@@ -16,6 +16,9 @@ Canonical place to **derive Torah logic before code**.
 | [SHOW_WORK_TREES_2026-07-20.md](SHOW_WORK_TREES_2026-07-20.md) | **Where to record trees** — unit `binary_trees` + `tree_ascii` (show all work) |
 | [TAAMIM_PARSE_NOTES.md](TAAMIM_PARSE_NOTES.md) | **Living notes** — update as we adjust parse understanding (glue vs nest, changelog) |
 | [taamim_rules/](taamim_rules/) | Frozen rule versions (`CURRENT`, `v1/ranks_prose.yaml`, golden tests) |
+| [lexicon/](lexicon/) | **Versioned gloss table** (EN-AID; hand entries override Strong's auto #IMPOSED) — regenerate via `artifacts/generate_lexicon_v1.py` |
+| [role_rules/](role_rules/) | **Versioned leaf→role rules** (auto illustrative labels, not derivation) + goldens: `python3 logic/role_rules/check_golden.py` |
+| [pre_logic_methods_2026-07-28/](pre_logic_methods_2026-07-28/INDEX.md) | Pre-code logic track: week experiment, tutorials, architecture plan (SQLite index: `build_db.py`) |
 | [TREE_INTERPRETATION_RULES.md](TREE_INTERPRETATION_RULES.md) | Living catalog: consistent tree→logic rules; 100% word-use aspiration |
 | [SYSTEM.md](SYSTEM.md) | Full method (formats, steps, comments, language policy) |
 | [SCHEMA.yaml](SCHEMA.yaml) | Field definitions |
