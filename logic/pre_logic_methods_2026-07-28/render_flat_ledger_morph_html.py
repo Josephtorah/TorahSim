@@ -16,42 +16,20 @@ import sys
 import unicodedata
 from pathlib import Path
 
+import yaml
+
 ROOT = Path(__file__).resolve().parents[2]  # repo root (file lives at logic/<topic>/)
 
-# ---------------------------------------------------------------- lexicon
-PREFIX_LEMMA = {"b": "in", "c": "and", "d": "the", "l": "to", "m": "from", "i": "the", "k": "like", "s": "which"}
-
-LEX = {
-    "215": "give-light", "216": "light", "226": "signs", "259": "one", "413": "to",
-    "430": "God", "559": "say", "776": "earth", "853": "obj-marker·et", "914": "divide",
-    "922": "void", "996": "between", "1242": "morning", "1876": "sprout", "1877": "grass",
-    "1961": "be", "2232": "yield-seed", "2233": "seed", "2822": "darkness", "3004": "dry-land",
-    "3117": "day", "3220": "seas", "3318": "bring-forth", "3556": "stars", "3915": "night",
-    "3974": "lights", "4150": "seasons", "4325": "waters", "4327": "kind", "4475": "dominion",
-    "4725": "place", "4910": "rule", "5315": "living-being", "5414": "set", "5775": "flying-creature",
-    "6086": "tree", "6153": "evening", "6212": "herb", "6440": "face", "6529": "fruit",
-    "7121": "call", "7200": "see", "7225": "beginning", "7243": "fourth", "7307": "spirit",
-    "7549": "firmament", "7992": "third", "8064": "heavens", "8141": "years", "8145": "second",
-    "8147": "two", "8317": "swarm", "8318": "swarming-creature", "8414": "formless", "8415": "deep",
-    "8432": "midst", "8478": "under", "834 a": "which", "1254 a": "create", "1419 a": "great",
-    "2416 a": "living", "2896 a": "good", "3588 a": "that", "3651 c": "so", "4723 c": "gathering",
-    "5774 a": "fly", "5921 a": "over", "6213 a": "make", "6960 b": "be-gathered",
-    "6996 b": "small", "7363 b": "hovering",
-    # week extension (Gen 1:21–2:3), added 2026-07-28
-    "120": "human", "127": "ground", "1288": "bless", "1710": "fish", "1823": "likeness",
-    "2009": "behold", "2145": "male", "2416 c": "living", "2549": "fifth", "3418": "green",
-    "3533": "subdue", "3605": "all", "3615": "be-complete", "3671": "wing", "3966": "very",
-    "402": "food", "4390": "fill", "4399": "work", "5347": "female", "6509": "be-fruitful",
-    "6635 a": "host", "6754": "image", "6942": "sanctify", "7235 a": "multiply",
-    "7287 a": "rule-over", "7430": "creep", "7431": "creeper", "7637": "seventh",
-    "7673 a": "cease", "8345": "sixth", "8577 b": "sea-monster", "929": "livestock",
-}
-
-SUFFIX_GLOSS = {
-    "1cs": "me/my", "1cp": "us/our", "2ms": "you/your", "2fs": "you/your",
-    "2mp": "you/your (pl)", "3ms": "him/its", "3fs": "her/its", "3mp": "them/their",
-    "3fp": "them/their",
-}
+# ---------------------------------------------------------------- lexicon (versioned)
+# Loaded from logic/lexicon/<CURRENT>/lexicon.yaml — EN-AID glosses, #IMPOSED
+# provenance recorded in the file. Hand entries override Strong's auto glosses.
+LEX_DIR = ROOT / "logic" / "lexicon"
+LEX_VERSION = (LEX_DIR / "CURRENT").read_text().strip()
+_lexdoc = yaml.safe_load((LEX_DIR / LEX_VERSION / "lexicon.yaml").read_text(encoding="utf-8"))
+PREFIX_LEMMA = _lexdoc["prefixes"]
+SUFFIX_GLOSS = {str(k): v for k, v in _lexdoc["suffix_pronouns"].items()}
+LEX_FULL = _lexdoc["entries"]
+LEX = {k: v["en"] for k, v in LEX_FULL.items()}
 
 VERSE_EN = {
     (1, 1): "In the beginning God created the heavens and the earth.",
@@ -311,125 +289,50 @@ def word_translit(word) -> str:
     return "-".join(translit_segment(t, i == len(segs) - 1) for i, (t, _, _) in enumerate(segs))
 
 
-def _has_lem(L, *keys):
-    s = L["lemset"]
-    return any(k in s for k in keys)
+# ---------------------------------------------------------------- role rules (versioned)
+# Loaded from logic/role_rules/<CURRENT>/rules.yaml. Auto illustrative labels,
+# NOT logic derivation. Error -> new rules version, never silent edits.
+RR_DIR = ROOT / "logic" / "role_rules"
+RR_VERSION = (RR_DIR / "CURRENT").read_text().strip()
+_rrdoc = yaml.safe_load((RR_DIR / RR_VERSION / "rules.yaml").read_text(encoding="utf-8"))
+ROLE_RULESET = f"role_rules-{_rrdoc['meta']['version']}-{_rrdoc['meta']['date']}"
+FRAMES = _rrdoc["frames"]
+NIPHAL_IRREG = _rrdoc["niphal_irregular"]
+ORD_GLOSS = {str(k): v for k, v in _rrdoc["ord_gloss"].items()}
+VERBLESS = _rrdoc["verbless"]
 
 
-def _has_verb(L):
-    return any(
-        m.startswith("V") or (len(m) > 1 and m[0] in "qNpPhHt" and any(c.isdigit() for c in m))
-        for m in L["morphset"]
-    ) or any(m.startswith("V") for m in L["morphset"])
+def _compile_rule(spec):
+    any_l = set(spec.get("any", []))
+    all_l = set(spec.get("all", []))
+    any_m = tuple(spec.get("any_morph", []))
+    not_l = set(spec.get("not_any", []))
+    not_m = tuple(spec.get("not_morph", []))
+
+    def test(lemset, morphset):
+        if any_l and not (lemset & any_l):
+            return False
+        if not all_l <= lemset:
+            return False
+        if any_m and not any(m.startswith(pfx) for m in morphset for pfx in any_m):
+            return False
+        if lemset & not_l:
+            return False
+        if not_m and any(m.startswith(pfx) for m in morphset for pfx in not_m):
+            return False
+        return True
+
+    return test, spec["role"]
 
 
-def _morph_has(L, *prefixes):
-    for m in L["morphset"]:
-        for p in prefixes:
-            if m == p or m.startswith(p):
-                return True
-    return False
-
-
-# Illustrative leaf roles for Gen-1-style narrative + frame tags.
-# First match wins. Not TIR-frozen; not binding law. Expand carefully by Strong's / morph cues.
-ROLE_RULES = [
-    # --- speech / fiat cycle ---
-    (
-        lambda L: _has_lem(L, "559") and _morph_has(L, "Vqw", "Vqp", "Vqi", "Vqv", "Vqq") and _has_lem(L, "430"),
-        "SPEAK(agent=Elohim)",
-    ),
-    (lambda L: _has_lem(L, "559") and _morph_has(L, "V"), "SPEAK"),
-    (lambda L: _has_lem(L, "1961", "3651 c") and _has_lem(L, "3651 c"), "RESULT(so)"),
-    (
-        lambda L: _has_lem(L, "1961") and (_has_lem(L, "6153") or _has_lem(L, "1242")),
-        "TIME-STAMP",
-    ),
-    (lambda L: _has_lem(L, "1961") and _morph_has(L, "Vqj"), "CMD(be)"),
-    (
-        lambda L: _has_lem(L, "1961")
-        and _morph_has(L, "Vqw", "Vqp", "Vqi")
-        and not (_has_lem(L, "6153") or _has_lem(L, "1242") or _has_lem(L, "3651 c")),
-        "BECOME/WAS",
-    ),
-    # --- perception / evaluation ---
-    (lambda L: _has_lem(L, "7200"), "SEE/ASSESS"),
-    (lambda L: _has_lem(L, "2896 a", "2896"), "EVAL(good)"),
-    # --- naming / calendar ---
-    (lambda L: _has_lem(L, "7121"), "NAME"),
-    (
-        lambda L: _has_lem(L, "8145", "7992", "7243", "259", "8147", "2549", "8345", "7637")
-        or _has_lem(L, "3117")
-        and _has_lem(L, "259"),
-        "ORDINAL/DAY-COUNT",
-    ),
-    # --- create / make / place / separate ---
-    (lambda L: _has_lem(L, "1254 a", "1254"), "CREATE"),
-    (lambda L: _has_lem(L, "6213 a", "6213"), "MAKE"),
-    (lambda L: _has_lem(L, "5414"), "SET/PLACE"),
-    (lambda L: _has_lem(L, "914"), "DIVIDE"),
-    (lambda L: _has_lem(L, "6960 b", "6960", "4723 c", "4723"), "GATHER"),
-    (lambda L: _has_lem(L, "3004"), "DRY-LAND"),
-    # --- plant / life (days 3–5) ---
-    (lambda L: _has_lem(L, "1876"), "SPROUT"),
-    (lambda L: _has_lem(L, "3318"), "BRING_FORTH"),
-    (lambda L: _has_lem(L, "2232"), "YIELD_SEED"),
-    (lambda L: _has_lem(L, "1877", "6212", "6086", "6529"), "PLANT/FRUIT"),
-    (lambda L: _has_lem(L, "2233"), "SEED"),
-    (lambda L: _has_lem(L, "4327"), "KIND"),
-    # --- lights / rule (day 4) ---
-    (lambda L: _has_lem(L, "215"), "GIVE_LIGHT"),
-    (lambda L: _has_lem(L, "3974", "3556", "216"), "LIGHTS"),
-    (lambda L: _has_lem(L, "4910", "4475"), "RULE/DOMINION"),
-    (lambda L: _has_lem(L, "226", "4150", "8141"), "SIGNS/SEASONS"),
-    # --- sea / sky life (day 5) ---
-    (lambda L: _has_lem(L, "8317", "8318"), "SWARM"),
-    (lambda L: _has_lem(L, "5774 a", "5774", "5775"), "FLY"),
-    (lambda L: _has_lem(L, "2416 a", "2416", "2416 c", "5315"), "LIVING"),
-    (lambda L: _has_lem(L, "1288"), "BLESS"),
-    # --- week extension: day 5b–7 verbs and frames (2026-07-28) ---
-    (lambda L: _has_lem(L, "8577 b"), "SEA-MONSTERS"),
-    (lambda L: _has_lem(L, "6509", "7235 a", "4390"), "BE-FRUITFUL/FILL"),
-    (lambda L: _has_lem(L, "7287 a", "3533"), "RULE/SUBDUE"),
-    (lambda L: _has_lem(L, "6754", "1823"), "IMAGE/LIKENESS"),
-    (lambda L: _has_lem(L, "2145", "5347"), "MALE+FEMALE"),
-    (lambda L: _has_lem(L, "7430", "7431"), "CREEPERS"),
-    (lambda L: _has_lem(L, "929"), "LIVESTOCK"),
-    (lambda L: _has_lem(L, "402", "3418"), "FOOD-GRANT"),
-    (lambda L: _has_lem(L, "3615"), "COMPLETE"),
-    (lambda L: _has_lem(L, "7673 a"), "CEASE/REST"),
-    (lambda L: _has_lem(L, "6942"), "SANCTIFY"),
-    (lambda L: _has_lem(L, "4399"), "WORK"),
-    (lambda L: _has_lem(L, "6635 a"), "HOST"),
-    # --- morph frame roles (before bare domain so *et*+NP is OBJ_FRAME) ---
-    (lambda L: _morph_has(L, "To"), "OBJ_FRAME"),
-    (
-        lambda L: _morph_has(L, "R")
-        and not _morph_has(L, "V")
-        and not _morph_has(L, "To"),
-        "PREP_PHRASE",
-    ),
-    # --- domain nouns (when not already caught by verb/frame rules) ---
-    (lambda L: _has_lem(L, "8064") and not _morph_has(L, "V"), "DOMAIN(heavens)"),
-    (lambda L: _has_lem(L, "776") and not _morph_has(L, "V"), "DOMAIN(earth)"),
-    (lambda L: _has_lem(L, "4325", "3220") and not _morph_has(L, "V"), "DOMAIN(waters)"),
-    (lambda L: _has_lem(L, "7549") and not _morph_has(L, "V"), "DOMAIN(firmament)"),
-    (lambda L: _has_lem(L, "2822") and not _morph_has(L, "V"), "DOMAIN(darkness)"),
-    (lambda L: _has_lem(L, "3117", "3915") and not _morph_has(L, "V"), "DOMAIN(day/night)"),
-]
+ROLE_RULES = [_compile_rule(s) for s in _rrdoc["lemma_rules"]]
 
 
 def _semantic_role(lemset, morphset):
-    box = {"lemset": lemset, "morphset": morphset}
     for test, role in ROLE_RULES:
-        if test(box):
+        if test(lemset, morphset):
             return role
     return None
-
-
-ORD_GLOSS = {"259": "one", "8147": "two", "8145": "second", "7992": "third", "7243": "fourth",
-             "2549": "fifth", "8345": "sixth", "7637": "seventh"}
-NIPHAL_IRREG = {"see": "be-seen", "be": "come-to-be"}
 
 
 def leaf_role(segs):
@@ -473,9 +376,9 @@ def leaf_role(segs):
         else:
             role = f"EVENT({vg})" if form == "w" else f"STATE({vg})"
     else:
-        if "996" in lemset:
+        if VERBLESS["between"] in lemset:
             role = f"BETWEEN({head})"
-        elif "834 a" in lemset:
+        elif VERBLESS["relative"] in lemset:
             role = f"REL({base or head})"
         elif base == "OBJ_FRAME":
             role = f"OBJ_FRAME({head})"
@@ -484,12 +387,12 @@ def leaf_role(segs):
             role = f"PREP({prep}·{head})"
         elif base == "ORDINAL/DAY-COUNT":
             n = next((ORD_GLOSS[o] for o in ORD_GLOSS if o in lemset), "?")
-            role = f"DAY-COUNT({n})" if "3117" in lemset else f"NP({head})"
+            role = f"DAY-COUNT({n})" if VERBLESS["day_lemma"] in lemset else f"NP({head})"
         elif base:
             role = base
-        elif "3966" in lemset:
+        elif VERBLESS["intensifier"] in lemset:
             role = "INTENSIFIER(very)"      # me'od as its own brick (Gen 1:31, on the etnachta)
-        elif "2009" in lemset:
+        elif VERBLESS["present"] in lemset:
             role = "PRESENT(behold)"        # hinneh presentative
         elif heads:
             role = f"NP({head})"

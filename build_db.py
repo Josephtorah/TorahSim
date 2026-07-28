@@ -25,7 +25,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 DB_PATH = ROOT / "torah_grok.sqlite"
 BOOKS = ["Gen", "Exod", "Lev", "Num", "Deut"]
-ROLE_RULESET = "r0-inline-2026-07-28"
 
 sys.path.insert(0, str(ROOT))
 import taamim_tree_parse as ttp  # noqa: E402
@@ -35,6 +34,8 @@ _spec = importlib.util.spec_from_file_location(
 )
 render = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(renderer := render)  # noqa: F841
+
+ROLE_RULESET = renderer.ROLE_RULESET  # from logic/role_rules/<CURRENT>/rules.yaml
 
 SCHEMA = """
 PRAGMA journal_mode=WAL;
@@ -195,7 +196,8 @@ def build() -> None:
         "built_from_commit": commit,
         "taamim_rule_version": ttp.load_active_version(),
         "role_ruleset": ROLE_RULESET,
-        "lexicon_note": "glosses '?' where lemma not yet in LEX (Gen-1 seeded); EN-AID only",
+        "lexicon_version": renderer.LEX_VERSION,
+        "lexicon_note": "logic/lexicon: hand glosses override Strong's auto (#IMPOSED, public domain); EN-AID only",
         "verses": str(n_verses), "words": str(n_words), "segments": str(n_segs),
         "leaves": str(n_leaves), "word_count_mismatches": str(n_mismatch),
         "status_counts": json.dumps(status_counts),

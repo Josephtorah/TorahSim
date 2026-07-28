@@ -1,0 +1,116 @@
+# Role rules v1 — leaf → role labels (auto, illustrative; NOT logic derivation)
+# Frozen 2026-07-28 from the inline ruleset of render_flat_ledger_morph_html.py
+# (r0-inline-2026-07-28). Error → new version directory, never silent edits —
+# same discipline as logic/taamim_rules/. Interpreted by code; invents nothing.
+#
+# Engine semantics (implemented in render_flat_ledger_morph_html.py):
+#   1. If the leaf has a verb, the OSHB FORM letter picks a frame (frames: below);
+#      wayyiqtol/perfect fall through to the first-match lemma_rules; unmatched
+#      w/p verbs become EVENT(gloss)/STATE(gloss).
+#   2. Verbless leaves: special particles (verbless: below), then lemma_rules,
+#      then PREP/NP fallbacks by phrase shape.
+#   3. Decorations appended: +et-obj (853 present), +eval(good) (2896 a present).
+# lemma_rules match: first rule wins; a rule matches when
+#   any: lemset ∩ any ≠ ∅ · all: all ⊆ lemset · any_morph: some morph startswith
+#   not_any: lemset ∩ not_any = ∅ · not_morph: no morph startswith
+
+meta:
+  version: v1
+  date: 2026-07-28
+  status: frozen
+  supersedes: r0-inline-2026-07-28
+
+frames:  # OSHB verb-form letter → frame label
+  c: PURPOSE     # infinitive construct (usually with prefix l: "in order to")
+  r: ONGOING     # participle: standing state / invariant
+  s: ONGOING     # passive participle
+  j: CMD         # jussive: "let it..."
+  v: CMD!        # imperative
+  i: CMD?        # imperfect inside command speech — hypothesis marker
+  q: THEN        # weqatal: sequential "and it shall..."
+  h: CMD-US      # cohortative: "let us..."
+
+niphal_irregular:  # stem N/pual: passive voice glosses
+  see: be-seen
+  be: come-to-be
+
+ord_gloss:
+  "259": one
+  "8147": two
+  "8145": second
+  "7992": third
+  "7243": fourth
+  "2549": fifth
+  "8345": sixth
+  "7637": seventh
+
+verbless:  # particle-driven roles for leaves with no verb (checked before lemma_rules fallback)
+  intensifier: "3966"     # me'od
+  present: "2009"         # hinneh
+  between: "996"          # bein
+  relative: "834 a"       # asher
+  day_lemma: "3117"       # required for DAY-COUNT (else ordinal leaf -> NP)
+
+lemma_rules:
+  # --- speech / fiat cycle ---
+  - {role: "SPEAK(agent=Elohim)", all: ["559", "430"], any_morph: [Vqw, Vqp, Vqi, Vqv, Vqq]}
+  - {role: "SPEAK", any: ["559"], any_morph: [V]}
+  - {role: "RESULT(so)", all: ["1961", "3651 c"]}
+  - {role: "TIME-STAMP", all: ["1961"], any: ["6153", "1242"]}
+  - {role: "CMD(be)", all: ["1961"], any_morph: [Vqj]}
+  - {role: "BECOME/WAS", all: ["1961"], any_morph: [Vqw, Vqp, Vqi], not_any: ["6153", "1242", "3651 c"]}
+  # --- perception / evaluation ---
+  - {role: "SEE/ASSESS", any: ["7200"]}
+  - {role: "EVAL(good)", any: ["2896 a", "2896"]}
+  # --- naming / calendar ---
+  - {role: "NAME", any: ["7121"]}
+  - {role: "ORDINAL/DAY-COUNT", any: ["8145", "7992", "7243", "259", "8147", "2549", "8345", "7637"]}
+  - {role: "ORDINAL/DAY-COUNT", all: ["3117", "259"]}
+  # --- create / make / place / separate ---
+  - {role: "CREATE", any: ["1254 a", "1254"]}
+  - {role: "MAKE", any: ["6213 a", "6213"]}
+  - {role: "SET/PLACE", any: ["5414"]}
+  - {role: "DIVIDE", any: ["914"]}
+  - {role: "GATHER", any: ["6960 b", "6960", "4723 c", "4723"]}
+  - {role: "DRY-LAND", any: ["3004"]}
+  # --- plant / life ---
+  - {role: "SPROUT", any: ["1876"]}
+  - {role: "BRING_FORTH", any: ["3318"]}
+  - {role: "YIELD_SEED", any: ["2232"]}
+  - {role: "PLANT/FRUIT", any: ["1877", "6212", "6086", "6529"]}
+  - {role: "SEED", any: ["2233"]}
+  - {role: "KIND", any: ["4327"]}
+  # --- lights / rule ---
+  - {role: "GIVE_LIGHT", any: ["215"]}
+  - {role: "LIGHTS", any: ["3974", "3556", "216"]}
+  - {role: "RULE/DOMINION", any: ["4910", "4475"]}
+  - {role: "SIGNS/SEASONS", any: ["226", "4150", "8141"]}
+  # --- sea / sky / land life ---
+  - {role: "SWARM", any: ["8317", "8318"]}
+  - {role: "FLY", any: ["5774 a", "5774", "5775"]}
+  - {role: "LIVING", any: ["2416 a", "2416", "2416 c", "5315"]}
+  - {role: "BLESS", any: ["1288"]}
+  - {role: "SEA-MONSTERS", any: ["8577 b"]}
+  - {role: "BE-FRUITFUL/FILL", any: ["6509", "7235 a", "4390"]}
+  - {role: "RULE/SUBDUE", any: ["7287 a", "3533"]}
+  - {role: "IMAGE/LIKENESS", any: ["6754", "1823"]}
+  - {role: "MALE+FEMALE", any: ["2145", "5347"]}
+  - {role: "CREEPERS", any: ["7430", "7431"]}
+  - {role: "LIVESTOCK", any: ["929"]}
+  - {role: "FOOD-GRANT", any: ["402", "3418"]}
+  # --- day 7 ---
+  - {role: "COMPLETE", any: ["3615"]}
+  - {role: "CEASE/REST", any: ["7673 a"]}
+  - {role: "SANCTIFY", any: ["6942"]}
+  - {role: "WORK", any: ["4399"]}
+  - {role: "HOST", any: ["6635 a"]}
+  # --- morph frame roles (before bare domains so et+NP is OBJ_FRAME) ---
+  - {role: "OBJ_FRAME", any_morph: [To]}
+  - {role: "PREP_PHRASE", any_morph: [R], not_morph: [V, To]}
+  # --- domain nouns (when nothing above caught the leaf) ---
+  - {role: "DOMAIN(heavens)", any: ["8064"], not_morph: [V]}
+  - {role: "DOMAIN(earth)", any: ["776"], not_morph: [V]}
+  - {role: "DOMAIN(waters)", any: ["4325", "3220"], not_morph: [V]}
+  - {role: "DOMAIN(firmament)", any: ["7549"], not_morph: [V]}
+  - {role: "DOMAIN(darkness)", any: ["2822"], not_morph: [V]}
+  - {role: "DOMAIN(day/night)", any: ["3117", "3915"], not_morph: [V]}

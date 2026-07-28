@@ -111,10 +111,22 @@ Schema rules: every text column keeps the **he + translit + en** triple (the
    lexicon; form-frames (CMD!/THEN/EVENT…) work Torah-wide regardless.
 2. **Index the ~190 units** into `units/steps/coverage`, with `SCHEMA.yaml`
    validation that *flags* malformed units (never edits them).
+   **✅ DONE 2026-07-28** — `index_units.py`: **213 units · 5,865 steps · 1,537
+   scenarios · 0 warnings** (+ unit_scenarios, coverage tables; steps in FTS).
 3. **`oral_refs` + `oral_texts` FTS** over all 312 corpus files; backfill this week's
    verified quotes (BR 4:2/4:6/4:7/5:8/5:9/8:3/9:5/11:2/11:8 · Chagigah 12a–b ·
    Sanhedrin 38b · Eruvin 18a · Bava Batra 74b · Shabbat 88a/119b · RH 31a) as the
    first rows.
+   **✅ DONE 2026-07-28** — `index_oral.py`: **215 Hebrew corpus files · 119,903
+   segments FTS'd (~5s)** · computed loci for Mishnah/Tosefta/Rabbah shapes (Bavli
+   keeps raw path — daf mapping not guessed) · **20 oral_refs** backfilled (19
+   verified, 1 observation).
+
+**Stage A additions (same day):** `logic/lexicon/v1/` — 3,582 lemmas (111 hand override
+Strong's auto, #IMPOSED, public domain; **99.9% word-gloss coverage**, 71 `?` left) ·
+`logic/role_rules/v1/` — 52 rules + frames extracted to frozen YAML, goldens across
+Gen/Lev/Deut (`logic/role_rules/check_golden.py` — ALL GREEN) · render module +
+`build_db.py` load both from `CURRENT` pointers · DB now 147 MB with units + Oral layers.
 4. **Point the D3 viewer at JSON exports** from the DB.
 5. (Only if needed) thin read-only API for live queries.
 
