@@ -1,0 +1,913 @@
+# =============================================================================
+# LOGIC UNIT: Proverbs 3:5–6 — Trust YHWH with all heart; do not lean on understanding;
+#                              know Him in all ways → He straightens paths
+# First poetry Pre-Code unit — trees from taamim v3 (locked goldens)
+# =============================================================================
+# Experimental model — not binding religious law.
+# Genre: instructional dual (positive ‖ negative) + DO → RESULT chain.
+# Process: binary_trees (v3 poetry) → tree_coverage → dual rules / decision rows → scenarios.
+
+meta:
+  id: "prov_03_trust_know"
+  title_en: "Trust YHWH; do not lean on understanding; know Him → He straightens paths (3:5–6)"
+  title_he: "בְּטַח אֶל־יְהוָה"
+  title_he_translit: "betach el-YHWH"
+  title_he_en: "Trust toward YHWH"
+  book_he: "מִשְׁלֵי"
+  book_he_translit: "Mishlei"
+  book_en: "Proverbs"
+  refs: "3:5-6"
+  data_paths_he:
+    - "/tmp/morphhb/wlc/Prov.xml"   # OSHB morphhb (not in Data/ for Prov)
+  data_paths_en_aid: []
+  status: draft
+  confidence_overall: hypothesis
+  genre: "instructional_dual"
+  build_track: poetry_wisdom_seed
+  depends_on: []
+  parser_rule_set: "v3"
+  related_parse_docs:
+    - "logic/Parse_tree_2026-07-27/EXPERIMENT_poetry_v3_implemented_2026-07-27.md"
+    - "logic/Parse_tree_2026-07-27/SMOKE_prov_v3_2026-07-27.md"
+  owner_language_note: >
+    Reader is fluent in English only, not Hebrew.
+    All comments and en fields must make the Hebrew usable.
+    Hebrew remains the only derivation source.
+  oral_policy_note_en: >
+    Written trees first. Dual-track Oral only when named; never silent-merge.
+  method_note_en: >
+    First wisdom/poetry unit under Pre-Code. Structure from taamim v3 poetry ranks
+    (dehi disjunctive enables trust-to-YHWH as its own brick before etnachta).
+    Logic: 3:5 = dual imperative (DO ‖ DO-NOT); 3:6 = command → YHWH result.
+    Not casuistic temple law. Not binding religious law.
+
+# -----------------------------------------------------------------------------
+derivation_log:
+  - step: A
+    name_en: "Choose the unit"
+    comment: >
+      After Prov full-book smoke (915/915 structural pass) and locked goldens on
+      Prov.3.5 / Prov.3.6, start first Pre-Code poetry unit on this dual.
+      Hebrew book: מִשְׁלֵי / Mishlei / "Proverbs"; range 3:5–6.
+      Why: clearest instructional dual + consequence chain already golden-locked.
+    tags: ["[HE-WRITTEN]"]
+    confidence: established
+
+  - step: B
+    name_en: "Load Hebrew source (English aid only)"
+    comment: >
+      Hebrew from morphhb OSHB Prov.xml via taamim_tree_parse.py (book_file_for_osis).
+      No English translation used as derivation input. Free en glosses are [EN-AID] only.
+    tags: ["[HE-WRITTEN]", "[EN-AID]"]
+    confidence: tested
+
+  - step: C
+    name_en: "Segment structure (BINARY / ta'amim trees FIRST)"
+    comment: >
+      Parsed Prov.3.5 and Prov.3.6 with taamim_tree_parse.py rule_set v3 poetry.
+      Both unique, pure_binary, leaf_complete. Full tree_ascii stored under binary_trees.
+      Top splits both at etnachta (rank-1 mid-verse rest in poetry).
+    tags: ["[HE-STRUCT]"]
+    confidence: tested
+
+  - step: D
+    name_en: "Extract predicates and outcomes from Hebrew"
+    comment: >
+      3:5 LEFT: בטח אל יהוה / betach el YHWH / "trust toward YHWH"
+      + manner ב/כל לב/ך / be-khol libbekha / "with all your heart".
+      3:5 RIGHT: אל תשען / al tishsha'en / "do not lean" on ו/אל בינת/ך / ve-el binatekha /
+      "and toward your understanding".
+      3:6 LEFT: ב/כל דרכי/ך דע/הו / be-khol derakhekha da'ehu / "in all your ways know Him".
+      3:6 RIGHT: ו/הוא יישר ארחתי/ך / ve-hu yeyashsher orchotekha / "and He will straighten your paths".
+    tags: ["[HE-WRITTEN]"]
+    confidence: hypothesis
+
+  - step: E
+    name_en: "Choose logic format(s)"
+    comment: >
+      decision_table + sparse rules (not pure casuistic WHEN gender THEN days).
+      3:5 = parallel dual_imperative (positive ‖ prohibitive).
+      3:6 = command_then_result (know → He straightens).
+      Optional coarse FSM for agent stance (leaning on self vs trusting YHWH).
+    tags: ["[INFER]"]
+    confidence: hypothesis
+
+  - step: F
+    name_en: "Fill trilingual logic objects"
+    comment: >
+      Every atom he + he_translit + en; phrase_map from glue bricks; tree_coverage
+      100% words (15); rules R_dual_trust_no_lean, R_know_then_straighten.
+    tags: ["[HE-WRITTEN]"]
+    confidence: hypothesis
+
+  - step: G
+    name_en: "Optional Oral attachments"
+    comment: >
+      No Oral attachments in this draft. Possible later dual-track only with named locus
+      (e.g. midrash on trust / binah) — not merged into Written.
+    tags: ["[ORAL]"]
+    confidence: hypothesis
+
+  - step: H
+    name_en: "Scenarios"
+    comment: >
+      Three English-readable cases testing dual commands and know→straighten chain;
+      expectations cite rule ids only.
+    tags: ["[HE-WRITTEN]"]
+    confidence: hypothesis
+
+  - step: I
+    name_en: "English-leakage review"
+    comment: >
+      Conditions quote Hebrew first. English free glosses marked [EN-AID].
+      Checklist filled below; freeze blocked until re-read.
+    tags: ["[EN-AID]"]
+    confidence: hypothesis
+
+  - step: J
+    name_en: "Freeze"
+    comment: >
+      status remains draft. Not frozen. No interpreter may invent rules from this unit.
+    tags: []
+    confidence: hypothesis
+
+# -----------------------------------------------------------------------------
+binary_trees:
+  method_note_en: >
+    Primary structure from our versioned ta'amim parser (v3 poetry).
+    OSHB n= not used as authority. Display: top-down pure binary + glue bricks.
+  data_source: "/tmp/morphhb/wlc/Prov.xml"
+  parser: "taamim_tree_parse.py"
+  rule_set_version: "v3"
+  system: "poetry"
+  tags: ["[HE-STRUCT]"]
+  chapter_outline_tree:
+    id: T_3_5_6
+    comment: >
+      English: two-verse instructional chain. v5 dual command pair; v6 know → YHWH result.
+    root:
+      role_en: "instructional_block"
+      children:
+        - role_en: "dual_imperative_positive_negative"
+          verse: "3:5"
+        - role_en: "command_then_divine_result"
+          verse: "3:6"
+
+  verse_trees:
+    Prov_3_5:
+      verse: "3:5"
+      osis_id: "Prov.3.5"
+      parser_status: unique
+      pure_binary: true
+      leaf_complete: true
+      word_count: 9
+      brick_count: 4
+      linear:
+        he: "בטח אל יהוה ב/כל לב/ך ו/אל בינת/ך אל תשען"
+        he_translit: "betach el YHWH be-khol libbekha ve-el binatekha al tishsha'en"
+        en: "Trust toward YHWH with all your heart, and toward your understanding do not lean."
+        en_note: "Free gloss [EN-AID]; not a legal ruling."
+      top_binary_split:
+        comment: >
+          Etnachta (poetry rank 1) splits dual: LEFT = positive trust-cluster;
+          RIGHT = prohibitive lean-cluster. Pattern TIR-023 (poetry dual imperative ‖).
+          Not condition vs consequence (both arms are commands).
+        left_half:
+          phrase:
+            he: "בטח אל יהוה ב/כל לב/ך"
+            he_translit: "betach el YHWH be-khol libbekha"
+            en: "Trust toward YHWH with all your heart"
+        right_half:
+          phrase:
+            he: "ו/אל בינת/ך אל תשען"
+            he_translit: "ve-el binatekha al tishsha'en"
+            en: "and toward your understanding do not lean"
+      nested_bricks:
+        - id: B0
+          words: [0, 1, 2]
+          end_mark: dehi
+          he: "בטח אל יהוה"
+          he_translit: "betach el YHWH"
+          en: "trust toward YHWH"
+          role_en: "positive_imperative_core"
+        - id: B1
+          words: [3, 4]
+          end_mark: etnachta
+          he: "ב/כל לב/ך"
+          he_translit: "be-khol libbekha"
+          en: "with/in all your heart"
+          role_en: "manner_scope_all_heart"
+        - id: B2
+          words: [5, 6]
+          end_mark: revia
+          he: "ו/אל בינת/ך"
+          he_translit: "ve-el binatekha"
+          en: "and toward your understanding"
+          role_en: "prohibited_lean_target"
+        - id: B3
+          words: [7, 8]
+          end_mark: silluq
+          he: "אל תשען"
+          he_translit: "al tishsha'en"
+          en: "do not lean / do not rely"
+          role_en: "prohibitive_imperative"
+      tree_ascii: |
+        PHRASE (binary 9w) בְּטַ֣ח אֶל יְ֭הוָה בְּ/כָל לִבֶּ֑/ךָ וְ/אֶל בּ…
+        ├── PHRASE (binary 5w) בְּטַ֣ח אֶל יְ֭הוָה בְּ/כָל לִבֶּ֑/ךָ
+        │   ├── [0-2] GLUE בְּטַ֣ח אֶל יְ֭הוָה (dehi, rank=2)
+        │   └── [3-4] GLUE בְּ/כָל לִבֶּ֑/ךָ (atnach, rank=1)
+        └── PHRASE (binary 4w) וְ/אֶל בִּֽ֝ינָתְ/ךָ֗ אַל תִּשָּׁעֵֽן
+            ├── [5-6] GLUE וְ/אֶל בִּֽ֝ינָתְ/ךָ֗ (revia, rank=3)
+            └── [7-8] GLUE אַל תִּשָּׁעֵֽן (silluq, rank=1)
+      maps_to:
+        - "R_dual_trust_no_lean"
+        - "STEP_Pr_3_5"
+        - "P1"
+        - "P2"
+        - "P3"
+        - "P4"
+      confidence: tested
+      source: "[HE-STRUCT][HE-WRITTEN] taamim v3 poetry golden"
+
+    Prov_3_6:
+      verse: "3:6"
+      osis_id: "Prov.3.6"
+      parser_status: unique
+      pure_binary: true
+      leaf_complete: true
+      word_count: 6
+      brick_count: 3
+      linear:
+        he: "ב/כל דרכי/ך דע/הו ו/הוא יישר ארחתי/ך"
+        he_translit: "be-khol derakhekha da'ehu ve-hu yeyashsher orchotekha"
+        en: "In all your ways know Him, and He will straighten your paths."
+        en_note: "Free gloss [EN-AID]."
+      top_binary_split:
+        comment: >
+          Etnachta splits command (LEFT) from divine result (RIGHT).
+          TIR-001-style setup vs consequence, adapted for poetry instruction (TIR-024).
+          LEFT ends on דע/הו / da'ehu / "know Him"; RIGHT agent ו/הוא / ve-hu / "and He"
+          then effect יישר ארחתי/ך / yeyashsher orchotekha / "will straighten your paths".
+        left_half:
+          phrase:
+            he: "ב/כל דרכי/ך דע/הו"
+            he_translit: "be-khol derakhekha da'ehu"
+            en: "in all your ways know Him"
+        right_half:
+          phrase:
+            he: "ו/הוא יישר ארחתי/ך"
+            he_translit: "ve-hu yeyashsher orchotekha"
+            en: "and He will straighten your paths"
+      nested_bricks:
+        - id: B0
+          words: [0, 1, 2]
+          end_mark: etnachta
+          he: "ב/כל דרכי/ך דע/הו"
+          he_translit: "be-khol derakhekha da'ehu"
+          en: "in all your ways know Him"
+          role_en: "command_know_in_all_ways"
+        - id: B1
+          words: [3]
+          end_mark: revia
+          he: "ו/הוא"
+          he_translit: "ve-hu"
+          en: "and He"
+          role_en: "divine_agent"
+        - id: B2
+          words: [4, 5]
+          end_mark: silluq
+          he: "יישר ארחתי/ך"
+          he_translit: "yeyashsher orchotekha"
+          en: "will straighten your paths"
+          role_en: "divine_result_straighten"
+      tree_ascii: |
+        PHRASE (binary 6w) בְּ/כָל דְּרָכֶ֥י/ךָ דָעֵ֑/הוּ וְ֝/ה֗וּא יְיַשׁ…
+        ├── [0-2] GLUE בְּ/כָל דְּרָכֶ֥י/ךָ דָעֵ֑/הוּ (atnach, rank=1)
+        └── PHRASE (binary 3w) וְ֝/ה֗וּא יְיַשֵּׁ֥ר אֹֽרְחֹתֶֽי/ךָ
+            ├── [3] וְ֝/ה֗וּא (revia, rank=3)
+            └── [4-5] GLUE יְיַשֵּׁ֥ר אֹֽרְחֹתֶֽי/ךָ (silluq, rank=1)
+      maps_to:
+        - "R_know_then_straighten"
+        - "STEP_Pr_3_6"
+        - "P5"
+        - "P6"
+        - "P7"
+      confidence: tested
+      source: "[HE-STRUCT][HE-WRITTEN] taamim v3 poetry golden"
+
+  tree_to_logic_index:
+    - from: "Prov.3.5 top left (etnachta left)"
+      to: "R_dual_trust_no_lean.when_positive"
+      relation: "positive half of dual imperative"
+    - from: "Prov.3.5 top right (etnachta right)"
+      to: "R_dual_trust_no_lean.when_negative"
+      relation: "prohibitive half of dual imperative"
+    - from: "Prov.3.5 B0 בטח אל יהוה"
+      to: "P1 / STEP_Pr_3_5"
+      relation: "imperative core + object YHWH"
+    - from: "Prov.3.5 B1 ב/כל לב/ך"
+      to: "P2 manner scope"
+      relation: "kol-maximize heart manner"
+    - from: "Prov.3.5 B2–B3 אל תשען on בינת/ך"
+      to: "P3–P4"
+      relation: "prohibition + forbidden lean-target"
+    - from: "Prov.3.6 top left"
+      to: "R_know_then_straighten.when"
+      relation: "command (IF / DO arm)"
+    - from: "Prov.3.6 top right"
+      to: "R_know_then_straighten.then"
+      relation: "YHWH result (THEN arm)"
+    - from: "Prov.3.6 B1 ו/הוא"
+      to: "P6 agent"
+      relation: "subject of straighten = He (YHWH context from 3:5)"
+
+# -----------------------------------------------------------------------------
+phrase_map:
+  - id: P1
+    role: condition
+    he: "בטח אל יהוה"
+    he_translit: "betach el YHWH"
+    en: "trust toward YHWH"
+    en_note: "Imperative + directional אל / el / \"to/toward\" + divine name. Free gloss [EN-AID]."
+    verse: "3:5"
+    structure_note: "Glue brick ending dehi (poetry disjunctive); left of etnachta half."
+    tags: ["[HE-WRITTEN]", "[HE-STRUCT]"]
+    confidence: tested
+    feeds: ["R_dual_trust_no_lean", "STEP_Pr_3_5"]
+
+  - id: P2
+    role: condition
+    he: "ב/כל לב/ך"
+    he_translit: "be-khol libbekha"
+    en: "with/in all your heart"
+    en_note: "Manner/scope: כל / kol / \"all\" maximizes לב / lev / \"heart\". [EN-AID]"
+    verse: "3:5"
+    structure_note: "Glue brick ending etnachta; pairs with P1 under left half."
+    tags: ["[HE-WRITTEN]", "[HE-STRUCT]"]
+    confidence: tested
+    feeds: ["R_dual_trust_no_lean"]
+
+  - id: P3
+    role: condition
+    he: "ו/אל בינת/ך"
+    he_translit: "ve-el binatekha"
+    en: "and toward your understanding"
+    en_note: "בינה / binah / \"understanding\" is the forbidden lean-target, not the verb. [EN-AID]"
+    verse: "3:5"
+    structure_note: "Glue brick ending revia; right half, object of prohibition."
+    tags: ["[HE-WRITTEN]", "[HE-STRUCT]"]
+    confidence: tested
+    feeds: ["R_dual_trust_no_lean"]
+
+  - id: P4
+    role: consequence
+    he: "אל תשען"
+    he_translit: "al tishsha'en"
+    en: "do not lean / do not rely"
+    en_note: "אל / al / prohibitive particle + תשען / tishsha'en / \"you shall lean\". [EN-AID]"
+    verse: "3:5"
+    structure_note: "Glue brick ending silluq; prohibitive imperative core of right half."
+    tags: ["[HE-WRITTEN]", "[HE-STRUCT]"]
+    confidence: tested
+    feeds: ["R_dual_trust_no_lean"]
+
+  - id: P5
+    role: condition
+    he: "ב/כל דרכי/ך דע/הו"
+    he_translit: "be-khol derakhekha da'ehu"
+    en: "in all your ways know Him"
+    en_note: "Command + kol-scope on ways; object suffix on know points to Him (YHWH). [EN-AID]"
+    verse: "3:6"
+    structure_note: "Single glue brick to etnachta = entire left half."
+    tags: ["[HE-WRITTEN]", "[HE-STRUCT]"]
+    confidence: tested
+    feeds: ["R_know_then_straighten", "STEP_Pr_3_6"]
+
+  - id: P6
+    role: other
+    he: "ו/הוא"
+    he_translit: "ve-hu"
+    en: "and He"
+    en_note: "Agent of result; context from 3:5 YHWH. [EN-AID]"
+    verse: "3:6"
+    structure_note: "Atomic brick (revia); right-half subject."
+    tags: ["[HE-WRITTEN]", "[HE-STRUCT]"]
+    confidence: hypothesis
+    feeds: ["R_know_then_straighten"]
+
+  - id: P7
+    role: consequence
+    he: "יישר ארחתי/ך"
+    he_translit: "yeyashsher orchotekha"
+    en: "will straighten your paths"
+    en_note: "Result verb + paths (ארחות / orchot). [EN-AID]"
+    verse: "3:6"
+    structure_note: "Glue brick ending silluq; effect under ו/הוא."
+    tags: ["[HE-WRITTEN]", "[HE-STRUCT]"]
+    confidence: tested
+    feeds: ["R_know_then_straighten"]
+
+# -----------------------------------------------------------------------------
+# Tree-derived STEPs (one per verse; arms cite Hebrew)
+boot_steps:
+  - id: STEP_Pr_3_5
+    order: 1
+    ref: "Prov.3.5"
+    op: DUAL_IMPERATIVE_SPLIT
+    he: "בטח אל יהוה ב/כל לב/ך … ו/אל בינת/ך אל תשען"
+    he_translit: "betach el YHWH be-khol libbekha … ve-el binatekha al tishsha'en"
+    en: >
+      [EN-AID] From top etnachta split: LEFT positive trust-with-all-heart;
+      RIGHT prohibitive do-not-lean on understanding. Dual pair, not IF/THEN.
+    tree_left:
+      he: "בטח אל יהוה ב/כל לב/ך"
+      he_translit: "betach el YHWH be-khol libbekha"
+      en: "Trust toward YHWH with all your heart"
+    tree_right:
+      he: "ו/אל בינת/ך אל תשען"
+      he_translit: "ve-el binatekha al tishsha'en"
+      en: "and toward your understanding do not lean"
+    comment: >
+      Poetry dual: dehi splits B0 trust-to-YHWH before etnachta manner B1.
+      maps_to R_dual_trust_no_lean only.
+    confidence: tested
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+  - id: STEP_Pr_3_6
+    order: 2
+    ref: "Prov.3.6"
+    op: COMMAND_THEN_RESULT
+    he: "ב/כל דרכי/ך דע/הו … ו/הוא יישר ארחתי/ך"
+    he_translit: "be-khol derakhekha da'ehu … ve-hu yeyashsher orchotekha"
+    en: >
+      [EN-AID] From top etnachta split: LEFT know-Him-in-all-ways command;
+      RIGHT He-will-straighten-paths result.
+    tree_left:
+      he: "ב/כל דרכי/ך דע/הו"
+      he_translit: "be-khol derakhekha da'ehu"
+      en: "In all your ways know Him"
+    tree_right:
+      he: "ו/הוא יישר ארחתי/ך"
+      he_translit: "ve-hu yeyashsher orchotekha"
+      en: "and He will straighten your paths"
+    comment: >
+      maps_to R_know_then_straighten. Agent ו/הוא / ve-hu / "and He" links to YHWH of 3:5 by discourse, not by repeating the name in 3:6.
+    confidence: hypothesis
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+# -----------------------------------------------------------------------------
+decision_table:
+  columns_note: >
+    WHEN cells are Hebrew-grounded stance/actions from the dual and know-command.
+    THEN cells are Hebrew-grounded prohibitions or divine results.
+    Not temple casuistry; instructional wisdom only. Not binding law.
+  rows:
+    - id: R_dual_trust_no_lean
+      when:
+        - id: W_trust_YHWH
+          he: "בטח אל יהוה"
+          he_translit: "betach el YHWH"
+          en: "trust toward YHWH"
+          comment: >
+            Positive imperative brick B0 (dehi). Condition = the stance commanded,
+            not a prior case feature like gender.
+          tags: ["[HE-WRITTEN]"]
+          confidence: tested
+          source: "Prov 3:5; taamim v3 B0"
+        - id: W_all_heart
+          he: "ב/כל לב/ך"
+          he_translit: "be-khol libbekha"
+          en: "with all your heart"
+          comment: "Manner/scope on the trust command (B1 to etnachta)."
+          tags: ["[HE-WRITTEN]"]
+          confidence: tested
+          source: "Prov 3:5; taamim v3 B1"
+      then:
+        - id: T_no_lean
+          he: "אל תשען"
+          he_translit: "al tishsha'en"
+          en: "do not lean"
+          comment: >
+            Parallel prohibitive half (B3). Paired object: ו/אל בינת/ך / ve-el binatekha /
+            "and toward your understanding" (B2) — lean-target of the prohibition.
+          tags: ["[HE-WRITTEN]"]
+          confidence: tested
+          source: "Prov 3:5; taamim v3 B2–B3"
+      row_comment: >
+        English summary: Dual instruction — trust YHWH with the whole heart,
+        and do not lean on your own understanding. Both arms are commands (TIR-023),
+        not condition→result. Tree: etnachta A ‖ B.
+      confidence: hypothesis
+      source: "[HE-WRITTEN][HE-STRUCT]"
+
+    - id: R_know_then_straighten
+      when:
+        - id: W_know_all_ways
+          he: "ב/כל דרכי/ך דע/הו"
+          he_translit: "be-khol derakhekha da'ehu"
+          en: "in all your ways know Him"
+          comment: "Left half of 3:6 (etnachta); command / IF-arm (TIR-024)."
+          tags: ["[HE-WRITTEN]"]
+          confidence: tested
+          source: "Prov 3:6; taamim v3 B0"
+      then:
+        - id: T_he_straightens
+          he: "ו/הוא יישר ארחתי/ך"
+          he_translit: "ve-hu yeyashsher orchotekha"
+          en: "and He will straighten your paths"
+          comment: >
+            Right half: agent ו/הוא / ve-hu / "and He" + effect יישר ארחתי/ך /
+            yeyashsher orchotekha / "will straighten your paths".
+          tags: ["[HE-WRITTEN]"]
+          confidence: tested
+          source: "Prov 3:6; taamim v3 B1–B2"
+      row_comment: >
+        English summary: If/when you know Him in all your ways, He straightens your paths.
+        Tree: etnachta command ‖ divine result (TIR-024).
+      confidence: hypothesis
+      source: "[HE-WRITTEN][HE-STRUCT]"
+
+# -----------------------------------------------------------------------------
+rules:
+  - id: RULE_dual_poetry_imperative
+    if:
+      he: "etnachta-split dual where both arms are imperative (positive ‖ אל-prohibition)"
+      he_translit: "n/a structure rule"
+      en: "Poetry dual imperative pattern (TIR-023)"
+    then:
+      he: "map left = positive command cluster; right = prohibitive cluster"
+      he_translit: "n/a"
+      en: "Emit dual row, not casuistic gender WHEN"
+    comment: >
+      Structural rule for 3:5-class verses. Cite TIR-023. Do not force IF→THEN.
+    confidence: hypothesis
+    source: "[HE-STRUCT] Prov.3.5"
+    tags: ["[INFER]", "[HE-STRUCT]"]
+
+  - id: RULE_command_then_divine_result
+    if:
+      he: "ב/כל דרכי/ך דע/הו"
+      he_translit: "be-khol derakhekha da'ehu"
+      en: "in all your ways know Him (etnachta left)"
+    then:
+      he: "ו/הוא יישר ארחתי/ך"
+      he_translit: "ve-hu yeyashsher orchotekha"
+      en: "and He will straighten your paths (etnachta right)"
+    comment: "Sparse IF–THEN mirroring R_know_then_straighten; TIR-024."
+    confidence: hypothesis
+    source: "[HE-WRITTEN][HE-STRUCT] Prov.3.6"
+    tags: ["[HE-WRITTEN]"]
+
+# -----------------------------------------------------------------------------
+state_machine:
+  comment_en: >
+    Coarse stance machine for the dual (not full psychology). States are English labels
+    for accessibility; transitions cite Hebrew-derived events.
+  states:
+    - id: S_open
+      he: "פתיחה"
+      he_translit: "petichah"
+      en: "block open (before dual)"
+      comment: "Structural only."
+      tags: ["[INFER]"]
+      confidence: hypothesis
+      source: ""
+    - id: S_trust_all_heart
+      he: "בטח … ב/כל לב/ך"
+      he_translit: "betach … be-khol libbekha"
+      en: "trusting YHWH with all heart"
+      comment: "Positive arm of dual applied."
+      tags: ["[HE-WRITTEN]"]
+      confidence: hypothesis
+      source: "Prov 3:5 left"
+    - id: S_not_leaning_binah
+      he: "אל תשען על בינה"
+      he_translit: "al tishsha'en al binah"
+      en: "not leaning on (own) understanding"
+      comment: >
+        Prohibitive arm. Hebrew object is בינת/ך / binatekha / "your understanding".
+      tags: ["[HE-WRITTEN]"]
+      confidence: hypothesis
+      source: "Prov 3:5 right"
+    - id: S_knowing_in_ways
+      he: "דע/הו ב/כל דרכי/ך"
+      he_translit: "da'ehu be-khol derakhekha"
+      en: "knowing Him in all ways"
+      comment: "3:6 left command engaged."
+      tags: ["[HE-WRITTEN]"]
+      confidence: hypothesis
+      source: "Prov 3:6 left"
+    - id: S_paths_straightened
+      he: "ארחתי/ך יישרו"
+      he_translit: "orchotekha yeyusharu"
+      en: "paths straightened (by Him)"
+      comment: "Result state; agent is ו/הוא / ve-hu / \"and He\"."
+      tags: ["[HE-WRITTEN]"]
+      confidence: hypothesis
+      source: "Prov 3:6 right"
+  events:
+    - id: E_apply_trust
+      he: "בטח אל יהוה"
+      he_translit: "betach el YHWH"
+      en: "apply trust-to-YHWH command"
+      comment: "From P1/B0."
+      tags: ["[HE-WRITTEN]"]
+      confidence: hypothesis
+      source: "Prov 3:5"
+    - id: E_apply_no_lean
+      he: "אל תשען"
+      he_translit: "al tishsha'en"
+      en: "apply do-not-lean command"
+      comment: "From P4/B3."
+      tags: ["[HE-WRITTEN]"]
+      confidence: hypothesis
+      source: "Prov 3:5"
+    - id: E_know_him
+      he: "דע/הו"
+      he_translit: "da'ehu"
+      en: "know Him (in all ways)"
+      comment: "From P5."
+      tags: ["[HE-WRITTEN]"]
+      confidence: hypothesis
+      source: "Prov 3:6"
+    - id: E_he_straightens
+      he: "יישר"
+      he_translit: "yeyashsher"
+      en: "He straightens"
+      comment: "Result event under ו/הוא."
+      tags: ["[HE-WRITTEN]"]
+      confidence: hypothesis
+      source: "Prov 3:6"
+  transitions:
+    - id: TR1
+      from: S_open
+      event: E_apply_trust
+      guard: []
+      to: S_trust_all_heart
+      effects: []
+      comment: "Engage positive dual arm."
+      tags: ["[HE-WRITTEN]"]
+      confidence: hypothesis
+      source: "R_dual_trust_no_lean"
+    - id: TR2
+      from: S_trust_all_heart
+      event: E_apply_no_lean
+      guard: []
+      to: S_not_leaning_binah
+      effects: []
+      comment: "Engage prohibitive dual arm (parallel, not exclusive sequence required by tree)."
+      tags: ["[HE-WRITTEN]"]
+      confidence: hypothesis
+      source: "R_dual_trust_no_lean"
+    - id: TR3
+      from: S_not_leaning_binah
+      event: E_know_him
+      guard: []
+      to: S_knowing_in_ways
+      effects: []
+      comment: "3:6 command after dual stance (discourse order of verses)."
+      tags: ["[HE-WRITTEN]"]
+      confidence: hypothesis
+      source: "R_know_then_straighten"
+    - id: TR4
+      from: S_knowing_in_ways
+      event: E_he_straightens
+      guard: []
+      to: S_paths_straightened
+      effects: []
+      comment: "Divine result arm of 3:6."
+      tags: ["[HE-WRITTEN]"]
+      confidence: hypothesis
+      source: "R_know_then_straighten"
+
+# -----------------------------------------------------------------------------
+tree_coverage:
+  meta:
+    total_words: 15
+    accounted: 15
+    accounted_pct: 100
+    with_tir_pct: 100
+    note_en: >
+      Every word of Prov 3:5–6 assigned a role. Poetry TIRs 023–024 are seed
+      (hypothesis) until re-used on more duals (e.g. 14:12, 15:1).
+  verses:
+    - ref: "Prov.3.5"
+      osis_id: "Prov.3.5"
+      words:
+        - index: 0
+          he: "בטח"
+          he_translit: "betach"
+          en: "trust! (imperative)"
+          role: positive_imperative
+          kind: logic_bearing
+          interp_rule: "TIR-023"
+          feeds: ["R_dual_trust_no_lean", "P1"]
+          confidence: tested
+        - index: 1
+          he: "אל"
+          he_translit: "el"
+          en: "to / toward"
+          role: glue_directional
+          kind: glue
+          interp_rule: "TIR-022"
+          feeds: ["P1"]
+          confidence: tested
+          comment: "Directional prep toward YHWH; not prohibitive אל."
+        - index: 2
+          he: "יהוה"
+          he_translit: "YHWH"
+          en: "the LORD (divine name)"
+          role: trust_object_divine
+          kind: logic_bearing
+          interp_rule: "TIR-023"
+          feeds: ["R_dual_trust_no_lean", "P1"]
+          confidence: tested
+        - index: 3
+          he: "ב/כל"
+          he_translit: "be-khol"
+          en: "in/with all"
+          role: set_maximize_manner
+          kind: logic_bearing
+          interp_rule: "TIR-016"
+          feeds: ["P2"]
+          confidence: hypothesis
+          comment: "כל / kol maximizes heart-scope (manner), analogous to set_maximize."
+        - index: 4
+          he: "לב/ך"
+          he_translit: "libbekha"
+          en: "your heart"
+          role: manner_locus_heart
+          kind: logic_bearing
+          interp_rule: "TIR-023"
+          feeds: ["P2"]
+          confidence: tested
+        - index: 5
+          he: "ו/אל"
+          he_translit: "ve-el"
+          en: "and to/toward"
+          role: glue_directional_seq
+          kind: glue
+          interp_rule: "TIR-022"
+          feeds: ["P3"]
+          confidence: tested
+        - index: 6
+          he: "בינת/ך"
+          he_translit: "binatekha"
+          en: "your understanding"
+          role: prohibited_lean_target
+          kind: logic_bearing
+          interp_rule: "TIR-023"
+          feeds: ["P3", "R_dual_trust_no_lean"]
+          confidence: tested
+        - index: 7
+          he: "אל"
+          he_translit: "al"
+          en: "do not (prohibitive)"
+          role: prohibitive_particle
+          kind: logic_bearing
+          interp_rule: "TIR-023"
+          feeds: ["P4"]
+          confidence: tested
+          comment: "Prohibitive אל / al — distinct from directional אל / el in words 1,5."
+        - index: 8
+          he: "תשען"
+          he_translit: "tishsha'en"
+          en: "you shall lean / rely"
+          role: prohibited_verb
+          kind: logic_bearing
+          interp_rule: "TIR-023"
+          feeds: ["P4", "R_dual_trust_no_lean"]
+          confidence: tested
+
+    - ref: "Prov.3.6"
+      osis_id: "Prov.3.6"
+      words:
+        - index: 0
+          he: "ב/כל"
+          he_translit: "be-khol"
+          en: "in all"
+          role: set_maximize_domain
+          kind: logic_bearing
+          interp_rule: "TIR-016"
+          feeds: ["P5"]
+          confidence: hypothesis
+        - index: 1
+          he: "דרכי/ך"
+          he_translit: "derakhekha"
+          en: "your ways"
+          role: domain_ways
+          kind: logic_bearing
+          interp_rule: "TIR-024"
+          feeds: ["P5", "R_know_then_straighten"]
+          confidence: tested
+        - index: 2
+          he: "דע/הו"
+          he_translit: "da'ehu"
+          en: "know Him"
+          role: command_know
+          kind: logic_bearing
+          interp_rule: "TIR-024"
+          feeds: ["P5", "R_know_then_straighten"]
+          confidence: tested
+        - index: 3
+          he: "ו/הוא"
+          he_translit: "ve-hu"
+          en: "and He"
+          role: divine_agent
+          kind: logic_bearing
+          interp_rule: "TIR-024"
+          feeds: ["P6", "R_know_then_straighten"]
+          confidence: hypothesis
+        - index: 4
+          he: "יישר"
+          he_translit: "yeyashsher"
+          en: "will straighten"
+          role: result_verb
+          kind: logic_bearing
+          interp_rule: "TIR-024"
+          feeds: ["P7", "R_know_then_straighten"]
+          confidence: tested
+        - index: 5
+          he: "ארחתי/ך"
+          he_translit: "orchotekha"
+          en: "your paths"
+          role: result_object_paths
+          kind: logic_bearing
+          interp_rule: "TIR-024"
+          feeds: ["P7"]
+          confidence: tested
+
+# -----------------------------------------------------------------------------
+oral_attachments: []
+# No Oral in this draft. Future dual-track only with named tractate/location.
+
+# -----------------------------------------------------------------------------
+scenarios:
+  - id: SC1_full_chain
+    description_en: >
+      A person trusts toward YHWH with all the heart, does not lean on their own
+      understanding, and knows Him in all their ways.
+    inputs_en: >
+      Stance matches בטח אל יהוה ב/כל לב/ך / betach el YHWH be-khol libbekha /
+      "trust toward YHWH with all your heart"; avoids אל תשען / al tishsha'en /
+      "do not lean" on בינת/ך / binatekha / "your understanding"; does
+      ב/כל דרכי/ך דע/הו / be-khol derakhekha da'ehu / "in all your ways know Him".
+    expected:
+      - field: "dual_commands"
+        value_en: "both arms of the dual satisfied"
+        value_he: "בטח … ואל תשען"
+        value_he_translit: "betach … ve-al tishsha'en"
+        justified_by: "R_dual_trust_no_lean"
+      - field: "paths"
+        value_en: "He straightens the paths"
+        value_he: "יישר ארחתי/ך"
+        value_he_translit: "yeyashsher orchotekha"
+        justified_by: "R_know_then_straighten"
+    comment: >
+      Full written chain of 3:5–6. Result agent is ו/הוא / ve-hu / "and He".
+    confidence: hypothesis
+
+  - id: SC2_lean_on_binah
+    description_en: >
+      A person relies on their own understanding and does not take the trust dual.
+    inputs_en: >
+      Acts as leaning on בינת/ך / binatekha / "your understanding" contrary to
+      אל תשען / al tishsha'en / "do not lean".
+    expected:
+      - field: "prohibition"
+        value_en: "violates prohibitive arm of dual"
+        value_he: "אל תשען"
+        value_he_translit: "al tishsha'en"
+        justified_by: "R_dual_trust_no_lean"
+    comment: >
+      Does not invent extra punishments; only flags the written prohibition.
+    confidence: hypothesis
+
+  - id: SC3_know_without_claiming_extra
+    description_en: >
+      Someone knows Him in all ways; text states He will straighten paths.
+    inputs_en: >
+      Matches ב/כל דרכי/ך דע/הו / be-khol derakhekha da'ehu /
+      "in all your ways know Him".
+    expected:
+      - field: "result"
+        value_en: "and He will straighten your paths"
+        value_he: "ו/הוא יישר ארחתי/ך"
+        value_he_translit: "ve-hu yeyashsher orchotekha"
+        justified_by: "R_know_then_straighten"
+    comment: >
+      No English-only conditions (e.g. "success in career") added beyond ארחתי/ך /
+      orchotekha / "your paths".
+    confidence: hypothesis
+
+# -----------------------------------------------------------------------------
+english_leakage_checklist:
+  no_english_only_conditions: true
+  all_numbers_cite_hebrew: true   # no numeric durations in this unit
+  comments_teach_hebrew: true
+  confidence_labels_present: true
+  he_en_conflicts_noted: true
+  reviewer_comment: >
+    Draft self-check: WHEN/THEN quote Hebrew with translit. Free glosses marked
+    [EN-AID]. Agent link ו/הוא → YHWH is discourse hypothesis, labeled as such.
+    status stays draft (not frozen). Owner may re-open dual vs IF/THEN labeling.

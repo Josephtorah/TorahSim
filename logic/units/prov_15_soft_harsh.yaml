@@ -1,0 +1,427 @@
+# =============================================================================
+# LOGIC UNIT: Proverbs 15:1 — Soft answer turns wrath; harsh word stirs anger
+# Third poetry Pre-Code unit — dual contrast (parallel outcomes) to promote TIR-023
+# =============================================================================
+# Experimental model — not binding religious law.
+
+meta:
+  id: "prov_15_soft_harsh"
+  title_en: "Soft answer turns wrath; harsh word raises anger (15:1)"
+  title_he: "מַעֲנֶה־רַּךְ"
+  title_he_translit: "ma'aneh rakh"
+  title_he_en: "a soft answer"
+  book_he: "מִשְׁלֵי"
+  book_he_translit: "Mishlei"
+  book_en: "Proverbs"
+  refs: "15:1"
+  data_paths_he:
+    - "/tmp/morphhb/wlc/Prov.xml"
+  status: draft
+  confidence_overall: hypothesis
+  genre: "instructional_dual"
+  build_track: poetry_wisdom_seed
+  depends_on:
+    - "prov_03_trust_know"
+  parser_rule_set: "v3"
+  related_parse_docs:
+    - "logic/Parse_tree_2026-07-27/DONE_poetry_checkpoint_2026-07-27.md"
+  owner_language_note: >
+    Reader is fluent in English only, not Hebrew. Hebrew is the derivation source.
+  oral_policy_note_en: >
+    Written trees first. Dual-track Oral only when named; never silent-merge.
+  method_note_en: >
+    Second dual-imperative-style contrast (cause→effect ‖ cause→effect) under TIR-023 family.
+    Both arms are descriptive duals (not אל-prohibition like 3:5), but same etnachta A‖B
+    poetry dual mapping: two parallel instruction clusters.
+
+derivation_log:
+  - step: A
+    name_en: "Choose unit"
+    comment: >
+      Closure pack: re-use dual pattern after prov_03 to promote TIR-023 beyond one verse.
+      Hebrew מִשְׁלֵי / Mishlei / "Proverbs" 15:1.
+    tags: ["[HE-WRITTEN]"]
+    confidence: established
+  - step: B
+    name_en: "Hebrew source"
+    comment: "OSHB Prov.xml via taamim_tree_parse.py v3 poetry."
+    tags: ["[HE-WRITTEN]"]
+    confidence: tested
+  - step: C
+    name_en: "Trees"
+    comment: "unique, pure_binary, leaf_complete; 8 words, 4 bricks; etnachta dual."
+    tags: ["[HE-STRUCT]"]
+    confidence: tested
+  - step: D
+    name_en: "Predicates"
+    comment: >
+      LEFT: מענה רך ישיב חמה / ma'aneh rakh yashiv chemah /
+      "a soft answer turns back wrath".
+      RIGHT: ו/דבר עצב יעלה אף / ve-devar etsev ya'aleh af /
+      "and a painful word raises anger".
+    tags: ["[HE-WRITTEN]"]
+    confidence: hypothesis
+  - step: E
+    name_en: "Format"
+    comment: "decision_table dual row; TIR-023 dual poetry (parallel effect arms)."
+    tags: ["[INFER]"]
+    confidence: hypothesis
+  - step: F
+    name_en: "Fill objects"
+    comment: "phrase_map + tree_coverage 8/8."
+    tags: ["[HE-WRITTEN]"]
+    confidence: hypothesis
+  - step: G
+    name_en: "Oral"
+    comment: "No Oral in this draft."
+    tags: ["[ORAL]"]
+    confidence: hypothesis
+  - step: H
+    name_en: "Scenarios"
+    comment: "Soft vs harsh speech outcomes."
+    tags: ["[HE-WRITTEN]"]
+    confidence: hypothesis
+  - step: I
+    name_en: "English-leakage"
+    comment: "Ground on Hebrew מענה רך / דבר עצב not English psychology only."
+    tags: ["[EN-AID]"]
+    confidence: hypothesis
+  - step: J
+    name_en: "Freeze"
+    comment: "status draft; not frozen."
+    tags: []
+    confidence: hypothesis
+
+binary_trees:
+  method_note_en: "v3 poetry; top-down display contract."
+  data_source: "/tmp/morphhb/wlc/Prov.xml"
+  parser: "taamim_tree_parse.py"
+  rule_set_version: "v3"
+  system: "poetry"
+  tags: ["[HE-STRUCT]"]
+  verse_trees:
+    Prov_15_1:
+      verse: "15:1"
+      osis_id: "Prov.15.1"
+      parser_status: unique
+      pure_binary: true
+      leaf_complete: true
+      word_count: 8
+      brick_count: 4
+      linear:
+        he: "מענה רך ישיב חמה ו/דבר עצב יעלה אף"
+        he_translit: "ma'aneh rakh yashiv chemah ve-devar etsev ya'aleh af"
+        en: "A soft answer turns back wrath, and a painful word raises anger."
+        en_note: "Free gloss [EN-AID]."
+      top_binary_split:
+        comment: >
+          Etnachta dual: LEFT soft-answer → turns wrath; RIGHT painful-word → raises anger.
+          TIR-023 family (poetry dual A‖B). Parallel cause→effect, not path→end (TIR-025).
+        left_half:
+          phrase:
+            he: "מענה רך ישיב חמה"
+            he_translit: "ma'aneh rakh yashiv chemah"
+            en: "a soft answer turns back wrath"
+        right_half:
+          phrase:
+            he: "ו/דבר עצב יעלה אף"
+            he_translit: "ve-devar etsev ya'aleh af"
+            en: "and a painful word raises anger"
+      nested_bricks:
+        - id: B0
+          words: [0, 1]
+          end_mark: dehi
+          he: "מענה רך"
+          he_translit: "ma'aneh rakh"
+          en: "a soft answer"
+          role_en: "cause_soft_answer"
+        - id: B1
+          words: [2, 3]
+          end_mark: etnachta
+          he: "ישיב חמה"
+          he_translit: "yashiv chemah"
+          en: "turns back wrath"
+          role_en: "effect_turn_wrath"
+        - id: B2
+          words: [4, 5]
+          end_mark: revia
+          he: "ו/דבר עצב"
+          he_translit: "ve-devar etsev"
+          en: "and a painful / grievous word"
+          role_en: "cause_harsh_word"
+        - id: B3
+          words: [6, 7]
+          end_mark: silluq
+          he: "יעלה אף"
+          he_translit: "ya'aleh af"
+          en: "raises anger"
+          role_en: "effect_raise_anger"
+      tree_ascii: |
+        PHRASE (binary 8w)
+        ├── PHRASE (binary 4w)
+        │   ├── [0-1] GLUE מענה רך (dehi)
+        │   └── [2-3] GLUE ישיב חמה (etnachta)
+        └── PHRASE (binary 4w)
+            ├── [4-5] GLUE ו/דבר עצב (revia)
+            └── [6-7] GLUE יעלה אף (silluq)
+      maps_to:
+        - "R_soft_harsh_dual"
+        - "STEP_Pr_15_1"
+      confidence: tested
+      source: "[HE-STRUCT][HE-WRITTEN] taamim v3 golden Prov.15.1"
+
+  tree_to_logic_index:
+    - from: "top left"
+      to: "R_soft_harsh_dual.arm_soft"
+      relation: "soft answer → turns wrath"
+    - from: "top right"
+      to: "R_soft_harsh_dual.arm_harsh"
+      relation: "painful word → raises anger"
+
+phrase_map:
+  - id: P1
+    role: condition
+    he: "מענה רך"
+    he_translit: "ma'aneh rakh"
+    en: "a soft answer"
+    en_note: "מענה / ma'aneh / \"answer\" + רך / rakh / \"soft\". [EN-AID]"
+    verse: "15:1"
+    structure_note: "B0 dehi"
+    tags: ["[HE-WRITTEN]", "[HE-STRUCT]"]
+    confidence: tested
+    feeds: ["R_soft_harsh_dual"]
+  - id: P2
+    role: consequence
+    he: "ישיב חמה"
+    he_translit: "yashiv chemah"
+    en: "turns back wrath"
+    en_note: "ישיב / yashiv / \"turns back\" + חמה / chemah / \"wrath\". [EN-AID]"
+    verse: "15:1"
+    structure_note: "B1 etnachta"
+    tags: ["[HE-WRITTEN]", "[HE-STRUCT]"]
+    confidence: tested
+    feeds: ["R_soft_harsh_dual"]
+  - id: P3
+    role: condition
+    he: "ו/דבר עצב"
+    he_translit: "ve-devar etsev"
+    en: "and a painful word"
+    en_note: "דבר / devar / \"word of\" + עצב / etsev / \"pain/grief\". [EN-AID]"
+    verse: "15:1"
+    structure_note: "B2 revia"
+    tags: ["[HE-WRITTEN]", "[HE-STRUCT]"]
+    confidence: tested
+    feeds: ["R_soft_harsh_dual"]
+  - id: P4
+    role: consequence
+    he: "יעלה אף"
+    he_translit: "ya'aleh af"
+    en: "raises anger"
+    en_note: "יעלה / ya'aleh / \"raises\" + אף / af / \"anger/nose\". [EN-AID]"
+    verse: "15:1"
+    structure_note: "B3 silluq"
+    tags: ["[HE-WRITTEN]", "[HE-STRUCT]"]
+    confidence: tested
+    feeds: ["R_soft_harsh_dual"]
+
+boot_steps:
+  - id: STEP_Pr_15_1
+    order: 1
+    ref: "Prov.15.1"
+    op: DUAL_IMPERATIVE_SPLIT
+    he: "מענה רך ישיב חמה … ו/דבר עצב יעלה אף"
+    he_translit: "ma'aneh rakh yashiv chemah … ve-devar etsev ya'aleh af"
+    en: "[EN-AID] Dual etnachta: soft-answer arm ‖ harsh-word arm."
+    tree_left:
+      he: "מענה רך ישיב חמה"
+      he_translit: "ma'aneh rakh yashiv chemah"
+      en: "a soft answer turns back wrath"
+    tree_right:
+      he: "ו/דבר עצב יעלה אף"
+      he_translit: "ve-devar etsev ya'aleh af"
+      en: "and a painful word raises anger"
+    comment: "TIR-023 dual A‖B (second locus after Prov 3:5)."
+    confidence: tested
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+decision_table:
+  columns_note: >
+    Dual parallel arms: soft speech → turns wrath; harsh speech → raises anger.
+    Not casuistic temple law. Not binding.
+  rows:
+    - id: R_soft_harsh_dual
+      when:
+        - id: W_soft
+          he: "מענה רך"
+          he_translit: "ma'aneh rakh"
+          en: "a soft answer"
+          comment: "Left cause brick B0."
+          tags: ["[HE-WRITTEN]"]
+          confidence: tested
+          source: "Prov 15:1"
+      then:
+        - id: T_turn_wrath
+          he: "ישיב חמה"
+          he_translit: "yashiv chemah"
+          en: "turns back wrath"
+          comment: "Left effect B1."
+          tags: ["[HE-WRITTEN]"]
+          confidence: tested
+          source: "Prov 15:1"
+      row_comment: "Soft arm of dual (also see parallel harsh arm as second when/then pair in comment)."
+      confidence: hypothesis
+      source: "[HE-WRITTEN][HE-STRUCT]"
+    - id: R_harsh_raises_anger
+      when:
+        - id: W_harsh
+          he: "ו/דבר עצב"
+          he_translit: "ve-devar etsev"
+          en: "and a painful word"
+          comment: "Right cause B2."
+          tags: ["[HE-WRITTEN]"]
+          confidence: tested
+          source: "Prov 15:1"
+      then:
+        - id: T_raise_af
+          he: "יעלה אף"
+          he_translit: "ya'aleh af"
+          en: "raises anger"
+          comment: "Right effect B3."
+          tags: ["[HE-WRITTEN]"]
+          confidence: tested
+          source: "Prov 15:1"
+      row_comment: "Harsh arm of the same etnachta dual (TIR-023)."
+      confidence: hypothesis
+      source: "[HE-WRITTEN][HE-STRUCT]"
+
+rules:
+  - id: RULE_dual_soft_harsh
+    if:
+      he: "etnachta dual with cause→effect in each arm"
+      he_translit: "n/a"
+      en: "Poetry dual A‖B (TIR-023)"
+    then:
+      he: "two parallel decision rows or one dual row with two arms"
+      he_translit: "n/a"
+      en: "Soft turns wrath; harsh raises anger"
+    comment: "Second TIR-023 locus (with Prov 3:5)."
+    confidence: tested
+    source: "[HE-STRUCT] Prov.15.1"
+    tags: ["[HE-STRUCT]"]
+
+tree_coverage:
+  meta:
+    total_words: 8
+    accounted: 8
+    accounted_pct: 100
+    note_en: "TIR-023 on dual arms; all words accounted."
+  verses:
+    - ref: "Prov.15.1"
+      osis_id: "Prov.15.1"
+      words:
+        - index: 0
+          he: "מענה"
+          he_translit: "ma'aneh"
+          en: "answer"
+          role: cause_noun_answer
+          kind: logic_bearing
+          interp_rule: "TIR-023"
+          feeds: ["P1", "R_soft_harsh_dual"]
+          confidence: tested
+        - index: 1
+          he: "רך"
+          he_translit: "rakh"
+          en: "soft"
+          role: cause_quality_soft
+          kind: logic_bearing
+          interp_rule: "TIR-023"
+          feeds: ["P1"]
+          confidence: tested
+        - index: 2
+          he: "ישיב"
+          he_translit: "yashiv"
+          en: "turns back"
+          role: effect_verb_turn
+          kind: logic_bearing
+          interp_rule: "TIR-023"
+          feeds: ["P2"]
+          confidence: tested
+        - index: 3
+          he: "חמה"
+          he_translit: "chemah"
+          en: "wrath"
+          role: effect_object_wrath
+          kind: logic_bearing
+          interp_rule: "TIR-023"
+          feeds: ["P2"]
+          confidence: tested
+        - index: 4
+          he: "ו/דבר"
+          he_translit: "ve-devar"
+          en: "and a word of"
+          role: cause_noun_word
+          kind: logic_bearing
+          interp_rule: "TIR-023"
+          feeds: ["P3", "R_harsh_raises_anger"]
+          confidence: tested
+        - index: 5
+          he: "עצב"
+          he_translit: "etsev"
+          en: "pain / grief"
+          role: cause_quality_harsh
+          kind: logic_bearing
+          interp_rule: "TIR-023"
+          feeds: ["P3"]
+          confidence: tested
+        - index: 6
+          he: "יעלה"
+          he_translit: "ya'aleh"
+          en: "raises"
+          role: effect_verb_raise
+          kind: logic_bearing
+          interp_rule: "TIR-023"
+          feeds: ["P4"]
+          confidence: tested
+        - index: 7
+          he: "אף"
+          he_translit: "af"
+          en: "anger"
+          role: effect_object_anger
+          kind: logic_bearing
+          interp_rule: "TIR-023"
+          feeds: ["P4", "R_harsh_raises_anger"]
+          confidence: tested
+
+oral_attachments: []
+
+scenarios:
+  - id: SC1_soft
+    description_en: "Someone gives a soft answer."
+    inputs_en: "מענה רך / ma'aneh rakh / \"a soft answer\"."
+    expected:
+      - field: "effect"
+        value_en: "turns back wrath"
+        value_he: "ישיב חמה"
+        value_he_translit: "yashiv chemah"
+        justified_by: "R_soft_harsh_dual"
+    comment: "Left arm only."
+    confidence: hypothesis
+  - id: SC2_harsh
+    description_en: "Someone speaks a painful word."
+    inputs_en: "דבר עצב / devar etsev / \"a painful word\"."
+    expected:
+      - field: "effect"
+        value_en: "raises anger"
+        value_he: "יעלה אף"
+        value_he_translit: "ya'aleh af"
+        justified_by: "R_harsh_raises_anger"
+    comment: "Right arm only."
+    confidence: hypothesis
+
+english_leakage_checklist:
+  no_english_only_conditions: true
+  all_numbers_cite_hebrew: true
+  comments_teach_hebrew: true
+  confidence_labels_present: true
+  he_en_conflicts_noted: true
+  reviewer_comment: "Draft dual for TIR-023 promotion; not frozen."

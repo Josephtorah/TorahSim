@@ -1,0 +1,221 @@
+# SCHEMA.yaml — Pre-Code Logic System field definitions
+# Human-readable schema (not a strict JSON Schema validator).
+# All unit files under logic/units/ should follow this shape.
+#
+# Language policy (HARD — future derivations must follow):
+#   - Hebrew fields (he, he_span, …) are SOURCE.
+#   - he_translit is REQUIRED whenever he is present (not optional).
+#   - English fields (en, comment, …) are ACCESSIBILITY + documentation.
+#   - Owner is English-fluent only; comments must teach the Hebrew.
+#   - Never bare Hebrew in trees, tables, guards, effects, scenarios, or comments.
+#   - Inline comment form: עברית / translit / "English gloss"
+#   - Scenarios: value_he + value_he_translit + value_en
+
+# ---------------------------------------------------------------------------
+# Top-level unit document
+# ---------------------------------------------------------------------------
+unit:
+  meta:
+    id: string                    # e.g. "lev_12_childbirth"
+    title_en: string              # English title for navigation
+    title_he: string              # Hebrew title or short label if known
+    title_he_translit: string     # required if title_he set
+    title_he_en: string           # English of title_he
+    book_he: string               # e.g. "ויקרא"
+    book_he_translit: string      # e.g. "Vayikra"
+    book_en: string               # e.g. "Leviticus"
+    refs: string                  # e.g. "12:1-8"
+    data_paths_he: [string]       # paths under Data/ for Hebrew sources
+    data_paths_en_aid: [string]   # optional English aids only
+    status: draft | review | frozen
+    confidence_overall: hypothesis | tested | failed | dead_end | established
+    owner_language_note: string   # remind: English-only reader; HE is source
+
+  # Ordered log of the derivation process (comments required on each step)
+  derivation_log:
+    - step: A | B | C | D | E | F | G | H | I | J
+      name_en: string
+      comment: string             # English narrative of what was done
+      tags: [string]              # e.g. [HE-WRITTEN], [EN-AID]
+      confidence: hypothesis | tested | failed | dead_end | established
+
+  # Structure before semantics — REQUIRED show-all-work (see SHOW_WORK_TREES_*.md)
+  binary_trees:
+    rule_set_version: string      # e.g. "v1" — which taamim_rules package
+    parser: string                # "taamim_tree_parse.py"
+    data_source: string           # e.g. "Data/Gen.xml"
+    method_note_en: string
+    tags: [string]
+    verse_trees:
+      VERSE_KEY:                  # e.g. Gen_1_14
+        verse: string
+        osis_id: string
+        parser_status: unique | multi | fail
+        pure_binary: bool
+        word_count: int
+        linear:
+          he: string
+          he_translit: string     # required
+          en: string
+          en_note: string
+        top_binary_split:
+          comment: string
+          left_half:
+            phrase: { he, he_translit, en }
+          right_half:
+            phrase: { he, he_translit, en }
+        tree_ascii: string        # full --tree output (block scalar)
+        maps_to: [string]         # boot step / rule ids
+        confidence: ...
+        source: string
+
+  # Every leaf of the trees above (100% aspiration) — companion to binary_trees
+  tree_coverage:
+    meta: { total_words: int, note_en: string }
+    verses:                       # or list of { ref, words: [...] }
+      - ref: string
+        words:
+          - index: int
+            he: string
+            he_translit: string
+            en: string
+            role: string
+            kind: logic_bearing | glue
+            feeds: [string]
+
+  # Structure before semantics
+  phrase_map:
+    - id: string
+      role: header | condition | consequence | reference | implication | ritual_close | other
+      he: string                  # exact Hebrew phrase/span
+      he_translit: string         # optional
+      en: string                  # free English gloss (NOT a source)
+      en_note: string             # e.g. "free translation"
+      verse: string               # e.g. "12:2"
+      structure_note: string      # ta'amim / clause / פס — English comment
+      tags: [string]
+      confidence: ...
+
+  # Casuistic cases
+  decision_table:
+    columns_note: string          # English explanation of columns
+    rows:
+      - id: string                # e.g. "R_male"
+        when:
+          - id: string
+            he: string
+            he_translit: string
+            en: string
+            comment: string       # why this is a condition
+            tags: [string]
+            confidence: ...
+            source: string        # e.g. "Lev 12:2; Data/..."
+        then:
+          - id: string
+            he: string
+            he_translit: string
+            en: string
+            comment: string
+            tags: [string]
+            confidence: ...
+            source: string
+        row_comment: string       # English summary of the whole row
+
+  # Status over time / events
+  state_machine:
+    states:
+      - id: string
+        he: string
+        he_translit: string
+        en: string
+        comment: string
+        tags: [string]
+        confidence: ...
+        source: string
+    events:
+      - id: string
+        he: string
+        he_translit: string
+        en: string
+        comment: string
+        tags: [string]
+        confidence: ...
+        source: string
+    transitions:
+      - id: string
+        from: string              # state id
+        event: string             # event id
+        guard:                    # optional extra conditions
+          - he: string
+            en: string
+            comment: string
+            source: string
+        to: string
+        effects:                  # optional variable updates (still from HE)
+          - he: string
+            en: string
+            comment: string
+            source: string
+        comment: string
+        tags: [string]
+        confidence: ...
+        source: string
+
+  # Sparse IF–THEN rules
+  rules:
+    - id: string
+      if:
+        - he: string
+          he_translit: string
+          en: string
+          comment: string
+          tags: [string]
+          confidence: ...
+          source: string
+      then:
+        - he: string
+          he_translit: string
+          en: string
+          comment: string
+          tags: [string]
+          confidence: ...
+          source: string
+      comment: string
+      tags: [string]
+      confidence: ...
+
+  # Optional Oral layer — never silent merge into Written
+  oral_attachments:
+    - id: string
+      corpus: mishnah | talmud | midrash | other
+      location: string            # e.g. "Niddah 3:7" / "Niddah 31a"
+      he: string
+      he_translit: string
+      en: string
+      relates_to: [string]        # rule / row / transition ids
+      comment: string
+      tags: [string]              # must include [ORAL:...]
+      confidence: ...
+
+  # Tests without executable code
+  scenarios:
+    - id: string
+      description_en: string
+      inputs_en: string
+      expected:
+        - field: string
+          value_en: string
+          value_he: string        # when a Hebrew term is the real expected token
+          value_he_translit: string  # REQUIRED if value_he is set
+          justified_by: string    # rule/row/transition id
+      comment: string
+      confidence: ...
+
+  # Final gate
+  english_leakage_checklist:
+    no_english_only_conditions: bool
+    all_numbers_cite_hebrew: bool
+    comments_teach_hebrew: bool
+    confidence_labels_present: bool
+    he_en_conflicts_noted: bool
+    reviewer_comment: string

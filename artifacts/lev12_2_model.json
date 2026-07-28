@@ -1,0 +1,23 @@
+{
+  "verse": "Leviticus 12:2",
+  "hebrew": "דַּבֵּ֨ר אֶל־בְּנֵ֣י יִשְׂרָאֵל֮ לֵאמֹר֒ אִשָּׁה֙ כִּ֣י תַזְרִ֔יעַ וְיָלְדָ֖ה זָכָ֑ר וְטָמְאָ֖ה שִׁבְעַ֣ת יָמִ֑ים כִּימֵ֙י נִדַּ֣ת דְּוֹתָ֔הּ תִּטְמָֽא׃",
+  "provenance": "Web Grok recovery paste (2026-07-10). Representation only — not autonomous law generation.",
+  "taamim_tree_mapping": {
+    "condition_pivot": "birth + male (strong disjunctive near 'zachar') → IF trigger",
+    "consequence_subtree": "impurity 7 days + niddah reference → THEN rules",
+    "header": "divine address (setup, not part of logic)"
+  },
+  "derived_logic": {
+    "if": "child_gender == 'male'",
+    "then": {
+      "impurity_duration_days": 7,
+      "status": "impure",
+      "reference": "niddah rule"
+    }
+  },
+  "oral_derivation_link": {
+    "source": "Talmud Niddah 31a",
+    "content": "Explains related rules for female birth (doubled periods) and symbolic reasons (e.g., mother's potential oath during labor)"
+  },
+  "justification": "Direct from ta'amim hierarchical divisions. 'IF' placed at the gender/birth pivot per standard prose accent ranking. Variables extracted from delimited phrases only."
+}

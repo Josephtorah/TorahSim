@@ -1,0 +1,344 @@
+# =============================================================================
+# LOGIC UNIT: BR 1:1 amon-cluster — tree-derived code for Gen 1:1 + cited ports
+# Tree-first phase A · experimental · NOT binding religious law
+# =============================================================================
+# Question: if Tanakh is cantillated code, does Gen 1:1 "call" remote verses?
+# Method: same as gen_01_creation_boot — top etnachta split → one STEP per verse.
+# Poetry books (Prov, Lam) parsed with force_prose (v1 has no poetry ranks yet) — note below.
+
+meta:
+  id: "br_1_1_amon_cluster_tree_logic"
+  title_en: "Amon cluster: tree logic for Gen 1:1 and BR 1:1 cited verses"
+  title_he: אָמוֹן — צְרוֹר פְּסוּקִים לְגֶנֶסִיס א,א
+  title_he_translit: "amon — tzeror pesukim le-Genesis 1:1"
+  title_he_en: "amon — verse bundle for Genesis 1:1"
+  book_en: "Genesis + Prov + Num + Lam + Esth + Nah (cluster)"
+  refs: "Gen.1.1; Prov.8.30; Num.11.12; Lam.4.5; Esth.2.7; Nah.3.8; Prov.8.22"
+  data_paths_he:
+    - "Data/Gen.xml"
+    - "Data/Num.xml"
+    - "/tmp/morphhb/wlc/Prov.xml"
+    - "/tmp/morphhb/wlc/Lam.xml"
+    - "/tmp/morphhb/wlc/Esth.xml"
+    - "/tmp/morphhb/wlc/Nah.xml"
+  status: draft
+  tree_derive_version: tree_derived_v1
+  tree_derive_phase: "A"
+  confidence_overall: hypothesis
+  genre: "cross_ref_cluster_boot"
+  build_track: br_link_studies
+  depends_on:
+    - "gen_01_creation_boot"
+  related_oral:
+    - "reviews/br_genesis_packets/BR_1_1_amon.md"
+    - "reviews/br_link_studies/"
+  owner_language_note: >
+    English for reading only. Hebrew is the derivation source. Every Hebrew has
+    translit + English. Dual-track Oral (BR) labeled; never silent-merged into Written.
+  method_note_en: >
+    One STEP per verse from top binary split (etnachta). Poetry force_prose for
+    Prov/Lam (parser v1 poetry ranks not implemented). Then cluster hypothesis:
+    which remote STEPs Gen 1:1 can "call" from Written structure alone vs only via BR.
+
+derivation_log:
+  - step: A
+    name_en: "Cluster choice"
+    comment: >
+      First BR multi-cite set tested (BR 1:1 amon petihah): Prov 8:30 + four
+      amon-family proofs + Prov 8:22 land + Gen 1:1.
+    confidence: established
+  - step: B
+    name_en: "Trees"
+    comment: >
+      taamim_tree_parse.py v1; Nakh via morphhb WLC; poetry with force_prose.
+      Trees in binary_trees + _amon_cluster_trees.json.
+    confidence: tested
+    tags: ["[HE-STRUCT]"]
+  - step: C
+    name_en: "Tree → steps"
+    comment: >
+      Each verse: LEFT/RIGHT arms → op tag (hypothesis). English [EN-AID].
+    confidence: hypothesis
+    tags: ["[HE-WRITTEN]","[HE-STRUCT]"]
+  - step: D
+    name_en: "Call-graph hypothesis"
+    comment: >
+      Compare Gen 1:1 arms to remote STEPs. Written call candidate: reishit ↔ Prov 8:22.
+      Amon multi-sense lattice is BR manual dispatch, not a lemma shared with Gen 1:1.
+    confidence: hypothesis
+    tags: ["[HE-WRITTEN]","[ORAL]"]
+
+# -----------------------------------------------------------------------------
+# STEPs — one per verse (tree-derived)
+# -----------------------------------------------------------------------------
+boot_steps:
+  - id: STEP_Gn_1_1
+    order: 1
+    ref: "Gen.1.1"
+    op: CREATE_AT_REISHIT_WITH_ET_DOMAINS
+    he: בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ
+    he_translit: "be-reishit bara Elohim et ha-shamayim ve-et ha-aretz"
+    en: "[EN-AID] In/as reishit God created — et the heavens and et the earth."
+    tree_left:
+      he: בְּרֵאשִׁית בָּרָא אֱלֹהִים
+      he_translit: "be-reishit bara Elohim"
+      en: "LEFT: as/in reishit — God created [EN-AID]"
+    tree_right:
+      he: אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ
+      he_translit: "et ha-shamayim ve-et ha-aretz"
+      en: "RIGHT: include-list of two domains (heavens, earth) [EN-AID]"
+    logic_en: >
+      [EN-AID] WHEN frame = reishit + agent Elohim creates;
+      THEN object inventory = heavens + earth (את…ואת / et…ve-et).
+    maps_to:
+      - "TIR-015 set_include_list"
+      - "gen_01_creation_boot.STEP_Gn_1_1"
+    comment: >
+      Top split etnachta. L = create-at-reishit; R = dual et-domains.
+      Possible CALL site for remote reishit-definition (see Prov 8:22).
+    confidence: hypothesis
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+  - id: STEP_Pr_8_30
+    order: 2
+    ref: "Prov.8.30"
+    op: PRIOR_BESIDE_AS_AMON
+    he: וָאֶהְיֶה אֶצְלוֹ אָמוֹן וָאֶהְיֶה שַׁעֲשׁוּעִים יוֹם יוֹם מְשַׂחֶקֶת לְפָנָיו בְּכָל־עֵת
+    he_translit: "va-ehyeh etzlo amon va-ehyeh sha'ashu'im yom yom mesakheket lefanav be-khol et"
+    en: "[EN-AID] I was beside Him as amon; I was delights day by day; playing before Him always."
+    tree_left:
+      he: וָאֶהְיֶה אֶצְלוֹ אָמוֹן וָאֶהְיֶה שַׁעֲשׁוּעִים יוֹם יוֹם
+      he_translit: "va-ehyeh etzlo amon va-ehyeh sha'ashu'im yom yom"
+      en: "LEFT: presence beside Him as amon + daily delights [EN-AID]"
+    tree_right:
+      he: מְשַׂחֶקֶת לְפָנָיו בְּכָל־עֵת
+      he_translit: "mesakheket lefanav be-khol et"
+      en: "RIGHT: continuous play before Him [EN-AID]"
+    logic_en: >
+      [EN-AID] PRIOR state: wisdom/speaker EXISTS beside God under role-label amon;
+      mode = ongoing delight/play (not yet "create earth" verb).
+    comment: >
+      force_prose. Unique H525 amon in Tanakh. Does NOT share reishit with Gen 1:1.
+      BR uses this as OPEN opcode; Written link to Gen is not same-lemma.
+    confidence: hypothesis
+    source: "[HE-WRITTEN][HE-STRUCT]"
+    parse_note: "poetry force_prose v1"
+
+  - id: STEP_Nu_11_12
+    order: 3
+    ref: "Num.11.12"
+    op: CAREGIVER_ANALOGY_OMEN
+    he: הֶאָנֹכִי הָרִיתִי אֵת כָּל־הָעָם הַזֶּה אִם־אָנֹכִי יְלִדְתִּיהוּ … כַּאֲשֶׁר יִשָּׂא הָאֹמֵן אֶת־הַיֹּנֵק
+    he_translit: "he-anokhi hariti et kol ha-am ha-zeh im-anokhi yelidtihu … ka'asher yissa ha-omen et ha-yonek"
+    en: "[EN-AID] Did I conceive this people / birth them? … as the omen carries the nursing child."
+    tree_left:
+      he: הֶאָנֹכִי הָרִיתִי אֵת כָּל־הָעָם הַזֶּה אִם־אָנֹכִי יְלִדְתִּיהוּ
+      he_translit: "he-anokhi hariti et kol ha-am ha-zeh im-anokhi yelidtihu"
+      en: "LEFT: rhetorical reject — I did not conceive/birth this people [EN-AID]"
+    tree_right:
+      he: כִּי־תֹאמַר אֵלַי שָׂאֵהוּ בְחֵיקֶךָ כַּאֲשֶׁר יִשָּׂא הָאֹמֵן אֶת־הַיֹּנֵק …
+      he_translit: "ki tomar elai saehu be-heikekha ka'asher yissa ha-omen et ha-yonek …"
+      en: "RIGHT: command-simile — carry as the omen carries the suckling [EN-AID]"
+    logic_en: >
+      [EN-AID] CAREGIVE role = omen (foster-nurse) who carries dependent child;
+      Moses refuses sole biological origin of the people.
+    comment: >
+      Prose full parse. Key leaf הָאֹמֵן / ha-omen under RIGHT simile.
+      BR maps this sense onto Prov 8:30 amon (tutor/foster) — root family, not identical form.
+    confidence: hypothesis
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+  - id: STEP_La_4_5
+    order: 4
+    ref: "Lam.4.5"
+    op: EMUNIM_REARED_THEN_FALL
+    he: הָאֹכְלִים לְמַעֲדַנִּים נָשַׁמּוּ בַּחוּצוֹת הָאֱמֻנִים עֲלֵי תוֹלָע חִבְּקוּ אַשְׁפַּתּוֹת
+    he_translit: "ha-okhelim le-ma'adanim nashamu ba-hutzot ha-emunim alei tola' ḥibbeu ashpatot"
+    en: "[EN-AID] Those who ate delicacies are desolate in streets; those reared on scarlet embrace ash-heaps."
+    tree_left:
+      he: הָאֹכְלִים לְמַעֲדַנִּים נָשַׁמּוּ בַּחוּצוֹת
+      he_translit: "ha-okhelim le-ma'adanim nashamu ba-hutzot"
+      en: "LEFT: luxury-eaters → desolation outdoors [EN-AID]"
+    tree_right:
+      he: הָאֱמֻנִים עֲלֵי תוֹלָע חִבְּקוּ אַשְׁפַּתּוֹת
+      he_translit: "ha-emunim alei tola' ḥibbeu ashpatot"
+      en: "RIGHT: the emunim (reared/faithful) on scarlet → ash-heaps [EN-AID]"
+    logic_en: >
+      [EN-AID] Parallel fall: reared/elite status (emunim) inverted to ruin.
+      Supplies sense "covered/reared" for BR amon multi-read.
+    confidence: hypothesis
+    source: "[HE-WRITTEN][HE-STRUCT]"
+    parse_note: "poetry force_prose v1"
+
+  - id: STEP_Es_2_7
+    order: 5
+    ref: "Esth.2.7"
+    op: OMEN_FOSTER_THEN_ADOPT
+    he: וַיְהִי אֹמֵן אֶת־הֲדַסָּה הִיא אֶסְתֵּר … וּבְמוֹת אָבִיהָ וְאִמָּהּ לְקָחָהּ מָרְדֳּכַי לוֹ לְבַת
+    he_translit: "va-yehi omen et-Hadassah hi Ester … u-ve-mot aviha ve-immah leqaḥah Mordekhai lo le-vat"
+    en: "[EN-AID] He was omen (fosterer) to Hadassah/Esther… when her parents died, Mordecai took her as daughter."
+    tree_left:
+      he: וַיְהִי אֹמֵן אֶת־הֲדַסָּה הִיא אֶסְתֵּר בַּת־דֹּדוֹ כִּי אֵין לָהּ אָב וָאֵם
+      he_translit: "va-yehi omen et-Hadassah hi Ester bat-dodo ki ein lah av va-em"
+      en: "LEFT: assign omen role to orphaned Hadassah/Esther [EN-AID]"
+    tree_right:
+      he: וְהַנַּעֲרָה יְפַת־תֹּאַר … לְקָחָהּ מָרְדֳּכַי לוֹ לְבַת
+      he_translit: "ve-ha-na'arah yefat-to'ar … leqaḥah Mordekhai lo le-vat"
+      en: "RIGHT: outcome — taken as daughter [EN-AID]"
+    logic_en: >
+      [EN-AID] FOSTER: omen → protective custody → legal daughter.
+      Written sense of omen as foster-father; BR imports to amon.
+    confidence: hypothesis
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+  - id: STEP_Na_3_8
+    order: 6
+    ref: "Nah.3.8"
+    op: PROPER_NAME_NO_AMON
+    he: הֲתֵיטְבִי מִנֹּא אָמוֹן הַיֹּשְׁבָה בַּיְאֹרִים מַיִם סָבִיב לָהּ אֲשֶׁר־חֵיל יָם מִיָּם חוֹמָתָהּ
+    he_translit: "ha-teitvi mi-No Amon ha-yoshevah ba-ye'orim mayim saviv lah asher-ḥeil yam mi-yam ḥomatah"
+    en: "[EN-AID] Are you better than No-Amon, sitting by rivers, water around her, sea her wall?"
+    tree_left:
+      he: הֲתֵיטְבִי מִנֹּא אָמוֹן הַיֹּשְׁבָה בַּיְאֹרִים מַיִם סָבִיב לָהּ
+      he_translit: "ha-teitvi mi-No Amon ha-yoshevah ba-ye'orim mayim saviv lah"
+      en: "LEFT: compare to No-Amon + watery seat [EN-AID]"
+    tree_right:
+      he: אֲשֶׁר־חֵיל יָם מִיָּם חוֹמָתָהּ
+      he_translit: "asher-ḥeil yam mi-yam ḥomatah"
+      en: "RIGHT: fortification = sea/water wall [EN-AID]"
+    logic_en: >
+      [EN-AID] PROPER NAME No-Amon (Thebes); "great" / capital sense for BR wordplay on amon.
+    confidence: hypothesis
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+  - id: STEP_Pr_8_22
+    order: 7
+    ref: "Prov.8.22"
+    op: ACQUIRE_AS_REISHIT_BEFORE_WORKS
+    he: יְהוָה קָנָנִי רֵאשִׁית דַּרְכּוֹ קֶדֶם מִפְעָלָיו מֵאָז
+    he_translit: "YHWH qanani reishit darko qedem mif'alav me-az"
+    en: "[EN-AID] The LORD acquired me as reishit of His way; before His works of old."
+    tree_left:
+      he: יְהוָה קָנָנִי רֵאשִׁית דַּרְכּוֹ
+      he_translit: "YHWH qanani reishit darko"
+      en: "LEFT: acquire me = reishit of His path/way [EN-AID]"
+    tree_right:
+      he: קֶדֶם מִפְעָלָיו מֵאָז
+      he_translit: "qedem mif'alav me-az"
+      en: "RIGHT: temporally before His works [EN-AID]"
+    logic_en: >
+      [EN-AID] DEFINE reishit: wisdom/speaker is acquired as beginning of YHWH's way,
+      PRIOR to works. This is the Written bridge lemma to Gen 1:1 be-reishit.
+    maps_to:
+      - "CALL_TARGET_FOR Gen.1.1 LEFT reishit"
+    comment: >
+      force_prose. Shared lemma reishit H7225 with Gen 1:1. Strongest Written call edge.
+    confidence: hypothesis
+    source: "[HE-WRITTEN][HE-STRUCT]"
+    parse_note: "poetry force_prose v1"
+
+# -----------------------------------------------------------------------------
+# Cluster call-graph (hypothesis)
+# -----------------------------------------------------------------------------
+call_graph_hypothesis:
+  status: hypothesis
+  plain_en: >
+    Gen 1:1 does not "import" amon by shared tree lemma. It may resolve reishit
+    via Prov 8:22 (same word + prior-to-works). The amon lattice is BR's multi-dispatch
+    OPEN that lands on Gen using the reishit cable.
+  written_edges:
+    - from: "Gen.1.1"
+      arm: left
+      token_he: רֵאשִׁית
+      token_he_translit: reishit
+      token_en: beginning / first
+      to: "Prov.8.22"
+      kind: "LEMMA_RESOLVE / DEFINE"
+      confidence: hypothesis
+    - from: "Gen.1.1"
+      arm: right
+      token_he: אֵת … וְאֵת
+      token_he_translit: et … ve-et
+      token_en: object-include pair
+      to: null
+      kind: "LOCAL_SET_INCLUDE (TIR-015)"
+      confidence: tested
+  oral_edges_br_only:
+    - from: "Prov.8.30"
+      to: ["Num.11.12", "Lam.4.5", "Esth.2.7", "Nah.3.8"]
+      kind: "POLYROOT_DISPATCH on א-מ-ן family"
+      confidence: tested
+      note: "Not unique Strong's pair share; root/sense family"
+    - from: "Prov.8.30"
+      to: "Prov.8.22"
+      kind: "SAME_SPEAKER_WISDOM continuous (Prov 8)"
+      confidence: hypothesis
+    - from: "Prov.8.22"
+      to: "Gen.1.1"
+      kind: "LAND reishit → be-reishit (BR + Written lemma)"
+      confidence: hypothesis
+
+# -----------------------------------------------------------------------------
+# binary_trees (show work)
+# -----------------------------------------------------------------------------
+binary_trees:
+  rule_set_version: v1
+  note_en: >
+    Full ascii in reviews/br_link_studies/_amon_cluster_trees.json.
+    Poetry force_prose flagged per verse.
+  verses:
+    Gen.1.1:
+      force_prose: false
+      top_split_mark: etnachta
+      left_he: בְּרֵאשִׁית בָּרָא אֱלֹהִים
+      left_he_translit: "be-reishit bara Elohim"
+      left_en: "in/as beginning God created"
+      right_he: אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ
+      right_he_translit: "et ha-shamayim ve-et ha-aretz"
+      right_en: "et the heavens and et the earth"
+      maps_to: STEP_Gn_1_1
+    Prov.8.30:
+      force_prose: true
+      top_split_mark: etnachta
+      left_he: וָאֶהְיֶה אֶצְלוֹ אָמוֹן וָאֶהְיֶה שַׁעֲשׁוּעִים יוֹם יוֹם
+      left_he_translit: "va-ehyeh etzlo amon … yom yom"
+      left_en: "I was beside Him as amon; delights day by day"
+      right_he: מְשַׂחֶקֶת לְפָנָיו בְּכָל־עֵת
+      right_he_translit: "mesakheket lefanav be-khol et"
+      right_en: "playing before Him at every time"
+      maps_to: STEP_Pr_8_30
+    Num.11.12:
+      force_prose: false
+      top_split_mark: etnachta
+      left_en: "Did I conceive/birth this people?"
+      right_en: "carry as the omen carries the nursing child…"
+      maps_to: STEP_Nu_11_12
+    Lam.4.5:
+      force_prose: true
+      top_split_mark: etnachta
+      left_en: "delicacies → desolate"
+      right_en: "emunim on scarlet → ash heaps"
+      maps_to: STEP_La_4_5
+    Esth.2.7:
+      force_prose: false
+      top_split_mark: etnachta
+      left_en: "was omen to Hadassah/Esther, no parents"
+      right_en: "took her as daughter"
+      maps_to: STEP_Es_2_7
+    Nah.3.8:
+      force_prose: false
+      top_split_mark: etnachta
+      left_en: "better than No-Amon on rivers?"
+      right_en: "sea as wall"
+      maps_to: STEP_Na_3_8
+    Prov.8.22:
+      force_prose: true
+      top_split_mark: etnachta
+      left_en: "YHWH acquired me as reishit of His way"
+      right_en: "before His works from then"
+      maps_to: STEP_Pr_8_22
+
+fence_en: >
+  Dual-track: BR multi-sense amon is Oral. Written Gen 1:1 still "God created."
+  force_prose trees for poetry are provisional until poetry ranks exist.
+  Not binding religious law.

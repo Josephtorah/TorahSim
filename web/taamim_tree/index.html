@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ta'amim tree · D3 viewer</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: system-ui, sans-serif;
+        background: #0e1218;
+        color: #e8eef7;
+      }
+      body {
+        margin: 0;
+        padding: 20px 24px 48px;
+      }
+      h1 {
+        font-size: 1.25rem;
+        color: #e6b84d;
+        margin: 0 0 8px;
+      }
+      h3, h4 {
+        color: #c5d4ea;
+        margin: 16px 0 8px;
+      }
+      p {
+        color: #8b9bb4;
+        margin: 0 0 12px;
+        max-width: 80ch;
+      }
+      .meta {
+        font-size: 0.9rem;
+      }
+      #status {
+        font-size: 0.95rem;
+        color: #b6efc6;
+        margin: 8px 0 12px;
+      }
+      label {
+        color: #c5d4ea;
+        margin-right: 8px;
+      }
+      select {
+        background: #1c2636;
+        color: #e8eef7;
+        border: 1px solid #3a4a60;
+        border-radius: 6px;
+        padding: 6px 10px;
+      }
+      #chart {
+        width: 100%;
+        min-height: 480px;
+        margin-top: 12px;
+        border: 1px solid #3a4a60;
+        border-radius: 10px;
+        background: #0a0e14;
+        overflow: auto;
+      }
+      .node-label {
+        font-size: 11px;
+      }
+      .link {
+        fill: none;
+        stroke: #6b7c93;
+        stroke-width: 1.5px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 1100px;
+        font-size: 0.9rem;
+        margin-top: 8px;
+      }
+      th, td {
+        border: 1px solid #3a4a60;
+        padding: 6px 8px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background: #243044;
+        color: #c5d4ea;
+      }
+      .he {
+        direction: rtl;
+        unicode-bidi: plaintext;
+        color: #f0e6d3;
+      }
+      code {
+        color: #ffd09a;
+      }
+      #detail {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ta'amim tree · D3 hierarchy (from this repo)</h1>
+    <p>
+      Real parses from <code>taamim_tree_parse.py</code> (v3), drawn with
+      <code>d3.hierarchy</code> + <code>d3.tree</code> · root at top · click a node for word marks.
+      English free glosses are [EN-AID] only · not binding religious law.
+    </p>
+    <div>
+      <label for="verse-select">Verse</label>
+      <select id="verse-select"></select>
+    </div>
+    <div id="status">Starting…</div>
+    <div id="chart"></div>
+    <div id="detail"></div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

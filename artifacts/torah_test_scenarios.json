@@ -1,0 +1,36 @@
+{
+  "scenarios": [
+    {
+      "id": "lev12_male_standard",
+      "description": "Woman gives birth to male child",
+      "input": { "child_gender": "male", "birth_event": true },
+      "expected": {
+        "impurity_days": 7,
+        "status": "impure",
+        "talmud_reason": "Quicker remorse"
+      }
+    },
+    {
+      "id": "lev12_female_standard",
+      "description": "Woman gives birth to female child",
+      "input": { "child_gender": "female", "birth_event": true },
+      "expected": {
+        "impurity_days": 14,
+        "status": "impure",
+        "talmud_reason": "Doubled period due to slower remorse"
+      }
+    },
+    {
+      "id": "lev12_male_poor",
+      "description": "Male birth + poor offering option",
+      "input": {
+        "child_gender": "male",
+        "birth_event": true,
+        "economic_status": "poor"
+      },
+      "expected": { "offering_type": "two birds" }
+    }
+  ],
+  "source": "Derived from Lev 12 structure + Mishnah Niddah edge cases. For testing the layered model.",
+  "provenance": "Web Grok recovery batch (saved into Torah_Grok/artifacts)."
+}
