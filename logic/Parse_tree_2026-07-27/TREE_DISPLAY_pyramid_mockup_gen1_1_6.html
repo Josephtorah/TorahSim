@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ta'amim pyramid (fixed layout) · Gen 1:1–6</title>
+<style>
+:root {
+  --bg: #0e1218;
+  --panel: #151b24;
+  --card: #1c2636;
+  --leaf: #163528;
+  --root: #2a2340;
+  --border: #3a4a60;
+  --he: #f3ebdd;
+  --tr: #9ecbff;
+  --en: #b6efc6;
+  --muted: #8b9bb4;
+  --accent: #e6b84d;
+  --stem: #7a8da8;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: #e8eef7;
+  line-height: 1.4;
+  padding: 20px 28px 64px;
+}
+header {
+  max-width: 1800px;
+  margin: 0 auto 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+h1 { margin: 0 0 8px; font-size: 1.5rem; color: var(--accent); }
+header p { margin: 4px 0; color: var(--muted); max-width: 100ch; }
+.nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.nav a {
+  color: var(--tr); text-decoration: none;
+  border: 1px solid var(--border); border-radius: 6px;
+  padding: 4px 10px; font-size: 0.9rem;
+}
+.nav a:hover { background: var(--card); }
+.verse {
+  max-width: 1800px;
+  margin: 0 auto 40px;
+  padding: 18px 18px 28px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.verse h2 { margin: 0 0 12px; color: var(--accent); display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.verse h3 { margin: 22px 0 10px; color: #c5d4ea; font-size: 1.05rem; }
+.pill {
+  font-size: 0.75rem; font-weight: 600; color: var(--muted);
+  border: 1px solid var(--border); border-radius: 999px; padding: 3px 10px;
+}
+.hint { color: var(--muted); font-size: 0.88rem; margin: 0 0 10px; }
+.word-strip { display: flex; flex-wrap: wrap; gap: 8px; }
+.wcell {
+  background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+  padding: 8px; min-width: 108px; font-size: 0.8rem;
+}
+.wcell .wi { color: var(--accent); font-weight: 700; }
+.wcell .he { color: var(--he); font-size: 1.1rem; direction: rtl; margin: 2px 0; }
+.wcell .mk code { color: #ffd09a; font-size: 0.78rem; }
+.wcell .rk, .wcell .md { color: var(--muted); font-size: 0.72rem; }
+
+/* === NON-OVERLAPPING TREE === */
+.pyramid {
+  overflow-x: auto;
+  overflow-y: visible;
+  padding: 20px 12px 28px;
+  background: #0a0e14;
+  border: 1px solid #243044;
+  border-radius: 10px;
+}
+/* unit = card + optional children row; children NEVER sit inside the card */
+.unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: max-content;
+  min-width: 100%;
+  margin: 0 auto;
+}
+.card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: var(--card);
+  width: 280px;
+  max-width: 320px;
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.card.root {
+  background: var(--root);
+  border-color: #7a6ab0;
+  width: min(520px, 90vw);
+  max-width: 560px;
+}
+.card.leaf {
+  background: var(--leaf);
+  border-color: #3f8a62;
+  width: 260px;
+}
+.card.phrase { border-color: #4a6280; }
+.badge {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.04em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 4px;
+}
+.card .he { color: var(--he); font-size: 1.15rem; direction: rtl; unicode-bidi: plaintext; }
+.card .tr { color: var(--tr); font-size: 0.88rem; margin-top: 2px; word-break: break-word; }
+.card .en { color: var(--en); font-size: 0.88rem; margin-top: 2px; word-break: break-word; }
+.card .meta { color: var(--muted); font-size: 0.75rem; margin-top: 6px; }
+.mini {
+  width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.7rem;
+}
+.mini th, .mini td {
+  border: 1px solid var(--border); padding: 2px 4px; text-align: left;
+}
+.mini th { background: #243044; }
+.he-cell { color: var(--he); direction: rtl; }
+
+.connector {
+  display: flex; flex-direction: column; align-items: center;
+  width: 100%;
+}
+.vline {
+  width: 2px; height: 16px; background: var(--stem); flex: 0 0 auto;
+}
+.vline.short { height: 12px; }
+.split-label {
+  font-size: 0.72rem; color: var(--accent); margin: 2px 0 4px;
+}
+.hline-wrap {
+  width: 100%;
+  display: flex; justify-content: center;
+}
+.hline {
+  height: 2px;
+  width: calc(100% - 140px);
+  min-width: 120px;
+  max-width: 100%;
+  background: var(--stem);
+}
+
+/* children sit side-by-side with gap; each child is its own column */
+.children {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 28px;
+  width: max-content;
+  min-width: 100%;
+  padding: 0 8px;
+}
+.child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 auto;
+}
+.child-cap {
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+
+.table-wrap { overflow-x: auto; }
+.leaf-table {
+  width: 100%; border-collapse: collapse; font-size: 0.88rem; min-width: 900px;
+}
+.leaf-table th, .leaf-table td {
+  border: 1px solid var(--border); padding: 6px 8px; text-align: left; vertical-align: top;
+}
+.leaf-table th { background: #243044; color: #c5d4ea; }
+.leaf-table .he-cell { font-size: 1.05rem; }
+footer {
+  max-width: 1800px; margin: 20px auto 0; color: var(--muted); font-size: 0.85rem;
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>Top-down pyramid — layout fixed (no nested card squeeze)</h1>
+  <p><strong>Why it overlapped before:</strong> parent cards were max-width ~520px while two arms each needed ~280px,
+  so deeper levels were forced to draw on top of each other. <strong>Fix:</strong> each node is only a small card;
+  LEFT/RIGHT children are a separate full-width row <em>under</em> the card, never inside it.</p>
+  <p>Data: <code>taamim_tree_parse.py</code> v3 prose · he · translit · en on every node · every mark on leaves · not binding law.</p>
+  <div class="nav">
+    <a href="#Gen-1-1">1:1</a><a href="#Gen-1-2">1:2</a><a href="#Gen-1-3">1:3</a>
+    <a href="#Gen-1-4">1:4</a><a href="#Gen-1-5">1:5</a><a href="#Gen-1-6">1:6</a>
+  </div>
+</header>
+
+    <section class="verse" id="Gen-1-1">
+      <h2>Gen.1.1
+        <span class="pill">7w · 4 leaves · vv3 prose</span>
+      </h2>
+      <h3>1. Every word + cantillation mark</h3>
+      <div class="word-strip"><div class='wcell'><div class='wi'>w0</div><div class='he'>ב/ראשית</div><div class='mk'><code>tifcha</code></div><div class='rk'>rank 2 · disjunctive</div><div class='md'>tifcha</div></div><div class='wcell'><div class='wi'>w1</div><div class='he'>ברא</div><div class='mk'><code>munach</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>munach (conjunctive)</div></div><div class='wcell'><div class='wi'>w2</div><div class='he'>אלהים</div><div class='mk'><code>etnachta</code></div><div class='rk'>rank 1 · disjunctive</div><div class='md'>etnachta (major mid-verse rest)</div></div><div class='wcell'><div class='wi'>w3</div><div class='he'>את</div><div class='mk'><code>mercha</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>mercha (conjunctive)</div></div><div class='wcell'><div class='wi'>w4</div><div class='he'>ה/שמים</div><div class='mk'><code>tifcha</code></div><div class='rk'>rank 2 · disjunctive</div><div class='md'>tifcha</div></div><div class='wcell'><div class='wi'>w5</div><div class='he'>ו/את</div><div class='mk'><code>mercha</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>mercha (conjunctive)</div></div><div class='wcell'><div class='wi'>w6</div><div class='he'>ה/ארץ</div><div class='mk'><code>silluq</code></div><div class='rk'>rank 1 · special_silluq_meteg</div><div class='md'>silluq if last word of verse; else meteg (ignored for structure)</div></div></div>
+      <h3>2. Top-down pyramid (cards do not nest inside each other)</h3>
+      <p class="hint">Parent card stays narrow; LEFT/RIGHT sit in a full-width row underneath so nothing stacks on top of siblings.</p>
+      <div class="pyramid">
+            <div class="unit">
+              
+        <div class="card root">
+          <div class="badge">ROOT · full verse</div>
+          <div class="he">ב/ראשית ברא אלהים את ה/שמים ו/את ה/ארץ</div>
+          <div class="tr">ב-ראשית ברא אלהים את ה-שמים ו-את ה-ארץ</div>
+          <div class="en">"In the beginning God created the heavens and the earth."</div>
+          <div class="meta">status unique · pure binary branch</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ top split (etnachta usually)</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+            <div class="unit">
+              
+        <div class="card phrase">
+          <div class="badge">LEFT · 3w phrase</div>
+          <div class="he">ב/ראשית ברא אלהים</div>
+          <div class="tr">be-reshit bara Elohim</div>
+          <div class="en">"in beginning God created"</div>
+          <div class="meta">internal binary phrase — children below (not inside this card)</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ binary split</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B0 · ATOM [0] · LEAF</div>
+          <div class="he">ב/ראשית</div>
+          <div class="tr">be-reshit</div>
+          <div class="en">"in beginning"</div>
+          <div class="meta">end: <strong>tifcha</strong> · rank 2 · tifcha</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>0</td><td class='he-cell'>ב/ראשית</td><td><code>tifcha</code></td><td>2</td><td>disjunctive</td><td>tifcha</td></tr></tbody></table>
+        </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B1 · GLUE [1–2] · LEAF</div>
+          <div class="he">ברא אלהים</div>
+          <div class="tr">bara Elohim</div>
+          <div class="en">"created God"</div>
+          <div class="meta">end: <strong>etnachta</strong> · rank 1 · etnachta (major mid-verse rest)</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>1</td><td class='he-cell'>ברא</td><td><code>munach</code></td><td>9</td><td>conjunctive</td><td>munach (conjunctive)</td></tr><tr><td>2</td><td class='he-cell'>אלהים</td><td><code>etnachta</code></td><td>1</td><td>disjunctive</td><td>etnachta (major mid-verse rest)</td></tr></tbody></table>
+        </div>
+                </div>
+              </div>
+            </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+            <div class="unit">
+              
+        <div class="card phrase">
+          <div class="badge">RIGHT · 4w phrase</div>
+          <div class="he">את ה/שמים ו/את ה/ארץ</div>
+          <div class="tr">et ha-shamayim ve-et ha-arets</div>
+          <div class="en">"et the heavens and et the earth"</div>
+          <div class="meta">internal binary phrase — children below (not inside this card)</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ binary split</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B2 · GLUE [3–4] · LEAF</div>
+          <div class="he">את ה/שמים</div>
+          <div class="tr">et ha-shamayim</div>
+          <div class="en">"et the heavens"</div>
+          <div class="meta">end: <strong>tifcha</strong> · rank 2 · tifcha</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>3</td><td class='he-cell'>את</td><td><code>mercha</code></td><td>9</td><td>conjunctive</td><td>mercha (conjunctive)</td></tr><tr><td>4</td><td class='he-cell'>ה/שמים</td><td><code>tifcha</code></td><td>2</td><td>disjunctive</td><td>tifcha</td></tr></tbody></table>
+        </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B3 · GLUE [5–6] · LEAF</div>
+          <div class="he">ו/את ה/ארץ</div>
+          <div class="tr">ve-et ha-arets</div>
+          <div class="en">"and et the earth"</div>
+          <div class="meta">end: <strong>silluq</strong> · rank 1 · silluq if last word of verse; else meteg (ignored for structure)</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>5</td><td class='he-cell'>ו/את</td><td><code>mercha</code></td><td>9</td><td>conjunctive</td><td>mercha (conjunctive)</td></tr><tr><td>6</td><td class='he-cell'>ה/ארץ</td><td><code>silluq</code></td><td>1</td><td>special_silluq_meteg</td><td>silluq if last word of verse; else meteg (ignored for structure)</td></tr></tbody></table>
+        </div>
+                </div>
+              </div>
+            </div>
+                </div>
+              </div>
+            </div></div>
+      <h3>3. Leaves table</h3>
+      <div class="table-wrap">
+      <table class="leaf-table">
+        <thead><tr>
+          <th>B#</th><th>idx</th><th>kind</th><th>he</th><th>translit</th><th>en</th>
+          <th>end mark</th><th>rank</th><th>mark does</th>
+        </tr></thead>
+        <tbody><tr><td>B0</td><td>[0]</td><td>ATOM</td><td class='he-cell'>ב/ראשית</td><td>be-reshit</td><td>in beginning</td><td><code>tifcha</code></td><td>2</td><td>tifcha</td></tr><tr><td>B1</td><td>[1–2]</td><td>GLUE</td><td class='he-cell'>ברא אלהים</td><td>bara Elohim</td><td>created God</td><td><code>etnachta</code></td><td>1</td><td>etnachta (major mid-verse rest)</td></tr><tr><td>B2</td><td>[3–4]</td><td>GLUE</td><td class='he-cell'>את ה/שמים</td><td>et ha-shamayim</td><td>et the heavens</td><td><code>tifcha</code></td><td>2</td><td>tifcha</td></tr><tr><td>B3</td><td>[5–6]</td><td>GLUE</td><td class='he-cell'>ו/את ה/ארץ</td><td>ve-et ha-arets</td><td>and et the earth</td><td><code>silluq</code></td><td>1</td><td>silluq if last word of verse; else meteg (ignored for structure)</td></tr></tbody>
+      </table>
+      </div>
+    </section>
+    
+
+    <section class="verse" id="Gen-1-2">
+      <h2>Gen.1.2
+        <span class="pill">14w · 8 leaves · vv3 prose</span>
+      </h2>
+      <h3>1. Every word + cantillation mark</h3>
+      <div class="word-strip"><div class='wcell'><div class='wi'>w0</div><div class='he'>ו/ה/ארץ</div><div class='mk'><code>revia</code></div><div class='rk'>rank 3 · disjunctive</div><div class='md'>revia</div></div><div class='wcell'><div class='wi'>w1</div><div class='he'>היתה</div><div class='mk'><code>mercha</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>mercha (conjunctive)</div></div><div class='wcell'><div class='wi'>w2</div><div class='he'>תהו</div><div class='mk'><code>pashta</code></div><div class='rk'>rank 3 · disjunctive</div><div class='md'>pashta</div></div><div class='wcell'><div class='wi'>w3</div><div class='he'>ו/בהו</div><div class='mk'><code>zaqef_qatan</code></div><div class='rk'>rank 2 · disjunctive</div><div class='md'>zaqef qatan</div></div><div class='wcell'><div class='wi'>w4</div><div class='he'>ו/חשך</div><div class='mk'><code>tifcha</code></div><div class='rk'>rank 2 · disjunctive</div><div class='md'>tifcha</div></div><div class='wcell'><div class='wi'>w5</div><div class='he'>על</div><div class='mk'><code>zero_conjunctive</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>no mark — glue into next disjunctive</div></div><div class='wcell'><div class='wi'>w6</div><div class='he'>פני</div><div class='mk'><code>munach</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>munach (conjunctive)</div></div><div class='wcell'><div class='wi'>w7</div><div class='he'>תהום</div><div class='mk'><code>etnachta</code></div><div class='rk'>rank 1 · disjunctive</div><div class='md'>etnachta (major mid-verse rest)</div></div><div class='wcell'><div class='wi'>w8</div><div class='he'>ו/רוח</div><div class='mk'><code>munach</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>munach (conjunctive)</div></div><div class='wcell'><div class='wi'>w9</div><div class='he'>אלהים</div><div class='mk'><code>zaqef_qatan</code></div><div class='rk'>rank 2 · disjunctive</div><div class='md'>zaqef qatan</div></div><div class='wcell'><div class='wi'>w10</div><div class='he'>מרחפת</div><div class='mk'><code>tifcha</code></div><div class='rk'>rank 2 · disjunctive</div><div class='md'>tifcha</div></div><div class='wcell'><div class='wi'>w11</div><div class='he'>על</div><div class='mk'><code>zero_conjunctive</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>no mark — glue into next disjunctive</div></div><div class='wcell'><div class='wi'>w12</div><div class='he'>פני</div><div class='mk'><code>mercha</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>mercha (conjunctive)</div></div><div class='wcell'><div class='wi'>w13</div><div class='he'>ה/מים</div><div class='mk'><code>silluq</code></div><div class='rk'>rank 1 · special_silluq_meteg</div><div class='md'>silluq if last word of verse; else meteg (ignored for structure)</div></div></div>
+      <h3>2. Top-down pyramid (cards do not nest inside each other)</h3>
+      <p class="hint">Parent card stays narrow; LEFT/RIGHT sit in a full-width row underneath so nothing stacks on top of siblings.</p>
+      <div class="pyramid">
+            <div class="unit">
+              
+        <div class="card root">
+          <div class="badge">ROOT · full verse</div>
+          <div class="he">ו/ה/ארץ היתה תהו ו/בהו ו/חשך על פני תהום ו/רוח אלהים מרחפת על פני ה/מים</div>
+          <div class="tr">ו-ה-ארץ היתה תהו ו-בהו ו-חשך על פני תהום ו-רוח אלהים מרחפת על פני ה-מים</div>
+          <div class="en">"And the earth was formless and void, and darkness on the face of the deep; and the spirit of God hovering on the face of the waters."</div>
+          <div class="meta">status unique · pure binary branch</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ top split (etnachta usually)</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+            <div class="unit">
+              
+        <div class="card phrase">
+          <div class="badge">LEFT · 8w phrase</div>
+          <div class="he">ו/ה/ארץ היתה תהו ו/בהו ו/חשך על פני תהום</div>
+          <div class="tr">… tehom</div>
+          <div class="en">"earth chaos and deep"</div>
+          <div class="meta">internal binary phrase — children below (not inside this card)</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ binary split</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+            <div class="unit">
+              
+        <div class="card phrase">
+          <div class="badge">LEFT · 4w phrase</div>
+          <div class="he">ו/ה/ארץ היתה תהו ו/בהו</div>
+          <div class="tr">ve-ha-arets hayetah tohu va-vohu</div>
+          <div class="en">"the earth was formless and void"</div>
+          <div class="meta">internal binary phrase — children below (not inside this card)</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ binary split</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B0 · ATOM [0] · LEAF</div>
+          <div class="he">ו/ה/ארץ</div>
+          <div class="tr">ve-ha-arets</div>
+          <div class="en">"and the earth"</div>
+          <div class="meta">end: <strong>revia</strong> · rank 3 · revia</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>0</td><td class='he-cell'>ו/ה/ארץ</td><td><code>revia</code></td><td>3</td><td>disjunctive</td><td>revia</td></tr></tbody></table>
+        </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+            <div class="unit">
+              
+        <div class="card phrase">
+          <div class="badge">RIGHT · 3w phrase</div>
+          <div class="he">היתה תהו ו/בהו</div>
+          <div class="tr">hayetah tohu va-vohu</div>
+          <div class="en">"was formless and void"</div>
+          <div class="meta">internal binary phrase — children below (not inside this card)</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ binary split</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B1 · GLUE [1–2] · LEAF</div>
+          <div class="he">היתה תהו</div>
+          <div class="tr">hayetah tohu</div>
+          <div class="en">"was formless"</div>
+          <div class="meta">end: <strong>pashta</strong> · rank 3 · pashta</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>1</td><td class='he-cell'>היתה</td><td><code>mercha</code></td><td>9</td><td>conjunctive</td><td>mercha (conjunctive)</td></tr><tr><td>2</td><td class='he-cell'>תהו</td><td><code>pashta</code></td><td>3</td><td>disjunctive</td><td>pashta</td></tr></tbody></table>
+        </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B2 · ATOM [3] · LEAF</div>
+          <div class="he">ו/בהו</div>
+          <div class="tr">va-vohu</div>
+          <div class="en">"and void"</div>
+          <div class="meta">end: <strong>zaqef_qatan</strong> · rank 2 · zaqef qatan</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>3</td><td class='he-cell'>ו/בהו</td><td><code>zaqef_qatan</code></td><td>2</td><td>disjunctive</td><td>zaqef qatan</td></tr></tbody></table>
+        </div>
+                </div>
+              </div>
+            </div>
+                </div>
+              </div>
+            </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+            <div class="unit">
+              
+        <div class="card phrase">
+          <div class="badge">RIGHT · 4w phrase</div>
+          <div class="he">ו/חשך על פני תהום</div>
+          <div class="tr">ve-choshekh al penei tehom</div>
+          <div class="en">"darkness on the face of the deep"</div>
+          <div class="meta">internal binary phrase — children below (not inside this card)</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ binary split</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B3 · ATOM [4] · LEAF</div>
+          <div class="he">ו/חשך</div>
+          <div class="tr">ve-choshekh</div>
+          <div class="en">"and darkness"</div>
+          <div class="meta">end: <strong>tifcha</strong> · rank 2 · tifcha</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>4</td><td class='he-cell'>ו/חשך</td><td><code>tifcha</code></td><td>2</td><td>disjunctive</td><td>tifcha</td></tr></tbody></table>
+        </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B4 · GLUE [5–7] · LEAF</div>
+          <div class="he">על פני תהום</div>
+          <div class="tr">al penei tehom</div>
+          <div class="en">"on the face of the deep"</div>
+          <div class="meta">end: <strong>etnachta</strong> · rank 1 · etnachta (major mid-verse rest)</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>5</td><td class='he-cell'>על</td><td><code>zero_conjunctive</code></td><td>9</td><td>conjunctive</td><td>no mark — glue into next disjunctive</td></tr><tr><td>6</td><td class='he-cell'>פני</td><td><code>munach</code></td><td>9</td><td>conjunctive</td><td>munach (conjunctive)</td></tr><tr><td>7</td><td class='he-cell'>תהום</td><td><code>etnachta</code></td><td>1</td><td>disjunctive</td><td>etnachta (major mid-verse rest)</td></tr></tbody></table>
+        </div>
+                </div>
+              </div>
+            </div>
+                </div>
+              </div>
+            </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+            <div class="unit">
+              
+        <div class="card phrase">
+          <div class="badge">RIGHT · 6w phrase</div>
+          <div class="he">ו/רוח אלהים מרחפת על פני ה/מים</div>
+          <div class="tr">ve-ruach Elohim merachefet…</div>
+          <div class="en">"spirit of God hovering on waters"</div>
+          <div class="meta">internal binary phrase — children below (not inside this card)</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ binary split</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B5 · GLUE [8–9] · LEAF</div>
+          <div class="he">ו/רוח אלהים</div>
+          <div class="tr">ve-ruach Elohim</div>
+          <div class="en">"and spirit of God"</div>
+          <div class="meta">end: <strong>zaqef_qatan</strong> · rank 2 · zaqef qatan</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>8</td><td class='he-cell'>ו/רוח</td><td><code>munach</code></td><td>9</td><td>conjunctive</td><td>munach (conjunctive)</td></tr><tr><td>9</td><td class='he-cell'>אלהים</td><td><code>zaqef_qatan</code></td><td>2</td><td>disjunctive</td><td>zaqef qatan</td></tr></tbody></table>
+        </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+            <div class="unit">
+              
+        <div class="card phrase">
+          <div class="badge">RIGHT · 4w phrase</div>
+          <div class="he">מרחפת על פני ה/מים</div>
+          <div class="tr">merachefet al penei ha-mayim</div>
+          <div class="en">"hovering on the waters"</div>
+          <div class="meta">internal binary phrase — children below (not inside this card)</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ binary split</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B6 · ATOM [10] · LEAF</div>
+          <div class="he">מרחפת</div>
+          <div class="tr">merachefet</div>
+          <div class="en">"hovering"</div>
+          <div class="meta">end: <strong>tifcha</strong> · rank 2 · tifcha</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>10</td><td class='he-cell'>מרחפת</td><td><code>tifcha</code></td><td>2</td><td>disjunctive</td><td>tifcha</td></tr></tbody></table>
+        </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B7 · GLUE [11–13] · LEAF</div>
+          <div class="he">על פני ה/מים</div>
+          <div class="tr">al penei ha-mayim</div>
+          <div class="en">"on the face of the waters"</div>
+          <div class="meta">end: <strong>silluq</strong> · rank 1 · silluq if last word of verse; else meteg (ignored for structure)</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>11</td><td class='he-cell'>על</td><td><code>zero_conjunctive</code></td><td>9</td><td>conjunctive</td><td>no mark — glue into next disjunctive</td></tr><tr><td>12</td><td class='he-cell'>פני</td><td><code>mercha</code></td><td>9</td><td>conjunctive</td><td>mercha (conjunctive)</td></tr><tr><td>13</td><td class='he-cell'>ה/מים</td><td><code>silluq</code></td><td>1</td><td>special_silluq_meteg</td><td>silluq if last word of verse; else meteg (ignored for structure)</td></tr></tbody></table>
+        </div>
+                </div>
+              </div>
+            </div>
+                </div>
+              </div>
+            </div>
+                </div>
+              </div>
+            </div></div>
+      <h3>3. Leaves table</h3>
+      <div class="table-wrap">
+      <table class="leaf-table">
+        <thead><tr>
+          <th>B#</th><th>idx</th><th>kind</th><th>he</th><th>translit</th><th>en</th>
+          <th>end mark</th><th>rank</th><th>mark does</th>
+        </tr></thead>
+        <tbody><tr><td>B0</td><td>[0]</td><td>ATOM</td><td class='he-cell'>ו/ה/ארץ</td><td>ve-ha-arets</td><td>and the earth</td><td><code>revia</code></td><td>3</td><td>revia</td></tr><tr><td>B1</td><td>[1–2]</td><td>GLUE</td><td class='he-cell'>היתה תהו</td><td>hayetah tohu</td><td>was formless</td><td><code>pashta</code></td><td>3</td><td>pashta</td></tr><tr><td>B2</td><td>[3]</td><td>ATOM</td><td class='he-cell'>ו/בהו</td><td>va-vohu</td><td>and void</td><td><code>zaqef_qatan</code></td><td>2</td><td>zaqef qatan</td></tr><tr><td>B3</td><td>[4]</td><td>ATOM</td><td class='he-cell'>ו/חשך</td><td>ve-choshekh</td><td>and darkness</td><td><code>tifcha</code></td><td>2</td><td>tifcha</td></tr><tr><td>B4</td><td>[5–7]</td><td>GLUE</td><td class='he-cell'>על פני תהום</td><td>al penei tehom</td><td>on the face of the deep</td><td><code>etnachta</code></td><td>1</td><td>etnachta (major mid-verse rest)</td></tr><tr><td>B5</td><td>[8–9]</td><td>GLUE</td><td class='he-cell'>ו/רוח אלהים</td><td>ve-ruach Elohim</td><td>and spirit of God</td><td><code>zaqef_qatan</code></td><td>2</td><td>zaqef qatan</td></tr><tr><td>B6</td><td>[10]</td><td>ATOM</td><td class='he-cell'>מרחפת</td><td>merachefet</td><td>hovering</td><td><code>tifcha</code></td><td>2</td><td>tifcha</td></tr><tr><td>B7</td><td>[11–13]</td><td>GLUE</td><td class='he-cell'>על פני ה/מים</td><td>al penei ha-mayim</td><td>on the face of the waters</td><td><code>silluq</code></td><td>1</td><td>silluq if last word of verse; else meteg (ignored for structure)</td></tr></tbody>
+      </table>
+      </div>
+    </section>
+    
+
+    <section class="verse" id="Gen-1-3">
+      <h2>Gen.1.3
+        <span class="pill">6w · 3 leaves · vv3 prose</span>
+      </h2>
+      <h3>1. Every word + cantillation mark</h3>
+      <div class="word-strip"><div class='wcell'><div class='wi'>w0</div><div class='he'>ו/יאמר</div><div class='mk'><code>mercha</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>mercha (conjunctive)</div></div><div class='wcell'><div class='wi'>w1</div><div class='he'>אלהים</div><div class='mk'><code>tifcha</code></div><div class='rk'>rank 2 · disjunctive</div><div class='md'>tifcha</div></div><div class='wcell'><div class='wi'>w2</div><div class='he'>יהי</div><div class='mk'><code>munach</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>munach (conjunctive)</div></div><div class='wcell'><div class='wi'>w3</div><div class='he'>אור</div><div class='mk'><code>etnachta</code></div><div class='rk'>rank 1 · disjunctive</div><div class='md'>etnachta (major mid-verse rest)</div></div><div class='wcell'><div class='wi'>w4</div><div class='he'>ו/יהי</div><div class='mk'><code>zero_conjunctive</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>no mark — glue into next disjunctive</div></div><div class='wcell'><div class='wi'>w5</div><div class='he'>אור</div><div class='mk'><code>silluq</code></div><div class='rk'>rank 1 · special_silluq_meteg</div><div class='md'>silluq if last word of verse; else meteg (ignored for structure)</div></div></div>
+      <h3>2. Top-down pyramid (cards do not nest inside each other)</h3>
+      <p class="hint">Parent card stays narrow; LEFT/RIGHT sit in a full-width row underneath so nothing stacks on top of siblings.</p>
+      <div class="pyramid">
+            <div class="unit">
+              
+        <div class="card root">
+          <div class="badge">ROOT · full verse</div>
+          <div class="he">ו/יאמר אלהים יהי אור ו/יהי אור</div>
+          <div class="tr">ו-יאמר אלהים יהי אור ו-יהי אור</div>
+          <div class="en">"And God said, Let there be light, and there was light."</div>
+          <div class="meta">status unique · pure binary branch</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ top split (etnachta usually)</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+            <div class="unit">
+              
+        <div class="card phrase">
+          <div class="badge">LEFT · 4w phrase</div>
+          <div class="he">ו/יאמר אלהים יהי אור</div>
+          <div class="tr">va-yomer Elohim yehi or</div>
+          <div class="en">"and God said, let there be light"</div>
+          <div class="meta">internal binary phrase — children below (not inside this card)</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ binary split</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B0 · GLUE [0–1] · LEAF</div>
+          <div class="he">ו/יאמר אלהים</div>
+          <div class="tr">va-yomer Elohim</div>
+          <div class="en">"and God said"</div>
+          <div class="meta">end: <strong>tifcha</strong> · rank 2 · tifcha</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>0</td><td class='he-cell'>ו/יאמר</td><td><code>mercha</code></td><td>9</td><td>conjunctive</td><td>mercha (conjunctive)</td></tr><tr><td>1</td><td class='he-cell'>אלהים</td><td><code>tifcha</code></td><td>2</td><td>disjunctive</td><td>tifcha</td></tr></tbody></table>
+        </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B1 · GLUE [2–3] · LEAF</div>
+          <div class="he">יהי אור</div>
+          <div class="tr">yehi or</div>
+          <div class="en">"let there be light"</div>
+          <div class="meta">end: <strong>etnachta</strong> · rank 1 · etnachta (major mid-verse rest)</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>2</td><td class='he-cell'>יהי</td><td><code>munach</code></td><td>9</td><td>conjunctive</td><td>munach (conjunctive)</td></tr><tr><td>3</td><td class='he-cell'>אור</td><td><code>etnachta</code></td><td>1</td><td>disjunctive</td><td>etnachta (major mid-verse rest)</td></tr></tbody></table>
+        </div>
+                </div>
+              </div>
+            </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B2 · GLUE [4–5] · LEAF</div>
+          <div class="he">ו/יהי אור</div>
+          <div class="tr">va-yehi or</div>
+          <div class="en">"and there was light"</div>
+          <div class="meta">end: <strong>silluq</strong> · rank 1 · silluq if last word of verse; else meteg (ignored for structure)</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>4</td><td class='he-cell'>ו/יהי</td><td><code>zero_conjunctive</code></td><td>9</td><td>conjunctive</td><td>no mark — glue into next disjunctive</td></tr><tr><td>5</td><td class='he-cell'>אור</td><td><code>silluq</code></td><td>1</td><td>special_silluq_meteg</td><td>silluq if last word of verse; else meteg (ignored for structure)</td></tr></tbody></table>
+        </div>
+                </div>
+              </div>
+            </div></div>
+      <h3>3. Leaves table</h3>
+      <div class="table-wrap">
+      <table class="leaf-table">
+        <thead><tr>
+          <th>B#</th><th>idx</th><th>kind</th><th>he</th><th>translit</th><th>en</th>
+          <th>end mark</th><th>rank</th><th>mark does</th>
+        </tr></thead>
+        <tbody><tr><td>B0</td><td>[0–1]</td><td>GLUE</td><td class='he-cell'>ו/יאמר אלהים</td><td>va-yomer Elohim</td><td>and God said</td><td><code>tifcha</code></td><td>2</td><td>tifcha</td></tr><tr><td>B1</td><td>[2–3]</td><td>GLUE</td><td class='he-cell'>יהי אור</td><td>yehi or</td><td>let there be light</td><td><code>etnachta</code></td><td>1</td><td>etnachta (major mid-verse rest)</td></tr><tr><td>B2</td><td>[4–5]</td><td>GLUE</td><td class='he-cell'>ו/יהי אור</td><td>va-yehi or</td><td>and there was light</td><td><code>silluq</code></td><td>1</td><td>silluq if last word of verse; else meteg (ignored for structure)</td></tr></tbody>
+      </table>
+      </div>
+    </section>
+    
+
+    <section class="verse" id="Gen-1-4">
+      <h2>Gen.1.4
+        <span class="pill">12w · 6 leaves · vv3 prose</span>
+      </h2>
+      <h3>1. Every word + cantillation mark</h3>
+      <div class="word-strip"><div class='wcell'><div class='wi'>w0</div><div class='he'>ו/ירא</div><div class='mk'><code>darga</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>darga (conjunctive)</div></div><div class='wcell'><div class='wi'>w1</div><div class='he'>אלהים</div><div class='mk'><code>tevir</code></div><div class='rk'>rank 3 · disjunctive</div><div class='md'>tevir</div></div><div class='wcell'><div class='wi'>w2</div><div class='he'>את</div><div class='mk'><code>zero_conjunctive</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>no mark — glue into next disjunctive</div></div><div class='wcell'><div class='wi'>w3</div><div class='he'>ה/אור</div><div class='mk'><code>tifcha</code></div><div class='rk'>rank 2 · disjunctive</div><div class='md'>tifcha</div></div><div class='wcell'><div class='wi'>w4</div><div class='he'>כי</div><div class='mk'><code>zero_conjunctive</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>no mark — glue into next disjunctive</div></div><div class='wcell'><div class='wi'>w5</div><div class='he'>טוב</div><div class='mk'><code>etnachta</code></div><div class='rk'>rank 1 · disjunctive</div><div class='md'>etnachta (major mid-verse rest)</div></div><div class='wcell'><div class='wi'>w6</div><div class='he'>ו/יבדל</div><div class='mk'><code>munach</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>munach (conjunctive)</div></div><div class='wcell'><div class='wi'>w7</div><div class='he'>אלהים</div><div class='mk'><code>zaqef_qatan</code></div><div class='rk'>rank 2 · disjunctive</div><div class='md'>zaqef qatan</div></div><div class='wcell'><div class='wi'>w8</div><div class='he'>בין</div><div class='mk'><code>mercha</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>mercha (conjunctive)</div></div><div class='wcell'><div class='wi'>w9</div><div class='he'>ה/אור</div><div class='mk'><code>tifcha</code></div><div class='rk'>rank 2 · disjunctive</div><div class='md'>tifcha</div></div><div class='wcell'><div class='wi'>w10</div><div class='he'>ו/בין</div><div class='mk'><code>mercha</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>mercha (conjunctive)</div></div><div class='wcell'><div class='wi'>w11</div><div class='he'>ה/חשך</div><div class='mk'><code>silluq</code></div><div class='rk'>rank 1 · special_silluq_meteg</div><div class='md'>silluq if last word of verse; else meteg (ignored for structure)</div></div></div>
+      <h3>2. Top-down pyramid (cards do not nest inside each other)</h3>
+      <p class="hint">Parent card stays narrow; LEFT/RIGHT sit in a full-width row underneath so nothing stacks on top of siblings.</p>
+      <div class="pyramid">
+            <div class="unit">
+              
+        <div class="card root">
+          <div class="badge">ROOT · full verse</div>
+          <div class="he">ו/ירא אלהים את ה/אור כי טוב ו/יבדל אלהים בין ה/אור ו/בין ה/חשך</div>
+          <div class="tr">ו-ירא אלהים את ה-אור כי טוב ו-יבדל אלהים בין ה-אור ו-בין ה-חשך</div>
+          <div class="en">"And God saw the light, that it was good; and God separated between the light and between the darkness."</div>
+          <div class="meta">status unique · pure binary branch</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ top split (etnachta usually)</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+            <div class="unit">
+              
+        <div class="card phrase">
+          <div class="badge">LEFT · 6w phrase</div>
+          <div class="he">ו/ירא אלהים את ה/אור כי טוב</div>
+          <div class="tr">va-yar Elohim et ha-or ki tov</div>
+          <div class="en">"God saw the light that it was good"</div>
+          <div class="meta">internal binary phrase — children below (not inside this card)</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ binary split</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+            <div class="unit">
+              
+        <div class="card phrase">
+          <div class="badge">LEFT · 4w phrase</div>
+          <div class="he">ו/ירא אלהים את ה/אור</div>
+          <div class="tr">va-yar Elohim et ha-or</div>
+          <div class="en">"and God saw et the light"</div>
+          <div class="meta">internal binary phrase — children below (not inside this card)</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ binary split</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B0 · GLUE [0–1] · LEAF</div>
+          <div class="he">ו/ירא אלהים</div>
+          <div class="tr">va-yar Elohim</div>
+          <div class="en">"and God saw"</div>
+          <div class="meta">end: <strong>tevir</strong> · rank 3 · tevir</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>0</td><td class='he-cell'>ו/ירא</td><td><code>darga</code></td><td>9</td><td>conjunctive</td><td>darga (conjunctive)</td></tr><tr><td>1</td><td class='he-cell'>אלהים</td><td><code>tevir</code></td><td>3</td><td>disjunctive</td><td>tevir</td></tr></tbody></table>
+        </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B1 · GLUE [2–3] · LEAF</div>
+          <div class="he">את ה/אור</div>
+          <div class="tr">et ha-or</div>
+          <div class="en">"et the light"</div>
+          <div class="meta">end: <strong>tifcha</strong> · rank 2 · tifcha</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>2</td><td class='he-cell'>את</td><td><code>zero_conjunctive</code></td><td>9</td><td>conjunctive</td><td>no mark — glue into next disjunctive</td></tr><tr><td>3</td><td class='he-cell'>ה/אור</td><td><code>tifcha</code></td><td>2</td><td>disjunctive</td><td>tifcha</td></tr></tbody></table>
+        </div>
+                </div>
+              </div>
+            </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B2 · GLUE [4–5] · LEAF</div>
+          <div class="he">כי טוב</div>
+          <div class="tr">ki tov</div>
+          <div class="en">"that it was good"</div>
+          <div class="meta">end: <strong>etnachta</strong> · rank 1 · etnachta (major mid-verse rest)</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>4</td><td class='he-cell'>כי</td><td><code>zero_conjunctive</code></td><td>9</td><td>conjunctive</td><td>no mark — glue into next disjunctive</td></tr><tr><td>5</td><td class='he-cell'>טוב</td><td><code>etnachta</code></td><td>1</td><td>disjunctive</td><td>etnachta (major mid-verse rest)</td></tr></tbody></table>
+        </div>
+                </div>
+              </div>
+            </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+            <div class="unit">
+              
+        <div class="card phrase">
+          <div class="badge">RIGHT · 6w phrase</div>
+          <div class="he">ו/יבדל אלהים בין ה/אור ו/בין ה/חשך</div>
+          <div class="tr">va-yavdel Elohim bein ha-or u-vein ha-choshekh</div>
+          <div class="en">"God separated light from darkness"</div>
+          <div class="meta">internal binary phrase — children below (not inside this card)</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ binary split</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B3 · GLUE [6–7] · LEAF</div>
+          <div class="he">ו/יבדל אלהים</div>
+          <div class="tr">va-yavdel Elohim</div>
+          <div class="en">"and God separated"</div>
+          <div class="meta">end: <strong>zaqef_qatan</strong> · rank 2 · zaqef qatan</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>6</td><td class='he-cell'>ו/יבדל</td><td><code>munach</code></td><td>9</td><td>conjunctive</td><td>munach (conjunctive)</td></tr><tr><td>7</td><td class='he-cell'>אלהים</td><td><code>zaqef_qatan</code></td><td>2</td><td>disjunctive</td><td>zaqef qatan</td></tr></tbody></table>
+        </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+            <div class="unit">
+              
+        <div class="card phrase">
+          <div class="badge">RIGHT · 4w phrase</div>
+          <div class="he">בין ה/אור ו/בין ה/חשך</div>
+          <div class="tr">bein ha-or u-vein ha-choshekh</div>
+          <div class="en">"between the light and the darkness"</div>
+          <div class="meta">internal binary phrase — children below (not inside this card)</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ binary split</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B4 · GLUE [8–9] · LEAF</div>
+          <div class="he">בין ה/אור</div>
+          <div class="tr">bein ha-or</div>
+          <div class="en">"between the light"</div>
+          <div class="meta">end: <strong>tifcha</strong> · rank 2 · tifcha</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>8</td><td class='he-cell'>בין</td><td><code>mercha</code></td><td>9</td><td>conjunctive</td><td>mercha (conjunctive)</td></tr><tr><td>9</td><td class='he-cell'>ה/אור</td><td><code>tifcha</code></td><td>2</td><td>disjunctive</td><td>tifcha</td></tr></tbody></table>
+        </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B5 · GLUE [10–11] · LEAF</div>
+          <div class="he">ו/בין ה/חשך</div>
+          <div class="tr">u-vein ha-choshekh</div>
+          <div class="en">"and between the darkness"</div>
+          <div class="meta">end: <strong>silluq</strong> · rank 1 · silluq if last word of verse; else meteg (ignored for structure)</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>10</td><td class='he-cell'>ו/בין</td><td><code>mercha</code></td><td>9</td><td>conjunctive</td><td>mercha (conjunctive)</td></tr><tr><td>11</td><td class='he-cell'>ה/חשך</td><td><code>silluq</code></td><td>1</td><td>special_silluq_meteg</td><td>silluq if last word of verse; else meteg (ignored for structure)</td></tr></tbody></table>
+        </div>
+                </div>
+              </div>
+            </div>
+                </div>
+              </div>
+            </div>
+                </div>
+              </div>
+            </div></div>
+      <h3>3. Leaves table</h3>
+      <div class="table-wrap">
+      <table class="leaf-table">
+        <thead><tr>
+          <th>B#</th><th>idx</th><th>kind</th><th>he</th><th>translit</th><th>en</th>
+          <th>end mark</th><th>rank</th><th>mark does</th>
+        </tr></thead>
+        <tbody><tr><td>B0</td><td>[0–1]</td><td>GLUE</td><td class='he-cell'>ו/ירא אלהים</td><td>va-yar Elohim</td><td>and God saw</td><td><code>tevir</code></td><td>3</td><td>tevir</td></tr><tr><td>B1</td><td>[2–3]</td><td>GLUE</td><td class='he-cell'>את ה/אור</td><td>et ha-or</td><td>et the light</td><td><code>tifcha</code></td><td>2</td><td>tifcha</td></tr><tr><td>B2</td><td>[4–5]</td><td>GLUE</td><td class='he-cell'>כי טוב</td><td>ki tov</td><td>that it was good</td><td><code>etnachta</code></td><td>1</td><td>etnachta (major mid-verse rest)</td></tr><tr><td>B3</td><td>[6–7]</td><td>GLUE</td><td class='he-cell'>ו/יבדל אלהים</td><td>va-yavdel Elohim</td><td>and God separated</td><td><code>zaqef_qatan</code></td><td>2</td><td>zaqef qatan</td></tr><tr><td>B4</td><td>[8–9]</td><td>GLUE</td><td class='he-cell'>בין ה/אור</td><td>bein ha-or</td><td>between the light</td><td><code>tifcha</code></td><td>2</td><td>tifcha</td></tr><tr><td>B5</td><td>[10–11]</td><td>GLUE</td><td class='he-cell'>ו/בין ה/חשך</td><td>u-vein ha-choshekh</td><td>and between the darkness</td><td><code>silluq</code></td><td>1</td><td>silluq if last word of verse; else meteg (ignored for structure)</td></tr></tbody>
+      </table>
+      </div>
+    </section>
+    
+
+    <section class="verse" id="Gen-1-5">
+      <h2>Gen.1.5
+        <span class="pill">13w · 6 leaves · vv3 prose</span>
+      </h2>
+      <h3>1. Every word + cantillation mark</h3>
+      <div class="word-strip"><div class='wcell'><div class='wi'>w0</div><div class='he'>ו/יקרא</div><div class='mk'><code>qadma</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>qadma (conjunctive)</div></div><div class='wcell'><div class='wi'>w1</div><div class='he'>אלהים</div><div class='mk'><code>mahpach</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>mahpach (conjunctive)</div></div><div class='wcell'><div class='wi'>w2</div><div class='he'>ל/אור</div><div class='mk'><code>pashta</code></div><div class='rk'>rank 3 · disjunctive</div><div class='md'>pashta</div></div><div class='wcell'><div class='wi'>w3</div><div class='he'>יום</div><div class='mk'><code>zaqef_qatan</code></div><div class='rk'>rank 2 · disjunctive</div><div class='md'>zaqef qatan</div></div><div class='wcell'><div class='wi'>w4</div><div class='he'>ו/ל/חשך</div><div class='mk'><code>tifcha</code></div><div class='rk'>rank 2 · disjunctive</div><div class='md'>tifcha</div></div><div class='wcell'><div class='wi'>w5</div><div class='he'>קרא</div><div class='mk'><code>munach</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>munach (conjunctive)</div></div><div class='wcell'><div class='wi'>w6</div><div class='he'>לילה</div><div class='mk'><code>etnachta</code></div><div class='rk'>rank 1 · disjunctive</div><div class='md'>etnachta (major mid-verse rest)</div></div><div class='wcell'><div class='wi'>w7</div><div class='he'>ו/יהי</div><div class='mk'><code>zero_conjunctive</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>no mark — glue into next disjunctive</div></div><div class='wcell'><div class='wi'>w8</div><div class='he'>ערב</div><div class='mk'><code>mercha</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>mercha (conjunctive)</div></div><div class='wcell'><div class='wi'>w9</div><div class='he'>ו/יהי</div><div class='mk'><code>zero_conjunctive</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>no mark — glue into next disjunctive</div></div><div class='wcell'><div class='wi'>w10</div><div class='he'>בקר</div><div class='mk'><code>tifcha</code></div><div class='rk'>rank 2 · disjunctive</div><div class='md'>tifcha</div></div><div class='wcell'><div class='wi'>w11</div><div class='he'>יום</div><div class='mk'><code>mercha</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>mercha (conjunctive)</div></div><div class='wcell'><div class='wi'>w12</div><div class='he'>אחד</div><div class='mk'><code>silluq</code></div><div class='rk'>rank 1 · special_silluq_meteg</div><div class='md'>silluq if last word of verse; else meteg (ignored for structure)</div></div></div>
+      <h3>2. Top-down pyramid (cards do not nest inside each other)</h3>
+      <p class="hint">Parent card stays narrow; LEFT/RIGHT sit in a full-width row underneath so nothing stacks on top of siblings.</p>
+      <div class="pyramid">
+            <div class="unit">
+              
+        <div class="card root">
+          <div class="badge">ROOT · full verse</div>
+          <div class="he">ו/יקרא אלהים ל/אור יום ו/ל/חשך קרא לילה ו/יהי ערב ו/יהי בקר יום אחד</div>
+          <div class="tr">ו-יקרא אלהים ל-אור יום ו-ל-חשך קרא לילה ו-יהי ערב ו-יהי בקר יום אחד</div>
+          <div class="en">"And God called the light Day, and the darkness he called Night. And there was evening and there was morning, day one."</div>
+          <div class="meta">status unique · pure binary branch</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ top split (etnachta usually)</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+            <div class="unit">
+              
+        <div class="card phrase">
+          <div class="badge">LEFT · 7w phrase</div>
+          <div class="he">ו/יקרא אלהים ל/אור יום ו/ל/חשך קרא לילה</div>
+          <div class="tr">va-yiqra … laylah</div>
+          <div class="en">"naming Day and Night"</div>
+          <div class="meta">internal binary phrase — children below (not inside this card)</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ binary split</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+            <div class="unit">
+              
+        <div class="card phrase">
+          <div class="badge">LEFT · 4w phrase</div>
+          <div class="he">ו/יקרא אלהים ל/אור יום</div>
+          <div class="tr">va-yiqra Elohim la-or yom</div>
+          <div class="en">"God called the light Day"</div>
+          <div class="meta">internal binary phrase — children below (not inside this card)</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ binary split</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B0 · GLUE [0–2] · LEAF</div>
+          <div class="he">ו/יקרא אלהים ל/אור</div>
+          <div class="tr">va-yiqra Elohim la-or</div>
+          <div class="en">"and God called to the light"</div>
+          <div class="meta">end: <strong>pashta</strong> · rank 3 · pashta</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>0</td><td class='he-cell'>ו/יקרא</td><td><code>qadma</code></td><td>9</td><td>conjunctive</td><td>qadma (conjunctive)</td></tr><tr><td>1</td><td class='he-cell'>אלהים</td><td><code>mahpach</code></td><td>9</td><td>conjunctive</td><td>mahpach (conjunctive)</td></tr><tr><td>2</td><td class='he-cell'>ל/אור</td><td><code>pashta</code></td><td>3</td><td>disjunctive</td><td>pashta</td></tr></tbody></table>
+        </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B1 · ATOM [3] · LEAF</div>
+          <div class="he">יום</div>
+          <div class="tr">yom</div>
+          <div class="en">"Day"</div>
+          <div class="meta">end: <strong>zaqef_qatan</strong> · rank 2 · zaqef qatan</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>3</td><td class='he-cell'>יום</td><td><code>zaqef_qatan</code></td><td>2</td><td>disjunctive</td><td>zaqef qatan</td></tr></tbody></table>
+        </div>
+                </div>
+              </div>
+            </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+            <div class="unit">
+              
+        <div class="card phrase">
+          <div class="badge">RIGHT · 3w phrase</div>
+          <div class="he">ו/ל/חשך קרא לילה</div>
+          <div class="tr">ve-la-choshekh qara laylah</div>
+          <div class="en">"and to the darkness called Night"</div>
+          <div class="meta">internal binary phrase — children below (not inside this card)</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ binary split</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B2 · ATOM [4] · LEAF</div>
+          <div class="he">ו/ל/חשך</div>
+          <div class="tr">ve-la-choshekh</div>
+          <div class="en">"and to the darkness"</div>
+          <div class="meta">end: <strong>tifcha</strong> · rank 2 · tifcha</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>4</td><td class='he-cell'>ו/ל/חשך</td><td><code>tifcha</code></td><td>2</td><td>disjunctive</td><td>tifcha</td></tr></tbody></table>
+        </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B3 · GLUE [5–6] · LEAF</div>
+          <div class="he">קרא לילה</div>
+          <div class="tr">qara laylah</div>
+          <div class="en">"he called Night"</div>
+          <div class="meta">end: <strong>etnachta</strong> · rank 1 · etnachta (major mid-verse rest)</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>5</td><td class='he-cell'>קרא</td><td><code>munach</code></td><td>9</td><td>conjunctive</td><td>munach (conjunctive)</td></tr><tr><td>6</td><td class='he-cell'>לילה</td><td><code>etnachta</code></td><td>1</td><td>disjunctive</td><td>etnachta (major mid-verse rest)</td></tr></tbody></table>
+        </div>
+                </div>
+              </div>
+            </div>
+                </div>
+              </div>
+            </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+            <div class="unit">
+              
+        <div class="card phrase">
+          <div class="badge">RIGHT · 6w phrase</div>
+          <div class="he">ו/יהי ערב ו/יהי בקר יום אחד</div>
+          <div class="tr">va-yehi erev va-yehi voqer yom echad</div>
+          <div class="en">"evening and morning, day one"</div>
+          <div class="meta">internal binary phrase — children below (not inside this card)</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ binary split</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B4 · GLUE [7–10] · LEAF</div>
+          <div class="he">ו/יהי ערב ו/יהי בקר</div>
+          <div class="tr">va-yehi erev va-yehi voqer</div>
+          <div class="en">"evening and morning"</div>
+          <div class="meta">end: <strong>tifcha</strong> · rank 2 · tifcha</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>7</td><td class='he-cell'>ו/יהי</td><td><code>zero_conjunctive</code></td><td>9</td><td>conjunctive</td><td>no mark — glue into next disjunctive</td></tr><tr><td>8</td><td class='he-cell'>ערב</td><td><code>mercha</code></td><td>9</td><td>conjunctive</td><td>mercha (conjunctive)</td></tr><tr><td>9</td><td class='he-cell'>ו/יהי</td><td><code>zero_conjunctive</code></td><td>9</td><td>conjunctive</td><td>no mark — glue into next disjunctive</td></tr><tr><td>10</td><td class='he-cell'>בקר</td><td><code>tifcha</code></td><td>2</td><td>disjunctive</td><td>tifcha</td></tr></tbody></table>
+        </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B5 · GLUE [11–12] · LEAF</div>
+          <div class="he">יום אחד</div>
+          <div class="tr">yom echad</div>
+          <div class="en">"day one"</div>
+          <div class="meta">end: <strong>silluq</strong> · rank 1 · silluq if last word of verse; else meteg (ignored for structure)</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>11</td><td class='he-cell'>יום</td><td><code>mercha</code></td><td>9</td><td>conjunctive</td><td>mercha (conjunctive)</td></tr><tr><td>12</td><td class='he-cell'>אחד</td><td><code>silluq</code></td><td>1</td><td>special_silluq_meteg</td><td>silluq if last word of verse; else meteg (ignored for structure)</td></tr></tbody></table>
+        </div>
+                </div>
+              </div>
+            </div>
+                </div>
+              </div>
+            </div></div>
+      <h3>3. Leaves table</h3>
+      <div class="table-wrap">
+      <table class="leaf-table">
+        <thead><tr>
+          <th>B#</th><th>idx</th><th>kind</th><th>he</th><th>translit</th><th>en</th>
+          <th>end mark</th><th>rank</th><th>mark does</th>
+        </tr></thead>
+        <tbody><tr><td>B0</td><td>[0–2]</td><td>GLUE</td><td class='he-cell'>ו/יקרא אלהים ל/אור</td><td>va-yiqra Elohim la-or</td><td>and God called to the light</td><td><code>pashta</code></td><td>3</td><td>pashta</td></tr><tr><td>B1</td><td>[3]</td><td>ATOM</td><td class='he-cell'>יום</td><td>yom</td><td>Day</td><td><code>zaqef_qatan</code></td><td>2</td><td>zaqef qatan</td></tr><tr><td>B2</td><td>[4]</td><td>ATOM</td><td class='he-cell'>ו/ל/חשך</td><td>ve-la-choshekh</td><td>and to the darkness</td><td><code>tifcha</code></td><td>2</td><td>tifcha</td></tr><tr><td>B3</td><td>[5–6]</td><td>GLUE</td><td class='he-cell'>קרא לילה</td><td>qara laylah</td><td>he called Night</td><td><code>etnachta</code></td><td>1</td><td>etnachta (major mid-verse rest)</td></tr><tr><td>B4</td><td>[7–10]</td><td>GLUE</td><td class='he-cell'>ו/יהי ערב ו/יהי בקר</td><td>va-yehi erev va-yehi voqer</td><td>evening and morning</td><td><code>tifcha</code></td><td>2</td><td>tifcha</td></tr><tr><td>B5</td><td>[11–12]</td><td>GLUE</td><td class='he-cell'>יום אחד</td><td>yom echad</td><td>day one</td><td><code>silluq</code></td><td>1</td><td>silluq if last word of verse; else meteg (ignored for structure)</td></tr></tbody>
+      </table>
+      </div>
+    </section>
+    
+
+    <section class="verse" id="Gen-1-6">
+      <h2>Gen.1.6
+        <span class="pill">11w · 6 leaves · vv3 prose</span>
+      </h2>
+      <h3>1. Every word + cantillation mark</h3>
+      <div class="word-strip"><div class='wcell'><div class='wi'>w0</div><div class='he'>ו/יאמר</div><div class='mk'><code>munach</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>munach (conjunctive)</div></div><div class='wcell'><div class='wi'>w1</div><div class='he'>אלהים</div><div class='mk'><code>zaqef_qatan</code></div><div class='rk'>rank 2 · disjunctive</div><div class='md'>zaqef qatan</div></div><div class='wcell'><div class='wi'>w2</div><div class='he'>יהי</div><div class='mk'><code>mercha</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>mercha (conjunctive)</div></div><div class='wcell'><div class='wi'>w3</div><div class='he'>רקיע</div><div class='mk'><code>tifcha</code></div><div class='rk'>rank 2 · disjunctive</div><div class='md'>tifcha</div></div><div class='wcell'><div class='wi'>w4</div><div class='he'>ב/תוך</div><div class='mk'><code>munach</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>munach (conjunctive)</div></div><div class='wcell'><div class='wi'>w5</div><div class='he'>ה/מים</div><div class='mk'><code>etnachta</code></div><div class='rk'>rank 1 · disjunctive</div><div class='md'>etnachta (major mid-verse rest)</div></div><div class='wcell'><div class='wi'>w6</div><div class='he'>ו/יהי</div><div class='mk'><code>munach</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>munach (conjunctive)</div></div><div class='wcell'><div class='wi'>w7</div><div class='he'>מבדיל</div><div class='mk'><code>zaqef_qatan</code></div><div class='rk'>rank 2 · disjunctive</div><div class='md'>zaqef qatan</div></div><div class='wcell'><div class='wi'>w8</div><div class='he'>בין</div><div class='mk'><code>mercha</code></div><div class='rk'>rank 9 · conjunctive</div><div class='md'>mercha (conjunctive)</div></div><div class='wcell'><div class='wi'>w9</div><div class='he'>מים</div><div class='mk'><code>tifcha</code></div><div class='rk'>rank 2 · disjunctive</div><div class='md'>tifcha</div></div><div class='wcell'><div class='wi'>w10</div><div class='he'>ל/מים</div><div class='mk'><code>silluq</code></div><div class='rk'>rank 1 · special_silluq_meteg</div><div class='md'>silluq if last word of verse; else meteg (ignored for structure)</div></div></div>
+      <h3>2. Top-down pyramid (cards do not nest inside each other)</h3>
+      <p class="hint">Parent card stays narrow; LEFT/RIGHT sit in a full-width row underneath so nothing stacks on top of siblings.</p>
+      <div class="pyramid">
+            <div class="unit">
+              
+        <div class="card root">
+          <div class="badge">ROOT · full verse</div>
+          <div class="he">ו/יאמר אלהים יהי רקיע ב/תוך ה/מים ו/יהי מבדיל בין מים ל/מים</div>
+          <div class="tr">ו-יאמר אלהים יהי רקיע ב-תוך ה-מים ו-יהי מבדיל בין מים ל-מים</div>
+          <div class="en">"And God said, Let there be a firmament in the midst of the waters, and let it divide water from water."</div>
+          <div class="meta">status unique · pure binary branch</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ top split (etnachta usually)</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+            <div class="unit">
+              
+        <div class="card phrase">
+          <div class="badge">LEFT · 6w phrase</div>
+          <div class="he">ו/יאמר אלהים יהי רקיע ב/תוך ה/מים</div>
+          <div class="tr">va-yomer Elohim yehi raqia be-tokh ha-mayim</div>
+          <div class="en">"God said: firmament in the waters"</div>
+          <div class="meta">internal binary phrase — children below (not inside this card)</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ binary split</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B0 · GLUE [0–1] · LEAF</div>
+          <div class="he">ו/יאמר אלהים</div>
+          <div class="tr">va-yomer Elohim</div>
+          <div class="en">"and God said"</div>
+          <div class="meta">end: <strong>zaqef_qatan</strong> · rank 2 · zaqef qatan</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>0</td><td class='he-cell'>ו/יאמר</td><td><code>munach</code></td><td>9</td><td>conjunctive</td><td>munach (conjunctive)</td></tr><tr><td>1</td><td class='he-cell'>אלהים</td><td><code>zaqef_qatan</code></td><td>2</td><td>disjunctive</td><td>zaqef qatan</td></tr></tbody></table>
+        </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+            <div class="unit">
+              
+        <div class="card phrase">
+          <div class="badge">RIGHT · 4w phrase</div>
+          <div class="he">יהי רקיע ב/תוך ה/מים</div>
+          <div class="tr">יהי רקיע ב-תוך ה-מים</div>
+          <div class="en">"[gloss] יהי רקיע ב/תוך ה/מים"</div>
+          <div class="meta">internal binary phrase — children below (not inside this card)</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ binary split</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B1 · GLUE [2–3] · LEAF</div>
+          <div class="he">יהי רקיע</div>
+          <div class="tr">yehi raqia</div>
+          <div class="en">"let there be a firmament"</div>
+          <div class="meta">end: <strong>tifcha</strong> · rank 2 · tifcha</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>2</td><td class='he-cell'>יהי</td><td><code>mercha</code></td><td>9</td><td>conjunctive</td><td>mercha (conjunctive)</td></tr><tr><td>3</td><td class='he-cell'>רקיע</td><td><code>tifcha</code></td><td>2</td><td>disjunctive</td><td>tifcha</td></tr></tbody></table>
+        </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B2 · GLUE [4–5] · LEAF</div>
+          <div class="he">ב/תוך ה/מים</div>
+          <div class="tr">be-tokh ha-mayim</div>
+          <div class="en">"in the midst of the waters"</div>
+          <div class="meta">end: <strong>etnachta</strong> · rank 1 · etnachta (major mid-verse rest)</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>4</td><td class='he-cell'>ב/תוך</td><td><code>munach</code></td><td>9</td><td>conjunctive</td><td>munach (conjunctive)</td></tr><tr><td>5</td><td class='he-cell'>ה/מים</td><td><code>etnachta</code></td><td>1</td><td>disjunctive</td><td>etnachta (major mid-verse rest)</td></tr></tbody></table>
+        </div>
+                </div>
+              </div>
+            </div>
+                </div>
+              </div>
+            </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+            <div class="unit">
+              
+        <div class="card phrase">
+          <div class="badge">RIGHT · 5w phrase</div>
+          <div class="he">ו/יהי מבדיל בין מים ל/מים</div>
+          <div class="tr">va-yehi mavdil bein mayim la-mayim</div>
+          <div class="en">"divider between waters"</div>
+          <div class="meta">internal binary phrase — children below (not inside this card)</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ binary split</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B3 · GLUE [6–7] · LEAF</div>
+          <div class="he">ו/יהי מבדיל</div>
+          <div class="tr">va-yehi mavdil</div>
+          <div class="en">"and let it be a divider"</div>
+          <div class="meta">end: <strong>zaqef_qatan</strong> · rank 2 · zaqef qatan</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>6</td><td class='he-cell'>ו/יהי</td><td><code>munach</code></td><td>9</td><td>conjunctive</td><td>munach (conjunctive)</td></tr><tr><td>7</td><td class='he-cell'>מבדיל</td><td><code>zaqef_qatan</code></td><td>2</td><td>disjunctive</td><td>zaqef qatan</td></tr></tbody></table>
+        </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+            <div class="unit">
+              
+        <div class="card phrase">
+          <div class="badge">RIGHT · 3w phrase</div>
+          <div class="he">בין מים ל/מים</div>
+          <div class="tr">בין מים ל-מים</div>
+          <div class="en">"[gloss] בין מים ל/מים"</div>
+          <div class="meta">internal binary phrase — children below (not inside this card)</div>
+          
+        </div>
+              <div class="connector">
+                <div class="vline"></div>
+                <div class="split-label">▼ binary split</div>
+                <div class="hline-wrap"><div class="hline"></div></div>
+              </div>
+              <div class="children">
+                <div class="child">
+                  <div class="child-cap">LEFT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B4 · GLUE [8–9] · LEAF</div>
+          <div class="he">בין מים</div>
+          <div class="tr">bein mayim</div>
+          <div class="en">"between waters"</div>
+          <div class="meta">end: <strong>tifcha</strong> · rank 2 · tifcha</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>8</td><td class='he-cell'>בין</td><td><code>mercha</code></td><td>9</td><td>conjunctive</td><td>mercha (conjunctive)</td></tr><tr><td>9</td><td class='he-cell'>מים</td><td><code>tifcha</code></td><td>2</td><td>disjunctive</td><td>tifcha</td></tr></tbody></table>
+        </div>
+                </div>
+                <div class="child">
+                  <div class="child-cap">RIGHT</div>
+                  <div class="vline short"></div>
+                  
+        <div class="card leaf">
+          <div class="badge">B5 · ATOM [10] · LEAF</div>
+          <div class="he">ל/מים</div>
+          <div class="tr">la-mayim</div>
+          <div class="en">"to waters"</div>
+          <div class="meta">end: <strong>silluq</strong> · rank 1 · silluq if last word of verse; else meteg (ignored for structure)</div>
+          <table class='mini'><thead><tr><th>#</th><th>he</th><th>mark</th><th>rank</th><th>kind</th><th>does</th></tr></thead><tbody><tr><td>10</td><td class='he-cell'>ל/מים</td><td><code>silluq</code></td><td>1</td><td>special_silluq_meteg</td><td>silluq if last word of verse; else meteg (ignored for structure)</td></tr></tbody></table>
+        </div>
+                </div>
+              </div>
+            </div>
+                </div>
+              </div>
+            </div>
+                </div>
+              </div>
+            </div></div>
+      <h3>3. Leaves table</h3>
+      <div class="table-wrap">
+      <table class="leaf-table">
+        <thead><tr>
+          <th>B#</th><th>idx</th><th>kind</th><th>he</th><th>translit</th><th>en</th>
+          <th>end mark</th><th>rank</th><th>mark does</th>
+        </tr></thead>
+        <tbody><tr><td>B0</td><td>[0–1]</td><td>GLUE</td><td class='he-cell'>ו/יאמר אלהים</td><td>va-yomer Elohim</td><td>and God said</td><td><code>zaqef_qatan</code></td><td>2</td><td>zaqef qatan</td></tr><tr><td>B1</td><td>[2–3]</td><td>GLUE</td><td class='he-cell'>יהי רקיע</td><td>yehi raqia</td><td>let there be a firmament</td><td><code>tifcha</code></td><td>2</td><td>tifcha</td></tr><tr><td>B2</td><td>[4–5]</td><td>GLUE</td><td class='he-cell'>ב/תוך ה/מים</td><td>be-tokh ha-mayim</td><td>in the midst of the waters</td><td><code>etnachta</code></td><td>1</td><td>etnachta (major mid-verse rest)</td></tr><tr><td>B3</td><td>[6–7]</td><td>GLUE</td><td class='he-cell'>ו/יהי מבדיל</td><td>va-yehi mavdil</td><td>and let it be a divider</td><td><code>zaqef_qatan</code></td><td>2</td><td>zaqef qatan</td></tr><tr><td>B4</td><td>[8–9]</td><td>GLUE</td><td class='he-cell'>בין מים</td><td>bein mayim</td><td>between waters</td><td><code>tifcha</code></td><td>2</td><td>tifcha</td></tr><tr><td>B5</td><td>[10]</td><td>ATOM</td><td class='he-cell'>ל/מים</td><td>la-mayim</td><td>to waters</td><td><code>silluq</code></td><td>1</td><td>silluq if last word of verse; else meteg (ignored for structure)</td></tr></tbody>
+      </table>
+      </div>
+    </section>
+    
+<footer>
+  Scroll horizontally inside a pyramid box if a deep tree is wider than the window.
+  Rank: 1 strongest (etnachta/silluq) · 2–3 weaker disjunctives · 9 conjunctive glue.
+</footer>
+</body>
+</html>

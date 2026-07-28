@@ -1,0 +1,121 @@
+# Tree → logic interpretation rules (living catalog)
+
+**Goal:** Build a **consistent, reusable rule set** for reading each verse’s **binary / ta'amim tree** into pre-code logic—so interpretation is not ad hoc per chapter.
+
+**Aspiration:** **100% word use** — every Hebrew word in the verse tree is assigned a logic role (condition, outcome, number, reference, header, glue, etc.) under an explicit interpretation rule. Early units will fall short; gaps are logged and drive better rules.
+
+**Status:** Seed catalog + particle/set-ops (TIR-014–022) + **poetry block (TIR-023–025, 2026-07-27)**. Rules below are provisional; promote only when they re-run cleanly on multiple units.
+
+**Related:** `logic/SYSTEM.md`, `logic/units/lev_12_childbirth.yaml`, `logic/TUTORIAL_BEGINNERS.md`, `reviews/STANDING_DECISIONS.md` §6b, `reviews/SCAN_gen_particles_et_gam_akh_raq_2026-07-25.md`
+
+---
+
+## Principles
+
+1. **Hebrew tree is primary** — roles come from OSHB `n=` structure + Hebrew content, not English paraphrase.
+2. **Every word gets a role** — even if the role is “structure_header” or “glue_only.” Unused/unclassified words are **coverage failures**, not silent omissions.
+3. **Consistent mapping** — the same tree pattern (e.g. etnachta pivot = condition head) should mean the same logical job across verses, unless a documented exception applies.
+4. **Improve the rulebook, don’t hide gaps** — when a word doesn’t fit, add an `[OPEN]` note and a candidate rule; don’t pretend coverage is 100%.
+5. **Always** `he` + `he_translit` + `en` on every word/role.
+
+---
+
+## Coverage targets
+
+| Level | Meaning |
+|-------|---------|
+| **Accounted** | Word has a role tag (including pure structure) |
+| **Logic-bearing** | Role feeds WHEN / THEN / state / restriction / ritual / reference |
+| **100% use (aspiration)** | Every word is **accounted**; maximize **logic-bearing** where the text supports it; no silent leftovers |
+
+Early phase: require **100% accounted**. Stretch toward richer logic-bearing use as the rule set grows.
+
+---
+
+## Seed interpretation rules (provisional)
+
+IDs are stable so units can cite them (`interp_rule: TIR-001`).
+
+| ID | Pattern (tree) | Maps to logic | Confidence | Notes / Lev 12 check |
+|----|----------------|---------------|------------|----------------------|
+| TIR-001 | Top split `n=1` head vs `n=0` head (typical etnachta / final) | First half often **condition/setup cluster**; second half often **consequence/status cluster** (verify per genre) | hypothesis | v2: `זָכָר` n=1 vs `תִּטְמָא` n=0 |
+| TIR-002 | Strong pivot word at half-verse head that names a case feature (gender, animal type, …) | **WHEN / case pivot** | tested (Lev 12 male) | `זָכָר` / zakhar / "male" |
+| TIR-003 | Number-word + time-unit under consequence subtree | **THEN duration** (numeric gloss from Hebrew only) | tested | `שִׁבְעַת יָמִים` → 7 |
+| TIR-004 | Dual/plural time morphology (e.g. dual “weeks”) | Duration via morphology, not English “14” first | tested | `שְׁבֻעַיִם` → 14 |
+| TIR-005 | Additive number pairs (thirty+three, sixty+six) | Sum gloss after reading both Hebrew number words | tested | 33, 66 |
+| TIR-006 | Comparison phrase “as / like …” under reference subtree | **Reference link**, not a second independent counter unless text adds numbers | tested | niddah comparison |
+| TIR-007 | Divine/relay address subtree (speak to… saying) | **Header only** — never IF | tested | v1–v2a |
+| TIR-008 | Words with **no** `n=` | **Bound** into neighboring phrase; inherit that phrase’s role; still listed individually for 100% accounting | tested | `כִּי`, `שִׁבְעַת`, … |
+| TIR-009 | Status verbs (impure / pure / sit) | **State** or THEN-status | tested | `טָמְאָה`, `תֵּשֵׁב`, `טָהֲרָה` |
+| TIR-010 | Restriction clauses “do not … until …” | **Guards / rules** until completion event | tested | v4 holy / sanctuary |
+| TIR-011 | Parallel case marker (`וְאִם` + alternate feature) | New decision-table **row** | tested | female path v5 |
+| TIR-012 | Shared close “for X or for Y” | Unifies prior case rows under one ritual/outcome | tested | v7 male or female |
+| TIR-013 | Poverty / inability branch | Alternate THEN on same outcome class | tested | v8 two birds |
+| TIR-014 | Standalone **את** / *et* / object marker (and **ואת** / *ve-et*) before a definite NP | Role **`glue_object_marker`**: binds verb → definite patient; **not** a free name; following NP is the payload (person, domain, blood, *kol*-total, …) | tested (Lev 1:5 ×3; Gen inventory verses) | See Gen scan `SCAN_gen_particles_et_gam_akh_raq_2026-07-25.md` |
+| TIR-015 | **את X ואת Y** (parallel *et* … *ve-et* …) or multi-*et* under one verb | Role **`set_include_list`**: build **object inventory** / dual domains (creation pairs, plunder, genealogy children, family staging) | tested (Gen 1:1; 36:6; 25:2; …) | Written include-by-listing; BR *ribui* dual-track only when cited |
+| TIR-016 | **את כל** / *et kol* / “et all …” | Role **`set_maximize`**: patient = entire class/total under the verb | tested (Gen *et kol* high frequency) | Maximizer, not ordinary NP |
+| TIR-017 | **גם** / **וגם** / *gam* / *ve-gam* (“also/even”) | Role **`set_add`**: add agent, patient, time, or goods to a set already in play; **וגם את** = also + object-mark another patient | tested (Gen ~92 hits) | Written ribui-like; not object marker itself |
+| TIR-018 | **אך** / *akh* (“but/only/just”) | Role **`set_limit` / `focus_restrict`**: narrow survivors, conditions, timing, kinship, or claims | tested (Gen 13 hits, e.g. 7:23, 9:4, 34:15) | School *mi’ut*; dual-track BR when named |
+| TIR-019 | **רק** / *raq* (“only/except”) | Role **`set_except` / `exclusive_only`**: exception set or exclusive property (often near לא) | tested (Gen 11 hits, e.g. 24:8 *raq et beni*, 47:22) | BR 59:10 dual-track on 24:8 |
+| TIR-020 | **את** + divine name (יהוה / אלהים) sparse | Role **`special_et_relation`**: do **not** auto-apply domain-expand; may be accompaniment/fence — verify per verse; Oral dual-track for BR school loci only (4:1, etc.) | hypothesis | Blocks false “every *et* expands domains” |
+| TIR-021 | Same NP re-marked with **את** under a **new verb** | Role **`re_object_bind`**: new verb frame re-licenses object (not redundant waste) | tested (Lev 1:5 הדם under present + dash) | Gold Lev 1:5 |
+| TIR-022 | Morph prefix on content word (ו- sequence, ה- definite, מ-/ל-/ב- prep) | Role **`morph_*`**: account under the leaf; prefix has a job; base may be free name | tested (מאהל, המזבח, ושחט) | Letter-level only when morph job exists |
+| TIR-023 | **Poetry dual A‖B** — top etnachta (or equivalent rank-1) split into two parallel instruction clusters: (a) dual imperative (positive ‖ `אל`-prohibition), or (b) parallel cause→effect ‖ cause→effect | Map to **dual instruction row(s)** (not path→end TIR-025; not single casuistic gender WHEN). Sub-bricks may be cause / effect / manner | **tested** (Prov 3:5 + Prov 15:1) | Units `prov_03_trust_know`, `prov_15_soft_harsh`; dehi often opens first brick before etnachta |
+| TIR-024 | **Poetry command → divine result** — etnachta left = human imperative/jussive (often `דע` / know, `ב/כל דרכיך`…); right = 3sg agent (`ו/הוא` / *ve-hu* / “and He”) + result verb | Map to **WHEN command / THEN result** decision row (or COMMAND_THEN_RESULT step). Agent may be discourse-linked to prior divine name | **hypothesis** (Prov 3:6 only) | Distinct from TIR-023 and TIR-025. Pair with 3:5 in `prov_03_trust_know` |
+| TIR-025 | **Poetry path-claim → end-result** — etnachta left = existence/appearance path (`יש דרך ישר` … `ל/פני איש`); right = end pivot (`אחרית`) + outcome (`דרכי מות` …) | Map to **WHEN path-as-before-man / THEN its-end**. Death (or other end) must stay in **THEN**, not smuggled into left arm via English. Exact // copies share **one** rule | **tested** (Prov 14:12 + // 16:25 same bracket) | Unit `prov_14_way_death`. Not dual imperative (TIR-023). Not divine-agent straighten (TIR-024) |
+
+**Related research:**  
+- Genesis full scan: `reviews/SCAN_gen_particles_et_gam_akh_raq_2026-07-25.md`  
+- Spine glue scan: `reviews/sanctuary_spine_v1/SCAN_glue_morph_patterns_2026-07-25.md`  
+- BR school: `reviews/RESEARCH_BR_particles_2026-07-21.md`  
+- Gold coverage: `reviews/sanctuary_spine_v1/GOLD_lev_1_5_full_word_coverage_2026-07-25.md`  
+- Poetry units: `logic/units/prov_03_trust_know.yaml`, `logic/units/prov_14_way_death.yaml`
+
+**Not yet rules (open research):** multi-etnachta edge cases; how far header nesting depth ever becomes logic; automatic *et* “with God” vs object sense classifier; full Exod–Deut particle density comparison; promote TIR-023 after a second dual-imperative unit (e.g. Prov 15:1); promote TIR-024 after another divine-result dual.
+
+**Poetry structure note:** ta’amim parse ranks live under `logic/taamim_rules/v3/` (CURRENT); interpretation roles (this file) are separate from parse ranks.
+
+---
+
+## Per-unit requirement: `binary_trees` first, then `tree_coverage`
+
+**Structure record (required):** unit section **`binary_trees`** — `rule_set_version`, top split, full `tree_ascii` from the parser, `maps_to` logic ids.  
+See `logic/SHOW_WORK_TREES_2026-07-20.md` and `reviews/STANDING_DECISIONS.md` §6a.  
+`tree_coverage` is the **role layer** on those leaves; it does **not** replace storing the tree.
+
+## Per-unit requirement: `tree_coverage`
+
+Each new (or revised) unit should include a **tree_coverage** section (or table) that, for every word in every verse tree:
+
+| Field | Purpose |
+|-------|---------|
+| `he` / `he_translit` / `en` | Identity |
+| `oshb_n` | Tree address or `null` if bound |
+| `role` | e.g. `when_pivot`, `then_number`, `header`, `glue`, `glue_object_marker`, `set_add`, `set_limit`, `set_include_list`, `set_maximize`, `re_object_bind`, `morph_vav_seq`, `morph_ha_def`, `reference`, `restrict`, `ritual`, `open` |
+| `interp_rule` | TIR-xxx or `none` |
+| `feeds` | Logic ids (row/rule/state) or empty |
+| `confidence` | hypothesis / tested / … |
+
+**Metrics to record:**
+
+- `% accounted` (target: 100% always)  
+- `% with interp_rule` (grows over time)  
+- `% logic-bearing` (grows where justified)  
+- list of `role: open` words → backlog for new TIR rules  
+
+---
+
+## How the catalog grows
+
+1. Derive a unit with binary trees — **write them into `binary_trees`** (show all work).  
+2. Fill `tree_coverage` for **every** word.  
+3. Any `open` or inconsistent mapping → propose a new **TIR-xxx** (or revise an existing one).  
+4. Re-test the rule on at least one prior unit (e.g. Lev 12) before calling it `tested`.  
+5. Prefer **consistent** rules over one-off cleverness.
+
+---
+
+## Honest baseline (Lev 12 first pass)
+
+First Lev 12 unit: strong use of pivots + numbers + ritual; headers/glue accounted as structure; **not** yet 100% logic-bearing, and not every word cited a TIR id.  
+That gap is **expected** and is the reason this catalog exists.

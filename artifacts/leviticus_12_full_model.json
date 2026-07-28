@@ -1,0 +1,46 @@
+{
+  "chapter": "Leviticus 12",
+  "title": "Purification after Childbirth",
+  "verses": "1-8",
+  "overview": "Coherent logical unit: gender-based impurity durations followed by unified purification ritual. Ta'amim hierarchy creates consistent condition → consequence → transition structure.",
+  "provenance": "Web Grok recovery paste (2026-07-10). Representation only — not autonomous law generation.",
+  "taamim_tree_summary": {
+    "root": "Divine command framework",
+    "intro": "v1 - God spoke to Moses saying (setup)",
+    "male_block": {
+      "condition": "Woman conceives and bears male (strong disjunctive pivot)",
+      "impurity": "7 days (like niddah)",
+      "purification": "33 days blood purification",
+      "restrictions": "No touching holy things or entering sanctuary",
+      "special": "Circumcision on day 8"
+    },
+    "female_block": {
+      "condition": "Woman bears female (parallel structure)",
+      "impurity": "14 days (doubled)",
+      "purification": "66 days (doubled)"
+    },
+    "ritual_block": {
+      "condition": "End of purification period (male or female)",
+      "offerings": "Burnt offering + sin offering (lamb + bird, or two birds if poor)",
+      "outcome": "Priest atones → she becomes pure"
+    }
+  },
+  "derived_logic": {
+    "pattern": "Consistent across chapter: Condition (birth + gender) → Timed states (impurity + purification) → Restrictions/Reference → Transition ritual → New status",
+    "variables": {
+      "child_gender": ["male", "female"],
+      "impurity_duration_days": { "male": 7, "female": 14 },
+      "purification_duration_days": { "male": 33, "female": 66 },
+      "status": ["impure", "pure after ritual"],
+      "restrictions": "No holy things / sanctuary during impurity",
+      "offering_type": "Lamb + bird (or two birds if poor)",
+      "outcome": "Atonement and purity"
+    },
+    "consistency": "High. Gender difference handled by doubling. Final ritual unifies both cases. Ta'amim verse splits align with logical boundaries."
+  },
+  "oral_layer": {
+    "talmud": "Niddah 31a - Explains doubled periods for girls (mother's potential oath during labor pain)",
+    "mishnah": "Primarily Tractate Niddah (e.g. 3:7 on miscarriage timing and edge cases; 5:3 on caesarean). Focuses on practical counting and status without always quoting Lev 12 directly."
+  },
+  "justification": "All structure and logic derived from ta'amim hierarchical divisions (LREC treebank methodology) and explicit Written text. Oral sources cited by name. No unsupported inference."
+}

@@ -1,0 +1,299 @@
+# =============================================================================
+# UNIT TEMPLATE — Pre-Code Logic System
+# Copy to: logic/units/<book>_<ref>_<slug>.yaml
+#
+# METHOD: logic/SYSTEM.md
+# SCHEMA: logic/SCHEMA.yaml
+#
+# LANGUAGE POLICY (read before editing) — HARD RULES FOR ALL FUTURE UNITS:
+#   - Derive ALL logic from Hebrew (he fields + Data/*_he* / OSHB XML).
+#   - English (en, comment) is for an English-only reader — NOT a source.
+#   - Project owner is NOT fluent in Hebrew.
+#   - NEVER bare Hebrew. Every Hebrew span needs:
+#       he + he_translit + en   (all three, always)
+#     In comments/prose use:  עברית / translit / "English gloss"
+#   - Binary/ta'amim trees FIRST (OSHB n= paths), then phrase_map, then rules.
+#   - Do NOT invent rules in Python. This YAML is the logic.
+#   - Worked example: logic/units/lev_12_childbirth.yaml
+# =============================================================================
+
+meta:
+  id: "BOOK_CH_slug"                    # e.g. lev_12_childbirth
+  title_en: "English title of this unit"
+  title_he: "כותרת בעברית (if known)"
+  title_he_translit: "koteret be-ivrit"
+  title_he_en: "Hebrew title (if known)"
+  book_he: "ויקרא"                      # example; replace
+  book_he_translit: "Vayikra"
+  book_en: "Leviticus"                  # example; replace
+  refs: "12:1-8"                        # example; replace
+  data_paths_he:
+    - "Data/PATH_TO_HEBREW_SOURCE"      # REQUIRED for derivation
+  data_paths_en_aid:
+    - "Data/PATH_TO_ENGLISH_AID"        # optional reading aid only
+  status: draft                         # draft | review | frozen
+  confidence_overall: hypothesis
+  owner_language_note: >
+    Reader is fluent in English only, not Hebrew.
+    All comments and en fields must make the Hebrew usable.
+    Hebrew remains the only derivation source.
+
+# -----------------------------------------------------------------------------
+# DERIVATION LOG — fill as you work (comments required)
+# -----------------------------------------------------------------------------
+derivation_log:
+  - step: A
+    name_en: "Choose the unit"
+    comment: >
+      Why this block was chosen; what procedure it seems to describe (in English).
+      Note the Hebrew book name and range.
+    tags: ["[HE-WRITTEN]"]
+    confidence: hypothesis
+
+  - step: B
+    name_en: "Load Hebrew source (English aid only)"
+    comment: >
+      Which _he file was opened. If _en was opened, state that it was ONLY
+      for reading help and list any places English might mislead.
+    tags: ["[HE-WRITTEN]", "[EN-AID]"]
+    confidence: hypothesis
+
+  - step: C
+    name_en: "Segment structure (BINARY / ta'amim trees FIRST)"
+    comment: >
+      REQUIRED: Build verse-level binary/ta'amim trees from OSHB n= paths
+      (or accent ranks) BEFORE the decision table. Then phrase_map leaves.
+      Mark Masoretic tree vs analyst role labels. See logic/SYSTEM.md §2.4
+      and logic/units/lev_12_childbirth.yaml → binary_trees.
+    tags: ["[HE-STRUCT]"]
+    confidence: hypothesis
+
+  - step: D
+    name_en: "Extract predicates and outcomes from Hebrew"
+    comment: >
+      List candidate WHEN/THEN items. Each must quote Hebrew WITH translit + English
+      (he / he_translit / en). Numbers: keep Hebrew number-words; give numeric gloss in English.
+    tags: ["[HE-WRITTEN]"]
+    confidence: hypothesis
+
+  - step: E
+    name_en: "Choose logic format(s)"
+    comment: >
+      Why decision_table / state_machine / rules fit this unit.
+    tags: ["[INFER]"]
+    confidence: hypothesis
+
+  - step: F
+    name_en: "Fill trilingual logic objects (HE + translit + EN)"
+    comment: >
+      Every row/transition/rule/guard/effect has he, he_translit, en, comment,
+      confidence, source. No bare Hebrew in comments either.
+    tags: ["[HE-WRITTEN]"]
+    confidence: hypothesis
+
+  - step: G
+    name_en: "Optional Oral attachments (named only)"
+    comment: >
+      If unused, write: No Oral attachments in this draft.
+      If used: tractate + location required.
+    tags: ["[ORAL]"]
+    confidence: hypothesis
+
+  - step: H
+    name_en: "Scenarios (tests without code)"
+    comment: >
+      Cases an English reader can follow; expectations justified by rule ids.
+    tags: ["[HE-WRITTEN]"]
+    confidence: hypothesis
+
+  - step: I
+    name_en: "English-leakage review"
+    comment: >
+      Checklist results. Fix any English-only conditions before freeze.
+    tags: ["[EN-AID]"]
+    confidence: hypothesis
+
+  - step: J
+    name_en: "Freeze (optional interpreter only after this)"
+    comment: >
+      status becomes frozen only when stable. Code may load this file later;
+      code must not re-derive the rules.
+    tags: []
+    confidence: hypothesis
+
+# -----------------------------------------------------------------------------
+# BINARY / TA'AMIM TREES — REQUIRED before decision_table / boot_steps
+# Show all work: record full trees HERE (not only in chat).
+# Procedure: logic/SHOW_WORK_TREES_2026-07-20.md · STANDING_DECISIONS §6a
+# Primary: our parser (taamim_tree_parse.py + taamim_rules). OSHB n= optional check.
+# Reference: logic/units/gen_01_day4_lights.yaml
+# -----------------------------------------------------------------------------
+binary_trees:
+  method_note_en: >
+    Parse each verse with taamim_tree_parse.py. Paste tree_ascii from --tree.
+    Map top splits and leaves to boot steps / IF-THEN. Never bare Hebrew.
+  data_source: "Data/..."
+  parser: "taamim_tree_parse.py"
+  rule_set_version: "v1"
+  tags: ["[HE-STRUCT]"]
+  chapter_outline_tree:
+    id: T_chapter
+    comment: "English: high-level block nesting (optional for short units)"
+    root:
+      role_en: ""
+      children: []
+  verse_trees:
+    # Copy shape from gen_01_day4_lights.yaml or lev_01_call_and_korban_opening.yaml
+    VERSE_X:
+      verse: ""
+      osis_id: ""
+      parser_status: unique          # unique | multi | fail
+      pure_binary: true              # false if any n-ary node
+      word_count: 0
+      linear:
+        he: ""
+        he_translit: ""
+        en: ""
+        en_note: "Free gloss [EN-AID]."
+      top_binary_split:
+        comment: "English: what left vs right means for logic"
+        left_half:
+          phrase: { he: "", he_translit: "", en: "" }
+        right_half:
+          phrase: { he: "", he_translit: "", en: "" }
+      tree_ascii: |
+        # paste: python3 taamim_tree_parse.py Book.Ch.V --tree
+      maps_to: []
+      confidence: hypothesis
+      source: "[HE-STRUCT][HE-WRITTEN]"
+  tree_to_logic_index:
+    - from: "tree node …"
+      to: "rule/row/step id …"
+      relation: "IF pivot | THEN | boot step | …"
+
+# -----------------------------------------------------------------------------
+# PHRASE MAP — flat leaves of the trees above
+# -----------------------------------------------------------------------------
+phrase_map:
+  - id: P1
+    role: header                        # header | condition | consequence | reference | implication | ritual_close | other
+    he: "טֶקְסְט עִבְרִי כָּאן"
+    he_translit: "replace with transliteration"
+    en: "Free English gloss of the same span"
+    en_note: "Free translation; not a legal English ruling."
+    verse: "12:1"
+    structure_note: "English: why this is a separate node (verse/ta'amim/clause)."
+    tags: ["[HE-WRITTEN]", "[HE-STRUCT]"]
+    confidence: hypothesis
+
+# -----------------------------------------------------------------------------
+# DECISION TABLE — casuistic WHEN → THEN
+# -----------------------------------------------------------------------------
+decision_table:
+  columns_note: >
+    English explanation of what WHEN and THEN mean for this unit.
+    All cells must still be grounded in Hebrew.
+  rows:
+    - id: R1
+      when:
+        - id: W1
+          he: ""
+          he_translit: ""
+          en: ""
+          comment: "English: why this Hebrew phrase is a condition."
+          tags: ["[HE-WRITTEN]"]
+          confidence: hypothesis
+          source: "Book ch:v; Data/..."
+      then:
+        - id: T1
+          he: ""
+          he_translit: ""
+          en: ""
+          comment: "English: why this Hebrew phrase is an outcome."
+          tags: ["[HE-WRITTEN]"]
+          confidence: hypothesis
+          source: "Book ch:v; Data/..."
+      row_comment: "English summary of the whole case for a non-Hebrew reader."
+
+# -----------------------------------------------------------------------------
+# STATE MACHINE — optional; delete section if unused
+# -----------------------------------------------------------------------------
+state_machine:
+  states:
+    - id: S_start
+      he: ""
+      he_translit: ""
+      en: ""
+      comment: "English: what this status means; Hebrew term is authoritative."
+      tags: ["[HE-WRITTEN]"]
+      confidence: hypothesis
+      source: ""
+  events:
+    - id: E1
+      he: ""
+      he_translit: ""
+      en: ""
+      comment: "English: what triggers this event in the text."
+      tags: ["[HE-WRITTEN]"]
+      confidence: hypothesis
+      source: ""
+  transitions:
+    - id: TR1
+      from: S_start
+      event: E1
+      guard: []
+      to: S_start
+      effects: []
+      comment: "English: plain-language description of the transition."
+      tags: ["[HE-WRITTEN]"]
+      confidence: hypothesis
+      source: ""
+
+# -----------------------------------------------------------------------------
+# RULES — optional sparse IF–THEN; delete if unused
+# -----------------------------------------------------------------------------
+rules: []
+
+# -----------------------------------------------------------------------------
+# ORAL ATTACHMENTS — optional; named location required
+# -----------------------------------------------------------------------------
+oral_attachments: []
+# Example shape (commented):
+# - id: O1
+#   corpus: mishnah
+#   location: "Niddah 3:7"
+#   he: ""
+#   he_translit: ""
+#   en: ""
+#   relates_to: ["R1"]
+#   comment: "English: how this Oral source relates; not merged into Written silently."
+#   tags: ["[ORAL:Mishnah Niddah 3:7]"]
+#   confidence: hypothesis
+
+# -----------------------------------------------------------------------------
+# SCENARIOS — tests without executable code
+# -----------------------------------------------------------------------------
+scenarios:
+  - id: SC1
+    description_en: "Plain English story of the case."
+    inputs_en: "What is given (include HE / translit / English for key facts)."
+    expected:
+      - field: "outcome_or_state_id"
+        value_en: "Expected result in English words"
+        value_he: "Hebrew token if that is the real expected value"
+        value_he_translit: "transliteration of value_he"
+        justified_by: "R1"
+    comment: "English: why this expectation follows from the Hebrew-derived rule."
+    confidence: hypothesis
+
+# -----------------------------------------------------------------------------
+# ENGLISH-LEAKAGE CHECKLIST — must pass before status: frozen
+# -----------------------------------------------------------------------------
+english_leakage_checklist:
+  no_english_only_conditions: false
+  all_numbers_cite_hebrew: false
+  comments_teach_hebrew: false
+  confidence_labels_present: false
+  he_en_conflicts_noted: false
+  reviewer_comment: >
+    Fill after review. Any false above blocks freeze.

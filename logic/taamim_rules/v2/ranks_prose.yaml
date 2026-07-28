@@ -1,0 +1,262 @@
+# Prose ta'amim ranks — parser version v1
+# Lower rank number = stronger disjunctive break.
+# kind: disjunctive | conjunctive | ignore
+# he_name / en_name: for English-only owner (never bare mark names without gloss)
+
+version: v2
+system: prose
+comment: >
+  Same mark ranks as v1. Algorithm change is glue-bricks-first (see ALGORITHM.md v2).
+  Fix errors by copying to v3 — never per-verse hacks.
+
+marks:
+  # --- Rank 1 Emperors ---
+  "\u0591":
+    id: etnachta
+    he_name: "אֶתְנַחְתָּא"
+    he_name_translit: "etnachta"
+    en_name: "etnachta (major mid-verse rest)"
+    kind: disjunctive
+    rank: 1
+  "\u05BD":
+    id: silluq_or_meteg
+    he_name: "סִלּוּק / מֶתֶג"
+    he_name_translit: "silluq / meteg"
+    en_name: "silluq if last word of verse; else meteg (ignored for structure)"
+    kind: special_silluq_meteg
+    rank: 1
+
+  # --- Rank 2 Kings ---
+  "\u0592":
+    id: segol
+    he_name: "סֶגוֹל"
+    he_name_translit: "segol"
+    en_name: "segol"
+    kind: disjunctive
+    rank: 2
+  "\u0593":
+    id: shalshelet
+    he_name: "שַׁלְשֶׁלֶת"
+    he_name_translit: "shalshelet"
+    en_name: "shalshelet"
+    kind: disjunctive
+    rank: 2
+  "\u0594":
+    id: zaqef_qatan
+    he_name: "זָקֵף קָטָן"
+    he_name_translit: "zaqef qatan"
+    en_name: "zaqef qatan"
+    kind: disjunctive
+    rank: 2
+  "\u0595":
+    id: zaqef_gadol
+    he_name: "זָקֵף גָּדוֹל"
+    he_name_translit: "zaqef gadol"
+    en_name: "zaqef gadol"
+    kind: disjunctive
+    rank: 2
+  "\u0596":
+    id: tifcha
+    he_name: "טִפְחָא"
+    he_name_translit: "tifcha"
+    en_name: "tifcha"
+    kind: disjunctive
+    rank: 2
+
+  # --- Rank 3 Dukes ---
+  "\u0597":
+    id: revia
+    he_name: "רְבִיעַ"
+    he_name_translit: "revia"
+    en_name: "revia"
+    kind: disjunctive
+    rank: 3
+  "\u0598":
+    id: zarqa
+    he_name: "זַרְקָא"
+    he_name_translit: "zarqa"
+    en_name: "zarqa"
+    kind: disjunctive
+    rank: 3
+  "\u0599":
+    id: pashta
+    he_name: "פַּשְׁטָא"
+    he_name_translit: "pashta"
+    en_name: "pashta"
+    kind: disjunctive
+    rank: 3
+  "\u059A":
+    id: yetiv
+    he_name: "יְתִיב"
+    he_name_translit: "yetiv"
+    en_name: "yetiv"
+    kind: disjunctive
+    rank: 3
+  "\u059B":
+    id: tevir
+    he_name: "תְּבִיר"
+    he_name_translit: "tevir"
+    en_name: "tevir"
+    kind: disjunctive
+    rank: 3
+  "\u05A2":
+    id: atnah_hafukh
+    he_name: "אַתְנָח הָפוּךְ"
+    he_name_translit: "atnah hafukh"
+    en_name: "atnah hafukh"
+    kind: disjunctive
+    rank: 3
+  "\u05AE":
+    id: zinor
+    he_name: "צִנּוֹרִית"
+    he_name_translit: "zinorit"
+    en_name: "zinor (poetic cousin; rare in prose)"
+    kind: disjunctive
+    rank: 3
+
+  # --- Rank 4 Officers ---
+  "\u059C":
+    id: geresh
+    he_name: "גֵּרֵשׁ"
+    he_name_translit: "geresh"
+    en_name: "geresh"
+    kind: disjunctive
+    rank: 4
+  "\u059D":
+    id: geresh_muqdam
+    he_name: "גֵּרֵשׁ מֻקְדָּם"
+    he_name_translit: "geresh muqdam"
+    en_name: "geresh muqdam"
+    kind: disjunctive
+    rank: 4
+  "\u059E":
+    id: gershayim
+    he_name: "גֵּרְשַׁיִם"
+    he_name_translit: "gershayim"
+    en_name: "gershayim"
+    kind: disjunctive
+    rank: 4
+  "\u059F":
+    id: qarney_para
+    he_name: "קַרְנֵי פָרָה"
+    he_name_translit: "qarney para"
+    en_name: "qarney para"
+    kind: disjunctive
+    rank: 4
+  "\u05A0":
+    id: telisha_gedola
+    he_name: "תְּלִישָׁא גְדוֹלָה"
+    he_name_translit: "telisha gedola"
+    en_name: "telisha gedola"
+    kind: disjunctive
+    rank: 4
+  "\u05A1":
+    id: pazer
+    he_name: "פָּזֵר"
+    he_name_translit: "pazer"
+    en_name: "pazer"
+    kind: disjunctive
+    rank: 4
+
+  # --- Conjunctives (rank 9 = non-splitting) ---
+  "\u05A3":
+    id: munach
+    he_name: "מֻנַּח"
+    he_name_translit: "munach"
+    en_name: "munach (conjunctive)"
+    kind: conjunctive
+    rank: 9
+  "\u05A4":
+    id: mahpach
+    he_name: "מַהְפַּךְ"
+    he_name_translit: "mahpach"
+    en_name: "mahpach (conjunctive)"
+    kind: conjunctive
+    rank: 9
+  "\u05A5":
+    id: mercha
+    he_name: "מֵרְכָא"
+    he_name_translit: "mercha"
+    en_name: "mercha (conjunctive)"
+    kind: conjunctive
+    rank: 9
+  "\u05A6":
+    id: mercha_kefula
+    he_name: "מֵרְכָא כְּפוּלָה"
+    he_name_translit: "mercha kefula"
+    en_name: "mercha kefula (conjunctive)"
+    kind: conjunctive
+    rank: 9
+  "\u05A7":
+    id: darga
+    he_name: "דַּרְגָּא"
+    he_name_translit: "darga"
+    en_name: "darga (conjunctive)"
+    kind: conjunctive
+    rank: 9
+  "\u05A8":
+    id: qadma
+    he_name: "קַדְמָא"
+    he_name_translit: "qadma"
+    en_name: "qadma (conjunctive)"
+    kind: conjunctive
+    rank: 9
+  "\u05A9":
+    id: telisha_qetana
+    he_name: "תְּלִישָׁא קְטַנָּה"
+    he_name_translit: "telisha qetana"
+    en_name: "telisha qetana (conjunctive)"
+    kind: conjunctive
+    rank: 9
+  "\u05AA":
+    id: yerah_ben_yomo
+    he_name: "יֶרַח בֶּן יוֹמוֹ"
+    he_name_translit: "yerah ben yomo"
+    en_name: "yerah ben yomo (conjunctive)"
+    kind: conjunctive
+    rank: 9
+  "\u05AB":
+    id: ole
+    he_name: "עוֹלֶה"
+    he_name_translit: "ole"
+    en_name: "ole (often poetic; treat conjunctive in v1 if seen)"
+    kind: conjunctive
+    rank: 9
+  "\u05AC":
+    id: iluy
+    he_name: "עִלּוּי"
+    he_name_translit: "iluy"
+    en_name: "iluy"
+    kind: conjunctive
+    rank: 9
+  "\u05AD":
+    id: dehi
+    he_name: "דְּחִי"
+    he_name_translit: "dehi"
+    en_name: "dehi"
+    kind: conjunctive
+    rank: 9
+
+  # --- Ignored for v1 structure ---
+  "\u05AF":
+    id: masora_circle
+    he_name: "circellus"
+    he_name_translit: "circellus"
+    en_name: "masora circle (ignore)"
+    kind: ignore
+    rank: 99
+  "\u05C0":
+    id: paseq
+    he_name: "פָּסֵק"
+    he_name_translit: "paseq"
+    en_name: "paseq line (ignore for v1 dichotomy)"
+    kind: ignore
+    rank: 99
+
+zero_conjunctive:
+  id: zero_conjunctive
+  he_name: "(אין טעם)"
+  he_name_translit: "(ein ta'am)"
+  en_name: "no cantillation mark — bind as conjunctive"
+  kind: conjunctive
+  rank: 9

@@ -1,0 +1,992 @@
+# =============================================================================
+# LOGIC UNIT: Leviticus 24:1-9 — Pure oil for ner tamid; lechem ha-panim each Shabbat (24:1–9)
+# TREE-DERIVED v1 (phase G) — steps from ta'amim top splits
+# =============================================================================
+# Experimental model — not binding religious law.
+# Process: tree → arm-cited STEP per verse → maps_to → coverage.
+
+meta:
+  id: "lev_24_lamp_bread"
+  title_en: "Pure oil for ner tamid; lechem ha-panim each Shabbat (24:1–9)"
+  title_he: שֶׁמֶן זַיִת — לֶחֶם הַפָּנִים
+  title_he_translit: shemen zayit — lechem ha-panim
+  title_he_en: Olive oil — bread of the Presence
+  book_he: וַיִּקְרָא
+  book_he_translit: Vayikra
+  book_en: Leviticus
+  refs: "24:1-9"
+  data_paths_he:
+    - "Data/Lev.xml"
+  status: draft
+  tree_derive_version: tree_derived_v1
+  tree_derive_phase: "G"
+  confidence_overall: hypothesis
+  genre: "boot_steps"
+  build_track: leviticus_apps
+  depends_on:
+    - "lev_23_fall_festivals"
+    - "exo_27_altar_court"
+    - "exo_25_ark_table_menorah"
+  owner_language_note: >
+    English for reading only. Hebrew is the derivation source.
+  oral_policy_note_en: >
+    Written first. Prefer Sifra dual-track on law; MH endpoints possible Oral; never
+    silent-merge. Exodus free names import stage, not rebuilt here.
+  method_note_en: >
+    Tree-derived v1: each verse top binary split (left/right) grounds one STEP.
+    Not multi-verse English smear. Not full TIR yet.
+
+derivation_log:
+  - step: A
+    name_en: "Block choice"
+    comment: >
+      Reprocess lev_24_lamp_bread (24:1-9, 9 vv) tree-first phase G.
+    confidence: established
+  - step: B
+    name_en: "Trees"
+    comment: >
+      Every verse via taamim_tree_parse.py v1; full tree_ascii recorded.
+    confidence: tested
+    tags: ["[HE-STRUCT]"]
+  - step: C
+    name_en: "Tree → steps"
+    comment: >
+      One STEP per verse citing left/right top-split arms. English [EN-AID] only.
+    confidence: hypothesis
+    tags: ["[HE-WRITTEN]","[HE-STRUCT]"]
+  - step: D
+    name_en: "Oral dual-track"
+    comment: >
+      Sifra samples when available; dual-track only; never silent-merge.
+    confidence: hypothesis
+    tags: ["[ORAL]"]
+
+boot_steps:
+  - id: STEP_Lv_24_1
+    order: 1
+    ref: "Lev.24.1"
+    op: TREE_CLAIM
+    he: וידבר יהוה … אל משה לאמר
+    he_translit: "vydbr yhvh … 'l mshh l'mr"
+    en: "[EN-AID] From top split: LEFT «וידבר יהוה» / RIGHT «אל משה לאמר». Derive claim from Hebrew arms. Lev 24:1."
+    tree_left:
+      he: וידבר יהוה
+      he_translit: vydbr yhvh
+      en: "Left arm of top binary split [EN-AID]"
+    tree_right:
+      he: אל משה לאמר
+      he_translit: "'l mshh l'mr"
+      en: "Right arm of top binary split [EN-AID]"
+    comment: >
+      Top split L mark=tifcha; maps_to this verse only.
+    confidence: hypothesis
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+  - id: STEP_Lv_24_2
+    order: 2
+    ref: "Lev.24.2"
+    op: ETNACHTA_SPLIT
+    he: צו את בני ישראל ויקחו אליך שמן זית זך כתית למאור … להעלת נר תמיד
+    he_translit: "tzv 't bny yshr'l vyqchv 'lyk shmn zyt zk ktyt lm' … lh'lt nr tmyd"
+    en: "[EN-AID] From top split: LEFT «צו את בני ישראל ויקחו אליך שמן זית זך כתית למאור» / RIGHT «להעלת נר תמיד». Derive claim from Hebrew arms. Lev 24:2."
+    tree_left:
+      he: צו את בני ישראל ויקחו אליך שמן זית זך כתית למאור
+      he_translit: "tzv 't bny yshr'l vyqchv 'lyk shmn zyt zk ktyt lm'vr"
+      en: "Left arm of top binary split [EN-AID]"
+    tree_right:
+      he: להעלת נר תמיד
+      he_translit: "lh'lt nr tmyd"
+      en: "Right arm of top binary split [EN-AID]"
+    comment: >
+      Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
+    confidence: hypothesis
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+  - id: STEP_Lv_24_3
+    order: 3
+    ref: "Lev.24.3"
+    op: ETNACHTA_SPLIT
+    he: מחוץ לפרכת העדת באהל מועד יערך אתו אהרן מערב עד בקר לפני יהו … חקת עולם לדרתיכם
+    he_translit: "mchvtz lprkt h'dt b'hl mv'd y'rk 'tv 'hrn m'rb 'd  … chqt 'vlm ldrtykm"
+    en: "[EN-AID] From top split: LEFT «מחוץ לפרכת העדת באהל מועד יערך אתו אהרן מערב עד בקר לפני יהוה תמיד» / RIGHT «חקת עולם לדרתיכם». Derive claim from Hebrew arms. Lev 24:3."
+    tree_left:
+      he: מחוץ לפרכת העדת באהל מועד יערך אתו אהרן מערב עד בקר לפני יהוה תמיד
+      he_translit: "mchvtz lprkt h'dt b'hl mv'd y'rk 'tv 'hrn m'rb 'd bqr lpny yhvh tmyd"
+      en: "Left arm of top binary split [EN-AID]"
+    tree_right:
+      he: חקת עולם לדרתיכם
+      he_translit: "chqt 'vlm ldrtykm"
+      en: "Right arm of top binary split [EN-AID]"
+    comment: >
+      Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
+    confidence: hypothesis
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+  - id: STEP_Lv_24_4
+    order: 4
+    ref: "Lev.24.4"
+    op: ETNACHTA_SPLIT
+    he: על המנרה הטהרה יערך את הנרות … לפני יהוה תמיד
+    he_translit: "'l hmnrh hthrh y'rk 't hnrvt … lpny yhvh tmyd"
+    en: "[EN-AID] From top split: LEFT «על המנרה הטהרה יערך את הנרות» / RIGHT «לפני יהוה תמיד». Derive claim from Hebrew arms. Lev 24:4."
+    tree_left:
+      he: על המנרה הטהרה יערך את הנרות
+      he_translit: "'l hmnrh hthrh y'rk 't hnrvt"
+      en: "Left arm of top binary split [EN-AID]"
+    tree_right:
+      he: לפני יהוה תמיד
+      he_translit: lpny yhvh tmyd
+      en: "Right arm of top binary split [EN-AID]"
+    comment: >
+      Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
+    confidence: hypothesis
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+  - id: STEP_Lv_24_5
+    order: 5
+    ref: "Lev.24.5"
+    op: ETNACHTA_SPLIT
+    he: ולקחת סלת ואפית אתה שתים עשרה חלות … שני עשרנים יהיה החלה האחת
+    he_translit: "vlqcht slt v'pyt 'th shtym 'shrh chlvt … shny 'shrnym yhyh hchlh h'cht"
+    en: "[EN-AID] From top split: LEFT «ולקחת סלת ואפית אתה שתים עשרה חלות» / RIGHT «שני עשרנים יהיה החלה האחת». Derive claim from Hebrew arms. Lev 24:5."
+    tree_left:
+      he: ולקחת סלת ואפית אתה שתים עשרה חלות
+      he_translit: "vlqcht slt v'pyt 'th shtym 'shrh chlvt"
+      en: "Left arm of top binary split [EN-AID]"
+    tree_right:
+      he: שני עשרנים יהיה החלה האחת
+      he_translit: "shny 'shrnym yhyh hchlh h'cht"
+      en: "Right arm of top binary split [EN-AID]"
+    comment: >
+      Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
+    confidence: hypothesis
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+  - id: STEP_Lv_24_6
+    order: 6
+    ref: "Lev.24.6"
+    op: ETNACHTA_SPLIT
+    he: ושמת אותם שתים מערכות שש המערכת … על השלחן הטהר לפני יהוה
+    he_translit: "vshmt 'vtm shtym m'rkvt shsh hm'rkt … 'l hshlchn hthr lpny yhvh"
+    en: "[EN-AID] From top split: LEFT «ושמת אותם שתים מערכות שש המערכת» / RIGHT «על השלחן הטהר לפני יהוה». Derive claim from Hebrew arms. Lev 24:6."
+    tree_left:
+      he: ושמת אותם שתים מערכות שש המערכת
+      he_translit: "vshmt 'vtm shtym m'rkvt shsh hm'rkt"
+      en: "Left arm of top binary split [EN-AID]"
+    tree_right:
+      he: על השלחן הטהר לפני יהוה
+      he_translit: "'l hshlchn hthr lpny yhvh"
+      en: "Right arm of top binary split [EN-AID]"
+    comment: >
+      Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
+    confidence: hypothesis
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+  - id: STEP_Lv_24_7
+    order: 7
+    ref: "Lev.24.7"
+    op: ETNACHTA_SPLIT
+    he: ונתת על המערכת לבנה זכה … והיתה ללחם לאזכרה אשה ליהוה
+    he_translit: "vntt 'l hm'rkt lbnh zkh … vhyth llchm l'zkrh 'shh lyhvh"
+    en: "[EN-AID] From top split: LEFT «ונתת על המערכת לבנה זכה» / RIGHT «והיתה ללחם לאזכרה אשה ליהוה». Derive claim from Hebrew arms. Lev 24:7."
+    tree_left:
+      he: ונתת על המערכת לבנה זכה
+      he_translit: "vntt 'l hm'rkt lbnh zkh"
+      en: "Left arm of top binary split [EN-AID]"
+    tree_right:
+      he: והיתה ללחם לאזכרה אשה ליהוה
+      he_translit: "vhyth llchm l'zkrh 'shh lyhvh"
+      en: "Right arm of top binary split [EN-AID]"
+    comment: >
+      Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
+    confidence: hypothesis
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+  - id: STEP_Lv_24_8
+    order: 8
+    ref: "Lev.24.8"
+    op: ETNACHTA_SPLIT
+    he: ביום השבת ביום השבת יערכנו לפני יהוה תמיד … מאת בני ישראל ברית עולם
+    he_translit: "byvm hshbt byvm hshbt y'rknv lpny yhvh tmyd … m't bny yshr'l bryt 'vlm"
+    en: "[EN-AID] From top split: LEFT «ביום השבת ביום השבת יערכנו לפני יהוה תמיד» / RIGHT «מאת בני ישראל ברית עולם». Derive claim from Hebrew arms. Lev 24:8."
+    tree_left:
+      he: ביום השבת ביום השבת יערכנו לפני יהוה תמיד
+      he_translit: "byvm hshbt byvm hshbt y'rknv lpny yhvh tmyd"
+      en: "Left arm of top binary split [EN-AID]"
+    tree_right:
+      he: מאת בני ישראל ברית עולם
+      he_translit: "m't bny yshr'l bryt 'vlm"
+      en: "Right arm of top binary split [EN-AID]"
+    comment: >
+      Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
+    confidence: hypothesis
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+  - id: STEP_Lv_24_9
+    order: 9
+    ref: "Lev.24.9"
+    op: ETNACHTA_SPLIT
+    he: והיתה לאהרן ולבניו ואכלהו במקום קדש … כי קדש קדשים הוא לו מאשי יהוה חק עולם
+    he_translit: "vhyth l'hrn vlbnyv v'klhv bmqvm qdsh … ky qdsh qdshym hv' lv m'shy yhvh chq 'vlm"
+    en: "[EN-AID] From top split: LEFT «והיתה לאהרן ולבניו ואכלהו במקום קדש» / RIGHT «כי קדש קדשים הוא לו מאשי יהוה חק עולם». Derive claim from Hebrew arms. Lev 24:9."
+    tree_left:
+      he: והיתה לאהרן ולבניו ואכלהו במקום קדש
+      he_translit: "vhyth l'hrn vlbnyv v'klhv bmqvm qdsh"
+      en: "Left arm of top binary split [EN-AID]"
+    tree_right:
+      he: כי קדש קדשים הוא לו מאשי יהוה חק עולם
+      he_translit: "ky qdsh qdshym hv' lv m'shy yhvh chq 'vlm"
+      en: "Right arm of top binary split [EN-AID]"
+    comment: >
+      Top split L mark=etnachta (major mid-verse rest); maps_to this verse only.
+    confidence: hypothesis
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+state_machine:
+  comment_en: "Coarse states for lev_24_lamp_bread after tree-derived steps."
+  states:
+    - id: S_block_open
+      en: "Entered 24:1-9"
+    - id: S_block_mid
+      en: "Mid-block after ~half of verse steps"
+    - id: S_block_closed
+      en: "Completed tree-derived steps for 24:1-9"
+  transitions:
+    - from: S_block_open
+      to: S_block_mid
+      via: STEP_Lv_24_5
+    - from: S_block_mid
+      to: S_block_closed
+      via: STEP_Lv_24_9
+
+state_after:
+  - id: AFTER_S_block_closed
+    en: "Tree-derived v1 complete for lev_24_lamp_bread"
+
+exports:
+  - id: EXPORT_ner_tamid_lev
+    he: נֵר תָּמִיד
+    he_translit: ner tamid
+    en: Continual lamp (Lev restates Exod)
+  - id: EXPORT_lechem_panim
+    he: לֶחֶם הַפָּנִים
+    he_translit: lechem ha-panim
+    en: Bread of the Presence twelve loaves
+  - id: EXPORT_tree_derived_v1_lev_24_lamp_bread
+    en: "Unit reprocessed tree-first (one STEP per verse, arm-cited)"
+
+oral_notes:
+  - id: ORAL_policy
+    status: observation
+    work_en: "Leviticus tree-derive oral policy"
+    comment_en: >
+      Written trees first. Prefer Sifra on law densification; MH possible; never silent-merge.
+    source: "[PROJECT]"
+  - id: ORAL_sample_1
+    status: dual_track
+    work_en: Sifra
+    locus_en: "Sifra: Braita d'Rabbi Yishmael"
+    he_sample: "רבי ישמעאל אומ':"
+    he_translit: "see Hebrew sample in local Data dump"
+    en_sample: "[EN-AID] Sample only; not derivation source; dual-track."
+    comment_en: >
+      Dual-track sample — does not rewrite Written tree-derived STEPs.
+    source: "[ORAL][SIFRA]"
+    confidence: hypothesis
+  - id: ORAL_sample_2
+    status: dual_track
+    work_en: Sifra
+    locus_en: "Sifra: Braita d'Rabbi Yishmael"
+    he_sample: "בשלש עשרה מדות התורה נדרשת: (א) מקל וחומר; (ב) מגזירה שוה; (ג) מבנין אב מכתוב אחד, מבנין אב משני כתובים; (ד) מכלל ופרט; (ה) מפרט וכלל; (ו) מכלל ופרט וכלל – אי אתה דן אלא כעין הפרט; (ז) מכלל שהוא צריך לפרט ומפרט שהוא צריך לכלל;(ח) כל דבר שהי"
+    he_translit: "see Hebrew sample in local Data dump"
+    en_sample: "[EN-AID] Sample only; not derivation source; dual-track."
+    comment_en: >
+      Dual-track sample — does not rewrite Written tree-derived STEPs.
+    source: "[ORAL][SIFRA]"
+    confidence: hypothesis
+  - id: ORAL_sample_3
+    status: dual_track
+    work_en: Sifra
+    locus_en: "Sifra: Braita d'Rabbi Yishmael"
+    he_sample: "(א) מקל וחומר – כיצד? ויאמר יי' אל משה: ואביה ירק ירק בפניה הלא תכלם שבעת ימים? תסגר...! 'שבעת ימים' – קל וחומד לשכינה ארבעה עשר יום? אלא: דיו לבא מן הדין להיות כנדון – תסגר מרי' שבעת ימים מחוץ למחנה – ואחר תאסף."
+    he_translit: "see Hebrew sample in local Data dump"
+    en_sample: "[EN-AID] Sample only; not derivation source; dual-track."
+    comment_en: >
+      Dual-track sample — does not rewrite Written tree-derived STEPs.
+    source: "[ORAL][SIFRA]"
+    confidence: hypothesis
+
+scenarios:
+  - id: S1
+    title_en: "After Lev 24:1 (STEP_Lv_24_1)"
+    expect_en: "Advances via tree-derived STEP_Lv_24_1; arms in boot_steps."
+  - id: S2
+    title_en: "After Lev 24:2 (STEP_Lv_24_2)"
+    expect_en: "Advances via tree-derived STEP_Lv_24_2; arms in boot_steps."
+  - id: S3
+    title_en: "After Lev 24:3 (STEP_Lv_24_3)"
+    expect_en: "Advances via tree-derived STEP_Lv_24_3; arms in boot_steps."
+  - id: S4
+    title_en: "After Lev 24:4 (STEP_Lv_24_4)"
+    expect_en: "Advances via tree-derived STEP_Lv_24_4; arms in boot_steps."
+  - id: S5
+    title_en: "After Lev 24:5 (STEP_Lv_24_5)"
+    expect_en: "Advances via tree-derived STEP_Lv_24_5; arms in boot_steps."
+  - id: S6
+    title_en: "After Lev 24:6 (STEP_Lv_24_6)"
+    expect_en: "Advances via tree-derived STEP_Lv_24_6; arms in boot_steps."
+  - id: S_last
+    title_en: "After final verse 24:9"
+    expect_en: "Block closed via STEP_Lv_24_9."
+
+binary_trees:
+  display_policy_en: >
+    Always he + he_translit + en. Full tree_ascii per verse.
+  method_note_en: >
+    taamim_tree_parse.py v1; STEPs from top splits (tree_derived_v1).
+  data_source: "Data/Lev.xml"
+  parser: "taamim_tree_parse.py"
+  rule_set_version: "v1"
+  tags: ["[HE-STRUCT]"]
+  verse_trees:
+    Lev_24_1:
+      verse: "24:1"
+      osis_id: "Lev.24.1"
+      parser_status: unique
+      pure_binary: false
+      word_count: 5
+      linear:
+        he: וידבר יהוה אל משה לאמר
+        he_translit: "vydbr yhvh 'l mshh l'mr"
+        en: "Free gloss [EN-AID] — structure from Hebrew tree. 24:1."
+      top_binary_split:
+        comment: >
+          Top split ta'amim v1; maps_to ['STEP_Lv_24_1'].
+        left_half:
+          side_en: "Left of top split"
+          head:
+            he: יהוה
+            he_translit: "yhvh"
+            en: "left-end leaf 1"
+            mark_en: tifcha
+          phrase:
+            he: וידבר יהוה
+            he_translit: vydbr yhvh
+            en: "left phrase arm (see tree_ascii)"
+        right_half:
+          side_en: "Right of top split"
+          phrase:
+            he: אל משה לאמר
+            he_translit: "'l mshh l'mr"
+            en: "right phrase arm (see tree_ascii)"
+      tree_ascii: |
+        PHRASE (binary 5w) וַ/יְדַבֵּ֥ר יְהוָ֖ה אֶל מֹשֶׁ֥ה לֵּ/אמֹֽר
+        ├── PHRASE (binary 2w) וַ/יְדַבֵּ֥ר יְהוָ֖ה
+        │   ├── [0] וַ/יְדַבֵּ֥ר (mercha (conjunctive), rank=9)
+        │   └── [1] יְהוָ֖ה (tifcha, rank=2)
+        └── PHRASE (3-ary 3w) אֶל מֹשֶׁ֥ה לֵּ/אמֹֽר
+            ├── [2] אֶל (no cantillation mark — bind as conjunctive, rank=9)
+            ├── [3] מֹשֶׁ֥ה (mercha (conjunctive), rank=9)
+            └── [4] לֵּ/אמֹֽר (silluq (verse-end emperor), rank=1)
+      maps_to: ["STEP_Lv_24_1"]
+      confidence: tested
+      source: "[HE-STRUCT][HE-WRITTEN]"
+
+    Lev_24_2:
+      verse: "24:2"
+      osis_id: "Lev.24.2"
+      parser_status: unique
+      pure_binary: false
+      word_count: 14
+      linear:
+        he: צו את בני ישראל ויקחו אליך שמן זית זך כתית למאור להעלת נר תמיד
+        he_translit: "tzv 't bny yshr'l vyqchv 'lyk shmn zyt zk ktyt lm'vr lh'lt nr tmyd"
+        en: "Free gloss [EN-AID] — structure from Hebrew tree. 24:2."
+      top_binary_split:
+        comment: >
+          Top split ta'amim v1; maps_to ['STEP_Lv_24_2'].
+        left_half:
+          side_en: "Left of top split"
+          head:
+            he: למאור
+            he_translit: "lm'vr"
+            en: "left-end leaf 10"
+            mark_en: etnachta (major mid-verse rest)
+          phrase:
+            he: צו את בני ישראל ויקחו אליך שמן זית זך כתית למאור
+            he_translit: "tzv 't bny yshr'l vyqchv 'lyk shmn zyt zk ktyt lm'vr"
+            en: "left phrase arm (see tree_ascii)"
+        right_half:
+          side_en: "Right of top split"
+          phrase:
+            he: להעלת נר תמיד
+            he_translit: "lh'lt nr tmyd"
+            en: "right phrase arm (see tree_ascii)"
+      tree_ascii: |
+        PHRASE (binary 14w) צַ֞ו אֶת בְּנֵ֣י יִשְׂרָאֵ֗ל וְ/יִקְח֨וּ אֵלֶ֜י…
+        ├── PHRASE (binary 11w) צַ֞ו אֶת בְּנֵ֣י יִשְׂרָאֵ֗ל וְ/יִקְח֨וּ אֵלֶ֜י…
+        │   ├── PHRASE (binary 10w) צַ֞ו אֶת בְּנֵ֣י יִשְׂרָאֵ֗ל וְ/יִקְח֨וּ אֵלֶ֜י…
+        │   │   ├── PHRASE (binary 4w) צַ֞ו אֶת בְּנֵ֣י יִשְׂרָאֵ֗ל
+        │   │   │   ├── [0] צַ֞ו (gershayim, rank=4)
+        │   │   │   └── PHRASE (3-ary 3w) אֶת בְּנֵ֣י יִשְׂרָאֵ֗ל
+        │   │   │       ├── [1] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+        │   │   │       ├── [2] בְּנֵ֣י (munach (conjunctive), rank=9)
+        │   │   │       └── [3] יִשְׂרָאֵ֗ל (revia, rank=3)
+        │   │   └── PHRASE (binary 6w) וְ/יִקְח֨וּ אֵלֶ֜י/ךָ שֶׁ֣מֶן זַ֥יִת זָ֛ךְ כָּת…
+        │   │       ├── PHRASE (binary 5w) וְ/יִקְח֨וּ אֵלֶ֜י/ךָ שֶׁ֣מֶן זַ֥יִת זָ֛ךְ
+        │   │       │   ├── PHRASE (binary 2w) וְ/יִקְח֨וּ אֵלֶ֜י/ךָ
+        │   │       │   │   ├── [4] וְ/יִקְח֨וּ (qadma (conjunctive), rank=9)
+        │   │       │   │   └── [5] אֵלֶ֜י/ךָ (geresh, rank=4)
+        │   │       │   └── PHRASE (3-ary 3w) שֶׁ֣מֶן זַ֥יִת זָ֛ךְ
+        │   │       │       ├── [6] שֶׁ֣מֶן (munach (conjunctive), rank=9)
+        │   │       │       ├── [7] זַ֥יִת (mercha (conjunctive), rank=9)
+        │   │       │       └── [8] זָ֛ךְ (tevir, rank=3)
+        │   │       └── [9] כָּתִ֖ית (tifcha, rank=2)
+        │   └── [10] לַ/מָּא֑וֹר (etnachta (major mid-verse rest), rank=1)
+        └── PHRASE (binary 3w) לְ/הַעֲלֹ֥ת נֵ֖ר תָּמִֽיד
+            ├── PHRASE (binary 2w) לְ/הַעֲלֹ֥ת נֵ֖ר
+            │   ├── [11] לְ/הַעֲלֹ֥ת (mercha (conjunctive), rank=9)
+            │   └── [12] נֵ֖ר (tifcha, rank=2)
+            └── [13] תָּמִֽיד (silluq (verse-end emperor), rank=1)
+      maps_to: ["STEP_Lv_24_2"]
+      confidence: tested
+      source: "[HE-STRUCT][HE-WRITTEN]"
+
+    Lev_24_3:
+      verse: "24:3"
+      osis_id: "Lev.24.3"
+      parser_status: unique
+      pure_binary: false
+      word_count: 17
+      linear:
+        he: מחוץ לפרכת העדת באהל מועד יערך אתו אהרן מערב עד בקר לפני יהוה תמיד חקת עולם לדרתיכם
+        he_translit: "mchvtz lprkt h'dt b'hl mv'd y'rk 'tv 'hrn m'rb 'd bqr lpny yhvh tmyd chqt 'vlm ldrtykm"
+        en: "Free gloss [EN-AID] — structure from Hebrew tree. 24:3."
+      top_binary_split:
+        comment: >
+          Top split ta'amim v1; maps_to ['STEP_Lv_24_3'].
+        left_half:
+          side_en: "Left of top split"
+          head:
+            he: תמיד
+            he_translit: "tmyd"
+            en: "left-end leaf 13"
+            mark_en: etnachta (major mid-verse rest)
+          phrase:
+            he: מחוץ לפרכת העדת באהל מועד יערך אתו אהרן מערב עד בקר לפני יהוה תמיד
+            he_translit: "mchvtz lprkt h'dt b'hl mv'd y'rk 'tv 'hrn m'rb 'd bqr lpny yhvh tmyd"
+            en: "left phrase arm (see tree_ascii)"
+        right_half:
+          side_en: "Right of top split"
+          phrase:
+            he: חקת עולם לדרתיכם
+            he_translit: "chqt 'vlm ldrtykm"
+            en: "right phrase arm (see tree_ascii)"
+      tree_ascii: |
+        PHRASE (binary 17w) מִ/חוּץ֩ לְ/פָרֹ֨כֶת הָ/עֵדֻ֜ת בְּ/אֹ֣הֶל מוֹעֵ…
+        ├── PHRASE (binary 14w) מִ/חוּץ֩ לְ/פָרֹ֨כֶת הָ/עֵדֻ֜ת בְּ/אֹ֣הֶל מוֹעֵ…
+        │   ├── PHRASE (binary 13w) מִ/חוּץ֩ לְ/פָרֹ֨כֶת הָ/עֵדֻ֜ת בְּ/אֹ֣הֶל מוֹעֵ…
+        │   │   ├── PHRASE (binary 5w) מִ/חוּץ֩ לְ/פָרֹ֨כֶת הָ/עֵדֻ֜ת בְּ/אֹ֣הֶל מוֹעֵ…
+        │   │   │   ├── PHRASE (3-ary 3w) מִ/חוּץ֩ לְ/פָרֹ֨כֶת הָ/עֵדֻ֜ת
+        │   │   │   │   ├── [0] מִ/חוּץ֩ (telisha qetana (conjunctive), rank=9)
+        │   │   │   │   ├── [1] לְ/פָרֹ֨כֶת (qadma (conjunctive), rank=9)
+        │   │   │   │   └── [2] הָ/עֵדֻ֜ת (geresh, rank=4)
+        │   │   │   └── PHRASE (binary 2w) בְּ/אֹ֣הֶל מוֹעֵ֗ד
+        │   │   │       ├── [3] בְּ/אֹ֣הֶל (munach (conjunctive), rank=9)
+        │   │   │       └── [4] מוֹעֵ֗ד (revia, rank=3)
+        │   │   └── PHRASE (binary 8w) יַעֲרֹךְ֩ אֹת֨/וֹ אַהֲרֹ֜ן מֵ/עֶ֧רֶב עַד בֹּ֛קֶ…
+        │   │       ├── PHRASE (binary 6w) יַעֲרֹךְ֩ אֹת֨/וֹ אַהֲרֹ֜ן מֵ/עֶ֧רֶב עַד בֹּ֛קֶר
+        │   │       │   ├── PHRASE (3-ary 3w) יַעֲרֹךְ֩ אֹת֨/וֹ אַהֲרֹ֜ן
+        │   │       │   │   ├── [5] יַעֲרֹךְ֩ (telisha qetana (conjunctive), rank=9)
+        │   │       │   │   ├── [6] אֹת֨/וֹ (qadma (conjunctive), rank=9)
+        │   │       │   │   └── [7] אַהֲרֹ֜ן (geresh, rank=4)
+        │   │       │   └── PHRASE (3-ary 3w) מֵ/עֶ֧רֶב עַד בֹּ֛קֶר
+        │   │       │       ├── [8] מֵ/עֶ֧רֶב (darga (conjunctive), rank=9)
+        │   │       │       ├── [9] עַד (no cantillation mark — bind as conjunctive, rank=9)
+        │   │       │       └── [10] בֹּ֛קֶר (tevir, rank=3)
+        │   │       └── PHRASE (binary 2w) לִ/פְנֵ֥י יְהוָ֖ה
+        │   │           ├── [11] לִ/פְנֵ֥י (mercha (conjunctive), rank=9)
+        │   │           └── [12] יְהוָ֖ה (tifcha, rank=2)
+        │   └── [13] תָּמִ֑יד (etnachta (major mid-verse rest), rank=1)
+        └── PHRASE (binary 3w) חֻקַּ֥ת עוֹלָ֖ם לְ/דֹרֹֽתֵי/כֶֽם
+            ├── PHRASE (binary 2w) חֻקַּ֥ת עוֹלָ֖ם
+            │   ├── [14] חֻקַּ֥ת (mercha (conjunctive), rank=9)
+            │   └── [15] עוֹלָ֖ם (tifcha, rank=2)
+            └── [16] לְ/דֹרֹֽתֵי/כֶֽם (silluq (verse-end emperor), rank=1)
+      maps_to: ["STEP_Lv_24_3"]
+      confidence: tested
+      source: "[HE-STRUCT][HE-WRITTEN]"
+
+    Lev_24_4:
+      verse: "24:4"
+      osis_id: "Lev.24.4"
+      parser_status: unique
+      pure_binary: true
+      word_count: 9
+      linear:
+        he: על המנרה הטהרה יערך את הנרות לפני יהוה תמיד
+        he_translit: "'l hmnrh hthrh y'rk 't hnrvt lpny yhvh tmyd"
+        en: "Free gloss [EN-AID] — structure from Hebrew tree. 24:4."
+      top_binary_split:
+        comment: >
+          Top split ta'amim v1; maps_to ['STEP_Lv_24_4'].
+        left_half:
+          side_en: "Left of top split"
+          head:
+            he: הנרות
+            he_translit: "hnrvt"
+            en: "left-end leaf 5"
+            mark_en: etnachta (major mid-verse rest)
+          phrase:
+            he: על המנרה הטהרה יערך את הנרות
+            he_translit: "'l hmnrh hthrh y'rk 't hnrvt"
+            en: "left phrase arm (see tree_ascii)"
+        right_half:
+          side_en: "Right of top split"
+          phrase:
+            he: לפני יהוה תמיד
+            he_translit: lpny yhvh tmyd
+            en: "right phrase arm (see tree_ascii)"
+      tree_ascii: |
+        PHRASE (binary 9w) עַ֚ל הַ/מְּנֹרָ֣ה הַ/טְּהֹרָ֔ה יַעֲרֹ֖ךְ אֶת הַ…
+        ├── PHRASE (binary 6w) עַ֚ל הַ/מְּנֹרָ֣ה הַ/טְּהֹרָ֔ה יַעֲרֹ֖ךְ אֶת הַ…
+        │   ├── PHRASE (binary 3w) עַ֚ל הַ/מְּנֹרָ֣ה הַ/טְּהֹרָ֔ה
+        │   │   ├── [0] עַ֚ל (yetiv, rank=3)
+        │   │   └── PHRASE (binary 2w) הַ/מְּנֹרָ֣ה הַ/טְּהֹרָ֔ה
+        │   │       ├── [1] הַ/מְּנֹרָ֣ה (munach (conjunctive), rank=9)
+        │   │       └── [2] הַ/טְּהֹרָ֔ה (zaqef qatan, rank=2)
+        │   └── PHRASE (binary 3w) יַעֲרֹ֖ךְ אֶת הַ/נֵּר֑וֹת
+        │       ├── [3] יַעֲרֹ֖ךְ (tifcha, rank=2)
+        │       └── PHRASE (binary 2w) אֶת הַ/נֵּר֑וֹת
+        │           ├── [4] אֶת (no cantillation mark — bind as conjunctive, rank=9)
+        │           └── [5] הַ/נֵּר֑וֹת (etnachta (major mid-verse rest), rank=1)
+        └── PHRASE (binary 3w) לִ/פְנֵ֥י יְהוָ֖ה תָּמִֽיד
+            ├── PHRASE (binary 2w) לִ/פְנֵ֥י יְהוָ֖ה
+            │   ├── [6] לִ/פְנֵ֥י (mercha (conjunctive), rank=9)
+            │   └── [7] יְהוָ֖ה (tifcha, rank=2)
+            └── [8] תָּמִֽיד (silluq (verse-end emperor), rank=1)
+      maps_to: ["STEP_Lv_24_4"]
+      confidence: tested
+      source: "[HE-STRUCT][HE-WRITTEN]"
+
+    Lev_24_5:
+      verse: "24:5"
+      osis_id: "Lev.24.5"
+      parser_status: unique
+      pure_binary: true
+      word_count: 12
+      linear:
+        he: ולקחת סלת ואפית אתה שתים עשרה חלות שני עשרנים יהיה החלה האחת
+        he_translit: "vlqcht slt v'pyt 'th shtym 'shrh chlvt shny 'shrnym yhyh hchlh h'cht"
+        en: "Free gloss [EN-AID] — structure from Hebrew tree. 24:5."
+      top_binary_split:
+        comment: >
+          Top split ta'amim v1; maps_to ['STEP_Lv_24_5'].
+        left_half:
+          side_en: "Left of top split"
+          head:
+            he: חלות
+            he_translit: "chlvt"
+            en: "left-end leaf 6"
+            mark_en: etnachta (major mid-verse rest)
+          phrase:
+            he: ולקחת סלת ואפית אתה שתים עשרה חלות
+            he_translit: "vlqcht slt v'pyt 'th shtym 'shrh chlvt"
+            en: "left phrase arm (see tree_ascii)"
+        right_half:
+          side_en: "Right of top split"
+          phrase:
+            he: שני עשרנים יהיה החלה האחת
+            he_translit: "shny 'shrnym yhyh hchlh h'cht"
+            en: "right phrase arm (see tree_ascii)"
+      tree_ascii: |
+        PHRASE (binary 12w) וְ/לָקַחְתָּ֣ סֹ֔לֶת וְ/אָפִיתָ֣ אֹתָ֔/הּ שְׁתּ…
+        ├── PHRASE (binary 7w) וְ/לָקַחְתָּ֣ סֹ֔לֶת וְ/אָפִיתָ֣ אֹתָ֔/הּ שְׁתּ…
+        │   ├── PHRASE (binary 2w) וְ/לָקַחְתָּ֣ סֹ֔לֶת
+        │   │   ├── [0] וְ/לָקַחְתָּ֣ (munach (conjunctive), rank=9)
+        │   │   └── [1] סֹ֔לֶת (zaqef qatan, rank=2)
+        │   └── PHRASE (binary 5w) וְ/אָפִיתָ֣ אֹתָ֔/הּ שְׁתֵּ֥ים עֶשְׂרֵ֖ה חַלּ֑ו…
+        │       ├── PHRASE (binary 2w) וְ/אָפִיתָ֣ אֹתָ֔/הּ
+        │       │   ├── [2] וְ/אָפִיתָ֣ (munach (conjunctive), rank=9)
+        │       │   └── [3] אֹתָ֔/הּ (zaqef qatan, rank=2)
+        │       └── PHRASE (binary 3w) שְׁתֵּ֥ים עֶשְׂרֵ֖ה חַלּ֑וֹת
+        │           ├── PHRASE (binary 2w) שְׁתֵּ֥ים עֶשְׂרֵ֖ה
+        │           │   ├── [4] שְׁתֵּ֥ים (mercha (conjunctive), rank=9)
+        │           │   └── [5] עֶשְׂרֵ֖ה (tifcha, rank=2)
+        │           └── [6] חַלּ֑וֹת (etnachta (major mid-verse rest), rank=1)
+        └── PHRASE (binary 5w) שְׁנֵי֙ עֶשְׂרֹנִ֔ים יִהְיֶ֖ה הַֽ/חַלָּ֥ה הָ/אֶ…
+            ├── PHRASE (binary 2w) שְׁנֵי֙ עֶשְׂרֹנִ֔ים
+            │   ├── [7] שְׁנֵי֙ (pashta, rank=3)
+            │   └── [8] עֶשְׂרֹנִ֔ים (zaqef qatan, rank=2)
+            └── PHRASE (binary 3w) יִהְיֶ֖ה הַֽ/חַלָּ֥ה הָ/אֶחָֽת
+                ├── [9] יִהְיֶ֖ה (tifcha, rank=2)
+                └── PHRASE (binary 2w) הַֽ/חַלָּ֥ה הָ/אֶחָֽת
+                    ├── [10] הַֽ/חַלָּ֥ה (mercha (conjunctive), rank=9)
+                    └── [11] הָ/אֶחָֽת (silluq (verse-end emperor), rank=1)
+      maps_to: ["STEP_Lv_24_5"]
+      confidence: tested
+      source: "[HE-STRUCT][HE-WRITTEN]"
+
+    Lev_24_6:
+      verse: "24:6"
+      osis_id: "Lev.24.6"
+      parser_status: unique
+      pure_binary: true
+      word_count: 11
+      linear:
+        he: ושמת אותם שתים מערכות שש המערכת על השלחן הטהר לפני יהוה
+        he_translit: "vshmt 'vtm shtym m'rkvt shsh hm'rkt 'l hshlchn hthr lpny yhvh"
+        en: "Free gloss [EN-AID] — structure from Hebrew tree. 24:6."
+      top_binary_split:
+        comment: >
+          Top split ta'amim v1; maps_to ['STEP_Lv_24_6'].
+        left_half:
+          side_en: "Left of top split"
+          head:
+            he: המערכת
+            he_translit: "hm'rkt"
+            en: "left-end leaf 5"
+            mark_en: etnachta (major mid-verse rest)
+          phrase:
+            he: ושמת אותם שתים מערכות שש המערכת
+            he_translit: "vshmt 'vtm shtym m'rkvt shsh hm'rkt"
+            en: "left phrase arm (see tree_ascii)"
+        right_half:
+          side_en: "Right of top split"
+          phrase:
+            he: על השלחן הטהר לפני יהוה
+            he_translit: "'l hshlchn hthr lpny yhvh"
+            en: "right phrase arm (see tree_ascii)"
+      tree_ascii: |
+        PHRASE (binary 11w) וְ/שַׂמְתָּ֥ אוֹתָ֛/ם שְׁתַּ֥יִם מַֽעֲרָכ֖וֹת ש…
+        ├── PHRASE (binary 6w) וְ/שַׂמְתָּ֥ אוֹתָ֛/ם שְׁתַּ֥יִם מַֽעֲרָכ֖וֹת ש…
+        │   ├── PHRASE (binary 4w) וְ/שַׂמְתָּ֥ אוֹתָ֛/ם שְׁתַּ֥יִם מַֽעֲרָכ֖וֹת
+        │   │   ├── PHRASE (binary 2w) וְ/שַׂמְתָּ֥ אוֹתָ֛/ם
+        │   │   │   ├── [0] וְ/שַׂמְתָּ֥ (mercha (conjunctive), rank=9)
+        │   │   │   └── [1] אוֹתָ֛/ם (tevir, rank=3)
+        │   │   └── PHRASE (binary 2w) שְׁתַּ֥יִם מַֽעֲרָכ֖וֹת
+        │   │       ├── [2] שְׁתַּ֥יִם (mercha (conjunctive), rank=9)
+        │   │       └── [3] מַֽעֲרָכ֖וֹת (tifcha, rank=2)
+        │   └── PHRASE (binary 2w) שֵׁ֣שׁ הַֽ/מַּעֲרָ֑כֶת
+        │       ├── [4] שֵׁ֣שׁ (munach (conjunctive), rank=9)
+        │       └── [5] הַֽ/מַּעֲרָ֑כֶת (etnachta (major mid-verse rest), rank=1)
+        └── PHRASE (binary 5w) עַ֛ל הַ/שֻּׁלְחָ֥ן הַ/טָּהֹ֖ר לִ/פְנֵ֥י יְהוָֽה
+            ├── PHRASE (binary 3w) עַ֛ל הַ/שֻּׁלְחָ֥ן הַ/טָּהֹ֖ר
+            │   ├── [6] עַ֛ל (tevir, rank=3)
+            │   └── PHRASE (binary 2w) הַ/שֻּׁלְחָ֥ן הַ/טָּהֹ֖ר
+            │       ├── [7] הַ/שֻּׁלְחָ֥ן (mercha (conjunctive), rank=9)
+            │       └── [8] הַ/טָּהֹ֖ר (tifcha, rank=2)
+            └── PHRASE (binary 2w) לִ/פְנֵ֥י יְהוָֽה
+                ├── [9] לִ/פְנֵ֥י (mercha (conjunctive), rank=9)
+                └── [10] יְהוָֽה (silluq (verse-end emperor), rank=1)
+      maps_to: ["STEP_Lv_24_6"]
+      confidence: tested
+      source: "[HE-STRUCT][HE-WRITTEN]"
+
+    Lev_24_7:
+      verse: "24:7"
+      osis_id: "Lev.24.7"
+      parser_status: unique
+      pure_binary: false
+      word_count: 10
+      linear:
+        he: ונתת על המערכת לבנה זכה והיתה ללחם לאזכרה אשה ליהוה
+        he_translit: "vntt 'l hm'rkt lbnh zkh vhyth llchm l'zkrh 'shh lyhvh"
+        en: "Free gloss [EN-AID] — structure from Hebrew tree. 24:7."
+      top_binary_split:
+        comment: >
+          Top split ta'amim v1; maps_to ['STEP_Lv_24_7'].
+        left_half:
+          side_en: "Left of top split"
+          head:
+            he: זכה
+            he_translit: "zkh"
+            en: "left-end leaf 4"
+            mark_en: etnachta (major mid-verse rest)
+          phrase:
+            he: ונתת על המערכת לבנה זכה
+            he_translit: "vntt 'l hm'rkt lbnh zkh"
+            en: "left phrase arm (see tree_ascii)"
+        right_half:
+          side_en: "Right of top split"
+          phrase:
+            he: והיתה ללחם לאזכרה אשה ליהוה
+            he_translit: "vhyth llchm l'zkrh 'shh lyhvh"
+            en: "right phrase arm (see tree_ascii)"
+      tree_ascii: |
+        PHRASE (binary 10w) וְ/נָתַתָּ֥ עַל הַֽ/מַּעֲרֶ֖כֶת לְבֹנָ֣ה זַכָּ֑…
+        ├── PHRASE (binary 5w) וְ/נָתַתָּ֥ עַל הַֽ/מַּעֲרֶ֖כֶת לְבֹנָ֣ה זַכָּ֑ה
+        │   ├── PHRASE (3-ary 3w) וְ/נָתַתָּ֥ עַל הַֽ/מַּעֲרֶ֖כֶת
+        │   │   ├── [0] וְ/נָתַתָּ֥ (mercha (conjunctive), rank=9)
+        │   │   ├── [1] עַל (no cantillation mark — bind as conjunctive, rank=9)
+        │   │   └── [2] הַֽ/מַּעֲרֶ֖כֶת (tifcha, rank=2)
+        │   └── PHRASE (binary 2w) לְבֹנָ֣ה זַכָּ֑ה
+        │       ├── [3] לְבֹנָ֣ה (munach (conjunctive), rank=9)
+        │       └── [4] זַכָּ֑ה (etnachta (major mid-verse rest), rank=1)
+        └── PHRASE (binary 5w) וְ/הָיְתָ֤ה לַ/לֶּ֨חֶם֙ לְ/אַזְכָּרָ֔ה אִשֶּׁ֖ה…
+            ├── PHRASE (binary 3w) וְ/הָיְתָ֤ה לַ/לֶּ֨חֶם֙ לְ/אַזְכָּרָ֔ה
+            │   ├── PHRASE (binary 2w) וְ/הָיְתָ֤ה לַ/לֶּ֨חֶם֙
+            │   │   ├── [5] וְ/הָיְתָ֤ה (mahpach (conjunctive), rank=9)
+            │   │   └── [6] לַ/לֶּ֨חֶם֙ (pashta, rank=3)
+            │   └── [7] לְ/אַזְכָּרָ֔ה (zaqef qatan, rank=2)
+            └── PHRASE (binary 2w) אִשֶּׁ֖ה לַֽ/יהוָֽה
+                ├── [8] אִשֶּׁ֖ה (tifcha, rank=2)
+                └── [9] לַֽ/יהוָֽה (silluq (verse-end emperor), rank=1)
+      maps_to: ["STEP_Lv_24_7"]
+      confidence: tested
+      source: "[HE-STRUCT][HE-WRITTEN]"
+
+    Lev_24_8:
+      verse: "24:8"
+      osis_id: "Lev.24.8"
+      parser_status: unique
+      pure_binary: false
+      word_count: 13
+      linear:
+        he: ביום השבת ביום השבת יערכנו לפני יהוה תמיד מאת בני ישראל ברית עולם
+        he_translit: "byvm hshbt byvm hshbt y'rknv lpny yhvh tmyd m't bny yshr'l bryt 'vlm"
+        en: "Free gloss [EN-AID] — structure from Hebrew tree. 24:8."
+      top_binary_split:
+        comment: >
+          Top split ta'amim v1; maps_to ['STEP_Lv_24_8'].
+        left_half:
+          side_en: "Left of top split"
+          head:
+            he: תמיד
+            he_translit: "tmyd"
+            en: "left-end leaf 7"
+            mark_en: etnachta (major mid-verse rest)
+          phrase:
+            he: ביום השבת ביום השבת יערכנו לפני יהוה תמיד
+            he_translit: "byvm hshbt byvm hshbt y'rknv lpny yhvh tmyd"
+            en: "left phrase arm (see tree_ascii)"
+        right_half:
+          side_en: "Right of top split"
+          phrase:
+            he: מאת בני ישראל ברית עולם
+            he_translit: "m't bny yshr'l bryt 'vlm"
+            en: "right phrase arm (see tree_ascii)"
+      tree_ascii: |
+        PHRASE (binary 13w) בְּ/י֨וֹם הַ/שַּׁבָּ֜ת בְּ/י֣וֹם הַ/שַּׁבָּ֗ת י…
+        ├── PHRASE (binary 8w) בְּ/י֨וֹם הַ/שַּׁבָּ֜ת בְּ/י֣וֹם הַ/שַּׁבָּ֗ת י…
+        │   ├── PHRASE (binary 7w) בְּ/י֨וֹם הַ/שַּׁבָּ֜ת בְּ/י֣וֹם הַ/שַּׁבָּ֗ת י…
+        │   │   ├── PHRASE (binary 4w) בְּ/י֨וֹם הַ/שַּׁבָּ֜ת בְּ/י֣וֹם הַ/שַּׁבָּ֗ת
+        │   │   │   ├── PHRASE (binary 2w) בְּ/י֨וֹם הַ/שַּׁבָּ֜ת
+        │   │   │   │   ├── [0] בְּ/י֨וֹם (qadma (conjunctive), rank=9)
+        │   │   │   │   └── [1] הַ/שַּׁבָּ֜ת (geresh, rank=4)
+        │   │   │   └── PHRASE (binary 2w) בְּ/י֣וֹם הַ/שַּׁבָּ֗ת
+        │   │   │       ├── [2] בְּ/י֣וֹם (munach (conjunctive), rank=9)
+        │   │   │       └── [3] הַ/שַּׁבָּ֗ת (revia, rank=3)
+        │   │   └── PHRASE (binary 3w) יַֽעַרְכֶ֛/נּוּ לִ/פְנֵ֥י יְהוָ֖ה
+        │   │       ├── [4] יַֽעַרְכֶ֛/נּוּ (tevir, rank=3)
+        │   │       └── PHRASE (binary 2w) לִ/פְנֵ֥י יְהוָ֖ה
+        │   │           ├── [5] לִ/פְנֵ֥י (mercha (conjunctive), rank=9)
+        │   │           └── [6] יְהוָ֖ה (tifcha, rank=2)
+        │   └── [7] תָּמִ֑יד (etnachta (major mid-verse rest), rank=1)
+        └── PHRASE (binary 5w) מֵ/אֵ֥ת בְּנֵֽי יִשְׂרָאֵ֖ל בְּרִ֥ית עוֹלָֽם
+            ├── PHRASE (3-ary 3w) מֵ/אֵ֥ת בְּנֵֽי יִשְׂרָאֵ֖ל
+            │   ├── [8] מֵ/אֵ֥ת (mercha (conjunctive), rank=9)
+            │   ├── [9] בְּנֵֽי (no cantillation mark — bind as conjunctive, rank=9)
+            │   └── [10] יִשְׂרָאֵ֖ל (tifcha, rank=2)
+            └── PHRASE (binary 2w) בְּרִ֥ית עוֹלָֽם
+                ├── [11] בְּרִ֥ית (mercha (conjunctive), rank=9)
+                └── [12] עוֹלָֽם (silluq (verse-end emperor), rank=1)
+      maps_to: ["STEP_Lv_24_8"]
+      confidence: tested
+      source: "[HE-STRUCT][HE-WRITTEN]"
+
+    Lev_24_9:
+      verse: "24:9"
+      osis_id: "Lev.24.9"
+      parser_status: unique
+      pure_binary: true
+      word_count: 15
+      linear:
+        he: והיתה לאהרן ולבניו ואכלהו במקום קדש כי קדש קדשים הוא לו מאשי יהוה חק עולם
+        he_translit: "vhyth l'hrn vlbnyv v'klhv bmqvm qdsh ky qdsh qdshym hv' lv m'shy yhvh chq 'vlm"
+        en: "Free gloss [EN-AID] — structure from Hebrew tree. 24:9."
+      top_binary_split:
+        comment: >
+          Top split ta'amim v1; maps_to ['STEP_Lv_24_9'].
+        left_half:
+          side_en: "Left of top split"
+          head:
+            he: קדש
+            he_translit: "qdsh"
+            en: "left-end leaf 5"
+            mark_en: etnachta (major mid-verse rest)
+          phrase:
+            he: והיתה לאהרן ולבניו ואכלהו במקום קדש
+            he_translit: "vhyth l'hrn vlbnyv v'klhv bmqvm qdsh"
+            en: "left phrase arm (see tree_ascii)"
+        right_half:
+          side_en: "Right of top split"
+          phrase:
+            he: כי קדש קדשים הוא לו מאשי יהוה חק עולם
+            he_translit: "ky qdsh qdshym hv' lv m'shy yhvh chq 'vlm"
+            en: "right phrase arm (see tree_ascii)"
+      tree_ascii: |
+        PHRASE (binary 15w) וְ/הָֽיְתָה֙ לְ/אַהֲרֹ֣ן וּ/לְ/בָנָ֔י/ו וַ/אֲכָ…
+        ├── PHRASE (binary 6w) וְ/הָֽיְתָה֙ לְ/אַהֲרֹ֣ן וּ/לְ/בָנָ֔י/ו וַ/אֲכָ…
+        │   ├── PHRASE (binary 3w) וְ/הָֽיְתָה֙ לְ/אַהֲרֹ֣ן וּ/לְ/בָנָ֔י/ו
+        │   │   ├── [0] וְ/הָֽיְתָה֙ (pashta, rank=3)
+        │   │   └── PHRASE (binary 2w) לְ/אַהֲרֹ֣ן וּ/לְ/בָנָ֔י/ו
+        │   │       ├── [1] לְ/אַהֲרֹ֣ן (munach (conjunctive), rank=9)
+        │   │       └── [2] וּ/לְ/בָנָ֔י/ו (zaqef qatan, rank=2)
+        │   └── PHRASE (binary 3w) וַ/אֲכָלֻ֖/הוּ בְּ/מָק֣וֹם קָדֹ֑שׁ
+        │       ├── [3] וַ/אֲכָלֻ֖/הוּ (tifcha, rank=2)
+        │       └── PHRASE (binary 2w) בְּ/מָק֣וֹם קָדֹ֑שׁ
+        │           ├── [4] בְּ/מָק֣וֹם (munach (conjunctive), rank=9)
+        │           └── [5] קָדֹ֑שׁ (etnachta (major mid-verse rest), rank=1)
+        └── PHRASE (binary 9w) כִּ֡י קֹדֶשׁ֩ קָֽדָשִׁ֨ים ה֥וּא ל֛/וֹ מֵ/אִשֵּׁ…
+            ├── PHRASE (binary 7w) כִּ֡י קֹדֶשׁ֩ קָֽדָשִׁ֨ים ה֥וּא ל֛/וֹ מֵ/אִשֵּׁ…
+            │   ├── PHRASE (binary 5w) כִּ֡י קֹדֶשׁ֩ קָֽדָשִׁ֨ים ה֥וּא ל֛/וֹ
+            │   │   ├── [6] כִּ֡י (pazer, rank=4)
+            │   │   └── PHRASE (4-ary 4w) קֹדֶשׁ֩ קָֽדָשִׁ֨ים ה֥וּא ל֛/וֹ
+            │   │       ├── [7] קֹדֶשׁ֩ (telisha qetana (conjunctive), rank=9)
+            │   │       ├── [8] קָֽדָשִׁ֨ים (qadma (conjunctive), rank=9)
+            │   │       ├── [9] ה֥וּא (mercha (conjunctive), rank=9)
+            │   │       └── [10] ל֛/וֹ (tevir, rank=3)
+            │   └── PHRASE (binary 2w) מֵ/אִשֵּׁ֥י יְהוָ֖ה
+            │       ├── [11] מֵ/אִשֵּׁ֥י (mercha (conjunctive), rank=9)
+            │       └── [12] יְהוָ֖ה (tifcha, rank=2)
+            └── PHRASE (binary 2w) חָק עוֹלָֽם
+                ├── [13] חָק (no cantillation mark — bind as conjunctive, rank=9)
+                └── [14] עוֹלָֽם (silluq (verse-end emperor), rank=1)
+      maps_to: ["STEP_Lv_24_9"]
+      confidence: tested
+      source: "[HE-STRUCT][HE-WRITTEN]"
+
+tree_coverage:
+  aspiration_en: >
+    100% word use; roles provisional pending TIR.
+  word_total: 106
+  verses:
+  - ref: "Lev.24.1"
+    words:
+      - {index: 0, he: וידבר, he_translit: vydbr, en: "leaf 0 (וידבר)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_1]}
+      - {index: 1, he: יהוה, he_translit: yhvh, en: "leaf 1 (יהוה)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_1]}
+      - {index: 2, he: אל, he_translit: "'l", en: "leaf 2 (אל)", role: glue, kind: glue, feeds: [STEP_Lv_24_1]}
+      - {index: 3, he: משה, he_translit: mshh, en: "leaf 3 (משה)", role: agent_or_person, kind: logic_bearing, feeds: [STEP_Lv_24_1]}
+      - {index: 4, he: לאמר, he_translit: "l'mr", en: "leaf 4 (לאמר)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_1]}
+  - ref: "Lev.24.2"
+    words:
+      - {index: 0, he: צו, he_translit: tzv, en: "leaf 0 (צו)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_2]}
+      - {index: 1, he: את, he_translit: "'t", en: "leaf 1 (את)", role: glue, kind: glue, feeds: [STEP_Lv_24_2]}
+      - {index: 2, he: בני, he_translit: bny, en: "leaf 2 (בני)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_2]}
+      - {index: 3, he: ישראל, he_translit: "yshr'l", en: "leaf 3 (ישראל)", role: agent_or_person, kind: logic_bearing, feeds: [STEP_Lv_24_2]}
+      - {index: 4, he: ויקחו, he_translit: vyqchv, en: "leaf 4 (ויקחו)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_2]}
+      - {index: 5, he: אליך, he_translit: "'lyk", en: "leaf 5 (אליך)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_2]}
+      - {index: 6, he: שמן, he_translit: shmn, en: "leaf 6 (שמן)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_2]}
+      - {index: 7, he: זית, he_translit: zyt, en: "leaf 7 (זית)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_2]}
+      - {index: 8, he: זך, he_translit: zk, en: "leaf 8 (זך)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_2]}
+      - {index: 9, he: כתית, he_translit: ktyt, en: "leaf 9 (כתית)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_2]}
+      - {index: 10, he: למאור, he_translit: "lm'vr", en: "leaf 10 (למאור)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_2]}
+      - {index: 11, he: להעלת, he_translit: "lh'lt", en: "leaf 11 (להעלת)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_2]}
+      - {index: 12, he: נר, he_translit: nr, en: "leaf 12 (נר)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_2]}
+      - {index: 13, he: תמיד, he_translit: tmyd, en: "leaf 13 (תמיד)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_2]}
+  - ref: "Lev.24.3"
+    words:
+      - {index: 0, he: מחוץ, he_translit: mchvtz, en: "leaf 0 (מחוץ)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_3]}
+      - {index: 1, he: לפרכת, he_translit: lprkt, en: "leaf 1 (לפרכת)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_3]}
+      - {index: 2, he: העדת, he_translit: "h'dt", en: "leaf 2 (העדת)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_3]}
+      - {index: 3, he: באהל, he_translit: "b'hl", en: "leaf 3 (באהל)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_3]}
+      - {index: 4, he: מועד, he_translit: "mv'd", en: "leaf 4 (מועד)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_3]}
+      - {index: 5, he: יערך, he_translit: "y'rk", en: "leaf 5 (יערך)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_3]}
+      - {index: 6, he: אתו, he_translit: "'tv", en: "leaf 6 (אתו)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_3]}
+      - {index: 7, he: אהרן, he_translit: "'hrn", en: "leaf 7 (אהרן)", role: agent_or_person, kind: logic_bearing, feeds: [STEP_Lv_24_3]}
+      - {index: 8, he: מערב, he_translit: "m'rb", en: "leaf 8 (מערב)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_3]}
+      - {index: 9, he: עד, he_translit: "'d", en: "leaf 9 (עד)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_3]}
+      - {index: 10, he: בקר, he_translit: bqr, en: "leaf 10 (בקר)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_3]}
+      - {index: 11, he: לפני, he_translit: lpny, en: "leaf 11 (לפני)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_3]}
+      - {index: 12, he: יהוה, he_translit: yhvh, en: "leaf 12 (יהוה)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_3]}
+      - {index: 13, he: תמיד, he_translit: tmyd, en: "leaf 13 (תמיד)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_3]}
+      - {index: 14, he: חקת, he_translit: chqt, en: "leaf 14 (חקת)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_3]}
+      - {index: 15, he: עולם, he_translit: "'vlm", en: "leaf 15 (עולם)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_3]}
+      - {index: 16, he: לדרתיכם, he_translit: ldrtykm, en: "leaf 16 (לדרתיכם)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_3]}
+  - ref: "Lev.24.4"
+    words:
+      - {index: 0, he: על, he_translit: "'l", en: "leaf 0 (על)", role: glue, kind: glue, feeds: [STEP_Lv_24_4]}
+      - {index: 1, he: המנרה, he_translit: hmnrh, en: "leaf 1 (המנרה)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_4]}
+      - {index: 2, he: הטהרה, he_translit: hthrh, en: "leaf 2 (הטהרה)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_4]}
+      - {index: 3, he: יערך, he_translit: "y'rk", en: "leaf 3 (יערך)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_4]}
+      - {index: 4, he: את, he_translit: "'t", en: "leaf 4 (את)", role: glue, kind: glue, feeds: [STEP_Lv_24_4]}
+      - {index: 5, he: הנרות, he_translit: hnrvt, en: "leaf 5 (הנרות)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_4]}
+      - {index: 6, he: לפני, he_translit: lpny, en: "leaf 6 (לפני)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_4]}
+      - {index: 7, he: יהוה, he_translit: yhvh, en: "leaf 7 (יהוה)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_4]}
+      - {index: 8, he: תמיד, he_translit: tmyd, en: "leaf 8 (תמיד)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_4]}
+  - ref: "Lev.24.5"
+    words:
+      - {index: 0, he: ולקחת, he_translit: vlqcht, en: "leaf 0 (ולקחת)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_5]}
+      - {index: 1, he: סלת, he_translit: slt, en: "leaf 1 (סלת)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_5]}
+      - {index: 2, he: ואפית, he_translit: "v'pyt", en: "leaf 2 (ואפית)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_5]}
+      - {index: 3, he: אתה, he_translit: "'th", en: "leaf 3 (אתה)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_5]}
+      - {index: 4, he: שתים, he_translit: shtym, en: "leaf 4 (שתים)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_5]}
+      - {index: 5, he: עשרה, he_translit: "'shrh", en: "leaf 5 (עשרה)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_5]}
+      - {index: 6, he: חלות, he_translit: chlvt, en: "leaf 6 (חלות)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_5]}
+      - {index: 7, he: שני, he_translit: shny, en: "leaf 7 (שני)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_5]}
+      - {index: 8, he: עשרנים, he_translit: "'shrnym", en: "leaf 8 (עשרנים)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_5]}
+      - {index: 9, he: יהיה, he_translit: yhyh, en: "leaf 9 (יהיה)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_5]}
+      - {index: 10, he: החלה, he_translit: hchlh, en: "leaf 10 (החלה)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_5]}
+      - {index: 11, he: האחת, he_translit: "h'cht", en: "leaf 11 (האחת)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_5]}
+  - ref: "Lev.24.6"
+    words:
+      - {index: 0, he: ושמת, he_translit: vshmt, en: "leaf 0 (ושמת)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_6]}
+      - {index: 1, he: אותם, he_translit: "'vtm", en: "leaf 1 (אותם)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_6]}
+      - {index: 2, he: שתים, he_translit: shtym, en: "leaf 2 (שתים)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_6]}
+      - {index: 3, he: מערכות, he_translit: "m'rkvt", en: "leaf 3 (מערכות)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_6]}
+      - {index: 4, he: שש, he_translit: shsh, en: "leaf 4 (שש)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_6]}
+      - {index: 5, he: המערכת, he_translit: "hm'rkt", en: "leaf 5 (המערכת)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_6]}
+      - {index: 6, he: על, he_translit: "'l", en: "leaf 6 (על)", role: glue, kind: glue, feeds: [STEP_Lv_24_6]}
+      - {index: 7, he: השלחן, he_translit: hshlchn, en: "leaf 7 (השלחן)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_6]}
+      - {index: 8, he: הטהר, he_translit: hthr, en: "leaf 8 (הטהר)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_6]}
+      - {index: 9, he: לפני, he_translit: lpny, en: "leaf 9 (לפני)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_6]}
+      - {index: 10, he: יהוה, he_translit: yhvh, en: "leaf 10 (יהוה)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_6]}
+  - ref: "Lev.24.7"
+    words:
+      - {index: 0, he: ונתת, he_translit: vntt, en: "leaf 0 (ונתת)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_7]}
+      - {index: 1, he: על, he_translit: "'l", en: "leaf 1 (על)", role: glue, kind: glue, feeds: [STEP_Lv_24_7]}
+      - {index: 2, he: המערכת, he_translit: "hm'rkt", en: "leaf 2 (המערכת)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_7]}
+      - {index: 3, he: לבנה, he_translit: lbnh, en: "leaf 3 (לבנה)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_7]}
+      - {index: 4, he: זכה, he_translit: zkh, en: "leaf 4 (זכה)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_7]}
+      - {index: 5, he: והיתה, he_translit: vhyth, en: "leaf 5 (והיתה)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_7]}
+      - {index: 6, he: ללחם, he_translit: llchm, en: "leaf 6 (ללחם)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_7]}
+      - {index: 7, he: לאזכרה, he_translit: "l'zkrh", en: "leaf 7 (לאזכרה)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_7]}
+      - {index: 8, he: אשה, he_translit: "'shh", en: "leaf 8 (אשה)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_7]}
+      - {index: 9, he: ליהוה, he_translit: lyhvh, en: "leaf 9 (ליהוה)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_7]}
+  - ref: "Lev.24.8"
+    words:
+      - {index: 0, he: ביום, he_translit: byvm, en: "leaf 0 (ביום)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_8]}
+      - {index: 1, he: השבת, he_translit: hshbt, en: "leaf 1 (השבת)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_8]}
+      - {index: 2, he: ביום, he_translit: byvm, en: "leaf 2 (ביום)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_8]}
+      - {index: 3, he: השבת, he_translit: hshbt, en: "leaf 3 (השבת)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_8]}
+      - {index: 4, he: יערכנו, he_translit: "y'rknv", en: "leaf 4 (יערכנו)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_8]}
+      - {index: 5, he: לפני, he_translit: lpny, en: "leaf 5 (לפני)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_8]}
+      - {index: 6, he: יהוה, he_translit: yhvh, en: "leaf 6 (יהוה)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_8]}
+      - {index: 7, he: תמיד, he_translit: tmyd, en: "leaf 7 (תמיד)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_8]}
+      - {index: 8, he: מאת, he_translit: "m't", en: "leaf 8 (מאת)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_8]}
+      - {index: 9, he: בני, he_translit: bny, en: "leaf 9 (בני)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_8]}
+      - {index: 10, he: ישראל, he_translit: "yshr'l", en: "leaf 10 (ישראל)", role: agent_or_person, kind: logic_bearing, feeds: [STEP_Lv_24_8]}
+      - {index: 11, he: ברית, he_translit: bryt, en: "leaf 11 (ברית)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_8]}
+      - {index: 12, he: עולם, he_translit: "'vlm", en: "leaf 12 (עולם)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_8]}
+  - ref: "Lev.24.9"
+    words:
+      - {index: 0, he: והיתה, he_translit: vhyth, en: "leaf 0 (והיתה)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_9]}
+      - {index: 1, he: לאהרן, he_translit: "l'hrn", en: "leaf 1 (לאהרן)", role: agent_or_person, kind: logic_bearing, feeds: [STEP_Lv_24_9]}
+      - {index: 2, he: ולבניו, he_translit: vlbnyv, en: "leaf 2 (ולבניו)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_9]}
+      - {index: 3, he: ואכלהו, he_translit: "v'klhv", en: "leaf 3 (ואכלהו)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_9]}
+      - {index: 4, he: במקום, he_translit: bmqvm, en: "leaf 4 (במקום)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_9]}
+      - {index: 5, he: קדש, he_translit: qdsh, en: "leaf 5 (קדש)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_9]}
+      - {index: 6, he: כי, he_translit: ky, en: "leaf 6 (כי)", role: glue, kind: glue, feeds: [STEP_Lv_24_9]}
+      - {index: 7, he: קדש, he_translit: qdsh, en: "leaf 7 (קדש)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_9]}
+      - {index: 8, he: קדשים, he_translit: qdshym, en: "leaf 8 (קדשים)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_9]}
+      - {index: 9, he: הוא, he_translit: "hv'", en: "leaf 9 (הוא)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_9]}
+      - {index: 10, he: לו, he_translit: lv, en: "leaf 10 (לו)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_9]}
+      - {index: 11, he: מאשי, he_translit: "m'shy", en: "leaf 11 (מאשי)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_9]}
+      - {index: 12, he: יהוה, he_translit: yhvh, en: "leaf 12 (יהוה)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_9]}
+      - {index: 13, he: חק, he_translit: chq, en: "leaf 13 (חק)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_9]}
+      - {index: 14, he: עולם, he_translit: "'vlm", en: "leaf 14 (עולם)", role: logic_bearing_leaf, kind: logic_bearing, feeds: [STEP_Lv_24_9]}
+
+confidence: hypothesis
+status_note_en: >
+  Tree-derived v1 (phase G). One STEP per verse from top-split arms. Not binding religious law.

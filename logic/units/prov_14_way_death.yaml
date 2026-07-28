@@ -1,0 +1,794 @@
+# =============================================================================
+# LOGIC UNIT: Proverbs 14:12 // 16:25 — There is a way straight before a man;
+#                                       its end: ways of death
+# Second poetry Pre-Code unit — parallel IF→THEN (same bracket lock)
+# =============================================================================
+# Experimental model — not binding religious law.
+# Genre: wisdom path-claim → end-result (not dual imperative).
+# Process: binary_trees (v3) → tree_coverage → decision rows → scenarios.
+# Depends: re-uses / refines poetry TIR after prov_03_trust_know.
+
+meta:
+  id: "prov_14_way_death"
+  title_en: "A way that seems straight before a man — its end is ways of death (14:12 // 16:25)"
+  title_he: "יֵשׁ דֶּרֶךְ יָשָׁר"
+  title_he_translit: "yesh derekh yashar"
+  title_he_en: "there is a straight way"
+  book_he: "מִשְׁלֵי"
+  book_he_translit: "Mishlei"
+  book_en: "Proverbs"
+  refs: "14:12; 16:25"
+  data_paths_he:
+    - "/tmp/morphhb/wlc/Prov.xml"
+  data_paths_en_aid: []
+  status: draft
+  confidence_overall: hypothesis
+  genre: "path_end_result"
+  build_track: poetry_wisdom_seed
+  depends_on:
+    - "prov_03_trust_know"
+  parser_rule_set: "v3"
+  parallel_note_en: >
+    Prov 14:12 and 16:25 share the same plain bracket under v3:
+    [[יש דרך ישר ל/פני איש] [ו/אחרית/ה דרכי מות]].
+    Treated as one logic package (// lock), not two independent English paraphrases.
+  related_parse_docs:
+    - "logic/Parse_tree_2026-07-27/EXPERIMENT_poetry_v3_implemented_2026-07-27.md"
+    - "logic/Parse_tree_2026-07-27/SMOKE_prov_v3_2026-07-27.md"
+  owner_language_note: >
+    Reader is fluent in English only, not Hebrew.
+    All comments and en fields must make the Hebrew usable.
+    Hebrew remains the only derivation source.
+  oral_policy_note_en: >
+    Written trees first. Dual-track Oral only when named; never silent-merge.
+  method_note_en: >
+    Second poetry unit. Contrasts with prov_03_trust_know (dual imperative + know→He-straightens).
+    Here: existence/appearance claim about a path → its end = death-ways.
+    Not binding religious law.
+
+# -----------------------------------------------------------------------------
+derivation_log:
+  - step: A
+    name_en: "Choose the unit"
+    comment: >
+      Chosen after prov_03_trust_know to re-test poetry tree→logic on a different
+      dual shape: path-setup ‖ end-result (not DO ‖ DO-NOT). Hebrew book
+      מִשְׁלֵי / Mishlei / "Proverbs"; refs 14:12 and // 16:25 (identical structure).
+    tags: ["[HE-WRITTEN]"]
+    confidence: established
+
+  - step: B
+    name_en: "Load Hebrew source"
+    comment: >
+      Hebrew from morphhb OSHB Prov.xml via taamim_tree_parse.py. English only [EN-AID].
+    tags: ["[HE-WRITTEN]", "[EN-AID]"]
+    confidence: tested
+
+  - step: C
+    name_en: "Segment structure (trees FIRST)"
+    comment: >
+      Both verses: unique, pure_binary, leaf_complete, system=poetry, 8 words, 4 bricks.
+      Same tree_ascii shape and same expect_bracket_plain. Etnachta top split.
+    tags: ["[HE-STRUCT]"]
+    confidence: tested
+
+  - step: D
+    name_en: "Extract predicates and outcomes"
+    comment: >
+      LEFT: יש דרך ישר ל/פני איש / yesh derekh yashar li-fnei ish /
+      "there is a straight way before a man".
+      RIGHT: ו/אחרית/ה דרכי מות / ve-acharita darkhei mavet /
+      "and its end — ways of death".
+      ישר / yashar / "straight/right" is appearance-before-man, not final moral verdict
+      from the English word "right" alone — end is מות / mavet / "death".
+    tags: ["[HE-WRITTEN]"]
+    confidence: hypothesis
+
+  - step: E
+    name_en: "Choose logic format"
+    comment: >
+      One decision row shared by both verse refs (//). STEPs per osis for show-work.
+      Pattern TIR-025 (path claim → end). Contrast TIR-023 (dual imperative) from unit 1.
+    tags: ["[INFER]"]
+    confidence: hypothesis
+
+  - step: F
+    name_en: "Fill trilingual objects"
+    comment: >
+      phrase_map once (shared); tree_coverage listed for 14:12 and mirrored for 16:25
+      (same roles; mark sequences may differ slightly — both lock same brackets).
+    tags: ["[HE-WRITTEN]"]
+    confidence: hypothesis
+
+  - step: G
+    name_en: "Optional Oral"
+    comment: "No Oral attachments in this draft."
+    tags: ["[ORAL]"]
+    confidence: hypothesis
+
+  - step: H
+    name_en: "Scenarios"
+    comment: "Appearance of straight path vs written end = death-ways."
+    tags: ["[HE-WRITTEN]"]
+    confidence: hypothesis
+
+  - step: I
+    name_en: "English-leakage review"
+    comment: >
+      Avoid English "seems right" as sole condition — ground on יש דרך ישר ל/פני איש.
+      Free gloss may say "seems straight before a man" as [EN-AID] of ל/פני איש.
+    tags: ["[EN-AID]"]
+    confidence: hypothesis
+
+  - step: J
+    name_en: "Freeze"
+    comment: "status remains draft. Not frozen."
+    tags: []
+    confidence: hypothesis
+
+# -----------------------------------------------------------------------------
+binary_trees:
+  method_note_en: >
+    v3 poetry parser. 14:12 and 16:25 produce identical plain brackets (// lock).
+  data_source: "/tmp/morphhb/wlc/Prov.xml"
+  parser: "taamim_tree_parse.py"
+  rule_set_version: "v3"
+  system: "poetry"
+  tags: ["[HE-STRUCT]"]
+  shared_bracket_plain: "[[יש דרך ישר ל/פני איש] [ו/אחרית/ה דרכי מות]]"
+  chapter_outline_tree:
+    id: T_way_death_parallel
+    comment: "English: one path-end proverb; two verse copies in Proverbs."
+    root:
+      role_en: "parallel_wisdom_sayings"
+      children:
+        - role_en: "path_claim_then_end"
+          verse: "14:12"
+        - role_en: "path_claim_then_end_repeat"
+          verse: "16:25"
+
+  verse_trees:
+    Prov_14_12:
+      verse: "14:12"
+      osis_id: "Prov.14.12"
+      parser_status: unique
+      pure_binary: true
+      leaf_complete: true
+      word_count: 8
+      brick_count: 4
+      linear:
+        he: "יש דרך ישר ל/פני איש ו/אחרית/ה דרכי מות"
+        he_translit: "yesh derekh yashar li-fnei ish ve-acharita darkhei mavet"
+        en: "There is a straight way before a man, and its end is ways of death."
+        en_note: "Free gloss [EN-AID]. ישר / yashar is the path-as-before-man, not English ethics alone."
+      top_binary_split:
+        comment: >
+          Etnachta: LEFT path-existence + straight + before-man (setup);
+          RIGHT its-end + ways-of-death (result). TIR-025 / TIR-001.
+        left_half:
+          phrase:
+            he: "יש דרך ישר ל/פני איש"
+            he_translit: "yesh derekh yashar li-fnei ish"
+            en: "there is a straight way before a man"
+        right_half:
+          phrase:
+            he: "ו/אחרית/ה דרכי מות"
+            he_translit: "ve-acharita darkhei mavet"
+            en: "and its end — ways of death"
+      nested_bricks:
+        - id: B0
+          words: [0, 1, 2]
+          end_mark: dehi
+          he: "יש דרך ישר"
+          he_translit: "yesh derekh yashar"
+          en: "there is a straight way"
+          role_en: "existence_path_claim"
+        - id: B1
+          words: [3, 4]
+          end_mark: etnachta
+          he: "ל/פני איש"
+          he_translit: "li-fnei ish"
+          en: "before a man / in front of a person"
+          role_en: "viewpoint_before_man"
+        - id: B2
+          words: [5]
+          end_mark: revia
+          he: "ו/אחרית/ה"
+          he_translit: "ve-acharita"
+          en: "and its end / and her end"
+          role_en: "end_pivot"
+        - id: B3
+          words: [6, 7]
+          end_mark: silluq
+          he: "דרכי מות"
+          he_translit: "darkhei mavet"
+          en: "ways of death"
+          role_en: "end_result_death_ways"
+      tree_ascii: |
+        PHRASE (binary 8w) יֵ֤שׁ דֶּ֣רֶךְ יָ֭שָׁר לִ/פְנֵי אִ֑ישׁ וְ֝/אַחֲ…
+        ├── PHRASE (binary 5w) יֵ֤שׁ דֶּ֣רֶךְ יָ֭שָׁר לִ/פְנֵי אִ֑ישׁ
+        │   ├── [0-2] GLUE יֵ֤שׁ דֶּ֣רֶךְ יָ֭שָׁר (dehi, rank=2)
+        │   └── [3-4] GLUE לִ/פְנֵי אִ֑ישׁ (atnach, rank=1)
+        └── PHRASE (binary 3w) וְ֝/אַחֲרִיתָ֗/הּ דַּרְכֵי מָֽוֶת
+            ├── [5] וְ֝/אַחֲרִיתָ֗/הּ (revia, rank=3)
+            └── [6-7] GLUE דַּרְכֵי מָֽוֶת (silluq, rank=1)
+      maps_to:
+        - "R_path_end_death"
+        - "STEP_Pr_14_12"
+        - "P1"
+        - "P2"
+        - "P3"
+        - "P4"
+      confidence: tested
+      source: "[HE-STRUCT][HE-WRITTEN] taamim v3 poetry golden"
+
+    Prov_16_25:
+      verse: "16:25"
+      osis_id: "Prov.16.25"
+      parser_status: unique
+      pure_binary: true
+      leaf_complete: true
+      word_count: 8
+      brick_count: 4
+      linear:
+        he: "יש דרך ישר ל/פני איש ו/אחרית/ה דרכי מות"
+        he_translit: "yesh derekh yashar li-fnei ish ve-acharita darkhei mavet"
+        en: "There is a straight way before a man, and its end is ways of death."
+        en_note: "Same Hebrew span as 14:12 [EN-AID]. // parallel."
+      top_binary_split:
+        comment: "Identical split shape to Prov.14.12 — same maps_to row."
+        left_half:
+          phrase:
+            he: "יש דרך ישר ל/פני איש"
+            he_translit: "yesh derekh yashar li-fnei ish"
+            en: "there is a straight way before a man"
+        right_half:
+          phrase:
+            he: "ו/אחרית/ה דרכי מות"
+            he_translit: "ve-acharita darkhei mavet"
+            en: "and its end — ways of death"
+      nested_bricks:
+        - id: B0
+          words: [0, 1, 2]
+          end_mark: dehi
+          he: "יש דרך ישר"
+          he_translit: "yesh derekh yashar"
+          en: "there is a straight way"
+          role_en: "existence_path_claim"
+        - id: B1
+          words: [3, 4]
+          end_mark: etnachta
+          he: "ל/פני איש"
+          he_translit: "li-fnei ish"
+          en: "before a man"
+          role_en: "viewpoint_before_man"
+        - id: B2
+          words: [5]
+          end_mark: revia
+          he: "ו/אחרית/ה"
+          he_translit: "ve-acharita"
+          en: "and its end"
+          role_en: "end_pivot"
+        - id: B3
+          words: [6, 7]
+          end_mark: silluq
+          he: "דרכי מות"
+          he_translit: "darkhei mavet"
+          en: "ways of death"
+          role_en: "end_result_death_ways"
+      tree_ascii: |
+        PHRASE (binary 8w) יֵ֤שׁ דֶּ֣רֶךְ יָ֭שָׁר לִ/פְנֵי אִ֑ישׁ וְ֝/אַחֲ…
+        ├── PHRASE (binary 5w) יֵ֤שׁ דֶּ֣רֶךְ יָ֭שָׁר לִ/פְנֵי אִ֑ישׁ
+        │   ├── [0-2] GLUE יֵ֤שׁ דֶּ֣רֶךְ יָ֭שָׁר (dehi, rank=2)
+        │   └── [3-4] GLUE לִ/פְנֵי אִ֑ישׁ (atnach, rank=1)
+        └── PHRASE (binary 3w) וְ֝/אַחֲרִיתָ֗/הּ דַּרְכֵי מָֽוֶת
+            ├── [5] וְ֝/אַחֲרִיתָ֗/הּ (revia, rank=3)
+            └── [6-7] GLUE דַּרְכֵי מָֽוֶת (silluq, rank=1)
+      maps_to:
+        - "R_path_end_death"
+        - "STEP_Pr_16_25"
+      confidence: tested
+      source: "[HE-STRUCT][HE-WRITTEN] taamim v3 poetry golden // 14:12"
+
+  tree_to_logic_index:
+    - from: "top left etnachta (both verses)"
+      to: "R_path_end_death.when"
+      relation: "path claim before man (setup)"
+    - from: "top right etnachta (both verses)"
+      to: "R_path_end_death.then"
+      relation: "end = ways of death"
+    - from: "B0 יש דרך ישר"
+      to: "P1"
+      relation: "existence + path + straight"
+    - from: "B1 ל/פני איש"
+      to: "P2"
+      relation: "viewpoint: before a man"
+    - from: "B2 ו/אחרית/ה"
+      to: "P3"
+      relation: "end pivot"
+    - from: "B3 דרכי מות"
+      to: "P4"
+      relation: "death-ways result"
+    - from: "identical bracket 14:12 // 16:25"
+      to: "R_path_end_death"
+      relation: "single shared rule (// lock)"
+
+# -----------------------------------------------------------------------------
+phrase_map:
+  - id: P1
+    role: condition
+    he: "יש דרך ישר"
+    he_translit: "yesh derekh yashar"
+    en: "there is a straight way"
+    en_note: "יש / yesh / \"there is\" + דרך / derekh / \"way\" + ישר / yashar / \"straight\". [EN-AID]"
+    verse: "14:12 // 16:25"
+    structure_note: "Glue brick ending dehi; left of etnachta half."
+    tags: ["[HE-WRITTEN]", "[HE-STRUCT]"]
+    confidence: tested
+    feeds: ["R_path_end_death"]
+
+  - id: P2
+    role: condition
+    he: "ל/פני איש"
+    he_translit: "li-fnei ish"
+    en: "before a man"
+    en_note: "Viewpoint: the path is ישר before a person — appearance locus. [EN-AID]"
+    verse: "14:12 // 16:25"
+    structure_note: "Glue brick ending etnachta."
+    tags: ["[HE-WRITTEN]", "[HE-STRUCT]"]
+    confidence: tested
+    feeds: ["R_path_end_death"]
+
+  - id: P3
+    role: consequence
+    he: "ו/אחרית/ה"
+    he_translit: "ve-acharita"
+    en: "and its end"
+    en_note: "אחרית / acharit / \"end/outcome\" + suffix -ה (her/its, referring to the way). [EN-AID]"
+    verse: "14:12 // 16:25"
+    structure_note: "Atomic brick (revia); opens result half."
+    tags: ["[HE-WRITTEN]", "[HE-STRUCT]"]
+    confidence: tested
+    feeds: ["R_path_end_death"]
+
+  - id: P4
+    role: consequence
+    he: "דרכי מות"
+    he_translit: "darkhei mavet"
+    en: "ways of death"
+    en_note: "Plural דרכי / darkhei / \"ways of\" + מות / mavet / \"death\". [EN-AID]"
+    verse: "14:12 // 16:25"
+    structure_note: "Glue brick ending silluq."
+    tags: ["[HE-WRITTEN]", "[HE-STRUCT]"]
+    confidence: tested
+    feeds: ["R_path_end_death"]
+
+# -----------------------------------------------------------------------------
+boot_steps:
+  - id: STEP_Pr_14_12
+    order: 1
+    ref: "Prov.14.12"
+    op: PATH_THEN_END
+    he: "יש דרך ישר ל/פני איש … ו/אחרית/ה דרכי מות"
+    he_translit: "yesh derekh yashar li-fnei ish … ve-acharita darkhei mavet"
+    en: >
+      [EN-AID] Top etnachta: LEFT path-claim before man; RIGHT its end = death-ways.
+    tree_left:
+      he: "יש דרך ישר ל/פני איש"
+      he_translit: "yesh derekh yashar li-fnei ish"
+      en: "there is a straight way before a man"
+    tree_right:
+      he: "ו/אחרית/ה דרכי מות"
+      he_translit: "ve-acharita darkhei mavet"
+      en: "and its end — ways of death"
+    comment: "Primary locus for R_path_end_death."
+    confidence: tested
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+  - id: STEP_Pr_16_25
+    order: 2
+    ref: "Prov.16.25"
+    op: PATH_THEN_END
+    he: "יש דרך ישר ל/פני איש … ו/אחרית/ה דרכי מות"
+    he_translit: "yesh derekh yashar li-fnei ish … ve-acharita darkhei mavet"
+    en: >
+      [EN-AID] Same arms as 14:12 — // parallel, same rule id.
+    tree_left:
+      he: "יש דרך ישר ל/פני איש"
+      he_translit: "yesh derekh yashar li-fnei ish"
+      en: "there is a straight way before a man"
+    tree_right:
+      he: "ו/אחרית/ה דרכי מות"
+      he_translit: "ve-acharita darkhei mavet"
+      en: "and its end — ways of death"
+    comment: "Does not invent a second English rule; cites same R_path_end_death."
+    confidence: tested
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+# -----------------------------------------------------------------------------
+decision_table:
+  columns_note: >
+    WHEN = Hebrew path claim as before a man. THEN = Hebrew end = death-ways.
+    Shared by 14:12 and 16:25. Not temple casuistry. Not binding law.
+  rows:
+    - id: R_path_end_death
+      when:
+        - id: W_yesh_derekh_yashar
+          he: "יש דרך ישר"
+          he_translit: "yesh derekh yashar"
+          en: "there is a straight way"
+          comment: "Existence + path + straight (B0 dehi)."
+          tags: ["[HE-WRITTEN]"]
+          confidence: tested
+          source: "Prov 14:12 // 16:25; taamim v3 B0"
+        - id: W_lifnei_ish
+          he: "ל/פני איש"
+          he_translit: "li-fnei ish"
+          en: "before a man"
+          comment: "Viewpoint brick (B1 etnachta) — path as it appears before a person."
+          tags: ["[HE-WRITTEN]"]
+          confidence: tested
+          source: "Prov 14:12 // 16:25; taamim v3 B1"
+      then:
+        - id: T_acharit
+          he: "ו/אחרית/ה"
+          he_translit: "ve-acharita"
+          en: "and its end"
+          comment: "End-pivot (B2); suffix points back to the way."
+          tags: ["[HE-WRITTEN]"]
+          confidence: tested
+          source: "Prov 14:12 // 16:25; taamim v3 B2"
+        - id: T_darkhei_mavet
+          he: "דרכי מות"
+          he_translit: "darkhei mavet"
+          en: "ways of death"
+          comment: "Result payload (B3 silluq)."
+          tags: ["[HE-WRITTEN]"]
+          confidence: tested
+          source: "Prov 14:12 // 16:25; taamim v3 B3"
+      row_comment: >
+        English summary: A way that is straight before a man — its end is ways of death.
+        Do not reverse: the text does not say the path is already "death" in the left arm;
+        מות / mavet / "death" is in the RIGHT arm only. Tree: etnachta setup ‖ end.
+        Pattern TIR-025. Applies equally to 14:12 and 16:25 (//).
+      confidence: hypothesis
+      source: "[HE-WRITTEN][HE-STRUCT]"
+      applies_to_refs:
+        - "Prov.14.12"
+        - "Prov.16.25"
+
+# -----------------------------------------------------------------------------
+rules:
+  - id: RULE_parallel_same_bracket
+    if:
+      he: "identical plain bracket under same rule_set_version"
+      he_translit: "n/a"
+      en: "Two osis ids share expect_bracket_plain"
+    then:
+      he: "one decision row; two STEP show-work entries"
+      he_translit: "n/a"
+      en: "Do not invent divergent English rules for // copies"
+    comment: "Method rule for 14:12 // 16:25 and future exact parallels."
+    confidence: tested
+    source: "[HE-STRUCT]"
+    tags: ["[INFER]", "[HE-STRUCT]"]
+
+  - id: RULE_path_then_end
+    if:
+      he: "יש דרך ישר ל/פני איש"
+      he_translit: "yesh derekh yashar li-fnei ish"
+      en: "there is a straight way before a man"
+    then:
+      he: "ו/אחרית/ה דרכי מות"
+      he_translit: "ve-acharita darkhei mavet"
+      en: "and its end — ways of death"
+    comment: "Sparse IF–THEN mirroring R_path_end_death; TIR-025."
+    confidence: hypothesis
+    source: "[HE-WRITTEN][HE-STRUCT]"
+    tags: ["[HE-WRITTEN]"]
+
+# -----------------------------------------------------------------------------
+state_machine:
+  comment_en: "Coarse path evaluation states (wisdom, not psychology model)."
+  states:
+    - id: S_open
+      he: "פתיחה"
+      he_translit: "petichah"
+      en: "before path evaluation"
+      comment: "Structural."
+      tags: ["[INFER]"]
+      confidence: hypothesis
+      source: ""
+    - id: S_path_before_man
+      he: "דרך ישר ל/פני איש"
+      he_translit: "derekh yashar li-fnei ish"
+      en: "path registered as straight before a man"
+      comment: "Left arm engaged."
+      tags: ["[HE-WRITTEN]"]
+      confidence: hypothesis
+      source: "Prov 14:12 left"
+    - id: S_end_death_ways
+      he: "אחרית … דרכי מות"
+      he_translit: "acharit … darkhei mavet"
+      en: "end evaluated as ways of death"
+      comment: "Right arm engaged."
+      tags: ["[HE-WRITTEN]"]
+      confidence: hypothesis
+      source: "Prov 14:12 right"
+  events:
+    - id: E_register_path
+      he: "יש דרך ישר"
+      he_translit: "yesh derekh yashar"
+      en: "register the path claim"
+      comment: "From P1."
+      tags: ["[HE-WRITTEN]"]
+      confidence: hypothesis
+      source: "Prov 14:12"
+    - id: E_read_end
+      he: "אחרית/ה"
+      he_translit: "acharita"
+      en: "read its end"
+      comment: "From P3."
+      tags: ["[HE-WRITTEN]"]
+      confidence: hypothesis
+      source: "Prov 14:12"
+  transitions:
+    - id: TR1
+      from: S_open
+      event: E_register_path
+      guard: []
+      to: S_path_before_man
+      effects: []
+      comment: "Left arm."
+      tags: ["[HE-WRITTEN]"]
+      confidence: hypothesis
+      source: "R_path_end_death"
+    - id: TR2
+      from: S_path_before_man
+      event: E_read_end
+      guard: []
+      to: S_end_death_ways
+      effects: []
+      comment: "Right arm — written end is death-ways."
+      tags: ["[HE-WRITTEN]"]
+      confidence: hypothesis
+      source: "R_path_end_death"
+
+# -----------------------------------------------------------------------------
+tree_coverage:
+  meta:
+    total_words: 16
+    accounted: 16
+    accounted_pct: 100
+    note_en: >
+      8 words × 2 verse copies. Roles identical; 16:25 mirrors 14:12.
+      TIR-025 on path→end; TIR-022 on prep morph; TIR-001 on top split.
+  verses:
+    - ref: "Prov.14.12"
+      osis_id: "Prov.14.12"
+      words:
+        - index: 0
+          he: "יש"
+          he_translit: "yesh"
+          en: "there is"
+          role: existence_claim
+          kind: logic_bearing
+          interp_rule: "TIR-025"
+          feeds: ["P1", "R_path_end_death"]
+          confidence: tested
+        - index: 1
+          he: "דרך"
+          he_translit: "derekh"
+          en: "way / path"
+          role: path_noun
+          kind: logic_bearing
+          interp_rule: "TIR-025"
+          feeds: ["P1"]
+          confidence: tested
+        - index: 2
+          he: "ישר"
+          he_translit: "yashar"
+          en: "straight / upright"
+          role: path_quality_before_man
+          kind: logic_bearing
+          interp_rule: "TIR-025"
+          feeds: ["P1"]
+          confidence: tested
+          comment: "Quality on the path claim; not the death verdict (that is RIGHT arm)."
+        - index: 3
+          he: "ל/פני"
+          he_translit: "li-fnei"
+          en: "before / in front of"
+          role: viewpoint_prep
+          kind: glue
+          interp_rule: "TIR-022"
+          feeds: ["P2"]
+          confidence: tested
+        - index: 4
+          he: "איש"
+          he_translit: "ish"
+          en: "a man / person"
+          role: viewpoint_person
+          kind: logic_bearing
+          interp_rule: "TIR-025"
+          feeds: ["P2"]
+          confidence: tested
+        - index: 5
+          he: "ו/אחרית/ה"
+          he_translit: "ve-acharita"
+          en: "and its end"
+          role: end_pivot
+          kind: logic_bearing
+          interp_rule: "TIR-025"
+          feeds: ["P3", "R_path_end_death"]
+          confidence: tested
+        - index: 6
+          he: "דרכי"
+          he_translit: "darkhei"
+          en: "ways of"
+          role: result_ways_construct
+          kind: logic_bearing
+          interp_rule: "TIR-025"
+          feeds: ["P4"]
+          confidence: tested
+        - index: 7
+          he: "מות"
+          he_translit: "mavet"
+          en: "death"
+          role: result_death
+          kind: logic_bearing
+          interp_rule: "TIR-025"
+          feeds: ["P4", "R_path_end_death"]
+          confidence: tested
+
+    - ref: "Prov.16.25"
+      osis_id: "Prov.16.25"
+      note_en: "Mirror of 14:12 roles (//). Same Hebrew words and TIR ids."
+      words:
+        - index: 0
+          he: "יש"
+          he_translit: "yesh"
+          en: "there is"
+          role: existence_claim
+          kind: logic_bearing
+          interp_rule: "TIR-025"
+          feeds: ["R_path_end_death"]
+          confidence: tested
+        - index: 1
+          he: "דרך"
+          he_translit: "derekh"
+          en: "way / path"
+          role: path_noun
+          kind: logic_bearing
+          interp_rule: "TIR-025"
+          feeds: ["R_path_end_death"]
+          confidence: tested
+        - index: 2
+          he: "ישר"
+          he_translit: "yashar"
+          en: "straight / upright"
+          role: path_quality_before_man
+          kind: logic_bearing
+          interp_rule: "TIR-025"
+          feeds: ["R_path_end_death"]
+          confidence: tested
+        - index: 3
+          he: "ל/פני"
+          he_translit: "li-fnei"
+          en: "before / in front of"
+          role: viewpoint_prep
+          kind: glue
+          interp_rule: "TIR-022"
+          feeds: ["R_path_end_death"]
+          confidence: tested
+        - index: 4
+          he: "איש"
+          he_translit: "ish"
+          en: "a man / person"
+          role: viewpoint_person
+          kind: logic_bearing
+          interp_rule: "TIR-025"
+          feeds: ["R_path_end_death"]
+          confidence: tested
+        - index: 5
+          he: "ו/אחרית/ה"
+          he_translit: "ve-acharita"
+          en: "and its end"
+          role: end_pivot
+          kind: logic_bearing
+          interp_rule: "TIR-025"
+          feeds: ["R_path_end_death"]
+          confidence: tested
+        - index: 6
+          he: "דרכי"
+          he_translit: "darkhei"
+          en: "ways of"
+          role: result_ways_construct
+          kind: logic_bearing
+          interp_rule: "TIR-025"
+          feeds: ["R_path_end_death"]
+          confidence: tested
+        - index: 7
+          he: "מות"
+          he_translit: "mavet"
+          en: "death"
+          role: result_death
+          kind: logic_bearing
+          interp_rule: "TIR-025"
+          feeds: ["R_path_end_death"]
+          confidence: tested
+
+# -----------------------------------------------------------------------------
+oral_attachments: []
+
+# -----------------------------------------------------------------------------
+scenarios:
+  - id: SC1_path_then_end
+    description_en: >
+      A path is evaluated as straight before a person; the proverb states its end.
+    inputs_en: >
+      Matches יש דרך ישר ל/פני איש / yesh derekh yashar li-fnei ish /
+      "there is a straight way before a man".
+    expected:
+      - field: "end"
+        value_en: "its end is ways of death"
+        value_he: "ו/אחרית/ה דרכי מות"
+        value_he_translit: "ve-acharita darkhei mavet"
+        justified_by: "R_path_end_death"
+    comment: "Applies at both 14:12 and 16:25."
+    confidence: hypothesis
+
+  - id: SC2_do_not_place_death_in_left_arm
+    description_en: >
+      Check that death is not smuggled into the left arm by English "wrong path."
+    inputs_en: >
+      Left arm only: יש דרך ישר ל/פני איש (no מות / mavet / "death" token).
+    expected:
+      - field: "left_arm_tokens"
+        value_en: "no death word in left half"
+        value_he: "יש דרך ישר ל/פני איש"
+        value_he_translit: "yesh derekh yashar li-fnei ish"
+        justified_by: "STEP_Pr_14_12"
+      - field: "death_location"
+        value_en: "death only in right arm"
+        value_he: "דרכי מות"
+        value_he_translit: "darkhei mavet"
+        justified_by: "R_path_end_death"
+    comment: "English-leakage guard: keep מות in THEN, not WHEN."
+    confidence: tested
+
+  - id: SC3_parallel_same_rule
+    description_en: "Reader opens 16:25 after 14:12."
+    inputs_en: "Same Hebrew as 14:12 under osis Prov.16.25."
+    expected:
+      - field: "rule"
+        value_en: "same decision row, no second English rule"
+        value_he: "יש דרך ישר … דרכי מות"
+        value_he_translit: "yesh derekh yashar … darkhei mavet"
+        justified_by: "R_path_end_death"
+    comment: "RULE_parallel_same_bracket."
+    confidence: tested
+
+# -----------------------------------------------------------------------------
+contrast_with_prov_03:
+  note_en: >
+    Unit prov_03_trust_know: 3:5 dual imperative (TIR-023); 3:6 command → He straightens (TIR-024).
+    This unit: path claim before man → end death (TIR-025). Do not force TIR-023 here —
+    neither arm is an imperative command.
+  table:
+    - unit: prov_03_trust_know
+      pattern: "DO ‖ DO-NOT; then know → He straightens"
+      tir: "TIR-023, TIR-024"
+    - unit: prov_14_way_death
+      pattern: "path-setup ‖ end-result"
+      tir: "TIR-025 (+ TIR-001 top split)"
+
+english_leakage_checklist:
+  no_english_only_conditions: true
+  all_numbers_cite_hebrew: true
+  comments_teach_hebrew: true
+  confidence_labels_present: true
+  he_en_conflicts_noted: true
+  reviewer_comment: >
+    "Seems right" is [EN-AID] only; conditions cite יש דרך ישר ל/פני איש.
+    Death stays in THEN. // parallel shares one rule. Draft not frozen.
