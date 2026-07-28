@@ -242,13 +242,16 @@ def load_oshb_words(book_xml: Path, chapter: int, verse: int):
         raise SystemExit(f"verse {chapter}:{verse} not found")
     body = m.group(1)
     words = []
-    token_re = re.compile(r'<w [^>]*?lemma="([^"]*)"[^>]*?morph="([^"]*)"[^>]*>([^<]*)</w>|<seg type="x-maqqef">', re.S)
+    token_re = re.compile(r'<w [^>]*?lemma="([^"]*)"[^>]*?morph="([^"]*)"[^>]*>(.*?)</w>|<seg type="x-maqqef">', re.S)
     for tok in token_re.finditer(body):
         if tok.group(0).startswith("<seg"):
             if words:
                 words[-1]["maqqef_after"] = True
             continue
         lemma, morph, text = tok.group(1), tok.group(2), tok.group(3)
+        # strip nested markup (e.g. <seg type="x-large"> around the big letters of
+        # the Shema, Lev 11:42's vav, Num 27:5's nun) but keep its letter content
+        text = re.sub(r"<[^>]+>", "", text)
         words.append({"lemma": lemma, "morph": morph, "text": text.strip(), "maqqef_after": False})
     return words
 

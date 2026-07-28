@@ -102,6 +102,13 @@ Schema rules: every text column keeps the **he + translit + en** triple (the
 1. **`build_db.py`** — whole-Torah pass: verses, words, segments, trees (v3), leaves,
    roles. Makes this week's questions one-liners ("every leaf with את + divine name",
    "verses lacking va-yehi khen").
+   **✅ DONE 2026-07-28** — `build_db.py` (repo root) → `torah_grok.sqlite` (58 MB,
+   gitignored, ~7 min rebuild): **5,853 verses — all parse `unique` under v3** ·
+   80,052 words · 124,199 morpheme segments · 43,823 leaves · roles (r0-inline) ·
+   FTS5 over he_plain/translit/gloss · 0 word-count mismatches (the only 3 were the
+   large-letter verses — Lev 11:42, Num 27:5, Deut 6:4 — nested markup, fixed in
+   `load_oshb_words`). Known gap by design: glosses are `?` outside the Gen-1-seeded
+   lexicon; form-frames (CMD!/THEN/EVENT…) work Torah-wide regardless.
 2. **Index the ~190 units** into `units/steps/coverage`, with `SCHEMA.yaml`
    validation that *flags* malformed units (never edits them).
 3. **`oral_refs` + `oral_texts` FTS** over all 312 corpus files; backfill this week's
@@ -119,6 +126,36 @@ Schema rules: every text column keeps the **he + translit + en** triple (the
 - Commit cadence: one commit per landed work session (owner says "commit this");
   dated-filename renames appear as clean renames in history.
 - The SQLite index is never committed (gitignored) — rebuild is the restore path.
+
+## 8. Roadmap to executable logic (added 2026-07-28)
+
+Framing: code never *derives* logic (Pre-Code rule). The end state is code that
+**executes** logic a human derived and froze.
+
+```text
+✅ Layer 0 — sources:      corpora in Data/ · git + private GitHub
+✅ Layer 1 — structure:    v3 ta'amim rules · all 5,853 verses parse unique
+✅ Layer 2 — morphology:   OSHB joined, morpheme-level, whole Torah
+🟡 Layer 3 — role hints:   whole Torah, shallow (r0 heuristics; '?' outside Gen-1 lexicon)
+🟡 Layer 4 — derivation:   34 verses hypothesis-tier (week experiment doc)
+                           + ~190 tree_derived_v1 DRAFT units (pre-roles)
+❌ Layer 5 — frozen logic: no unit upgraded with the new logic yet
+❌ Layer 6 — interpreter:  no code executes any of it yet
+```
+
+| Stage | What | Who | Exit test |
+|-------|------|-----|-----------|
+| **A — harden mechanical layers** | lexicon + role rules → versioned files (`logic/lexicon/v1*`, `logic/role_rules/v1*`) with goldens; grow lexicon whole-Torah (EN-AID, #IMPOSED-labeled source); DB steps 2–3 (index units; oral_refs + oral_texts FTS with citable loci) | agent | no `?` glosses; units + Oral queryable |
+| **B — freeze the interpretation rulebook** | week's form→operator mappings proposed as numbered TIR rules (jussive→LET, imperative→CMD!, weqatal→THEN, ל+inf→PURPOSE, participle→INVARIANT, niphal/pual→agentless, את→Theme); tested across all five books; owner signs off | joint | frozen paper rulebook: tree+morph pattern → logic operator |
+| **C — derive units to frozen** | per unit: full `binary_trees` + 100% coverage + derivation log A–J *including logic lines* + scenarios + named Oral + confidence → `status: frozen`. Pilot: day 1 (Gen 1:2–5); then the week; then Leviticus (casuistic payoff) | owner+agent (the long middle — this IS the project) | per unit: frozen, with scenarios |
+| **D — the interpreter** | the dry-run machine as a program: loads FROZEN units only, executes logic lines against registers (TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER), runs scenarios as assertions. Same contract as parser: never invents; red scenario ⇒ fix document or version the rulebook | agent | hand-trace of Gen 1:1–10 reproduces mechanically |
+| **E — scale + surface** | CI over all frozen units; cross-unit state chaining (Gen boot → Exod installs → Lev resolutions — the write-sites work, executable); D3 verse card: tree→morph→roles→logic→Oral | ongoing | the loop closes: hand-derived documents, machine-verified consequences |
+
+Stage C never fully "finishes" — that is the scholarship, and the Pre-Code rule
+predicts it: machines do structure + verification at scale; deciding what the Hebrew
+*means* stays in reviewable documents.
+
+---
 
 **Related:** `EXPERIMENT_precode_logic_gen_1_1_to_2_3_2026-07-28.md` (the workload that
 motivated this) · `render_flat_ledger_morph_html.py` (current generator) ·
