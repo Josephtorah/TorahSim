@@ -1,0 +1,308 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Torah Grok — scroll mockup</title>
+<style>
+:root { --bg:#ffffff; --fg:#1f2937; --mut:#6b7280; --line:#d7d3c8; --acc:#8a6d1a;
+        --chip:#f5f2ea; --hd:#f0ecdf; --code:#f7f5ee; --blue:#4a6da7; --frozen:#0a7a2f; }
+* { box-sizing:border-box; }
+html { font-size:18px; }   /* master text scale — all rem sizes key off this */
+body { margin:0; background:var(--bg); color:var(--fg);
+       font:1rem/1.55 "Charter","Georgia",serif;
+       min-width:1024px;              /* layout floor: fits iPad landscape fully;   */
+       -webkit-text-size-adjust:100%; /* iPhone pans sideways instead of reflowing */ }
+main { max-width:1680px; margin:0 auto; padding:1rem 2rem 8rem; }
+
+/* ---------- sticky app bar ---------- */
+header { position:sticky; top:0; z-index:50; }
+.bar { max-width:1680px; margin:0 auto; padding:.6rem 2rem; display:flex; gap:.6rem;
+       align-items:center; flex-wrap:wrap; background:#332a18;
+       border-bottom:3px solid var(--acc); border-radius:0 0 10px 10px;
+       box-shadow:0 2px 10px rgba(0,0,0,.25); }
+.brand { font-weight:bold; letter-spacing:.02em; margin-right:.4rem; color:#f3e9c8; }
+.brand small { color:#b8ab8a; font-weight:normal; }
+select, input, button { font:inherit; font-size:.85rem; padding:.28rem .5rem;
+       border:1px solid #5a4d31; border-radius:6px; background:#fffdf6; color:var(--fg); }
+button { cursor:pointer; background:var(--acc); color:#fff; border-color:var(--acc); }
+button:hover { background:#a5841f; }
+input.search { width:180px; color:var(--mut); }
+.loc { margin-left:auto; font-size:.85rem; color:#b8ab8a; }
+.loc b { color:#f3e9c8; }
+
+/* ---------- chapter + verse cards ---------- */
+.chapter-head { margin:2rem 0 .6rem; padding:.5rem .9rem; background:var(--hd);
+       border:1px solid var(--line); border-radius:8px; display:flex; gap:.8rem;
+       align-items:baseline; }
+.chapter-head h2 { margin:0; font-size:1.15rem; }
+.chapter-head span { color:var(--mut); font-size:.82rem; }
+.verse { border:1px solid var(--line); border-radius:10px; margin:1rem 0; padding:.9rem 1.2rem;
+       scroll-margin-top:5.2rem; }
+.vhead { display:flex; gap:.6rem; align-items:center; flex-wrap:wrap; margin-bottom:.4rem; }
+.vref { font-weight:bold; color:var(--acc); }
+.badge { font:.68rem/1.5 monospace; padding:0 .45rem; border-radius:10px; }
+.badge.frozen { background:#e8f5ec; color:var(--frozen); border:1px solid #bfe3ca; }
+.badge.auto { background:#eef1f7; color:var(--blue); border:1px solid #ccd6ea; }
+.vhead .fen { color:var(--mut); font-style:italic; font-size:.88rem; }
+.flat .row { margin:.22rem 0; }
+.flat .lab { display:inline-block; width:8.5rem; color:var(--mut); font:.72rem/1 monospace; }
+.he-row { direction:rtl; text-align:left; font-size:1.3rem; }
+.he-row .lab { direction:ltr; float:left; margin-top:.5rem; }
+.brick { display:inline-block; background:var(--chip); border:1px solid var(--line);
+       border-radius:6px; padding:.03rem .45rem; margin:.08rem .12rem; }
+
+/* ---------- always-open sections ---------- */
+.sect { border-top:1px dashed var(--line); margin-top:.7rem; padding-top:.45rem; }
+.sect h3 { margin:.1rem 0 .2rem; font:.72rem/1.7 monospace; letter-spacing:.07em;
+       text-transform:uppercase; color:var(--mut); font-weight:normal; }
+.sect h3 .count { color:#b0a88f; }
+.sect .desc { font-size:.78rem; color:var(--mut); font-style:italic; margin:0 0 .25rem; }
+table { border-collapse:collapse; width:100%; font-size:.82rem; margin:.45rem 0 .3rem; }
+th { background:var(--hd); text-align:left; font-size:.68rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid var(--line); padding:.28rem .55rem; vertical-align:top; }
+td.he { font-size:1.05rem; direction:rtl; text-align:right; }
+td.code, .mono { font-family:monospace; font-size:.76rem; }
+.more { color:var(--mut); font-size:.78rem; font-style:italic; padding:.2rem .1rem; }
+pre.codepre { background:var(--code); border:1px solid var(--line);
+       border-left:3px solid var(--blue); border-radius:0 8px 8px 0; padding:.6rem .9rem;
+       font:.78rem/1.55 Menlo,Consolas,monospace; white-space:pre-wrap; margin:.45rem 0 .2rem; }
+pre.codepre .cmt { color:#6b7280; }
+
+/* ---------- infinite-scroll sentinel ---------- */
+.sentinel { margin:2.2rem 0; padding:1.1rem; text-align:center; color:var(--mut);
+       border:2px dashed var(--line); border-radius:10px; font-size:.9rem; }
+.sk { height:.8rem; border-radius:5px; margin:.45rem auto; max-width:70%;
+      background:linear-gradient(90deg,#f0ecdf 25%,#faf8f1 50%,#f0ecdf 75%);
+      background-size:200% 100%; animation:sh 1.4s infinite; }
+@keyframes sh { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+
+/* ---------- footer ---------- */
+footer { border-top:2px solid var(--acc); margin-top:3rem; padding-top:1rem;
+       font-size:.82rem; color:var(--mut); }
+footer h3 { font-size:.8rem; text-transform:uppercase; letter-spacing:.07em; color:var(--fg); }
+.mockup-note { background:#fff8e1; border:1px solid #e6d9a8; border-radius:8px;
+       padding:.6rem .9rem; font-size:.85rem; margin:1rem 0; }
+</style></head><body>
+
+<header><div class="bar">
+  <span class="brand">Torah&nbsp;Grok <small>· the Torah as a scroll</small></span>
+  <select id="book" onchange="jump()">
+    <option>Genesis</option><option disabled>Exodus (soon)</option>
+    <option disabled>Leviticus (soon)</option><option disabled>Numbers (soon)</option>
+    <option disabled>Deuteronomy (soon)</option>
+  </select>
+  <select id="chap" onchange="jump()" title="chapter"></select>
+  <select id="vrs" onchange="jump()" title="verse"></select>
+  <button onclick="jump()">Go</button>
+  <input class="search" disabled value="🔍 Search — phase 2" title="Client index or serverless FTS — phase 2">
+  <span class="loc">reading <b id="loc">Genesis 1:1</b></span>
+</div></header>
+
+<main>
+<div class="mockup-note"><b>MOCKUP v2 (2026-07-29)</b> — wide layout, every section displayed in full,
+no collapsing, no inner scroll regions. Verse rows are <b>real data</b> from
+<span class="mono">torah_grok.sqlite</span> (Gen 1:1–5); morph tables complete for 1:1 and 1:3,
+truncated elsewhere to keep the mockup light. Production renders every verse of the Torah.</div>
+
+<div class="chapter-head"><h2>Genesis 1</h2>
+  <span>בְּרֵאשִׁית · be-reshit · prose · ta'amim v3 · 31 verses</span></div>
+
+<!-- ==================== Gen 1:1 ==================== -->
+<section class="verse" id="v1_1" data-ref="Genesis 1:1">
+  <div class="vhead"><span class="vref">Gen 1:1</span>
+    <span class="badge frozen" title="Covered by frozen unit gen_01_creation_boot · STEP_Gn_1_1">❄ frozen: gen_01_creation_boot</span>
+    <span class="fen">“In the beginning God created the heavens and the earth.”</span></div>
+  <div class="flat">
+    <div class="row he-row"><span class="lab">Hebrew</span> <span class="brick">(⁨בְּרֵאשִׁ֖ית⁩)</span> <span class="brick">(⁨בָּרָ֣א אֱלֹהִ֑ים⁩)</span> <span class="brick">(⁨אֵ֥ת הַשָּׁמַ֖יִם⁩)</span> <span class="brick">(⁨וְאֵ֥ת הָאָֽרֶץ⁩)</span></div>
+    <div class="row"><span class="lab">Transliteration</span> <span class="brick">(be-reshit)</span> <span class="brick">(bara Elohim)</span> <span class="brick">(et ha-shamayim)</span> <span class="brick">(ve-et ha-aretz)</span></div>
+    <div class="row"><span class="lab">English</span> <span class="brick">(in-beginning)</span> <span class="brick">(create God)</span> <span class="brick">(obj-marker·et the-heavens)</span> <span class="brick">(and-obj-marker·et the-earth)</span></div>
+  </div>
+  <div class="sect"><h3>Leaf ledger <span class="count">· 4 bricks</span></h3>
+    <p class="desc">The result of splitting the verse into leaves based on the cantillation marks: one row per leaf-brick — the words the ta'amim glued together, the pause mark that sealed them, their address in the verse's tree, and an automatic hint at their role.</p>
+    <table><tr><th>B#</th><th>Hebrew</th><th>Transliteration</th><th>English</th><th>end mark · rank</th><th>role (auto)</th></tr>
+      <tr><td><b>B0</b></td><td class="he">בְּרֵאשִׁ֖ית</td><td>be-reshit</td><td>in-beginning</td><td>tifcha · r2</td><td>PREP(in·beginning)</td></tr>
+      <tr><td><b>B1</b></td><td class="he">בָּרָ֣א אֱלֹהִ֑ים</td><td>bara Elohim</td><td>create God</td><td>etnachta · r1</td><td>CREATE</td></tr>
+      <tr><td><b>B2</b></td><td class="he">אֵ֥ת הַשָּׁמַ֖יִם</td><td>et ha-shamayim</td><td>obj-marker·et the-heavens</td><td>tifcha · r2</td><td>OBJ_FRAME(heavens)</td></tr>
+      <tr><td><b>B3</b></td><td class="he">וְאֵ֥ת הָאָֽרֶץ</td><td>ve-et ha-aretz</td><td>and-obj-marker·et the-earth</td><td>silluq · r1</td><td>OBJ_FRAME(earth)</td></tr></table></div>
+  <div class="sect"><h3>Morph <span class="count">· 11 morpheme rows</span></h3>
+    <table><tr><th>w</th><th>Hebrew</th><th>Transliteration</th><th>English</th><th>code</th><th>grammar (English aid)</th></tr>
+      <tr><td class="code">0a</td><td class="he">בְּ</td><td>be</td><td>in</td><td class="code">R</td><td>preposition — prefix letter, not a standalone word</td></tr>
+      <tr><td class="code">0b</td><td class="he">רֵאשִׁ֖ית</td><td>reshit</td><td>beginning</td><td class="code">Ncfsa</td><td>noun · common · fem · singular · absolute — “beginning” (H7225)</td></tr>
+      <tr><td class="code">1</td><td class="he">בָּרָ֣א</td><td>bara</td><td>create</td><td class="code">Vqp3ms</td><td>verb · qal · perfect · 3rd masc singular — “create” (H1254)</td></tr>
+      <tr><td class="code">2</td><td class="he">אֱלֹהִ֑ים</td><td>Elohim</td><td>God</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “God” (H430)</td></tr>
+      <tr><td class="code">3</td><td class="he">אֵ֥ת</td><td>et</td><td>obj-marker·et</td><td class="code">To</td><td>particle: object marker (H853)</td></tr>
+      <tr><td class="code">4a</td><td class="he">הַ</td><td>ha</td><td>the</td><td class="code">Td</td><td>particle: definite article — prefix letter</td></tr>
+      <tr><td class="code">4b</td><td class="he">שָּׁמַ֖יִם</td><td>shamayim</td><td>heavens</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “heavens” (H8064)</td></tr>
+      <tr><td class="code">5a</td><td class="he">וְ</td><td>ve</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter</td></tr>
+      <tr><td class="code">5b</td><td class="he">אֵ֥ת</td><td>et</td><td>obj-marker·et</td><td class="code">To</td><td>particle: object marker (H853)</td></tr>
+      <tr><td class="code">6a</td><td class="he">הָ</td><td>ha</td><td>the</td><td class="code">Td</td><td>particle: definite article — prefix letter</td></tr>
+      <tr><td class="code">6b</td><td class="he">אָֽרֶץ</td><td>aretz</td><td>earth</td><td class="code">Ncbsa</td><td>noun · common · both · singular · absolute — “earth” (H776)</td></tr></table></div>
+  <div class="sect"><h3>Code <span class="count">· machine-operator sketch (auto)</span></h3>
+    <pre class="codepre"><span class="cmt"># frozen coverage: gen_01_creation_boot · STEP_Gn_1_1 (EVENT_CREATE)</span>
+pass                                 <span class="cmt"># B0 be-reshit — in-beginning  (context: PREP(in·beginning))</span>
+EVENT("create")                      <span class="cmt"># B1 bara Elohim — create God [Vqp3ms qal perfect]</span>
+THEME("heavens")                     <span class="cmt"># B2 et ha-shamayim — the-heavens  [TIR-014]</span>
+THEME("earth")                       <span class="cmt"># B3 ve-et ha-aretz — the-earth  [TIR-014]</span></pre></div>
+</section>
+
+<!-- ==================== Gen 1:2 ==================== -->
+<section class="verse" id="v1_2" data-ref="Genesis 1:2">
+  <div class="vhead"><span class="vref">Gen 1:2</span>
+    <span class="badge frozen">❄ frozen: gen_01_creation_boot</span>
+    <span class="fen">“The earth was formless and void… the spirit of God hovering over the waters.”</span></div>
+  <div class="flat">
+    <div class="row he-row"><span class="lab">Hebrew</span> <span class="brick">(⁨וְהָאָ֗רֶץ⁩)</span> <span class="brick">(⁨הָיְתָ֥ה תֹ֨הוּ֙⁩)</span> <span class="brick">(⁨וָבֹ֔הוּ⁩)</span> <span class="brick">(⁨וְחֹ֖שֶׁךְ⁩)</span> <span class="brick">(⁨עַל־פְּנֵ֣י תְה֑וֹם⁩)</span> <span class="brick">(⁨וְר֣וּחַ אֱלֹהִ֔ים⁩)</span> <span class="brick">(⁨מְרַחֶ֖פֶת⁩)</span> <span class="brick">(⁨עַל־פְּנֵ֥י הַמָּֽיִם⁩)</span></div>
+    <div class="row"><span class="lab">Transliteration</span> <span class="brick">(ve-ha-aretz)</span> <span class="brick">(hayta tohu)</span> <span class="brick">(va-vohu)</span> <span class="brick">(ve-choshekh)</span> <span class="brick">(al-penei tehom)</span> <span class="brick">(ve-ruach Elohim)</span> <span class="brick">(merachefet)</span> <span class="brick">(al-penei ha-mayim)</span></div>
+    <div class="row"><span class="lab">English</span> <span class="brick">(and-the-earth)</span> <span class="brick">(be formless)</span> <span class="brick">(and-void)</span> <span class="brick">(and-darkness)</span> <span class="brick">(over face deep)</span> <span class="brick">(and-spirit God)</span> <span class="brick">(hovering)</span> <span class="brick">(over face the-waters)</span></div>
+  </div>
+  <div class="sect"><h3>Leaf ledger <span class="count">· 8 bricks</span></h3>
+    <p class="desc">The result of splitting the verse into leaves based on the cantillation marks: one row per leaf-brick — the words the ta'amim glued together, the pause mark that sealed them, their address in the verse's tree, and an automatic hint at their role.</p>
+    <table><tr><th>B#</th><th>Hebrew</th><th>Transliteration</th><th>English</th><th>end mark · rank</th><th>role (auto)</th></tr>
+      <tr><td><b>B0</b></td><td class="he">וְהָאָ֗רֶץ</td><td>ve-ha-aretz</td><td>and-the-earth</td><td>revia · r3</td><td>DOMAIN(earth)</td></tr>
+      <tr><td><b>B1</b></td><td class="he">הָיְתָ֥ה תֹ֨הוּ֙</td><td>hayta tohu</td><td>be formless</td><td>pashta · r3</td><td>BECOME/WAS</td></tr>
+      <tr><td><b>B2</b></td><td class="he">וָבֹ֔הוּ</td><td>va-vohu</td><td>and-void</td><td>zaqef_qatan · r2</td><td>NP(void)</td></tr>
+      <tr><td><b>B3</b></td><td class="he">וְחֹ֖שֶׁךְ</td><td>ve-choshekh</td><td>and-darkness</td><td>tifcha · r2</td><td>DOMAIN(darkness)</td></tr>
+      <tr><td><b>B4</b></td><td class="he">עַל־פְּנֵ֣י תְה֑וֹם</td><td>al-penei tehom</td><td>over face deep</td><td>etnachta · r1</td><td>PREP(over·face·deep)</td></tr>
+      <tr><td><b>B5</b></td><td class="he">וְר֣וּחַ אֱלֹהִ֔ים</td><td>ve-ruach Elohim</td><td>and-spirit God</td><td>zaqef_qatan · r2</td><td>NP(spirit·God)</td></tr>
+      <tr><td><b>B6</b></td><td class="he">מְרַחֶ֖פֶת</td><td>merachefet</td><td>hovering</td><td>tifcha · r2</td><td>ONGOING(hovering)</td></tr>
+      <tr><td><b>B7</b></td><td class="he">עַל־פְּנֵ֥י הַמָּֽיִם</td><td>al-penei ha-mayim</td><td>over face the-waters</td><td>silluq · r1</td><td>PREP(over·face·waters)</td></tr></table></div>
+  <div class="sect"><h3>Morph <span class="count">· 19 morpheme rows</span></h3>
+    <table><tr><th>w</th><th>Hebrew</th><th>Transliteration</th><th>English</th><th>code</th><th>grammar (English aid)</th></tr>
+      <tr><td class="code">10</td><td class="he">מְרַחֶ֖פֶת</td><td>merachefet</td><td>hovering</td><td class="code">Vprfsa</td><td>verb · piel · participle · fem singular — “hovering” (H7363)</td></tr></table>
+    <div class="more">… 18 more rows in the production app (mockup truncated)</div></div>
+  <div class="sect"><h3>Code <span class="count">· machine-operator sketch (auto)</span></h3>
+    <pre class="codepre"><span class="cmt"># frozen coverage: gen_01_creation_boot · STEP_Gn_1_2 (STATE_BLOCK)</span>
+EVENT("become")                      <span class="cmt"># B1 hayta tohu — was formless [Vqp3fs qal perfect]</span>
+WORLD.invariant("hovering")          <span class="cmt"># B6 merachefet — hovering [Vprfsa piel participle]  [TIR-031]</span>
+<span class="cmt"># context bricks: B0 DOMAIN(earth) · B2 NP(void) · B3 DOMAIN(darkness) · B4/B7 PREP · B5 NP</span></pre></div>
+</section>
+
+<!-- ==================== Gen 1:3 ==================== -->
+<section class="verse" id="v1_3" data-ref="Genesis 1:3">
+  <div class="vhead"><span class="vref">Gen 1:3</span>
+    <span class="badge frozen">❄ frozen: gen_01_creation_boot</span>
+    <span class="fen">“And God said, Let there be light — and there was light.”</span></div>
+  <div class="flat">
+    <div class="row he-row"><span class="lab">Hebrew</span> <span class="brick">(⁨וַיֹּ֥אמֶר אֱלֹהִ֖ים⁩)</span> <span class="brick">(⁨יְהִ֣י א֑וֹר⁩)</span> <span class="brick">(⁨וַֽיְהִי־אֽוֹר⁩)</span></div>
+    <div class="row"><span class="lab">Transliteration</span> <span class="brick">(va-yomer Elohim)</span> <span class="brick">(yehi or)</span> <span class="brick">(va-yehi or)</span></div>
+    <div class="row"><span class="lab">English</span> <span class="brick">(and-say God)</span> <span class="brick">(be light)</span> <span class="brick">(and-be light)</span></div>
+  </div>
+  <div class="sect"><h3>Leaf ledger <span class="count">· 3 bricks</span></h3>
+    <p class="desc">The result of splitting the verse into leaves based on the cantillation marks: one row per leaf-brick — the words the ta'amim glued together, the pause mark that sealed them, their address in the verse's tree, and an automatic hint at their role.</p>
+    <table><tr><th>B#</th><th>Hebrew</th><th>Transliteration</th><th>English</th><th>end mark · rank</th><th>role (auto)</th></tr>
+      <tr><td><b>B0</b></td><td class="he">וַיֹּ֥אמֶר אֱלֹהִ֖ים</td><td>va-yomer Elohim</td><td>and-say God</td><td>tifcha · r2</td><td>SPEAK(agent=Elohim)</td></tr>
+      <tr><td><b>B1</b></td><td class="he">יְהִ֣י א֑וֹר</td><td>yehi or</td><td>be light</td><td>etnachta · r1</td><td>CMD(be)</td></tr>
+      <tr><td><b>B2</b></td><td class="he">וַֽיְהִי־אֽוֹר</td><td>va-yehi or</td><td>and-be light</td><td>silluq · r1</td><td>BECOME/WAS</td></tr></table></div>
+  <div class="sect"><h3>Morph <span class="count">· 8 morpheme rows</span></h3>
+    <table><tr><th>w</th><th>Hebrew</th><th>Transliteration</th><th>English</th><th>code</th><th>grammar (English aid)</th></tr>
+      <tr><td class="code">0a</td><td class="he">וַ</td><td>va</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter</td></tr>
+      <tr><td class="code">0b</td><td class="he">יֹּ֥אמֶר</td><td>yomer</td><td>say</td><td class="code">Vqw3ms</td><td>verb · qal · wayyiqtol (narrative past) · 3rd masc singular — “say” (H559)</td></tr>
+      <tr><td class="code">1</td><td class="he">אֱלֹהִ֖ים</td><td>Elohim</td><td>God</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “God” (H430)</td></tr>
+      <tr><td class="code">2</td><td class="he">יְהִ֣י</td><td>yehi</td><td>be</td><td class="code">Vqj3ms</td><td>verb · qal · <b>jussive</b> · 3rd masc singular — “be” (H1961)</td></tr>
+      <tr><td class="code">3</td><td class="he">א֑וֹר</td><td>or</td><td>light</td><td class="code">Ncbsa</td><td>noun · common · both · singular · absolute — “light” (H216)</td></tr>
+      <tr><td class="code">4a</td><td class="he">וַֽ</td><td>va</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter</td></tr>
+      <tr><td class="code">4b</td><td class="he">יְהִי</td><td>yehi</td><td>be</td><td class="code">Vqw3ms</td><td>verb · qal · wayyiqtol (narrative past) · 3rd masc singular — “be” (H1961)</td></tr>
+      <tr><td class="code">5</td><td class="he">אֽוֹר</td><td>or</td><td>light</td><td class="code">Ncbsa</td><td>noun · common · both · singular · absolute — “light” (H216)</td></tr></table></div>
+  <div class="sect"><h3>Code <span class="count">· machine-operator sketch (auto)</span></h3>
+    <pre class="codepre"><span class="cmt"># frozen coverage: gen_01_creation_boot · STEP_Gn_1_3 (DECLARE_LET_RESULT)</span>
+DECLARE(agent=Elohim)                <span class="cmt"># B0 va-yomer Elohim — and-say God [Vqw3ms qal wayyiqtol]</span>
+SPECS.push(LET("be"))                <span class="cmt"># B1 yehi or — be light [Vqj3ms qal jussive]  [TIR-026]</span>
+EVENT("become")                      <span class="cmt"># B2 va-yehi or — and-be light [Vqw3ms qal wayyiqtol]</span></pre></div>
+</section>
+
+<!-- ==================== Gen 1:4 ==================== -->
+<section class="verse" id="v1_4" data-ref="Genesis 1:4">
+  <div class="vhead"><span class="vref">Gen 1:4</span>
+    <span class="badge frozen">❄ frozen: gen_01_creation_boot</span>
+    <span class="fen">“God saw that the light was good, and divided the light from the darkness.”</span></div>
+  <div class="flat">
+    <div class="row he-row"><span class="lab">Hebrew</span> <span class="brick">(⁨וַיַּ֧רְא אֱלֹהִ֛ים⁩)</span> <span class="brick">(⁨אֶת־הָא֖וֹר⁩)</span> <span class="brick">(⁨כִּי־ט֑וֹב⁩)</span> <span class="brick">(⁨וַיַּבְדֵּ֣ל אֱלֹהִ֔ים⁩)</span> <span class="brick">(⁨בֵּ֥ין הָא֖וֹר⁩)</span> <span class="brick">(⁨וּבֵ֥ין הַחֹֽשֶׁךְ⁩)</span></div>
+    <div class="row"><span class="lab">Transliteration</span> <span class="brick">(va-yar Elohim)</span> <span class="brick">(et ha-or)</span> <span class="brick">(ki-tov)</span> <span class="brick">(va-yavdel Elohim)</span> <span class="brick">(bein ha-or)</span> <span class="brick">(u-vein ha-choshekh)</span></div>
+    <div class="row"><span class="lab">English</span> <span class="brick">(and-see God)</span> <span class="brick">(the-light)</span> <span class="brick">(that good)</span> <span class="brick">(and-divide God)</span> <span class="brick">(between the-light)</span> <span class="brick">(and-between the-darkness)</span></div>
+  </div>
+  <div class="sect"><h3>Leaf ledger <span class="count">· 6 bricks</span></h3>
+    <p class="desc">The result of splitting the verse into leaves based on the cantillation marks: one row per leaf-brick — the words the ta'amim glued together, the pause mark that sealed them, their address in the verse's tree, and an automatic hint at their role.</p>
+    <table><tr><th>B#</th><th>Hebrew</th><th>Transliteration</th><th>English</th><th>end mark · rank</th><th>role (auto)</th></tr>
+      <tr><td><b>B0</b></td><td class="he">וַיַּ֧רְא אֱלֹהִ֛ים</td><td>va-yar Elohim</td><td>and-see God</td><td>tevir · r3</td><td>SEE/ASSESS</td></tr>
+      <tr><td><b>B1</b></td><td class="he">אֶת־הָא֖וֹר</td><td>et ha-or</td><td>obj-marker·et the-light</td><td>tifcha · r2</td><td>LIGHTS +et-obj</td></tr>
+      <tr><td><b>B2</b></td><td class="he">כִּי־ט֑וֹב</td><td>ki-tov</td><td>that good</td><td>etnachta · r1</td><td>EVAL(good)</td></tr>
+      <tr><td><b>B3</b></td><td class="he">וַיַּבְדֵּ֣ל אֱלֹהִ֔ים</td><td>va-yavdel Elohim</td><td>and-divide God</td><td>zaqef_qatan · r2</td><td>DIVIDE</td></tr>
+      <tr><td><b>B4</b></td><td class="he">בֵּ֥ין הָא֖וֹר</td><td>bein ha-or</td><td>between the-light</td><td>tifcha · r2</td><td>BETWEEN(light)</td></tr>
+      <tr><td><b>B5</b></td><td class="he">וּבֵ֥ין הַחֹֽשֶׁךְ</td><td>u-vein ha-choshekh</td><td>and-between the-darkness</td><td>silluq · r1</td><td>BETWEEN(darkness)</td></tr></table></div>
+  <div class="sect"><h3>Morph <span class="count">· 16 morpheme rows</span></h3>
+    <div class="more">full table in the production app (mockup truncated)</div></div>
+  <div class="sect"><h3>Code <span class="count">· machine-operator sketch (auto)</span></h3>
+    <pre class="codepre"><span class="cmt"># frozen coverage: gen_01_creation_boot · STEP_Gn_1_4 (TEST_AND_PARTITION)</span>
+EVENT("see")                         <span class="cmt"># B0 va-yar Elohim — and-see God [Vqw3ms qal wayyiqtol]</span>
+THEME("light")                       <span class="cmt"># B1 et ha-or — the-light  [TIR-014]</span>
+TESTS.record(PASS("good"))           <span class="cmt"># B2 ki-tov — that good (ki = 'that', not casuistic IF)</span>
+EVENT("divide")                      <span class="cmt"># B3 va-yavdel Elohim — and-divide God [Vhw3ms hifil wayyiqtol]</span>
+BETWEEN("light")                     <span class="cmt"># B4 bein ha-or — between the-light</span>
+BETWEEN("darkness")                  <span class="cmt"># B5 u-vein ha-choshekh — and-between the-darkness</span></pre></div>
+</section>
+
+<!-- ==================== Gen 1:5 ==================== -->
+<section class="verse" id="v1_5" data-ref="Genesis 1:5">
+  <div class="vhead"><span class="vref">Gen 1:5</span>
+    <span class="badge frozen">❄ frozen: gen_01_creation_boot</span>
+    <span class="fen">“God called the light Day and the darkness Night; evening, morning — day one.”</span></div>
+  <div class="flat">
+    <div class="row he-row"><span class="lab">Hebrew</span> <span class="brick">(⁨וַיִּקְרָ֨א אֱלֹהִ֤ים לָאוֹר֙⁩)</span> <span class="brick">(⁨י֔וֹם⁩)</span> <span class="brick">(⁨וְלַחֹ֖שֶׁךְ⁩)</span> <span class="brick">(⁨קָ֣רָא לָ֑יְלָה⁩)</span> <span class="brick">(⁨וַֽיְהִי־עֶ֥רֶב וַֽיְהִי־בֹ֖קֶר⁩)</span> <span class="brick">(⁨י֥וֹם אֶחָֽד⁩)</span></div>
+    <div class="row"><span class="lab">Transliteration</span> <span class="brick">(va-yiqra Elohim la-or)</span> <span class="brick">(yom)</span> <span class="brick">(ve-la-choshekh)</span> <span class="brick">(qara layla)</span> <span class="brick">(va-yehi erev va-yehi voqer)</span> <span class="brick">(yom echad)</span></div>
+    <div class="row"><span class="lab">English</span> <span class="brick">(and-call God to-light)</span> <span class="brick">(day)</span> <span class="brick">(and-to-darkness)</span> <span class="brick">(call night)</span> <span class="brick">(and-be evening and-be morning)</span> <span class="brick">(day one)</span></div>
+  </div>
+  <div class="sect"><h3>Leaf ledger <span class="count">· 6 bricks</span></h3>
+    <p class="desc">The result of splitting the verse into leaves based on the cantillation marks: one row per leaf-brick — the words the ta'amim glued together, the pause mark that sealed them, their address in the verse's tree, and an automatic hint at their role.</p>
+    <table><tr><th>B#</th><th>Hebrew</th><th>Transliteration</th><th>English</th><th>end mark · rank</th><th>role (auto)</th></tr>
+      <tr><td><b>B0</b></td><td class="he">וַיִּקְרָ֨א אֱלֹהִ֤ים לָאוֹר֙</td><td>va-yiqra Elohim la-or</td><td>and-call God to-light</td><td>pashta · r3</td><td>NAME</td></tr>
+      <tr><td><b>B1</b></td><td class="he">י֔וֹם</td><td>yom</td><td>day</td><td>zaqef_qatan · r2</td><td>DOMAIN(day/night)</td></tr>
+      <tr><td><b>B2</b></td><td class="he">וְלַחֹ֖שֶׁךְ</td><td>ve-la-choshekh</td><td>and-to-darkness</td><td>tifcha · r2</td><td>PREP(to·darkness)</td></tr>
+      <tr><td><b>B3</b></td><td class="he">קָ֣רָא לָ֑יְלָה</td><td>qara layla</td><td>call night</td><td>etnachta · r1</td><td>NAME</td></tr>
+      <tr><td><b>B4</b></td><td class="he">וַֽיְהִי־עֶ֥רֶב וַֽיְהִי־בֹ֖קֶר</td><td>va-yehi erev va-yehi voqer</td><td>and-be evening and-be morning</td><td>tifcha · r2</td><td>TIME-STAMP</td></tr>
+      <tr><td><b>B5</b></td><td class="he">י֥וֹם אֶחָֽד</td><td>yom echad</td><td>day one</td><td>silluq · r1</td><td>DAY-COUNT(one)</td></tr></table></div>
+  <div class="sect"><h3>Morph <span class="count">· 18 morpheme rows</span></h3>
+    <div class="more">full table in the production app (mockup truncated)</div></div>
+  <div class="sect"><h3>Code <span class="count">· machine-operator sketch (auto)</span></h3>
+    <pre class="codepre"><span class="cmt"># frozen coverage: gen_01_creation_boot · STEP_Gn_1_5 (NAME_AND_COMMIT)</span>
+REGISTRY.name(...)                   <span class="cmt"># B0 va-yiqra Elohim la-or — and-call God to-light [Vqw3ms]  [TIR-022]</span>
+REGISTRY.name(...)                   <span class="cmt"># B3 qara layla — call night [Vqp3ms qal perfect]  [TIR-022]</span>
+LEDGER.cycle("erev -&gt; boqer")        <span class="cmt"># B4 va-yehi erev va-yehi voqer — evening then morning</span>
+LEDGER.commit(day_label="one")       <span class="cmt"># B5 yom echad — day one (CARDINAL — days 2–6 use ordinals)</span></pre></div>
+</section>
+
+<div class="sentinel">▼ Genesis 1:6 – 1:31 load as you scroll (infinite scroll — per-chapter JSON bundles)
+  <div class="sk"></div><div class="sk" style="max-width:55%"></div>
+  then <b>Genesis 2</b>, then onward — one continuous scroll to Deuteronomy 34</div>
+
+<footer>
+  <h3>Provenance</h3>
+  <p>Built from commit <span class="mono">cf911dc</span> · ta'amim rules <span class="mono">v3</span>
+  (all 5,853 verses parse unique) · role rules <span class="mono">v1</span> · lexicon <span class="mono">v1</span>
+  (Strong's baseline, hand overrides win) · morphology OSHB (a labeled modern scholarly layer).</p>
+  <h3>Attribution</h3>
+  <p>Hebrew text &amp; cantillation: Westminster Leningrad Codex via the Open Scriptures Hebrew Bible
+  (CC BY 4.0) · glosses: Strong's Exhaustive Concordance (1890, public domain) · Oral citations:
+  named locations, quotation-scale, verified against Sefaria library texts where possible.</p>
+  <h3>Read this first</h3>
+  <p>English and transliteration are reading aids only — Hebrew is the sole derivation source.
+  Role and code lines are automatic, illustrative renderings of grammatical facts; verses marked
+  ❄ frozen carry human-derived, owner-reviewed logic units. Nothing on this site is binding
+  religious law.</p>
+</footer>
+</main>
+
+<script>
+const chapSel = document.getElementById('chap'), vrsSel = document.getElementById('vrs');
+for (let c = 1; c <= 50; c++) chapSel.add(new Option('ch ' + c, c));      // Genesis: 50 chapters
+for (let v = 1; v <= 31; v++) vrsSel.add(new Option('v ' + v, v));        // Gen 1: 31 verses
+function jump() {
+  const el = document.getElementById('v' + chapSel.value + '_' + vrsSel.value);
+  if (el) el.scrollIntoView({behavior: 'smooth'});
+  else alert('Mockup contains Gen 1:1-1:5 only — production app covers every verse.');
+}
+const obs = new IntersectionObserver(es => {
+  es.forEach(e => { if (e.isIntersecting)
+    document.getElementById('loc').textContent = e.target.dataset.ref; });
+}, {rootMargin: '-40% 0px -55% 0px'});
+document.querySelectorAll('.verse').forEach(s => obs.observe(s));
+</script>
+</body></html>

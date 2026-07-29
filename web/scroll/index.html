@@ -1,0 +1,328 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Torah Grok — the Torah as a scroll</title>
+<style>
+:root { --bg:#ffffff; --fg:#1f2937; --mut:#6b7280; --line:#d7d3c8; --acc:#8a6d1a;
+        --chip:#f5f2ea; --hd:#f0ecdf; --code:#f7f5ee; --blue:#4a6da7; --frozen:#0a7a2f; }
+* { box-sizing:border-box; }
+html { font-size:18px; }   /* master text scale — all rem sizes key off this */
+body { margin:0; background:var(--bg); color:var(--fg);
+       font:1rem/1.55 "Charter","Georgia",serif;
+       min-width:1024px;              /* layout floor: fits iPad landscape fully   */
+       -webkit-text-size-adjust:100%; /* iPhone pans sideways instead of reflowing */ }
+main { max-width:1680px; margin:0 auto; padding:1rem 2rem 8rem; }
+
+/* ---------- sticky app bar ---------- */
+header { position:sticky; top:0; z-index:50; }
+.bar { max-width:1680px; margin:0 auto; padding:.6rem 2rem; display:flex; gap:.6rem;
+       align-items:center; flex-wrap:wrap; background:#332a18;
+       border-bottom:3px solid var(--acc); border-radius:0 0 10px 10px;
+       box-shadow:0 2px 10px rgba(0,0,0,.25); }
+.brand { font-weight:bold; letter-spacing:.02em; margin-right:.4rem; color:#f3e9c8; }
+.brand small { color:#b8ab8a; font-weight:normal; }
+select, input, button { font:inherit; font-size:.85rem; padding:.28rem .5rem;
+       border:1px solid #5a4d31; border-radius:6px; background:#fffdf6; color:var(--fg); }
+button { cursor:pointer; background:var(--acc); color:#fff; border-color:var(--acc); }
+button:hover { background:#a5841f; }
+input.search { width:180px; color:var(--mut); }
+.loc { margin-left:auto; font-size:.85rem; color:#b8ab8a; }
+.loc b { color:#f3e9c8; }
+
+/* ---------- chapter + verse cards ---------- */
+.chapter-head { margin:2rem 0 .6rem; padding:.5rem .9rem; background:var(--hd);
+       border:1px solid var(--line); border-radius:8px; display:flex; gap:.8rem;
+       align-items:baseline; }
+.chapter-head h2 { margin:0; font-size:1.15rem; }
+.chapter-head span { color:var(--mut); font-size:.82rem; }
+.verse { border:1px solid var(--line); border-radius:10px; margin:1rem 0; padding:.9rem 1.2rem;
+       scroll-margin-top:5.2rem; }
+.vhead { display:flex; gap:.6rem; align-items:center; flex-wrap:wrap; margin-bottom:.4rem; }
+.vref { font-weight:bold; color:var(--acc); }
+.badge { font:.68rem/1.5 monospace; padding:0 .45rem; border-radius:10px; }
+.badge.frozen { background:#e8f5ec; color:var(--frozen); border:1px solid #bfe3ca; }
+.badge.auto { background:#eef1f7; color:var(--blue); border:1px solid #ccd6ea; }
+.vhead .fen { color:var(--mut); font-style:italic; font-size:.88rem; }
+.flat .row { margin:.1rem 0 .3rem; }
+.flat .lab { display:block; color:var(--mut); font:.68rem/1.4 monospace;
+       letter-spacing:.07em; text-transform:uppercase; margin:.5rem 0 .1rem; }
+.flat .lab:first-child { margin-top:0; }
+.he-row { direction:rtl; text-align:left; font-size:1.3rem; }
+.brick { display:inline-block; background:var(--chip); border:1px solid var(--line);
+       border-radius:6px; padding:.03rem .45rem; margin:.08rem .12rem; }
+
+/* ---------- always-open sections ---------- */
+.sect { border-top:1px dashed var(--line); margin-top:.7rem; padding-top:.45rem; }
+.sect h3 { margin:.1rem 0 .2rem; font:.72rem/1.7 monospace; letter-spacing:.07em;
+       text-transform:uppercase; color:var(--mut); font-weight:normal; }
+.sect h3 .count { color:#b0a88f; }
+.sect .desc { font-size:.78rem; color:var(--mut); font-style:italic; margin:0 0 .25rem; }
+table { border-collapse:collapse; width:100%; font-size:.82rem; margin:.45rem 0 .3rem; }
+th { background:var(--hd); text-align:left; font-size:.68rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid var(--line); padding:.28rem .55rem; vertical-align:top; }
+td.he { font-size:1.05rem; direction:rtl; text-align:right; }
+td.code, .mono { font-family:monospace; font-size:.76rem; }
+tr.bstart td { border-top:2px solid var(--acc); }
+pre.codepre { background:var(--code); border:1px solid var(--line);
+       border-left:3px solid var(--blue); border-radius:0 8px 8px 0; padding:.6rem .9rem;
+       font:.78rem/1.55 Menlo,Consolas,monospace; white-space:pre-wrap; margin:.45rem 0 .2rem; }
+pre.codepre .cmt { color:#6b7280; }
+
+/* ---------- infinite-scroll sentinel ---------- */
+.sentinel { margin:2.2rem 0; padding:1.1rem; text-align:center; color:var(--mut);
+       border:2px dashed var(--line); border-radius:10px; font-size:.9rem; }
+.sk { height:.8rem; border-radius:5px; margin:.45rem auto; max-width:70%;
+      background:linear-gradient(90deg,#f0ecdf 25%,#faf8f1 50%,#f0ecdf 75%);
+      background-size:200% 100%; animation:sh 1.4s infinite; }
+@keyframes sh { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+
+/* ---------- footer ---------- */
+footer { border-top:2px solid var(--acc); margin-top:3rem; padding-top:1rem;
+       font-size:.82rem; color:var(--mut); }
+footer h3 { font-size:.8rem; text-transform:uppercase; letter-spacing:.07em; color:var(--fg); }
+</style></head><body>
+
+<header><div class="bar">
+  <span class="brand">Torah&nbsp;Grok <small>· the Torah as a scroll</small></span>
+  <select id="book" onchange="bookChanged()"></select>
+  <select id="chap" onchange="chapChanged()" title="chapter"></select>
+  <select id="vrs" onchange="jump()" title="verse"></select>
+  <button onclick="jump()">Go</button>
+  <input class="search" disabled value="🔍 Search — phase 2"
+         title="Client index or serverless FTS — phase 2">
+  <span class="loc">reading <b id="loc">—</b></span>
+</div></header>
+
+<main>
+  <div id="feed"></div>
+  <div class="sentinel" id="sentinel">▼ loading…
+    <div class="sk"></div><div class="sk" style="max-width:55%"></div></div>
+
+<footer>
+  <h3>Provenance</h3>
+  <p id="prov">loading…</p>
+  <h3>Attribution</h3>
+  <p>Hebrew text &amp; cantillation: Westminster Leningrad Codex via the Open Scriptures Hebrew Bible
+  (CC BY 4.0) · verse translation: The Holy Scriptures — A New Translation (JPS 1917, public
+  domain, via Sefaria) · glosses: Strong's Exhaustive Concordance (1890, public domain) ·
+  Oral citations: named locations, quotation-scale, verified against Sefaria library texts
+  where possible.</p>
+  <h3>Read this first</h3>
+  <p>English and transliteration are reading aids only — Hebrew is the sole derivation source.
+  Role and code lines are automatic, illustrative renderings of grammatical facts; verses marked
+  ❄ frozen carry human-derived, owner-reviewed logic units. Nothing on this site is binding
+  religious law.</p>
+</footer>
+</main>
+
+<script>
+"use strict";
+const LEDGER_DESC = "The result of splitting the verse into leaves based on the " +
+  "cantillation marks: one row per leaf-brick — the words the ta'amim glued together, " +
+  "the pause mark that sealed them, their address in the verse's tree, and an " +
+  "automatic hint at their role.";
+const FSI = "⁨", PDI = "⁩";
+
+let MANIFEST = null;
+let SEQ = [];          // ordered chapter list: [{b:"Gen", c:1}, ...]
+let feedPos = 0;       // next SEQ index to load
+let epoch = 0;         // bumped by jump(): in-flight loads from the old feed are discarded
+let chain = Promise.resolve();   // serializes chapter loads (no concurrent/duplicate appends)
+const rendered = new Set();   // "Gen_1" keys currently in the feed
+const cache = new Map();
+
+const esc = s => String(s ?? "").replace(/[&<>"]/g,
+  m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+const $ = id => document.getElementById(id);
+
+async function bundle(b, c) {
+  const key = b + "_" + c;
+  if (!cache.has(key))
+    cache.set(key, fetch("data/" + key + ".json").then(r => r.json()));
+  return cache.get(key);
+}
+
+/* ---------------- rendering ---------------- */
+function verseHTML(b, c, vd) {
+  const name = MANIFEST.books.find(x => x.id === b).name;
+  const badge = vd.frozen.length
+    ? `<span class="badge frozen" title="${esc(vd.frozen.join(" · "))}">❄ frozen: ${esc(vd.frozen[0].split(" · ")[0])}</span>`
+    : `<span class="badge auto">auto · illustrative</span>`;
+  const fen = vd.fen ? `“${esc(vd.fen)}”`
+    : "word glosses: " + esc(vd.leaves.map(l => l.en).join(" · "));
+  const bricks = k => vd.leaves.map(l =>
+    `<span class="brick">(${k === "he" ? FSI + esc(l.he) + PDI : esc(l[k])})</span>`).join(" ");
+
+  const ledger = vd.leaves.map(l =>
+    `<tr><td><b>B${l.b}</b></td><td>${esc(l.w)}</td><td class="code">${esc(l.path)}</td>` +
+    `<td class="he">${esc(l.he)}</td><td>${esc(l.tr)}</td><td>${esc(l.en)}</td>` +
+    `<td>${esc(l.mark)} · r${l.rank}</td><td>${esc(l.froze)}</td><td>${esc(l.role)}</td></tr>`).join("");
+
+  const morph = vd.morph.map(m =>
+    `<tr${m.bs ? ' class="bstart"' : ""}><td><b>B${m.b}</b></td><td class="code">${esc(m.w)}</td>` +
+    `<td class="he">${esc(m.he)}</td><td>${esc(m.tr)}</td><td>${esc(m.en)}</td>` +
+    `<td class="code">${esc(m.code)}</td><td>${esc(m.g)}</td></tr>`).join("");
+
+  const codeHead = vd.frozen.map(f =>
+    `<span class="cmt"># frozen coverage: ${esc(f)}</span>`).join("\n");
+  const code = vd.code.map(l =>
+    `${esc(l.c).padEnd(38)}<span class="cmt">${esc(l.m)}</span>`).join("\n");
+
+  return `<section class="verse" id="v${b}_${c}_${vd.v}" data-ref="${esc(name)} ${c}:${vd.v}">
+  <div class="vhead"><span class="vref">${esc(b)} ${c}:${vd.v}</span>${badge}
+    <span class="fen">${fen}</span></div>
+  <div class="flat">
+    <div class="lab">Hebrew</div>
+    <div class="row he-row">${bricks("he")}</div>
+    <div class="lab">Transliteration</div>
+    <div class="row">${bricks("tr")}</div>
+    <div class="lab">English</div>
+    <div class="row">${bricks("en")}</div>
+  </div>
+  <div class="sect"><h3>Leaf ledger <span class="count">· ${vd.leaves.length} bricks</span></h3>
+    <p class="desc">${LEDGER_DESC}</p>
+    <table><tr><th>B#</th><th>words</th><th>path</th><th>Hebrew</th><th>Transliteration</th>
+      <th>English</th><th>end mark · rank</th><th>froze because</th><th>role (auto)</th></tr>
+      ${ledger}</table></div>
+  <div class="sect"><h3>Morph <span class="count">· ${vd.morph.length} morpheme rows</span></h3>
+    <table><tr><th>B#</th><th>w</th><th>Hebrew</th><th>Transliteration</th><th>English</th>
+      <th>code</th><th>grammar (English aid)</th></tr>
+      ${morph}</table></div>
+  <div class="sect"><h3>Code <span class="count">· machine-operator sketch (auto)</span></h3>
+    <pre class="codepre">${codeHead}${codeHead ? "\n" : ""}${code}</pre></div>
+</section>`;
+}
+
+function chapterHTML(data) {
+  const b = data.book, name = MANIFEST.books.find(x => x.id === b).name;
+  return `<div class="chapter-head" id="ch${b}_${data.chapter}">
+      <h2>${esc(name)} ${data.chapter}</h2>
+      <span>${esc(data.verses[0]?.sys || "")} · ta'amim ${esc(MANIFEST.taamim)} ·
+      ${data.verses.length} verses</span></div>` +
+    data.verses.map(v => verseHTML(b, data.chapter, v)).join("");
+}
+
+/* ---------------- feed ---------------- */
+const locObs = new IntersectionObserver(es => {
+  es.forEach(e => { if (e.isIntersecting) {
+    $("loc").textContent = e.target.dataset.ref;
+    syncPickers(e.target.id);
+  }});
+}, {rootMargin: "-40% 0px -55% 0px"});
+
+function appendChapter(html) {
+  const div = document.createElement("div");
+  div.innerHTML = html;
+  $("feed").appendChild(div);
+  div.querySelectorAll(".verse").forEach(s => locObs.observe(s));
+}
+
+async function loadNext() {
+  if (feedPos >= SEQ.length) {
+    $("sentinel").textContent = "· end of Deuteronomy — the scroll is complete ·";
+    return;
+  }
+  const myEpoch = epoch;
+  const {b, c} = SEQ[feedPos];
+  let data;
+  try {
+    data = await bundle(b, c);
+  } catch (e) {
+    cache.delete(b + "_" + c);       // don't cache the failure
+    if (myEpoch === epoch)
+      $("sentinel").innerHTML = "⚠ could not load " + esc(b) + " " + c +
+        " — <a href=\"#\" onclick=\"scheduleLoad();return false\">retry</a>";
+    return;
+  }
+  if (myEpoch !== epoch) return;     // a jump reset the feed while this fetched
+  appendChapter(chapterHTML(data));
+  rendered.add(b + "_" + c);
+  feedPos++;
+  if (feedPos >= SEQ.length)
+    $("sentinel").textContent = "· end of Deuteronomy — the scroll is complete ·";
+}
+
+function scheduleLoad() {            // all loads run through one promise chain
+  chain = chain.then(loadNext);
+  return chain;
+}
+
+const sentObs = new IntersectionObserver(es => {
+  if (es.some(e => e.isIntersecting)) scheduleLoad();
+}, {rootMargin: "1200px 0px"});
+
+/* ---------------- navigation ---------------- */
+function fillSelect(sel, opts) {
+  sel.innerHTML = "";
+  opts.forEach(([val, label]) => sel.add(new Option(label, val)));
+}
+
+function bookChanged() {
+  const bk = MANIFEST.books.find(x => x.id === $("book").value);
+  fillSelect($("chap"), bk.chapters.map((n, i) => [i + 1, "ch " + (i + 1)]));
+  chapChanged();
+}
+function chapChanged() {
+  const bk = MANIFEST.books.find(x => x.id === $("book").value);
+  const n = bk.chapters[$("chap").value - 1];
+  fillSelect($("vrs"), Array.from({length: n}, (_, i) => [i + 1, "v " + (i + 1)]));
+  jump();
+}
+let syncing = false;
+function syncPickers(vid) {   // keep dropdowns in step while scrolling
+  const m = vid.match(/^v(\w+)_(\d+)_(\d+)$/);
+  if (!m) return;
+  syncing = true;
+  if ($("book").value !== m[1]) {
+    $("book").value = m[1];
+    const bk = MANIFEST.books.find(x => x.id === m[1]);
+    fillSelect($("chap"), bk.chapters.map((n, i) => [i + 1, "ch " + (i + 1)]));
+  }
+  if ($("chap").value !== m[2]) {
+    $("chap").value = m[2];
+    const bk = MANIFEST.books.find(x => x.id === m[1]);
+    fillSelect($("vrs"), Array.from({length: bk.chapters[m[2] - 1]},
+                                    (_, i) => [i + 1, "v " + (i + 1)]));
+  }
+  $("vrs").value = m[3];
+  syncing = false;
+}
+
+async function jump() {
+  if (syncing || !MANIFEST) return;
+  const b = $("book").value, c = +$("chap").value, v = +$("vrs").value;
+  const key = b + "_" + c;
+  if (!rendered.has(key)) {          // restart the feed at the chosen chapter
+    epoch++;                         // discard any in-flight loads from the old feed
+    $("feed").innerHTML = "";
+    rendered.clear();
+    feedPos = SEQ.findIndex(x => x.b === b && x.c === c);
+    $("sentinel").innerHTML = "▼ loading…";
+    await scheduleLoad();
+  }
+  document.getElementById("v" + b + "_" + c + "_" + v)
+    ?.scrollIntoView({behavior: "smooth"});
+}
+
+/* ---------------- boot ---------------- */
+(async function () {
+  MANIFEST = await (await fetch("data/manifest.json")).json();
+  SEQ = MANIFEST.books.flatMap(bk =>
+    bk.chapters.map((_, i) => ({b: bk.id, c: i + 1})));
+  fillSelect($("book"), MANIFEST.books.map(bk => [bk.id, bk.name]));
+  const bk = MANIFEST.books[0];
+  fillSelect($("chap"), bk.chapters.map((n, i) => [i + 1, "ch " + (i + 1)]));
+  fillSelect($("vrs"), Array.from({length: bk.chapters[0]}, (_, i) => [i + 1, "v " + (i + 1)]));
+  $("prov").innerHTML =
+    `Built ${esc(MANIFEST.built_at)} from commit <span class="mono">${esc(MANIFEST.commit)}</span>
+     · ta'amim rules <span class="mono">${esc(MANIFEST.taamim)}</span>
+     (all ${MANIFEST.verses_total.toLocaleString()} verses parse unique)
+     · roles <span class="mono">${esc(MANIFEST.roles)}</span>
+     · lexicon <span class="mono">${esc(MANIFEST.lexicon)}</span>
+     · morphology OSHB (a labeled modern scholarly layer)${MANIFEST.translation
+       ? ` · translation ${esc(MANIFEST.translation)}` : ""}.`;
+  await scheduleLoad();              // Genesis 1 first
+  sentObs.observe($("sentinel"));
+})();
+</script>
+</body></html>
