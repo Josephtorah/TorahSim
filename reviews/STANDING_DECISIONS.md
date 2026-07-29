@@ -2,7 +2,7 @@
 
 Owner may not track cross-project questions. **Agents decide and update this file** when new evidence arrives. Do not re-ask the owner for these unless a decision would delete work or rewrite `Data/`.
 
-Last updated: 2026-07-27 (tree display = leaf en·he + OSHB morph → `TREE_DISPLAY_LEAF_EN_HE_MORPH.md`)
+Last updated: 2026-07-28 (§6c form→operator TIR-026–033 owner-approved; SQLite index + versioned lexicon/role_rules — see logic/pre_logic_methods_2026-07-28/PLAN)
 
 ---
 
@@ -134,6 +134,16 @@ Last updated: 2026-07-27 (tree display = leaf en·he + OSHB morph → `TREE_DISP
 | **Not** | Particles ≠ `SYM_*` sanctuary free names. Not every *et* = BR Gen 1:1 domain expand. Not letter-opcode codegen. |
 | **Sanctuary demo Python** | Teaching dry-run of free names / olah / cloud — **no rewrite required** for particle ops (olah already uses *et* only as implicit syntax). Optional later: annotate `glue_object_marker` on steps. |
 
+### 6c. Verb-form → logic-operator rules (TIR-026–033) — owner-approved 2026-07-28
+
+| Decision | **The eight form→operator mappings are frozen TIR rules, citable in units: jussive→LET (אל+jussive→LET-NOT) · imperative→CMD! · imperfect-in-command→LET? (`?` mandatory, never silently upgraded) · weqatal→THEN · ל+infinitive→PURPOSE · participle→ONGOING/INVARIANT · niphal/pual in directive/outcome→agentless constraint · cohortative→CMD-US.** |
+|----------|------|
+| **Rules** | `logic/TREE_INTERPRETATION_RULES.md` **TIR-026 … TIR-033** (+ TIR-014 Theme-slot amendment) |
+| **Evidence** | `logic/pre_logic_methods_2026-07-28/PROPOSAL_TIR_026_033_form_operators_2026-07-28.md` — whole-Torah counts (genre fingerprint: wayyiqtol Gen 2107 vs Lev 189; weqatal Lev 707/Deut 632) + cross-book examples (Num 6:25 ya'er; Lev 1:4 ve-nirtza; Deut 6:4) |
+| **Origin** | Gen 1:1–2:3 pre-code logic experiment (same folder) |
+| **Mechanical layer** | `logic/role_rules/` (versioned, goldens) *implements* these as display labels; TIR = the citable interpretation layer. Independent versioning. |
+| **Not** | Not a claim that Torah "is" deontic logic; operators are disciplined reading rules with stated limits; not binding religious law. |
+
 ## 7. Data
 
 | Decision | **Use `Data/` here. Do not bulk-copy foreign corpora.** |
@@ -159,6 +169,7 @@ When a standing decision changes, edit this file and add one line to the bottom 
 
 ## Changelog
 
+- 2026-07-28: **§6c form→operator rules** — TIR-026–033 owner-approved + merged; whole-Torah SQLite index (build_db.py, all 5,853 verses unique); versioned logic/lexicon v1 (99.9% gloss coverage) + logic/role_rules v1 (goldens); units + Oral corpus indexed (213 units; 119,903 Oral segments FTS). Repo now on private GitHub Josephtorah/Torah_Grok.
 - 2026-07-25: **§6b Particles as set operators** — TIR-014–022 in `TREE_INTERPRETATION_RULES.md`; Gen scan et/gam/akh/raq; gold Lev 1:5 word coverage; sanctuary spine V1 demo complete under `reviews/sanctuary_spine_v1/`. Python demo = teaching dry-run; **no mandatory rewrite** for particle ops.
 - 2026-07-24: Deuteronomy **full first draft + tree_derived_v1** complete — 10 phases A–J, **41** units, **959** STEP_Dt; Sifrei Devarim dual-track. Tool: `reprocess_book_from_trees.py --book deu`. **Five books of Torah** now have tree_derived_v1 units.
 - 2026-07-24: Genesis **tree_derived_v1** reprocess complete (26 units, 1533 STEPs; phases A–H). Tool: `reprocess_book_from_trees.py --book gen`.
