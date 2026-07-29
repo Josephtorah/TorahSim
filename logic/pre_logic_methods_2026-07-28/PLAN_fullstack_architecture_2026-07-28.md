@@ -151,8 +151,8 @@ Framing: code never *derives* logic (Pre-Code rule). The end state is code that
 🟡 Layer 3 — role hints:   whole Torah, shallow (r0 heuristics; '?' outside Gen-1 lexicon)
 🟡 Layer 4 — derivation:   34 verses hypothesis-tier (week experiment doc)
                            + ~190 tree_derived_v1 DRAFT units (pre-roles)
-❌ Layer 5 — frozen logic: no unit upgraded with the new logic yet
-❌ Layer 6 — interpreter:  no code executes any of it yet
+🟡 Layer 5 — frozen logic: gen_01_creation_boot (Gen 1:1-5) frozen; days 2-7 pending
+🟡 Layer 6 — interpreter:  run_unit.py executes frozen units; pilot green (S1-S7)
 ```
 
 | Stage | What | Who | Exit test |
@@ -160,7 +160,7 @@ Framing: code never *derives* logic (Pre-Code rule). The end state is code that
 | **A — harden mechanical layers** | lexicon + role rules → versioned files (`logic/lexicon/v1*`, `logic/role_rules/v1*`) with goldens; grow lexicon whole-Torah (EN-AID, #IMPOSED-labeled source); DB steps 2–3 (index units; oral_refs + oral_texts FTS with citable loci) | agent | no `?` glosses; units + Oral queryable |
 | **B — freeze the interpretation rulebook** — **✅ DONE 2026-07-28**: TIR-026…033 approved by owner + merged into `TREE_INTERPRETATION_RULES.md` (+ TIR-014 Theme amendment); evidence doc `PROPOSAL_TIR_026_033_form_operators_2026-07-28.md` | joint | frozen paper rulebook: tree+morph pattern → logic operator ✅ |
 | **C — derive units to frozen** — **▶ PILOT DONE 2026-07-28**: `gen_01_creation_boot` (Gen 1:1–5) frozen as first logic_derived_v1 unit — v3 trees, 14 operator lines citing TIR, 52/52 word coverage, machine-state scenarios S1–S5 + negative contracts S6/S7. Next: rest of the week; then Leviticus (casuistic payoff) | owner+agent (the long middle — this IS the project) | per unit: frozen, with scenarios ✅ pilot |
-| **D — the interpreter** | the dry-run machine as a program: loads FROZEN units only, executes logic lines against registers (TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER), runs scenarios as assertions. Same contract as parser: never invents; red scenario ⇒ fix document or version the rulebook | agent | hand-trace of Gen 1:1–10 reproduces mechanically |
+| **D — the interpreter** — **▶ PILOT GREEN 2026-07-28**: `run_unit.py` (repo root) loads FROZEN units only (drafts refused, exit 2), executes `boot_steps[].operators` against registers (TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER), asserts scenarios. `gen_01_creation_boot --scenarios`: S1–S5 green, S6 FLAG-not-block, S7 LET?-never-upgrades; false ledger claims go red (mutation-tested). Parses ONLY the unit's own notation; unknown op = rulebook-gap stop. Full exit (Gen 1:1–10 mechanical) lands when days 2–3 units freeze | agent | hand-trace of Gen 1:1–10 reproduces mechanically — ✅ 1:1–5 |
 | **E — scale + surface** | CI over all frozen units; cross-unit state chaining (Gen boot → Exod installs → Lev resolutions — the write-sites work, executable); D3 verse card: tree→morph→roles→logic→Oral | ongoing | the loop closes: hand-derived documents, machine-verified consequences |
 
 Stage C never fully "finishes" — that is the scholarship, and the Pre-Code rule
