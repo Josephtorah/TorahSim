@@ -1,0 +1,534 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gen 1:1-10 — FLAT · LEDGER · MORPH (DB)</title>
+<style>
+:root { --bg:#ffffff; --fg:#1f2937; --mut:#6b7280; --line:#d7d3c8; --acc:#8a6d1a;
+        --chip:#f5f2ea; --hd:#f0ecdf; --code:#f7f5ee; }
+* { box-sizing: border-box; }
+body { margin:0; padding:2rem 1rem 6rem; background:var(--bg); color:var(--fg);
+       font:15px/1.55 "Charter","Georgia",serif; }
+main { max-width: 1080px; margin:0 auto; }
+h1 { font-size:1.5rem; } h2 { font-size:1.2rem; margin-top:3rem; border-bottom:2px solid var(--acc);
+     padding-bottom:.3rem;} h3 { font-size:.95rem; letter-spacing:.06em; text-transform:uppercase;
+     color:var(--mut); margin:1.4rem 0 .5rem; }
+.meta { color:var(--mut); font-size:.85rem; }
+.banner { background:var(--chip); border:1px solid var(--line); border-radius:8px;
+          padding:.8rem 1rem; font-size:.85rem; margin:1rem 0 2rem; }
+.flat { border-left:3px solid var(--acc); padding:.6rem .9rem; background:var(--code);
+        border-radius:0 8px 8px 0; margin:.6rem 0 1rem; overflow-x:auto; }
+.flat .row { margin:.25rem 0; white-space:nowrap; }
+.flat .lab { display:inline-block; width:2.2rem; color:var(--mut); font:.75rem/1 monospace; }
+.flat .he-row { direction:rtl; text-align:left; font-size:1.25rem; }
+.flat .he-row .lab { direction:ltr; float:left; margin-top:.45rem;}
+.brick { display:inline-block; background:var(--chip); border:1px solid var(--line);
+         border-radius:6px; padding:.05rem .45rem; margin:.1rem .15rem; }
+.guide { color:var(--mut); font-size:.78rem; margin-top:.4rem; }
+.fen { font-style:italic; color:var(--mut); margin:.2rem 0 .8rem; }
+table { border-collapse:collapse; width:100%; font-size:.83rem; margin:.4rem 0 1.2rem; }
+th { background:var(--hd); text-align:left; font-size:.72rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid var(--line); padding:.3rem .5rem; vertical-align:top; }
+td.he { font-size:1.1rem; white-space:nowrap; direction:rtl; text-align:right;}
+td.code { font-family:monospace; font-size:.78rem; white-space:nowrap; }
+tr.bstart td { border-top:2px solid var(--acc); }
+.wrap { overflow-x:auto; }
+nav { font-size:.85rem; line-height:2; } nav a { color:var(--acc); text-decoration:none;
+      margin-right:.7rem; } nav a:hover { text-decoration:underline; }
+.tag { font-family:monospace; font-size:.75rem; background:var(--chip);
+       border-radius:4px; padding:0 .35rem; }
+
+pre.codepre { background:#f7f5ee; border:1px solid var(--line); border-left:3px solid #4a6da7;
+  border-radius:0 8px 8px 0; padding:.7rem .9rem; font:.76rem/1.55 Menlo,Consolas,monospace;
+  overflow-x:auto; margin:.4rem 0 1.2rem; }
+pre.codepre .cmt { color:#6b7280; }
+</style></head><body><main>
+<h1>Genesis 1:1-10 — FLAT parens · LEAF LEDGER · OSHB MORPH</h1>
+<div class="meta"><b>DB-backed:</b> every row queried from <span class="tag">torah_grok.sqlite</span>
+(no re-parse) · index built 2026-07-28 18:37:41 from commit <span class="tag">cf911dc</span> ·
+structure = ta'amim rules <span class="tag">v3</span> · roles <span class="tag">role_rules-v1-2026-07-28</span> ·
+lexicon <span class="tag">v1</span> · morphology = OSHB (#IMPOSED labeled aid) ·
+English &amp; translit = EN-AID only, never derivation source · roles auto, illustrative only ·
+not binding religious law · not TIR-frozen</div>
+<div class="banner"><b>How to read:</b> each verse shows (1) <b>FLAT</b> — the full verse in
+Hebrew / transliteration / literal-gloss English with parentheses around each ta'amim leaf brick;
+(2) <b>LEAF LEDGER</b> — one row per brick with its tree path and the disjunctive mark that closed it;
+(3) <b>MORPH</b> — one row per <i>morpheme segment</i>: prefix letters (ו=and, ה=the, ל=to, ב=in, מ=from)
+and pronoun suffixes get their own rows; ids like <span class="tag">4a/4b</span> = segments of word 4;
+(4) <b>CODE</b> — a machine-operator sketch generated mechanically from the role column and verb forms
+(role CMD=jussive→LET · CMD?=imperfect→LET_Q, the '?' never auto-removed · CMD!=imperative→CMD);
+auto + illustrative, not a frozen derivation — verses covered by a frozen unit cite it as provenance.
+Format spec: <span class="tag">MOCKUP_flat_ledger_oshb_morph_2026-07-27.md</span> · role vocabulary:
+see the original report banner (<span class="tag">GEN_1_1_to_2_3_flat_ledger_morph_2026-07-28.html</span>).</div>
+<nav><a href="#v1_1">Gen 1:1</a> <a href="#v1_2">Gen 1:2</a> <a href="#v1_3">Gen 1:3</a> <a href="#v1_4">Gen 1:4</a> <a href="#v1_5">Gen 1:5</a> <a href="#v1_6">Gen 1:6</a> <a href="#v1_7">Gen 1:7</a> <a href="#v1_8">Gen 1:8</a> <a href="#v1_9">Gen 1:9</a> <a href="#v1_10">Gen 1:10</a></nav>
+<h2 id="v1_1">Gen 1:1</h2>
+<div class="meta">FLAT · taamim v3 · prose · 7 words → 4 bricks · parser status: unique · source: torah_grok.sqlite</div>
+<div class="fen">en: “In the beginning God created the heavens and the earth.”</div>
+<div class="flat">
+<div class="row he-row"><span class="lab">he:</span> <span class="brick">(⁨בְּרֵאשִׁ֖ית⁩)</span> <span class="brick">(⁨בָּרָ֣א אֱלֹהִ֑ים⁩)</span> <span class="brick">(⁨אֵ֥ת הַשָּׁמַ֖יִם⁩)</span> <span class="brick">(⁨וְאֵ֥ת הָאָֽרֶץ⁩)</span></div>
+<div class="row"><span class="lab">tr:</span> <span class="brick">(be-reshit)</span> <span class="brick">(bara Elohim)</span> <span class="brick">(et ha-shamayim)</span> <span class="brick">(ve-et ha-aretz)</span></div>
+<div class="row"><span class="lab">en:</span> <span class="brick">(in-beginning)</span> <span class="brick">(create God)</span> <span class="brick">(obj-marker·et the-heavens)</span> <span class="brick">(and-obj-marker·et the-earth)</span></div>
+<div class="guide">B0 … B3 in reading order — Hebrew row runs right-to-left (B0 is the right-most paren); en = literal word glosses, verse line above = free English.</div></div>
+<h3>Leaf ledger</h3><div class="wrap"><table>
+<tr><th>B#</th><th>words</th><th>path</th><th>he</th><th>translit</th><th>en (literal)</th><th>end mark · rank</th><th>froze because</th><th>role (auto, illustrative)</th></tr>
+<tr><td><b>B0</b></td><td>w0</td><td class="code">L·L</td><td class="he">בְּרֵאשִׁ֖ית</td><td>be-reshit</td><td>in-beginning</td><td>tifcha · r2</td><td>single word</td><td>PREP(in·beginning)</td></tr>
+<tr><td><b>B1</b></td><td>w1–2</td><td class="code">L·R</td><td class="he">בָּרָ֣א אֱלֹהִ֑ים</td><td>bara Elohim</td><td>create God</td><td>etnachta · r1</td><td>only munach (conj) inside</td><td>CREATE</td></tr>
+<tr><td><b>B2</b></td><td>w3–4</td><td class="code">R·L</td><td class="he">אֵ֥ת הַשָּׁמַ֖יִם</td><td>et ha-shamayim</td><td>obj-marker·et the-heavens</td><td>tifcha · r2</td><td>only mercha (conj) inside</td><td>OBJ_FRAME(heavens)</td></tr>
+<tr><td><b>B3</b></td><td>w5–6</td><td class="code">R·R</td><td class="he">וְאֵ֥ת הָאָֽרֶץ</td><td>ve-et ha-aretz</td><td>and-obj-marker·et the-earth</td><td>silluq · r1</td><td>only mercha (conj) inside</td><td>OBJ_FRAME(earth)</td></tr>
+</table></div>
+<h3>Morph — every word and every morpheme letter (OSHB)</h3><div class="wrap"><table>
+<tr><th>B#</th><th>w</th><th>he</th><th>translit</th><th>en</th><th>OSHB code</th><th>grammar (English aid)</th></tr>
+<tr class="bstart"><td><b>B0</b></td><td class="code">0a</td><td class="he">בְּ</td><td>be</td><td>in</td><td class="code">R</td><td>preposition — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B0</b></td><td class="code">0b</td><td class="he">רֵאשִׁ֖ית</td><td>reshit</td><td>beginning</td><td class="code">Ncfsa</td><td>noun · common · fem · singular · absolute — “beginning” (H7225)</td></tr>
+<tr class="bstart"><td><b>B1</b></td><td class="code">1</td><td class="he">בָּרָ֣א</td><td>bara</td><td>create</td><td class="code">Vqp3ms</td><td>verb · qal · perfect · 3rd masc singular — “create” (H1254)</td></tr>
+<tr><td><b>B1</b></td><td class="code">2</td><td class="he">אֱלֹהִ֑ים</td><td>Elohim</td><td>God</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “God” (H430)</td></tr>
+<tr class="bstart"><td><b>B2</b></td><td class="code">3</td><td class="he">אֵ֥ת</td><td>et</td><td>obj-marker·et</td><td class="code">To</td><td>particle: object marker — “obj-marker·et” (H853)</td></tr>
+<tr><td><b>B2</b></td><td class="code">4a</td><td class="he">הַ</td><td>ha</td><td>the</td><td class="code">Td</td><td>particle: definite article — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B2</b></td><td class="code">4b</td><td class="he">שָּׁמַ֖יִם</td><td>shamayim</td><td>heavens</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “heavens” (H8064)</td></tr>
+<tr class="bstart"><td><b>B3</b></td><td class="code">5a</td><td class="he">וְ</td><td>ve</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B3</b></td><td class="code">5b</td><td class="he">אֵ֥ת</td><td>et</td><td>obj-marker·et</td><td class="code">To</td><td>particle: object marker — “obj-marker·et” (H853)</td></tr>
+<tr><td><b>B3</b></td><td class="code">6a</td><td class="he">הָ</td><td>ha</td><td>the</td><td class="code">Td</td><td>particle: definite article — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B3</b></td><td class="code">6b</td><td class="he">אָֽרֶץ</td><td>aretz</td><td>earth</td><td class="code">Ncbsa</td><td>noun · common · either-gender · singular · absolute — “earth” (H776)</td></tr>
+</table></div>
+<h3>Code — machine-operator sketch (auto, illustrative)</h3><pre class="codepre"><span class="cmt"># CODE (auto, illustrative) — mechanical rendering of the role column + verb forms.</span>
+<span class="cmt"># Not a frozen derivation; LET_Q keeps its &#x27;?&#x27; — never auto-upgraded [TIR-028].</span>
+<span class="cmt"># frozen coverage: gen_01_creation_boot · STEP_Gn_1_1 (EVENT_CREATE) — owner-derived operators live in that unit</span>
+
+pass                                           <span class="cmt"># B0 be-reshit — in-beginning  (context: PREP(in·beginning))</span>
+EVENT(&quot;create&quot;)                                <span class="cmt"># B1 bara Elohim — create God [Vqp3ms qal perfect]</span>
+THEME(&quot;heavens&quot;)                               <span class="cmt"># B2 et ha-shamayim — obj-marker·et the-heavens  [TIR-014]</span>
+THEME(&quot;earth&quot;)                                 <span class="cmt"># B3 ve-et ha-aretz — and-obj-marker·et the-earth  [TIR-014]</span></pre>
+<h2 id="v1_2">Gen 1:2</h2>
+<div class="meta">FLAT · taamim v3 · prose · 14 words → 8 bricks · parser status: unique · source: torah_grok.sqlite</div>
+<div class="fen">en: “The earth was formless and void, with darkness over the deep, and the spirit of God hovering over the waters.”</div>
+<div class="flat">
+<div class="row he-row"><span class="lab">he:</span> <span class="brick">(⁨וְהָאָ֗רֶץ⁩)</span> <span class="brick">(⁨הָיְתָ֥ה תֹ֨הוּ֙⁩)</span> <span class="brick">(⁨וָבֹ֔הוּ⁩)</span> <span class="brick">(⁨וְחֹ֖שֶׁךְ⁩)</span> <span class="brick">(⁨עַל־פְּנֵ֣י תְה֑וֹם⁩)</span> <span class="brick">(⁨וְר֣וּחַ אֱלֹהִ֔ים⁩)</span> <span class="brick">(⁨מְרַחֶ֖פֶת⁩)</span> <span class="brick">(⁨עַל־פְּנֵ֥י הַמָּֽיִם⁩)</span></div>
+<div class="row"><span class="lab">tr:</span> <span class="brick">(ve-ha-aretz)</span> <span class="brick">(hayta tohu)</span> <span class="brick">(va-vohu)</span> <span class="brick">(ve-choshekh)</span> <span class="brick">(al pene tehom)</span> <span class="brick">(ve-rucha Elohim)</span> <span class="brick">(merachefet)</span> <span class="brick">(al pene ha-mayim)</span></div>
+<div class="row"><span class="lab">en:</span> <span class="brick">(and-the-earth)</span> <span class="brick">(be formless)</span> <span class="brick">(and-void)</span> <span class="brick">(and-darkness)</span> <span class="brick">(over face deep)</span> <span class="brick">(and-spirit God)</span> <span class="brick">(hovering)</span> <span class="brick">(over face the-waters)</span></div>
+<div class="guide">B0 … B7 in reading order — Hebrew row runs right-to-left (B0 is the right-most paren); en = literal word glosses, verse line above = free English.</div></div>
+<h3>Leaf ledger</h3><div class="wrap"><table>
+<tr><th>B#</th><th>words</th><th>path</th><th>he</th><th>translit</th><th>en (literal)</th><th>end mark · rank</th><th>froze because</th><th>role (auto, illustrative)</th></tr>
+<tr><td><b>B0</b></td><td>w0</td><td class="code">L·L·L</td><td class="he">וְהָאָ֗רֶץ</td><td>ve-ha-aretz</td><td>and-the-earth</td><td>revia · r3</td><td>single word</td><td>DOMAIN(earth)</td></tr>
+<tr><td><b>B1</b></td><td>w1–2</td><td class="code">L·L·R·L</td><td class="he">הָיְתָ֥ה תֹ֨הוּ֙</td><td>hayta tohu</td><td>be formless</td><td>pashta · r3</td><td>only mercha (conj) inside</td><td>BECOME/WAS</td></tr>
+<tr><td><b>B2</b></td><td>w3</td><td class="code">L·L·R·R</td><td class="he">וָבֹ֔הוּ</td><td>va-vohu</td><td>and-void</td><td>zaqef_qatan · r2</td><td>single word</td><td>NP(void)</td></tr>
+<tr><td><b>B3</b></td><td>w4</td><td class="code">L·R·L</td><td class="he">וְחֹ֖שֶׁךְ</td><td>ve-choshekh</td><td>and-darkness</td><td>tifcha · r2</td><td>single word</td><td>DOMAIN(darkness)</td></tr>
+<tr><td><b>B4</b></td><td>w5–7</td><td class="code">L·R·R</td><td class="he">עַל־פְּנֵ֣י תְה֑וֹם</td><td>al pene tehom</td><td>over face deep</td><td>etnachta · r1</td><td>only munach, zero_conjunctive (conj) inside</td><td>PREP(over·face·deep)</td></tr>
+<tr><td><b>B5</b></td><td>w8–9</td><td class="code">R·L</td><td class="he">וְר֣וּחַ אֱלֹהִ֔ים</td><td>ve-rucha Elohim</td><td>and-spirit God</td><td>zaqef_qatan · r2</td><td>only munach (conj) inside</td><td>NP(spirit·God)</td></tr>
+<tr><td><b>B6</b></td><td>w10</td><td class="code">R·R·L</td><td class="he">מְרַחֶ֖פֶת</td><td>merachefet</td><td>hovering</td><td>tifcha · r2</td><td>single word</td><td>ONGOING(hovering)</td></tr>
+<tr><td><b>B7</b></td><td>w11–13</td><td class="code">R·R·R</td><td class="he">עַל־פְּנֵ֥י הַמָּֽיִם</td><td>al pene ha-mayim</td><td>over face the-waters</td><td>silluq · r1</td><td>only mercha, zero_conjunctive (conj) inside</td><td>PREP(over·face·waters)</td></tr>
+</table></div>
+<h3>Morph — every word and every morpheme letter (OSHB)</h3><div class="wrap"><table>
+<tr><th>B#</th><th>w</th><th>he</th><th>translit</th><th>en</th><th>OSHB code</th><th>grammar (English aid)</th></tr>
+<tr class="bstart"><td><b>B0</b></td><td class="code">0a</td><td class="he">וְ</td><td>ve</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B0</b></td><td class="code">0b</td><td class="he">הָ</td><td>ha</td><td>the</td><td class="code">Td</td><td>particle: definite article — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B0</b></td><td class="code">0c</td><td class="he">אָ֗רֶץ</td><td>aretz</td><td>earth</td><td class="code">Ncbsa</td><td>noun · common · either-gender · singular · absolute — “earth” (H776)</td></tr>
+<tr class="bstart"><td><b>B1</b></td><td class="code">1</td><td class="he">הָיְתָ֥ה</td><td>hayta</td><td>be</td><td class="code">Vqp3fs</td><td>verb · qal · perfect · 3rd fem singular — “be” (H1961)</td></tr>
+<tr><td><b>B1</b></td><td class="code">2</td><td class="he">תֹ֨הוּ֙</td><td>tohu</td><td>formless</td><td class="code">Ncmsa</td><td>noun · common · masc · singular · absolute — “formless” (H8414)</td></tr>
+<tr class="bstart"><td><b>B2</b></td><td class="code">3a</td><td class="he">וָ</td><td>va</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B2</b></td><td class="code">3b</td><td class="he">בֹ֔הוּ</td><td>vohu</td><td>void</td><td class="code">Ncmsa</td><td>noun · common · masc · singular · absolute — “void” (H922)</td></tr>
+<tr class="bstart"><td><b>B3</b></td><td class="code">4a</td><td class="he">וְ</td><td>ve</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B3</b></td><td class="code">4b</td><td class="he">חֹ֖שֶׁךְ</td><td>choshekh</td><td>darkness</td><td class="code">Ncmsa</td><td>noun · common · masc · singular · absolute — “darkness” (H2822)</td></tr>
+<tr class="bstart"><td><b>B4</b></td><td class="code">5</td><td class="he">עַל</td><td>al</td><td>over</td><td class="code">R</td><td>preposition — “over” (H5921)</td></tr>
+<tr><td><b>B4</b></td><td class="code">6</td><td class="he">פְּנֵ֣י</td><td>pene</td><td>face</td><td class="code">Ncbpc</td><td>noun · common · either-gender · plural · construct — “face” (H6440)</td></tr>
+<tr><td><b>B4</b></td><td class="code">7</td><td class="he">תְה֑וֹם</td><td>tehom</td><td>deep</td><td class="code">Ncbsa</td><td>noun · common · either-gender · singular · absolute — “deep” (H8415)</td></tr>
+<tr class="bstart"><td><b>B5</b></td><td class="code">8a</td><td class="he">וְ</td><td>ve</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B5</b></td><td class="code">8b</td><td class="he">ר֣וּחַ</td><td>rucha</td><td>spirit</td><td class="code">Ncbsc</td><td>noun · common · either-gender · singular · construct — “spirit” (H7307)</td></tr>
+<tr><td><b>B5</b></td><td class="code">9</td><td class="he">אֱלֹהִ֔ים</td><td>Elohim</td><td>God</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “God” (H430)</td></tr>
+<tr class="bstart"><td><b>B6</b></td><td class="code">10</td><td class="he">מְרַחֶ֖פֶת</td><td>merachefet</td><td>hovering</td><td class="code">Vprfsa</td><td>verb · piel · participle · fem · singular — “hovering” (H7363)</td></tr>
+<tr class="bstart"><td><b>B7</b></td><td class="code">11</td><td class="he">עַל</td><td>al</td><td>over</td><td class="code">R</td><td>preposition — “over” (H5921)</td></tr>
+<tr><td><b>B7</b></td><td class="code">12</td><td class="he">פְּנֵ֥י</td><td>pene</td><td>face</td><td class="code">Ncbpc</td><td>noun · common · either-gender · plural · construct — “face” (H6440)</td></tr>
+<tr><td><b>B7</b></td><td class="code">13a</td><td class="he">הַ</td><td>ha</td><td>the</td><td class="code">Td</td><td>particle: definite article — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B7</b></td><td class="code">13b</td><td class="he">מָּֽיִם</td><td>mayim</td><td>waters</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “waters” (H4325)</td></tr>
+</table></div>
+<h3>Code — machine-operator sketch (auto, illustrative)</h3><pre class="codepre"><span class="cmt"># CODE (auto, illustrative) — mechanical rendering of the role column + verb forms.</span>
+<span class="cmt"># Not a frozen derivation; LET_Q keeps its &#x27;?&#x27; — never auto-upgraded [TIR-028].</span>
+<span class="cmt"># frozen coverage: gen_01_creation_boot · STEP_Gn_1_2 (STATE_BLOCK) — owner-derived operators live in that unit</span>
+
+pass                                           <span class="cmt"># B0 ve-ha-aretz — and-the-earth  (context: DOMAIN(earth))</span>
+EVENT(&quot;become&quot;)                                <span class="cmt"># B1 hayta tohu — be formless [Vqp3fs qal perfect]</span>
+pass                                           <span class="cmt"># B2 va-vohu — and-void  (context: NP(void))</span>
+pass                                           <span class="cmt"># B3 ve-choshekh — and-darkness  (context: DOMAIN(darkness))</span>
+pass                                           <span class="cmt"># B4 al pene tehom — over face deep  (context: PREP(over·face·deep))</span>
+pass                                           <span class="cmt"># B5 ve-rucha Elohim — and-spirit God  (context: NP(spirit·God))</span>
+WORLD.invariant(&quot;hovering&quot;)                    <span class="cmt"># B6 merachefet — hovering [Vprfsa piel participle]  [TIR-031]</span>
+pass                                           <span class="cmt"># B7 al pene ha-mayim — over face the-waters  (context: PREP(over·face·waters))</span></pre>
+<h2 id="v1_3">Gen 1:3</h2>
+<div class="meta">FLAT · taamim v3 · prose · 6 words → 3 bricks · parser status: unique · source: torah_grok.sqlite</div>
+<div class="fen">en: “And God said, Let there be light — and there was light.”</div>
+<div class="flat">
+<div class="row he-row"><span class="lab">he:</span> <span class="brick">(⁨וַיֹּ֥אמֶר אֱלֹהִ֖ים⁩)</span> <span class="brick">(⁨יְהִ֣י א֑וֹר⁩)</span> <span class="brick">(⁨וַֽיְהִי־אֽוֹר⁩)</span></div>
+<div class="row"><span class="lab">tr:</span> <span class="brick">(va-yomer Elohim)</span> <span class="brick">(yehi or)</span> <span class="brick">(va-yehi or)</span></div>
+<div class="row"><span class="lab">en:</span> <span class="brick">(and-say God)</span> <span class="brick">(be light)</span> <span class="brick">(and-be light)</span></div>
+<div class="guide">B0 … B2 in reading order — Hebrew row runs right-to-left (B0 is the right-most paren); en = literal word glosses, verse line above = free English.</div></div>
+<h3>Leaf ledger</h3><div class="wrap"><table>
+<tr><th>B#</th><th>words</th><th>path</th><th>he</th><th>translit</th><th>en (literal)</th><th>end mark · rank</th><th>froze because</th><th>role (auto, illustrative)</th></tr>
+<tr><td><b>B0</b></td><td>w0–1</td><td class="code">L·L</td><td class="he">וַיֹּ֥אמֶר אֱלֹהִ֖ים</td><td>va-yomer Elohim</td><td>and-say God</td><td>tifcha · r2</td><td>only mercha (conj) inside</td><td>SPEAK(agent=Elohim)</td></tr>
+<tr><td><b>B1</b></td><td>w2–3</td><td class="code">L·R</td><td class="he">יְהִ֣י א֑וֹר</td><td>yehi or</td><td>be light</td><td>etnachta · r1</td><td>only munach (conj) inside</td><td>CMD(be)</td></tr>
+<tr><td><b>B2</b></td><td>w4–5</td><td class="code">R</td><td class="he">וַֽיְהִי־אֽוֹר</td><td>va-yehi or</td><td>and-be light</td><td>silluq · r1</td><td>only zero_conjunctive (conj) inside</td><td>BECOME/WAS</td></tr>
+</table></div>
+<h3>Morph — every word and every morpheme letter (OSHB)</h3><div class="wrap"><table>
+<tr><th>B#</th><th>w</th><th>he</th><th>translit</th><th>en</th><th>OSHB code</th><th>grammar (English aid)</th></tr>
+<tr class="bstart"><td><b>B0</b></td><td class="code">0a</td><td class="he">וַ</td><td>va</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B0</b></td><td class="code">0b</td><td class="he">יֹּ֥אמֶר</td><td>yomer</td><td>say</td><td class="code">Vqw3ms</td><td>verb · qal · wayyiqtol (narrative past) · 3rd masc singular — “say” (H559)</td></tr>
+<tr><td><b>B0</b></td><td class="code">1</td><td class="he">אֱלֹהִ֖ים</td><td>Elohim</td><td>God</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “God” (H430)</td></tr>
+<tr class="bstart"><td><b>B1</b></td><td class="code">2</td><td class="he">יְהִ֣י</td><td>yehi</td><td>be</td><td class="code">Vqj3ms</td><td>verb · qal · jussive · 3rd masc singular — “be” (H1961)</td></tr>
+<tr><td><b>B1</b></td><td class="code">3</td><td class="he">א֑וֹר</td><td>or</td><td>light</td><td class="code">Ncbsa</td><td>noun · common · either-gender · singular · absolute — “light” (H216)</td></tr>
+<tr class="bstart"><td><b>B2</b></td><td class="code">4a</td><td class="he">וַֽ</td><td>va</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B2</b></td><td class="code">4b</td><td class="he">יְהִי</td><td>yehi</td><td>be</td><td class="code">Vqw3ms</td><td>verb · qal · wayyiqtol (narrative past) · 3rd masc singular — “be” (H1961)</td></tr>
+<tr><td><b>B2</b></td><td class="code">5</td><td class="he">אֽוֹר</td><td>or</td><td>light</td><td class="code">Ncbsa</td><td>noun · common · either-gender · singular · absolute — “light” (H216)</td></tr>
+</table></div>
+<h3>Code — machine-operator sketch (auto, illustrative)</h3><pre class="codepre"><span class="cmt"># CODE (auto, illustrative) — mechanical rendering of the role column + verb forms.</span>
+<span class="cmt"># Not a frozen derivation; LET_Q keeps its &#x27;?&#x27; — never auto-upgraded [TIR-028].</span>
+<span class="cmt"># frozen coverage: gen_01_creation_boot · STEP_Gn_1_3 (DECLARE_LET_RESULT) — owner-derived operators live in that unit</span>
+
+DECLARE(agent=Elohim)                          <span class="cmt"># B0 va-yomer Elohim — and-say God [Vqw3ms qal wayyiqtol]</span>
+SPECS.push(LET(&quot;be&quot;))                          <span class="cmt"># B1 yehi or — be light [Vqj3ms qal jussive]  [TIR-026]</span>
+EVENT(&quot;become&quot;)                                <span class="cmt"># B2 va-yehi or — and-be light [Vqw3ms qal wayyiqtol]</span></pre>
+<h2 id="v1_4">Gen 1:4</h2>
+<div class="meta">FLAT · taamim v3 · prose · 12 words → 6 bricks · parser status: unique · source: torah_grok.sqlite</div>
+<div class="fen">en: “God saw that the light was good, and God divided the light from the darkness.”</div>
+<div class="flat">
+<div class="row he-row"><span class="lab">he:</span> <span class="brick">(⁨וַיַּ֧רְא אֱלֹהִ֛ים⁩)</span> <span class="brick">(⁨אֶת־הָא֖וֹר⁩)</span> <span class="brick">(⁨כִּי־ט֑וֹב⁩)</span> <span class="brick">(⁨וַיַּבְדֵּ֣ל אֱלֹהִ֔ים⁩)</span> <span class="brick">(⁨בֵּ֥ין הָא֖וֹר⁩)</span> <span class="brick">(⁨וּבֵ֥ין הַחֹֽשֶׁךְ⁩)</span></div>
+<div class="row"><span class="lab">tr:</span> <span class="brick">(va-yar Elohim)</span> <span class="brick">(et ha-or)</span> <span class="brick">(ki tov)</span> <span class="brick">(va-yavdel Elohim)</span> <span class="brick">(ben ha-or)</span> <span class="brick">(u-ven ha-choshekh)</span></div>
+<div class="row"><span class="lab">en:</span> <span class="brick">(and-see God)</span> <span class="brick">(obj-marker·et the-light)</span> <span class="brick">(that good)</span> <span class="brick">(and-divide God)</span> <span class="brick">(between the-light)</span> <span class="brick">(and-between the-darkness)</span></div>
+<div class="guide">B0 … B5 in reading order — Hebrew row runs right-to-left (B0 is the right-most paren); en = literal word glosses, verse line above = free English.</div></div>
+<h3>Leaf ledger</h3><div class="wrap"><table>
+<tr><th>B#</th><th>words</th><th>path</th><th>he</th><th>translit</th><th>en (literal)</th><th>end mark · rank</th><th>froze because</th><th>role (auto, illustrative)</th></tr>
+<tr><td><b>B0</b></td><td>w0–1</td><td class="code">L·L·L</td><td class="he">וַיַּ֧רְא אֱלֹהִ֛ים</td><td>va-yar Elohim</td><td>and-see God</td><td>tevir · r3</td><td>only darga (conj) inside</td><td>SEE/ASSESS</td></tr>
+<tr><td><b>B1</b></td><td>w2–3</td><td class="code">L·L·R</td><td class="he">אֶת־הָא֖וֹר</td><td>et ha-or</td><td>obj-marker·et the-light</td><td>tifcha · r2</td><td>only zero_conjunctive (conj) inside</td><td>LIGHTS +et-obj</td></tr>
+<tr><td><b>B2</b></td><td>w4–5</td><td class="code">L·R</td><td class="he">כִּי־ט֑וֹב</td><td>ki tov</td><td>that good</td><td>etnachta · r1</td><td>only zero_conjunctive (conj) inside</td><td>EVAL(good)</td></tr>
+<tr><td><b>B3</b></td><td>w6–7</td><td class="code">R·L</td><td class="he">וַיַּבְדֵּ֣ל אֱלֹהִ֔ים</td><td>va-yavdel Elohim</td><td>and-divide God</td><td>zaqef_qatan · r2</td><td>only munach (conj) inside</td><td>DIVIDE</td></tr>
+<tr><td><b>B4</b></td><td>w8–9</td><td class="code">R·R·L</td><td class="he">בֵּ֥ין הָא֖וֹר</td><td>ben ha-or</td><td>between the-light</td><td>tifcha · r2</td><td>only mercha (conj) inside</td><td>BETWEEN(light)</td></tr>
+<tr><td><b>B5</b></td><td>w10–11</td><td class="code">R·R·R</td><td class="he">וּבֵ֥ין הַחֹֽשֶׁךְ</td><td>u-ven ha-choshekh</td><td>and-between the-darkness</td><td>silluq · r1</td><td>only mercha (conj) inside</td><td>BETWEEN(darkness)</td></tr>
+</table></div>
+<h3>Morph — every word and every morpheme letter (OSHB)</h3><div class="wrap"><table>
+<tr><th>B#</th><th>w</th><th>he</th><th>translit</th><th>en</th><th>OSHB code</th><th>grammar (English aid)</th></tr>
+<tr class="bstart"><td><b>B0</b></td><td class="code">0a</td><td class="he">וַ</td><td>va</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B0</b></td><td class="code">0b</td><td class="he">יַּ֧רְא</td><td>yar</td><td>see</td><td class="code">Vqw3ms</td><td>verb · qal · wayyiqtol (narrative past) · 3rd masc singular — “see” (H7200)</td></tr>
+<tr><td><b>B0</b></td><td class="code">1</td><td class="he">אֱלֹהִ֛ים</td><td>Elohim</td><td>God</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “God” (H430)</td></tr>
+<tr class="bstart"><td><b>B1</b></td><td class="code">2</td><td class="he">אֶת</td><td>et</td><td>obj-marker·et</td><td class="code">To</td><td>particle: object marker — “obj-marker·et” (H853)</td></tr>
+<tr><td><b>B1</b></td><td class="code">3a</td><td class="he">הָ</td><td>ha</td><td>the</td><td class="code">Td</td><td>particle: definite article — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B1</b></td><td class="code">3b</td><td class="he">א֖וֹר</td><td>or</td><td>light</td><td class="code">Ncbsa</td><td>noun · common · either-gender · singular · absolute — “light” (H216)</td></tr>
+<tr class="bstart"><td><b>B2</b></td><td class="code">4</td><td class="he">כִּי</td><td>ki</td><td>that</td><td class="code">C</td><td>conjunction — “that” (H3588)</td></tr>
+<tr><td><b>B2</b></td><td class="code">5</td><td class="he">ט֑וֹב</td><td>tov</td><td>good</td><td class="code">Aamsa</td><td>adjective — “good” (H2896)</td></tr>
+<tr class="bstart"><td><b>B3</b></td><td class="code">6a</td><td class="he">וַ</td><td>va</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B3</b></td><td class="code">6b</td><td class="he">יַּבְדֵּ֣ל</td><td>yavdel</td><td>divide</td><td class="code">Vhw3ms</td><td>verb · hifil · wayyiqtol (narrative past) · 3rd masc singular — “divide” (H914)</td></tr>
+<tr><td><b>B3</b></td><td class="code">7</td><td class="he">אֱלֹהִ֔ים</td><td>Elohim</td><td>God</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “God” (H430)</td></tr>
+<tr class="bstart"><td><b>B4</b></td><td class="code">8</td><td class="he">בֵּ֥ין</td><td>ben</td><td>between</td><td class="code">R</td><td>preposition — “between” (H996)</td></tr>
+<tr><td><b>B4</b></td><td class="code">9a</td><td class="he">הָ</td><td>ha</td><td>the</td><td class="code">Td</td><td>particle: definite article — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B4</b></td><td class="code">9b</td><td class="he">א֖וֹר</td><td>or</td><td>light</td><td class="code">Ncbsa</td><td>noun · common · either-gender · singular · absolute — “light” (H216)</td></tr>
+<tr class="bstart"><td><b>B5</b></td><td class="code">10a</td><td class="he">וּ</td><td>u</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B5</b></td><td class="code">10b</td><td class="he">בֵ֥ין</td><td>ven</td><td>between</td><td class="code">R</td><td>preposition — “between” (H996)</td></tr>
+<tr><td><b>B5</b></td><td class="code">11a</td><td class="he">הַ</td><td>ha</td><td>the</td><td class="code">Td</td><td>particle: definite article — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B5</b></td><td class="code">11b</td><td class="he">חֹֽשֶׁךְ</td><td>choshekh</td><td>darkness</td><td class="code">Ncmsa</td><td>noun · common · masc · singular · absolute — “darkness” (H2822)</td></tr>
+</table></div>
+<h3>Code — machine-operator sketch (auto, illustrative)</h3><pre class="codepre"><span class="cmt"># CODE (auto, illustrative) — mechanical rendering of the role column + verb forms.</span>
+<span class="cmt"># Not a frozen derivation; LET_Q keeps its &#x27;?&#x27; — never auto-upgraded [TIR-028].</span>
+<span class="cmt"># frozen coverage: gen_01_creation_boot · STEP_Gn_1_4 (TEST_AND_PARTITION) — owner-derived operators live in that unit</span>
+
+EVENT(&quot;see&quot;)                                   <span class="cmt"># B0 va-yar Elohim — and-see God [Vqw3ms qal wayyiqtol]</span>
+pass                                           <span class="cmt"># B1 et ha-or — obj-marker·et the-light  (context: LIGHTS +et-obj)</span>
+TESTS.record(PASS(&quot;good&quot;))                     <span class="cmt"># B2 ki tov — that good</span>
+EVENT(&quot;divide&quot;)                                <span class="cmt"># B3 va-yavdel Elohim — and-divide God [Vhw3ms hifil wayyiqtol]</span>
+BETWEEN(&quot;light&quot;)                               <span class="cmt"># B4 ben ha-or — between the-light</span>
+BETWEEN(&quot;darkness&quot;)                            <span class="cmt"># B5 u-ven ha-choshekh — and-between the-darkness</span></pre>
+<h2 id="v1_5">Gen 1:5</h2>
+<div class="meta">FLAT · taamim v3 · prose · 13 words → 6 bricks · parser status: unique · source: torah_grok.sqlite</div>
+<div class="fen">en: “God called the light Day and the darkness Night; evening and morning — day one.”</div>
+<div class="flat">
+<div class="row he-row"><span class="lab">he:</span> <span class="brick">(⁨וַיִּקְרָ֨א אֱלֹהִ֤ים לָאוֹר֙⁩)</span> <span class="brick">(⁨י֔וֹם⁩)</span> <span class="brick">(⁨וְלַחֹ֖שֶׁךְ⁩)</span> <span class="brick">(⁨קָ֣רָא לָ֑יְלָה⁩)</span> <span class="brick">(⁨וַֽיְהִי־עֶ֥רֶב וַֽיְהִי־בֹ֖קֶר⁩)</span> <span class="brick">(⁨י֥וֹם אֶחָֽד⁩)</span></div>
+<div class="row"><span class="lab">tr:</span> <span class="brick">(va-yiqra Elohim la-or)</span> <span class="brick">(yom)</span> <span class="brick">(ve-la-choshekh)</span> <span class="brick">(qara layla)</span> <span class="brick">(va-yehi erev va-yehi voqer)</span> <span class="brick">(yom echad)</span></div>
+<div class="row"><span class="lab">en:</span> <span class="brick">(and-call God to-light)</span> <span class="brick">(day)</span> <span class="brick">(and-to-darkness)</span> <span class="brick">(call night)</span> <span class="brick">(and-be evening and-be morning)</span> <span class="brick">(day one)</span></div>
+<div class="guide">B0 … B5 in reading order — Hebrew row runs right-to-left (B0 is the right-most paren); en = literal word glosses, verse line above = free English.</div></div>
+<h3>Leaf ledger</h3><div class="wrap"><table>
+<tr><th>B#</th><th>words</th><th>path</th><th>he</th><th>translit</th><th>en (literal)</th><th>end mark · rank</th><th>froze because</th><th>role (auto, illustrative)</th></tr>
+<tr><td><b>B0</b></td><td>w0–2</td><td class="code">L·L·L</td><td class="he">וַיִּקְרָ֨א אֱלֹהִ֤ים לָאוֹר֙</td><td>va-yiqra Elohim la-or</td><td>and-call God to-light</td><td>pashta · r3</td><td>only mahpach, qadma (conj) inside</td><td>NAME</td></tr>
+<tr><td><b>B1</b></td><td>w3</td><td class="code">L·L·R</td><td class="he">י֔וֹם</td><td>yom</td><td>day</td><td>zaqef_qatan · r2</td><td>single word</td><td>DOMAIN(day/night)</td></tr>
+<tr><td><b>B2</b></td><td>w4</td><td class="code">L·R·L</td><td class="he">וְלַחֹ֖שֶׁךְ</td><td>ve-la-choshekh</td><td>and-to-darkness</td><td>tifcha · r2</td><td>single word</td><td>PREP(to·darkness)</td></tr>
+<tr><td><b>B3</b></td><td>w5–6</td><td class="code">L·R·R</td><td class="he">קָ֣רָא לָ֑יְלָה</td><td>qara layla</td><td>call night</td><td>etnachta · r1</td><td>only munach (conj) inside</td><td>NAME</td></tr>
+<tr><td><b>B4</b></td><td>w7–10</td><td class="code">R·L</td><td class="he">וַֽיְהִי־עֶ֥רֶב וַֽיְהִי־בֹ֖קֶר</td><td>va-yehi erev va-yehi voqer</td><td>and-be evening and-be morning</td><td>tifcha · r2</td><td>only mercha, zero_conjunctive (conj) inside</td><td>TIME-STAMP</td></tr>
+<tr><td><b>B5</b></td><td>w11–12</td><td class="code">R·R</td><td class="he">י֥וֹם אֶחָֽד</td><td>yom echad</td><td>day one</td><td>silluq · r1</td><td>only mercha (conj) inside</td><td>DAY-COUNT(one)</td></tr>
+</table></div>
+<h3>Morph — every word and every morpheme letter (OSHB)</h3><div class="wrap"><table>
+<tr><th>B#</th><th>w</th><th>he</th><th>translit</th><th>en</th><th>OSHB code</th><th>grammar (English aid)</th></tr>
+<tr class="bstart"><td><b>B0</b></td><td class="code">0a</td><td class="he">וַ</td><td>va</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B0</b></td><td class="code">0b</td><td class="he">יִּקְרָ֨א</td><td>yiqra</td><td>call</td><td class="code">Vqw3ms</td><td>verb · qal · wayyiqtol (narrative past) · 3rd masc singular — “call” (H7121)</td></tr>
+<tr><td><b>B0</b></td><td class="code">1</td><td class="he">אֱלֹהִ֤ים</td><td>Elohim</td><td>God</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “God” (H430)</td></tr>
+<tr><td><b>B0</b></td><td class="code">2a</td><td class="he">לָ</td><td>la</td><td>to</td><td class="code">Rd</td><td>preposition (definite) — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B0</b></td><td class="code">2b</td><td class="he">אוֹר֙</td><td>or</td><td>light</td><td class="code">Ncbsa</td><td>noun · common · either-gender · singular · absolute — “light” (H216)</td></tr>
+<tr class="bstart"><td><b>B1</b></td><td class="code">3</td><td class="he">י֔וֹם</td><td>yom</td><td>day</td><td class="code">Ncmsa</td><td>noun · common · masc · singular · absolute — “day” (H3117)</td></tr>
+<tr class="bstart"><td><b>B2</b></td><td class="code">4a</td><td class="he">וְ</td><td>ve</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B2</b></td><td class="code">4b</td><td class="he">לַ</td><td>la</td><td>to</td><td class="code">Rd</td><td>preposition (definite) — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B2</b></td><td class="code">4c</td><td class="he">חֹ֖שֶׁךְ</td><td>choshekh</td><td>darkness</td><td class="code">Ncmsa</td><td>noun · common · masc · singular · absolute — “darkness” (H2822)</td></tr>
+<tr class="bstart"><td><b>B3</b></td><td class="code">5</td><td class="he">קָ֣רָא</td><td>qara</td><td>call</td><td class="code">Vqp3ms</td><td>verb · qal · perfect · 3rd masc singular — “call” (H7121)</td></tr>
+<tr><td><b>B3</b></td><td class="code">6</td><td class="he">לָ֑יְלָה</td><td>layla</td><td>night</td><td class="code">Ncmsa</td><td>noun · common · masc · singular · absolute — “night” (H3915)</td></tr>
+<tr class="bstart"><td><b>B4</b></td><td class="code">7a</td><td class="he">וַֽ</td><td>va</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B4</b></td><td class="code">7b</td><td class="he">יְהִי</td><td>yehi</td><td>be</td><td class="code">Vqw3ms</td><td>verb · qal · wayyiqtol (narrative past) · 3rd masc singular — “be” (H1961)</td></tr>
+<tr><td><b>B4</b></td><td class="code">8</td><td class="he">עֶ֥רֶב</td><td>erev</td><td>evening</td><td class="code">Ncmsa</td><td>noun · common · masc · singular · absolute — “evening” (H6153)</td></tr>
+<tr><td><b>B4</b></td><td class="code">9a</td><td class="he">וַֽ</td><td>va</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B4</b></td><td class="code">9b</td><td class="he">יְהִי</td><td>yehi</td><td>be</td><td class="code">Vqw3ms</td><td>verb · qal · wayyiqtol (narrative past) · 3rd masc singular — “be” (H1961)</td></tr>
+<tr><td><b>B4</b></td><td class="code">10</td><td class="he">בֹ֖קֶר</td><td>voqer</td><td>morning</td><td class="code">Ncmsa</td><td>noun · common · masc · singular · absolute — “morning” (H1242)</td></tr>
+<tr class="bstart"><td><b>B5</b></td><td class="code">11</td><td class="he">י֥וֹם</td><td>yom</td><td>day</td><td class="code">Ncmsa</td><td>noun · common · masc · singular · absolute — “day” (H3117)</td></tr>
+<tr><td><b>B5</b></td><td class="code">12</td><td class="he">אֶחָֽד</td><td>echad</td><td>one</td><td class="code">Acmsa</td><td>adjective · common — “one” (H259)</td></tr>
+</table></div>
+<h3>Code — machine-operator sketch (auto, illustrative)</h3><pre class="codepre"><span class="cmt"># CODE (auto, illustrative) — mechanical rendering of the role column + verb forms.</span>
+<span class="cmt"># Not a frozen derivation; LET_Q keeps its &#x27;?&#x27; — never auto-upgraded [TIR-028].</span>
+<span class="cmt"># frozen coverage: gen_01_creation_boot · STEP_Gn_1_5 (NAME_AND_COMMIT) — owner-derived operators live in that unit</span>
+
+REGISTRY.name(...)                             <span class="cmt"># B0 va-yiqra Elohim la-or — and-call God to-light [Vqw3ms qal wayyiqtol]  [TIR-022]</span>
+pass                                           <span class="cmt"># B1 yom — day  (context: DOMAIN(day/night))</span>
+pass                                           <span class="cmt"># B2 ve-la-choshekh — and-to-darkness  (context: PREP(to·darkness))</span>
+REGISTRY.name(...)                             <span class="cmt"># B3 qara layla — call night [Vqp3ms qal perfect]  [TIR-022]</span>
+LEDGER.cycle(&quot;erev -&gt; boqer&quot;)                  <span class="cmt"># B4 va-yehi erev va-yehi voqer — and-be evening and-be morning [Vqw3ms qal wayyiqtol]</span>
+LEDGER.commit(day_label=&quot;one&quot;)                 <span class="cmt"># B5 yom echad — day one</span></pre>
+<h2 id="v1_6">Gen 1:6</h2>
+<div class="meta">FLAT · taamim v3 · prose · 11 words → 6 bricks · parser status: unique · source: torah_grok.sqlite</div>
+<div class="fen">en: “God said: let there be a firmament amid the waters, dividing waters from waters.”</div>
+<div class="flat">
+<div class="row he-row"><span class="lab">he:</span> <span class="brick">(⁨וַיֹּ֣אמֶר אֱלֹהִ֔ים⁩)</span> <span class="brick">(⁨יְהִ֥י רָקִ֖יעַ⁩)</span> <span class="brick">(⁨בְּת֣וֹךְ הַמָּ֑יִם⁩)</span> <span class="brick">(⁨וִיהִ֣י מַבְדִּ֔יל⁩)</span> <span class="brick">(⁨בֵּ֥ין מַ֖יִם⁩)</span> <span class="brick">(⁨לָמָֽיִם⁩)</span></div>
+<div class="row"><span class="lab">tr:</span> <span class="brick">(va-yomer Elohim)</span> <span class="brick">(yehi raqia)</span> <span class="brick">(be-tokh ha-mayim)</span> <span class="brick">(vi-yhi mavdil)</span> <span class="brick">(ben mayim)</span> <span class="brick">(la-mayim)</span></div>
+<div class="row"><span class="lab">en:</span> <span class="brick">(and-say God)</span> <span class="brick">(be firmament)</span> <span class="brick">(in-midst the-waters)</span> <span class="brick">(and-be divide)</span> <span class="brick">(between waters)</span> <span class="brick">(to-waters)</span></div>
+<div class="guide">B0 … B5 in reading order — Hebrew row runs right-to-left (B0 is the right-most paren); en = literal word glosses, verse line above = free English.</div></div>
+<h3>Leaf ledger</h3><div class="wrap"><table>
+<tr><th>B#</th><th>words</th><th>path</th><th>he</th><th>translit</th><th>en (literal)</th><th>end mark · rank</th><th>froze because</th><th>role (auto, illustrative)</th></tr>
+<tr><td><b>B0</b></td><td>w0–1</td><td class="code">L·L</td><td class="he">וַיֹּ֣אמֶר אֱלֹהִ֔ים</td><td>va-yomer Elohim</td><td>and-say God</td><td>zaqef_qatan · r2</td><td>only munach (conj) inside</td><td>SPEAK(agent=Elohim)</td></tr>
+<tr><td><b>B1</b></td><td>w2–3</td><td class="code">L·R·L</td><td class="he">יְהִ֥י רָקִ֖יעַ</td><td>yehi raqia</td><td>be firmament</td><td>tifcha · r2</td><td>only mercha (conj) inside</td><td>CMD(be)</td></tr>
+<tr><td><b>B2</b></td><td>w4–5</td><td class="code">L·R·R</td><td class="he">בְּת֣וֹךְ הַמָּ֑יִם</td><td>be-tokh ha-mayim</td><td>in-midst the-waters</td><td>etnachta · r1</td><td>only munach (conj) inside</td><td>PREP(in·midst·waters)</td></tr>
+<tr><td><b>B3</b></td><td>w6–7</td><td class="code">R·L</td><td class="he">וִיהִ֣י מַבְדִּ֔יל</td><td>vi-yhi mavdil</td><td>and-be divide</td><td>zaqef_qatan · r2</td><td>only munach (conj) inside</td><td>CMD?(be)</td></tr>
+<tr><td><b>B4</b></td><td>w8–9</td><td class="code">R·R·L</td><td class="he">בֵּ֥ין מַ֖יִם</td><td>ben mayim</td><td>between waters</td><td>tifcha · r2</td><td>only mercha (conj) inside</td><td>BETWEEN(waters)</td></tr>
+<tr><td><b>B5</b></td><td>w10</td><td class="code">R·R·R</td><td class="he">לָמָֽיִם</td><td>la-mayim</td><td>to-waters</td><td>silluq · r1</td><td>single word</td><td>PREP(to·waters)</td></tr>
+</table></div>
+<h3>Morph — every word and every morpheme letter (OSHB)</h3><div class="wrap"><table>
+<tr><th>B#</th><th>w</th><th>he</th><th>translit</th><th>en</th><th>OSHB code</th><th>grammar (English aid)</th></tr>
+<tr class="bstart"><td><b>B0</b></td><td class="code">0a</td><td class="he">וַ</td><td>va</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B0</b></td><td class="code">0b</td><td class="he">יֹּ֣אמֶר</td><td>yomer</td><td>say</td><td class="code">Vqw3ms</td><td>verb · qal · wayyiqtol (narrative past) · 3rd masc singular — “say” (H559)</td></tr>
+<tr><td><b>B0</b></td><td class="code">1</td><td class="he">אֱלֹהִ֔ים</td><td>Elohim</td><td>God</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “God” (H430)</td></tr>
+<tr class="bstart"><td><b>B1</b></td><td class="code">2</td><td class="he">יְהִ֥י</td><td>yehi</td><td>be</td><td class="code">Vqj3ms</td><td>verb · qal · jussive · 3rd masc singular — “be” (H1961)</td></tr>
+<tr><td><b>B1</b></td><td class="code">3</td><td class="he">רָקִ֖יעַ</td><td>raqia</td><td>firmament</td><td class="code">Ncmsa</td><td>noun · common · masc · singular · absolute — “firmament” (H7549)</td></tr>
+<tr class="bstart"><td><b>B2</b></td><td class="code">4a</td><td class="he">בְּ</td><td>be</td><td>in</td><td class="code">R</td><td>preposition — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B2</b></td><td class="code">4b</td><td class="he">ת֣וֹךְ</td><td>tokh</td><td>midst</td><td class="code">Ncmsc</td><td>noun · common · masc · singular · construct — “midst” (H8432)</td></tr>
+<tr><td><b>B2</b></td><td class="code">5a</td><td class="he">הַ</td><td>ha</td><td>the</td><td class="code">Td</td><td>particle: definite article — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B2</b></td><td class="code">5b</td><td class="he">מָּ֑יִם</td><td>mayim</td><td>waters</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “waters” (H4325)</td></tr>
+<tr class="bstart"><td><b>B3</b></td><td class="code">6a</td><td class="he">וִ</td><td>vi</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B3</b></td><td class="code">6b</td><td class="he">יהִ֣י</td><td>yhi</td><td>be</td><td class="code">Vqi3ms</td><td>verb · qal · imperfect · 3rd masc singular — “be” (H1961)</td></tr>
+<tr><td><b>B3</b></td><td class="code">7</td><td class="he">מַבְדִּ֔יל</td><td>mavdil</td><td>divide</td><td class="code">Vhrmsa</td><td>verb · hifil · participle · masc · singular — “divide” (H914)</td></tr>
+<tr class="bstart"><td><b>B4</b></td><td class="code">8</td><td class="he">בֵּ֥ין</td><td>ben</td><td>between</td><td class="code">R</td><td>preposition — “between” (H996)</td></tr>
+<tr><td><b>B4</b></td><td class="code">9</td><td class="he">מַ֖יִם</td><td>mayim</td><td>waters</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “waters” (H4325)</td></tr>
+<tr class="bstart"><td><b>B5</b></td><td class="code">10a</td><td class="he">לָ</td><td>la</td><td>to</td><td class="code">R</td><td>preposition — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B5</b></td><td class="code">10b</td><td class="he">מָֽיִם</td><td>mayim</td><td>waters</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “waters” (H4325)</td></tr>
+</table></div>
+<h3>Code — machine-operator sketch (auto, illustrative)</h3><pre class="codepre"><span class="cmt"># CODE (auto, illustrative) — mechanical rendering of the role column + verb forms.</span>
+<span class="cmt"># Not a frozen derivation; LET_Q keeps its &#x27;?&#x27; — never auto-upgraded [TIR-028].</span>
+
+DECLARE(agent=Elohim)                          <span class="cmt"># B0 va-yomer Elohim — and-say God [Vqw3ms qal wayyiqtol]</span>
+SPECS.push(LET(&quot;be&quot;))                          <span class="cmt"># B1 yehi raqia — be firmament [Vqj3ms qal jussive]  [TIR-026]</span>
+pass                                           <span class="cmt"># B2 be-tokh ha-mayim — in-midst the-waters  (context: PREP(in·midst·waters))</span>
+SPECS.push(LET_Q(&quot;be&quot;))                        <span class="cmt"># B3 vi-yhi mavdil — and-be divide [Vqi3ms qal imperfect]  [TIR-028]</span>
+BETWEEN(&quot;waters&quot;)                              <span class="cmt"># B4 ben mayim — between waters</span>
+pass                                           <span class="cmt"># B5 la-mayim — to-waters  (context: PREP(to·waters))</span></pre>
+<h2 id="v1_7">Gen 1:7</h2>
+<div class="meta">FLAT · taamim v3 · prose · 17 words → 10 bricks · parser status: unique · source: torah_grok.sqlite</div>
+<div class="fen">en: “God made the firmament and divided the waters beneath it from the waters above it — and it was so.”</div>
+<div class="flat">
+<div class="row he-row"><span class="lab">he:</span> <span class="brick">(⁨וַיַּ֣עַשׂ אֱלֹהִים֮⁩)</span> <span class="brick">(⁨אֶת־הָרָקִיעַ֒⁩)</span> <span class="brick">(⁨וַיַּבְדֵּ֗ל⁩)</span> <span class="brick">(⁨בֵּ֤ין הַמַּ֨יִם֙⁩)</span> <span class="brick">(⁨אֲשֶׁר֙⁩)</span> <span class="brick">(⁨מִתַּ֣חַת לָרָקִ֔יעַ⁩)</span> <span class="brick">(⁨וּבֵ֣ין הַמַּ֔יִם⁩)</span> <span class="brick">(⁨אֲשֶׁ֖ר⁩)</span> <span class="brick">(⁨מֵעַ֣ל לָרָקִ֑יעַ⁩)</span> <span class="brick">(⁨וַֽיְהִי־כֵֽן⁩)</span></div>
+<div class="row"><span class="lab">tr:</span> <span class="brick">(va-yaas Elohim)</span> <span class="brick">(et ha-raqia)</span> <span class="brick">(va-yavdel)</span> <span class="brick">(ben ha-mayim)</span> <span class="brick">(asher)</span> <span class="brick">(mi-tachat la-raqia)</span> <span class="brick">(u-ven ha-mayim)</span> <span class="brick">(asher)</span> <span class="brick">(me-al la-raqia)</span> <span class="brick">(va-yehi khen)</span></div>
+<div class="row"><span class="lab">en:</span> <span class="brick">(and-make God)</span> <span class="brick">(obj-marker·et the-firmament)</span> <span class="brick">(and-divide)</span> <span class="brick">(between the-waters)</span> <span class="brick">(which)</span> <span class="brick">(from-under to-firmament)</span> <span class="brick">(and-between the-waters)</span> <span class="brick">(which)</span> <span class="brick">(from-over to-firmament)</span> <span class="brick">(and-be so)</span></div>
+<div class="guide">B0 … B9 in reading order — Hebrew row runs right-to-left (B0 is the right-most paren); en = literal word glosses, verse line above = free English.</div></div>
+<h3>Leaf ledger</h3><div class="wrap"><table>
+<tr><th>B#</th><th>words</th><th>path</th><th>he</th><th>translit</th><th>en (literal)</th><th>end mark · rank</th><th>froze because</th><th>role (auto, illustrative)</th></tr>
+<tr><td><b>B0</b></td><td>w0–1</td><td class="code">L·L·L</td><td class="he">וַיַּ֣עַשׂ אֱלֹהִים֮</td><td>va-yaas Elohim</td><td>and-make God</td><td>zinor · r3</td><td>only munach (conj) inside</td><td>MAKE</td></tr>
+<tr><td><b>B1</b></td><td>w2–3</td><td class="code">L·L·R</td><td class="he">אֶת־הָרָקִיעַ֒</td><td>et ha-raqia</td><td>obj-marker·et the-firmament</td><td>segol · r2</td><td>only zero_conjunctive (conj) inside</td><td>OBJ_FRAME(firmament)</td></tr>
+<tr><td><b>B2</b></td><td>w4</td><td class="code">L·R·L·L</td><td class="he">וַיַּבְדֵּ֗ל</td><td>va-yavdel</td><td>and-divide</td><td>revia · r3</td><td>single word</td><td>DIVIDE</td></tr>
+<tr><td><b>B3</b></td><td>w5–6</td><td class="code">L·R·L·R·L</td><td class="he">בֵּ֤ין הַמַּ֨יִם֙</td><td>ben ha-mayim</td><td>between the-waters</td><td>pashta · r3</td><td>only mahpach (conj) inside</td><td>BETWEEN(waters)</td></tr>
+<tr><td><b>B4</b></td><td>w7</td><td class="code">L·R·L·R·R·L</td><td class="he">אֲשֶׁר֙</td><td>asher</td><td>which</td><td>pashta · r3</td><td>single word</td><td>REL(…)</td></tr>
+<tr><td><b>B5</b></td><td>w8–9</td><td class="code">L·R·L·R·R·R</td><td class="he">מִתַּ֣חַת לָרָקִ֔יעַ</td><td>mi-tachat la-raqia</td><td>from-under to-firmament</td><td>zaqef_qatan · r2</td><td>only munach (conj) inside</td><td>PREP(from·firmament)</td></tr>
+<tr><td><b>B6</b></td><td>w10–11</td><td class="code">L·R·R·L</td><td class="he">וּבֵ֣ין הַמַּ֔יִם</td><td>u-ven ha-mayim</td><td>and-between the-waters</td><td>zaqef_qatan · r2</td><td>only munach (conj) inside</td><td>BETWEEN(waters)</td></tr>
+<tr><td><b>B7</b></td><td>w12</td><td class="code">L·R·R·R·L</td><td class="he">אֲשֶׁ֖ר</td><td>asher</td><td>which</td><td>tifcha · r2</td><td>single word</td><td>REL(…)</td></tr>
+<tr><td><b>B8</b></td><td>w13–14</td><td class="code">L·R·R·R·R</td><td class="he">מֵעַ֣ל לָרָקִ֑יעַ</td><td>me-al la-raqia</td><td>from-over to-firmament</td><td>etnachta · r1</td><td>only munach (conj) inside</td><td>PREP(from·firmament)</td></tr>
+<tr><td><b>B9</b></td><td>w15–16</td><td class="code">R</td><td class="he">וַֽיְהִי־כֵֽן</td><td>va-yehi khen</td><td>and-be so</td><td>silluq · r1</td><td>only zero_conjunctive (conj) inside</td><td>RESULT(so)</td></tr>
+</table></div>
+<h3>Morph — every word and every morpheme letter (OSHB)</h3><div class="wrap"><table>
+<tr><th>B#</th><th>w</th><th>he</th><th>translit</th><th>en</th><th>OSHB code</th><th>grammar (English aid)</th></tr>
+<tr class="bstart"><td><b>B0</b></td><td class="code">0a</td><td class="he">וַ</td><td>va</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B0</b></td><td class="code">0b</td><td class="he">יַּ֣עַשׂ</td><td>yaas</td><td>make</td><td class="code">Vqw3ms</td><td>verb · qal · wayyiqtol (narrative past) · 3rd masc singular — “make” (H6213)</td></tr>
+<tr><td><b>B0</b></td><td class="code">1</td><td class="he">אֱלֹהִים֮</td><td>Elohim</td><td>God</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “God” (H430)</td></tr>
+<tr class="bstart"><td><b>B1</b></td><td class="code">2</td><td class="he">אֶת</td><td>et</td><td>obj-marker·et</td><td class="code">To</td><td>particle: object marker — “obj-marker·et” (H853)</td></tr>
+<tr><td><b>B1</b></td><td class="code">3a</td><td class="he">הָ</td><td>ha</td><td>the</td><td class="code">Td</td><td>particle: definite article — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B1</b></td><td class="code">3b</td><td class="he">רָקִיעַ֒</td><td>raqia</td><td>firmament</td><td class="code">Ncmsa</td><td>noun · common · masc · singular · absolute — “firmament” (H7549)</td></tr>
+<tr class="bstart"><td><b>B2</b></td><td class="code">4a</td><td class="he">וַ</td><td>va</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B2</b></td><td class="code">4b</td><td class="he">יַּבְדֵּ֗ל</td><td>yavdel</td><td>divide</td><td class="code">Vhw3ms</td><td>verb · hifil · wayyiqtol (narrative past) · 3rd masc singular — “divide” (H914)</td></tr>
+<tr class="bstart"><td><b>B3</b></td><td class="code">5</td><td class="he">בֵּ֤ין</td><td>ben</td><td>between</td><td class="code">R</td><td>preposition — “between” (H996)</td></tr>
+<tr><td><b>B3</b></td><td class="code">6a</td><td class="he">הַ</td><td>ha</td><td>the</td><td class="code">Td</td><td>particle: definite article — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B3</b></td><td class="code">6b</td><td class="he">מַּ֨יִם֙</td><td>mayim</td><td>waters</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “waters” (H4325)</td></tr>
+<tr class="bstart"><td><b>B4</b></td><td class="code">7</td><td class="he">אֲשֶׁר֙</td><td>asher</td><td>which</td><td class="code">Tr</td><td>particle: relative — “which” (H834)</td></tr>
+<tr class="bstart"><td><b>B5</b></td><td class="code">8a</td><td class="he">מִ</td><td>mi</td><td>from</td><td class="code">R</td><td>preposition — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B5</b></td><td class="code">8b</td><td class="he">תַּ֣חַת</td><td>tachat</td><td>under</td><td class="code">R</td><td>preposition — “under” (H8478)</td></tr>
+<tr><td><b>B5</b></td><td class="code">9a</td><td class="he">לָ</td><td>la</td><td>to</td><td class="code">Rd</td><td>preposition (definite) — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B5</b></td><td class="code">9b</td><td class="he">רָקִ֔יעַ</td><td>raqia</td><td>firmament</td><td class="code">Ncmsa</td><td>noun · common · masc · singular · absolute — “firmament” (H7549)</td></tr>
+<tr class="bstart"><td><b>B6</b></td><td class="code">10a</td><td class="he">וּ</td><td>u</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B6</b></td><td class="code">10b</td><td class="he">בֵ֣ין</td><td>ven</td><td>between</td><td class="code">R</td><td>preposition — “between” (H996)</td></tr>
+<tr><td><b>B6</b></td><td class="code">11a</td><td class="he">הַ</td><td>ha</td><td>the</td><td class="code">Td</td><td>particle: definite article — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B6</b></td><td class="code">11b</td><td class="he">מַּ֔יִם</td><td>mayim</td><td>waters</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “waters” (H4325)</td></tr>
+<tr class="bstart"><td><b>B7</b></td><td class="code">12</td><td class="he">אֲשֶׁ֖ר</td><td>asher</td><td>which</td><td class="code">Tr</td><td>particle: relative — “which” (H834)</td></tr>
+<tr class="bstart"><td><b>B8</b></td><td class="code">13a</td><td class="he">מֵ</td><td>me</td><td>from</td><td class="code">R</td><td>preposition — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B8</b></td><td class="code">13b</td><td class="he">עַ֣ל</td><td>al</td><td>over</td><td class="code">R</td><td>preposition — “over” (H5921)</td></tr>
+<tr><td><b>B8</b></td><td class="code">14a</td><td class="he">לָ</td><td>la</td><td>to</td><td class="code">Rd</td><td>preposition (definite) — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B8</b></td><td class="code">14b</td><td class="he">רָקִ֑יעַ</td><td>raqia</td><td>firmament</td><td class="code">Ncmsa</td><td>noun · common · masc · singular · absolute — “firmament” (H7549)</td></tr>
+<tr class="bstart"><td><b>B9</b></td><td class="code">15a</td><td class="he">וַֽ</td><td>va</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B9</b></td><td class="code">15b</td><td class="he">יְהִי</td><td>yehi</td><td>be</td><td class="code">Vqw3ms</td><td>verb · qal · wayyiqtol (narrative past) · 3rd masc singular — “be” (H1961)</td></tr>
+<tr><td><b>B9</b></td><td class="code">16</td><td class="he">כֵֽן</td><td>khen</td><td>so</td><td class="code">D</td><td>adverb — “so” (H3651)</td></tr>
+</table></div>
+<h3>Code — machine-operator sketch (auto, illustrative)</h3><pre class="codepre"><span class="cmt"># CODE (auto, illustrative) — mechanical rendering of the role column + verb forms.</span>
+<span class="cmt"># Not a frozen derivation; LET_Q keeps its &#x27;?&#x27; — never auto-upgraded [TIR-028].</span>
+
+EVENT(&quot;make&quot;)                                  <span class="cmt"># B0 va-yaas Elohim — and-make God [Vqw3ms qal wayyiqtol]</span>
+THEME(&quot;firmament&quot;)                             <span class="cmt"># B1 et ha-raqia — obj-marker·et the-firmament  [TIR-014]</span>
+EVENT(&quot;divide&quot;)                                <span class="cmt"># B2 va-yavdel — and-divide [Vhw3ms hifil wayyiqtol]</span>
+BETWEEN(&quot;waters&quot;)                              <span class="cmt"># B3 ben ha-mayim — between the-waters</span>
+pass                                           <span class="cmt"># B4 asher — which  (context: REL(…))</span>
+pass                                           <span class="cmt"># B5 mi-tachat la-raqia — from-under to-firmament  (context: PREP(from·firmament))</span>
+BETWEEN(&quot;waters&quot;)                              <span class="cmt"># B6 u-ven ha-mayim — and-between the-waters</span>
+pass                                           <span class="cmt"># B7 asher — which  (context: REL(…))</span>
+pass                                           <span class="cmt"># B8 me-al la-raqia — from-over to-firmament  (context: PREP(from·firmament))</span>
+RESULT(&quot;so&quot;)                                   <span class="cmt"># B9 va-yehi khen — and-be so [Vqw3ms qal wayyiqtol]</span></pre>
+<h2 id="v1_8">Gen 1:8</h2>
+<div class="meta">FLAT · taamim v3 · prose · 10 words → 5 bricks · parser status: unique · source: torah_grok.sqlite</div>
+<div class="fen">en: “God called the firmament Heavens; evening and morning — a second day.”</div>
+<div class="flat">
+<div class="row he-row"><span class="lab">he:</span> <span class="brick">(⁨וַיִּקְרָ֧א אֱלֹהִ֛ים⁩)</span> <span class="brick">(⁨לָֽרָקִ֖יעַ⁩)</span> <span class="brick">(⁨שָׁמָ֑יִם⁩)</span> <span class="brick">(⁨וַֽיְהִי־עֶ֥רֶב וַֽיְהִי־בֹ֖קֶר⁩)</span> <span class="brick">(⁨י֥וֹם שֵׁנִֽי⁩)</span></div>
+<div class="row"><span class="lab">tr:</span> <span class="brick">(va-yiqra Elohim)</span> <span class="brick">(la-raqia)</span> <span class="brick">(shamayim)</span> <span class="brick">(va-yehi erev va-yehi voqer)</span> <span class="brick">(yom sheni)</span></div>
+<div class="row"><span class="lab">en:</span> <span class="brick">(and-call God)</span> <span class="brick">(to-firmament)</span> <span class="brick">(heavens)</span> <span class="brick">(and-be evening and-be morning)</span> <span class="brick">(day second)</span></div>
+<div class="guide">B0 … B4 in reading order — Hebrew row runs right-to-left (B0 is the right-most paren); en = literal word glosses, verse line above = free English.</div></div>
+<h3>Leaf ledger</h3><div class="wrap"><table>
+<tr><th>B#</th><th>words</th><th>path</th><th>he</th><th>translit</th><th>en (literal)</th><th>end mark · rank</th><th>froze because</th><th>role (auto, illustrative)</th></tr>
+<tr><td><b>B0</b></td><td>w0–1</td><td class="code">L·L·L</td><td class="he">וַיִּקְרָ֧א אֱלֹהִ֛ים</td><td>va-yiqra Elohim</td><td>and-call God</td><td>tevir · r3</td><td>only darga (conj) inside</td><td>NAME</td></tr>
+<tr><td><b>B1</b></td><td>w2</td><td class="code">L·L·R</td><td class="he">לָֽרָקִ֖יעַ</td><td>la-raqia</td><td>to-firmament</td><td>tifcha · r2</td><td>single word</td><td>PREP(to·firmament)</td></tr>
+<tr><td><b>B2</b></td><td>w3</td><td class="code">L·R</td><td class="he">שָׁמָ֑יִם</td><td>shamayim</td><td>heavens</td><td>etnachta · r1</td><td>single word</td><td>DOMAIN(heavens)</td></tr>
+<tr><td><b>B3</b></td><td>w4–7</td><td class="code">R·L</td><td class="he">וַֽיְהִי־עֶ֥רֶב וַֽיְהִי־בֹ֖קֶר</td><td>va-yehi erev va-yehi voqer</td><td>and-be evening and-be morning</td><td>tifcha · r2</td><td>only mercha, zero_conjunctive (conj) inside</td><td>TIME-STAMP</td></tr>
+<tr><td><b>B4</b></td><td>w8–9</td><td class="code">R·R</td><td class="he">י֥וֹם שֵׁנִֽי</td><td>yom sheni</td><td>day second</td><td>silluq · r1</td><td>only mercha (conj) inside</td><td>DAY-COUNT(second)</td></tr>
+</table></div>
+<h3>Morph — every word and every morpheme letter (OSHB)</h3><div class="wrap"><table>
+<tr><th>B#</th><th>w</th><th>he</th><th>translit</th><th>en</th><th>OSHB code</th><th>grammar (English aid)</th></tr>
+<tr class="bstart"><td><b>B0</b></td><td class="code">0a</td><td class="he">וַ</td><td>va</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B0</b></td><td class="code">0b</td><td class="he">יִּקְרָ֧א</td><td>yiqra</td><td>call</td><td class="code">Vqw3ms</td><td>verb · qal · wayyiqtol (narrative past) · 3rd masc singular — “call” (H7121)</td></tr>
+<tr><td><b>B0</b></td><td class="code">1</td><td class="he">אֱלֹהִ֛ים</td><td>Elohim</td><td>God</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “God” (H430)</td></tr>
+<tr class="bstart"><td><b>B1</b></td><td class="code">2a</td><td class="he">לָֽ</td><td>la</td><td>to</td><td class="code">Rd</td><td>preposition (definite) — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B1</b></td><td class="code">2b</td><td class="he">רָקִ֖יעַ</td><td>raqia</td><td>firmament</td><td class="code">Ncmsa</td><td>noun · common · masc · singular · absolute — “firmament” (H7549)</td></tr>
+<tr class="bstart"><td><b>B2</b></td><td class="code">3</td><td class="he">שָׁמָ֑יִם</td><td>shamayim</td><td>heavens</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “heavens” (H8064)</td></tr>
+<tr class="bstart"><td><b>B3</b></td><td class="code">4a</td><td class="he">וַֽ</td><td>va</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B3</b></td><td class="code">4b</td><td class="he">יְהִי</td><td>yehi</td><td>be</td><td class="code">Vqw3ms</td><td>verb · qal · wayyiqtol (narrative past) · 3rd masc singular — “be” (H1961)</td></tr>
+<tr><td><b>B3</b></td><td class="code">5</td><td class="he">עֶ֥רֶב</td><td>erev</td><td>evening</td><td class="code">Ncmsa</td><td>noun · common · masc · singular · absolute — “evening” (H6153)</td></tr>
+<tr><td><b>B3</b></td><td class="code">6a</td><td class="he">וַֽ</td><td>va</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B3</b></td><td class="code">6b</td><td class="he">יְהִי</td><td>yehi</td><td>be</td><td class="code">Vqw3ms</td><td>verb · qal · wayyiqtol (narrative past) · 3rd masc singular — “be” (H1961)</td></tr>
+<tr><td><b>B3</b></td><td class="code">7</td><td class="he">בֹ֖קֶר</td><td>voqer</td><td>morning</td><td class="code">Ncmsa</td><td>noun · common · masc · singular · absolute — “morning” (H1242)</td></tr>
+<tr class="bstart"><td><b>B4</b></td><td class="code">8</td><td class="he">י֥וֹם</td><td>yom</td><td>day</td><td class="code">Ncmsa</td><td>noun · common · masc · singular · absolute — “day” (H3117)</td></tr>
+<tr><td><b>B4</b></td><td class="code">9</td><td class="he">שֵׁנִֽי</td><td>sheni</td><td>second</td><td class="code">Aomsa</td><td>adjective — “second” (H8145)</td></tr>
+</table></div>
+<h3>Code — machine-operator sketch (auto, illustrative)</h3><pre class="codepre"><span class="cmt"># CODE (auto, illustrative) — mechanical rendering of the role column + verb forms.</span>
+<span class="cmt"># Not a frozen derivation; LET_Q keeps its &#x27;?&#x27; — never auto-upgraded [TIR-028].</span>
+
+REGISTRY.name(...)                             <span class="cmt"># B0 va-yiqra Elohim — and-call God [Vqw3ms qal wayyiqtol]  [TIR-022]</span>
+pass                                           <span class="cmt"># B1 la-raqia — to-firmament  (context: PREP(to·firmament))</span>
+pass                                           <span class="cmt"># B2 shamayim — heavens  (context: DOMAIN(heavens))</span>
+LEDGER.cycle(&quot;erev -&gt; boqer&quot;)                  <span class="cmt"># B3 va-yehi erev va-yehi voqer — and-be evening and-be morning [Vqw3ms qal wayyiqtol]</span>
+LEDGER.commit(day_label=&quot;second&quot;)              <span class="cmt"># B4 yom sheni — day second</span></pre>
+<h2 id="v1_9">Gen 1:9</h2>
+<div class="meta">FLAT · taamim v3 · prose · 13 words → 7 bricks · parser status: unique · source: torah_grok.sqlite</div>
+<div class="fen">en: “God said: let the waters under the heavens gather to one place, and let the dry land appear — and it was so.”</div>
+<div class="flat">
+<div class="row he-row"><span class="lab">he:</span> <span class="brick">(⁨וַיֹּ֣אמֶר אֱלֹהִ֗ים⁩)</span> <span class="brick">(⁨יִקָּו֨וּ הַמַּ֜יִם⁩)</span> <span class="brick">(⁨מִתַּ֤חַת הַשָּׁמַ֨יִם֙⁩)</span> <span class="brick">(⁨אֶל־מָק֣וֹם אֶחָ֔ד⁩)</span> <span class="brick">(⁨וְתֵרָאֶ֖ה⁩)</span> <span class="brick">(⁨הַיַּבָּשָׁ֑ה⁩)</span> <span class="brick">(⁨וַֽיְהִי־כֵֽן⁩)</span></div>
+<div class="row"><span class="lab">tr:</span> <span class="brick">(va-yomer Elohim)</span> <span class="brick">(yiqavu ha-mayim)</span> <span class="brick">(mi-tachat ha-shamayim)</span> <span class="brick">(el maqom echad)</span> <span class="brick">(ve-terae)</span> <span class="brick">(ha-yabasha)</span> <span class="brick">(va-yehi khen)</span></div>
+<div class="row"><span class="lab">en:</span> <span class="brick">(and-say God)</span> <span class="brick">(be-gathered the-waters)</span> <span class="brick">(from-under the-heavens)</span> <span class="brick">(to place one)</span> <span class="brick">(and-see)</span> <span class="brick">(the-dry-land)</span> <span class="brick">(and-be so)</span></div>
+<div class="guide">B0 … B6 in reading order — Hebrew row runs right-to-left (B0 is the right-most paren); en = literal word glosses, verse line above = free English.</div></div>
+<h3>Leaf ledger</h3><div class="wrap"><table>
+<tr><th>B#</th><th>words</th><th>path</th><th>he</th><th>translit</th><th>en (literal)</th><th>end mark · rank</th><th>froze because</th><th>role (auto, illustrative)</th></tr>
+<tr><td><b>B0</b></td><td>w0–1</td><td class="code">L·L·L</td><td class="he">וַיֹּ֣אמֶר אֱלֹהִ֗ים</td><td>va-yomer Elohim</td><td>and-say God</td><td>revia · r3</td><td>only munach (conj) inside</td><td>SPEAK(agent=Elohim)</td></tr>
+<tr><td><b>B1</b></td><td>w2–3</td><td class="code">L·L·R·L·L</td><td class="he">יִקָּו֨וּ הַמַּ֜יִם</td><td>yiqavu ha-mayim</td><td>be-gathered the-waters</td><td>geresh · r4</td><td>only qadma (conj) inside</td><td>CMD(be-gathered)</td></tr>
+<tr><td><b>B2</b></td><td>w4–5</td><td class="code">L·L·R·L·R</td><td class="he">מִתַּ֤חַת הַשָּׁמַ֨יִם֙</td><td>mi-tachat ha-shamayim</td><td>from-under the-heavens</td><td>pashta · r3</td><td>only mahpach (conj) inside</td><td>PREP(from·heavens)</td></tr>
+<tr><td><b>B3</b></td><td>w6–8</td><td class="code">L·L·R·R</td><td class="he">אֶל־מָק֣וֹם אֶחָ֔ד</td><td>el maqom echad</td><td>to place one</td><td>zaqef_qatan · r2</td><td>only munach, zero_conjunctive (conj) inside</td><td>NP(place·one)</td></tr>
+<tr><td><b>B4</b></td><td>w9</td><td class="code">L·R·L</td><td class="he">וְתֵרָאֶ֖ה</td><td>ve-terae</td><td>and-see</td><td>tifcha · r2</td><td>single word</td><td>CMD?(be-seen)</td></tr>
+<tr><td><b>B5</b></td><td>w10</td><td class="code">L·R·R</td><td class="he">הַיַּבָּשָׁ֑ה</td><td>ha-yabasha</td><td>the-dry-land</td><td>etnachta · r1</td><td>single word</td><td>DRY-LAND</td></tr>
+<tr><td><b>B6</b></td><td>w11–12</td><td class="code">R</td><td class="he">וַֽיְהִי־כֵֽן</td><td>va-yehi khen</td><td>and-be so</td><td>silluq · r1</td><td>only zero_conjunctive (conj) inside</td><td>RESULT(so)</td></tr>
+</table></div>
+<h3>Morph — every word and every morpheme letter (OSHB)</h3><div class="wrap"><table>
+<tr><th>B#</th><th>w</th><th>he</th><th>translit</th><th>en</th><th>OSHB code</th><th>grammar (English aid)</th></tr>
+<tr class="bstart"><td><b>B0</b></td><td class="code">0a</td><td class="he">וַ</td><td>va</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B0</b></td><td class="code">0b</td><td class="he">יֹּ֣אמֶר</td><td>yomer</td><td>say</td><td class="code">Vqw3ms</td><td>verb · qal · wayyiqtol (narrative past) · 3rd masc singular — “say” (H559)</td></tr>
+<tr><td><b>B0</b></td><td class="code">1</td><td class="he">אֱלֹהִ֗ים</td><td>Elohim</td><td>God</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “God” (H430)</td></tr>
+<tr class="bstart"><td><b>B1</b></td><td class="code">2</td><td class="he">יִקָּו֨וּ</td><td>yiqavu</td><td>be-gathered</td><td class="code">VNj3mp</td><td>verb · niphal · jussive · 3rd masc plural — “be-gathered” (H6960)</td></tr>
+<tr><td><b>B1</b></td><td class="code">3a</td><td class="he">הַ</td><td>ha</td><td>the</td><td class="code">Td</td><td>particle: definite article — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B1</b></td><td class="code">3b</td><td class="he">מַּ֜יִם</td><td>mayim</td><td>waters</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “waters” (H4325)</td></tr>
+<tr class="bstart"><td><b>B2</b></td><td class="code">4a</td><td class="he">מִ</td><td>mi</td><td>from</td><td class="code">R</td><td>preposition — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B2</b></td><td class="code">4b</td><td class="he">תַּ֤חַת</td><td>tachat</td><td>under</td><td class="code">R</td><td>preposition — “under” (H8478)</td></tr>
+<tr><td><b>B2</b></td><td class="code">5a</td><td class="he">הַ</td><td>ha</td><td>the</td><td class="code">Td</td><td>particle: definite article — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B2</b></td><td class="code">5b</td><td class="he">שָּׁמַ֨יִם֙</td><td>shamayim</td><td>heavens</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “heavens” (H8064)</td></tr>
+<tr class="bstart"><td><b>B3</b></td><td class="code">6</td><td class="he">אֶל</td><td>el</td><td>to</td><td class="code">R</td><td>preposition — “to” (H413)</td></tr>
+<tr><td><b>B3</b></td><td class="code">7</td><td class="he">מָק֣וֹם</td><td>maqom</td><td>place</td><td class="code">Ncmsa</td><td>noun · common · masc · singular · absolute — “place” (H4725)</td></tr>
+<tr><td><b>B3</b></td><td class="code">8</td><td class="he">אֶחָ֔ד</td><td>echad</td><td>one</td><td class="code">Acmsa</td><td>adjective · common — “one” (H259)</td></tr>
+<tr class="bstart"><td><b>B4</b></td><td class="code">9a</td><td class="he">וְ</td><td>ve</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B4</b></td><td class="code">9b</td><td class="he">תֵרָאֶ֖ה</td><td>terae</td><td>see</td><td class="code">VNi3fs</td><td>verb · niphal · imperfect · 3rd fem singular — “see” (H7200)</td></tr>
+<tr class="bstart"><td><b>B5</b></td><td class="code">10a</td><td class="he">הַ</td><td>ha</td><td>the</td><td class="code">Td</td><td>particle: definite article — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B5</b></td><td class="code">10b</td><td class="he">יַּבָּשָׁ֑ה</td><td>yabasha</td><td>dry-land</td><td class="code">Ncfsa</td><td>noun · common · fem · singular · absolute — “dry-land” (H3004)</td></tr>
+<tr class="bstart"><td><b>B6</b></td><td class="code">11a</td><td class="he">וַֽ</td><td>va</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B6</b></td><td class="code">11b</td><td class="he">יְהִי</td><td>yehi</td><td>be</td><td class="code">Vqw3ms</td><td>verb · qal · wayyiqtol (narrative past) · 3rd masc singular — “be” (H1961)</td></tr>
+<tr><td><b>B6</b></td><td class="code">12</td><td class="he">כֵֽן</td><td>khen</td><td>so</td><td class="code">D</td><td>adverb — “so” (H3651)</td></tr>
+</table></div>
+<h3>Code — machine-operator sketch (auto, illustrative)</h3><pre class="codepre"><span class="cmt"># CODE (auto, illustrative) — mechanical rendering of the role column + verb forms.</span>
+<span class="cmt"># Not a frozen derivation; LET_Q keeps its &#x27;?&#x27; — never auto-upgraded [TIR-028].</span>
+
+DECLARE(agent=Elohim)                          <span class="cmt"># B0 va-yomer Elohim — and-say God [Vqw3ms qal wayyiqtol]</span>
+SPECS.push(LET(&quot;be-gathered&quot;))                 <span class="cmt"># B1 yiqavu ha-mayim — be-gathered the-waters [VNj3mp niphal jussive]  [TIR-026]</span>
+pass                                           <span class="cmt"># B2 mi-tachat ha-shamayim — from-under the-heavens  (context: PREP(from·heavens))</span>
+pass                                           <span class="cmt"># B3 el maqom echad — to place one  (context: NP(place·one))</span>
+SPECS.push(LET_Q(&quot;be-seen&quot;))                   <span class="cmt"># B4 ve-terae — and-see [VNi3fs niphal imperfect]  [TIR-028]</span>
+pass                                           <span class="cmt"># B5 ha-yabasha — the-dry-land  (context: DRY-LAND)</span>
+RESULT(&quot;so&quot;)                                   <span class="cmt"># B6 va-yehi khen — and-be so [Vqw3ms qal wayyiqtol]</span></pre>
+<h2 id="v1_10">Gen 1:10</h2>
+<div class="meta">FLAT · taamim v3 · prose · 12 words → 6 bricks · parser status: unique · source: torah_grok.sqlite</div>
+<div class="fen">en: “God called the dry land Earth and the gathered waters Seas; and God saw that it was good.”</div>
+<div class="flat">
+<div class="row he-row"><span class="lab">he:</span> <span class="brick">(⁨וַיִּקְרָ֨א אֱלֹהִ֤ים לַיַּבָּשָׁה֙⁩)</span> <span class="brick">(⁨אֶ֔רֶץ⁩)</span> <span class="brick">(⁨וּלְמִקְוֵ֥ה הַמַּ֖יִם⁩)</span> <span class="brick">(⁨קָרָ֣א יַמִּ֑ים⁩)</span> <span class="brick">(⁨וַיַּ֥רְא אֱלֹהִ֖ים⁩)</span> <span class="brick">(⁨כִּי־טֽוֹב⁩)</span></div>
+<div class="row"><span class="lab">tr:</span> <span class="brick">(va-yiqra Elohim la-yabasha)</span> <span class="brick">(eretz)</span> <span class="brick">(u-le-miqve ha-mayim)</span> <span class="brick">(qara yamim)</span> <span class="brick">(va-yar Elohim)</span> <span class="brick">(ki tov)</span></div>
+<div class="row"><span class="lab">en:</span> <span class="brick">(and-call God to-dry-land)</span> <span class="brick">(earth)</span> <span class="brick">(and-to-gathering the-waters)</span> <span class="brick">(call seas)</span> <span class="brick">(and-see God)</span> <span class="brick">(that good)</span></div>
+<div class="guide">B0 … B5 in reading order — Hebrew row runs right-to-left (B0 is the right-most paren); en = literal word glosses, verse line above = free English.</div></div>
+<h3>Leaf ledger</h3><div class="wrap"><table>
+<tr><th>B#</th><th>words</th><th>path</th><th>he</th><th>translit</th><th>en (literal)</th><th>end mark · rank</th><th>froze because</th><th>role (auto, illustrative)</th></tr>
+<tr><td><b>B0</b></td><td>w0–2</td><td class="code">L·L·L</td><td class="he">וַיִּקְרָ֨א אֱלֹהִ֤ים לַיַּבָּשָׁה֙</td><td>va-yiqra Elohim la-yabasha</td><td>and-call God to-dry-land</td><td>pashta · r3</td><td>only mahpach, qadma (conj) inside</td><td>NAME</td></tr>
+<tr><td><b>B1</b></td><td>w3</td><td class="code">L·L·R</td><td class="he">אֶ֔רֶץ</td><td>eretz</td><td>earth</td><td>zaqef_qatan · r2</td><td>single word</td><td>DOMAIN(earth)</td></tr>
+<tr><td><b>B2</b></td><td>w4–5</td><td class="code">L·R·L</td><td class="he">וּלְמִקְוֵ֥ה הַמַּ֖יִם</td><td>u-le-miqve ha-mayim</td><td>and-to-gathering the-waters</td><td>tifcha · r2</td><td>only mercha (conj) inside</td><td>GATHER</td></tr>
+<tr><td><b>B3</b></td><td>w6–7</td><td class="code">L·R·R</td><td class="he">קָרָ֣א יַמִּ֑ים</td><td>qara yamim</td><td>call seas</td><td>etnachta · r1</td><td>only munach (conj) inside</td><td>NAME</td></tr>
+<tr><td><b>B4</b></td><td>w8–9</td><td class="code">R·L</td><td class="he">וַיַּ֥רְא אֱלֹהִ֖ים</td><td>va-yar Elohim</td><td>and-see God</td><td>tifcha · r2</td><td>only mercha (conj) inside</td><td>SEE/ASSESS</td></tr>
+<tr><td><b>B5</b></td><td>w10–11</td><td class="code">R·R</td><td class="he">כִּי־טֽוֹב</td><td>ki tov</td><td>that good</td><td>silluq · r1</td><td>only zero_conjunctive (conj) inside</td><td>EVAL(good)</td></tr>
+</table></div>
+<h3>Morph — every word and every morpheme letter (OSHB)</h3><div class="wrap"><table>
+<tr><th>B#</th><th>w</th><th>he</th><th>translit</th><th>en</th><th>OSHB code</th><th>grammar (English aid)</th></tr>
+<tr class="bstart"><td><b>B0</b></td><td class="code">0a</td><td class="he">וַ</td><td>va</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B0</b></td><td class="code">0b</td><td class="he">יִּקְרָ֨א</td><td>yiqra</td><td>call</td><td class="code">Vqw3ms</td><td>verb · qal · wayyiqtol (narrative past) · 3rd masc singular — “call” (H7121)</td></tr>
+<tr><td><b>B0</b></td><td class="code">1</td><td class="he">אֱלֹהִ֤ים</td><td>Elohim</td><td>God</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “God” (H430)</td></tr>
+<tr><td><b>B0</b></td><td class="code">2a</td><td class="he">לַ</td><td>la</td><td>to</td><td class="code">Rd</td><td>preposition (definite) — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B0</b></td><td class="code">2b</td><td class="he">יַּבָּשָׁה֙</td><td>yabasha</td><td>dry-land</td><td class="code">Ncfsa</td><td>noun · common · fem · singular · absolute — “dry-land” (H3004)</td></tr>
+<tr class="bstart"><td><b>B1</b></td><td class="code">3</td><td class="he">אֶ֔רֶץ</td><td>eretz</td><td>earth</td><td class="code">Ncbsa</td><td>noun · common · either-gender · singular · absolute — “earth” (H776)</td></tr>
+<tr class="bstart"><td><b>B2</b></td><td class="code">4a</td><td class="he">וּ</td><td>u</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B2</b></td><td class="code">4b</td><td class="he">לְ</td><td>le</td><td>to</td><td class="code">R</td><td>preposition — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B2</b></td><td class="code">4c</td><td class="he">מִקְוֵ֥ה</td><td>miqve</td><td>gathering</td><td class="code">Ncmsc</td><td>noun · common · masc · singular · construct — “gathering” (H4723)</td></tr>
+<tr><td><b>B2</b></td><td class="code">5a</td><td class="he">הַ</td><td>ha</td><td>the</td><td class="code">Td</td><td>particle: definite article — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B2</b></td><td class="code">5b</td><td class="he">מַּ֖יִם</td><td>mayim</td><td>waters</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “waters” (H4325)</td></tr>
+<tr class="bstart"><td><b>B3</b></td><td class="code">6</td><td class="he">קָרָ֣א</td><td>qara</td><td>call</td><td class="code">Vqp3ms</td><td>verb · qal · perfect · 3rd masc singular — “call” (H7121)</td></tr>
+<tr><td><b>B3</b></td><td class="code">7</td><td class="he">יַמִּ֑ים</td><td>yamim</td><td>seas</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “seas” (H3220)</td></tr>
+<tr class="bstart"><td><b>B4</b></td><td class="code">8a</td><td class="he">וַ</td><td>va</td><td>and</td><td class="code">C</td><td>conjunction — prefix letter, not a standalone word</td></tr>
+<tr><td><b>B4</b></td><td class="code">8b</td><td class="he">יַּ֥רְא</td><td>yar</td><td>see</td><td class="code">Vqw3ms</td><td>verb · qal · wayyiqtol (narrative past) · 3rd masc singular — “see” (H7200)</td></tr>
+<tr><td><b>B4</b></td><td class="code">9</td><td class="he">אֱלֹהִ֖ים</td><td>Elohim</td><td>God</td><td class="code">Ncmpa</td><td>noun · common · masc · plural · absolute — “God” (H430)</td></tr>
+<tr class="bstart"><td><b>B5</b></td><td class="code">10</td><td class="he">כִּי</td><td>ki</td><td>that</td><td class="code">C</td><td>conjunction — “that” (H3588)</td></tr>
+<tr><td><b>B5</b></td><td class="code">11</td><td class="he">טֽוֹב</td><td>tov</td><td>good</td><td class="code">Aamsa</td><td>adjective — “good” (H2896)</td></tr>
+</table></div>
+<h3>Code — machine-operator sketch (auto, illustrative)</h3><pre class="codepre"><span class="cmt"># CODE (auto, illustrative) — mechanical rendering of the role column + verb forms.</span>
+<span class="cmt"># Not a frozen derivation; LET_Q keeps its &#x27;?&#x27; — never auto-upgraded [TIR-028].</span>
+
+REGISTRY.name(...)                             <span class="cmt"># B0 va-yiqra Elohim la-yabasha — and-call God to-dry-land [Vqw3ms qal wayyiqtol]  [TIR-022]</span>
+pass                                           <span class="cmt"># B1 eretz — earth  (context: DOMAIN(earth))</span>
+EVENT(&quot;gather&quot;)                                <span class="cmt"># B2 u-le-miqve ha-mayim — and-to-gathering the-waters</span>
+REGISTRY.name(...)                             <span class="cmt"># B3 qara yamim — call seas [Vqp3ms qal perfect]  [TIR-022]</span>
+EVENT(&quot;see&quot;)                                   <span class="cmt"># B4 va-yar Elohim — and-see God [Vqw3ms qal wayyiqtol]</span>
+TESTS.record(PASS(&quot;good&quot;))                     <span class="cmt"># B5 ki tov — that good</span></pre>
+<p class="meta">Generated by render_flat_ledger_from_db.py · the DB is a derived, rebuildable
+index — the system of record stays the git-versioned text (Pre-Code rule).</p>
+</main></body></html>

@@ -124,10 +124,22 @@ Schema rules: every text column keeps the **he + translit + en** triple (the
 
 **Stage A additions (same day):** `logic/lexicon/v1/` — 3,582 lemmas (111 hand override
 Strong's auto, #IMPOSED, public domain; **99.9% word-gloss coverage**, 71 `?` left) ·
+**lexicon v2 2026-07-29** (`artifacts/generate_lexicon_v2.py`, CURRENT→v2): fixes the
+alphabetical-first-KJV-gloss defect ('act' for davar, 'gate'→'city' class of errors) —
+Strong's-definition-first for common words · corpus-detected proper nouns (Np>50%)
+KJV-name-first with Compare-H#### stripped · hand rows 111→233 (top-240 frequency
+curation) · `?` glosses 71→53 ·
 `logic/role_rules/v1/` — 52 rules + frames extracted to frozen YAML, goldens across
 Gen/Lev/Deut (`logic/role_rules/check_golden.py` — ALL GREEN) · render module +
 `build_db.py` load both from `CURRENT` pointers · DB now 147 MB with units + Oral layers.
 4. **Point the D3 viewer at JSON exports** from the DB.
+   **▶ SCROLL APP 2026-07-29** — `export_web.py` (repo root) → `web/scroll/data/`
+   (manifest + 187 per-chapter JSON bundles, gitignored/derived) · `web/scroll/index.html`
+   — public-facing continuous-scroll app (owner-approved mockup design): sticky
+   book/chapter/verse dropdowns, FLAT + LEDGER + MORPH + CODE per verse, ❄ frozen
+   badges from the units index, 1024px layout floor, provenance/attribution footer.
+   Local preview: `cd web/scroll && python3 -m http.server 8011`. Search = phase 2;
+   D3 tree card still pending.
 5. (Only if needed) thin read-only API for live queries.
 
 ## 7. Git / GitHub workflow (established 2026-07-28)

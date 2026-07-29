@@ -1,0 +1,301 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'><title>torah_grok.sqlite inspection — 2026-07-28</title><style>
+body { background:#fff; color:#1a1a1a; font:15px/1.55 -apple-system,'Segoe UI',sans-serif;
+       max-width:1080px; margin:2em auto; padding:0 1.5em; }
+h1 { font-size:1.5em; border-bottom:2px solid #333; padding-bottom:.3em; }
+h2 { font-size:1.15em; margin-top:2em; border-bottom:1px solid #ccc; padding-bottom:.2em; }
+h3 { font-size:1em; margin-top:1.2em; }
+table { border-collapse:collapse; margin:.7em 0; font-size:.86em; }
+th, td { border:1px solid #ddd; padding:.28em .55em; text-align:left; vertical-align:top; }
+th { background:#f2f2f2; }
+table.num td { text-align:right; } table.num td:first-child { text-align:left; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em; }
+.sql { background:#f6f6f6; border-left:3px solid #bbb; padding:.35em .6em;
+       font-family:Menlo,monospace; font-size:.78em; color:#444; margin:.5em 0; }
+pre { background:#f6f6f6; border:1px solid #ddd; padding:.8em; overflow-x:auto;
+      font-size:.78em; line-height:1.45; }
+code { background:#f0f0f0; padding:.05em .3em; font-size:.9em; }
+.note { color:#555; font-size:.92em; }
+.ok { color:#0a7a2f; } .flag { color:#b04000; }
+</style></head><body><h1>torah_grok.sqlite — inspection report</h1>
+<p class="note">Derived, rebuildable index (<code>python3 build_db.py</code>, ~7 min). The system of record is the git-versioned text: corpora in <code>Data/</code>, rules in <code>logic/</code>, derivations in <code>logic/units/*.yaml</code>. Deleting this file loses nothing. Every row below is queried live at report time.</p>
+<h2>1 · Build provenance (meta)</h2>
+<table class="kv"><tr>
+<th>key</th>
+<th>value</th>
+</tr>
+<tr><td>built_at</td><td>2026-07-28 18:37:41</td></tr>
+<tr><td>built_from_commit</td><td>cf911dc</td></tr>
+<tr><td>leaves</td><td>43823</td></tr>
+<tr><td>lexicon_note</td><td>logic/lexicon: hand glosses override Strong&#x27;s auto (#IMPOSED, public domain); EN-AID only</td></tr>
+<tr><td>lexicon_version</td><td>v1</td></tr>
+<tr><td>oral_files_indexed</td><td>215</td></tr>
+<tr><td>oral_segments_indexed</td><td>119903</td></tr>
+<tr><td>role_ruleset</td><td>role_rules-v1-2026-07-28</td></tr>
+<tr><td>segments</td><td>124243</td></tr>
+<tr><td>status_counts</td><td>{&quot;unique&quot;: 5853}</td></tr>
+<tr><td>taamim_rule_version</td><td>v3</td></tr>
+<tr><td>unit_steps_indexed</td><td>5865</td></tr>
+<tr><td>units_indexed</td><td>213</td></tr>
+<tr><td>verses</td><td>5853</td></tr>
+<tr><td>word_count_mismatches</td><td>0</td></tr>
+<tr><td>words</td><td>80052</td></tr>
+</table>
+<h2>2 · Layer map — every table, live row count</h2>
+<table class=""><tr>
+<th>layer</th>
+<th>table</th>
+<th>rows</th>
+<th>what it holds</th>
+</tr>
+<tr><td>text</td><td><code>verses</code></td><td>5,853</td><td>one row per Torah verse (osis_id, book, chapter, verse, prose/poetry system)</td></tr>
+<tr><td>text</td><td><code>words</code></td><td>80,052</td><td>one row per word: pointed Hebrew, translit, gloss (lexicon v1), OSHB lemma+morph, ta&#x27;am mark</td></tr>
+<tr><td>text</td><td><code>segments</code></td><td>124,243</td><td>morpheme level: every prefix letter / suffix as its own row (the ו/ה/ל/מ rows)</td></tr>
+<tr><td>structure</td><td><code>trees</code></td><td>5,853</td><td>one v3 ta&#x27;amim tree per verse (JSON), parse status</td></tr>
+<tr><td>structure</td><td><code>leaves</code></td><td>43,823</td><td>glue-brick leaves: span, closing mark, rank, L/R path, he+translit</td></tr>
+<tr><td>interpretation</td><td><code>roles</code></td><td>43,823</td><td>role label per leaf (role_rules v1 — display heuristics, versioned)</td></tr>
+<tr><td>derivation</td><td><code>units</code></td><td>213</td><td>index of logic/units/*.yaml (YAML stays canonical — never authored here)</td></tr>
+<tr><td>derivation</td><td><code>steps</code></td><td>5,865</td><td>every unit step: op, he+translit+en, confidence, source tags</td></tr>
+<tr><td>derivation</td><td><code>unit_scenarios</code></td><td>1,538</td><td>every unit scenario (id, title, expectation)</td></tr>
+<tr><td>derivation</td><td><code>coverage</code></td><td>0</td><td>per-word role coverage from units <b class="flag">⚠ empty — tree_coverage not yet indexed (known gap)</b></td></tr>
+<tr><td>oral</td><td><code>oral_refs</code></td><td>20</td><td>named, tiered Oral citations backfilled from this week&#x27;s derivations</td></tr>
+<tr><td>oral</td><td><code>oral_texts</code></td><td>119,903</td><td>FTS5 over 215 local Oral corpus files (119,903 searchable segments)</td></tr>
+<tr><td>search</td><td><code>fts</code></td><td>129,740</td><td>FTS5 over the whole Written layer: he_plain + translit + gloss</td></tr>
+<tr><td>build</td><td><code>warnings</code></td><td>0</td><td>validation flags from the build (never silent edits)</td></tr>
+<tr><td>build</td><td><code>meta</code></td><td>16</td><td>build provenance: rule versions, source commit, counts</td></tr>
+</table>
+<h2>3 · Text layer — Gen 1:1 word rows</h2>
+<div class="sql">SELECT w.idx, w.he, w.translit, w.gloss, w.lemma, w.morph, w.mark_id, w.mark_kind, w.mark_rank FROM words w JOIN verses v ON w.verse_id=v.id WHERE v.osis_id=&#x27;Gen.1.1&#x27; ORDER BY w.idx</div>
+<table class=""><tr>
+<th>#</th>
+<th>he</th>
+<th>translit</th>
+<th>gloss (EN-AID)</th>
+<th>lemma</th>
+<th>morph (#IMPOSED)</th>
+<th>mark</th>
+<th>kind</th>
+<th>rank</th>
+</tr>
+<tr><td>0</td><td><span class="he" dir="rtl">בְּ/רֵאשִׁ֖ית</span></td><td>be-reshit</td><td>in-beginning</td><td>b/7225</td><td><code>HR/Ncfsa</code></td><td>tifcha</td><td>disjunctive</td><td>2</td></tr>
+<tr><td>1</td><td><span class="he" dir="rtl">בָּרָ֣א</span></td><td>bara</td><td>create</td><td>1254 a</td><td><code>HVqp3ms</code></td><td>munach</td><td>conjunctive</td><td>9</td></tr>
+<tr><td>2</td><td><span class="he" dir="rtl">אֱלֹהִ֑ים</span></td><td>Elohim</td><td>God</td><td>430</td><td><code>HNcmpa</code></td><td>etnachta</td><td>disjunctive</td><td>1</td></tr>
+<tr><td>3</td><td><span class="he" dir="rtl">אֵ֥ת</span></td><td>et</td><td>obj-marker·et</td><td>853</td><td><code>HTo</code></td><td>mercha</td><td>conjunctive</td><td>9</td></tr>
+<tr><td>4</td><td><span class="he" dir="rtl">הַ/שָּׁמַ֖יִם</span></td><td>ha-shamayim</td><td>the-heavens</td><td>d/8064</td><td><code>HTd/Ncmpa</code></td><td>tifcha</td><td>disjunctive</td><td>2</td></tr>
+<tr><td>5</td><td><span class="he" dir="rtl">וְ/אֵ֥ת</span></td><td>ve-et</td><td>and-obj-marker·et</td><td>c/853</td><td><code>HC/To</code></td><td>mercha</td><td>conjunctive</td><td>9</td></tr>
+<tr><td>6</td><td><span class="he" dir="rtl">הָ/אָֽרֶץ</span></td><td>ha-aretz</td><td>the-earth</td><td>d/776</td><td><code>HTd/Ncbsa</code></td><td>silluq</td><td>disjunctive</td><td>1</td></tr>
+</table>
+<h3>…and its morpheme segments (word 0: בְּרֵאשִׁית / be-reshit)</h3>
+<table class=""><tr>
+<th>seg</th>
+<th>he</th>
+<th>translit</th>
+<th>lemma</th>
+<th>morph</th>
+<th>gloss</th>
+</tr>
+<tr><td>0</td><td><span class="he" dir="rtl">בְּ</span></td><td>be</td><td>b</td><td><code>R</code></td><td>in</td></tr>
+<tr><td>1</td><td><span class="he" dir="rtl">רֵאשִׁ֖ית</span></td><td>reshit</td><td>7225</td><td><code>Ncfsa</code></td><td>beginning</td></tr>
+</table>
+<h2>4 · Structure + roles — Gen 1:3 glue-brick leaves</h2>
+<div class="sql">SELECT l.b_index, l.he, l.translit, l.end_mark, l.rank, l.path, r.role FROM leaves l JOIN trees t ON l.tree_id=t.id JOIN verses v ON t.verse_id=v.id LEFT JOIN roles r ON r.leaf_id=l.id WHERE v.osis_id=&#x27;Gen.1.3&#x27; ORDER BY l.b_index</div>
+<table class=""><tr>
+<th>B#</th>
+<th>he</th>
+<th>translit</th>
+<th>closing mark</th>
+<th>rank</th>
+<th>path</th>
+<th>role (auto, v1)</th>
+</tr>
+<tr><td>0</td><td><span class="he" dir="rtl">וַיֹּ֥אמֶר אֱלֹהִ֖ים</span></td><td>va-yomer Elohim</td><td>tifcha</td><td>2</td><td><code>L·L</code></td><td><b>SPEAK(agent=Elohim)</b></td></tr>
+<tr><td>1</td><td><span class="he" dir="rtl">יְהִ֣י א֑וֹר</span></td><td>yehi or</td><td>etnachta</td><td>1</td><td><code>L·R</code></td><td><b>CMD(be)</b></td></tr>
+<tr><td>2</td><td><span class="he" dir="rtl">וַֽיְהִי־אֽוֹר</span></td><td>va-yehi or</td><td>silluq</td><td>1</td><td><code>R</code></td><td><b>BECOME/WAS</b></td></tr>
+</table>
+<p class="note">Trees: v3 / unique: <b>5,853</b> — every verse in the Torah parses unique under v3.</p>
+<h2>5 · Genre fingerprint — verb forms × book (whole Torah)</h2>
+<p class="note">The evidence table behind TIR-026…033, reproduced live: 3rd character of the OSHB verb code is the form.</p>
+<div class="sql">SELECT v.book, substr(s.morph_seg,3,1) form, COUNT(*) c FROM segments s JOIN words w ON s.word_id=w.id JOIN verses v ON w.verse_id=v.id WHERE s.morph_seg LIKE &#x27;V%&#x27; AND length(s.morph_seg) &gt;= 3 GROUP BY v.book, form</div>
+<table class="num"><tr>
+<th>form</th>
+<th>Gen</th>
+<th>Exod</th>
+<th>Lev</th>
+<th>Num</th>
+<th>Deut</th>
+<th>total</th>
+</tr>
+<tr><td>wayyiqtol (narrative event)</td><td>2,107</td><td>889</td><td>189</td><td>752</td><td>255</td><td>4,192</td></tr>
+<tr><td>weqatal (THEN-chain)</td><td>164</td><td>524</td><td>707</td><td>408</td><td>632</td><td>2,435</td></tr>
+<tr><td>imperfect (modal space)</td><td>537</td><td>755</td><td>879</td><td>639</td><td>971</td><td>3,781</td></tr>
+<tr><td>imperative (CMD!)</td><td>300</td><td>196</td><td>41</td><td>137</td><td>110</td><td>784</td></tr>
+<tr><td>inf. construct (PURPOSE)</td><td>435</td><td>346</td><td>196</td><td>310</td><td>452</td><td>1,739</td></tr>
+<tr><td>participle (ONGOING)</td><td>330</td><td>287</td><td>205</td><td>255</td><td>395</td><td>1,472</td></tr>
+<tr><td>perfect (completed state)</td><td>940</td><td>559</td><td>208</td><td>444</td><td>544</td><td>2,695</td></tr>
+<tr><td>jussive (LET)</td><td>77</td><td>40</td><td>16</td><td>31</td><td>29</td><td>193</td></tr>
+</table>
+<h2>6 · Derivation layer — units index</h2>
+<p><b>212</b> draft · <b>1</b> frozen — YAML files stay canonical; this table only indexes them.</p>
+<table class=""><tr>
+<th>unit</th>
+<th>refs</th>
+<th>status</th>
+<th>derive version</th>
+<th>steps</th>
+<th>scenarios</th>
+</tr>
+<tr><td><b>gen_01_creation_boot</b></td><td>1:1-5</td><td><b class="ok">frozen</b></td><td>logic_derived_v1</td><td>5</td><td>7</td></tr>
+</table>
+<h3>Steps of the frozen unit</h3>
+<table class=""><tr>
+<th>step</th>
+<th>ref</th>
+<th>op</th>
+<th>he</th>
+<th>translit</th>
+<th>en (EN-AID)</th>
+</tr>
+<tr><td>STEP_Gn_1_1</td><td>Gen.1.1</td><td><code>EVENT_CREATE</code></td><td><span class="he" dir="rtl">בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ</span></td><td>be-reshit bara Elohim et ha-shamayim ve-et ha-aretz</td><td>In the beginning God created the heavens and the earth.</td></tr>
+<tr><td>STEP_Gn_1_2</td><td>Gen.1.2</td><td><code>STATE_BLOCK</code></td><td><span class="he" dir="rtl">וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ וְחֹשֶׁךְ עַל־פְּנֵי תְהוֹם וְרוּחַ אֱלֹהִים מְרַחֶפֶת עַל־פְּנֵי הַמָּיִם</span></td><td>ve-ha-aretz hayta tohu va-vohu ve-choshekh al-penei tehom ve-ruach Elohim merachefet al-penei ha-mayim</td><td>The earth was formless and void, darkness over the deep, God&#x27;s spirit hovering over the waters.</td></tr>
+<tr><td>STEP_Gn_1_3</td><td>Gen.1.3</td><td><code>DECLARE_LET_RESULT</code></td><td><span class="he" dir="rtl">וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר וַיְהִי־אוֹר</span></td><td>va-yomer Elohim yehi or va-yehi or</td><td>God said: let there be light — and there was light.</td></tr>
+<tr><td>STEP_Gn_1_4</td><td>Gen.1.4</td><td><code>TEST_AND_PARTITION</code></td><td><span class="he" dir="rtl">וַיַּרְא אֱלֹהִים אֶת־הָאוֹר כִּי־טוֹב וַיַּבְדֵּל אֱלֹהִים בֵּין הָאוֹר וּבֵין הַחֹשֶׁךְ</span></td><td>va-yar Elohim et-ha-or ki-tov va-yavdel Elohim bein ha-or u-vein ha-choshekh</td><td>God saw the light, that it was good; and God divided the light from the darkness.</td></tr>
+<tr><td>STEP_Gn_1_5</td><td>Gen.1.5</td><td><code>NAME_AND_COMMIT</code></td><td><span class="he" dir="rtl">וַיִּקְרָא אֱלֹהִים לָאוֹר יוֹם וְלַחֹשֶׁךְ קָרָא לָיְלָה וַיְהִי־עֶרֶב וַיְהִי־בֹקֶר יוֹם אֶחָד</span></td><td>va-yiqra Elohim la-or yom ve-la-choshekh qara layla va-yehi erev va-yehi voqer yom echad</td><td>God called the light Day and the darkness Night; evening, morning — day one.</td></tr>
+</table>
+<h2>7 · Oral layer — all 20 named citations (oral_refs)</h2>
+<table class=""><tr>
+<th>work</th>
+<th>locus</th>
+<th>he</th>
+<th>translit</th>
+<th>tier</th>
+<th>anchors to</th>
+</tr>
+<tr><td>Bereshit Rabbah</td><td>4:2</td><td><span class="he" dir="rtl">לחים היו מעשיהם ביום הראשון ובשני קרשו. יהי רקיע — יחזק הרקי…</span></td><td>lachim hayu ma&#x27;aseihem ba-yom ha-rishon u-va-sheni karshu</td><td><b class="ok">verified</b></td><td>Gen.1.6</td></tr>
+<tr><td>Bereshit Rabbah</td><td>4:6</td><td><span class="he" dir="rtl">למה אין כתיב בשני כי טוב — שבו נבראת גיהנם</span></td><td>lamah ein ketiv ba-sheni ki tov — she-bo nivre&#x27;at Gehinnom</td><td><b class="ok">verified</b></td><td>Gen.1.7</td></tr>
+<tr><td>Bereshit Rabbah</td><td>4:7</td><td><span class="he" dir="rtl">נטל הקב&quot;ה אש ומים ופתכן זה בזה ומהן נעשו שמים</span></td><td>natal HKBH esh u-mayim u-fetakhan zeh ba-zeh</td><td><b class="ok">verified</b></td><td>Gen.1.8</td></tr>
+<tr><td>Bereshit Rabbah</td><td>5:8</td><td><span class="he" dir="rtl">למה נקרא שמה ארץ? שרצתה לעשות רצון קונה</span></td><td>lamah niqra shemah eretz? she-ratzta la&#x27;asot retzon konah</td><td><b class="ok">verified</b></td><td>Gen.1.10</td></tr>
+<tr><td>Bereshit Rabbah</td><td>5:9</td><td><span class="he" dir="rtl">שלשה נכנסו לדין וארבעה יצאו מחיבין … ונתקללה הארץ עמהן</span></td><td>sheloshah nikhnesu la-din ve-arba&#x27;ah yatze&#x27;u mechuyavin</td><td><b class="ok">verified</b></td><td>Gen.1.11</td></tr>
+<tr><td>Bereshit Rabbah</td><td>3:7</td><td><span class="he" dir="rtl">מלמד שהיה בורא עולמות ומחריבן … אמר דין הנין לי</span></td><td>melammed she-hayah bore olamot u-machrivan … dein hanyan li</td><td><b class="ok">verified</b></td><td>Gen.1.31</td></tr>
+<tr><td>Bereshit Rabbah</td><td>9:5</td><td><span class="he" dir="rtl">בתורתו של רבי מאיר מצאו כתוב: והנה טוב מאד — והנה טוב מות</span></td><td>be-torato shel Rabbi Meir: ve-hinneh tov me&#x27;od — tov mavet</td><td><b class="ok">verified</b></td><td>Gen.1.31</td></tr>
+<tr><td>Bereshit Rabbah</td><td>8:3</td><td><span class="he" dir="rtl">נעשה אדם — במי נמלך? במלאכת השמים והארץ נמלך</span></td><td>na&#x27;aseh adam — be-mi nimlakh?</td><td><b class="ok">verified</b></td><td>Gen.1.26</td></tr>
+<tr><td>Bereshit Rabbah</td><td>8:1</td><td><span class="he" dir="rtl">אחור וקדם צרתני — דו פרצופים</span></td><td>achor va-qedem tzartani — du-partzufin</td><td><b class="ok">verified</b></td><td>Gen.1.27</td></tr>
+<tr><td>Bereshit Rabbah</td><td>11:2</td><td><span class="he" dir="rtl">ברכו במן וקדשו במן</span></td><td>berkho ba-man ve-qiddesho ba-man</td><td><b class="ok">verified</b></td><td>Gen.2.3</td></tr>
+<tr><td>Bereshit Rabbah</td><td>11:8</td><td><span class="he" dir="rtl">שאין לו בן זוג … שבתא לית לה בן זוג</span></td><td>she-ein lo ben zug</td><td><b class="ok">verified</b></td><td>Gen.2.3</td></tr>
+<tr><td>Bavli Chagigah</td><td>12a</td><td><span class="he" dir="rtl">מאי שמים … ששם מים … אש ומים … ועשה מהן רקיע</span></td><td>mai shamayim … she-sham mayim … esh u-mayim</td><td><b class="ok">verified</b></td><td>Gen.1.8</td></tr>
+<tr><td>Bavli Chagigah</td><td>12b</td><td><span class="he" dir="rtl">שבעה … וילון רקיע שחקים זבול מעון מכון ערבות … רקיע שבו חמה …</span></td><td>shiv&#x27;ah reqi&#x27;im … Raqia she-bo chamah u-levanah</td><td><b class="ok">verified</b></td><td>Gen.1.17</td></tr>
+<tr><td>Bavli Sanhedrin</td><td>38b</td><td><span class="he" dir="rtl">ברא כת אחת של מלאכי השרת אמר להם רצונכם נעשה אדם בצלמנו</span></td><td>bara kat achat shel mal&#x27;akhei ha-sharet</td><td><b class="ok">verified</b></td><td>Gen.1.26</td></tr>
+<tr><td>Bavli Eruvin</td><td>18a</td><td><span class="he" dir="rtl">דיו פרצוף פנים היה לו לאדם הראשון</span></td><td>du partzuf panim hayah lo le-adam ha-rishon</td><td><b class="ok">verified</b></td><td>Gen.1.27</td></tr>
+<tr><td>Bavli Bava Batra</td><td>74b</td><td><span class="he" dir="rtl">התנינים הגדולים — זה לויתן נחש בריח ולויתן נחש עקלתון</span></td><td>zeh livyatan nachash bariach ve-livyatan nachash aqallaton</td><td><b class="ok">verified</b></td><td>Gen.1.21</td></tr>
+<tr><td>Bavli Shabbat</td><td>88a</td><td><span class="he" dir="rtl">ה&#x27; יתירה למה לי? מלמד שהתנה הקב&quot;ה עם מעשה בראשית</span></td><td>heh yeterah lamah li? she-hitnah HKBH im ma&#x27;aseh bereshit</td><td><b class="ok">verified</b></td><td>Gen.1.31</td></tr>
+<tr><td>Bavli Shabbat</td><td>119b</td><td><span class="he" dir="rtl">כל המתפלל … ואומר ויכולו … נעשה שותף להקב&quot;ה במעשה בראשית</span></td><td>kol ha-mitpallel … va-yekhullu … na&#x27;asah shutaf</td><td><b class="ok">verified</b></td><td>Gen.2.1</td></tr>
+<tr><td>Bavli Rosh Hashanah</td><td>31a</td><td><span class="he" dir="rtl">בשביעי … מזמור שיר ליום השבת — ליום שכולו שבת</span></td><td>le-yom she-kullo shabbat</td><td><b class="ok">verified</b></td><td>Gen.2.2</td></tr>
+<tr><td>Bereshit Rabbah</td><td>10:9</td><td><span class="he" dir="rtl">מה היה העולם חסר? מנוחה. באת שבת באת מנוחה</span></td><td>mah hayah ha-olam chaser? menuchah</td><td><b class="flag">observation</b></td><td>Gen.2.2</td></tr>
+</table>
+<h3>Live FTS demos</h3>
+<div class="sql">SELECT osis_id FROM fts WHERE fts MATCH &#x27;&quot;יהי אור&quot;&#x27;</div>
+<p><span class="he" dir="rtl">יהי אור</span> (yehi or / let there be light) → <b>Gen.1.3</b></p>
+<div class="sql">SELECT work, locus FROM oral_texts WHERE oral_texts MATCH &#x27;&quot;סדר זמנים&quot;&#x27; LIMIT 5</div>
+<p><span class="he" dir="rtl">סדר זמנים</span> (seder zemanim / order of times) → <b>Bereishit Rabbah 3:7</b> — the exact quote cited in the frozen unit's oral_notes.</p>
+<h2>8 · Stage D interpreter run — computed live, NOT stored in the DB</h2>
+<p class="note">By design: interpreter results are re-derived from the frozen YAML on every run, like a test suite. The DB holds everything upstream of this. (Roadmap: a <code>scenario_results</code> snapshot table can land with Stage E CI.)</p>
+<h3>run_unit.py gen_01_creation_boot --scenarios — scenario assertions</h3>
+<pre>unit: gen_01_creation_boot — Genesis boot: create world, light, separate, name, day one (1:1-5) [frozen]
+
+final state: WORLD=[&#x27;aretz&#x27;, &#x27;or&#x27;, &#x27;shamayim&#x27;] (+4 presupposed) | REGISTRY={&#x27;or&#x27;: &#x27;yom&#x27;, &#x27;choshekh&#x27;: &#x27;layla&#x27;} | TESTS=1 PASS | LEDGER days=[1] | FLAGS=[&#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;]
+
+=== S1 — Boot: after STEP_Gn_1_1
+    אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ (et ha-shamayim ve-et ha-aretz)
+    PASS  WORLD = {shamayim, aretz}  (created=[&#x27;aretz&#x27;, &#x27;shamayim&#x27;])
+    PASS  TIME t0 = reshit  (t0=reshit)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — Precondition load: after STEP_Gn_1_2
+    תֹהוּ וָבֹהוּ (tohu va-vohu)
+    PASS  Facts tohu/vohu/darkness-over-deep HOLD  (2 facts)
+    PASS  hover INVARIANT active  (invariants=[&#x27;hover(ruach-Elohim, face(mayim))&#x27;])
+    PASS  ZERO events fired  (events_in_step=0)
+    PASS  machine flags choshekh/tehom/mayim/ruach as read-before-install (presupposed).  (flagged=[&#x27;choshekh&#x27;, &#x27;mayim&#x27;, &#x27;ruach&#x27;, &#x27;tehom&#x27;])
+
+=== S3 — Fiat: after STEP_Gn_1_3
+    יְהִי אוֹר (yehi or)
+    PASS  SPECS: LET(exists(or)) pushed then satisfied in the SAME verse (latency 0)  (pushed=Gen.1.3 satisfied=Gen.1.3)
+    PASS  WORLD += or  (entity={&#x27;mode&#x27;: &#x27;created&#x27;, &#x27;by&#x27;: &#x27;fiat-result&#x27;, &#x27;step&#x27;: &#x27;Gen.1.3&#x27;})
+    PASS  triple {P} yehi-or {exists(or)} discharged.  (triples=[{&#x27;q&#x27;: &#x27;exists(or)&#x27;, &#x27;step&#x27;: &#x27;Gen.1.3&#x27;, &#x27;discharged&#x27;: True}])
+
+=== S4 — Test + partition: after STEP_Gn_1_4
+    כִּי־טוֹב (ki-tov)
+    PASS  TESTS += PASS(tov, or)  (tests=[(&#x27;tov&#x27;, &#x27;or&#x27;)])
+    PASS  partition or ∩ choshekh = ∅ recorded.  (partitions=[(&#x27;or&#x27;, &#x27;choshekh&#x27;)])
+
+=== S5 — Name + commit: after STEP_Gn_1_5
+    יוֹם אֶחָד (yom echad)
+    PASS  REGISTRY: or-&gt;yom, choshekh-&gt;layla (2 writes)  (names={&#x27;or&#x27;: &#x27;yom&#x27;, &#x27;choshekh&#x27;: &#x27;layla&#x27;} writes=2)
+    PASS  LEDGER[day 1] committed with spec ✓ / test PASS / names 2  (entry={&#x27;closed&#x27;: True, &#x27;spec_ok&#x27;: True, &#x27;test_pass&#x27;: True, &#x27;names&#x27;: 2, &#x27;label_form&#x27;: &#x27;cardinal&#x27;, &#x27;label_he&#x27;: &#x27;יוֹם אֶחָד&#x27;, &#x27;label_translit&#x27;: &#x27;yom echad&#x27;, &#x27;step&#x27;: &#x27;Gen.1.5&#x27;})
+    PASS  day label is CARDINAL echad.  (label=yom echad form=cardinal)
+
+=== S6_negative — Negative: commit without test
+    PASS  commit proceeded (not blocked)  (LEDGER=[99])
+    PASS  pattern deviation FLAGGED  (flags=[&#x27;commit_without_test&#x27;])
+
+=== S7_negative — Negative: LET? never auto-upgrades
+    PASS  imperfect-in-command parsed as LET? (question mark kept)  (mood=LET?)
+    PASS  auto-upgrade REFUSED  (TIR-028: LET? never auto-upgrades to LET — a per-unit judgme...)
+    PASS  upgrade WITH citation allowed  (cite=per-unit judgment (owner), TIR-028 resolution)
+
+ALL SCENARIOS GREEN
+</pre>
+<h3>run_unit.py gen_01_creation_boot --trace — register trace</h3>
+<pre>unit: gen_01_creation_boot — Genesis boot: create world, light, separate, name, day one (1:1-5) [frozen]
+
+STEP_Gn_1_1  Gen.1.1  [EVENT_CREATE]
+  he: בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ
+      be-reshit bara Elohim et ha-shamayim ve-et ha-aretz | In the beginning God created the heavens and the earth.
+   - TIME_ANCHOR        t0 := reshit (timeline origin from the be- prefix frame)   [TIR-022]
+   - EVENT              create(e1) ∧ Agent(e1, Elohim) ∧ Theme(e1, shamayim) ∧ Theme(e1, aretz)   [TIR-014,TIR-015]
+   - REGISTRY_INSTALL   WORLD += {shamayim, aretz} — installed by narration, NOT by naming formula   [-]
+  Δ WORLD=[&#x27;aretz&#x27;, &#x27;shamayim&#x27;] +presup:0 | SPECS q:0 | TESTS:0 | REG writes:0 | LEDGER:[] | FLAGS:0
+
+STEP_Gn_1_2  Gen.1.2  [STATE_BLOCK]
+  he: וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ וְחֹשֶׁךְ עַל־פְּנֵי תְהוֹם וְרוּחַ אֱלֹהִים מְרַחֶפֶת עַל־פְּנֵי הַמָּיִם
+      ve-ha-aretz hayta tohu va-vohu ve-choshekh al-penei tehom ve-ruach Elohim merachefet al-penei ha-mayim | The earth was formless and void, darkness over the deep, God&#x27;s spirit hovering over the waters.
+   - PRECONDITION_STATE HOLDS(tohu(aretz) ∧ vohu(aretz), t0); HOLDS(over(choshekh, face(tehom)), t0)   [-]
+   - INVARIANT          INVARIANT(hover(ruach-Elohim, face(mayim))) during t0   [TIR-031]
+   - NOTE_ZERO_EVENTS   no wayyiqtol in the verse — this whole verse is {P}, the precondition block   [-]
+   - NOTE_PRESUPPOSED   choshekh, tehom, mayim, ruach are READ without prior install (uninitialized entities)   [-]
+  Δ WORLD=[&#x27;aretz&#x27;, &#x27;shamayim&#x27;] +presup:4 | SPECS q:0 | TESTS:0 | REG writes:0 | LEDGER:[] | FLAGS:4
+
+STEP_Gn_1_3  Gen.1.3  [DECLARE_LET_RESULT]
+  he: וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר וַיְהִי־אוֹר
+      va-yomer Elohim yehi or va-yehi or | God said: let there be light — and there was light.
+   - DECLARE            DECLARE(Elohim, LET(exists(or)))   [TIR-026]
+   - TRIPLE             { P: 1:2 state } yehi or { Q: exists(or) }   [TIR-026]
+   - RESULT             HOLDS(exists(or), t1) — SPECS queue popped same verse (latency 0)   [-]
+  Δ WORLD=[&#x27;aretz&#x27;, &#x27;or&#x27;, &#x27;shamayim&#x27;] +presup:4 | SPECS q:0 | TESTS:0 | REG writes:0 | LEDGER:[] | FLAGS:4
+
+STEP_Gn_1_4  Gen.1.4  [TEST_AND_PARTITION]
+  he: וַיַּרְא אֱלֹהִים אֶת־הָאוֹר כִּי־טוֹב וַיַּבְדֵּל אֱלֹהִים בֵּין הָאוֹר וּבֵין הַחֹשֶׁךְ
+      va-yar Elohim et-ha-or ki-tov va-yavdel Elohim bein ha-or u-vein ha-choshekh | God saw the light, that it was good; and God divided the light from the darkness.
+   - TEST               PASS(tov, or) — inside see(e2, Agent Elohim, Theme or): epistemic wrap   [TIR-014]
+   - EVENT_PARTITION    divide(e3, Agent Elohim, between(or, choshekh)) ⇒ or ∩ choshekh = ∅   [-]
+  Δ WORLD=[&#x27;aretz&#x27;, &#x27;or&#x27;, &#x27;shamayim&#x27;] +presup:4 | SPECS q:0 | TESTS:1 | REG writes:0 | LEDGER:[] | FLAGS:4
+
+STEP_Gn_1_5  Gen.1.5  [NAME_AND_COMMIT]
+  he: וַיִּקְרָא אֱלֹהִים לָאוֹר יוֹם וְלַחֹשֶׁךְ קָרָא לָיְלָה וַיְהִי־עֶרֶב וַיְהִי־בֹקֶר יוֹם אֶחָד
+      va-yiqra Elohim la-or yom ve-la-choshekh qara layla va-yehi erev va-yehi voqer yom echad | God called the light Day and the darkness Night; evening, morning — day one.
+   - NAME               REGISTRY: name(or) := yom; name(choshekh) := layla   [TIR-022]
+   - COMMIT             cycle(erev -&gt; boqer); LEDGER[day 1] := {spec ✓, test PASS, names 2}   [-]
+  Δ WORLD=[&#x27;aretz&#x27;, &#x27;or&#x27;, &#x27;shamayim&#x27;] +presup:4 | SPECS q:0 | TESTS:1 | REG writes:2 | LEDGER:[1] | FLAGS:4
+
+final state: WORLD=[&#x27;aretz&#x27;, &#x27;or&#x27;, &#x27;shamayim&#x27;] (+4 presupposed) | REGISTRY={&#x27;or&#x27;: &#x27;yom&#x27;, &#x27;choshekh&#x27;: &#x27;layla&#x27;} | TESTS=1 PASS | LEDGER days=[1] | FLAGS=[&#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;]
+</pre>
+<h2>9 · Inspecting the DB yourself</h2>
+<ul>
+<li><b>Datasette</b> (recommended — instant read-only web UI):
+<code>pip install datasette</code> then <code>datasette torah_grok.sqlite</code>
+→ browse every table, run SQL, use FTS, all in the browser.</li>
+<li><b>DB Browser for SQLite</b> (free Mac app, point-and-click): open
+<code>torah_grok.sqlite</code>, Browse Data tab.</li>
+<li><b>sqlite3 CLI</b> (already installed):
+<code>sqlite3 torah_grok.sqlite ".tables"</code> — then paste any query shown
+in the gray boxes above.</li>
+</ul><p class='note'>Generated 2026-07-28 18:37:41 by report_db_html.py · build commit cf911dc · not binding religious law · English = aid only.</p></body></html>
