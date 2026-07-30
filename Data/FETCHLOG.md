@@ -12,6 +12,7 @@ verdicts, and quotes in logic/oral_triage/ and logic/units/.
 | 2026-07-30 | (no cache — evidence queries) | `python3 logic/written_echo/verify_rarity.py …` | 5 search-wrapper queries (4 echo signatures + 1 probe) | rarity counts recorded in logic/written_echo/v1/edges.yaml |
 | 2026-07-30 | (no cache — 4 single verses) | api/texts Jer 4:23, Isa 45:7, Ps 104:2, Prov 8:22 | echo-edge target texts | Hebrew recorded in edges.yaml; English is own literal gloss (API returned copyrighted JPS 2023) |
 | 2026-07-30 | (no cache — 1 range) | api/texts Onkelos_Genesis.1.14-19 | gen_04 derivation Tier-A read (charter §4.1) | findings recorded in gen_04_lights_calendar.yaml (yehon plural; le-mimnei counting verb; le-mishlat; revi'a'i) |
+| 2026-07-30 | Data/sefaria_texts/ | `python3 fetch_oral_texts.py Gen.1.14 Gen.1.19` | day-4 tier-1 sources | 130 new files · 35 already held · 0 failures |
 
 Politeness contract (owner order): sequential requests, 0.5s delay, small
 ranges per invocation — never a whole book at once.
