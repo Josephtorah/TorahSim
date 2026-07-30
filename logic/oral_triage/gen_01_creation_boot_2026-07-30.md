@@ -7,7 +7,7 @@ source may earn are bounded by its chain status. Not binding religious law.
 **Counters (updated per batch — the three honest numbers):**
 - enumerated: 483 tier-1 sources (oral_links, fetched index 2026-07-30)
 - fetched: 483 (Data/sefaria_texts/, 0 failures)
-- **read: 417** of 483 (batches 1-8 as before; batch 9: missed primaries + PRE + the Tanchuma/Yelamdenu family, 73 — 2026-07-30; material list unchanged, +BR 4:2 already-cited)
+- **read: 457** of 483 (batches 1-9 as before; batch 10: the Rabbah family + Midrash Tehillim + Pesikta Rabbati, 40 — 2026-07-30)
 
 **Verdict vocabulary:** `material` (bears on the derivation — chain_primary only, per policy) ·
 `enrichment` (worth an Oral note — chain_primary/compilation/geonic) · `context` (liturgical/
@@ -442,3 +442,43 @@ outside_chain (29, observation pass).
 | 415 | Sifra, Shemini, Mekhilta DeMiluim II 15 | chain_primary | enrichment | the TANNAITIC primary of the creation<->Mishkan vayehi pairing: 'the day the Mishkan was erected was as joyous before Him as the day heavens and earth were created — here va-yehi, there va-yehi erev va-yehi voker' (rows 29, 48, 390 resolve here) |
 | 416 | Sifrei Devarim 43:19 | chain_primary | not-bearing | the Okeanos flood of Enosh's generation — tehom-waters used narratively in a punishment homily |
 | 417 | Tanna DeBei Eliyahu Zuta, Additions to Seder Eliyahu Zuta, Pirkei DeRabbi Eliezer 3 | chain_compilation | not-bearing | cup-of-consolation dialogue; day-1 anchor incidental |
+| 418 | Bamidbar Rabbah 12:13 | chain_compilation | dup-of:Midrash Tanchuma, Pekudei 2:3 | Mishkan equal to the world; the day-by-day pairing (day 1: Gen 1:1 <-> the spread curtain, Ps 104:2) |
+| 419 | Bamidbar Rabbah 13:5 | chain_compilation | dup-of:Bereshit Rabbah 42:3 | the vayhi/vehaya polarity sugya |
+| 420 | Bamidbar Rabbah 13:6 | chain_compilation | dup-of:Bereshit Rabbah 3:9 | 'ba-yom ha-rishon — but at creation THE-first-day is not written, rather yom echad'; the Shekhinah-below desire frame around the echad/rishon contrast |
+| 421 | Bamidbar Rabbah 14:12 | chain_compilation | not-bearing | the princes' offering correspondences; anchor artifact |
+| 422 | Bamidbar Rabbah 15:7 | chain_compilation | dup-of:Vayikra Rabbah 31:8 | do-not-demean-the-menorah; do-I-need-your-light |
+| 423 | Bamidbar Rabbah 18:4 | chain_compilation | not-bearing | Korach's tallit narrative |
+| 424 | Bamidbar Rabbah 18:7 | chain_compilation | dup-of:Midrash Tanchuma Buber, Korach 10:2 | 'Morning' — He set boundaries in His world |
+| 425 | Bamidbar Rabbah 1:1 | chain_compilation | dup-of:Vayikra Rabbah 27:1 | righteousness/mountains, judgments/deep |
+| 426 | Devarim Rabbah 2:13 | chain_compilation | dup-of:Jerusalem Talmud Berakhot 9:1:8 | the minim's how-many-authorities challenge; singular bara answer |
+| 427 | Esther Rabbah, Petichta 11 | chain_compilation | dup-of:Bereshit Rabbah 42:3 | the vayhi-=-trouble tradition from the Exile |
+| 428 | Kohelet Rabbah 1:2:1 | chain_compilation | not-bearing | havel havalim, David and Solomon explaining each other; day-1 anchor incidental |
+| 429 | Midrash Tehillim 139:4 | chain_compilation | dup-of:Bereshit Rabbah 8:1 | the two-faces creation of Adam |
+| 430 | Midrash Tehillim 149:1 | chain_compilation | not-bearing | new-song homily; anchor artifact |
+| 431 | Midrash Tehillim 18:29 | chain_compilation | not-bearing | Abraham seated while the Shekhinah stands; anchor artifact |
+| 432 | Midrash Tehillim 26:6 | chain_compilation | dup-of:Midrash Tanchuma, Pekudei 2:3 | the creation<->Mishkan day-by-day correspondence |
+| 433 | Midrash Tehillim 27:1 | chain_compilation | not-bearing | the-Lord-is-my-light candle homily |
+| 434 | Midrash Tehillim 86:4 | chain_compilation | dup-of:Mekhilta DeRabbi Yishmael, Tractate Shirah 8:14 | He builds the upper world first |
+| 435 | Midrash Tehillim 92:3 | chain_compilation | dup-of:Bereshit Rabbah 12:6 | the thirty-six-hour primordial light around Shabbat |
+| 436 | Midrash Tehillim 93:3 | chain_compilation | dup-of:Jerusalem Talmud Chagigah 2:1:8 | Ben Azzai: the waters rose to the throne; merachefet paired with Deut 32:11's eagle again — another witness for the within-Torah echo pair |
+| 437 | Pesikta Rabbati 17:1 | chain_compilation | dup-of:Pesikta DeRav Kahana 7:5 | the midnight-precision exposition (he-only) |
+| 438 | Pesikta Rabbati 21:1 | chain_compilation | context | the Anokhi piska (he-only); the ten-utterances <-> ten-commandments correspondence family around its Gen 1:3 anchor |
+| 439 | Pesikta Rabbati 36:1 | chain_compilation | enrichment | the MESSIANIC form of the hidden light: 'arise, my light' — the light stored from creation for the Messiah (extends the or-ha-ganuz dossier toward its future pole; cf. rows 19, 26, 33) |
+| 440 | Pesikta Rabbati 44:1 | chain_compilation | not-bearing | teshuvah/immersion homily (he-only); anchor artifact |
+| 441 | Pesikta Rabbati 5:1 | chain_compilation | not-bearing | Shekhinah fills the Mishkan; cave-and-sea parable; day-1 anchor incidental |
+| 442 | Pesikta Rabbati 7:1 | chain_compilation | not-bearing | Nachshon's first-day offering procession; anchored via ba-yom ha-rishon |
+| 443 | Ruth Rabbah (Lerner) 1:7:2 | chain_compilation | dup-of:Bereshit Rabbah 42:3 | vayhi polarity with the va-yehi-or objection (he-only) |
+| 444 | Ruth Rabbah, Petichta 1 | chain_compilation | not-bearing | judges-generation homily |
+| 445 | Ruth Rabbah, Petichta 7 | chain_compilation | dup-of:Bereshit Rabbah 42:3 | the full vayhi-=-trouble exposition |
+| 446 | Shemot Rabbah 14:2 | chain_compilation | not-bearing | the source of Egypt's plague-darkness (upper darkness vs Gehinnom), citing the 1:2 darkness |
+| 447 | Shemot Rabbah 15:22 | chain_compilation | enrichment | 'many deeds Moses recorded UNCLEAR, and DAVID arose and EXPLAINED them — in creation He created the heavens and did not explain…' — the later-verse-explains-creation doctrine with the Psalms as explainer: second compiled statement of the echo-graph rationale (cf. row 214) |
+| 448 | Shemot Rabbah 1:2 | chain_compilation | dup-of:Bereshit Rabbah 12:3 | eleh negates — 'void and darkness' expunged; ve-eleh adds |
+| 449 | Shemot Rabbah 1:20 | chain_compilation | dup-of:Sotah 12a:17 | Moses' birth and tov |
+| 450 | Shemot Rabbah 25:6 | chain_compilation | not-bearing | none-like-You manna homily |
+| 451 | Shemot Rabbah 2:4 | chain_compilation | dup-of:Midrash Tanchuma, Shemot 17:1 | haya read as pre-designation ('everyone of whom haya is written was fated…') |
+| 452 | Shemot Rabbah 30:13 | chain_compilation | dup-of:Bereshit Rabbah 14:1 | created with justice — with the explicit name-contrast: 'H'-created is NOT stated, but ELOHIM-created' (cf. row 406's din-then-rachamim) |
+| 453 | Shemot Rabbah 34:2 | chain_compilation | not-bearing | the Ark preceded the vessels as light preceded the creations — analogy use |
+| 454 | Shemot Rabbah 35:1 | chain_compilation | not-bearing | cedars-of-Lebanon homily |
+| 455 | Shemot Rabbah 50:1 | chain_compilation | dup-of:Jerusalem Talmud Chagigah 2:1:3 | 'when He created His world it was entirely water' — the initial-state cosmology again |
+| 456 | Shemot Rabbah 52:5 | chain_compilation | not-bearing | the Tabernacle brought to Moses; Solomon's crown homily |
+| 457 | Shir HaShirim Rabbah 5:11:4 | chain_compilation | not-bearing | the yod of Sarai pleading; letter lore, day-1 anchor incidental |
