@@ -7,7 +7,7 @@ source may earn are bounded by its chain status. Not binding religious law.
 **Counters (updated per batch — the three honest numbers):**
 - enumerated: 483 tier-1 sources (oral_links, fetched index 2026-07-30)
 - fetched: 483 (Data/sefaria_texts/, 0 failures)
-- **read: 344** of 483 (batches 1-7 as before; batch 8: halakhic_application 43 + geonic 7 + late targum 8 + outside_chain 29 — 2026-07-30; material finds unchanged: BR 1:9, 1:14, 3:2, 3:6, 3:9, 17:1 + Chagigah 12a:6, 12a:20 + Onkelos 1:1, Onkelos 1:5, MdRY Pischa 1:4. REMAINING 139 = the rest of the chain_primary/chain_compilation layer (Tanchuma, PRE, Midrash Tehillim, Pesikta Rabbati, TDE, Sifra/Sifrei, ADRN A, Seder Olam…))
+- **read: 417** of 483 (batches 1-8 as before; batch 9: missed primaries + PRE + the Tanchuma/Yelamdenu family, 73 — 2026-07-30; material list unchanged, +BR 4:2 already-cited)
 
 **Verdict vocabulary:** `material` (bears on the derivation — chain_primary only, per policy) ·
 `enrichment` (worth an Oral note — chain_primary/compilation/geonic) · `context` (liturgical/
@@ -369,3 +369,76 @@ outside_chain (29, observation pass).
 | 342 | The Sabbath Epistle, Third Gate; On the Beginning of the Day 15 | halakhic_application | enrichment | tohu va-vohu = UNINHABITED, proved from Jer 4:23 AS EXPLAINED BY Jer 4:25 ('I saw and there was no man') — the flagship echo edge used as a lexical gloss by a Rishon; Isa 30:26 similarly cited as explanation of 'the seven days' |
 | 343 | The Sabbath Epistle, Third Gate; On the Beginning of the Day 16 | halakhic_application | enrichment | darkness preceded light; yom = the full diurnal cycle, dark-then-light — the composition order argued from 1:2 |
 | 344 | The Sabbath Epistle, Third Gate; On the Beginning of the Day 17 | halakhic_application | enrichment | the YOM POLYSEMY stated outright: 'yom has two meanings — 12-hour daylight and the 24-hour period'; dusk and dawn are the two boundaries encompassing the Torah's day; erev defined perceptually ('when shapes merge') — a Rishon articulating the REGISTRY-label vs LEDGER-unit split (Onkelos and Rasag dossier) |
+| 345 | Bereshit Rabbah 4:2 | chain_primary | material (already cited) | the middle-drop congealing on yehi raqia (1:6) — day-2 primary, already cited in gen_02's oral notes; its day-1 anchor is incidental |
+| 346 | Midrash Tanchuma Buber, Bamidbar 18:1 | chain_compilation | not-bearing | the matron's six-days question; matchmaking homily — day-1 anchor incidental |
+| 347 | Midrash Tanchuma Buber, Bamidbar 1:1 | chain_compilation | dup-of:Vayikra Rabbah 27:1 | righteousness-like-mountains / judgments-like-the-deep |
+| 348 | Midrash Tanchuma Buber, Beha'alotcha 8:1 | chain_compilation | dup-of:Vayikra Rabbah 31:8 | 'could one light a lamp from darkness? He did' — 1:2 then 1:3, the menorah frame |
+| 349 | Midrash Tanchuma Buber, Bereshit 11:1 | chain_compilation | not-bearing | R. Yitzchak's why-not-start-from-ha-chodesh (koach ma'asav) — canon-structure rationale (cf. row 167) |
+| 350 | Midrash Tanchuma Buber, Bereshit 11:2 | chain_compilation | dup-of:Bereshit Rabbah 3:2 | Resh Lakish: created by the word (Ps 33:6), without toil; retribution frame for world-destroyers |
+| 351 | Midrash Tanchuma Buber, Bereshit 18:1 | chain_compilation | dup-of:Bereshit Rabbah 12:6 | the defective toledot spellings |
+| 352 | Midrash Tanchuma Buber, Bereshit 19:1 | chain_compilation | dup-of:Chagigah 12a:16 | Beit Shammai / Beit Hillel order dispute with the 1:1 vs 2:4 tension stated |
+| 353 | Midrash Tanchuma Buber, Bereshit 1:1 | chain_compilation | dup-of:Bereshit Rabbah 1:3 | creation schedule: heaven+earth day one, the rest built after (Ps 104:3 roof-on-waters) |
+| 354 | Midrash Tanchuma Buber, Bereshit 3:1 | chain_compilation | dup-of:Vayikra Rabbah 36:4 | bereshit = for the sake of Israel-called-reshit (Jer 2:3) |
+| 355 | Midrash Tanchuma Buber, Bereshit 4:1 | chain_compilation | not-bearing | shield-of-salvation homily |
+| 356 | Midrash Tanchuma Buber, Bereshit 4:7 | chain_compilation | dup-of:Bereshit Rabbah 1:12 | Ben Azzai: He mentioned His works BEFORE His name (bereshit bara, then Elohim) — the word-order humility reading |
+| 357 | Midrash Tanchuma Buber, Bereshit 5:1 | chain_compilation | dup-of:Bereshit Rabbah 1:1 | amon / Prov 8:30 — the Torah-blueprint reading |
+| 358 | Midrash Tanchuma Buber, Bereshit 6:1 | chain_compilation | dup-of:Bereshit Rabbah 1:13 | RSHBY's offering word-order rule (to-the-LORD placed after) |
+| 359 | Midrash Tanchuma Buber, Bereshit 7:1 | chain_compilation | dup-of:Jerusalem Talmud Berakhot 9:1:8 | the minim's how-many-deities challenge answered from the singular verb |
+| 360 | Midrash Tanchuma Buber, Bereshit 8:1 | chain_compilation | dup-of:Bereshit Rabbah 1:14 | akh/rak exclusions, et/gam inclusions — the R. Yishmael / R. Akiva exchange |
+| 361 | Midrash Tanchuma Buber, Bo 2:1 | chain_compilation | not-bearing | source of Egypt's plague-darkness (darkness above vs Gehinnom) — plague homily citing the 1:2 darkness traditions |
+| 362 | Midrash Tanchuma Buber, Bo 6:1 | chain_compilation | not-bearing | plagues destined for Edom; anchor artifact |
+| 363 | Midrash Tanchuma Buber, Emor 7:6 | chain_compilation | dup-of:Vayikra Rabbah 27:1 | righteousness/mountains, R. Yishmael and R. Akiva |
+| 364 | Midrash Tanchuma Buber, Korach 10:2 | chain_compilation | enrichment | THE compiled primary of the boundary paradigm (resolves row 240): 'He distinguished BOUNDARIES in His world — can you confuse morning with evening? va-yehi erev va-yehi voker, and God SEPARATED — as He separated light from darkness, so He separated Israel…' — the SEPARATE operator as inviolable covenant template, at its Tanchuma locus |
+| 365 | Midrash Tanchuma Buber, Korach 6:1 | chain_compilation | not-bearing | Korach's tallit narrative; anchor artifact |
+| 366 | Midrash Tanchuma Buber, Matot 9:1 | chain_compilation | not-bearing | exaltation-not-from-east homily; anchor artifact |
+| 367 | Midrash Tanchuma Buber, Mishpatim 2:3 | chain_compilation | dup-of:Bereshit Rabbah 12:3 | R. Abahu: eleh cancels — 'it canceled AND THE EARTH WAS VOID…' stated verbatim |
+| 368 | Midrash Tanchuma Buber, Noach 12:1 | chain_compilation | enrichment | the Flood-wind (Gen 8:1) 'restored them just as they were at their beginning,' tied to 1:2's wind-over-waters — the {P}-state as an explicit RESTORE POINT (rollback dossier: rows 16, 38, 74, 131) |
+| 369 | Midrash Tanchuma Buber, Pekudei 8:7 | chain_compilation | not-bearing | the pepper-trader Zion story; anchor artifact |
+| 370 | Midrash Tanchuma Buber, Shemot 19:2 | chain_compilation | dup-of:Megillah 9a:12 | the Ptolemy word-order change, bare statement |
+| 371 | Midrash Tanchuma Buber, Shmini 9:1 | chain_compilation | not-bearing | Rechabites and wine; anchor artifact |
+| 372 | Midrash Tanchuma Buber, Tazria 12:1 | chain_compilation | enrichment | R. Elazar b. Pedat in R. Yochanan's name — the NAMING ASYMMETRY at its compiled locus (resolves row 198's source): His name is mentioned with the good only — va-yiqra ELOHIM la-or yom, but the darkness named without the Name |
+| 373 | Midrash Tanchuma Buber, Tazria 2:1 | chain_compilation | dup-of:Bereshit Rabbah 8:1 | achor va-kedem; the two-creations reading of Adam |
+| 374 | Midrash Tanchuma Buber, Vaera 7:1 | chain_compilation | not-bearing | king-of-glory homily; anchor artifact |
+| 375 | Midrash Tanchuma Buber, Vayikra 6:1 | chain_compilation | not-bearing | He called from the Tent of Meeting; day-1 anchor incidental |
+| 376 | Midrash Tanchuma Buber, Yitro 16:1 | chain_compilation | dup-of:Pesikta DeRav Kahana 12:24 | R. Acha: the alef's twenty-six-generation complaint, repaid at Anokhi |
+| 377 | Midrash Tanchuma, Bamidbar 16:1 | chain_compilation | not-bearing | the matron's six-days question, standard recension |
+| 378 | Midrash Tanchuma, Beha'alotcha 5:1 | chain_compilation | not-bearing | menorah after the princes' offerings; anchor artifact |
+| 379 | Midrash Tanchuma, Bereshit 1:1 | chain_compilation | dup-of:Bereshit Rabbah 1:1 | 'with reshit = with wisdom He founded the earth' (Prov 3:19) — the blueprint reading |
+| 380 | Midrash Tanchuma, Bereshit 1:8 | chain_compilation | enrichment | Resh Lakish's TENAI at its Tanchuma locus: only day six takes the definite article — yom HA-shishi — creation held conditional on Israel's acceptance of Torah (cf. row 279; flagged for the day-6 unit) |
+| 381 | Midrash Tanchuma, Bereshit 4:1 | chain_compilation | context | yelamdenu-question frame opening the Bereshit cycle |
+| 382 | Midrash Tanchuma, Bereshit 5:1 | chain_compilation | dup-of:Bereshit Rabbah 1:10 | why the account begins with bet and not alef |
+| 383 | Midrash Tanchuma, Bo 2:3 | chain_compilation | not-bearing | Egypt's darkness-magic homily |
+| 384 | Midrash Tanchuma, Chayei Sara 3:6 | chain_compilation | enrichment | the missing TEST on day 2 explained: 'about that day it is not written ki tov' because Gehenna's fire was created then — the chain's reason for the very gap gen_02's S6 fires on (parallel to BR 4:6, already cited in gen_02's oral notes) |
+| 385 | Midrash Tanchuma, Emor 5:1 | chain_compilation | dup-of:Vayikra Rabbah 27:1 | righteousness/mountains |
+| 386 | Midrash Tanchuma, Korach 3:1 | chain_compilation | not-bearing | Korach's tallit, standard recension |
+| 387 | Midrash Tanchuma, Korach 5:1 | chain_compilation | dup-of:Midrash Tanchuma Buber, Korach 10:2 | the in-the-morning boundaries exposition, standard recension |
+| 388 | Midrash Tanchuma, Matot 6:1 | chain_compilation | not-bearing | exaltation homily, standard recension |
+| 389 | Midrash Tanchuma, Nasso 19:1 | chain_compilation | not-bearing | twenty-six generations sustained by kindness; day-1 anchor incidental |
+| 390 | Midrash Tanchuma, Pekudei 2:3 | chain_compilation | enrichment | 'the Tabernacle is EQUAL to the creation of the world' — with the day-by-day verse correspondence table (day 1 bereshit <-> the spread curtains…): the fullest form of the creation<->Mishkan pairing (rows 29, 48, 103, 117) |
+| 391 | Midrash Tanchuma, Shemot 17:1 | chain_compilation | enrichment | hayetah read as PRE-DESIGNATION ('many things designated before entering the world'); choshekh (1:2) identified as the angel of death — a qatal-semantics move on the STATE_BLOCK verb plus symbolic overlay |
+| 392 | Midrash Tanchuma, Shemot 22:1 | chain_compilation | dup-of:Megillah 9a:12 | the Ptolemy alterations, ten-changes recension |
+| 393 | Midrash Tanchuma, Shmini 5:1 | chain_compilation | not-bearing | wine commandment homily |
+| 394 | Midrash Tanchuma, Shmini 9:1 | chain_compilation | dup-of:Bereshit Rabbah 42:3 | the vayehi-=-grief tradition from the exile |
+| 395 | Midrash Tanchuma, Tazria 1:1 | chain_compilation | not-bearing | Job's months-of-old / womb homily |
+| 396 | Midrash Tanchuma, Tazria 9:1 | chain_compilation | dup-of:Midrash Tanchuma Buber, Tazria 12:1 | He delights in vindicating; the naming-asymmetry context, standard recension |
+| 397 | Midrash Tanchuma, Tetzaveh 12:4 | chain_compilation | not-bearing | 'they stand this day according to Your ordinances' — creation as law-governed, in passing (cf. the din dossier, row 406) |
+| 398 | Midrash Tanchuma, Vaera 1:2 | chain_compilation | dup-of:Bereshit Rabbah 1:12 | Ben Azzai: His name mentioned only after 'bereshit bara' — word-order humility |
+| 399 | Midrash Tanchuma, Vayakhel 6:1 | chain_compilation | dup-of:Jerusalem Talmud Chagigah 2:1:3 | 'the entire world was water' — the water-in-water initial state |
+| 400 | Midrash Tanchuma, Vayakhel 6:2 | chain_compilation | dup-of:Bereshit Rabbah 3:1 | the king lit candles then built — light first |
+| 401 | Midrash Tanchuma, Vayeshev 4:1 | chain_compilation | not-bearing | He acts circuitously; anchor artifact |
+| 402 | Midrash Tanchuma, Vayigash 6:1 | chain_compilation | dup-of:Jerusalem Talmud Berakhot 8:6:9 | havdalah lamp only after benefit — the TEST-then-SEPARATE order rule, Tanchuma recension |
+| 403 | Midrash Tanchuma, Vayikra 4:1 | chain_compilation | not-bearing | He called from the Tent; day-1 anchor incidental |
+| 404 | Midrash Tanchuma, Vayikra 8:1 | chain_compilation | not-bearing | vayikra / 'saying' exposition; anchor artifact |
+| 405 | Midrash Yelamdenu, Selections from Yalkut Talmud Torah 10:1 | chain_compilation | dup-of:Midrash Tanchuma, Shemot 17:1 | choshekh = angel of death, created day one (he-only text) |
+| 406 | Midrash Yelamdenu, Selections from Yalkut Talmud Torah 1:1 | chain_compilation | enrichment | the DIN-then-RACHAMIM progression stated fully (he-only): 'with justice You created — bereshit bara ELOHIM; it did not stand until He joined MERCY — be-yom asot H' ELOHIM (2:4)'; likewise the rain and Adam — the agent-designator's two-name progression as attribute mixing (completes rows 36, 96, 168) |
+| 407 | Midrash Yelamdenu, Selections from Yalkut Talmud Torah 2:1 | chain_compilation | dup-of:Mekhilta DeRabbi Yishmael, Tractate Shirah 8:14 | flesh-and-blood builds bottom-up; He built top-down (he-only) |
+| 408 | Midrash Yelamdenu, Selections from Yalkut Talmud Torah 3:1 | chain_compilation | dup-of:Midrash Tanchuma, Shemot 17:1 | choshekh = angel of death; another: Gehinnom (he-only) |
+| 409 | Pirkei DeRabbi Eliezer 18:1 | chain_compilation | dup-of:Chagigah 12a:16 | Beit Shammai / Beit Hillel order dispute, PRE recension |
+| 410 | Pirkei DeRabbi Eliezer 18:4 | chain_compilation | enrichment | SEVEN DEDICATIONS: each day He 'finished all His work and DEDICATED it — va-yehi erev va-yehi voker' — the commit formula read as a per-day consecration rite; six dedicated, the seventh reserved for the future (day-7 flag) |
+| 411 | Pirkei DeRabbi Eliezer 3:12 | chain_compilation | enrichment | the ten sayings comprised in THREE attributes (wisdom, understanding, knowledge — Prov 3:19-20) — the utterance census compressed into instruments (census dossier); north as the abode of evil |
+| 412 | Pirkei DeRabbi Eliezer 3:6 | chain_compilation | enrichment | VARIANT day-one inventory: EIGHT things (heaven, earth, light, darkness, tohu, bohu, wind, water) — 'some say' day and night made TEN: the day-one list itself is a machloket (8 vs 10 — cf. Chagigah 12a:6, ORAL_presupposed_resolutions dossier) |
+| 413 | Pirkei DeRabbi Eliezer 4:1 | chain_compilation | enrichment | day-2 inventory (firmament, angels, fire, Gehinnom's fire) + 'which firmament was created on day two?' — R. Eliezer: the one above the chayot — the 1:1-shamayim vs 1:6-raqia distinction (flagged for gen_02) |
+| 414 | Pirkei DeRabbi Eliezer 7:3 | chain_compilation | context | lunar-cycle arithmetic under the day definitions |
+| 415 | Sifra, Shemini, Mekhilta DeMiluim II 15 | chain_primary | enrichment | the TANNAITIC primary of the creation<->Mishkan vayehi pairing: 'the day the Mishkan was erected was as joyous before Him as the day heavens and earth were created — here va-yehi, there va-yehi erev va-yehi voker' (rows 29, 48, 390 resolve here) |
+| 416 | Sifrei Devarim 43:19 | chain_primary | not-bearing | the Okeanos flood of Enosh's generation — tehom-waters used narratively in a punishment homily |
+| 417 | Tanna DeBei Eliyahu Zuta, Additions to Seder Eliyahu Zuta, Pirkei DeRabbi Eliezer 3 | chain_compilation | not-bearing | cup-of-consolation dialogue; day-1 anchor incidental |
