@@ -26,6 +26,8 @@ DROP TABLE IF EXISTS units;
 DROP TABLE IF EXISTS steps;
 DROP TABLE IF EXISTS coverage;
 DROP TABLE IF EXISTS unit_scenarios;
+DROP TABLE IF EXISTS unit_oral_notes;
+DROP TABLE IF EXISTS unit_amendments;
 CREATE TABLE units (id INTEGER PRIMARY KEY, unit_id TEXT UNIQUE, file TEXT,
                     book_en TEXT, refs TEXT, status TEXT, genre TEXT,
                     confidence TEXT, title_en TEXT, tree_derive_version TEXT,
@@ -36,6 +38,11 @@ CREATE TABLE steps (id INTEGER PRIMARY KEY, unit_id TEXT, step_id TEXT,
 CREATE TABLE coverage (unit_id TEXT, ref TEXT, coverage_json TEXT);
 CREATE TABLE unit_scenarios (unit_id TEXT, sid TEXT, title_en TEXT,
                              expect_en TEXT, extra_json TEXT);
+CREATE TABLE unit_oral_notes (unit_id TEXT, note_id TEXT, status TEXT,
+                              work_en TEXT, he TEXT, translit TEXT,
+                              en TEXT, comment_en TEXT, source TEXT);
+CREATE TABLE unit_amendments (unit_id TEXT, date TEXT, authorized TEXT,
+                              what TEXT);
 CREATE INDEX ix_steps_unit ON steps(unit_id);
 CREATE INDEX ix_steps_ref ON steps(ref);
 """
@@ -79,6 +86,19 @@ def main() -> None:
              len(scen) if isinstance(scen, list) else 0),
         )
         n_units += 1
+        for o in (d.get("oral_notes") or []):
+            if isinstance(o, dict):
+                con.execute(
+                    "INSERT INTO unit_oral_notes VALUES(?,?,?,?,?,?,?,?,?)",
+                    (uid, o.get("id"), o.get("status"), o.get("work_en"),
+                     o.get("he"), o.get("he_translit"), str(o.get("en", "")),
+                     str(o.get("comment_en", "")), str(o.get("source", ""))))
+        for a in (d.get("amendment_log") or []):
+            if isinstance(a, dict):
+                con.execute(
+                    "INSERT INTO unit_amendments VALUES(?,?,?,?)",
+                    (uid, str(a.get("date")), str(a.get("authorized", "")),
+                     str(a.get("what", ""))))
         if isinstance(steps, list):
             for s in steps:
                 if not isinstance(s, dict):
