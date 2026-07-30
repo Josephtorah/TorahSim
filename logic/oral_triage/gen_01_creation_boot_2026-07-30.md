@@ -7,7 +7,7 @@ source may earn are bounded by its chain status. Not binding religious law.
 **Counters (updated per batch — the three honest numbers):**
 - enumerated: 483 tier-1 sources (oral_links, fetched index 2026-07-30)
 - fetched: 483 (Data/sefaria_texts/, 0 failures)
-- **read: 257** of 483 (batches 1-6 as before; batch 7: the chain_anthology fast-pass, all 125 — 2026-07-30; material finds so far: BR 1:9, 1:14, 3:2, 3:6, 3:9, 17:1 + Chagigah 12a:6, 12a:20 + Onkelos 1:1, Onkelos 1:5, MdRY Pischa 1:4 — no material possible from anthologies per policy)
+- **read: 344** of 483 (batches 1-7 as before; batch 8: halakhic_application 43 + geonic 7 + late targum 8 + outside_chain 29 — 2026-07-30; material finds unchanged: BR 1:9, 1:14, 3:2, 3:6, 3:9, 17:1 + Chagigah 12a:6, 12a:20 + Onkelos 1:1, Onkelos 1:5, MdRY Pischa 1:4. REMAINING 139 = the rest of the chain_primary/chain_compilation layer (Tanchuma, PRE, Midrash Tehillim, Pesikta Rabbati, TDE, Sifra/Sifrei, ADRN A, Seder Olam…))
 
 **Verdict vocabulary:** `material` (bears on the derivation — chain_primary only, per policy) ·
 `enrichment` (worth an Oral note — chain_primary/compilation/geonic) · `context` (liturgical/
@@ -282,3 +282,90 @@ outside_chain (29, observation pass).
 | 255 | Yalkut Shimoni on Torah 766:5 | chain_anthology | not-bearing | Balaam homily; anchor artifact |
 | 256 | Yalkut Shimoni on Torah 830:12 | chain_anthology | dup-of:Bava Kamma 55a:6 | tov in the dibrot |
 | 257 | Yalkut Shimoni on Torah 860:8 | chain_anthology | not-bearing | Deut land/circumcision homily; anchor artifact |
+| 258 | Abudarham, Weekday Prayers, Songs of Praise 1 | halakhic_application | context | barukh she-amar ('who SPOKE and the world was') explained by the maamar doctrine (Ps 33:6) + created-with-heh — the liturgy's opening blessing encodes the utterance reading |
+| 259 | Arukh HaShulchan, Orach Chaim 669:1 | halakhic_application | context | Simchat Torah: the cycle restarts at Bereshit immediately after Deuteronomy ends |
+| 260 | Ben Ish Hai, Drashot, Bereshit 1 | halakhic_application | not-bearing | homiletic-kabbalistic: pru-urvu as first mitzvah tied to 1:1 (Portuguese translation) |
+| 261 | Ben Ish Hai, Drashot, Bereshit 3 | halakhic_application | not-bearing | creatures-from-the-inanimate homily |
+| 262 | Ben Ish Hai, Drashot, Bereshit 4 | halakhic_application | not-bearing | klipot / gematria homily on 1:4 |
+| 263 | Ben Ish Hai, Halachot 1st Year, Pinchas 1:1 | halakhic_application | context | why the blessing says ha-ADAMAH not ha-ARETZ: eretz is the more honored name — first named in the Torah at 1:1, bearing His name — registry-name honor driving blessing wording |
+| 264 | Ben Ish Hai, Halachot 2nd Year, Toldot 7:1 | halakhic_application | context | yotzer-or kavanot for Shabbat — liturgical use of the 1:3 vocabulary |
+| 265 | Contemporary Halakhic Problems, Vol V, Chapter III Mizvot in the Polar Regions and in Earth Orbit 25 | halakhic_application | context | the polar-day problem; Tiferet Yisrael's Danzig distinction — the day-definition stress-tested at the poles |
+| 266 | Contemporary Halakhic Problems, Vol V, Chapter III Mizvot in the Polar Regions and in Earth Orbit 31 | halakhic_application | context | 'read literally, the day is defined by evening and morning (Gen 1:5)' — the commit formula applied to earth orbit; modern edge-case jurisprudence on our token |
+| 267 | From Sinai to Ethiopia, Shulhan haOrit; The Halakhah of Ethiopian Jewry, Then and Now, 3 Shabbat 3:5 | halakhic_application | context | Ethiopian halakhah: the day begins the preceding evening, from Gen 1:5 — the erev-first rule across a long-separated community |
+| 268 | Halakhot Gedolot 2:6 | chain_geonic | context | geonic kiddush rules for Shabbat eve — the evening-boundary in early codified practice |
+| 269 | Kitzur Shulchan Arukh 138:9 | halakhic_application | context | Simchat Torah reading mechanics |
+| 270 | Kitzur Shulchan Arukh 68:6 | halakhic_application | context | journey conduct — the ki-tov family codified (cf. row 115) |
+| 271 | Learning to Read Midrash, Introduction 27 | outside_chain_academic | not-bearing | OBSERVATION: academic survey of commentary genres; anchor artifact |
+| 272 | Legends of the Jews 1:1:1 | outside_chain_academic | not-bearing | OBSERVATION: section heading only ('The First Things Created') |
+| 273 | Legends of the Jews 1:1:13 | outside_chain_academic | dup-of:Chagigah 12a:6 | Ginzberg's English retelling of the ten-things list |
+| 274 | Legends of the Jews 1:1:2 | outside_chain_academic | dup-of:Bereshit Rabbah 1:4 | Ginzberg merges the SEVEN pre-creation things (Pesachim 54a's version — that Bavli primary is not in the day-1 link set; flagged) with BR 1:4's six |
+| 275 | Mishneh Torah, Prayer and the Priestly Blessing 13:1 | halakhic_application | context | the annual cycle begins with sidrat Bereshit after Sukkot |
+| 276 | Mishneh Torah, Prayer and the Priestly Blessing 13:3 | halakhic_application | context | weekday/afternoon reading mechanics off the Bereshit start |
+| 277 | Mishneh Torah, Reading the Shema 1:1 | halakhic_application | context | evening Shema first — Rambam codifying the evening-precedence the gemara derived from 1:5 (row 57) |
+| 278 | Mishneh Torah, Vessels of the Sanctuary and Those Who Serve Therein 6:6 | halakhic_application | context | ma'amadot read the creation narrative — 'were it not for the sacrifices, heavens and earth would not be maintained' (cf. rows 55, 68, 103) |
+| 279 | Otzar Midrashim, Midrash Hagadol 2 | outside_chain_academic | not-bearing | OBSERVATION: editor's introduction taking permission; no content on our span |
+| 280 | Otzar Midrashim, Midrash Konen ('He Established') 1:3 | outside_chain_academic | context | OBSERVATION: late cosmogonic midrash — the world established by wisdom = Torah (blueprint family) |
+| 281 | Otzar Midrashim, Midrash Lekach Tov 3 | outside_chain_academic | not-bearing | OBSERVATION: Eisenstein's bibliographic note on Lekach Tov — opens Bereshit citing Sefer Yetzirah and Shabbetai Donnolo: provenance background for the batch-7 rows |
+| 282 | Otzar Midrashim, Midrash Temurah 1:4 | outside_chain_academic | not-bearing | OBSERVATION: R. Akiva healing narrative; anchor artifact |
+| 283 | Otzar Midrashim, Midrash on the Ten Commandments 1:33 | outside_chain_academic | not-bearing | OBSERVATION: pious-man story; anchor artifact |
+| 284 | Otzar Midrashim, Midrash on the Ten Commandments 1:4 | outside_chain_academic | context | OBSERVATION: pre-creation Torah written black-fire-on-white-fire, gazed at before creating — the blueprint family in late form |
+| 285 | Otzar Midrashim, Midrashim of Rabbi Akiba, The Small Letters and their Purposes 25 | outside_chain_academic | context | OBSERVATION: 'after 80 letters comes va-yomer Elohim yehi or, for we find NO SPEECH before this' — VERIFIED against our corpus 2026-07-30: Gen 1:1-2 = exactly 80 letters, the first va-yomer starts at letter 81; a letter-census corroborating the utterance count (ORAL_e1_maamar dossier) |
+| 286 | Otzar Midrashim, Sefer Tagin ('Crowns') 15:2 | outside_chain_academic | context | OBSERVATION: tagin list — Elohim of 1:1 (cf. Soferim 9:1, row 102) |
+| 287 | Otzar Midrashim, Sefer Tagin ('Crowns') 15:3 | outside_chain_academic | context | OBSERVATION: tagin list — Elohim of yehi or (1:3) |
+| 288 | Otzar Midrashim, Sefer Tagin ('Crowns') 20:2 | outside_chain_academic | context | OBSERVATION: tagin list — merachefet (1:2) |
+| 289 | Otzar Midrashim, Sefer Tagin ('Crowns') 24:2 | outside_chain_academic | context | OBSERVATION: tagin list — va-yiqra Elohim (1:5) |
+| 290 | Otzar Midrashim, Sefer Tagin ('Crowns') 24:3 | outside_chain_academic | context | OBSERVATION: tagin list — kara lailah (1:5) |
+| 291 | Otzar Midrashim, Sefer Tagin ('Crowns') 25:2 | outside_chain_academic | context | OBSERVATION: tagin list — yehi or (1:3) |
+| 292 | Otzar Midrashim, Sefer Tagin ('Crowns') 27:2 | outside_chain_academic | context | OBSERVATION: tagin list — merachefet again (variant list) |
+| 293 | Otzar Midrashim, Sefer Tagin ('Crowns') 28:2 | outside_chain_academic | context | OBSERVATION: the BET of bereshit must stand at the head of the column — scribal layout rule for e1's first letter |
+| 294 | Otzar Midrashim, Sefer Tagin ('Crowns') 5:2 | outside_chain_academic | context | OBSERVATION: tagin list — Elohim of 1:1 (parallel list) |
+| 295 | Otzar Midrashim, Sefer Tagin ('Crowns') 5:3 | outside_chain_academic | context | OBSERVATION: tagin list — Elohim of 1:3 (parallel list) |
+| 296 | Otzar Midrashim, Sefer Tagin ('Crowns') 8:2 | outside_chain_academic | context | OBSERVATION: tagin list — ve-ruach Elohim merachefet (1:2) |
+| 297 | Otzar Midrashim, Sefer Tagin ('Crowns') 9:2 | outside_chain_academic | context | OBSERVATION: tagin list — ki tov (1:4), marked as the FIRST |
+| 298 | Peninei Halakhah, Family Purity 10:1:3 | halakhic_application | context | mikveh rationale: the waters preceded life (from 1:2) — immersion as return to the pre-formation state |
+| 299 | Peninei Halakhah, Family Purity 1:12:4 | halakhic_application | context | chesed as foundation: waters preceded heavens-and-earth (1:2) with ADRN's 'world built on chesed' |
+| 300 | Peninei Halakhah, Family Purity 9:9:2 | halakhic_application | context | modern synthesis citing the Zohar's reading of va-yehi as diminution (the great light reduced on descent) — kabbalistic mood-reading of the RESULT token |
+| 301 | Peninei Halakhah, Shabbat 3:1:2 | halakhic_application | context | modern codification: 'in the Torah, night precedes day for all matters,' from Gen 1:5 — the erev-first composition as standing law |
+| 302 | Sefer Chasidim 258:1 | halakhic_application | enrichment | letter-level: SIX word-final EMET acrostics in the creation account (barA ElohiM eT = alef-mem-tav spells emet) — the pietist tradition counting hidden truth-seals across our span; checkable locally |
+| 303 | Sefer HaChinukh 173:2 | halakhic_application | context | mikveh = re-creation: 'the whole world was water before man' (1:2) — the {P}-state as purification rationale |
+| 304 | Sefer HaMitzvot, Positive Commandments 110:1 | halakhic_application | not-bearing | tzaraat purification procedure; anchor artifact |
+| 305 | Sefer Puah, First Volume; Family and Purity, III Immersion and Interposition in Complex Situations 18:2 | halakhic_application | dup-of:Sefer HaChinukh 173:2 | quotes the Chinukh's mikveh-as-re-creation passage (he-only text) |
+| 306 | Sheiltot d'Rav Achai Gaon 26:9 | chain_geonic | context | geonic: read each festival's matter in its season (Lev 23:44 rule) — the reading-calendar frame |
+| 307 | Shibbolei HaLeket 372:4 | halakhic_application | context | Simchat Torah custom: the congregation recites BY HEART 'bereshit bara… yom echad' — the day-1 parashah (our exact span) as a memorized liturgical unit |
+| 308 | Shulchan Arukh, Choshen Mishpat 5:3 | halakhic_application | context | judges sit from morning to the fifth hour — codification of the Shabbat 10a sugya (row 66) |
+| 309 | Shulchan Arukh, Orach Chayim 668:2 | halakhic_application | context | Simchat Torah: second scroll reads Bereshit through 'asher bara Elohim la'asot' |
+| 310 | Shulchan Arukh, Orach Chayim 669:1 | halakhic_application | context | Simchat Torah order; Bereshit restart |
+| 311 | Shulchan Arukh, Yoreh De'ah 395:1 | halakhic_application | context | miktzat ha-yom ke-kulo (part of the day counts as the whole) in mourning law — day-composition arithmetic in halakhic service |
+| 312 | Shulchan Shel Arba 1:48 | halakhic_application | context | havdalah as honoring Shabbat at entry and exit |
+| 313 | Shulchan Shel Arba 1:56 | halakhic_application | not-bearing | pairs superstition; anchor artifact |
+| 314 | Shulchan Shel Arba, Introduction 6 | halakhic_application | not-bearing | Adam's decree homily |
+| 315 | Shulchan Shel Arba, Introduction 7 | halakhic_application | context | the two-slaves parable with the toheh-ve-voheh pun — the bewildered-earth reading of tohu/vohu applied (cf. rows 17, 190) |
+| 316 | Siddur Rashi 447:2 | halakhic_application | context | Simchat Torah: Bereshit read to 'eleh toledot ha-shamayim' |
+| 317 | Siddur Rashi 523:1 | halakhic_application | not-bearing | havdalah incantation text; anchor artifact |
+| 318 | Siddur Rashi 525:1 | halakhic_application | context | Rav Natronai Gaon: whence havdalah over light? 'di-khtiv va-yar Elohim et ha-or' (1:4) — the TEST verse as the blessing's source; nail-gazing custom |
+| 319 | Tafsir Rasag, Genesis 1:1 | chain_geonic | enrichment | Saadia renders e1 as a DEPENDENT clause — 'As soon as God created…' — the bero-construct parse (the very reading Ibn Ezra attacks in rows 337-338): the geonic translation's ruling on the e1 parse question |
+| 320 | Tafsir Rasag, Genesis 1:2 | chain_geonic | enrichment | tohu va-vohu -> 'deeply submerged'; 'Allah's wind would blow' — wind reading, agreeing with Onkelos's menashva against the dove tradition |
+| 321 | Tafsir Rasag, Genesis 1:3 | chain_geonic | enrichment | the command de-anthropomorphized: 'Allah WILLED that there should be light' — the jussive rendered as volition, not speech: a geonic ruling on the CMD/LET operator's semantics |
+| 322 | Tafsir Rasag, Genesis 1:4 | chain_geonic | enrichment | 'when Allah KNEW that the light was good' — the TEST verdict rendered as knowledge, not perception: de-anthropomorphized va-yar |
+| 323 | Tafsir Rasag, Genesis 1:5 | chain_geonic | enrichment | labels bound to TIME-SPANS: 'named the TIME of the light Daylight, the TIME of darkness Night' — a third label-semantics ruling beside Onkelos's yemama and the literal reading; erev/boker paraphrased as the night-to-day passage |
+| 324 | Targum Jerusalem, Genesis 1:1 | targum_composite_late | enrichment | BE-CHUKHMA bera YY — 'in WISDOM the LORD created': bereshit rendered by the reshit=wisdom equation (Prov 8:22) — the echo edge as a translation choice |
+| 325 | Targum Jerusalem, Genesis 1:2 | targum_composite_late | enrichment | tohu/vohu expanded 'solitary of the sons of men, void of every animal' (the uninhabited gloss — Ibn Ezra's and Jer 4:25's); 'Spirit of MERCIES from before the Lord' |
+| 326 | Targum Jerusalem, Genesis 1:5 | targum_composite_late | enrichment | ORDINALIZES: 'the First Day, in the order of the work of creation' — the late composite normalizes the cardinal that Onkelos preserved (echad dossier contrast) |
+| 327 | Targum Jonathan on Genesis 1:1 | targum_composite_late | enrichment | min avella ('from the first') — temporal reading of e1's anchor |
+| 328 | Targum Jonathan on Genesis 1:2 | targum_composite_late | enrichment | the uninhabited expansion + darkness clause + 'Spirit of mercies… breathed' — wind-verb like Onkelos |
+| 329 | Targum Jonathan on Genesis 1:3 | targum_composite_late | enrichment | 'and AT ONCE there was light' — latency-zero made explicit in translation (BR 3:2's derivation rendered as text; ORAL_result_latency dossier) |
+| 330 | Targum Jonathan on Genesis 1:4 | targum_composite_late | context | straight rendering of TEST and SEPARATE |
+| 331 | Targum Jonathan on Genesis 1:5 | targum_composite_late | enrichment | the naming write expanded with PURPOSE clauses — day 'that the inhabiters might labour by it,' night 'that the creatures might have rest' — domain-function assignment (the two-generals reading as translation); ordinalizes to 'the First Day' |
+| 332 | Targum Neofiti 1:1 | outside_chain_academic | context | OBSERVATION: 'in the beginning AND IN GREAT WISDOM God created AND FINISHED' — wisdom insertion + completion verb |
+| 333 | Targum Neofiti 1:2 | outside_chain_academic | dup-of:Targum Jonathan on Genesis 1:2 | OBSERVATION: same uninhabited expansion + merciful spirit; adds 'empty of vegetation' |
+| 334 | Targum Neofiti 1:3 | outside_chain_academic | context | OBSERVATION: 'there was light AS HE COMMANDED' — the result clause tied back to the command |
+| 335 | Targum Neofiti 1:3-4 | outside_chain_academic | dup-of:Targum Neofiti 1:3 | fetched range row overlapping 1:3 and 1:4 |
+| 336 | Targum Neofiti 1:4 | outside_chain_academic | context | OBSERVATION: 'he separated BY WORD between light and dark' — the SEPARATE operator executed as a speech-act (maamar census pressure from outside the chain) |
+| 337 | Targum Neofiti 1:5 | outside_chain_academic | context | OBSERVATION: 'it was day and night; the FIRST day of the Genesis order' — also ordinalizes |
+| 338 | The Sabbath Epistle, Author's Preface 19 | halakhic_application | enrichment | Ibn Ezra's occasion: a commentator read 'it was evening and it was morning' as ENDING the day at dawn (night follows day) — the polemic that produced a whole treatise on our commit formula |
+| 339 | The Sabbath Epistle, Third Gate; On the Beginning of the Day 12 | halakhic_application | enrichment | the interruption argument: were the day dawn-to-dawn, Scripture would say so; placing 'it was dusk' first proves the day runs dusk->dawn — word-order logic on the LEDGER close |
+| 340 | The Sabbath Epistle, Third Gate; On the Beginning of the Day 13 | halakhic_application | enrichment | diagnoses the error's root: the bero-construct misreading of e1 ('at the beginning of God's creating…'), which turns tohu into nonexistence and darkness into absence — Ibn Ezra defends the independent-clause parse our TIME_ANCHOR+EVENT reading uses (vs Tafsir Rasag, row 319) |
+| 341 | The Sabbath Epistle, Third Gate; On the Beginning of the Day 14 | halakhic_application | enrichment | shamayim of Gen 1 = the lower sky/atmosphere; heavens and earth as one globe — the registry entity's referent scoped |
+| 342 | The Sabbath Epistle, Third Gate; On the Beginning of the Day 15 | halakhic_application | enrichment | tohu va-vohu = UNINHABITED, proved from Jer 4:23 AS EXPLAINED BY Jer 4:25 ('I saw and there was no man') — the flagship echo edge used as a lexical gloss by a Rishon; Isa 30:26 similarly cited as explanation of 'the seven days' |
+| 343 | The Sabbath Epistle, Third Gate; On the Beginning of the Day 16 | halakhic_application | enrichment | darkness preceded light; yom = the full diurnal cycle, dark-then-light — the composition order argued from 1:2 |
+| 344 | The Sabbath Epistle, Third Gate; On the Beginning of the Day 17 | halakhic_application | enrichment | the YOM POLYSEMY stated outright: 'yom has two meanings — 12-hour daylight and the 24-hour period'; dusk and dawn are the two boundaries encompassing the Torah's day; erev defined perceptually ('when shapes merge') — a Rishon articulating the REGISTRY-label vs LEDGER-unit split (Onkelos and Rasag dossier) |
