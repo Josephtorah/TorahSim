@@ -224,8 +224,15 @@ def h_event_partition(m, op, step):
     m.event("divide", None, [mt.group(1), mt.group(2)])
 
 
+def h_note_spec_delta(m, op, step):
+    mt = re.search(r"spec '(.+?)' delivered '(.+?)'", op.get("expr_en", ""))
+    if not mt:
+        raise ContractError("NOTE_SPEC_DELTA without \"spec '..' delivered '..'\" notation")
+    m.flag("spec_delta", "spec '%s' -> delivered '%s'" % (mt.group(1), mt.group(2)))
+
+
 def h_name(m, op, step):
-    pairs = re.findall(r"name\((\w+)\)\s*:=\s*(\w+)", op.get("expr_en", ""))
+    pairs = re.findall(r"name\(([\w-]+)\)\s*:=\s*(\w+)", op.get("expr_en", ""))
     if not pairs:
         raise ContractError("NAME without 'name(x) := y' notation")
     for ent, label in pairs:
@@ -282,6 +289,7 @@ HANDLERS = {
     "INVARIANT": h_invariant,
     "NOTE_ZERO_EVENTS": h_note_zero_events,
     "NOTE_PRESUPPOSED": h_note_presupposed,
+    "NOTE_SPEC_DELTA": h_note_spec_delta,
     "DECLARE": h_declare,
     "TRIPLE": h_triple,
     "RESULT": h_result,
@@ -478,6 +486,14 @@ def check_clause(clause, m, step_ref, alias):
         ok = any(f["kind"] == "commit_without_test" for f in m.FLAGS)
         return (ok, "flags=%s" % sorted({f["kind"] for f in m.FLAGS}))
 
+    if "machine flags spec-delta" in c:
+        ok = any(f["kind"] == "spec_delta" for f in m.FLAGS)
+        return (ok, "flags=%s" % sorted({f["kind"] for f in m.FLAGS}))
+
+    if "commit is clean" in c:
+        ok = not any(f["kind"] == "commit_without_test" for f in m.FLAGS)
+        return (ok, "flags=%s" % sorted({f["kind"] for f in m.FLAGS}))
+
     mt = re.search(r"day label is ORDINAL (\w+)", c)
     if mt:
         entry = m.LEDGER.get(max(m.LEDGER)) if m.LEDGER else None
@@ -509,13 +525,13 @@ def check_clause(clause, m, step_ref, alias):
         ok = (mt.group(1), mt.group(2)) in m.WORLD["partitions"]
         return (ok, "partitions=%s" % m.WORLD["partitions"])
 
-    mt = re.search(r"REGISTRY: (\w+)->(\w+), (\w+)->(\w+) \((\d+) writes\)", c)
+    mt = re.search(r"REGISTRY: ([\w-]+)->(\w+), ([\w-]+)->(\w+) \((\d+) writes\)", c)
     if mt:
         want = {mt.group(1): mt.group(2), mt.group(3): mt.group(4)}
         ok = m.REGISTRY["names"] == want and m.REGISTRY["writes"] == int(mt.group(5))
         return (ok, "names=%s writes=%d" % (m.REGISTRY["names"], m.REGISTRY["writes"]))
 
-    mt = re.search(r"REGISTRY: (\w+)->(\w+) \((\d+) writes?\)", c)
+    mt = re.search(r"REGISTRY: ([\w-]+)->(\w+) \((\d+) writes?\)", c)
     if mt:
         want = {mt.group(1): mt.group(2)}
         ok = m.REGISTRY["names"] == want and m.REGISTRY["writes"] == int(mt.group(3))
