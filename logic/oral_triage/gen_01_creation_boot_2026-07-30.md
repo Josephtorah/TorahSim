@@ -7,7 +7,7 @@ source may earn are bounded by its chain status. Not binding religious law.
 **Counters (updated per batch — the three honest numbers):**
 - enumerated: 483 tier-1 sources (oral_links, fetched index 2026-07-30)
 - fetched: 483 (Data/sefaria_texts/, 0 failures)
-- **read: 457** of 483 (batches 1-9 as before; batch 10: the Rabbah family + Midrash Tehillim + Pesikta Rabbati, 40 — 2026-07-30)
+- **read: 483 of 483 — DAY-1 TRIAGE COMPLETE (2026-07-30).** Eleven batches. Material finds (16): BR 1:9, 1:14, 3:2, 3:6, 3:7 (pilot-cited), 3:9, 17:1; Chagigah 12a:6, 12a:10 (cited), 12a:20; Megillah 21b:10 (cited), RH 32a:19 (cited); Onkelos 1:1, 1:5; MdRY Pischa 1:4; BR 4:2 (cited in gen_02). Every tier-1 source enumerated for Gen 1:1-5 has been fetched AND read.
 
 **Verdict vocabulary:** `material` (bears on the derivation — chain_primary only, per policy) ·
 `enrichment` (worth an Oral note — chain_primary/compilation/geonic) · `context` (liturgical/
@@ -482,3 +482,29 @@ outside_chain (29, observation pass).
 | 455 | Shemot Rabbah 50:1 | chain_compilation | dup-of:Jerusalem Talmud Chagigah 2:1:3 | 'when He created His world it was entirely water' — the initial-state cosmology again |
 | 456 | Shemot Rabbah 52:5 | chain_compilation | not-bearing | the Tabernacle brought to Moses; Solomon's crown homily |
 | 457 | Shir HaShirim Rabbah 5:11:4 | chain_compilation | not-bearing | the yod of Sarai pleading; letter lore, day-1 anchor incidental |
+| 458 | Bereshit Rabbati, Parashat Bereshit 1 | chain_compilation | enrichment | the numeric census of e1: SEVEN words (vs seven days, planets, firmaments) and TWENTY-EIGHT letters (vs the 28 'times' of Eccl 3 and 28 lunar parts) — BOTH counts VERIFIED against our corpus 2026-07-30 (7 words, 28 letters exactly): token-level arithmetic on the first verse read as a cosmological table |
+| 459 | Bereshit Rabbati, Parashat Bereshit 2 | chain_compilation | dup-of:Bereshit Rabbati, Parashat Bereshit 1 | continuation of the 28-times scheme |
+| 460 | Bereshit Rabbati, Parashat Bereshit 37 | chain_compilation | dup-of:Bereshit Rabbah 2:2 | R. Abahu's two-slaves parable; the earth sat toha u-voha (bewildered) |
+| 461 | Bereshit Rabbati, Parashat Bereshit 4 | chain_compilation | enrichment | FOURTEEN words in 1:2 (vs the 14 days of birth-impurity) — count VERIFIED against our corpus (14 exactly); homiletic overlay on a true token count |
+| 462 | Bereshit Rabbati, Parashat Bereshit 5 | chain_compilation | not-bearing | speculative letter-gematria on first/last letters of the seven words (messianic hint arithmetic) |
+| 463 | Bereshit Rabbati, Parashat Bereshit 58 | chain_compilation | enrichment | va-yekhulu read as REVEAL: 'as long as tohu-vohu was in the world, the workmanship of heaven and earth was not visible; once tohu-vohu was UPROOTED it appeared' — plus the completion inventory (heavens crowned with luminaries, earth with trees and Gan Eden): the {P}-state's removal as the commissioning step (day-7 flag; inverse of the rollback dossier) |
+| 464 | Bereshit Rabbati, Parashat Bereshit 61 | chain_compilation | enrichment | the bet of bereshit + the lamed of yisrael (Torah's last letter) = LEV ('heart', 32) — Torah framed by its first and last letters; plus the reshit = challah/tithes/first-fruits merit list (VR 36:4 family variant) |
+| 465 | Bereshit Rabbati, Parashat Bereshit 66 | chain_compilation | enrichment | light, fire, and water all created FROM THE WISDOM OF TORAH (prooftexts per element); then the deliberation 'if I put the light with the darkness…' — a boundary-design deliberation preceding the SEPARATE operator |
+| 466 | Bereshit Rabbati, Parashat Noah 15 | chain_compilation | enrichment | the explicit identification: 'WHICH wind did He pass over the earth (Gen 8:1)? THE wind that was hovering over them from their beginning — ve-ruach Elohim merachefet (1:2) — and once He passed it, AT ONCE they rested': the INVARIANT's agent reused as the Flood's restore instrument (strongest form of row 368) |
+| 467 | Midrash Aggadah, Exodus 21:1:2 | chain_compilation | dup-of:Mekhilta DeRabbi Yishmael, Tractate Amalek 4:1 | judge-as-partner |
+| 468 | Midrash Aggadah, Exodus 2:2:5 | chain_compilation | dup-of:Sotah 12a:17 | Moses' birth fills the house with light |
+| 469 | Midrash Aggadah, Exodus 40:17:1 | chain_compilation | not-bearing | Nisan / Mishkan-erection timing (parallel of row 171) |
+| 470 | Midrash Aggadah, Genesis 1:1:1 | chain_compilation | not-bearing | Jeremiah 31 measuring homily |
+| 471 | Midrash Aggadah, Genesis 1:1:10 | chain_compilation | not-bearing | bet as pair; two-better-than-one letter homily |
+| 472 | Midrash Aggadah, Genesis 1:1:11 | chain_compilation | dup-of:Midrash Yelamdenu, Selections from Yalkut Talmud Torah 1:1 | din-then-rachamim stated plainly: thought to create with Judgment alone, combined Mercy (from Gen 2:4's double name) |
+| 473 | Midrash Aggadah, Genesis 1:1:12 | chain_compilation | dup-of:Bereshit Rabbah 1:12 | why the Name is not first in the word order (with the offering-wording parallel, BR 1:13's rule) |
+| 474 | Midrash Aggadah, Genesis 1:1:13 | chain_compilation | dup-of:Bereshit Rabbah 1:14 | et ha-shamayim as inclusion of the heavens' generations |
+| 475 | Midrash Aggadah, Genesis 1:1:2 | chain_compilation | dup-of:Vayikra Rabbah 36:4 | reshit-identification variant: reshit = fear of the LORD (Ps 111:10) |
+| 476 | Midrash Aggadah, Genesis 1:1:3 | chain_compilation | dup-of:Bereshit Rabbah 1:1 | reshit = Torah (Prov 8:22) |
+| 477 | Midrash Aggadah, Genesis 1:1:4 | chain_compilation | not-bearing | six letters vs 'six words' arithmetic via Isa 26:4 |
+| 478 | Midrash Aggadah, Genesis 1:1:5 | chain_compilation | dup-of:Sukkah 49a:2 | bara-shit — the altar pit re-segmentation |
+| 479 | Midrash Aggadah, Genesis 1:1:6 | chain_compilation | not-bearing | bereshit anagram-frame spelling BRIT ('covenant') — letter permutation homily (the covenant-condition theme has its chain grounding at rows 168, 406 instead) |
+| 480 | Midrash Aggadah, Genesis 1:1:7 | chain_compilation | not-bearing | six letters vs six Mishnah orders / six days |
+| 481 | Midrash Aggadah, Genesis 1:1:8 | chain_compilation | not-bearing | letter-removal gematria to 613 |
+| 482 | Midrash Aggadah, Genesis 1:1:9 | chain_compilation | dup-of:Bereshit Rabbah 1:10 | bet-numeric family variant: the opening bet = the TWO Torahs, written and oral |
+| 483 | Midrash Aggadah, Leviticus 1:1:4 | chain_compilation | not-bearing | the king's-tower parable; eighteen vertebrae correspondence |
