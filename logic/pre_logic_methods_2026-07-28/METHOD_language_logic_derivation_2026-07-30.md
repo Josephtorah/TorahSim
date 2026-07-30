@@ -130,6 +130,67 @@ froze structure in marks and left interpretation with humans; we freeze structur
 versioned parsers and leave interpretation in signed documents. The rhyme explains why the
 Pre-Code rule fits this material so naturally; it claims nothing more.
 
+### 4.1 The Oral coverage protocol (calibrated on day 1, 2026-07-30)
+
+Step 6 says *what* an Oral lookup is; this subsection says *how much* to read per unit.
+It replaces intuition with measurement: for the pilot span (Gen 1:1–5) we ran the
+exhaustive experiment once — **every** tier-1 source Sefaria's link index anchors to the
+span was enumerated, fetched, and read: **483 of 483**, eleven batches, one row per source
+in `logic/oral_triage/gen_01_creation_boot_2026-07-30.md`, honest counters throughout
+(enumerated / fetched / read are three different numbers, and all three must be reported).
+
+**What the calibration measured.**
+
+- Signal rate: ~40 of 483 sources (~8%) changed or strengthened anything — 16 material
+  finds, ~12 strong enrichments, a handful of machine-verifiable text claims (the first
+  *tet* ("ט") landing in *tov* ("good"); exactly 80 letters before the first *va-yomer*
+  ("and He said"); 7 words / 28 letters in 1:1; 14 words in 1:2 — every count checked
+  against our own corpus and found true).
+- Provenance held empirically, not just by policy: **100% of material finds came from
+  chain primaries and authorized translations.** No anthology, halakhic code, geonic
+  work, late targum, or outside-chain source produced material a primary didn't already
+  contain. All 148 duplicate-resolutions pointed at primaries we had read.
+- The best witnesses were not where fame predicts: the strongest operator-level evidence
+  came from *translations and grammar-adjacent works* (Onkelos's *yat* object-marker and
+  *yemama*/*yoma* label split; Saadia's dependent-clause parse of 1:1; Ibn Ezra's Sabbath
+  Epistle on the *yom* polysemy) — because our derivation is grammatical, sources that
+  make grammatical commitments outweigh sources that make homiletic ones.
+
+**The standing protocol for units after the pilot (two tiers plus a filter):**
+
+1. **Tier A — full read** (read the whole passage, verdict every source):
+   (a) all chain-primary sources anchored to the unit's span;
+   (b) all translations, of every era — Onkelos, Saadia's Tafsir, the late targumim —
+       because a translation is forced to *rule* on every parse question;
+   (c) any source of any class anchored to a token where the unit carries an [OPEN]
+       flag, a ? mood, or a FLAG — open questions buy full reads wherever they point.
+   On day 1 this tier contained 100% of the material finds at roughly a third of the work.
+2. **Tier B — snippet triage** (everything else): read the opening of the passage,
+   identify what it compiles or which primary it parallels, and verdict it —
+   `dup-of:<primary>` / `context` / `not-bearing` — in one ledger line. Promote to a
+   Tier-A full read on any trigger: the snippet doesn't resolve to a known primary, it
+   makes a checkable claim about our tokens, or it engages a form (mood, particle,
+   word order, letter count) rather than a theme.
+3. **Anchor-artifact filter** (before reading at all): a source whose anchor to our span
+   is one incidental citation inside a passage about something else is presumptively
+   `not-bearing`; the pattern is detectable cheaply (the source is anchored across many
+   unrelated verses, or the anchor verse is quoted once deep in a long text). It still
+   gets its ledger row — presumption is not exemption from the count.
+
+**Unchanged disciplines.** The three honest counters; named-location-only citations
+verified against the local corpus; the provenance register bounds what any class may do
+(material = chain_primary only); verdicts are human, one row per source, ledgers stay
+canonical and the DB `triage` table stays derived; and any machine-checkable claim a
+source makes about our tokens gets checked, dated, and recorded — that habit produced
+some of day 1's best rows.
+
+**When to go exhaustive again.** A full 483-style pass is a *calibration instrument*,
+not a routine: repeat it only when the corpus shifts under us (a new span with a
+categorically different link profile — e.g., first legal unit in Leviticus, first
+narrative unit outside creation) or when a Tier-B pass starts surfacing material-grade
+content where the calibration said none should exist. Either event means the yield
+model above is stale — recalibrate once, then re-cheapen.
+
 ---
 
 ## 5. Worked examples — complex verses through the full stack
@@ -216,3 +277,7 @@ This method is designed to be revised as the Torah teaches us more — but never
 2026-07-30 — §4 clarification added at owner's order: "human" = the project's deriver/owner,
 not the Oral Torah; Oral = named, tiered source consulted at step 6; Written/Oral resonance
 recorded as labeled observation.
+2026-07-30 — §4.1 added at owner's order ("yes write it up"), after the day-1 exhaustive
+read completed 483/483: the calibrated Oral coverage protocol — Tier-A full read
+(primaries, translations, OPEN-flag anchors), Tier-B snippet triage with promotion
+triggers, anchor-artifact filter; exhaustive passes reserved for recalibration.
