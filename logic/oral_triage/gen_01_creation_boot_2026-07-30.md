@@ -7,7 +7,7 @@ source may earn are bounded by its chain status. Not binding religious law.
 **Counters (updated per batch — the three honest numbers):**
 - enumerated: 483 tier-1 sources (oral_links, fetched index 2026-07-30)
 - fetched: 483 (Data/sefaria_texts/, 0 failures)
-- **read: 132** of 483 (batches 1-2: BR parashiyot 1-3; batch 3: remaining BR; batch 4: Bavli; batch 5: Yerushalmi + minor tractates; batch 6: Mekhilta + Mishnah + Onkelos + VR + PDRK + Eikhah, 28 segments — 2026-07-30; material finds so far: BR 1:9, 1:14, 3:2, 3:6, 3:9, 17:1 + Chagigah 12a:6, 12a:20 + Onkelos 1:1, Onkelos 1:5, MdRY Pischa 1:4)
+- **read: 257** of 483 (batches 1-6 as before; batch 7: the chain_anthology fast-pass, all 125 — 2026-07-30; material finds so far: BR 1:9, 1:14, 3:2, 3:6, 3:9, 17:1 + Chagigah 12a:6, 12a:20 + Onkelos 1:1, Onkelos 1:5, MdRY Pischa 1:4 — no material possible from anthologies per policy)
 
 **Verdict vocabulary:** `material` (bears on the derivation — chain_primary only, per policy) ·
 `enrichment` (worth an Oral note — chain_primary/compilation/geonic) · `context` (liturgical/
@@ -157,3 +157,128 @@ outside_chain (29, observation pass).
 | 130 | Pesikta DeRav Kahana 12:24 | chain_primary | enrichment | (he-only text) the alef's twenty-six-generation complaint: "I am first of the letters, yet You created the world with the BET — bereshit bara"; answered: "I will repay you — the Torah opens with alef: Anokhi" — the opening-letter design decision with DEFERRED REPAYMENT at Sinai: the same anomaly-repayment pattern as the echad/Mishkan answer (row 29; cf. rows 10, 102) |
 | 131 | Pesikta DeRav Kahana 21:5 | chain_primary | enrichment | (he-only text) R. Chiyya: from the world's beginning He foresaw the Temple "built, destroyed, and rebuilt" — mapped onto OUR arc: bereshit bara = BUILT; ve-ha-aretz hayetah tohu va-vohu = DESTROYED; yehi or = REBUILT for the future — fourth chain witness for tohu-as-destruction/rollback (rows 16, 38, 74), the semantics behind the Gen 1:2 <-> Jer 4:23 edge |
 | 132 | Eikhah Rabbah, Petichta 24 | chain_primary | not-bearing | the great destruction lament; Gen 1:1 appears only in the letters-as-witnesses scene (Abraham silences BET: "you stand at the head of the Torah — bereshit bara") |
+| 133 | Ein Yaakov (Glick Edition), Bava Kama 5:5 | chain_anthology | dup-of:Bava Kamma 55a:6 | the tet-omen passage, translated |
+| 134 | Ein Yaakov (Glick Edition), Khagigah 2:4 | chain_anthology | dup-of:Chagigah 12a:6 | the ten-things-created-day-one list, translated |
+| 135 | Ein Yaakov (Glick Edition), Khagigah 2:6 | chain_anthology | dup-of:Chagigah 12a:10 | the or-ha-ganuz block with the 1:14/1:19 luminaries objection |
+| 136 | Ein Yaakov (Glick Edition), Khagigah 2:8 | chain_anthology | dup-of:Chagigah 12a:16 | Beit Shammai / Beit Hillel order dispute |
+| 137 | Ein Yaakov (Glick Edition), Megillah 1:7 | chain_anthology | dup-of:Megillah 9a:12 | the Ptolemy translation story |
+| 138 | Ein Yaakov (Glick Edition), Megillah 1:8 | chain_anthology | dup-of:Megillah 10b:10 | the vayhi=trouble tradition |
+| 139 | Ein Yaakov (Glick Edition), Pesakhim 8:8 | chain_anthology | dup-of:Pesachim 88a:5 | the ingathering-day sugya region |
+| 140 | Ein Yaakov (Glick Edition), Sotah 1:40 | chain_anthology | dup-of:Sotah 12a:17 | Moses named Tov |
+| 141 | Ein Yaakov (Glick Edition), Sotah 1:48 | chain_anthology | not-bearing | compiles the Sotah 13a funeral of Jacob; day-1 anchor artifact |
+| 142 | Ein Yaakov (Glick Edition), Sukkah 4:5 | chain_anthology | dup-of:Sukkah 49a:2 | the shittin / bara-shit passage |
+| 143 | Ein Yaakov (Glick Edition), Taanit 4:1 | chain_anthology | dup-of:Taanit 26a:7 | the ma'amadot institution and readings |
+| 144 | Ein Yaakov (Glick Edition), Yoma 3:19 | chain_anthology | dup-of:Yoma 38b:11 | even for one righteous person the world was created |
+| 145 | Ein Yaakov, Avodah Zarah 2:8 | chain_anthology | dup-of:Avodah Zarah 29a:5 | the remedy mnemonic citing the hovering ruach |
+| 146 | Ein Yaakov, Bava Kamma 5:7 | chain_anthology | dup-of:Bava Kamma 55a:6 | the adjacent tov-in-the-dibrot sugya (BK 54b-55a) |
+| 147 | Ein Yaakov, Khagigah 2:12 | chain_anthology | dup-of:Chagigah 15a:3 | ben Zoma on the gap between the waters |
+| 148 | Ein Yaakov, Khagigah 2:2 | chain_anthology | not-bearing | compiles the Chagigah 12a Adam-size sugya; day-1 anchor artifact |
+| 149 | Ein Yaakov, Khagigah 2:3 | chain_anthology | dup-of:Chagigah 12a:16 | Beit Shammai / Beit Hillel, Hebrew text |
+| 150 | Ein Yaakov, Khullin 5:1 | chain_anthology | dup-of:Mishnah Chullin 5:5 | the oto-ve-et-beno mishnah verbatim |
+| 151 | Ein Yaakov, Megillah 1:14 | chain_anthology | dup-of:Megillah 10b:10 | vayhi tradition, Hebrew text |
+| 152 | Ein Yaakov, Pesakhim 8:10 | chain_anthology | dup-of:Pesachim 88a:5 | compiled sugya region (tablets, then the yom-echad analogy) |
+| 153 | Ein Yaakov, Shabbat 1:4 | chain_anthology | dup-of:Shabbat 10a:5 | Rav Ami and Rav Asi; judge-as-partner |
+| 154 | Ein Yaakov, Shabbat 9:9 | chain_anthology | enrichment | compiles SHABBAT 88a — Resh Lakish's TENAI: creation held CONDITIONAL on Israel's acceptance of Torah, built on the day-formula — a primary NOT in the day-1 link set; flag for the day-6 unit (yom ha-SHISHI) and the rollback dossier |
+| 155 | Ein Yaakov, Sotah 1:47 | chain_anthology | dup-of:Sotah 12a:17 | Moses named Tov, Hebrew text |
+| 156 | Ein Yaakov, Tamid 4:1 | chain_anthology | dup-of:Tamid 32a:3 | Alexander and the Elders of the Negev |
+| 157 | Ein Yaakov, Yoma 3:22 | chain_anthology | dup-of:Yoma 38b:11 | one righteous person, Hebrew text |
+| 158 | Midrash Lekach Tov, Deuteronomy 32:1:2 | chain_anthology | not-bearing | author's tokhecha preface; no day-1 content |
+| 159 | Midrash Lekach Tov, Deuteronomy 5:6:2 | chain_anthology | not-bearing | Anokhi voice-from-all-directions homily; anchor artifact |
+| 160 | Midrash Lekach Tov, Exodus 16:1:2 | chain_anthology | context | the 15th fell on the week's first day, 'ordered since He created His world' — weekday cycle anchored to yom echad |
+| 161 | Midrash Lekach Tov, Exodus 16:23:2 | chain_anthology | not-bearing | manna / Sivan calendar computation |
+| 162 | Midrash Lekach Tov, Exodus 18:13:5 | chain_anthology | dup-of:Mekhilta DeRabbi Yishmael, Tractate Amalek 4:1 | judge-as-partner |
+| 163 | Midrash Lekach Tov, Exodus 27:19:2 | chain_anthology | not-bearing | author's Tetzaveh preface with tov wordplay on his own name |
+| 164 | Midrash Lekach Tov, Exodus 2:2:2 | chain_anthology | dup-of:Sotah 12a:17 | Moses named Tov |
+| 165 | Midrash Lekach Tov, Exodus 40:17:1 | chain_anthology | not-bearing | Nisan / Mishkan-erection timing (cf. row 29's repayment locus) |
+| 166 | Midrash Lekach Tov, Genesis 1:1:1 | chain_anthology | not-bearing | author's proverb preface (lekach tov wordplay) |
+| 167 | Midrash Lekach Tov, Genesis 1:1:2 | chain_anthology | not-bearing | author's opening acrostic piyyut, line |
+| 168 | Midrash Lekach Tov, Genesis 1:1:3 | chain_anthology | not-bearing | author's opening acrostic piyyut, line |
+| 169 | Midrash Lekach Tov, Genesis 1:1:4 | chain_anthology | not-bearing | author's opening acrostic piyyut, line |
+| 170 | Midrash Lekach Tov, Genesis 1:1:5 | chain_anthology | not-bearing | author's opening acrostic piyyut, line |
+| 171 | Midrash Lekach Tov, Genesis 1:1:6 | chain_anthology | not-bearing | author's opening acrostic piyyut, line |
+| 172 | Midrash Lekach Tov, Genesis 1:1:7 | chain_anthology | not-bearing | author's opening acrostic piyyut, line |
+| 173 | Midrash Lekach Tov, Genesis 1:1:8 | chain_anthology | not-bearing | author's opening acrostic piyyut, line |
+| 174 | Midrash Lekach Tov, Genesis 1:1:9 | chain_anthology | not-bearing | author's opening acrostic piyyut, line |
+| 175 | Midrash Lekach Tov, Genesis 1:1:10 | chain_anthology | not-bearing | author's opening acrostic piyyut, line |
+| 176 | Midrash Lekach Tov, Genesis 1:1:11 | chain_anthology | not-bearing | author's opening acrostic piyyut, line |
+| 177 | Midrash Lekach Tov, Genesis 1:1:12 | chain_anthology | not-bearing | author's opening acrostic piyyut, line |
+| 178 | Midrash Lekach Tov, Genesis 1:1:13 | chain_anthology | not-bearing | author's opening acrostic piyyut, line |
+| 179 | Midrash Lekach Tov, Genesis 1:1:14 | chain_anthology | not-bearing | author's opening acrostic piyyut, line |
+| 180 | Midrash Lekach Tov, Genesis 1:1:15 | chain_anthology | not-bearing | author's opening acrostic piyyut, line |
+| 181 | Midrash Lekach Tov, Genesis 1:1:16 | chain_anthology | not-bearing | author's opening acrostic piyyut, line |
+| 182 | Midrash Lekach Tov, Genesis 1:1:17 | chain_anthology | not-bearing | author's opening acrostic piyyut, line |
+| 183 | Midrash Lekach Tov, Genesis 1:1:18 | chain_anthology | not-bearing | tov-le-khol homily |
+| 184 | Midrash Lekach Tov, Genesis 1:1:19 | chain_anthology | dup-of:Megillah 9a:12 | Ptolemy change; adds the author's word-order-custom parallel from Lev 1:2 (the Name not placed first) |
+| 185 | Midrash Lekach Tov, Genesis 1:1:20 | chain_anthology | not-bearing | R. Yitzchak's why-not-start-from-ha-chodesh (koach ma'asav) — canon-structure homily |
+| 186 | Midrash Lekach Tov, Genesis 1:1:21 | chain_anthology | enrichment | author's grammar on the be- frame: bare reshit would read as construct (like reshit degankha) leaving the Name unstated — BE-reshit bara = 'at the head of all deeds He created': TIME_ANCHOR-adjacent analysis |
+| 187 | Midrash Lekach Tov, Genesis 1:1:22 | chain_anthology | dup-of:Bereshit Rabbah 1:1 | the blueprint reading (diftera'ot) |
+| 188 | Midrash Lekach Tov, Genesis 1:1:23 | chain_anthology | dup-of:Vayikra Rabbah 36:4 | reshit = Israel (Jer 2:3) |
+| 189 | Midrash Lekach Tov, Genesis 1:1:24 | chain_anthology | dup-of:Bereshit Rabbah 1:1 | reshit = Torah via Prov 8:22 (echo-edge verse cited again) |
+| 190 | Midrash Lekach Tov, Genesis 1:1:25 | chain_anthology | dup-of:Bereshit Rabbah 1:10 | the bet = two worlds |
+| 191 | Midrash Lekach Tov, Genesis 1:1:26 | chain_anthology | dup-of:Bereshit Rabbah 1:3 | sole agent — levado (Isa 44:24) |
+| 192 | Midrash Lekach Tov, Genesis 1:1:27 | chain_anthology | dup-of:Bereshit Rabbah 3:2 | ba-maamar ve-lo bi-ygia (Ps 33:6), generalized to e1 |
+| 193 | Midrash Lekach Tov, Genesis 1:1:28 | chain_anthology | enrichment | lexical note: Elohim from el = power/might (tzidkatekha ke-harerei el) |
+| 194 | Midrash Lekach Tov, Genesis 1:1:29 | chain_anthology | dup-of:Bereshit Rabbah 14:1 | Elohim = judge (din); adds Jer 33:25 (creation conditional on the covenant) as prooftext |
+| 195 | Midrash Lekach Tov, Genesis 1:1:30 | chain_anthology | enrichment | a bereshit CONCORDANCE: exactly three in Tanakh — Gen 1:1, Jer 26:1 (Yehoyakim), Jer 28:1 (Zedekiah) — 'for He sought to return the world to tohu but for His mercy': the anthology's own rare-word echo table tying Gen 1:1 to the Jeremiah bereshit verses (cf. rows 74, 131; echo-graph evidence) |
+| 196 | Midrash Lekach Tov, Genesis 1:1:31 | chain_anthology | dup-of:Bereshit Rabbah 1:14 | the et inclusions (R. Akiva), with segue into the ten things |
+| 197 | Midrash Lekach Tov, Genesis 1:1:32 | chain_anthology | dup-of:Chagigah 12a:6 | the ten things created on day one, verbatim |
+| 198 | Midrash Lekach Tov, Genesis 1:1:33 | chain_anthology | enrichment | a THIRD ten-maamarot census configuration: counts bereshit (via Ps 33:6) AND pru-urvu (1:28), omits 2:18 — beside BR 17:1's and ADRN B's counts (ORAL_e1_maamar dossier); plus the ten instruments |
+| 199 | Midrash Lekach Tov, Genesis 1:1:34 | chain_anthology | dup-of:Chagigah 12a:16 | sham-mayim / esh-u-mayim etymology + the order dispute |
+| 200 | Midrash Lekach Tov, Genesis 1:1:35 | chain_anthology | enrichment | the author's own element-chain cosmology (wind -> water -> fire -> earth, with household demonstrations) — 11th-c. natural philosophy layered on the {P}-state |
+| 201 | Midrash Lekach Tov, Genesis 1:1:36 | chain_anthology | dup-of:Jerusalem Talmud Chagigah 2:1:8 | dove-hovering semantics with Deut 32:11 yerachef |
+| 202 | Midrash Lekach Tov, Genesis 1:13:5 | chain_anthology | enrichment | harmonization question: do the LUMINARIES separate (1:14) when the LIGHT already separates (1:4)? — answered: yehi ha-or me'orot, the same light installed in the lamps: the anthology resolving the two separation operators' overlap |
+| 203 | Midrash Lekach Tov, Genesis 1:3:1 | chain_anthology | dup-of:Bereshit Rabbah 3:4 | light from the garment-wrapping (Ps 104:1-2 — the echo-edge verse) |
+| 204 | Midrash Lekach Tov, Genesis 1:3:2 | chain_anthology | enrichment | anthology-preserved variant: yesh omrim the light came FROM THE WATER (Job or-verses; eye-moisture analogy) — a light-source tradition beside garment and darkness-derivation |
+| 205 | Midrash Lekach Tov, Genesis 1:3:3 | chain_anthology | dup-of:Bereshit Rabbah 3:6 | or-ha-ganuz; notes day 1 says va-yehi OR, not the generic va-yehi KHEN of later days |
+| 206 | Midrash Lekach Tov, Genesis 1:3:4 | chain_anthology | dup-of:Pesikta DeRav Kahana 21:5 | built-and-perfected for the future |
+| 207 | Midrash Lekach Tov, Genesis 1:4:1 | chain_anthology | enrichment | utility reading of the TEST: ki tov = good FOR THE CREATURES — He did not need the light, His creatures did |
+| 208 | Midrash Lekach Tov, Genesis 1:5:1 | chain_anthology | enrichment | va-yiqra la-or yom 'because it came from the water' — the naming tied to the light-from-water etiology (with 1:3:2) |
+| 209 | Midrash Lekach Tov, Genesis 1:5:2 | chain_anthology | enrichment | label etymology: layla = leshon yelala ('wailing') |
+| 210 | Midrash Lekach Tov, Genesis 1:5:3 | chain_anthology | dup-of:Bereshit Rabbah 3:5 | five or-occurrences = five books |
+| 211 | Midrash Lekach Tov, Genesis 1:5:4 | chain_anthology | enrichment | the author's registry synthesis: THREE labels per entity (or/yom/boker vs choshekh/layla/erev), the later labels applicable only after the separation assigned each its HOURS — domain-scoped labels installed at havdalah |
+| 212 | Midrash Lekach Tov, Genesis 1:5:5 | chain_anthology | enrichment | naming ASYMMETRY (R. Elazar): the Name joins only the light-write — va-yiqra ELOHIM la-or yom, but ve-la-choshekh kara without the Name — the agent designator withheld from the dark-side registry write |
+| 213 | Midrash Lekach Tov, Genesis 1:5:6 | chain_anthology | enrichment | the author's 12+12-hour computation of erev/boker on day one; restates the rishon-expected question |
+| 214 | Midrash Lekach Tov, Genesis 1:5:7 | chain_anthology | enrichment | TWO further echad answers: (a) bereshit already established firstness, rishon would be redundant; (b) narrative style uses echad-then-sheni, as Eccl 4:8 yesh echad ve-ein sheni — additional to BR 3:9's Mishkan answer (ORAL_echad_label_form dossier) |
+| 215 | Midrash Lekach Tov, Genesis 1:5:8 | chain_anthology | enrichment | THIRD echad answer — the UNITY reading: had it said rishon, only the daytime would be 'first'; yom ECHAD teaches evening+morning are ONE — echad as composition claim, not sequence label |
+| 216 | Midrash Lekach Tov, Genesis 1:5:9 | chain_anthology | dup-of:Bereshit Rabbah 3:8 | righteous/wicked mapping; yom echad = day of judgment |
+| 217 | Midrash Lekach Tov, Genesis 1:5:10 | chain_anthology | enrichment | echad tied to the Shema's echad — whoever declares the unity attests He created the world (yichud reading of the day label) |
+| 218 | Midrash Lekach Tov, Genesis 44:3:1 | chain_anthology | dup-of:Mekhilta DeRabbi Yishmael, Tractate Pischa 11:15 | the ki-tov travel rule |
+| 219 | Midrash Lekach Tov, Genesis 7:17:1 | chain_anthology | dup-of:Pesikta DeRav Kahana 7:5 | yom includes layla, not vice versa — scope rule from yom echad |
+| 220 | Midrash Lekach Tov, Leviticus 1:1:1 | chain_anthology | not-bearing | author's Leviticus preface (Torah's fruit) |
+| 221 | Midrash Lekach Tov, Leviticus 9:1:2 | chain_anthology | not-bearing | Kohelet homily on Adam; anchor artifact |
+| 222 | Midrash Sekhel Tov, Bereshit 44:3:2 | chain_anthology | dup-of:Mekhilta DeRabbi Yishmael, Tractate Pischa 11:15 | ki-tov travel rule with the author's own paraphrase |
+| 223 | Midrash Sekhel Tov, Shemot 12:20:42 | chain_anthology | dup-of:Pesachim 2a:3 | the or = naghei/leilei bedikat-chametz sugya |
+| 224 | Midrash Sekhel Tov, Shemot 16:1:2 | chain_anthology | context | weekday cycle 'ordered from the six days' — calendar use of yom echad |
+| 225 | Midrash Sekhel Tov, Shemot 18:13:4 | chain_anthology | dup-of:Mekhilta DeRabbi Yishmael, Tractate Amalek 4:1 | judge-as-partner |
+| 226 | Midrash Sekhel Tov, Shemot 2:2:2 | chain_anthology | dup-of:Sotah 12a:17 | Moses named Tov |
+| 227 | Yalkut Shimoni on Torah 1:1 | chain_anthology | dup-of:Bereshit Rabbah 17:1 | ten-utterances opening (Avot 5:1 family) |
+| 228 | Yalkut Shimoni on Torah 2:5 | chain_anthology | dup-of:Pesikta DeRav Kahana 12:24 | the alef's twenty-six-generation complaint |
+| 229 | Yalkut Shimoni on Torah 3:3 | chain_anthology | dup-of:Bereshit Rabbah 1:14 | the et rule, merging the BR and Bavli phrasings |
+| 230 | Yalkut Shimoni on Torah 3:4 | chain_anthology | dup-of:Bereshit Rabbah 1:6 | NOTE: makes the method explicit — 'bereshit bara... and did not explain; where did He explain? LATER' (Isa 40:22, Job) — the chain's own later-verse-explains-creation principle: the echo-graph rationale in compiled form |
+| 231 | Yalkut Shimoni on Torah 4:4 | chain_anthology | dup-of:Chagigah 12a:16 | the Beit Hillel / Beit Shammai retorts (upper story / footstool) |
+| 232 | Yalkut Shimoni on Torah 4:6 | chain_anthology | dup-of:Tamid 32a:3 | Alexander and the Elders |
+| 233 | Yalkut Shimoni on Torah 4:7 | chain_anthology | dup-of:Chagigah 12b:1 | why verse 2 returns to the earth (early-riser parable) |
+| 234 | Yalkut Shimoni on Torah 4:9 | chain_anthology | dup-of:Bereshit Rabbah 2:1 | unripe-fig proverb + Jer 4:23 as the prophet's destined vision + the two-slaves parable |
+| 235 | Yalkut Shimoni on Torah 4:10 | chain_anthology | dup-of:Bereshit Rabbah 2:4 | ruach = Adam's spirit / Messiah-spirit; the covenant with the waters |
+| 236 | Yalkut Shimoni on Torah 4:11 | chain_anthology | dup-of:Bereshit Rabbah 3:1 | light-first vs world-first machloket |
+| 237 | Yalkut Shimoni on Torah 5:1 | chain_anthology | dup-of:Yoma 38b:11 | one righteous person |
+| 238 | Yalkut Shimoni on Torah 5:2 | chain_anthology | dup-of:Bereshit Rabbah 3:6 | havdalah mammash + the two-generals domain parable (JT Berakhot 8:6:9 parallel) |
+| 239 | Yalkut Shimoni on Torah 5:3 | chain_anthology | dup-of:Megillah 20b:2 | the la-meir-u-va naming sugya with its refutation |
+| 240 | Yalkut Shimoni on Torah 17:3 | chain_anthology | dup-of:Bereshit Rabbah 12:3 | eleh rejects — expunging tohu, vohu, choshekh |
+| 241 | Yalkut Shimoni on Torah 22:9 | chain_anthology | dup-of:Bereshit Rabbah 17:1 | the census dissent block (2:18 in; ruach-utterance disputed) |
+| 242 | Yalkut Shimoni on Torah 150:1 | chain_anthology | not-bearing | Gen 43 shalom homily; anchor artifact |
+| 243 | Yalkut Shimoni on Torah 166:1 | chain_anthology | dup-of:Sotah 12a:17 | Moses named Tov |
+| 244 | Yalkut Shimoni on Torah 180:1 | chain_anthology | not-bearing | Exod 7:1 homily; anchor artifact |
+| 245 | Yalkut Shimoni on Torah 186:6 | chain_anthology | not-bearing | plague-of-darkness homily citing creation darkness incidentally |
+| 246 | Yalkut Shimoni on Torah 250:4 | chain_anthology | not-bearing | nora tehillot homily; anchor artifact |
+| 247 | Yalkut Shimoni on Torah 270:1 | chain_anthology | not-bearing | Yitro homily; anchor artifact |
+| 248 | Yalkut Shimoni on Torah 285:2 | chain_anthology | dup-of:Bereshit Rabbah 1:7 | bara singular — no two powers (bar'u is not written) |
+| 249 | Yalkut Shimoni on Torah 306:3 | chain_anthology | not-bearing | Mishpatim homily; anchor artifact |
+| 250 | Yalkut Shimoni on Torah 378:6 | chain_anthology | dup-of:Vayikra Rabbah 31:8 | do-I-need-your-light (menorah) |
+| 251 | Yalkut Shimoni on Torah 520:3 | chain_anthology | not-bearing | Mishkan erected on Rosh Chodesh — timing material (cf. row 29's repayment locus) |
+| 252 | Yalkut Shimoni on Torah 528:3 | chain_anthology | not-bearing | wine gematria homily |
+| 253 | Yalkut Shimoni on Torah 547:4 | chain_anthology | dup-of:Bereshit Rabbah 8:1 | achor va-kedem; merachefet = Messiah-spirit |
+| 254 | Yalkut Shimoni on Torah 750:25 | chain_anthology | enrichment | havdalah as INVIOLABLE BOUNDARY paradigm: 'can you mix day with night? as He separated light from darkness, so He separated Israel from the nations' — the SEPARATE operator made covenant template; compiles a Balaam-cycle primary not yet read |
+| 255 | Yalkut Shimoni on Torah 766:5 | chain_anthology | not-bearing | Balaam homily; anchor artifact |
+| 256 | Yalkut Shimoni on Torah 830:12 | chain_anthology | dup-of:Bava Kamma 55a:6 | tov in the dibrot |
+| 257 | Yalkut Shimoni on Torah 860:8 | chain_anthology | not-bearing | Deut land/circumcision homily; anchor artifact |
