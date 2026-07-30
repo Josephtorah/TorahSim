@@ -302,11 +302,18 @@ boot_steps:
         en: "the spec asked for a FRUIT-tree making fruit; the delivery reports a tree MAKING fruit — the word peri is absent from the tree's own description. Letter-visible in the Hebrew; BR 5:9 judges exactly this deviation (the earth later 'cursed with Adam, Eve, and the serpent'). Micro-delta also recorded: spec le-mino, delivery le-minehu (suffix form shift) — noted, [OPEN]"
         cites: []
         confidence: "delta tested (letter-visible); significance = named-Oral track"
+      - op: NOTE_SPEC_DELTA
+        expr_en: "spec 'esev mazria zera' delivered 'esev mazria zera le-minehu' — flag spec_delta"
+        he: עֵשֶׂב מַזְרִיעַ זֶרַע ← עֵשֶׂב מַזְרִיעַ זֶרַע לְמִינֵהוּ
+        he_translit: "esev mazria zera -> esev mazria zera le-minehu"
+        en: "AMENDMENT 2026-07-30 (oral_links coverage review): the delta runs BOTH WAYS — the spec keys 'by its kind' (le-mino) to the TREES only; the delivery adds le-minehu ('by its kind') to the HERBS too. Over-delivery beside the trees' under-delivery. Named source: Chullin 60a — the grasses drew a kal va-chomer (a-fortiori inference) upon themselves"
+        cites: []
+        confidence: "delta tested (letter-visible in 1:11 vs 1:12); significance = named-Oral track"
       - op: TEST
         expr_en: "PASS(tov, vegetation)"
         he: כִּי־טוֹב
         he_translit: "ki-tov"
-        en: "test #2 — again with NO explicit et-object; the delivery passes inspection AS DELIVERED, delta and all: the deviation is flagged by comparison, not by the oracle"
+        en: "test #2 — again with NO explicit et-object; the delivery passes inspection AS DELIVERED, both deltas and all: the deviations are flagged by comparison, not by the oracle"
         cites: []
         confidence: tested
     comment: >
@@ -422,6 +429,21 @@ oral_notes:
       specified) is remembered at Eden's judgment. The named source for the
       spec_delta flag's significance.
     comment_en: "Verified from local Data. Dual-track; the flag is Written-visible, the verdict is Oral."
+    source: "[ORAL][VERIFIED-LOCAL]"
+  - id: ORAL_grasses_kal_vachomer
+    status: verified
+    work_en: "Bavli Chullin 60a (on le-minehu, 1:12) — surfaced by the oral_links coverage review"
+    he: בשעה שאמר הקב"ה למינהו באילנות נשאו דשאים קל וחומר בעצמן
+    he_translit: "be-sha'ah she-amar HKB'H le-minehu ba-ilanot, nas'u desha'im kal va-chomer be-atzman"
+    en: >
+      "When the Holy One said le-minehu ('by its kind') of the TREES, the
+      grasses (desha'im) drew a kal va-chomer (a-fortiori inference) upon
+      themselves" — R. Chanina bar Papa: the herbs' 'by its kind' in the
+      delivery is the grasses' own inference, never commanded — the named
+      owner of the second spec delta. Same page, Rav Assi: the grasses stood
+      at the soil's mouth until Adam prayed for rain — "the Holy One desires
+      the prayers of the righteous" (resolving 1:12 against 2:5).
+    comment_en: "Verified from Data/bavli_chullin_he.json 2026-07-30. Dual-track; not merged."
     source: "[ORAL][VERIFIED-LOCAL]"
   - id: ORAL_policy
     status: observation
@@ -715,10 +737,22 @@ tree_coverage:
 
 confidence: "structure tested · operators tested-per-TIR · machine model hypothesis"
 status_note_en: >
-  DRAFT (2026-07-30): third logic-derived unit. Central findings: the FIRST
-  DELEGATED build (fiat addressed to the earth; the earth executes — feminine
-  verb agreement is the audit trail); the spec/delivery DELTA on the fruit
-  trees (letter-visible, machine-flagged, judged in BR 5:9); delivery passes
-  the tov oracle DESPITE the delta (spec-conformance and goodness are separate
-  predicates); the clean double commit that makes day 2's naked commit
-  measurable. Awaiting owner review. Not binding religious law.
+  FROZEN 2026-07-30 (owner approved): third logic-derived unit. Central
+  findings: the FIRST DELEGATED build (fiat addressed to the earth; the earth
+  executes — feminine verb agreement is the audit trail); the TWO-WAY
+  spec/delivery DELTA (trees lost peri/'fruit' — BR 5:9; herbs gained
+  le-minehu/'by its kind' — Chullin 60a, added by amendment); delivery passes
+  the tov ('good') oracle DESPITE both deltas (spec-conformance and goodness
+  are separate predicates); the clean double commit that makes day 2's naked
+  commit measurable. Not binding religious law.
+
+amendment_log:
+  - date: 2026-07-30
+    authorized: owner order ("amend day one and three and add day two enrichment")
+    what: >
+      Second NOTE_SPEC_DELTA operator added to STEP_Gn_1_12 (herbs GAINED
+      le-minehu — spec 1:11 keys 'by its kind' to trees only, delivery 1:12
+      keys both; letter-visible in our own word data) + ORAL_grasses_kal_vachomer
+      (Chullin 60a, verified local), surfaced by the oral_links coverage review
+      (ORAL_COVERAGE_review_gen01-03_2026-07-30.md). Scenarios unchanged and
+      re-verified (S4's spec-delta assertion covers both flags).
