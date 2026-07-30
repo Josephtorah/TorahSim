@@ -104,13 +104,15 @@ def code_lines(d):
     return lines
 
 
-def verse_json(d, frozen_rows, fen):
+def verse_json(d, frozen_rows, fen, oral=None):
     words, leaves = d["words"], d["leaves"]
     out = {"v": d["verse"]["verse"], "osis": d["osis"],
            "sys": d["verse"]["system"], "status": d["tree"]["status"],
            "fen": fen,
            "frozen": ["%s · %s (%s)" % (r["unit_id"], r["step_id"], r["op"])
                       for r in (frozen_rows or [])]}
+    if oral:
+        out["oral"] = oral  # [enumerated, read, material] — honest counters
     out["leaves"] = []
     for lf in leaves:
         ws, we = lf["w_start"], lf["w_end"]
@@ -157,6 +159,24 @@ def main():
                            GROUP BY book, chapter"""):
         shape.setdefault(r["book"], {})[r["chapter"]] = r["n"]
 
+    # per-verse Oral triage counts: [enumerated, read, material] — the three
+    # honest numbers, derived from oral_links (anchors) x triage (verdicts).
+    oral_counts = {}
+    try:
+        for osis, e, rd, m in cx.execute("""
+                SELECT ol.anchor_osis,
+                       COUNT(DISTINCT ol.source_ref),
+                       COUNT(DISTINCT t.source_ref),
+                       COUNT(DISTINCT CASE WHEN t.verdict_class = 'material'
+                                           THEN t.source_ref END)
+                FROM oral_links ol
+                LEFT JOIN triage t ON t.source_ref = ol.source_ref
+                WHERE ol.tier = 1
+                GROUP BY ol.anchor_osis"""):
+            oral_counts[osis] = [e, rd, m]
+    except sqlite3.OperationalError:
+        pass  # oral_links / triage not built yet -> no badges
+
     jps = load_jps(shape)
     build_search_index(cx, jps)
     if "--search-only" in sys.argv:
@@ -188,7 +208,8 @@ def main():
                 ch_jps = jps.get((b, ch))
                 fen = ch_jps[v - 1] if ch_jps else (
                     RDB.VERSE_EN.get((ch, v)) if b == "Gen" else None)
-                verses.append(verse_json(d, frozen_steps.get(d["osis"]), fen))
+                verses.append(verse_json(d, frozen_steps.get(d["osis"]), fen,
+                                         oral_counts.get(d["osis"])))
                 n_v += 1
             (OUT / ("%s_%d.json" % (b, ch))).write_text(
                 json.dumps({"book": b, "chapter": ch, "verses": verses},
