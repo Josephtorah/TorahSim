@@ -217,7 +217,7 @@ def h_test(m, op, step):
 
 
 def h_event_partition(m, op, step):
-    mt = re.search(r"between\((\w+),\s*(\w+)\)", op.get("expr_en", ""))
+    mt = re.search(r"between\(([\w-]+),\s*([\w-]+)\)", op.get("expr_en", ""))
     if not mt:
         raise ContractError("EVENT_PARTITION without 'between(a, b)' notation")
     m.WORLD["partitions"].append((mt.group(1), mt.group(2)))
@@ -264,7 +264,9 @@ def h_commit(m, op, step):
     if not test_pass:
         m.flag("commit_without_test", "day %d cycle closed with TESTS empty" % day)
 
-    label_form = "cardinal" if "CARDINAL" in op.get("en", "") else None
+    en_note = op.get("en", "")
+    label_form = ("cardinal" if "CARDINAL" in en_note
+                  else "ordinal" if "ORDINAL" in en_note else None)
     m.LEDGER[day] = {"closed": True, "spec_ok": spec_ok, "test_pass": test_pass,
                      "names": names_n, "label_form": label_form,
                      "label_he": op.get("he", ""),
@@ -459,6 +461,31 @@ def check_clause(clause, m, step_ref, alias):
                                                         e["satisfied_step"]))
         return (False, "no spec with demand %s" % d)
 
+    mt = re.search(r"LET\((.+?)\) pushed and OPEN", c)
+    if mt:
+        ok = any(e["demand"] == mt.group(1) and not e["satisfied_step"]
+                 for e in m.SPECS["queue"])
+        return (ok, "queue=%s" % [e["demand"] for e in m.SPECS["queue"]])
+
+    mt = re.search(r"LET\?\((.+?)\) mood remains LET\?", c)
+    if mt:
+        for e in m.SPECS["log"]:
+            if e["demand"] == mt.group(1):
+                return (e["mood"] == "LET?", "mood=%s" % e["mood"])
+        return (False, "no spec with demand %s" % mt.group(1))
+
+    if "machine flags commit-without-test" in c:
+        ok = any(f["kind"] == "commit_without_test" for f in m.FLAGS)
+        return (ok, "flags=%s" % sorted({f["kind"] for f in m.FLAGS}))
+
+    mt = re.search(r"day label is ORDINAL (\w+)", c)
+    if mt:
+        entry = m.LEDGER.get(max(m.LEDGER)) if m.LEDGER else None
+        ok = bool(entry) and entry["label_form"] == "ordinal" \
+            and mt.group(1) in entry["label_translit"]
+        return (ok, "label=%s form=%s" % (entry and entry["label_translit"],
+                                          entry and entry["label_form"]))
+
     mt = re.search(r"WORLD \+= (\w+)\b", c)
     if mt:
         ent = m.WORLD["entities"].get(mt.group(1))
@@ -486,6 +513,12 @@ def check_clause(clause, m, step_ref, alias):
     if mt:
         want = {mt.group(1): mt.group(2), mt.group(3): mt.group(4)}
         ok = m.REGISTRY["names"] == want and m.REGISTRY["writes"] == int(mt.group(5))
+        return (ok, "names=%s writes=%d" % (m.REGISTRY["names"], m.REGISTRY["writes"]))
+
+    mt = re.search(r"REGISTRY: (\w+)->(\w+) \((\d+) writes?\)", c)
+    if mt:
+        want = {mt.group(1): mt.group(2)}
+        ok = m.REGISTRY["names"] == want and m.REGISTRY["writes"] == int(mt.group(3))
         return (ok, "names=%s writes=%d" % (m.REGISTRY["names"], m.REGISTRY["writes"]))
 
     mt = re.search(r"LEDGER\[day (\d+)\] committed with (.+)", c)
