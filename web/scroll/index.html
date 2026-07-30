@@ -24,9 +24,26 @@ select, input, button { font:inherit; font-size:.85rem; padding:.28rem .5rem;
        border:1px solid #5a4d31; border-radius:6px; background:#fffdf6; color:var(--fg); }
 button { cursor:pointer; background:var(--acc); color:#fff; border-color:var(--acc); }
 button:hover { background:#a5841f; }
-input.search { width:180px; color:var(--mut); }
+button.nav { background:#4a3d24; border-color:#5a4d31; color:#e8dcb8; padding:.28rem .45rem;
+       font-size:.75rem; margin-left:.15rem; }
+button.nav:hover { background:var(--acc); color:#fff; }
+input.search { width:230px; }
 .loc { margin-left:auto; font-size:.85rem; color:#b8ab8a; }
 .loc b { color:#f3e9c8; }
+
+/* ---------- search results panel ---------- */
+.results { position:fixed; top:3.6rem; left:50%; transform:translateX(-50%);
+       width:min(980px, 92vw); max-height:65vh; overflow-y:auto; z-index:60;
+       background:#fffdf6; border:1px solid var(--line); border-radius:10px;
+       box-shadow:0 10px 34px rgba(0,0,0,.3); padding:.35rem; }
+.results .rhead { font-size:.78rem; color:var(--mut); padding:.3rem .6rem;
+       border-bottom:2px solid var(--acc); }
+.hit { padding:.4rem .6rem; border-bottom:1px solid #eee6d6; cursor:pointer;
+       font-size:.88rem; line-height:1.45; }
+.hit:hover { background:var(--chip); }
+.hit .ref { color:var(--acc); font-weight:bold; margin-right:.5rem; }
+.hit .he-snip { direction:rtl; unicode-bidi:isolate; }
+mark { background:#ffe89a; padding:0 .05em; }
 
 /* ---------- chapter + verse cards ---------- */
 .chapter-head { margin:2rem 0 .6rem; padding:.5rem .9rem; background:var(--hd);
@@ -84,13 +101,15 @@ footer h3 { font-size:.8rem; text-transform:uppercase; letter-spacing:.07em; col
 
 <header><div class="bar">
   <span class="brand">Torah&nbsp;Grok <small>· the Torah as a scroll</small></span>
-  <select id="book" onchange="bookChanged()"></select>
-  <select id="chap" onchange="chapChanged()" title="chapter"></select>
-  <select id="vrs" onchange="jump()" title="verse"></select>
+  <select id="book" onchange="bookChanged()"></select><button class="nav" onclick="step('book',-1)" title="previous book">◀</button><button class="nav" onclick="step('book',1)" title="next book">▶</button>
+  <select id="chap" onchange="chapChanged()" title="chapter"></select><button class="nav" onclick="step('chap',-1)" title="previous chapter">◀</button><button class="nav" onclick="step('chap',1)" title="next chapter">▶</button>
+  <select id="vrs" onchange="jump()" title="verse"></select><button class="nav" onclick="step('vrs',-1)" title="previous verse">◀</button><button class="nav" onclick="step('vrs',1)" title="next verse">▶</button>
   <button onclick="jump()">Go</button>
-  <input class="search" disabled value="🔍 Search — phase 2"
-         title="Client index or serverless FTS — phase 2">
+  <input class="search" id="q" placeholder="🔍 Search any word…"
+         title="Hebrew (unpointed), transliteration, or English — Enter to search, Esc to close"
+         onkeydown="if(event.key==='Enter')doSearch(); if(event.key==='Escape')hideResults()">
   <span class="loc">reading <b id="loc">—</b></span>
+  <div class="results" id="results" hidden></div>
 </div></header>
 
 <main>
@@ -268,6 +287,123 @@ function chapChanged() {
   fillSelect($("vrs"), Array.from({length: n}, (_, i) => [i + 1, "v " + (i + 1)]));
   jump();
 }
+const bookById = id => MANIFEST.books.find(x => x.id === id);
+
+/* ---------------- search (client-side over data/search.json) ---------------- */
+let SEARCH = null;
+const HEBREW = /[֐-׿]/;
+const stripPoints = s => s.replace(/[֑-ׇ]/g, "");
+
+function hideResults() { $("results").hidden = true; }
+document.addEventListener("click", e => {
+  if (!e.target.closest(".results") && e.target.id !== "q") hideResults();
+});
+
+function snippet(text, needle) {
+  const i = text.toLowerCase().indexOf(needle.toLowerCase());
+  if (i < 0) return esc(text.slice(0, 110));
+  const a = Math.max(0, i - 45), z = Math.min(text.length, i + needle.length + 65);
+  return (a > 0 ? "…" : "") + esc(text.slice(a, i)) +
+    "<mark>" + esc(text.slice(i, i + needle.length)) + "</mark>" +
+    esc(text.slice(i + needle.length, z)) + (z < text.length ? "…" : "");
+}
+
+async function doSearch() {
+  const q = $("q").value.trim();
+  if (!q) { hideResults(); return; }
+  if (!SEARCH) {
+    $("results").hidden = false;
+    $("results").innerHTML = '<div class="rhead">loading search index…</div>';
+    SEARCH = await (await fetch("data/search.json")).json();
+  }
+  const isHe = HEBREW.test(q);
+  const needles = (isHe ? stripPoints(q) : q.toLowerCase()).split(/\s+/).filter(Boolean);
+  const dehyph = s => s.replace(/[-·]/g, "");   // 'bereshit' finds 'be-reshit'
+  const hits = [];
+  for (const e of SEARCH) {
+    const hay = isHe ? e.he
+      : (e.tr + "  " + e.en + "  " + e.fen).toLowerCase();
+    const hay2 = dehyph(hay);
+    if (needles.every(n => hay.includes(n) || hay2.includes(dehyph(n)))) {
+      hits.push(e);
+      if (hits.length >= 200) break;
+    }
+  }
+  const rows = hits.slice(0, 100).map(e => {
+    const name = bookById(e.b).name;
+    let snip;
+    if (isHe) snip = '<span class="he-snip">' + snippet(e.he, needles[0]) + "</span>";
+    else {
+      const field = [e.fen, e.en, e.tr].find(f =>
+        f && f.toLowerCase().includes(needles[0])) || e.fen || e.en;
+      snip = snippet(field, needles[0]);
+    }
+    return `<div class="hit" onclick="hideResults();gotoRef('${e.b}',${e.c},${e.v})">` +
+           `<span class="ref">${esc(name)} ${e.c}:${e.v}</span>${snip}</div>`;
+  }).join("");
+  $("results").innerHTML =
+    `<div class="rhead">${hits.length >= 200 ? "200+" : hits.length} match${
+      hits.length === 1 ? "" : "es"} for “${esc(q)}”${
+      hits.length > 100 ? " — showing first 100" : ""} · ${
+      isHe ? "Hebrew (unpointed)" : "translit + gloss + JPS English"} · click to open</div>` +
+    (rows || '<div class="hit">no matches</div>');
+  $("results").hidden = false;
+}
+
+function gotoRef(b, c, v) {   // set all three pickers, then jump
+  syncing = true;
+  $("book").value = b;
+  const bk = bookById(b);
+  fillSelect($("chap"), bk.chapters.map((n, i) => [i + 1, "ch " + (i + 1)]));
+  $("chap").value = c;
+  fillSelect($("vrs"), Array.from({length: bk.chapters[c - 1]},
+                                  (_, i) => [i + 1, "v " + (i + 1)]));
+  $("vrs").value = v;
+  syncing = false;
+  jump(true);                 // arrows jump instantly — no animation race
+}
+
+function step(kind, dir) {    // ◀ ▶ arrows; verse/chapter roll across boundaries
+  let b = $("book").value, c = +$("chap").value, v = +$("vrs").value;
+  let bi = MANIFEST.books.findIndex(x => x.id === b);
+  const bk = MANIFEST.books[bi];
+  if (kind === "book") {
+    const nb = MANIFEST.books[bi + dir];
+    if (!nb) return;
+    b = nb.id; c = 1; v = 1;
+  } else if (kind === "chap") {
+    c += dir; v = 1;
+    if (c < 1) {
+      const nb = MANIFEST.books[bi - 1];
+      if (!nb) return;
+      b = nb.id; c = nb.chapters.length;
+    } else if (c > bk.chapters.length) {
+      const nb = MANIFEST.books[bi + 1];
+      if (!nb) return;
+      b = nb.id; c = 1;
+    }
+  } else {
+    v += dir;
+    if (v < 1) {
+      c -= 1;
+      if (c < 1) {
+        const nb = MANIFEST.books[bi - 1];
+        if (!nb) return;
+        b = nb.id; c = nb.chapters.length;
+      }
+      v = bookById(b).chapters[c - 1];
+    } else if (v > bk.chapters[c - 1]) {
+      c += 1; v = 1;
+      if (c > bk.chapters.length) {
+        const nb = MANIFEST.books[bi + 1];
+        if (!nb) return;
+        b = nb.id; c = 1;
+      }
+    }
+  }
+  gotoRef(b, c, v);
+}
+
 let syncing = false;
 function syncPickers(vid) {   // keep dropdowns in step while scrolling
   const m = vid.match(/^v(\w+)_(\d+)_(\d+)$/);
@@ -288,7 +424,7 @@ function syncPickers(vid) {   // keep dropdowns in step while scrolling
   syncing = false;
 }
 
-async function jump() {
+async function jump(instant) {
   if (syncing || !MANIFEST) return;
   const b = $("book").value, c = +$("chap").value, v = +$("vrs").value;
   const key = b + "_" + c;
@@ -301,7 +437,7 @@ async function jump() {
     await scheduleLoad();
   }
   document.getElementById("v" + b + "_" + c + "_" + v)
-    ?.scrollIntoView({behavior: "smooth"});
+    ?.scrollIntoView({behavior: instant === true ? "auto" : "smooth"});
 }
 
 /* ---------------- boot ---------------- */

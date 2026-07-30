@@ -54,6 +54,32 @@ def load_jps(shape):
     return jps
 
 
+def build_search_index(cx, jps):
+    """data/search.json — one entry per verse: unpointed Hebrew, translit,
+    glosses, JPS English. Loaded lazily by the app on first search (~2.5 MB)."""
+    acc = {}
+    for r in cx.execute("""SELECT v.book b, v.chapter c, v.verse v,
+                                  w.he_plain, w.translit, w.gloss
+                           FROM words w JOIN verses v ON w.verse_id = v.id
+                           ORDER BY v.id, w.idx"""):
+        e = acc.setdefault((r["b"], r["c"], r["v"]), {"he": [], "tr": [], "en": []})
+        e["he"].append((r["he_plain"] or "").replace("/", ""))
+        e["tr"].append(r["translit"] or "")
+        e["en"].append(r["gloss"] or "")
+    out = []
+    for key in sorted(acc, key=lambda k: (BOOKS.index(k[0]), k[1], k[2])):
+        b, c, v = key
+        ch_jps = jps.get((b, c))
+        out.append({"b": b, "c": c, "v": v,
+                    "he": " ".join(x for x in acc[key]["he"] if x),
+                    "tr": " ".join(x for x in acc[key]["tr"] if x),
+                    "en": " ".join(x for x in acc[key]["en"] if x),
+                    "fen": ch_jps[v - 1] if ch_jps else ""})
+    path = OUT / "search.json"
+    path.write_text(json.dumps(out, ensure_ascii=False), encoding="utf-8")
+    print("search.json: %d verses, %.1f MB" % (len(out), path.stat().st_size / 1e6))
+
+
 def code_lines(d):
     """Same mapping as the report's code_section, structured for JSON."""
     lines = []
@@ -132,6 +158,9 @@ def main():
         shape.setdefault(r["book"], {})[r["chapter"]] = r["n"]
 
     jps = load_jps(shape)
+    build_search_index(cx, jps)
+    if "--search-only" in sys.argv:
+        return
 
     manifest = {"built_at": meta.get("built_at"),
                 "commit": meta.get("built_from_commit"),
