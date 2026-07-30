@@ -1,0 +1,167 @@
+# ============================================================================
+# WRITTEN <-> WRITTEN ECHO REGISTER — v1
+# ============================================================================
+# The human half of the inner-biblical echo graph: later Tanakh verses that
+# reuse the Written Torah's own words. The machine surfaces CANDIDATES
+# (echo_candidates table, built by build_candidates.py from Sefaria's curated
+# verse<->verse links) and verifies rarity counts (verify_rarity.py, live
+# Sefaria search); a candidate becomes an EDGE only here, by human verdict.
+# Verdicts are NEVER auto-assigned. Owner signs off like TIR / provenance.
+#
+# Guarded by check_edges.py (golden-style: schema, vocabulary, DB cross-check).
+# ============================================================================
+
+meta:
+  name: written_echo_register
+  version: 1
+  status: approved                   # owner sign-off in chat, 2026-07-30
+  created: 2026-07-30
+  owner_signoff: 2026-07-30
+
+  # what a verdict may claim
+  verdict_vocabulary:
+    allusion:  "the later verse deliberately reuses the earlier verse's words"
+    idiom:     "shared stock phrase of the language; no deliberate reuse shown"
+    homiletic: "the pairing exists only in a midrash's exposition, not in the later verse's own words"
+    open:      "candidate recorded; no verdict yet"
+
+  signature_kinds:
+    shared-phrase: "the signature phrase occurs in BOTH verses (rarity counts both)"
+    marker-phrase: "the signature phrase is unique to the LATER verse; the tie to the anchor is its lexical core plus cited chain testimony"
+
+  rules:
+    - every rarity number in an evidence line comes from a real query
+      (verify_rarity.py against Sefaria search, or local FTS for Torah-side),
+      with the query date; never from memory
+    - origin records how the candidate surfaced — 'sefaria-link' (echo_candidates)
+      and/or 'chain-citation:<named location>' (met while reading, triage ledger)
+    - anchor = the Torah verse; target = the echoing verse; 'allusion' asserts
+      the direction of reuse, nothing more
+    - a non-open verdict requires owner_signoff date + confidence (high/medium/low)
+
+# ============================================================================
+# EDGES
+# ============================================================================
+
+edges:
+
+  # --------------------------------------------------------------------------
+  # 1. The flagship: the un-creation vision
+  # --------------------------------------------------------------------------
+  - id: gen-1-2--jer-4-23--tohu-vohu
+    anchor:
+      osis: Gen.1.2
+      ref: "Genesis 1:2"
+      he: "וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ"
+      translit: "ve-ha-aretz hayetah tohu va-vohu"
+      en: "and the earth was formless-and-void"
+    target:
+      ref: "Jeremiah 4:23"
+      he: "רָאִיתִי אֶת־הָאָרֶץ וְהִנֵּה־תֹהוּ וָבֹהוּ וְאֶל־הַשָּׁמַיִם וְאֵין אוֹרָם"
+      translit: "ra'iti et-ha-aretz ve-hinneh tohu va-vohu, ve-el ha-shamayim ve-ein oram"
+      en: "I looked at the earth — and behold, formless-and-void; and to the heavens — and their light was gone"
+    signature:
+      kind: shared-phrase
+      he: "תהו ובהו"
+      translit: "tohu va-vohu"
+      en: "formless-and-void"
+    evidence:
+      - "rarity=2 in all Tanakh: Genesis 1:2 + Jeremiah 4:23 only (verify_rarity.py, Sefaria search, 2026-07-30)"
+      - "Torah-side local FTS 2026-07-30: vohu ('void') occurs ONLY at Gen 1:2; tohu ('waste') at Gen 1:2 + Deut 32:10"
+      - "echo_candidates: Gen.1.2 <-> Jeremiah 4:23 (link types reference+related; also linked from Gen.1.3)"
+      - "chain: Bereshit Rabbah 2:1 ties tohu forward to Jer 4:23 (triage ledger gen_01 row 16)"
+    origin: [sefaria-link, "chain-citation:Bereshit Rabbah 2:1"]
+    rationale: "point-for-point inversion of the unit's own state machine: the unique pair-phrase restores the {P}-state of Gen 1:2, and 'their light is gone' reverses Gen 1:3 — the prophet watches creation run backward"
+    verdict: allusion
+    confidence: high
+    owner_signoff: 2026-07-30
+
+  # --------------------------------------------------------------------------
+  # 2. Closing the presupposed-darkness gap
+  # --------------------------------------------------------------------------
+  - id: gen-1-2--isa-45-7--bore-choshekh
+    anchor:
+      osis: Gen.1.2
+      ref: "Genesis 1:2-5 (the or/choshekh cycle)"
+      he: "וְחֹשֶׁךְ עַל־פְּנֵי תְהוֹם … וְלַחֹשֶׁךְ קָרָא לָיְלָה"
+      translit: "ve-choshekh al-penei tehom … ve-la-choshekh kara lailah"
+      en: "and darkness upon the face of the deep … and the darkness He called Night"
+    target:
+      ref: "Isaiah 45:7"
+      he: "יוֹצֵר אוֹר וּבוֹרֵא חֹשֶׁךְ עֹשֶׂה שָׁלוֹם וּבוֹרֵא רָע"
+      translit: "yotzer or u-vore choshekh, oseh shalom u-vore ra"
+      en: "forming light and creating darkness, making peace and creating evil"
+    signature:
+      kind: marker-phrase
+      he: "ובורא חשך"
+      translit: "u-vore choshekh"
+      en: "and creating darkness"
+    evidence:
+      - "rarity=1 in all Tanakh: Isaiah 45:7 only (verify_rarity.py, Sefaria search, 2026-07-30)"
+      - "the anchor's gap is machine-recorded: gen_01 NOTE_PRESUPPOSED lists choshekh ('darkness') — present at t0, never created in the unit; Isa 45:7 asserts bore ('creates') for exactly that item"
+      - "chain: Bereshit Rabbah 1:9 — Rabban Gamliel answers the philosopher's 'darkness was found, not created' with Isa 45:7 by name (triage ledger gen_01 row 9, material find)"
+    origin: ["chain-citation:Bereshit Rabbah 1:9"]
+    rationale: "Isa 45:7 does exegetical work on Gen 1:2-5's silence: it pairs yotzer or ('forming light') with the claim Genesis never makes — that darkness too is created; the chain itself deployed it as the answer to the presupposed-materials challenge"
+    verdict: allusion
+    confidence: medium
+    owner_signoff: 2026-07-30
+
+  # --------------------------------------------------------------------------
+  # 3. The or-source tradition: light as garment
+  # --------------------------------------------------------------------------
+  - id: gen-1-3--ps-104-2--or-kasalmah
+    anchor:
+      osis: Gen.1.3
+      ref: "Genesis 1:3"
+      he: "וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר וַיְהִי־אוֹר"
+      translit: "va-yomer Elohim yehi or, va-yehi or"
+      en: "and God said: let there be light — and light was"
+    target:
+      ref: "Psalms 104:2"
+      he: "עֹטֶה־אוֹר כַּשַּׂלְמָה נוֹטֶה שָׁמַיִם כַּיְרִיעָה"
+      translit: "oteh-or ka-salmah, noteh shamayim ka-yeri'ah"
+      en: "wrapping in light as in a garment, stretching out the heavens like a curtain"
+    signature:
+      kind: marker-phrase
+      he: "עטה אור כשלמה"
+      translit: "oteh or ka-salmah"
+      en: "wrapping in light as in a garment"
+    evidence:
+      - "rarity=1 in all Tanakh: Psalms 104:2 only (verify_rarity.py, Sefaria search, 2026-07-30)"
+      - "chain: Bereshit Rabbah 3:4 — 'whence was the light created? He wrapped Himself in it like a garment' — taught on Gen 1:3 with Ps 104:2 as the source, 'in a whisper' (triage ledger gen_01 row 24)"
+      - "echo_candidates places the SAME psalm on days 1-3: Gen.1.2 <-> Ps 104:6 (deep-as-garment), Gen.1.9 <-> Ps 104:7 (waters flee at rebuke) — Ps 104 tracks the creation week in order"
+    origin: ["chain-citation:Bereshit Rabbah 3:4"]
+    rationale: "Ps 104 is a creation-week retelling verse-by-verse (vv. 2, 6, 7, 9 track days 1-3); v. 2 answers the question Gen 1:3 leaves open — the light's source — which is why the chain reads it there"
+    verdict: allusion
+    confidence: medium
+    owner_signoff: 2026-07-30
+
+  # --------------------------------------------------------------------------
+  # 4. Wisdom at the reshit
+  # --------------------------------------------------------------------------
+  - id: gen-1-1--prov-8-22--reshit-darko
+    anchor:
+      osis: Gen.1.1
+      ref: "Genesis 1:1"
+      he: "בְּרֵאשִׁית בָּרָא אֱלֹהִים"
+      translit: "be-reshit bara Elohim"
+      en: "in-the-beginning God created"
+    target:
+      ref: "Proverbs 8:22"
+      he: "יְהֹוָה קָנָנִי רֵאשִׁית דַּרְכּוֹ קֶדֶם מִפְעָלָיו מֵאָז"
+      translit: "H' kanani reshit darko, kedem mif'alav me-az"
+      en: "the LORD acquired me — the beginning of His way, before His works of old"
+    signature:
+      kind: marker-phrase
+      he: "קנני ראשית דרכו"
+      translit: "kanani reshit darko"
+      en: "acquired me — the beginning of His way"
+    evidence:
+      - "rarity=1 in all Tanakh: Proverbs 8:22 only (verify_rarity.py, Sefaria search, 2026-07-30)"
+      - "the shared lexical core is reshit ('beginning') — the anchor's opening word in marked anarthrous form; Prov 8:22-31 goes on to walk the creation sequence (deeps, springs, mountains, heavens, sea-boundary) with Wisdom present"
+      - "chain: Bereshit Rabbah 1:1 builds the blueprint reading (be-reshit = 'by means of reshit = Torah') on Prov 8's Wisdom-at-creation speech (triage ledger gen_01 row 1)"
+    origin: ["chain-citation:Bereshit Rabbah 1:1"]
+    rationale: "Prov 8:22 situates Wisdom's own origin AT Gen 1:1's reshit and then retells the build in order (8:24-29); the speech presents itself as a first-person commentary on the creation account"
+    verdict: allusion
+    confidence: medium
+    owner_signoff: 2026-07-30
