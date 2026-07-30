@@ -58,6 +58,7 @@ mark { background:#ffe89a; padding:0 .05em; }
 .badge { font:.68rem/1.5 monospace; padding:0 .45rem; border-radius:10px; }
 .badge.frozen { background:#e8f5ec; color:var(--frozen); border:1px solid #bfe3ca; }
 .badge.auto { background:#eef1f7; color:var(--blue); border:1px solid #ccd6ea; }
+.badge.oral { background:#faf3e3; color:#7a5b0a; border:1px solid #e6d5a3; cursor:help; }
 .vhead .fen { color:var(--mut); font-style:italic; font-size:.88rem; }
 .flat .row { margin:.1rem 0 .3rem; }
 .flat .lab { display:block; color:var(--mut); font:.68rem/1.4 monospace;
@@ -169,6 +170,9 @@ function verseHTML(b, c, vd) {
   const badge = vd.frozen.length
     ? `<span class="badge frozen" title="${esc(vd.frozen.join(" · "))}">❄ frozen: ${esc(vd.frozen[0].split(" · ")[0])}</span>`
     : `<span class="badge auto">auto · illustrative</span>`;
+  const oral = vd.oral
+    ? `<span class="badge oral" title="Oral-tradition sources anchored to this verse (tier 1 of Sefaria's link index): ${vd.oral[0]} enumerated, ${vd.oral[1]} read with a verdict in the triage ledger, ${vd.oral[2]} judged material (bearing on the frozen derivation). Enumerated / fetched / read are kept as separate honest counters; the ledger in logic/oral_triage/ is the canonical record.">📜 oral ${vd.oral[1]}/${vd.oral[0]} read${vd.oral[2] ? ` · ${vd.oral[2]} material` : ""}</span>`
+    : "";
   const fen = vd.fen ? `“${esc(vd.fen)}”`
     : "word glosses: " + esc(vd.leaves.map(l => l.en).join(" · "));
   const bricks = k => vd.leaves.map(l =>
@@ -190,7 +194,7 @@ function verseHTML(b, c, vd) {
     `${esc(l.c).padEnd(38)}<span class="cmt">${esc(l.m)}</span>`).join("\n");
 
   return `<section class="verse" id="v${b}_${c}_${vd.v}" data-ref="${esc(name)} ${c}:${vd.v}">
-  <div class="vhead"><span class="vref">${esc(b)} ${c}:${vd.v}</span>${badge}
+  <div class="vhead"><span class="vref">${esc(b)} ${c}:${vd.v}</span>${badge}${oral}
     <span class="fen">${fen}</span></div>
   <div class="flat">
     <div class="lab">Hebrew</div>
