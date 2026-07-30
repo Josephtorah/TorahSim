@@ -109,6 +109,8 @@ footer h3 { font-size:.8rem; text-transform:uppercase; letter-spacing:.07em; col
          title="Hebrew (unpointed), transliteration, or English — Enter to search, Esc to close"
          onkeydown="if(event.key==='Enter')doSearch(); if(event.key==='Escape')hideResults()">
   <span class="loc">reading <b id="loc">—</b></span>
+  <button class="nav" id="regenBtn" style="display:none" onclick="regenData()"
+          title="Local dev only: re-run index_units + index_triage + export_web from the database, then reload">⟳ regenerate</button>
   <div class="results" id="results" hidden></div>
 </div></header>
 
@@ -439,6 +441,24 @@ async function jump(instant) {
   document.getElementById("v" + b + "_" + c + "_" + v)
     ?.scrollIntoView({behavior: instant === true ? "auto" : "smooth"});
 }
+
+/* ---------------- regenerate (local dev server only; hidden on static hosts) -------- */
+async function regenData() {
+  const b = $("regenBtn");
+  b.disabled = true; b.textContent = "⟳ regenerating…";
+  try {
+    const r = await (await fetch("/regen/data", {method: "POST"})).json();
+    if (!r.ok) throw new Error(r.log);
+    b.textContent = "⟳ done — reloading";
+    location.reload();
+  } catch (e) {
+    console.error("[regen]", e);
+    b.textContent = "⟳ failed (see console)";
+    b.disabled = false;
+  }
+}
+fetch("/regen/ping").then(r => r.ok && ($("regenBtn").style.display = ""))
+                    .catch(() => {});
 
 /* ---------------- boot ---------------- */
 (async function () {

@@ -227,13 +227,29 @@ def render(unit_id, out_path):
         S.append('<div class="note">%s</div>'
                  % esc(" ".join(str(u["status_note_en"]).split())))
 
+    regen = (
+        "<button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;"
+        "font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' "
+        "title='Local dev only: re-run render_unit_html.py for this unit, then reload'>"
+        "⟳ regenerate</button>"
+        "<script>(function(){var b=document.getElementById('regenBtn');"
+        "fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';})"
+        ".catch(function(){});"
+        "b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';"
+        "var out=location.pathname.split('/').pop();"
+        "fetch('/regen/unit/%s?out='+encodeURIComponent(out),{method:'POST'})"
+        ".then(function(r){return r.json();}).then(function(j){"
+        "if(!j.ok)throw new Error(j.log);location.reload();})"
+        ".catch(function(e){console.error('[regen]',e);"
+        "b.textContent='⟳ failed (see console)';b.disabled=false;});};})();"
+        "</script>" % unit_id)
     page = ("<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'>"
             "<title>%s — frozen logic unit</title><style>%s</style></head>"
-            "<body><main>%s"
+            "<body>%s<main>%s"
             "<p class='meta'>Rendered %s by render_unit_html.py · the YAML is "
             "canonical, this page is read-only display · English = aid only · "
             "not binding religious law.</p></main></body></html>"
-            % (esc(unit_id), CSS, "\n".join(S), date.today().isoformat()))
+            % (esc(unit_id), CSS, regen, "\n".join(S), date.today().isoformat()))
     out_path.write_text(page, encoding="utf-8")
     print("wrote %s (%.0f KB)" % (out_path, out_path.stat().st_size / 1024))
 
