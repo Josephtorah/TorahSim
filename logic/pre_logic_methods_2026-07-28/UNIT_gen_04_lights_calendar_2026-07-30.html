@@ -1,0 +1,366 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_04_lights_calendar — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_04_lights_calendar?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Day four: luminaries — jobs, calendar, dominion; three spec deltas (1:14-19) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_04_lights_calendar</b> · Genesis 1:14-19 · derive logic_derived_v1 · phase C-4</div>
+<p><span class="he">יוֹם רְבִיעִי — הַמְּאוֹרוֹת וְהַלּוּחַ</span> · <i>yom revi&#x27;i — ha-me&#x27;orot ve-ha-luach</i> · fourth day — the luminaries and the calendar</p>
+<div class="note">Derived 2026-07-30 at owner&#x27;s order (&quot;derive day 4&quot;); FROZEN 2026-07-30 on owner approval (&quot;freeze day 4&quot;). First unit derived under the calibrated coverage protocol (charter section 4.1): the span&#x27;s Onkelos was read Tier-A at derive time (single range fetch, logged in Data/FETCHLOG.md). At freeze, the interpreter gained the ASSIGN handler (day-3 NOTE_SPEC_DELTA precedent) and the unit was machine-verified.</div>
+<div class="note">Logic-derived v1: v3 ta&#x27;amim trees (glue bricks, pure binary) -&gt; leaf role frames from OSHB morph -&gt; operator lines citing TIR-026..033 -&gt; machine-state scenarios (registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER). Compound machine names use underscores (maor_gadol, memshelet_yom) so scenario clauses stay checkable; display fields keep the hyphenated transliteration.</div>
+<div class="meta">confidence: structure tested; operator readings tested-per-TIR; intent hypothesis</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>Day-4 unit (1:14-19): the fullest work-order shape in the week so far — SPEC with a job list (1:14-15) -&gt; receipt -&gt; BUILD (1:16) -&gt; INSTALL (1:17) -&gt; delivered-purpose recap (1:18a) -&gt; TEST -&gt; COMMIT. It is also the integration unit: the spec references every prior unit&#x27;s outputs (raqia/shamayim of day 2, aretz of days 1/3, the yom/lailah labels of day 1) and takes over a function Elohim performed personally on day 1.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Hebrew source + trees</td><td>All 6 verses via taamim_tree_parse.py rule set v3: status unique, pure_binary true. tree_ascii regenerated 2026-07-30 from DB tree_json.</td><td>tested</td></tr>
+<tr><td><b>C</b></td><td>Segment structure</td><td>Verb morphology (#IMPOSED OSHB, DB-verified 2026-07-30): yehi Vqj3ms — QAL JUSSIVE SINGULAR — over me&#x27;orot Ncmpa PLURAL (number mismatch, machine-visible in the codes); ve-hayu C+Vqq3cp WEQATAL twice (1:14, 1:15 — the THEN-chain form, TIR-029); le-havdil R+Vhc and le-ha&#x27;ir R+Vhc and ve-li-meshol C+R+Vqc — lamed + infinitive construct, the PURPOSE frame (TIR-030); va-ya&#x27;as Vqw3ms (asah, not bara); va-yiten Vqw3ms; FOUR object markers in 1:16 (To x4) plus To+Sp3mp (otam) in 1:17 — the densest et-inventory since 1:1; revi&#x27;i Aomsa — the morphology itself tags the day label ORDINAL.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Predicates &amp; outcomes</td><td>SPEC: LET(exist lights, loc=raqia) + purpose(divide day/night) + THEN(jobs: signs, festivals, days+years) + THEN(be lights to shine on the earth) -&gt; generic receipt (1:15, crossing a verse boundary and preceding the build narrative, as in 1:11). BUILD: asah delivers a DIFFERENTIATED inventory (great/small/stars) with an office each for the two lights (dominion of day / of night) — three letter-visible deltas against the spec. INSTALL: natan mounts them in the day-2 registry entity. RECAP restates the delegated separation at ENTITY level (or/choshekh) where the spec spoke at LABEL level (yom/lailah). TEST passes without an et-object. COMMIT ordinal, clean.</td><td>tested</td></tr>
+<tr><td><b>E</b></td><td>Logic format choice</td><td>Operator lines + WORLD/REGISTRY writes + day-ledger row; ONE Hoare TRIPLE carries the acceptance contract of the spec; ASSIGN introduced for the dative role bindings (le-memshelet) — REGISTRY write of an OFFICE, deliberately distinct from NAME (no va-yiqra in this unit); interpreter vocabulary to be extended at verification (day-3 NOTE_SPEC_DELTA precedent).</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Bilingual logic objects</td><td>Every operator line carries he + he_translit + en; register values keep Hebrew where the text supplies them (memshelet, revi&#x27;i). Compound machine identifiers use underscores for clause-checkability.</td><td>established</td></tr>
+<tr><td><b>G</b></td><td>Oral (named only) + Tier-A translation check</td><td>Verified from local Data: JT Rosh Hashanah 2:8:4 (R. Simon on OUR ve-hayu — festivals by BOTH luminaries; read in triage batch 5, row 90); Bavli Chagigah 12a:6 (the MEASURES of day and night created day one — the chain&#x27;s own question about what day 4 adds; row 40). Named but not yet read (observation tier, day-4 Tier-A queue): Chullin 60b (two-kings-one-crown on gadol/qaton); the me&#x27;erat defective-spelling reading (named via Rashi on 1:14, commentary tier). Tier-A Onkelos read at derive time (FETCHLOG 2026-07-30): renders yehi as PLURAL yehon (normalizes the number mismatch); inserts a verb of COUNTING (u-le-mimnei ve-hon yomin u-shnin — &#x27;to count by them days and years&#x27;) making the calendar job explicit computation; renders memshelet verbally (le-mishlat); keeps the ordinal (revi&#x27;a&#x27;i).</td><td>tested</td></tr>
+<tr><td><b>H</b></td><td>Scenarios</td><td>S1-S5 register deltas per step; asserts the OPEN spec at 1:14 (the first demand in the corpus to cross a verse boundary), the triple discharge at 1:15, the differentiated WORLD writes and TWO role writes at 1:16, the spec-delta flags, the no-et test, and the clean ORDINAL commit. S6_negative reasserts the flag-never-block contract — the very rule that lets three deltas ride a clean commit.</td><td>tested</td></tr>
+<tr><td><b>I</b></td><td>English leakage review</td><td>Operators derive from verb forms (jussive, weqatal, infinitive constructs, wayyiqtol), particles (et, le-, bein) and morph codes (Aomsa ordinal) — not from English glosses. All three deltas are letter-visible word-sequence comparisons (gedolim-&gt;gadol/qaton; kokhavim absent from spec; yom/lailah-&gt;or/choshekh). The number-mismatch flag rests on the morph codes Vqj3ms vs Ncmpa.</td><td>established</td></tr>
+<tr><td><b>J</b></td><td>Freeze</td><td>status: frozen 2026-07-30 on owner approval (&quot;freeze day 4&quot;). ASSIGN handler added to the interpreter at verification; all scenarios green. Changes require a new derive pass, not silent edits.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_1_14 · Gen.1.14 · <span class='expr'>DECLARE_SPEC_CALENDAR</span></h3>
+<p><span class="he">וַיֹּאמֶר אֱלֹהִים יְהִי מְאֹרֹת בִּרְקִיעַ הַשָּׁמַיִם לְהַבְדִּיל בֵּין הַיּוֹם וּבֵין הַלָּיְלָה וְהָיוּ לְאֹתֹת וּלְמוֹעֲדִים וּלְיָמִים וְשָׁנִים</span> · <i>va-yomer Elohim yehi me&#x27;orot bi-rkia ha-shamayim le-havdil bein ha-yom u-vein ha-lailah ve-hayu le-otot u-le-mo&#x27;adim u-le-yamim ve-shanim</i> · [EN-AID/JPS] And God said: &#x27;Let there be lights in the firmament of the heaven to divide the day from the night; and let them be for signs, and for seasons, and for days and years.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר אלהים יהי מארת ברקיע השמים להבדיל בין היום ובין הלילה</span> · <i>va-yomer … u-vein ha-lailah</i> · speech act + existence fiat + mount location + separation purpose (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">והיו לאתת ולמועדים ולימים ושנים</span> · <i>ve-hayu le-otot u-le-mo&#x27;adim u-le-yamim ve-shanim</i> · the weqatal THEN-chain: the calendar job list</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(Elohim, LET(exists(meorot), loc=raqia_ha_shamayim))</span><br>QAL JUSSIVE 3MS (Vqj3ms) over a PLURAL subject (me&#x27;orot, Ncmpa): a singular fiat commanding a plural product — the number mismatch is machine-visible in the morph codes and recorded [OPEN]. Onkelos (Tier-A 2026-07-30) normalizes to plural yehon — the authorized translation smooths what the Hebrew leaves rough. Spelling: מארת doubly defective here, מאורת at 1:15, מאור (singular, plene) at 1:16 — three orthographies of one lexeme inside one unit, letter-visible [OPEN] (Oral candidate: the me&#x27;erat reading — observation tier, ORAL_meorot_defective).
+</td><td><span class="he">יְהִי מְאֹרֹת</span> · <i>yehi me&#x27;orot</i></td><td class='cite'>TIR-026</td><td>tested</td></tr>
+<tr class="opline"><td>TRIPLE</td><td><span class="expr">{ P: raqia read (installed gen_02) } install-lights { Q: exists(meorot), loc=raqia_ha_shamayim }</span><br>The acceptance contract, with the job list as its criteria. Purpose #1 — le-havdil bein ha-yom u-vein ha-lailah (lamed + infinitive construct, TIR-030): the very function Elohim performed personally on day 1 (va-yavdel, 1:4) is here WRITTEN INTO THE FIXTURES&#x27; SPEC — an operational handover, machine to fixtures. Then the weqatal THEN-chain (ve-hayu, Vqq3cp, TIR-029): le-otot (signs), u-le-mo&#x27;adim (appointed times/festivals), u-le-yamim ve-shanim (days and years) — the CALENDAR job. Onkelos makes the computation explicit: u-le-mimnei ve-hon yomin u-shnin, &#x27;to COUNT by them days and years&#x27; — a verb of counting the Hebrew leaves implicit. Note the objects of havdil here are the day-1 REGISTRY LABELS (ha-yom, ha-lailah) — hold that for 1:18.
+</td><td><span class="he">לְהַבְדִּיל … וְהָיוּ לְאֹתֹת וּלְמוֹעֲדִים וּלְיָמִים וְשָׁנִים</span> · <i>le-havdil … ve-hayu le-otot u-le-mo&#x27;adim u-le-yamim ve-shanim</i></td><td class='cite'>TIR-029, TIR-030</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">raqia, shamayim are READ without prior install (standalone machine; installed in gen_02 — cross-unit chaining is Stage E)</span><br>flag, not fix</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The etnachta splits [fiat + mount location + operate-purpose | signal- purposes]: the spec itself is two-track — the fixtures must OPERATE (divide) and SIGNAL (mark, count). First demand in the corpus whose receipt does not arrive in its own verse.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_1_15 · Gen.1.15 · <span class='expr'>SPEC_CROSS_REGISTRY_RESULT</span></h3>
+<p><span class="he">וְהָיוּ לִמְאוֹרֹת בִּרְקִיעַ הַשָּׁמַיִם לְהָאִיר עַל־הָאָרֶץ וַיְהִי־כֵן</span> · <i>ve-hayu li-me&#x27;orot bi-rkia ha-shamayim le-ha&#x27;ir al-ha-aretz va-yehi khen</i> · [EN-AID/JPS] &#x27;And let them be for lights in the firmament of the heaven to give light upon the earth.&#x27; And it was so.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">והיו למאורת ברקיע השמים להאיר על הארץ</span> · <i>ve-hayu li-me&#x27;orot … al-ha-aretz</i> · spec continuation: service purpose across registries (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויהי כן</span> · <i>va-yehi khen</i> · generic RESULT — the receipt</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">aretz are READ without prior install (standalone machine; installed in gen_01, renamed in gen_03 — cross-unit chaining is Stage E)</span><br>flag, not fix</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">HOLDS(exists(meorot), loc=raqia_ha_shamayim, t1) — va-yehi khen pops the 1:14 demand</span><br>Generic summary receipt. TWO pattern notes: (a) the demand was pushed at 1:14 and pops here — the first verse-boundary-crossing spec in the corpus (days 1-3 closed same-verse); (b) the receipt PRECEDES the build narrative of 1:16-17, exactly as 1:11&#x27;s khen preceded 1:12 — receipt-before-execution, second occurrence: a pattern now, not an anomaly. The second weqatal (ve-hayu li-me&#x27;orot … le-ha&#x27;ir al-ha-aretz, TIR-029/030) is the CROSS-REGISTRY service purpose: mounted heaven-side (raqia ha-shamayim, day 2&#x27;s entity), serving earth-side (aretz, days 1/3) — the first spec that wires three prior units together.
+</td><td><span class="he">וַיְהִי־כֵן</span> · <i>va-yehi khen</i></td><td class='cite'>TIR-029, TIR-030</td><td>tested</td></tr>
+</table>
+<div class="meta">The integration verse: raqia/shamayim (gen_02), aretz (gen_01/03), and by 1:14&#x27;s purposes the yom/lailah labels (gen_01) all referenced in a single spec. The machine reads them presupposed; the flags are the cross-unit wiring made visible.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_1_16 · Gen.1.16 · <span class='expr'>BUILD_DIFFERENTIATE_DELTA</span></h3>
+<p><span class="he">וַיַּעַשׂ אֱלֹהִים אֶת־שְׁנֵי הַמְּאֹרֹת הַגְּדֹלִים אֶת־הַמָּאוֹר הַגָּדֹל לְמֶמְשֶׁלֶת הַיּוֹם וְאֶת־הַמָּאוֹר הַקָּטֹן לְמֶמְשֶׁלֶת הַלַּיְלָה וְאֵת הַכּוֹכָבִים</span> · <i>va-ya&#x27;as Elohim et-shnei ha-me&#x27;orot ha-gedolim et-ha-maor ha-gadol le-memshelet ha-yom ve-et-ha-maor ha-qaton le-memshelet ha-lailah ve-et ha-kokhavim</i> · [EN-AID/JPS] And God made the two great lights: the greater light to rule the day, and the lesser light to rule the night; and the stars.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויעש אלהים את שני המארת הגדלים</span> · <i>va-ya&#x27;as Elohim et-shnei ha-me&#x27;orot ha-gedolim</i> · the build event + the SUMMARY inventory: &#x27;the two GREAT lights&#x27; (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">את המאור הגדל לממשלת היום ואת המאור הקטן לממשלת הלילה ואת הכוכבים</span> · <i>et-ha-maor ha-gadol … ve-et ha-kokhavim</i> · the ITEMIZED inventory: great/small differentiated, offices assigned, stars appended</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">make(e4) ∧ Agent(e4, Elohim) ∧ Theme(e4, maor_gadol) ∧ Theme(e4, maor_qaton) ∧ Theme(e4, kokhavim)</span><br>asah (&#x27;made&#x27;, Vqw3ms) — not bara: manufacture, not creation ex nihilo. FOUR et-markers in one verse (To x4: the summary pair + each light + the stars) — the densest Theme inventory since 1:1, the ORAL_et_theme_marker semantics (et = object/Theme marker, Onkelos yat) on full display.
+</td><td><span class="he">וַיַּעַשׂ אֱלֹהִים אֶת … אֶת … וְאֶת … וְאֵת</span> · <i>va-ya&#x27;as Elohim et … et … ve-et … ve-et</i></td><td class='cite'>TIR-014, TIR-015</td><td>tested</td></tr>
+<tr class="opline"><td>REGISTRY_INSTALL</td><td><span class="expr">WORLD += {maor_gadol, maor_qaton, kokhavim} — the delivered inventory, differentiated</span><br>three entities enter the world where the spec named one undifferentiated plural</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>ASSIGN</td><td><span class="expr">REGISTRY: maor_gadol-&gt;memshelet_yom, maor_qaton-&gt;memshelet_lailah</span><br>Dative le- + construct memshelet (&#x27;for the dominion of&#x27;): ROLE bindings, not names — this unit contains NO va-yiqra; the naming series ended on day 3. The same dative frame TIR-022 reads on naming writes here carries an OFFICE APPOINTMENT: greater light -&gt; dominion of day, lesser light -&gt; dominion of night. The stars receive NO office — a trailing et with no le- phrase. Onkelos renders the office verbally (le-mishlat, &#x27;to rule&#x27;). NEW OP: interpreter vocabulary extended at verification (day-3 precedent).
+</td><td><span class="he">לְמֶמְשֶׁלֶת הַיּוֹם … לְמֶמְשֶׁלֶת הַלַּיְלָה</span> · <i>le-memshelet ha-yom … le-memshelet ha-lailah</i></td><td class='cite'>TIR-022</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_SPEC_DELTA</td><td><span class="expr">spec &#x27;me&#x27;orot (one undifferentiated plural)&#x27; delivered &#x27;shnei ha-me&#x27;orot ha-GEDOLIM, then ha-gadol / ha-qaton&#x27; — flag spec_delta</span><br>The same-verse tension: the pair is introduced as BOTH GREAT (ha-gedolim, plural adjective) and immediately split into greater and lesser — letter-visible within eleven words; the tree itself stages it (the etnachta closes the summary half before the itemization half splits them). Significance = named-Oral track: Chullin 60b&#x27;s two-kings-one-crown (observation until read at the day-4 triage).
+</td><td><span class="he">הַמְּאֹרֹת הַגְּדֹלִים ← הַגָּדֹל / הַקָּטֹן</span> · <i>ha-me&#x27;orot ha-GEDOLIM -&gt; ha-gadol / ha-qaton</i></td><td class='cite'>—</td><td>delta tested (letter-visible); significance = named-Oral track</td></tr>
+<tr class="opline"><td>NOTE_SPEC_DELTA</td><td><span class="expr">spec &#x27;no stars in the job order&#x27; delivered &#x27;ve-et ha-kokhavim&#x27; — flag spec_delta</span><br>Over-delivery: the stars appear only at the build, never in the 1:14-15 spec — the day-3 pattern again (the herbs&#x27; le-minehu), delivery exceeding order; appended as a bare trailing Theme with no office and no size adjective.
+</td><td><span class="he">וְאֵת הַכּוֹכָבִים</span> · <i>ve-et ha-kokhavim</i></td><td class='cite'>—</td><td>delta tested (letter-visible)</td></tr>
+<tr class="opline"><td>NOTE_SPEC_DELTA</td><td><span class="expr">spec &#x27;jobs: divide, signs, festivals, days+years, shine&#x27; delivered &#x27;le-memshelet (dominion) added&#x27; — flag spec_delta</span><br>The office of RULE appears only in the delivery (1:16) and the install recap (1:18 ve-limshol) — the 1:14-15 job list never mentions dominion. Delivery adds a governance layer the spec did not order.
+</td><td><span class="he">לְמֶמְשֶׁלֶת</span> · <i>le-memshelet</i></td><td class='cite'>—</td><td>delta tested (letter-visible)</td></tr>
+</table>
+<div class="meta">The build differentiates what the spec left generic — and every difference is flagged, not judged: three deltas on the books, verdict deferred to the oracle at 1:18 (the day-3 lesson: spec-conformance and goodness are separate predicates).</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_1_17 · Gen.1.17 · <span class='expr'>INSTALL_MOUNT</span></h3>
+<p><span class="he">וַיִּתֵּן אֹתָם אֱלֹהִים בִּרְקִיעַ הַשָּׁמָיִם לְהָאִיר עַל־הָאָרֶץ</span> · <i>va-yiten otam Elohim bi-rkia ha-shamayim le-ha&#x27;ir al-ha-aretz</i> · [EN-AID/JPS] And God set them in the firmament of the heaven to give light upon the earth.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויתן אתם אלהים ברקיע השמים</span> · <i>va-yiten otam Elohim bi-rkia ha-shamayim</i> · the mount event: placed into day 2&#x27;s entity (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">להאיר על הארץ</span> · <i>le-ha&#x27;ir al-ha-aretz</i> · delivered-purpose recap begins: to shine on the earth</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">place(e5) ∧ Agent(e5, Elohim) ∧ Theme(e5, otam_ha_meorot)</span><br>natan (&#x27;set/placed&#x27;, Vqw3ms) with otam — the et-marker carrying a pronominal suffix (To+Sp3mp): the built entities, referenced as a group, mounted into raqia ha-shamayim. TWO-STEP BUILD: asah (1:16, manufacture) then natan (1:17, installation) — distinct events; day 2&#x27;s raqia had va-ya&#x27;as only. The purpose chain that begins here (le-ha&#x27;ir) continues across the verse boundary into 1:18 — the infinitives hang off this install event.
+</td><td><span class="he">וַיִּתֵּן אֹתָם</span> · <i>va-yiten otam</i></td><td class='cite'>TIR-030</td><td>tested</td></tr>
+</table>
+<div class="meta">Manufacture and deployment separated: the corpus distinguishes making a thing from putting it where it serves. Location = the day-2 entity, read presupposed (flagged at 1:14).</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_1_18 · Gen.1.18 · <span class='expr'>PURPOSE_RECAP_DELTA_TEST</span></h3>
+<p><span class="he">וְלִמְשֹׁל בַּיּוֹם וּבַלַּיְלָה וּלְהַבְדִּיל בֵּין הָאוֹר וּבֵין הַחֹשֶׁךְ וַיַּרְא אֱלֹהִים כִּי־טוֹב</span> · <i>ve-limshol ba-yom u-va-lailah u-le-havdil bein ha-or u-vein ha-choshekh va-yar Elohim ki-tov</i> · [EN-AID/JPS] And to rule over the day and over the night, and to divide the light from the darkness; and God saw that it was good.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ולמשל ביום ובלילה ולהבדיל בין האור ובין החשך</span> · <i>ve-limshol … u-vein ha-choshekh</i> · delivered-purpose recap: rule + separate, at ENTITY level (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וירא אלהים כי טוב</span> · <i>va-yar Elohim ki-tov</i> · the day&#x27;s test</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>NOTE_SPEC_DELTA</td><td><span class="expr">spec &#x27;le-havdil bein ha-YOM u-vein ha-LAILAH (registry labels, 1:14)&#x27; delivered &#x27;u-le-havdil bein ha-OR u-vein ha-CHOSHEKH (the entities, 1:18)&#x27; — flag spec_delta</span><br>The delegated separation restated at ENTITY level where the spec spoke at LABEL level: 1:14 divides the day-1 REGISTRY LABELS (yom/lailah), 1:18 divides the day-1 ENTITIES (or/choshekh) — the label-vs-entity distinction (gen_01&#x27;s ORAL_label_not_entity, BR 3:6 &#x27;the light is not the day?!&#x27;) drawn by the text itself across the spec/delivery pair. Letter-visible; recorded as the third delta of the unit — [OPEN] whether restatement or refinement.
+</td><td><span class="he">בֵּין הַיּוֹם וּבֵין הַלָּיְלָה ← בֵּין הָאוֹר וּבֵין הַחֹשֶׁךְ</span> · <i>bein ha-yom u-vein ha-lailah -&gt; bein ha-or u-vein ha-choshekh</i></td><td class='cite'>—</td><td>delta tested (letter-visible); significance [OPEN]</td></tr>
+<tr class="opline"><td>TEST</td><td><span class="expr">PASS(tov, meorot)</span><br>The day&#x27;s single test — again with NO explicit et-object (contrast 1:4 va-yar ET-ha-or; like both day-3 tests): the inspection covers the delivered work as a whole. Three deltas stand flagged; the oracle passes the delivery AS DELIVERED — the day-3 lesson (spec-conformance and goodness are separate predicates) repeats on a triple deviation.
+</td><td><span class="he">כִּי־טוֹב</span> · <i>ki-tov</i></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">1:18&#x27;s infinitive chain (ve-limshol … u-le-havdil, TIR-030) hangs off 1:17&#x27;s va-yiten: the install&#x27;s delivered-purpose recap. Delivered job list {shine, rule, divide(or/choshekh)} vs spec job list {divide(yom/lailah), signs, festivals, days+years, shine}: the diffs are exactly the flags on the books.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_1_19 · Gen.1.19 · <span class='expr'>COMMIT_DAY</span></h3>
+<p><span class="he">וַיְהִי־עֶרֶב וַיְהִי־בֹקֶר יוֹם רְבִיעִי</span> · <i>va-yehi erev va-yehi voqer yom revi&#x27;i</i> · [EN-AID/JPS] And there was evening and there was morning, a fourth day.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויהי ערב ויהי בקר</span> · <i>va-yehi erev va-yehi voqer</i> · cycle close</div><div class="arm"><b>RIGHT</b><br><span class="he">יום רביעי</span> · <i>yom revi&#x27;i</i> · day ledger entry — spec received, build delivered, one test, two offices</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>COMMIT</td><td><span class="expr">cycle(erev -&gt; boqer); LEDGER[day 4] := {spec ✓, test PASS, roles 2}</span><br>revi&#x27;i = ORDINAL &#x27;fourth&#x27; — and here the morphology itself testifies: OSHB tags it Aomsa, ordinal adjective (the day-1 cardinal echad is the marked exception, as ORAL_echad_label_form records). Spec received (1:15), inventory delivered and mounted, one PASS on the books, two offices bound; three spec-delta flags ride the ledger without blocking. Clean commit.
+</td><td><span class="he">יוֹם רְבִיעִי</span> · <i>yom revii</i></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The fullest clean transaction so far: five distinct phases (spec, receipt, build, install, recap+test) closed by one ordinal commit.</div>
+</div>
+<h2>State machine</h2>
+<div class="meta">Day-4 work order (standalone; registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER).</div>
+<table><tr><th>state</th><th>meaning</th></tr>
+<tr><td><b>S_boot</b></td><td>Before 1:14 — all registers empty (standalone unit)</td></tr>
+<tr><td><b>S_spec_open</b></td><td>After 1:14 — LET(exists(meorot)) pushed and OPEN (first cross-verse demand); job list on the contract; raqia/shamayim flagged</td></tr>
+<tr><td><b>S_spec_received</b></td><td>After 1:15 — receipt pops the demand (before the build narrative); WORLD += meorot (receipt-level); aretz flagged</td></tr>
+<tr><td><b>S_built_differentiated</b></td><td>After 1:16 — WORLD += {maor_gadol, maor_qaton, kokhavim}; REGISTRY: two role writes (offices); spec_delta x3 building</td></tr>
+<tr><td><b>S_mounted</b></td><td>After 1:17 — the delivered inventory placed into raqia (day-2 entity); purpose recap opens</td></tr>
+<tr><td><b>S_recapped_tested</b></td><td>After 1:18 — third delta flagged (label-&gt;entity restatement); TESTS: PASS(tov, meorot)</td></tr>
+<tr><td><b>S_day4_committed_clean</b></td><td>After 1:19 — LEDGER[4] closed ordinal revi&#x27;i; clean (no commit_without_test); three deltas ride</td></tr>
+</table><table><tr><th>from</th><th>to</th><th>via</th></tr>
+<tr><td>S_boot</td><td>S_spec_open</td><td>STEP_Gn_1_14</td></tr>
+<tr><td>S_spec_open</td><td>S_spec_received</td><td>STEP_Gn_1_15</td></tr>
+<tr><td>S_spec_received</td><td>S_built_differentiated</td><td>STEP_Gn_1_16</td></tr>
+<tr><td>S_built_differentiated</td><td>S_mounted</td><td>STEP_Gn_1_17</td></tr>
+<tr><td>S_mounted</td><td>S_recapped_tested</td><td>STEP_Gn_1_18</td></tr>
+<tr><td>S_recapped_tested</td><td>S_day4_committed_clean</td><td>STEP_Gn_1_19</td></tr>
+</table>
+<div class="note"><b>AFTER_S_day4_committed_clean</b> — WORLD: meorot (receipt-level plural, fiat-result 1:15) + maor_gadol, maor_qaton, kokhavim (the delivered, differentiated inventory, 1:16) + raqia, shamayim, aretz (presupposed, flagged). The machine keeps BOTH the generic receipt entity and the delivered three because the text does (1:15 receipt vs 1:16 delivery). REGISTRY: maor_gadol -&gt; memshelet_yom, maor_qaton -&gt; memshelet_lailah — 2 ROLE writes, 0 naming writes: the first build day with no va-yiqra (the naming series ended day 3 — recorded [OPEN]). TESTS: PASS(tov, meorot). LEDGER: day 4 committed, ordinal revi&#x27;i, clean. FLAGS: read_before_install x3 (raqia, shamayim, aretz), spec_delta x3 (gedolim-&gt;gadol/qaton; stars over-delivered; dominion unspecified) — none blocking.</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>Spec with jobs, demand OPEN: after STEP_Gn_1_14</td><td>All registers empty (standalone unit).</td><td>SPECS: LET(exists(meorot), loc=raqia_ha_shamayim) pushed and OPEN; machine flags raqia/shamayim as read-before-install (presupposed).</td><td><span class="he">יְהִי מְאֹרֹת</span> · <i>yehi me&#x27;orot</i></td></tr>
+<tr><td><b>S2</b></td><td>Cross-verse receipt discharges the contract: after STEP_Gn_1_15</td><td>S1 state.</td><td>WORLD += meorot; SPECS empty; triple contract { exists(meorot), loc=raqia_ha_shamayim } discharged; machine flags aretz as read-before-install (presupposed).</td><td><span class="he">וַיְהִי־כֵן</span> · <i>va-yehi khen</i></td></tr>
+<tr><td><b>S3</b></td><td>Differentiated build, offices bound, deltas flagged: after STEP_Gn_1_16</td><td>S2 state.</td><td>WORLD += maor_gadol; WORLD += maor_qaton; WORLD += kokhavim; REGISTRY: maor_gadol-&gt;memshelet_yom, maor_qaton-&gt;memshelet_lailah (2 writes); machine flags spec-delta.</td><td><span class="he">אֶת־שְׁנֵי הַמְּאֹרֹת הַגְּדֹלִים</span> · <i>et-shnei ha-me&#x27;orot ha-gedolim</i></td></tr>
+<tr><td><b>S4</b></td><td>Recap at entity level, test passes over three deltas: after STEP_Gn_1_18</td><td>S3 state, plus the 1:17 mount.</td><td>TESTS += PASS(tov, meorot); machine flags spec-delta.</td><td><span class="he">וַיַּרְא אֱלֹהִים כִּי־טוֹב</span> · <i>va-yar Elohim ki-tov</i></td></tr>
+<tr><td><b>S5</b></td><td>Clean ordinal commit: after STEP_Gn_1_19</td><td>S4 state.</td><td>LEDGER[day 4] committed with spec ✓ / test PASS; day label is ORDINAL revii; commit is clean.</td><td><span class="he">יוֹם רְבִיעִי</span> · <i>yom revi&#x27;i</i></td></tr>
+<tr><td><b>S6_negative</b></td><td>Negative: flags never block the ledger</td><td>A synthetic commit with TESTS empty (the machine&#x27;s own contract self-test).</td><td>Cycle close with TESTS empty must be FLAGGED, never blocked — the same flag-don&#x27;t-block rule that lets this unit&#x27;s three spec-deltas ride a clean commit.</td><td></td></tr>
+</table>
+<h2>Exports (reusable patterns)</h2><table><tr><th>id</th><th>content</th></tr>
+<tr><td>EXPORT_operational_handover</td><td><span class="he">וַיַּבְדֵּל אֱלֹהִים (1:4) ← לְהַבְדִּיל (1:14) … וּלְהַבְדִּיל (1:18)</span> · <i>va-yavdel Elohim (1:4) -&gt; le-havdil (1:14) … u-le-havdil (1:18)</i> · a running divine function written into installed fixtures&#x27; spec: the corpus&#x27;s first delegation of an ALREADY-OPERATING task (day 3 delegated a build; day 4 delegates an operation)</td></tr>
+<tr><td>EXPORT_two_step_build</td><td><span class="he">וַיַּעַשׂ … וַיִּתֵּן</span> · <i>va-ya&#x27;as … va-yiten</i> · manufacture then installation as distinct events — build pipelines have stages</td></tr>
+<tr><td>EXPORT_role_assignment_dative</td><td><span class="he">לְמֶמְשֶׁלֶת הַיּוֹם</span> · <i>le-memshelet ha-yom</i> · the dative office appointment: role bindings without naming (ASSIGN vs NAME) — recurs at 1:28 (dominion of the humans)</td></tr>
+<tr><td>EXPORT_label_vs_entity_pair</td><td><span class="he">בֵּין הַיּוֹם וּבֵין הַלָּיְלָה ← בֵּין הָאוֹר וּבֵין הַחֹשֶׁךְ</span> · <i>bein ha-yom … -&gt; bein ha-or …</i> · spec at label level, recap at entity level: the text itself operates the label/entity distinction the registry semantics encode</td></tr>
+<tr><td>EXPORT_delta_method_scales</td><td>three letter-visible deltas on one delivery, all flagged, none blocking, verdict from the oracle — the day-3 comparison method at full scale</td></tr>
+<tr><td>EXPORT_naming_series_ends</td><td>days 1-3 carry five va-yiqra writes; day 4 (and after) none — office assignment replaces naming; [OPEN] observation for the week-level pattern</td></tr>
+</table>
+<h2>Oral notes (named, tiered, dual-track — never merged)</h2>
+<div class="note"><span class="badge tier-v">verified</span> <b>Jerusalem Talmud Rosh Hashanah 2:8:4 (on ve-hayu, 1:14) — read in triage batch 5 (ledger row 90)</b><br><span class="he">אָמַר רִבִּי סִימוֹן. וְהָיוּ. עַל יְדֵי זֶה וְעַל יְדֵי זֶה</span> · <i>amar Ribbi Simon: ve-hayu — al yedei zeh ve-al yedei zeh</i> · R. Simon on this unit&#x27;s own weqatal token: &quot;&#x27;ve-hayu (and they shall be)&#x27; — by THIS one and by THAT one&quot;: the festivals are fixed by BOTH luminaries jointly — the chain deriving joint calendar authority from the plural of our THEN-chain; the sugya pairs it with R. Yochanan&#x27;s evening-first derivation from 1:5 and shows each prooftext needs the other.
+<br><i>Verified from Data/sefaria_texts/ (local). Dual-track; not merged.</i></div>
+<div class="note"><span class="badge tier-v">verified</span> <b>Bavli Chagigah 12a:6 (the ten things of day one) — read in triage batch 4 (ledger row 40)</b><br><span class="he">מִדַּת יוֹם וּמִדַּת לַיְלָה — דִּכְתִיב וַיְהִי עֶרֶב וַיְהִי בֹקֶר יוֹם אֶחָד</span> · <i>middat yom u-middat lailah — di-khtiv va-yehi erev va-yehi voqer yom echad</i> · &quot;The MEASURE of day and the MEASURE of night — as it is written: and there was evening and there was morning, one day&quot;: the chain assigns the day/night measures to DAY ONE. The chain thereby asks this unit&#x27;s own question — what do the day-4 fixtures add to an already-running schedule? Read with the or-ha-ganuz track (gen_01): the primordial light withdrawn, the fixtures installed as its operating replacement — a handover, not an invention.
+<br><i>Verified from Data/sefaria_texts/ (local). Dual-track; not merged.</i></div>
+<div class="note"><span class="badge tier-o">observation</span> <b>Bavli Chullin 60b (on ha-gedolim -&gt; ha-gadol/ha-qaton, 1:16) — NAMED, not yet read</b><br>The classical owner of the same-verse tension flagged in this unit&#x27;s first delta: the two lights created equal (&#x27;the two GREAT lights&#x27;), the moon&#x27;s challenge (&#x27;can two kings share one crown?&#x27;), and the diminution (&#x27;go, lessen yourself&#x27;) — named location only; queued for Tier-A reading at the day-4 triage, upgrade to verified with quote on that pass.
+<br><i>Observation tier until read from local text (charter 4.1 Tier-A queue).</i></div>
+<div class="note"><span class="badge tier-o">observation</span> <b>The me&#x27;erat reading of the defective spelling (named via Rashi on Gen 1:14, citing the midrash) — commentary tier</b><br>The doubly defective מארת of 1:14 read as me&#x27;erat (&#x27;curse&#x27;) in the classical tradition Rashi transmits. Recorded as the named owner of the three-orthographies flag; commentary tier (tier 2) — observation only under the provenance policy, never material.
+<br><i>Named location only; the letter-level fact itself is verified from our own text data.</i></div>
+<div class="note"><span class="badge tier-o">observation</span> <b>Oral policy</b><br><br><i>Named location only; never silent-merge.</i></div>
+<h2>Binary trees (ta'amim v3, glue bricks)</h2>
+<h3>Gen.1.14 · parser unique · 16 words</h3><pre>PHRASE (binary 16w) וַ/יֹּ֣אמֶר אֱלֹהִ֗ים יְהִ֤י מְאֹרֹת֙ בִּ/רְקִ֣…
+├── PHRASE (binary 11w) וַ/יֹּ֣אמֶר אֱלֹהִ֗ים יְהִ֤י מְאֹרֹת֙ בִּ/רְקִ֣…
+│   ├── PHRASE (binary 6w) וַ/יֹּ֣אמֶר אֱלֹהִ֗ים יְהִ֤י מְאֹרֹת֙ בִּ/רְקִ֣…
+│   │   ├── [0-1] GLUE וַ/יֹּ֣אמֶר אֱלֹהִ֗ים (revia, rank=3)
+│   │   └── PHRASE (binary 4w) יְהִ֤י מְאֹרֹת֙ בִּ/רְקִ֣יעַ הַ/שָּׁמַ֔יִם
+│   │       ├── [2-3] GLUE יְהִ֤י מְאֹרֹת֙ (pashta, rank=3)
+│   │       └── [4-5] GLUE בִּ/רְקִ֣יעַ הַ/שָּׁמַ֔יִם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) לְ/הַבְדִּ֕יל בֵּ֥ין הַ/יּ֖וֹם וּ/בֵ֣ין הַ/לָּ֑…
+│       ├── [6] לְ/הַבְדִּ֕יל (zaqef gadol, rank=2)
+│       └── PHRASE (binary 4w) בֵּ֥ין הַ/יּ֖וֹם וּ/בֵ֣ין הַ/לָּ֑יְלָה
+│           ├── [7-8] GLUE בֵּ֥ין הַ/יּ֖וֹם (tifcha, rank=2)
+│           └── [9-10] GLUE וּ/בֵ֣ין הַ/לָּ֑יְלָה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) וְ/הָי֤וּ לְ/אֹתֹת֙ וּ/לְ/מ֣וֹעֲדִ֔ים וּ/לְ/יָמ…
+    ├── PHRASE (binary 3w) וְ/הָי֤וּ לְ/אֹתֹת֙ וּ/לְ/מ֣וֹעֲדִ֔ים
+    │   ├── [11-12] GLUE וְ/הָי֤וּ לְ/אֹתֹת֙ (pashta, rank=3)
+    │   └── [13] וּ/לְ/מ֣וֹעֲדִ֔ים (zaqef qatan, rank=2)
+    └── PHRASE (binary 2w) וּ/לְ/יָמִ֖ים וְ/שָׁנִֽים
+        ├── [14] וּ/לְ/יָמִ֖ים (tifcha, rank=2)
+        └── [15] וְ/שָׁנִֽים (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.1.15 · parser unique · 9 words</h3><pre>PHRASE (binary 9w) וְ/הָי֤וּ לִ/מְאוֹרֹת֙ בִּ/רְקִ֣יעַ הַ/שָּׁמַ֔י…
+├── PHRASE (binary 7w) וְ/הָי֤וּ לִ/מְאוֹרֹת֙ בִּ/רְקִ֣יעַ הַ/שָּׁמַ֔י…
+│   ├── PHRASE (binary 4w) וְ/הָי֤וּ לִ/מְאוֹרֹת֙ בִּ/רְקִ֣יעַ הַ/שָּׁמַ֔י…
+│   │   ├── [0-1] GLUE וְ/הָי֤וּ לִ/מְאוֹרֹת֙ (pashta, rank=3)
+│   │   └── [2-3] GLUE בִּ/רְקִ֣יעַ הַ/שָּׁמַ֔יִם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) לְ/הָאִ֖יר עַל הָ/אָ֑רֶץ
+│       ├── [4] לְ/הָאִ֖יר (tifcha, rank=2)
+│       └── [5-6] GLUE עַל הָ/אָ֑רֶץ (etnachta (major mid-verse rest), rank=1)
+└── [7-8] GLUE וַֽ/יְהִי כֵֽן (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.1.16 · parser unique · 18 words</h3><pre>PHRASE (binary 18w) וַ/יַּ֣עַשׂ אֱלֹהִ֔ים אֶת שְׁנֵ֥י הַ/מְּאֹרֹ֖ת …
+├── PHRASE (binary 6w) וַ/יַּ֣עַשׂ אֱלֹהִ֔ים אֶת שְׁנֵ֥י הַ/מְּאֹרֹ֖ת …
+│   ├── [0-1] GLUE וַ/יַּ֣עַשׂ אֱלֹהִ֔ים (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) אֶת שְׁנֵ֥י הַ/מְּאֹרֹ֖ת הַ/גְּדֹלִ֑ים
+│       ├── [2-4] GLUE אֶת שְׁנֵ֥י הַ/מְּאֹרֹ֖ת (tifcha, rank=2)
+│       └── [5] הַ/גְּדֹלִ֑ים (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 12w) אֶת הַ/מָּא֤וֹר הַ/גָּדֹל֙ לְ/מֶמְשֶׁ֣לֶת הַ/יּ…
+    ├── PHRASE (binary 5w) אֶת הַ/מָּא֤וֹר הַ/גָּדֹל֙ לְ/מֶמְשֶׁ֣לֶת הַ/יּ…
+    │   ├── [6-8] GLUE אֶת הַ/מָּא֤וֹר הַ/גָּדֹל֙ (pashta, rank=3)
+    │   └── [9-10] GLUE לְ/מֶמְשֶׁ֣לֶת הַ/יּ֔וֹם (zaqef qatan, rank=2)
+    └── PHRASE (binary 7w) וְ/אֶת הַ/מָּא֤וֹר הַ/קָּטֹן֙ לְ/מֶמְשֶׁ֣לֶת הַ…
+        ├── PHRASE (binary 5w) וְ/אֶת הַ/מָּא֤וֹר הַ/קָּטֹן֙ לְ/מֶמְשֶׁ֣לֶת הַ…
+        │   ├── [11-13] GLUE וְ/אֶת הַ/מָּא֤וֹר הַ/קָּטֹן֙ (pashta, rank=3)
+        │   └── [14-15] GLUE לְ/מֶמְשֶׁ֣לֶת הַ/לַּ֔יְלָה (zaqef qatan, rank=2)
+        └── PHRASE (binary 2w) וְ/אֵ֖ת הַ/כּוֹכָבִֽים
+            ├── [16] וְ/אֵ֖ת (tifcha, rank=2)
+            └── [17] הַ/כּוֹכָבִֽים (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.1.17 · parser unique · 8 words</h3><pre>PHRASE (binary 8w) וַ/יִּתֵּ֥ן אֹתָ֛/ם אֱלֹהִ֖ים בִּ/רְקִ֣יעַ הַ/ש…
+├── PHRASE (binary 5w) וַ/יִּתֵּ֥ן אֹתָ֛/ם אֱלֹהִ֖ים בִּ/רְקִ֣יעַ הַ/ש…
+│   ├── PHRASE (binary 3w) וַ/יִּתֵּ֥ן אֹתָ֛/ם אֱלֹהִ֖ים
+│   │   ├── [0-1] GLUE וַ/יִּתֵּ֥ן אֹתָ֛/ם (tevir, rank=3)
+│   │   └── [2] אֱלֹהִ֖ים (tifcha, rank=2)
+│   └── [3-4] GLUE בִּ/רְקִ֣יעַ הַ/שָּׁמָ֑יִם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) לְ/הָאִ֖יר עַל הָ/אָֽרֶץ
+    ├── [5] לְ/הָאִ֖יר (tifcha, rank=2)
+    └── [6-7] GLUE עַל הָ/אָֽרֶץ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.1.18 · parser unique · 12 words</h3><pre>PHRASE (binary 12w) וְ/לִ/מְשֹׁל֙ בַּ/יּ֣וֹם וּ/בַ/לַּ֔יְלָה וּֽ/לֲ…
+├── PHRASE (binary 8w) וְ/לִ/מְשֹׁל֙ בַּ/יּ֣וֹם וּ/בַ/לַּ֔יְלָה וּֽ/לֲ…
+│   ├── PHRASE (binary 3w) וְ/לִ/מְשֹׁל֙ בַּ/יּ֣וֹם וּ/בַ/לַּ֔יְלָה
+│   │   ├── [0] וְ/לִ/מְשֹׁל֙ (pashta, rank=3)
+│   │   └── [1-2] GLUE בַּ/יּ֣וֹם וּ/בַ/לַּ֔יְלָה (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) וּֽ/לֲ/הַבְדִּ֔יל בֵּ֥ין הָ/א֖וֹר וּ/בֵ֣ין הַ/ח…
+│       ├── [3] וּֽ/לֲ/הַבְדִּ֔יל (zaqef qatan, rank=2)
+│       └── PHRASE (binary 4w) בֵּ֥ין הָ/א֖וֹר וּ/בֵ֣ין הַ/חֹ֑שֶׁךְ
+│           ├── [4-5] GLUE בֵּ֥ין הָ/א֖וֹר (tifcha, rank=2)
+│           └── [6-7] GLUE וּ/בֵ֣ין הַ/חֹ֑שֶׁךְ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וַ/יַּ֥רְא אֱלֹהִ֖ים כִּי טֽוֹב
+    ├── [8-9] GLUE וַ/יַּ֥רְא אֱלֹהִ֖ים (tifcha, rank=2)
+    └── [10-11] GLUE כִּי טֽוֹב (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.1.19 · parser unique · 6 words</h3><pre>PHRASE (binary 6w) וַֽ/יְהִי עֶ֥רֶב וַֽ/יְהִי בֹ֖קֶר י֥וֹם רְבִיעִ…
+├── [0-3] GLUE וַֽ/יְהִי עֶ֥רֶב וַֽ/יְהִי בֹ֖קֶר (tifcha, rank=2)
+└── [4-5] GLUE י֥וֹם רְבִיעִֽי (silluq (verse-end emperor), rank=1)
+</pre>
+<h2>Word coverage — 69/69 words with named roles</h2>
+<table><tr><th>ref</th><th>#</th><th>Hebrew</th><th>translit</th><th>English</th><th>role</th><th>kind</th><th>rule</th></tr>
+<tr><td>Gen.1.14</td><td>0</td><td class='he-cell'>ויאמר</td><td>va-yomer</td><td>and-said</td><td>speech_verb_declare</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.14</td><td>1</td><td class='he-cell'>אלהים</td><td>Elohim</td><td>God</td><td>agent</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.14</td><td>2</td><td class='he-cell'>יהי</td><td>yehi</td><td>let-be</td><td>jussive_singular_over_plural</td><td>logic_bearing</td><td class='cite'>TIR-026</td></tr>
+<tr><td>Gen.1.14</td><td>3</td><td class='he-cell'>מארת</td><td>me&#x27;orot</td><td>lights</td><td>product_spec_plural_defective</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.14</td><td>4</td><td class='he-cell'>ברקיע</td><td>bi-rkia</td><td>in-firmament-of</td><td>mount_location_presupposed</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.14</td><td>5</td><td class='he-cell'>השמים</td><td>ha-shamayim</td><td>the-heavens</td><td>mount_location_presupposed</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.14</td><td>6</td><td class='he-cell'>להבדיל</td><td>le-havdil</td><td>to-divide</td><td>purpose_infinitive_handover</td><td>logic_bearing</td><td class='cite'>TIR-030</td></tr>
+<tr><td>Gen.1.14</td><td>7</td><td class='he-cell'>בין</td><td>bein</td><td>between</td><td>boundary_prep</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.1.14</td><td>8</td><td class='he-cell'>היום</td><td>ha-yom</td><td>the-day</td><td>registry_label_ref</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.14</td><td>9</td><td class='he-cell'>ובין</td><td>u-vein</td><td>and-between</td><td>boundary_prep</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.1.14</td><td>10</td><td class='he-cell'>הלילה</td><td>ha-lailah</td><td>the-night</td><td>registry_label_ref</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.14</td><td>11</td><td class='he-cell'>והיו</td><td>ve-hayu</td><td>and-they-shall-be</td><td>weqatal_then</td><td>logic_bearing</td><td class='cite'>TIR-029</td></tr>
+<tr><td>Gen.1.14</td><td>12</td><td class='he-cell'>לאתת</td><td>le-otot</td><td>for-signs</td><td>job_list_member</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.14</td><td>13</td><td class='he-cell'>ולמועדים</td><td>u-le-mo&#x27;adim</td><td>and-for-seasons</td><td>job_list_member_calendar</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.14</td><td>14</td><td class='he-cell'>ולימים</td><td>u-le-yamim</td><td>and-for-days</td><td>job_list_member_calendar</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.14</td><td>15</td><td class='he-cell'>ושנים</td><td>ve-shanim</td><td>and-years</td><td>job_list_member_calendar</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.15</td><td>0</td><td class='he-cell'>והיו</td><td>ve-hayu</td><td>and-they-shall-be</td><td>weqatal_then</td><td>logic_bearing</td><td class='cite'>TIR-029</td></tr>
+<tr><td>Gen.1.15</td><td>1</td><td class='he-cell'>למאורת</td><td>li-me&#x27;orot</td><td>for-lights</td><td>service_role_dative</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.15</td><td>2</td><td class='he-cell'>ברקיע</td><td>bi-rkia</td><td>in-firmament-of</td><td>mount_location_presupposed</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.15</td><td>3</td><td class='he-cell'>השמים</td><td>ha-shamayim</td><td>the-heavens</td><td>mount_location_presupposed</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.15</td><td>4</td><td class='he-cell'>להאיר</td><td>le-ha&#x27;ir</td><td>to-give-light</td><td>purpose_infinitive_service</td><td>logic_bearing</td><td class='cite'>TIR-030</td></tr>
+<tr><td>Gen.1.15</td><td>5</td><td class='he-cell'>על</td><td>al</td><td>upon</td><td>location_prep</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.1.15</td><td>6</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>service_target_presupposed</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.15</td><td>7</td><td class='he-cell'>ויהי</td><td>va-yehi</td><td>and-there-was</td><td>result_wayyiqtol</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.15</td><td>8</td><td class='he-cell'>כן</td><td>khen</td><td>so</td><td>result_summary</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.16</td><td>0</td><td class='he-cell'>ויעש</td><td>va-ya&#x27;as</td><td>and-made</td><td>build_verb_asah</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.16</td><td>1</td><td class='he-cell'>אלהים</td><td>Elohim</td><td>God</td><td>agent</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.16</td><td>2</td><td class='he-cell'>את</td><td>et</td><td>obj-marker</td><td>obj_marker_inventory</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.1.16</td><td>3</td><td class='he-cell'>שני</td><td>shnei</td><td>two-of</td><td>numeral_pair</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.16</td><td>4</td><td class='he-cell'>המארת</td><td>ha-me&#x27;orot</td><td>the-lights</td><td>delivered_summary_plural</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.16</td><td>5</td><td class='he-cell'>הגדלים</td><td>ha-gedolim</td><td>the-great-ones</td><td>adjective_both_great_tension</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.16</td><td>6</td><td class='he-cell'>את</td><td>et</td><td>obj-marker</td><td>obj_marker_inventory</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.1.16</td><td>7</td><td class='he-cell'>המאור</td><td>ha-maor</td><td>the-light</td><td>delivered_member</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.16</td><td>8</td><td class='he-cell'>הגדל</td><td>ha-gadol</td><td>the-great</td><td>differentiator_great</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.16</td><td>9</td><td class='he-cell'>לממשלת</td><td>le-memshelet</td><td>for-dominion-of</td><td>office_dative</td><td>logic_bearing</td><td class='cite'>TIR-022</td></tr>
+<tr><td>Gen.1.16</td><td>10</td><td class='he-cell'>היום</td><td>ha-yom</td><td>the-day</td><td>office_domain_label</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.16</td><td>11</td><td class='he-cell'>ואת</td><td>ve-et</td><td>and-obj-marker</td><td>obj_marker_inventory</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.1.16</td><td>12</td><td class='he-cell'>המאור</td><td>ha-maor</td><td>the-light</td><td>delivered_member</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.16</td><td>13</td><td class='he-cell'>הקטן</td><td>ha-qaton</td><td>the-small</td><td>differentiator_small</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.16</td><td>14</td><td class='he-cell'>לממשלת</td><td>le-memshelet</td><td>for-dominion-of</td><td>office_dative</td><td>logic_bearing</td><td class='cite'>TIR-022</td></tr>
+<tr><td>Gen.1.16</td><td>15</td><td class='he-cell'>הלילה</td><td>ha-lailah</td><td>the-night</td><td>office_domain_label</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.16</td><td>16</td><td class='he-cell'>ואת</td><td>ve-et</td><td>and-obj-marker</td><td>obj_marker_inventory</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.1.16</td><td>17</td><td class='he-cell'>הכוכבים</td><td>ha-kokhavim</td><td>the-stars</td><td>delivered_member_over_delivery</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.17</td><td>0</td><td class='he-cell'>ויתן</td><td>va-yiten</td><td>and-set</td><td>install_verb_natan</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.17</td><td>1</td><td class='he-cell'>אתם</td><td>otam</td><td>them</td><td>obj_marker_pronoun_group</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.1.17</td><td>2</td><td class='he-cell'>אלהים</td><td>Elohim</td><td>God</td><td>agent</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.17</td><td>3</td><td class='he-cell'>ברקיע</td><td>bi-rkia</td><td>in-firmament-of</td><td>mount_location_presupposed</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.17</td><td>4</td><td class='he-cell'>השמים</td><td>ha-shamayim</td><td>the-heavens</td><td>mount_location_presupposed</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.17</td><td>5</td><td class='he-cell'>להאיר</td><td>le-ha&#x27;ir</td><td>to-give-light</td><td>purpose_infinitive_service</td><td>logic_bearing</td><td class='cite'>TIR-030</td></tr>
+<tr><td>Gen.1.17</td><td>6</td><td class='he-cell'>על</td><td>al</td><td>upon</td><td>location_prep</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.1.17</td><td>7</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>service_target_presupposed</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.18</td><td>0</td><td class='he-cell'>ולמשל</td><td>ve-limshol</td><td>and-to-rule</td><td>purpose_infinitive_rule</td><td>logic_bearing</td><td class='cite'>TIR-030</td></tr>
+<tr><td>Gen.1.18</td><td>1</td><td class='he-cell'>ביום</td><td>ba-yom</td><td>in-the-day</td><td>office_domain_label</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.18</td><td>2</td><td class='he-cell'>ובלילה</td><td>u-va-lailah</td><td>and-in-the-night</td><td>office_domain_label</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.18</td><td>3</td><td class='he-cell'>ולהבדיל</td><td>u-le-havdil</td><td>and-to-divide</td><td>purpose_infinitive_handover</td><td>logic_bearing</td><td class='cite'>TIR-030</td></tr>
+<tr><td>Gen.1.18</td><td>4</td><td class='he-cell'>בין</td><td>bein</td><td>between</td><td>boundary_prep</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.1.18</td><td>5</td><td class='he-cell'>האור</td><td>ha-or</td><td>the-light</td><td>entity_ref_label_shift</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.18</td><td>6</td><td class='he-cell'>ובין</td><td>u-vein</td><td>and-between</td><td>boundary_prep</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.1.18</td><td>7</td><td class='he-cell'>החשך</td><td>ha-choshekh</td><td>the-darkness</td><td>entity_ref_label_shift</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.18</td><td>8</td><td class='he-cell'>וירא</td><td>va-yar</td><td>and-saw</td><td>perception_verb</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.18</td><td>9</td><td class='he-cell'>אלהים</td><td>Elohim</td><td>God</td><td>agent</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.18</td><td>10</td><td class='he-cell'>כי</td><td>ki</td><td>that</td><td>complementizer_that</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.1.18</td><td>11</td><td class='he-cell'>טוב</td><td>tov</td><td>good</td><td>eval_oracle_predicate</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.19</td><td>0</td><td class='he-cell'>ויהי</td><td>va-yehi</td><td>and-there-was</td><td>cycle_verb</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.19</td><td>1</td><td class='he-cell'>ערב</td><td>erev</td><td>evening</td><td>cycle_time_unit</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.19</td><td>2</td><td class='he-cell'>ויהי</td><td>va-yehi</td><td>and-there-was</td><td>cycle_verb</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.19</td><td>3</td><td class='he-cell'>בקר</td><td>voqer</td><td>morning</td><td>cycle_time_unit</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.19</td><td>4</td><td class='he-cell'>יום</td><td>yom</td><td>day</td><td>ledger_day_noun</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.19</td><td>5</td><td class='he-cell'>רביעי</td><td>revi&#x27;i</td><td>fourth</td><td>ledger_count_ordinal</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_04_lights_calendar — Day four: luminaries — jobs, calendar, dominion; three spec deltas (1:14-19) [frozen]
+
+final state: WORLD=[&#x27;kokhavim&#x27;, &#x27;maor_gadol&#x27;, &#x27;maor_qaton&#x27;, &#x27;meorot&#x27;] (+3 presupposed) | REGISTRY={&#x27;maor_gadol&#x27;: &#x27;memshelet_yom&#x27;, &#x27;maor_qaton&#x27;: &#x27;memshelet_lailah&#x27;} | TESTS=1 PASS | LEDGER days=[4] | FLAGS=[&#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;spec_delta&#x27;, &#x27;spec_delta&#x27;, &#x27;spec_delta&#x27;, &#x27;spec_delta&#x27;]
+
+=== S1 — Spec with jobs, demand OPEN: after STEP_Gn_1_14
+    יְהִי מְאֹרֹת (yehi me&#x27;orot)
+    PASS  SPECS: LET(exists(meorot), loc=raqia_ha_shamayim) pushed and OPEN  (queue=[&#x27;exists(meorot), loc=raqia_ha_shamayim&#x27;])
+    PASS  machine flags raqia/shamayim as read-before-install (presupposed).  (flagged=[&#x27;raqia&#x27;, &#x27;shamayim&#x27;])
+
+=== S2 — Cross-verse receipt discharges the contract: after STEP_Gn_1_15
+    וַיְהִי־כֵן (va-yehi khen)
+    PASS  WORLD += meorot  (entity={&#x27;mode&#x27;: &#x27;created&#x27;, &#x27;by&#x27;: &#x27;fiat-result&#x27;, &#x27;step&#x27;: &#x27;Gen.1.15&#x27;})
+    PASS  SPECS empty  (queue=0)
+    PASS  triple contract { exists(meorot), loc=raqia_ha_shamayim } discharged  (triples=[{&#x27;q&#x27;: &#x27;exists(meorot), loc=raqia_ha_shamayim&#x27;, &#x27;step&#x27;: &#x27;Gen.1.14&#x27;, &#x27;discharged&#x27;: True}])
+    PASS  machine flags aretz as read-before-install (presupposed).  (flagged=[&#x27;aretz&#x27;, &#x27;raqia&#x27;, &#x27;shamayim&#x27;])
+
+=== S3 — Differentiated build, offices bound, deltas flagged: after STEP_Gn_1_16
+    אֶת־שְׁנֵי הַמְּאֹרֹת הַגְּדֹלִים (et-shnei ha-me&#x27;orot ha-gedolim)
+    PASS  WORLD += maor_gadol  (entity={&#x27;mode&#x27;: &#x27;created&#x27;, &#x27;by&#x27;: &#x27;narration&#x27;, &#x27;step&#x27;: &#x27;Gen.1.16&#x27;})
+    PASS  WORLD += maor_qaton  (entity={&#x27;mode&#x27;: &#x27;created&#x27;, &#x27;by&#x27;: &#x27;narration&#x27;, &#x27;step&#x27;: &#x27;Gen.1.16&#x27;})
+    PASS  WORLD += kokhavim  (entity={&#x27;mode&#x27;: &#x27;created&#x27;, &#x27;by&#x27;: &#x27;narration&#x27;, &#x27;step&#x27;: &#x27;Gen.1.16&#x27;})
+    PASS  REGISTRY: maor_gadol-&gt;memshelet_yom, maor_qaton-&gt;memshelet_lailah (2 writes)  (names={&#x27;maor_gadol&#x27;: &#x27;memshelet_yom&#x27;, &#x27;maor_qaton&#x27;: &#x27;memshelet_lailah&#x27;} writes=2)
+    PASS  machine flags spec-delta.  (flags=[&#x27;read_before_install&#x27;, &#x27;spec_delta&#x27;])
+
+=== S4 — Recap at entity level, test passes over three deltas: after STEP_Gn_1_18
+    וַיַּרְא אֱלֹהִים כִּי־טוֹב (va-yar Elohim ki-tov)
+    PASS  TESTS += PASS(tov, meorot)  (tests=[(&#x27;tov&#x27;, &#x27;meorot&#x27;)])
+    PASS  machine flags spec-delta.  (flags=[&#x27;read_before_install&#x27;, &#x27;spec_delta&#x27;])
+
+=== S5 — Clean ordinal commit: after STEP_Gn_1_19
+    יוֹם רְבִיעִי (yom revi&#x27;i)
+    PASS  LEDGER[day 4] committed with spec ✓ / test PASS  (entry={&#x27;closed&#x27;: True, &#x27;spec_ok&#x27;: True, &#x27;test_pass&#x27;: True, &#x27;names&#x27;: 2, &#x27;label_form&#x27;: &#x27;ordinal&#x27;, &#x27;label_he&#x27;: &#x27;יוֹם רְבִיעִי&#x27;, &#x27;label_translit&#x27;: &#x27;yom revii&#x27;, &#x27;step&#x27;: &#x27;Gen.1.19&#x27;})
+    PASS  day label is ORDINAL revii  (label=yom revii form=ordinal)
+    PASS  commit is clean.  (flags=[&#x27;read_before_install&#x27;, &#x27;spec_delta&#x27;])
+
+=== S6_negative — Negative: flags never block the ledger
+    PASS  commit proceeded (not blocked)  (LEDGER=[99])
+    PASS  pattern deviation FLAGGED  (flags=[&#x27;commit_without_test&#x27;])
+
+ALL SCENARIOS GREEN
+</pre>
+<div class="note">FROZEN 2026-07-30 (owner approved): fourth logic-derived unit, first under the calibrated coverage protocol. Central findings: the fullest work-order shape of the week (spec-with-jobs -&gt; cross-verse receipt -&gt; build -&gt; install -&gt; recap -&gt; test -&gt; commit); the corpus&#x27;s first OPERATIONAL handover (day 1&#x27;s own separating function written into the fixtures&#x27; spec); the two-step build (asah then natan); ROLE assignment via dative (dominion offices; no naming — the va-yiqra series ends at day 3); THREE letter-visible spec deltas (both-great -&gt; great/small; stars over-delivered; dominion unspecified) all riding a clean commit past a passing test; the label-&gt;entity restatement of the delegated separation (1:14 vs 1:18); the singular-jussive/plural-subject mismatch that Onkelos normalizes. Not binding religious law.</div><p class='meta'>Rendered 2026-07-30 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

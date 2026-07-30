@@ -243,6 +243,21 @@ def h_name(m, op, step):
         m.event("name", None, [ent, label])
 
 
+def h_assign(m, op, step):
+    """ASSIGN (introduced gen_04, 2026-07-30): dative role/office binding —
+    a REGISTRY write distinct from NAME (no va-yiqra formula). Notation:
+    'REGISTRY: entity->role[, entity->role]'."""
+    pairs = re.findall(r"([\w-]+)->([\w-]+)", op.get("expr_en", ""))
+    if not pairs:
+        raise ContractError("ASSIGN without 'entity->role' notation")
+    for ent, role in pairs:
+        if ent not in m.WORLD["entities"]:
+            m.flag("assigned_before_any_presence", ent)
+        m.REGISTRY["names"][ent] = role
+        m.REGISTRY["writes"] += 1
+        m.event("assign", None, [ent, role])
+
+
 def h_commit(m, op, step):
     expr = op.get("expr_en", "")
     dm = re.search(r"LEDGER\[day (\d+)\]", expr)
@@ -296,6 +311,7 @@ HANDLERS = {
     "TEST": h_test,
     "EVENT_PARTITION": h_event_partition,
     "NAME": h_name,
+    "ASSIGN": h_assign,
     "COMMIT": h_commit,
 }
 
