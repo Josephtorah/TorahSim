@@ -14,6 +14,8 @@ verdicts, and quotes in logic/oral_triage/ and logic/units/.
 | 2026-07-30 | (no cache — 1 range) | api/texts Onkelos_Genesis.1.14-19 | gen_04 derivation Tier-A read (charter §4.1) | findings recorded in gen_04_lights_calendar.yaml (yehon plural; le-mimnei counting verb; le-mishlat; revi'a'i) |
 | 2026-07-30 | Data/sefaria_texts/ | `python3 fetch_oral_texts.py Gen.1.14 Gen.1.19` | day-4 tier-1 sources | 130 new files · 35 already held · 0 failures |
 | 2026-07-30 | (no cache — 1 range) | api/texts Onkelos_Genesis.1.20-23 | gen_05 derivation Tier-A read (charter §4.1) | findings recorded in gen_05_swarms_blessing.yaml (yirchashun — delegation + imperfect retained; NO receipt token added, matching MT; aphel archishu — waters as causer; ofa de-farach re-verbalizes kanaf, symmetric receipt; imperatives pushu/sgu/mlu retained, fowl 3ms yisgei) |
+| 2026-07-30 | Data/sefaria_texts/ | `python3 fetch_oral_texts.py Gen.1.20 Gen.1.23` | day-5 tier-1 sources | 88 new files · 41 already held · 0 failures |
+| 2026-07-30 | (no cache — 1 range) | api/texts Bava_Batra.74b.6-8 | §4.1 promotion fetch: the taninim sugya continues past the enumerated section (74b:5) into the mate tradition the [OPEN] ktiv dossier names | male-and-female created; male castrated, female slain and salted for the righteous (Isa 27:1); recorded in the day-5 ledger + ORAL_taninim_defective upgrade |
 
 Politeness contract (owner order): sequential requests, 0.5s delay, small
 ranges per invocation — never a whole book at once.
