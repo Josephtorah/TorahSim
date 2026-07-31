@@ -73,6 +73,25 @@ FORMULAS = [
      ["זה שאמר הכתוב", 'זש"ה', "זש״ה"]),
     ("operator", "davar acher (\"another interpretation\": the multi-reading alternation operator)",
      ["דבר אחר", 'ד"א', "ד״א"]),
+    # ---- discovered 2026-07-31 by corpus mining (DISCOVERY_devices report) ----
+    ("discovered", "ein ketiv kan ela (\"it is not written here … but rather\": the chain's diff operator — expected wording vs actual)",
+     ["אין כתיב כאן", "אין כתוב כאן"]),
+    ("discovered", "kemah de-at amar (\"as you say [elsewhere]\": usage-analogy — a word's sense imported from another verse)",
+     ["כמה דאת אמר", "כמא דאת אמר", "כמה דתימר"]),
+    ("discovered", "ein X ela Y (\"X means nothing but Y\": the lexical definition operator)",
+     ["ואין טוב אלא", "אין טוב אלא", "ואין מים אלא", "ואין אור אלא"]),
+    ("discovered", "lekhakh ne'emar (\"therefore it is stated\": derivation closer)",
+     ["לכך נאמר", "לכך הוא אומר"]),
+    ("discovered", "ve-khen hu omer (\"and so it says\": corroborating second prooftext)",
+     ["וכן הוא אומר", "וכה הוא אומר"]),
+    ("discovered", "yakhol/talmud lomar (\"one might think … Scripture teaches\": hypothesis-rejection structure — most widespread device in the cache)",
+     ["תלמוד לומר", 'ת"ל', "ת״ל", "שומע אני"]),
+    ("discovered", "melamed she- (\"it teaches that\": tannaitic teaching operator)",
+     ["מלמד ש", "מגיד הכתוב"]),
+    ("discovered", "bi-zekhut (\"in the merit of\": aggadic causality operator)",
+     ["בזכות"]),
+    ("discovered", "kivyakhol (\"as it were\": anthropomorphism guard)",
+     ["כביכול"]),
 ]
 
 
