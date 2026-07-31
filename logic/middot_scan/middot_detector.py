@@ -26,25 +26,53 @@ CACHE = ROOT / "Data" / "sefaria_texts"
 RARE_MAX = 12          # lemma total occurrences in the Torah to count as join-grade rare
 NIQQUD = re.compile(r"[֑-ׇ]")   # Hebrew vowel points + cantillation marks
 
-# The chain's rule-announcement formulas (unpointed), each tagged with its rule.
-# Every Hebrew formula carries its English counterpart (absolute glossing rule).
+# The chain's rule-announcement formulas (unpointed), each tagged with its
+# rulebook — "13" = Rabbi Yishmael's thirteen middot ("measures"), the LAW-side
+# inference rules; "32" = Rabbi Eliezer b. R. Yose the Galilean's thirty-two,
+# the NARRATIVE-side (aggadah, "telling") reading rules; "shared" = in both;
+# "operator" = standard midrashic citation/alternation operators that ride
+# alongside the rules. Every Hebrew formula carries its English counterpart
+# (absolute glossing rule).
 FORMULAS = [
-    ("kal va-chomer (light-and-heavy: the how-much-more-so argument)",
+    ("shared", "kal va-chomer (light-and-heavy: the how-much-more-so argument)",
      ["קל וחומר", "קל חומר", "על אחת כמה וכמה", 'ק"ו', "ק״ו", "קו וחומר"]),
-    ("gezerah shavah (equal decree: verbal analogy on a shared word)",
+    ("shared", "gezerah shavah (equal decree: verbal analogy on a shared word)",
      ["גזרה שוה", "גזירה שוה", "גזרה שווה", "גזירה שווה", 'גז"ש', "גז״ש"]),
-    ("atya (\"it is derived\": the Aramaic verbal-analogy operator)",
+    ("shared", "atya (\"it is derived\": the Aramaic verbal-analogy operator)",
      ["אתיא", "אתא קרא"]),
-    ("katuv echad omer (\"one verse says\": the contradiction protocol, rule 13)",
+    ("shared", "katuv echad omer (\"one verse says\": contradiction until a third decides)",
      ["כתוב אחד אומר", "כתוב א' אומר"]),
-    ("mufneh (\"free\": join-key availability check for verbal analogy)",
+    ("13", "mufneh (\"free\": join-key availability check for verbal analogy)",
      ["מופנה", "מפנה גבי"]),
-    ("binyan av (\"father-building\": prototype generalization)",
+    ("shared", "binyan av (\"father-building\": prototype generalization)",
      ["בנין אב", "בניין אב"]),
-    ("klal u-frat (\"general and particular\": scope restriction family)",
+    ("13", "klal u-frat (\"general and particular\": scope restriction family)",
      ["כלל ופרט", "פרט וכלל", "כלל ופרט וכלל"]),
-    ("mah lehalan af kan (\"as there, so here\": analogy transfer formula)",
+    ("shared", "mah lehalan af kan (\"as there, so here\": analogy transfer formula)",
      ["מה להלן אף כאן", "מה כאן אף להלן"]),
+    # ---- 32-side (aggadah, narrative) instruments ----
+    ("32", "ribbui (\"inclusion\": et/gam/af come to include — rules 1/3)",
+     ["לרבות", "אין רבוי אחר רבוי", "ריבה"]),
+    ("32", "mi'ut (\"exclusion\": akh/raq exclude — rules 2/4)",
+     ["למעט", "אין מיעוט אחר מיעוט"]),
+    ("32", "mashal (\"parable\" — rule 26; the king-parable is its classic form)",
+     ["משל למלך", "משל לאחד", "משל למה הדבר דומה"]),
+    ("32", "lashon nofel al lashon (\"language falling on language\": wordplay — rule 28 family)",
+     ["לשון נופל על לשון", "לשון הנופל על לשון"]),
+    ("32", "gematria (\"letter-arithmetic\": words as number values — rule 29)",
+     ["גימטריא", "בגימטריא", "גמטריא"]),
+    ("32", "notarikon (\"acronym reading\": a word unpacked as initials — rule 30)",
+     ["נוטריקון", "נוטריקין"]),
+    ("32", "mukdam u-me'uchar (\"earlier and later\": narrative order is not event order — rules 31/32)",
+     ["אין מוקדם ומאוחר", "מוקדם ומאוחר"]),
+    ("32", "al tikrei (\"do not read X but Y\": revocalization device)",
+     ["אל תקרי", "אל תיקרי", "אל תקרא"]),
+    ("operator", "hada hu dikhtiv (\"this is what is written\": the prooftext opener of Bereshit Rabbah — \"Great Genesis\")",
+     ["הדא הוא דכתיב", 'הה"ד', "הה״ד"]),
+    ("operator", "zeh she-amar ha-katuv (\"this is what Scripture said\": the sermon/petichta opener)",
+     ["זה שאמר הכתוב", 'זש"ה', "זש״ה"]),
+    ("operator", "davar acher (\"another interpretation\": the multi-reading alternation operator)",
+     ["דבר אחר", 'ד"א', "ד״א"]),
 ]
 
 
@@ -124,12 +152,12 @@ def chain_invocations():
             he = " ".join(x if isinstance(x, str) else " ".join(map(str, x))
                           for x in he)
         text = strip_points(re.sub(r"<[^>]+>", "", he or ""))
-        for rule, needles in FORMULAS:
+        for book, rule, needles in FORMULAS:
             for n in needles:
                 for m in re.finditer(re.escape(n), text):
                     s = max(0, m.start() - 50)
                     snippet = text[s:m.end() + 70].replace("|", " ")
-                    hits.append((ref, rule, n, snippet.strip()))
+                    hits.append((ref, book, rule, n, snippet.strip()))
                     break   # one hit per needle per source is enough
     return files, hits
 
@@ -142,14 +170,14 @@ def write_tables(con, joins, hits):
         CREATE TABLE middot_joins (lemma TEXT, display_he TEXT, translit TEXT,
             total INT, n_chapters INT, n_books INT, grade TEXT, refs TEXT);
         DROP TABLE IF EXISTS middot_invocations;
-        CREATE TABLE middot_invocations (source_ref TEXT, middah TEXT,
-            formula TEXT, snippet TEXT);
+        CREATE TABLE middot_invocations (source_ref TEXT, rulebook TEXT,
+            middah TEXT, formula TEXT, snippet TEXT);
     """)
     con.executemany("INSERT INTO middot_joins VALUES (?,?,?,?,?,?,?,?)",
                     [(l, d, t, tot, nc, nb, g,
                       json.dumps([f"{b} {c}:{v}" for b, c, v in refs]))
                      for l, d, t, tot, nc, nb, g, refs in joins])
-    con.executemany("INSERT INTO middot_invocations VALUES (?,?,?,?)", hits)
+    con.executemany("INSERT INTO middot_invocations VALUES (?,?,?,?,?)", hits)
     con.commit()
 
 
@@ -180,15 +208,21 @@ def write_reports(con, joins, files, hits):
              f"Cache scanned: {len(files)} files (coverage is bounded by what we "
              "have fetched — honest counter). A hit means the source announces a "
              "rule by formula; it does NOT mean the rule bears on our verses — "
-             "see the calibration report for that join.", "",
-             "source | rule (glossed) | formula | in triage? | snippet",
-             "-------|----------------|---------|------------|--------"]
-    for ref, rule, n, snip in sorted(hits):
+             "see the calibration report for that join. Rulebook column: 13 = "
+             "Rabbi Yishmael's law-side rules; 32 = R. Eliezer b. R. Yose the "
+             "Galilean's narrative-side (aggadah, \"telling\") rules; shared = "
+             "both lists; operator = midrashic citation/alternation operators.",
+             "",
+             "source | book | rule (glossed) | formula | in triage? | snippet",
+             "-------|------|----------------|---------|------------|--------"]
+    for ref, book, rule, n, snip in sorted(hits):
         t = tri.get(ref)
         tcol = f"{t[0]} ({t[1]})" if t else "not yet triaged"
-        lines.append(f"{ref} | {rule} | {n} | {tcol} | …{snip}…")
+        lines.append(f"{ref} | {book} | {rule} | {n} | {tcol} | …{snip}…")
+    by_book = Counter(h[1] for h in hits)
     lines.append(f"\nTotal invocations: {len(hits)} across "
-                 f"{len({h[0] for h in hits})} sources.")
+                 f"{len({h[0] for h in hits})} sources. By rulebook: " +
+                 " · ".join(f"{k}: {v}" for k, v in sorted(by_book.items())))
     (OUT / "MIDDOT_invocations_cached.md").write_text("\n".join(lines),
                                                       encoding="utf-8")
 

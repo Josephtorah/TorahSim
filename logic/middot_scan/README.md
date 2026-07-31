@@ -10,10 +10,19 @@ by which the Oral chain derives conclusions from the Written text.
    passages of the Torah, with an overload grade (the classical *mufneh* — "free" —
    constraint: a join key already used in many places is a poor analogy carrier).
 2. **Chain side** — scans our locally cached Oral sources for the classical rule-
-   announcement formulas (*kal va-chomer* — "light and heavy," the how-much-more-so
-   argument; *gezerah shavah*; *atya* — "it is derived"; *katuv echad omer* — "one
-   verse says," the contradiction protocol; *mufneh* — "free"; and others), i.e.
-   the places where the chain itself declares it is running a rule.
+   announcement formulas of BOTH rulebooks (v1.1): the **13 middot of Rabbi
+   Yishmael** — the LAW-side rules (*kal va-chomer* — "light and heavy," the
+   how-much-more-so argument; *gezerah shavah* — "equal decree," verbal analogy;
+   *atya* — "it is derived"; *katuv echad omer* — "one verse says," the
+   contradiction protocol; *mufneh* — "free") — and the **32 middot of Rabbi
+   Eliezer ben Rabbi Yose the Galilean** — the NARRATIVE-side (aggadah, "telling")
+   rules (*mashal* — "parable"; *ribbui/mi'ut* — "inclusion/exclusion" via the
+   particles; *gematria* — "letter-arithmetic"; *notarikon* — "acronym reading";
+   *al tikrei* — "do not read X but Y," revocalization; *lashon nofel al lashon* —
+   wordplay; *mukdam u-me'uchar* — "earlier and later," order displacement) —
+   plus the standing midrashic citation operators (*hada hu dikhtiv* — "this is
+   what is written"; *davar acher* — "another interpretation"). The two rulebooks
+   mirror the corpus's two measured modes: law-as-code, narrative-as-log.
 3. **Calibration** — joins the two sides against the triage ledgers: which chain
    rule-applications did our completed triage already read, and would the corpus
    side have predicted their join keys.
