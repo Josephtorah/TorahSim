@@ -12,15 +12,20 @@ Contract (same as taamim_tree_parse.py):
     version the rulebook (TIR) — never a code hack here.
   * Operator micro-grammar: this file parses ONLY notation the frozen unit
     already uses:  WORLD += {a, b} · HOLDS(p, tN) · INVARIANT(p) during tN ·
-    DECLARE(x, LET(exists(y))) · { P: .. } op { Q: .. } · PASS(a, b) ·
+    DECLARE(x, LET(exists(y))) · DECLARE(x, CMD-US?(make(y), ..)) —
+    the CMD-US mood family added at the gen_06 freeze (TIR-033; coded
+    imperfect => TIR-028's mandatory ?) · { P: .. } op { Q: .. } · PASS(a, b) ·
     between(a, b) · name(x) := y · REGISTRY: x->role (ASSIGN) ·
-    BLESS(s, r) MANDATE {..} · LEDGER[day N] := {..} · t0 := x.
+    BLESS(s, r) [MANDATE {..}] — the mandate clause made OPTIONAL at the
+    gen_07 freeze (2:3 blesses a day with no quoted speech) ·
+    LEDGER[day N] := {..} · t0 := x.
     Any operator kind outside the dispatch table is a rulebook gap: hard stop.
   * Negative contracts:
       S6 — COMMIT with empty TESTS => FLAG pattern deviation, never block
            (day 2 commits without a test; the flag is data, not an error).
       S7 — LET? never auto-upgrades to LET/CMD! (TIR-028); an upgrade requires
-           an explicit per-unit citation or the run fails validation.
+           an explicit per-unit citation or the run fails validation. The same
+           guard covers EVERY ?-mood (CMD-US? since gen_06).
 
 Usage:
   python3 run_unit.py gen_01_creation_boot --scenarios
@@ -85,16 +90,19 @@ class Machine:
 
     # -- S7 guard: the ONLY path that changes a LET? mood ---------------------
     def resolve_spec(self, demand, new_mood, cite=None):
+        # generalized at the gen_06 freeze: EVERY ?-mood (LET?, CMD-US?)
+        # refuses upgrade without a per-unit citation — TIR-028's contract
         for entry in self.SPECS["log"]:
-            if entry["demand"] == demand and entry["mood"].startswith("LET?"):
-                if new_mood in ("LET", "CMD!") and not cite:
+            if entry["demand"] == demand and entry["mood"].endswith("?"):
+                if not cite and not new_mood.endswith("?"):
                     raise ContractError(
-                        "TIR-028: LET? never auto-upgrades to %s — a per-unit "
-                        "judgment citation is required (demand: %s)" % (new_mood, demand))
+                        "TIR-028: %s never auto-upgrades to %s — a per-unit "
+                        "judgment citation is required (demand: %s)"
+                        % (entry["mood"], new_mood, demand))
                 entry["mood"] = new_mood
                 entry["resolution_cite"] = cite
                 return entry
-        raise ContractError("no LET? spec found for demand: %s" % demand)
+        raise ContractError("no ?-mood spec found for demand: %s" % demand)
 
 
 # ---------------------------------------------------------------------------
@@ -156,17 +164,23 @@ def h_note_presupposed(m, op, step):
 
 
 def h_declare(m, op, step):
+    # CMD-US mood family added at the gen_06 freeze (TIR-033: the 1cp
+    # volitive na'aseh, "let US make"; coded imperfect => mandatory ?)
     expr = op.get("expr_en", "")
     speaker = re.search(r"DECLARE\((\w+),", expr)
-    if "LET?(" in expr:
+    if "CMD-US?(" in expr:
+        mood = "CMD-US?"
+    elif "CMD-US(" in expr:
+        mood = "CMD-US"
+    elif "LET?(" in expr:
         mood = "LET?"
     elif "LET-NOT(" in expr:
         mood = "LET-NOT"
     elif "LET(" in expr:
         mood = "LET"
     else:
-        raise ContractError("DECLARE without LET/LET-NOT/LET? payload: %s" % expr)
-    dm = re.search(r"LET\??(?:-NOT)?\((.+)\)\)", expr)
+        raise ContractError("DECLARE without LET/LET-NOT/LET?/CMD-US payload: %s" % expr)
+    dm = re.search(r"(?:LET\??(?:-NOT)?|CMD-US\??)\((.+)\)\)", expr)
     demand = dm.group(1).strip() if dm else "?"
     entry = {"demand": demand, "mood": mood,
              "speaker": speaker.group(1) if speaker else None,
@@ -260,19 +274,22 @@ def h_assign(m, op, step):
 
 
 def h_bless(m, op, step):
-    """BLESS (introduced gen_05, 2026-07-30): benediction speech act with a
-    quoted mandate — the corpus's first second-person address. The mandate
-    items are recorded as STANDING WORLD FACTS, never pushed to SPECS: the
-    text provides no receipt for them (their horizon exceeds the unit) and
-    still commits the day clean — a SPECS push would falsify that. Notation:
-    'BLESS(speaker, recipients) MANDATE {item, item, ..}'."""
+    """BLESS (introduced gen_05, 2026-07-30): benediction speech act — the
+    corpus's first second-person address. Mandate items are recorded as
+    STANDING WORLD FACTS, never pushed to SPECS: the text provides no receipt
+    for them (their horizon exceeds the unit) and still commits the day
+    clean — a SPECS push would falsify that. The MANDATE clause was made
+    OPTIONAL at the gen_07 freeze (2026-07-31): Gen 2:3 blesses the seventh
+    day with NO quoted speech — the mandate was a parameter of the day-5/6
+    blessings, not the operator's essence. Notation:
+    'BLESS(speaker, recipients) [MANDATE {item, item, ..}]'."""
     expr = op.get("expr_en", "")
     sp = re.search(r"BLESS\((\w+),\s*([\w-]+)\)", expr)
-    mt = re.search(r"MANDATE \{([^}]*)\}", expr)
-    if not sp or not mt:
+    if not sp:
         raise ContractError(
-            "BLESS without 'BLESS(speaker, recipients) MANDATE {..}' notation")
-    items = [x.strip() for x in mt.group(1).split(",") if x.strip()]
+            "BLESS without 'BLESS(speaker, recipients)' notation")
+    mt = re.search(r"MANDATE \{([^}]*)\}", expr)
+    items = [x.strip() for x in mt.group(1).split(",") if x.strip()] if mt else []
     for item in items:
         m.WORLD["facts"].append("mandate: %s" % item)
     m.event("bless", sp.group(1), [sp.group(2)] + items)
@@ -598,6 +615,39 @@ def check_clause(clause, m, step_ref, alias):
         return (ok, "label=%s form=%s" % (entry and entry["label_translit"],
                                           entry and entry["label_form"]))
 
+    # ---- patterns added at the gen_06/gen_07 freeze (2026-07-31) ----
+    mt = re.search(r"CMD-US\?\((.+?)\) pushed and OPEN", c)
+    if mt:
+        ok = any(e["demand"] == mt.group(1) and not e["satisfied_step"]
+                 for e in m.SPECS["queue"])
+        return (ok, "queue=%s" % [e["demand"] for e in m.SPECS["queue"]])
+
+    mt = re.search(r"CMD-US\?\((.+?)\) mood remains CMD-US\?", c)
+    if mt:
+        for e in m.SPECS["log"]:
+            if e["demand"] == mt.group(1):
+                return (e["mood"] == "CMD-US?", "mood=%s" % e["mood"])
+        return (False, "no spec with demand %s" % mt.group(1))
+
+    mt = re.search(r"triple .*\{([^}]+)\}\s*stands undischarged", c)
+    if mt:
+        q = mt.group(1).strip()
+        for tr in m.TRIPLES:
+            if tr["q"] == q:
+                return (not tr["discharged"], "discharged=%s" % tr["discharged"])
+        return (False, "no triple with q=%s" % q)
+
+    mt = re.search(r"flags (\S+) as assigned-before-presence", c)
+    if mt:
+        want = [x.strip() for x in mt.group(1).split("/")]
+        flagged = {f["detail"] for f in m.FLAGS
+                   if f["kind"] == "assigned_before_any_presence"}
+        missing = [w for w in want if w not in flagged]
+        return (not missing, "flagged=%s" % sorted(flagged))
+
+    if re.search(r"LEDGER stays EMPTY \(open transaction\)", c):
+        return (not m.LEDGER, "ledger_days=%s" % sorted(m.LEDGER))
+
     return ("UNCHECKED", c)
 
 
@@ -647,6 +697,30 @@ def contract_let_never_upgrades():
     return results
 
 
+def contract_cmd_us_never_upgrades():
+    """S9 (gen_06): CMD-US? -> CMD-US/CMD! without a per-unit citation must
+    refuse — the new mood family inherits TIR-028's contract unchanged."""
+    m = Machine()
+    m._step_ref = "synthetic.cmd-us?"
+    h_declare(m, {"op": "DECLARE",
+                  "expr_en": "DECLARE(Elohim, CMD-US?(make(adam), spec=b_tzelem_k_demut))"},
+              {"ref": "synthetic.cmd-us?"})
+    mood = m.SPECS["log"][0]["mood"]
+    results = [("volitive 1cp parsed as CMD-US? (question mark kept)",
+                mood == "CMD-US?", "mood=%s" % mood)]
+    try:
+        m.resolve_spec("make(adam), spec=b_tzelem_k_demut", "CMD-US", cite=None)
+        results.append(("auto-upgrade REFUSED", False, "upgrade went through!"))
+    except ContractError as e:
+        results.append(("auto-upgrade REFUSED", True, str(e)[:60] + "..."))
+    entry = m.resolve_spec("make(adam), spec=b_tzelem_k_demut", "CMD-US",
+                           cite="per-unit judgment (owner), TIR-028 resolution")
+    results.append(("upgrade WITH citation allowed",
+                    entry["mood"] == "CMD-US" and bool(entry["resolution_cite"]),
+                    "cite=%s" % entry["resolution_cite"]))
+    return results
+
+
 # ---------------------------------------------------------------------------
 # Scenario runner
 # ---------------------------------------------------------------------------
@@ -662,7 +736,9 @@ def run_scenarios(unit):
 
         if sid.endswith("_negative"):
             expect = sc.get("expect_en", "")
-            if "LET?" in expect:
+            if "CMD-US?" in expect:
+                checks = contract_cmd_us_never_upgrades()
+            elif "LET?" in expect:
                 checks = contract_let_never_upgrades()
             elif "FLAG" in expect:
                 checks = contract_commit_without_test()

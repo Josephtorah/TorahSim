@@ -74,8 +74,8 @@ FORMULAS = [
     ("operator", "davar acher (\"another interpretation\": the multi-reading alternation operator)",
      ["דבר אחר", 'ד"א', "ד״א"]),
     # ---- discovered 2026-07-31 by corpus mining (DISCOVERY_devices report) ----
-    ("discovered", "ein ketiv kan ela (\"it is not written here … but rather\": the chain's diff operator — expected wording vs actual)",
-     ["אין כתיב כאן", "אין כתוב כאן"]),
+    ("discovered", "ein ketiv kan ela (\"it is not written here … but rather\": the chain's diff operator — expected wording vs actual; incl. the spoken variant eino omer ela, \"it does not say … but rather\")",
+     ["אין כתיב כאן", "אין כתוב כאן", "אינו אומר אלא", "אינו אומר כן אלא"]),
     ("discovered", "kemah de-at amar (\"as you say [elsewhere]\": usage-analogy — a word's sense imported from another verse)",
      ["כמה דאת אמר", "כמא דאת אמר", "כמה דתימר"]),
     ("discovered", "ein X ela Y (\"X means nothing but Y\": the lexical definition operator)",
@@ -92,6 +92,31 @@ FORMULAS = [
      ["בזכות"]),
     ("discovered", "kivyakhol (\"as it were\": anthropomorphism guard)",
      ["כביכול"]),
+    # ---- adopted 2026-07-31 from Bacher's lexicon of exegetical terminology
+    #      (owner order "yes add them to the detector"; term list reconstructed
+    #      from scholarship — OCR of the 1899 scan destroyed all Hebrew — and
+    #      every needle yield-tested against our own cache first: see
+    #      BACHER_terms_2026-07-31.md) ----
+    ("bacher", "keneged (\"corresponding to\": the correspondence/typology operator — declares two structures parallel)",
+     ["כנגד"]),
+    ("bacher", "ma'aseh be- (\"an incident concerning\": case/precedent marker — narrative cited as evidence)",
+     ["מעשה ב"]),
+    ("bacher", "ve-omer (\"and it says\": stacked additional prooftext — NOISY needle (also plain dialogue); document-frequency use only)",
+     ["ואומר"]),
+    ("bacher", "minayin (\"from where [is this derived]?\": the derivation question that opens a sourcing demand)",
+     ["מנין ש", "ומנין ש", "מניין ש", "מנין לו", "מנין את"]),
+    ("bacher", "tanya / tanu rabbanan (\"it was taught / the Rabbis taught\": tannaitic-source markers — stratum seams inside later text)",
+     ["תניא", "תנו רבנן"]),
+    ("bacher", "le-mah ha-davar domeh (\"to what may the matter be compared\": the parable ANNOUNCEMENT — execution form of rule 26 of the 32)",
+     ["למה הדבר דומה", "משלו משל"]),
+    ("bacher", "ktiv hakha u-khtiv hatam (Aramaic \"written here and written there\": the Bavli's verbal-analogy executor — Aramaic twin of ne'emar kan ve-ne'emar lehalan)",
+     ["כתיב הכא וכתיב התם", "וכתיב התם"]),
+    ("bacher", "bo u-re'eh (\"come and see\": demonstration summons — aggadic sibling of the Bavli's ta shema, \"come hear\")",
+     ["בא וראה", "בוא וראה"]),
+    ("bacher", "mah ra'ah (\"what did he see [to prompt this]?\": the motivation question)",
+     ["מה ראה"]),
+    ("bacher", "she-ne'emar (\"as it is said\": the baseline prooftext citator — DENSITY METER, not a discovery; saturates ~45% of the cache)",
+     ["שנאמר"]),
 ]
 
 

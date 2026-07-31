@@ -42,9 +42,26 @@ by which the Oral chain derives conclusions from the Written text.
 - Every Hebrew term in every output carries its English counterpart inline
   (owner's absolute glossing rule).
 
+**v1.3 (2026-07-31, owner order):** the `bacher` formula class — ten devices
+adopted from Wilhelm Bacher's lexicon of exegetical terminology (*Die
+exegetische Terminologie der juedischen Traditionsliteratur*, Leipzig
+1899/1905 — the scholarly census of the chain's technical vocabulary), each
+yield-tested against our own cache before adoption (BACHER_terms_2026-07-31.md).
+Headliners: *keneged* ("corresponding to" — the correspondence/typology
+operator, 69 sources), *ma'aseh be-* ("an incident concerning" — case cited
+as evidence), *minayin* ("from where is this derived?" — the derivation
+question), *ktiv hakha u-khtiv hatam* (Aramaic "written here and written
+there" — the Bavli's verbal-analogy executor), plus *she-ne'emar* ("as it is
+said") kept as a citation-DENSITY meter, not a discovery. The *eino omer
+ela* ("it does not say … but rather") needles were merged into the diff
+operator's entry. Detector totals moved from 574 invocations in 277 sources
+(v1.2) to 1,249 in 458 of 717 (v1.3).
+
 **v2 (planned, not built):** *klal u-frat* ("general and particular") scope
 candidates using the cantillation-tree brackets; contradiction-pair candidates on
-the corpus side.
+the corpus side; label-form detection (the Lekach Tov two-word klal/prat
+annotations); stratum tags per formula (Tannaitic/Amoraic — Bacher's
+two-volume split as a dating instrument).
 
 Run: `python3 logic/middot_scan/middot_detector.py` (writes the two derived DB
 tables `middot_joins` and `middot_invocations` + the reports in this directory).
