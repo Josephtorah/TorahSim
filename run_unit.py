@@ -13,7 +13,8 @@ Contract (same as taamim_tree_parse.py):
   * Operator micro-grammar: this file parses ONLY notation the frozen unit
     already uses:  WORLD += {a, b} · HOLDS(p, tN) · INVARIANT(p) during tN ·
     DECLARE(x, LET(exists(y))) · { P: .. } op { Q: .. } · PASS(a, b) ·
-    between(a, b) · name(x) := y · LEDGER[day N] := {..} · t0 := x.
+    between(a, b) · name(x) := y · REGISTRY: x->role (ASSIGN) ·
+    BLESS(s, r) MANDATE {..} · LEDGER[day N] := {..} · t0 := x.
     Any operator kind outside the dispatch table is a rulebook gap: hard stop.
   * Negative contracts:
       S6 — COMMIT with empty TESTS => FLAG pattern deviation, never block
@@ -258,6 +259,25 @@ def h_assign(m, op, step):
         m.event("assign", None, [ent, role])
 
 
+def h_bless(m, op, step):
+    """BLESS (introduced gen_05, 2026-07-30): benediction speech act with a
+    quoted mandate — the corpus's first second-person address. The mandate
+    items are recorded as STANDING WORLD FACTS, never pushed to SPECS: the
+    text provides no receipt for them (their horizon exceeds the unit) and
+    still commits the day clean — a SPECS push would falsify that. Notation:
+    'BLESS(speaker, recipients) MANDATE {item, item, ..}'."""
+    expr = op.get("expr_en", "")
+    sp = re.search(r"BLESS\((\w+),\s*([\w-]+)\)", expr)
+    mt = re.search(r"MANDATE \{([^}]*)\}", expr)
+    if not sp or not mt:
+        raise ContractError(
+            "BLESS without 'BLESS(speaker, recipients) MANDATE {..}' notation")
+    items = [x.strip() for x in mt.group(1).split(",") if x.strip()]
+    for item in items:
+        m.WORLD["facts"].append("mandate: %s" % item)
+    m.event("bless", sp.group(1), [sp.group(2)] + items)
+
+
 def h_commit(m, op, step):
     expr = op.get("expr_en", "")
     dm = re.search(r"LEDGER\[day (\d+)\]", expr)
@@ -312,6 +332,7 @@ HANDLERS = {
     "EVENT_PARTITION": h_event_partition,
     "NAME": h_name,
     "ASSIGN": h_assign,
+    "BLESS": h_bless,
     "COMMIT": h_commit,
 }
 
