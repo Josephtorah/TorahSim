@@ -22,7 +22,10 @@ Contract (same as taamim_tree_parse.py):
     added at the lev_13 freeze (2026-08-01): the ki ("when") case-opener and
     the weqatal ("and-he-shall-do", TIR-029) chains, recorded as STANDING
     WORLD FACTS (the BLESS-mandate precedent) — the law installs; only
-    cases execute · LEDGER[day N] := {..} · t0 := x.
+    cases execute · SECTION(label, ..) — the toledot ("generations")
+    section-header device added at the gen_08 freeze (2026-08-01): a header
+    labels, it installs NOTHING (event only, zero register writes) ·
+    LEDGER[day N] := {..} · t0 := x.
     Any operator kind outside the dispatch table is a rulebook gap: hard stop.
   * Negative contracts:
       S6 — COMMIT with empty TESTS => FLAG pattern deviation, never block
@@ -30,6 +33,10 @@ Contract (same as taamim_tree_parse.py):
       S7 — LET? never auto-upgrades to LET/CMD! (TIR-028); an upgrade requires
            an explicit per-unit citation or the run fails validation. The same
            guard covers EVERY ?-mood (CMD-US? since gen_06).
+      S10 (gen_08) — LET-NOT has NO resolution path at all: it is not a
+           ?-mood, so resolve_spec refuses outright, citation or none — no
+           path exists that flips a prohibition (lo + imperfect in a command
+           frame, TIR-034) into a permission. First firing: Gen 2:17.
 
 Usage:
   python3 run_unit.py gen_01_creation_boot --scenarios
@@ -329,6 +336,19 @@ def h_handler(m, op, step):
     m.event("handler_installed", None, [mt.group(1).strip()[:40]])
 
 
+def h_section(m, op, step):
+    """SECTION (introduced gen_08, 2026-08-01): the toledot ('generations')
+    section-header device — first of 13 in Genesis at Gen 2:4, the corpus's
+    own table of contents. A header LABELS; it installs nothing: the handler
+    records an event only — zero register writes (contrast REGISTRY_INSTALL).
+    Notation: 'SECTION(label, member, member)'."""
+    mt = re.search(r"SECTION\((\w+),\s*(.+)\)", op.get("expr_en", ""))
+    if not mt:
+        raise ContractError("SECTION without 'SECTION(label, ..)' notation")
+    members = [x.strip() for x in mt.group(2).split(",") if x.strip()]
+    m.event("section", None, [mt.group(1)] + members)
+
+
 def h_commit(m, op, step):
     expr = op.get("expr_en", "")
     dm = re.search(r"LEDGER\[day (\d+)\]", expr)
@@ -386,6 +406,7 @@ HANDLERS = {
     "BLESS": h_bless,
     "CASE": h_case,
     "HANDLER": h_handler,
+    "SECTION": h_section,
     "COMMIT": h_commit,
 }
 
@@ -684,6 +705,26 @@ def check_clause(clause, m, step_ref, alias):
     if re.search(r"LEDGER stays EMPTY \(open transaction\)", c):
         return (not m.LEDGER, "ledger_days=%s" % sorted(m.LEDGER))
 
+    # ---- patterns added at the gen_08 freeze (2026-08-01) ----
+    mt = re.search(r"LET\?\((.+?)\) pushed and OPEN", c)
+    if mt:
+        ok = any(e["demand"] == mt.group(1) and not e["satisfied_step"]
+                 for e in m.SPECS["queue"])
+        return (ok, "queue=%s" % [e["demand"] for e in m.SPECS["queue"]])
+
+    mt = re.search(r"LET-NOT\((.+?)\) pushed and OPEN", c)
+    if mt:
+        ok = any(e["demand"] == mt.group(1) and not e["satisfied_step"]
+                 for e in m.SPECS["queue"])
+        return (ok, "queue=%s" % [e["demand"] for e in m.SPECS["queue"]])
+
+    mt = re.search(r"LET-NOT\((.+?)\) mood remains LET-NOT", c)
+    if mt:
+        for e in m.SPECS["log"]:
+            if e["demand"] == mt.group(1):
+                return (e["mood"] == "LET-NOT", "mood=%s" % e["mood"])
+        return (False, "no spec with demand %s" % mt.group(1))
+
     return ("UNCHECKED", c)
 
 
@@ -757,6 +798,39 @@ def contract_cmd_us_never_upgrades():
     return results
 
 
+def contract_let_not_never_resolves():
+    """S10 (gen_08): a prohibition has NO resolution path — LET-NOT is not
+    a ?-mood, so resolve_spec must refuse OUTRIGHT, citation or none: no
+    path exists that flips a prohibition into a permission. The mood a
+    prohibition is born with is the mood it keeps (first firing: Gen 2:17
+    lo tokhal, 'you shall not eat' — TIR-034)."""
+    m = Machine()
+    m._step_ref = "synthetic.let-not"
+    h_declare(m, {"op": "DECLARE",
+                  "expr_en": "DECLARE(YHWH_Elohim, LET-NOT(akhal(adam, me_etz_ha_daat_tov_va_ra)))"},
+              {"ref": "synthetic.let-not"})
+    mood = m.SPECS["log"][0]["mood"]
+    results = [("prohibitive lo+imperfect parsed as LET-NOT",
+                mood == "LET-NOT", "mood=%s" % mood)]
+    try:
+        m.resolve_spec("akhal(adam, me_etz_ha_daat_tov_va_ra)", "LET", cite=None)
+        results.append(("resolution without citation REFUSED", False, "went through!"))
+    except ContractError as e:
+        results.append(("resolution without citation REFUSED", True, str(e)[:60] + "..."))
+    try:
+        m.resolve_spec("akhal(adam, me_etz_ha_daat_tov_va_ra)", "LET",
+                       cite="per-unit judgment (owner)")
+        results.append(("resolution WITH citation ALSO refused (no ?-mood path)",
+                        False, "went through!"))
+    except ContractError as e:
+        results.append(("resolution WITH citation ALSO refused (no ?-mood path)",
+                        True, str(e)[:60] + "..."))
+    still = m.SPECS["log"][0]["mood"]
+    results.append(("mood unchanged after both attempts",
+                    still == "LET-NOT", "mood=%s" % still))
+    return results
+
+
 # ---------------------------------------------------------------------------
 # Scenario runner
 # ---------------------------------------------------------------------------
@@ -774,6 +848,8 @@ def run_scenarios(unit):
             expect = sc.get("expect_en", "")
             if "CMD-US?" in expect:
                 checks = contract_cmd_us_never_upgrades()
+            elif "LET-NOT" in expect:
+                checks = contract_let_not_never_resolves()
             elif "LET?" in expect:
                 checks = contract_let_never_upgrades()
             elif "FLAG" in expect:

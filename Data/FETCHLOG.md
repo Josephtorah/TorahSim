@@ -24,3 +24,17 @@ verdicts, and quotes in logic/oral_triage/ and logic/units/.
 
 Politeness contract (owner order): sequential requests, 0.5s delay, small
 ranges per invocation — never a whole book at once.
+- 2026-08-01 · `Onkelos Genesis 2:4` -> `Data/sefaria_texts/Onkelos_Genesis_2_4__715ea898.json` · Tier-A gen_08 derive-time read (sequential, 0.5s)
+- 2026-08-01 · `Onkelos Genesis 2:5` -> `Data/sefaria_texts/Onkelos_Genesis_2_5__84903187.json` · Tier-A gen_08 derive-time read (sequential, 0.5s)
+- 2026-08-01 · `Onkelos Genesis 2:6` -> `Data/sefaria_texts/Onkelos_Genesis_2_6__2ab65680.json` · Tier-A gen_08 derive-time read (sequential, 0.5s)
+- 2026-08-01 · `Onkelos Genesis 2:7` -> `Data/sefaria_texts/Onkelos_Genesis_2_7__7cf77abe.json` · Tier-A gen_08 derive-time read (sequential, 0.5s)
+- 2026-08-01 · `Onkelos Genesis 2:8` -> `Data/sefaria_texts/Onkelos_Genesis_2_8__1d311596.json` · Tier-A gen_08 derive-time read (sequential, 0.5s)
+- 2026-08-01 · `Onkelos Genesis 2:9` -> `Data/sefaria_texts/Onkelos_Genesis_2_9__e8f45b6b.json` · Tier-A gen_08 derive-time read (sequential, 0.5s)
+- 2026-08-01 · `Onkelos Genesis 2:10` -> `Data/sefaria_texts/Onkelos_Genesis_2_10__040b267a.json` · Tier-A gen_08 derive-time read (sequential, 0.5s)
+- 2026-08-01 · `Onkelos Genesis 2:11` -> `Data/sefaria_texts/Onkelos_Genesis_2_11__ff5b4a3b.json` · Tier-A gen_08 derive-time read (sequential, 0.5s)
+- 2026-08-01 · `Onkelos Genesis 2:12` -> `Data/sefaria_texts/Onkelos_Genesis_2_12__08777467.json` · Tier-A gen_08 derive-time read (sequential, 0.5s)
+- 2026-08-01 · `Onkelos Genesis 2:13` -> `Data/sefaria_texts/Onkelos_Genesis_2_13__33c98a05.json` · Tier-A gen_08 derive-time read (sequential, 0.5s)
+- 2026-08-01 · `Onkelos Genesis 2:14` -> `Data/sefaria_texts/Onkelos_Genesis_2_14__0492d31f.json` · Tier-A gen_08 derive-time read (sequential, 0.5s)
+- 2026-08-01 · `Onkelos Genesis 2:15` -> `Data/sefaria_texts/Onkelos_Genesis_2_15__07237f32.json` · Tier-A gen_08 derive-time read (sequential, 0.5s)
+- 2026-08-01 · `Onkelos Genesis 2:16` -> `Data/sefaria_texts/Onkelos_Genesis_2_16__6454b489.json` · Tier-A gen_08 derive-time read (sequential, 0.5s)
+- 2026-08-01 · `Onkelos Genesis 2:17` -> `Data/sefaria_texts/Onkelos_Genesis_2_17__0f431d11.json` · Tier-A gen_08 derive-time read (sequential, 0.5s)
