@@ -18,7 +18,11 @@ Contract (same as taamim_tree_parse.py):
     between(a, b) · name(x) := y · REGISTRY: x->role (ASSIGN) ·
     BLESS(s, r) [MANDATE {..}] — the mandate clause made OPTIONAL at the
     gen_07 freeze (2:3 blesses a day with no quoted speech) ·
-    LEDGER[day N] := {..} · t0 := x.
+    CASE(..) ROUTE(x) and HANDLER IF(..) THEN(..) — the LAW-GENRE installers
+    added at the lev_13 freeze (2026-08-01): the ki ("when") case-opener and
+    the weqatal ("and-he-shall-do", TIR-029) chains, recorded as STANDING
+    WORLD FACTS (the BLESS-mandate precedent) — the law installs; only
+    cases execute · LEDGER[day N] := {..} · t0 := x.
     Any operator kind outside the dispatch table is a rulebook gap: hard stop.
   * Negative contracts:
       S6 — COMMIT with empty TESTS => FLAG pattern deviation, never block
@@ -295,6 +299,36 @@ def h_bless(m, op, step):
     m.event("bless", sp.group(1), [sp.group(2)] + items)
 
 
+def h_case(m, op, step):
+    """CASE (introduced lev_13, 2026-08-01): the law genre's ki ('when')
+    case-opener — an intake filter + routing clause, recorded as a standing
+    WORLD fact. The law installs; only cases execute. Notation:
+    'CASE(subject, filter) ROUTE(destination)'."""
+    expr = op.get("expr_en", "")
+    mt = re.search(r"CASE\((.+)\)\s*ROUTE\(([\w-]+)\)", expr)
+    if not mt:
+        raise ContractError("CASE without 'CASE(..) ROUTE(..)' notation")
+    m.WORLD["facts"].append("case: %s -> %s" % (mt.group(1).strip(), mt.group(2)))
+    m.event("case_installed", None, [mt.group(2)])
+
+
+def h_handler(m, op, step):
+    """HANDLER (introduced lev_13, 2026-08-01): the weqatal chain
+    ('and-he-shall-do', TIR-029) — IF(predicates) THEN(actions), recorded as
+    a standing WORLD fact (the day-5 BLESS-mandate precedent: standing
+    directives with horizons beyond the unit are facts, never SPECS).
+    Handlers are installed, never executed — no receipt is owed because
+    nothing was demanded of the narrative present. Notation:
+    'HANDLER IF(..) THEN(..)'."""
+    expr = op.get("expr_en", "")
+    mt = re.search(r"HANDLER IF\((.+)\) THEN\((.+)\)", expr)
+    if not mt:
+        raise ContractError("HANDLER without 'HANDLER IF(..) THEN(..)' notation")
+    m.WORLD["facts"].append("handler: IF(%s) THEN(%s)"
+                            % (mt.group(1).strip(), mt.group(2).strip()))
+    m.event("handler_installed", None, [mt.group(1).strip()[:40]])
+
+
 def h_commit(m, op, step):
     expr = op.get("expr_en", "")
     dm = re.search(r"LEDGER\[day (\d+)\]", expr)
@@ -350,6 +384,8 @@ HANDLERS = {
     "NAME": h_name,
     "ASSIGN": h_assign,
     "BLESS": h_bless,
+    "CASE": h_case,
+    "HANDLER": h_handler,
     "COMMIT": h_commit,
 }
 
