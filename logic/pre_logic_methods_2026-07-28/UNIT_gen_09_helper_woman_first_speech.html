@@ -12,6 +12,8 @@ h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
 .frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
 .tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
 .tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
 .note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
         padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
 table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
@@ -530,5 +532,123 @@ final state: WORLD=[&#x27;chayat_ha_sadeh&#x27;, &#x27;ishah&#x27;, &#x27;of_ha_
     PASS  pattern deviation FLAGGED  (flags=[&#x27;commit_without_test&#x27;])
 
 ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_09_helper_woman_first_speech.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_09_helper_woman_first_speech — 2:18-25
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_09_helper_woman_first_speech.yaml) is CANONICAL
+# (Pre-Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Eden II: not-good, the helper, the woman, first human speech (2:18-25)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_09_helper_woman_first_speech&quot;)
+
+# -------------------------- Gen.2.18 · VERDICT_FAIL_AND_PLAN ---------------
+# va-yomer YHWH Elohim lo-tov heyot ha-adam levado e&#x27;eseh-lo ezer kenegdo
+# &quot;And the LORD God said: &#x27;It is not good that the man should be alone; I
+# will make him a help meet for him.&#x27;&quot;
+m.step(&quot;Gen.2.18&quot;)
+m.test(&quot;FAIL&quot;, &quot;tov&quot;, &quot;heyot_ha_adam_levado&quot;)
+m.declare(&quot;YHWH_Elohim&quot;, &quot;CMD-US?&quot;,
+          &quot;make(ezer_kenegdo, le_adam)&quot;)
+m.presupposed(&quot;adam&quot;)
+
+# -------------------------- Gen.2.19 · FORM_BRING_DELEGATE -----------------
+# va-yitzer YHWH Elohim min-ha-adamah kol-chayat ha-sadeh ve-et kol-of ha-
+# shamayim va-yave el-ha-adam li-reot mah-yiqra-lo ve-khol asher yiqra-lo
+# ha-adam nefesh chayah hu shemo
+# &quot;And out of the ground the LORD God formed every beast of the field, and
+# every fowl of the air; and brought them unto the man to see what he would
+# call them; and whatsoever the man would call every living creature, that
+# was to be the name thereof.&quot;
+m.step(&quot;Gen.2.19&quot;)
+m.event(&quot;form&quot;, agent=&quot;YHWH_Elohim&quot;, themes=[&quot;chayat_ha_sadeh&quot;, &quot;of_ha_shamayim&quot;])
+m.install(&quot;chayat_ha_sadeh&quot;, &quot;of_ha_shamayim&quot;)
+m.event(&quot;bring&quot;, agent=&quot;YHWH_Elohim&quot;, themes=[&quot;chayat_ha_sadeh&quot;])
+m.fact(&quot;hu_shemo(kol_asher_yiqra_lo_ha_adam)&quot;)
+m.presupposed(&quot;adamah&quot;)
+
+# -------------------------- Gen.2.20 · BULK_NAMING_FAILED_SEARCH -----------
+# va-yiqra ha-adam shemot le-khol-ha-behemah u-le-of ha-shamayim u-le-khol
+# chayat ha-sadeh u-le-adam lo-matza ezer kenegdo
+# &quot;And the man gave names to all cattle, and to the fowl of the air, and to
+# every beast of the field; but for Adam there was not found a help meet for
+# him.&quot;
+m.step(&quot;Gen.2.20&quot;)
+m.event(&quot;call&quot;, agent=&quot;adam&quot;, themes=[&quot;shemot&quot;])
+m.fact(&quot;lo_matza(ezer_kenegdo, le_adam)&quot;)
+m.presupposed(&quot;behemah&quot;)
+
+# -------------------------- Gen.2.21 · SLEEP_AND_SURGERY -------------------
+# va-yapel YHWH Elohim tardemah al-ha-adam va-yishan va-yiqach achat mi-
+# tzalotav va-yisgor basar tachtenah
+# &quot;And the LORD God caused a deep sleep to fall upon the man, and he slept;
+# and He took one of his ribs, and closed up the place with flesh instead
+# thereof.&quot;
+m.step(&quot;Gen.2.21&quot;)
+m.event(&quot;cast_sleep&quot;, agent=&quot;YHWH_Elohim&quot;, themes=[&quot;tardemah&quot;])
+m.event(&quot;take&quot;, agent=&quot;YHWH_Elohim&quot;, themes=[&quot;tzela&quot;])
+m.event(&quot;close&quot;, agent=&quot;YHWH_Elohim&quot;, themes=[&quot;basar&quot;])
+
+# -------------------------- Gen.2.22 · BUILD_WOMAN_RECEIPT -----------------
+# va-yiven YHWH Elohim et-ha-tzela asher-laqach min-ha-adam le-ishah va-
+# yevieha el-ha-adam
+# &quot;And the rib, which the LORD God had taken from the man, made He a woman,
+# and brought her unto the man.&quot;
+m.step(&quot;Gen.2.22&quot;)
+m.event(&quot;build&quot;, agent=&quot;YHWH_Elohim&quot;, themes=[&quot;ishah&quot;])
+m.install(&quot;ishah&quot;)
+m.result(&quot;make(ezer_kenegdo, le_adam)&quot;, tmark=&quot;t1&quot;)
+m.spec_delta(&quot;e&#x27;eseh (I will MAKE — asah, the week&#x27;s build verb)&quot;,
+             &quot;va-yiven (He BUILT — banah, first token)&quot;)
+
+# -------------------------- Gen.2.23 · FIRST_HUMAN_SPEECH_NAME -------------
+# va-yomer ha-adam zot ha-paam etzem me-atzamai u-vasar mi-besari le-zot
+# yiqare ishah ki me-ish lukocha-zot
+# &quot;And the man said: &#x27;This is now bone of my bones, and flesh of my flesh;
+# she shall be called Woman, because she was taken out of Man.&#x27;&quot;
+m.step(&quot;Gen.2.23&quot;)
+m.event(&quot;say&quot;, agent=&quot;adam&quot;)
+m.name(&quot;ishah&quot;, &quot;ishah&quot;)
+
+# -------------------------- Gen.2.24 · ETIOLOGY_PATTERN --------------------
+# al-ken yaazov-ish et-aviv ve-et-imo ve-davak be-ishto ve-hayu le-vasar
+# echad
+# &quot;Therefore shall a man leave his father and his mother, and shall cleave
+# unto his wife, and they shall be one flesh.&quot;
+m.step(&quot;Gen.2.24&quot;)
+m.pattern(&quot;azav(ish, av_ve_em) ∧ davak(ish, be_ishto) ∧ hayu(basar_echad)&quot;)
+
+# -------------------------- Gen.2.25 · CLOSING_STATE_BRIDGE ----------------
+# va-yihyu shneihem arumim ha-adam ve-ishto ve-lo yitboshashu
+# &quot;And they were both naked, the man and his wife, and were not ashamed.&quot;
+m.step(&quot;Gen.2.25&quot;)
+m.fact(&quot;arumim(ha_adam_ve_ishto)&quot;,
+       &quot;lo_yitboshashu(shneihem)&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == {&#x27;ishah&#x27;, &#x27;chayat_ha_sadeh&#x27;, &#x27;of_ha_shamayim&#x27;}
+    assert m.presupposed_set() == {&#x27;adam&#x27;, &#x27;adamah&#x27;, &#x27;behemah&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {&#x27;ishah&#x27;: &#x27;ishah&#x27;}
+    assert m.REGISTRY[&quot;writes&quot;] == 1
+    assert m.tests_list() == [(&#x27;FAIL&#x27;, &#x27;tov&#x27;, &#x27;heyot_ha_adam_levado&#x27;)]
+    assert m.open_demands() == []
+    assert len(m.SPECS[&quot;log&quot;]) == 1
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;read_before_install&#x27;: 3, &#x27;spec_delta&#x27;: 1}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;hu_shemo(kol_asher_yiqra_lo_ha_adam)&#x27;, &#x27;lo_matza(ezer_kenegdo, le_adam)&#x27;, &#x27;pattern: azav(ish, av_ve_em) ∧ davak(ish, be_ishto) ∧ hayu(basar_echad)&#x27;, &#x27;arumim(ha_adam_ve_ishto)&#x27;, &#x27;lo_yitboshashu(shneihem)&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 12
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
 <div class="note">FROZEN 2026-08-01 (owner order &quot;freeze gen_09 and gen_10 and commit and push&quot;; derived same day, &quot;go derive gen 9&quot;): tenth frozen unit. Central findings, all DB-verified before drafting: the corpus&#x27;s FIRST FAIL verdict (lo-tov — speech-mode, against the week&#x27;s see-mode; Onkelos negates day 6&#x27;s own verdict word: la takkin); the in-span demand-&gt;receipt arc (e&#x27;eseh pushed at 2:18, popped by va-yiven at 2:22 — execution-as-receipt, the Miriam class — with the make-&gt;build spec-delta flagged); the 1cs volitive joining gen_06&#x27;s CMD-US family; the formation minimal pair completing ACROSS CREATURES (single-yod animals, double-yod human); the NAME device delegated, ratified standing (hu shemo), and executed as the corpus&#x27;s first creature-agent event — with every value withheld by the letter (the registry stays unwritten rather than invented); sagar and basar debuting in the surgery (the quarantine root born as healing closure); tzela&#x27;s Tabernacle-exclusive trail (the woman built from sanctuary vocabulary); the first human speech (near-poetic accents, passive naming, the corpus&#x27;s first etymology: ishah from ish); the first narrator etiology in law grammar (al-ken + imperfect + weqatal — the PATTERN operator, standing fact with no trigger); shame debuting negated; and the one-token naked/cunning pun bridging to the serpent. gen_08&#x27;s two open demands and armed handler are UNTOUCHED — the debt carries into Gen 3. Pre-flight green in the scratchpad harness (TEST-FAIL, PATTERN, one checker pattern injected; repo interpreter untouched). Freeze, narrative (ASK FIRST), and triage await owner order. Not binding religious law.</div><p class='meta'>Rendered 2026-08-01 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

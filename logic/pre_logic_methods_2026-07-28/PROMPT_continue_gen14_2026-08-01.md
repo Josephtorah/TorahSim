@@ -20,6 +20,15 @@ share one gloss engine — keep them in sync.
 ~700k tokens; keep THIS resume file current at every milestone,
 unprompted; announce clean compaction points.
 
+**STANDING RULE (memory: auto-freeze-process, owner order 2026-08-01):**
+FREEZE IS AUTOMATIC — when a derivation's pre-flight runs ALL
+SCENARIOS GREEN, flip status to frozen immediately (no owner ask),
+re-verify through the real frozen gate, regression-run all frozen
+units, re-render + re-index, update this file. Stop for the owner
+ONLY if a unit needs an interpreter extension or regression goes
+RED. Amend/narrative/triage/commit gates are UNCHANGED (owner order
+only).
+
 **State: FOURTEEN units FROZEN and green** (gen_01..gen_13 — creation
 week + Eden + the Cain cycle + the genealogy bridge, Gen 1:1-4:26
 GAPLESS — plus lev_13_intake_quarantine; regression 14/14 green at the
@@ -76,7 +85,8 @@ Nothing owner-relevant sits uncommitted.
 
 **TASK 1 — derive gen_14 = Gen 5:1-32** (the book of Adam's line), same ritual (prospective
 watch-list FIRST -> DB morph dump -> DB trees -> Onkelos Tier-A
-sequential 0.5s FETCHLOG -> full YAML -> pre-flight -> gate).
+sequential 0.5s FETCHLOG -> full YAML -> pre-flight -> AUTO-FREEZE on
+green -> regression -> render/index).
 Expected content to verify from DB at derive time: SEFER ("book" —
 likely first token: "this is the BOOK of the generations of Adam");
 5:1-2 re-runs 1:26-28 (likeness/image, male-female, the BLESS — and
@@ -120,8 +130,9 @@ deletable on owner order only.
 
 **Standing rules (non-negotiable):** Pre-Code (logic hand-authored
 in frozen YAML; code only interprets; flags never auto-resolve;
-dual-track, never merge). Freeze/amend/narrative gates: owner order
-only (narratives: ASK FIRST each time). Hebrew ALWAYS glossed in
+dual-track, never merge). FREEZE: AUTOMATIC on green pre-flight
+(owner order 2026-08-01); amend/narrative/triage/commit gates:
+owner order only (narratives: ASK FIRST each time). Hebrew ALWAYS glossed in
 English — absolute, everywhere, forever. Oral: named location only;
 verified from local corpus; tier per the APPROVED provenance
 register (material = chain_primary only); machine never derives law

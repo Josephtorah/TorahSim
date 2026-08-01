@@ -12,6 +12,8 @@ h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
 .frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
 .tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
 .tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
 .note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
         padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
 table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
@@ -613,5 +615,141 @@ final state: WORLD=[&#x27;ir&#x27;] (+4 presupposed) | REGISTRY={&#x27;ir&#x27;:
     PASS  pattern deviation FLAGGED  (flags=[&#x27;commit_without_test&#x27;])
 
 ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_13_cain_line_seth.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_13_cain_line_seth — 4:17-26
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_13_cain_line_seth.yaml) is CANONICAL (Pre-Code);
+# this file is a derived, runnable rendering. Do not edit — regenerate. The
+# assertion block at the bottom is baked from the Stage D interpreter&#x27;s
+# actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Cain&#x27;s line and Seth: the first city, the crafts, seventy-seven, calling on the Name (4:17-26)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_13_cain_line_seth&quot;)
+
+# -------------------------- Gen.4.17 · FIRST_CITY_BUILT_NAMED --------------
+# va-yeda Kayin et-ishto va-tahar va-teled et-Chanokh va-yehi boneh ir va-
+# yiqra shem ha-ir ke-shem beno Chanokh
+# &quot;And Cain knew his wife; and she conceived, and bore Enoch; and he builded
+# a city, and called the name of the city after the name of his son Enoch.&quot;
+m.step(&quot;Gen.4.17&quot;)
+m.event(&quot;bear&quot;, agent=&quot;eshet_kayin&quot;, themes=[&quot;chanokh&quot;])
+m.install(&quot;ir&quot;)
+m.name(&quot;ir&quot;, &quot;Chanokh&quot;)
+m.presupposed(&quot;kayin&quot;, &quot;eshet_kayin&quot;)
+
+# -------------------------- Gen.4.18 · BEGETTING_CHAIN_FOUR_LINKS ----------
+# va-yivaled la-Chanokh et-Irad ve-Irad yalad et-Mechuyael u-Mechiyael yalad
+# et-Metushael u-Metushael yalad et-Lamekh
+# &quot;And unto Enoch was born Irad; and Irad begot Mehujael; and Mehujael begot
+# Methushael; and Methushael begot Lamech.&quot;
+m.step(&quot;Gen.4.18&quot;)
+m.event(&quot;born&quot;, themes=[&quot;irad&quot;])
+m.event(&quot;beget&quot;, agent=&quot;irad&quot;, themes=[&quot;mechuyael&quot;])
+m.event(&quot;beget&quot;, agent=&quot;mechuyael&quot;, themes=[&quot;metushael&quot;])
+m.event(&quot;beget&quot;, agent=&quot;metushael&quot;, themes=[&quot;lemekh&quot;])
+
+# -------------------------- Gen.4.19 · FIRST_POLYGAMY ----------------------
+# va-yiqach-lo Lemekh shtei nashim shem ha-achat Adah ve-shem ha-shenit
+# Tzilah
+# &quot;And Lamech took unto him two wives; the name of the one was Adah, and the
+# name of the other Zillah.&quot;
+m.step(&quot;Gen.4.19&quot;)
+m.event(&quot;take&quot;, agent=&quot;lemekh&quot;, themes=[&quot;shte_nashim&quot;])
+m.fact(&quot;shte_nashim_le_lemekh&quot;,
+       &quot;shem_ha_achat_adah&quot;,
+       &quot;shem_ha_shenit_tzilah&quot;)
+
+# -------------------------- Gen.4.20 · OFFICE_TENT_AND_HERD ----------------
+# va-teled Adah et-Yaval hu hayah avi yoshev ohel u-mikneh
+# &quot;And Adah bore Jabal; he was the father of such as dwell in tents and have
+# cattle.&quot;
+m.step(&quot;Gen.4.20&quot;)
+m.event(&quot;bear&quot;, agent=&quot;adah&quot;, themes=[&quot;yaval&quot;])
+m.fact(&quot;avi_yoshev_ohel_u_mikneh(yaval)&quot;)
+
+# -------------------------- Gen.4.21 · OFFICE_HARP_AND_PIPE ----------------
+# ve-shem achiv Yuval hu hayah avi kol-tofes kinor ve-ugav
+# &quot;And his brother&#x27;s name was Jubal; he was the father of all such as handle
+# the harp and pipe.&quot;
+m.step(&quot;Gen.4.21&quot;)
+m.fact(&quot;shem_achiv_yuval&quot;,
+       &quot;avi_kol_tofes_kinor_ve_ugav(yuval)&quot;)
+
+# -------------------------- Gen.4.22 · OFFICE_BRONZE_IRON_SISTER -----------
+# ve-Tzilah gam-hi yaldah et-Tuval-Kayin lotesh kol-choresh nechoshet
+# u-varzel va-achot Tuval-Kayin Naamah
+# &quot;And Zillah, she also bore Tubal-cain, the forger of every cutting
+# instrument of brass and iron; and the sister of Tubal-cain was Naamah.&quot;
+m.step(&quot;Gen.4.22&quot;)
+m.event(&quot;bear&quot;, agent=&quot;tzilah&quot;, themes=[&quot;tuval_kayin&quot;])
+m.fact(&quot;lotesh_kol_choresh_nechoshet_u_varzel(tuval_kayin)&quot;,
+       &quot;achot_tuval_kayin_naamah&quot;)
+
+# -------------------------- Gen.4.23 · SWORD_SONG_FIRST_HUMAN_IMPERATIVES --
+# va-yomer Lemekh le-nashav Adah ve-Tzilah shemaan qoli neshei Lemekh
+# haazenah imrati ki ish haragti le-fitzi ve-yeled le-chaburati
+# &quot;And Lamech said unto his wives: Adah and Zillah, hear my voice; ye wives
+# of Lamech, hearken unto my speech; for I have slain a man for wounding me,
+# and a young man for bruising me.&quot;
+m.step(&quot;Gen.4.23&quot;)
+m.event(&quot;say&quot;, agent=&quot;lemekh&quot;, themes=[&quot;neshei_lemekh&quot;])
+m.declare(&quot;lemekh&quot;, &quot;LET&quot;,
+          &quot;shema(neshei_lemekh, qol_lemekh)&quot;)
+m.fact(&quot;ish_haragti_le_fitzi_ve_yeled_le_chaburati&quot;)
+
+# -------------------------- Gen.4.24 · QUOTE_DIFF_SEVENTY_SEVEN ------------
+# ki shivatayim yukam-Kayin ve-Lemekh shivim ve-shivah
+# &quot;If Cain shall be avenged sevenfold, truly Lamech seventy and sevenfold.&quot;
+m.step(&quot;Gen.4.24&quot;)
+m.spec_delta(&quot;kol-horeg Kayin shivatayim yukam — issuer YHWH, decree with mark (4:15, frozen gen_12)&quot;,
+             &quot;ki shivatayim yukam-Kayin ve-Lemekh shivim ve-shivah — issuer lemekh, boast, multiplier x11, target self, ratification NONE (4:24)&quot;)
+
+# -------------------------- Gen.4.25 · SETH_REPLACEMENT_SEED ---------------
+# va-yeda Adam od et-ishto va-teled ben va-tiqra et-shemo Shet ki shat-li
+# Elohim zera acher tachat Hevel ki harago Kayin
+# &quot;And Adam knew his wife again; and she bore a son, and called his name
+# Seth: &#x27;for God hath appointed me another seed instead of Abel; for Cain
+# slew him.&#x27;&quot;
+m.step(&quot;Gen.4.25&quot;)
+m.event(&quot;bear&quot;, agent=&quot;eshet_adam&quot;, themes=[&quot;shet&quot;])
+m.name(&quot;shet&quot;, &quot;Shet&quot;)
+m.fact(&quot;shat_li_elohim_zera_acher_tachat_hevel&quot;,
+       &quot;harago_kayin_named_in_speech&quot;)
+m.presupposed(&quot;adam&quot;, &quot;eshet_adam&quot;)
+
+# -------------------------- Gen.4.26 · ENOSH_CALLING_ON_THE_NAME -----------
+# u-le-Shet gam-hu yulad-ben va-yiqra et-shemo Enosh az huchal likro be-shem
+# YHWH
+# &quot;And to Seth, to him also there was born a son; and he called his name
+# Enosh; then began men to call upon the name of the LORD.&quot;
+m.step(&quot;Gen.4.26&quot;)
+m.event(&quot;born&quot;, themes=[&quot;enosh&quot;])
+m.name(&quot;enosh&quot;, &quot;Enosh&quot;)
+m.fact(&quot;huchal_likro_be_shem_YHWH&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == {&#x27;ir&#x27;}
+    assert m.presupposed_set() == {&#x27;adam&#x27;, &#x27;eshet_kayin&#x27;, &#x27;eshet_adam&#x27;, &#x27;kayin&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {&#x27;ir&#x27;: &#x27;Chanokh&#x27;, &#x27;shet&#x27;: &#x27;Shet&#x27;, &#x27;enosh&#x27;: &#x27;Enosh&#x27;}
+    assert m.REGISTRY[&quot;writes&quot;] == 3
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;shema(neshei_lemekh, qol_lemekh)&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 1
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;read_before_install&#x27;: 4, &#x27;spec_delta&#x27;: 1, &#x27;named_before_any_presence&#x27;: 2}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;shte_nashim_le_lemekh&#x27;, &#x27;shem_ha_achat_adah&#x27;, &#x27;shem_ha_shenit_tzilah&#x27;, &#x27;avi_yoshev_ohel_u_mikneh(yaval)&#x27;, &#x27;shem_achiv_yuval&#x27;, &#x27;avi_kol_tofes_kinor_ve_ugav(yuval)&#x27;, &#x27;lotesh_kol_choresh_nechoshet_u_varzel(tuval_kayin)&#x27;, &#x27;achot_tuval_kayin_naamah&#x27;, &#x27;ish_haragti_le_fitzi_ve_yeled_le_chaburati&#x27;, &#x27;shat_li_elohim_zera_acher_tachat_hevel&#x27;, &#x27;harago_kayin_named_in_speech&#x27;, &#x27;huchal_likro_be_shem_YHWH&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 15
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
 <div class="note">FROZEN 2026-08-01 (owner order &quot;freeze all commit&quot;; derived same day): fourteenth frozen unit — CAIN&#x27;S LINE AND SETH, the corpus&#x27;s first genealogy unit; fourth extension-free derivation in a row. Central findings, all DB-verified before drafting: the WANDERER BUILDS THE FIRST CITY (ir tokens 1-2 in one verse; the build verb a participle — never finished; the naming verb spent on the city, for the son; the first HUMAN WORLD install); the crafts offices founded by template (shape-identical trees at 4:20-21; avi as office formula, BROKEN for the smith; first tokens: tent, harp, the Torah&#x27;s only pipe, bronze whose next stop is the Tabernacle, iron whose next stop is a curse; the herd-word carrying Kayin&#x27;s own name-root); the FIRST HUMAN IMPERATIVES (every prior imperative is divine blessing) demanding a hearing for a kill-boast the machine holds as testimony, not event — and Onkelos NEGATES; QUOTE-DIFF #2: the sevenfold decree quoted VERBATIM and inflated x11 by a human mouth with no ratification (shivatayim&#x27;s whole Torah census is the decree and this echo) — flagged, never installed; the REPLACEMENT SEED named with 3:15&#x27;s SET-verb (the root&#x27;s only other Gen 1-10 token) while the mother names the murder and switches the divine name; and the close: AZ&#x27;s own first token, worship&#x27;s formula agentless under the begin/profane LEXICAL FORK — Onkelos votes the dark side; the letter holds both; the machine ends with one install, one flag, one open HUMAN demand, and the fork standing.</div><p class='meta'>Rendered 2026-08-01 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

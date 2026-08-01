@@ -12,6 +12,8 @@ h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
 .frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
 .tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
 .tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
 .note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
         padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
 table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
@@ -244,5 +246,72 @@ final state: WORLD=[&#x27;raqia&#x27;] (+1 presupposed) | REGISTRY={&#x27;raqia&
     PASS  upgrade WITH citation allowed  (cite=per-unit judgment (owner), TIR-028 resolution)
 
 ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_02_raqia_day.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_02_raqia_day — 1:6-8
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_02_raqia_day.yaml) is CANONICAL (Pre-Code); this
+# file is a derived, runnable rendering. Do not edit — regenerate. The
+# assertion block at the bottom is baked from the Stage D interpreter&#x27;s
+# actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Day two: firmament — build, divide, name; commit without test (1:6-8)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_02_raqia_day&quot;)
+
+# -------------------------- Gen.1.6 · DECLARE_TWO_MOOD_SPEC ----------------
+# va-yomer Elohim yehi raqia be-tokh ha-mayim vi-yhi mavdil bein mayim la-
+# mayim
+# &quot;And God said: &#x27;Let there be a firmament in the midst of the waters, and
+# let it divide the waters from the waters.&#x27;&quot;
+m.step(&quot;Gen.1.6&quot;)
+m.declare(&quot;Elohim&quot;, &quot;LET&quot;,
+          &quot;exists(raqia)&quot;)
+m.declare(&quot;Elohim&quot;, &quot;LET?&quot;,
+          &quot;mavdil(raqia, mayim|mayim)&quot;)
+m.invariant(&quot;mavdil(raqia, mayim|mayim)&quot;)
+m.presupposed(&quot;mayim&quot;)
+
+# -------------------------- Gen.1.7 · BUILD_DIVIDE_RESULT ------------------
+# va-ya&#x27;as Elohim et-ha-raqia va-yavdel bein ha-mayim asher mi-tachat la-
+# raqia u-vein ha-mayim asher me-al la-raqia va-yehi khen
+# &quot;And God made the firmament, and divided the waters which were under the
+# firmament from the waters which were above the firmament; and it was so.&quot;
+m.step(&quot;Gen.1.7&quot;)
+m.event(&quot;make&quot;, agent=&quot;Elohim&quot;, themes=[&quot;raqia&quot;])
+m.partition(&quot;mayim-under&quot;, &quot;mayim-over&quot;)
+m.result(&quot;exists(raqia)&quot;, tmark=&quot;t2&quot;)
+m.result(&quot;mavdil(raqia, mayim|mayim)&quot;, tmark=&quot;t2&quot;)
+
+# -------------------------- Gen.1.8 · NAME_AND_COMMIT_NO_TEST --------------
+# va-yiqra Elohim la-raqia shamayim va-yehi erev va-yehi voqer yom sheni
+# &quot;And God called the firmament Heaven. And there was evening and there was
+# morning, a second day.&quot;
+m.step(&quot;Gen.1.8&quot;)
+m.name(&quot;raqia&quot;, &quot;shamayim&quot;)
+m.commit(2, label_form=&quot;ordinal&quot;, label_translit=&quot;yom sheni&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == {&#x27;raqia&#x27;}
+    assert m.presupposed_set() == {&#x27;mayim&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {&#x27;raqia&#x27;: &#x27;shamayim&#x27;}
+    assert m.REGISTRY[&quot;writes&quot;] == 1
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS[&quot;log&quot;]) == 2
+    assert sorted(m.LEDGER) == [2]
+    assert m.flag_counts() == {&#x27;read_before_install&#x27;: 1, &#x27;commit_without_test&#x27;: 1}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([])
+    assert m.WORLD[&quot;invariants&quot;] == [&#x27;mavdil(raqia, mayim|mayim)&#x27;]
+    assert m.WORLD[&quot;partitions&quot;] == [(&#x27;mayim-under&#x27;, &#x27;mayim-over&#x27;)]
+    assert len(m.EVENTS) == 7
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
 <div class="note">FROZEN 2026-07-30 (owner approved; LET? on vi-yhi mavdil RETAINED by owner decision): second logic-derived unit, first derived after the interpreter existed. Central finding: day 2 commits without a test — the machine flags it (S6 on real text), and three verified Oral voices address it by name. Not binding religious law.</div><p class='meta'>Rendered 2026-08-01 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

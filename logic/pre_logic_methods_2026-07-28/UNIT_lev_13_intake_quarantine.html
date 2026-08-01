@@ -12,6 +12,8 @@ h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
 .frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
 .tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
 .tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
 .note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
         padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
 table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
@@ -523,5 +525,123 @@ final state: WORLD=[] (+5 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER day
     PASS  pattern deviation FLAGGED  (flags=[&#x27;commit_without_test&#x27;])
 
 ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/lev_13_intake_quarantine.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# lev_13_intake_quarantine — 13:1-8
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/lev_13_intake_quarantine.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;The skin-mark intake: case, handlers, quarantine loop (Lev 13:1-8) — first law unit&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;lev_13_intake_quarantine&quot;)
+
+# -------------------------- Lev.13.1 · FRAME_SPEECH ------------------------
+# va-yedabber YHWH el-Moshe ve-el-Aharon le-mor
+# &quot;And the LORD spoke unto Moses and unto Aaron, saying:&quot;
+m.step(&quot;Lev.13.1&quot;)
+m.event(&quot;speak&quot;, agent=&quot;YHWH&quot;)
+m.presupposed(&quot;moshe&quot;, &quot;aharon&quot;)
+
+# -------------------------- Lev.13.2 · CASE_INTAKE -------------------------
+# adam ki-yihyeh ve-or-besaro se&#x27;et o-sapachat o vaheret ve-hayah ve-or-
+# besaro le-nega tzara&#x27;at ve-huva el-Aharon ha-kohen o el-achad mi-banav ha-
+# kohanim
+# &quot;When a man shall have in the skin of his flesh a rising, or a scab, or a
+# bright spot, and it become in the skin of his flesh the plague of leprosy,
+# then he shall be brought unto Aaron the priest, or unto one of his sons
+# the priests.&quot;
+m.step(&quot;Lev.13.2&quot;)
+m.case(&quot;adam, mark_in_or_basar(seet_o_sapachat_o_baheret) -&gt; nega_tzaraat&quot;, &quot;hova_el_ha_kohen&quot;)
+m.presupposed(&quot;adam&quot;, &quot;or_basar&quot;, &quot;ha_kohen&quot;)
+
+# -------------------------- Lev.13.3 · HANDLER_VERDICT_TAMEI ---------------
+# ve-ra&#x27;ah ha-kohen et-ha-nega be-or ha-basar ve-se&#x27;ar ba-nega hafakh lavan
+# u-mar&#x27;eh ha-nega amok me-or besaro nega tzara&#x27;at hu ve-ra&#x27;ahu ha-kohen ve-
+# timme oto
+# &quot;And the priest shall look upon the plague in the skin of the flesh; and
+# if the hair in the plague be turned white, and the appearance of the
+# plague be deeper than the skin of his flesh, it is the plague of leprosy;
+# and the priest shall look on him, and pronounce him unclean.&quot;
+m.step(&quot;Lev.13.3&quot;)
+m.handler(&quot;sear_hafakh_lavan ∧ mareh_amok_me_or&quot;,
+          &quot;classify(nega_tzaraat_hu) ∧ timme(status_tamei)&quot;)
+
+# -------------------------- Lev.13.4 · HANDLER_CONFINE_FIRST ---------------
+# ve-im-baheret levanah hi ve-or besaro ve-amok ein-mar&#x27;eha min-ha-or
+# u-se&#x27;arah lo-hafakh lavan ve-hisgir ha-kohen et-ha-nega shivat yamim
+# &quot;And if the bright spot be white in the skin of his flesh, and the
+# appearance thereof be not deeper than the skin, and the hair thereof be
+# not turned white, then the priest shall shut up him that hath the plague
+# seven days.&quot;
+m.step(&quot;Lev.13.4&quot;)
+m.handler(&quot;baheret_levanah ∧ ein_amok_mareha ∧ lo_hafakh_lavan&quot;,
+          &quot;hisgir(et_ha_nega, shivat_yamim)&quot;)
+
+# -------------------------- Lev.13.5 · HANDLER_RECHECK_CONFINE_SECOND ------
+# ve-ra&#x27;ahu ha-kohen ba-yom ha-shevi&#x27;i ve-hineh ha-nega amad be-einav lo-
+# fasah ha-nega ba-or ve-hisgiro ha-kohen shivat yamim shenit
+# &quot;And the priest shall look on him the seventh day; and, behold, if the
+# plague stay in its appearance, and the plague be not spread in the skin,
+# then the priest shall shut him up seven days more.&quot;
+m.step(&quot;Lev.13.5&quot;)
+m.handler(&quot;ba_yom_ha_shevii ∧ amad_be_einav ∧ lo_fasah&quot;,
+          &quot;hisgiro(shivat_yamim_shenit)&quot;)
+
+# -------------------------- Lev.13.6 · HANDLER_RELEASE ---------------------
+# ve-ra&#x27;ah ha-kohen oto ba-yom ha-shevi&#x27;i shenit ve-hineh kehah ha-nega ve-
+# lo-fasah ha-nega ba-or ve-tiharo ha-kohen mispachat hi ve-khibbes begadav
+# ve-taher
+# &quot;And the priest shall look on him again the seventh day; and, behold, if
+# the plague be dim, and the plague be not spread in the skin, then the
+# priest shall pronounce him clean: it is a scab; and he shall wash his
+# clothes, and be clean.&quot;
+m.step(&quot;Lev.13.6&quot;)
+m.handler(&quot;ba_yom_ha_shevii_shenit ∧ kehah ∧ lo_fasah&quot;,
+          &quot;tiharo(status_tahor) ∧ classify(mispachat_hi) ∧ kibbes_begadav ∧ taher&quot;)
+
+# -------------------------- Lev.13.7 · HANDLER_REOPEN_TRIGGER --------------
+# ve-im-pasoh tifseh ha-mispachat ba-or acharei hera&#x27;oto el-ha-kohen le-
+# tohorato ve-nir&#x27;ah shenit el-ha-kohen
+# &quot;But if the scab spread abroad in the skin, after that he hath shown
+# himself to the priest for his cleansing, he shall show himself to the
+# priest again.&quot;
+m.step(&quot;Lev.13.7&quot;)
+m.handler(&quot;pasoh_tifseh(acharei_heraoto_le_tohorato)&quot;,
+          &quot;nirah_shenit_el_ha_kohen&quot;)
+
+# -------------------------- Lev.13.8 · HANDLER_REOPEN_VERDICT --------------
+# ve-ra&#x27;ah ha-kohen ve-hineh pastah ha-mispachat ba-or ve-timme&#x27;o ha-kohen
+# tzara&#x27;at hi
+# &quot;And the priest shall look, and, behold, the scab is spread in the skin;
+# then the priest shall pronounce him unclean: it is leprosy.&quot;
+m.step(&quot;Lev.13.8&quot;)
+m.handler(&quot;hineh_pastah_ha_mispachat&quot;,
+          &quot;timmeo(status_tamei) ∧ classify(tzaraat_hi)&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == {&#x27;or_basar&#x27;, &#x27;moshe&#x27;, &#x27;adam&#x27;, &#x27;aharon&#x27;, &#x27;ha_kohen&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS[&quot;log&quot;]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;read_before_install&#x27;: 5}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;case: adam, mark_in_or_basar(seet_o_sapachat_o_baheret) -&gt; nega_tzaraat -&gt; hova_el_ha_kohen&#x27;, &#x27;handler: IF(sear_hafakh_lavan ∧ mareh_amok_me_or) THEN(classify(nega_tzaraat_hu) ∧ timme(status_tamei))&#x27;, &#x27;handler: IF(baheret_levanah ∧ ein_amok_mareha ∧ lo_hafakh_lavan) THEN(hisgir(et_ha_nega, shivat_yamim))&#x27;, &#x27;handler: IF(ba_yom_ha_shevii ∧ amad_be_einav ∧ lo_fasah) THEN(hisgiro(shivat_yamim_shenit))&#x27;, &#x27;handler: IF(ba_yom_ha_shevii_shenit ∧ kehah ∧ lo_fasah) THEN(tiharo(status_tahor) ∧ classify(mispachat_hi) ∧ kibbes_begadav ∧ taher)&#x27;, &#x27;handler: IF(pasoh_tifseh(acharei_heraoto_le_tohorato)) THEN(nirah_shenit_el_ha_kohen)&#x27;, &#x27;handler: IF(hineh_pastah_ha_mispachat) THEN(timmeo(status_tamei) ∧ classify(tzaraat_hi))&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 8
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
 <div class="note">FROZEN 2026-08-01 (owner approved, &quot;freeze lev 13&quot;; interpreter gained the CASE/HANDLER law-genre operators at freeze): eighth logic-derived unit and the FIRST LAW UNIT — the pilot the owner chose after the seven days closed. Central findings: the genre parses exactly as the learning pass predicted — one narrative frame verb, then installed code: a ki-case with a three-class intake filter and passive routing, six weqatal handlers (verdict, confine, recheck-confine, release, armed reopen trigger, reopen verdict), predicates as perfects under lo/ein negation, the infinitive-absolute doubling on the overturn branch, and the declare/become minimal pair (piel/qal) inside the release verse. The etnachta brackets condition|action in all seven law verses. The quarantine loop runs on the frozen week&#x27;s clock (shivat yamim; re-entry BA-YOM HA-SHEVI&#x27;I) with a bounded second iteration (shenit). Onkelos fuses disease and procedure (tzara&#x27;at -&gt; segiru, &#x27;the shutting-disease&#x27;). The machine ends with SEVEN standing law facts and every other register untouched: no demand, no test, no name, no ledger row — installed code, armed, unexecuted. Narrative (ASK FIRST) and triage await owner order; the triage is the middot detector&#x27;s legal-device tripwire test. Not binding religious law.</div><p class='meta'>Rendered 2026-08-01 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

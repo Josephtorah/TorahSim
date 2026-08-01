@@ -1,0 +1,143 @@
+#!/usr/bin/env python3
+# =============================================================================
+# gen_06_land_adam_dominion — 1:24-31
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_06_land_adam_dominion.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter's actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+"""Day six: land classes, the adam, dominion — receipts return, the council plural, bara tripled, the five-imperative blessing, the food grants, THE sixth day (1:24-31)"""
+from machine import Machine
+
+m = Machine("gen_06_land_adam_dominion")
+
+# -------------------------- Gen.1.24 · DECLARE_SPEC_LAND_CLASSES_RECEIPT ---
+# va-yomer Elohim totze ha-aretz nefesh chaya le-minah behemah va-remes ve-
+# chayto-eretz le-minah va-yehi khen
+# "And God said: 'Let the earth bring forth the living creature after its
+# kind, cattle, and creeping thing, and beast of the earth after its kind.'
+# And it was so."
+m.step("Gen.1.24")
+m.declare("Elohim", "LET",
+          "totze(aretz), product=nefesh_chaya_le_minah")
+m.triple("totze(aretz), product=nefesh_chaya_le_minah")
+m.result("totze(aretz), product=nefesh_chaya_le_minah", tmark="t1")
+m.presupposed("aretz")
+
+# -------------------------- Gen.1.25 · BUILD_DELTA_TEST --------------------
+# va-ya'as Elohim et-chayat ha-aretz le-minah ve-et ha-behemah le-minah ve-
+# et kol-remes ha-adamah le-minehu va-yar Elohim ki-tov
+# "And God made the beast of the earth after its kind, and the cattle after
+# their kind, and every thing that creepeth upon the ground after its kind;
+# and God saw that it was good."
+m.step("Gen.1.25")
+m.event("make", agent="Elohim", themes=["chayat_ha_aretz", "behemah", "remes_ha_adamah"])
+m.install("chayat_ha_aretz", "behemah", "remes_ha_adamah")
+m.spec_delta("totze HA-ARETZ (the earth as delegated producer)",
+             "va-ya")
+m.spec_delta("behemah, remes, chayto-eretz (archaic construct, bare eretz)",
+             "CHAYAT HA-ARETZ first (normalized construct + definite article), ha-behemah, remes")
+m.spec_delta("remes (bare)",
+             "KOL-remes HA-ADAMAH (totality quantifier + substrate shift to the ground)")
+m.test("PASS", "tov", "nefesh_chaya")
+
+# -------------------------- Gen.1.26 · DECLARE_SPEC_ADAM_COUNCIL -----------
+# va-yomer Elohim na'aseh adam be-tzalmenu ki-dmutenu ve-yirdu bi-dgat ha-
+# yam u-ve-of ha-shamayim u-va-behemah u-ve-khol ha-aretz u-ve-khol ha-remes
+# ha-romes al-ha-aretz
+# "And God said: 'Let us make man in our image, after our likeness; and let
+# them have dominion over the fish of the sea, and over the fowl of the air,
+# and over the cattle, and over all the earth, and over every creeping thing
+# that creepeth upon the earth.'"
+m.step("Gen.1.26")
+m.declare("Elohim", "CMD-US?",
+          "make(adam), spec=b_tzelem_k_demut")
+m.triple("rule(adam, dagah_of_behemah_aretz_remes)")
+m.presupposed("dagat_ha_yam", "of_ha_shamayim")
+
+# -------------------------- Gen.1.27 · BUILD_BARA_TRIPLED ------------------
+# va-yivra Elohim et-ha-adam be-tzalmo be-tzelem Elohim bara oto zakhar
+# u-nekevah bara otam
+# "And God created man in His own image, in the image of God created He him;
+# male and female created He them."
+m.step("Gen.1.27")
+m.event("create", agent="Elohim", themes=["ha_adam"])
+m.install("ha_adam")
+m.result("make(adam), spec=b_tzelem_k_demut", tmark="t2")
+m.spec_delta("na'aseh (asah — the making verb, 1cp)",
+             "bara x3 (creation")
+m.spec_delta("be-tzalmeNU ki-dmuteNU (OUR image, OUR likeness — plural possessor)",
+             "be-tzalmO (HIS image) + be-tzelem ELOHIM (the image of God, named singular)")
+m.spec_delta("tzelem AND demut (image and likeness, two nouns)",
+             "tzelem only, x3 — demut DROPPED")
+m.spec_delta("adam (unsexed species noun)",
+             "zakhar u-nekevah (male and female) + oto -> otam (created HIM -> created THEM)")
+
+# -------------------------- Gen.1.28 · BLESS_MANDATE_DOMINION --------------
+# va-yevarekh otam Elohim va-yomer lahem Elohim peru u-revu u-milu et-ha-
+# aretz ve-khivshuha u-redu bi-dgat ha-yam u-ve-of ha-shamayim u-ve-khol
+# chaya ha-romeset al-ha-aretz
+# "And God blessed them; and God said unto them: 'Be fruitful, and multiply,
+# and replenish the earth, and subdue it; and have dominion over the fish of
+# the sea, and over the fowl of the air, and over every living thing that
+# creepeth upon the earth.'"
+m.step("Gen.1.28")
+m.bless("Elohim", "otam", mandate=["CMD!(peru)", "CMD!(revu)", "CMD!(milu(et_ha_aretz))", "CMD!(kivshuha)", "CMD!(redu(ba_dagah_u_va_of_u_ve_khol_chaya_romeset))"])
+m.spec_delta("design: yirdu over 5 domains (incl. behemah + KOL HA-ARETZ as dominion domains)",
+             "mandate: redu over 3 domains — behemah dropped, remes -> KOL CHAYAH romeset, and the earth MOVED from dominion-domain to fill-and-subdue OBJECT")
+m.spec_delta("design verbs: radah only (rule)",
+             "kavash ADDED (subdue) — a verb absent from every spec clause of the week")
+
+# -------------------------- Gen.1.29 · GRANT_FOOD_ADAM ---------------------
+# va-yomer Elohim hineh natati lakhem et-kol-esev zorea zera asher al-pnei
+# khol-ha-aretz ve-et-kol-ha-etz asher-bo fri-etz zorea zara lakhem yihyeh
+# le-okhlah
+# "And God said: 'Behold, I have given you every herb yielding seed, which
+# is upon the face of all the earth, and every tree, in which is the fruit
+# of a tree yielding seed — to you it shall be for food;'"
+m.step("Gen.1.29")
+m.event("grant", agent="Elohim", themes=["kol_zorea_zera"])
+m.presupposed("kol_zorea_zera")
+m.assign("kol_zorea_zera", "okhlah_la_adam")
+m.declare("Elohim", "LET?",
+          "yihyeh(kol_zorea_zera, le_okhlah)")
+
+# -------------------------- Gen.1.30 · GRANT_FOOD_ANIMALS_RECEIPT ----------
+# u-le-khol chayat ha-aretz u-le-khol of ha-shamayim u-le-khol romes al-ha-
+# aretz asher-bo nefesh chaya et-kol-yerek esev le-okhlah va-yehi khen
+# "'and to every beast of the earth, and to every fowl of the air, and to
+# every thing that creepeth upon the earth, wherein there is a living soul,
+# [I have given] every green herb for food.' And it was so."
+m.step("Gen.1.30")
+m.presupposed("kol_yerek_esev")
+m.assign("kol_yerek_esev", "okhlah_le_chol_nefesh_chaya")
+m.result("yihyeh(kol_zorea_zera, le_okhlah)", tmark="t3")
+
+# -------------------------- Gen.1.31 · TEST_GLOBAL_COMMIT ------------------
+# va-yar Elohim et-kol-asher asah ve-hineh-tov me'od va-yehi erev va-yehi
+# voker yom ha-shishi
+# "And God saw every thing that He had made, and, behold, it was very good.
+# And there was evening and there was morning, the sixth day."
+m.step("Gen.1.31")
+m.test("PASS", "tov_meod", "kol_asher_asah")
+m.commit(6, label_form="ordinal", label_translit="yom ha-shishi")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == {'remes_ha_adamah', 'ha_adam', 'chayat_ha_aretz', 'behemah'}
+    assert m.presupposed_set() == {'kol_zorea_zera', 'kol_yerek_esev', 'aretz', 'of_ha_shamayim', 'dagat_ha_yam'}
+    assert m.REGISTRY["names"] == {'kol_zorea_zera': 'okhlah_la_adam', 'kol_yerek_esev': 'okhlah_le_chol_nefesh_chaya'}
+    assert m.REGISTRY["writes"] == 2
+    assert m.tests_list() == [('PASS', 'tov', 'nefesh_chaya'), ('PASS', 'tov_meod', 'kol_asher_asah')]
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 3
+    assert sorted(m.LEDGER) == [6]
+    assert m.flag_counts() == {'read_before_install': 5, 'spec_delta': 9}
+    assert sorted(m.WORLD["facts"]) == sorted(['mandate: CMD!(peru)', 'mandate: CMD!(revu)', 'mandate: CMD!(milu(et_ha_aretz))', 'mandate: CMD!(kivshuha)', 'mandate: CMD!(redu(ba_dagah_u_va_of_u_ve_khol_chaya_romeset))'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 12
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

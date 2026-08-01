@@ -12,6 +12,8 @@ h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
 .frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
 .tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
 .tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
 .note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
         padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
 table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
@@ -327,5 +329,88 @@ final state: WORLD=[&#x27;nefesh_chaya_romeset&#x27;, &#x27;of_kanaf&#x27;, &#x2
     PASS  pattern deviation FLAGGED  (flags=[&#x27;commit_without_test&#x27;])
 
 ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_05_swarms_blessing.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_05_swarms_blessing — 1:20-23
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_05_swarms_blessing.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Day five: swarms and the blessing — LET? demands, missing receipt, bara returns, first life, first blessing (1:20-23)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_05_swarms_blessing&quot;)
+
+# -------------------------- Gen.1.20 · DECLARE_SPEC_SWARM_FLIGHT -----------
+# va-yomer Elohim yishretzu ha-mayim sheretz nefesh chaya ve-of ye&#x27;ofef al-
+# ha-aretz al-pnei reqia ha-shamayim
+# &quot;And God said: &#x27;Let the waters swarm with swarms of living creatures, and
+# let fowl fly above the earth in the open firmament of heaven.&#x27;&quot;
+m.step(&quot;Gen.1.20&quot;)
+m.declare(&quot;Elohim&quot;, &quot;LET?&quot;,
+          &quot;swarm(mayim), product=sheretz_nefesh_chaya&quot;)
+m.declare(&quot;Elohim&quot;, &quot;LET?&quot;,
+          &quot;fly(of), loc=pnei_raqia_ha_shamayim&quot;)
+m.triple(&quot;swarm(mayim), product=sheretz_nefesh_chaya&quot;)
+m.presupposed(&quot;mayim&quot;, &quot;aretz&quot;, &quot;raqia&quot;, &quot;shamayim&quot;)
+
+# -------------------------- Gen.1.21 · BUILD_CREATE_CREDIT_DELTA_TEST ------
+# va-yivra Elohim et-ha-taninim ha-gedolim ve-et kol-nefesh ha-chaya ha-
+# romeset asher shartzu ha-mayim le-minehem ve-et kol-of kanaf le-minehu va-
+# yar Elohim ki-tov
+# &quot;And God created the great sea-monsters, and every living creature that
+# creepeth, wherewith the waters swarmed, after its kind, and every winged
+# fowl after its kind; and God saw that it was good.&quot;
+m.step(&quot;Gen.1.21&quot;)
+m.event(&quot;create&quot;, agent=&quot;Elohim&quot;, themes=[&quot;taninim&quot;, &quot;nefesh_chaya_romeset&quot;, &quot;of_kanaf&quot;])
+m.install(&quot;taninim&quot;, &quot;nefesh_chaya_romeset&quot;, &quot;of_kanaf&quot;)
+m.result(&quot;swarm(mayim), product=sheretz_nefesh_chaya&quot;, tmark=&quot;t1&quot;)
+m.result(&quot;fly(of), loc=pnei_raqia_ha_shamayim&quot;, tmark=&quot;t1&quot;)
+m.spec_delta(&quot;yishretzu HA-MAYIM (the waters as delegated producer)&quot;,
+             &quot;va-yivra ELOHIM (bara — God executes; the waters credited only in the relative clause)&quot;)
+m.spec_delta(&quot;no taninim in the order&quot;,
+             &quot;et-ha-taninim ha-gedolim leading the inventory, with the week&quot;)
+m.spec_delta(&quot;sheretz nefesh chaya; of (bare classes)&quot;,
+             &quot;kol- totality x2, kind-keys le-minehem / le-minehu, of differentiated as of KANAF&quot;)
+m.test(&quot;PASS&quot;, &quot;tov&quot;, &quot;nefesh_chaya&quot;)
+
+# -------------------------- Gen.1.22 · BLESS_MANDATE -----------------------
+# va-yevarekh otam Elohim le-mor peru u-revu u-milu et-ha-mayim ba-yamim ve-
+# ha-of yirev ba-aretz
+# &quot;And God blessed them, saying: &#x27;Be fruitful, and multiply, and fill the
+# waters in the seas, and let fowl multiply in the earth.&#x27;&quot;
+m.step(&quot;Gen.1.22&quot;)
+m.bless(&quot;Elohim&quot;, &quot;otam&quot;, mandate=[&quot;CMD!(peru)&quot;, &quot;CMD!(revu)&quot;, &quot;CMD!(milu(et_ha_mayim_ba_yamim))&quot;, &quot;LET(yirev(ha_of_ba_aretz))&quot;])
+m.presupposed(&quot;yamim&quot;)
+
+# -------------------------- Gen.1.23 · COMMIT_DAY --------------------------
+# va-yehi erev va-yehi voqer yom chamishi
+# &quot;And there was evening and there was morning, a fifth day.&quot;
+m.step(&quot;Gen.1.23&quot;)
+m.commit(5, label_form=&quot;ordinal&quot;, label_translit=&quot;yom chamishi&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == {&#x27;taninim&#x27;, &#x27;nefesh_chaya_romeset&#x27;, &#x27;of_kanaf&#x27;}
+    assert m.presupposed_set() == {&#x27;mayim&#x27;, &#x27;shamayim&#x27;, &#x27;aretz&#x27;, &#x27;yamim&#x27;, &#x27;raqia&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == [(&#x27;PASS&#x27;, &#x27;tov&#x27;, &#x27;nefesh_chaya&#x27;)]
+    assert m.open_demands() == []
+    assert len(m.SPECS[&quot;log&quot;]) == 2
+    assert sorted(m.LEDGER) == [5]
+    assert m.flag_counts() == {&#x27;read_before_install&#x27;: 5, &#x27;spec_delta&#x27;: 3}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;mandate: CMD!(peru)&#x27;, &#x27;mandate: CMD!(revu)&#x27;, &#x27;mandate: CMD!(milu(et_ha_mayim_ba_yamim))&#x27;, &#x27;mandate: LET(yirev(ha_of_ba_aretz))&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 6
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
 <div class="note">FROZEN 2026-07-30 (owner approved): fifth logic-derived unit, second under the calibrated coverage protocol. Central findings: TWO live LET? demands (the interpreter&#x27;s own S7 rehearsal example made real); the week&#x27;s only missing receipt token (no va-yehi khen, MT and Onkelos), receipt work relocated into the delivery&#x27;s relative clause; bara returning for the corpus&#x27;s first LIVING entities with the unordered great taninim leading; the delegation answered by direct divine creation with the delegate credited (dual agency — Onkelos resolves via the causative archishu); the first BLESSING with the corpus&#x27;s first second-person imperatives and a mood-split, rationed mandate recorded as standing WORLD facts (new op BLESS — interpreter extension at freeze, ASSIGN precedent); zero REGISTRY writes; the defective taninim ktiv verified from own letter data. Not binding religious law.</div><p class='meta'>Rendered 2026-08-01 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

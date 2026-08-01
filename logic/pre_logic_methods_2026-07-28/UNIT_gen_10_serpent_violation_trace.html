@@ -12,6 +12,8 @@ h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
 .frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
 .tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
 .tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
 .note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
         padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
 table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
@@ -726,5 +728,176 @@ final state: WORLD=[&#x27;chagorot&#x27;] (+5 presupposed) | REGISTRY={} | TESTS
     PASS  pattern deviation FLAGGED  (flags=[&#x27;commit_without_test&#x27;])
 
 ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_10_serpent_violation_trace.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_10_serpent_violation_trace — 3:1-13
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_10_serpent_violation_trace.yaml) is CANONICAL
+# (Pre-Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Eden III: the serpent, the misquoted rule, the eating, the interrogation (3:1-13)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_10_serpent_violation_trace&quot;)
+
+# -------------------------- Gen.3.1 · SERPENT_ONSET_INVERTED_QUOTE ---------
+# ve-ha-nachash hayah arum mi-kol chayat ha-sadeh asher asah YHWH Elohim va-
+# yomer el-ha-ishah af ki-amar Elohim lo tokhlu mi-kol etz ha-gan
+# &quot;Now the serpent was more subtle than any beast of the field which the
+# LORD God had made. And he said unto the woman: &#x27;Yea, hath God said: Ye
+# shall not eat of any tree of the garden?&#x27;&quot;
+m.step(&quot;Gen.3.1&quot;)
+m.fact(&quot;arum(nachash)&quot;,
+       &quot;asah_YHWH_Elohim(nachash)&quot;)
+m.presupposed(&quot;nachash&quot;, &quot;ishah&quot;, &quot;gan&quot;)
+m.event(&quot;say&quot;, agent=&quot;nachash&quot;, themes=[&quot;ishah&quot;])
+m.spec_delta(&quot;akhol tokhel mi-kol etz ha-gan + one exclusion (gen_08 2:16-17: permission over ALL, prohibition on ONE)&quot;,
+             &quot;lo tokhlu mi-kol etz ha-gan (the serpent: negation over ALL — the scope INVERTED, and the addressee pluralized 2ms-&gt;2mp)&quot;)
+m.spec_delta(&quot;YHWH_Elohim (the rule&#x27;s issuer, gen_08 2:16 — the Eden-exclusive compound)&quot;,
+             &quot;Elohim (the serpent&quot;)
+
+# -------------------------- Gen.3.2 · WOMAN_PERMISSION_REDUCED -------------
+# va-tomer ha-ishah el-ha-nachash mi-peri etz-ha-gan nokhel
+# &quot;And the woman said unto the serpent: &#x27;Of the fruit of the trees of the
+# garden we may eat.&#x27;&quot;
+m.step(&quot;Gen.3.2&quot;)
+m.event(&quot;say&quot;, agent=&quot;ishah&quot;, themes=[&quot;nachash&quot;])
+m.spec_delta(&quot;mi-KOL etz ha-gan AKHOL TOKHEL (gen_08 2:16: from ALL, with the emphatic doubling — the corpus first doubling)&quot;,
+             &quot;mi-peri etz-ha-gan nokhel (the woman: no mi-kol, no doubling — from the fruit of the garden trees we may eat)&quot;)
+
+# -------------------------- Gen.3.3 · WOMAN_FENCE_AND_SOFTENED_PENALTY -----
+# u-mi-peri ha-etz asher be-tokh-ha-gan amar Elohim lo tokhlu mimenu ve-lo
+# tigu bo pen-temutun
+# &quot;&#x27;But of the fruit of the tree which is in the midst of the garden, God
+# hath said: Ye shall not eat of it, neither shall ye touch it, lest ye
+# die.&#x27;&quot;
+m.step(&quot;Gen.3.3&quot;)
+m.presupposed(&quot;ha_etz&quot;)
+m.spec_delta(&quot;me-etz ha-daat tov va-ra (gen_08 2:17: the tree named by its knowledge; located nowhere)&quot;,
+             &quot;ha-etz asher be-tokh ha-gan (the woman: the tree IN THE MIDST — the address 2:9 states for the tree of LIFE)&quot;)
+m.spec_delta(&quot;lo tokhal mimenu (gen_08 2:17: eating prohibited — nothing else)&quot;,
+             &quot;lo tokhlu mimenu VE-LO TIGU BO (eating AND TOUCHING prohibited — a fence added to the rule)&quot;)
+m.spec_delta(&quot;ki be-yom akholkha mimenu mot tamut (gen_08 2:17: certainty ON THE DAY, with the death-doubling)&quot;,
+             &quot;pen-temutun (the woman: LEST you die — risk for certainty, no doubling, no day-clock)&quot;)
+
+# -------------------------- Gen.3.4 · SERPENT_CONTRADICTION ----------------
+# va-yomer ha-nachash el-ha-ishah lo-mot temutun
+# &quot;And the serpent said unto the woman: &#x27;Ye shall not surely die.&#x27;&quot;
+m.step(&quot;Gen.3.4&quot;)
+m.event(&quot;say&quot;, agent=&quot;nachash&quot;, themes=[&quot;ishah&quot;])
+m.spec_delta(&quot;mot tamut (gen_08 2:17: the penalty, doubled — the emphatic device the woman had dropped)&quot;,
+             &quot;LO-mot temutun (the serpent: the doubling RESTORED in order to be NEGATED — the corpus first direct contradiction of a divine word)&quot;)
+
+# -------------------------- Gen.3.5 · SERPENT_COUNTER_THEORY ---------------
+# ki yodea Elohim ki be-yom akholkhem mimenu ve-nifqechu eineikhem vi-
+# heyitem ke-Elohim yodei tov va-ra
+# &quot;&#x27;For God doth know that in the day ye eat thereof, then your eyes shall
+# be opened, and ye shall be as God, knowing good and evil.&#x27;&quot;
+m.step(&quot;Gen.3.5&quot;)
+m.event(&quot;claim&quot;, agent=&quot;nachash&quot;, themes=[&quot;nifqechu_eineikhem&quot;, &quot;ke_Elohim&quot;])
+
+# -------------------------- Gen.3.6 · CREATURE_TEST_AND_TRIGGER ------------
+# va-tere ha-ishah ki tov ha-etz le-maakhal ve-khi taavah-hu la-einayim ve-
+# nechmad ha-etz le-haskil va-tiqach mi-piryo va-tokhal va-titen gam-le-
+# ishah imah va-yokhal
+# &quot;And when the woman saw that the tree was good for food, and that it was a
+# delight to the eyes, and that the tree was to be desired to make one wise,
+# she took of the fruit thereof, and did eat; and she gave also unto her
+# husband with her, and he did eat.&quot;
+m.step(&quot;Gen.3.6&quot;)
+m.test(&quot;PASS&quot;, &quot;tov&quot;, &quot;ha_etz_le_maakhal&quot;)
+m.event(&quot;take&quot;, agent=&quot;ishah&quot;, themes=[&quot;pri&quot;])
+m.event(&quot;eat&quot;, agent=&quot;ishah&quot;, themes=[&quot;pri&quot;])
+m.event(&quot;give&quot;, agent=&quot;ishah&quot;, themes=[&quot;adam&quot;])
+m.event(&quot;eat&quot;, agent=&quot;adam&quot;, themes=[&quot;pri&quot;])
+m.presupposed(&quot;adam&quot;)
+
+# -------------------------- Gen.3.7 · EYES_OPEN_FIRST_MANUFACTURE ----------
+# va-tipakachnah einei shneihem va-yedu ki eirummim hem va-yitperu aleh
+# te&#x27;enah va-ya&#x27;asu lahem chagorot
+# &quot;And the eyes of them both were opened, and they knew that they were
+# naked; and they sewed fig-leaves together, and made themselves girdles.&quot;
+m.step(&quot;Gen.3.7&quot;)
+m.event(&quot;open_eyes&quot;, themes=[&quot;einei_shneihem&quot;])
+m.event(&quot;know&quot;, agent=&quot;shneihem&quot;, themes=[&quot;eirummim&quot;])
+m.event(&quot;make&quot;, agent=&quot;shneihem&quot;, themes=[&quot;chagorot&quot;])
+m.install(&quot;chagorot&quot;)
+
+# -------------------------- Gen.3.8 · VOICE_AND_HIDING ---------------------
+# va-yishme&#x27;u et-qol YHWH Elohim mithalekh ba-gan le-ruach ha-yom va-
+# yitchabe ha-adam ve-ishto mi-penei YHWH Elohim be-tokh etz ha-gan
+# &quot;And they heard the voice of the LORD God walking in the garden toward the
+# cool of the day; and the man and his wife hid themselves from the presence
+# of the LORD God amongst the trees of the garden.&quot;
+m.step(&quot;Gen.3.8&quot;)
+m.event(&quot;hear&quot;, agent=&quot;shneihem&quot;, themes=[&quot;qol_YHWH_Elohim&quot;])
+m.event(&quot;hide&quot;, agent=&quot;shneihem&quot;, themes=[&quot;be_tokh_etz_ha_gan&quot;])
+
+# -------------------------- Gen.3.9 · FIRST_QUESTION -----------------------
+# va-yiqra YHWH Elohim el-ha-adam va-yomer lo ayeka
+# &quot;And the LORD God called unto the man, and said unto him: &#x27;Where art
+# thou?&#x27;&quot;
+m.step(&quot;Gen.3.9&quot;)
+m.event(&quot;call&quot;, agent=&quot;YHWH_Elohim&quot;, themes=[&quot;adam&quot;])
+m.event(&quot;ask&quot;, agent=&quot;YHWH_Elohim&quot;, themes=[&quot;ayeka&quot;])
+
+# -------------------------- Gen.3.10 · TESTIMONY_FEAR ----------------------
+# va-yomer et-qolkha shamati ba-gan va-ira ki-erom anokhi va-echave
+# &quot;And he said: &#x27;I heard Thy voice in the garden, and I was afraid, because
+# I was naked; and I hid myself.&#x27;&quot;
+m.step(&quot;Gen.3.10&quot;)
+m.event(&quot;say&quot;, agent=&quot;adam&quot;, themes=[&quot;YHWH_Elohim&quot;])
+m.fact(&quot;testimony_feared_naked_hid(adam)&quot;)
+
+# -------------------------- Gen.3.11 · RULE_QUOTED_BACK --------------------
+# va-yomer mi higid lekha ki erom atah ha-min-ha-etz asher tzivitikha le-
+# vilti akhol-mimenu akhalta
+# &quot;And He said: &#x27;Who told thee that thou wast naked? Hast thou eaten of the
+# tree, whereof I commanded thee that thou shouldest not eat?&#x27;&quot;
+m.step(&quot;Gen.3.11&quot;)
+m.event(&quot;ask&quot;, agent=&quot;YHWH_Elohim&quot;, themes=[&quot;mi_higid&quot;, &quot;akhalta&quot;])
+
+# -------------------------- Gen.3.12 · BLAME_CHAIN_ADMISSION_1 -------------
+# va-yomer ha-adam ha-ishah asher natatah imadi hiv natnah-li min-ha-etz va-
+# okhel
+# &quot;And the man said: &#x27;The woman whom Thou gavest to be with me, she gave me
+# of the tree, and I did eat.&#x27;&quot;
+m.step(&quot;Gen.3.12&quot;)
+m.event(&quot;say&quot;, agent=&quot;adam&quot;, themes=[&quot;ishah&quot;])
+m.fact(&quot;admission_va_okhel(adam)&quot;)
+
+# -------------------------- Gen.3.13 · ADMISSION_2_HAPAX_DECEIT ------------
+# va-yomer YHWH Elohim la-ishah mah-zot asit va-tomer ha-ishah ha-nachash
+# hishiani va-okhel
+# &quot;And the LORD God said unto the woman: &#x27;What is this thou hast done?&#x27; And
+# the woman said: &#x27;The serpent beguiled me, and I did eat.&#x27;&quot;
+m.step(&quot;Gen.3.13&quot;)
+m.event(&quot;ask&quot;, agent=&quot;YHWH_Elohim&quot;, themes=[&quot;ishah&quot;])
+m.event(&quot;say&quot;, agent=&quot;ishah&quot;, themes=[&quot;nachash&quot;])
+m.fact(&quot;admission_va_okhel(ishah)&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == {&#x27;chagorot&#x27;}
+    assert m.presupposed_set() == {&#x27;ishah&#x27;, &#x27;nachash&#x27;, &#x27;adam&#x27;, &#x27;gan&#x27;, &#x27;ha_etz&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == [(&#x27;PASS&#x27;, &#x27;tov&#x27;, &#x27;ha_etz_le_maakhal&#x27;)]
+    assert m.open_demands() == []
+    assert len(m.SPECS[&quot;log&quot;]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;read_before_install&#x27;: 5, &#x27;spec_delta&#x27;: 7}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;arum(nachash)&#x27;, &#x27;asah_YHWH_Elohim(nachash)&#x27;, &#x27;testimony_feared_naked_hid(adam)&#x27;, &#x27;admission_va_okhel(adam)&#x27;, &#x27;admission_va_okhel(ishah)&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 20
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
 <div class="note">FROZEN 2026-08-01 (owner order &quot;freeze gen_09 and gen_10 and commit and push&quot;; derived same day, &quot;derive next gen block&quot;): eleventh frozen unit — THE VIOLATION TRACE, and the first EXTENSION-FREE freeze (zero interpreter changes; pre-flight ran against the unmodified repo interpreter). Central findings, all DB-verified before drafting: the corpus&#x27;s first LAW QUOTATION — three quotes, SEVEN machine-diffable mutations held as spec-delta flags against gen_08&#x27;s frozen text (the serpent inverts scope, pluralizes, reduces the divine name — the bare-Elohim window is exactly 3:1b-5; the woman de-totalizes, drops both doublings, relocates the tree to the life-tree&#x27;s address, ADDS the touch-fence — naga&#x27;s first corpus token inside the invented clause, the verb whose career is the purity law&#x27;s contact mechanism — and softens the penalty; the serpent restores the doubling to negate it: the first contradiction of a divine word, reading mot tamut as forecast — TIR-034&#x27;s ambiguity exploited on schedule); the week&#x27;s TEST instrument in creature hands, PASSING on 2:9&#x27;s own criterion (a true verdict on the wrong question); the trigger chain the gen_08 HANDLER awaits (the rest sits ON va-tokhal); the Miriam verb-echo receipt paid to the SERPENT&#x27;S weqatal forecast — what the knowing delivers is nakedness, under a changed lemma; the first human manufacture as the unit&#x27;s ONLY install (girdles — Torah hapax); the first hiding, at the relocated tree&#x27;s address; the first divine question (ayeka -&gt; 4:9); the rule quoted back with its authority named (third form); two confessions ending on the identical trigger verb; the deceit hapax; and SPECS empty end to end — no demand is ever issued: the unit whose flags ARE its findings. Tier-A crowns: the serpent is CHAKIM (the tree-eaters&#x27; word), &#x27;like God&#x27; demoted to &#x27;like the great ones&#x27;, and the MEMRA debuts at the walking voice. Freeze, narrative (ASK FIRST), and triage await owner order. Not binding religious law.</div><p class='meta'>Rendered 2026-08-01 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

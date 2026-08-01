@@ -12,6 +12,8 @@ h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
 .frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
 .tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
 .tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
 .note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
         padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
 table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
@@ -384,5 +386,101 @@ final state: WORLD=[&#x27;kokhavim&#x27;, &#x27;maor_gadol&#x27;, &#x27;maor_qat
     PASS  pattern deviation FLAGGED  (flags=[&#x27;commit_without_test&#x27;])
 
 ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_04_lights_calendar.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_04_lights_calendar — 1:14-19
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_04_lights_calendar.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Day four: luminaries — jobs, calendar, dominion; three spec deltas (1:14-19)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_04_lights_calendar&quot;)
+
+# -------------------------- Gen.1.14 · DECLARE_SPEC_CALENDAR ---------------
+# va-yomer Elohim yehi me&#x27;orot bi-rkia ha-shamayim le-havdil bein ha-yom
+# u-vein ha-lailah ve-hayu le-otot u-le-mo&#x27;adim u-le-yamim ve-shanim
+# &quot;And God said: &#x27;Let there be lights in the firmament of the heaven to
+# divide the day from the night; and let them be for signs, and for seasons,
+# and for days and years.&#x27;&quot;
+m.step(&quot;Gen.1.14&quot;)
+m.declare(&quot;Elohim&quot;, &quot;LET&quot;,
+          &quot;exists(meorot), loc=raqia_ha_shamayim&quot;)
+m.triple(&quot;exists(meorot), loc=raqia_ha_shamayim&quot;)
+m.presupposed(&quot;raqia&quot;, &quot;shamayim&quot;)
+
+# -------------------------- Gen.1.15 · SPEC_CROSS_REGISTRY_RESULT ----------
+# ve-hayu li-me&#x27;orot bi-rkia ha-shamayim le-ha&#x27;ir al-ha-aretz va-yehi khen
+# &quot;&#x27;And let them be for lights in the firmament of the heaven to give light
+# upon the earth.&#x27; And it was so.&quot;
+m.step(&quot;Gen.1.15&quot;)
+m.presupposed(&quot;aretz&quot;)
+m.result(&quot;exists(meorot), loc=raqia_ha_shamayim&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Gen.1.16 · BUILD_DIFFERENTIATE_DELTA -----------
+# va-ya&#x27;as Elohim et-shnei ha-me&#x27;orot ha-gedolim et-ha-maor ha-gadol le-
+# memshelet ha-yom ve-et-ha-maor ha-qaton le-memshelet ha-lailah ve-et ha-
+# kokhavim
+# &quot;And God made the two great lights: the greater light to rule the day, and
+# the lesser light to rule the night; and the stars.&quot;
+m.step(&quot;Gen.1.16&quot;)
+m.event(&quot;make&quot;, agent=&quot;Elohim&quot;, themes=[&quot;maor_gadol&quot;, &quot;maor_qaton&quot;, &quot;kokhavim&quot;])
+m.install(&quot;maor_gadol&quot;, &quot;maor_qaton&quot;, &quot;kokhavim&quot;)
+m.assign(&quot;maor_gadol&quot;, &quot;memshelet_yom&quot;)
+m.assign(&quot;maor_qaton&quot;, &quot;memshelet_lailah&quot;)
+m.spec_delta(&quot;me&#x27;orot (one undifferentiated plural)&quot;,
+             &quot;shnei ha-me&quot;)
+m.spec_delta(&quot;no stars in the job order&quot;,
+             &quot;ve-et ha-kokhavim&quot;)
+m.spec_delta(&quot;jobs: divide, signs, festivals, days+years, shine&quot;,
+             &quot;le-memshelet (dominion) added&quot;)
+
+# -------------------------- Gen.1.17 · INSTALL_MOUNT -----------------------
+# va-yiten otam Elohim bi-rkia ha-shamayim le-ha&#x27;ir al-ha-aretz
+# &quot;And God set them in the firmament of the heaven to give light upon the
+# earth.&quot;
+m.step(&quot;Gen.1.17&quot;)
+m.event(&quot;place&quot;, agent=&quot;Elohim&quot;, themes=[&quot;otam_ha_meorot&quot;])
+
+# -------------------------- Gen.1.18 · PURPOSE_RECAP_DELTA_TEST ------------
+# ve-limshol ba-yom u-va-lailah u-le-havdil bein ha-or u-vein ha-choshekh
+# va-yar Elohim ki-tov
+# &quot;And to rule over the day and over the night, and to divide the light from
+# the darkness; and God saw that it was good.&quot;
+m.step(&quot;Gen.1.18&quot;)
+m.spec_delta(&quot;le-havdil bein ha-YOM u-vein ha-LAILAH (registry labels, 1:14)&quot;,
+             &quot;u-le-havdil bein ha-OR u-vein ha-CHOSHEKH (the entities, 1:18)&quot;)
+m.test(&quot;PASS&quot;, &quot;tov&quot;, &quot;meorot&quot;)
+
+# -------------------------- Gen.1.19 · COMMIT_DAY --------------------------
+# va-yehi erev va-yehi voqer yom revi&#x27;i
+# &quot;And there was evening and there was morning, a fourth day.&quot;
+m.step(&quot;Gen.1.19&quot;)
+m.commit(4, label_form=&quot;ordinal&quot;, label_translit=&quot;yom revii&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == {&#x27;meorot&#x27;, &#x27;kokhavim&#x27;, &#x27;maor_qaton&#x27;, &#x27;maor_gadol&#x27;}
+    assert m.presupposed_set() == {&#x27;shamayim&#x27;, &#x27;aretz&#x27;, &#x27;raqia&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {&#x27;maor_gadol&#x27;: &#x27;memshelet_yom&#x27;, &#x27;maor_qaton&#x27;: &#x27;memshelet_lailah&#x27;}
+    assert m.REGISTRY[&quot;writes&quot;] == 2
+    assert m.tests_list() == [(&#x27;PASS&#x27;, &#x27;tov&#x27;, &#x27;meorot&#x27;)]
+    assert m.open_demands() == []
+    assert len(m.SPECS[&quot;log&quot;]) == 1
+    assert sorted(m.LEDGER) == [4]
+    assert m.flag_counts() == {&#x27;read_before_install&#x27;: 3, &#x27;spec_delta&#x27;: 4}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 6
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
 <div class="note">FROZEN 2026-07-30 (owner approved): fourth logic-derived unit, first under the calibrated coverage protocol. Central findings: the fullest work-order shape of the week (spec-with-jobs -&gt; cross-verse receipt -&gt; build -&gt; install -&gt; recap -&gt; test -&gt; commit); the corpus&#x27;s first OPERATIONAL handover (day 1&#x27;s own separating function written into the fixtures&#x27; spec); the two-step build (asah then natan); ROLE assignment via dative (dominion offices; no naming — the va-yiqra series ends at day 3); THREE letter-visible spec deltas (both-great -&gt; great/small; stars over-delivered; dominion unspecified) all riding a clean commit past a passing test; the label-&gt;entity restatement of the delegated separation (1:14 vs 1:18); the singular-jussive/plural-subject mismatch that Onkelos normalizes. Not binding religious law.</div><p class='meta'>Rendered 2026-08-01 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

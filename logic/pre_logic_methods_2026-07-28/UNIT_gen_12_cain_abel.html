@@ -12,6 +12,8 @@ h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
 .frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
 .tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
 .tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
 .note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
         padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
 table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
@@ -815,5 +817,186 @@ final state: WORLD=[] (+3 presupposed) | REGISTRY={&#x27;kayin&#x27;: &#x27;arur
     PASS  pattern deviation FLAGGED  (flags=[&#x27;commit_without_test&#x27;])
 
 ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_12_cain_abel.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_12_cain_abel — 4:1-16
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_12_cain_abel.yaml) is CANONICAL (Pre-Code); this
+# file is a derived, runnable rendering. Do not edit — regenerate. The
+# assertion block at the bottom is baked from the Stage D interpreter&#x27;s
+# actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Cain and Abel: first offerings, sin at the door, first murder, the mark (4:1-16)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_12_cain_abel&quot;)
+
+# -------------------------- Gen.4.1 · FIRST_BIRTH_NAME_SPEECH --------------
+# ve-ha-adam yada et-Chavah ishto va-tahar va-teled et-Kayin va-tomer kaniti
+# ish et-YHWH
+# &quot;And the man knew Eve his wife; and she conceived and bore Cain, and said:
+# &#x27;I have gotten a man with the help of the LORD.&#x27;&quot;
+m.step(&quot;Gen.4.1&quot;)
+m.event(&quot;know&quot;, agent=&quot;adam&quot;, themes=[&quot;chavah&quot;])
+m.event(&quot;bear&quot;, agent=&quot;chavah&quot;, themes=[&quot;kayin&quot;])
+m.name(&quot;kayin&quot;, &quot;Kayin&quot;)
+m.presupposed(&quot;adam&quot;, &quot;chavah&quot;)
+
+# -------------------------- Gen.4.2 · SECOND_BIRTH_PROFESSIONS -------------
+# va-tosef la-ledet et-achiv et-Havel va-yehi-Hevel ro&#x27;eh tzon ve-Kayin
+# hayah oved adamah
+# &quot;And again she bore his brother Abel. And Abel was a keeper of sheep, but
+# Cain was a tiller of the ground.&quot;
+m.step(&quot;Gen.4.2&quot;)
+m.event(&quot;bear&quot;, agent=&quot;chavah&quot;, themes=[&quot;hevel&quot;])
+m.fact(&quot;roeh_tzon(hevel)&quot;,
+       &quot;oved_adamah(kayin)&quot;)
+m.presupposed(&quot;adamah&quot;)
+
+# -------------------------- Gen.4.3 · FIRST_OFFERING -----------------------
+# va-yehi mi-ketz yamim va-yave Kayin mi-peri ha-adamah minchah la-YHWH
+# &quot;And in process of time it came to pass, that Cain brought of the fruit of
+# the ground an offering unto the LORD.&quot;
+m.step(&quot;Gen.4.3&quot;)
+m.event(&quot;bring&quot;, agent=&quot;kayin&quot;, themes=[&quot;minchah&quot;])
+
+# -------------------------- Gen.4.4 · SECOND_OFFERING_FAVOR ----------------
+# ve-Hevel hevi gam-hu mi-bekhorot tzono u-me-chelvehen va-yisha YHWH el-
+# Hevel ve-el-minchato
+# &quot;And Abel, he also brought of the firstlings of his flock and of the fat
+# thereof. And the LORD had respect unto Abel and to his offering.&quot;
+m.step(&quot;Gen.4.4&quot;)
+m.event(&quot;bring&quot;, agent=&quot;hevel&quot;, themes=[&quot;bekhorot&quot;])
+m.test(&quot;PASS&quot;, &quot;shaah&quot;, &quot;hevel_u_minchato&quot;)
+
+# -------------------------- Gen.4.5 · NON_REGARD_FIRST_ANGER ---------------
+# ve-el-Kayin ve-el-minchato lo sha&#x27;ah va-yichar le-Kayin me&#x27;od va-yiplu
+# panav
+# &quot;But unto Cain and to his offering He had not respect. And Cain was very
+# wroth, and his countenance fell.&quot;
+m.step(&quot;Gen.4.5&quot;)
+m.fact(&quot;lo_shaah_el_kayin_ve_el_minchato&quot;)
+m.event(&quot;burn&quot;, agent=&quot;kayin&quot;)
+
+# -------------------------- Gen.4.6 · ANGER_DIAGNOSTIC ---------------------
+# va-yomer YHWH el-Kayin lamah charah lakh ve-lamah naflu fanekha
+# &quot;And the LORD said unto Cain: &#x27;Why art thou wroth? and why is thy
+# countenance fallen?&#x27;&quot;
+m.step(&quot;Gen.4.6&quot;)
+m.event(&quot;ask&quot;, agent=&quot;YHWH&quot;, themes=[&quot;kayin&quot;])
+
+# -------------------------- Gen.4.7 · COUNSEL_FIRST_IF ---------------------
+# halo im-teitiv se&#x27;et ve-im lo teitiv la-petach chattat rovetz ve-elekha
+# teshukato ve-atah timshol-bo
+# &quot;&#x27;If thou doest well, shall it not be lifted up? and if thou doest not
+# well, sin coucheth at the door; and unto thee is its desire, but thou
+# mayest rule over it.&#x27;&quot;
+m.step(&quot;Gen.4.7&quot;)
+m.handler(&quot;teitiv(kayin)&quot;,
+          &quot;seet&quot;)
+m.handler(&quot;lo_teitiv(kayin)&quot;,
+          &quot;la_petach_chattat_rovetz&quot;)
+m.declare(&quot;YHWH&quot;, &quot;LET?&quot;,
+          &quot;timshol(kayin, ba_chattat)&quot;)
+
+# -------------------------- Gen.4.8 · EMPTY_QUOTE_FIRST_MURDER -------------
+# va-yomer Kayin el-Hevel achiv va-yehi bihyotam ba-sadeh va-yakom Kayin el-
+# Hevel achiv va-yahargehu
+# &quot;And Cain spoke unto Abel his brother. And it came to pass, when they were
+# in the field, that Cain rose up against Abel his brother, and slew him.&quot;
+m.step(&quot;Gen.4.8&quot;)
+m.event(&quot;say&quot;, agent=&quot;kayin&quot;, themes=[&quot;hevel&quot;])
+m.event(&quot;kill&quot;, agent=&quot;kayin&quot;, themes=[&quot;hevel&quot;])
+
+# -------------------------- Gen.4.9 · DOCKET_FIRST_LIE ---------------------
+# va-yomer YHWH el-Kayin ei Hevel achikha va-yomer lo yadati ha-shomer achi
+# anokhi
+# &quot;And the LORD said unto Cain: &#x27;Where is Abel thy brother?&#x27; And he said: &#x27;I
+# know not; am I my brother&#x27;s keeper?&#x27;&quot;
+m.step(&quot;Gen.4.9&quot;)
+m.event(&quot;ask&quot;, agent=&quot;YHWH&quot;, themes=[&quot;kayin&quot;])
+m.fact(&quot;lo_yadati_ha_shomer_achi_anokhi(kayin)&quot;)
+
+# -------------------------- Gen.4.10 · BLOODS_CRY --------------------------
+# va-yomer meh asita kol demei achikha tzo&#x27;akim elai min-ha-adamah
+# &quot;And He said: &#x27;What hast thou done? the voice of thy brother&#x27;s blood
+# crieth unto Me from the ground.&#x27;&quot;
+m.step(&quot;Gen.4.10&quot;)
+m.event(&quot;ask&quot;, agent=&quot;YHWH&quot;, themes=[&quot;kayin&quot;])
+m.fact(&quot;kol_demei_achikha_tzoakim_min_ha_adamah&quot;)
+
+# -------------------------- Gen.4.11 · CURSE_REACHES_HUMAN -----------------
+# ve-atah arur atah min-ha-adamah asher patztah et-piha lakachat et-demei
+# achikha mi-yadekha
+# &quot;&#x27;And now cursed art thou from the ground, which hath opened her mouth to
+# receive thy brother&#x27;s blood from thy hand.&#x27;&quot;
+m.step(&quot;Gen.4.11&quot;)
+m.assign(&quot;kayin&quot;, &quot;arur_min_ha_adamah&quot;)
+m.fact(&quot;ha_adamah_patztah_piha_lakachat_demei(kayin)&quot;)
+
+# -------------------------- Gen.4.12 · GROUND_STRIKE_WANDERER --------------
+# ki ta&#x27;avod et-ha-adamah lo-tosef tet-kochah lakh na va-nad tihyeh va-aretz
+# &quot;&#x27;When thou tillest the ground, it shall not henceforth yield unto thee
+# her strength; a fugitive and a wanderer shalt thou be in the earth.&#x27;&quot;
+m.step(&quot;Gen.4.12&quot;)
+m.fact(&quot;ki_taavod_lo_tosef_tet_kochah(adamah, kayin)&quot;,
+       &quot;na_va_nad_tihyeh(kayin)&quot;)
+
+# -------------------------- Gen.4.13 · PLEA_UNBEARABLE ---------------------
+# va-yomer Kayin el-YHWH gadol avoni mi-neso
+# &quot;And Cain said unto the LORD: &#x27;My punishment is greater than I can bear.&#x27;&quot;
+m.step(&quot;Gen.4.13&quot;)
+m.event(&quot;plead&quot;, agent=&quot;kayin&quot;, themes=[&quot;YHWH&quot;])
+
+# -------------------------- Gen.4.14 · FEAR_OF_FINDERS ---------------------
+# hen gerashta oti ha-yom me&#x27;al pnei ha-adamah u-mi-panekha esater ve-hayiti
+# na va-nad ba-aretz ve-hayah khol-motzi yahargeni
+# &quot;&#x27;Behold, Thou hast driven me out this day from the face of the land; and
+# from Thy face shall I be hid; and I shall be a fugitive and a wanderer in
+# the earth; and it will come to pass, that whosoever findeth me will slay
+# me.&#x27;&quot;
+m.step(&quot;Gen.4.14&quot;)
+m.fact(&quot;gerashta_oti_u_mi_panekha_esater(kayin)&quot;,
+       &quot;khol_motzi_yahargeni_fear(kayin)&quot;)
+
+# -------------------------- Gen.4.15 · SEVENFOLD_HANDLER_MARK --------------
+# va-yomer lo YHWH lakhen kol-horeg Kayin shivatayim yukam va-yasem YHWH le-
+# Kayin ot le-vilti hakot-oto kol-motz&#x27;o
+# &quot;And the LORD said unto him: &#x27;Therefore whosoever slayeth Cain, vengeance
+# shall be taken on him sevenfold.&#x27; And the LORD set a sign for Cain, lest
+# any finding him should smite him.&quot;
+m.step(&quot;Gen.4.15&quot;)
+m.handler(&quot;horeg(kayin)&quot;,
+          &quot;shivatayim_yukam&quot;)
+m.fact(&quot;ot_le_kayin_levilti_hakot(kayin)&quot;)
+
+# -------------------------- Gen.4.16 · EXIT_EAST_SETTLED_IN_WANDERING ------
+# va-yetze Kayin mi-lifnei YHWH va-yeshev be-eretz-Nod kidmat-Eden
+# &quot;And Cain went out from the presence of the LORD, and dwelt in the land of
+# Nod, on the east of Eden.&quot;
+m.step(&quot;Gen.4.16&quot;)
+m.event(&quot;go_out&quot;, agent=&quot;kayin&quot;, themes=[&quot;eretz_nod_kidmat_eden&quot;])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == {&#x27;adam&#x27;, &#x27;chavah&#x27;, &#x27;adamah&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {&#x27;kayin&#x27;: &#x27;arur_min_ha_adamah&#x27;}
+    assert m.REGISTRY[&quot;writes&quot;] == 2
+    assert m.tests_list() == [(&#x27;PASS&#x27;, &#x27;shaah&#x27;, &#x27;hevel_u_minchato&#x27;)]
+    assert m.open_demands() == [&#x27;timshol(kayin, ba_chattat)&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 1
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;named_before_any_presence&#x27;: 1, &#x27;read_before_install&#x27;: 3, &#x27;assigned_before_any_presence&#x27;: 1}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;roeh_tzon(hevel)&#x27;, &#x27;oved_adamah(kayin)&#x27;, &#x27;lo_shaah_el_kayin_ve_el_minchato&#x27;, &#x27;handler: IF(teitiv(kayin)) THEN(seet)&#x27;, &#x27;handler: IF(lo_teitiv(kayin)) THEN(la_petach_chattat_rovetz)&#x27;, &#x27;lo_yadati_ha_shomer_achi_anokhi(kayin)&#x27;, &#x27;kol_demei_achikha_tzoakim_min_ha_adamah&#x27;, &#x27;ha_adamah_patztah_piha_lakachat_demei(kayin)&#x27;, &#x27;ki_taavod_lo_tosef_tet_kochah(adamah, kayin)&#x27;, &#x27;na_va_nad_tihyeh(kayin)&#x27;, &#x27;gerashta_oti_u_mi_panekha_esater(kayin)&#x27;, &#x27;khol_motzi_yahargeni_fear(kayin)&#x27;, &#x27;handler: IF(horeg(kayin)) THEN(shivatayim_yukam)&#x27;, &#x27;ot_le_kayin_levilti_hakot(kayin)&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 19
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
 <div class="note">FROZEN 2026-08-01 (owner order &quot;freeze all commit&quot;; derived same day): thirteenth frozen unit — CAIN AND ABEL, the first cycle outside the garden; third extension-free derivation in a row. Central findings, all DB-verified before drafting: solo-YHWH&#x27;s first token in the MOTHER&#x27;s mouth at the first birth (the first human to say the Name), with the corpus&#x27;s first birth-etymology; the second name left unexplained (vapor); the offering institutions debuting UNINSTRUCTED in the law&#x27;s own vocabulary (minchah x3 first; firstlings; fat) under a NEW test instrument (sha&#x27;ah — favor-gaze, 3 tokens), with the rejection carrying no stated reason (held as fact, not FAIL); the corpus&#x27;s FIRST IF — both first tokens of the law&#x27;s branch particle in one counsel speech, modeled as two HANDLERs, the good branch paying se&#x27;et (the nasa root — lev_13&#x27;s lead mark-name sourced), the dark branch debuting CHATTAT crouching at the door; the woman&#x27;s sentence-pair (longing+rule) re-aimed at sin and closing as a coded-imperfect LET? — pushed at 4:7, VIOLATED at 4:8, never popped: the first counsel-demand left open by transgression (the queue&#x27;s standing debt grows to three beside gen_08&#x27;s two); the EMPTY QUOTE (nothing invented); the corpus&#x27;s first actual death — FRATRICIDE, man-made (harag&#x27;s entire debut is this story; the armed handler&#x27;s mot unexecuted by heaven — the handler-delta&#x27;s sharpest edge); the docket formulas inherited (where &lt;- ayeka; what-have-you-done &lt;- 3:13); the first LIE with the office word as sarcasm (am I my brother&#x27;s KEEPER); the BLOODS plural held [OPEN] (the Mishnah&#x27;s worlds-doctrine is the diyyuk tripwire — and Onkelos already carries it: &#x27;the descendants destined to issue&#x27;); the curse&#x27;s third token — first on a HUMAN, from the ground whose MOUTH drank the bloods; the ground-strike unwriting his profession; the plea returning the nasa root as the unbearable load (Onkelos brackets the story in FORGIVENESS instead — its largest expansion in our spans: 4:7 rebuilt as a theology of repentance); the sevenfold protective HANDLER (the week&#x27;s number as vengeance arithmetic; Onkelos: seven GENERATIONS) and the mark (day 4&#x27;s sign-word turned personal — its next tokens are the rainbow); and the exit: settled in WANDERING (his sentence fossilized as an address), east of Eden — the guards&#x27; compass, one ring further out. ZERO WORLD installs — the first zero-install narrative unit. Freeze, narrative (ASK FIRST), and triage await owner order. Not binding religious law.</div><p class='meta'>Rendered 2026-08-01 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

@@ -84,6 +84,8 @@ h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
 .frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
 .tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
 .tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
 .note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
         padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
 table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
@@ -299,6 +301,18 @@ def render(unit_id, out_path):
                         unit_id, "--scenarios"],
                        capture_output=True, text=True, cwd=str(ROOT))
     S.append("<pre>%s</pre>" % esc(r.stdout or r.stderr))
+
+    # ---- python rendering (generated layer, bottom of every unit page) ----
+    py_path = ROOT / "logic" / "py_units" / ("%s.py" % unit_id)
+    if py_path.exists():
+        S.append("<h2>Python rendering — the unit as a program</h2>")
+        S.append("<p class='meta'>Generated from the frozen YAML by "
+                 "render_unit_py.py (the YAML stays canonical — this layer is "
+                 "derived, like this page). Runnable: <code>python3 "
+                 "logic/py_units/%s.py</code> — replays the six registers and "
+                 "asserts the interpreter's machine truth.</p>" % esc(unit_id))
+        S.append("<pre class='pyblock'>%s</pre>"
+                 % esc(py_path.read_text(encoding="utf-8")))
 
     if u.get("status_note_en"):
         S.append('<div class="note">%s</div>'

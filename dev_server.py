@@ -104,9 +104,10 @@ class Handler(SimpleHTTPRequestHandler):
             if not OUT_RX.match(out):
                 return self._json(400, {"ok": False, "log": "bad output name"})
             try:
-                ok, log = run_scripts([[
-                    "logic/pre_logic_methods_2026-07-28/render_unit_html.py",
-                    uid, str(UNITS_HTML / out)]])
+                ok, log = run_scripts([
+                    ["logic/pre_logic_methods_2026-07-28/render_unit_py.py", uid],
+                    ["logic/pre_logic_methods_2026-07-28/render_unit_html.py",
+                     uid, str(UNITS_HTML / out)]])
             except Exception as e:
                 return self._json(500, {"ok": False, "log": str(e)})
             return self._json(200 if ok else 500, {"ok": ok, "log": log})
