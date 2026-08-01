@@ -25,6 +25,11 @@ Contract (same as taamim_tree_parse.py):
     cases execute · SECTION(label, ..) — the toledot ("generations")
     section-header device added at the gen_08 freeze (2026-08-01): a header
     labels, it installs NOTHING (event only, zero register writes) ·
+    PATTERN(p) — the narrator's al-ken ("therefore") etiology added at the
+    gen_09 freeze: a standing generalization in law grammar with no trigger
+    and no addressee — a WORLD fact, not a handler · PASS(a, b) | FAIL(a, b)
+    — the TEST verdict FAIL added at the gen_09 freeze (Gen 2:18 lo-tov:
+    the week's instrument firing negative; verdicts are data, never blocks) ·
     LEDGER[day N] := {..} · t0 := x.
     Any operator kind outside the dispatch table is a rulebook gap: hard stop.
   * Negative contracts:
@@ -235,11 +240,15 @@ def h_result(m, op, step):
 
 
 def h_test(m, op, step):
-    mt = re.search(r"PASS\((\w+),\s*(\w+)\)", op.get("expr_en", ""))
+    """TEST extended at the gen_09 freeze (2026-08-01): verdicts PASS and
+    FAIL. The FAIL class opens at Gen 2:18 (lo-tov — the week's oracle word
+    negated, in speech mode; Tier-A warrant: Onkelos la takkin = day 6's own
+    verdict word negated). Verdicts are DATA: a FAIL blocks nothing."""
+    mt = re.search(r"(PASS|FAIL)\((\w+),\s*(\w+)\)", op.get("expr_en", ""))
     if not mt:
-        raise ContractError("TEST without 'PASS(oracle, theme)' notation")
-    m.TESTS.append({"oracle": mt.group(1), "theme": mt.group(2),
-                    "verdict": "PASS", "step": step["ref"]})
+        raise ContractError("TEST without 'PASS(a, b)' or 'FAIL(a, b)' notation")
+    m.TESTS.append({"oracle": mt.group(2), "theme": mt.group(3),
+                    "verdict": mt.group(1), "step": step["ref"]})
 
 
 def h_event_partition(m, op, step):
@@ -336,6 +345,20 @@ def h_handler(m, op, step):
     m.event("handler_installed", None, [mt.group(1).strip()[:40]])
 
 
+def h_pattern(m, op, step):
+    """PATTERN (introduced gen_09, 2026-08-01): the narrator's al-ken
+    ('therefore') etiology — a standing generalization in law grammar
+    (imperfect + weqatal, TIR-029) with NO trigger clause and NO addressee:
+    not a HANDLER (nothing fires it), not a demand (nothing is owed) — a
+    standing WORLD fact. First token: Gen 2:24 (leave-cleave-one-flesh).
+    Notation: 'PATTERN(p)'."""
+    mt = re.search(r"PATTERN\((.+)\)", op.get("expr_en", ""))
+    if not mt:
+        raise ContractError("PATTERN without 'PATTERN(p)' notation")
+    m.WORLD["facts"].append("pattern: %s" % mt.group(1).strip())
+    m.event("pattern_installed", None, [mt.group(1).strip()[:40]])
+
+
 def h_section(m, op, step):
     """SECTION (introduced gen_08, 2026-08-01): the toledot ('generations')
     section-header device — first of 13 in Genesis at Gen 2:4, the corpus's
@@ -407,6 +430,7 @@ HANDLERS = {
     "CASE": h_case,
     "HANDLER": h_handler,
     "SECTION": h_section,
+    "PATTERN": h_pattern,
     "COMMIT": h_commit,
 }
 
@@ -724,6 +748,14 @@ def check_clause(clause, m, step_ref, alias):
             if e["demand"] == mt.group(1):
                 return (e["mood"] == "LET-NOT", "mood=%s" % e["mood"])
         return (False, "no spec with demand %s" % mt.group(1))
+
+    # ---- pattern added at the gen_09 freeze (2026-08-01) ----
+    mt = re.search(r"TESTS \+= FAIL\((\w+),\s*(\w+)\)", c)
+    if mt:
+        ok = any(t["oracle"] == mt.group(1) and t["theme"] == mt.group(2)
+                 and t["verdict"] == "FAIL" for t in m.TESTS)
+        return (ok, "tests=%s" % [(t["verdict"], t["oracle"], t["theme"])
+                                  for t in m.TESTS])
 
     return ("UNCHECKED", c)
 
