@@ -39,6 +39,7 @@ DATA_CHAIN = [
     ["index_units.py"],
     ["index_triage.py"],
     ["export_web.py"],
+    ["logic/pre_logic_methods_2026-07-28/render_coverage_index.py"],
 ]
 
 

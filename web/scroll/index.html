@@ -57,6 +57,9 @@ mark { background:#ffe89a; padding:0 .05em; }
 .vref { font-weight:bold; color:var(--acc); }
 .badge { font:.68rem/1.5 monospace; padding:0 .45rem; border-radius:10px; }
 .badge.frozen { background:#e8f5ec; color:var(--frozen); border:1px solid #bfe3ca; }
+a.badge.frozen { text-decoration:none; cursor:pointer; }
+a.badge.frozen:hover { background:#d8eedd; }
+a.nav { text-decoration:none; display:inline-block; }
 .badge.auto { background:#eef1f7; color:var(--blue); border:1px solid #ccd6ea; }
 .badge.oral { background:#faf3e3; color:#7a5b0a; border:1px solid #e6d5a3; cursor:help; }
 .vhead .fen { color:var(--mut); font-style:italic; font-size:.88rem; }
@@ -106,6 +109,7 @@ footer h3 { font-size:.8rem; text-transform:uppercase; letter-spacing:.07em; col
   <select id="chap" onchange="chapChanged()" title="chapter"></select><button class="nav" onclick="step('chap',-1)" title="previous chapter">◀</button><button class="nav" onclick="step('chap',1)" title="next chapter">▶</button>
   <select id="vrs" onchange="jump()" title="verse"></select><button class="nav" onclick="step('vrs',-1)" title="previous verse">◀</button><button class="nav" onclick="step('vrs',1)" title="next verse">▶</button>
   <button onclick="jump()">Go</button>
+  <a class="nav" href="units/UNIT_INDEX.html" title="coverage index — every derived unit, with links between the YAML view and this verse view">☰ units</a>
   <input class="search" id="q" placeholder="🔍 Search any word…"
          title="Hebrew (unpointed), transliteration, or English — Enter to search, Esc to close"
          onkeydown="if(event.key==='Enter')doSearch(); if(event.key==='Escape')hideResults()">
@@ -167,8 +171,9 @@ async function bundle(b, c) {
 /* ---------------- rendering ---------------- */
 function verseHTML(b, c, vd) {
   const name = MANIFEST.books.find(x => x.id === b).name;
+  const uid0 = vd.frozen.length ? vd.frozen[0].split(" · ")[0] : "";
   const badge = vd.frozen.length
-    ? `<span class="badge frozen" title="${esc(vd.frozen.join(" · "))}">❄ frozen: ${esc(vd.frozen[0].split(" · ")[0])}</span>`
+    ? `<a class="badge frozen" href="units/UNIT_${esc(uid0)}.html" title="${esc(vd.frozen.join(" · "))} — click to switch to the unit's derivation page (the YAML view)">❄ frozen: ${esc(uid0)} ⇄</a>`
     : `<span class="badge auto">auto · illustrative</span>`;
   const oral = vd.oral
     ? `<span class="badge oral" title="Oral-tradition sources anchored to this verse (tier 1 of Sefaria's link index): ${vd.oral[0]} enumerated, ${vd.oral[1]} read with a verdict in the triage ledger, ${vd.oral[2]} judged material (bearing on the frozen derivation). Enumerated / fetched / read are kept as separate honest counters; the ledger in logic/oral_triage/ is the canonical record.">📜 oral ${vd.oral[1]}/${vd.oral[0]} read${vd.oral[2] ? ` · ${vd.oral[2]} material` : ""}</span>`
@@ -483,6 +488,14 @@ fetch("/regen/ping").then(r => r.ok && ($("regenBtn").style.display = ""))
        ? ` · translation ${esc(MANIFEST.translation)}` : ""}.`;
   await scheduleLoad();              // Genesis 1 first
   sentObs.observe($("sentinel"));
+
+  // deep links: #Gen/3/1 -> jump there (used by the unit pages' "verse view" button)
+  function applyHash() {
+    const mh = location.hash.match(/^#([A-Za-z]+)\/(\d+)(?:\/(\d+))?$/);
+    if (mh && bookById(mh[1])) gotoRef(mh[1], +mh[2], +(mh[3] || 1));
+  }
+  window.addEventListener("hashchange", applyHash);
+  applyHash();
 })();
 </script>
 </body></html>

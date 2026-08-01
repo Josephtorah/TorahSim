@@ -96,6 +96,13 @@ GLOSS_FUNC = {
     "le": "to", "la": "to", "mi": "from", "me": "from", "ke": "like",
     "el": "to", "al": "upon", "lo": "not", "hu": "that", "et": "",
     "min": "from", "bein": "between", "im": "if", "ki": "when",
+    "mimenu": "from-it", "mimena": "from-it", "bo": "in-it",
+    "oto": "it", "otah": "her", "lakh": "to-you", "lekha": "to-you",
+    "elekha": "to-you", "beinkha": "between-you", "imah": "with-her",
+    "imadi": "with-me", "akholkha": "your-eating",
+    "akholkhem": "your-eating", "shuvkha": "your-return",
+    "kol": "all", "khol": "all", "gam": "also", "pen": "lest",
+    "ad": "until", "asher": "which", "sham": "there", "zot": "this",
 }
 
 GLOSS_UNIT = {}   # filled per unit from its own tree_coverage table

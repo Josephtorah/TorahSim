@@ -11,12 +11,60 @@ Usage:  python3 render_unit_html.py gen_01_creation_boot [out.html]
 """
 
 import html
+import re
 import subprocess
 import sys
 from datetime import date
 from pathlib import Path
 
 import yaml
+
+BOOK_IDS = {"Genesis": "Gen", "Exodus": "Exod", "Leviticus": "Lev",
+            "Numbers": "Num", "Deuteronomy": "Deut"}
+
+# ---- glossing (owner order 2026-08-01: English everywhere) ----------------
+# Reuses the stepper's gloss engine (step_unit.py at repo root): every
+# machine token and transliterated anchor gets an inline English twin.
+HERE_DIR = Path(__file__).resolve().parent
+_ROOT = HERE_DIR.parent.parent
+sys.path.insert(0, str(_ROOT))
+import step_unit as _gloss  # noqa: E402  (GLOSS engine; display-only)
+
+_TR_PRE = ("va-", "ve-", "ha-", "la-", "le-", "be-", "ba-", "mi-", "me-",
+           "u-", "ke-", "bi-", "li-", "vi-")
+
+
+def gloss_expr_twin(expr):
+    """Dim '=' twin line for a machine expression, or '' if nothing glossed."""
+    s = str(expr)
+    g = _gloss.gloss_expr(s)
+    if g == s:
+        return ""
+    return '<br><span class="gloss">= %s</span>' % html.escape(g)
+
+
+def gloss_translit_phrase(tr):
+    """Word-by-word English for a transliterated anchor phrase."""
+    if not tr:
+        return ""
+    out = []
+    for word in re.split(r"\s+", str(tr)):
+        core = word.strip("…—·().,;:!?״'\"")
+        if not core or core in ("…", "—", "·"):
+            continue
+        probe = core
+        changed = True
+        while changed:
+            changed = False
+            for p in _TR_PRE:
+                if probe.startswith(p) and len(probe) > len(p) + 1:
+                    probe, changed = probe[len(p):], True
+        g = (_gloss.GLOSS_EXACT.get(core) or _gloss.GLOSS_UNIT.get(core)
+             or _gloss.GLOSS_CORE.get(core)
+             or _gloss.GLOSS_UNIT.get(probe) or _gloss.GLOSS_CORE.get(probe)
+             or _gloss.gloss_token(core.replace("-", "_")))
+        out.append(g if (g and g != core) else core)
+    return " ".join(out)
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
@@ -49,6 +97,7 @@ td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowr
 .expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
         padding:.1rem .35rem; border-radius:4px; }
 .cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
 pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
       font-size:.75rem; line-height:1.4; overflow-x:auto; }
 .arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
@@ -76,6 +125,9 @@ def he3(he, tr, en):
 def render(unit_id, out_path):
     u = yaml.safe_load((UNITS / (unit_id + ".yaml")).read_text(encoding="utf-8"))
     m = u.get("meta", {})
+    # per-unit gloss map: the unit's own coverage table feeds the twins
+    _gloss.GLOSS_UNIT.clear()
+    _gloss.GLOSS_UNIT.update(_gloss.build_unit_gloss(u))
     S = []
 
     S.append("<h1>%s <span class='badge frozen'>%s</span></h1>"
@@ -83,6 +135,15 @@ def render(unit_id, out_path):
     S.append('<div class="meta">unit <b>%s</b> · %s %s · derive %s · phase %s</div>'
              % (esc(m.get("id")), esc(m.get("book_en")), esc(m.get("refs")),
                 esc(m.get("tree_derive_version")), esc(m.get("tree_derive_phase"))))
+    # switch buttons (owner order 2026-08-01): YAML view <-> verse tree/morph view
+    bid = BOOK_IDS.get(str(m.get("book_en", "")), "")
+    ref1 = re.match(r"(\d+):(\d+)", str(m.get("refs", "")))
+    if bid and ref1:
+        S.append('<div class="meta">'
+                 '<a href="/#%s/%s/%s">⇄ verse view — this span in the scroll '
+                 '(trees + morphology)</a> &nbsp;·&nbsp; '
+                 '<a href="UNIT_INDEX.html">☰ all derived units</a></div>'
+                 % (bid, ref1.group(1), ref1.group(2)))
     S.append("<p>%s</p>" % he3(m.get("title_he"), m.get("title_he_translit"),
                                m.get("title_he_en")))
     for key in ("frozen_note_en", "method_note_en"):
@@ -122,11 +183,16 @@ def render(unit_id, out_path):
         S.append("<table><tr><th>operator</th><th>expression</th>"
                  "<th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>")
         for op in st.get("operators", []):
+            anchor = he3(op.get("he"), op.get("he_translit"), None) or "—"
+            anchor_gloss = gloss_translit_phrase(op.get("he_translit"))
+            if anchor_gloss:
+                anchor += '<br><span class="gloss">= %s</span>' % esc(anchor_gloss)
             S.append('<tr class="opline"><td>%s</td><td><span class="expr">%s</span>'
-                     "%s</td><td>%s</td><td class='cite'>%s</td><td>%s</td></tr>"
+                     "%s%s</td><td>%s</td><td class='cite'>%s</td><td>%s</td></tr>"
                      % (esc(op.get("op")), esc(op.get("expr_en")),
+                        gloss_expr_twin(op.get("expr_en")),
                         ("<br>" + esc(op.get("en"))) if op.get("en") else "",
-                        he3(op.get("he"), op.get("he_translit"), None) or "—",
+                        anchor,
                         esc(", ".join(op.get("cites") or [])) or "—",
                         esc(op.get("confidence"))))
         S.append("</table>")
@@ -160,11 +226,16 @@ def render(unit_id, out_path):
         S.append("<table><tr><th>id</th><th>title</th><th>given</th>"
                  "<th>expect</th><th>anchor</th></tr>")
         for sc in u["scenarios"]:
-            S.append("<tr><td><b>%s</b></td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>"
+            expect = " ".join(str(sc.get("expect_en", "")).split())
+            anchor = he3(sc.get("value_he"), sc.get("value_he_translit"), None)
+            a_gloss = gloss_translit_phrase(sc.get("value_he_translit"))
+            if a_gloss:
+                anchor += '<br><span class="gloss">= %s</span>' % esc(a_gloss)
+            S.append("<tr><td><b>%s</b></td><td>%s</td><td>%s</td><td>%s%s</td><td>%s</td></tr>"
                      % (esc(sc.get("id")), esc(sc.get("title_en")),
                         esc(" ".join(str(sc.get("given_en", "")).split())),
-                        esc(" ".join(str(sc.get("expect_en", "")).split())),
-                        he3(sc.get("value_he"), sc.get("value_he_translit"), None)))
+                        esc(expect), gloss_expr_twin(expect),
+                        anchor))
         S.append("</table>")
 
     # ---- exports + oral ----
@@ -192,9 +263,15 @@ def render(unit_id, out_path):
     if vt:
         S.append("<h2>Binary trees (ta'amim v3, glue bricks)</h2>")
         for key, t in vt.items():
-            S.append("<h3>%s · parser %s · %s words</h3><pre>%s</pre>"
+            S.append("<h3>%s · parser %s · %s words</h3>"
                      % (esc(t.get("osis_id", key)), esc(t.get("parser_status")),
-                        esc(t.get("word_count")), esc(t.get("tree_ascii", ""))))
+                        esc(t.get("word_count"))))
+            lin = t.get("linear") or {}
+            if lin:
+                S.append('<div class="meta">%s</div>'
+                         % he3(lin.get("he"), lin.get("he_translit"),
+                               str(lin.get("en", "")).replace("[EN-AID] ", "")))
+            S.append("<pre>%s</pre>" % esc(t.get("tree_ascii", "")))
 
     # ---- word coverage ----
     tc = u.get("tree_coverage")
