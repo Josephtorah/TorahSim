@@ -28,6 +28,22 @@ OUT = ROOT / "logic" / "py_units"
 sys.path.insert(0, str(ROOT))
 import yaml
 import run_unit as ru
+import step_unit as _g   # the gloss engine (display-only) — owner order
+                         # 2026-08-02: Hebrew + English in code comments,
+                         # every machine token translated, no transliteration
+
+
+def G(tok):
+    """Gloss one machine token into English (falls back to the token)."""
+    tok = str(tok).strip()
+    g = (_g.GLOSS_EXACT.get(tok) or _g.GLOSS_UNIT.get(tok)
+         or _g.GLOSS_CORE.get(tok) or _g.gloss_token(tok))
+    return g if g else tok
+
+
+def GE(s):
+    """Gloss a call-shaped expression, e.g. tze(noach, min_ha_tevah)."""
+    return _g.gloss_expr(str(s).strip())
 
 
 def _wrap_comment(text, prefix="# ", width=76):
@@ -153,6 +169,108 @@ def emit_op(op):
     return L
 
 
+def op_comment(op):
+    """English comment line(s) for one operator — the owner's rule: every
+    machine token in the code is translated, in comments interleaved with
+    the code (Hebrew snippet first where the YAML carries one)."""
+    kind = op.get("op")
+    expr = op.get("expr_en", "")
+    if kind == "TIME_ANCHOR":
+        mt = re.search(r"t0 := (\w+)", expr)
+        en = "clock anchored: t0 := %s" % G(mt.group(1))
+    elif kind == "EVENT":
+        verb = re.match(r"(\w+)\(e\d+\)", expr)
+        agent = re.search(r"Agent\(e\d+,\s*([\w-]+)\)", expr)
+        themes = re.findall(r"Theme\(e\d+,\s*([\w-]+)\)", expr)
+        bits = ["event: %s" % G(verb.group(1) if verb else "?")]
+        if agent:
+            bits.append("agent %s" % G(agent.group(1)))
+        if themes:
+            bits.append("theme %s" % ", ".join(G(t) for t in themes))
+        en = " — ".join([bits[0], "; ".join(bits[1:])]) if bits[1:] else bits[0]
+    elif kind == "REGISTRY_INSTALL":
+        mt = re.search(r"WORLD \+= \{([^}]*)\}", expr)
+        names = [x.strip() for x in mt.group(1).split(",") if x.strip()]
+        en = "the world gains: %s" % ", ".join(G(n) for n in names)
+    elif kind == "PRECONDITION_STATE":
+        facts = re.findall(r"HOLDS\((.+?),\s*t\d+\)", expr)
+        en = "fact holds: %s" % "; ".join(GE(f) for f in facts)
+    elif kind == "INVARIANT":
+        mt = re.search(r"INVARIANT\((.+)\)\s*during", expr)
+        en = "standing constraint: %s" % GE(mt.group(1))
+    elif kind == "NOTE_ZERO_EVENTS":
+        en = "note: zero events in this verse"
+    elif kind == "NOTE_PRESUPPOSED":
+        mt = re.match(r"(.+?) are READ", expr)
+        names = [x.strip() for x in mt.group(1).split(",") if x.strip()]
+        en = ("reads without prior install (flag, not fix): %s"
+              % ", ".join(G(n) for n in names))
+    elif kind == "NOTE_SPEC_DELTA":
+        mt = re.search(r"spec '(.+?)' delivered '(.+?)'", expr)
+        en = ("spec-delta — spec said %s, delivery says %s"
+              % (GE(mt.group(1)), GE(mt.group(2))))
+    elif kind == "DECLARE":
+        speaker = re.search(r"DECLARE\((\w+),", expr)
+        mood = ("CMD-US?" if "CMD-US?(" in expr else
+                "CMD-US" if "CMD-US(" in expr else
+                "LET?" if "LET?(" in expr else
+                "LET-NOT" if "LET-NOT(" in expr else "LET")
+        dm = re.search(r"(?:LET\??(?:-NOT)?|CMD-US\??)\((.+)\)\)", expr)
+        en = ("%s speaks a demand — %s: %s"
+              % (G(speaker.group(1) if speaker else "?"), mood,
+                 GE(dm.group(1) if dm else "?")))
+    elif kind == "TRIPLE":
+        qm = re.search(r"\{\s*Q:\s*([^}]+)\}", expr)
+        en = "open question logged: %s" % GE(qm.group(1))
+    elif kind == "RESULT":
+        hm = re.search(r"HOLDS\((.+?),\s*t\d+\)", expr)
+        en = "demand settled (popped from the queue): %s" % GE(hm.group(1))
+    elif kind == "TEST":
+        mt = re.search(r"(PASS|FAIL)\((\w+),\s*(\w+)\)", expr)
+        en = ("test %s — oracle-word %s, on %s"
+              % (mt.group(1), G(mt.group(2)), G(mt.group(3))))
+    elif kind == "EVENT_PARTITION":
+        mt = re.search(r"between\(([\w-]+),\s*([\w-]+)\)", expr)
+        en = "partition between %s and %s" % (G(mt.group(1)), G(mt.group(2)))
+    elif kind == "NAME":
+        pairs = re.findall(r"name\(([\w-]+)\)\s*:=\s*(\w+)", expr)
+        en = "named: " + "; ".join("%s := %s" % (G(a), G(b)) for a, b in pairs)
+    elif kind == "ASSIGN":
+        pairs = re.findall(r"([\w-]+)->([\w-]+)", expr)
+        en = "role assigned: " + "; ".join(
+            "%s -> %s" % (G(a), G(b)) for a, b in pairs)
+    elif kind == "BLESS":
+        sp = re.search(r"BLESS\((\w+),\s*([\w-]+)\)", expr)
+        mt = re.search(r"MANDATE \{([^}]*)\}", expr)
+        en = "blessing: %s blesses %s" % (G(sp.group(1)), G(sp.group(2)))
+        if mt:
+            items = [x.strip() for x in mt.group(1).split(",") if x.strip()]
+            en += " — mandate: %s" % ", ".join(G(i) for i in items)
+    elif kind == "CASE":
+        mt = re.search(r"CASE\((.+)\)\s*ROUTE\(([\w-]+)\)", expr)
+        en = "case %s routes to %s" % (GE(mt.group(1)), G(mt.group(2)))
+    elif kind == "HANDLER":
+        mt = re.search(r"HANDLER IF\((.+)\) THEN\((.+)\)", expr)
+        en = "standing handler — if %s then %s" % (GE(mt.group(1)),
+                                                   GE(mt.group(2)))
+    elif kind == "PATTERN":
+        mt = re.search(r"PATTERN\((.+)\)", expr)
+        en = "pattern recorded: %s" % GE(mt.group(1))
+    elif kind == "SECTION":
+        mt = re.search(r"SECTION\((\w+),\s*(.+)\)", expr)
+        members = [x.strip() for x in mt.group(2).split(",") if x.strip()]
+        en = "section %s: %s" % (G(mt.group(1)),
+                                 ", ".join(G(x) for x in members))
+    elif kind == "COMMIT":
+        dm = re.search(r"LEDGER\[day (\d+)\]", expr)
+        en = "ledger: day %s committed" % dm.group(1)
+    else:
+        en = ""
+    he = str(op.get("he", "")).strip().replace("\n", " ")
+    head = ("\u2039%s\u203a %s" % (he, en)) if he else en
+    return _wrap_comment(head)
+
+
 def render(uid):
     path = UNITS / (uid + ".yaml")
     unit = yaml.safe_load(path.read_text(encoding="utf-8"))
@@ -163,6 +281,8 @@ def render(uid):
         return
 
     truth = ru.run_steps(unit)   # machine truth from the Stage D interpreter
+    _g.GLOSS_UNIT.clear()
+    _g.GLOSS_UNIT.update(_g.build_unit_gloss(unit))
 
     L = ["#!/usr/bin/env python3",
          "# " + "=" * 77,
@@ -185,14 +305,15 @@ def render(uid):
         ref = st["ref"]
         L.append("# " + ("-" * 26) + " %s · %s " % (ref, st.get("op", ""))
                  + "-" * max(1, 74 - 30 - len(ref) - len(st.get("op", ""))))
-        tr = st.get("he_translit", "")
-        if tr:
-            L += _wrap_comment(tr)
+        he = str(st.get("he", "")).strip().replace("\n", " ")
+        if he:
+            L += _wrap_comment(he)
         en = st.get("en", "").replace("[EN-AID/JPS] ", "")
         if en:
             L += _wrap_comment('"%s"' % en)
         L.append('m.step("%s")' % ref)
         for op in st.get("operators", []):
+            L += op_comment(op)
             L += emit_op(op)
         L.append("")
 

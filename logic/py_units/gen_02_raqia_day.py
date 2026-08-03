@@ -14,35 +14,50 @@ from machine import Machine
 m = Machine("gen_02_raqia_day")
 
 # -------------------------- Gen.1.6 · DECLARE_TWO_MOOD_SPEC ----------------
-# va-yomer Elohim yehi raqia be-tokh ha-mayim vi-yhi mavdil bein mayim la-
-# mayim
+# וַיֹּאמֶר אֱלֹהִים יְהִי רָקִיעַ בְּתוֹךְ הַמָּיִם וִיהִי מַבְדִּיל בֵּין
+# מַיִם לָמָיִם
 # "And God said: 'Let there be a firmament in the midst of the waters, and
 # let it divide the waters from the waters.'"
 m.step("Gen.1.6")
+# ‹יְהִי רָקִיעַ› God speaks a demand — LET: exists(firmament)
 m.declare("Elohim", "LET",
           "exists(raqia)")
+# ‹וִיהִי מַבְדִּיל› God speaks a demand — LET?: dividing(firmament,
+# waters|waters)
 m.declare("Elohim", "LET?",
           "mavdil(raqia, mayim|mayim)")
+# ‹מַבְדִּיל› standing constraint: dividing(firmament, waters|waters)
 m.invariant("mavdil(raqia, mayim|mayim)")
+# reads without prior install (flag, not fix): waters
 m.presupposed("mayim")
 
 # -------------------------- Gen.1.7 · BUILD_DIVIDE_RESULT ------------------
-# va-ya'as Elohim et-ha-raqia va-yavdel bein ha-mayim asher mi-tachat la-
-# raqia u-vein ha-mayim asher me-al la-raqia va-yehi khen
+# וַיַּעַשׂ אֱלֹהִים אֶת־הָרָקִיעַ וַיַּבְדֵּל בֵּין הַמַּיִם אֲשֶׁר
+# מִתַּחַת לָרָקִיעַ וּבֵין הַמַּיִם אֲשֶׁר מֵעַל לָרָקִיעַ וַיְהִי־כֵן
 # "And God made the firmament, and divided the waters which were under the
 # firmament from the waters which were above the firmament; and it was so."
 m.step("Gen.1.7")
+# ‹וַיַּעַשׂ אֱלֹהִים אֶת־הָרָקִיעַ› event: make — agent God; theme
+# firmament
 m.event("make", agent="Elohim", themes=["raqia"])
+# ‹בֵּין הַמַּיִם … וּבֵין הַמַּיִם› partition between mayim-under and
+# mayim-over
 m.partition("mayim-under", "mayim-over")
+# ‹וַיְהִי־כֵן› demand settled (popped from the queue): exists(firmament)
 m.result("exists(raqia)", tmark="t2")
+# ‹וַיַּבְדֵּל› demand settled (popped from the queue): dividing(firmament,
+# waters|waters)
 m.result("mavdil(raqia, mayim|mayim)", tmark="t2")
 
 # -------------------------- Gen.1.8 · NAME_AND_COMMIT_NO_TEST --------------
-# va-yiqra Elohim la-raqia shamayim va-yehi erev va-yehi voqer yom sheni
+# וַיִּקְרָא אֱלֹהִים לָרָקִיעַ שָׁמָיִם וַיְהִי־עֶרֶב וַיְהִי־בֹקֶר יוֹם
+# שֵׁנִי
 # "And God called the firmament Heaven. And there was evening and there was
 # morning, a second day."
 m.step("Gen.1.8")
+# ‹לָרָקִיעַ שָׁמָיִם› named: firmament := Heavens
 m.name("raqia", "shamayim")
+# ‹יוֹם שֵׁנִי› ledger: day 2 committed
 m.commit(2, label_form="ordinal", label_translit="yom sheni")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

@@ -14,85 +14,114 @@ from machine import Machine
 m = Machine("lev_13_intake_quarantine")
 
 # -------------------------- Lev.13.1 · FRAME_SPEECH ------------------------
-# va-yedabber YHWH el-Moshe ve-el-Aharon le-mor
+# וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה וְאֶל־אַהֲרֹן לֵאמֹר
 # "And the LORD spoke unto Moses and unto Aaron, saying:"
 m.step("Lev.13.1")
+# ‹וַיְדַבֵּר יְהוָה› event: speak — agent the-LORD
 m.event("speak", agent="YHWH")
+# reads without prior install (flag, not fix): Moses, Aaron
 m.presupposed("moshe", "aharon")
 
 # -------------------------- Lev.13.2 · CASE_INTAKE -------------------------
-# adam ki-yihyeh ve-or-besaro se'et o-sapachat o vaheret ve-hayah ve-or-
-# besaro le-nega tzara'at ve-huva el-Aharon ha-kohen o el-achad mi-banav ha-
-# kohanim
+# אָדָם כִּי־יִהְיֶה בְעוֹר־בְּשָׂרוֹ שְׂאֵת אוֹ־סַפַּחַת אוֹ בַהֶרֶת
+# וְהָיָה בְעוֹר־בְּשָׂרוֹ לְנֶגַע צָרָעַת וְהוּבָא אֶל־אַהֲרֹן הַכֹּהֵן אוֹ
+# אֶל־אַחַד מִבָּנָיו הַכֹּהֲנִים
 # "When a man shall have in the skin of his flesh a rising, or a scab, or a
 # bright spot, and it become in the skin of his flesh the plague of leprosy,
 # then he shall be brought unto Aaron the priest, or unto one of his sons
 # the priests."
 m.step("Lev.13.2")
+# ‹אָדָם כִּי־יִהְיֶה … וְהוּבָא אֶל־אַהֲרֹן הַכֹּהֵן› case human, mark-in-
+# skin-of-flesh(swelling-or-scab-or-bright-spot) -> the-disease-mark routes
+# to hova-to-the-priest
 m.case("adam, mark_in_or_basar(seet_o_sapachat_o_baheret) -> nega_tzaraat", "hova_el_ha_kohen")
+# reads without prior install (flag, not fix): human, skin-of-flesh, the-
+# priest
 m.presupposed("adam", "or_basar", "ha_kohen")
 
 # -------------------------- Lev.13.3 · HANDLER_VERDICT_TAMEI ---------------
-# ve-ra'ah ha-kohen et-ha-nega be-or ha-basar ve-se'ar ba-nega hafakh lavan
-# u-mar'eh ha-nega amok me-or besaro nega tzara'at hu ve-ra'ahu ha-kohen ve-
-# timme oto
+# וְרָאָה הַכֹּהֵן אֶת־הַנֶּגַע בְּעוֹר־הַבָּשָׂר וְשֵׂעָר בַּנֶּגַע הָפַךְ
+# לָבָן וּמַרְאֵה הַנֶּגַע עָמֹק מֵעוֹר בְּשָׂרוֹ נֶגַע צָרַעַת הוּא
+# וְרָאָהוּ הַכֹּהֵן וְטִמֵּא אֹתוֹ
 # "And the priest shall look upon the plague in the skin of the flesh; and
 # if the hair in the plague be turned white, and the appearance of the
 # plague be deeper than the skin of his flesh, it is the plague of leprosy;
 # and the priest shall look on him, and pronounce him unclean."
 m.step("Lev.13.3")
+# ‹וְשֵׂעָר … הָפַךְ לָבָן וּמַרְאֵה … עָמֹק … וְטִמֵּא אֹתוֹ› standing
+# handler — if hair-has-turned-white ∧ appearance-deeper-from-skin-of then
+# classify(into-a-mark-of-the-disease-it-is) ∧ he-shall-declare-
+# impure(status-impure)
 m.handler("sear_hafakh_lavan ∧ mareh_amok_me_or",
           "classify(nega_tzaraat_hu) ∧ timme(status_tamei)")
 
 # -------------------------- Lev.13.4 · HANDLER_CONFINE_FIRST ---------------
-# ve-im-baheret levanah hi ve-or besaro ve-amok ein-mar'eha min-ha-or
-# u-se'arah lo-hafakh lavan ve-hisgir ha-kohen et-ha-nega shivat yamim
+# וְאִם־בַּהֶרֶת לְבָנָה הִוא בְּעוֹר בְּשָׂרוֹ וְעָמֹק אֵין־מַרְאֶהָ
+# מִן־הָעוֹר וּשְׂעָרָה לֹא־הָפַךְ לָבָן וְהִסְגִּיר הַכֹּהֵן אֶת־הַנֶּגַע
+# שִׁבְעַת יָמִים
 # "And if the bright spot be white in the skin of his flesh, and the
 # appearance thereof be not deeper than the skin, and the hair thereof be
 # not turned white, then the priest shall shut up him that hath the plague
 # seven days."
 m.step("Lev.13.4")
+# ‹וְאִם … אֵין … לֹא … וְהִסְגִּיר … שִׁבְעַת יָמִים› standing handler — if
+# bright-spot-white ∧ is-not-deeper-its-appearance ∧ not-has-turned-white
+# then he-shall-confine(obj-marker-the-into-a-mark-of, seven-of-days)
 m.handler("baheret_levanah ∧ ein_amok_mareha ∧ lo_hafakh_lavan",
           "hisgir(et_ha_nega, shivat_yamim)")
 
 # -------------------------- Lev.13.5 · HANDLER_RECHECK_CONFINE_SECOND ------
-# ve-ra'ahu ha-kohen ba-yom ha-shevi'i ve-hineh ha-nega amad be-einav lo-
-# fasah ha-nega ba-or ve-hisgiro ha-kohen shivat yamim shenit
+# וְרָאָהוּ הַכֹּהֵן בַּיּוֹם הַשְּׁבִיעִי וְהִנֵּה הַנֶּגַע עָמַד
+# בְּעֵינָיו לֹא־פָשָׂה הַנֶּגַע בָּעוֹר וְהִסְגִּירוֹ הַכֹּהֵן שִׁבְעַת
+# יָמִים שֵׁנִית
 # "And the priest shall look on him the seventh day; and, behold, if the
 # plague stay in its appearance, and the plague be not spread in the skin,
 # then the priest shall shut him up seven days more."
 m.step("Lev.13.5")
+# ‹בַּיּוֹם הַשְּׁבִיעִי וְהִנֵּה … עָמַד … לֹא־פָשָׂה … שֵׁנִית› standing
+# handler — if in-the-day-the-seventh ∧ has-stood-in-its-appearance ∧ not-
+# has-spread then he-shall-confine-him(seven-of-days-a-second-time)
 m.handler("ba_yom_ha_shevii ∧ amad_be_einav ∧ lo_fasah",
           "hisgiro(shivat_yamim_shenit)")
 
 # -------------------------- Lev.13.6 · HANDLER_RELEASE ---------------------
-# ve-ra'ah ha-kohen oto ba-yom ha-shevi'i shenit ve-hineh kehah ha-nega ve-
-# lo-fasah ha-nega ba-or ve-tiharo ha-kohen mispachat hi ve-khibbes begadav
-# ve-taher
+# וְרָאָה הַכֹּהֵן אֹתוֹ בַּיּוֹם הַשְּׁבִיעִי שֵׁנִית וְהִנֵּה כֵּהָה
+# הַנֶּגַע וְלֹא־פָשָׂה הַנֶּגַע בָּעוֹר וְטִהֲרוֹ הַכֹּהֵן מִסְפַּחַת הִיא
+# וְכִבֶּס בְּגָדָיו וְטָהֵר
 # "And the priest shall look on him again the seventh day; and, behold, if
 # the plague be dim, and the plague be not spread in the skin, then the
 # priest shall pronounce him clean: it is a scab; and he shall wash his
 # clothes, and be clean."
 m.step("Lev.13.6")
+# ‹כֵּהָה … וְטִהֲרוֹ … מִסְפַּחַת הִיא וְכִבֶּס בְּגָדָיו וְטָהֵר› standing
+# handler — if in-the-day-the-seventh-a-second-time ∧ has-dimmed ∧ not-has-
+# spread then he-shall-declare-him-pure(status-pure) ∧ classify(scab-it-is)
+# ∧ wash-his-garments ∧ he-is-pure
 m.handler("ba_yom_ha_shevii_shenit ∧ kehah ∧ lo_fasah",
           "tiharo(status_tahor) ∧ classify(mispachat_hi) ∧ kibbes_begadav ∧ taher")
 
 # -------------------------- Lev.13.7 · HANDLER_REOPEN_TRIGGER --------------
-# ve-im-pasoh tifseh ha-mispachat ba-or acharei hera'oto el-ha-kohen le-
-# tohorato ve-nir'ah shenit el-ha-kohen
+# וְאִם־פָּשֹׂה תִפְשֶׂה הַמִּסְפַּחַת בָּעוֹר אַחֲרֵי הֵרָאֹתוֹ
+# אֶל־הַכֹּהֵן לְטָהֳרָתוֹ וְנִרְאָה שֵׁנִית אֶל־הַכֹּהֵן
 # "But if the scab spread abroad in the skin, after that he hath shown
 # himself to the priest for his cleansing, he shall show himself to the
 # priest again."
 m.step("Lev.13.7")
+# ‹פָּשֹׂה תִפְשֶׂה … אַחֲרֵי הֵרָאֹתוֹ … וְנִרְאָה שֵׁנִית› standing
+# handler — if spread-it-spreads(after-its-appearing-to-his-purification)
+# then seen-a-second-time-to-the-priest
 m.handler("pasoh_tifseh(acharei_heraoto_le_tohorato)",
           "nirah_shenit_el_ha_kohen")
 
 # -------------------------- Lev.13.8 · HANDLER_REOPEN_VERDICT --------------
-# ve-ra'ah ha-kohen ve-hineh pastah ha-mispachat ba-or ve-timme'o ha-kohen
-# tzara'at hi
+# וְרָאָה הַכֹּהֵן וְהִנֵּה פָּשְׂתָה הַמִּסְפַּחַת בָּעוֹר וְטִמְּאוֹ
+# הַכֹּהֵן צָרַעַת הִוא
 # "And the priest shall look, and, behold, the scab is spread in the skin;
 # then the priest shall pronounce him unclean: it is leprosy."
 m.step("Lev.13.8")
+# ‹וְהִנֵּה פָּשְׂתָה … וְטִמְּאוֹ … צָרַעַת הִוא› standing handler — if
+# behold-has-spread-the-scab then pronounce-impure(status-impure) ∧
+# classify(the-disease-it-is)
 m.handler("hineh_pastah_ha_mispachat",
           "timmeo(status_tamei) ∧ classify(tzaraat_hi)")
 

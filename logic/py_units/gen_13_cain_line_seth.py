@@ -14,111 +14,159 @@ from machine import Machine
 m = Machine("gen_13_cain_line_seth")
 
 # -------------------------- Gen.4.17 · FIRST_CITY_BUILT_NAMED --------------
-# va-yeda Kayin et-ishto va-tahar va-teled et-Chanokh va-yehi boneh ir va-
-# yiqra shem ha-ir ke-shem beno Chanokh
+# וַיֵּדַע קַיִן אֶת־אִשְׁתּוֹ וַתַּהַר וַתֵּלֶד אֶת־חֲנוֹךְ וַיְהִי בֹּנֶה
+# עִיר וַיִּקְרָא שֵׁם הָעִיר כְּשֵׁם בְּנוֹ חֲנוֹךְ
 # "And Cain knew his wife; and she conceived, and bore Enoch; and he builded
 # a city, and called the name of the city after the name of his son Enoch."
 m.step("Gen.4.17")
+# ‹וַיֵּדַע קַיִן אֶת־אִשְׁתּוֹ וַתַּהַר וַתֵּלֶד אֶת־חֲנוֹךְ› event: bear —
+# agent wife-of-Cain; theme Enoch
 m.event("bear", agent="eshet_kayin", themes=["chanokh"])
+# ‹וַיְהִי בֹּנֶה עִיר› the world gains: city
 m.install("ir")
+# ‹וַיִּקְרָא שֵׁם הָעִיר כְּשֵׁם בְּנוֹ חֲנוֹךְ› named: city := Chanokh
 m.name("ir", "Chanokh")
+# reads without prior install (flag, not fix): Cain, wife-of-Cain
 m.presupposed("kayin", "eshet_kayin")
 
 # -------------------------- Gen.4.18 · BEGETTING_CHAIN_FOUR_LINKS ----------
-# va-yivaled la-Chanokh et-Irad ve-Irad yalad et-Mechuyael u-Mechiyael yalad
-# et-Metushael u-Metushael yalad et-Lamekh
+# וַיִּוָּלֵד לַחֲנוֹךְ אֶת־עִירָד וְעִירָד יָלַד אֶת־מְחוּיָאֵל
+# וּמְחִיּיָאֵל יָלַד אֶת־מְתוּשָׁאֵל וּמְתוּשָׁאֵל יָלַד אֶת־לָמֶךְ
 # "And unto Enoch was born Irad; and Irad begot Mehujael; and Mehujael begot
 # Methushael; and Methushael begot Lamech."
 m.step("Gen.4.18")
+# ‹וַיִּוָּלֵד לַחֲנוֹךְ אֶת־עִירָד› event: born — theme Irad
 m.event("born", themes=["irad"])
+# ‹וְעִירָד יָלַד אֶת־מְחוּיָאֵל› event: beget — agent Irad; theme Mehujael
 m.event("beget", agent="irad", themes=["mechuyael"])
+# ‹וּמְחִיּיָאֵל יָלַד אֶת־מְתוּשָׁאֵל› event: beget — agent Mehujael; theme
+# Methusael
 m.event("beget", agent="mechuyael", themes=["metushael"])
+# ‹וּמְתוּשָׁאֵל יָלַד אֶת־לָמֶךְ› event: beget — agent Methusael; theme
+# Lamech
 m.event("beget", agent="metushael", themes=["lemekh"])
 
 # -------------------------- Gen.4.19 · FIRST_POLYGAMY ----------------------
-# va-yiqach-lo Lemekh shtei nashim shem ha-achat Adah ve-shem ha-shenit
-# Tzilah
+# וַיִּקַּח־לוֹ לֶמֶךְ שְׁתֵּי נָשִׁים שֵׁם הָאַחַת עָדָה וְשֵׁם הַשֵּׁנִית
+# צִלָּה
 # "And Lamech took unto him two wives; the name of the one was Adah, and the
 # name of the other Zillah."
 m.step("Gen.4.19")
+# ‹וַיִּקַּח־לוֹ לֶמֶךְ שְׁתֵּי נָשִׁים› event: take — agent Lamech; theme
+# two-of-wives
 m.event("take", agent="lemekh", themes=["shte_nashim"])
+# ‹שֵׁם הָאַחַת עָדָה וְשֵׁם הַשֵּׁנִית צִלָּה› fact holds: two-of-wives-to-
+# Lamech; name-of-the-first-Adah; name-of-the-second-Tzillah
 m.fact("shte_nashim_le_lemekh",
        "shem_ha_achat_adah",
        "shem_ha_shenit_tzilah")
 
 # -------------------------- Gen.4.20 · OFFICE_TENT_AND_HERD ----------------
-# va-teled Adah et-Yaval hu hayah avi yoshev ohel u-mikneh
+# וַתֵּלֶד עָדָה אֶת־יָבָל הוּא הָיָה אֲבִי יֹשֵׁב אֹהֶל וּמִקְנֶה
 # "And Adah bore Jabal; he was the father of such as dwell in tents and have
 # cattle."
 m.step("Gen.4.20")
+# ‹וַתֵּלֶד עָדָה אֶת־יָבָל› event: bear — agent Adah; theme Yaval
 m.event("bear", agent="adah", themes=["yaval"])
+# ‹הוּא הָיָה אֲבִי יֹשֵׁב אֹהֶל וּמִקְנֶה› fact holds: father-of-dweller-
+# of-tent-and-livestock(Yaval)
 m.fact("avi_yoshev_ohel_u_mikneh(yaval)")
 
 # -------------------------- Gen.4.21 · OFFICE_HARP_AND_PIPE ----------------
-# ve-shem achiv Yuval hu hayah avi kol-tofes kinor ve-ugav
+# וְשֵׁם אָחִיו יוּבָל הוּא הָיָה אֲבִי כָּל־תֹּפֵשׂ כִּנּוֹר וְעוּגָב
 # "And his brother's name was Jubal; he was the father of all such as handle
 # the harp and pipe."
 m.step("Gen.4.21")
+# ‹וְשֵׁם אָחִיו יוּבָל הוּא הָיָה אֲבִי כָּל־תֹּפֵשׂ כִּנּוֹר וְעוּגָב›
+# fact holds: name-of-his-brother-Yuval; father-of-all-handler-of-harp-and-
+# pipe(Yuval)
 m.fact("shem_achiv_yuval",
        "avi_kol_tofes_kinor_ve_ugav(yuval)")
 
 # -------------------------- Gen.4.22 · OFFICE_BRONZE_IRON_SISTER -----------
-# ve-Tzilah gam-hi yaldah et-Tuval-Kayin lotesh kol-choresh nechoshet
-# u-varzel va-achot Tuval-Kayin Naamah
+# וְצִלָּה גַם־הִוא יָלְדָה אֶת־תּוּבַל קַיִן לֹטֵשׁ כָּל־חֹרֵשׁ נְחֹשֶׁת
+# וּבַרְזֶל וַאֲחוֹת תּוּבַל־קַיִן נַעֲמָה
 # "And Zillah, she also bore Tubal-cain, the forger of every cutting
 # instrument of brass and iron; and the sister of Tubal-cain was Naamah."
 m.step("Gen.4.22")
+# ‹וְצִלָּה גַם־הִוא יָלְדָה אֶת־תּוּבַל קַיִן› event: bear — agent Tzillah;
+# theme Tuval-Cain
 m.event("bear", agent="tzilah", themes=["tuval_kayin"])
+# ‹לֹטֵשׁ כָּל־חֹרֵשׁ נְחֹשֶׁת וּבַרְזֶל וַאֲחוֹת תּוּבַל־קַיִן נַעֲמָה›
+# fact holds: hammerer-of-all-craftsman-of-bronze-and-iron(Tuval-Cain);
+# sister-of-Tuval-Cain-Naamah
 m.fact("lotesh_kol_choresh_nechoshet_u_varzel(tuval_kayin)",
        "achot_tuval_kayin_naamah")
 
 # -------------------------- Gen.4.23 · SWORD_SONG_FIRST_HUMAN_IMPERATIVES --
-# va-yomer Lemekh le-nashav Adah ve-Tzilah shemaan qoli neshei Lemekh
-# haazenah imrati ki ish haragti le-fitzi ve-yeled le-chaburati
+# וַיֹּאמֶר לֶמֶךְ לְנָשָׁיו עָדָה וְצִלָּה שְׁמַעַן קוֹלִי נְשֵׁי לֶמֶךְ
+# הַאְזֵנָּה אִמְרָתִי כִּי אִישׁ הָרַגְתִּי לְפִצְעִי וְיֶלֶד לְחַבֻּרָתִי
 # "And Lamech said unto his wives: Adah and Zillah, hear my voice; ye wives
 # of Lamech, hearken unto my speech; for I have slain a man for wounding me,
 # and a young man for bruising me."
 m.step("Gen.4.23")
+# ‹וַיֹּאמֶר לֶמֶךְ לְנָשָׁיו עָדָה וְצִלָּה› event: say — agent Lamech;
+# theme wives-of-Lamech
 m.event("say", agent="lemekh", themes=["neshei_lemekh"])
+# ‹שְׁמַעַן קוֹלִי … הַאְזֵנָּה אִמְרָתִי› Lamech speaks a demand — LET:
+# hear(wives-of-Lamech, voice-Lamech)
 m.declare("lemekh", "LET",
           "shema(neshei_lemekh, qol_lemekh)")
+# ‹כִּי אִישׁ הָרַגְתִּי לְפִצְעִי וְיֶלֶד לְחַבֻּרָתִי› fact holds: a-man-
+# I-have-killed-to-fitzi-and-a-boy-to-my-wound
 m.fact("ish_haragti_le_fitzi_ve_yeled_le_chaburati")
 
 # -------------------------- Gen.4.24 · QUOTE_DIFF_SEVENTY_SEVEN ------------
-# ki shivatayim yukam-Kayin ve-Lemekh shivim ve-shivah
+# כִּי שִׁבְעָתַיִם יֻקַּם־קָיִן וְלֶמֶךְ שִׁבְעִים וְשִׁבְעָה
 # "If Cain shall be avenged sevenfold, truly Lamech seventy and sevenfold."
 m.step("Gen.4.24")
+# ‹כִּי שִׁבְעָתַיִם יֻקַּם־קָיִן וְלֶמֶךְ שִׁבְעִים וְשִׁבְעָה› spec-delta
+# — spec said all-slayer Kayin sevenfold shall-be-avenged — issuer the-LORD,
+# decree with mark (4:15, frozen gen-12), delivery says for sevenfold shall-
+# be-avenged-Kayin and-Lemekh seventy and-seven — issuer Lamech, boast,
+# multiplier x11, target self, ratification NONE (4:24)
 m.spec_delta("kol-horeg Kayin shivatayim yukam — issuer YHWH, decree with mark (4:15, frozen gen_12)",
              "ki shivatayim yukam-Kayin ve-Lemekh shivim ve-shivah — issuer lemekh, boast, multiplier x11, target self, ratification NONE (4:24)")
 
 # -------------------------- Gen.4.25 · SETH_REPLACEMENT_SEED ---------------
-# va-yeda Adam od et-ishto va-teled ben va-tiqra et-shemo Shet ki shat-li
-# Elohim zera acher tachat Hevel ki harago Kayin
+# וַיֵּדַע אָדָם עוֹד אֶת־אִשְׁתּוֹ וַתֵּלֶד בֵּן וַתִּקְרָא אֶת־שְׁמוֹ שֵׁת
+# כִּי שָׁת־לִי אֱלֹהִים זֶרַע אַחֵר תַּחַת הֶבֶל כִּי הֲרָגוֹ קָיִן
 # "And Adam knew his wife again; and she bore a son, and called his name
 # Seth: 'for God hath appointed me another seed instead of Abel; for Cain
 # slew him.'"
 m.step("Gen.4.25")
+# ‹וַיֵּדַע אָדָם עוֹד אֶת־אִשְׁתּוֹ וַתֵּלֶד בֵּן› event: bear — agent
+# wife-of-Adam; theme Shet
 m.event("bear", agent="eshet_adam", themes=["shet"])
+# ‹וַתִּקְרָא אֶת־שְׁמוֹ שֵׁת› named: Shet := Shet
 m.name("shet", "Shet")
+# ‹כִּי שָׁת־לִי אֱלֹהִים זֶרַע אַחֵר תַּחַת הֶבֶל כִּי הֲרָגוֹ קָיִן› fact
+# holds: has-SET-to-me-God-seed-another-place-of-Abel; slew-him-Cain-named-
+# in-speech
 m.fact("shat_li_elohim_zera_acher_tachat_hevel",
        "harago_kayin_named_in_speech")
+# reads without prior install (flag, not fix): Adam, wife-of-Adam
 m.presupposed("adam", "eshet_adam")
 
 # -------------------------- Gen.4.26 · ENOSH_CALLING_ON_THE_NAME -----------
-# u-le-Shet gam-hu yulad-ben va-yiqra et-shemo Enosh az huchal likro be-shem
-# YHWH
+# וּלְשֵׁת גַּם־הוּא יֻלַּד־בֵּן וַיִּקְרָא אֶת־שְׁמוֹ אֱנוֹשׁ אָז הוּחַל
+# לִקְרֹא בְּשֵׁם יְהוָה
 # "And to Seth, to him also there was born a son; and he called his name
 # Enosh; then began men to call upon the name of the LORD."
 m.step("Gen.4.26")
+# ‹וּלְשֵׁת גַּם־הוּא יֻלַּד־בֵּן› event: born — theme Enosh
 m.event("born", themes=["enosh"])
+# ‹וַיִּקְרָא אֶת־שְׁמוֹ אֱנוֹשׁ› named: Enosh := Enosh
 m.name("enosh", "Enosh")
+# ‹אָז הוּחַל לִקְרֹא בְּשֵׁם יְהוָה› fact holds: was-begun-to-call-in-name-
+# of-the-LORD
 m.fact("huchal_likro_be_shem_YHWH")
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
     assert m.created_set() == {'ir'}
-    assert m.presupposed_set() == {'adam', 'eshet_kayin', 'eshet_adam', 'kayin'}
+    assert m.presupposed_set() == {'eshet_kayin', 'eshet_adam', 'adam', 'kayin'}
     assert m.REGISTRY["names"] == {'ir': 'Chanokh', 'shet': 'Shet', 'enosh': 'Enosh'}
     assert m.REGISTRY["writes"] == 3
     assert m.tests_list() == []

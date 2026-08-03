@@ -7,10 +7,10 @@ reviewed, and frozen — the exit, the altar, and the never-agains are in.)
 ---
 
 Continue work on Torah_Grok (private GitHub `Josephtorah/Torah_Grok`, on
-**main**; last PUSHED commit 60a8a7d. The gen_17 + gen_18 + gen_19 +
-gen_20 waves are frozen ON DISK, NOT committed — FOUR waves deep;
-recommend seeking the owner's commit order). Dev server: port 8011,
-fresh process, full regen chain.
+**main**; last PUSHED commit faf4a3d — the agent-era wave: gen_17-20 +
+debut-map tools + prompts, ALL BANKED 2026-08-01; working tree clean
+except the protected untracked trio). Dev server: port 8011, fresh
+process, full regen chain.
 
 **ABSOLUTE RULE (memory: chat-hebrew-glossing):** NEVER reference Hebrew
 anywhere — script, transliteration, OR Hebrew-derived jargon — without
@@ -90,13 +90,12 @@ extension-free derivations). Newest:
 **KNOWN COSMETIC DEFECT (owner decision pending):** gen_14's 32
 boot-step he: lines UNPOINTED (amend-gated).
 
-**UNCOMMITTED pile (FOUR waves — seek commit order):** gen_17/18/19/20
-YAMLs (frozen); WATCHLIST_gen17/18/19/20; FETCHLOG += 46 (16+8+14+8);
-py_units ×4; UNIT_ pages ×4 + UNIT_INDEX (21); build_debut_map.py +
-debut_scan.py; PROMPT_continue_gen18/19/20/21; dev_server.py regen
-edits. Protected untracked (NEVER commit): Disclosure/,
+**COMMIT STATE: CLEAN (faf4a3d pushed 2026-08-01).** Only untracked
+files are the protected trio (NEVER commit): Disclosure/,
 reviews/architecture/NARRATIVE_theory_of_disclosure_intro,
-TEMP_return_to_main.
+TEMP_return_to_main. NOTE: this prompt file itself was committed at
+faf4a3d then edited (this commit-state note) — a one-line diff will
+show; commit on the next owner order or fold into the next wave.
 
 **Read these first, in order:**
 1. `logic/units/gen_20_exit_altar.yaml` — freshest frozen (DECLARE/

@@ -14,93 +14,132 @@ from machine import Machine
 m = Machine("gen_09_helper_woman_first_speech")
 
 # -------------------------- Gen.2.18 · VERDICT_FAIL_AND_PLAN ---------------
-# va-yomer YHWH Elohim lo-tov heyot ha-adam levado e'eseh-lo ezer kenegdo
+# וַיֹּאמֶר יְהוָה אֱלֹהִים לֹא־טוֹב הֱיוֹת הָאָדָם לְבַדּוֹ אֶעֱשֶׂה־לּוֹ
+# עֵזֶר כְּנֶגְדּוֹ
 # "And the LORD God said: 'It is not good that the man should be alone; I
 # will make him a help meet for him.'"
 m.step("Gen.2.18")
+# ‹לֹא־טוֹב הֱיוֹת הָאָדָם לְבַדּוֹ› test FAIL — oracle-word good, on the-
+# human-being-alone
 m.test("FAIL", "tov", "heyot_ha_adam_levado")
+# ‹אֶעֱשֶׂה־לּוֹ עֵזֶר כְּנֶגְדּוֹ› the-LORD-God speaks a demand — CMD-US?:
+# make(helper-corresponding-to-him, to-human)
 m.declare("YHWH_Elohim", "CMD-US?",
           "make(ezer_kenegdo, le_adam)")
+# reads without prior install (flag, not fix): human
 m.presupposed("adam")
 
 # -------------------------- Gen.2.19 · FORM_BRING_DELEGATE -----------------
-# va-yitzer YHWH Elohim min-ha-adamah kol-chayat ha-sadeh ve-et kol-of ha-
-# shamayim va-yave el-ha-adam li-reot mah-yiqra-lo ve-khol asher yiqra-lo
-# ha-adam nefesh chayah hu shemo
+# וַיִּצֶר יְהוָה אֱלֹהִים מִן־הָאֲדָמָה כָּל־חַיַּת הַשָּׂדֶה וְאֵת
+# כָּל־עוֹף הַשָּׁמַיִם וַיָּבֵא אֶל־הָאָדָם לִרְאוֹת מַה־יִּקְרָא־לוֹ וְכֹל
+# אֲשֶׁר יִקְרָא־לוֹ הָאָדָם נֶפֶשׁ חַיָּה הוּא שְׁמוֹ
 # "And out of the ground the LORD God formed every beast of the field, and
 # every fowl of the air; and brought them unto the man to see what he would
 # call them; and whatsoever the man would call every living creature, that
 # was to be the name thereof."
 m.step("Gen.2.19")
+# ‹וַיִּצֶר … מִן־הָאֲדָמָה› event: form — agent the-LORD-God; theme beast-
+# of-the-field, fowl-of-the-sky
 m.event("form", agent="YHWH_Elohim", themes=["chayat_ha_sadeh", "of_ha_shamayim"])
+# ‹כָּל־חַיַּת הַשָּׂדֶה וְאֵת כָּל־עוֹף הַשָּׁמַיִם› the world gains:
+# beast-of-the-field, fowl-of-the-sky
 m.install("chayat_ha_sadeh", "of_ha_shamayim")
+# ‹וַיָּבֵא אֶל־הָאָדָם לִרְאוֹת מַה־יִּקְרָא־לוֹ› event: bring — agent the-
+# LORD-God; theme beast-of-the-field
 m.event("bring", agent="YHWH_Elohim", themes=["chayat_ha_sadeh"])
+# ‹וְכֹל אֲשֶׁר יִקְרָא־לוֹ הָאָדָם נֶפֶשׁ חַיָּה הוּא שְׁמוֹ› fact holds:
+# that-is-its-name(all-which-he-will-call-not-the-human)
 m.fact("hu_shemo(kol_asher_yiqra_lo_ha_adam)")
+# reads without prior install (flag, not fix): ground
 m.presupposed("adamah")
 
 # -------------------------- Gen.2.20 · BULK_NAMING_FAILED_SEARCH -----------
-# va-yiqra ha-adam shemot le-khol-ha-behemah u-le-of ha-shamayim u-le-khol
-# chayat ha-sadeh u-le-adam lo-matza ezer kenegdo
+# וַיִּקְרָא הָאָדָם שֵׁמוֹת לְכָל־הַבְּהֵמָה וּלְעוֹף הַשָּׁמַיִם וּלְכֹל
+# חַיַּת הַשָּׂדֶה וּלְאָדָם לֹא־מָצָא עֵזֶר כְּנֶגְדּוֹ
 # "And the man gave names to all cattle, and to the fowl of the air, and to
 # every beast of the field; but for Adam there was not found a help meet for
 # him."
 m.step("Gen.2.20")
+# ‹וַיִּקְרָא הָאָדָם שֵׁמוֹת› event: call — agent human; theme names
 m.event("call", agent="adam", themes=["shemot"])
+# ‹וּלְאָדָם לֹא־מָצָא עֵזֶר כְּנֶגְדּוֹ› fact holds: did-not-find(helper-
+# corresponding-to-him, to-human)
 m.fact("lo_matza(ezer_kenegdo, le_adam)")
+# reads without prior install (flag, not fix): livestock
 m.presupposed("behemah")
 
 # -------------------------- Gen.2.21 · SLEEP_AND_SURGERY -------------------
-# va-yapel YHWH Elohim tardemah al-ha-adam va-yishan va-yiqach achat mi-
-# tzalotav va-yisgor basar tachtenah
+# וַיַּפֵּל יְהוָה אֱלֹהִים תַּרְדֵּמָה עַל־הָאָדָם וַיִּישָׁן וַיִּקַּח
+# אַחַת מִצַּלְעֹתָיו וַיִּסְגֹּר בָּשָׂר תַּחְתֶּנָּה
 # "And the LORD God caused a deep sleep to fall upon the man, and he slept;
 # and He took one of his ribs, and closed up the place with flesh instead
 # thereof."
 m.step("Gen.2.21")
+# ‹וַיַּפֵּל … תַּרְדֵּמָה עַל־הָאָדָם וַיִּישָׁן› event: cast-sleep — agent
+# the-LORD-God; theme deep-sleep
 m.event("cast_sleep", agent="YHWH_Elohim", themes=["tardemah"])
+# ‹וַיִּקַּח אַחַת מִצַּלְעֹתָיו› event: take — agent the-LORD-God; theme
+# side
 m.event("take", agent="YHWH_Elohim", themes=["tzela"])
+# ‹וַיִּסְגֹּר בָּשָׂר תַּחְתֶּנָּה› event: close — agent the-LORD-God;
+# theme flesh
 m.event("close", agent="YHWH_Elohim", themes=["basar"])
 
 # -------------------------- Gen.2.22 · BUILD_WOMAN_RECEIPT -----------------
-# va-yiven YHWH Elohim et-ha-tzela asher-laqach min-ha-adam le-ishah va-
-# yevieha el-ha-adam
+# וַיִּבֶן יְהוָה אֱלֹהִים אֶת־הַצֵּלָע אֲשֶׁר־לָקַח מִן־הָאָדָם לְאִשָּׁה
+# וַיְבִאֶהָ אֶל־הָאָדָם
 # "And the rib, which the LORD God had taken from the man, made He a woman,
 # and brought her unto the man."
 m.step("Gen.2.22")
+# ‹וַיִּבֶן … אֶת־הַצֵּלָע … לְאִשָּׁה› event: build — agent the-LORD-God;
+# theme woman
 m.event("build", agent="YHWH_Elohim", themes=["ishah"])
+# ‹לְאִשָּׁה› the world gains: woman
 m.install("ishah")
+# ‹וַיִּבֶן … וַיְבִאֶהָ אֶל־הָאָדָם› demand settled (popped from the
+# queue): make(helper-corresponding-to-him, to-human)
 m.result("make(ezer_kenegdo, le_adam)", tmark="t1")
+# spec-delta — spec said e'I-will-make (I will MAKE — make, the week's build
+# verb), delivery says and-he-built (He BUILT — build, first token)
 m.spec_delta("e'eseh (I will MAKE — asah, the week's build verb)",
              "va-yiven (He BUILT — banah, first token)")
 
 # -------------------------- Gen.2.23 · FIRST_HUMAN_SPEECH_NAME -------------
-# va-yomer ha-adam zot ha-paam etzem me-atzamai u-vasar mi-besari le-zot
-# yiqare ishah ki me-ish lukocha-zot
+# וַיֹּאמֶר הָאָדָם זֹאת הַפַּעַם עֶצֶם מֵעֲצָמַי וּבָשָׂר מִבְּשָׂרִי
+# לְזֹאת יִקָּרֵא אִשָּׁה כִּי מֵאִישׁ לֻקֳחָה־זֹּאת
 # "And the man said: 'This is now bone of my bones, and flesh of my flesh;
 # she shall be called Woman, because she was taken out of Man.'"
 m.step("Gen.2.23")
+# ‹וַיֹּאמֶר הָאָדָם› event: say — agent human
 m.event("say", agent="adam")
+# ‹לְזֹאת יִקָּרֵא אִשָּׁה כִּי מֵאִישׁ לֻקֳחָה־זֹּאת› named: woman := woman
 m.name("ishah", "ishah")
 
 # -------------------------- Gen.2.24 · ETIOLOGY_PATTERN --------------------
-# al-ken yaazov-ish et-aviv ve-et-imo ve-davak be-ishto ve-hayu le-vasar
-# echad
+# עַל־כֵּן יַעֲזָב־אִישׁ אֶת־אָבִיו וְאֶת־אִמּוֹ וְדָבַק בְּאִשְׁתּוֹ
+# וְהָיוּ לְבָשָׂר אֶחָד
 # "Therefore shall a man leave his father and his mother, and shall cleave
 # unto his wife, and they shall be one flesh."
 m.step("Gen.2.24")
+# ‹עַל־כֵּן יַעֲזָב־אִישׁ … וְדָבַק … וְהָיוּ לְבָשָׂר אֶחָד› pattern
+# recorded: leave(man, father-and-mother) ∧ cleave(man, in-his-wife) ∧ they-
+# become(one-flesh)
 m.pattern("azav(ish, av_ve_em) ∧ davak(ish, be_ishto) ∧ hayu(basar_echad)")
 
 # -------------------------- Gen.2.25 · CLOSING_STATE_BRIDGE ----------------
-# va-yihyu shneihem arumim ha-adam ve-ishto ve-lo yitboshashu
+# וַיִּהְיוּ שְׁנֵיהֶם עֲרוּמִּים הָאָדָם וְאִשְׁתּוֹ וְלֹא יִתְבֹּשָׁשׁוּ
 # "And they were both naked, the man and his wife, and were not ashamed."
 m.step("Gen.2.25")
+# ‹עֲרוּמִּים … וְלֹא יִתְבֹּשָׁשׁוּ› fact holds: naked(the-human-and-his-
+# wife); were-not-ashamed(both-of-them)
 m.fact("arumim(ha_adam_ve_ishto)",
        "lo_yitboshashu(shneihem)")
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
-    assert m.created_set() == {'ishah', 'chayat_ha_sadeh', 'of_ha_shamayim'}
-    assert m.presupposed_set() == {'adam', 'adamah', 'behemah'}
+    assert m.created_set() == {'ishah', 'of_ha_shamayim', 'chayat_ha_sadeh'}
+    assert m.presupposed_set() == {'adamah', 'behemah', 'adam'}
     assert m.REGISTRY["names"] == {'ishah': 'ishah'}
     assert m.REGISTRY["writes"] == 1
     assert m.tests_list() == [('FAIL', 'tov', 'heyot_ha_adam_levado')]

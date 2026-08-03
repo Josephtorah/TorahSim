@@ -14,151 +14,197 @@ from machine import Machine
 m = Machine("gen_17_boarding")
 
 # -------------------------- Gen.7.1 · COME_COMMAND_SECOND_PERSON_VERDICT ---
-# va-yomer YHWH le-Noach bo-atah ve-khol-beitkha el-ha-tevah ki-otkha raiti
-# tzaddik lefanai ba-dor ha-zeh
+# וַיֹּאמֶר יְהוָה לְנֹחַ בֹּא־אַתָּה וְכָל־בֵּיתְךָ אֶל־הַתֵּבָה
+# כִּי־אֹתְךָ רָאִיתִי צַדִּיק לְפָנַי בַּדּוֹר הַזֶּה
 # "And the LORD said unto Noah: 'Come thou and all thy house into the ark;
 # for thee have I seen righteous before Me in this generation.'"
 m.step("Gen.7.1")
+# ‹בֹּא־אַתָּה וְכָל־בֵּיתְךָ אֶל־הַתֵּבָה› the-LORD speaks a demand — LET:
+# come(Noach, to-the-ark)
 m.declare("YHWH", "LET",
           "bo(noach, el_ha_tevah)")
+# ‹כִּי־אֹתְךָ רָאִיתִי צַדִּיק לְפָנַי› test PASS — oracle-word righteous,
+# on Noach
 m.test("PASS", "tzaddik", "noach")
+# reads without prior install (flag, not fix): Noach, ark
 m.presupposed("noach", "tevah")
 
 # -------------------------- Gen.7.2 · CLEAN_SEVENS_AMENDMENT ---------------
-# mi-kol ha-behemah ha-tehorah tiqach-lekha shivah shivah ish ve-ishto
-# u-min-ha-behemah asher lo tehorah hi shnayim ish ve-ishto
+# מִכֹּל הַבְּהֵמָה הַטְּהוֹרָה תִּקַּח־לְךָ שִׁבְעָה שִׁבְעָה אִישׁ
+# וְאִשְׁתּוֹ וּמִן־הַבְּהֵמָה אֲשֶׁר לֹא טְהֹרָה הִוא שְׁנַיִם אִישׁ
+# וְאִשְׁתּוֹ
 # "Of every clean beast thou shalt take to thee seven and seven, each with
 # his mate; and of the beasts that are not clean two and two, each with his
 # mate;"
 m.step("Gen.7.2")
+# ‹הַטְּהוֹרָה … שִׁבְעָה שִׁבְעָה … לֹא טְהֹרָה הִוא שְׁנַיִם› fact holds:
+# seven-seven-the-livestock-the-clean; two-which-not-clean
 m.fact("shivah_shivah_ha_behemah_ha_tehorah",
        "shnayim_asher_lo_tehorah")
 
 # -------------------------- Gen.7.3 · BIRDS_AND_THE_SEED_PURPOSE -----------
-# gam me-of ha-shamayim shivah shivah zakhar u-nekevah le-chayot zera al-
-# pnei khol-ha-aretz
+# גַּם מֵעוֹף הַשָּׁמַיִם שִׁבְעָה שִׁבְעָה זָכָר וּנְקֵבָה לְחַיּוֹת זֶרַע
+# עַל־פְּנֵי כָל־הָאָרֶץ
 # "of the fowl also of the air, seven and seven, male and female; to keep
 # seed alive upon the face of all the earth."
 m.step("Gen.7.3")
+# ‹לְחַיּוֹת זֶרַע עַל־פְּנֵי כָל־הָאָרֶץ› fact holds: to-keep-alive-seed-
+# over-face-of-all-the-earth
 m.fact("le_chayot_zera_al_pnei_khol_ha_aretz")
 
 # -------------------------- Gen.7.4 · COUNTDOWN_STACK_WIPE_SCHEDULED -------
-# ki le-yamim od shivah anokhi mamtir al-ha-aretz arbaim yom ve-arbaim
-# laylah u-machiti et-kol-ha-yequm asher asiti me-al pnei ha-adamah
+# כִּי לְיָמִים עוֹד שִׁבְעָה אָנֹכִי מַמְטִיר עַל־הָאָרֶץ אַרְבָּעִים יוֹם
+# וְאַרְבָּעִים לָיְלָה וּמָחִיתִי אֶת־כָּל־הַיְקוּם אֲשֶׁר עָשִׂיתִי מֵעַל
+# פְּנֵי הָאֲדָמָה
 # "For yet seven days, and I will cause it to rain upon the earth forty days
 # and forty nights; and every living substance that I have made will I blot
 # out from off the face of the earth.'"
 m.step("Gen.7.4")
+# ‹עוֹד שִׁבְעָה אָנֹכִי מַמְטִיר … וּמָחִיתִי אֶת־כָּל־הַיְקוּם› fact
+# holds: still-seven-day-I-raining; and-I-will-wipe-obj-marker·et-all-the-
+# standing-substance
 m.fact("od_shivat_yamim_anokhi_mamtir",
        "u_machiti_et_kol_ha_yequm")
 
 # -------------------------- Gen.7.5 · REFRAIN_TWO --------------------------
-# va-yaas Noach ke-khol asher-tzivahu YHWH
+# וַיַּעַשׂ נֹחַ כְּכֹל אֲשֶׁר־צִוָּהוּ יְהוָה
 # "And Noah did according unto all that the LORD commanded him."
 m.step("Gen.7.5")
+# ‹וַיַּעַשׂ נֹחַ כְּכֹל אֲשֶׁר־צִוָּהוּ יְהוָה› fact holds: like-all-which-
+# commanded-him-the-LORD
 m.fact("ke_khol_asher_tzivahu_YHWH")
 
 # -------------------------- Gen.7.6 · AGE_AT_THE_FLOOD ---------------------
-# ve-Noach ben-shesh meot shanah ve-ha-mabul hayah mayim al-ha-aretz
+# וְנֹחַ בֶּן־שֵׁשׁ מֵאוֹת שָׁנָה וְהַמַּבּוּל הָיָה מַיִם עַל־הָאָרֶץ
 # "And Noah was six hundred years old when the flood of waters was upon the
 # earth."
 m.step("Gen.7.6")
+# ‹וְנֹחַ בֶּן־שֵׁשׁ מֵאוֹת שָׁנָה› fact holds: Noach-son-six-hundred-year
 m.fact("noach_ben_shesh_meot_shanah")
 
 # -------------------------- Gen.7.7 · THE_ENTRY_DEMAND_POPPED --------------
-# va-yavo Noach u-vanav ve-ishto u-neshei-vanav ito el-ha-tevah mi-pnei mei
-# ha-mabul
+# וַיָּבֹא נֹחַ וּבָנָיו וְאִשְׁתּוֹ וּנְשֵׁי־בָנָיו אִתּוֹ אֶל־הַתֵּבָה
+# מִפְּנֵי מֵי הַמַּבּוּל
 # "And Noah went in, and his sons, and his wife, and his sons' wives with
 # him, into the ark, because of the waters of the flood."
 m.step("Gen.7.7")
+# ‹וַיָּבֹא נֹחַ … אֶל־הַתֵּבָה› event: come — agent Noach; theme to-the-ark
 m.event("come", agent="noach", themes=["el_ha_tevah"])
+# ‹וַיָּבֹא … אֶל־הַתֵּבָה› demand settled (popped from the queue):
+# come(Noach, to-the-ark)
 m.result("bo(noach, el_ha_tevah)", tmark="t1")
 
 # -------------------------- Gen.7.8 · THE_CARGO_CLASSES --------------------
-# min-ha-behemah ha-tehorah u-min-ha-behemah asher einenah tehorah u-min-ha-
-# of ve-khol asher-romes al-ha-adamah
+# מִן־הַבְּהֵמָה הַטְּהוֹרָה וּמִן־הַבְּהֵמָה אֲשֶׁר אֵינֶנָּה טְהֹרָה
+# וּמִן־הָעוֹף וְכֹל אֲשֶׁר־רֹמֵשׂ עַל־הָאֲדָמָה
 # "Of clean beasts, and of beasts that are not clean, and of fowls, and of
 # every thing that creepeth upon the ground,"
 m.step("Gen.7.8")
+# ‹הַטְּהוֹרָה … אֵינֶנָּה טְהֹרָה … הָעוֹף … רֹמֵשׂ› fact holds: the-clean-
+# and-is-not-clean-and-the-flying-creature-and-the-creep
 m.fact("ha_tehorah_ve_einenah_tehorah_ve_ha_of_ve_ha_romes")
 
 # -------------------------- Gen.7.9 · SELF_LOADING_REFRAIN_THREE -----------
-# shnayim shnayim bau el-Noach el-ha-tevah zakhar u-nekevah ka-asher tzivah
-# Elohim et-Noach
+# שְׁנַיִם שְׁנַיִם בָּאוּ אֶל־נֹחַ אֶל־הַתֵּבָה זָכָר וּנְקֵבָה כַּאֲשֶׁר
+# צִוָּה אֱלֹהִים אֶת־נֹחַ
 # "there went in two and two unto Noah into the ark, male and female, as God
 # commanded Noah."
 m.step("Gen.7.9")
+# ‹שְׁנַיִם שְׁנַיִם בָּאוּ … כַּאֲשֶׁר צִוָּה אֱלֹהִים› fact holds: two-
+# two-they-came-to-Noach; like-which-commanded-God-obj-marker·et-Noach
 m.fact("shnayim_shnayim_bau_el_noach",
        "ka_asher_tzivah_elohim_et_noach")
 
 # -------------------------- Gen.7.10 · SEVEN_DAYS_ELAPSE -------------------
-# va-yehi le-shivat ha-yamim u-mei ha-mabul hayu al-ha-aretz
+# וַיְהִי לְשִׁבְעַת הַיָּמִים וּמֵי הַמַּבּוּל הָיוּ עַל־הָאָרֶץ
 # "And it came to pass after the seven days, that the waters of the flood
 # were upon the earth."
 m.step("Gen.7.10")
+# ‹וַיְהִי לְשִׁבְעַת הַיָּמִים וּמֵי הַמַּבּוּל הָיוּ› fact holds: to-
+# seven-the-day-waters-of-the-deluge
 m.fact("le_shivat_ha_yamim_mei_ha_mabul")
 
 # -------------------------- Gen.7.11 · THE_DATE_DOUBLE_BREACH --------------
-# bi-shnat shesh-meot shanah le-chayei-Noach ba-chodesh ha-sheni be-shivah-
-# asar yom la-chodesh ba-yom ha-zeh nivkeu kol-mayenot tehom rabbah va-
-# arubot ha-shamayim niftachu
+# בִּשְׁנַת שֵׁשׁ־מֵאוֹת שָׁנָה לְחַיֵּי־נֹחַ בַּחֹדֶשׁ הַשֵּׁנִי
+# בְּשִׁבְעָה־עָשָׂר יוֹם לַחֹדֶשׁ בַּיּוֹם הַזֶּה נִבְקְעוּ כָּל־מַעְיְנֹת
+# תְּהוֹם רַבָּה וַאֲרֻבֹּת הַשָּׁמַיִם נִפְתָּחוּ
 # "In the six hundredth year of Noah's life, in the second month, on the
 # seventeenth day of the month, on the same day were all the fountains of
 # the great deep broken up, and the windows of heaven were opened."
 m.step("Gen.7.11")
+# ‹בִּשְׁנַת שֵׁשׁ־מֵאוֹת שָׁנָה לְחַיֵּי־נֹחַ בַּחֹדֶשׁ הַשֵּׁנִי
+# בְּשִׁבְעָה־עָשָׂר יוֹם לַחֹדֶשׁ› clock anchored: t0 := year-of-600-of-
+# month-2-day-17
 m.time_anchor("shnat_600_chodesh_2_yom_17")
+# ‹נִבְקְעוּ כָּל־מַעְיְנֹת תְּהוֹם רַבָּה› event: split — theme fountains-
+# of-deep-great
 m.event("split", themes=["mayenot_tehom_rabbah"])
+# ‹וַאֲרֻבֹּת הַשָּׁמַיִם נִפְתָּחוּ› event: open — theme windows-of-the-
+# heavens
 m.event("open", themes=["arubot_ha_shamayim"])
 
 # -------------------------- Gen.7.12 · THE_RAIN_FORTY ----------------------
-# va-yehi ha-geshem al-ha-aretz arbaim yom ve-arbaim laylah
+# וַיְהִי הַגֶּשֶׁם עַל־הָאָרֶץ אַרְבָּעִים יוֹם וְאַרְבָּעִים לָיְלָה
 # "And the rain was upon the earth forty days and forty nights."
 m.step("Gen.7.12")
+# ‹הַגֶּשֶׁם … אַרְבָּעִים יוֹם וְאַרְבָּעִים לָיְלָה› fact holds: the-rain-
+# forty-day-and-forty-night
 m.fact("ha_geshem_arbaim_yom_va_arbaim_laylah")
 
 # -------------------------- Gen.7.13 · THE_SOLEMN_DAY_STAMP ----------------
-# be-etzem ha-yom ha-zeh ba Noach ve-Shem-ve-Cham va-Yefet bnei-Noach ve-
-# eshet Noach u-shloshet neshei-vanav itam el-ha-tevah
+# בְּעֶצֶם הַיּוֹם הַזֶּה בָּא נֹחַ וְשֵׁם־וְחָם וָיֶפֶת בְּנֵי־נֹחַ
+# וְאֵשֶׁת נֹחַ וּשְׁלֹשֶׁת נְשֵׁי־בָנָיו אִתָּם אֶל־הַתֵּבָה
 # "In the selfsame day entered Noah, and Shem, and Ham, and Japheth, the
 # sons of Noah, and Noah's wife, and the three wives of his sons with them,
 # into the ark;"
 m.step("Gen.7.13")
+# ‹בְּעֶצֶם הַיּוֹם הַזֶּה בָּא נֹחַ› fact holds: in-very-the-day-the-this-
+# came-Noach
 m.fact("be_etzem_ha_yom_ha_zeh_ba_noach")
 
 # -------------------------- Gen.7.14 · FULL_TAXONOMY_EVERY_WING ------------
-# hemah ve-khol-ha-chayah le-minah ve-khol-ha-behemah le-minah ve-khol-ha-
-# remes ha-romes al-ha-aretz le-minehu ve-khol-ha-of le-minehu kol tzippor
-# kol-kanaf
+# הֵמָּה וְכָל־הַחַיָּה לְמִינָהּ וְכָל־הַבְּהֵמָה לְמִינָהּ וְכָל־הָרֶמֶשׂ
+# הָרֹמֵשׂ עַל־הָאָרֶץ לְמִינֵהוּ וְכָל־הָעוֹף לְמִינֵהוּ כֹּל צִפּוֹר
+# כָּל־כָּנָף
 # "they, and every beast after its kind, and all the cattle after their
 # kind, and every creeping thing that creepeth upon the earth after its
 # kind, and every fowl after its kind, every bird of every sort."
 m.step("Gen.7.14")
+# ‹לְמִינָהּ … לְמִינֵהוּ … כֹּל צִפּוֹר כָּל־כָּנָף› fact holds: all-the-
+# beast-to-its-kind-the-flying-creature-to-its-kind; all-bird-all-wing
 m.fact("kol_ha_chayah_le_minah_ha_of_le_minehu",
        "kol_tzippor_kol_kanaf")
 
 # -------------------------- Gen.7.15 · THE_PAIRS_AND_THE_BREATH ------------
-# va-yavou el-Noach el-ha-tevah shnayim shnayim mi-kol-ha-basar asher-bo
-# ruach chayim
+# וַיָּבֹאוּ אֶל־נֹחַ אֶל־הַתֵּבָה שְׁנַיִם שְׁנַיִם מִכָּל־הַבָּשָׂר
+# אֲשֶׁר־בּוֹ רוּחַ חַיִּים
 # "And they went in unto Noah into the ark, two and two of all flesh wherein
 # is the breath of life."
 m.step("Gen.7.15")
+# ‹וַיָּבֹאוּ אֶל־נֹחַ … שְׁנַיִם שְׁנַיִם› event: come — theme all-flesh-
+# two-two
 m.event("come", themes=["kol_basar_shnayim_shnayim"])
 
 # -------------------------- Gen.7.16 · THE_SEAL_YHWH_SHUTS -----------------
-# ve-ha-baim zakhar u-nekevah mi-kol-basar bau ka-asher tzivah oto Elohim
-# va-yisgor YHWH baado
+# וְהַבָּאִים זָכָר וּנְקֵבָה מִכָּל־בָּשָׂר בָּאוּ כַּאֲשֶׁר צִוָּה אֹתוֹ
+# אֱלֹהִים וַיִּסְגֹּר יְהוָה בַּעֲדוֹ
 # "And they that went in, went in male and female of all flesh, as God
 # commanded him; and the LORD shut him in."
 m.step("Gen.7.16")
+# ‹וְהַבָּאִים זָכָר וּנְקֵבָה … בָּאוּ כַּאֲשֶׁר צִוָּה אֹתוֹ אֱלֹהִים›
+# fact holds: the-comers-male-and-female-they-came; like-which-commanded-it-
+# God
 m.fact("ha_baim_zakhar_u_nekevah_bau",
        "ka_asher_tzivah_oto_elohim")
+# ‹וַיִּסְגֹּר יְהוָה בַּעֲדוֹ› event: shut — agent the-LORD; theme about-
+# him
 m.event("shut", agent="YHWH", themes=["baado"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
     assert m.created_set() == set()
-    assert m.presupposed_set() == {'tevah', 'noach'}
+    assert m.presupposed_set() == {'noach', 'tevah'}
     assert m.REGISTRY["names"] == {}
     assert m.REGISTRY["writes"] == 0
     assert m.tests_list() == [('PASS', 'tzaddik', 'noach')]

@@ -14,58 +14,90 @@ from machine import Machine
 m = Machine("gen_05_swarms_blessing")
 
 # -------------------------- Gen.1.20 · DECLARE_SPEC_SWARM_FLIGHT -----------
-# va-yomer Elohim yishretzu ha-mayim sheretz nefesh chaya ve-of ye'ofef al-
-# ha-aretz al-pnei reqia ha-shamayim
+# וַיֹּאמֶר אֱלֹהִים יִשְׁרְצוּ הַמַּיִם שֶׁרֶץ נֶפֶשׁ חַיָּה וְעוֹף
+# יְעוֹפֵף עַל־הָאָרֶץ עַל־פְּנֵי רְקִיעַ הַשָּׁמָיִם
 # "And God said: 'Let the waters swarm with swarms of living creatures, and
 # let fowl fly above the earth in the open firmament of heaven.'"
 m.step("Gen.1.20")
+# ‹יִשְׁרְצוּ הַמַּיִם שֶׁרֶץ נֶפֶשׁ חַיָּה› God speaks a demand — LET?:
+# swarm(waters), product=swarm-of-living-being-living
 m.declare("Elohim", "LET?",
           "swarm(mayim), product=sheretz_nefesh_chaya")
+# ‹וְעוֹף יְעוֹפֵף עַל־הָאָרֶץ עַל־פְּנֵי רְקִיעַ הַשָּׁמָיִם› God speaks a
+# demand — LET?: fly(flier), loc=face-of-expanse-the-heavens
 m.declare("Elohim", "LET?",
           "fly(of), loc=pnei_raqia_ha_shamayim")
+# ‹יִשְׁרְצוּ הַמַּיִם שֶׁרֶץ› open question logged: swarm(waters),
+# product=swarm-of-living-being-living
 m.triple("swarm(mayim), product=sheretz_nefesh_chaya")
+# reads without prior install (flag, not fix): waters, earth, expanse,
+# heavens
 m.presupposed("mayim", "aretz", "raqia", "shamayim")
 
 # -------------------------- Gen.1.21 · BUILD_CREATE_CREDIT_DELTA_TEST ------
-# va-yivra Elohim et-ha-taninim ha-gedolim ve-et kol-nefesh ha-chaya ha-
-# romeset asher shartzu ha-mayim le-minehem ve-et kol-of kanaf le-minehu va-
-# yar Elohim ki-tov
+# וַיִּבְרָא אֱלֹהִים אֶת־הַתַּנִּינִם הַגְּדֹלִים וְאֵת כָּל־נֶפֶשׁ
+# הַחַיָּה הָרֹמֶשֶׂת אֲשֶׁר שָׁרְצוּ הַמַּיִם לְמִינֵהֶם וְאֵת כָּל־עוֹף
+# כָּנָף לְמִינֵהוּ וַיַּרְא אֱלֹהִים כִּי־טוֹב
 # "And God created the great sea-monsters, and every living creature that
 # creepeth, wherewith the waters swarmed, after its kind, and every winged
 # fowl after its kind; and God saw that it was good."
 m.step("Gen.1.21")
+# ‹וַיִּבְרָא אֱלֹהִים אֶת … וְאֵת … וְאֵת› event: create — agent God; theme
+# sea-monsters, living-being-living-creeping, flier-wing
 m.event("create", agent="Elohim", themes=["taninim", "nefesh_chaya_romeset", "of_kanaf"])
+# the world gains: sea-monsters, living-being-living-creeping, flier-wing
 m.install("taninim", "nefesh_chaya_romeset", "of_kanaf")
+# ‹אֲשֶׁר שָׁרְצוּ הַמַּיִם› demand settled (popped from the queue):
+# swarm(waters), product=swarm-of-living-being-living
 m.result("swarm(mayim), product=sheretz_nefesh_chaya", tmark="t1")
+# ‹וְאֵת כָּל־עוֹף כָּנָף› demand settled (popped from the queue):
+# fly(flier), loc=face-of-expanse-the-heavens
 m.result("fly(of), loc=pnei_raqia_ha_shamayim", tmark="t1")
+# ‹יִשְׁרְצוּ הַמַּיִם ← וַיִּבְרָא אֱלֹהִים› spec-delta — spec said let-
+# swarm HA-MAYIM (the waters as delegated producer), delivery says and-
+# created ELOHIM (create — God executes; the waters credited only in the
+# relative clause)
 m.spec_delta("yishretzu HA-MAYIM (the waters as delegated producer)",
              "va-yivra ELOHIM (bara — God executes; the waters credited only in the relative clause)")
+# ‹אֶת־הַתַּנִּינִם הַגְּדֹלִים› spec-delta — spec said no sea-monsters in
+# the order, delivery says obj-marker-the-sea-monsters the-great-ones
+# leading the inventory, with the week
 m.spec_delta("no taninim in the order",
              "et-ha-taninim ha-gedolim leading the inventory, with the week")
+# ‹כָּל … לְמִינֵהֶם … כָּל־עוֹף כָּנָף לְמִינֵהוּ› spec-delta — spec said
+# swarm-of living-being living; flier (bare classes), delivery says every-
+# totality x2, kind-keys to-by-their-kinds / to-by-its-kind, flier
+# differentiated as flier KANAF
 m.spec_delta("sheretz nefesh chaya; of (bare classes)",
              "kol- totality x2, kind-keys le-minehem / le-minehu, of differentiated as of KANAF")
+# ‹כִּי־טוֹב› test PASS — oracle-word good, on living-being
 m.test("PASS", "tov", "nefesh_chaya")
 
 # -------------------------- Gen.1.22 · BLESS_MANDATE -----------------------
-# va-yevarekh otam Elohim le-mor peru u-revu u-milu et-ha-mayim ba-yamim ve-
-# ha-of yirev ba-aretz
+# וַיְבָרֶךְ אֹתָם אֱלֹהִים לֵאמֹר פְּרוּ וּרְבוּ וּמִלְאוּ אֶת־הַמַּיִם
+# בַּיַּמִּים וְהָעוֹף יִרֶב בָּאָרֶץ
 # "And God blessed them, saying: 'Be fruitful, and multiply, and fill the
 # waters in the seas, and let fowl multiply in the earth.'"
 m.step("Gen.1.22")
+# ‹וַיְבָרֶךְ אֹתָם אֱלֹהִים לֵאמֹר פְּרוּ וּרְבוּ וּמִלְאוּ› blessing: God
+# blesses them — mandate: CMD!(peru), CMD!(revu), CMD!(milu(et-the-waters-
+# in-the-yamim)), LET(yirev(ha-flier-in-the-aretz))
 m.bless("Elohim", "otam", mandate=["CMD!(peru)", "CMD!(revu)", "CMD!(milu(et_ha_mayim_ba_yamim))", "LET(yirev(ha_of_ba_aretz))"])
+# reads without prior install (flag, not fix): seas
 m.presupposed("yamim")
 
 # -------------------------- Gen.1.23 · COMMIT_DAY --------------------------
-# va-yehi erev va-yehi voqer yom chamishi
+# וַיְהִי־עֶרֶב וַיְהִי־בֹקֶר יוֹם חֲמִישִׁי
 # "And there was evening and there was morning, a fifth day."
 m.step("Gen.1.23")
+# ‹יוֹם חֲמִישִׁי› ledger: day 5 committed
 m.commit(5, label_form="ordinal", label_translit="yom chamishi")
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
-    assert m.created_set() == {'taninim', 'nefesh_chaya_romeset', 'of_kanaf'}
-    assert m.presupposed_set() == {'mayim', 'shamayim', 'aretz', 'yamim', 'raqia'}
+    assert m.created_set() == {'of_kanaf', 'nefesh_chaya_romeset', 'taninim'}
+    assert m.presupposed_set() == {'aretz', 'shamayim', 'mayim', 'raqia', 'yamim'}
     assert m.REGISTRY["names"] == {}
     assert m.REGISTRY["writes"] == 0
     assert m.tests_list() == [('PASS', 'tov', 'nefesh_chaya')]
