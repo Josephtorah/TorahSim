@@ -19,16 +19,19 @@ TEMP_return_to_main.
 **ABSOLUTE:** Hebrew never without English inline — script,
 transliteration, or jargon. Everywhere, forever.
 
-**ORDER STATUS: ALL owner orders COMPLETE.** "commit push and next
-block" -> 8445f30 + gen_28 frozen (#11); standing "next block" ->
-gen_29 frozen (#12). STOPPED; awaiting owner. NEXT BLOCK READY:
-gen_30 = Gen 14:1-24 PRE-STAGED by gen-4 (scratchpad gen30_staging.md:
-recommend ONE UNIT, seam 15:1, HYBRID steps — grouped rows for the
-annal 14:1-11, per-verse 14:12-24; splitting at 14:13 would sever the
-laqach ['take'] arc. Headlines: melekh ['king'] debut x27; kohen
-['priest'] debut = Malki-Tzedek; el ['God'] tokens 1-4 all El Elyon
-['God Most High']; the REFUSED human demand — new class territory;
-the 14:20 miggen / 15:1 magen ['shielded'/'shield'] seam-pun).
+**ORDER STATUS:** owner's second "commit push and next block"
+EXECUTING: commit DONE (**21a3c00** — the gen_28+29 two-wave freeze,
+13 files, pushed; NOTHING uncommitted but the protected untracked);
+**gen_30 = Gen 14:1-24 SEEDED to gen-4, IN FLIGHT** (span + hybrid
+steps ratified; unit name gen_30_war_of_kings; 24 Onkelos fetches
+authorized; the REFUSED-demand class weigh is the flagged boldest
+call — NO new operators, weigh within frozen vocabulary; Malki-Tzedek
+kohen ['priest'] debut; tithe subject held OPEN; ivri ['Hebrew']
+debut; baalei brit human-covenant check; pipeline order = pre-stage
+gen_31 [candidate 15:1-21, seam 16:1 — 15:6 belief/righteousness
+touches the TESTS roster; 15:18 natati is gen_29's named future
+receipt]). On the draft: freeze-after-review #13, then STOP and
+report (no standing order beyond gen_30).
 
 **THE GEN-4 AGENT:** active, ~185k lifetime after its first
 derive-cycle (retire ~700k; capacity ~3 more units; next clean
