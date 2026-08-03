@@ -8,20 +8,30 @@ TWENTY-ONE consecutive zero-cache tripwires.)
 ---
 
 Continue Torah_Grok (private `Josephtorah/Torah_Grok`, main; last PUSHED
-e331bf9). **UNCOMMITTED: SEVEN waves (gen_21..gen_27)** — seven frozen
-YAMLs + watch-lists, FETCHLOG +102, seven py_units, seven UNIT_ pages,
-UNIT_INDEX (28), the PROMPT_continue chain. Owner commit order required
-(recommend FIRST thing). Protected untracked (NEVER commit):
-Disclosure/, reviews/architecture/NARRATIVE_theory_of_disclosure_intro,
-TEMP_return_to_main.
+**8445f30** — the seven-wave freeze gen_21-gen_27, 36 files, committed
+on owner order 2026-08-03; NOTHING uncommitted except the always-
+protected untracked: Disclosure/, reviews/architecture/
+NARRATIVE_theory_of_disclosure_intro, TEMP_return_to_main — NEVER
+commit those).
 
 **ABSOLUTE:** Hebrew never without English inline — script,
 transliteration, or jargon. Everywhere, forever.
 
-**ORDER STATUS: the owner's "do two more blocks without me prompting
-you" is COMPLETE** — gen_26 (freeze-after-review #9, zero corrections)
-+ gen_27 (#10, zero corrections). Final report DELIVERED. STOPPED as
-ordered; next block awaits an owner order.
+**ORDER STATUS:** the two-block autonomous run COMPLETED (gen_26 #9 +
+gen_27 #10, zero corrections, report delivered). Then owner ordered
+"commit push and next block" — commit DONE (8445f30), and **gen_28 =
+Gen 12:10-20 IS SEEDED to gen-3, IN FLIGHT** (span ratified by the
+owner's order; unit name gen_28_egypt_descent; Onkelos 12:10-20
+fetches authorized; the seed also ordered gen_29 pre-staging
+[candidate 13:1-18, seam 14:1] and gen-3's OWN succession handoff
+notes -> scratchpad gen4_handoff_notes.md). On the draft's arrival:
+freeze-after-review #11, then SPAWN GEN-4 with the distilled handoff.
+**STANDING ORDER (owner, mid-gen_28-flight): "next block"** — the
+gen_24/gen_25 pattern: after gen_28 freezes, proceed DIRECTLY to
+gen_29 (candidate Gen 13:1-18, seam 14:1 — adopt the agent's staged
+recommendation on the span) via the fresh GEN-4 agent, no further
+owner prompt needed. Review, freeze (#12), then stop and report
+unless a further order arrives.
 
 **THE GEN-3 AGENT:** active, ~550k lifetime (retire ~700k). Two units,
 two first-run greens, zero corrections. **gen_28 evidence PRE-STAGED**
