@@ -1,0 +1,387 @@
+#!/usr/bin/env python3
+# =============================================================================
+# gen_34_mamre_laugh_plea — 18:1-33
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_34_mamre_laugh_plea.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter's actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+"""The visitors at Mamre, the laugh within, the plea for Sodom (18:1-33)"""
+from machine import Machine
+
+m = Machine("gen_34_mamre_laugh_plea")
+
+# -------------------------- Gen.18.1 · THE_THIRD_APPEARANCE ----------------
+# וַיֵּרָא אֵלָיו יְהוָה בְּאֵלֹנֵי מַמְרֵא וְהוּא יֹשֵׁב פֶּתַח־הָאֹהֶל
+# כְּחֹם הַיּוֹם
+# "And the LORD appeared unto him by the terebinths of Mamre, as he sat in
+# the tent door in the heat of the day;"
+m.step("Gen.18.1")
+# ‹וַיֵּרָא אֵלָיו יְהוָה› event: appear — agent the-LORD
+m.event("appear", agent="YHWH")
+# ‹בְּאֵלֹנֵי מַמְרֵא› reads without prior install (flag, not fix): mamre
+m.presupposed("mamre")
+# ‹וְהוּא יֹשֵׁב פֶּתַח־הָאֹהֶל כְּחֹם הַיּוֹם› fact holds: yoshev-door-
+# opening-the-ohel-like-chom-the-day
+m.fact("yoshev_petach_ha_ohel_ke_chom_ha_yom")
+
+# -------------------------- Gen.18.2 · THREE_MEN_AND_THE_BOW ---------------
+# וַיִּשָּׂא עֵינָיו וַיַּרְא וְהִנֵּה שְׁלֹשָׁה אֲנָשִׁים נִצָּבִים עָלָיו
+# וַיַּרְא וַיָּרָץ לִקְרָאתָם מִפֶּתַח הָאֹהֶל וַיִּשְׁתַּחוּ אָרְצָה
+# "and he lifted up his eyes and looked, and, lo, three men stood over
+# against him; and when he saw them, he ran to meet them from the tent door,
+# and bowed down to the earth,"
+m.step("Gen.18.2")
+# ‹וְהִנֵּה שְׁלֹשָׁה אֲנָשִׁים נִצָּבִים עָלָיו› the world gains: shelosha-
+# anashim
+m.install("shelosha_anashim")
+# ‹וַיָּרָץ לִקְרָאתָם› event: run — agent avraham
+m.event("run", agent="avraham")
+# ‹וַיִּשְׁתַּחוּ אָרְצָה› event: bow — agent avraham
+m.event("bow", agent="avraham")
+
+# -------------------------- Gen.18.3 · THE_DOOR_PETITION -------------------
+# וַיֹּאמַר אֲדֹנָי אִם־נָא מָצָאתִי חֵן בְּעֵינֶיךָ אַל־נָא תַעֲבֹר מֵעַל
+# עַבְדֶּךָ
+# "and said: 'My lord, if now I have found favour in thy sight, pass not
+# away, I pray thee, from thy servant."
+m.step("Gen.18.3")
+# ‹אַל־נָא תַעֲבֹר מֵעַל עַבְדֶּךָ› avraham speaks a demand — LET-NOT:
+# taavor(from-upon-avdekha)
+m.declare("avraham", "LET-NOT",
+          "taavor(me_al_avdekha)")
+
+# -------------------------- Gen.18.4 · WATER_AND_THE_RARE_PASSIVE ----------
+# יֻקַּח־נָא מְעַט־מַיִם וְרַחֲצוּ רַגְלֵיכֶם וְהִשָּׁעֲנוּ תַּחַת הָעֵץ
+# "Let now a little water be fetched, and wash your feet, and recline
+# yourselves under the tree."
+m.step("Gen.18.4")
+# ‹יֻקַּח־נָא מְעַט־מַיִם› avraham speaks a demand — LET: yuqach(meat-
+# waters)
+m.declare("avraham", "LET",
+          "yuqach(meat_mayim)")
+# ‹וְרַחֲצוּ רַגְלֵיכֶם וְהִשָּׁעֲנוּ תַּחַת הָעֵץ› avraham speaks a demand
+# — LET: rachatzu-and-hishaanu(raglekhem)
+m.declare("avraham", "LET",
+          "rachatzu_ve_hishaanu(raglekhem)")
+
+# -------------------------- Gen.18.5 · BREAD_PROMISED_ASSENT_GIVEN ---------
+# וְאֶקְחָה פַת־לֶחֶם וְסַעֲדוּ לִבְּכֶם אַחַר תַּעֲבֹרוּ כִּי־עַל־כֵּן
+# עֲבַרְתֶּם עַל־עַבְדְּכֶם וַיֹּאמְרוּ כֵּן תַּעֲשֶׂה כַּאֲשֶׁר דִּבַּרְתָּ
+# "And I will fetch a morsel of bread, and stay ye your heart; after that ye
+# shall pass on; forasmuch as ye are come to your servant.' And they said:
+# 'So do, as thou hast said.'"
+m.step("Gen.18.5")
+# ‹וְאֶקְחָה פַת־לֶחֶם› fact holds: and-eqchah-fat-lechem
+m.fact("ve_eqchah_fat_lechem")
+# ‹וְסַעֲדוּ לִבְּכֶם› avraham speaks a demand — LET: saadu(libkhem)
+m.declare("avraham", "LET",
+          "saadu(libkhem)")
+# ‹כֵּן תַּעֲשֶׂה כַּאֲשֶׁר דִּבַּרְתָּ› fact holds: ken-taaseh-like-which-
+# dibarta
+m.fact("ken_taaseh_ka_asher_dibarta")
+
+# -------------------------- Gen.18.6 · THE_TRIPLE_TO_SARAH -----------------
+# וַיְמַהֵר אַבְרָהָם הָאֹהֱלָה אֶל־שָׂרָה וַיֹּאמֶר מַהֲרִי שְׁלֹשׁ סְאִים
+# קֶמַח סֹלֶת לוּשִׁי וַעֲשִׂי עֻגוֹת
+# "And Abraham hastened into the tent unto Sarah, and said: 'Make ready
+# quickly three measures of fine meal, knead it, and make cakes.'"
+m.step("Gen.18.6")
+# ‹וַיְמַהֵר אַבְרָהָם הָאֹהֱלָה אֶל־שָׂרָה› event: hurry — agent avraham
+m.event("hurry", agent="avraham")
+# ‹מַהֲרִי שְׁלֹשׁ סְאִים קֶמַח סֹלֶת לוּשִׁי וַעֲשִׂי עֻגוֹת› avraham
+# speaks a demand — LET: mahari-lushi-and-asi(ugot)
+m.declare("avraham", "LET",
+          "mahari_lushi_va_asi(ugot)")
+
+# -------------------------- Gen.18.7 · THE_RUN_TO_THE_HERD -----------------
+# וְאֶל־הַבָּקָר רָץ אַבְרָהָם וַיִּקַּח בֶּן־בָּקָר רַךְ וָטוֹב וַיִּתֵּן
+# אֶל־הַנַּעַר וַיְמַהֵר לַעֲשׂוֹת אֹתוֹ
+# "And Abraham ran unto the herd, and fetched a calf tender and good, and
+# gave it unto the servant; and he hastened to dress it."
+m.step("Gen.18.7")
+# ‹וַיִּקַּח בֶּן־בָּקָר רַךְ וָטוֹב› event: take — agent avraham; theme
+# ben-baqar
+m.event("take", agent="avraham", themes=["ben_baqar"])
+# ‹וַיְמַהֵר לַעֲשׂוֹת אֹתוֹ› event: hurry-prepare — agent the-naar; theme
+# ben-baqar
+m.event("hurry_prepare", agent="ha_naar", themes=["ben_baqar"])
+
+# -------------------------- Gen.18.8 · THE_DELIVERED_FEAST -----------------
+# וַיִּקַּח חֶמְאָה וְחָלָב וּבֶן־הַבָּקָר אֲשֶׁר עָשָׂה וַיִּתֵּן
+# לִפְנֵיהֶם וְהוּא־עֹמֵד עֲלֵיהֶם תַּחַת הָעֵץ וַיֹּאכֵלוּ
+# "And he took curd, and milk, and the calf which he had dressed, and set it
+# before them; and he stood by them under the tree, and they did eat."
+m.step("Gen.18.8")
+# ‹וַיִּקַּח חֶמְאָה וְחָלָב וּבֶן־הַבָּקָר אֲשֶׁר עָשָׂה וַיִּתֵּן
+# לִפְנֵיהֶם› event: serve — agent avraham; theme chemah-chalav-and-ven-the-
+# baqar
+m.event("serve", agent="avraham", themes=["chemah_chalav_u_ven_ha_baqar"])
+# ‹פַת־לֶחֶם … חֶמְאָה וְחָלָב וּבֶן־הַבָּקָר› spec-delta — spec said fat-
+# lechem (a morsel fowl bread), delivery says chemah-chalav-and-ven-the-
+# baqar (curds, milk, the dressed calf)
+m.spec_delta("fat_lechem (a morsel of bread)",
+             "chemah_chalav_u_ven_ha_baqar (curds, milk, the dressed calf)")
+# ‹וְהוּא־עֹמֵד עֲלֵיהֶם תַּחַת הָעֵץ וַיֹּאכֵלוּ› fact holds: and-that-
+# omed-aleihem-tachat-the-tree
+m.fact("ve_hu_omed_aleihem_tachat_ha_etz")
+
+# -------------------------- Gen.18.9 · THE_FOURTH_WHERE --------------------
+# וַיֹּאמְרוּ אֵלָיו אַיֵּה שָׂרָה אִשְׁתֶּךָ וַיֹּאמֶר הִנֵּה בָאֹהֶל
+# "And they said unto him: 'Where is Sarah thy wife?' And he said: 'Behold,
+# in the tent.'"
+m.step("Gen.18.9")
+# ‹וַיֹּאמְרוּ אֵלָיו אַיֵּה שָׂרָה אִשְׁתֶּךָ› event: say — agent shelosha-
+# anashim
+m.event("say", agent="shelosha_anashim")
+
+# -------------------------- Gen.18.10 · THE_RETURN_PROMISE -----------------
+# וַיֹּאמֶר שׁוֹב אָשׁוּב אֵלֶיךָ כָּעֵת חַיָּה וְהִנֵּה־בֵן לְשָׂרָה
+# אִשְׁתֶּךָ וְשָׂרָה שֹׁמַעַת פֶּתַח הָאֹהֶל וְהוּא אַחֲרָיו
+# "And He said: 'I will certainly return unto thee when the season cometh
+# round; and, lo, Sarah thy wife shall have a son.' And Sarah heard in the
+# tent door, which was behind him.—"
+m.step("Gen.18.10")
+# ‹שׁוֹב אָשׁוּב אֵלֶיךָ כָּעֵת חַיָּה וְהִנֵּה־בֵן לְשָׂרָה› fact holds:
+# shov-ashuv-to-you-like-beast; behold-ven-to-sarah
+m.fact("shov_ashuv_elekha_ka_et_chayah",
+       "hinneh_ven_le_sarah")
+# ‹וְשָׂרָה שֹׁמַעַת פֶּתַח הָאֹהֶל› event: hear — agent sarah
+m.event("hear", agent="sarah")
+
+# -------------------------- Gen.18.11 · THE_AGE_PARENTHESIS ----------------
+# וְאַבְרָהָם וְשָׂרָה זְקֵנִים בָּאִים בַּיָּמִים חָדַל לִהְיוֹת לְשָׂרָה
+# אֹרַח כַּנָּשִׁים
+# "Now Abraham and Sarah were old, and well stricken in age; it had ceased
+# to be with Sarah after the manner of women.—"
+m.step("Gen.18.11")
+# ‹זְקֵנִים בָּאִים בַּיָּמִים … חָדַל לִהְיוֹת לְשָׂרָה אֹרַח כַּנָּשִׁים›
+# fact holds: zeqenim-baim-in-the-seas; chadal-orach-like-nashim
+m.fact("zeqenim_baim_ba_yamim",
+       "chadal_orach_ka_nashim")
+# ‹וְאַבְרָהָם וְשָׂרָה זְקֵנִים› note: zero events in this verse
+m.note_zero_events()
+
+# -------------------------- Gen.18.12 · THE_INTERIOR_LAUGH -----------------
+# וַתִּצְחַק שָׂרָה בְּקִרְבָּהּ לֵאמֹר אַחֲרֵי בְלֹתִי הָיְתָה־לִּי עֶדְנָה
+# וַאדֹנִי זָקֵן
+# "And Sarah laughed within herself, saying: 'After I am waxed old shall I
+# have pleasure, my lord being old also?'"
+m.step("Gen.18.12")
+# ‹וַתִּצְחַק שָׂרָה בְּקִרְבָּהּ לֵאמֹר› event: say — agent sarah
+m.event("say", agent="sarah")
+# ‹אַחֲרֵי בְלֹתִי הָיְתָה־לִּי עֶדְנָה וַאדֹנִי זָקֵן› fact holds: acharei-
+# veloti-haytah-to-me-ednah-and-adoni-zaqen
+m.fact("acharei_veloti_haytah_li_ednah_va_adoni_zaqen")
+
+# -------------------------- Gen.18.13 · THE_QUOTED_LAUGH -------------------
+# וַיֹּאמֶר יְהוָה אֶל־אַבְרָהָם לָמָּה זֶּה צָחֲקָה שָׂרָה לֵאמֹר הַאַף
+# אֻמְנָם אֵלֵד וַאֲנִי זָקַנְתִּי
+# "And the LORD said unto Abraham: 'Wherefore did Sarah laugh, saying: Shall
+# I of a surety bear a child, who am old?"
+m.step("Gen.18.13")
+# ‹וַיֹּאמֶר יְהוָה אֶל־אַבְרָהָם לָמָּה זֶּה צָחֲקָה שָׂרָה› event: say —
+# agent the-LORD
+m.event("say", agent="YHWH")
+
+# -------------------------- Gen.18.14 · TOO_WONDROUS -----------------------
+# הֲיִפָּלֵא מֵיְהוָה דָּבָר לַמּוֹעֵד אָשׁוּב אֵלֶיךָ כָּעֵת חַיָּה
+# וּלְשָׂרָה בֵן
+# "Is any thing too hard for the LORD. At the set time I will return unto
+# thee, when the season cometh round, and Sarah shall have a son.'"
+m.step("Gen.18.14")
+# ‹הֲיִפָּלֵא מֵיְהוָה דָּבָר› fact holds: the-yipale-from-the-LORD-davar
+m.fact("ha_yipale_me_YHWH_davar")
+# ‹לַמּוֹעֵד אָשׁוּב אֵלֶיךָ כָּעֵת חַיָּה וּלְשָׂרָה בֵן› fact holds: to-
+# moed-ashuv-to-you-and-to-sarah-ven
+m.fact("la_moed_ashuv_elekha_u_le_sarah_ven")
+
+# -------------------------- Gen.18.15 · THE_DENIAL_AND_THE_CORRECTION ------
+# וַתְּכַחֵשׁ שָׂרָה לֵאמֹר לֹא צָחַקְתִּי כִּי יָרֵאָה וַיֹּאמֶר לֹא כִּי
+# צָחָקְתְּ
+# "Then Sarah denied, saying: 'I laughed not'; for she was afraid. And He
+# said: 'Nay; but thou didst laugh.'"
+m.step("Gen.18.15")
+# ‹וַתְּכַחֵשׁ שָׂרָה לֵאמֹר לֹא צָחַקְתִּי› event: deny — agent sarah
+m.event("deny", agent="sarah")
+# ‹וַיֹּאמֶר לֹא כִּי צָחָקְתְּ› event: correct — agent the-LORD
+m.event("correct", agent="YHWH")
+
+# -------------------------- Gen.18.16 · THE_TURN_TOWARD_SODOM --------------
+# וַיָּקֻמוּ מִשָּׁם הָאֲנָשִׁים וַיַּשְׁקִפוּ עַל־פְּנֵי סְדֹם וְאַבְרָהָם
+# הֹלֵךְ עִמָּם לְשַׁלְּחָם
+# "And the men rose up from thence, and looked out toward Sodom; and Abraham
+# went with them to bring them on the way."
+m.step("Gen.18.16")
+# ‹וַיָּקֻמוּ מִשָּׁם הָאֲנָשִׁים וַיַּשְׁקִפוּ עַל־פְּנֵי סְדֹם› event:
+# rise-look — agent shelosha-anashim
+m.event("rise_look", agent="shelosha_anashim")
+# ‹סְדֹם› reads without prior install (flag, not fix): sedom
+m.presupposed("sedom")
+# ‹וְאַבְרָהָם הֹלֵךְ עִמָּם לְשַׁלְּחָם› event: escort — agent avraham
+m.event("escort", agent="avraham")
+
+# -------------------------- Gen.18.17 · THE_SOLILOQUY_OPENS ----------------
+# וַיהֹוָה אָמָר הַמְכַסֶּה אֲנִי מֵאַבְרָהָם אֲשֶׁר אֲנִי עֹשֶׂה
+# "And the LORD said: 'Shall I hide from Abraham that which I am doing;"
+m.step("Gen.18.17")
+# ‹וַיהֹוָה אָמָר הַמְכַסֶּה אֲנִי מֵאַבְרָהָם› event: say — agent the-LORD
+m.event("say", agent="YHWH")
+
+# -------------------------- Gen.18.18 · THE_GUARD_FORMULA_RESOUNDED --------
+# וְאַבְרָהָם הָיוֹ יִהְיֶה לְגוֹי גָּדוֹל וְעָצוּם וְנִבְרְכוּ בוֹ כֹּל
+# גּוֹיֵי הָאָרֶץ
+# "seeing that Abraham shall surely become a great and mighty nation, and
+# all the nations of the earth shall be blessed in him?"
+m.step("Gen.18.18")
+# ‹הָיוֹ יִהְיֶה לְגוֹי גָּדוֹל וְעָצוּם וְנִבְרְכוּ בוֹ כֹּל גּוֹיֵי
+# הָאָרֶץ› fact holds: hayo-yihyeh-to-goy-gadol-and-atzum; and-nivrekhu-vo-
+# all-goyei-the-earth
+m.fact("hayo_yihyeh_le_goy_gadol_ve_atzum",
+       "ve_nivrekhu_vo_kol_goyei_ha_aretz")
+
+# -------------------------- Gen.18.19 · THE_HOUSE_CHARGE -------------------
+# כִּי יְדַעְתִּיו לְמַעַן אֲשֶׁר יְצַוֶּה אֶת־בָּנָיו וְאֶת־בֵּיתוֹ
+# אַחֲרָיו וְשָׁמְרוּ דֶּרֶךְ יְהוָה לַעֲשׂוֹת צְדָקָה וּמִשְׁפָּט לְמַעַן
+# הָבִיא יְהוָה עַל־אַבְרָהָם אֵת אֲשֶׁר־דִּבֶּר עָלָיו
+# "For I have known him, to the end that he may command his children and his
+# household after him, that they may keep the way of the LORD, to do
+# righteousness and justice; to the end that the LORD may bring upon Abraham
+# that which He hath spoken of him.'"
+m.step("Gen.18.19")
+# ‹כִּי יְדַעְתִּיו› fact holds: when-yedativ
+m.fact("ki_yedativ")
+# ‹וְשָׁמְרוּ דֶּרֶךְ יְהוָה לַעֲשׂוֹת צְדָקָה וּמִשְׁפָּט› fact holds: and-
+# shamru-derekh-the-LORD-to-making-tzedaqah-and-mishpat
+m.fact("ve_shamru_derekh_YHWH_la_asot_tzedaqah_u_mishpat")
+# ‹לְמַעַן הָבִיא יְהוָה עַל־אַבְרָהָם אֵת אֲשֶׁר־דִּבֶּר עָלָיו› fact
+# holds: lemaan-havi-the-LORD-upon-avraham-which-diber
+m.fact("lemaan_havi_YHWH_al_avraham_et_asher_diber")
+
+# -------------------------- Gen.18.20 · THE_OUTCRY_DOUBLED -----------------
+# וַיֹּאמֶר יְהוָה זַעֲקַת סְדֹם וַעֲמֹרָה כִּי־רָבָּה וְחַטָּאתָם כִּי
+# כָבְדָה מְאֹד
+# "And the LORD said: 'Verily, the cry of Sodom and Gomorrah is great, and,
+# verily, their sin is exceeding grievous."
+m.step("Gen.18.20")
+# ‹וַיֹּאמֶר יְהוָה› event: say — agent the-LORD
+m.event("say", agent="YHWH")
+# ‹זַעֲקַת סְדֹם וַעֲמֹרָה כִּי־רָבָּה וְחַטָּאתָם כִּי כָבְדָה מְאֹד› fact
+# holds: zaaqat-sedom-and-amorah-when-rabah; chatatam-when-khavdah-very
+m.fact("zaaqat_sedom_va_amorah_ki_rabah",
+       "chatatam_ki_khavdah_meod")
+# ‹וַעֲמֹרָה› reads without prior install (flag, not fix): amora
+m.presupposed("amora")
+
+# -------------------------- Gen.18.21 · THE_DESCEND_COHORTATIVE_RETURNS ----
+# אֵרֲדָה־נָּא וְאֶרְאֶה הַכְּצַעֲקָתָהּ הַבָּאָה אֵלַי עָשׂוּ כָּלָה
+# וְאִם־לֹא אֵדָעָה
+# "I will go down now, and see whether they have done altogether according
+# to the cry of it, which is come unto Me; and if not, I will know.'"
+m.step("Gen.18.21")
+# ‹אֵרֲדָה־נָּא וְאֶרְאֶה› fact holds: eradah-na-and-ereh
+m.fact("eradah_na_ve_ereh")
+# ‹הַכְּצַעֲקָתָהּ הַבָּאָה אֵלַי עָשׂוּ כָּלָה וְאִם־לֹא אֵדָעָה› fact
+# holds: the-like-tzaaqatah-asu-kalah; and-if-not-edaah
+m.fact("ha_ke_tzaaqatah_asu_kalah",
+       "ve_im_lo_edaah")
+
+# -------------------------- Gen.18.22 · STILL_STANDING_BEFORE_YHWH ---------
+# וַיִּפְנוּ מִשָּׁם הָאֲנָשִׁים וַיֵּלְכוּ סְדֹמָה וְאַבְרָהָם עוֹדֶנּוּ
+# עֹמֵד לִפְנֵי יְהוָה
+# "And the men turned from thence, and went toward Sodom; but Abraham stood
+# yet before the LORD."
+m.step("Gen.18.22")
+# ‹וַיִּפְנוּ מִשָּׁם הָאֲנָשִׁים וַיֵּלְכוּ סְדֹמָה› event: turn-go — agent
+# shelosha-anashim
+m.event("turn_go", agent="shelosha_anashim")
+# ‹וְאַבְרָהָם עוֹדֶנּוּ עֹמֵד לִפְנֵי יְהוָה› fact holds: and-avraham-
+# odenu-omed-lifnei-the-LORD
+m.fact("ve_avraham_odenu_omed_lifnei_YHWH")
+
+# -------------------------- Gen.18.23 · THE_APPROACH_AND_THE_FIFTY ---------
+# וַיִּגַּשׁ אַבְרָהָם וַיֹּאמַר הַאַף תִּסְפֶּה צַדִּיק עִם־רָשָׁע … אוּלַי
+# יֵשׁ חֲמִשִּׁים צַדִּיקִם בְּתוֹךְ הָעִיר … חָלִלָה לְּךָ מֵעֲשֹׂת
+# כַּדָּבָר הַזֶּה … הֲשֹׁפֵט כָּל־הָאָרֶץ לֹא יַעֲשֶׂה מִשְׁפָּט …
+# וַיֹּאמֶר יְהוָה אִם־אֶמְצָא בִסְדֹם חֲמִשִּׁים צַדִּיקִם בְּתוֹךְ הָעִיר
+# וְנָשָׂאתִי לְכָל־הַמָּקוֹם בַּעֲבוּרָם
+# "[EN-AID/JPS 18:23-26] And Abraham drew near, and said: 'Will You indeed
+# sweep away the righteous with the wicked? Peradventure there are fifty
+# righteous within the city... That be far from Thee... shall not the judge
+# of all the earth do justly?' And the LORD said: 'If I find in Sodom fifty
+# righteous within the city, then I will forgive all the place for their
+# sake.'"
+m.step("Gen.18.23")
+# ‹וַיִּגַּשׁ אַבְרָהָם› event: approach — agent avraham
+m.event("approach", agent="avraham")
+# ‹הַאַף תִּסְפֶּה צַדִּיק עִם־רָשָׁע אוּלַי יֵשׁ חֲמִשִּׁים צַדִּיקִם
+# בְּתוֹךְ הָעִיר› fact holds: the-af-tispeh-tzaddiq-if-rasha; ulay-yesh-
+# chamishim-tzaddiqim
+m.fact("ha_af_tispeh_tzaddiq_im_rasha",
+       "ulay_yesh_chamishim_tzaddiqim")
+# ‹חָלִלָה לְּךָ … הֲשֹׁפֵט כָּל־הָאָרֶץ לֹא יַעֲשֶׂה מִשְׁפָּט› fact holds:
+# chalilah-to-you-the-shofet-all-the-earth-not-yaaseh-mishpat
+m.fact("chalilah_lekha_ha_shofet_kol_ha_aretz_lo_yaaseh_mishpat")
+# ‹אִם־אֶמְצָא בִסְדֹם חֲמִשִּׁים צַדִּיקִם בְּתוֹךְ הָעִיר וְנָשָׂאתִי
+# לְכָל־הַמָּקוֹם בַּעֲבוּרָם› fact holds: if-emtza-chamishim-and-nasati-to-
+# all-the-maqom
+m.fact("im_emtza_chamishim_ve_nasati_le_khol_ha_maqom")
+
+# -------------------------- Gen.18.27 · THE_DESCENDING_LADDER --------------
+# וַיַּעַן אַבְרָהָם וַיֹּאמַר הִנֵּה־נָא הוֹאַלְתִּי לְדַבֵּר אֶל־אֲדֹנָי
+# וְאָנֹכִי עָפָר וָאֵפֶר … אוּלַי יַחְסְרוּן חֲמִשִּׁים הַצַּדִּיקִם
+# חֲמִשָּׁה … לֹא אַשְׁחִית אִם־אֶמְצָא שָׁם אַרְבָּעִים וַחֲמִשָּׁה …
+# אַל־נָא יִחַר לַאדֹנָי וַאֲדַבֵּרָה … אַךְ־הַפַּעַם אוּלַי יִמָּצְאוּן
+# שָׁם עֲשָׂרָה וַיֹּאמֶר לֹא אַשְׁחִית בַּעֲבוּר הָעֲשָׂרָה
+# "[EN-AID/JPS 18:27-32] And Abraham answered and said: 'Behold now, I have
+# taken upon me to speak unto the Lord, who am but dust and ashes.
+# Peradventure there shall lack five of the fifty righteous...' ...'Oh, let
+# not the Lord be angry, and I will speak yet but this once. Peradventure
+# ten shall be found there.' And He said: 'I will not destroy it for the
+# ten's sake.'"
+m.step("Gen.18.27")
+# ‹וַיַּעַן אַבְרָהָם וַיֹּאמַר› event: answer — agent avraham
+m.event("answer", agent="avraham")
+# ‹אַל־נָא יִחַר לַאדֹנָי וַאֲדַבֵּרָה› avraham speaks a demand — LET-NOT:
+# yichar(to-adonai)
+m.declare("avraham", "LET-NOT",
+          "yichar(le_adonai)")
+# ‹אַל־נָא יִחַר לַאדֹנָי וַאֲדַבְּרָה אַךְ־הַפַּעַם› avraham speaks a
+# demand — LET-NOT: yichar(to-adonai, akh-the-paam)
+m.declare("avraham", "LET-NOT",
+          "yichar(le_adonai, akh_ha_paam)")
+# ‹לֹא אַשְׁחִית … לֹא אֶעֱשֶׂה … לֹא אַשְׁחִית בַּעֲבוּר הָעֲשָׂרָה› fact
+# holds: not-ashchit-in-the-avur-the-asarah
+m.fact("lo_ashchit_ba_avur_ha_asarah")
+
+# -------------------------- Gen.18.33 · THE_EXIT_FORMULA -------------------
+# וַיֵּלֶךְ יְהוָה כַּאֲשֶׁר כִּלָּה לְדַבֵּר אֶל־אַבְרָהָם וְאַבְרָהָם שָׁב
+# לִמְקֹמוֹ
+# "And the LORD went His way, as soon as He had left off speaking to
+# Abraham; and Abraham returned unto his place."
+m.step("Gen.18.33")
+# ‹וַיֵּלֶךְ יְהוָה כַּאֲשֶׁר כִּלָּה לְדַבֵּר› event: depart — agent the-
+# LORD
+m.event("depart", agent="YHWH")
+# ‹וְאַבְרָהָם שָׁב לִמְקֹמוֹ› event: return — agent avraham
+m.event("return", agent="avraham")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == {'shelosha_anashim'}
+    assert m.presupposed_set() == {'amora', 'mamre', 'sedom'}
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == ['taavor(me_al_avdekha)', 'yuqach(meat_mayim)', 'rachatzu_ve_hishaanu(raglekhem)', 'saadu(libkhem)', 'mahari_lushi_va_asi(ugot)', 'yichar(le_adonai)', 'yichar(le_adonai, akh_ha_paam)']
+    assert len(m.SPECS["log"]) == 7
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {'read_before_install': 3, 'spec_delta': 1}
+    assert sorted(m.WORLD["facts"]) == sorted(['yoshev_petach_ha_ohel_ke_chom_ha_yom', 've_eqchah_fat_lechem', 'ken_taaseh_ka_asher_dibarta', 've_hu_omed_aleihem_tachat_ha_etz', 'shov_ashuv_elekha_ka_et_chayah', 'hinneh_ven_le_sarah', 'zeqenim_baim_ba_yamim', 'chadal_orach_ka_nashim', 'acharei_veloti_haytah_li_ednah_va_adoni_zaqen', 'ha_yipale_me_YHWH_davar', 'la_moed_ashuv_elekha_u_le_sarah_ven', 'hayo_yihyeh_le_goy_gadol_ve_atzum', 've_nivrekhu_vo_kol_goyei_ha_aretz', 'ki_yedativ', 've_shamru_derekh_YHWH_la_asot_tzedaqah_u_mishpat', 'lemaan_havi_YHWH_al_avraham_et_asher_diber', 'zaaqat_sedom_va_amorah_ki_rabah', 'chatatam_ki_khavdah_meod', 'eradah_na_ve_ereh', 'ha_ke_tzaaqatah_asu_kalah', 've_im_lo_edaah', 've_avraham_odenu_omed_lifnei_YHWH', 'ha_af_tispeh_tzaddiq_im_rasha', 'ulay_yesh_chamishim_tzaddiqim', 'chalilah_lekha_ha_shofet_kol_ha_aretz_lo_yaaseh_mishpat', 'im_emtza_chamishim_ve_nasati_le_khol_ha_maqom', 'lo_ashchit_ba_avur_ha_asarah'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 29
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

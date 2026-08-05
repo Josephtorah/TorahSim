@@ -7,11 +7,10 @@ regression 33/33 GREEN, TWENTY-THREE consecutive extension-free.)
 ---
 
 Continue Torah_Grok (private `Josephtorah/Torah_Grok`, main; last PUSHED
-5db7364 = the gen_30 freeze wave). **UNCOMMITTED: TWO waves (gen_31 +
-gen_32)** — 2 frozen YAMLs + 2 watch-lists, FETCHLOG +37 (21+16),
-2 py_units, 2 UNIT pages, UNIT_INDEX (33), ALL_UNITS.py (33, green),
-the whole-Torah STUDY, the PROMPT chain. Owner commit order required.
-Protected untracked (NEVER commit): Disclosure/, reviews/architecture/
+6344d55 = the gen_31+gen_32 two-wave freeze, 2026-08-05 — included the
+STUDY and ALL_UNITS.py). **UNCOMMITTED: none** (only this PROMPT
+file's post-push update + protected untracked). Protected untracked
+(NEVER commit): Disclosure/, reviews/architecture/
 NARRATIVE_theory_of_disclosure_intro, TEMP_return_to_main.
 
 **ABSOLUTE:** Hebrew never without English inline — script,
@@ -72,11 +71,17 @@ peru/va-yirbu/va-timale payment of Gen 1:28 verified live in chat).
 Dev server 8011 up. TOKEN LEDGER: gen-1 698,918; gen-2 534,445; gen-3
 ~650k; gen-4 lost ~345k; gen-5 ~360k after two units (~160k/cycle).
 
-**TASK NEXT (owner-gated):** COMMIT the two waves; the THREE open
-triages; on "next block": seed gen-5 with gen_33 = Gen 17 (staging
-done). TWENTY-NINE triages owed; narratives (ASK FIRST); PUBLIC
-REPORT; middot v2; Stage E linker; repo-tools; gen_14 fix; days 2-3
-backfill.
+**STANDING ORDER (owner, 2026-08-05): "do the next two blocks without
+me prompting you"** — gen_33 (Gen 17) AND gen_34 (Gen 18 expected)
+autonomous: seed -> draft -> freeze-after-review -> renders, twice,
+no owner check-ins; COMMIT stays owner-gated. gen_33 SEEDED to gen-5
+(with orders to write gen5_handoff_notes + gen_34 pre-stage + honest
+handoff verdict; if gen-5 lacks headroom, spawn gen-6 from its notes
+for gen_34). Report to owner when both frozen.
+**TASK NEXT (owner-gated after the two blocks):** COMMIT; the THREE
+open triages; TWENTY-NINE triages owed; narratives (ASK FIRST);
+PUBLIC REPORT; middot v2; Stage E linker; repo-tools; gen_14 fix;
+days 2-3 backfill.
 
 **Non-negotiables:** Pre-Code; flags never auto-resolve; dual-track
 never merged; ein adam dan me-atzmo ('one may not derive on his own');
