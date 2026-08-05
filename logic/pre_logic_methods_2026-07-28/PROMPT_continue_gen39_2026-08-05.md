@@ -7,10 +7,9 @@ regression 39/39 GREEN, TWENTY-NINE consecutive extension-free.)
 ---
 
 Continue Torah_Grok (private `Josephtorah/Torah_Grok`, main; last PUSHED
-1463c6a = the gen_36+gen_37 two-wave freeze). **UNCOMMITTED: ONE wave
-(gen_38)** — frozen YAML + watch-list, FETCHLOG +24, py_unit, UNIT
-page, UNIT_INDEX (39), ALL_UNITS.py (39, green), the PROMPT chain.
-Owner commit order required. Protected untracked (NEVER commit):
+a37b611 = the gen_38 AQEDAH freeze wave, 2026-08-05). **UNCOMMITTED:
+none** (only this PROMPT file's post-push update + protected
+untracked). Owner compacted at this point — clean state. Protected untracked (NEVER commit):
 Disclosure/ (incl. the two LeBlanc docs + 3 epubs, all em-dash-free
 with reader-friendly builds per owner orders), NARRATIVE_theory_of_
 disclosure_intro, TEMP_return_to_main.
@@ -61,11 +60,17 @@ debut; third consecutive all-zero instrument field. NOT SEEDED — next
 block = owner order. Gen-7 projects gen_39 + gen_40 pre-stage, then
 handoff announcement.
 
-**OWNER TRIAGES OPEN x4:** 15:6 weigh; NAME-on-YHWH (16:13);
-demand-on-God (16:5); **THE AQEDAH CROWN FORK (22:13 substitute-pop —
-side A ratification = cycle #15)**. AMENDMENT REFERRALS x3: gen_34
-stand-verb ordinal; gen_34 laugh-record mood-refinement; gen_14
-pointing.
+**OWNER TRIAGES — STANDING DEFERRAL POLICY (owner, 2026-08-05):** "if
+you can't resolve something just leave it open. I am not qualified to
+resolve it yet." ALL x4 stay OPEN indefinitely (15:6 weigh; NAME-on-YHWH
+16:13; demand-on-God 16:5; the AQEDAH CROWN FORK — base/no-pop stands,
+gen_39's cycle candidate stays contingent/staged both ways). Safe
+encodings stand as frozen; bold readings stay staged verbatim in the
+files. DO NOT re-present the docket or push rulings — file new triages
+OPEN, note once in the wave report, move on. AMENDMENT REFERRALS x3
+likewise parked (gen_34 stand-verb ordinal — mechanical, census-
+confirmed, one-word yes whenever owner wants; gen_34 laugh-record
+mood-refinement; gen_14 pointing).
 
 **PUBLIC REPORT:** outline + Piece A committed (d1b4f12); Piece A
 awaits owner markup; then Piece B; then interactive; publication
@@ -87,12 +92,11 @@ ElevenReader fix = tables-to-prose EPUB pipeline. Debugger tutorial
 paused at item 3. Dev server 8011 up. TOKEN LEDGER: gen-5 retired
 ~575k; gen-6 retired ~500k; gen-7 ~300k after two units.
 
-**TASK NEXT (owner-gated):** COMMIT the gen_38 wave; **the CROWN FORK
-ruling** (side A -> cycle #15 + gen_39 renumber; base -> stands); on
-"next block": seed gen-7 with gen_39 = Gen 23 (staging done); the
-other three triages + three amendments; Piece A markup; THIRTY-FIVE
-triages owed; narratives (ASK FIRST); middot v2; Stage E linker;
-repo-tools; days 2-3 backfill.
+**TASK NEXT (owner-gated):** on "next block": seed gen-7 with gen_39 =
+Gen 23 (staging done; cycle candidate carries contingent numbering per
+the deferral policy — that is fine indefinitely). Piece A markup;
+THIRTY-FIVE triages owed (all parked open per policy); narratives (ASK
+FIRST); middot v2; Stage E linker; repo-tools; days 2-3 backfill.
 
 **Non-negotiables:** Pre-Code; flags never auto-resolve; dual-track
 never merged; ein adam dan me-atzmo ('one may not derive on his own');
