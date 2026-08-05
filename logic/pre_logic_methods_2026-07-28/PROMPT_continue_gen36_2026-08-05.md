@@ -8,17 +8,18 @@ regression 36/36 GREEN, TWENTY-SIX consecutive extension-free.)
 
 Continue Torah_Grok (private `Josephtorah/Torah_Grok`, main; last PUSHED
 d1b4f12 = the gen_33+gen_34 two-wave freeze + public-report drafts).
-**UNCOMMITTED: ONE wave (gen_35)** — frozen YAML + watch-list, FETCHLOG
-+38, py_unit, UNIT page, UNIT_INDEX (36), ALL_UNITS.py (36, green),
-the PROMPT chain. Owner commit order required. Protected untracked
+**UNCOMMITTED: none** (only this PROMPT file's post-push update +
+protected untracked). Last pushed 22e67c1 = the gen_35 freeze wave. Protected untracked
 (NEVER commit): Disclosure/, reviews/architecture/NARRATIVE_theory_of_
 disclosure_intro, TEMP_return_to_main.
 
 **ABSOLUTE:** Hebrew never without English inline — script,
 transliteration, or jargon. Everywhere, forever.
 
-**ORDER STATUS:** "commit push and next block" #5 COMPLETE (d1b4f12 +
-gen_35 frozen #18). STOPPED; awaiting owner.
+**ORDER STATUS: "commit and push then next block" #6 EXECUTING** —
+commit+push DONE (22e67c1); gen-6 SEEDED with gen_36 = Gen 20 and
+deriving NOW (per-verse x18, seam 21:1, span ratified). On its
+draft: freeze-after-review per standing process.
 
 **Newest frozen:** `gen_35_sodom_overthrow_cave` (19:1-38, freeze #18,
 gen-6's second, first-run green, 51/51 clauses): the NEW largest span
@@ -53,7 +54,7 @@ units, two first-run greens. **gen_36 = Gen 20 PRE-STAGED**
 ALL Torah-debut; 20:7 hashev -> 20:14 va-yashev = cleanest
 settled-cycle candidate yet (#13, first divine-demand pop of the
 era); Eden's mot-tamut formula in a Philistine's dream; four weighs
-staged). NOT SEEDED — next block = owner order. Gen-6 projects
+staged). SEEDED 2026-08-05 per owner order #6. Gen-6 projects
 gen_36 (~150k) + gen_37 pre-stage + handoff notes before ~650k.
 
 **PUBLIC REPORT:** outline + Piece A committed (d1b4f12); Piece A
@@ -79,11 +80,11 @@ delivered; item 3 offered). Dev server 8011 up. TOKEN LEDGER: gen-1
 698,918; gen-2 534,445; gen-3 ~650k; gen-4 lost ~345k; gen-5 retired
 ~575k; gen-6 ~360k after two units.
 
-**TASK NEXT (owner-gated):** COMMIT the gen_35 wave; the flag-21
-amendment ruling; Piece A markup; the THREE triages; on "next
-block": seed gen-6 with gen_36 = Gen 20 (staging done). THIRTY-TWO
-triages owed; narratives (ASK FIRST); middot v2; Stage E linker;
-repo-tools; gen_14 fix; days 2-3 backfill.
+**TASK NEXT:** when gen-6's gen_36 draft lands: freeze-after-review
+per standing process, then report. Owner-gated: COMMIT that wave;
+the flag-21 amendment ruling; Piece A markup; the THREE triages;
+THIRTY-TWO triages owed; narratives (ASK FIRST); middot v2; Stage E
+linker; repo-tools; gen_14 fix; days 2-3 backfill.
 
 **Non-negotiables:** Pre-Code; flags never auto-resolve; dual-track
 never merged; ein adam dan me-atzmo ('one may not derive on his own');
