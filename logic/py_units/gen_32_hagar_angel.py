@@ -1,0 +1,269 @@
+#!/usr/bin/env python3
+# =============================================================================
+# gen_32_hagar_angel — 16:1-16
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_32_hagar_angel.yaml) is CANONICAL (Pre-Code);
+# this file is a derived, runnable rendering. Do not edit — regenerate. The
+# assertion block at the bottom is baked from the Stage D interpreter's
+# actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+"""Hagar: the maid given, the flight, the angel, the names (16:1-16)"""
+from machine import Machine
+
+m = Machine("gen_32_hagar_angel")
+
+# -------------------------- Gen.16.1 · THE_BARREN_WIFE_AND_THE_MAID --------
+# וְשָׂרַי אֵשֶׁת אַבְרָם לֹא יָלְדָה לוֹ וְלָהּ שִׁפְחָה מִצְרִית וּשְׁמָהּ
+# הָגָר
+# "Now Sarai Abram's wife bore him no children; and she had a handmaid, an
+# Egyptian, whose name was Hagar."
+m.step("Gen.16.1")
+# ‹לֹא יָלְדָה לוֹ וְלָהּ שִׁפְחָה מִצְרִית וּשְׁמָהּ הָגָר› fact holds:
+# saray-not-yaldah-not; and-lah-shifchah-mitzrit-and-shemah-hagar
+m.fact("saray_lo_yaldah_lo",
+       "ve_lah_shifchah_mitzrit_u_shemah_hagar")
+
+# -------------------------- Gen.16.2 · THE_INITIATIVE_AND_THE_LISTENING ----
+# וַתֹּאמֶר שָׂרַי אֶל־אַבְרָם הִנֵּה־נָא עֲצָרַנִי יְהוָה מִלֶּדֶת בֹּא־נָא
+# אֶל־שִׁפְחָתִי אוּלַי אִבָּנֶה מִמֶּנָּה וַיִּשְׁמַע אַבְרָם לְקוֹל שָׂרָי
+# "And Sarai said unto Abram: 'Behold now, the LORD hath restrained me from
+# bearing; go in, I pray thee, unto my handmaid; it may be that I shall be
+# builded up through her.' And Abram hearkened to the voice of Sarai."
+m.step("Gen.16.2")
+# ‹וַתֹּאמֶר שָׂרַי אֶל־אַבְרָם› event: say — agent saray
+m.event("say", agent="saray")
+# ‹בֹּא־נָא אֶל־שִׁפְחָתִי› saray speaks a demand — LET: in-it(avram, to-
+# shifchati)
+m.declare("saray", "LET",
+          "bo(avram, el_shifchati)")
+# ‹עֲצָרַנִי יְהוָה מִלֶּדֶת … אוּלַי אִבָּנֶה מִמֶּנָּה› fact holds:
+# atzarani-the-LORD-from-ledet; ulay-ibaneh-mimenah
+m.fact("atzarani_YHWH_mi_ledet",
+       "ulay_ibaneh_mimenah")
+# ‹וַיִּשְׁמַע אַבְרָם לְקוֹל שָׂרָי› event: hear — agent avram; theme
+# voice-saray
+m.event("hear", agent="avram", themes=["qol_saray"])
+
+# -------------------------- Gen.16.3 · THE_TAKE_AND_THE_GIVE ---------------
+# וַתִּקַּח שָׂרַי אֵשֶׁת־אַבְרָם אֶת־הָגָר הַמִּצְרִית שִׁפְחָתָהּ מִקֵּץ
+# עֶשֶׂר שָׁנִים לְשֶׁבֶת אַבְרָם בְּאֶרֶץ כְּנָעַן וַתִּתֵּן אֹתָהּ
+# לְאַבְרָם אִישָׁהּ לוֹ לְאִשָּׁה
+# "And Sarai Abram's wife took Hagar the Egyptian, her handmaid, after Abram
+# had dwelt ten years in the land of Canaan, and gave her to Abram her
+# husband to be his wife."
+m.step("Gen.16.3")
+# ‹וַתִּקַּח שָׂרַי … אֶת־הָגָר› event: take — agent saray; theme hagar
+m.event("take", agent="saray", themes=["hagar"])
+# ‹וַתִּתֵּן אֹתָהּ לְאַבְרָם אִישָׁהּ לוֹ לְאִשָּׁה› event: give — agent
+# saray; theme hagar
+m.event("give", agent="saray", themes=["hagar"])
+# ‹מִקֵּץ עֶשֶׂר שָׁנִים לְשֶׁבֶת אַבְרָם בְּאֶרֶץ כְּנָעַן› fact holds:
+# from-qetz-eser-shanim-to-shevet-avram-in-earth-kenaan
+m.fact("mi_qetz_eser_shanim_le_shevet_avram_be_eretz_kenaan")
+
+# -------------------------- Gen.16.4 · THE_COMPLIANCE_AND_THE_CONTEMPT -----
+# וַיָּבֹא אֶל־הָגָר וַתַּהַר וַתֵּרֶא כִּי הָרָתָה וַתֵּקַל גְּבִרְתָּהּ
+# בְּעֵינֶיהָ
+# "And he went in unto Hagar, and she conceived; and when she saw that she
+# had conceived, her mistress was despised in her eyes."
+m.step("Gen.16.4")
+# ‹וַיָּבֹא אֶל־הָגָר› event: come — agent avram
+m.event("come", agent="avram")
+# ‹וַיָּבֹא אֶל־הָגָר› demand settled (popped from the queue): in-it(avram,
+# to-shifchati)
+m.result("bo(avram, el_shifchati)", tmark="t1")
+# ‹וַתַּהַר› event: conceive — agent hagar
+m.event("conceive", agent="hagar")
+# ‹וַתֵּקַל גְּבִרְתָּהּ בְּעֵינֶיהָ› fact holds: and-teqal-gevirtah-in-
+# eineha
+m.fact("va_teqal_gevirtah_be_eineha")
+
+# -------------------------- Gen.16.5 · THE_GRIEVANCE_AND_THE_DEMAND_ON_GOD -
+# וַתֹּאמֶר שָׂרַי אֶל־אַבְרָם חֲמָסִי עָלֶיךָ אָנֹכִי נָתַתִּי שִׁפְחָתִי
+# בְּחֵיקֶךָ וַתֵּרֶא כִּי הָרָתָה וָאֵקַל בְּעֵינֶיהָ יִשְׁפֹּט יְהוָה
+# בֵּינִי וּבֵינֶיךָ
+# "And Sarai said unto Abram: 'My wrong be upon thee: I gave my handmaid
+# into thy bosom; and when she saw that she had conceived, I was despised in
+# her eyes: the LORD judge between me and thee.'"
+m.step("Gen.16.5")
+# ‹וַתֹּאמֶר שָׂרַי אֶל־אַבְרָם› event: say — agent saray
+m.event("say", agent="saray")
+# ‹חֲמָסִי עָלֶיךָ אָנֹכִי נָתַתִּי שִׁפְחָתִי בְּחֵיקֶךָ› fact holds:
+# chamasi-alekha; anokhi-natati-shifchati-in-cheqekha
+m.fact("chamasi_alekha",
+       "anokhi_natati_shifchati_be_cheqekha")
+# ‹יִשְׁפֹּט יְהוָה בֵּינִי וּבֵינֶיךָ› saray speaks a demand — LET:
+# yishpot(the-LORD, beini-and-veinekha)
+m.declare("saray", "LET",
+          "yishpot(YHWH, beini_u_veinekha)")
+
+# -------------------------- Gen.16.6 · THE_PERMISSION_THE_AFFLICTION_THE_FLIGHT -
+# וַיֹּאמֶר אַבְרָם אֶל־שָׂרַי הִנֵּה שִׁפְחָתֵךְ בְּיָדֵךְ עֲשִׂי־לָהּ
+# הַטּוֹב בְּעֵינָיִךְ וַתְּעַנֶּהָ שָׂרַי וַתִּבְרַח מִפָּנֶיהָ
+# "But Abram said unto Sarai: 'Behold, thy maid is in thy hand; do to her
+# that which is good in thine eyes.' And Sarai dealt harshly with her, and
+# she fled from her face."
+m.step("Gen.16.6")
+# ‹וַיֹּאמֶר אַבְרָם אֶל־שָׂרַי› event: say — agent avram
+m.event("say", agent="avram")
+# ‹עֲשִׂי־לָהּ הַטּוֹב בְּעֵינָיִךְ› avram speaks a demand — LET: asi(saray,
+# to-hagar-the-good-in-einayikh)
+m.declare("avram", "LET",
+          "asi(saray, la_hagar_ha_tov_be_einayikh)")
+# ‹וַתְּעַנֶּהָ שָׂרַי› event: afflict — agent saray; theme hagar
+m.event("afflict", agent="saray", themes=["hagar"])
+# ‹וַתִּבְרַח מִפָּנֶיהָ› event: flee — agent hagar
+m.event("flee", agent="hagar")
+
+# -------------------------- Gen.16.7 · THE_ANGEL_FINDS_HER -----------------
+# וַיִּמְצָאָהּ מַלְאַךְ יְהוָה עַל־עֵין הַמַּיִם בַּמִּדְבָּר עַל־הָעַיִן
+# בְּדֶרֶךְ שׁוּר
+# "And the angel of the LORD found her by a fountain of water in the
+# wilderness, by the fountain in the way to Shur."
+m.step("Gen.16.7")
+# ‹וַיִּמְצָאָהּ מַלְאַךְ יְהוָה› event: find — agent malakh-the-LORD; theme
+# hagar
+m.event("find", agent="malakh_YHWH", themes=["hagar"])
+# reads without prior install (flag, not fix): shur
+m.presupposed("shur")
+
+# -------------------------- Gen.16.8 · THE_WHERE_QUESTIONS_AND_THE_RUNAWAY_ANSWER -
+# וַיֹּאמַר הָגָר שִׁפְחַת שָׂרַי אֵי־מִזֶּה בָאת וְאָנָה תֵלֵכִי וַתֹּאמֶר
+# מִפְּנֵי שָׂרַי גְּבִרְתִּי אָנֹכִי בֹּרַחַת
+# "And he said: 'Hagar, Sarai's handmaid, whence camest thou? and whither
+# goest thou?' And she said: 'I flee from the face of my mistress Sarai.'"
+m.step("Gen.16.8")
+# ‹וַיֹּאמַר הָגָר שִׁפְחַת שָׂרַי אֵי־מִזֶּה בָאת וְאָנָה תֵלֵכִי› event:
+# say — agent malakh-the-LORD
+m.event("say", agent="malakh_YHWH")
+# ‹אֵי־מִזֶּה בָאת וְאָנָה תֵלֵכִי› fact holds: ei-mizeh-vat-and-anah-
+# telekhi
+m.fact("ei_mizeh_vat_ve_anah_telekhi")
+# ‹וַתֹּאמֶר› event: say — agent hagar
+m.event("say", agent="hagar")
+# ‹מִפְּנֵי שָׂרַי גְּבִרְתִּי אָנֹכִי בֹּרַחַת› fact holds: from-face-of-
+# saray-gevirti-anokhi-borachat
+m.fact("mi_pnei_saray_gevirti_anokhi_borachat")
+
+# -------------------------- Gen.16.9 · THE_RETURN_AND_SUBMIT_COMMAND -------
+# וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה שׁוּבִי אֶל־גְּבִרְתֵּךְ וְהִתְעַנִּי
+# תַּחַת יָדֶיהָ
+# "And the angel of the LORD said unto her: 'Return to thy mistress, and
+# submit thyself under her hands.'"
+m.step("Gen.16.9")
+# ‹וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה› event: say — agent malakh-the-LORD
+m.event("say", agent="malakh_YHWH")
+# ‹שׁוּבִי אֶל־גְּבִרְתֵּךְ וְהִתְעַנִּי תַּחַת יָדֶיהָ› malakh-the-LORD
+# speaks a demand — LET: shuvi-and-hitani(hagar, to-gevirtekh-tachat-yadeha)
+m.declare("malakh_YHWH", "LET",
+          "shuvi_ve_hitani(hagar, el_gevirtekh_tachat_yadeha)")
+
+# -------------------------- Gen.16.10 · THE_UNCOUNTABLE_SEED ---------------
+# וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה הַרְבָּה אַרְבֶּה אֶת־זַרְעֵךְ וְלֹא
+# יִסָּפֵר מֵרֹב
+# "And the angel of the LORD said unto her: 'I will greatly multiply thy
+# seed, that it shall not be numbered for multitude.'"
+m.step("Gen.16.10")
+# ‹וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה› event: say — agent malakh-the-LORD
+m.event("say", agent="malakh_YHWH")
+# ‹הַרְבָּה אַרְבֶּה אֶת־זַרְעֵךְ וְלֹא יִסָּפֵר מֵרֹב› fact holds: greatly-
+# I-will-multiply-zarekh; and-not-yisafer-from-rov
+m.fact("harbah_arbeh_et_zarekh",
+       "ve_lo_yisafer_me_rov")
+
+# -------------------------- Gen.16.11 · THE_ANNUNCIATION -------------------
+# וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה הִנָּךְ הָרָה וְיֹלַדְתְּ בֵּן וְקָרָאת
+# שְׁמוֹ יִשְׁמָעֵאל כִּי־שָׁמַע יְהוָה אֶל־עָנְיֵךְ
+# "And the angel of the LORD said unto her: 'Behold, thou art with child,
+# and shalt bear a son; and thou shalt call his name Ishmael, because the
+# LORD hath heard thy affliction.'"
+m.step("Gen.16.11")
+# ‹וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה› event: say — agent malakh-the-LORD
+m.event("say", agent="malakh_YHWH")
+# ‹הִנָּךְ הָרָה וְיֹלַדְתְּ בֵּן וְקָרָאת שְׁמוֹ יִשְׁמָעֵאל כִּי־שָׁמַע
+# יְהוָה אֶל־עָנְיֵךְ› fact holds: hinakh-harah-and-yoladt-ben; and-qarat-
+# shemo-yishmael; when-shama-the-LORD-to-onyekh
+m.fact("hinakh_harah_ve_yoladt_ben",
+       "ve_qarat_shemo_yishmael",
+       "ki_shama_YHWH_el_onyekh")
+
+# -------------------------- Gen.16.12 · THE_WILD_ASS_ORACLE ----------------
+# וְהוּא יִהְיֶה פֶּרֶא אָדָם יָדוֹ בַכֹּל וְיַד כֹּל בּוֹ וְעַל־פְּנֵי
+# כָל־אֶחָיו יִשְׁכֹּן
+# "And he shall be a wild ass of a man: his hand shall be against every man,
+# and every man's hand against him; and he shall dwell in the face of all
+# his brethren.'"
+m.step("Gen.16.12")
+# ‹פֶּרֶא אָדָם יָדוֹ בַכֹּל וְיַד כֹּל בּוֹ וְעַל־פְּנֵי כָל־אֶחָיו
+# יִשְׁכֹּן› fact holds: pere-human-his-hand-and-all-and-yad-all-in-it;
+# upon-face-of-all-echav-yishkon
+m.fact("pere_adam_yado_va_khol_ve_yad_kol_bo",
+       "al_pnei_khol_echav_yishkon")
+
+# -------------------------- Gen.16.13 · SHE_NAMES_YHWH ---------------------
+# וַתִּקְרָא שֵׁם־יְהוָה הַדֹּבֵר אֵלֶיהָ אַתָּה אֵל רֳאִי כִּי אָמְרָה
+# הֲגַם הֲלֹם רָאִיתִי אַחֲרֵי רֹאִי
+# "And she called the name of the LORD that spoke unto her, Thou art a God
+# of seeing; for she said: 'Have I even here seen Him that seeth Me?'"
+m.step("Gen.16.13")
+# ‹וַתִּקְרָא שֵׁם־יְהוָה הַדֹּבֵר אֵלֶיהָ אַתָּה אֵל רֳאִי› named: the-LORD
+# := El-Roi
+m.name("YHWH", "El_Roi")
+# ‹כִּי אָמְרָה הֲגַם הֲלֹם רָאִיתִי אַחֲרֵי רֹאִי› fact holds: hagam-halom-
+# raiti-acharei-roi
+m.fact("hagam_halom_raiti_acharei_roi")
+
+# -------------------------- Gen.16.14 · THE_WELL_OF_THE_LIVING_ONE_WHO_SEES -
+# עַל־כֵּן קָרָא לַבְּאֵר בְּאֵר לַחַי רֹאִי הִנֵּה בֵין־קָדֵשׁ וּבֵין
+# בָּרֶד
+# "Wherefore the well was called 'Beer-lahai-roi; behold, it is between
+# Kadesh and Bered."
+m.step("Gen.16.14")
+# ‹עַל־כֵּן קָרָא לַבְּאֵר בְּאֵר לַחַי רֹאִי› pattern recorded: upon-ken-
+# qara-to-beer-beer-lachai-roi
+m.pattern("al_ken_qara_la_beer_beer_lachai_roi")
+# ‹הִנֵּה בֵין־קָדֵשׁ וּבֵין בָּרֶד› fact holds: hineh-vein-qadesh-and-vein-
+# bared
+m.fact("hineh_vein_qadesh_u_vein_bared")
+# reads without prior install (flag, not fix): qadesh, bered
+m.presupposed("qadesh", "bered")
+
+# -------------------------- Gen.16.15 · THE_BIRTH_AND_THE_FATHERS_NAMING ---
+# וַתֵּלֶד הָגָר לְאַבְרָם בֵּן וַיִּקְרָא אַבְרָם שֶׁם־בְּנוֹ
+# אֲשֶׁר־יָלְדָה הָגָר יִשְׁמָעֵאל
+# "And Hagar bore Abram a son; and Abram called the name of his son, whom
+# Hagar bore, Ishmael."
+m.step("Gen.16.15")
+# ‹וַתֵּלֶד הָגָר לְאַבְרָם בֵּן› event: bear — agent hagar; theme yishmael
+m.event("bear", agent="hagar", themes=["yishmael"])
+# ‹וַיִּקְרָא אַבְרָם שֶׁם־בְּנוֹ … יִשְׁמָעֵאל› named: yishmael := Yishmael
+m.name("yishmael", "Yishmael")
+
+# -------------------------- Gen.16.16 · THE_AGE_FRAME ----------------------
+# וְאַבְרָם בֶּן־שְׁמֹנִים שָׁנָה וְשֵׁשׁ שָׁנִים בְּלֶדֶת־הָגָר
+# אֶת־יִשְׁמָעֵאל לְאַבְרָם
+# "And Abram was fourscore and six years old, when Hagar bore Ishmael to
+# Abram."
+m.step("Gen.16.16")
+# ‹וְאַבְרָם בֶּן־שְׁמֹנִים שָׁנָה וְשֵׁשׁ שָׁנִים› fact holds: avram-ben-
+# shemonim-year-and-shesh-shanim
+m.fact("avram_ben_shemonim_shanah_ve_shesh_shanim")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == {'bered', 'shur', 'qadesh'}
+    assert m.REGISTRY["names"] == {'YHWH': 'El_Roi', 'yishmael': 'Yishmael'}
+    assert m.REGISTRY["writes"] == 2
+    assert m.tests_list() == []
+    assert m.open_demands() == ['yishpot(YHWH, beini_u_veinekha)', 'asi(saray, la_hagar_ha_tov_be_einayikh)', 'shuvi_ve_hitani(hagar, el_gevirtekh_tachat_yadeha)']
+    assert len(m.SPECS["log"]) == 4
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {'read_before_install': 3, 'named_before_any_presence': 2}
+    assert sorted(m.WORLD["facts"]) == sorted(['saray_lo_yaldah_lo', 've_lah_shifchah_mitzrit_u_shemah_hagar', 'atzarani_YHWH_mi_ledet', 'ulay_ibaneh_mimenah', 'mi_qetz_eser_shanim_le_shevet_avram_be_eretz_kenaan', 'va_teqal_gevirtah_be_eineha', 'chamasi_alekha', 'anokhi_natati_shifchati_be_cheqekha', 'ei_mizeh_vat_ve_anah_telekhi', 'mi_pnei_saray_gevirti_anokhi_borachat', 'harbah_arbeh_et_zarekh', 've_lo_yisafer_me_rov', 'hinakh_harah_ve_yoladt_ben', 've_qarat_shemo_yishmael', 'ki_shama_YHWH_el_onyekh', 'pere_adam_yado_va_khol_ve_yad_kol_bo', 'al_pnei_khol_echav_yishkon', 'hagam_halom_raiti_acharei_roi', 'pattern: al_ken_qara_la_beer_beer_lachai_roi', 'hineh_vein_qadesh_u_vein_bared', 'avram_ben_shemonim_shanah_ve_shesh_shanim'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 25
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

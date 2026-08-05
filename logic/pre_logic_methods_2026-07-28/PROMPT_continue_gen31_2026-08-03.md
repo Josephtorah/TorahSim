@@ -1,26 +1,27 @@
-# Resume prompt — THIRTY-ONE frozen; the WAR done; orders COMPLETE · 2026-08-03
+# Resume prompt — THIRTY-ONE frozen; gen_30 PUSHED; gen-5 DERIVING gen_31 · 2026-08-03
 
 Paste into the compacted session. (Supersedes PROMPT_continue_gen30.
 Corpus: gen_01..gen_30 = Gen 1:1-14:24 GAPLESS + lev_13 = 31 frozen,
-regression 31/31 GREEN, TWENTY-ONE consecutive extension-free,
-TWENTY-FOUR consecutive zero-cache tripwires.)
+regression 31/31 GREEN re-verified post-crash 2026-08-03, TWENTY-ONE
+consecutive extension-free, TWENTY-FOUR consecutive zero-cache
+tripwires.)
 
 ---
 
 Continue Torah_Grok (private `Josephtorah/Torah_Grok`, main; last PUSHED
-21a3c00 = the gen_28+29 two-wave freeze). **UNCOMMITTED: ONE wave
-(gen_30)** — frozen YAML + watch-list, FETCHLOG +24, py_unit, UNIT_
-page, UNIT_INDEX (31), the PROMPT_continue chain. Owner commit order
-required. Protected untracked (NEVER commit): Disclosure/,
+5db7364 = the gen_30 freeze wave). **UNCOMMITTED: none** (only this
+PROMPT file's post-push update + protected untracked). Protected
+untracked (NEVER commit): Disclosure/,
 reviews/architecture/NARRATIVE_theory_of_disclosure_intro,
 TEMP_return_to_main.
 
 **ABSOLUTE:** Hebrew never without English inline — script,
 transliteration, or jargon. Everywhere, forever.
 
-**ORDER STATUS: ALL owner orders COMPLETE** ("commit push and next
-block" #2 -> 21a3c00 + gen_30 frozen #13). STOPPED; awaiting owner.
-NEXT BLOCK READY: gen_31 = Gen 15:1-21 PRE-STAGED by gen-4
+**ORDER STATUS: "commit push and next block" #3 (2026-08-03)
+EXECUTING** — commit+push DONE (5db7364); gen-5 SPAWNED and deriving
+gen_31. Awaiting gen-5's draft report, then freeze-after-review.
+BLOCK IN FLIGHT: gen_31 = Gen 15:1-21, PRE-STAGED by gen-4
 (gen31_staging.md: recommend ONE UNIT, seam 16:1, per-verse x21 —
 splitting at 15:7 would sever the question-pair and the give-arc.
 Headlines: ABRAM'S FIRST RECORDED WORDS TO GOD — the four-unit
@@ -33,10 +34,14 @@ ad-olam ruling names — needs gen_21 + gen_29 quotes side by side;
 esh ('fire') debut at the covenant torch; the magen ('shield')
 seam-pun lands at 15:1).
 
-**THE GEN-4 AGENT:** active, ~345k+ lifetime (retire ~700k). Two
-units, both first-run green, zero corrections. Clean-handoff
-assessment due after gen_31's draft (~490-500k projected) — expect
-gen-5 spawn before gen_32.
+**THE GEN-5 AGENT:** active since 2026-08-03, spawned fresh (gen-4's
+live context was LOST in the session crash at ~345k lifetime, after
+two first-run-green units, zero corrections). Gen-4's succession
+files SURVIVED (gen4_handoff_notes.md + gen31_staging.md + pre-stage
+data, secured in the current session scratchpad) and were folded into
+gen-5's seed brief in full. Gen-5's orders: gen_31 draft + preflight
+GREEN + prospective watch-list + gen_32 (Gen 16, Hagar) pre-stage +
+report with token estimate. Retire ~700k, handoff before ~650k.
 
 **Newest frozen:** `gen_30_war_of_kings` (14:1-24, #13, gen-4's
 second): THE REFUSAL RULING — frozen law for future refusals: a
@@ -79,13 +84,19 @@ precedent index through gen_31 when succession comes).
 tov/shaah/tzaddik/nichoach (15:6 will press this). Stage E arcs x8.
 ktiv/qere doubles 8. Amend-gated: gen_14 pointing.
 
-**TASK NEXT (owner-gated):** COMMIT gen_30's wave; on "next block":
-seed gen-4 with gen_31 = 15:1-21 (staging done; owner ratifies span;
-the 15:6 TESTS weigh is the flagged decision — staged both ways).
-TWENTY-SEVEN triages owed; narratives (ASK FIRST); PUBLIC REPORT;
-middot v2; Stage E linker; repo-tools; gen_14 fix; days 2-3 backfill.
+**TASK NEXT:** when gen-5's draft report lands: freeze-after-review
+(quotes verbatim vs frozen; censuses vs SNAPSHOT; the 15:6 TESTS
+weigh is the owner-triage decision — staged both ways; flip; gate;
+regression; renders; index; export; update this file). Then owner
+commit gate. TWENTY-SEVEN triages owed; narratives (ASK FIRST);
+PUBLIC REPORT; middot v2; Stage E linker; repo-tools; gen_14 fix;
+days 2-3 backfill.
 
-**State notes:** DB snapshot + debut map repo root (gitignored);
+**State notes:** owner-ordered whole-Torah projection study written
+2026-08-03: reviews/architecture/STUDY_full_torah_machine_projection_
+2026-08-03.md (uncommitted; hypothesis-grade beyond frozen span; 7
+standing predictions for the derivation track to falsify). DB snapshot
++ debut map repo root (gitignored);
 Onkelos cache Gen 1:1-14:24 + Lev 13:1-8; FETCHLOG is provenance;
 dev server 8011; subagent status line user-level. TOKEN LEDGER:
 gen-1 698,918; gen-2 534,445; gen-3 ~650k; gen-4 ~345k+ after two
