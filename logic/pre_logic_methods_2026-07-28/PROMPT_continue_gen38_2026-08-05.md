@@ -7,21 +7,25 @@ regression 38/38 GREEN, TWENTY-EIGHT consecutive extension-free.)
 ---
 
 Continue Torah_Grok (private `Josephtorah/Torah_Grok`, main; last PUSHED
-22e67c1 = the gen_35 freeze wave). **UNCOMMITTED: TWO waves (gen_36 +
-gen_37)** — 2 frozen YAMLs + 2 watch-lists, FETCHLOG +52 (18+34), 2
-py_units, 2 UNIT pages, UNIT_INDEX (38), ALL_UNITS.py (38, green), the
-PROMPT chain. Owner commit order required. Protected untracked (NEVER
+1463c6a = the gen_36+gen_37 two-wave freeze, 2026-08-05).
+**UNCOMMITTED: none** (only this PROMPT file's post-push update +
+protected untracked). Protected untracked (NEVER
 commit): Disclosure/ (now incl. LeBlanc_Epic_Certainty_layperson md +
 epub — owner-ordered revision, 2026-08-05), NARRATIVE_theory_of_
 disclosure_intro, TEMP_return_to_main.
 
 **ABSOLUTE:** Hebrew never without English inline. Everywhere, forever.
 
-**ORDER STATUS:** "next block" #7 COMPLETE (gen_37 frozen #20 below).
-STOPPED on derivation; awaiting owner. OWNER'S ACTIVE ASK (mid-turn,
-2026-08-05): a COMPANION DOCUMENT outline — "highlights that make the
-written Torah function like a computer system" — first-draft outline
-delivered in-thread; awaiting owner feedback before drafting the doc.
+**ORDER STATUS: "next block and commit and push first" #8 EXECUTING**
+— commit+push DONE (1463c6a); gen-7 SEEDED with gen_38 = Gen 22 THE
+AQEDAH and deriving NOW (ONE unit, hybrid ~20 steps, seam 23:1,
+ratified). The crown weigh (command/countermand/substitute) ordered
+ENCODED-PER-LETTER + STAGED BOTH WAYS + NOT RESOLVED — owner-grade
+triage expected at review. On the draft: freeze-after-review.
+COMPANION DOC: delivered — Disclosure/LeBlanc_Torah_As_Running_System
+_2026-08-05.md + .epub (sure-voiced; Masoretes-first section; logic
+interlock; command-reliability section; falsifiability page). The
+LeBlanc credo (md+epub) also done. Disclosure NEVER committed.
 
 **Newest frozen:** `gen_37_laughter_wilderness_oath` (21:1-34, freeze
 #20, gen-7's first, first-run green, 36/36): SETTLED CYCLE #14 — the
@@ -49,7 +53,7 @@ countermanded at 22:12 by the roster's first direct LET-NOT collision,
 the demanded root+stem performed on a SUBSTITUTE (tachat beno, 22:13).
 Census gems staged: yachid ('only one') 3/3 in-span; lekh-lekha
 exactly x2 Torah (12:1/22:2); love-verb + test-verb debut in one
-command; Rivqah minted in the coda. NOT SEEDED — next block = owner.
+command; Rivqah minted in the coda. SEEDED 2026-08-05 per owner order #8.
 
 **AMENDMENT REFERRALS OPEN (owner):** gen_34 stand-verb ordinal
 (token 3 = 19:17 not 19:27); gen_14 pointing; NEW: the gen_34
@@ -78,12 +82,13 @@ daily-changing counts per owner rule). Debugger tutorial paused at
 item 3. Dev server 8011 up. TOKEN LEDGER: gen-5 retired ~575k; gen-6
 retired ~500k; gen-7 ~150k after one unit.
 
-**TASK NEXT (owner-gated):** COMPANION outline feedback -> draft;
-COMMIT the two waves; on "next block": seed gen-7 with gen_38 (the
-Aqedah — the crown weigh is owner-grade, expect triage); the THREE
-triages + THREE amendment items; Piece A markup; THIRTY-FOUR triages
-owed; narratives (ASK FIRST); middot v2; Stage E linker; repo-tools;
-days 2-3 backfill.
+**TASK NEXT:** when gen-7's Aqedah draft lands: freeze-after-review —
+EXPECT the crown weigh staged both ways; hold it for OWNER TRIAGE
+(encode-as-shipped may freeze per auto-freeze IF the encoding follows
+frozen law with the fork documented; the fork itself is owner-only).
+Then report. Owner-gated: COMMIT that wave; the THREE triages + THREE
+amendment items; Piece A markup; THIRTY-FOUR triages owed; narratives
+(ASK FIRST); middot v2; Stage E linker; repo-tools; days 2-3 backfill.
 
 **Non-negotiables:** Pre-Code; flags never auto-resolve; dual-track
 never merged; ein adam dan me-atzmo ('one may not derive on his own');
