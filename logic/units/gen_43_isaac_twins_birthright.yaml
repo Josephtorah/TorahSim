@@ -1,0 +1,616 @@
+meta:
+  id: gen_43_isaac_twins_birthright
+  title_en: 'Isaac''s toledot: twins and the birthright (25:19-34)'
+  title_he: מִכְרָה כַיּוֹם אֶת־בְּכֹרָתְךָ
+  title_he_translit: mikhra ka-yom et bekhorat-kha
+  title_he_en: '''Sell as of today your birthright'''
+  book_he: בְּרֵאשִׁית
+  book_he_translit: Be-reshit
+  book_en: Genesis
+  refs: 25:19-34
+  data_paths_he:
+  - Data/Gen.xml
+  status: frozen
+  draft_note_en: 'FROZEN 2026-08-05. Birthright: sell+swear pop; gulp stays OPEN other-verb.'
+boot_steps:
+- id: STEP_Gn_25_19
+  order: 1
+  ref: Gen.25.19
+  op: V_25_19
+  he: וְ/אֵ֛לֶּה תּוֹלְדֹ֥ת יִצְחָ֖ק בֶּן אַבְרָהָ֑ם אַבְרָהָ֖ם הוֹלִ֥יד אֶת יִצְחָֽק
+  he_translit: ve-ele toldot yitzchaq ben avraham avraham holid et yitzchaq
+  en: '[EN-AID] And these are the generations of Isaac, Abraham''s son: Abraham begot Isaac.'
+  tree_left:
+    he: וְ/אֵ֛לֶּה תּוֹלְדֹ֥ת יִצְחָ֖ק בֶּן אַבְרָהָ֑ם אַבְרָהָ֖ם הוֹלִ֥יד אֶת יִצְחָֽק
+    he_translit: ve-ele toldot yitzchaq ben avraham avraham holid et yitzchaq
+    en: 'And these are the generations of Isaac, Abraham''s son: Abraham begot Isaac. (left) [VERIFIED:
+      SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'right or n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: SECTION
+    expr_en: SECTION(toldot_yitzchaq, yitzchaq)
+    he: וְאֵלֶּה תּוֹלְדֹת יִצְחָק
+    he_translit: ve-ele toldot yitzchaq
+    en: 'Isaac toledot header [VERIFIED: SNAPSHOT].'
+    cites:
+    - TIR-014
+    confidence: tested
+  - op: NOTE_PRESUPPOSED
+    expr_en: avraham, yitzchaq are READ without prior install
+    he: אַבְרָהָם
+    he_translit: avraham
+    en: READ.
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: 25:19 birthright arc.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_20
+  order: 2
+  ref: Gen.25.20
+  op: V_25_20
+  he: וַ/יְהִ֤י יִצְחָק֙ בֶּן אַרְבָּעִ֣ים שָׁנָ֔ה בְּ/קַחְתּ֣/וֹ אֶת רִבְקָ֗ה בַּת בְּתוּאֵל֙ הָֽ/אֲרַמִּ֔י
+    מִ/פַּדַּ֖ן אֲרָ֑ם אֲח֛וֹת לָבָ֥ן הָ/אֲרַמִּ֖י ל֥/וֹ לְ/אִשָּֽׁה
+  he_translit: va-yehi yitzchaq ben arbaim shana be-qacht-o et rivqa bat betuel ha-arami mi-padan aram
+    achot lavan ha-arami l-o le-isha
+  en: '[EN-AID] And Isaac was forty years old when he took Rivqah, daughter of Betuel the Aramean of Paddan-aram,
+    sister of Laban the Aramean, as wife.'
+  tree_left:
+    he: וַ/יְהִ֤י יִצְחָק֙ בֶּן אַרְבָּעִ֣ים שָׁנָ֔ה בְּ/קַחְתּ֣/וֹ אֶת רִבְקָ֗ה בַּת בְּתוּאֵל֙ הָֽ/אֲרַמִּ֔י
+      מִ/פַּדַּ֖ן אֲרָ֑ם אֲח֛וֹת לָבָ֥ן הָ/אֲרַמִּ֖י ל֥/וֹ לְ/אִשָּֽׁה
+    he_translit: va-yehi yitzchaq ben arbaim shana be-qacht-o et rivqa bat betuel ha-arami mi-padan aram
+      achot lavan ha-arami l-o le-isha
+    en: 'And Isaac was forty years old when he took Rivqah, daughter of Betuel the Aramea (left) [VERIFIED:
+      SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'right or n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: take_wife(e20) ∧ Agent(e20, yitzchaq) ∧ Theme(e20, rivqah)
+    he: בְּקַחְתּוֹ אֶת־רִבְקָה
+    he_translit: be-qachto et rivqa
+    en: 'Marriage age forty [VERIFIED: SNAPSHOT].'
+    cites:
+    - TIR-014
+    confidence: tested
+  - op: NOTE_PRESUPPOSED
+    expr_en: rivqah, lavan, betuel, padan_aram are READ without prior install
+    he: רִבְקָה
+    he_translit: rivqa
+    en: Bride household READ from gen_40-41.
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: 25:20 birthright arc.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_21
+  order: 3
+  ref: Gen.25.21
+  op: V_25_21
+  he: וַ/יֶּעְתַּ֨ר יִצְחָ֤ק לַֽ/יהוָה֙ לְ/נֹ֣כַח אִשְׁתּ֔/וֹ כִּ֥י עֲקָרָ֖ה הִ֑וא וַ/יֵּעָ֤תֶר ל/וֹ֙
+    יְהוָ֔ה וַ/תַּ֖הַר רִבְקָ֥ה אִשְׁתּֽ/וֹ
+  he_translit: va-yetar yitzchaq la-YHWH le-nokhach isht-o ki aqara hiv va-yeater l-o YHWH va-tahar rivqa
+    isht-o
+  en: '[EN-AID] And Isaac prayed to YHWH facing his wife, for she was barren; and YHWH was entreated of
+    him, and Rivqah his wife conceived.'
+  tree_left:
+    he: וַ/יֶּעְתַּ֨ר יִצְחָ֤ק לַֽ/יהוָה֙ לְ/נֹ֣כַח אִשְׁתּ֔/וֹ כִּ֥י עֲקָרָ֖ה הִ֑וא וַ/יֵּעָ֤תֶר ל/וֹ֙
+      יְהוָ֔ה וַ/תַּ֖הַר רִבְקָ֥ה אִשְׁתּֽ/וֹ
+    he_translit: va-yetar yitzchaq la-YHWH le-nokhach isht-o ki aqara hiv va-yeater l-o YHWH va-tahar
+      rivqa isht-o
+    en: 'And Isaac prayed to YHWH facing his wife, for she was barren; and YHWH was entre (left) [VERIFIED:
+      SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'right or n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: pray_conceive(e21) ∧ Agent(e21, yitzchaq) ∧ Goal(e21, YHWH)
+    he: וַיֶּעְתַּר … וַתַּהַר
+    he_translit: va-yetar … va-tahar
+    en: 'Isaac entreated YHWH; accepted; Rivqah conceived [VERIFIED: SNAPSHOT]. Not imperative-at-God
+      class.'
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: 25:21 birthright arc.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_22
+  order: 4
+  ref: Gen.25.22
+  op: V_25_22
+  he: וַ/יִּתְרֹֽצֲצ֤וּ הַ/בָּנִים֙ בְּ/קִרְבָּ֔/הּ וַ/תֹּ֣אמֶר אִם כֵּ֔ן לָ֥/מָּה זֶּ֖ה אָנֹ֑כִי וַ/תֵּ֖לֶךְ
+    לִ/דְרֹ֥שׁ אֶת יְהוָֽה
+  he_translit: va-yitrotzatzu ha-banim be-qirba-ה va-tomer im ken la-ma ze anokhi va-telekh li-derosh
+    et YHWH
+  en: '[EN-AID] And the children struggled together within her; and she said: If so, why am I thus? And
+    she went to inquire of YHWH.'
+  tree_left:
+    he: וַ/יִּתְרֹֽצֲצ֤וּ הַ/בָּנִים֙ בְּ/קִרְבָּ֔/הּ וַ/תֹּ֣אמֶר אִם כֵּ֔ן לָ֥/מָּה זֶּ֖ה אָנֹ֑כִי וַ/תֵּ֖לֶךְ
+      לִ/דְרֹ֥שׁ אֶת יְהוָֽה
+    he_translit: va-yitrotzatzu ha-banim be-qirba-ה va-tomer im ken la-ma ze anokhi va-telekh li-derosh
+      et YHWH
+    en: 'And the children struggled together within her; and she said: If so, why am I th (left) [VERIFIED:
+      SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'right or n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: struggle_inquire(e22) ∧ Agent(e22, rivqah)
+    he: וַיִּתְרֹצְצוּ … וַתֵּלֶךְ לִדְרֹשׁ
+    he_translit: va-yitrotzatzu … va-telekh li-drosh
+    en: 'Struggle; she inquires of YHWH [VERIFIED: SNAPSHOT]. Question FACT.'
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: 25:22 birthright arc.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_23
+  order: 5
+  ref: Gen.25.23
+  op: V_25_23
+  he: וַ/יֹּ֨אמֶר יְהוָ֜ה לָ֗/הּ שְׁנֵ֤י גיים גוֹיִם֙ בְּ/בִטְנֵ֔/ךְ וּ/שְׁנֵ֣י לְאֻמִּ֔ים מִ/מֵּעַ֖יִ/ךְ
+    יִפָּרֵ֑דוּ וּ/לְאֹם֙ מִ/לְאֹ֣ם יֶֽאֱמָ֔ץ וְ/רַ֖ב יַעֲבֹ֥ד צָעִֽיר
+  he_translit: va-yomer YHWH la-ה shene gyym goyim be-vitne-khe u-shene leumim mi-meayi-khe yiparedu u-leom
+    mi-leom yeematz ve-rav yaavod tzair
+  en: '[EN-AID] And YHWH said to her: Two nations are in your womb, and two peoples shall be separated
+    from your belly; and people shall be stronger than people, and the elder shall serve the younger.'
+  tree_left:
+    he: וַ/יֹּ֨אמֶר יְהוָ֜ה לָ֗/הּ שְׁנֵ֤י גיים גוֹיִם֙ בְּ/בִטְנֵ֔/ךְ וּ/שְׁנֵ֣י לְאֻמִּ֔ים מִ/מֵּעַ֖יִ/ךְ
+      יִפָּרֵ֑דוּ וּ/לְאֹם֙ מִ/לְאֹ֣ם יֶֽאֱמָ֔ץ וְ/רַ֖ב יַעֲבֹ֥ד צָעִֽיר
+    he_translit: va-yomer YHWH la-ה shene gyym goyim be-vitne-khe u-shene leumim mi-meayi-khe yiparedu
+      u-leom mi-leom yeematz ve-rav yaavod tzair
+    en: 'And YHWH said to her: Two nations are in your womb, and two peoples shall be sep (left) [VERIFIED:
+      SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'right or n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: say_oracle(e23) ∧ Agent(e23, YHWH) ∧ Goal(e23, rivqah)
+    he: וַיֹּאמֶר יְהוָה
+    he_translit: va-yomer YHWH
+    en: 'Divine oracle EVENT [VERIFIED: SNAPSHOT].'
+    cites:
+    - TIR-014
+    confidence: tested
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(two_nations_oracle, t0)
+    he: שְׁנֵי גוֹיִם
+    he_translit: shene goyim
+    en: Two nations prophecy content FACT (not SPECS push).
+    cites: []
+    confidence: tested
+  comment: 25:23 birthright arc.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_24
+  order: 6
+  ref: Gen.25.24
+  op: V_25_24
+  he: וַ/יִּמְלְא֥וּ יָמֶ֖י/הָ לָ/לֶ֑דֶת וְ/הִנֵּ֥ה תוֹמִ֖ם בְּ/בִטְנָֽ/הּ
+  he_translit: va-yimlu yame-ha la-ledet ve-hine tomim be-vitna-ה
+  en: '[EN-AID] And when her days to bear were fulfilled, behold twins were in her womb.'
+  tree_left:
+    he: וַ/יִּמְלְא֥וּ יָמֶ֖י/הָ לָ/לֶ֑דֶת וְ/הִנֵּ֥ה תוֹמִ֖ם בְּ/בִטְנָֽ/הּ
+    he_translit: va-yimlu yame-ha la-ledet ve-hine tomim be-vitna-ה
+    en: 'And when her days to bear were fulfilled, behold twins were in her womb. (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'right or n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: event_25_24(e)
+    he: וַ/יִּמְלְא֥וּ
+    he_translit: va-yimlu
+    en: 'EVENT 25:24 [VERIFIED: SNAPSHOT].'
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: 25:24 birthright arc.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_25
+  order: 7
+  ref: Gen.25.25
+  op: V_25_25
+  he: וַ/יֵּצֵ֤א הָ/רִאשׁוֹן֙ אַדְמוֹנִ֔י כֻּלּ֖/וֹ כְּ/אַדֶּ֣רֶת שֵׂעָ֑ר וַ/יִּקְרְא֥וּ שְׁמ֖/וֹ עֵשָֽׂו
+  he_translit: va-yetze ha-rishon admoni kul-o ke-aderet sear va-yiqru shem-o esav
+  en: '[EN-AID] And the first came out red, all of him like a hairy mantle; and they called his name Esau.'
+  tree_left:
+    he: וַ/יֵּצֵ֤א הָ/רִאשׁוֹן֙ אַדְמוֹנִ֔י כֻּלּ֖/וֹ כְּ/אַדֶּ֣רֶת שֵׂעָ֑ר וַ/יִּקְרְא֥וּ שְׁמ֖/וֹ עֵשָֽׂו
+    he_translit: va-yetze ha-rishon admoni kul-o ke-aderet sear va-yiqru shem-o esav
+    en: 'And the first came out red, all of him like a hairy mantle; and they called his  (left) [VERIFIED:
+      SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'right or n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: birth_first(e25)
+    he: וַיֵּצֵא הָרִאשׁוֹן
+    he_translit: va-yetze ha-rishon
+    en: 'Firstborn emerges [VERIFIED: SNAPSHOT].'
+    cites:
+    - TIR-014
+    confidence: tested
+  - op: REGISTRY_INSTALL
+    expr_en: WORLD += {esav}
+    he: עֵשָׂו
+    he_translit: esav
+    en: 'Esau DEBUT name [VERIFIED: SNAPSHOT 6215 tok1]. Report naming.'
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: 25:25 birthright arc.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_26
+  order: 8
+  ref: Gen.25.26
+  op: V_25_26
+  he: וְ/אַֽחֲרֵי כֵ֞ן יָצָ֣א אָחִ֗י/ו וְ/יָד֤/וֹ אֹחֶ֨זֶת֙ בַּ/עֲקֵ֣ב עֵשָׂ֔ו וַ/יִּקְרָ֥א שְׁמ֖/וֹ יַעֲקֹ֑ב
+    וְ/יִצְחָ֛ק בֶּן שִׁשִּׁ֥ים שָׁנָ֖ה בְּ/לֶ֥דֶת אֹתָֽ/ם
+  he_translit: ve-achare khen yatza achi-v ve-yad-o ochezet ba-aqev esav va-yiqra shem-o yaaqov ve-yitzchaq
+    ben shishim shana be-ledet et-m
+  en: '[EN-AID] And afterward his brother came out, and his hand holding Esau''s heel; and his name was
+    called Jacob. And Isaac was sixty years old when she bore them.'
+  tree_left:
+    he: וְ/אַֽחֲרֵי כֵ֞ן יָצָ֣א אָחִ֗י/ו וְ/יָד֤/וֹ אֹחֶ֨זֶת֙ בַּ/עֲקֵ֣ב עֵשָׂ֔ו וַ/יִּקְרָ֥א שְׁמ֖/וֹ
+      יַעֲקֹ֑ב וְ/יִצְחָ֛ק בֶּן שִׁשִּׁ֥ים שָׁנָ֖ה בְּ/לֶ֥דֶת אֹתָֽ/ם
+    he_translit: ve-achare khen yatza achi-v ve-yad-o ochezet ba-aqev esav va-yiqra shem-o yaaqov ve-yitzchaq
+      ben shishim shana be-ledet et-m
+    en: 'And afterward his brother came out, and his hand holding Esau''s heel; and his na (left) [VERIFIED:
+      SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'right or n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: birth_second(e26)
+    he: וְאַחֲרֵי־כֵן יָצָא אָחִיו
+    he_translit: ve-achare ken yatza achi-v
+    en: 'Jacob emerges holding heel [VERIFIED: SNAPSHOT].'
+    cites:
+    - TIR-014
+    confidence: tested
+  - op: REGISTRY_INSTALL
+    expr_en: WORLD += {yaaqov}
+    he: יַעֲקֹב
+    he_translit: yaaqov
+    en: 'Jacob DEBUT name [VERIFIED: SNAPSHOT 3290 tok1].'
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: 25:26 birthright arc.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_27
+  order: 9
+  ref: Gen.25.27
+  op: V_25_27
+  he: וַֽ/יִּגְדְּלוּ֙ הַ/נְּעָרִ֔ים וַ/יְהִ֣י עֵשָׂ֗ו אִ֛ישׁ יֹדֵ֥עַ צַ֖יִד אִ֣ישׁ שָׂדֶ֑ה וְ/יַעֲקֹב֙
+    אִ֣ישׁ תָּ֔ם יֹשֵׁ֖ב אֹהָלִֽים
+  he_translit: va-yigdlu ha-nearim va-yehi esav ish yodea tzayid ish sade ve-yaaqov ish tam yoshev ohalim
+  en: '[EN-AID] And the boys grew; and Esau was a man knowing hunting, a man of the field, and Jacob was
+    a quiet man, dwelling in tents.'
+  tree_left:
+    he: וַֽ/יִּגְדְּלוּ֙ הַ/נְּעָרִ֔ים וַ/יְהִ֣י עֵשָׂ֗ו אִ֛ישׁ יֹדֵ֥עַ צַ֖יִד אִ֣ישׁ שָׂדֶ֑ה וְ/יַעֲקֹב֙
+      אִ֣ישׁ תָּ֔ם יֹשֵׁ֖ב אֹהָלִֽים
+    he_translit: va-yigdlu ha-nearim va-yehi esav ish yodea tzayid ish sade ve-yaaqov ish tam yoshev ohalim
+    en: 'And the boys grew; and Esau was a man knowing hunting, a man of the field, and J (left) [VERIFIED:
+      SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'right or n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: event_25_27(e)
+    he: וַֽ/יִּגְדְּלוּ֙
+    he_translit: va-yigdlu
+    en: 'EVENT 25:27 [VERIFIED: SNAPSHOT].'
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: 25:27 birthright arc.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_28
+  order: 10
+  ref: Gen.25.28
+  op: V_25_28
+  he: וַ/יֶּאֱהַ֥ב יִצְחָ֛ק אֶת עֵשָׂ֖ו כִּי צַ֣יִד בְּ/פִ֑י/ו וְ/רִבְקָ֖ה אֹהֶ֥בֶת אֶֽת יַעֲקֹֽב
+  he_translit: va-yeehav yitzchaq et esav ki tzayid be-fi-v ve-rivqa ohevet et yaaqov
+  en: '[EN-AID] And Isaac loved Esau because game was in his mouth, and Rivqah loved Jacob.'
+  tree_left:
+    he: וַ/יֶּאֱהַ֥ב יִצְחָ֛ק אֶת עֵשָׂ֖ו כִּי צַ֣יִד בְּ/פִ֑י/ו וְ/רִבְקָ֖ה אֹהֶ֥בֶת אֶֽת יַעֲקֹֽב
+    he_translit: va-yeehav yitzchaq et esav ki tzayid be-fi-v ve-rivqa ohevet et yaaqov
+    en: 'And Isaac loved Esau because game was in his mouth, and Rivqah loved Jacob. (left) [VERIFIED:
+      SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'right or n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: event_25_28(e)
+    he: וַ/יֶּאֱהַ֥ב
+    he_translit: va-yeehav
+    en: 'EVENT 25:28 [VERIFIED: SNAPSHOT].'
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: 25:28 birthright arc.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_29
+  order: 11
+  ref: Gen.25.29
+  op: V_25_29
+  he: וַ/יָּ֥זֶד יַעֲקֹ֖ב נָזִ֑יד וַ/יָּבֹ֥א עֵשָׂ֛ו מִן הַ/שָּׂדֶ֖ה וְ/ה֥וּא עָיֵֽף
+  he_translit: va-yazed yaaqov nazid va-yavo esav min ha-sade ve-hu ayef
+  en: '[EN-AID] And Jacob boiled stew; and Esau came in from the field, and he was faint.'
+  tree_left:
+    he: וַ/יָּ֥זֶד יַעֲקֹ֖ב נָזִ֑יד וַ/יָּבֹ֥א עֵשָׂ֛ו מִן הַ/שָּׂדֶ֖ה וְ/ה֥וּא עָיֵֽף
+    he_translit: va-yazed yaaqov nazid va-yavo esav min ha-sade ve-hu ayef
+    en: 'And Jacob boiled stew; and Esau came in from the field, and he was faint. (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'right or n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: event_25_29(e)
+    he: וַ/יָּ֥זֶד
+    he_translit: va-yazed
+    en: 'EVENT 25:29 [VERIFIED: SNAPSHOT].'
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: 25:29 birthright arc.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_30
+  order: 12
+  ref: Gen.25.30
+  op: V_25_30
+  he: וַ/יֹּ֨אמֶר עֵשָׂ֜ו אֶֽל יַעֲקֹ֗ב הַלְעִיטֵ֤/נִי נָא֙ מִן הָ/אָדֹ֤ם הָ/אָדֹם֙ הַ/זֶּ֔ה כִּ֥י עָיֵ֖ף
+    אָנֹ֑כִי עַל כֵּ֥ן קָרָֽא שְׁמ֖/וֹ אֱדֽוֹם
+  he_translit: va-yomer esav el yaaqov halite-ni na min ha-adom ha-adom ha-ze ki ayef anokhi al ken qara
+    shem-o edom
+  en: '[EN-AID] And Esau said to Jacob: Let me gulp, please, from this red red, for I am faint. Therefore
+    his name was called Edom.'
+  tree_left:
+    he: וַ/יֹּ֨אמֶר עֵשָׂ֜ו אֶֽל יַעֲקֹ֗ב הַלְעִיטֵ֤/נִי נָא֙ מִן הָ/אָדֹ֤ם הָ/אָדֹם֙ הַ/זֶּ֔ה כִּ֥י עָיֵ֖ף
+      אָנֹ֑כִי עַל כֵּ֥ן קָרָֽא שְׁמ֖/וֹ אֱדֽוֹם
+    he_translit: va-yomer esav el yaaqov halite-ni na min ha-adom ha-adom ha-ze ki ayef anokhi al ken
+      qara shem-o edom
+    en: 'And Esau said to Jacob: Let me gulp, please, from this red red, for I am faint.  (left) [VERIFIED:
+      SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'right or n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: say(e30) ∧ Agent(e30, esav) ∧ Goal(e30, yaaqov)
+    he: וַיֹּאמֶר עֵשָׂו
+    he_translit: va-yomer esav
+    en: 'Esau speaks [VERIFIED: SNAPSHOT].'
+    cites:
+    - TIR-014
+    confidence: tested
+  - op: DECLARE
+    expr_en: DECLARE(esav, LET(halite_ni(yaaqov, min_ha_adom)))
+    he: הַלְעִיטֵנִי נָא
+    he_translit: halite-ni na
+    en: 'LIVE PUSH hapax halite-ni (''let me gulp'', HVhv2ms) [VERIFIED: SNAPSHOT 3938 tok1].'
+    cites:
+    - TIR-027
+    confidence: tested
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(name_edom_etiology, t0)
+    he: עַל־כֵּן קָרָא־שְׁמוֹ אֱדוֹם
+    he_translit: al ken qara shem-o edom
+    en: Edom name etiology FACT (al-ken pattern).
+    cites: []
+    confidence: tested
+  comment: 25:30 birthright arc.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_31
+  order: 13
+  ref: Gen.25.31
+  op: V_25_31
+  he: וַ/יֹּ֖אמֶר יַעֲקֹ֑ב מִכְרָ֥/ה כַ/יּ֛וֹם אֶת בְּכֹֽרָתְ/ךָ֖ לִֽ/י
+  he_translit: va-yomer yaaqov mikhra-ה kha-yom et bekhorat-kha li-y
+  en: '[EN-AID] And Jacob said: Sell me as of today your birthright.'
+  tree_left:
+    he: וַ/יֹּ֖אמֶר יַעֲקֹ֑ב מִכְרָ֥/ה כַ/יּ֛וֹם אֶת בְּכֹֽרָתְ/ךָ֖ לִֽ/י
+    he_translit: va-yomer yaaqov mikhra-ה kha-yom et bekhorat-kha li-y
+    en: 'And Jacob said: Sell me as of today your birthright. (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'right or n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: DECLARE
+    expr_en: DECLARE(yaaqov, LET(mikhra(esav, bekhorat_kha)))
+    he: מִכְרָה כַיּוֹם אֶת־בְּכֹרָתְךָ
+    he_translit: mikhra ka-yom et bekhorat-kha
+    en: 'LIVE PUSH mikhra (''SELL'', HVqv2ms) [VERIFIED: SNAPSHOT 4376 tok1]. Birthright object.'
+    cites:
+    - TIR-027
+    confidence: tested
+  comment: 25:31 birthright arc.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_32
+  order: 14
+  ref: Gen.25.32
+  op: V_25_32
+  he: וַ/יֹּ֣אמֶר עֵשָׂ֔ו הִנֵּ֛ה אָנֹכִ֥י הוֹלֵ֖ךְ לָ/מ֑וּת וְ/לָ/מָּה זֶּ֥ה לִ֖/י בְּכֹרָֽה
+  he_translit: va-yomer esav hine anokhi holekh la-mut ve-la-ma ze li-y bekhora
+  en: '[EN-AID] And Esau said: Behold I am going to die; and what is this birthright to me?'
+  tree_left:
+    he: וַ/יֹּ֣אמֶר עֵשָׂ֔ו הִנֵּ֛ה אָנֹכִ֥י הוֹלֵ֖ךְ לָ/מ֑וּת וְ/לָ/מָּה זֶּ֥ה לִ֖/י בְּכֹרָֽה
+    he_translit: va-yomer esav hine anokhi holekh la-mut ve-la-ma ze li-y bekhora
+    en: 'And Esau said: Behold I am going to die; and what is this birthright to me? (left) [VERIFIED:
+      SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'right or n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(esav_die_speech_fact, t0)
+    he: הִנֵּה אָנֹכִי הוֹלֵךְ לָמוּת
+    he_translit: hine anokhi holekh la-mut
+    en: Esau's dying-speech FACT; no push.
+    cites: []
+    confidence: tested
+  comment: 25:32 birthright arc.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_33
+  order: 15
+  ref: Gen.25.33
+  op: V_25_33
+  he: וַ/יֹּ֣אמֶר יַעֲקֹ֗ב הִשָּׁ֤בְעָ/ה לִּ/י֙ כַּ/יּ֔וֹם וַ/יִּשָּׁבַ֖ע ל֑/וֹ וַ/יִּמְכֹּ֥ר אֶת בְּכֹרָת֖/וֹ
+    לְ/יַעֲקֹֽב
+  he_translit: va-yomer yaaqov hishava-ה li-y ka-yom va-yishava l-o va-yimkor et bekhorat-o le-yaaqov
+  en: '[EN-AID] And Jacob said: Swear to me as of today. And he swore to him, and he sold his birthright
+    to Jacob.'
+  tree_left:
+    he: וַ/יֹּ֣אמֶר יַעֲקֹ֗ב הִשָּׁ֤בְעָ/ה לִּ/י֙ כַּ/יּ֔וֹם וַ/יִּשָּׁבַ֖ע ל֑/וֹ וַ/יִּמְכֹּ֥ר אֶת בְּכֹרָת֖/וֹ
+      לְ/יַעֲקֹֽב
+    he_translit: va-yomer yaaqov hishava-ה li-y ka-yom va-yishava l-o va-yimkor et bekhorat-o le-yaaqov
+    en: 'And Jacob said: Swear to me as of today. And he swore to him, and he sold his bi (left) [VERIFIED:
+      SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'right or n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: DECLARE
+    expr_en: DECLARE(yaaqov, LET(hishava(esav)))
+    he: הִשָּׁבְעָה לִּי
+    he_translit: hishava-ה li-y
+    en: 'LIVE PUSH hishava (''SWEAR'', HVNv2ms) [VERIFIED: SNAPSHOT 7650].'
+    cites:
+    - TIR-027
+    confidence: tested
+  - op: RESULT
+    expr_en: HOLDS(hishava(esav), t1)
+    he: וַיִּשָּׁבַע לוֹ
+    he_translit: va-yishava l-o
+    en: 'POP: va-yishava same root/stem by demandee [VERIFIED: SNAPSHOT]. Cycle contingent #21-or-#22.'
+    cites:
+    - TIR-027
+    confidence: tested
+  - op: RESULT
+    expr_en: HOLDS(mikhra(esav, bekhorat_kha), t2)
+    he: וַיִּמְכֹּר אֶת־בְּכֹרָתוֹ
+    he_translit: va-yimkor et bekhorat-o
+    en: 'POP of sell: va-yimkor same root makar [VERIFIED: SNAPSHOT]. Object birthright matches.'
+    cites:
+    - TIR-027
+    confidence: tested
+  comment: 25:33 birthright arc.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_34
+  order: 16
+  ref: Gen.25.34
+  op: V_25_34
+  he: וְ/יַעֲקֹ֞ב נָתַ֣ן לְ/עֵשָׂ֗ו לֶ֚חֶם וּ/נְזִ֣יד עֲדָשִׁ֔ים וַ/יֹּ֣אכַל וַ/יֵּ֔שְׁתְּ וַ/יָּ֖קָם
+    וַ/יֵּלַ֑ךְ וַ/יִּ֥בֶז עֵשָׂ֖ו אֶת הַ/בְּכֹרָֽה
+  he_translit: ve-yaaqov natan le-esav lechem u-nezid adashim va-yokhal va-yesht va-yaqam va-yelakh va-yivez
+    esav et ha-bekhora
+  en: '[EN-AID] And Jacob gave Esau bread and lentil stew, and he ate and drank and rose and went; and
+    Esau despised the birthright.'
+  tree_left:
+    he: וְ/יַעֲקֹ֞ב נָתַ֣ן לְ/עֵשָׂ֗ו לֶ֚חֶם וּ/נְזִ֣יד עֲדָשִׁ֔ים וַ/יֹּ֣אכַל וַ/יֵּ֔שְׁתְּ וַ/יָּ֖קָם
+      וַ/יֵּלַ֑ךְ וַ/יִּ֥בֶז עֵשָׂ֖ו אֶת הַ/בְּכֹרָֽה
+    he_translit: ve-yaaqov natan le-esav lechem u-nezid adashim va-yokhal va-yesht va-yaqam va-yelakh
+      va-yivez esav et ha-bekhora
+    en: 'And Jacob gave Esau bread and lentil stew, and he ate and drank and rose and wen (left) [VERIFIED:
+      SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'right or n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: feed_eat_drink_go(e34) ∧ Agent(e34, yaaqov_esav)
+    he: נָתַן … וַיֹּאכַל וַיֵּשְׁתְּ
+    he_translit: natan … va-yokhal va-yesht
+    en: 'Bread and stew given; Esau eats/drinks/goes [VERIFIED: SNAPSHOT]. Other-verb vs halite_ni (gulp)
+      — demand may stay OPEN (flag).'
+    cites:
+    - TIR-014
+    confidence: tested
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(esav_despised_birthright, t0)
+    he: וַיִּבֶז עֵשָׂו אֶת־הַבְּכֹרָה
+    he_translit: va-yivez esav et ha-bekhora
+    en: 'Despised birthright FACT [VERIFIED: SNAPSHOT].'
+    cites: []
+    confidence: tested
+  comment: 25:34 birthright arc.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+scenarios:
+- id: S1
+  title_en: after STEP_Gn_25_26 — twins installed; SPECS empty
+  given_en: After oracle and births.
+  expect_en: 'WORLD += yaaqov;
+
+    SPECS empty;
+
+    no test, no name.'
+  value_he: עֵשָׂו … יַעֲקֹב
+  value_he_translit: esav … yaaqov
+- id: S2
+  title_en: after STEP_Gn_25_31 — gulp and sell pushes open
+  given_en: After stew request.
+  expect_en: 'LET(halite_ni(yaaqov, min_ha_adom)) pushed and OPEN;
+
+    LET(mikhra(esav, bekhorat_kha)) pushed and OPEN;
+
+    no test, no name.'
+  value_he: מִכְרָה כַיּוֹם
+  value_he_translit: mikhra ka-yom
+- id: S3
+  title_en: after STEP_Gn_25_33 — swear and sell popped
+  given_en: Swear demanded and performed; birthright sold.
+  expect_en: 'LET(halite_ni(yaaqov, min_ha_adom)) pushed and OPEN;
+
+    no test, no name.'
+  value_he: וַיִּשָּׁבַע … וַיִּמְכֹּר
+  value_he_translit: va-yishava … va-yimkor
+- id: S4
+  title_en: after STEP_Gn_25_34 — unit end; gulp still open other-verb
+  given_en: Ate and drank; despised birthright.
+  expect_en: 'LET(halite_ni(yaaqov, min_ha_adom)) pushed and OPEN;
+
+    no test, no name.'
+  value_he: וַיִּבֶז עֵשָׂו אֶת־הַבְּכֹרָה
+  value_he_translit: va-yivez esav et ha-bekhora

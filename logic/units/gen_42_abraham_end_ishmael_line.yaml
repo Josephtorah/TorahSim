@@ -1,0 +1,653 @@
+meta:
+  id: gen_42_abraham_end_ishmael_line
+  title_en: Abraham's end and Ishmael's line (25:1-18)
+  title_he: וַיִּגְוַע וַיָּמָת אַבְרָהָם
+  title_he_translit: va-yigva va-yamat avraham
+  title_he_en: '''And Abraham expired and died'''
+  book_he: בְּרֵאשִׁית
+  book_he_translit: Be-reshit
+  book_en: Genesis
+  refs: 25:1-18
+  data_paths_he:
+  - Data/Gen.xml
+  status: frozen
+  draft_note_en: FROZEN 2026-08-05 after commit gen_40-41. Zero volitives; SPECS empty throughout; tova
+    no-test; toledot Ishmael SECTION.
+boot_steps:
+- id: STEP_Gn_25_1
+  order: 1
+  ref: Gen.25.1
+  op: V_25_1
+  he: וַ/יֹּ֧סֶף אַבְרָהָ֛ם וַ/יִּקַּ֥ח אִשָּׁ֖ה וּ/שְׁמָ֥/הּ קְטוּרָֽה
+  he_translit: va-yosef avraham va-yiqach isha u-shema-ה qetura
+  en: '[EN-AID] And Abraham took another wife, and her name was Keturah.'
+  tree_left:
+    he: וַ/יֹּ֧סֶף אַבְרָהָ֛ם וַ/יִּקַּ֥ח אִשָּׁ֖ה וּ/שְׁמָ֥/הּ קְטוּרָֽה
+    he_translit: va-yosef avraham va-yiqach isha u-shema-ה qetura
+    en: 'And Abraham took another wife, and her name was Keturah. (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: take_wife(e1) ∧ Agent(e1, avraham) ∧ Theme(e1, qetura)
+    he: וַיִּקַּח
+    he_translit: va-yiqach
+    en: 'Abraham takes Keturah [VERIFIED: SNAPSHOT].'
+    cites:
+    - TIR-014
+    confidence: tested
+  - op: REGISTRY_INSTALL
+    expr_en: WORLD += {qetura}
+    he: קְטוּרָה
+    he_translit: qetura
+    en: 'Keturah DEBUT 6989 tok1 [VERIFIED: SNAPSHOT].'
+    cites:
+    - TIR-014
+    confidence: tested
+  - op: NOTE_PRESUPPOSED
+    expr_en: avraham are READ without prior install
+    he: אַבְרָהָם
+    he_translit: avraham
+    en: Abraham READ.
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: 25:1. Zero-volitive unit half.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_2
+  order: 2
+  ref: Gen.25.2
+  op: V_25_2
+  he: וַ/תֵּ֣לֶד ל֗/וֹ אֶת זִמְרָן֙ וְ/אֶת יָקְשָׁ֔ן וְ/אֶת מְדָ֖ן וְ/אֶת מִדְיָ֑ן וְ/אֶת יִשְׁבָּ֖ק וְ/אֶת
+    שֽׁוּחַ
+  he_translit: va-teled l-o et zimran ve-et yaqshan ve-et medan ve-et midyan ve-et yishbaq ve-et shucha
+  en: '[EN-AID] And she bore him Zimran and Jokshan and Medan and Midian and Ishbak and Shuah.'
+  tree_left:
+    he: וַ/תֵּ֣לֶד ל֗/וֹ אֶת זִמְרָן֙ וְ/אֶת יָקְשָׁ֔ן וְ/אֶת מְדָ֖ן וְ/אֶת מִדְיָ֑ן וְ/אֶת יִשְׁבָּ֖ק
+      וְ/אֶת שֽׁוּחַ
+    he_translit: va-teled l-o et zimran ve-et yaqshan ve-et medan ve-et midyan ve-et yishbaq ve-et shucha
+    en: 'And she bore him Zimran and Jokshan and Medan and Midian and Ishbak and Shuah. (left) [VERIFIED:
+      SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(name_list_25_2, t0)
+    he: וַ/תֵּ֣לֶד ל֗/וֹ אֶת זִמְרָן֙ וְ/אֶת יָק
+    he_translit: va-teled l-o et zimran ve-et yaqshan ve-
+    en: 'Name-list ledger 25:2; debuts [VERIFIED: SNAPSHOT].'
+    cites: []
+    confidence: tested
+  comment: 25:2. Zero-volitive unit half.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_3
+  order: 3
+  ref: Gen.25.3
+  op: V_25_3
+  he: וְ/יָקְשָׁ֣ן יָלַ֔ד אֶת שְׁבָ֖א וְ/אֶת דְּדָ֑ן וּ/בְנֵ֣י דְדָ֔ן הָי֛וּ אַשּׁוּרִ֥ם וּ/לְטוּשִׁ֖ים
+    וּ/לְאֻמִּֽים
+  he_translit: ve-yaqshan yalad et sheva ve-et dedan u-vene dedan hayu ashurim u-letushim u-leumim
+  en: '[EN-AID] And Jokshan begot Sheba and Dedan. And the sons of Dedan were Asshurim and Letushim and
+    Leummim.'
+  tree_left:
+    he: וְ/יָקְשָׁ֣ן יָלַ֔ד אֶת שְׁבָ֖א וְ/אֶת דְּדָ֑ן וּ/בְנֵ֣י דְדָ֔ן הָי֛וּ אַשּׁוּרִ֥ם וּ/לְטוּשִׁ֖ים
+      וּ/לְאֻמִּֽים
+    he_translit: ve-yaqshan yalad et sheva ve-et dedan u-vene dedan hayu ashurim u-letushim u-leumim
+    en: 'And Jokshan begot Sheba and Dedan. And the sons of Dedan were Asshurim and Letushim and Le (left)
+      [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(name_list_25_3, t0)
+    he: וְ/יָקְשָׁ֣ן יָלַ֔ד אֶת שְׁבָ֖א וְ/אֶת ד
+    he_translit: ve-yaqshan yalad et sheva ve-et dedan u-
+    en: 'Name-list ledger 25:3; debuts [VERIFIED: SNAPSHOT].'
+    cites: []
+    confidence: tested
+  comment: 25:3. Zero-volitive unit half.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_4
+  order: 4
+  ref: Gen.25.4
+  op: V_25_4
+  he: וּ/בְנֵ֣י מִדְיָ֗ן עֵיפָ֤ה וָ/עֵ֨פֶר֙ וַ/חֲנֹ֔ךְ וַ/אֲבִידָ֖ע וְ/אֶלְדָּעָ֑ה כָּל אֵ֖לֶּה בְּנֵ֥י
+    קְטוּרָֽה
+  he_translit: u-vene midyan efa va-efer va-chanokh va-avida ve-eldaa kal ele bene qetura
+  en: '[EN-AID] And the sons of Midian: Ephah and Epher and Hanoch and Abida and Eldaah. All these were
+    the sons of Keturah.'
+  tree_left:
+    he: וּ/בְנֵ֣י מִדְיָ֗ן עֵיפָ֤ה וָ/עֵ֨פֶר֙ וַ/חֲנֹ֔ךְ וַ/אֲבִידָ֖ע וְ/אֶלְדָּעָ֑ה כָּל אֵ֖לֶּה בְּנֵ֥י
+      קְטוּרָֽה
+    he_translit: u-vene midyan efa va-efer va-chanokh va-avida ve-eldaa kal ele bene qetura
+    en: 'And the sons of Midian: Ephah and Epher and Hanoch and Abida and Eldaah. All these were th (left)
+      [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(name_list_25_4, t0)
+    he: וּ/בְנֵ֣י מִדְיָ֗ן עֵיפָ֤ה וָ/עֵ֨פֶר֙ וַ
+    he_translit: u-vene midyan efa va-efer va-chanokh va-
+    en: 'Name-list ledger 25:4; debuts [VERIFIED: SNAPSHOT].'
+    cites: []
+    confidence: tested
+  comment: 25:4. Zero-volitive unit half.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_5
+  order: 5
+  ref: Gen.25.5
+  op: V_25_5
+  he: וַ/יִּתֵּ֧ן אַבְרָהָ֛ם אֶת כָּל אֲשֶׁר ל֖/וֹ לְ/יִצְחָֽק
+  he_translit: va-yiten avraham et kal asher l-o le-yitzchaq
+  en: '[EN-AID] And Abraham gave all that he had to Isaac.'
+  tree_left:
+    he: וַ/יִּתֵּ֧ן אַבְרָהָ֛ם אֶת כָּל אֲשֶׁר ל֖/וֹ לְ/יִצְחָֽק
+    he_translit: va-yiten avraham et kal asher l-o le-yitzchaq
+    en: 'And Abraham gave all that he had to Isaac. (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: give_all(e5) ∧ Agent(e5, avraham) ∧ Goal(e5, yitzchaq)
+    he: וַיִּתֵּן
+    he_translit: va-yiten
+    en: 'All to Isaac [VERIFIED: SNAPSHOT].'
+    cites:
+    - TIR-014
+    confidence: tested
+  - op: NOTE_PRESUPPOSED
+    expr_en: yitzchaq are READ without prior install
+    he: יִצְחָק
+    he_translit: yitzchaq
+    en: Isaac READ.
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: 25:5. Zero-volitive unit half.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_6
+  order: 6
+  ref: Gen.25.6
+  op: V_25_6
+  he: וְ/לִ/בְנֵ֤י הַ/פִּֽילַגְשִׁים֙ אֲשֶׁ֣ר לְ/אַבְרָהָ֔ם נָתַ֥ן אַבְרָהָ֖ם מַתָּנֹ֑ת וַֽ/יְשַׁלְּחֵ֞/ם
+    מֵ/עַ֨ל יִצְחָ֤ק בְּנ/וֹ֙ בְּ/עוֹדֶ֣/נּוּ חַ֔י קֵ֖דְמָ/ה אֶל אֶ֥רֶץ קֶֽדֶם
+  he_translit: ve-li-vene ha-pilagshim asher le-avraham natan avraham matanot va-yeshalche-m me-al yitzchaq
+    ben-o be-ode-nu chay qedma-ה el eretz qedem
+  en: '[EN-AID] And to the sons of the concubines that Abraham had, Abraham gave gifts, and he sent them
+    away from Isaac his son, while he was still living, eastward to the land of the east.'
+  tree_left:
+    he: וְ/לִ/בְנֵ֤י הַ/פִּֽילַגְשִׁים֙ אֲשֶׁ֣ר לְ/אַבְרָהָ֔ם נָתַ֥ן אַבְרָהָ֖ם מַתָּנֹ֑ת וַֽ/יְשַׁלְּחֵ֞/ם
+      מֵ/עַ֨ל יִצְחָ֤ק בְּנ/וֹ֙ בְּ/עוֹדֶ֣/נּוּ חַ֔י קֵ֖דְמָ/ה אֶל אֶ֥רֶץ קֶֽדֶם
+    he_translit: ve-li-vene ha-pilagshim asher le-avraham natan avraham matanot va-yeshalche-m me-al yitzchaq
+      ben-o be-ode-nu chay qedma-ה el eretz qedem
+    en: 'And to the sons of the concubines that Abraham had, Abraham gave gifts, and he sent them a (left)
+      [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: gifts_send_east(e6) ∧ Agent(e6, avraham)
+    he: נָתַן … וַיְשַׁלְּחֵם
+    he_translit: natan … va-yeshalchem
+    en: 'Gifts; sent east from Isaac [VERIFIED: SNAPSHOT].'
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: 25:6. Zero-volitive unit half.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_7
+  order: 7
+  ref: Gen.25.7
+  op: V_25_7
+  he: וְ/אֵ֗לֶּה יְמֵ֛י שְׁנֵֽי חַיֵּ֥י אַבְרָהָ֖ם אֲשֶׁר חָ֑י מְאַ֥ת שָׁנָ֛ה וְ/שִׁבְעִ֥ים שָׁנָ֖ה וְ/חָמֵ֥שׁ
+    שָׁנִֽים
+  he_translit: ve-ele yeme shene chaye avraham asher chay meat shana ve-shivim shana ve-chamesh shanim
+  en: '[EN-AID] And these are the days of the years of Abraham''s life that he lived: a hundred seventy-five
+    years.'
+  tree_left:
+    he: וְ/אֵ֗לֶּה יְמֵ֛י שְׁנֵֽי חַיֵּ֥י אַבְרָהָ֖ם אֲשֶׁר חָ֑י מְאַ֥ת שָׁנָ֛ה וְ/שִׁבְעִ֥ים שָׁנָ֖ה
+      וְ/חָמֵ֥שׁ שָׁנִֽים
+    he_translit: ve-ele yeme shene chaye avraham asher chay meat shana ve-shivim shana ve-chamesh shanim
+    en: 'And these are the days of the years of Abraham''s life that he lived: a hundred seventy-fiv (left)
+      [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(avraham_age_175, t0)
+    he: מְאַת שָׁנָה וְשִׁבְעִים שָׁנָה וְחָמֵשׁ שָׁנִים
+    he_translit: meat shana ve-shivim shana ve-chamesh shanim
+    en: 'Age 175 FACT [VERIFIED: SNAPSHOT].'
+    cites: []
+    confidence: tested
+  comment: 25:7. Zero-volitive unit half.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_8
+  order: 8
+  ref: Gen.25.8
+  op: V_25_8
+  he: וַ/יִּגְוַ֨ע וַ/יָּ֧מָת אַבְרָהָ֛ם בְּ/שֵׂיבָ֥ה טוֹבָ֖ה זָקֵ֣ן וְ/שָׂבֵ֑עַ וַ/יֵּאָ֖סֶף אֶל עַמָּֽי/ו
+  he_translit: va-yigva va-yamat avraham be-seva tova zaqen ve-savea va-yeasef el amay-v
+  en: '[EN-AID] And Abraham expired and died in a good old age, old and full, and he was gathered to his
+    people.'
+  tree_left:
+    he: וַ/יִּגְוַ֨ע וַ/יָּ֧מָת אַבְרָהָ֛ם בְּ/שֵׂיבָ֥ה טוֹבָ֖ה זָקֵ֣ן וְ/שָׂבֵ֑עַ וַ/יֵּאָ֖סֶף אֶל עַמָּֽי/ו
+    he_translit: va-yigva va-yamat avraham be-seva tova zaqen ve-savea va-yeasef el amay-v
+    en: 'And Abraham expired and died in a good old age, old and full, and he was gathered to his p (left)
+      [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: expire_die_gather(e8) ∧ Theme(e8, avraham)
+    he: וַיִּגְוַע וַיָּמָת … וַיֵּאָסֶף
+    he_translit: va-yigva va-yamat … va-yeasef
+    en: 'Death triad [VERIFIED: SNAPSHOT].'
+    cites:
+    - TIR-014
+    confidence: tested
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(seva_tova_no_test, t0)
+    he: בְּשֵׂיבָה טוֹבָה
+    he_translit: be-seva tova
+    en: 'tova HAafsa 2896 [VERIFIED: SNAPSHOT] — NO TEST (age-attribute idiom).'
+    cites: []
+    confidence: tested
+  comment: 25:8. Zero-volitive unit half.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_9
+  order: 9
+  ref: Gen.25.9
+  op: V_25_9
+  he: וַ/יִּקְבְּר֨וּ אֹת֜/וֹ יִצְחָ֤ק וְ/יִשְׁמָעֵאל֙ בָּנָ֔י/ו אֶל מְעָרַ֖ת הַ/מַּכְפֵּלָ֑ה אֶל שְׂדֵ֞ה
+    עֶפְרֹ֤ן בֶּן צֹ֨חַר֙ הַֽ/חִתִּ֔י אֲשֶׁ֖ר עַל פְּנֵ֥י מַמְרֵֽא
+  he_translit: va-yiqbru et-o yitzchaq ve-yishmael banay-v el mearat ha-makhpela el sede efron ben tzochar
+    ha-chiti asher al pene mamre
+  en: '[EN-AID] And Isaac and Ishmael his sons buried him in the cave of Machpelah, in the field of Ephron
+    son of Zohar the Hittite, which is before Mamre,'
+  tree_left:
+    he: וַ/יִּקְבְּר֨וּ אֹת֜/וֹ יִצְחָ֤ק וְ/יִשְׁמָעֵאל֙ בָּנָ֔י/ו אֶל מְעָרַ֖ת הַ/מַּכְפֵּלָ֑ה אֶל שְׂדֵ֞ה
+      עֶפְרֹ֤ן בֶּן צֹ֨חַר֙ הַֽ/חִתִּ֔י אֲשֶׁ֖ר עַל פְּנֵ֥י מַמְרֵֽא
+    he_translit: va-yiqbru et-o yitzchaq ve-yishmael banay-v el mearat ha-makhpela el sede efron ben tzochar
+      ha-chiti asher al pene mamre
+    en: 'And Isaac and Ishmael his sons buried him in the cave of Machpelah, in the field of Ephron (left)
+      [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: bury(e9) ∧ Agent(e9, yitzchaq_yishmael) ∧ Theme(e9, avraham)
+    he: וַיִּקְבְּרוּ
+    he_translit: va-yiqbru
+    en: 'Sons bury at Machpelah [VERIFIED: SNAPSHOT].'
+    cites:
+    - TIR-014
+    confidence: tested
+  - op: NOTE_PRESUPPOSED
+    expr_en: makhpela, mamre, yishmael are READ without prior install
+    he: הַמַּכְפֵּלָה
+    he_translit: ha-makhpela
+    en: Burial geography + Ishmael READ.
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: 25:9. Zero-volitive unit half.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_10
+  order: 10
+  ref: Gen.25.10
+  op: V_25_10
+  he: הַ/שָּׂדֶ֛ה אֲשֶׁר קָנָ֥ה אַבְרָהָ֖ם מֵ/אֵ֣ת בְּנֵי חֵ֑ת שָׁ֛מָּ/ה קֻבַּ֥ר אַבְרָהָ֖ם וְ/שָׂרָ֥ה
+    אִשְׁתּֽ/וֹ
+  he_translit: ha-sade asher qana avraham me-et bene chet shama-ה qubar avraham ve-sara isht-o
+  en: '[EN-AID] the field that Abraham bought from the sons of Heth; there Abraham was buried, and Sarah
+    his wife.'
+  tree_left:
+    he: הַ/שָּׂדֶ֛ה אֲשֶׁר קָנָ֥ה אַבְרָהָ֖ם מֵ/אֵ֣ת בְּנֵי חֵ֑ת שָׁ֛מָּ/ה קֻבַּ֥ר אַבְרָהָ֖ם וְ/שָׂרָ֥ה
+      אִשְׁתּֽ/וֹ
+    he_translit: ha-sade asher qana avraham me-et bene chet shama-ה qubar avraham ve-sara isht-o
+    en: 'the field that Abraham bought from the sons of Heth; there Abraham was buried, and Sarah h (left)
+      [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(field_bought_burial_there, t0)
+    he: הַשָּׂדֶה … שָׁמָּה קֻבַּר
+    he_translit: ha-sadeh … shama qubar
+    en: 'Purchase recap + passive buried FACT [VERIFIED: SNAPSHOT].'
+    cites: []
+    confidence: tested
+  comment: 25:10. Zero-volitive unit half.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_11
+  order: 11
+  ref: Gen.25.11
+  op: V_25_11
+  he: וַ/יְהִ֗י אַחֲרֵי֙ מ֣וֹת אַבְרָהָ֔ם וַ/יְבָ֥רֶךְ אֱלֹהִ֖ים אֶת יִצְחָ֣ק בְּנ֑/וֹ וַ/יֵּ֣שֶׁב יִצְחָ֔ק
+    עִם בְּאֵ֥ר לַחַ֖י רֹאִֽי
+  he_translit: va-yehi achare mot avraham va-yevarekh Elohim et yitzchaq ben-o va-yeshev yitzchaq im beer
+    lachay roi
+  en: '[EN-AID] And it was after Abraham''s death that God blessed Isaac his son; and Isaac dwelt by Beer-lahai-roi.'
+  tree_left:
+    he: וַ/יְהִ֗י אַחֲרֵי֙ מ֣וֹת אַבְרָהָ֔ם וַ/יְבָ֥רֶךְ אֱלֹהִ֖ים אֶת יִצְחָ֣ק בְּנ֑/וֹ וַ/יֵּ֣שֶׁב יִצְחָ֔ק
+      עִם בְּאֵ֥ר לַחַ֖י רֹאִֽי
+    he_translit: va-yehi achare mot avraham va-yevarekh Elohim et yitzchaq ben-o va-yeshev yitzchaq im
+      beer lachay roi
+    en: 'And it was after Abraham''s death that God blessed Isaac his son; and Isaac dwelt by Beer-l (left)
+      [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: bless(e11) ∧ Agent(e11, Elohim) ∧ Goal(e11, yitzchaq)
+    he: וַיְבָרֶךְ אֱלֹהִים
+    he_translit: va-yevarekh Elohim
+    en: 'God blesses Isaac [VERIFIED: SNAPSHOT]. Not TEST.'
+    cites:
+    - TIR-014
+    confidence: tested
+  - op: NOTE_PRESUPPOSED
+    expr_en: beer_lachai_roi are READ without prior install
+    he: בְּאֵר לַחַי רֹאִי
+    he_translit: beer lachai roi
+    en: Seeing-well READ.
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: 25:11. Zero-volitive unit half.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_12
+  order: 12
+  ref: Gen.25.12
+  op: V_25_12
+  he: וְ/אֵ֛לֶּה תֹּלְדֹ֥ת יִשְׁמָעֵ֖אל בֶּן אַבְרָהָ֑ם אֲשֶׁ֨ר יָלְדָ֜ה הָגָ֧ר הַ/מִּצְרִ֛ית שִׁפְחַ֥ת
+    שָׂרָ֖ה לְ/אַבְרָהָֽם
+  he_translit: ve-ele toldot yishmael ben avraham asher yalda hagar ha-mitzrit shifchat sara le-avraham
+  en: '[EN-AID] And these are the generations of Ishmael, Abraham''s son, whom Hagar the Egyptian, Sarah''s
+    maidservant, bore to Abraham.'
+  tree_left:
+    he: וְ/אֵ֛לֶּה תֹּלְדֹ֥ת יִשְׁמָעֵ֖אל בֶּן אַבְרָהָ֑ם אֲשֶׁ֨ר יָלְדָ֜ה הָגָ֧ר הַ/מִּצְרִ֛ית שִׁפְחַ֥ת
+      שָׂרָ֖ה לְ/אַבְרָהָֽם
+    he_translit: ve-ele toldot yishmael ben avraham asher yalda hagar ha-mitzrit shifchat sara le-avraham
+    en: 'And these are the generations of Ishmael, Abraham''s son, whom Hagar the Egyptian, Sarah''s  (left)
+      [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: SECTION
+    expr_en: SECTION(toldot_yishmael, yishmael)
+    he: וְאֵלֶּה תֹּלְדֹת יִשְׁמָעֵאל
+    he_translit: ve-ele toldot yishmael
+    en: 'Toledot header labels only [VERIFIED: SNAPSHOT].'
+    cites:
+    - TIR-014
+    confidence: tested
+  - op: NOTE_PRESUPPOSED
+    expr_en: hagar are READ without prior install
+    he: הָגָר
+    he_translit: hagar
+    en: Hagar READ.
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: 25:12. Zero-volitive unit half.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_13
+  order: 13
+  ref: Gen.25.13
+  op: V_25_13
+  he: וְ/אֵ֗לֶּה שְׁמוֹת֙ בְּנֵ֣י יִשְׁמָעֵ֔אל בִּ/שְׁמֹתָ֖/ם לְ/תוֹלְדֹתָ֑/ם בְּכֹ֤ר יִשְׁמָעֵאל֙ נְבָיֹ֔ת
+    וְ/קֵדָ֥ר וְ/אַדְבְּאֵ֖ל וּ/מִבְשָֽׂם
+  he_translit: ve-ele shemot bene yishmael bi-shemota-m le-toldota-m bekhor yishmael nevayot ve-qedar
+    ve-adbel u-mivsam
+  en: '[EN-AID] And these are the names of the sons of Ishmael, by their names, according to their generations:
+    Nebaioth firstborn of Ishmael, and Kedar and Adbeel and Mibsam,'
+  tree_left:
+    he: וְ/אֵ֗לֶּה שְׁמוֹת֙ בְּנֵ֣י יִשְׁמָעֵ֔אל בִּ/שְׁמֹתָ֖/ם לְ/תוֹלְדֹתָ֑/ם בְּכֹ֤ר יִשְׁמָעֵאל֙ נְבָיֹ֔ת
+      וְ/קֵדָ֥ר וְ/אַדְבְּאֵ֖ל וּ/מִבְשָֽׂם
+    he_translit: ve-ele shemot bene yishmael bi-shemota-m le-toldota-m bekhor yishmael nevayot ve-qedar
+      ve-adbel u-mivsam
+    en: 'And these are the names of the sons of Ishmael, by their names, according to their generat (left)
+      [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(name_list_25_13, t0)
+    he: וְ/אֵ֗לֶּה שְׁמוֹת֙ בְּנֵ֣י יִשְׁמָעֵ֔אל
+    he_translit: ve-ele shemot bene yishmael bi-shemota-m
+    en: 'Name-list ledger 25:13; debuts [VERIFIED: SNAPSHOT].'
+    cites: []
+    confidence: tested
+  comment: 25:13. Zero-volitive unit half.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_14
+  order: 14
+  ref: Gen.25.14
+  op: V_25_14
+  he: וּ/מִשְׁמָ֥ע וְ/דוּמָ֖ה וּ/מַשָּֽׂא
+  he_translit: u-mishma ve-duma u-masa
+  en: '[EN-AID] and Mishma and Dumah and Massa,'
+  tree_left:
+    he: וּ/מִשְׁמָ֥ע וְ/דוּמָ֖ה וּ/מַשָּֽׂא
+    he_translit: u-mishma ve-duma u-masa
+    en: 'and Mishma and Dumah and Massa, (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(name_list_25_14, t0)
+    he: וּ/מִשְׁמָ֥ע וְ/דוּמָ֖ה וּ/מַשָּֽׂא
+    he_translit: u-mishma ve-duma u-masa
+    en: 'Name-list ledger 25:14; debuts [VERIFIED: SNAPSHOT].'
+    cites: []
+    confidence: tested
+  comment: 25:14. Zero-volitive unit half.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_15
+  order: 15
+  ref: Gen.25.15
+  op: V_25_15
+  he: חֲדַ֣ד וְ/תֵימָ֔א יְט֥וּר נָפִ֖ישׁ וָ/קֵֽדְמָה
+  he_translit: chadad ve-tema yetur nafish va-qedma
+  en: '[EN-AID] Hadad and Tema, Jetur, Naphish, and Kedemah.'
+  tree_left:
+    he: חֲדַ֣ד וְ/תֵימָ֔א יְט֥וּר נָפִ֖ישׁ וָ/קֵֽדְמָה
+    he_translit: chadad ve-tema yetur nafish va-qedma
+    en: 'Hadad and Tema, Jetur, Naphish, and Kedemah. (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(name_list_25_15, t0)
+    he: חֲדַ֣ד וְ/תֵימָ֔א יְט֥וּר נָפִ֖ישׁ וָ/קֵ
+    he_translit: chadad ve-tema yetur nafish va-qedma
+    en: 'Name-list ledger 25:15; debuts [VERIFIED: SNAPSHOT].'
+    cites: []
+    confidence: tested
+  comment: 25:15. Zero-volitive unit half.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_16
+  order: 16
+  ref: Gen.25.16
+  op: V_25_16
+  he: אֵ֣לֶּה הֵ֞ם בְּנֵ֤י יִשְׁמָעֵאל֙ וְ/אֵ֣לֶּה שְׁמֹתָ֔/ם בְּ/חַצְרֵי/הֶ֖ם וּ/בְ/טִֽירֹתָ֑/ם שְׁנֵים
+    עָשָׂ֥ר נְשִׂיאִ֖ם לְ/אֻמֹּתָֽ/ם
+  he_translit: ele hem bene yishmael ve-ele shemota-m be-chatzre-hem u-ve-tirota-m shenem asar nesiim
+    le-umota-m
+  en: '[EN-AID] These are the sons of Ishmael and these are their names, by their villages and by their
+    encampments, twelve princes according to their tribes.'
+  tree_left:
+    he: אֵ֣לֶּה הֵ֞ם בְּנֵ֤י יִשְׁמָעֵאל֙ וְ/אֵ֣לֶּה שְׁמֹתָ֔/ם בְּ/חַצְרֵי/הֶ֖ם וּ/בְ/טִֽירֹתָ֑/ם שְׁנֵים
+      עָשָׂ֥ר נְשִׂיאִ֖ם לְ/אֻמֹּתָֽ/ם
+    he_translit: ele hem bene yishmael ve-ele shemota-m be-chatzre-hem u-ve-tirota-m shenem asar nesiim
+      le-umota-m
+    en: 'These are the sons of Ishmael and these are their names, by their villages and by their en (left)
+      [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(name_list_25_16, t0)
+    he: אֵ֣לֶּה הֵ֞ם בְּנֵ֤י יִשְׁמָעֵאל֙ וְ/אֵ֣
+    he_translit: ele hem bene yishmael ve-ele shemota-m b
+    en: 'Name-list ledger 25:16; debuts [VERIFIED: SNAPSHOT].'
+    cites: []
+    confidence: tested
+  comment: 25:16. Zero-volitive unit half.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_17
+  order: 17
+  ref: Gen.25.17
+  op: V_25_17
+  he: וְ/אֵ֗לֶּה שְׁנֵי֙ חַיֵּ֣י יִשְׁמָעֵ֔אל מְאַ֥ת שָׁנָ֛ה וּ/שְׁלֹשִׁ֥ים שָׁנָ֖ה וְ/שֶׁ֣בַע שָׁנִ֑ים
+    וַ/יִּגְוַ֣ע וַ/יָּ֔מָת וַ/יֵּאָ֖סֶף אֶל עַמָּֽי/ו
+  he_translit: ve-ele shene chaye yishmael meat shana u-sheloshim shana ve-sheva shanim va-yigva va-yamat
+    va-yeasef el amay-v
+  en: '[EN-AID] And these are the years of the life of Ishmael: a hundred thirty-seven years; and he expired
+    and died, and was gathered to his people.'
+  tree_left:
+    he: וְ/אֵ֗לֶּה שְׁנֵי֙ חַיֵּ֣י יִשְׁמָעֵ֔אל מְאַ֥ת שָׁנָ֛ה וּ/שְׁלֹשִׁ֥ים שָׁנָ֖ה וְ/שֶׁ֣בַע שָׁנִ֑ים
+      וַ/יִּגְוַ֣ע וַ/יָּ֔מָת וַ/יֵּאָ֖סֶף אֶל עַמָּֽי/ו
+    he_translit: ve-ele shene chaye yishmael meat shana u-sheloshim shana ve-sheva shanim va-yigva va-yamat
+      va-yeasef el amay-v
+    en: 'And these are the years of the life of Ishmael: a hundred thirty-seven years; and he expir (left)
+      [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: expire_die_gather(e17) ∧ Theme(e17, yishmael)
+    he: וַיִּגְוַע וַיָּמָת
+    he_translit: va-yigva va-yamat
+    en: 'Ishmael death parallel Abraham [VERIFIED: SNAPSHOT].'
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: 25:17. Zero-volitive unit half.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_25_18
+  order: 18
+  ref: Gen.25.18
+  op: V_25_18
+  he: וַ/יִּשְׁכְּנ֨וּ מֵֽ/חֲוִילָ֜ה עַד שׁ֗וּר אֲשֶׁר֙ עַל פְּנֵ֣י מִצְרַ֔יִם בֹּאֲ/כָ֖ה אַשּׁ֑וּרָ/ה
+    עַל פְּנֵ֥י כָל אֶחָ֖י/ו נָפָֽל
+  he_translit: va-yishknu me-chavila ad shur asher al pene mitzrayim boa-kha ashura-ה al pene khal echay-v
+    nafal
+  en: '[EN-AID] And they dwelt from Havilah to Shur, which is before Egypt as you go toward Assyria; he
+    settled facing all his brothers.'
+  tree_left:
+    he: וַ/יִּשְׁכְּנ֨וּ מֵֽ/חֲוִילָ֜ה עַד שׁ֗וּר אֲשֶׁר֙ עַל פְּנֵ֣י מִצְרַ֔יִם בֹּאֲ/כָ֖ה אַשּׁ֑וּרָ/ה
+      עַל פְּנֵ֥י כָל אֶחָ֖י/ו נָפָֽל
+    he_translit: va-yishknu me-chavila ad shur asher al pene mitzrayim boa-kha ashura-ה al pene khal echay-v
+      nafal
+    en: 'And they dwelt from Havilah to Shur, which is before Egypt as you go toward Assyria; he se (left)
+      [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: ''
+    he_translit: ''
+    en: 'n/a [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: dwell(e18) ∧ Theme(e18, yishmael_line)
+    he: וַיִּשְׁכְּנוּ
+    he_translit: va-yishknu
+    en: 'Dwell Havilah to Shur [VERIFIED: SNAPSHOT].'
+    cites:
+    - TIR-014
+    confidence: tested
+  - op: NOTE_PRESUPPOSED
+    expr_en: havila, shur, mitzrayim are READ without prior install
+    he: מֵחֲוִילָה עַד־שׁוּר
+    he_translit: me-chavila ad shur
+    en: Frontier geography READ.
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: 25:18. Zero-volitive unit half.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+scenarios:
+- id: S1
+  title_en: after STEP_Gn_25_1 — Keturah installed
+  given_en: Empty.
+  expect_en: 'WORLD += qetura;
+
+    no test, no name.'
+  value_he: קְטוּרָה
+  value_he_translit: qetura
+- id: S2
+  title_en: after STEP_Gn_25_8 — Abraham dies; no test on tova
+  given_en: After gifts and age.
+  expect_en: no test, no name.
+  value_he: בְּשֵׂיבָה טוֹבָה
+  value_he_translit: be-seva tova
+- id: S3
+  title_en: after STEP_Gn_25_11 — God blesses Isaac; SPECS still empty
+  given_en: After burial.
+  expect_en: 'SPECS empty;
+
+    no test, no name.'
+  value_he: וַיְבָרֶךְ אֱלֹהִים אֶת־יִצְחָק
+  value_he_translit: va-yevarekh Elohim et yitzchaq
+- id: S4
+  title_en: after STEP_Gn_25_18 — Ishmael line closed; unit end
+  given_en: After toledot and death.
+  expect_en: 'SPECS empty;
+
+    no test, no name.'
+  value_he: וַיִּשְׁכְּנוּ מֵחֲוִילָה עַד־שׁוּר
+  value_he_translit: va-yishknu me-chavila ad shur
