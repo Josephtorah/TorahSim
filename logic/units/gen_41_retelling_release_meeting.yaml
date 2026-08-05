@@ -1,0 +1,1325 @@
+meta:
+  id: gen_41_retelling_release_meeting
+  title_en: The retelling, the release, and the meeting (24:34-67)
+  title_he: קַח וָלֵךְ
+  title_he_translit: qach va-lekh
+  title_he_en: '''Take and go'''
+  book_he: בְּרֵאשִׁית
+  book_he_translit: Be-reshit
+  book_en: Genesis
+  refs: 24:34-67
+  data_paths_he:
+  - Data/Gen.xml
+  status: frozen
+  draft_note_en: FROZEN 2026-08-05 Grok next-block. gen_41 draft complete span 24:34-67. Retelling fence;
+    live field from 49; compound qach_va_lekh pops at 61; shalchu_ni pops at 59; hayi OPEN; al-teacharu
+    LET-NOT OPEN; hagidu OPEN (no tell-back in demand verb); TESTS 0 (ra-o-tov merism). Ready for freeze
+    conversion.
+boot_steps:
+- id: STEP_Gn_24_34
+  order: 1
+  ref: Gen.24.34
+  op: V_34
+  he: וַ/יֹּאמַ֑ר עֶ֥בֶד אַבְרָהָ֖ם אָנֹֽכִי
+  he_translit: va-yomar eved avraham anokhi
+  en: '[EN-AID] And he said: I am Abraham''s servant.'
+  tree_left:
+    he: וַ/יֹּאמַ֑ר
+    he_translit: va-yomar
+    en: 'And he said: I am Abraham''s servant. (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: עֶ֥בֶד אַבְרָהָ֖ם אָנֹֽכִי
+    he_translit: eved avraham anokhi
+    en: ' (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: say(e1) ∧ Agent(e1, ha_eved)
+    he: וַיֹּאמַר
+    he_translit: va-yomar
+    en: 'wayyiqtol va-yomar [VERIFIED: SNAPSHOT]. Cross-wall other-verb vs gen_40 daber; no RESULT pop
+      of prior unit in standalone.'
+    cites:
+    - TIR-014
+    confidence: tested
+  - op: NOTE_PRESUPPOSED
+    expr_en: ha_eved, avraham are READ without prior install (carry)
+    he: עֶבֶד אַבְרָהָם
+    he_translit: eved avraham
+    en: Known cast READ.
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: Gen 24:34 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_35
+  order: 2
+  ref: Gen.24.35
+  op: V_35
+  he: וַ/יהוָ֞ה בֵּרַ֧ךְ אֶת אֲדֹנִ֛/י מְאֹ֖ד וַ/יִּגְדָּ֑ל וַ/יִּתֶּן ל֞/וֹ צֹ֤אן וּ/בָקָר֙ וְ/כֶ֣סֶף
+    וְ/זָהָ֔ב וַ/עֲבָדִם֙ וּ/שְׁפָחֹ֔ת וּ/גְמַלִּ֖ים וַ/חֲמֹרִֽים
+  he_translit: va-YHWH berakh et adoni-y meod va-yigdal va-yiten l-o tzon u-vaqar ve-khesef ve-zahav va-avadim
+    u-shefachot u-gemalim va-chamorim
+  en: '[EN-AID] And YHWH has blessed my master greatly, and he has become great; and He gave him flocks
+    and herds, silver and gold, servants and maidservants, camels and donkeys.'
+  tree_left:
+    he: וַ/יהוָ֞ה בֵּרַ֧ךְ אֶת אֲדֹנִ֛/י מְאֹ֖ד וַ/יִּגְדָּ֑ל
+    he_translit: va-YHWH berakh et adoni-y meod va-yigdal
+    en: 'And YHWH has blessed my master greatly, and he has become great; and He gave him flocks and herds,
+      silver and gold, serv (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: וַ/יִּתֶּן ל֞/וֹ צֹ֤אן וּ/בָקָר֙ וְ/כֶ֣סֶף וְ/זָהָ֔ב וַ/עֲבָדִם֙ וּ/שְׁפָחֹ֔ת וּ/גְמַלִּ֖ים וַ/חֲמֹרִֽים
+    he_translit: va-yiten l-o tzon u-vaqar ve-khesef ve-zahav va-avadim u-shefachot u-gemalim va-chamorim
+    en: 'eat; and He gave him flocks and herds, silver and gold, servants and maidservants, camels and
+      donkeys. (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(content_24_35, t0)
+    he: 'וַ/יהוָ֞ה בֵּרַ֧ךְ אֶת אֲדֹנִ֛/י מְאֹ֖ד '
+    he_translit: va-YHWH berakh et adoni-y meod va-yigdal
+    en: 'Speech-content / state at 24:35 held as FACT [VERIFIED: SNAPSHOT].'
+    cites: []
+    confidence: tested
+  comment: Gen 24:35 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_36
+  order: 3
+  ref: Gen.24.36
+  op: V_36
+  he: וַ/תֵּ֡לֶד שָׂרָה֩ אֵ֨שֶׁת אֲדֹנִ֥/י בֵן֙ לַֽ/אדֹנִ֔/י אַחֲרֵ֖י זִקְנָתָ֑/הּ וַ/יִּתֶּן לּ֖/וֹ אֶת
+    כָּל אֲשֶׁר לֽ/וֹ
+  he_translit: va-teled sara eshet adoni-y ven la-doni-y achare ziqnata-ה va-yiten l-o et kal asher l-o
+  en: '[EN-AID] And Sarah my master''s wife bore a son to my master after her old age, and he has given
+    him all that he has.'
+  tree_left:
+    he: וַ/תֵּ֡לֶד שָׂרָה֩ אֵ֨שֶׁת אֲדֹנִ֥/י בֵן֙ לַֽ/אדֹנִ֔/י אַחֲרֵ֖י זִקְנָתָ֑/הּ
+    he_translit: va-teled sara eshet adoni-y ven la-doni-y achare ziqnata-ה
+    en: 'And Sarah my master''s wife bore a son to my master after her old age, and he has given him all
+      that he has. (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: וַ/יִּתֶּן לּ֖/וֹ אֶת כָּל אֲשֶׁר לֽ/וֹ
+    he_translit: va-yiten l-o et kal asher l-o
+    en: ' old age, and he has given him all that he has. (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: event_v36(e) ∧ Agent(e, speaker)
+    he: וַ/תֵּ֡לֶד
+    he_translit: va-teled
+    en: 'wayyiqtol narrative/report at 24:36 [VERIFIED: SNAPSHOT HC/Vqw3fs]. Retelling content through
+      48 is speech-report FACT for SPECS (no live push).'
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: Gen 24:36 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_37
+  order: 4
+  ref: Gen.24.37
+  op: V_37
+  he: וַ/יַּשְׁבִּעֵ֥/נִי אֲדֹנִ֖/י לֵ/אמֹ֑ר לֹא תִקַּ֤ח אִשָּׁה֙ לִ/בְנִ֔/י מִ/בְּנוֹת֙ הַֽ/כְּנַעֲנִ֔י
+    אֲשֶׁ֥ר אָנֹכִ֖י יֹשֵׁ֥ב בְּ/אַרְצֽ/וֹ
+  he_translit: va-yashbie-ni adoni-y le-mor lo tiqach isha li-veni-y mi-benot ha-kenaani asher anokhi
+    yoshev be-artz-o
+  en: '[EN-AID] And my master made me swear, saying: You shall not take a wife for my son from the Canaanite''s
+    daughters among whom I dwell.'
+  tree_left:
+    he: וַ/יַּשְׁבִּעֵ֥/נִי אֲדֹנִ֖/י לֵ/אמֹ֑ר
+    he_translit: va-yashbie-ni adoni-y le-mor
+    en: 'And my master made me swear, saying: You shall not take a wife for my son from the Canaanite''s
+      daughters among whom I dw (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: לֹא תִקַּ֤ח אִשָּׁה֙ לִ/בְנִ֔/י מִ/בְּנוֹת֙ הַֽ/כְּנַעֲנִ֔י אֲשֶׁ֥ר אָנֹכִ֖י יֹשֵׁ֥ב בְּ/אַרְצֽ/וֹ
+    he_translit: lo tiqach isha li-veni-y mi-benot ha-kenaani asher anokhi yoshev be-artz-o
+    en: 'fe for my son from the Canaanite''s daughters among whom I dwell. (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: event_v37(e) ∧ Agent(e, speaker)
+    he: וַ/יַּשְׁבִּעֵ֥/נִי
+    he_translit: va-yashbie-ni
+    en: 'wayyiqtol narrative/report at 24:37 [VERIFIED: SNAPSHOT HC/Vhw3ms/Sp1cs]. Retelling content through
+      48 is speech-report FACT for SPECS (no live push).'
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: Gen 24:37 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_38
+  order: 5
+  ref: Gen.24.38
+  op: V_38
+  he: אִם לֹ֧א אֶל בֵּית אָבִ֛/י תֵּלֵ֖ךְ וְ/אֶל מִשְׁפַּחְתִּ֑/י וְ/לָקַחְתָּ֥ אִשָּׁ֖ה לִ/בְנִֽ/י
+  he_translit: im lo el bet avi-y telekh ve-el mishpachti-y ve-laqachta isha li-veni-y
+  en: '[EN-AID] But you shall go to my father''s house and to my family, and take a wife for my son.'
+  tree_left:
+    he: אִם לֹ֧א אֶל בֵּית אָבִ֛/י תֵּלֵ֖ךְ וְ/אֶל מִשְׁפַּחְתִּ֑/י
+    he_translit: im lo el bet avi-y telekh ve-el mishpachti-y
+    en: 'But you shall go to my father''s house and to my family, and take a wife for my son. (left) [VERIFIED:
+      SNAPSHOT]'
+  tree_right:
+    he: וְ/לָקַחְתָּ֥ אִשָּׁ֖ה לִ/בְנִֽ/י
+    he_translit: ve-laqachta isha li-veni-y
+    en: 'take a wife for my son. (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(content_24_38, t0)
+    he: אִם לֹ֧א אֶל בֵּית אָבִ֛/י תֵּלֵ֖ךְ וְ/א
+    he_translit: im lo el bet avi-y telekh ve-el mishpach
+    en: 'Speech-content / state at 24:38 held as FACT [VERIFIED: SNAPSHOT].'
+    cites: []
+    confidence: tested
+  comment: Gen 24:38 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_39
+  order: 6
+  ref: Gen.24.39
+  op: V_39
+  he: וָ/אֹמַ֖ר אֶל אֲדֹנִ֑/י אֻלַ֛י לֹא תֵלֵ֥ךְ הָ/אִשָּׁ֖ה אַחֲרָֽ/י
+  he_translit: va-omar el adoni-y ulay lo telekh ha-isha achara-y
+  en: '[EN-AID] And I said to my master: Perhaps the woman will not follow me.'
+  tree_left:
+    he: וָ/אֹמַ֖ר אֶל אֲדֹנִ֑/י
+    he_translit: va-omar el adoni-y
+    en: 'And I said to my master: Perhaps the woman will not follow me. (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: אֻלַ֛י לֹא תֵלֵ֥ךְ הָ/אִשָּׁ֖ה אַחֲרָֽ/י
+    he_translit: ulay lo telekh ha-isha achara-y
+    en: 'e. (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: event_v39(e) ∧ Agent(e, speaker)
+    he: וָ/אֹמַ֖ר
+    he_translit: va-omar
+    en: 'wayyiqtol narrative/report at 24:39 [VERIFIED: SNAPSHOT HC/Vqw1cs]. Retelling content through
+      48 is speech-report FACT for SPECS (no live push).'
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: Gen 24:39 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_40
+  order: 7
+  ref: Gen.24.40
+  op: V_40
+  he: וַ/יֹּ֖אמֶר אֵלָ֑/י יְהוָ֞ה אֲשֶׁר הִתְהַלַּ֣כְתִּי לְ/פָנָ֗י/ו יִשְׁלַ֨ח מַלְאָכ֤/וֹ אִתָּ/ךְ֙
+    וְ/הִצְלִ֣יחַ דַּרְכֶּ֔/ךָ וְ/לָקַחְתָּ֤ אִשָּׁה֙ לִ/בְנִ֔/י מִ/מִּשְׁפַּחְתִּ֖/י וּ/מִ/בֵּ֥ית אָבִֽ/י
+  he_translit: va-yomer el-y YHWH asher hithalakhti le-fanay-v yishlach malakh-o et-khe ve-hitzlicha darke-kha
+    ve-laqachta isha li-veni-y mi-mishpachti-y u-mi-bet avi-y
+  en: '[EN-AID] And he said to me: YHWH, before whom I have walked, will send His angel with you and prosper
+    your way, and you shall take a wife for my son from my family and my father''s house.'
+  tree_left:
+    he: וַ/יֹּ֖אמֶר אֵלָ֑/י
+    he_translit: va-yomer el-y
+    en: 'And he said to me: YHWH, before whom I have walked, will send His angel with you and prosper
+      your way, and you shall tak (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: יְהוָ֞ה אֲשֶׁר הִתְהַלַּ֣כְתִּי לְ/פָנָ֗י/ו יִשְׁלַ֨ח מַלְאָכ֤/וֹ אִתָּ/ךְ֙ וְ/הִצְלִ֣יחַ דַּרְכֶּ֔/ךָ
+      וְ/לָקַחְתָּ֤ אִשָּׁה֙ לִ/בְנִ֔/י מִ/מִּשְׁפַּחְתִּ֖/י וּ/מִ/בֵּ֥ית אָבִֽ/י
+    he_translit: YHWH asher hithalakhti le-fanay-v yishlach malakh-o et-khe ve-hitzlicha darke-kha ve-laqachta
+      isha li-veni-y mi-mishpachti-y u-mi-bet avi-y
+    en: 'd His angel with you and prosper your way, and you shall take a wife for my son from my family
+      and my father''s house. (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: event_v40(e) ∧ Agent(e, speaker)
+    he: וַ/יֹּ֖אמֶר
+    he_translit: va-yomer
+    en: 'wayyiqtol narrative/report at 24:40 [VERIFIED: SNAPSHOT HC/Vqw3ms]. Retelling content through
+      48 is speech-report FACT for SPECS (no live push).'
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: Gen 24:40 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_41
+  order: 8
+  ref: Gen.24.41
+  op: V_41
+  he: אָ֤ז תִּנָּקֶה֙ מֵ/אָ֣לָתִ֔/י כִּ֥י תָב֖וֹא אֶל מִשְׁפַּחְתִּ֑/י וְ/אִם לֹ֤א יִתְּנוּ֙ לָ֔/ךְ וְ/הָיִ֥יתָ
+    נָקִ֖י מֵ/אָלָתִֽ/י
+  he_translit: az tinaqe me-alati-y ki tavo el mishpachti-y ve-im lo yitnu la-khe ve-hayita naqi me-alati-y
+  en: '[EN-AID] Then you shall be free from my oath when you come to my family; and if they will not give
+    her to you, you shall be free from my oath.'
+  tree_left:
+    he: אָ֤ז תִּנָּקֶה֙ מֵ/אָ֣לָתִ֔/י כִּ֥י תָב֖וֹא אֶל מִשְׁפַּחְתִּ֑/י
+    he_translit: az tinaqe me-alati-y ki tavo el mishpachti-y
+    en: 'Then you shall be free from my oath when you come to my family; and if they will not give her
+      to you, you shall be free  (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: וְ/אִם לֹ֤א יִתְּנוּ֙ לָ֔/ךְ וְ/הָיִ֥יתָ נָקִ֖י מֵ/אָלָתִֽ/י
+    he_translit: ve-im lo yitnu la-khe ve-hayita naqi me-alati-y
+    en: 'ly; and if they will not give her to you, you shall be free from my oath. (right) [VERIFIED:
+      SNAPSHOT]'
+  operators:
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(alah_niqqah_release_retold, t0)
+    he: מֵאָלָתִי … נָקִי
+    he_translit: me-alati … naqi
+    en: 'alah (''imprecation-oath'') DEBUT x2; niqqah/naqi release field [VERIFIED: SNAPSHOT 423,5352,5355].
+      Retold release FACTS.'
+    cites: []
+    confidence: tested
+  comment: Gen 24:41 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_42
+  order: 9
+  ref: Gen.24.42
+  op: V_42
+  he: וָ/אָבֹ֥א הַ/יּ֖וֹם אֶל הָ/עָ֑יִן וָ/אֹמַ֗ר יְהוָה֙ אֱלֹהֵי֙ אֲדֹנִ֣/י אַבְרָהָ֔ם אִם יֶשְׁ/ךָ נָּא֙
+    מַצְלִ֣יחַ דַּרְכִּ֔/י אֲשֶׁ֥ר אָנֹכִ֖י הֹלֵ֥ךְ עָלֶֽי/הָ
+  he_translit: va-avo ha-yom el ha-ayin va-omar YHWH elohe adoni-y avraham im yesh-kha na matzlicha darki-y
+    asher anokhi holekh ale-ha
+  en: '[EN-AID] And I came today to the spring and said: YHWH, God of my master Abraham, if You are prospering
+    my way on which I go—'
+  tree_left:
+    he: וָ/אָבֹ֥א הַ/יּ֖וֹם אֶל הָ/עָ֑יִן
+    he_translit: va-avo ha-yom el ha-ayin
+    en: 'And I came today to the spring and said: YHWH, God of my master Abraham, if You are prospering
+      my way on which I go— (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: וָ/אֹמַ֗ר יְהוָה֙ אֱלֹהֵי֙ אֲדֹנִ֣/י אַבְרָהָ֔ם אִם יֶשְׁ/ךָ נָּא֙ מַצְלִ֣יחַ דַּרְכִּ֔/י אֲשֶׁ֥ר
+      אָנֹכִ֖י הֹלֵ֥ךְ עָלֶֽי/הָ
+    he_translit: va-omar YHWH elohe adoni-y avraham im yesh-kha na matzlicha darki-y asher anokhi holekh
+      ale-ha
+    en: 'ter Abraham, if You are prospering my way on which I go— (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: event_v42(e) ∧ Agent(e, speaker)
+    he: וָ/אָבֹ֥א
+    he_translit: va-avo
+    en: 'wayyiqtol narrative/report at 24:42 [VERIFIED: SNAPSHOT HC/Vqw1cs]. Retelling content through
+      48 is speech-report FACT for SPECS (no live push).'
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: Gen 24:42 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_43
+  order: 10
+  ref: Gen.24.43
+  op: V_43
+  he: הִנֵּ֛ה אָנֹכִ֥י נִצָּ֖ב עַל עֵ֣ין הַ/מָּ֑יִם וְ/הָיָ֤ה הָֽ/עַלְמָה֙ הַ/יֹּצֵ֣את לִ/שְׁאֹ֔ב וְ/אָמַרְתִּ֣י
+    אֵלֶ֔י/הָ הַשְׁקִֽי/נִי נָ֥א מְעַט מַ֖יִם מִ/כַּדֵּֽ/ךְ
+  he_translit: hine anokhi nitzav al en ha-mayim ve-haya ha-alma ha-yotzet li-sheov ve-amarti ele-ha hashqi-ni
+    na meat mayim mi-kade-khe
+  en: '[EN-AID] behold I stand by the spring of water, and let the young woman who comes out to draw,
+    to whom I say, Please let me drink a little from your pitcher,'
+  tree_left:
+    he: הִנֵּ֛ה אָנֹכִ֥י נִצָּ֖ב עַל עֵ֣ין הַ/מָּ֑יִם
+    he_translit: hine anokhi nitzav al en ha-mayim
+    en: 'behold I stand by the spring of water, and let the young woman who comes out to draw, to whom
+      I say, Please let me drink (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: וְ/הָיָ֤ה הָֽ/עַלְמָה֙ הַ/יֹּצֵ֣את לִ/שְׁאֹ֔ב וְ/אָמַרְתִּ֣י אֵלֶ֔י/הָ הַשְׁקִֽי/נִי נָ֥א מְעַט
+      מַ֖יִם מִ/כַּדֵּֽ/ךְ
+    he_translit: ve-haya ha-alma ha-yotzet li-sheov ve-amarti ele-ha hashqi-ni na meat mayim mi-kade-khe
+    en: 'an who comes out to draw, to whom I say, Please let me drink a little from your pitcher, (right)
+      [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(content_24_43, t0)
+    he: הִנֵּ֛ה אָנֹכִ֥י נִצָּ֖ב עַל עֵ֣ין הַ/מּ
+    he_translit: hine anokhi nitzav al en ha-mayim ve-hay
+    en: 'Speech-content / state at 24:43 held as FACT [VERIFIED: SNAPSHOT].'
+    cites: []
+    confidence: tested
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(retold_design_volitives_are_facts, t0)
+    he: הַשְׁקִינִי / שְׁתֵה
+    he_translit: hashqi-ni / shete
+    en: 'Retelling fence: imperatives inside servant''s retold design/live-memory are FACTS (Excerpt A),
+      not SPECS pushes. almah DEBUT at 24:43 [VERIFIED: SNAPSHOT 5959 tok 1].'
+    cites: []
+    confidence: tested
+  comment: Gen 24:43 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_44
+  order: 11
+  ref: Gen.24.44
+  op: V_44
+  he: וְ/אָמְרָ֤ה אֵלַ/י֙ גַּם אַתָּ֣ה שְׁתֵ֔ה וְ/גַ֥ם לִ/גְמַלֶּ֖י/ךָ אֶשְׁאָ֑ב הִ֣וא הָֽ/אִשָּׁ֔ה אֲשֶׁר
+    הֹכִ֥יחַ יְהוָ֖ה לְ/בֶן אֲדֹנִֽ/י
+  he_translit: ve-amra el-y gam ata shete ve-gam li-gemale-kha eshav hiv ha-isha asher hokhicha YHWH le-ven
+    adoni-y
+  en: '[EN-AID] and she says to me, Drink, and I will also draw for your camels—she is the woman whom
+    YHWH has appointed for my master''s son.'
+  tree_left:
+    he: וְ/אָמְרָ֤ה אֵלַ/י֙ גַּם אַתָּ֣ה שְׁתֵ֔ה וְ/גַ֥ם לִ/גְמַלֶּ֖י/ךָ אֶשְׁאָ֑ב
+    he_translit: ve-amra el-y gam ata shete ve-gam li-gemale-kha eshav
+    en: 'and she says to me, Drink, and I will also draw for your camels—she is the woman whom YHWH has
+      appointed for my master''s (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: הִ֣וא הָֽ/אִשָּׁ֔ה אֲשֶׁר הֹכִ֥יחַ יְהוָ֖ה לְ/בֶן אֲדֹנִֽ/י
+    he_translit: hiv ha-isha asher hokhicha YHWH le-ven adoni-y
+    en: 'els—she is the woman whom YHWH has appointed for my master''s son. (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(content_24_44, t0)
+    he: וְ/אָמְרָ֤ה אֵלַ/י֙ גַּם אַתָּ֣ה שְׁתֵ֔ה
+    he_translit: ve-amra el-y gam ata shete ve-gam li-gem
+    en: 'Speech-content / state at 24:44 held as FACT [VERIFIED: SNAPSHOT].'
+    cites: []
+    confidence: tested
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(retold_design_volitives_are_facts, t0)
+    he: הַשְׁקִינִי / שְׁתֵה
+    he_translit: hashqi-ni / shete
+    en: 'Retelling fence: imperatives inside servant''s retold design/live-memory are FACTS (Excerpt A),
+      not SPECS pushes. almah DEBUT at 24:43 [VERIFIED: SNAPSHOT 5959 tok 1].'
+    cites: []
+    confidence: tested
+  comment: Gen 24:44 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_45
+  order: 12
+  ref: Gen.24.45
+  op: V_45
+  he: אֲנִי֩ טֶ֨רֶם אֲכַלֶּ֜ה לְ/דַבֵּ֣ר אֶל לִבִּ֗/י וְ/הִנֵּ֨ה רִבְקָ֤ה יֹצֵאת֙ וְ/כַדָּ֣/הּ עַל שִׁכְמָ֔/הּ
+    וַ/תֵּ֥רֶד הָ/עַ֖יְנָ/ה וַ/תִּשְׁאָ֑ב וָ/אֹמַ֥ר אֵלֶ֖י/הָ הַשְׁקִ֥י/נִי נָֽא
+  he_translit: ani terem akhale le-daber el libi-y ve-hine rivqa yotzet ve-khada-ה al shikhma-ה va-tered
+    ha-ayna-ה va-tishav va-omar ele-ha hashqi-ni na
+  en: '[EN-AID] I had not yet finished speaking to my heart, and behold Rivqah came out with her pitcher
+    on her shoulder, and she went down to the spring and drew; and I said to her: Please let me drink.'
+  tree_left:
+    he: אֲנִי֩ טֶ֨רֶם אֲכַלֶּ֜ה לְ/דַבֵּ֣ר אֶל לִבִּ֗/י וְ/הִנֵּ֨ה רִבְקָ֤ה יֹצֵאת֙ וְ/כַדָּ֣/הּ עַל שִׁכְמָ֔/הּ
+      וַ/תֵּ֥רֶד הָ/עַ֖יְנָ/ה וַ/תִּשְׁאָ֑ב
+    he_translit: ani terem akhale le-daber el libi-y ve-hine rivqa yotzet ve-khada-ה al shikhma-ה va-tered
+      ha-ayna-ה va-tishav
+    en: 'I had not yet finished speaking to my heart, and behold Rivqah came out with her pitcher on her
+      shoulder, and she went d (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: וָ/אֹמַ֥ר אֵלֶ֖י/הָ הַשְׁקִ֥י/נִי נָֽא
+    he_translit: va-omar ele-ha hashqi-ni na
+    en: 'ah came out with her pitcher on her shoulder, and she went down to the spring and drew; and I
+      said to her: Please let me (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(content_24_45, t0)
+    he: אֲנִי֩ טֶ֨רֶם אֲכַלֶּ֜ה לְ/דַבֵּ֣ר אֶל ל
+    he_translit: ani terem akhale le-daber el libi-y ve-h
+    en: 'Speech-content / state at 24:45 held as FACT [VERIFIED: SNAPSHOT].'
+    cites: []
+    confidence: tested
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(retold_design_volitives_are_facts, t0)
+    he: הַשְׁקִינִי / שְׁתֵה
+    he_translit: hashqi-ni / shete
+    en: 'Retelling fence: imperatives inside servant''s retold design/live-memory are FACTS (Excerpt A),
+      not SPECS pushes. almah DEBUT at 24:43 [VERIFIED: SNAPSHOT 5959 tok 1].'
+    cites: []
+    confidence: tested
+  comment: Gen 24:45 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_46
+  order: 13
+  ref: Gen.24.46
+  op: V_46
+  he: וַ/תְּמַהֵ֗ר וַ/תּ֤וֹרֶד כַּדָּ/הּ֙ מֵֽ/עָלֶ֔י/הָ וַ/תֹּ֣אמֶר שְׁתֵ֔ה וְ/גַם גְּמַלֶּ֖י/ךָ אַשְׁקֶ֑ה
+    וָ/אֵ֕שְׁתְּ וְ/גַ֥ם הַ/גְּמַלִּ֖ים הִשְׁקָֽתָה
+  he_translit: va-temaher va-tored kada-ה me-ale-ha va-tomer shete ve-gam gemale-kha ashqe va-esht ve-gam
+    ha-gemalim hishqata
+  en: '[EN-AID] And she hurried and lowered her pitcher from her and said: Drink, and I will also water
+    your camels; and I drank, and she also watered the camels.'
+  tree_left:
+    he: וַ/תְּמַהֵ֗ר וַ/תּ֤וֹרֶד כַּדָּ/הּ֙ מֵֽ/עָלֶ֔י/הָ וַ/תֹּ֣אמֶר שְׁתֵ֔ה וְ/גַם גְּמַלֶּ֖י/ךָ אַשְׁקֶ֑ה
+    he_translit: va-temaher va-tored kada-ה me-ale-ha va-tomer shete ve-gam gemale-kha ashqe
+    en: 'And she hurried and lowered her pitcher from her and said: Drink, and I will also water your
+      camels; and I drank, and sh (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: וָ/אֵ֕שְׁתְּ וְ/גַ֥ם הַ/גְּמַלִּ֖ים הִשְׁקָֽתָה
+    he_translit: va-esht ve-gam ha-gemalim hishqata
+    en: 'rink, and I will also water your camels; and I drank, and she also watered the camels. (right)
+      [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: event_v46(e) ∧ Agent(e, speaker)
+    he: וַ/תְּמַהֵ֗ר
+    he_translit: va-temaher
+    en: 'wayyiqtol narrative/report at 24:46 [VERIFIED: SNAPSHOT HC/Vpw3fs]. Retelling content through
+      48 is speech-report FACT for SPECS (no live push).'
+    cites:
+    - TIR-014
+    confidence: tested
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(retold_design_volitives_are_facts, t0)
+    he: הַשְׁקִינִי / שְׁתֵה
+    he_translit: hashqi-ni / shete
+    en: 'Retelling fence: imperatives inside servant''s retold design/live-memory are FACTS (Excerpt A),
+      not SPECS pushes. almah DEBUT at 24:43 [VERIFIED: SNAPSHOT 5959 tok 1].'
+    cites: []
+    confidence: tested
+  comment: Gen 24:46 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_47
+  order: 14
+  ref: Gen.24.47
+  op: V_47
+  he: וָ/אֶשְׁאַ֣ל אֹתָ֗/הּ וָ/אֹמַר֮ בַּת מִ֣י אַתְּ֒ וַ/תֹּ֗אמֶר בַּת בְּתוּאֵל֙ בֶּן נָח֔וֹר אֲשֶׁ֥ר
+    יָֽלְדָה לּ֖/וֹ מִלְכָּ֑ה וָ/אָשִׂ֤ם הַ/נֶּ֨זֶם֙ עַל אַפָּ֔/הּ וְ/הַ/צְּמִידִ֖ים עַל יָדֶֽי/הָ
+  he_translit: va-eshal et-ה va-omar bat mi et va-tomer bat betuel ben nachor asher yalda l-o milka va-asim
+    ha-nezem al apa-ה ve-ha-tzemidim al yade-ha
+  en: '[EN-AID] And I asked her, Whose daughter are you? and she said, Daughter of Betuel son of Nahor,
+    whom Milcah bore him; and I put the ring on her nose and the bracelets on her hands.'
+  tree_left:
+    he: וָ/אֶשְׁאַ֣ל אֹתָ֗/הּ וָ/אֹמַר֮ בַּת מִ֣י אַתְּ֒ וַ/תֹּ֗אמֶר בַּת בְּתוּאֵל֙ בֶּן נָח֔וֹר אֲשֶׁ֥ר
+      יָֽלְדָה לּ֖/וֹ מִלְכָּ֑ה
+    he_translit: va-eshal et-ה va-omar bat mi et va-tomer bat betuel ben nachor asher yalda l-o milka
+    en: 'And I asked her, Whose daughter are you? and she said, Daughter of Betuel son of Nahor, whom
+      Milcah bore him; and I put  (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: וָ/אָשִׂ֤ם הַ/נֶּ֨זֶם֙ עַל אַפָּ֔/הּ וְ/הַ/צְּמִידִ֖ים עַל יָדֶֽי/הָ
+    he_translit: va-asim ha-nezem al apa-ה ve-ha-tzemidim al yade-ha
+    en: 'ter of Betuel son of Nahor, whom Milcah bore him; and I put the ring on her nose and the bracelets
+      on her hands. (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: event_v47(e) ∧ Agent(e, speaker)
+    he: וָ/אֶשְׁאַ֣ל
+    he_translit: va-eshal
+    en: 'wayyiqtol narrative/report at 24:47 [VERIFIED: SNAPSHOT HC/Vqw1cs]. Retelling content through
+      48 is speech-report FACT for SPECS (no live push).'
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: Gen 24:47 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_48
+  order: 15
+  ref: Gen.24.48
+  op: V_48
+  he: וָ/אֶקֹּ֥ד וָֽ/אֶשְׁתַּחֲוֶ֖ה לַ/יהוָ֑ה וָ/אֲבָרֵ֗ךְ אֶת יְהוָה֙ אֱלֹהֵי֙ אֲדֹנִ֣/י אַבְרָהָ֔ם אֲשֶׁ֤ר
+    הִנְחַ֨/נִי֙ בְּ/דֶ֣רֶךְ אֱמֶ֔ת לָ/קַ֛חַת אֶת בַּת אֲחִ֥י אֲדֹנִ֖/י לִ/בְנֽ/וֹ
+  he_translit: va-eqod va-eshtachave la-YHWH va-avarekh et YHWH elohe adoni-y avraham asher hincha-ni
+    be-derekh emet la-qachat et bat achi adoni-y li-ven-o
+  en: '[EN-AID] And I bowed and prostrated to YHWH, and I blessed YHWH, God of my master Abraham, who
+    led me in the true way to take my master''s brother''s daughter for his son.'
+  tree_left:
+    he: וָ/אֶקֹּ֥ד וָֽ/אֶשְׁתַּחֲוֶ֖ה לַ/יהוָ֑ה
+    he_translit: va-eqod va-eshtachave la-YHWH
+    en: 'And I bowed and prostrated to YHWH, and I blessed YHWH, God of my master Abraham, who led me
+      in the true way to take my  (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: וָ/אֲבָרֵ֗ךְ אֶת יְהוָה֙ אֱלֹהֵי֙ אֲדֹנִ֣/י אַבְרָהָ֔ם אֲשֶׁ֤ר הִנְחַ֨/נִי֙ בְּ/דֶ֣רֶךְ אֱמֶ֔ת
+      לָ/קַ֛חַת אֶת בַּת אֲחִ֥י אֲדֹנִ֖/י לִ/בְנֽ/וֹ
+    he_translit: va-avarekh et YHWH elohe adoni-y avraham asher hincha-ni be-derekh emet la-qachat et
+      bat achi adoni-y li-ven-o
+    en: 'of my master Abraham, who led me in the true way to take my master''s brother''s daughter for
+      his son. (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: event_v48(e) ∧ Agent(e, speaker)
+    he: וָ/אֶקֹּ֥ד
+    he_translit: va-eqod
+    en: 'wayyiqtol narrative/report at 24:48 [VERIFIED: SNAPSHOT HC/Vqw1cs]. Retelling content through
+      48 is speech-report FACT for SPECS (no live push).'
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: Gen 24:48 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_49
+  order: 16
+  ref: Gen.24.49
+  op: V_49
+  he: וְ֠/עַתָּה אִם יֶשְׁ/כֶ֨ם עֹשִׂ֜ים חֶ֧סֶד וֶֽ/אֱמֶ֛ת אֶת אֲדֹנִ֖/י הַגִּ֣ידוּ לִ֑/י וְ/אִם לֹ֕א
+    הַגִּ֣ידוּ לִ֔/י וְ/אֶפְנֶ֥ה עַל יָמִ֖ין א֥וֹ עַל שְׂמֹֽאל
+  he_translit: ve-ata im yesh-khem osim chesed ve-emet et adoni-y hagidu li-y ve-im lo hagidu li-y ve-efne
+    al yamin o al semol
+  en: '[EN-AID] And now, if you will deal kindly and truly with my master, tell me; and if not, tell me,
+    that I may turn to the right or to the left.'
+  tree_left:
+    he: וְ֠/עַתָּה אִם יֶשְׁ/כֶ֨ם עֹשִׂ֜ים חֶ֧סֶד וֶֽ/אֱמֶ֛ת אֶת אֲדֹנִ֖/י הַגִּ֣ידוּ לִ֑/י
+    he_translit: ve-ata im yesh-khem osim chesed ve-emet et adoni-y hagidu li-y
+    en: 'And now, if you will deal kindly and truly with my master, tell me; and if not, tell me, that
+      I may turn to the right or (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: וְ/אִם לֹ֕א הַגִּ֣ידוּ לִ֔/י וְ/אֶפְנֶ֥ה עַל יָמִ֖ין א֥וֹ עַל שְׂמֹֽאל
+    he_translit: ve-im lo hagidu li-y ve-efne al yamin o al semol
+    en: 'ell me; and if not, tell me, that I may turn to the right or to the left. (right) [VERIFIED:
+      SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: say(e49) ∧ Agent(e49, ha_eved)
+    he: הַגִּידוּ
+    he_translit: hagidu
+    en: Live address to the house.
+    cites:
+    - TIR-014
+    confidence: tested
+  - op: DECLARE
+    expr_en: DECLARE(ha_eved, LET(hagidu(li)))
+    he: הַגִּידוּ לִי
+    he_translit: hagidu li-y
+    en: 'LIVE PUSH hagidu (''TELL'', HVhv2mp) [VERIFIED: SNAPSHOT]. Second hagidu in verse held as re-sound
+      FACT (no re-push operator).'
+    cites:
+    - TIR-027
+    confidence: tested
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(second_hagidu_resound_fact, t0)
+    he: הַגִּידוּ
+    he_translit: hagidu
+    en: Second hagidu = fact beside open entry.
+    cites: []
+    confidence: tested
+  comment: Gen 24:49 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_50
+  order: 17
+  ref: Gen.24.50
+  op: V_50
+  he: וַ/יַּ֨עַן לָבָ֤ן וּ/בְתוּאֵל֙ וַ/יֹּ֣אמְר֔וּ מֵ/יְהוָ֖ה יָצָ֣א הַ/דָּבָ֑ר לֹ֥א נוּכַ֛ל דַּבֵּ֥ר
+    אֵלֶ֖י/ךָ רַ֥ע אוֹ טֽוֹב
+  he_translit: va-yaan lavan u-vetuel va-yomru me-YHWH yatza ha-davar lo nukhal daber ele-kha ra o tov
+  en: '[EN-AID] And Laban and Betuel answered and said: The matter has gone out from YHWH; we cannot speak
+    to you bad or good.'
+  tree_left:
+    he: וַ/יַּ֨עַן לָבָ֤ן וּ/בְתוּאֵל֙ וַ/יֹּ֣אמְר֔וּ מֵ/יְהוָ֖ה יָצָ֣א הַ/דָּבָ֑ר
+    he_translit: va-yaan lavan u-vetuel va-yomru me-YHWH yatza ha-davar
+    en: 'And Laban and Betuel answered and said: The matter has gone out from YHWH; we cannot speak to
+      you bad or good. (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: לֹ֥א נוּכַ֛ל דַּבֵּ֥ר אֵלֶ֖י/ךָ רַ֥ע אוֹ טֽוֹב
+    he_translit: lo nukhal daber ele-kha ra o tov
+    en: 'out from YHWH; we cannot speak to you bad or good. (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: answer_say(e50) ∧ Agent(e50, lavan_betuel)
+    he: וַיַּעַן … וַיֹּאמְרוּ
+    he_translit: va-yaan … va-yomru
+    en: 'Laban and Betuel answer [VERIFIED: SNAPSHOT].'
+    cites:
+    - TIR-014
+    confidence: tested
+  - op: NOTE_PRESUPPOSED
+    expr_en: lavan are READ without prior install (from gen_40)
+    he: לָבָן
+    he_translit: lavan
+    en: Laban known from gen_40.
+    cites:
+    - TIR-014
+    confidence: tested
+  - op: REGISTRY_INSTALL
+    expr_en: WORLD += {betuel}
+    he: בְּתוּאֵל
+    he_translit: betuel
+    en: Betuel installed as speaker with Laban (Laban already known).
+    cites:
+    - TIR-014
+    confidence: tested
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(me_YHWH_yatza_ha_davar, t0) ∧ HOLDS(ra_o_tov_merism_no_test, t0)
+    he: רַע אוֹ־טוֹב
+    he_translit: ra o tov
+    en: 'From-YHWH verdict FACT. ra o tov (''bad or good'') merism — Strong 2896 tov [VERIFIED: SNAPSHOT
+      ord 23]; NO TEST (merism class-fence). Flag instrument sleep continues.'
+    cites: []
+    confidence: tested
+  comment: Gen 24:50 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_51
+  order: 18
+  ref: Gen.24.51
+  op: V_51
+  he: הִנֵּֽה רִבְקָ֥ה לְ/פָנֶ֖י/ךָ קַ֣ח וָ/לֵ֑ךְ וּ/תְהִ֤י אִשָּׁה֙ לְ/בֶן אֲדֹנֶ֔י/ךָ כַּ/אֲשֶׁ֖ר דִּבֶּ֥ר
+    יְהוָֽה
+  he_translit: hine rivqa le-fane-kha qach va-lekh u-tehi isha le-ven adone-kha ka-asher diber YHWH
+  en: '[EN-AID] Behold Rivqah is before you; take and go, and let her be a wife to your master''s son,
+    as YHWH has spoken.'
+  tree_left:
+    he: הִנֵּֽה רִבְקָ֥ה לְ/פָנֶ֖י/ךָ קַ֣ח וָ/לֵ֑ךְ
+    he_translit: hine rivqa le-fane-kha qach va-lekh
+    en: 'Behold Rivqah is before you; take and go, and let her be a wife to your master''s son, as YHWH
+      has spoken. (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: וּ/תְהִ֤י אִשָּׁה֙ לְ/בֶן אֲדֹנֶ֔י/ךָ כַּ/אֲשֶׁ֖ר דִּבֶּ֥ר יְהוָֽה
+    he_translit: u-tehi isha le-ven adone-kha ka-asher diber YHWH
+    en: 'ife to your master''s son, as YHWH has spoken. (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: DECLARE
+    expr_en: DECLARE(lavan_betuel, LET(qach_va_lekh(ha_eved, rivqah)))
+    he: קַח וָלֵךְ
+    he_translit: qach va-lekh
+    en: 'LIVE compound PUSH qach (''take'') + va-lekh (''and go'') one breath [VERIFIED: SNAPSHOT Vqv2ms
+      both; Excerpt B compound class].'
+    cites:
+    - TIR-027
+    confidence: tested
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(u_tehi_isha_jussive_content, t0)
+    he: וּתְהִי אִשָּׁה
+    he_translit: u-tehi isha
+    en: 'u-tehi (''and let her be'', Vqj3fs) [VERIFIED: SNAPSHOT] — jussive content FACT SAFE (about Rivqah
+      as wife); bold LET staged in flags.'
+    cites: []
+    confidence: tested
+  comment: Gen 24:51 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_52
+  order: 19
+  ref: Gen.24.52
+  op: V_52
+  he: וַ/יְהִ֕י כַּ/אֲשֶׁ֥ר שָׁמַ֛ע עֶ֥בֶד אַבְרָהָ֖ם אֶת דִּבְרֵי/הֶ֑ם וַ/יִּשְׁתַּ֥חוּ אַ֖רְצָ/ה לַֽ/יהוָֽה
+  he_translit: va-yehi ka-asher shama eved avraham et divre-hem va-yishtachu artza-ה la-YHWH
+  en: '[EN-AID] And when Abraham''s servant heard their words, he bowed to the ground to YHWH.'
+  tree_left:
+    he: וַ/יְהִ֕י כַּ/אֲשֶׁ֥ר שָׁמַ֛ע עֶ֥בֶד אַבְרָהָ֖ם אֶת דִּבְרֵי/הֶ֑ם
+    he_translit: va-yehi ka-asher shama eved avraham et divre-hem
+    en: 'And when Abraham''s servant heard their words, he bowed to the ground to YHWH. (left) [VERIFIED:
+      SNAPSHOT]'
+  tree_right:
+    he: וַ/יִּשְׁתַּ֥חוּ אַ֖רְצָ/ה לַֽ/יהוָֽה
+    he_translit: va-yishtachu artza-ה la-YHWH
+    en: 'e ground to YHWH. (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: event_v52(e) ∧ Agent(e, speaker)
+    he: וַ/יְהִ֕י
+    he_translit: va-yehi
+    en: 'wayyiqtol narrative/report at 24:52 [VERIFIED: SNAPSHOT HC/Vqw3ms]. Retelling content through
+      48 is speech-report FACT for SPECS (no live push).'
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: Gen 24:52 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_53
+  order: 20
+  ref: Gen.24.53
+  op: V_53
+  he: וַ/יּוֹצֵ֨א הָ/עֶ֜בֶד כְּלֵי כֶ֨סֶף וּ/כְלֵ֤י זָהָב֙ וּ/בְגָדִ֔ים וַ/יִּתֵּ֖ן לְ/רִבְקָ֑ה וּ/מִ֨גְדָּנֹ֔ת
+    נָתַ֥ן לְ/אָחִ֖י/הָ וּ/לְ/אִמָּֽ/הּ
+  he_translit: va-yotze ha-eved kele khesef u-khele zahav u-vegadim va-yiten le-rivqa u-migdanot natan
+    le-achi-ha u-le-ima-ה
+  en: '[EN-AID] And the servant brought out vessels of silver and gold and garments and gave them to Rivqah;
+    and precious gifts he gave to her brother and her mother.'
+  tree_left:
+    he: וַ/יּוֹצֵ֨א הָ/עֶ֜בֶד כְּלֵי כֶ֨סֶף וּ/כְלֵ֤י זָהָב֙ וּ/בְגָדִ֔ים וַ/יִּתֵּ֖ן לְ/רִבְקָ֑ה
+    he_translit: va-yotze ha-eved kele khesef u-khele zahav u-vegadim va-yiten le-rivqa
+    en: 'And the servant brought out vessels of silver and gold and garments and gave them to Rivqah;
+      and precious gifts he gave  (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: וּ/מִ֨גְדָּנֹ֔ת נָתַ֥ן לְ/אָחִ֖י/הָ וּ/לְ/אִמָּֽ/הּ
+    he_translit: u-migdanot natan le-achi-ha u-le-ima-ה
+    en: 'arments and gave them to Rivqah; and precious gifts he gave to her brother and her mother. (right)
+      [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: event_v53(e) ∧ Agent(e, speaker)
+    he: וַ/יּוֹצֵ֨א
+    he_translit: va-yotze
+    en: 'wayyiqtol narrative/report at 24:53 [VERIFIED: SNAPSHOT HC/Vhw3ms]. Retelling content through
+      48 is speech-report FACT for SPECS (no live push).'
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: Gen 24:53 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_54
+  order: 21
+  ref: Gen.24.54
+  op: V_54
+  he: וַ/יֹּאכְל֣וּ וַ/יִּשְׁתּ֗וּ ה֛וּא וְ/הָ/אֲנָשִׁ֥ים אֲשֶׁר עִמּ֖/וֹ וַ/יָּלִ֑ינוּ וַ/יָּק֣וּמוּ
+    בַ/בֹּ֔קֶר וַ/יֹּ֖אמֶר שַׁלְּחֻ֥/נִי לַֽ/אדֹנִֽ/י
+  he_translit: va-yokhlu va-yishtu hu ve-ha-anashim asher im-o va-yalinu va-yaqumu va-boqer va-yomer shalchu-ni
+    la-doni-y
+  en: '[EN-AID] And they ate and drank, he and the men with him, and lodged; and they rose in the morning,
+    and he said: Send me to my master.'
+  tree_left:
+    he: וַ/יֹּאכְל֣וּ וַ/יִּשְׁתּ֗וּ ה֛וּא וְ/הָ/אֲנָשִׁ֥ים אֲשֶׁר עִמּ֖/וֹ וַ/יָּלִ֑ינוּ
+    he_translit: va-yokhlu va-yishtu hu ve-ha-anashim asher im-o va-yalinu
+    en: 'And they ate and drank, he and the men with him, and lodged; and they rose in the morning, and
+      he said: Send me to my ma (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: וַ/יָּק֣וּמוּ בַ/בֹּ֔קֶר וַ/יֹּ֖אמֶר שַׁלְּחֻ֥/נִי לַֽ/אדֹנִֽ/י
+    he_translit: va-yaqumu va-boqer va-yomer shalchu-ni la-doni-y
+    en: ' and they rose in the morning, and he said: Send me to my master. (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: eat_drink_lodge_rise(e54) ∧ Agent(e54, party)
+    he: וַיֹּאכְלוּ … וַיָּקֻמוּ
+    he_translit: va-yokhlu … va-yaqumu
+    en: 'Hospitality EVENTs then morning rise [VERIFIED: SNAPSHOT].'
+    cites:
+    - TIR-014
+    confidence: tested
+  - op: DECLARE
+    expr_en: DECLARE(ha_eved, LET(shalchu_ni(house)))
+    he: שַׁלְּחוּנִי
+    he_translit: shalchu-ni
+    en: 'LIVE PUSH shalchu-ni (''send me'', HVpv2mp) [VERIFIED: SNAPSHOT].'
+    cites:
+    - TIR-027
+    confidence: tested
+  comment: Gen 24:54 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_55
+  order: 22
+  ref: Gen.24.55
+  op: V_55
+  he: וַ/יֹּ֤אמֶר אָחִ֨י/הָ֙ וְ/אִמָּ֔/הּ תֵּשֵׁ֨ב הַ/נַּעֲרָ֥ אִתָּ֛/נוּ יָמִ֖ים א֣וֹ עָשׂ֑וֹר אַחַ֖ר
+    תֵּלֵֽךְ
+  he_translit: va-yomer achi-ha ve-ima-ה teshev ha-naara et-nu yamim o asor achar telekh
+  en: '[EN-AID] And her brother and her mother said: Let the girl stay with us some days, or ten; afterward
+    she may go.'
+  tree_left:
+    he: וַ/יֹּ֤אמֶר אָחִ֨י/הָ֙ וְ/אִמָּ֔/הּ תֵּשֵׁ֨ב הַ/נַּעֲרָ֥ אִתָּ֛/נוּ יָמִ֖ים א֣וֹ עָשׂ֑וֹר
+    he_translit: va-yomer achi-ha ve-ima-ה teshev ha-naara et-nu yamim o asor
+    en: 'And her brother and her mother said: Let the girl stay with us some days, or ten; afterward she
+      may go. (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: אַחַ֖ר תֵּלֵֽךְ
+    he_translit: achar telekh
+    en: 'us some days, or ten; afterward she may go. (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: event_v55(e) ∧ Agent(e, speaker)
+    he: וַ/יֹּ֤אמֶר
+    he_translit: va-yomer
+    en: 'wayyiqtol narrative/report at 24:55 [VERIFIED: SNAPSHOT HC/Vqw3ms]. Retelling content through
+      48 is speech-report FACT for SPECS (no live push).'
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: Gen 24:55 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_56
+  order: 23
+  ref: Gen.24.56
+  op: V_56
+  he: וַ/יֹּ֤אמֶר אֲלֵ/הֶם֙ אַל תְּאַחֲר֣וּ אֹתִ֔/י וַֽ/יהוָ֖ה הִצְלִ֣יחַ דַּרְכִּ֑/י שַׁלְּח֕וּ/נִי וְ/אֵלְכָ֖ה
+    לַֽ/אדֹנִֽ/י
+  he_translit: va-yomer el-hem el teacharu et-y va-YHWH hitzlicha darki-y shalchu-ni ve-elkha la-doni-y
+  en: '[EN-AID] And he said to them: Do not delay me, since YHWH has prospered my way; send me that I
+    may go to my master.'
+  tree_left:
+    he: וַ/יֹּ֤אמֶר אֲלֵ/הֶם֙ אַל תְּאַחֲר֣וּ אֹתִ֔/י וַֽ/יהוָ֖ה הִצְלִ֣יחַ דַּרְכִּ֑/י
+    he_translit: va-yomer el-hem el teacharu et-y va-YHWH hitzlicha darki-y
+    en: 'And he said to them: Do not delay me, since YHWH has prospered my way; send me that I may go
+      to my master. (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: שַׁלְּח֕וּ/נִי וְ/אֵלְכָ֖ה לַֽ/אדֹנִֽ/י
+    he_translit: shalchu-ni ve-elkha la-doni-y
+    en: 'ed my way; send me that I may go to my master. (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: DECLARE
+    expr_en: DECLARE(ha_eved, LET-NOT(teacharu(ha_eved)))
+    he: אַל־תְּאַחֲרוּ
+    he_translit: al teacharu
+    en: 'LIVE LET-NOT: al (''do not'', HTn) + teacharu (''delay'', HVpj2mp) [VERIFIED: SNAPSHOT 56|2-3].'
+    cites:
+    - TIR-027
+    confidence: tested
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(second_shalchu_ni_resound, t0)
+    he: שַׁלְּחוּנִי
+    he_translit: shalchu-ni
+    en: Second shalchu-ni held as re-sound FACT; first entry still OPEN. ve-elkha cohortative fact.
+    cites: []
+    confidence: tested
+  comment: Gen 24:56 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_57
+  order: 24
+  ref: Gen.24.57
+  op: V_57
+  he: וַ/יֹּאמְר֖וּ נִקְרָ֣א לַֽ/נַּעֲרָ֑ וְ/נִשְׁאֲלָ֖ה אֶת פִּֽי/הָ
+  he_translit: va-yomru niqra la-naara ve-nishala et pi-ha
+  en: '[EN-AID] And they said: Let us call the girl and ask her mouth.'
+  tree_left:
+    he: וַ/יֹּאמְר֖וּ נִקְרָ֣א לַֽ/נַּעֲרָ֑
+    he_translit: va-yomru niqra la-naara
+    en: 'And they said: Let us call the girl and ask her mouth. (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: וְ/נִשְׁאֲלָ֖ה אֶת פִּֽי/הָ
+    he_translit: ve-nishala et pi-ha
+    en: ' (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(ve_nishala_cohortative_fact, t0)
+    he: וְנִשְׁאֲלָה
+    he_translit: ve-nishala
+    en: 've-nishala (''let us ask'', Vqh1cp) [VERIFIED: SNAPSHOT] cohortative FACT, not push on Rivqah.'
+    cites: []
+    confidence: tested
+  comment: Gen 24:57 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_58
+  order: 25
+  ref: Gen.24.58
+  op: V_58
+  he: וַ/יִּקְרְא֤וּ לְ/רִבְקָה֙ וַ/יֹּאמְר֣וּ אֵלֶ֔י/הָ הֲ/תֵלְכִ֖י עִם הָ/אִ֣ישׁ הַ/זֶּ֑ה וַ/תֹּ֖אמֶר
+    אֵלֵֽךְ
+  he_translit: va-yiqru le-rivqa va-yomru ele-ha ha-telkhi im ha-ish ha-ze va-tomer elekh
+  en: '[EN-AID] And they called Rivqah and said to her: Will you go with this man? And she said: I will
+    go.'
+  tree_left:
+    he: וַ/יִּקְרְא֤וּ לְ/רִבְקָה֙ וַ/יֹּאמְר֣וּ אֵלֶ֔י/הָ הֲ/תֵלְכִ֖י עִם הָ/אִ֣ישׁ הַ/זֶּ֑ה
+    he_translit: va-yiqru le-rivqa va-yomru ele-ha ha-telkhi im ha-ish ha-ze
+    en: 'And they called Rivqah and said to her: Will you go with this man? And she said: I will go. (left)
+      [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: וַ/תֹּ֖אמֶר אֵלֵֽךְ
+    he_translit: va-tomer elekh
+    en: 's man? And she said: I will go. (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: call_say(e58) ∧ Agent(e58, house) ∧ Goal(e58, rivqah)
+    he: וַיִּקְרְאוּ … וַתֹּאמֶר
+    he_translit: va-yiqru … va-tomer
+    en: 'They call Rivqah; question ha-telkhi FACT; her elekh (''I will go'', HVqi1cs) FACT consent [VERIFIED:
+      SNAPSHOT].'
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: Gen 24:58 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_59
+  order: 26
+  ref: Gen.24.59
+  op: V_59
+  he: וַֽ/יְשַׁלְּח֛וּ אֶת רִבְקָ֥ה אֲחֹתָ֖/ם וְ/אֶת מֵנִקְתָּ֑/הּ וְ/אֶת עֶ֥בֶד אַבְרָהָ֖ם וְ/אֶת אֲנָשָֽׁי/ו
+  he_translit: va-yeshalchu et rivqa achota-m ve-et meniqta-ה ve-et eved avraham ve-et anashay-v
+  en: '[EN-AID] And they sent Rivqah their sister and her nurse, and Abraham''s servant and his men.'
+  tree_left:
+    he: וַֽ/יְשַׁלְּח֛וּ אֶת רִבְקָ֥ה אֲחֹתָ֖/ם וְ/אֶת מֵנִקְתָּ֑/הּ
+    he_translit: va-yeshalchu et rivqa achota-m ve-et meniqta-ה
+    en: 'And they sent Rivqah their sister and her nurse, and Abraham''s servant and his men. (left) [VERIFIED:
+      SNAPSHOT]'
+  tree_right:
+    he: וְ/אֶת עֶ֥בֶד אַבְרָהָ֖ם וְ/אֶת אֲנָשָֽׁי/ו
+    he_translit: ve-et eved avraham ve-et anashay-v
+    en: '''s servant and his men. (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: RESULT
+    expr_en: HOLDS(shalchu_ni(house), t1)
+    he: וַיְשַׁלְּחוּ
+    he_translit: va-yeshalchu
+    en: 'POP of shalchu_ni: va-yeshalchu same root shalach [VERIFIED: SNAPSHOT]. Demandee house performs.
+      Cycle #19-or-#20 contingent (after gen_40 #17-18 and #18-19).'
+    cites:
+    - TIR-027
+    confidence: tested
+  - op: EVENT
+    expr_en: send_party(e59)
+    he: וַיְשַׁלְּחוּ אֶת־רִבְקָה
+    he_translit: va-yeshalchu et rivqa
+    en: Release EVENT of Rivqah, nurse, servant, men.
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: Gen 24:59 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_60
+  order: 27
+  ref: Gen.24.60
+  op: V_60
+  he: וַ/יְבָרֲכ֤וּ אֶת רִבְקָה֙ וַ/יֹּ֣אמְרוּ לָ֔/הּ אֲחֹתֵ֕/נוּ אַ֥תְּ הֲיִ֖י לְ/אַלְפֵ֣י רְבָבָ֑ה וְ/יִירַ֣שׁ
+    זַרְעֵ֔/ךְ אֵ֖ת שַׁ֥עַר שֹׂנְאָֽי/ו
+  he_translit: va-yevarakhu et rivqa va-yomru la-ה achote-nu et hayi le-alfe revava ve-yirash zare-khe
+    et shaar sonay-v
+  en: '[EN-AID] And they blessed Rivqah and said to her: Our sister, be thousands of myriads, and may
+    your seed possess the gate of those who hate him.'
+  tree_left:
+    he: וַ/יְבָרֲכ֤וּ אֶת רִבְקָה֙ וַ/יֹּ֣אמְרוּ לָ֔/הּ אֲחֹתֵ֕/נוּ אַ֥תְּ הֲיִ֖י לְ/אַלְפֵ֣י רְבָבָ֑ה
+    he_translit: va-yevarakhu et rivqa va-yomru la-ה achote-nu et hayi le-alfe revava
+    en: 'And they blessed Rivqah and said to her: Our sister, be thousands of myriads, and may your seed
+      possess the gate of thos (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: וְ/יִירַ֣שׁ זַרְעֵ֔/ךְ אֵ֖ת שַׁ֥עַר שֹׂנְאָֽי/ו
+    he_translit: ve-yirash zare-khe et shaar sonay-v
+    en: 'sands of myriads, and may your seed possess the gate of those who hate him. (right) [VERIFIED:
+      SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: bless_say(e60) ∧ Agent(e60, house) ∧ Goal(e60, rivqah)
+    he: וַיְבָרֲכוּ … וַיֹּאמְרוּ
+    he_translit: va-yevarakhu … va-yomru
+    en: 'Blessing frame [VERIFIED: SNAPSHOT barakh ord 27].'
+    cites:
+    - TIR-014
+    confidence: tested
+  - op: DECLARE
+    expr_en: DECLARE(house, LET(hayi(rivqah, le_alfe_revava)))
+    he: הֲיִי לְאַלְפֵי רְבָבָה
+    he_translit: hayi le-alfe revava
+    en: 'LIVE PUSH hayi (''BE'', HVqv2fs) [VERIFIED: SNAPSHOT]. Blessing-imperative; stays OPEN (no becoming-myriads
+      EVENT in-span). Gate-of-haters line prose echo of 22:17.'
+    cites:
+    - TIR-027
+    confidence: tested
+  comment: Gen 24:60 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_61
+  order: 28
+  ref: Gen.24.61
+  op: V_61
+  he: וַ/תָּ֨קָם רִבְקָ֜ה וְ/נַעֲרֹתֶ֗י/הָ וַ/תִּרְכַּ֨בְנָה֙ עַל הַ/גְּמַלִּ֔ים וַ/תֵּלַ֖כְנָה אַחֲרֵ֣י
+    הָ/אִ֑ישׁ וַ/יִּקַּ֥ח הָ/עֶ֛בֶד אֶת רִבְקָ֖ה וַ/יֵּלַֽךְ
+  he_translit: va-taqam rivqa ve-naarote-ha va-tirkavna al ha-gemalim va-telakhna achare ha-ish va-yiqach
+    ha-eved et rivqa va-yelakh
+  en: '[EN-AID] And Rivqah and her girls arose and rode the camels and followed the man; and the servant
+    took Rivqah and went.'
+  tree_left:
+    he: וַ/תָּ֨קָם רִבְקָ֜ה וְ/נַעֲרֹתֶ֗י/הָ וַ/תִּרְכַּ֨בְנָה֙ עַל הַ/גְּמַלִּ֔ים וַ/תֵּלַ֖כְנָה אַחֲרֵ֣י
+      הָ/אִ֑ישׁ
+    he_translit: va-taqam rivqa ve-naarote-ha va-tirkavna al ha-gemalim va-telakhna achare ha-ish
+    en: 'And Rivqah and her girls arose and rode the camels and followed the man; and the servant took
+      Rivqah and went. (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: וַ/יִּקַּ֥ח הָ/עֶ֛בֶד אֶת רִבְקָ֖ה וַ/יֵּלַֽךְ
+    he_translit: va-yiqach ha-eved et rivqa va-yelakh
+    en: 'wed the man; and the servant took Rivqah and went. (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: RESULT
+    expr_en: HOLDS(qach_va_lekh(ha_eved, rivqah), t2)
+    he: וַיִּקַּח … וַיֵּלַךְ
+    he_translit: va-yiqach … va-yelakh
+    en: 'POP of compound qach_va_lekh: both roots return foreground by demandee with object Rivqah [VERIFIED:
+      SNAPSHOT 3947/3212]. Full compound return (not partial). Cycle #20-or-#21 contingent.'
+    cites:
+    - TIR-027
+    confidence: tested
+  - op: EVENT
+    expr_en: ride_go(e61) ∧ Agent(e61, rivqah_and_servant)
+    he: וַתִּרְכַּבְנָה … וַיֵּלַךְ
+    he_translit: va-tirkavna … va-yelakh
+    en: Ride debut Strong 7392; departure EVENTs.
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: Gen 24:61 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_62
+  order: 29
+  ref: Gen.24.62
+  op: V_62
+  he: וְ/יִצְחָק֙ בָּ֣א מִ/בּ֔וֹא בְּאֵ֥ר לַחַ֖י רֹאִ֑י וְ/ה֥וּא יוֹשֵׁ֖ב בְּ/אֶ֥רֶץ הַ/נֶּֽגֶב
+  he_translit: ve-yitzchaq ba mi-bo beer lachay roi ve-hu yoshev be-eretz ha-negev
+  en: '[EN-AID] And Isaac came from coming to Beer-lahai-roi; and he was dwelling in the land of the Negev.'
+  tree_left:
+    he: וְ/יִצְחָק֙ בָּ֣א מִ/בּ֔וֹא בְּאֵ֥ר לַחַ֖י רֹאִ֑י
+    he_translit: ve-yitzchaq ba mi-bo beer lachay roi
+    en: 'And Isaac came from coming to Beer-lahai-roi; and he was dwelling in the land of the Negev. (left)
+      [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: וְ/ה֥וּא יוֹשֵׁ֖ב בְּ/אֶ֥רֶץ הַ/נֶּֽגֶב
+    he_translit: ve-hu yoshev be-eretz ha-negev
+    en: 'lling in the land of the Negev. (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: REGISTRY_INSTALL
+    expr_en: WORLD += {yitzchaq}
+    he: יִצְחָק
+    he_translit: yitzchaq
+    en: 'Isaac acting install in this unit [VERIFIED: SNAPSHOT].'
+    cites:
+    - TIR-014
+    confidence: tested
+  - op: NOTE_PRESUPPOSED
+    expr_en: beer_lachai_roi, ha_negev are READ without prior install (known geography / Hagar well tok
+      2)
+    he: בְּאֵר לַחַי רֹאִי
+    he_translit: beer lachai roi
+    en: 'Beer-lahai-roi token 2 [VERIFIED: SNAPSHOT 883 ord 2]; Negev READ.'
+    cites:
+    - TIR-014
+    confidence: tested
+  - op: EVENT
+    expr_en: come_dwell(e62) ∧ Agent(e62, yitzchaq)
+    he: בָּא … יֹשֵׁב
+    he_translit: ba … yoshev
+    en: Isaac arrives from the seeing-well.
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: Gen 24:62 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_63
+  order: 30
+  ref: Gen.24.63
+  op: V_63
+  he: וַ/יֵּצֵ֥א יִצְחָ֛ק לָ/שׂ֥וּחַ בַּ/שָּׂדֶ֖ה לִ/פְנ֣וֹת עָ֑רֶב וַ/יִּשָּׂ֤א עֵינָי/ו֙ וַ/יַּ֔רְא
+    וְ/הִנֵּ֥ה גְמַלִּ֖ים בָּאִֽים
+  he_translit: va-yetze yitzchaq la-sucha ba-sade li-fenot arev va-yisa enay-v va-yar ve-hine gemalim
+    baim
+  en: '[EN-AID] And Isaac went out to meditate in the field toward evening; and he lifted his eyes and
+    saw, and behold camels were coming.'
+  tree_left:
+    he: וַ/יֵּצֵ֥א יִצְחָ֛ק לָ/שׂ֥וּחַ בַּ/שָּׂדֶ֖ה לִ/פְנ֣וֹת עָ֑רֶב
+    he_translit: va-yetze yitzchaq la-sucha ba-sade li-fenot arev
+    en: 'And Isaac went out to meditate in the field toward evening; and he lifted his eyes and saw, and
+      behold camels were comin (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: וַ/יִּשָּׂ֤א עֵינָי/ו֙ וַ/יַּ֔רְא וְ/הִנֵּ֥ה גְמַלִּ֖ים בָּאִֽים
+    he_translit: va-yisa enay-v va-yar ve-hine gemalim baim
+    en: 'and he lifted his eyes and saw, and behold camels were coming. (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: meditate_see(e63) ∧ Agent(e63, yitzchaq)
+    he: לָשׂוּחַ … וַיַּרְא
+    he_translit: la-sucha … va-yar
+    en: 'suach (''meditate'') HAPAX 7742 tok 1 [VERIFIED: SNAPSHOT]; evening field; camels coming.'
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: Gen 24:63 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_64
+  order: 31
+  ref: Gen.24.64
+  op: V_64
+  he: וַ/תִּשָּׂ֤א רִבְקָה֙ אֶת עֵינֶ֔י/הָ וַ/תֵּ֖רֶא אֶת יִצְחָ֑ק וַ/תִּפֹּ֖ל מֵ/עַ֥ל הַ/גָּמָֽל
+  he_translit: va-tisa rivqa et ene-ha va-tere et yitzchaq va-tipol me-al ha-gamal
+  en: '[EN-AID] And Rivqah lifted her eyes and saw Isaac, and she fell from the camel.'
+  tree_left:
+    he: וַ/תִּשָּׂ֤א רִבְקָה֙ אֶת עֵינֶ֔י/הָ וַ/תֵּ֖רֶא אֶת יִצְחָ֑ק
+    he_translit: va-tisa rivqa et ene-ha va-tere et yitzchaq
+    en: 'And Rivqah lifted her eyes and saw Isaac, and she fell from the camel. (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: וַ/תִּפֹּ֖ל מֵ/עַ֥ל הַ/גָּמָֽל
+    he_translit: va-tipol me-al ha-gamal
+    en: 'the camel. (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: event_v64(e) ∧ Agent(e, speaker)
+    he: וַ/תִּשָּׂ֤א
+    he_translit: va-tisa
+    en: 'wayyiqtol narrative/report at 24:64 [VERIFIED: SNAPSHOT HC/Vqw3fs]. Retelling content through
+      48 is speech-report FACT for SPECS (no live push).'
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: Gen 24:64 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_65
+  order: 32
+  ref: Gen.24.65
+  op: V_65
+  he: וַ/תֹּ֣אמֶר אֶל הָ/עֶ֗בֶד מִֽי הָ/אִ֤ישׁ הַלָּזֶה֙ הַ/הֹלֵ֤ךְ בַּ/שָּׂדֶה֙ לִ/קְרָאתֵ֔/נוּ וַ/יֹּ֥אמֶר
+    הָ/עֶ֖בֶד ה֣וּא אֲדֹנִ֑/י וַ/תִּקַּ֥ח הַ/צָּעִ֖יף וַ/תִּתְכָּֽס
+  he_translit: va-tomer el ha-eved mi ha-ish halaze ha-holekh ba-sade li-qerate-nu va-yomer ha-eved hu
+    adoni-y va-tiqach ha-tzaif va-titkas
+  en: '[EN-AID] And she said to the servant: Who is that man walking in the field to meet us? And the
+    servant said: He is my master. And she took the veil and covered herself.'
+  tree_left:
+    he: וַ/תֹּ֣אמֶר אֶל הָ/עֶ֗בֶד מִֽי הָ/אִ֤ישׁ הַלָּזֶה֙ הַ/הֹלֵ֤ךְ בַּ/שָּׂדֶה֙ לִ/קְרָאתֵ֔/נוּ וַ/יֹּ֥אמֶר
+      הָ/עֶ֖בֶד ה֣וּא אֲדֹנִ֑/י
+    he_translit: va-tomer el ha-eved mi ha-ish halaze ha-holekh ba-sade li-qerate-nu va-yomer ha-eved
+      hu adoni-y
+    en: 'And she said to the servant: Who is that man walking in the field to meet us? And the servant
+      said: He is my master. And (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: וַ/תִּקַּ֥ח הַ/צָּעִ֖יף וַ/תִּתְכָּֽס
+    he_translit: va-tiqach ha-tzaif va-titkas
+    en: 'field to meet us? And the servant said: He is my master. And she took the veil and covered herself.
+      (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: ask_answer_veil(e65)
+    he: וַתֹּאמֶר … וַתִּתְכָּס
+    he_translit: va-tomer … va-titkas
+    en: 'Identity question; servant names adoni; tzaif (''veil'') DEBUT 6809 tok 1 [VERIFIED: SNAPSHOT];
+      she covers.'
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: Gen 24:65 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_66
+  order: 33
+  ref: Gen.24.66
+  op: V_66
+  he: וַ/יְסַפֵּ֥ר הָ/עֶ֖בֶד לְ/יִצְחָ֑ק אֵ֥ת כָּל הַ/דְּבָרִ֖ים אֲשֶׁ֥ר עָשָֽׂה
+  he_translit: va-yesaper ha-eved le-yitzchaq et kal ha-devarim asher asa
+  en: '[EN-AID] And the servant told Isaac all the things he had done.'
+  tree_left:
+    he: וַ/יְסַפֵּ֥ר הָ/עֶ֖בֶד לְ/יִצְחָ֑ק
+    he_translit: va-yesaper ha-eved le-yitzchaq
+    en: 'And the servant told Isaac all the things he had done. (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: אֵ֥ת כָּל הַ/דְּבָרִ֖ים אֲשֶׁ֥ר עָשָֽׂה
+    he_translit: et kal ha-devarim asher asa
+    en: ' (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: event_v66(e) ∧ Agent(e, speaker)
+    he: וַ/יְסַפֵּ֥ר
+    he_translit: va-yesaper
+    en: 'wayyiqtol narrative/report at 24:66 [VERIFIED: SNAPSHOT HC/Vpw3ms]. Retelling content through
+      48 is speech-report FACT for SPECS (no live push).'
+    cites:
+    - TIR-014
+    confidence: tested
+  comment: Gen 24:66 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+- id: STEP_Gn_24_67
+  order: 34
+  ref: Gen.24.67
+  op: V_67
+  he: וַ/יְבִאֶ֣/הָ יִצְחָ֗ק הָ/אֹ֨הֱלָ/ה֙ שָׂרָ֣ה אִמּ֔/וֹ וַ/יִּקַּ֧ח אֶת רִבְקָ֛ה וַ/תְּהִי ל֥/וֹ לְ/אִשָּׁ֖ה
+    וַ/יֶּאֱהָבֶ֑/הָ וַ/יִּנָּחֵ֥ם יִצְחָ֖ק אַחֲרֵ֥י אִמּֽ/וֹ
+  he_translit: va-yevie-ha yitzchaq ha-ohela-ה sara im-o va-yiqach et rivqa va-tehi l-o le-isha va-yeehave-ha
+    va-yinachem yitzchaq achare im-o
+  en: '[EN-AID] And Isaac brought her into the tent of Sarah his mother, and took Rivqah, and she became
+    his wife, and he loved her; and Isaac was comforted after his mother.'
+  tree_left:
+    he: וַ/יְבִאֶ֣/הָ יִצְחָ֗ק הָ/אֹ֨הֱלָ/ה֙ שָׂרָ֣ה אִמּ֔/וֹ וַ/יִּקַּ֧ח אֶת רִבְקָ֛ה וַ/תְּהִי ל֥/וֹ
+      לְ/אִשָּׁ֖ה וַ/יֶּאֱהָבֶ֑/הָ
+    he_translit: va-yevie-ha yitzchaq ha-ohela-ה sara im-o va-yiqach et rivqa va-tehi l-o le-isha va-yeehave-ha
+    en: 'And Isaac brought her into the tent of Sarah his mother, and took Rivqah, and she became his
+      wife, and he loved her; and (left) [VERIFIED: SNAPSHOT]'
+  tree_right:
+    he: וַ/יִּנָּחֵ֥ם יִצְחָ֖ק אַחֲרֵ֥י אִמּֽ/וֹ
+    he_translit: va-yinachem yitzchaq achare im-o
+    en: ' took Rivqah, and she became his wife, and he loved her; and Isaac was comforted after his mother.
+      (right) [VERIFIED: SNAPSHOT]'
+  operators:
+  - op: EVENT
+    expr_en: bring_take_love_comfort(e67) ∧ Agent(e67, yitzchaq) ∧ Theme(e67, rivqah)
+    he: וַיְבִאֶהָ … וַיֶּאֱהָבֶהָ … וַיִּנָּחֵם
+    he_translit: va-yevie-ha … va-yeehave-ha … va-yinachem
+    en: 'Marriage arc EVENTs. ahav (''love'') tok 2 [VERIFIED: SNAPSHOT 157 ord 2]. Comfort after mother
+      — cross-wall prose to gen_39 mourning.'
+    cites:
+    - TIR-014
+    confidence: tested
+  - op: PRECONDITION_STATE
+    expr_en: HOLDS(va_tehi_lo_le_isha, t0)
+    he: וַתְּהִי־לוֹ לְאִשָּׁה
+    he_translit: va-tehi lo le-isha
+    en: She became his wife — fact of marriage status.
+    cites: []
+    confidence: tested
+  comment: Gen 24:67 — machine encoding under retelling fence until live field; self-verified morph against
+    SNAPSHOT.
+  confidence: tested
+  source: '[HE-WRITTEN][HE-STRUCT]'
+scenarios:
+- id: S1
+  title_en: after STEP_Gn_24_38 — retelling oath facts; SPECS empty
+  given_en: Standalone gen_41. Speech opened; wealth and retold oath.
+  expect_en: 'SPECS empty;
+
+    no test, no name.'
+  value_he: וְלָקַחְתָּ אִשָּׁה
+  value_he_translit: ve-laqachta isha
+- id: S2
+  title_en: after STEP_Gn_24_49 — hagidu live push
+  given_en: Retelling complete through design memory.
+  expect_en: 'LET(hagidu(li)) pushed and OPEN;
+
+    no test, no name.'
+  value_he: הַגִּידוּ לִי
+  value_he_translit: hagidu li
+- id: S3
+  title_en: after STEP_Gn_24_51 — compound take-go pushed; merism no test at 50
+  given_en: After YHWH-verdict and ra-o-tov.
+  expect_en: 'LET(hagidu(li)) pushed and OPEN;
+
+    LET(qach_va_lekh(ha_eved, rivqah)) pushed and OPEN;
+
+    no test, no name.'
+  value_he: קַח וָלֵךְ
+  value_he_translit: qach va-lekh
+- id: S4
+  title_en: after STEP_Gn_24_56 — send and let-not live
+  given_en: After lodging and first shalchu-ni.
+  expect_en: 'LET(hagidu(li)) pushed and OPEN;
+
+    LET(qach_va_lekh(ha_eved, rivqah)) pushed and OPEN;
+
+    LET(shalchu_ni(house)) pushed and OPEN;
+
+    LET-NOT(teacharu(ha_eved)) pushed and OPEN;
+
+    no test, no name.'
+  value_he: אַל־תְּאַחֲרוּ … שַׁלְּחוּנִי
+  value_he_translit: al teacharu … shalchu-ni
+- id: S5
+  title_en: after STEP_Gn_24_61 — compound and send popped; hayi still open
+  given_en: After consent, release, blessing.
+  expect_en: 'LET(hagidu(li)) pushed and OPEN;
+
+    LET-NOT(teacharu(ha_eved)) pushed and OPEN;
+
+    LET(hayi(rivqah, le_alfe_revava)) pushed and OPEN;
+
+    no test, no name.'
+  value_he: וַיִּקַּח … וַיֵּלַךְ
+  value_he_translit: va-yiqach … va-yelakh
+- id: S6
+  title_en: after STEP_Gn_24_67 — unit end; love and comfort; SPECS residual opens
+  given_en: Isaac meeting complete.
+  expect_en: 'LET(hagidu(li)) pushed and OPEN;
+
+    LET-NOT(teacharu(ha_eved)) pushed and OPEN;
+
+    LET(hayi(rivqah, le_alfe_revava)) pushed and OPEN;
+
+    no test, no name.'
+  value_he: וַיֶּאֱהָבֶהָ … וַיִּנָּחֵם
+  value_he_translit: va-yeehave-ha … va-yinachem

@@ -69,6 +69,35 @@ The owner attaches with this brief:
 - Your general knowledge of Hebrew and the Bible may guide where you
   LOOK, never what you ASSERT.
 
+**The self-verification law (owner order, 2026-08-05 — effective
+piece 2 onward, and retroactively for piece 1):**
+
+Your work must arrive already checked, not merely declared. Every
+factual claim in your draft carries one of two tags:
+
+- **`[VERIFIED: <file>]`** — you re-opened that attached file AT
+  WRITE TIME and re-checked the claim against it. Morph codes →
+  `gen40_morph.txt`; token ordinals and debuts →
+  `gen40_debut_scan.txt`; counts → `gen40_census_out.txt`; verse
+  text and etnachta splits → `gen40_pointed_text.txt`; template
+  conventions and quotes → `gen_39_machpelah_purchase.yaml`;
+  precedent excerpts → the certification message. Verifying means
+  re-reading the source line as you write, never remembering it.
+- **`[UNVERIFIED — main loop]`** — anything your files cannot
+  settle. This stays honorable; some things are main-loop-only by
+  design (snapshot database queries, frozen-corpus quotes beyond
+  your excerpts, Onkelos, JPS English, the interpreter gate).
+
+Three rules ride on the tags: (1) VERIFIED without the source named
+is forbidden — an unsourced VERIFIED is worse than an honest
+UNVERIFIED; (2) if a check FAILS — the file contradicts what you
+meant to write — **the file wins**: correct the claim and log the
+self-catch in your flag ledger (self-caught errors are a feature,
+not a shame); (3) every piece ends with a **VERIFICATION LEDGER**:
+total claims, how many VERIFIED (grouped by source file), and every
+UNVERIFIED item listed one line each — that list becomes the main
+loop's review checklist.
+
 ## 3. The iron rules
 
 1. **Hebrew never appears without English inline. Ever.** Every

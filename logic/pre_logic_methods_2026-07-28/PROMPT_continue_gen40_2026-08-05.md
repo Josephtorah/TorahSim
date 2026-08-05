@@ -1,4 +1,15 @@
-# Resume prompt — FORTY frozen; Machpelah paid 15:15; GROK INTERIM ACTIVE · 2026-08-05
+# Resume prompt — FORTY frozen; Machpelah paid 15:15; GROK HOLDS FULL CONTROL · 2026-08-05
+
+**⚠ FULL HANDOFF IN EFFECT (owner order 2026-08-05, after piece 1):**
+"hand off everything to grok now. No draft, grok takes over full
+control until I return it to you." Grok holds the COORDINATOR role
+(Claude's constraints inherited: commit/next-block/amend/triage all
+still owner-gated; Disclosure untouchable) per the charter
+`grok_package/FULL_HANDOFF_grok_coordinator_2026-08-05.md`. Claude is
+STOOD DOWN until the owner returns control. ON RETURN: audit the full
+Grok tenure (git log since 084526e + `grok_package/GROK_TENURE_
+REPORT.md` + DB re-verification of anything frozen) BEFORE any new
+work.
 
 Paste into the compacted session. (Supersedes PROMPT_continue_gen39.
 Corpus: gen_01..gen_39 = Gen 1:1-23:20 GAPLESS + lev_13 = 40 frozen,
@@ -7,10 +18,13 @@ regression 40/40 GREEN, THIRTY consecutive extension-free.)
 ---
 
 Continue Torah_Grok (private `Josephtorah/Torah_Grok`, main; last PUSHED
-a37b611 = the gen_38 Aqedah wave). **UNCOMMITTED: the ENTIRE gen_39
-freeze wave** (YAML, py_unit, ALL_UNITS.py 40-green, UNIT html,
-UNIT_INDEX, coverage, WATCHLIST_gen39 in middot_scan, FETCHLOG, this
-file, PROMPT_grok_interim_derivation) — COMMIT IS OWNER-ONLY. Protected
+**084526e = the gen_39 Machpelah freeze wave**, 2026-08-05).
+**UNCOMMITTED: none** (only this file's post-push line + protected
+untracked + the live Grok draft in REPO-ROOT `grok_package/` —
+untracked, NEVER commit, symlinked from scratchpad/grok_package for
+Grok's tooling; repo-root `agent_notes/` likewise untracked = the
+permanence copies of gen4-7 handoff notes + gen39/40 staging, owner
+permanence order 2026-08-05). Protected
 untracked (NEVER commit): Disclosure/, NARRATIVE_theory_of_disclosure_
 intro, TEMP_return_to_main.
 
@@ -24,17 +38,42 @@ the frozen files; DO NOT re-present or push rulings. Amendments x3
 likewise parked (gen_34 ordinal = mechanical one-word yes; gen_34
 laugh mood; gen_14 pointing).
 
-**GROK INTERIM (owner order, 2026-08-05):** owner's Claude usage hit
-~89%; owner will run xAI's Grok as interim drafter for gen_40 until
-credits reset. The brief = `PROMPT_grok_interim_derivation_2026-08-05
-.md` (this folder): Grok DRAFTS ONLY from gen-7's pre-stage attachments
-(gen40_staging.md + morph/census/debut files + frozen gen_39 as
-template), small pieces, no Onkelos (buffer deferred), no verse_trees
-(main loop adds), counts only from attached data, everything else
-[UNVERIFIED]. ON RESUME: treat any Grok-produced draft as UNTRUSTED —
-full freeze-after-review (verbatim quotes, censuses vs snapshot, gate,
-regression) catches everything; freeze/commit stays main-loop/owner.
-Back-and-forth relay: owner pastes Grok's replies; answer tight.
+**GROK HOLDS COORDINATOR (owner order 2026-08-05, full handoff):**
+Charter = `grok_package/FULL_HANDOFF_grok_coordinator_2026-08-05.md`.
+Grok = main loop (derive + self-review vs SNAPSHOT DBs + freeze
+ritual when unit ready). Claude STOOD DOWN until owner reversion
+audit. Owner-gates unchanged: commit/push, next-block, amend,
+triage rulings. Disclosure/ never touch. On reversion: Grok writes
+`grok_package/GROK_TENURE_REPORT.md`; Claude audits git + DB.
+
+**SELF-VERIFICATION LAW:** every claim [VERIFIED: source] or
+[UNVERIFIED — main loop]; file-wins; ledger per piece. Coordinator
+also re-runs counts against
+`torah_grok.SNAPSHOT-main-51801ca.sqlite` +
+`debut_map.SNAPSHOT-main-51801ca.sqlite` ATTACH.
+
+**OWNER ORDER "next block" (2026-08-05): RECEIVED.** Authorizes
+seeding **gen_41 = Gen 24:34-67** after gen_40 freezes. Does not
+skip gen_40. Commit still owner-only.
+
+**gen_40 DRAFT STATUS (`grok_package/gen_40_DRAFT.yaml`):**
+- **SPAN COMPLETE draft** Gen **24:1–33** (33 steps + S1–S11).
+  `status: draft`. id `gen_40_servant_oath_well`.
+- SPECS FINAL (draft): **7 OPEN** — hishamer, haqreh(YHWH),
+  aseh_chesed(YHWH), hagmiini, shete, hagidi, **daber (seam)**;
+  **2 POPPED** — sim (#17-or-#18 contingent), bo (#18-or-#19
+  contingent); TESTS **0** (tovat mareh class-fenced).
+- Key weighs encoded: prayer-on-God 24:12; thigh cycle 2→9;
+  lo-tiqach fact; design/live boundary; seam daber OPEN.
+- **Claude pre-freeze directives APPLIED (2026-08-05):** flag15
+place-READ flip; flag24 narrative tovat fence; trees 16-33
+translit+English; TIR-032 at 24:33; bo 61→62 census.
+
+**NEXT COORDINATOR TASKS:** adversarial self-review of full
+  draft vs SNAPSHOT; fix any YAML/scenario gaps; Onkelos BUFFER
+  or fetch protocol; copy to logic/units + freeze ritual (gate,
+  regression 41, renders, watchlist, this file). Then seed gen_41.
+- Commit only on owner word.
 
 **Newest frozen:** `gen_39_machpelah_purchase` (23:1-20, freeze #22,
 gen-7's third, first-run green, 40/40): QAVAR (bury) token 1 = 15:15's
@@ -87,9 +126,9 @@ Usage: owner at ~89% weekly; credits guidance given (Settings>Usage).
 Dev server 8011. TOKEN LEDGER: gen-5 ~575k ret., gen-6 ~500k ret.,
 gen-7 ~510k idle.
 
-**TASK NEXT (owner-gated):** COMMIT the gen_39 wave; relay Grok
-back-and-forth (tight replies); on credits-reset: re-verify any Grok
-draft from scratch; Piece A markup; credo opening apply; narratives
+**TASK NEXT (owner-gated):** relay Grok back-and-forth (tight
+replies; piece 1 = 24:1-5 VERIFIED, morph-exact; "continue" cleared
+for 24:6-10); on credits-reset: re-verify any Grok draft from scratch; Piece A markup; credo opening apply; narratives
 (ASK FIRST); middot v2; Stage E linker; days 2-3 backfill.
 
 **Non-negotiables:** Pre-Code; flags never auto-resolve; dual-track

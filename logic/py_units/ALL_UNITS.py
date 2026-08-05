@@ -4,9 +4,11 @@ Generated at freeze time; run top-to-bottom, each unit asserts its machine truth
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
+
 ###############################################################################
 # UNIT: gen_01_creation_boot
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_01_creation_boot — 1:1-5
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -107,6 +109,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_02_raqia_day
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_02_raqia_day — 1:6-8
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -189,6 +192,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_03_double_build
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_03_double_build — 1:9-13
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -305,6 +309,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_04_lights_calendar
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_04_lights_calendar — 1:14-19
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -428,6 +433,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_05_swarms_blessing
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_05_swarms_blessing — 1:20-23
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -543,6 +549,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_06_land_adam_dominion
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_06_land_adam_dominion — 1:24-31
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -759,6 +766,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_07_completion_sanctity
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_07_completion_sanctity — 2:1-3
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -829,6 +837,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_08_toledot_garden_first_rule
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_08_toledot_garden_first_rule — 2:4-17
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -1079,6 +1088,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_09_helper_woman_first_speech
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_09_helper_woman_first_speech — 2:18-25
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -1236,6 +1246,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_10_serpent_violation_trace
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_10_serpent_violation_trace — 3:1-13
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -1484,6 +1495,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_11_sentences_exile
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_11_sentences_exile — 3:14-24
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -1696,6 +1708,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_12_cain_abel
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_12_cain_abel — 4:1-16
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -1930,6 +1943,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_13_cain_line_seth
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_13_cain_line_seth — 4:17-26
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -2114,6 +2128,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_14_adam_line_ledger
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_14_adam_line_ledger — 5:1-32
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -2490,6 +2505,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_15_flood_prologue
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_15_flood_prologue — 6:1-8
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -2650,6 +2666,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_16_ark_spec
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_16_ark_spec — 6:9-22
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -2875,6 +2892,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_17_boarding
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_17_boarding — 7:1-16
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -3097,6 +3115,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_18_the_rise
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_18_the_rise — 7:17-24
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -3248,6 +3267,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_19_the_remembering
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_19_the_remembering — 8:1-14
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -3497,6 +3517,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_20_exit_altar
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_20_exit_altar — 8:15-22
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -3647,6 +3668,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_21_blessing_blood_law
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_21_blessing_blood_law — 9:1-7
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -3774,6 +3796,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_22_covenant_bow
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_22_covenant_bow — 9:8-17
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -3931,6 +3954,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_23_vineyard_curse
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_23_vineyard_curse — 9:18-29
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -4130,6 +4154,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_24_nations_table
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_24_nations_table — 10:1-32
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -4373,6 +4398,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_25_babel
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_25_babel — 11:1-9
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -4550,6 +4576,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_26_shem_ledger
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_26_shem_ledger — 11:10-32
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -4801,6 +4828,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_27_the_call
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_27_the_call — 12:1-9
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -4992,6 +5020,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_28_egypt_descent
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_28_egypt_descent — 12:10-20
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -5172,6 +5201,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_29_separation_promise
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_29_separation_promise — 13:1-18
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -5454,6 +5484,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_30_war_of_kings
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_30_war_of_kings — 14:1-24
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -5747,6 +5778,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_31_covenant_pieces
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_31_covenant_pieces — 15:1-21
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -6065,6 +6097,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_32_hagar_angel
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_32_hagar_angel — 16:1-16
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -6337,6 +6370,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_33_shaddai_covenant_flesh
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_33_shaddai_covenant_flesh — 17:1-27
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -6675,6 +6709,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_34_mamre_laugh_plea
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_34_mamre_laugh_plea — 18:1-33
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -7065,6 +7100,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_35_sodom_overthrow_cave
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_35_sodom_overthrow_cave — 19:1-38
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -7547,6 +7583,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_36_gerar_dream_prophet
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_36_gerar_dream_prophet — 20:1-18
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -7804,6 +7841,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_37_laughter_wilderness_oath
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_37_laughter_wilderness_oath — 21:1-34
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -8209,6 +8247,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_38_moriah_binding_oath
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_38_moriah_binding_oath — 22:1-24
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -8520,6 +8559,7 @@ if __name__ == "__main__":
 ###############################################################################
 # UNIT: gen_39_machpelah_purchase
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # gen_39_machpelah_purchase — 23:1-20
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -8805,8 +8845,867 @@ if __name__ == "__main__":
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
 
 ###############################################################################
+# UNIT: gen_40_servant_oath_well
+###############################################################################
+#!/usr/bin/env python3
+# =============================================================================
+# gen_40_servant_oath_well — 24:1-33
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_40_servant_oath_well.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter's actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+"""The servant's oath and the well (24:1-33)"""
+from machine import Machine
+
+m = Machine("gen_40_servant_oath_well")
+
+# -------------------------- Gen.24.1 · THE_OLD_AND_THE_BLESSED -------------
+# וְאַבְרָהָ֣ם זָקֵ֔ן בָּ֖א בַּיָּמִ֑ים וַֽיהוָ֛ה בֵּרַ֥ךְ אֶת־אַבְרָהָ֖ם
+# בַּכֹּֽל
+# "[EN-AID] And Abraham was old, advanced in days; and YHWH had blessed
+# Abraham in all."
+m.step("Gen.24.1")
+# ‹אַבְרָהָם … יְהוָה› reads without prior install (flag, not fix): avraham,
+# the-LORD
+m.presupposed("avraham", "YHWH")
+# ‹זָקֵן בָּא בַּיָּמִים … בֵּרַךְ אֶת־אַבְרָהָם בַּכֹּל› fact holds:
+# avraham-zaqen-in-the-in-the-seas; the-LORD-berakh-avraham-in-the-all
+m.fact("avraham_zaqen_ba_ba_yamim",
+       "YHWH_berakh_et_avraham_ba_kol")
+
+# -------------------------- Gen.24.2 · THE_THIGH_GESTURE_DEMAND ------------
+# וַיֹּ֣אמֶר אַבְרָהָ֗ם אֶל־עַבְדּוֹ֙ זְקַ֣ן בֵּית֔וֹ הַמֹּשֵׁ֖ל
+# בְּכָל־אֲשֶׁר־ל֑וֹ שִֽׂים־נָ֥א יָדְךָ֖ תַּ֥חַת יְרֵכִֽי
+# "[EN-AID] And Abraham said to his servant, the elder of his house, who
+# ruled over all that was his: Place, please, your hand under my thigh."
+m.step("Gen.24.2")
+# ‹וַיֹּאמֶר אַבְרָהָם אֶל־עַבְדּוֹ› event: say — agent avraham
+m.event("say", agent="avraham")
+# ‹עַבְדּוֹ … הַמֹּשֵׁל בְּכָל־אֲשֶׁר־לוֹ› the world gains: the-eved
+m.install("ha_eved")
+# ‹שִׂים־נָא יָדְךָ תַּחַת יְרֵכִי› avraham speaks a demand — LET: sim(the-
+# eved, yad-tachat-yerekh)
+m.declare("avraham", "LET",
+          "sim(ha_eved, yad_tachat_yerekh)")
+
+# -------------------------- Gen.24.3 · THE_OATH_FRAME_AND_THE_NOT_TAKE -----
+# וְאַשְׁבִּ֣יעֲךָ֔ בַּֽיהוָה֙ אֱלֹהֵ֣י הַשָּׁמַ֔יִם וֵֽאלֹהֵ֖י הָאָ֑רֶץ
+# אֲשֶׁ֨ר לֹֽא־תִקַּ֤ח אִשָּׁה֙ לִבְנִ֔י מִבְּנוֹת֙ הַֽכְּנַעֲנִ֔י אֲשֶׁ֥ר
+# אָנֹכִ֖י יוֹשֵׁ֥ב בְּקִרְבּֽוֹ
+# "[EN-AID] And I will make you swear by YHWH, God of the heavens and God of
+# the earth, that you shall not take a wife for my son from the daughters of
+# the Canaanite among whom I dwell."
+m.step("Gen.24.3")
+# ‹וְאַשְׁבִּיעֲךָ בַּיהוָה› fact holds: and-ashbia-kha-in-the-the-LORD
+m.fact("ve_ashbia_kha_ba_YHWH")
+# ‹לֹא־תִקַּח אִשָּׁה לִבְנִי מִבְּנוֹת הַכְּנַעֲנִי› fact holds: not-
+# tiqach-isha-to-me-veni-from-benot-the-kenaani
+m.fact("lo_tiqach_isha_li_veni_mi_benot_ha_kenaani")
+
+# -------------------------- Gen.24.4 · THE_GO_AND_THE_TAKE_DUTY ------------
+# כִּ֧י אֶל־אַרְצִ֛י וְאֶל־מוֹלַדְתִּ֖י תֵּלֵ֑ךְ וְלָקַחְתָּ֥ אִשָּׁ֖ה
+# לִבְנִ֥י לְיִצְחָֽק
+# "[EN-AID] But to my land and to my kindred you shall go, and you shall
+# take a wife for my son, for Isaac."
+m.step("Gen.24.4")
+# ‹אֶל־אַרְצִי וְאֶל־מוֹלַדְתִּי תֵּלֵךְ› fact holds: telekh-to-artzi-and-
+# to-moladti
+m.fact("telekh_el_artzi_ve_el_moladti")
+# ‹וְלָקַחְתָּ אִשָּׁה לִבְנִי לְיִצְחָק› fact holds: laqachta(the-eved,
+# isha-to-me-yitzchaq)
+m.fact("laqachta(ha_eved, isha_li_yitzchaq)")
+
+# -------------------------- Gen.24.5 · THE_SERVANT_ASKS_THE_RETURN_CASE ----
+# וַיֹּ֤אמֶר אֵלָיו֙ הָעֶ֔בֶד אוּלַי֙ לֹא־תֹאבֶ֣ה הָֽאִשָּׁ֔ה לָלֶ֥כֶת
+# אַחֲרַ֖י אֶל־הָאָ֣רֶץ הַזֹּ֑את הֶֽהָשֵׁ֤ב אָשִׁיב֙ אֶת־בִּנְךָ֔
+# אֶל־הָאָ֖רֶץ אֲשֶׁר־יָצָ֥אתָ מִשָּֽׁם
+# "[EN-AID] And the servant said to him: Perhaps the woman will not be
+# willing to follow me to this land; shall I indeed bring your son back to
+# the land from which you came?"
+m.step("Gen.24.5")
+# ‹וַיֹּאמֶר אֵלָיו הָעֶבֶד› event: say — agent the-eved
+m.event("say", agent="ha_eved")
+# ‹אוּלַי לֹא־תֹאבֶה … הֶהָשֵׁב אָשִׁיב› fact holds: ulay-not-tove-the-isha-
+# to-lekhet; question-he-hashev-ashiv
+m.fact("ulay_lo_tove_ha_isha_la_lekhet",
+       "question_he_hashev_ashiv")
+
+# -------------------------- Gen.24.6 · THE_GUARD_LEST_YOU_RETURN -----------
+# וַיֹּ֥אמֶר אֵלָ֖יו אַבְרָהָ֑ם הִשָּׁ֣מֶר לְךָ֔ פֶּן־תָּשִׁ֥יב אֶת־בְּנִ֖י
+# שָֽׁמָּה
+# "[EN-AID] And Abraham said to him: Guard yourself, lest you return my son
+# there."
+m.step("Gen.24.6")
+# ‹וַיֹּאמֶר אֵלָיו אַבְרָהָם› event: say — agent avraham
+m.event("say", agent="avraham")
+# ‹הִשָּׁמֶר לְךָ פֶּן־תָּשִׁיב אֶת־בְּנִי שָׁמָּה› avraham speaks a demand
+# — LET: hishamer(the-eved, lest-tashiv-beni-shama)
+m.declare("avraham", "LET",
+          "hishamer(ha_eved, pen_tashiv_et_beni_shama)")
+
+# -------------------------- Gen.24.7 · THE_PAST_OATH_AND_THE_ANGEL_PROMISE -
+# יְהוָ֣ה אֱלֹהֵ֣י הַשָּׁמַ֗יִם אֲשֶׁ֨ר לְקָחַ֜נִי מִבֵּ֣ית אָבִי֮
+# וּמֵאֶ֣רֶץ מֽוֹלַדְתִּי֒ וַאֲשֶׁ֨ר דִּבֶּר־לִ֜י וַאֲשֶׁ֤ר נִֽשְׁבַּֽע־לִי֙
+# לֵאמֹ֔ר לְזַ֨רְעֲךָ֔ אֶתֵּ֖ן אֶת־הָאָ֣רֶץ הַזֹּ֑את ה֗וּא יִשְׁלַ֤ח
+# מַלְאָכוֹ֙ לְפָנֶ֔יךָ וְלָקַחְתָּ֥ אִשָּׁ֛ה לִבְנִ֖י מִשָּֽׁם
+# "[EN-AID] YHWH, God of the heavens, who took me from my father's house and
+# from the land of my kindred, and who spoke to me and who swore to me,
+# saying, To your seed I will give this land — He will send His angel before
+# you, and you shall take a wife for my son from there."
+m.step("Gen.24.7")
+# ‹נִשְׁבַּע־לִי … אֶתֵּן אֶת־הָאָרֶץ הַזֹּאת› fact holds: past-oath-nishba-
+# to-me; quoted-eten-to-zara-kha
+m.fact("past_oath_nishba_li",
+       "quoted_eten_le_zara_kha")
+# ‹הוּא יִשְׁלַח מַלְאָכוֹ לְפָנֶיךָ› fact holds: yishlach-malakh-o-to-fane-
+# kha
+m.fact("yishlach_malakh_o_le_fane_kha")
+# ‹וְלָקַחְתָּ אִשָּׁה לִבְנִי מִשָּׁם› fact holds: laqachta(the-eved, isha-
+# to-me-veni-from-there)
+m.fact("laqachta(ha_eved, isha_li_veni_mi_sham)")
+
+# -------------------------- Gen.24.8 · THE_RELEASE_CONDITION ---------------
+# וְאִם־לֹ֨א תֹאבֶ֤ה הָֽאִשָּׁה֙ לָלֶ֣כֶת אַחֲרֶ֔יךָ וְנִקִּ֕יתָ
+# מִשְּׁבֻעָתִ֖י זֹ֑את רַ֣ק אֶת־בְּנִ֔י לֹ֥א תָשֵׁ֖ב שָֽׁמָּה
+# "[EN-AID] And if the woman is not willing to follow you, then you shall be
+# free from this my oath; only my son you shall not return there."
+m.step("Gen.24.8")
+# ‹וְאִם־לֹא תֹאבֶה … וְנִקִּיתָ מִשְּׁבֻעָתִי זֹאת› fact holds: release-if-
+# not-tove-then-niqita-from-shevuah
+m.fact("release_if_lo_tove_then_niqita_mi_shevuah")
+# ‹רַק אֶת־בְּנִי לֹא תָשֵׁב שָׁמָּה› fact holds: raq-beni-not-tashev-shama
+m.fact("raq_et_beni_lo_tashev_shama")
+
+# -------------------------- Gen.24.9 · THE_THIGH_POP_AND_THE_SWEAR ---------
+# וַיָּ֤שֶׂם הָעֶ֨בֶד֙ אֶת־יָד֔וֹ תַּ֛חַת יֶ֥רֶךְ אַבְרָהָ֖ם אֲדֹנָ֑יו
+# וַיִּשָּׁ֣בַֽע ל֔וֹ עַל־הַדָּבָ֖ר הַזֶּֽה
+# "[EN-AID] And the servant placed his hand under the thigh of Abraham his
+# master, and swore to him concerning this matter."
+m.step("Gen.24.9")
+# ‹וַיָּשֶׂם הָעֶבֶד אֶת־יָדוֹ תַּחַת יֶרֶךְ אַבְרָהָם› demand settled
+# (popped from the queue): sim(the-eved, yad-tachat-yerekh)
+m.result("sim(ha_eved, yad_tachat_yerekh)", tmark="t1")
+# ‹וַיִּשָּׁבַע לוֹ עַל־הַדָּבָר הַזֶּה› event: swear — agent the-eved;
+# theme the-davar-the-ze
+m.event("swear", agent="ha_eved", themes=["ha_davar_ha_ze"])
+
+# -------------------------- Gen.24.10 · THE_JOURNEY_TO_ARAM_NAHARAYIM ------
+# וַיִּקַּ֣ח הָ֠עֶבֶד עֲשָׂרָ֨ה גְמַלִּ֜ים מִגְּמַלֵּ֤י אֲדֹנָיו֙ וַיֵּ֔לֶךְ
+# וְכָל־ט֥וּב אֲדֹנָ֖יו בְּיָד֑וֹ וַיָּ֗קָם וַיֵּ֛לֶךְ אֶל־אֲרַ֥ם
+# נַֽהֲרַ֖יִם אֶל־עִ֥יר נָחֽוֹר
+# "[EN-AID] And the servant took ten camels from his master's camels and
+# went, with all his master's goods in his hand; and he rose and went to
+# Aram-naharayim, to the city of Nahor."
+m.step("Gen.24.10")
+# ‹וַיִּקַּח … וַיֵּלֶךְ … וַיָּקָם וַיֵּלֶךְ› event: take-go-rise-go —
+# agent the-eved; theme gemalim-tuv
+m.event("take_go_rise_go", agent="ha_eved", themes=["gemalim_tuv"])
+# ‹אֲרַם נַהֲרַיִם … עִיר נָחוֹר› reads without prior install (flag, not
+# fix): aram-naharayim, ir-nachor
+m.presupposed("aram_naharayim", "ir_nachor")
+
+# -------------------------- Gen.24.11 · THE_CAMELS_AT_THE_WELL -------------
+# וַיַּבְרֵ֧ךְ הַגְּמַלִּ֛ים מִח֥וּץ לָעִ֖יר אֶל־בְּאֵ֣ר הַמָּ֑יִם לְעֵ֣ת
+# עֶ֔רֶב לְעֵ֖ת צֵ֥את הַשֹּׁאֲבֹֽת
+# "[EN-AID] And he made the camels kneel outside the city by the well of
+# water, at evening time, the time the water-drawers go out."
+m.step("Gen.24.11")
+# ‹וַיַּבְרֵךְ הַגְּמַלִּים … אֶל־בְּאֵר הַמָּיִם› event: kneel-camels —
+# agent the-eved; theme the-gemalim
+m.event("kneel_camels", agent="ha_eved", themes=["ha_gemalim"])
+
+# -------------------------- Gen.24.12 · THE_PRAYER_IMPERATIVES_AT_YHWH -----
+# וַיֹּאמַ֓ר יְהוָ֗ה אֱלֹהֵי֙ אֲדֹנִ֣י אַבְרָהָ֔ם הַקְרֵה־נָ֥א לְפָנַ֖י
+# הַיּ֑וֹם וַעֲשֵׂה־חֶ֕סֶד עִ֖ם אֲדֹנִ֥י אַבְרָהָֽם
+# "[EN-AID] And he said: YHWH, God of my master Abraham, cause it to happen
+# before me today, and do kindness with my master Abraham."
+m.step("Gen.24.12")
+# ‹וַיֹּאמַר› event: say — agent the-eved
+m.event("say", agent="ha_eved")
+# ‹הַקְרֵה־נָא לְפָנַי הַיּוֹם› the-eved speaks a demand — LET: haqreh(the-
+# LORD, before-Me-hayom)
+m.declare("ha_eved", "LET",
+          "haqreh(YHWH, lefanai_hayom)")
+# ‹וַעֲשֵׂה־חֶסֶד עִם אֲדֹנִי אַבְרָהָם› the-eved speaks a demand — LET:
+# make-chesed(the-LORD, if-adoni-avraham)
+m.declare("ha_eved", "LET",
+          "aseh_chesed(YHWH, im_adoni_avraham)")
+
+# -------------------------- Gen.24.13 · THE_STANDING_AT_THE_SPRING ---------
+# הִנֵּ֛ה אָנֹכִ֥י נִצָּ֖ב עַל־עֵ֣ין הַמָּ֑יִם וּבְנוֹת֙ אַנְשֵׁ֣י הָעִ֔יר
+# יֹצְאֹ֖ת לִשְׁאֹ֥ב מָֽיִם
+# "[EN-AID] Behold, I am standing by the spring of water, and the daughters
+# of the men of the city are coming out to draw water."
+m.step("Gen.24.13")
+# ‹אָנֹכִי נִצָּב … יֹצְאֹת לִשְׁאֹב› fact holds: anokhi-nitzav-upon-en-the-
+# waters; daughters-yotzot-to-me-sheov
+m.fact("anokhi_nitzav_al_en_ha_mayim",
+       "banot_yotzot_li_sheov")
+
+# -------------------------- Gen.24.14 · THE_DESIGNED_SIGN ------------------
+# וְהָיָ֣ה הַֽנַּעֲרָ֗ אֲשֶׁ֨ר אֹמַ֤ר אֵלֶ֨יהָ֙ הַטִּי־נָ֤א כַדֵּךְ֙
+# וְאֶשְׁתֶּ֔ה וְאָמְרָ֣ה שְׁתֵ֔ה וְגַם־גְּמַלֶּ֖יךָ אַשְׁקֶ֑ה אֹתָ֤הּ
+# הֹכַ֨חְתָּ֙ לְעַבְדְּךָ֣ לְיִצְחָ֔ק וּבָ֣הּ אֵדַ֔ע כִּי־עָשִׂ֥יתָ חֶ֖סֶד
+# עִם־אֲדֹנִֽי
+# "[EN-AID] And let it be the girl to whom I say, Tip your pitcher please
+# that I may drink, and she says, Drink, and I will also water your camels —
+# her You have appointed for Your servant, for Isaac; and by her I shall
+# know that You have done kindness with my master."
+m.step("Gen.24.14")
+# ‹הַטִּי־נָא … שְׁתֵה … אַשְׁקֶה› fact holds: designed-sign-oracle
+m.fact("designed_sign_oracle")
+# ‹אֹתָהּ הֹכַחְתָּ לְעַבְדְּךָ לְיִצְחָק› fact holds: hokhachta-
+# appointment-criterion
+m.fact("hokhachta_appointment_criterion")
+
+# -------------------------- Gen.24.15 · RIVQAH_APPEARS ---------------------
+# וַֽיְהִי־ה֗וּא טֶרֶם֮ כִּלָּ֣ה לְדַבֵּר֒ וְהִנֵּ֧ה רִבְקָ֣ה יֹצֵ֗את
+# אֲשֶׁ֤ר יֻלְּדָה֙ לִבְתוּאֵ֣ל בֶּן־מִלְכָּ֔ה אֵ֥שֶׁת נָח֖וֹר אֲחִ֣י
+# אַבְרָהָ֑ם וְכַדָּ֖הּ עַל־שִׁכְמָֽהּ
+# "[EN-AID] And it was, before he had finished speaking, that behold Rivqah
+# was coming out — who was born to Betuel son of Milcah, wife of Nahor
+# brother of Abraham — and her pitcher on her shoulder."
+m.step("Gen.24.15")
+# ‹וַיְהִי … טֶרֶם כִּלָּה לְדַבֵּר וְהִנֵּה רִבְקָה יֹצֵאת› event: appear —
+# theme rivqah
+m.event("appear", themes=["rivqah"])
+# ‹רִבְקָה› the world gains: rivqah
+m.install("rivqah")
+
+# -------------------------- Gen.24.16 · THE_GIRL_ATTRIBUTE_AND_THE_WELL_ACT -
+# וְהַֽנַּעֲרָ֗ טֹבַ֤ת מַרְאֶה֙ מְאֹ֔ד בְּתוּלָ֕ה וְאִ֖ישׁ לֹ֣א יְדָעָ֑הּ
+# וַתֵּ֣רֶד הָעַ֔יְנָה וַתְּמַלֵּ֥א כַדָּ֖הּ וַתָּֽעַל
+# "[EN-AID] And the girl was very fair of appearance, a virgin, and no man
+# had known her; and she went down to the spring and filled her pitcher and
+# came up."
+m.step("Gen.24.16")
+# ‹טֹבַת מַרְאֶה› fact holds: tovat-appearance-attribute
+m.fact("tovat_mareh_attribute")
+# ‹וַתֵּרֶד … וַתְּמַלֵּא … וַתָּעַל› event: descend-fill-ascend — agent
+# rivqah
+m.event("descend_fill_ascend", agent="rivqah")
+
+# -------------------------- Gen.24.17 · THE_LIVE_SIP_DEMAND ----------------
+# וַיָּ֥רָץ הָעֶ֖בֶד לִקְרָאתָ֑הּ וַיֹּ֕אמֶר הַגְמִיאִ֥ינִי נָ֛א
+# מְעַט־מַ֖יִם מִכַּדֵּֽךְ
+# "[EN-AID] And the servant ran to meet her and said: Let me sip, please, a
+# little water from your pitcher."
+m.step("Gen.24.17")
+# ‹וַיָּרָץ … וַיֹּאמֶר› event: run-say — agent the-eved
+m.event("run_say", agent="ha_eved")
+# ‹הַגְמִיאִינִי נָא› the-eved speaks a demand — LET: hagmiini(rivqah, meat-
+# waters)
+m.declare("ha_eved", "LET",
+          "hagmiini(rivqah, meat_mayim)")
+
+# -------------------------- Gen.24.18 · DRINK_MY_LORD_AND_THE_WATERING -----
+# וַתֹּ֖אמֶר שְׁתֵ֣ה אֲדֹנִ֑י וַתְּמַהֵ֗ר וַתֹּ֧רֶד כַּדָּ֛הּ עַל־יָדָ֖הּ
+# וַתַּשְׁקֵֽהוּ
+# "[EN-AID] And she said: Drink, my lord; and she hurried and lowered her
+# pitcher on her hand and gave him drink."
+m.step("Gen.24.18")
+# ‹שְׁתֵה אֲדֹנִי› rivqah speaks a demand — LET: shete(the-eved)
+m.declare("rivqah", "LET",
+          "shete(ha_eved)")
+# ‹וַתְּמַהֵר … וַתַּשְׁקֵהוּ› event: water — agent rivqah
+m.event("water", agent="rivqah")
+
+# -------------------------- Gen.24.19 · THE_OVERPERFORMANCE_PROMISE --------
+# וַתְּכַ֖ל לְהַשְׁקֹת֑וֹ וַתֹּ֗אמֶר גַּ֤ם לִגְמַלֶּ֨יךָ֙ אֶשְׁאָ֔ב עַ֥ד
+# אִם־כִּלּ֖וּ לִשְׁתֹּֽת
+# "[EN-AID] And she finished giving him drink, and said: Also for your
+# camels I will draw until they have finished drinking."
+m.step("Gen.24.19")
+# ‹וַתְּכַל לְהַשְׁקֹתוֹ› event: finish-watering — agent rivqah
+m.event("finish_watering", agent="rivqah")
+# ‹גַּם לִגְמַלֶּיךָ אֶשְׁאָב› fact holds: promise-eshav-to-me-gemale-kha
+m.fact("promise_eshav_li_gemale_kha")
+
+# -------------------------- Gen.24.20 · THE_CAMELS_WATERED -----------------
+# וַתְּמַהֵ֗ר וַתְּעַ֤ר כַּדָּהּ֙ אֶל־הַשֹּׁ֔קֶת וַתָּ֥רָץ ע֛וֹד
+# אֶֽל־הַבְּאֵ֖ר לִשְׁאֹ֑ב וַתִּשְׁאַ֖ב לְכָל־גְּמַלָּֽיו
+# "[EN-AID] And she hurried and emptied her pitcher into the trough and ran
+# again to the well to draw, and she drew for all his camels."
+m.step("Gen.24.20")
+# ‹וַתְּמַהֵר וַתְּעַר … וַתָּרָץ … וַתִּשְׁאַב› event: empty-run-draw —
+# agent rivqah; theme all-camels
+m.event("empty_run_draw", agent="rivqah", themes=["all_camels"])
+
+# -------------------------- Gen.24.21 · THE_SILENT_GAZE --------------------
+# וְהָאִ֥ישׁ מִשְׁתָּאֵ֖ה לָ֑הּ מַחֲרִ֕ישׁ לָדַ֗עַת הַֽהִצְלִ֧יחַ יְהוָ֛ה
+# דַּרְכּ֖וֹ אִם־לֹֽא
+# "[EN-AID] And the man was gazing at her, keeping silent, to know whether
+# YHWH had prospered his way or not."
+m.step("Gen.24.21")
+# ‹מִשְׁתָּאֵה … מַחֲרִישׁ … הֲהִצְלִיחַ› fact holds: gazing-silent-wonder
+m.fact("gazing_silent_wonder")
+
+# -------------------------- Gen.24.22 · THE_GIFTS_OF_GOLD ------------------
+# וַיְהִ֗י כַּאֲשֶׁ֨ר כִּלּ֤וּ הַגְּמַלִּים֙ לִשְׁתּ֔וֹת וַיִּקַּ֤ח הָאִישׁ֙
+# נֶ֣זֶם זָהָ֔ב בֶּ֖קַע מִשְׁקָל֑וֹ וּשְׁנֵ֤י צְמִידִים֙ עַל־יָדֶ֔יהָ
+# עֲשָׂרָ֥ה זָהָ֖ב מִשְׁקָלָֽם
+# "[EN-AID] And when the camels had finished drinking, the man took a gold
+# nose-ring, a beqa its weight, and two bracelets on her hands, ten of gold
+# their weight."
+m.step("Gen.24.22")
+# ‹וַיִּקַּח … נֶזֶם … צְמִידִים› event: take-gifts — agent the-eved; theme
+# nezem-tzamid
+m.event("take_gifts", agent="ha_eved", themes=["nezem_tzamid"])
+
+# -------------------------- Gen.24.23 · TELL_ME_WHOSE_DAUGHTER -------------
+# וַיֹּ֨אמֶר֙ בַּת־מִ֣י אַ֔תְּ הַגִּ֥ידִי נָ֖א לִ֑י הֲיֵ֧שׁ בֵּית־אָבִ֛יךְ
+# מָק֥וֹם לָ֖נוּ לָלִֽין
+# "[EN-AID] And he said: Whose daughter are you? Tell me, please. Is there
+# in your father's house a place for us to lodge?"
+m.step("Gen.24.23")
+# ‹וַיֹּאמֶר› event: say — agent the-eved
+m.event("say", agent="ha_eved")
+# ‹הַגִּידִי נָא לִי› the-eved speaks a demand — LET: hagidi(rivqah, bat-
+# from)
+m.declare("ha_eved", "LET",
+          "hagidi(rivqah, bat_mi)")
+
+# -------------------------- Gen.24.24 · THE_LINEAGE_ANSWER -----------------
+# וַתֹּ֣אמֶר אֵלָ֔יו בַּת־בְּתוּאֵ֖ל אָנֹ֑כִי בֶּן־מִלְכָּ֕ה אֲשֶׁ֥ר
+# יָלְדָ֖ה לְנָחֽוֹר
+# "[EN-AID] And she said to him: I am the daughter of Betuel, son of Milcah,
+# whom she bore to Nahor."
+m.step("Gen.24.24")
+# ‹וַתֹּאמֶר› event: say — agent rivqah
+m.event("say", agent="rivqah")
+# ‹בַּת־בְּתוּאֵל … לְנָחוֹר› fact holds: rivqah-bat-betuel-line
+m.fact("rivqah_bat_betuel_line")
+
+# -------------------------- Gen.24.25 · STRAW_AND_FODDER_AND_ROOM ----------
+# וַתֹּ֣אמֶר אֵלָ֔יו גַּם־תֶּ֥בֶן גַּם־מִסְפּ֖וֹא רַ֣ב עִמָּ֑נוּ
+# גַּם־מָק֖וֹם לָלֽוּן
+# "[EN-AID] And she said to him: Also straw, also fodder, much with us; also
+# a place to lodge."
+m.step("Gen.24.25")
+# ‹וַתֹּאמֶר› event: say — agent rivqah
+m.event("say", agent="rivqah")
+
+# -------------------------- Gen.24.26 · THE_BOW_TO_YHWH --------------------
+# וַיִּקֹּ֣ד הָאִ֔ישׁ וַיִּשְׁתַּ֖חוּ לַֽיהוָֽה
+# "[EN-AID] And the man bowed the head and prostrated himself to YHWH."
+m.step("Gen.24.26")
+# ‹וַיִּקֹּד … וַיִּשְׁתַּחוּ לַיהוָה› event: bow-prostrate — agent the-eved
+m.event("bow_prostrate", agent="ha_eved")
+
+# -------------------------- Gen.24.27 · BLESSED_BE_YHWH_KINDNESS_AND_TRUTH -
+# וַיֹּ֗אמֶר בָּר֤וּךְ יְהוָה֙ אֱלֹהֵי֙ אֲדֹנִ֣י אַבְרָהָ֔ם אֲ֠שֶׁר
+# לֹֽא־עָזַ֥ב חַסְדּ֛וֹ וַאֲמִתּ֖וֹ מֵעִ֣ם אֲדֹנִ֑י אָנֹכִ֗י בַּדֶּ֨רֶךְ֙
+# נָחַ֣נִי יְהוָ֔ה בֵּ֖ית אֲחֵ֥י אֲדֹנִֽי
+# "[EN-AID] And he said: Blessed be YHWH, God of my master Abraham, who has
+# not forsaken His kindness and His truth from with my master; I being on
+# the way, YHWH led me to the house of my master's brothers."
+m.step("Gen.24.27")
+# ‹וַיֹּאמֶר› event: say — agent the-eved
+m.event("say", agent="ha_eved")
+# ‹בָּרוּךְ יְהוָה … חַסְדּוֹ וַאֲמִתּוֹ› fact holds: barukh-the-LORD-
+# chesed-and-emet
+m.fact("barukh_YHWH_chesed_ve_emet")
+
+# -------------------------- Gen.24.28 · SHE_RUNS_AND_TELLS -----------------
+# וַתָּ֨רָץ֙ הַֽנַּעֲרָ֔ וַתַּגֵּ֖ד לְבֵ֣ית אִמָּ֑הּ כַּדְּבָרִ֖ים הָאֵֽלֶּה
+# "[EN-AID] And the girl ran and told her mother's household these things."
+m.step("Gen.24.28")
+# ‹וַתָּרָץ … וַתַּגֵּד› event: run-tell — agent rivqah
+m.event("run_tell", agent="rivqah")
+
+# -------------------------- Gen.24.29 · LABAN_RUNS -------------------------
+# וּלְרִבְקָ֥ה אָ֖ח וּשְׁמ֣וֹ לָבָ֑ן וַיָּ֨רָץ לָבָ֧ן אֶל־הָאִ֛ישׁ הַח֖וּצָה
+# אֶל־הָעָֽיִן
+# "[EN-AID] And Rivqah had a brother, and his name was Laban; and Laban ran
+# to the man outside, to the spring."
+m.step("Gen.24.29")
+# ‹וּשְׁמוֹ לָבָן› the world gains: lavan
+m.install("lavan")
+
+# -------------------------- Gen.24.30 · HE_SEES_THE_GIFTS_AND_COMES --------
+# וַיְהִ֣י כִּרְאֹ֣ת אֶת־הַנֶּ֗זֶם וְֽאֶת־הַצְּמִדִים֮ עַל־יְדֵ֣י אֲחֹתוֹ֒
+# וּכְשָׁמְע֗וֹ אֶת־דִּבְרֵ֞י רִבְקָ֤ה אֲחֹתוֹ֙ לֵאמֹ֔ר כֹּֽה־דִבֶּ֥ר אֵלַ֖י
+# הָאִ֑ישׁ וַיָּבֹא֙ אֶל־הָאִ֔ישׁ וְהִנֵּ֛ה עֹמֵ֥ד עַל־הַגְּמַלִּ֖ים
+# עַל־הָעָֽיִן
+# "[EN-AID] And when he saw the nose-ring and the bracelets on his sister's
+# hands, and when he heard the words of Rivqah his sister saying, Thus the
+# man spoke to me, he came to the man; and behold, standing by the camels at
+# the spring."
+m.step("Gen.24.30")
+# ‹כִּרְאֹת … וּכְשָׁמְעוֹ … וַיָּבֹא› event: see-hear-come — agent lavan
+m.event("see_hear_come", agent="lavan")
+
+# -------------------------- Gen.24.31 · COME_IN_O_BLESSED_OF_YHWH ----------
+# וַיֹּ֕אמֶר בּ֖וֹא בְּר֣וּךְ יְהוָ֑ה לָ֤מָּה תַעֲמֹד֙ בַּח֔וּץ וְאָנֹכִי֙
+# פִּנִּ֣יתִי הַבַּ֔יִת וּמָק֖וֹם לַגְּמַלִּֽים
+# "[EN-AID] And he said: Come in, O blessed of YHWH; why do you stand
+# outside? And I have cleared the house, and a place for the camels."
+m.step("Gen.24.31")
+# ‹בּוֹא› lavan speaks a demand — LET: in-it(the-eved)
+m.declare("lavan", "LET",
+          "bo(ha_eved)")
+
+# -------------------------- Gen.24.32 · HE_ENTERS_AND_IS_SERVED ------------
+# וַיָּבֹ֤א הָאִישׁ֙ הַבַּ֔יְתָה וַיְפַתַּ֖ח הַגְּמַלִּ֑ים וַיִּתֵּ֨ן
+# תֶּ֤בֶן וּמִסְפּוֹא֙ לַגְּמַלִּ֔ים וּמַ֨יִם֙ לִרְחֹ֣ץ רַגְלָ֔יו וְרַגְלֵ֥י
+# הָאֲנָשִׁ֖ים אֲשֶׁ֥ר אִתּֽוֹ
+# "[EN-AID] And the man came to the house and unmuzzled the camels; and he
+# gave straw and fodder to the camels, and water to wash his feet and the
+# feet of the men who were with him."
+m.step("Gen.24.32")
+# ‹וַיָּבֹא הָאִישׁ הַבַּיְתָה› demand settled (popped from the queue): in-
+# it(the-eved)
+m.result("bo(ha_eved)", tmark="t2")
+# ‹וַיְפַתַּח … וַיִּתֵּן … לִרְחֹץ› event: serve-camels-and-feet
+m.event("serve_camels_and_feet")
+
+# -------------------------- Gen.24.33 · THE_SEAM_SPEAK_DEMAND --------------
+# ויישם וַיּוּשַׂ֤ם לְפָנָיו֙ לֶאֱכֹ֔ל וַיֹּ֨אמֶר֙ לֹ֣א אֹכַ֔ל עַ֥ד
+# אִם־דִּבַּ֖רְתִּי דְּבָרָ֑י וַיֹּ֖אמֶר דַּבֵּֽר
+# "[EN-AID] And food was set before him to eat; and he said: I will not eat
+# until I have spoken my words. And he said: Speak."
+m.step("Gen.24.33")
+# ‹וַיּוּשַׂם … וַיֹּאמֶר לֹא אֹכַל … וַיֹּאמֶר דַּבֵּר› event: food-set
+m.event("food_set")
+# ‹דַּבֵּר› house-voice speaks a demand — LET: daber(the-eved)
+m.declare("house_voice", "LET",
+          "daber(ha_eved)")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == {'lavan', 'ha_eved', 'rivqah'}
+    assert m.presupposed_set() == {'ir_nachor', 'avraham', 'aram_naharayim', 'YHWH'}
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == ['hishamer(ha_eved, pen_tashiv_et_beni_shama)', 'haqreh(YHWH, lefanai_hayom)', 'aseh_chesed(YHWH, im_adoni_avraham)', 'hagmiini(rivqah, meat_mayim)', 'shete(ha_eved)', 'hagidi(rivqah, bat_mi)', 'daber(ha_eved)']
+    assert len(m.SPECS["log"]) == 9
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {'read_before_install': 4}
+    assert sorted(m.WORLD["facts"]) == sorted(['avraham_zaqen_ba_ba_yamim', 'YHWH_berakh_et_avraham_ba_kol', 've_ashbia_kha_ba_YHWH', 'lo_tiqach_isha_li_veni_mi_benot_ha_kenaani', 'telekh_el_artzi_ve_el_moladti', 'laqachta(ha_eved, isha_li_yitzchaq)', 'ulay_lo_tove_ha_isha_la_lekhet', 'question_he_hashev_ashiv', 'past_oath_nishba_li', 'quoted_eten_le_zara_kha', 'yishlach_malakh_o_le_fane_kha', 'laqachta(ha_eved, isha_li_veni_mi_sham)', 'release_if_lo_tove_then_niqita_mi_shevuah', 'raq_et_beni_lo_tashev_shama', 'anokhi_nitzav_al_en_ha_mayim', 'banot_yotzot_li_sheov', 'designed_sign_oracle', 'hokhachta_appointment_criterion', 'tovat_mareh_attribute', 'promise_eshav_li_gemale_kha', 'gazing_silent_wonder', 'rivqah_bat_betuel_line', 'barukh_YHWH_chesed_ve_emet'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 34
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+###############################################################################
+# UNIT: gen_41_retelling_release_meeting
+###############################################################################
+#!/usr/bin/env python3
+# =============================================================================
+# gen_41_retelling_release_meeting — 24:34-67
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_41_retelling_release_meeting.yaml) is CANONICAL
+# (Pre-Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter's actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+"""The retelling, the release, and the meeting (24:34-67)"""
+from machine import Machine
+
+m = Machine("gen_41_retelling_release_meeting")
+
+# -------------------------- Gen.24.34 · V_34 -------------------------------
+# וַ/יֹּאמַ֑ר עֶ֥בֶד אַבְרָהָ֖ם אָנֹֽכִי
+# "[EN-AID] And he said: I am Abraham's servant."
+m.step("Gen.24.34")
+# ‹וַיֹּאמַר› event: say — agent the-eved
+m.event("say", agent="ha_eved")
+# ‹עֶבֶד אַבְרָהָם› reads without prior install (flag, not fix): the-eved,
+# avraham
+m.presupposed("ha_eved", "avraham")
+
+# -------------------------- Gen.24.35 · V_35 -------------------------------
+# וַ/יהוָ֞ה בֵּרַ֧ךְ אֶת אֲדֹנִ֛/י מְאֹ֖ד וַ/יִּגְדָּ֑ל וַ/יִּתֶּן ל֞/וֹ
+# צֹ֤אן וּ/בָקָר֙ וְ/כֶ֣סֶף וְ/זָהָ֔ב וַ/עֲבָדִם֙ וּ/שְׁפָחֹ֔ת וּ/גְמַלִּ֖ים
+# וַ/חֲמֹרִֽים
+# "[EN-AID] And YHWH has blessed my master greatly, and he has become great;
+# and He gave him flocks and herds, silver and gold, servants and
+# maidservants, camels and donkeys."
+m.step("Gen.24.35")
+# ‹וַ/יהוָ֞ה בֵּרַ֧ךְ אֶת אֲדֹנִ֛/י מְאֹ֖ד› fact holds: content-24-35
+m.fact("content_24_35")
+
+# -------------------------- Gen.24.36 · V_36 -------------------------------
+# וַ/תֵּ֡לֶד שָׂרָה֩ אֵ֨שֶׁת אֲדֹנִ֥/י בֵן֙ לַֽ/אדֹנִ֔/י אַחֲרֵ֖י
+# זִקְנָתָ֑/הּ וַ/יִּתֶּן לּ֖/וֹ אֶת כָּל אֲשֶׁר לֽ/וֹ
+# "[EN-AID] And Sarah my master's wife bore a son to my master after her old
+# age, and he has given him all that he has."
+m.step("Gen.24.36")
+# ‹וַ/תֵּ֡לֶד› event: ?
+m.event("?")
+
+# -------------------------- Gen.24.37 · V_37 -------------------------------
+# וַ/יַּשְׁבִּעֵ֥/נִי אֲדֹנִ֖/י לֵ/אמֹ֑ר לֹא תִקַּ֤ח אִשָּׁה֙ לִ/בְנִ֔/י
+# מִ/בְּנוֹת֙ הַֽ/כְּנַעֲנִ֔י אֲשֶׁ֥ר אָנֹכִ֖י יֹשֵׁ֥ב בְּ/אַרְצֽ/וֹ
+# "[EN-AID] And my master made me swear, saying: You shall not take a wife
+# for my son from the Canaanite's daughters among whom I dwell."
+m.step("Gen.24.37")
+# ‹וַ/יַּשְׁבִּעֵ֥/נִי› event: ?
+m.event("?")
+
+# -------------------------- Gen.24.38 · V_38 -------------------------------
+# אִם לֹ֧א אֶל בֵּית אָבִ֛/י תֵּלֵ֖ךְ וְ/אֶל מִשְׁפַּחְתִּ֑/י וְ/לָקַחְתָּ֥
+# אִשָּׁ֖ה לִ/בְנִֽ/י
+# "[EN-AID] But you shall go to my father's house and to my family, and take
+# a wife for my son."
+m.step("Gen.24.38")
+# ‹אִם לֹ֧א אֶל בֵּית אָבִ֛/י תֵּלֵ֖ךְ וְ/א› fact holds: content-24-38
+m.fact("content_24_38")
+
+# -------------------------- Gen.24.39 · V_39 -------------------------------
+# וָ/אֹמַ֖ר אֶל אֲדֹנִ֑/י אֻלַ֛י לֹא תֵלֵ֥ךְ הָ/אִשָּׁ֖ה אַחֲרָֽ/י
+# "[EN-AID] And I said to my master: Perhaps the woman will not follow me."
+m.step("Gen.24.39")
+# ‹וָ/אֹמַ֖ר› event: ?
+m.event("?")
+
+# -------------------------- Gen.24.40 · V_40 -------------------------------
+# וַ/יֹּ֖אמֶר אֵלָ֑/י יְהוָ֞ה אֲשֶׁר הִתְהַלַּ֣כְתִּי לְ/פָנָ֗י/ו יִשְׁלַ֨ח
+# מַלְאָכ֤/וֹ אִתָּ/ךְ֙ וְ/הִצְלִ֣יחַ דַּרְכֶּ֔/ךָ וְ/לָקַחְתָּ֤ אִשָּׁה֙
+# לִ/בְנִ֔/י מִ/מִּשְׁפַּחְתִּ֖/י וּ/מִ/בֵּ֥ית אָבִֽ/י
+# "[EN-AID] And he said to me: YHWH, before whom I have walked, will send
+# His angel with you and prosper your way, and you shall take a wife for my
+# son from my family and my father's house."
+m.step("Gen.24.40")
+# ‹וַ/יֹּ֖אמֶר› event: ?
+m.event("?")
+
+# -------------------------- Gen.24.41 · V_41 -------------------------------
+# אָ֤ז תִּנָּקֶה֙ מֵ/אָ֣לָתִ֔/י כִּ֥י תָב֖וֹא אֶל מִשְׁפַּחְתִּ֑/י וְ/אִם
+# לֹ֤א יִתְּנוּ֙ לָ֔/ךְ וְ/הָיִ֥יתָ נָקִ֖י מֵ/אָלָתִֽ/י
+# "[EN-AID] Then you shall be free from my oath when you come to my family;
+# and if they will not give her to you, you shall be free from my oath."
+m.step("Gen.24.41")
+# ‹מֵאָלָתִי … נָקִי› fact holds: alah-niqqah-release-retold
+m.fact("alah_niqqah_release_retold")
+
+# -------------------------- Gen.24.42 · V_42 -------------------------------
+# וָ/אָבֹ֥א הַ/יּ֖וֹם אֶל הָ/עָ֑יִן וָ/אֹמַ֗ר יְהוָה֙ אֱלֹהֵי֙ אֲדֹנִ֣/י
+# אַבְרָהָ֔ם אִם יֶשְׁ/ךָ נָּא֙ מַצְלִ֣יחַ דַּרְכִּ֔/י אֲשֶׁ֥ר אָנֹכִ֖י
+# הֹלֵ֥ךְ עָלֶֽי/הָ
+# "[EN-AID] And I came today to the spring and said: YHWH, God of my master
+# Abraham, if You are prospering my way on which I go—"
+m.step("Gen.24.42")
+# ‹וָ/אָבֹ֥א› event: ?
+m.event("?")
+
+# -------------------------- Gen.24.43 · V_43 -------------------------------
+# הִנֵּ֛ה אָנֹכִ֥י נִצָּ֖ב עַל עֵ֣ין הַ/מָּ֑יִם וְ/הָיָ֤ה הָֽ/עַלְמָה֙
+# הַ/יֹּצֵ֣את לִ/שְׁאֹ֔ב וְ/אָמַרְתִּ֣י אֵלֶ֔י/הָ הַשְׁקִֽי/נִי נָ֥א מְעַט
+# מַ֖יִם מִ/כַּדֵּֽ/ךְ
+# "[EN-AID] behold I stand by the spring of water, and let the young woman
+# who comes out to draw, to whom I say, Please let me drink a little from
+# your pitcher,"
+m.step("Gen.24.43")
+# ‹הִנֵּ֛ה אָנֹכִ֥י נִצָּ֖ב עַל עֵ֣ין הַ/מּ› fact holds: content-24-43
+m.fact("content_24_43")
+# ‹הַשְׁקִינִי / שְׁתֵה› fact holds: retold-design-volitives-are-facts
+m.fact("retold_design_volitives_are_facts")
+
+# -------------------------- Gen.24.44 · V_44 -------------------------------
+# וְ/אָמְרָ֤ה אֵלַ/י֙ גַּם אַתָּ֣ה שְׁתֵ֔ה וְ/גַ֥ם לִ/גְמַלֶּ֖י/ךָ אֶשְׁאָ֑ב
+# הִ֣וא הָֽ/אִשָּׁ֔ה אֲשֶׁר הֹכִ֥יחַ יְהוָ֖ה לְ/בֶן אֲדֹנִֽ/י
+# "[EN-AID] and she says to me, Drink, and I will also draw for your
+# camels—she is the woman whom YHWH has appointed for my master's son."
+m.step("Gen.24.44")
+# ‹וְ/אָמְרָ֤ה אֵלַ/י֙ גַּם אַתָּ֣ה שְׁתֵ֔ה› fact holds: content-24-44
+m.fact("content_24_44")
+# ‹הַשְׁקִינִי / שְׁתֵה› fact holds: retold-design-volitives-are-facts
+m.fact("retold_design_volitives_are_facts")
+
+# -------------------------- Gen.24.45 · V_45 -------------------------------
+# אֲנִי֩ טֶ֨רֶם אֲכַלֶּ֜ה לְ/דַבֵּ֣ר אֶל לִבִּ֗/י וְ/הִנֵּ֨ה רִבְקָ֤ה
+# יֹצֵאת֙ וְ/כַדָּ֣/הּ עַל שִׁכְמָ֔/הּ וַ/תֵּ֥רֶד הָ/עַ֖יְנָ/ה וַ/תִּשְׁאָ֑ב
+# וָ/אֹמַ֥ר אֵלֶ֖י/הָ הַשְׁקִ֥י/נִי נָֽא
+# "[EN-AID] I had not yet finished speaking to my heart, and behold Rivqah
+# came out with her pitcher on her shoulder, and she went down to the spring
+# and drew; and I said to her: Please let me drink."
+m.step("Gen.24.45")
+# ‹אֲנִי֩ טֶ֨רֶם אֲכַלֶּ֜ה לְ/דַבֵּ֣ר אֶל ל› fact holds: content-24-45
+m.fact("content_24_45")
+# ‹הַשְׁקִינִי / שְׁתֵה› fact holds: retold-design-volitives-are-facts
+m.fact("retold_design_volitives_are_facts")
+
+# -------------------------- Gen.24.46 · V_46 -------------------------------
+# וַ/תְּמַהֵ֗ר וַ/תּ֤וֹרֶד כַּדָּ/הּ֙ מֵֽ/עָלֶ֔י/הָ וַ/תֹּ֣אמֶר שְׁתֵ֔ה
+# וְ/גַם גְּמַלֶּ֖י/ךָ אַשְׁקֶ֑ה וָ/אֵ֕שְׁתְּ וְ/גַ֥ם הַ/גְּמַלִּ֖ים
+# הִשְׁקָֽתָה
+# "[EN-AID] And she hurried and lowered her pitcher from her and said:
+# Drink, and I will also water your camels; and I drank, and she also
+# watered the camels."
+m.step("Gen.24.46")
+# ‹וַ/תְּמַהֵ֗ר› event: ?
+m.event("?")
+# ‹הַשְׁקִינִי / שְׁתֵה› fact holds: retold-design-volitives-are-facts
+m.fact("retold_design_volitives_are_facts")
+
+# -------------------------- Gen.24.47 · V_47 -------------------------------
+# וָ/אֶשְׁאַ֣ל אֹתָ֗/הּ וָ/אֹמַר֮ בַּת מִ֣י אַתְּ֒ וַ/תֹּ֗אמֶר בַּת
+# בְּתוּאֵל֙ בֶּן נָח֔וֹר אֲשֶׁ֥ר יָֽלְדָה לּ֖/וֹ מִלְכָּ֑ה וָ/אָשִׂ֤ם
+# הַ/נֶּ֨זֶם֙ עַל אַפָּ֔/הּ וְ/הַ/צְּמִידִ֖ים עַל יָדֶֽי/הָ
+# "[EN-AID] And I asked her, Whose daughter are you? and she said, Daughter
+# of Betuel son of Nahor, whom Milcah bore him; and I put the ring on her
+# nose and the bracelets on her hands."
+m.step("Gen.24.47")
+# ‹וָ/אֶשְׁאַ֣ל› event: ?
+m.event("?")
+
+# -------------------------- Gen.24.48 · V_48 -------------------------------
+# וָ/אֶקֹּ֥ד וָֽ/אֶשְׁתַּחֲוֶ֖ה לַ/יהוָ֑ה וָ/אֲבָרֵ֗ךְ אֶת יְהוָה֙ אֱלֹהֵי֙
+# אֲדֹנִ֣/י אַבְרָהָ֔ם אֲשֶׁ֤ר הִנְחַ֨/נִי֙ בְּ/דֶ֣רֶךְ אֱמֶ֔ת לָ/קַ֛חַת אֶת
+# בַּת אֲחִ֥י אֲדֹנִ֖/י לִ/בְנֽ/וֹ
+# "[EN-AID] And I bowed and prostrated to YHWH, and I blessed YHWH, God of
+# my master Abraham, who led me in the true way to take my master's
+# brother's daughter for his son."
+m.step("Gen.24.48")
+# ‹וָ/אֶקֹּ֥ד› event: ?
+m.event("?")
+
+# -------------------------- Gen.24.49 · V_49 -------------------------------
+# וְ֠/עַתָּה אִם יֶשְׁ/כֶ֨ם עֹשִׂ֜ים חֶ֧סֶד וֶֽ/אֱמֶ֛ת אֶת אֲדֹנִ֖/י
+# הַגִּ֣ידוּ לִ֑/י וְ/אִם לֹ֕א הַגִּ֣ידוּ לִ֔/י וְ/אֶפְנֶ֥ה עַל יָמִ֖ין א֥וֹ
+# עַל שְׂמֹֽאל
+# "[EN-AID] And now, if you will deal kindly and truly with my master, tell
+# me; and if not, tell me, that I may turn to the right or to the left."
+m.step("Gen.24.49")
+# ‹הַגִּידוּ› event: say — agent the-eved
+m.event("say", agent="ha_eved")
+# ‹הַגִּידוּ לִי› the-eved speaks a demand — LET: hagidu(to-me)
+m.declare("ha_eved", "LET",
+          "hagidu(li)")
+# ‹הַגִּידוּ› fact holds: second-hagidu-resound-fact
+m.fact("second_hagidu_resound_fact")
+
+# -------------------------- Gen.24.50 · V_50 -------------------------------
+# וַ/יַּ֨עַן לָבָ֤ן וּ/בְתוּאֵל֙ וַ/יֹּ֣אמְר֔וּ מֵ/יְהוָ֖ה יָצָ֣א הַ/דָּבָ֑ר
+# לֹ֥א נוּכַ֛ל דַּבֵּ֥ר אֵלֶ֖י/ךָ רַ֥ע אוֹ טֽוֹב
+# "[EN-AID] And Laban and Betuel answered and said: The matter has gone out
+# from YHWH; we cannot speak to you bad or good."
+m.step("Gen.24.50")
+# ‹וַיַּעַן … וַיֹּאמְרוּ› event: answer-say — agent lavan-betuel
+m.event("answer_say", agent="lavan_betuel")
+# ‹לָבָן› reads without prior install (flag, not fix): lavan
+m.presupposed("lavan")
+# ‹בְּתוּאֵל› the world gains: betuel
+m.install("betuel")
+# ‹רַע אוֹ־טוֹב› fact holds: from-the-LORD-yatza-the-davar; evil-o-good-
+# merism-no-test
+m.fact("me_YHWH_yatza_ha_davar",
+       "ra_o_tov_merism_no_test")
+
+# -------------------------- Gen.24.51 · V_51 -------------------------------
+# הִנֵּֽה רִבְקָ֥ה לְ/פָנֶ֖י/ךָ קַ֣ח וָ/לֵ֑ךְ וּ/תְהִ֤י אִשָּׁה֙ לְ/בֶן
+# אֲדֹנֶ֔י/ךָ כַּ/אֲשֶׁ֖ר דִּבֶּ֥ר יְהוָֽה
+# "[EN-AID] Behold Rivqah is before you; take and go, and let her be a wife
+# to your master's son, as YHWH has spoken."
+m.step("Gen.24.51")
+# ‹קַח וָלֵךְ› lavan-betuel speaks a demand — LET: qach-and-lekh(the-eved,
+# rivqah)
+m.declare("lavan_betuel", "LET",
+          "qach_va_lekh(ha_eved, rivqah)")
+# ‹וּתְהִי אִשָּׁה› fact holds: and-tehi-isha-jussive-content
+m.fact("u_tehi_isha_jussive_content")
+
+# -------------------------- Gen.24.52 · V_52 -------------------------------
+# וַ/יְהִ֕י כַּ/אֲשֶׁ֥ר שָׁמַ֛ע עֶ֥בֶד אַבְרָהָ֖ם אֶת דִּבְרֵי/הֶ֑ם
+# וַ/יִּשְׁתַּ֥חוּ אַ֖רְצָ/ה לַֽ/יהוָֽה
+# "[EN-AID] And when Abraham's servant heard their words, he bowed to the
+# ground to YHWH."
+m.step("Gen.24.52")
+# ‹וַ/יְהִ֕י› event: ?
+m.event("?")
+
+# -------------------------- Gen.24.53 · V_53 -------------------------------
+# וַ/יּוֹצֵ֨א הָ/עֶ֜בֶד כְּלֵי כֶ֨סֶף וּ/כְלֵ֤י זָהָב֙ וּ/בְגָדִ֔ים
+# וַ/יִּתֵּ֖ן לְ/רִבְקָ֑ה וּ/מִ֨גְדָּנֹ֔ת נָתַ֥ן לְ/אָחִ֖י/הָ
+# וּ/לְ/אִמָּֽ/הּ
+# "[EN-AID] And the servant brought out vessels of silver and gold and
+# garments and gave them to Rivqah; and precious gifts he gave to her
+# brother and her mother."
+m.step("Gen.24.53")
+# ‹וַ/יּוֹצֵ֨א› event: ?
+m.event("?")
+
+# -------------------------- Gen.24.54 · V_54 -------------------------------
+# וַ/יֹּאכְל֣וּ וַ/יִּשְׁתּ֗וּ ה֛וּא וְ/הָ/אֲנָשִׁ֥ים אֲשֶׁר עִמּ֖/וֹ
+# וַ/יָּלִ֑ינוּ וַ/יָּק֣וּמוּ בַ/בֹּ֔קֶר וַ/יֹּ֖אמֶר שַׁלְּחֻ֥/נִי
+# לַֽ/אדֹנִֽ/י
+# "[EN-AID] And they ate and drank, he and the men with him, and lodged; and
+# they rose in the morning, and he said: Send me to my master."
+m.step("Gen.24.54")
+# ‹וַיֹּאכְלוּ … וַיָּקֻמוּ› event: eat-drink-lodge-rise — agent party
+m.event("eat_drink_lodge_rise", agent="party")
+# ‹שַׁלְּחוּנִי› the-eved speaks a demand — LET: shalchu-ni(house)
+m.declare("ha_eved", "LET",
+          "shalchu_ni(house)")
+
+# -------------------------- Gen.24.55 · V_55 -------------------------------
+# וַ/יֹּ֤אמֶר אָחִ֨י/הָ֙ וְ/אִמָּ֔/הּ תֵּשֵׁ֨ב הַ/נַּעֲרָ֥ אִתָּ֛/נוּ
+# יָמִ֖ים א֣וֹ עָשׂ֑וֹר אַחַ֖ר תֵּלֵֽךְ
+# "[EN-AID] And her brother and her mother said: Let the girl stay with us
+# some days, or ten; afterward she may go."
+m.step("Gen.24.55")
+# ‹וַ/יֹּ֤אמֶר› event: ?
+m.event("?")
+
+# -------------------------- Gen.24.56 · V_56 -------------------------------
+# וַ/יֹּ֤אמֶר אֲלֵ/הֶם֙ אַל תְּאַחֲר֣וּ אֹתִ֔/י וַֽ/יהוָ֖ה הִצְלִ֣יחַ
+# דַּרְכִּ֑/י שַׁלְּח֕וּ/נִי וְ/אֵלְכָ֖ה לַֽ/אדֹנִֽ/י
+# "[EN-AID] And he said to them: Do not delay me, since YHWH has prospered
+# my way; send me that I may go to my master."
+m.step("Gen.24.56")
+# ‹אַל־תְּאַחֲרוּ› the-eved speaks a demand — LET-NOT: teacharu(the-eved)
+m.declare("ha_eved", "LET-NOT",
+          "teacharu(ha_eved)")
+# ‹שַׁלְּחוּנִי› fact holds: second-shalchu-ni-resound
+m.fact("second_shalchu_ni_resound")
+
+# -------------------------- Gen.24.57 · V_57 -------------------------------
+# וַ/יֹּאמְר֖וּ נִקְרָ֣א לַֽ/נַּעֲרָ֑ וְ/נִשְׁאֲלָ֖ה אֶת פִּֽי/הָ
+# "[EN-AID] And they said: Let us call the girl and ask her mouth."
+m.step("Gen.24.57")
+# ‹וְנִשְׁאֲלָה› fact holds: and-nishala-cohortative-fact
+m.fact("ve_nishala_cohortative_fact")
+
+# -------------------------- Gen.24.58 · V_58 -------------------------------
+# וַ/יִּקְרְא֤וּ לְ/רִבְקָה֙ וַ/יֹּאמְר֣וּ אֵלֶ֔י/הָ הֲ/תֵלְכִ֖י עִם
+# הָ/אִ֣ישׁ הַ/זֶּ֑ה וַ/תֹּ֖אמֶר אֵלֵֽךְ
+# "[EN-AID] And they called Rivqah and said to her: Will you go with this
+# man? And she said: I will go."
+m.step("Gen.24.58")
+# ‹וַיִּקְרְאוּ … וַתֹּאמֶר› event: call-say — agent house
+m.event("call_say", agent="house")
+
+# -------------------------- Gen.24.59 · V_59 -------------------------------
+# וַֽ/יְשַׁלְּח֛וּ אֶת רִבְקָ֥ה אֲחֹתָ֖/ם וְ/אֶת מֵנִקְתָּ֑/הּ וְ/אֶת עֶ֥בֶד
+# אַבְרָהָ֖ם וְ/אֶת אֲנָשָֽׁי/ו
+# "[EN-AID] And they sent Rivqah their sister and her nurse, and Abraham's
+# servant and his men."
+m.step("Gen.24.59")
+# ‹וַיְשַׁלְּחוּ› demand settled (popped from the queue): shalchu-ni(house)
+m.result("shalchu_ni(house)", tmark="t1")
+# ‹וַיְשַׁלְּחוּ אֶת־רִבְקָה› event: send-party
+m.event("send_party")
+
+# -------------------------- Gen.24.60 · V_60 -------------------------------
+# וַ/יְבָרֲכ֤וּ אֶת רִבְקָה֙ וַ/יֹּ֣אמְרוּ לָ֔/הּ אֲחֹתֵ֕/נוּ אַ֥תְּ הֲיִ֖י
+# לְ/אַלְפֵ֣י רְבָבָ֑ה וְ/יִירַ֣שׁ זַרְעֵ֔/ךְ אֵ֖ת שַׁ֥עַר שֹׂנְאָֽי/ו
+# "[EN-AID] And they blessed Rivqah and said to her: Our sister, be
+# thousands of myriads, and may your seed possess the gate of those who hate
+# him."
+m.step("Gen.24.60")
+# ‹וַיְבָרֲכוּ … וַיֹּאמְרוּ› event: bless-say — agent house
+m.event("bless_say", agent="house")
+# ‹הֲיִי לְאַלְפֵי רְבָבָה› house speaks a demand — LET: hayi(rivqah, to-
+# alfe-revava)
+m.declare("house", "LET",
+          "hayi(rivqah, le_alfe_revava)")
+
+# -------------------------- Gen.24.61 · V_61 -------------------------------
+# וַ/תָּ֨קָם רִבְקָ֜ה וְ/נַעֲרֹתֶ֗י/הָ וַ/תִּרְכַּ֨בְנָה֙ עַל הַ/גְּמַלִּ֔ים
+# וַ/תֵּלַ֖כְנָה אַחֲרֵ֣י הָ/אִ֑ישׁ וַ/יִּקַּ֥ח הָ/עֶ֛בֶד אֶת רִבְקָ֖ה
+# וַ/יֵּלַֽךְ
+# "[EN-AID] And Rivqah and her girls arose and rode the camels and followed
+# the man; and the servant took Rivqah and went."
+m.step("Gen.24.61")
+# ‹וַיִּקַּח … וַיֵּלַךְ› demand settled (popped from the queue): qach-and-
+# lekh(the-eved, rivqah)
+m.result("qach_va_lekh(ha_eved, rivqah)", tmark="t2")
+# ‹וַתִּרְכַּבְנָה … וַיֵּלַךְ› event: ride-go — agent rivqah-and-servant
+m.event("ride_go", agent="rivqah_and_servant")
+
+# -------------------------- Gen.24.62 · V_62 -------------------------------
+# וְ/יִצְחָק֙ בָּ֣א מִ/בּ֔וֹא בְּאֵ֥ר לַחַ֖י רֹאִ֑י וְ/ה֥וּא יוֹשֵׁ֖ב
+# בְּ/אֶ֥רֶץ הַ/נֶּֽגֶב
+# "[EN-AID] And Isaac came from coming to Beer-lahai-roi; and he was
+# dwelling in the land of the Negev."
+m.step("Gen.24.62")
+# ‹יִצְחָק› the world gains: yitzchaq
+m.install("yitzchaq")
+# ‹בְּאֵר לַחַי רֹאִי› reads without prior install (flag, not fix): beer-
+# lachai-roi, the-negev
+m.presupposed("beer_lachai_roi", "ha_negev")
+# ‹בָּא … יֹשֵׁב› event: come-dwell — agent yitzchaq
+m.event("come_dwell", agent="yitzchaq")
+
+# -------------------------- Gen.24.63 · V_63 -------------------------------
+# וַ/יֵּצֵ֥א יִצְחָ֛ק לָ/שׂ֥וּחַ בַּ/שָּׂדֶ֖ה לִ/פְנ֣וֹת עָ֑רֶב וַ/יִּשָּׂ֤א
+# עֵינָי/ו֙ וַ/יַּ֔רְא וְ/הִנֵּ֥ה גְמַלִּ֖ים בָּאִֽים
+# "[EN-AID] And Isaac went out to meditate in the field toward evening; and
+# he lifted his eyes and saw, and behold camels were coming."
+m.step("Gen.24.63")
+# ‹לָשׂוּחַ … וַיַּרְא› event: meditate-see — agent yitzchaq
+m.event("meditate_see", agent="yitzchaq")
+
+# -------------------------- Gen.24.64 · V_64 -------------------------------
+# וַ/תִּשָּׂ֤א רִבְקָה֙ אֶת עֵינֶ֔י/הָ וַ/תֵּ֖רֶא אֶת יִצְחָ֑ק וַ/תִּפֹּ֖ל
+# מֵ/עַ֥ל הַ/גָּמָֽל
+# "[EN-AID] And Rivqah lifted her eyes and saw Isaac, and she fell from the
+# camel."
+m.step("Gen.24.64")
+# ‹וַ/תִּשָּׂ֤א› event: ?
+m.event("?")
+
+# -------------------------- Gen.24.65 · V_65 -------------------------------
+# וַ/תֹּ֣אמֶר אֶל הָ/עֶ֗בֶד מִֽי הָ/אִ֤ישׁ הַלָּזֶה֙ הַ/הֹלֵ֤ךְ בַּ/שָּׂדֶה֙
+# לִ/קְרָאתֵ֔/נוּ וַ/יֹּ֥אמֶר הָ/עֶ֖בֶד ה֣וּא אֲדֹנִ֑/י וַ/תִּקַּ֥ח
+# הַ/צָּעִ֖יף וַ/תִּתְכָּֽס
+# "[EN-AID] And she said to the servant: Who is that man walking in the
+# field to meet us? And the servant said: He is my master. And she took the
+# veil and covered herself."
+m.step("Gen.24.65")
+# ‹וַתֹּאמֶר … וַתִּתְכָּס› event: ask-answer-veil
+m.event("ask_answer_veil")
+
+# -------------------------- Gen.24.66 · V_66 -------------------------------
+# וַ/יְסַפֵּ֥ר הָ/עֶ֖בֶד לְ/יִצְחָ֑ק אֵ֥ת כָּל הַ/דְּבָרִ֖ים אֲשֶׁ֥ר עָשָֽׂה
+# "[EN-AID] And the servant told Isaac all the things he had done."
+m.step("Gen.24.66")
+# ‹וַ/יְסַפֵּ֥ר› event: ?
+m.event("?")
+
+# -------------------------- Gen.24.67 · V_67 -------------------------------
+# וַ/יְבִאֶ֣/הָ יִצְחָ֗ק הָ/אֹ֨הֱלָ/ה֙ שָׂרָ֣ה אִמּ֔/וֹ וַ/יִּקַּ֧ח אֶת
+# רִבְקָ֛ה וַ/תְּהִי ל֥/וֹ לְ/אִשָּׁ֖ה וַ/יֶּאֱהָבֶ֑/הָ וַ/יִּנָּחֵ֥ם
+# יִצְחָ֖ק אַחֲרֵ֥י אִמּֽ/וֹ
+# "[EN-AID] And Isaac brought her into the tent of Sarah his mother, and
+# took Rivqah, and she became his wife, and he loved her; and Isaac was
+# comforted after his mother."
+m.step("Gen.24.67")
+# ‹וַיְבִאֶהָ … וַיֶּאֱהָבֶהָ … וַיִּנָּחֵם› event: bring-take-love-comfort
+# — agent yitzchaq; theme rivqah
+m.event("bring_take_love_comfort", agent="yitzchaq", themes=["rivqah"])
+# ‹וַתְּהִי־לוֹ לְאִשָּׁה› fact holds: and-tehi-not-to-isha
+m.fact("va_tehi_lo_le_isha")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == {'betuel', 'yitzchaq'}
+    assert m.presupposed_set() == {'ha_eved', 'beer_lachai_roi', 'ha_negev', 'lavan', 'avraham'}
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == ['hagidu(li)', 'teacharu(ha_eved)', 'hayi(rivqah, le_alfe_revava)']
+    assert len(m.SPECS["log"]) == 5
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {'read_before_install': 5}
+    assert sorted(m.WORLD["facts"]) == sorted(['content_24_35', 'content_24_38', 'alah_niqqah_release_retold', 'content_24_43', 'retold_design_volitives_are_facts', 'content_24_44', 'retold_design_volitives_are_facts', 'content_24_45', 'retold_design_volitives_are_facts', 'retold_design_volitives_are_facts', 'second_hagidu_resound_fact', 'me_YHWH_yatza_ha_davar', 'ra_o_tov_merism_no_test', 'u_tehi_isha_jussive_content', 'second_shalchu_ni_resound', 've_nishala_cohortative_fact', 'va_tehi_lo_le_isha'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 32
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+###############################################################################
 # UNIT: lev_13_intake_quarantine
 ###############################################################################
+#!/usr/bin/env python3
 # =============================================================================
 # lev_13_intake_quarantine — 13:1-8
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -8950,6 +9849,3 @@ if __name__ == "__main__":
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 8
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
-
-###############################################################################
-print("ALL_UNITS: every frozen unit ran GREEN — 40 units")
