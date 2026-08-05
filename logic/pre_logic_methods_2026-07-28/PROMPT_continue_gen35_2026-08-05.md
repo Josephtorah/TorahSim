@@ -7,20 +7,19 @@ regression 35/35 GREEN, TWENTY-FIVE consecutive extension-free.)
 ---
 
 Continue Torah_Grok (private `Josephtorah/Torah_Grok`, main; last PUSHED
-6344d55 = the gen_31+gen_32 two-wave freeze). **UNCOMMITTED: TWO waves
-(gen_33 + gen_34)** — 2 frozen YAMLs + 2 watch-lists, FETCHLOG +60
-(27+33), 2 py_units, 2 UNIT pages, UNIT_INDEX (35), ALL_UNITS.py (35,
-green), the PROMPT chain, PLUS the public-report drafts (outline +
-Piece A, below). Owner commit order required. Protected untracked
+d1b4f12 = the gen_33+gen_34 two-wave freeze + public-report drafts,
+2026-08-05). **UNCOMMITTED: none** (only this PROMPT file's post-push
+update + protected untracked). Protected untracked
 (NEVER commit): Disclosure/, reviews/architecture/NARRATIVE_theory_of_
 disclosure_intro, TEMP_return_to_main.
 
 **ABSOLUTE:** Hebrew never without English inline — script,
 transliteration, or jargon. Everywhere, forever.
 
-**STANDING ORDER STATUS: the two-block order (2026-08-05) is COMPLETE**
-— block 1 gen_33 frozen #16, block 2 gen_34 frozen #17. Consolidated
-report delivered. STOPPED; awaiting owner (commit gate + next orders).
+**ORDER STATUS: "commit push and next block" (2026-08-05) EXECUTING**
+— commit+push DONE (d1b4f12); gen-6 SEEDED with gen_35 = Gen 19 and
+deriving NOW (span rec ratified: ONE unit, hybrid ~32 steps, seam
+20:1). On its draft: freeze-after-review per standing process.
 
 **Newest frozen:** `gen_34_mamre_laugh_plea` (18:1-33, freeze #17,
 gen-6's first, first-run green, 37/37 scenario clauses): the corpus's
@@ -51,8 +50,8 @@ tokens, NEW largest; recommend ONE unit hybrid ~32 steps, two-unit
 alternative named; three weighs: the violated do-not-look prohibition
 -> salt pillar landing gen_30's melach line; the issuer-executed
 bring-out demand; the council-cohortatives; registry watch: first
-NAME ops since gen_32 — Moab/Ben-ammi 19:37-38). NOT SEEDED — the
-two-block order is complete; next block = owner order.
+NAME ops since gen_32 — Moab/Ben-ammi 19:37-38). SEEDED 2026-08-05
+per the owner's "next block".
 
 **PUBLIC REPORT (owner's active project):** decisions locked 2026-08-05
 (layered audience; thesis FRONT AND CENTER with three-register
@@ -85,11 +84,11 @@ delivered plainly; item 3 offered — the al-tira find). Dev server
 8011 up. TOKEN LEDGER: gen-1 698,918; gen-2 534,445; gen-3 ~650k;
 gen-4 lost ~345k; gen-5 retired ~575k; gen-6 ~165k after one unit.
 
-**TASK NEXT (owner-gated):** COMMIT the two waves + public-report
-drafts; Piece A markup; the THREE triages; on "next block": seed
-gen-6 with gen_35 = Gen 19 (staging done; span rec ONE unit, owner
-ratifies). THIRTY-ONE triages owed; narratives (ASK FIRST); middot
-v2; Stage E linker; repo-tools; gen_14 fix; days 2-3 backfill.
+**TASK NEXT:** when gen-6's gen_35 draft lands: freeze-after-review
+per standing process, then report. Owner-gated: COMMIT that wave;
+Piece A markup; the THREE triages; THIRTY-ONE triages owed;
+narratives (ASK FIRST); middot v2; Stage E linker; repo-tools;
+gen_14 fix; days 2-3 backfill.
 
 **Non-negotiables:** Pre-Code; flags never auto-resolve; dual-track
 never merged; ein adam dan me-atzmo ('one may not derive on his own');
