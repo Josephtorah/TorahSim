@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""ALL_UNITS.py — frozen only (gen_42 unfrozen for amendment 2026-08-06; 45 frozen public surface)."""
+"""ALL_UNITS.py — frozen only (gen_43 unfrozen for amendment 2026-08-06; 45 frozen)."""
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
@@ -9670,213 +9670,223 @@ if __name__ == "__main__":
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
 
 ###############################################################################
-# UNIT: gen_43_isaac_twins_birthright
+# UNIT: gen_42_abraham_end_ishmael_line
 ###############################################################################
 # =============================================================================
-# gen_43_isaac_twins_birthright — 25:19-34
+# gen_42_abraham_end_ishmael_line — 25:1-18
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
-# The YAML (logic/units/gen_43_isaac_twins_birthright.yaml) is CANONICAL
+# The YAML (logic/units/gen_42_abraham_end_ishmael_line.yaml) is CANONICAL
 # (Pre-Code); this file is a derived, runnable rendering. Do not edit —
 # regenerate. The assertion block at the bottom is baked from the Stage D
 # interpreter's actual final state: running this file re-proves the unit.
 # Experimental model — not binding religious law.
 # =============================================================================
-"""Isaac's toledot: twins and the birthright (25:19-34)"""
+"""Abraham's end and Ishmael's line (25:1-18)"""
 from machine import Machine
 
-m = Machine("gen_43_isaac_twins_birthright")
+m = Machine("gen_42_abraham_end_ishmael_line")
 
-# -------------------------- Gen.25.19 · V_25_19 ----------------------------
-# וְ/אֵ֛לֶּה תּוֹלְדֹ֥ת יִצְחָ֖ק בֶּן אַבְרָהָ֑ם אַבְרָהָ֖ם הוֹלִ֥יד אֶת
-# יִצְחָֽק
-# "[EN-AID] And these are the generations of Isaac, Abraham's son: Abraham
-# begot Isaac."
-m.step("Gen.25.19")
-# ‹וְאֵלֶּה תּוֹלְדֹת יִצְחָק› section toldot-yitzchaq: yitzchaq
-m.section("toldot_yitzchaq", "yitzchaq")
-# ‹אַבְרָהָם› reads without prior install (flag, not fix): avraham, yitzchaq
-m.presupposed("avraham", "yitzchaq")
+# -------------------------- Gen.25.1 · THE_KETURAH_REPORT_NAME -------------
+# וַיֹּ֧סֶף אַבְרָהָ֛ם וַיִּקַּ֥ח אִשָּׁ֖ה וּשְׁמָ֥הּ קְטוּרָֽה
+# "[EN-AID] And Abraham again took a wife, and her name was Keturah."
+m.step("Gen.25.1")
+# ‹וַיֹּסֶף … וַיִּקַּח אִשָּׁה› event: take-wife — agent avraham; theme
+# qetura
+m.event("take_wife", agent="avraham", themes=["qetura"])
+# ‹וּשְׁמָהּ קְטוּרָה› fact holds: report-name-qetura
+m.fact("report_name_qetura")
 
-# -------------------------- Gen.25.20 · V_25_20 ----------------------------
-# וַ/יְהִ֤י יִצְחָק֙ בֶּן אַרְבָּעִ֣ים שָׁנָ֔ה בְּ/קַחְתּ֣/וֹ אֶת רִבְקָ֗ה
-# בַּת בְּתוּאֵל֙ הָֽ/אֲרַמִּ֔י מִ/פַּדַּ֖ן אֲרָ֑ם אֲח֛וֹת לָבָ֥ן
-# הָ/אֲרַמִּ֖י ל֥/וֹ לְ/אִשָּֽׁה
-# "[EN-AID] And Isaac was forty years old when he took Rivqah, daughter of
-# Betuel the Aramean of Paddan-aram, sister of Laban the Aramean, as wife."
-m.step("Gen.25.20")
-# ‹בְּקַחְתּוֹ אֶת־רִבְקָה› event: take-wife — agent yitzchaq; theme rivqah
-m.event("take_wife", agent="yitzchaq", themes=["rivqah"])
-# ‹רִבְקָה› reads without prior install (flag, not fix): rivqah, lavan,
-# betuel, padan-aram
-m.presupposed("rivqah", "lavan", "betuel", "padan_aram")
+# -------------------------- Gen.25.2 · THE_KETURAH_SIX_SONS ----------------
+# וַתֵּ֣לֶד ל֗וֹ אֶת־זִמְרָן֙ וְאֶת־יָקְשָׁ֔ן וְאֶת־מְדָ֖ן וְאֶת־מִדְיָ֑ן
+# וְאֶת־יִשְׁבָּ֖ק וְאֶת־שֽׁוּחַ
+# "[EN-AID] And she bore him Zimran and Jokshan and Medan and Midian and
+# Ishbak and Shuah."
+m.step("Gen.25.2")
+# ‹וַתֵּלֶד לוֹ› event: bear-sons — agent qetura
+m.event("bear_sons", agent="qetura")
+# ‹זִמְרָן … יָקְשָׁן … מְדָן … מִדְיָן … יִשְׁבָּק … שׁוּחַ› fact holds:
+# named-only-roster-zimran-yaqshan-medan-midyan-yishbaq-shucha
+m.fact("named_only_roster_zimran_yaqshan_medan_midyan_yishbaq_shucha")
 
-# -------------------------- Gen.25.21 · V_25_21 ----------------------------
-# וַ/יֶּעְתַּ֨ר יִצְחָ֤ק לַֽ/יהוָה֙ לְ/נֹ֣כַח אִשְׁתּ֔/וֹ כִּ֥י עֲקָרָ֖ה
-# הִ֑וא וַ/יֵּעָ֤תֶר ל/וֹ֙ יְהוָ֔ה וַ/תַּ֖הַר רִבְקָ֥ה אִשְׁתּֽ/וֹ
-# "[EN-AID] And Isaac prayed to YHWH facing his wife, for she was barren;
-# and YHWH was entreated of him, and Rivqah his wife conceived."
-m.step("Gen.25.21")
-# ‹וַיֶּעְתַּר … וַתַּהַר› event: pray-conceive — agent yitzchaq
-m.event("pray_conceive", agent="yitzchaq")
+# -------------------------- Gen.25.3 · THE_JOKSHAN_LINE --------------------
+# וְיָקְשָׁ֣ן יָלַ֔ד אֶת־שְׁבָ֖א וְאֶת־דְּדָ֑ן וּבְנֵ֣י דְדָ֔ן הָי֛וּ
+# אַשּׁוּרִ֥ם וּלְטוּשִׁ֖ים וּלְאֻמִּֽים
+# "[EN-AID] And Jokshan begot Sheba and Dedan; and the sons of Dedan were
+# Asshurim and Letushim and Leummim."
+m.step("Gen.25.3")
+# ‹שְׁבָא … דְּדָן … אַשּׁוּרִם וּלְטוּשִׁים וּלְאֻמִּים› fact holds: named-
+# only-roster-yaqshan-line
+m.fact("named_only_roster_yaqshan_line")
 
-# -------------------------- Gen.25.22 · V_25_22 ----------------------------
-# וַ/יִּתְרֹֽצֲצ֤וּ הַ/בָּנִים֙ בְּ/קִרְבָּ֔/הּ וַ/תֹּ֣אמֶר אִם כֵּ֔ן
-# לָ֥/מָּה זֶּ֖ה אָנֹ֑כִי וַ/תֵּ֖לֶךְ לִ/דְרֹ֥שׁ אֶת יְהוָֽה
-# "[EN-AID] And the children struggled together within her; and she said: If
-# so, why am I thus? And she went to inquire of YHWH."
-m.step("Gen.25.22")
-# ‹וַיִּתְרֹצְצוּ … וַתֵּלֶךְ לִדְרֹשׁ› event: struggle-inquire — agent
-# rivqah
-m.event("struggle_inquire", agent="rivqah")
+# -------------------------- Gen.25.4 · THE_MIDIAN_LINE_AND_CLOSE -----------
+# וּבְנֵ֣י מִדְיָ֗ן עֵיפָ֤ה וָעֵ֨פֶר֙ וַחֲנֹ֔ךְ וַאֲבִידָ֖ע וְאֶלְדָּעָ֑ה
+# כָּל־אֵ֖לֶּה בְּנֵ֥י קְטוּרָֽה
+# "[EN-AID] And the sons of Midian: Ephah and Epher and Hanoch and Abida and
+# Eldaah. All these were the sons of Keturah."
+m.step("Gen.25.4")
+# ‹עֵיפָה … עֵפֶר … חֲנוֹךְ … אֲבִידָע … אֶלְדָּעָה … בְּנֵי קְטוּרָה› fact
+# holds: named-only-roster-midyan-line-and-close
+m.fact("named_only_roster_midyan_line_and_close")
 
-# -------------------------- Gen.25.23 · V_25_23 ----------------------------
-# וַ/יֹּ֨אמֶר יְהוָ֜ה לָ֗/הּ שְׁנֵ֤י גיים גוֹיִם֙ בְּ/בִטְנֵ֔/ךְ וּ/שְׁנֵ֣י
-# לְאֻמִּ֔ים מִ/מֵּעַ֖יִ/ךְ יִפָּרֵ֑דוּ וּ/לְאֹם֙ מִ/לְאֹ֣ם יֶֽאֱמָ֔ץ
-# וְ/רַ֖ב יַעֲבֹ֥ד צָעִֽיר
-# "[EN-AID] And YHWH said to her: Two nations are in your womb, and two
-# peoples shall be separated from your belly; and people shall be stronger
-# than people, and the elder shall serve the younger."
-m.step("Gen.25.23")
-# ‹וַיֹּאמֶר יְהוָה› event: say-oracle — agent the-LORD
-m.event("say_oracle", agent="YHWH")
-# ‹שְׁנֵי גוֹיִם› fact holds: two-nations-oracle
-m.fact("two_nations_oracle")
+# -------------------------- Gen.25.5 · THE_HEIR_GIFT_TO_ISAAC --------------
+# וַיִּתֵּ֧ן אַבְרָהָ֛ם אֶת־כָּל־אֲשֶׁר־ל֖וֹ לְיִצְחָֽק
+# "[EN-AID] And Abraham gave all that he had to Isaac."
+m.step("Gen.25.5")
+# ‹וַיִּתֵּן אַבְרָהָם אֶת־כָּל־אֲשֶׁר־לוֹ לְיִצְחָק› event: give-all —
+# agent avraham
+m.event("give_all", agent="avraham")
 
-# -------------------------- Gen.25.24 · V_25_24 ----------------------------
-# וַ/יִּמְלְא֥וּ יָמֶ֖י/הָ לָ/לֶ֑דֶת וְ/הִנֵּ֥ה תוֹמִ֖ם בְּ/בִטְנָֽ/הּ
-# "[EN-AID] And when her days to bear were fulfilled, behold twins were in
-# her womb."
-m.step("Gen.25.24")
-# ‹וַ/יִּמְלְא֥וּ› event: ?
+# -------------------------- Gen.25.6 · THE_PILEGESH_GIFTS_AND_SEND_EAST ----
+# וְלִבְנֵ֤י הַפִּֽילַגְשִׁים֙ אֲשֶׁ֣ר לְאַבְרָהָ֔ם נָתַ֥ן אַבְרָהָ֖ם
+# מַתָּנֹ֑ת וַֽיְשַׁלְּחֵ֞ם מֵעַ֨ל יִצְחָ֤ק בְּנוֹ֙ בְּעוֹדֶ֣נּוּ חַ֔י
+# קֵ֖דְמָה אֶל־אֶ֥רֶץ קֶֽדֶם
+# "[EN-AID] And to the sons of the concubines that Abraham had, Abraham gave
+# gifts; and he sent them away from Isaac his son, while he yet lived,
+# eastward, to the land of the East."
+m.step("Gen.25.6")
+# ‹נָתַן … מַתָּנֹת וַיְשַׁלְּחֵם … קֵדְמָה› event: gift-and-send-east —
+# agent avraham; theme bene-the-pilagshim
+m.event("gift_and_send_east", agent="avraham", themes=["bene_ha_pilagshim"])
+
+# -------------------------- Gen.25.7 · THE_YEARS_OF_ABRAHAM ----------------
+# וְאֵ֗לֶּה יְמֵ֛י שְׁנֵֽי־חַיֵּ֥י אַבְרָהָ֖ם אֲשֶׁר־חָ֑י מְאַ֥ת שָׁנָ֛ה
+# וְשִׁבְעִ֥ים שָׁנָ֖ה וְחָמֵ֥שׁ שָׁנִֽים
+# "[EN-AID] And these are the days of the years of Abraham's life which he
+# lived: a hundred years and seventy years and five years."
+m.step("Gen.25.7")
+# ‹מְאַת שָׁנָה וְשִׁבְעִים שָׁנָה וְחָמֵשׁ שָׁנִים› fact holds: avraham-
+# lived-175-years
+m.fact("avraham_lived_175_years")
+
+# -------------------------- Gen.25.8 · THE_SEVAH_TOVAH_LANDING -------------
+# וַיִּגְוַ֨ע וַיָּ֧מָת אַבְרָהָ֛ם בְּשֵׂיבָ֥ה טוֹבָ֖ה זָקֵ֣ן וְשָׂבֵ֑עַ
+# וַיֵּאָ֖סֶף אֶל־עַמָּֽיו
+# "[EN-AID] And Abraham expired and died in a good old age, old and full,
+# and was gathered to his peoples."
+m.step("Gen.25.8")
+# ‹וַיִּגְוַע וַיָּמָת … וַיֵּאָסֶף אֶל־עַמָּיו› event: expire-die-gather
+m.event("expire_die_gather")
+# ‹בְּשֵׂיבָה טוֹבָה› fact holds: sevah-tovah-promise-landing-from-15-15
+m.fact("sevah_tovah_promise_landing_from_15_15")
+
+# -------------------------- Gen.25.9 · THE_SONS_BURY_AT_MACHPELAH ----------
+# וַיִּקְבְּר֨וּ אֹת֜וֹ יִצְחָ֤ק וְיִשְׁמָעֵאל֙ בָּנָ֔יו אֶל־מְעָרַ֖ת
+# הַמַּכְפֵּלָ֑ה אֶל־שְׂדֵ֞ה עֶפְרֹ֤ן בֶּן־צֹ֨חַר֙ הַֽחִתִּ֔י אֲשֶׁ֖ר
+# עַל־פְּנֵ֥י מַמְרֵֽא
+# "[EN-AID] And Isaac and Ishmael his sons buried him in the cave of
+# Machpelah, in the field of Efron son of Zohar the Hittite, which is before
+# Mamre."
+m.step("Gen.25.9")
+# ‹וַיִּקְבְּרוּ אֹתוֹ יִצְחָק וְיִשְׁמָעֵאל … מְעָרַת הַמַּכְפֵּלָה› event:
+# bury — theme avraham
+m.event("bury", themes=["avraham"])
+
+# -------------------------- Gen.25.10 · THE_FIELD_PURCHASE_RECAP -----------
+# הַשָּׂדֶ֛ה אֲשֶׁר־קָנָ֥ה אַבְרָהָ֖ם מֵאֵ֣ת בְּנֵי־חֵ֑ת שָׁ֛מָּה קֻבַּ֥ר
+# אַבְרָהָ֖ם וְשָׂרָ֥ה אִשְׁתּֽוֹ
+# "[EN-AID] The field that Abraham bought from the sons of Chet — there
+# Abraham was buried, and Sarah his wife."
+m.step("Gen.25.10")
+# ‹הַשָּׂדֶה אֲשֶׁר־קָנָה אַבְרָהָם מֵאֵת בְּנֵי־חֵת› fact holds: field-
+# bought-from-bene-chet-burial-place
+m.fact("field_bought_from_bene_chet_burial_place")
+
+# -------------------------- Gen.25.11 · THE_BLESSING_AND_BEER_LACHAI_ROI_CLOSE -
+# וַיְהִ֗י אַחֲרֵי֙ מ֣וֹת אַבְרָהָ֔ם וַיְבָ֥רֶךְ אֱלֹהִ֖ים אֶת־יִצְחָ֣ק
+# בְּנ֑וֹ וַיֵּ֣שֶׁב יִצְחָ֔ק עִם־בְּאֵ֥ר לַחַ֖י רֹאִֽי
+# "[EN-AID] And after the death of Abraham, God blessed Isaac his son; and
+# Isaac dwelt with Beer-lachai-roi."
+m.step("Gen.25.11")
+# ‹וַיְבָרֶךְ אֱלֹהִים אֶת־יִצְחָק בְּנוֹ› event: ?
 m.event("?")
+# ‹בְּאֵר לַחַי רֹאִי› fact holds: yitzchaq-dwells-beer-lachai-roi-career-
+# close
+m.fact("yitzchaq_dwells_beer_lachai_roi_career_close")
 
-# -------------------------- Gen.25.25 · V_25_25 ----------------------------
-# וַ/יֵּצֵ֤א הָ/רִאשׁוֹן֙ אַדְמוֹנִ֔י כֻּלּ֖/וֹ כְּ/אַדֶּ֣רֶת שֵׂעָ֑ר
-# וַ/יִּקְרְא֥וּ שְׁמ֖/וֹ עֵשָֽׂו
-# "[EN-AID] And the first came out red, all of him like a hairy mantle; and
-# they called his name Esau."
-m.step("Gen.25.25")
-# ‹וַיֵּצֵא הָרִאשׁוֹן› event: birth-first
-m.event("birth_first")
-# ‹עֵשָׂו› the world gains: esav
-m.install("esav")
+# -------------------------- Gen.25.12 · THE_TOLEDOT_OF_ISHMAEL -------------
+# וְאֵ֛לֶּה תֹּלְדֹ֥ת יִשְׁמָעֵ֖אל בֶּן־אַבְרָהָ֑ם אֲשֶׁ֨ר יָלְדָ֜ה הָגָ֧ר
+# הַמִּצְרִ֛ית שִׁפְחַ֥ת שָׂרָ֖ה לְאַבְרָהָֽם
+# "[EN-AID] And these are the generations of Ishmael, Abraham's son, whom
+# Hagar the Egyptian, Sarah's maid, bore to Abraham."
+m.step("Gen.25.12")
+# ‹תֹּלְדֹת יִשְׁמָעֵאל› fact holds: generations-yishmael-section-header
+m.fact("toledot_yishmael_section_header")
 
-# -------------------------- Gen.25.26 · V_25_26 ----------------------------
-# וְ/אַֽחֲרֵי כֵ֞ן יָצָ֣א אָחִ֗י/ו וְ/יָד֤/וֹ אֹחֶ֨זֶת֙ בַּ/עֲקֵ֣ב עֵשָׂ֔ו
-# וַ/יִּקְרָ֥א שְׁמ֖/וֹ יַעֲקֹ֑ב וְ/יִצְחָ֛ק בֶּן שִׁשִּׁ֥ים שָׁנָ֖ה
-# בְּ/לֶ֥דֶת אֹתָֽ/ם
-# "[EN-AID] And afterward his brother came out, and his hand holding Esau's
-# heel; and his name was called Jacob. And Isaac was sixty years old when
-# she bore them."
-m.step("Gen.25.26")
-# ‹וְאַחֲרֵי־כֵן יָצָא אָחִיו› event: birth-second
-m.event("birth_second")
-# ‹יַעֲקֹב› the world gains: yaaqov
-m.install("yaaqov")
+# -------------------------- Gen.25.13 · THE_ISHMAEL_NAMES_A ----------------
+# וְאֵ֗לֶּה שְׁמוֹת֙ בְּנֵ֣י יִשְׁמָעֵ֔אל בִּשְׁמֹתָ֖ם לְתוֹלְדֹתָ֑ם בְּכֹ֤ר
+# יִשְׁמָעֵאל֙ נְבָיֹ֔ת וְקֵדָ֥ר וְאַדְבְּאֵ֖ל וּמִבְשָֽׂם
+# "[EN-AID] And these are the names of the sons of Ishmael, by their names,
+# according to their generations: the firstborn of Ishmael, Nevayot; and
+# Qedar and Adbeel and Mibsam."
+m.step("Gen.25.13")
+# ‹נְבָיוֹת וְקֵדָר וְאַדְבְּאֵל וּמִבְשָׂם› fact holds: named-only-roster-
+# ishmael-sons-a
+m.fact("named_only_roster_ishmael_sons_a")
 
-# -------------------------- Gen.25.27 · V_25_27 ----------------------------
-# וַֽ/יִּגְדְּלוּ֙ הַ/נְּעָרִ֔ים וַ/יְהִ֣י עֵשָׂ֗ו אִ֛ישׁ יֹדֵ֥עַ צַ֖יִד
-# אִ֣ישׁ שָׂדֶ֑ה וְ/יַעֲקֹב֙ אִ֣ישׁ תָּ֔ם יֹשֵׁ֖ב אֹהָלִֽים
-# "[EN-AID] And the boys grew; and Esau was a man knowing hunting, a man of
-# the field, and Jacob was a quiet man, dwelling in tents."
-m.step("Gen.25.27")
-# ‹וַֽ/יִּגְדְּלוּ֙› event: ?
+# -------------------------- Gen.25.14 · THE_ISHMAEL_NAMES_B ----------------
+# וּמִשְׁמָ֥ע וְדוּמָ֖ה וּמַשָּֽׂא
+# "[EN-AID] and Mishma and Duma and Masa."
+m.step("Gen.25.14")
+# ‹מִשְׁמָע וְדוּמָה וּמַשָּׂא› fact holds: named-only-roster-ishmael-sons-b
+m.fact("named_only_roster_ishmael_sons_b")
+
+# -------------------------- Gen.25.15 · THE_ISHMAEL_NAMES_C ----------------
+# חֲדַ֣ד וְתֵימָ֔א יְט֥וּר נָפִ֖ישׁ וָקֵֽדְמָה
+# "[EN-AID] Chadad and Tema, Yetur, Nafish, and Qedma."
+m.step("Gen.25.15")
+# ‹חֲדַד וְתֵימָא יְטוּר נָפִישׁ וָקֵדְמָה› fact holds: named-only-roster-
+# ishmael-sons-c
+m.fact("named_only_roster_ishmael_sons_c")
+
+# -------------------------- Gen.25.16 · THE_TWELVE_PRINCES_PAY -------------
+# אֵ֣לֶּה הֵ֞ם בְּנֵ֤י יִשְׁמָעֵאל֙ וְאֵ֣לֶּה שְׁמֹתָ֔ם בְּחַצְרֵיהֶ֖ם
+# וּבְטִֽירֹתָ֑ם שְׁנֵים־עָשָׂ֥ר נְשִׂיאִ֖ם לְאֻמֹּתָֽם
+# "[EN-AID] These are the sons of Ishmael and these are their names, by
+# their villages and by their encampments: twelve princes according to their
+# nations."
+m.step("Gen.25.16")
+# ‹שְׁנֵים־עָשָׂר נְשִׂיאִים› fact holds: shneim-asar-nesiim-promise-
+# landing-from-17-20
+m.fact("shneim_asar_nesiim_promise_landing_from_17_20")
+
+# -------------------------- Gen.25.17 · THE_ISHMAEL_DEATH_TRIAD ------------
+# וְאֵ֗לֶּה שְׁנֵי֙ חַיֵּ֣י יִשְׁמָעֵ֔אל מְאַ֥ת שָׁנָ֛ה וּשְׁלֹשִׁ֥ים
+# שָׁנָ֖ה וְשֶׁ֣בַע שָׁנִ֑ים וַיִּגְוַ֣ע וַיָּ֔מָת וַיֵּאָ֖סֶף אֶל־עַמָּֽיו
+# "[EN-AID] And these are the years of the life of Ishmael: a hundred years
+# and thirty years and seven years; and he expired and died and was gathered
+# to his peoples."
+m.step("Gen.25.17")
+# ‹וַיִּגְוַע וַיָּמָת וַיֵּאָסֶף אֶל־עַמָּיו› event: expire-die-gather
+m.event("expire_die_gather")
+
+# -------------------------- Gen.25.18 · THE_NAFAL_YISHKON_ECHO_AND_SEAM ----
+# וַיִּשְׁכְּנ֨וּ מֵֽחֲוִילָ֜ה עַד־שׁ֗וּר אֲשֶׁר֙ עַל־פְּנֵ֣י מִצְרַ֔יִם
+# בֹּאֲכָ֖ה אַשּׁ֑וּרָה עַל־פְּנֵ֥י כָל־אֶחָ֖יו נָפָֽל
+# "[EN-AID] And they dwelt from Chavila to Shur, which is before Egypt as
+# you go toward Ashur; before all his brothers he fell."
+m.step("Gen.25.18")
+# ‹וַיִּשְׁכְּנוּ מֵחֲוִילָה עַד־שׁוּר› event: ?
 m.event("?")
-
-# -------------------------- Gen.25.28 · V_25_28 ----------------------------
-# וַ/יֶּאֱהַ֥ב יִצְחָ֛ק אֶת עֵשָׂ֖ו כִּי צַ֣יִד בְּ/פִ֑י/ו וְ/רִבְקָ֖ה
-# אֹהֶ֥בֶת אֶֽת יַעֲקֹֽב
-# "[EN-AID] And Isaac loved Esau because game was in his mouth, and Rivqah
-# loved Jacob."
-m.step("Gen.25.28")
-# ‹וַ/יֶּאֱהַ֥ב› event: ?
-m.event("?")
-
-# -------------------------- Gen.25.29 · V_25_29 ----------------------------
-# וַ/יָּ֥זֶד יַעֲקֹ֖ב נָזִ֑יד וַ/יָּבֹ֥א עֵשָׂ֛ו מִן הַ/שָּׂדֶ֖ה וְ/ה֥וּא
-# עָיֵֽף
-# "[EN-AID] And Jacob boiled stew; and Esau came in from the field, and he
-# was faint."
-m.step("Gen.25.29")
-# ‹וַ/יָּ֥זֶד› event: ?
-m.event("?")
-
-# -------------------------- Gen.25.30 · V_25_30 ----------------------------
-# וַ/יֹּ֨אמֶר עֵשָׂ֜ו אֶֽל יַעֲקֹ֗ב הַלְעִיטֵ֤/נִי נָא֙ מִן הָ/אָדֹ֤ם
-# הָ/אָדֹם֙ הַ/זֶּ֔ה כִּ֥י עָיֵ֖ף אָנֹ֑כִי עַל כֵּ֥ן קָרָֽא שְׁמ֖/וֹ אֱדֽוֹם
-# "[EN-AID] And Esau said to Jacob: Let me gulp, please, from this red red,
-# for I am faint. Therefore his name was called Edom."
-m.step("Gen.25.30")
-# ‹וַיֹּאמֶר עֵשָׂו› event: say — agent esav
-m.event("say", agent="esav")
-# ‹הַלְעִיטֵנִי נָא› esav speaks a demand — LET: halite-ni(yaaqov, from-the-
-# adom)
-m.declare("esav", "LET",
-          "halite_ni(yaaqov, min_ha_adom)")
-# ‹עַל־כֵּן קָרָא־שְׁמוֹ אֱדוֹם› fact holds: name-edom-etiology
-m.fact("name_edom_etiology")
-
-# -------------------------- Gen.25.31 · V_25_31 ----------------------------
-# וַ/יֹּ֖אמֶר יַעֲקֹ֑ב מִכְרָ֥/ה כַ/יּ֛וֹם אֶת בְּכֹֽרָתְ/ךָ֖ לִֽ/י
-# "[EN-AID] And Jacob said: Sell me as of today your birthright."
-m.step("Gen.25.31")
-# ‹מִכְרָה כַיּוֹם אֶת־בְּכֹרָתְךָ› yaaqov speaks a demand — LET:
-# mikhra(esav, bekhorat-kha)
-m.declare("yaaqov", "LET",
-          "mikhra(esav, bekhorat_kha)")
-
-# -------------------------- Gen.25.32 · V_25_32 ----------------------------
-# וַ/יֹּ֣אמֶר עֵשָׂ֔ו הִנֵּ֛ה אָנֹכִ֥י הוֹלֵ֖ךְ לָ/מ֑וּת וְ/לָ/מָּה זֶּ֥ה
-# לִ֖/י בְּכֹרָֽה
-# "[EN-AID] And Esau said: Behold I am going to die; and what is this
-# birthright to me?"
-m.step("Gen.25.32")
-# ‹הִנֵּה אָנֹכִי הוֹלֵךְ לָמוּת› fact holds: esav-die-speech-fact
-m.fact("esav_die_speech_fact")
-
-# -------------------------- Gen.25.33 · V_25_33 ----------------------------
-# וַ/יֹּ֣אמֶר יַעֲקֹ֗ב הִשָּׁ֤בְעָ/ה לִּ/י֙ כַּ/יּ֔וֹם וַ/יִּשָּׁבַ֖ע ל֑/וֹ
-# וַ/יִּמְכֹּ֥ר אֶת בְּכֹרָת֖/וֹ לְ/יַעֲקֹֽב
-# "[EN-AID] And Jacob said: Swear to me as of today. And he swore to him,
-# and he sold his birthright to Jacob."
-m.step("Gen.25.33")
-# ‹הִשָּׁבְעָה לִּי› yaaqov speaks a demand — LET: hishava(esav)
-m.declare("yaaqov", "LET",
-          "hishava(esav)")
-# ‹וַיִּשָּׁבַע לוֹ› demand settled (popped from the queue): hishava(esav)
-m.result("hishava(esav)", tmark="t1")
-# ‹וַיִּמְכֹּר אֶת־בְּכֹרָתוֹ› demand settled (popped from the queue):
-# mikhra(esav, bekhorat-kha)
-m.result("mikhra(esav, bekhorat_kha)", tmark="t2")
-
-# -------------------------- Gen.25.34 · V_25_34 ----------------------------
-# וְ/יַעֲקֹ֞ב נָתַ֣ן לְ/עֵשָׂ֗ו לֶ֚חֶם וּ/נְזִ֣יד עֲדָשִׁ֔ים וַ/יֹּ֣אכַל
-# וַ/יֵּ֔שְׁתְּ וַ/יָּ֖קָם וַ/יֵּלַ֑ךְ וַ/יִּ֥בֶז עֵשָׂ֖ו אֶת הַ/בְּכֹרָֽה
-# "[EN-AID] And Jacob gave Esau bread and lentil stew, and he ate and drank
-# and rose and went; and Esau despised the birthright."
-m.step("Gen.25.34")
-# ‹נָתַן … וַיֹּאכַל וַיֵּשְׁתְּ› event: feed-eat-drink-go — agent yaaqov-
-# esav
-m.event("feed_eat_drink_go", agent="yaaqov_esav")
-# ‹וַיִּבֶז עֵשָׂו אֶת־הַבְּכֹרָה› fact holds: esav-despised-birthright
-m.fact("esav_despised_birthright")
+# ‹עַל־פְּנֵי כָל־אֶחָיו נָפָל› fact holds: nafal-before-brothers-echo-
+# fowl-16-12-yishkon
+m.fact("nafal_before_brothers_echo_of_16_12_yishkon")
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
-    assert m.created_set() == {'yaaqov', 'esav'}
-    assert m.presupposed_set() == {'rivqah', 'yitzchaq', 'avraham', 'padan_aram', 'lavan', 'betuel'}
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
     assert m.REGISTRY["names"] == {}
     assert m.REGISTRY["writes"] == 0
     assert m.tests_list() == []
-    assert m.open_demands() == ['halite_ni(yaaqov, min_ha_adom)']
-    assert len(m.SPECS["log"]) == 3
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
     assert sorted(m.LEDGER) == []
-    assert m.flag_counts() == {'read_before_install': 6}
-    assert sorted(m.WORLD["facts"]) == sorted(['two_nations_oracle', 'name_edom_etiology', 'esav_die_speech_fact', 'esav_despised_birthright'])
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted(['report_name_qetura', 'named_only_roster_zimran_yaqshan_medan_midyan_yishbaq_shucha', 'named_only_roster_yaqshan_line', 'named_only_roster_midyan_line_and_close', 'avraham_lived_175_years', 'sevah_tovah_promise_landing_from_15_15', 'field_bought_from_bene_chet_burial_place', 'yitzchaq_dwells_beer_lachai_roi_career_close', 'toledot_yishmael_section_header', 'named_only_roster_ishmael_sons_a', 'named_only_roster_ishmael_sons_b', 'named_only_roster_ishmael_sons_c', 'shneim_asar_nesiim_promise_landing_from_17_20', 'nafal_before_brothers_echo_of_16_12_yishkon'])
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
-    assert len(m.EVENTS) == 18
+    assert len(m.EVENTS) == 9
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
 
 ###############################################################################
