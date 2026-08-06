@@ -672,6 +672,13 @@ def check_clause(clause, m, step_ref, alias):
         ok = m.REGISTRY["names"] == want and m.REGISTRY["writes"] == int(mt.group(3))
         return (ok, "names=%s writes=%d" % (m.REGISTRY["names"], m.REGISTRY["writes"]))
 
+    # ---- pattern added at the gen_45 remediation (2026-08-06, owner-authorized) ----
+    mt = re.search(r"REGISTRY (\d+) writes", c)
+    if mt:
+        ok = m.REGISTRY["writes"] == int(mt.group(1))
+        return (ok, "writes=%d names=%s" % (m.REGISTRY["writes"],
+                                            sorted(m.REGISTRY["names"])))
+
     mt = re.search(r"LEDGER\[day (\d+)\] committed with (.+)", c)
     if mt:
         entry = m.LEDGER.get(int(mt.group(1)))
