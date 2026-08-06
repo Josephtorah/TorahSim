@@ -1,37 +1,36 @@
-# Resume — AMENDMENT WAVE · 2026-08-06 · CLOSED pending owner commit
+# Resume — gen_46 piece 7 STOP · 2026-08-06
 
 ## §1a Claude law (permanent)
-Care-points first · pieces STOP for Claude · no freeze without whole-unit · owner commit/push.
+Care-points first · pieces STOP for Claude · no freeze without whole-unit · owner commit.
 
-**Last relay:** #7 (gen_43 freeze ritual).
+## Process
+- Draft scenario checks = **dry-run only** (run_unit = frozen only).
 
----
-
-## Amendment wave status: COMPLETE (ritual) · COMMIT DEBT
-
-| Unit | Commit |
+## Closed / verified
+| Item | State |
 |------|--------|
-| gen_41 | `2b0fada` on main |
-| gen_42 | `93dfe52` on main |
-| gen_43 | **freeze ritual done locally — OWNER COMMIT PENDING** |
+| gen_46 pieces 1–6 | **VERIFIED** (RELAY #11–#16) |
+| Bare tags | **0** (uncommitted; ride gen_46 wave) |
 
-## gen_43 freeze ritual (local)
-- status **frozen** · refs **25:19-34**
-- Gate **11/11 GREEN** · Regression **46/46 GREEN**
-- render py/html done
-- indexes + ALL_UNITS + watchlist + export_web (this completion pass)
-- Unit-end: **LET(haliteni) OPEN** · REGISTRY 2 · TESTS 0
+## Active draft
+- **gen_46_isaac_blessing_demandee_mismatch** · R1 **27:1–40**
+- Piece 7 **27:27–29** (the blessing itself) · SPECS depth **9 OPEN**:
+  1. `sa_tze_tzuda_ase_havia(esav)`
+  2. `shema_be_qoli(yaaqov)`
+  3. `lekh_qach_heveta(yaaqov)`
+  4. `qum_sheva_akhla(yitzchaq)`
+  5. `yiten(ha_Elohim, le_yaaqov)`
+  6. `yaavdu_kha(amim)`
+  7. `yishtachavu(leumim)`
+  8. `heve_gevir(yaaqov)`
+  9. `yishtachavu(bene_imekha)`
+- **SETTLED this piece:** `gesha_shqa(yaaqov)`
+- LOUD: smell-pair 8:21; second bless-EVENT; demand-on-God; human *arur* chiasm
+- Ledger: `grok_package/gen46_piece7_verification_ledger_2026-08-06.md`
+- **Do not derive 27:30+** until Claude piece-7 verification
+- Onkelos BUFFER PENDING · no freeze yet
 
-### Owner commit message (when authorized)
-```
-Amend wave complete: gen_43 re-frozen (25:19-34); Gen 1:1-26:35 gapless, 46 frozen, zero hollow tags corpus-wide
-```
-Trailer: `Co-Authored-By: Grok <interim-coordinator@x.ai>`
-
-## After owner commit
-- Chair **holds** until owner next order.
-- **Genesis 27** only on owner `next block` + Claude care-points.
-- Do **not** seed next unit without those.
-
-## COMMIT DEBT
-Until `origin/main` includes gen_43 freeze: treat public remote as **45 frozen + gen_43 draft/missing** depending on prior push; local is 46 frozen. **Do not open next work until commit or explicit hold.**
+## Next
+1. Claude reviews piece 7 (summit + depth-9 bookkeeping)
+2. If PASS + authorize → piece 8 (27:30–33)
+3. Commit bare-tag + draft with first gen_46 wave when owner says
