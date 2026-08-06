@@ -2,7 +2,21 @@
 
 Owner may not track cross-project questions. **Agents decide and update this file** when new evidence arrives. Do not re-ask the owner for these unless a decision would delete work or rewrite `Data/`.
 
-Last updated: 2026-07-28 (§6c form→operator TIR-026–033 owner-approved; SQLite index + versioned lexicon/role_rules — see logic/pre_logic_methods_2026-07-28/PLAN)
+Last updated: 2026-08-06 (§1a Claude guides every derivation — permanent; supersedes solo auto-freeze)
+
+---
+
+## 1a. Derivation process — Claude guides and checks every derivation (PERMANENT · 2026-08-06)
+
+| Decision | **"Claude guides and checks every derivation."** Binding on the chair (Grok and any deriving agent), permanent — not a remediation-era measure. |
+|----------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| **(1) Care-points first** | No span is derived until Claude's **pre-derivation care-points** arrive through the owner. Do not open a new piece or unit span without them. |
+| **(2) Pieces + STOP** | All derivation proceeds in **4–5-verse pieces**. Each piece **STOP**s for Claude's external verification before the next piece is authorized. |
+| **(3) Freeze gate** | **No unit freezes** without Claude's **whole-unit review**. A green preflight / green scenarios alone **never** freezes anything, ever again. |
+| Supersedes | Solo **auto-freeze** provisions in older continue-prompts / charters (e.g. green → freeze without external review). Those are **void**. |
+| Unchanged (owner-only) | Commit / push · next-block authorization · amendments · triage — still owner gates. |
+| Scope | Every Written-logic unit derivation from now on (amendment wave and post-wave corpus build). |
+| Current posture | Match the protocol already in use on gen_41 amend: care-points → piece → STOP → verify → next piece → whole-unit review → freeze ritual only after Claude green → owner commit. |
 
 ---
 
