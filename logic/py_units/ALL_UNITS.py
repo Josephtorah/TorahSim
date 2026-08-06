@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""ALL_UNITS.py — frozen only (gen_46 frozen 2026-08-06; 47 frozen units)."""
+"""ALL_UNITS.py — frozen only (gen_48 frozen 2026-08-06; 49 frozen units)."""
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
@@ -11137,6 +11137,383 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 35
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: gen_47_grudge_flight_paddan_send
+###############################################################################
+# =============================================================================
+# gen_47_grudge_flight_paddan_send — 27:41-28:9
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_47_grudge_flight_paddan_send.yaml) is CANONICAL
+# (Pre-Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter's actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+"""Esau's grudge, Jacob's flight order, Rivqah's pressure — Paddan send (27:41-28:9)"""
+
+m = Machine("gen_47_grudge_flight_paddan_send")
+
+# -------------------------- Gen.27.41 · THE_GRUDGE_AND_HEART_SPEECH_KILL_INTENT -
+# וַיִּשְׂטֹם עֵשָׂו אֶת־יַעֲקֹב עַל־הַבְּרָכָה אֲשֶׁר בֵּרֲכוֹ אָבִיו
+# וַיֹּאמֶר עֵשָׂו בְּלִבּוֹ יִקְרְבוּ יְמֵי אֵבֶל אָבִי וְאַהַרְגָה
+# אֶת־יַעֲקֹב אָחִי
+# "[EN-AID] And Esau bore a grudge against Jacob over the blessing with
+# which his father had blessed him; and Esau said in his heart, Let the days
+# of mourning for my father draw near, and I will kill Jacob my brother."
+m.step("Gen.27.41")
+# ‹וַיִּשְׂטֹם … בְּלִבּוֹ … וְאַהַרְגָה› fact holds: esav-grudge; heart-
+# kill-intent
+m.fact("esav_grudge",
+       "heart_kill_intent")
+
+# -------------------------- Gen.27.42 · THE_LEAK_RETELLING_DELTA_AND_CALL_YOUNGER -
+# וַיֻּגַּד לְרִבְקָה אֶת־דִּבְרֵי עֵשָׂו בְּנָהּ הַגָּדֹל וַתִּשְׁלַח
+# וַתִּקְרָא לְיַעֲקֹב בְּנָהּ הַקָּטָן וַתֹּאמֶר אֵלָיו הִנֵּה עֵשָׂו
+# אָחִיךָ מִתְנַחֵם לְךָ לְהָרְגֶךָ
+# "[EN-AID] And the words of Esau her great son were told to Rivqah; and she
+# sent and called Jacob her small son and said to him, Behold Esau your
+# brother is consoling himself concerning you to kill you."
+m.step("Gen.27.42")
+# ‹וַיֻּגַּד … מִתְנַחֵם … לְהָרְגֶךָ› fact holds: leak-and-delta
+m.fact("leak_and_delta")
+
+# -------------------------- Gen.27.43 · THE_SHEMA_BE_QOLI_AND_FLIGHT_COMPOUND -
+# וְעַתָּה בְנִי שְׁמַע בְּקֹלִי וְקוּם בְּרַח־לְךָ אֶל־לָבָן אָחִי חָרָנָה
+# "[EN-AID] And now my son hear my voice; and arise, flee for yourself to
+# Laban my brother, to Haran."
+m.step("Gen.27.43")
+# ‹שְׁמַע בְּקֹלִי› rivqah speaks a demand — LET: hear-in-qoli-2(yaaqov)
+m.declare("rivqah", "LET",
+          "shema_be_qoli_2(yaaqov)")
+# ‹וְקוּם בְּרַח› rivqah speaks a demand — LET: qum-berach-yashavta(yaaqov)
+m.declare("rivqah", "LET",
+          "qum_berach_yashavta(yaaqov)")
+
+# -------------------------- Gen.27.44 · THE_DWELL_DUTY_AND_WRATH_RETURN_WAIT -
+# וְיָשַׁבְתָּ עִמּוֹ יָמִים אֲחָדִים עַד אֲשֶׁר־תָּשׁוּב חֲמַת אָחִיךָ
+# "[EN-AID] And you shall dwell with him a few days, until your brother's
+# wrath turns back."
+m.step("Gen.27.44")
+# ‹וְיָשַׁבְתָּ … חֲמַת אָחִיךָ› fact holds: yashavta-third-member-attached
+m.fact("yashavta_third_member_attached")
+
+# -------------------------- Gen.27.45 · THE_FORGET_SEND_TAKE_AND_BEREAVE_ARITHMETIC -
+# עַד־שׁוּב אַף־אָחִיךָ מִמְּךָ וְשָׁכַח אֵת אֲשֶׁר־עָשִׂיתָ לּוֹ
+# וְשָׁלַחְתִּי וּלְקַחְתִּיךָ מִשָּׁם לָמָה אֶשְׁכַּל גַּם־שְׁנֵיכֶם יוֹם
+# אֶחָד
+# "[EN-AID] Until your brother's anger turns back from you and he forgets
+# what you did to him; then I will send and take you from there. Why should
+# I be bereaved of both of you in one day?"
+m.step("Gen.27.45")
+# ‹וְשָׁכַח … וְשָׁלַחְתִּי … אֶשְׁכַּל› fact holds: rivqa-plan-forget-send-
+# take
+m.fact("rivqa_plan_forget_send_take")
+
+# -------------------------- Gen.27.46 · THE_PRESSURE_SPEECH_TO_ISAAC_HITTITE_LOATHE -
+# וַתֹּאמֶר רִבְקָה אֶל־יִצְחָק קַצְתִּי בְחַיַּי מִפְּנֵי בְּנוֹת חֵת
+# אִם־לֹקֵחַ יַעֲקֹב אִשָּׁה מִבְּנוֹת־חֵת כָּאֵלֶּה מִבְּנוֹת הָאָרֶץ
+# לָמָּה לִּי חַיִּים
+# "[EN-AID] And Rivqah said to Isaac, I loathe my life because of the
+# daughters of Heth; if Jacob takes a wife from the daughters of Heth like
+# these, from the daughters of the land, why is life mine?"
+m.step("Gen.27.46")
+# ‹קַצְתִּי … לָמָּה לִּי חַיִּים› fact holds: rivqa-pressure-speech-to-
+# yitzchaq
+m.fact("rivqa_pressure_speech_to_yitzchaq")
+
+# -------------------------- Gen.28.1 · THE_BLESS_EVENT_AND_CANAANITE_PROHIBITION -
+# וַיִּקְרָא יִצְחָק אֶל־יַעֲקֹב וַיְבָרֶךְ אֹתוֹ וַיְצַוֵּהוּ וַיֹּאמֶר לוֹ
+# לֹא־תִקַּח אִשָּׁה מִבְּנוֹת כְּנָעַן
+# "[EN-AID] And Isaac called Jacob and blessed him, and commanded him and
+# said to him, You shall not take a wife from the daughters of Canaan."
+m.step("Gen.28.1")
+# ‹וַיְבָרֶךְ אֹתוֹ› event: ?
+m.event("?")
+# ‹לֹא תִקַּח› fact holds: prohibition-not-tiqach-kenaanit
+m.fact("prohibition_lo_tiqach_kenaanit")
+
+# -------------------------- Gen.28.2 · THE_QUM_LEKH_QACH_WIFE_COMPOUND -----
+# קוּם לֵךְ פַּדֶּנָה אֲרָם בֵּיתָה בְתוּאֵל אֲבִי אִמֶּךָ וְקַח־לְךָ
+# מִשָּׁם אִשָּׁה מִבְּנוֹת לָבָן אֲחִי אִמֶּךָ
+# "[EN-AID] Arise, go to Paddan-aram, to the house of Bethuel your mother's
+# father, and take for yourself from there a wife from the daughters of
+# Laban your mother's brother."
+m.step("Gen.28.2")
+# ‹קוּם לֵךְ … וְקַח› yitzchaq speaks a demand — LET: qum-lekh-qach(yaaqov)
+m.declare("yitzchaq", "LET",
+          "qum_lekh_qach(yaaqov)")
+
+# -------------------------- Gen.28.3 · THE_EL_SHADDAI_JUSSIVE_PACKAGE_OPEN -
+# וְאֵל שַׁדַּי יְבָרֵךְ אֹתְךָ וְיַפְרְךָ וְיַרְבֶּךָ וְהָיִיתָ לִקְהַל
+# עַמִּים
+# "[EN-AID] And may El Shaddai bless you and make you fruitful and multiply
+# you, and may you become an assembly of peoples."
+m.step("Gen.28.3")
+# ‹וְאֵל שַׁדַּי יְבָרֵךְ … וְיַרְבֶּךָ› fact holds: to-shaddai-limbs-staged
+m.fact("el_shaddai_limbs_staged")
+
+# -------------------------- Gen.28.4 · THE_ABRAHAM_BLESSING_GRANT_PACKAGE_PUSH -
+# וְיִתֶּן־לְךָ אֶת־בִּרְכַּת אַבְרָהָם לְךָ וּלְזַרְעֲךָ אִתָּךְ
+# לְרִשְׁתְּךָ אֶת־אֶרֶץ מְגֻרֶיךָ אֲשֶׁר־נָתַן אֱלֹהִים לְאַבְרָהָם
+# "[EN-AID] And may He give you the blessing of Abraham, to you and to your
+# seed with you, to possess the land of your sojournings which God gave to
+# Abraham."
+m.step("Gen.28.4")
+# ‹וְיִתֶּן … בִּרְכַּת אַבְרָהָם› yitzchaq speaks a demand — LET: to-
+# shaddai-package(yaaqov)
+m.declare("yitzchaq", "LET",
+          "el_shaddai_package(yaaqov)")
+
+# -------------------------- Gen.28.5 · THE_FATHER_SEND_AND_LEKH_PARTIAL ----
+# וַיִּשְׁלַח יִצְחָק אֶת־יַעֲקֹב וַיֵּלֶךְ פַּדֶּנָה אֲרָם אֶל־לָבָן
+# בֶּן־בְּתוּאֵל הָאֲרַמִּי אֲחִי רִבְקָה אֵם יַעֲקֹב וְעֵשָׂו
+# "[EN-AID] And Isaac sent Jacob, and he went to Paddan-aram, to Laban son
+# of Bethuel the Aramean, brother of Rivqah mother of Jacob and Esau."
+m.step("Gen.28.5")
+# ‹וַיִּשְׁלַח … וַיֵּלֶךְ› fact holds: lekh-partial-return-no-pop
+m.fact("lekh_partial_return_no_pop")
+
+# -------------------------- Gen.28.6 · THE_ESAU_SEES_BLESS_SEND_AND_QUOTE_REPLAY -
+# וַיַּרְא עֵשָׂו כִּי־בֵרַךְ יִצְחָק אֶת־יַעֲקֹב וְשִׁלַּח אֹתוֹ פַּדֶּנָה
+# אֲרָם לָקַחַת־לוֹ מִשָּׁם אִשָּׁה בְּבָרֲכוֹ אֹתוֹ וַיְצַו עָלָיו לֵאמֹר
+# לֹא־תִקַּח אִשָּׁה מִבְּנוֹת כְּנָעַן
+# "[EN-AID] And Esau saw that Isaac had blessed Jacob and sent him to
+# Paddan-aram to take for himself from there a wife — when he blessed him he
+# commanded him, saying, You shall not take a wife from the daughters of
+# Canaan."
+m.step("Gen.28.6")
+# ‹וַיַּרְא עֵשָׂו כִּי־בֵרַךְ› fact holds: esav-sees-bless-and-send
+m.fact("esav_sees_bless_and_send")
+
+# -------------------------- Gen.28.7 · THE_VA_YISHMA_POP_AND_GO_NOT_FLEE ---
+# וַיִּשְׁמַע יַעֲקֹב אֶל־אָבִיו וְאֶל־אִמּוֹ וַיֵּלֶךְ פַּדֶּנָה אֲרָם
+# "[EN-AID] And Jacob heeded his father and his mother, and went to Paddan-
+# aram."
+m.step("Gen.28.7")
+# ‹וַיִּשְׁמַע יַעֲקֹב› demand settled (popped from the queue): hear-in-
+# qoli-2(yaaqov)
+m.result("shema_be_qoli_2(yaaqov)", tmark="t1")
+# ‹וַיֵּלֶךְ פַּדֶּנָה אֲרָם› fact holds: yelekh-go-frame-not-flee-frame
+m.fact("yelekh_go_frame_not_flee_frame")
+
+# -------------------------- Gen.28.8 · THE_SECOND_SEEING_EVIL_IN_THE_FATHERS_EYES -
+# וַיַּרְא עֵשָׂו כִּי רָעוֹת בְּנוֹת כְּנָעַן בְּעֵינֵי יִצְחָק אָבִיו
+# "[EN-AID] And Esau saw that the daughters of Canaan were evil in the eyes
+# of Isaac his father."
+m.step("Gen.28.8")
+# ‹רָעוֹת … בְּעֵינֵי יִצְחָק› fact holds: esav-sees-canaanite-evil-in-
+# isaacs-eyes
+m.fact("esav_sees_canaanite_evil_in_isaacs_eyes")
+
+# -------------------------- Gen.28.9 · THE_MIRROR_TAKE_MACHALAT_CODA -------
+# וַיֵּלֶךְ עֵשָׂו אֶל־יִשְׁמָעֵאל וַיִּקַּח אֶת־מָחֲלַת בַּת־יִשְׁמָעֵאל
+# בֶּן־אַבְרָהָם אֲחוֹת נְבָיוֹת עַל־נָשָׁיו לוֹ לְאִשָּׁה
+# "[EN-AID] And Esau went to Ishmael and took Machalat, daughter of Ishmael
+# son of Abraham, sister of Nebaioth, in addition to his wives, as his
+# wife."
+m.step("Gen.28.9")
+# ‹וַיִּקַּח אֶת־מָחֲלַת› fact holds: esav-mirror-take-machalat
+m.fact("esav_mirror_take_machalat")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == ['qum_berach_yashavta(yaaqov)', 'qum_lekh_qach(yaaqov)', 'el_shaddai_package(yaaqov)']
+    assert len(m.SPECS["log"]) == 4
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted(['esav_grudge', 'heart_kill_intent', 'leak_and_delta', 'yashavta_third_member_attached', 'rivqa_plan_forget_send_take', 'rivqa_pressure_speech_to_yitzchaq', 'prohibition_lo_tiqach_kenaanit', 'el_shaddai_limbs_staged', 'lekh_partial_return_no_pop', 'esav_sees_bless_and_send', 'yelekh_go_frame_not_flee_frame', 'esav_sees_canaanite_evil_in_isaacs_eyes', 'esav_mirror_take_machalat'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 6
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: gen_48_bethel_ladder_vow
+###############################################################################
+# =============================================================================
+# gen_48_bethel_ladder_vow — 28:10-22
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_48_bethel_ladder_vow.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter's actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+"""The Bethel ladder, the name write, and the first vow (28:10-22)"""
+
+m = Machine("gen_48_bethel_ladder_vow")
+
+# -------------------------- Gen.28.10 · THE_DEPARTURE_BEER_SHEVA_TO_HARAN --
+# וַיֵּצֵא יַעֲקֹב מִבְּאֵר שָׁבַע וַיֵּלֶךְ חָרָנָה
+# "[EN-AID] And Jacob went out from Beer-sheva and went toward Haran."
+m.step("Gen.28.10")
+# ‹וַיֵּצֵא … וַיֵּלֶךְ חָרָנָה› fact holds: yaaqov-departed-beer-seven-
+# toward-charan
+m.fact("yaaqov_departed_beer_sheva_toward_charan")
+
+# -------------------------- Gen.28.11 · THE_PLACE_SUNSET_AND_STONE_PILLOW --
+# וַיִּפְגַּע בַּמָּקוֹם וַיָּלֶן שָׁם כִּי־בָא הַשֶּׁמֶשׁ וַיִּקַּח
+# מֵאַבְנֵי הַמָּקוֹם וַיָּשֶׂם מְרַאֲשֹׁתָיו וַיִּשְׁכַּב בַּמָּקוֹם הַהוּא
+# "[EN-AID] And he lit upon the place and lodged there, for the sun had set;
+# and he took of the stones of the place and set them at his head, and lay
+# down in that place."
+m.step("Gen.28.11")
+# ‹כִּי־בָא הַשֶּׁמֶשׁ … מֵאַבְנֵי הַמָּקוֹם› fact holds: sun-set-stone-
+# pillow-at-the-maqom
+m.fact("sun_set_stone_pillow_at_ha_maqom")
+
+# -------------------------- Gen.28.12 · THE_DREAM_DEBUT_AND_LADDER_HAPAX ---
+# וַיַּחֲלֹם וְהִנֵּה סֻלָּם מֻצָּב אַרְצָה וְרֹאשׁוֹ מַגִּיעַ הַשָּׁמָיְמָה
+# וְהִנֵּה מַלְאֲכֵי אֱלֹהִים עֹלִים וְיֹרְדִים בּוֹ
+# "[EN-AID] And he dreamed — and behold a ladder set earthward, its head
+# reaching heavenward; and behold, angels of God ascending and descending on
+# it."
+m.step("Gen.28.12")
+# ‹וַיַּחֲלֹם› event: ?
+m.event("?")
+# ‹סֻלָּם מֻצָּב אַרְצָה› fact holds: sulam-earthward-head-heavenward-angels
+m.fact("sulam_earthward_head_heavenward_angels")
+
+# -------------------------- Gen.28.13 · THE_STATIONED_LORD_AND_LAND_COMMITMENT -
+# וְהִנֵּה יְהוָה נִצָּב עָלָיו וַיֹּאמַר אֲנִי יְהוָה אֱלֹהֵי אַבְרָהָם
+# אָבִיךָ וֵאלֹהֵי יִצְחָק הָאָרֶץ אֲשֶׁר אַתָּה שֹׁכֵב עָלֶיהָ לְךָ
+# אֶתְּנֶנָּה וּלְזַרְעֶךָ
+# "[EN-AID] And behold, YHWH stood over him and said: I am YHWH, God of
+# Abraham your father and God of Isaac; the land on which you lie, to you I
+# will give it and to your seed."
+m.step("Gen.28.13")
+# ‹נִצָּב עָלָיו … לְךָ אֶתְּנֶנָּה› fact holds: the-LORD-nitzav-self-
+# identification-land-commitment
+m.fact("YHWH_nitzav_self_identification_land_commitment")
+
+# -------------------------- Gen.28.14 · THE_DUST_FORMULA_ALL_FAMILIES_NIPHAL -
+# וְהָיָה זַרְעֲךָ כַּעֲפַר הָאָרֶץ וּפָרַצְתָּ יָמָּה וָקֵדְמָה וְצָפֹנָה
+# וָנֶגְבָּה וְנִבְרֲכוּ בְךָ כָּל־מִשְׁפְּחֹת הָאֲדָמָה וּבְזַרְעֶךָ
+# "[EN-AID] And your seed shall be as the dust of the earth, and you shall
+# spread west and east and north and south; and all the families of the
+# ground shall be blessed in you and in your seed."
+m.step("Gen.28.14")
+# ‹כַּעֲפַר הָאָרֶץ … וְנִבְרֲכוּ בְךָ› fact holds: dust-seed-spread-all-
+# families-blessed
+m.fact("dust_seed_spread_all_families_blessed")
+
+# -------------------------- Gen.28.15 · THE_FIVE_FOLD_PROMISE_NOT_LEAVE ----
+# וְהִנֵּה אָנֹכִי עִמָּךְ וּשְׁמַרְתִּיךָ בְּכֹל אֲשֶׁר־תֵּלֵךְ
+# וַהֲשִׁבֹתִיךָ אֶל־הָאֲדָמָה הַזֹּאת כִּי לֹא אֶעֱזָבְךָ עַד אֲשֶׁר
+# אִם־עָשִׂיתִי אֵת אֲשֶׁר־דִּבַּרְתִּי לָךְ
+# "[EN-AID] And behold, I am with you, and I will keep you wherever you go,
+# and I will bring you back to this ground; for I will not leave you until I
+# have done what I have spoken to you."
+m.step("Gen.28.15")
+# ‹וּשְׁמַרְתִּיךָ … וַהֲשִׁבֹתִיךָ … לֹא אֶעֱזָבְךָ› fact holds: five-fold-
+# promise-with-keep-return-not-leave-until-done
+m.fact("five_fold_promise_with_keep_return_not_leave_until_done")
+
+# -------------------------- Gen.28.16 · THE_WAKING_AKHEN_AND_NOT_KNOWING ---
+# וַיִּיקַץ יַעֲקֹב מִשְּׁנָתוֹ וַיֹּאמֶר אָכֵן יֵשׁ יְהוָה בַּמָּקוֹם
+# הַזֶּה וְאָנֹכִי לֹא יָדָעְתִּי
+# "[EN-AID] And Jacob awoke from his sleep and said: Surely YHWH is in this
+# place, and I did not know."
+m.step("Gen.28.16")
+# ‹וַיִּיקַץ … אָכֵן … לֹא יָדָעְתִּי› fact holds: yaaqov-woke-akhen-the-
+# LORD-in-place-unknown
+m.fact("yaaqov_woke_akhen_YHWH_in_place_unknown")
+
+# -------------------------- Gen.28.17 · THE_FEAR_DOUBLET_GATE_OF_HEAVEN ----
+# וַיִּירָא וַיֹּאמַר מַה־נּוֹרָא הַמָּקוֹם הַזֶּה אֵין זֶה כִּי אִם־בֵּית
+# אֱלֹהִים וְזֶה שַׁעַר הַשָּׁמָיִם
+# "[EN-AID] And he feared and said: How awesome is this place! This is none
+# other than the house of God, and this is the gate of heaven."
+m.step("Gen.28.17")
+# ‹וַיִּירָא … מַה־נּוֹרָא … שַׁעַר הַשָּׁמָיִם› fact holds: fear-doublet-
+# bet-God-shaar-the-heavens
+m.fact("fear_doublet_bet_elohim_shaar_ha_shamayim")
+
+# -------------------------- Gen.28.18 · THE_PILLAR_AND_THE_OIL_DEBUT -------
+# וַיַּשְׁכֵּם יַעֲקֹב בַּבֹּקֶר וַיִּקַּח אֶת־הָאֶבֶן אֲשֶׁר־שָׂם
+# מְרַאֲשֹׁתָיו וַיָּשֶׂם אֹתָהּ מַצֵּבָה וַיִּצֹק שֶׁמֶן עַל־רֹאשָׁהּ
+# "[EN-AID] And Jacob rose early in the morning and took the stone he had
+# set at his head, and set it as a pillar, and poured oil on its head."
+m.step("Gen.28.18")
+# ‹וַיָּשֶׂם אֹתָהּ מַצֵּבָה וַיִּצֹק שֶׁמֶן› event: ?
+m.event("?")
+# ‹וַיַּשְׁכֵּם … וַיִּקַּח אֶת־הָאֶבֶן› fact holds: early-rise-stone-taken-
+# set-as-pillar
+m.fact("early_rise_stone_taken_set_as_pillar")
+
+# -------------------------- Gen.28.19 · THE_NAME_WRITE_BEIT_EL -------------
+# וַיִּקְרָא אֶת־שֵׁם־הַמָּקוֹם הַהוּא בֵּית־אֵל וְאוּלָם לוּז שֵׁם־הָעִיר
+# לָרִאשֹׁנָה
+# "[EN-AID] And he called the name of that place Bethel; but Luz was the
+# name of the city at first."
+m.step("Gen.28.19")
+# ‹וַיִּקְרָא אֶת־שֵׁם־הַמָּקוֹם הַהוּא בֵּית־אֵל› named: the-maqom-luz :=
+# beit-to
+m.name("ha_maqom_luz", "beit_el")
+
+# -------------------------- Gen.28.20 · THE_FIRST_VOW_CONDITIONS_OPEN ------
+# וַיִּדַּר יַעֲקֹב נֶדֶר לֵאמֹר אִם־יִהְיֶה אֱלֹהִים עִמָּדִי וּשְׁמָרַנִי
+# בַּדֶּרֶךְ הַזֶּה אֲשֶׁר אָנֹכִי הוֹלֵךְ וְנָתַן־לִי לֶחֶם לֶאֱכֹל וּבֶגֶד
+# לִלְבֹּשׁ
+# "[EN-AID] And Jacob vowed a vow, saying: If God will be with me and keep
+# me on this way that I go, and give me bread to eat and a garment to wear
+# —"
+m.step("Gen.28.20")
+# ‹וַיִּדַּר יַעֲקֹב נֶדֶר … לֶחֶם … וּבֶגֶד› fact holds: neder-opened-
+# conditions-with-keep-bread-garment
+m.fact("neder_opened_conditions_with_keep_bread_garment")
+
+# -------------------------- Gen.28.21 · THE_RETURN_IN_PEACE_AND_THEN_CLAUSE -
+# וְשַׁבְתִּי בְשָׁלוֹם אֶל־בֵּית אָבִי וְהָיָה יְהוָה לִי לֵאלֹהִים
+# "[EN-AID] And I return in peace to my father's house — then YHWH will be
+# my God."
+m.step("Gen.28.21")
+# ‹וְשַׁבְתִּי בְשָׁלוֹם … וְהָיָה יְהוָה לִי לֵאלֹהִים› fact holds: return-
+# in-peace-condition-then-the-LORD-my-God
+m.fact("return_in_peace_condition_then_YHWH_my_God")
+
+# -------------------------- Gen.28.22 · THE_VOW_HANDLER_STONE_HOUSE_TITHE --
+# וְהָאֶבֶן הַזֹּאת אֲשֶׁר־שַׂמְתִּי מַצֵּבָה יִהְיֶה בֵּית אֱלֹהִים וְכֹל
+# אֲשֶׁר תִּתֶּן־לִי עַשֵּׂר אֲעַשְּׂרֶנּוּ לָךְ
+# "[EN-AID] And this stone which I have set as a pillar shall be the house
+# of God; and all that You give me I will surely tithe to You."
+m.step("Gen.28.22")
+# ‹אִם־יִהְיֶה אֱלֹהִים עִמָּדִי … עַשֵּׂר אֲעַשְּׂרֶנּוּ לָךְ› standing
+# handler — if God-with-me ∧ shemarani-in-the-derekh ∧ natan-lechem-and-
+# veged ∧ shavti-and-shalom then the-LORD-to-me-to-God ∧ the-even-bet-God ∧
+# aser-aasrenu
+m.handler("elohim_imadi ∧ shemarani_ba_derekh ∧ natan_lechem_u_veged ∧ shavti_ve_shalom",
+          "YHWH_li_le_Elohim ∧ ha_even_bet_Elohim ∧ aser_aasrenu")
+# ‹וְהָאֶבֶן הַזֹּאת … עַשֵּׂר אֲעַשְּׂרֶנּוּ› fact holds: stone-house-
+# tithe-vow-content
+m.fact("stone_house_tithe_vow_content")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {'ha_maqom_luz': 'beit_el'}
+    assert m.REGISTRY["writes"] == 1
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {'named_before_any_presence': 1}
+    assert sorted(m.WORLD["facts"]) == sorted(['yaaqov_departed_beer_sheva_toward_charan', 'sun_set_stone_pillow_at_ha_maqom', 'sulam_earthward_head_heavenward_angels', 'YHWH_nitzav_self_identification_land_commitment', 'dust_seed_spread_all_families_blessed', 'five_fold_promise_with_keep_return_not_leave_until_done', 'yaaqov_woke_akhen_YHWH_in_place_unknown', 'fear_doublet_bet_elohim_shaar_ha_shamayim', 'early_rise_stone_taken_set_as_pillar', 'neder_opened_conditions_with_keep_bread_garment', 'return_in_peace_condition_then_YHWH_my_God', 'handler: IF(elohim_imadi ∧ shemarani_ba_derekh ∧ natan_lechem_u_veged ∧ shavti_ve_shalom) THEN(YHWH_li_le_Elohim ∧ ha_even_bet_Elohim ∧ aser_aasrenu)', 'stone_house_tithe_vow_content'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 4
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
 
 
