@@ -1,3 +1,6 @@
+> **SUPERSEDED 2026-08-06** by PROMPT_continue_solo_era_2026-08-06.md
+> (Grok relay era closed; gen_47 frozen; solo mode). Historical record only.
+
 # Resume prompt — 46 frozen, amendment COMPLETE, gen_46 (Gen 27) opening · 2026-08-06
 
 Read this FIRST after compaction. Supersedes PROMPT_continue_gen40 and
@@ -45,7 +48,70 @@ pre-stage. If error rate ticks up, narrow the pieces again.
 - **Swear-career spine verified across units:** shava toks 5-7
   (gen_40), 8 (24:37), 9-10 (25:33), 11 (26:3), 12 (26:31).
 
-## STATE — gen_46 FROZEN AND COMMITTED · next = gen_47 pre-stage
+## IN FLIGHT — RELAY #21 (issued, awaiting Grok): piece-1 fixes + piece 2
+RELAY #20 (recovered original, canonical on disk in grok_package/)
+was posted; Grok delivered piece 1 (27:41–46): 6 steps + 6 dry-run
+scenarios in logic/units/gen_47_grudge_flight_paddan_send.yaml +
+ledger gen47_piece1_verification_ledger_2026-08-06.md. Claude
+verification: SUBSTANCE PASS — every tagged ordinal/total/morph/
+career/etnachta claim exact; SPECS boots empty, depth 2 after 27:43,
+ends 2 OPEN (shema_be_qoli_2 + qum_berach_yashavta); REGISTRY 0,
+TESTS 0; bare-tag scan 0; tree splits all at correct etnachta.
+THREE text errors ordered fixed: 27:44 tashuv MISSING SHIN DOT
+(step-he + tree_R); 27:45 step-he lama carries 27:46's pointing
+(לָ֥מָּה should be לָמָ֥ה = "why"; verses differ, tree_R already right);
+S5 value_he same lama fix. TWO convention alignments to frozen
+gen_46: step-he = plain + maqqef restored; tree halves = accents
+kept, slashes stripped. Corrected text SUPPLIED in RELAY #21
+(regenerable: scratchpad verify_gen47_p1_text.py). ONE wording fix
+(Claude's own RELAY #20 error): Chet 2845 debut = 10:15 Table of
+Nations NOT Machpelah; 26:34 = gentilic Chitti 2850, not 2845;
+corrected headline = all tokens except 10:15 + 27:46 are Machpelah
+burial-field context. On paste-in piece 1 GREEN (RELAY #18
+precedent, no re-review round) and PIECE 2 AUTHORIZED (28:1–5),
+STOP before 28:6. Piece-2 pre-verified (dump run 28:1–5): SEVEN
+volitives (qum 6965 tok33 / lekh 3212 tok52 / ve-qach 3947 tok80
+imperatives 28:2; yevarekh 1288 tok52 Vpj + ve-yafrekha 6509 tok9 +
+ve-yarbekha 7235 tok22 Vhj 28:3; ve-yiten 5414 tok58 Vqj 28:4);
+lo tiqach 3947 tok79 HVqi2ms = prohibition NOT volitive. Verified
+seams: qum toks 32→33 mother→father arise; bless-verb 1288 toks
+50-51-52 grudge-clause→28:1 EVENT→28:3 jussive; blessing-noun 1293
+toks 7→8 CONSECUTIVE grudge-object→birkat Avraham; give-verb 5414
+toks 56-57-58-59 (27:28→27:37→28:4×2); send 7971 toks 27→28 her
+promised send→his actual send; 3212 toks 52→53 lekh→va-yelekh
+(partial return, never pops); megurekha 4033 tok1=17:8 covenant
+phrase→tok2=28:4 exact return; creation pair 6509 tok9 + 7235 tok22
+(both debut 1:22 peru u-revu) as jussives; qehal 6951 tok1/34 DEBUT;
+Shaddai 7706 tok2/9 (debut 17:1); Betuel 1328 tok9/9 CLOSES; em 517
+toks 15-16 = 28:2 BOTH halves end "your mother" (etnachta idx7 +
+silluq idx15). Etnachta: 28:1 idx5 et-o ("blessed HIM"), 28:2 idx7,
+28:3 idx5 ON ve-yarbekha, 28:4 idx7, 28:5 idx6 aram. Expected
+piece-2 end: depth 4 OPEN if El Shaddai package rules as ONE push
+(piece-1 pair + qum_lekh_qach partial-OPEN + package); deriver
+proposes shape per gen_32 fence, Claude checks. ERROR-RATE WATCH:
+first text-layer errors of the wide-batch era (claims layer still
+100%); if piece 2 repeats text errors, narrow the pieces.
+Pre-stage VERIFIED in full (15vv/232 tokens exact; all debuts and
+careers confirmed). Piece plan RULED: THREE pieces — 1: 27:41–46 ·
+2: 28:1–5 · 3: 28:6–9. Cross-wall LAW stated: units boot SPECS
+empty; gen_46's 12 OPEN are frozen history; echoes = landing-notes
+(sevah class), never machine ops. Within gen_47: 27:43 shema
+be-qoli = NEW LET; 28:7 va-yishma = its pop candidate (piece 3).
+Grok's 6 pre-stage questions answered in RELAY #20 (heart-speech
+fence on ve-aharga; 27:46 pure FACT; 28:1 = unit's own bless-EVENT
+no cross-close; 28:3-4 NEW demand-on-God; Mahalat no name write).
+Piece-1 headline careers pre-verified: harag 2026 toks1-5 ALL
+Cain-cycle → tok10 ve-aharga (brother-kill echo); nacham 5162
+tok4=24:67 Isaac comforted → tok5=27:42 Esau self-consoles-by-
+murder → toks6-7=37:35 Jacob refuses comfort; evel 60 all-5 tokens
+= mourning for fathers; shakhol 7921 tok1 Rivqah → toks3-4 Jacob's
+own mouth 42:36/43:14; shakhach 7911 tok2=40:23 cupbearer forgets;
+qutz 6973 tok2=Exod 1:12; barach 1272 toks1-2 Hagar → tok3 first
+flee-imperative; heart-speech census 8:21/17:17/24:45 → 27:41.
+Etnachta: 41 idx8, 42 idx6, 43 idx3 (be-qoli AGAIN like 27:8!),
+44 idx3, 45 idx12, 46 idx8. STOP before 28:1.
+
+## PRIOR — gen_46 FROZEN AND COMMITTED
 gen_46 frozen (whole-unit PASS, 40/40 steps zero data errors, nine
 tree halves expanded, real scenario run ALL GREEN, regression
 47/47), COMMITTED and PUSHED. History note 2026-08-06: owner asked
