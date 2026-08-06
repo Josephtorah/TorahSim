@@ -1,4 +1,8 @@
-# Resume prompt — SOLO ERA · 49 frozen · gen_47+gen_48 FROZEN (uncommitted) · 2026-08-06
+# Resume prompt — SOLO ERA · 49 frozen · gen_47+gen_48 COMMITTED+PUSHED · 2026-08-06
+
+COMMITS (owner word given, pushed to main): b9b9fa7 gen_47 freeze ·
+c88b200 gen_48 freeze (+ ALL_UNITS/index/solo-era doc) · 8a9a1b0 webapp
+undated-page fix. Working tree CLEAN. HEAD = 8a9a1b0.
 
 Read this FIRST after compaction. Supersedes PROMPT_continue_gen46 and
 PROMPT_continue_amendment_wave (both closed). Disk is truth: verify with
