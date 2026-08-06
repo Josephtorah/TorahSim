@@ -1,33 +1,37 @@
-# Resume — AMENDMENT WAVE · 2026-08-06
+# Resume — AMENDMENT WAVE · 2026-08-06 · CLOSED pending owner commit
 
 ## §1a Claude law (permanent)
-Care-points first · pieces STOP for Claude · no freeze without whole-unit review · owner commit.
+Care-points first · pieces STOP for Claude · no freeze without whole-unit · owner commit/push.
 
-**Last relay acted: #4** (gen_43 piece 1).
+**Last relay:** #7 (gen_43 freeze ritual).
 
 ---
 
-## Order
-gen_41 committed · gen_42 freeze ritual done (await owner commit if not yet) · **gen_43** (current, LAST amend unit).
+## Amendment wave status: COMPLETE (ritual) · COMMIT DEBT
 
-## gen_43 (current)
-- **Unfrozen** draft (was b715772) · public **45 frozen**
-- Unit: `logic/units/gen_43_isaac_twins_birthright.yaml` · refs **25:19-23**
-- **Piece 1 (25:19–23)** drafted under RELAY #4 — **STOP for Claude before 25:24**
-- Pieces planned: **19–23** · **24–28** · **29–34**
-- Ledger: `grok_package/gen43_amend_piece1_verification_ledger_2026-08-06.md`
-- State: SPECS empty · REGISTRY 0 · 4 scenarios / 5 steps PASS
+| Unit | Commit |
+|------|--------|
+| gen_41 | `2b0fada` on main |
+| gen_42 | `93dfe52` on main |
+| gen_43 | **freeze ritual done locally — OWNER COMMIT PENDING** |
 
-### Piece 1 headlines
-- *atar* debut pair tok1–2 same verse (entreat / be-entreated)
-- *aqara* tok2 (after Sarai 11:30)
-- first *li-derosh et-YHWH* oracle consultation
-- 25:23 elder-serves-younger = decree-FACT (not SPECS)
+## gen_43 freeze ritual (local)
+- status **frozen** · refs **25:19-34**
+- Gate **11/11 GREEN** · Regression **46/46 GREEN**
+- render py/html done
+- indexes + ALL_UNITS + watchlist + export_web (this completion pass)
+- Unit-end: **LET(haliteni) OPEN** · REGISTRY 2 · TESTS 0
 
-### Later care-points (not yet derived)
-Namings 25:25–26; ahav tok3–4; birthright machine; gulp residual; *va-yivez*; seam 26:1.
+### Owner commit message (when authorized)
+```
+Amend wave complete: gen_43 re-frozen (25:19-34); Gen 1:1-26:35 gapless, 46 frozen, zero hollow tags corpus-wide
+```
+Trailer: `Co-Authored-By: Grok <interim-coordinator@x.ai>`
 
-## Do not
-- Piece 2 without Claude green + authorization  
-- Freeze without whole-unit review  
-- Commit without owner  
+## After owner commit
+- Chair **holds** until owner next order.
+- **Genesis 27** only on owner `next block` + Claude care-points.
+- Do **not** seed next unit without those.
+
+## COMMIT DEBT
+Until `origin/main` includes gen_43 freeze: treat public remote as **45 frozen + gen_43 draft/missing** depending on prior push; local is 46 frozen. **Do not open next work until commit or explicit hold.**
