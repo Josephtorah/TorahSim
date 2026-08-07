@@ -1,0 +1,385 @@
+#!/usr/bin/env python3
+# =============================================================================
+# gen_55_two_camps_wrestled_name — 32:1-33
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_55_two_camps_wrestled_name.yaml) is CANONICAL
+# (Pre-Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter's actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+"""The two camps, the gift, and the wrestled name (32:1-33)"""
+from machine import Machine
+
+m = Machine("gen_55_two_camps_wrestled_name")
+
+# -------------------------- Gen.32.1 · THE_FAREWELL_KISS -------------------
+# וַיַּשְׁכֵּם לָבָן בַּבֹּקֶר וַיְנַשֵּׁק לְבָנָיו וְלִבְנוֹתָיו וַיְבָרֶךְ
+# אֶתְהֶם וַיֵּלֶךְ וַיָּשָׁב לָבָן לִמְקֹמוֹ
+# "[EN-AID] And Laban rose early in the morning and kissed his sons and his
+# daughters and blessed them; and Laban went and returned to his place."
+m.step("Gen.32.1")
+# ‹וַיַּשְׁכֵּם לָבָן בַּבֹּקֶר וַיְנַשֵּׁק› fact holds: and-yenasheq-and-
+# yevarekh-and-yashav(lavan, to-me-meqomo)
+m.fact("va_yenasheq_va_yevarekh_va_yashav(lavan, li_meqomo)")
+
+# -------------------------- Gen.32.2 · THE_ANGEL_ENCOUNTER -----------------
+# וְיַעֲקֹב הָלַךְ לְדַרְכּוֹ וַיִּפְגְּעוּ־בוֹ מַלְאֲכֵי אֱלֹהִים
+# "[EN-AID] And Jacob went on his way, and messengers of God met him."
+m.step("Gen.32.2")
+# ‹וַיִּפְגְּעוּ־בוֹ מַלְאֲכֵי אֱלֹהִים› fact holds: and-yifgu-vo-malakhe-
+# God(yaaqov, in-the-derekh)
+m.fact("va_yifgu_vo_malakhe_Elohim(yaaqov, ba_derekh)")
+
+# -------------------------- Gen.32.3 · THE_DUAL_NAME -----------------------
+# וַיֹּאמֶר יַעֲקֹב כַּאֲשֶׁר רָאָם מַחֲנֵה אֱלֹהִים זֶה וַיִּקְרָא
+# שֵׁם־הַמָּקוֹם הַהוּא מַחֲנָיִם
+# "[EN-AID] And Jacob said when he saw them: This is God's camp. And he
+# called the name of that place Machanayim [Two Camps]."
+m.step("Gen.32.3")
+# ‹מַחֲנֵה אֱלֹהִים זֶה› the world gains: maqom-machanayim
+m.install("maqom_machanayim")
+# ‹וַיִּקְרָא שֵׁם־הַמָּקוֹם הַהוּא מַחֲנָיִם› named: maqom-machanayim :=
+# machanayim
+m.name("maqom_machanayim", "machanayim")
+
+# -------------------------- Gen.32.4 · THE_ENVOYS --------------------------
+# וַיִּשְׁלַח יַעֲקֹב מַלְאָכִים לְפָנָיו אֶל־עֵשָׂו אָחִיו אַרְצָה שֵׂעִיר
+# שְׂדֵה אֱדוֹם
+# "[EN-AID] And Jacob sent messengers before him to Esau his brother, to the
+# land of Seir, the field of Edom."
+m.step("Gen.32.4")
+# ‹וַיִּשְׁלַח יַעֲקֹב מַלְאָכִים לְפָנָיו› fact holds: and-yishlach-
+# malakhim-to-esav(yaaqov, artza-seir)
+m.fact("va_yishlach_malakhim_el_esav(yaaqov, artza_seir)")
+
+# -------------------------- Gen.32.5 · THE_SAY_INSTRUCTION -----------------
+# וַיְצַו אֹתָם לֵאמֹר כֹּה תֹאמְרוּן לַאדֹנִי לְעֵשָׂו כֹּה אָמַר עַבְדְּךָ
+# יַעֲקֹב עִם־לָבָן גַּרְתִּי וָאֵחַר עַד־עָתָּה
+# "[EN-AID] And he commanded them, saying: Thus shall you say to my lord, to
+# Esau: Thus said your servant Jacob: With Laban I have sojourned, and I
+# have tarried until now."
+m.step("Gen.32.5")
+# ‹כֹּה תֹאמְרוּן לַאדֹנִי לְעֵשָׂו› yaaqov speaks a demand — LET?:
+# tomrun(the-malakhim, to-doni-to-esav)
+m.declare("yaaqov", "LET?",
+          "tomrun(ha_malakhim, la_doni_le_esav)")
+
+# -------------------------- Gen.32.6 · THE_INVENTORY_MESSAGE ---------------
+# וַיְהִי־לִי שׁוֹר וַחֲמוֹר צֹאן וְעֶבֶד וְשִׁפְחָה וָאֶשְׁלְחָה לְהַגִּיד
+# לַאדֹנִי לִמְצֹא־חֵן בְּעֵינֶיךָ
+# "[EN-AID] And I have ox and donkey, flock and servant and maid; and I send
+# to tell my lord, to find grace in your eyes."
+m.step("Gen.32.6")
+# ‹וַיְהִי־לִי שׁוֹר וַחֲמוֹר צֹאן וְעֶבֶד וְשִׁפְחָה› fact holds: and-yehi-
+# to-me-shor-and-chamor(divre-the-shelichut)
+m.fact("va_yehi_li_shor_va_chamor(divre_ha_shelichut)")
+
+# -------------------------- Gen.32.7 · THE_FOUR_HUNDRED --------------------
+# וַיָּשֻׁבוּ הַמַּלְאָכִים אֶל־יַעֲקֹב לֵאמֹר בָּאנוּ אֶל־אָחִיךָ
+# אֶל־עֵשָׂו וְגַם הֹלֵךְ לִקְרָאתְךָ וְאַרְבַּע־מֵאוֹת אִישׁ עִמּוֹ
+# "[EN-AID] And the messengers returned to Jacob, saying: We came to your
+# brother, to Esau — and he also is coming to meet you, and four hundred men
+# with him."
+m.step("Gen.32.7")
+# ‹בָּאנוּ אֶל־אָחִיךָ אֶל־עֵשָׂו› fact holds: banu-to-your-brother-and-
+# arba-meot-man(report)
+m.fact("banu_el_achikha_ve_arba_meot_ish(report)")
+
+# -------------------------- Gen.32.8 · THE_SPLIT ---------------------------
+# וַיִּירָא יַעֲקֹב מְאֹד וַיֵּצֶר לוֹ וַיַּחַץ אֶת־הָעָם אֲשֶׁר־אִתּוֹ
+# וְאֶת־הַצֹּאן וְאֶת־הַבָּקָר וְהַגְּמַלִּים לִשְׁנֵי מַחֲנוֹת
+# "[EN-AID] And Jacob feared greatly, and it distressed him; and he divided
+# the people that were with him, and the flock and the herd and the camels,
+# into two camps."
+m.step("Gen.32.8")
+# ‹וַיִּירָא יַעֲקֹב מְאֹד וַיֵּצֶר› fact holds: and-yira-and-yachatz-to-me-
+# shene-machanot(yaaqov)
+m.fact("va_yira_va_yachatz_li_shene_machanot(yaaqov)")
+
+# -------------------------- Gen.32.9 · THE_REMNANT_ARITHMETIC --------------
+# וַיֹּאמֶר אִם־יָבוֹא עֵשָׂו אֶל־הַמַּחֲנֶה הָאַחַת וְהִכָּהוּ וְהָיָה
+# הַמַּחֲנֶה הַנִּשְׁאָר לִפְלֵיטָה
+# "[EN-AID] And he said: If Esau comes to the one camp and strikes it, the
+# remaining camp will become a remnant."
+m.step("Gen.32.9")
+# ‹וְהָיָה הַמַּחֲנֶה הַנִּשְׁאָר לִפְלֵיטָה› fact holds: if-yavo-and-
+# hikahu-and-haya-to-me-feleta(tokhnit)
+m.fact("im_yavo_ve_hikahu_ve_haya_li_feleta(tokhnit)")
+
+# -------------------------- Gen.32.10 · THE_REQUOTE_LADDER_OPENS -----------
+# וַיֹּאמֶר יַעֲקֹב אֱלֹהֵי אָבִי אַבְרָהָם וֵאלֹהֵי אָבִי יִצְחָק יְהוָה
+# הָאֹמֵר אֵלַי שׁוּב לְאַרְצְךָ וּלְמוֹלַדְתְּךָ וְאֵיטִיבָה עִמָּךְ
+# "[EN-AID] And Jacob said: God of my father Abraham and God of my father
+# Isaac, YHWH, who says to me: Return to your land and to your kindred, and
+# I will do good with you."
+m.step("Gen.32.10")
+# ‹שׁוּב לְאַרְצְךָ וּלְמוֹלַדְתְּךָ וְאֵיטִיבָה עִמָּךְ› fact holds:
+# retell-shuv-to-artzekha-and-etiva(tefila, delta-x2)
+m.fact("retell_shuv_le_artzekha_ve_etiva(tefila, delta_x2)")
+
+# -------------------------- Gen.32.11 · THE_TOO_SMALL ----------------------
+# קָטֹנְתִּי מִכֹּל הַחֲסָדִים וּמִכָּל־הָאֱמֶת אֲשֶׁר עָשִׂיתָ
+# אֶת־עַבְדֶּךָ כִּי בְמַקְלִי עָבַרְתִּי אֶת־הַיַּרְדֵּן הַזֶּה וְעַתָּה
+# הָיִיתִי לִשְׁנֵי מַחֲנוֹת
+# "[EN-AID] I am too small for all the kindnesses and all the truth that You
+# have done for Your servant; for with my staff I crossed this Jordan, and
+# now I have become two camps."
+m.step("Gen.32.11")
+# ‹קָטֹנְתִּי מִכֹּל הַחֲסָדִים וּמִכָּל־הָאֱמֶת› fact holds: qatonti-from-
+# all-the-chasadim(tefila)
+m.fact("qatonti_mi_kol_ha_chasadim(tefila)")
+
+# -------------------------- Gen.32.12 · THE_RESCUE_DEMAND ------------------
+# הַצִּילֵנִי נָא מִיַּד אָחִי מִיַּד עֵשָׂו כִּי־יָרֵא אָנֹכִי אֹתוֹ
+# פֶּן־יָבוֹא וְהִכַּנִי אֵם עַל־בָּנִים
+# "[EN-AID] Rescue me, please, from the hand of my brother, from the hand of
+# Esau; for I fear him, lest he come and strike me, mother upon children."
+m.step("Gen.32.12")
+# ‹הַצִּילֵנִי נָא מִיַּד אָחִי מִיַּד עֵשָׂו› yaaqov speaks a demand — LET:
+# hatzileni(the-LORD, from-yad-esav)
+m.declare("yaaqov", "LET",
+          "hatzileni(YHWH, mi_yad_esav)")
+
+# -------------------------- Gen.32.13 · THE_UNSOURCED_DOUBLET --------------
+# וְאַתָּה אָמַרְתָּ הֵיטֵב אֵיטִיב עִמָּךְ וְשַׂמְתִּי אֶת־זַרְעֲךָ כְּחוֹל
+# הַיָּם אֲשֶׁר לֹא־יִסָּפֵר מֵרֹב
+# "[EN-AID] And You said: Doing good I will do good with you, and I will
+# make your seed as the sand of the sea, which cannot be counted for
+# multitude."
+m.step("Gen.32.13")
+# ‹וְאַתָּה אָמַרְתָּ הֵיטֵב אֵיטִיב עִמָּךְ› fact holds: amarta-hetev-etiv-
+# like-chol-the-yam(tefila, delta-x2)
+m.fact("amarta_hetev_etiv_ke_chol_ha_yam(tefila, delta_x2)")
+
+# -------------------------- Gen.32.14 · THE_GIFT_TAKEN ---------------------
+# וַיָּלֶן שָׁם בַּלַּיְלָה הַהוּא וַיִּקַּח מִן־הַבָּא בְיָדוֹ מִנְחָה
+# לְעֵשָׂו אָחִיו
+# "[EN-AID] And he lodged there that night; and he took from what came to
+# his hand a gift for Esau his brother."
+m.step("Gen.32.14")
+# ‹וַיִּקַּח מִן־הַבָּא בְיָדוֹ מִנְחָה לְעֵשָׂו אָחִיו› fact holds: and-
+# yiqach-mincha-to-esav(yaaqov, from-the-in-the-and-his-hand)
+m.fact("va_yiqach_mincha_le_esav(yaaqov, min_ha_ba_ve_yado)")
+
+# -------------------------- Gen.32.15 · THE_HERD_LIST_ONE ------------------
+# עִזִּים מָאתַיִם וּתְיָשִׁים עֶשְׂרִים רְחֵלִים מָאתַיִם וְאֵילִים
+# עֶשְׂרִים
+# "[EN-AID] Two hundred she-goats and twenty he-goats, two hundred ewes and
+# twenty rams,"
+m.step("Gen.32.15")
+# ‹עִזִּים מָאתַיִם וּתְיָשִׁים עֶשְׂרִים› fact holds: izim-teyashim-
+# rechelim-elim(minchat-the-tzon)
+m.fact("izim_teyashim_rechelim_elim(minchat_ha_tzon)")
+
+# -------------------------- Gen.32.16 · THE_HERD_LIST_TWO ------------------
+# גְּמַלִּים מֵינִיקוֹת וּבְנֵיהֶם שְׁלֹשִׁים פָּרוֹת אַרְבָּעִים וּפָרִים
+# עֲשָׂרָה אֲתֹנֹת עֶשְׂרִים וַעְיָרִם עֲשָׂרָה
+# "[EN-AID] Thirty nursing camels with their young, forty cows and ten
+# bulls, twenty she-donkeys and ten colts."
+m.step("Gen.32.16")
+# ‹גְּמַלִּים מֵינִיקוֹת וּבְנֵיהֶם שְׁלֹשִׁים› fact holds: gemalim-parot-
+# parim-atonot-eyarim(minchat-the-beemot)
+m.fact("gemalim_parot_parim_atonot_eyarim(minchat_ha_beemot)")
+
+# -------------------------- Gen.32.17 · THE_PASS_ORDER ---------------------
+# וַיִּתֵּן בְּיַד־עֲבָדָיו עֵדֶר עֵדֶר לְבַדּוֹ וַיֹּאמֶר אֶל־עֲבָדָיו
+# עִבְרוּ לְפָנַי וְרֶוַח תָּשִׂימוּ בֵּין עֵדֶר וּבֵין עֵדֶר
+# "[EN-AID] And he gave them into the hand of his servants, drove by drove
+# alone, and said to his servants: Pass over before me, and put a space
+# between drove and drove."
+m.step("Gen.32.17")
+# ‹עִבְרוּ לְפָנַי› yaaqov speaks a demand — LET: ivru(avadav, to-fanai)
+m.declare("yaaqov", "LET",
+          "ivru(avadav, le_fanai)")
+# ‹וְרֶוַח תָּשִׂימוּ בֵּין עֵדֶר וּבֵין עֵדֶר› yaaqov speaks a demand —
+# LET?: tasimu(revach, ben-eder-and-ven-eder)
+m.declare("yaaqov", "LET?",
+          "tasimu(revach, ben_eder_u_ven_eder)")
+
+# -------------------------- Gen.32.18 · THE_FIRST_WAVE_SCRIPT --------------
+# וַיְצַו אֶת־הָרִאשׁוֹן לֵאמֹר כִּי יִפְגָּשְׁךָ עֵשָׂו אָחִי וִשְׁאֵלְךָ
+# לֵאמֹר לְמִי־אַתָּה וְאָנָה תֵלֵךְ וּלְמִי אֵלֶּה לְפָנֶיךָ
+# "[EN-AID] And he commanded the first, saying: When Esau my brother meets
+# you and asks you, saying: Whose are you, and where do you go, and whose
+# are these before you?"
+m.step("Gen.32.18")
+# ‹כִּי יִפְגָּשְׁךָ עֵשָׂו אָחִי וִשְׁאֵלְךָ› fact holds: when-yifgashkha-
+# esav-and-sheelkha(tzav-rishon)
+m.fact("ki_yifgashkha_esav_u_sheelkha(tzav_rishon)")
+
+# -------------------------- Gen.32.19 · THE_SCRIPTED_ANSWER ----------------
+# וְאָמַרְתָּ לְעַבְדְּךָ לְיַעֲקֹב מִנְחָה הִוא שְׁלוּחָה לַאדֹנִי לְעֵשָׂו
+# וְהִנֵּה גַם־הוּא אַחֲרֵינוּ
+# "[EN-AID] Then you shall say: Your servant Jacob's — it is a gift sent to
+# my lord, to Esau; and behold, he also is behind us."
+m.step("Gen.32.19")
+# ‹מִנְחָה הִוא שְׁלוּחָה לַאדֹנִי› fact holds: mincha-hi-shelucha-and-hine-
+# that-acharenu(maane)
+m.fact("mincha_hi_shelucha_ve_hine_hu_acharenu(maane)")
+
+# -------------------------- Gen.32.20 · THE_SECOND_SAY_CARD ----------------
+# וַיְצַו גַּם אֶת־הַשֵּׁנִי גַּם אֶת־הַשְּׁלִישִׁי גַּם אֶת־כָּל־הַהֹלְכִים
+# אַחֲרֵי הָעֲדָרִים לֵאמֹר כַּדָּבָר הַזֶּה תְּדַבְּרוּן אֶל־עֵשָׂו
+# בְּמֹצַאֲכֶם אֹתוֹ
+# "[EN-AID] And he commanded also the second, also the third, also all who
+# walked behind the droves, saying: According to this word shall you speak
+# to Esau when you find him."
+m.step("Gen.32.20")
+# ‹כַּדָּבָר הַזֶּה תְּדַבְּרוּן אֶל־עֵשָׂו בְּמֹצַאֲכֶם אֹתוֹ› yaaqov
+# speaks a demand — LET?: tedabrun(all-the-holkhim, to-esav)
+m.declare("yaaqov", "LET?",
+          "tedabrun(kol_ha_holkhim, el_esav)")
+
+# -------------------------- Gen.32.21 · THE_ATONEMENT_VERB -----------------
+# וַאֲמַרְתֶּם גַּם הִנֵּה עַבְדְּךָ יַעֲקֹב אַחֲרֵינוּ כִּי־אָמַר
+# אֲכַפְּרָה פָנָיו בַּמִּנְחָה הַהֹלֶכֶת לְפָנָי וְאַחֲרֵי־כֵן אֶרְאֶה
+# פָנָיו אוּלַי יִשָּׂא פָנָי
+# "[EN-AID] And you shall say: Also, behold, your servant Jacob is behind
+# us. For he said: Let me cover his face with the gift that walks before my
+# face; and afterwards I will see his face — perhaps he will lift my face."
+m.step("Gen.32.21")
+# ‹אֲכַפְּרָה פָנָיו בַּמִּנְחָה הַהֹלֶכֶת לְפָנָי› fact holds: akhapra-
+# fanav-in-the-mincha(machshevet-yaaqov)
+m.fact("akhapra_fanav_ba_mincha(machshevet_yaaqov)")
+
+# -------------------------- Gen.32.22 · THE_WRONG_SUBJECT_PASSES -----------
+# וַתַּעֲבֹר הַמִּנְחָה עַל־פָּנָיו וְהוּא לָן בַּלַּיְלָה־הַהוּא
+# בַּמַּחֲנֶה
+# "[EN-AID] And the gift passed over before his face; and he lodged that
+# night in the camp."
+m.step("Gen.32.22")
+# ‹וַתַּעֲבֹר הַמִּנְחָה עַל־פָּנָיו› fact holds: and-taavor-the-mincha-
+# upon-panav(that-lan-in-the-machane)
+m.fact("va_taavor_ha_mincha_al_panav(hu_lan_ba_machane)")
+
+# -------------------------- Gen.32.23 · THE_NIGHT_CROSSING -----------------
+# וַיָּקָם בַּלַּיְלָה הוּא וַיִּקַּח אֶת־שְׁתֵּי נָשָׁיו וְאֶת־שְׁתֵּי
+# שִׁפְחֹתָיו וְאֶת־אַחַד עָשָׂר יְלָדָיו וַיַּעֲבֹר אֵת מַעֲבַר יַבֹּק
+# "[EN-AID] And he rose that night and took his two wives and his two maids
+# and his eleven children, and crossed the ford of the Jabbok."
+m.step("Gen.32.23")
+# ‹וַיַּעֲבֹר אֵת מַעֲבַר יַבֹּק› fact holds: and-yaavor-maavar-yaboq(in-
+# the-night, achad-asar-yeladav)
+m.fact("va_yaavor_et_maavar_yaboq(ba_layla, achad_asar_yeladav)")
+
+# -------------------------- Gen.32.24 · THE_FERRYING -----------------------
+# וַיִּקָּחֵם וַיַּעֲבִרֵם אֶת־הַנָּחַל וַיַּעֲבֵר אֶת־אֲשֶׁר־לוֹ
+# "[EN-AID] And he took them and crossed them over the stream, and crossed
+# over what was his."
+m.step("Gen.32.24")
+# ‹וַיִּקָּחֵם וַיַּעֲבִרֵם אֶת־הַנָּחַל› fact holds: and-yaavirem-the-
+# nachal(all-which-not)
+m.fact("va_yaavirem_et_ha_nachal(kol_asher_lo)")
+
+# -------------------------- Gen.32.25 · THE_ALONE_AND_THE_WRESTLE ----------
+# וַיִּוָּתֵר יַעֲקֹב לְבַדּוֹ וַיֵּאָבֵק אִישׁ עִמּוֹ עַד עֲלוֹת הַשָּׁחַר
+# "[EN-AID] And Jacob was left alone; and a man wrestled with him until the
+# rising of the dawn."
+m.step("Gen.32.25")
+# ‹וַיֵּאָבֵק אִישׁ עִמּוֹ עַד עֲלוֹת הַשָּׁחַר› fact holds: and-yeaveq-man-
+# imo(yaaqov-alone, until-alot-the-shachar)
+m.fact("va_yeaveq_ish_imo(yaaqov_levado, ad_alot_ha_shachar)")
+
+# -------------------------- Gen.32.26 · THE_TOUCH --------------------------
+# וַיַּרְא כִּי לֹא יָכֹל לוֹ וַיִּגַּע בְּכַף־יְרֵכוֹ וַתֵּקַע כַּף־יֶרֶךְ
+# יַעֲקֹב בְּהֵאָבְקוֹ עִמּוֹ
+# "[EN-AID] And he saw that he could not prevail against him, and he touched
+# the socket of his thigh; and the socket of Jacob's thigh was wrenched as
+# he wrestled with him."
+m.step("Gen.32.26")
+# ‹וַתֵּקַע כַּף־יֶרֶךְ יַעֲקֹב בְּהֵאָבְקוֹ עִמּוֹ› fact holds: and-yiga-
+# in-khaf-yerekho(and-teqa, in-heavqo)
+m.fact("va_yiga_be_khaf_yerekho(va_teqa, be_heavqo)")
+
+# -------------------------- Gen.32.27 · THE_WRESTLERS_SEND_ME --------------
+# וַיֹּאמֶר שַׁלְּחֵנִי כִּי עָלָה הַשָּׁחַר וַיֹּאמֶר לֹא אֲשַׁלֵּחֲךָ כִּי
+# אִם־בֵּרַכְתָּנִי
+# "[EN-AID] And he said: Send me away, for the dawn has risen. And he said:
+# I will not send you away unless you have blessed me."
+m.step("Gen.32.27")
+# ‹שַׁלְּחֵנִי כִּי עָלָה הַשָּׁחַר› the-man speaks a demand — LET:
+# shalcheni(yaaqov)
+m.declare("ha_ish", "LET",
+          "shalcheni(yaaqov)")
+
+# -------------------------- Gen.32.28 · THE_NAME_SURRENDERED ---------------
+# וַיֹּאמֶר אֵלָיו מַה־שְּׁמֶךָ וַיֹּאמֶר יַעֲקֹב
+# "[EN-AID] And he said to him: What is your name? And he said: Jacob."
+m.step("Gen.32.28")
+# ‹מַה־שְּׁמֶךָ וַיֹּאמֶר יַעֲקֹב› fact holds: ma-shemekha-and-yomer-
+# yaaqov(the-man-shoel)
+m.fact("ma_shemekha_va_yomer_yaaqov(ha_ish_shoel)")
+
+# -------------------------- Gen.32.29 · THE_DECREE_THAT_WRITES_NOTHING -----
+# וַיֹּאמֶר לֹא יַעֲקֹב יֵאָמֵר עוֹד שִׁמְךָ כִּי אִם־יִשְׂרָאֵל
+# כִּי־שָׂרִיתָ עִם־אֱלֹהִים וְעִם־אֲנָשִׁים וַתּוּכָל
+# "[EN-AID] And he said: No more Jacob shall your name be said, but Israel;
+# for you have striven with God and with men, and have prevailed."
+m.step("Gen.32.29")
+# ‹לֹא יַעֲקֹב יֵאָמֵר עוֹד שִׁמְךָ כִּי אִם־יִשְׂרָאֵל› fact holds: not-
+# yaaqov-yeamer-od-when-if-yisrael(decree-fact)
+m.fact("lo_yaaqov_yeamer_od_ki_im_yisrael(decree_fact)")
+
+# -------------------------- Gen.32.30 · THE_NAME_REFUSED -------------------
+# וַיִּשְׁאַל יַעֲקֹב וַיֹּאמֶר הַגִּידָה־נָּא שְׁמֶךָ וַיֹּאמֶר לָמָּה זֶּה
+# תִּשְׁאַל לִשְׁמִי וַיְבָרֶךְ אֹתוֹ שָׁם
+# "[EN-AID] And Jacob asked and said: Tell, please, your name. And he said:
+# Why is it that you ask my name? And he blessed him there."
+m.step("Gen.32.30")
+# ‹הַגִּידָה־נָּא שְׁמֶךָ› yaaqov speaks a demand — LET: hagida(the-man,
+# shimkha)
+m.declare("yaaqov", "LET",
+          "hagida(ha_ish, et_shimkha)")
+
+# -------------------------- Gen.32.31 · THE_FACE_AND_THE_WRONG_RESCUE ------
+# וַיִּקְרָא יַעֲקֹב שֵׁם הַמָּקוֹם פְּנִיאֵל כִּי־רָאִיתִי אֱלֹהִים פָּנִים
+# אֶל־פָּנִים וַתִּנָּצֵל נַפְשִׁי
+# "[EN-AID] And Jacob called the name of the place Peniel: for I have seen
+# God face to face, and my soul was delivered."
+m.step("Gen.32.31")
+# ‹וַיִּקְרָא יַעֲקֹב שֵׁם הַמָּקוֹם פְּנִיאֵל› the world gains: maqom-
+# peniel
+m.install("maqom_peniel")
+# ‹פְּנִיאֵל› named: maqom-peniel := peniel
+m.name("maqom_peniel", "peniel")
+
+# -------------------------- Gen.32.32 · THE_SUNRISE_AND_THE_LIMP -----------
+# וַיִּזְרַח־לוֹ הַשֶּׁמֶשׁ כַּאֲשֶׁר עָבַר אֶת־פְּנוּאֵל וְהוּא צֹלֵעַ
+# עַל־יְרֵכוֹ
+# "[EN-AID] And the sun rose upon him as he passed Penuel, and he was
+# limping on his thigh."
+m.step("Gen.32.32")
+# ‹וַיִּזְרַח־לוֹ הַשֶּׁמֶשׁ› fact holds: and-yizrach-the-shemesh-and-that-
+# tzolea(over-penuel)
+m.fact("va_yizrach_ha_shemesh_ve_hu_tzolea(over_et_penuel)")
+
+# -------------------------- Gen.32.33 · THE_FIRST_NARRATOR_LAW -------------
+# עַל־כֵּן לֹא־יֹאכְלוּ בְנֵי־יִשְׂרָאֵל אֶת־גִּיד הַנָּשֶׁה אֲשֶׁר עַל־כַּף
+# הַיָּרֵךְ עַד הַיּוֹם הַזֶּה כִּי נָגַע בְּכַף־יֶרֶךְ יַעֲקֹב בְּגִיד
+# הַנָּשֶׁה
+# "[EN-AID] Therefore the children of Israel eat not the sinew of the thigh-
+# vein which is upon the socket of the thigh, to this day; for he touched
+# the socket of Jacob's thigh in the sinew of the thigh-vein."
+m.step("Gen.32.33")
+# ‹עַל־כֵּן לֹא־יֹאכְלוּ בְנֵי־יִשְׂרָאֵל אֶת־גִּיד הַנָּשֶׁה› pattern
+# recorded: not-yokhlu-bene-yisrael-gid-the-nashe
+m.pattern("lo_yokhlu_bene_yisrael_et_gid_ha_nashe")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == {'maqom_machanayim', 'maqom_peniel'}
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {'maqom_machanayim': 'machanayim', 'maqom_peniel': 'peniel'}
+    assert m.REGISTRY["writes"] == 2
+    assert m.tests_list() == []
+    assert m.open_demands() == ['tomrun(ha_malakhim, la_doni_le_esav)', 'hatzileni(YHWH, mi_yad_esav)', 'ivru(avadav, le_fanai)', 'tasimu(revach, ben_eder_u_ven_eder)', 'tedabrun(kol_ha_holkhim, el_esav)', 'shalcheni(yaaqov)', 'hagida(ha_ish, et_shimkha)']
+    assert len(m.SPECS["log"]) == 7
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted(['va_yenasheq_va_yevarekh_va_yashav(lavan, li_meqomo)', 'va_yifgu_vo_malakhe_Elohim(yaaqov, ba_derekh)', 'va_yishlach_malakhim_el_esav(yaaqov, artza_seir)', 'va_yehi_li_shor_va_chamor(divre_ha_shelichut)', 'banu_el_achikha_ve_arba_meot_ish(report)', 'va_yira_va_yachatz_li_shene_machanot(yaaqov)', 'im_yavo_ve_hikahu_ve_haya_li_feleta(tokhnit)', 'retell_shuv_le_artzekha_ve_etiva(tefila, delta_x2)', 'qatonti_mi_kol_ha_chasadim(tefila)', 'amarta_hetev_etiv_ke_chol_ha_yam(tefila, delta_x2)', 'va_yiqach_mincha_le_esav(yaaqov, min_ha_ba_ve_yado)', 'izim_teyashim_rechelim_elim(minchat_ha_tzon)', 'gemalim_parot_parim_atonot_eyarim(minchat_ha_beemot)', 'ki_yifgashkha_esav_u_sheelkha(tzav_rishon)', 'mincha_hi_shelucha_ve_hine_hu_acharenu(maane)', 'akhapra_fanav_ba_mincha(machshevet_yaaqov)', 'va_taavor_ha_mincha_al_panav(hu_lan_ba_machane)', 'va_yaavor_et_maavar_yaboq(ba_layla, achad_asar_yeladav)', 'va_yaavirem_et_ha_nachal(kol_asher_lo)', 'va_yeaveq_ish_imo(yaaqov_levado, ad_alot_ha_shachar)', 'va_yiga_be_khaf_yerekho(va_teqa, be_heavqo)', 'ma_shemekha_va_yomer_yaaqov(ha_ish_shoel)', 'lo_yaaqov_yeamer_od_ki_im_yisrael(decree_fact)', 'va_yizrach_ha_shemesh_ve_hu_tzolea(over_et_penuel)', 'pattern: lo_yokhlu_bene_yisrael_et_gid_ha_nashe'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 10
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
