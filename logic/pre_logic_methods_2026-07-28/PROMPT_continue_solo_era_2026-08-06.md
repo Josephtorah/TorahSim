@@ -1,4 +1,4 @@
-# Resume prompt — SOLO ERA · 51 frozen · gen_50 COMMITTED (71c6dea, pushed) · 2026-08-07
+# Resume prompt — SOLO ERA · 54 frozen · gen_51+52+53 FROZEN (uncommitted; 3-block autonomous run COMPLETE) · 2026-08-07
 
 COMMITS (owner word given, pushed to main): b9b9fa7 gen_47 freeze ·
 c88b200 gen_48 freeze (+ ALL_UNITS/index/solo-era doc) · 8a9a1b0 webapp
@@ -134,10 +134,82 @@ amended (1419 toks 18-19, 22).
   allocated variables the law operates on). App-ness emerges at Stage E
   cross-unit chaining.
 
-## NEXT
-1. **gen_51 = 29:31–30:24 suggested** (the womb arc: eleven births, the
-   NAME-WRITE AVALANCHE — REGISTRY's densest span; every son an explicit
-   etiology naming) on owner's next-block word. Rhythm unchanged.
+## AUTONOMOUS 3-BLOCK RUN (owner order 2026-08-07: "process the next 3
+## blocks on your own ... one at a time")
+Owner is away; the next-block gate is lifted for THREE blocks. Commit
+gate NOT lifted (freeze artifacts accumulate uncommitted); narrative
+gate NOT lifted (needs per-unit owner ask). Progress:
+- **Block 1 DONE — gen_51_opened_womb_twelve_names FROZEN (29:31–30:24).**
+  29 steps/29 scenarios; REGISTRY 12 writes (reuven→yosef incl. dina);
+  3 pushes, 1 clean pop (bo_el_bilhah 30:3→30:4); ends depth 2 OPEN
+  (hava_banim — wrong-performer+wrong-number non-pop at 30:23, the
+  remainder written into the REGISTRY as the name yosef; teni_dudaim —
+  transfer never narrated). Mismatch family member #5. Ketiv/qere
+  carried at 30:11 (corpus first in a name-etiology). Four
+  etnachta-less verses split at strongest disjunctive (30:5,10,12,19).
+  Adversarial review PASS (~365 checks) + re-review of two applied
+  fences CONFIRMED. Regression 52/52; ALL_UNITS 52× green; py+html
+  rendered (undated page); watchlist WATCHLIST_gen51_prospective.
+- **Block 2 DONE — gen_52_send_me_speckled_wage_rods FROZEN (30:25–43).**
+  19 steps/19 scenarios; 3 pushes (shalcheni, tena_nashai_viladai,
+  naqva_sekhar), 1 pop (naqva at 30:32, the wage designated); ends depth
+  2 OPEN (send never performed — ch 31 = flight; household never
+  delivered). Mismatch family #6. Adversarial review FAIL→amend→PASS
+  (naqva career +Num 1:17; "third"→"second" depth-2 wall; 30:34
+  three-word left half). Regression 53/53; ALL_UNITS 53× green; py+html
+  rendered (undated); watchlist WATCHLIST_gen52_prospective (incl. open
+  corpus-wide maqqef-in-tree-halves observation for owner). Original
+  pre-stage notes:
+  19 verses/278 tokens, all etnachta'd; volitives = shalcheni 30:25 +
+  tena 30:26 + naqva 30:28 (three pushes) + purpose-cohortatives
+  (ve-elkha, ve-elekha, ve-etena) + 30:31 ashuva (1cs self-commit,
+  fence). Expected headline: shalcheni NEVER performed (Jacob leaves by
+  FLIGHT, ch 31). Career gold pre-verified: nachash 1/7 DEBUT in
+  Laban's mouth (→ Joseph's cup 44:5,15 → prohibited Lev 19:26/Deut
+  18:10); paratz tok1 = 28:14 Bethel pledge → toks 2-3 = 30:30/43
+  in-span; meod-meod doubling 30:43 (cf. 17:2,6); seh toks 1-2 = Akedah
+  → 3-4 = wage-lambs; shoqet 2/2 career = Rebekah's trough → rod-trough;
+  spotted-vocab hapax garden (tala 6/6, chum 4/4, patzal 2/2, livne,
+  armon, luz-tree all 1/1; luz-tree ≠ luz-city strong, fence). Scans in
+  scratchpad gen52_careers.txt.
+- **Block 3 DONE — gen_53_flight_over_the_river FROZEN (31:1–21).**
+  21 steps/21 scenarios; 2 pushes (shuv_eretz_avot by YHWH 31:3;
+  ase_kol_asher_amar by COMPOUND speaker rachel_ve_leah 31:16 — first
+  two-women compound; gen_41's lavan_betuel holds first-of-any-kind),
+  ZERO pops — ends mid-flight, depth 2 OPEN (the ALL-quantifier holds
+  both cards; resolution horizon 35:27), THIRD consecutive depth-2
+  wall. Mismatch family #7. CROWN: 31:13 registry read-back (anokhi
+  ha-El BET-EL = gen_48's NAME label read by its bearer) + mashach
+  anoint-verb Torah DEBUT in the same verse; 31:5 = the gen_48 vow
+  if-clause's truth-token (imadi tok9); 31:21 = gen_47's flee-verb
+  finally performed (landing-note). 31:9 etnachta-less (tifcha idx4).
+  Retelling fence applied to 31:12-13's five dream-imperatives (gen_41
+  law). Adversarial review FAIL→amend→PASS (3 MAJOR prose fixes:
+  compound-speaker superlative narrowed; hineni list adds God's own
+  6:17; "verbatim" → object-SHIFTED letter-delta for 32:10) +
+  re-review CONFIRMED. Regression 54/54; ALL_UNITS 54× green; py+html
+  (undated)/index/coverage rendered; watchlist
+  WATCHLIST_gen53_prospective. Original boundary note:
+  Boundary chosen: ends at 31:21 (river crossed, face toward Gilead);
+  31:22 opens the pursuit (yom-walk tok100 lands there). Pre-staged: 21
+  verses/287 tokens; 31:9 etnachta-less; volitives = 31:3 shuv (YHWH's
+  return-command — PUSH; note ve-ehye imakh echoes the gen_48 vow
+  condition), 31:12 sa/u-ree + 31:13 qum/tze/ve-shuv (inside Jacob's
+  DREAM-RETELL to the wives — reported commands, fence-vs-push decision
+  needed, check gen_41 retell precedent), 31:16 ase (the WIVES' joint
+  demand "all Elohim said, DO" — PUSH; performed va-yaqom 31:17 → pop;
+  keep shuv OPEN through wall — arrival = 35:27). CROWN CARE: 31:13
+  "anokhi ha-El BET-EL" — God self-identifies by gen_48's REGISTRY
+  label (matzevah tok2, neder callback) — the strongest NAME-write
+  read-back yet. Also: ganav storm lands (31:19 Rachel/terafim debut,
+  31:20 heart-theft, arami tokens); maskoret tok2 = 31:7 + monim
+  ten-times; 31:10-12 dream re-uses deal adjectives with BERUDIM
+  swapped in (1258 debut ×2) for the deal's telu'im — the retell
+  CHANGES an adjective, machine-visible; 31:14-16 nachalah/cheleq
+  inheritance debut in the daughters' mouths + "he SOLD us" (makhar —
+  the birthright-sale verb) + devoured-our-silver infinitive-absolute;
+  31:18 rekhush; 31:19 gazaz shearing debut; 31:21 the RIVER crossed
+  (nahar careers: Eden 2:10, covenant 15:18) + Gilead debut.
 2. **Webapp machine-player** (owner floated 2026-08-07): visualize the
    interpreter run per unit — trace JSON baked at freeze + static player
    page; proposal delivered in chat, awaiting owner go.
@@ -166,7 +238,7 @@ names = HANDLERS table in run_unit.py (~line 413).
 ```
 cd <old-home>/code/Torah_Grok
 git log --oneline -3
-grep -l "status: frozen" logic/units/*.yaml | wc -l   # expect 51
+grep -l "status: frozen" logic/units/*.yaml | wc -l   # expect 54
 python3 run_unit.py gen_50_wage_seven_years_switched_bride --scenarios | tail -1
 for f in $(grep -l "status: frozen" logic/units/*.yaml); do n=$(grep -c "VERIFIED: SNAPSHOT]" $f); [ "$n" -gt 0 ] && echo "$f: $n"; done
 ```

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""ALL_UNITS.py — frozen only (gen_50 frozen 2026-08-07; 51 frozen units)."""
+"""ALL_UNITS.py — frozen only (gen_53 frozen 2026-08-07; 54 frozen units)."""
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
@@ -11888,6 +11888,788 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 7
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: gen_51_opened_womb_twelve_names
+###############################################################################
+
+m = Machine("gen_51_opened_womb_twelve_names")
+
+# -------------------------- Gen.29.31 · THE_SEEING_AND_THE_TWO_WOMBS -------
+# וַיַּרְא יְהוָה כִּי־שְׂנוּאָה לֵאָה וַיִּפְתַּח אֶת־רַחְמָהּ וְרָחֵל
+# עֲקָרָה
+# "[EN-AID] And YHWH saw that Leah was hated, and He opened her womb; and
+# Rachel was barren."
+m.step("Gen.29.31")
+# ‹וַיִּפְתַּח אֶת־רַחְמָהּ› event: patach — agent the-LORD; theme rechem-
+# leah
+m.event("patach", agent="YHWH", themes=["rechem_leah"])
+# ‹וְרָחֵל עֲקָרָה› fact holds: senua(leah); aqara(rachel)
+m.fact("senua(leah)",
+       "aqara(rachel)")
+
+# -------------------------- Gen.29.32 · THE_FIRST_WRITE_REUVEN -------------
+# וַתַּהַר לֵאָה וַתֵּלֶד בֵּן וַתִּקְרָא שְׁמוֹ רְאוּבֵן כִּי אָמְרָה
+# כִּי־רָאָה יְהוָה בְּעָנְיִי כִּי עַתָּה יֶאֱהָבַנִי אִישִׁי
+# "[EN-AID] And Leah conceived and bore a son, and she called his name
+# Reuben, for she said: Because YHWH has seen my affliction; for now my
+# husband will love me."
+m.step("Gen.29.32")
+# ‹וַתַּהַר לֵאָה וַתֵּלֶד בֵּן› the world gains: ben-1-leah
+m.install("ben_1_leah")
+# ‹וַתִּקְרָא שְׁמוֹ רְאוּבֵן› named: ben-1-leah := reuven
+m.name("ben_1_leah", "reuven")
+
+# -------------------------- Gen.29.33 · THE_SECOND_WRITE_SHIMON ------------
+# וַתַּהַר עוֹד וַתֵּלֶד בֵּן וַתֹּאמֶר כִּי־שָׁמַע יְהוָה כִּי־שְׂנוּאָה
+# אָנֹכִי וַיִּתֶּן־לִי גַּם־אֶת־זֶה וַתִּקְרָא שְׁמוֹ שִׁמְעוֹן
+# "[EN-AID] And she conceived again and bore a son, and said: Because YHWH
+# has heard that I am hated, He has given me this one also; and she called
+# his name Simeon."
+m.step("Gen.29.33")
+# ‹וַתַּהַר עוֹד וַתֵּלֶד בֵּן› the world gains: ben-2-leah
+m.install("ben_2_leah")
+# ‹וַתִּקְרָא שְׁמוֹ שִׁמְעוֹן› named: ben-2-leah := shimon
+m.name("ben_2_leah", "shimon")
+
+# -------------------------- Gen.29.34 · THE_THIRD_WRITE_LEVI ---------------
+# וַתַּהַר עוֹד וַתֵּלֶד בֵּן וַתֹּאמֶר עַתָּה הַפַּעַם יִלָּוֶה אִישִׁי
+# אֵלַי כִּי־יָלַדְתִּי לוֹ שְׁלֹשָׁה בָנִים עַל־כֵּן קָרָא־שְׁמוֹ לֵוִי
+# "[EN-AID] And she conceived again and bore a son, and said: Now this time
+# my husband will be joined to me, for I have borne him three sons;
+# therefore he called his name Levi."
+m.step("Gen.29.34")
+# ‹וַתַּהַר עוֹד וַתֵּלֶד בֵּן› the world gains: ben-3-leah
+m.install("ben_3_leah")
+# ‹קָרָא־שְׁמוֹ לֵוִי› named: ben-3-leah := levi
+m.name("ben_3_leah", "levi")
+
+# -------------------------- Gen.29.35 · THE_FOURTH_WRITE_YEHUDA ------------
+# וַתַּהַר עוֹד וַתֵּלֶד בֵּן וַתֹּאמֶר הַפַּעַם אוֹדֶה אֶת־יְהוָה עַל־כֵּן
+# קָרְאָה שְׁמוֹ יְהוּדָה וַתַּעֲמֹד מִלֶּדֶת
+# "[EN-AID] And she conceived again and bore a son, and said: This time I
+# will praise YHWH; therefore she called his name Judah. And she ceased
+# bearing."
+m.step("Gen.29.35")
+# ‹וַתַּהַר עוֹד וַתֵּלֶד בֵּן› the world gains: ben-4-leah
+m.install("ben_4_leah")
+# ‹קָרְאָה שְׁמוֹ יְהוּדָה› named: ben-4-leah := yehuda
+m.name("ben_4_leah", "yehuda")
+
+# -------------------------- Gen.30.1 · THE_CHILDREN_DEMAND -----------------
+# וַתֵּרֶא רָחֵל כִּי לֹא יָלְדָה לְיַעֲקֹב וַתְּקַנֵּא רָחֵל בַּאֲחֹתָהּ
+# וַתֹּאמֶר אֶל־יַעֲקֹב הָבָה־לִּי בָנִים וְאִם־אַיִן מֵתָה אָנֹכִי
+# "[EN-AID] And Rachel saw that she bore Jacob no children, and Rachel
+# envied her sister; and she said to Jacob: Give me children, and if not, I
+# die."
+m.step("Gen.30.1")
+# ‹הָבָה־לִּי בָנִים› rachel speaks a demand — LET: hava-banim(yaaqov)
+m.declare("rachel", "LET",
+          "hava_banim(yaaqov)")
+
+# -------------------------- Gen.30.2 · THE_REDIRECT_TO_ELOHIM --------------
+# וַיִּחַר־אַף יַעֲקֹב בְּרָחֵל וַיֹּאמֶר הֲתַחַת אֱלֹהִים אָנֹכִי
+# אֲשֶׁר־מָנַע מִמֵּךְ פְּרִי־בָטֶן
+# "[EN-AID] And Jacob's anger burned against Rachel, and he said: Am I in
+# the place of God, who has withheld from you the fruit of the womb?"
+m.step("Gen.30.2")
+# ‹הֲתַחַת אֱלֹהִים אָנֹכִי אֲשֶׁר־מָנַע מִמֵּךְ פְּרִי־בָטֶן› fact holds:
+# mana-God-peri-vaten(rachel)
+m.fact("mana_Elohim_peri_vaten(rachel)")
+
+# -------------------------- Gen.30.3 · THE_SARAI_SCRIPT_RERUN --------------
+# וַתֹּאמֶר הִנֵּה אֲמָתִי בִלְהָה בֹּא אֵלֶיהָ וְתֵלֵד עַל־בִּרְכַּי
+# וְאִבָּנֶה גַם־אָנֹכִי מִמֶּנָּה
+# "[EN-AID] And she said: Behold my maid Bilhah; go in to her, that she may
+# bear upon my knees, and I too may be built from her."
+m.step("Gen.30.3")
+# ‹בֹּא אֵלֶיהָ› rachel speaks a demand — LET: in-it-to-bilhah(yaaqov)
+m.declare("rachel", "LET",
+          "bo_el_bilhah(yaaqov)")
+
+# -------------------------- Gen.30.4 · THE_ROUTE_PERFORMED -----------------
+# וַתִּתֶּן־לוֹ אֶת־בִּלְהָה שִׁפְחָתָהּ לְאִשָּׁה וַיָּבֹא אֵלֶיהָ יַעֲקֹב
+# "[EN-AID] And she gave him Bilhah her maid as a wife; and Jacob went in to
+# her."
+m.step("Gen.30.4")
+# ‹וַיָּבֹא אֵלֶיהָ יַעֲקֹב› demand settled (popped from the queue): in-it-
+# to-bilhah(yaaqov)
+m.result("bo_el_bilhah(yaaqov)", tmark="t2")
+
+# -------------------------- Gen.30.5 · BILHAH_BEARS_A_SON ------------------
+# וַתַּהַר בִּלְהָה וַתֵּלֶד לְיַעֲקֹב בֵּן
+# "[EN-AID] And Bilhah conceived, and bore Jacob a son."
+m.step("Gen.30.5")
+# ‹וַתַּהַר בִּלְהָה וַתֵּלֶד לְיַעֲקֹב בֵּן› the world gains: ben-1-bilhah
+m.install("ben_1_bilhah")
+
+# -------------------------- Gen.30.6 · THE_FIFTH_WRITE_DAN -----------------
+# וַתֹּאמֶר רָחֵל דָּנַנִּי אֱלֹהִים וְגַם שָׁמַע בְּקֹלִי וַיִּתֶּן־לִי
+# בֵּן עַל־כֵּן קָרְאָה שְׁמוֹ דָּן
+# "[EN-AID] And Rachel said: God has judged me, and has also heard my voice,
+# and has given me a son; therefore she called his name Dan."
+m.step("Gen.30.6")
+# ‹קָרְאָה שְׁמוֹ דָּן› named: ben-1-bilhah := dan
+m.name("ben_1_bilhah", "dan")
+
+# -------------------------- Gen.30.7 · BILHAH_BEARS_A_SECOND ---------------
+# וַתַּהַר עוֹד וַתֵּלֶד בִּלְהָה שִׁפְחַת רָחֵל בֵּן שֵׁנִי לְיַעֲקֹב
+# "[EN-AID] And Bilhah, Rachel's maid, conceived again, and bore Jacob a
+# second son."
+m.step("Gen.30.7")
+# ‹וַתַּהַר עוֹד וַתֵּלֶד בִּלְהָה› the world gains: ben-2-bilhah
+m.install("ben_2_bilhah")
+
+# -------------------------- Gen.30.8 · THE_SIXTH_WRITE_NAFTALI -------------
+# וַתֹּאמֶר רָחֵל נַפְתּוּלֵי אֱלֹהִים נִפְתַּלְתִּי עִם־אֲחֹתִי
+# גַּם־יָכֹלְתִּי וַתִּקְרָא שְׁמוֹ נַפְתָּלִי
+# "[EN-AID] And Rachel said: Wrestlings of God I have wrestled with my
+# sister; indeed I have prevailed. And she called his name Naphtali."
+m.step("Gen.30.8")
+# ‹וַתִּקְרָא שְׁמוֹ נַפְתָּלִי› named: ben-2-bilhah := naftali
+m.name("ben_2_bilhah", "naftali")
+
+# -------------------------- Gen.30.9 · THE_ZILPAH_MOVE ---------------------
+# וַתֵּרֶא לֵאָה כִּי עָמְדָה מִלֶּדֶת וַתִּקַּח אֶת־זִלְפָּה שִׁפְחָתָהּ
+# וַתִּתֵּן אֹתָהּ לְיַעֲקֹב לְאִשָּׁה
+# "[EN-AID] And Leah saw that she had ceased bearing; and she took Zilpah
+# her maid, and gave her to Jacob as a wife."
+m.step("Gen.30.9")
+# ‹וַתִּקַּח אֶת־זִלְפָּה שִׁפְחָתָהּ וַתִּתֵּן אֹתָהּ לְיַעֲקֹב לְאִשָּׁה›
+# fact holds: zilpah-given-to-yaaqov(leah)
+m.fact("zilpah_given_le_yaaqov(leah)")
+
+# -------------------------- Gen.30.10 · ZILPAH_BEARS_A_SON -----------------
+# וַתֵּלֶד זִלְפָּה שִׁפְחַת לֵאָה לְיַעֲקֹב בֵּן
+# "[EN-AID] And Zilpah, Leah's maid, bore Jacob a son."
+m.step("Gen.30.10")
+# ‹וַתֵּלֶד זִלְפָּה שִׁפְחַת לֵאָה לְיַעֲקֹב בֵּן› the world gains:
+# ben-1-zilpah
+m.install("ben_1_zilpah")
+
+# -------------------------- Gen.30.11 · THE_SEVENTH_WRITE_GAD_WRITTEN_AND_READ -
+# וַתֹּאמֶר לֵאָה בגד בָּא גָד וַתִּקְרָא אֶת־שְׁמוֹ גָּד
+# "[EN-AID] And Leah said: Fortune has come! And she called his name Gad."
+m.step("Gen.30.11")
+# ‹וַתִּקְרָא אֶת־שְׁמוֹ גָּד› named: ben-1-zilpah := gad
+m.name("ben_1_zilpah", "gad")
+
+# -------------------------- Gen.30.12 · ZILPAH_BEARS_A_SECOND --------------
+# וַתֵּלֶד זִלְפָּה שִׁפְחַת לֵאָה בֵּן שֵׁנִי לְיַעֲקֹב
+# "[EN-AID] And Zilpah, Leah's maid, bore Jacob a second son."
+m.step("Gen.30.12")
+# ‹וַתֵּלֶד זִלְפָּה שִׁפְחַת לֵאָה בֵּן שֵׁנִי לְיַעֲקֹב› the world gains:
+# ben-2-zilpah
+m.install("ben_2_zilpah")
+
+# -------------------------- Gen.30.13 · THE_EIGHTH_WRITE_ASHER -------------
+# וַתֹּאמֶר לֵאָה בְּאָשְׁרִי כִּי אִשְּׁרוּנִי בָּנוֹת וַתִּקְרָא
+# אֶת־שְׁמוֹ אָשֵׁר
+# "[EN-AID] And Leah said: In my happiness! For the daughters will call me
+# happy. And she called his name Asher."
+m.step("Gen.30.13")
+# ‹וַתִּקְרָא אֶת־שְׁמוֹ אָשֵׁר› named: ben-2-zilpah := which
+m.name("ben_2_zilpah", "asher")
+
+# -------------------------- Gen.30.14 · THE_MANDRAKE_DEMAND ----------------
+# וַיֵּלֶךְ רְאוּבֵן בִּימֵי קְצִיר־חִטִּים וַיִּמְצָא דוּדָאִים בַּשָּׂדֶה
+# וַיָּבֵא אֹתָם אֶל־לֵאָה אִמּוֹ וַתֹּאמֶר רָחֵל אֶל־לֵאָה תְּנִי־נָא לִי
+# מִדּוּדָאֵי בְּנֵךְ
+# "[EN-AID] And Reuben went in the days of wheat harvest and found mandrakes
+# in the field, and brought them to Leah his mother. And Rachel said to
+# Leah: Give me, please, of your son's mandrakes."
+m.step("Gen.30.14")
+# ‹וַיֵּלֶךְ רְאוּבֵן בִּימֵי קְצִיר־חִטִּים› fact holds: dudaim-found-by-
+# reuven(sade)
+m.fact("dudaim_found_by_reuven(sade)")
+# ‹תְּנִי־נָא לִי מִדּוּדָאֵי בְּנֵךְ› rachel speaks a demand — LET: teni-
+# dudaim(leah)
+m.declare("rachel", "LET",
+          "teni_dudaim(leah)")
+
+# -------------------------- Gen.30.15 · THE_EXCHANGE_SET -------------------
+# וַתֹּאמֶר לָהּ הַמְעַט קַחְתֵּךְ אֶת־אִישִׁי וְלָקַחַת גַּם אֶת־דּוּדָאֵי
+# בְּנִי וַתֹּאמֶר רָחֵל לָכֵן יִשְׁכַּב עִמָּךְ הַלַּיְלָה תַּחַת דּוּדָאֵי
+# בְנֵךְ
+# "[EN-AID] And she said to her: Is it a small thing that you have taken my
+# husband? And would you take also my son's mandrakes? And Rachel said:
+# Therefore he shall lie with you tonight, in exchange for your son's
+# mandrakes."
+m.step("Gen.30.15")
+# ‹לָכֵן יִשְׁכַּב עִמָּךְ הַלַּיְלָה תַּחַת דּוּדָאֵי בְנֵךְ› fact holds:
+# laila-tachat-dudaim(exchange-set)
+m.fact("laila_tachat_dudaim(exchange_set)")
+
+# -------------------------- Gen.30.16 · THE_HIRE_NIGHT ---------------------
+# וַיָּבֹא יַעֲקֹב מִן־הַשָּׂדֶה בָּעֶרֶב וַתֵּצֵא לֵאָה לִקְרָאתוֹ
+# וַתֹּאמֶר אֵלַי תָּבוֹא כִּי שָׂכֹר שְׂכַרְתִּיךָ בְּדוּדָאֵי בְּנִי
+# וַיִּשְׁכַּב עִמָּהּ בַּלַּיְלָה הוּא
+# "[EN-AID] And Jacob came from the field in the evening, and Leah went out
+# to meet him and said: To me you shall come in, for hiring I have hired you
+# with my son's mandrakes. And he lay with her that night."
+m.step("Gen.30.16")
+# ‹שָׂכֹר שְׂכַרְתִּיךָ בְּדוּדָאֵי בְּנִי› fact holds: sakhor-
+# sekharticha(laila)
+m.fact("sakhor_sekharticha(laila)")
+
+# -------------------------- Gen.30.17 · THE_FIFTH_SON_HEARD ----------------
+# וַיִּשְׁמַע אֱלֹהִים אֶל־לֵאָה וַתַּהַר וַתֵּלֶד לְיַעֲקֹב בֵּן חֲמִישִׁי
+# "[EN-AID] And God heard Leah, and she conceived and bore Jacob a fifth
+# son."
+m.step("Gen.30.17")
+# ‹וַיִּשְׁמַע אֱלֹהִים אֶל־לֵאָה› fact holds: shama-God-to-leah
+m.fact("shama_Elohim_el_leah")
+# ‹וַתַּהַר וַתֵּלֶד לְיַעֲקֹב בֵּן חֲמִישִׁי› the world gains: ben-5-leah
+m.install("ben_5_leah")
+
+# -------------------------- Gen.30.18 · THE_NINTH_WRITE_YISASHKHAR ---------
+# וַתֹּאמֶר לֵאָה נָתַן אֱלֹהִים שְׂכָרִי אֲשֶׁר־נָתַתִּי שִׁפְחָתִי
+# לְאִישִׁי וַתִּקְרָא שְׁמוֹ יִשָּׂשכָר
+# "[EN-AID] And Leah said: God has given my wage, because I gave my maid to
+# my husband. And she called his name Issachar."
+m.step("Gen.30.18")
+# ‹וַתִּקְרָא שְׁמוֹ יִשָּׂשכָר› named: ben-5-leah := yisashkhar
+m.name("ben_5_leah", "yisashkhar")
+
+# -------------------------- Gen.30.19 · THE_SIXTH_SON ----------------------
+# וַתַּהַר עוֹד לֵאָה וַתֵּלֶד בֵּן־שִׁשִּׁי לְּיַעֲקֹב
+# "[EN-AID] And Leah conceived again, and bore Jacob a sixth son."
+m.step("Gen.30.19")
+# ‹וַתַּהַר עוֹד לֵאָה וַתֵּלֶד בֵּן־שִׁשִּׁי לְּיַעֲקֹב› the world gains:
+# ben-6-leah
+m.install("ben_6_leah")
+
+# -------------------------- Gen.30.20 · THE_TENTH_WRITE_ZEVULUN ------------
+# וַתֹּאמֶר לֵאָה זְבָדַנִי אֱלֹהִים אֹתִי זֵבֶד טוֹב הַפַּעַם יִזְבְּלֵנִי
+# אִישִׁי כִּי־יָלַדְתִּי לוֹ שִׁשָּׁה בָנִים וַתִּקְרָא אֶת־שְׁמוֹ זְבֻלוּן
+# "[EN-AID] And Leah said: God has endowed me with a good endowment; this
+# time my husband will dwell with me, for I have borne him six sons. And she
+# called his name Zebulun."
+m.step("Gen.30.20")
+# ‹וַתִּקְרָא אֶת־שְׁמוֹ זְבֻלוּן› named: ben-6-leah := zevulun
+m.name("ben_6_leah", "zevulun")
+
+# -------------------------- Gen.30.21 · THE_ELEVENTH_WRITE_DINA ------------
+# וְאַחַר יָלְדָה בַּת וַתִּקְרָא אֶת־שְׁמָהּ דִּינָה
+# "[EN-AID] And afterward she bore a daughter, and called her name Dinah."
+m.step("Gen.30.21")
+# ‹וְאַחַר יָלְדָה בַּת› the world gains: bat-leah
+m.install("bat_leah")
+# ‹וַתִּקְרָא אֶת־שְׁמָהּ דִּינָה› named: bat-leah := dina
+m.name("bat_leah", "dina")
+
+# -------------------------- Gen.30.22 · THE_REMEMBERING_AND_THE_OPENING ----
+# וַיִּזְכֹּר אֱלֹהִים אֶת־רָחֵל וַיִּשְׁמַע אֵלֶיהָ אֱלֹהִים וַיִּפְתַּח
+# אֶת־רַחְמָהּ
+# "[EN-AID] And God remembered Rachel, and God heard her, and opened her
+# womb."
+m.step("Gen.30.22")
+# ‹וַיִּזְכֹּר אֱלֹהִים אֶת־רָחֵל› event: male — agent God; theme rachel
+m.event("zakhar", agent="Elohim", themes=["rachel"])
+# ‹וַיִּפְתַּח אֶת־רַחְמָהּ› event: patach — agent God; theme rechem-rachel
+m.event("patach", agent="Elohim", themes=["rechem_rachel"])
+
+# -------------------------- Gen.30.23 · THE_REPROACH_GATHERED_NON_POP ------
+# וַתַּהַר וַתֵּלֶד בֵּן וַתֹּאמֶר אָסַף אֱלֹהִים אֶת־חֶרְפָּתִי
+# "[EN-AID] And she conceived and bore a son, and said: God has gathered
+# away my reproach."
+m.step("Gen.30.23")
+# ‹וַתַּהַר וַתֵּלֶד בֵּן› the world gains: ben-1-rachel
+m.install("ben_1_rachel")
+# ‹וַתֹּאמֶר אָסַף אֱלֹהִים אֶת־חֶרְפָּתִי› fact holds: asaf-God-
+# cherpati(rachel)
+m.fact("asaf_Elohim_cherpati(rachel)")
+
+# -------------------------- Gen.30.24 · THE_TWELFTH_WRITE_YOSEF_THE_OPEN_CARD -
+# וַתִּקְרָא אֶת־שְׁמוֹ יוֹסֵף לֵאמֹר יֹסֵף יְהוָה לִי בֵּן אַחֵר
+# "[EN-AID] And she called his name Joseph, saying: May YHWH add to me
+# another son."
+m.step("Gen.30.24")
+# ‹וַתִּקְרָא אֶת־שְׁמוֹ יוֹסֵף לֵאמֹר› named: ben-1-rachel := yosef
+m.name("ben_1_rachel", "yosef")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == {'bat_leah', 'ben_4_leah', 'ben_5_leah', 'ben_2_leah', 'ben_1_rachel', 'ben_1_leah', 'ben_1_bilhah', 'ben_3_leah', 'ben_2_bilhah', 'ben_2_zilpah', 'ben_6_leah', 'ben_1_zilpah'}
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {'ben_1_leah': 'reuven', 'ben_2_leah': 'shimon', 'ben_3_leah': 'levi', 'ben_4_leah': 'yehuda', 'ben_1_bilhah': 'dan', 'ben_2_bilhah': 'naftali', 'ben_1_zilpah': 'gad', 'ben_2_zilpah': 'asher', 'ben_5_leah': 'yisashkhar', 'ben_6_leah': 'zevulun', 'bat_leah': 'dina', 'ben_1_rachel': 'yosef'}
+    assert m.REGISTRY["writes"] == 12
+    assert m.tests_list() == []
+    assert m.open_demands() == ['hava_banim(yaaqov)', 'teni_dudaim(leah)']
+    assert len(m.SPECS["log"]) == 3
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted(['senua(leah)', 'aqara(rachel)', 'mana_Elohim_peri_vaten(rachel)', 'zilpah_given_le_yaaqov(leah)', 'dudaim_found_by_reuven(sade)', 'laila_tachat_dudaim(exchange_set)', 'sakhor_sekharticha(laila)', 'shama_Elohim_el_leah', 'asaf_Elohim_cherpati(rachel)'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 19
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: gen_52_send_me_speckled_wage_rods
+###############################################################################
+
+m = Machine("gen_52_send_me_speckled_wage_rods")
+
+# -------------------------- Gen.30.25 · THE_SEND_ME_DEMAND -----------------
+# וַיְהִי כַּאֲשֶׁר יָלְדָה רָחֵל אֶת־יוֹסֵף וַיֹּאמֶר יַעֲקֹב אֶל־לָבָן
+# שַׁלְּחֵנִי וְאֵלְכָה אֶל־מְקוֹמִי וּלְאַרְצִי
+# "[EN-AID] And it was, when Rachel had borne Joseph, that Jacob said to
+# Laban: Send me away, that I may go to my own place and to my land."
+m.step("Gen.30.25")
+# ‹שַׁלְּחֵנִי וְאֵלְכָה אֶל־מְקוֹמִי וּלְאַרְצִי› yaaqov speaks a demand —
+# LET: shalcheni(lavan)
+m.declare("yaaqov", "LET",
+          "shalcheni(lavan)")
+
+# -------------------------- Gen.30.26 · THE_WIVES_AND_CHILDREN_DEMAND ------
+# תְּנָה אֶת־נָשַׁי וְאֶת־יְלָדַי אֲשֶׁר עָבַדְתִּי אֹתְךָ בָּהֵן וְאֵלֵכָה
+# כִּי אַתָּה יָדַעְתָּ אֶת־עֲבֹדָתִי אֲשֶׁר עֲבַדְתִּיךָ
+# "[EN-AID] Give my wives and my children, for whom I have served you, and
+# let me go; for you know my service which I have served you."
+m.step("Gen.30.26")
+# ‹תְּנָה אֶת־נָשַׁי וְאֶת־יְלָדַי› yaaqov speaks a demand — LET: tena-
+# nashai-viladai(lavan)
+m.declare("yaaqov", "LET",
+          "tena_nashai_viladai(lavan)")
+
+# -------------------------- Gen.30.27 · THE_DIVINATION_CONFESSION ----------
+# וַיֹּאמֶר אֵלָיו לָבָן אִם־נָא מָצָאתִי חֵן בְּעֵינֶיךָ נִחַשְׁתִּי
+# וַיְבָרֲכֵנִי יְהוָה בִּגְלָלֶךָ
+# "[EN-AID] And Laban said to him: If now I have found favor in your eyes —
+# I have divined that YHWH has blessed me for your sake."
+m.step("Gen.30.27")
+# ‹נִחַשְׁתִּי וַיְבָרֲכֵנִי יְהוָה בִּגְלָלֶךָ› fact holds: berakh-the-
+# LORD-biglal-yaaqov(lavan)
+m.fact("berakh_YHWH_biglal_yaaqov(lavan)")
+
+# -------------------------- Gen.30.28 · THE_WAGE_DESIGNATION_DEMAND --------
+# וַיֹּאמַר נָקְבָה שְׂכָרְךָ עָלַי וְאֶתֵּנָה
+# "[EN-AID] And he said: Designate your wage upon me, and I will give it."
+m.step("Gen.30.28")
+# ‹נָקְבָה שְׂכָרְךָ עָלַי וְאֶתֵּנָה› lavan speaks a demand — LET: naqva-
+# sekhar(yaaqov)
+m.declare("lavan", "LET",
+          "naqva_sekhar(yaaqov)")
+
+# -------------------------- Gen.30.29 · THE_SERVICE_AUDIT ------------------
+# וַיֹּאמֶר אֵלָיו אַתָּה יָדַעְתָּ אֵת אֲשֶׁר עֲבַדְתִּיךָ וְאֵת
+# אֲשֶׁר־הָיָה מִקְנְךָ אִתִּי
+# "[EN-AID] And he said to him: You know how I have served you, and how your
+# livestock has fared with me."
+m.step("Gen.30.29")
+# ‹אַתָּה יָדַעְתָּ אֵת אֲשֶׁר עֲבַדְתִּיךָ› fact holds: yadata-
+# avodati(lavan)
+m.fact("yadata_avodati(lavan)")
+
+# -------------------------- Gen.30.30 · THE_BREAK_OUT_AUDIT ----------------
+# כִּי מְעַט אֲשֶׁר־הָיָה לְךָ לְפָנַי וַיִּפְרֹץ לָרֹב וַיְבָרֶךְ יְהוָה
+# אֹתְךָ לְרַגְלִי וְעַתָּה מָתַי אֶעֱשֶׂה גַם־אָנֹכִי לְבֵיתִי
+# "[EN-AID] For the little you had before me has broken out into abundance,
+# and YHWH has blessed you at my foot; and now, when shall I do for my own
+# house also?"
+m.step("Gen.30.30")
+# ‹וַיִּפְרֹץ לָרֹב וַיְבָרֶךְ יְהוָה אֹתְךָ לְרַגְלִי› fact holds: paratz-
+# to-rov-to-ragli(miqne-lavan)
+m.fact("paratz_la_rov_le_ragli(miqne_lavan)")
+
+# -------------------------- Gen.30.31 · THE_NOTHING_WAGE -------------------
+# וַיֹּאמֶר מָה אֶתֶּן־לָךְ וַיֹּאמֶר יַעֲקֹב לֹא־תִתֶּן־לִי מְאוּמָה
+# אִם־תַּעֲשֶׂה־לִּי הַדָּבָר הַזֶּה אָשׁוּבָה אֶרְעֶה צֹאנְךָ אֶשְׁמֹר
+# "[EN-AID] And he said: What shall I give you? And Jacob said: You shall
+# not give me anything. If you will do this thing for me, I will again feed
+# and keep your flock:"
+m.step("Gen.30.31")
+# ‹לֹא־תִתֶּן־לִי מְאוּמָה› fact holds: not-titen-to-me-meuma(exchange)
+m.fact("lo_titen_li_meuma(exchange)")
+
+# -------------------------- Gen.30.32 · THE_WAGE_NAMED_POP -----------------
+# אֶעֱבֹר בְּכָל־צֹאנְךָ הַיּוֹם הָסֵר מִשָּׁם כָּל־שֶׂה נָקֹד וְטָלוּא
+# וְכָל־שֶׂה־חוּם בַּכְּשָׂבִים וְטָלוּא וְנָקֹד בָּעִזִּים וְהָיָה שְׂכָרִי
+# "[EN-AID] I will pass through all your flock today, removing from there
+# every speckled and spotted lamb, and every dark lamb among the sheep, and
+# the spotted and speckled among the goats; and that shall be my wage."
+m.step("Gen.30.32")
+# ‹וְהָיָה שְׂכָרִי› demand settled (popped from the queue): naqva-
+# sekhar(yaaqov)
+m.result("naqva_sekhar(yaaqov)", tmark="t3")
+
+# -------------------------- Gen.30.33 · THE_RIGHTEOUSNESS_CLAUSE -----------
+# וְעָנְתָה־בִּי צִדְקָתִי בְּיוֹם מָחָר כִּי־תָבוֹא עַל־שְׂכָרִי לְפָנֶיךָ
+# כֹּל אֲשֶׁר־אֵינֶנּוּ נָקֹד וְטָלוּא בָּעִזִּים וְחוּם בַּכְּשָׂבִים
+# גָּנוּב הוּא אִתִּי
+# "[EN-AID] And my righteousness will answer for me on a day to come, when
+# you come concerning my wage before you: every one that is not speckled and
+# spotted among the goats and dark among the sheep, it is stolen with me."
+m.step("Gen.30.33")
+# ‹וְעָנְתָה־בִּי צִדְקָתִי בְּיוֹם מָחָר› fact holds: tzedaqa-ana-in-day-
+# machar(yaaqov)
+m.fact("tzedaqa_ana_be_yom_machar(yaaqov)")
+
+# -------------------------- Gen.30.34 · THE_YEHI_ACCEPTANCE ----------------
+# וַיֹּאמֶר לָבָן הֵן לוּ יְהִי כִדְבָרֶךָ
+# "[EN-AID] And Laban said: Behold, would that it be according to your
+# word."
+m.step("Gen.30.34")
+# ‹לוּ יְהִי כִדְבָרֶךָ› fact holds: lu-yehi-khi-devarekha(lavan)
+m.fact("lu_yehi_khi_devarekha(lavan)")
+
+# -------------------------- Gen.30.35 · THE_SAME_DAY_REMOVAL ---------------
+# וַיָּסַר בַּיּוֹם הַהוּא אֶת־הַתְּיָשִׁים הָעֲקֻדִּים וְהַטְּלֻאִים וְאֵת
+# כָּל־הָעִזִּים הַנְּקֻדּוֹת וְהַטְּלֻאֹת כֹּל אֲשֶׁר־לָבָן בּוֹ וְכָל־חוּם
+# בַּכְּשָׂבִים וַיִּתֵּן בְּיַד־בָּנָיו
+# "[EN-AID] And he removed on that day the striped and spotted he-goats and
+# all the speckled and spotted she-goats — every one that had white in it —
+# and every dark one among the sheep, and gave them into the hand of his
+# sons."
+m.step("Gen.30.35")
+# ‹וַיָּסַר בַּיּוֹם הַהוּא› fact holds: hesir-lavan-in-the-day-the-
+# that(the-aqudim)
+m.fact("hesir_lavan_ba_yom_ha_hu(ha_aqudim)")
+
+# -------------------------- Gen.30.36 · THE_THREE_DAYS_GAP -----------------
+# וַיָּשֶׂם דֶּרֶךְ שְׁלֹשֶׁת יָמִים בֵּינוֹ וּבֵין יַעֲקֹב וְיַעֲקֹב רֹעֶה
+# אֶת־צֹאן לָבָן הַנּוֹתָרֹת
+# "[EN-AID] And he set a way of three days between himself and Jacob; and
+# Jacob was shepherding the remnant of Laban's flock."
+m.step("Gen.30.36")
+# ‹וַיָּשֶׂם דֶּרֶךְ שְׁלֹשֶׁת יָמִים בֵּינוֹ וּבֵין יַעֲקֹב› fact holds:
+# derekh-sheloshet-seas(ben-lavan-and-ven-yaaqov)
+m.fact("derekh_sheloshet_yamim(ben_lavan_u_ven_yaaqov)")
+
+# -------------------------- Gen.30.37 · THE_WHITE_PEELED -------------------
+# וַיִּקַּח־לוֹ יַעֲקֹב מַקַּל לִבְנֶה לַח וְלוּז וְעֶרְמוֹן וַיְפַצֵּל
+# בָּהֵן פְּצָלוֹת לְבָנוֹת מַחְשֹׂף הַלָּבָן אֲשֶׁר עַל־הַמַּקְלוֹת
+# "[EN-AID] And Jacob took himself fresh rods of poplar and almond and
+# plane, and peeled white peelings in them, laying bare the white which was
+# on the rods."
+m.step("Gen.30.37")
+# ‹וַיְפַצֵּל בָּהֵן פְּצָלוֹת לְבָנוֹת מַחְשֹׂף הַלָּבָן› fact holds:
+# pitzel-machsof-the-lavan(maqlot)
+m.fact("pitzel_machsof_ha_lavan(maqlot)")
+
+# -------------------------- Gen.30.38 · THE_TROUGH_SIGHTLINE ---------------
+# וַיַּצֵּג אֶת־הַמַּקְלוֹת אֲשֶׁר פִּצֵּל בָּרֳהָטִים בְּשִׁקֲתוֹת הַמָּיִם
+# אֲשֶׁר תָּבֹאןָ הַצֹּאן לִשְׁתּוֹת לְנֹכַח הַצֹּאן וַיֵּחַמְנָה בְּבֹאָן
+# לִשְׁתּוֹת
+# "[EN-AID] And he set the rods which he had peeled in the runnels, in the
+# watering troughs where the flock came to drink, in front of the flock; and
+# they came to heat when they came to drink."
+m.step("Gen.30.38")
+# ‹וַיַּצֵּג אֶת־הַמַּקְלוֹת אֲשֶׁר פִּצֵּל בָּרֳהָטִים בְּשִׁקֲתוֹת
+# הַמָּיִם› fact holds: maqlot-in-the-rehatim(to-nokhach-the-tzon)
+m.fact("maqlot_ba_rehatim(le_nokhach_ha_tzon)")
+
+# -------------------------- Gen.30.39 · THE_FLOCK_CONCEIVES_STRIPED --------
+# וַיֶּחֱמוּ הַצֹּאן אֶל־הַמַּקְלוֹת וַתֵּלַדְןָ הַצֹּאן עֲקֻדִּים נְקֻדִּים
+# וּטְלֻאִים
+# "[EN-AID] And the flock conceived-heat at the rods; and the flock bore
+# striped, speckled, and spotted."
+m.step("Gen.30.39")
+# ‹וַתֵּלַדְןָ הַצֹּאן עֲקֻדִּים נְקֻדִּים וּטְלֻאִים› fact holds: teladna-
+# aqudim-nequdim-teluim(the-tzon)
+m.fact("teladna_aqudim_nequdim_teluim(ha_tzon)")
+
+# -------------------------- Gen.30.40 · THE_SEPARATION ---------------------
+# וְהַכְּשָׂבִים הִפְרִיד יַעֲקֹב וַיִּתֵּן פְּנֵי הַצֹּאן אֶל־עָקֹד
+# וְכָל־חוּם בְּצֹאן לָבָן וַיָּשֶׁת־לוֹ עֲדָרִים לְבַדּוֹ וְלֹא שָׁתָם
+# עַל־צֹאן לָבָן
+# "[EN-AID] And Jacob separated the lambs, and set the faces of the flock
+# toward the striped and every dark one in Laban's flock; and he set himself
+# droves alone, and did not set them with Laban's flock."
+m.step("Gen.30.40")
+# ‹וְהַכְּשָׂבִים הִפְרִיד יַעֲקֹב› fact holds: hifrid-adarim-alone(yaaqov)
+m.fact("hifrid_adarim_levado(yaaqov)")
+
+# -------------------------- Gen.30.41 · THE_STRONG_ONES --------------------
+# וְהָיָה בְּכָל־יַחֵם הַצֹּאן הַמְקֻשָּׁרוֹת וְשָׂם יַעֲקֹב אֶת־הַמַּקְלוֹת
+# לְעֵינֵי הַצֹּאן בָּרֳהָטִים לְיַחְמֵנָּה בַּמַּקְלוֹת
+# "[EN-AID] And it was, whenever the bound-strong of the flock conceived,
+# that Jacob set the rods before the eyes of the flock in the runnels, to
+# make them conceive among the rods."
+m.step("Gen.30.41")
+# ‹וְשָׂם יַעֲקֹב אֶת־הַמַּקְלוֹת› fact holds: maqlot-to-ene-the-
+# mequsharot(yaaqov)
+m.fact("maqlot_le_ene_ha_mequsharot(yaaqov)")
+
+# -------------------------- Gen.30.42 · THE_SORT ---------------------------
+# וּבְהַעֲטִיף הַצֹּאן לֹא יָשִׂים וְהָיָה הָעֲטֻפִים לְלָבָן וְהַקְּשֻׁרִים
+# לְיַעֲקֹב
+# "[EN-AID] And when the flock were feeble, he did not set them; and the
+# feeble were Laban's, and the bound-strong Jacob's."
+m.step("Gen.30.42")
+# ‹וְהָיָה הָעֲטֻפִים לְלָבָן וְהַקְּשֻׁרִים לְיַעֲקֹב› fact holds: atufim-
+# to-lavan-qeshurim-to-yaaqov(the-tzon)
+m.fact("atufim_le_lavan_qeshurim_le_yaaqov(ha_tzon)")
+
+# -------------------------- Gen.30.43 · THE_BREAK_OUT_DOUBLED --------------
+# וַיִּפְרֹץ הָאִישׁ מְאֹד מְאֹד וַיְהִי־לוֹ צֹאן רַבּוֹת וּשְׁפָחוֹת
+# וַעֲבָדִים וּגְמַלִּים וַחֲמֹרִים
+# "[EN-AID] And the man broke out exceedingly, exceedingly; and he had many
+# flocks, and maidservants and menservants, and camels and donkeys."
+m.step("Gen.30.43")
+# ‹וַיִּפְרֹץ הָאִישׁ מְאֹד מְאֹד› fact holds: paratz-very-very(the-man)
+m.fact("paratz_meod_meod(ha_ish)")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == ['shalcheni(lavan)', 'tena_nashai_viladai(lavan)']
+    assert len(m.SPECS["log"]) == 3
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted(['berakh_YHWH_biglal_yaaqov(lavan)', 'yadata_avodati(lavan)', 'paratz_la_rov_le_ragli(miqne_lavan)', 'lo_titen_li_meuma(exchange)', 'tzedaqa_ana_be_yom_machar(yaaqov)', 'lu_yehi_khi_devarekha(lavan)', 'hesir_lavan_ba_yom_ha_hu(ha_aqudim)', 'derekh_sheloshet_yamim(ben_lavan_u_ven_yaaqov)', 'pitzel_machsof_ha_lavan(maqlot)', 'maqlot_ba_rehatim(le_nokhach_ha_tzon)', 'teladna_aqudim_nequdim_teluim(ha_tzon)', 'hifrid_adarim_levado(yaaqov)', 'maqlot_le_ene_ha_mequsharot(yaaqov)', 'atufim_le_lavan_qeshurim_le_yaaqov(ha_tzon)', 'paratz_meod_meod(ha_ish)'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 4
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: gen_53_flight_over_the_river
+###############################################################################
+
+m = Machine("gen_53_flight_over_the_river")
+
+# -------------------------- Gen.31.1 · THE_SONS_COMPLAINT ------------------
+# וַיִּשְׁמַע אֶת־דִּבְרֵי בְנֵי־לָבָן לֵאמֹר לָקַח יַעֲקֹב אֵת כָּל־אֲשֶׁר
+# לְאָבִינוּ וּמֵאֲשֶׁר לְאָבִינוּ עָשָׂה אֵת כָּל־הַכָּבֹד הַזֶּה
+# "[EN-AID] And he heard the words of Laban's sons, saying: Jacob has taken
+# all that was our father's, and from what was our father's he has made all
+# this glory."
+m.step("Gen.31.1")
+# ‹וַיִּשְׁמַע אֶת־דִּבְרֵי בְנֵי־לָבָן לֵאמֹר› fact holds: laqach-yaaqov-
+# all-which-to-avinu(divre-vene-lavan)
+m.fact("laqach_yaaqov_kol_asher_le_avinu(divre_vene_lavan)")
+
+# -------------------------- Gen.31.2 · THE_CHANGED_FACE --------------------
+# וַיַּרְא יַעֲקֹב אֶת־פְּנֵי לָבָן וְהִנֵּה אֵינֶנּוּ עִמּוֹ כִּתְמוֹל
+# שִׁלְשׁוֹם
+# "[EN-AID] And Jacob saw the face of Laban, and behold, it was not toward
+# him as yesterday and the day before."
+m.step("Gen.31.2")
+# ‹וְהִנֵּה אֵינֶנּוּ עִמּוֹ כִּתְמוֹל שִׁלְשׁוֹם› fact holds: pene-lavan-
+# not-khi-temol-shilshom(yaaqov)
+m.fact("pene_lavan_lo_khi_temol_shilshom(yaaqov)")
+
+# -------------------------- Gen.31.3 · THE_RETURN_COMMAND ------------------
+# וַיֹּאמֶר יְהוָה אֶל־יַעֲקֹב שׁוּב אֶל־אֶרֶץ אֲבוֹתֶיךָ וּלְמוֹלַדְתֶּךָ
+# וְאֶהְיֶה עִמָּךְ
+# "[EN-AID] And YHWH said to Jacob: Return to the land of your fathers and
+# to your kindred, and I will be with you."
+m.step("Gen.31.3")
+# ‹שׁוּב אֶל־אֶרֶץ אֲבוֹתֶיךָ וּלְמוֹלַדְתֶּךָ› the-LORD speaks a demand —
+# LET: shuv-earth-avot(yaaqov)
+m.declare("YHWH", "LET",
+          "shuv_eretz_avot(yaaqov)")
+
+# -------------------------- Gen.31.4 · THE_FIELD_SUMMONS -------------------
+# וַיִּשְׁלַח יַעֲקֹב וַיִּקְרָא לְרָחֵל וּלְלֵאָה הַשָּׂדֶה אֶל־צֹאנוֹ
+# "[EN-AID] And Jacob sent and called Rachel and Leah to the field, to his
+# flock."
+m.step("Gen.31.4")
+# ‹וַיִּשְׁלַח יַעֲקֹב וַיִּקְרָא לְרָחֵל וּלְלֵאָה› fact holds: qara-to-
+# rachel-and-to-leah(the-sade)
+m.fact("qara_le_rachel_u_le_leah(ha_sade)")
+
+# -------------------------- Gen.31.5 · THE_CONDITION_DECLARED_TRUE ---------
+# וַיֹּאמֶר לָהֶן רֹאֶה אָנֹכִי אֶת־פְּנֵי אֲבִיכֶן כִּי־אֵינֶנּוּ אֵלַי
+# כִּתְמֹל שִׁלְשֹׁם וֵאלֹהֵי אָבִי הָיָה עִמָּדִי
+# "[EN-AID] And he said to them: I see your father's face, that it is not
+# toward me as yesterday and the day before; but the God of my father has
+# been with me."
+m.step("Gen.31.5")
+# ‹וֵאלֹהֵי אָבִי הָיָה עִמָּדִי› fact holds: elohe-avi-haya-with-me(yaaqov)
+m.fact("elohe_avi_haya_imadi(yaaqov)")
+
+# -------------------------- Gen.31.6 · THE_STRENGTH_LEDGER -----------------
+# וְאַתֵּנָה יְדַעְתֶּן כִּי בְּכָל־כֹּחִי עָבַדְתִּי אֶת־אֲבִיכֶן
+# "[EN-AID] And you know that with all my strength I have served your
+# father."
+m.step("Gen.31.6")
+# ‹כִּי בְּכָל־כֹּחִי עָבַדְתִּי אֶת› fact holds: in-all-kochi-avadti(atena)
+m.fact("be_khol_kochi_avadti(atena)")
+
+# -------------------------- Gen.31.7 · THE_TEN_CHANGES ---------------------
+# וַאֲבִיכֶן הֵתֶל בִּי וְהֶחֱלִף אֶת־מַשְׂכֻּרְתִּי עֲשֶׂרֶת מֹנִים
+# וְלֹא־נְתָנוֹ אֱלֹהִים לְהָרַע עִמָּדִי
+# "[EN-AID] And your father has mocked me and changed my wages ten times;
+# but God did not give him leave to harm me."
+m.step("Gen.31.7")
+# ‹וַאֲבִיכֶן הֵתֶל בִּי וְהֶחֱלִף אֶת־מַשְׂכֻּרְתִּי עֲשֶׂרֶת מֹנִים› fact
+# holds: hechelif-maskurti-aseret-monim(lavan)
+m.fact("hechelif_maskurti_aseret_monim(lavan)")
+
+# -------------------------- Gen.31.8 · THE_WAGE_FLIP_RULE ------------------
+# אִם־כֹּה יֹאמַר נְקֻדִּים יִהְיֶה שְׂכָרֶךָ וְיָלְדוּ כָל־הַצֹּאן
+# נְקֻדִּים וְאִם־כֹּה יֹאמַר עֲקֻדִּים יִהְיֶה שְׂכָרֶךָ וְיָלְדוּ
+# כָל־הַצֹּאן עֲקֻדִּים
+# "[EN-AID] If he said thus: The speckled shall be your wage — then all the
+# flock bore speckled; and if he said thus: The striped shall be your wage —
+# then all the flock bore striped."
+m.step("Gen.31.8")
+# ‹אִם־כֹּה יֹאמַר נְקֻדִּים יִהְיֶה שְׂכָרֶךָ› fact holds: if-ko-yomar-and-
+# yaldu-so(sekharekha)
+m.fact("im_ko_yomar_ve_yaldu_khen(sekharekha)")
+
+# -------------------------- Gen.31.9 · THE_RESCUE_VERB_BORN ----------------
+# וַיַּצֵּל אֱלֹהִים אֶת־מִקְנֵה אֲבִיכֶם וַיִּתֶּן־לִי
+# "[EN-AID] And God has rescued your father's livestock and given it to me."
+m.step("Gen.31.9")
+# ‹וַיַּצֵּל אֱלֹהִים אֶת־מִקְנֵה אֲבִיכֶם וַיִּתֶּן־לִי› fact holds: and-
+# yatzel-God-and-yiten-to-me(miqne)
+m.fact("va_yatzel_Elohim_va_yiten_li(miqne)")
+
+# -------------------------- Gen.31.10 · THE_DREAM_AND_THE_CHANGED_ADJECTIVE -
+# וַיְהִי בְּעֵת יַחֵם הַצֹּאן וָאֶשָּׂא עֵינַי וָאֵרֶא בַּחֲלוֹם וְהִנֵּה
+# הָעַתֻּדִים הָעֹלִים עַל־הַצֹּאן עֲקֻדִּים נְקֻדִּים וּבְרֻדִּים
+# "[EN-AID] And it was at the time the flock conceived, that I lifted my
+# eyes and saw in a dream: and behold, the he-goats going up on the flock
+# were striped, speckled, and mottled."
+m.step("Gen.31.10")
+# ‹וָאֶשָּׂא עֵינַי וָאֵרֶא בַּחֲלוֹם› fact holds: and-ere-in-the-chalom-
+# atudim(olim)
+m.fact("va_ere_ba_chalom_atudim(olim)")
+
+# -------------------------- Gen.31.11 · THE_HINENI -------------------------
+# וַיֹּאמֶר אֵלַי מַלְאַךְ הָאֱלֹהִים בַּחֲלוֹם יַעֲקֹב וָאֹמַר הִנֵּנִי
+# "[EN-AID] And the angel of God said to me in the dream: Jacob. And I said:
+# Here I am."
+m.step("Gen.31.11")
+# ‹וָאֹמַר הִנֵּנִי› fact holds: behold-I(yaaqov)
+m.fact("hineni(yaaqov)")
+
+# -------------------------- Gen.31.12 · THE_RETOLD_LIFT_YOUR_EYES ----------
+# וַיֹּאמֶר שָׂא־נָא עֵינֶיךָ וּרְאֵה כָּל־הָעַתֻּדִים הָעֹלִים עַל־הַצֹּאן
+# עֲקֻדִּים נְקֻדִּים וּבְרֻדִּים כִּי רָאִיתִי אֵת כָּל־אֲשֶׁר לָבָן עֹשֶׂה
+# לָּךְ
+# "[EN-AID] And he said: Lift now your eyes and see: all the he-goats going
+# up on the flock are striped, speckled, and mottled; for I have seen all
+# that Laban is doing to you."
+m.step("Gen.31.12")
+# ‹שָׂא־נָא עֵינֶיךָ וּרְאֵה› fact holds: retold-sa-enekha-and-ree(in-the-
+# chalom)
+m.fact("retold_sa_enekha_u_ree(ba_chalom)")
+
+# -------------------------- Gen.31.13 · THE_SELF_NAME_BY_THE_REGISTRY ------
+# אָנֹכִי הָאֵל בֵּית־אֵל אֲשֶׁר מָשַׁחְתָּ שָּׁם מַצֵּבָה אֲשֶׁר נָדַרְתָּ
+# לִּי שָׁם נֶדֶר עַתָּה קוּם צֵא מִן־הָאָרֶץ הַזֹּאת וְשׁוּב אֶל־אֶרֶץ
+# מוֹלַדְתֶּךָ
+# "[EN-AID] I am the God of Bethel, where you anointed a pillar, where you
+# vowed to Me a vow. Now arise, go out from this land, and return to the
+# land of your kindred."
+m.step("Gen.31.13")
+# ‹אָנֹכִי הָאֵל בֵּית־אֵל אֲשֶׁר מָשַׁחְתָּ שָּׁם מַצֵּבָה אֲשֶׁר נָדַרְתָּ
+# לִּי שָׁם נֶדֶר› fact holds: anokhi-the-to-bet-to(mashachta-matzeva-
+# nadarta-neder)
+m.fact("anokhi_ha_el_bet_el(mashachta_matzeva_nadarta_neder)")
+
+# -------------------------- Gen.31.14 · THE_INHERITANCE_QUESTION -----------
+# וַתַּעַן רָחֵל וְלֵאָה וַתֹּאמַרְנָה לוֹ הַעוֹד לָנוּ חֵלֶק וְנַחֲלָה
+# בְּבֵית אָבִינוּ
+# "[EN-AID] And Rachel and Leah answered and said to him: Have we still a
+# portion and an inheritance in our father's house?"
+m.step("Gen.31.14")
+# ‹הַעוֹד לָנוּ חֵלֶק וְנַחֲלָה בְּבֵית אָבִינוּ› fact holds: the-od-lanu-
+# cheleq-and-nachala(rachel-and-leah)
+m.fact("ha_od_lanu_cheleq_ve_nachala(rachel_ve_leah)")
+
+# -------------------------- Gen.31.15 · THE_SOLD_DAUGHTERS -----------------
+# הֲלוֹא נָכְרִיּוֹת נֶחְשַׁבְנוּ לוֹ כִּי מְכָרָנוּ וַיֹּאכַל גַּם־אָכוֹל
+# אֶת־כַּסְפֵּנוּ
+# "[EN-AID] Are we not reckoned foreign women to him? For he has sold us,
+# and has utterly devoured our silver."
+m.step("Gen.31.15")
+# ‹הֲלוֹא נָכְרִיּוֹת נֶחְשַׁבְנוּ לוֹ כִּי מְכָרָנוּ› fact holds: nokhriot-
+# nechshavnu-when-mekharanu(lahen)
+m.fact("nokhriot_nechshavnu_ki_mekharanu(lahen)")
+
+# -------------------------- Gen.31.16 · THE_DO_ALL_DEMAND ------------------
+# כִּי כָל־הָעֹשֶׁר אֲשֶׁר הִצִּיל אֱלֹהִים מֵאָבִינוּ לָנוּ הוּא
+# וּלְבָנֵינוּ וְעַתָּה כֹּל אֲשֶׁר אָמַר אֱלֹהִים אֵלֶיךָ עֲשֵׂה
+# "[EN-AID] For all the wealth which God has rescued from our father — it is
+# ours and our children's. And now, all that God has said to you — do."
+m.step("Gen.31.16")
+# ‹וְעַתָּה כֹּל אֲשֶׁר אָמַר אֱלֹהִים אֵלֶיךָ עֲשֵׂה› rachel-and-leah
+# speaks a demand — LET: ase-all-which-amar(yaaqov)
+m.declare("rachel_ve_leah", "LET",
+          "ase_kol_asher_amar(yaaqov)")
+
+# -------------------------- Gen.31.17 · THE_RISING -------------------------
+# וַיָּקָם יַעֲקֹב וַיִּשָּׂא אֶת־בָּנָיו וְאֶת־נָשָׁיו עַל־הַגְּמַלִּים
+# "[EN-AID] And Jacob arose, and lifted his sons and his wives onto the
+# camels."
+m.step("Gen.31.17")
+# ‹וַיָּקָם יַעֲקֹב› fact holds: and-yaqam-and-yisa(yaaqov)
+m.fact("va_yaqam_va_yisa(yaaqov)")
+
+# -------------------------- Gen.31.18 · THE_ABRAM_FORMULA ------------------
+# וַיִּנְהַג אֶת־כָּל־מִקְנֵהוּ וְאֶת־כָּל־רְכֻשׁוֹ אֲשֶׁר רָכָשׁ מִקְנֵה
+# קִנְיָנוֹ אֲשֶׁר רָכַשׁ בְּפַדַּן אֲרָם לָבוֹא אֶל־יִצְחָק אָבִיו אַרְצָה
+# כְּנָעַן
+# "[EN-AID] And he drove all his livestock and all his property which he had
+# acquired — the livestock of his getting, which he acquired in Paddan-Aram
+# — to come to Isaac his father, to the land of Canaan."
+m.step("Gen.31.18")
+# ‹וַיִּנְהַג אֶת־כָּל־מִקְנֵהוּ וְאֶת־כָּל־רְכֻשׁוֹ› fact holds: and-
+# yinhag-miqne-rekhush(to-vo-to-yitzchaq)
+m.fact("va_yinhag_miqne_rekhush(la_vo_el_yitzchaq)")
+
+# -------------------------- Gen.31.19 · THE_SHEARING_AND_THE_THEFT ---------
+# וְלָבָן הָלַךְ לִגְזֹז אֶת־צֹאנוֹ וַתִּגְנֹב רָחֵל אֶת־הַתְּרָפִים אֲשֶׁר
+# לְאָבִיהָ
+# "[EN-AID] And Laban had gone to shear his flock; and Rachel stole the
+# terafim that were her father's."
+m.step("Gen.31.19")
+# ‹וַתִּגְנֹב רָחֵל אֶת־הַתְּרָפִים אֲשֶׁר› fact holds: and-tignov-rachel-
+# terafim(lavan-gozez)
+m.fact("va_tignov_rachel_terafim(lavan_gozez)")
+
+# -------------------------- Gen.31.20 · THE_HEART_THEFT --------------------
+# וַיִּגְנֹב יַעֲקֹב אֶת־לֵב לָבָן הָאֲרַמִּי עַל־בְּלִי הִגִּיד לוֹ כִּי
+# בֹרֵחַ הוּא
+# "[EN-AID] And Jacob stole the heart of Laban the Aramean, in that he did
+# not tell him that he was fleeing."
+m.step("Gen.31.20")
+# ‹וַיִּגְנֹב יַעֲקֹב אֶת־לֵב לָבָן הָאֲרַמִּי› fact holds: and-yignov-
+# yaaqov-lev-lavan(the-arami)
+m.fact("va_yignov_yaaqov_lev_lavan(ha_arami)")
+
+# -------------------------- Gen.31.21 · THE_FLIGHT_AND_THE_RIVER -----------
+# וַיִּבְרַח הוּא וְכָל־אֲשֶׁר־לוֹ וַיָּקָם וַיַּעֲבֹר אֶת־הַנָּהָר
+# וַיָּשֶׂם אֶת־פָּנָיו הַר הַגִּלְעָד
+# "[EN-AID] And he fled, he and all that was his; and he arose and crossed
+# the river, and set his face toward the mountain of Gilead."
+m.step("Gen.31.21")
+# ‹וַיִּבְרַח הוּא וְכָל־אֲשֶׁר־לוֹ וַיָּקָם וַיַּעֲבֹר אֶת־הַנָּהָר› fact
+# holds: and-yivrach-and-yaavor-the-river(panav-har-the-gilad)
+m.fact("va_yivrach_va_yaavor_ha_nahar(panav_har_ha_gilad)")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == ['shuv_eretz_avot(yaaqov)', 'ase_kol_asher_amar(yaaqov)']
+    assert len(m.SPECS["log"]) == 2
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted(['laqach_yaaqov_kol_asher_le_avinu(divre_vene_lavan)', 'pene_lavan_lo_khi_temol_shilshom(yaaqov)', 'qara_le_rachel_u_le_leah(ha_sade)', 'elohe_avi_haya_imadi(yaaqov)', 'be_khol_kochi_avadti(atena)', 'hechelif_maskurti_aseret_monim(lavan)', 'im_ko_yomar_ve_yaldu_khen(sekharekha)', 'va_yatzel_Elohim_va_yiten_li(miqne)', 'va_ere_ba_chalom_atudim(olim)', 'hineni(yaaqov)', 'retold_sa_enekha_u_ree(ba_chalom)', 'anokhi_ha_el_bet_el(mashachta_matzeva_nadarta_neder)', 'ha_od_lanu_cheleq_ve_nachala(rachel_ve_leah)', 'nokhriot_nechshavnu_ki_mekharanu(lahen)', 'va_yaqam_va_yisa(yaaqov)', 'va_yinhag_miqne_rekhush(la_vo_el_yitzchaq)', 'va_tignov_rachel_terafim(lavan_gozez)', 'va_yignov_yaaqov_lev_lavan(ha_arami)', 'va_yivrach_va_yaavor_ha_nahar(panav_har_ha_gilad)'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 2
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
 
 
