@@ -80,7 +80,9 @@ def main():
     print("\n=== VOLITIVES (V?v imperative / V?j jussive / V?h cohortative) ===")
     n = 0
     for ch, vs, idx, wid, he, tr, lem, mo, mk, mr in rows:
-        for m in re.finditer(r"V([a-zA-Z])([vjh])\b", mo or ""):
+        # person digit follows the form letter directly (Vqv2ms), so \b
+        # would never fire mid-morph; require the digit instead
+        for m in re.finditer(r"V([a-zA-Z])([vjh])(?=\d)", mo or ""):
             kind = {"v": "imperative", "j": "jussive", "h": "cohortative"}[m.group(2)]
             print("  %d:%d idx%d %-18s %-14s %s (%s)"
                   % (ch, vs, idx, tr, mo, kind, lem))

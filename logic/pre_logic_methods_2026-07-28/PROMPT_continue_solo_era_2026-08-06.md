@@ -1,4 +1,4 @@
-# Resume prompt — SOLO ERA · 54 frozen · gen_51+52+53 + solo_tools COMMITTED (…982c22b / eeb5e82, pushed; tree clean) · 2026-08-07
+# Resume prompt — SOLO ERA · 57 frozen · SECOND 3-BLOCK RUN COMPLETE (gen_54+55+56 FROZEN, UNCOMMITTED — awaiting owner commit word; committed through 263e6db) · 2026-08-07
 
 COMMITS (owner word given, pushed to main): b9b9fa7 gen_47 freeze ·
 c88b200 gen_48 freeze (+ ALL_UNITS/index/solo-era doc) · 8a9a1b0 webapp
@@ -147,8 +147,142 @@ amended (1419 toks 18-19, 22).
   31:5; lavan-WHITE career running from the rods to Lev 13's diagnostic
   color.
 
-## AUTONOMOUS 3-BLOCK RUN (owner order 2026-08-07: "process the next 3
-## blocks on your own ... one at a time")
+## SECOND AUTONOMOUS 3-BLOCK RUN (owner order 2026-08-07, post-compact:
+## "once again lets do 3 blocks each one at a time but without my input")
+Same gates as run #1: next-block lifted for THREE blocks; commit gate NOT
+lifted (freeze artifacts accumulate uncommitted on top of 263e6db);
+narrative gate NOT lifted. Progress:
+- **Block 1 DONE — gen_54_pursuit_heap_two_tongues FROZEN (31:22-54).**
+  33 steps/33 scenarios · 481 tokens · all 33 verses etnachta'd. SEVEN
+  pushes, ZERO pops, SEVEN OPEN at the wall (gen_34's Mamre end-shape
+  re-fires; exceeded only by gen_35's 13 / gen_46's 12): hishamer
+  guard-order (31:24, gen_40 class) · haker_ve_qach compound (31:32) ·
+  LET-NOT yichar (31:35; the burn lands in JACOB at 31:36, consecutive
+  career tokens) · sim + tribunal-purpose (31:37; BOTH its verbs
+  performed-BEFORE-demanded: Rachel's hiding-set 31:34 = sim tok24→25,
+  God's amesh-adjudication 31:24/42 = yakach tok5→6) · CMD-US? nikhreta
+  (31:44; karat's only two 1cp-cohortatives = 26:28+31:44, both answered
+  by shava toks 12-13, neither cut — gen_45 Excerpt B re-run) · liqtu
+  (31:46; performed va-yiqchu — WRONG ROOT one letter apart, 3950 vs
+  3947; letter-family gains its VERB member) · yitzef on YHWH (31:49,
+  gen_32 16:5 law — same between-us formula, judge→watch; 31:53's
+  yishptu is IMPERFECT and fenced: the mood-law's cleanest pair).
+  CROWN: 31:47 yegar sahaduta morph=ANp ×2 — the SNAPSHOT's ONLY
+  Aramaic-tagged tokens (full-corpus scan =2); heap = first
+  within-one-verse double NAME write and first bilingual pair (ishah/
+  shet hold the cross-unit precedents); h_name last-write-wins leaves
+  galed = 31:48's own etiology. REGISTRY 2 (both ha_gal); TESTS 0
+  (mi-tov-ad-ra ×2 fenced). Career closes: terafim 3/3 UNFOUND ·
+  hide-verb 3/3 (Eden's pair + the flight) · kinnor 2/2 · emesh 3/3 ·
+  maskoret 3/3 + monim 2/2 (gen_50 watch LANDED) · shena 2/2 · nachor
+  16/16 · gal 7/7 inside its own nine verses. Debuts: ed witness-noun
+  1/25 · zavach+zevach sacrifice pair (31:54) · terefa · bakash ·
+  pesha · reqam · pachad-yitzchaq epithet (both tokens in-unit,
+  31:42/53). 31:40 = three hapaxes in one verse. Review: FAIL→amend→
+  AMENDMENTS CONFIRMED — PASS FOR FREEZE (2 MAJOR both prose absolutes:
+  double-name scope, pursuit-overtake list; 3 MINOR). Regression 55/55;
+  ALL_UNITS 55× green; py+html rendered; WATCHLIST_gen54_prospective
+  filed (Rachel death-oath→35:16-20 arm, manna-liqtu, Exod-pursuit
+  grid). Tooling fixes this block (uncommitted): prestage.py volitive
+  regex (\\b never fired mid-morph — census was EMPTY on gen_54's first
+  run; now requires the person digit) + ~55 new GLOBAL_SUBS entries
+  (gen_51/52/53 rebuilds verified BYTE-IDENTICAL after).
+- **Block 2 DONE — gen_55_two_camps_wrestled_name FROZEN (32:1-33).**
+  33 steps/33 scenarios · 453 tokens · all 33 etnachta'd (second
+  all-etnachta unit running). SEVEN pushes, ZERO pops, SEVEN OPEN —
+  the THIRD all-open seven (gen_34 Mamre, gen_54 Gilead, gen_55
+  Peniel; gen_40 excluded on its 9-push/2-pop record): LET?(tomrun)
+  32:5 + LET?(tedabrun) 32:20 (TIR-028 say-imperfects; delivery to
+  Esau never narrated — 32:7's banu is an in-speech report, homograph-
+  echo of gen_25's ruling) · LET(hatzileni(YHWH)) 32:12 (imperative-
+  on-God, gen_40 haqreh class) — natzal tok3→4 delivers from the
+  WRONG DANGER (asked from Esau's HAND, rescued from God's FACE,
+  32:31) · LET(ivru)+LET?(tasimu) 32:17 — the pass-verb performs with
+  the GIFT as subject (32:22, tok13→14, wrong performer; revach 1/1
+  hapax never narrated) · LET(shalcheni) 32:27 — THE MIRROR: the
+  send-me form's ONLY two Torah tokens are 30:25 (Jacob→Laban,
+  gen_52) and 32:27 (the ish→Jacob), both unperformed; refused on
+  condition, condition met (32:30 blessing), send never narrated ·
+  LET(hagida) 32:30 — name refused by a question (shaal tok5→6),
+  blessing given in the name's place. CROWN — THE REQUOTE LADDER:
+  31:3→32:10 deltas (avotekha→artzekha; ehye→ETIVA) + 32:13's hetev
+  etiv cited as God's words with NO source token (3190 census: 4
+  prior tokens, none promissory, none to Jacob) + Abraham's
+  sand-simile (22:17) quoted into Jacob's file (chol tok1→2; God's
+  recorded word was 28:14's DUST). THE DECREE THAT WRITES NOTHING:
+  32:29 = gen_33's decree-fact class (no NAME write; 35:10's formula
+  holds the write) with the COUNTERSIGN INVERTED — avram died 59/59
+  in its retirement verse; yaaqov continues at 32:30/31/33 in-unit
+  (tok103→106/212) while yisrael debuts (tok1/587) — and yisrael's
+  tok2/587 is 32:33's BENE YISRAEL: the name legislates four verses
+  after birth — the corpus's FIRST people-subject practice-PATTERN
+  (prior 8 = name-etiologies/proverb/relation-generalizations) —
+  init→law inside one unit. REGISTRY 2 (machanayim 1/1 hapax dual —
+  named five verses BEFORE the two-camps split; peniel — spelling
+  shifts to penuel next verse, 2/2). Hapaxes: qatonti, va-yetzer,
+  revach, maavar, sarita (inside the name's own etiology), tzolea;
+  wrestle-verb avaq 2/2 one night; dawn 3/3 closes (Sodom's + the
+  wrestling's); ladder-adjacencies: naga tok6 (28:12 ladder touches
+  heaven)→tok7 (the hip)→tok8 (the law); shemesh tok4 (28:11
+  sunset)→tok5 (32:32 sunrise). Review: FAIL→amend→AMENDMENTS
+  CONFIRMED — PASS FOR FREEZE (1 MAJOR: Laban token-list omitted
+  32:5's quoted mention; 3 MINOR: two crossed tree-glosses, bull-
+  career start, banu paraphrase). Regression 56/56; ALL_UNITS 56×
+  green; py+html rendered; WATCHLIST_gen55_prospective filed (33:4
+  embrace horizon; 35:10 Israel-write arm; Balaam/red-heifer/
+  nest-law career arms).
+- **Block 3 DONE — gen_56_blessing_returned_first_altar FROZEN
+  (33:1-20).** 20 steps/20 scenarios · 268 tokens · TWO etnachta-less
+  verses (33:6, 33:16 — tifcha fallbacks, first fallback splits since
+  gen_51). FOUR pushes, **ONE POP**, THREE OPEN: THE POP = 33:11 qach
+  na et BIRKHATI → va-yiftzar bo VA-YIQACH — the Gen 27 theft-cry's
+  verb AND noun (27:35-36 "he took my blessing") spoken back with
+  roles reversed and TAKEN: demand and receipt are CONSECUTIVE career
+  tokens (3947 toks 102→103, latency ZERO; gen_51's pop ran latency
+  one) — after gen_54+55 pushed FOURTEEN cards and popped NONE, the
+  one demand the letter clears in the whole run is
+  return-the-blessing. Open: yehi(lekha_asher_lakh) 33:9
+  (SELF-REVERSED — Esau takes what his own jussive declined: new
+  mismatch shape) · CMD-US?(nisa_ve_nelekha) 33:12 (answered by
+  OPPOSITE VECTORS 33:16/17 — Seir vs Sukkot; nasa toks 6→7 =
+  demand→solo deed) · yaavar_na 33:14 (answered in the other root,
+  shuv). CROWN 2: 33:20 Jacob's FIRST altar (mizbeach tok10/198;
+  toks 1-9 all his fathers') NAMED el_elohe_yisrael — yisrael
+  tok3/587 enters the REGISTRY for the first time INSIDE God's
+  title (32:29's decree wrote nothing; 35:10's formula-write ahead).
+  Finds: bow-decree inverted (7812 toks 9-11 = 27:29's
+  brothers-will-bow → tok12 = Jacob bowing 7× to Esau, consecutive);
+  weep-verb's FIRST PLURAL token (1058 tok5 va-yivku; toks 1-4 all
+  singular incl. Esau alone at 27:38); neck-career
+  disguise→yoke→embrace (6677 toks 1-3); chelqat homograph (smooth-
+  of-neck 27:16 → portion-of-field 33:19); acceptance-verb ratzah
+  DEBUT in Esau's welcome (career → Lev 1:4's altar-formula);
+  grace-verb chanan DEBUT ×2 (career → priestly blessing, closing
+  in Deut's denials); sukka-noun born as cattle-shed (career = the
+  FESTIVAL, Lev 23) + place-name → Exod 12:37 first station;
+  va-yiftzar 3/3 closes (two Sodom doors + the urging); hapaxes
+  alot/u-defaqum/le-iti/qesita; melakha tok4 (first post-creation
+  work-token); RAV vs KHOL inventories. gen_55 landing-note: the
+  feared hand arrives as arms (no natzal-token in Gen 33). Review:
+  FAIL→amend→re-review caught TWO silently-failed replacement
+  strings→fixed with assertions→AMENDMENTS CONFIRMED — PASS FOR
+  FREEZE (3 MAJOR all interpretive prose: le-darko misattribution,
+  machane first-claim scope, chanan career overreach; 3 MINOR).
+  Regression 57/57; ALL_UNITS 57× green; py+html rendered;
+  WATCHLIST_gen56_prospective filed (Gen 34 door armed: shekhem
+  toks 4-18, chamor toks 2-11).
+- **RUN COMPLETE (2026-08-07): gen_54+55+56 frozen, 57 total,
+  Genesis 1:1-33:20 gapless + lev_13. UNCOMMITTED on top of
+  263e6db: 3 unit yamls + 3 content modules + 3 py_units + 3
+  undated HTMLs + ALL_UNITS + indexes + 3 watchlists + solo_tools
+  fixes (prestage.py volitive-census regex; subs.py ~115 new
+  entries with the ahol-o carve-out) + this doc. NEXT BLOCK on
+  owner word: gen_57 = Gen 34 (the Dinah span; 31 verses; shekhem/
+  chamor/nagash/anah careers armed by gen_56's watchlist).
+  Narratives pending owner ask ×6 (gen_51-56).**
+
+## FIRST AUTONOMOUS 3-BLOCK RUN (owner order 2026-08-07: "process the next 3
+## blocks on your own ... one at a time") — COMPLETE, COMMITTED
 Owner is away; the next-block gate is lifted for THREE blocks. Commit
 gate NOT lifted (freeze artifacts accumulate uncommitted); narrative
 gate NOT lifted (needs per-unit owner ask). Progress:
@@ -273,7 +407,7 @@ names = HANDLERS table in run_unit.py (~line 413).
 ```
 cd <old-home>/code/Torah_Grok
 git log --oneline -3
-grep -l "status: frozen" logic/units/*.yaml | wc -l   # expect 54
+grep -l "status: frozen" logic/units/*.yaml | wc -l   # expect 57
 python3 run_unit.py gen_50_wage_seven_years_switched_bride --scenarios | tail -1
 for f in $(grep -l "status: frozen" logic/units/*.yaml); do n=$(grep -c "VERIFIED: SNAPSHOT]" $f); [ "$n" -gt 0 ] && echo "$f: $n"; done
 ```
