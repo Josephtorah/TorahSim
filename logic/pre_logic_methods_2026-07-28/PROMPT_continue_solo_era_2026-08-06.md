@@ -1,4 +1,4 @@
-# Resume prompt — SOLO ERA · 54 frozen · gen_51+52+53 FROZEN (uncommitted; 3-block autonomous run COMPLETE) · 2026-08-07
+# Resume prompt — SOLO ERA · 54 frozen · gen_51+52+53 COMMITTED (8b7cbcd / be3190e / 982c22b, pushed) · 2026-08-07
 
 COMMITS (owner word given, pushed to main): b9b9fa7 gen_47 freeze ·
 c88b200 gen_48 freeze (+ ALL_UNITS/index/solo-era doc) · 8a9a1b0 webapp
