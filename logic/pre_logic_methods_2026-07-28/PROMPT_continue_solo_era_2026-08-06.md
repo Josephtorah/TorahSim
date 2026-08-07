@@ -1,4 +1,4 @@
-# Resume prompt — SOLO ERA · 54 frozen · gen_51+52+53 COMMITTED (8b7cbcd / be3190e / 982c22b, pushed) · 2026-08-07
+# Resume prompt — SOLO ERA · 54 frozen · gen_51+52+53 + solo_tools COMMITTED (…982c22b / eeb5e82, pushed; tree clean) · 2026-08-07
 
 COMMITS (owner word given, pushed to main): b9b9fa7 gen_47 freeze ·
 c88b200 gen_48 freeze (+ ALL_UNITS/index/solo-era doc) · 8a9a1b0 webapp
@@ -112,9 +112,8 @@ amended (1419 toks 18-19, 22).
 
 ## OPEN THREADS AT COMPACTION #2 (2026-08-07, post 3-block run + tooling)
 - **STATE: 54 frozen, Gen 1:1-31:21 gapless + lev_13, all COMMITTED+pushed
-  through dfd2d7f.** UNCOMMITTED (owner commit word pending):
-  logic/solo_tools/ (the new pipeline tooling, tested end-to-end) + this
-  doc's TOOLING-section rewrite. Disk is truth either way.
+  through dfd2d7f; tooling COMMITTED eeb5e82, pushed.** Tree clean
+  (grok-mockups/ untracked by owner's design).
 - **NEXT BLOCK on owner word: gen_54 = 31:22-54** (the pursuit, the
   terafim search, the twenty-years audit, the heap-covenant). Pre-stage
   ALREADY RUNNABLE in one command: `python3 logic/solo_tools/prestage.py
