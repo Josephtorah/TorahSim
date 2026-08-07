@@ -1,4 +1,4 @@
-# Resume prompt — SOLO ERA · 57 frozen · SECOND 3-BLOCK RUN COMPLETE (gen_54+55+56 FROZEN, UNCOMMITTED — awaiting owner commit word; committed through 263e6db) · 2026-08-07
+# Resume prompt — SOLO ERA · 57 frozen · SECOND 3-BLOCK RUN COMPLETE + COMMITTED (55b371e / d6b6572 / dac2080 / 37895e9, pushed; tree clean, grok-mockups/ untracked by owner's design) · 2026-08-07 · COMPACTION POINT #3
 
 COMMITS (owner word given, pushed to main): b9b9fa7 gen_47 freeze ·
 c88b200 gen_48 freeze (+ ALL_UNITS/index/solo-era doc) · 8a9a1b0 webapp
@@ -279,7 +279,13 @@ narrative gate NOT lifted. Progress:
   entries with the ahol-o carve-out) + this doc. NEXT BLOCK on
   owner word: gen_57 = Gen 34 (the Dinah span; 31 verses; shekhem/
   chamor/nagash/anah careers armed by gen_56's watchlist).
-  Narratives pending owner ask ×6 (gen_51-56).**
+  Narratives pending owner ask ×6 (gen_51-56). COMMITTED 2026-08-07
+  on owner word as four commits (three per-unit freezes + tooling/
+  state), pushed to main; HEAD = 37895e9; git status clean except
+  grok-mockups/ (untracked by owner's design). OWNER COMPACTED HERE
+  (compaction point #3) — on resume run §CHECK (expect 57, HEAD
+  37895e9), then await owner word: gen_57 = Gen 34 next block, or
+  machine-player go, or narratives ask.**
 
 ## FIRST AUTONOMOUS 3-BLOCK RUN (owner order 2026-08-07: "process the next 3
 ## blocks on your own ... one at a time") — COMPLETE, COMMITTED
