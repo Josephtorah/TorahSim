@@ -1,4 +1,4 @@
-# Resume prompt — SOLO ERA · 57 frozen · SECOND 3-BLOCK RUN COMPLETE + COMMITTED (55b371e / d6b6572 / dac2080 / 37895e9, pushed; tree clean, grok-mockups/ untracked by owner's design) · 2026-08-07 · COMPACTION POINT #3
+# Resume prompt — SOLO ERA · 60 frozen · THIRD 3-BLOCK RUN COMPLETE (gen_57/58/59 FROZEN, all UNCOMMITTED on base a896ea6; awaiting owner commit word) · 2026-08-07
 
 COMMITS (owner word given, pushed to main): b9b9fa7 gen_47 freeze ·
 c88b200 gen_48 freeze (+ ALL_UNITS/index/solo-era doc) · 8a9a1b0 webapp
@@ -147,8 +147,153 @@ amended (1419 toks 18-19, 22).
   31:5; lavan-WHITE career running from the rods to Lev 13's diagnostic
   color.
 
+## THIRD AUTONOMOUS 3-BLOCK RUN (owner order 2026-08-07, post-compact #3:
+## "lets do 3 more the same way")
+Same gates: next-block lifted for THREE blocks (gen_57/58/59, serial);
+commit gate NOT lifted (freeze artifacts accumulate uncommitted on top of
+a896ea6); narrative gate NOT lifted (pending owner ask now ×7:
+gen_51–gen_57). Progress:
+- **Block 1 DONE — gen_57_deceit_at_the_gate FROZEN (34:1-31, the Dinah
+  span).** 31 steps/31 scenarios · 421 tokens · all 31 verses etnachta'd.
+  NINE pushes, ZERO pops — the corpus's LARGEST ALL-OPEN WALL (prior
+  all-open max: the three sevens gen_34/54/55; reviewer attacked via
+  gen_40 — it popped twice — claim held). Queue: qach_li (34:4,
+  performed-before-demanded on CONSECUTIVE career tokens 104→105; Hamor
+  never takes — the verb returns as the avengers' swords/sister/spoil
+  toks 110-112) · tenu_na + tenu_li (father and son push the same give,
+  gen_54 double-push; refused in the demand's own verb la-tet 34:14) ·
+  hitchatnu (finite exactly twice in Torah: this invite + Deut 7:3's
+  ban) · shevu/secharuha/heachazu (settlement triple; achaz tok3→tok4 =
+  47:27 Goshen, wrong land) · harbu (mohar 1/2 → Exod 22:16 seduction
+  law) · CMD-US? neota (true 1cp cohortative; complied at 34:24 in
+  OTHER roots shama+mul; consent-verb ot 3/3 whole career in-span).
+  Mood rulings: 34:9-10 imperfects = offer-terms (gen_51 yosef-class;
+  TIR-028 needs a command frame) with the letter's own witness —
+  teshevu (imperfect) re-issued as shevu (imperative) in the SAME
+  verse; ve-etna 1cs cohortative fenced (gen_47/52); 34:16 weqatal
+  duty-content; census 10 = 8 LETs + 1 CMD-US? + 1 fence, fully
+  accounted. LETTER-NOTE: 34:17's threat-apodosis (ve-laqachnu) fires
+  at 34:26 though 34:24 falsified its protasis. CROWNS: Deut 22:21
+  reunion (nevala 2/2 both riding be-yisrael; there nevala→be-yisrael→
+  li-zenot CONSECUTIVE idx15-17; zanah tok1 = 34:31's closing
+  question); silence architecture (Dinah subject of exactly ONE finite
+  verb in the Torah — va-tetze; hecherish career → Num 30's
+  father's-silence-binds law; Jacob's one speech = 8 first-person
+  marks, zero Dinah; 34:31 etnachta on FIRST token — 12 corpus-wide,
+  only plural say-verb); am echad bare phrase 3/3 = Babel + this
+  failed merger (49:16 look-alike fenced); dibber al-lev comfort-idiom
+  2/2 = Shechem→Dinah + Joseph→brothers (el-heart inward trio fenced);
+  tamei BORN toks 1-3 (purity codebook's verb debuts on Dinah); gate
+  formula inverts (bae shaar iro ×2 Machpelah / yotze shaar iro ×2
+  here); mirma 2/2 closes father→sons; shavah 31:26 metaphor → 34:29
+  enactment consecutive; kenaani+perizi pair-alone 2/2 = 13:7 + 34:30.
+  REGISTRY 0 (no naming formula in span — reviewer verified zero
+  qara/shem tokens); TESTS 0. Review: FAIL (2 MAJOR prose fences —
+  chalal career homograph, am-echad census method; 2 MINOR) → amended
+  (asserted-replacement script) → AMENDMENTS CONFIRMED — PASS FOR
+  FREEZE. Ritual complete: regression 58/58 · py self-proof green ·
+  ALL_UNITS 58/58 · UNIT_INDEX 58 · watchlist filed
+  (WATCHLIST_gen57_prospective_2026-08-07.md). Corpus: **Gen 1:1-34:31
+  gapless + lev_13.** subs.py: gen_57 span appended (39 keys,
+  collision-scanned; li-fene-hem/ir-o + et-* pronouns module-local;
+  all six prior solo units re-verified byte-identical modulo freeze
+  flip).
+- **Block 2 DONE — gen_58_israel_written_three_deaths FROZEN
+  (35:1-29).** 29 steps/29 scenarios · 378 tokens · 26/29 etnachta'd
+  (35:15 tifcha, 35:24/25 zaqef-qatan fallbacks). NINE pushes, ZERO
+  pops — the SECOND nine-open wall, back to back with gen_57's, as
+  OPPOSITES: there refusal, here COMPLIANCE — every commanded thing
+  happens, no commanded root ever narrates for its demandee (qum_ale→
+  nasa+bo; shev→shakhan; ase→bana; hasiru→natan+taman; hitaharu/
+  hachalifu→nothing; naquma_ve_naale?→nasa; pere_u_reve→47:27
+  horizon; tiri-NOT→she died); the one commanded root that narrates
+  (alah 35:13) has GOD as subject, ascending away — reviewer's
+  full-root scan confirmed zero missed pops. Census 12 (9 imp + 2
+  cohort + 1 jussive) → 9 cards, zero fenced (aux-absorptions and
+  merism-pair per gen_47/56 classes). REGISTRY 6 writes / 4 keys —
+  the corpus's first person-rename WRITE: 35:10 holds decree grammar
+  (writes NOTHING, gen_33 law) + va-yiqra formula (WRITES yisrael)
+  in ONE VERSE; narrator's first Israel-for-the-man = 35:21 (tok7,
+  after the write, never before), yaaqov continues ×8 after (toks
+  132-139 incl. the burial verse). TWO last-write-wins pairs:
+  el_bet_el→bet_el (35:7→15), ben_oni→vinyamin (35:18 — the dying
+  mother's formula-write overwritten by the father's qara-lo).
+  CROWNS: purity-pair born in consecutive chapters (tamei 34:5 /
+  taher 35:2 — both careers = Leviticus); cult kit seeded at Bethel
+  (nesekh 1/41 debut, yatzaq+shemen toks 1-2 both Jacob's two
+  pillar-pours, matzeva career ends BANNED Deut 16:22, matzevet 2/2
+  in-span); God-goes-up exactly twice (17:22/35:13 — both renaming
+  theophanies, decree-sealed vs write-sealed); pere u-reve = the
+  Torah's ONLY singular be-fruitful-and-multiply (morph census);
+  Bethlehem/Kiryat-Arba/kivrat exist only at deaths and their
+  retellings (35:19+48:7; 23:2+35:27); Devorah named only in her
+  death-verse; burial order-flip (25:9 yitzchaq-ve-yishmael vs
+  35:29 esav-ve-yaaqov, first two patriarch burials); midwife
+  office debuts (→38:28→Exod 1); qashah born in Rachel's labor
+  (→Pharaoh's heart); earring ledger (Rebekah's ring→buried→calf→
+  Mishkan); 35:5 = another of the Torah's 12 first-token etnachta
+  verses (with 34:31 — consecutive units). Review: FAIL (4 MAJOR
+  census/scope + 1 MINOR) → amended → AMENDMENTS CONFIRMED — PASS
+  FOR FREEZE. Ritual complete: regression 59/59 · ALL_UNITS 59/59 ·
+  watchlist filed (WATCHLIST_gen58_prospective_2026-08-07.md).
+  Corpus: **Gen 1:1-35:29 gapless + lev_13.** subs.py: gen_58 span
+  appended (22 keys, collision-scanned; et-o left raw span-wide —
+  mixed 853/854, im-o class; all seven prior solo units re-verified
+  byte-identical).
+- **Block 3 DONE — gen_59_esau_edom_kings_ledger FROZEN
+  (36:1-43).** 43 steps/43 scenarios · 489 tokens · 36/43
+  etnachta'd (seven fallbacks: tifcha ×6, zaqef-qatan 36:8) ·
+  ketiv pair yysh/yeush (36:5,14). ZERO pushes, ZERO pops — the
+  ledger class: volitive census NONE across 43 verses; REGISTRY 0
+  (dozens of names, no va-yiqra act); TESTS 0. The run's arc:
+  nine-refused (57), nine-obeyed-in-other-roots (58), empty (59).
+  CROWNS: the reign-verb malakh = 13 Torah tokens — toks 1-10
+  Edom's kings (36:31-39), 11-12 = 37:8's brothers mocking
+  Joseph, 13 = Exod 15:18 YHWH's forever-reign — debuting against
+  35:11's loins-promise one chapter old ("before a king reigned
+  li-vene yisrael", Israel tok10); aluf = 44 tokens, 43 in-span,
+  tok44 = Exod 15:15's terrified chiefs of Edom (moav tok4 in the
+  same Song-verse); Esau = the Torah's ONLY double-toledot
+  subject (36:1+36:9); the 13:6 Abram-Lot separation formula
+  re-used verbatim-class at 36:7 (mi-pene toks 97-99: Jacob flees
+  from-before Esau ×2 → Esau withdraws from-before Jacob;
+  megurim tok3→tok4 = Esau leaves the sojourn-land / 37:1 Jacob
+  settles it); Amalek born of Timna (whole timna career 3/3
+  in-span: concubine/sister/chief; pilegesh-noun closes 4/4);
+  Ishmael's LAST Torah token inside Esau's wife-list (3458
+  17/17 — reviewer's find); teman + qenaz whole careers 3/3
+  in-span; achuza tok5/39 — Edom reaches the holding-word before
+  Jacob's line (47:11); Hadad's Midian-in-Moab clause (36:35 —
+  the king-list's only deed, the Balaam-cycle cast pre-assembled);
+  the three bat-bat chains all in this chapter (36:2/14/39,
+  fenced, not adjudicated); wife-list tension (26:34/28:9 vs
+  36:2-3) filed OPEN. Review: FAIL (1 BLOCKER — a hollow tok? +
+  Tanakh-count leak at 36:3; 8 MAJOR prose ordinals; 1 MINOR) →
+  amended (13 asserted replacements) → AMENDMENTS CONFIRMED —
+  PASS FOR FREEZE. Ritual complete: regression 60/60 · ALL_UNITS
+  60/60 · watchlist filed (WATCHLIST_gen59_prospective_
+  2026-08-07.md). Corpus: **Gen 1:1-36:43 gapless + lev_13.**
+  subs.py: gen_59 span appended (13 keys, collision-scanned; all
+  eight prior solo units re-verified byte-identical).
+
+RUN #3 COMPLETE (2026-08-07): gen_57 (34:1-31, nine refused) ·
+gen_58 (35:1-29, nine obeyed-in-other-verbs, Israel written) ·
+gen_59 (36:1-43, the empty ledger). 60 frozen · Gen 1:1-36:43
+gapless + lev_13 · regression 60/60 · ALL_UNITS 60/60 green.
+UNCOMMITTED artifacts on base a896ea6 (commit gate intact): 3 unit
+yamls + 3 content modules + 3 py_units + 3 undated HTMLs + 3
+watchlists + subs.py (3 span-appends) + ALL_UNITS.py + UNIT_INDEX
++ index DB + this state doc. Owner gates pending: COMMIT WORD for
+run #3; next-block word (gen_60 = Gen 37, va-yeshev — Joseph
+begins; 37:1-2's megurim/toledot arms already filed); derivation
+narratives ask now ×9 (gen_51-gen_59); machine-player go.
+NEXT-SESSION §CHECK: expect 60 frozen; HEAD a896ea6 with dirty
+tree (the run's artifacts) unless owner committed.
+
 ## SECOND AUTONOMOUS 3-BLOCK RUN (owner order 2026-08-07, post-compact:
 ## "once again lets do 3 blocks each one at a time but without my input")
+COMPLETE + COMMITTED (55b371e / d6b6572 / dac2080 / 37895e9 + stamp
+a896ea6, all pushed).
 Same gates as run #1: next-block lifted for THREE blocks; commit gate NOT
 lifted (freeze artifacts accumulate uncommitted on top of 263e6db);
 narrative gate NOT lifted. Progress:
@@ -413,8 +558,8 @@ names = HANDLERS table in run_unit.py (~line 413).
 ```
 cd <old-home>/code/Torah_Grok
 git log --oneline -3
-grep -l "status: frozen" logic/units/*.yaml | wc -l   # expect 57
-python3 run_unit.py gen_50_wage_seven_years_switched_bride --scenarios | tail -1
+grep -l "status: frozen" logic/units/*.yaml | wc -l   # expect 60
+python3 run_unit.py gen_59_esau_edom_kings_ledger --scenarios | tail -1
 for f in $(grep -l "status: frozen" logic/units/*.yaml); do n=$(grep -c "VERIFIED: SNAPSHOT]" $f); [ "$n" -gt 0 ] && echo "$f: $n"; done
 ```
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""ALL_UNITS.py — frozen only (gen_56 frozen 2026-08-07; 57 frozen units)."""
+"""ALL_UNITS.py — frozen only (gen_59 frozen 2026-08-07; 60 frozen units)."""
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
@@ -13676,6 +13676,1129 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 6
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: gen_57_deceit_at_the_gate
+###############################################################################
+
+m = Machine("gen_57_deceit_at_the_gate")
+
+# -------------------------- Gen.34.1 · THE_EXIT ----------------------------
+# וַתֵּצֵא דִינָה בַּת־לֵאָה אֲשֶׁר יָלְדָה לְיַעֲקֹב לִרְאוֹת בִּבְנוֹת
+# הָאָרֶץ
+# "[EN-AID] And Dinah, the daughter of Leah, whom she had borne to Jacob,
+# went out to see among the daughters of the land."
+m.step("Gen.34.1")
+# ‹וַתֵּצֵא דִינָה בַּת־לֵאָה› fact holds: and-tetze-dina-to-me-see(bat-
+# leah, bi-venot-the-earth)
+m.fact("va_tetze_dina_li_reot(bat_leah, bi_venot_ha_aretz)")
+
+# -------------------------- Gen.34.2 · THE_TAKING_BEFORE_ASKING ------------
+# וַיַּרְא אֹתָהּ שְׁכֶם בֶּן־חֲמוֹר הַחִוִּי נְשִׂיא הָאָרֶץ וַיִּקַּח
+# אֹתָהּ וַיִּשְׁכַּב אֹתָהּ וַיְעַנֶּהָ
+# "[EN-AID] And Shechem, son of Hamor the Hivite, prince of the land, saw
+# her; and he took her and lay with her and violated her."
+m.step("Gen.34.2")
+# ‹וַיִּקַּח אֹתָהּ וַיִּשְׁכַּב אֹתָהּ וַיְעַנֶּהָ› fact holds: and-yiqach-
+# and-yishkav-and-yeaneha(shekhem, her)
+m.fact("va_yiqach_va_yishkav_va_yeaneha(shekhem, otah)")
+
+# -------------------------- Gen.34.3 · THE_CLEAVE_AND_THE_HEART ------------
+# וַתִּדְבַּק נַפְשׁוֹ בְּדִינָה בַּת־יַעֲקֹב וַיֶּאֱהַב אֶת־הַנַּעֲרָ
+# וַיְדַבֵּר עַל־לֵב הַנַּעֲרָ
+# "[EN-AID] And his soul cleaved to Dinah, daughter of Jacob; and he loved
+# the girl, and spoke to the heart of the girl."
+m.step("Gen.34.3")
+# ‹וַתִּדְבַּק נַפְשׁוֹ בְּדִינָה בַּת› fact holds: and-tidbaq-nafsho-and-
+# yedaber-upon-lev(shekhem, the-naara)
+m.fact("va_tidbaq_nafsho_va_yedaber_al_lev(shekhem, ha_naara)")
+
+# -------------------------- Gen.34.4 · THE_DEMAND_AFTER_THE_DEED -----------
+# וַיֹּאמֶר שְׁכֶם אֶל־חֲמוֹר אָבִיו לֵאמֹר קַח־לִי אֶת־הַיַּלְדָּה הַזֹּאת
+# לְאִשָּׁה
+# "[EN-AID] And Shechem said to Hamor his father, saying: Take me this girl
+# as a wife."
+m.step("Gen.34.4")
+# ‹קַח־לִי אֶת־הַיַּלְדָּה הַזֹּאת לְאִשָּׁה› shekhem speaks a demand — LET:
+# qach-to-me(chamor, the-yalda-the-this-to-isha)
+m.declare("shekhem", "LET",
+          "qach_li(chamor, et_ha_yalda_ha_zot_le_isha)")
+
+# -------------------------- Gen.34.5 · THE_DEFILE_VERB_BORN ----------------
+# וְיַעֲקֹב שָׁמַע כִּי טִמֵּא אֶת־דִּינָה בִתּוֹ וּבָנָיו הָיוּ
+# אֶת־מִקְנֵהוּ בַּשָּׂדֶה וְהֶחֱרִשׁ יַעֲקֹב עַד־בֹּאָם
+# "[EN-AID] And Jacob heard that he had defiled Dinah his daughter, and his
+# sons were with his livestock in the field; and Jacob kept silent until
+# they came."
+m.step("Gen.34.5")
+# ‹וְהֶחֱרִשׁ יַעֲקֹב עַד־בֹּאָם› fact holds: shama-when-time-and-
+# hecherish(yaaqov, until-boam)
+m.fact("shama_ki_time_ve_hecherish(yaaqov, ad_boam)")
+
+# -------------------------- Gen.34.6 · THE_FATHER_GOES_OUT -----------------
+# וַיֵּצֵא חֲמוֹר אֲבִי־שְׁכֶם אֶל־יַעֲקֹב לְדַבֵּר אִתּוֹ
+# "[EN-AID] And Hamor, the father of Shechem, went out to Jacob, to speak
+# with him."
+m.step("Gen.34.6")
+# ‹וַיֵּצֵא חֲמוֹר אֲבִי־שְׁכֶם› fact holds: and-yetze-chamor-to-daber(to-
+# yaaqov, with-him)
+m.fact("va_yetze_chamor_le_daber(el_yaaqov, ito)")
+
+# -------------------------- Gen.34.7 · THE_OUTRAGE_IN_ISRAEL ---------------
+# וּבְנֵי יַעֲקֹב בָּאוּ מִן־הַשָּׂדֶה כְּשָׁמְעָם וַיִּתְעַצְּבוּ
+# הָאֲנָשִׁים וַיִּחַר לָהֶם מְאֹד כִּי־נְבָלָה עָשָׂה בְיִשְׂרָאֵל
+# לִשְׁכַּב אֶת־בַּת־יַעֲקֹב וְכֵן לֹא יֵעָשֶׂה
+# "[EN-AID] And the sons of Jacob came from the field when they heard, and
+# the men were grieved and very angry; for he had done an outrage in Israel,
+# to lie with a daughter of Jacob — and so is not done."
+m.step("Gen.34.7")
+# ‹כִּי־נְבָלָה עָשָׂה בְיִשְׂרָאֵל לִשְׁכַּב› fact holds: and-yitatzvu-
+# when-nevala-and-yisrael(the-anashim)
+m.fact("va_yitatzvu_ki_nevala_ve_yisrael(ha_anashim)")
+
+# -------------------------- Gen.34.8 · THE_GIVE_HER_DEMAND -----------------
+# וַיְדַבֵּר חֲמוֹר אִתָּם לֵאמֹר שְׁכֶם בְּנִי חָשְׁקָה נַפְשׁוֹ
+# בְּבִתְּכֶם תְּנוּ נָא אֹתָהּ לוֹ לְאִשָּׁה
+# "[EN-AID] And Hamor spoke with them, saying: Shechem my son — his soul
+# longs for your daughter; give her, please, to him as a wife."
+m.step("Gen.34.8")
+# ‹תְּנוּ נָא אֹתָהּ לוֹ לְאִשָּׁה› chamor speaks a demand — LET: tenu-
+# na(bet-yaaqov, her-not-to-isha)
+m.declare("chamor", "LET",
+          "tenu_na(bet_yaaqov, otah_lo_le_isha)")
+
+# -------------------------- Gen.34.9 · THE_INTERMARRY_INVITATION -----------
+# וְהִתְחַתְּנוּ אֹתָנוּ בְּנֹתֵיכֶם תִּתְּנוּ־לָנוּ וְאֶת־בְּנֹתֵינוּ
+# תִּקְחוּ לָכֶם
+# "[EN-AID] And intermarry with us: your daughters you shall give to us, and
+# our daughters you shall take for yourselves."
+m.step("Gen.34.9")
+# ‹וְהִתְחַתְּנוּ אֹתָנוּ› chamor speaks a demand — LET: hitchatnu(bet-
+# yaaqov, otanu)
+m.declare("chamor", "LET",
+          "hitchatnu(bet_yaaqov, otanu)")
+
+# -------------------------- Gen.34.10 · THE_SETTLEMENT_TRIPLE --------------
+# וְאִתָּנוּ תֵּשֵׁבוּ וְהָאָרֶץ תִּהְיֶה לִפְנֵיכֶם שְׁבוּ וּסְחָרוּהָ
+# וְהֵאָחֲזוּ בָּהּ
+# "[EN-AID] And with us you shall dwell; and the land shall be before you:
+# dwell, and trade in it, and take holdings in it."
+m.step("Gen.34.10")
+# ‹שְׁבוּ› chamor speaks a demand — LET: shevu(bet-yaaqov, itanu)
+m.declare("chamor", "LET",
+          "shevu(bet_yaaqov, itanu)")
+# ‹וּסְחָרוּהָ› chamor speaks a demand — LET: secharuha(bet-yaaqov, the-
+# earth)
+m.declare("chamor", "LET",
+          "secharuha(bet_yaaqov, ha_aretz)")
+# ‹וְהֵאָחֲזוּ בָּהּ› chamor speaks a demand — LET: heachazu(bet-yaaqov, in-
+# the-earth)
+m.declare("chamor", "LET",
+          "heachazu(bet_yaaqov, ba_aretz)")
+
+# -------------------------- Gen.34.11 · THE_BLANK_CHECK --------------------
+# וַיֹּאמֶר שְׁכֶם אֶל־אָבִיה וְאֶל־אַחֶיהָ אֶמְצָא־חֵן בְּעֵינֵיכֶם
+# וַאֲשֶׁר תֹּאמְרוּ אֵלַי אֶתֵּן
+# "[EN-AID] And Shechem said to her father and to her brothers: Let me find
+# grace in your eyes; and whatever you say to me, I will give."
+m.step("Gen.34.11")
+# ‹אֶמְצָא־חֵן בְּעֵינֵיכֶם› fact holds: emtza-chen-and-which-tomru-
+# eten(shekhem)
+m.fact("emtza_chen_va_asher_tomru_eten(shekhem)")
+
+# -------------------------- Gen.34.12 · THE_PRICE_AND_THE_DOUBLED_GIVE -----
+# הַרְבּוּ עָלַי מְאֹד מֹהַר וּמַתָּן וְאֶתְּנָה כַּאֲשֶׁר תֹּאמְרוּ אֵלָי
+# וּתְנוּ־לִי אֶת־הַנַּעֲרָ לְאִשָּׁה
+# "[EN-AID] Multiply upon me exceedingly bride-price and gift, and I will
+# give as you say to me; and give me the girl as a wife."
+m.step("Gen.34.12")
+# ‹הַרְבּוּ עָלַי מְאֹד מֹהַר וּמַתָּן› shekhem speaks a demand — LET:
+# harbu(aviha-and-acheha, mohar-and-matan)
+m.declare("shekhem", "LET",
+          "harbu(aviha_ve_acheha, mohar_u_matan)")
+# ‹וּתְנוּ־לִי אֶת־הַנַּעֲרָ לְאִשָּׁה› shekhem speaks a demand — LET: tenu-
+# to-me(aviha-and-acheha, the-naara-to-isha)
+m.declare("shekhem", "LET",
+          "tenu_li(aviha_ve_acheha, et_ha_naara_le_isha)")
+
+# -------------------------- Gen.34.13 · THE_DECEIT_INHERITED ---------------
+# וַיַּעֲנוּ בְנֵי־יַעֲקֹב אֶת־שְׁכֶם וְאֶת־חֲמוֹר אָבִיו בְּמִרְמָה
+# וַיְדַבֵּרוּ אֲשֶׁר טִמֵּא אֵת דִּינָה אֲחֹתָם
+# "[EN-AID] And the sons of Jacob answered Shechem and Hamor his father with
+# deceit, and spoke — because he had defiled Dinah their sister."
+m.step("Gen.34.13")
+# ‹בְּמִרְמָה וַיְדַבֵּרוּ› fact holds: and-yaanu-in-mirma(vene-yaaqov,
+# which-time)
+m.fact("va_yaanu_be_mirma(vene_yaaqov, asher_time)")
+
+# -------------------------- Gen.34.14 · THE_REFUSAL ------------------------
+# וַיֹּאמְרוּ אֲלֵיהֶם לֹא נוּכַל לַעֲשׂוֹת הַדָּבָר הַזֶּה לָתֵת
+# אֶת־אֲחֹתֵנוּ לְאִישׁ אֲשֶׁר־לוֹ עָרְלָה כִּי־חֶרְפָּה הִוא לָנוּ
+# "[EN-AID] And they said to them: We cannot do this thing, to give our
+# sister to a man who has a foreskin; for it is a reproach to us."
+m.step("Gen.34.14")
+# ‹לֹא נוּכַל לַעֲשׂוֹת הַדָּבָר› fact holds: not-nukhal-to-tet-when-
+# cherpa(vene-yaaqov)
+m.fact("lo_nukhal_la_tet_ki_cherpa(vene_yaaqov)")
+
+# -------------------------- Gen.34.15 · THE_CONSENT_VERB_BORN --------------
+# אַךְ־בְּזֹאת נֵאוֹת לָכֶם אִם תִּהְיוּ כָמֹנוּ לְהִמֹּל לָכֶם כָּל־זָכָר
+# "[EN-AID] Only in this will we consent to you: if you become like us, to
+# have every male circumcised."
+m.step("Gen.34.15")
+# ‹אַךְ־בְּזֹאת נֵאוֹת› fact holds: akh-in-this-neot-if-himol-kal-male(tnai)
+m.fact("akh_be_zot_neot_im_himol_kal_zakhar(tnai)")
+
+# -------------------------- Gen.34.16 · THE_ONE_PEOPLE_CLAUSE --------------
+# וְנָתַנּוּ אֶת־בְּנֹתֵינוּ לָכֶם וְאֶת־בְּנֹתֵיכֶם נִקַּח־לָנוּ
+# וְיָשַׁבְנוּ אִתְּכֶם וְהָיִינוּ לְעַם אֶחָד
+# "[EN-AID] Then we will give our daughters to you, and your daughters we
+# will take for ourselves; and we will dwell with you, and become one
+# people."
+m.step("Gen.34.16")
+# ‹וְנָתַנּוּ אֶת־בְּנֹתֵינוּ› fact holds: and-natanu-and-hayinu-to-am-
+# echad(havtacha-upon-tnai)
+m.fact("ve_natanu_ve_hayinu_le_am_echad(havtacha_al_tnai)")
+
+# -------------------------- Gen.34.17 · THE_COUNTER_THREAT -----------------
+# וְאִם־לֹא תִשְׁמְעוּ אֵלֵינוּ לְהִמּוֹל וְלָקַחְנוּ אֶת־בִּתֵּנוּ
+# וְהָלָכְנוּ
+# "[EN-AID] And if you will not heed us, to be circumcised — then we will
+# take our daughter, and go."
+m.step("Gen.34.17")
+# ‹וְאִם־לֹא תִשְׁמְעוּ אֵלֵינוּ› fact holds: and-if-not-tishmu-and-
+# laqachnu(tnai-negdi)
+m.fact("ve_im_lo_tishmu_ve_laqachnu(tnai_negdi)")
+
+# -------------------------- Gen.34.18 · GOOD_IN_THEIR_EYES -----------------
+# וַיִּיטְבוּ דִבְרֵיהֶם בְּעֵינֵי חֲמוֹר וּבְעֵינֵי שְׁכֶם בֶּן־חֲמוֹר
+# "[EN-AID] And their words were good in the eyes of Hamor, and in the eyes
+# of Shechem, son of Hamor."
+m.step("Gen.34.18")
+# ‹וַיִּיטְבוּ דִבְרֵיהֶם בְּעֵינֵי חֲמוֹר› fact holds: and-yitvu-divrehem-
+# in-ene(chamor-and-shekhem)
+m.fact("va_yitvu_divrehem_be_ene(chamor_u_shekhem)")
+
+# -------------------------- Gen.34.19 · DELIGHT_WITHOUT_DELAY --------------
+# וְלֹא־אֵחַר הַנַּעַר לַעֲשׂוֹת הַדָּבָר כִּי חָפֵץ בְּבַת־יַעֲקֹב וְהוּא
+# נִכְבָּד מִכֹּל בֵּית אָבִיו
+# "[EN-AID] And the youth did not delay to do the thing, for he delighted in
+# the daughter of Jacob; and he was the most honored of all his father's
+# house."
+m.step("Gen.34.19")
+# ‹וְלֹא־אֵחַר הַנַּעַר לַעֲשׂוֹת› fact holds: not-echar-when-chafetz-and-
+# that-nikhbad(the-naar)
+m.fact("lo_echar_ki_chafetz_ve_hu_nikhbad(ha_naar)")
+
+# -------------------------- Gen.34.20 · THE_GATE ---------------------------
+# וַיָּבֹא חֲמוֹר וּשְׁכֶם בְּנוֹ אֶל־שַׁעַר עִירָם וַיְדַבְּרוּ
+# אֶל־אַנְשֵׁי עִירָם לֵאמֹר
+# "[EN-AID] And Hamor and Shechem his son came to the gate of their city,
+# and spoke to the men of their city, saying:"
+m.step("Gen.34.20")
+# ‹אֶל־שַׁעַר עִירָם› fact holds: and-yavou-to-shaar-iram(chamor-and-
+# shekhem)
+m.fact("va_yavou_el_shaar_iram(chamor_u_shekhem)")
+
+# -------------------------- Gen.34.21 · THE_TWO_FACED_PITCH_OPENS ----------
+# הָאֲנָשִׁים הָאֵלֶּה שְׁלֵמִים הֵם אִתָּנוּ וְיֵשְׁבוּ בָאָרֶץ וְיִסְחֲרוּ
+# אֹתָהּ וְהָאָרֶץ הִנֵּה רַחֲבַת־יָדַיִם לִפְנֵיהֶם אֶת־בְּנֹתָם
+# נִקַּח־לָנוּ לְנָשִׁים וְאֶת־בְּנֹתֵינוּ נִתֵּן לָהֶם
+# "[EN-AID] These men are peaceable with us; let them dwell in the land and
+# trade in it — and the land, behold, is wide-handed before them; their
+# daughters we will take to us as wives, and our daughters we will give to
+# them."
+m.step("Gen.34.21")
+# ‹שְׁלֵמִים הֵם אִתָּנוּ› fact holds: shelemim-hem-itanu-and-the-earth-
+# rachavat(the-pitch)
+m.fact("shelemim_hem_itanu_ve_ha_aretz_rachavat(ha_pitch)")
+
+# -------------------------- Gen.34.22 · THE_RETOLD_CONDITION ---------------
+# אַךְ־בְּזֹאת יֵאֹתוּ לָנוּ הָאֲנָשִׁים לָשֶׁבֶת אִתָּנוּ לִהְיוֹת לְעַם
+# אֶחָד בְּהִמּוֹל לָנוּ כָּל־זָכָר כַּאֲשֶׁר הֵם נִמֹּלִים
+# "[EN-AID] Only in this will the men consent to us, to dwell with us, to
+# become one people: when every male among us is circumcised, as they are
+# circumcised."
+m.step("Gen.34.22")
+# ‹אַךְ־בְּזֹאת יֵאֹתוּ› fact holds: in-this-yeotu-to-me-heot-to-am-
+# echad(the-tnai-retold)
+m.fact("be_zot_yeotu_li_heot_le_am_echad(ha_tnai_retold)")
+
+# -------------------------- Gen.34.23 · THE_PROPERTY_CLAUSE_AND_THE_CONSENT -
+# מִקְנֵהֶם וְקִנְיָנָם וְכָל־בְּהֶמְתָּם הֲלוֹא לָנוּ הֵם אַךְ נֵאוֹתָה
+# לָהֶם וְיֵשְׁבוּ אִתָּנוּ
+# "[EN-AID] Their livestock and their property and all their beasts — are
+# they not ours? Only let us consent to them, and they will dwell with us."
+m.step("Gen.34.23")
+# ‹אַךְ נֵאוֹתָה לָהֶם› chamor-and-shekhem speaks a demand — CMD-US?:
+# neota(anshe-the-ir, to-hem)
+m.declare("chamor_u_shekhem", "CMD-US?",
+          "neota(anshe_ha_ir, la_hem)")
+
+# -------------------------- Gen.34.24 · THE_GATE_FORMULA_INVERTS -----------
+# וַיִּשְׁמְעוּ אֶל־חֲמוֹר וְאֶל־שְׁכֶם בְּנוֹ כָּל־יֹצְאֵי שַׁעַר עִירוֹ
+# וַיִּמֹּלוּ כָּל־זָכָר כָּל־יֹצְאֵי שַׁעַר עִירוֹ
+# "[EN-AID] And all who went out of the gate of his city heeded Hamor and
+# Shechem his son; and every male was circumcised — all who went out of the
+# gate of his city."
+m.step("Gen.34.24")
+# ‹וַיִּשְׁמְעוּ אֶל־חֲמוֹר וְאֶל› fact holds: and-yishmu-and-yimolu-kal-
+# yotze-shaar(the-ir)
+m.fact("va_yishmu_va_yimolu_kal_yotze_shaar(ha_ir)")
+
+# -------------------------- Gen.34.25 · DAY_THREE_THE_SWORDS ---------------
+# וַיְהִי בַיּוֹם הַשְּׁלִישִׁי בִּהְיוֹתָם כֹּאֲבִים וַיִּקְחוּ
+# שְׁנֵי־בְנֵי־יַעֲקֹב שִׁמְעוֹן וְלֵוִי אֲחֵי דִינָה אִישׁ חַרְבּוֹ
+# וַיָּבֹאוּ עַל־הָעִיר בֶּטַח וַיַּהַרְגוּ כָּל־זָכָר
+# "[EN-AID] And it was on the third day, when they were in pain, that two of
+# Jacob's sons, Simeon and Levi, Dinah's brothers, took each his sword; and
+# they came upon the city secure, and killed every male."
+m.step("Gen.34.25")
+# ‹וַיִּקְחוּ שְׁנֵי־בְנֵי־יַעֲקֹב שִׁמְעוֹן וְלֵוִי אֲחֵי› fact holds: and-
+# yiqchu-charbam-and-yahargu-kal-male(shimon-and-levi)
+m.fact("va_yiqchu_charbam_va_yahargu_kal_zakhar(shimon_ve_levi)")
+
+# -------------------------- Gen.34.26 · THE_TAKING_BACK --------------------
+# וְאֶת־חֲמוֹר וְאֶת־שְׁכֶם בְּנוֹ הָרְגוּ לְפִי־חָרֶב וַיִּקְחוּ
+# אֶת־דִּינָה מִבֵּית שְׁכֶם וַיֵּצֵאוּ
+# "[EN-AID] And Hamor and Shechem his son they killed by the mouth of the
+# sword; and they took Dinah from the house of Shechem, and went out."
+m.step("Gen.34.26")
+# ‹וַיִּקְחוּ אֶת־דִּינָה› fact holds: hargu-to-fi-charev-and-yiqchu-
+# dina(and-yetzeu)
+m.fact("hargu_le_fi_charev_va_yiqchu_et_dina(va_yetzeu)")
+
+# -------------------------- Gen.34.27 · THE_PLUNDER_REASON -----------------
+# בְּנֵי יַעֲקֹב בָּאוּ עַל־הַחֲלָלִים וַיָּבֹזּוּ הָעִיר אֲשֶׁר טִמְּאוּ
+# אֲחוֹתָם
+# "[EN-AID] The sons of Jacob came upon the slain and plundered the city —
+# because they had defiled their sister."
+m.step("Gen.34.27")
+# ‹וַיָּבֹזּוּ הָעִיר› fact holds: and-yavozu-the-ir-which-timu(bene-yaaqov)
+m.fact("va_yavozu_ha_ir_asher_timu(bene_yaaqov)")
+
+# -------------------------- Gen.34.28 · THE_LIVESTOCK_SWEPT ----------------
+# אֶת־צֹאנָם וְאֶת־בְּקָרָם וְאֶת־חֲמֹרֵיהֶּם וְאֵת אֲשֶׁר־בָּעִיר
+# וְאֶת־אֲשֶׁר בַּשָּׂדֶה לָקָחוּ
+# "[EN-AID] Their flocks and their herds and their donkeys, and what was in
+# the city and what was in the field, they took."
+m.step("Gen.34.28")
+# ‹אֶת־צֹאנָם וְאֶת־בְּקָרָם› fact holds: tzonam-beqaram-chamorehem-
+# laqachu(the-shalal)
+m.fact("tzonam_beqaram_chamorehem_laqachu(ha_shalal)")
+
+# -------------------------- Gen.34.29 · THE_CAPTIVES -----------------------
+# וְאֶת־כָּל־חֵילָם וְאֶת־כָּל־טַפָּם וְאֶת־נְשֵׁיהֶם שָׁבוּ וַיָּבֹזּוּ
+# וְאֵת כָּל־אֲשֶׁר בַּבָּיִת
+# "[EN-AID] And all their wealth and all their little ones and their wives
+# they captured and plundered — and all that was in the house."
+m.step("Gen.34.29")
+# ‹וְאֶת־כָּל־חֵילָם וְאֶת־כָּל־טַפָּם› fact holds: shavu-and-yavozu-chel-
+# taf-nashim(the-shvi)
+m.fact("shavu_va_yavozu_chel_taf_nashim(ha_shvi)")
+
+# -------------------------- Gen.34.30 · THE_EIGHT_SELVES -------------------
+# וַיֹּאמֶר יַעֲקֹב אֶל־שִׁמְעוֹן וְאֶל־לֵוִי עֲכַרְתֶּם אֹתִי
+# לְהַבְאִישֵׁנִי בְּיֹשֵׁב הָאָרֶץ בַּכְּנַעֲנִי וּבַפְּרִזִּי וַאֲנִי
+# מְתֵי מִסְפָּר וְנֶאֶסְפוּ עָלַי וְהִכּוּנִי וְנִשְׁמַדְתִּי אֲנִי
+# וּבֵיתִי
+# "[EN-AID] And Jacob said to Simeon and to Levi: You have troubled me,
+# making me stink among the dwellers of the land, among the Canaanite and
+# among the Perizzite; and I being few in number, they will gather against
+# me and strike me, and I shall be destroyed — I and my house."
+m.step("Gen.34.30")
+# ‹עֲכַרְתֶּם אֹתִי› fact holds: akhartem-me-to-havisheni(yaaqov, mete-
+# mispar)
+m.fact("akhartem_oti_le_havisheni(yaaqov, mete_mispar)")
+
+# -------------------------- Gen.34.31 · THE_UNANSWERED_QUESTION ------------
+# וַיֹּאמְרוּ הַכְזוֹנָה יַעֲשֶׂה אֶת־אֲחוֹתֵנוּ
+# "[EN-AID] And they said: Should he treat our sister like a whore?"
+m.step("Gen.34.31")
+# ‹וַיֹּאמְרוּ הַכְזוֹנָה יַעֲשֶׂה אֶת־אֲחוֹתֵנוּ› fact holds: the-khe-zona-
+# yaase-achotenu(sheela-petucha)
+m.fact("ha_khe_zona_yaase_et_achotenu(sheela_petucha)")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == ['qach_li(chamor, et_ha_yalda_ha_zot_le_isha)', 'tenu_na(bet_yaaqov, otah_lo_le_isha)', 'hitchatnu(bet_yaaqov, otanu)', 'shevu(bet_yaaqov, itanu)', 'secharuha(bet_yaaqov, ha_aretz)', 'heachazu(bet_yaaqov, ba_aretz)', 'harbu(aviha_ve_acheha, mohar_u_matan)', 'tenu_li(aviha_ve_acheha, et_ha_naara_le_isha)', 'neota(anshe_ha_ir, la_hem)']
+    assert len(m.SPECS["log"]) == 9
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted(['va_tetze_dina_li_reot(bat_leah, bi_venot_ha_aretz)', 'va_yiqach_va_yishkav_va_yeaneha(shekhem, otah)', 'va_tidbaq_nafsho_va_yedaber_al_lev(shekhem, ha_naara)', 'shama_ki_time_ve_hecherish(yaaqov, ad_boam)', 'va_yetze_chamor_le_daber(el_yaaqov, ito)', 'va_yitatzvu_ki_nevala_ve_yisrael(ha_anashim)', 'emtza_chen_va_asher_tomru_eten(shekhem)', 'va_yaanu_be_mirma(vene_yaaqov, asher_time)', 'lo_nukhal_la_tet_ki_cherpa(vene_yaaqov)', 'akh_be_zot_neot_im_himol_kal_zakhar(tnai)', 've_natanu_ve_hayinu_le_am_echad(havtacha_al_tnai)', 've_im_lo_tishmu_ve_laqachnu(tnai_negdi)', 'va_yitvu_divrehem_be_ene(chamor_u_shekhem)', 'lo_echar_ki_chafetz_ve_hu_nikhbad(ha_naar)', 'va_yavou_el_shaar_iram(chamor_u_shekhem)', 'shelemim_hem_itanu_ve_ha_aretz_rachavat(ha_pitch)', 'be_zot_yeotu_li_heot_le_am_echad(ha_tnai_retold)', 'va_yishmu_va_yimolu_kal_yotze_shaar(ha_ir)', 'va_yiqchu_charbam_va_yahargu_kal_zakhar(shimon_ve_levi)', 'hargu_le_fi_charev_va_yiqchu_et_dina(va_yetzeu)', 'va_yavozu_ha_ir_asher_timu(bene_yaaqov)', 'tzonam_beqaram_chamorehem_laqachu(ha_shalal)', 'shavu_va_yavozu_chel_taf_nashim(ha_shvi)', 'akhartem_oti_le_havisheni(yaaqov, mete_mispar)', 'ha_khe_zona_yaase_et_achotenu(sheela_petucha)'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 9
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: gen_58_israel_written_three_deaths
+###############################################################################
+
+m = Machine("gen_58_israel_written_three_deaths")
+
+# -------------------------- Gen.35.1 · THE_COMMAND_CHAIN -------------------
+# וַיֹּאמֶר אֱלֹהִים אֶל־יַעֲקֹב קוּם עֲלֵה בֵית־אֵל וְשֶׁב־שָׁם
+# וַעֲשֵׂה־שָׁם מִזְבֵּחַ לָאֵל הַנִּרְאֶה אֵלֶיךָ בְּבָרְחֲךָ מִפְּנֵי
+# עֵשָׂו אָחִיךָ
+# "[EN-AID] And God said to Jacob: Arise, go up to Bethel and dwell there;
+# and make there an altar to the El who appeared to you when you fled from
+# Esau your brother."
+m.step("Gen.35.1")
+# ‹קוּם עֲלֵה בֵית־אֵל› God speaks a demand — LET: qum-ale(yaaqov, bet-to)
+m.declare("Elohim", "LET",
+          "qum_ale(yaaqov, bet_el)")
+# ‹וְשֶׁב־שָׁם› God speaks a demand — LET: shev-there(yaaqov, bet-to)
+m.declare("Elohim", "LET",
+          "shev_sham(yaaqov, bet_el)")
+# ‹וַעֲשֵׂה־שָׁם מִזְבֵּחַ לָאֵל› God speaks a demand — LET: ase-there-
+# altar(yaaqov, to-to-the-nire)
+m.declare("Elohim", "LET",
+          "ase_sham_mizbeach(yaaqov, la_el_ha_nire)")
+
+# -------------------------- Gen.35.2 · THE_PURGE_TRIPLE --------------------
+# וַיֹּאמֶר יַעֲקֹב אֶל־בֵּיתוֹ וְאֶל כָּל־אֲשֶׁר עִמּוֹ הָסִרוּ אֶת־אֱלֹהֵי
+# הַנֵּכָר אֲשֶׁר בְּתֹכְכֶם וְהִטַּהֲרוּ וְהַחֲלִיפוּ שִׂמְלֹתֵיכֶם
+# "[EN-AID] And Jacob said to his house and to all who were with him: Remove
+# the foreign gods that are in your midst, and purify yourselves, and change
+# your garments."
+m.step("Gen.35.2")
+# ‹הָסִרוּ אֶת־אֱלֹהֵי הַנֵּכָר› yaaqov speaks a demand — LET: hasiru(bet-
+# yaaqov, elohe-the-nekhar)
+m.declare("yaaqov", "LET",
+          "hasiru(bet_yaaqov, et_elohe_ha_nekhar)")
+# ‹וְהִטַּהֲרוּ› yaaqov speaks a demand — LET: hitaharu(bet-yaaqov)
+m.declare("yaaqov", "LET",
+          "hitaharu(bet_yaaqov)")
+# ‹וְהַחֲלִיפוּ שִׂמְלֹתֵיכֶם› yaaqov speaks a demand — LET: hachalifu(bet-
+# yaaqov, simlotekhem)
+m.declare("yaaqov", "LET",
+          "hachalifu(bet_yaaqov, simlotekhem)")
+
+# -------------------------- Gen.35.3 · THE_COHORTATIVE_PAIR ----------------
+# וְנָקוּמָה וְנַעֲלֶה בֵּית־אֵל וְאֶעֱשֶׂה־שָּׁם מִזְבֵּחַ לָאֵל הָעֹנֶה
+# אֹתִי בְּיוֹם צָרָתִי וַיְהִי עִמָּדִי בַּדֶּרֶךְ אֲשֶׁר הָלָכְתִּי
+# "[EN-AID] And let us arise and go up to Bethel; and I will make there an
+# altar to the El who answered me in the day of my distress, and was with me
+# on the way that I walked."
+m.step("Gen.35.3")
+# ‹וְנָקוּמָה וְנַעֲלֶה בֵּית־אֵל› yaaqov speaks a demand — CMD-US?: naquma-
+# and-naale(bet-yaaqov, bet-to)
+m.declare("yaaqov", "CMD-US?",
+          "naquma_ve_naale(bet_yaaqov, bet_el)")
+
+# -------------------------- Gen.35.4 · THE_HANDOVER ------------------------
+# וַיִּתְּנוּ אֶל־יַעֲקֹב אֵת כָּל־אֱלֹהֵי הַנֵּכָר אֲשֶׁר בְּיָדָם
+# וְאֶת־הַנְּזָמִים אֲשֶׁר בְּאָזְנֵיהֶם וַיִּטְמֹן אֹתָם יַעֲקֹב תַּחַת
+# הָאֵלָה אֲשֶׁר עִם־שְׁכֶם
+# "[EN-AID] And they gave to Jacob all the foreign gods that were in their
+# hand, and the rings that were in their ears; and Jacob hid them under the
+# terebinth that is by Shechem."
+m.step("Gen.35.4")
+# ‹וַיִּתְּנוּ אֶל־יַעֲקֹב› fact holds: and-yitnu-and-yitmon(elohe-the-
+# nekhar-and-the-nezamim, tachat-the-ela)
+m.fact("va_yitnu_va_yitmon(elohe_ha_nekhar_ve_ha_nezamim, tachat_ha_ela)")
+
+# -------------------------- Gen.35.5 · THE_UN_PURSUIT ----------------------
+# וַיִּסָּעוּ וַיְהִי חִתַּת אֱלֹהִים עַל־הֶעָרִים אֲשֶׁר סְבִיבֹתֵיהֶם
+# וְלֹא רָדְפוּ אַחֲרֵי בְּנֵי יַעֲקֹב
+# "[EN-AID] And they journeyed; and a terror of God was upon the cities that
+# were around them, and they did not pursue after the sons of Jacob."
+m.step("Gen.35.5")
+# ‹וַיִּסָּעוּ› fact holds: chitat-God-and-not-radfu(he-arim)
+m.fact("chitat_Elohim_ve_lo_radfu(he_arim)")
+
+# -------------------------- Gen.35.6 · THE_ARRIVAL -------------------------
+# וַיָּבֹא יַעֲקֹב לוּזָה אֲשֶׁר בְּאֶרֶץ כְּנַעַן הִוא בֵּית־אֵל הוּא
+# וְכָל־הָעָם אֲשֶׁר־עִמּוֹ
+# "[EN-AID] And Jacob came to Luz, which is in the land of Canaan — it is
+# Bethel — he and all the people who were with him."
+m.step("Gen.35.6")
+# ‹וַיָּבֹא יַעֲקֹב לוּזָה› fact holds: and-yavo-luzah-hiv-bet-to(yaaqov-
+# and-the-am)
+m.fact("va_yavo_luzah_hiv_bet_el(yaaqov_ve_ha_am)")
+
+# -------------------------- Gen.35.7 · THE_ALTAR_BUILT_AND_NAMED -----------
+# וַיִּבֶן שָׁם מִזְבֵּחַ וַיִּקְרָא לַמָּקוֹם אֵל בֵּית־אֵל כִּי שָׁם
+# נִגְלוּ אֵלָיו הָאֱלֹהִים בְּבָרְחוֹ מִפְּנֵי אָחִיו
+# "[EN-AID] And he built there an altar, and called the place El-Bethel; for
+# there the Elohim were revealed to him when he fled from before his
+# brother."
+m.step("Gen.35.7")
+# ‹וַיִּבֶן שָׁם מִזְבֵּחַ› the world gains: the-maqom
+m.install("ha_maqom")
+# ‹וַיִּקְרָא לַמָּקוֹם אֵל› named: the-maqom := to-bet-to
+m.name("ha_maqom", "el_bet_el")
+
+# -------------------------- Gen.35.8 · THE_NURSE_NAMED_AT_DEATH ------------
+# וַתָּמָת דְּבֹרָה מֵינֶקֶת רִבְקָה וַתִּקָּבֵר מִתַּחַת לְבֵית־אֵל תַּחַת
+# הָאַלּוֹן וַיִּקְרָא שְׁמוֹ אַלּוֹן בָּכוּת
+# "[EN-AID] And Devorah, Rebekah's nurse, died, and she was buried below
+# Bethel, under the oak; and he called its name Oak of Weeping."
+m.step("Gen.35.8")
+# ‹וַתָּמָת דְּבֹרָה מֵינֶקֶת רִבְקָה› the world gains: the-alon
+m.install("ha_alon")
+# ‹וַיִּקְרָא שְׁמוֹ אַלּוֹן בָּכוּת› named: the-alon := alon-bakhut
+m.name("ha_alon", "alon_bakhut")
+
+# -------------------------- Gen.35.9 · THE_SECOND_APPEARANCE ---------------
+# וַיֵּרָא אֱלֹהִים אֶל־יַעֲקֹב עוֹד בְּבֹאוֹ מִפַּדַּן אֲרָם וַיְבָרֶךְ
+# אֹתוֹ
+# "[EN-AID] And God appeared to Jacob again, in his coming from Paddan-aram;
+# and He blessed him."
+m.step("Gen.35.9")
+# ‹וַיֵּרָא אֱלֹהִים אֶל־יַעֲקֹב עוֹד› fact holds: and-yera-God-od-and-
+# yevarekh(to-yaaqov)
+m.fact("va_yera_Elohim_od_va_yevarekh(el_yaaqov)")
+
+# -------------------------- Gen.35.10 · THE_DECREE_AND_THE_FORMULA ---------
+# וַיֹּאמֶר־לוֹ אֱלֹהִים שִׁמְךָ יַעֲקֹב לֹא־יִקָּרֵא שִׁמְךָ עוֹד יַעֲקֹב
+# כִּי אִם־יִשְׂרָאֵל יִהְיֶה שְׁמֶךָ וַיִּקְרָא אֶת־שְׁמוֹ יִשְׂרָאֵל
+# "[EN-AID] And God said to him: Your name is Jacob; your name shall no more
+# be called Jacob, but Israel shall be your name. And He called his name
+# Israel."
+m.step("Gen.35.10")
+# ‹שִׁמְךָ יַעֲקֹב› the world gains: yaaqov
+m.install("yaaqov")
+# ‹וַיִּקְרָא אֶת־שְׁמוֹ יִשְׂרָאֵל› named: yaaqov := yisrael
+m.name("yaaqov", "yisrael")
+
+# -------------------------- Gen.35.11 · THE_SINGULAR_BLESSING_COMMAND ------
+# וַיֹּאמֶר לוֹ אֱלֹהִים אֲנִי אֵל שַׁדַּי פְּרֵה וּרְבֵה גּוֹי וּקְהַל
+# גּוֹיִם יִהְיֶה מִמֶּךָּ וּמְלָכִים מֵחֲלָצֶיךָ יֵצֵאוּ
+# "[EN-AID] And God said to him: I am El Shaddai. Be fruitful and multiply —
+# a nation and an assembly of nations shall be from you; and kings shall go
+# out from your loins."
+m.step("Gen.35.11")
+# ‹פְּרֵה וּרְבֵה› to-shaday speaks a demand — LET: pere-and-reve(yisrael)
+m.declare("el_shaday", "LET",
+          "pere_u_reve(yisrael)")
+
+# -------------------------- Gen.35.12 · THE_LAND_GRANT_TRIPLE --------------
+# וְאֶת־הָאָרֶץ אֲשֶׁר נָתַתִּי לְאַבְרָהָם וּלְיִצְחָק לְךָ אֶתְּנֶנָּה
+# וּלְזַרְעֲךָ אַחֲרֶיךָ אֶתֵּן אֶת־הָאָרֶץ
+# "[EN-AID] And the land that I gave to Abraham and to Isaac — to you I will
+# give it; and to your seed after you I will give the land."
+m.step("Gen.35.12")
+# ‹וְאֶת־הָאָרֶץ אֲשֶׁר נָתַתִּי› fact holds: natati-etnena-eten(the-earth,
+# to-yisrael-and-to-zaro)
+m.fact("natati_etnena_eten(ha_aretz, le_yisrael_u_le_zaro)")
+
+# -------------------------- Gen.35.13 · GOD_GOES_UP ------------------------
+# וַיַּעַל מֵעָלָיו אֱלֹהִים בַּמָּקוֹם אֲשֶׁר־דִּבֶּר אִתּוֹ
+# "[EN-AID] And God went up from him, in the place where He had spoken with
+# him."
+m.step("Gen.35.13")
+# ‹וַיַּעַל מֵעָלָיו אֱלֹהִים› fact holds: and-yaal-from-alav-God(in-the-
+# maqom)
+m.fact("va_yaal_me_alav_Elohim(ba_maqom)")
+
+# -------------------------- Gen.35.14 · THE_PILLAR_AND_THE_LIBATION --------
+# וַיַּצֵּב יַעֲקֹב מַצֵּבָה בַּמָּקוֹם אֲשֶׁר־דִּבֶּר אִתּוֹ מַצֶּבֶת אָבֶן
+# וַיַּסֵּךְ עָלֶיהָ נֶסֶךְ וַיִּצֹק עָלֶיהָ שָׁמֶן
+# "[EN-AID] And Jacob set up a pillar in the place where He had spoken with
+# him, a pillar of stone; and he poured on it a libation, and poured on it
+# oil."
+m.step("Gen.35.14")
+# ‹וַיַּצֵּב יַעֲקֹב מַצֵּבָה בַּמָּקוֹם› fact holds: and-yatzev-matzeva-
+# and-yasekh-nesekh(yaaqov, shamen)
+m.fact("va_yatzev_matzeva_va_yasekh_nesekh(yaaqov, shamen)")
+
+# -------------------------- Gen.35.15 · THE_NAME_REWRITTEN -----------------
+# וַיִּקְרָא יַעֲקֹב אֶת־שֵׁם הַמָּקוֹם אֲשֶׁר דִּבֶּר אִתּוֹ שָׁם אֱלֹהִים
+# בֵּית־אֵל
+# "[EN-AID] And Jacob called the name of the place where God had spoken with
+# him — Bethel."
+m.step("Gen.35.15")
+# ‹וַיִּקְרָא יַעֲקֹב אֶת־שֵׁם הַמָּקוֹם› named: the-maqom := bet-to
+m.name("ha_maqom", "bet_el")
+
+# -------------------------- Gen.35.16 · THE_HARD_BIRTH_BEGINS --------------
+# וַיִּסְעוּ מִבֵּית אֵל וַיְהִי־עוֹד כִּבְרַת־הָאָרֶץ לָבוֹא אֶפְרָתָה
+# וַתֵּלֶד רָחֵל וַתְּקַשׁ בְּלִדְתָּהּ
+# "[EN-AID] And they journeyed from Bethel, and there was still a stretch of
+# land to come to Efrat; and Rachel gave birth, and her birthing was hard."
+m.step("Gen.35.16")
+# ‹וַתְּקַשׁ בְּלִדְתָּהּ› fact holds: and-teqash-in-lidtah(rachel, kivrat-
+# the-earth-efrata)
+m.fact("va_teqash_be_lidtah(rachel, kivrat_ha_aretz_efrata)")
+
+# -------------------------- Gen.35.17 · THE_MIDWIFE_AND_THE_FEAR_NOT -------
+# וַיְהִי בְהַקְשֹׁתָהּ בְּלִדְתָּהּ וַתֹּאמֶר לָהּ הַמְיַלֶּדֶת
+# אַל־תִּירְאִי כִּי־גַם־זֶה לָךְ בֵּן
+# "[EN-AID] And it was, in her hard birthing, that the midwife said to her:
+# Fear not, for this one too is a son for you."
+m.step("Gen.35.17")
+# ‹אַל־תִּירְאִי› the-meyaledet speaks a demand — LET-NOT: tiri(rachel)
+m.declare("ha_meyaledet", "LET-NOT",
+          "tiri(rachel)")
+
+# -------------------------- Gen.35.18 · THE_TWO_NAMES ----------------------
+# וַיְהִי בְּצֵאת נַפְשָׁהּ כִּי מֵתָה וַתִּקְרָא שְׁמוֹ בֶּן־אוֹנִי
+# וְאָבִיו קָרָא־לוֹ בִנְיָמִין
+# "[EN-AID] And it was, as her soul went out — for she died — that she
+# called his name Ben-oni [son of my sorrow]; and his father called him
+# Binyamin [son of the right hand]."
+m.step("Gen.35.18")
+# ‹בְּצֵאת נַפְשָׁהּ כִּי› the world gains: the-ben
+m.install("ha_ben")
+# ‹וַתִּקְרָא שְׁמוֹ בֶּן־אוֹנִי› named: the-ben := ben-oni
+m.name("ha_ben", "ben_oni")
+# ‹וְאָבִיו קָרָא־לוֹ בִנְיָמִין› named: the-ben := vinyamin
+m.name("ha_ben", "vinyamin")
+
+# -------------------------- Gen.35.19 · RACHEL_DIES ------------------------
+# וַתָּמָת רָחֵל וַתִּקָּבֵר בְּדֶרֶךְ אֶפְרָתָה הִוא בֵּית לָחֶם
+# "[EN-AID] And Rachel died; and she was buried on the way to Efrat — it is
+# Bethlehem."
+m.step("Gen.35.19")
+# ‹וַתָּמָת רָחֵל› fact holds: and-tamat-and-tiqaver(rachel, in-derekh-
+# efrata-bet-lachem)
+m.fact("va_tamat_va_tiqaver(rachel, be_derekh_efrata_bet_lachem)")
+
+# -------------------------- Gen.35.20 · THE_GRAVE_PILLAR -------------------
+# וַיַּצֵּב יַעֲקֹב מַצֵּבָה עַל־קְבֻרָתָהּ הִוא מַצֶּבֶת קְבֻרַת־רָחֵל
+# עַד־הַיּוֹם
+# "[EN-AID] And Jacob set up a pillar upon her grave — it is the pillar of
+# Rachel's grave to this day."
+m.step("Gen.35.20")
+# ‹וַיַּצֵּב יַעֲקֹב מַצֵּבָה› fact holds: matzevet-qevurat-rachel(until-
+# the-day)
+m.fact("matzevet_qevurat_rachel(ad_ha_yom)")
+
+# -------------------------- Gen.35.21 · ISRAEL_MOVES -----------------------
+# וַיִּסַּע יִשְׂרָאֵל וַיֵּט אָהֳלֹה מֵהָלְאָה לְמִגְדַּל־עֵדֶר
+# "[EN-AID] And Israel journeyed, and pitched his tent beyond Migdal-eder."
+m.step("Gen.35.21")
+# ‹וַיִּסַּע יִשְׂרָאֵל› fact holds: and-yisa-yisrael(from-hala-to-migdal-
+# eder)
+m.fact("va_yisa_yisrael(me_hala_le_migdal_eder)")
+
+# -------------------------- Gen.35.22 · REUBEN_AND_THE_COUNT ---------------
+# וַיְהִי בִּשְׁכֹּן יִשְׂרָאֵל בָּאָרֶץ הַהִוא וַיֵּלֶךְ רְאוּבֵן
+# וַיִּשְׁכַּב אֶת־בִּלְהָה פִּילֶגֶשׁ אָבִיו וַיִּשְׁמַע יִשְׂרָאֵל
+# וַיִּהְיוּ בְנֵי־יַעֲקֹב שְׁנֵים עָשָׂר
+# "[EN-AID] And it was, while Israel dwelt in that land, that Reuben went
+# and lay with Bilhah, his father's concubine; and Israel heard. And the
+# sons of Jacob were twelve."
+m.step("Gen.35.22")
+# ‹וַיִּשְׁכַּב אֶת־בִּלְהָה פִּילֶגֶשׁ› fact holds: and-yishkav-reuven-and-
+# yishma-yisrael(shenem-asar)
+m.fact("va_yishkav_reuven_va_yishma_yisrael(shenem_asar)")
+
+# -------------------------- Gen.35.23 · LEAH_S_SIX -------------------------
+# בְּנֵי לֵאָה בְּכוֹר יַעֲקֹב רְאוּבֵן וְשִׁמְעוֹן וְלֵוִי וִיהוּדָה
+# וְיִשָּׂשכָר וּזְבוּלֻן
+# "[EN-AID] The sons of Leah: Jacob's firstborn Reuben, and Simeon and Levi
+# and Judah and Issachar and Zebulun."
+m.step("Gen.35.23")
+# ‹בְּנֵי לֵאָה בְּכוֹר› fact holds: bene-lea-shisha(reuven-until-zevulun)
+m.fact("bene_lea_shisha(reuven_ad_zevulun)")
+
+# -------------------------- Gen.35.24 · RACHEL_S_TWO -----------------------
+# בְּנֵי רָחֵל יוֹסֵף וּבִנְיָמִן
+# "[EN-AID] The sons of Rachel: Joseph and Binyamin."
+m.step("Gen.35.24")
+# ‹בְּנֵי רָחֵל יוֹסֵף וּבִנְיָמִן› fact holds: bene-rachel(yosef-and-
+# vinyamin)
+m.fact("bene_rachel(yosef_u_vinyamin)")
+
+# -------------------------- Gen.35.25 · BILHAH_S_TWO -----------------------
+# וּבְנֵי בִלְהָה שִׁפְחַת רָחֵל דָּן וְנַפְתָּלִי
+# "[EN-AID] And the sons of Bilhah, Rachel's maid: Dan and Naphtali."
+m.step("Gen.35.25")
+# ‹וּבְנֵי בִלְהָה שִׁפְחַת רָחֵל› fact holds: bene-vilha(dan-and-naftali)
+m.fact("bene_vilha(dan_ve_naftali)")
+
+# -------------------------- Gen.35.26 · ZILPAH_S_TWO_AND_THE_SUMMARY -------
+# וּבְנֵי זִלְפָּה שִׁפְחַת לֵאָה גָּד וְאָשֵׁר אֵלֶּה בְּנֵי יַעֲקֹב אֲשֶׁר
+# יֻלַּד־לוֹ בְּפַדַּן אֲרָם
+# "[EN-AID] And the sons of Zilpah, Leah's maid: Gad and Asher. These are
+# the sons of Jacob who were born to him in Paddan-aram."
+m.step("Gen.35.26")
+# ‹אֵלֶּה בְּנֵי יַעֲקֹב אֲשֶׁר יֻלַּד› fact holds: ele-vene-yaaqov(yulad-
+# not-in-fadan-aram)
+m.fact("ele_vene_yaaqov(yulad_lo_be_fadan_aram)")
+
+# -------------------------- Gen.35.27 · THE_RETURN_TO_THE_FATHER -----------
+# וַיָּבֹא יַעֲקֹב אֶל־יִצְחָק אָבִיו מַמְרֵא קִרְיַת הָאַרְבַּע הִוא
+# חֶבְרוֹן אֲשֶׁר־גָּר־שָׁם אַבְרָהָם וְיִצְחָק
+# "[EN-AID] And Jacob came to Isaac his father, to Mamre, Kiryat-Arba — it
+# is Hebron — where Abraham and Isaac had sojourned."
+m.step("Gen.35.27")
+# ‹וַיָּבֹא יַעֲקֹב אֶל־יִצְחָק אָבִיו› fact holds: and-yavo-to-
+# yitzchaq(mamre-qiryat-haarba-hiv-chevron)
+m.fact("va_yavo_el_yitzchaq(mamre_qiryat_haarba_hiv_chevron)")
+
+# -------------------------- Gen.35.28 · ISAAC_S_DAYS -----------------------
+# וַיִּהְיוּ יְמֵי יִצְחָק מְאַת שָׁנָה וּשְׁמֹנִים שָׁנָה
+# "[EN-AID] And the days of Isaac were a hundred years and eighty years."
+m.step("Gen.35.28")
+# ‹וַיִּהְיוּ יְמֵי יִצְחָק› fact holds: yeme-yitzchaq(meat-and-shemonim-
+# shana)
+m.fact("yeme_yitzchaq(meat_u_shemonim_shana)")
+
+# -------------------------- Gen.35.29 · THE_BROTHERS_AT_THE_GRAVE ----------
+# וַיִּגְוַע יִצְחָק וַיָּמָת וַיֵּאָסֶף אֶל־עַמָּיו זָקֵן וּשְׂבַע יָמִים
+# וַיִּקְבְּרוּ אֹתוֹ עֵשָׂו וְיַעֲקֹב בָּנָיו
+# "[EN-AID] And Isaac expired and died, and was gathered to his people, old
+# and full of days; and Esau and Jacob his sons buried him."
+m.step("Gen.35.29")
+# ‹וַיִּגְוַע יִצְחָק וַיָּמָת› fact holds: and-yigva-and-yeasef-and-
+# yiqbru(yitzchaq, esav-and-yaaqov)
+m.fact("va_yigva_va_yeasef_va_yiqbru(yitzchaq, esav_ve_yaaqov)")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == {'ha_ben', 'ha_alon', 'yaaqov', 'ha_maqom'}
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {'ha_maqom': 'bet_el', 'ha_alon': 'alon_bakhut', 'yaaqov': 'yisrael', 'ha_ben': 'vinyamin'}
+    assert m.REGISTRY["writes"] == 6
+    assert m.tests_list() == []
+    assert m.open_demands() == ['qum_ale(yaaqov, bet_el)', 'shev_sham(yaaqov, bet_el)', 'ase_sham_mizbeach(yaaqov, la_el_ha_nire)', 'hasiru(bet_yaaqov, et_elohe_ha_nekhar)', 'hitaharu(bet_yaaqov)', 'hachalifu(bet_yaaqov, simlotekhem)', 'naquma_ve_naale(bet_yaaqov, bet_el)', 'pere_u_reve(yisrael)', 'tiri(rachel)']
+    assert len(m.SPECS["log"]) == 9
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted(['va_yitnu_va_yitmon(elohe_ha_nekhar_ve_ha_nezamim, tachat_ha_ela)', 'chitat_Elohim_ve_lo_radfu(he_arim)', 'va_yavo_luzah_hiv_bet_el(yaaqov_ve_ha_am)', 'va_yera_Elohim_od_va_yevarekh(el_yaaqov)', 'natati_etnena_eten(ha_aretz, le_yisrael_u_le_zaro)', 'va_yaal_me_alav_Elohim(ba_maqom)', 'va_yatzev_matzeva_va_yasekh_nesekh(yaaqov, shamen)', 'va_teqash_be_lidtah(rachel, kivrat_ha_aretz_efrata)', 'va_tamat_va_tiqaver(rachel, be_derekh_efrata_bet_lachem)', 'matzevet_qevurat_rachel(ad_ha_yom)', 'va_yisa_yisrael(me_hala_le_migdal_eder)', 'va_yishkav_reuven_va_yishma_yisrael(shenem_asar)', 'bene_lea_shisha(reuven_ad_zevulun)', 'bene_rachel(yosef_u_vinyamin)', 'bene_vilha(dan_ve_naftali)', 'ele_vene_yaaqov(yulad_lo_be_fadan_aram)', 'va_yavo_el_yitzchaq(mamre_qiryat_haarba_hiv_chevron)', 'yeme_yitzchaq(meat_u_shemonim_shana)', 'va_yigva_va_yeasef_va_yiqbru(yitzchaq, esav_ve_yaaqov)'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 15
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: gen_59_esau_edom_kings_ledger
+###############################################################################
+
+m = Machine("gen_59_esau_edom_kings_ledger")
+
+# -------------------------- Gen.36.1 · THE_FIRST_HEADER --------------------
+# וְאֵלֶּה תֹּלְדוֹת עֵשָׂו הוּא אֱדוֹם
+# "[EN-AID] And these are the generations of Esau — he is Edom."
+m.step("Gen.36.1")
+# ‹וְאֵלֶּה תֹּלְדוֹת עֵשָׂו› fact holds: toldot-esav-that-edom(kotev-
+# rishon)
+m.fact("toldot_esav_hu_edom(kotev_rishon)")
+
+# -------------------------- Gen.36.2 · THE_WIVES_OF_CANAAN -----------------
+# עֵשָׂו לָקַח אֶת־נָשָׁיו מִבְּנוֹת כְּנָעַן אֶת־עָדָה בַּת־אֵילוֹן
+# הַחִתִּי וְאֶת־אָהֳלִיבָמָה בַּת־עֲנָה בַּת־צִבְעוֹן הַחִוִּי
+# "[EN-AID] Esau took his wives from the daughters of Canaan: Ada, daughter
+# of Elon the Hittite; and Aholivamah, daughter of Ana, daughter of Tzivon
+# the Hivite;"
+m.step("Gen.36.2")
+# ‹עֵשָׂו לָקַח אֶת־נָשָׁיו› fact holds: laqach-nashav-from-benot-
+# kenaan(esav, ada-and-aholivama)
+m.fact("laqach_nashav_mi_benot_kenaan(esav, ada_ve_aholivama)")
+
+# -------------------------- Gen.36.3 · THE_ISHMAEL_WIFE --------------------
+# וְאֶת־בָּשְׂמַת בַּת־יִשְׁמָעֵאל אֲחוֹת נְבָיוֹת
+# "[EN-AID] and Basmat, daughter of Ishmael, sister of Nevayot."
+m.step("Gen.36.3")
+# ‹וְאֶת־בָּשְׂמַת בַּת› fact holds: basmat-bat-yishmael(achot-nevayot)
+m.fact("basmat_bat_yishmael(achot_nevayot)")
+
+# -------------------------- Gen.36.4 · THE_FIRSTBORN_SONS ------------------
+# וַתֵּלֶד עָדָה לְעֵשָׂו אֶת־אֱלִיפָז וּבָשְׂמַת יָלְדָה אֶת־רְעוּאֵל
+# "[EN-AID] And Ada bore to Esau Elifaz; and Basmat bore Reuel;"
+m.step("Gen.36.4")
+# ‹וַתֵּלֶד עָדָה לְעֵשָׂו אֶת› fact holds: and-teled-ada-and-vasmat(elifaz-
+# and-reuel)
+m.fact("va_teled_ada_u_vasmat(elifaz_u_reuel)")
+
+# -------------------------- Gen.36.5 · THE_CANAAN_BORN_CLOSE ---------------
+# וְאָהֳלִיבָמָה יָלְדָה אֶת־יעיש יְעוּשׁ וְאֶת־יַעְלָם וְאֶת־קֹרַח אֵלֶּה
+# בְּנֵי עֵשָׂו אֲשֶׁר יֻלְּדוּ־לוֹ בְּאֶרֶץ כְּנָעַן
+# "[EN-AID] and Aholivamah bore Yeush and Yalam and Korach. These are the
+# sons of Esau who were born to him in the land of Canaan."
+m.step("Gen.36.5")
+# ‹וְאָהֳלִיבָמָה יָלְדָה› fact holds: ele-bene-esav(yuldu-not-in-earth-
+# kenaan)
+m.fact("ele_bene_esav(yuldu_lo_be_eretz_kenaan)")
+
+# -------------------------- Gen.36.6 · THE_WITHDRAWAL ----------------------
+# וַיִּקַּח עֵשָׂו אֶת־נָשָׁיו וְאֶת־בָּנָיו וְאֶת־בְּנֹתָיו
+# וְאֶת־כָּל־נַפְשׁוֹת בֵּיתוֹ וְאֶת־מִקְנֵהוּ וְאֶת־כָּל־בְּהֶמְתּוֹ וְאֵת
+# כָּל־קִנְיָנוֹ אֲשֶׁר רָכַשׁ בְּאֶרֶץ כְּנָעַן וַיֵּלֶךְ אֶל־אֶרֶץ
+# מִפְּנֵי יַעֲקֹב אָחִיו
+# "[EN-AID] And Esau took his wives and his sons and his daughters and all
+# the souls of his house, and his livestock and all his beasts and all his
+# property that he had acquired in the land of Canaan; and he went to a
+# land, away from before Jacob his brother."
+m.step("Gen.36.6")
+# ‹וַיֵּלֶךְ אֶל־אֶרֶץ מִפְּנֵי יַעֲקֹב› fact holds: and-yelekh-to-
+# earth(esav, from-pene-yaaqov-his-brother)
+m.fact("va_yelekh_el_eretz(esav, mi_pene_yaaqov_achiv)")
+
+# -------------------------- Gen.36.7 · THE_LAND_THAT_COULD_NOT_BEAR --------
+# כִּי־הָיָה רְכוּשָׁם רָב מִשֶּׁבֶת יַחְדָּו וְלֹא יָכְלָה אֶרֶץ
+# מְגוּרֵיהֶם לָשֵׂאת אֹתָם מִפְּנֵי מִקְנֵיהֶם
+# "[EN-AID] For their property was too great for dwelling together; and the
+# land of their sojournings could not bear them, because of their
+# livestock."
+m.step("Gen.36.7")
+# ‹כִּי־הָיָה רְכוּשָׁם רָב› fact holds: not-yakhla-earth-megurehem-to-set-
+# otam(rekhusham-rav)
+m.fact("lo_yakhla_eretz_megurehem_la_set_otam(rekhusham_rav)")
+
+# -------------------------- Gen.36.8 · SEIR_SETTLED ------------------------
+# וַיֵּשֶׁב עֵשָׂו בְּהַר שֵׂעִיר עֵשָׂו הוּא אֱדוֹם
+# "[EN-AID] And Esau dwelt in the hill-country of Seir — Esau, he is Edom."
+m.step("Gen.36.8")
+# ‹וַיֵּשֶׁב עֵשָׂו בְּהַר שֵׂעִיר› fact holds: and-yeshev-esav-in-har-
+# seir(that-edom)
+m.fact("va_yeshev_esav_be_har_seir(hu_edom)")
+
+# -------------------------- Gen.36.9 · THE_SECOND_HEADER -------------------
+# וְאֵלֶּה תֹּלְדוֹת עֵשָׂו אֲבִי אֱדוֹם בְּהַר שֵׂעִיר
+# "[EN-AID] And these are the generations of Esau, father of Edom, in the
+# hill-country of Seir."
+m.step("Gen.36.9")
+# ‹וְאֵלֶּה תֹּלְדוֹת עֵשָׂו אֲבִי› fact holds: toldot-esav-avi-edom(kotev-
+# sheni, in-har-seir)
+m.fact("toldot_esav_avi_edom(kotev_sheni, be_har_seir)")
+
+# -------------------------- Gen.36.10 · THE_SONS_NAMED ---------------------
+# אֵלֶּה שְׁמוֹת בְּנֵי־עֵשָׂו אֱלִיפַז בֶּן־עָדָה אֵשֶׁת עֵשָׂו רְעוּאֵל
+# בֶּן־בָּשְׂמַת אֵשֶׁת עֵשָׂו
+# "[EN-AID] These are the names of the sons of Esau: Elifaz son of Ada,
+# Esau's wife; Reuel son of Basmat, Esau's wife."
+m.step("Gen.36.10")
+# ‹אֵלֶּה שְׁמוֹת בְּנֵי־עֵשָׂו› fact holds: ele-names-bene-esav(elifaz-and-
+# reuel)
+m.fact("ele_shemot_bene_esav(elifaz_u_reuel)")
+
+# -------------------------- Gen.36.11 · ELIFAZ_S_FIVE ----------------------
+# וַיִּהְיוּ בְּנֵי אֱלִיפָז תֵּימָן אוֹמָר צְפוֹ וְגַעְתָּם וּקְנַז
+# "[EN-AID] And the sons of Elifaz were: Teman, Omar, Tzefo, and Gatam, and
+# Kenaz."
+m.step("Gen.36.11")
+# ‹וַיִּהְיוּ בְּנֵי אֱלִיפָז› fact holds: bene-elifaz(teman-until-qenaz)
+m.fact("bene_elifaz(teman_ad_qenaz)")
+
+# -------------------------- Gen.36.12 · AMALEK_BORN ------------------------
+# וְתִמְנַע הָיְתָה פִילֶגֶשׁ לֶאֱלִיפַז בֶּן־עֵשָׂו וַתֵּלֶד לֶאֱלִיפַז
+# אֶת־עֲמָלֵק אֵלֶּה בְּנֵי עָדָה אֵשֶׁת עֵשָׂו
+# "[EN-AID] And Timna was concubine to Elifaz, son of Esau, and she bore to
+# Elifaz Amalek. These are the sons of Ada, Esau's wife."
+m.step("Gen.36.12")
+# ‹וְתִמְנַע הָיְתָה פִילֶגֶשׁ לֶאֱלִיפַז› fact holds: and-teled-timna-to-
+# elifaz(amaleq)
+m.fact("va_teled_timna_le_elifaz(et_amaleq)")
+
+# -------------------------- Gen.36.13 · REUEL_S_FOUR -----------------------
+# וְאֵלֶּה בְּנֵי רְעוּאֵל נַחַת וָזֶרַח שַׁמָּה וּמִזָּה אֵלֶּה הָיוּ
+# בְּנֵי בָשְׂמַת אֵשֶׁת עֵשָׂו
+# "[EN-AID] And these are the sons of Reuel: Nachat and Zerach, Shama and
+# Miza. These were the sons of Basmat, Esau's wife."
+m.step("Gen.36.13")
+# ‹וְאֵלֶּה בְּנֵי רְעוּאֵל› fact holds: bene-reuel(nachat-until-miza)
+m.fact("bene_reuel(nachat_ad_miza)")
+
+# -------------------------- Gen.36.14 · AHOLIVAMAH_S_THREE -----------------
+# וְאֵלֶּה הָיוּ בְּנֵי אָהֳלִיבָמָה בַת־עֲנָה בַּת־צִבְעוֹן אֵשֶׁת עֵשָׂו
+# וַתֵּלֶד לְעֵשָׂו אֶת־יעיש יְעוּשׁ וְאֶת־יַעְלָם וְאֶת־קֹרַח
+# "[EN-AID] And these were the sons of Aholivamah, daughter of Ana, daughter
+# of Tzivon, Esau's wife: she bore to Esau Yeush and Yalam and Korach."
+m.step("Gen.36.14")
+# ‹וְאֵלֶּה הָיוּ בְּנֵי אָהֳלִיבָמָה› fact holds: bene-aholivama(yeush-
+# yalam-qorach)
+m.fact("bene_aholivama(yeush_yalam_qorach)")
+
+# -------------------------- Gen.36.15 · THE_CHIEF_TITLE_MINTED -------------
+# אֵלֶּה אַלּוּפֵי בְנֵי־עֵשָׂו בְּנֵי אֱלִיפַז בְּכוֹר עֵשָׂו אַלּוּף
+# תֵּימָן אַלּוּף אוֹמָר אַלּוּף צְפוֹ אַלּוּף קְנַז
+# "[EN-AID] These are the chiefs of the sons of Esau. The sons of Elifaz,
+# Esau's firstborn: chief Teman, chief Omar, chief Tzefo, chief Kenaz,"
+m.step("Gen.36.15")
+# ‹אֵלֶּה אַלּוּפֵי בְנֵי› fact holds: ele-alufe-vene-esav(alufe-elifaz)
+m.fact("ele_alufe_vene_esav(alufe_elifaz)")
+
+# -------------------------- Gen.36.16 · ELIFAZ_S_CHIEFS_CLOSE --------------
+# אַלּוּף־קֹרַח אַלּוּף גַּעְתָּם אַלּוּף עֲמָלֵק אֵלֶּה אַלּוּפֵי אֱלִיפַז
+# בְּאֶרֶץ אֱדוֹם אֵלֶּה בְּנֵי עָדָה
+# "[EN-AID] chief Korach, chief Gatam, chief Amalek. These are the chiefs of
+# Elifaz in the land of Edom; these are the sons of Ada."
+m.step("Gen.36.16")
+# ‹אַלּוּף־קֹרַח אַלּוּף› fact holds: alufe-elifaz-in-earth-edom(bene-ada)
+m.fact("alufe_elifaz_be_eretz_edom(bene_ada)")
+
+# -------------------------- Gen.36.17 · REUEL_S_CHIEFS ---------------------
+# וְאֵלֶּה בְּנֵי רְעוּאֵל בֶּן־עֵשָׂו אַלּוּף נַחַת אַלּוּף זֶרַח אַלּוּף
+# שַׁמָּה אַלּוּף מִזָּה אֵלֶּה אַלּוּפֵי רְעוּאֵל בְּאֶרֶץ אֱדוֹם אֵלֶּה
+# בְּנֵי בָשְׂמַת אֵשֶׁת עֵשָׂו
+# "[EN-AID] And these are the sons of Reuel, Esau's son: chief Nachat, chief
+# Zerach, chief Shama, chief Miza. These are the chiefs of Reuel in the land
+# of Edom; these are the sons of Basmat, Esau's wife."
+m.step("Gen.36.17")
+# ‹וְאֵלֶּה בְּנֵי רְעוּאֵל בֶּן־עֵשָׂו אַלּוּף› fact holds: alufe-reuel-in-
+# earth-edom(bene-vasmat)
+m.fact("alufe_reuel_be_eretz_edom(bene_vasmat)")
+
+# -------------------------- Gen.36.18 · AHOLIVAMAH_S_CHIEFS ----------------
+# וְאֵלֶּה בְּנֵי אָהֳלִיבָמָה אֵשֶׁת עֵשָׂו אַלּוּף יְעוּשׁ אַלּוּף יַעְלָם
+# אַלּוּף קֹרַח אֵלֶּה אַלּוּפֵי אָהֳלִיבָמָה בַּת־עֲנָה אֵשֶׁת עֵשָׂו
+# "[EN-AID] And these are the sons of Aholivamah, Esau's wife: chief Yeush,
+# chief Yalam, chief Korach. These are the chiefs of Aholivamah, daughter of
+# Ana, Esau's wife."
+m.step("Gen.36.18")
+# ‹וְאֵלֶּה בְּנֵי אָהֳלִיבָמָה אֵשֶׁת עֵשָׂו› fact holds: alufe-
+# aholivama(yeush-yalam-qorach)
+m.fact("alufe_aholivama(yeush_yalam_qorach)")
+
+# -------------------------- Gen.36.19 · THE_FIRST_LEDGER_SEALS -------------
+# אֵלֶּה בְנֵי־עֵשָׂו וְאֵלֶּה אַלּוּפֵיהֶם הוּא אֱדוֹם
+# "[EN-AID] These are the sons of Esau, and these their chiefs — he is
+# Edom."
+m.step("Gen.36.19")
+# ‹אֵלֶּה בְנֵי› fact holds: ele-vene-esav-and-alufehem(that-edom)
+m.fact("ele_vene_esav_ve_alufehem(hu_edom)")
+
+# -------------------------- Gen.36.20 · THE_HORITES_ENTER ------------------
+# אֵלֶּה בְנֵי־שֵׂעִיר הַחֹרִי יֹשְׁבֵי הָאָרֶץ לוֹטָן וְשׁוֹבָל וְצִבְעוֹן
+# וַעֲנָה
+# "[EN-AID] These are the sons of Seir the Horite, the dwellers of the land:
+# Lotan and Shoval and Tzivon and Ana,"
+m.step("Gen.36.20")
+# ‹אֵלֶּה בְנֵי־שֵׂעִיר הַחֹרִי› fact holds: bene-seir-the-chori(yoshve-the-
+# earth)
+m.fact("bene_seir_ha_chori(yoshve_ha_aretz)")
+
+# -------------------------- Gen.36.21 · THE_HORITE_SEVEN -------------------
+# וְדִשׁוֹן וְאֵצֶר וְדִישָׁן אֵלֶּה אַלּוּפֵי הַחֹרִי בְּנֵי שֵׂעִיר
+# בְּאֶרֶץ אֱדוֹם
+# "[EN-AID] and Dishon and Etzer and Dishan. These are the chiefs of the
+# Horites, the sons of Seir, in the land of Edom."
+m.step("Gen.36.21")
+# ‹וְדִשׁוֹן וְאֵצֶר וְדִישָׁן› fact holds: alufe-the-chori(bene-seir)
+m.fact("alufe_ha_chori(bene_seir)")
+
+# -------------------------- Gen.36.22 · TIMNA_THE_SISTER -------------------
+# וַיִּהְיוּ בְנֵי־לוֹטָן חֹרִי וְהֵימָם וַאֲחוֹת לוֹטָן תִּמְנָע
+# "[EN-AID] And the sons of Lotan were Chori and Hemam; and Lotan's sister
+# was Timna."
+m.step("Gen.36.22")
+# ‹וַאֲחוֹת לוֹטָן תִּמְנָע› fact holds: and-achot-lotan(timna)
+m.fact("va_achot_lotan(timna)")
+
+# -------------------------- Gen.36.23 · SHOVAL_S_FIVE ----------------------
+# וְאֵלֶּה בְּנֵי שׁוֹבָל עַלְוָן וּמָנַחַת וְעֵיבָל שְׁפוֹ וְאוֹנָם
+# "[EN-AID] And these are the sons of Shoval: Alvan and Manachat and Eval,
+# Shefo and Onam."
+m.step("Gen.36.23")
+# ‹וְאֵלֶּה בְּנֵי שׁוֹבָל› fact holds: bene-shoval(alvan-until-onam)
+m.fact("bene_shoval(alvan_ad_onam)")
+
+# -------------------------- Gen.36.24 · THE_YEMIM_FINDER -------------------
+# וְאֵלֶּה בְנֵי־צִבְעוֹן וְאַיָּה וַעֲנָה הוּא עֲנָה אֲשֶׁר מָצָא
+# אֶת־הַיֵּמִם בַּמִּדְבָּר בִּרְעֹתוֹ אֶת־הַחֲמֹרִים לְצִבְעוֹן אָבִיו
+# "[EN-AID] And these are the sons of Tzivon: Aya and Ana — he is the Ana
+# who found the yemim in the wilderness, while pasturing the donkeys for
+# Tzivon his father."
+m.step("Gen.36.24")
+# ‹הוּא עֲנָה אֲשֶׁר מָצָא› fact holds: that-ana-which-matza-the-yemim(in-
+# the-midbar)
+m.fact("hu_ana_asher_matza_et_ha_yemim(ba_midbar)")
+
+# -------------------------- Gen.36.25 · ANA_S_TWO --------------------------
+# וְאֵלֶּה בְנֵי־עֲנָה דִּשֹׁן וְאָהֳלִיבָמָה בַּת־עֲנָה
+# "[EN-AID] And these are the sons of Ana: Dishon; and Aholivamah, daughter
+# of Ana."
+m.step("Gen.36.25")
+# ‹וְאֵלֶּה בְנֵי־עֲנָה› fact holds: bene-ana(dishon-and-aholivama)
+m.fact("bene_ana(dishon_ve_aholivama)")
+
+# -------------------------- Gen.36.26 · DISHAN_S_FOUR ----------------------
+# וְאֵלֶּה בְּנֵי דִישָׁן חֶמְדָּן וְאֶשְׁבָּן וְיִתְרָן וּכְרָן
+# "[EN-AID] And these are the sons of Dishan: Chemdan and Eshban and Yitran
+# and Cheran."
+m.step("Gen.36.26")
+# ‹וְאֵלֶּה בְּנֵי דִישָׁן› fact holds: bene-dishan-rishon(chemdan-until-
+# kheran)
+m.fact("bene_dishan_rishon(chemdan_ad_kheran)")
+
+# -------------------------- Gen.36.27 · ETZER_S_THREE ----------------------
+# אֵלֶּה בְּנֵי־אֵצֶר בִּלְהָן וְזַעֲוָן וַעֲקָן
+# "[EN-AID] These are the sons of Etzer: Bilhan and Zaavan and Akan."
+m.step("Gen.36.27")
+# ‹אֵלֶּה בְּנֵי־אֵצֶר› fact holds: bene-etzer(bilhan-zaavan-aqan)
+m.fact("bene_etzer(bilhan_zaavan_aqan)")
+
+# -------------------------- Gen.36.28 · DISHAN_S_TWO -----------------------
+# אֵלֶּה בְנֵי־דִישָׁן עוּץ וַאֲרָן
+# "[EN-AID] These are the sons of Dishan: Utz and Aran."
+m.step("Gen.36.28")
+# ‹אֵלֶּה בְנֵי־דִישָׁן› fact holds: bene-dishan(utz-and-aran)
+m.fact("bene_dishan(utz_va_aran)")
+
+# -------------------------- Gen.36.29 · THE_HORITE_CHIEFS ------------------
+# אֵלֶּה אַלּוּפֵי הַחֹרִי אַלּוּף לוֹטָן אַלּוּף שׁוֹבָל אַלּוּף צִבְעוֹן
+# אַלּוּף עֲנָה
+# "[EN-AID] These are the chiefs of the Horites: chief Lotan, chief Shoval,
+# chief Tzivon, chief Ana,"
+m.step("Gen.36.29")
+# ‹אֵלֶּה אַלּוּפֵי הַחֹרִי› fact holds: alufe-the-chori-rishon(lotan-until-
+# ana)
+m.fact("alufe_ha_chori_rishon(lotan_ad_ana)")
+
+# -------------------------- Gen.36.30 · THE_HORITE_LEDGER_SEALS ------------
+# אַלּוּף דִּשֹׁן אַלּוּף אֵצֶר אַלּוּף דִּישָׁן אֵלֶּה אַלּוּפֵי הַחֹרִי
+# לְאַלֻּפֵיהֶם בְּאֶרֶץ שֵׂעִיר
+# "[EN-AID] chief Dishon, chief Etzer, chief Dishan. These are the chiefs of
+# the Horites, by their chiefdoms, in the land of Seir."
+m.step("Gen.36.30")
+# ‹אַלּוּף דִּשֹׁן› fact holds: alufe-the-chori-to-alufehem(in-earth-seir)
+m.fact("alufe_ha_chori_le_alufehem(be_eretz_seir)")
+
+# -------------------------- Gen.36.31 · THE_KINGS_BEFORE_THE_KINGS ---------
+# וְאֵלֶּה הַמְּלָכִים אֲשֶׁר מָלְכוּ בְּאֶרֶץ אֱדוֹם לִפְנֵי מְלָךְ־מֶלֶךְ
+# לִבְנֵי יִשְׂרָאֵל
+# "[EN-AID] And these are the kings who reigned in the land of Edom, before
+# a king reigned for the sons of Israel."
+m.step("Gen.36.31")
+# ‹וְאֵלֶּה הַמְּלָכִים אֲשֶׁר מָלְכוּ בְּאֶרֶץ אֱדוֹם› fact holds: the-
+# melakhim-which-malkhu-in-edom(to-me-fene-melakh-melekh-to-me-vene-yisrael)
+m.fact("ha_melakhim_asher_malkhu_be_edom(li_fene_melakh_melekh_li_vene_yisrael)")
+
+# -------------------------- Gen.36.32 · THE_FIRST_KING ---------------------
+# וַיִּמְלֹךְ בֶּאֱדוֹם בֶּלַע בֶּן־בְּעוֹר וְשֵׁם עִירוֹ דִּנְהָבָה
+# "[EN-AID] And Bela son of Beor reigned in Edom; and the name of his city
+# was Dinhava."
+m.step("Gen.36.32")
+# ‹וַיִּמְלֹךְ בֶּאֱדוֹם בֶּלַע בֶּן› fact holds: and-yimlokh-bela-ben-
+# beor(ir-dinhava)
+m.fact("va_yimlokh_bela_ben_beor(ir_dinhava)")
+
+# -------------------------- Gen.36.33 · THE_CHAIN_BEGINS -------------------
+# וַיָּמָת בָּלַע וַיִּמְלֹךְ תַּחְתָּיו יוֹבָב בֶּן־זֶרַח מִבָּצְרָה
+# "[EN-AID] And Bela died; and Yovav son of Zerach, from Botzra, reigned in
+# his place."
+m.step("Gen.36.33")
+# ‹וַיָּמָת בָּלַע› fact holds: and-yamat-bela-and-yimlokh(yovav-from-
+# batzra)
+m.fact("va_yamat_bela_va_yimlokh(yovav_mi_batzra)")
+
+# -------------------------- Gen.36.34 · THE_THIRD_KING ---------------------
+# וַיָּמָת יוֹבָב וַיִּמְלֹךְ תַּחְתָּיו חֻשָׁם מֵאֶרֶץ הַתֵּימָנִי
+# "[EN-AID] And Yovav died; and Chusham, from the land of the Temanite,
+# reigned in his place."
+m.step("Gen.36.34")
+# ‹וַיָּמָת יוֹבָב› fact holds: and-yamat-yovav-and-yimlokh(chusham-the-
+# temani)
+m.fact("va_yamat_yovav_va_yimlokh(chusham_ha_temani)")
+
+# -------------------------- Gen.36.35 · THE_KING_WHO_STRUCK_MIDIAN ---------
+# וַיָּמָת חֻשָׁם וַיִּמְלֹךְ תַּחְתָּיו הֲדַד בֶּן־בְּדַד הַמַּכֶּה
+# אֶת־מִדְיָן בִּשְׂדֵה מוֹאָב וְשֵׁם עִירוֹ עֲוִית
+# "[EN-AID] And Chusham died; and Hadad son of Bedad — who struck Midian in
+# the field of Moab — reigned in his place; and the name of his city was
+# Avit."
+m.step("Gen.36.35")
+# ‹הַמַּכֶּה אֶת־מִדְיָן בִּשְׂדֵה› fact holds: and-yimlokh-hadad(the-make-
+# midyan-bi-sede-moav)
+m.fact("va_yimlokh_hadad(ha_make_et_midyan_bi_sede_moav)")
+
+# -------------------------- Gen.36.36 · THE_FIFTH_KING ---------------------
+# וַיָּמָת הֲדָד וַיִּמְלֹךְ תַּחְתָּיו שַׂמְלָה מִמַּשְׂרֵקָה
+# "[EN-AID] And Hadad died; and Samla, from Masreka, reigned in his place."
+m.step("Gen.36.36")
+# ‹וַיָּמָת הֲדָד› fact holds: and-yamat-hadad-and-yimlokh(samla-from-
+# masreqa)
+m.fact("va_yamat_hadad_va_yimlokh(samla_mi_masreqa)")
+
+# -------------------------- Gen.36.37 · THE_KING_FROM_THE_WIDE_PLACES ------
+# וַיָּמָת שַׂמְלָה וַיִּמְלֹךְ תַּחְתָּיו שָׁאוּל מֵרְחֹבוֹת הַנָּהָר
+# "[EN-AID] And Samla died; and Shaul, from Rechovot-of-the-river, reigned
+# in his place."
+m.step("Gen.36.37")
+# ‹וַיִּמְלֹךְ תַּחְתָּיו שָׁאוּל מֵרְחֹבוֹת› fact holds: and-yimlokh-
+# shaul(from-rechovot-the-river)
+m.fact("va_yimlokh_shaul(me_rechovot_ha_nahar)")
+
+# -------------------------- Gen.36.38 · THE_SEVENTH_KING -------------------
+# וַיָּמָת שָׁאוּל וַיִּמְלֹךְ תַּחְתָּיו בַּעַל חָנָן בֶּן־עַכְבּוֹר
+# "[EN-AID] And Shaul died; and Baal-Chanan son of Akhbor reigned in his
+# place."
+m.step("Gen.36.38")
+# ‹וַיָּמָת שָׁאוּל› fact holds: and-yamat-shaul-and-yimlokh(baal-chanan-
+# ben-akhbor)
+m.fact("va_yamat_shaul_va_yimlokh(baal_chanan_ben_akhbor)")
+
+# -------------------------- Gen.36.39 · THE_LAST_KING_AND_THE_QUEEN_LINE ---
+# וַיָּמָת בַּעַל חָנָן בֶּן־עַכְבּוֹר וַיִּמְלֹךְ תַּחְתָּיו הֲדַר וְשֵׁם
+# עִירוֹ פָּעוּ וְשֵׁם אִשְׁתּוֹ מְהֵיטַבְאֵל בַּת־מַטְרֵד בַּת מֵי זָהָב
+# "[EN-AID] And Baal-Chanan son of Akhbor died; and Hadar reigned in his
+# place; and the name of his city was Pau; and his wife's name was
+# Mehetavel, daughter of Matred, daughter of Me-zahav."
+m.step("Gen.36.39")
+# ‹וְשֵׁם אִשְׁתּוֹ מְהֵיטַבְאֵל בַּת־מַטְרֵד בַּת מֵי זָהָב› fact holds:
+# and-yimlokh-hadar(his-wife-mehetavel-bat-from-gold)
+m.fact("va_yimlokh_hadar(ishto_mehetavel_bat_me_zahav)")
+
+# -------------------------- Gen.36.40 · THE_CLOSING_LIST_OPENS -------------
+# וְאֵלֶּה שְׁמוֹת אַלּוּפֵי עֵשָׂו לְמִשְׁפְּחֹתָם לִמְקֹמֹתָם בִּשְׁמֹתָם
+# אַלּוּף תִּמְנָע אַלּוּף עַלְוָה אַלּוּף יְתֵת
+# "[EN-AID] And these are the names of the chiefs of Esau, by their
+# families, by their places, by their names: chief Timna, chief Alva, chief
+# Yetet,"
+m.step("Gen.36.40")
+# ‹וְאֵלֶּה שְׁמוֹת אַלּוּפֵי עֵשָׂו לְמִשְׁפְּחֹתָם לִמְקֹמֹתָם› fact
+# holds: alufe-esav-to-mishpechotam(to-me-meqomotam-bi-shemotam)
+m.fact("alufe_esav_le_mishpechotam(li_meqomotam_bi_shemotam)")
+
+# -------------------------- Gen.36.41 · THE_LIST_RUNS ----------------------
+# אַלּוּף אָהֳלִיבָמָה אַלּוּף אֵלָה אַלּוּף פִּינֹן
+# "[EN-AID] chief Aholivamah, chief Ela, chief Pinon,"
+m.step("Gen.36.41")
+# ‹אַלּוּף אָהֳלִיבָמָה אַלּוּף אֵלָה› fact holds: aluf-aholivama-ela-
+# pinon(reshima)
+m.fact("aluf_aholivama_ela_pinon(reshima)")
+
+# -------------------------- Gen.36.42 · THE_LIST_NEARS_ITS_END -------------
+# אַלּוּף קְנַז אַלּוּף תֵּימָן אַלּוּף מִבְצָר
+# "[EN-AID] chief Kenaz, chief Teman, chief Mivtzar,"
+m.step("Gen.36.42")
+# ‹אַלּוּף קְנַז אַלּוּף תֵּימָן› fact holds: aluf-qenaz-teman-
+# mivtzar(reshima)
+m.fact("aluf_qenaz_teman_mivtzar(reshima)")
+
+# -------------------------- Gen.36.43 · THE_BRACKET_CLOSES -----------------
+# אַלּוּף מַגְדִּיאֵל אַלּוּף עִירָם אֵלֶּה אַלּוּפֵי אֱדוֹם לְמֹשְׁבֹתָם
+# בְּאֶרֶץ אֲחֻזָּתָם הוּא עֵשָׂו אֲבִי אֱדוֹם
+# "[EN-AID] chief Magdiel, chief Iram. These are the chiefs of Edom, by
+# their dwellings, in the land of their holding — he is Esau, father of
+# Edom."
+m.step("Gen.36.43")
+# ‹אֵלֶּה אַלּוּפֵי אֱדוֹם לְמֹשְׁבֹתָם בְּאֶרֶץ אֲחֻזָּתָם› fact holds:
+# ele-alufe-edom-in-earth-achuzatam(that-esav-avi-edom)
+m.fact("ele_alufe_edom_be_eretz_achuzatam(hu_esav_avi_edom)")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted(['toldot_esav_hu_edom(kotev_rishon)', 'laqach_nashav_mi_benot_kenaan(esav, ada_ve_aholivama)', 'basmat_bat_yishmael(achot_nevayot)', 'va_teled_ada_u_vasmat(elifaz_u_reuel)', 'ele_bene_esav(yuldu_lo_be_eretz_kenaan)', 'va_yelekh_el_eretz(esav, mi_pene_yaaqov_achiv)', 'lo_yakhla_eretz_megurehem_la_set_otam(rekhusham_rav)', 'va_yeshev_esav_be_har_seir(hu_edom)', 'toldot_esav_avi_edom(kotev_sheni, be_har_seir)', 'ele_shemot_bene_esav(elifaz_u_reuel)', 'bene_elifaz(teman_ad_qenaz)', 'va_teled_timna_le_elifaz(et_amaleq)', 'bene_reuel(nachat_ad_miza)', 'bene_aholivama(yeush_yalam_qorach)', 'ele_alufe_vene_esav(alufe_elifaz)', 'alufe_elifaz_be_eretz_edom(bene_ada)', 'alufe_reuel_be_eretz_edom(bene_vasmat)', 'alufe_aholivama(yeush_yalam_qorach)', 'ele_vene_esav_ve_alufehem(hu_edom)', 'bene_seir_ha_chori(yoshve_ha_aretz)', 'alufe_ha_chori(bene_seir)', 'va_achot_lotan(timna)', 'bene_shoval(alvan_ad_onam)', 'hu_ana_asher_matza_et_ha_yemim(ba_midbar)', 'bene_ana(dishon_ve_aholivama)', 'bene_dishan_rishon(chemdan_ad_kheran)', 'bene_etzer(bilhan_zaavan_aqan)', 'bene_dishan(utz_va_aran)', 'alufe_ha_chori_rishon(lotan_ad_ana)', 'alufe_ha_chori_le_alufehem(be_eretz_seir)', 'ha_melakhim_asher_malkhu_be_edom(li_fene_melakh_melekh_li_vene_yisrael)', 'va_yimlokh_bela_ben_beor(ir_dinhava)', 'va_yamat_bela_va_yimlokh(yovav_mi_batzra)', 'va_yamat_yovav_va_yimlokh(chusham_ha_temani)', 'va_yimlokh_hadad(ha_make_et_midyan_bi_sede_moav)', 'va_yamat_hadad_va_yimlokh(samla_mi_masreqa)', 'va_yimlokh_shaul(me_rechovot_ha_nahar)', 'va_yamat_shaul_va_yimlokh(baal_chanan_ben_akhbor)', 'va_yimlokh_hadar(ishto_mehetavel_bat_me_zahav)', 'alufe_esav_le_mishpechotam(li_meqomotam_bi_shemotam)', 'aluf_aholivama_ela_pinon(reshima)', 'aluf_qenaz_teman_mivtzar(reshima)', 'ele_alufe_edom_be_eretz_achuzatam(hu_esav_avi_edom)'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 0
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
 
 

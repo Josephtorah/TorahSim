@@ -112,6 +112,54 @@ GLOBAL_SUBS = {
     "le-negde-kha": "le-negdekha", "u-defaqu-m": "u-defaqum",
     "le-iti-y": "le-iti", "avd-o": "avdo",
     "u-le-miqne-hu": "u-le-miqnehu", "be-vo-o": "be-voo",
+    # gen_57 span (34:1-31), appended 2026-08-07 — all unambiguous.
+    # NOTE: "li-fene-hem" and "ir-o" are NOT here — both appear raw inside
+    # frozen gen_56 / gen_54 files (substring scan); gen_57 polishes them
+    # via module EXTRA_SUBS, same class as the ahol-o carve-out above.
+    # The et-* object/with pronouns (et-o/et-m/et-nu/et-khem/et-y) stay
+    # module-local too: object-marker vs with-preposition is context-
+    # dependent (oto/ito class — see header).
+    "nafsh-o": "nafsho", "vit-o": "vito", "u-vanay-v": "u-vanav",
+    "va-yeane-ha": "va-yeaneha", "be-vit-khem": "be-vitkhem",
+    "benote-khem": "benotekhem", "benote-nu": "benotenu",
+    "la-khem": "lakhem", "la-hem": "lahem", "li-fene-khem": "li-fenekhem",
+    "u-secharu-ha": "u-secharuha", "ba-ה": "bah", "avi-ה": "aviha",
+    "ache-ha": "acheha", "be-ene-khem": "be-enekhem",
+    "achota-m": "achotam", "achote-nu": "achotenu",
+    "khamo-nu": "khamonu", "ele-nu": "elenu", "bite-nu": "bitenu",
+    "divre-hem": "divrehem", "ira-m": "iram", "benota-m": "benotam",
+    "miqne-hem": "miqnehem", "ve-qinyana-m": "ve-qinyanam",
+    "behemta-m": "behemtam", "bi-heota-m": "bi-heotam",
+    "charb-o": "charbo", "tzona-m": "tzonam", "beqara-m": "beqaram",
+    "chamore-hem": "chamorehem", "chela-m": "chelam", "tapa-m": "tapam",
+    "neshe-hem": "neshehem", "le-havishe-ni": "le-havisheni",
+    "ve-hiku-ni": "ve-hikuni", "u-veti-y": "u-veti",
+    "boa-m": "boam", "ke-shama-m": "ke-shamam",
+    # gen_58 span (35:1-29), appended 2026-08-07 — all unambiguous.
+    # NOTE: "et-o" is NOT here and stays RAW in gen_58 — the span mixes
+    # object-marker et-o (oto: 35:9,29) with with-preposition et-o
+    # (ito: 35:13,14,15); one key cannot carry both (im-o/bi-y class).
+    # "aholo-ה" (his-tent spelled with final he, 9:21/35:21) is distinct
+    # from frozen gen_54's raw "ahol-o" (see NOTE above).
+    "be-varcha-kha": "be-varchakha", "be-varch-o": "be-varcho",
+    "be-tokh-khem": "be-tokhkhem", "tzarati-y": "tzarati",
+    "be-yada-m": "be-yadam", "be-azne-hem": "be-aznehem",
+    "sevivote-hem": "sevivotehem", "luza-ה": "luzah",
+    "mime-ka": "mimeka", "me-chalatze-kha": "me-chalatzekha",
+    "etne-na": "etnena", "u-le-zara-kha": "u-le-zarakha",
+    "achare-kha": "acharekha", "me-alay-v": "me-alav",
+    "ale-ha": "aleha", "be-lidta-ה": "be-lidtah",
+    "ve-haqshota-ה": "ve-haqshotah", "nafsha-ה": "nafshah",
+    "amay-v": "amav", "qevurata-ה": "qevuratah",
+    "aholo-ה": "aholo", "bet-o": "beto",
+    # gen_59 span (36:1-43), appended 2026-08-07 — all unambiguous.
+    "benotay-v": "benotav", "behemt-o": "behemto",
+    "rekhusha-m": "rekhusham", "megure-hem": "megurehem",
+    "tachtay-v": "tachtav", "isht-o": "ishto",
+    "alufe-hem": "alufehem", "le-mishpchota-m": "le-mishpchotam",
+    "li-meqomota-m": "li-meqomotam", "bi-shemota-m": "bi-shemotam",
+    "le-moshvota-m": "le-moshvotam", "achuzata-m": "achuzatam",
+    "bi-reot-o": "bi-reoto",
 }
 # NOTE (2026-08-07, filed with the maqqef observation): frozen gen_51
 # keeps "im-o" raw and frozen gen_52 keeps "bi-y" raw where later units
