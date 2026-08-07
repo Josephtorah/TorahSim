@@ -1,4 +1,4 @@
-# Resume prompt — SOLO ERA · 49 frozen · gen_47+gen_48 COMMITTED+PUSHED · 2026-08-06
+# Resume prompt — SOLO ERA · 50 frozen · gen_49 FROZEN (uncommitted) · 2026-08-07
 
 COMMITS (owner word given, pushed to main): b9b9fa7 gen_47 freeze ·
 c88b200 gen_48 freeze (+ ALL_UNITS/index/solo-era doc) · 8a9a1b0 webapp
@@ -73,16 +73,34 @@ all amended, re-review PASS, then frozen. Lesson: even with DB-checks at
 write time, career-PROSE can drift; the adversarial reviewer is
 load-bearing. Keep it forever.
 
+## gen_49 FROZEN (2026-08-07, owner's next-block word)
+`gen_49_well_stone_rachel_arrival` · Gen 29:1–14 · 14 steps · 14
+scenarios GREEN · regression 50/50 · ALL_UNITS 50/50 self-proof ·
+UNIT_INDEX 50 · py/html(UNDATED page per rule)/index/watchlist done.
+Corpus: **Gen 1:1–29:14 gapless + lev_13.** Shape: THREE volitives all
+in 29:7 → ONE compound LET(hashqu_lekhu_reu(ha_roim)); REFUSED 29:8
+(stone grounds, no pop); DEMANDER PERFORMS 29:10 (mismatch family 3rd
+variation); ends depth 1 OPEN; REGISTRY 0; TESTS 0. Headline seams
+verified: crouch 7257 tok1=4:7 sin-at-door → tok2 flocks; pasture 7462
+tok1=4:2 Abel → tok3 Rachel first named shepherdess; Haran 2771 CLOSES
+7/7 at arrival; kiss toks 1-4 deception→love→welcome; run toks 5-8
+aunt/Laban → niece/Laban; recount tok4=24:66 → tok5 type-scene repeat;
+dwell toks 39→40 cross-wall landing (27:44 limb content); bone+flesh =
+2:23 only prior CONJOINED phrase (17:23 fenced — reviewer-forced
+qualifier, exhaustively proven). Review history: FAIL once on that
+absolute → amended → PASS zero discrepancies.
+
 ## NEXT
-1. **Owner commit word** for gen_47 + gen_48 freezes (everything on disk,
-   nothing committed).
-2. **gen_49 = 29:1–14 suggested span** (well arrival: stone-on-mouth ×3,
-   Rachel, Laban's run-embrace-kiss echoing 24:29-33) on owner's
-   next-block word. Solo rhythm unchanged: pre-stage dump → care-points
-   in draft_note → derive with DB-verify → text script + preflight →
-   fresh-context adversarial review → freeze on green → ritual.
-3. Onkelos BUFFER PENDING (standing; Gen 27–28 not opened).
-4. Triage deferral policy standing: all owner triages stay OPEN; never push.
+1. **Owner commit word** for gen_49 (gen_47+48 committed at 64ff484;
+   gen_49 artifacts uncommitted on disk).
+2. **gen_50 = 29:15–30 suggested** (wage, seven years, switched bride:
+   the deceiver deceived — 29:26 younger-before-FIRSTBORN inverts ch.
+   27) on owner's next-block word. Rhythm unchanged.
+3. **Webapp machine-player** (owner floated 2026-08-07): visualize the
+   interpreter run per unit — trace JSON baked at freeze + static player
+   page; proposal delivered in chat, awaiting owner go.
+4. Onkelos BUFFER PENDING (standing; Gen 27–29 not opened).
+5. Triage deferral policy standing: all owner triages stay OPEN; never push.
 
 ## TOOLING (solo-era additions, session scratchpad — regenerable)
 verify_gen47_text_v2.py pattern: step-he == plain(no accents/meteg,
@@ -106,8 +124,8 @@ names = HANDLERS table in run_unit.py (~line 413).
 ```
 cd <old-home>/code/Torah_Grok
 git log --oneline -3
-grep -l "status: frozen" logic/units/*.yaml | wc -l   # expect 49
-python3 run_unit.py gen_48_bethel_ladder_vow --scenarios | tail -1
+grep -l "status: frozen" logic/units/*.yaml | wc -l   # expect 50
+python3 run_unit.py gen_49_well_stone_rachel_arrival --scenarios | tail -1
 for f in $(grep -l "status: frozen" logic/units/*.yaml); do n=$(grep -c "VERIFIED: SNAPSHOT]" $f); [ "$n" -gt 0 ] && echo "$f: $n"; done
 ```
 
