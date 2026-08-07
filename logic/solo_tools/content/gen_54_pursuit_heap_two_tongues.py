@@ -1,0 +1,1368 @@
+# -*- coding: utf-8 -*-
+"""Authored content for gen_54 (31:22-54). DB evidence: gen54_prestage_full.txt
+(regenerable: python3 logic/solo_tools/prestage.py Gen 31:22-31:54) + targeted
+queries logged in the derivation session 2026-08-07."""
+
+UID = "gen_54_pursuit_heap_two_tongues"
+BOOK = "Gen"
+SPAN = (31, 22, 31, 54)
+EXTRA_SUBS = {"et-y": "oti", "lekha-ה": "lekha"}
+
+
+META = [
+    ("id", "gen_54_pursuit_heap_two_tongues"),
+    ("title_en", '"The pursuit, the search, and the heap of witness in two tongues (31:22-54)"'),
+    ("title_he", "יְגַר שָׂהֲדוּתָא"),
+    ("title_he_translit", "yegar sahaduta"),
+    ("title_he_en", "\"'Heap of witness' — Laban's Aramaic name for the heap\""),
+    ("book_he", "בְּרֵאשִׁית"),
+    ("book_he_translit", "Be-reshit"),
+    ("book_en", "Genesis"),
+    ("refs", "31:22-54"),
+    ("unit_span_planned", "31:22-54"),
+]
+
+DRAFT_NOTE = """
+DRAFT 2026-08-07 · SOLO ERA unit #8 (Claude coordinator+deriver; external
+fresh-context adversarial review before freeze per standing law). Span:
+31:22-54, from the told flight to the covenant meal. 33 verses · 481
+tokens (SNAPSHOT-verified). SNAPSHOT + debut_map. bar C. Conventions:
+step he: = plain (no accents/meteg; maqqef ־ per snapshot); tree halves
+= accents kept, slashes stripped; split at etnachta — ALL 33 verses
+carry one (token-map scan; no fallback splits this unit). Onkelos
+BUFFER PENDING. NOTE: prestage.py's volitive census regex required a
+word boundary after the mood letter and reported NONE; fixed 2026-08-07
+(person digit follows directly, e.g. imperative 2ms = Vqv2ms); the
+corrected census (12 volitives) governs this unit.
+
+UNIT SHAPE — SEVEN pushes, ZERO pops, SEVEN OPEN: frozen gen_34's
+Mamre end-shape re-fires at Gilead (gen_34's own final scenario:
+"SEVEN pushed, ZERO popped, SEVEN OPEN") — the corpus's two all-open
+sevens. End-state depth 7 is exceeded only by gen_35 (13 open) and
+gen_46 (12 open) — final-scenario scan across all 54 frozen units,
+2026-08-07. Every demand in the pursuit-and-pact stays on the letter's
+queue: (1) God's guard-order to Laban (31:24, gen_40's 24:6
+hishamer-class guard-push — prohibitions carry no receipt event);
+(2) Jacob's identify-and-take compound (31:32, gen_34 flag-4 compound
+class) — Laban feels every tent and finds NOTHING (matza ×3 negated),
+then answers by claiming EVERYTHING ("all that you see is mine",
+31:43) and taking nothing; (3) Rachel's let-it-not-burn (31:35,
+LET-NOT per gen_34's 18:30/32 al-yichar pair) — and the burn-verb's
+very next career token ignites in JACOB one verse later (31:36),
+the wrong eyes; (4) Jacob's set-it-here tribunal demand (31:37; the
+let-them-decide jussive rides as purpose-content, gen_51's 30:3
+ve-teled class) — nothing is ever set, and Jacob himself declares at
+31:42 that GOD already adjudicated LAST NIGHT: the tribunal's verb
+(yakach 3198) walks demand 5/8 → performance 6/8 with the performance
+BEFORE the demand and by another performer; likewise the set-verb
+(sim 7760) walks performance 24/152 (Rachel HIDING the gods, 31:34)
+→ demand 25/152 (Jacob demanding they be REVEALED, 31:37) —
+consecutive career tokens, each performed-before-demanded; (5) the
+covenant cohortative (31:44, CMD-US? per TIR-033/gen_45) — gen_45's
+26:28 centerpiece re-runs EXACTLY: the cut-verb karat 3772 carries
+its only two cohortative covenant-demands at toks 6/69 (Gerar) and
+7/69 (Gilead), and BOTH are answered by the swear-verb shava 7650 at
+toks 12/70 (26:31) and 13/70 (31:53) — adjacent demand-tokens,
+adjacent performance-tokens, and in both units the other-root law
+(gen_45 Excerpt B: different root → no pop) keeps the card OPEN;
+(6) gather-stones (31:46) — demanded laqat 3950 (gather, DEBUT
+1/15), performed laqach 3947 (take, 96/393): roots one letter apart
+(lamed-qof-TET vs lamed-qof-CHET), object identical, verb wrong —
+the letter-precision family (gen_50 object, gen_51 number, gen_53
+quantifier) gains a VERB member; the gather-imperative's next
+imperative token is Exod 16:16 liqtu — the MANNA command; (7) the
+watchpost prayer (31:49, LET on YHWH per gen_32's 16:5 law "the
+letter's mood decides and the mood is jussive") — and 31:49 re-runs
+16:5's very formula, judge→watch: yishpot YHWH beini u-veinekha →
+yitzef YHWH beni u-venekha. THE MOOD-LAW'S CLEANEST PAIR closes the
+unit: 31:49's yitzef is morph-tagged jussive (HVqj3ms) and PUSHES;
+31:53's yishptu — same judge-root as 16:5, same between-us formula —
+is morph-tagged IMPERFECT (HVqi3mp) and stays FENCED (gen_51's
+yosef-class: volitive by sense, imperfect on the letter, no push).
+REGISTRY 2 writes — both on ONE object. TESTS 0 (the only in-span
+tov-tokens are the mi-tov-ad-ra idiom pair inside the guard-order,
+31:24/31:29 — idiom-in-speech, attribute-fence class gen_46 27:9 /
+gen_50 29:19).
+
+CROWN — THE TWO TONGUES (31:47): Laban names the heap YEGAR SAHADUTA
+and the SNAPSHOT tags both tokens morph=ANp — the language prefix
+itself flips from H (Hebrew) to A (Aramaic): a full-corpus morph scan
+(SELECT count WHERE morph LIKE 'A%') returns EXACTLY these TWO tokens
+[VERIFIED 2026-08-07] — the Torah's only Aramaic-tagged words, and
+the machine sees the language switch in the data layer, not the
+commentary. Jacob answers with GALED (1567, whole career = 31:47-48).
+One object, two NAME writes, two languages — the corpus has
+double-named objects across units (ishah's woman→chavah writes span
+gen_09/gen_11; shet is written twice across gen_13/gen_14,
+registry-wide scan incl. quoted expr forms, 2026-08-07), but no
+prior object takes two writes WITHIN ONE UNIT — here within one
+VERSE — and none in two LANGUAGES: the corpus's first bilingual
+name-pair, and its first translation event (sahaduta = witness in
+Aramaic; the Hebrew witness-noun ed 5707 DEBUTED three verses
+earlier at 31:44 as the covenant's own term). h_name's last-write-wins leaves GALED as the
+ledger label — and 31:48's etiology settles on Galed in the letter
+too: the machine's overwrite mirrors the text. The third label,
+ha-mitzpa (31:49, hapax 1/1), arrives with NO naming verb ("asher
+amar" — elliptical) — report-class etiology (gen_45 flag-25 al-ken
+city-line class), the REGISTRY sleeps; its pun-partner yitzef (6822,
+may-he-watch) is ALSO 1/1 — the watchpost and the watch-verb are
+each single-token careers, the pun's two halves both hapax.
+
+CARE-POINTS (filed before derivation; ordinals from debut_map via
+prestage unless tagged otherwise):
+(1) 31:22 THE TELL-CHAIN: higid 5046 walks toks 16-18/55 across the
+seam — 31:20 lo higid (he did NOT tell, gen_53), 31:22 va-yugad
+(hophal: it WAS told, agentless), 31:27 higadta (ve-lo higadta li,
+"you did not tell ME") — withheld telling, passive telling, accused
+not-telling, consecutive career tokens.
+(2) 31:23 davaq 1692 tok3/13 — the CLEAVE-verb of 2:24 ("cleave to
+his wife", tok1) in hiphil as hostile catch-up; radaf 7291 tok3/25
+(pursue-DEBUT was 14:14's war) + nasag 5381 tok1/23 (overtake-DEBUT
+31:25) — the pursue-overtake pair co-fires again at the sea (radaf
+toks 7-9 = Exod 14:8-23; nasag tok5 = 14:9): Laban overtaking Jacob
+at Gilead prefigures Pharaoh overtaking Israel at the sea, in the
+careers' own grid (the pair also co-fires at 44:4's goblet chase,
+Exod 15:9's boast, Deut 19:6's avenger-law).
+(3) 31:24 chalom 2472 tok5/37 — the dream-NOUN's Genesis walk: toks
+1-2 = Avimelekh's warning-dream (20:3,6), toks 3-4 = Jacob's
+flock-dream (31:10,11), tok5 = Laban's warning-dream: Jacob's one
+dream bracketed by outsider warnings (gen_53 care-10's bracket
+closes). ha-arami 761 tok5/6 — the Aramean epithet's last Genesis
+token; tok6/6 = Deut 26:5 arami oved avi, the firstfruits credo
+(token-fact only). mi-tov ad ra idiom ×2 (toks 30-31/86 of tov) —
+fenced, TESTS 0.
+(4) 31:25 taqa 8628 toks 1-2/11 DEBUT ×2 — the PITCH-verb born
+double (Jacob's tent, Laban's kinsmen); its career leaves tents for
+TRUMPETS (Exod 10:19's locust-hurl, then Num 10's blast-laws toks
+4-11): the pitch-verb becomes the blast-verb.
+(5) 31:26 me asita — 29:25's ma zot asita li RETURNED: the deceived's
+what-have-you-done, Jacob→Laban at the wedding-switch, now
+Laban→Jacob at the flight [VERIFIED: SNAPSHOT 29:25 idx8-11 /
+31:26 idx3-4]. va-tignov morph HC/Vqw2ms — a 2ms wayyiqtol inside
+accusation speech; shevuyot 7617 tok2/8 (like sword-captives).
+(6) 31:27 THE COUNTERFACTUAL SEND: va-ashalecha-kha (7971 tok32/201)
+— gen_52's never-performed shalcheni (tok30) circled by irrealis
+sends: tok31 = 31:4 (Jacob sends for wives), tok32 = Laban's "I
+WOULD HAVE sent you with joy", tok33 = 31:42 "you would have sent me
+away EMPTY" — the send-verb's whole in-span life is subjunctive.
+nachbeta 2244 tok3/3 — the HIDE-verb CLOSES: its career is Adam
+hiding (3:8), Adam explaining the hiding (3:10), Jacob's flight-hide
+— Eden's garden and Gilead's road. kinnor 3658 tok2/2 CLOSES: tok1 =
+4:21 Jubal, father of lyre-players; tok2 = the lyre in Laban's
+imagined farewell band — invented once, never played. simcha 8057
+tok1/3 DEBUT (joy born in a counterfactual); tof 8596 tok1/3; shirim
+7892 tok1/9.
+(7) 31:28 netashta-ni 5203 tok1/4 DEBUT; nashaq 5401 tok5/13 — the
+kiss-walk: 29:11 Jacob kisses Rachel, 29:13 Laban kisses Jacob
+(arrival), 31:28 the DENIED departure kiss; tok6 = 32:1 Laban kisses
+grandsons and daughters — the farewell kiss performed one verse past
+the span. hiskalta 5528 tok1/1 HAPAX — the do-foolishly verb's only
+Torah token, Laban's verdict on Jacob.
+(8) 31:29 yesh le-el yadi — the el-word (410 tok10/50) as POWER
+("power of my hand"): the DB codes Laban's power-idiom with the same
+strong as El the divine name (homograph-in-career observation, filed
+open). RETELLING FENCE (gen_41): emesh amar... hishamer retold as
+content-fact, no second push — WITH A LETTER-DELTA: 31:24 says pen
+TEDABER (finite, "lest you speak"), 31:29 retells mi-DABER
+(infinitive, "from speaking") — the guard-order reshaped in its own
+reteller's mouth [VERIFIED: SNAPSHOT 31:24 idx11-12 / 31:29 idx14].
+emesh 570 tok2/3.
+(9) 31:30 halokh halakhta + nikhsof nikhsafta — TWO infinitive-
+absolute doublings, and nikhsof 3700 is a WHOLE-CAREER-IN-ONE-VERSE
+pair (2/2): the LONGING-verb's entire Torah life is this one doubled
+utterance. la-ma ganavta et ELOHAY — "my GODS": strong 430 covers
+the stolen terafim and the warning God in the same unit (walk note).
+(10) 31:31 yare 3372 tok11/81 (yareti — "I was afraid"); gazal 1497
+tok2/6 (tigzol — "tear away", career → Lev 5:23/19:13 robbery-law).
+(11) 31:32 THE DEATH-OATH: lo yichye (2421 tok46/83) — oath-content
+FACT (gen_40 lo-tiqach class); it never triggers in-span (nothing
+found); Rachel dies at 35:16-19, OUTSIDE the span — watchlist arm,
+no adjudication. THE KNOWLEDGE-GAP: ve-lo yada yaaqov ki rachel
+genavatam (3045 tok36/174; 1589 tok7/21) — the narrator's
+dramatic-irony fence: the demander does not know his demand's danger.
+haker 5234 tok2/15 — the recognize-imperative debuts NEGATED at
+27:23 (ve-lo hikir-o: Isaac does NOT recognize the disguised Jacob
+[VERIFIED: SNAPSHOT 27:23 idx0-1]) and its first imperative token is
+Jacob inviting the recognition that will find nothing; prospective:
+toks 3,5 = 37:32/38:25 haker-na (the tunic, the pledge) — filed,
+outside span.
+(12) 31:33-35 THE SEARCH: matza 4672 toks 26-28/122 — THREE negated
+finds (lo matza, lo matza, ve-lo matza et ha-terafim); ohel 168 toks
+17-22/215 — six tent-tokens in three verses; terafim 8655 tok3/3 —
+the terafim's WHOLE Torah career is 31:19 (stolen), 31:34 (sat
+upon), 31:35 (not found): they exit the Torah UNFOUND. mashash 4959
+toks 3-4/7 — the FEEL-verb: toks 1-2 = Isaac feeling the disguised
+Jacob (27:12,22, gen_46's span), toks 3-4 = Laban feeling the tents
+— its four Genesis tokens are two deceiver-feelings; career → Exod
+10:21 (darkness that may be FELT) + Deut 28:29 (groping at noon).
+be-khar 3733 tok1/2 (camel-cushion DEBUT); chapes 2664 tok1/2 DEBUT
+— the SEARCH-verb's only other token is 44:12: the terafim-search
+and the goblet-search, both hunting planted property of the
+searcher's kin. va-teshev aleihem — Rachel SITS on the gods; qum
+6965 tok37/145 (la-qum — the rise she "cannot" perform); derekh
+nashim 1870 tok16/116 + 802 tok114/307.
+(13) 31:36 chara 2734 toks 6-7/33 CONSECUTIVE — tok6 = Rachel's
+LET-NOT (al yichar, jussive), tok7 = va-yichar LE-YAAQOV: the burn
+asked away from Laban's eyes lands in Jacob's, next verse, next
+career token; no burning in Laban's eyes is ever narrated (the
+LET-NOT's content never violated on the letter — card OPEN, class
+gen_34). riv 7378 tok4/10 (va-yarev); pesha 6588 tok1/9 DEBUT — the
+TRANSGRESSION-noun born inside an innocence protest (ma pishi);
+career → Exod 34:7 (the attribute-formula's nose), Lev 16:16,21
+(Yom Kippur's freight); chatat 2403 tok3/142; dalaq 1814 tok1/1
+HAPAX (hotly-pursued).
+(14) 31:38-41 THE AUDIT: esrim shana ×2 (6242 toks 7-8/73) frames
+it; rechelekha 7353 tok1/2 — the EWE-noun debuts in the audit while
+RACHEL (7354, the adjacent strong: the name IS the ewe-word) sits on
+the terafim — the DB keeps name and noun one strong apart
+(observation); shakal 7921 tok2/8 — the BEREAVE-verb: tok1 = 27:45
+Rebekah's "why be bereaved of you both", tok2 = the flock
+NOT-bereaved, tok3 = 42:36 "you have BEREAVED me" (Jacob); terefa
+2966 tok1/6 DEBUT — the TORN-ANIMAL noun born as the shepherd's
+liability boast; career = Exod 22:12,30 + Lev 7:24/17:15/22:8 — the
+torn-flesh law's seed sentence; achatena 2398 tok3/72 — the
+SIN-root piel as "bear the loss" (make-good), the root's only
+compensation-sense token in Genesis (in-career reading, fenced);
+bakash 1245 tok1/15 DEBUT — the SEEK-verb born as mi-yadi
+tevaqshena ("from my hand you would seek it"); tok4 = 43:9 Judah's
+mi-yadi tevaqshenu — the surety-formula's re-run; genuvti yom
+u-genuvti layla (1589 toks 8-9/21 — the theft-verb passive pair);
+31:40 THREE HAPAXES + A CLOSE IN ONE VERSE: chorev 2721 1/1 (heat),
+qerach 7140 1/1 (frost), nadad 5074 1/1 (va-tidad — sleep FLED),
+shena 8142 tok2/2 CLOSES (tok1 = 28:16 mi-shenato, the Bethel
+dream-sleep; tok2 = the fled sleep — Jacob's two sleeps); 31:41
+va-tachalef (2498 tok2/5, 2ms wayyiqtol), maskurti 4909 tok3/3
+CLOSES — the WAGE-noun's whole career is Laban's mouth (29:15) and
+Jacob's audit (31:7,41): born and buried in this cycle (gen_50
+watch LANDS); aseret monim 4489 tok2/2 CLOSES (ten countings ×2,
+31:7/41); avad 5647 tok22/113.
+(15) 31:42 THE ALREADY-HELD TRIBUNAL: lule 3884 tok1/3 DEBUT
+(were-it-not); u-fachad yitzchaq 6343 tok1/6 DEBUT — the FEAR OF
+ISAAC divine epithet born; its pair-token 2/6 = 31:53 (Jacob SWEARS
+by it) — the epithet's only two Torah tokens are this unit's, and
+the remaining career (Exod 15:16, Deut 2:25 etc.) is dread-the-noun,
+not the title (in-span reading); reqam 7387 tok1/6 DEBUT — career →
+Exod 3:21 ("you shall NOT go empty"): the empty-send Laban would
+have inflicted is the one God forbids at the Exodus; oni 6040
+tok3/9 — the AFFLICTION-walk: Hagar (16:11), Leah (29:32, gen_51's
+see-my-affliction write), Jacob, Joseph's land-of-my-affliction
+(41:52) — and at Exod 3:7 "I have surely SEEN the oni of my
+people": raa + oni collocate here (et anyi... RAA Elohim) before
+the burning bush says it nationally; yegia 3018
+tok1/2 (toil; tok2 = Deut 28:33); va-yokhach 3198 tok6/8 — THE
+LANDING (see UNIT SHAPE (4)); amesh 570 tok3/3 CLOSES — emesh
+(31:29, Laban's mouth) and amesh (31:42, Jacob's mouth) are the
+same night twice told, and the yesterday-word's Torah career ends
+on it (tok1 = 19:34, Lot's cave).
+(16) 31:43 THE ALL-CLAIM: ha-banot benotay ve-ha-banim banay
+ve-ha-tzon tzoni ve-khol asher ata roe li hu — the identify-and-take
+demand (31:32) answered in words: EVERYTHING identified as his,
+NOTHING taken; ma eese la-ele ha-yom — the do-verb pair: 31:29
+yesh le-el yadi LA-ASOT ra (power to DO harm, 6213 tok105) → ma
+EESE (what CAN I do, tok106) — the power-boast and the powerless
+question, consecutive do-tokens in the same speaker.
+(17) 31:44 ed 5707 tok1/25 DEBUT — the WITNESS-noun born as the
+covenant's term; in-span walk toks 1-4 (44 le-ed, 48 ed, 50 ed, 52
+ed) + eda 5713 tok2/5 (31:52 ve-eda; tok1 = 21:30 the seven
+ewe-lambs le-eda) — career → Exod 20:16 (false witness), Deut 17:6
+(two-witness law), Deut 31:19,21,26 (the song and the scroll as
+witnesses): the word that polices testimony is born policing a
+heap. ve-haya le-ed weqatal = promise-fact (gen_40 class). lekha
+(3212 tok63/229, imperative + paragogic he) = summons-opener, no
+push (gen_35's 19:32 lekha-before-cohortative class).
+(18) 31:45-46 aven 68 toks 11-13/88 — the STONE-walk: toks 8-10 =
+the well-mouth stone (29:3,8,10, gen_50's span), 11 = the pillar
+stone, 12-13 = the gathered stones; tok14 = 35:14 (the NEXT pillar,
+Bethel again). matzeva 4676 tok4/16 — gen_48's Bethel pillar (toks
+1-3) → the witness-pillar (toks 4-7 ALL in this unit: 45,51,52,52);
+toks 8-9 = 35:14 (Bethel re-anointed) and 35:20 — the pillar over
+RACHEL'S GRAVE: the next matzeva Jacob raises after the
+death-oath's span is hers (watchlist arm, no adjudication). rum
+7311 tok3/46 (va-yerime-ha); gal 1530 — THE HEAP'S WHOLE TORAH
+CAREER (7/7) lives inside 31:46-52: born, named twice, eaten on,
+sworn by, boundary-drawn, gone. va-yokhlu sham al ha-gal — the
+covenant meal ON the witness.
+(19) 31:51 yara 3384 tok1/17 DEBUT (yariti — "I have cast [the
+pillar]"): Laban claims the raising, but 31:45 narrates JACOB
+raising it (rum) — claimed caster vs narrated raiser, different
+verbs, different men (letter-observation, no queue effect); the
+cast-verb's later career is the TEACH-cluster (Exod 24:12
+le-horotam, Lev 10:11, Deut 17:10-11, 33:10 yoru) — the root-family
+that yields torah (fenced etymology-note, career-tokens only).
+(20) 31:52 avar 5674 toks 10-11/130 — gen_53's river-crossing
+(va-yaavor, tok9, 31:21) is IMMEDIATELY followed in the career by
+the crossing BANNED for harm (im ani lo EEVOR... im ata lo TAAVOR):
+the crossed river's verb becomes the uncrossable line's verb,
+consecutive tokens; le-raa 7451 tok16/96 — the ra-frame: the unit
+opens on banned bad-SPEECH (mi-tov ad ra ×2) and closes on banned
+bad-CROSSING (le-raa).
+(21) 31:53 nachor 5152 tok16/16 CLOSES — Nahor's last Torah token
+stands inside a god-formula (elohe nachor); yishptu 8199 tok5/27
+IMPERFECT — fenced (see UNIT SHAPE (7)); va-yishava 7650 tok13/70 —
+the other-root performance (see UNIT SHAPE (5)); be-fachad aviv
+yitzchaq — the Fear-epithet completed as an OATH-NAME.
+(22) 31:54 zavach 2076 tok1/41 DEBUT + zevach 2077 tok1/72 DEBUT —
+THE SACRIFICE VERB AND NOUN ARE BORN: the Torah's first narrated
+zevach-act is Jacob's covenant meal on the mountain; verb tok2 =
+46:1 (Jacob again, at Beersheba, bound for Egypt — the verb's first
+two tokens are both his); noun career → Exod 12:27 (pesach), Lev
+3's shelamim law — the peace-offering vocabulary debuts sealing a
+peace. lechem ×2 (3899 toks 8-9/84); lun 3885 tok7/31 (va-yalinu —
+they lodged on the mountain of the oath).
+
+WATCHLIST ARMS (prospective, filed): Rachel's death-oath horizon
+35:16-19; matzeva tok9 = 35:20 (her grave-pillar); haker-na chain
+37:32/38:25; chapes tok2 = 44:12 (the goblet); bakash tok4 = 43:9
+(Judah's surety-formula); radaf+nasag at Exod 14; reqam at Exod
+3:21; raa+oni at Exod 3:7; teane (6031 tok4/27, 31:50) — the
+afflict-verb: prophesied 15:13, Hagar 16:6/9, BANNED here on the
+daughters, then Exod 1:11-12 Egypt performs it nationally; liqtu at
+Exod 16:16 (manna); terefa at Exod 22:12,30; ed at Deut 17:6/31:19;
+arami at Deut 26:5; galed/gilad toks → Num 32, Deut 3 (the
+land-grant career).
+"""
+
+# ---------------------------------------------------------------------------
+
+STEPS = [
+ dict(ref=(31,22), op="THE_TOLD_FLIGHT",
+  en="And it was told to Laban on the third day that Jacob had fled.",
+  tl_en="it was told to Laban on the third day",
+  tr_en="that Jacob had fled",
+  ops=[
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(hugad_le_lavan_ki_varach_yaaqov(yom_shelishi), t0)",
+    frag=("va-yugad",7), prose="""
+THE TELL-CHAIN [care 1]. va-yugad (5046 tok17/55, hophal HC/VHw3ms)
+[VERIFIED: SNAPSHOT Gen.31.22 idx0 ordinal=17/55 morph=HC/VHw3ms] —
+the tell-verb walks toks 16-18 across the seam: 31:20 lo higid (he
+did NOT tell — gen_53's heart-theft verse), 31:22 va-yugad (it WAS
+told — passive, agentless: the withheld telling happens with no
+teller on the letter), 31:27 higadta ("you did not tell ME") —
+consecutive career tokens. ba-yom ha-shelishi (7992 tok5/31)
+[VERIFIED: idx3 ordinal=5/31] — the third-day of 22:4 (Moriah seen)
+and 40:20/42:18 ahead. barach (1272 tok6/14) [VERIFIED: idx5
+ordinal=6/14] — the flee-verb the pursuit now hears. REGISTRY 0.
+TESTS 0. Onkelos BUFFER PENDING."""),
+  ],
+  comment="The flight reaches Laban's ears agentless; facts only."),
+
+ dict(ref=(31,23), op="THE_SEVEN_DAY_PURSUIT",
+  en="And he took his kinsmen with him and pursued after him a seven days' journey, and overtook him in the hill-country of Gilead.",
+  tl_en="he took his kinsmen and pursued seven days",
+  tr_en="and overtook him at Mount Gilead",
+  ops=[
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(radaf_va_yadbeq(lavan, echav, shivat_yamim, har_ha_gilad), t0)",
+    frag=("va-yirdof",5), prose="""
+THE PURSUIT [care 2]. va-yirdof (7291 tok3/25) [VERIFIED: SNAPSHOT
+Gen.31.23 idx4 ordinal=3/25] — the pursue-verb (war-debut 14:14);
+va-yadbeq (1692 tok3/13, hiphil) [VERIFIED: idx9 ordinal=3/13
+morph=HC/Vhw3ms] — the CLEAVE-verb of 2:24 ("cleave to his wife",
+tok1) turned hostile catch-up: the cling of marriage becomes the
+cling of pursuit, third token. The pair radaf+nasag (nasag debuts
+31:25) co-fires at Exod 14:9 — radaf toks 7-9 and nasag tok5 in the
+sea-pursuit [debut_map careers]: Gilead prefigures the sea. derekh
+shivat yamim (7651 tok28/185) [VERIFIED: idx7 ordinal=28/185] —
+seven days, the week-word of the served weeks (29:20,27,30 toks
+25-27: the previous three sevens were Jacob's service). har
+ha-gilad (1568 toks 2-3/22 at 31:23,25) [VERIFIED: idx12
+ordinal=2/22] — gen_53's compass-point (tok1 = 31:21) reached."""),
+  ],
+  comment="Seven days, the cleave-verb as catch-up; the pursuit lands at Gilead."),
+
+ dict(ref=(31,24), op="THE_DREAM_GUARD",
+  en="And God came to Laban the Aramean in a dream of the night and said to him: Guard yourself, lest you speak with Jacob from good to bad.",
+  tl_en="God came to Laban the Aramean in the night dream",
+  tr_en="guard yourself, lest you speak good to bad",
+  ops=[
+   dict(op="DECLARE",
+    expr="DECLARE(Elohim, LET(hishamer(lavan, pen_tedaber_im_yaaqov_mi_tov_ad_ra)))",
+    frag=("hishamer",9), prose="""
+THE GUARD-PUSH [UNIT SHAPE (1); care 3]. hishamer (8104 tok12/148,
+niphal imperative HVNv2ms) [VERIFIED: SNAPSHOT Gen.31.24 idx9
+ordinal=12/148 morph=HVNv2ms] — gen_40's 24:6 hishamer-lekha-pen
+class: a true guard-push; the pen-clause (pen tedaber im yaaqov
+mi-tov ad ra) is the guard's CONTENT, not a second push. The
+demandee is LABAN — the Torah's one God-to-Laban speech (this dream
+and its 31:29 retell; scene-fact read from the letter, speaker
+attribution is not a DB column) — and the card has no receipt event
+(a prohibition narrates no performance): OPEN to the wall. ba-chalom ha-layla (2472 tok5/37)
+[VERIFIED: idx5 ordinal=5/37] — the dream-noun's Genesis walk: toks
+1-2 Avimelekh's warning (20:3,6), toks 3-4 Jacob's flock-dream
+(31:10,11), tok5 Laban's warning — Jacob's one dream bracketed by
+outsider warnings. ha-arami (761 tok5/6) [VERIFIED: idx4
+ordinal=5/6] — the epithet's last Genesis token; tok6 = Deut 26:5,
+the credo (token-fact only). mi-tov ad ra (2896 tok30/86; 7451
+tok13/96) [VERIFIED: idx15,17] — idiom inside speech:
+attribute-fence class (gen_46 27:9 / gen_50 29:19), TESTS 0.
+PUSH LET(hishamer(lavan, ...)). Depth 1."""),
+  ],
+  comment="God's guard-order to Laban pushed; the dream-bracket closes; depth 1."),
+
+ dict(ref=(31,25), op="THE_TWO_CAMPS",
+  en="And Laban caught up with Jacob; and Jacob had pitched his tent in the mountain, and Laban with his kinsmen pitched in the hill-country of Gilead.",
+  tl_en="Laban caught up with Jacob",
+  tr_en="two tents pitched in the mountain of Gilead",
+  ops=[
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(taqa_ohel_mul_ohel(yaaqov, lavan, har_ha_gilad), t1)",
+    frag=("va-yaseg",4), prose="""
+THE OVERTAKE AND THE TWO TENTS [care 4]. va-yaseg (5381 tok1/23
+DEBUT) [VERIFIED: SNAPSHOT Gen.31.25 idx0 ordinal=1/23] — the
+OVERTAKE-verb is born here; its career's later pursuit-overtakes
+run the goblet chase (44:4, with the pursue-verb in the same
+verse), the sea (Exod 14:9), the song's boast (Exod 15:9 "I will
+pursue, I will overtake"), and the blood-avenger law (Deut 19:6)
+[debut_map] — the overtake born at Gilead keeps overtaking. taqa (8628 toks 1-2/11
+DEBUT ×2) [VERIFIED: idx5,10 ordinals=1-2/11] — the PITCH-verb born
+double, Jacob's tent and Laban's kinsmen's; its career leaves tents
+for trumpets (Num 10 blast-laws, toks 4-11): the pitch-verb becomes
+the blast-verb. Depth 1."""),
+  ],
+  comment="Overtake-verb born; two camps face each other; the guard-card holds."),
+
+ dict(ref=(31,26), op="THE_HEART_THEFT_CHARGE",
+  en="And Laban said to Jacob: What have you done, that you stole my heart and led away my daughters like captives of the sword?",
+  tl_en="what have you done — you stole my heart",
+  tr_en="led my daughters like captives of the sword",
+  ops=[
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(me_asita_ganavta_levavi(lavan, divre_riv), t1)",
+    frag=("me",5), prose="""
+THE FORMULA RETURNS [care 5]. me asita (4100 tok31/133; 6213
+tok103/860) [VERIFIED: SNAPSHOT Gen.31.26 idx3-4] — 29:25's ma zot
+asita li (Jacob→Laban at the wedding-switch [VERIFIED: SNAPSHOT
+29:25 idx8-11]) comes back Laban→Jacob at the flight: the
+deceived's what-have-you-done, traded between the two deceivers.
+va-tignov (1589 tok4/21, morph HC/Vqw2ms) [VERIFIED: idx5
+morph=HC/Vqw2ms] — a SECOND-person wayyiqtol: the narrative form in
+the accuser's mouth; the theft-verb's six in-span tokens (4-9/21)
+are all this quarrel's. levavi (3824 tok3/55) [VERIFIED: idx7] —
+the stolen HEART (gen_53's 31:20 heart-theft retold as charge).
+ki-shevuyot charev (7617 tok2/8; 2719 tok3/38) [VERIFIED:
+idx11-12] — like sword-captives. Depth 1."""),
+  ],
+  comment="The accusation storm opens with the returned formula; facts only."),
+
+ dict(ref=(31,27), op="THE_UNPLAYED_BAND",
+  en="Why did you hide yourself to flee, and steal me, and did not tell me — I would have sent you away with joy and with songs, with timbrel and with lyre —",
+  tl_en="you hid to flee and stole me away",
+  tr_en="I would have sent you with joy, songs, timbrel, lyre",
+  ops=[
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(nachbeta_va_ashalechakha_be_simcha(lavan, irrealis), t1)",
+    frag=("la-ma",5), prose="""
+THE COUNTERFACTUAL SEND [care 6]. nachbeta (2244 tok3/3 CLOSES)
+[VERIFIED: SNAPSHOT Gen.31.27 idx1 ordinal=3/3] — the HIDE-verb's
+whole Torah career: Adam hides (3:8), Adam explains the hiding
+(3:10), Jacob hides-to-flee — Eden and Gilead, nothing between.
+va-ashalecha-kha (7971 tok32/201) [VERIFIED: idx8 ordinal=32/201]
+— gen_52's shalcheni (tok30, never performed) circled by irrealis:
+Laban's "I WOULD HAVE sent you with joy" — the send that was
+demanded and refused now imagined by the refuser. be-simcha (8057
+tok1/3 DEBUT — joy born in a counterfactual), u-ve-shirim (7892
+tok1/9), be-tof (8596 tok1/3), u-ve-khinor (3658 tok2/2 CLOSES:
+tok1 = 4:21 Jubal father of lyre-players — the lyre's Torah career
+is its invention and this unplayed farewell) [VERIFIED: idx9-12
+ordinals 1/3, 1/9, 1/3, 2/2]. higadta (5046 tok18/55) — the
+tell-chain's third link [care 1]. Depth 1."""),
+  ],
+  comment="Hide-verb closes on Eden's pair; the lyre exits unplayed; facts only."),
+
+ dict(ref=(31,28), op="THE_DENIED_KISS",
+  en="And did not allow me to kiss my sons and my daughters? Now you have done foolishly.",
+  tl_en="did not let me kiss my sons and daughters",
+  tr_en="now you have done foolishly",
+  ops=[
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(lo_netashtani_le_nasheq(lavan, hiskalta_aso), t1)",
+    frag=("ve-lo",5), prose="""
+THE VERDICT-HAPAX [care 7]. netashta-ni (5203 tok1/4 DEBUT)
+[VERIFIED: SNAPSHOT Gen.31.28 idx1 ordinal=1/4] — the allow/leave
+verb born in the denied farewell. le-nasheq (5401 tok5/13)
+[VERIFIED: idx2 ordinal=5/13] — the kiss-walk: Jacob kisses Rachel
+(29:11), Laban kisses Jacob at arrival (29:13), the departure kiss
+DENIED here — and tok6 = 32:1, Laban kisses his grandsons and
+daughters: the kiss performs one verse past this unit's wall
+(watch-note). hiskalta (5528 tok1/1 HAPAX) [VERIFIED: idx6
+ordinal=1/1] — the do-foolishly verb's ONLY Torah token: Laban's
+verdict word on Jacob, spoken once in the whole corpus. Depth 1."""),
+  ],
+  comment="The denied kiss and the hapax verdict; the guard-card holds."),
+
+ dict(ref=(31,29), op="THE_POWER_AND_THE_RETELL",
+  en="It is in the power of my hand to do you all harm; but the God of your father last night said to me: Guard yourself from speaking with Jacob from good to bad.",
+  tl_en="my hand has power to do you harm",
+  tr_en="but your father's God said: guard yourself",
+  ops=[
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(retell_hishamer_emesh(lavan, letter_delta_mi_daber), t1)",
+    frag=("hishamer",8), prose="""
+THE RETELLING FENCE [care 8; gen_41's law]. Laban re-speaks the
+guard-order — retold imperatives are content-facts of reported
+speech, NO second push; the card count holds at 1. AND THE RETELL
+RESHAPES THE LETTER: 31:24 pen TEDABER (finite: "lest you speak"
+[VERIFIED: SNAPSHOT Gen.31.24 idx11-12]) → 31:29 mi-DABER
+(infinitive: "from speaking" [VERIFIED: SNAPSHOT Gen.31.29 idx14
+morph=HR/Vpc]) — the reteller compresses the clause; the guard he
+reports is grammatically not the guard he received. yesh le-el
+yadi (410 tok10/50) [VERIFIED: idx1 ordinal=10/50] — the el-word as
+POWER: the DB codes Laban's power-idiom with the divine El's own
+strong (homograph-in-career observation, filed open, no ruling).
+emesh (570 tok2/3) [VERIFIED: idx8 ordinal=2/3] — last-night's
+first of two tellings [care 15]. ra ×2 (7451 toks 14-15/96) frame
+the verse. Depth 1."""),
+  ],
+  comment="The retold guard with its letter-delta; power boasted, not used."),
+
+ dict(ref=(31,30), op="THE_LONGING_AND_THE_GODS",
+  en="And now, going you went because longing you longed for your father's house — why did you steal my gods?",
+  tl_en="you went because you longed for your father's house",
+  tr_en="why did you steal my gods?",
+  ops=[
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(lama_ganavta_et_elohay(lavan), t1)",
+    frag=("la-ma",4), prose="""
+THE WHOLE-CAREER DOUBLET [care 9]. nikhsof nikhsafta (3700 toks
+1-2/2 — WHOLE CAREER IN ONE VERSE) [VERIFIED: SNAPSHOT Gen.31.30
+idx4-5 ordinals=1-2/2] — the LONGING-verb's entire Torah life is
+this single doubled utterance (infinitive absolute + finite),
+granted by the accuser to the accused. halokh halakhta (1980 toks
+24-25/85) [VERIFIED: idx1-2] — a second doubling in the same
+breath. la-ma ganavta et ELOHAY (1589 tok6/21; 430 tok156/812)
+[VERIFIED: idx8-11] — "my GODS": the god-word covers the stolen
+terafim and the warning God of 31:24 within one unit — strong 430
+serves both (walk note; the terafim equation is 31:34-35's, where
+the narrator swaps the nouns). Depth 1."""),
+  ],
+  comment="Longing granted, theft charged; the god-word starts doubling."),
+
+ dict(ref=(31,31), op="THE_FEAR_ANSWER",
+  en="And Jacob answered and said to Laban: Because I was afraid, for I said: Lest you tear your daughters away from me.",
+  tl_en="Jacob answered Laban: because I was afraid",
+  tr_en="lest you tear your daughters from me",
+  ops=[
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(yareti_pen_tigzol(yaaqov), t1)",
+    frag=("ki",4), prose="""
+THE FEAR CONFESSED [care 10]. yareti (3372 tok11/81) [VERIFIED:
+SNAPSHOT Gen.31.31 idx5 ordinal=11/81] — Jacob's stated motive; the
+fear-verb's next token is 32:8 (va-yira — before Esau): the two
+fears bracket the river. pen tigzol (1497 tok2/6) [VERIFIED: idx9
+ordinal=2/6] — the TEAR-AWAY verb (career → Lev 5:23/19:13, the
+robbery-law); Jacob imagines seized daughters, Laban has just
+alleged captive daughters (31:26) — each man files the same charge
+prospectively at the other. Depth 1."""),
+  ],
+  comment="Fear answers the storm; the tear-verb aimed both ways."),
+
+ dict(ref=(31,32), op="THE_DEATH_OATH_AND_THE_WARRANT",
+  en="With whomever you find your gods — he shall not live. Before our kinsmen, identify what of yours is with me and take it. And Jacob did not know that Rachel had stolen them.",
+  tl_en="whoever has your gods shall not live — identify and take",
+  tr_en="Jacob did not know that Rachel stole them",
+  ops=[
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(im_timtza_lo_yichye(oath_content), t1)",
+    frag=("im",7), prose="""
+THE DEATH-OATH [care 11]. im asher timtza et eloheykha lo yichye
+(4672 tok25/122; 2421 tok46/83) [VERIFIED: SNAPSHOT Gen.31.32
+idx2,6 ordinals=25/122, 46/83] — oath-content FACT (gen_40's
+lo-tiqach class: imperfect terms of a swear-frame push nothing).
+It never triggers in-span — nothing is found; Rachel dies at
+35:16-19, OUTSIDE the span: watchlist arm, no adjudication, the
+letter records only that the oath was spoken over an unknown
+holder."""),
+   dict(op="DECLARE",
+    expr="DECLARE(yaaqov, LET(haker_ve_qach(lavan, ma_imadi)))",
+    frag=("haker",6), prose="""
+THE WARRANT-PUSH [UNIT SHAPE (2)]. haker le-kha ma imadi ve-qach
+lakh — TWO coordinated 2ms imperatives, one addressee, one breath:
+haker (5234 tok2/15, HVhv2ms) + ve-qach (3947 tok93/393,
+HC/Vqv2ms) [VERIFIED: SNAPSHOT Gen.31.32 idx9,13 morphs=HVhv2ms,
+HC/Vqv2ms] — one COMPOUND demand (gen_34 flag-4 class; gen_41's
+24:61 standard: partials never pop). The recognize-verb debuted
+NEGATED at 27:23 — ve-lo hikir-o, Isaac NOT recognizing the
+disguised Jacob [VERIFIED: SNAPSHOT 27:23 idx0-1] — and its first
+imperative token is Jacob inviting a recognition that will find
+nothing. PUSH LET(haker_ve_qach(lavan, ma_imadi)). Depth 2."""),
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(velo_yada_yaaqov_ki_rachel_genavatam(narrator), t2)",
+    frag=("ve-lo",6), prose="""
+THE KNOWLEDGE-GAP FENCE. ve-lo yada yaaqov ki rachel genavatam
+(3045 tok36/174; 7354 tok30/44; 1589 tok7/21) [VERIFIED: SNAPSHOT
+Gen.31.32 idx15-20] — the narrator's dramatic-irony line: the
+demander does not know his own demand shelters the thief and his
+oath aims at his beloved. The machine holds the demand and the
+oath side by side; the letter withholds the collision. Depth 2."""),
+  ],
+  comment="Death-oath spoken blind; the identify-and-take compound pushed; depth 2."),
+
+ dict(ref=(31,33), op="THE_FOUR_TENTS",
+  en="And Laban came into Jacob's tent and into Leah's tent and into the tent of the two maidservants, and did not find; and he went out of Leah's tent and came into Rachel's tent.",
+  tl_en="into Jacob's, Leah's, the maidservants' tents — nothing",
+  tr_en="out of Leah's tent, into Rachel's tent",
+  ops=[
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(lo_matza_rishon(lavan, arba_ohalim), t2)",
+    frag=("va-yavo",3,2), prose="""
+THE SEARCH BEGINS [care 12]. ohel ×5 in one verse (168 toks
+17-21/215) [VERIFIED: SNAPSHOT Gen.31.33 idx2,4,6,12,15] — the
+tent-word's densest verse [VERIFIED: per-verse census over
+debut_map 168 — five here, no other verse above three]; ve-lo matza (4672 tok26/122) [VERIFIED:
+idx10] — negated find #1 of three. The order walks Jacob → Leah →
+the maidservants → (return) → Rachel: the verse doubles back to
+put Rachel LAST, and the searcher enters her tent as the verse
+ends — the letter's own suspense architecture. Depth 2."""),
+  ],
+  comment="Three tents empty; the verse re-enters at Rachel's; both cards hold."),
+
+ dict(ref=(31,34), op="THE_SITTING_ON_THE_GODS",
+  en="And Rachel had taken the terafim and put them in the camel's saddle-cushion and sat upon them. And Laban felt through all the tent and did not find.",
+  tl_en="Rachel put the terafim in the camel-cushion and sat on them",
+  tr_en="Laban felt all the tent and did not find",
+  ops=[
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(va_tesimem_va_teshev_aleihem(rachel, ha_terafim), t2)",
+    frag=("ve-rachel",4), prose="""
+THE HIDING SET [care 12; UNIT SHAPE (4) first half]. va-tesime-m
+(7760 tok24/152) [VERIFIED: SNAPSHOT Gen.31.34 idx4 ordinal=24/152]
+— the SET-verb performed by RACHEL, hiding the gods: file this
+token — the verb's NEXT career token (25/152) is Jacob's imperative
+at 31:37 demanding a setting that would REVEAL them:
+performance-before-demand, wrong performer, consecutive tokens.
+be-khar ha-gamal (3733 tok1/2 DEBUT; 1581 tok22/28) [VERIFIED:
+idx5-6] — the camel-cushion born as a god-box. va-teshev ale-hem
+(3427 tok42/199) [VERIFIED: idx7] — she SITS on the gods her
+father seeks. va-yemashesh (4959 tok3/7) [VERIFIED: idx9
+ordinal=3/7] — the FEEL-verb: toks 1-2 = Isaac feeling the
+disguised Jacob (27:12,22 — gen_46's span); toks 3-4 = Laban
+feeling the tents: all four Genesis tokens are deceiver-feelings;
+career → Exod 10:21 (darkness to be felt), Deut 28:29 (noon
+groping). ve-lo matza — negated find #2. Depth 2."""),
+  ],
+  comment="The set-verb performs as concealment; the feel-verb's second deceiver."),
+
+ dict(ref=(31,35), op="THE_WAY_OF_WOMEN_AND_THE_JUSSIVE",
+  en="And she said to her father: Let it not burn in the eyes of my lord that I cannot rise before you, for the way of women is upon me. And he searched and did not find the terafim.",
+  tl_en="let it not burn — the way of women is upon me",
+  tr_en="he searched and did not find the terafim",
+  ops=[
+   dict(op="DECLARE",
+    expr="DECLARE(rachel, LET-NOT(yichar(be_ene_adoni)))",
+    frag=("yichar",3), prose="""
+THE LET-NOT [UNIT SHAPE (3); care 13]. al yichar be-ene adoni
+(2734 tok6/33, HVqj3ms true jussive) [VERIFIED: SNAPSHOT Gen.31.35
+idx4 ordinal=6/33 morph=HVqj3ms] — gen_34's 18:30/32 al-yichar
+class: same burn-verb, same negative-jussive mood (there al-na
+yichar la-adonai, here al yichar be-ene adoni; Abraham's two
+anger-petitions pushed as LET-NOT and never popped). Rachel's
+first LET-NOT — her prior pushes are gen_51's (30:1 give-me-sons,
+30:3 the Bilhah demand, 30:14 the mandrakes-ask). ki lo ukhal la-qum (3201 tok9/64; 6965
+tok37/145) [VERIFIED: idx9-10] — the rise she cannot perform,
+seated on the evidence; derekh nashim (1870 tok16/116; 802
+tok114/307) [VERIFIED: idx13-14] — the excuse that stops the
+search at her saddle. PUSH LET-NOT(yichar(be_ene_adoni)).
+Depth 3."""),
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(lo_matza_et_ha_terafim(lavan, sof_chipus), t3)",
+    frag=("va-yechapes",4), prose="""
+THE TERAFIM EXIT UNFOUND. va-yechapes (2664 tok1/2 DEBUT)
+[VERIFIED: SNAPSHOT Gen.31.35 idx16 ordinal=1/2] — the SEARCH-verb
+born; its ONLY other token is 44:12 — the goblet-search: the
+corpus's two chapes-searches both hunt property planted by the
+searched party's own kin. ve-lo matza et ha-terafim (8655 tok3/3
+CLOSES) [VERIFIED: idx20 ordinal=3/3] — the terafim's whole Torah
+career: stolen (31:19), sat upon (31:34), NOT FOUND (31:35) —
+they leave the Torah unfound, their last token inside a negation.
+Depth 3."""),
+  ],
+  comment="Rachel's let-not-burn pushed; the terafim close their career unfound."),
+
+ dict(ref=(31,36), op="THE_BURN_LANDS_WRONG",
+  en="And it burned for Jacob, and he quarreled with Laban; and Jacob answered and said to Laban: What is my transgression, what is my sin, that you have hotly pursued after me?",
+  tl_en="it burned for Jacob; he quarreled with Laban",
+  tr_en="what is my transgression, that you hotly pursued?",
+  ops=[
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(va_yichar_le_yaaqov(ha_charon_ba_enayim_acherot), t3)",
+    frag=("va-yichar",4), prose="""
+THE WRONG EYES [care 13]. va-yichar le-yaaqov (2734 tok7/33)
+[VERIFIED: SNAPSHOT Gen.31.36 idx0 ordinal=7/33] — the burn-verb's
+NEXT token after the banned one: Rachel asked the burning away
+from Laban's eyes (tok6, jussive), and one verse later it ignites
+— in JACOB. No burning in Laban's eyes is ever narrated: the
+LET-NOT's content stays unviolated on the letter (card OPEN), and
+the anger it deflected lands in other eyes, consecutive career
+tokens. va-yarev (7378 tok4/10) [VERIFIED: idx2] — the
+QUARREL-verb (the Gerar well-quarrels toks 1-3, gen_44). ma pishi
+(6588 tok1/9 DEBUT) [VERIFIED: idx9 ordinal=1/9] — the
+TRANSGRESSION-noun born inside an innocence protest; career →
+Exod 34:7 (the attribute-formula), Lev 16:16,21 (Yom Kippur's
+freight): the word that will carry Israel's guilt enters the
+Torah meaning "nothing, surely?". ma chatati (2403 tok3/142)
+[VERIFIED: idx11]; ki dalaqta (1814 tok1/1 HAPAX) [VERIFIED:
+idx13 ordinal=1/1] — the hot-pursuit verb spoken once in the
+Torah, by the pursued. Depth 3."""),
+  ],
+  comment="The deflected burn lands in Jacob; sin-vocabulary debuts protesting innocence."),
+
+ dict(ref=(31,37), op="THE_TRIBUNAL_DEMAND",
+  en="For you have felt through all my vessels — what have you found of all your house's vessels? Set it here before my kinsmen and your kinsmen, and let them decide between the two of us.",
+  tl_en="you felt all my vessels — what have you found? set it here",
+  tr_en="let them decide between the two of us",
+  ops=[
+   dict(op="DECLARE",
+    expr="DECLARE(yaaqov, LET(sim(lavan, ko_neged_achai_ve_achekha)))",
+    frag=("sim",5), prose="""
+THE SET-DEMAND [UNIT SHAPE (4); care 12]. mishashta (4959 tok4/7)
+[VERIFIED: SNAPSHOT Gen.31.37 idx1 ordinal=4/7] — the feel-verb's
+fourth and last Genesis token, now in the felt one's mouth. sim ko
+neged achai ve-achekha (7760 tok25/152, HVqv2ms) [VERIFIED: idx10
+ordinal=25/152 morph=HVqv2ms] — the SET-imperative: its
+IMMEDIATELY PRECEDING career token (24/152) is Rachel's
+va-tesime-m at 31:34 — the verb Jacob demands as disclosure was
+last performed as concealment, by the one person the demand cannot
+reach: performed-before-demanded, wrong performer, consecutive
+tokens. ve-yokhichu ben shenenu (3198 tok5/8, HC/Vhj3mp jussive)
+[VERIFIED: idx15 ordinal=5/8 morph=HC/Vhj3mp] — PURPOSE-CONTENT of
+the sim-demand (gen_51's 30:3 ve-teled class / gen_46 27:4: a
+jussive riding an imperative pushes nothing) — set it here SO THAT
+they may decide; the tribunal is the setting's purpose, and
+nothing is ever set: the demanded court never convenes. Its
+landing is 31:42's [see care 15]. PUSH LET(sim(lavan, ...)).
+Depth 4."""),
+  ],
+  comment="Set-it-here pushed; the tribunal rides as purpose; depth 4."),
+
+ dict(ref=(31,38), op="THE_AUDIT_OPENS",
+  en="These twenty years I have been with you: your ewes and your she-goats have not miscarried, and the rams of your flock I have not eaten.",
+  tl_en="twenty years: your ewes and goats did not miscarry",
+  tr_en="the rams of your flock I did not eat",
+  ops=[
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(esrim_shana_lo_shikelu(yaaqov, cheshbon), t4)",
+    frag=("ze",5), prose="""
+THE LEDGER [care 14]. ze esrim shana (6242 tok7/73) [VERIFIED:
+SNAPSHOT Gen.31.38 idx1 ordinal=7/73] — the twenty-years frame,
+first sounding (second at 31:41). rechele-kha (7353 tok1/2 DEBUT)
+[VERIFIED: idx5 ordinal=1/2] — the EWE-noun's Torah debut in the
+audit, one strong away from rachel the name (7354): the DB keeps
+the shepherdess (29:9, "for she was a shepherdess") and the ewes
+adjacent — filed as observation while Rachel sits on the terafim
+one scene back. ve-ize-kha lo shikelu (7921 tok2/8) [VERIFIED:
+idx8 ordinal=2/8] — the BEREAVE-verb: tok1 = 27:45 (Rebekah's
+"why should I be bereaved of you both" — gen_47's span), tok2 =
+the flock NOT-bereaved, tok3 = 42:36 (Jacob: "you have BEREAVED
+me") — the bereave-verb migrates from mother to flock to father.
+ve-ele tzon-kha lo akhalti (352 tok4/117; 398 tok43/328)
+[VERIFIED: idx9-12]. Depth 4."""),
+  ],
+  comment="The audit opens: no miscarriage, no eaten rams; four cards hold."),
+
+ dict(ref=(31,39), op="THE_SHEPHERD_LAW_SEED",
+  en="A torn animal I did not bring you — I bore its loss; from my hand you would seek it, stolen by day or stolen by night.",
+  tl_en="torn beasts I bore myself; you sought them from my hand",
+  tr_en="stolen by day or stolen by night",
+  ops=[
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(terefa_anokhi_achatena(yaaqov, cheshbon), t4)",
+    frag=("terefa",4), prose="""
+THE LIABILITY SENTENCE [care 14]. terefa (2966 tok1/6 DEBUT)
+[VERIFIED: SNAPSHOT Gen.31.39 idx0 ordinal=1/6] — the TORN-ANIMAL
+noun born as the shepherd's boast; career = Exod 22:12 (the
+bailment law's own terefa), Exod 22:30, Lev 7:24/17:15/22:8 — the
+torn-flesh statutes grow from this audit line. anokhi achate-na
+(2398 tok3/72) [VERIFIED: idx5 ordinal=3/72] — the SIN-root piel
+as "bear the loss": compensation-sense (in-career reading,
+fenced). mi-yadi tevaqshe-na (1245 tok1/15 DEBUT) [VERIFIED: idx7
+ordinal=1/15] — the SEEK-verb born in the wage-claim formula
+from-my-hand-you-would-seek-it; tok4 = 43:9, Judah's mi-yadi
+tevaqshenu — the surety-formula re-runs at the next
+hostage-negotiation (watch armed). genuvti yom u-genuvti layla
+(1589 toks 8-9/21) [VERIFIED: idx8,10] — the theft-verb's passive
+pair: the accused thief's own theft-losses. Depth 4."""),
+  ],
+  comment="Torn-animal law seeded; the seek-formula born; the theft-verb turns passive."),
+
+ dict(ref=(31,40), op="THE_HEAT_AND_THE_FROST",
+  en="I was: by day heat consumed me, and frost by night; and my sleep fled from my eyes.",
+  tl_en="by day heat consumed me, frost by night",
+  tr_en="my sleep fled from my eyes",
+  ops=[
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(chorev_qerach_nadad_shena(yaaqov, cheshbon), t4)",
+    frag=("hayiti",6), prose="""
+THREE HAPAXES, ONE VERSE [care 14]. chorev (2721 tok1/1) — HEAT;
+ve-qerach (7140 tok1/1) — FROST; va-tidad (5074 tok1/1) — FLED
+[VERIFIED: SNAPSHOT Gen.31.40 idx3,4,6 ordinals all 1/1]: three
+words the Torah speaks only here, all in one audit verse — day's
+consuming, night's freezing, sleep's flight. shenati (8142 tok2/2
+CLOSES) [VERIFIED: idx7 ordinal=2/2] — the SLEEP-noun's pair:
+tok1 = 28:16 mi-shenato — Jacob waking from the ladder-dream;
+tok2 = the sleep that fled his eyes in Laban's service: the
+corpus gives Jacob both of its sleeps, the visited and the
+stolen. Depth 4."""),
+  ],
+  comment="The audit's hapax verse; the sleep-noun closes on Jacob's two sleeps."),
+
+ dict(ref=(31,41), op="THE_TWENTY_YEARS_LEDGER",
+  en="These twenty years I have been in your house: I served you fourteen years for your two daughters and six years for your flock, and you changed my wages ten countings.",
+  tl_en="fourteen years for your daughters, six for your flock",
+  tr_en="you changed my wages ten countings",
+  ops=[
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(arba_esre_ve_shesh_aseret_monim(yaaqov, cheshbon), t4)",
+    frag=("va-tachalef",5), prose="""
+THE ARITHMETIC AND THE CLOSES [care 14]. ze li esrim shana (6242
+tok8/73) — the frame's second sounding; arba esre shana bi-shete
+venotekha ve-shesh shanim be-tzonekha (702 tok11/98; 6240
+tok14/92; 8337 tok6/73) [VERIFIED: SNAPSHOT Gen.31.41 idx6-13] —
+fourteen plus six: the ledger adds to its own frame. avadti-kha
+(5647 tok22/113) [VERIFIED: idx5]. va-tachalef (2498 tok2/5,
+HC/Vhw2ms — a second 2ms wayyiqtol accusation [VERIFIED: idx14
+morph=HC/Vhw2ms]) et maskurti (4909 tok3/3 CLOSES) [VERIFIED:
+idx16 ordinal=3/3] — the WAGE-noun's whole Torah career is this
+cycle: Laban's offer-word (29:15), Jacob's charge-word (31:7),
+Jacob's audit-word (31:41) — born and buried between these two
+men (gen_50's maskoret watch LANDS). aseret monim (4489 tok2/2
+CLOSES) [VERIFIED: idx17-18] — ten-countings spoken twice
+(31:7,41), both by Jacob, career complete. Depth 4."""),
+  ],
+  comment="Fourteen-plus-six arithmetic; the wage-noun's career ends in the audit."),
+
+ dict(ref=(31,42), op="THE_ADJUDICATION_ALREADY_HELD",
+  en="Were it not that the God of my father — the God of Abraham and the Fear of Isaac — was for me, now you would have sent me away empty. My affliction and the toil of my palms God has seen — and he adjudicated last night.",
+  tl_en="but for the Fear of Isaac, you'd have sent me empty",
+  tr_en="God saw my affliction and adjudicated last night",
+  ops=[
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(lule_elohe_avi_u_fachad_yitzchaq(yaaqov), t4)",
+    frag=("lule",7), prose="""
+THE FEAR IS BORN [care 15]. lule (3884 tok1/3 DEBUT) [VERIFIED:
+SNAPSHOT Gen.31.42 idx0 ordinal=1/3] — were-it-not enters the
+Torah. u-fachad yitzchaq (6343 tok1/6 DEBUT) [VERIFIED: idx5
+ordinal=1/6] — THE FEAR OF ISAAC: a divine title heard nowhere
+before; its pair-token (2/6) is 31:53, where Jacob SWEARS by it —
+the epithet's only two Torah tokens are this unit's own
+(remaining career = dread-the-noun, Exod 15:16 etc., in-span
+reading). reqam shilachta-ni (7387 tok1/6 DEBUT; 7971 tok33/201)
+[VERIFIED: idx11-12] — the EMPTY-send: the send-verb's third
+in-span irrealis [care 6]; reqam's career → Exod 3:21 "you shall
+not go EMPTY": what Laban would have done to Jacob, God forbids
+Egypt to do to Israel."""),
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(raa_Elohim_va_yokhach_amesh(landing_sim_tribunal), t4)",
+    frag=("va-yokhach",2), prose="""
+THE TRIBUNAL WAS LAST NIGHT [UNIT SHAPE (4); care 15]. et anyi
+ve-et yegia kapay raa Elohim (6040 tok3/9; 3018 tok1/2; 7200
+tok75/396) [VERIFIED: SNAPSHOT Gen.31.42 idx14,16,18] — the
+affliction-walk (Hagar 16:11 → Leah 29:32, gen_51's
+see-my-affliction write → Jacob) collocates raa + oni before
+Exod 3:7 says it nationally ("I have surely seen the oni of my
+people"). va-yokhach amesh (3198 tok6/8) [VERIFIED: idx20
+ordinal=6/8] — THE LANDING: the adjudicate-verb Jacob demanded
+at 31:37 (ve-yokhichu, tok5/8) was already performed — tok6, by
+GOD, AMESH — last night, BEFORE the demand: wrong performer,
+inverted order, consecutive career tokens; the sim-card stays
+OPEN (nothing was ever set), and the tribunal it purposed turns
+out to have adjourned before it was called. amesh (570 tok3/3
+CLOSES) [VERIFIED: idx21 ordinal=3/3] — Laban's emesh (31:29)
+and Jacob's amesh: one night, two mouths, and the
+yesterday-word's Torah career ends on it. Depth 4."""),
+  ],
+  comment="The Fear named, the empty-send denied, the demanded tribunal already held."),
+
+ dict(ref=(31,43), op="THE_EVERYTHING_IS_MINE",
+  en="And Laban answered and said to Jacob: The daughters are my daughters and the sons are my sons and the flock is my flock, and all that you see — it is mine. And for my daughters, what can I do for these today, or for their sons whom they have borne?",
+  tl_en="daughters, sons, flock — all that you see is mine",
+  tr_en="what can I do for these today?",
+  ops=[
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(ha_kol_li_hu_u_ma_eese(lavan), t4)",
+    frag=("ve-khol",6), prose="""
+THE ALL-CLAIM ANSWERS THE WARRANT [care 16]. ha-banot benotay
+ve-ha-banim banay ve-ha-tzon tzoni ve-khol asher ata roe li hu
+(1323 toks 66-68/204; 1121 toks 220-221/1498; 6629 toks
+42-43/116; 3605 tok234/1595) [VERIFIED: SNAPSHOT Gen.31.43
+idx5-16] — the identify-and-take demand (31:32) receives its
+answer in words: Laban identifies EVERYTHING as his — daughters,
+sons, flock, all you see — and takes NOTHING; the compound card
+stays OPEN with its limbs inverted (asked to pick out his own
+from Jacob's, he declares Jacob's all his own). ma eese la-ele
+ha-yom (6213 tok106/860) [VERIFIED: idx19 ordinal=106/860] — the
+do-verb pair: 31:29's yesh le-el yadi LA-ASOT ra (tok105, power
+to DO harm) is followed in the very career by ma EESE (tok106,
+what CAN I do) — boast and surrender, consecutive do-tokens,
+one speaker. Depth 4."""),
+  ],
+  comment="Identify-and-take answered by all-mine-take-nothing; the do-verb folds."),
+
+ dict(ref=(31,44), op="THE_COVENANT_COHORTATIVE",
+  en="And now, come, let us cut a covenant, I and you; and let it be for a witness between me and you.",
+  tl_en="come, let us cut a covenant, I and you",
+  tr_en="let it be witness between me and you",
+  ops=[
+   dict(op="DECLARE",
+    expr="DECLARE(lavan, CMD-US?(nikhreta(verit_ani_va_ata)))",
+    frag=("ve-ata",6), prose="""
+THE CUT-DEMAND [UNIT SHAPE (5); care 17]. lekha (3212 tok63/229,
+HVqv2ms + paragogic he) [VERIFIED: SNAPSHOT Gen.31.44 idx1
+morph=HVqv2ms/Sh] — summons-opener before a first-person volitive
+(gen_35's 19:32 lekha-class): no push of its own. nikhrta verit
+(3772 tok7/69, HVqh1cp TRUE cohortative; 1285 tok27/82)
+[VERIFIED: idx2-3 ordinal=7/69 morph=HVqh1cp] — CMD-US? per
+TIR-033 (gen_45's law: true cohortative, ?-guard kept while the
+receipt path stays open). THE CAREER SYMMETRY: the cut-verb's
+only two cohortative covenant-demands are toks 6/69 (26:28,
+Gerar — gen_45's centerpiece) and 7/69 (here, Gilead) [VERIFIED:
+full-career morph census of 3772 — exactly two 1cp-cohortative
+tokens] — adjacent demand-tokens; both will be answered by the SWEAR-verb (shava
+7650: toks 12/70 = 26:31, 13/70 = 31:53 — adjacent
+performance-tokens), and in both the other-root law (gen_45
+Excerpt B) keeps the card OPEN: the Torah's two demanded
+covenant-cuts are both sworn, neither cut. ve-haya le-ed (1961
+tok203/1050 weqatal; 5707 tok1/25 DEBUT) [VERIFIED: idx6-7] —
+promise-fact (gen_40's weqatal class), and the WITNESS-noun is
+BORN as the covenant's term; its in-span walk (44→48→50→52) hands
+it to Exod 20:16 (false witness), Deut 17:6 (two witnesses),
+Deut 31:19,21,26 (the song as witness). PUSH
+CMD-US?(nikhreta(verit_ani_va_ata)). Depth 5."""),
+  ],
+  comment="The second cohortative covenant-cut pushed; the witness-noun born; depth 5."),
+
+ dict(ref=(31,45), op="THE_STONE_RAISED",
+  en="And Jacob took a stone and raised it up as a pillar.",
+  tl_en="Jacob took a stone",
+  tr_en="raised it up as a pillar",
+  ops=[
+   dict(op="REGISTRY_INSTALL",
+    expr="WORLD += {ha_matzeva}",
+    frag=("va-yiqach",5), prose="""
+THE PILLAR [care 18]. va-yiqach yaaqov aven (3947 tok95/393; 68
+tok11/88) [VERIFIED: SNAPSHOT Gen.31.45 idx0,2] — the stone-walk:
+toks 8-10 = the well-mouth stone (29:3,8,10 — gen_50's span),
+tok11 = this pillar-stone, toks 12-13 = the gathered heap-stones
+(31:46), tok14 = 35:14, the NEXT pillar at Bethel. va-yerime-ha
+matzeva (7311 tok3/46; 4676 tok4/16) [VERIFIED: idx3-4
+ordinals=3/46, 4/16] — matzeva's toks 1-3 are gen_48's Bethel
+pillar; toks 4-7 are ALL this unit's witness-pillar (45,51,52,52);
+toks 8-9 = 35:14 (Bethel re-raised) and 35:20 — the pillar on
+RACHEL'S GRAVE: the next matzeva Jacob raises after this span is
+hers (watch armed at care 11's oath; no adjudication). WORLD +=
+ha_matzeva. Depth 5."""),
+  ],
+  comment="The pillar installed; its word's career runs Bethel to Rachel's grave."),
+
+ dict(ref=(31,46), op="THE_HEAP_AND_THE_WRONG_VERB",
+  en="And Jacob said to his kinsmen: Gather stones! And they took stones and made a heap, and they ate there upon the heap.",
+  tl_en="gather stones — and they took stones, made a heap",
+  tr_en="and they ate there upon the heap",
+  ops=[
+   dict(op="DECLARE",
+    expr="DECLARE(yaaqov, LET(liqtu(echav, avanim)))",
+    frag=("liqtu",2), prose="""
+THE GATHER-DEMAND [UNIT SHAPE (6); care 18]. liqtu avanim (3950
+tok1/15 DEBUT, HVqv2mp) [VERIFIED: SNAPSHOT Gen.31.46 idx3
+ordinal=1/15 morph=HVqv2mp] — the GATHER-verb enters the Torah as
+an imperative to Jacob's kinsmen. PUSH LET(liqtu(echav, avanim)).
+Depth 6."""),
+   dict(op="REGISTRY_INSTALL",
+    expr="WORLD += {ha_gal}",
+    frag=("va-yiqchu",4), prose="""
+THE OTHER-ROOT ANSWER. va-yiqchu avanim (3947 tok96/393)
+[VERIFIED: SNAPSHOT Gen.31.46 idx5 ordinal=96/393] — the deed
+answers in a DIFFERENT root: demanded laqat (gather, 3950),
+performed laqach (take, 3947) — lamed-qof-TET against
+lamed-qof-CHET, one letter apart, object identical [VERIFIED:
+strongs 3950 vs 3947, SNAPSHOT idx3,5]; gen_45's Excerpt B
+(different root → no pop; deed = EVENT FACT) holds the card OPEN
+— the letter-precision family (gen_50 object, gen_51 number,
+gen_53 quantifier) gains its VERB member. The gather-imperative's
+next imperative token is Exod 16:16 liqtu — the MANNA command:
+demanded here and answered in another verb, it performs
+nationally at the bread from heaven [debut_map 3950]. va-yaasu
+gal (1530 tok1/7) [VERIFIED: idx8 ordinal=1/7] — THE HEAP IS
+BORN: gal's whole Torah career (7/7) lives inside 31:46-52.
+va-yokhlu sham al ha-gal (398 tok45/328) [VERIFIED: idx9] — the
+first covenant meal, ON the witness-to-be. WORLD += ha_gal.
+Depth 6."""),
+  ],
+  comment="Gather demanded, take performed — one letter off; the heap installed; depth 6."),
+
+ dict(ref=(31,47), op="THE_TWO_TONGUES",
+  en="And Laban called it Yegar-Sahaduta [heap of witness, in Aramaic], and Jacob called it Galed [heap of witness, in Hebrew].",
+  tl_en="Laban called it Yegar-Sahaduta (Aramaic)",
+  tr_en="and Jacob called it Galed (Hebrew)",
+  ops=[
+   dict(op="NAME",
+    expr="name(ha_gal) := yegar_sahaduta",
+    frag=("va-yiqra",5), prose="""
+WRITE #1 — THE ARAMAIC [CROWN]. va-yiqra lo lavan yegar sahaduta
+(7121 tok75/193; 3026 toks 1-2/2) [VERIFIED: SNAPSHOT Gen.31.47
+idx0-4; ordinal=1-2/2] — and the SNAPSHOT tags BOTH name-tokens
+morph=ANp: the morph column's language prefix flips from H
+(Hebrew) to A (Aramaic) — a full-corpus scan (morph LIKE 'A%')
+returns EXACTLY these two tokens [VERIFIED: SQL count=2,
+2026-08-07]: the Torah's only Aramaic-tagged words, and the
+machine reads the language switch off the data layer. sahaduta =
+witness in Aramaic — the Hebrew witness-noun ed debuted three
+verses earlier (31:44, 5707 tok1/25): the covenant's key term is
+born in Hebrew and immediately translated: the corpus's first
+translation-pair. REGISTRY 1."""),
+   dict(op="NAME",
+    expr="name(ha_gal) := galed",
+    frag=("ve-yaaqov",4), prose="""
+WRITE #2 — THE HEBREW. ve-yaaqov qara lo galed (1567 tok1/2)
+[VERIFIED: SNAPSHOT Gen.31.47 idx5-8; ordinal=1/2] — ONE object,
+TWO name-writes, two languages: prior double-namings span units
+(ishah woman→chavah, gen_09/gen_11; shet twice, gen_13/gen_14 —
+registry-wide scan 2026-08-07), but no prior object is written
+twice within one unit — here within one VERSE — and none
+bilingually: the corpus's first two-tongue name-pair. h_name's
+last-write-wins leaves GALED as ha_gal's ledger label — and the
+letter itself settles on Galed at 31:48's etiology: the machine's
+overwrite law mirrors the text's own choice. REGISTRY 2 writes.
+Depth 6."""),
+  ],
+  comment="One heap, two tongues, two writes; the ledger keeps the Hebrew; REGISTRY 2."),
+
+ dict(ref=(31,48), op="THE_ETIOLOGY_REPORT",
+  en="And Laban said: This heap is witness between me and you today. Therefore its name was called Galed,",
+  tl_en="this heap is witness between me and you today",
+  tr_en="therefore its name was called Galed",
+  ops=[
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(ha_gal_ed_al_ken_galed(report_only), t6)",
+    frag=("al",5), prose="""
+THE AL-KEN REPORT [care 18; gen_45 flag-25 class]. ha-gal ha-ze ed
+beni u-venkha ha-yom (1530 tok3/7; 5707 tok2/25) [VERIFIED:
+SNAPSHOT Gen.31.48 idx2-7] — Laban speaks the heap INTO the
+witness-office the noun was born for (31:44). al ken qara shemo
+galed (7121 tok77/193; 1567 tok2/2 CLOSES) [VERIFIED: idx8-12
+ordinal=2/2] — al-ken etiology = REPORT class (gen_45's 26:33
+city-line law: no second write for an etiology formula); the
+REGISTRY sleeps at 2, and galed's two-token career closes inside
+its own naming-story. Depth 6."""),
+  ],
+  comment="The etiology reports what write #2 wrote; the registry sleeps."),
+
+ dict(ref=(31,49), op="THE_WATCHPOST_PRAYER",
+  en="And the Mitzpah [watchpost], because he said: May YHWH watch between me and you when we are hidden each from his fellow.",
+  tl_en="may YHWH watch between me and you",
+  tr_en="when we are hidden each from his fellow",
+  ops=[
+   dict(op="DECLARE",
+    expr="DECLARE(lavan, LET(yitzef(YHWH, beni_u_venekha)))",
+    frag=("yitzef",4), prose="""
+THE DEMAND-ON-GOD [UNIT SHAPE (7)]. ve-ha-mitzpa (4709 tok1/1
+HAPAX) [VERIFIED: SNAPSHOT Gen.31.49 idx0 ordinal=1/1] — a THIRD
+label arrives with NO naming verb ("asher amar" — elliptical):
+report-class etiology (gen_45 flag-25), NO write — the heap keeps
+its two written names, and the watchpost-word's whole Torah
+career is this verse. yitzef YHWH beni u-venekha (6822 tok1/1
+HAPAX, HVqj3ms TRUE jussive; 3068 tok150/1815) [VERIFIED: idx3-6
+ordinal=1/1 morph=HVqj3ms] — the watch-verb is ALSO a hapax: the
+pun's two halves (mitzpa the place, yitzef the prayer) are each
+single-token careers. The mood decides (gen_32's 16:5 law: Sarai's
+yishpot YHWH beini u-veinekha, true jussive, pushed on YHWH) — and
+31:49 re-runs 16:5's very formula with the verb swapped,
+judge→watch. The unit's ONLY YHWH token [VERIFIED: 3068 in-span
+count=1]. PUSH LET(yitzef(YHWH, beni_u_venekha)). Depth 7."""),
+  ],
+  comment="Mitzpah reported, not written; the jussive watch-prayer pushes on YHWH; depth 7."),
+
+ dict(ref=(31,50), op="THE_TERMS_AND_THE_SEE",
+  en="If you afflict my daughters, and if you take wives over my daughters — no man is with us; see, God is witness between me and you.",
+  tl_en="if you afflict my daughters, take wives over them",
+  tr_en="see, God is witness between me and you",
+  ops=[
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(im_teane_im_tiqach_oath_content(lavan), t7)",
+    frag=("ree",5), prose="""
+THE OATH-TERMS [care 17]. im teane et benotay ve-im tiqach nashim
+(6031 tok4/27; 3947 tok97/393) [VERIFIED: SNAPSHOT Gen.31.50
+idx1,5] — oath-content FACT (gen_45 flag-22 / gen_40 lo-tiqach
+class: conditional imperfects inside a swear-frame push nothing).
+THE AFFLICT-WALK: innah's career runs prophecy (15:13 "they will
+afflict them"), Sarai→Hagar (16:6,9), the BAN here (Laban fencing
+his daughters), then Exod 1:11-12 — Egypt performs nationally what
+the covenant banned domestically [debut_map 6031]. ree Elohim ed
+beni u-venekha (7200 tok77/396, HVqv2ms; 5707 tok3/25) [VERIFIED:
+idx12-16 morph=HVqv2ms] — SEE: exclamatory speech-opener FACT
+(gen_46's 27:27 flag-52 class: no performable content, no push) —
+the witness-noun's third sounding. Depth 7."""),
+  ],
+  comment="Afflict-ban filed as oath-content; the see-imperative stays an opener."),
+
+ dict(ref=(31,51), op="THE_CLAIMED_CASTER",
+  en="And Laban said to Jacob: Behold this heap and behold the pillar which I have cast between me and you.",
+  tl_en="behold this heap, behold the pillar",
+  tr_en="which I have cast between me and you",
+  ops=[
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(hine_ha_gal_ve_ha_matzeva_yariti(lavan), t7)",
+    frag=("hine",5), prose="""
+THE CAST-CLAIM [care 19]. hine ha-gal ha-ze ve-hine ha-matzeva
+(1530 tok4/7; 4676 tok5/16) [VERIFIED: SNAPSHOT Gen.31.51
+idx3-7] — heap and pillar presented as one boundary-set. asher
+yariti (3384 tok1/17 DEBUT) [VERIFIED: idx9 ordinal=1/17] — "which
+I have CAST": Laban claims the setting, but 31:45 narrates JACOB
+raising the pillar (va-yerime-ha, rum) — claimed caster against
+narrated raiser, different verbs, different men
+(letter-observation; no queue effect). The cast-verb's later
+career is the TEACH-cluster (Exod 24:12 le-horotam, Lev 10:11,
+Deut 33:10 yoru) — the same root-family that yields torah
+(etymology fenced; career-tokens only). Depth 7."""),
+  ],
+  comment="Laban claims the raising the letter gave Jacob; the cast-verb debuts."),
+
+ dict(ref=(31,52), op="THE_BOUNDARY_OATH",
+  en="Witness is this heap and witness the pillar: that I will not pass beyond this heap to you, and that you will not pass beyond this heap and this pillar to me, for harm.",
+  tl_en="witness the heap, witness the pillar",
+  tr_en="neither passes to the other, for harm",
+  ops=[
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(ed_ha_gal_ve_eda_ha_matzeva_lo_naavor(oath_content), t7)",
+    frag=("ed",5), prose="""
+THE UNCROSSABLE LINE [care 20]. ed ha-gal... ve-eda ha-matzeva
+(5707 tok4/25; 5713 tok2/5) [VERIFIED: SNAPSHOT Gen.31.52
+idx0-4] — masculine witness and feminine witness (eda's tok1 =
+21:30, the seven ewe-lambs le-eda: witness-objects both times).
+im ani lo EEVOR... ve-im ata lo TAAVOR (5674 toks 10-11/130)
+[VERIFIED: idx8,16 ordinals=10-11/130] — gen_53's river-crossing
+(va-yaavor, tok9 = 31:21) is IMMEDIATELY followed in the
+cross-verb's career by the crossing BANNED for harm: consecutive
+tokens, the crossed river's verb turned boundary-verb. Oath-content
+imperfects: FACT class, no push. le-raa (7451 tok16/96) [VERIFIED:
+idx24] — the ra-frame closes: banned bad-SPEECH opened the unit
+(mi-tov ad ra, 31:24/29), banned bad-CROSSING closes it. gal toks
+5-7/7 — the heap's career completes inside its own oath. Depth
+7."""),
+  ],
+  comment="The cross-verb turns boundary; the ra-frame and the heap's career close."),
+
+ dict(ref=(31,53), op="THE_OATH_BY_THE_FEAR",
+  en="The God of Abraham and the god of Nahor judge between us — the god of their father. And Jacob swore by the Fear of his father Isaac.",
+  tl_en="gods of Abraham and Nahor judge between us",
+  tr_en="Jacob swore by the Fear of his father Isaac",
+  ops=[
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(yishptu_imperfect_fenced(elohe_avraham_ve_lohe_nachor), t7)",
+    frag=("elohe",5), prose="""
+THE MOOD-LAW'S PAIR [UNIT SHAPE (7); care 21]. elohe avraham
+ve-lohe nachor yishptu venenu (8199 tok5/27, HVqi3mp IMPERFECT)
+[VERIFIED: SNAPSHOT Gen.31.53 idx0-5 morph=HVqi3mp] — the
+judge-root's return to the between-us formula it debuted in
+(16:5, Sarai's yishpot — HVqj3ms JUSSIVE, tok1/27, pushed by
+gen_32) — same root, same formula, but the morph line reads
+imperfect, and gen_51's yosef-class fence rules (volitive by
+sense, imperfect on the letter: NO push): the machine pushes
+Sarai's prayer and 31:49's yitzef, and fences Laban's yishptu —
+mood, not meaning, moves the queue. nachor (5152 tok16/16
+CLOSES) [VERIFIED: idx3 ordinal=16/16] — Nahor's last Torah
+token stands as a god-formula's genitive."""),
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(va_yishava_yaaqov_be_fachad_aviv(other_root_performance), t7)",
+    frag=("va-yishava",5), prose="""
+THE SWEAR ANSWERS THE CUT [UNIT SHAPE (5)]. va-yishava yaaqov
+(7650 tok13/70) [VERIFIED: SNAPSHOT Gen.31.53 idx8
+ordinal=13/70] — the OTHER-ROOT performance: karat was demanded
+(31:44, tok7/69), shava is performed — exactly gen_45's
+26:28→26:31 shape (its demand tok6/69, its performance tok12/70):
+adjacent demand-tokens, adjacent performance-tokens, two
+covenants sworn, neither cut on the letter; Excerpt B holds
+CMD-US? OPEN, the deed files as EVENT FACT. be-fachad aviv
+yitzchaq (6343 tok2/6) [VERIFIED: idx10 ordinal=2/6] — Jacob
+swears BY THE FEAR: the epithet born in his protest (31:42)
+becomes his oath's divine name eleven verses later — the title's
+whole Torah life is this unit's two tokens (in-span reading,
+care 15). Depth 7."""),
+  ],
+  comment="Imperfect prayer fenced, jussive's oath sworn in the other root; depth 7."),
+
+ dict(ref=(31,54), op="THE_FIRST_SACRIFICE",
+  en="And Jacob sacrificed a sacrifice on the mountain and called his kinsmen to eat bread; and they ate bread and lodged on the mountain.",
+  tl_en="Jacob sacrificed a sacrifice, called his kinsmen to eat",
+  tr_en="they ate bread and lodged on the mountain",
+  ops=[
+   dict(op="PRECONDITION_STATE",
+    expr="HOLDS(va_yizbach_zevach_va_yokhlu_va_yalinu(yaaqov, echav, ba_har), t7)",
+    frag=("va-yizbach",4), prose="""
+THE SACRIFICE IS BORN [care 22]. va-yizbach yaaqov zevach (2076
+tok1/41 DEBUT; 2077 tok1/72 DEBUT) [VERIFIED: SNAPSHOT Gen.31.54
+idx0,2 ordinals=1/41, 1/72] — the SACRIFICE verb AND noun enter
+the Torah together: the first narrated zevach-act is Jacob's
+covenant meal on the mountain of the oath; the verb's tok2 = 46:1
+— Jacob again, at Beersheba, bound for Egypt: its first two
+tokens are both his; the noun's career runs to Exod 12:27 (the
+pesach answer) and Lev 3 (the shelamim law) — the peace-offering
+vocabulary debuts sealing a peace. va-yiqra le-echav le-ekhal
+lachem (7121 tok78/193; 398 toks 46-47/328; 3899 toks 8-9/84)
+[VERIFIED: idx4-9] — the second covenant meal (the first ate on
+the heap, 31:46). va-yalinu ba-har (3885 tok7/31) [VERIFIED:
+idx10] — they lodge on the mountain. UNIT END: SPECS depth 7
+OPEN (hishamer · haker_ve_qach · LET-NOT yichar · sim · CMD-US?
+nikhreta · liqtu · yitzef) — SEVEN pushed, ZERO popped, SEVEN
+OPEN: gen_34's Mamre end-shape re-fires at Gilead (final-scenario
+scan 2026-08-07: exceeded only by gen_35's 13 and gen_46's 12).
+REGISTRY 2 writes (both on ha_gal — two tongues). TESTS 0 (tov
+×2 idiom-fenced, care 3). Divine-name walk: Elohim/elohe ×11,
+YHWH ×1 (31:49, inside the pushed prayer), pachad-as-title ×2,
+ha-arami ×1, and two Aramaic tokens no Hebrew morph will
+claim."""),
+  ],
+  comment="The sacrifice-verb born at the seal; seven cards stand open at the wall."),
+]
+
+# ---------------------------------------------------------------------------
+
+def _s(id, ref, frag, title, given, expect, occ=1):
+    d = dict(id=id, ref=ref, frag=frag, title=title, given=given, expect=expect)
+    d["occ"] = occ
+    return d
+
+HG = "LET(hishamer(lavan, pen_tedaber_im_yaaqov_mi_tov_ad_ra)) pushed and OPEN;"
+HQ = "LET(haker_ve_qach(lavan, ma_imadi)) pushed and OPEN;"
+YN = "LET-NOT(yichar(be_ene_adoni)) pushed and OPEN;"
+SM = "LET(sim(lavan, ko_neged_achai_ve_achekha)) pushed and OPEN;"
+NK = "CMD-US?(nikhreta(verit_ani_va_ata)) pushed and OPEN;"
+LQ = "LET(liqtu(echav, avanim)) pushed and OPEN;"
+YZ = "LET(yitzef(YHWH, beni_u_venekha)) pushed and OPEN;"
+NTN = "no test, no name."
+R2 = "REGISTRY 2 writes"
+
+SCENS = [
+ _s("S1", (31,22), ("va-yugad",4),
+    "after STEP_Gn_31_22 — the flight told; queue empty",
+    "It was told to Laban on the third day that Jacob had fled.",
+    ["SPECS empty;", NTN]),
+ _s("S2", (31,23), ("va-yirdof",5),
+    "after STEP_Gn_31_23 — seven days' pursuit; queue empty",
+    "He pursued seven days and overtook him at Mount Gilead.",
+    ["SPECS empty;", NTN]),
+ _s("S3", (31,24), ("hishamer",9),
+    "after STEP_Gn_31_24 — the dream guard-order pushed; depth 1",
+    "Guard yourself, lest you speak with Jacob from good to bad.",
+    [HG, NTN]),
+ _s("S4", (31,25), ("va-yaseg",4),
+    "after STEP_Gn_31_25 — two camps at Gilead; depth 1",
+    "Laban overtook Jacob; two tents pitched in the mountain.",
+    [HG, NTN]),
+ _s("S5", (31,26), ("me",5),
+    "after STEP_Gn_31_26 — the heart-theft charge; depth 1",
+    "What have you done — you stole my heart.",
+    [HG, NTN]),
+ _s("S6", (31,27), ("la-ma",5),
+    "after STEP_Gn_31_27 — the unplayed band; depth 1",
+    "Why did you hide to flee and steal me away?",
+    [HG, NTN]),
+ _s("S7", (31,28), ("ve-lo",5),
+    "after STEP_Gn_31_28 — the denied kiss, the hapax verdict; depth 1",
+    "You did not let me kiss my sons and daughters.",
+    [HG, NTN]),
+ _s("S8", (31,29), ("hishamer",8),
+    "after STEP_Gn_31_29 — the guard retold, fenced; still depth 1",
+    "Your father's God said to me last night: guard yourself.",
+    [HG, NTN]),
+ _s("S9", (31,30), ("la-ma",4),
+    "after STEP_Gn_31_30 — the longing granted, the gods claimed; depth 1",
+    "Why did you steal my gods?",
+    [HG, NTN]),
+ _s("S10", (31,31), ("ki",4),
+    "after STEP_Gn_31_31 — the fear answer; depth 1",
+    "Because I was afraid: lest you tear your daughters from me.",
+    [HG, NTN]),
+ _s("S11", (31,32), ("haker",6),
+    "after STEP_Gn_31_32 — death-oath filed, identify-and-take pushed; depth 2",
+    "Identify what of yours is with me and take it.",
+    [HG, HQ, NTN]),
+ _s("S12", (31,33), ("va-yavo",3),
+    "after STEP_Gn_31_33 — three tents empty; depth 2",
+    "He came into Rachel's tent.",
+    [HG, HQ, NTN], occ=2),
+ _s("S13", (31,34), ("ve-rachel",4),
+    "after STEP_Gn_31_34 — the gods sat upon; the set-verb spent; depth 2",
+    "Rachel put the terafim in the camel-cushion and sat on them.",
+    [HG, HQ, NTN]),
+ _s("S14", (31,35), ("yichar",3),
+    "after STEP_Gn_31_35 — let-it-not-burn pushed; terafim unfound; depth 3",
+    "Let it not burn in the eyes of my lord.",
+    [HG, HQ, YN, NTN]),
+ _s("S15", (31,36), ("va-yichar",4),
+    "after STEP_Gn_31_36 — the burn lands in Jacob; depth 3",
+    "And it burned for Jacob, and he quarreled with Laban.",
+    [HG, HQ, YN, NTN]),
+ _s("S16", (31,37), ("sim",5),
+    "after STEP_Gn_31_37 — set-it-here pushed; the tribunal rides; depth 4",
+    "Set it here before my kinsmen and your kinsmen.",
+    [HG, HQ, YN, SM, NTN]),
+ _s("S17", (31,38), ("ze",5),
+    "after STEP_Gn_31_38 — the audit opens; depth 4",
+    "Twenty years: your ewes and she-goats have not miscarried.",
+    [HG, HQ, YN, SM, NTN]),
+ _s("S18", (31,39), ("terefa",4),
+    "after STEP_Gn_31_39 — the torn-animal line; depth 4",
+    "A torn animal I did not bring you — I bore its loss.",
+    [HG, HQ, YN, SM, NTN]),
+ _s("S19", (31,40), ("hayiti",6),
+    "after STEP_Gn_31_40 — heat, frost, fled sleep; depth 4",
+    "By day heat consumed me, and frost by night.",
+    [HG, HQ, YN, SM, NTN]),
+ _s("S20", (31,41), ("va-tachalef",5),
+    "after STEP_Gn_31_41 — fourteen and six and ten countings; depth 4",
+    "You changed my wages ten countings.",
+    [HG, HQ, YN, SM, NTN]),
+ _s("S21", (31,42), ("va-yokhach",2),
+    "after STEP_Gn_31_42 — the adjudication was last night; depth 4",
+    "God saw my affliction — and he adjudicated last night.",
+    [HG, HQ, YN, SM, NTN]),
+ _s("S22", (31,43), ("ve-khol",6),
+    "after STEP_Gn_31_43 — all-mine, take-nothing; depth 4",
+    "All that you see — it is mine.",
+    [HG, HQ, YN, SM, NTN]),
+ _s("S23", (31,44), ("ve-ata",6),
+    "after STEP_Gn_31_44 — the covenant cohortative pushed; depth 5",
+    "Come, let us cut a covenant, I and you.",
+    [HG, HQ, YN, SM, NK, NTN]),
+ _s("S24", (31,45), ("va-yiqach",5),
+    "after STEP_Gn_31_45 — the pillar raised and installed; depth 5",
+    "Jacob took a stone and raised it up as a pillar.",
+    [HG, HQ, YN, SM, NK, "WORLD += ha_matzeva;", NTN]),
+ _s("S25", (31,46), ("liqtu",2),
+    "after STEP_Gn_31_46 — gather pushed, take performed; the heap; depth 6",
+    "Gather stones! And they took stones and made a heap.",
+    [HG, HQ, YN, SM, NK, LQ, "WORLD += ha_gal;", NTN]),
+ _s("S26", (31,47), ("va-yiqra",5),
+    "after STEP_Gn_31_47 — two names in two tongues; REGISTRY 2",
+    "Laban called it Yegar-Sahaduta; Jacob called it Galed.",
+    [HG, HQ, YN, SM, NK, LQ, R2]),
+ _s("S27", (31,48), ("al",5),
+    "after STEP_Gn_31_48 — the etiology reports; REGISTRY sleeps at 2",
+    "Therefore its name was called Galed.",
+    [HG, HQ, YN, SM, NK, LQ, R2]),
+ _s("S28", (31,49), ("yitzef",4),
+    "after STEP_Gn_31_49 — the watch-prayer pushed on YHWH; depth 7",
+    "May YHWH watch between me and you.",
+    [HG, HQ, YN, SM, NK, LQ, YZ, R2]),
+ _s("S29", (31,50), ("ree",5),
+    "after STEP_Gn_31_50 — oath-terms filed; the see-opener; depth 7",
+    "See, God is witness between me and you.",
+    [HG, HQ, YN, SM, NK, LQ, YZ, R2]),
+ _s("S30", (31,51), ("hine",5),
+    "after STEP_Gn_31_51 — heap and pillar presented; depth 7",
+    "Behold this heap and behold the pillar.",
+    [HG, HQ, YN, SM, NK, LQ, YZ, R2]),
+ _s("S31", (31,52), ("ed",5),
+    "after STEP_Gn_31_52 — the boundary oath; depth 7",
+    "I will not pass to you, you will not pass to me, for harm.",
+    [HG, HQ, YN, SM, NK, LQ, YZ, R2]),
+ _s("S32", (31,53), ("va-yishava",5),
+    "after STEP_Gn_31_53 — sworn in the other root; depth 7",
+    "And Jacob swore by the Fear of his father Isaac.",
+    [HG, HQ, YN, SM, NK, LQ, YZ, R2]),
+ _s("S33", (31,54), ("va-yizbach",4),
+    "after STEP_Gn_31_54 — the first sacrifice; seven open at the wall",
+    "Jacob sacrificed a sacrifice on the mountain; they ate and lodged.",
+    [HG, HQ, YN, SM, NK, LQ, YZ, R2]),
+]
