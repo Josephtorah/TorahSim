@@ -1,4 +1,4 @@
-# Resume prompt — SOLO ERA · 60 frozen · THIRD 3-BLOCK RUN COMPLETE + COMMITTED (9ecc7aa / 4a1eb5e / 71700db / cd65531, pushed; tree clean, grok-mockups/ untracked by owner's design) · 2026-08-07
+# Resume prompt — SOLO ERA · 60 frozen · THIRD 3-BLOCK RUN COMPLETE + COMMITTED (9ecc7aa / 4a1eb5e / 71700db / cd65531 / stamp d635c1a, pushed; tree clean, grok-mockups/ untracked by owner's design) · 2026-08-07 · COMPACTION POINT #4
 
 COMMITS (owner word given, pushed to main): b9b9fa7 gen_47 freeze ·
 c88b200 gen_48 freeze (+ ALL_UNITS/index/solo-era doc) · 8a9a1b0 webapp
@@ -288,8 +288,13 @@ owner's design). Owner gates pending: next-block word (gen_60 =
 Gen 37, va-yeshev — Joseph begins; 37:1-2's megurim/toledot arms
 and 37:8's reign-mock already filed); derivation narratives ask
 now ×9 (gen_51-gen_59); machine-player go.
-NEXT-SESSION §CHECK: expect 60 frozen; HEAD = the stamp commit
-after cd65531; tree clean but grok-mockups/.
+OWNER COMPACTED HERE (compaction point #4) — on resume run §CHECK
+(expect 60 frozen; HEAD = the compaction-stamp commit one past
+d635c1a; tree clean but grok-mockups/), then await owner word:
+gen_60 = Gen 37 next block (prestage: python3
+logic/solo_tools/prestage.py Gen 37:1-37:36), or machine-player
+go, or narratives ask (×9, gen_51-gen_59). No autonomous work
+before the word.
 
 ## SECOND AUTONOMOUS 3-BLOCK RUN (owner order 2026-08-07, post-compact:
 ## "once again lets do 3 blocks each one at a time but without my input")
