@@ -1,4 +1,4 @@
-# Resume prompt — SOLO ERA · 50 frozen · gen_49 FROZEN (uncommitted) · 2026-08-07
+# Resume prompt — SOLO ERA · 51 frozen · gen_49 COMMITTED (473dc36) · gen_50 FROZEN (uncommitted) · 2026-08-07
 
 COMMITS (owner word given, pushed to main): b9b9fa7 gen_47 freeze ·
 c88b200 gen_48 freeze (+ ALL_UNITS/index/solo-era doc) · 8a9a1b0 webapp
@@ -90,12 +90,55 @@ dwell toks 39→40 cross-wall landing (27:44 limb content); bone+flesh =
 qualifier, exhaustively proven). Review history: FAIL once on that
 absolute → amended → PASS zero discrepancies.
 
+## gen_50 FROZEN (2026-08-07, owner's next-block word)
+`gen_50_wage_seven_years_switched_bride` · Gen 29:15–30 · 16 steps · 16
+scenarios GREEN · regression 51/51 · ALL_UNITS 51/51 · index 51 ·
+py/html(undated)/watchlist done. Corpus: **Gen 1:1–29:30 gapless +
+lev_13.** Shape: FIVE volitives → FOUR pushes, THREE pops, and the
+CENTERPIECE NON-POP at 29:23 (hava_ishti's object = the contracted
+Rachel of 29:18; Leah delivered = OBJECT-MISMATCH; the switch is a card
+that refuses to clear until 29:28). Depth walk 1,1,1,0,1,1,2,2,2,2,2,2,
+3,1,1,1; ends depth 1 (sheva_imadi OPEN). 29:22 = first etnachta-less
+verse handled solo (tifcha idx5 split, gen_03 1:13 precedent; verifier
+fallback added). tov-instrument WOKE (2896 tok28, 29:19) — comparative-
+in-speech, fenced, TESTS 0. Headline seams verified: serve-verb toks
+9-12 consecutive (oracle→blessing→anti-blessing→"serve me for
+nothing?") + 12-17 in-span; Babel hava toks 1-3 → tok4; few-days 259
+toks 21-23; deceive 7411 tok1 = Torah's only piel, in the deceiver's
+mouth; tzeira/bekhirah = Lot's-daughters careers + 25:23 oracle-word;
+bekhirah 5/5 CLOSES; avodah 5656 1/83 DEBUT (service-noun born);
+do-verb toks 92-97 consecutive walk. Review: PASS, one prose ordinal
+amended (1419 toks 18-19, 22).
+
+## OPEN THREADS AT COMPACTION (2026-08-07)
+- **gen_50 commit word PENDING** (gen_49 committed 473dc36; gen_50
+  freeze artifacts clean on disk, uncommitted).
+- **grok-mockups/ untracked dir** — owner copied the three machine-player
+  mockups into the repo; owner decides commit vs untracked.
+- **Machine-player build** proposed and mocked, awaiting owner go. Three
+  private artifact mockups (all data from frozen units, hand-baked):
+  gen_46 queue-dialect:
+  https://claude.ai/code/artifact/c15e9c54-7b55-491b-bbc8-60a2e8cf7100
+  lev_13 rulebook-dialect:
+  https://claude.ai/code/artifact/057c2950-a7aa-410b-af2a-5aa9863fcc5d
+  gen_01 world-builder-dialect:
+  https://claude.ai/code/artifact/37ab827b-ad3b-4314-8962-00ad521f12ea
+  Real build = trace emitter over run_unit.py writing traces/<uid>.json
+  (all steps) + one static player page reading it; becomes a freeze-
+  ritual step. Local copies: scratchpad machine_player_*.html + owner's
+  grok-mockups/.
+- **Owner's framing question answered 2026-08-07** (keep the thesis):
+  narrative units INITIALIZE (entities, debuts, precedent classes),
+  law units CONSUME (lev_13 read_before_install flags = the dependency
+  graph; careers oil/avodah/neder/tithe/week/chinam = narrative-
+  allocated variables the law operates on). App-ness emerges at Stage E
+  cross-unit chaining.
+
 ## NEXT
-1. **Owner commit word** for gen_49 (gen_47+48 committed at 64ff484;
-   gen_49 artifacts uncommitted on disk).
-2. **gen_50 = 29:15–30 suggested** (wage, seven years, switched bride:
-   the deceiver deceived — 29:26 younger-before-FIRSTBORN inverts ch.
-   27) on owner's next-block word. Rhythm unchanged.
+1. **Owner commit word** for gen_50 (gen_49 committed 473dc36).
+2. **gen_51 = 29:31–30:24 suggested** (the womb arc: eleven births, the
+   NAME-WRITE AVALANCHE — REGISTRY's densest span; every son an explicit
+   etiology naming) on owner's next-block word. Rhythm unchanged.
 3. **Webapp machine-player** (owner floated 2026-08-07): visualize the
    interpreter run per unit — trace JSON baked at freeze + static player
    page; proposal delivered in chat, awaiting owner go.
@@ -124,8 +167,8 @@ names = HANDLERS table in run_unit.py (~line 413).
 ```
 cd <old-home>/code/Torah_Grok
 git log --oneline -3
-grep -l "status: frozen" logic/units/*.yaml | wc -l   # expect 50
-python3 run_unit.py gen_49_well_stone_rachel_arrival --scenarios | tail -1
+grep -l "status: frozen" logic/units/*.yaml | wc -l   # expect 51
+python3 run_unit.py gen_50_wage_seven_years_switched_bride --scenarios | tail -1
 for f in $(grep -l "status: frozen" logic/units/*.yaml); do n=$(grep -c "VERIFIED: SNAPSHOT]" $f); [ "$n" -gt 0 ] && echo "$f: $n"; done
 ```
 
