@@ -1,0 +1,246 @@
+#!/usr/bin/env python3
+# =============================================================================
+# gen_56_blessing_returned_first_altar — 33:1-20
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_56_blessing_returned_first_altar.yaml) is
+# CANONICAL (Pre-Code); this file is a derived, runnable rendering. Do not
+# edit — regenerate. The assertion block at the bottom is baked from the
+# Stage D interpreter's actual final state: running this file re-proves the
+# unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+"""The blessing returned and the first altar (33:1-20)"""
+from machine import Machine
+
+m = Machine("gen_56_blessing_returned_first_altar")
+
+# -------------------------- Gen.33.1 · THE_LIFTED_EYES_AND_THE_SPLIT -------
+# וַיִּשָּׂא יַעֲקֹב עֵינָיו וַיַּרְא וְהִנֵּה עֵשָׂו בָּא וְעִמּוֹ אַרְבַּע
+# מֵאוֹת אִישׁ וַיַּחַץ אֶת־הַיְלָדִים עַל־לֵאָה וְעַל־רָחֵל וְעַל שְׁתֵּי
+# הַשְּׁפָחוֹת
+# "[EN-AID] And Jacob lifted his eyes and saw, and behold, Esau was coming,
+# and with him four hundred men. And he divided the children unto Leah and
+# unto Rachel and unto the two maids."
+m.step("Gen.33.1")
+# ‹וַיִּשָּׂא יַעֲקֹב עֵינָיו וַיַּרְא וְהִנֵּה עֵשָׂו בָּא› fact holds:
+# and-yar-esav-in-the-and-yachatz(arba-meot-man)
+m.fact("va_yar_esav_ba_va_yachatz(arba_meot_ish)")
+
+# -------------------------- Gen.33.2 · THE_ORDER_OF_LOVE -------------------
+# וַיָּשֶׂם אֶת־הַשְּׁפָחוֹת וְאֶת־יַלְדֵיהֶן רִאשֹׁנָה וְאֶת־לֵאָה
+# וִילָדֶיהָ אַחֲרֹנִים וְאֶת־רָחֵל וְאֶת־יוֹסֵף אַחֲרֹנִים
+# "[EN-AID] And he put the maids and their children first, and Leah and her
+# children behind, and Rachel and Joseph hindmost."
+m.step("Gen.33.2")
+# ‹וַיָּשֶׂם אֶת־הַשְּׁפָחוֹת וְאֶת־יַלְדֵיהֶן רִאשֹׁנָה› fact holds:
+# rishona-acharonim-acharonim(seder-the-machane)
+m.fact("rishona_acharonim_acharonim(seder_ha_machane)")
+
+# -------------------------- Gen.33.3 · THE_BOW_INVERTED --------------------
+# וְהוּא עָבַר לִפְנֵיהֶם וַיִּשְׁתַּחוּ אַרְצָה שֶׁבַע פְּעָמִים
+# עַד־גִּשְׁתּוֹ עַד־אָחִיו
+# "[EN-AID] And he himself crossed over before them and bowed to the ground
+# seven times, until he came near to his brother."
+m.step("Gen.33.3")
+# ‹וַיִּשְׁתַּחוּ אַרְצָה שֶׁבַע פְּעָמִים› fact holds: and-yishtachu-seven-
+# peamim(hipukh-the-berakha)
+m.fact("va_yishtachu_sheva_peamim(hipukh_ha_berakha)")
+
+# -------------------------- Gen.33.4 · THE_HAND_BECOMES_ARMS ---------------
+# וַיָּרָץ עֵשָׂו לִקְרָאתוֹ וַיְחַבְּקֵהוּ וַיִּפֹּל עַל־צַוָּארָו
+# וַׄיִּׄשָּׁׄקֵׄהׄוּׄ וַיִּבְכּוּ
+# "[EN-AID] And Esau ran to meet him and embraced him, and fell on his neck
+# and kissed him; and they wept."
+m.step("Gen.33.4")
+# ‹וַיָּרָץ עֵשָׂו לִקְרָאתוֹ וַיְחַבְּקֵהוּ› fact holds: and-yechabqehu-
+# and-yivku(esav-and-yaaqov)
+m.fact("va_yechabqehu_va_yivku(esav_ve_yaaqov)")
+
+# -------------------------- Gen.33.5 · THE_GRACE_VERB_IS_BORN --------------
+# וַיִּשָּׂא אֶת־עֵינָיו וַיַּרְא אֶת־הַנָּשִׁים וְאֶת־הַיְלָדִים וַיֹּאמֶר
+# מִי־אֵלֶּה לָּךְ וַיֹּאמַר הַיְלָדִים אֲשֶׁר־חָנַן אֱלֹהִים אֶת־עַבְדֶּךָ
+# "[EN-AID] And he lifted his eyes and saw the women and the children, and
+# said: Who are these to you? And he said: The children with whom God has
+# graced your servant."
+m.step("Gen.33.5")
+# ‹חָנַן אֱלֹהִים אֶת־עַבְדֶּךָ› fact holds: the-yeladim-which-chanan-
+# God(maane-yaaqov)
+m.fact("ha_yeladim_asher_chanan_Elohim(maane_yaaqov)")
+
+# -------------------------- Gen.33.6 · THE_FIRST_WAVE ----------------------
+# וַתִּגַּשְׁןָ הַשְּׁפָחוֹת הֵנָּה וְיַלְדֵיהֶן וַתִּשְׁתַּחֲוֶיןָ
+# "[EN-AID] And the maids came near, they and their children, and they
+# bowed."
+m.step("Gen.33.6")
+# ‹וַתִּגַּשְׁןָ הַשְּׁפָחוֹת הֵנָּה וְיַלְדֵיהֶן וַתִּשְׁתַּחֲוֶיןָ› fact
+# holds: and-tigashna-and-tishtachavena(the-shefachot)
+m.fact("va_tigashna_va_tishtachavena(ha_shefachot)")
+
+# -------------------------- Gen.33.7 · THE_SECOND_AND_THIRD_WAVES ----------
+# וַתִּגַּשׁ גַּם־לֵאָה וִילָדֶיהָ וַיִּשְׁתַּחֲווּ וְאַחַר נִגַּשׁ יוֹסֵף
+# וְרָחֵל וַיִּשְׁתַּחֲווּ
+# "[EN-AID] And Leah too came near, and her children, and they bowed; and
+# after came Joseph near, and Rachel, and they bowed."
+m.step("Gen.33.7")
+# ‹וַתִּגַּשׁ גַּם־לֵאָה וִילָדֶיהָ וַיִּשְׁתַּחֲווּ› fact holds: and-
+# yishtachavu-kulam(lea-yosef-and-rachel)
+m.fact("va_yishtachavu_kulam(lea_yosef_ve_rachel)")
+
+# -------------------------- Gen.33.8 · THE_CAMP_EXPLAINED ------------------
+# וַיֹּאמֶר מִי לְךָ כָּל־הַמַּחֲנֶה הַזֶּה אֲשֶׁר פָּגָשְׁתִּי וַיֹּאמֶר
+# לִמְצֹא־חֵן בְּעֵינֵי אֲדֹנִי
+# "[EN-AID] And he said: What to you is all this camp which I met? And he
+# said: To find grace in the eyes of my lord."
+m.step("Gen.33.8")
+# ‹מִי לְךָ כָּל־הַמַּחֲנֶה הַזֶּה אֲשֶׁר› fact holds: from-to-you-kal-the-
+# machane(pagashti)
+m.fact("mi_lekha_kal_ha_machane(pagashti)")
+
+# -------------------------- Gen.33.9 · THE_KEEP_IT_JUSSIVE -----------------
+# וַיֹּאמֶר עֵשָׂו יֶשׁ־לִי רָב אָחִי יְהִי לְךָ אֲשֶׁר־לָךְ
+# "[EN-AID] And Esau said: I have much, my brother; let what is yours be
+# yours."
+m.step("Gen.33.9")
+# ‹יֶשׁ־לִי רָב אָחִי› esav speaks a demand — LET: yehi(to-you-which-to-you)
+m.declare("esav", "LET",
+          "yehi(lekha_asher_lakh)")
+
+# -------------------------- Gen.33.10 · THE_FACE_CODA_AND_THE_ACCEPT_VERB --
+# וַיֹּאמֶר יַעֲקֹב אַל־נָא אִם־נָא מָצָאתִי חֵן בְּעֵינֶיךָ וְלָקַחְתָּ
+# מִנְחָתִי מִיָּדִי כִּי עַל־כֵּן רָאִיתִי פָנֶיךָ כִּרְאֹת פְּנֵי אֱלֹהִים
+# וַתִּרְצֵנִי
+# "[EN-AID] And Jacob said: No, please — if now I have found grace in your
+# eyes, then take my offering from my hand; for therefore have I seen your
+# face, as one sees the face of God, and you have accepted me."
+m.step("Gen.33.10")
+# ‹כִּי עַל־כֵּן רָאִיתִי פָנֶיךָ כִּרְאֹת פְּנֵי אֱלֹהִים וַתִּרְצֵנִי›
+# fact holds: when-see-pene-God-and-tirtzeni(peniel-coda)
+m.fact("ki_reot_pene_Elohim_va_tirtzeni(peniel_coda)")
+
+# -------------------------- Gen.33.11 · THE_POP_THE_BLESSING_RETURNED ------
+# קַח־נָא אֶת־בִּרְכָתִי אֲשֶׁר הֻבָאת לָךְ כִּי־חַנַּנִי אֱלֹהִים וְכִי
+# יֶשׁ־לִי־כֹל וַיִּפְצַר־בּוֹ וַיִּקָּח
+# "[EN-AID] Take, please, my blessing that was brought to you, for God has
+# graced me, and because I have all. And he urged him, and he took."
+m.step("Gen.33.11")
+# ‹קַח־נָא אֶת־בִּרְכָתִי› yaaqov speaks a demand — LET: qach-na-
+# birkhati(esav)
+m.declare("yaaqov", "LET",
+          "qach_na_et_birkhati(esav)")
+# ‹וַיִּפְצַר־בּוֹ וַיִּקָּח› demand settled (popped from the queue): qach-
+# na-birkhati(esav)
+m.result("qach_na_et_birkhati(esav)", tmark="t2")
+
+# -------------------------- Gen.33.12 · THE_DECLINED_CONVOY ----------------
+# וַיֹּאמֶר נִסְעָה וְנֵלֵכָה וְאֵלְכָה לְנֶגְדֶּךָ
+# "[EN-AID] And he said: Let us journey and go, and I will go opposite you."
+m.step("Gen.33.12")
+# ‹נִסְעָה וְנֵלֵכָה וְאֵלְכָה לְנֶגְדֶּךָ› esav speaks a demand — CMD-US?:
+# nisa-and-nelekha(esav-and-yaaqov)
+m.declare("esav", "CMD-US?",
+          "nisa_ve_nelekha(esav_ve_yaaqov)")
+
+# -------------------------- Gen.33.13 · THE_TENDER_PACE --------------------
+# וַיֹּאמֶר אֵלָיו אֲדֹנִי יֹדֵעַ כִּי־הַיְלָדִים רַכִּים וְהַצֹּאן
+# וְהַבָּקָר עָלוֹת עָלָי וּדְפָקוּם יוֹם אֶחָד וָמֵתוּ כָּל־הַצֹּאן
+# "[EN-AID] And he said to him: My lord knows that the children are tender,
+# and the flock and herd giving suck are upon me; and were they overdriven
+# one day, all the flock would die."
+m.step("Gen.33.13")
+# ‹אֲדֹנִי יֹדֵעַ כִּי־הַיְלָדִים רַכִּים› fact holds: the-yeladim-rakim-
+# and-alot-alay(taanat-yaaqov)
+m.fact("ha_yeladim_rakim_ve_alot_alay(taanat_yaaqov)")
+
+# -------------------------- Gen.33.14 · THE_PASS_BEFORE_JUSSIVE ------------
+# יַעֲבָר־נָא אֲדֹנִי לִפְנֵי עַבְדּוֹ וַאֲנִי אֶתְנָהֲלָה לְאִטִּי לְרֶגֶל
+# הַמְּלָאכָה אֲשֶׁר־לְפָנַי וּלְרֶגֶל הַיְלָדִים עַד אֲשֶׁר־אָבֹא
+# אֶל־אֲדֹנִי שֵׂעִירָה
+# "[EN-AID] Let my lord pass, please, before his servant, and I will lead on
+# gently at my slow pace, at the foot of the work before me and at the foot
+# of the children, until I come to my lord, to Seir."
+m.step("Gen.33.14")
+# ‹יַעֲבָר־נָא אֲדֹנִי לִפְנֵי עַבְדּוֹ› yaaqov speaks a demand — LET:
+# yaavar-na(adoni, to-me-fene-avdo)
+m.declare("yaaqov", "LET",
+          "yaavar_na(adoni, li_fene_avdo)")
+
+# -------------------------- Gen.33.15 · THE_DECLINED_GARRISON --------------
+# וַיֹּאמֶר עֵשָׂו אַצִּיגָה־נָּא עִמְּךָ מִן־הָעָם אֲשֶׁר אִתִּי וַיֹּאמֶר
+# לָמָּה זֶּה אֶמְצָא־חֵן בְּעֵינֵי אֲדֹנִי
+# "[EN-AID] And Esau said: Let me station with you, please, some of the
+# people who are with me. And he said: Why so? Let me find grace in the eyes
+# of my lord."
+m.step("Gen.33.15")
+# ‹אַצִּיגָה־נָּא עִמְּךָ מִן־הָעָם› fact holds: atziga-na-declined(to-ma-
+# ze)
+m.fact("atziga_na_declined(la_ma_ze)")
+
+# -------------------------- Gen.33.16 · THE_FIRST_VECTOR -------------------
+# וַיָּשָׁב בַּיּוֹם הַהוּא עֵשָׂו לְדַרְכּוֹ שֵׂעִירָה
+# "[EN-AID] And Esau returned that day on his way to Seir."
+m.step("Gen.33.16")
+# ‹וַיָּשָׁב בַּיּוֹם הַהוּא עֵשָׂו לְדַרְכּוֹ שֵׂעִירָה› fact holds: and-
+# yashav-esav-seira(to-its-way)
+m.fact("va_yashav_esav_seira(le_darko)")
+
+# -------------------------- Gen.33.17 · THE_SECOND_VECTOR_AND_THE_BOOTHS ---
+# וְיַעֲקֹב נָסַע סֻכֹּתָה וַיִּבֶן לוֹ בָּיִת וּלְמִקְנֵהוּ עָשָׂה סֻכֹּת
+# עַל־כֵּן קָרָא שֵׁם־הַמָּקוֹם סֻכּוֹת
+# "[EN-AID] And Jacob journeyed to Sukkot, and built himself a house, and
+# for his cattle he made booths; therefore he called the name of the place
+# Sukkot."
+m.step("Gen.33.17")
+# ‹וְיַעֲקֹב נָסַע סֻכֹּתָה› fact holds: and-yaaqov-nasa-sukota(bayit-and-
+# sukot, report-only)
+m.fact("ve_yaaqov_nasa_sukota(bayit_u_sukot, report_only)")
+
+# -------------------------- Gen.33.18 · THE_WHOLE_ARRIVAL ------------------
+# וַיָּבֹא יַעֲקֹב שָׁלֵם עִיר שְׁכֶם אֲשֶׁר בְּאֶרֶץ כְּנַעַן בְּבֹאוֹ
+# מִפַּדַּן אֲרָם וַיִּחַן אֶת־פְּנֵי הָעִיר
+# "[EN-AID] And Jacob came whole to the city of Shechem, which is in the
+# land of Canaan, in his coming from Paddan-Aram; and he encamped before the
+# city."
+m.step("Gen.33.18")
+# ‹וַיָּבֹא יַעֲקֹב שָׁלֵם עִיר שְׁכֶם› fact holds: and-yavo-shalem-from-
+# padan-aram(and-yichan)
+m.fact("va_yavo_shalem_mi_padan_aram(va_yichan)")
+
+# -------------------------- Gen.33.19 · THE_SECOND_PURCHASE ----------------
+# וַיִּקֶן אֶת־חֶלְקַת הַשָּׂדֶה אֲשֶׁר נָטָה־שָׁם אָהֳלוֹ מִיַּד
+# בְּנֵי־חֲמוֹר אֲבִי שְׁכֶם בְּמֵאָה קְשִׂיטָה
+# "[EN-AID] And he bought the portion of the field where he had pitched his
+# tent from the hand of the sons of Hamor, father of Shechem, for a hundred
+# qesita."
+m.step("Gen.33.19")
+# ‹וַיִּקֶן אֶת־חֶלְקַת הַשָּׂדֶה› fact holds: and-yiqen-chelqat-the-
+# sade(in-mea-qesita)
+m.fact("va_yiqen_chelqat_ha_sade(be_mea_qesita)")
+
+# -------------------------- Gen.33.20 · THE_ALTAR_AND_THE_OBLIQUE_WRITE ----
+# וַיַּצֶּב־שָׁם מִזְבֵּחַ וַיִּקְרָא־לוֹ אֵל אֱלֹהֵי יִשְׂרָאֵל
+# "[EN-AID] And he set up there an altar, and called it El-Elohe-Israel
+# [God, the God of Israel]."
+m.step("Gen.33.20")
+# ‹וַיַּצֶּב־שָׁם מִזְבֵּחַ› the world gains: the-altar
+m.install("ha_mizbeach")
+# ‹וַיִּקְרָא־לוֹ אֵל אֱלֹהֵי יִשְׂרָאֵל› named: the-altar := to-elohe-
+# yisrael
+m.name("ha_mizbeach", "el_elohe_yisrael")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == {'ha_mizbeach'}
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {'ha_mizbeach': 'el_elohe_yisrael'}
+    assert m.REGISTRY["writes"] == 1
+    assert m.tests_list() == []
+    assert m.open_demands() == ['yehi(lekha_asher_lakh)', 'nisa_ve_nelekha(esav_ve_yaaqov)', 'yaavar_na(adoni, li_fene_avdo)']
+    assert len(m.SPECS["log"]) == 4
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted(['va_yar_esav_ba_va_yachatz(arba_meot_ish)', 'rishona_acharonim_acharonim(seder_ha_machane)', 'va_yishtachu_sheva_peamim(hipukh_ha_berakha)', 'va_yechabqehu_va_yivku(esav_ve_yaaqov)', 'ha_yeladim_asher_chanan_Elohim(maane_yaaqov)', 'va_tigashna_va_tishtachavena(ha_shefachot)', 'va_yishtachavu_kulam(lea_yosef_ve_rachel)', 'mi_lekha_kal_ha_machane(pagashti)', 'ki_reot_pene_Elohim_va_tirtzeni(peniel_coda)', 'ha_yeladim_rakim_ve_alot_alay(taanat_yaaqov)', 'atziga_na_declined(la_ma_ze)', 'va_yashav_esav_seira(le_darko)', 've_yaaqov_nasa_sukota(bayit_u_sukot, report_only)', 'va_yavo_shalem_mi_padan_aram(va_yichan)', 'va_yiqen_chelqat_ha_sade(be_mea_qesita)'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 6
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
