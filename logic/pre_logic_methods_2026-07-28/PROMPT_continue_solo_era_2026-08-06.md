@@ -1,4 +1,4 @@
-# Resume prompt — SOLO ERA · 60 frozen · THIRD 3-BLOCK RUN COMPLETE (gen_57/58/59 FROZEN, all UNCOMMITTED on base a896ea6; awaiting owner commit word) · 2026-08-07
+# Resume prompt — SOLO ERA · 60 frozen · THIRD 3-BLOCK RUN COMPLETE + COMMITTED (9ecc7aa / 4a1eb5e / 71700db / cd65531, pushed; tree clean, grok-mockups/ untracked by owner's design) · 2026-08-07
 
 COMMITS (owner word given, pushed to main): b9b9fa7 gen_47 freeze ·
 c88b200 gen_48 freeze (+ ALL_UNITS/index/solo-era doc) · 8a9a1b0 webapp
@@ -280,15 +280,16 @@ RUN #3 COMPLETE (2026-08-07): gen_57 (34:1-31, nine refused) ·
 gen_58 (35:1-29, nine obeyed-in-other-verbs, Israel written) ·
 gen_59 (36:1-43, the empty ledger). 60 frozen · Gen 1:1-36:43
 gapless + lev_13 · regression 60/60 · ALL_UNITS 60/60 green.
-UNCOMMITTED artifacts on base a896ea6 (commit gate intact): 3 unit
-yamls + 3 content modules + 3 py_units + 3 undated HTMLs + 3
-watchlists + subs.py (3 span-appends) + ALL_UNITS.py + UNIT_INDEX
-+ index DB + this state doc. Owner gates pending: COMMIT WORD for
-run #3; next-block word (gen_60 = Gen 37, va-yeshev — Joseph
-begins; 37:1-2's megurim/toledot arms already filed); derivation
-narratives ask now ×9 (gen_51-gen_59); machine-player go.
-NEXT-SESSION §CHECK: expect 60 frozen; HEAD a896ea6 with dirty
-tree (the run's artifacts) unless owner committed.
+COMMITTED + PUSHED (owner word 2026-08-07): 9ecc7aa gen_57 freeze ·
+4a1eb5e gen_58 freeze · 71700db gen_59 freeze · cd65531 run-complete
+bundle (ALL_UNITS, UNIT_INDEX, subs.py, state doc) · plus this
+stamp commit. Tree clean except grok-mockups/ (untracked by
+owner's design). Owner gates pending: next-block word (gen_60 =
+Gen 37, va-yeshev — Joseph begins; 37:1-2's megurim/toledot arms
+and 37:8's reign-mock already filed); derivation narratives ask
+now ×9 (gen_51-gen_59); machine-player go.
+NEXT-SESSION §CHECK: expect 60 frozen; HEAD = the stamp commit
+after cd65531; tree clean but grok-mockups/.
 
 ## SECOND AUTONOMOUS 3-BLOCK RUN (owner order 2026-08-07, post-compact:
 ## "once again lets do 3 blocks each one at a time but without my input")
