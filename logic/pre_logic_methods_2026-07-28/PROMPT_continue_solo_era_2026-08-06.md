@@ -1,4 +1,4 @@
-# Resume prompt — SOLO ERA · 51 frozen · gen_49 COMMITTED (473dc36) · gen_50 FROZEN (uncommitted) · 2026-08-07
+# Resume prompt — SOLO ERA · 51 frozen · gen_50 COMMITTED (71c6dea, pushed) · 2026-08-07
 
 COMMITS (owner word given, pushed to main): b9b9fa7 gen_47 freeze ·
 c88b200 gen_48 freeze (+ ALL_UNITS/index/solo-era doc) · 8a9a1b0 webapp
@@ -111,8 +111,8 @@ do-verb toks 92-97 consecutive walk. Review: PASS, one prose ordinal
 amended (1419 toks 18-19, 22).
 
 ## OPEN THREADS AT COMPACTION (2026-08-07)
-- **gen_50 commit word PENDING** (gen_49 committed 473dc36; gen_50
-  freeze artifacts clean on disk, uncommitted).
+- **gen_50 COMMITTED 71c6dea, pushed (2026-08-07)** — thread closed.
+  grok-mockups/ deliberately left untracked (owner's call still open).
 - **grok-mockups/ untracked dir** — owner copied the three machine-player
   mockups into the repo; owner decides commit vs untracked.
 - **Machine-player build** proposed and mocked, awaiting owner go. Three
@@ -135,11 +135,10 @@ amended (1419 toks 18-19, 22).
   cross-unit chaining.
 
 ## NEXT
-1. **Owner commit word** for gen_50 (gen_49 committed 473dc36).
-2. **gen_51 = 29:31–30:24 suggested** (the womb arc: eleven births, the
+1. **gen_51 = 29:31–30:24 suggested** (the womb arc: eleven births, the
    NAME-WRITE AVALANCHE — REGISTRY's densest span; every son an explicit
    etiology naming) on owner's next-block word. Rhythm unchanged.
-3. **Webapp machine-player** (owner floated 2026-08-07): visualize the
+2. **Webapp machine-player** (owner floated 2026-08-07): visualize the
    interpreter run per unit — trace JSON baked at freeze + static player
    page; proposal delivered in chat, awaiting owner go.
 4. Onkelos BUFFER PENDING (standing; Gen 27–29 not opened).
