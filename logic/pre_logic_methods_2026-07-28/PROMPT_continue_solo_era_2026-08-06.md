@@ -110,29 +110,43 @@ bekhirah 5/5 CLOSES; avodah 5656 1/83 DEBUT (service-noun born);
 do-verb toks 92-97 consecutive walk. Review: PASS, one prose ordinal
 amended (1419 toks 18-19, 22).
 
-## OPEN THREADS AT COMPACTION (2026-08-07)
-- **gen_50 COMMITTED 71c6dea, pushed (2026-08-07)** — thread closed.
-  grok-mockups/ deliberately left untracked (owner's call still open).
-- **grok-mockups/ untracked dir** — owner copied the three machine-player
-  mockups into the repo; owner decides commit vs untracked.
-- **Machine-player build** proposed and mocked, awaiting owner go. Three
-  private artifact mockups (all data from frozen units, hand-baked):
-  gen_46 queue-dialect:
-  https://claude.ai/code/artifact/c15e9c54-7b55-491b-bbc8-60a2e8cf7100
-  lev_13 rulebook-dialect:
-  https://claude.ai/code/artifact/057c2950-a7aa-410b-af2a-5aa9863fcc5d
-  gen_01 world-builder-dialect:
-  https://claude.ai/code/artifact/37ab827b-ad3b-4314-8962-00ad521f12ea
-  Real build = trace emitter over run_unit.py writing traces/<uid>.json
-  (all steps) + one static player page reading it; becomes a freeze-
-  ritual step. Local copies: scratchpad machine_player_*.html + owner's
-  grok-mockups/.
-- **Owner's framing question answered 2026-08-07** (keep the thesis):
-  narrative units INITIALIZE (entities, debuts, precedent classes),
-  law units CONSUME (lev_13 read_before_install flags = the dependency
-  graph; careers oil/avodah/neder/tithe/week/chinam = narrative-
-  allocated variables the law operates on). App-ness emerges at Stage E
-  cross-unit chaining.
+## OPEN THREADS AT COMPACTION #2 (2026-08-07, post 3-block run + tooling)
+- **STATE: 54 frozen, Gen 1:1-31:21 gapless + lev_13, all COMMITTED+pushed
+  through dfd2d7f.** UNCOMMITTED (owner commit word pending):
+  logic/solo_tools/ (the new pipeline tooling, tested end-to-end) + this
+  doc's TOOLING-section rewrite. Disk is truth either way.
+- **NEXT BLOCK on owner word: gen_54 = 31:22-54** (the pursuit, the
+  terafim search, the twenty-years audit, the heap-covenant). Pre-stage
+  ALREADY RUNNABLE in one command: `python3 logic/solo_tools/prestage.py
+  Gen 31:22-31:54` (33 verses/481 tokens; 11 whole-career-in-span finds;
+  CROWN candidate: 31:47 yegar sahaduta — Laban names the heap in
+  ARAMAIC, the corpus's first Aramaic tokens; 31:47-48 = dual NAME
+  writes galed/yegar-sahaduta; matzevah toks 4-7 land; ganav accusation
+  storm 31:26-39; maskoret/monim/hechelif tok2s at 31:41; oni tok3 at
+  31:42). FIRST UNIT ON THE NEW PIPELINE — follow
+  logic/solo_tools/README.md steps 0-7.
+- **Derivation narratives PENDING OWNER ASK ×3** (gen_51, gen_52,
+  gen_53) per standing narrative gate.
+- **Machine-player build** proposed and mocked, awaiting owner go.
+  Mockup artifacts (private): gen_46 queue-dialect
+  https://claude.ai/code/artifact/c15e9c54-7b55-491b-bbc8-60a2e8cf7100 ·
+  lev_13 rulebook
+  https://claude.ai/code/artifact/057c2950-a7aa-410b-af2a-5aa9863fcc5d ·
+  gen_01 world-builder
+  https://claude.ai/code/artifact/37ab827b-ad3b-4314-8962-00ad521f12ea.
+  Real build = trace emitter over run_unit.py -> traces/<uid>.json + one
+  static player page; would become a freeze_ritual.py step.
+- **grok-mockups/ untracked** — owner decides commit vs untracked.
+- **Open observations filed, never push for rulings**: maqqef-in-tree-
+  halves corpus inconsistency (gen_52 watchlist); frozen-translit
+  im-o/bi-y inconsistency (solo_tools/subs.py NOTE).
+- **Init->law thesis (keep)**: narrative units INITIALIZE (entities,
+  debuts, precedent classes), law units CONSUME (lev_13
+  read_before_install flags = the dependency graph); app-ness emerges at
+  Stage E cross-unit chaining. New evidence this run: gen_48's NAME
+  label read back by God at 31:13; the vow if-clause's truth-token at
+  31:5; lavan-WHITE career running from the rods to Lev 13's diagnostic
+  color.
 
 ## AUTONOMOUS 3-BLOCK RUN (owner order 2026-08-07: "process the next 3
 ## blocks on your own ... one at a time")
@@ -216,19 +230,41 @@ gate NOT lifted (needs per-unit owner ask). Progress:
 4. Onkelos BUFFER PENDING (standing; Gen 27–29 not opened).
 5. Triage deferral policy standing: all owner triages stay OPEN; never push.
 
-## TOOLING (solo-era additions, session scratchpad — regenerable)
-verify_gen47_text_v2.py pattern: step-he == plain(no accents/meteg,
-maqqef ־ per flag); tree halves == accented, slashes stripped, split at
-etnachta; scenario fragments ellipsis-split contiguous in-order. CAUTION:
-write the accent-strip class as explicit escapes [֑-ֽ֯] —
-a pasted literal range once swallowed the vowels (U+05B0-U+05BC). Machine
-preflight for drafts: sed status→frozen to a tmp uid in logic/units/, run
-run_unit.py --scenarios, delete tmp. FREEZE-RITUAL PAGE RULE (bug found by
-owner 2026-08-06): UNIT_INDEX links to the UNDATED page name
-UNIT_<uid>.html, but render_unit_html.py defaults to a DATED filename —
-ALWAYS pass the undated out path explicitly:
-`python3 $D/render_unit_html.py <uid> "$D/UNIT_<uid>.html"`. gen_46/47/48
-were unclickable in the webapp until undated copies were rendered. Interpreter grammar: pushes = op
+## TOOLING — PERMANENT: logic/solo_tools/ (owner-authorized 2026-08-07;
+## supersedes the scratchpad scripts; read logic/solo_tools/README.md)
+The whole pipeline is now repo scripts, tested end-to-end on gen_51/52/53:
+- **prestage.py Gen ch:v-ch:v** — one call: shape, token map (etnachta */
+  ketiv !), volitive census, in-span debuts, EVERY in-span career (no
+  hand-picked strong lists, no gap-fill round-trips).
+- **build_unit.py content/<UID>.py** — renders the draft yaml from a
+  content module (UID/BOOK/SPAN/META/DRAFT_NOTE/STEPS/SCENS/EXTRA_SUBS);
+  shared translit dict subs.py (append-only) + per-module EXTRA_SUBS for
+  ambiguous forms; ships an EXPECT SIMULATOR that replays the ops and
+  verifies every scenario's queue/registry/world clause — the
+  bookkeeping layer is computed, not trusted. All three solo-era content
+  modules live in content/ and rebuild their frozen yamls BYTE-IDENTICAL.
+- **verify_text.py <uid>** — independent text-layer recompute (the old
+  per-unit verify scripts, generalized).
+- **preflight.py <uid>** — tmp-frozen interpreter run + scenarios,
+  strict status-position FAIL/UNCHECKED detection, auto-cleanup.
+- **superlative_lint.py <yaml>** — lists every absolute-claim line
+  (first/only/all/whole/verbatim/never/hapax/debut...) for pre-review
+  DB-checking: every reviewer FAIL to date lived in this class.
+- **freeze_ritual.py <uid>** — the entire post-PASS ritual in ONE
+  idempotent call (~80s): text check, flip, frozen run+scenarios,
+  PARALLEL full regression, py render+self-proof, UNDATED html, both
+  indexes, ALL_UNITS insert with computed header count, corpus proof,
+  checklist. (The undated-page rule and the tmp-preflight recipe are
+  now encoded in these scripts — no more hand-run sed/inserts.)
+Manual judgment stays manual: care-point authoring, adversarial review
+(charge doc = logic/solo_tools/REVIEW_BRIEF.md + per-unit boldest-claims
+list), watchlist, state doc, owner gates. Amendments go into the CONTENT
+MODULE, then rebuild — never edit the yaml directly.
+Historical translit inconsistencies filed (subs.py NOTE): frozen gen_51
+"im-o" / gen_52 "bi-y" kept raw vs later "imo"/"bi" — pinned via
+EXTRA_SUBS; harmonizing = owner-gated amendment. CAUTION unchanged:
+write accent-strip classes as explicit escapes (a pasted literal range
+once swallowed vowels). Interpreter grammar: pushes = op
 DECLARE, expr DECLARE(speaker, LET(demand(args))); pops = op RESULT, expr
 HOLDS(demand(args), tN); bless = op EVENT, expr bless_event(eNN, giver,
 recipient); PRECONDITION_STATE facts via HOLDS(fact, t0) patterns; valid op
