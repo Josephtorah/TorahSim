@@ -645,3 +645,11 @@ export_links in torah_grok.sqlite); all probes against
 torah_grok.SNAPSHOT-main-51801ca.sqlite. 211 verifier rows: 205
 VERIFIED / 0 FAILED / 6 UNCHECKABLE (builder-asserted manual rows).
 66m22s wall.
+
+## 2026-08-08 — RUN 6 (retro oral audits gen_47-gen_51, Gen 27:41-30:24)
+ZERO web fetches — all sources read locally (export_texts /
+export_links in torah_grok.sqlite; Minchat Shai, Kitzur Baal
+HaTurim, Bereshit Rabbah span maps, Rashi scan). 69 verifier rows:
+64 VERIFIED / 0 FAILED / 5 UNCHECKABLE. 29m41s wall
+(18:07:25-18:37:06 CDT). Index 44 of 62 audited; Gen 2:4-30:24
+oral layer gapless (creation week deferred).

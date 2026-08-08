@@ -148,10 +148,15 @@ def render(unit_id, out_path):
                  % (bid, ref1.group(1), ref1.group(2)))
     S.append("<p>%s</p>" % he3(m.get("title_he"), m.get("title_he_translit"),
                                m.get("title_he_en")))
-    for key in ("frozen_note_en", "method_note_en", "oral_audit_note_en"):
+    for key in ("frozen_note_en", "method_note_en", "draft_note_en",
+                "oral_audit_note_en"):
         if m.get(key):
-            label = ('<b>ORAL AUDIT — crowns (chain-attested + '
-                     'DB-verified):</b> ' if key == "oral_audit_note_en" else "")
+            label = {"oral_audit_note_en":
+                     '<b>ORAL AUDIT — crowns (chain-attested + '
+                     'DB-verified):</b> ',
+                     "draft_note_en":
+                     '<b>DERIVATION RECORD — freeze-era draft note:</b> ',
+                     }.get(key, "")
             S.append('<div class="note">%s%s</div>'
                      % (label, esc(" ".join(str(m[key]).split()))))
     S.append('<div class="meta">confidence: %s</div>'
