@@ -72,18 +72,31 @@ def main():
     S.append("<h2>Units, in canonical order</h2><table>")
     S.append("<tr><th>span</th><th>unit</th><th>title</th><th>steps</th>"
              "<th>scenarios</th><th>views</th></tr>")
+    audited = 0
     for uid, book, refs, title, n_steps, n_scen in units:
         bid = BOOK_IDS.get(book, book)
         mt = re.match(r"(\d+):(\d+)", refs or "")
         verse_link = ('<a href="/#%s/%s/%s">verse view</a>' %
                       (bid, mt.group(1), mt.group(2))) if mt else ""
+        # oral-first era (2026-08-08): link the unit's oral-audit page when
+        # one has been rendered (retro program, PROCESS.md)
+        audit_link = ""
+        if (HERE / ("ORAL_AUDIT_%s.html" % uid)).exists():
+            audited += 1
+            audit_link = (' · <a href="ORAL_AUDIT_%s.html" class="audit">'
+                          '&#10003; oral audit</a>' % uid)
         S.append('<tr id="unit-%s"><td><b>%s %s</b></td>'
                  '<td class="code"><a href="UNIT_%s.html">%s</a></td>'
                  '<td>%s</td><td>%s</td><td>%s</td>'
-                 '<td><a href="UNIT_%s.html">YAML view</a> · %s</td></tr>'
+                 '<td><a href="UNIT_%s.html">YAML view</a> · %s%s</td></tr>'
                  % (esc(uid), esc(book), esc(refs), esc(uid), esc(uid),
-                    esc(title), n_steps, n_scen, esc(uid), verse_link))
+                    esc(title), n_steps, n_scen, esc(uid), verse_link,
+                    audit_link))
     S.append("</table>")
+    S.append('<div class="meta">Oral-audit retro program (PROCESS.md, '
+             "oral-first era): %d of %d frozen units audited — "
+             "&#10003; marks a unit whose crowns are chain-attested + "
+             "DB-verified and folded in.</div>" % (audited, len(units)))
     S.append('<div class="note">Experimental model — not binding religious law. '
              "The YAML in logic/units/ is canonical; this page and the per-unit "
              "pages are derived artifacts, regenerated on demand.</div>")
@@ -103,6 +116,7 @@ th { background: #f0ecdf; font-size: .8rem; text-transform: uppercase; }
 .note { background: #f7f5ee; border: 1px solid #e3ddc9; padding: .6rem .8rem;
         margin-top: 1.5rem; font-size: .9rem; }
 a { color: #4a6da7; }
+a.audit { color: #0a7a2f; font-weight: bold; text-decoration: none; }
 </style></head><body>%s</body></html>""" % "\n".join(S)
     OUT.write_text(page, encoding="utf-8")
     print("wrote %s (%d units)" % (OUT.name, len(units)))

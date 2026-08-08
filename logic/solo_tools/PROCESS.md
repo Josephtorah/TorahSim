@@ -115,11 +115,23 @@ Per frozen unit, in canon order starting gen_08:
    verified crowns with sources + manifest ids, instrument gaps,
    mined-only claims kept where they do not conflict, readings
    named-only. MACHINE LAYER UNTOUCHED (steps/scenarios byte-identical;
-   diff must show pure insertion). Re-run interpreter + scenarios
-   green; external fresh-context check of the amendment (diff scope +
-   manifest match) before the amendment stands — the review law
-   applies to amendments. Re-render the unit HTML. The yaml is the one
-   source of truth; the audit file is the record.
+   diff must show pure insertion). AMENDMENT GATES (all mechanical —
+   the EXTERNAL FRESH-CONTEXT CHECK IS ON HOLD, owner order 2026-08-08
+   "it's costing me too much time"; resume only on owner word; the
+   new-unit FREEZE review law is untouched by this hold):
+     (a) `git diff --numstat` = pure insertion, all inside
+         oral_audit_note_en;
+     (b) interpreter + scenarios ALL GREEN;
+     (c) verify_claims.py = 0 FAILED;
+     (d) `python3 logic/solo_tools/gloss_lint.py <yaml>` clean — the
+         glossing linter (built 2026-08-08; both prior external checks
+         FAILed round 1 on exactly this class).
+   Scope discipline the held checker used to enforce, now self-applied:
+   Torah-frame every count claim (the DB is Torah-only — never say
+   "in Scripture" unless the tradition's own count is being quoted
+   with its source); spelling-check patterns must not cross morpheme
+   slashes; count-claims lock expect_refs. Re-render the unit HTML.
+   The yaml is the one source of truth; the audit file is the record.
 
 ## Era-1 Oral infrastructure (kept, superseded for scans)
 

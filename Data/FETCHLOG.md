@@ -601,3 +601,8 @@ ranges per invocation — never a whole book at once.
   -> torah_grok.sqlite: export_texts FTS5 (41,114 segments He+En) + export_links
   (668,695 Torah-anchored citations). Oral scans are now LOCAL-FIRST (PROCESS.md);
   web = gap-filler only.
+- 2026-08-08 · ORAL AUDIT gen_09 (Gen 2:18-25): ZERO web fetches — first fully local-first
+  audit; all sources read verbatim from Data/sefaria_export/ via export_texts/export_links
+  (Kitzur Baal HaTurim, Minchat Shai, Rashi, citation-graph span map). Oral layer ~22 min.
+- 2026-08-08 · ORAL AUDIT gen_10 (Gen 3:1-13): ZERO web fetches; oral layer ~14 min; first
+  audit under the external-checker hold (mechanical gates: diff/green/verifier/gloss_lint).
