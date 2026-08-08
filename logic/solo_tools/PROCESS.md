@@ -40,7 +40,13 @@ review-FAIL class (5 units running). This rewrite deletes that cost.
   into machine state, never pushed for rulings. "Written trees first."
 - Owner gates: commit/push, amendments to frozen units, derivation
   narratives (per-unit ask FIRST), Disclosure. Hebrew-glossing absolute
-  rule (English inline, every time).
+  rule (English inline, every time) — AMENDED 2026-08-08: HEBREW SCRIPT
+  is the display form going forward, transliteration RETIRED from all
+  new prose — write ויסגר ("and He closed"), not va-yisgor. English is
+  the only translation layer. Unchanged: the DB translit column stays
+  the QUERY layer (manifest "where" clauses); frozen machine tokens
+  stay; already-folded blocks are not rewritten without owner order.
+  New audit blocks lint with `gloss_lint.py --no-translit`.
 
 ## NEW-UNIT PIPELINE (per block)
 

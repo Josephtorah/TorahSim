@@ -33,9 +33,23 @@ except OSError:
     ENGLISH = set()
 
 
-def lint_text(text, label):
+HEBREW_RUN = re.compile(r"[א-ת][֑-תװ-״]*")
+
+
+def lint_text(text, label, no_translit=False):
     flags = []
     seen = set()
+    # Hebrew-script runs need an English gloss marker nearby (owner rule
+    # amended 2026-08-08: script IS the display form; gloss stays law)
+    for m in HEBREW_RUN.finditer(text):
+        run = m.group(0)
+        if len(run) < 2 or run in seen:
+            continue
+        seen.add(run)
+        tail = text[m.end():m.end() + 120]
+        if not GLOSS_NEAR.match(tail):
+            flags.append((label, run, text[max(0, m.start() - 30):m.end() + 40]
+                          .replace("\n", " ")))
     for m in TRANSLIT.finditer(text):
         tok = m.group(0)
         if tok in seen or tok.count("-") > 3:
@@ -53,6 +67,11 @@ def lint_text(text, label):
                        (p, p.rstrip("s"), p[:-1], p[:-2], p[:-3] + "e" if len(p) > 3 else p))
         if ENGLISH and all(eng(p) for p in tok.split("-")):
             continue
+        if no_translit:  # 2026-08-08 rule: translit itself is a violation
+            flags.append((label, tok + " [TRANSLIT — use Hebrew script]",
+                          text[max(0, m.start() - 30):m.end() + 40]
+                          .replace("\n", " ")))
+            continue
         tail = text[m.end():m.end() + 120]
         if not GLOSS_NEAR.match(tail):
             flags.append((label, tok, text[max(0, m.start() - 30):m.end() + 40]
@@ -68,6 +87,8 @@ def lint_text(text, label):
 
 
 def main(paths):
+    no_translit = "--no-translit" in paths
+    paths = [p for p in paths if p != "--no-translit"]
     total = 0
     for p in paths:
         text = open(p, encoding="utf-8").read()
@@ -78,7 +99,7 @@ def main(paths):
         else:
             blocks = [(text, p)]
         for text_block, label in blocks:
-            for lbl, tok, ctx in lint_text(text_block, label):
+            for lbl, tok, ctx in lint_text(text_block, label, no_translit):
                 total += 1
                 print("FLAG  %-24s ...%s..." % (tok, ctx.strip()))
     print("gloss_lint: %d flag(s)" % total)
