@@ -1,4 +1,31 @@
-# Resume prompt — SOLO ERA · 62 frozen · PROBE WAVE BLOCKS 1-2 COMPLETE + COMMITTED (b564bd8 lev_19 / a0c4a59 lev_04 / b934976 tooling, pushed; tree clean, grok-mockups/ untracked by owner's design) · 2026-08-08 · COMPACTION POINT #5 — NEXT: BLOCK 3 = Lev 25 (owner-approved order; prestage ready in scratchpad, regenerable: python3 logic/solo_tools/prestage.py Lev 25:1-25:55)
+# Resume prompt — ORAL-FIRST ERA (process REWRITTEN 2026-08-08, owner order) · 62 frozen · LEV 25 ON HOLD (machine structure derived, owner paused it) · gen_08 RETRO AUDIT COMPLETE + FOLDED (external check: "AMENDMENT CONFIRMED — STANDS") · LOCAL SEFARIA MIRROR LIVE (Data/sefaria_export/, ~700MB, 91 files; export_texts FTS 41,114 segments + export_links 668,695 Torah-anchored citations in torah_grok.sqlite) · NEXT: gen_09 retro audit, local-first — read logic/solo_tools/PROCESS.md before anything else · ALL OF THIS UNCOMMITTED, awaiting owner commit word (incl. the mirror; owner asked whether to gitignore it — UNANSWERED)
+
+## PROCESS REWRITE (2026-08-08, owner-ratified — supersedes all prior crown practice)
+Owner orders: NO self-directed crown search ever ("get rid of our own
+search for crowns"); insights come from Oral Torah lookup (Sefaria)
+verified against SNAPSHOT ("If the oral torah doesn't reveal it then
+maybe we don't need it"); CROWN redefined = chain-attested +
+DB-verified letter-fact (named Oral source + manifest row +
+verify_claims.py green); retro audit ALL frozen blocks, NOT
+forward-only, starting gen_08; failed verifications -> watchlist as
+discrepancies. Canonical doc: logic/solo_tools/PROCESS.md. Verifier:
+logic/solo_tools/verify_claims.py; manifests + audit files in
+logic/oral_audit/. REVIEW_BRIEF.md rewritten (reviewer re-runs the
+verifier; unsourced absolutes = MAJOR). gen_08 pilot: tradition
+attested ~8 mined finds, added missed letter-facts (toledot
+full-spelling unique at 2:4 — DB-verified; be-hibbaram/be-Avraham
+anagram; chotam seal-acrostic 2:7); Kitzur Baal HaTurim + Minchat
+Shai claims 10/10 verified. Time every audit; report further process
+fat. All standing laws unchanged (review law, triage, gates,
+byte-identity, Hebrew-glossing).
+
+## PRIOR HEADER (superseded 2026-08-08, kept for the record)
+SOLO ERA · PROBE WAVE BLOCKS 1-2 COMPLETE + COMMITTED (b564bd8 lev_19
+/ a0c4a59 lev_04 / b934976 tooling, pushed) · COMPACTION POINT #5 —
+Block 3 = Lev 25 was next (owner-approved order; prestage regenerable:
+python3 logic/solo_tools/prestage.py Lev 25:1-25:55) — NOW ON HOLD by
+owner order 2026-08-08; resume only on owner word, under the new
+pipeline.
 
 COMMITS (owner word given, pushed to main): b9b9fa7 gen_47 freeze ·
 c88b200 gen_48 freeze (+ ALL_UNITS/index/solo-era doc) · 8a9a1b0 webapp
@@ -396,7 +423,7 @@ Gen 37, va-yeshev — Joseph begins; 37:1-2's megurim/toledot arms
 and 37:8's reign-mock already filed); derivation narratives ask
 now ×9 (gen_51-gen_59); machine-player go.
 OWNER COMPACTED HERE (compaction point #4) — on resume run §CHECK
-(expect 60 frozen; HEAD = the compaction-stamp commit one past
+(expect 62 frozen; HEAD = the compaction-stamp commit one past
 d635c1a; tree clean but grok-mockups/), then await owner word:
 gen_60 = Gen 37 next block (prestage: python3
 logic/solo_tools/prestage.py Gen 37:1-37:36), or machine-player
@@ -671,7 +698,7 @@ names = HANDLERS table in run_unit.py (~line 413).
 ```
 cd <old-home>/code/Torah_Grok
 git log --oneline -3
-grep -l "status: frozen" logic/units/*.yaml | wc -l   # expect 60
+grep -l "status: frozen" logic/units/*.yaml | wc -l   # expect 62
 python3 run_unit.py gen_59_esau_edom_kings_ledger --scenarios | tail -1
 for f in $(grep -l "status: frozen" logic/units/*.yaml); do n=$(grep -c "VERIFIED: SNAPSHOT]" $f); [ "$n" -gt 0 ] && echo "$f: $n"; done
 ```

@@ -582,3 +582,22 @@ ranges per invocation — never a whole book at once.
 - 2026-08-05 · `Onkelos Genesis 23:18` -> `Data/sefaria_texts/Onkelos_Genesis_23_18__f2117587.json` · Tier-A gen_39 derive-time read (sequential, 0.5s)
 - 2026-08-05 · `Onkelos Genesis 23:19` -> `Data/sefaria_texts/Onkelos_Genesis_23_19__42242803.json` · Tier-A gen_39 derive-time read (sequential, 0.5s)
 - 2026-08-05 · `Onkelos Genesis 23:20` -> `Data/sefaria_texts/Onkelos_Genesis_23_20__2ea16adc.json` · Tier-A gen_39 derive-time read (sequential, 0.5s)
+- 2026-08-08 · ORAL AUDIT gen_08 (oral-first era pilot; WebFetch summaries, not cached to disk — claims DB-verified via verify_claims.py, summaries advisory only):
+  `api/texts/Rashi_on_Genesis.2.4-2.9` · `api/texts/Rashi_on_Genesis.2.10-2.17` ·
+  `api/texts/Bereshit_Rabbah.12` · `api/texts/Bereshit_Rabbah.13` · `api/texts/Bereshit_Rabbah.14` ·
+  `api/texts/Bereshit_Rabbah.15` · `api/texts/Bereshit_Rabbah.16` ·
+  `api/texts/Berakhot.61a` · `api/texts/Sanhedrin.56b` · `api/texts/Avot_DeRabbi_Natan.1` ·
+  `api/texts/Pesachim.54a` · `api/related/Genesis.2.4` ·
+  `api/texts/Kitzur_Baal_HaTurim_on_Genesis.2.4-2.17` · `api/texts/Minchat_Shai_on_Torah,_Genesis.2.4-2.17`
+  (dead ends logged: `Baal_HaTurim_on_Genesis` = empty index; chapter-level fetch returns first segment only — use verse ranges)
+- 2026-08-08 · SEFARIA-EXPORT CURATED MIRROR (owner order: local search) — one-time bulk
+  download from the public GCS bucket (the sanctioned bulk path) via
+  logic/solo_tools/fetch_sefaria_export.py: 91 files, 0 failures, ~700MB ->
+  Data/sefaria_export/ (full list: Data/sefaria_export/MIRROR_MANIFEST.txt).
+  Works: Rashi ×5 · Kitzur Baal HaTurim ×5 · Baal HaTurim (Gen) · Minchat Shai on Torah ·
+  Midrash Rabbah ×5 · Tanchuma + Buber · Sifra · Sifrei ×2 · Mekhilta ×2 · Pirkei DeRabbi
+  Eliezer · Avot DeRabbi Natan · Aggadat Bereshit · Onkelos ×5 · Targum Jonathan ×5 ·
+  links0-16.csv (full citation graph). Indexed by logic/solo_tools/index_sefaria_export.py
+  -> torah_grok.sqlite: export_texts FTS5 (41,114 segments He+En) + export_links
+  (668,695 Torah-anchored citations). Oral scans are now LOCAL-FIRST (PROCESS.md);
+  web = gap-filler only.
