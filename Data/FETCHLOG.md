@@ -623,3 +623,12 @@ ZERO web fetches. Run total 16m31s (13:38:26-13:54:57); 40 verified /
 0 failed / 1 uncheckable; 5 discrepancy observations; 12 inheritance
 edges recorded (first run under the edge layer); ktiv/qere dual-token
 instrument discovery at Gen 8:17.
+
+## 2026-08-08 — third five-block run: gen_22 through gen_26 (Gen 9:8-11:32)
+ZERO web fetches. Run total 15m08s (13:59:09-14:14:17); 37 verified /
+0 failed / 3 uncheckable; the 9:29 Noah death-total manuscript war
+arbitrated (SNAPSHOT = Jericho-chumash camp, closing gen_14's held
+anomaly); 11 inheritance edges (Chronicles mirror-list, Jonah's
+Nineveh, Jeremiah 51 anti-Babel oracle, Zephaniah pure-speech
+reversal); meteg-precedes-vowel codepoint lesson; letter-form
+(inverted nun) = fifth uninstrumented layer.
