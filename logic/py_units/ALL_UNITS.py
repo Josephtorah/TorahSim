@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""ALL_UNITS.py — frozen only (gen_59 frozen 2026-08-07; 60 frozen units)."""
+"""ALL_UNITS.py — frozen only (lev_04 frozen 2026-08-08; 62 frozen units)."""
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
@@ -14799,6 +14799,931 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 0
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_19_holiness_duty_ledger
+###############################################################################
+
+m = Machine("lev_19_holiness_duty_ledger")
+
+# -------------------------- Lev.19.1 · THE_FRAME ---------------------------
+# וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר
+# "[EN-AID] And the LORD spoke to Moses, saying:"
+m.step("Lev.19.1")
+# ‹וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר› event: speak — agent the-LORD
+m.event("speak", agent="YHWH")
+# ‹אֶל־מֹשֶׁה› reads without prior install (flag, not fix): Moses
+m.presupposed("moshe")
+
+# -------------------------- Lev.19.2 · THE_RELAY_AND_THE_THESIS ------------
+# דַּבֵּר אֶל־כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל וְאָמַרְתָּ אֲלֵהֶם קְדֹשִׁים
+# תִּהְיוּ כִּי קָדוֹשׁ אֲנִי יְהוָה אֱלֹהֵיכֶם
+# "[EN-AID] Speak to all the congregation of the sons of Israel and say to
+# them: Holy shall you be, for holy am I, the LORD your God."
+m.step("Lev.19.2")
+# ‹דַּבֵּר אֶל־כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל› the-LORD speaks a demand — LET:
+# daber-to-kal-adat(Moses)
+m.declare("YHWH", "LET",
+          "daber_el_kal_adat(moshe)")
+# ‹קְדֹשִׁים תִּהְיוּ כִּי קָדוֹשׁ אֲנִי יְהוָה אֱלֹהֵיכֶם›
+m.statute("BIND", "qedoshim_tihyu")
+
+# -------------------------- Lev.19.3 · MOTHER_FIRST ------------------------
+# אִישׁ אִמּוֹ וְאָבִיו תִּירָאוּ וְאֶת־שַׁבְּתֹתַי תִּשְׁמֹרוּ אֲנִי יְהוָה
+# אֱלֹהֵיכֶם
+# "[EN-AID] Each man shall fear his mother and his father, and My sabbaths
+# you shall keep: I am the LORD your God."
+m.step("Lev.19.3")
+# ‹אִישׁ אִמּוֹ וְאָבִיו תִּירָאוּ›
+m.statute("BIND", "imo_ve_aviv_tirau")
+# ‹וְאֶת־שַׁבְּתֹתַי תִּשְׁמֹרוּ אֲנִי יְהוָה אֱלֹהֵיכֶם›
+m.statute("BIND", "shabtotay_tishmoru")
+
+# -------------------------- Lev.19.4 · THE_RETYPING_WITNESS ----------------
+# אַל־תִּפְנוּ אֶל־הָאֱלִילִים וֵאלֹהֵי מַסֵּכָה לֹא תַעֲשׂוּ לָכֶם אֲנִי
+# יְהוָה אֱלֹהֵיכֶם
+# "[EN-AID] Do not turn to the idols, and molten gods you shall not make for
+# yourselves: I am the LORD your God."
+m.step("Lev.19.4")
+# ‹אַל־תִּפְנוּ אֶל־הָאֱלִילִים›
+m.statute("FORBID", "peno_el_ha_elilim")
+# ‹וֵאלֹהֵי מַסֵּכָה לֹא תַעֲשׂוּ›
+m.statute("FORBID", "elohe_masekha")
+
+# -------------------------- Lev.19.5 · THE_SHELAMIM_CLOCK_OPENS ------------
+# וְכִי תִזְבְּחוּ זֶבַח שְׁלָמִים לַיהוָה לִרְצֹנְכֶם תִּזְבָּחֻהוּ
+# "[EN-AID] And when you sacrifice a sacrifice of well-being to the LORD,
+# you shall sacrifice it for your acceptance."
+m.step("Lev.19.5")
+# ‹וְכִי תִזְבְּחוּ זֶבַח שְׁלָמִים לַיהוָה לִרְצֹנְכֶם תִּזְבָּחֻהוּ› case
+# bene-yisrael, tizbchu-zevach-shelamim routes to to-me-retzonkhem-
+# tizbachuhu
+m.case("bene_yisrael, tizbchu_zevach_shelamim", "li_retzonkhem_tizbachuhu")
+
+# -------------------------- Lev.19.6 · THE_TWO_DAY_WINDOW ------------------
+# בְּיוֹם זִבְחֲכֶם יֵאָכֵל וּמִמָּחֳרָת וְהַנּוֹתָר עַד־יוֹם הַשְּׁלִישִׁי
+# בָּאֵשׁ יִשָּׂרֵף
+# "[EN-AID] On the day of your sacrifice it shall be eaten, and on the
+# morrow; and what is left until the third day shall be burned in fire."
+m.step("Lev.19.6")
+# ‹בְּיוֹם זִבְחֲכֶם יֵאָכֵל וּמִמָּחֳרָת וְהַנּוֹתָר עַד־יוֹם הַשְּׁלִישִׁי
+# בָּאֵשׁ יִשָּׂרֵף› standing handler — if in-day-zivchakhem-and-from-
+# machorat then yeakhel ∧ the-notar-in-the-esh-yisaref
+m.handler("be_yom_zivchakhem_u_mi_machorat",
+          "yeakhel ∧ ha_notar_ba_esh_yisaref")
+
+# -------------------------- Lev.19.7 · PIGUL -------------------------------
+# וְאִם הֵאָכֹל יֵאָכֵל בַּיּוֹם הַשְּׁלִישִׁי פִּגּוּל הוּא לֹא יֵרָצֶה
+# "[EN-AID] And if it is eaten at all on the third day, it is a foul thing;
+# it shall not be accepted."
+m.step("Lev.19.7")
+# ‹וְאִם הֵאָכֹל יֵאָכֵל בַּיּוֹם הַשְּׁלִישִׁי פִּגּוּל הוּא לֹא יֵרָצֶה›
+# standing handler — if heakhol-yeakhel-in-the-day-the-shelishi then pigul-
+# that-not-yeratze
+m.handler("heakhol_yeakhel_ba_yom_ha_shelishi",
+          "pigul_hu_lo_yeratze")
+
+# -------------------------- Lev.19.8 · KARET_ON_THE_EATER ------------------
+# וְאֹכְלָיו עֲוֺנוֹ יִשָּׂא כִּי־אֶת־קֹדֶשׁ יְהוָה חִלֵּל וְנִכְרְתָה
+# הַנֶּפֶשׁ הַהִוא מֵעַמֶּיהָ
+# "[EN-AID] And its eaters shall bear his iniquity, for the holy thing of
+# the LORD he has profaned; and that soul shall be cut off from its people."
+m.step("Lev.19.8")
+# ‹וְאֹכְלָיו עֲוֺנוֹ יִשָּׂא כִּי־אֶת־קֹדֶשׁ יְהוָה חִלֵּל וְנִכְרְתָה
+# הַנֶּפֶשׁ הַהִוא מֵעַמֶּיהָ› standing handler — if eat-pigul then avono-
+# yisa ∧ nikhrta-the-nefesh-from-ameha
+m.handler("akhal_pigul",
+          "avono_yisa ∧ nikhrta_ha_nefesh_me_ameha")
+
+# -------------------------- Lev.19.9 · THE_UNREAPED_CORNER -----------------
+# וּבְקֻצְרְכֶם אֶת־קְצִיר אַרְצְכֶם לֹא תְכַלֶּה פְּאַת שָׂדְךָ לִקְצֹר
+# וְלֶקֶט קְצִירְךָ לֹא תְלַקֵּט
+# "[EN-AID] And when you reap the harvest of your land, you shall not finish
+# the corner of your field in reaping, and the gleaning of your harvest you
+# shall not gather."
+m.step("Lev.19.9")
+# ‹וּבְקֻצְרְכֶם אֶת־קְצִיר אַרְצְכֶם לֹא תְכַלֶּה פְּאַת שָׂדְךָ לִקְצֹר›
+m.statute("FORBID", "tekhale_peat_sadkha")
+# ‹וְלֶקֶט קְצִירְךָ לֹא תְלַקֵּט›
+m.statute("FORBID", "leqet_qetzirkha")
+
+# -------------------------- Lev.19.10 · VINEYARD_AND_THE_POOR --------------
+# וְכַרְמְךָ לֹא תְעוֹלֵל וּפֶרֶט כַּרְמְךָ לֹא תְלַקֵּט לֶעָנִי וְלַגֵּר
+# תַּעֲזֹב אֹתָם אֲנִי יְהוָה אֱלֹהֵיכֶם
+# "[EN-AID] And your vineyard you shall not glean, and the fallen grapes of
+# your vineyard you shall not gather; for the poor and for the stranger you
+# shall leave them: I am the LORD your God."
+m.step("Lev.19.10")
+# ‹וְכַרְמְךָ לֹא תְעוֹלֵל›
+m.statute("FORBID", "teolel_karmkha")
+# ‹וּפֶרֶט כַּרְמְךָ לֹא תְלַקֵּט›
+m.statute("FORBID", "peret_karmkha")
+# ‹לֶעָנִי וְלַגֵּר תַּעֲזֹב אֹתָם›
+m.statute("BIND", "le_ani_ve_la_ger_taazov")
+
+# -------------------------- Lev.19.11 · THE_DECALOGUE_GOES_PLURAL ----------
+# לֹא תִּגְנֹבוּ וְלֹא־תְכַחֲשׁוּ וְלֹא־תְשַׁקְּרוּ אִישׁ בַּעֲמִיתוֹ
+# "[EN-AID] You shall not steal, and you shall not deny falsely, and you
+# shall not lie each man to his fellow."
+m.step("Lev.19.11")
+# ‹לֹא תִּגְנֹבוּ›
+m.statute("FORBID", "tignovu")
+# ‹וְלֹא־תְכַחֲשׁוּ›
+m.statute("FORBID", "tekhachashu")
+# ‹וְלֹא־תְשַׁקְּרוּ אִישׁ בַּעֲמִיתוֹ›
+m.statute("FORBID", "teshaqru_ish_ba_amito")
+
+# -------------------------- Lev.19.12 · THE_NAME_SEALS_ITSELF --------------
+# וְלֹא־תִשָּׁבְעוּ בִשְׁמִי לַשָּׁקֶר וְחִלַּלְתָּ אֶת־שֵׁם אֱלֹהֶיךָ אֲנִי
+# יְהוָה
+# "[EN-AID] And you shall not swear by My name falsely, so that you profane
+# the name of your God: I am the LORD."
+m.step("Lev.19.12")
+# ‹וְלֹא־תִשָּׁבְעוּ בִשְׁמִי לַשָּׁקֶר›
+m.statute("FORBID", "tishavu_vi_shemi_la_shaqer")
+
+# -------------------------- Lev.19.13 · THE_WAGE_MUST_NOT_SLEEP ------------
+# לֹא־תַעֲשֹׁק אֶת־רֵעֲךָ וְלֹא תִגְזֹל לֹא־תָלִין פְּעֻלַּת שָׂכִיר אִתְּךָ
+# עַד־בֹּקֶר
+# "[EN-AID] You shall not oppress your neighbor and you shall not rob; the
+# wage of a hired man shall not stay the night with you until morning."
+m.step("Lev.19.13")
+# ‹לֹא־תַעֲשֹׁק אֶת־רֵעֲךָ›
+m.statute("FORBID", "taashoq_et_reakha")
+# ‹וְלֹא תִגְזֹל›
+m.statute("FORBID", "tigzol")
+# ‹לֹא־תָלִין פְּעֻלַּת שָׂכִיר אִתְּךָ עַד־בֹּקֶר›
+m.statute("FORBID", "talin_peulat_sakhir")
+
+# -------------------------- Lev.19.14 · THE_DEAF_AND_THE_BLIND -------------
+# לֹא־תְקַלֵּל חֵרֵשׁ וְלִפְנֵי עִוֵּר לֹא תִתֵּן מִכְשֹׁל וְיָרֵאתָ
+# מֵּאֱלֹהֶיךָ אֲנִי יְהוָה
+# "[EN-AID] You shall not curse the deaf, and before the blind you shall not
+# put a stumbling-block; and you shall fear your God: I am the LORD."
+m.step("Lev.19.14")
+# ‹לֹא־תְקַלֵּל חֵרֵשׁ›
+m.statute("FORBID", "teqalel_cheresh")
+# ‹וְלִפְנֵי עִוֵּר לֹא תִתֵּן מִכְשֹׁל›
+m.statute("FORBID", "mikhshol_li_fene_iver")
+# ‹וְיָרֵאתָ מֵּאֱלֹהֶיךָ›
+m.statute("BIND", "ve_yareta_me_elohekha")
+
+# -------------------------- Lev.19.15 · NO_FACES_IN_COURT ------------------
+# לֹא־תַעֲשׂוּ עָוֶל בַּמִּשְׁפָּט לֹא־תִשָּׂא פְנֵי־דָל וְלֹא תֶהְדַּר
+# פְּנֵי גָדוֹל בְּצֶדֶק תִּשְׁפֹּט עֲמִיתֶךָ
+# "[EN-AID] You shall do no wrong in judgment; you shall not lift the face
+# of the poor and you shall not favor the face of the great; in
+# righteousness shall you judge your fellow."
+m.step("Lev.19.15")
+# ‹לֹא־תַעֲשׂוּ עָוֶל בַּמִּשְׁפָּט›
+m.statute("FORBID", "avel_ba_mishpat")
+# ‹לֹא־תִשָּׂא פְנֵי־דָל›
+m.statute("FORBID", "tisa_fene_dal")
+# ‹וְלֹא תֶהְדַּר פְּנֵי גָדוֹל›
+m.statute("FORBID", "tehdar_pene_gadol")
+# ‹בְּצֶדֶק תִּשְׁפֹּט עֲמִיתֶךָ›
+m.statute("BIND", "be_tzedeq_tishpot_amitekha")
+
+# -------------------------- Lev.19.16 · TALEBEARER_AND_BYSTANDER -----------
+# לֹא־תֵלֵךְ רָכִיל בְּעַמֶּיךָ לֹא תַעֲמֹד עַל־דַּם רֵעֶךָ אֲנִי יְהוָה
+# "[EN-AID] You shall not go about as a talebearer among your people; you
+# shall not stand upon the blood of your neighbor: I am the LORD."
+m.step("Lev.19.16")
+# ‹לֹא־תֵלֵךְ רָכִיל בְּעַמֶּיךָ›
+m.statute("FORBID", "telekh_rakhil_be_amekha")
+# ‹לֹא תַעֲמֹד עַל־דַּם רֵעֶךָ›
+m.statute("FORBID", "taamod_al_dam_reekha")
+
+# -------------------------- Lev.19.17 · THE_REPROVE_DOUBLING ---------------
+# לֹא־תִשְׂנָא אֶת־אָחִיךָ בִּלְבָבֶךָ הוֹכֵחַ תּוֹכִיחַ אֶת־עֲמִיתֶךָ
+# וְלֹא־תִשָּׂא עָלָיו חֵטְא
+# "[EN-AID] You shall not hate your brother in your heart; you shall surely
+# reprove your fellow, and not bear sin upon him."
+m.step("Lev.19.17")
+# ‹לֹא־תִשְׂנָא אֶת־אָחִיךָ בִּלְבָבֶךָ›
+m.statute("FORBID", "tisna_et_achikha_bi_levavekha")
+# ‹הוֹכֵחַ תּוֹכִיחַ אֶת־עֲמִיתֶךָ›
+m.statute("BIND", "hokheach_tokhiach_et_amitekha")
+# ‹וְלֹא־תִשָּׂא עָלָיו חֵטְא›
+m.statute("FORBID", "tisa_alav_chet")
+
+# -------------------------- Lev.19.18 · THE_LOVE_COMMAND -------------------
+# לֹא־תִקֹּם וְלֹא־תִטֹּר אֶת־בְּנֵי עַמֶּךָ וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ
+# אֲנִי יְהוָה
+# "[EN-AID] You shall not avenge and you shall not keep a grudge against the
+# sons of your people; and you shall love your neighbor as yourself: I am
+# the LORD."
+m.step("Lev.19.18")
+# ‹לֹא־תִקֹּם›
+m.statute("FORBID", "tiqom")
+# ‹וְלֹא־תִטֹּר אֶת־בְּנֵי עַמֶּךָ›
+m.statute("FORBID", "titor_et_bene_amekha")
+# ‹וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ›
+m.statute("BIND", "ve_ahavta_le_reakha_kamokha")
+
+# -------------------------- Lev.19.19 · THE_MIXTURES -----------------------
+# אֶת־חֻקֹּתַי תִּשְׁמֹרוּ בְּהֶמְתְּךָ לֹא־תַרְבִּיעַ כִּלְאַיִם שָׂדְךָ
+# לֹא־תִזְרַע כִּלְאָיִם וּבֶגֶד כִּלְאַיִם שַׁעַטְנֵז לֹא יַעֲלֶה עָלֶיךָ
+# "[EN-AID] My statutes you shall keep: your beast you shall not mate in two
+# kinds; your field you shall not sow in two kinds; and a garment of two
+# kinds, shaatnez, shall not come upon you."
+m.step("Lev.19.19")
+# ‹אֶת־חֻקֹּתַי תִּשְׁמֹרוּ›
+m.statute("BIND", "et_chuqotay_tishmoru")
+# ‹בְּהֶמְתְּךָ לֹא־תַרְבִּיעַ›
+m.statute("FORBID", "tarbia_behemtekha_kilayim")
+# ‹שָׂדְךָ לֹא־תִזְרַע כִּלְאָיִם›
+m.statute("FORBID", "tizra_sadkha_kilayim")
+# ‹וּבֶגֶד כִּלְאַיִם שַׁעַטְנֵז לֹא יַעֲלֶה עָלֶיךָ›
+m.statute("FORBID", "beged_kilayim_shaatnez")
+
+# -------------------------- Lev.19.20 · THE_INQUEST_CASE -------------------
+# וְאִישׁ כִּי־יִשְׁכַּב אֶת־אִשָּׁה שִׁכְבַת־זֶרַע וְהִוא שִׁפְחָה
+# נֶחֱרֶפֶת לְאִישׁ וְהָפְדֵּה לֹא נִפְדָּתָה אוֹ חֻפְשָׁה לֹא נִתַּן־לָהּ
+# בִּקֹּרֶת תִּהְיֶה לֹא יוּמְתוּ כִּי־לֹא חֻפָּשָׁה
+# "[EN-AID] And a man who lies carnally with a woman who is a slave
+# designated for a man, and she has not at all been redeemed nor freedom
+# given her - there shall be an inquest; they shall not be put to death, for
+# she was not freed."
+m.step("Lev.19.20")
+# ‹וְאִישׁ כִּי־יִשְׁכַּב אֶת־אִשָּׁה שִׁכְבַת־זֶרַע וְהִוא שִׁפְחָה
+# נֶחֱרֶפֶת לְאִישׁ› case man-and-shifcha-necherefet, yishkav-shikhvat-seed
+# routes to biqoret-tihye
+m.case("ish_ve_shifcha_necherefet, yishkav_shikhvat_zera", "biqoret_tihye")
+
+# -------------------------- Lev.19.21 · THE_ASHAM_ROUTE --------------------
+# וְהֵבִיא אֶת־אֲשָׁמוֹ לַיהוָה אֶל־פֶּתַח אֹהֶל מוֹעֵד אֵיל אָשָׁם
+# "[EN-AID] And he shall bring his guilt-offering to the LORD to the
+# entrance of the tent of meeting: a ram of guilt-offering."
+m.step("Lev.19.21")
+# ‹וְהֵבִיא אֶת־אֲשָׁמוֹ לַיהוָה אֶל־פֶּתַח אֹהֶל מוֹעֵד› standing handler —
+# if necherefet-case then and-hevi-ashamo-to-door-opening-ohel-moed
+m.handler("necherefet_case",
+          "ve_hevi_ashamo_el_petach_ohel_moed")
+
+# -------------------------- Lev.19.22 · ATONED_AND_FORGIVEN ----------------
+# וְכִפֶּר עָלָיו הַכֹּהֵן בְּאֵיל הָאָשָׁם לִפְנֵי יְהוָה עַל־חַטָּאתוֹ
+# אֲשֶׁר חָטָא וְנִסְלַח לוֹ מֵחַטָּאתוֹ אֲשֶׁר חָטָא
+# "[EN-AID] And the priest shall make atonement for him with the ram of the
+# guilt-offering before the LORD for his sin which he has sinned; and he
+# shall be forgiven of his sin which he has sinned."
+m.step("Lev.19.22")
+# ‹וְכִפֶּר עָלָיו הַכֹּהֵן בְּאֵיל הָאָשָׁם לִפְנֵי יְהוָה› standing
+# handler — if to-the-asham then and-khiper-the-priest ∧ and-nislach-not
+m.handler("el_ha_asham",
+          "ve_khiper_ha_kohen ∧ ve_nislach_lo")
+
+# -------------------------- Lev.19.23 · THE_ORCHARD_CLOCK ------------------
+# וְכִי־תָבֹאוּ אֶל־הָאָרֶץ וּנְטַעְתֶּם כָּל־עֵץ מַאֲכָל וַעֲרַלְתֶּם
+# עָרְלָתוֹ אֶת־פִּרְיוֹ שָׁלֹשׁ שָׁנִים יִהְיֶה לָכֶם עֲרֵלִים לֹא יֵאָכֵל
+# "[EN-AID] And when you come into the land and plant any tree for food, you
+# shall treat its fruit as its foreskin; three years it shall be to you as
+# uncircumcised - it shall not be eaten."
+m.step("Lev.19.23")
+# ‹וְכִי־תָבֹאוּ אֶל־הָאָרֶץ וּנְטַעְתֶּם כָּל־עֵץ מַאֲכָל› case bene-
+# yisrael, tavou-to-the-earth-and-netatem-kal-tree routes to orlat-piryo
+m.case("bene_yisrael, tavou_el_ha_aretz_u_netatem_kal_etz", "orlat_piryo")
+# ‹וַעֲרַלְתֶּם עָרְלָתוֹ אֶת־פִּרְיוֹ› standing handler — if shalosh-shanim
+# then arelim-not-yeakhel
+m.handler("shalosh_shanim",
+          "arelim_lo_yeakhel")
+
+# -------------------------- Lev.19.24 · YEAR_FOUR_IS_PRAISE ----------------
+# וּבַשָּׁנָה הָרְבִיעִת יִהְיֶה כָּל־פִּרְיוֹ קֹדֶשׁ הִלּוּלִים לַיהוָה
+# "[EN-AID] And in the fourth year all its fruit shall be holy, praise-fruit
+# to the LORD."
+m.step("Lev.19.24")
+# ‹וּבַשָּׁנָה הָרְבִיעִת יִהְיֶה כָּל־פִּרְיוֹ קֹדֶשׁ הִלּוּלִים לַיהוָה›
+# standing handler — if in-the-shana-the-reviit then qodesh-hilulim-to-the-
+# LORD
+m.handler("ba_shana_ha_reviit",
+          "qodesh_hilulim_la_YHWH")
+
+# -------------------------- Lev.19.25 · YEAR_FIVE_AND_THE_INCREASE ---------
+# וּבַשָּׁנָה הַחֲמִישִׁת תֹּאכְלוּ אֶת־פִּרְיוֹ לְהוֹסִיף לָכֶם תְּבוּאָתוֹ
+# אֲנִי יְהוָה אֱלֹהֵיכֶם
+# "[EN-AID] And in the fifth year you shall eat its fruit, to add its yield
+# to you: I am the LORD your God."
+m.step("Lev.19.25")
+# ‹וּבַשָּׁנָה הַחֲמִישִׁת תֹּאכְלוּ אֶת־פִּרְיוֹ לְהוֹסִיף לָכֶם
+# תְּבוּאָתוֹ› standing handler — if in-the-shana-the-chamishit then tokhlu-
+# piryo ∧ to-hosif-tevuato
+m.handler("ba_shana_ha_chamishit",
+          "tokhlu_et_piryo ∧ le_hosif_tevuato")
+
+# -------------------------- Lev.19.26 · BLOOD_AND_OMENS --------------------
+# לֹא תֹאכְלוּ עַל־הַדָּם לֹא תְנַחֲשׁוּ וְלֹא תְעוֹנֵנוּ
+# "[EN-AID] You shall not eat upon the blood; you shall not read omens and
+# you shall not tell fortunes."
+m.step("Lev.19.26")
+# ‹לֹא תֹאכְלוּ עַל־הַדָּם›
+m.statute("FORBID", "tokhlu_al_ha_dam")
+# ‹לֹא תְנַחֲשׁוּ›
+m.statute("FORBID", "tenachashu")
+# ‹וְלֹא תְעוֹנֵנוּ›
+m.statute("FORBID", "teonenu")
+
+# -------------------------- Lev.19.27 · THE_CORNER_MOVES_TO_THE_HEAD -------
+# לֹא תַקִּפוּ פְּאַת רֹאשְׁכֶם וְלֹא תַשְׁחִית אֵת פְּאַת זְקָנֶךָ
+# "[EN-AID] You shall not round off the corner of your head, and you shall
+# not destroy the corner of your beard."
+m.step("Lev.19.27")
+# ‹לֹא תַקִּפוּ פְּאַת רֹאשְׁכֶם›
+m.statute("FORBID", "taqifu_peat_roshkhem")
+# ‹וְלֹא תַשְׁחִית אֵת פְּאַת זְקָנֶךָ›
+m.statute("FORBID", "tashchit_peat_zeqanekha")
+
+# -------------------------- Lev.19.28 · THE_TATTOO_PAIR --------------------
+# וְשֶׂרֶט לָנֶפֶשׁ לֹא תִתְּנוּ בִּבְשַׂרְכֶם וּכְתֹבֶת קַעֲקַע לֹא
+# תִתְּנוּ בָּכֶם אֲנִי יְהוָה
+# "[EN-AID] And a cut for the dead you shall not make in your flesh, and
+# writing of tattoo you shall not put in you: I am the LORD."
+m.step("Lev.19.28")
+# ‹וְשֶׂרֶט לָנֶפֶשׁ לֹא תִתְּנוּ בִּבְשַׂרְכֶם›
+m.statute("FORBID", "seret_la_nefesh_bi_vesarkhem")
+# ‹וּכְתֹבֶת קַעֲקַע לֹא תִתְּנוּ בָּכֶם›
+m.statute("FORBID", "ketovet_qaaqa")
+
+# -------------------------- Lev.19.29 · THE_DAUGHTER_AND_THE_LAND ----------
+# אַל־תְּחַלֵּל אֶת־בִּתְּךָ לְהַזְנוֹתָהּ וְלֹא־תִזְנֶה הָאָרֶץ וּמָלְאָה
+# הָאָרֶץ זִמָּה
+# "[EN-AID] Do not profane your daughter to make her a harlot, lest the land
+# fall to harlotry and the land fill with depravity."
+m.step("Lev.19.29")
+# ‹אַל־תְּחַלֵּל אֶת־בִּתְּךָ לְהַזְנוֹתָהּ›
+m.statute("FORBID", "techalel_et_bitkha_le_haznotah")
+
+# -------------------------- Lev.19.30 · THE_CHIASM_CLOSES ------------------
+# אֶת־שַׁבְּתֹתַי תִּשְׁמֹרוּ וּמִקְדָּשִׁי תִּירָאוּ אֲנִי יְהוָה
+# "[EN-AID] My sabbaths you shall keep and My sanctuary you shall fear: I am
+# the LORD."
+m.step("Lev.19.30")
+# ‹אֶת־שַׁבְּתֹתַי תִּשְׁמֹרוּ וּמִקְדָּשִׁי תִּירָאוּ›
+m.statute("BIND", "shabtotay_tishmoru_u_miqdashi_tirau")
+
+# -------------------------- Lev.19.31 · THE_TURN_VERB_RETURNS --------------
+# אַל־תִּפְנוּ אֶל־הָאֹבֹת וְאֶל־הַיִּדְּעֹנִים אַל־תְּבַקְשׁוּ לְטָמְאָה
+# בָהֶם אֲנִי יְהוָה אֱלֹהֵיכֶם
+# "[EN-AID] Do not turn to the ghost-mediums, and to the familiar spirits do
+# not seek, to be defiled by them: I am the LORD your God."
+m.step("Lev.19.31")
+# ‹אַל־תִּפְנוּ אֶל־הָאֹבֹת וְאֶל־הַיִּדְּעֹנִים›
+m.statute("FORBID", "peno_el_ha_ovot")
+# ‹אַל־תְּבַקְשׁוּ לְטָמְאָה בָהֶם›
+m.statute("FORBID", "baqesh_el_ha_yidonim")
+
+# -------------------------- Lev.19.32 · RISE_BEFORE_GREY_HAIR --------------
+# מִפְּנֵי שֵׂיבָה תָּקוּם וְהָדַרְתָּ פְּנֵי זָקֵן וְיָרֵאתָ מֵּאֱלֹהֶיךָ
+# אֲנִי יְהוָה
+# "[EN-AID] Before grey hair you shall rise, and you shall honor the face of
+# the aged; and you shall fear your God: I am the LORD."
+m.step("Lev.19.32")
+# ‹מִפְּנֵי שֵׂיבָה תָּקוּם›
+m.statute("BIND", "mi_pene_seva_taqum")
+# ‹וְהָדַרְתָּ פְּנֵי זָקֵן›
+m.statute("BIND", "ve_hadarta_pene_zaqen")
+# ‹וְיָרֵאתָ מֵּאֱלֹהֶיךָ›
+m.statute("BIND", "ve_yareta_me_elohekha")
+
+# -------------------------- Lev.19.33 · THE_GER_CASE -----------------------
+# וְכִי־יָגוּר אִתְּךָ גֵּר בְּאַרְצְכֶם לֹא תוֹנוּ אֹתוֹ
+# "[EN-AID] And when a stranger sojourns with you in your land, you shall
+# not wrong him."
+m.step("Lev.19.33")
+# ‹וְכִי־יָגוּר אִתְּךָ גֵּר בְּאַרְצְכֶם› case ger, yagur-itkha-in-artzkhem
+# routes to mishpat-the-ger
+m.case("ger, yagur_itkha_be_artzkhem", "mishpat_ha_ger")
+# ‹לֹא תוֹנוּ אֹתוֹ›
+m.statute("FORBID", "tonu_oto")
+
+# -------------------------- Lev.19.34 · THE_SECOND_LOVE --------------------
+# כְּאֶזְרָח מִכֶּם יִהְיֶה לָכֶם הַגֵּר הַגָּר אִתְּכֶם וְאָהַבְתָּ לוֹ
+# כָּמוֹךָ כִּי־גֵרִים הֱיִיתֶם בְּאֶרֶץ מִצְרָיִם אֲנִי יְהוָה אֱלֹהֵיכֶם
+# "[EN-AID] As a native among you shall the stranger who sojourns with you
+# be to you, and you shall love him as yourself, for strangers you were in
+# the land of Egypt: I am the LORD your God."
+m.step("Lev.19.34")
+# ‹כְּאֶזְרָח מִכֶּם יִהְיֶה לָכֶם הַגֵּר הַגָּר אִתְּכֶם›
+m.statute("BIND", "ke_ezrach_mikem_yihye_lakhem")
+# ‹וְאָהַבְתָּ לוֹ כָּמוֹךָ›
+m.statute("BIND", "ve_ahavta_lo_kamokha")
+
+# -------------------------- Lev.19.35 · THE_FORMULA_RETURNS ----------------
+# לֹא־תַעֲשׂוּ עָוֶל בַּמִּשְׁפָּט בַּמִּדָּה בַּמִּשְׁקָל וּבַמְּשׂוּרָה
+# "[EN-AID] You shall do no wrong in judgment - in measure, in weight, or in
+# liquid-measure."
+m.step("Lev.19.35")
+# ‹לֹא־תַעֲשׂוּ עָוֶל בַּמִּשְׁפָּט בַּמִּדָּה בַּמִּשְׁקָל וּבַמְּשׂוּרָה›
+m.statute("FORBID", "avel_ba_mishpat_ba_mida_ba_mishqal_u_va_mesura")
+
+# -------------------------- Lev.19.36 · THE_JUST_KIT -----------------------
+# מֹאזְנֵי צֶדֶק אַבְנֵי־צֶדֶק אֵיפַת צֶדֶק וְהִין צֶדֶק יִהְיֶה לָכֶם אֲנִי
+# יְהוָה אֱלֹהֵיכֶם אֲשֶׁר־הוֹצֵאתִי אֶתְכֶם מֵאֶרֶץ מִצְרָיִם
+# "[EN-AID] Just scales, just weights, a just efah and a just hin shall you
+# have: I am the LORD your God who brought you out of the land of Egypt."
+m.step("Lev.19.36")
+# ‹מֹאזְנֵי צֶדֶק אַבְנֵי־צֶדֶק אֵיפַת צֶדֶק וְהִין צֶדֶק יִהְיֶה לָכֶם›
+m.statute("BIND", "mozne_tzedeq_avne_tzedeq_efat_tzedeq_ve_hin_tzedeq")
+
+# -------------------------- Lev.19.37 · THE_CLOSER -------------------------
+# וּשְׁמַרְתֶּם אֶת־כָּל־חֻקֹּתַי וְאֶת־כָּל־מִשְׁפָּטַי וַעֲשִׂיתֶם אֹתָם
+# אֲנִי יְהוָה
+# "[EN-AID] And you shall keep all My statutes and all My judgments, and do
+# them: I am the LORD."
+m.step("Lev.19.37")
+# ‹וּשְׁמַרְתֶּם אֶת־כָּל־חֻקֹּתַי וְאֶת־כָּל־מִשְׁפָּטַי וַעֲשִׂיתֶם אֹתָם›
+m.statute("BIND", "u_shemartem_kal_chuqotay_ve_kal_mishpatay_va_asitem")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == {'moshe'}
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == ['daber_el_kal_adat(moshe)']
+    assert len(m.SPECS["log"]) == 1
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {'read_before_install': 1}
+    assert sorted(m.WORLD["facts"]) == sorted(['statute: BIND(qedoshim_tihyu)', 'statute: BIND(imo_ve_aviv_tirau)', 'statute: BIND(shabtotay_tishmoru)', 'statute: FORBID(peno_el_ha_elilim)', 'statute: FORBID(elohe_masekha)', 'case: bene_yisrael, tizbchu_zevach_shelamim -> li_retzonkhem_tizbachuhu', 'handler: IF(be_yom_zivchakhem_u_mi_machorat) THEN(yeakhel ∧ ha_notar_ba_esh_yisaref)', 'handler: IF(heakhol_yeakhel_ba_yom_ha_shelishi) THEN(pigul_hu_lo_yeratze)', 'handler: IF(akhal_pigul) THEN(avono_yisa ∧ nikhrta_ha_nefesh_me_ameha)', 'statute: FORBID(tekhale_peat_sadkha)', 'statute: FORBID(leqet_qetzirkha)', 'statute: FORBID(teolel_karmkha)', 'statute: FORBID(peret_karmkha)', 'statute: BIND(le_ani_ve_la_ger_taazov)', 'statute: FORBID(tignovu)', 'statute: FORBID(tekhachashu)', 'statute: FORBID(teshaqru_ish_ba_amito)', 'statute: FORBID(tishavu_vi_shemi_la_shaqer)', 'statute: FORBID(taashoq_et_reakha)', 'statute: FORBID(tigzol)', 'statute: FORBID(talin_peulat_sakhir)', 'statute: FORBID(teqalel_cheresh)', 'statute: FORBID(mikhshol_li_fene_iver)', 'statute: BIND(ve_yareta_me_elohekha)', 'statute: FORBID(avel_ba_mishpat)', 'statute: FORBID(tisa_fene_dal)', 'statute: FORBID(tehdar_pene_gadol)', 'statute: BIND(be_tzedeq_tishpot_amitekha)', 'statute: FORBID(telekh_rakhil_be_amekha)', 'statute: FORBID(taamod_al_dam_reekha)', 'statute: FORBID(tisna_et_achikha_bi_levavekha)', 'statute: BIND(hokheach_tokhiach_et_amitekha)', 'statute: FORBID(tisa_alav_chet)', 'statute: FORBID(tiqom)', 'statute: FORBID(titor_et_bene_amekha)', 'statute: BIND(ve_ahavta_le_reakha_kamokha)', 'statute: BIND(et_chuqotay_tishmoru)', 'statute: FORBID(tarbia_behemtekha_kilayim)', 'statute: FORBID(tizra_sadkha_kilayim)', 'statute: FORBID(beged_kilayim_shaatnez)', 'case: ish_ve_shifcha_necherefet, yishkav_shikhvat_zera -> biqoret_tihye', 'handler: IF(necherefet_case) THEN(ve_hevi_ashamo_el_petach_ohel_moed)', 'handler: IF(el_ha_asham) THEN(ve_khiper_ha_kohen ∧ ve_nislach_lo)', 'case: bene_yisrael, tavou_el_ha_aretz_u_netatem_kal_etz -> orlat_piryo', 'handler: IF(shalosh_shanim) THEN(arelim_lo_yeakhel)', 'handler: IF(ba_shana_ha_reviit) THEN(qodesh_hilulim_la_YHWH)', 'handler: IF(ba_shana_ha_chamishit) THEN(tokhlu_et_piryo ∧ le_hosif_tevuato)', 'statute: FORBID(tokhlu_al_ha_dam)', 'statute: FORBID(tenachashu)', 'statute: FORBID(teonenu)', 'statute: FORBID(taqifu_peat_roshkhem)', 'statute: FORBID(tashchit_peat_zeqanekha)', 'statute: FORBID(seret_la_nefesh_bi_vesarkhem)', 'statute: FORBID(ketovet_qaaqa)', 'statute: FORBID(techalel_et_bitkha_le_haznotah)', 'statute: BIND(shabtotay_tishmoru_u_miqdashi_tirau)', 'statute: FORBID(peno_el_ha_ovot)', 'statute: FORBID(baqesh_el_ha_yidonim)', 'statute: BIND(mi_pene_seva_taqum)', 'statute: BIND(ve_hadarta_pene_zaqen)', 'statute: BIND(ve_yareta_me_elohekha)', 'case: ger, yagur_itkha_be_artzkhem -> mishpat_ha_ger', 'statute: FORBID(tonu_oto)', 'statute: BIND(ke_ezrach_mikem_yihye_lakhem)', 'statute: BIND(ve_ahavta_lo_kamokha)', 'statute: FORBID(avel_ba_mishpat_ba_mida_ba_mishqal_u_va_mesura)', 'statute: BIND(mozne_tzedeq_avne_tzedeq_efat_tzedeq_ve_hin_tzedeq)', 'statute: BIND(u_shemartem_kal_chuqotay_ve_kal_mishpatay_va_asitem)'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 70
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: lev_04_inadvertence_case_tree
+###############################################################################
+
+m = Machine("lev_04_inadvertence_case_tree")
+
+# -------------------------- Lev.4.1 · THE_FRAME ----------------------------
+# וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר
+# "[EN-AID] And the LORD spoke to Moses, saying:"
+m.step("Lev.4.1")
+# ‹וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר› event: speak — agent the-LORD
+m.event("speak", agent="YHWH")
+# ‹אֶל־מֹשֶׁה› reads without prior install (flag, not fix): Moses
+m.presupposed("moshe")
+
+# -------------------------- Lev.4.2 · THE_RELAY_AND_THE_INTAKE -------------
+# דַּבֵּר אֶל־בְּנֵי יִשְׂרָאֵל לֵאמֹר נֶפֶשׁ כִּי־תֶחֱטָא בִשְׁגָגָה מִכֹּל
+# מִצְוֺת יְהוָה אֲשֶׁר לֹא תֵעָשֶׂינָה וְעָשָׂה מֵאַחַת מֵהֵנָּה
+# "[EN-AID] Speak to the sons of Israel, saying: a soul, when it sins in
+# inadvertence from any of the commandments of the LORD which shall not be
+# done, and does from one of them -"
+m.step("Lev.4.2")
+# ‹דַּבֵּר אֶל־בְּנֵי יִשְׂרָאֵל לֵאמֹר› the-LORD speaks a demand — LET:
+# daber-to-bene-yisrael(Moses)
+m.declare("YHWH", "LET",
+          "daber_el_bene_yisrael(moshe)")
+# ‹נֶפֶשׁ כִּי־תֶחֱטָא בִשְׁגָגָה מִכֹּל מִצְוֺת יְהוָה אֲשֶׁר לֹא
+# תֵעָשֶׂינָה וְעָשָׂה מֵאַחַת מֵהֵנָּה› case nefesh, techeta-vi-shegaga-
+# from-all-mitzvot routes to and-asa-from-achat-from-hena
+m.case("nefesh, techeta_vi_shegaga_mi_kol_mitzvot", "ve_asa_me_achat_me_hena")
+
+# -------------------------- Lev.4.3 · BRANCH_ONE_THE_ANOINTED --------------
+# אִם הַכֹּהֵן הַמָּשִׁיחַ יֶחֱטָא לְאַשְׁמַת הָעָם וְהִקְרִיב עַל חַטָּאתוֹ
+# אֲשֶׁר חָטָא פַּר בֶּן־בָּקָר תָּמִים לַיהוָה לְחַטָּאת
+# "[EN-AID] If the anointed priest sins to the guilt of the people, he shall
+# offer for his sin which he has sinned a bull, a son of the herd,
+# unblemished, to the LORD for a sin-offering."
+m.step("Lev.4.3")
+# ‹אִם הַכֹּהֵן הַמָּשִׁיחַ יֶחֱטָא לְאַשְׁמַת הָעָם› case the-priest-the-
+# mashiach, if-yecheta-to-ashmat-the-am routes to par-ben-baqar-tamim-to-
+# chatat
+m.case("ha_kohen_ha_mashiach, im_yecheta_le_ashmat_ha_am", "par_ben_baqar_tamim_le_chatat")
+
+# -------------------------- Lev.4.4 · TO_THE_DOOR --------------------------
+# וְהֵבִיא אֶת־הַפָּר אֶל־פֶּתַח אֹהֶל מוֹעֵד לִפְנֵי יְהוָה וְסָמַךְ
+# אֶת־יָדוֹ עַל־רֹאשׁ הַפָּר וְשָׁחַט אֶת־הַפָּר לִפְנֵי יְהוָה
+# "[EN-AID] And he shall bring the bull to the entrance of the tent of
+# meeting before the LORD, and lean his hand on the bull's head, and
+# slaughter the bull before the LORD."
+m.step("Lev.4.4")
+# ‹וְהֵבִיא אֶת־הַפָּר אֶל־פֶּתַח אֹהֶל מוֹעֵד לִפְנֵי יְהוָה› standing
+# handler — if par-the-chatat then hevi-to-door-opening-ohel-moed ∧ samakh-
+# his-hand-upon-rosh ∧ shachat-to-me-fene-the-LORD
+m.handler("par_ha_chatat",
+          "hevi_el_petach_ohel_moed ∧ samakh_yado_al_rosh ∧ shachat_li_fene_YHWH")
+
+# -------------------------- Lev.4.5 · BLOOD_ENTERS -------------------------
+# וְלָקַח הַכֹּהֵן הַמָּשִׁיחַ מִדַּם הַפָּר וְהֵבִיא אֹתוֹ אֶל־אֹהֶל מוֹעֵד
+# "[EN-AID] And the anointed priest shall take of the bull's blood and bring
+# it into the tent of meeting."
+m.step("Lev.4.5")
+# ‹וְלָקַח הַכֹּהֵן הַמָּשִׁיחַ מִדַּם הַפָּר וְהֵבִיא אֹתוֹ אֶל־אֹהֶל
+# מוֹעֵד› standing handler — if blood-the-par then laqach-the-mashiach ∧
+# hevi-it-to-ohel-moed
+m.handler("dam_ha_par",
+          "laqach_ha_mashiach ∧ hevi_oto_el_ohel_moed")
+
+# -------------------------- Lev.4.6 · SEVEN_BEFORE_THE_VEIL ----------------
+# וְטָבַל הַכֹּהֵן אֶת־אֶצְבָּעוֹ בַּדָּם וְהִזָּה מִן־הַדָּם שֶׁבַע
+# פְּעָמִים לִפְנֵי יְהוָה אֶת־פְּנֵי פָּרֹכֶת הַקֹּדֶשׁ
+# "[EN-AID] And the priest shall dip his finger in the blood and sprinkle of
+# the blood seven times before the LORD, before the veil of the sanctuary."
+m.step("Lev.4.6")
+# ‹וְטָבַל הַכֹּהֵן אֶת־אֶצְבָּעוֹ בַּדָּם וְהִזָּה מִן־הַדָּם שֶׁבַע
+# פְּעָמִים לִפְנֵי יְהוָה אֶת־פְּנֵי פָּרֹכֶת הַקֹּדֶשׁ› standing handler —
+# if in-the-blood then taval-etzbao ∧ hiza-seven-peamim-pene-parokhet-the-
+# qodesh
+m.handler("ba_dam",
+          "taval_etzbao ∧ hiza_sheva_peamim_et_pene_parokhet_ha_qodesh")
+
+# -------------------------- Lev.4.7 · HORNS_AND_BASE -----------------------
+# וְנָתַן הַכֹּהֵן מִן־הַדָּם עַל־קַרְנוֹת מִזְבַּח קְטֹרֶת הַסַּמִּים
+# לִפְנֵי יְהוָה אֲשֶׁר בְּאֹהֶל מוֹעֵד וְאֵת כָּל־דַּם הַפָּר יִשְׁפֹּךְ
+# אֶל־יְסוֹד מִזְבַּח הָעֹלָה אֲשֶׁר־פֶּתַח אֹהֶל מוֹעֵד
+# "[EN-AID] And the priest shall put of the blood on the horns of the altar
+# of fragrant incense before the LORD in the tent of meeting; and all the
+# bull's blood he shall pour out at the base of the altar of burnt-offering
+# which is at the entrance of the tent of meeting."
+m.step("Lev.4.7")
+# ‹וְנָתַן הַכֹּהֵן מִן־הַדָּם עַל־קַרְנוֹת מִזְבַּח קְטֹרֶת הַסַּמִּים
+# לִפְנֵי יְהוָה אֲשֶׁר בְּאֹהֶל מוֹעֵד› standing handler — if from-the-
+# blood then natan-upon-qarnot-mizbach-the-qetoret ∧ yishpokh-to-yesod-
+# mizbach-the-ola
+m.handler("min_ha_dam",
+          "natan_al_qarnot_mizbach_ha_qetoret ∧ yishpokh_el_yesod_mizbach_ha_ola")
+
+# -------------------------- Lev.4.8 · THE_FAT_LIFTED -----------------------
+# וְאֶת־כָּל־חֵלֶב פַּר הַחַטָּאת יָרִים מִמֶּנּוּ אֶת־הַחֵלֶב הַמְכַסֶּה
+# עַל־הַקֶּרֶב וְאֵת כָּל־הַחֵלֶב אֲשֶׁר עַל־הַקֶּרֶב
+# "[EN-AID] And all the fat of the sin-offering bull he shall lift from it:
+# the fat that covers the entrails, and all the fat that is on the
+# entrails,"
+m.step("Lev.4.8")
+# ‹וְאֶת־כָּל־חֵלֶב פַּר הַחַטָּאת יָרִים מִמֶּנּוּ› standing handler — if
+# chelev-par-the-chatat then yarim-the-chelev-the-mekhase
+m.handler("chelev_par_ha_chatat",
+          "yarim_et_ha_chelev_ha_mekhase")
+
+# -------------------------- Lev.4.9 · KIDNEYS_AND_LOBE ---------------------
+# וְאֵת שְׁתֵּי הַכְּלָיֹת וְאֶת־הַחֵלֶב אֲשֶׁר עֲלֵיהֶן אֲשֶׁר
+# עַל־הַכְּסָלִים וְאֶת־הַיֹּתֶרֶת עַל־הַכָּבֵד עַל־הַכְּלָיוֹת יְסִירֶנָּה
+# "[EN-AID] and the two kidneys and the fat that is on them, which is on the
+# flanks, and the lobe on the liver - with the kidneys he shall remove it -"
+m.step("Lev.4.9")
+# ‹וְאֵת שְׁתֵּי הַכְּלָיֹת וְאֶת־הַחֵלֶב אֲשֶׁר עֲלֵיהֶן אֲשֶׁר
+# עַל־הַכְּסָלִים וְאֶת־הַיֹּתֶרֶת עַל־הַכָּבֵד עַל־הַכְּלָיוֹת יְסִירֶנָּה›
+# standing handler — if shete-the-kelayot-and-the-yoteret-upon-the-kaved
+# then yesirena
+m.handler("shete_ha_kelayot_ve_ha_yoteret_al_ha_kaved",
+          "yesirena")
+
+# -------------------------- Lev.4.10 · THE_FIRST_SUBROUTINE ----------------
+# כַּאֲשֶׁר יוּרַם מִשּׁוֹר זֶבַח הַשְּׁלָמִים וְהִקְטִירָם הַכֹּהֵן עַל
+# מִזְבַּח הָעֹלָה
+# "[EN-AID] as it is lifted from the ox of the sacrifice of well-being - and
+# the priest shall burn them on the altar of burnt-offering."
+m.step("Lev.4.10")
+# ‹כַּאֲשֶׁר יוּרַם מִשּׁוֹר זֶבַח הַשְּׁלָמִים וְהִקְטִירָם הַכֹּהֵן עַל
+# מִזְבַּח הָעֹלָה› standing handler — if like-which-yuram-from-shor-zevach-
+# the-shelamim then hiqtiram-upon-mizbach-the-ola
+m.handler("ka_asher_yuram_mi_shor_zevach_ha_shelamim",
+          "hiqtiram_al_mizbach_ha_ola")
+
+# -------------------------- Lev.4.11 · THE_CARCASS_LIST --------------------
+# וְאֶת־עוֹר הַפָּר וְאֶת־כָּל־בְּשָׂרוֹ עַל־רֹאשׁוֹ וְעַל־כְּרָעָיו
+# וְקִרְבּוֹ וּפִרְשׁוֹ
+# "[EN-AID] And the bull's hide and all its flesh, with its head and with
+# its legs, and its entrails and its dung -"
+m.step("Lev.4.11")
+# ‹וְאֶת־עוֹר הַפָּר וְאֶת־כָּל־בְּשָׂרוֹ עַל־רֹאשׁוֹ וְעַל־כְּרָעָיו
+# וְקִרְבּוֹ וּפִרְשׁוֹ› note: zero events in this verse
+m.note_zero_events()
+
+# -------------------------- Lev.4.12 · OUTSIDE_THE_CAMP --------------------
+# וְהוֹצִיא אֶת־כָּל־הַפָּר אֶל־מִחוּץ לַמַּחֲנֶה אֶל־מָקוֹם טָהוֹר
+# אֶל־שֶׁפֶךְ הַדֶּשֶׁן וְשָׂרַף אֹתוֹ עַל־עֵצִים בָּאֵשׁ עַל־שֶׁפֶךְ
+# הַדֶּשֶׁן יִשָּׂרֵף
+# "[EN-AID] he shall carry out the whole bull outside the camp to a clean
+# place, to the pouring-place of the ashes, and burn it on wood in fire; on
+# the pouring-place of the ashes it shall be burned."
+m.step("Lev.4.12")
+# ‹וְהוֹצִיא אֶת־כָּל־הַפָּר אֶל־מִחוּץ לַמַּחֲנֶה אֶל־מָקוֹם טָהוֹר
+# אֶל־שֶׁפֶךְ הַדֶּשֶׁן וְשָׂרַף אֹתוֹ עַל־עֵצִים בָּאֵשׁ עַל־שֶׁפֶךְ
+# הַדֶּשֶׁן יִשָּׂרֵף› standing handler — if all-the-par then hotzi-to-from-
+# chutz-to-machane-to-maqom-pure ∧ saraf-upon-shefekh-the-deshen
+m.handler("kol_ha_par",
+          "hotzi_el_mi_chutz_la_machane_el_maqom_tahor ∧ saraf_al_shefekh_ha_deshen")
+
+# -------------------------- Lev.4.13 · BRANCH_TWO_THE_CONGREGATION ---------
+# וְאִם כָּל־עֲדַת יִשְׂרָאֵל יִשְׁגּוּ וְנֶעְלַם דָּבָר מֵעֵינֵי הַקָּהָל
+# וְעָשׂוּ אַחַת מִכָּל־מִצְוֺת יְהוָה אֲשֶׁר לֹא־תֵעָשֶׂינָה וְאָשֵׁמוּ
+# "[EN-AID] And if the whole congregation of Israel errs, and a thing is
+# hidden from the eyes of the assembly, and they do one of all the
+# commandments of the LORD which shall not be done, and become guilty -"
+m.step("Lev.4.13")
+# ‹וְאִם כָּל־עֲדַת יִשְׂרָאֵל יִשְׁגּוּ וְנֶעְלַם דָּבָר מֵעֵינֵי הַקָּהָל›
+# case kal-adat-yisrael, yishgu-and-nelam-davar routes to and-ashemu
+m.case("kal_adat_yisrael, yishgu_ve_nelam_davar", "ve_ashemu")
+
+# -------------------------- Lev.4.14 · THE_SIN_BECOMES_KNOWN ---------------
+# וְנוֹדְעָה הַחַטָּאת אֲשֶׁר חָטְאוּ עָלֶיהָ וְהִקְרִיבוּ הַקָּהָל פַּר
+# בֶּן־בָּקָר לְחַטָּאת וְהֵבִיאוּ אֹתוֹ לִפְנֵי אֹהֶל מוֹעֵד
+# "[EN-AID] and the sin which they sinned against it becomes known - then
+# the assembly shall offer a bull, a son of the herd, for a sin-offering,
+# and bring it before the tent of meeting."
+m.step("Lev.4.14")
+# ‹וְנוֹדְעָה הַחַטָּאת אֲשֶׁר חָטְאוּ עָלֶיהָ וְהִקְרִיבוּ הַקָּהָל פַּר
+# בֶּן־בָּקָר לְחַטָּאת וְהֵבִיאוּ אֹתוֹ לִפְנֵי אֹהֶל מוֹעֵד› standing
+# handler — if and-noda-the-chatat then hiqrivu-the-qahal-par ∧ heviu-it-to-
+# me-fene-ohel-moed
+m.handler("ve_noda_ha_chatat",
+          "hiqrivu_ha_qahal_par ∧ heviu_oto_li_fene_ohel_moed")
+
+# -------------------------- Lev.4.15 · THE_ELDERS_HANDS --------------------
+# וְסָמְכוּ זִקְנֵי הָעֵדָה אֶת־יְדֵיהֶם עַל־רֹאשׁ הַפָּר לִפְנֵי יְהוָה
+# וְשָׁחַט אֶת־הַפָּר לִפְנֵי יְהוָה
+# "[EN-AID] And the elders of the congregation shall lean their hands on the
+# bull's head before the LORD, and one shall slaughter the bull before the
+# LORD."
+m.step("Lev.4.15")
+# ‹וְסָמְכוּ זִקְנֵי הָעֵדָה אֶת־יְדֵיהֶם עַל־רֹאשׁ הַפָּר לִפְנֵי יְהוָה›
+# standing handler — if par-the-qahal then samkhu-ziqne-the-eda-yedehem ∧
+# shachat-to-me-fene-the-LORD
+m.handler("par_ha_qahal",
+          "samkhu_ziqne_ha_eda_yedehem ∧ shachat_li_fene_YHWH")
+
+# -------------------------- Lev.4.16 · THE_ANOINTED_CARRIES_AGAIN ----------
+# וְהֵבִיא הַכֹּהֵן הַמָּשִׁיחַ מִדַּם הַפָּר אֶל־אֹהֶל מוֹעֵד
+# "[EN-AID] And the anointed priest shall bring of the bull's blood into the
+# tent of meeting."
+m.step("Lev.4.16")
+# ‹וְהֵבִיא הַכֹּהֵן הַמָּשִׁיחַ מִדַּם הַפָּר אֶל־אֹהֶל מוֹעֵד› standing
+# handler — if blood-the-par then hevi-the-mashiach-to-ohel-moed
+m.handler("dam_ha_par",
+          "hevi_ha_mashiach_el_ohel_moed")
+
+# -------------------------- Lev.4.17 · SEVEN_AGAIN -------------------------
+# וְטָבַל הַכֹּהֵן אֶצְבָּעוֹ מִן־הַדָּם וְהִזָּה שֶׁבַע פְּעָמִים לִפְנֵי
+# יְהוָה אֵת פְּנֵי הַפָּרֹכֶת
+# "[EN-AID] And the priest shall dip his finger from the blood and sprinkle
+# seven times before the LORD, before the veil."
+m.step("Lev.4.17")
+# ‹וְטָבַל הַכֹּהֵן אֶצְבָּעוֹ מִן־הַדָּם וְהִזָּה שֶׁבַע פְּעָמִים לִפְנֵי
+# יְהוָה אֵת פְּנֵי הַפָּרֹכֶת› standing handler — if from-the-blood then
+# taval-etzbao ∧ hiza-seven-peamim-pene-the-parokhet
+m.handler("min_ha_dam",
+          "taval_etzbao ∧ hiza_sheva_peamim_et_pene_ha_parokhet")
+
+# -------------------------- Lev.4.18 · HORNS_AND_BASE_AGAIN ----------------
+# וּמִן־הַדָּם יִתֵּן עַל־קַרְנֹת הַמִּזְבֵּחַ אֲשֶׁר לִפְנֵי יְהוָה אֲשֶׁר
+# בְּאֹהֶל מוֹעֵד וְאֵת כָּל־הַדָּם יִשְׁפֹּךְ אֶל־יְסוֹד מִזְבַּח הָעֹלָה
+# אֲשֶׁר־פֶּתַח אֹהֶל מוֹעֵד
+# "[EN-AID] And of the blood he shall put on the horns of the altar which is
+# before the LORD, which is in the tent of meeting; and all the blood he
+# shall pour out at the base of the altar of burnt-offering which is at the
+# entrance of the tent of meeting."
+m.step("Lev.4.18")
+# ‹וּמִן־הַדָּם יִתֵּן עַל־קַרְנֹת הַמִּזְבֵּחַ אֲשֶׁר לִפְנֵי יְהוָה אֲשֶׁר
+# בְּאֹהֶל מוֹעֵד› standing handler — if and-from-the-blood then yiten-upon-
+# qarnot-the-mizbecha ∧ yishpokh-to-yesod-mizbach-the-ola
+m.handler("u_min_ha_dam",
+          "yiten_al_qarnot_ha_mizbecha ∧ yishpokh_el_yesod_mizbach_ha_ola")
+
+# -------------------------- Lev.4.19 · ALL_ITS_FAT -------------------------
+# וְאֵת כָּל־חֶלְבּוֹ יָרִים מִמֶּנּוּ וְהִקְטִיר הַמִּזְבֵּחָה
+# "[EN-AID] And all its fat he shall lift from it and burn on the altar."
+m.step("Lev.4.19")
+# ‹וְאֵת כָּל־חֶלְבּוֹ יָרִים מִמֶּנּוּ וְהִקְטִיר הַמִּזְבֵּחָה› standing
+# handler — if all-chelbo then yarim-from-it ∧ hiqtir-the-mizbecha
+m.handler("kol_chelbo",
+          "yarim_mimenu ∧ hiqtir_ha_mizbecha")
+
+# -------------------------- Lev.4.20 · AS_THE_FIRST_AND_FORGIVEN -----------
+# וְעָשָׂה לַפָּר כַּאֲשֶׁר עָשָׂה לְפַר הַחַטָּאת כֵּן יַעֲשֶׂה־לּוֹ
+# וְכִפֶּר עֲלֵהֶם הַכֹּהֵן וְנִסְלַח לָהֶם
+# "[EN-AID] And he shall do to the bull as he did to the sin-offering bull -
+# so shall he do to it; and the priest shall atone for them, and it shall be
+# forgiven them."
+m.step("Lev.4.20")
+# ‹וְעָשָׂה לַפָּר כַּאֲשֶׁר עָשָׂה לְפַר הַחַטָּאת כֵּן יַעֲשֶׂה־לּוֹ
+# וְכִפֶּר עֲלֵהֶם הַכֹּהֵן וְנִסְלַח לָהֶם› standing handler — if like-
+# which-asa-to-far-the-chatat then ken-yaase-not ∧ kiper-the-priest ∧
+# nislach-to-them
+m.handler("ka_asher_asa_le_far_ha_chatat",
+          "ken_yaase_lo ∧ kiper_ha_kohen ∧ nislach_lahem")
+
+# -------------------------- Lev.4.21 · THE_FIRST_BULL_CITED ----------------
+# וְהוֹצִיא אֶת־הַפָּר אֶל־מִחוּץ לַמַּחֲנֶה וְשָׂרַף אֹתוֹ כַּאֲשֶׁר שָׂרַף
+# אֵת הַפָּר הָרִאשׁוֹן חַטַּאת הַקָּהָל הוּא
+# "[EN-AID] And he shall carry the bull outside the camp and burn it as he
+# burned the first bull: it is the sin-offering of the assembly."
+m.step("Lev.4.21")
+# ‹וְהוֹצִיא אֶת־הַפָּר אֶל־מִחוּץ לַמַּחֲנֶה וְשָׂרַף אֹתוֹ כַּאֲשֶׁר
+# שָׂרַף אֵת הַפָּר הָרִאשׁוֹן חַטַּאת הַקָּהָל הוּא› standing handler — if
+# like-which-saraf-the-par-the-rishon then hotzi-and-saraf-from-chutz-to-
+# machane
+m.handler("ka_asher_saraf_et_ha_par_ha_rishon",
+          "hotzi_ve_saraf_mi_chutz_la_machane")
+
+# -------------------------- Lev.4.22 · BRANCH_THREE_THE_LEADER -------------
+# אֲשֶׁר נָשִׂיא יֶחֱטָא וְעָשָׂה אַחַת מִכָּל־מִצְוֺת יְהוָה אֱלֹהָיו
+# אֲשֶׁר לֹא־תֵעָשֶׂינָה בִּשְׁגָגָה וְאָשֵׁם
+# "[EN-AID] When a leader sins, and does one of all the commandments of the
+# LORD his God which shall not be done, in inadvertence, and becomes guilty
+# -"
+m.step("Lev.4.22")
+# ‹אֲשֶׁר נָשִׂיא יֶחֱטָא› case nasi, which-yecheta-bi-shegaga routes to
+# and-ashem
+m.case("nasi, asher_yecheta_bi_shegaga", "ve_ashem")
+
+# -------------------------- Lev.4.23 · THE_KNOWLEDGE_TRIGGER ---------------
+# אוֹ־הוֹדַע אֵלָיו חַטָּאתוֹ אֲשֶׁר חָטָא בָּהּ וְהֵבִיא אֶת־קָרְבָּנוֹ
+# שְׂעִיר עִזִּים זָכָר תָּמִים
+# "[EN-AID] or his sin which he sinned is made known to him - then he shall
+# bring his offering: a goat of the goats, a male, unblemished."
+m.step("Lev.4.23")
+# ‹אוֹ־הוֹדַע אֵלָיו חַטָּאתוֹ אֲשֶׁר חָטָא בָּהּ› standing handler — if
+# o-hoda-to-him-chatato then hevi-qarbano-seir-izim-male-tamim
+m.handler("o_hoda_elav_chatato",
+          "hevi_qarbano_seir_izim_zakhar_tamim")
+
+# -------------------------- Lev.4.24 · AT_THE_OLAH_PLACE -------------------
+# וְסָמַךְ יָדוֹ עַל־רֹאשׁ הַשָּׂעִיר וְשָׁחַט אֹתוֹ בִּמְקוֹם
+# אֲשֶׁר־יִשְׁחַט אֶת־הָעֹלָה לִפְנֵי יְהוָה חַטָּאת הוּא
+# "[EN-AID] And he shall lean his hand on the goat's head and slaughter it
+# in the place where one slaughters the burnt-offering before the LORD: it
+# is a sin-offering."
+m.step("Lev.4.24")
+# ‹וְסָמַךְ יָדוֹ עַל־רֹאשׁ הַשָּׂעִיר וְשָׁחַט אֹתוֹ בִּמְקוֹם
+# אֲשֶׁר־יִשְׁחַט אֶת־הָעֹלָה לִפְנֵי יְהוָה› standing handler — if seir-
+# the-chatat then samakh-his-hand ∧ shachat-bi-meqom-which-yishchat-the-ola
+m.handler("seir_ha_chatat",
+          "samakh_yado ∧ shachat_bi_meqom_asher_yishchat_et_ha_ola")
+
+# -------------------------- Lev.4.25 · OUTER_HORNS -------------------------
+# וְלָקַח הַכֹּהֵן מִדַּם הַחַטָּאת בְּאֶצְבָּעוֹ וְנָתַן עַל־קַרְנֹת
+# מִזְבַּח הָעֹלָה וְאֶת־דָּמוֹ יִשְׁפֹּךְ אֶל־יְסוֹד מִזְבַּח הָעֹלָה
+# "[EN-AID] And the priest shall take of the sin-offering's blood with his
+# finger and put it on the horns of the altar of burnt-offering; and its
+# blood he shall pour out at the base of the altar of burnt-offering."
+m.step("Lev.4.25")
+# ‹וְלָקַח הַכֹּהֵן מִדַּם הַחַטָּאת בְּאֶצְבָּעוֹ וְנָתַן עַל־קַרְנֹת
+# מִזְבַּח הָעֹלָה וְאֶת־דָּמוֹ יִשְׁפֹּךְ אֶל־יְסוֹד מִזְבַּח הָעֹלָה›
+# standing handler — if from-blood-the-chatat then natan-in-etzbao-upon-
+# qarnot-mizbach-the-ola ∧ yishpokh-to-yesod
+m.handler("mi_dam_ha_chatat",
+          "natan_be_etzbao_al_qarnot_mizbach_ha_ola ∧ yishpokh_el_yesod")
+
+# -------------------------- Lev.4.26 · LEADER_FORGIVEN ---------------------
+# וְאֶת־כָּל־חֶלְבּוֹ יַקְטִיר הַמִּזְבֵּחָה כְּחֵלֶב זֶבַח הַשְּׁלָמִים
+# וְכִפֶּר עָלָיו הַכֹּהֵן מֵחַטָּאתוֹ וְנִסְלַח לוֹ
+# "[EN-AID] And all its fat he shall burn on the altar like the fat of the
+# sacrifice of well-being; and the priest shall atone for him from his sin,
+# and he shall be forgiven."
+m.step("Lev.4.26")
+# ‹וְאֶת־כָּל־חֶלְבּוֹ יַקְטִיר הַמִּזְבֵּחָה כְּחֵלֶב זֶבַח הַשְּׁלָמִים
+# וְכִפֶּר עָלָיו הַכֹּהֵן מֵחַטָּאתוֹ וְנִסְלַח לוֹ› standing handler — if
+# all-chelbo-like-chelev-zevach-the-shelamim then yaqtir ∧ kiper ∧ nislach-
+# not
+m.handler("kol_chelbo_ke_chelev_zevach_ha_shelamim",
+          "yaqtir ∧ kiper ∧ nislach_lo")
+
+# -------------------------- Lev.4.27 · BRANCH_FOUR_THE_COMMONER ------------
+# וְאִם־נֶפֶשׁ אַחַת תֶּחֱטָא בִשְׁגָגָה מֵעַם הָאָרֶץ בַּעֲשֹׂתָהּ אַחַת
+# מִמִּצְוֺת יְהוָה אֲשֶׁר לֹא־תֵעָשֶׂינָה וְאָשֵׁם
+# "[EN-AID] And if one soul of the people of the land sins in inadvertence,
+# by doing one of the commandments of the LORD which shall not be done, and
+# becomes guilty -"
+m.step("Lev.4.27")
+# ‹וְאִם־נֶפֶשׁ אַחַת תֶּחֱטָא בִשְׁגָגָה מֵעַם הָאָרֶץ› case nefesh-from-
+# am-the-earth, techeta-vi-shegaga routes to and-ashem
+m.case("nefesh_me_am_ha_aretz, techeta_vi_shegaga", "ve_ashem")
+
+# -------------------------- Lev.4.28 · THE_SHE_GOAT ------------------------
+# אוֹ הוֹדַע אֵלָיו חַטָּאתוֹ אֲשֶׁר חָטָא וְהֵבִיא קָרְבָּנוֹ שְׂעִירַת
+# עִזִּים תְּמִימָה נְקֵבָה עַל־חַטָּאתוֹ אֲשֶׁר חָטָא
+# "[EN-AID] or his sin which he sinned is made known to him - then he shall
+# bring his offering: a she-goat of the goats, unblemished, a female, for
+# his sin which he sinned."
+m.step("Lev.4.28")
+# ‹אוֹ הוֹדַע אֵלָיו חַטָּאתוֹ אֲשֶׁר חָטָא וְהֵבִיא קָרְבָּנוֹ שְׂעִירַת
+# עִזִּים תְּמִימָה נְקֵבָה› standing handler — if o-hoda-to-him-chatato
+# then hevi-qarbano-seirat-izim-temima-neqeva
+m.handler("o_hoda_elav_chatato",
+          "hevi_qarbano_seirat_izim_temima_neqeva")
+
+# -------------------------- Lev.4.29 · LEAN_AND_SLAUGHTER ------------------
+# וְסָמַךְ אֶת־יָדוֹ עַל רֹאשׁ הַחַטָּאת וְשָׁחַט אֶת־הַחַטָּאת בִּמְקוֹם
+# הָעֹלָה
+# "[EN-AID] And he shall lean his hand on the sin-offering's head and
+# slaughter the sin-offering in the place of the burnt-offering."
+m.step("Lev.4.29")
+# ‹וְסָמַךְ אֶת־יָדוֹ עַל רֹאשׁ הַחַטָּאת וְשָׁחַט אֶת־הַחַטָּאת בִּמְקוֹם
+# הָעֹלָה› standing handler — if the-chatat then samakh-his-hand ∧ shachat-
+# bi-meqom-the-ola
+m.handler("ha_chatat",
+          "samakh_yado ∧ shachat_bi_meqom_ha_ola")
+
+# -------------------------- Lev.4.30 · FINGER_HORNS_BASE -------------------
+# וְלָקַח הַכֹּהֵן מִדָּמָהּ בְּאֶצְבָּעוֹ וְנָתַן עַל־קַרְנֹת מִזְבַּח
+# הָעֹלָה וְאֶת־כָּל־דָּמָהּ יִשְׁפֹּךְ אֶל־יְסוֹד הַמִּזְבֵּחַ
+# "[EN-AID] And the priest shall take of its blood with his finger and put
+# it on the horns of the altar of burnt-offering; and all its blood he shall
+# pour out at the base of the altar."
+m.step("Lev.4.30")
+# ‹וְלָקַח הַכֹּהֵן מִדָּמָהּ בְּאֶצְבָּעוֹ וְנָתַן עַל־קַרְנֹת מִזְבַּח
+# הָעֹלָה וְאֶת־כָּל־דָּמָהּ יִשְׁפֹּךְ אֶל־יְסוֹד הַמִּזְבֵּחַ› standing
+# handler — if from-damah then natan-in-etzbao-upon-qarnot-mizbach-the-ola ∧
+# yishpokh-to-yesod-the-mizbecha
+m.handler("mi_damah",
+          "natan_be_etzbao_al_qarnot_mizbach_ha_ola ∧ yishpokh_el_yesod_ha_mizbecha")
+
+# -------------------------- Lev.4.31 · THE_PLEASING_AROMA ------------------
+# וְאֶת־כָּל־חֶלְבָּהּ יָסִיר כַּאֲשֶׁר הוּסַר חֵלֶב מֵעַל זֶבַח
+# הַשְּׁלָמִים וְהִקְטִיר הַכֹּהֵן הַמִּזְבֵּחָה לְרֵיחַ נִיחֹחַ לַיהוָה
+# וְכִפֶּר עָלָיו הַכֹּהֵן וְנִסְלַח לוֹ
+# "[EN-AID] And all its fat he shall remove, as fat is removed from the
+# sacrifice of well-being, and the priest shall burn it on the altar for a
+# pleasing aroma to the LORD; and the priest shall atone for him, and he
+# shall be forgiven."
+m.step("Lev.4.31")
+# ‹וְאֶת־כָּל־חֶלְבָּהּ יָסִיר כַּאֲשֶׁר הוּסַר חֵלֶב מֵעַל זֶבַח
+# הַשְּׁלָמִים וְהִקְטִיר הַכֹּהֵן הַמִּזְבֵּחָה לְרֵיחַ נִיחֹחַ לַיהוָה
+# וְכִפֶּר עָלָיו הַכֹּהֵן וְנִסְלַח לוֹ› standing handler — if all-chelbah-
+# like-which-husar-from-upon-zevach-the-shelamim then hiqtir-to-recha-
+# nichocha ∧ kiper ∧ nislach-not
+m.handler("kol_chelbah_ka_asher_husar_me_al_zevach_ha_shelamim",
+          "hiqtir_le_recha_nichocha ∧ kiper ∧ nislach_lo")
+
+# -------------------------- Lev.4.32 · THE_LAMB_ALTERNATIVE ----------------
+# וְאִם־כֶּבֶשׂ יָבִיא קָרְבָּנוֹ לְחַטָּאת נְקֵבָה תְמִימָה יְבִיאֶנָּה
+# "[EN-AID] And if he brings a lamb as his offering for a sin-offering, an
+# unblemished female shall he bring."
+m.step("Lev.4.32")
+# ‹וְאִם־כֶּבֶשׂ יָבִיא קָרְבָּנוֹ לְחַטָּאת נְקֵבָה תְמִימָה יְבִיאֶנָּה›
+# case keves, and-if-yavi-to-chatat routes to neqeva-temima-yeviena
+m.case("keves, ve_im_yavi_le_chatat", "neqeva_temima_yeviena")
+
+# -------------------------- Lev.4.33 · LEAN_AND_SLAUGHTER_HER --------------
+# וְסָמַךְ אֶת־יָדוֹ עַל רֹאשׁ הַחַטָּאת וְשָׁחַט אֹתָהּ לְחַטָּאת בִּמְקוֹם
+# אֲשֶׁר יִשְׁחַט אֶת־הָעֹלָה
+# "[EN-AID] And he shall lean his hand on the sin-offering's head and
+# slaughter it for a sin-offering in the place where one slaughters the
+# burnt-offering."
+m.step("Lev.4.33")
+# ‹וְסָמַךְ אֶת־יָדוֹ עַל רֹאשׁ הַחַטָּאת וְשָׁחַט אֹתָהּ לְחַטָּאת
+# בִּמְקוֹם אֲשֶׁר יִשְׁחַט אֶת־הָעֹלָה› standing handler — if the-chatat
+# then samakh-his-hand ∧ shachat-her-to-chatat-bi-meqom-which-yishchat-the-
+# ola
+m.handler("ha_chatat",
+          "samakh_yado ∧ shachat_otah_le_chatat_bi_meqom_asher_yishchat_et_ha_ola")
+
+# -------------------------- Lev.4.34 · THE_LAST_BLOOD ----------------------
+# וְלָקַח הַכֹּהֵן מִדַּם הַחַטָּאת בְּאֶצְבָּעוֹ וְנָתַן עַל־קַרְנֹת
+# מִזְבַּח הָעֹלָה וְאֶת־כָּל־דָּמָהּ יִשְׁפֹּךְ אֶל־יְסוֹד הַמִּזְבֵּחַ
+# "[EN-AID] And the priest shall take of the sin-offering's blood with his
+# finger and put it on the horns of the altar of burnt-offering; and all its
+# blood he shall pour out at the base of the altar."
+m.step("Lev.4.34")
+# ‹וְלָקַח הַכֹּהֵן מִדַּם הַחַטָּאת בְּאֶצְבָּעוֹ וְנָתַן עַל־קַרְנֹת
+# מִזְבַּח הָעֹלָה וְאֶת־כָּל־דָּמָהּ יִשְׁפֹּךְ אֶל־יְסוֹד הַמִּזְבֵּחַ›
+# standing handler — if from-blood-the-chatat then natan-in-etzbao-upon-
+# qarnot ∧ yishpokh-kal-damah-to-yesod
+m.handler("mi_dam_ha_chatat",
+          "natan_be_etzbao_al_qarnot ∧ yishpokh_kal_damah_el_yesod")
+
+# -------------------------- Lev.4.35 · THE_WALL_FOURTH_PARDON --------------
+# וְאֶת־כָּל־חֶלְבָּה יָסִיר כַּאֲשֶׁר יוּסַר חֵלֶב־הַכֶּשֶׂב מִזֶּבַח
+# הַשְּׁלָמִים וְהִקְטִיר הַכֹּהֵן אֹתָם הַמִּזְבֵּחָה עַל אִשֵּׁי יְהוָה
+# וְכִפֶּר עָלָיו הַכֹּהֵן עַל־חַטָּאתוֹ אֲשֶׁר־חָטָא וְנִסְלַח לוֹ
+# "[EN-AID] And all its fat he shall remove, as the lamb's fat is removed
+# from the sacrifice of well-being, and the priest shall burn them on the
+# altar upon the fire-offerings of the LORD; and the priest shall atone for
+# him, for his sin which he sinned, and he shall be forgiven."
+m.step("Lev.4.35")
+# ‹וְאֶת־כָּל־חֶלְבָּה יָסִיר כַּאֲשֶׁר יוּסַר חֵלֶב־הַכֶּשֶׂב מִזֶּבַח
+# הַשְּׁלָמִים וְהִקְטִיר הַכֹּהֵן אֹתָם הַמִּזְבֵּחָה עַל אִשֵּׁי יְהוָה
+# וְכִפֶּר עָלָיו הַכֹּהֵן עַל־חַטָּאתוֹ אֲשֶׁר־חָטָא וְנִסְלַח לוֹ›
+# standing handler — if all-chelbah-like-which-yusar-chelev-the-kesev then
+# hiqtir-upon-ishe-the-LORD ∧ kiper ∧ nislach-not
+m.handler("kol_chelbah_ka_asher_yusar_chelev_ha_kesev",
+          "hiqtir_al_ishe_YHWH ∧ kiper ∧ nislach_lo")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == {'moshe'}
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == ['daber_el_bene_yisrael(moshe)']
+    assert len(m.SPECS["log"]) == 1
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {'read_before_install': 1}
+    assert sorted(m.WORLD["facts"]) == sorted(['case: nefesh, techeta_vi_shegaga_mi_kol_mitzvot -> ve_asa_me_achat_me_hena', 'case: ha_kohen_ha_mashiach, im_yecheta_le_ashmat_ha_am -> par_ben_baqar_tamim_le_chatat', 'handler: IF(par_ha_chatat) THEN(hevi_el_petach_ohel_moed ∧ samakh_yado_al_rosh ∧ shachat_li_fene_YHWH)', 'handler: IF(dam_ha_par) THEN(laqach_ha_mashiach ∧ hevi_oto_el_ohel_moed)', 'handler: IF(ba_dam) THEN(taval_etzbao ∧ hiza_sheva_peamim_et_pene_parokhet_ha_qodesh)', 'handler: IF(min_ha_dam) THEN(natan_al_qarnot_mizbach_ha_qetoret ∧ yishpokh_el_yesod_mizbach_ha_ola)', 'handler: IF(chelev_par_ha_chatat) THEN(yarim_et_ha_chelev_ha_mekhase)', 'handler: IF(shete_ha_kelayot_ve_ha_yoteret_al_ha_kaved) THEN(yesirena)', 'handler: IF(ka_asher_yuram_mi_shor_zevach_ha_shelamim) THEN(hiqtiram_al_mizbach_ha_ola)', 'handler: IF(kol_ha_par) THEN(hotzi_el_mi_chutz_la_machane_el_maqom_tahor ∧ saraf_al_shefekh_ha_deshen)', 'case: kal_adat_yisrael, yishgu_ve_nelam_davar -> ve_ashemu', 'handler: IF(ve_noda_ha_chatat) THEN(hiqrivu_ha_qahal_par ∧ heviu_oto_li_fene_ohel_moed)', 'handler: IF(par_ha_qahal) THEN(samkhu_ziqne_ha_eda_yedehem ∧ shachat_li_fene_YHWH)', 'handler: IF(dam_ha_par) THEN(hevi_ha_mashiach_el_ohel_moed)', 'handler: IF(min_ha_dam) THEN(taval_etzbao ∧ hiza_sheva_peamim_et_pene_ha_parokhet)', 'handler: IF(u_min_ha_dam) THEN(yiten_al_qarnot_ha_mizbecha ∧ yishpokh_el_yesod_mizbach_ha_ola)', 'handler: IF(kol_chelbo) THEN(yarim_mimenu ∧ hiqtir_ha_mizbecha)', 'handler: IF(ka_asher_asa_le_far_ha_chatat) THEN(ken_yaase_lo ∧ kiper_ha_kohen ∧ nislach_lahem)', 'handler: IF(ka_asher_saraf_et_ha_par_ha_rishon) THEN(hotzi_ve_saraf_mi_chutz_la_machane)', 'case: nasi, asher_yecheta_bi_shegaga -> ve_ashem', 'handler: IF(o_hoda_elav_chatato) THEN(hevi_qarbano_seir_izim_zakhar_tamim)', 'handler: IF(seir_ha_chatat) THEN(samakh_yado ∧ shachat_bi_meqom_asher_yishchat_et_ha_ola)', 'handler: IF(mi_dam_ha_chatat) THEN(natan_be_etzbao_al_qarnot_mizbach_ha_ola ∧ yishpokh_el_yesod)', 'handler: IF(kol_chelbo_ke_chelev_zevach_ha_shelamim) THEN(yaqtir ∧ kiper ∧ nislach_lo)', 'case: nefesh_me_am_ha_aretz, techeta_vi_shegaga -> ve_ashem', 'handler: IF(o_hoda_elav_chatato) THEN(hevi_qarbano_seirat_izim_temima_neqeva)', 'handler: IF(ha_chatat) THEN(samakh_yado ∧ shachat_bi_meqom_ha_ola)', 'handler: IF(mi_damah) THEN(natan_be_etzbao_al_qarnot_mizbach_ha_ola ∧ yishpokh_el_yesod_ha_mizbecha)', 'handler: IF(kol_chelbah_ka_asher_husar_me_al_zevach_ha_shelamim) THEN(hiqtir_le_recha_nichocha ∧ kiper ∧ nislach_lo)', 'case: keves, ve_im_yavi_le_chatat -> neqeva_temima_yeviena', 'handler: IF(ha_chatat) THEN(samakh_yado ∧ shachat_otah_le_chatat_bi_meqom_asher_yishchat_et_ha_ola)', 'handler: IF(mi_dam_ha_chatat) THEN(natan_be_etzbao_al_qarnot ∧ yishpokh_kal_damah_el_yesod)', 'handler: IF(kol_chelbah_ka_asher_yusar_chelev_ha_kesev) THEN(hiqtir_al_ishe_YHWH ∧ kiper ∧ nislach_lo)'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 35
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
 
 

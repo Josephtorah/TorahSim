@@ -41,6 +41,7 @@ DB = REPO / "torah_grok.SNAPSHOT-main-51801ca.sqlite"
 ACCENTS = re.compile("[֑-ֽ֯]")
 VOWELS = re.compile("[ְ-ׇ]")
 MAQQEF = "־"
+BOOK_STEP = {"Gen": "Gn", "Exod": "Ex", "Lev": "Lv", "Num": "Nm", "Deut": "Dt"}
 
 
 def load_module(path):
@@ -154,12 +155,14 @@ def yq(s):
 # ---------------------------------------------------------------------------
 
 def simulate_and_check(mod):
+    bk = BOOK_STEP[mod.BOOK]
     queue, writes, world = [], 0, {}       # world: entity -> step ref str
-    state_after = {}                        # "STEP_Gn_ch_vs" -> snapshot
+    facts = []                              # law register: case/handler/statute/pattern
+    state_after = {}                        # "STEP_<Bk>_ch_vs" -> snapshot
     errors = []
     for st in mod.STEPS:
         ch, vs = st["ref"]
-        ref = "STEP_Gn_%d_%d" % (ch, vs)
+        ref = "STEP_%s_%d_%d" % (bk, ch, vs)
         for op in st["ops"]:
             kind, expr = op["op"], op["expr"]
             if kind == "DECLARE":
@@ -199,17 +202,41 @@ def simulate_and_check(mod):
             elif kind == "TEST":
                 errors.append("%s: TEST op present — simulator assumes TESTS 0; "
                               "extend simulate_and_check before using TEST" % ref)
+            elif kind == "CASE":
+                m = re.search(r"CASE\((.+)\)\s*ROUTE\(([\w-]+)\)", expr)
+                if not m:
+                    errors.append("%s: CASE without 'CASE(..) ROUTE(..)': %s" % (ref, expr))
+                else:
+                    facts.append("case: %s -> %s" % (m.group(1).strip(), m.group(2)))
+            elif kind == "HANDLER":
+                m = re.search(r"HANDLER IF\((.+)\) THEN\((.+)\)", expr)
+                if not m:
+                    errors.append("%s: HANDLER without 'HANDLER IF(..) THEN(..)': %s" % (ref, expr))
+                else:
+                    facts.append("handler: IF(%s) THEN(%s)"
+                                 % (m.group(1).strip(), m.group(2).strip()))
+            elif kind == "STATUTE":
+                m = re.search(r"STATUTE (FORBID|BIND)\((.+)\)", expr)
+                if not m:
+                    errors.append("%s: STATUTE without 'STATUTE FORBID(..)/BIND(..)': %s" % (ref, expr))
+                else:
+                    facts.append("statute: %s(%s)" % (m.group(1), m.group(2).strip()))
+            elif kind == "PATTERN":
+                m = re.search(r"PATTERN\((.+)\)", expr)
+                if not m:
+                    errors.append("%s: PATTERN without 'PATTERN(p)': %s" % (ref, expr))
+                else:
+                    facts.append("pattern: %s" % m.group(1).strip())
         state_after[ref] = {"queue": list(queue), "writes": writes,
-                            "world": dict(world)}
+                            "world": dict(world), "facts": list(facts)}
 
     for sc in mod.SCENS:
-        m = re.search(r"STEP_Gn_(\d+)_(\d+)", sc["title"])
-        anchor = "after STEP_Gn_%d_%d" % sc["ref"]
+        m = re.search(r"STEP_%s_(\d+)_(\d+)" % bk, sc["title"])
         if not m or (int(m.group(1)), int(m.group(2))) != tuple(sc["ref"]):
-            errors.append("%s: title lacks matching 'after STEP_Gn_%d_%d' anchor"
-                          % (sc["id"], sc["ref"][0], sc["ref"][1]))
+            errors.append("%s: title lacks matching 'after STEP_%s_%d_%d' anchor"
+                          % (sc["id"], bk, sc["ref"][0], sc["ref"][1]))
             continue
-        stref = "STEP_Gn_%d_%d" % sc["ref"]
+        stref = "STEP_%s_%d_%d" % ((bk,) + tuple(sc["ref"]))
         snap = state_after.get(stref)
         if snap is None:
             errors.append("%s: no step %s" % (sc["id"], stref)); continue
@@ -243,6 +270,21 @@ def simulate_and_check(mod):
                     errors.append("%s: expects WORLD += %s installed AT %s, got %s"
                                   % (sc["id"], mt.group(1), stref,
                                      snap["world"].get(mt.group(1))))
+                continue
+            mt = re.match(r"Facts (.+?) HOLD", c)
+            if mt:
+                for token in [t.strip() for t in mt.group(1).split("/")]:
+                    parts = token.split("-")
+                    if not any(all(p in f for p in parts) for f in snap["facts"]):
+                        errors.append("%s: expects fact %r but simulated facts=%s"
+                                      % (sc["id"], token, snap["facts"][-3:]))
+                continue
+            mt = re.search(r"STATUTES (\d+) standing", c)
+            if mt:
+                n = sum(1 for f in snap["facts"] if f.startswith("statute:"))
+                if n != int(mt.group(1)):
+                    errors.append("%s: expects STATUTES %s standing, simulated %d"
+                                  % (sc["id"], mt.group(1), n))
                 continue
             errors.append("%s: clause not simulatable (would be UNCHECKED "
                           "in run_unit.py too?): %r" % (sc["id"], c))
@@ -293,13 +335,14 @@ def build(mod, out_path):
         w("  value_he_translit: %s" % R.join_tr(toks))
         w("")
     w("boot_steps:")
+    bk = BOOK_STEP[mod.BOOK]
     for order, st in enumerate(mod.STEPS, 1):
         ch, vs = st["ref"]
         toks = V[(ch, vs)]
         L, Rt, e, mklabel = R.split((ch, vs))
-        w("- id: STEP_Gn_%d_%d" % (ch, vs))
+        w("- id: STEP_%s_%d_%d" % (bk, ch, vs))
         w("  order: %d" % order)
-        w("  ref: Gen.%d.%d" % (ch, vs))
+        w("  ref: %s.%d.%d" % (mod.BOOK, ch, vs))
         w("  op: %s" % st["op"])
         w("  he: %s" % R.join_he(toks, plain=True))
         w("  he_translit: %s" % R.join_tr(toks))
@@ -309,20 +352,20 @@ def build(mod, out_path):
         w("    he_translit: %s" % R.join_tr(L))
         last = R.tr_tok(L[-1]).split("-")[-1]
         if mklabel == "etnachta":
-            tag = ("%s (etnachta on %s) [VERIFIED: SNAPSHOT Gen.%d.%d idx%d "
-                   "mark_id=etnachta]" % (st["tl_en"], last, ch, vs, e))
+            tag = ("%s (etnachta on %s) [VERIFIED: SNAPSHOT %s.%d.%d idx%d "
+                   "mark_id=etnachta]" % (st["tl_en"], last, mod.BOOK, ch, vs, e))
         else:
             tag = ("%s (NO etnachta in verse: split at %s on %s) [VERIFIED: "
-                   "SNAPSHOT Gen.%d.%d idx%d mark_id=%s rank=2; no etnachta "
-                   "token]" % (st["tl_en"], mklabel, last, ch, vs, e, mklabel))
+                   "SNAPSHOT %s.%d.%d idx%d mark_id=%s rank=2; no etnachta "
+                   "token]" % (st["tl_en"], mklabel, last, mod.BOOK, ch, vs, e, mklabel))
         w("    en: %s" % yq(tag))
         w("  tree_right:")
         w("    he: %s" % R.join_he(Rt, plain=False))
         w("    he_translit: %s" % R.join_tr(Rt))
-        w("    en: %s" % yq("%s (verse-final %s) [VERIFIED: SNAPSHOT Gen.%d.%d "
+        w("    en: %s" % yq("%s (verse-final %s) [VERIFIED: SNAPSHOT %s.%d.%d "
                             "idx%d-%d]" % (st["tr_en"],
                                            R.tr_tok(Rt[-1]).split("-")[-1],
-                                           ch, vs, e + 1, len(toks) - 1)))
+                                           mod.BOOK, ch, vs, e + 1, len(toks) - 1)))
         w("  operators:")
         for op in st["ops"]:
             f = op["frag"]

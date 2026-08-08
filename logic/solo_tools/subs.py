@@ -160,6 +160,47 @@ GLOBAL_SUBS = {
     "li-meqomota-m": "li-meqomotam", "bi-shemota-m": "bi-shemotam",
     "le-moshvota-m": "le-moshvotam", "achuzata-m": "achuzatam",
     "bi-reot-o": "bi-reoto",
+    # lev_19 span (19:1-37), appended 2026-08-07 (probe wave block 1) —
+    # all unambiguous, collision-scanned against solo frozen yamls
+    # (zero raw hits). et-khem deliberately ABSENT: mixed lemma in-span
+    # (854 itkhem 19:34 / 853 etkhem 19:36) — stays raw, gen_58 et-o
+    # precedent. el-hem -> alehem shares its value with ale-hem (both
+    # surface alehem; the he line keeps the letter distinction).
+    # "ve-avi-v" is NOT here — frozen gen_58 (35:18) keeps the raw form
+    # (the ahol-o carve-out class); lev_19 polishes via module EXTRA_SUBS.
+    "le-haznota-ה": "le-haznotah",
+    "alay-v": "alav", "ale-kha": "alekha", "ame-kha": "amekha",
+    "amite-kha": "amitekha", "arlat-o": "arlato", "artz-khem": "artzkhem",
+    "asham-o": "ashamo", "avon-o": "avono", "ba-amit-o": "ba-amito",
+    "ba-khem": "bakhem", "be-ame-kha": "be-amekha",
+    "be-artz-khem": "be-artzkhem", "behemt-kha": "behemtekha",
+    "bi-levave-kha": "bi-levavekha", "bi-vesar-khem": "bi-vesarkhem",
+    "bit-kha": "bitkha", "chatat-o": "chatato", "chuqota-y": "chuqotay",
+    "el-hem": "alehem", "elohe-khem": "elohekhem",
+    "kamo-kha": "kamokha", "karm-kha": "karmkha",
+    "le-rea-kha": "le-reakha", "li-retzon-khem": "li-retzonkhem",
+    "me-chatat-o": "me-chatato", "me-elohe-kha": "me-elohekha",
+    "mishpata-y": "mishpatay", "piry-o": "piryo",
+    "qetzir-kha": "qetzirkha", "rea-kha": "reakha", "ree-kha": "reekha",
+    "rosh-khem": "roshkhem", "sad-kha": "sadkha",
+    "shabtota-y": "shabtotay", "tevuat-o": "tevuato",
+    "tizbachu-hu": "tizbachuhu", "u-miqdashi-y": "u-miqdashi",
+    "u-ve-qutzr-khem": "u-ve-qutzrkhem", "va-hem": "vahem",
+    "ve-kharm-kha": "ve-kharmkha",
+    "ve-okhlay-v": "ve-okhlav", "vi-shemi-y": "vi-shemi",
+    "zeqane-kha": "zeqanekha", "zivcha-khem": "zivchakhem",
+    # lev_04 span (4:1-35), appended 2026-08-07 (probe wave block 2) —
+    # all unambiguous, collision-scanned (zero raw hits in solo frozen).
+    "ale-hen": "alehen", "ba-asota-ה": "ba-asotah",
+    "be-etzba-o": "be-etzbao", "besar-o": "besaro", "chelb-o": "chelbo",
+    "chelba-ה": "chelbah", "dam-o": "damo", "dama-ה": "damah",
+    "elohay-v": "elohav", "etzba-o": "etzbao",
+    "ha-mizbecha-ה": "ha-mizbechah", "keraay-v": "keraav",
+    "mi-dama-ה": "mi-damah", "mime-nu": "mimenu", "qarban-o": "qarbano",
+    "rosh-o": "rosho", "u-firsh-o": "u-firsho",
+    "ve-hiqtira-m": "ve-hiqtiram", "ve-qirb-o": "ve-qirbo",
+    "yad-o": "yado", "yede-hem": "yedehem", "yesire-na": "yesirena",
+    "yevie-na": "yeviena",
 }
 # NOTE (2026-08-07, filed with the maqqef observation): frozen gen_51
 # keeps "im-o" raw and frozen gen_52 keeps "bi-y" raw where later units

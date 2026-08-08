@@ -8,6 +8,113 @@ Read this FIRST after compaction. Supersedes PROMPT_continue_gen46 and
 PROMPT_continue_amendment_wave (both closed). Disk is truth: verify with
 §CHECK before any instruction.
 
+## PROBE WAVE (owner order 2026-08-07: "probe wave lets do it")
+Genre stress-test of the encoding BEFORE continuing Gen 37–Exodus:
+THREE Leviticus law units, full pipeline, all gates intact (auto-freeze
+on green preflight + adversarial review PASS; commit gate NOT lifted;
+narrative gate NOT lifted). Rationale (owner's concern, 2026-08-07): if
+the card/registry model misses a law-genre logic class, find out at 60
+frozen units, not 120+. Precedent: lev_13_intake_quarantine (frozen,
+"first law unit") already forced an ADDITIVE vocabulary — the
+CASE/HANDLER/verdict-loop machine — without touching narrative
+semantics; the probe asks whether the other law genres extend the same
+way. Order (risk-first):
+- **Block 1: Lev 19:1-37 (apodictic wall)** — direct second-person
+  command chains; tests whether decree grammar (gen_33: writes nothing)
+  + weqatal duty-content (gen_40) yield a real duty ledger or a
+  degenerate empty board. HIGHEST-RISK genre for the current encoding.
+- **Block 2: Lev 4 (casuistic tree)** — if-agent-sins branching over
+  agent classes (anointed priest / congregation / leader / commoner);
+  tests quantification over person-classes.
+- **Block 3: Lev 25 (arithmetic/calendar)** — sabbath-years, jubilee,
+  redemption pricing; tests numeric/calendrical ops.
+UID care: old-era DRAFT yamls exist at lev_19_holiness_neighbor,
+lev_19_mixtures_weights, lev_04_chatat_* , lev_25_* — new probe UIDs
+must NOT collide (they are scouting maps only, not to current
+standard). gen_60 = Gen 37 resumes after the probe verdict + owner
+word. Progress:
+- **Block 1 DONE — lev_19_holiness_duty_ledger FROZEN (61 frozen;
+  regression 61/61; ALL_UNITS 61/61 green; py+html rendered;
+  WATCHLIST_lev19_prospective_2026-08-07.md filed). Review: FAIL
+  (1 BLOCKER pana-jussive scope — Num 16:15/Deut 9:27 2ms tokens;
+  1 MAJOR tzedeq-doubling ordinal; 3 MINOR) → 9 asserted
+  replacements → AMENDMENTS CONFIRMED — PASS FOR FREEZE. Renderer
+  + machine.py gained m.statute (additive). Block 2 (Lev 4)
+  prestaged: 35vv/542 toks, one daber-imperative, frame-verse-only
+  etnachta gap again; casuistic tree expected to need ZERO new ops.**
+- **Block 2 (Lev 4) — drafted, ALL GREEN, under external review.**
+  UID lev_04_inadvertence_case_tree · 35 steps/35 scenarios · 542
+  tokens · PROBE ANSWER: ZERO new operators — 6 CASEs + 27 HANDLERs
+  (lev_13 vocabulary) + 1 relay card (OPEN; 1 wayyiqtol in 542) +
+  NOTE_ZERO_EVENTS on 4:11 (the verbless carcass-list). STATUTES 0
+  — the three law units now mirror: lev_13 procedure / lev_19
+  apodictic (56 statutes) / lev_04 casuistic (0). Crowns: Gen 4:7
+  chatat+petach ADJACENT double-debut → 4:4 sin-to-the-door; Gen
+  37:31 deception kit (shachat + seir izim + taval + dam; taval
+  tok2 = Exod 12:22 Passover hyssop); Akedah arms (shachat tok1 =
+  22:10, qarnot tok1 = 22:13); nislach toks 2-5/20 after Exod 34:9
+  Moses-plea debut + THE UNPARDONED FIRST BRANCH (zero kipper/
+  nislach in 4:3-12); 8 self-citations incl. "the first bull"
+  (rishon 22/55); mashiach 4/4 debut-as-sinner; inadvertence
+  vocabulary minted (shegaga/shagag/alam/asham-verb debuts);
+  asher-opener on the nasi branch (Chamor = the Torah's 4th nasi,
+  gen_57 tie); recha nichocha once, on the commoner's goat.
+  REVIEW: FAIL (4 MAJOR + 1 MINOR, all prose-census: rum /46;
+  forty-five; volitive-quietest fenced to lev_13's zero; the two
+  bare 854 et tokens named; 4:29 pointer fenced) → all 5 amended,
+  rebuilt, text+preflight GREEN. Re-review verdict RECEIVED
+  2026-08-07 (moments after the pause order): "AMENDMENTS
+  CONFIRMED — PASS FOR FREEZE" — the external-review law is
+  SATISFIED and on record. RESUMED 2026-08-08 on owner word ("I
+  approve of that order": freeze → commit → block 3): **lev_04
+  FROZEN — 62 frozen units, regression 62/62, ALL_UNITS 62x
+  green, py+html rendered,
+  WATCHLIST_lev04_prospective_2026-08-08.md filed** (ordination-
+  execution arm Lev 8:14-17/9:8-11 = the installed handlers'
+  first narrative firing; Num 15:22-29 shegaga re-law; Num 19
+  para; Gen 37:31 backward-tie armed for gen_60). Block 3
+  (Lev 25) PRESTAGED ONLY: 55vv/711 toks, scratchpad
+  lev25_prestage_full.txt (regenerable); volitives = daber + 2
+  al-jussives (25:14 tonu — lev_19's 19:33 arm; 25:36 tiqach);
+  all three registers expected + the reckon-verb chashav cluster
+  as the arithmetic probe's letter-native compute instruction.
+  NOTHING COMMITTED since b10d3af (commit gate: owner word).
+  Uncommitted: lev_19 freeze bundle (yaml+content+py+html+
+  indexes+ALL_UNITS 61x+watchlist), lev_04 draft (yaml+content),
+  run_unit.py h_statute + STATUTES clause, machine.py m.statute,
+  render_unit_py.py STATUTE map, build_unit.py/verify_text.py
+  book-generic + law-op simulator, subs.py lev_19+lev_04 blocks,
+  prestage scratchpads, this doc.
+  UID lev_19_holiness_duty_ledger · 37 steps/37 scenarios · 440
+  tokens · 19:1 the only etnachta-less verse (= the only narrative
+  verse, lev_13's signature). PROBE ANSWER (design): ONE new
+  operator STATUTE (FORBID/BIND) — law-relay frame RE-TYPES
+  volitives (lev_13 ki-retyping extended; letter witness 19:4:
+  al+jussive coordinated with lo+imperfect in one list); the 4
+  al-jussives → FORBID statutes; the 1 true imperative (19:2 daber,
+  YHWH→Moses) pushes the unit's ONE card, OPEN at wall (relay never
+  narrated — 1 wayyiqtol in 440 tokens). Census: 56 statutes (39
+  FORBID + 17 BIND) + 4 CASEs + 8 HANDLERs = 68 standing facts;
+  REGISTRY 0; TESTS 0. Crowns: seal grid ani-YHWH 16 = 8 long + 8
+  short, first bare seal ON the false-oath verse 19:12, exodus
+  clause only on the scales 19:36; ve-ahavta ×4 Torah (both
+  human-object here: neighbor 18 / stranger 34); verbatim triple
+  (19:15∥19:35 4-token; 19:30=26:2 whole-verse; 19:9-10→23:22
+  leqet 2/2); mother-first vs both Decalogues + fear-keep chiasm
+  3↔30; hadar 3/3 forbidden-then-commanded; 16 whole-career
+  hapaxes (4 in 19:20); Genesis arms LANDED (gen_52 nachash ban,
+  gen_57 zanah 34:31→19:29→Deut 22:21, gen_54 yakhach tribunal→
+  8/8 close, ganav only-2mp, shaqar 2/2 Avimelekh); tzedeq toks
+  1-5 in-span; ve-yareta me-elohekha 5/5 all-Lev. TOOLING (this
+  block): build_unit.py + verify_text.py book-generic (BOOK_STEP
+  map; STEP_Lv ids); simulator handles CASE/HANDLER/STATUTE/
+  PATTERN + "Facts X HOLD"/"STATUTES N standing"; run_unit.py +
+  h_statute + STATUTES clause (ADDITIVE — regression 60/60 green
+  after; 9/9 solo rebuilds byte-identical). subs.py lev_19 block
+  (~45 keys; ve-avi-v carve-out module-local, gen_58 raw; et-khem
+  raw mixed-lemma). Next: review verdict → amend/freeze ritual →
+  watchlist → Block 2 (Lev 4).
+
 ## SOLO MODE (owner order 2026-08-06: "finish up with grok then resume with just you")
 The Grok relay era is CLOSED. No human-pasted relays, ever again — the owner
 explicitly refused to keep ferrying messages. Claude = coordinator + deriver

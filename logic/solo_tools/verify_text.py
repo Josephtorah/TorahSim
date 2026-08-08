@@ -38,13 +38,13 @@ def main():
             fails.append((label, want, got))
 
     for st in U["boot_steps"]:
-        _, ch, vs = st["ref"].split(".")
+        bk, ch, vs = st["ref"].split(".")
         ch, vs = int(ch), int(vs)
         rows = db.execute(
             "SELECT w.idx, w.he, w.maqqef_after, w.mark_id, w.mark_rank "
             "FROM words w JOIN verses v ON v.id=w.verse_id "
-            "WHERE v.book='Gen' AND v.chapter=? AND v.verse=? ORDER BY w.idx",
-            (ch, vs)).fetchall()
+            "WHERE v.book=? AND v.chapter=? AND v.verse=? ORDER BY w.idx",
+            (bk, ch, vs)).fetchall()
         plain = ""
         for i, (idx, he, mq, mk, mr) in enumerate(rows):
             plain += ACC.sub("", he.replace("/", ""))
@@ -70,15 +70,16 @@ def main():
             if oh and nfc(oh) not in nfc(plain):
                 fails.append((st["ref"] + " op-frag not in plain", oh, plain))
 
+    book = U["boot_steps"][0]["ref"].split(".")[0]
     for sc in U.get("scenarios", []):
-        m = re.search(r"STEP_Gn_(\d+)_(\d+)", sc["title_en"])
+        m = re.search(r"STEP_\w\w_(\d+)_(\d+)", sc["title_en"])
         if not m:
             fails.append((sc["id"] + " no step anchor", "", sc["title_en"]))
             continue
         rows = db.execute(
             "SELECT w.he FROM words w JOIN verses v ON v.id=w.verse_id "
-            "WHERE v.book='Gen' AND v.chapter=? AND v.verse=? ORDER BY w.idx",
-            (int(m.group(1)), int(m.group(2)))).fetchall()
+            "WHERE v.book=? AND v.chapter=? AND v.verse=? ORDER BY w.idx",
+            (book, int(m.group(1)), int(m.group(2)))).fetchall()
         acc_line = " ".join(h.replace("/", "") for (h,) in rows)
         if nfc(sc["value_he"]) not in nfc(acc_line):
             fails.append((sc["id"] + " value_he not in verse",
