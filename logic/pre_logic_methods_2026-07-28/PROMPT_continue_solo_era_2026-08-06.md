@@ -1,4 +1,4 @@
-# Resume prompt — SOLO ERA · 60 frozen · THIRD 3-BLOCK RUN COMPLETE + COMMITTED (9ecc7aa / 4a1eb5e / 71700db / cd65531 / stamp d635c1a, pushed; tree clean, grok-mockups/ untracked by owner's design) · 2026-08-07 · COMPACTION POINT #4
+# Resume prompt — SOLO ERA · 62 frozen · PROBE WAVE BLOCKS 1-2 COMPLETE + COMMITTED (b564bd8 lev_19 / a0c4a59 lev_04 / b934976 tooling, pushed; tree clean, grok-mockups/ untracked by owner's design) · 2026-08-08 · COMPACTION POINT #5 — NEXT: BLOCK 3 = Lev 25 (owner-approved order; prestage ready in scratchpad, regenerable: python3 logic/solo_tools/prestage.py Lev 25:1-25:55)
 
 COMMITS (owner word given, pushed to main): b9b9fa7 gen_47 freeze ·
 c88b200 gen_48 freeze (+ ALL_UNITS/index/solo-era doc) · 8a9a1b0 webapp
