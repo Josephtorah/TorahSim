@@ -638,3 +638,10 @@ Zero web fetches. All sources from the local mirror (export_texts /
 export_links in torah_grok.sqlite); all probes against
 torah_grok.SNAPSHOT-main-51801ca.sqlite. 156 verifier rows: 153
 VERIFIED / 0 FAILED / 3 UNCHECKABLE. 63m29s wall.
+
+## 2026-08-08 — retro-audit run 5 (gen_37..gen_46, Gen 21:1-27:40)
+Zero web fetches. All sources from the local mirror (export_texts /
+export_links in torah_grok.sqlite); all probes against
+torah_grok.SNAPSHOT-main-51801ca.sqlite. 211 verifier rows: 205
+VERIFIED / 0 FAILED / 6 UNCHECKABLE (builder-asserted manual rows).
+66m22s wall.
