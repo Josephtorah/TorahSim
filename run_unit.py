@@ -359,6 +359,23 @@ def h_pattern(m, op, step):
     m.event("pattern_installed", None, [mt.group(1).strip()[:40]])
 
 
+def h_statute(m, op, step):
+    """STATUTE (introduced lev_19, 2026-08-07, the probe wave's apodictic
+    operator): the law-code's direct standing directive — addressee-bound
+    (the frame's distribution list), NO trigger clause: not a HANDLER
+    (no IF fires it), not a PATTERN (it binds someone), not a demand (the
+    law frame re-types decree grammar and jussive alike — the lev_13
+    ki-retyping extended to the relay frame; letter witness Lev 19:4:
+    el-jussive and lo-imperfect coordinated in ONE prohibition list).
+    Recorded as a standing WORLD fact; installed, never executed.
+    Notation: 'STATUTE FORBID(x)' / 'STATUTE BIND(x)'."""
+    mt = re.search(r"STATUTE (FORBID|BIND)\((.+)\)", op.get("expr_en", ""))
+    if not mt:
+        raise ContractError("STATUTE without 'STATUTE FORBID(x)/BIND(x)' notation")
+    m.WORLD["facts"].append("statute: %s(%s)" % (mt.group(1), mt.group(2).strip()))
+    m.event("statute_installed", None, [mt.group(2).strip()[:40]])
+
+
 def h_section(m, op, step):
     """SECTION (introduced gen_08, 2026-08-01): the toledot ('generations')
     section-header device — first of 13 in Genesis at Gen 2:4, the corpus's
@@ -429,6 +446,7 @@ HANDLERS = {
     "BLESS": h_bless,
     "CASE": h_case,
     "HANDLER": h_handler,
+    "STATUTE": h_statute,
     "SECTION": h_section,
     "PATTERN": h_pattern,
     "COMMIT": h_commit,
@@ -577,6 +595,11 @@ def check_clause(clause, m, step_ref, alias):
         missing = [t for t in tokens if not fact_token_holds(t, m.WORLD["facts"], alias)]
         return (not missing, "missing=%s" % missing if missing else
                 "%d facts" % len(m.WORLD["facts"]))
+
+    mt = re.search(r"STATUTES (\d+) standing", c)
+    if mt:
+        n = sum(1 for f in m.WORLD["facts"] if f.startswith("statute:"))
+        return (n == int(mt.group(1)), "statutes=%d" % n)
 
     mt = re.search(r"(\w+) INVARIANT active", c)
     if mt:

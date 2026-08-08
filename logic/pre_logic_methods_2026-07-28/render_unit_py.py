@@ -148,6 +148,9 @@ def emit_op(op):
     elif kind == "PATTERN":
         mt = re.search(r"PATTERN\((.+)\)", expr)
         L.append("m.pattern(%s)" % _q(mt.group(1).strip()))
+    elif kind == "STATUTE":
+        mt = re.search(r"STATUTE (FORBID|BIND)\((.+)\)", expr)
+        L.append("m.statute(%s, %s)" % (_q(mt.group(1)), _q(mt.group(2).strip())))
     elif kind == "SECTION":
         mt = re.search(r"SECTION\((\w+),\s*(.+)\)", expr)
         members = [x.strip() for x in mt.group(2).split(",") if x.strip()]

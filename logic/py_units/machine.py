@@ -155,6 +155,10 @@ class Machine:
         self.WORLD["facts"].append("pattern: %s" % p)
         self.event("pattern_installed", None, [p[:40]])
 
+    def statute(self, polarity, payload):            # STATUTE FORBID(x)/BIND(x) — lev_19
+        self.WORLD["facts"].append("statute: %s(%s)" % (polarity, payload))
+        self.event("statute_installed", None, [payload[:40]])
+
     def section(self, label, *members):              # SECTION — labels, installs nothing
         self.event("section", None, [label] + list(members))
 
