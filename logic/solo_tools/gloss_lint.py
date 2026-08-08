@@ -58,7 +58,8 @@ def lint_text(text, label, no_translit=False):
         # skip obvious non-Hebrew compounds / file-ish tokens
         if any(p in tok for p in ("http", "json", "yaml", "html", "py",
                                   "note", "self", "left", "right", "one",
-                                  "first", "check", "claims", "audit")):
+                                  "first", "check", "claims", "audit",
+                                  "translit")):  # tool-flag syntax, not Hebrew
             continue
         # all-English-parts compound (e.g. "chain-attested") -> not translit
         def eng(p):

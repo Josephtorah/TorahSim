@@ -146,6 +146,25 @@ class V:
         ok = bool(got) and got[0] == c["expect_mark"]
         return ok, "mark=%s" % (got[0] if got else None)
 
+    def verse_word_count(self, c):
+        toks = self.verse_tokens(c["ref"])
+        ok = len(toks) == c["expect_total"]
+        return ok, "words=%d" % len(toks)
+
+    def verse_token_count(self, c):
+        toks = self.verse_tokens(c["ref"])
+        n = sum(1 for i, t, h, he, mk in toks if t == c["translit"])
+        ok = n == c["expect_total"]
+        return ok, "in-verse count=%d" % n
+
+    def maqqef_after(self, c):
+        b, ch, vs = parse_ref(c["ref"])
+        got = self.q("SELECT w.maqqef_after FROM words w JOIN verses v ON "
+                     "w.verse_id=v.id WHERE v.book=? AND v.chapter=? AND "
+                     "v.verse=? AND w.idx=?", (b, ch, vs, c["idx"]))
+        ok = bool(got) and got[0][0] == c["expect"]
+        return ok, "maqqef_after=%s" % (got[0][0] if got else None)
+
     def he_contains(self, c):
         toks = self.verse_tokens(c["ref"])
         got = [he for i, t, h, he, mk in toks if i == c["idx"]]

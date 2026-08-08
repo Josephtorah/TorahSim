@@ -606,3 +606,20 @@ ranges per invocation — never a whole book at once.
   (Kitzur Baal HaTurim, Minchat Shai, Rashi, citation-graph span map). Oral layer ~22 min.
 - 2026-08-08 · ORAL AUDIT gen_10 (Gen 3:1-13): ZERO web fetches; oral layer ~14 min; first
   audit under the external-checker hold (mechanical gates: diff/green/verifier/gloss_lint).
+
+## 2026-08-08 — gen_11_sentences_exile retro audit (Gen 3:14-24)
+ZERO web fetches. All sources local: export_links span census +
+export_texts raw reads (Kitzur Baal HaTurim 6 notes, Minchat Shai 11
+notes, Rashi 23 notes, Bereshit Rabbah 20:12). First audit under the
+Hebrew-script display convention.
+
+## 2026-08-08 — five-block timed run: gen_12 through gen_16 (Gen 4:1-6:22)
+ZERO web fetches across all five blocks. Local reads only; the Gen 4
+and Gen 6 chapter-wide queries were banked across adjacent blocks.
+Run total 20m00s; 45 verified / 0 failed / 3 uncheckable.
+
+## 2026-08-08 — second five-block run: gen_17 through gen_21 (Gen 7:1-9:7)
+ZERO web fetches. Run total 16m31s (13:38:26-13:54:57); 40 verified /
+0 failed / 1 uncheckable; 5 discrepancy observations; 12 inheritance
+edges recorded (first run under the edge layer); ktiv/qere dual-token
+instrument discovery at Gen 8:17.
