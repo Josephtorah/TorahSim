@@ -1,0 +1,119 @@
+[
+ {
+  "id": "G28-01",
+  "source": "Minchat Shai on Gen 12:16 (the Masorah's three-defective list)",
+  "ref": "Gen 12:16",
+  "claim_en": "u-shfachot ('and maidservants') written DEFECTIVE (no second vav) — three in the Torah, the Masorah's mnemonic: 'to Abram he did good' (12:16), 'Avimelech took' (20:14), 'the LORD blessed my master' (24:35). The Hilleli copy reads plene here; SNAPSHOT sides with the Yerushalmi codex and the Masorah: defective at exactly the three.",
+  "check": {
+   "type": "token_count",
+   "where": {
+    "he_plain_joined": "ושפחת"
+   },
+   "expect_total": 3,
+   "expect_refs": [
+    "Gen 12:16",
+    "Gen 20:14",
+    "Gen 24:35"
+   ]
+  }
+ },
+ {
+  "id": "G28-02",
+  "source": "Minchat Shai on Gen 12:16 (the book-splitting Masorah)",
+  "ref": "Gen 30:43",
+  "claim_en": "The rule's boundary: 'from the book's beginning until THE MAN BURST FORTH (30:43) the maidservant-plural is written defective; from there to the Torah's end, always plene.' The first plene token is the boundary verse itself.",
+  "check": {
+   "type": "token_count",
+   "where": {
+    "he_plain_joined": "ושפחות"
+   },
+   "expect_total": 1,
+   "expect_refs": [
+    "Gen 30:43"
+   ]
+  }
+ },
+ {
+  "id": "G28-03",
+  "source": "Minchat Shai on Gen 12:16 (the book-splitting Masorah)",
+  "ref": "Gen 33:1",
+  "claim_en": "The rule's far side: every remaining maidservant-plural token (Jacob's camp-ordering, 33:1/2/6) is plene — the book-splitting rule holds END-TO-END on SNAPSHOT: three defective before the boundary, four plene at and after it, nothing else anywhere in the Torah.",
+  "check": {
+   "type": "token_count",
+   "where": {
+    "he_plain_joined": "השפחות"
+   },
+   "expect_total": 3,
+   "expect_refs": [
+    "Gen 33:1",
+    "Gen 33:2",
+    "Gen 33:6"
+   ]
+  }
+ },
+ {
+  "id": "G28-04",
+  "source": "Minchat Shai on Gen 12:15",
+  "ref": "Gen 12:15",
+  "claim_en": "va-yehallelu ('and they PRAISED her') — 'the first lamed is LIGHT, to ease the tongue, like va-etpalela in Daniel 9:4.' SNAPSHOT: the doubling dot is absent from the first lamed — the praise-hapax's very form is a lightened one; the Daniel pair rides as an edge.",
+  "check": {
+   "type": "he_contains",
+   "ref": "Gen 12:15",
+   "idx": 4,
+   "contains": "לְל"
+  }
+ },
+ {
+  "id": "G28-05",
+  "source": "Kitzur Baal HaTurim on Gen 12:12",
+  "ref": "Gen 12:12",
+  "claim_en": "yechayu ('they will KEEP ALIVE') — two in the Masorah: here and 'they shall revive as the grain' (Hosea 14:8). Torah-side: exactly ONE token — the fear-verse's life-verb is unique in the Torah; the Hosea leg rides as an edge.",
+  "check": {
+   "type": "token_count",
+   "where": {
+    "he_plain_joined": "יחיו"
+   },
+   "expect_total": 1,
+   "expect_refs": [
+    "Gen 12:12"
+   ]
+  }
+ },
+ {
+  "id": "G28-06",
+  "source": "Kitzur Baal HaTurim on Gen 12:13",
+  "ref": "Gen 12:13",
+  "claim_en": "achoti at ('you are my sister') — two in the Masorah: here and 'say to wisdom: you are my sister' (Prov 7:4) — 'Abraham and Sarah were great in wisdom.' Torah-side: the two-word pair stands exactly once (12:13; every other 'my sister' token is followed by another word). The Proverbs leg — a SAY-command aimed at the sister-word, like Abram's own imri — rides as an edge.",
+  "check": {
+   "type": "adjacency",
+   "first": {
+    "he_plain_joined": "אחתי"
+   },
+   "second": [
+    "et"
+   ],
+   "expect_refs": [
+    "Gen 12:13"
+   ]
+  }
+ },
+ {
+  "id": "G28-07",
+  "source": "Kitzur Baal HaTurim on Gen 12:19",
+  "ref": "Gen 12:19",
+  "claim_en": "qach va-lekh ('TAKE and GO') — the Masorah's five-member hand-to-hand list (the Kitzur: what is given passes from hand to hand — so Pharaoh surely gave gifts here too). Torah-side: the pair stands exactly TWICE — Pharaoh releasing Sarai (12:19) and Laban's house releasing Rivkah (24:51): both wife-transfer releases; the Kings and Jeremiah legs ride as edges.",
+  "check": {
+   "type": "adjacency",
+   "first": {
+    "he_plain_joined": "קח"
+   },
+   "second": [
+    "va-lekh"
+   ],
+   "expect_refs": [
+    "Gen 12:19",
+    "Gen 24:51"
+   ]
+  }
+ }
+]

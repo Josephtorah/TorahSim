@@ -45,13 +45,16 @@ class V:
         return self.db.execute(sql, args).fetchall()
 
     def tokens(self, where):
-        """where: translit / translit_like / lemma / lemma_like / strong,
-        optional morph_like. Returns (book, ch, vs, idx, translit, he_plain)."""
+        """where: translit / translit_like / he_plain_joined (slash-stripped
+        he_plain equality) / lemma / lemma_like / strong, optional morph_like. Returns (book, ch, vs, idx, translit, he_plain)."""
         conds, args = [], []
         if "translit" in where:
             conds.append("w.translit = ?"); args.append(where["translit"])
         if "translit_like" in where:
             conds.append("w.translit LIKE ?"); args.append(where["translit_like"])
+        if "he_plain_joined" in where:
+            conds.append("REPLACE(w.he_plain,'/','') = ?")
+            args.append(where["he_plain_joined"])
         if "lemma" in where:
             conds.append("w.lemma = ?"); args.append(where["lemma"])
         if "lemma_like" in where:
@@ -74,6 +77,8 @@ class V:
     # ---- check types -------------------------------------------------
     def token_count(self, c):
         rows = self.tokens(c["where"])
+        if c.get("verse_initial"):
+            rows = [r for r in rows if r[3] == 0]
         refs = ["%s %d:%d" % r[:3] for r in rows]
         ok = True
         if "expect_total" in c:

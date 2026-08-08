@@ -632,3 +632,9 @@ anomaly); 11 inheritance edges (Chronicles mirror-list, Jonah's
 Nineveh, Jeremiah 51 anti-Babel oracle, Zephaniah pure-speech
 reversal); meteg-precedes-vowel codepoint lesson; letter-form
 (inverted nun) = fifth uninstrumented layer.
+
+## 2026-08-08 — retro-audit run 4 (gen_27..gen_36, Gen 12:1-20:18)
+Zero web fetches. All sources from the local mirror (export_texts /
+export_links in torah_grok.sqlite); all probes against
+torah_grok.SNAPSHOT-main-51801ca.sqlite. 156 verifier rows: 153
+VERIFIED / 0 FAILED / 3 UNCHECKABLE. 63m29s wall.
