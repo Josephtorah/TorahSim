@@ -1,0 +1,58 @@
+# settlement_links.yaml — authored cross-unit demand settlements
+# (corpus world config).
+#
+# WHY THIS FILE EXISTS: inside a unit, a RESULT operator pops its demand
+# by EXACT string match — the interpreter proves those. ACROSS units the
+# settling verse almost never repeats the demand's wording, so every
+# cross-unit settlement is an authored judgment citing both verses. The
+# fold applies these links after all units are folded; each link carries
+# its basis and an uncertain flag where the judgment is arguable.
+#
+# link form:
+#   - demand:     the demand string as the declaring unit wrote it
+#     from_unit:  unit that declared it
+#     settled_by: {unit: ..., ref: Book.Ch.Vs}
+#     basis_en:   one sentence: why this verse settles that demand
+#     uncertain:  true|false (+ comment when true)
+#
+# AWAITING (hooks armed at units outside the current corpus — enter here
+# when Gen 42+ freezes): Joseph's dreams (gen_60) vs "and Joseph
+# remembered the dreams" Gen 42:9; Simeon taken 42:24; the
+# recognize-pair 42:7-8.
+
+links:
+  - demand: "zekhartani_ve_hizkartani_el_paro"
+    from_unit: gen_63_two_dreams_prison
+    settled_by: {unit: gen_64_pharaoh_dreams_rise, ref: Gen.41.9}
+    basis_en: >
+      Joseph's "remember me and mention me to Pharaoh" (Gen 40:14, the
+      hizkir root) is delivered at Gen 41:9-13 — the chief cupbearer's
+      "my offenses I MENTION (mazkir) today," the same verb, followed by
+      the full retelling that brings Joseph up from the pit. The text
+      itself marks the two-year delay (40:23 "did not remember... and
+      forgot him" — narrated non-satisfaction — then 41:1 "at the end of
+      two years").
+    uncertain: false
+
+  - demand: "machah(ha_adam, me_al_pnei_ha_adamah)"
+    from_unit: gen_15_flood_prologue
+    settled_by: {unit: gen_18_the_rise, ref: Gen.7.23}
+    basis_en: >
+      "I will wipe out (emcheh) the human from the face of the ground"
+      (Gen 6:7) is executed at Gen 7:23 "and He wiped out (va-yimach)
+      every living thing... from man to beast to creeping thing to fowl"
+      — the same verb machah ("wipe"), the same face-of-the-ground scope,
+      narrated done.
+    uncertain: false
+
+  - demand: "hatzileni(YHWH, mi_yad_esav)"
+    from_unit: gen_55_two_camps_wrestled_name
+    settled_by: {unit: gen_56_blessing_returned_first_altar, ref: Gen.33.4}
+    basis_en: >
+      Jacob's prayer "deliver me from the hand of Esau" (Gen 32:12) is
+      answered in the event: "Esau ran to meet him and embraced him...
+      and they wept" (Gen 33:4) — no hand raised.
+    uncertain: true
+    # UNCERTAIN — the deliverance is narrated in outcome, not in receipt:
+    # no verse says "God delivered." Reading the embrace as the answer is
+    # a judgment (a strong one, but authored, not textual-exact).
