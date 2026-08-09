@@ -17,10 +17,11 @@ m = Machine("gen_42_abraham_end_ishmael_line")
 # וַיֹּ֧סֶף אַבְרָהָ֛ם וַיִּקַּ֥ח אִשָּׁ֖ה וּשְׁמָ֥הּ קְטוּרָֽה
 # "[EN-AID] And Abraham again took a wife, and her name was Keturah."
 m.step("Gen.25.1")
-# ‹וַיֹּסֶף … וַיִּקַּח אִשָּׁה› event: take-wife — agent avraham; theme
-# qetura
+# ‹וַיֹּסֶף … וַיִּקַּח אִשָּׁה› (“and-add … and-take woman”) — event: take-
+# wife — agent Abraham; theme Keturah
 m.event("take_wife", agent="avraham", themes=["qetura"])
-# ‹וּשְׁמָהּ קְטוּרָה› fact holds: report-name-qetura
+# ‹וּשְׁמָהּ קְטוּרָה› (“and-name-her/its Keturah”) — fact holds: report-
+# name-Keturah
 m.fact("report_name_qetura")
 
 # -------------------------- Gen.25.2 · THE_KETURAH_SIX_SONS ----------------
@@ -29,10 +30,12 @@ m.fact("report_name_qetura")
 # "[EN-AID] And she bore him Zimran and Jokshan and Medan and Midian and
 # Ishbak and Shuah."
 m.step("Gen.25.2")
-# ‹וַתֵּלֶד לוֹ› event: bear-sons — agent qetura
+# ‹וַתֵּלֶד לוֹ› (“and-bear-young to-him/its”) — event: bear-sons — agent
+# Keturah
 m.event("bear_sons", agent="qetura")
-# ‹זִמְרָן … יָקְשָׁן … מְדָן … מִדְיָן … יִשְׁבָּק … שׁוּחַ› fact holds:
-# named-only-roster-zimran-yaqshan-medan-midyan-yishbaq-shucha
+# ‹זִמְרָן … יָקְשָׁן … מְדָן … מִדְיָן … יִשְׁבָּק … שׁוּחַ› (“Zimran …
+# Jokshan … Medan … Midian … Ishbak … Shuah”) — fact holds: named-only-
+# roster-Zimran-Jokshan-Medan-Midian-Ishbak-Shuah
 m.fact("named_only_roster_zimran_yaqshan_medan_midyan_yishbaq_shucha")
 
 # -------------------------- Gen.25.3 · THE_JOKSHAN_LINE --------------------
@@ -41,8 +44,9 @@ m.fact("named_only_roster_zimran_yaqshan_medan_midyan_yishbaq_shucha")
 # "[EN-AID] And Jokshan begot Sheba and Dedan; and the sons of Dedan were
 # Asshurim and Letushim and Leummim."
 m.step("Gen.25.3")
-# ‹שְׁבָא … דְּדָן … אַשּׁוּרִם וּלְטוּשִׁים וּלְאֻמִּים› fact holds: named-
-# only-roster-yaqshan-line
+# ‹שְׁבָא … דְּדָן … אַשּׁוּרִם וּלְטוּשִׁים וּלְאֻמִּים› (“Sheba … Dedan …
+# Asshurim and-Letushim and-Leummim”) — fact holds: named-only-roster-
+# Jokshan-line
 m.fact("named_only_roster_yaqshan_line")
 
 # -------------------------- Gen.25.4 · THE_MIDIAN_LINE_AND_CLOSE -----------
@@ -51,16 +55,17 @@ m.fact("named_only_roster_yaqshan_line")
 # "[EN-AID] And the sons of Midian: Ephah and Epher and Hanoch and Abida and
 # Eldaah. All these were the sons of Keturah."
 m.step("Gen.25.4")
-# ‹עֵיפָה … עֵפֶר … חֲנוֹךְ … אֲבִידָע … אֶלְדָּעָה … בְּנֵי קְטוּרָה› fact
-# holds: named-only-roster-midyan-line-and-close
+# ‹עֵיפָה … עֵפֶר … חֲנוֹךְ … אֲבִידָע … אֶלְדָּעָה … בְּנֵי קְטוּרָה›
+# (“Ephah … dust … Enoch … Abida … Eldaah … son Keturah”) — fact holds:
+# named-only-roster-Midian-line-and-close
 m.fact("named_only_roster_midyan_line_and_close")
 
 # -------------------------- Gen.25.5 · THE_HEIR_GIFT_TO_ISAAC --------------
 # וַיִּתֵּ֧ן אַבְרָהָ֛ם אֶת־כָּל־אֲשֶׁר־ל֖וֹ לְיִצְחָֽק
 # "[EN-AID] And Abraham gave all that he had to Isaac."
 m.step("Gen.25.5")
-# ‹וַיִּתֵּן אַבְרָהָם אֶת־כָּל־אֲשֶׁר־לוֹ לְיִצְחָק› event: give-all —
-# agent avraham
+# ‹וַיִּתֵּן אַבְרָהָם אֶת־כָּל־אֲשֶׁר־לוֹ לְיִצְחָק› (“and-set Abraham obj-
+# marker all which to-him/its to-Isaac”) — event: give-all — agent Abraham
 m.event("give_all", agent="avraham")
 
 # -------------------------- Gen.25.6 · THE_PILEGESH_GIFTS_AND_SEND_EAST ----
@@ -71,8 +76,9 @@ m.event("give_all", agent="avraham")
 # gifts; and he sent them away from Isaac his son, while he yet lived,
 # eastward, to the land of the East."
 m.step("Gen.25.6")
-# ‹נָתַן … מַתָּנֹת וַיְשַׁלְּחֵם … קֵדְמָה› event: gift-and-send-east —
-# agent avraham; theme bene-the-pilagshim
+# ‹נָתַן … מַתָּנֹת וַיְשַׁלְּחֵם … קֵדְמָה› (“set … present and-send-
+# them/their … front-ward”) — event: gift-and-send-east — agent Abraham;
+# theme son-the-concubine
 m.event("gift_and_send_east", agent="avraham", themes=["bene_ha_pilagshim"])
 
 # -------------------------- Gen.25.7 · THE_YEARS_OF_ABRAHAM ----------------
@@ -81,8 +87,8 @@ m.event("gift_and_send_east", agent="avraham", themes=["bene_ha_pilagshim"])
 # "[EN-AID] And these are the days of the years of Abraham's life which he
 # lived: a hundred years and seventy years and five years."
 m.step("Gen.25.7")
-# ‹מְאַת שָׁנָה וְשִׁבְעִים שָׁנָה וְחָמֵשׁ שָׁנִים› fact holds: avraham-
-# lived-175-years
+# ‹מְאַת שָׁנָה וְשִׁבְעִים שָׁנָה וְחָמֵשׁ שָׁנִים› (“hundred years and-
+# seventy years and-five years”) — fact holds: Abraham-lived-175-years
 m.fact("avraham_lived_175_years")
 
 # -------------------------- Gen.25.8 · THE_SEVAH_TOVAH_LANDING -------------
@@ -91,9 +97,11 @@ m.fact("avraham_lived_175_years")
 # "[EN-AID] And Abraham expired and died in a good old age, old and full,
 # and was gathered to his peoples."
 m.step("Gen.25.8")
-# ‹וַיִּגְוַע וַיָּמָת … וַיֵּאָסֶף אֶל־עַמָּיו› event: expire-die-gather
+# ‹וַיִּגְוַע וַיָּמָת … וַיֵּאָסֶף אֶל־עַמָּיו› (“and-breathe-out and-die …
+# and-gather-for-any-purpose to people-him/its”) — event: expire-die-gather
 m.event("expire_die_gather")
-# ‹בְּשֵׂיבָה טוֹבָה› fact holds: sevah-tovah-promise-landing-from-15-15
+# ‹בְּשֵׂיבָה טוֹבָה› (“in-old-age good”) — fact holds: sevah-tovah-promise-
+# landing-from-15-15
 m.fact("sevah_tovah_promise_landing_from_15_15")
 
 # -------------------------- Gen.25.9 · THE_SONS_BURY_AT_MACHPELAH ----------
@@ -104,8 +112,9 @@ m.fact("sevah_tovah_promise_landing_from_15_15")
 # Machpelah, in the field of Efron son of Zohar the Hittite, which is before
 # Mamre."
 m.step("Gen.25.9")
-# ‹וַיִּקְבְּרוּ אֹתוֹ יִצְחָק וְיִשְׁמָעֵאל … מְעָרַת הַמַּכְפֵּלָה› event:
-# bury — theme avraham
+# ‹וַיִּקְבְּרוּ אֹתוֹ יִצְחָק וְיִשְׁמָעֵאל … מְעָרַת הַמַּכְפֵּלָה› (“and-
+# bury obj-marker-him/its Isaac and-Ishmael … cavern the-Machpelah”) —
+# event: bury — theme Abraham
 m.event("bury", themes=["avraham"])
 
 # -------------------------- Gen.25.10 · THE_FIELD_PURCHASE_RECAP -----------
@@ -114,8 +123,9 @@ m.event("bury", themes=["avraham"])
 # "[EN-AID] The field that Abraham bought from the sons of Chet — there
 # Abraham was buried, and Sarah his wife."
 m.step("Gen.25.10")
-# ‹הַשָּׂדֶה אֲשֶׁר־קָנָה אַבְרָהָם מֵאֵת בְּנֵי־חֵת› fact holds: field-
-# bought-from-bene-chet-burial-place
+# ‹הַשָּׂדֶה אֲשֶׁר־קָנָה אַבְרָהָם מֵאֵת בְּנֵי־חֵת› (“the-field which
+# possessor Abraham from-with son Heth”) — fact holds: field-bought-from-
+# son-Heth-burial-place
 m.fact("field_bought_from_bene_chet_burial_place")
 
 # -------------------------- Gen.25.11 · THE_BLESSING_AND_BEER_LACHAI_ROI_CLOSE -
@@ -124,10 +134,11 @@ m.fact("field_bought_from_bene_chet_burial_place")
 # "[EN-AID] And after the death of Abraham, God blessed Isaac his son; and
 # Isaac dwelt with Beer-lachai-roi."
 m.step("Gen.25.11")
-# ‹וַיְבָרֶךְ אֱלֹהִים אֶת־יִצְחָק בְּנוֹ› event: ?
+# ‹וַיְבָרֶךְ אֱלֹהִים אֶת־יִצְחָק בְּנוֹ› (“and-bless God obj-marker Isaac
+# son-him/its”) — event: ?
 m.event("?")
-# ‹בְּאֵר לַחַי רֹאִי› fact holds: yitzchaq-dwells-beer-lachai-roi-career-
-# close
+# ‹בְּאֵר לַחַי רֹאִי› (“Beer-lahai-roi”) — fact holds: Isaac-dwells-beer-
+# lachai-Beer-lahai-roi-career-close
 m.fact("yitzchaq_dwells_beer_lachai_roi_career_close")
 
 # -------------------------- Gen.25.12 · THE_TOLEDOT_OF_ISHMAEL -------------
@@ -136,7 +147,8 @@ m.fact("yitzchaq_dwells_beer_lachai_roi_career_close")
 # "[EN-AID] And these are the generations of Ishmael, Abraham's son, whom
 # Hagar the Egyptian, Sarah's maid, bore to Abraham."
 m.step("Gen.25.12")
-# ‹תֹּלְדֹת יִשְׁמָעֵאל› fact holds: generations-yishmael-section-header
+# ‹תֹּלְדֹת יִשְׁמָעֵאל› (“generations Ishmael”) — fact holds: generations-
+# Ishmael-section-header
 m.fact("toledot_yishmael_section_header")
 
 # -------------------------- Gen.25.13 · THE_ISHMAEL_NAMES_A ----------------
@@ -146,23 +158,24 @@ m.fact("toledot_yishmael_section_header")
 # according to their generations: the firstborn of Ishmael, Nevayot; and
 # Qedar and Adbeel and Mibsam."
 m.step("Gen.25.13")
-# ‹נְבָיוֹת וְקֵדָר וְאַדְבְּאֵל וּמִבְשָׂם› fact holds: named-only-roster-
-# ishmael-sons-a
+# ‹נְבָיוֹת וְקֵדָר וְאַדְבְּאֵל וּמִבְשָׂם› (“Nebaioth and-Kedar and-Adbeel
+# and-Mibsam”) — fact holds: named-only-roster-ishmael-sons-a
 m.fact("named_only_roster_ishmael_sons_a")
 
 # -------------------------- Gen.25.14 · THE_ISHMAEL_NAMES_B ----------------
 # וּמִשְׁמָ֥ע וְדוּמָ֖ה וּמַשָּֽׂא
 # "[EN-AID] and Mishma and Duma and Masa."
 m.step("Gen.25.14")
-# ‹מִשְׁמָע וְדוּמָה וּמַשָּׂא› fact holds: named-only-roster-ishmael-sons-b
+# ‹מִשְׁמָע וְדוּמָה וּמַשָּׂא› (“Mishma and-Dumah and-Massa”) — fact holds:
+# named-only-roster-ishmael-sons-b
 m.fact("named_only_roster_ishmael_sons_b")
 
 # -------------------------- Gen.25.15 · THE_ISHMAEL_NAMES_C ----------------
 # חֲדַ֣ד וְתֵימָ֔א יְט֥וּר נָפִ֖ישׁ וָקֵֽדְמָה
 # "[EN-AID] Chadad and Tema, Yetur, Nafish, and Qedma."
 m.step("Gen.25.15")
-# ‹חֲדַד וְתֵימָא יְטוּר נָפִישׁ וָקֵדְמָה› fact holds: named-only-roster-
-# ishmael-sons-c
+# ‹חֲדַד וְתֵימָא יְטוּר נָפִישׁ וָקֵדְמָה› (“Hadad and-Tema Jetur Naphish
+# and-Kedemah”) — fact holds: named-only-roster-ishmael-sons-c
 m.fact("named_only_roster_ishmael_sons_c")
 
 # -------------------------- Gen.25.16 · THE_TWELVE_PRINCES_PAY -------------
@@ -172,8 +185,8 @@ m.fact("named_only_roster_ishmael_sons_c")
 # their villages and by their encampments: twelve princes according to their
 # nations."
 m.step("Gen.25.16")
-# ‹שְׁנֵים־עָשָׂר נְשִׂיאִים› fact holds: shneim-asar-nesiim-promise-
-# landing-from-17-20
+# ‹שְׁנֵים־עָשָׂר נְשִׂיאִים› (“two -teen chieftains”) — fact holds: shneim
+# --teen-prince-promise-landing-from-17-20
 m.fact("shneim_asar_nesiim_promise_landing_from_17_20")
 
 # -------------------------- Gen.25.17 · THE_ISHMAEL_DEATH_TRIAD ------------
@@ -183,7 +196,8 @@ m.fact("shneim_asar_nesiim_promise_landing_from_17_20")
 # and thirty years and seven years; and he expired and died and was gathered
 # to his peoples."
 m.step("Gen.25.17")
-# ‹וַיִּגְוַע וַיָּמָת וַיֵּאָסֶף אֶל־עַמָּיו› event: expire-die-gather
+# ‹וַיִּגְוַע וַיָּמָת וַיֵּאָסֶף אֶל־עַמָּיו› (“and-breathe-out and-die
+# and-gather-for-any-purpose to people-him/its”) — event: expire-die-gather
 m.event("expire_die_gather")
 
 # -------------------------- Gen.25.18 · THE_NAFAL_YISHKON_ECHO_AND_SEAM ----
@@ -192,10 +206,11 @@ m.event("expire_die_gather")
 # "[EN-AID] And they dwelt from Chavila to Shur, which is before Egypt as
 # you go toward Ashur; before all his brothers he fell."
 m.step("Gen.25.18")
-# ‹וַיִּשְׁכְּנוּ מֵחֲוִילָה עַד־שׁוּר› event: ?
+# ‹וַיִּשְׁכְּנוּ מֵחֲוִילָה עַד־שׁוּר› (“and-reside from-Havilah until
+# Shur”) — event: ?
 m.event("?")
-# ‹עַל־פְּנֵי כָל־אֶחָיו נָפָל› fact holds: nafal-before-brothers-echo-
-# fowl-16-12-yishkon
+# ‹עַל־פְּנֵי כָל־אֶחָיו נָפָל› (“over face all brother-him/its fall”) —
+# fact holds: fall-before-brothers-echo-fowl-16-12-yishkon
 m.fact("nafal_before_brothers_echo_of_16_12_yishkon")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

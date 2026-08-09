@@ -535,10 +535,11 @@ m = Machine(&quot;gen_15_flood_prologue&quot;)
 # &quot;And it came to pass, when men began to multiply on the face of the earth,
 # and daughters were born unto them,&quot;
 m.step(&quot;Gen.6.1&quot;)
-# ‹כִּי־הֵחֵל הָאָדָם לָרֹב עַל־פְּנֵי הָאֲדָמָה› event: multiply — agent
-# the-human
+# ‹כִּי־הֵחֵל הָאָדָם לָרֹב עַל־פְּנֵי הָאֲדָמָה› (“when began the-human to-
+# multiply upon face-of the-ground”) — event: multiply — agent the-human
 m.event(&quot;multiply&quot;, agent=&quot;ha_adam&quot;)
-# ‹וּבָנוֹת יֻלְּדוּ לָהֶם› event: born — theme daughters
+# ‹וּבָנוֹת יֻלְּדוּ לָהֶם› (“and-daughters were-born to-them”) — event:
+# born — theme daughters
 m.event(&quot;born&quot;, themes=[&quot;banot&quot;])
 # reads without prior install (flag, not fix): human
 m.presupposed(&quot;adam&quot;)
@@ -549,21 +550,24 @@ m.presupposed(&quot;adam&quot;)
 # &quot;that the sons of God saw the daughters of men that they were fair; and
 # they took them wives, whomsoever they chose.&quot;
 m.step(&quot;Gen.6.2&quot;)
-# ‹וַיִּרְאוּ בְנֵי־הָאֱלֹהִים אֶת־בְּנוֹת הָאָדָם› event: see — agent sons-
-# of-the-God; theme daughters-of-the-human
+# ‹וַיִּרְאוּ בְנֵי־הָאֱלֹהִים אֶת־בְּנוֹת הָאָדָם› (“and-they-saw sons-of
+# the-God obj-marker daughters-of the-human”) — event: see — agent sons-of-
+# the-God; theme daughters-of-the-human
 m.event(&quot;see&quot;, agent=&quot;bnei_ha_elohim&quot;, themes=[&quot;benot_ha_adam&quot;])
-# ‹כִּי טֹבֹת הֵנָּה› test PASS — oracle-word good, on daughters-of-the-
-# human
+# ‹כִּי טֹבֹת הֵנָּה› (“that good they”) — test PASS — oracle-word good, on
+# daughters-of-the-human
 m.test(&quot;PASS&quot;, &quot;tovot&quot;, &quot;benot_ha_adam&quot;)
-# ‹וַיִּרְאוּ … כִּי טֹבֹת … וַיִּקְחוּ› spec-delta — spec said and-He-saw
-# God when-good — the Maker inspects His work and verdicts it good (the
-# frozen week units), delivery says and-they-saw sons-of-the-God obj-
-# marker·et-daughters-of the-human when good — creature subjects, human
-# daughters as object, and a TAKING as the consequence (6:2)
+# ‹וַיִּרְאוּ … כִּי טֹבֹת … וַיִּקְחוּ› (“and-they-saw … that good … and-
+# they-took”) — spec-delta — spec said and-He-saw God when-good — the Maker
+# inspects His work and verdicts it good (the frozen week units), delivery
+# says and-they-saw sons-of-the-God obj-marker·et-daughters-of the-human
+# when good — creature subjects, human daughters as object, and a TAKING as
+# the consequence (6:2)
 m.spec_delta(&quot;va-yar Elohim ki-tov — the Maker inspects His work and verdicts it good (the frozen week units)&quot;,
              &quot;va-yiru bnei-ha-elohim et-bnot ha-adam ki tovot — creature subjects, human daughters as object, and a TAKING as the consequence (6:2)&quot;)
-# ‹וַיִּקְחוּ לָהֶם נָשִׁים מִכֹּל אֲשֶׁר בָּחָרוּ› event: take — agent
-# sons-of-the-God; theme wives-from-all-that-they-chose
+# ‹וַיִּקְחוּ לָהֶם נָשִׁים מִכֹּל אֲשֶׁר בָּחָרוּ› (“and-they-took for-
+# themselves wives from-all that they-chose”) — event: take — agent sons-of-
+# the-God; theme wives-from-all-that-they-chose
 m.event(&quot;take&quot;, agent=&quot;bnei_ha_elohim&quot;, themes=[&quot;nashim_mi_kol_asher_bacharu&quot;])
 
 # -------------------------- Gen.6.3 · DECREE_120_YEARS ---------------------
@@ -573,11 +577,12 @@ m.event(&quot;take&quot;, agent=&quot;bnei_ha_elohim&quot;, themes=[&quot;nashim
 # he also is flesh; therefore shall his days be a hundred and twenty
 # years.&#x27;&quot;
 m.step(&quot;Gen.6.3&quot;)
-# ‹וַיֹּאמֶר יְהוָה› event: say — agent the-LORD
+# ‹וַיֹּאמֶר יְהוָה› (“and-He-said YHWH”) — event: say — agent the-LORD
 m.event(&quot;say&quot;, agent=&quot;YHWH&quot;)
 # ‹לֹא־יָדוֹן רוּחִי בָאָדָם לְעֹלָם … וְהָיוּ יָמָיו מֵאָה וְעֶשְׂרִים
-# שָׁנָה› fact holds: not-shall-abide-judge-My-spirit-and-human-to-forever;
-# and-shall-be-his-days-hundred-and-twenty-year
+# שָׁנָה› (“not shall-abide-judge My-spirit in-man forever … and-shall-be
+# his-days hundred and-twenty year”) — fact holds: not-shall-abide-judge-My-
+# spirit-and-human-to-forever; and-shall-be-his-days-hundred-and-twenty-year
 m.fact(&quot;lo_yadon_ruchi_va_adam_le_olam&quot;,
        &quot;ve_hayu_yamav_meah_ve_esrim_shanah&quot;)
 
@@ -591,8 +596,9 @@ m.fact(&quot;lo_yadon_ruchi_va_adam_le_olam&quot;,
 # renown.&quot;
 m.step(&quot;Gen.6.4&quot;)
 # ‹הַנְּפִלִים הָיוּ בָאָרֶץ … הֵמָּה הַגִּבֹּרִים אֲשֶׁר מֵעוֹלָם אַנְשֵׁי
-# הַשֵּׁם› fact holds: the-Nephilim-shall-be-and-earth; men-of-the-name-
-# from-forever
+# הַשֵּׁם› (“the-Nephilim were in-the-earth … they the-mighty when from-of-
+# old men-of the-name”) — fact holds: the-Nephilim-shall-be-and-earth; men-
+# of-the-name-from-forever
 m.fact(&quot;ha_nefilim_hayu_va_aretz&quot;,
        &quot;anshei_ha_shem_me_olam&quot;)
 
@@ -603,16 +609,18 @@ m.fact(&quot;ha_nefilim_hayu_va_aretz&quot;,
 # that every imagination of the thoughts of his heart was only evil
 # continually.&quot;
 m.step(&quot;Gen.6.5&quot;)
-# ‹וַיַּרְא יְהוָה כִּי רַבָּה רָעַת הָאָדָם› event: see — agent the-LORD;
-# theme evil-of-the-human
+# ‹וַיַּרְא יְהוָה כִּי רַבָּה רָעַת הָאָדָם› (“and-He-saw YHWH that great
+# evil-of the-human”) — event: see — agent the-LORD; theme evil-of-the-human
 m.event(&quot;see&quot;, agent=&quot;YHWH&quot;, themes=[&quot;raat_ha_adam&quot;])
-# ‹וַיַּרְא … כִּי רַבָּה רָעַת› spec-delta — spec said and-He-saw God obj-
-# marker·et-all-that make and-behold good very — He saw all He had made:
-# very good (1:31, frozen day 6), delivery says and-He-saw the-LORD when
-# great evil-of the-human — He saw: GREAT was the EVIL bird-of man (6:5)
+# ‹וַיַּרְא … כִּי רַבָּה רָעַת› (“and-He-saw … that great evil-of”) — spec-
+# delta — spec said and-He-saw God obj-marker·et-all-that make and-behold
+# good very — He saw all He had made: very good (1:31, frozen day 6),
+# delivery says and-He-saw the-LORD when great evil-of the-human — He saw:
+# GREAT was the EVIL bird-of man (6:5)
 m.spec_delta(&quot;va-yar Elohim et-kol-asher asah ve-hinneh tov meod — He saw all He had made: very good (1:31, frozen day 6)&quot;,
              &quot;va-yar YHWH ki rabbah raat ha-adam — He saw: GREAT was the EVIL of man (6:5)&quot;)
-# ‹וְכָל־יֵצֶר מַחְשְׁבֹת לִבּוֹ רַק רַע כָּל־הַיּוֹם› fact holds: all-
+# ‹וְכָל־יֵצֶר מַחְשְׁבֹת לִבּוֹ רַק רַע כָּל־הַיּוֹם› (“and-every devising-
+# of thoughts-of his-heart only evil all the-day”) — fact holds: all-
 # devising-of-thoughts-His-heart-only-evil-all-the-day
 m.fact(&quot;kol_yetzer_machshevot_libo_raq_ra_kol_ha_yom&quot;)
 
@@ -622,10 +630,11 @@ m.fact(&quot;kol_yetzer_machshevot_libo_raq_ra_kol_ha_yom&quot;)
 # &quot;And it repented the LORD that He had made man on the earth, and it
 # grieved Him at His heart.&quot;
 m.step(&quot;Gen.6.6&quot;)
-# ‹וַיִּנָּחֶם יְהוָה כִּי־עָשָׂה אֶת־הָאָדָם› event: regret — agent the-
-# LORD
+# ‹וַיִּנָּחֶם יְהוָה כִּי־עָשָׂה אֶת־הָאָדָם› (“and-He-regretted YHWH that
+# He-made obj-marker the-human”) — event: regret — agent the-LORD
 m.event(&quot;regret&quot;, agent=&quot;YHWH&quot;)
-# ‹וַיִּתְעַצֵּב אֶל־לִבּוֹ› event: grieve — agent the-LORD; theme His-heart
+# ‹וַיִּתְעַצֵּב אֶל־לִבּוֹ› (“and-He-grieved to His-heart”) — event: grieve
+# — agent the-LORD; theme His-heart
 m.event(&quot;grieve&quot;, agent=&quot;YHWH&quot;, themes=[&quot;libo&quot;])
 
 # -------------------------- Gen.6.7 · WIPE_RESOLVE_PUSHED ------------------
@@ -636,13 +645,16 @@ m.event(&quot;grieve&quot;, agent=&quot;YHWH&quot;, themes=[&quot;libo&quot;])
 # of the earth; both man, and beast, and creeping thing, and fowl of the
 # air; for it repenteth Me that I have made them.&#x27;&quot;
 m.step(&quot;Gen.6.7&quot;)
-# ‹וַיֹּאמֶר יְהוָה› event: say — agent the-LORD
+# ‹וַיֹּאמֶר יְהוָה› (“and-He-said YHWH”) — event: say — agent the-LORD
 m.event(&quot;say&quot;, agent=&quot;YHWH&quot;)
-# ‹אֶמְחֶה אֶת־הָאָדָם אֲשֶׁר־בָּרָאתִי מֵעַל פְּנֵי הָאֲדָמָה› the-LORD
-# speaks a demand — CMD-US?: wipe(the-human, from-upon-face-of-the-ground)
+# ‹אֶמְחֶה אֶת־הָאָדָם אֲשֶׁר־בָּרָאתִי מֵעַל פְּנֵי הָאֲדָמָה› (“I-will-
+# wipe obj-marker the-human whom I-created from-upon face-of the-ground”) —
+# the-LORD speaks a demand — CMD-US?: wipe(the-human, from-upon-face-of-the-
+# ground)
 m.declare(&quot;YHWH&quot;, &quot;CMD-US?&quot;,
           &quot;machah(ha_adam, me_al_pnei_ha_adamah)&quot;)
-# ‹מֵאָדָם עַד־בְּהֵמָה עַד־רֶמֶשׂ וְעַד־עוֹף הַשָּׁמָיִם› fact holds: from-
+# ‹מֵאָדָם עַד־בְּהֵמָה עַד־רֶמֶשׂ וְעַד־עוֹף הַשָּׁמָיִם› (“from-human to
+# livestock to creeper and-to bird-of the-heavens”) — fact holds: from-
 # human-to-livestock-to-creeper-and-to-bird-of-the-heavens
 m.fact(&quot;me_adam_ad_behemah_ad_remes_ve_ad_of_ha_shamayim&quot;)
 
@@ -650,8 +662,8 @@ m.fact(&quot;me_adam_ad_behemah_ad_remes_ve_ad_of_ha_shamayim&quot;)
 # וְנֹחַ מָצָא חֵן בְּעֵינֵי יְהוָה
 # &quot;But Noah found grace in the eyes of the LORD.&quot;
 m.step(&quot;Gen.6.8&quot;)
-# ‹וְנֹחַ מָצָא חֵן בְּעֵינֵי יְהוָה› fact holds: Noach-found-favor-in-eyes-
-# of-the-LORD
+# ‹וְנֹחַ מָצָא חֵן בְּעֵינֵי יְהוָה› (“and-Noach found favor in-eyes-of
+# YHWH”) — fact holds: Noach-found-favor-in-eyes-of-the-LORD
 m.fact(&quot;noach_matza_chen_be_einei_YHWH&quot;)
 
 # -------------------------- machine truth (baked from the Stage D run) -------
@@ -672,4 +684,4 @@ if __name__ == &quot;__main__&quot;:
     assert len(m.EVENTS) == 10
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">FROZEN 2026-08-01 (derived on owner order &quot;derive next block&quot;; frozen automatically per the 2026-08-01 process order — auto-freeze #2): sixteenth frozen unit — THE FLOOD PROLOGUE, the corpus&#x27;s hinge; sixth extension-free derivation in a row. Central findings, all DB-verified before drafting: the week&#x27;s inspection formula STOLEN at 6:2 (creature subjects, human daughters, a taking as sequel — creature-run TEST #2 beside spec-delta #1; choice&#x27;s first token spent on unlimited taking) and INVERTED at 6:5 (very-good answered by great-evil — spec-delta #2); the 120-year decree with all three forks held open (yadon / be-shagam / cap-vs-countdown; Onkelos rebuilds it as a repentance window — the 4:7 device); the Nephilim held to the letter&#x27;s grant — existence, time-stamp, title, three Torah tokens, no identity; the corpus&#x27;s FIRST DIVINE-INTERIOR EVENTS — the comfort-root (5:29&#x27;s hope, gen_14&#x27;s fuse) as regret, the toil-root (both Eden sentences) as grief in His own heart, both DELETED by the buffer (&#x27;turned in His Word to break their strength&#x27;); the wipe-resolve pushed in I-WILL-MAKE&#x27;s own mood grammar (CMD-US?, gen_09&#x27;s precedent) and popped by NOTHING — the first open UN-creation demand, queue debt five, scope walking creation backward; and the five-word counterweight: chen&#x27;s first token, the Noach/chen letter-reversal, favor found in the eyes that just saw great evil. Machine state: zero installs, ZERO registry writes (a first), one creature-run PASS, one open divine demand, two spec-deltas — and both the demand and the counterweight survive the unit.</div><p class='meta'>Rendered 2026-08-08 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">FROZEN 2026-08-01 (derived on owner order &quot;derive next block&quot;; frozen automatically per the 2026-08-01 process order — auto-freeze #2): sixteenth frozen unit — THE FLOOD PROLOGUE, the corpus&#x27;s hinge; sixth extension-free derivation in a row. Central findings, all DB-verified before drafting: the week&#x27;s inspection formula STOLEN at 6:2 (creature subjects, human daughters, a taking as sequel — creature-run TEST #2 beside spec-delta #1; choice&#x27;s first token spent on unlimited taking) and INVERTED at 6:5 (very-good answered by great-evil — spec-delta #2); the 120-year decree with all three forks held open (yadon / be-shagam / cap-vs-countdown; Onkelos rebuilds it as a repentance window — the 4:7 device); the Nephilim held to the letter&#x27;s grant — existence, time-stamp, title, three Torah tokens, no identity; the corpus&#x27;s FIRST DIVINE-INTERIOR EVENTS — the comfort-root (5:29&#x27;s hope, gen_14&#x27;s fuse) as regret, the toil-root (both Eden sentences) as grief in His own heart, both DELETED by the buffer (&#x27;turned in His Word to break their strength&#x27;); the wipe-resolve pushed in I-WILL-MAKE&#x27;s own mood grammar (CMD-US?, gen_09&#x27;s precedent) and popped by NOTHING — the first open UN-creation demand, queue debt five, scope walking creation backward; and the five-word counterweight: chen&#x27;s first token, the Noach/chen letter-reversal, favor found in the eyes that just saw great evil. Machine state: zero installs, ZERO registry writes (a first), one creature-run PASS, one open divine demand, two spec-deltas — and both the demand and the counterweight survive the unit.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

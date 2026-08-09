@@ -458,8 +458,10 @@ m = Machine(&quot;gen_21_blessing_blood_law&quot;)
 # multiply, and replenish the earth.&quot;
 m.step(&quot;Gen.9.1&quot;)
 # ‹וַיְבָרֶךְ אֱלֹהִים אֶת־נֹחַ וְאֶת־בָּנָיו … פְּרוּ וּרְבוּ וּמִלְאוּ
-# אֶת־הָאָרֶץ› blessing: God blesses Noach-and-vanav — mandate: CMD!(peru),
-# CMD!(revu), CMD!(milu(et-the-aretz))
+# אֶת־הָאָרֶץ› (“and-He-blessed God obj-marker Noah obj-marker his-sons …
+# be-fruitful and-multiply and-fill obj-marker the-earth”) — blessing: God
+# blesses Noach-and-vanav — mandate: CMD!(peru), CMD!(revu), CMD!(milu(et-
+# the-aretz))
 m.bless(&quot;elohim&quot;, &quot;noach_u_vanav&quot;, mandate=[&quot;CMD!(peru)&quot;, &quot;CMD!(revu)&quot;, &quot;CMD!(milu(et_ha_aretz))&quot;])
 # reads without prior install (flag, not fix): Noach, banav
 m.presupposed(&quot;noach&quot;, &quot;banav&quot;)
@@ -473,8 +475,9 @@ m.presupposed(&quot;noach&quot;, &quot;banav&quot;)
 # teemeth, and upon all the fishes of the sea: into your hand are they
 # delivered.&quot;
 m.step(&quot;Gen.9.2&quot;)
-# ‹וּמוֹרַאֲכֶם וְחִתְּכֶם … בְּיֶדְכֶם נִתָּנוּ› fact holds: moraakhem-and-
-# chitkhem-over-all-living-the-earth; in-yedkhem-nittanu
+# ‹וּמוֹרַאֲכֶם וְחִתְּכֶם … בְּיֶדְכֶם נִתָּנוּ› (“and-the-fear-of-you and-
+# the-dread-of-you … into-your-hand they-are-given”) — fact holds:
+# moraakhem-and-chitkhem-over-all-living-the-earth; in-yedkhem-nittanu
 m.fact(&quot;moraakhem_ve_chitkhem_al_kol_chayat_ha_aretz&quot;,
        &quot;be_yedkhem_nittanu&quot;)
 
@@ -484,15 +487,17 @@ m.fact(&quot;moraakhem_ve_chitkhem_al_kol_chayat_ha_aretz&quot;,
 # &quot;Every moving thing that liveth shall be for food for you; as the green
 # herb have I given you all.&quot;
 m.step(&quot;Gen.9.3&quot;)
-# ‹כָּל־רֶמֶשׂ אֲשֶׁר הוּא־חַי … לְאָכְלָה› role assigned: all-moving-thing-
-# which-it-living -&gt; food-to-you
+# ‹כָּל־רֶמֶשׂ אֲשֶׁר הוּא־חַי … לְאָכְלָה› (“all moving-thing which it
+# living … for-food”) — role assigned: all-moving-thing-which-it-living -&gt;
+# food-to-you
 m.assign(&quot;kol_remes_asher_hu_chai&quot;, &quot;okhlah_la_khem&quot;)
-# ‹לָכֶם יִהְיֶה לְאָכְלָה› God speaks a demand — LET?: yihyeh(all-moving-
-# thing-living, for-food)
+# ‹לָכֶם יִהְיֶה לְאָכְלָה› (“to-you shall-be for-food”) — God speaks a
+# demand — LET?: yihyeh(all-moving-thing-living, for-food)
 m.declare(&quot;elohim&quot;, &quot;LET?&quot;,
           &quot;yihyeh(kol_remes_chai, le_okhlah)&quot;)
-# ‹כְּיֶרֶק עֵשֶׂב נָתַתִּי לָכֶם אֶת־כֹּל› fact holds: like-as-the-green-
-# of-herb-I-have-given-to-you-obj-marker·et-all
+# ‹כְּיֶרֶק עֵשֶׂב נָתַתִּי לָכֶם אֶת־כֹּל› (“as-the-green-of herb I-have-
+# given to-you obj-marker all”) — fact holds: like-as-the-green-of-herb-I-
+# have-given-to-you-obj-marker·et-all
 m.fact(&quot;ke_yereq_esev_natati_la_khem_et_kol&quot;)
 
 # -------------------------- Gen.9.4 · THE_FIRST_PROHIBITION_SINCE_EDEN -----
@@ -500,8 +505,9 @@ m.fact(&quot;ke_yereq_esev_natati_la_khem_et_kol&quot;)
 # &quot;Only flesh with the life thereof, which is the blood thereof, shall ye
 # not eat.&quot;
 m.step(&quot;Gen.9.4&quot;)
-# ‹אַךְ־בָּשָׂר בְּנַפְשׁוֹ דָמוֹ לֹא תֹאכֵלוּ› God speaks a demand — LET-
-# NOT: eat(flesh-in-nafsho-damo)
+# ‹אַךְ־בָּשָׂר בְּנַפְשׁוֹ דָמוֹ לֹא תֹאכֵלוּ› (“only flesh with-its-life
+# its-blood not you-shall-eat”) — God speaks a demand — LET-NOT: eat(flesh-
+# in-nafsho-damo)
 m.declare(&quot;elohim&quot;, &quot;LET-NOT&quot;,
           &quot;akhal(basar_be_nafsho_damo)&quot;)
 
@@ -514,10 +520,14 @@ m.declare(&quot;elohim&quot;, &quot;LET-NOT&quot;,
 # man&#x27;s brother, will I require the life of man.&quot;
 m.step(&quot;Gen.9.5&quot;)
 # ‹וְאַךְ אֶת־דִּמְכֶם לְנַפְשֹׁתֵיכֶם אֶדְרֹשׁ … אֶדְרְשֶׁנּוּ … אֶדְרֹשׁ›
-# standing constraint: obj-marker·et-dimkhem-to-nafshoteikhem-I-will-require
+# (“and-only obj-marker your-blood for-your-lives I-will-require … I-will-
+# require-it … I-will-require”) — standing constraint: obj-marker·et-
+# dimkhem-to-nafshoteikhem-I-will-require
 m.invariant(&quot;et_dimkhem_le_nafshoteikhem_edrosh&quot;)
-# ‹מִיַּד כָּל־חַיָּה … וּמִיַּד הָאָדָם מִיַּד אִישׁ אָחִיו› fact holds:
-# from-hand-of-all-beast-and-from-hand-of-the-human-a-man-his-brother
+# ‹מִיַּד כָּל־חַיָּה … וּמִיַּד הָאָדָם מִיַּד אִישׁ אָחִיו› (“from-the-
+# hand-of all living … and-from-the-hand-of the-human from-the-hand-of a-man
+# his-brother”) — fact holds: from-hand-of-all-beast-and-from-hand-of-the-
+# human-a-man-his-brother
 m.fact(&quot;mi_yad_kol_chayah_u_mi_yad_ha_adam_ish_achiv&quot;)
 
 # -------------------------- Gen.9.6 · THE_TALION_ON_THE_IMAGE_GROUND -------
@@ -526,12 +536,15 @@ m.fact(&quot;mi_yad_kol_chayah_u_mi_yad_ha_adam_ish_achiv&quot;)
 # &quot;Whoso sheddeth man&#x27;s blood, by man shall his blood be shed; for in the
 # image of God made He man.&quot;
 m.step(&quot;Gen.9.6&quot;)
-# ‹שֹׁפֵךְ דַּם הָאָדָם בָּאָדָם דָּמוֹ יִשָּׁפֵךְ› standing handler — if
-# shedder-of(blood-of-the-human) then in-the-human-damo-shall-be-shed
+# ‹שֹׁפֵךְ דַּם הָאָדָם בָּאָדָם דָּמוֹ יִשָּׁפֵךְ› (“the-shedder-of the-
+# blood-of the-human by-the-human his-blood shall-be-shed”) — standing
+# handler — if shedder-of(blood-of-the-human) then in-the-human-damo-shall-
+# be-shed
 m.handler(&quot;shofekh(dam_ha_adam)&quot;,
           &quot;ba_adam_damo_yishafekh&quot;)
-# ‹כִּי בְּצֶלֶם אֱלֹהִים עָשָׂה אֶת־הָאָדָם› fact holds: that-in-image-of-
-# God-make-obj-marker·et-the-human
+# ‹כִּי בְּצֶלֶם אֱלֹהִים עָשָׂה אֶת־הָאָדָם› (“that in-the-image-of God He-
+# made obj-marker the-human”) — fact holds: that-in-image-of-God-make-obj-
+# marker·et-the-human
 m.fact(&quot;ki_be_tzelem_elohim_asah_et_ha_adam&quot;)
 
 # -------------------------- Gen.9.7 · THE_FRAME_REDOUBLED ------------------
@@ -539,15 +552,16 @@ m.fact(&quot;ki_be_tzelem_elohim_asah_et_ha_adam&quot;)
 # &quot;And you, be ye fruitful, and multiply; swarm in the earth, and multiply
 # therein.&#x27;&quot;
 m.step(&quot;Gen.9.7&quot;)
-# ‹וְאַתֶּם פְּרוּ וּרְבוּ שִׁרְצוּ בָאָרֶץ וּרְבוּ־בָהּ› fact holds: and-
-# you-be-fruitful-and-multiply-swarm-and-earth
+# ‹וְאַתֶּם פְּרוּ וּרְבוּ שִׁרְצוּ בָאָרֶץ וּרְבוּ־בָהּ› (“and-you be-
+# fruitful and-multiply swarm in-the-earth and-multiply in-her/its”) — fact
+# holds: and-you-be-fruitful-and-multiply-swarm-and-earth
 m.fact(&quot;ve_atem_peru_u_revu_shirtzu_va_aretz&quot;)
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == &quot;__main__&quot;:
     m.report()
     assert m.created_set() == set()
-    assert m.presupposed_set() == {&#x27;noach&#x27;, &#x27;banav&#x27;}
+    assert m.presupposed_set() == {&#x27;banav&#x27;, &#x27;noach&#x27;}
     assert m.REGISTRY[&quot;names&quot;] == {&#x27;kol_remes_asher_hu_chai&#x27;: &#x27;okhlah_la_khem&#x27;}
     assert m.REGISTRY[&quot;writes&quot;] == 1
     assert m.tests_list() == []
@@ -561,4 +575,4 @@ if __name__ == &quot;__main__&quot;:
     assert len(m.EVENTS) == 5
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">FROZEN 2026-08-03 (persistent derivation agent; freeze-after-review #4 — review PASSED; third unit under the PIPELINE + DEBUT-MAP process): twenty-second frozen unit — THE BLESSING AND THE BLOOD-LAW; twelfth extension-free derivation in a row. The corpus&#x27;s first LAW-GIVING to humans since Eden, every machine call precedent-matched with encodings quoted from the frozen units: the blessing re-issued TWO VERBS SHORT (gen_06&#x27;s five-item mandate minus subdue and rule — absence-censused) to the first plural human target; fear-and-dread (a debut and a Torah hapax) standing where dominion stood; the meat-grant on gen_06&#x27;s food-office class — ASSIGN + LET? in 1:29&#x27;s own syntax, left letter-faithfully OPEN (no receipt verse); the FIRST LET-NOT SINCE EDEN (gen_08&#x27;s 2:17 class, TIR-034&#x27;s second firing — both prohibitions eating-laws); the triple I-will-require as INVARIANT (gen_20&#x27;s perpetual-pledge class, positive voice) over the mi-yad ladder written in the fratricide&#x27;s vocabulary; the corpus&#x27;s first TALION-FORM — a six-word chiasm with the shed-verb&#x27;s tokens 1-2 both inside it — as HANDLER (gen_12&#x27;s 4:15 class), grounded in the image-word (tzelem token 5 of 6; PATTERN weighed and declined); and the frame re-doubled with SWARM handed to humans. Onkelos writes witnesses-and-judges into the chiasm and keeps the image while swapping the name — dual-track. Machine state: t0 empty, zero installs (+2 presupposed), ONE registry write (the food-office&#x27;s second binding), 1 invariant, 10 facts, 3 flags — and the queue ends with TWO OPEN guarded entries (the LET? grant, the LET-NOT prohibition): the corpus&#x27;s first standing law-ledger since Eden, by design.</div><p class='meta'>Rendered 2026-08-08 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">FROZEN 2026-08-03 (persistent derivation agent; freeze-after-review #4 — review PASSED; third unit under the PIPELINE + DEBUT-MAP process): twenty-second frozen unit — THE BLESSING AND THE BLOOD-LAW; twelfth extension-free derivation in a row. The corpus&#x27;s first LAW-GIVING to humans since Eden, every machine call precedent-matched with encodings quoted from the frozen units: the blessing re-issued TWO VERBS SHORT (gen_06&#x27;s five-item mandate minus subdue and rule — absence-censused) to the first plural human target; fear-and-dread (a debut and a Torah hapax) standing where dominion stood; the meat-grant on gen_06&#x27;s food-office class — ASSIGN + LET? in 1:29&#x27;s own syntax, left letter-faithfully OPEN (no receipt verse); the FIRST LET-NOT SINCE EDEN (gen_08&#x27;s 2:17 class, TIR-034&#x27;s second firing — both prohibitions eating-laws); the triple I-will-require as INVARIANT (gen_20&#x27;s perpetual-pledge class, positive voice) over the mi-yad ladder written in the fratricide&#x27;s vocabulary; the corpus&#x27;s first TALION-FORM — a six-word chiasm with the shed-verb&#x27;s tokens 1-2 both inside it — as HANDLER (gen_12&#x27;s 4:15 class), grounded in the image-word (tzelem token 5 of 6; PATTERN weighed and declined); and the frame re-doubled with SWARM handed to humans. Onkelos writes witnesses-and-judges into the chiasm and keeps the image while swapping the name — dual-track. Machine state: t0 empty, zero installs (+2 presupposed), ONE registry write (the food-office&#x27;s second binding), 1 invariant, 10 facts, 3 flags — and the queue ends with TWO OPEN guarded entries (the LET? grant, the LET-NOT prohibition): the corpus&#x27;s first standing law-ledger since Eden, by design.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

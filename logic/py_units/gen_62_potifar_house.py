@@ -21,8 +21,9 @@ m = Machine("gen_62_potifar_house")
 # officer, the chief of the slaughterers, an Egyptian man, bought him from
 # the hand of the Ishmaelites who had brought him down there."
 m.step("Gen.39.1")
-# ‹וְיוֹסֵף הוּרַד מִצְרָיְמָה וַיִּקְנֵהוּ פּוֹטִיפַר› fact holds: hurad-
-# mitzrayma-and-yiqnehu-potifar(yosef)
+# ‹וְיוֹסֵף הוּרַד מִצְרָיְמָה וַיִּקְנֵהוּ פּוֹטִיפַר› (“and-Joseph go-down
+# Egypt-ward and-erect-him/its Potiphar”) — fact holds: go-down-mitzrayma-
+# and-yiqnehu-Potiphar(Joseph)
 m.fact("hurad_mitzrayma_va_yiqnehu_potifar(yosef)")
 
 # -------------------------- Gen.39.2 · THE_LORD_WITH_HIM -------------------
@@ -31,8 +32,9 @@ m.fact("hurad_mitzrayma_va_yiqnehu_potifar(yosef)")
 # "[EN-AID] And the LORD was with Joseph, and he was a prospering man; and
 # he was in the house of his master the Egyptian."
 m.step("Gen.39.2")
-# ‹וַיְהִי יְהוָה אֶת־יוֹסֵף וַיְהִי אִישׁ מַצְלִיחַ› fact holds: the-LORD-
-# yosef-man-matzliach
+# ‹וַיְהִי יְהוָה אֶת־יוֹסֵף וַיְהִי אִישׁ מַצְלִיחַ› (“and-be YHWH with
+# Joseph and-be man push-forward”) — fact holds: the-LORD-with-Joseph-man-
+# matzliach
 m.fact("YHWH_et_yosef_ish_matzliach")
 
 # -------------------------- Gen.39.3 · THE_MASTER_SEES ---------------------
@@ -41,8 +43,8 @@ m.fact("YHWH_et_yosef_ish_matzliach")
 # "[EN-AID] And his master saw that the LORD was with him, and all that he
 # did the LORD made prosper in his hand."
 m.step("Gen.39.3")
-# ‹וַיַּרְא אֲדֹנָיו כִּי יְהוָה אִתּוֹ› fact holds: raa-adonav-when-the-
-# LORD-with-him
+# ‹וַיַּרְא אֲדֹנָיו כִּי יְהוָה אִתּוֹ› (“and-see lord-him/its that YHWH
+# with-him/its”) — fact holds: bad-adonav-that-the-LORD-with-him
 m.fact("raa_adonav_ki_YHWH_ito")
 
 # -------------------------- Gen.39.4 · APPOINTED_OVER_THE_HOUSE ------------
@@ -51,8 +53,9 @@ m.fact("raa_adonav_ki_YHWH_ito")
 # "[EN-AID] And Joseph found favor in his eyes, and he served him; and he
 # appointed him over his house, and all he had he gave into his hand."
 m.step("Gen.39.4")
-# ‹וַיַּפְקִדֵהוּ עַל־בֵּיתוֹ וְכָל־יֶשׁ־לוֹ נָתַן בְּיָדוֹ› fact holds:
-# hifqid-upon-beto-and-all-natan-in-his-hand
+# ‹וַיַּפְקִדֵהוּ עַל־בֵּיתוֹ וְכָל־יֶשׁ־לוֹ נָתַן בְּיָדוֹ› (“and-
+# count/visit-him/its over house-him/its and-all there-is to-him/its set in-
+# hand-him/its”) — fact holds: count/visit-over-beto-and-all-set-in-his-hand
 m.fact("hifqid_al_beto_ve_khol_natan_be_yado")
 
 # -------------------------- Gen.39.5 · THE_BLESSING_FOR_HIS_SAKE -----------
@@ -63,8 +66,9 @@ m.fact("hifqid_al_beto_ve_khol_natan_be_yado")
 # all that he had, the LORD blessed the Egyptian's house for Joseph's sake;
 # and the LORD's blessing was on all he had, in the house and in the field."
 m.step("Gen.39.5")
-# ‹וַיְבָרֶךְ יְהוָה אֶת־בֵּית הַמִּצְרִי בִּגְלַל יוֹסֵף› fact holds:
-# berakh-the-LORD-bet-the-mitzri-biglal-yosef
+# ‹וַיְבָרֶךְ יְהוָה אֶת־בֵּית הַמִּצְרִי בִּגְלַל יוֹסֵף› (“and-bless YHWH
+# obj-marker house the-Egyptian in-circumstance Joseph”) — fact holds:
+# berakh-the-LORD-house-the-Egyptian-biglal-Joseph
 m.fact("berakh_YHWH_bet_ha_mitzri_biglal_yosef")
 
 # -------------------------- Gen.39.6 · THE_BEAUTY_NOTE ---------------------
@@ -74,8 +78,9 @@ m.fact("berakh_YHWH_bet_ha_mitzri_biglal_yosef")
 # with him except the bread that he ate; and Joseph was beautiful of form
 # and beautiful of appearance."
 m.step("Gen.39.6")
-# ‹וַיְהִי יוֹסֵף יְפֵה־תֹאַר וִיפֵה מַרְאֶה› fact holds: yefe-toar-vi-yfe-
-# mare(yosef)
+# ‹וַיְהִי יוֹסֵף יְפֵה־תֹאַר וִיפֵה מַרְאֶה› (“and-be Joseph beautiful
+# outline and-beautiful appearance”) — fact holds: beautiful-outline-vi-yfe-
+# appearance(Joseph)
 m.fact("yefe_toar_vi_yfe_mare(yosef)")
 
 # -------------------------- Gen.39.7 · THE_DEMAND_PUSHED -------------------
@@ -84,8 +89,8 @@ m.fact("yefe_toar_vi_yfe_mare(yosef)")
 # "[EN-AID] And it was after these things, and his master's wife lifted her
 # eyes to Joseph, and said: Lie with me."
 m.step("Gen.39.7")
-# ‹וַתֹּאמֶר שִׁכְבָה עִמִּי› wife-of-adonav speaks a demand — LET: shikhva-
-# imi
+# ‹וַתֹּאמֶר שִׁכְבָה עִמִּי› (“and-say lie-down-ward with-me/my”) — woman-
+# adonav speaks a demand — LET: shikhva-imi
 m.declare("eshet_adonav", "LET",
           "shikhva_imi")
 
@@ -96,7 +101,8 @@ m.declare("eshet_adonav", "LET",
 # knows not what is with me in the house, and all that he has he gave into
 # my hand."
 m.step("Gen.39.8")
-# ‹וַיְמָאֵן וַיֹּאמֶר› fact holds: and-yemaen-hen-adoni(yosef)
+# ‹וַיְמָאֵן וַיֹּאמֶר› (“and-refuse and-say”) — fact holds: and-refuse-
+# lo!-adoni(Joseph)
 m.fact("va_yemaen_hen_adoni(yosef)")
 
 # -------------------------- Gen.39.9 · THE_GREAT_EVIL_NAMED ----------------
@@ -107,8 +113,9 @@ m.fact("va_yemaen_hen_adoni(yosef)")
 # nothing from me except you, in that you are his wife; and how shall I do
 # this great evil, and sin against God?"
 m.step("Gen.39.9")
-# ‹וְאֵיךְ אֶעֱשֶׂה הָרָעָה הַגְּדֹלָה הַזֹּאת וְחָטָאתִי לֵאלֹהִים› fact
-# holds: ekh-eese-the-raa-the-gedola-and-chatati-to-God
+# ‹וְאֵיךְ אֶעֱשֶׂה הָרָעָה הַגְּדֹלָה הַזֹּאת וְחָטָאתִי לֵאלֹהִים› (“and-
+# how? make the-bad the-great the-this and-sin to-God”) — fact holds:
+# how?-make-the-bad-the-great-and-sin-to-God
 m.fact("ekh_eese_ha_raa_ha_gedola_ve_chatati_le_Elohim")
 
 # -------------------------- Gen.39.10 · DAY_BY_DAY -------------------------
@@ -117,8 +124,8 @@ m.fact("ekh_eese_ha_raa_ha_gedola_ve_chatati_le_Elohim")
 # "[EN-AID] And it was, as she spoke to Joseph day by day, he did not listen
 # to her, to lie beside her, to be with her."
 m.step("Gen.39.10")
-# ‹וַיְהִי כְּדַבְּרָהּ אֶל־יוֹסֵף יוֹם יוֹם› fact holds: and-not-shama-
-# eleha-day-day(yosef)
+# ‹וַיְהִי כְּדַבְּרָהּ אֶל־יוֹסֵף יוֹם יוֹם› (“and-be like-speak-her/its to
+# Joseph day day”) — fact holds: and-not-hear-eleha-day-day(Joseph)
 m.fact("ve_lo_shama_eleha_yom_yom(yosef)")
 
 # -------------------------- Gen.39.11 · THE_EMPTY_HOUSE --------------------
@@ -127,8 +134,9 @@ m.fact("ve_lo_shama_eleha_yom_yom(yosef)")
 # "[EN-AID] And it was, on this day, that he came into the house to do his
 # work; and no man of the men of the house was there in the house."
 m.step("Gen.39.11")
-# ‹וְאֵין אִישׁ מֵאַנְשֵׁי הַבַּיִת שָׁם בַּבָּיִת› fact holds: and-en-man-
-# in-the-bayit
+# ‹וְאֵין אִישׁ מֵאַנְשֵׁי הַבַּיִת שָׁם בַּבָּיִת› (“and-there-is-not man
+# from-man the-house there in-house”) — fact holds: and-there-is-not-man-
+# come/bring-house
 m.fact("ve_en_ish_ba_bayit")
 
 # -------------------------- Gen.39.12 · THE_GARMENT_SEIZED -----------------
@@ -137,12 +145,14 @@ m.fact("ve_en_ish_ba_bayit")
 # "[EN-AID] And she seized him by his garment, saying: Lie with me. And he
 # left his garment in her hand, and fled and went outside."
 m.step("Gen.39.12")
-# ‹וַתִּתְפְּשֵׂהוּ בְּבִגְדוֹ לֵאמֹר שִׁכְבָה עִמִּי› wife-of-adonav speaks
-# a demand — LET: shikhva-imi
+# ‹וַתִּתְפְּשֵׂהוּ בְּבִגְדוֹ לֵאמֹר שִׁכְבָה עִמִּי› (“and-manipulate-
+# him/its in-garment-him/its to-say lie-down-ward with-me/my”) — woman-
+# adonav speaks a demand — LET: shikhva-imi
 m.declare("eshet_adonav", "LET",
           "shikhva_imi")
-# ‹וַיַּעֲזֹב בִּגְדוֹ בְּיָדָהּ וַיָּנָס וַיֵּצֵא הַחוּצָה› event: leave —
-# agent yosef; theme beged
+# ‹וַיַּעֲזֹב בִּגְדוֹ בְּיָדָהּ וַיָּנָס וַיֵּצֵא הַחוּצָה› (“and-loosen
+# garment-him/its in-hand-her/its and-flit and-bring-forth the-outside-
+# ward”) — event: loosen — agent Joseph; theme beged
 m.event("azav", agent="yosef", themes=["beged"])
 
 # -------------------------- Gen.39.13 · THE_EVIDENCE_READ ------------------
@@ -150,8 +160,9 @@ m.event("azav", agent="yosef", themes=["beged"])
 # "[EN-AID] And it was, when she saw that he had left his garment in her
 # hand, and fled outside,"
 m.step("Gen.39.13")
-# ‹וַיְהִי כִּרְאוֹתָהּ כִּי־עָזַב בִּגְדוֹ בְּיָדָהּ› fact holds: raata-
-# when-leave-bigdo-in-yadah
+# ‹וַיְהִי כִּרְאוֹתָהּ כִּי־עָזַב בִּגְדוֹ בְּיָדָהּ› (“and-be like-see-
+# her/its that loosen garment-him/its in-hand-her/its”) — fact holds: raata-
+# that-loosen-bigdo-in-yadah
 m.fact("raata_ki_azav_bigdo_be_yadah")
 
 # -------------------------- Gen.39.14 · THE_HOUSEHOLD_SPEECH ---------------
@@ -162,8 +173,9 @@ m.fact("raata_ki_azav_bigdo_be_yadah")
 # saying: See — he brought us a Hebrew man to mock us; he came to me to lie
 # with me, and I called with a great voice."
 m.step("Gen.39.14")
-# ‹רְאוּ הֵבִיא לָנוּ אִישׁ עִבְרִי לְצַחֶק בָּנוּ› fact holds: qara-to-
-# anshe-veta-hevi-lanu-man-ivri
+# ‹רְאוּ הֵבִיא לָנוּ אִישׁ עִבְרִי לְצַחֶק בָּנוּ› (“see come/bring to-
+# us/our man Hebrew to-laugh-outright in-us/our”) — fact holds: qara-to-man-
+# veta-come/bring-lanu-man-Hebrew
 m.fact("qara_le_anshe_veta_hevi_lanu_ish_ivri")
 
 # -------------------------- Gen.39.15 · THE_RAISED_VOICE -------------------
@@ -171,8 +183,8 @@ m.fact("qara_le_anshe_veta_hevi_lanu_ish_ivri")
 # אֶצְלִי וַיָּנָס וַיֵּצֵא הַחוּצָה
 # "[EN-AID] And it was, when he heard that I raised my voice and called,"
 m.step("Gen.39.15")
-# ‹כִּי־הֲרִימֹתִי קוֹלִי וָאֶקְרָא› fact holds: harimoti-qoli-and-
-# eqra(wife-of-adonav)
+# ‹כִּי־הֲרִימֹתִי קוֹלִי וָאֶקְרָא› (“that rise-high voice/sound-me/my and-
+# call”) — fact holds: rise-high-qoli-and-call(woman-adonav)
 m.fact("harimoti_qoli_va_eqra(eshet_adonav)")
 
 # -------------------------- Gen.39.16 · THE_GARMENT_WAITS ------------------
@@ -180,8 +192,8 @@ m.fact("harimoti_qoli_va_eqra(eshet_adonav)")
 # "[EN-AID] And she laid his garment beside her until his master came to his
 # house."
 m.step("Gen.39.16")
-# ‹וַתַּנַּח בִּגְדוֹ אֶצְלָהּ› fact holds: and-tanach-bigdo-etzlah-until-
-# in-it-adonav
+# ‹וַתַּנַּח בִּגְדוֹ אֶצְלָהּ› (“and-deposit garment-him/its side-her/its”)
+# — fact holds: and-deposit-bigdo-etzlah-until-come/bring-adonav
 m.fact("va_tanach_bigdo_etzlah_ad_bo_adonav")
 
 # -------------------------- Gen.39.17 · THE_SECOND_TELLING -----------------
@@ -190,8 +202,10 @@ m.fact("va_tanach_bigdo_etzlah_ad_bo_adonav")
 # "[EN-AID] And she spoke to him according to these words, saying: The
 # Hebrew slave whom you brought us came to me, to mock me."
 m.step("Gen.39.17")
-# ‹בָּא־אֵלַי הָעֶבֶד הָעִבְרִי אֲשֶׁר־הֵבֵאתָ לָּנוּ לְצַחֶק› fact holds:
-# in-the-elay-the-eved-the-ivri-to-tzacheq-bi
+# ‹בָּא־אֵלַי הָעֶבֶד הָעִבְרִי אֲשֶׁר־הֵבֵאתָ לָּנוּ לְצַחֶק› (“come/bring
+# to-me/my the-servant the-Hebrew which come/bring to-us/our to-laugh-
+# outright”) — fact holds: come/bring-elay-the-servant-the-Hebrew-to-laugh-
+# outright-bi
 m.fact("ba_elay_ha_eved_ha_ivri_le_tzacheq_bi")
 
 # -------------------------- Gen.39.18 · THE_QUOTED_CRY ---------------------
@@ -200,8 +214,9 @@ m.fact("ba_elay_ha_eved_ha_ivri_le_tzacheq_bi")
 # "[EN-AID] And it was, as I raised my voice and called, that he left his
 # garment beside me and fled outside."
 m.step("Gen.39.18")
-# ‹וַיְהִי כַּהֲרִימִי קוֹלִי וָאֶקְרָא› fact holds: like-harimi-qoli-and-
-# yaazov-bigdo-etzli
+# ‹וַיְהִי כַּהֲרִימִי קוֹלִי וָאֶקְרָא› (“and-be like-rise-high-me/my
+# voice/sound-me/my and-call”) — fact holds: like-harimi-qoli-and-loosen-
+# bigdo-etzli
 m.fact("ka_harimi_qoli_va_yaazov_bigdo_etzli")
 
 # -------------------------- Gen.39.19 · THE_ANGER --------------------------
@@ -211,7 +226,8 @@ m.fact("ka_harimi_qoli_va_yaazov_bigdo_etzli")
 # she spoke to him, saying: According to these words your slave did to me —
 # his anger burned."
 m.step("Gen.39.19")
-# ‹עַבְדֶּךָ וַיִּחַר› fact holds: and-yichar-apo(adonav)
+# ‹עַבְדֶּךָ וַיִּחַר› (“servant-you/your and-glow”) — fact holds: and-glow-
+# apo(adonav)
 m.fact("va_yichar_apo(adonav)")
 
 # -------------------------- Gen.39.20 · INTO_THE_ROUND_HOUSE ---------------
@@ -221,8 +237,9 @@ m.fact("va_yichar_apo(adonav)")
 # the place where the king's prisoners were bound; and he was there in the
 # prison-house."
 m.step("Gen.39.20")
-# ‹מְקוֹם אֲשֶׁר־אסורי אֲסִירֵי הַמֶּלֶךְ אֲסוּרִים› fact holds: netano-to-
-# bet-the-sohar(adone-yosef)
+# ‹מְקוֹם אֲשֶׁר־אסורי אֲסִירֵי הַמֶּלֶךְ אֲסוּרִים› (“place which yoke
+# bound the-king yoke”) — fact holds: netano-to-house-the-dungeon(lord-
+# Joseph)
 m.fact("netano_el_bet_ha_sohar(adone_yosef)")
 
 # -------------------------- Gen.39.21 · CHESED_IN_THE_PIT ------------------
@@ -231,8 +248,9 @@ m.fact("netano_el_bet_ha_sohar(adone_yosef)")
 # "[EN-AID] And the LORD was with Joseph, and extended kindness to him, and
 # gave his favor in the eyes of the chief of the prison-house."
 m.step("Gen.39.21")
-# ‹וַיְהִי יְהוָה אֶת־יוֹסֵף וַיֵּט אֵלָיו חָסֶד› fact holds: and-yet-to-
-# him-chased-and-chino-in-ene-sar-bet-the-sohar
+# ‹וַיְהִי יְהוָה אֶת־יוֹסֵף וַיֵּט אֵלָיו חָסֶד› (“and-be YHWH with Joseph
+# and-stretch to-him/its kindness”) — fact holds: and-stretch-to-him-
+# kindness-and-chino-in-eye-officer-house-the-dungeon
 m.fact("va_yet_elav_chased_ve_chino_be_ene_sar_bet_ha_sohar")
 
 # -------------------------- Gen.39.22 · ALL_IN_HIS_HAND_AGAIN --------------
@@ -242,8 +260,9 @@ m.fact("va_yet_elav_chased_ve_chino_be_ene_sar_bet_ha_sohar")
 # the prisoners in the prison-house; and all that they did there, he was the
 # doer."
 m.step("Gen.39.22")
-# ‹אֵת כָּל־הָאֲסִירִם אֲשֶׁר בְּבֵית הַסֹּהַר› fact holds: natan-in-yad-
-# yosef-kal-the-asirim
+# ‹אֵת כָּל־הָאֲסִירִם אֲשֶׁר בְּבֵית הַסֹּהַר› (“obj-marker all the-bound
+# which in-house the-dungeon”) — fact holds: set-in-hand-Joseph-with-all-
+# the-bound
 m.fact("natan_be_yad_yosef_et_kal_ha_asirim")
 
 # -------------------------- Gen.39.23 · THE_UNSEEN_OVERSEER ----------------
@@ -252,8 +271,9 @@ m.fact("natan_be_yad_yosef_et_kal_ha_asirim")
 # "[EN-AID] The chief of the prison-house saw not any thing in his hand, in
 # that the LORD was with him; and what he did, the LORD made prosper."
 m.step("Gen.39.23")
-# ‹בַּאֲשֶׁר יְהוָה אִתּוֹ וַאֲשֶׁר־הוּא עֹשֶׂה יְהוָה מַצְלִיחַ› fact
-# holds: the-LORD-with-him-and-which-that-ose-the-LORD-matzliach
+# ‹בַּאֲשֶׁר יְהוָה אִתּוֹ וַאֲשֶׁר־הוּא עֹשֶׂה יְהוָה מַצְלִיחַ› (“in-who
+# YHWH with-him/its and-which he/it make YHWH push-forward”) — fact holds:
+# the-LORD-with-him-and-which-he/it-make-the-LORD-matzliach
 m.fact("YHWH_ito_va_asher_hu_ose_YHWH_matzliach")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

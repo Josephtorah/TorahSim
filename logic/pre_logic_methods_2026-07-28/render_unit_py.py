@@ -31,6 +31,9 @@ import run_unit as ru
 import step_unit as _g   # the gloss engine (display-only) — owner order
                          # 2026-08-02: Hebrew + English in code comments,
                          # every machine token translated, no transliteration
+import gloss_db          # per-word English: SNAPSHOT gloss column +
+                         # authored overrides; owner order 2026-08-09:
+                         # every quoted Hebrew span translated inline
 
 
 def G(tok):
@@ -172,10 +175,11 @@ def emit_op(op):
     return L
 
 
-def op_comment(op):
+def op_comment(op, ref=None):
     """English comment line(s) for one operator — the owner's rule: every
     machine token in the code is translated, in comments interleaved with
-    the code (Hebrew snippet first where the YAML carries one)."""
+    the code (Hebrew snippet first where the YAML carries one, now with
+    its own word-by-word English in quotes right after it)."""
     kind = op.get("op")
     expr = op.get("expr_en", "")
     if kind == "TIME_ANCHOR":
@@ -270,7 +274,15 @@ def op_comment(op):
     else:
         en = ""
     he = str(op.get("he", "")).strip().replace("\n", " ")
-    head = ("\u2039%s\u203a %s" % (he, en)) if he else en
+    if he and ref:
+        span_en = gloss_db.translate_span(he, ref)
+        head = ("\u2039%s\u203a (\u201c%s\u201d) \u2014 %s"
+                % (he, span_en, en)) if span_en \
+            else ("\u2039%s\u203a %s" % (he, en))
+    elif he:
+        head = "\u2039%s\u203a %s" % (he, en)
+    else:
+        head = en
     return _wrap_comment(head)
 
 
@@ -284,8 +296,11 @@ def render(uid):
         return
 
     truth = ru.run_steps(unit)   # machine truth from the Stage D interpreter
+    refs = [st["ref"] for st in unit["boot_steps"]]
     _g.GLOSS_UNIT.clear()
-    _g.GLOSS_UNIT.update(_g.build_unit_gloss(unit))
+    _g.GLOSS_UNIT.update(gloss_db.build_translit_gloss(refs))  # DB layer
+    _g.GLOSS_UNIT.update(_g.build_unit_gloss(unit))     # authored layer wins
+    gloss_db.set_unit_tree(unit)
 
     L = ["#!/usr/bin/env python3",
          "# " + "=" * 77,
@@ -316,7 +331,7 @@ def render(uid):
             L += _wrap_comment('"%s"' % en)
         L.append('m.step("%s")' % ref)
         for op in st.get("operators", []):
-            L += op_comment(op)
+            L += op_comment(op, ref)
             L += emit_op(op)
         L.append("")
 

@@ -523,13 +523,16 @@ m = Machine(&quot;gen_18_the_rise&quot;)
 # &quot;And the flood was forty days upon the earth; and the waters increased,
 # and bore up the ark, and it was lifted up above the earth.&quot;
 m.step(&quot;Gen.7.17&quot;)
-# ‹וַיְהִי הַמַּבּוּל אַרְבָּעִים יוֹם עַל־הָאָרֶץ› fact holds: the-deluge-
-# forty-day-over-the-earth
+# ‹וַיְהִי הַמַּבּוּל אַרְבָּעִים יוֹם עַל־הָאָרֶץ› (“and-be the-deluge
+# forty day over the-earth”) — fact holds: the-deluge-forty-day-over-the-
+# earth
 m.fact(&quot;ha_mabul_arbaim_yom_al_ha_aretz&quot;)
-# ‹וַיִּרְבּוּ הַמַּיִם וַיִּשְׂאוּ אֶת־הַתֵּבָה› event: lift — agent the-
-# waters; theme the-ark
+# ‹וַיִּרְבּוּ הַמַּיִם וַיִּשְׂאוּ אֶת־הַתֵּבָה› (“and-increased the-waters
+# and-they-lifted obj-marker the-ark”) — event: lift — agent the-waters;
+# theme the-ark
 m.event(&quot;lift&quot;, agent=&quot;ha_mayim&quot;, themes=[&quot;ha_tevah&quot;])
-# ‹וַתָּרָם מֵעַל הָאָרֶץ› event: rise — theme the-ark
+# ‹וַתָּרָם מֵעַל הָאָרֶץ› (“and-it-rose from-over the-earth”) — event: rise
+# — theme the-ark
 m.event(&quot;rise&quot;, themes=[&quot;ha_tevah&quot;])
 # reads without prior install (flag, not fix): ark, waters
 m.presupposed(&quot;tevah&quot;, &quot;mayim&quot;)
@@ -540,13 +543,15 @@ m.presupposed(&quot;tevah&quot;, &quot;mayim&quot;)
 # &quot;And the waters prevailed, and increased greatly upon the earth; and the
 # ark went upon the face of the waters.&quot;
 m.step(&quot;Gen.7.18&quot;)
-# ‹וַיִּגְבְּרוּ הַמַּיִם› event: prevail — agent the-waters
+# ‹וַיִּגְבְּרוּ הַמַּיִם› (“and-prevailed the-waters”) — event: prevail —
+# agent the-waters
 m.event(&quot;prevail&quot;, agent=&quot;ha_mayim&quot;)
-# ‹וַיִּרְבּוּ מְאֹד עַל־הָאָרֶץ› fact holds: and-increased-very-over-the-
-# earth
+# ‹וַיִּרְבּוּ מְאֹד עַל־הָאָרֶץ› (“and-increased very over the-earth”) —
+# fact holds: and-increased-very-over-the-earth
 m.fact(&quot;va_yirbu_meod_al_ha_aretz&quot;)
-# ‹וַתֵּלֶךְ הַתֵּבָה עַל־פְּנֵי הַמָּיִם› event: walk — agent the-ark;
-# theme over-face-of-the-waters
+# ‹וַתֵּלֶךְ הַתֵּבָה עַל־פְּנֵי הַמָּיִם› (“and-it-walked the-ark over
+# face-of the-waters”) — event: walk — agent the-ark; theme over-face-of-
+# the-waters
 m.event(&quot;walk&quot;, agent=&quot;ha_tevah&quot;, themes=[&quot;al_pnei_ha_mayim&quot;])
 
 # -------------------------- Gen.7.19 · THE_MOUNTAINS_GO_UNDER --------------
@@ -556,12 +561,13 @@ m.event(&quot;walk&quot;, agent=&quot;ha_tevah&quot;, themes=[&quot;al_pnei_ha_m
 # mountains that were under the whole heaven were covered.&quot;
 m.step(&quot;Gen.7.19&quot;)
 # ‹גָּבְרוּ מְאֹד מְאֹד … כָּל־הֶהָרִים הַגְּבֹהִים אֲשֶׁר־תַּחַת
-# כָּל־הַשָּׁמָיִם› fact holds: prevailed-very-very-over-the-earth; all-he-
-# mountains-the-high-under-all-the-heavens
+# כָּל־הַשָּׁמָיִם› (“prevailed very very … all the-mountains the-high which
+# under all the-heavens”) — fact holds: prevailed-very-very-over-the-earth;
+# all-he-mountains-the-high-under-all-the-heavens
 m.fact(&quot;gavru_meod_meod_al_ha_aretz&quot;,
        &quot;kol_he_harim_ha_gevohim_tachat_kol_ha_shamayim&quot;)
-# ‹וַיְכֻסּוּ כָּל־הֶהָרִים הַגְּבֹהִים› event: cover — theme all-he-
-# mountains-the-high
+# ‹וַיְכֻסּוּ כָּל־הֶהָרִים הַגְּבֹהִים› (“and-were-covered all the-
+# mountains the-high”) — event: cover — theme all-he-mountains-the-high
 m.event(&quot;cover&quot;, themes=[&quot;kol_he_harim_ha_gevohim&quot;])
 
 # -------------------------- Gen.7.20 · FIFTEEN_CUBITS_UPWARD ---------------
@@ -569,10 +575,12 @@ m.event(&quot;cover&quot;, themes=[&quot;kol_he_harim_ha_gevohim&quot;])
 # &quot;Fifteen cubits upward did the waters prevail; and the mountains were
 # covered.&quot;
 m.step(&quot;Gen.7.20&quot;)
-# ‹חֲמֵשׁ עֶשְׂרֵה אַמָּה מִלְמַעְלָה גָּבְרוּ הַמָּיִם› fact holds: five--
-# teen-cubit-from-upward-prevailed
+# ‹חֲמֵשׁ עֶשְׂרֵה אַמָּה מִלְמַעְלָה גָּבְרוּ הַמָּיִם› (“five teen cubit
+# upward prevailed the-waters”) — fact holds: five--teen-cubit-from-upward-
+# prevailed
 m.fact(&quot;chamesh_esreh_amah_mi_lemalah_gavru&quot;)
-# ‹וַיְכֻסּוּ הֶהָרִים› event: cover — theme mountains
+# ‹וַיְכֻסּוּ הֶהָרִים› (“and-were-covered the-mountains”) — event: cover —
+# theme mountains
 m.event(&quot;cover&quot;, themes=[&quot;he_harim&quot;])
 
 # -------------------------- Gen.7.21 · ALL_FLESH_EXPIRES -------------------
@@ -582,11 +590,13 @@ m.event(&quot;cover&quot;, themes=[&quot;he_harim&quot;])
 # and beast, and every swarming thing that swarmeth upon the earth, and
 # every man;&quot;
 m.step(&quot;Gen.7.21&quot;)
-# ‹וַיִּגְוַע כָּל־בָּשָׂר› event: expire — theme all-flesh
+# ‹וַיִּגְוַע כָּל־בָּשָׂר› (“and-expired all flesh”) — event: expire —
+# theme all-flesh
 m.event(&quot;expire&quot;, themes=[&quot;kol_basar&quot;])
-# ‹בָּעוֹף וּבַבְּהֵמָה וּבַחַיָּה וּבְכָל־הַשֶּׁרֶץ … וְכֹל הָאָדָם› fact
-# holds: in-the-flying-creature-and-and-livestock-and-and-beast-and-and-
-# swarming-creature-and-all-the-human
+# ‹בָּעוֹף וּבַבְּהֵמָה וּבַחַיָּה וּבְכָל־הַשֶּׁרֶץ … וְכֹל הָאָדָם› (“in-
+# flying-creature and-in-livestock and-in-beast and-in-all the-swarming-
+# creature … and-all the-human”) — fact holds: in-the-flying-creature-and-
+# and-livestock-and-and-beast-and-and-swarming-creature-and-all-the-human
 m.fact(&quot;ba_of_u_va_behemah_u_va_chayah_u_va_sheretz_ve_khol_ha_adam&quot;)
 
 # -------------------------- Gen.7.22 · THE_COMPOUNDED_BREATH_CRITERION -----
@@ -595,9 +605,10 @@ m.fact(&quot;ba_of_u_va_behemah_u_va_chayah_u_va_sheretz_ve_khol_ha_adam&quot;)
 # &quot;all in whose nostrils was the breath of the spirit of life, whatsoever
 # was in the dry land, died.&quot;
 m.step(&quot;Gen.7.22&quot;)
-# ‹נִשְׁמַת־רוּחַ חַיִּים בְּאַפָּיו … מִכֹּל אֲשֶׁר בֶּחָרָבָה מֵתוּ› fact
-# holds: breath-of-spirit-wind-life-in-his-nostrils; from-all-which-in-dry-
-# land-died
+# ‹נִשְׁמַת־רוּחַ חַיִּים בְּאַפָּיו … מִכֹּל אֲשֶׁר בֶּחָרָבָה מֵתוּ›
+# (“breath-of spirit life in-his-nostrils … from-all which on-dry-land
+# died”) — fact holds: breath-of-spirit-wind-life-in-his-nostrils; from-all-
+# which-in-dry-land-died
 m.fact(&quot;nishmat_ruach_chayim_be_apav&quot;,
        &quot;mi_kol_asher_be_charavah_metu&quot;)
 
@@ -610,16 +621,20 @@ m.fact(&quot;nishmat_ruach_chayim_be_apav&quot;,
 # and they were blotted out from the earth; and Noah only was left, and they
 # that were with him in the ark.&quot;
 m.step(&quot;Gen.7.23&quot;)
-# ‹וַיִּמַח אֶת־כָּל־הַיְקוּם› event: wipe — theme all-the-standing-
-# substance
+# ‹וַיִּמַח אֶת־כָּל־הַיְקוּם› (“and-He-wiped obj-marker all the-standing-
+# substance”) — event: wipe — theme all-the-standing-substance
 m.event(&quot;wipe&quot;, themes=[&quot;kol_ha_yequm&quot;])
-# ‹מֵאָדָם עַד־בְּהֵמָה עַד־רֶמֶשׂ וְעַד־עוֹף הַשָּׁמַיִם› fact holds: from-
-# human-until-livestock-until-creeper-and-until-flying-creature
+# ‹מֵאָדָם עַד־בְּהֵמָה עַד־רֶמֶשׂ וְעַד־עוֹף הַשָּׁמַיִם› (“from-human
+# until livestock until creeper and-until flying-creature the-heavens”) —
+# fact holds: from-human-until-livestock-until-creeper-and-until-flying-
+# creature
 m.fact(&quot;me_adam_ad_behemah_ad_remes_ve_ad_of&quot;)
-# ‹וַיִּמָּחוּ מִן־הָאָרֶץ› event: wiped — theme all-the-standing-substance
+# ‹וַיִּמָּחוּ מִן־הָאָרֶץ› (“and-they-were-wiped from the-earth”) — event:
+# wiped — theme all-the-standing-substance
 m.event(&quot;wiped&quot;, themes=[&quot;kol_ha_yequm&quot;])
-# ‹וַיִשָּׁאֶר אַךְ־נֹחַ וַאֲשֶׁר אִתּוֹ בַּתֵּבָה› event: remain — theme
-# only-Noach-and-which-with-him
+# ‹וַיִשָּׁאֶר אַךְ־נֹחַ וַאֲשֶׁר אִתּוֹ בַּתֵּבָה› (“and-was-left only Noah
+# and-which with-him in-ark”) — event: remain — theme only-Noach-and-which-
+# with-him
 m.event(&quot;remain&quot;, themes=[&quot;akh_noach_va_asher_ito&quot;])
 # reads without prior install (flag, not fix): Noach
 m.presupposed(&quot;noach&quot;)
@@ -628,16 +643,18 @@ m.presupposed(&quot;noach&quot;)
 # וַיִּגְבְּרוּ הַמַּיִם עַל־הָאָרֶץ חֲמִשִּׁים וּמְאַת יוֹם
 # &quot;And the waters prevailed upon the earth a hundred and fifty days.&quot;
 m.step(&quot;Gen.7.24&quot;)
-# ‹וַיִּגְבְּרוּ הַמַּיִם עַל־הָאָרֶץ› event: prevail — agent the-waters
+# ‹וַיִּגְבְּרוּ הַמַּיִם עַל־הָאָרֶץ› (“and-prevailed the-waters over the-
+# earth”) — event: prevail — agent the-waters
 m.event(&quot;prevail&quot;, agent=&quot;ha_mayim&quot;)
-# ‹חֲמִשִּׁים וּמְאַת יוֹם› fact holds: fifty-and-hundred-day-over-the-earth
+# ‹חֲמִשִּׁים וּמְאַת יוֹם› (“fifty and-hundred day”) — fact holds: fifty-
+# and-hundred-day-over-the-earth
 m.fact(&quot;chamishim_u_meat_yom_al_ha_aretz&quot;)
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == &quot;__main__&quot;:
     m.report()
     assert m.created_set() == set()
-    assert m.presupposed_set() == {&#x27;mayim&#x27;, &#x27;noach&#x27;, &#x27;tevah&#x27;}
+    assert m.presupposed_set() == {&#x27;noach&#x27;, &#x27;tevah&#x27;, &#x27;mayim&#x27;}
     assert m.REGISTRY[&quot;names&quot;] == {}
     assert m.REGISTRY[&quot;writes&quot;] == 0
     assert m.tests_list() == []
@@ -651,4 +668,4 @@ if __name__ == &quot;__main__&quot;:
     assert len(m.EVENTS) == 11
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">FROZEN 2026-08-01 (AGENT-TRIAL derivation, owner-approved 2026-08-01: mechanics by the derivation agent; review and freeze stayed with the main loop — freeze-after-review #1, review PASSED): nineteenth frozen unit — THE RISE; ninth extension-free derivation in a row. Central findings, all DB-verified before drafting: the judgment waters LIFT the ark (the nasa bear-verb&#x27;s token 2 — token 1 was Cain&#x27;s too-heavy bearing — ACTIVE, the waters as agent) and it RISES (the rum rise-verb&#x27;s Torah debut; career: the raised-hand oath, the staff over the Nile, the high hand out of Egypt); the ark WALKS (the go-verb stem&#x27;s token 2 — the serpent&#x27;s crawl was token 1) on the face-of-the-waters, a three-token phrase shared with 1:2&#x27;s hovering spirit and the calf-dust of Exod 32:20; GAVAR (&#x27;prevail&#x27;) is BORN as this span — 7 Torah tokens, the first four here, ringed event/state/state/event; the mountains and the high-word DEBUT drowned under the cover-verb&#x27;s first two agentless tokens (its next token covers a father&#x27;s nakedness); the flood&#x27;s only measure is fifteen cubits — the ark-blueprint&#x27;s own unit, whose next token measures the ark of the covenant; three death-orders (dying-list with humankind LAST and alone on the verse-end arm; wipe-scope quoting 6:7&#x27;s decree VERBATIM with humankind FIRST; neither creation&#x27;s order); 2:7&#x27;s breath-formula quoted one word WIDER at the drowning (nishmat-RUACH chayim, &#x27;breath of the SPIRIT of life&#x27; — prose-held quote-diff, translation-stable in Onkelos); the wipe executed TWICE in one verse (active + niphal agentless) with ZERO divine names, zero speech, zero imperatives in the span — the executioner covert, his antecedent across the unit boundary; and the crown: VA-YISHAER AKH-NOACH (&#x27;and only Noach was left&#x27;) — the SHAAR remnant-root&#x27;s FIRST Torah token, born naming one man and a boat&#x27;s company. Machine state: no clock (durations, not dates — t0 empty by decision), zero installs (+3 presupposed), zero writes, zero queue traffic, zero tests, eleven events, ten facts, three read-flags — the unit ends underwater with the waters still prevailing.</div><p class='meta'>Rendered 2026-08-08 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">FROZEN 2026-08-01 (AGENT-TRIAL derivation, owner-approved 2026-08-01: mechanics by the derivation agent; review and freeze stayed with the main loop — freeze-after-review #1, review PASSED): nineteenth frozen unit — THE RISE; ninth extension-free derivation in a row. Central findings, all DB-verified before drafting: the judgment waters LIFT the ark (the nasa bear-verb&#x27;s token 2 — token 1 was Cain&#x27;s too-heavy bearing — ACTIVE, the waters as agent) and it RISES (the rum rise-verb&#x27;s Torah debut; career: the raised-hand oath, the staff over the Nile, the high hand out of Egypt); the ark WALKS (the go-verb stem&#x27;s token 2 — the serpent&#x27;s crawl was token 1) on the face-of-the-waters, a three-token phrase shared with 1:2&#x27;s hovering spirit and the calf-dust of Exod 32:20; GAVAR (&#x27;prevail&#x27;) is BORN as this span — 7 Torah tokens, the first four here, ringed event/state/state/event; the mountains and the high-word DEBUT drowned under the cover-verb&#x27;s first two agentless tokens (its next token covers a father&#x27;s nakedness); the flood&#x27;s only measure is fifteen cubits — the ark-blueprint&#x27;s own unit, whose next token measures the ark of the covenant; three death-orders (dying-list with humankind LAST and alone on the verse-end arm; wipe-scope quoting 6:7&#x27;s decree VERBATIM with humankind FIRST; neither creation&#x27;s order); 2:7&#x27;s breath-formula quoted one word WIDER at the drowning (nishmat-RUACH chayim, &#x27;breath of the SPIRIT of life&#x27; — prose-held quote-diff, translation-stable in Onkelos); the wipe executed TWICE in one verse (active + niphal agentless) with ZERO divine names, zero speech, zero imperatives in the span — the executioner covert, his antecedent across the unit boundary; and the crown: VA-YISHAER AKH-NOACH (&#x27;and only Noach was left&#x27;) — the SHAAR remnant-root&#x27;s FIRST Torah token, born naming one man and a boat&#x27;s company. Machine state: no clock (durations, not dates — t0 empty by decision), zero installs (+3 presupposed), zero writes, zero queue traffic, zero tests, eleven events, ten facts, three read-flags — the unit ends underwater with the waters still prevailing.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

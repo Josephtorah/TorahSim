@@ -323,7 +323,8 @@ m = Machine(&quot;gen_43_isaac_twins_birthright&quot;)
 # &quot;[EN-AID] And these are the generations of Isaac, Abraham&#x27;s son: Abraham
 # begot Isaac.&quot;
 m.step(&quot;Gen.25.19&quot;)
-# ‹תּוֹלְדֹת יִצְחָק› fact holds: generations-yitzchaq-section-header
+# ‹תּוֹלְדֹת יִצְחָק› (“generations Isaac”) — fact holds: generations-Isaac-
+# section-header
 m.fact(&quot;toledot_yitzchaq_section_header&quot;)
 
 # -------------------------- Gen.25.20 · THE_MARRIAGE_AGE_AND_ORIGIN --------
@@ -334,8 +335,9 @@ m.fact(&quot;toledot_yitzchaq_section_header&quot;)
 # Betuel the Aramean of Padan-aram, sister of Laban the Aramean, as wife for
 # himself.&quot;
 m.step(&quot;Gen.25.20&quot;)
-# ‹בֶּן־אַרְבָּעִים שָׁנָה … רִבְקָה … מִפַּדַּן אֲרָם› fact holds:
-# yitzchaq-forty-takes-rivqa-from-padan-aram
+# ‹בֶּן־אַרְבָּעִים שָׁנָה … רִבְקָה … מִפַּדַּן אֲרָם› (“son forty years …
+# Rebekah … from Padan”) — fact holds: Isaac-forty-takes-Rebekah-from-from-
+# Padan
 m.fact(&quot;yitzchaq_forty_takes_rivqa_from_padan_aram&quot;)
 
 # -------------------------- Gen.25.21 · THE_ENTREAT_PAIR -------------------
@@ -344,8 +346,9 @@ m.fact(&quot;yitzchaq_forty_takes_rivqa_from_padan_aram&quot;)
 # &quot;[EN-AID] And Isaac entreated YHWH opposite his wife, for she was barren;
 # and YHWH was entreated of him, and Rivqah his wife conceived.&quot;
 m.step(&quot;Gen.25.21&quot;)
-# ‹וַיֶּעְתַּר … וַיֵּעָתֶר … וַתַּהַר› event: entreat-and-in-entreated —
-# theme isht-o
+# ‹וַיֶּעְתַּר … וַיֵּעָתֶר … וַתַּהַר› (“and-burn-incense-in-worship … and-
+# burn-incense-in-worship … and-be-pregnant”) — event: entreat-and-in-
+# entreated — theme woman-him/its
 m.event(&quot;entreat_and_be_entreated&quot;, themes=[&quot;isht-o&quot;])
 
 # -------------------------- Gen.25.22 · THE_STRUGGLE_AND_INQUIRE -----------
@@ -354,7 +357,8 @@ m.event(&quot;entreat_and_be_entreated&quot;, themes=[&quot;isht-o&quot;])
 # &quot;[EN-AID] And the children struggled together within her; and she said: If
 # it be so, why am I thus? And she went to inquire of YHWH.&quot;
 m.step(&quot;Gen.25.22&quot;)
-# ‹וַיִּתְרֹצֲצוּ … לִדְרֹשׁ אֶת־יְהוָה› event: struggle-and-inquire
+# ‹וַיִּתְרֹצֲצוּ … לִדְרֹשׁ אֶת־יְהוָה› (“and-crack-in-pieces … to-tread
+# obj-marker YHWH”) — event: struggle-and-inquire
 m.event(&quot;struggle_and_inquire&quot;)
 
 # -------------------------- Gen.25.23 · THE_ORACLE_DECREE_FACTS ------------
@@ -365,8 +369,8 @@ m.event(&quot;struggle_and_inquire&quot;)
 # peoples shall be separated from your bowels; and one people shall be
 # stronger than the other people; and the elder shall serve the younger.&quot;
 m.step(&quot;Gen.25.23&quot;)
-# ‹שְׁנֵי גוֹיִם … וְרַב יַעֲבֹד צָעִיר› fact holds: oracle-two-nations-
-# elder-serves-younger
+# ‹שְׁנֵי גוֹיִם … וְרַב יַעֲבֹד צָעִיר› (“two nation … and-many/great
+# work/serve little”) — fact holds: oracle-two-nations-elder-serves-younger
 m.fact(&quot;oracle_two_nations_elder_serves_younger&quot;)
 
 # -------------------------- Gen.25.24 · THE_TWINS_IN_THE_WOMB --------------
@@ -374,7 +378,8 @@ m.fact(&quot;oracle_two_nations_elder_serves_younger&quot;)
 # &quot;[EN-AID] And her days to give birth were filled; and behold, twins were
 # in her womb.&quot;
 m.step(&quot;Gen.25.24&quot;)
-# ‹תוֹמִם בְּבִטְנָהּ› event: birth-due — theme tomim
+# ‹תוֹמִם בְּבִטְנָהּ› (“twin in-belly-her/its”) — event: birth-due — theme
+# twin
 m.event(&quot;birth_due&quot;, themes=[&quot;tomim&quot;])
 
 # -------------------------- Gen.25.25 · THE_ESAV_NAMING --------------------
@@ -383,10 +388,12 @@ m.event(&quot;birth_due&quot;, themes=[&quot;tomim&quot;])
 # &quot;[EN-AID] And the first came out reddish, all of him like a hairy mantle;
 # and they called his name Esau.&quot;
 m.step(&quot;Gen.25.25&quot;)
-# ‹וַיֵּצֵא הָרִאשׁוֹן אַדְמוֹנִי … כְּאַדֶּרֶת שֵׂעָר› event: birth-first —
-# theme the-rishon
+# ‹וַיֵּצֵא הָרִאשׁוֹן אַדְמוֹנִי … כְּאַדֶּרֶת שֵׂעָר› (“and-bring-forth
+# the-first reddish … like-something-ample hair”) — event: birth-first —
+# theme the-first
 m.event(&quot;birth_first&quot;, themes=[&quot;ha_rishon&quot;])
-# ‹וַיִּקְרְאוּ שְׁמוֹ עֵשָׂו› named: esav := esav
+# ‹וַיִּקְרְאוּ שְׁמוֹ עֵשָׂו› (“and-call name-him/its Esau”) — named: Esau
+# := Esau
 m.name(&quot;esav&quot;, &quot;esav&quot;)
 
 # -------------------------- Gen.25.26 · THE_YAAQOV_NAMING ------------------
@@ -397,10 +404,11 @@ m.name(&quot;esav&quot;, &quot;esav&quot;)
 # Esau&#x27;s heel; and he called his name Jacob; and Isaac was sixty years old
 # when she bore them.&quot;
 m.step(&quot;Gen.25.26&quot;)
-# ‹יָדוֹ אֹחֶזֶת בַּעֲקֵב עֵשָׂו› event: birth-second-heel — theme my-
-# brother-v
+# ‹יָדוֹ אֹחֶזֶת בַּעֲקֵב עֵשָׂו› (“hand-him/its seize in-heel Esau”) —
+# event: birth-second-heel — theme brother-him/its
 m.event(&quot;birth_second_heel&quot;, themes=[&quot;achi_v&quot;])
-# ‹וַיִּקְרָא שְׁמוֹ יַעֲקֹב› named: yaaqov := yaaqov
+# ‹וַיִּקְרָא שְׁמוֹ יַעֲקֹב› (“and-call name-him/its Jacob”) — named: Jacob
+# := Jacob
 m.name(&quot;yaaqov&quot;, &quot;yaaqov&quot;)
 
 # -------------------------- Gen.25.27 · THE_TWO_MEN_GROW -------------------
@@ -409,8 +417,8 @@ m.name(&quot;yaaqov&quot;, &quot;yaaqov&quot;)
 # &quot;[EN-AID] And the boys grew; and Esau was a man knowing hunting, a man of
 # the field; and Jacob was a complete man, dwelling in tents.&quot;
 m.step(&quot;Gen.25.27&quot;)
-# ‹עֵשָׂו אִישׁ יֹדֵעַ צַיִד … יַעֲקֹב אִישׁ תָּם› fact holds: esav-hunter-
-# yaaqov-man-tam
+# ‹עֵשָׂו אִישׁ יֹדֵעַ צַיִד … יַעֲקֹב אִישׁ תָּם› (“Esau man know chase …
+# Jacob man complete”) — fact holds: Esau-hunter-Jacob-man-complete
 m.fact(&quot;esav_hunter_yaaqov_ish_tam&quot;)
 
 # -------------------------- Gen.25.28 · THE_SPLIT_LOVES --------------------
@@ -419,8 +427,9 @@ m.fact(&quot;esav_hunter_yaaqov_ish_tam&quot;)
 # &quot;[EN-AID] And Isaac loved Esau because game was in his mouth; and Rivqah
 # loved Jacob.&quot;
 m.step(&quot;Gen.25.28&quot;)
-# ‹וַיֶּאֱהַב יִצְחָק אֶת־עֵשָׂו … וְרִבְקָה אֹהֶבֶת אֶת־יַעֲקֹב› event:
-# love-split
+# ‹וַיֶּאֱהַב יִצְחָק אֶת־עֵשָׂו … וְרִבְקָה אֹהֶבֶת אֶת־יַעֲקֹב› (“and-
+# have-affection-for Isaac obj-marker Esau … and-Rebekah have-affection-for
+# obj-marker Jacob”) — event: love-split
 m.event(&quot;love_split&quot;)
 
 # -------------------------- Gen.25.29 · THE_STEW_AND_THE_WEARY -------------
@@ -428,7 +437,8 @@ m.event(&quot;love_split&quot;)
 # &quot;[EN-AID] And Jacob boiled stew; and Esau came in from the field, and he
 # was weary.&quot;
 m.step(&quot;Gen.25.29&quot;)
-# ‹וַיָּזֶד … נָזִיד … עָיֵף› event: stew-and-arrive
+# ‹וַיָּזֶד … נָזִיד … עָיֵף› (“and-seethe … something-boiled … languid”) —
+# event: stew-and-arrive
 m.event(&quot;stew_and_arrive&quot;)
 
 # -------------------------- Gen.25.30 · THE_HALITENI_AND_EDOM_REPORT -------
@@ -437,19 +447,21 @@ m.event(&quot;stew_and_arrive&quot;)
 # &quot;[EN-AID] And Esau said to Jacob: Let me gulp, please, from this red, this
 # red, for I am weary; therefore his name was called Edom.&quot;
 m.step(&quot;Gen.25.30&quot;)
-# ‹הַלְעִיטֵנִי נָא› esav speaks a demand — LET: haliteni(from-the-adom)
+# ‹הַלְעִיטֵנִי נָא› (“swallow-greedily-me/my please”) — Esau speaks a
+# demand — LET: haliteni(from-the-rosy)
 m.declare(&quot;esav&quot;, &quot;LET&quot;,
           &quot;haliteni(min_ha_adom)&quot;)
-# ‹עַל־כֵּן קָרָא־שְׁמוֹ אֱדוֹם› fact holds: upon-ken-qara-shemo-edom-
-# report-only
+# ‹עַל־כֵּן קָרָא־שְׁמוֹ אֱדוֹם› (“over so call name-him/its Edom”) — fact
+# holds: over-so-call-shemo-Edom-report-only
 m.fact(&quot;al_ken_qara_shemo_edom_report_only&quot;)
 
 # -------------------------- Gen.25.31 · THE_MIKHRA_PUSH --------------------
 # וַיֹּ֖אמֶר יַעֲקֹ֑ב מִכְרָ֥ה כַיּ֛וֹם אֶת־בְּכֹֽרָתְךָ֖ לִֽי
 # &quot;[EN-AID] And Jacob said: Sell me as of today your birthright.&quot;
 m.step(&quot;Gen.25.31&quot;)
-# ‹מִכְרָה כַיּוֹם אֶת־בְּכֹרָתְךָ לִי› yaaqov speaks a demand — LET:
-# mikhra(bekhorat-kha, like-day)
+# ‹מִכְרָה כַיּוֹם אֶת־בְּכֹרָתְךָ לִי› (“sell-ward like-day obj-marker
+# firstling-of-man-you/your to-me/my”) — Jacob speaks a demand — LET:
+# mikhra(firstling-of-man-you/your, day)
 m.declare(&quot;yaaqov&quot;, &quot;LET&quot;,
           &quot;mikhra(bekhorat_kha, ka_yom)&quot;)
 
@@ -459,7 +471,8 @@ m.declare(&quot;yaaqov&quot;, &quot;LET&quot;,
 # &quot;[EN-AID] And Esau said: Behold, I am going to die; and what is this
 # birthright to me?&quot;
 m.step(&quot;Gen.25.32&quot;)
-# ‹וְלָמָּה־זֶּה לִי בְּכֹרָה› fact holds: esav-dismisses-bekhora-speech
+# ‹וְלָמָּה־זֶּה לִי בְּכֹרָה› (“and-to-what this to-me/my firstling-of-
+# man”) — fact holds: Esau-dismisses-firstling-of-man-speech
 m.fact(&quot;esav_dismisses_bekhora_speech&quot;)
 
 # -------------------------- Gen.25.33 · THE_DOUBLE_POP_SWEAR_AND_SELL ------
@@ -468,15 +481,16 @@ m.fact(&quot;esav_dismisses_bekhora_speech&quot;)
 # &quot;[EN-AID] And Jacob said: Swear to me as of today; and he swore to him;
 # and he sold his birthright to Jacob.&quot;
 m.step(&quot;Gen.25.33&quot;)
-# ‹הִשָּׁבְעָה לִי כַּיּוֹם› yaaqov speaks a demand — LET: hishava(to-me,
-# like-day)
+# ‹הִשָּׁבְעָה לִי כַּיּוֹם› (“swear-ward to-me/my like-day”) — Jacob speaks
+# a demand — LET: hishava(to-me, day)
 m.declare(&quot;yaaqov&quot;, &quot;LET&quot;,
           &quot;hishava(li, ka_yom)&quot;)
-# ‹וַיִּשָּׁבַע לוֹ› demand settled (popped from the queue): hishava(to-me,
-# like-day)
+# ‹וַיִּשָּׁבַע לוֹ› (“and-swear to-him/its”) — demand settled (popped from
+# the queue): hishava(to-me, day)
 m.result(&quot;hishava(li, ka_yom)&quot;, tmark=&quot;t1&quot;)
-# ‹וַיִּמְכֹּר אֶת־בְּכֹרָתוֹ לְיַעֲקֹב› demand settled (popped from the
-# queue): mikhra(bekhorat-kha, like-day)
+# ‹וַיִּמְכֹּר אֶת־בְּכֹרָתוֹ לְיַעֲקֹב› (“and-sell obj-marker firstling-of-
+# man-him/its to-Jacob”) — demand settled (popped from the queue):
+# mikhra(firstling-of-man-you/your, day)
 m.result(&quot;mikhra(bekhorat_kha, ka_yom)&quot;, tmark=&quot;t2&quot;)
 
 # -------------------------- Gen.25.34 · THE_MEAL_AND_THE_DESPISE -----------
@@ -485,9 +499,11 @@ m.result(&quot;mikhra(bekhorat_kha, ka_yom)&quot;, tmark=&quot;t2&quot;)
 # &quot;[EN-AID] And Jacob gave Esau bread and lentil stew; and he ate and drank
 # and rose and went; and Esau despised the birthright.&quot;
 m.step(&quot;Gen.25.34&quot;)
-# ‹וַיֹּאכַל וַיֵּשְׁתְּ וַיָּקָם וַיֵּלַךְ› event: ?
+# ‹וַיֹּאכַל וַיֵּשְׁתְּ וַיָּקָם וַיֵּלַךְ› (“and-eat and-drink and-arise
+# and-go”) — event: ?
 m.event(&quot;?&quot;)
-# ‹וַיִּבֶז עֵשָׂו אֶת־הַבְּכֹרָה› event: ?
+# ‹וַיִּבֶז עֵשָׂו אֶת־הַבְּכֹרָה› (“and-disesteem Esau obj-marker the-
+# firstling-of-man”) — event: ?
 m.event(&quot;?&quot;)
 
 # -------------------------- machine truth (baked from the Stage D run) -------
@@ -507,4 +523,4 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 16
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-08 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

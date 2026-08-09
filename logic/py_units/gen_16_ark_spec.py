@@ -19,10 +19,11 @@ m = Machine("gen_16_ark_spec")
 # "These are the generations of Noah. Noah was in his generations a man
 # righteous and whole-hearted; Noah walked with God."
 m.step("Gen.6.9")
-# ‹אֵלֶּה תּוֹלְדֹת נֹחַ› section generations-Noach: eleh toledot noach —
-# the third generations header
+# ‹אֵלֶּה תּוֹלְדֹת נֹחַ› (“these generations-of Noach”) — section
+# generations-Noach: eleh toledot noach — the third generations header
 m.section("toledot_noach", "eleh toledot noach — the third generations header")
 # ‹אִישׁ צַדִּיק תָּמִים הָיָה בְּדֹרֹתָיו אֶת־הָאֱלֹהִים הִתְהַלֶּךְ־נֹחַ›
+# (“man righteous whole was in-his-generations with the-God walked Noach”) —
 # fact holds: man-righteous-whole-in-his-generations; with-the-God-walked-
 # Noach
 m.fact("ish_tzaddik_tamim_be_dorotav",
@@ -34,8 +35,9 @@ m.presupposed("noach")
 # וַיּוֹלֶד נֹחַ שְׁלֹשָׁה בָנִים אֶת־שֵׁם אֶת־חָם וְאֶת־יָפֶת
 # "And Noah begot three sons, Shem, Ham, and Japheth."
 m.step("Gen.6.10")
-# ‹וַיּוֹלֶד נֹחַ שְׁלֹשָׁה בָנִים אֶת־שֵׁם אֶת־חָם וְאֶת־יָפֶת› event:
-# beget — agent Noach; theme Shem, Cham, Yafet
+# ‹וַיּוֹלֶד נֹחַ שְׁלֹשָׁה בָנִים אֶת־שֵׁם אֶת־חָם וְאֶת־יָפֶת› (“and-he-
+# begot Noach three sons obj-marker Shem obj-marker Cham and-obj-marker
+# Yafet”) — event: beget — agent Noach; theme Shem, Cham, Yafet
 m.event("beget", agent="noach", themes=["shem", "cham", "yafet"])
 
 # -------------------------- Gen.6.11 · EARTH_CORRUPTED_FILLED --------------
@@ -43,9 +45,11 @@ m.event("beget", agent="noach", themes=["shem", "cham", "yafet"])
 # "And the earth was corrupt before God, and the earth was filled with
 # violence."
 m.step("Gen.6.11")
-# ‹וַתִּשָּׁחֵת הָאָרֶץ לִפְנֵי הָאֱלֹהִים› event: corrupt — theme the-earth
+# ‹וַתִּשָּׁחֵת הָאָרֶץ לִפְנֵי הָאֱלֹהִים› (“and-was-corrupted the-earth
+# before the-God”) — event: corrupt — theme the-earth
 m.event("corrupt", themes=["ha_aretz"])
-# ‹וַתִּמָּלֵא הָאָרֶץ חָמָס› fact holds: and-was-filled-the-earth-violence
+# ‹וַתִּמָּלֵא הָאָרֶץ חָמָס› (“and-was-filled the-earth violence”) — fact
+# holds: and-was-filled-the-earth-violence
 m.fact("va_timale_ha_aretz_chamas")
 
 # -------------------------- Gen.6.12 · THIRD_SEEING_BEHOLD_CORRUPTED -------
@@ -54,16 +58,17 @@ m.fact("va_timale_ha_aretz_chamas")
 # "And God saw the earth, and, behold, it was corrupt; for all flesh had
 # corrupted their way upon the earth."
 m.step("Gen.6.12")
-# ‹וַיַּרְא אֱלֹהִים אֶת־הָאָרֶץ› event: see — agent God; theme the-earth
+# ‹וַיַּרְא אֱלֹהִים אֶת־הָאָרֶץ› (“and-He-saw God obj-marker the-earth”) —
+# event: see — agent God; theme the-earth
 m.event("see", agent="Elohim", themes=["ha_aretz"])
-# ‹וְהִנֵּה נִשְׁחָתָה› spec-delta — spec said and-He-saw God with-all-which
-# make and-behold good very — and behold, very good (1:31, frozen day 6),
-# delivery says and-He-saw God with-the-earth and-behold was-corrupted — and
-# behold, CORRUPTED (6:12)
+# ‹וְהִנֵּה נִשְׁחָתָה› (“and-behold corrupted”) — spec-delta — spec said
+# and-He-saw God with-all-which make and-behold good very — and behold, very
+# good (1:31, frozen day 6), delivery says and-He-saw God with-the-earth
+# and-behold was-corrupted — and behold, CORRUPTED (6:12)
 m.spec_delta("va-yar Elohim et-kol-asher asah ve-hinneh tov meod — and behold, very good (1:31, frozen day 6)",
              "va-yar Elohim et-ha-aretz ve-hinneh nishchatah — and behold, CORRUPTED (6:12)")
-# ‹כִּי־הִשְׁחִית כָּל־בָּשָׂר אֶת־דַּרְכּוֹ› fact holds: had-corrupted-all-
-# flesh-with-its-way
+# ‹כִּי־הִשְׁחִית כָּל־בָּשָׂר אֶת־דַּרְכּוֹ› (“for had-corrupted all flesh
+# obj-marker its-way”) — fact holds: had-corrupted-all-flesh-with-its-way
 m.fact("hishchit_kol_basar_et_darko")
 
 # -------------------------- Gen.6.13 · END_DECREE_SPOKEN_TO_NOACH ----------
@@ -73,11 +78,13 @@ m.fact("hishchit_kol_basar_et_darko")
 # earth is filled with violence through them; and, behold, I will destroy
 # them with the earth.'"
 m.step("Gen.6.13")
-# ‹וַיֹּאמֶר אֱלֹהִים לְנֹחַ› event: say — agent God; theme Noach
+# ‹וַיֹּאמֶר אֱלֹהִים לְנֹחַ› (“and-He-said God to-Noach”) — event: say —
+# agent God; theme Noach
 m.event("say", agent="Elohim", themes=["noach"])
-# ‹קֵץ כָּל־בָּשָׂר בָּא לְפָנַי … וְהִנְנִי מַשְׁחִיתָם אֶת־הָאָרֶץ› fact
-# holds: end-of-all-flesh-has-come-before-Me; behold-I-destroying-them-with-
-# the-earth
+# ‹קֵץ כָּל־בָּשָׂר בָּא לְפָנַי … וְהִנְנִי מַשְׁחִיתָם אֶת־הָאָרֶץ› (“end-
+# of all flesh has-come before-Me … and-behold-Me destroying-them with the-
+# earth”) — fact holds: end-of-all-flesh-has-come-before-Me; behold-I-
+# destroying-them-with-the-earth
 m.fact("qetz_kol_basar_ba_lefanai",
        "hineni_mashchitam_et_ha_aretz")
 
@@ -87,12 +94,13 @@ m.fact("qetz_kol_basar_ba_lefanai",
 # "Make thee an ark of gopher wood; with rooms shalt thou make the ark, and
 # shalt pitch it within and without with pitch."
 m.step("Gen.6.14")
-# ‹עֲשֵׂה לְךָ תֵּבַת עֲצֵי־גֹפֶר› God speaks a demand — LET: make(Noach,
-# ark)
+# ‹עֲשֵׂה לְךָ תֵּבַת עֲצֵי־גֹפֶר› (“make for-yourself ark-of woods-of
+# gofer”) — God speaks a demand — LET: make(Noach, ark)
 m.declare("Elohim", "LET",
           "aseh(noach, tevah)")
-# ‹קִנִּים תַּעֲשֶׂה אֶת־הַתֵּבָה וְכָפַרְתָּ אֹתָהּ … בַּכֹּפֶר› fact
-# holds: ark-of-wood-of-gofer-rooms; and-you-shall-pitch-has-come-pitch
+# ‹קִנִּים תַּעֲשֶׂה אֶת־הַתֵּבָה וְכָפַרְתָּ אֹתָהּ … בַּכֹּפֶר› (“rooms
+# you-shall-make with the-ark and-you-shall-pitch it … with-the-pitch”) —
+# fact holds: ark-of-wood-of-gofer-rooms; and-you-shall-pitch-has-come-pitch
 m.fact("tevat_atzei_gofer_qinim",
        "ve_khafarta_ba_kofer")
 
@@ -104,8 +112,9 @@ m.fact("tevat_atzei_gofer_qinim",
 # cubits."
 m.step("Gen.6.15")
 # ‹שְׁלֹשׁ מֵאוֹת אַמָּה אֹרֶךְ … חֲמִשִּׁים אַמָּה רָחְבָּהּ וּשְׁלֹשִׁים
-# אַמָּה קוֹמָתָהּ› fact holds: three-hundred-cubit-length-of; fifty-cubit-
-# its-width; thirty-cubit-its-height
+# אַמָּה קוֹמָתָהּ› (“three hundred cubit length-of … fifty cubit its-width
+# and-thirty cubit its-height”) — fact holds: three-hundred-cubit-length-of;
+# fifty-cubit-its-width; thirty-cubit-its-height
 m.fact("shelosh_meot_amah_orekh",
        "chamishim_amah_rochbah",
        "sheloshim_amah_qomatah")
@@ -119,7 +128,8 @@ m.fact("shelosh_meot_amah_orekh",
 # lower, second, and third stories shalt thou make it."
 m.step("Gen.6.16")
 # ‹צֹהַר … וּפֶתַח הַתֵּבָה בְּצִדָּהּ … תַּחְתִּיִּם שְׁנִיִּם
-# וּשְׁלִשִׁים› fact holds: a-light-to-ark; door-opening-has-come-its-side;
+# וּשְׁלִשִׁים› (“a-light … and-door-of the-ark in-its-side … lower second
+# and-third”) — fact holds: a-light-to-ark; door-opening-has-come-its-side;
 # lower-second-decks-and-third-decks
 m.fact("tzohar_la_tevah",
        "petach_ba_tzidah",
@@ -134,8 +144,9 @@ m.fact("tzohar_la_tevah",
 # that is in the earth shall perish."
 m.step("Gen.6.17")
 # ‹וַאֲנִי הִנְנִי מֵבִיא אֶת־הַמַּבּוּל … כֹּל אֲשֶׁר־בָּאָרֶץ יִגְוָע›
-# fact holds: behold-I-bringing-with-the-flood-waters; all-which-has-come-
-# earth-shall-expire
+# (“and-I behold-Me bringing obj-marker the-flood … all which in-the-earth
+# shall-expire”) — fact holds: behold-I-bringing-with-the-flood-waters; all-
+# which-has-come-earth-shall-expire
 m.fact("hineni_mevi_et_ha_mabul_mayim",
        "kol_asher_ba_aretz_yigva")
 
@@ -145,9 +156,10 @@ m.fact("hineni_mevi_et_ha_mabul_mayim",
 # "But I will establish My covenant with thee; and thou shalt come into the
 # ark, thou, and thy sons, and thy wife, and thy sons' wives with thee."
 m.step("Gen.6.18")
-# ‹וַהֲקִמֹתִי אֶת־בְּרִיתִי אִתָּךְ וּבָאתָ אֶל־הַתֵּבָה› fact holds: and-
-# I-will-establish-with-My-covenant-with-you; and-you-shall-come-to-the-ark-
-# you-and-your-sons
+# ‹וַהֲקִמֹתִי אֶת־בְּרִיתִי אִתָּךְ וּבָאתָ אֶל־הַתֵּבָה› (“and-I-will-
+# establish obj-marker My-covenant with-you and-you-shall-come to the-ark”)
+# — fact holds: and-I-will-establish-with-My-covenant-with-you; and-you-
+# shall-come-to-the-ark-you-and-your-sons
 m.fact("va_hakimoti_et_briti_itakh",
        "u_vata_el_ha_tevah_atah_u_vanekha")
 
@@ -158,8 +170,9 @@ m.fact("va_hakimoti_et_briti_itakh",
 # bring into the ark, to keep them alive with thee; they shall be male and
 # female."
 m.step("Gen.6.19")
-# ‹שְׁנַיִם מִכֹּל תָּבִיא … זָכָר וּנְקֵבָה יִהְיוּ› fact holds: two-from-
-# all-you-shall-bring-to-the-ark; male-and-female-they-shall-be
+# ‹שְׁנַיִם מִכֹּל תָּבִיא … זָכָר וּנְקֵבָה יִהְיוּ› (“two from-all you-
+# shall-bring … male and-female they-shall-be”) — fact holds: two-from-all-
+# you-shall-bring-to-the-ark; male-and-female-they-shall-be
 m.fact("shnayim_mi_kol_tavi_el_ha_tevah",
        "zakhar_u_nekevah_yihyu")
 
@@ -170,8 +183,9 @@ m.fact("shnayim_mi_kol_tavi_el_ha_tevah",
 # every creeping thing of the ground after its kind, two of every sort shall
 # come unto thee, to keep them alive."
 m.step("Gen.6.20")
-# ‹מֵהָעוֹף לְמִינֵהוּ … שְׁנַיִם מִכֹּל יָבֹאוּ אֵלֶיךָ› fact holds: to-
-# its-kind-manifest-bird-livestock-creeper-of
+# ‹מֵהָעוֹף לְמִינֵהוּ … שְׁנַיִם מִכֹּל יָבֹאוּ אֵלֶיךָ› (“from-the-bird
+# by-its-kind … two from-all shall-come to-you”) — fact holds: to-its-kind-
+# manifest-bird-livestock-creeper-of
 m.fact("le_minehu_manifest_of_behemah_remes")
 
 # -------------------------- Gen.6.21 · SECOND_IMPERATIVE_PROVISIONS --------
@@ -180,27 +194,30 @@ m.fact("le_minehu_manifest_of_behemah_remes")
 # "And take thou unto thee of all food that is eaten, and gather it to thee;
 # and it shall be for food for thee, and for them.'"
 m.step("Gen.6.21")
-# ‹וְאַתָּה קַח־לְךָ מִכָּל־מַאֲכָל אֲשֶׁר יֵאָכֵל› God speaks a demand —
-# LET: take(Noach, from-all-food)
+# ‹וְאַתָּה קַח־לְךָ מִכָּל־מַאֲכָל אֲשֶׁר יֵאָכֵל› (“and-you take for-
+# yourself from-all food which is-eaten”) — God speaks a demand — LET:
+# take(Noach, from-all-food)
 m.declare("Elohim", "LET",
           "qach(noach, mi_kol_maakhal)")
-# ‹וְהָיָה לְךָ וְלָהֶם לְאָכְלָה› fact holds: and-was-to-you-and-to-them-
-# to-food
+# ‹וְהָיָה לְךָ וְלָהֶם לְאָכְלָה› (“and-it-shall-be for-yourself and-for-
+# them for-food”) — fact holds: and-was-to-you-and-to-them-to-food
 m.fact("ve_hayah_lekha_ve_lahem_le_akhlah")
 
 # -------------------------- Gen.6.22 · THE_RECEIPT_BOTH_POPPED -------------
 # וַיַּעַשׂ נֹחַ כְּכֹל אֲשֶׁר צִוָּה אֹתוֹ אֱלֹהִים כֵּן עָשָׂה
 # "Thus did Noah; according to all that God commanded him, so did he."
 m.step("Gen.6.22")
-# ‹וַיַּעַשׂ נֹחַ› event: make — agent Noach; theme ark
+# ‹וַיַּעַשׂ נֹחַ› (“and-he-made Noach”) — event: make — agent Noach; theme
+# ark
 m.event("make", agent="noach", themes=["tevah"])
-# ‹וַיַּעַשׂ נֹחַ כְּכֹל אֲשֶׁר צִוָּה› the world gains: ark
+# ‹וַיַּעַשׂ נֹחַ כְּכֹל אֲשֶׁר צִוָּה› (“and-he-made Noach according-to-all
+# which commanded”) — the world gains: ark
 m.install("tevah")
-# ‹כְּכֹל אֲשֶׁר צִוָּה אֹתוֹ אֱלֹהִים› demand settled (popped from the
-# queue): make(Noach, ark)
+# ‹כְּכֹל אֲשֶׁר צִוָּה אֹתוֹ אֱלֹהִים› (“according-to-all which commanded
+# him God”) — demand settled (popped from the queue): make(Noach, ark)
 m.result("aseh(noach, tevah)", tmark="t2")
-# ‹כֵּן עָשָׂה› demand settled (popped from the queue): take(Noach, from-
-# all-food)
+# ‹כֵּן עָשָׂה› (“so he-did”) — demand settled (popped from the queue):
+# take(Noach, from-all-food)
 m.result("qach(noach, mi_kol_maakhal)", tmark="t2")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

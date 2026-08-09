@@ -713,11 +713,13 @@ m = Machine(&quot;gen_36_gerar_dream_prophet&quot;)
 # &quot;And Abraham journeyed from thence toward the land of the South, and dwelt
 # between Kadesh and Shur; and he sojourned in Gerar.&quot;
 m.step(&quot;Gen.20.1&quot;)
-# ‹וַיִּסַּע מִשָּׁם אַבְרָהָם … וַיָּגָר בִּגְרָר› event: journey-sojourn —
-# agent avraham
+# ‹וַיִּסַּע מִשָּׁם אַבְרָהָם … וַיָּגָר בִּגְרָר› (“and-journey from-there
+# Abraham … and-turn-aside-from-the-road in-Gerar”) — event: journey-sojourn
+# — agent Abraham
 m.event(&quot;journey_sojourn&quot;, agent=&quot;avraham&quot;)
-# ‹בֵּין־קָדֵשׁ וּבֵין שׁוּר … בִּגְרָר› reads without prior install (flag,
-# not fix): gerar, qadesh, shur
+# ‹בֵּין־קָדֵשׁ וּבֵין שׁוּר … בִּגְרָר› (“between Kadesh and-between Shur …
+# in-Gerar”) — reads without prior install (flag, not fix): Gerar, Kadesh,
+# Shur
 m.presupposed(&quot;gerar&quot;, &quot;qadesh&quot;, &quot;shur&quot;)
 
 # -------------------------- Gen.20.2 · THE_SECOND_CLAIM_AND_THE_TAKING -----
@@ -726,12 +728,13 @@ m.presupposed(&quot;gerar&quot;, &quot;qadesh&quot;, &quot;shur&quot;)
 # &quot;And Abraham said of Sarah his wife: &#x27;She is my sister.&#x27; And Abimelech
 # king of Gerar sent, and took Sarah.&quot;
 m.step(&quot;Gen.20.2&quot;)
-# ‹אֲחֹתִי הִוא› fact holds: achoti-hi
+# ‹אֲחֹתִי הִוא› (“sister-me/my he/it”) — fact holds: achoti-he/it
 m.fact(&quot;achoti_hi&quot;)
-# ‹אֲבִימֶלֶךְ מֶלֶךְ גְּרָר› the world gains: avimelekh
+# ‹אֲבִימֶלֶךְ מֶלֶךְ גְּרָר› (“Abimelech king Gerar”) — the world gains:
+# Abimelech
 m.install(&quot;avimelekh&quot;)
-# ‹וַיִּשְׁלַח … וַיִּקַּח אֶת־שָׂרָה› event: take — agent avimelekh; theme
-# sarah
+# ‹וַיִּשְׁלַח … וַיִּקַּח אֶת־שָׂרָה› (“and-send … and-take obj-marker
+# Sarah”) — event: take — agent Abimelech; theme sarah
 m.event(&quot;take&quot;, agent=&quot;avimelekh&quot;, themes=[&quot;sarah&quot;])
 
 # -------------------------- Gen.20.3 · THE_DREAM_VERDICT -------------------
@@ -741,11 +744,13 @@ m.event(&quot;take&quot;, agent=&quot;avimelekh&quot;, themes=[&quot;sarah&quot;
 # &#x27;Behold, thou shalt die, because of the woman whom thou hast taken; for
 # she is a man&#x27;s wife.&#x27;&quot;
 m.step(&quot;Gen.20.3&quot;)
-# ‹וַיָּבֹא אֱלֹהִים אֶל־אֲבִימֶלֶךְ בַּחֲלוֹם הַלָּיְלָה› event: dream-say
-# — agent God
+# ‹וַיָּבֹא אֱלֹהִים אֶל־אֲבִימֶלֶךְ בַּחֲלוֹם הַלָּיְלָה› (“and-come/bring
+# God to Abimelech in-dream the-night”) — event: dream-say — agent God
 m.event(&quot;dream_say&quot;, agent=&quot;elohim&quot;)
-# ‹הִנְּךָ מֵת עַל־הָאִשָּׁה אֲשֶׁר־לָקַחְתָּ וְהִוא בְּעֻלַת בָּעַל› fact
-# holds: hinkha-met-upon-the-woman; and-hi-beulat-baal
+# ‹הִנְּךָ מֵת עַל־הָאִשָּׁה אֲשֶׁר־לָקַחְתָּ וְהִוא בְּעֻלַת בָּעַל›
+# (“behold-you/your die over the-woman which take and-he/it be-master
+# master”) — fact holds: hinkha-die-over-the-woman; and-he/it-be-master-
+# master
 m.fact(&quot;hinkha_met_al_ha_ishah&quot;,
        &quot;ve_hi_beulat_baal&quot;)
 
@@ -755,8 +760,9 @@ m.fact(&quot;hinkha_met_al_ha_ishah&quot;,
 # &quot;Now Abimelech had not come near her; and he said: &#x27;Lord, wilt Thou slay
 # even a righteous nation?&quot;
 m.step(&quot;Gen.20.4&quot;)
-# ‹לֹא קָרַב אֵלֶיהָ … הֲגוֹי גַּם־צַדִּיק תַּהֲרֹג› fact holds: not-qarav-
-# eleha; the-goy-also-tzaddiq-taharog
+# ‹לֹא קָרַב אֵלֶיהָ … הֲגוֹי גַּם־צַדִּיק תַּהֲרֹג› (“not bring-near to-
+# her/its … the-nation also just smite-with-deadly-intent”) — fact holds:
+# not-bring-near-eleha; the-nation-also-tzaddiq-smite-with-deadly-intent
 m.fact(&quot;lo_qarav_eleha&quot;,
        &quot;ha_goy_gam_tzaddiq_taharog&quot;)
 
@@ -767,8 +773,10 @@ m.fact(&quot;lo_qarav_eleha&quot;,
 # said: He is my brother. In the simplicity of my heart and the innocency of
 # my hands have I done this.&#x27;&quot;
 m.step(&quot;Gen.20.5&quot;)
-# ‹הֲלֹא הוּא אָמַר־לִי … בְּתָם־לְבָבִי וּבְנִקְיֹן כַּפַּי› fact holds:
-# that-amar-to-me-and-hi-also-hi-amrah; in-tom-levavi-and-and-niqyon-kapai
+# ‹הֲלֹא הוּא אָמַר־לִי … בְּתָם־לְבָבִי וּבְנִקְיֹן כַּפַּי› (“is-it-not
+# he/it say to-me/my … in-completeness heart-me/my and-in-clearness palm-of-
+# hand-me/my”) — fact holds: he/it-say-to-me-and-he/it-also-he/it-amrah; in-
+# tom-levavi-and-and-clearness-kapai
 m.fact(&quot;hu_amar_li_ve_hi_gam_hi_amrah&quot;,
        &quot;be_tom_levavi_u_ve_niqyon_kapai&quot;)
 
@@ -780,9 +788,10 @@ m.fact(&quot;hu_amar_li_ve_hi_gam_hi_amrah&quot;,
 # of thy heart thou hast done this, and I also withheld thee from sinning
 # against Me. Therefore suffered I thee not to touch her.&quot;
 m.step(&quot;Gen.20.6&quot;)
-# ‹יָדַעְתִּי … וָאֶחְשֹׂךְ … מֵחֲטוֹ־לִי … לֹא־נְתַתִּיךָ לִנְגֹּעַ› fact
-# holds: also-anokhi-yadati-and-tom-levavkha; and-echsokh-otkha-from-chato-
-# to-me; not-netatikha-lingoa
+# ‹יָדַעְתִּי … וָאֶחְשֹׂךְ … מֵחֲטוֹ־לִי … לֹא־נְתַתִּיךָ לִנְגֹּעַ› (“know
+# … and-restrain … from-sin to-me/my … not set-you/your to-touch”) — fact
+# holds: also-anokhi-know-and-tom-levavkha; and-restrain-otkha-what-sin-to-
+# me; not-netatikha-lingoa
 m.fact(&quot;gam_anokhi_yadati_ve_tom_levavkha&quot;,
        &quot;va_echsokh_otkha_me_chato_li&quot;,
        &quot;lo_netatikha_lingoa&quot;)
@@ -795,15 +804,16 @@ m.fact(&quot;gam_anokhi_yadati_ve_tom_levavkha&quot;,
 # pray for thee, and thou shalt live; and if thou restore her not, know thou
 # that thou shalt surely die, thou, and all that are thine.&#x27;&quot;
 m.step(&quot;Gen.20.7&quot;)
-# ‹וְעַתָּה הָשֵׁב אֵשֶׁת־הָאִישׁ› God speaks a demand — LET: hashev(wife-
-# of-the-man)
+# ‹וְעַתָּה הָשֵׁב אֵשֶׁת־הָאִישׁ› (“and-now return woman the-man”) — God
+# speaks a demand — LET: return(woman-the-man)
 m.declare(&quot;elohim&quot;, &quot;LET&quot;,
           &quot;hashev(eshet_ha_ish)&quot;)
-# ‹וְיִתְפַּלֵּל בַּעַדְךָ וֶחְיֵה› fact holds: and-yitpalel-baadkha-and-
-# cheyeh
+# ‹וְיִתְפַּלֵּל בַּעַדְךָ וֶחְיֵה› (“and-judge in-up-to-you/your and-live”)
+# — fact holds: and-judge-baadkha-and-cheyeh
 m.fact(&quot;ve_yitpalel_baadkha_ve_cheyeh&quot;)
-# ‹וְאִם־אֵינְךָ מֵשִׁיב דַּע כִּי־מוֹת תָּמוּת› fact holds: if-einkha-
-# meshiv-da-when-dying-you-shall-die
+# ‹וְאִם־אֵינְךָ מֵשִׁיב דַּע כִּי־מוֹת תָּמוּת› (“and-if there-is-not-
+# you/your return know that die die”) — fact holds: if-einkha-return-know-
+# that-die-die
 m.fact(&quot;im_einkha_meshiv_da_ki_mot_tamut&quot;)
 
 # -------------------------- Gen.20.8 · THE_COURT_FEARS ---------------------
@@ -812,8 +822,9 @@ m.fact(&quot;im_einkha_meshiv_da_ki_mot_tamut&quot;)
 # &quot;And Abimelech rose early in the morning, and called all his servants, and
 # told all these things in their ears; and the men were sore afraid.&quot;
 m.step(&quot;Gen.20.8&quot;)
-# ‹וַיַּשְׁכֵּם … וַיְדַבֵּר … וַיִּירְאוּ הָאֲנָשִׁים מְאֹד› event: report-
-# fear — agent avimelekh
+# ‹וַיַּשְׁכֵּם … וַיְדַבֵּר … וַיִּירְאוּ הָאֲנָשִׁים מְאֹד› (“and-rise-
+# early … and-speak … and-fear the-man very”) — event: report-fear — agent
+# Abimelech
 m.event(&quot;report_fear&quot;, agent=&quot;avimelekh&quot;)
 
 # -------------------------- Gen.20.9 · THE_GREAT_SIN_REBUKE ----------------
@@ -826,7 +837,8 @@ m.event(&quot;report_fear&quot;, agent=&quot;avimelekh&quot;)
 # not to be done.&#x27;&quot;
 m.step(&quot;Gen.20.9&quot;)
 # ‹מֶה־עָשִׂיתָ לָּנוּ … חֲטָאָה גְדֹלָה … מַעֲשִׂים אֲשֶׁר לֹא־יֵעָשׂוּ›
-# fact holds: meh-asita-lanu-and-meh-chatati; chataah-gedolah-upon-mamlakhti
+# (“what make to-us/our … offence great … deed/work which not make”) — fact
+# holds: meh-make-lanu-and-meh-sin; chataah-gedolah-over-mamlakhti
 m.fact(&quot;meh_asita_lanu_u_meh_chatati&quot;,
        &quot;chataah_gedolah_al_mamlakhti&quot;)
 
@@ -836,7 +848,8 @@ m.fact(&quot;meh_asita_lanu_u_meh_chatati&quot;,
 # &quot;And Abimelech said unto Abraham: &#x27;What sawest thou, that thou hast done
 # this thing?&#x27;&quot;
 m.step(&quot;Gen.20.10&quot;)
-# ‹מָה רָאִיתָ כִּי עָשִׂיתָ› fact holds: mah-raita-when-asita
+# ‹מָה רָאִיתָ כִּי עָשִׂיתָ› (“what see that make”) — fact holds: mah-see-
+# that-make
 m.fact(&quot;mah_raita_ki_asita&quot;)
 
 # -------------------------- Gen.20.11 · THE_FEAR_OF_GOD_GUESS --------------
@@ -845,8 +858,9 @@ m.fact(&quot;mah_raita_ki_asita&quot;)
 # &quot;And Abraham said: &#x27;Because I thought: Surely the fear of God is not in
 # this place; and they will slay me for my wife&#x27;s sake.&quot;
 m.step(&quot;Gen.20.11&quot;)
-# ‹אֵין־יִרְאַת אֱלֹהִים בַּמָּקוֹם הַזֶּה וַהֲרָגוּנִי› fact holds: amarti-
-# ein-yirat-God; and-haraguni-upon-devar-ishti
+# ‹אֵין־יִרְאַת אֱלֹהִים בַּמָּקוֹם הַזֶּה וַהֲרָגוּנִי› (“there-is-not fear
+# God in-place the-this and-smite-with-deadly-intent-me/my”) — fact holds:
+# say-ein-fear-God; and-haraguni-over-word/thing-ishti
 m.fact(&quot;amarti_ein_yirat_elohim&quot;,
        &quot;va_haraguni_al_devar_ishti&quot;)
 
@@ -856,8 +870,9 @@ m.fact(&quot;amarti_ein_yirat_elohim&quot;,
 # &quot;And moreover she is indeed my sister, the daughter of my father, but not
 # the daughter of my mother; and so she became my wife.&quot;
 m.step(&quot;Gen.20.12&quot;)
-# ‹אֲחֹתִי בַת־אָבִי הִוא אַךְ לֹא בַת־אִמִּי› fact holds: achoti-vat-avi-
-# akh-not-vat-imi
+# ‹אֲחֹתִי בַת־אָבִי הִוא אַךְ לֹא בַת־אִמִּי› (“sister-me/my daughter
+# father-me/my he/it indeed not daughter mother-me/my”) — fact holds:
+# achoti-daughter-avi-indeed-not-daughter-imi
 m.fact(&quot;achoti_vat_avi_akh_lo_vat_imi&quot;)
 
 # -------------------------- Gen.20.13 · THE_WANDERING_AND_THE_QUOTED_DEMAND -
@@ -868,8 +883,9 @@ m.fact(&quot;achoti_vat_avi_akh_lo_vat_imi&quot;)
 # that I said unto her: This is thy kindness which thou shalt show unto me;
 # at every place whither we shall come, say of me: He is my brother.&#x27;&quot;
 m.step(&quot;Gen.20.13&quot;)
-# ‹הִתְעוּ אֹתִי אֱלֹהִים … אִמְרִי־לִי אָחִי הוּא› fact holds: hitu-me-God-
-# from-beit-avi; imri-to-me-my-brother-that
+# ‹הִתְעוּ אֹתִי אֱלֹהִים … אִמְרִי־לִי אָחִי הוּא› (“vacillate obj-marker-
+# me/my God … say to-me/my brother-me/my he/it”) — fact holds: vacillate-me-
+# God-from-beit-avi; say-to-me-my-brother-he/it
 m.fact(&quot;hitu_oti_elohim_mi_beit_avi&quot;,
        &quot;imri_li_achi_hu&quot;)
 
@@ -879,8 +895,9 @@ m.fact(&quot;hitu_oti_elohim_mi_beit_avi&quot;,
 # &quot;And Abimelech took sheep and oxen, and men-servants and women-servants,
 # and gave them unto Abraham, and restored him Sarah his wife.&quot;
 m.step(&quot;Gen.20.14&quot;)
-# ‹וַיָּשֶׁב לוֹ אֵת שָׂרָה אִשְׁתּוֹ› demand settled (popped from the
-# queue): hashev(wife-of-the-man)
+# ‹וַיָּשֶׁב לוֹ אֵת שָׂרָה אִשְׁתּוֹ› (“and-return to-him/its obj-marker
+# Sarah woman-him/its”) — demand settled (popped from the queue):
+# return(woman-the-man)
 m.result(&quot;hashev(eshet_ha_ish)&quot;, tmark=&quot;t1&quot;)
 
 # -------------------------- Gen.20.15 · THE_DWELL_GRANT --------------------
@@ -888,8 +905,8 @@ m.result(&quot;hashev(eshet_ha_ish)&quot;, tmark=&quot;t1&quot;)
 # &quot;And Abimelech said: &#x27;Behold, my land is before thee: dwell where it
 # pleaseth thee.&#x27;&quot;
 m.step(&quot;Gen.20.15&quot;)
-# ‹בַּטּוֹב בְּעֵינֶיךָ שֵׁב› avimelekh speaks a demand — LET: shev(in-the-
-# good-in-einekha)
+# ‹בַּטּוֹב בְּעֵינֶיךָ שֵׁב› (“in-good in-eye-you/your dwell/sit”) —
+# Abimelech speaks a demand — LET: dwell/sit(in-the-good-in-einekha)
 m.declare(&quot;avimelekh&quot;, &quot;LET&quot;,
           &quot;shev(ba_tov_be_einekha)&quot;)
 
@@ -900,8 +917,9 @@ m.declare(&quot;avimelekh&quot;, &quot;LET&quot;,
 # pieces of silver; behold, it is for thee a covering of the eyes to all
 # that are with thee; and before all men thou art righted.&#x27;&quot;
 m.step(&quot;Gen.20.16&quot;)
-# ‹אֶלֶף כֶּסֶף … כְּסוּת עֵינַיִם … וְנֹכָחַת› fact holds: elef-kesef-
-# kesut-einayim; and-nokhachat
+# ‹אֶלֶף כֶּסֶף … כְּסוּת עֵינַיִם … וְנֹכָחַת› (“thousand silver … cover
+# eye … and-be-right”) — fact holds: thousand-silver-cover-einayim; and-be-
+# right
 m.fact(&quot;elef_kesef_kesut_einayim&quot;,
        &quot;ve_nokhachat&quot;)
 
@@ -911,10 +929,11 @@ m.fact(&quot;elef_kesef_kesut_einayim&quot;,
 # &quot;And Abraham prayed unto God; and God healed Abimelech, and his wife, and
 # his maid-servants; and they bore children.&quot;
 m.step(&quot;Gen.20.17&quot;)
-# ‹וַיִּתְפַּלֵּל אַבְרָהָם אֶל־הָאֱלֹהִים› event: pray — agent avraham
+# ‹וַיִּתְפַּלֵּל אַבְרָהָם אֶל־הָאֱלֹהִים› (“and-judge Abraham to the-God”)
+# — event: pray — agent Abraham
 m.event(&quot;pray&quot;, agent=&quot;avraham&quot;)
-# ‹וַיִּרְפָּא אֱלֹהִים … וַיֵּלֵדוּ› event: heal — agent God; theme beit-
-# avimelekh
+# ‹וַיִּרְפָּא אֱלֹהִים … וַיֵּלֵדוּ› (“and-mend God … and-bear-young”) —
+# event: heal — agent God; theme beit-Abimelech
 m.event(&quot;heal&quot;, agent=&quot;elohim&quot;, themes=[&quot;beit_avimelekh&quot;])
 
 # -------------------------- Gen.20.18 · THE_SHUT_WOMB_CLOSER ---------------
@@ -923,17 +942,18 @@ m.event(&quot;heal&quot;, agent=&quot;elohim&quot;, themes=[&quot;beit_avimelekh
 # &quot;For the LORD had fast closed up all the wombs of the house of Abimelech,
 # because of Sarah Abraham&#x27;s wife.&quot;
 m.step(&quot;Gen.20.18&quot;)
-# ‹כִּי־עָצֹר עָצַר יְהוָה בְּעַד כָּל־רֶחֶם› fact holds: atzor-atzar-the-
-# LORD-bead-all-rechem
+# ‹כִּי־עָצֹר עָצַר יְהוָה בְּעַד כָּל־רֶחֶם› (“that close close YHWH in-up-
+# to all womb”) — fact holds: close-close-the-LORD-up-to-all-womb
 m.fact(&quot;atzor_atzar_YHWH_bead_kol_rechem&quot;)
-# ‹כִּי־עָצֹר עָצַר יְהוָה› note: zero events in this verse
+# ‹כִּי־עָצֹר עָצַר יְהוָה› (“that close close YHWH”) — note: zero events in
+# this verse
 m.note_zero_events()
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == &quot;__main__&quot;:
     m.report()
     assert m.created_set() == {&#x27;avimelekh&#x27;}
-    assert m.presupposed_set() == {&#x27;shur&#x27;, &#x27;qadesh&#x27;, &#x27;gerar&#x27;}
+    assert m.presupposed_set() == {&#x27;shur&#x27;, &#x27;gerar&#x27;, &#x27;qadesh&#x27;}
     assert m.REGISTRY[&quot;names&quot;] == {}
     assert m.REGISTRY[&quot;writes&quot;] == 0
     assert m.tests_list() == []
@@ -946,4 +966,4 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 9
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-08 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

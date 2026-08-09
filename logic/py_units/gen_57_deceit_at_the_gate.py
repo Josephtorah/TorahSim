@@ -19,8 +19,9 @@ m = Machine("gen_57_deceit_at_the_gate")
 # "[EN-AID] And Dinah, the daughter of Leah, whom she had borne to Jacob,
 # went out to see among the daughters of the land."
 m.step("Gen.34.1")
-# ‹וַתֵּצֵא דִינָה בַּת־לֵאָה› fact holds: and-tetze-dina-to-me-see(bat-
-# leah, bi-venot-the-earth)
+# ‹וַתֵּצֵא דִינָה בַּת־לֵאָה› (“and-bring-forth Dinah daughter Leah”) —
+# fact holds: and-bring-forth-Dinah-to-me-see(daughter-leah, bi-venot-the-
+# earth)
 m.fact("va_tetze_dina_li_reot(bat_leah, bi_venot_ha_aretz)")
 
 # -------------------------- Gen.34.2 · THE_TAKING_BEFORE_ASKING ------------
@@ -29,8 +30,9 @@ m.fact("va_tetze_dina_li_reot(bat_leah, bi_venot_ha_aretz)")
 # "[EN-AID] And Shechem, son of Hamor the Hivite, prince of the land, saw
 # her; and he took her and lay with her and violated her."
 m.step("Gen.34.2")
-# ‹וַיִּקַּח אֹתָהּ וַיִּשְׁכַּב אֹתָהּ וַיְעַנֶּהָ› fact holds: and-yiqach-
-# and-yishkav-and-yeaneha(shekhem, her)
+# ‹וַיִּקַּח אֹתָהּ וַיִּשְׁכַּב אֹתָהּ וַיְעַנֶּהָ› (“and-take obj-marker-
+# her/its and-lie-down obj-marker-her/its and-afflict-literally-her/its”) —
+# fact holds: and-take-and-lie-down-and-yeaneha(Shechem, her)
 m.fact("va_yiqach_va_yishkav_va_yeaneha(shekhem, otah)")
 
 # -------------------------- Gen.34.3 · THE_CLEAVE_AND_THE_HEART ------------
@@ -39,8 +41,9 @@ m.fact("va_yiqach_va_yishkav_va_yeaneha(shekhem, otah)")
 # "[EN-AID] And his soul cleaved to Dinah, daughter of Jacob; and he loved
 # the girl, and spoke to the heart of the girl."
 m.step("Gen.34.3")
-# ‹וַתִּדְבַּק נַפְשׁוֹ בְּדִינָה בַּת› fact holds: and-tidbaq-nafsho-and-
-# yedaber-upon-lev(shekhem, the-naara)
+# ‹וַתִּדְבַּק נַפְשׁוֹ בְּדִינָה בַּת› (“and-impinge living-being-him/its
+# in-Dinah daughter”) — fact holds: and-impinge-nafsho-and-speak-over-
+# heart(Shechem, the-girl)
 m.fact("va_tidbaq_nafsho_va_yedaber_al_lev(shekhem, ha_naara)")
 
 # -------------------------- Gen.34.4 · THE_DEMAND_AFTER_THE_DEED -----------
@@ -49,8 +52,9 @@ m.fact("va_tidbaq_nafsho_va_yedaber_al_lev(shekhem, ha_naara)")
 # "[EN-AID] And Shechem said to Hamor his father, saying: Take me this girl
 # as a wife."
 m.step("Gen.34.4")
-# ‹קַח־לִי אֶת־הַיַּלְדָּה הַזֹּאת לְאִשָּׁה› shekhem speaks a demand — LET:
-# qach-to-me(chamor, the-yalda-the-this-to-isha)
+# ‹קַח־לִי אֶת־הַיַּלְדָּה הַזֹּאת לְאִשָּׁה› (“take to-me/my obj-marker
+# the-lass the-this to-woman”) — Shechem speaks a demand — LET: take-to-
+# me(Hamor, obj-marker-the-bear-young-the-this-to-woman)
 m.declare("shekhem", "LET",
           "qach_li(chamor, et_ha_yalda_ha_zot_le_isha)")
 
@@ -61,8 +65,9 @@ m.declare("shekhem", "LET",
 # sons were with his livestock in the field; and Jacob kept silent until
 # they came."
 m.step("Gen.34.5")
-# ‹וְהֶחֱרִשׁ יַעֲקֹב עַד־בֹּאָם› fact holds: shama-when-time-and-
-# hecherish(yaaqov, until-boam)
+# ‹וְהֶחֱרִשׁ יַעֲקֹב עַד־בֹּאָם› (“and-scratch Jacob until come/bring-
+# them/their”) — fact holds: hear-that-be-foul-and-scratch(Jacob, until-
+# boam)
 m.fact("shama_ki_time_ve_hecherish(yaaqov, ad_boam)")
 
 # -------------------------- Gen.34.6 · THE_FATHER_GOES_OUT -----------------
@@ -70,8 +75,8 @@ m.fact("shama_ki_time_ve_hecherish(yaaqov, ad_boam)")
 # "[EN-AID] And Hamor, the father of Shechem, went out to Jacob, to speak
 # with him."
 m.step("Gen.34.6")
-# ‹וַיֵּצֵא חֲמוֹר אֲבִי־שְׁכֶם› fact holds: and-yetze-chamor-to-daber(to-
-# yaaqov, with-him)
+# ‹וַיֵּצֵא חֲמוֹר אֲבִי־שְׁכֶם› (“and-bring-forth Hamor father Shechem”) —
+# fact holds: and-bring-forth-Hamor-to-speak(to-Jacob, with-him)
 m.fact("va_yetze_chamor_le_daber(el_yaaqov, ito)")
 
 # -------------------------- Gen.34.7 · THE_OUTRAGE_IN_ISRAEL ---------------
@@ -82,8 +87,9 @@ m.fact("va_yetze_chamor_le_daber(el_yaaqov, ito)")
 # the men were grieved and very angry; for he had done an outrage in Israel,
 # to lie with a daughter of Jacob — and so is not done."
 m.step("Gen.34.7")
-# ‹כִּי־נְבָלָה עָשָׂה בְיִשְׂרָאֵל לִשְׁכַּב› fact holds: and-yitatzvu-
-# when-nevala-and-yisrael(the-anashim)
+# ‹כִּי־נְבָלָה עָשָׂה בְיִשְׂרָאֵל לִשְׁכַּב› (“that foolishness make in-
+# Israel to-lie-down”) — fact holds: and-carve-that-foolishness-and-
+# Israel(the-man)
 m.fact("va_yitatzvu_ki_nevala_ve_yisrael(ha_anashim)")
 
 # -------------------------- Gen.34.8 · THE_GIVE_HER_DEMAND -----------------
@@ -92,8 +98,9 @@ m.fact("va_yitatzvu_ki_nevala_ve_yisrael(ha_anashim)")
 # "[EN-AID] And Hamor spoke with them, saying: Shechem my son — his soul
 # longs for your daughter; give her, please, to him as a wife."
 m.step("Gen.34.8")
-# ‹תְּנוּ נָא אֹתָהּ לוֹ לְאִשָּׁה› chamor speaks a demand — LET: tenu-
-# na(bet-yaaqov, her-not-to-isha)
+# ‹תְּנוּ נָא אֹתָהּ לוֹ לְאִשָּׁה› (“set please obj-marker-her/its to-
+# him/its to-woman”) — Hamor speaks a demand — LET: set-please(house-Jacob,
+# her-not-to-woman)
 m.declare("chamor", "LET",
           "tenu_na(bet_yaaqov, otah_lo_le_isha)")
 
@@ -103,8 +110,8 @@ m.declare("chamor", "LET",
 # "[EN-AID] And intermarry with us: your daughters you shall give to us, and
 # our daughters you shall take for yourselves."
 m.step("Gen.34.9")
-# ‹וְהִתְחַתְּנוּ אֹתָנוּ› chamor speaks a demand — LET: hitchatnu(bet-
-# yaaqov, otanu)
+# ‹וְהִתְחַתְּנוּ אֹתָנוּ› (“and-give-away-in-marriage obj-marker-us/our”) —
+# Hamor speaks a demand — LET: give-away-in-marriage(house-Jacob, otanu)
 m.declare("chamor", "LET",
           "hitchatnu(bet_yaaqov, otanu)")
 
@@ -114,15 +121,16 @@ m.declare("chamor", "LET",
 # "[EN-AID] And with us you shall dwell; and the land shall be before you:
 # dwell, and trade in it, and take holdings in it."
 m.step("Gen.34.10")
-# ‹שְׁבוּ› chamor speaks a demand — LET: shevu(bet-yaaqov, itanu)
+# ‹שְׁבוּ› (“dwell/sit”) — Hamor speaks a demand — LET: dwell/sit(house-
+# Jacob, itanu)
 m.declare("chamor", "LET",
           "shevu(bet_yaaqov, itanu)")
-# ‹וּסְחָרוּהָ› chamor speaks a demand — LET: secharuha(bet-yaaqov, the-
-# earth)
+# ‹וּסְחָרוּהָ› (“and-travel-round-her/its”) — Hamor speaks a demand — LET:
+# secharuha(house-Jacob, the-earth)
 m.declare("chamor", "LET",
           "secharuha(bet_yaaqov, ha_aretz)")
-# ‹וְהֵאָחֲזוּ בָּהּ› chamor speaks a demand — LET: heachazu(bet-yaaqov, in-
-# the-earth)
+# ‹וְהֵאָחֲזוּ בָּהּ› (“and-seize in-her/its”) — Hamor speaks a demand —
+# LET: seize(house-Jacob, in-the-earth)
 m.declare("chamor", "LET",
           "heachazu(bet_yaaqov, ba_aretz)")
 
@@ -132,8 +140,8 @@ m.declare("chamor", "LET",
 # "[EN-AID] And Shechem said to her father and to her brothers: Let me find
 # grace in your eyes; and whatever you say to me, I will give."
 m.step("Gen.34.11")
-# ‹אֶמְצָא־חֵן בְּעֵינֵיכֶם› fact holds: emtza-chen-and-which-tomru-
-# eten(shekhem)
+# ‹אֶמְצָא־חֵן בְּעֵינֵיכֶם› (“find graciousness in-eye-you/your(pl)”) —
+# fact holds: find-graciousness-and-which-say-set(Shechem)
 m.fact("emtza_chen_va_asher_tomru_eten(shekhem)")
 
 # -------------------------- Gen.34.12 · THE_PRICE_AND_THE_DOUBLED_GIVE -----
@@ -142,12 +150,14 @@ m.fact("emtza_chen_va_asher_tomru_eten(shekhem)")
 # "[EN-AID] Multiply upon me exceedingly bride-price and gift, and I will
 # give as you say to me; and give me the girl as a wife."
 m.step("Gen.34.12")
-# ‹הַרְבּוּ עָלַי מְאֹד מֹהַר וּמַתָּן› shekhem speaks a demand — LET:
-# harbu(aviha-and-acheha, mohar-and-matan)
+# ‹הַרְבּוּ עָלַי מְאֹד מֹהַר וּמַתָּן› (“multiply over-me/my very price
+# and-present”) — Shechem speaks a demand — LET: multiply(aviha-and-acheha,
+# price-and-present)
 m.declare("shekhem", "LET",
           "harbu(aviha_ve_acheha, mohar_u_matan)")
-# ‹וּתְנוּ־לִי אֶת־הַנַּעֲרָ לְאִשָּׁה› shekhem speaks a demand — LET: tenu-
-# to-me(aviha-and-acheha, the-naara-to-isha)
+# ‹וּתְנוּ־לִי אֶת־הַנַּעֲרָ לְאִשָּׁה› (“and-set to-me/my obj-marker the-
+# girl to-woman”) — Shechem speaks a demand — LET: set-to-me(aviha-and-
+# acheha, obj-marker-the-girl-to-woman)
 m.declare("shekhem", "LET",
           "tenu_li(aviha_ve_acheha, et_ha_naara_le_isha)")
 
@@ -157,8 +167,8 @@ m.declare("shekhem", "LET",
 # "[EN-AID] And the sons of Jacob answered Shechem and Hamor his father with
 # deceit, and spoke — because he had defiled Dinah their sister."
 m.step("Gen.34.13")
-# ‹בְּמִרְמָה וַיְדַבֵּרוּ› fact holds: and-yaanu-in-mirma(vene-yaaqov,
-# which-time)
+# ‹בְּמִרְמָה וַיְדַבֵּרוּ› (“in-fraud and-speak”) — fact holds: and-eye-in-
+# fraud(son-Jacob, which-be-foul)
 m.fact("va_yaanu_be_mirma(vene_yaaqov, asher_time)")
 
 # -------------------------- Gen.34.14 · THE_REFUSAL ------------------------
@@ -167,8 +177,8 @@ m.fact("va_yaanu_be_mirma(vene_yaaqov, asher_time)")
 # "[EN-AID] And they said to them: We cannot do this thing, to give our
 # sister to a man who has a foreskin; for it is a reproach to us."
 m.step("Gen.34.14")
-# ‹לֹא נוּכַל לַעֲשׂוֹת הַדָּבָר› fact holds: not-nukhal-to-tet-when-
-# cherpa(vene-yaaqov)
+# ‹לֹא נוּכַל לַעֲשׂוֹת הַדָּבָר› (“not be-able to-make the-word/thing”) —
+# fact holds: not-be-able-to-set-that-contumely(son-Jacob)
 m.fact("lo_nukhal_la_tet_ki_cherpa(vene_yaaqov)")
 
 # -------------------------- Gen.34.15 · THE_CONSENT_VERB_BORN --------------
@@ -176,7 +186,8 @@ m.fact("lo_nukhal_la_tet_ki_cherpa(vene_yaaqov)")
 # "[EN-AID] Only in this will we consent to you: if you become like us, to
 # have every male circumcised."
 m.step("Gen.34.15")
-# ‹אַךְ־בְּזֹאת נֵאוֹת› fact holds: akh-in-this-neot-if-himol-kal-male(tnai)
+# ‹אַךְ־בְּזֹאת נֵאוֹת› (“indeed in-this come”) — fact holds: indeed-in-
+# this-come-if-circumcise-all-male(tnai)
 m.fact("akh_be_zot_neot_im_himol_kal_zakhar(tnai)")
 
 # -------------------------- Gen.34.16 · THE_ONE_PEOPLE_CLAUSE --------------
@@ -186,8 +197,8 @@ m.fact("akh_be_zot_neot_im_himol_kal_zakhar(tnai)")
 # will take for ourselves; and we will dwell with you, and become one
 # people."
 m.step("Gen.34.16")
-# ‹וְנָתַנּוּ אֶת־בְּנֹתֵינוּ› fact holds: and-natanu-and-hayinu-to-am-
-# echad(havtacha-upon-tnai)
+# ‹וְנָתַנּוּ אֶת־בְּנֹתֵינוּ› (“and-set obj-marker daughter-us/our”) — fact
+# holds: and-set-and-be-to-people-one(havtacha-over-tnai)
 m.fact("ve_natanu_ve_hayinu_le_am_echad(havtacha_al_tnai)")
 
 # -------------------------- Gen.34.17 · THE_COUNTER_THREAT -----------------
@@ -196,8 +207,8 @@ m.fact("ve_natanu_ve_hayinu_le_am_echad(havtacha_al_tnai)")
 # "[EN-AID] And if you will not heed us, to be circumcised — then we will
 # take our daughter, and go."
 m.step("Gen.34.17")
-# ‹וְאִם־לֹא תִשְׁמְעוּ אֵלֵינוּ› fact holds: and-if-not-tishmu-and-
-# laqachnu(tnai-negdi)
+# ‹וְאִם־לֹא תִשְׁמְעוּ אֵלֵינוּ› (“and-if not hear to-us/our”) — fact
+# holds: and-if-not-hear-and-take(tnai-negdi)
 m.fact("ve_im_lo_tishmu_ve_laqachnu(tnai_negdi)")
 
 # -------------------------- Gen.34.18 · GOOD_IN_THEIR_EYES -----------------
@@ -205,8 +216,9 @@ m.fact("ve_im_lo_tishmu_ve_laqachnu(tnai_negdi)")
 # "[EN-AID] And their words were good in the eyes of Hamor, and in the eyes
 # of Shechem, son of Hamor."
 m.step("Gen.34.18")
-# ‹וַיִּיטְבוּ דִבְרֵיהֶם בְּעֵינֵי חֲמוֹר› fact holds: and-yitvu-divrehem-
-# in-ene(chamor-and-shekhem)
+# ‹וַיִּיטְבוּ דִבְרֵיהֶם בְּעֵינֵי חֲמוֹר› (“and-be-make-well word/thing-
+# them/their in-eye Hamor”) — fact holds: and-be-make-well-divrehem-in-
+# eye(Hamor-and-Shechem)
 m.fact("va_yitvu_divrehem_be_ene(chamor_u_shekhem)")
 
 # -------------------------- Gen.34.19 · DELIGHT_WITHOUT_DELAY --------------
@@ -216,8 +228,8 @@ m.fact("va_yitvu_divrehem_be_ene(chamor_u_shekhem)")
 # the daughter of Jacob; and he was the most honored of all his father's
 # house."
 m.step("Gen.34.19")
-# ‹וְלֹא־אֵחַר הַנַּעַר לַעֲשׂוֹת› fact holds: not-echar-when-chafetz-and-
-# that-nikhbad(the-naar)
+# ‹וְלֹא־אֵחַר הַנַּעַר לַעֲשׂוֹת› (“and-not loiter the-boy to-make”) — fact
+# holds: not-loiter-that-incline-to-and-he/it-be-heavy(the-boy)
 m.fact("lo_echar_ki_chafetz_ve_hu_nikhbad(ha_naar)")
 
 # -------------------------- Gen.34.20 · THE_GATE ---------------------------
@@ -226,8 +238,8 @@ m.fact("lo_echar_ki_chafetz_ve_hu_nikhbad(ha_naar)")
 # "[EN-AID] And Hamor and Shechem his son came to the gate of their city,
 # and spoke to the men of their city, saying:"
 m.step("Gen.34.20")
-# ‹אֶל־שַׁעַר עִירָם› fact holds: and-yavou-to-shaar-iram(chamor-and-
-# shekhem)
+# ‹אֶל־שַׁעַר עִירָם› (“to gate city-them/their”) — fact holds: and-
+# come/bring-to-gate-iram(Hamor-and-Shechem)
 m.fact("va_yavou_el_shaar_iram(chamor_u_shekhem)")
 
 # -------------------------- Gen.34.21 · THE_TWO_FACED_PITCH_OPENS ----------
@@ -239,8 +251,8 @@ m.fact("va_yavou_el_shaar_iram(chamor_u_shekhem)")
 # daughters we will take to us as wives, and our daughters we will give to
 # them."
 m.step("Gen.34.21")
-# ‹שְׁלֵמִים הֵם אִתָּנוּ› fact holds: shelemim-hem-itanu-and-the-earth-
-# rachavat(the-pitch)
+# ‹שְׁלֵמִים הֵם אִתָּנוּ› (“complete they with-us/our”) — fact holds:
+# complete-them/their-itanu-and-the-earth-roomy(the-pitch)
 m.fact("shelemim_hem_itanu_ve_ha_aretz_rachavat(ha_pitch)")
 
 # -------------------------- Gen.34.22 · THE_RETOLD_CONDITION ---------------
@@ -250,8 +262,8 @@ m.fact("shelemim_hem_itanu_ve_ha_aretz_rachavat(ha_pitch)")
 # become one people: when every male among us is circumcised, as they are
 # circumcised."
 m.step("Gen.34.22")
-# ‹אַךְ־בְּזֹאת יֵאֹתוּ› fact holds: in-this-yeotu-to-me-heot-to-am-
-# echad(the-tnai-retold)
+# ‹אַךְ־בְּזֹאת יֵאֹתוּ› (“indeed in-this come”) — fact holds: in-this-come-
+# to-me-heot-to-people-one(the-tnai-retold)
 m.fact("be_zot_yeotu_li_heot_le_am_echad(ha_tnai_retold)")
 
 # -------------------------- Gen.34.23 · THE_PROPERTY_CLAUSE_AND_THE_CONSENT -
@@ -260,8 +272,8 @@ m.fact("be_zot_yeotu_li_heot_le_am_echad(ha_tnai_retold)")
 # "[EN-AID] Their livestock and their property and all their beasts — are
 # they not ours? Only let us consent to them, and they will dwell with us."
 m.step("Gen.34.23")
-# ‹אַךְ נֵאוֹתָה לָהֶם› chamor-and-shekhem speaks a demand — CMD-US?:
-# neota(anshe-the-ir, to-hem)
+# ‹אַךְ נֵאוֹתָה לָהֶם› (“indeed come to-them/their”) — Hamor-and-Shechem
+# speaks a demand — CMD-US?: come(man-the-city, to-them/their)
 m.declare("chamor_u_shekhem", "CMD-US?",
           "neota(anshe_ha_ir, la_hem)")
 
@@ -272,8 +284,8 @@ m.declare("chamor_u_shekhem", "CMD-US?",
 # Shechem his son; and every male was circumcised — all who went out of the
 # gate of his city."
 m.step("Gen.34.24")
-# ‹וַיִּשְׁמְעוּ אֶל־חֲמוֹר וְאֶל› fact holds: and-yishmu-and-yimolu-kal-
-# yotze-shaar(the-ir)
+# ‹וַיִּשְׁמְעוּ אֶל־חֲמוֹר וְאֶל› (“and-hear to Hamor and-to”) — fact
+# holds: and-hear-and-circumcise-all-bring-forth-gate(the-city)
 m.fact("va_yishmu_va_yimolu_kal_yotze_shaar(ha_ir)")
 
 # -------------------------- Gen.34.25 · DAY_THREE_THE_SWORDS ---------------
@@ -284,8 +296,9 @@ m.fact("va_yishmu_va_yimolu_kal_yotze_shaar(ha_ir)")
 # Jacob's sons, Simeon and Levi, Dinah's brothers, took each his sword; and
 # they came upon the city secure, and killed every male."
 m.step("Gen.34.25")
-# ‹וַיִּקְחוּ שְׁנֵי־בְנֵי־יַעֲקֹב שִׁמְעוֹן וְלֵוִי אֲחֵי› fact holds: and-
-# yiqchu-charbam-and-yahargu-kal-male(shimon-and-levi)
+# ‹וַיִּקְחוּ שְׁנֵי־בְנֵי־יַעֲקֹב שִׁמְעוֹן וְלֵוִי אֲחֵי› (“and-take two
+# son Jacob Simeon and-Levi brother”) — fact holds: and-take-charbam-and-
+# smite-with-deadly-intent-all-male(Simeon-and-Levi)
 m.fact("va_yiqchu_charbam_va_yahargu_kal_zakhar(shimon_ve_levi)")
 
 # -------------------------- Gen.34.26 · THE_TAKING_BACK --------------------
@@ -294,8 +307,9 @@ m.fact("va_yiqchu_charbam_va_yahargu_kal_zakhar(shimon_ve_levi)")
 # "[EN-AID] And Hamor and Shechem his son they killed by the mouth of the
 # sword; and they took Dinah from the house of Shechem, and went out."
 m.step("Gen.34.26")
-# ‹וַיִּקְחוּ אֶת־דִּינָה› fact holds: hargu-to-fi-charev-and-yiqchu-
-# dina(and-yetzeu)
+# ‹וַיִּקְחוּ אֶת־דִּינָה› (“and-take obj-marker Dinah”) — fact holds:
+# smite-with-deadly-intent-to-mouth-drought-and-take-obj-marker-Dinah(and-
+# bring-forth)
 m.fact("hargu_le_fi_charev_va_yiqchu_et_dina(va_yetzeu)")
 
 # -------------------------- Gen.34.27 · THE_PLUNDER_REASON -----------------
@@ -304,7 +318,8 @@ m.fact("hargu_le_fi_charev_va_yiqchu_et_dina(va_yetzeu)")
 # "[EN-AID] The sons of Jacob came upon the slain and plundered the city —
 # because they had defiled their sister."
 m.step("Gen.34.27")
-# ‹וַיָּבֹזּוּ הָעִיר› fact holds: and-yavozu-the-ir-which-timu(bene-yaaqov)
+# ‹וַיָּבֹזּוּ הָעִיר› (“and-plunder the-city”) — fact holds: and-plunder-
+# the-city-which-be-foul(son-Jacob)
 m.fact("va_yavozu_ha_ir_asher_timu(bene_yaaqov)")
 
 # -------------------------- Gen.34.28 · THE_LIVESTOCK_SWEPT ----------------
@@ -313,8 +328,8 @@ m.fact("va_yavozu_ha_ir_asher_timu(bene_yaaqov)")
 # "[EN-AID] Their flocks and their herds and their donkeys, and what was in
 # the city and what was in the field, they took."
 m.step("Gen.34.28")
-# ‹אֶת־צֹאנָם וְאֶת־בְּקָרָם› fact holds: tzonam-beqaram-chamorehem-
-# laqachu(the-shalal)
+# ‹אֶת־צֹאנָם וְאֶת־בְּקָרָם› (“obj-marker flock-them/their and-obj-marker
+# herd-them/their”) — fact holds: tzonam-beqaram-chamorehem-take(the-shalal)
 m.fact("tzonam_beqaram_chamorehem_laqachu(ha_shalal)")
 
 # -------------------------- Gen.34.29 · THE_CAPTIVES -----------------------
@@ -323,8 +338,9 @@ m.fact("tzonam_beqaram_chamorehem_laqachu(ha_shalal)")
 # "[EN-AID] And all their wealth and all their little ones and their wives
 # they captured and plundered — and all that was in the house."
 m.step("Gen.34.29")
-# ‹וְאֶת־כָּל־חֵילָם וְאֶת־כָּל־טַפָּם› fact holds: shavu-and-yavozu-chel-
-# taf-nashim(the-shvi)
+# ‹וְאֶת־כָּל־חֵילָם וְאֶת־כָּל־טַפָּם› (“and-obj-marker all force-
+# them/their and-obj-marker all family-them/their”) — fact holds: transport-
+# into-captivity-and-plunder-chel-taf-woman(the-shvi)
 m.fact("shavu_va_yavozu_chel_taf_nashim(ha_shvi)")
 
 # -------------------------- Gen.34.30 · THE_EIGHT_SELVES -------------------
@@ -337,16 +353,17 @@ m.fact("shavu_va_yavozu_chel_taf_nashim(ha_shvi)")
 # among the Perizzite; and I being few in number, they will gather against
 # me and strike me, and I shall be destroyed — I and my house."
 m.step("Gen.34.30")
-# ‹עֲכַרְתֶּם אֹתִי› fact holds: akhartem-me-to-havisheni(yaaqov, mete-
-# mispar)
+# ‹עֲכַרְתֶּם אֹתִי› (“roil-water obj-marker-me/my”) — fact holds: roil-
+# water-me-to-havisheni(Jacob, adult-number)
 m.fact("akhartem_oti_le_havisheni(yaaqov, mete_mispar)")
 
 # -------------------------- Gen.34.31 · THE_UNANSWERED_QUESTION ------------
 # וַיֹּאמְרוּ הַכְזוֹנָה יַעֲשֶׂה אֶת־אֲחוֹתֵנוּ
 # "[EN-AID] And they said: Should he treat our sister like a whore?"
 m.step("Gen.34.31")
-# ‹וַיֹּאמְרוּ הַכְזוֹנָה יַעֲשֶׂה אֶת־אֲחוֹתֵנוּ› fact holds: the-khe-zona-
-# yaase-achotenu(sheela-petucha)
+# ‹וַיֹּאמְרוּ הַכְזוֹנָה יַעֲשֶׂה אֶת־אֲחוֹתֵנוּ› (“and-say the-like-
+# commit-adultery make obj-marker sister-us/our”) — fact holds: the-khe-
+# zona-make-obj-marker-achotenu(sheela-petucha)
 m.fact("ha_khe_zona_yaase_et_achotenu(sheela_petucha)")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

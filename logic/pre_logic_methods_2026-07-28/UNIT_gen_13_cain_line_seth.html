@@ -640,12 +640,14 @@ m = Machine(&quot;gen_13_cain_line_seth&quot;)
 # &quot;And Cain knew his wife; and she conceived, and bore Enoch; and he builded
 # a city, and called the name of the city after the name of his son Enoch.&quot;
 m.step(&quot;Gen.4.17&quot;)
-# ‹וַיֵּדַע קַיִן אֶת־אִשְׁתּוֹ וַתַּהַר וַתֵּלֶד אֶת־חֲנוֹךְ› event: bear —
-# agent wife-of-Cain; theme Enoch
+# ‹וַיֵּדַע קַיִן אֶת־אִשְׁתּוֹ וַתַּהַר וַתֵּלֶד אֶת־חֲנוֹךְ› (“and-he-knew
+# Cain obj-marker his-wife and-she-conceived and-she-bore obj-marker Enoch”)
+# — event: bear — agent wife-of-Cain; theme Enoch
 m.event(&quot;bear&quot;, agent=&quot;eshet_kayin&quot;, themes=[&quot;chanokh&quot;])
-# ‹וַיְהִי בֹּנֶה עִיר› the world gains: city
+# ‹וַיְהִי בֹּנֶה עִיר› (“and-he-was building city”) — the world gains: city
 m.install(&quot;ir&quot;)
-# ‹וַיִּקְרָא שֵׁם הָעִיר כְּשֵׁם בְּנוֹ חֲנוֹךְ› named: city := Chanokh
+# ‹וַיִּקְרָא שֵׁם הָעִיר כְּשֵׁם בְּנוֹ חֲנוֹךְ› (“and-he-called name-of
+# the-city like-name-of his-son Enoch”) — named: city := Chanokh
 m.name(&quot;ir&quot;, &quot;Chanokh&quot;)
 # reads without prior install (flag, not fix): Cain, wife-of-Cain
 m.presupposed(&quot;kayin&quot;, &quot;eshet_kayin&quot;)
@@ -656,15 +658,17 @@ m.presupposed(&quot;kayin&quot;, &quot;eshet_kayin&quot;)
 # &quot;And unto Enoch was born Irad; and Irad begot Mehujael; and Mehujael begot
 # Methushael; and Methushael begot Lamech.&quot;
 m.step(&quot;Gen.4.18&quot;)
-# ‹וַיִּוָּלֵד לַחֲנוֹךְ אֶת־עִירָד› event: born — theme Irad
+# ‹וַיִּוָּלֵד לַחֲנוֹךְ אֶת־עִירָד› (“and-was-born to-Enoch obj-marker
+# Irad”) — event: born — theme Irad
 m.event(&quot;born&quot;, themes=[&quot;irad&quot;])
-# ‹וְעִירָד יָלַד אֶת־מְחוּיָאֵל› event: beget — agent Irad; theme Mehujael
+# ‹וְעִירָד יָלַד אֶת־מְחוּיָאֵל› (“and-Irad begot obj-marker Mehujael”) —
+# event: beget — agent Irad; theme Mehujael
 m.event(&quot;beget&quot;, agent=&quot;irad&quot;, themes=[&quot;mechuyael&quot;])
-# ‹וּמְחִיּיָאֵל יָלַד אֶת־מְתוּשָׁאֵל› event: beget — agent Mehujael; theme
-# Methusael
+# ‹וּמְחִיּיָאֵל יָלַד אֶת־מְתוּשָׁאֵל› (“and-Mehijael begot obj-marker
+# Methusael”) — event: beget — agent Mehujael; theme Methusael
 m.event(&quot;beget&quot;, agent=&quot;mechuyael&quot;, themes=[&quot;metushael&quot;])
-# ‹וּמְתוּשָׁאֵל יָלַד אֶת־לָמֶךְ› event: beget — agent Methusael; theme
-# Lamech
+# ‹וּמְתוּשָׁאֵל יָלַד אֶת־לָמֶךְ› (“and-Methusael begot obj-marker Lamech”)
+# — event: beget — agent Methusael; theme Lamech
 m.event(&quot;beget&quot;, agent=&quot;metushael&quot;, themes=[&quot;lemekh&quot;])
 
 # -------------------------- Gen.4.19 · FIRST_POLYGAMY ----------------------
@@ -673,11 +677,12 @@ m.event(&quot;beget&quot;, agent=&quot;metushael&quot;, themes=[&quot;lemekh&quo
 # &quot;And Lamech took unto him two wives; the name of the one was Adah, and the
 # name of the other Zillah.&quot;
 m.step(&quot;Gen.4.19&quot;)
-# ‹וַיִּקַּח־לוֹ לֶמֶךְ שְׁתֵּי נָשִׁים› event: take — agent Lamech; theme
-# two-of-wives
+# ‹וַיִּקַּח־לוֹ לֶמֶךְ שְׁתֵּי נָשִׁים› (“and-he-took for-himself Lamech
+# two wives”) — event: take — agent Lamech; theme two-of-wives
 m.event(&quot;take&quot;, agent=&quot;lemekh&quot;, themes=[&quot;shte_nashim&quot;])
-# ‹שֵׁם הָאַחַת עָדָה וְשֵׁם הַשֵּׁנִית צִלָּה› fact holds: two-of-wives-to-
-# Lamech; name-of-the-first-Adah; name-of-the-second-Tzillah
+# ‹שֵׁם הָאַחַת עָדָה וְשֵׁם הַשֵּׁנִית צִלָּה› (“name-of the-first Adah
+# and-name-of the-second Tzillah”) — fact holds: two-of-wives-to-Lamech;
+# name-of-the-first-Adah; name-of-the-second-Tzillah
 m.fact(&quot;shte_nashim_le_lemekh&quot;,
        &quot;shem_ha_achat_adah&quot;,
        &quot;shem_ha_shenit_tzilah&quot;)
@@ -687,10 +692,12 @@ m.fact(&quot;shte_nashim_le_lemekh&quot;,
 # &quot;And Adah bore Jabal; he was the father of such as dwell in tents and have
 # cattle.&quot;
 m.step(&quot;Gen.4.20&quot;)
-# ‹וַתֵּלֶד עָדָה אֶת־יָבָל› event: bear — agent Adah; theme Yaval
+# ‹וַתֵּלֶד עָדָה אֶת־יָבָל› (“and-she-bore Adah obj-marker Yaval”) — event:
+# bear — agent Adah; theme Yaval
 m.event(&quot;bear&quot;, agent=&quot;adah&quot;, themes=[&quot;yaval&quot;])
-# ‹הוּא הָיָה אֲבִי יֹשֵׁב אֹהֶל וּמִקְנֶה› fact holds: father-of-dweller-
-# of-tent-and-livestock(Yaval)
+# ‹הוּא הָיָה אֲבִי יֹשֵׁב אֹהֶל וּמִקְנֶה› (“he was father-of dweller-of
+# tent and-herds”) — fact holds: father-of-dweller-of-tent-and-
+# livestock(Yaval)
 m.fact(&quot;avi_yoshev_ohel_u_mikneh(yaval)&quot;)
 
 # -------------------------- Gen.4.21 · OFFICE_HARP_AND_PIPE ----------------
@@ -699,8 +706,9 @@ m.fact(&quot;avi_yoshev_ohel_u_mikneh(yaval)&quot;)
 # the harp and pipe.&quot;
 m.step(&quot;Gen.4.21&quot;)
 # ‹וְשֵׁם אָחִיו יוּבָל הוּא הָיָה אֲבִי כָּל־תֹּפֵשׂ כִּנּוֹר וְעוּגָב›
-# fact holds: name-of-his-brother-Yuval; father-of-all-handler-of-harp-and-
-# pipe(Yuval)
+# (“and-name-of his-brother Yuval he was father-of all handler-of harp and-
+# pipe”) — fact holds: name-of-his-brother-Yuval; father-of-all-handler-of-
+# harp-and-pipe(Yuval)
 m.fact(&quot;shem_achiv_yuval&quot;,
        &quot;avi_kol_tofes_kinor_ve_ugav(yuval)&quot;)
 
@@ -710,12 +718,13 @@ m.fact(&quot;shem_achiv_yuval&quot;,
 # &quot;And Zillah, she also bore Tubal-cain, the forger of every cutting
 # instrument of brass and iron; and the sister of Tubal-cain was Naamah.&quot;
 m.step(&quot;Gen.4.22&quot;)
-# ‹וְצִלָּה גַם־הִוא יָלְדָה אֶת־תּוּבַל קַיִן› event: bear — agent Tzillah;
-# theme Tuval-Cain
+# ‹וְצִלָּה גַם־הִוא יָלְדָה אֶת־תּוּבַל קַיִן› (“and-Tzillah also she bore
+# obj-marker Tuval Kayin”) — event: bear — agent Tzillah; theme Tuval-Cain
 m.event(&quot;bear&quot;, agent=&quot;tzilah&quot;, themes=[&quot;tuval_kayin&quot;])
 # ‹לֹטֵשׁ כָּל־חֹרֵשׁ נְחֹשֶׁת וּבַרְזֶל וַאֲחוֹת תּוּבַל־קַיִן נַעֲמָה›
-# fact holds: hammerer-of-all-craftsman-of-bronze-and-iron(Tuval-Cain);
-# sister-of-Tuval-Cain-Naamah
+# (“hammerer-of every craftsman-of bronze and-iron and-sister-of Tuval Kayin
+# Naamah”) — fact holds: hammerer-of-all-craftsman-of-bronze-and-iron(Tuval-
+# Cain); sister-of-Tuval-Cain-Naamah
 m.fact(&quot;lotesh_kol_choresh_nechoshet_u_varzel(tuval_kayin)&quot;,
        &quot;achot_tuval_kayin_naamah&quot;)
 
@@ -726,26 +735,30 @@ m.fact(&quot;lotesh_kol_choresh_nechoshet_u_varzel(tuval_kayin)&quot;,
 # of Lamech, hearken unto my speech; for I have slain a man for wounding me,
 # and a young man for bruising me.&quot;
 m.step(&quot;Gen.4.23&quot;)
-# ‹וַיֹּאמֶר לֶמֶךְ לְנָשָׁיו עָדָה וְצִלָּה› event: say — agent Lamech;
-# theme wives-of-Lamech
+# ‹וַיֹּאמֶר לֶמֶךְ לְנָשָׁיו עָדָה וְצִלָּה› (“and-he-said Lamech to-his-
+# wives Adah and-Tzillah”) — event: say — agent Lamech; theme wives-of-
+# Lamech
 m.event(&quot;say&quot;, agent=&quot;lemekh&quot;, themes=[&quot;neshei_lemekh&quot;])
-# ‹שְׁמַעַן קוֹלִי … הַאְזֵנָּה אִמְרָתִי› Lamech speaks a demand — LET:
-# hear(wives-of-Lamech, voice-Lamech)
+# ‹שְׁמַעַן קוֹלִי … הַאְזֵנָּה אִמְרָתִי› (“hear my-voice … give-ear my-
+# speech”) — Lamech speaks a demand — LET: hear(wives-of-Lamech, voice-
+# Lamech)
 m.declare(&quot;lemekh&quot;, &quot;LET&quot;,
           &quot;shema(neshei_lemekh, qol_lemekh)&quot;)
-# ‹כִּי אִישׁ הָרַגְתִּי לְפִצְעִי וְיֶלֶד לְחַבֻּרָתִי› fact holds: a-man-
-# I-have-killed-to-fitzi-and-a-boy-to-my-wound
+# ‹כִּי אִישׁ הָרַגְתִּי לְפִצְעִי וְיֶלֶד לְחַבֻּרָתִי› (“for a-man I-have-
+# killed for-my-wound and-a-boy for-my-bruise”) — fact holds: a-man-I-have-
+# killed-to-fitzi-and-a-boy-to-my-wound
 m.fact(&quot;ish_haragti_le_fitzi_ve_yeled_le_chaburati&quot;)
 
 # -------------------------- Gen.4.24 · QUOTE_DIFF_SEVENTY_SEVEN ------------
 # כִּי שִׁבְעָתַיִם יֻקַּם־קָיִן וְלֶמֶךְ שִׁבְעִים וְשִׁבְעָה
 # &quot;If Cain shall be avenged sevenfold, truly Lamech seventy and sevenfold.&quot;
 m.step(&quot;Gen.4.24&quot;)
-# ‹כִּי שִׁבְעָתַיִם יֻקַּם־קָיִן וְלֶמֶךְ שִׁבְעִים וְשִׁבְעָה› spec-delta
-# — spec said all-slayer Kayin sevenfold shall-be-avenged — issuer the-LORD,
-# decree with mark (4:15, frozen gen-12), delivery says for sevenfold shall-
-# be-avenged-Kayin and-Lemekh seventy and-seven — issuer Lamech, boast,
-# multiplier x11, target self, ratification NONE (4:24)
+# ‹כִּי שִׁבְעָתַיִם יֻקַּם־קָיִן וְלֶמֶךְ שִׁבְעִים וְשִׁבְעָה› (“if
+# sevenfold shall-be-avenged Cain then-Lamech seventy and-seven”) — spec-
+# delta — spec said all-slayer Kayin sevenfold shall-be-avenged — issuer
+# the-LORD, decree with mark (4:15, frozen gen-12), delivery says for
+# sevenfold shall-be-avenged-Kayin and-Lemekh seventy and-seven — issuer
+# Lamech, boast, multiplier x11, target self, ratification NONE (4:24)
 m.spec_delta(&quot;kol-horeg Kayin shivatayim yukam — issuer YHWH, decree with mark (4:15, frozen gen_12)&quot;,
              &quot;ki shivatayim yukam-Kayin ve-Lemekh shivim ve-shivah — issuer lemekh, boast, multiplier x11, target self, ratification NONE (4:24)&quot;)
 
@@ -756,12 +769,15 @@ m.spec_delta(&quot;kol-horeg Kayin shivatayim yukam — issuer YHWH, decree with
 # Seth: &#x27;for God hath appointed me another seed instead of Abel; for Cain
 # slew him.&#x27;&quot;
 m.step(&quot;Gen.4.25&quot;)
-# ‹וַיֵּדַע אָדָם עוֹד אֶת־אִשְׁתּוֹ וַתֵּלֶד בֵּן› event: bear — agent
-# wife-of-Adam; theme Shet
+# ‹וַיֵּדַע אָדָם עוֹד אֶת־אִשְׁתּוֹ וַתֵּלֶד בֵּן› (“and-he-knew Adam again
+# obj-marker his-wife and-she-bore son”) — event: bear — agent wife-of-Adam;
+# theme Shet
 m.event(&quot;bear&quot;, agent=&quot;eshet_adam&quot;, themes=[&quot;shet&quot;])
-# ‹וַתִּקְרָא אֶת־שְׁמוֹ שֵׁת› named: Shet := Shet
+# ‹וַתִּקְרָא אֶת־שְׁמוֹ שֵׁת› (“and-she-called obj-marker his-name Shet”) —
+# named: Shet := Shet
 m.name(&quot;shet&quot;, &quot;Shet&quot;)
-# ‹כִּי שָׁת־לִי אֱלֹהִים זֶרַע אַחֵר תַּחַת הֶבֶל כִּי הֲרָגוֹ קָיִן› fact
+# ‹כִּי שָׁת־לִי אֱלֹהִים זֶרַע אַחֵר תַּחַת הֶבֶל כִּי הֲרָגוֹ קָיִן› (“for
+# Shet to-me God seed another in-place-of Abel for killed-him Cain”) — fact
 # holds: has-SET-to-me-God-seed-another-place-of-Abel; slew-him-Cain-named-
 # in-speech
 m.fact(&quot;shat_li_elohim_zera_acher_tachat_hevel&quot;,
@@ -775,19 +791,21 @@ m.presupposed(&quot;adam&quot;, &quot;eshet_adam&quot;)
 # &quot;And to Seth, to him also there was born a son; and he called his name
 # Enosh; then began men to call upon the name of the LORD.&quot;
 m.step(&quot;Gen.4.26&quot;)
-# ‹וּלְשֵׁת גַּם־הוּא יֻלַּד־בֵּן› event: born — theme Enosh
+# ‹וּלְשֵׁת גַּם־הוּא יֻלַּד־בֵּן› (“and-to-Seth also he was-born son”) —
+# event: born — theme Enosh
 m.event(&quot;born&quot;, themes=[&quot;enosh&quot;])
-# ‹וַיִּקְרָא אֶת־שְׁמוֹ אֱנוֹשׁ› named: Enosh := Enosh
+# ‹וַיִּקְרָא אֶת־שְׁמוֹ אֱנוֹשׁ› (“and-he-called obj-marker his-name
+# Enosh”) — named: Enosh := Enosh
 m.name(&quot;enosh&quot;, &quot;Enosh&quot;)
-# ‹אָז הוּחַל לִקְרֹא בְּשֵׁם יְהוָה› fact holds: was-begun-to-call-in-name-
-# of-the-LORD
+# ‹אָז הוּחַל לִקְרֹא בְּשֵׁם יְהוָה› (“then was-begun to-call in-name-of
+# YHWH”) — fact holds: was-begun-to-call-in-name-of-the-LORD
 m.fact(&quot;huchal_likro_be_shem_YHWH&quot;)
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == &quot;__main__&quot;:
     m.report()
     assert m.created_set() == {&#x27;ir&#x27;}
-    assert m.presupposed_set() == {&#x27;eshet_kayin&#x27;, &#x27;eshet_adam&#x27;, &#x27;adam&#x27;, &#x27;kayin&#x27;}
+    assert m.presupposed_set() == {&#x27;kayin&#x27;, &#x27;eshet_adam&#x27;, &#x27;eshet_kayin&#x27;, &#x27;adam&#x27;}
     assert m.REGISTRY[&quot;names&quot;] == {&#x27;ir&#x27;: &#x27;Chanokh&#x27;, &#x27;shet&#x27;: &#x27;Shet&#x27;, &#x27;enosh&#x27;: &#x27;Enosh&#x27;}
     assert m.REGISTRY[&quot;writes&quot;] == 3
     assert m.tests_list() == []
@@ -801,4 +819,4 @@ if __name__ == &quot;__main__&quot;:
     assert len(m.EVENTS) == 15
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">FROZEN 2026-08-01 (owner order &quot;freeze all commit&quot;; derived same day): fourteenth frozen unit — CAIN&#x27;S LINE AND SETH, the corpus&#x27;s first genealogy unit; fourth extension-free derivation in a row. Central findings, all DB-verified before drafting: the WANDERER BUILDS THE FIRST CITY (ir tokens 1-2 in one verse; the build verb a participle — never finished; the naming verb spent on the city, for the son; the first HUMAN WORLD install); the crafts offices founded by template (shape-identical trees at 4:20-21; avi as office formula, BROKEN for the smith; first tokens: tent, harp, the Torah&#x27;s only pipe, bronze whose next stop is the Tabernacle, iron whose next stop is a curse; the herd-word carrying Kayin&#x27;s own name-root); the FIRST HUMAN IMPERATIVES (every prior imperative is divine blessing) demanding a hearing for a kill-boast the machine holds as testimony, not event — and Onkelos NEGATES; QUOTE-DIFF #2: the sevenfold decree quoted VERBATIM and inflated x11 by a human mouth with no ratification (shivatayim&#x27;s whole Torah census is the decree and this echo) — flagged, never installed; the REPLACEMENT SEED named with 3:15&#x27;s SET-verb (the root&#x27;s only other Gen 1-10 token) while the mother names the murder and switches the divine name; and the close: AZ&#x27;s own first token, worship&#x27;s formula agentless under the begin/profane LEXICAL FORK — Onkelos votes the dark side; the letter holds both; the machine ends with one install, one flag, one open HUMAN demand, and the fork standing.</div><p class='meta'>Rendered 2026-08-08 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">FROZEN 2026-08-01 (owner order &quot;freeze all commit&quot;; derived same day): fourteenth frozen unit — CAIN&#x27;S LINE AND SETH, the corpus&#x27;s first genealogy unit; fourth extension-free derivation in a row. Central findings, all DB-verified before drafting: the WANDERER BUILDS THE FIRST CITY (ir tokens 1-2 in one verse; the build verb a participle — never finished; the naming verb spent on the city, for the son; the first HUMAN WORLD install); the crafts offices founded by template (shape-identical trees at 4:20-21; avi as office formula, BROKEN for the smith; first tokens: tent, harp, the Torah&#x27;s only pipe, bronze whose next stop is the Tabernacle, iron whose next stop is a curse; the herd-word carrying Kayin&#x27;s own name-root); the FIRST HUMAN IMPERATIVES (every prior imperative is divine blessing) demanding a hearing for a kill-boast the machine holds as testimony, not event — and Onkelos NEGATES; QUOTE-DIFF #2: the sevenfold decree quoted VERBATIM and inflated x11 by a human mouth with no ratification (shivatayim&#x27;s whole Torah census is the decree and this echo) — flagged, never installed; the REPLACEMENT SEED named with 3:15&#x27;s SET-verb (the root&#x27;s only other Gen 1-10 token) while the mother names the murder and switches the divine name; and the close: AZ&#x27;s own first token, worship&#x27;s formula agentless under the begin/profane LEXICAL FORK — Onkelos votes the dark side; the letter holds both; the machine ends with one install, one flag, one open HUMAN demand, and the fork standing.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

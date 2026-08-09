@@ -17,7 +17,8 @@ m = Machine("gen_07_completion_sanctity")
 # וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם
 # "And the heaven and the earth were finished, and all the host of them."
 m.step("Gen.2.1")
-# ‹וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם› event: complete — theme
+# ‹וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם› (“and-they-were-finished
+# the-heavens and-the-earth and-all their-host”) — event: complete — theme
 # heavens, earth, their-host
 m.event("complete", themes=["shamayim", "aretz", "tzevaam"])
 # reads without prior install (flag, not fix): heavens, earth
@@ -29,11 +30,11 @@ m.presupposed("shamayim", "aretz")
 # "And on the seventh day God finished His work which He had made; and He
 # rested on the seventh day from all His work which He had made."
 m.step("Gen.2.2")
-# ‹וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ› event: finish — agent
-# God
+# ‹וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ› (“and-he-finished God
+# on-the-day the-seventh his-work”) — event: finish — agent God
 m.event("finish", agent="Elohim")
-# ‹וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ› event: cease —
-# agent God
+# ‹וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ› (“and-he-ceased
+# on-the-day the-seventh from-all his-work”) — event: cease — agent God
 m.event("cease", agent="Elohim")
 
 # -------------------------- Gen.2.3 · BLESS_SANCTIFY -----------------------
@@ -42,10 +43,11 @@ m.event("cease", agent="Elohim")
 # "And God blessed the seventh day, and hallowed it; because that in it He
 # rested from all His work which God in creating had made."
 m.step("Gen.2.3")
-# ‹וַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי› blessing: God blesses the-
-# seventh-day
+# ‹וַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי› (“and-blessed God obj-marker
+# day the-seventh”) — blessing: God blesses the-seventh-day
 m.bless("Elohim", "yom_ha_shevii")
-# ‹וַיְקַדֵּשׁ אֹתוֹ› role assigned: the-seventh-day -> holy
+# ‹וַיְקַדֵּשׁ אֹתוֹ› (“and-sanctified it”) — role assigned: the-seventh-day
+# -> holy
 m.assign("yom_ha_shevii", "kadosh")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

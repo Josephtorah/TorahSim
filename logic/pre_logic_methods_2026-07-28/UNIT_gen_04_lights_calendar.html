@@ -413,12 +413,13 @@ m = Machine(&quot;gen_04_lights_calendar&quot;)
 # divide the day from the night; and let them be for signs, and for seasons,
 # and for days and years.&#x27;&quot;
 m.step(&quot;Gen.1.14&quot;)
-# ‹יְהִי מְאֹרֹת› God speaks a demand — LET: exists(lights), loc=expanse-
-# the-heavens
+# ‹יְהִי מְאֹרֹת› (“let-be lights”) — God speaks a demand — LET:
+# exists(lights), loc=expanse-the-heavens
 m.declare(&quot;Elohim&quot;, &quot;LET&quot;,
           &quot;exists(meorot), loc=raqia_ha_shamayim&quot;)
-# ‹לְהַבְדִּיל … וְהָיוּ לְאֹתֹת וּלְמוֹעֲדִים וּלְיָמִים וְשָׁנִים› open
-# question logged: exists(lights), loc=expanse-the-heavens
+# ‹לְהַבְדִּיל … וְהָיוּ לְאֹתֹת וּלְמוֹעֲדִים וּלְיָמִים וְשָׁנִים› (“to-
+# divide … and-they-shall-be for-signs and-for-seasons and-for-days and-
+# years”) — open question logged: exists(lights), loc=expanse-the-heavens
 m.triple(&quot;exists(meorot), loc=raqia_ha_shamayim&quot;)
 # reads without prior install (flag, not fix): expanse, heavens
 m.presupposed(&quot;raqia&quot;, &quot;shamayim&quot;)
@@ -430,8 +431,8 @@ m.presupposed(&quot;raqia&quot;, &quot;shamayim&quot;)
 m.step(&quot;Gen.1.15&quot;)
 # reads without prior install (flag, not fix): earth
 m.presupposed(&quot;aretz&quot;)
-# ‹וַיְהִי־כֵן› demand settled (popped from the queue): exists(lights),
-# loc=expanse-the-heavens
+# ‹וַיְהִי־כֵן› (“and-there-was so”) — demand settled (popped from the
+# queue): exists(lights), loc=expanse-the-heavens
 m.result(&quot;exists(meorot), loc=raqia_ha_shamayim&quot;, tmark=&quot;t1&quot;)
 
 # -------------------------- Gen.1.16 · BUILD_DIFFERENTIATE_DELTA -----------
@@ -441,25 +442,29 @@ m.result(&quot;exists(meorot), loc=raqia_ha_shamayim&quot;, tmark=&quot;t1&quot;
 # &quot;And God made the two great lights: the greater light to rule the day, and
 # the lesser light to rule the night; and the stars.&quot;
 m.step(&quot;Gen.1.16&quot;)
-# ‹וַיַּעַשׂ אֱלֹהִים אֶת … אֶת … וְאֶת … וְאֵת› event: make — agent God;
+# ‹וַיַּעַשׂ אֱלֹהִים אֶת … אֶת … וְאֶת … וְאֵת› (“and-made God obj-marker …
+# obj-marker … and-obj-marker … and-obj-marker”) — event: make — agent God;
 # theme light-great, light-small, stars
 m.event(&quot;make&quot;, agent=&quot;Elohim&quot;, themes=[&quot;maor_gadol&quot;, &quot;maor_qaton&quot;, &quot;kokhavim&quot;])
 # the world gains: light-great, light-small, stars
 m.install(&quot;maor_gadol&quot;, &quot;maor_qaton&quot;, &quot;kokhavim&quot;)
-# ‹לְמֶמְשֶׁלֶת הַיּוֹם … לְמֶמְשֶׁלֶת הַלַּיְלָה› role assigned: light-
-# great -&gt; dominion-of-day; light-small -&gt; dominion-of-night
+# ‹לְמֶמְשֶׁלֶת הַיּוֹם … לְמֶמְשֶׁלֶת הַלַּיְלָה› (“for-dominion-of the-day
+# … for-dominion-of the-night”) — role assigned: light-great -&gt; dominion-of-
+# day; light-small -&gt; dominion-of-night
 m.assign(&quot;maor_gadol&quot;, &quot;memshelet_yom&quot;)
 m.assign(&quot;maor_qaton&quot;, &quot;memshelet_lailah&quot;)
-# ‹הַמְּאֹרֹת הַגְּדֹלִים ← הַגָּדֹל / הַקָּטֹן› spec-delta — spec said
-# from&#x27;lights (one undifferentiated plural), delivery says two-of the-from
+# ‹הַמְּאֹרֹת הַגְּדֹלִים ← הַגָּדֹל / הַקָּטֹן› (“the-lights the-great-ones
+# the-great the-small”) — spec-delta — spec said from&#x27;lights (one
+# undifferentiated plural), delivery says two-of the-from
 m.spec_delta(&quot;me&#x27;orot (one undifferentiated plural)&quot;,
              &quot;shnei ha-me&quot;)
-# ‹וְאֵת הַכּוֹכָבִים› spec-delta — spec said no stars in the job order,
-# delivery says and-obj-marker the-stars
+# ‹וְאֵת הַכּוֹכָבִים› (“and-obj-marker the-stars”) — spec-delta — spec said
+# no stars in the job order, delivery says and-obj-marker the-stars
 m.spec_delta(&quot;no stars in the job order&quot;,
              &quot;ve-et ha-kokhavim&quot;)
-# ‹לְמֶמְשֶׁלֶת› spec-delta — spec said jobs: divide, signs, festivals,
-# days+years, shine, delivery says to-dominion-of (dominion) added
+# ‹לְמֶמְשֶׁלֶת› (“for-dominion-of”) — spec-delta — spec said jobs: divide,
+# signs, festivals, days+years, shine, delivery says to-dominion-of
+# (dominion) added
 m.spec_delta(&quot;jobs: divide, signs, festivals, days+years, shine&quot;,
              &quot;le-memshelet (dominion) added&quot;)
 
@@ -468,7 +473,8 @@ m.spec_delta(&quot;jobs: divide, signs, festivals, days+years, shine&quot;,
 # &quot;And God set them in the firmament of the heaven to give light upon the
 # earth.&quot;
 m.step(&quot;Gen.1.17&quot;)
-# ‹וַיִּתֵּן אֹתָם› event: place — agent God; theme them-the-lights
+# ‹וַיִּתֵּן אֹתָם› (“and-set them”) — event: place — agent God; theme them-
+# the-lights
 m.event(&quot;place&quot;, agent=&quot;Elohim&quot;, themes=[&quot;otam_ha_meorot&quot;])
 
 # -------------------------- Gen.1.18 · PURPOSE_RECAP_DELTA_TEST ------------
@@ -477,26 +483,27 @@ m.event(&quot;place&quot;, agent=&quot;Elohim&quot;, themes=[&quot;otam_ha_meoro
 # &quot;And to rule over the day and over the night, and to divide the light from
 # the darkness; and God saw that it was good.&quot;
 m.step(&quot;Gen.1.18&quot;)
-# ‹בֵּין הַיּוֹם וּבֵין הַלָּיְלָה ← בֵּין הָאוֹר וּבֵין הַחֹשֶׁךְ› spec-
-# delta — spec said to-divide between the-YOM u-between the-LAILAH (registry
-# labels, 1:14), delivery says u-to-divide between the-OR u-between the-
-# CHOSHEKH (the entities, 1:18)
+# ‹בֵּין הַיּוֹם וּבֵין הַלָּיְלָה ← בֵּין הָאוֹר וּבֵין הַחֹשֶׁךְ›
+# (“between the-day and-between the-night between the-light and-between the-
+# darkness”) — spec-delta — spec said to-divide between the-YOM u-between
+# the-LAILAH (registry labels, 1:14), delivery says u-to-divide between the-
+# OR u-between the-CHOSHEKH (the entities, 1:18)
 m.spec_delta(&quot;le-havdil bein ha-YOM u-vein ha-LAILAH (registry labels, 1:14)&quot;,
              &quot;u-le-havdil bein ha-OR u-vein ha-CHOSHEKH (the entities, 1:18)&quot;)
-# ‹כִּי־טוֹב› test PASS — oracle-word good, on lights
+# ‹כִּי־טוֹב› (“that good”) — test PASS — oracle-word good, on lights
 m.test(&quot;PASS&quot;, &quot;tov&quot;, &quot;meorot&quot;)
 
 # -------------------------- Gen.1.19 · COMMIT_DAY --------------------------
 # וַיְהִי־עֶרֶב וַיְהִי־בֹקֶר יוֹם רְבִיעִי
 # &quot;And there was evening and there was morning, a fourth day.&quot;
 m.step(&quot;Gen.1.19&quot;)
-# ‹יוֹם רְבִיעִי› ledger: day 4 committed
+# ‹יוֹם רְבִיעִי› (“day fourth”) — ledger: day 4 committed
 m.commit(4, label_form=&quot;ordinal&quot;, label_translit=&quot;yom revii&quot;)
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == &quot;__main__&quot;:
     m.report()
-    assert m.created_set() == {&#x27;maor_gadol&#x27;, &#x27;maor_qaton&#x27;, &#x27;kokhavim&#x27;, &#x27;meorot&#x27;}
+    assert m.created_set() == {&#x27;kokhavim&#x27;, &#x27;maor_gadol&#x27;, &#x27;maor_qaton&#x27;, &#x27;meorot&#x27;}
     assert m.presupposed_set() == {&#x27;aretz&#x27;, &#x27;raqia&#x27;, &#x27;shamayim&#x27;}
     assert m.REGISTRY[&quot;names&quot;] == {&#x27;maor_gadol&#x27;: &#x27;memshelet_yom&#x27;, &#x27;maor_qaton&#x27;: &#x27;memshelet_lailah&#x27;}
     assert m.REGISTRY[&quot;writes&quot;] == 2
@@ -511,4 +518,4 @@ if __name__ == &quot;__main__&quot;:
     assert len(m.EVENTS) == 6
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">FROZEN 2026-07-30 (owner approved): fourth logic-derived unit, first under the calibrated coverage protocol. Central findings: the fullest work-order shape of the week (spec-with-jobs -&gt; cross-verse receipt -&gt; build -&gt; install -&gt; recap -&gt; test -&gt; commit); the corpus&#x27;s first OPERATIONAL handover (day 1&#x27;s own separating function written into the fixtures&#x27; spec); the two-step build (asah then natan); ROLE assignment via dative (dominion offices; no naming — the va-yiqra series ends at day 3); THREE letter-visible spec deltas (both-great -&gt; great/small; stars over-delivered; dominion unspecified) all riding a clean commit past a passing test; the label-&gt;entity restatement of the delegated separation (1:14 vs 1:18); the singular-jussive/plural-subject mismatch that Onkelos normalizes. Not binding religious law.</div><p class='meta'>Rendered 2026-08-08 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">FROZEN 2026-07-30 (owner approved): fourth logic-derived unit, first under the calibrated coverage protocol. Central findings: the fullest work-order shape of the week (spec-with-jobs -&gt; cross-verse receipt -&gt; build -&gt; install -&gt; recap -&gt; test -&gt; commit); the corpus&#x27;s first OPERATIONAL handover (day 1&#x27;s own separating function written into the fixtures&#x27; spec); the two-step build (asah then natan); ROLE assignment via dative (dominion offices; no naming — the va-yiqra series ends at day 3); THREE letter-visible spec deltas (both-great -&gt; great/small; stars over-delivered; dominion unspecified) all riding a clean commit past a passing test; the label-&gt;entity restatement of the delegated separation (1:14 vs 1:18); the singular-jussive/plural-subject mismatch that Onkelos normalizes. Not binding religious law.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

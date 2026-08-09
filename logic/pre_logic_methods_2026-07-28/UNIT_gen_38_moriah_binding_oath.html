@@ -882,8 +882,9 @@ m = Machine(&quot;gen_38_moriah_binding_oath&quot;)
 # &quot;And it came to pass after these things, that God did prove Abraham, and
 # said unto him: &#x27;Abraham&#x27;; and he said: &#x27;Here am I.&#x27;&quot;
 m.step(&quot;Gen.22.1&quot;)
-# ‹וְהָאֱלֹהִים נִסָּה אֶת־אַבְרָהָם … הִנֵּנִי› fact holds: achar-the-
-# devarim-and-the-God-nisah-avraham; and-yomer-behold-I
+# ‹וְהָאֱלֹהִים נִסָּה אֶת־אַבְרָהָם … הִנֵּנִי› (“and-the-God test obj-
+# marker Abraham … behold-me/my”) — fact holds: after-the-word/thing-and-
+# the-God-nisah-obj-marker-Abraham; and-say-behold-I
 m.fact(&quot;achar_ha_devarim_ve_ha_elohim_nisah_et_avraham&quot;,
        &quot;va_yomer_hineni&quot;)
 
@@ -895,13 +896,15 @@ m.fact(&quot;achar_ha_devarim_ve_ha_elohim_nisah_et_avraham&quot;,
 # Isaac, and get thee into the land of Moriah; and offer him there for a
 # burnt-offering upon one of the mountains which I will tell thee of.&#x27;&quot;
 m.step(&quot;Gen.22.2&quot;)
-# ‹קַח־נָא … וְלֶךְ־לְךָ … וְהַעֲלֵהוּ שָׁם לְעֹלָה› God speaks a demand —
-# LET: qach-lekh-and-haalehu(binkha, to-burnt-offering)
+# ‹קַח־נָא … וְלֶךְ־לְךָ … וְהַעֲלֵהוּ שָׁם לְעֹלָה› (“take please … and-go
+# to-you/your … and-go-up-him/its there to-burnt-offering”) — God speaks a
+# demand — LET: take-go-and-haalehu(obj-marker-binkha, to-burnt-offering)
 m.declare(&quot;elohim&quot;, &quot;LET&quot;,
           &quot;qach_lekh_ve_haalehu(et_binkha, le_olah)&quot;)
-# ‹אֶת־בִּנְךָ אֶת־יְחִידְךָ אֲשֶׁר־אָהַבְתָּ אֶת־יִצְחָק› fact holds:
-# binkha-yechidkha-which-ahavta-yitzchaq; to-earth-the-moriyah-which-omar-
-# to-you
+# ‹אֶת־בִּנְךָ אֶת־יְחִידְךָ אֲשֶׁר־אָהַבְתָּ אֶת־יִצְחָק› (“obj-marker son-
+# you/your obj-marker united-you/your which have-affection-for obj-marker
+# Isaac”) — fact holds: obj-marker-binkha-obj-marker-yechidkha-which-have-
+# affection-for-obj-marker-Isaac; to-earth-the-moriyah-which-say-to-you
 m.fact(&quot;et_binkha_et_yechidkha_asher_ahavta_et_yitzchaq&quot;,
        &quot;el_eretz_ha_moriyah_asher_omar_elekha&quot;)
 
@@ -914,15 +917,20 @@ m.fact(&quot;et_binkha_et_yechidkha_asher_ahavta_et_yitzchaq&quot;,
 # the burnt-offering, and rose up, and went unto the place of which God had
 # told him.&quot;
 m.step(&quot;Gen.22.3&quot;)
-# ‹וְאֵת יִצְחָק בְּנוֹ› the world gains: yitzchaq
+# ‹וְאֵת יִצְחָק בְּנוֹ› (“and-obj-marker Isaac son-him/its”) — the world
+# gains: Isaac
 m.install(&quot;yitzchaq&quot;)
-# ‹אֶת־שְׁנֵי נְעָרָיו› the world gains: shnei-nearav
+# ‹אֶת־שְׁנֵי נְעָרָיו› (“obj-marker two boy-him/its”) — the world gains:
+# shnei-nearav
 m.install(&quot;shnei_nearav&quot;)
 # ‹וַיַּשְׁכֵּם … וַיַּחֲבֹשׁ … וַיִּקַּח … וַיְבַקַּע … וַיָּקָם וַיֵּלֶךְ›
-# event: dawn-journey — agent avraham
+# (“and-rise-early … and-wrap-firmly … and-take … and-cleave … and-arise
+# and-go”) — event: dawn-journey — agent Abraham
 m.event(&quot;dawn_journey&quot;, agent=&quot;avraham&quot;)
-# ‹וַיַּשְׁכֵּם אַבְרָהָם בַּבֹּקֶר וַיַּחֲבֹשׁ אֶת־חֲמֹרוֹ› fact holds:
-# and-yashkem-in-the-morning-and-yachavosh-chamoro
+# ‹וַיַּשְׁכֵּם אַבְרָהָם בַּבֹּקֶר וַיַּחֲבֹשׁ אֶת־חֲמֹרוֹ› (“and-rise-
+# early Abraham in-morning and-wrap-firmly obj-marker male-ass-him/its”) —
+# fact holds: and-rise-early-in-the-morning-and-wrap-firmly-obj-marker-
+# chamoro
 m.fact(&quot;va_yashkem_ba_boqer_va_yachavosh_et_chamoro&quot;)
 
 # -------------------------- Gen.22.4 · THE_THIRD_DAY_SIGHTING --------------
@@ -930,8 +938,8 @@ m.fact(&quot;va_yashkem_ba_boqer_va_yachavosh_et_chamoro&quot;)
 # אֶת־הַמָּקוֹם מֵרָחֹק
 # &quot;On the third day Abraham lifted up his eyes, and saw the place afar off.&quot;
 m.step(&quot;Gen.22.4&quot;)
-# ‹בַּיּוֹם הַשְּׁלִישִׁי … מֵרָחֹק› fact holds: in-the-day-the-shelishi-
-# and-yar-the-maqom-from-rachoq
+# ‹בַּיּוֹם הַשְּׁלִישִׁי … מֵרָחֹק› (“in-day the-third … from-remote”) —
+# fact holds: in-the-day-the-third-and-see-obj-marker-the-place-from-remote
 m.fact(&quot;ba_yom_ha_shelishi_va_yar_et_ha_maqom_me_rachoq&quot;)
 
 # -------------------------- Gen.22.5 · THE_STAY_DEMAND_AND_THE_EXCLUSIVE_WE -
@@ -940,12 +948,14 @@ m.fact(&quot;ba_yom_ha_shelishi_va_yar_et_ha_maqom_me_rachoq&quot;)
 # &quot;And Abraham said unto his young men: &#x27;Abide ye here with the ass, and I
 # and the lad will go yonder; and we will worship, and come back to you.&#x27;&quot;
 m.step(&quot;Gen.22.5&quot;)
-# ‹שְׁבוּ־לָכֶם פֹּה עִם־הַחֲמוֹר› avraham speaks a demand — LET: shevu(po-
-# if-the-chamor)
+# ‹שְׁבוּ־לָכֶם פֹּה עִם־הַחֲמוֹר› (“dwell/sit to-you/your(pl) this-place
+# with the-male-ass”) — Abraham speaks a demand — LET: dwell/sit(this-place-
+# with-the-male-ass)
 m.declare(&quot;avraham&quot;, &quot;LET&quot;,
           &quot;shevu(po_im_ha_chamor)&quot;)
-# ‹נֵלְכָה … וְנִשְׁתַּחֲוֶה וְנָשׁוּבָה אֲלֵיכֶם› fact holds: nelkha-and-
-# nishtachaveh-and-nashuvah-aleikhem
+# ‹נֵלְכָה … וְנִשְׁתַּחֲוֶה וְנָשׁוּבָה אֲלֵיכֶם› (“go … and-afflict and-
+# return to-you/your(pl)”) — fact holds: go-and-nishtachaveh-and-nashuvah-
+# aleikhem
 m.fact(&quot;nelkha_ve_nishtachaveh_ve_nashuvah_aleikhem&quot;)
 
 # -------------------------- Gen.22.6 · THE_LOADED_WALK_TOGETHER ------------
@@ -956,8 +966,9 @@ m.fact(&quot;nelkha_ve_nishtachaveh_ve_nashuvah_aleikhem&quot;)
 # his son; and he took in his hand the fire and the knife; and they went
 # both of them together.&quot;
 m.step(&quot;Gen.22.6&quot;)
-# ‹וַיָּשֶׂם עַל־יִצְחָק בְּנוֹ … וַיֵּלְכוּ שְׁנֵיהֶם יַחְדָּו› event:
-# load-and-walk — agent avraham
+# ‹וַיָּשֶׂם עַל־יִצְחָק בְּנוֹ … וַיֵּלְכוּ שְׁנֵיהֶם יַחְדָּו› (“and-
+# put/set over Isaac son-him/its … and-go two-them/their unit”) — event:
+# load-and-walk — agent Abraham
 m.event(&quot;load_and_walk&quot;, agent=&quot;avraham&quot;)
 
 # -------------------------- Gen.22.7 · THE_WHERE_IS_THE_LAMB ---------------
@@ -967,8 +978,10 @@ m.event(&quot;load_and_walk&quot;, agent=&quot;avraham&quot;)
 # said: &#x27;Here am I, my son.&#x27; And he said: &#x27;Behold the fire and the wood; but
 # where is the lamb for a burnt-offering?&#x27;&quot;
 m.step(&quot;Gen.22.7&quot;)
-# ‹אָבִי … הִנֶּנִּי בְנִי … וְאַיֵּה הַשֶּׂה לְעֹלָה› fact holds: avi-and-
-# yomer-behold-I-veni; and-ayeh-the-seh-to-burnt-offering
+# ‹אָבִי … הִנֶּנִּי בְנִי … וְאַיֵּה הַשֶּׂה לְעֹלָה› (“father-me/my …
+# behold-me/my son-me/my … and-where? the-member-of-a-flock to-burnt-
+# offering”) — fact holds: father-and-say-behold-I-veni; and-ayeh-the-seh-
+# to-burnt-offering
 m.fact(&quot;avi_va_yomer_hineni_veni&quot;,
        &quot;ve_ayeh_ha_seh_le_olah&quot;)
 
@@ -978,8 +991,9 @@ m.fact(&quot;avi_va_yomer_hineni_veni&quot;,
 # &quot;And Abraham said: &#x27;God will provide Himself the lamb for a burnt-
 # offering, my son.&#x27; So they went both of them together.&quot;
 m.step(&quot;Gen.22.8&quot;)
-# ‹אֱלֹהִים יִרְאֶה־לּוֹ הַשֶּׂה לְעֹלָה בְּנִי› fact holds: God-yireh-not-
-# the-seh-to-burnt-offering-beni
+# ‹אֱלֹהִים יִרְאֶה־לּוֹ הַשֶּׂה לְעֹלָה בְּנִי› (“God see to-him/its the-
+# member-of-a-flock to-burnt-offering son-me/my”) — fact holds: God-yireh-
+# not-the-seh-to-burnt-offering-beni
 m.fact(&quot;elohim_yireh_lo_ha_seh_le_olah_beni&quot;)
 
 # -------------------------- Gen.22.9 · THE_BINDING -------------------------
@@ -990,11 +1004,14 @@ m.fact(&quot;elohim_yireh_lo_ha_seh_le_olah_beni&quot;)
 # the altar there, and laid the wood in order, and bound Isaac his son, and
 # laid him on the altar, upon the wood.&quot;
 m.step(&quot;Gen.22.9&quot;)
-# ‹וַיַּעֲקֹד אֶת־יִצְחָק בְּנוֹ וַיָּשֶׂם אֹתוֹ עַל־הַמִּזְבֵּחַ› event:
-# bind — agent avraham; theme yitzchaq
+# ‹וַיַּעֲקֹד אֶת־יִצְחָק בְּנוֹ וַיָּשֶׂם אֹתוֹ עַל־הַמִּזְבֵּחַ› (“and-
+# tie-with-thongs obj-marker Isaac son-him/its and-put/set obj-marker-
+# him/its over the-altar”) — event: bind — agent Abraham; theme Isaac
 m.event(&quot;bind&quot;, agent=&quot;avraham&quot;, themes=[&quot;yitzchaq&quot;])
-# ‹וַיַּעֲקֹד אֶת־יִצְחָק בְּנוֹ וַיָּשֶׂם אֹתוֹ עַל־הַמִּזְבֵּחַ› fact
-# holds: and-yaaqod-yitzchaq-and-yasem-upon-the-altar
+# ‹וַיַּעֲקֹד אֶת־יִצְחָק בְּנוֹ וַיָּשֶׂם אֹתוֹ עַל־הַמִּזְבֵּחַ› (“and-
+# tie-with-thongs obj-marker Isaac son-him/its and-put/set obj-marker-
+# him/its over the-altar”) — fact holds: and-tie-with-thongs-obj-marker-
+# Isaac-and-put/set-over-the-altar
 m.fact(&quot;va_yaaqod_et_yitzchaq_va_yasem_al_ha_mizbeach&quot;)
 
 # -------------------------- Gen.22.10 · THE_HAND_AND_THE_KNIFE -------------
@@ -1003,8 +1020,9 @@ m.fact(&quot;va_yaaqod_et_yitzchaq_va_yasem_al_ha_mizbeach&quot;)
 # &quot;And Abraham stretched forth his hand, and took the knife to slay his
 # son.&quot;
 m.step(&quot;Gen.22.10&quot;)
-# ‹וַיִּשְׁלַח … אֶת־יָדוֹ וַיִּקַּח אֶת־הַמַּאֲכֶלֶת לִשְׁחֹט› event:
-# reach-knife — agent avraham
+# ‹וַיִּשְׁלַח … אֶת־יָדוֹ וַיִּקַּח אֶת־הַמַּאֲכֶלֶת לִשְׁחֹט› (“and-send …
+# obj-marker hand-him/its and-take obj-marker the-something-to-eat-with to-
+# slaughter”) — event: reach-knife — agent Abraham
 m.event(&quot;reach_knife&quot;, agent=&quot;avraham&quot;)
 
 # -------------------------- Gen.22.11 · THE_FIRST_DOUBLED_NAME_CALL --------
@@ -1013,10 +1031,11 @@ m.event(&quot;reach_knife&quot;, agent=&quot;avraham&quot;)
 # &quot;And the angel of the LORD called unto him out of heaven, and said:
 # &#x27;Abraham, Abraham.&#x27; And he said: &#x27;Here am I.&#x27;&quot;
 m.step(&quot;Gen.22.11&quot;)
-# ‹מַלְאַךְ יְהוָה מִן־הַשָּׁמַיִם› the world gains: malakh-the-LORD
+# ‹מַלְאַךְ יְהוָה מִן־הַשָּׁמַיִם› (“messenger YHWH from the-heavens”) —
+# the world gains: messenger-the-LORD
 m.install(&quot;malakh_YHWH&quot;)
-# ‹אַבְרָהָם אַבְרָהָם … הִנֵּנִי› fact holds: avraham-avraham-and-yomer-
-# behold-I
+# ‹אַבְרָהָם אַבְרָהָם … הִנֵּנִי› (“Abraham Abraham … behold-me/my”) — fact
+# holds: Abraham-Abraham-and-say-behold-I
 m.fact(&quot;avraham_avraham_va_yomer_hineni&quot;)
 
 # -------------------------- Gen.22.12 · THE_COUNTERMAND_AND_THE_CONFERRED_TITLE -
@@ -1027,16 +1046,19 @@ m.fact(&quot;avraham_avraham_va_yomer_hineni&quot;)
 # unto him; for now I know that thou art a God-fearing man, seeing thou hast
 # not withheld thy son, thine only son, from Me.&#x27;&quot;
 m.step(&quot;Gen.22.12&quot;)
-# ‹אַל־תִּשְׁלַח יָדְךָ אֶל־הַנַּעַר› malakh-the-LORD speaks a demand — LET-
-# NOT: tishlach(yadkha-to-the-naar)
+# ‹אַל־תִּשְׁלַח יָדְךָ אֶל־הַנַּעַר› (“do-not send hand-you/your to the-
+# boy”) — messenger-the-LORD speaks a demand — LET-NOT: send(yadkha-to-the-
+# boy)
 m.declare(&quot;malakh_YHWH&quot;, &quot;LET-NOT&quot;,
           &quot;tishlach(yadkha_el_ha_naar)&quot;)
-# ‹וְאַל־תַּעַשׂ לוֹ מְאוּמָה› malakh-the-LORD speaks a demand — LET-NOT:
-# taas(not-meumah)
+# ‹וְאַל־תַּעַשׂ לוֹ מְאוּמָה› (“and-do-not make to-him/its speck”) —
+# messenger-the-LORD speaks a demand — LET-NOT: make(not-meumah)
 m.declare(&quot;malakh_YHWH&quot;, &quot;LET-NOT&quot;,
           &quot;taas(lo_meumah)&quot;)
-# ‹כִּי עַתָּה יָדַעְתִּי כִּי־יְרֵא אֱלֹהִים אַתָּה וְלֹא חָשַׂכְתָּ› fact
-# holds: you-yadati-when-yere-God-you; and-not-chasakhta-binkha-yechidkha
+# ‹כִּי עַתָּה יָדַעְתִּי כִּי־יְרֵא אֱלֹהִים אַתָּה וְלֹא חָשַׂכְתָּ›
+# (“that now know that fearing God you and-not restrain”) — fact holds: you-
+# know-that-fearing-God-you; and-not-restrain-obj-marker-binkha-obj-marker-
+# yechidkha
 m.fact(&quot;atah_yadati_ki_yere_elohim_atah&quot;,
        &quot;ve_lo_chasakhta_et_binkha_et_yechidkha&quot;)
 
@@ -1048,15 +1070,18 @@ m.fact(&quot;atah_yadati_ki_yere_elohim_atah&quot;,
 # caught in the thicket by his horns. And Abraham went and took the ram, and
 # offered him up for a burnt-offering in the stead of his son.&quot;
 m.step(&quot;Gen.22.13&quot;)
-# ‹וְהִנֵּה־אַיִל אַחַר נֶאֱחַז בַּסְּבַךְ בְּקַרְנָיו› event: see-ram —
-# agent avraham
+# ‹וְהִנֵּה־אַיִל אַחַר נֶאֱחַז בַּסְּבַךְ בְּקַרְנָיו› (“and-behold ram
+# after seize in-copse in-horn-him/its”) — event: see-ram — agent Abraham
 m.event(&quot;see_ram&quot;, agent=&quot;avraham&quot;)
 # ‹וַיֵּלֶךְ אַבְרָהָם וַיִּקַּח אֶת־הָאַיִל וַיַּעֲלֵהוּ לְעֹלָה תַּחַת
-# בְּנוֹ› event: offer-substitute — agent avraham; theme the-ayil
+# בְּנוֹ› (“and-go Abraham and-take obj-marker the-ram and-go-up-him/its to-
+# burnt-offering under son-him/its”) — event: offer-substitute — agent
+# Abraham; theme the-ram
 m.event(&quot;offer_substitute&quot;, agent=&quot;avraham&quot;, themes=[&quot;ha_ayil&quot;])
-# ‹אַיִל … נֶאֱחַז בַּסְּבַךְ … וַיַּעֲלֵהוּ לְעֹלָה תַּחַת בְּנוֹ› fact
-# holds: ayil-neechaz-in-the-sevakh-in-qarnav; and-yaalehu-to-burnt-
-# offering-tachat-beno
+# ‹אַיִל … נֶאֱחַז בַּסְּבַךְ … וַיַּעֲלֵהוּ לְעֹלָה תַּחַת בְּנוֹ› (“ram …
+# seize in-copse … and-go-up-him/its to-burnt-offering under son-him/its”) —
+# fact holds: ram-seize-in-the-sevakh-in-qarnav; and-yaalehu-to-burnt-
+# offering-under-beno
 m.fact(&quot;ayil_neechaz_ba_sevakh_be_qarnav&quot;,
        &quot;va_yaalehu_le_olah_tachat_beno&quot;)
 
@@ -1066,11 +1091,13 @@ m.fact(&quot;ayil_neechaz_ba_sevakh_be_qarnav&quot;,
 # &quot;And Abraham called the name of that place Adonai-jireh; as it is said to
 # this day: &#x27;In the mount where the LORD is seen.&#x27;&quot;
 m.step(&quot;Gen.22.14&quot;)
-# ‹וַיִּקְרָא אַבְרָהָם שֵׁם־הַמָּקוֹם הַהוּא יְהוָה יִרְאֶה› named: the-
-# maqom := the-LORD-Yireh
+# ‹וַיִּקְרָא אַבְרָהָם שֵׁם־הַמָּקוֹם הַהוּא יְהוָה יִרְאֶה› (“and-call
+# Abraham name the-place that YHWH see”) — named: the-place := the-LORD-
+# Yireh
 m.name(&quot;ha_maqom&quot;, &quot;YHWH_Yireh&quot;)
-# ‹אֲשֶׁר יֵאָמֵר הַיּוֹם בְּהַר יְהוָה יֵרָאֶה› pattern recorded: which-
-# yeamer-the-day-in-har-the-LORD-yeraeh
+# ‹אֲשֶׁר יֵאָמֵר הַיּוֹם בְּהַר יְהוָה יֵרָאֶה› (“which say the-day in-
+# mountain YHWH see”) — pattern recorded: which-say-the-day-in-mountain-the-
+# LORD-yeraeh
 m.pattern(&quot;asher_yeamer_ha_yom_be_har_YHWH_yeraeh&quot;)
 
 # -------------------------- Gen.22.15 · THE_SECOND_SKY_CALL ----------------
@@ -1078,8 +1105,8 @@ m.pattern(&quot;asher_yeamer_ha_yom_be_har_YHWH_yeraeh&quot;)
 # &quot;And the angel of the LORD called unto Abraham a second time out of
 # heaven,&quot;
 m.step(&quot;Gen.22.15&quot;)
-# ‹וַיִּקְרָא … שֵׁנִית מִן־הַשָּׁמָיִם› event: sky-call — agent malakh-the-
-# LORD
+# ‹וַיִּקְרָא … שֵׁנִית מִן־הַשָּׁמָיִם› (“and-call … second from the-
+# heavens”) — event: sky-call — agent messenger-the-LORD
 m.event(&quot;sky_call&quot;, agent=&quot;malakh_YHWH&quot;)
 
 # -------------------------- Gen.22.16 · THE_DIVINE_SELF_OATH ---------------
@@ -1088,8 +1115,9 @@ m.event(&quot;sky_call&quot;, agent=&quot;malakh_YHWH&quot;)
 # &quot;and said: &#x27;By Myself have I sworn, saith the LORD, because thou hast done
 # this thing, and hast not withheld thy son, thine only son,&quot;
 m.step(&quot;Gen.22.16&quot;)
-# ‹בִּי נִשְׁבַּעְתִּי נְאֻם־יְהוָה … יַעַן אֲשֶׁר עָשִׂיתָ› fact holds: bi-
-# nishbati-neum-the-LORD; yaan-which-asita-and-not-chasakhta
+# ‹בִּי נִשְׁבַּעְתִּי נְאֻם־יְהוָה … יַעַן אֲשֶׁר עָשִׂיתָ› (“in-me/my
+# swear oracle YHWH … heed which make”) — fact holds: bi-swear-oracle-the-
+# LORD; heed-which-make-and-not-restrain
 m.fact(&quot;bi_nishbati_neum_YHWH&quot;,
        &quot;yaan_asher_asita_ve_lo_chasakhta&quot;)
 
@@ -1101,9 +1129,10 @@ m.fact(&quot;bi_nishbati_neum_YHWH&quot;,
 # thy seed as the stars of the heaven, and as the sand which is upon the
 # seashore; and thy seed shall possess the gate of his enemies;&quot;
 m.step(&quot;Gen.22.17&quot;)
-# ‹בָרֵךְ אֲבָרֶכְךָ וְהַרְבָּה אַרְבֶּה … כְּכוֹכְבֵי … וְכַחוֹל› fact
-# holds: varekh-avarekhkha-and-greatly-I-will-multiply; like-khokhvei-and-
-# kha-chol-and-yirash-shaar-oyvav
+# ‹בָרֵךְ אֲבָרֶכְךָ וְהַרְבָּה אַרְבֶּה … כְּכוֹכְבֵי … וְכַחוֹל› (“bless
+# bless-you/your and-multiply multiply … like-stars … and-like-sand”) — fact
+# holds: bless-avarekhkha-and-greatly-I-will-multiply; like-khokhvei-and-
+# you/your-chol-and-possess/inherit-gate-oyvav
 m.fact(&quot;varekh_avarekhkha_ve_harbah_arbeh&quot;,
        &quot;ke_khokhvei_ve_kha_chol_ve_yirash_shaar_oyvav&quot;)
 
@@ -1113,8 +1142,9 @@ m.fact(&quot;varekh_avarekhkha_ve_harbah_arbeh&quot;,
 # &quot;and in thy seed shall all the nations of the earth be blessed; because
 # thou hast hearkened to My voice.&#x27;&quot;
 m.step(&quot;Gen.22.18&quot;)
-# ‹וְהִתְבָּרְכוּ … עֵקֶב אֲשֶׁר שָׁמַעְתָּ בְּקֹלִי› fact holds: and-
-# hitbarakhu-and-zarakha-all-goyei-the-earth; ekev-which-shamata-in-qoli
+# ‹וְהִתְבָּרְכוּ … עֵקֶב אֲשֶׁר שָׁמַעְתָּ בְּקֹלִי› (“and-bless … heel
+# which hear in-voice/sound-me/my”) — fact holds: and-bless-and-zarakha-all-
+# goyei-the-earth; ekev-which-hear-in-qoli
 m.fact(&quot;ve_hitbarakhu_ve_zarakha_kol_goyei_ha_aretz&quot;,
        &quot;ekev_asher_shamata_be_qoli&quot;)
 
@@ -1124,11 +1154,11 @@ m.fact(&quot;ve_hitbarakhu_ve_zarakha_kol_goyei_ha_aretz&quot;,
 # &quot;So Abraham returned unto his young men, and they rose up and went
 # together to Beer-sheba; and Abraham dwelt at Beer-sheba.&quot;
 m.step(&quot;Gen.22.19&quot;)
-# ‹וַיָּשָׁב … וַיָּקֻמוּ וַיֵּלְכוּ יַחְדָּו … וַיֵּשֶׁב› event: return-
-# dwell — agent avraham
+# ‹וַיָּשָׁב … וַיָּקֻמוּ וַיֵּלְכוּ יַחְדָּו … וַיֵּשֶׁב› (“and-return …
+# and-arise and-go unit … and-return”) — event: return-dwell — agent Abraham
 m.event(&quot;return_dwell&quot;, agent=&quot;avraham&quot;)
-# ‹אֶל־בְּאֵר שָׁבַע … בִּבְאֵר שָׁבַע› reads without prior install (flag,
-# not fix): beer-seven
+# ‹אֶל־בְּאֵר שָׁבַע … בִּבְאֵר שָׁבַע› (“to Beer-shebah … in Beer-shebah”)
+# — reads without prior install (flag, not fix): beer-seven
 m.presupposed(&quot;beer_sheva&quot;)
 
 # -------------------------- Gen.22.20-24 · THE_CODA_REPORT_THE_BRIDE_MINTED -
@@ -1144,18 +1174,22 @@ m.presupposed(&quot;beer_sheva&quot;)
 # Tahash, and Maacah.&quot;
 m.step(&quot;Gen.22.20-24&quot;)
 # ‹וַיֻּגַּד לְאַבְרָהָם … הִנֵּה יָלְדָה מִלְכָּה גַם־הִוא … וּבְתוּאֵל
-# יָלַד אֶת־רִבְקָה› fact holds: and-yugad-to-avraham-behold-yaldah-milkah-
-# also-hi; and-vetuel-yalad-rivqah
+# יָלַד אֶת־רִבְקָה› (“and-tell to-Abraham … behold bear-young Milcah also
+# he/it … and-Bethuel bear-young obj-marker Rebekah”) — fact holds: and-
+# tell-to-Abraham-behold-yaldah-milkah-also-hi; and-Bethuel-bear-young-obj-
+# marker-rivqah
 m.fact(&quot;va_yugad_le_avraham_hinneh_yaldah_milkah_gam_hi&quot;,
        &quot;u_vetuel_yalad_et_rivqah&quot;)
 # ‹שְׁמֹנָה אֵלֶּה יָלְדָה מִלְכָּה … וּפִילַגְשׁוֹ … וַתֵּלֶד גַּם־הִוא›
-# fact holds: shmonah-ele-yaldah-milkah-and-filagsho-reumah-four
+# (“number these bear-young Milcah … and-concubine-him/its … and-bear-young
+# also he/it”) — fact holds: shmonah-these-yaldah-milkah-and-filagsho-
+# reumah-four
 m.fact(&quot;shmonah_ele_yaldah_milkah_u_filagsho_reumah_arbaah&quot;)
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == &quot;__main__&quot;:
     m.report()
-    assert m.created_set() == {&#x27;shnei_nearav&#x27;, &#x27;malakh_YHWH&#x27;, &#x27;yitzchaq&#x27;}
+    assert m.created_set() == {&#x27;yitzchaq&#x27;, &#x27;shnei_nearav&#x27;, &#x27;malakh_YHWH&#x27;}
     assert m.presupposed_set() == {&#x27;beer_sheva&#x27;}
     assert m.REGISTRY[&quot;names&quot;] == {&#x27;ha_maqom&#x27;: &#x27;YHWH_Yireh&#x27;}
     assert m.REGISTRY[&quot;writes&quot;] == 1
@@ -1169,4 +1203,4 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 14
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-08 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

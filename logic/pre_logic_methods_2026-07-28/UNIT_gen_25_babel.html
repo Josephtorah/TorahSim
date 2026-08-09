@@ -584,8 +584,8 @@ m = Machine(&quot;gen_25_babel&quot;)
 # וַיְהִי כָל־הָאָרֶץ שָׂפָה אֶחָת וּדְבָרִים אֲחָדִים
 # &quot;And the whole earth was of one language and of one speech.&quot;
 m.step(&quot;Gen.11.1&quot;)
-# ‹כָל־הָאָרֶץ שָׂפָה אֶחָת וּדְבָרִים אֲחָדִים› fact holds: all-the-earth-
-# safah-one-and-words-one
+# ‹כָל־הָאָרֶץ שָׂפָה אֶחָת וּדְבָרִים אֲחָדִים› (“all the-earth lip one
+# and-words one”) — fact holds: all-the-earth-safah-one-and-words-one
 m.fact(&quot;kol_ha_aretz_safah_echat_u_devarim_achadim&quot;)
 
 # -------------------------- Gen.11.2 · THE_JOURNEY_EAST_TO_SHINAR ----------
@@ -594,12 +594,14 @@ m.fact(&quot;kol_ha_aretz_safah_echat_u_devarim_achadim&quot;)
 # &quot;And it came to pass, as they journeyed east, that they found a plain in
 # the land of Shinar; and they dwelt there.&quot;
 m.step(&quot;Gen.11.2&quot;)
-# ‹בְּנָסְעָם מִקֶּדֶם› fact holds: in-nasam-from-east
+# ‹בְּנָסְעָם מִקֶּדֶם› (“as-they-journeyed from-the-east”) — fact holds:
+# in-nasam-from-east
 m.fact(&quot;be_nasam_mi_qedem&quot;)
-# ‹וַיִּמְצְאוּ בִקְעָה בְּאֶרֶץ שִׁנְעָר› event: find — theme viqah-in-
-# earth-Shinar
+# ‹וַיִּמְצְאוּ בִקְעָה בְּאֶרֶץ שִׁנְעָר› (“and-find a-valley in-earth
+# Shinar”) — event: find — theme viqah-in-earth-Shinar
 m.event(&quot;find&quot;, themes=[&quot;viqah_be_eretz_shinar&quot;])
-# ‹וַיֵּשְׁבוּ שָׁם› event: settle — theme there
+# ‹וַיֵּשְׁבוּ שָׁם› (“and-they-settled there”) — event: settle — theme
+# there
 m.event(&quot;settle&quot;, themes=[&quot;sham&quot;])
 # reads without prior install (flag, not fix): Shinar
 m.presupposed(&quot;shinar&quot;)
@@ -610,19 +612,21 @@ m.presupposed(&quot;shinar&quot;)
 # &quot;And they said one to another: &#x27;Come, let us make brick, and burn them
 # thoroughly.&#x27; And they had brick for stone, and slime had they for mortar.&quot;
 m.step(&quot;Gen.11.3&quot;)
-# ‹וַיֹּאמְרוּ אִישׁ אֶל־רֵעֵהוּ הָבָה› event: speak — agent man-to-reehu
+# ‹וַיֹּאמְרוּ אִישׁ אֶל־רֵעֵהוּ הָבָה› (“and-say man to his-fellow come”) —
+# event: speak — agent man-to-reehu
 m.event(&quot;speak&quot;, agent=&quot;ish_el_reehu&quot;)
-# ‹נִלְבְּנָה לְבֵנִים› man-to-reehu speaks a demand — CMD-US:
-# nilbenah(bricks)
+# ‹נִלְבְּנָה לְבֵנִים› (“let-us-brick bricks”) — man-to-reehu speaks a
+# demand — CMD-US: nilbenah(bricks)
 m.declare(&quot;ish_el_reehu&quot;, &quot;CMD-US&quot;,
           &quot;nilbenah(levenim)&quot;)
-# ‹וְנִשְׂרְפָה לִשְׂרֵפָה› man-to-reehu speaks a demand — CMD-US:
-# nisrefah(to-me-serefah)
+# ‹וְנִשְׂרְפָה לִשְׂרֵפָה› (“and-let-us-burn a-burning”) — man-to-reehu
+# speaks a demand — CMD-US: nisrefah(to-me-serefah)
 m.declare(&quot;ish_el_reehu&quot;, &quot;CMD-US&quot;,
           &quot;nisrefah(li_serefah)&quot;)
-# ‹וַתְּהִי לָהֶם הַלְּבֵנָה לְאָבֶן וְהַחֵמָר הָיָה לָהֶם לַחֹמֶר› fact
-# holds: and-be-to-them-the-levenah-to-stone; and-the-bitumen-was-to-them-
-# to-mortar
+# ‹וַתְּהִי לָהֶם הַלְּבֵנָה לְאָבֶן וְהַחֵמָר הָיָה לָהֶם לַחֹמֶר› (“and-be
+# for-them the-brick for-stone and-the-bitumen be for-them for-mortar”) —
+# fact holds: and-be-to-them-the-levenah-to-stone; and-the-bitumen-was-to-
+# them-to-mortar
 m.fact(&quot;va_tehi_lahem_ha_levenah_le_aven&quot;,
        &quot;ve_ha_chemar_hayah_lahem_la_chomer&quot;)
 
@@ -633,18 +637,21 @@ m.fact(&quot;va_tehi_lahem_ha_levenah_le_aven&quot;,
 # in heaven, and let us make us a name; lest we be scattered abroad upon the
 # face of the whole earth.&#x27;&quot;
 m.step(&quot;Gen.11.4&quot;)
-# ‹וַיֹּאמְרוּ הָבָה› event: speak — agent man-to-reehu
+# ‹וַיֹּאמְרוּ הָבָה› (“and-say come”) — event: speak — agent man-to-reehu
 m.event(&quot;speak&quot;, agent=&quot;ish_el_reehu&quot;)
-# ‹נִבְנֶה־לָּנוּ עִיר וּמִגְדָּל וְרֹאשׁוֹ בַשָּׁמַיִם› man-to-reehu speaks
+# ‹נִבְנֶה־לָּנוּ עִיר וּמִגְדָּל וְרֹאשׁוֹ בַשָּׁמַיִם› (“let-us-build for-
+# us a-city and-a-tower and-its-head in-the-heavens”) — man-to-reehu speaks
 # a demand — CMD-US?: nivneh(a-city-and-a-tower)
 m.declare(&quot;ish_el_reehu&quot;, &quot;CMD-US?&quot;,
           &quot;nivneh(ir_u_migdal)&quot;)
-# ‹וְנַעֲשֶׂה־לָּנוּ שֵׁם› man-to-reehu speaks a demand — CMD-US?:
-# naaseh(lanu-a-name)
+# ‹וְנַעֲשֶׂה־לָּנוּ שֵׁם› (“and-let-us-make for-us a-name”) — man-to-reehu
+# speaks a demand — CMD-US?: naaseh(lanu-a-name)
 m.declare(&quot;ish_el_reehu&quot;, &quot;CMD-US?&quot;,
           &quot;naaseh(lanu_shem)&quot;)
-# ‹וְרֹאשׁוֹ בַשָּׁמַיִם … פֶּן־נָפוּץ עַל־פְּנֵי כָל־הָאָרֶץ› fact holds:
-# and-rosho-and-heavens; lest-we-be-scattered-over-face-of-all-the-earth
+# ‹וְרֹאשׁוֹ בַשָּׁמַיִם … פֶּן־נָפוּץ עַל־פְּנֵי כָל־הָאָרֶץ› (“and-its-
+# head in-the-heavens … lest we-be-scattered over the-face-of all the-
+# earth”) — fact holds: and-rosho-and-heavens; lest-we-be-scattered-over-
+# face-of-all-the-earth
 m.fact(&quot;ve_rosho_va_shamayim&quot;,
        &quot;pen_nafutz_al_pnei_khol_ha_aretz&quot;)
 
@@ -654,11 +661,12 @@ m.fact(&quot;ve_rosho_va_shamayim&quot;,
 # &quot;And the LORD came down to see the city and the tower, which the children
 # of men builded.&quot;
 m.step(&quot;Gen.11.5&quot;)
-# ‹וַיֵּרֶד יְהוָה לִרְאֹת› event: descend — agent the-LORD; theme lirot-
-# obj-marker·et-the-a-city-and-obj-marker·et-the-a-tower
+# ‹וַיֵּרֶד יְהוָה לִרְאֹת› (“and-He-descended YHWH to-see”) — event:
+# descend — agent the-LORD; theme lirot-obj-marker·et-the-a-city-and-obj-
+# marker·et-the-a-tower
 m.event(&quot;descend&quot;, agent=&quot;YHWH&quot;, themes=[&quot;lirot_et_ha_ir_ve_et_ha_migdal&quot;])
-# ‹אֲשֶׁר בָּנוּ בְּנֵי הָאָדָם› fact holds: which-they-built-sons-of-the-
-# humankind
+# ‹אֲשֶׁר בָּנוּ בְּנֵי הָאָדָם› (“which they-built son the-humankind”) —
+# fact holds: which-they-built-sons-of-the-humankind
 m.fact(&quot;asher_banu_bnei_ha_adam&quot;)
 
 # -------------------------- Gen.11.6 · ONE_PEOPLE_THE_ASSESSMENT -----------
@@ -668,12 +676,13 @@ m.fact(&quot;asher_banu_bnei_ha_adam&quot;)
 # language; and this is what they begin to do; and now nothing will be
 # withholden from them, which they purpose to do.&#x27;&quot;
 m.step(&quot;Gen.11.6&quot;)
-# ‹וַיֹּאמֶר יְהוָה הֵן עַם אֶחָד› event: speak — agent the-LORD; theme
-# behold-people-one
+# ‹וַיֹּאמֶר יְהוָה הֵן עַם אֶחָד› (“and-say YHWH behold people one”) —
+# event: speak — agent the-LORD; theme behold-people-one
 m.event(&quot;speak&quot;, agent=&quot;YHWH&quot;, themes=[&quot;hen_am_echad&quot;])
-# ‹הֵן עַם אֶחָד … וְזֶה הַחִלָּם לַעֲשׂוֹת … לֹא־יִבָּצֵר מֵהֶם› fact
-# holds: behold-people-one-and-safah-one-to-khulam; and-this-hachillam-to-
-# do; not-will-be-withheld-mehem-all-which-they-plan
+# ‹הֵן עַם אֶחָד … וְזֶה הַחִלָּם לַעֲשׂוֹת … לֹא־יִבָּצֵר מֵהֶם› (“behold
+# people one … and-this their-beginning to-do … not will-be-withheld from-
+# them”) — fact holds: behold-people-one-and-safah-one-to-khulam; and-this-
+# hachillam-to-do; not-will-be-withheld-mehem-all-which-they-plan
 m.fact(&quot;hen_am_echad_ve_safah_achat_le_khulam&quot;,
        &quot;ve_zeh_hachillam_la_asot&quot;,
        &quot;lo_yibatzer_mehem_kol_asher_yazmu&quot;)
@@ -684,11 +693,12 @@ m.fact(&quot;hen_am_echad_ve_safah_achat_le_khulam&quot;,
 # &quot;&#x27;Come, let us go down, and there confound their language, that they may
 # not understand one another&#x27;s speech.&#x27;&quot;
 m.step(&quot;Gen.11.7&quot;)
-# ‹הָבָה נֵרְדָה› the-LORD speaks a demand — CMD-US: nerdah(there)
+# ‹הָבָה נֵרְדָה› (“come let-Us-descend”) — the-LORD speaks a demand — CMD-
+# US: nerdah(there)
 m.declare(&quot;YHWH&quot;, &quot;CMD-US&quot;,
           &quot;nerdah(sham)&quot;)
-# ‹וְנָבְלָה שָׁם שְׂפָתָם› the-LORD speaks a demand — CMD-US: navlah(there-
-# sefatam)
+# ‹וְנָבְלָה שָׁם שְׂפָתָם› (“and-let-Us-confuse there their-lip”) — the-
+# LORD speaks a demand — CMD-US: navlah(there-sefatam)
 m.declare(&quot;YHWH&quot;, &quot;CMD-US&quot;,
           &quot;navlah(sham_sefatam)&quot;)
 
@@ -698,10 +708,12 @@ m.declare(&quot;YHWH&quot;, &quot;CMD-US&quot;,
 # &quot;So the LORD scattered them abroad from thence upon the face of all the
 # earth; and they left off to build the city.&quot;
 m.step(&quot;Gen.11.8&quot;)
-# ‹וַיָּפֶץ יְהוָה אֹתָם מִשָּׁם› event: scatter — agent the-LORD; theme
-# from-there-over-face-of-all-the-earth
+# ‹וַיָּפֶץ יְהוָה אֹתָם מִשָּׁם› (“and-He-scattered YHWH obj-marker from-
+# there”) — event: scatter — agent the-LORD; theme from-there-over-face-of-
+# all-the-earth
 m.event(&quot;scatter&quot;, agent=&quot;YHWH&quot;, themes=[&quot;mi_sham_al_pnei_khol_ha_aretz&quot;])
-# ‹וַיַּחְדְּלוּ לִבְנֹת הָעִיר› fact holds: and-yachdelu-livnot-the-a-city
+# ‹וַיַּחְדְּלוּ לִבְנֹת הָעִיר› (“and-they-ceased to-build the-city”) —
+# fact holds: and-yachdelu-livnot-the-a-city
 m.fact(&quot;va_yachdelu_livnot_ha_ir&quot;)
 
 # -------------------------- Gen.11.9 · THE_NAME_ETIOLOGY_AND_THE_ECHO ------
@@ -711,14 +723,16 @@ m.fact(&quot;va_yachdelu_livnot_ha_ir&quot;)
 # confound the language of all the earth; and from thence did the LORD
 # scatter them abroad upon the face of all the earth.&quot;
 m.step(&quot;Gen.11.9&quot;)
-# ‹כִּי־שָׁם בָּלַל יְהוָה שְׂפַת כָּל־הָאָרֶץ› demand settled (popped from
-# the queue): navlah(there-sefatam)
+# ‹כִּי־שָׁם בָּלַל יְהוָה שְׂפַת כָּל־הָאָרֶץ› (“for there He-confused YHWH
+# lip-of all the-earth”) — demand settled (popped from the queue):
+# navlah(there-sefatam)
 m.result(&quot;navlah(sham_sefatam)&quot;, tmark=&quot;t2&quot;)
-# ‹עַל־כֵּן קָרָא שְׁמָהּ בָּבֶל› pattern recorded: over-so-kara-shemah-
-# Babel
+# ‹עַל־כֵּן קָרָא שְׁמָהּ בָּבֶל› (“over so one-called its-name Babel”) —
+# pattern recorded: over-so-kara-shemah-Babel
 m.pattern(&quot;al_ken_kara_shemah_bavel&quot;)
-# ‹כִּי־שָׁם בָּלַל … וּמִשָּׁם הֱפִיצָם› fact holds: for-there-He-confused-
-# yhwh-lip-of-all-the-earth; and-from-there-hefitzam-yhwh
+# ‹כִּי־שָׁם בָּלַל … וּמִשָּׁם הֱפִיצָם› (“for there He-confused … and-
+# from-there He-scattered-them”) — fact holds: for-there-He-confused-yhwh-
+# lip-of-all-the-earth; and-from-there-hefitzam-yhwh
 m.fact(&quot;ki_sham_balal_yhwh_sefat_kol_ha_aretz&quot;,
        &quot;u_mi_sham_hefitzam_yhwh&quot;)
 
@@ -740,4 +754,4 @@ if __name__ == &quot;__main__&quot;:
     assert len(m.EVENTS) == 15
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">FROZEN 2026-08-03 (second-generation derivation agent; freeze-after-review by the main loop — NO agent freeze; seventh unit under the PIPELINE + DEBUT-MAP process, the agent&#x27;s third and LAST before planned succession): twenty-sixth-unit candidate — BABEL; sixteenth extension-free derivation candidate in a row. Two speech-worlds in one grammar, and the machine mirrors the letter&#x27;s symmetry and its asymmetries alike: the corpus&#x27;s FIRST HUMAN CMD-US demands (gen_06&#x27;s council class in human mouths — 11:4&#x27;s verb is NAASEH itself, 1:26&#x27;s verb with 1:26&#x27;s final-heh form-problem and 1:26&#x27;s mood-mark; the mood-split by form recorded: -ah-marked volitives plain CMD-US per TIR-033, the final-heh pair CMD-US? per TIR-028); the corpus&#x27;s FIRST ABANDONED PROJECT (four human demands open forever over the chadal cessation-fact; NO install — every install precedent was a completed build; no interpreter extension: the open queue plus the fact IS the letter&#x27;s state); the fear granted VERBATIM inside one unit (pen-nafutz -&gt; va-yafetz, putz tokens 2-3 on 10:18&#x27;s staged debut) [internal arc]; the descent that SEES and never judges (gen_19&#x27;s class; no TEST — while Onkelos inserts the verdict: &#x27;was REVEALED to PUNISH&#x27;; dual-track); the divine counter-council in the mirrored havah grammar, its confuse-demand POPPED by its own root returning as deed (navlah -&gt; balal: the echo-receipt class — SETTLED CYCLE #5, the confuse-cycle) and its descend-demand left open (the letter records one descent only); the al-ken formula&#x27;s THIRD genre (a NAME-etiology as PATTERN, no registry write — gen_24&#x27;s report-naming rule; the bavel/balal pun the etiology&#x27;s engine, kept doubled in the buffer). The debut-field held as letter facts (davar, am, rea, nasa, zamam, migdal, chadal, batzar; the saphah run vs the table&#x27;s lashon — leveled in the buffer; the sevenfold shem/sham soundplay census-verified; the YHWH-only span countering gen_22&#x27;s Elohim-only; the Babel-to-Egypt material rerun). Machine state: t0 empty, ZERO installs (+1 presupposed), zero registry writes, SIX demands pushed / ONE popped / FIVE open at rest, zero tests, one pattern, twelve facts, one read-flag — a ruin at rest, filed under its own pun.</div><p class='meta'>Rendered 2026-08-08 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">FROZEN 2026-08-03 (second-generation derivation agent; freeze-after-review by the main loop — NO agent freeze; seventh unit under the PIPELINE + DEBUT-MAP process, the agent&#x27;s third and LAST before planned succession): twenty-sixth-unit candidate — BABEL; sixteenth extension-free derivation candidate in a row. Two speech-worlds in one grammar, and the machine mirrors the letter&#x27;s symmetry and its asymmetries alike: the corpus&#x27;s FIRST HUMAN CMD-US demands (gen_06&#x27;s council class in human mouths — 11:4&#x27;s verb is NAASEH itself, 1:26&#x27;s verb with 1:26&#x27;s final-heh form-problem and 1:26&#x27;s mood-mark; the mood-split by form recorded: -ah-marked volitives plain CMD-US per TIR-033, the final-heh pair CMD-US? per TIR-028); the corpus&#x27;s FIRST ABANDONED PROJECT (four human demands open forever over the chadal cessation-fact; NO install — every install precedent was a completed build; no interpreter extension: the open queue plus the fact IS the letter&#x27;s state); the fear granted VERBATIM inside one unit (pen-nafutz -&gt; va-yafetz, putz tokens 2-3 on 10:18&#x27;s staged debut) [internal arc]; the descent that SEES and never judges (gen_19&#x27;s class; no TEST — while Onkelos inserts the verdict: &#x27;was REVEALED to PUNISH&#x27;; dual-track); the divine counter-council in the mirrored havah grammar, its confuse-demand POPPED by its own root returning as deed (navlah -&gt; balal: the echo-receipt class — SETTLED CYCLE #5, the confuse-cycle) and its descend-demand left open (the letter records one descent only); the al-ken formula&#x27;s THIRD genre (a NAME-etiology as PATTERN, no registry write — gen_24&#x27;s report-naming rule; the bavel/balal pun the etiology&#x27;s engine, kept doubled in the buffer). The debut-field held as letter facts (davar, am, rea, nasa, zamam, migdal, chadal, batzar; the saphah run vs the table&#x27;s lashon — leveled in the buffer; the sevenfold shem/sham soundplay census-verified; the YHWH-only span countering gen_22&#x27;s Elohim-only; the Babel-to-Egypt material rerun). Machine state: t0 empty, ZERO installs (+1 presupposed), zero registry writes, SIX demands pushed / ONE popped / FIVE open at rest, zero tests, one pattern, twelve facts, one read-flag — a ruin at rest, filed under its own pun.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

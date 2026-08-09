@@ -19,16 +19,17 @@ m = Machine("gen_08_toledot_garden_first_rule")
 # "These are the generations of the heaven and of the earth when they were
 # created, in the day that the LORD God made earth and heaven."
 m.step("Gen.2.4")
-# ‹אֵלֶּה תוֹלְדוֹת הַשָּׁמַיִם וְהָאָרֶץ› section generations: heavens,
-# earth
+# ‹אֵלֶּה תוֹלְדוֹת הַשָּׁמַיִם וְהָאָרֶץ› (“these generations the-heavens
+# and-the-earth”) — section generations: heavens, earth
 m.section("toledot", "shamayim", "aretz")
-# ‹בְּיוֹם עֲשׂוֹת יְהוָה אֱלֹהִים אֶרֶץ וְשָׁמָיִם› clock anchored: t0 :=
-# in-the-day-of-[His]-making
+# ‹בְּיוֹם עֲשׂוֹת יְהוָה אֱלֹהִים אֶרֶץ וְשָׁמָיִם› (“in-day making YHWH
+# God earth and-heavens”) — clock anchored: t0 := in-the-day-of-[His]-making
 m.time_anchor("be_yom_asot")
 # reads without prior install (flag, not fix): heavens, earth
 m.presupposed("shamayim", "aretz")
-# ‹יְהוָה אֱלֹהִים› spec-delta — spec said God (the week's sole agent name,
-# gen-01-07), delivery says the-LORD-God (compound: personal name + generic)
+# ‹יְהוָה אֱלֹהִים› (“YHWH God”) — spec-delta — spec said God (the week's
+# sole agent name, gen-01-07), delivery says the-LORD-God (compound:
+# personal name + generic)
 m.spec_delta("Elohim (the week's sole agent name, gen_01-07)",
              "YHWH_Elohim (compound: personal name + generic)")
 
@@ -40,10 +41,10 @@ m.spec_delta("Elohim (the week's sole agent name, gen_01-07)",
 # yet sprung up; for the LORD God had not caused it to rain upon the earth,
 # and there was not a man to till the ground."
 m.step("Gen.2.5")
-# ‹טֶרֶם … טֶרֶם … לֹא הִמְטִיר … וְאָדָם אַיִן› fact holds: not-yet(all-
-# shrub-the-field); not-yet(all-herb-the-field); had-not-caused-rain(the-
-# LORD-God, over-the-earth); no-human-existed(to-work-obj-marker·et-the-
-# ground)
+# ‹טֶרֶם … טֶרֶם … לֹא הִמְטִיר … וְאָדָם אַיִן› (“not-yet … not-yet … not
+# caused-rain … and-human there-is-not”) — fact holds: not-yet(all-shrub-
+# the-field); not-yet(all-herb-the-field); had-not-caused-rain(the-LORD-God,
+# over-the-earth); no-human-existed(to-work-obj-marker·et-the-ground)
 m.fact("terem(kol_siach_ha_sadeh)",
        "terem(kol_esev_ha_sadeh)",
        "lo_himtir(YHWH_Elohim, al_ha_aretz)",
@@ -56,8 +57,8 @@ m.presupposed("adamah")
 # "But there went up a mist from the earth, and watered the whole face of
 # the ground."
 m.step("Gen.2.6")
-# ‹וְאֵד יַעֲלֶה … וְהִשְׁקָה› fact holds: mist-went-up-and-watered(all-
-# face-of-the-ground)
+# ‹וְאֵד יַעֲלֶה … וְהִשְׁקָה› (“and-mist would-rise … and-would-water”) —
+# fact holds: mist-went-up-and-watered(all-face-of-the-ground)
 m.fact("ed_yaaleh_ve_hishqah(kol_pnei_ha_adamah)")
 
 # -------------------------- Gen.2.7 · FORM_BREATHE_BECOME ------------------
@@ -66,16 +67,18 @@ m.fact("ed_yaaleh_ve_hishqah(kol_pnei_ha_adamah)")
 # "Then the LORD God formed man of the dust of the ground, and breathed into
 # his nostrils the breath of life; and man became a living soul."
 m.step("Gen.2.7")
-# ‹וַיִּיצֶר יְהוָה אֱלֹהִים אֶת־הָאָדָם עָפָר מִן־הָאֲדָמָה› event: form —
-# agent the-LORD-God; theme human
+# ‹וַיִּיצֶר יְהוָה אֱלֹהִים אֶת־הָאָדָם עָפָר מִן־הָאֲדָמָה› (“and-he-
+# formed YHWH God obj-marker the-human dust from the-ground”) — event: form
+# — agent the-LORD-God; theme human
 m.event("form", agent="YHWH_Elohim", themes=["adam"])
-# ‹וַיִּפַּח בְּאַפָּיו נִשְׁמַת חַיִּים› event: breathe — agent the-LORD-
-# God; theme breath-of-life
+# ‹וַיִּפַּח בְּאַפָּיו נִשְׁמַת חַיִּים› (“and-he-breathed in-his-nostrils
+# breath-of life”) — event: breathe — agent the-LORD-God; theme breath-of-
+# life
 m.event("breathe", agent="YHWH_Elohim", themes=["nishmat_chayim"])
-# ‹וַיְהִי הָאָדָם לְנֶפֶשׁ חַיָּה› event: become — theme human, living-
-# being
+# ‹וַיְהִי הָאָדָם לְנֶפֶשׁ חַיָּה› (“and-he-became the-human to-living-
+# being living”) — event: become — theme human, living-being
 m.event("become", themes=["adam", "nefesh_chaya"])
-# ‹הָאָדָם› the world gains: human
+# ‹הָאָדָם› (“the-human”) — the world gains: human
 m.install("adam")
 # spec-delta — spec said create/make (create/make — the week's build verbs),
 # delivery says he-formed (form — the potter verb, double-yod written-form)
@@ -88,13 +91,15 @@ m.spec_delta("bara/asah (create/make — the week's build verbs)",
 # "And the LORD God planted a garden eastward, in Eden; and there He put the
 # man whom He had formed."
 m.step("Gen.2.8")
-# ‹וַיִּטַּע יְהוָה אֱלֹהִים גַּן־בְּעֵדֶן מִקֶּדֶם› event: plant — agent
-# the-LORD-God; theme garden
+# ‹וַיִּטַּע יְהוָה אֱלֹהִים גַּן־בְּעֵדֶן מִקֶּדֶם› (“and-he-planted YHWH
+# God garden in-Eden from-east-or-of-old”) — event: plant — agent the-LORD-
+# God; theme garden
 m.event("plant", agent="YHWH_Elohim", themes=["gan"])
-# ‹וַיָּשֶׂם שָׁם אֶת־הָאָדָם אֲשֶׁר יָצָר› event: place — agent the-LORD-
-# God; theme human
+# ‹וַיָּשֶׂם שָׁם אֶת־הָאָדָם אֲשֶׁר יָצָר› (“and-he-set there obj-marker
+# the-human whom he-formed”) — event: place — agent the-LORD-God; theme
+# human
 m.event("place", agent="YHWH_Elohim", themes=["adam"])
-# ‹גַּן› the world gains: garden
+# ‹גַּן› (“garden”) — the world gains: garden
 m.install("gan")
 # reads without prior install (flag, not fix): Eden
 m.presupposed("eden")
@@ -106,11 +111,13 @@ m.presupposed("eden")
 # pleasant to the sight, and good for food; the tree of life also in the
 # midst of the garden, and the tree of the knowledge of good and evil."
 m.step("Gen.2.9")
-# ‹וַיַּצְמַח יְהוָה אֱלֹהִים מִן־הָאֲדָמָה כָּל־עֵץ› event: sprout — agent
-# the-LORD-God; theme all-tree
+# ‹וַיַּצְמַח יְהוָה אֱלֹהִים מִן־הָאֲדָמָה כָּל־עֵץ› (“and-he-caused-sprout
+# YHWH God from the-ground all tree”) — event: sprout — agent the-LORD-God;
+# theme all-tree
 m.event("sprout", agent="YHWH_Elohim", themes=["kol_etz"])
-# ‹וְעֵץ הַחַיִּים בְּתוֹךְ הַגָּן וְעֵץ הַדַּעַת טוֹב וָרָע› the world
-# gains: tree-of-life, tree-of-knowledge-of-good-and-evil
+# ‹וְעֵץ הַחַיִּים בְּתוֹךְ הַגָּן וְעֵץ הַדַּעַת טוֹב וָרָע› (“and-tree-of
+# the-life in-midst the-garden and-tree-of the-knowledge good and-evil”) —
+# the world gains: tree-of-life, tree-of-knowledge-of-good-and-evil
 m.install("etz_ha_chayim", "etz_ha_daat_tov_va_ra")
 # spec-delta — spec said good as TEST verdict (the week's instrument, days
 # 1-6), delivery says good as attribute (good to-food; gold good 2:12;
@@ -124,12 +131,13 @@ m.spec_delta("tov as TEST verdict (the week's instrument, days 1-6)",
 # "And a river went out of Eden to water the garden; and from thence it was
 # parted, and became four heads."
 m.step("Gen.2.10")
-# ‹וְנָהָר יֹצֵא … יִפָּרֵד וְהָיָה› fact holds: river-goes-out-from-
-# Eden(to-water-obj-marker·et-the-garden); divides-to-four-heads(river)
+# ‹וְנָהָר יֹצֵא … יִפָּרֵד וְהָיָה› (“and-river goes-out … divides and-
+# becomes”) — fact holds: river-goes-out-from-Eden(to-water-obj-marker·et-
+# the-garden); divides-to-four-heads(river)
 m.fact("nahar_yotze_me_eden(le_hashqot_et_ha_gan)",
        "yipared_le_arbaah_rashim(nahar)")
-# ‹וְהָיָה לְאַרְבָּעָה רָאשִׁים› the world gains: river, river-1, river-2,
-# river-3, river-4
+# ‹וְהָיָה לְאַרְבָּעָה רָאשִׁים› (“and-becomes to-four heads”) — the world
+# gains: river, river-1, river-2, river-3, river-4
 m.install("nahar", "nahar_1", "nahar_2", "nahar_3", "nahar_4")
 
 # -------------------------- Gen.2.11 · REGISTRY_ROW_1 ----------------------
@@ -138,10 +146,12 @@ m.install("nahar", "nahar_1", "nahar_2", "nahar_3", "nahar_4")
 # "The name of the first is Pishon; that is it which compasseth the whole
 # land of Havilah, where there is gold."
 m.step("Gen.2.11")
-# ‹שֵׁם הָאֶחָד פִּישׁוֹן› named: river-1 := Pishon
+# ‹שֵׁם הָאֶחָד פִּישׁוֹן› (“name-of the-first Pison”) — named: river-1 :=
+# Pishon
 m.name("nahar_1", "Pishon")
-# ‹הוּא הַסֹּבֵב … אֲשֶׁר־שָׁם הַזָּהָב› fact holds: circling-all-earth-the-
-# Havilah(river-1); there-the-gold(Havilah)
+# ‹הוּא הַסֹּבֵב … אֲשֶׁר־שָׁם הַזָּהָב› (“he/it the-circling … which name-
+# of the-gold”) — fact holds: circling-all-earth-the-Havilah(river-1);
+# there-the-gold(Havilah)
 m.fact("sovev_kol_eretz_ha_chavilah(nahar_1)",
        "sham_ha_zahav(chavilah)")
 
@@ -149,9 +159,10 @@ m.fact("sovev_kol_eretz_ha_chavilah(nahar_1)",
 # וּזְהַב הָאָרֶץ הַהִוא טוֹב שָׁם הַבְּדֹלַח וְאֶבֶן הַשֹּׁהַם
 # "And the gold of that land is good; there is bdellium and the onyx stone."
 m.step("Gen.2.12")
-# ‹וּזְהַב הָאָרֶץ הַהִוא טוֹב שָׁם הַבְּדֹלַח וְאֶבֶן הַשֹּׁהַם› fact
-# holds: gold-good(the-earth-the-that-one-ktiv-hu-qere-hi); there-the-
-# bdellium-and-stone-of-the-shoham(Havilah)
+# ‹וּזְהַב הָאָרֶץ הַהִוא טוֹב שָׁם הַבְּדֹלַח וְאֶבֶן הַשֹּׁהַם› (“and-
+# gold-of the-earth that-one-ktiv-hu-qere-hi good there the-bdellium and-
+# stone-of the-shoham”) — fact holds: gold-good(the-earth-the-that-one-ktiv-
+# hu-qere-hi); there-the-bdellium-and-stone-of-the-shoham(Havilah)
 m.fact("zahav_tov(ha_aretz_ha_hiv)",
        "sham_ha_bedolach_ve_even_ha_shoham(chavilah)")
 
@@ -160,10 +171,11 @@ m.fact("zahav_tov(ha_aretz_ha_hiv)",
 # "And the name of the second river is Gihon; the same is it that compasseth
 # the whole land of Cush."
 m.step("Gen.2.13")
-# ‹וְשֵׁם־הַנָּהָר הַשֵּׁנִי גִּיחוֹן› named: river-2 := Gichon
+# ‹וְשֵׁם־הַנָּהָר הַשֵּׁנִי גִּיחוֹן› (“and-name the-river the-second
+# Gihon”) — named: river-2 := Gichon
 m.name("nahar_2", "Gichon")
-# ‹הוּא הַסּוֹבֵב אֵת כָּל־אֶרֶץ כּוּשׁ› fact holds: circling-all-earth-
-# Chush(river-2)
+# ‹הוּא הַסּוֹבֵב אֵת כָּל־אֶרֶץ כּוּשׁ› (“he/it the-circling obj-marker all
+# earth Chush”) — fact holds: circling-all-earth-Chush(river-2)
 m.fact("sovev_kol_eretz_kush(nahar_2)")
 
 # -------------------------- Gen.2.14 · REGISTRY_ROWS_3_4 -------------------
@@ -172,11 +184,12 @@ m.fact("sovev_kol_eretz_kush(nahar_2)")
 # "And the name of the third river is Hiddekel; that is it which goeth
 # toward the east of Asshur. And the fourth river is the Euphrates."
 m.step("Gen.2.14")
-# ‹חִדֶּקֶל … וְהַנָּהָר הָרְבִיעִי הוּא פְרָת› named: river-3 := Chidekel;
-# river-4 := Perat
+# ‹חִדֶּקֶל … וְהַנָּהָר הָרְבִיעִי הוּא פְרָת› (“Hiddekel … and-the-river
+# the-fourth he/it Perat”) — named: river-3 := Chidekel; river-4 := Perat
 m.name("nahar_3", "Chidekel")
 m.name("nahar_4", "Perat")
-# ‹הוּא הַהֹלֵךְ קִדְמַת אַשּׁוּר› fact holds: going-east-of-Asshur(river-3)
+# ‹הוּא הַהֹלֵךְ קִדְמַת אַשּׁוּר› (“he/it the-going east-of Asshur”) — fact
+# holds: going-east-of-Asshur(river-3)
 m.fact("holekh_qidmat_ashur(nahar_3)")
 
 # -------------------------- Gen.2.15 · TAKE_SETTLE_ASSIGN_JOB --------------
@@ -185,13 +198,14 @@ m.fact("holekh_qidmat_ashur(nahar_3)")
 # "And the LORD God took the man, and put him into the garden of Eden to
 # dress it and to keep it."
 m.step("Gen.2.15")
-# ‹וַיִּקַּח יְהוָה אֱלֹהִים אֶת־הָאָדָם› event: take — agent the-LORD-God;
-# theme human
+# ‹וַיִּקַּח יְהוָה אֱלֹהִים אֶת־הָאָדָם› (“and-he-took YHWH God obj-marker
+# the-human”) — event: take — agent the-LORD-God; theme human
 m.event("take", agent="YHWH_Elohim", themes=["adam"])
-# ‹וַיַּנִּחֵהוּ בְגַן־עֵדֶן› event: settle — agent the-LORD-God; theme
-# human
+# ‹וַיַּנִּחֵהוּ בְגַן־עֵדֶן› (“and-settled-him in-garden-of Eden”) — event:
+# settle — agent the-LORD-God; theme human
 m.event("settle", agent="YHWH_Elohim", themes=["adam"])
-# ‹לְעָבְדָהּ וּלְשָׁמְרָהּ› role assigned: human -> worker-and-keeper
+# ‹לְעָבְדָהּ וּלְשָׁמְרָהּ› (“to-work-her and-to-keep-her”) — role
+# assigned: human -> worker-and-keeper
 m.assign("adam", "oved_ve_shomer")
 
 # -------------------------- Gen.2.16 · COMMAND_PERMISSION ------------------
@@ -199,11 +213,12 @@ m.assign("adam", "oved_ve_shomer")
 # "And the LORD God commanded the man, saying: 'Of every tree of the garden
 # thou mayest freely eat.'"
 m.step("Gen.2.16")
-# ‹וַיְצַו יְהוָה אֱלֹהִים עַל־הָאָדָם לֵאמֹר› event: command — agent the-
-# LORD-God; theme human
+# ‹וַיְצַו יְהוָה אֱלֹהִים עַל־הָאָדָם לֵאמֹר› (“and-he-commanded YHWH God
+# upon the-human saying”) — event: command — agent the-LORD-God; theme human
 m.event("command", agent="YHWH_Elohim", themes=["adam"])
-# ‹מִכֹּל עֵץ־הַגָּן אָכֹל תֹּאכֵל› the-LORD-God speaks a demand — LET?:
-# eat(human, from-every-tree-of-the-garden)
+# ‹מִכֹּל עֵץ־הַגָּן אָכֹל תֹּאכֵל› (“from-all tree-of the-garden eating
+# you-may-eat”) — the-LORD-God speaks a demand — LET?: eat(human, from-
+# every-tree-of-the-garden)
 m.declare("YHWH_Elohim", "LET?",
           "akhal(adam, mi_kol_etz_ha_gan)")
 # spec-delta — spec said all herb + all tree to-food (1:29 universal food
@@ -218,21 +233,24 @@ m.spec_delta("kol esev + kol etz le-okhlah (1:29 universal food grant)",
 # "'But of the tree of the knowledge of good and evil, thou shalt not eat of
 # it; for in the day that thou eatest thereof thou shalt surely die.'"
 m.step("Gen.2.17")
-# ‹וּמֵעֵץ הַדַּעַת טוֹב וָרָע לֹא תֹאכַל מִמֶּנּוּ› the-LORD-God speaks a
-# demand — LET-NOT: eat(human, from-the-tree-of-knowledge-of-good-and-evil)
+# ‹וּמֵעֵץ הַדַּעַת טוֹב וָרָע לֹא תֹאכַל מִמֶּנּוּ› (“and-from-tree-of the-
+# knowledge good and-evil not you-shall-eat from-it”) — the-LORD-God speaks
+# a demand — LET-NOT: eat(human, from-the-tree-of-knowledge-of-good-and-
+# evil)
 m.declare("YHWH_Elohim", "LET-NOT",
           "akhal(adam, me_etz_ha_daat_tov_va_ra)")
-# ‹כִּי בְּיוֹם אֲכָלְךָ מִמֶּנּוּ מוֹת תָּמוּת› standing handler — if in-
-# day-eat(human, from-the-tree-of-knowledge-of-good-and-evil) then dying-
-# you-shall-die(human)
+# ‹כִּי בְּיוֹם אֲכָלְךָ מִמֶּנּוּ מוֹת תָּמוּת› (“for in-day-of your-eating
+# from-it dying you-shall-die”) — standing handler — if in-day-eat(human,
+# from-the-tree-of-knowledge-of-good-and-evil) then dying-you-shall-
+# die(human)
 m.handler("be_yom_akhal(adam, me_etz_ha_daat_tov_va_ra)",
           "mot_tamut(adam)")
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
-    assert m.created_set() == {'gan', 'etz_ha_daat_tov_va_ra', 'nahar', 'nahar_1', 'etz_ha_chayim', 'adam', 'nahar_3', 'nahar_2', 'nahar_4'}
-    assert m.presupposed_set() == {'aretz', 'adamah', 'eden', 'shamayim'}
+    assert m.created_set() == {'nahar_3', 'nahar_2', 'adam', 'nahar_4', 'nahar', 'gan', 'nahar_1', 'etz_ha_chayim', 'etz_ha_daat_tov_va_ra'}
+    assert m.presupposed_set() == {'adamah', 'aretz', 'shamayim', 'eden'}
     assert m.REGISTRY["names"] == {'nahar_1': 'Pishon', 'nahar_2': 'Gichon', 'nahar_3': 'Chidekel', 'nahar_4': 'Perat', 'adam': 'oved_ve_shomer'}
     assert m.REGISTRY["writes"] == 5
     assert m.tests_list() == []

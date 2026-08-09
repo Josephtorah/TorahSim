@@ -21,12 +21,14 @@ m = Machine("gen_33_shaddai_covenant_flesh")
 # and said unto him: 'I am God Almighty; walk before Me, and be thou
 # wholehearted."
 m.step("Gen.17.1")
-# ‹וַיֵּרָא יְהוָה אֶל־אַבְרָם› event: appear — agent the-LORD
+# ‹וַיֵּרָא יְהוָה אֶל־אַבְרָם› (“and-see YHWH to Abram”) — event: appear —
+# agent the-LORD
 m.event("appear", agent="YHWH")
-# ‹אֲנִי־אֵל שַׁדַּי› fact holds: ani-to-shaddai
+# ‹אֲנִי־אֵל שַׁדַּי› (“strength Almighty”) — fact holds: ani-to-shaddai
 m.fact("ani_el_shaddai")
-# ‹הִתְהַלֵּךְ לְפָנַי וֶהְיֵה תָמִים› the-LORD speaks a demand — LET:
-# walked-about-and-heyeh-tamim(avram, before-Me)
+# ‹הִתְהַלֵּךְ לְפָנַי וֶהְיֵה תָמִים› (“walk/go to-face-me/my and-be
+# entire”) — the-LORD speaks a demand — LET: walk/go-and-heyeh-entire(Abram,
+# before-Me)
 m.declare("YHWH", "LET",
           "hithalekh_ve_heyeh_tamim(avram, lefanai)")
 
@@ -36,8 +38,9 @@ m.declare("YHWH", "LET",
 # exceedingly.'"
 m.step("Gen.17.2")
 # ‹וְאֶתְּנָה בְרִיתִי בֵּינִי וּבֵינֶךָ וְאַרְבֶּה אוֹתְךָ בִּמְאֹד מְאֹד›
-# fact holds: and-etnah-vriti-beini-and-veinekha; and-I-will-multiply-otkha-
-# bi-very-very
+# (“and-set covenant-me/my between-me/my and-between-you/your and-multiply
+# obj-marker-you/your in-very very”) — fact holds: and-etnah-vriti-beini-
+# and-veinekha; and-I-will-multiply-otkha-bi-very-very
 m.fact("ve_etnah_vriti_beini_u_veinekha",
        "ve_arbeh_otkha_bi_meod_meod")
 
@@ -45,9 +48,11 @@ m.fact("ve_etnah_vriti_beini_u_veinekha",
 # וַיִּפֹּל אַבְרָם עַל־פָּנָיו וַיְדַבֵּר אִתּוֹ אֱלֹהִים לֵאמֹר
 # "And Abram fell on his face; and God talked with him, saying:"
 m.step("Gen.17.3")
-# ‹וַיִּפֹּל אַבְרָם עַל־פָּנָיו› event: fall — agent avram
+# ‹וַיִּפֹּל אַבְרָם עַל־פָּנָיו› (“and-fall Abram over face-him/its”) —
+# event: fall — agent Abram
 m.event("fall", agent="avram")
-# ‹וַיְדַבֵּר אִתּוֹ אֱלֹהִים לֵאמֹר› event: speak — agent God
+# ‹וַיְדַבֵּר אִתּוֹ אֱלֹהִים לֵאמֹר› (“and-speak with-him/its God to-say”)
+# — event: speak — agent God
 m.event("speak", agent="elohim")
 
 # -------------------------- Gen.17.4 · THE_FATHER_OF_MULTITUDE_CHARTER -----
@@ -55,8 +60,9 @@ m.event("speak", agent="elohim")
 # "'As for Me, behold, My covenant is with thee, and thou shalt be the
 # father of a multitude of nations."
 m.step("Gen.17.4")
-# ‹אֲנִי הִנֵּה בְרִיתִי אִתָּךְ וְהָיִיתָ לְאַב הֲמוֹן גּוֹיִם› fact holds:
-# ani-hineh-vriti-with-you; and-hayita-to-father-hamon-goyim
+# ‹אֲנִי הִנֵּה בְרִיתִי אִתָּךְ וְהָיִיתָ לְאַב הֲמוֹן גּוֹיִם› (“behold
+# covenant-me/my with-you/your and-be to-father noise nation”) — fact holds:
+# ani-hineh-vriti-with-you; and-be-to-father-noise-nation
 m.fact("ani_hineh_vriti_itakh",
        "ve_hayita_le_av_hamon_goyim")
 
@@ -66,8 +72,10 @@ m.fact("ani_hineh_vriti_itakh",
 # "Neither shall thy name any more be called Abram, but thy name shall be
 # Abraham; for the father of a multitude of nations have I made thee."
 m.step("Gen.17.5")
-# ‹וְלֹא־יִקָּרֵא עוֹד אֶת־שִׁמְךָ אַבְרָם וְהָיָה שִׁמְךָ אַבְרָהָם› fact
-# holds: not-yiqare-od-shimkha-avram; and-was-shimkha-avraham
+# ‹וְלֹא־יִקָּרֵא עוֹד אֶת־שִׁמְךָ אַבְרָם וְהָיָה שִׁמְךָ אַבְרָהָם› (“and-
+# not call still/again obj-marker name-you/your Abram and-be name-you/your
+# Abraham”) — fact holds: not-call-still/again-shimkha-Abram; and-was-
+# shimkha-Abraham
 m.fact("lo_yiqare_od_shimkha_avram",
        "ve_hayah_shimkha_avraham")
 
@@ -77,8 +85,10 @@ m.fact("lo_yiqare_od_shimkha_avram",
 # "And I will make thee exceeding fruitful, and I will make nations of thee,
 # and kings shall come out of thee."
 m.step("Gen.17.6")
-# ‹וְהִפְרֵתִי אֹתְךָ בִּמְאֹד מְאֹד וּמְלָכִים מִמְּךָ יֵצֵאוּ› fact holds:
-# and-hifreti-otkha-bi-very-very; and-melakhim-mimkha-yetzeu
+# ‹וְהִפְרֵתִי אֹתְךָ בִּמְאֹד מְאֹד וּמְלָכִים מִמְּךָ יֵצֵאוּ› (“and-be-
+# fruitful obj-marker-you/your in-very very and-king from-you/your bring-
+# forth”) — fact holds: and-be-fruitful-otkha-bi-very-very; and-king-mimkha-
+# bring-forth
 m.fact("ve_hifreti_otkha_bi_meod_meod",
        "u_melakhim_mimkha_yetzeu")
 
@@ -89,9 +99,10 @@ m.fact("ve_hifreti_otkha_bi_meod_meod",
 # thee throughout their generations for an everlasting covenant, to be a God
 # unto thee and to thy seed after thee."
 m.step("Gen.17.7")
-# ‹וַהֲקִמֹתִי אֶת־בְּרִיתִי … לִבְרִית עוֹלָם לִהְיוֹת לְךָ לֵאלֹהִים› fact
-# holds: and-haqimoti-My-covenant-to-me-vrit-olam; to-me-being-to-you-to-
-# lohim
+# ‹וַהֲקִמֹתִי אֶת־בְּרִיתִי … לִבְרִית עוֹלָם לִהְיוֹת לְךָ לֵאלֹהִים›
+# (“and-arise obj-marker covenant-me/my … to-covenant forever to-be to-
+# you/your to-God”) — fact holds: and-arise-obj-marker-My-covenant-to-me-
+# vrit-forever; to-me-being-to-you-to-lohim
 m.fact("va_haqimoti_et_briti_li_vrit_olam",
        "li_heyot_lekha_le_lohim")
 
@@ -103,8 +114,10 @@ m.fact("va_haqimoti_et_briti_li_vrit_olam",
 # will be their God.'"
 m.step("Gen.17.8")
 # ‹וְנָתַתִּי … אֵת אֶרֶץ מְגֻרֶיךָ … לַאֲחֻזַּת עוֹלָם וְהָיִיתִי לָהֶם
-# לֵאלֹהִים› fact holds: and-natati-earth-megurekha-to-achuzat-olam; and-
-# hayiti-to-them-to-lohim
+# לֵאלֹהִים› (“and-set … obj-marker earth sojourning-you/your … to-
+# something-seized forever and-be to-them/their to-God”) — fact holds: and-
+# set-obj-marker-earth-megurekha-to-something-seized-forever; and-be-to-
+# them-to-lohim
 m.fact("ve_natati_et_eretz_megurekha_la_achuzat_olam",
        "ve_hayiti_lahem_le_lohim")
 
@@ -114,10 +127,12 @@ m.fact("ve_natati_et_eretz_megurekha_la_achuzat_olam",
 # "And God said unto Abraham: 'And as for thee, thou shalt keep My covenant,
 # thou, and thy seed after thee throughout their generations."
 m.step("Gen.17.9")
-# ‹וַיֹּאמֶר אֱלֹהִים אֶל־אַבְרָהָם› event: say — agent God
+# ‹וַיֹּאמֶר אֱלֹהִים אֶל־אַבְרָהָם› (“and-say God to Abraham”) — event: say
+# — agent God
 m.event("say", agent="elohim")
-# ‹וְאַתָּה אֶת־בְּרִיתִי תִשְׁמֹר› God speaks a demand — LET?:
-# tishmor(avraham, My-covenant)
+# ‹וְאַתָּה אֶת־בְּרִיתִי תִשְׁמֹר› (“and-you obj-marker covenant-me/my
+# keep/guard”) — God speaks a demand — LET?: keep/guard(Abraham, obj-marker-
+# My-covenant)
 m.declare("elohim", "LET?",
           "tishmor(avraham, et_briti)")
 
@@ -127,8 +142,9 @@ m.declare("elohim", "LET?",
 # "This is My covenant, which ye shall keep, between Me and you and thy seed
 # after thee: every male among you shall be circumcised."
 m.step("Gen.17.10")
-# ‹זֹאת בְּרִיתִי אֲשֶׁר תִּשְׁמְרוּ … הִמּוֹל לָכֶם כָּל־זָכָר› fact holds:
-# this-My-covenant-which-tishmeru; himol-lakhem-all-male
+# ‹זֹאת בְּרִיתִי אֲשֶׁר תִּשְׁמְרוּ … הִמּוֹל לָכֶם כָּל־זָכָר› (“this
+# covenant-me/my which keep/guard … circumcise to-you/your(pl) all male”) —
+# fact holds: this-My-covenant-which-tishmeru; circumcise-lakhem-all-male
 m.fact("zot_briti_asher_tishmeru",
        "himol_lakhem_kol_zakhar")
 
@@ -138,8 +154,10 @@ m.fact("zot_briti_asher_tishmeru",
 # "And ye shall be circumcised in the flesh of your foreskin; and it shall
 # be a token of a covenant betwixt Me and you."
 m.step("Gen.17.11")
-# ‹וּנְמַלְתֶּם אֵת בְּשַׂר עָרְלַתְכֶם וְהָיָה לְאוֹת בְּרִית› fact holds:
-# and-nemaltem-besar-arlatkhem; and-was-to-ot-brit
+# ‹וּנְמַלְתֶּם אֵת בְּשַׂר עָרְלַתְכֶם וְהָיָה לְאוֹת בְּרִית› (“and-be-
+# circumcised obj-marker flesh foreskin-you/your(pl) and-be to-signs
+# covenant”) — fact holds: and-be-circumcised-obj-marker-flesh-arlatkhem;
+# and-was-to-signs-brit
 m.fact("u_nemaltem_et_besar_arlatkhem",
        "ve_hayah_le_ot_brit")
 
@@ -150,9 +168,10 @@ m.fact("u_nemaltem_et_besar_arlatkhem",
 # throughout your generations, he that is born in the house, or bought with
 # money of any foreigner, that is not of thy seed."
 m.step("Gen.17.12")
-# ‹וּבֶן־שְׁמֹנַת יָמִים יִמּוֹל לָכֶם כָּל־זָכָר› standing handler — if
-# ben-shemonat-seas ∧ all-male-to-doroteikhem then yimol ∧ yelid-bayit-and-
-# miqnat-kesef-bi-khlal
+# ‹וּבֶן־שְׁמֹנַת יָמִים יִמּוֹל לָכֶם כָּל־זָכָר› (“and-son number day
+# circumcise to-you/your(pl) all male”) — standing handler — if son-number-
+# day ∧ all-male-to-doroteikhem then circumcise ∧ born-house-and-buying-
+# silver-bi-khlal
 m.handler("ben_shemonat_yamim ∧ kol_zakhar_le_doroteikhem",
           "yimol ∧ yelid_bayit_u_miqnat_kesef_bi_khlal")
 
@@ -163,8 +182,10 @@ m.handler("ben_shemonat_yamim ∧ kol_zakhar_le_doroteikhem",
 # needs be circumcised; and My covenant shall be in your flesh for an
 # everlasting covenant."
 m.step("Gen.17.13")
-# ‹הִמּוֹל יִמּוֹל … וְהָיְתָה בְרִיתִי בִּבְשַׂרְכֶם לִבְרִית עוֹלָם› fact
-# holds: himol-yimol-yelid-beitkha; vriti-bi-vesarkhem-to-me-vrit-olam
+# ‹הִמּוֹל יִמּוֹל … וְהָיְתָה בְרִיתִי בִּבְשַׂרְכֶם לִבְרִית עוֹלָם›
+# (“circumcise circumcise … and-be covenant-me/my in-flesh-you/your(pl) to-
+# covenant forever”) — fact holds: circumcise-circumcise-born-beitkha;
+# vriti-bi-vesarkhem-to-me-vrit-forever
 m.fact("himol_yimol_yelid_beitkha",
        "vriti_bi_vesarkhem_li_vrit_olam")
 
@@ -176,8 +197,10 @@ m.fact("himol_yimol_yelid_beitkha",
 # covenant.'"
 m.step("Gen.17.14")
 # ‹וְעָרֵל זָכָר אֲשֶׁר לֹא־יִמּוֹל … וְנִכְרְתָה הַנֶּפֶשׁ הַהִוא
-# מֵעַמֶּיהָ› standing handler — if arel-male-which-not-yimol then and-
-# nikhrta-the-nefesh-the-hi-from-ameha ∧ My-covenant-hefar
+# מֵעַמֶּיהָ› (“and-uncircumcised male which not circumcise … and-cut the-
+# living-being that from-people-her/its”) — standing handler — if
+# uncircumcised-male-which-not-circumcise then and-cut-the-living-being-the-
+# hi-from-ameha ∧ obj-marker-My-covenant-break-up
 m.handler("arel_zakhar_asher_lo_yimol",
           "ve_nikhrta_ha_nefesh_ha_hi_me_ameha ∧ et_briti_hefar")
 
@@ -187,10 +210,12 @@ m.handler("arel_zakhar_asher_lo_yimol",
 # "And God said unto Abraham: 'As for Sarai thy wife, thou shalt not call
 # her name Sarai, but Sarah shall her name be."
 m.step("Gen.17.15")
-# ‹וַיֹּאמֶר אֱלֹהִים אֶל־אַבְרָהָם› event: say — agent God
+# ‹וַיֹּאמֶר אֱלֹהִים אֶל־אַבְרָהָם› (“and-say God to Abraham”) — event: say
+# — agent God
 m.event("say", agent="elohim")
-# ‹לֹא־תִקְרָא אֶת־שְׁמָהּ שָׂרָי כִּי שָׂרָה שְׁמָהּ› fact holds: not-
-# tiqra-shemah-saray; when-sarah-shemah
+# ‹לֹא־תִקְרָא אֶת־שְׁמָהּ שָׂרָי כִּי שָׂרָה שְׁמָהּ› (“not call obj-marker
+# name-her/its Sarai that Sarah name-her/its”) — fact holds: not-call-obj-
+# marker-shemah-Sarai; that-sarah-shemah
 m.fact("lo_tiqra_et_shemah_saray",
        "ki_sarah_shemah")
 
@@ -202,8 +227,9 @@ m.fact("lo_tiqra_et_shemah_saray",
 # shall be of her.'"
 m.step("Gen.17.16")
 # ‹וּבֵרַכְתִּי אֹתָהּ וְגַם נָתַתִּי מִמֶּנָּה לְךָ בֵּן … מַלְכֵי עַמִּים
-# מִמֶּנָּה יִהְיוּ› fact holds: and-verakhti-her-and-natati-mimenah-to-you-
-# ben; malkhei-amim-mimenah-yihyu
+# מִמֶּנָּה יִהְיוּ› (“and-bless obj-marker-her/its and-also set from-
+# her/its to-you/your son … king people from-her/its be”) — fact holds: and-
+# bless-her-and-set-mimenah-to-you-son; malkhei-people-mimenah-be
 m.fact("u_verakhti_otah_ve_natati_mimenah_lekha_ben",
        "malkhei_amim_mimenah_yihyu")
 
@@ -214,15 +240,18 @@ m.fact("u_verakhti_otah_ve_natati_mimenah_lekha_ben",
 # 'Shall a child be born unto him that is a hundred years old? and shall
 # Sarah, that is ninety years old, bear?'"
 m.step("Gen.17.17")
-# ‹וַיִּפֹּל אַבְרָהָם עַל־פָּנָיו› event: fall — agent avraham
+# ‹וַיִּפֹּל אַבְרָהָם עַל־פָּנָיו› (“and-fall Abraham over face-him/its”) —
+# event: fall — agent Abraham
 m.event("fall", agent="avraham")
-# ‹וַיִּצְחָק› event: laugh — agent avraham
+# ‹וַיִּצְחָק› (“and-laugh-outright”) — event: laugh — agent Abraham
 m.event("laugh", agent="avraham")
-# ‹וַיֹּאמֶר בְּלִבּוֹ› event: say — agent avraham
+# ‹וַיֹּאמֶר בְּלִבּוֹ› (“and-say in-heart-him/its”) — event: say — agent
+# Abraham
 m.event("say", agent="avraham")
 # ‹הַלְּבֶן מֵאָה־שָׁנָה יִוָּלֵד וְאִם־שָׂרָה הֲבַת־תִּשְׁעִים שָׁנָה
-# תֵּלֵד› fact holds: the-to-ven-hundred-year-yivaled; the-vat-tishim-year-
-# teled
+# תֵּלֵד› (“the-to-son hundred years bear-young and-if Sarah the-daughter
+# ninety years bear-young”) — fact holds: the-to-between-hundred-year-bear-
+# young; the-daughter-ninety-year-bear-young
 m.fact("ha_le_ven_meah_shanah_yivaled",
        "ha_vat_tishim_shanah_teled")
 
@@ -230,9 +259,11 @@ m.fact("ha_le_ven_meah_shanah_yivaled",
 # וַיֹּאמֶר אַבְרָהָם אֶל־הָאֱלֹהִים לוּ יִשְׁמָעֵאל יִחְיֶה לְפָנֶיךָ
 # "And Abraham said unto God: 'Oh that Ishmael might live before Thee!'"
 m.step("Gen.17.18")
-# ‹וַיֹּאמֶר אַבְרָהָם אֶל־הָאֱלֹהִים› event: say — agent avraham
+# ‹וַיֹּאמֶר אַבְרָהָם אֶל־הָאֱלֹהִים› (“and-say Abraham to the-God”) —
+# event: say — agent Abraham
 m.event("say", agent="avraham")
-# ‹לוּ יִשְׁמָעֵאל יִחְיֶה לְפָנֶיךָ› fact holds: lu-yishmael-yichyeh-
+# ‹לוּ יִשְׁמָעֵאל יִחְיֶה לְפָנֶיךָ› (“conditional-particle Ishmael live
+# to-face-you/your”) — fact holds: conditional-particle-Ishmael-yichyeh-
 # lefanekha
 m.fact("lu_yishmael_yichyeh_lefanekha")
 
@@ -244,11 +275,14 @@ m.fact("lu_yishmael_yichyeh_lefanekha")
 # shalt call his name Isaac; and I will establish My covenant with him for
 # an everlasting covenant for his seed after him."
 m.step("Gen.17.19")
-# ‹וַיֹּאמֶר אֱלֹהִים אֲבָל› event: say — agent God
+# ‹וַיֹּאמֶר אֱלֹהִים אֲבָל› (“and-say God nay”) — event: say — agent God
 m.event("say", agent="elohim")
 # ‹שָׂרָה … יֹלֶדֶת לְךָ בֵּן וְקָרָאתָ אֶת־שְׁמוֹ יִצְחָק וַהֲקִמֹתִי
-# אֶת־בְּרִיתִי אִתּוֹ› fact holds: sarah-yoledet-to-you-ben; and-qarata-
-# shemo-yitzchaq; and-haqimoti-My-covenant-with-him-to-me-vrit-olam
+# אֶת־בְּרִיתִי אִתּוֹ› (“Sarah … bear-young to-you/your son and-call obj-
+# marker name-him/its Isaac and-arise obj-marker covenant-me/my with-
+# him/its”) — fact holds: sarah-bear-young-to-you-son; and-call-obj-marker-
+# shemo-laugh-outright; and-arise-obj-marker-My-covenant-with-him-to-me-
+# vrit-forever
 m.fact("sarah_yoledet_lekha_ben",
        "ve_qarata_et_shemo_yitzchaq",
        "va_haqimoti_et_briti_ito_li_vrit_olam")
@@ -262,8 +296,9 @@ m.fact("sarah_yoledet_lekha_ben",
 # shall he beget, and I will make him a great nation."
 m.step("Gen.17.20")
 # ‹וּלְיִשְׁמָעֵאל שְׁמַעְתִּיךָ הִנֵּה בֵּרַכְתִּי אֹתוֹ … שְׁנֵים־עָשָׂר
-# נְשִׂיאִם יוֹלִיד› fact holds: and-to-yishmael-shematikha; hineh-berakhti-
-# it-bi-very-very; shneim-asar-nesiim-yolid
+# נְשִׂיאִם יוֹלִיד› (“and-to-Ishmael hear-you/your behold bless obj-marker-
+# him/its … two -teen prince bear-young”) — fact holds: and-to-Ishmael-
+# shematikha; hineh-bless-it-bi-very-very; shneim--teen-prince-bear-young
 m.fact("u_le_yishmael_shematikha",
        "hineh_berakhti_oto_bi_meod_meod",
        "shneim_asar_nesiim_yolid")
@@ -275,8 +310,10 @@ m.fact("u_le_yishmael_shematikha",
 # thee at this set time in the next year.'"
 m.step("Gen.17.21")
 # ‹וְאֶת־בְּרִיתִי אָקִים אֶת־יִצְחָק … לַמּוֹעֵד הַזֶּה בַּשָּׁנָה
-# הָאַחֶרֶת› fact holds: and-My-covenant-aqim-yitzchaq; to-moed-the-this-in-
-# the-year-the-acheret
+# הָאַחֶרֶת› (“and-obj-marker covenant-me/my arise with Isaac … to-seasons
+# the-this in-years the-hinder”) — fact holds: and-obj-marker-My-covenant-
+# arise-obj-marker-laugh-outright; to-seasons-the-this-in-the-year-the-
+# hinder
 m.fact("ve_et_briti_aqim_et_yitzchaq",
        "la_moed_ha_zeh_ba_shanah_ha_acheret")
 
@@ -284,9 +321,11 @@ m.fact("ve_et_briti_aqim_et_yitzchaq",
 # וַיְכַל לְדַבֵּר אִתּוֹ וַיַּעַל אֱלֹהִים מֵעַל אַבְרָהָם
 # "And He left off talking with him, and God went up from Abraham."
 m.step("Gen.17.22")
-# ‹וַיְכַל לְדַבֵּר אִתּוֹ› event: finish-speaking — agent God
+# ‹וַיְכַל לְדַבֵּר אִתּוֹ› (“and-be-complete to-speak with-him/its”) —
+# event: finish-speaking — agent God
 m.event("finish_speaking", agent="elohim")
-# ‹וַיַּעַל אֱלֹהִים מֵעַל אַבְרָהָם› event: ascend — agent God
+# ‹וַיַּעַל אֱלֹהִים מֵעַל אַבְרָהָם› (“and-go-up God from-over Abraham”) —
+# event: ascend — agent God
 m.event("ascend", agent="elohim")
 
 # -------------------------- Gen.17.23 · THE_SELFSAME_DAY_COMPLIANCE --------
@@ -302,16 +341,19 @@ m.event("ascend", agent="elohim")
 # circumcised, and Ishmael his son. And all the men of his house... were
 # circumcised with him."
 m.step("Gen.17.23")
-# ‹וַיִּקַּח אַבְרָהָם אֶת־יִשְׁמָעֵאל בְּנוֹ› event: take — agent avraham;
-# theme yishmael-and-all-men-of-beito
+# ‹וַיִּקַּח אַבְרָהָם אֶת־יִשְׁמָעֵאל בְּנוֹ› (“and-take Abraham obj-marker
+# Ishmael son-him/its”) — event: take — agent Abraham; theme Ishmael-and-
+# all-men-of-beito
 m.event("take", agent="avraham", themes=["yishmael_ve_khol_anshei_beito"])
 # ‹וַיָּמָל אֶת־בְּשַׂר עָרְלָתָם … נִמּוֹל אַבְרָהָם וְיִשְׁמָעֵאל בְּנוֹ …
-# נִמֹּלוּ אִתּוֹ› event: circumcise — agent avraham; theme all-male-in-men-
-# of-beito
+# נִמֹּלוּ אִתּוֹ› (“and-circumcise obj-marker flesh foreskin-them/their …
+# circumcise Abraham and-Ishmael son-him/its … circumcise with-him/its”) —
+# event: circumcise — agent Abraham; theme all-male-in-men-of-beito
 m.event("circumcise", agent="avraham", themes=["kol_zakhar_be_anshei_beito"])
-# ‹בְּעֶצֶם הַיּוֹם הַזֶּה … כַּאֲשֶׁר דִּבֶּר אִתּוֹ אֱלֹהִים› fact holds:
-# in-etzem-the-day-the-this; like-which-diber-with-him-God;
-# avraham-99-yishmael-13-in-himolam
+# ‹בְּעֶצֶם הַיּוֹם הַזֶּה … כַּאֲשֶׁר דִּבֶּר אִתּוֹ אֱלֹהִים› (“in-bone
+# the-day the-this … like-as/which speak with-him/its God”) — fact holds:
+# in-bone-the-day-the-this; like-which-speak-with-him-God;
+# Abraham-99-Ishmael-13-in-himolam
 m.fact("be_etzem_ha_yom_ha_zeh",
        "ka_asher_diber_ito_elohim",
        "avraham_99_yishmael_13_be_himolam")

@@ -19,10 +19,11 @@ m = Machine("gen_51_opened_womb_twelve_names")
 # "[EN-AID] And YHWH saw that Leah was hated, and He opened her womb; and
 # Rachel was barren."
 m.step("Gen.29.31")
-# ‹וַיִּפְתַּח אֶת־רַחְמָהּ› event: patach — agent the-LORD; theme rechem-
-# leah
+# ‹וַיִּפְתַּח אֶת־רַחְמָהּ› (“and-open-wide obj-marker womb-her/its”) —
+# event: patach — agent the-LORD; theme rechem-leah
 m.event("patach", agent="YHWH", themes=["rechem_leah"])
-# ‹וְרָחֵל עֲקָרָה› fact holds: senua(leah); aqara(rachel)
+# ‹וְרָחֵל עֲקָרָה› (“and-Rachel sterile”) — fact holds: hate(leah);
+# sterile(Rachel)
 m.fact("senua(leah)",
        "aqara(rachel)")
 
@@ -33,9 +34,11 @@ m.fact("senua(leah)",
 # Reuben, for she said: Because YHWH has seen my affliction; for now my
 # husband will love me."
 m.step("Gen.29.32")
-# ‹וַתַּהַר לֵאָה וַתֵּלֶד בֵּן› the world gains: ben-1-leah
+# ‹וַתַּהַר לֵאָה וַתֵּלֶד בֵּן› (“and-be-pregnant Leah and-bear-young son”)
+# — the world gains: son-1-leah
 m.install("ben_1_leah")
-# ‹וַתִּקְרָא שְׁמוֹ רְאוּבֵן› named: ben-1-leah := reuven
+# ‹וַתִּקְרָא שְׁמוֹ רְאוּבֵן› (“and-call name-him/its Reuben”) — named:
+# son-1-leah := Reuben
 m.name("ben_1_leah", "reuven")
 
 # -------------------------- Gen.29.33 · THE_SECOND_WRITE_SHIMON ------------
@@ -45,9 +48,11 @@ m.name("ben_1_leah", "reuven")
 # has heard that I am hated, He has given me this one also; and she called
 # his name Simeon."
 m.step("Gen.29.33")
-# ‹וַתַּהַר עוֹד וַתֵּלֶד בֵּן› the world gains: ben-2-leah
+# ‹וַתַּהַר עוֹד וַתֵּלֶד בֵּן› (“and-be-pregnant still/again and-bear-young
+# son”) — the world gains: son-2-leah
 m.install("ben_2_leah")
-# ‹וַתִּקְרָא שְׁמוֹ שִׁמְעוֹן› named: ben-2-leah := shimon
+# ‹וַתִּקְרָא שְׁמוֹ שִׁמְעוֹן› (“and-call name-him/its Simeon”) — named:
+# son-2-leah := Simeon
 m.name("ben_2_leah", "shimon")
 
 # -------------------------- Gen.29.34 · THE_THIRD_WRITE_LEVI ---------------
@@ -57,9 +62,11 @@ m.name("ben_2_leah", "shimon")
 # my husband will be joined to me, for I have borne him three sons;
 # therefore he called his name Levi."
 m.step("Gen.29.34")
-# ‹וַתַּהַר עוֹד וַתֵּלֶד בֵּן› the world gains: ben-3-leah
+# ‹וַתַּהַר עוֹד וַתֵּלֶד בֵּן› (“and-be-pregnant still/again and-bear-young
+# son”) — the world gains: son-3-leah
 m.install("ben_3_leah")
-# ‹קָרָא־שְׁמוֹ לֵוִי› named: ben-3-leah := levi
+# ‹קָרָא־שְׁמוֹ לֵוִי› (“call name-him/its Levi”) — named: son-3-leah :=
+# Levi
 m.name("ben_3_leah", "levi")
 
 # -------------------------- Gen.29.35 · THE_FOURTH_WRITE_YEHUDA ------------
@@ -69,9 +76,11 @@ m.name("ben_3_leah", "levi")
 # will praise YHWH; therefore she called his name Judah. And she ceased
 # bearing."
 m.step("Gen.29.35")
-# ‹וַתַּהַר עוֹד וַתֵּלֶד בֵּן› the world gains: ben-4-leah
+# ‹וַתַּהַר עוֹד וַתֵּלֶד בֵּן› (“and-be-pregnant still/again and-bear-young
+# son”) — the world gains: son-4-leah
 m.install("ben_4_leah")
-# ‹קָרְאָה שְׁמוֹ יְהוּדָה› named: ben-4-leah := yehuda
+# ‹קָרְאָה שְׁמוֹ יְהוּדָה› (“call name-him/its Judah”) — named: son-4-leah
+# := Judah
 m.name("ben_4_leah", "yehuda")
 
 # -------------------------- Gen.30.1 · THE_CHILDREN_DEMAND -----------------
@@ -81,7 +90,8 @@ m.name("ben_4_leah", "yehuda")
 # envied her sister; and she said to Jacob: Give me children, and if not, I
 # die."
 m.step("Gen.30.1")
-# ‹הָבָה־לִּי בָנִים› rachel speaks a demand — LET: hava-banim(yaaqov)
+# ‹הָבָה־לִּי בָנִים› (“give-ward to-me/my son”) — Rachel speaks a demand —
+# LET: hava-banim(Jacob)
 m.declare("rachel", "LET",
           "hava_banim(yaaqov)")
 
@@ -91,8 +101,9 @@ m.declare("rachel", "LET",
 # "[EN-AID] And Jacob's anger burned against Rachel, and he said: Am I in
 # the place of God, who has withheld from you the fruit of the womb?"
 m.step("Gen.30.2")
-# ‹הֲתַחַת אֱלֹהִים אָנֹכִי אֲשֶׁר־מָנַע מִמֵּךְ פְּרִי־בָטֶן› fact holds:
-# mana-God-peri-vaten(rachel)
+# ‹הֲתַחַת אֱלֹהִים אָנֹכִי אֲשֶׁר־מָנַע מִמֵּךְ פְּרִי־בָטֶן› (“the-under
+# God which debar-from-benefit from-you/your fruit belly”) — fact holds:
+# debar-from-benefit-God-fruit-belly(Rachel)
 m.fact("mana_Elohim_peri_vaten(rachel)")
 
 # -------------------------- Gen.30.3 · THE_SARAI_SCRIPT_RERUN --------------
@@ -101,7 +112,8 @@ m.fact("mana_Elohim_peri_vaten(rachel)")
 # "[EN-AID] And she said: Behold my maid Bilhah; go in to her, that she may
 # bear upon my knees, and I too may be built from her."
 m.step("Gen.30.3")
-# ‹בֹּא אֵלֶיהָ› rachel speaks a demand — LET: in-it-to-bilhah(yaaqov)
+# ‹בֹּא אֵלֶיהָ› (“come/bring to-her/its”) — Rachel speaks a demand — LET:
+# come/bring-to-bilhah(Jacob)
 m.declare("rachel", "LET",
           "bo_el_bilhah(yaaqov)")
 
@@ -110,15 +122,16 @@ m.declare("rachel", "LET",
 # "[EN-AID] And she gave him Bilhah her maid as a wife; and Jacob went in to
 # her."
 m.step("Gen.30.4")
-# ‹וַיָּבֹא אֵלֶיהָ יַעֲקֹב› demand settled (popped from the queue): in-it-
-# to-bilhah(yaaqov)
+# ‹וַיָּבֹא אֵלֶיהָ יַעֲקֹב› (“and-come/bring to-her/its Jacob”) — demand
+# settled (popped from the queue): come/bring-to-bilhah(Jacob)
 m.result("bo_el_bilhah(yaaqov)", tmark="t2")
 
 # -------------------------- Gen.30.5 · BILHAH_BEARS_A_SON ------------------
 # וַתַּהַר בִּלְהָה וַתֵּלֶד לְיַעֲקֹב בֵּן
 # "[EN-AID] And Bilhah conceived, and bore Jacob a son."
 m.step("Gen.30.5")
-# ‹וַתַּהַר בִּלְהָה וַתֵּלֶד לְיַעֲקֹב בֵּן› the world gains: ben-1-bilhah
+# ‹וַתַּהַר בִּלְהָה וַתֵּלֶד לְיַעֲקֹב בֵּן› (“and-be-pregnant Bilhah and-
+# bear-young to-Jacob son”) — the world gains: son-1-bilhah
 m.install("ben_1_bilhah")
 
 # -------------------------- Gen.30.6 · THE_FIFTH_WRITE_DAN -----------------
@@ -127,7 +140,8 @@ m.install("ben_1_bilhah")
 # "[EN-AID] And Rachel said: God has judged me, and has also heard my voice,
 # and has given me a son; therefore she called his name Dan."
 m.step("Gen.30.6")
-# ‹קָרְאָה שְׁמוֹ דָּן› named: ben-1-bilhah := dan
+# ‹קָרְאָה שְׁמוֹ דָּן› (“call name-him/its Daniel”) — named: son-1-bilhah
+# := Daniel
 m.name("ben_1_bilhah", "dan")
 
 # -------------------------- Gen.30.7 · BILHAH_BEARS_A_SECOND ---------------
@@ -135,7 +149,8 @@ m.name("ben_1_bilhah", "dan")
 # "[EN-AID] And Bilhah, Rachel's maid, conceived again, and bore Jacob a
 # second son."
 m.step("Gen.30.7")
-# ‹וַתַּהַר עוֹד וַתֵּלֶד בִּלְהָה› the world gains: ben-2-bilhah
+# ‹וַתַּהַר עוֹד וַתֵּלֶד בִּלְהָה› (“and-be-pregnant still/again and-bear-
+# young Bilhah”) — the world gains: son-2-bilhah
 m.install("ben_2_bilhah")
 
 # -------------------------- Gen.30.8 · THE_SIXTH_WRITE_NAFTALI -------------
@@ -144,7 +159,8 @@ m.install("ben_2_bilhah")
 # "[EN-AID] And Rachel said: Wrestlings of God I have wrestled with my
 # sister; indeed I have prevailed. And she called his name Naphtali."
 m.step("Gen.30.8")
-# ‹וַתִּקְרָא שְׁמוֹ נַפְתָּלִי› named: ben-2-bilhah := naftali
+# ‹וַתִּקְרָא שְׁמוֹ נַפְתָּלִי› (“and-call name-him/its Naphtali”) — named:
+# son-2-bilhah := Naphtali
 m.name("ben_2_bilhah", "naftali")
 
 # -------------------------- Gen.30.9 · THE_ZILPAH_MOVE ---------------------
@@ -154,30 +170,33 @@ m.name("ben_2_bilhah", "naftali")
 # her maid, and gave her to Jacob as a wife."
 m.step("Gen.30.9")
 # ‹וַתִּקַּח אֶת־זִלְפָּה שִׁפְחָתָהּ וַתִּתֵּן אֹתָהּ לְיַעֲקֹב לְאִשָּׁה›
-# fact holds: zilpah-given-to-yaaqov(leah)
+# (“and-take obj-marker Zilpah female-slave-her/its and-set obj-marker-
+# her/its to-Jacob to-woman”) — fact holds: zilpah-given-to-Jacob(leah)
 m.fact("zilpah_given_le_yaaqov(leah)")
 
 # -------------------------- Gen.30.10 · ZILPAH_BEARS_A_SON -----------------
 # וַתֵּלֶד זִלְפָּה שִׁפְחַת לֵאָה לְיַעֲקֹב בֵּן
 # "[EN-AID] And Zilpah, Leah's maid, bore Jacob a son."
 m.step("Gen.30.10")
-# ‹וַתֵּלֶד זִלְפָּה שִׁפְחַת לֵאָה לְיַעֲקֹב בֵּן› the world gains:
-# ben-1-zilpah
+# ‹וַתֵּלֶד זִלְפָּה שִׁפְחַת לֵאָה לְיַעֲקֹב בֵּן› (“and-bear-young Zilpah
+# female-slave Leah to-Jacob son”) — the world gains: son-1-zilpah
 m.install("ben_1_zilpah")
 
 # -------------------------- Gen.30.11 · THE_SEVENTH_WRITE_GAD_WRITTEN_AND_READ -
 # וַתֹּאמֶר לֵאָה בגד בָּא גָד וַתִּקְרָא אֶת־שְׁמוֹ גָּד
 # "[EN-AID] And Leah said: Fortune has come! And she called his name Gad."
 m.step("Gen.30.11")
-# ‹וַתִּקְרָא אֶת־שְׁמוֹ גָּד› named: ben-1-zilpah := gad
+# ‹וַתִּקְרָא אֶת־שְׁמוֹ גָּד› (“and-call obj-marker name-him/its Gad”) —
+# named: son-1-zilpah := fortune
 m.name("ben_1_zilpah", "gad")
 
 # -------------------------- Gen.30.12 · ZILPAH_BEARS_A_SECOND --------------
 # וַתֵּלֶד זִלְפָּה שִׁפְחַת לֵאָה בֵּן שֵׁנִי לְיַעֲקֹב
 # "[EN-AID] And Zilpah, Leah's maid, bore Jacob a second son."
 m.step("Gen.30.12")
-# ‹וַתֵּלֶד זִלְפָּה שִׁפְחַת לֵאָה בֵּן שֵׁנִי לְיַעֲקֹב› the world gains:
-# ben-2-zilpah
+# ‹וַתֵּלֶד זִלְפָּה שִׁפְחַת לֵאָה בֵּן שֵׁנִי לְיַעֲקֹב› (“and-bear-young
+# Zilpah female-slave Leah son second to-Jacob”) — the world gains:
+# son-2-zilpah
 m.install("ben_2_zilpah")
 
 # -------------------------- Gen.30.13 · THE_EIGHTH_WRITE_ASHER -------------
@@ -186,7 +205,8 @@ m.install("ben_2_zilpah")
 # "[EN-AID] And Leah said: In my happiness! For the daughters will call me
 # happy. And she called his name Asher."
 m.step("Gen.30.13")
-# ‹וַתִּקְרָא אֶת־שְׁמוֹ אָשֵׁר› named: ben-2-zilpah := which
+# ‹וַתִּקְרָא אֶת־שְׁמוֹ אָשֵׁר› (“and-call obj-marker name-him/its Asher”)
+# — named: son-2-zilpah := which
 m.name("ben_2_zilpah", "asher")
 
 # -------------------------- Gen.30.14 · THE_MANDRAKE_DEMAND ----------------
@@ -197,11 +217,11 @@ m.name("ben_2_zilpah", "asher")
 # in the field, and brought them to Leah his mother. And Rachel said to
 # Leah: Give me, please, of your son's mandrakes."
 m.step("Gen.30.14")
-# ‹וַיֵּלֶךְ רְאוּבֵן בִּימֵי קְצִיר־חִטִּים› fact holds: dudaim-found-by-
-# reuven(sade)
+# ‹וַיֵּלֶךְ רְאוּבֵן בִּימֵי קְצִיר־חִטִּים› (“and-go Reuben in-day severed
+# wheat”) — fact holds: boiler-found-by-Reuben(field)
 m.fact("dudaim_found_by_reuven(sade)")
-# ‹תְּנִי־נָא לִי מִדּוּדָאֵי בְּנֵךְ› rachel speaks a demand — LET: teni-
-# dudaim(leah)
+# ‹תְּנִי־נָא לִי מִדּוּדָאֵי בְּנֵךְ› (“set please to-me/my from-boiler
+# son-you/your”) — Rachel speaks a demand — LET: set-boiler(leah)
 m.declare("rachel", "LET",
           "teni_dudaim(leah)")
 
@@ -214,8 +234,9 @@ m.declare("rachel", "LET",
 # Therefore he shall lie with you tonight, in exchange for your son's
 # mandrakes."
 m.step("Gen.30.15")
-# ‹לָכֵן יִשְׁכַּב עִמָּךְ הַלַּיְלָה תַּחַת דּוּדָאֵי בְנֵךְ› fact holds:
-# laila-tachat-dudaim(exchange-set)
+# ‹לָכֵן יִשְׁכַּב עִמָּךְ הַלַּיְלָה תַּחַת דּוּדָאֵי בְנֵךְ› (“to-so lie-
+# down with-you/your the-night under boiler son-you/your”) — fact holds:
+# laila-under-boiler(exchange-set)
 m.fact("laila_tachat_dudaim(exchange_set)")
 
 # -------------------------- Gen.30.16 · THE_HIRE_NIGHT ---------------------
@@ -226,8 +247,8 @@ m.fact("laila_tachat_dudaim(exchange_set)")
 # to meet him and said: To me you shall come in, for hiring I have hired you
 # with my son's mandrakes. And he lay with her that night."
 m.step("Gen.30.16")
-# ‹שָׂכֹר שְׂכַרְתִּיךָ בְּדוּדָאֵי בְּנִי› fact holds: sakhor-
-# sekharticha(laila)
+# ‹שָׂכֹר שְׂכַרְתִּיךָ בְּדוּדָאֵי בְּנִי› (“hire hire-you/your in-boiler
+# son-me/my”) — fact holds: hire-sekharticha(laila)
 m.fact("sakhor_sekharticha(laila)")
 
 # -------------------------- Gen.30.17 · THE_FIFTH_SON_HEARD ----------------
@@ -235,9 +256,11 @@ m.fact("sakhor_sekharticha(laila)")
 # "[EN-AID] And God heard Leah, and she conceived and bore Jacob a fifth
 # son."
 m.step("Gen.30.17")
-# ‹וַיִּשְׁמַע אֱלֹהִים אֶל־לֵאָה› fact holds: shama-God-to-leah
+# ‹וַיִּשְׁמַע אֱלֹהִים אֶל־לֵאָה› (“and-hear God to Leah”) — fact holds:
+# hear-God-to-leah
 m.fact("shama_Elohim_el_leah")
-# ‹וַתַּהַר וַתֵּלֶד לְיַעֲקֹב בֵּן חֲמִישִׁי› the world gains: ben-5-leah
+# ‹וַתַּהַר וַתֵּלֶד לְיַעֲקֹב בֵּן חֲמִישִׁי› (“and-be-pregnant and-bear-
+# young to-Jacob son fifth”) — the world gains: son-5-leah
 m.install("ben_5_leah")
 
 # -------------------------- Gen.30.18 · THE_NINTH_WRITE_YISASHKHAR ---------
@@ -246,15 +269,17 @@ m.install("ben_5_leah")
 # "[EN-AID] And Leah said: God has given my wage, because I gave my maid to
 # my husband. And she called his name Issachar."
 m.step("Gen.30.18")
-# ‹וַתִּקְרָא שְׁמוֹ יִשָּׂשכָר› named: ben-5-leah := yisashkhar
+# ‹וַתִּקְרָא שְׁמוֹ יִשָּׂשכָר› (“and-call name-him/its Issachar”) — named:
+# son-5-leah := Issachar
 m.name("ben_5_leah", "yisashkhar")
 
 # -------------------------- Gen.30.19 · THE_SIXTH_SON ----------------------
 # וַתַּהַר עוֹד לֵאָה וַתֵּלֶד בֵּן־שִׁשִּׁי לְּיַעֲקֹב
 # "[EN-AID] And Leah conceived again, and bore Jacob a sixth son."
 m.step("Gen.30.19")
-# ‹וַתַּהַר עוֹד לֵאָה וַתֵּלֶד בֵּן־שִׁשִּׁי לְּיַעֲקֹב› the world gains:
-# ben-6-leah
+# ‹וַתַּהַר עוֹד לֵאָה וַתֵּלֶד בֵּן־שִׁשִּׁי לְּיַעֲקֹב› (“and-be-pregnant
+# still/again Leah and-bear-young son sixth to-Jacob”) — the world gains:
+# son-6-leah
 m.install("ben_6_leah")
 
 # -------------------------- Gen.30.20 · THE_TENTH_WRITE_ZEVULUN ------------
@@ -264,16 +289,19 @@ m.install("ben_6_leah")
 # time my husband will dwell with me, for I have borne him six sons. And she
 # called his name Zebulun."
 m.step("Gen.30.20")
-# ‹וַתִּקְרָא אֶת־שְׁמוֹ זְבֻלוּן› named: ben-6-leah := zevulun
+# ‹וַתִּקְרָא אֶת־שְׁמוֹ זְבֻלוּן› (“and-call obj-marker name-him/its
+# Zebulun”) — named: son-6-leah := Zebulun
 m.name("ben_6_leah", "zevulun")
 
 # -------------------------- Gen.30.21 · THE_ELEVENTH_WRITE_DINA ------------
 # וְאַחַר יָלְדָה בַּת וַתִּקְרָא אֶת־שְׁמָהּ דִּינָה
 # "[EN-AID] And afterward she bore a daughter, and called her name Dinah."
 m.step("Gen.30.21")
-# ‹וְאַחַר יָלְדָה בַּת› the world gains: bat-leah
+# ‹וְאַחַר יָלְדָה בַּת› (“and-after bear-young daughter”) — the world
+# gains: daughter-leah
 m.install("bat_leah")
-# ‹וַתִּקְרָא אֶת־שְׁמָהּ דִּינָה› named: bat-leah := dina
+# ‹וַתִּקְרָא אֶת־שְׁמָהּ דִּינָה› (“and-call obj-marker name-her/its
+# Dinah”) — named: daughter-leah := Dinah
 m.name("bat_leah", "dina")
 
 # -------------------------- Gen.30.22 · THE_REMEMBERING_AND_THE_OPENING ----
@@ -282,9 +310,11 @@ m.name("bat_leah", "dina")
 # "[EN-AID] And God remembered Rachel, and God heard her, and opened her
 # womb."
 m.step("Gen.30.22")
-# ‹וַיִּזְכֹּר אֱלֹהִים אֶת־רָחֵל› event: male — agent God; theme rachel
+# ‹וַיִּזְכֹּר אֱלֹהִים אֶת־רָחֵל› (“and-mark God obj-marker Rachel”) —
+# event: male — agent God; theme Rachel
 m.event("zakhar", agent="Elohim", themes=["rachel"])
-# ‹וַיִּפְתַּח אֶת־רַחְמָהּ› event: patach — agent God; theme rechem-rachel
+# ‹וַיִּפְתַּח אֶת־רַחְמָהּ› (“and-open-wide obj-marker womb-her/its”) —
+# event: patach — agent God; theme rechem-Rachel
 m.event("patach", agent="Elohim", themes=["rechem_rachel"])
 
 # -------------------------- Gen.30.23 · THE_REPROACH_GATHERED_NON_POP ------
@@ -292,10 +322,12 @@ m.event("patach", agent="Elohim", themes=["rechem_rachel"])
 # "[EN-AID] And she conceived and bore a son, and said: God has gathered
 # away my reproach."
 m.step("Gen.30.23")
-# ‹וַתַּהַר וַתֵּלֶד בֵּן› the world gains: ben-1-rachel
+# ‹וַתַּהַר וַתֵּלֶד בֵּן› (“and-be-pregnant and-bear-young son”) — the
+# world gains: son-1-Rachel
 m.install("ben_1_rachel")
-# ‹וַתֹּאמֶר אָסַף אֱלֹהִים אֶת־חֶרְפָּתִי› fact holds: asaf-God-
-# cherpati(rachel)
+# ‹וַתֹּאמֶר אָסַף אֱלֹהִים אֶת־חֶרְפָּתִי› (“and-say gather-for-any-purpose
+# God obj-marker contumely-me/my”) — fact holds: gather-for-any-purpose-God-
+# cherpati(Rachel)
 m.fact("asaf_Elohim_cherpati(rachel)")
 
 # -------------------------- Gen.30.24 · THE_TWELFTH_WRITE_YOSEF_THE_OPEN_CARD -
@@ -303,13 +335,14 @@ m.fact("asaf_Elohim_cherpati(rachel)")
 # "[EN-AID] And she called his name Joseph, saying: May YHWH add to me
 # another son."
 m.step("Gen.30.24")
-# ‹וַתִּקְרָא אֶת־שְׁמוֹ יוֹסֵף לֵאמֹר› named: ben-1-rachel := yosef
+# ‹וַתִּקְרָא אֶת־שְׁמוֹ יוֹסֵף לֵאמֹר› (“and-call obj-marker name-him/its
+# Joseph to-say”) — named: son-1-Rachel := Joseph
 m.name("ben_1_rachel", "yosef")
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
-    assert m.created_set() == {'bat_leah', 'ben_4_leah', 'ben_5_leah', 'ben_2_leah', 'ben_1_rachel', 'ben_1_leah', 'ben_1_bilhah', 'ben_3_leah', 'ben_2_bilhah', 'ben_2_zilpah', 'ben_6_leah', 'ben_1_zilpah'}
+    assert m.created_set() == {'ben_1_leah', 'ben_3_leah', 'ben_2_leah', 'ben_1_zilpah', 'ben_1_bilhah', 'ben_6_leah', 'ben_4_leah', 'ben_1_rachel', 'ben_2_zilpah', 'bat_leah', 'ben_5_leah', 'ben_2_bilhah'}
     assert m.presupposed_set() == set()
     assert m.REGISTRY["names"] == {'ben_1_leah': 'reuven', 'ben_2_leah': 'shimon', 'ben_3_leah': 'levi', 'ben_4_leah': 'yehuda', 'ben_1_bilhah': 'dan', 'ben_2_bilhah': 'naftali', 'ben_1_zilpah': 'gad', 'ben_2_zilpah': 'asher', 'ben_5_leah': 'yisashkhar', 'ben_6_leah': 'zevulun', 'bat_leah': 'dina', 'ben_1_rachel': 'yosef'}
     assert m.REGISTRY["writes"] == 12

@@ -21,8 +21,9 @@ m = Machine("gen_47_grudge_flight_paddan_send")
 # which his father had blessed him; and Esau said in his heart, Let the days
 # of mourning for my father draw near, and I will kill Jacob my brother."
 m.step("Gen.27.41")
-# ‹וַיִּשְׂטֹם … בְּלִבּוֹ … וְאַהַרְגָה› fact holds: esav-grudge; heart-
-# kill-intent
+# ‹וַיִּשְׂטֹם … בְּלִבּוֹ … וְאַהַרְגָה› (“and-lurk-for … in-heart-him/its
+# … and-smite-with-deadly-intent”) — fact holds: Esau-grudge; heart-kill-
+# intent
 m.fact("esav_grudge",
        "heart_kill_intent")
 
@@ -34,7 +35,8 @@ m.fact("esav_grudge",
 # sent and called Jacob her small son and said to him, Behold Esau your
 # brother is consoling himself concerning you to kill you."
 m.step("Gen.27.42")
-# ‹וַיֻּגַּד … מִתְנַחֵם … לְהָרְגֶךָ› fact holds: leak-and-delta
+# ‹וַיֻּגַּד … מִתְנַחֵם … לְהָרְגֶךָ› (“and-tell … sigh … to-smite-with-
+# deadly-intent-you/your”) — fact holds: leak-and-delta
 m.fact("leak_and_delta")
 
 # -------------------------- Gen.27.43 · THE_SHEMA_BE_QOLI_AND_FLIGHT_COMPOUND -
@@ -42,10 +44,12 @@ m.fact("leak_and_delta")
 # "[EN-AID] And now my son hear my voice; and arise, flee for yourself to
 # Laban my brother, to Haran."
 m.step("Gen.27.43")
-# ‹שְׁמַע בְּקֹלִי› rivqah speaks a demand — LET: hear-in-qoli-2(yaaqov)
+# ‹שְׁמַע בְּקֹלִי› (“hear in-voice/sound-me/my”) — rivqah speaks a demand —
+# LET: hear-in-qoli-2(Jacob)
 m.declare("rivqah", "LET",
           "shema_be_qoli_2(yaaqov)")
-# ‹וְקוּם בְּרַח› rivqah speaks a demand — LET: qum-berach-yashavta(yaaqov)
+# ‹וְקוּם בְּרַח› (“and-arise bolt”) — rivqah speaks a demand — LET: arise-
+# bolt-dwell/sit(Jacob)
 m.declare("rivqah", "LET",
           "qum_berach_yashavta(yaaqov)")
 
@@ -54,7 +58,8 @@ m.declare("rivqah", "LET",
 # "[EN-AID] And you shall dwell with him a few days, until your brother's
 # wrath turns back."
 m.step("Gen.27.44")
-# ‹וְיָשַׁבְתָּ … חֲמַת אָחִיךָ› fact holds: yashavta-third-member-attached
+# ‹וְיָשַׁבְתָּ … חֲמַת אָחִיךָ› (“and-dwell/sit … heat brother-you/your”) —
+# fact holds: dwell/sit-third-member-attached
 m.fact("yashavta_third_member_attached")
 
 # -------------------------- Gen.27.45 · THE_FORGET_SEND_TAKE_AND_BEREAVE_ARITHMETIC -
@@ -65,8 +70,8 @@ m.fact("yashavta_third_member_attached")
 # what you did to him; then I will send and take you from there. Why should
 # I be bereaved of both of you in one day?"
 m.step("Gen.27.45")
-# ‹וְשָׁכַח … וְשָׁלַחְתִּי … אֶשְׁכַּל› fact holds: rivqa-plan-forget-send-
-# take
+# ‹וְשָׁכַח … וְשָׁלַחְתִּי … אֶשְׁכַּל› (“and-forget … and-send …
+# miscarry”) — fact holds: Rebekah-plan-forget-send-take
 m.fact("rivqa_plan_forget_send_take")
 
 # -------------------------- Gen.27.46 · THE_PRESSURE_SPEECH_TO_ISAAC_HITTITE_LOATHE -
@@ -77,8 +82,8 @@ m.fact("rivqa_plan_forget_send_take")
 # daughters of Heth; if Jacob takes a wife from the daughters of Heth like
 # these, from the daughters of the land, why is life mine?"
 m.step("Gen.27.46")
-# ‹קַצְתִּי … לָמָּה לִּי חַיִּים› fact holds: rivqa-pressure-speech-to-
-# yitzchaq
+# ‹קַצְתִּי … לָמָּה לִּי חַיִּים› (“be-disgusted … to-what to-me/my alive”)
+# — fact holds: Rebekah-pressure-speech-to-Isaac
 m.fact("rivqa_pressure_speech_to_yitzchaq")
 
 # -------------------------- Gen.28.1 · THE_BLESS_EVENT_AND_CANAANITE_PROHIBITION -
@@ -87,9 +92,9 @@ m.fact("rivqa_pressure_speech_to_yitzchaq")
 # "[EN-AID] And Isaac called Jacob and blessed him, and commanded him and
 # said to him, You shall not take a wife from the daughters of Canaan."
 m.step("Gen.28.1")
-# ‹וַיְבָרֶךְ אֹתוֹ› event: ?
+# ‹וַיְבָרֶךְ אֹתוֹ› (“and-bless obj-marker-him/its”) — event: ?
 m.event("?")
-# ‹לֹא תִקַּח› fact holds: prohibition-not-tiqach-kenaanit
+# ‹לֹא תִקַּח› (“not take”) — fact holds: prohibition-not-take-kenaanit
 m.fact("prohibition_lo_tiqach_kenaanit")
 
 # -------------------------- Gen.28.2 · THE_QUM_LEKH_QACH_WIFE_COMPOUND -----
@@ -99,7 +104,8 @@ m.fact("prohibition_lo_tiqach_kenaanit")
 # father, and take for yourself from there a wife from the daughters of
 # Laban your mother's brother."
 m.step("Gen.28.2")
-# ‹קוּם לֵךְ … וְקַח› yitzchaq speaks a demand — LET: qum-lekh-qach(yaaqov)
+# ‹קוּם לֵךְ … וְקַח› (“arise go … and-take”) — Isaac speaks a demand — LET:
+# arise-go-take(Jacob)
 m.declare("yitzchaq", "LET",
           "qum_lekh_qach(yaaqov)")
 
@@ -109,7 +115,8 @@ m.declare("yitzchaq", "LET",
 # "[EN-AID] And may El Shaddai bless you and make you fruitful and multiply
 # you, and may you become an assembly of peoples."
 m.step("Gen.28.3")
-# ‹וְאֵל שַׁדַּי יְבָרֵךְ … וְיַרְבֶּךָ› fact holds: to-shaddai-limbs-staged
+# ‹וְאֵל שַׁדַּי יְבָרֵךְ … וְיַרְבֶּךָ› (“and-strength Almighty bless …
+# and-multiply-you/your”) — fact holds: to-shaddai-limbs-staged
 m.fact("el_shaddai_limbs_staged")
 
 # -------------------------- Gen.28.4 · THE_ABRAHAM_BLESSING_GRANT_PACKAGE_PUSH -
@@ -119,8 +126,8 @@ m.fact("el_shaddai_limbs_staged")
 # seed with you, to possess the land of your sojournings which God gave to
 # Abraham."
 m.step("Gen.28.4")
-# ‹וְיִתֶּן … בִּרְכַּת אַבְרָהָם› yitzchaq speaks a demand — LET: to-
-# shaddai-package(yaaqov)
+# ‹וְיִתֶּן … בִּרְכַּת אַבְרָהָם› (“and-set … blessing Abraham”) — Isaac
+# speaks a demand — LET: to-shaddai-package(Jacob)
 m.declare("yitzchaq", "LET",
           "el_shaddai_package(yaaqov)")
 
@@ -130,7 +137,8 @@ m.declare("yitzchaq", "LET",
 # "[EN-AID] And Isaac sent Jacob, and he went to Paddan-aram, to Laban son
 # of Bethuel the Aramean, brother of Rivqah mother of Jacob and Esau."
 m.step("Gen.28.5")
-# ‹וַיִּשְׁלַח … וַיֵּלֶךְ› fact holds: lekh-partial-return-no-pop
+# ‹וַיִּשְׁלַח … וַיֵּלֶךְ› (“and-send … and-go”) — fact holds: go-partial-
+# return-no-pop
 m.fact("lekh_partial_return_no_pop")
 
 # -------------------------- Gen.28.6 · THE_ESAU_SEES_BLESS_SEND_AND_QUOTE_REPLAY -
@@ -142,7 +150,8 @@ m.fact("lekh_partial_return_no_pop")
 # commanded him, saying, You shall not take a wife from the daughters of
 # Canaan."
 m.step("Gen.28.6")
-# ‹וַיַּרְא עֵשָׂו כִּי־בֵרַךְ› fact holds: esav-sees-bless-and-send
+# ‹וַיַּרְא עֵשָׂו כִּי־בֵרַךְ› (“and-see Esau that bless”) — fact holds:
+# Esau-sees-bless-and-send
 m.fact("esav_sees_bless_and_send")
 
 # -------------------------- Gen.28.7 · THE_VA_YISHMA_POP_AND_GO_NOT_FLEE ---
@@ -150,10 +159,11 @@ m.fact("esav_sees_bless_and_send")
 # "[EN-AID] And Jacob heeded his father and his mother, and went to Paddan-
 # aram."
 m.step("Gen.28.7")
-# ‹וַיִּשְׁמַע יַעֲקֹב› demand settled (popped from the queue): hear-in-
-# qoli-2(yaaqov)
+# ‹וַיִּשְׁמַע יַעֲקֹב› (“and-hear Jacob”) — demand settled (popped from the
+# queue): hear-in-qoli-2(Jacob)
 m.result("shema_be_qoli_2(yaaqov)", tmark="t1")
-# ‹וַיֵּלֶךְ פַּדֶּנָה אֲרָם› fact holds: yelekh-go-frame-not-flee-frame
+# ‹וַיֵּלֶךְ פַּדֶּנָה אֲרָם› (“and-go to-Padan Padan”) — fact holds: go-go-
+# frame-not-flee-frame
 m.fact("yelekh_go_frame_not_flee_frame")
 
 # -------------------------- Gen.28.8 · THE_SECOND_SEEING_EVIL_IN_THE_FATHERS_EYES -
@@ -161,8 +171,8 @@ m.fact("yelekh_go_frame_not_flee_frame")
 # "[EN-AID] And Esau saw that the daughters of Canaan were evil in the eyes
 # of Isaac his father."
 m.step("Gen.28.8")
-# ‹רָעוֹת … בְּעֵינֵי יִצְחָק› fact holds: esav-sees-canaanite-evil-in-
-# isaacs-eyes
+# ‹רָעוֹת … בְּעֵינֵי יִצְחָק› (“bad … in-eye Isaac”) — fact holds: Esau-
+# sees-canaanite-evil-in-isaacs-eyes
 m.fact("esav_sees_canaanite_evil_in_isaacs_eyes")
 
 # -------------------------- Gen.28.9 · THE_MIRROR_TAKE_MACHALAT_CODA -------
@@ -172,7 +182,8 @@ m.fact("esav_sees_canaanite_evil_in_isaacs_eyes")
 # son of Abraham, sister of Nebaioth, in addition to his wives, as his
 # wife."
 m.step("Gen.28.9")
-# ‹וַיִּקַּח אֶת־מָחֲלַת› fact holds: esav-mirror-take-machalat
+# ‹וַיִּקַּח אֶת־מָחֲלַת› (“and-take obj-marker Mahalath”) — fact holds:
+# Esau-mirror-take-Mahalath
 m.fact("esav_mirror_take_machalat")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

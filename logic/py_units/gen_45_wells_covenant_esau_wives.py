@@ -18,12 +18,13 @@ m = Machine("gen_45_wells_covenant_esau_wives")
 # "[EN-AID] And Isaac went from there and encamped in the wadi of Gerar, and
 # dwelt there."
 m.step("Gen.26.17")
-# ‹וַיֵּלֶךְ מִשָּׁם יִצְחָק› event: ?
+# ‹וַיֵּלֶךְ מִשָּׁם יִצְחָק› (“and-go from-there Isaac”) — event: ?
 m.event("?")
-# ‹וַיִּחַן בְּנַחַל־גְּרָר וַיֵּשֶׁב שָׁם› event: ?
+# ‹וַיִּחַן בְּנַחַל־גְּרָר וַיֵּשֶׁב שָׁם› (“and-encamp in-river Gerar and-
+# dwell/sit there”) — event: ?
 m.event("?")
-# ‹יִצְחָק … גְּרָר› reads without prior install (flag, not fix): yitzchaq,
-# gerar
+# ‹יִצְחָק … גְּרָר› (“Isaac … Gerar”) — reads without prior install (flag,
+# not fix): Isaac, Gerar
 m.presupposed("yitzchaq", "gerar")
 
 # -------------------------- Gen.26.18 · THE_REDIG_AND_THE_RESTORED_NAMES ---
@@ -36,10 +37,13 @@ m.presupposed("yitzchaq", "gerar")
 # Abraham's death; and he called them names like the names his father had
 # called them."
 m.step("Gen.26.18")
-# ‹וַיָּשָׁב … וַיַּחְפֹּר אֶת־בְּאֵרֹת הַמַּיִם› event: redig-wells — agent
-# yitzchaq; theme beerot-avraham
+# ‹וַיָּשָׁב … וַיַּחְפֹּר אֶת־בְּאֵרֹת הַמַּיִם› (“and-return … and-dig
+# obj-marker pit the-waters”) — event: redig-wells — agent Isaac; theme pit-
+# Abraham
 m.event("redig_wells", agent="yitzchaq", themes=["beerot_avraham"])
-# ‹וַיִּקְרָא לָהֶן שֵׁמוֹת כַּשֵּׁמוֹת אֲשֶׁר־קָרָא לָהֶן אָבִיו› event: ?
+# ‹וַיִּקְרָא לָהֶן שֵׁמוֹת כַּשֵּׁמוֹת אֲשֶׁר־קָרָא לָהֶן אָבִיו› (“and-
+# call to-them/their name like-the-names which call to-them/their father-
+# him/its”) — event: ?
 m.event("?")
 
 # -------------------------- Gen.26.19 · THE_WELL_OF_LIVING_WATER -----------
@@ -48,8 +52,9 @@ m.event("?")
 # "[EN-AID] And Isaac's servants dug in the wadi and found there a well of
 # living water."
 m.step("Gen.26.19")
-# ‹וַיַּחְפְּרוּ … וַיִּמְצְאוּ … בְּאֵר מַיִם חַיִּים› event: dig-and-find
-# — agent avde-yitzchaq; theme beer-waters-chayim
+# ‹וַיַּחְפְּרוּ … וַיִּמְצְאוּ … בְּאֵר מַיִם חַיִּים› (“and-dig … and-find
+# … pit waters living”) — event: dig-and-find — agent servant-Isaac; theme
+# pit-waters-living
 m.event("dig_and_find", agent="avde_yitzchaq", themes=["beer_mayim_chayim"])
 
 # -------------------------- Gen.26.20 · THE_QUARREL_AND_THE_NAME_ESEK ------
@@ -59,10 +64,11 @@ m.event("dig_and_find", agent="avde_yitzchaq", themes=["beer_mayim_chayim"])
 # saying: The water is ours. And he called the name of the well Esek,
 # because they contended with him."
 m.step("Gen.26.20")
-# ‹וַיָּרִיבוּ רֹעֵי גְרָר עִם־רֹעֵי יִצְחָק› event: quarrel — agent roe-
-# gerar
+# ‹וַיָּרִיבוּ רֹעֵי גְרָר עִם־רֹעֵי יִצְחָק› (“and-toss pastoral Gerar with
+# pastoral Isaac”) — event: quarrel — agent pastoral-Gerar
 m.event("quarrel", agent="roe_gerar")
-# ‹וַיִּקְרָא שֵׁם־הַבְּאֵר עֵשֶׂק› named: beer-eseq := eseq
+# ‹וַיִּקְרָא שֵׁם־הַבְּאֵר עֵשֶׂק› (“and-call name the-pit Esek”) — named:
+# pit-Esek := Esek
 m.name("beer_eseq", "eseq")
 
 # -------------------------- Gen.26.21 · THE_SECOND_WELL_SITNAH -------------
@@ -71,10 +77,12 @@ m.name("beer_eseq", "eseq")
 # "[EN-AID] And they dug another well, and they quarreled over it too; and
 # he called its name Sitnah."
 m.step("Gen.26.21")
-# ‹וַיַּחְפְּרוּ בְּאֵר אַחֶרֶת וַיָּרִיבוּ גַּם־עָלֶיהָ› event: dig-and-
-# quarrel — theme beer-acheret
+# ‹וַיַּחְפְּרוּ בְּאֵר אַחֶרֶת וַיָּרִיבוּ גַּם־עָלֶיהָ› (“and-dig pit
+# other and-toss also over-her/its”) — event: dig-and-quarrel — theme pit-
+# other
 m.event("dig_and_quarrel", themes=["beer_acheret"])
-# ‹וַיִּקְרָא שְׁמָהּ שִׂטְנָה› named: beer-sitna := sitna
+# ‹וַיִּקְרָא שְׁמָהּ שִׂטְנָה› (“and-call name-her/its Sitnah”) — named:
+# pit-Sitnah := Sitnah
 m.name("beer_sitna", "sitna")
 
 # -------------------------- Gen.26.22 · THE_THIRD_WELL_REHOBOTH ------------
@@ -85,20 +93,23 @@ m.name("beer_sitna", "sitna")
 # quarrel over it; and he called its name Rehoboth, and he said: For now
 # YHWH has made room for us, and we shall be fruitful in the land."
 m.step("Gen.26.22")
-# ‹וַיַּעְתֵּק … וַיַּחְפֹּר … וְלֹא רָבוּ› event: move-dig-no-quarrel —
-# agent yitzchaq
+# ‹וַיַּעְתֵּק … וַיַּחְפֹּר … וְלֹא רָבוּ› (“and-moved-on … and-dig … and-
+# not toss”) — event: move-dig-no-quarrel — agent Isaac
 m.event("move_dig_no_quarrel", agent="yitzchaq")
-# ‹וַיִּקְרָא שְׁמָהּ רְחֹבוֹת› named: beer-rechovot := rechovot
+# ‹וַיִּקְרָא שְׁמָהּ רְחֹבוֹת› (“and-call name-her/its Rehoboth”) — named:
+# pit-Rehoboth := Rehoboth
 m.name("beer_rechovot", "rechovot")
-# ‹כִּי־עַתָּה הִרְחִיב יְהוָה לָנוּ וּפָרִינוּ בָאָרֶץ› fact holds:
-# hirchiv-the-LORD-to-nu-and-farinu
+# ‹כִּי־עַתָּה הִרְחִיב יְהוָה לָנוּ וּפָרִינוּ בָאָרֶץ› (“that now broaden
+# YHWH to-us/our and-be-fruitful in-earth”) — fact holds: broaden-the-LORD-
+# to-us/our-and-be-fruitful
 m.fact("hirchiv_YHWH_la_nu_u_farinu")
 
 # -------------------------- Gen.26.23 · THE_ASCENT_TO_BEER_SHEBA -----------
 # וַיַּ֥עַל מִשָּׁ֖ם בְּאֵ֥ר שָֽׁבַע
 # "[EN-AID] And he went up from there to Beer-sheba."
 m.step("Gen.26.23")
-# ‹וַיַּעַל מִשָּׁם בְּאֵר שָׁבַע› event: go-up — agent yitzchaq
+# ‹וַיַּעַל מִשָּׁם בְּאֵר שָׁבַע› (“and-go-up from-there Beer-shebah”) —
+# event: go-up — agent Isaac
 m.event("go_up", agent="yitzchaq")
 
 # -------------------------- Gen.26.24 · THE_NIGHT_WORD_AND_AL_TIRA ---------
@@ -110,17 +121,19 @@ m.event("go_up", agent="yitzchaq")
 # Abraham your father; do not fear, for I am with you, and I will bless you
 # and multiply your seed for the sake of Abraham My servant."
 m.step("Gen.26.24")
-# ‹וַיֵּרָא אֵלָיו יְהוָה בַּלַּיְלָה הַהוּא וַיֹּאמֶר› event: appear-night
-# — agent the-LORD
+# ‹וַיֵּרָא אֵלָיו יְהוָה בַּלַּיְלָה הַהוּא וַיֹּאמֶר› (“and-see to-him/its
+# YHWH in-night that and-say”) — event: appear-night — agent the-LORD
 m.event("appear_night", agent="YHWH")
-# ‹אָנֹכִי אֱלֹהֵי אַבְרָהָם אָבִיךָ› fact holds: anokhi-elohe-avraham-avi-
-# kha
+# ‹אָנֹכִי אֱלֹהֵי אַבְרָהָם אָבִיךָ› (“God Abraham father-you/your”) — fact
+# holds: anokhi-God-Abraham-avi-kha
 m.fact("anokhi_elohe_avraham_avi_kha")
-# ‹אַל־תִּירָא› the-LORD speaks a demand — LET-NOT: tira(yitzchaq)
+# ‹אַל־תִּירָא› (“do-not fear”) — the-LORD speaks a demand — LET-NOT:
+# fear(Isaac)
 m.declare("YHWH", "LET-NOT",
           "tira(yitzchaq)")
-# ‹כִּי־אִתְּךָ אָנֹכִי וּבֵרַכְתִּיךָ וְהִרְבֵּיתִי אֶת־זַרְעֲךָ› fact
-# holds: kha-anokhi-and-verakhti-and-hirbeti
+# ‹כִּי־אִתְּךָ אָנֹכִי וּבֵרַכְתִּיךָ וְהִרְבֵּיתִי אֶת־זַרְעֲךָ› (“that
+# with-you/your and-bless-you/your and-multiply obj-marker seed-you/your”) —
+# fact holds: obj-marker-kha-anokhi-and-verakhti-and-multiply
 m.fact("et_kha_anokhi_u_verakhti_ve_hirbeti")
 
 # -------------------------- Gen.26.25 · THE_ALTAR_INVOCATION_AND_KARAH_DIG -
@@ -129,11 +142,13 @@ m.fact("et_kha_anokhi_u_verakhti_ve_hirbeti")
 # "[EN-AID] And he built an altar there and called on the name of YHWH, and
 # pitched his tent there; and Isaac's servants dug a well there."
 m.step("Gen.26.25")
-# ‹וַיִּבֶן שָׁם מִזְבֵּחַ … וַיֶּט שָׁם אָהֳלוֹ› event: ?
+# ‹וַיִּבֶן שָׁם מִזְבֵּחַ … וַיֶּט שָׁם אָהֳלוֹ› (“and-build there altar …
+# and-stretch there tent-him/its”) — event: ?
 m.event("?")
-# ‹וַיִּקְרָא בְּשֵׁם יְהוָה› event: ?
+# ‹וַיִּקְרָא בְּשֵׁם יְהוָה› (“and-call in-name YHWH”) — event: ?
 m.event("?")
-# ‹וַיִּכְרוּ שָׁם עַבְדֵי יִצְחָק בְּאֵר› event: ?
+# ‹וַיִּכְרוּ שָׁם עַבְדֵי יִצְחָק בְּאֵר› (“and-dig there servant Isaac
+# pit”) — event: ?
 m.event("?")
 
 # -------------------------- Gen.26.26 · THE_VISITORS_FROM_GERAR ------------
@@ -142,10 +157,11 @@ m.event("?")
 # "[EN-AID] And Abimelech went to him from Gerar, with Achuzzath his friend
 # and Phichol the commander of his army."
 m.step("Gen.26.26")
-# ‹וַאֲבִימֶלֶךְ הָלַךְ אֵלָיו מִגְּרָר› event: visit — agent avimelekh
+# ‹וַאֲבִימֶלֶךְ הָלַךְ אֵלָיו מִגְּרָר› (“and-Abimelech walk/go to-him/its
+# from-Gerar”) — event: visit — agent Abimelech
 m.event("visit", agent="avimelekh")
-# ‹אֲחֻזַּת … פִיכֹל› reads without prior install (flag, not fix): achuzat,
-# fikhol, merea
+# ‹אֲחֻזַּת … פִיכֹל› (“something-seized … Pikhol”) — reads without prior
+# install (flag, not fix): Ahuzzath, Phichol, merea
 m.presupposed("achuzat", "fikhol", "merea")
 
 # -------------------------- Gen.26.27 · THE_WHY_HAVE_YOU_COME --------------
@@ -154,7 +170,8 @@ m.presupposed("achuzat", "fikhol", "merea")
 # "[EN-AID] And Isaac said to them: Why have you come to me, seeing you hate
 # me and have sent me away from you?"
 m.step("Gen.26.27")
-# ‹וַיֹּאמֶר … מַדּוּעַ בָּאתֶם› event: say — agent yitzchaq
+# ‹וַיֹּאמֶר … מַדּוּעַ בָּאתֶם› (“and-say … what-known? come/bring”) —
+# event: say — agent Isaac
 m.event("say", agent="yitzchaq")
 
 # -------------------------- Gen.26.28 · THE_COVENANT_VOLITIVES -------------
@@ -165,15 +182,15 @@ m.event("say", agent="yitzchaq")
 # said: Let there be an oath between us, between us and you, and let us cut
 # a covenant with you."
 m.step("Gen.26.28")
-# ‹רָאוֹ רָאִינוּ כִּי־הָיָה יְהוָה עִמָּךְ› fact holds: rao-rainu-the-LORD-
-# ima-kha
+# ‹רָאוֹ רָאִינוּ כִּי־הָיָה יְהוָה עִמָּךְ› (“see see that be YHWH with-
+# you/your”) — fact holds: see-see-the-LORD-ima-kha
 m.fact("rao_rainu_YHWH_ima_kha")
-# ‹תְּהִי נָא אָלָה בֵּינוֹתֵינוּ› avimelekh-party speaks a demand — LET:
-# tehi(ala-between-us)
+# ‹תְּהִי נָא אָלָה בֵּינוֹתֵינוּ› (“be please imprecation between-us/our”)
+# — Abimelech-party speaks a demand — LET: be(imprecation-between-us)
 m.declare("avimelekh_party", "LET",
           "tehi(ala_between_us)")
-# ‹וְנִכְרְתָה בְרִית עִמָּךְ› avimelekh-party speaks a demand — CMD-US?:
-# nikhreta(berit-if-kha)
+# ‹וְנִכְרְתָה בְרִית עִמָּךְ› (“and-cut covenant with-her/its”) —
+# Abimelech-party speaks a demand — CMD-US?: nikhreta(berit-with-kha)
 m.declare("avimelekh_party", "CMD-US?",
           "nikhreta(berit_im_kha)")
 
@@ -185,18 +202,19 @@ m.declare("avimelekh_party", "CMD-US?",
 # we have done with you only good and have sent you away in peace; you are
 # now the blessed of YHWH."
 m.step("Gen.26.29")
-# ‹אִם־תַּעֲשֵׂה עִמָּנוּ רָעָה …› fact holds: if-taase-ima-nu-raa-oath-
-# content
+# ‹אִם־תַּעֲשֵׂה עִמָּנוּ רָעָה …› (“if make with-us/our bad”) — fact holds:
+# with-make-ima-us/our-bad-oath-content
 m.fact("im_taase_ima_nu_raa_oath_content")
-# ‹אַתָּה עַתָּה בְּרוּךְ יְהוָה› fact holds: ata-ata-berukh-the-LORD
+# ‹אַתָּה עַתָּה בְּרוּךְ יְהוָה› (“you now bless YHWH”) — fact holds: now-
+# now-bless-the-LORD
 m.fact("ata_ata_berukh_YHWH")
 
 # -------------------------- Gen.26.30 · THE_FEAST --------------------------
 # וַיַּ֤עַשׂ לָהֶם֙ מִשְׁתֶּ֔ה וַיֹּאכְל֖וּ וַיִּשְׁתּֽוּ
 # "[EN-AID] And he made them a feast, and they ate and drank."
 m.step("Gen.26.30")
-# ‹וַיַּעַשׂ … מִשְׁתֶּה וַיֹּאכְלוּ וַיִּשְׁתּוּ› event: feast-eat-drink —
-# agent yitzchaq-and-guests
+# ‹וַיַּעַשׂ … מִשְׁתֶּה וַיֹּאכְלוּ וַיִּשְׁתּוּ› (“and-make … drink and-
+# eat and-drink”) — event: feast-eat-drink — agent Isaac-and-guests
 m.event("feast_eat_drink", agent="yitzchaq_and_guests")
 
 # -------------------------- Gen.26.31 · THE_SWEAR_OTHER_VERB_CENTERPIECE ---
@@ -205,12 +223,14 @@ m.event("feast_eat_drink", agent="yitzchaq_and_guests")
 # "[EN-AID] And they rose early in the morning and swore each to his
 # brother; and Isaac sent them away, and they went from him in peace."
 m.step("Gen.26.31")
-# ‹וַיַּשְׁכִּימוּ … וַיִּשָּׁבְעוּ אִישׁ לְאָחִיו› event: ?
+# ‹וַיַּשְׁכִּימוּ … וַיִּשָּׁבְעוּ אִישׁ לְאָחִיו› (“and-rise-early … and-
+# swear man to-brother-him/its”) — event: ?
 m.event("?")
-# ‹וַיִּשָּׁבְעוּ ≠ תְּהִי / נִכְרְתָה› fact holds: other-verb-non-pop-tehi-
-# and-nikhreta
+# ‹וַיִּשָּׁבְעוּ ≠ תְּהִי / נִכְרְתָה› (“and-swear be cut”) — fact holds:
+# other-verb-non-pop-be-and-nikhreta
 m.fact("other_verb_non_pop_tehi_and_nikhreta")
-# ‹וַיְשַׁלְּחֵם יִצְחָק וַיֵּלְכוּ … בְּשָׁלוֹם› event: ?
+# ‹וַיְשַׁלְּחֵם יִצְחָק וַיֵּלְכוּ … בְּשָׁלוֹם› (“and-send-them/their
+# Isaac and-go … in-safe”) — event: ?
 m.event("?")
 
 # -------------------------- Gen.26.32 · THE_WELL_FOUND_REPORT --------------
@@ -221,8 +241,8 @@ m.event("?")
 # told him about the well that they had dug, and said to him: We have found
 # water."
 m.step("Gen.26.32")
-# ‹וַיַּגִּדוּ … מָצָאנוּ מָיִם› event: report-well-found — agent avde-
-# yitzchaq
+# ‹וַיַּגִּדוּ … מָצָאנוּ מָיִם› (“and-tell … find waters”) — event: report-
+# well-found — agent servant-Isaac
 m.event("report_well_found", agent="avde_yitzchaq")
 
 # -------------------------- Gen.26.33 · THE_NAME_SHIBAH_AND_THE_CITY_ETIOLOGY -
@@ -231,10 +251,12 @@ m.event("report_well_found", agent="avde_yitzchaq")
 # "[EN-AID] And he called it Shibah; therefore the name of the city is Beer-
 # sheba to this day."
 m.step("Gen.26.33")
-# ‹וַיִּקְרָא אֹתָהּ שִׁבְעָה› named: beer-shiva := shiva
+# ‹וַיִּקְרָא אֹתָהּ שִׁבְעָה› (“and-call obj-marker-her/its Shebah”) —
+# named: pit-Shebah := Shebah
 m.name("beer_shiva", "shiva")
-# ‹עַל־כֵּן שֵׁם הָעִיר בְּאֵר שֶׁבַע עַד הַיּוֹם הַזֶּה› fact holds: upon-
-# ken-shem-the-ir-beer-seven
+# ‹עַל־כֵּן שֵׁם הָעִיר בְּאֵר שֶׁבַע עַד הַיּוֹם הַזֶּה› (“over so name
+# the-city Beer-shebah until the-day the-this”) — fact holds: over-so-name-
+# the-city-pit-Beer-shebah
 m.fact("al_ken_shem_ha_ir_beer_sheva")
 
 # -------------------------- Gen.26.34 · ESAU_TAKES_TWO_HITTITE_WIVES -------
@@ -244,28 +266,30 @@ m.fact("al_ken_shem_ha_ir_beer_sheva")
 # "[EN-AID] And when Esau was forty years old he took as wife Judith
 # daughter of Beeri the Hittite, and Basemath daughter of Elon the Hittite."
 m.step("Gen.26.34")
-# ‹עֵשָׂו בֶּן־אַרְבָּעִים שָׁנָה› fact holds: esav-ben-arbaim-shana
+# ‹עֵשָׂו בֶּן־אַרְבָּעִים שָׁנָה› (“Esau son forty years”) — fact holds:
+# Esau-son-forty-years
 m.fact("esav_ben_arbaim_shana")
-# ‹וַיִּקַּח אִשָּׁה אֶת־יְהוּדִית … וְאֶת־בָּשְׂמַת› event: take-wives —
-# agent esav
+# ‹וַיִּקַּח אִשָּׁה אֶת־יְהוּדִית … וְאֶת־בָּשְׂמַת› (“and-take woman obj-
+# marker Judith … and-obj-marker Bashemath”) — event: take-wives — agent
+# Esau
 m.event("take_wives", agent="esav")
-# ‹יְהוּדִית … בָּשְׂמַת … בְּאֵרִי … אֵילוֹן› the world gains: yehudit,
-# basmat, beeri, elon
+# ‹יְהוּדִית … בָּשְׂמַת … בְּאֵרִי … אֵילוֹן› (“Judith … Bashemath … Beeri
+# … Elon”) — the world gains: Judith, Bashemath, Beeri, Elon
 m.install("yehudit", "basmat", "beeri", "elon")
 
 # -------------------------- Gen.26.35 · BITTERNESS_OF_SPIRIT ---------------
 # וַתִּהְיֶ֖יןָ מֹ֣רַת ר֑וּחַ לְיִצְחָ֖ק וּלְרִבְקָֽה
 # "[EN-AID] And they were a bitterness of spirit to Isaac and to Rivqah."
 m.step("Gen.26.35")
-# ‹מֹרַת רוּחַ לְיִצְחָק וּלְרִבְקָה› fact holds: morat-spirit-wind-to-
-# yitzchaq-and-to-rivqah
+# ‹מֹרַת רוּחַ לְיִצְחָק וּלְרִבְקָה› (“bitterness spirit to-Isaac and-to-
+# Rebekah”) — fact holds: bitterness-spirit-wind-to-Isaac-and-to-rivqah
 m.fact("morat_ruach_le_yitzchaq_u_le_rivqah")
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
     assert m.created_set() == {'yehudit', 'elon', 'basmat', 'beeri'}
-    assert m.presupposed_set() == {'achuzat', 'gerar', 'merea', 'fikhol', 'yitzchaq'}
+    assert m.presupposed_set() == {'yitzchaq', 'achuzat', 'gerar', 'fikhol', 'merea'}
     assert m.REGISTRY["names"] == {'beer_eseq': 'eseq', 'beer_sitna': 'sitna', 'beer_rechovot': 'rechovot', 'beer_shiva': 'shiva'}
     assert m.REGISTRY["writes"] == 4
     assert m.tests_list() == []

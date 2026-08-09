@@ -1,0 +1,108 @@
+# word_gloss_overrides.yaml — authored corrections to the SNAPSHOT DB's
+# per-word gloss column, used by gloss_db.py for the display layer (the
+# py renderings and any future renderer). Display-only: never touches
+# frozen YAMLs or machine truth.
+#
+#   by_gloss:    raw DB gloss -> replacement, EXACT match (wins first)
+#   replace:     ordered [from, to] substring fixes applied otherwise
+#   by_ref:      "Book.Ch.Vs:idx" -> replacement (context homographs; wins last)
+#   by_skeleton: bare consonantal token -> English (for span tokens whose
+#                spelling never matches a DB row — plene forms, rare names)
+
+by_gloss:
+  "?": ""
+  "to-?": "to"
+  "in-?": "in"
+  "from-?": "from"
+  "and-?": "and-I"           # both span stations are ve-anokhi ("and I")
+  "what-known?": "why?"
+  "where?-hence-how?": "how?"
+  "what-place?": "where?"
+  "hinder": "other"
+  "scan": "look"
+  "fore": "east-wind"
+  "the-fore": "the-east"
+  "erect": "possessor"
+  "prop": "lay"
+  "and-prop": "and-lay"
+  "the-he/it": "that"
+  "the-not": "is-it-not"
+  "to-strength": "to-God"
+  "from-front": "from-the-east"
+  "in-crossed": "for-the-sake-of"
+  "inter": "bury"
+  "and-inter": "and-bury"
+  "station": "stand"
+  "and-station": "and-stand"
+  "and-remove--figuratively": "and-moved-on"
+  "be--make-well": "do-well"
+
+replace:
+  - ["obj-marker·et", "obj-marker"]
+  - ["blood--of-man", "blood"]
+  - [" (pl)", "(pl)"]
+  - ["-suffix", "-ward"]
+  - ["Yᵉ'Or", "Nile"]
+  - ["heifer", "cow"]
+  - ["extremity", "end"]
+  - ["tend-a-flock", "graze"]
+  - ["bulrush", "reed-grass"]
+  - ["crushed", "thin"]
+  - ["view", "appearance"]
+  - ["temporary-abode", "sojourning"]
+  - ["box", "ark"]
+  - ["depress", "afflict"]
+  - ["hind-part", "after"]
+  - ["stream", "river"]
+  - ["thieve", "steal"]
+  - ["inclose", "close"]
+  - ["benediction", "blessing"]
+  - ["Eberite", "Hebrew"]
+  - ["sovereign", "lord"]
+  - ["something-stationed", "pillar"]
+  - ["something-born", "child"]
+  - ["pit-hole", "pit"]
+  - ["cardinal-number", "number"]
+  - ["payment-of-contract", "wage"]
+  - ["particle-of-affirmation", "indeed"]
+  - ["quaff", "give-drink"]
+  - ["imbibe", "drink"]
+  - ["be-high-actively", "rise-high"]
+  - ["be-liquid", "hasten"]
+  - ["copiousness", "plenty"]
+  - ["elevation", "Most-High"]
+  - ["make-away-with", "swallow"]
+  - ["be-flabby", "cease"]
+  - ["load-up", "rise-early"]
+  - ["pry-into", "dig"]
+  - ["cut-short", "circumcise"]
+  - ["become-clipped", "be-circumcised"]
+  - ["mislay", "forget"]
+  - ["prepuce", "foreskin"]
+  - ["stated-assemblage", "congregation"]
+  - ["descent", "generations"]
+  - ["mark-as-a-tally", "count"]
+  - ["score-with-a-count", "count"]
+  - ["--", "-"]
+
+by_ref:
+  "Gen.41.1:5": "dreaming"   # cholem — DB lemma gloss 'bind-firmly' is the wrong homograph
+  "Lev.4.15:1": "elders-of"  # zikne — same lemma as plain 'old', but construct 'elders' here
+
+by_skeleton:
+  # shibolim ("ears of grain") — the DB glosses the other homograph
+  # ("stream"); all 10 Torah tokens of this skeleton are Gen 41's ears
+  "שבלים": "ears-of-grain"
+  "השבלים": "the-ears-of-grain"
+  "פדנה": "to-Padan"
+  "ורחבת": "and-Rehoboth"
+  "וכלח": "and-Calah"
+  "ורסן": "and-Resen"
+  "ויחזיקו": "and-they-seized"
+  "מגדנת": "precious-things"
+  "אבידע": "Abida"
+  "אלדעה": "Eldaah"
+  "משמע": "Mishma"
+  "נשיאים": "chieftains"
+  "כשמות": "like-the-names"
+  "פיכל": "Pikhol"

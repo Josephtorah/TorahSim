@@ -673,9 +673,11 @@ m = Machine(&quot;lev_04_inadvertence_case_tree&quot;)
 # וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר
 # &quot;[EN-AID] And the LORD spoke to Moses, saying:&quot;
 m.step(&quot;Lev.4.1&quot;)
-# ‹וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר› event: speak — agent the-LORD
+# ‹וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר› (“and-speak YHWH to Moses to-say”)
+# — event: speak — agent the-LORD
 m.event(&quot;speak&quot;, agent=&quot;YHWH&quot;)
-# ‹אֶל־מֹשֶׁה› reads without prior install (flag, not fix): Moses
+# ‹אֶל־מֹשֶׁה› (“to Moses”) — reads without prior install (flag, not fix):
+# Moses
 m.presupposed(&quot;moshe&quot;)
 
 # -------------------------- Lev.4.2 · THE_RELAY_AND_THE_INTAKE -------------
@@ -685,13 +687,15 @@ m.presupposed(&quot;moshe&quot;)
 # inadvertence from any of the commandments of the LORD which shall not be
 # done, and does from one of them -&quot;
 m.step(&quot;Lev.4.2&quot;)
-# ‹דַּבֵּר אֶל־בְּנֵי יִשְׂרָאֵל לֵאמֹר› the-LORD speaks a demand — LET:
-# daber-to-bene-yisrael(Moses)
+# ‹דַּבֵּר אֶל־בְּנֵי יִשְׂרָאֵל לֵאמֹר› (“speak to son Israel to-say”) —
+# the-LORD speaks a demand — LET: speak-to-son-Israel(Moses)
 m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
           &quot;daber_el_bene_yisrael(moshe)&quot;)
 # ‹נֶפֶשׁ כִּי־תֶחֱטָא בִשְׁגָגָה מִכֹּל מִצְוֺת יְהוָה אֲשֶׁר לֹא
-# תֵעָשֶׂינָה וְעָשָׂה מֵאַחַת מֵהֵנָּה› case nefesh, techeta-vi-shegaga-
-# from-all-mitzvot routes to and-asa-from-achat-from-hena
+# תֵעָשֶׂינָה וְעָשָׂה מֵאַחַת מֵהֵנָּה› (“living-being that sin in-mistake
+# from-all commandment YHWH which not make and-make from-one from-
+# themselves”) — case living-being, sin-vi-shegaga-from-all-commandment
+# routes to and-make-from-one-from-themselves
 m.case(&quot;nefesh, techeta_vi_shegaga_mi_kol_mitzvot&quot;, &quot;ve_asa_me_achat_me_hena&quot;)
 
 # -------------------------- Lev.4.3 · BRANCH_ONE_THE_ANOINTED --------------
@@ -701,9 +705,10 @@ m.case(&quot;nefesh, techeta_vi_shegaga_mi_kol_mitzvot&quot;, &quot;ve_asa_me_ac
 # offer for his sin which he has sinned a bull, a son of the herd,
 # unblemished, to the LORD for a sin-offering.&quot;
 m.step(&quot;Lev.4.3&quot;)
-# ‹אִם הַכֹּהֵן הַמָּשִׁיחַ יֶחֱטָא לְאַשְׁמַת הָעָם› case the-priest-the-
-# mashiach, if-yecheta-to-ashmat-the-am routes to par-ben-baqar-tamim-to-
-# chatat
+# ‹אִם הַכֹּהֵן הַמָּשִׁיחַ יֶחֱטָא לְאַשְׁמַת הָעָם› (“if the-priest the-
+# anointed sin to-guiltiness the-people”) — case the-priest-the-mashiach,
+# if-sin-to-guiltiness-the-people routes to bullock-son-herd-entire-to-sin-
+# offering
 m.case(&quot;ha_kohen_ha_mashiach, im_yecheta_le_ashmat_ha_am&quot;, &quot;par_ben_baqar_tamim_le_chatat&quot;)
 
 # -------------------------- Lev.4.4 · TO_THE_DOOR --------------------------
@@ -713,9 +718,10 @@ m.case(&quot;ha_kohen_ha_mashiach, im_yecheta_le_ashmat_ha_am&quot;, &quot;par_b
 # meeting before the LORD, and lean his hand on the bull&#x27;s head, and
 # slaughter the bull before the LORD.&quot;
 m.step(&quot;Lev.4.4&quot;)
-# ‹וְהֵבִיא אֶת־הַפָּר אֶל־פֶּתַח אֹהֶל מוֹעֵד לִפְנֵי יְהוָה› standing
-# handler — if par-the-chatat then hevi-to-door-opening-ohel-moed ∧ samakh-
-# his-hand-upon-rosh ∧ shachat-to-me-fene-the-LORD
+# ‹וְהֵבִיא אֶת־הַפָּר אֶל־פֶּתַח אֹהֶל מוֹעֵד לִפְנֵי יְהוָה› (“and-
+# come/bring obj-marker the-bullock to opening tent seasons to-face YHWH”) —
+# standing handler — if bullock-the-sin-offering then come/bring-to-opening-
+# tent-seasons ∧ lay-his-hand-over-head ∧ slaughter-to-me-fene-the-LORD
 m.handler(&quot;par_ha_chatat&quot;,
           &quot;hevi_el_petach_ohel_moed ∧ samakh_yado_al_rosh ∧ shachat_li_fene_YHWH&quot;)
 
@@ -725,8 +731,9 @@ m.handler(&quot;par_ha_chatat&quot;,
 # it into the tent of meeting.&quot;
 m.step(&quot;Lev.4.5&quot;)
 # ‹וְלָקַח הַכֹּהֵן הַמָּשִׁיחַ מִדַּם הַפָּר וְהֵבִיא אֹתוֹ אֶל־אֹהֶל
-# מוֹעֵד› standing handler — if blood-the-par then laqach-the-mashiach ∧
-# hevi-it-to-ohel-moed
+# מוֹעֵד› (“and-take the-priest the-anointed from-blood the-bullock and-
+# come/bring obj-marker-him/its to tent seasons”) — standing handler — if
+# blood-the-bullock then take-the-mashiach ∧ come/bring-it-to-tent-seasons
 m.handler(&quot;dam_ha_par&quot;,
           &quot;laqach_ha_mashiach ∧ hevi_oto_el_ohel_moed&quot;)
 
@@ -737,9 +744,11 @@ m.handler(&quot;dam_ha_par&quot;,
 # the blood seven times before the LORD, before the veil of the sanctuary.&quot;
 m.step(&quot;Lev.4.6&quot;)
 # ‹וְטָבַל הַכֹּהֵן אֶת־אֶצְבָּעוֹ בַּדָּם וְהִזָּה מִן־הַדָּם שֶׁבַע
-# פְּעָמִים לִפְנֵי יְהוָה אֶת־פְּנֵי פָּרֹכֶת הַקֹּדֶשׁ› standing handler —
-# if in-the-blood then taval-etzbao ∧ hiza-seven-peamim-pene-parokhet-the-
-# qodesh
+# פְּעָמִים לִפְנֵי יְהוָה אֶת־פְּנֵי פָּרֹכֶת הַקֹּדֶשׁ› (“and-dip the-
+# priest obj-marker something-to-sieze-with-him/its in-blood and-spirt from
+# the-blood seven stroke to-face YHWH with face separatrix the-holiness”) —
+# standing handler — if blood then dip-etzbao ∧ spirt-seven-stroke-obj-
+# marker-face-separatrix-the-holiness
 m.handler(&quot;ba_dam&quot;,
           &quot;taval_etzbao ∧ hiza_sheva_peamim_et_pene_parokhet_ha_qodesh&quot;)
 
@@ -753,9 +762,10 @@ m.handler(&quot;ba_dam&quot;,
 # which is at the entrance of the tent of meeting.&quot;
 m.step(&quot;Lev.4.7&quot;)
 # ‹וְנָתַן הַכֹּהֵן מִן־הַדָּם עַל־קַרְנוֹת מִזְבַּח קְטֹרֶת הַסַּמִּים
-# לִפְנֵי יְהוָה אֲשֶׁר בְּאֹהֶל מוֹעֵד› standing handler — if from-the-
-# blood then natan-upon-qarnot-mizbach-the-qetoret ∧ yishpokh-to-yesod-
-# mizbach-the-ola
+# לִפְנֵי יְהוָה אֲשֶׁר בְּאֹהֶל מוֹעֵד› (“and-set the-priest from the-blood
+# over horn altar fumigation the-aroma to-face YHWH which in-tent seasons”)
+# — standing handler — if from-the-blood then set-over-horn-altar-the-
+# fumigation ∧ spill-forth-to-foundation-altar-the-burnt-offering
 m.handler(&quot;min_ha_dam&quot;,
           &quot;natan_al_qarnot_mizbach_ha_qetoret ∧ yishpokh_el_yesod_mizbach_ha_ola&quot;)
 
@@ -766,8 +776,10 @@ m.handler(&quot;min_ha_dam&quot;,
 # the fat that covers the entrails, and all the fat that is on the
 # entrails,&quot;
 m.step(&quot;Lev.4.8&quot;)
-# ‹וְאֶת־כָּל־חֵלֶב פַּר הַחַטָּאת יָרִים מִמֶּנּוּ› standing handler — if
-# chelev-par-the-chatat then yarim-the-chelev-the-mekhase
+# ‹וְאֶת־כָּל־חֵלֶב פַּר הַחַטָּאת יָרִים מִמֶּנּוּ› (“and-obj-marker all
+# fat bullock the-sin-offering rise-high from-us/our”) — standing handler —
+# if fat-bullock-the-sin-offering then rise-high-obj-marker-the-fat-the-
+# plump
 m.handler(&quot;chelev_par_ha_chatat&quot;,
           &quot;yarim_et_ha_chelev_ha_mekhase&quot;)
 
@@ -779,8 +791,10 @@ m.handler(&quot;chelev_par_ha_chatat&quot;,
 m.step(&quot;Lev.4.9&quot;)
 # ‹וְאֵת שְׁתֵּי הַכְּלָיֹת וְאֶת־הַחֵלֶב אֲשֶׁר עֲלֵיהֶן אֲשֶׁר
 # עַל־הַכְּסָלִים וְאֶת־הַיֹּתֶרֶת עַל־הַכָּבֵד עַל־הַכְּלָיוֹת יְסִירֶנָּה›
-# standing handler — if shete-the-kelayot-and-the-yoteret-upon-the-kaved
-# then yesirena
+# (“and-obj-marker two the-kidney and-obj-marker the-fat which over-
+# them/their which over the-fatness and-obj-marker the-lobe over the-liver
+# over the-kidney turn-aside-her/its”) — standing handler — if two-the-
+# kidney-and-the-lobe-over-the-liver then yesirena
 m.handler(&quot;shete_ha_kelayot_ve_ha_yoteret_al_ha_kaved&quot;,
           &quot;yesirena&quot;)
 
@@ -791,8 +805,10 @@ m.handler(&quot;shete_ha_kelayot_ve_ha_yoteret_al_ha_kaved&quot;,
 # the priest shall burn them on the altar of burnt-offering.&quot;
 m.step(&quot;Lev.4.10&quot;)
 # ‹כַּאֲשֶׁר יוּרַם מִשּׁוֹר זֶבַח הַשְּׁלָמִים וְהִקְטִירָם הַכֹּהֵן עַל
-# מִזְבַּח הָעֹלָה› standing handler — if like-which-yuram-from-shor-zevach-
-# the-shelamim then hiqtiram-upon-mizbach-the-ola
+# מִזְבַּח הָעֹלָה› (“like-as/which rise-high from-bullock sacrifice the-
+# requital and-smoke-them/their the-priest over altar the-burnt-offering”) —
+# standing handler — if like-which-rise-high-from-bullock-sacrifice-the-
+# requital then hiqtiram-over-altar-the-burnt-offering
 m.handler(&quot;ka_asher_yuram_mi_shor_zevach_ha_shelamim&quot;,
           &quot;hiqtiram_al_mizbach_ha_ola&quot;)
 
@@ -803,7 +819,10 @@ m.handler(&quot;ka_asher_yuram_mi_shor_zevach_ha_shelamim&quot;,
 # its legs, and its entrails and its dung -&quot;
 m.step(&quot;Lev.4.11&quot;)
 # ‹וְאֶת־עוֹר הַפָּר וְאֶת־כָּל־בְּשָׂרוֹ עַל־רֹאשׁוֹ וְעַל־כְּרָעָיו
-# וְקִרְבּוֹ וּפִרְשׁוֹ› note: zero events in this verse
+# וְקִרְבּוֹ וּפִרְשׁוֹ› (“and-obj-marker skin the-bullock and-obj-marker
+# all flesh-him/its over head-him/its and-over leg-of-men-him/its and-
+# nearest-part-him/its and-excrement-him/its”) — note: zero events in this
+# verse
 m.note_zero_events()
 
 # -------------------------- Lev.4.12 · OUTSIDE_THE_CAMP --------------------
@@ -816,8 +835,11 @@ m.note_zero_events()
 m.step(&quot;Lev.4.12&quot;)
 # ‹וְהוֹצִיא אֶת־כָּל־הַפָּר אֶל־מִחוּץ לַמַּחֲנֶה אֶל־מָקוֹם טָהוֹר
 # אֶל־שֶׁפֶךְ הַדֶּשֶׁן וְשָׂרַף אֹתוֹ עַל־עֵצִים בָּאֵשׁ עַל־שֶׁפֶךְ
-# הַדֶּשֶׁן יִשָּׂרֵף› standing handler — if all-the-par then hotzi-to-from-
-# chutz-to-machane-to-maqom-pure ∧ saraf-upon-shefekh-the-deshen
+# הַדֶּשֶׁן יִשָּׂרֵף› (“and-bring-forth obj-marker all the-bullock to from-
+# outside to-camp to place pure to emptying-place the-fat and-be-on-fire
+# obj-marker-him/its over tree in-fire over emptying-place the-fat be-on-
+# fire”) — standing handler — if all-the-bullock then bring-forth-to-from-
+# outside-to-camp-to-place-pure ∧ be-on-fire-over-emptying-place-the-fat
 m.handler(&quot;kol_ha_par&quot;,
           &quot;hotzi_el_mi_chutz_la_machane_el_maqom_tahor ∧ saraf_al_shefekh_ha_deshen&quot;)
 
@@ -829,7 +851,9 @@ m.handler(&quot;kol_ha_par&quot;,
 # commandments of the LORD which shall not be done, and become guilty -&quot;
 m.step(&quot;Lev.4.13&quot;)
 # ‹וְאִם כָּל־עֲדַת יִשְׂרָאֵל יִשְׁגּוּ וְנֶעְלַם דָּבָר מֵעֵינֵי הַקָּהָל›
-# case kal-adat-yisrael, yishgu-and-nelam-davar routes to and-ashemu
+# (“and-if all congregation Israel stray and-veil-from-sight word/thing
+# from-eye the-assemblage”) — case all-congregation-Israel, stray-and-veil-
+# from-sight-word/thing routes to and-be-guilty
 m.case(&quot;kal_adat_yisrael, yishgu_ve_nelam_davar&quot;, &quot;ve_ashemu&quot;)
 
 # -------------------------- Lev.4.14 · THE_SIN_BECOMES_KNOWN ---------------
@@ -840,9 +864,11 @@ m.case(&quot;kal_adat_yisrael, yishgu_ve_nelam_davar&quot;, &quot;ve_ashemu&quot
 # and bring it before the tent of meeting.&quot;
 m.step(&quot;Lev.4.14&quot;)
 # ‹וְנוֹדְעָה הַחַטָּאת אֲשֶׁר חָטְאוּ עָלֶיהָ וְהִקְרִיבוּ הַקָּהָל פַּר
-# בֶּן־בָּקָר לְחַטָּאת וְהֵבִיאוּ אֹתוֹ לִפְנֵי אֹהֶל מוֹעֵד› standing
-# handler — if and-noda-the-chatat then hiqrivu-the-qahal-par ∧ heviu-it-to-
-# me-fene-ohel-moed
+# בֶּן־בָּקָר לְחַטָּאת וְהֵבִיאוּ אֹתוֹ לִפְנֵי אֹהֶל מוֹעֵד› (“and-know
+# the-sin-offering which sin over-her/its and-bring-near the-assemblage
+# bullock son herd to-sin-offering and-come/bring obj-marker-him/its to-face
+# tent seasons”) — standing handler — if and-know-the-sin-offering then
+# bring-near-the-assemblage-bullock ∧ come/bring-it-to-me-fene-tent-seasons
 m.handler(&quot;ve_noda_ha_chatat&quot;,
           &quot;hiqrivu_ha_qahal_par ∧ heviu_oto_li_fene_ohel_moed&quot;)
 
@@ -854,8 +880,10 @@ m.handler(&quot;ve_noda_ha_chatat&quot;,
 # LORD.&quot;
 m.step(&quot;Lev.4.15&quot;)
 # ‹וְסָמְכוּ זִקְנֵי הָעֵדָה אֶת־יְדֵיהֶם עַל־רֹאשׁ הַפָּר לִפְנֵי יְהוָה›
-# standing handler — if par-the-qahal then samkhu-ziqne-the-eda-yedehem ∧
-# shachat-to-me-fene-the-LORD
+# (“and-lay elders-of the-congregation obj-marker hand-them/their over head
+# the-bullock to-face YHWH”) — standing handler — if bullock-the-assemblage
+# then lay-elders-of-the-congregation-yedehem ∧ slaughter-to-me-fene-the-
+# LORD
 m.handler(&quot;par_ha_qahal&quot;,
           &quot;samkhu_ziqne_ha_eda_yedehem ∧ shachat_li_fene_YHWH&quot;)
 
@@ -864,8 +892,10 @@ m.handler(&quot;par_ha_qahal&quot;,
 # &quot;[EN-AID] And the anointed priest shall bring of the bull&#x27;s blood into the
 # tent of meeting.&quot;
 m.step(&quot;Lev.4.16&quot;)
-# ‹וְהֵבִיא הַכֹּהֵן הַמָּשִׁיחַ מִדַּם הַפָּר אֶל־אֹהֶל מוֹעֵד› standing
-# handler — if blood-the-par then hevi-the-mashiach-to-ohel-moed
+# ‹וְהֵבִיא הַכֹּהֵן הַמָּשִׁיחַ מִדַּם הַפָּר אֶל־אֹהֶל מוֹעֵד› (“and-
+# come/bring the-priest the-anointed from-blood the-bullock to tent
+# seasons”) — standing handler — if blood-the-bullock then come/bring-the-
+# mashiach-to-tent-seasons
 m.handler(&quot;dam_ha_par&quot;,
           &quot;hevi_ha_mashiach_el_ohel_moed&quot;)
 
@@ -876,8 +906,10 @@ m.handler(&quot;dam_ha_par&quot;,
 # seven times before the LORD, before the veil.&quot;
 m.step(&quot;Lev.4.17&quot;)
 # ‹וְטָבַל הַכֹּהֵן אֶצְבָּעוֹ מִן־הַדָּם וְהִזָּה שֶׁבַע פְּעָמִים לִפְנֵי
-# יְהוָה אֵת פְּנֵי הַפָּרֹכֶת› standing handler — if from-the-blood then
-# taval-etzbao ∧ hiza-seven-peamim-pene-the-parokhet
+# יְהוָה אֵת פְּנֵי הַפָּרֹכֶת› (“and-dip the-priest something-to-sieze-
+# with-him/its from the-blood and-spirt seven stroke to-face YHWH with face
+# the-separatrix”) — standing handler — if from-the-blood then dip-etzbao ∧
+# spirt-seven-stroke-obj-marker-face-the-separatrix
 m.handler(&quot;min_ha_dam&quot;,
           &quot;taval_etzbao ∧ hiza_sheva_peamim_et_pene_ha_parokhet&quot;)
 
@@ -891,8 +923,10 @@ m.handler(&quot;min_ha_dam&quot;,
 # entrance of the tent of meeting.&quot;
 m.step(&quot;Lev.4.18&quot;)
 # ‹וּמִן־הַדָּם יִתֵּן עַל־קַרְנֹת הַמִּזְבֵּחַ אֲשֶׁר לִפְנֵי יְהוָה אֲשֶׁר
-# בְּאֹהֶל מוֹעֵד› standing handler — if and-from-the-blood then yiten-upon-
-# qarnot-the-mizbecha ∧ yishpokh-to-yesod-mizbach-the-ola
+# בְּאֹהֶל מוֹעֵד› (“and-from the-blood set over horn the-altar which to-
+# face YHWH which in-tent seasons”) — standing handler — if and-from-the-
+# blood then set-over-horn-the-altar ∧ spill-forth-to-foundation-altar-the-
+# burnt-offering
 m.handler(&quot;u_min_ha_dam&quot;,
           &quot;yiten_al_qarnot_ha_mizbecha ∧ yishpokh_el_yesod_mizbach_ha_ola&quot;)
 
@@ -900,8 +934,9 @@ m.handler(&quot;u_min_ha_dam&quot;,
 # וְאֵת כָּל־חֶלְבּוֹ יָרִים מִמֶּנּוּ וְהִקְטִיר הַמִּזְבֵּחָה
 # &quot;[EN-AID] And all its fat he shall lift from it and burn on the altar.&quot;
 m.step(&quot;Lev.4.19&quot;)
-# ‹וְאֵת כָּל־חֶלְבּוֹ יָרִים מִמֶּנּוּ וְהִקְטִיר הַמִּזְבֵּחָה› standing
-# handler — if all-chelbo then yarim-from-it ∧ hiqtir-the-mizbecha
+# ‹וְאֵת כָּל־חֶלְבּוֹ יָרִים מִמֶּנּוּ וְהִקְטִיר הַמִּזְבֵּחָה› (“and-obj-
+# marker all fat-him/its rise-high from-us/our and-smoke the-altar-ward”) —
+# standing handler — if all-chelbo then rise-high-from-it ∧ smoke-the-altar
 m.handler(&quot;kol_chelbo&quot;,
           &quot;yarim_mimenu ∧ hiqtir_ha_mizbecha&quot;)
 
@@ -913,9 +948,11 @@ m.handler(&quot;kol_chelbo&quot;,
 # forgiven them.&quot;
 m.step(&quot;Lev.4.20&quot;)
 # ‹וְעָשָׂה לַפָּר כַּאֲשֶׁר עָשָׂה לְפַר הַחַטָּאת כֵּן יַעֲשֶׂה־לּוֹ
-# וְכִפֶּר עֲלֵהֶם הַכֹּהֵן וְנִסְלַח לָהֶם› standing handler — if like-
-# which-asa-to-far-the-chatat then ken-yaase-not ∧ kiper-the-priest ∧
-# nislach-to-them
+# וְכִפֶּר עֲלֵהֶם הַכֹּהֵן וְנִסְלַח לָהֶם› (“and-make to-bullock like-
+# as/which make to-bullock the-sin-offering so make to-him/its and-atone
+# over-them/their the-priest and-forgive to-them/their”) — standing handler
+# — if like-which-make-to-bullock-the-sin-offering then so-make-not ∧ kiper-
+# the-priest ∧ forgive-to-them
 m.handler(&quot;ka_asher_asa_le_far_ha_chatat&quot;,
           &quot;ken_yaase_lo ∧ kiper_ha_kohen ∧ nislach_lahem&quot;)
 
@@ -926,9 +963,12 @@ m.handler(&quot;ka_asher_asa_le_far_ha_chatat&quot;,
 # burned the first bull: it is the sin-offering of the assembly.&quot;
 m.step(&quot;Lev.4.21&quot;)
 # ‹וְהוֹצִיא אֶת־הַפָּר אֶל־מִחוּץ לַמַּחֲנֶה וְשָׂרַף אֹתוֹ כַּאֲשֶׁר
-# שָׂרַף אֵת הַפָּר הָרִאשׁוֹן חַטַּאת הַקָּהָל הוּא› standing handler — if
-# like-which-saraf-the-par-the-rishon then hotzi-and-saraf-from-chutz-to-
-# machane
+# שָׂרַף אֵת הַפָּר הָרִאשׁוֹן חַטַּאת הַקָּהָל הוּא› (“and-bring-forth obj-
+# marker the-bullock to from-outside to-camp and-be-on-fire obj-marker-
+# him/its like-as/which be-on-fire obj-marker the-bullock the-first sin-
+# offering the-assemblage he/it”) — standing handler — if like-which-be-on-
+# fire-obj-marker-the-bullock-the-first then bring-forth-and-be-on-fire-
+# from-outside-to-camp
 m.handler(&quot;ka_asher_saraf_et_ha_par_ha_rishon&quot;,
           &quot;hotzi_ve_saraf_mi_chutz_la_machane&quot;)
 
@@ -939,8 +979,8 @@ m.handler(&quot;ka_asher_saraf_et_ha_par_ha_rishon&quot;,
 # LORD his God which shall not be done, in inadvertence, and becomes guilty
 # -&quot;
 m.step(&quot;Lev.4.22&quot;)
-# ‹אֲשֶׁר נָשִׂיא יֶחֱטָא› case nasi, which-yecheta-bi-shegaga routes to
-# and-ashem
+# ‹אֲשֶׁר נָשִׂיא יֶחֱטָא› (“which prince sin”) — case prince, which-sin-bi-
+# shegaga routes to and-be-guilty
 m.case(&quot;nasi, asher_yecheta_bi_shegaga&quot;, &quot;ve_ashem&quot;)
 
 # -------------------------- Lev.4.23 · THE_KNOWLEDGE_TRIGGER ---------------
@@ -949,8 +989,9 @@ m.case(&quot;nasi, asher_yecheta_bi_shegaga&quot;, &quot;ve_ashem&quot;)
 # &quot;[EN-AID] or his sin which he sinned is made known to him - then he shall
 # bring his offering: a goat of the goats, a male, unblemished.&quot;
 m.step(&quot;Lev.4.23&quot;)
-# ‹אוֹ־הוֹדַע אֵלָיו חַטָּאתוֹ אֲשֶׁר חָטָא בָּהּ› standing handler — if
-# o-hoda-to-him-chatato then hevi-qarbano-seir-izim-male-tamim
+# ‹אוֹ־הוֹדַע אֵלָיו חַטָּאתוֹ אֲשֶׁר חָטָא בָּהּ› (“or know to-him/its sin-
+# offering-him/its which sin in-her/its”) — standing handler — if or-know-
+# to-him-chatato then come/bring-qarbano-shaggy-she-goat-male-entire
 m.handler(&quot;o_hoda_elav_chatato&quot;,
           &quot;hevi_qarbano_seir_izim_zakhar_tamim&quot;)
 
@@ -962,8 +1003,11 @@ m.handler(&quot;o_hoda_elav_chatato&quot;,
 # is a sin-offering.&quot;
 m.step(&quot;Lev.4.24&quot;)
 # ‹וְסָמַךְ יָדוֹ עַל־רֹאשׁ הַשָּׂעִיר וְשָׁחַט אֹתוֹ בִּמְקוֹם
-# אֲשֶׁר־יִשְׁחַט אֶת־הָעֹלָה לִפְנֵי יְהוָה› standing handler — if seir-
-# the-chatat then samakh-his-hand ∧ shachat-bi-meqom-which-yishchat-the-ola
+# אֲשֶׁר־יִשְׁחַט אֶת־הָעֹלָה לִפְנֵי יְהוָה› (“and-lay hand-him/its over
+# head the-shaggy and-slaughter obj-marker-him/its in-place which slaughter
+# obj-marker the-burnt-offering to-face YHWH”) — standing handler — if
+# shaggy-the-sin-offering then lay-his-hand ∧ slaughter-bi-meqom-which-
+# slaughter-obj-marker-the-burnt-offering
 m.handler(&quot;seir_ha_chatat&quot;,
           &quot;samakh_yado ∧ shachat_bi_meqom_asher_yishchat_et_ha_ola&quot;)
 
@@ -976,8 +1020,11 @@ m.handler(&quot;seir_ha_chatat&quot;,
 m.step(&quot;Lev.4.25&quot;)
 # ‹וְלָקַח הַכֹּהֵן מִדַּם הַחַטָּאת בְּאֶצְבָּעוֹ וְנָתַן עַל־קַרְנֹת
 # מִזְבַּח הָעֹלָה וְאֶת־דָּמוֹ יִשְׁפֹּךְ אֶל־יְסוֹד מִזְבַּח הָעֹלָה›
-# standing handler — if from-blood-the-chatat then natan-in-etzbao-upon-
-# qarnot-mizbach-the-ola ∧ yishpokh-to-yesod
+# (“and-take the-priest from-blood the-sin-offering in-something-to-sieze-
+# with-him/its and-set over horn altar the-burnt-offering and-obj-marker
+# blood-him/its spill-forth to foundation altar the-burnt-offering”) —
+# standing handler — if from-blood-the-sin-offering then set-in-etzbao-over-
+# horn-altar-the-burnt-offering ∧ spill-forth-to-foundation
 m.handler(&quot;mi_dam_ha_chatat&quot;,
           &quot;natan_be_etzbao_al_qarnot_mizbach_ha_ola ∧ yishpokh_el_yesod&quot;)
 
@@ -989,9 +1036,11 @@ m.handler(&quot;mi_dam_ha_chatat&quot;,
 # and he shall be forgiven.&quot;
 m.step(&quot;Lev.4.26&quot;)
 # ‹וְאֶת־כָּל־חֶלְבּוֹ יַקְטִיר הַמִּזְבֵּחָה כְּחֵלֶב זֶבַח הַשְּׁלָמִים
-# וְכִפֶּר עָלָיו הַכֹּהֵן מֵחַטָּאתוֹ וְנִסְלַח לוֹ› standing handler — if
-# all-chelbo-like-chelev-zevach-the-shelamim then yaqtir ∧ kiper ∧ nislach-
-# not
+# וְכִפֶּר עָלָיו הַכֹּהֵן מֵחַטָּאתוֹ וְנִסְלַח לוֹ› (“and-obj-marker all
+# fat-him/its smoke the-altar-ward like-fat sacrifice the-requital and-atone
+# over-him/its the-priest from-sin-offering-him/its and-forgive to-him/its”)
+# — standing handler — if all-chelbo-like-fat-sacrifice-the-requital then
+# smoke ∧ kiper ∧ forgive-not
 m.handler(&quot;kol_chelbo_ke_chelev_zevach_ha_shelamim&quot;,
           &quot;yaqtir ∧ kiper ∧ nislach_lo&quot;)
 
@@ -1002,8 +1051,9 @@ m.handler(&quot;kol_chelbo_ke_chelev_zevach_ha_shelamim&quot;,
 # by doing one of the commandments of the LORD which shall not be done, and
 # becomes guilty -&quot;
 m.step(&quot;Lev.4.27&quot;)
-# ‹וְאִם־נֶפֶשׁ אַחַת תֶּחֱטָא בִשְׁגָגָה מֵעַם הָאָרֶץ› case nefesh-from-
-# am-the-earth, techeta-vi-shegaga routes to and-ashem
+# ‹וְאִם־נֶפֶשׁ אַחַת תֶּחֱטָא בִשְׁגָגָה מֵעַם הָאָרֶץ› (“and-if living-
+# being one sin in-mistake from-people the-earth”) — case living-being-from-
+# people-the-earth, sin-vi-shegaga routes to and-be-guilty
 m.case(&quot;nefesh_me_am_ha_aretz, techeta_vi_shegaga&quot;, &quot;ve_ashem&quot;)
 
 # -------------------------- Lev.4.28 · THE_SHE_GOAT ------------------------
@@ -1014,8 +1064,10 @@ m.case(&quot;nefesh_me_am_ha_aretz, techeta_vi_shegaga&quot;, &quot;ve_ashem&quo
 # his sin which he sinned.&quot;
 m.step(&quot;Lev.4.28&quot;)
 # ‹אוֹ הוֹדַע אֵלָיו חַטָּאתוֹ אֲשֶׁר חָטָא וְהֵבִיא קָרְבָּנוֹ שְׂעִירַת
-# עִזִּים תְּמִימָה נְקֵבָה› standing handler — if o-hoda-to-him-chatato
-# then hevi-qarbano-seirat-izim-temima-neqeva
+# עִזִּים תְּמִימָה נְקֵבָה› (“or know to-him/its sin-offering-him/its which
+# sin and-come/bring offering-him/its she-goat she-goat entire female”) —
+# standing handler — if or-know-to-him-chatato then come/bring-qarbano-she-
+# goat-she-goat-entire-female
 m.handler(&quot;o_hoda_elav_chatato&quot;,
           &quot;hevi_qarbano_seirat_izim_temima_neqeva&quot;)
 
@@ -1026,8 +1078,10 @@ m.handler(&quot;o_hoda_elav_chatato&quot;,
 # slaughter the sin-offering in the place of the burnt-offering.&quot;
 m.step(&quot;Lev.4.29&quot;)
 # ‹וְסָמַךְ אֶת־יָדוֹ עַל רֹאשׁ הַחַטָּאת וְשָׁחַט אֶת־הַחַטָּאת בִּמְקוֹם
-# הָעֹלָה› standing handler — if the-chatat then samakh-his-hand ∧ shachat-
-# bi-meqom-the-ola
+# הָעֹלָה› (“and-lay obj-marker hand-him/its over head the-sin-offering and-
+# slaughter obj-marker the-sin-offering in-place the-burnt-offering”) —
+# standing handler — if the-sin-offering then lay-his-hand ∧ slaughter-bi-
+# meqom-the-burnt-offering
 m.handler(&quot;ha_chatat&quot;,
           &quot;samakh_yado ∧ shachat_bi_meqom_ha_ola&quot;)
 
@@ -1039,9 +1093,12 @@ m.handler(&quot;ha_chatat&quot;,
 # pour out at the base of the altar.&quot;
 m.step(&quot;Lev.4.30&quot;)
 # ‹וְלָקַח הַכֹּהֵן מִדָּמָהּ בְּאֶצְבָּעוֹ וְנָתַן עַל־קַרְנֹת מִזְבַּח
-# הָעֹלָה וְאֶת־כָּל־דָּמָהּ יִשְׁפֹּךְ אֶל־יְסוֹד הַמִּזְבֵּחַ› standing
-# handler — if from-damah then natan-in-etzbao-upon-qarnot-mizbach-the-ola ∧
-# yishpokh-to-yesod-the-mizbecha
+# הָעֹלָה וְאֶת־כָּל־דָּמָהּ יִשְׁפֹּךְ אֶל־יְסוֹד הַמִּזְבֵּחַ› (“and-take
+# the-priest from-blood-her/its in-something-to-sieze-with-him/its and-set
+# over horn altar the-burnt-offering and-obj-marker all blood-her/its spill-
+# forth to foundation the-altar”) — standing handler — if from-damah then
+# set-in-etzbao-over-horn-altar-the-burnt-offering ∧ spill-forth-to-
+# foundation-the-altar
 m.handler(&quot;mi_damah&quot;,
           &quot;natan_be_etzbao_al_qarnot_mizbach_ha_ola ∧ yishpokh_el_yesod_ha_mizbecha&quot;)
 
@@ -1056,9 +1113,12 @@ m.handler(&quot;mi_damah&quot;,
 m.step(&quot;Lev.4.31&quot;)
 # ‹וְאֶת־כָּל־חֶלְבָּהּ יָסִיר כַּאֲשֶׁר הוּסַר חֵלֶב מֵעַל זֶבַח
 # הַשְּׁלָמִים וְהִקְטִיר הַכֹּהֵן הַמִּזְבֵּחָה לְרֵיחַ נִיחֹחַ לַיהוָה
-# וְכִפֶּר עָלָיו הַכֹּהֵן וְנִסְלַח לוֹ› standing handler — if all-chelbah-
-# like-which-husar-from-upon-zevach-the-shelamim then hiqtir-to-recha-
-# nichocha ∧ kiper ∧ nislach-not
+# וְכִפֶּר עָלָיו הַכֹּהֵן וְנִסְלַח לוֹ› (“and-obj-marker all fat-her/its
+# turn-aside like-as/which turn-aside fat from-over sacrifice the-requital
+# and-smoke the-priest the-altar-ward to-odor restful to-YHWH and-atone
+# over-him/its the-priest and-forgive to-him/its”) — standing handler — if
+# all-chelbah-like-which-turn-aside-from-over-sacrifice-the-requital then
+# smoke-to-odor-restful ∧ kiper ∧ forgive-not
 m.handler(&quot;kol_chelbah_ka_asher_husar_me_al_zevach_ha_shelamim&quot;,
           &quot;hiqtir_le_recha_nichocha ∧ kiper ∧ nislach_lo&quot;)
 
@@ -1068,7 +1128,9 @@ m.handler(&quot;kol_chelbah_ka_asher_husar_me_al_zevach_ha_shelamim&quot;,
 # unblemished female shall he bring.&quot;
 m.step(&quot;Lev.4.32&quot;)
 # ‹וְאִם־כֶּבֶשׂ יָבִיא קָרְבָּנוֹ לְחַטָּאת נְקֵבָה תְמִימָה יְבִיאֶנָּה›
-# case keves, and-if-yavi-to-chatat routes to neqeva-temima-yeviena
+# (“and-if ram come/bring offering-him/its to-sin-offering female entire
+# come/bring-her/its”) — case ram, and-if-come/bring-to-sin-offering routes
+# to female-entire-yeviena
 m.case(&quot;keves, ve_im_yavi_le_chatat&quot;, &quot;neqeva_temima_yeviena&quot;)
 
 # -------------------------- Lev.4.33 · LEAN_AND_SLAUGHTER_HER --------------
@@ -1079,9 +1141,11 @@ m.case(&quot;keves, ve_im_yavi_le_chatat&quot;, &quot;neqeva_temima_yeviena&quot
 # burnt-offering.&quot;
 m.step(&quot;Lev.4.33&quot;)
 # ‹וְסָמַךְ אֶת־יָדוֹ עַל רֹאשׁ הַחַטָּאת וְשָׁחַט אֹתָהּ לְחַטָּאת
-# בִּמְקוֹם אֲשֶׁר יִשְׁחַט אֶת־הָעֹלָה› standing handler — if the-chatat
-# then samakh-his-hand ∧ shachat-her-to-chatat-bi-meqom-which-yishchat-the-
-# ola
+# בִּמְקוֹם אֲשֶׁר יִשְׁחַט אֶת־הָעֹלָה› (“and-lay obj-marker hand-him/its
+# over head the-sin-offering and-slaughter obj-marker-her/its to-sin-
+# offering in-place which slaughter obj-marker the-burnt-offering”) —
+# standing handler — if the-sin-offering then lay-his-hand ∧ slaughter-her-
+# to-sin-offering-bi-meqom-which-slaughter-obj-marker-the-burnt-offering
 m.handler(&quot;ha_chatat&quot;,
           &quot;samakh_yado ∧ shachat_otah_le_chatat_bi_meqom_asher_yishchat_et_ha_ola&quot;)
 
@@ -1094,8 +1158,11 @@ m.handler(&quot;ha_chatat&quot;,
 m.step(&quot;Lev.4.34&quot;)
 # ‹וְלָקַח הַכֹּהֵן מִדַּם הַחַטָּאת בְּאֶצְבָּעוֹ וְנָתַן עַל־קַרְנֹת
 # מִזְבַּח הָעֹלָה וְאֶת־כָּל־דָּמָהּ יִשְׁפֹּךְ אֶל־יְסוֹד הַמִּזְבֵּחַ›
-# standing handler — if from-blood-the-chatat then natan-in-etzbao-upon-
-# qarnot ∧ yishpokh-kal-damah-to-yesod
+# (“and-take the-priest from-blood the-sin-offering in-something-to-sieze-
+# with-him/its and-set over horn altar the-burnt-offering and-obj-marker all
+# blood-her/its spill-forth to foundation the-altar”) — standing handler —
+# if from-blood-the-sin-offering then set-in-etzbao-over-horn ∧ spill-forth-
+# all-damah-to-foundation
 m.handler(&quot;mi_dam_ha_chatat&quot;,
           &quot;natan_be_etzbao_al_qarnot ∧ yishpokh_kal_damah_el_yesod&quot;)
 
@@ -1110,9 +1177,13 @@ m.handler(&quot;mi_dam_ha_chatat&quot;,
 m.step(&quot;Lev.4.35&quot;)
 # ‹וְאֶת־כָּל־חֶלְבָּה יָסִיר כַּאֲשֶׁר יוּסַר חֵלֶב־הַכֶּשֶׂב מִזֶּבַח
 # הַשְּׁלָמִים וְהִקְטִיר הַכֹּהֵן אֹתָם הַמִּזְבֵּחָה עַל אִשֵּׁי יְהוָה
-# וְכִפֶּר עָלָיו הַכֹּהֵן עַל־חַטָּאתוֹ אֲשֶׁר־חָטָא וְנִסְלַח לוֹ›
-# standing handler — if all-chelbah-like-which-yusar-chelev-the-kesev then
-# hiqtir-upon-ishe-the-LORD ∧ kiper ∧ nislach-not
+# וְכִפֶּר עָלָיו הַכֹּהֵן עַל־חַטָּאתוֹ אֲשֶׁר־חָטָא וְנִסְלַח לוֹ› (“and-
+# obj-marker all fat-her/its turn-aside like-as/which turn-aside fat the-
+# young-sheep from-sacrifice the-requital and-smoke the-priest obj-marker-
+# them/their the-altar-ward over fire-offering YHWH and-atone over-him/its
+# the-priest over sin-offering-him/its which sin and-forgive to-him/its”) —
+# standing handler — if all-chelbah-like-which-turn-aside-fat-the-young-
+# sheep then smoke-over-fire-offering-the-LORD ∧ kiper ∧ forgive-not
 m.handler(&quot;kol_chelbah_ka_asher_yusar_chelev_ha_kesev&quot;,
           &quot;hiqtir_al_ishe_YHWH ∧ kiper ∧ nislach_lo&quot;)
 
@@ -1133,4 +1204,4 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 35
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-08 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

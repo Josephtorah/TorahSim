@@ -689,8 +689,9 @@ m = Machine(&quot;gen_60_dreamer_sold&quot;)
 # &quot;[EN-AID] And Jacob dwelt in the land of his father&#x27;s sojournings, in the
 # land of Canaan.&quot;
 m.step(&quot;Gen.37.1&quot;)
-# ‹וַיֵּשֶׁב יַעֲקֹב בְּאֶרֶץ מְגוּרֵי אָבִיו› fact holds: yashav-in-earth-
-# megure-aviv(yaaqov)
+# ‹וַיֵּשֶׁב יַעֲקֹב בְּאֶרֶץ מְגוּרֵי אָבִיו› (“and-dwell/sit Jacob in-
+# earth sojourning father-him/its”) — fact holds: return-in-earth-
+# sojourning-aviv(Jacob)
 m.fact(&quot;yashav_be_eretz_megure_aviv(yaaqov)&quot;)
 
 # -------------------------- Gen.37.2 · THE_HEADER_AND_THE_REPORT -----------
@@ -702,11 +703,12 @@ m.fact(&quot;yashav_be_eretz_megure_aviv(yaaqov)&quot;)
 # Bilhah and Zilpah, his father&#x27;s wives — and Joseph brought their evil
 # report to their father.&quot;
 m.step(&quot;Gen.37.2&quot;)
-# ‹אֵלֶּה תֹּלְדוֹת יַעֲקֹב יוֹסֵף› fact holds: toldot-yaaqov(yosef-ben-
-# seven-esre)
+# ‹אֵלֶּה תֹּלְדוֹת יַעֲקֹב יוֹסֵף› (“these generations Jacob Joseph”) —
+# fact holds: generations-Jacob(Joseph-son-seven--teen)
 m.fact(&quot;toldot_yaaqov(yosef_ben_sheva_esre)&quot;)
-# ‹וַיָּבֵא יוֹסֵף אֶת־דִּבָּתָם רָעָה אֶל־אֲבִיהֶם› fact holds: hevi-
-# dibata-m-raa-to-avi-hem(yosef)
+# ‹וַיָּבֵא יוֹסֵף אֶת־דִּבָּתָם רָעָה אֶל־אֲבִיהֶם› (“and-come/bring Joseph
+# obj-marker slander-them/their bad to father-them/their”) — fact holds:
+# hevi-dibata-m-bad-to-avi-they(Joseph)
 m.fact(&quot;hevi_dibata_m_raa_el_avi_hem(yosef)&quot;)
 
 # -------------------------- Gen.37.3 · THE_LOVE_AND_THE_COAT ---------------
@@ -715,11 +717,13 @@ m.fact(&quot;hevi_dibata_m_raa_el_avi_hem(yosef)&quot;)
 # &quot;[EN-AID] And Israel loved Joseph more than all his sons, for he was to
 # him a son of old age; and he made him a coat of stripes.&quot;
 m.step(&quot;Gen.37.3&quot;)
-# ‹וְיִשְׂרָאֵל אָהַב אֶת־יוֹסֵף מִכָּל־בָּנָיו› fact holds: ahav-yosef-
-# from-kal-banay-v(yisrael)
+# ‹וְיִשְׂרָאֵל אָהַב אֶת־יוֹסֵף מִכָּל־בָּנָיו› (“and-Israel have-
+# affection-for obj-marker Joseph from-all son-him/its”) — fact holds: have-
+# affection-for-with-Joseph-from-all-banay-v(Israel)
 m.fact(&quot;ahav_et_yosef_mi_kal_banay_v(yisrael)&quot;)
-# ‹וְעָשָׂה לוֹ כְּתֹנֶת פַּסִּים› event: asa — agent yisrael; theme
-# ketonet-pasim
+# ‹וְעָשָׂה לוֹ כְּתֹנֶת פַּסִּים› (“and-make to-him/its shirt long-and-
+# sleeved-tunic”) — event: make — agent Israel; theme shirt-long-and-
+# sleeved-tunic
 m.event(&quot;asa&quot;, agent=&quot;yisrael&quot;, themes=[&quot;ketonet_pasim&quot;])
 
 # -------------------------- Gen.37.4 · THE_LEAN_PEACE ----------------------
@@ -729,8 +733,9 @@ m.event(&quot;asa&quot;, agent=&quot;yisrael&quot;, themes=[&quot;ketonet_pasim&
 # his brothers, and they hated him, and could not speak to him toward
 # peace.&quot;
 m.step(&quot;Gen.37.4&quot;)
-# ‹וַיִּשְׂנְאוּ אֹתוֹ וְלֹא יָכְלוּ דַּבְּרוֹ לְשָׁלֹם› fact holds: sanu-
-# it-and-not-yakhlu-dabro-to-shalom(echay-v)
+# ‹וַיִּשְׂנְאוּ אֹתוֹ וְלֹא יָכְלוּ דַּבְּרוֹ לְשָׁלֹם› (“and-hate obj-
+# marker-him/its and-not be-able speak-him/its to-safe”) — fact holds: sanu-
+# it-and-not-be-able-dabro-to-safe(brother-him/its)
 m.fact(&quot;sanu_oto_ve_lo_yakhlu_dabro_le_shalom(echay_v)&quot;)
 
 # -------------------------- Gen.37.5 · THE_FIRST_DREAM_TOLD ----------------
@@ -738,8 +743,8 @@ m.fact(&quot;sanu_oto_ve_lo_yakhlu_dabro_le_shalom(echay_v)&quot;)
 # &quot;[EN-AID] And Joseph dreamed a dream and told it to his brothers, and they
 # hated him yet more.&quot;
 m.step(&quot;Gen.37.5&quot;)
-# ‹וַיַּחֲלֹם יוֹסֵף חֲלוֹם וַיַּגֵּד› event: chalam — agent yosef; theme
-# chalom-rishon
+# ‹וַיַּחֲלֹם יוֹסֵף חֲלוֹם וַיַּגֵּד› (“and-bind-firmly Joseph dream and-
+# tell”) — event: chalam — agent Joseph; theme dream-rishon
 m.event(&quot;chalam&quot;, agent=&quot;yosef&quot;, themes=[&quot;chalom_rishon&quot;])
 
 # -------------------------- Gen.37.6 · THE_HEAR_DEMAND ---------------------
@@ -747,8 +752,8 @@ m.event(&quot;chalam&quot;, agent=&quot;yosef&quot;, themes=[&quot;chalom_rishon
 # &quot;[EN-AID] And he said to them: Hear, please, this dream which I have
 # dreamed.&quot;
 m.step(&quot;Gen.37.6&quot;)
-# ‹שִׁמְעוּ־נָא הַחֲלוֹם הַזֶּה› yosef speaks a demand — LET: shimu-na-the-
-# chalom
+# ‹שִׁמְעוּ־נָא הַחֲלוֹם הַזֶּה› (“hear please the-bind-firmly the-this”) —
+# Joseph speaks a demand — LET: hear-please-the-dream
 m.declare(&quot;yosef&quot;, &quot;LET&quot;,
           &quot;shimu_na_ha_chalom&quot;)
 
@@ -760,8 +765,9 @@ m.declare(&quot;yosef&quot;, &quot;LET&quot;,
 # sheaf arose and stood upright; and behold, your sheaves gathered round and
 # bowed to my sheaf.&quot;
 m.step(&quot;Gen.37.7&quot;)
-# ‹וְהִנֵּה קָמָה אֲלֻמָּתִי וְגַם־נִצָּבָה› fact holds: alumati-qama-
-# nitzava-and-alumot-tishtachavena(chalom-rishon)
+# ‹וְהִנֵּה קָמָה אֲלֻמָּתִי וְגַם־נִצָּבָה› (“and-behold arise something-
+# bound-me/my and-also stand”) — fact holds: alumati-arise-stand-and-alumot-
+# afflict(dream-rishon)
 m.fact(&quot;alumati_qama_nitzava_ve_alumot_tishtachavena(chalom_rishon)&quot;)
 
 # -------------------------- Gen.37.8 · THE_ANSWER_OF_KINGS -----------------
@@ -772,7 +778,9 @@ m.fact(&quot;alumati_qama_nitzava_ve_alumot_tishtachavena(chalom_rishon)&quot;)
 # his words.&quot;
 m.step(&quot;Gen.37.8&quot;)
 # ‹וַיֹּאמְרוּ לוֹ אֶחָיו הֲמָלֹךְ תִּמְלֹךְ עָלֵינוּ אִם־מָשׁוֹל תִּמְשֹׁל
-# בָּנוּ› demand settled (popped from the queue): shimu-na-the-chalom
+# בָּנוּ› (“and-say to-him/its brother-him/its the-reign reign over-us/our
+# if rule rule in-us/our”) — demand settled (popped from the queue): hear-
+# please-the-dream
 m.result(&quot;shimu_na_ha_chalom&quot;, tmark=&quot;t1&quot;)
 
 # -------------------------- Gen.37.9 · THE_SECOND_DREAM --------------------
@@ -784,7 +792,8 @@ m.result(&quot;shimu_na_ha_chalom&quot;, tmark=&quot;t1&quot;)
 # the moon and eleven stars bowing to me.&quot;
 m.step(&quot;Gen.37.9&quot;)
 # ‹וְהִנֵּה הַשֶּׁמֶשׁ וְהַיָּרֵחַ וְאַחַד עָשָׂר כּוֹכָבִים מִשְׁתַּחֲוִים›
-# event: chalam — agent yosef; theme chalom-sheni
+# (“and-behold the-sun and-the-moon and-one -teen stars afflict”) — event:
+# chalam — agent Joseph; theme dream-sheni
 m.event(&quot;chalam&quot;, agent=&quot;yosef&quot;, themes=[&quot;chalom_sheni&quot;])
 
 # -------------------------- Gen.37.10 · THE_REBUKE_THAT_KEEPS --------------
@@ -796,16 +805,18 @@ m.event(&quot;chalam&quot;, agent=&quot;yosef&quot;, themes=[&quot;chalom_sheni&
 # Shall we indeed come, I and your mother and your brothers, to bow to you
 # to the ground?&quot;
 m.step(&quot;Gen.37.10&quot;)
-# ‹וַיִּגְעַר־בּוֹ אָבִיו וַיֹּאמֶר› fact holds: gaar-in-it-aviv-ma-the-
-# chalom(yaaqov)
+# ‹וַיִּגְעַר־בּוֹ אָבִיו וַיֹּאמֶר› (“and-chide in-him/its father-him/its
+# and-say”) — fact holds: gaar-in-it-aviv-what-the-dream(Jacob)
 m.fact(&quot;gaar_bo_aviv_ma_ha_chalom(yaaqov)&quot;)
 
 # -------------------------- Gen.37.11 · THE_KEPT_WORD ----------------------
 # וַיְקַנְאוּ־בוֹ אֶחָיו וְאָבִיו שָׁמַר אֶת־הַדָּבָר
 # &quot;[EN-AID] And his brothers envied him; and his father kept the word.&quot;
 m.step(&quot;Gen.37.11&quot;)
-# ‹וַיְקַנְאוּ־בוֹ אֶחָיו וְאָבִיו שָׁמַר אֶת־הַדָּבָר› fact holds: qinu-in-
-# it-echay-v-and-aviv-shamar-the-davar
+# ‹וַיְקַנְאוּ־בוֹ אֶחָיו וְאָבִיו שָׁמַר אֶת־הַדָּבָר› (“and-be-zealous in-
+# him/its brother-him/its and-father-him/its keep/guard obj-marker the-
+# word/thing”) — fact holds: qinu-in-it-echay-v-and-aviv-keep/guard-with-
+# the-word/thing
 m.fact(&quot;qinu_bo_echay_v_ve_aviv_shamar_et_ha_davar&quot;)
 
 # -------------------------- Gen.37.12 · THE_DOTTED_ET ----------------------
@@ -813,8 +824,9 @@ m.fact(&quot;qinu_bo_echay_v_ve_aviv_shamar_et_ha_davar&quot;)
 # &quot;[EN-AID] And his brothers went to pasture their father&#x27;s flock in
 # Shechem.&quot;
 m.step(&quot;Gen.37.12&quot;)
-# ‹וַיֵּלְכוּ אֶחָיו לִרְעוֹת אֶׄתׄ־צֹאן אֲבִיהֶם› fact holds: halkhu-
-# lireot-tzon-avi-hem-bi-shekhem(echay-v)
+# ‹וַיֵּלְכוּ אֶחָיו לִרְעוֹת אֶׄתׄ־צֹאן אֲבִיהֶם› (“and-go brother-him/its
+# to-graze obj-marker flock father-them/their”) — fact holds: halkhu-lireot-
+# with-flock-avi-they-bi-shekhem(brother-him/its)
 m.fact(&quot;halkhu_lireot_et_tzon_avi_hem_bi_shekhem(echay_v)&quot;)
 
 # -------------------------- Gen.37.13 · THE_SUMMONS_AND_HINENI -------------
@@ -824,8 +836,8 @@ m.fact(&quot;halkhu_lireot_et_tzon_avi_hem_bi_shekhem(echay_v)&quot;)
 # Shechem? Come, and I will send you to them. And he said to him: Here I
 # am.&quot;
 m.step(&quot;Gen.37.13&quot;)
-# ‹לְכָה וְאֶשְׁלָחֲךָ אֲלֵיהֶם› yisrael speaks a demand — LET: to-you-to-
-# achekha
+# ‹לְכָה וְאֶשְׁלָחֲךָ אֲלֵיהֶם› (“go-ward and-send-you/your to-them/their”)
+# — Israel speaks a demand — LET: to-you-to-achekha
 m.declare(&quot;yisrael&quot;, &quot;LET&quot;,
           &quot;lekha_el_achekha&quot;)
 
@@ -836,15 +848,18 @@ m.declare(&quot;yisrael&quot;, &quot;LET&quot;,
 # the peace of the flock, and bring me back word. And he sent him from the
 # valley of Hebron, and he came to Shechem.&quot;
 m.step(&quot;Gen.37.14&quot;)
-# ‹לֶךְ־נָא רְאֵה אֶת־שְׁלוֹם אַחֶיךָ וְאֶת־שְׁלוֹם הַצֹּאן› yisrael speaks
-# a demand — LET: ree-shelom-achekha
+# ‹לֶךְ־נָא רְאֵה אֶת־שְׁלוֹם אַחֶיךָ וְאֶת־שְׁלוֹם הַצֹּאן› (“go please see
+# obj-marker safe brother-you/your and-obj-marker safe the-flock”) — Israel
+# speaks a demand — LET: see-with-safe-achekha
 m.declare(&quot;yisrael&quot;, &quot;LET&quot;,
           &quot;ree_et_shelom_achekha&quot;)
-# ‹וַהֲשִׁבֵנִי דָּבָר› yisrael speaks a demand — LET: hashiveni-davar
+# ‹וַהֲשִׁבֵנִי דָּבָר› (“and-return-me/my word/thing”) — Israel speaks a
+# demand — LET: hashiveni-word/thing
 m.declare(&quot;yisrael&quot;, &quot;LET&quot;,
           &quot;hashiveni_davar&quot;)
-# ‹וַיִּשְׁלָחֵהוּ מֵעֵמֶק חֶבְרוֹן וַיָּבֹא שְׁכֶמָה› demand settled
-# (popped from the queue): to-you-to-achekha
+# ‹וַיִּשְׁלָחֵהוּ מֵעֵמֶק חֶבְרוֹן וַיָּבֹא שְׁכֶמָה› (“and-send-him/its
+# from-vale Hebron and-come/bring Shechem-ward”) — demand settled (popped
+# from the queue): to-you-to-achekha
 m.result(&quot;lekha_el_achekha&quot;, tmark=&quot;t1&quot;)
 
 # -------------------------- Gen.37.15 · THE_WANDERER_FOUND -----------------
@@ -853,8 +868,9 @@ m.result(&quot;lekha_el_achekha&quot;, tmark=&quot;t1&quot;)
 # &quot;[EN-AID] And a man found him — and behold, wandering in the field; and
 # the man asked him: What do you seek?&quot;
 m.step(&quot;Gen.37.15&quot;)
-# ‹וַיִּמְצָאֵהוּ אִישׁ וְהִנֵּה תֹעֶה בַּשָּׂדֶה› fact holds: toe-in-the-
-# sade-and-yishale-that-the-man(yosef)
+# ‹וַיִּמְצָאֵהוּ אִישׁ וְהִנֵּה תֹעֶה בַּשָּׂדֶה› (“and-find-him/its man
+# and-behold vacillate in-field”) — fact holds: vacillate-come/bring-field-
+# come/bring-yishale-he/it-the-man(Joseph)
 m.fact(&quot;toe_ba_sade_va_yishale_hu_ha_ish(yosef)&quot;)
 
 # -------------------------- Gen.37.16 · THE_WHERE_WORD ---------------------
@@ -862,8 +878,9 @@ m.fact(&quot;toe_ba_sade_va_yishale_hu_ha_ish(yosef)&quot;)
 # &quot;[EN-AID] And he said: My brothers I seek; tell me, please, where they are
 # pasturing.&quot;
 m.step(&quot;Gen.37.16&quot;)
-# ‹הַגִּידָה־נָּא לִי אֵיפֹה הֵם רֹעִים› yosef speaks a demand — LET:
-# hagida-na-efo-hem-roim
+# ‹הַגִּידָה־נָּא לִי אֵיפֹה הֵם רֹעִים› (“tell-ward please to-me/my where?
+# they graze”) — Joseph speaks a demand — LET: hagida-please-where?-they-
+# graze
 m.declare(&quot;yosef&quot;, &quot;LET&quot;,
           &quot;hagida_na_efo_hem_roim&quot;)
 
@@ -875,10 +892,13 @@ m.declare(&quot;yosef&quot;, &quot;LET&quot;,
 # found them at Dothan.&quot;
 m.step(&quot;Gen.37.17&quot;)
 # ‹וַיֹּאמֶר הָאִישׁ נָסְעוּ מִזֶּה כִּי שָׁמַעְתִּי אֹמְרִים נֵלְכָה
-# דֹּתָיְנָה› demand settled (popped from the queue): hagida-na-efo-hem-roim
+# דֹּתָיְנָה› (“and-say the-man journey from-this that hear say go Dothan-
+# ward”) — demand settled (popped from the queue): hagida-please-
+# where?-they-graze
 m.result(&quot;hagida_na_efo_hem_roim&quot;, tmark=&quot;t1&quot;)
-# ‹וַיֵּלֶךְ יוֹסֵף אַחַר אֶחָיו וַיִּמְצָאֵם› demand settled (popped from
-# the queue): ree-shelom-achekha
+# ‹וַיֵּלֶךְ יוֹסֵף אַחַר אֶחָיו וַיִּמְצָאֵם› (“and-go Joseph after
+# brother-him/its and-find-them/their”) — demand settled (popped from the
+# queue): see-with-safe-achekha
 m.result(&quot;ree_et_shelom_achekha&quot;, tmark=&quot;t1&quot;)
 
 # -------------------------- Gen.37.18 · THE_CONSPIRACY ---------------------
@@ -887,7 +907,8 @@ m.result(&quot;ree_et_shelom_achekha&quot;, tmark=&quot;t1&quot;)
 # &quot;[EN-AID] And they saw him from afar; and before he drew near to them,
 # they conspired against him to put him to death.&quot;
 m.step(&quot;Gen.37.18&quot;)
-# ‹וַיִּתְנַכְּלוּ אֹתוֹ› fact holds: yitnaklu-it-to-hamito(echay-v)
+# ‹וַיִּתְנַכְּלוּ אֹתוֹ› (“and-defraud obj-marker-him/its”) — fact holds:
+# defraud-it-to-hamito(brother-him/its)
 m.fact(&quot;yitnaklu_oto_la_hamito(echay_v)&quot;)
 
 # -------------------------- Gen.37.19 · THE_DREAMER_NAMED ------------------
@@ -895,8 +916,9 @@ m.fact(&quot;yitnaklu_oto_la_hamito(echay_v)&quot;)
 # &quot;[EN-AID] And they said each to his brother: Behold, this master of dreams
 # comes.&quot;
 m.step(&quot;Gen.37.19&quot;)
-# ‹הִנֵּה בַּעַל הַחֲלֹמוֹת הַלָּזֶה בָּא› fact holds: baal-the-chalomot-
-# halaze-in-the(man-to-his-brother)
+# ‹הִנֵּה בַּעַל הַחֲלֹמוֹת הַלָּזֶה בָּא› (“behold master the-dream this-
+# very come/bring”) — fact holds: master-the-dream-this-very-come/bring(man-
+# to-his-brother)
 m.fact(&quot;baal_ha_chalomot_halaze_ba(ish_el_achiv)&quot;)
 
 # -------------------------- Gen.37.20 · THE_PLOT_PUSHED --------------------
@@ -906,15 +928,16 @@ m.fact(&quot;baal_ha_chalomot_halaze_ba(ish_el_achiv)&quot;)
 # pits, and we will say: an evil beast devoured him — and we shall see what
 # his dreams will be.&quot;
 m.step(&quot;Gen.37.20&quot;)
-# ‹לְכוּ וְנַהַרְגֵהוּ› achim speaks a demand — CMD-US: naharge-that
+# ‹לְכוּ וְנַהַרְגֵהוּ› (“go and-smite-with-deadly-intent-him/its”) — achim
+# speaks a demand — CMD-US: smite-with-deadly-intent-him/its
 m.declare(&quot;achim&quot;, &quot;CMD-US&quot;,
           &quot;naharge_hu&quot;)
-# ‹וְנַשְׁלִכֵהוּ בְּאַחַד הַבֹּרוֹת› achim speaks a demand — CMD-US:
-# nashlikhe-that
+# ‹וְנַשְׁלִכֵהוּ בְּאַחַד הַבֹּרוֹת› (“and-throw-out-him/its in-one the-
+# pit”) — achim speaks a demand — CMD-US: throw-out-him/its
 m.declare(&quot;achim&quot;, &quot;CMD-US&quot;,
           &quot;nashlikhe_hu&quot;)
-# ‹וְאָמַרְנוּ חַיָּה רָעָה אֲכָלָתְהוּ› achim speaks a demand — CMD-US:
-# amarnu-living-raa-akhalat-that
+# ‹וְאָמַרְנוּ חַיָּה רָעָה אֲכָלָתְהוּ› (“and-say living bad eat-him/its”)
+# — achim speaks a demand — CMD-US: say-living-bad-akhalat-he/it
 m.declare(&quot;achim&quot;, &quot;CMD-US&quot;,
           &quot;amarnu_chaya_raa_akhalat_hu&quot;)
 
@@ -923,8 +946,8 @@ m.declare(&quot;achim&quot;, &quot;CMD-US&quot;,
 # &quot;[EN-AID] And Reuben heard, and rescued him from their hand, and said: Let
 # us not strike a soul.&quot;
 m.step(&quot;Gen.37.21&quot;)
-# ‹וַיֹּאמֶר לֹא נַכֶּנּוּ נָפֶשׁ› reuven speaks a demand — LET-NOT: nake-
-# nu-nafesh
+# ‹וַיֹּאמֶר לֹא נַכֶּנּוּ נָפֶשׁ› (“and-say not strike-him/its living-
+# being”) — Reuben speaks a demand — LET-NOT: nake-nu-living-being
 m.declare(&quot;reuven&quot;, &quot;LET-NOT&quot;,
           &quot;nake_nu_nafesh&quot;)
 
@@ -936,15 +959,16 @@ m.declare(&quot;reuven&quot;, &quot;LET-NOT&quot;,
 # which is in the wilderness, and lay no hand on him — in order to rescue
 # him from their hand, to return him to his father.&quot;
 m.step(&quot;Gen.37.22&quot;)
-# ‹אַל־תִּשְׁפְּכוּ־דָם› reuven speaks a demand — LET-NOT: tishpekhu-blood
+# ‹אַל־תִּשְׁפְּכוּ־דָם› (“not spill-forth blood”) — Reuben speaks a demand
+# — LET-NOT: tishpekhu-blood
 m.declare(&quot;reuven&quot;, &quot;LET-NOT&quot;,
           &quot;tishpekhu_dam&quot;)
-# ‹הַשְׁלִיכוּ אֹתוֹ אֶל־הַבּוֹר הַזֶּה› reuven speaks a demand — LET:
-# hashlikhu-it-to-the-bor
+# ‹הַשְׁלִיכוּ אֹתוֹ אֶל־הַבּוֹר הַזֶּה› (“throw-out obj-marker-him/its to
+# the-pit the-this”) — Reuben speaks a demand — LET: throw-out-it-to-the-pit
 m.declare(&quot;reuven&quot;, &quot;LET&quot;,
           &quot;hashlikhu_oto_el_ha_bor&quot;)
-# ‹וְיָד אַל־תִּשְׁלְחוּ־בוֹ› reuven speaks a demand — LET-NOT: yad-upon-
-# tishlechu-vo
+# ‹וְיָד אַל־תִּשְׁלְחוּ־בוֹ› (“and-hand do-not send in-him/its”) — Reuben
+# speaks a demand — LET-NOT: hand-over-tishlechu-come/bring
 m.declare(&quot;reuven&quot;, &quot;LET-NOT&quot;,
           &quot;yad_al_tishlechu_vo&quot;)
 
@@ -955,7 +979,9 @@ m.declare(&quot;reuven&quot;, &quot;LET-NOT&quot;,
 # stripped Joseph of his coat, the coat of stripes that was on him.&quot;
 m.step(&quot;Gen.37.23&quot;)
 # ‹וַיַּפְשִׁיטוּ אֶת־יוֹסֵף אֶת־כֻּתָּנְתּוֹ אֶת־כְּתֹנֶת הַפַּסִּים›
-# event: hifshitu — agent echay-v; theme ketonet-the-pasim
+# (“and-spread-out obj-marker Joseph obj-marker shirt-him/its obj-marker
+# shirt the-long-and-sleeved-tunic”) — event: hifshitu — agent brother-
+# him/its; theme shirt-the-long-and-sleeved-tunic
 m.event(&quot;hifshitu&quot;, agent=&quot;echay_v&quot;, themes=[&quot;ketonet_ha_pasim&quot;])
 
 # -------------------------- Gen.37.24 · THE_PIT_TAKES_HIM ------------------
@@ -963,11 +989,12 @@ m.event(&quot;hifshitu&quot;, agent=&quot;echay_v&quot;, themes=[&quot;ketonet_h
 # &quot;[EN-AID] And they took him and threw him into the pit; and the pit was
 # empty — no water in it.&quot;
 m.step(&quot;Gen.37.24&quot;)
-# ‹וַיִּקָּחֻהוּ וַיַּשְׁלִכוּ אֹתוֹ הַבֹּרָה› demand settled (popped from
-# the queue): hashlikhu-it-to-the-bor
+# ‹וַיִּקָּחֻהוּ וַיַּשְׁלִכוּ אֹתוֹ הַבֹּרָה› (“and-take-him/its and-throw-
+# out obj-marker-him/its the-pit-ward”) — demand settled (popped from the
+# queue): throw-out-it-to-the-pit
 m.result(&quot;hashlikhu_oto_el_ha_bor&quot;, tmark=&quot;t2&quot;)
-# ‹וַיַּשְׁלִכוּ אֹתוֹ הַבֹּרָה› demand settled (popped from the queue):
-# nashlikhe-that
+# ‹וַיַּשְׁלִכוּ אֹתוֹ הַבֹּרָה› (“and-throw-out obj-marker-him/its the-pit-
+# ward”) — demand settled (popped from the queue): throw-out-him/its
 m.result(&quot;nashlikhe_hu&quot;, tmark=&quot;t2&quot;)
 
 # -------------------------- Gen.37.25 · BREAD_AND_THE_CARAVAN --------------
@@ -978,8 +1005,9 @@ m.result(&quot;nashlikhe_hu&quot;, tmark=&quot;t2&quot;)
 # saw — behold, a caravan of Ishmaelites coming from Gilead, their camels
 # bearing gum, balm, and ladanum, going to carry it down to Egypt.&quot;
 m.step(&quot;Gen.37.25&quot;)
-# ‹וְהִנֵּה אֹרְחַת יִשְׁמְעֵאלִים בָּאָה מִגִּלְעָד› fact holds: orchat-
-# yishmeelim-baa-holkhim-mitzrayma
+# ‹וְהִנֵּה אֹרְחַת יִשְׁמְעֵאלִים בָּאָה מִגִּלְעָד› (“and-behold caravan
+# Jishmaelite come/bring from-Gilead”) — fact holds: caravan-yishmeelim-
+# come/bring-walk/go-mitzrayma
 m.fact(&quot;orchat_yishmeelim_baa_holkhim_mitzrayma&quot;)
 
 # -------------------------- Gen.37.26 · JUDAHS_QUESTION --------------------
@@ -988,8 +1016,10 @@ m.fact(&quot;orchat_yishmeelim_baa_holkhim_mitzrayma&quot;)
 # &quot;[EN-AID] And Judah said to his brothers: What profit if we kill our
 # brother and cover his blood?&quot;
 m.step(&quot;Gen.37.26&quot;)
-# ‹מַה־בֶּצַע כִּי נַהֲרֹג אֶת־אָחִינוּ וְכִסִּינוּ אֶת־דָּמוֹ› fact holds:
-# ma-betza-when-naharog-my-brother-nu(yehuda)
+# ‹מַה־בֶּצַע כִּי נַהֲרֹג אֶת־אָחִינוּ וְכִסִּינוּ אֶת־דָּמוֹ› (“what
+# plunder that smite-with-deadly-intent obj-marker brother-us/our and-plump
+# obj-marker blood-him/its”) — fact holds: what-plunder-that-smite-with-
+# deadly-intent-with-my-brother-nu(Judah)
 m.fact(&quot;ma_betza_ki_naharog_et_achi_nu(yehuda)&quot;)
 
 # -------------------------- Gen.37.27 · THE_SALE_PROPOSED ------------------
@@ -998,12 +1028,12 @@ m.fact(&quot;ma_betza_ki_naharog_et_achi_nu(yehuda)&quot;)
 # &quot;[EN-AID] Come, let us sell him to the Ishmaelites, and let our hand not
 # be upon him, for he is our brother, our flesh. And his brothers heeded.&quot;
 m.step(&quot;Gen.37.27&quot;)
-# ‹לְכוּ וְנִמְכְּרֶנּוּ לַיִּשְׁמְעֵאלִים› yehuda speaks a demand — CMD-US:
-# nimkere-nu-to-yishmeelim
+# ‹לְכוּ וְנִמְכְּרֶנּוּ לַיִּשְׁמְעֵאלִים› (“go and-sell-him/its to-
+# Jishmaelite”) — Judah speaks a demand — CMD-US: nimkere-nu-to-yishmeelim
 m.declare(&quot;yehuda&quot;, &quot;CMD-US&quot;,
           &quot;nimkere_nu_la_yishmeelim&quot;)
-# ‹וְיָדֵנוּ אַל־תְּהִי־בוֹ› yehuda speaks a demand — LET-NOT: yade-nu-upon-
-# tehi-vo
+# ‹וְיָדֵנוּ אַל־תְּהִי־בוֹ› (“and-hand-us/our do-not be in-him/its”) —
+# Judah speaks a demand — LET-NOT: yade-nu-over-be-come/bring
 m.declare(&quot;yehuda&quot;, &quot;LET-NOT&quot;,
           &quot;yade_nu_al_tehi_vo&quot;)
 
@@ -1016,8 +1046,10 @@ m.declare(&quot;yehuda&quot;, &quot;LET-NOT&quot;,
 # twenty pieces of silver; and they brought Joseph to Egypt.&quot;
 m.step(&quot;Gen.37.28&quot;)
 # ‹וַיִּמְשְׁכוּ וַיַּעֲלוּ אֶת־יוֹסֵף מִן־הַבּוֹר וַיִּמְכְּרוּ אֶת־יוֹסֵף
-# לַיִּשְׁמְעֵאלִים בְּעֶשְׂרִים כָּסֶף› demand settled (popped from the
-# queue): nimkere-nu-to-yishmeelim
+# לַיִּשְׁמְעֵאלִים בְּעֶשְׂרִים כָּסֶף› (“and-draw and-go-up obj-marker
+# Joseph from the-pit and-sell obj-marker Joseph to-Jishmaelite in-twenty
+# silver”) — demand settled (popped from the queue): nimkere-nu-to-
+# yishmeelim
 m.result(&quot;nimkere_nu_la_yishmeelim&quot;, tmark=&quot;t2&quot;)
 
 # -------------------------- Gen.37.29 · REUBEN_AT_THE_EMPTY_PIT ------------
@@ -1026,8 +1058,9 @@ m.result(&quot;nimkere_nu_la_yishmeelim&quot;, tmark=&quot;t2&quot;)
 # &quot;[EN-AID] And Reuben returned to the pit — and behold, Joseph was not in
 # the pit; and he tore his garments.&quot;
 m.step(&quot;Gen.37.29&quot;)
-# ‹וַיָּשָׁב רְאוּבֵן אֶל־הַבּוֹר וְהִנֵּה אֵין־יוֹסֵף בַּבּוֹר› fact holds:
-# shav-to-the-bor-and-en-yosef(reuven)
+# ‹וַיָּשָׁב רְאוּבֵן אֶל־הַבּוֹר וְהִנֵּה אֵין־יוֹסֵף בַּבּוֹר› (“and-
+# return Reuben to the-pit and-behold there-is-not Joseph in-pit”) — fact
+# holds: shav-to-the-pit-and-there-is-not-Joseph(Reuben)
 m.fact(&quot;shav_el_ha_bor_ve_en_yosef(reuven)&quot;)
 
 # -------------------------- Gen.37.30 · THE_CHILD_IS_NOT -------------------
@@ -1035,8 +1068,9 @@ m.fact(&quot;shav_el_ha_bor_ve_en_yosef(reuven)&quot;)
 # &quot;[EN-AID] And he returned to his brothers and said: The child is not — and
 # I, where shall I come?&quot;
 m.step(&quot;Gen.37.30&quot;)
-# ‹הַיֶּלֶד אֵינֶנּוּ וַאֲנִי אָנָה אֲנִי־בָא› fact holds: the-yeled-ene-nu-
-# and-ani-ana-ani-and(reuven)
+# ‹הַיֶּלֶד אֵינֶנּוּ וַאֲנִי אָנָה אֲנִי־בָא› (“the-child there-is-not-
+# him/its and-I where? come/bring”) — fact holds: the-child-ene-nu-
+# come/bring-I-where?-I-come/bring(Reuben)
 m.fact(&quot;ha_yeled_ene_nu_va_ani_ana_ani_va(reuven)&quot;)
 
 # -------------------------- Gen.37.31 · THE_COAT_DIPPED --------------------
@@ -1046,7 +1080,8 @@ m.fact(&quot;ha_yeled_ene_nu_va_ani_ana_ani_va(reuven)&quot;)
 # goats, and dipped the coat in the blood.&quot;
 m.step(&quot;Gen.37.31&quot;)
 # ‹וַיִּשְׁחֲטוּ שְׂעִיר עִזִּים וַיִּטְבְּלוּ אֶת־הַכֻּתֹּנֶת בַּדָּם›
-# event: taval — agent achim; theme the-kutonet-in-the-blood
+# (“and-slaughter shaggy she-goat and-dip obj-marker the-shirt in-blood”) —
+# event: taval — agent achim; theme the-shirt-come/bring-blood
 m.event(&quot;taval&quot;, agent=&quot;achim&quot;, themes=[&quot;ha_kutonet_ba_dam&quot;])
 
 # -------------------------- Gen.37.32 · THE_RECOGNIZE_DEMAND ---------------
@@ -1056,8 +1091,8 @@ m.event(&quot;taval&quot;, agent=&quot;achim&quot;, themes=[&quot;ha_kutonet_ba_
 # father, and said: This we found; recognize, please — is it your son&#x27;s coat
 # or not?&quot;
 m.step(&quot;Gen.37.32&quot;)
-# ‹הַכֶּר־נָא הַכְּתֹנֶת בִּנְךָ› achim speaks a demand — LET: haker-na-the-
-# ketonet
+# ‹הַכֶּר־נָא הַכְּתֹנֶת בִּנְךָ› (“scrutinize please the-shirt son-
+# you/your”) — achim speaks a demand — LET: scrutinize-please-the-shirt
 m.declare(&quot;achim&quot;, &quot;LET&quot;,
           &quot;haker_na_ha_ketonet&quot;)
 
@@ -1067,11 +1102,13 @@ m.declare(&quot;achim&quot;, &quot;LET&quot;,
 # &quot;[EN-AID] And he recognized it and said: My son&#x27;s coat — an evil beast
 # devoured him; torn, torn is Joseph.&quot;
 m.step(&quot;Gen.37.33&quot;)
-# ‹וַיַּכִּירָהּ וַיֹּאמֶר כְּתֹנֶת בְּנִי› demand settled (popped from the
-# queue): haker-na-the-ketonet
+# ‹וַיַּכִּירָהּ וַיֹּאמֶר כְּתֹנֶת בְּנִי› (“and-scrutinize-her/its and-say
+# shirt son-me/my”) — demand settled (popped from the queue): scrutinize-
+# please-the-shirt
 m.result(&quot;haker_na_ha_ketonet&quot;, tmark=&quot;t3&quot;)
-# ‹חַיָּה רָעָה אֲכָלָתְהוּ טָרֹף טֹרַף› fact holds: amar-living-raa-
-# akhalat-that-tarof-toraf(yaaqov)
+# ‹חַיָּה רָעָה אֲכָלָתְהוּ טָרֹף טֹרַף› (“living bad eat-him/its pluck-off
+# pluck-off”) — fact holds: amar-living-bad-akhalat-he/it-pluck-off-pluck-
+# off(Jacob)
 m.fact(&quot;amar_chaya_raa_akhalat_hu_tarof_toraf(yaaqov)&quot;)
 
 # -------------------------- Gen.37.34 · THE_MOURNING -----------------------
@@ -1080,8 +1117,9 @@ m.fact(&quot;amar_chaya_raa_akhalat_hu_tarof_toraf(yaaqov)&quot;)
 # &quot;[EN-AID] And Jacob tore his garments and put sackcloth on his loins, and
 # mourned his son many days.&quot;
 m.step(&quot;Gen.37.34&quot;)
-# ‹וַיִּקְרַע יַעֲקֹב שִׂמְלֹתָיו וַיָּשֶׂם שַׂק בְּמָתְנָיו› fact holds:
-# qara-simlotay-v-sam-saq-and-yitabel(yaaqov)
+# ‹וַיִּקְרַע יַעֲקֹב שִׂמְלֹתָיו וַיָּשֶׂם שַׂק בְּמָתְנָיו› (“and-rend
+# Jacob dress-him/its and-put/set mesh in-waist-him/its”) — fact holds:
+# qara-simlotay-v-sam-mesh-come/bring-bewail(Jacob)
 m.fact(&quot;qara_simlotay_v_sam_saq_va_yitabel(yaaqov)&quot;)
 
 # -------------------------- Gen.37.35 · COMFORT_REFUSED --------------------
@@ -1092,7 +1130,8 @@ m.fact(&quot;qara_simlotay_v_sam_saq_va_yitabel(yaaqov)&quot;)
 # mourning, to Sheol. And his father wept for him.&quot;
 m.step(&quot;Gen.37.35&quot;)
 # ‹וַיְמָאֵן לְהִתְנַחֵם וַיֹּאמֶר כִּי־אֵרֵד אֶל־בְּנִי אָבֵל שְׁאֹלָה›
-# fact holds: vayemaen-lehitnachem-ered-avel-sheola(yaaqov)
+# (“and-refuse to-sigh and-say that go-down to son-me/my lamenting Shᵉ&#x27;Owl-
+# ward”) — fact holds: vayemaen-lehitnachem-go-down-lamenting-sheola(Jacob)
 m.fact(&quot;vayemaen_lehitnachem_ered_avel_sheola(yaaqov)&quot;)
 
 # -------------------------- Gen.37.36 · THE_SECOND_SALE --------------------
@@ -1101,8 +1140,9 @@ m.fact(&quot;vayemaen_lehitnachem_ered_avel_sheola(yaaqov)&quot;)
 # &quot;[EN-AID] And the Medanites sold him to Egypt, to Potiphar, Pharaoh&#x27;s
 # officer, the chief of the slaughterers.&quot;
 m.step(&quot;Gen.37.36&quot;)
-# ‹וְהַמְּדָנִים מָכְרוּ אֹתוֹ אֶל־מִצְרָיִם› fact holds: makhru-it-to-
-# mitzrayim-to-fotifar(medanim)
+# ‹וְהַמְּדָנִים מָכְרוּ אֹתוֹ אֶל־מִצְרָיִם› (“and-the-Midjanite sell obj-
+# marker-him/its to Egypt”) — fact holds: sell-it-to-Egypt-to-
+# Potiphar(Midjanite)
 m.fact(&quot;makhru_oto_el_mitzrayim_le_fotifar(medanim)&quot;)
 
 # -------------------------- machine truth (baked from the Stage D run) -------
@@ -1122,4 +1162,4 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 28
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-08 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

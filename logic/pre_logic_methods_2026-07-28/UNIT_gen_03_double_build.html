@@ -369,19 +369,21 @@ m = Machine(&quot;gen_03_double_build&quot;)
 # &quot;And God said: &#x27;Let the waters under the heaven be gathered together unto
 # one place, and let the dry land appear.&#x27; And it was so.&quot;
 m.step(&quot;Gen.1.9&quot;)
-# ‹יִקָּווּ הַמַּיִם› God speaks a demand — LET: gathered(waters, to=place-
-# one)
+# ‹יִקָּווּ הַמַּיִם› (“be-gathered the-waters”) — God speaks a demand —
+# LET: gathered(waters, to=place-one)
 m.declare(&quot;Elohim&quot;, &quot;LET&quot;,
           &quot;gathered(mayim, to=maqom-echad)&quot;)
-# ‹וְתֵרָאֶה הַיַּבָּשָׁה› God speaks a demand — LET?: exists(dry-land)
+# ‹וְתֵרָאֶה הַיַּבָּשָׁה› (“and-let-appear the-dry-land”) — God speaks a
+# demand — LET?: exists(dry-land)
 m.declare(&quot;Elohim&quot;, &quot;LET?&quot;,
           &quot;exists(yabasha)&quot;)
 # reads without prior install (flag, not fix): waters, heavens
 m.presupposed(&quot;mayim&quot;, &quot;shamayim&quot;)
-# ‹וַיְהִי־כֵן› demand settled (popped from the queue): gathered(waters,
-# to=place-one)
+# ‹וַיְהִי־כֵן› (“and-there-was so”) — demand settled (popped from the
+# queue): gathered(waters, to=place-one)
 m.result(&quot;gathered(mayim, to=maqom-echad)&quot;, tmark=&quot;t1&quot;)
-# ‹הַיַּבָּשָׁה› demand settled (popped from the queue): exists(dry-land)
+# ‹הַיַּבָּשָׁה› (“the-dry-land”) — demand settled (popped from the queue):
+# exists(dry-land)
 m.result(&quot;exists(yabasha)&quot;, tmark=&quot;t1&quot;)
 
 # -------------------------- Gen.1.10 · NAME_NAME_TEST ----------------------
@@ -390,11 +392,11 @@ m.result(&quot;exists(yabasha)&quot;, tmark=&quot;t1&quot;)
 # &quot;And God called the dry land Earth, and the gathering together of the
 # waters called He Seas; and God saw that it was good.&quot;
 m.step(&quot;Gen.1.10&quot;)
-# ‹לַיַּבָּשָׁה אֶרֶץ … קָרָא יַמִּים› named: dry-land := Earth; miqveh-ha-
-# mayim := Seas
+# ‹לַיַּבָּשָׁה אֶרֶץ … קָרָא יַמִּים› (“to-the-dry-land Earth … called
+# Seas”) — named: dry-land := Earth; miqveh-ha-mayim := Seas
 m.name(&quot;yabasha&quot;, &quot;eretz&quot;)
 m.name(&quot;miqveh-ha-mayim&quot;, &quot;yamim&quot;)
-# ‹כִּי־טוֹב› test PASS — oracle-word good, on gathering
+# ‹כִּי־טוֹב› (“that good”) — test PASS — oracle-word good, on gathering
 m.test(&quot;PASS&quot;, &quot;tov&quot;, &quot;gathering&quot;)
 
 # -------------------------- Gen.1.11 · DECLARE_DELEGATED_SPEC --------------
@@ -404,14 +406,16 @@ m.test(&quot;PASS&quot;, &quot;tov&quot;, &quot;gathering&quot;)
 # fruit-tree bearing fruit after its kind, wherein is the seed thereof, upon
 # the earth.&#x27; And it was so.&quot;
 m.step(&quot;Gen.1.11&quot;)
-# ‹תַּדְשֵׁא הָאָרֶץ› God speaks a demand — LET: sprout(earth, vegetation)
+# ‹תַּדְשֵׁא הָאָרֶץ› (“let-sprout the-earth”) — God speaks a demand — LET:
+# sprout(earth, vegetation)
 m.declare(&quot;Elohim&quot;, &quot;LET&quot;,
           &quot;sprout(aretz, vegetation)&quot;)
-# ‹מַזְרִיעַ זֶרַע … עֹשֶׂה פְּרִי לְמִינוֹ› standing constraint: yielding-
-# seed(herb, seed) ∧ making(tree, fruit) ∧ to-by-its-kind(reproduction)
+# ‹מַזְרִיעַ זֶרַע … עֹשֶׂה פְּרִי לְמִינוֹ› (“yielding-seed seed … making
+# fruit by-its-kind”) — standing constraint: yielding-seed(herb, seed) ∧
+# making(tree, fruit) ∧ to-by-its-kind(reproduction)
 m.invariant(&quot;mazria(esev, zera) ∧ oseh(etz, peri) ∧ le-mino(reproduction)&quot;)
-# ‹וַיְהִי־כֵן› demand settled (popped from the queue): sprout(earth,
-# vegetation)
+# ‹וַיְהִי־כֵן› (“and-there-was so”) — demand settled (popped from the
+# queue): sprout(earth, vegetation)
 m.result(&quot;sprout(aretz, vegetation)&quot;, tmark=&quot;t2&quot;)
 
 # -------------------------- Gen.1.12 · DELEGATED_BUILD_DELTA_TEST ----------
@@ -421,34 +425,37 @@ m.result(&quot;sprout(aretz, vegetation)&quot;, tmark=&quot;t2&quot;)
 # tree bearing fruit, wherein is the seed thereof, after its kind; and God
 # saw that it was good.&quot;
 m.step(&quot;Gen.1.12&quot;)
-# ‹וַתּוֹצֵא הָאָרֶץ› event: ? — agent earth; theme grass
+# ‹וַתּוֹצֵא הָאָרֶץ› (“and-brought-forth the-earth”) — event: ? — agent
+# earth; theme grass
 m.event(&quot;?&quot;, agent=&quot;aretz&quot;, themes=[&quot;deshe&quot;])
 # the world gains: grass
 m.install(&quot;deshe&quot;)
-# ‹עֵץ פְּרִי עֹשֶׂה פְּרִי ← וְעֵץ עֹשֶׂה־פְּרִי› spec-delta — spec said
-# tree fruit making fruit, delivery says tree making fruit
+# ‹עֵץ פְּרִי עֹשֶׂה פְּרִי ← וְעֵץ עֹשֶׂה־פְּרִי› (“tree fruit making fruit
+# and-tree making fruit”) — spec-delta — spec said tree fruit making fruit,
+# delivery says tree making fruit
 m.spec_delta(&quot;etz peri oseh peri&quot;,
              &quot;etz oseh peri&quot;)
-# ‹עֵשֶׂב מַזְרִיעַ זֶרַע ← עֵשֶׂב מַזְרִיעַ זֶרַע לְמִינֵהוּ› spec-delta —
+# ‹עֵשֶׂב מַזְרִיעַ זֶרַע ← עֵשֶׂב מַזְרִיעַ זֶרַע לְמִינֵהוּ› (“herb
+# yielding-seed seed herb yielding-seed seed by-its-kind”) — spec-delta —
 # spec said herb yielding-seed seed, delivery says herb yielding-seed seed
 # to-by-its-kind
 m.spec_delta(&quot;esev mazria zera&quot;,
              &quot;esev mazria zera le-minehu&quot;)
-# ‹כִּי־טוֹב› test PASS — oracle-word good, on vegetation
+# ‹כִּי־טוֹב› (“that good”) — test PASS — oracle-word good, on vegetation
 m.test(&quot;PASS&quot;, &quot;tov&quot;, &quot;vegetation&quot;)
 
 # -------------------------- Gen.1.13 · COMMIT_DOUBLE_DAY -------------------
 # וַיְהִי־עֶרֶב וַיְהִי־בֹקֶר יוֹם שְׁלִישִׁי
 # &quot;And there was evening and there was morning, a third day.&quot;
 m.step(&quot;Gen.1.13&quot;)
-# ‹יוֹם שְׁלִישִׁי› ledger: day 3 committed
+# ‹יוֹם שְׁלִישִׁי› (“day third”) — ledger: day 3 committed
 m.commit(3, label_form=&quot;ordinal&quot;, label_translit=&quot;yom shelishi&quot;)
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == &quot;__main__&quot;:
     m.report()
-    assert m.created_set() == {&#x27;yabasha&#x27;, &#x27;deshe&#x27;}
-    assert m.presupposed_set() == {&#x27;mayim&#x27;, &#x27;shamayim&#x27;}
+    assert m.created_set() == {&#x27;deshe&#x27;, &#x27;yabasha&#x27;}
+    assert m.presupposed_set() == {&#x27;shamayim&#x27;, &#x27;mayim&#x27;}
     assert m.REGISTRY[&quot;names&quot;] == {&#x27;yabasha&#x27;: &#x27;eretz&#x27;, &#x27;miqveh-ha-mayim&#x27;: &#x27;yamim&#x27;}
     assert m.REGISTRY[&quot;writes&quot;] == 2
     assert m.tests_list() == [(&#x27;PASS&#x27;, &#x27;tov&#x27;, &#x27;gathering&#x27;), (&#x27;PASS&#x27;, &#x27;tov&#x27;, &#x27;vegetation&#x27;)]
@@ -462,4 +469,4 @@ if __name__ == &quot;__main__&quot;:
     assert len(m.EVENTS) == 9
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">FROZEN 2026-07-30 (owner approved): third logic-derived unit. Central findings: the FIRST DELEGATED build (fiat addressed to the earth; the earth executes — feminine verb agreement is the audit trail); the TWO-WAY spec/delivery DELTA (trees lost peri/&#x27;fruit&#x27; — BR 5:9; herbs gained le-minehu/&#x27;by its kind&#x27; — Chullin 60a, added by amendment); delivery passes the tov (&#x27;good&#x27;) oracle DESPITE both deltas (spec-conformance and goodness are separate predicates); the clean double commit that makes day 2&#x27;s naked commit measurable. Not binding religious law.</div><p class='meta'>Rendered 2026-08-08 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">FROZEN 2026-07-30 (owner approved): third logic-derived unit. Central findings: the FIRST DELEGATED build (fiat addressed to the earth; the earth executes — feminine verb agreement is the audit trail); the TWO-WAY spec/delivery DELTA (trees lost peri/&#x27;fruit&#x27; — BR 5:9; herbs gained le-minehu/&#x27;by its kind&#x27; — Chullin 60a, added by amendment); delivery passes the tov (&#x27;good&#x27;) oracle DESPITE both deltas (spec-conformance and goodness are separate predicates); the clean double commit that makes day 2&#x27;s naked commit measurable. Not binding religious law.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

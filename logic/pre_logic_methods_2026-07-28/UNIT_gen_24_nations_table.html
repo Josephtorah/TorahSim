@@ -1027,11 +1027,13 @@ m = Machine(&quot;gen_24_nations_table&quot;)
 # &quot;Now these are the generations of the sons of Noah: Shem, Ham, and
 # Japheth; and unto them were sons born after the flood.&quot;
 m.step(&quot;Gen.10.1&quot;)
-# ‹וְאֵלֶּה תּוֹלְדֹת בְּנֵי־נֹחַ שֵׁם חָם וָיָפֶת› section generations-
-# sons-of-Noach: Sem, Ham, Japheth
+# ‹וְאֵלֶּה תּוֹלְדֹת בְּנֵי־נֹחַ שֵׁם חָם וָיָפֶת› (“and-these generations-
+# of sons-of Noah Sem Ham and-Japheth”) — section generations-sons-of-Noach:
+# Sem, Ham, Japheth
 m.section(&quot;toledot_bnei_noach&quot;, &quot;shem&quot;, &quot;cham&quot;, &quot;yefet&quot;)
-# ‹וַיִּוָּלְדוּ לָהֶם בָּנִים אַחַר הַמַּבּוּל› event: in-born — theme
-# sons-of-after-the-deluge
+# ‹וַיִּוָּלְדוּ לָהֶם בָּנִים אַחַר הַמַּבּוּל› (“and-were-born to-them
+# sons-of after the-deluge”) — event: in-born — theme sons-of-after-the-
+# deluge
 m.event(&quot;be_born&quot;, themes=[&quot;banim_achar_ha_mabul&quot;])
 # reads without prior install (flag, not fix): Noach
 m.presupposed(&quot;noach&quot;)
@@ -1046,11 +1048,14 @@ m.presupposed(&quot;noach&quot;)
 # families, in their nations.&quot;
 m.step(&quot;Gen.10.2-5&quot;)
 # ‹בְּנֵי יֶפֶת גֹּמֶר וּמָגוֹג וּמָדַי וְיָוָן וְתֻבָל וּמֶשֶׁךְ וְתִירָס›
-# fact holds: sons-of-Japheth-Gomer-and-Magog-and-Madai-and-Javan
+# (“son Japheth Gomer and-Magog and-Madai and-Javan and-Tubal and-Mesech
+# and-Tiras”) — fact holds: sons-of-Japheth-Gomer-and-Magog-and-Madai-and-
+# Javan
 m.fact(&quot;bnei_yefet_gomer_u_magog_u_maday_ve_yavan&quot;)
-# ‹מֵאֵלֶּה נִפְרְדוּ אִיֵּי הַגּוֹיִם … אִישׁ לִלְשֹׁנוֹ› fact holds: and-
-# from-these-nifredu-iyei-the-nations-in-artzotam; each-to-me-leshono-to-
-# mishpechotam-in-goyehem
+# ‹מֵאֵלֶּה נִפְרְדוּ אִיֵּי הַגּוֹיִם … אִישׁ לִלְשֹׁנוֹ› (“from-these
+# break-through habitable-spot the-nation … man to-tongue-him/its”) — fact
+# holds: and-from-these-nifredu-iyei-the-nations-in-artzotam; each-to-me-
+# leshono-to-mishpechotam-in-goyehem
 m.fact(&quot;u_me_eleh_nifredu_iyei_ha_goyim_be_artzotam&quot;,
        &quot;ish_li_leshono_le_mishpechotam_be_goyehem&quot;)
 
@@ -1062,9 +1067,9 @@ m.fact(&quot;u_me_eleh_nifredu_iyei_ha_goyim_be_artzotam&quot;,
 # of Cush: Seba, and Havilah, and Sabtah, and Raamah, and Sabteca; and the
 # sons of Raamah: Sheba, and Dedan.&quot;
 m.step(&quot;Gen.10.6-7&quot;)
-# ‹וּבְנֵי חָם כּוּשׁ וּמִצְרַיִם וּפוּט וּכְנָעַן …› fact holds: sons-of-
-# Ham-Chush-and-Egypt-and-Phut-and-Canaan; sons-of-Chush-Seba-and-Havilah-
-# and-vnei-ramah
+# ‹וּבְנֵי חָם כּוּשׁ וּמִצְרַיִם וּפוּט וּכְנָעַן …› (“and-son Ham Chush
+# and-Egypt and-Phut and-Canaan”) — fact holds: sons-of-Ham-Chush-and-Egypt-
+# and-Phut-and-Canaan; sons-of-Chush-Seba-and-Havilah-and-vnei-ramah
 m.fact(&quot;bnei_cham_kush_u_mitzrayim_u_fut_u_khenaan&quot;,
        &quot;bnei_khush_seva_va_chavilah_u_vnei_ramah&quot;)
 
@@ -1076,14 +1081,17 @@ m.fact(&quot;bnei_cham_kush_u_mitzrayim_u_fut_u_khenaan&quot;,
 # mighty hunter before the LORD; wherefore it is said: &#x27;Like Nimrod a mighty
 # hunter before the LORD.&#x27;&quot;
 m.step(&quot;Gen.10.8-9&quot;)
-# ‹וְכוּשׁ יָלַד אֶת־נִמְרֹד› event: beget — agent Chush; theme Nimrod
+# ‹וְכוּשׁ יָלַד אֶת־נִמְרֹד› (“and-Chush bear-young obj-marker Nimrod”) —
+# event: beget — agent Chush; theme Nimrod
 m.event(&quot;beget&quot;, agent=&quot;kush&quot;, themes=[&quot;nimrod&quot;])
-# ‹הוּא הֵחֵל לִהְיוֹת גִּבֹּר בָּאָרֶץ … גִבֹּר־צַיִד לִפְנֵי יְהוָה› fact
-# holds: he-began-lihyot-gibbor-in-the-earth; gibbor-hunter-lifnei-yhwh
+# ‹הוּא הֵחֵל לִהְיוֹת גִּבֹּר בָּאָרֶץ … גִבֹּר־צַיִד לִפְנֵי יְהוָה›
+# (“he/it bore to-be powerful in-earth … powerful chase to-face YHWH”) —
+# fact holds: he-began-lihyot-gibbor-in-the-earth; gibbor-hunter-lifnei-yhwh
 m.fact(&quot;hu_hechel_lihyot_gibbor_ba_aretz&quot;,
        &quot;gibbor_tzayid_lifnei_yhwh&quot;)
-# ‹עַל־כֵּן יֵאָמַר כְּנִמְרֹד גִּבּוֹר צַיִד לִפְנֵי יְהוָה› pattern
-# recorded: like-Nimrod-gibbor-hunter-lifnei-yhwh
+# ‹עַל־כֵּן יֵאָמַר כְּנִמְרֹד גִּבּוֹר צַיִד לִפְנֵי יְהוָה› (“over so say
+# like-Nimrod powerful chase to-face YHWH”) — pattern recorded: like-Nimrod-
+# gibbor-hunter-lifnei-yhwh
 m.pattern(&quot;ke_nimrod_gibbor_tzayid_lifnei_yhwh&quot;)
 
 # -------------------------- Gen.10.10-12 · THE_KINGDOM_AND_THE_FOUR_CITIES -
@@ -1096,18 +1104,22 @@ m.pattern(&quot;ke_nimrod_gibbor_tzayid_lifnei_yhwh&quot;)
 # builded Nineveh, and Rehoboth-ir, and Calah, and Resen between Nineveh and
 # Calah — the same is the great city.&quot;
 m.step(&quot;Gen.10.10-12&quot;)
-# ‹וַתְּהִי רֵאשִׁית מַמְלַכְתּוֹ בָּבֶל … בְּאֶרֶץ שִׁנְעָר› fact holds:
+# ‹וַתְּהִי רֵאשִׁית מַמְלַכְתּוֹ בָּבֶל … בְּאֶרֶץ שִׁנְעָר› (“and-be
+# beginning dominion-him/its Babel … in-earth Shinar”) — fact holds:
 # beginning-of-mamlakhto-Babel-in-land-Shinar; from-the-earth-the-hi-went-
 # out-Ashur
 m.fact(&quot;reshit_mamlakhto_bavel_be_eretz_shinar&quot;,
        &quot;min_ha_aretz_ha_hi_yatza_ashur&quot;)
-# ‹וַיִּבֶן אֶת־נִינְוֵה וְאֶת־רְחֹבֹת עִיר וְאֶת־כָּלַח וְאֶת־רֶסֶן› event:
-# build — theme ninveh, Rehoboth-city, Calah, Resen
+# ‹וַיִּבֶן אֶת־נִינְוֵה וְאֶת־רְחֹבֹת עִיר וְאֶת־כָּלַח וְאֶת־רֶסֶן› (“and-
+# build obj-marker Nineveh and-obj-marker Rehoboth city and-obj-marker Calah
+# and-obj-marker Resen”) — event: build — theme ninveh, Rehoboth-city,
+# Calah, Resen
 m.event(&quot;build&quot;, themes=[&quot;ninveh&quot;, &quot;rechovot_ir&quot;, &quot;kalach&quot;, &quot;resen&quot;])
-# ‹נִינְוֵה וְרְחֹבֹת עִיר וְכָלַח וְרֶסֶן› the world gains: ninveh,
-# Rehoboth-city, Calah, Resen
+# ‹נִינְוֵה וְרְחֹבֹת עִיר וְכָלַח וְרֶסֶן› (“Nineveh and-Rehoboth city and-
+# Calah and-Resen”) — the world gains: ninveh, Rehoboth-city, Calah, Resen
 m.install(&quot;ninveh&quot;, &quot;rechovot_ir&quot;, &quot;kalach&quot;, &quot;resen&quot;)
-# ‹הִוא הָעִיר הַגְּדֹלָה› fact holds: hi-the-city-the-gedolah
+# ‹הִוא הָעִיר הַגְּדֹלָה› (“he/it the-city the-great”) — fact holds: hi-
+# the-city-the-gedolah
 m.fact(&quot;hi_ha_ir_ha_gedolah&quot;)
 
 # -------------------------- Gen.10.13-14 · MITZRAYIM_ROWS_AND_THE_PHILISTINE_NOTE -
@@ -1118,11 +1130,11 @@ m.fact(&quot;hi_ha_ir_ha_gedolah&quot;)
 # Pathrusim, and Casluhim — whence went forth the Philistines — and
 # Caphtorim.&quot;
 m.step(&quot;Gen.10.13-14&quot;)
-# ‹וּמִצְרַיִם יָלַד אֶת־לוּדִים …› event: beget — agent Egypt; theme seven-
-# amamim
+# ‹וּמִצְרַיִם יָלַד אֶת־לוּדִים …› (“and-Egypt bear-young obj-marker
+# Ludite”) — event: beget — agent Egypt; theme seven-amamim
 m.event(&quot;beget&quot;, agent=&quot;mitzrayim&quot;, themes=[&quot;shivat_amamim&quot;])
-# ‹אֲשֶׁר יָצְאוּ מִשָּׁם פְּלִשְׁתִּים› fact holds: who-bring-forth-from-
-# there-Philistines
+# ‹אֲשֶׁר יָצְאוּ מִשָּׁם פְּלִשְׁתִּים› (“which bring-forth from-there
+# Pelishtite”) — fact holds: who-bring-forth-from-there-Philistines
 m.fact(&quot;asher_yatzu_mi_sham_pelishtim&quot;)
 
 # -------------------------- Gen.10.15-19 · CANAAN_ROWS_SPREAD_AND_BORDER ---
@@ -1136,16 +1148,19 @@ m.fact(&quot;asher_yatzu_mi_sham_pelishtim&quot;)
 # of the Canaanite was from Zidon, as thou goest toward Gerar, unto Gaza; as
 # thou goest toward Sodom and Gomorrah and Admah and Zeboiim, unto Lasha.&quot;
 m.step(&quot;Gen.10.15-19&quot;)
-# ‹וּכְנַעַן יָלַד אֶת־צִידֹן בְּכֹרוֹ וְאֶת־חֵת› event: beget — agent
-# kenaan; theme Sidon-bekhoro, Heth
+# ‹וּכְנַעַן יָלַד אֶת־צִידֹן בְּכֹרוֹ וְאֶת־חֵת› (“and-Canaan bear-young
+# obj-marker Sidon firstborn-him/its and-obj-marker Heth”) — event: beget —
+# agent kenaan; theme Sidon-bekhoro, Heth
 m.event(&quot;beget&quot;, agent=&quot;kenaan&quot;, themes=[&quot;tzidon_bekhoro&quot;, &quot;chet&quot;])
 # ‹וְאֶת־הַיְבוּסִי וְאֶת־הָאֱמֹרִי … וְאַחַר נָפֹצוּ מִשְׁפְּחוֹת
-# הַכְּנַעֲנִי› fact holds: these-the-Canaanite-asarah-amamim; and-after-
-# were-spread-mishpechot-the-Canaanite
+# הַכְּנַעֲנִי› (“and-obj-marker the-Jebusite and-obj-marker the-Emorite …
+# and-after dash-in-pieces family the-Kenaanite”) — fact holds: these-the-
+# Canaanite-asarah-amamim; and-after-were-spread-mishpechot-the-Canaanite
 m.fact(&quot;eleh_ha_kenaani_asarah_amamim&quot;,
        &quot;ve_achar_nafotzu_mishpechot_ha_kenaani&quot;)
-# ‹וַיְהִי גְּבוּל הַכְּנַעֲנִי מִצִּידֹן … עַד־לָשַׁע› fact holds: border-
-# of-the-Canaanite-from-Sidon-until-azah-until-Lasha
+# ‹וַיְהִי גְּבוּל הַכְּנַעֲנִי מִצִּידֹן … עַד־לָשַׁע› (“and-be cord the-
+# Kenaanite from-Sidon … until Lasha”) — fact holds: border-of-the-
+# Canaanite-from-Sidon-until-azah-until-Lasha
 m.fact(&quot;gevul_ha_kenaani_mi_tzidon_ad_azah_ad_lasha&quot;)
 
 # -------------------------- Gen.10.20 · HAM_CLOSE --------------------------
@@ -1153,8 +1168,9 @@ m.fact(&quot;gevul_ha_kenaani_mi_tzidon_ad_azah_ad_lasha&quot;)
 # &quot;These are the sons of Ham, after their families, after their tongues, in
 # their lands, in their nations.&quot;
 m.step(&quot;Gen.10.20&quot;)
-# ‹אֵלֶּה בְנֵי־חָם … בְּגוֹיֵהֶם› fact holds: these-vnei-Ham-to-
-# mishpechotam-to-me-leshonotam-in-artzotam-in-goyehem
+# ‹אֵלֶּה בְנֵי־חָם … בְּגוֹיֵהֶם› (“these sons-of Ham … in-their-nations”)
+# — fact holds: these-vnei-Ham-to-mishpechotam-to-me-leshonotam-in-artzotam-
+# in-goyehem
 m.fact(&quot;eleh_vnei_cham_le_mishpechotam_li_leshonotam_be_artzotam_be_goyehem&quot;)
 
 # -------------------------- Gen.10.21-24 · SHEM_OPENER_AND_ROWS ------------
@@ -1167,17 +1183,20 @@ m.fact(&quot;eleh_vnei_cham_le_mishpechotam_li_leshonotam_be_artzotam_be_goyehem
 # Hul, and Gether, and Mash. And Arpachshad begot Shelah; and Shelah begot
 # Eber.&quot;
 m.step(&quot;Gen.10.21-24&quot;)
-# ‹וּלְשֵׁם יֻלַּד גַּם־הוּא› event: in-born — theme to-Sem-also-he
+# ‹וּלְשֵׁם יֻלַּד גַּם־הוּא› (“and-to-Sem bear-young also he/it”) — event:
+# in-born — theme to-Sem-also-he
 m.event(&quot;be_born&quot;, themes=[&quot;le_shem_gam_hu&quot;])
 # ‹אֲבִי כָּל־בְּנֵי־עֵבֶר אֲחִי יֶפֶת הַגָּדוֹל … בְּנֵי שֵׁם עֵילָם
-# וְאַשּׁוּר› fact holds: father-of-all-sons-of-Ever-brother-Japheth-the-
+# וְאַשּׁוּר› (“father all son Eber brother Japheth the-great … son Sem Elam
+# and-Asshur”) — fact holds: father-of-all-sons-of-Ever-brother-Japheth-the-
 # elder; sons-of-Sem-eilam-and-Ashur-and-Arphaxad
 m.fact(&quot;avi_kol_bnei_ever_achi_yefet_ha_gadol&quot;,
        &quot;bnei_shem_eilam_ve_ashur_ve_arpakhshad&quot;)
-# ‹וְאַרְפַּכְשַׁד יָלַד אֶת־שָׁלַח› event: beget — agent Arphaxad; theme
-# Salah
+# ‹וְאַרְפַּכְשַׁד יָלַד אֶת־שָׁלַח› (“and-Arphaxad bear-young obj-marker
+# Salah”) — event: beget — agent Arphaxad; theme Salah
 m.event(&quot;beget&quot;, agent=&quot;arpakhshad&quot;, themes=[&quot;shelach&quot;])
-# ‹וְשֶׁלַח יָלַד אֶת־עֵבֶר› event: beget — agent Salah; theme Ever
+# ‹וְשֶׁלַח יָלַד אֶת־עֵבֶר› (“and-Salah bear-young obj-marker Eber”) —
+# event: beget — agent Salah; theme Ever
 m.event(&quot;beget&quot;, agent=&quot;shelach&quot;, themes=[&quot;ever&quot;])
 
 # -------------------------- Gen.10.25-29 · PELEG_AND_THE_YOKTAN_ROWS -------
@@ -1189,17 +1208,20 @@ m.event(&quot;beget&quot;, agent=&quot;shelach&quot;, themes=[&quot;ever&quot;])
 # Hadoram, and Uzal, and Diklah; and Obal, and Abimael, and Sheba; and
 # Ophir, and Havilah, and Jobab; all these were the sons of Joktan.&quot;
 m.step(&quot;Gen.10.25-29&quot;)
-# ‹וּלְעֵבֶר יֻלַּד שְׁנֵי בָנִים› event: in-born — theme to-Ever-shnei-
-# sons-of
+# ‹וּלְעֵבֶר יֻלַּד שְׁנֵי בָנִים› (“and-to-Eber bear-young two son”) —
+# event: in-born — theme to-Ever-shnei-sons-of
 m.event(&quot;be_born&quot;, themes=[&quot;le_ever_shnei_vanim&quot;])
-# ‹שֵׁם הָאֶחָד פֶּלֶג כִּי בְיָמָיו נִפְלְגָה הָאָרֶץ› fact holds: Sem-the-
-# one-Peleg-that-and-his-days-niflegah-the-earth; and-Sem-his-brother-yoktan
+# ‹שֵׁם הָאֶחָד פֶּלֶג כִּי בְיָמָיו נִפְלְגָה הָאָרֶץ› (“name the-one Peleg
+# that in-day-him/its split the-earth”) — fact holds: Sem-the-one-Peleg-
+# that-and-his-days-niflegah-the-earth; and-Sem-his-brother-yoktan
 m.fact(&quot;shem_ha_echad_peleg_ki_ve_yamav_niflegah_ha_aretz&quot;,
        &quot;ve_shem_achiv_yoktan&quot;)
-# ‹וְיָקְטָן יָלַד אֶת־אַלְמוֹדָד … וְאֶת־יוֹבָב› event: beget — agent
-# yoktan; theme shloshah-asar-sons-of
+# ‹וְיָקְטָן יָלַד אֶת־אַלְמוֹדָד … וְאֶת־יוֹבָב› (“and-Joktan bear-young
+# obj-marker Almodad … and-obj-marker Jobab”) — event: beget — agent yoktan;
+# theme shloshah-asar-sons-of
 m.event(&quot;beget&quot;, agent=&quot;yoktan&quot;, themes=[&quot;shloshah_asar_banim&quot;])
-# ‹כָּל־אֵלֶּה בְּנֵי יָקְטָן› fact holds: all-these-sons-of-yoktan
+# ‹כָּל־אֵלֶּה בְּנֵי יָקְטָן› (“all these son Joktan”) — fact holds: all-
+# these-sons-of-yoktan
 m.fact(&quot;kol_eleh_bnei_yoktan&quot;)
 
 # -------------------------- Gen.10.30-31 · THE_DWELLING_AND_SHEM_CLOSE -----
@@ -1209,11 +1231,13 @@ m.fact(&quot;kol_eleh_bnei_yoktan&quot;)
 # mountain of the east. These are the sons of Shem, after their families,
 # after their tongues, in their lands, after their nations.&quot;
 m.step(&quot;Gen.10.30-31&quot;)
-# ‹וַיְהִי מוֹשָׁבָם מִמֵּשָׁא בֹּאֲכָה סְפָרָה הַר הַקֶּדֶם› fact holds:
-# moshavam-from-Mesha-mountain-the-east
+# ‹וַיְהִי מוֹשָׁבָם מִמֵּשָׁא בֹּאֲכָה סְפָרָה הַר הַקֶּדֶם› (“and-be seat-
+# them/their from-Mesha come/bring-you/your Sephar-ward mountain the-front”)
+# — fact holds: moshavam-from-Mesha-mountain-the-east
 m.fact(&quot;moshavam_mi_mesha_har_ha_qedem&quot;)
-# ‹אֵלֶּה בְנֵי־שֵׁם … לְגוֹיֵהֶם› fact holds: these-vnei-Sem-to-
-# mishpechotam-to-me-leshonotam-in-artzotam-to-goyehem
+# ‹אֵלֶּה בְנֵי־שֵׁם … לְגוֹיֵהֶם› (“these son Sem … to-nation-them/their”)
+# — fact holds: these-vnei-Sem-to-mishpechotam-to-me-leshonotam-in-artzotam-
+# to-goyehem
 m.fact(&quot;eleh_vnei_shem_le_mishpechotam_li_leshonotam_be_artzotam_le_goyehem&quot;)
 
 # -------------------------- Gen.10.32 · THE_GRAND_CLOSE_SEALS_THE_INCLUSIO -
@@ -1224,15 +1248,17 @@ m.fact(&quot;eleh_vnei_shem_le_mishpechotam_li_leshonotam_be_artzotam_le_goyehem
 # the flood.&quot;
 m.step(&quot;Gen.10.32&quot;)
 # ‹אֵלֶּה מִשְׁפְּחֹת בְּנֵי־נֹחַ … וּמֵאֵלֶּה נִפְרְדוּ הַגּוֹיִם בָּאָרֶץ
-# אַחַר הַמַּבּוּל› fact holds: these-mishpechot-sons-of-Noach-to-toledotam;
-# and-from-these-nifredu-the-nations-in-the-earth-after-the-deluge
+# אַחַר הַמַּבּוּל› (“these families-of sons-of Noah … and-from-these
+# divided the-nations in-the-land after the-deluge”) — fact holds: these-
+# mishpechot-sons-of-Noach-to-toledotam; and-from-these-nifredu-the-nations-
+# in-the-earth-after-the-deluge
 m.fact(&quot;eleh_mishpechot_bnei_noach_le_toledotam&quot;,
        &quot;u_me_eleh_nifredu_ha_goyim_ba_aretz_achar_ha_mabul&quot;)
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == &quot;__main__&quot;:
     m.report()
-    assert m.created_set() == {&#x27;resen&#x27;, &#x27;rechovot_ir&#x27;, &#x27;kalach&#x27;, &#x27;ninveh&#x27;}
+    assert m.created_set() == {&#x27;kalach&#x27;, &#x27;rechovot_ir&#x27;, &#x27;resen&#x27;, &#x27;ninveh&#x27;}
     assert m.presupposed_set() == {&#x27;noach&#x27;}
     assert m.REGISTRY[&quot;names&quot;] == {}
     assert m.REGISTRY[&quot;writes&quot;] == 0
@@ -1247,4 +1273,4 @@ if __name__ == &quot;__main__&quot;:
     assert len(m.EVENTS) == 12
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">FROZEN 2026-08-03 (second-generation derivation agent; freeze-after-review by the main loop — NO agent freeze; sixth unit under the PIPELINE + DEBUT-MAP process, the agent&#x27;s second): twenty-fifth-unit candidate — THE NATIONS TABLE, span OWNER-RULED whole (32 verses as one ledger-genre unit; boot steps grouped on the letter&#x27;s own twelve paragraphs); fifteenth extension-free derivation candidate in a row. The table is 91 percent verbless and the machine mirrors it: one SECTION that labels and installs nothing (gen_16&#x27;s toledot device — the series&#x27; tokens 4-5 bracket the span), twenty-three row-facts (gen_14&#x27;s ledger class), ten birth/build events (the beget-grammar&#x27;s active/passive split by line held, TIR-032), one PATTERN for the table&#x27;s one proverb (gen_09&#x27;s al-ken class — carrying the chapter&#x27;s only divine-name tokens), FOUR city installs on an AGENTLESS build (gen_13&#x27;s city precedent a fortiori; the Ashur/he subject held [OPEN] while Onkelos decides it), and a queue that NEVER WAKES — zero imperatives, zero jussives, no demand, no test, no invariant, no handler, no clock. The letter&#x27;s own architecture carried as facts: the 10:1/10:32 achar-ha-mabul INCLUSIO [tree fact], the three closings with deltas named (Yefet&#x27;s anomalous; the Ham/Shem twins ONE PREPOSITION apart — a delta Onkelos erases), GOY and MISHPACHAH born here and handing off to 12:2-3&#x27;s promises [the Abram-bridge], the scatter-family bracketing the atlas (the putz debut on the Canaanites; the palag hapax in Peleg&#x27;s naming-reason — report-naming, no NAME op; parad from Eden&#x27;s river), the Canaanite border pre-loading Sodom and the covenant map, the firstborn-word debuting on Canaan&#x27;s Tzidon, the kingdom&#x27;s Babel-first beginning on creation&#x27;s beginning-word, and the cross-line name-doubles held without harmonizing. The seventy-count stays the chain&#x27;s [OPEN, named-only; raw census 79 lemmas / 110 tokens]. Machine state: t0 empty, four installs (+1 presupposed), zero registry writes, zero queue traffic, zero tests, eleven events, one pattern, twenty-three facts, one read-flag — an atlas at rest, one chapter before Babel.</div><p class='meta'>Rendered 2026-08-08 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">FROZEN 2026-08-03 (second-generation derivation agent; freeze-after-review by the main loop — NO agent freeze; sixth unit under the PIPELINE + DEBUT-MAP process, the agent&#x27;s second): twenty-fifth-unit candidate — THE NATIONS TABLE, span OWNER-RULED whole (32 verses as one ledger-genre unit; boot steps grouped on the letter&#x27;s own twelve paragraphs); fifteenth extension-free derivation candidate in a row. The table is 91 percent verbless and the machine mirrors it: one SECTION that labels and installs nothing (gen_16&#x27;s toledot device — the series&#x27; tokens 4-5 bracket the span), twenty-three row-facts (gen_14&#x27;s ledger class), ten birth/build events (the beget-grammar&#x27;s active/passive split by line held, TIR-032), one PATTERN for the table&#x27;s one proverb (gen_09&#x27;s al-ken class — carrying the chapter&#x27;s only divine-name tokens), FOUR city installs on an AGENTLESS build (gen_13&#x27;s city precedent a fortiori; the Ashur/he subject held [OPEN] while Onkelos decides it), and a queue that NEVER WAKES — zero imperatives, zero jussives, no demand, no test, no invariant, no handler, no clock. The letter&#x27;s own architecture carried as facts: the 10:1/10:32 achar-ha-mabul INCLUSIO [tree fact], the three closings with deltas named (Yefet&#x27;s anomalous; the Ham/Shem twins ONE PREPOSITION apart — a delta Onkelos erases), GOY and MISHPACHAH born here and handing off to 12:2-3&#x27;s promises [the Abram-bridge], the scatter-family bracketing the atlas (the putz debut on the Canaanites; the palag hapax in Peleg&#x27;s naming-reason — report-naming, no NAME op; parad from Eden&#x27;s river), the Canaanite border pre-loading Sodom and the covenant map, the firstborn-word debuting on Canaan&#x27;s Tzidon, the kingdom&#x27;s Babel-first beginning on creation&#x27;s beginning-word, and the cross-line name-doubles held without harmonizing. The seventy-count stays the chain&#x27;s [OPEN, named-only; raw census 79 lemmas / 110 tokens]. Machine state: t0 empty, four installs (+1 presupposed), zero registry writes, zero queue traffic, zero tests, eleven events, one pattern, twenty-three facts, one read-flag — an atlas at rest, one chapter before Babel.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

@@ -18,7 +18,8 @@ m = Machine("gen_49_well_stone_rachel_arrival")
 # "[EN-AID] And Jacob lifted his feet and went to the land of the children
 # of the east."
 m.step("Gen.29.1")
-# ‹וַיִּשָּׂא … רַגְלָיו … קֶדֶם› fact holds: yaaqov-lifted-feet-walked-east
+# ‹וַיִּשָּׂא … רַגְלָיו … קֶדֶם› (“and-lift/carry … foot-him/its … front”)
+# — fact holds: Jacob-lifted-feet-walked-east
 m.fact("yaaqov_lifted_feet_walked_east")
 
 # -------------------------- Gen.29.2 · THE_WELL_THREE_FLOCKS_GREAT_STONE ---
@@ -29,8 +30,8 @@ m.fact("yaaqov_lifted_feet_walked_east")
 # of sheep crouching by it, for from that well the flocks were watered; and
 # the stone was great on the mouth of the well."
 m.step("Gen.29.2")
-# ‹רֹבְצִים … וְהָאֶבֶן גְּדֹלָה› fact holds: well-three-flocks-great-stone-
-# on-mouth
+# ‹רֹבְצִים … וְהָאֶבֶן גְּדֹלָה› (“crouch … and-the-stone great”) — fact
+# holds: well-three-flocks-great-stone-on-mouth
 m.fact("well_three_flocks_great_stone_on_mouth")
 
 # -------------------------- Gen.29.3 · THE_STONE_PROTOCOL_HABITUAL ---------
@@ -41,8 +42,8 @@ m.fact("well_three_flocks_great_stone_on_mouth")
 # stone from the mouth of the well and water the sheep, and return the stone
 # to its place on the mouth of the well."
 m.step("Gen.29.3")
-# ‹וְגָלֲלוּ … וְהִשְׁקוּ … וְהֵשִׁיבוּ› fact holds: stone-protocol-gather-
-# roll-water-return
+# ‹וְגָלֲלוּ … וְהִשְׁקוּ … וְהֵשִׁיבוּ› (“and-roll … and-give-drink … and-
+# return”) — fact holds: stone-protocol-gather-roll-water-return
 m.fact("stone_protocol_gather_roll_water_return")
 
 # -------------------------- Gen.29.4 · THE_MY_BROTHERS_FROM_HARAN ----------
@@ -50,7 +51,8 @@ m.fact("stone_protocol_gather_roll_water_return")
 # "[EN-AID] And Jacob said to them: My brothers, from where are you? And
 # they said: From Haran are we."
 m.step("Gen.29.4")
-# ‹אַחַי מֵאַיִן אַתֶּם … מֵחָרָן› fact holds: shepherds-are-from-charan
+# ‹אַחַי מֵאַיִן אַתֶּם … מֵחָרָן› (“brother-me/my from-where? you … from-
+# Haran”) — fact holds: shepherds-are-from-Haran
 m.fact("shepherds_are_from_charan")
 
 # -------------------------- Gen.29.5 · THE_KNOW_CHAIN_AND_GRANDFATHER_SKIP -
@@ -58,8 +60,8 @@ m.fact("shepherds_are_from_charan")
 # "[EN-AID] And he said to them: Do you know Laban son of Nachor? And they
 # said: We know."
 m.step("Gen.29.5")
-# ‹הַיְדַעְתֶּם … בֶּן־נָחוֹר … יָדָעְנוּ› fact holds: shepherds-know-lavan-
-# ben-nachor
+# ‹הַיְדַעְתֶּם … בֶּן־נָחוֹר … יָדָעְנוּ› (“the-know … son Nahor … know”) —
+# fact holds: shepherds-know-Laban-son-Nahor
 m.fact("shepherds_know_lavan_ben_nachor")
 
 # -------------------------- Gen.29.6 · THE_SHALOM_AND_RACHEL_DEBUT ---------
@@ -68,8 +70,8 @@ m.fact("shepherds_know_lavan_ben_nachor")
 # "[EN-AID] And he said to them: Is there peace to him? And they said: Peace
 # — and behold Rachel his daughter comes with the sheep."
 m.step("Gen.29.6")
-# ‹הֲשָׁלוֹם לוֹ … וְהִנֵּה רָחֵל› fact holds: shalom-confirmed-rachel-
-# approaching
+# ‹הֲשָׁלוֹם לוֹ … וְהִנֵּה רָחֵל› (“the-safe to-him/its … and-behold
+# Rachel”) — fact holds: safe-confirmed-Rachel-approaching
 m.fact("shalom_confirmed_rachel_approaching")
 
 # -------------------------- Gen.29.7 · THE_COMPOUND_PUSH_ON_THE_SHEPHERDS --
@@ -78,8 +80,8 @@ m.fact("shalom_confirmed_rachel_approaching")
 # "[EN-AID] And he said: Behold, the day is still great; it is not time for
 # the livestock to be gathered — water the sheep and go, pasture."
 m.step("Gen.29.7")
-# ‹הַשְׁקוּ הַצֹּאן וּלְכוּ רְעוּ› yaaqov speaks a demand — LET: hashqu-
-# lekhu-reu(the-roim)
+# ‹הַשְׁקוּ הַצֹּאן וּלְכוּ רְעוּ› (“give-drink the-flock and-go graze”) —
+# Jacob speaks a demand — LET: give-drink-go-graze(the-roim)
 m.declare("yaaqov", "LET",
           "hashqu_lekhu_reu(ha_roim)")
 
@@ -89,7 +91,8 @@ m.declare("yaaqov", "LET",
 # "[EN-AID] And they said: We cannot, until all the flocks are gathered and
 # they roll the stone from the mouth of the well — then we water the sheep."
 m.step("Gen.29.8")
-# ‹לֹא נוּכַל עַד אֲשֶׁר …› fact holds: refusal-not-nukhal-stone-grounds
+# ‹לֹא נוּכַל עַד אֲשֶׁר …› (“not be-able until which”) — fact holds:
+# refusal-not-be-able-stone-grounds
 m.fact("refusal_lo_nukhal_stone_grounds")
 
 # -------------------------- Gen.29.9 · THE_STILL_SPEAKING_SHEPHERDESS ------
@@ -98,8 +101,8 @@ m.fact("refusal_lo_nukhal_stone_grounds")
 # "[EN-AID] While he was still speaking with them, Rachel came with the
 # sheep that were her father's, for she was a shepherdess."
 m.step("Gen.29.9")
-# ‹עוֹדֶנּוּ מְדַבֵּר … כִּי רֹעָה הִוא› fact holds: rachel-arrived-
-# shepherdess-while-speaking
+# ‹עוֹדֶנּוּ מְדַבֵּר … כִּי רֹעָה הִוא› (“still/again-him/its speak … that
+# graze he/it”) — fact holds: Rachel-arrived-shepherdess-while-speaking
 m.fact("rachel_arrived_shepherdess_while_speaking")
 
 # -------------------------- Gen.29.10 · THE_DEMANDER_PERFORMS_ROLL_AND_WATER -
@@ -111,16 +114,17 @@ m.fact("rachel_arrived_shepherdess_while_speaking")
 # and rolled the stone from the mouth of the well, and watered the sheep of
 # Laban his mother's brother."
 m.step("Gen.29.10")
-# ‹וַיִּגַּשׁ … וַיָּגֶל … וַיַּשְׁקְ› fact holds: demander-performed-roll-
-# and-water
+# ‹וַיִּגַּשׁ … וַיָּגֶל … וַיַּשְׁקְ› (“and-be … and-roll … and-give-
+# drink”) — fact holds: demander-performed-roll-and-water
 m.fact("demander_performed_roll_and_water")
 
 # -------------------------- Gen.29.11 · THE_KISS_VOICE_AND_WEEPING ---------
 # וַיִּשַּׁק יַעֲקֹב לְרָחֵל וַיִּשָּׂא אֶת־קֹלוֹ וַיֵּבְךְּ
 # "[EN-AID] And Jacob kissed Rachel, and lifted his voice, and wept."
 m.step("Gen.29.11")
-# ‹וַיִּשַּׁק … וַיִּשָּׂא אֶת־קֹלוֹ וַיֵּבְךְּ› fact holds: kiss-lifted-
-# voice-weeping
+# ‹וַיִּשַּׁק … וַיִּשָּׂא אֶת־קֹלוֹ וַיֵּבְךְּ› (“and-kiss … and-lift/carry
+# obj-marker voice/sound-him/its and-weep”) — fact holds: kiss-lifted-voice-
+# weeping
 m.fact("kiss_lifted_voice_weeping")
 
 # -------------------------- Gen.29.12 · THE_TELL_CHAIN_AND_HER_RUN ---------
@@ -129,8 +133,8 @@ m.fact("kiss_lifted_voice_weeping")
 # "[EN-AID] And Jacob told Rachel that he was her father's kinsman and that
 # he was Rivqah's son; and she ran and told her father."
 m.step("Gen.29.12")
-# ‹וַיַּגֵּד … וַתָּרָץ וַתַּגֵּד› fact holds: identity-told-rachel-ran-
-# told-father
+# ‹וַיַּגֵּד … וַתָּרָץ וַתַּגֵּד› (“and-tell … and-run and-tell”) — fact
+# holds: identity-told-Rachel-ran-told-father
 m.fact("identity_told_rachel_ran_told_father")
 
 # -------------------------- Gen.29.13 · THE_SECOND_RUN_EMBRACE_KISS_RECOUNT -
@@ -141,8 +145,9 @@ m.fact("identity_told_rachel_ran_told_father")
 # son, that he ran to meet him, and embraced him, and kissed him, and
 # brought him to his house; and he recounted to Laban all these things."
 m.step("Gen.29.13")
-# ‹כִשְׁמֹעַ … וַיָּרָץ … וַיְחַבֶּק … וַיְסַפֵּר› fact holds: lavan-heard-
-# ran-embraced-kissed-housed-recounted
+# ‹כִשְׁמֹעַ … וַיָּרָץ … וַיְחַבֶּק … וַיְסַפֵּר› (“like-hear … and-run …
+# and-clasp … and-count”) — fact holds: Laban-heard-ran-embraced-kissed-
+# housed-recounted
 m.fact("lavan_heard_ran_embraced_kissed_housed_recounted")
 
 # -------------------------- Gen.29.14 · THE_BONE_FLESH_AND_MONTH_DWELL -----
@@ -151,8 +156,8 @@ m.fact("lavan_heard_ran_embraced_kissed_housed_recounted")
 # "[EN-AID] And Laban said to him: Surely you are my bone and my flesh. And
 # he dwelt with him a month of days."
 m.step("Gen.29.14")
-# ‹עַצְמִי וּבְשָׂרִי … וַיֵּשֶׁב עִמּוֹ› fact holds: bone-flesh-kinship-
-# month-dwell
+# ‹עַצְמִי וּבְשָׂרִי … וַיֵּשֶׁב עִמּוֹ› (“bone-me/my and-flesh-me/my …
+# and-dwell/sit with-him/its”) — fact holds: bone-flesh-kinship-month-dwell
 m.fact("bone_flesh_kinship_month_dwell")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

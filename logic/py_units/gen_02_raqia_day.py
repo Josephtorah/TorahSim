@@ -19,14 +19,16 @@ m = Machine("gen_02_raqia_day")
 # "And God said: 'Let there be a firmament in the midst of the waters, and
 # let it divide the waters from the waters.'"
 m.step("Gen.1.6")
-# ‹יְהִי רָקִיעַ› God speaks a demand — LET: exists(firmament)
+# ‹יְהִי רָקִיעַ› (“let-there-be firmament”) — God speaks a demand — LET:
+# exists(firmament)
 m.declare("Elohim", "LET",
           "exists(raqia)")
-# ‹וִיהִי מַבְדִּיל› God speaks a demand — LET?: dividing(firmament,
-# waters|waters)
+# ‹וִיהִי מַבְדִּיל› (“and-let-it-be dividing”) — God speaks a demand —
+# LET?: dividing(firmament, waters|waters)
 m.declare("Elohim", "LET?",
           "mavdil(raqia, mayim|mayim)")
-# ‹מַבְדִּיל› standing constraint: dividing(firmament, waters|waters)
+# ‹מַבְדִּיל› (“dividing”) — standing constraint: dividing(firmament,
+# waters|waters)
 m.invariant("mavdil(raqia, mayim|mayim)")
 # reads without prior install (flag, not fix): waters
 m.presupposed("mayim")
@@ -37,16 +39,17 @@ m.presupposed("mayim")
 # "And God made the firmament, and divided the waters which were under the
 # firmament from the waters which were above the firmament; and it was so."
 m.step("Gen.1.7")
-# ‹וַיַּעַשׂ אֱלֹהִים אֶת־הָרָקִיעַ› event: make — agent God; theme
-# firmament
+# ‹וַיַּעַשׂ אֱלֹהִים אֶת־הָרָקִיעַ› (“and-made God obj-marker the-
+# firmament”) — event: make — agent God; theme firmament
 m.event("make", agent="Elohim", themes=["raqia"])
-# ‹בֵּין הַמַּיִם … וּבֵין הַמַּיִם› partition between mayim-under and
-# mayim-over
+# ‹בֵּין הַמַּיִם … וּבֵין הַמַּיִם› (“between the-waters … and-between the-
+# waters”) — partition between mayim-under and mayim-over
 m.partition("mayim-under", "mayim-over")
-# ‹וַיְהִי־כֵן› demand settled (popped from the queue): exists(firmament)
+# ‹וַיְהִי־כֵן› (“and-there-was so”) — demand settled (popped from the
+# queue): exists(firmament)
 m.result("exists(raqia)", tmark="t2")
-# ‹וַיַּבְדֵּל› demand settled (popped from the queue): dividing(firmament,
-# waters|waters)
+# ‹וַיַּבְדֵּל› (“and-divided”) — demand settled (popped from the queue):
+# dividing(firmament, waters|waters)
 m.result("mavdil(raqia, mayim|mayim)", tmark="t2")
 
 # -------------------------- Gen.1.8 · NAME_AND_COMMIT_NO_TEST --------------
@@ -55,9 +58,10 @@ m.result("mavdil(raqia, mayim|mayim)", tmark="t2")
 # "And God called the firmament Heaven. And there was evening and there was
 # morning, a second day."
 m.step("Gen.1.8")
-# ‹לָרָקִיעַ שָׁמָיִם› named: firmament := Heavens
+# ‹לָרָקִיעַ שָׁמָיִם› (“to-the-firmament Heavens”) — named: firmament :=
+# Heavens
 m.name("raqia", "shamayim")
-# ‹יוֹם שֵׁנִי› ledger: day 2 committed
+# ‹יוֹם שֵׁנִי› (“day second”) — ledger: day 2 committed
 m.commit(2, label_form="ordinal", label_translit="yom sheni")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

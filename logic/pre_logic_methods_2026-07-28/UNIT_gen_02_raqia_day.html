@@ -271,14 +271,16 @@ m = Machine(&quot;gen_02_raqia_day&quot;)
 # &quot;And God said: &#x27;Let there be a firmament in the midst of the waters, and
 # let it divide the waters from the waters.&#x27;&quot;
 m.step(&quot;Gen.1.6&quot;)
-# ‹יְהִי רָקִיעַ› God speaks a demand — LET: exists(firmament)
+# ‹יְהִי רָקִיעַ› (“let-there-be firmament”) — God speaks a demand — LET:
+# exists(firmament)
 m.declare(&quot;Elohim&quot;, &quot;LET&quot;,
           &quot;exists(raqia)&quot;)
-# ‹וִיהִי מַבְדִּיל› God speaks a demand — LET?: dividing(firmament,
-# waters|waters)
+# ‹וִיהִי מַבְדִּיל› (“and-let-it-be dividing”) — God speaks a demand —
+# LET?: dividing(firmament, waters|waters)
 m.declare(&quot;Elohim&quot;, &quot;LET?&quot;,
           &quot;mavdil(raqia, mayim|mayim)&quot;)
-# ‹מַבְדִּיל› standing constraint: dividing(firmament, waters|waters)
+# ‹מַבְדִּיל› (“dividing”) — standing constraint: dividing(firmament,
+# waters|waters)
 m.invariant(&quot;mavdil(raqia, mayim|mayim)&quot;)
 # reads without prior install (flag, not fix): waters
 m.presupposed(&quot;mayim&quot;)
@@ -289,16 +291,17 @@ m.presupposed(&quot;mayim&quot;)
 # &quot;And God made the firmament, and divided the waters which were under the
 # firmament from the waters which were above the firmament; and it was so.&quot;
 m.step(&quot;Gen.1.7&quot;)
-# ‹וַיַּעַשׂ אֱלֹהִים אֶת־הָרָקִיעַ› event: make — agent God; theme
-# firmament
+# ‹וַיַּעַשׂ אֱלֹהִים אֶת־הָרָקִיעַ› (“and-made God obj-marker the-
+# firmament”) — event: make — agent God; theme firmament
 m.event(&quot;make&quot;, agent=&quot;Elohim&quot;, themes=[&quot;raqia&quot;])
-# ‹בֵּין הַמַּיִם … וּבֵין הַמַּיִם› partition between mayim-under and
-# mayim-over
+# ‹בֵּין הַמַּיִם … וּבֵין הַמַּיִם› (“between the-waters … and-between the-
+# waters”) — partition between mayim-under and mayim-over
 m.partition(&quot;mayim-under&quot;, &quot;mayim-over&quot;)
-# ‹וַיְהִי־כֵן› demand settled (popped from the queue): exists(firmament)
+# ‹וַיְהִי־כֵן› (“and-there-was so”) — demand settled (popped from the
+# queue): exists(firmament)
 m.result(&quot;exists(raqia)&quot;, tmark=&quot;t2&quot;)
-# ‹וַיַּבְדֵּל› demand settled (popped from the queue): dividing(firmament,
-# waters|waters)
+# ‹וַיַּבְדֵּל› (“and-divided”) — demand settled (popped from the queue):
+# dividing(firmament, waters|waters)
 m.result(&quot;mavdil(raqia, mayim|mayim)&quot;, tmark=&quot;t2&quot;)
 
 # -------------------------- Gen.1.8 · NAME_AND_COMMIT_NO_TEST --------------
@@ -307,9 +310,10 @@ m.result(&quot;mavdil(raqia, mayim|mayim)&quot;, tmark=&quot;t2&quot;)
 # &quot;And God called the firmament Heaven. And there was evening and there was
 # morning, a second day.&quot;
 m.step(&quot;Gen.1.8&quot;)
-# ‹לָרָקִיעַ שָׁמָיִם› named: firmament := Heavens
+# ‹לָרָקִיעַ שָׁמָיִם› (“to-the-firmament Heavens”) — named: firmament :=
+# Heavens
 m.name(&quot;raqia&quot;, &quot;shamayim&quot;)
-# ‹יוֹם שֵׁנִי› ledger: day 2 committed
+# ‹יוֹם שֵׁנִי› (“day second”) — ledger: day 2 committed
 m.commit(2, label_form=&quot;ordinal&quot;, label_translit=&quot;yom sheni&quot;)
 
 # -------------------------- machine truth (baked from the Stage D run) -------
@@ -330,4 +334,4 @@ if __name__ == &quot;__main__&quot;:
     assert len(m.EVENTS) == 7
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">FROZEN 2026-07-30 (owner approved; LET? on vi-yhi mavdil RETAINED by owner decision): second logic-derived unit, first derived after the interpreter existed. Central finding: day 2 commits without a test — the machine flags it (S6 on real text), and three verified Oral voices address it by name. Not binding religious law.</div><p class='meta'>Rendered 2026-08-08 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">FROZEN 2026-07-30 (owner approved; LET? on vi-yhi mavdil RETAINED by owner decision): second logic-derived unit, first derived after the interpreter existed. Central finding: day 2 commits without a test — the machine flags it (S6 on real text), and three verified Oral voices address it by name. Not binding religious law.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

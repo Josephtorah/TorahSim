@@ -19,8 +19,9 @@ m = Machine("gen_63_two_dreams_prison")
 # "[EN-AID] And it came to pass after these things, the cupbearer of the
 # king of Egypt and the baker offended their lord, the king of Egypt."
 m.step("Gen.40.1")
-# ‹חָטְאוּ מַשְׁקֵה מֶלֶךְ־מִצְרַיִם וְהָאֹפֶה לַאֲדֹנֵיהֶם› fact holds:
-# chatu-mashqe-and-ofe-to-adonehem
+# ‹חָטְאוּ מַשְׁקֵה מֶלֶךְ־מִצְרַיִם וְהָאֹפֶה לַאֲדֹנֵיהֶם› (“sin causing-
+# to-drink king Egypt and-the-cook to-lord-them/their”) — fact holds: sin-
+# causing-to-drink-and-cook-to-adonehem
 m.fact("chatu_mashqe_ve_ofe_la_adonehem")
 
 # -------------------------- Gen.40.2 · THE_WRATH ---------------------------
@@ -29,7 +30,8 @@ m.fact("chatu_mashqe_ve_ofe_la_adonehem")
 # "[EN-AID] And Pharaoh was wroth against his two officers, against the
 # chief of the cupbearers and against the chief of the bakers."
 m.step("Gen.40.2")
-# ‹וְעַל שַׂר הָאוֹפִים› fact holds: qatzaf-paro-upon-shene-sarisav
+# ‹וְעַל שַׂר הָאוֹפִים› (“and-over officer the-cook”) — fact holds: qatzaf-
+# Pharaoh-over-two-sarisav
 m.fact("qatzaf_paro_al_shene_sarisav")
 
 # -------------------------- Gen.40.3 · INTO_JOSEPHS_PRISON -----------------
@@ -38,8 +40,8 @@ m.fact("qatzaf_paro_al_shene_sarisav")
 # "[EN-AID] And he gave them into custody, the house of the chief of the
 # slaughterers, to the prison-house, the place where Joseph was bound."
 m.step("Gen.40.3")
-# ‹מְקוֹם אֲשֶׁר יוֹסֵף אָסוּר שָׁם› fact holds: in-mishmar-meqom-which-
-# yosef-asur-there
+# ‹מְקוֹם אֲשֶׁר יוֹסֵף אָסוּר שָׁם› (“place which Joseph yoke there”) —
+# fact holds: in-guard-place-which-Joseph-yoke-there
 m.fact("be_mishmar_meqom_asher_yosef_asur_sham")
 
 # -------------------------- Gen.40.4 · APPOINTED_TO_SERVE ------------------
@@ -48,8 +50,10 @@ m.fact("be_mishmar_meqom_asher_yosef_asur_sham")
 # "[EN-AID] And the chief of the slaughterers appointed Joseph with them,
 # and he served them; and they were days in custody."
 m.step("Gen.40.4")
-# ‹וַיִּפְקֹד שַׂר הַטַּבָּחִים אֶת־יוֹסֵף אִתָּם וַיְשָׁרֶת אֹתָם› fact
-# holds: and-yesharet-otam(yosef)
+# ‹וַיִּפְקֹד שַׂר הַטַּבָּחִים אֶת־יוֹסֵף אִתָּם וַיְשָׁרֶת אֹתָם› (“and-
+# count/visit officer the-butcher obj-marker Joseph with-them/their and-
+# attend-as-a-menial obj-marker-them/their”) — fact holds: and-attend-as-a-
+# menial-otam(Joseph)
 m.fact("va_yesharet_otam(yosef)")
 
 # -------------------------- Gen.40.5 · TWO_DREAMS_ONE_NIGHT ----------------
@@ -60,10 +64,12 @@ m.fact("va_yesharet_otam(yosef)")
 # night, each according to the interpretation of his dream — the cupbearer
 # and the baker of the king of Egypt, who were bound in the prison-house."
 m.step("Gen.40.5")
-# ‹וַיַּחַלְמוּ חֲלוֹם שְׁנֵיהֶם אִישׁ חֲלֹמוֹ בְּלַיְלָה אֶחָד› event:
-# chalam — agent shene-the-sarisim; theme chalomot
+# ‹וַיַּחַלְמוּ חֲלוֹם שְׁנֵיהֶם אִישׁ חֲלֹמוֹ בְּלַיְלָה אֶחָד› (“and-bind-
+# firmly dream two-them/their man dream-him/its in-night one”) — event:
+# chalam — agent two-the-sarisim; theme chalomot
 m.event("chalam", agent="shene_ha_sarisim", themes=["chalomot"])
-# ‹אֲשֶׁר אֲסוּרִים בְּבֵית הַסֹּהַר› fact holds: asurim-in-vet-the-sohar
+# ‹אֲשֶׁר אֲסוּרִים בְּבֵית הַסֹּהַר› (“which yoke in-house the-dungeon”) —
+# fact holds: yoke-in-house-the-dungeon
 m.fact("asurim_be_vet_ha_sohar")
 
 # -------------------------- Gen.40.6 · THE_DOWNCAST_FACES ------------------
@@ -71,8 +77,9 @@ m.fact("asurim_be_vet_ha_sohar")
 # "[EN-AID] And Joseph came to them in the morning, and saw them — and
 # behold, they were downcast."
 m.step("Gen.40.6")
-# ‹וַיַּרְא אֹתָם וְהִנָּם זֹעֲפִים› fact holds: and-yar-otam-and-hinam-
-# zoafim(yosef)
+# ‹וַיַּרְא אֹתָם וְהִנָּם זֹעֲפִים› (“and-see obj-marker-them/their and-
+# lo!-them/their boil-up”) — fact holds: and-see-otam-and-hinam-boil-
+# up(Joseph)
 m.fact("va_yar_otam_ve_hinam_zoafim(yosef)")
 
 # -------------------------- Gen.40.7 · THE_QUESTION ------------------------
@@ -81,8 +88,9 @@ m.fact("va_yar_otam_ve_hinam_zoafim(yosef)")
 # "[EN-AID] And he asked Pharaoh's officers who were with him in custody of
 # his master's house, saying: Why are your faces bad today?"
 m.step("Gen.40.7")
-# ‹לֵאמֹר מַדּוּעַ פְּנֵיכֶם רָעִים הַיּוֹם› fact holds: madua-penekhem-
-# raim-the-day(yosef)
+# ‹לֵאמֹר מַדּוּעַ פְּנֵיכֶם רָעִים הַיּוֹם› (“to-say what-known? face-
+# you/your(pl) bad the-day”) — fact holds: what-known?-penekhem-bad-the-
+# day(Joseph)
 m.fact("madua_penekhem_raim_ha_yom(yosef)")
 
 # -------------------------- Gen.40.8 · THE_TELL_DEMAND ---------------------
@@ -92,8 +100,9 @@ m.fact("madua_penekhem_raim_ha_yom(yosef)")
 # interpreter of it. And Joseph said to them: Are not interpretations God's?
 # Tell it, please, to me."
 m.step("Gen.40.8")
-# ‹הֲלוֹא לֵאלֹהִים פִּתְרֹנִים סַפְּרוּ־נָא לִי› yosef speaks a demand —
-# LET: sapru-na-to-me
+# ‹הֲלוֹא לֵאלֹהִים פִּתְרֹנִים סַפְּרוּ־נָא לִי› (“is-it-not to-God
+# interpretation count please to-me/my”) — Joseph speaks a demand — LET:
+# count-please-to-me
 m.declare("yosef", "LET",
           "sapru_na_li")
 
@@ -103,8 +112,9 @@ m.declare("yosef", "LET",
 # "[EN-AID] And the chief of the cupbearers told his dream to Joseph, and
 # said to him: In my dream — behold, a vine before me."
 m.step("Gen.40.9")
-# ‹וַיְסַפֵּר שַׂר־הַמַּשְׁקִים אֶת־חֲלֹמוֹ לְיוֹסֵף› demand settled (popped
-# from the queue): sapru-na-to-me
+# ‹וַיְסַפֵּר שַׂר־הַמַּשְׁקִים אֶת־חֲלֹמוֹ לְיוֹסֵף› (“and-count officer
+# the-causing-to-drink obj-marker dream-him/its to-Joseph”) — demand settled
+# (popped from the queue): count-please-to-me
 m.result("sapru_na_li", tmark="t1")
 
 # -------------------------- Gen.40.10 · THE_THREE_BRANCHES -----------------
@@ -113,8 +123,8 @@ m.result("sapru_na_li", tmark="t1")
 # "[EN-AID] And on the vine three branches; and it was as though budding —
 # its blossom shot up, its clusters ripened into grapes."
 m.step("Gen.40.10")
-# ‹וּבַגֶּפֶן שְׁלֹשָׁה שָׂרִיגִם› fact holds: shelosha-sarigim-porachat-
-# hivshilu-anavim
+# ‹וּבַגֶּפֶן שְׁלֹשָׁה שָׂרִיגִם› (“and-in-vine three tendril”) — fact
+# holds: three-tendril-porachat-boil-up-grape
 m.fact("shelosha_sarigim_porachat_hivshilu_anavim")
 
 # -------------------------- Gen.40.11 · THE_CUP_IN_MY_HAND -----------------
@@ -123,8 +133,8 @@ m.fact("shelosha_sarigim_porachat_hivshilu_anavim")
 # "[EN-AID] And Pharaoh's cup was in my hand; and I took the grapes and
 # pressed them into Pharaoh's cup, and I gave the cup onto Pharaoh's palm."
 m.step("Gen.40.11")
-# ‹וְכוֹס פַּרְעֹה בְּיָדִי› fact holds: kos-paro-in-yadi-and-eschat-and-
-# eten
+# ‹וְכוֹס פַּרְעֹה בְּיָדִי› (“and-cup Pharaoh in-hand-me/my”) — fact holds:
+# cup-Pharaoh-in-yadi-and-tread-out-and-set
 m.fact("kos_paro_be_yadi_va_eschat_va_eten")
 
 # -------------------------- Gen.40.12 · THIS_IS_ITS_INTERPRETATION_1 -------
@@ -133,7 +143,8 @@ m.fact("kos_paro_be_yadi_va_eschat_va_eten")
 # "[EN-AID] And Joseph said to him: This is its interpretation — the three
 # branches, three days are they."
 m.step("Gen.40.12")
-# ‹זֶה פִּתְרֹנוֹ› fact holds: ze-pitrono-sheloshet-seas(yosef)
+# ‹זֶה פִּתְרֹנוֹ› (“this interpretation-him/its”) — fact holds: this-
+# pitrono-three-day(Joseph)
 m.fact("ze_pitrono_sheloshet_yamim(yosef)")
 
 # -------------------------- Gen.40.13 · THE_HEAD_LIFTED_UP -----------------
@@ -144,8 +155,8 @@ m.fact("ze_pitrono_sheloshet_yamim(yosef)")
 # your post, and you will give Pharaoh's cup into his hand, as the former
 # custom when you were his cupbearer."
 m.step("Gen.40.13")
-# ‹בְּעוֹד שְׁלֹשֶׁת יָמִים› fact holds: yisa-paro-roshekha-and-hashivkha-
-# upon-kanekha
+# ‹בְּעוֹד שְׁלֹשֶׁת יָמִים› (“in-still/again three day”) — fact holds:
+# lift/carry-Pharaoh-obj-marker-roshekha-and-hashivkha-over-kanekha
 m.fact("yisa_paro_et_roshekha_va_hashivkha_al_kanekha")
 
 # -------------------------- Gen.40.14 · THE_REMEMBER_DEMAND ----------------
@@ -157,8 +168,10 @@ m.fact("yisa_paro_et_roshekha_va_hashivkha_al_kanekha")
 # house."
 m.step("Gen.40.14")
 # ‹זְכַרְתַּנִי אִתְּךָ כַּאֲשֶׁר יִיטַב לָךְ וְעָשִׂיתָ־נָּא עִמָּדִי חָסֶד
-# וְהִזְכַּרְתַּנִי אֶל־פַּרְעֹה› yosef speaks a demand — LET: zekhartani-
-# and-hizkartani-to-paro
+# וְהִזְכַּרְתַּנִי אֶל־פַּרְעֹה› (“mark-me/my with-you/your like-as/which
+# do-well to-you/your and-make please along-with-me/my kindness and-mark-
+# me/my to Pharaoh”) — Joseph speaks a demand — LET: zekhartani-and-
+# hizkartani-to-Pharaoh
 m.declare("yosef", "LET",
           "zekhartani_ve_hizkartani_el_paro")
 
@@ -168,8 +181,8 @@ m.declare("yosef", "LET",
 # "[EN-AID] For stolen, I was stolen from the land of the Hebrews; and here
 # also I have done nothing, that they should put me in the pit."
 m.step("Gen.40.15")
-# ‹כִּי־גֻנֹּב גֻּנַּבְתִּי מֵאֶרֶץ הָעִבְרִים› fact holds: gunov-gunavti-
-# not-asiti-meuma(yosef)
+# ‹כִּי־גֻנֹּב גֻּנַּבְתִּי מֵאֶרֶץ הָעִבְרִים› (“that steal steal from-
+# earth the-Hebrew”) — fact holds: steal-steal-is-it-not-make-speck(Joseph)
 m.fact("gunov_gunavti_lo_asiti_meuma(yosef)")
 
 # -------------------------- Gen.40.16 · THE_BAKER_ENCOURAGED ---------------
@@ -179,8 +192,9 @@ m.fact("gunov_gunavti_lo_asiti_meuma(yosef)")
 # and said to Joseph: I also, in my dream — behold, three baskets of white
 # bread on my head."
 m.step("Gen.40.16")
-# ‹וַיַּרְא שַׂר־הָאֹפִים כִּי טוֹב פָּתָר› fact holds: when-good-patar-af-
-# ani-in-the-chalomi(sar-the-ofim)
+# ‹וַיַּרְא שַׂר־הָאֹפִים כִּי טוֹב פָּתָר› (“and-see officer the-cook that
+# good open-up”) — fact holds: very-widely-used-as-a-relati-good-open-up-
+# meaning-accession-ani-in-the-chalomi(officer-the-cook)
 m.fact("ki_tov_patar_af_ani_ba_chalomi(sar_ha_ofim)")
 
 # -------------------------- Gen.40.17 · THE_BIRDS_EAT ----------------------
@@ -189,8 +203,9 @@ m.fact("ki_tov_patar_af_ani_ba_chalomi(sar_ha_ofim)")
 # "[EN-AID] And in the top basket, of all Pharaoh's food, baker's work; and
 # the bird was eating them from the basket, from upon my head."
 m.step("Gen.40.17")
-# ‹וְהָעוֹף אֹכֵל אֹתָם מִן־הַסַּל מֵעַל רֹאשִׁי› fact holds: and-the-fowl-
-# okhel-otam-from-upon-roshi
+# ‹וְהָעוֹף אֹכֵל אֹתָם מִן־הַסַּל מֵעַל רֹאשִׁי› (“and-the-flying-creature
+# eat obj-marker-them/their from the-willow-twig from-over head-me/my”) —
+# fact holds: and-the-flying-creature-eat-otam-from-over-roshi
 m.fact("ve_ha_of_okhel_otam_me_al_roshi")
 
 # -------------------------- Gen.40.18 · THIS_IS_ITS_INTERPRETATION_2 -------
@@ -199,7 +214,8 @@ m.fact("ve_ha_of_okhel_otam_me_al_roshi")
 # "[EN-AID] And Joseph answered and said: This is its interpretation — the
 # three baskets, three days are they."
 m.step("Gen.40.18")
-# ‹זֶה פִּתְרֹנוֹ› fact holds: ze-pitrono-sheloshet-the-salim(yosef)
+# ‹זֶה פִּתְרֹנוֹ› (“this interpretation-him/its”) — fact holds: this-
+# pitrono-three-the-willow-twig(Joseph)
 m.fact("ze_pitrono_sheloshet_ha_salim(yosef)")
 
 # -------------------------- Gen.40.19 · THE_HEAD_LIFTED_OFF ----------------
@@ -208,8 +224,9 @@ m.fact("ze_pitrono_sheloshet_ha_salim(yosef)")
 # "[EN-AID] In yet three days Pharaoh will lift your head from off you, and
 # hang you on a tree; and the bird will eat your flesh from off you."
 m.step("Gen.40.19")
-# ‹יִשָּׂא פַרְעֹה אֶת־רֹאשְׁךָ מֵעָלֶיךָ› fact holds: yisa-roshkha-from-
-# alekha-and-tala(pitron)
+# ‹יִשָּׂא פַרְעֹה אֶת־רֹאשְׁךָ מֵעָלֶיךָ› (“lift/carry Pharaoh obj-marker
+# head-you/your from-over-you/your”) — fact holds: lift/carry-obj-marker-
+# roshkha-from-alekha-and-suspend(pitron)
 m.fact("yisa_et_roshkha_me_alekha_ve_tala(pitron)")
 
 # -------------------------- Gen.40.20 · THE_BIRTHDAY_FEAST -----------------
@@ -220,8 +237,9 @@ m.fact("yisa_et_roshkha_me_alekha_ve_tala(pitron)")
 # feast for all his servants; and he lifted the head of the chief of the
 # cupbearers and the head of the chief of the bakers among his servants."
 m.step("Gen.40.20")
-# ‹וַיְהִי בַּיּוֹם הַשְּׁלִישִׁי יוֹם הֻלֶּדֶת אֶת־פַּרְעֹה› fact holds:
-# day-huledet-paro-and-yisa-rosh
+# ‹וַיְהִי בַּיּוֹם הַשְּׁלִישִׁי יוֹם הֻלֶּדֶת אֶת־פַּרְעֹה› (“and-be in-
+# day the-third day bear-young obj-marker Pharaoh”) — fact holds: day-bear-
+# young-obj-marker-Pharaoh-and-lift/carry-obj-marker-head
 m.fact("yom_huledet_et_paro_va_yisa_et_rosh")
 
 # -------------------------- Gen.40.21 · THE_CUPBEARER_RESTORED -------------
@@ -230,8 +248,9 @@ m.fact("yom_huledet_et_paro_va_yisa_et_rosh")
 # "[EN-AID] And he restored the chief of the cupbearers to his cupbearing;
 # and he gave the cup onto Pharaoh's palm."
 m.step("Gen.40.21")
-# ‹וַיָּשֶׁב אֶת־שַׂר הַמַּשְׁקִים עַל־מַשְׁקֵהוּ› fact holds: and-yashev-
-# sar-the-mashqim-upon-mashqehu
+# ‹וַיָּשֶׁב אֶת־שַׂר הַמַּשְׁקִים עַל־מַשְׁקֵהוּ› (“and-return obj-marker
+# officer the-causing-to-drink over causing-to-drink-him/its”) — fact holds:
+# and-return-obj-marker-officer-the-causing-to-drink-over-mashqehu
 m.fact("va_yashev_et_sar_ha_mashqim_al_mashqehu")
 
 # -------------------------- Gen.40.22 · THE_BAKER_HANGED -------------------
@@ -239,8 +258,8 @@ m.fact("va_yashev_et_sar_ha_mashqim_al_mashqehu")
 # "[EN-AID] And the chief of the bakers he hanged — as Joseph had
 # interpreted to them."
 m.step("Gen.40.22")
-# ‹כַּאֲשֶׁר פָּתַר לָהֶם יוֹסֵף› fact holds: tala-like-which-patar-to-them-
-# yosef
+# ‹כַּאֲשֶׁר פָּתַר לָהֶם יוֹסֵף› (“like-as/which open-up to-them/their
+# Joseph”) — fact holds: suspend-like-which-open-up-to-them-Joseph
 m.fact("tala_ka_asher_patar_lahem_yosef")
 
 # -------------------------- Gen.40.23 · THE_FORGETTING ---------------------
@@ -248,8 +267,9 @@ m.fact("tala_ka_asher_patar_lahem_yosef")
 # "[EN-AID] And the chief of the cupbearers did not remember Joseph — and he
 # forgot him."
 m.step("Gen.40.23")
-# ‹וְלֹא־זָכַר שַׂר־הַמַּשְׁקִים אֶת־יוֹסֵף וַיִּשְׁכָּחֵהוּ› fact holds:
-# and-not-male-and-yishkachehu(sar-the-mashqim)
+# ‹וְלֹא־זָכַר שַׂר־הַמַּשְׁקִים אֶת־יוֹסֵף וַיִּשְׁכָּחֵהוּ› (“and-not mark
+# officer the-causing-to-drink obj-marker Joseph and-forget-him/its”) — fact
+# holds: and-is-it-not-mark-and-yishkachehu(officer-the-causing-to-drink)
 m.fact("ve_lo_zakhar_va_yishkachehu(sar_ha_mashqim)")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

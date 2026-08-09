@@ -557,11 +557,13 @@ m = Machine(&quot;gen_40_servant_oath_well&quot;)
 # &quot;[EN-AID] And Abraham was old, advanced in days; and YHWH had blessed
 # Abraham in all.&quot;
 m.step(&quot;Gen.24.1&quot;)
-# ‹אַבְרָהָם … יְהוָה› reads without prior install (flag, not fix): avraham,
-# the-LORD
+# ‹אַבְרָהָם … יְהוָה› (“Abraham … YHWH”) — reads without prior install
+# (flag, not fix): Abraham, the-LORD
 m.presupposed(&quot;avraham&quot;, &quot;YHWH&quot;)
-# ‹זָקֵן בָּא בַּיָּמִים … בֵּרַךְ אֶת־אַבְרָהָם בַּכֹּל› fact holds:
-# avraham-zaqen-in-the-in-the-seas; the-LORD-berakh-avraham-in-the-all
+# ‹זָקֵן בָּא בַּיָּמִים … בֵּרַךְ אֶת־אַבְרָהָם בַּכֹּל› (“be-old
+# come/bring in-day … bless obj-marker Abraham in-all”) — fact holds:
+# Abraham-be-old-come/bring-come/bring-seas; the-LORD-bless-obj-marker-
+# Abraham-come/bring-all
 m.fact(&quot;avraham_zaqen_ba_ba_yamim&quot;,
        &quot;YHWH_berakh_et_avraham_ba_kol&quot;)
 
@@ -571,12 +573,15 @@ m.fact(&quot;avraham_zaqen_ba_ba_yamim&quot;,
 # &quot;[EN-AID] And Abraham said to his servant, the elder of his house, who
 # ruled over all that was his: Place, please, your hand under my thigh.&quot;
 m.step(&quot;Gen.24.2&quot;)
-# ‹וַיֹּאמֶר אַבְרָהָם אֶל־עַבְדּוֹ› event: say — agent avraham
+# ‹וַיֹּאמֶר אַבְרָהָם אֶל־עַבְדּוֹ› (“and-say Abraham to servant-him/its”)
+# — event: say — agent Abraham
 m.event(&quot;say&quot;, agent=&quot;avraham&quot;)
-# ‹עַבְדּוֹ … הַמֹּשֵׁל בְּכָל־אֲשֶׁר־לוֹ› the world gains: the-eved
+# ‹עַבְדּוֹ … הַמֹּשֵׁל בְּכָל־אֲשֶׁר־לוֹ› (“servant-him/its … the-rule in-
+# all which to-him/its”) — the world gains: the-servant
 m.install(&quot;ha_eved&quot;)
-# ‹שִׂים־נָא יָדְךָ תַּחַת יְרֵכִי› avraham speaks a demand — LET: sim(the-
-# eved, yad-tachat-yerekh)
+# ‹שִׂים־נָא יָדְךָ תַּחַת יְרֵכִי› (“put/set please hand-you/your under
+# thigh-me/my”) — Abraham speaks a demand — LET: put/set(the-servant, yad-
+# under-thigh)
 m.declare(&quot;avraham&quot;, &quot;LET&quot;,
           &quot;sim(ha_eved, yad_tachat_yerekh)&quot;)
 
@@ -588,10 +593,12 @@ m.declare(&quot;avraham&quot;, &quot;LET&quot;,
 # the earth, that you shall not take a wife for my son from the daughters of
 # the Canaanite among whom I dwell.&quot;
 m.step(&quot;Gen.24.3&quot;)
-# ‹וְאַשְׁבִּיעֲךָ בַּיהוָה› fact holds: and-ashbia-kha-in-the-the-LORD
+# ‹וְאַשְׁבִּיעֲךָ בַּיהוָה› (“and-swear-you/your in-YHWH”) — fact holds:
+# and-ashbia-you/your-come/bring-the-LORD
 m.fact(&quot;ve_ashbia_kha_ba_YHWH&quot;)
-# ‹לֹא־תִקַּח אִשָּׁה לִבְנִי מִבְּנוֹת הַכְּנַעֲנִי› fact holds: not-
-# tiqach-isha-to-me-veni-from-benot-the-kenaani
+# ‹לֹא־תִקַּח אִשָּׁה לִבְנִי מִבְּנוֹת הַכְּנַעֲנִי› (“not take woman to-
+# son-me/my from-daughter the-Kenaanite”) — fact holds: not-take-woman-to-
+# me-veni-who?-daughter-the-Kenaanite
 m.fact(&quot;lo_tiqach_isha_li_veni_mi_benot_ha_kenaani&quot;)
 
 # -------------------------- Gen.24.4 · THE_GO_AND_THE_TAKE_DUTY ------------
@@ -600,11 +607,11 @@ m.fact(&quot;lo_tiqach_isha_li_veni_mi_benot_ha_kenaani&quot;)
 # &quot;[EN-AID] But to my land and to my kindred you shall go, and you shall
 # take a wife for my son, for Isaac.&quot;
 m.step(&quot;Gen.24.4&quot;)
-# ‹אֶל־אַרְצִי וְאֶל־מוֹלַדְתִּי תֵּלֵךְ› fact holds: telekh-to-artzi-and-
-# to-moladti
+# ‹אֶל־אַרְצִי וְאֶל־מוֹלַדְתִּי תֵּלֵךְ› (“to earth-me/my and-to nativity-
+# me/my go”) — fact holds: go-to-artzi-and-to-moladti
 m.fact(&quot;telekh_el_artzi_ve_el_moladti&quot;)
-# ‹וְלָקַחְתָּ אִשָּׁה לִבְנִי לְיִצְחָק› fact holds: laqachta(the-eved,
-# isha-to-me-yitzchaq)
+# ‹וְלָקַחְתָּ אִשָּׁה לִבְנִי לְיִצְחָק› (“and-take woman to-son-me/my to-
+# Isaac”) — fact holds: take(the-servant, woman-to-me-Isaac)
 m.fact(&quot;laqachta(ha_eved, isha_li_yitzchaq)&quot;)
 
 # -------------------------- Gen.24.5 · THE_SERVANT_ASKS_THE_RETURN_CASE ----
@@ -615,10 +622,12 @@ m.fact(&quot;laqachta(ha_eved, isha_li_yitzchaq)&quot;)
 # willing to follow me to this land; shall I indeed bring your son back to
 # the land from which you came?&quot;
 m.step(&quot;Gen.24.5&quot;)
-# ‹וַיֹּאמֶר אֵלָיו הָעֶבֶד› event: say — agent the-eved
+# ‹וַיֹּאמֶר אֵלָיו הָעֶבֶד› (“and-say to-him/its the-servant”) — event: say
+# — agent the-servant
 m.event(&quot;say&quot;, agent=&quot;ha_eved&quot;)
-# ‹אוּלַי לֹא־תֹאבֶה … הֶהָשֵׁב אָשִׁיב› fact holds: ulay-not-tove-the-isha-
-# to-lekhet; question-he-hashev-ashiv
+# ‹אוּלַי לֹא־תֹאבֶה … הֶהָשֵׁב אָשִׁיב› (“if-not not breathe-after … the-
+# return return”) — fact holds: if-not-not-breathe-after-the-woman-to-go;
+# question-he-hashev-return
 m.fact(&quot;ulay_lo_tove_ha_isha_la_lekhet&quot;,
        &quot;question_he_hashev_ashiv&quot;)
 
@@ -628,10 +637,12 @@ m.fact(&quot;ulay_lo_tove_ha_isha_la_lekhet&quot;,
 # &quot;[EN-AID] And Abraham said to him: Guard yourself, lest you return my son
 # there.&quot;
 m.step(&quot;Gen.24.6&quot;)
-# ‹וַיֹּאמֶר אֵלָיו אַבְרָהָם› event: say — agent avraham
+# ‹וַיֹּאמֶר אֵלָיו אַבְרָהָם› (“and-say to-him/its Abraham”) — event: say —
+# agent Abraham
 m.event(&quot;say&quot;, agent=&quot;avraham&quot;)
-# ‹הִשָּׁמֶר לְךָ פֶּן־תָּשִׁיב אֶת־בְּנִי שָׁמָּה› avraham speaks a demand
-# — LET: hishamer(the-eved, lest-tashiv-beni-shama)
+# ‹הִשָּׁמֶר לְךָ פֶּן־תָּשִׁיב אֶת־בְּנִי שָׁמָּה› (“keep/guard to-you/your
+# lest return obj-marker son-me/my there-ward”) — Abraham speaks a demand —
+# LET: keep/guard(the-servant, lest-return-obj-marker-beni-shama)
 m.declare(&quot;avraham&quot;, &quot;LET&quot;,
           &quot;hishamer(ha_eved, pen_tashiv_et_beni_shama)&quot;)
 
@@ -645,15 +656,16 @@ m.declare(&quot;avraham&quot;, &quot;LET&quot;,
 # saying, To your seed I will give this land — He will send His angel before
 # you, and you shall take a wife for my son from there.&quot;
 m.step(&quot;Gen.24.7&quot;)
-# ‹נִשְׁבַּע־לִי … אֶתֵּן אֶת־הָאָרֶץ הַזֹּאת› fact holds: past-oath-nishba-
-# to-me; quoted-eten-to-zara-kha
+# ‹נִשְׁבַּע־לִי … אֶתֵּן אֶת־הָאָרֶץ הַזֹּאת› (“swear to-me/my … set obj-
+# marker the-earth the-this”) — fact holds: past-oath-swear-to-me; quoted-
+# set-to-zara-you/your
 m.fact(&quot;past_oath_nishba_li&quot;,
        &quot;quoted_eten_le_zara_kha&quot;)
-# ‹הוּא יִשְׁלַח מַלְאָכוֹ לְפָנֶיךָ› fact holds: yishlach-malakh-o-to-fane-
-# kha
+# ‹הוּא יִשְׁלַח מַלְאָכוֹ לְפָנֶיךָ› (“he/it send messenger-him/its to-
+# face-you/your”) — fact holds: send-malakh-o-to-fane-you/your
 m.fact(&quot;yishlach_malakh_o_le_fane_kha&quot;)
-# ‹וְלָקַחְתָּ אִשָּׁה לִבְנִי מִשָּׁם› fact holds: laqachta(the-eved, isha-
-# to-me-veni-from-there)
+# ‹וְלָקַחְתָּ אִשָּׁה לִבְנִי מִשָּׁם› (“and-take woman to-son-me/my from-
+# there”) — fact holds: take(the-servant, woman-to-me-veni-who?-there)
 m.fact(&quot;laqachta(ha_eved, isha_li_veni_mi_sham)&quot;)
 
 # -------------------------- Gen.24.8 · THE_RELEASE_CONDITION ---------------
@@ -662,10 +674,13 @@ m.fact(&quot;laqachta(ha_eved, isha_li_veni_mi_sham)&quot;)
 # &quot;[EN-AID] And if the woman is not willing to follow you, then you shall be
 # free from this my oath; only my son you shall not return there.&quot;
 m.step(&quot;Gen.24.8&quot;)
-# ‹וְאִם־לֹא תֹאבֶה … וְנִקִּיתָ מִשְּׁבֻעָתִי זֹאת› fact holds: release-if-
-# not-tove-then-niqita-from-shevuah
+# ‹וְאִם־לֹא תֹאבֶה … וְנִקִּיתָ מִשְּׁבֻעָתִי זֹאת› (“and-if not breathe-
+# after … and-be-clean from-something-sworn-me/my this”) — fact holds:
+# release-if-not-breathe-after-then-be-clean-who?-shevuah
 m.fact(&quot;release_if_lo_tove_then_niqita_mi_shevuah&quot;)
-# ‹רַק אֶת־בְּנִי לֹא תָשֵׁב שָׁמָּה› fact holds: raq-beni-not-tashev-shama
+# ‹רַק אֶת־בְּנִי לֹא תָשֵׁב שָׁמָּה› (“leanness obj-marker son-me/my not
+# return there-ward”) — fact holds: leanness-obj-marker-beni-not-return-
+# shama
 m.fact(&quot;raq_et_beni_lo_tashev_shama&quot;)
 
 # -------------------------- Gen.24.9 · THE_THIGH_POP_AND_THE_SWEAR ---------
@@ -674,11 +689,13 @@ m.fact(&quot;raq_et_beni_lo_tashev_shama&quot;)
 # &quot;[EN-AID] And the servant placed his hand under the thigh of Abraham his
 # master, and swore to him concerning this matter.&quot;
 m.step(&quot;Gen.24.9&quot;)
-# ‹וַיָּשֶׂם הָעֶבֶד אֶת־יָדוֹ תַּחַת יֶרֶךְ אַבְרָהָם› demand settled
-# (popped from the queue): sim(the-eved, yad-tachat-yerekh)
+# ‹וַיָּשֶׂם הָעֶבֶד אֶת־יָדוֹ תַּחַת יֶרֶךְ אַבְרָהָם› (“and-put/set the-
+# servant obj-marker hand-him/its under thigh Abraham”) — demand settled
+# (popped from the queue): put/set(the-servant, yad-under-thigh)
 m.result(&quot;sim(ha_eved, yad_tachat_yerekh)&quot;, tmark=&quot;t1&quot;)
-# ‹וַיִּשָּׁבַע לוֹ עַל־הַדָּבָר הַזֶּה› event: swear — agent the-eved;
-# theme the-davar-the-ze
+# ‹וַיִּשָּׁבַע לוֹ עַל־הַדָּבָר הַזֶּה› (“and-swear to-him/its over the-
+# word/thing the-this”) — event: swear — agent the-servant; theme the-
+# word/thing-the-this
 m.event(&quot;swear&quot;, agent=&quot;ha_eved&quot;, themes=[&quot;ha_davar_ha_ze&quot;])
 
 # -------------------------- Gen.24.10 · THE_JOURNEY_TO_ARAM_NAHARAYIM ------
@@ -689,11 +706,12 @@ m.event(&quot;swear&quot;, agent=&quot;ha_eved&quot;, themes=[&quot;ha_davar_ha_
 # went, with all his master&#x27;s goods in his hand; and he rose and went to
 # Aram-naharayim, to the city of Nahor.&quot;
 m.step(&quot;Gen.24.10&quot;)
-# ‹וַיִּקַּח … וַיֵּלֶךְ … וַיָּקָם וַיֵּלֶךְ› event: take-go-rise-go —
-# agent the-eved; theme gemalim-tuv
+# ‹וַיִּקַּח … וַיֵּלֶךְ … וַיָּקָם וַיֵּלֶךְ› (“and-take … and-go … and-
+# arise and-go”) — event: take-go-rise-go — agent the-servant; theme camel-
+# good
 m.event(&quot;take_go_rise_go&quot;, agent=&quot;ha_eved&quot;, themes=[&quot;gemalim_tuv&quot;])
-# ‹אֲרַם נַהֲרַיִם … עִיר נָחוֹר› reads without prior install (flag, not
-# fix): aram-naharayim, ir-nachor
+# ‹אֲרַם נַהֲרַיִם … עִיר נָחוֹר› (“Aham-naharaim … city Nahor”) — reads
+# without prior install (flag, not fix): aram-Aham-naharaim, city-Nahor
 m.presupposed(&quot;aram_naharayim&quot;, &quot;ir_nachor&quot;)
 
 # -------------------------- Gen.24.11 · THE_CAMELS_AT_THE_WELL -------------
@@ -702,8 +720,9 @@ m.presupposed(&quot;aram_naharayim&quot;, &quot;ir_nachor&quot;)
 # &quot;[EN-AID] And he made the camels kneel outside the city by the well of
 # water, at evening time, the time the water-drawers go out.&quot;
 m.step(&quot;Gen.24.11&quot;)
-# ‹וַיַּבְרֵךְ הַגְּמַלִּים … אֶל־בְּאֵר הַמָּיִם› event: kneel-camels —
-# agent the-eved; theme the-gemalim
+# ‹וַיַּבְרֵךְ הַגְּמַלִּים … אֶל־בְּאֵר הַמָּיִם› (“and-bless the-camel …
+# to pit the-waters”) — event: kneel-camels — agent the-servant; theme the-
+# camel
 m.event(&quot;kneel_camels&quot;, agent=&quot;ha_eved&quot;, themes=[&quot;ha_gemalim&quot;])
 
 # -------------------------- Gen.24.12 · THE_PRAYER_IMPERATIVES_AT_YHWH -----
@@ -712,14 +731,15 @@ m.event(&quot;kneel_camels&quot;, agent=&quot;ha_eved&quot;, themes=[&quot;ha_ge
 # &quot;[EN-AID] And he said: YHWH, God of my master Abraham, cause it to happen
 # before me today, and do kindness with my master Abraham.&quot;
 m.step(&quot;Gen.24.12&quot;)
-# ‹וַיֹּאמַר› event: say — agent the-eved
+# ‹וַיֹּאמַר› (“and-say”) — event: say — agent the-servant
 m.event(&quot;say&quot;, agent=&quot;ha_eved&quot;)
-# ‹הַקְרֵה־נָא לְפָנַי הַיּוֹם› the-eved speaks a demand — LET: haqreh(the-
-# LORD, before-Me-hayom)
+# ‹הַקְרֵה־נָא לְפָנַי הַיּוֹם› (“light-upon please to-face-me/my the-day”)
+# — the-servant speaks a demand — LET: haqreh(the-LORD, before-Me-hayom)
 m.declare(&quot;ha_eved&quot;, &quot;LET&quot;,
           &quot;haqreh(YHWH, lefanai_hayom)&quot;)
-# ‹וַעֲשֵׂה־חֶסֶד עִם אֲדֹנִי אַבְרָהָם› the-eved speaks a demand — LET:
-# make-chesed(the-LORD, if-adoni-avraham)
+# ‹וַעֲשֵׂה־חֶסֶד עִם אֲדֹנִי אַבְרָהָם› (“and-make kindness with lord-me/my
+# Abraham”) — the-servant speaks a demand — LET: make-kindness(the-LORD, if-
+# adoni-Abraham)
 m.declare(&quot;ha_eved&quot;, &quot;LET&quot;,
           &quot;aseh_chesed(YHWH, im_adoni_avraham)&quot;)
 
@@ -729,8 +749,9 @@ m.declare(&quot;ha_eved&quot;, &quot;LET&quot;,
 # &quot;[EN-AID] Behold, I am standing by the spring of water, and the daughters
 # of the men of the city are coming out to draw water.&quot;
 m.step(&quot;Gen.24.13&quot;)
-# ‹אָנֹכִי נִצָּב … יֹצְאֹת לִשְׁאֹב› fact holds: anokhi-nitzav-upon-en-the-
-# waters; daughters-yotzot-to-me-sheov
+# ‹אָנֹכִי נִצָּב … יֹצְאֹת לִשְׁאֹב› (“stand … bring-forth to-bale-up-
+# water”) — fact holds: I-stand-over-eye-the-waters; daughters-bring-forth-
+# to-me-sheov
 m.fact(&quot;anokhi_nitzav_al_en_ha_mayim&quot;,
        &quot;banot_yotzot_li_sheov&quot;)
 
@@ -744,10 +765,11 @@ m.fact(&quot;anokhi_nitzav_al_en_ha_mayim&quot;,
 # her You have appointed for Your servant, for Isaac; and by her I shall
 # know that You have done kindness with my master.&quot;
 m.step(&quot;Gen.24.14&quot;)
-# ‹הַטִּי־נָא … שְׁתֵה … אַשְׁקֶה› fact holds: designed-sign-oracle
+# ‹הַטִּי־נָא … שְׁתֵה … אַשְׁקֶה› (“stretch please … drink … give-drink”) —
+# fact holds: designed-sign-oracle
 m.fact(&quot;designed_sign_oracle&quot;)
-# ‹אֹתָהּ הֹכַחְתָּ לְעַבְדְּךָ לְיִצְחָק› fact holds: hokhachta-
-# appointment-criterion
+# ‹אֹתָהּ הֹכַחְתָּ לְעַבְדְּךָ לְיִצְחָק› (“obj-marker-her/its be-right to-
+# servant-you/your to-Isaac”) — fact holds: be-right-appointment-criterion
 m.fact(&quot;hokhachta_appointment_criterion&quot;)
 
 # -------------------------- Gen.24.15 · RIVQAH_APPEARS ---------------------
@@ -758,10 +780,11 @@ m.fact(&quot;hokhachta_appointment_criterion&quot;)
 # was coming out — who was born to Betuel son of Milcah, wife of Nahor
 # brother of Abraham — and her pitcher on her shoulder.&quot;
 m.step(&quot;Gen.24.15&quot;)
-# ‹וַיְהִי … טֶרֶם כִּלָּה לְדַבֵּר וְהִנֵּה רִבְקָה יֹצֵאת› event: appear —
-# theme rivqah
+# ‹וַיְהִי … טֶרֶם כִּלָּה לְדַבֵּר וְהִנֵּה רִבְקָה יֹצֵאת› (“and-be … non-
+# occurrence be-complete to-speak and-behold Rebekah bring-forth”) — event:
+# appear — theme rivqah
 m.event(&quot;appear&quot;, themes=[&quot;rivqah&quot;])
-# ‹רִבְקָה› the world gains: rivqah
+# ‹רִבְקָה› (“Rebekah”) — the world gains: rivqah
 m.install(&quot;rivqah&quot;)
 
 # -------------------------- Gen.24.16 · THE_GIRL_ATTRIBUTE_AND_THE_WELL_ACT -
@@ -771,10 +794,11 @@ m.install(&quot;rivqah&quot;)
 # had known her; and she went down to the spring and filled her pitcher and
 # came up.&quot;
 m.step(&quot;Gen.24.16&quot;)
-# ‹טֹבַת מַרְאֶה› fact holds: tovat-appearance-attribute
+# ‹טֹבַת מַרְאֶה› (“good appearance”) — fact holds: good-appearance-
+# attribute
 m.fact(&quot;tovat_mareh_attribute&quot;)
-# ‹וַתֵּרֶד … וַתְּמַלֵּא … וַתָּעַל› event: descend-fill-ascend — agent
-# rivqah
+# ‹וַתֵּרֶד … וַתְּמַלֵּא … וַתָּעַל› (“and-go-down … and-fill … and-go-up”)
+# — event: descend-fill-ascend — agent rivqah
 m.event(&quot;descend_fill_ascend&quot;, agent=&quot;rivqah&quot;)
 
 # -------------------------- Gen.24.17 · THE_LIVE_SIP_DEMAND ----------------
@@ -783,10 +807,11 @@ m.event(&quot;descend_fill_ascend&quot;, agent=&quot;rivqah&quot;)
 # &quot;[EN-AID] And the servant ran to meet her and said: Let me sip, please, a
 # little water from your pitcher.&quot;
 m.step(&quot;Gen.24.17&quot;)
-# ‹וַיָּרָץ … וַיֹּאמֶר› event: run-say — agent the-eved
+# ‹וַיָּרָץ … וַיֹּאמֶר› (“and-run … and-say”) — event: run-say — agent the-
+# servant
 m.event(&quot;run_say&quot;, agent=&quot;ha_eved&quot;)
-# ‹הַגְמִיאִינִי נָא› the-eved speaks a demand — LET: hagmiini(rivqah, meat-
-# waters)
+# ‹הַגְמִיאִינִי נָא› (“absorb-me/my please”) — the-servant speaks a demand
+# — LET: hagmiini(rivqah, little-waters)
 m.declare(&quot;ha_eved&quot;, &quot;LET&quot;,
           &quot;hagmiini(rivqah, meat_mayim)&quot;)
 
@@ -796,10 +821,12 @@ m.declare(&quot;ha_eved&quot;, &quot;LET&quot;,
 # &quot;[EN-AID] And she said: Drink, my lord; and she hurried and lowered her
 # pitcher on her hand and gave him drink.&quot;
 m.step(&quot;Gen.24.18&quot;)
-# ‹שְׁתֵה אֲדֹנִי› rivqah speaks a demand — LET: shete(the-eved)
+# ‹שְׁתֵה אֲדֹנִי› (“drink lord-me/my”) — rivqah speaks a demand — LET:
+# drink(the-servant)
 m.declare(&quot;rivqah&quot;, &quot;LET&quot;,
           &quot;shete(ha_eved)&quot;)
-# ‹וַתְּמַהֵר … וַתַּשְׁקֵהוּ› event: water — agent rivqah
+# ‹וַתְּמַהֵר … וַתַּשְׁקֵהוּ› (“and-hasten … and-give-drink-him/its”) —
+# event: water — agent rivqah
 m.event(&quot;water&quot;, agent=&quot;rivqah&quot;)
 
 # -------------------------- Gen.24.19 · THE_OVERPERFORMANCE_PROMISE --------
@@ -808,9 +835,11 @@ m.event(&quot;water&quot;, agent=&quot;rivqah&quot;)
 # &quot;[EN-AID] And she finished giving him drink, and said: Also for your
 # camels I will draw until they have finished drinking.&quot;
 m.step(&quot;Gen.24.19&quot;)
-# ‹וַתְּכַל לְהַשְׁקֹתוֹ› event: finish-watering — agent rivqah
+# ‹וַתְּכַל לְהַשְׁקֹתוֹ› (“and-be-complete to-give-drink-him/its”) — event:
+# finish-watering — agent rivqah
 m.event(&quot;finish_watering&quot;, agent=&quot;rivqah&quot;)
-# ‹גַּם לִגְמַלֶּיךָ אֶשְׁאָב› fact holds: promise-eshav-to-me-gemale-kha
+# ‹גַּם לִגְמַלֶּיךָ אֶשְׁאָב› (“also to-camel-you/your bale-up-water”) —
+# fact holds: promise-bale-up-water-to-me-camel-you/your
 m.fact(&quot;promise_eshav_li_gemale_kha&quot;)
 
 # -------------------------- Gen.24.20 · THE_CAMELS_WATERED -----------------
@@ -819,8 +848,9 @@ m.fact(&quot;promise_eshav_li_gemale_kha&quot;)
 # &quot;[EN-AID] And she hurried and emptied her pitcher into the trough and ran
 # again to the well to draw, and she drew for all his camels.&quot;
 m.step(&quot;Gen.24.20&quot;)
-# ‹וַתְּמַהֵר וַתְּעַר … וַתָּרָץ … וַתִּשְׁאַב› event: empty-run-draw —
-# agent rivqah; theme all-camels
+# ‹וַתְּמַהֵר וַתְּעַר … וַתָּרָץ … וַתִּשְׁאַב› (“and-hasten and-be-bare …
+# and-run … and-bale-up-water”) — event: empty-run-draw — agent rivqah;
+# theme all-camels
 m.event(&quot;empty_run_draw&quot;, agent=&quot;rivqah&quot;, themes=[&quot;all_camels&quot;])
 
 # -------------------------- Gen.24.21 · THE_SILENT_GAZE --------------------
@@ -829,7 +859,8 @@ m.event(&quot;empty_run_draw&quot;, agent=&quot;rivqah&quot;, themes=[&quot;all_
 # &quot;[EN-AID] And the man was gazing at her, keeping silent, to know whether
 # YHWH had prospered his way or not.&quot;
 m.step(&quot;Gen.24.21&quot;)
-# ‹מִשְׁתָּאֵה … מַחֲרִישׁ … הֲהִצְלִיחַ› fact holds: gazing-silent-wonder
+# ‹מִשְׁתָּאֵה … מַחֲרִישׁ … הֲהִצְלִיחַ› (“stun … scratch … the-push-
+# forward”) — fact holds: gazing-silent-wonder
 m.fact(&quot;gazing_silent_wonder&quot;)
 
 # -------------------------- Gen.24.22 · THE_GIFTS_OF_GOLD ------------------
@@ -840,8 +871,8 @@ m.fact(&quot;gazing_silent_wonder&quot;)
 # nose-ring, a beqa its weight, and two bracelets on her hands, ten of gold
 # their weight.&quot;
 m.step(&quot;Gen.24.22&quot;)
-# ‹וַיִּקַּח … נֶזֶם … צְמִידִים› event: take-gifts — agent the-eved; theme
-# nezem-tzamid
+# ‹וַיִּקַּח … נֶזֶם … צְמִידִים› (“and-take … nose-ring … bracelet”) —
+# event: take-gifts — agent the-servant; theme nose-ring-tzamid
 m.event(&quot;take_gifts&quot;, agent=&quot;ha_eved&quot;, themes=[&quot;nezem_tzamid&quot;])
 
 # -------------------------- Gen.24.23 · TELL_ME_WHOSE_DAUGHTER -------------
@@ -850,10 +881,10 @@ m.event(&quot;take_gifts&quot;, agent=&quot;ha_eved&quot;, themes=[&quot;nezem_t
 # &quot;[EN-AID] And he said: Whose daughter are you? Tell me, please. Is there
 # in your father&#x27;s house a place for us to lodge?&quot;
 m.step(&quot;Gen.24.23&quot;)
-# ‹וַיֹּאמֶר› event: say — agent the-eved
+# ‹וַיֹּאמֶר› (“and-say”) — event: say — agent the-servant
 m.event(&quot;say&quot;, agent=&quot;ha_eved&quot;)
-# ‹הַגִּידִי נָא לִי› the-eved speaks a demand — LET: hagidi(rivqah, bat-
-# from)
+# ‹הַגִּידִי נָא לִי› (“tell please to-me/my”) — the-servant speaks a demand
+# — LET: tell(rivqah, daughter-who?)
 m.declare(&quot;ha_eved&quot;, &quot;LET&quot;,
           &quot;hagidi(rivqah, bat_mi)&quot;)
 
@@ -863,9 +894,10 @@ m.declare(&quot;ha_eved&quot;, &quot;LET&quot;,
 # &quot;[EN-AID] And she said to him: I am the daughter of Betuel, son of Milcah,
 # whom she bore to Nahor.&quot;
 m.step(&quot;Gen.24.24&quot;)
-# ‹וַתֹּאמֶר› event: say — agent rivqah
+# ‹וַתֹּאמֶר› (“and-say”) — event: say — agent rivqah
 m.event(&quot;say&quot;, agent=&quot;rivqah&quot;)
-# ‹בַּת־בְּתוּאֵל … לְנָחוֹר› fact holds: rivqah-bat-betuel-line
+# ‹בַּת־בְּתוּאֵל … לְנָחוֹר› (“daughter Bethuel … to-Nahor”) — fact holds:
+# rivqah-daughter-Bethuel-line
 m.fact(&quot;rivqah_bat_betuel_line&quot;)
 
 # -------------------------- Gen.24.25 · STRAW_AND_FODDER_AND_ROOM ----------
@@ -874,14 +906,15 @@ m.fact(&quot;rivqah_bat_betuel_line&quot;)
 # &quot;[EN-AID] And she said to him: Also straw, also fodder, much with us; also
 # a place to lodge.&quot;
 m.step(&quot;Gen.24.25&quot;)
-# ‹וַתֹּאמֶר› event: say — agent rivqah
+# ‹וַתֹּאמֶר› (“and-say”) — event: say — agent rivqah
 m.event(&quot;say&quot;, agent=&quot;rivqah&quot;)
 
 # -------------------------- Gen.24.26 · THE_BOW_TO_YHWH --------------------
 # וַיִּקֹּ֣ד הָאִ֔ישׁ וַיִּשְׁתַּ֖חוּ לַֽיהוָֽה
 # &quot;[EN-AID] And the man bowed the head and prostrated himself to YHWH.&quot;
 m.step(&quot;Gen.24.26&quot;)
-# ‹וַיִּקֹּד … וַיִּשְׁתַּחוּ לַיהוָה› event: bow-prostrate — agent the-eved
+# ‹וַיִּקֹּד … וַיִּשְׁתַּחוּ לַיהוָה› (“and-shrivel-up … and-afflict to-
+# YHWH”) — event: bow-prostrate — agent the-servant
 m.event(&quot;bow_prostrate&quot;, agent=&quot;ha_eved&quot;)
 
 # -------------------------- Gen.24.27 · BLESSED_BE_YHWH_KINDNESS_AND_TRUTH -
@@ -892,17 +925,18 @@ m.event(&quot;bow_prostrate&quot;, agent=&quot;ha_eved&quot;)
 # not forsaken His kindness and His truth from with my master; I being on
 # the way, YHWH led me to the house of my master&#x27;s brothers.&quot;
 m.step(&quot;Gen.24.27&quot;)
-# ‹וַיֹּאמֶר› event: say — agent the-eved
+# ‹וַיֹּאמֶר› (“and-say”) — event: say — agent the-servant
 m.event(&quot;say&quot;, agent=&quot;ha_eved&quot;)
-# ‹בָּרוּךְ יְהוָה … חַסְדּוֹ וַאֲמִתּוֹ› fact holds: barukh-the-LORD-
-# chesed-and-emet
+# ‹בָּרוּךְ יְהוָה … חַסְדּוֹ וַאֲמִתּוֹ› (“bless YHWH … kindness-him/its
+# and-stability-him/its”) — fact holds: bless-the-LORD-kindness-and-emet
 m.fact(&quot;barukh_YHWH_chesed_ve_emet&quot;)
 
 # -------------------------- Gen.24.28 · SHE_RUNS_AND_TELLS -----------------
 # וַתָּ֨רָץ֙ הַֽנַּעֲרָ֔ וַתַּגֵּ֖ד לְבֵ֣ית אִמָּ֑הּ כַּדְּבָרִ֖ים הָאֵֽלֶּה
 # &quot;[EN-AID] And the girl ran and told her mother&#x27;s household these things.&quot;
 m.step(&quot;Gen.24.28&quot;)
-# ‹וַתָּרָץ … וַתַּגֵּד› event: run-tell — agent rivqah
+# ‹וַתָּרָץ … וַתַּגֵּד› (“and-run … and-tell”) — event: run-tell — agent
+# rivqah
 m.event(&quot;run_tell&quot;, agent=&quot;rivqah&quot;)
 
 # -------------------------- Gen.24.29 · LABAN_RUNS -------------------------
@@ -911,7 +945,7 @@ m.event(&quot;run_tell&quot;, agent=&quot;rivqah&quot;)
 # &quot;[EN-AID] And Rivqah had a brother, and his name was Laban; and Laban ran
 # to the man outside, to the spring.&quot;
 m.step(&quot;Gen.24.29&quot;)
-# ‹וּשְׁמוֹ לָבָן› the world gains: lavan
+# ‹וּשְׁמוֹ לָבָן› (“and-name-him/its Laban”) — the world gains: Laban
 m.install(&quot;lavan&quot;)
 
 # -------------------------- Gen.24.30 · HE_SEES_THE_GIFTS_AND_COMES --------
@@ -924,7 +958,8 @@ m.install(&quot;lavan&quot;)
 # man spoke to me, he came to the man; and behold, standing by the camels at
 # the spring.&quot;
 m.step(&quot;Gen.24.30&quot;)
-# ‹כִּרְאֹת … וּכְשָׁמְעוֹ … וַיָּבֹא› event: see-hear-come — agent lavan
+# ‹כִּרְאֹת … וּכְשָׁמְעוֹ … וַיָּבֹא› (“like-see … and-like-hear-him/its …
+# and-come/bring”) — event: see-hear-come — agent Laban
 m.event(&quot;see_hear_come&quot;, agent=&quot;lavan&quot;)
 
 # -------------------------- Gen.24.31 · COME_IN_O_BLESSED_OF_YHWH ----------
@@ -933,7 +968,8 @@ m.event(&quot;see_hear_come&quot;, agent=&quot;lavan&quot;)
 # &quot;[EN-AID] And he said: Come in, O blessed of YHWH; why do you stand
 # outside? And I have cleared the house, and a place for the camels.&quot;
 m.step(&quot;Gen.24.31&quot;)
-# ‹בּוֹא› lavan speaks a demand — LET: in-it(the-eved)
+# ‹בּוֹא› (“come/bring”) — Laban speaks a demand — LET: come/bring(the-
+# servant)
 m.declare(&quot;lavan&quot;, &quot;LET&quot;,
           &quot;bo(ha_eved)&quot;)
 
@@ -945,10 +981,11 @@ m.declare(&quot;lavan&quot;, &quot;LET&quot;,
 # gave straw and fodder to the camels, and water to wash his feet and the
 # feet of the men who were with him.&quot;
 m.step(&quot;Gen.24.32&quot;)
-# ‹וַיָּבֹא הָאִישׁ הַבַּיְתָה› demand settled (popped from the queue): in-
-# it(the-eved)
+# ‹וַיָּבֹא הָאִישׁ הַבַּיְתָה› (“and-come/bring the-man the-house-ward”) —
+# demand settled (popped from the queue): come/bring(the-servant)
 m.result(&quot;bo(ha_eved)&quot;, tmark=&quot;t2&quot;)
-# ‹וַיְפַתַּח … וַיִּתֵּן … לִרְחֹץ› event: serve-camels-and-feet
+# ‹וַיְפַתַּח … וַיִּתֵּן … לִרְחֹץ› (“and-open-wide … and-set … to-lave”) —
+# event: serve-camels-and-feet
 m.event(&quot;serve_camels_and_feet&quot;)
 
 # -------------------------- Gen.24.33 · THE_SEAM_SPEAK_DEMAND --------------
@@ -957,17 +994,19 @@ m.event(&quot;serve_camels_and_feet&quot;)
 # &quot;[EN-AID] And food was set before him to eat; and he said: I will not eat
 # until I have spoken my words. And he said: Speak.&quot;
 m.step(&quot;Gen.24.33&quot;)
-# ‹וַיּוּשַׂם … וַיֹּאמֶר לֹא אֹכַל … וַיֹּאמֶר דַּבֵּר› event: food-set
+# ‹וַיּוּשַׂם … וַיֹּאמֶר לֹא אֹכַל … וַיֹּאמֶר דַּבֵּר› (“and-put/set …
+# and-say not eat … and-say speak”) — event: food-set
 m.event(&quot;food_set&quot;)
-# ‹דַּבֵּר› house-voice speaks a demand — LET: daber(the-eved)
+# ‹דַּבֵּר› (“speak”) — house-voice speaks a demand — LET: speak(the-
+# servant)
 m.declare(&quot;house_voice&quot;, &quot;LET&quot;,
           &quot;daber(ha_eved)&quot;)
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == &quot;__main__&quot;:
     m.report()
-    assert m.created_set() == {&#x27;lavan&#x27;, &#x27;ha_eved&#x27;, &#x27;rivqah&#x27;}
-    assert m.presupposed_set() == {&#x27;ir_nachor&#x27;, &#x27;avraham&#x27;, &#x27;aram_naharayim&#x27;, &#x27;YHWH&#x27;}
+    assert m.created_set() == {&#x27;lavan&#x27;, &#x27;rivqah&#x27;, &#x27;ha_eved&#x27;}
+    assert m.presupposed_set() == {&#x27;avraham&#x27;, &#x27;ir_nachor&#x27;, &#x27;YHWH&#x27;, &#x27;aram_naharayim&#x27;}
     assert m.REGISTRY[&quot;names&quot;] == {}
     assert m.REGISTRY[&quot;writes&quot;] == 0
     assert m.tests_list() == []
@@ -980,4 +1019,4 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 34
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-08 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

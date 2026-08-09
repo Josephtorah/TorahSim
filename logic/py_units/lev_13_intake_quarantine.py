@@ -17,7 +17,7 @@ m = Machine("lev_13_intake_quarantine")
 # וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה וְאֶל־אַהֲרֹן לֵאמֹר
 # "And the LORD spoke unto Moses and unto Aaron, saying:"
 m.step("Lev.13.1")
-# ‹וַיְדַבֵּר יְהוָה› event: speak — agent the-LORD
+# ‹וַיְדַבֵּר יְהוָה› (“and-spoke the-LORD”) — event: speak — agent the-LORD
 m.event("speak", agent="YHWH")
 # reads without prior install (flag, not fix): Moses, Aaron
 m.presupposed("moshe", "aharon")
@@ -31,8 +31,9 @@ m.presupposed("moshe", "aharon")
 # then he shall be brought unto Aaron the priest, or unto one of his sons
 # the priests."
 m.step("Lev.13.2")
-# ‹אָדָם כִּי־יִהְיֶה … וְהוּבָא אֶל־אַהֲרֹן הַכֹּהֵן› case human, mark-in-
-# skin-of-flesh(swelling-or-scab-or-bright-spot) -> the-disease-mark routes
+# ‹אָדָם כִּי־יִהְיֶה … וְהוּבָא אֶל־אַהֲרֹן הַכֹּהֵן› (“human when there-is
+# … and-he-shall-be-brought to Aaron the-priest”) — case human, mark-in-
+# skin-of-flesh(Most-High-or-scab-or-bright-spot) -> the-disease-mark routes
 # to hova-to-the-priest
 m.case("adam, mark_in_or_basar(seet_o_sapachat_o_baheret) -> nega_tzaraat", "hova_el_ha_kohen")
 # reads without prior install (flag, not fix): human, skin-of-flesh, the-
@@ -48,10 +49,11 @@ m.presupposed("adam", "or_basar", "ha_kohen")
 # plague be deeper than the skin of his flesh, it is the plague of leprosy;
 # and the priest shall look on him, and pronounce him unclean."
 m.step("Lev.13.3")
-# ‹וְשֵׂעָר … הָפַךְ לָבָן וּמַרְאֵה … עָמֹק … וְטִמֵּא אֹתוֹ› standing
-# handler — if hair-has-turned-white ∧ appearance-deeper-from-skin-of then
-# classify(into-a-mark-of-the-disease-it-is) ∧ he-shall-declare-
-# impure(status-impure)
+# ‹וְשֵׂעָר … הָפַךְ לָבָן וּמַרְאֵה … עָמֹק … וְטִמֵּא אֹתוֹ› (“and-hair …
+# has-turned white and-appearance-of … deeper … and-he-shall-declare-impure
+# him”) — standing handler — if hair-has-turned-white ∧ appearance-deeper-
+# from-skin-of then classify(into-a-mark-of-leprosy-it-is) ∧ he-shall-
+# declare-impure(status-impure)
 m.handler("sear_hafakh_lavan ∧ mareh_amok_me_or",
           "classify(nega_tzaraat_hu) ∧ timme(status_tamei)")
 
@@ -64,7 +66,8 @@ m.handler("sear_hafakh_lavan ∧ mareh_amok_me_or",
 # not turned white, then the priest shall shut up him that hath the plague
 # seven days."
 m.step("Lev.13.4")
-# ‹וְאִם … אֵין … לֹא … וְהִסְגִּיר … שִׁבְעַת יָמִים› standing handler — if
+# ‹וְאִם … אֵין … לֹא … וְהִסְגִּיר … שִׁבְעַת יָמִים› (“and-if … is-not …
+# not … and-he-shall-confine … seven-of days”) — standing handler — if
 # bright-spot-white ∧ is-not-deeper-its-appearance ∧ not-has-turned-white
 # then he-shall-confine(obj-marker-the-into-a-mark-of, seven-of-days)
 m.handler("baheret_levanah ∧ ein_amok_mareha ∧ lo_hafakh_lavan",
@@ -78,9 +81,11 @@ m.handler("baheret_levanah ∧ ein_amok_mareha ∧ lo_hafakh_lavan",
 # plague stay in its appearance, and the plague be not spread in the skin,
 # then the priest shall shut him up seven days more."
 m.step("Lev.13.5")
-# ‹בַּיּוֹם הַשְּׁבִיעִי וְהִנֵּה … עָמַד … לֹא־פָשָׂה … שֵׁנִית› standing
-# handler — if in-the-day-the-seventh ∧ has-stood-in-its-appearance ∧ not-
-# has-spread then he-shall-confine-him(seven-of-days-a-second-time)
+# ‹בַּיּוֹם הַשְּׁבִיעִי וְהִנֵּה … עָמַד … לֹא־פָשָׂה … שֵׁנִית› (“on-the-
+# day the-seventh and-behold … has-stood … not has-spread … a-second-time”)
+# — standing handler — if in-the-day-the-seventh ∧ has-stood-in-its-
+# appearance ∧ not-has-spread then he-shall-confine-him(seven-of-days-a-
+# second-time)
 m.handler("ba_yom_ha_shevii ∧ amad_be_einav ∧ lo_fasah",
           "hisgiro(shivat_yamim_shenit)")
 
@@ -93,10 +98,11 @@ m.handler("ba_yom_ha_shevii ∧ amad_be_einav ∧ lo_fasah",
 # priest shall pronounce him clean: it is a scab; and he shall wash his
 # clothes, and be clean."
 m.step("Lev.13.6")
-# ‹כֵּהָה … וְטִהֲרוֹ … מִסְפַּחַת הִיא וְכִבֶּס בְּגָדָיו וְטָהֵר› standing
-# handler — if in-the-day-the-seventh-a-second-time ∧ has-dimmed ∧ not-has-
-# spread then he-shall-declare-him-pure(status-pure) ∧ classify(scab-it-is)
-# ∧ wash-his-garments ∧ he-is-pure
+# ‹כֵּהָה … וְטִהֲרוֹ … מִסְפַּחַת הִיא וְכִבֶּס בְּגָדָיו וְטָהֵר› (“has-
+# dimmed … and-he-shall-declare-him-pure … scab it-is and-he-shall-wash his-
+# garments and-he-is-pure”) — standing handler — if in-the-day-the-seventh-
+# a-second-time ∧ has-dimmed ∧ not-has-spread then he-shall-declare-him-
+# pure(status-pure) ∧ classify(scab-it-is) ∧ wash-his-garments ∧ he-is-pure
 m.handler("ba_yom_ha_shevii_shenit ∧ kehah ∧ lo_fasah",
           "tiharo(status_tahor) ∧ classify(mispachat_hi) ∧ kibbes_begadav ∧ taher")
 
@@ -107,9 +113,10 @@ m.handler("ba_yom_ha_shevii_shenit ∧ kehah ∧ lo_fasah",
 # himself to the priest for his cleansing, he shall show himself to the
 # priest again."
 m.step("Lev.13.7")
-# ‹פָּשֹׂה תִפְשֶׂה … אַחֲרֵי הֵרָאֹתוֹ … וְנִרְאָה שֵׁנִית› standing
-# handler — if spread-it-spreads(after-its-appearing-to-his-purification)
-# then seen-a-second-time-to-the-priest
+# ‹פָּשֹׂה תִפְשֶׂה … אַחֲרֵי הֵרָאֹתוֹ … וְנִרְאָה שֵׁנִית› (“spread it-
+# spreads … after his-being-seen … and-he-shall-be-seen a-second-time”) —
+# standing handler — if spread-it-spreads(after-its-appearing-to-his-
+# purification) then seen-a-second-time-to-the-priest
 m.handler("pasoh_tifseh(acharei_heraoto_le_tohorato)",
           "nirah_shenit_el_ha_kohen")
 
@@ -119,9 +126,10 @@ m.handler("pasoh_tifseh(acharei_heraoto_le_tohorato)",
 # "And the priest shall look, and, behold, the scab is spread in the skin;
 # then the priest shall pronounce him unclean: it is leprosy."
 m.step("Lev.13.8")
-# ‹וְהִנֵּה פָּשְׂתָה … וְטִמְּאוֹ … צָרַעַת הִוא› standing handler — if
+# ‹וְהִנֵּה פָּשְׂתָה … וְטִמְּאוֹ … צָרַעַת הִוא› (“and-behold has-spread …
+# and-he-shall-declare-him-impure … tzara'at it-is”) — standing handler — if
 # behold-has-spread-the-scab then pronounce-impure(status-impure) ∧
-# classify(the-disease-it-is)
+# classify(leprosy-it-is)
 m.handler("hineh_pastah_ha_mispachat",
           "timmeo(status_tamei) ∧ classify(tzaraat_hi)")
 
@@ -129,7 +137,7 @@ m.handler("hineh_pastah_ha_mispachat",
 if __name__ == "__main__":
     m.report()
     assert m.created_set() == set()
-    assert m.presupposed_set() == {'or_basar', 'moshe', 'adam', 'aharon', 'ha_kohen'}
+    assert m.presupposed_set() == {'moshe', 'adam', 'or_basar', 'ha_kohen', 'aharon'}
     assert m.REGISTRY["names"] == {}
     assert m.REGISTRY["writes"] == 0
     assert m.tests_list() == []

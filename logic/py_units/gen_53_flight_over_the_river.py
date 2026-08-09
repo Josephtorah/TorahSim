@@ -20,8 +20,9 @@ m = Machine("gen_53_flight_over_the_river")
 # all that was our father's, and from what was our father's he has made all
 # this glory."
 m.step("Gen.31.1")
-# ‹וַיִּשְׁמַע אֶת־דִּבְרֵי בְנֵי־לָבָן לֵאמֹר› fact holds: laqach-yaaqov-
-# all-which-to-avinu(divre-vene-lavan)
+# ‹וַיִּשְׁמַע אֶת־דִּבְרֵי בְנֵי־לָבָן לֵאמֹר› (“and-hear obj-marker
+# word/thing son Laban to-say”) — fact holds: take-Jacob-all-which-to-
+# avinu(word/thing-son-Laban)
 m.fact("laqach_yaaqov_kol_asher_le_avinu(divre_vene_lavan)")
 
 # -------------------------- Gen.31.2 · THE_CHANGED_FACE --------------------
@@ -30,8 +31,9 @@ m.fact("laqach_yaaqov_kol_asher_le_avinu(divre_vene_lavan)")
 # "[EN-AID] And Jacob saw the face of Laban, and behold, it was not toward
 # him as yesterday and the day before."
 m.step("Gen.31.2")
-# ‹וְהִנֵּה אֵינֶנּוּ עִמּוֹ כִּתְמוֹל שִׁלְשׁוֹם› fact holds: pene-lavan-
-# not-khi-temol-shilshom(yaaqov)
+# ‹וְהִנֵּה אֵינֶנּוּ עִמּוֹ כִּתְמוֹל שִׁלְשׁוֹם› (“and-behold there-is-
+# not-him/its with-him/its like-ago trebly”) — fact holds: face-Laban-not-
+# khi-temol-trebly(Jacob)
 m.fact("pene_lavan_lo_khi_temol_shilshom(yaaqov)")
 
 # -------------------------- Gen.31.3 · THE_RETURN_COMMAND ------------------
@@ -40,8 +42,9 @@ m.fact("pene_lavan_lo_khi_temol_shilshom(yaaqov)")
 # "[EN-AID] And YHWH said to Jacob: Return to the land of your fathers and
 # to your kindred, and I will be with you."
 m.step("Gen.31.3")
-# ‹שׁוּב אֶל־אֶרֶץ אֲבוֹתֶיךָ וּלְמוֹלַדְתֶּךָ› the-LORD speaks a demand —
-# LET: shuv-earth-avot(yaaqov)
+# ‹שׁוּב אֶל־אֶרֶץ אֲבוֹתֶיךָ וּלְמוֹלַדְתֶּךָ› (“return to earth father-
+# you/your and-to-nativity-you/your”) — the-LORD speaks a demand — LET:
+# return-earth-avot(Jacob)
 m.declare("YHWH", "LET",
           "shuv_eretz_avot(yaaqov)")
 
@@ -50,8 +53,9 @@ m.declare("YHWH", "LET",
 # "[EN-AID] And Jacob sent and called Rachel and Leah to the field, to his
 # flock."
 m.step("Gen.31.4")
-# ‹וַיִּשְׁלַח יַעֲקֹב וַיִּקְרָא לְרָחֵל וּלְלֵאָה› fact holds: qara-to-
-# rachel-and-to-leah(the-sade)
+# ‹וַיִּשְׁלַח יַעֲקֹב וַיִּקְרָא לְרָחֵל וּלְלֵאָה› (“and-send Jacob and-
+# call to-Rachel and-to-Leah”) — fact holds: qara-to-Rachel-and-to-leah(the-
+# field)
 m.fact("qara_le_rachel_u_le_leah(ha_sade)")
 
 # -------------------------- Gen.31.5 · THE_CONDITION_DECLARED_TRUE ---------
@@ -61,7 +65,8 @@ m.fact("qara_le_rachel_u_le_leah(ha_sade)")
 # toward me as yesterday and the day before; but the God of my father has
 # been with me."
 m.step("Gen.31.5")
-# ‹וֵאלֹהֵי אָבִי הָיָה עִמָּדִי› fact holds: elohe-avi-haya-with-me(yaaqov)
+# ‹וֵאלֹהֵי אָבִי הָיָה עִמָּדִי› (“and-God father-me/my be along-with-
+# me/my”) — fact holds: elohe-avi-be-with-me(Jacob)
 m.fact("elohe_avi_haya_imadi(yaaqov)")
 
 # -------------------------- Gen.31.6 · THE_STRENGTH_LEDGER -----------------
@@ -69,7 +74,8 @@ m.fact("elohe_avi_haya_imadi(yaaqov)")
 # "[EN-AID] And you know that with all my strength I have served your
 # father."
 m.step("Gen.31.6")
-# ‹כִּי בְּכָל־כֹּחִי עָבַדְתִּי אֶת› fact holds: in-all-kochi-avadti(atena)
+# ‹כִּי בְּכָל־כֹּחִי עָבַדְתִּי אֶת› (“that in-all vigor-me/my work/serve
+# obj-marker”) — fact holds: in-all-kochi-work/serve(thou-and-thee)
 m.fact("be_khol_kochi_avadti(atena)")
 
 # -------------------------- Gen.31.7 · THE_TEN_CHANGES ---------------------
@@ -78,8 +84,10 @@ m.fact("be_khol_kochi_avadti(atena)")
 # "[EN-AID] And your father has mocked me and changed my wages ten times;
 # but God did not give him leave to harm me."
 m.step("Gen.31.7")
-# ‹וַאֲבִיכֶן הֵתֶל בִּי וְהֶחֱלִף אֶת־מַשְׂכֻּרְתִּי עֲשֶׂרֶת מֹנִים› fact
-# holds: hechelif-maskurti-aseret-monim(lavan)
+# ‹וַאֲבִיכֶן הֵתֶל בִּי וְהֶחֱלִף אֶת־מַשְׂכֻּרְתִּי עֲשֶׂרֶת מֹנִים›
+# (“and-father-ward deride in-me/my and-slide-by obj-marker wages-me/my ten
+# something-weighed-out”) — fact holds: slide-by-maskurti-ten-something-
+# weighed-out(Laban)
 m.fact("hechelif_maskurti_aseret_monim(lavan)")
 
 # -------------------------- Gen.31.8 · THE_WAGE_FLIP_RULE ------------------
@@ -90,16 +98,17 @@ m.fact("hechelif_maskurti_aseret_monim(lavan)")
 # flock bore speckled; and if he said thus: The striped shall be your wage —
 # then all the flock bore striped."
 m.step("Gen.31.8")
-# ‹אִם־כֹּה יֹאמַר נְקֻדִּים יִהְיֶה שְׂכָרֶךָ› fact holds: if-ko-yomar-and-
-# yaldu-so(sekharekha)
+# ‹אִם־כֹּה יֹאמַר נְקֻדִּים יִהְיֶה שְׂכָרֶךָ› (“if like-this say spotted
+# be wage-you/your”) — fact holds: if-this-say-and-bear-young-so(sekharekha)
 m.fact("im_ko_yomar_ve_yaldu_khen(sekharekha)")
 
 # -------------------------- Gen.31.9 · THE_RESCUE_VERB_BORN ----------------
 # וַיַּצֵּל אֱלֹהִים אֶת־מִקְנֵה אֲבִיכֶם וַיִּתֶּן־לִי
 # "[EN-AID] And God has rescued your father's livestock and given it to me."
 m.step("Gen.31.9")
-# ‹וַיַּצֵּל אֱלֹהִים אֶת־מִקְנֵה אֲבִיכֶם וַיִּתֶּן־לִי› fact holds: and-
-# yatzel-God-and-yiten-to-me(miqne)
+# ‹וַיַּצֵּל אֱלֹהִים אֶת־מִקְנֵה אֲבִיכֶם וַיִּתֶּן־לִי› (“and-snatch-away
+# God obj-marker something-bought father-you/your(pl) and-set to-me/my”) —
+# fact holds: and-snatch-away-God-and-set-to-me(something-bought)
 m.fact("va_yatzel_Elohim_va_yiten_li(miqne)")
 
 # -------------------------- Gen.31.10 · THE_DREAM_AND_THE_CHANGED_ADJECTIVE -
@@ -109,8 +118,8 @@ m.fact("va_yatzel_Elohim_va_yiten_li(miqne)")
 # eyes and saw in a dream: and behold, the he-goats going up on the flock
 # were striped, speckled, and mottled."
 m.step("Gen.31.10")
-# ‹וָאֶשָּׂא עֵינַי וָאֵרֶא בַּחֲלוֹם› fact holds: and-ere-in-the-chalom-
-# atudim(olim)
+# ‹וָאֶשָּׂא עֵינַי וָאֵרֶא בַּחֲלוֹם› (“and-lift/carry eye-me/my and-see
+# in-dream”) — fact holds: and-see-in-the-chalom-prepared(go-up)
 m.fact("va_ere_ba_chalom_atudim(olim)")
 
 # -------------------------- Gen.31.11 · THE_HINENI -------------------------
@@ -118,7 +127,7 @@ m.fact("va_ere_ba_chalom_atudim(olim)")
 # "[EN-AID] And the angel of God said to me in the dream: Jacob. And I said:
 # Here I am."
 m.step("Gen.31.11")
-# ‹וָאֹמַר הִנֵּנִי› fact holds: behold-I(yaaqov)
+# ‹וָאֹמַר הִנֵּנִי› (“and-say behold-me/my”) — fact holds: behold-I(Jacob)
 m.fact("hineni(yaaqov)")
 
 # -------------------------- Gen.31.12 · THE_RETOLD_LIFT_YOUR_EYES ----------
@@ -129,8 +138,8 @@ m.fact("hineni(yaaqov)")
 # up on the flock are striped, speckled, and mottled; for I have seen all
 # that Laban is doing to you."
 m.step("Gen.31.12")
-# ‹שָׂא־נָא עֵינֶיךָ וּרְאֵה› fact holds: retold-sa-enekha-and-ree(in-the-
-# chalom)
+# ‹שָׂא־נָא עֵינֶיךָ וּרְאֵה› (“lift/carry please eye-you/your and-see”) —
+# fact holds: retold-lift/carry-enekha-and-see(dream)
 m.fact("retold_sa_enekha_u_ree(ba_chalom)")
 
 # -------------------------- Gen.31.13 · THE_SELF_NAME_BY_THE_REGISTRY ------
@@ -142,8 +151,9 @@ m.fact("retold_sa_enekha_u_ree(ba_chalom)")
 # land of your kindred."
 m.step("Gen.31.13")
 # ‹אָנֹכִי הָאֵל בֵּית־אֵל אֲשֶׁר מָשַׁחְתָּ שָּׁם מַצֵּבָה אֲשֶׁר נָדַרְתָּ
-# לִּי שָׁם נֶדֶר› fact holds: anokhi-the-to-bet-to(mashachta-matzeva-
-# nadarta-neder)
+# לִּי שָׁם נֶדֶר› (“the-strength Beth-el which rub-with-oil there pillar
+# which promise to-me/my there promise”) — fact holds: anokhi-the-to-bet-
+# to(rub-with-oil-pillar-promise-promise)
 m.fact("anokhi_ha_el_bet_el(mashachta_matzeva_nadarta_neder)")
 
 # -------------------------- Gen.31.14 · THE_INHERITANCE_QUESTION -----------
@@ -152,8 +162,9 @@ m.fact("anokhi_ha_el_bet_el(mashachta_matzeva_nadarta_neder)")
 # "[EN-AID] And Rachel and Leah answered and said to him: Have we still a
 # portion and an inheritance in our father's house?"
 m.step("Gen.31.14")
-# ‹הַעוֹד לָנוּ חֵלֶק וְנַחֲלָה בְּבֵית אָבִינוּ› fact holds: the-od-lanu-
-# cheleq-and-nachala(rachel-and-leah)
+# ‹הַעוֹד לָנוּ חֵלֶק וְנַחֲלָה בְּבֵית אָבִינוּ› (“the-still/again to-
+# us/our smoothness and-inheritance in-house father-us/our”) — fact holds:
+# the-still/again-lanu-smoothness-and-inheritance(Rachel-and-leah)
 m.fact("ha_od_lanu_cheleq_ve_nachala(rachel_ve_leah)")
 
 # -------------------------- Gen.31.15 · THE_SOLD_DAUGHTERS -----------------
@@ -162,8 +173,9 @@ m.fact("ha_od_lanu_cheleq_ve_nachala(rachel_ve_leah)")
 # "[EN-AID] Are we not reckoned foreign women to him? For he has sold us,
 # and has utterly devoured our silver."
 m.step("Gen.31.15")
-# ‹הֲלוֹא נָכְרִיּוֹת נֶחְשַׁבְנוּ לוֹ כִּי מְכָרָנוּ› fact holds: nokhriot-
-# nechshavnu-when-mekharanu(lahen)
+# ‹הֲלוֹא נָכְרִיּוֹת נֶחְשַׁבְנוּ לוֹ כִּי מְכָרָנוּ› (“is-it-not strange
+# plait to-him/its that sell-us/our”) — fact holds: nokhriot-plait-that-
+# mekharanu(lahen)
 m.fact("nokhriot_nechshavnu_ki_mekharanu(lahen)")
 
 # -------------------------- Gen.31.16 · THE_DO_ALL_DEMAND ------------------
@@ -172,8 +184,9 @@ m.fact("nokhriot_nechshavnu_ki_mekharanu(lahen)")
 # "[EN-AID] For all the wealth which God has rescued from our father — it is
 # ours and our children's. And now, all that God has said to you — do."
 m.step("Gen.31.16")
-# ‹וְעַתָּה כֹּל אֲשֶׁר אָמַר אֱלֹהִים אֵלֶיךָ עֲשֵׂה› rachel-and-leah
-# speaks a demand — LET: ase-all-which-amar(yaaqov)
+# ‹וְעַתָּה כֹּל אֲשֶׁר אָמַר אֱלֹהִים אֵלֶיךָ עֲשֵׂה› (“and-now all which
+# say God to-you/your make”) — Rachel-and-leah speaks a demand — LET: make-
+# all-which-say(Jacob)
 m.declare("rachel_ve_leah", "LET",
           "ase_kol_asher_amar(yaaqov)")
 
@@ -182,7 +195,8 @@ m.declare("rachel_ve_leah", "LET",
 # "[EN-AID] And Jacob arose, and lifted his sons and his wives onto the
 # camels."
 m.step("Gen.31.17")
-# ‹וַיָּקָם יַעֲקֹב› fact holds: and-yaqam-and-yisa(yaaqov)
+# ‹וַיָּקָם יַעֲקֹב› (“and-arise Jacob”) — fact holds: and-arise-and-
+# lift/carry(Jacob)
 m.fact("va_yaqam_va_yisa(yaaqov)")
 
 # -------------------------- Gen.31.18 · THE_ABRAM_FORMULA ------------------
@@ -193,8 +207,10 @@ m.fact("va_yaqam_va_yisa(yaaqov)")
 # acquired — the livestock of his getting, which he acquired in Paddan-Aram
 # — to come to Isaac his father, to the land of Canaan."
 m.step("Gen.31.18")
-# ‹וַיִּנְהַג אֶת־כָּל־מִקְנֵהוּ וְאֶת־כָּל־רְכֻשׁוֹ› fact holds: and-
-# yinhag-miqne-rekhush(to-vo-to-yitzchaq)
+# ‹וַיִּנְהַג אֶת־כָּל־מִקְנֵהוּ וְאֶת־כָּל־רְכֻשׁוֹ› (“and-drive-forth obj-
+# marker all something-bought-him/its and-obj-marker all property-him/its”)
+# — fact holds: and-drive-forth-something-bought-rekhush(to-come/bring-to-
+# Isaac)
 m.fact("va_yinhag_miqne_rekhush(la_vo_el_yitzchaq)")
 
 # -------------------------- Gen.31.19 · THE_SHEARING_AND_THE_THEFT ---------
@@ -203,8 +219,9 @@ m.fact("va_yinhag_miqne_rekhush(la_vo_el_yitzchaq)")
 # "[EN-AID] And Laban had gone to shear his flock; and Rachel stole the
 # terafim that were her father's."
 m.step("Gen.31.19")
-# ‹וַתִּגְנֹב רָחֵל אֶת־הַתְּרָפִים אֲשֶׁר› fact holds: and-tignov-rachel-
-# terafim(lavan-gozez)
+# ‹וַתִּגְנֹב רָחֵל אֶת־הַתְּרָפִים אֲשֶׁר› (“and-steal Rachel obj-marker
+# the-Teraphim-a-family-idol which”) — fact holds: and-steal-Rachel-
+# Teraphim-a-family-idol(Laban-gozez)
 m.fact("va_tignov_rachel_terafim(lavan_gozez)")
 
 # -------------------------- Gen.31.20 · THE_HEART_THEFT --------------------
@@ -213,8 +230,9 @@ m.fact("va_tignov_rachel_terafim(lavan_gozez)")
 # "[EN-AID] And Jacob stole the heart of Laban the Aramean, in that he did
 # not tell him that he was fleeing."
 m.step("Gen.31.20")
-# ‹וַיִּגְנֹב יַעֲקֹב אֶת־לֵב לָבָן הָאֲרַמִּי› fact holds: and-yignov-
-# yaaqov-lev-lavan(the-arami)
+# ‹וַיִּגְנֹב יַעֲקֹב אֶת־לֵב לָבָן הָאֲרַמִּי› (“and-steal Jacob obj-marker
+# heart Laban the-Aramite”) — fact holds: and-steal-Jacob-heart-Laban(the-
+# Aramite)
 m.fact("va_yignov_yaaqov_lev_lavan(ha_arami)")
 
 # -------------------------- Gen.31.21 · THE_FLIGHT_AND_THE_RIVER -----------
@@ -223,8 +241,10 @@ m.fact("va_yignov_yaaqov_lev_lavan(ha_arami)")
 # "[EN-AID] And he fled, he and all that was his; and he arose and crossed
 # the river, and set his face toward the mountain of Gilead."
 m.step("Gen.31.21")
-# ‹וַיִּבְרַח הוּא וְכָל־אֲשֶׁר־לוֹ וַיָּקָם וַיַּעֲבֹר אֶת־הַנָּהָר› fact
-# holds: and-yivrach-and-yaavor-the-river(panav-har-the-gilad)
+# ‹וַיִּבְרַח הוּא וְכָל־אֲשֶׁר־לוֹ וַיָּקָם וַיַּעֲבֹר אֶת־הַנָּהָר› (“and-
+# bolt he/it and-all which to-him/its and-arise and-pass-over obj-marker
+# the-river”) — fact holds: and-bolt-and-pass-over-the-river(panav-mountain-
+# the-Gilead)
 m.fact("va_yivrach_va_yaavor_ha_nahar(panav_har_ha_gilad)")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

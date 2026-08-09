@@ -20,8 +20,9 @@ m = Machine("gen_23_vineyard_curse")
 # and Japheth; and Ham is the father of Canaan."
 m.step("Gen.9.18")
 # ‹וַיִּהְיוּ בְנֵי־נֹחַ הַיֹּצְאִים מִן־הַתֵּבָה … וְחָם הוּא אֲבִי
-# כְנָעַן› fact holds: sons-of-Noach-the-going-out-of-from-the-ark-Shem-Ham-
-# and-Yefet; Ham-he-father-of-Canaan
+# כְנָעַן› (“and-they-were sons-of Noah going-out-of from the-ark … and-Ham
+# he father-of Canaan”) — fact holds: sons-of-Noach-the-going-out-of-from-
+# the-ark-Shem-Ham-and-Yefet; Ham-he-father-of-Canaan
 m.fact("bnei_noach_ha_yotzim_min_ha_tevah_shem_cham_va_yefet",
        "cham_hu_avi_khenaan")
 # reads without prior install (flag, not fix): Noach, ark, Canaan
@@ -32,8 +33,9 @@ m.presupposed("noach", "tevah", "kenaan")
 # "These three were the sons of Noah, and of these was the whole earth
 # overspread."
 m.step("Gen.9.19")
-# ‹שְׁלֹשָׁה אֵלֶּה … וּמֵאֵלֶּה נָפְצָה כָל־הָאָרֶץ› fact holds: three-
-# these-sons-of-Noach; and-from-these-naftzah-all-the-earth
+# ‹שְׁלֹשָׁה אֵלֶּה … וּמֵאֵלֶּה נָפְצָה כָל־הָאָרֶץ› (“three these … and-
+# from-these was-scattered all the-earth”) — fact holds: three-these-sons-
+# of-Noach; and-from-these-naftzah-all-the-earth
 m.fact("shelosha_eleh_bnei_noach",
        "u_me_eleh_naftzah_khol_ha_aretz")
 
@@ -41,13 +43,15 @@ m.fact("shelosha_eleh_bnei_noach",
 # וַיָּחֶל נֹחַ אִישׁ הָאֲדָמָה וַיִּטַּע כָּרֶם
 # "And Noah the husbandman began, and planted a vineyard."
 m.step("Gen.9.20")
-# ‹וַיָּחֶל נֹחַ› event: begin — agent Noach
+# ‹וַיָּחֶל נֹחַ› (“and-he-began Noah”) — event: begin — agent Noach
 m.event("begin", agent="noach")
-# ‹אִישׁ הָאֲדָמָה› fact holds: Noach-man-of-the-ground
+# ‹אִישׁ הָאֲדָמָה› (“man-of the-ground”) — fact holds: Noach-man-of-the-
+# ground
 m.fact("noach_ish_ha_adamah")
-# ‹וַיִּטַּע כָּרֶם› event: plant — agent Noach; theme kerem
+# ‹וַיִּטַּע כָּרֶם› (“and-he-planted vineyard”) — event: plant — agent
+# Noach; theme kerem
 m.event("plant", agent="noach", themes=["kerem"])
-# ‹כָּרֶם› the world gains: kerem
+# ‹כָּרֶם› (“vineyard”) — the world gains: kerem
 m.install("kerem")
 
 # -------------------------- Gen.9.21 · THE_WINE_AND_THE_SELF_UNCOVERING ----
@@ -55,12 +59,13 @@ m.install("kerem")
 # "And he drank of the wine, and was drunken; and he was uncovered within
 # his tent."
 m.step("Gen.9.21")
-# ‹וַיֵּשְׁתְּ מִן־הַיַּיִן› event: drink — agent Noach; theme from-the-wine
+# ‹וַיֵּשְׁתְּ מִן־הַיַּיִן› (“and-he-drank from the-wine”) — event: drink —
+# agent Noach; theme from-the-wine
 m.event("drink", agent="noach", themes=["min_ha_yayin"])
-# ‹וַיִּשְׁכָּר› event: become-drunk — agent Noach
+# ‹וַיִּשְׁכָּר› (“and-was-drunk”) — event: become-drunk — agent Noach
 m.event("become_drunk", agent="noach")
-# ‹וַיִּתְגַּל בְּתוֹךְ אָהֳלֹה› event: uncover-self — agent Noach; theme
-# in-inside-aholoh
+# ‹וַיִּתְגַּל בְּתוֹךְ אָהֳלֹה› (“and-uncovered-himself inside his-tent”) —
+# event: uncover-self — agent Noach; theme in-inside-aholoh
 m.event("uncover_self", agent="noach", themes=["be_tokh_aholoh"])
 
 # -------------------------- Gen.9.22 · THE_SEEING_AND_THE_TELLING ----------
@@ -69,11 +74,12 @@ m.event("uncover_self", agent="noach", themes=["be_tokh_aholoh"])
 # "And Ham, the father of Canaan, saw the nakedness of his father, and told
 # his two brethren without."
 m.step("Gen.9.22")
-# ‹וַיַּרְא חָם אֲבִי כְנַעַן אֵת עֶרְוַת אָבִיו› event: see — agent Ham;
+# ‹וַיַּרְא חָם אֲבִי כְנַעַן אֵת עֶרְוַת אָבִיו› (“and-he-saw Ham father-of
+# Canaan obj-marker nakedness-of his-father”) — event: see — agent Ham;
 # theme nakedness-of-aviv
 m.event("see", agent="cham", themes=["ervat_aviv"])
-# ‹וַיַּגֵּד לִשְׁנֵי־אֶחָיו בַּחוּץ› event: tell — agent Ham; theme to-me-
-# shnei-echav
+# ‹וַיַּגֵּד לִשְׁנֵי־אֶחָיו בַּחוּץ› (“and-he-told to-his-two his-brothers
+# outside”) — event: tell — agent Ham; theme to-me-shnei-echav
 m.event("tell", agent="cham", themes=["li_shnei_echav"])
 
 # -------------------------- Gen.9.23 · THE_BACKWARD_COVERING ---------------
@@ -84,18 +90,23 @@ m.event("tell", agent="cham", themes=["li_shnei_echav"])
 # shoulders, and went backward, and covered the nakedness of their father;
 # and their faces were backward, and they saw not their father's nakedness."
 m.step("Gen.9.23")
-# ‹וַיִּקַּח שֵׁם וָיֶפֶת אֶת־הַשִּׂמְלָה› event: take — agent Shem-and-
-# Yefet; theme the-simlah
+# ‹וַיִּקַּח שֵׁם וָיֶפֶת אֶת־הַשִּׂמְלָה› (“and-he-took Shem and-Yefet obj-
+# marker the-garment”) — event: take — agent Shem-and-Yefet; theme the-
+# simlah
 m.event("take", agent="shem_va_yefet", themes=["ha_simlah"])
-# ‹וַיָּשִׂימוּ עַל־שְׁכֶם שְׁנֵיהֶם› event: set — agent Shem-and-Yefet;
-# theme over-shoulder-of-both-of-them
+# ‹וַיָּשִׂימוּ עַל־שְׁכֶם שְׁנֵיהֶם› (“and-they-set over shoulder-of both-
+# of-them”) — event: set — agent Shem-and-Yefet; theme over-shoulder-of-
+# both-of-them
 m.event("set", agent="shem_va_yefet", themes=["al_shekhem_shneihem"])
-# ‹וַיֵּלְכוּ אֲחֹרַנִּית› event: walk-backward — agent Shem-and-Yefet
+# ‹וַיֵּלְכוּ אֲחֹרַנִּית› (“and-they-walked backward”) — event: walk-
+# backward — agent Shem-and-Yefet
 m.event("walk_backward", agent="shem_va_yefet")
-# ‹וַיְכַסּוּ אֵת עֶרְוַת אֲבִיהֶם› event: cover — agent Shem-and-Yefet;
-# theme nakedness-of-avihem
+# ‹וַיְכַסּוּ אֵת עֶרְוַת אֲבִיהֶם› (“and-they-covered obj-marker nakedness-
+# of their-father”) — event: cover — agent Shem-and-Yefet; theme nakedness-
+# of-avihem
 m.event("cover", agent="shem_va_yefet", themes=["ervat_avihem"])
-# ‹וּפְנֵיהֶם אֲחֹרַנִּית וְעֶרְוַת אֲבִיהֶם לֹא רָאוּ› fact holds: and-
+# ‹וּפְנֵיהֶם אֲחֹרַנִּית וְעֶרְוַת אֲבִיהֶם לֹא רָאוּ› (“and-their-faces
+# backward and-nakedness-of their-father not they-saw”) — fact holds: and-
 # nakedness-of-avihem-not-they-saw
 m.fact("ve_ervat_avihem_lo_rau")
 
@@ -104,10 +115,12 @@ m.fact("ve_ervat_avihem_lo_rau")
 # "And Noah awoke from his wine, and knew what his youngest son had done
 # unto him."
 m.step("Gen.9.24")
-# ‹וַיִּיקֶץ נֹחַ מִיֵּינוֹ› event: awake — agent Noach
+# ‹וַיִּיקֶץ נֹחַ מִיֵּינוֹ› (“and-he-awoke Noah from-his-wine”) — event:
+# awake — agent Noach
 m.event("awake", agent="noach")
-# ‹וַיֵּדַע אֵת אֲשֶׁר־עָשָׂה־לוֹ בְּנוֹ הַקָּטָן› event: know — agent
-# Noach; theme that-which-make-not-beno-the-small
+# ‹וַיֵּדַע אֵת אֲשֶׁר־עָשָׂה־לוֹ בְּנוֹ הַקָּטָן› (“and-he-knew obj-marker
+# that-which did to-him his-son the-small”) — event: know — agent Noach;
+# theme that-which-make-not-beno-the-small
 m.event("know", agent="noach", themes=["asher_asah_lo_beno_ha_qatan"])
 
 # -------------------------- Gen.9.25 · THE_FIRST_HUMAN_CURSE ---------------
@@ -115,13 +128,13 @@ m.event("know", agent="noach", themes=["asher_asah_lo_beno_ha_qatan"])
 # "And he said: 'Cursed be Canaan; a servant of servants shall he be unto
 # his brethren.'"
 m.step("Gen.9.25")
-# ‹וַיֹּאמֶר אָרוּר כְּנָעַן› event: speak — agent Noach; theme cursed-
-# Canaan
+# ‹וַיֹּאמֶר אָרוּר כְּנָעַן› (“and-he-said cursed Canaan”) — event: speak —
+# agent Noach; theme cursed-Canaan
 m.event("speak", agent="noach", themes=["arur_kenaan"])
-# ‹אָרוּר כְּנָעַן› role assigned: Canaan -> cursed
+# ‹אָרוּר כְּנָעַן› (“cursed Canaan”) — role assigned: Canaan -> cursed
 m.assign("kenaan", "arur")
-# ‹עֶבֶד עֲבָדִים יִהְיֶה לְאֶחָיו› fact holds: slave-of-slaves-yihyeh-to-
-# echav(Canaan)
+# ‹עֶבֶד עֲבָדִים יִהְיֶה לְאֶחָיו› (“slave-of slaves shall-he-be to-his-
+# brothers”) — fact holds: slave-of-slaves-yihyeh-to-echav(Canaan)
 m.fact("eved_avadim_yihyeh_le_echav(kenaan)")
 
 # -------------------------- Gen.9.26 · THE_FIRST_HUMAN_BLESSING ------------
@@ -129,13 +142,14 @@ m.fact("eved_avadim_yihyeh_le_echav(kenaan)")
 # "And he said: 'Blessed be the LORD, the God of Shem; and let Canaan be
 # their servant.'"
 m.step("Gen.9.26")
-# ‹וַיֹּאמֶר בָּרוּךְ יְהֹוָה אֱלֹהֵי שֵׁם› event: speak — agent Noach;
-# theme blessed-yhwh-elohei-Shem
+# ‹וַיֹּאמֶר בָּרוּךְ יְהֹוָה אֱלֹהֵי שֵׁם› (“and-he-said blessed YHWH God-
+# of Shem”) — event: speak — agent Noach; theme blessed-yhwh-elohei-Shem
 m.event("speak", agent="noach", themes=["barukh_yhwh_elohei_shem"])
-# ‹בָּרוּךְ יְהֹוָה אֱלֹהֵי שֵׁם› blessing: Noach blesses yhwh-elohei-Shem
+# ‹בָּרוּךְ יְהֹוָה אֱלֹהֵי שֵׁם› (“blessed YHWH God-of Shem”) — blessing:
+# Noach blesses yhwh-elohei-Shem
 m.bless("noach", "yhwh_elohei_shem")
-# ‹וִיהִי כְנַעַן עֶבֶד לָמוֹ› Noach speaks a demand — LET: yehi(Canaan,
-# slave-of-lamo)
+# ‹וִיהִי כְנַעַן עֶבֶד לָמוֹ› (“and-let-him-be Canaan slave to-them”) —
+# Noach speaks a demand — LET: yehi(Canaan, slave-of-lamo)
 m.declare("noach", "LET",
           "yehi(kenaan, eved_lamo)")
 
@@ -145,16 +159,16 @@ m.declare("noach", "LET",
 # "God enlarge Japheth, and he shall dwell in the tents of Shem; and let
 # Canaan be their servant."
 m.step("Gen.9.27")
-# ‹יַפְתְּ אֱלֹהִים לְיֶפֶת› Noach speaks a demand — LET: may-He-
-# enlarge(God, to-Yefet)
+# ‹יַפְתְּ אֱלֹהִים לְיֶפֶת› (“may-He-enlarge God to-Yefet”) — Noach speaks
+# a demand — LET: may-He-enlarge(God, to-Yefet)
 m.declare("noach", "LET",
           "yaft(elohim, le_yefet)")
-# ‹וְיִשְׁכֹּן בְּאָהֳלֵי־שֵׁם› Noach speaks a demand — LET: may-he-
-# dwell(in-aholei-Shem)
+# ‹וְיִשְׁכֹּן בְּאָהֳלֵי־שֵׁם› (“and-may-he-dwell in-the-tents-of Shem”) —
+# Noach speaks a demand — LET: may-he-dwell(in-aholei-Shem)
 m.declare("noach", "LET",
           "yishkon(be_aholei_shem)")
-# ‹וִיהִי כְנַעַן עֶבֶד לָמוֹ› Noach speaks a demand — LET: yehi(Canaan,
-# slave-of-lamo)
+# ‹וִיהִי כְנַעַן עֶבֶד לָמוֹ› (“and-let-him-be Canaan slave to-them”) —
+# Noach speaks a demand — LET: yehi(Canaan, slave-of-lamo)
 m.declare("noach", "LET",
           "yehi(kenaan, eved_lamo)")
 
@@ -163,6 +177,7 @@ m.declare("noach", "LET",
 # "And Noah lived after the flood three hundred and fifty years."
 m.step("Gen.9.28")
 # ‹וַיְחִי־נֹחַ אַחַר הַמַּבּוּל שְׁלֹשׁ מֵאוֹת שָׁנָה וַחֲמִשִּׁים שָׁנָה›
+# (“and-he-lived Noah after the-deluge three hundred year and-fifty year”) —
 # fact holds: and-he-lived-Noach-after-the-deluge-350-year
 m.fact("va_yechi_noach_achar_ha_mabul_350_shanah")
 
@@ -172,16 +187,17 @@ m.fact("va_yechi_noach_achar_ha_mabul_350_shanah")
 # "And all the days of Noah were nine hundred and fifty years; and he died."
 m.step("Gen.9.29")
 # ‹וַיִּהְיוּ כָּל־יְמֵי־נֹחַ תְּשַׁע מֵאוֹת שָׁנָה וַחֲמִשִּׁים שָׁנָה›
-# fact holds: all-days-of-Noach-950-year
+# (“and-they-were all days-of Noah nine hundred year and-fifty year”) — fact
+# holds: all-days-of-Noach-950-year
 m.fact("kol_yemei_noach_950_shanah")
-# ‹וַיָּמֹת› event: die — agent Noach
+# ‹וַיָּמֹת› (“and-he-died”) — event: die — agent Noach
 m.event("die", agent="noach")
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
     assert m.created_set() == {'kerem'}
-    assert m.presupposed_set() == {'tevah', 'noach', 'kenaan'}
+    assert m.presupposed_set() == {'noach', 'kenaan', 'tevah'}
     assert m.REGISTRY["names"] == {'kenaan': 'arur'}
     assert m.REGISTRY["writes"] == 1
     assert m.tests_list() == []

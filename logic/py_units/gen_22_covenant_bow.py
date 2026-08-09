@@ -17,8 +17,9 @@ m = Machine("gen_22_covenant_bow")
 # וַיֹּאמֶר אֱלֹהִים אֶל־נֹחַ וְאֶל־בָּנָיו אִתּוֹ לֵאמֹר
 # "And God spoke unto Noah, and to his sons with him, saying:"
 m.step("Gen.9.8")
-# ‹וַיֹּאמֶר אֱלֹהִים אֶל־נֹחַ וְאֶל־בָּנָיו אִתּוֹ› event: speak — agent
-# God; theme to-Noach-and-to-banav
+# ‹וַיֹּאמֶר אֱלֹהִים אֶל־נֹחַ וְאֶל־בָּנָיו אִתּוֹ› (“and-He-said God to
+# Noah and-to his-sons with-him”) — event: speak — agent God; theme to-
+# Noach-and-to-banav
 m.event("speak", agent="elohim", themes=["el_noach_ve_el_banav"])
 # reads without prior install (flag, not fix): Noach, banav, ark
 m.presupposed("noach", "banav", "tevah")
@@ -28,8 +29,9 @@ m.presupposed("noach", "banav", "tevah")
 # "'As for Me, behold, I establish My covenant with you, and with your seed
 # after you;"
 m.step("Gen.9.9")
-# ‹הִנְנִי מֵקִים אֶת־בְּרִיתִי אִתְּכֶם וְאֶת־זַרְעֲכֶם› fact holds: hinni-
-# mekim-obj-marker·et-My-covenant-itkhem
+# ‹הִנְנִי מֵקִים אֶת־בְּרִיתִי אִתְּכֶם וְאֶת־זַרְעֲכֶם› (“behold-I
+# establishing obj-marker My-covenant with-you and-with your-seed”) — fact
+# holds: hinni-mekim-obj-marker·et-My-covenant-itkhem
 m.fact("hinni_mekim_et_briti_itkhem")
 
 # -------------------------- Gen.9.10 · EVERY_LIVING_SOUL_A_PARTY -----------
@@ -41,7 +43,9 @@ m.fact("hinni_mekim_et_briti_itkhem")
 # every beast of the earth."
 m.step("Gen.9.10")
 # ‹וְאֵת כָּל־נֶפֶשׁ הַחַיָּה אֲשֶׁר אִתְּכֶם … מִכֹּל יֹצְאֵי הַתֵּבָה›
-# fact holds: and-obj-marker·et-all-soul-of-the-beast-which-itkhem
+# (“and-with all soul-of the-living which with-you … from-all goers-out-of
+# the-ark”) — fact holds: and-obj-marker·et-all-soul-of-the-beast-which-
+# itkhem
 m.fact("ve_et_kol_nefesh_ha_chayah_asher_itkhem")
 
 # -------------------------- Gen.9.11 · THE_CUT_VERB_BORN_REFUSING ----------
@@ -51,14 +55,18 @@ m.fact("ve_et_kol_nefesh_ha_chayah_asher_itkhem")
 # off any more by the waters of the flood; neither shall there any more be a
 # flood to destroy the earth.'"
 m.step("Gen.9.11")
-# ‹וַהֲקִמֹתִי אֶת־בְּרִיתִי אִתְּכֶם› fact holds: and-I-will-establish-obj-
-# marker·et-My-covenant-itkhem
+# ‹וַהֲקִמֹתִי אֶת־בְּרִיתִי אִתְּכֶם› (“and-I-will-establish obj-marker My-
+# covenant with-you”) — fact holds: and-I-will-establish-obj-marker·et-My-
+# covenant-itkhem
 m.fact("va_hakimoti_et_briti_itkhem")
-# ‹וְלֹא־יִכָּרֵת כָּל־בָּשָׂר עוֹד מִמֵּי הַמַּבּוּל› standing constraint:
-# and-not-yikkaret-all-flesh-still/again-from-waters-of-the-deluge
+# ‹וְלֹא־יִכָּרֵת כָּל־בָּשָׂר עוֹד מִמֵּי הַמַּבּוּל› (“and-not be-cut-off
+# all flesh still/again from-the-waters-of the-deluge”) — standing
+# constraint: and-not-yikkaret-all-flesh-still/again-from-waters-of-the-
+# deluge
 m.invariant("ve_lo_yikkaret_kol_basar_od_mi_mei_ha_mabul")
-# ‹וְלֹא־יִהְיֶה עוֹד מַבּוּל לְשַׁחֵת הָאָרֶץ› standing constraint: and-
-# not-yihyeh-still/again-deluge-to-destroy-the-earth
+# ‹וְלֹא־יִהְיֶה עוֹד מַבּוּל לְשַׁחֵת הָאָרֶץ› (“and-not be still/again
+# deluge to-destroy the-earth”) — standing constraint: and-not-yihyeh-
+# still/again-deluge-to-destroy-the-earth
 m.invariant("ve_lo_yihyeh_od_mabul_le_shachet_ha_aretz")
 
 # -------------------------- Gen.9.12 · THE_FRAME_REOPENS_ON_THE_SIGN -------
@@ -68,11 +76,12 @@ m.invariant("ve_lo_yihyeh_od_mabul_le_shachet_ha_aretz")
 # and you and every living creature that is with you, for perpetual
 # generations:"
 m.step("Gen.9.12")
-# ‹וַיֹּאמֶר אֱלֹהִים זֹאת אוֹת־הַבְּרִית› event: speak — agent God; theme
-# this-sign-of-the-brit
+# ‹וַיֹּאמֶר אֱלֹהִים זֹאת אוֹת־הַבְּרִית› (“and-He-said God this sign-of
+# the-covenant”) — event: speak — agent God; theme this-sign-of-the-brit
 m.event("speak", agent="elohim", themes=["zot_ot_ha_brit"])
-# ‹אֲשֶׁר־אֲנִי נֹתֵן בֵּינִי וּבֵינֵיכֶם … לְדֹרֹת עוֹלָם› fact holds:
-# I-giving-beini-and-veineikhem-to-generations-of-everlasting
+# ‹אֲשֶׁר־אֲנִי נֹתֵן בֵּינִי וּבֵינֵיכֶם … לְדֹרֹת עוֹלָם› (“which I giving
+# between-Me and-between-you … for-generations-of everlasting”) — fact
+# holds: I-giving-beini-and-veineikhem-to-generations-of-everlasting
 m.fact("ani_noten_beini_u_veineikhem_le_dorot_olam")
 
 # -------------------------- Gen.9.13 · MY_BOW_IN_THE_CLOUD -----------------
@@ -81,7 +90,8 @@ m.fact("ani_noten_beini_u_veineikhem_le_dorot_olam")
 # "I have set My bow in the cloud, and it shall be for a token of a covenant
 # between Me and the earth."
 m.step("Gen.9.13")
-# ‹אֶת־קַשְׁתִּי נָתַתִּי בֶּעָנָן וְהָיְתָה לְאוֹת בְּרִית› fact holds:
+# ‹אֶת־קַשְׁתִּי נָתַתִּי בֶּעָנָן וְהָיְתָה לְאוֹת בְּרִית› (“obj-marker
+# My-bow I-have-set in-the-cloud and-be for-a-sign covenant”) — fact holds:
 # obj-marker·et-qashti-I-have-set-in-cloud; and-haytah-to-sign-of-brit-
 # beini-and-vein-the-earth
 m.fact("et_qashti_natati_be_anan",
@@ -92,7 +102,8 @@ m.fact("et_qashti_natati_be_anan",
 # "And it shall come to pass, when I bring clouds over the earth, and the
 # bow is seen in the cloud,"
 m.step("Gen.9.14")
-# ‹וְהָיָה בְּעַנְנִי עָנָן … וְנִרְאֲתָה הַקֶּשֶׁת … וְזָכַרְתִּי› standing
+# ‹וְהָיָה בְּעַנְנִי עָנָן … וְנִרְאֲתָה הַקֶּשֶׁת … וְזָכַרְתִּי› (“and-be
+# when-I-cloud-up cloud … and-is-seen the-bow … and-mark”) — standing
 # handler — if in-anni-cloud-and-nireatah-the-bow then and-I-will-remember-
 # obj-marker·et-My-covenant
 m.handler("be_anni_anan_ve_nireatah_ha_qeshet",
@@ -106,9 +117,11 @@ m.handler("be_anni_anan_ve_nireatah_ha_qeshet",
 # living creature of all flesh; and the waters shall no more become a flood
 # to destroy all flesh."
 m.step("Gen.9.15")
-# ‹וְזָכַרְתִּי אֶת־בְּרִיתִי … וְלֹא־יִהְיֶה עוֹד הַמַּיִם לְמַבּוּל› fact
-# holds: and-I-will-remember-obj-marker·et-My-covenant-beini-and-veineikhem;
-# and-not-yihyeh-still/again-the-waters-to-deluge
+# ‹וְזָכַרְתִּי אֶת־בְּרִיתִי … וְלֹא־יִהְיֶה עוֹד הַמַּיִם לְמַבּוּל›
+# (“and-I-will-remember obj-marker My-covenant … and-not be still/again the-
+# waters into-a-deluge”) — fact holds: and-I-will-remember-obj-marker·et-My-
+# covenant-beini-and-veineikhem; and-not-yihyeh-still/again-the-waters-to-
+# deluge
 m.fact("ve_zakharti_et_briti_beini_u_veineikhem",
        "ve_lo_yihyeh_od_ha_mayim_le_mabul")
 
@@ -120,7 +133,9 @@ m.fact("ve_zakharti_et_briti_beini_u_veineikhem",
 # all flesh that is upon the earth.'"
 m.step("Gen.9.16")
 # ‹וּרְאִיתִיהָ לִזְכֹּר בְּרִית עוֹלָם בֵּין אֱלֹהִים וּבֵין כָּל־נֶפֶשׁ
-# חַיָּה› fact holds: and-reitiha-to-me-zekor-brit-everlasting
+# חַיָּה› (“and-I-will-see-it to-remember covenant everlasting between God
+# and-between all living-soul living”) — fact holds: and-reitiha-to-me-
+# zekor-brit-everlasting
 m.fact("u_reitiha_li_zekor_brit_olam")
 
 # -------------------------- Gen.9.17 · THE_SEAL_I_HAVE_ESTABLISHED ---------
@@ -129,17 +144,19 @@ m.fact("u_reitiha_li_zekor_brit_olam")
 # "And God said unto Noah: 'This is the token of the covenant which I have
 # established between Me and all flesh that is upon the earth.'"
 m.step("Gen.9.17")
-# ‹וַיֹּאמֶר אֱלֹהִים אֶל־נֹחַ› event: speak — agent God; theme to-Noach
+# ‹וַיֹּאמֶר אֱלֹהִים אֶל־נֹחַ› (“and-He-said God to Noah”) — event: speak —
+# agent God; theme to-Noach
 m.event("speak", agent="elohim", themes=["el_noach"])
-# ‹זֹאת אוֹת־הַבְּרִית אֲשֶׁר הֲקִמֹתִי› fact holds: this-sign-of-the-brit-
-# which-I-will-establish
+# ‹זֹאת אוֹת־הַבְּרִית אֲשֶׁר הֲקִמֹתִי› (“this sign-of the-covenant which
+# I-have-established”) — fact holds: this-sign-of-the-brit-which-I-will-
+# establish
 m.fact("zot_ot_ha_brit_asher_hakimoti")
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
     assert m.created_set() == set()
-    assert m.presupposed_set() == {'tevah', 'banav', 'noach'}
+    assert m.presupposed_set() == {'banav', 'noach', 'tevah'}
     assert m.REGISTRY["names"] == {}
     assert m.REGISTRY["writes"] == 0
     assert m.tests_list() == []

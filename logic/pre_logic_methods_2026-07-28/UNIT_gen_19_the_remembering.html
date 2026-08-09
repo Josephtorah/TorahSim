@@ -823,12 +823,16 @@ m = Machine(&quot;gen_19_the_remembering&quot;)
 # the waters assuaged;&quot;
 m.step(&quot;Gen.8.1&quot;)
 # ‹וַיִּזְכֹּר אֱלֹהִים אֶת־נֹחַ וְאֵת כָּל־הַחַיָּה וְאֶת־כָּל־הַבְּהֵמָה›
-# event: remember — agent God; theme Noach, all-the-beast-and-the-livestock
+# (“and-He-remembered God obj-marker Noah obj-marker all the-beast obj-
+# marker all the-livestock”) — event: remember — agent God; theme Noach,
+# all-the-beast-and-the-livestock
 m.event(&quot;remember&quot;, agent=&quot;elohim&quot;, themes=[&quot;noach&quot;, &quot;kol_ha_chayah_ve_ha_behemah&quot;])
-# ‹וַיַּעֲבֵר אֱלֹהִים רוּחַ עַל־הָאָרֶץ› event: pass — agent God; theme
-# spirit-wind-over-the-earth
+# ‹וַיַּעֲבֵר אֱלֹהִים רוּחַ עַל־הָאָרֶץ› (“and-He-passed God wind/spirit
+# over the-earth”) — event: pass — agent God; theme spirit-wind-over-the-
+# earth
 m.event(&quot;pass&quot;, agent=&quot;elohim&quot;, themes=[&quot;ruach_al_ha_aretz&quot;])
-# ‹וַיָּשֹׁכּוּ הַמָּיִם› event: subside — theme the-waters
+# ‹וַיָּשֹׁכּוּ הַמָּיִם› (“and-they-subsided the-waters”) — event: subside
+# — theme the-waters
 m.event(&quot;subside&quot;, themes=[&quot;ha_mayim&quot;])
 # reads without prior install (flag, not fix): Noach, ark, waters
 m.presupposed(&quot;noach&quot;, &quot;tevah&quot;, &quot;mayim&quot;)
@@ -839,10 +843,12 @@ m.presupposed(&quot;noach&quot;, &quot;tevah&quot;, &quot;mayim&quot;)
 # &quot;the fountains also of the deep and the windows of heaven were stopped,
 # and the rain from heaven was restrained.&quot;
 m.step(&quot;Gen.8.2&quot;)
-# ‹וַיִּסָּכְרוּ מַעְיְנֹת תְּהוֹם וַאֲרֻבֹּת הַשָּׁמָיִם› event: stop-up —
-# theme fountains-of-deep-and-windows-of-the-heavens
+# ‹וַיִּסָּכְרוּ מַעְיְנֹת תְּהוֹם וַאֲרֻבֹּת הַשָּׁמָיִם› (“and-were-
+# stopped-up fountains-of the-deep and-windows-of the-heavens”) — event:
+# stop-up — theme fountains-of-deep-and-windows-of-the-heavens
 m.event(&quot;stop_up&quot;, themes=[&quot;mayenot_tehom_va_arubot_ha_shamayim&quot;])
-# ‹וַיִּכָּלֵא הַגֶּשֶׁם מִן־הַשָּׁמָיִם› event: restrain — theme the-rain
+# ‹וַיִּכָּלֵא הַגֶּשֶׁם מִן־הַשָּׁמָיִם› (“and-was-restrained the-rain from
+# the-heavens”) — event: restrain — theme the-rain
 m.event(&quot;restrain&quot;, themes=[&quot;ha_geshem&quot;])
 
 # -------------------------- Gen.8.3 · THE_WATERS_COMMUTE_BRACKET_CLOSED ----
@@ -851,13 +857,16 @@ m.event(&quot;restrain&quot;, themes=[&quot;ha_geshem&quot;])
 # &quot;And the waters returned from off the earth continually; and after the end
 # of a hundred and fifty days the waters decreased.&quot;
 m.step(&quot;Gen.8.3&quot;)
-# ‹וַיָּשֻׁבוּ הַמַּיִם מֵעַל הָאָרֶץ› event: return — agent the-waters
+# ‹וַיָּשֻׁבוּ הַמַּיִם מֵעַל הָאָרֶץ› (“and-they-returned the-waters from-
+# over the-earth”) — event: return — agent the-waters
 m.event(&quot;return&quot;, agent=&quot;ha_mayim&quot;)
-# ‹הָלוֹךְ וָשׁוֹב … מִקְצֵה חֲמִשִּׁים וּמְאַת יוֹם› fact holds: going-and-
-# returning; from-at-the-end-of-fifty-and-hundred-day
+# ‹הָלוֹךְ וָשׁוֹב … מִקְצֵה חֲמִשִּׁים וּמְאַת יוֹם› (“going and-returning
+# … at-the-end-of fifty and-hundred day”) — fact holds: going-and-returning;
+# from-at-the-end-of-fifty-and-hundred-day
 m.fact(&quot;halokh_va_shov&quot;,
        &quot;mi_qetze_chamishim_u_meat_yom&quot;)
-# ‹וַיַּחְסְרוּ הַמַּיִם› event: diminish — theme the-waters
+# ‹וַיַּחְסְרוּ הַמַּיִם› (“and-they-diminished the-waters”) — event:
+# diminish — theme the-waters
 m.event(&quot;diminish&quot;, themes=[&quot;ha_mayim&quot;])
 
 # -------------------------- Gen.8.4 · THE_ARK_RESTS ------------------------
@@ -866,11 +875,13 @@ m.event(&quot;diminish&quot;, themes=[&quot;ha_mayim&quot;])
 # &quot;And the ark rested in the seventh month, on the seventeenth day of the
 # month, upon the mountains of Ararat.&quot;
 m.step(&quot;Gen.8.4&quot;)
-# ‹וַתָּנַח הַתֵּבָה› event: rest — theme the-ark
+# ‹וַתָּנַח הַתֵּבָה› (“and-it-rested the-ark”) — event: rest — theme the-
+# ark
 m.event(&quot;rest&quot;, themes=[&quot;ha_tevah&quot;])
 # ‹בַּחֹדֶשׁ הַשְּׁבִיעִי בְּשִׁבְעָה־עָשָׂר יוֹם לַחֹדֶשׁ עַל הָרֵי
-# אֲרָרָט› fact holds: in-the-of-month-the-seventh-in-seven-teen-day; over-
-# mountains-of-Ararat
+# אֲרָרָט› (“in-month the-seventh in-seven teen day of-month over mountain
+# Ararat”) — fact holds: in-the-of-month-the-seventh-in-seven-teen-day;
+# over-mountains-of-Ararat
 m.fact(&quot;ba_chodesh_ha_shevii_be_shivah_asar_yom&quot;,
        &quot;al_harei_ararat&quot;)
 
@@ -881,9 +892,10 @@ m.fact(&quot;ba_chodesh_ha_shevii_be_shivah_asar_yom&quot;,
 # month, on the first day of the month, were the tops of the mountains
 # seen.&quot;
 m.step(&quot;Gen.8.5&quot;)
-# ‹הָלוֹךְ וְחָסוֹר … נִרְאוּ רָאשֵׁי הֶהָרִים› fact holds: going-and-
-# diminishing-until-the-of-month-the-tenth; in-the-tenth-in-one-were-seen-
-# tops-of-he-mountains
+# ‹הָלוֹךְ וְחָסוֹר … נִרְאוּ רָאשֵׁי הֶהָרִים› (“going and-diminishing …
+# were-seen the-tops-of the-mountain”) — fact holds: going-and-diminishing-
+# until-the-of-month-the-tenth; in-the-tenth-in-one-were-seen-tops-of-he-
+# mountains
 m.fact(&quot;halokh_ve_chasor_ad_ha_chodesh_ha_asiri&quot;,
        &quot;ba_asiri_be_echad_niru_rashei_he_harim&quot;)
 
@@ -893,10 +905,12 @@ m.fact(&quot;halokh_ve_chasor_ad_ha_chodesh_ha_asiri&quot;,
 # &quot;And it came to pass at the end of forty days, that Noah opened the window
 # of the ark which he had made.&quot;
 m.step(&quot;Gen.8.6&quot;)
-# ‹מִקֵּץ אַרְבָּעִים יוֹם› fact holds: from-at-the-end-of-forty-day
+# ‹מִקֵּץ אַרְבָּעִים יוֹם› (“at-the-end-of forty day”) — fact holds: from-
+# at-the-end-of-forty-day
 m.fact(&quot;mi_qetz_arbaim_yom&quot;)
-# ‹וַיִּפְתַּח נֹחַ אֶת־חַלּוֹן הַתֵּבָה אֲשֶׁר עָשָׂה› event: open — agent
-# Noach; theme window-the-ark
+# ‹וַיִּפְתַּח נֹחַ אֶת־חַלּוֹן הַתֵּבָה אֲשֶׁר עָשָׂה› (“and-he-opened Noah
+# obj-marker window the-ark which he-had-made”) — event: open — agent Noach;
+# theme window-the-ark
 m.event(&quot;open&quot;, agent=&quot;noach&quot;, themes=[&quot;chalon_ha_tevah&quot;])
 
 # -------------------------- Gen.8.7 · THE_RAVEN ----------------------------
@@ -905,10 +919,12 @@ m.event(&quot;open&quot;, agent=&quot;noach&quot;, themes=[&quot;chalon_ha_tevah
 # &quot;And he sent forth a raven, and it went forth to and fro, until the waters
 # were dried up from off the earth.&quot;
 m.step(&quot;Gen.8.7&quot;)
-# ‹וַיְשַׁלַּח אֶת־הָעֹרֵב› event: send — agent Noach; theme the-raven
+# ‹וַיְשַׁלַּח אֶת־הָעֹרֵב› (“and-he-sent obj-marker the-raven”) — event:
+# send — agent Noach; theme the-raven
 m.event(&quot;send&quot;, agent=&quot;noach&quot;, themes=[&quot;ha_orev&quot;])
-# ‹יָצוֹא וָשׁוֹב עַד־יְבֹשֶׁת הַמַּיִם› fact holds: going-out-and-
-# returning-until-drying-of-the-waters
+# ‹יָצוֹא וָשׁוֹב עַד־יְבֹשֶׁת הַמַּיִם› (“going-out and-returning until
+# the-drying-of the-waters”) — fact holds: going-out-and-returning-until-
+# drying-of-the-waters
 m.fact(&quot;yatzo_va_shov_ad_yevoshet_ha_mayim&quot;)
 
 # -------------------------- Gen.8.8 · THE_DOVE_THE_QUESTION ----------------
@@ -917,11 +933,11 @@ m.fact(&quot;yatzo_va_shov_ad_yevoshet_ha_mayim&quot;)
 # &quot;And he sent forth a dove from him, to see if the waters were abated from
 # off the face of the ground.&quot;
 m.step(&quot;Gen.8.8&quot;)
-# ‹וַיְשַׁלַּח אֶת־הַיּוֹנָה מֵאִתּוֹ› event: send — agent Noach; theme the-
-# dove
+# ‹וַיְשַׁלַּח אֶת־הַיּוֹנָה מֵאִתּוֹ› (“and-he-sent obj-marker the-dove
+# from-him”) — event: send — agent Noach; theme the-dove
 m.event(&quot;send&quot;, agent=&quot;noach&quot;, themes=[&quot;ha_yonah&quot;])
-# ‹לִרְאוֹת הֲקַלּוּ הַמַּיִם› fact holds: to-me-see-the-whether-they-
-# abated-the-waters
+# ‹לִרְאוֹת הֲקַלּוּ הַמַּיִם› (“to-see whether-they-abated the-waters”) —
+# fact holds: to-me-see-the-whether-they-abated-the-waters
 m.fact(&quot;li_reot_ha_qalu_ha_mayim&quot;)
 
 # -------------------------- Gen.8.9 · NO_RESTING_PLACE_THE_HAND ------------
@@ -934,18 +950,23 @@ m.fact(&quot;li_reot_ha_qalu_ha_mayim&quot;)
 # the ark.&quot;
 m.step(&quot;Gen.8.9&quot;)
 # ‹וְלֹא־מָצְאָה הַיּוֹנָה מָנוֹחַ לְכַף־רַגְלָהּ כִּי־מַיִם עַל־פְּנֵי
-# כָל־הָאָרֶץ› fact holds: not-found-the-dove-resting-place-to-sole-of-her-
-# foot; that-waters-over-face-of-all-the-earth
+# כָל־הָאָרֶץ› (“and-not she-found the-dove resting-place for-the-sole-of
+# her-foot that waters over face all the-earth”) — fact holds: not-found-
+# the-dove-resting-place-to-sole-of-her-foot; that-waters-over-face-of-all-
+# the-earth
 m.fact(&quot;lo_matzah_ha_yonah_manoach_le_khaf_raglah&quot;,
        &quot;ki_mayim_al_pnei_khol_ha_aretz&quot;)
-# ‹וַתָּשָׁב אֵלָיו אֶל־הַתֵּבָה› event: return — agent the-dove
+# ‹וַתָּשָׁב אֵלָיו אֶל־הַתֵּבָה› (“and-return to-him to the-ark”) — event:
+# return — agent the-dove
 m.event(&quot;return&quot;, agent=&quot;ha_yonah&quot;)
-# ‹וַיִּשְׁלַח יָדוֹ› event: send — agent Noach; theme his-hand
+# ‹וַיִּשְׁלַח יָדוֹ› (“and-he-sent hand-him/its”) — event: send — agent
+# Noach; theme his-hand
 m.event(&quot;send&quot;, agent=&quot;noach&quot;, themes=[&quot;yado&quot;])
-# ‹וַיִּקָּחֶהָ› event: take — agent Noach; theme the-dove
+# ‹וַיִּקָּחֶהָ› (“and-took-her”) — event: take — agent Noach; theme the-
+# dove
 m.event(&quot;take&quot;, agent=&quot;noach&quot;, themes=[&quot;ha_yonah&quot;])
-# ‹וַיָּבֵא אֹתָהּ אֵלָיו אֶל־הַתֵּבָה› event: bring — agent Noach; theme
-# the-dove
+# ‹וַיָּבֵא אֹתָהּ אֵלָיו אֶל־הַתֵּבָה› (“and-brought-her-in obj-marker to-
+# him to the-ark”) — event: bring — agent Noach; theme the-dove
 m.event(&quot;bring&quot;, agent=&quot;noach&quot;, themes=[&quot;ha_yonah&quot;])
 
 # -------------------------- Gen.8.10 · THE_FIRST_WAIT ----------------------
@@ -954,11 +975,14 @@ m.event(&quot;bring&quot;, agent=&quot;noach&quot;, themes=[&quot;ha_yonah&quot;
 # &quot;And he stayed yet other seven days; and again he sent forth the dove out
 # of the ark.&quot;
 m.step(&quot;Gen.8.10&quot;)
-# ‹וַיָּחֶל עוֹד שִׁבְעַת יָמִים אֲחֵרִים› event: wait — agent Noach
+# ‹וַיָּחֶל עוֹד שִׁבְעַת יָמִים אֲחֵרִים› (“and-he-waited again seven day
+# other”) — event: wait — agent Noach
 m.event(&quot;wait&quot;, agent=&quot;noach&quot;)
-# ‹עוֹד שִׁבְעַת יָמִים אֲחֵרִים› fact holds: again-seven-day-other
+# ‹עוֹד שִׁבְעַת יָמִים אֲחֵרִים› (“again seven day other”) — fact holds:
+# again-seven-day-other
 m.fact(&quot;od_shivat_yamim_acherim&quot;)
-# ‹וַיֹּסֶף שַׁלַּח אֶת־הַיּוֹנָה› event: send — agent Noach; theme the-dove
+# ‹וַיֹּסֶף שַׁלַּח אֶת־הַיּוֹנָה› (“and-he-again to-send obj-marker the-
+# dove”) — event: send — agent Noach; theme the-dove
 m.event(&quot;send&quot;, agent=&quot;noach&quot;, themes=[&quot;ha_yonah&quot;])
 
 # -------------------------- Gen.8.11 · THE_LEAF_AT_EVENING -----------------
@@ -968,14 +992,17 @@ m.event(&quot;send&quot;, agent=&quot;noach&quot;, themes=[&quot;ha_yonah&quot;]
 # leaf freshly plucked; so Noah knew that the waters were abated from off
 # the earth.&quot;
 m.step(&quot;Gen.8.11&quot;)
-# ‹וַתָּבֹא אֵלָיו הַיּוֹנָה לְעֵת עֶרֶב› event: come — agent the-dove;
-# theme to-obj-marker·et-evening
+# ‹וַתָּבֹא אֵלָיו הַיּוֹנָה לְעֵת עֶרֶב› (“and-come/bring to-him the-dove
+# at-the-time-of evening”) — event: come — agent the-dove; theme to-obj-
+# marker·et-evening
 m.event(&quot;come&quot;, agent=&quot;ha_yonah&quot;, themes=[&quot;le_et_erev&quot;])
-# ‹וְהִנֵּה עֲלֵה־זַיִת טָרָף בְּפִיהָ› fact holds: leaf-olive-freshly-
-# plucked-in-her-mouth
+# ‹וְהִנֵּה עֲלֵה־זַיִת טָרָף בְּפִיהָ› (“and-behold leaf olive freshly-
+# plucked in-her-mouth”) — fact holds: leaf-olive-freshly-plucked-in-her-
+# mouth
 m.fact(&quot;aleh_zayit_taraf_be_fiha&quot;)
-# ‹וַיֵּדַע נֹחַ כִּי־קַלּוּ הַמַּיִם› event: know — agent Noach; theme
-# that-whether-they-abated-the-waters
+# ‹וַיֵּדַע נֹחַ כִּי־קַלּוּ הַמַּיִם› (“and-he-knew Noah that abated the-
+# waters”) — event: know — agent Noach; theme that-whether-they-abated-the-
+# waters
 m.event(&quot;know&quot;, agent=&quot;noach&quot;, themes=[&quot;ki_qalu_ha_mayim&quot;])
 
 # -------------------------- Gen.8.12 · THE_SECOND_WAIT_THE_LAST_OD ---------
@@ -984,12 +1011,14 @@ m.event(&quot;know&quot;, agent=&quot;noach&quot;, themes=[&quot;ki_qalu_ha_mayi
 # &quot;And he stayed yet other seven days; and sent forth the dove; and she
 # returned not again unto him any more.&quot;
 m.step(&quot;Gen.8.12&quot;)
-# ‹וַיִּיָּחֶל עוֹד שִׁבְעַת יָמִים אֲחֵרִים› event: wait — agent Noach
+# ‹וַיִּיָּחֶל עוֹד שִׁבְעַת יָמִים אֲחֵרִים› (“and-he-waited again seven
+# day other”) — event: wait — agent Noach
 m.event(&quot;wait&quot;, agent=&quot;noach&quot;)
-# ‹וַיְשַׁלַּח אֶת־הַיּוֹנָה› event: send — agent Noach; theme the-dove
+# ‹וַיְשַׁלַּח אֶת־הַיּוֹנָה› (“and-he-sent obj-marker the-dove”) — event:
+# send — agent Noach; theme the-dove
 m.event(&quot;send&quot;, agent=&quot;noach&quot;, themes=[&quot;ha_yonah&quot;])
-# ‹וְלֹא־יָסְפָה שׁוּב־אֵלָיו עוֹד› fact holds: and-not-did-again-return-to-
-# him-again
+# ‹וְלֹא־יָסְפָה שׁוּב־אֵלָיו עוֹד› (“and-not added to-return to-him again”)
+# — fact holds: and-not-did-again-return-to-him-again
 m.fact(&quot;ve_lo_yasfah_shuv_elav_od&quot;)
 
 # -------------------------- Gen.8.13 · NEW_YEARS_DAY_THE_COVER_OFF ---------
@@ -1001,20 +1030,22 @@ m.fact(&quot;ve_lo_yasfah_shuv_elav_od&quot;)
 # earth; and Noah removed the covering of the ark, and looked, and behold,
 # the face of the ground was dried.&quot;
 m.step(&quot;Gen.8.13&quot;)
-# ‹בְּאַחַת וְשֵׁשׁ־מֵאוֹת שָׁנָה בָּרִאשׁוֹן בְּאֶחָד לַחֹדֶשׁ› clock
+# ‹בְּאַחַת וְשֵׁשׁ־מֵאוֹת שָׁנָה בָּרִאשׁוֹן בְּאֶחָד לַחֹדֶשׁ› (“in-one
+# and-six hundred year in-the-first-month in-one of-month”) — clock
 # anchored: t0 := year-of-601-of-month-1-day-1
 m.time_anchor(&quot;shnat_601_chodesh_1_yom_1&quot;)
-# ‹חָרְבוּ הַמַּיִם מֵעַל הָאָרֶץ› fact holds: were-parched-the-waters-from-
-# over-the-earth
+# ‹חָרְבוּ הַמַּיִם מֵעַל הָאָרֶץ› (“were-parched the-waters from-over the-
+# earth”) — fact holds: were-parched-the-waters-from-over-the-earth
 m.fact(&quot;charvu_ha_mayim_me_al_ha_aretz&quot;)
-# ‹וַיָּסַר נֹחַ אֶת־מִכְסֵה הַתֵּבָה› event: remove — agent Noach; theme
-# covering-the-ark
+# ‹וַיָּסַר נֹחַ אֶת־מִכְסֵה הַתֵּבָה› (“and-he-removed Noah obj-marker
+# covering the-ark”) — event: remove — agent Noach; theme covering-the-ark
 m.event(&quot;remove&quot;, agent=&quot;noach&quot;, themes=[&quot;mikhseh_ha_tevah&quot;])
-# ‹וַיַּרְא וְהִנֵּה חָרְבוּ פְּנֵי הָאֲדָמָה› event: see — agent Noach;
-# theme face-of-the-ground
+# ‹וַיַּרְא וְהִנֵּה חָרְבוּ פְּנֵי הָאֲדָמָה› (“and-he-saw and-behold were-
+# parched face the-ground”) — event: see — agent Noach; theme face-of-the-
+# ground
 m.event(&quot;see&quot;, agent=&quot;noach&quot;, themes=[&quot;pnei_ha_adamah&quot;])
-# ‹וְהִנֵּה חָרְבוּ פְּנֵי הָאֲדָמָה› fact holds: and-behold-were-parched-
-# face-of-the-ground
+# ‹וְהִנֵּה חָרְבוּ פְּנֵי הָאֲדָמָה› (“and-behold were-parched face the-
+# ground”) — fact holds: and-behold-were-parched-face-of-the-ground
 m.fact(&quot;ve_hinneh_charvu_pnei_ha_adamah&quot;)
 
 # -------------------------- Gen.8.14 · THE_EARTH_DRY -----------------------
@@ -1023,8 +1054,9 @@ m.fact(&quot;ve_hinneh_charvu_pnei_ha_adamah&quot;)
 # &quot;And in the second month, on the seven and twentieth day of the month, was
 # the earth dry.&quot;
 m.step(&quot;Gen.8.14&quot;)
-# ‹בְּשִׁבְעָה וְעֶשְׂרִים יוֹם לַחֹדֶשׁ יָבְשָׁה הָאָרֶץ› fact holds: in-
-# the-of-month-the-second-in-seven-and-twenty-day; was-dry-the-earth
+# ‹בְּשִׁבְעָה וְעֶשְׂרִים יוֹם לַחֹדֶשׁ יָבְשָׁה הָאָרֶץ› (“in-seven and-
+# twenty day of-month was-dry the-earth”) — fact holds: in-the-of-month-the-
+# second-in-seven-and-twenty-day; was-dry-the-earth
 m.fact(&quot;ba_chodesh_ha_sheni_be_shivah_ve_esrim_yom&quot;,
        &quot;yavshah_ha_aretz&quot;)
 
@@ -1032,7 +1064,7 @@ m.fact(&quot;ba_chodesh_ha_sheni_be_shivah_ve_esrim_yom&quot;,
 if __name__ == &quot;__main__&quot;:
     m.report()
     assert m.created_set() == set()
-    assert m.presupposed_set() == {&#x27;noach&#x27;, &#x27;mayim&#x27;, &#x27;tevah&#x27;}
+    assert m.presupposed_set() == {&#x27;noach&#x27;, &#x27;tevah&#x27;, &#x27;mayim&#x27;}
     assert m.REGISTRY[&quot;names&quot;] == {}
     assert m.REGISTRY[&quot;writes&quot;] == 0
     assert m.tests_list() == []
@@ -1046,4 +1078,4 @@ if __name__ == &quot;__main__&quot;:
     assert len(m.EVENTS) == 23
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">FROZEN 2026-08-01 (persistent derivation agent, post-trial; freeze-after-review #2 — review PASSED; first unit under the PIPELINE + DEBUT-MAP process, the survey COMPLETE before the seed): twentieth frozen unit — THE REMEMBERING; tenth extension-free derivation in a row. Central findings, all DB-verified before drafting: ZAKHAR (&#x27;remember&#x27;) born on Noach and the animals together — the Name back on the page (Elohim x2, the only name-tokens) in a span with ZERO speech and ZERO imperatives: the second speechless span, but not nameless; AVAR (&#x27;pass over&#x27;) debuts carrying 1:2&#x27;s RUACH (&#x27;wind/spirit&#x27;) — the hover set moving; the shut-mirror NEAR-verbatim (the totalizers KOL &#x27;all&#x27; and RABBAH &#x27;great&#x27; dropped) with a TORAH-HAPAX stop-up verb — door and sky get different shut-words; the 150-bracket closed in its own digits; the ark RESTS (nuach debut) on the sound of its builder&#x27;s name, month 7 day 17, on the mountains that debuted drowned; the tops APPEAR by 1:9&#x27;s own niphal see-verb; the decree&#x27;s end-word counts down to a window he MADE; the Eden-expulsion send-verb turned scout (five sendings — birds piel, the hand qal); the dove finds no MANOACH (&#x27;resting-place&#x27;) — the two-token word the exile-curse quotes verbatim (Deut 28:65), held as FACT not FAIL; the first evening since the week&#x27;s refrain carries an olive leaf (aleh — shame, hope, terror: 3 tokens) and Noach KNOWS; two waits in two verbs (the second a Torah hapax); year 601 month 1 day 1 anchors the TIME register (the second full calendar date; RISHON &#x27;first&#x27; debuting inside it); CHAREV (&#x27;be parched&#x27;) spends both tokens in one verse; MIKHSEH (&#x27;covering&#x27;) debuts with an all-sanctuary future; the earth dry ten days past the entry-date&#x27;s slot one year on — and the unit ends dry, silent, and sealed-in: the exit-word belongs to 8:15. Machine state: t0 = the new year, zero installs (+3 presupposed), zero writes, zero queue traffic, zero tests, twenty-three events, eighteen facts, three read-flags.</div><p class='meta'>Rendered 2026-08-08 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">FROZEN 2026-08-01 (persistent derivation agent, post-trial; freeze-after-review #2 — review PASSED; first unit under the PIPELINE + DEBUT-MAP process, the survey COMPLETE before the seed): twentieth frozen unit — THE REMEMBERING; tenth extension-free derivation in a row. Central findings, all DB-verified before drafting: ZAKHAR (&#x27;remember&#x27;) born on Noach and the animals together — the Name back on the page (Elohim x2, the only name-tokens) in a span with ZERO speech and ZERO imperatives: the second speechless span, but not nameless; AVAR (&#x27;pass over&#x27;) debuts carrying 1:2&#x27;s RUACH (&#x27;wind/spirit&#x27;) — the hover set moving; the shut-mirror NEAR-verbatim (the totalizers KOL &#x27;all&#x27; and RABBAH &#x27;great&#x27; dropped) with a TORAH-HAPAX stop-up verb — door and sky get different shut-words; the 150-bracket closed in its own digits; the ark RESTS (nuach debut) on the sound of its builder&#x27;s name, month 7 day 17, on the mountains that debuted drowned; the tops APPEAR by 1:9&#x27;s own niphal see-verb; the decree&#x27;s end-word counts down to a window he MADE; the Eden-expulsion send-verb turned scout (five sendings — birds piel, the hand qal); the dove finds no MANOACH (&#x27;resting-place&#x27;) — the two-token word the exile-curse quotes verbatim (Deut 28:65), held as FACT not FAIL; the first evening since the week&#x27;s refrain carries an olive leaf (aleh — shame, hope, terror: 3 tokens) and Noach KNOWS; two waits in two verbs (the second a Torah hapax); year 601 month 1 day 1 anchors the TIME register (the second full calendar date; RISHON &#x27;first&#x27; debuting inside it); CHAREV (&#x27;be parched&#x27;) spends both tokens in one verse; MIKHSEH (&#x27;covering&#x27;) debuts with an all-sanctuary future; the earth dry ten days past the entry-date&#x27;s slot one year on — and the unit ends dry, silent, and sealed-in: the exit-word belongs to 8:15. Machine state: t0 = the new year, zero installs (+3 presupposed), zero writes, zero queue traffic, zero tests, twenty-three events, eighteen facts, three read-flags.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

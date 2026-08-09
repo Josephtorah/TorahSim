@@ -17,9 +17,11 @@ m = Machine("lev_19_holiness_duty_ledger")
 # וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר
 # "[EN-AID] And the LORD spoke to Moses, saying:"
 m.step("Lev.19.1")
-# ‹וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר› event: speak — agent the-LORD
+# ‹וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר› (“and-speak YHWH to Moses to-say”)
+# — event: speak — agent the-LORD
 m.event("speak", agent="YHWH")
-# ‹אֶל־מֹשֶׁה› reads without prior install (flag, not fix): Moses
+# ‹אֶל־מֹשֶׁה› (“to Moses”) — reads without prior install (flag, not fix):
+# Moses
 m.presupposed("moshe")
 
 # -------------------------- Lev.19.2 · THE_RELAY_AND_THE_THESIS ------------
@@ -28,11 +30,13 @@ m.presupposed("moshe")
 # "[EN-AID] Speak to all the congregation of the sons of Israel and say to
 # them: Holy shall you be, for holy am I, the LORD your God."
 m.step("Lev.19.2")
-# ‹דַּבֵּר אֶל־כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל› the-LORD speaks a demand — LET:
-# daber-to-kal-adat(Moses)
+# ‹דַּבֵּר אֶל־כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל› (“speak to all congregation son
+# Israel”) — the-LORD speaks a demand — LET: speak-to-all-
+# congregation(Moses)
 m.declare("YHWH", "LET",
           "daber_el_kal_adat(moshe)")
-# ‹קְדֹשִׁים תִּהְיוּ כִּי קָדוֹשׁ אֲנִי יְהוָה אֱלֹהֵיכֶם›
+# ‹קְדֹשִׁים תִּהְיוּ כִּי קָדוֹשׁ אֲנִי יְהוָה אֱלֹהֵיכֶם› (“sacred be that
+# sacred YHWH God-you/your(pl)”) —
 m.statute("BIND", "qedoshim_tihyu")
 
 # -------------------------- Lev.19.3 · MOTHER_FIRST ------------------------
@@ -41,9 +45,11 @@ m.statute("BIND", "qedoshim_tihyu")
 # "[EN-AID] Each man shall fear his mother and his father, and My sabbaths
 # you shall keep: I am the LORD your God."
 m.step("Lev.19.3")
-# ‹אִישׁ אִמּוֹ וְאָבִיו תִּירָאוּ›
+# ‹אִישׁ אִמּוֹ וְאָבִיו תִּירָאוּ› (“man mother-him/its and-father-him/its
+# fear”) —
 m.statute("BIND", "imo_ve_aviv_tirau")
-# ‹וְאֶת־שַׁבְּתֹתַי תִּשְׁמֹרוּ אֲנִי יְהוָה אֱלֹהֵיכֶם›
+# ‹וְאֶת־שַׁבְּתֹתַי תִּשְׁמֹרוּ אֲנִי יְהוָה אֱלֹהֵיכֶם› (“and-obj-marker
+# intermission-me/my keep/guard YHWH God-you/your(pl)”) —
 m.statute("BIND", "shabtotay_tishmoru")
 
 # -------------------------- Lev.19.4 · THE_RETYPING_WITNESS ----------------
@@ -52,9 +58,9 @@ m.statute("BIND", "shabtotay_tishmoru")
 # "[EN-AID] Do not turn to the idols, and molten gods you shall not make for
 # yourselves: I am the LORD your God."
 m.step("Lev.19.4")
-# ‹אַל־תִּפְנוּ אֶל־הָאֱלִילִים›
+# ‹אַל־תִּפְנוּ אֶל־הָאֱלִילִים› (“do-not turn to the-good-for-nothing”) —
 m.statute("FORBID", "peno_el_ha_elilim")
-# ‹וֵאלֹהֵי מַסֵּכָה לֹא תַעֲשׂוּ›
+# ‹וֵאלֹהֵי מַסֵּכָה לֹא תַעֲשׂוּ› (“and-God pouring-over not make”) —
 m.statute("FORBID", "elohe_masekha")
 
 # -------------------------- Lev.19.5 · THE_SHELAMIM_CLOCK_OPENS ------------
@@ -62,9 +68,10 @@ m.statute("FORBID", "elohe_masekha")
 # "[EN-AID] And when you sacrifice a sacrifice of well-being to the LORD,
 # you shall sacrifice it for your acceptance."
 m.step("Lev.19.5")
-# ‹וְכִי תִזְבְּחוּ זֶבַח שְׁלָמִים לַיהוָה לִרְצֹנְכֶם תִּזְבָּחֻהוּ› case
-# bene-yisrael, tizbchu-zevach-shelamim routes to to-me-retzonkhem-
-# tizbachuhu
+# ‹וְכִי תִזְבְּחוּ זֶבַח שְׁלָמִים לַיהוָה לִרְצֹנְכֶם תִּזְבָּחֻהוּ›
+# (“and-that slaughter-an-animal sacrifice requital to-YHWH to-delight-
+# you/your(pl) slaughter-an-animal-him/its”) — case son-Israel, slaughter-
+# an-animal-sacrifice-requital routes to to-me-retzonkhem-tizbachuhu
 m.case("bene_yisrael, tizbchu_zevach_shelamim", "li_retzonkhem_tizbachuhu")
 
 # -------------------------- Lev.19.6 · THE_TWO_DAY_WINDOW ------------------
@@ -74,8 +81,10 @@ m.case("bene_yisrael, tizbchu_zevach_shelamim", "li_retzonkhem_tizbachuhu")
 # morrow; and what is left until the third day shall be burned in fire."
 m.step("Lev.19.6")
 # ‹בְּיוֹם זִבְחֲכֶם יֵאָכֵל וּמִמָּחֳרָת וְהַנּוֹתָר עַד־יוֹם הַשְּׁלִישִׁי
-# בָּאֵשׁ יִשָּׂרֵף› standing handler — if in-day-zivchakhem-and-from-
-# machorat then yeakhel ∧ the-notar-in-the-esh-yisaref
+# בָּאֵשׁ יִשָּׂרֵף› (“in-day sacrifice-you/your(pl) eat and-from-morrow
+# and-the-jut-over until day the-third in-fire be-on-fire”) — standing
+# handler — if in-day-zivchakhem-and-from-morrow then eat ∧ the-jut-over-in-
+# the-esh-be-on-fire
 m.handler("be_yom_zivchakhem_u_mi_machorat",
           "yeakhel ∧ ha_notar_ba_esh_yisaref")
 
@@ -85,8 +94,9 @@ m.handler("be_yom_zivchakhem_u_mi_machorat",
 # it shall not be accepted."
 m.step("Lev.19.7")
 # ‹וְאִם הֵאָכֹל יֵאָכֵל בַּיּוֹם הַשְּׁלִישִׁי פִּגּוּל הוּא לֹא יֵרָצֶה›
-# standing handler — if heakhol-yeakhel-in-the-day-the-shelishi then pigul-
-# that-not-yeratze
+# (“and-if eat eat in-day the-third fetid he/it not be-pleased-with”) —
+# standing handler — if eat-eat-in-the-day-the-third then fetid-he/it-not-
+# be-pleased-with
 m.handler("heakhol_yeakhel_ba_yom_ha_shelishi",
           "pigul_hu_lo_yeratze")
 
@@ -97,8 +107,10 @@ m.handler("heakhol_yeakhel_ba_yom_ha_shelishi",
 # the LORD he has profaned; and that soul shall be cut off from its people."
 m.step("Lev.19.8")
 # ‹וְאֹכְלָיו עֲוֺנוֹ יִשָּׂא כִּי־אֶת־קֹדֶשׁ יְהוָה חִלֵּל וְנִכְרְתָה
-# הַנֶּפֶשׁ הַהִוא מֵעַמֶּיהָ› standing handler — if eat-pigul then avono-
-# yisa ∧ nikhrta-the-nefesh-from-ameha
+# הַנֶּפֶשׁ הַהִוא מֵעַמֶּיהָ› (“and-eat-him/its perversity-him/its
+# lift/carry that obj-marker holiness YHWH bore and-cut the-living-being
+# that from-people-her/its”) — standing handler — if eat-fetid then avono-
+# lift/carry ∧ cut-the-living-being-from-ameha
 m.handler("akhal_pigul",
           "avono_yisa ∧ nikhrta_ha_nefesh_me_ameha")
 
@@ -110,8 +122,11 @@ m.handler("akhal_pigul",
 # shall not gather."
 m.step("Lev.19.9")
 # ‹וּבְקֻצְרְכֶם אֶת־קְצִיר אַרְצְכֶם לֹא תְכַלֶּה פְּאַת שָׂדְךָ לִקְצֹר›
+# (“and-in-dock-off-you/your(pl) obj-marker severed earth-you/your(pl) not
+# be-complete mouth-in-a-figurative-sense field-you/your to-dock-off”) —
 m.statute("FORBID", "tekhale_peat_sadkha")
-# ‹וְלֶקֶט קְצִירְךָ לֹא תְלַקֵּט›
+# ‹וְלֶקֶט קְצִירְךָ לֹא תְלַקֵּט› (“and-gleaning severed-you/your not pick-
+# up”) —
 m.statute("FORBID", "leqet_qetzirkha")
 
 # -------------------------- Lev.19.10 · VINEYARD_AND_THE_POOR --------------
@@ -121,11 +136,13 @@ m.statute("FORBID", "leqet_qetzirkha")
 # your vineyard you shall not gather; for the poor and for the stranger you
 # shall leave them: I am the LORD your God."
 m.step("Lev.19.10")
-# ‹וְכַרְמְךָ לֹא תְעוֹלֵל›
+# ‹וְכַרְמְךָ לֹא תְעוֹלֵל› (“and-garden-you/your not effect-thoroughly”) —
 m.statute("FORBID", "teolel_karmkha")
-# ‹וּפֶרֶט כַּרְמְךָ לֹא תְלַקֵּט›
+# ‹וּפֶרֶט כַּרְמְךָ לֹא תְלַקֵּט› (“and-stray garden-you/your not pick-up”)
+# —
 m.statute("FORBID", "peret_karmkha")
-# ‹לֶעָנִי וְלַגֵּר תַּעֲזֹב אֹתָם›
+# ‹לֶעָנִי וְלַגֵּר תַּעֲזֹב אֹתָם› (“to-afflicted and-to-sojourner loosen
+# obj-marker-them/their”) —
 m.statute("BIND", "le_ani_ve_la_ger_taazov")
 
 # -------------------------- Lev.19.11 · THE_DECALOGUE_GOES_PLURAL ----------
@@ -133,11 +150,12 @@ m.statute("BIND", "le_ani_ve_la_ger_taazov")
 # "[EN-AID] You shall not steal, and you shall not deny falsely, and you
 # shall not lie each man to his fellow."
 m.step("Lev.19.11")
-# ‹לֹא תִּגְנֹבוּ›
+# ‹לֹא תִּגְנֹבוּ› (“not steal”) —
 m.statute("FORBID", "tignovu")
-# ‹וְלֹא־תְכַחֲשׁוּ›
+# ‹וְלֹא־תְכַחֲשׁוּ› (“and-not be-untrue”) —
 m.statute("FORBID", "tekhachashu")
-# ‹וְלֹא־תְשַׁקְּרוּ אִישׁ בַּעֲמִיתוֹ›
+# ‹וְלֹא־תְשַׁקְּרוּ אִישׁ בַּעֲמִיתוֹ› (“and-not cheat man in-
+# companionship-him/its”) —
 m.statute("FORBID", "teshaqru_ish_ba_amito")
 
 # -------------------------- Lev.19.12 · THE_NAME_SEALS_ITSELF --------------
@@ -146,7 +164,8 @@ m.statute("FORBID", "teshaqru_ish_ba_amito")
 # "[EN-AID] And you shall not swear by My name falsely, so that you profane
 # the name of your God: I am the LORD."
 m.step("Lev.19.12")
-# ‹וְלֹא־תִשָּׁבְעוּ בִשְׁמִי לַשָּׁקֶר›
+# ‹וְלֹא־תִשָּׁבְעוּ בִשְׁמִי לַשָּׁקֶר› (“and-not swear in-name-me/my to-
+# untruth”) —
 m.statute("FORBID", "tishavu_vi_shemi_la_shaqer")
 
 # -------------------------- Lev.19.13 · THE_WAGE_MUST_NOT_SLEEP ------------
@@ -155,11 +174,13 @@ m.statute("FORBID", "tishavu_vi_shemi_la_shaqer")
 # "[EN-AID] You shall not oppress your neighbor and you shall not rob; the
 # wage of a hired man shall not stay the night with you until morning."
 m.step("Lev.19.13")
-# ‹לֹא־תַעֲשֹׁק אֶת־רֵעֲךָ›
+# ‹לֹא־תַעֲשֹׁק אֶת־רֵעֲךָ› (“not press-upon obj-marker associate-you/your”)
+# —
 m.statute("FORBID", "taashoq_et_reakha")
-# ‹וְלֹא תִגְזֹל›
+# ‹וְלֹא תִגְזֹל› (“and-not pluck-off”) —
 m.statute("FORBID", "tigzol")
-# ‹לֹא־תָלִין פְּעֻלַּת שָׂכִיר אִתְּךָ עַד־בֹּקֶר›
+# ‹לֹא־תָלִין פְּעֻלַּת שָׂכִיר אִתְּךָ עַד־בֹּקֶר› (“not stop work man-at-
+# wages-by-the-day with-you/your until morning”) —
 m.statute("FORBID", "talin_peulat_sakhir")
 
 # -------------------------- Lev.19.14 · THE_DEAF_AND_THE_BLIND -------------
@@ -168,11 +189,12 @@ m.statute("FORBID", "talin_peulat_sakhir")
 # "[EN-AID] You shall not curse the deaf, and before the blind you shall not
 # put a stumbling-block; and you shall fear your God: I am the LORD."
 m.step("Lev.19.14")
-# ‹לֹא־תְקַלֵּל חֵרֵשׁ›
+# ‹לֹא־תְקַלֵּל חֵרֵשׁ› (“not be-light deaf”) —
 m.statute("FORBID", "teqalel_cheresh")
-# ‹וְלִפְנֵי עִוֵּר לֹא תִתֵּן מִכְשֹׁל›
+# ‹וְלִפְנֵי עִוֵּר לֹא תִתֵּן מִכְשֹׁל› (“and-to-face blind not set
+# stumbling-block”) —
 m.statute("FORBID", "mikhshol_li_fene_iver")
-# ‹וְיָרֵאתָ מֵּאֱלֹהֶיךָ›
+# ‹וְיָרֵאתָ מֵּאֱלֹהֶיךָ› (“and-fear from-God-you/your”) —
 m.statute("BIND", "ve_yareta_me_elohekha")
 
 # -------------------------- Lev.19.15 · NO_FACES_IN_COURT ------------------
@@ -182,13 +204,14 @@ m.statute("BIND", "ve_yareta_me_elohekha")
 # of the poor and you shall not favor the face of the great; in
 # righteousness shall you judge your fellow."
 m.step("Lev.19.15")
-# ‹לֹא־תַעֲשׂוּ עָוֶל בַּמִּשְׁפָּט›
+# ‹לֹא־תַעֲשׂוּ עָוֶל בַּמִּשְׁפָּט› (“not make evil in-judgment”) —
 m.statute("FORBID", "avel_ba_mishpat")
-# ‹לֹא־תִשָּׂא פְנֵי־דָל›
+# ‹לֹא־תִשָּׂא פְנֵי־דָל› (“not lift/carry face dangling”) —
 m.statute("FORBID", "tisa_fene_dal")
-# ‹וְלֹא תֶהְדַּר פְּנֵי גָדוֹל›
+# ‹וְלֹא תֶהְדַּר פְּנֵי גָדוֹל› (“and-not swell-up face great”) —
 m.statute("FORBID", "tehdar_pene_gadol")
-# ‹בְּצֶדֶק תִּשְׁפֹּט עֲמִיתֶךָ›
+# ‹בְּצֶדֶק תִּשְׁפֹּט עֲמִיתֶךָ› (“in-right judge companionship-you/your”)
+# —
 m.statute("BIND", "be_tzedeq_tishpot_amitekha")
 
 # -------------------------- Lev.19.16 · TALEBEARER_AND_BYSTANDER -----------
@@ -196,9 +219,11 @@ m.statute("BIND", "be_tzedeq_tishpot_amitekha")
 # "[EN-AID] You shall not go about as a talebearer among your people; you
 # shall not stand upon the blood of your neighbor: I am the LORD."
 m.step("Lev.19.16")
-# ‹לֹא־תֵלֵךְ רָכִיל בְּעַמֶּיךָ›
+# ‹לֹא־תֵלֵךְ רָכִיל בְּעַמֶּיךָ› (“not go scandal-monger in-people-
+# you/your”) —
 m.statute("FORBID", "telekh_rakhil_be_amekha")
-# ‹לֹא תַעֲמֹד עַל־דַּם רֵעֶךָ›
+# ‹לֹא תַעֲמֹד עַל־דַּם רֵעֶךָ› (“not stand over blood associate-you/your”)
+# —
 m.statute("FORBID", "taamod_al_dam_reekha")
 
 # -------------------------- Lev.19.17 · THE_REPROVE_DOUBLING ---------------
@@ -207,11 +232,13 @@ m.statute("FORBID", "taamod_al_dam_reekha")
 # "[EN-AID] You shall not hate your brother in your heart; you shall surely
 # reprove your fellow, and not bear sin upon him."
 m.step("Lev.19.17")
-# ‹לֹא־תִשְׂנָא אֶת־אָחִיךָ בִּלְבָבֶךָ›
+# ‹לֹא־תִשְׂנָא אֶת־אָחִיךָ בִּלְבָבֶךָ› (“not hate obj-marker brother-
+# you/your in-heart-you/your”) —
 m.statute("FORBID", "tisna_et_achikha_bi_levavekha")
-# ‹הוֹכֵחַ תּוֹכִיחַ אֶת־עֲמִיתֶךָ›
+# ‹הוֹכֵחַ תּוֹכִיחַ אֶת־עֲמִיתֶךָ› (“be-right be-right obj-marker
+# companionship-you/your”) —
 m.statute("BIND", "hokheach_tokhiach_et_amitekha")
-# ‹וְלֹא־תִשָּׂא עָלָיו חֵטְא›
+# ‹וְלֹא־תִשָּׂא עָלָיו חֵטְא› (“and-not lift/carry over-him/its crime”) —
 m.statute("FORBID", "tisa_alav_chet")
 
 # -------------------------- Lev.19.18 · THE_LOVE_COMMAND -------------------
@@ -221,11 +248,13 @@ m.statute("FORBID", "tisa_alav_chet")
 # sons of your people; and you shall love your neighbor as yourself: I am
 # the LORD."
 m.step("Lev.19.18")
-# ‹לֹא־תִקֹּם›
+# ‹לֹא־תִקֹּם› (“not grudge”) —
 m.statute("FORBID", "tiqom")
-# ‹וְלֹא־תִטֹּר אֶת־בְּנֵי עַמֶּךָ›
+# ‹וְלֹא־תִטֹּר אֶת־בְּנֵי עַמֶּךָ› (“and-not guard obj-marker son people-
+# you/your”) —
 m.statute("FORBID", "titor_et_bene_amekha")
-# ‹וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ›
+# ‹וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ› (“and-have-affection-for to-associate-
+# you/your form-of-the-prefix-'k-'-you/your”) —
 m.statute("BIND", "ve_ahavta_le_reakha_kamokha")
 
 # -------------------------- Lev.19.19 · THE_MIXTURES -----------------------
@@ -235,13 +264,15 @@ m.statute("BIND", "ve_ahavta_le_reakha_kamokha")
 # kinds; your field you shall not sow in two kinds; and a garment of two
 # kinds, shaatnez, shall not come upon you."
 m.step("Lev.19.19")
-# ‹אֶת־חֻקֹּתַי תִּשְׁמֹרוּ›
+# ‹אֶת־חֻקֹּתַי תִּשְׁמֹרוּ› (“obj-marker statute-me/my keep/guard”) —
 m.statute("BIND", "et_chuqotay_tishmoru")
-# ‹בְּהֶמְתְּךָ לֹא־תַרְבִּיעַ›
+# ‹בְּהֶמְתְּךָ לֹא־תַרְבִּיעַ› (“livestock-you/your not squat”) —
 m.statute("FORBID", "tarbia_behemtekha_kilayim")
-# ‹שָׂדְךָ לֹא־תִזְרַע כִּלְאָיִם›
+# ‹שָׂדְךָ לֹא־תִזְרַע כִּלְאָיִם› (“field-you/your not yield-seed two-
+# heterogeneities”) —
 m.statute("FORBID", "tizra_sadkha_kilayim")
-# ‹וּבֶגֶד כִּלְאַיִם שַׁעַטְנֵז לֹא יַעֲלֶה עָלֶיךָ›
+# ‹וּבֶגֶד כִּלְאַיִם שַׁעַטְנֵז לֹא יַעֲלֶה עָלֶיךָ› (“and-garment two-
+# heterogeneities linsey-woolsey not go-up over-you/your”) —
 m.statute("FORBID", "beged_kilayim_shaatnez")
 
 # -------------------------- Lev.19.20 · THE_INQUEST_CASE -------------------
@@ -254,8 +285,9 @@ m.statute("FORBID", "beged_kilayim_shaatnez")
 # she was not freed."
 m.step("Lev.19.20")
 # ‹וְאִישׁ כִּי־יִשְׁכַּב אֶת־אִשָּׁה שִׁכְבַת־זֶרַע וְהִוא שִׁפְחָה
-# נֶחֱרֶפֶת לְאִישׁ› case man-and-shifcha-necherefet, yishkav-shikhvat-seed
-# routes to biqoret-tihye
+# נֶחֱרֶפֶת לְאִישׁ› (“and-man that lie-down with woman lying-down seed and-
+# he/it female-slave pull-off to-man”) — case man-and-female-slave-pull-off,
+# lie-down-lying-down-seed routes to examination-be
 m.case("ish_ve_shifcha_necherefet, yishkav_shikhvat_zera", "biqoret_tihye")
 
 # -------------------------- Lev.19.21 · THE_ASHAM_ROUTE --------------------
@@ -263,8 +295,10 @@ m.case("ish_ve_shifcha_necherefet, yishkav_shikhvat_zera", "biqoret_tihye")
 # "[EN-AID] And he shall bring his guilt-offering to the LORD to the
 # entrance of the tent of meeting: a ram of guilt-offering."
 m.step("Lev.19.21")
-# ‹וְהֵבִיא אֶת־אֲשָׁמוֹ לַיהוָה אֶל־פֶּתַח אֹהֶל מוֹעֵד› standing handler —
-# if necherefet-case then and-hevi-ashamo-to-door-opening-ohel-moed
+# ‹וְהֵבִיא אֶת־אֲשָׁמוֹ לַיהוָה אֶל־פֶּתַח אֹהֶל מוֹעֵד› (“and-come/bring
+# obj-marker guilt-him/its to-YHWH to opening tent seasons”) — standing
+# handler — if pull-off-case then and-come/bring-ashamo-to-opening-tent-
+# seasons
 m.handler("necherefet_case",
           "ve_hevi_ashamo_el_petach_ohel_moed")
 
@@ -275,8 +309,9 @@ m.handler("necherefet_case",
 # guilt-offering before the LORD for his sin which he has sinned; and he
 # shall be forgiven of his sin which he has sinned."
 m.step("Lev.19.22")
-# ‹וְכִפֶּר עָלָיו הַכֹּהֵן בְּאֵיל הָאָשָׁם לִפְנֵי יְהוָה› standing
-# handler — if to-the-asham then and-khiper-the-priest ∧ and-nislach-not
+# ‹וְכִפֶּר עָלָיו הַכֹּהֵן בְּאֵיל הָאָשָׁם לִפְנֵי יְהוָה› (“and-atone
+# over-him/its the-priest in-ram the-guilt to-face YHWH”) — standing handler
+# — if to-the-guilt then and-atone-the-priest ∧ and-forgive-not
 m.handler("el_ha_asham",
           "ve_khiper_ha_kohen ∧ ve_nislach_lo")
 
@@ -287,11 +322,14 @@ m.handler("el_ha_asham",
 # shall treat its fruit as its foreskin; three years it shall be to you as
 # uncircumcised - it shall not be eaten."
 m.step("Lev.19.23")
-# ‹וְכִי־תָבֹאוּ אֶל־הָאָרֶץ וּנְטַעְתֶּם כָּל־עֵץ מַאֲכָל› case bene-
-# yisrael, tavou-to-the-earth-and-netatem-kal-tree routes to orlat-piryo
+# ‹וְכִי־תָבֹאוּ אֶל־הָאָרֶץ וּנְטַעְתֶּם כָּל־עֵץ מַאֲכָל› (“and-that
+# come/bring to the-earth and-strike-in all tree eatable”) — case son-
+# Israel, come/bring-to-the-earth-and-strike-in-all-tree routes to orlat-
+# piryo
 m.case("bene_yisrael, tavou_el_ha_aretz_u_netatem_kal_etz", "orlat_piryo")
-# ‹וַעֲרַלְתֶּם עָרְלָתוֹ אֶת־פִּרְיוֹ› standing handler — if shalosh-shanim
-# then arelim-not-yeakhel
+# ‹וַעֲרַלְתֶּם עָרְלָתוֹ אֶת־פִּרְיוֹ› (“and-expose foreskin-him/its obj-
+# marker fruit-him/its”) — standing handler — if three-years then
+# uncircumcised-not-eat
 m.handler("shalosh_shanim",
           "arelim_lo_yeakhel")
 
@@ -301,8 +339,9 @@ m.handler("shalosh_shanim",
 # to the LORD."
 m.step("Lev.19.24")
 # ‹וּבַשָּׁנָה הָרְבִיעִת יִהְיֶה כָּל־פִּרְיוֹ קֹדֶשׁ הִלּוּלִים לַיהוָה›
-# standing handler — if in-the-shana-the-reviit then qodesh-hilulim-to-the-
-# LORD
+# (“and-in-years the-fourth be all fruit-him/its holiness celebration-of-
+# thanksgiving- to-YHWH”) — standing handler — if in-the-years-the-fourth
+# then holiness-celebration-of-thanksgiving--to-the-LORD
 m.handler("ba_shana_ha_reviit",
           "qodesh_hilulim_la_YHWH")
 
@@ -313,8 +352,9 @@ m.handler("ba_shana_ha_reviit",
 # to you: I am the LORD your God."
 m.step("Lev.19.25")
 # ‹וּבַשָּׁנָה הַחֲמִישִׁת תֹּאכְלוּ אֶת־פִּרְיוֹ לְהוֹסִיף לָכֶם
-# תְּבוּאָתוֹ› standing handler — if in-the-shana-the-chamishit then tokhlu-
-# piryo ∧ to-hosif-tevuato
+# תְּבוּאָתוֹ› (“and-in-years the-fifth eat obj-marker fruit-him/its to-add
+# to-you/your(pl) income-him/its”) — standing handler — if in-the-years-the-
+# fifth then eat-obj-marker-piryo ∧ to-add-tevuato
 m.handler("ba_shana_ha_chamishit",
           "tokhlu_et_piryo ∧ le_hosif_tevuato")
 
@@ -323,11 +363,11 @@ m.handler("ba_shana_ha_chamishit",
 # "[EN-AID] You shall not eat upon the blood; you shall not read omens and
 # you shall not tell fortunes."
 m.step("Lev.19.26")
-# ‹לֹא תֹאכְלוּ עַל־הַדָּם›
+# ‹לֹא תֹאכְלוּ עַל־הַדָּם› (“not eat over the-blood”) —
 m.statute("FORBID", "tokhlu_al_ha_dam")
-# ‹לֹא תְנַחֲשׁוּ›
+# ‹לֹא תְנַחֲשׁוּ› (“not hiss”) —
 m.statute("FORBID", "tenachashu")
-# ‹וְלֹא תְעוֹנֵנוּ›
+# ‹וְלֹא תְעוֹנֵנוּ› (“and-not act-covertly”) —
 m.statute("FORBID", "teonenu")
 
 # -------------------------- Lev.19.27 · THE_CORNER_MOVES_TO_THE_HEAD -------
@@ -335,9 +375,11 @@ m.statute("FORBID", "teonenu")
 # "[EN-AID] You shall not round off the corner of your head, and you shall
 # not destroy the corner of your beard."
 m.step("Lev.19.27")
-# ‹לֹא תַקִּפוּ פְּאַת רֹאשְׁכֶם›
+# ‹לֹא תַקִּפוּ פְּאַת רֹאשְׁכֶם› (“not strike-with-more mouth-in-a-
+# figurative-sense head-you/your(pl)”) —
 m.statute("FORBID", "taqifu_peat_roshkhem")
-# ‹וְלֹא תַשְׁחִית אֵת פְּאַת זְקָנֶךָ›
+# ‹וְלֹא תַשְׁחִית אֵת פְּאַת זְקָנֶךָ› (“and-not decay obj-marker mouth-in-
+# a-figurative-sense beard-you/your”) —
 m.statute("FORBID", "tashchit_peat_zeqanekha")
 
 # -------------------------- Lev.19.28 · THE_TATTOO_PAIR --------------------
@@ -346,9 +388,11 @@ m.statute("FORBID", "tashchit_peat_zeqanekha")
 # "[EN-AID] And a cut for the dead you shall not make in your flesh, and
 # writing of tattoo you shall not put in you: I am the LORD."
 m.step("Lev.19.28")
-# ‹וְשֶׂרֶט לָנֶפֶשׁ לֹא תִתְּנוּ בִּבְשַׂרְכֶם›
+# ‹וְשֶׂרֶט לָנֶפֶשׁ לֹא תִתְּנוּ בִּבְשַׂרְכֶם› (“and-incision to-living-
+# being not set in-flesh-you/your(pl)”) —
 m.statute("FORBID", "seret_la_nefesh_bi_vesarkhem")
-# ‹וּכְתֹבֶת קַעֲקַע לֹא תִתְּנוּ בָּכֶם›
+# ‹וּכְתֹבֶת קַעֲקַע לֹא תִתְּנוּ בָּכֶם› (“and-letter incision not set in-
+# you/your(pl)”) —
 m.statute("FORBID", "ketovet_qaaqa")
 
 # -------------------------- Lev.19.29 · THE_DAUGHTER_AND_THE_LAND ----------
@@ -357,7 +401,8 @@ m.statute("FORBID", "ketovet_qaaqa")
 # "[EN-AID] Do not profane your daughter to make her a harlot, lest the land
 # fall to harlotry and the land fill with depravity."
 m.step("Lev.19.29")
-# ‹אַל־תְּחַלֵּל אֶת־בִּתְּךָ לְהַזְנוֹתָהּ›
+# ‹אַל־תְּחַלֵּל אֶת־בִּתְּךָ לְהַזְנוֹתָהּ› (“do-not bore obj-marker
+# daughter-you/your to-commit-adultery-her/its”) —
 m.statute("FORBID", "techalel_et_bitkha_le_haznotah")
 
 # -------------------------- Lev.19.30 · THE_CHIASM_CLOSES ------------------
@@ -365,7 +410,8 @@ m.statute("FORBID", "techalel_et_bitkha_le_haznotah")
 # "[EN-AID] My sabbaths you shall keep and My sanctuary you shall fear: I am
 # the LORD."
 m.step("Lev.19.30")
-# ‹אֶת־שַׁבְּתֹתַי תִּשְׁמֹרוּ וּמִקְדָּשִׁי תִּירָאוּ›
+# ‹אֶת־שַׁבְּתֹתַי תִּשְׁמֹרוּ וּמִקְדָּשִׁי תִּירָאוּ› (“obj-marker
+# intermission-me/my keep/guard and-consecrated-thing-me/my fear”) —
 m.statute("BIND", "shabtotay_tishmoru_u_miqdashi_tirau")
 
 # -------------------------- Lev.19.31 · THE_TURN_VERB_RETURNS --------------
@@ -374,9 +420,11 @@ m.statute("BIND", "shabtotay_tishmoru_u_miqdashi_tirau")
 # "[EN-AID] Do not turn to the ghost-mediums, and to the familiar spirits do
 # not seek, to be defiled by them: I am the LORD your God."
 m.step("Lev.19.31")
-# ‹אַל־תִּפְנוּ אֶל־הָאֹבֹת וְאֶל־הַיִּדְּעֹנִים›
+# ‹אַל־תִּפְנוּ אֶל־הָאֹבֹת וְאֶל־הַיִּדְּעֹנִים› (“do-not turn to the-
+# mumble and-to the-knowing-one”) —
 m.statute("FORBID", "peno_el_ha_ovot")
-# ‹אַל־תְּבַקְשׁוּ לְטָמְאָה בָהֶם›
+# ‹אַל־תְּבַקְשׁוּ לְטָמְאָה בָהֶם› (“do-not search-out to-be-foul in-
+# them/their”) —
 m.statute("FORBID", "baqesh_el_ha_yidonim")
 
 # -------------------------- Lev.19.32 · RISE_BEFORE_GREY_HAIR --------------
@@ -385,11 +433,11 @@ m.statute("FORBID", "baqesh_el_ha_yidonim")
 # "[EN-AID] Before grey hair you shall rise, and you shall honor the face of
 # the aged; and you shall fear your God: I am the LORD."
 m.step("Lev.19.32")
-# ‹מִפְּנֵי שֵׂיבָה תָּקוּם›
+# ‹מִפְּנֵי שֵׂיבָה תָּקוּם› (“from-face old-age arise”) —
 m.statute("BIND", "mi_pene_seva_taqum")
-# ‹וְהָדַרְתָּ פְּנֵי זָקֵן›
+# ‹וְהָדַרְתָּ פְּנֵי זָקֵן› (“and-swell-up face old”) —
 m.statute("BIND", "ve_hadarta_pene_zaqen")
-# ‹וְיָרֵאתָ מֵּאֱלֹהֶיךָ›
+# ‹וְיָרֵאתָ מֵּאֱלֹהֶיךָ› (“and-fear from-God-you/your”) —
 m.statute("BIND", "ve_yareta_me_elohekha")
 
 # -------------------------- Lev.19.33 · THE_GER_CASE -----------------------
@@ -397,10 +445,11 @@ m.statute("BIND", "ve_yareta_me_elohekha")
 # "[EN-AID] And when a stranger sojourns with you in your land, you shall
 # not wrong him."
 m.step("Lev.19.33")
-# ‹וְכִי־יָגוּר אִתְּךָ גֵּר בְּאַרְצְכֶם› case ger, yagur-itkha-in-artzkhem
-# routes to mishpat-the-ger
+# ‹וְכִי־יָגוּר אִתְּךָ גֵּר בְּאַרְצְכֶם› (“and-that turn-aside-from-the-
+# road with-you/your sojourner in-earth-you/your(pl)”) — case sojourner,
+# turn-aside-from-the-road-itkha-in-artzkhem routes to mishpat-the-sojourner
 m.case("ger, yagur_itkha_be_artzkhem", "mishpat_ha_ger")
-# ‹לֹא תוֹנוּ אֹתוֹ›
+# ‹לֹא תוֹנוּ אֹתוֹ› (“not rage obj-marker-him/its”) —
 m.statute("FORBID", "tonu_oto")
 
 # -------------------------- Lev.19.34 · THE_SECOND_LOVE --------------------
@@ -410,9 +459,12 @@ m.statute("FORBID", "tonu_oto")
 # be to you, and you shall love him as yourself, for strangers you were in
 # the land of Egypt: I am the LORD your God."
 m.step("Lev.19.34")
-# ‹כְּאֶזְרָח מִכֶּם יִהְיֶה לָכֶם הַגֵּר הַגָּר אִתְּכֶם›
+# ‹כְּאֶזְרָח מִכֶּם יִהְיֶה לָכֶם הַגֵּר הַגָּר אִתְּכֶם› (“like-
+# spontaneous-growth from-you/your(pl) be to-you/your(pl) the-sojourner the-
+# turn-aside-from-the-road with-you/your(pl)”) —
 m.statute("BIND", "ke_ezrach_mikem_yihye_lakhem")
-# ‹וְאָהַבְתָּ לוֹ כָּמוֹךָ›
+# ‹וְאָהַבְתָּ לוֹ כָּמוֹךָ› (“and-have-affection-for to-him/its form-of-
+# the-prefix-'k-'-you/your”) —
 m.statute("BIND", "ve_ahavta_lo_kamokha")
 
 # -------------------------- Lev.19.35 · THE_FORMULA_RETURNS ----------------
@@ -421,6 +473,7 @@ m.statute("BIND", "ve_ahavta_lo_kamokha")
 # liquid-measure."
 m.step("Lev.19.35")
 # ‹לֹא־תַעֲשׂוּ עָוֶל בַּמִּשְׁפָּט בַּמִּדָּה בַּמִּשְׁקָל וּבַמְּשׂוּרָה›
+# (“not make evil in-judgment in-extension in-weight and-in-measure”) —
 m.statute("FORBID", "avel_ba_mishpat_ba_mida_ba_mishqal_u_va_mesura")
 
 # -------------------------- Lev.19.36 · THE_JUST_KIT -----------------------
@@ -430,6 +483,8 @@ m.statute("FORBID", "avel_ba_mishpat_ba_mida_ba_mishqal_u_va_mesura")
 # have: I am the LORD your God who brought you out of the land of Egypt."
 m.step("Lev.19.36")
 # ‹מֹאזְנֵי צֶדֶק אַבְנֵי־צֶדֶק אֵיפַת צֶדֶק וְהִין צֶדֶק יִהְיֶה לָכֶם›
+# (“pair-of-scales right stone right ephah right and-hin right be to-
+# you/your(pl)”) —
 m.statute("BIND", "mozne_tzedeq_avne_tzedeq_efat_tzedeq_ve_hin_tzedeq")
 
 # -------------------------- Lev.19.37 · THE_CLOSER -------------------------
@@ -439,6 +494,8 @@ m.statute("BIND", "mozne_tzedeq_avne_tzedeq_efat_tzedeq_ve_hin_tzedeq")
 # them: I am the LORD."
 m.step("Lev.19.37")
 # ‹וּשְׁמַרְתֶּם אֶת־כָּל־חֻקֹּתַי וְאֶת־כָּל־מִשְׁפָּטַי וַעֲשִׂיתֶם אֹתָם›
+# (“and-keep/guard obj-marker all statute-me/my and-obj-marker all judgment-
+# me/my and-make obj-marker-them/their”) —
 m.statute("BIND", "u_shemartem_kal_chuqotay_ve_kal_mishpatay_va_asitem")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

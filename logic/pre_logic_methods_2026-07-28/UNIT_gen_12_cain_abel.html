@@ -842,12 +842,14 @@ m = Machine(&quot;gen_12_cain_abel&quot;)
 # &quot;And the man knew Eve his wife; and she conceived and bore Cain, and said:
 # &#x27;I have gotten a man with the help of the LORD.&#x27;&quot;
 m.step(&quot;Gen.4.1&quot;)
-# ‹וְהָאָדָם יָדַע אֶת־חַוָּה אִשְׁתּוֹ› event: know — agent human; theme
-# Chavah-Eve
+# ‹וְהָאָדָם יָדַע אֶת־חַוָּה אִשְׁתּוֹ› (“and-the-human knew obj-marker
+# Chavah his-wife”) — event: know — agent human; theme Chavah-Eve
 m.event(&quot;know&quot;, agent=&quot;adam&quot;, themes=[&quot;chavah&quot;])
-# ‹וַתַּהַר וַתֵּלֶד אֶת־קַיִן› event: bear — agent Chavah-Eve; theme Cain
+# ‹וַתַּהַר וַתֵּלֶד אֶת־קַיִן› (“and-she-conceived and-she-bore obj-marker
+# Cain”) — event: bear — agent Chavah-Eve; theme Cain
 m.event(&quot;bear&quot;, agent=&quot;chavah&quot;, themes=[&quot;kayin&quot;])
-# ‹וַתֹּאמֶר קָנִיתִי אִישׁ אֶת־יְהוָה› named: Cain := Kayin
+# ‹וַתֹּאמֶר קָנִיתִי אִישׁ אֶת־יְהוָה› (“and-she-said I-have-acquired man
+# obj-marker YHWH”) — named: Cain := Kayin
 m.name(&quot;kayin&quot;, &quot;Kayin&quot;)
 # reads without prior install (flag, not fix): human, Chavah-Eve
 m.presupposed(&quot;adam&quot;, &quot;chavah&quot;)
@@ -858,11 +860,11 @@ m.presupposed(&quot;adam&quot;, &quot;chavah&quot;)
 # &quot;And again she bore his brother Abel. And Abel was a keeper of sheep, but
 # Cain was a tiller of the ground.&quot;
 m.step(&quot;Gen.4.2&quot;)
-# ‹וַתֹּסֶף לָלֶדֶת אֶת־אָחִיו אֶת־הָבֶל› event: bear — agent Chavah-Eve;
-# theme Abel
+# ‹וַתֹּסֶף לָלֶדֶת אֶת־אָחִיו אֶת־הָבֶל› (“and-she-added to-bear obj-marker
+# his-brother obj-marker Abel”) — event: bear — agent Chavah-Eve; theme Abel
 m.event(&quot;bear&quot;, agent=&quot;chavah&quot;, themes=[&quot;hevel&quot;])
-# ‹רֹעֵה צֹאן … עֹבֵד אֲדָמָה› fact holds: shepherd-flock(Abel); worker-of-
-# ground(Cain)
+# ‹רֹעֵה צֹאן … עֹבֵד אֲדָמָה› (“shepherd-of flock … worker-of ground”) —
+# fact holds: shepherd-flock(Abel); worker-of-ground(Cain)
 m.fact(&quot;roeh_tzon(hevel)&quot;,
        &quot;oved_adamah(kayin)&quot;)
 # reads without prior install (flag, not fix): ground
@@ -873,8 +875,9 @@ m.presupposed(&quot;adamah&quot;)
 # &quot;And in process of time it came to pass, that Cain brought of the fruit of
 # the ground an offering unto the LORD.&quot;
 m.step(&quot;Gen.4.3&quot;)
-# ‹וַיָּבֵא קַיִן מִפְּרִי הָאֲדָמָה מִנְחָה לַיהוָה› event: bring — agent
-# Cain; theme offering
+# ‹וַיָּבֵא קַיִן מִפְּרִי הָאֲדָמָה מִנְחָה לַיהוָה› (“and-he-brought Cain
+# from-fruit-of the-ground offering to-YHWH”) — event: bring — agent Cain;
+# theme offering
 m.event(&quot;bring&quot;, agent=&quot;kayin&quot;, themes=[&quot;minchah&quot;])
 
 # -------------------------- Gen.4.4 · SECOND_OFFERING_FAVOR ----------------
@@ -883,11 +886,13 @@ m.event(&quot;bring&quot;, agent=&quot;kayin&quot;, themes=[&quot;minchah&quot;]
 # &quot;And Abel, he also brought of the firstlings of his flock and of the fat
 # thereof. And the LORD had respect unto Abel and to his offering.&quot;
 m.step(&quot;Gen.4.4&quot;)
-# ‹וְהֶבֶל הֵבִיא גַם־הוּא מִבְּכֹרוֹת צֹאנוֹ וּמֵחֶלְבֵהֶן› event: bring —
-# agent Abel; theme firstlings-of
+# ‹וְהֶבֶל הֵבִיא גַם־הוּא מִבְּכֹרוֹת צֹאנוֹ וּמֵחֶלְבֵהֶן› (“and-Abel
+# brought also he from-firstlings-of his-flock and-from-their-fat”) — event:
+# bring — agent Abel; theme firstlings-of
 m.event(&quot;bring&quot;, agent=&quot;hevel&quot;, themes=[&quot;bekhorot&quot;])
-# ‹וַיִּשַׁע יְהוָה אֶל־הֶבֶל וְאֶל־מִנְחָתוֹ› test PASS — oracle-word gaze,
-# on Abel-and-his-offering
+# ‹וַיִּשַׁע יְהוָה אֶל־הֶבֶל וְאֶל־מִנְחָתוֹ› (“and-he-regarded YHWH to
+# Abel and-to his-offering”) — test PASS — oracle-word gaze, on Abel-and-
+# his-offering
 m.test(&quot;PASS&quot;, &quot;shaah&quot;, &quot;hevel_u_minchato&quot;)
 
 # -------------------------- Gen.4.5 · NON_REGARD_FIRST_ANGER ---------------
@@ -896,10 +901,11 @@ m.test(&quot;PASS&quot;, &quot;shaah&quot;, &quot;hevel_u_minchato&quot;)
 # &quot;But unto Cain and to his offering He had not respect. And Cain was very
 # wroth, and his countenance fell.&quot;
 m.step(&quot;Gen.4.5&quot;)
-# ‹וְאֶל־קַיִן וְאֶל־מִנְחָתוֹ לֹא שָׁעָה› fact holds: not-gaze-to-Cain-and-
-# to-his-offering
+# ‹וְאֶל־קַיִן וְאֶל־מִנְחָתוֹ לֹא שָׁעָה› (“and-to Cain and-to his-offering
+# not he-regarded”) — fact holds: not-gaze-to-Cain-and-to-his-offering
 m.fact(&quot;lo_shaah_el_kayin_ve_el_minchato&quot;)
-# ‹וַיִּחַר לְקַיִן מְאֹד וַיִּפְּלוּ פָּנָיו› event: burn — agent Cain
+# ‹וַיִּחַר לְקַיִן מְאֹד וַיִּפְּלוּ פָּנָיו› (“and-he-burned to-Cain very
+# and-fell his-face”) — event: burn — agent Cain
 m.event(&quot;burn&quot;, agent=&quot;kayin&quot;)
 
 # -------------------------- Gen.4.6 · ANGER_DIAGNOSTIC ---------------------
@@ -907,8 +913,8 @@ m.event(&quot;burn&quot;, agent=&quot;kayin&quot;)
 # &quot;And the LORD said unto Cain: &#x27;Why art thou wroth? and why is thy
 # countenance fallen?&#x27;&quot;
 m.step(&quot;Gen.4.6&quot;)
-# ‹לָמָּה חָרָה לָךְ וְלָמָּה נָפְלוּ פָנֶיךָ› event: ask — agent the-LORD;
-# theme Cain
+# ‹לָמָּה חָרָה לָךְ וְלָמָּה נָפְלוּ פָנֶיךָ› (“why burned to-you and-why
+# fell your-face”) — event: ask — agent the-LORD; theme Cain
 m.event(&quot;ask&quot;, agent=&quot;YHWH&quot;, themes=[&quot;kayin&quot;])
 
 # -------------------------- Gen.4.7 · COUNSEL_FIRST_IF ---------------------
@@ -918,15 +924,18 @@ m.event(&quot;ask&quot;, agent=&quot;YHWH&quot;, themes=[&quot;kayin&quot;])
 # well, sin coucheth at the door; and unto thee is its desire, but thou
 # mayest rule over it.&#x27;&quot;
 m.step(&quot;Gen.4.7&quot;)
-# ‹אִם־תֵּיטִיב שְׂאֵת› standing handler — if you-do-well(Cain) then uplift
+# ‹אִם־תֵּיטִיב שְׂאֵת› (“IF you-do-well uplift”) — standing handler — if
+# you-do-well(Cain) then uplift
 m.handler(&quot;teitiv(kayin)&quot;,
           &quot;seet&quot;)
-# ‹וְאִם לֹא תֵיטִיב לַפֶּתַח חַטָּאת רֹבֵץ› standing handler — if not-you-
-# do-well(Cain) then to-at-the-door-sin-crouching
+# ‹וְאִם לֹא תֵיטִיב לַפֶּתַח חַטָּאת רֹבֵץ› (“and-if not you-do-well at-
+# the-door sin crouching”) — standing handler — if not-you-do-well(Cain)
+# then to-at-the-door-sin-crouching
 m.handler(&quot;lo_teitiv(kayin)&quot;,
           &quot;la_petach_chattat_rovetz&quot;)
-# ‹וְאֵלֶיךָ תְּשׁוּקָתוֹ וְאַתָּה תִּמְשָׁל־בּוֹ› the-LORD speaks a demand
-# — LET?: you-shall-rule(Cain, in-the-sin)
+# ‹וְאֵלֶיךָ תְּשׁוּקָתוֹ וְאַתָּה תִּמְשָׁל־בּוֹ› (“and-to-you its-longing
+# and-you shall-rule in-it”) — the-LORD speaks a demand — LET?: you-shall-
+# rule(Cain, in-the-sin)
 m.declare(&quot;YHWH&quot;, &quot;LET?&quot;,
           &quot;timshol(kayin, ba_chattat)&quot;)
 
@@ -936,10 +945,11 @@ m.declare(&quot;YHWH&quot;, &quot;LET?&quot;,
 # &quot;And Cain spoke unto Abel his brother. And it came to pass, when they were
 # in the field, that Cain rose up against Abel his brother, and slew him.&quot;
 m.step(&quot;Gen.4.8&quot;)
-# ‹וַיֹּאמֶר קַיִן אֶל־הֶבֶל אָחִיו› event: say — agent Cain; theme Abel
+# ‹וַיֹּאמֶר קַיִן אֶל־הֶבֶל אָחִיו› (“and-he-said Cain to Abel his-
+# brother”) — event: say — agent Cain; theme Abel
 m.event(&quot;say&quot;, agent=&quot;kayin&quot;, themes=[&quot;hevel&quot;])
-# ‹וַיָּקָם קַיִן אֶל־הֶבֶל אָחִיו וַיַּהַרְגֵהוּ› event: kill — agent Cain;
-# theme Abel
+# ‹וַיָּקָם קַיִן אֶל־הֶבֶל אָחִיו וַיַּהַרְגֵהוּ› (“and-he-rose Cain to
+# Abel his-brother and-killed-him”) — event: kill — agent Cain; theme Abel
 m.event(&quot;kill&quot;, agent=&quot;kayin&quot;, themes=[&quot;hevel&quot;])
 
 # -------------------------- Gen.4.9 · DOCKET_FIRST_LIE ---------------------
@@ -948,10 +958,11 @@ m.event(&quot;kill&quot;, agent=&quot;kayin&quot;, themes=[&quot;hevel&quot;])
 # &quot;And the LORD said unto Cain: &#x27;Where is Abel thy brother?&#x27; And he said: &#x27;I
 # know not; am I my brother&#x27;s keeper?&#x27;&quot;
 m.step(&quot;Gen.4.9&quot;)
-# ‹אֵי הֶבֶל אָחִיךָ› event: ask — agent the-LORD; theme Cain
+# ‹אֵי הֶבֶל אָחִיךָ› (“where Abel your-brother”) — event: ask — agent the-
+# LORD; theme Cain
 m.event(&quot;ask&quot;, agent=&quot;YHWH&quot;, themes=[&quot;kayin&quot;])
-# ‹לֹא יָדַעְתִּי הֲשֹׁמֵר אָחִי אָנֹכִי› fact holds: not-I-know-the-keeper-
-# of-my-brother-I(Cain)
+# ‹לֹא יָדַעְתִּי הֲשֹׁמֵר אָחִי אָנֹכִי› (“not I-know the-keeper-of my-
+# brother I”) — fact holds: not-I-know-the-keeper-of-my-brother-I(Cain)
 m.fact(&quot;lo_yadati_ha_shomer_achi_anokhi(kayin)&quot;)
 
 # -------------------------- Gen.4.10 · BLOODS_CRY --------------------------
@@ -959,10 +970,12 @@ m.fact(&quot;lo_yadati_ha_shomer_achi_anokhi(kayin)&quot;)
 # &quot;And He said: &#x27;What hast thou done? the voice of thy brother&#x27;s blood
 # crieth unto Me from the ground.&#x27;&quot;
 m.step(&quot;Gen.4.10&quot;)
-# ‹מֶה עָשִׂיתָ› event: ask — agent the-LORD; theme Cain
+# ‹מֶה עָשִׂיתָ› (“what you-have-done”) — event: ask — agent the-LORD; theme
+# Cain
 m.event(&quot;ask&quot;, agent=&quot;YHWH&quot;, themes=[&quot;kayin&quot;])
-# ‹קוֹל דְּמֵי אָחִיךָ צֹעֲקִים אֵלַי מִן־הָאֲדָמָה› fact holds: all-bloods-
-# of-your-brother-crying-out-from-the-ground
+# ‹קוֹל דְּמֵי אָחִיךָ צֹעֲקִים אֵלַי מִן־הָאֲדָמָה› (“voice-of bloods-of
+# your-brother crying to-me from the-ground”) — fact holds: all-bloods-of-
+# your-brother-crying-out-from-the-ground
 m.fact(&quot;kol_demei_achikha_tzoakim_min_ha_adamah&quot;)
 
 # -------------------------- Gen.4.11 · CURSE_REACHES_HUMAN -----------------
@@ -971,11 +984,11 @@ m.fact(&quot;kol_demei_achikha_tzoakim_min_ha_adamah&quot;)
 # &quot;&#x27;And now cursed art thou from the ground, which hath opened her mouth to
 # receive thy brother&#x27;s blood from thy hand.&#x27;&quot;
 m.step(&quot;Gen.4.11&quot;)
-# ‹אָרוּר אָתָּה מִן־הָאֲדָמָה› role assigned: Cain -&gt; CURSED-from-the-
-# ground
+# ‹אָרוּר אָתָּה מִן־הָאֲדָמָה› (“CURSED you from the-ground”) — role
+# assigned: Cain -&gt; CURSED-from-the-ground
 m.assign(&quot;kayin&quot;, &quot;arur_min_ha_adamah&quot;)
-# ‹אֲשֶׁר פָּצְתָה אֶת־פִּיהָ› fact holds: the-ground-opened-wide-her-mouth-
-# taken-bloods-of(Cain)
+# ‹אֲשֶׁר פָּצְתָה אֶת־פִּיהָ› (“which opened obj-marker her-mouth”) — fact
+# holds: the-ground-opened-wide-her-mouth-taken-bloods-of(Cain)
 m.fact(&quot;ha_adamah_patztah_piha_lakachat_demei(kayin)&quot;)
 
 # -------------------------- Gen.4.12 · GROUND_STRIKE_WANDERER --------------
@@ -984,9 +997,10 @@ m.fact(&quot;ha_adamah_patztah_piha_lakachat_demei(kayin)&quot;)
 # &quot;&#x27;When thou tillest the ground, it shall not henceforth yield unto thee
 # her strength; a fugitive and a wanderer shalt thou be in the earth.&#x27;&quot;
 m.step(&quot;Gen.4.12&quot;)
-# ‹לֹא־תֹסֵף תֵּת־כֹּחָהּ לָךְ … נָע וָנָד תִּהְיֶה› fact holds: when-you-
-# work-not-she-added-give-its-strength(ground, Cain); fugitive-and-wanderer-
-# shall-be(Cain)
+# ‹לֹא־תֹסֵף תֵּת־כֹּחָהּ לָךְ … נָע וָנָד תִּהְיֶה› (“not it-will-add to-
+# give her-strength to-you … fugitive and-wanderer you-shall-be”) — fact
+# holds: when-you-work-not-she-added-give-its-strength(ground, Cain);
+# fugitive-and-wanderer-shall-be(Cain)
 m.fact(&quot;ki_taavod_lo_tosef_tet_kochah(adamah, kayin)&quot;,
        &quot;na_va_nad_tihyeh(kayin)&quot;)
 
@@ -994,7 +1008,8 @@ m.fact(&quot;ki_taavod_lo_tosef_tet_kochah(adamah, kayin)&quot;,
 # וַיֹּאמֶר קַיִן אֶל־יְהוָה גָּדוֹל עֲוֺנִי מִנְּשֹׂא
 # &quot;And Cain said unto the LORD: &#x27;My punishment is greater than I can bear.&#x27;&quot;
 m.step(&quot;Gen.4.13&quot;)
-# ‹גָּדוֹל עֲוֺנִי מִנְּשֹׂא› event: plead — agent Cain; theme the-LORD
+# ‹גָּדוֹל עֲוֺנִי מִנְּשֹׂא› (“great my-iniquity than-bearing”) — event:
+# plead — agent Cain; theme the-LORD
 m.event(&quot;plead&quot;, agent=&quot;kayin&quot;, themes=[&quot;YHWH&quot;])
 
 # -------------------------- Gen.4.14 · FEAR_OF_FINDERS ---------------------
@@ -1005,9 +1020,10 @@ m.event(&quot;plead&quot;, agent=&quot;kayin&quot;, themes=[&quot;YHWH&quot;])
 # the earth; and it will come to pass, that whosoever findeth me will slay
 # me.&#x27;&quot;
 m.step(&quot;Gen.4.14&quot;)
-# ‹גֵּרַשְׁתָּ אֹתִי … וּמִפָּנֶיךָ אֶסָּתֵר … כָל־מֹצְאִי יַהַרְגֵנִי› fact
-# holds: you-have-driven-out-me-and-from-your-face-I-shall-be-hidden(Cain);
-# all-finder-will-kill-me-fear(Cain)
+# ‹גֵּרַשְׁתָּ אֹתִי … וּמִפָּנֶיךָ אֶסָּתֵר … כָל־מֹצְאִי יַהַרְגֵנִי›
+# (“you-have-driven-out me … and-from-your-face I-shall-be-hidden … all
+# finding-me will-kill-me”) — fact holds: you-have-driven-out-me-and-from-
+# your-face-I-shall-be-hidden(Cain); all-finder-will-kill-me-fear(Cain)
 m.fact(&quot;gerashta_oti_u_mi_panekha_esater(kayin)&quot;,
        &quot;khol_motzi_yahargeni_fear(kayin)&quot;)
 
@@ -1018,12 +1034,13 @@ m.fact(&quot;gerashta_oti_u_mi_panekha_esater(kayin)&quot;,
 # shall be taken on him sevenfold.&#x27; And the LORD set a sign for Cain, lest
 # any finding him should smite him.&quot;
 m.step(&quot;Gen.4.15&quot;)
-# ‹כָּל־הֹרֵג קַיִן שִׁבְעָתַיִם יֻקָּם› standing handler — if killer-
-# of(Cain) then sevenfold-shall-be-avenged
+# ‹כָּל־הֹרֵג קַיִן שִׁבְעָתַיִם יֻקָּם› (“all killer-of Cain sevenfold
+# shall-be-avenged”) — standing handler — if killer-of(Cain) then sevenfold-
+# shall-be-avenged
 m.handler(&quot;horeg(kayin)&quot;,
           &quot;shivatayim_yukam&quot;)
-# ‹וַיָּשֶׂם יְהוָה לְקַיִן אוֹת› fact holds: sign-to-Cain-so-as-not-
-# strike(Cain)
+# ‹וַיָּשֶׂם יְהוָה לְקַיִן אוֹת› (“and-he-set YHWH for-Cain sign”) — fact
+# holds: sign-to-Cain-so-as-not-strike(Cain)
 m.fact(&quot;ot_le_kayin_levilti_hakot(kayin)&quot;)
 
 # -------------------------- Gen.4.16 · EXIT_EAST_SETTLED_IN_WANDERING ------
@@ -1031,15 +1048,16 @@ m.fact(&quot;ot_le_kayin_levilti_hakot(kayin)&quot;)
 # &quot;And Cain went out from the presence of the LORD, and dwelt in the land of
 # Nod, on the east of Eden.&quot;
 m.step(&quot;Gen.4.16&quot;)
-# ‹וַיֵּצֵא … וַיֵּשֶׁב בְּאֶרֶץ־נוֹד קִדְמַת־עֵדֶן› event: go-out — agent
-# Cain; theme land-of-Nod-Wandering-east-of-Eden
+# ‹וַיֵּצֵא … וַיֵּשֶׁב בְּאֶרֶץ־נוֹד קִדְמַת־עֵדֶן› (“and-he-went-out …
+# and-he-settled in-land-of Nod-Wandering east-of Eden”) — event: go-out —
+# agent Cain; theme land-of-Nod-Wandering-east-of-Eden
 m.event(&quot;go_out&quot;, agent=&quot;kayin&quot;, themes=[&quot;eretz_nod_kidmat_eden&quot;])
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == &quot;__main__&quot;:
     m.report()
     assert m.created_set() == set()
-    assert m.presupposed_set() == {&#x27;chavah&#x27;, &#x27;adamah&#x27;, &#x27;adam&#x27;}
+    assert m.presupposed_set() == {&#x27;adamah&#x27;, &#x27;chavah&#x27;, &#x27;adam&#x27;}
     assert m.REGISTRY[&quot;names&quot;] == {&#x27;kayin&#x27;: &#x27;arur_min_ha_adamah&#x27;}
     assert m.REGISTRY[&quot;writes&quot;] == 2
     assert m.tests_list() == [(&#x27;PASS&#x27;, &#x27;shaah&#x27;, &#x27;hevel_u_minchato&#x27;)]
@@ -1053,4 +1071,4 @@ if __name__ == &quot;__main__&quot;:
     assert len(m.EVENTS) == 19
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">FROZEN 2026-08-01 (owner order &quot;freeze all commit&quot;; derived same day): thirteenth frozen unit — CAIN AND ABEL, the first cycle outside the garden; third extension-free derivation in a row. Central findings, all DB-verified before drafting: solo-YHWH&#x27;s first token in the MOTHER&#x27;s mouth at the first birth (the first human to say the Name), with the corpus&#x27;s first birth-etymology; the second name left unexplained (vapor); the offering institutions debuting UNINSTRUCTED in the law&#x27;s own vocabulary (minchah x3 first; firstlings; fat) under a NEW test instrument (sha&#x27;ah — favor-gaze, 3 tokens), with the rejection carrying no stated reason (held as fact, not FAIL); the corpus&#x27;s FIRST IF — both first tokens of the law&#x27;s branch particle in one counsel speech, modeled as two HANDLERs, the good branch paying se&#x27;et (the nasa root — lev_13&#x27;s lead mark-name sourced), the dark branch debuting CHATTAT crouching at the door; the woman&#x27;s sentence-pair (longing+rule) re-aimed at sin and closing as a coded-imperfect LET? — pushed at 4:7, VIOLATED at 4:8, never popped: the first counsel-demand left open by transgression (the queue&#x27;s standing debt grows to three beside gen_08&#x27;s two); the EMPTY QUOTE (nothing invented); the corpus&#x27;s first actual death — FRATRICIDE, man-made (harag&#x27;s entire debut is this story; the armed handler&#x27;s mot unexecuted by heaven — the handler-delta&#x27;s sharpest edge); the docket formulas inherited (where &lt;- ayeka; what-have-you-done &lt;- 3:13); the first LIE with the office word as sarcasm (am I my brother&#x27;s KEEPER); the BLOODS plural held [OPEN] (the Mishnah&#x27;s worlds-doctrine is the diyyuk tripwire — and Onkelos already carries it: &#x27;the descendants destined to issue&#x27;); the curse&#x27;s third token — first on a HUMAN, from the ground whose MOUTH drank the bloods; the ground-strike unwriting his profession; the plea returning the nasa root as the unbearable load (Onkelos brackets the story in FORGIVENESS instead — its largest expansion in our spans: 4:7 rebuilt as a theology of repentance); the sevenfold protective HANDLER (the week&#x27;s number as vengeance arithmetic; Onkelos: seven GENERATIONS) and the mark (day 4&#x27;s sign-word turned personal — its next tokens are the rainbow); and the exit: settled in WANDERING (his sentence fossilized as an address), east of Eden — the guards&#x27; compass, one ring further out. ZERO WORLD installs — the first zero-install narrative unit. Freeze, narrative (ASK FIRST), and triage await owner order. Not binding religious law.</div><p class='meta'>Rendered 2026-08-08 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">FROZEN 2026-08-01 (owner order &quot;freeze all commit&quot;; derived same day): thirteenth frozen unit — CAIN AND ABEL, the first cycle outside the garden; third extension-free derivation in a row. Central findings, all DB-verified before drafting: solo-YHWH&#x27;s first token in the MOTHER&#x27;s mouth at the first birth (the first human to say the Name), with the corpus&#x27;s first birth-etymology; the second name left unexplained (vapor); the offering institutions debuting UNINSTRUCTED in the law&#x27;s own vocabulary (minchah x3 first; firstlings; fat) under a NEW test instrument (sha&#x27;ah — favor-gaze, 3 tokens), with the rejection carrying no stated reason (held as fact, not FAIL); the corpus&#x27;s FIRST IF — both first tokens of the law&#x27;s branch particle in one counsel speech, modeled as two HANDLERs, the good branch paying se&#x27;et (the nasa root — lev_13&#x27;s lead mark-name sourced), the dark branch debuting CHATTAT crouching at the door; the woman&#x27;s sentence-pair (longing+rule) re-aimed at sin and closing as a coded-imperfect LET? — pushed at 4:7, VIOLATED at 4:8, never popped: the first counsel-demand left open by transgression (the queue&#x27;s standing debt grows to three beside gen_08&#x27;s two); the EMPTY QUOTE (nothing invented); the corpus&#x27;s first actual death — FRATRICIDE, man-made (harag&#x27;s entire debut is this story; the armed handler&#x27;s mot unexecuted by heaven — the handler-delta&#x27;s sharpest edge); the docket formulas inherited (where &lt;- ayeka; what-have-you-done &lt;- 3:13); the first LIE with the office word as sarcasm (am I my brother&#x27;s KEEPER); the BLOODS plural held [OPEN] (the Mishnah&#x27;s worlds-doctrine is the diyyuk tripwire — and Onkelos already carries it: &#x27;the descendants destined to issue&#x27;); the curse&#x27;s third token — first on a HUMAN, from the ground whose MOUTH drank the bloods; the ground-strike unwriting his profession; the plea returning the nasa root as the unbearable load (Onkelos brackets the story in FORGIVENESS instead — its largest expansion in our spans: 4:7 rebuilt as a theology of repentance); the sevenfold protective HANDLER (the week&#x27;s number as vengeance arithmetic; Onkelos: seven GENERATIONS) and the mark (day 4&#x27;s sign-word turned personal — its next tokens are the rainbow); and the exit: settled in WANDERING (his sentence fossilized as an address), east of Eden — the guards&#x27; compass, one ring further out. ZERO WORLD installs — the first zero-install narrative unit. Freeze, narrative (ASK FIRST), and triage await owner order. Not binding religious law.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

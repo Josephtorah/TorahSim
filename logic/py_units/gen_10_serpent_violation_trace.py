@@ -21,14 +21,15 @@ m = Machine("gen_10_serpent_violation_trace")
 # LORD God had made. And he said unto the woman: 'Yea, hath God said: Ye
 # shall not eat of any tree of the garden?'"
 m.step("Gen.3.1")
-# ‹וְהַנָּחָשׁ הָיָה עָרוּם … אֲשֶׁר עָשָׂה יְהוָה אֱלֹהִים› fact holds:
+# ‹וְהַנָּחָשׁ הָיָה עָרוּם … אֲשֶׁר עָשָׂה יְהוָה אֱלֹהִים› (“and-the-
+# serpent was cunning … which he-made YHWH God”) — fact holds:
 # cunning(serpent); make-the-LORD-God(serpent)
 m.fact("arum(nachash)",
        "asah_YHWH_Elohim(nachash)")
 # reads without prior install (flag, not fix): serpent, woman, garden
 m.presupposed("nachash", "ishah", "gan")
-# ‹וַיֹּאמֶר אֶל־הָאִשָּׁה אַף כִּי־אָמַר אֱלֹהִים› event: say — agent
-# serpent; theme woman
+# ‹וַיֹּאמֶר אֶל־הָאִשָּׁה אַף כִּי־אָמַר אֱלֹהִים› (“and-he-said to the-
+# woman really that he-said God”) — event: say — agent serpent; theme woman
 m.event("say", agent="nachash", themes=["ishah"])
 # spec-delta — spec said eating eat who-all tree-of the-garden + one
 # exclusion (gen-08 2:16-17: permission over ALL, prohibition on ONE),
@@ -47,8 +48,8 @@ m.spec_delta("YHWH_Elohim (the rule's issuer, gen_08 2:16 — the Eden-exclusive
 # "And the woman said unto the serpent: 'Of the fruit of the trees of the
 # garden we may eat.'"
 m.step("Gen.3.2")
-# ‹וַתֹּאמֶר הָאִשָּׁה אֶל־הַנָּחָשׁ› event: say — agent woman; theme
-# serpent
+# ‹וַתֹּאמֶר הָאִשָּׁה אֶל־הַנָּחָשׁ› (“and-she-said the-woman to the-
+# serpent”) — event: say — agent woman; theme serpent
 m.event("say", agent="ishah", themes=["nachash"])
 # spec-delta — spec said who-KOL tree-of the-garden AKHOL TOKHEL (gen-08
 # 2:16: from ALL, with the emphatic doubling — the corpus first doubling),
@@ -72,10 +73,10 @@ m.presupposed("ha_etz")
 # — the address 2:9 states for the tree fowl LIFE)
 m.spec_delta("me-etz ha-daat tov va-ra (gen_08 2:17: the tree named by its knowledge; located nowhere)",
              "ha-etz asher be-tokh ha-gan (the woman: the tree IN THE MIDST — the address 2:9 states for the tree of LIFE)")
-# ‹וְלֹא תִגְּעוּ בּוֹ› spec-delta — spec said not she-ate from-it (gen-08
-# 2:17: eating prohibited — nothing else), delivery says not you-shall-
-# eat(pl) from-it VE-LO TIGU BO (eating AND TOUCHING prohibited — a fence
-# added to the rule)
+# ‹וְלֹא תִגְּעוּ בּוֹ› (“and-not you-shall-touch in-it”) — spec-delta —
+# spec said not she-ate from-it (gen-08 2:17: eating prohibited — nothing
+# else), delivery says not you-shall-eat(pl) from-it VE-LO TIGU BO (eating
+# AND TOUCHING prohibited — a fence added to the rule)
 m.spec_delta("lo tokhal mimenu (gen_08 2:17: eating prohibited — nothing else)",
              "lo tokhlu mimenu VE-LO TIGU BO (eating AND TOUCHING prohibited — a fence added to the rule)")
 # spec-delta — spec said that in-day-of your-eating from-it dying you-shall-
@@ -89,14 +90,14 @@ m.spec_delta("ki be-yom akholkha mimenu mot tamut (gen_08 2:17: certainty ON THE
 # וַיֹּאמֶר הַנָּחָשׁ אֶל־הָאִשָּׁה לֹא־מוֹת תְּמֻתוּן
 # "And the serpent said unto the woman: 'Ye shall not surely die.'"
 m.step("Gen.3.4")
-# ‹וַיֹּאמֶר הַנָּחָשׁ אֶל־הָאִשָּׁה› event: say — agent serpent; theme
-# woman
+# ‹וַיֹּאמֶר הַנָּחָשׁ אֶל־הָאִשָּׁה› (“and-he-said the-serpent to the-
+# woman”) — event: say — agent serpent; theme woman
 m.event("say", agent="nachash", themes=["ishah"])
-# ‹לֹא־מוֹת תְּמֻתוּן› spec-delta — spec said dying you-shall-die (gen-08
-# 2:17: the penalty, doubled — the emphatic device the woman had dropped),
-# delivery says LO-dying you-shall-die (the serpent: the doubling RESTORED
-# in order to in NEGATED — the corpus first direct contradiction fowl a
-# divine word)
+# ‹לֹא־מוֹת תְּמֻתוּן› (“not dying you-shall-die(pl)”) — spec-delta — spec
+# said dying you-shall-die (gen-08 2:17: the penalty, doubled — the emphatic
+# device the woman had dropped), delivery says LO-dying you-shall-die (the
+# serpent: the doubling RESTORED in order to in NEGATED — the corpus first
+# direct contradiction fowl a divine word)
 m.spec_delta("mot tamut (gen_08 2:17: the penalty, doubled — the emphatic device the woman had dropped)",
              "LO-mot temutun (the serpent: the doubling RESTORED in order to be NEGATED — the corpus first direct contradiction of a divine word)")
 
@@ -106,8 +107,9 @@ m.spec_delta("mot tamut (gen_08 2:17: the penalty, doubled — the emphatic devi
 # "'For God doth know that in the day ye eat thereof, then your eyes shall
 # be opened, and ye shall be as God, knowing good and evil.'"
 m.step("Gen.3.5")
-# ‹כִּי יֹדֵעַ אֱלֹהִים … וְנִפְקְחוּ … וִהְיִיתֶם כֵּאלֹהִים› event: claim
-# — agent serpent; theme were-opened-your-eyes, like-God
+# ‹כִּי יֹדֵעַ אֱלֹהִים … וְנִפְקְחוּ … וִהְיִיתֶם כֵּאלֹהִים› (“that knows
+# God … and-shall-be-opened … and-you-shall-be like-God”) — event: claim —
+# agent serpent; theme were-opened-your-eyes, like-God
 m.event("claim", agent="nachash", themes=["nifqechu_eineikhem", "ke_Elohim"])
 
 # -------------------------- Gen.3.6 · CREATURE_TEST_AND_TRIGGER ------------
@@ -119,16 +121,19 @@ m.event("claim", agent="nachash", themes=["nifqechu_eineikhem", "ke_Elohim"])
 # she took of the fruit thereof, and did eat; and she gave also unto her
 # husband with her, and he did eat."
 m.step("Gen.3.6")
-# ‹וַתֵּרֶא הָאִשָּׁה כִּי טוֹב הָעֵץ לְמַאֲכָל› test PASS — oracle-word
-# good, on the-tree-of-to-food
+# ‹וַתֵּרֶא הָאִשָּׁה כִּי טוֹב הָעֵץ לְמַאֲכָל› (“and-she-saw the-woman
+# that good the-tree for-food”) — test PASS — oracle-word good, on the-tree-
+# of-to-food
 m.test("PASS", "tov", "ha_etz_le_maakhal")
-# ‹וַתִּקַּח מִפִּרְיוֹ› event: take — agent woman; theme fruit
+# ‹וַתִּקַּח מִפִּרְיוֹ› (“and-she-took from-its-fruit”) — event: take —
+# agent woman; theme fruit
 m.event("take", agent="ishah", themes=["pri"])
-# ‹וַתֹּאכַל› event: eat — agent woman; theme fruit
+# ‹וַתֹּאכַל› (“and-she-ate”) — event: eat — agent woman; theme fruit
 m.event("eat", agent="ishah", themes=["pri"])
-# ‹וַתִּתֵּן גַּם־לְאִישָׁהּ עִמָּהּ› event: give — agent woman; theme human
+# ‹וַתִּתֵּן גַּם־לְאִישָׁהּ עִמָּהּ› (“and-she-gave also to-her-man with-
+# her”) — event: give — agent woman; theme human
 m.event("give", agent="ishah", themes=["adam"])
-# ‹וַיֹּאכַל› event: eat — agent human; theme fruit
+# ‹וַיֹּאכַל› (“and-he-ate”) — event: eat — agent human; theme fruit
 m.event("eat", agent="adam", themes=["pri"])
 # reads without prior install (flag, not fix): human
 m.presupposed("adam")
@@ -139,16 +144,17 @@ m.presupposed("adam")
 # "And the eyes of them both were opened, and they knew that they were
 # naked; and they sewed fig-leaves together, and made themselves girdles."
 m.step("Gen.3.7")
-# ‹וַתִּפָּקַחְנָה עֵינֵי שְׁנֵיהֶם› event: open-eyes — theme eyes-of-both-
-# of-them
+# ‹וַתִּפָּקַחְנָה עֵינֵי שְׁנֵיהֶם› (“and-were-opened eyes-of the-two-of-
+# them”) — event: open-eyes — theme eyes-of-both-of-them
 m.event("open_eyes", themes=["einei_shneihem"])
-# ‹וַיֵּדְעוּ כִּי עֵירֻמִּם הֵם› event: know — agent both-of-them; theme
-# naked
+# ‹וַיֵּדְעוּ כִּי עֵירֻמִּם הֵם› (“and-they-knew that naked they”) — event:
+# know — agent both-of-them; theme naked
 m.event("know", agent="shneihem", themes=["eirummim"])
-# ‹וַיִּתְפְּרוּ עֲלֵה תְאֵנָה וַיַּעֲשׂוּ לָהֶם חֲגֹרֹת› event: make —
-# agent both-of-them; theme girdles
+# ‹וַיִּתְפְּרוּ עֲלֵה תְאֵנָה וַיַּעֲשׂוּ לָהֶם חֲגֹרֹת› (“and-they-sewed
+# leaf-of fig and-they-made for-them girdles”) — event: make — agent both-
+# of-them; theme girdles
 m.event("make", agent="shneihem", themes=["chagorot"])
-# ‹חֲגֹרֹת› the world gains: girdles
+# ‹חֲגֹרֹת› (“girdles”) — the world gains: girdles
 m.install("chagorot")
 
 # -------------------------- Gen.3.8 · VOICE_AND_HIDING ---------------------
@@ -159,10 +165,12 @@ m.install("chagorot")
 # cool of the day; and the man and his wife hid themselves from the presence
 # of the LORD God amongst the trees of the garden."
 m.step("Gen.3.8")
-# ‹וַיִּשְׁמְעוּ אֶת־קוֹל יְהוָה אֱלֹהִים מִתְהַלֵּךְ בַּגָּן› event: hear —
-# agent both-of-them; theme voice-of-the-LORD-God
+# ‹וַיִּשְׁמְעוּ אֶת־קוֹל יְהוָה אֱלֹהִים מִתְהַלֵּךְ בַּגָּן› (“and-they-
+# heard obj-marker voice-of YHWH God walking-about in-the-garden”) — event:
+# hear — agent both-of-them; theme voice-of-the-LORD-God
 m.event("hear", agent="shneihem", themes=["qol_YHWH_Elohim"])
-# ‹וַיִּתְחַבֵּא הָאָדָם וְאִשְׁתּוֹ … בְּתוֹךְ עֵץ הַגָּן› event: hide —
+# ‹וַיִּתְחַבֵּא הָאָדָם וְאִשְׁתּוֹ … בְּתוֹךְ עֵץ הַגָּן› (“and-he-hid
+# the-human and-his-wife … in-midst-of tree-of the-garden”) — event: hide —
 # agent both-of-them; theme in-midst-of-tree-of-the-garden
 m.event("hide", agent="shneihem", themes=["be_tokh_etz_ha_gan"])
 
@@ -171,10 +179,11 @@ m.event("hide", agent="shneihem", themes=["be_tokh_etz_ha_gan"])
 # "And the LORD God called unto the man, and said unto him: 'Where art
 # thou?'"
 m.step("Gen.3.9")
-# ‹וַיִּקְרָא יְהוָה אֱלֹהִים אֶל־הָאָדָם› event: call — agent the-LORD-God;
-# theme human
+# ‹וַיִּקְרָא יְהוָה אֱלֹהִים אֶל־הָאָדָם› (“and-he-called YHWH God to the-
+# human”) — event: call — agent the-LORD-God; theme human
 m.event("call", agent="YHWH_Elohim", themes=["adam"])
-# ‹אַיֶּכָּה› event: ask — agent the-LORD-God; theme where-are-you
+# ‹אַיֶּכָּה› (“where-are-you”) — event: ask — agent the-LORD-God; theme
+# where-are-you
 m.event("ask", agent="YHWH_Elohim", themes=["ayeka"])
 
 # -------------------------- Gen.3.10 · TESTIMONY_FEAR ----------------------
@@ -183,11 +192,12 @@ m.event("ask", agent="YHWH_Elohim", themes=["ayeka"])
 # "And he said: 'I heard Thy voice in the garden, and I was afraid, because
 # I was naked; and I hid myself.'"
 m.step("Gen.3.10")
-# ‹וַיֹּאמֶר אֶת־קֹלְךָ שָׁמַעְתִּי בַּגָּן› event: say — agent human; theme
-# the-LORD-God
+# ‹וַיֹּאמֶר אֶת־קֹלְךָ שָׁמַעְתִּי בַּגָּן› (“and-he-said obj-marker your-
+# voice I-heard in-the-garden”) — event: say — agent human; theme the-LORD-
+# God
 m.event("say", agent="adam", themes=["YHWH_Elohim"])
-# ‹וָאִירָא כִּי־עֵירֹם אָנֹכִי וָאֵחָבֵא› fact holds: testimony-feared-
-# naked-hid(human)
+# ‹וָאִירָא כִּי־עֵירֹם אָנֹכִי וָאֵחָבֵא› (“and-I-feared that naked I and-
+# I-hid”) — fact holds: testimony-feared-naked-hid(human)
 m.fact("testimony_feared_naked_hid(adam)")
 
 # -------------------------- Gen.3.11 · RULE_QUOTED_BACK --------------------
@@ -197,8 +207,9 @@ m.fact("testimony_feared_naked_hid(adam)")
 # tree, whereof I commanded thee that thou shouldest not eat?'"
 m.step("Gen.3.11")
 # ‹מִי הִגִּיד לְךָ … הֲמִן־הָעֵץ אֲשֶׁר צִוִּיתִיךָ לְבִלְתִּי
-# אֲכָל־מִמֶּנּוּ אָכָלְתָּ› event: ask — agent the-LORD-God; theme who-
-# told, you-have-eaten
+# אֲכָל־מִמֶּנּוּ אָכָלְתָּ› (“who told to-you … is-it-from the-tree which
+# I-commanded-you not-to eat from-it you-have-eaten”) — event: ask — agent
+# the-LORD-God; theme who-told, you-have-eaten
 m.event("ask", agent="YHWH_Elohim", themes=["mi_higid", "akhalta"])
 
 # -------------------------- Gen.3.12 · BLAME_CHAIN_ADMISSION_1 -------------
@@ -207,10 +218,11 @@ m.event("ask", agent="YHWH_Elohim", themes=["mi_higid", "akhalta"])
 # "And the man said: 'The woman whom Thou gavest to be with me, she gave me
 # of the tree, and I did eat.'"
 m.step("Gen.3.12")
-# ‹הָאִשָּׁה אֲשֶׁר נָתַתָּה עִמָּדִי הִוא נָתְנָה־לִּי› event: say — agent
+# ‹הָאִשָּׁה אֲשֶׁר נָתַתָּה עִמָּדִי הִוא נָתְנָה־לִּי› (“the-woman which
+# you-gave with-me she-ktiv-hu-qere-hi she-gave to-me”) — event: say — agent
 # human; theme woman
 m.event("say", agent="adam", themes=["ishah"])
-# ‹וָאֹכֵל› fact holds: admission-and-I-ate(human)
+# ‹וָאֹכֵל› (“and-I-ate”) — fact holds: admission-and-I-ate(human)
 m.fact("admission_va_okhel(adam)")
 
 # -------------------------- Gen.3.13 · ADMISSION_2_HAPAX_DECEIT ------------
@@ -219,18 +231,20 @@ m.fact("admission_va_okhel(adam)")
 # "And the LORD God said unto the woman: 'What is this thou hast done?' And
 # the woman said: 'The serpent beguiled me, and I did eat.'"
 m.step("Gen.3.13")
-# ‹מַה־זֹּאת עָשִׂית› event: ask — agent the-LORD-God; theme woman
+# ‹מַה־זֹּאת עָשִׂית› (“what this you-have-done”) — event: ask — agent the-
+# LORD-God; theme woman
 m.event("ask", agent="YHWH_Elohim", themes=["ishah"])
-# ‹הַנָּחָשׁ הִשִּׁיאַנִי› event: say — agent woman; theme serpent
+# ‹הַנָּחָשׁ הִשִּׁיאַנִי› (“the-serpent deceived-me”) — event: say — agent
+# woman; theme serpent
 m.event("say", agent="ishah", themes=["nachash"])
-# ‹וָאֹכֵל› fact holds: admission-and-I-ate(woman)
+# ‹וָאֹכֵל› (“and-I-ate”) — fact holds: admission-and-I-ate(woman)
 m.fact("admission_va_okhel(ishah)")
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
     assert m.created_set() == {'chagorot'}
-    assert m.presupposed_set() == {'gan', 'adam', 'ishah', 'ha_etz', 'nachash'}
+    assert m.presupposed_set() == {'adam', 'nachash', 'gan', 'ishah', 'ha_etz'}
     assert m.REGISTRY["names"] == {}
     assert m.REGISTRY["writes"] == 0
     assert m.tests_list() == [('PASS', 'tov', 'ha_etz_le_maakhal')]

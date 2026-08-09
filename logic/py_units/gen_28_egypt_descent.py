@@ -19,10 +19,11 @@ m = Machine("gen_28_egypt_descent")
 # "And there was a famine in the land; and Abram went down into Egypt to
 # sojourn there; for the famine was sore in the land."
 m.step("Gen.12.10")
-# ‹וַיֵּרֶד אַבְרָם מִצְרַיְמָה לָגוּר שָׁם› event: go-down — agent avram
+# ‹וַיֵּרֶד אַבְרָם מִצְרַיְמָה לָגוּר שָׁם› (“and-go-down Abram Egypt-ward
+# to-turn-aside-from-the-road there”) — event: go-down — agent Abram
 m.event("go_down", agent="avram")
-# ‹כִּי־כָבֵד הָרָעָב בָּאָרֶץ› fact holds: when-khaved-the-raav-in-the-
-# earth
+# ‹כִּי־כָבֵד הָרָעָב בָּאָרֶץ› (“that heavy the-hunger in-earth”) — fact
+# holds: that-heavy-the-hunger-in-the-earth
 m.fact("ki_khaved_ha_raav_ba_aretz")
 # reads without prior install (flag, not fix): mitzrayim
 m.presupposed("mitzrayim")
@@ -34,10 +35,12 @@ m.presupposed("mitzrayim")
 # said unto Sarai his wife: 'Behold now, I know that thou art a fair woman
 # to look upon.'"
 m.step("Gen.12.11")
-# ‹וַיֹּאמֶר אֶל־שָׂרַי אִשְׁתּוֹ› event: say — agent avram
+# ‹וַיֹּאמֶר אֶל־שָׂרַי אִשְׁתּוֹ› (“and-say to Sarai woman-him/its”) —
+# event: say — agent Abram
 m.event("say", agent="avram")
-# ‹הִנֵּה־נָא יָדַעְתִּי כִּי אִשָּׁה יְפַת־מַרְאֶה אָתְּ› fact holds:
-# behold-na-yadati-when-woman-yefat-appearance-at
+# ‹הִנֵּה־נָא יָדַעְתִּי כִּי אִשָּׁה יְפַת־מַרְאֶה אָתְּ› (“behold please
+# know that woman beautiful appearance thou-and-thee”) — fact holds: behold-
+# please-know-that-woman-beautiful-appearance-at
 m.fact("hinneh_na_yadati_ki_ishah_yefat_mareh_at")
 
 # -------------------------- Gen.12.12 · THE_FEAR_FORECAST ------------------
@@ -47,8 +50,9 @@ m.fact("hinneh_na_yadati_ki_ishah_yefat_mareh_at")
 # will say: This is his wife; and they will kill me, but thee they will keep
 # alive."
 m.step("Gen.12.12")
-# ‹וְהָרְגוּ אֹתִי וְאֹתָךְ יְחַיּוּ› fact holds: and-hargu-me-and-otakh-
-# yechayu
+# ‹וְהָרְגוּ אֹתִי וְאֹתָךְ יְחַיּוּ› (“and-smite-with-deadly-intent obj-
+# marker-me/my and-obj-marker-you/your live”) — fact holds: and-smite-with-
+# deadly-intent-me-and-otakh-live
 m.fact("ve_hargu_oti_ve_otakh_yechayu")
 
 # -------------------------- Gen.12.13 · THE_REQUEST_WITH_NO_REPLY ----------
@@ -57,12 +61,14 @@ m.fact("ve_hargu_oti_ve_otakh_yechayu")
 # "Say, I pray thee, thou art my sister; that it may be well with me for thy
 # sake, and that my soul may live because of thee.'"
 m.step("Gen.12.13")
-# ‹אִמְרִי־נָא אֲחֹתִי אָתְּ› avram speaks a demand — LET: imri(saray,
-# achoti-hi)
+# ‹אִמְרִי־נָא אֲחֹתִי אָתְּ› (“say please sister-me/my thou-and-thee”) —
+# Abram speaks a demand — LET: say(Sarai, achoti-hi)
 m.declare("avram", "LET",
           "imri(saray, achoti_hi)")
-# ‹לְמַעַן יִיטַב־לִי בַעֲבוּרֵךְ וְחָיְתָה נַפְשִׁי בִּגְלָלֵךְ› fact
-# holds: lemaan-yitav-to-me-vaavurekh-and-chaytah-nafshi
+# ‹לְמַעַן יִיטַב־לִי בַעֲבוּרֵךְ וְחָיְתָה נַפְשִׁי בִּגְלָלֵךְ› (“so-that
+# do-well to-me/my in-crossed-you/your and-live living-being-me/my in-
+# circumstance-you/your”) — fact holds: so-that-do-well-to-me-vaavurekh-and-
+# chaytah-nafshi
 m.fact("lemaan_yitav_li_vaavurekh_ve_chaytah_nafshi")
 
 # -------------------------- Gen.12.14 · THE_SEEING -------------------------
@@ -71,10 +77,11 @@ m.fact("lemaan_yitav_li_vaavurekh_ve_chaytah_nafshi")
 # "And it came to pass, that, when Abram was come into Egypt, the Egyptians
 # beheld the woman that she was very fair."
 m.step("Gen.12.14")
-# ‹וַיִּרְאוּ הַמִּצְרִים אֶת־הָאִשָּׁה› event: see — agent the-mitzrim;
-# theme the-woman
+# ‹וַיִּרְאוּ הַמִּצְרִים אֶת־הָאִשָּׁה› (“and-see the-Egyptian obj-marker
+# the-woman”) — event: see — agent the-Egyptian; theme the-woman
 m.event("see", agent="ha_mitzrim", themes=["ha_ishah"])
-# ‹כִּי־יָפָה הִוא מְאֹד› fact holds: when-yafah-hi-very
+# ‹כִּי־יָפָה הִוא מְאֹד› (“that beautiful he/it very”) — fact holds: that-
+# yafah-hi-very
 m.fact("ki_yafah_hi_meod")
 
 # -------------------------- Gen.12.15 · THE_PRAISE_AND_THE_PASSIVE_TAKING --
@@ -83,12 +90,14 @@ m.fact("ki_yafah_hi_meod")
 # "And the princes of Pharaoh saw her, and praised her to Pharaoh; and the
 # woman was taken into Pharaoh's house."
 m.step("Gen.12.15")
-# ‹וַיִּרְאוּ אֹתָהּ שָׂרֵי פַרְעֹה› event: see — agent sarei-faro; theme
-# the-woman
+# ‹וַיִּרְאוּ אֹתָהּ שָׂרֵי פַרְעֹה› (“and-see obj-marker-her/its officer
+# Pharaoh”) — event: see — agent sarei-Pharaoh; theme the-woman
 m.event("see", agent="sarei_faro", themes=["ha_ishah"])
-# ‹וַיְהַלְלוּ אֹתָהּ אֶל־פַּרְעֹה› event: praise — agent sarei-faro
+# ‹וַיְהַלְלוּ אֹתָהּ אֶל־פַּרְעֹה› (“and-be-clear obj-marker-her/its to
+# Pharaoh”) — event: praise — agent sarei-Pharaoh
 m.event("praise", agent="sarei_faro")
-# ‹וַתֻּקַּח הָאִשָּׁה בֵּית פַּרְעֹה› event: take — theme the-woman
+# ‹וַתֻּקַּח הָאִשָּׁה בֵּית פַּרְעֹה› (“and-take the-woman house Pharaoh”)
+# — event: take — theme the-woman
 m.event("take", themes=["ha_ishah"])
 
 # -------------------------- Gen.12.16 · THE_PAYMENT_FOR_HER_SAKE -----------
@@ -98,11 +107,14 @@ m.event("take", themes=["ha_ishah"])
 # and he-asses, and men-servants, and maid-servants, and she-asses, and
 # camels."
 m.step("Gen.12.16")
-# ‹וּלְאַבְרָם הֵיטִיב בַּעֲבוּרָהּ› event: do-good — agent paro
+# ‹וּלְאַבְרָם הֵיטִיב בַּעֲבוּרָהּ› (“and-to-Abram do-well in-crossed-
+# her/its”) — event: do-good — agent Pharaoh
 m.event("do_good", agent="paro")
 # ‹וַיְהִי־לוֹ צֹאן־וּבָקָר וַחֲמֹרִים וַעֲבָדִים וּשְׁפָחֹת וַאֲתֹנֹת
-# וּגְמַלִּים› fact holds: and-yehi-not-tzon-and-vaqar-and-chamorim-and-
-# avadim-and-shfachot-and-atonot-and-gemalim
+# וּגְמַלִּים› (“and-be to-him/its flock and-herd and-male-ass and-servant
+# and-female-slave and-female-donkey and-camel”) — fact holds: and-be-not-
+# flock-and-herd-and-male-ass-and-servant-and-shfachot-and-female-donkey-
+# and-camel
 m.fact("va_yehi_lo_tzon_u_vaqar_va_chamorim_va_avadim_u_shfachot_va_atonot_u_gemalim")
 
 # -------------------------- Gen.12.17 · THE_PLAGUE_WITHOUT_A_WORD ----------
@@ -111,11 +123,12 @@ m.fact("va_yehi_lo_tzon_u_vaqar_va_chamorim_va_avadim_u_shfachot_va_atonot_u_gem
 # "And the LORD plagued Pharaoh and his house with great plagues because of
 # Sarai Abram's wife."
 m.step("Gen.12.17")
-# ‹וַיְנַגַּע יְהוָה אֶת־פַּרְעֹה נְגָעִים גְּדֹלִים וְאֶת־בֵּיתוֹ› event:
-# plague — agent the-LORD; theme paro-and-veito
+# ‹וַיְנַגַּע יְהוָה אֶת־פַּרְעֹה נְגָעִים גְּדֹלִים וְאֶת־בֵּיתוֹ› (“and-
+# touch YHWH obj-marker Pharaoh blow great and-obj-marker house-him/its”) —
+# event: plague — agent the-LORD; theme Pharaoh-and-veito
 m.event("plague", agent="YHWH", themes=["paro_u_veito"])
-# ‹עַל־דְּבַר שָׂרַי אֵשֶׁת אַבְרָם› fact holds: upon-devar-saray-wife-of-
-# avram
+# ‹עַל־דְּבַר שָׂרַי אֵשֶׁת אַבְרָם› (“over word/thing Sarai woman Abram”) —
+# fact holds: over-word/thing-Sarai-woman-Abram
 m.fact("al_devar_saray_eshet_avram")
 
 # -------------------------- Gen.12.18 · THE_KINGS_QUESTIONS_IN_THE_GARDENS_FORM -
@@ -124,8 +137,9 @@ m.fact("al_devar_saray_eshet_avram")
 # "And Pharaoh called Abram, and said: 'What is this that thou hast done
 # unto me? why didst thou not tell me that she was thy wife?'"
 m.step("Gen.12.18")
-# ‹וַיִּקְרָא פַרְעֹה לְאַבְרָם וַיֹּאמֶר מַה־זֹּאת עָשִׂיתָ לִּי› event:
-# say — agent paro
+# ‹וַיִּקְרָא פַרְעֹה לְאַבְרָם וַיֹּאמֶר מַה־זֹּאת עָשִׂיתָ לִּי› (“and-
+# call Pharaoh to-Abram and-say what this make to-me/my”) — event: say —
+# agent Pharaoh
 m.event("say", agent="paro")
 
 # -------------------------- Gen.12.19 · THE_CONFESSION_AND_THE_COUNTER_COMMANDS -
@@ -134,14 +148,16 @@ m.event("say", agent="paro")
 # "Why saidst thou: She is my sister? so that I took her to be my wife; now
 # therefore behold thy wife, take her, and go thy way.'"
 m.step("Gen.12.19")
-# ‹אָמַרְתָּ אֲחֹתִי הִוא וָאֶקַּח אֹתָהּ לִי לְאִשָּׁה› fact holds: amarta-
-# achoti-hi; and-eqach-her-to-me-to-woman
+# ‹אָמַרְתָּ אֲחֹתִי הִוא וָאֶקַּח אֹתָהּ לִי לְאִשָּׁה› (“say sister-me/my
+# he/it and-take obj-marker-her/its to-me/my to-woman”) — fact holds: say-
+# achoti-hi; and-take-her-to-me-to-woman
 m.fact("amarta_achoti_hi",
        "va_eqach_otah_li_le_ishah")
-# ‹הִנֵּה אִשְׁתְּךָ קַח› paro speaks a demand — LET: qach(avram, his-wife)
+# ‹הִנֵּה אִשְׁתְּךָ קַח› (“behold woman-you/your take”) — Pharaoh speaks a
+# demand — LET: take(Abram, thou-and-thee-his-wife)
 m.declare("paro", "LET",
           "qach(avram, et_ishto)")
-# ‹וָלֵךְ› paro speaks a demand — LET: lekh(avram)
+# ‹וָלֵךְ› (“and-go”) — Pharaoh speaks a demand — LET: go(Abram)
 m.declare("paro", "LET",
           "lekh(avram)")
 
@@ -151,11 +167,13 @@ m.declare("paro", "LET",
 # "And Pharaoh gave men charge concerning him; and they brought him on the
 # way, and his wife, and all that he had."
 m.step("Gen.12.20")
-# ‹וַיְצַו עָלָיו פַּרְעֹה אֲנָשִׁים› event: command — agent paro; theme
-# anashim
+# ‹וַיְצַו עָלָיו פַּרְעֹה אֲנָשִׁים› (“and-command over-him/its Pharaoh
+# man”) — event: command — agent Pharaoh; theme man
 m.event("command", agent="paro", themes=["anashim"])
-# ‹וַיְשַׁלְּחוּ אֹתוֹ וְאֶת־אִשְׁתּוֹ וְאֶת־כָּל־אֲשֶׁר־לוֹ› event: send-
-# away — agent anashim; theme avram-and-his-wife-and-all-which-not
+# ‹וַיְשַׁלְּחוּ אֹתוֹ וְאֶת־אִשְׁתּוֹ וְאֶת־כָּל־אֲשֶׁר־לוֹ› (“and-send
+# obj-marker-him/its and-obj-marker woman-him/its and-obj-marker all which
+# to-him/its”) — event: send-away — agent man; theme Abram-and-his-wife-and-
+# all-which-not
 m.event("send_away", agent="anashim", themes=["avram_ve_ishto_ve_khol_asher_lo"])
 
 # -------------------------- machine truth (baked from the Stage D run) -------

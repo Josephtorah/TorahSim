@@ -22,8 +22,9 @@ m = Machine("gen_56_blessing_returned_first_altar")
 # and with him four hundred men. And he divided the children unto Leah and
 # unto Rachel and unto the two maids."
 m.step("Gen.33.1")
-# ‹וַיִּשָּׂא יַעֲקֹב עֵינָיו וַיַּרְא וְהִנֵּה עֵשָׂו בָּא› fact holds:
-# and-yar-esav-in-the-and-yachatz(arba-meot-man)
+# ‹וַיִּשָּׂא יַעֲקֹב עֵינָיו וַיַּרְא וְהִנֵּה עֵשָׂו בָּא› (“and-
+# lift/carry Jacob eye-him/its and-see and-behold Esau come/bring”) — fact
+# holds: and-see-Esau-come/bring-and-cut(four-hundred-man)
 m.fact("va_yar_esav_ba_va_yachatz(arba_meot_ish)")
 
 # -------------------------- Gen.33.2 · THE_ORDER_OF_LOVE -------------------
@@ -32,8 +33,9 @@ m.fact("va_yar_esav_ba_va_yachatz(arba_meot_ish)")
 # "[EN-AID] And he put the maids and their children first, and Leah and her
 # children behind, and Rachel and Joseph hindmost."
 m.step("Gen.33.2")
-# ‹וַיָּשֶׂם אֶת־הַשְּׁפָחוֹת וְאֶת־יַלְדֵיהֶן רִאשֹׁנָה› fact holds:
-# rishona-acharonim-acharonim(seder-the-machane)
+# ‹וַיָּשֶׂם אֶת־הַשְּׁפָחוֹת וְאֶת־יַלְדֵיהֶן רִאשֹׁנָה› (“and-put/set obj-
+# marker the-female-slave and-obj-marker child-them/their first”) — fact
+# holds: first-other-other(seder-the-camp)
 m.fact("rishona_acharonim_acharonim(seder_ha_machane)")
 
 # -------------------------- Gen.33.3 · THE_BOW_INVERTED --------------------
@@ -42,8 +44,8 @@ m.fact("rishona_acharonim_acharonim(seder_ha_machane)")
 # "[EN-AID] And he himself crossed over before them and bowed to the ground
 # seven times, until he came near to his brother."
 m.step("Gen.33.3")
-# ‹וַיִּשְׁתַּחוּ אַרְצָה שֶׁבַע פְּעָמִים› fact holds: and-yishtachu-seven-
-# peamim(hipukh-the-berakha)
+# ‹וַיִּשְׁתַּחוּ אַרְצָה שֶׁבַע פְּעָמִים› (“and-afflict earth-ward seven
+# stroke”) — fact holds: and-afflict-seven-stroke(hipukh-the-berakha)
 m.fact("va_yishtachu_sheva_peamim(hipukh_ha_berakha)")
 
 # -------------------------- Gen.33.4 · THE_HAND_BECOMES_ARMS ---------------
@@ -52,8 +54,9 @@ m.fact("va_yishtachu_sheva_peamim(hipukh_ha_berakha)")
 # "[EN-AID] And Esau ran to meet him and embraced him, and fell on his neck
 # and kissed him; and they wept."
 m.step("Gen.33.4")
-# ‹וַיָּרָץ עֵשָׂו לִקְרָאתוֹ וַיְחַבְּקֵהוּ› fact holds: and-yechabqehu-
-# and-yivku(esav-and-yaaqov)
+# ‹וַיָּרָץ עֵשָׂו לִקְרָאתוֹ וַיְחַבְּקֵהוּ› (“and-run Esau to-
+# encountering-him/its and-clasp-him/its”) — fact holds: and-yechabqehu-and-
+# weep(Esau-and-Jacob)
 m.fact("va_yechabqehu_va_yivku(esav_ve_yaaqov)")
 
 # -------------------------- Gen.33.5 · THE_GRACE_VERB_IS_BORN --------------
@@ -63,8 +66,8 @@ m.fact("va_yechabqehu_va_yivku(esav_ve_yaaqov)")
 # said: Who are these to you? And he said: The children with whom God has
 # graced your servant."
 m.step("Gen.33.5")
-# ‹חָנַן אֱלֹהִים אֶת־עַבְדֶּךָ› fact holds: the-yeladim-which-chanan-
-# God(maane-yaaqov)
+# ‹חָנַן אֱלֹהִים אֶת־עַבְדֶּךָ› (“bend God obj-marker servant-you/your”) —
+# fact holds: the-child-which-bend-God(maane-Jacob)
 m.fact("ha_yeladim_asher_chanan_Elohim(maane_yaaqov)")
 
 # -------------------------- Gen.33.6 · THE_FIRST_WAVE ----------------------
@@ -72,8 +75,9 @@ m.fact("ha_yeladim_asher_chanan_Elohim(maane_yaaqov)")
 # "[EN-AID] And the maids came near, they and their children, and they
 # bowed."
 m.step("Gen.33.6")
-# ‹וַתִּגַּשְׁןָ הַשְּׁפָחוֹת הֵנָּה וְיַלְדֵיהֶן וַתִּשְׁתַּחֲוֶיןָ› fact
-# holds: and-tigashna-and-tishtachavena(the-shefachot)
+# ‹וַתִּגַּשְׁןָ הַשְּׁפָחוֹת הֵנָּה וְיַלְדֵיהֶן וַתִּשְׁתַּחֲוֶיןָ› (“and-
+# be the-female-slave themselves and-child-them/their and-afflict”) — fact
+# holds: and-be-and-afflict(the-female-slave)
 m.fact("va_tigashna_va_tishtachavena(ha_shefachot)")
 
 # -------------------------- Gen.33.7 · THE_SECOND_AND_THIRD_WAVES ----------
@@ -82,8 +86,9 @@ m.fact("va_tigashna_va_tishtachavena(ha_shefachot)")
 # "[EN-AID] And Leah too came near, and her children, and they bowed; and
 # after came Joseph near, and Rachel, and they bowed."
 m.step("Gen.33.7")
-# ‹וַתִּגַּשׁ גַּם־לֵאָה וִילָדֶיהָ וַיִּשְׁתַּחֲווּ› fact holds: and-
-# yishtachavu-kulam(lea-yosef-and-rachel)
+# ‹וַתִּגַּשׁ גַּם־לֵאָה וִילָדֶיהָ וַיִּשְׁתַּחֲווּ› (“and-be also Leah
+# and-child-her/its and-afflict”) — fact holds: and-afflict-kulam(Leah-
+# Joseph-and-Rachel)
 m.fact("va_yishtachavu_kulam(lea_yosef_ve_rachel)")
 
 # -------------------------- Gen.33.8 · THE_CAMP_EXPLAINED ------------------
@@ -92,8 +97,9 @@ m.fact("va_yishtachavu_kulam(lea_yosef_ve_rachel)")
 # "[EN-AID] And he said: What to you is all this camp which I met? And he
 # said: To find grace in the eyes of my lord."
 m.step("Gen.33.8")
-# ‹מִי לְךָ כָּל־הַמַּחֲנֶה הַזֶּה אֲשֶׁר› fact holds: from-to-you-kal-the-
-# machane(pagashti)
+# ‹מִי לְךָ כָּל־הַמַּחֲנֶה הַזֶּה אֲשֶׁר› (“who? to-you/your all the-camp
+# the-this which”) — fact holds: who?-to-you-all-the-camp(come-in-contact-
+# with)
 m.fact("mi_lekha_kal_ha_machane(pagashti)")
 
 # -------------------------- Gen.33.9 · THE_KEEP_IT_JUSSIVE -----------------
@@ -101,7 +107,8 @@ m.fact("mi_lekha_kal_ha_machane(pagashti)")
 # "[EN-AID] And Esau said: I have much, my brother; let what is yours be
 # yours."
 m.step("Gen.33.9")
-# ‹יֶשׁ־לִי רָב אָחִי› esav speaks a demand — LET: yehi(to-you-which-to-you)
+# ‹יֶשׁ־לִי רָב אָחִי› (“there-is to-me/my many/great brother-me/my”) — Esau
+# speaks a demand — LET: be(to-you-which-to-you)
 m.declare("esav", "LET",
           "yehi(lekha_asher_lakh)")
 
@@ -114,7 +121,9 @@ m.declare("esav", "LET",
 # face, as one sees the face of God, and you have accepted me."
 m.step("Gen.33.10")
 # ‹כִּי עַל־כֵּן רָאִיתִי פָנֶיךָ כִּרְאֹת פְּנֵי אֱלֹהִים וַתִּרְצֵנִי›
-# fact holds: when-see-pene-God-and-tirtzeni(peniel-coda)
+# (“very-widely-used-as-a-relati above set-upright see face-you/your like-
+# see face God and-be-pleased-with-me/my”) — fact holds: very-widely-used-
+# as-a-relati-see-face-God-and-tirtzeni(peniel-coda)
 m.fact("ki_reot_pene_Elohim_va_tirtzeni(peniel_coda)")
 
 # -------------------------- Gen.33.11 · THE_POP_THE_BLESSING_RETURNED ------
@@ -123,20 +132,21 @@ m.fact("ki_reot_pene_Elohim_va_tirtzeni(peniel_coda)")
 # "[EN-AID] Take, please, my blessing that was brought to you, for God has
 # graced me, and because I have all. And he urged him, and he took."
 m.step("Gen.33.11")
-# ‹קַח־נָא אֶת־בִּרְכָתִי› yaaqov speaks a demand — LET: qach-na-
-# birkhati(esav)
+# ‹קַח־נָא אֶת־בִּרְכָתִי› (“take please obj-marker blessing-me/my”) — Jacob
+# speaks a demand — LET: take-please-obj-marker-birkhati(Esau)
 m.declare("yaaqov", "LET",
           "qach_na_et_birkhati(esav)")
-# ‹וַיִּפְצַר־בּוֹ וַיִּקָּח› demand settled (popped from the queue): qach-
-# na-birkhati(esav)
+# ‹וַיִּפְצַר־בּוֹ וַיִּקָּח› (“and-peck-at in-him/its and-take”) — demand
+# settled (popped from the queue): take-please-obj-marker-birkhati(Esau)
 m.result("qach_na_et_birkhati(esav)", tmark="t2")
 
 # -------------------------- Gen.33.12 · THE_DECLINED_CONVOY ----------------
 # וַיֹּאמֶר נִסְעָה וְנֵלֵכָה וְאֵלְכָה לְנֶגְדֶּךָ
 # "[EN-AID] And he said: Let us journey and go, and I will go opposite you."
 m.step("Gen.33.12")
-# ‹נִסְעָה וְנֵלֵכָה וְאֵלְכָה לְנֶגְדֶּךָ› esav speaks a demand — CMD-US?:
-# nisa-and-nelekha(esav-and-yaaqov)
+# ‹נִסְעָה וְנֵלֵכָה וְאֵלְכָה לְנֶגְדֶּךָ› (“journey and-go and-go to-
+# front-you/your”) — Esau speaks a demand — CMD-US?: journey-and-go(Esau-
+# and-Jacob)
 m.declare("esav", "CMD-US?",
           "nisa_ve_nelekha(esav_ve_yaaqov)")
 
@@ -147,8 +157,8 @@ m.declare("esav", "CMD-US?",
 # and the flock and herd giving suck are upon me; and were they overdriven
 # one day, all the flock would die."
 m.step("Gen.33.13")
-# ‹אֲדֹנִי יֹדֵעַ כִּי־הַיְלָדִים רַכִּים› fact holds: the-yeladim-rakim-
-# and-alot-alay(taanat-yaaqov)
+# ‹אֲדֹנִי יֹדֵעַ כִּי־הַיְלָדִים רַכִּים› (“lord-me/my know that the-child
+# tender”) — fact holds: the-child-tender-and-suckle-alay(taanat-Jacob)
 m.fact("ha_yeladim_rakim_ve_alot_alay(taanat_yaaqov)")
 
 # -------------------------- Gen.33.14 · THE_PASS_BEFORE_JUSSIVE ------------
@@ -159,8 +169,9 @@ m.fact("ha_yeladim_rakim_ve_alot_alay(taanat_yaaqov)")
 # gently at my slow pace, at the foot of the work before me and at the foot
 # of the children, until I come to my lord, to Seir."
 m.step("Gen.33.14")
-# ‹יַעֲבָר־נָא אֲדֹנִי לִפְנֵי עַבְדּוֹ› yaaqov speaks a demand — LET:
-# yaavar-na(adoni, to-me-fene-avdo)
+# ‹יַעֲבָר־נָא אֲדֹנִי לִפְנֵי עַבְדּוֹ› (“pass-over please lord-me/my to-
+# face servant-him/its”) — Jacob speaks a demand — LET: pass-over-
+# please(adoni, to-me-fene-avdo)
 m.declare("yaaqov", "LET",
           "yaavar_na(adoni, li_fene_avdo)")
 
@@ -171,16 +182,18 @@ m.declare("yaaqov", "LET",
 # people who are with me. And he said: Why so? Let me find grace in the eyes
 # of my lord."
 m.step("Gen.33.15")
-# ‹אַצִּיגָה־נָּא עִמְּךָ מִן־הָעָם› fact holds: atziga-na-declined(to-ma-
-# ze)
+# ‹אַצִּיגָה־נָּא עִמְּךָ מִן־הָעָם› (“place-permanently please with-
+# you/your from the-people”) — fact holds: place-permanently-please-
+# declined(to-what-this)
 m.fact("atziga_na_declined(la_ma_ze)")
 
 # -------------------------- Gen.33.16 · THE_FIRST_VECTOR -------------------
 # וַיָּשָׁב בַּיּוֹם הַהוּא עֵשָׂו לְדַרְכּוֹ שֵׂעִירָה
 # "[EN-AID] And Esau returned that day on his way to Seir."
 m.step("Gen.33.16")
-# ‹וַיָּשָׁב בַּיּוֹם הַהוּא עֵשָׂו לְדַרְכּוֹ שֵׂעִירָה› fact holds: and-
-# yashav-esav-seira(to-its-way)
+# ‹וַיָּשָׁב בַּיּוֹם הַהוּא עֵשָׂו לְדַרְכּוֹ שֵׂעִירָה› (“and-return in-
+# day that Esau to-way/road-him/its Seir-ward”) — fact holds: and-return-
+# Esau-seira(to-its-way)
 m.fact("va_yashav_esav_seira(le_darko)")
 
 # -------------------------- Gen.33.17 · THE_SECOND_VECTOR_AND_THE_BOOTHS ---
@@ -190,8 +203,8 @@ m.fact("va_yashav_esav_seira(le_darko)")
 # for his cattle he made booths; therefore he called the name of the place
 # Sukkot."
 m.step("Gen.33.17")
-# ‹וְיַעֲקֹב נָסַע סֻכֹּתָה› fact holds: and-yaaqov-nasa-sukota(bayit-and-
-# sukot, report-only)
+# ‹וְיַעֲקֹב נָסַע סֻכֹּתָה› (“and-Jacob journey Succoth-ward”) — fact
+# holds: and-Jacob-journey-sukota(house-and-hut, report-only)
 m.fact("ve_yaaqov_nasa_sukota(bayit_u_sukot, report_only)")
 
 # -------------------------- Gen.33.18 · THE_WHOLE_ARRIVAL ------------------
@@ -201,8 +214,9 @@ m.fact("ve_yaaqov_nasa_sukota(bayit_u_sukot, report_only)")
 # land of Canaan, in his coming from Paddan-Aram; and he encamped before the
 # city."
 m.step("Gen.33.18")
-# ‹וַיָּבֹא יַעֲקֹב שָׁלֵם עִיר שְׁכֶם› fact holds: and-yavo-shalem-from-
-# padan-aram(and-yichan)
+# ‹וַיָּבֹא יַעֲקֹב שָׁלֵם עִיר שְׁכֶם› (“and-come/bring Jacob complete city
+# Shechem”) — fact holds: and-come/bring-complete-who?-from-Padan(and-
+# encamp)
 m.fact("va_yavo_shalem_mi_padan_aram(va_yichan)")
 
 # -------------------------- Gen.33.19 · THE_SECOND_PURCHASE ----------------
@@ -212,8 +226,8 @@ m.fact("va_yavo_shalem_mi_padan_aram(va_yichan)")
 # tent from the hand of the sons of Hamor, father of Shechem, for a hundred
 # qesita."
 m.step("Gen.33.19")
-# ‹וַיִּקֶן אֶת־חֶלְקַת הַשָּׂדֶה› fact holds: and-yiqen-chelqat-the-
-# sade(in-mea-qesita)
+# ‹וַיִּקֶן אֶת־חֶלְקַת הַשָּׂדֶה› (“and-erect obj-marker smoothness the-
+# field”) — fact holds: and-erect-smoothness-the-field(in-hundred-ingot)
 m.fact("va_yiqen_chelqat_ha_sade(be_mea_qesita)")
 
 # -------------------------- Gen.33.20 · THE_ALTAR_AND_THE_OBLIQUE_WRITE ----
@@ -221,10 +235,11 @@ m.fact("va_yiqen_chelqat_ha_sade(be_mea_qesita)")
 # "[EN-AID] And he set up there an altar, and called it El-Elohe-Israel
 # [God, the God of Israel]."
 m.step("Gen.33.20")
-# ‹וַיַּצֶּב־שָׁם מִזְבֵּחַ› the world gains: the-altar
+# ‹וַיַּצֶּב־שָׁם מִזְבֵּחַ› (“and-stand there altar”) — the world gains:
+# the-altar
 m.install("ha_mizbeach")
-# ‹וַיִּקְרָא־לוֹ אֵל אֱלֹהֵי יִשְׂרָאֵל› named: the-altar := to-elohe-
-# yisrael
+# ‹וַיִּקְרָא־לוֹ אֵל אֱלֹהֵי יִשְׂרָאֵל› (“and-call to-him/its strength God
+# Israel”) — named: the-altar := do-not-God-Israel
 m.name("ha_mizbeach", "el_elohe_yisrael")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

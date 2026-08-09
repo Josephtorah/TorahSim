@@ -20,14 +20,16 @@ m = Machine("gen_31_covenant_pieces")
 # saying: 'Fear not, Abram, I am thy shield, thy reward shall be exceeding
 # great.'"
 m.step("Gen.15.1")
-# ‹הָיָה דְבַר־יְהוָה אֶל־אַבְרָם בַּמַּחֲזֶה› event: come — theme devar-
-# the-LORD
+# ‹הָיָה דְבַר־יְהוָה אֶל־אַבְרָם בַּמַּחֲזֶה› (“be word/thing YHWH to Abram
+# in-vision”) — event: come — theme word/thing-the-LORD
 m.event("come", themes=["devar_YHWH"])
-# ‹אַל־תִּירָא אַבְרָם› the-LORD speaks a demand — LET-NOT: tira(avram)
+# ‹אַל־תִּירָא אַבְרָם› (“do-not fear Abram”) — the-LORD speaks a demand —
+# LET-NOT: fear(Abram)
 m.declare("YHWH", "LET-NOT",
           "tira(avram)")
-# ‹אָנֹכִי מָגֵן לָךְ שְׂכָרְךָ הַרְבֵּה מְאֹד› fact holds: anokhi-magen-to-
-# you; sekharkha-harbeh-very
+# ‹אָנֹכִי מָגֵן לָךְ שְׂכָרְךָ הַרְבֵּה מְאֹד› (“shield to-you/your wage-
+# you/your multiply very”) — fact holds: I-shield-to-you; sekharkha-harbeh-
+# very
 m.fact("anokhi_magen_lakh",
        "sekharkha_harbeh_meod")
 
@@ -38,14 +40,16 @@ m.fact("anokhi_magen_lakh",
 # childless, and he that shall be possessor of my house is Eliezer of
 # Damascus?'"
 m.step("Gen.15.2")
-# ‹וַיֹּאמֶר אַבְרָם אֲדֹנָי יֱהוִה› event: say — agent avram
+# ‹וַיֹּאמֶר אַבְרָם אֲדֹנָי יֱהוִה› (“and-say Abram Lord-me/my YHWH”) —
+# event: say — agent Abram
 m.event("say", agent="avram")
 # ‹מַה־תִּתֶּן־לִי וְאָנֹכִי הוֹלֵךְ עֲרִירִי וּבֶן־מֶשֶׁק בֵּיתִי הוּא
-# דַּמֶּשֶׂק אֱלִיעֶזֶר› fact holds: mah-titen-to-me-and-anokhi-holekh-
-# ariri; ben-mesheq-beti-that-dameseq-eliezer
+# דַּמֶּשֶׂק אֱלִיעֶזֶר› (“what set to-me/my and-I walk/go bare and-son
+# possession house-me/my he/it Damascus Eliezer”) — fact holds: mah-set-to-
+# me-and-I-walk/go-bare; between-possession-beti-he/it-Damascus-Eliezer
 m.fact("mah_titen_li_ve_anokhi_holekh_ariri",
        "ben_mesheq_beti_hu_dameseq_eliezer")
-# reads without prior install (flag, not fix): dameseq
+# reads without prior install (flag, not fix): Damascus
 m.presupposed("dameseq")
 
 # -------------------------- Gen.15.3 · THE_COMPLAINT_RELAUNCHED ------------
@@ -54,10 +58,12 @@ m.presupposed("dameseq")
 # "And Abram said: 'Behold, to me Thou hast given no seed, and, lo, one born
 # in my house is to be mine heir.'"
 m.step("Gen.15.3")
-# ‹וַיֹּאמֶר אַבְרָם› event: say — agent avram
+# ‹וַיֹּאמֶר אַבְרָם› (“and-say Abram”) — event: say — agent Abram
 m.event("say", agent="avram")
-# ‹הֵן לִי לֹא נָתַתָּה זָרַע וְהִנֵּה בֶן־בֵּיתִי יוֹרֵשׁ אֹתִי› fact
-# holds: hen-to-me-not-natata-zara; ben-beti-yoresh-me
+# ‹הֵן לִי לֹא נָתַתָּה זָרַע וְהִנֵּה בֶן־בֵּיתִי יוֹרֵשׁ אֹתִי› (“lo! to-
+# me/my not set seed and-behold son house-me/my possess/inherit obj-marker-
+# me/my”) — fact holds: lo!-to-me-not-set-seed; between-beti-
+# possess/inherit-me
 m.fact("hen_li_lo_natata_zara",
        "ben_beti_yoresh_oti")
 
@@ -68,10 +74,13 @@ m.fact("hen_li_lo_natata_zara",
 # not be thine heir; but he that shall come forth out of thine own bowels
 # shall be thine heir.'"
 m.step("Gen.15.4")
-# ‹וְהִנֵּה דְבַר־יְהוָה אֵלָיו לֵאמֹר› event: come — theme devar-the-LORD
+# ‹וְהִנֵּה דְבַר־יְהוָה אֵלָיו לֵאמֹר› (“and-behold word/thing YHWH to-
+# him/its to-say”) — event: come — theme word/thing-the-LORD
 m.event("come", themes=["devar_YHWH"])
-# ‹לֹא יִירָשְׁךָ זֶה כִּי־אִם אֲשֶׁר יֵצֵא מִמֵּעֶיךָ הוּא יִירָשֶׁךָ› fact
-# holds: not-yirashkha-this; which-yetze-from-meekha-that-yirashekha
+# ‹לֹא יִירָשְׁךָ זֶה כִּי־אִם אֲשֶׁר יֵצֵא מִמֵּעֶיךָ הוּא יִירָשֶׁךָ›
+# (“not possess/inherit-you/your this that if which bring-forth from-used-
+# only-in-plural-the-inte-you/your he/it possess/inherit-you/your”) — fact
+# holds: not-yirashkha-this; which-bring-forth-from-meekha-he/it-yirashekha
 m.fact("lo_yirashkha_zeh",
        "asher_yetze_mi_meekha_hu_yirashekha")
 
@@ -83,25 +92,29 @@ m.fact("lo_yirashkha_zeh",
 # count the stars, if thou be able to count them'; and He said unto him: 'So
 # shall thy seed be.'"
 m.step("Gen.15.5")
-# ‹וַיּוֹצֵא אֹתוֹ הַחוּצָה› event: bring-out — agent the-LORD; theme avram
+# ‹וַיּוֹצֵא אֹתוֹ הַחוּצָה› (“and-bring-forth obj-marker-him/its the-
+# outside-ward”) — event: bring-out — agent the-LORD; theme Abram
 m.event("bring_out", agent="YHWH", themes=["avram"])
-# ‹וַיֹּאמֶר› event: say — agent the-LORD
+# ‹וַיֹּאמֶר› (“and-say”) — event: say — agent the-LORD
 m.event("say", agent="YHWH")
-# ‹הַבֶּט־נָא הַשָּׁמַיְמָה וּסְפֹר הַכּוֹכָבִים› the-LORD speaks a demand —
-# LET: habet-and-sefor(avram, the-shamaymah-and-the-stars)
+# ‹הַבֶּט־נָא הַשָּׁמַיְמָה וּסְפֹר הַכּוֹכָבִים› (“look please the-heavens-
+# ward and-count the-stars”) — the-LORD speaks a demand — LET: look-and-
+# count(Abram, the-shamaymah-and-the-stars)
 m.declare("YHWH", "LET",
           "habet_u_sefor(avram, ha_shamaymah_ve_ha_kokhavim)")
-# ‹וַיֹּאמֶר לוֹ› event: say — agent the-LORD
+# ‹וַיֹּאמֶר לוֹ› (“and-say to-him/its”) — event: say — agent the-LORD
 m.event("say", agent="YHWH")
-# ‹כֹּה יִהְיֶה זַרְעֶךָ› fact holds: koh-yihyeh-zarekha
+# ‹כֹּה יִהְיֶה זַרְעֶךָ› (“like-this be seed-you/your”) — fact holds: koh-
+# yihyeh-zarekha
 m.fact("koh_yihyeh_zarekha")
 
 # -------------------------- Gen.15.6 · THE_BELIEF_AND_THE_RECKONING --------
 # וְהֶאֱמִן בַּיהוָה וַיַּחְשְׁבֶהָ לּוֹ צְדָקָה
 # "And he believed in the LORD; and He counted it to him for righteousness."
 m.step("Gen.15.6")
-# ‹וְהֶאֱמִן בַּיהוָה וַיַּחְשְׁבֶהָ לּוֹ צְדָקָה› fact holds: and-heemin-
-# in-the-the-LORD; and-yachsheveha-not-tzedaqah
+# ‹וְהֶאֱמִן בַּיהוָה וַיַּחְשְׁבֶהָ לּוֹ צְדָקָה› (“and-build-up in-YHWH
+# and-plait-her/its to-him/its rightness”) — fact holds: and-build-up-in-
+# the-the-LORD; and-yachsheveha-not-tzedaqah
 m.fact("ve_heemin_ba_YHWH",
        "va_yachsheveha_lo_tzedaqah")
 
@@ -111,24 +124,27 @@ m.fact("ve_heemin_ba_YHWH",
 # "And He said unto him: 'I am the LORD that brought thee out of Ur of the
 # Chaldees, to give thee this land to inherit it.'"
 m.step("Gen.15.7")
-# ‹וַיֹּאמֶר אֵלָיו› event: say — agent the-LORD
+# ‹וַיֹּאמֶר אֵלָיו› (“and-say to-him/its”) — event: say — agent the-LORD
 m.event("say", agent="YHWH")
 # ‹אֲנִי יְהוָה אֲשֶׁר הוֹצֵאתִיךָ מֵאוּר כַּשְׂדִּים לָתֶת לְךָ אֶת־הָאָרֶץ
-# הַזֹּאת לְרִשְׁתָּהּ› fact holds: ani-the-LORD-which-hotzetikha-from-ur-
-# kasdim; to-tet-to-you-the-earth-the-this-to-rishtah
+# הַזֹּאת לְרִשְׁתָּהּ› (“YHWH which bring-forth-you/your from-Ur Chaldeans
+# to-set to-you/your obj-marker the-earth the-this to-possess/inherit-
+# her/its”) — fact holds: ani-the-LORD-which-hotzetikha-from-Ur-Chaldeans;
+# to-set-to-you-obj-marker-the-earth-the-this-to-rishtah
 m.fact("ani_YHWH_asher_hotzetikha_me_ur_kasdim",
        "la_tet_lekha_et_ha_aretz_ha_zot_le_rishtah")
-# reads without prior install (flag, not fix): ur-kasdim
+# reads without prior install (flag, not fix): Ur-Chaldeans
 m.presupposed("ur_kasdim")
 
 # -------------------------- Gen.15.8 · THE_SECOND_QUESTION -----------------
 # וַיֹּאמַר אֲדֹנָי יֱהוִה בַּמָּה אֵדַע כִּי אִירָשֶׁנָּה
 # "And he said: 'O Lord GOD, whereby shall I know that I shall inherit it?'"
 m.step("Gen.15.8")
-# ‹וַיֹּאמַר› event: say — agent avram
+# ‹וַיֹּאמַר› (“and-say”) — event: say — agent Abram
 m.event("say", agent="avram")
-# ‹אֲדֹנָי יֱהוִה בַּמָּה אֵדַע כִּי אִירָשֶׁנָּה› fact holds: in-the-mah-
-# eda-when-irashena
+# ‹אֲדֹנָי יֱהוִה בַּמָּה אֵדַע כִּי אִירָשֶׁנָּה› (“Lord-me/my YHWH in-what
+# know that possess/inherit-her/its”) — fact holds: in-the-mah-know-that-
+# irashena
 m.fact("ba_mah_eda_ki_irashena")
 
 # -------------------------- Gen.15.9 · THE_TAKE_COMMAND --------------------
@@ -138,11 +154,13 @@ m.fact("ba_mah_eda_ki_irashena")
 # goat of three years old, and a ram of three years old, and a turtle-dove,
 # and a young pigeon.'"
 m.step("Gen.15.9")
-# ‹וַיֹּאמֶר אֵלָיו› event: say — agent the-LORD
+# ‹וַיֹּאמֶר אֵלָיו› (“and-say to-him/its”) — event: say — agent the-LORD
 m.event("say", agent="YHWH")
 # ‹קְחָה לִי עֶגְלָה מְשֻׁלֶּשֶׁת וְעֵז מְשֻׁלֶּשֶׁת וְאַיִל מְשֻׁלָּשׁ
-# וְתֹר וְגוֹזָל› the-LORD speaks a demand — LET: qechah(avram, eglah-ez-
-# ayil-tor-and-gozal)
+# וְתֹר וְגוֹזָל› (“take-ward to-me/my calf be-triplicate and-she-goat be-
+# triplicate and-ram be-triplicate and-ring-dove and-nestling”) — the-LORD
+# speaks a demand — LET: qechah(Abram, eglah-she-goat-ram-ring-dove-and-
+# nestling)
 m.declare("YHWH", "LET",
           "qechah(avram, eglah_ez_ayil_tor_ve_gozal)")
 
@@ -152,17 +170,22 @@ m.declare("YHWH", "LET",
 # "And he took him all these, and divided them in the midst, and laid each
 # half over against the other; but the birds divided he not."
 m.step("Gen.15.10")
-# ‹וַיִּקַּח־לוֹ אֶת־כָּל־אֵלֶּה› event: take — agent avram; theme all-these
+# ‹וַיִּקַּח־לוֹ אֶת־כָּל־אֵלֶּה› (“and-take to-him/its obj-marker all
+# these”) — event: take — agent Abram; theme all-these
 m.event("take", agent="avram", themes=["kol_eleh"])
-# ‹וַיִּקַּח־לוֹ אֶת־כָּל־אֵלֶּה› demand settled (popped from the queue):
-# qechah(avram, eglah-ez-ayil-tor-and-gozal)
+# ‹וַיִּקַּח־לוֹ אֶת־כָּל־אֵלֶּה› (“and-take to-him/its obj-marker all
+# these”) — demand settled (popped from the queue): qechah(Abram, eglah-she-
+# goat-ram-ring-dove-and-nestling)
 m.result("qechah(avram, eglah_ez_ayil_tor_ve_gozal)", tmark="t1")
-# ‹וַיְבַתֵּר אֹתָם בַּתָּוֶךְ› event: cut — agent avram; theme the-behemot
+# ‹וַיְבַתֵּר אֹתָם בַּתָּוֶךְ› (“and-chop-up obj-marker-them/their in-
+# midst”) — event: cut — agent Abram; theme the-behemot
 m.event("cut", agent="avram", themes=["ha_behemot"])
-# ‹וַיִּתֵּן אִישׁ־בִּתְרוֹ לִקְרַאת רֵעֵהוּ› event: give — agent avram;
-# theme man-bitro
+# ‹וַיִּתֵּן אִישׁ־בִּתְרוֹ לִקְרַאת רֵעֵהוּ› (“and-set man section-him/its
+# to-encountering associate-him/its”) — event: give — agent Abram; theme
+# man-bitro
 m.event("give", agent="avram", themes=["ish_bitro"])
-# ‹וְאֶת־הַצִפֹּר לֹא בָתָר› fact holds: and-the-tzipor-not-vatar
+# ‹וְאֶת־הַצִפֹּר לֹא בָתָר› (“and-obj-marker the-little-bird not chop-up”)
+# — fact holds: and-obj-marker-the-little-bird-not-chop-up
 m.fact("ve_et_ha_tzipor_lo_vatar")
 
 # -------------------------- Gen.15.11 · THE_VULTURES_DRIVEN_OFF ------------
@@ -170,9 +193,11 @@ m.fact("ve_et_ha_tzipor_lo_vatar")
 # "And the birds of prey came down upon the carcasses, and Abram drove them
 # away."
 m.step("Gen.15.11")
-# ‹וַיֵּרֶד הָעַיִט עַל־הַפְּגָרִים› event: descend — agent the-ayit
+# ‹וַיֵּרֶד הָעַיִט עַל־הַפְּגָרִים› (“and-go-down the-hawk over the-
+# carcase”) — event: descend — agent the-hawk
 m.event("descend", agent="ha_ayit")
-# ‹וַיַּשֵּׁב אֹתָם אַבְרָם› event: drive-off — agent avram; theme the-ayit
+# ‹וַיַּשֵּׁב אֹתָם אַבְרָם› (“and-blow obj-marker-them/their Abram”) —
+# event: drive-off — agent Abram; theme the-hawk
 m.event("drive_off", agent="avram", themes=["ha_ayit"])
 
 # -------------------------- Gen.15.12 · THE_SLEEP_AND_THE_DREAD ------------
@@ -181,10 +206,12 @@ m.event("drive_off", agent="avram", themes=["ha_ayit"])
 # "And it came to pass, that, when the sun was going down, a deep sleep fell
 # upon Abram; and, lo, a dread, even a great darkness, fell upon him."
 m.step("Gen.15.12")
-# ‹וְתַרְדֵּמָה נָפְלָה עַל־אַבְרָם› event: fall — theme deep-sleep
+# ‹וְתַרְדֵּמָה נָפְלָה עַל־אַבְרָם› (“and-lethargy fall over Abram”) —
+# event: fall — theme deep-sleep
 m.event("fall", themes=["tardemah"])
-# ‹וְהִנֵּה אֵימָה חֲשֵׁכָה גְדֹלָה נֹפֶלֶת עָלָיו› fact holds: emah-
-# chashekhah-gedolah-nofelet-alav
+# ‹וְהִנֵּה אֵימָה חֲשֵׁכָה גְדֹלָה נֹפֶלֶת עָלָיו› (“and-behold fright
+# darkness great fall over-him/its”) — fact holds: emah-chashekhah-gedolah-
+# fall-alav
 m.fact("emah_chashekhah_gedolah_nofelet_alav")
 
 # -------------------------- Gen.15.13 · THE_DECREE_SOJOURN_SERVE_AFFLICT ---
@@ -194,11 +221,14 @@ m.fact("emah_chashekhah_gedolah_nofelet_alav")
 # stranger in a land that is not theirs, and shall serve them; and they
 # shall afflict them four hundred years;"
 m.step("Gen.15.13")
-# ‹וַיֹּאמֶר לְאַבְרָם יָדֹעַ תֵּדַע› event: say — agent the-LORD
+# ‹וַיֹּאמֶר לְאַבְרָם יָדֹעַ תֵּדַע› (“and-say to-Abram know know”) —
+# event: say — agent the-LORD
 m.event("say", agent="YHWH")
 # ‹כִּי־גֵר יִהְיֶה זַרְעֲךָ בְּאֶרֶץ לֹא לָהֶם וַעֲבָדוּם וְעִנּוּ אֹתָם
-# אַרְבַּע מֵאוֹת שָׁנָה› fact holds: ger-yihyeh-zarakha-in-earth-not-to-
-# them; and-avadum-and-inu-otam-arba-meot-year
+# אַרְבַּע מֵאוֹת שָׁנָה› (“that sojourner be seed-you/your in-earth not to-
+# them/their and-work/serve-them/their and-afflict-literally obj-marker-
+# them/their four hundred years”) — fact holds: sojourner-yihyeh-zarakha-in-
+# earth-not-to-them; and-avadum-and-afflict-literally-otam-four-hundred-year
 m.fact("ger_yihyeh_zarakha_be_eretz_lo_lahem",
        "va_avadum_ve_inu_otam_arba_meot_shanah")
 
@@ -209,8 +239,10 @@ m.fact("ger_yihyeh_zarakha_be_eretz_lo_lahem",
 # shall they come out with great substance."
 m.step("Gen.15.14")
 # ‹וְגַם אֶת־הַגּוֹי אֲשֶׁר יַעֲבֹדוּ דָּן אָנֹכִי וְאַחֲרֵי־כֵן יֵצְאוּ
-# בִּרְכֻשׁ גָּדוֹל› fact holds: dan-anokhi-the-goy-which-yaavodu; and-
-# acharei-so-yetzu-bi-rekhush-gadol
+# בִּרְכֻשׁ גָּדוֹל› (“and-also obj-marker the-nation which work/serve
+# straight-course and-after so bring-forth in-property great”) — fact holds:
+# straight-course-I-obj-marker-the-nation-which-work/serve; and-acharei-so-
+# bring-forth-bi-rekhush-great
 m.fact("dan_anokhi_et_ha_goy_asher_yaavodu",
        "ve_acharei_khen_yetzu_bi_rekhush_gadol")
 
@@ -220,7 +252,8 @@ m.fact("dan_anokhi_et_ha_goy_asher_yaavodu",
 # old age."
 m.step("Gen.15.15")
 # ‹וְאַתָּה תָּבוֹא אֶל־אֲבֹתֶיךָ בְּשָׁלוֹם תִּקָּבֵר בְּשֵׂיבָה טוֹבָה›
-# fact holds: tavo-to-avotekha-in-shalom; tiqaver-in-sevah-tovah
+# (“and-you come/bring to father-you/your in-safe bury in-old-age good”) —
+# fact holds: come/bring-to-avotekha-in-safe; bury-in-sevah-tovah
 m.fact("tavo_el_avotekha_be_shalom",
        "tiqaver_be_sevah_tovah")
 
@@ -231,8 +264,9 @@ m.fact("tavo_el_avotekha_be_shalom",
 # iniquity of the Amorite is not yet full.'"
 m.step("Gen.15.16")
 # ‹וְדוֹר רְבִיעִי יָשׁוּבוּ הֵנָּה כִּי לֹא־שָׁלֵם עֲוֺן הָאֱמֹרִי
-# עַד־הֵנָּה› fact holds: and-dor-revii-yashuvu-henah; not-shalem-avon-the-
-# emori-until-henah
+# עַד־הֵנָּה› (“and-generation fourth return hither that not complete
+# perversity the-Emorite until hither”) — fact holds: and-generation-fourth-
+# return-henah; not-complete-perversity-the-Emorite-until-henah
 m.fact("ve_dor_revii_yashuvu_henah",
        "lo_shalem_avon_ha_emori_ad_henah")
 
@@ -243,11 +277,13 @@ m.fact("ve_dor_revii_yashuvu_henah",
 # darkness, behold a smoking furnace, and a flaming torch that passed
 # between these pieces."
 m.step("Gen.15.17")
-# ‹וַיְהִי הַשֶּׁמֶשׁ בָּאָה וַעֲלָטָה הָיָה› fact holds: and-alatah-was
+# ‹וַיְהִי הַשֶּׁמֶשׁ בָּאָה וַעֲלָטָה הָיָה› (“and-be the-sun come/bring
+# and-dusk be”) — fact holds: and-alatah-was
 m.fact("va_alatah_hayah")
 # ‹וְהִנֵּה תַנּוּר עָשָׁן וְלַפִּיד אֵשׁ אֲשֶׁר עָבַר בֵּין הַגְּזָרִים
-# הָאֵלֶּה› event: pass — agent tanur-ashan-and-lapid-esh; theme between-
-# the-gezarim
+# הָאֵלֶּה› (“and-behold fire-pot smoke and-flambeau fire which pass-over
+# between the-something-cut-off the-these”) — event: pass — agent fire-pot-
+# smoke-and-flambeau-fire; theme between-the-something-cut-off
 m.event("pass", agent="tanur_ashan_ve_lapid_esh", themes=["bein_ha_gezarim"])
 
 # -------------------------- Gen.15.18 · THE_COVENANT_CUT_AND_THE_RECEIPT ---
@@ -258,33 +294,38 @@ m.event("pass", agent="tanur_ashan_ve_lapid_esh", themes=["bein_ha_gezarim"])
 # have I given this land, from the river of Egypt unto the great river, the
 # river Euphrates;"
 m.step("Gen.15.18")
-# ‹כָּרַת יְהוָה אֶת־אַבְרָם בְּרִית› event: cut-covenant — agent the-LORD;
-# theme brit
+# ‹כָּרַת יְהוָה אֶת־אַבְרָם בְּרִית› (“cut YHWH with Abram covenant”) —
+# event: cut-covenant — agent the-LORD; theme brit
 m.event("cut_covenant", agent="YHWH", themes=["brit"])
-# ‹לְזַרְעֲךָ נָתַתִּי אֶת־הָאָרֶץ הַזֹּאת› fact holds: to-zarakha-natati-
-# the-earth-the-this
+# ‹לְזַרְעֲךָ נָתַתִּי אֶת־הָאָרֶץ הַזֹּאת› (“to-seed-you/your set obj-
+# marker the-earth the-this”) — fact holds: to-zarakha-set-obj-marker-the-
+# earth-the-this
 m.fact("le_zarakha_natati_et_ha_aretz_ha_zot")
-# ‹מִנְּהַר מִצְרַיִם עַד־הַנָּהָר הַגָּדֹל נְהַר־פְּרָת› fact holds: from-
-# nehar-mitzrayim-until-the-river-the-gadol-nehar-Euphrates
+# ‹מִנְּהַר מִצְרַיִם עַד־הַנָּהָר הַגָּדֹל נְהַר־פְּרָת› (“from-river Egypt
+# until the-river the-great river Euphrates”) — fact holds: from-river-
+# Egypt-until-the-river-the-great-river-Euphrates
 m.fact("mi_nehar_mitzrayim_ad_ha_nahar_ha_gadol_nehar_perat")
-# reads without prior install (flag, not fix): river-mitzrayim, nehar-
-# Euphrates
+# reads without prior install (flag, not fix): river-Egypt, river-Euphrates
 m.presupposed("nahar_mitzrayim", "nehar_perat")
 
 # -------------------------- Gen.15.19 · THE_GRANT_ROSTER_ROW_ONE -----------
 # אֶת־הַקֵּינִי וְאֶת־הַקְּנִזִּי וְאֵת הַקַּדְמֹנִי
 # "the Kenite, and the Kenizzite, and the Kadmonite,"
 m.step("Gen.15.19")
-# ‹אֶת־הַקֵּינִי וְאֶת־הַקְּנִזִּי וְאֵת הַקַּדְמֹנִי› fact holds: the-qeni-
-# and-the-qenizi-and-the-qadmoni
+# ‹אֶת־הַקֵּינִי וְאֶת־הַקְּנִזִּי וְאֵת הַקַּדְמֹנִי› (“obj-marker the-
+# Kenite and-obj-marker the-Kenizzite and-obj-marker the-Kadmonite”) — fact
+# holds: obj-marker-the-Kenite-and-obj-marker-the-Kenizzite-and-obj-marker-
+# the-Kadmonite
 m.fact("et_ha_qeni_ve_et_ha_qenizi_ve_et_ha_qadmoni")
 
 # -------------------------- Gen.15.20 · THE_GRANT_ROSTER_ROW_TWO -----------
 # וְאֶת־הַחִתִּי וְאֶת־הַפְּרִזִּי וְאֶת־הָרְפָאִים
 # "and the Hittite, and the Perizzite, and the Rephaim,"
 m.step("Gen.15.20")
-# ‹וְאֶת־הַחִתִּי וְאֶת־הַפְּרִזִּי וְאֶת־הָרְפָאִים› fact holds: and-the-
-# chiti-and-the-perizi-and-the-refaim
+# ‹וְאֶת־הַחִתִּי וְאֶת־הַפְּרִזִּי וְאֶת־הָרְפָאִים› (“and-obj-marker the-
+# Chittite and-obj-marker the-Perizzite and-obj-marker the-Rapha'”) — fact
+# holds: and-obj-marker-the-Chittite-and-obj-marker-the-Perizzite-and-obj-
+# marker-the-Rapha'
 m.fact("ve_et_ha_chiti_ve_et_ha_perizi_ve_et_ha_refaim")
 
 # -------------------------- Gen.15.21 · THE_GRANT_ROSTER_ROW_THREE ---------
@@ -293,14 +334,17 @@ m.fact("ve_et_ha_chiti_ve_et_ha_perizi_ve_et_ha_refaim")
 # Jebusite.'"
 m.step("Gen.15.21")
 # ‹וְאֶת־הָאֱמֹרִי וְאֶת־הַכְּנַעֲנִי וְאֶת־הַגִּרְגָּשִׁי וְאֶת־הַיְבוּסִי›
-# fact holds: and-the-emori-and-the-kenaani-and-the-girgashi-and-the-yevusi
+# (“and-obj-marker the-Emorite and-obj-marker the-Kenaanite and-obj-marker
+# the-Girgashite and-obj-marker the-Jebusite”) — fact holds: and-obj-marker-
+# the-Emorite-and-obj-marker-the-Kenaanite-and-obj-marker-the-Girgashite-
+# and-obj-marker-the-Jebusite
 m.fact("ve_et_ha_emori_ve_et_ha_kenaani_ve_et_ha_girgashi_ve_et_ha_yevusi")
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
     assert m.created_set() == set()
-    assert m.presupposed_set() == {'ur_kasdim', 'nehar_perat', 'dameseq', 'nahar_mitzrayim'}
+    assert m.presupposed_set() == {'nehar_perat', 'ur_kasdim', 'dameseq', 'nahar_mitzrayim'}
     assert m.REGISTRY["names"] == {}
     assert m.REGISTRY["writes"] == 0
     assert m.tests_list() == []

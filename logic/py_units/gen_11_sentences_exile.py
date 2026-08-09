@@ -22,16 +22,18 @@ m = Machine("gen_11_sentences_exile")
 # field; upon thy belly shalt thou go, and dust shalt thou eat all the days
 # of thy life.'"
 m.step("Gen.3.14")
-# ‹וַיֹּאמֶר … אֶל־הַנָּחָשׁ כִּי עָשִׂיתָ זֹּאת› event: sentence — agent
-# the-LORD-God; theme serpent
+# ‹וַיֹּאמֶר … אֶל־הַנָּחָשׁ כִּי עָשִׂיתָ זֹּאת› (“and-he-said … to the-
+# serpent because you-did this”) — event: sentence — agent the-LORD-God;
+# theme serpent
 m.event("sentence", agent="YHWH_Elohim", themes=["nachash"])
 # reads without prior install (flag, not fix): serpent
 m.presupposed("nachash")
-# ‹אָרוּר אַתָּה מִכָּל־הַבְּהֵמָה› role assigned: serpent -> CURSED-from-
-# all-the-livestock
+# ‹אָרוּר אַתָּה מִכָּל־הַבְּהֵמָה› (“CURSED you from-all the-livestock”) —
+# role assigned: serpent -> CURSED-from-all-the-livestock
 m.assign("nachash", "arur_mi_kol_ha_behemah")
-# ‹עַל־גְּחֹנְךָ תֵלֵךְ וְעָפָר תֹּאכַל› fact holds: upon-your-belly-you-
-# shall-go(serpent); dust-you-shall-eat-all-days-of-your-life(serpent)
+# ‹עַל־גְּחֹנְךָ תֵלֵךְ וְעָפָר תֹּאכַל› (“upon your-belly you-shall-go and-
+# dust you-shall-eat”) — fact holds: upon-your-belly-you-shall-go(serpent);
+# dust-you-shall-eat-all-days-of-your-life(serpent)
 m.fact("al_gechonkha_telekh(nachash)",
        "afar_tokhal_kol_yemei_chayekha(nachash)")
 
@@ -43,6 +45,7 @@ m.fact("al_gechonkha_telekh(nachash)",
 # heel.'"
 m.step("Gen.3.15")
 # ‹וְאֵיבָה אָשִׁית … הוּא יְשׁוּפְךָ רֹאשׁ וְאַתָּה תְּשׁוּפֶנּוּ עָקֵב›
+# (“and-enmity I-will-set … he strikes-you head and-you strike-him heel”) —
 # pattern recorded: enmity(between-seed-the-woman, between-seed-the-serpent)
 # ∧ he-shall-bruise-you-head ∧ you-shall-bruise-him-heel
 m.pattern("eivah(bein_zera_ha_ishah, bein_zera_ha_nachash) ∧ hu_yeshufkha_rosh ∧ atah_teshufenu_akev")
@@ -57,9 +60,10 @@ m.step("Gen.3.16")
 # reads without prior install (flag, not fix): woman
 m.presupposed("ishah")
 # ‹הַרְבָּה אַרְבֶּה עִצְּבוֹנֵךְ … בְּעֶצֶב תֵּלְדִי בָנִים … וְהוּא
-# יִמְשָׁל־בָּךְ› fact holds: greatly-I-will-multiply-your-toil-and-your-
-# pregnancy(woman); in-pain-you-shall-bear-sons(woman); to-your-husband-
-# your-desire-and-he-shall-rule-in-you(woman)
+# יִמְשָׁל־בָּךְ› (“multiplying I-will-multiply your-toil … in-pain you-
+# shall-bear sons … and-he shall-rule in-you”) — fact holds: greatly-I-will-
+# multiply-your-toil-and-your-pregnancy(woman); in-pain-you-shall-bear-
+# sons(woman); to-your-husband-your-desire-and-he-shall-rule-in-you(woman)
 m.fact("harbah_arbeh_itzvonekh_ve_heronekh(ishah)",
        "be_etzev_teldi_vanim(ishah)",
        "el_ishekh_teshukatekh_ve_hu_yimshol_bakh(ishah)")
@@ -74,16 +78,18 @@ m.fact("harbah_arbeh_itzvonekh_ve_heronekh(ishah)",
 # eat of it all the days of thy life.'"
 m.step("Gen.3.17")
 # ‹וּלְאָדָם אָמַר כִּי־שָׁמַעְתָּ לְקוֹל אִשְׁתֶּךָ … אֲשֶׁר צִוִּיתִיךָ
-# לֵאמֹר לֹא תֹאכַל מִמֶּנּוּ› event: sentence — agent the-LORD-God; theme
-# Adam
+# לֵאמֹר לֹא תֹאכַל מִמֶּנּוּ› (“and-to-Adam he-said because you-listened
+# to-voice-of your-wife … which I-commanded-you saying not you-shall-eat
+# from-it”) — event: sentence — agent the-LORD-God; theme Adam
 m.event("sentence", agent="YHWH_Elohim", themes=["adam"])
 # reads without prior install (flag, not fix): Adam, ground
 m.presupposed("adam", "adamah")
-# ‹אֲרוּרָה הָאֲדָמָה בַּעֲבוּרֶךָ› role assigned: ground -> cursed-for-
-# your-sake
+# ‹אֲרוּרָה הָאֲדָמָה בַּעֲבוּרֶךָ› (“CURSED the-ground because-of-you”) —
+# role assigned: ground -> cursed-for-your-sake
 m.assign("adamah", "arurah_baavurekha")
-# ‹בְּעִצָּבוֹן תֹּאכֲלֶנָּה כֹּל יְמֵי חַיֶּיךָ› fact holds: in-toil-you-
-# shall-eat-all-days-of-your-life(Adam)
+# ‹בְּעִצָּבוֹן תֹּאכֲלֶנָּה כֹּל יְמֵי חַיֶּיךָ› (“in-toil you-shall-eat-it
+# all days-of your-life”) — fact holds: in-toil-you-shall-eat-all-days-of-
+# your-life(Adam)
 m.fact("be_itzavon_tokhalenah_kol_yemei_chayekha(adam)")
 
 # -------------------------- Gen.3.18 · THORN_DIET --------------------------
@@ -91,9 +97,10 @@ m.fact("be_itzavon_tokhalenah_kol_yemei_chayekha(adam)")
 # "'Thorns also and thistles shall it bring forth to thee; and thou shalt
 # eat the herb of the field.'"
 m.step("Gen.3.18")
-# ‹וְקוֹץ וְדַרְדַּר תַּצְמִיחַ … וְאָכַלְתָּ אֶת־עֵשֶׂב הַשָּׂדֶה› fact
-# holds: thorn-and-thistle-tatzmiach-to-you(ground); and-you-shall-eat-obj-
-# marker·et-herb-of-the-field(Adam)
+# ‹וְקוֹץ וְדַרְדַּר תַּצְמִיחַ … וְאָכַלְתָּ אֶת־עֵשֶׂב הַשָּׂדֶה› (“and-
+# thorn and-thistle it-shall-sprout … and-you-shall-eat obj-marker herb-of
+# the-field”) — fact holds: thorn-and-thistle-tatzmiach-to-you(ground); and-
+# you-shall-eat-obj-marker·et-herb-of-the-field(Adam)
 m.fact("kotz_ve_dardar_tatzmiach_lakh(adamah)",
        "ve_akhalta_et_esev_ha_sadeh(adam)")
 
@@ -104,18 +111,19 @@ m.fact("kotz_ve_dardar_tatzmiach_lakh(adamah)",
 # ground; for out of it wast thou taken; for dust thou art, and unto dust
 # shalt thou return.'"
 m.step("Gen.3.19")
-# ‹בְּזֵעַת אַפֶּיךָ … עַד שׁוּבְךָ … וְאֶל־עָפָר תָּשׁוּב› fact holds: in-
-# sweat-of-your-nostrils-you-shall-eat-bread(Adam); until-your-return-to-
-# the-ground(Adam); dust-you-and-to-dust-you-shall-return(Adam)
+# ‹בְּזֵעַת אַפֶּיךָ … עַד שׁוּבְךָ … וְאֶל־עָפָר תָּשׁוּב› (“in-sweat-of
+# your-face … until your-return … and-to dust you-shall-return”) — fact
+# holds: in-sweat-of-your-nostrils-you-shall-eat-bread(Adam); until-your-
+# return-to-the-ground(Adam); dust-you-and-to-dust-you-shall-return(Adam)
 m.fact("be_zeat_apekha_tokhal_lechem(adam)",
        "ad_shuvkha_el_ha_adamah(adam)",
        "afar_atah_ve_el_afar_tashuv(adam)")
-# ‹מוֹת תָּמוּת … עַד שׁוּבְךָ› spec-delta — spec said because in-day your-
-# eating from-it dying you-shall-die (gen-08 2:17 — the armed HANDLER:
-# dying-you-shall-die, IN THE DAY), delivery says until your-return to-the-
-# ground … and-to-dust you-shall-return (the sentence: toil-terms +
-# mortality as BOUNDARY — the return to dust as horizon; same-day death not
-# executed)
+# ‹מוֹת תָּמוּת … עַד שׁוּבְךָ› (“die die … until your-return”) — spec-delta
+# — spec said because in-day your-eating from-it dying you-shall-die (gen-08
+# 2:17 — the armed HANDLER: dying-you-shall-die, IN THE DAY), delivery says
+# until your-return to-the-ground … and-to-dust you-shall-return (the
+# sentence: toil-terms + mortality as BOUNDARY — the return to dust as
+# horizon; same-day death not executed)
 m.spec_delta("ki be-yom akholkha mimenu mot tamut (gen_08 2:17 — the armed HANDLER: dying-you-shall-die, IN THE DAY)",
              "ad shuvkha el-ha-adamah … ve-el-afar tashuv (the sentence: toil-terms + mortality as BOUNDARY — the return to dust as horizon; same-day death not executed)")
 
@@ -125,7 +133,8 @@ m.spec_delta("ki be-yom akholkha mimenu mot tamut (gen_08 2:17 — the armed HAN
 # living."
 m.step("Gen.3.20")
 # ‹וַיִּקְרָא הָאָדָם שֵׁם אִשְׁתּוֹ חַוָּה כִּי הִוא הָיְתָה אֵם כָּל־חָי›
-# named: woman := Chavah
+# (“and-he-called the-human name-of his-wife Chavah for she-ktiv-hu-qere-hi
+# was mother-of all living”) — named: woman := Chavah
 m.name("ishah", "Chavah")
 
 # -------------------------- Gen.3.21 · SKIN_GARMENTS -----------------------
@@ -134,12 +143,13 @@ m.name("ishah", "Chavah")
 # "And the LORD God made for Adam and for his wife garments of skins, and
 # clothed them."
 m.step("Gen.3.21")
-# ‹וַיַּעַשׂ … כָּתְנוֹת עוֹר› event: make — agent the-LORD-God; theme
-# garments-of-skin
+# ‹וַיַּעַשׂ … כָּתְנוֹת עוֹר› (“and-he-made … tunics-of skin”) — event:
+# make — agent the-LORD-God; theme garments-of-skin
 m.event("make", agent="YHWH_Elohim", themes=["kotnot_or"])
-# ‹וַיַּלְבִּשֵׁם› event: clothe — agent the-LORD-God; theme Adam
+# ‹וַיַּלְבִּשֵׁם› (“and-he-clothed-them”) — event: clothe — agent the-LORD-
+# God; theme Adam
 m.event("clothe", agent="YHWH_Elohim", themes=["adam"])
-# ‹כָּתְנוֹת עוֹר› the world gains: garments-of-skin
+# ‹כָּתְנוֹת עוֹר› (“tunics-of skin”) — the world gains: garments-of-skin
 m.install("kotnot_or")
 
 # -------------------------- Gen.3.22 · COUNCIL_CONCERN_SECOND_TREE ---------
@@ -150,12 +160,14 @@ m.install("kotnot_or")
 # good and evil; and now, lest he put forth his hand, and take also of the
 # tree of life, and eat, and live for ever.'"
 m.step("Gen.3.22")
-# ‹הֵן הָאָדָם הָיָה כְּאַחַד מִמֶּנּוּ› event: deliberate — agent the-LORD-
-# God; theme Adam
+# ‹הֵן הָאָדָם הָיָה כְּאַחַד מִמֶּנּוּ› (“behold the-human has-become like-
+# one of-us”) — event: deliberate — agent the-LORD-God; theme Adam
 m.event("deliberate", agent="YHWH_Elohim", themes=["adam"])
 # ‹וְעַתָּה פֶּן־יִשְׁלַח יָדוֹ וְלָקַח גַּם מֵעֵץ הַחַיִּים וְאָכַל וָחַי
-# לְעֹלָם› fact holds: like-one-from-it-to-know-good-and-evil(Adam); lest-
-# he-send-his-hand-and-take-from-tree-the-life-and-living-to-forever
+# לְעֹלָם› (“and-now lest he-send his-hand and-take also from-tree-of the-
+# life and-eat and-live forever”) — fact holds: like-one-from-it-to-know-
+# good-and-evil(Adam); lest-he-send-his-hand-and-take-from-tree-the-life-
+# and-living-to-forever
 m.fact("ke_achad_mimenu_la_daat_tov_va_ra(adam)",
        "pen_yishlach_yado_ve_lakach_me_etz_ha_chayim_va_chai_le_olam")
 # reads without prior install (flag, not fix): tree-of-life, garden-of
@@ -168,7 +180,9 @@ m.presupposed("etz_ha_chayim", "gan")
 # the ground from whence he was taken."
 m.step("Gen.3.23")
 # ‹וַיְשַׁלְּחֵהוּ … מִגַּן־עֵדֶן לַעֲבֹד אֶת־הָאֲדָמָה אֲשֶׁר לֻקַּח
-# מִשָּׁם› event: send-out — agent the-LORD-God; theme Adam
+# מִשָּׁם› (“and-he-sent-him-out … from-garden-of Eden to-work obj-marker
+# the-ground which he-was-taken from-there”) — event: send-out — agent the-
+# LORD-God; theme Adam
 m.event("send_out", agent="YHWH_Elohim", themes=["adam"])
 
 # -------------------------- Gen.3.24 · GUARDS_INSTALLED_WAY_KEPT -----------
@@ -178,23 +192,25 @@ m.event("send_out", agent="YHWH_Elohim", themes=["adam"])
 # the cherubim, and the flaming sword which turned every way, to keep the
 # way to the tree of life."
 m.step("Gen.3.24")
-# ‹וַיְגָרֶשׁ אֶת־הָאָדָם› event: drive-out — agent the-LORD-God; theme Adam
+# ‹וַיְגָרֶשׁ אֶת־הָאָדָם› (“and-he-drove-out obj-marker the-human”) —
+# event: drive-out — agent the-LORD-God; theme Adam
 m.event("drive_out", agent="YHWH_Elohim", themes=["adam"])
-# ‹וַיַּשְׁכֵּן מִקֶּדֶם לְגַן־עֵדֶן› event: station — agent the-LORD-God;
-# theme cherubim
+# ‹וַיַּשְׁכֵּן מִקֶּדֶם לְגַן־עֵדֶן› (“and-he-stationed from-east-or-of-old
+# to-garden-of Eden”) — event: station — agent the-LORD-God; theme cherubim
 m.event("station", agent="YHWH_Elohim", themes=["keruvim"])
-# ‹אֶת־הַכְּרֻבִים וְאֵת לַהַט הַחֶרֶב הַמִּתְהַפֶּכֶת› the world gains:
-# cherubim, flame-of-the-sword
+# ‹אֶת־הַכְּרֻבִים וְאֵת לַהַט הַחֶרֶב הַמִּתְהַפֶּכֶת› (“obj-marker the-
+# cherubim and-obj-marker flame-of the-sword the-self-turning”) — the world
+# gains: cherubim, flame-of-the-sword
 m.install("keruvim", "lahat_ha_cherev")
-# ‹לִשְׁמֹר אֶת־דֶּרֶךְ עֵץ הַחַיִּים› role assigned: cherubim -> keeper-
-# way-of-tree-the-life
+# ‹לִשְׁמֹר אֶת־דֶּרֶךְ עֵץ הַחַיִּים› (“to-guard obj-marker way-of tree-of
+# the-life”) — role assigned: cherubim -> keeper-way-of-tree-the-life
 m.assign("keruvim", "shomer_derekh_etz_ha_chayim")
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
-    assert m.created_set() == {'lahat_ha_cherev', 'kotnot_or', 'keruvim'}
-    assert m.presupposed_set() == {'gan', 'adamah', 'etz_ha_chayim', 'adam', 'ishah', 'nachash'}
+    assert m.created_set() == {'keruvim', 'lahat_ha_cherev', 'kotnot_or'}
+    assert m.presupposed_set() == {'adam', 'adamah', 'nachash', 'gan', 'ishah', 'etz_ha_chayim'}
     assert m.REGISTRY["names"] == {'nachash': 'arur_mi_kol_ha_behemah', 'adamah': 'arurah_baavurekha', 'ishah': 'Chavah', 'keruvim': 'shomer_derekh_etz_ha_chayim'}
     assert m.REGISTRY["writes"] == 4
     assert m.tests_list() == []

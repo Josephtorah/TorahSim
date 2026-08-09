@@ -645,8 +645,9 @@ m = Machine(&quot;gen_23_vineyard_curse&quot;)
 # and Japheth; and Ham is the father of Canaan.&quot;
 m.step(&quot;Gen.9.18&quot;)
 # ‹וַיִּהְיוּ בְנֵי־נֹחַ הַיֹּצְאִים מִן־הַתֵּבָה … וְחָם הוּא אֲבִי
-# כְנָעַן› fact holds: sons-of-Noach-the-going-out-of-from-the-ark-Shem-Ham-
-# and-Yefet; Ham-he-father-of-Canaan
+# כְנָעַן› (“and-they-were sons-of Noah going-out-of from the-ark … and-Ham
+# he father-of Canaan”) — fact holds: sons-of-Noach-the-going-out-of-from-
+# the-ark-Shem-Ham-and-Yefet; Ham-he-father-of-Canaan
 m.fact(&quot;bnei_noach_ha_yotzim_min_ha_tevah_shem_cham_va_yefet&quot;,
        &quot;cham_hu_avi_khenaan&quot;)
 # reads without prior install (flag, not fix): Noach, ark, Canaan
@@ -657,8 +658,9 @@ m.presupposed(&quot;noach&quot;, &quot;tevah&quot;, &quot;kenaan&quot;)
 # &quot;These three were the sons of Noah, and of these was the whole earth
 # overspread.&quot;
 m.step(&quot;Gen.9.19&quot;)
-# ‹שְׁלֹשָׁה אֵלֶּה … וּמֵאֵלֶּה נָפְצָה כָל־הָאָרֶץ› fact holds: three-
-# these-sons-of-Noach; and-from-these-naftzah-all-the-earth
+# ‹שְׁלֹשָׁה אֵלֶּה … וּמֵאֵלֶּה נָפְצָה כָל־הָאָרֶץ› (“three these … and-
+# from-these was-scattered all the-earth”) — fact holds: three-these-sons-
+# of-Noach; and-from-these-naftzah-all-the-earth
 m.fact(&quot;shelosha_eleh_bnei_noach&quot;,
        &quot;u_me_eleh_naftzah_khol_ha_aretz&quot;)
 
@@ -666,13 +668,15 @@ m.fact(&quot;shelosha_eleh_bnei_noach&quot;,
 # וַיָּחֶל נֹחַ אִישׁ הָאֲדָמָה וַיִּטַּע כָּרֶם
 # &quot;And Noah the husbandman began, and planted a vineyard.&quot;
 m.step(&quot;Gen.9.20&quot;)
-# ‹וַיָּחֶל נֹחַ› event: begin — agent Noach
+# ‹וַיָּחֶל נֹחַ› (“and-he-began Noah”) — event: begin — agent Noach
 m.event(&quot;begin&quot;, agent=&quot;noach&quot;)
-# ‹אִישׁ הָאֲדָמָה› fact holds: Noach-man-of-the-ground
+# ‹אִישׁ הָאֲדָמָה› (“man-of the-ground”) — fact holds: Noach-man-of-the-
+# ground
 m.fact(&quot;noach_ish_ha_adamah&quot;)
-# ‹וַיִּטַּע כָּרֶם› event: plant — agent Noach; theme kerem
+# ‹וַיִּטַּע כָּרֶם› (“and-he-planted vineyard”) — event: plant — agent
+# Noach; theme kerem
 m.event(&quot;plant&quot;, agent=&quot;noach&quot;, themes=[&quot;kerem&quot;])
-# ‹כָּרֶם› the world gains: kerem
+# ‹כָּרֶם› (“vineyard”) — the world gains: kerem
 m.install(&quot;kerem&quot;)
 
 # -------------------------- Gen.9.21 · THE_WINE_AND_THE_SELF_UNCOVERING ----
@@ -680,12 +684,13 @@ m.install(&quot;kerem&quot;)
 # &quot;And he drank of the wine, and was drunken; and he was uncovered within
 # his tent.&quot;
 m.step(&quot;Gen.9.21&quot;)
-# ‹וַיֵּשְׁתְּ מִן־הַיַּיִן› event: drink — agent Noach; theme from-the-wine
+# ‹וַיֵּשְׁתְּ מִן־הַיַּיִן› (“and-he-drank from the-wine”) — event: drink —
+# agent Noach; theme from-the-wine
 m.event(&quot;drink&quot;, agent=&quot;noach&quot;, themes=[&quot;min_ha_yayin&quot;])
-# ‹וַיִּשְׁכָּר› event: become-drunk — agent Noach
+# ‹וַיִּשְׁכָּר› (“and-was-drunk”) — event: become-drunk — agent Noach
 m.event(&quot;become_drunk&quot;, agent=&quot;noach&quot;)
-# ‹וַיִּתְגַּל בְּתוֹךְ אָהֳלֹה› event: uncover-self — agent Noach; theme
-# in-inside-aholoh
+# ‹וַיִּתְגַּל בְּתוֹךְ אָהֳלֹה› (“and-uncovered-himself inside his-tent”) —
+# event: uncover-self — agent Noach; theme in-inside-aholoh
 m.event(&quot;uncover_self&quot;, agent=&quot;noach&quot;, themes=[&quot;be_tokh_aholoh&quot;])
 
 # -------------------------- Gen.9.22 · THE_SEEING_AND_THE_TELLING ----------
@@ -694,11 +699,12 @@ m.event(&quot;uncover_self&quot;, agent=&quot;noach&quot;, themes=[&quot;be_tokh
 # &quot;And Ham, the father of Canaan, saw the nakedness of his father, and told
 # his two brethren without.&quot;
 m.step(&quot;Gen.9.22&quot;)
-# ‹וַיַּרְא חָם אֲבִי כְנַעַן אֵת עֶרְוַת אָבִיו› event: see — agent Ham;
+# ‹וַיַּרְא חָם אֲבִי כְנַעַן אֵת עֶרְוַת אָבִיו› (“and-he-saw Ham father-of
+# Canaan obj-marker nakedness-of his-father”) — event: see — agent Ham;
 # theme nakedness-of-aviv
 m.event(&quot;see&quot;, agent=&quot;cham&quot;, themes=[&quot;ervat_aviv&quot;])
-# ‹וַיַּגֵּד לִשְׁנֵי־אֶחָיו בַּחוּץ› event: tell — agent Ham; theme to-me-
-# shnei-echav
+# ‹וַיַּגֵּד לִשְׁנֵי־אֶחָיו בַּחוּץ› (“and-he-told to-his-two his-brothers
+# outside”) — event: tell — agent Ham; theme to-me-shnei-echav
 m.event(&quot;tell&quot;, agent=&quot;cham&quot;, themes=[&quot;li_shnei_echav&quot;])
 
 # -------------------------- Gen.9.23 · THE_BACKWARD_COVERING ---------------
@@ -709,18 +715,23 @@ m.event(&quot;tell&quot;, agent=&quot;cham&quot;, themes=[&quot;li_shnei_echav&q
 # shoulders, and went backward, and covered the nakedness of their father;
 # and their faces were backward, and they saw not their father&#x27;s nakedness.&quot;
 m.step(&quot;Gen.9.23&quot;)
-# ‹וַיִּקַּח שֵׁם וָיֶפֶת אֶת־הַשִּׂמְלָה› event: take — agent Shem-and-
-# Yefet; theme the-simlah
+# ‹וַיִּקַּח שֵׁם וָיֶפֶת אֶת־הַשִּׂמְלָה› (“and-he-took Shem and-Yefet obj-
+# marker the-garment”) — event: take — agent Shem-and-Yefet; theme the-
+# simlah
 m.event(&quot;take&quot;, agent=&quot;shem_va_yefet&quot;, themes=[&quot;ha_simlah&quot;])
-# ‹וַיָּשִׂימוּ עַל־שְׁכֶם שְׁנֵיהֶם› event: set — agent Shem-and-Yefet;
-# theme over-shoulder-of-both-of-them
+# ‹וַיָּשִׂימוּ עַל־שְׁכֶם שְׁנֵיהֶם› (“and-they-set over shoulder-of both-
+# of-them”) — event: set — agent Shem-and-Yefet; theme over-shoulder-of-
+# both-of-them
 m.event(&quot;set&quot;, agent=&quot;shem_va_yefet&quot;, themes=[&quot;al_shekhem_shneihem&quot;])
-# ‹וַיֵּלְכוּ אֲחֹרַנִּית› event: walk-backward — agent Shem-and-Yefet
+# ‹וַיֵּלְכוּ אֲחֹרַנִּית› (“and-they-walked backward”) — event: walk-
+# backward — agent Shem-and-Yefet
 m.event(&quot;walk_backward&quot;, agent=&quot;shem_va_yefet&quot;)
-# ‹וַיְכַסּוּ אֵת עֶרְוַת אֲבִיהֶם› event: cover — agent Shem-and-Yefet;
-# theme nakedness-of-avihem
+# ‹וַיְכַסּוּ אֵת עֶרְוַת אֲבִיהֶם› (“and-they-covered obj-marker nakedness-
+# of their-father”) — event: cover — agent Shem-and-Yefet; theme nakedness-
+# of-avihem
 m.event(&quot;cover&quot;, agent=&quot;shem_va_yefet&quot;, themes=[&quot;ervat_avihem&quot;])
-# ‹וּפְנֵיהֶם אֲחֹרַנִּית וְעֶרְוַת אֲבִיהֶם לֹא רָאוּ› fact holds: and-
+# ‹וּפְנֵיהֶם אֲחֹרַנִּית וְעֶרְוַת אֲבִיהֶם לֹא רָאוּ› (“and-their-faces
+# backward and-nakedness-of their-father not they-saw”) — fact holds: and-
 # nakedness-of-avihem-not-they-saw
 m.fact(&quot;ve_ervat_avihem_lo_rau&quot;)
 
@@ -729,10 +740,12 @@ m.fact(&quot;ve_ervat_avihem_lo_rau&quot;)
 # &quot;And Noah awoke from his wine, and knew what his youngest son had done
 # unto him.&quot;
 m.step(&quot;Gen.9.24&quot;)
-# ‹וַיִּיקֶץ נֹחַ מִיֵּינוֹ› event: awake — agent Noach
+# ‹וַיִּיקֶץ נֹחַ מִיֵּינוֹ› (“and-he-awoke Noah from-his-wine”) — event:
+# awake — agent Noach
 m.event(&quot;awake&quot;, agent=&quot;noach&quot;)
-# ‹וַיֵּדַע אֵת אֲשֶׁר־עָשָׂה־לוֹ בְּנוֹ הַקָּטָן› event: know — agent
-# Noach; theme that-which-make-not-beno-the-small
+# ‹וַיֵּדַע אֵת אֲשֶׁר־עָשָׂה־לוֹ בְּנוֹ הַקָּטָן› (“and-he-knew obj-marker
+# that-which did to-him his-son the-small”) — event: know — agent Noach;
+# theme that-which-make-not-beno-the-small
 m.event(&quot;know&quot;, agent=&quot;noach&quot;, themes=[&quot;asher_asah_lo_beno_ha_qatan&quot;])
 
 # -------------------------- Gen.9.25 · THE_FIRST_HUMAN_CURSE ---------------
@@ -740,13 +753,13 @@ m.event(&quot;know&quot;, agent=&quot;noach&quot;, themes=[&quot;asher_asah_lo_b
 # &quot;And he said: &#x27;Cursed be Canaan; a servant of servants shall he be unto
 # his brethren.&#x27;&quot;
 m.step(&quot;Gen.9.25&quot;)
-# ‹וַיֹּאמֶר אָרוּר כְּנָעַן› event: speak — agent Noach; theme cursed-
-# Canaan
+# ‹וַיֹּאמֶר אָרוּר כְּנָעַן› (“and-he-said cursed Canaan”) — event: speak —
+# agent Noach; theme cursed-Canaan
 m.event(&quot;speak&quot;, agent=&quot;noach&quot;, themes=[&quot;arur_kenaan&quot;])
-# ‹אָרוּר כְּנָעַן› role assigned: Canaan -&gt; cursed
+# ‹אָרוּר כְּנָעַן› (“cursed Canaan”) — role assigned: Canaan -&gt; cursed
 m.assign(&quot;kenaan&quot;, &quot;arur&quot;)
-# ‹עֶבֶד עֲבָדִים יִהְיֶה לְאֶחָיו› fact holds: slave-of-slaves-yihyeh-to-
-# echav(Canaan)
+# ‹עֶבֶד עֲבָדִים יִהְיֶה לְאֶחָיו› (“slave-of slaves shall-he-be to-his-
+# brothers”) — fact holds: slave-of-slaves-yihyeh-to-echav(Canaan)
 m.fact(&quot;eved_avadim_yihyeh_le_echav(kenaan)&quot;)
 
 # -------------------------- Gen.9.26 · THE_FIRST_HUMAN_BLESSING ------------
@@ -754,13 +767,14 @@ m.fact(&quot;eved_avadim_yihyeh_le_echav(kenaan)&quot;)
 # &quot;And he said: &#x27;Blessed be the LORD, the God of Shem; and let Canaan be
 # their servant.&#x27;&quot;
 m.step(&quot;Gen.9.26&quot;)
-# ‹וַיֹּאמֶר בָּרוּךְ יְהֹוָה אֱלֹהֵי שֵׁם› event: speak — agent Noach;
-# theme blessed-yhwh-elohei-Shem
+# ‹וַיֹּאמֶר בָּרוּךְ יְהֹוָה אֱלֹהֵי שֵׁם› (“and-he-said blessed YHWH God-
+# of Shem”) — event: speak — agent Noach; theme blessed-yhwh-elohei-Shem
 m.event(&quot;speak&quot;, agent=&quot;noach&quot;, themes=[&quot;barukh_yhwh_elohei_shem&quot;])
-# ‹בָּרוּךְ יְהֹוָה אֱלֹהֵי שֵׁם› blessing: Noach blesses yhwh-elohei-Shem
+# ‹בָּרוּךְ יְהֹוָה אֱלֹהֵי שֵׁם› (“blessed YHWH God-of Shem”) — blessing:
+# Noach blesses yhwh-elohei-Shem
 m.bless(&quot;noach&quot;, &quot;yhwh_elohei_shem&quot;)
-# ‹וִיהִי כְנַעַן עֶבֶד לָמוֹ› Noach speaks a demand — LET: yehi(Canaan,
-# slave-of-lamo)
+# ‹וִיהִי כְנַעַן עֶבֶד לָמוֹ› (“and-let-him-be Canaan slave to-them”) —
+# Noach speaks a demand — LET: yehi(Canaan, slave-of-lamo)
 m.declare(&quot;noach&quot;, &quot;LET&quot;,
           &quot;yehi(kenaan, eved_lamo)&quot;)
 
@@ -770,16 +784,16 @@ m.declare(&quot;noach&quot;, &quot;LET&quot;,
 # &quot;God enlarge Japheth, and he shall dwell in the tents of Shem; and let
 # Canaan be their servant.&quot;
 m.step(&quot;Gen.9.27&quot;)
-# ‹יַפְתְּ אֱלֹהִים לְיֶפֶת› Noach speaks a demand — LET: may-He-
-# enlarge(God, to-Yefet)
+# ‹יַפְתְּ אֱלֹהִים לְיֶפֶת› (“may-He-enlarge God to-Yefet”) — Noach speaks
+# a demand — LET: may-He-enlarge(God, to-Yefet)
 m.declare(&quot;noach&quot;, &quot;LET&quot;,
           &quot;yaft(elohim, le_yefet)&quot;)
-# ‹וְיִשְׁכֹּן בְּאָהֳלֵי־שֵׁם› Noach speaks a demand — LET: may-he-
-# dwell(in-aholei-Shem)
+# ‹וְיִשְׁכֹּן בְּאָהֳלֵי־שֵׁם› (“and-may-he-dwell in-the-tents-of Shem”) —
+# Noach speaks a demand — LET: may-he-dwell(in-aholei-Shem)
 m.declare(&quot;noach&quot;, &quot;LET&quot;,
           &quot;yishkon(be_aholei_shem)&quot;)
-# ‹וִיהִי כְנַעַן עֶבֶד לָמוֹ› Noach speaks a demand — LET: yehi(Canaan,
-# slave-of-lamo)
+# ‹וִיהִי כְנַעַן עֶבֶד לָמוֹ› (“and-let-him-be Canaan slave to-them”) —
+# Noach speaks a demand — LET: yehi(Canaan, slave-of-lamo)
 m.declare(&quot;noach&quot;, &quot;LET&quot;,
           &quot;yehi(kenaan, eved_lamo)&quot;)
 
@@ -788,6 +802,7 @@ m.declare(&quot;noach&quot;, &quot;LET&quot;,
 # &quot;And Noah lived after the flood three hundred and fifty years.&quot;
 m.step(&quot;Gen.9.28&quot;)
 # ‹וַיְחִי־נֹחַ אַחַר הַמַּבּוּל שְׁלֹשׁ מֵאוֹת שָׁנָה וַחֲמִשִּׁים שָׁנָה›
+# (“and-he-lived Noah after the-deluge three hundred year and-fifty year”) —
 # fact holds: and-he-lived-Noach-after-the-deluge-350-year
 m.fact(&quot;va_yechi_noach_achar_ha_mabul_350_shanah&quot;)
 
@@ -797,16 +812,17 @@ m.fact(&quot;va_yechi_noach_achar_ha_mabul_350_shanah&quot;)
 # &quot;And all the days of Noah were nine hundred and fifty years; and he died.&quot;
 m.step(&quot;Gen.9.29&quot;)
 # ‹וַיִּהְיוּ כָּל־יְמֵי־נֹחַ תְּשַׁע מֵאוֹת שָׁנָה וַחֲמִשִּׁים שָׁנָה›
-# fact holds: all-days-of-Noach-950-year
+# (“and-they-were all days-of Noah nine hundred year and-fifty year”) — fact
+# holds: all-days-of-Noach-950-year
 m.fact(&quot;kol_yemei_noach_950_shanah&quot;)
-# ‹וַיָּמֹת› event: die — agent Noach
+# ‹וַיָּמֹת› (“and-he-died”) — event: die — agent Noach
 m.event(&quot;die&quot;, agent=&quot;noach&quot;)
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == &quot;__main__&quot;:
     m.report()
     assert m.created_set() == {&#x27;kerem&#x27;}
-    assert m.presupposed_set() == {&#x27;tevah&#x27;, &#x27;noach&#x27;, &#x27;kenaan&#x27;}
+    assert m.presupposed_set() == {&#x27;noach&#x27;, &#x27;kenaan&#x27;, &#x27;tevah&#x27;}
     assert m.REGISTRY[&quot;names&quot;] == {&#x27;kenaan&#x27;: &#x27;arur&#x27;}
     assert m.REGISTRY[&quot;writes&quot;] == 1
     assert m.tests_list() == []
@@ -820,4 +836,4 @@ if __name__ == &quot;__main__&quot;:
     assert len(m.EVENTS) == 22
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">FROZEN 2026-08-03 (second-generation derivation agent; freeze-after-review by the main loop — NO agent freeze; fifth unit under the PIPELINE + DEBUT-MAP process, the agent&#x27;s first): twenty-fourth-unit candidate — THE VINEYARD AND THE CURSE; fourteenth extension-free derivation candidate in a row. The inverse of gen_22&#x27;s all-speech ring: sixteen deed-events carry the plot and speech enters only twice — the Torah&#x27;s FIRST HUMAN curse and FIRST HUMAN blessing, adjacent verses, one mouth. Every call precedent-matched with encodings quoted: the vineyard INSTALLED on gen_08&#x27;s garden class (the chain garden/city/ark/altar/vineyard); the curse two-layered on gen_11/gen_12&#x27;s ASSIGN device (kenaan-&gt;arur — the BARE formula, the letter&#x27;s own; the doom-clause a HOLDS fact on gen_11&#x27;s sentence-genre class; the speaking an event with a HUMAN agent — delta named); the blessing as gen_05&#x27;s BLESS inverted (a human blesses YHWH; mandate absent per gen_07); the four jussives as DECLARE + LET (TIR-026; gen_01&#x27;s yehi class, gen_13&#x27;s human-demand precedent) pushed and letter-faithfully OPEN — the queue ends open x4; the death-row on gen_14&#x27;s class (the 950-total fact + the die-event; the 5:32-to-9:29 hostage-row closure held as prose + [OPEN], Stage E ledger arc #7). FOUR frozen predictions land (gen_18&#x27;s cover-verb at 9:23; gen_21&#x27;s bless-verb at 9:26; gen_14&#x27;s curse-root at 9:25; gen_14&#x27;s ledger row at 9:29) plus gen_11&#x27;s named chain-link. EVED (&#x27;slave/servant&#x27;) born x4 inside the curse [crown]; ACHORANNIT (&#x27;backward&#x27;) spends its whole Torah career in one verse [rare crown]; NAFTZAH (&#x27;was scattered&#x27;) a Torah hapax pointing at Babel through a sibling stem. Onkelos INSERTS THE SHEKHINAH at 9:27 (find-class — the ambiguous dwell-subject resolved God-ward), levels the YHWH/Elohim name-split, moves the telling to the market, keeps the nakedness plain — dual-track throughout. Machine state: t0 empty, ONE install (+3 presupposed), ONE registry write, FOUR demands open, zero tests, zero invariants, zero handlers, nine facts, three read-flags — a dead man at nine hundred fifty, and a queue nothing will ever pop.</div><p class='meta'>Rendered 2026-08-08 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">FROZEN 2026-08-03 (second-generation derivation agent; freeze-after-review by the main loop — NO agent freeze; fifth unit under the PIPELINE + DEBUT-MAP process, the agent&#x27;s first): twenty-fourth-unit candidate — THE VINEYARD AND THE CURSE; fourteenth extension-free derivation candidate in a row. The inverse of gen_22&#x27;s all-speech ring: sixteen deed-events carry the plot and speech enters only twice — the Torah&#x27;s FIRST HUMAN curse and FIRST HUMAN blessing, adjacent verses, one mouth. Every call precedent-matched with encodings quoted: the vineyard INSTALLED on gen_08&#x27;s garden class (the chain garden/city/ark/altar/vineyard); the curse two-layered on gen_11/gen_12&#x27;s ASSIGN device (kenaan-&gt;arur — the BARE formula, the letter&#x27;s own; the doom-clause a HOLDS fact on gen_11&#x27;s sentence-genre class; the speaking an event with a HUMAN agent — delta named); the blessing as gen_05&#x27;s BLESS inverted (a human blesses YHWH; mandate absent per gen_07); the four jussives as DECLARE + LET (TIR-026; gen_01&#x27;s yehi class, gen_13&#x27;s human-demand precedent) pushed and letter-faithfully OPEN — the queue ends open x4; the death-row on gen_14&#x27;s class (the 950-total fact + the die-event; the 5:32-to-9:29 hostage-row closure held as prose + [OPEN], Stage E ledger arc #7). FOUR frozen predictions land (gen_18&#x27;s cover-verb at 9:23; gen_21&#x27;s bless-verb at 9:26; gen_14&#x27;s curse-root at 9:25; gen_14&#x27;s ledger row at 9:29) plus gen_11&#x27;s named chain-link. EVED (&#x27;slave/servant&#x27;) born x4 inside the curse [crown]; ACHORANNIT (&#x27;backward&#x27;) spends its whole Torah career in one verse [rare crown]; NAFTZAH (&#x27;was scattered&#x27;) a Torah hapax pointing at Babel through a sibling stem. Onkelos INSERTS THE SHEKHINAH at 9:27 (find-class — the ambiguous dwell-subject resolved God-ward), levels the YHWH/Elohim name-split, moves the telling to the market, keeps the nakedness plain — dual-track throughout. Machine state: t0 empty, ONE install (+3 presupposed), ONE registry write, FOUR demands open, zero tests, zero invariants, zero handlers, nine facts, three read-flags — a dead man at nine hundred fifty, and a queue nothing will ever pop.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

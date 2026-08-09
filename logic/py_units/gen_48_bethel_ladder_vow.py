@@ -17,8 +17,8 @@ m = Machine("gen_48_bethel_ladder_vow")
 # וַיֵּצֵא יַעֲקֹב מִבְּאֵר שָׁבַע וַיֵּלֶךְ חָרָנָה
 # "[EN-AID] And Jacob went out from Beer-sheva and went toward Haran."
 m.step("Gen.28.10")
-# ‹וַיֵּצֵא … וַיֵּלֶךְ חָרָנָה› fact holds: yaaqov-departed-beer-seven-
-# toward-charan
+# ‹וַיֵּצֵא … וַיֵּלֶךְ חָרָנָה› (“and-bring-forth … and-go Haran-ward”) —
+# fact holds: Jacob-departed-from-seven-toward-charan
 m.fact("yaaqov_departed_beer_sheva_toward_charan")
 
 # -------------------------- Gen.28.11 · THE_PLACE_SUNSET_AND_STONE_PILLOW --
@@ -28,8 +28,8 @@ m.fact("yaaqov_departed_beer_sheva_toward_charan")
 # and he took of the stones of the place and set them at his head, and lay
 # down in that place."
 m.step("Gen.28.11")
-# ‹כִּי־בָא הַשֶּׁמֶשׁ … מֵאַבְנֵי הַמָּקוֹם› fact holds: sun-set-stone-
-# pillow-at-the-maqom
+# ‹כִּי־בָא הַשֶּׁמֶשׁ … מֵאַבְנֵי הַמָּקוֹם› (“that come/bring the-sun …
+# from-stone the-place”) — fact holds: sun-set-stone-pillow-at-the-place
 m.fact("sun_set_stone_pillow_at_ha_maqom")
 
 # -------------------------- Gen.28.12 · THE_DREAM_DEBUT_AND_LADDER_HAPAX ---
@@ -39,9 +39,10 @@ m.fact("sun_set_stone_pillow_at_ha_maqom")
 # reaching heavenward; and behold, angels of God ascending and descending on
 # it."
 m.step("Gen.28.12")
-# ‹וַיַּחֲלֹם› event: ?
+# ‹וַיַּחֲלֹם› (“and-bind-firmly”) — event: ?
 m.event("?")
-# ‹סֻלָּם מֻצָּב אַרְצָה› fact holds: sulam-earthward-head-heavenward-angels
+# ‹סֻלָּם מֻצָּב אַרְצָה› (“stair-case stand earth-ward”) — fact holds:
+# stair-case-earthward-head-heavenward-angels
 m.fact("sulam_earthward_head_heavenward_angels")
 
 # -------------------------- Gen.28.13 · THE_STATIONED_LORD_AND_LAND_COMMITMENT -
@@ -52,8 +53,8 @@ m.fact("sulam_earthward_head_heavenward_angels")
 # Abraham your father and God of Isaac; the land on which you lie, to you I
 # will give it and to your seed."
 m.step("Gen.28.13")
-# ‹נִצָּב עָלָיו … לְךָ אֶתְּנֶנָּה› fact holds: the-LORD-nitzav-self-
-# identification-land-commitment
+# ‹נִצָּב עָלָיו … לְךָ אֶתְּנֶנָּה› (“stand over-him/its … to-you/your set-
+# her/its”) — fact holds: the-LORD-stand-self-identification-land-commitment
 m.fact("YHWH_nitzav_self_identification_land_commitment")
 
 # -------------------------- Gen.28.14 · THE_DUST_FORMULA_ALL_FAMILIES_NIPHAL -
@@ -63,8 +64,8 @@ m.fact("YHWH_nitzav_self_identification_land_commitment")
 # spread west and east and north and south; and all the families of the
 # ground shall be blessed in you and in your seed."
 m.step("Gen.28.14")
-# ‹כַּעֲפַר הָאָרֶץ … וְנִבְרֲכוּ בְךָ› fact holds: dust-seed-spread-all-
-# families-blessed
+# ‹כַּעֲפַר הָאָרֶץ … וְנִבְרֲכוּ בְךָ› (“like-dust the-earth … and-bless
+# in-you/your”) — fact holds: dust-seed-spread-all-families-blessed
 m.fact("dust_seed_spread_all_families_blessed")
 
 # -------------------------- Gen.28.15 · THE_FIVE_FOLD_PROMISE_NOT_LEAVE ----
@@ -75,8 +76,9 @@ m.fact("dust_seed_spread_all_families_blessed")
 # and I will bring you back to this ground; for I will not leave you until I
 # have done what I have spoken to you."
 m.step("Gen.28.15")
-# ‹וּשְׁמַרְתִּיךָ … וַהֲשִׁבֹתִיךָ … לֹא אֶעֱזָבְךָ› fact holds: five-fold-
-# promise-with-keep-return-not-leave-until-done
+# ‹וּשְׁמַרְתִּיךָ … וַהֲשִׁבֹתִיךָ … לֹא אֶעֱזָבְךָ› (“and-keep/guard-
+# you/your … and-return-you/your … not loosen-you/your”) — fact holds: five-
+# fold-promise-with-keep-return-not-leave-until-done
 m.fact("five_fold_promise_with_keep_return_not_leave_until_done")
 
 # -------------------------- Gen.28.16 · THE_WAKING_AKHEN_AND_NOT_KNOWING ---
@@ -85,8 +87,8 @@ m.fact("five_fold_promise_with_keep_return_not_leave_until_done")
 # "[EN-AID] And Jacob awoke from his sleep and said: Surely YHWH is in this
 # place, and I did not know."
 m.step("Gen.28.16")
-# ‹וַיִּיקַץ … אָכֵן … לֹא יָדָעְתִּי› fact holds: yaaqov-woke-akhen-the-
-# LORD-in-place-unknown
+# ‹וַיִּיקַץ … אָכֵן … לֹא יָדָעְתִּי› (“and-awake … firmly … not know”) —
+# fact holds: Jacob-woke-firmly-the-LORD-in-place-unknown
 m.fact("yaaqov_woke_akhen_YHWH_in_place_unknown")
 
 # -------------------------- Gen.28.17 · THE_FEAR_DOUBLET_GATE_OF_HEAVEN ----
@@ -95,8 +97,8 @@ m.fact("yaaqov_woke_akhen_YHWH_in_place_unknown")
 # "[EN-AID] And he feared and said: How awesome is this place! This is none
 # other than the house of God, and this is the gate of heaven."
 m.step("Gen.28.17")
-# ‹וַיִּירָא … מַה־נּוֹרָא … שַׁעַר הַשָּׁמָיִם› fact holds: fear-doublet-
-# bet-God-shaar-the-heavens
+# ‹וַיִּירָא … מַה־נּוֹרָא … שַׁעַר הַשָּׁמָיִם› (“and-fear … what fear …
+# gate the-heavens”) — fact holds: fear-doublet-house-God-gate-the-heavens
 m.fact("fear_doublet_bet_elohim_shaar_ha_shamayim")
 
 # -------------------------- Gen.28.18 · THE_PILLAR_AND_THE_OIL_DEBUT -------
@@ -105,10 +107,11 @@ m.fact("fear_doublet_bet_elohim_shaar_ha_shamayim")
 # "[EN-AID] And Jacob rose early in the morning and took the stone he had
 # set at his head, and set it as a pillar, and poured oil on its head."
 m.step("Gen.28.18")
-# ‹וַיָּשֶׂם אֹתָהּ מַצֵּבָה וַיִּצֹק שֶׁמֶן› event: ?
+# ‹וַיָּשֶׂם אֹתָהּ מַצֵּבָה וַיִּצֹק שֶׁמֶן› (“and-put/set obj-marker-
+# her/its pillar and-pour-out oil”) — event: ?
 m.event("?")
-# ‹וַיַּשְׁכֵּם … וַיִּקַּח אֶת־הָאֶבֶן› fact holds: early-rise-stone-taken-
-# set-as-pillar
+# ‹וַיַּשְׁכֵּם … וַיִּקַּח אֶת־הָאֶבֶן› (“and-rise-early … and-take obj-
+# marker the-stone”) — fact holds: early-rise-stone-taken-set-as-pillar
 m.fact("early_rise_stone_taken_set_as_pillar")
 
 # -------------------------- Gen.28.19 · THE_NAME_WRITE_BEIT_EL -------------
@@ -117,8 +120,8 @@ m.fact("early_rise_stone_taken_set_as_pillar")
 # "[EN-AID] And he called the name of that place Bethel; but Luz was the
 # name of the city at first."
 m.step("Gen.28.19")
-# ‹וַיִּקְרָא אֶת־שֵׁם־הַמָּקוֹם הַהוּא בֵּית־אֵל› named: the-maqom-luz :=
-# beit-to
+# ‹וַיִּקְרָא אֶת־שֵׁם־הַמָּקוֹם הַהוּא בֵּית־אֵל› (“and-call obj-marker
+# name the-place that Beth-el”) — named: the-place-Luz := beit-to
 m.name("ha_maqom_luz", "beit_el")
 
 # -------------------------- Gen.28.20 · THE_FIRST_VOW_CONDITIONS_OPEN ------
@@ -129,8 +132,9 @@ m.name("ha_maqom_luz", "beit_el")
 # me on this way that I go, and give me bread to eat and a garment to wear
 # —"
 m.step("Gen.28.20")
-# ‹וַיִּדַּר יַעֲקֹב נֶדֶר … לֶחֶם … וּבֶגֶד› fact holds: neder-opened-
-# conditions-with-keep-bread-garment
+# ‹וַיִּדַּר יַעֲקֹב נֶדֶר … לֶחֶם … וּבֶגֶד› (“and-promise Jacob promise …
+# food … and-garment”) — fact holds: promise-opened-conditions-with-keep-
+# bread-garment
 m.fact("neder_opened_conditions_with_keep_bread_garment")
 
 # -------------------------- Gen.28.21 · THE_RETURN_IN_PEACE_AND_THEN_CLAUSE -
@@ -138,8 +142,9 @@ m.fact("neder_opened_conditions_with_keep_bread_garment")
 # "[EN-AID] And I return in peace to my father's house — then YHWH will be
 # my God."
 m.step("Gen.28.21")
-# ‹וְשַׁבְתִּי בְשָׁלוֹם … וְהָיָה יְהוָה לִי לֵאלֹהִים› fact holds: return-
-# in-peace-condition-then-the-LORD-my-God
+# ‹וְשַׁבְתִּי בְשָׁלוֹם … וְהָיָה יְהוָה לִי לֵאלֹהִים› (“and-return in-
+# safe … and-be YHWH to-me/my to-God”) — fact holds: return-in-peace-
+# condition-then-the-LORD-my-God
 m.fact("return_in_peace_condition_then_YHWH_my_God")
 
 # -------------------------- Gen.28.22 · THE_VOW_HANDLER_STONE_HOUSE_TITHE --
@@ -148,14 +153,14 @@ m.fact("return_in_peace_condition_then_YHWH_my_God")
 # "[EN-AID] And this stone which I have set as a pillar shall be the house
 # of God; and all that You give me I will surely tithe to You."
 m.step("Gen.28.22")
-# ‹אִם־יִהְיֶה אֱלֹהִים עִמָּדִי … עַשֵּׂר אֲעַשְּׂרֶנּוּ לָךְ› standing
-# handler — if God-with-me ∧ shemarani-in-the-derekh ∧ natan-lechem-and-
-# veged ∧ shavti-and-shalom then the-LORD-to-me-to-God ∧ the-even-bet-God ∧
-# aser-aasrenu
+# ‹אִם־יִהְיֶה אֱלֹהִים עִמָּדִי … עַשֵּׂר אֲעַשְּׂרֶנּוּ לָךְ› (“if be God
+# along-with-me/my … tithe tithe-him/its to-you/your”) — standing handler —
+# if God-with-me ∧ shemarani-in-the-derekh ∧ set-food-and-garment ∧ return-
+# and-safe then the-LORD-to-me-to-God ∧ the-stone-house-God ∧ tithe-aasrenu
 m.handler("elohim_imadi ∧ shemarani_ba_derekh ∧ natan_lechem_u_veged ∧ shavti_ve_shalom",
           "YHWH_li_le_Elohim ∧ ha_even_bet_Elohim ∧ aser_aasrenu")
-# ‹וְהָאֶבֶן הַזֹּאת … עַשֵּׂר אֲעַשְּׂרֶנּוּ› fact holds: stone-house-
-# tithe-vow-content
+# ‹וְהָאֶבֶן הַזֹּאת … עַשֵּׂר אֲעַשְּׂרֶנּוּ› (“and-the-stone the-this …
+# tithe tithe-him/its”) — fact holds: stone-house-tithe-vow-content
 m.fact("stone_house_tithe_vow_content")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

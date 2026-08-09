@@ -19,8 +19,9 @@ m = Machine("gen_37_laughter_wilderness_oath")
 # "And the LORD remembered Sarah as He had said, and the LORD did unto Sarah
 # as He had spoken."
 m.step("Gen.21.1")
-# ‹פָּקַד … כַּאֲשֶׁר אָמָר … כַּאֲשֶׁר דִּבֵּר› fact holds: paqad-like-
-# which-amar-and-yaas-like-which-diber
+# ‹פָּקַד … כַּאֲשֶׁר אָמָר … כַּאֲשֶׁר דִּבֵּר› (“count/visit … like-
+# as/which say … like-as/which speak”) — fact holds: count/visit-like-which-
+# say-and-make-like-which-speak
 m.fact("paqad_ka_asher_amar_va_yaas_ka_asher_diber")
 
 # -------------------------- Gen.21.2 · THE_BIRTH_AT_THE_APPOINTED_TIME -----
@@ -29,10 +30,12 @@ m.fact("paqad_ka_asher_amar_va_yaas_ka_asher_diber")
 # "And Sarah conceived, and bore Abraham a son in his old age, at the set
 # time of which God had spoken to him."
 m.step("Gen.21.2")
-# ‹וַתֵּלֶד שָׂרָה לְאַבְרָהָם בֵּן› the world gains: yitzchaq
+# ‹וַתֵּלֶד שָׂרָה לְאַבְרָהָם בֵּן› (“and-bear-young Sarah to-Abraham son”)
+# — the world gains: Isaac
 m.install("yitzchaq")
-# ‹בֵּן לִזְקֻנָיו לַמּוֹעֵד אֲשֶׁר־דִּבֶּר› fact holds: ben-to-me-zequnayv;
-# to-moed-which-diber-God
+# ‹בֵּן לִזְקֻנָיו לַמּוֹעֵד אֲשֶׁר־דִּבֶּר› (“son to-old-age-him/its to-
+# seasons which speak”) — fact holds: son-to-me-zequnayv; to-seasons-which-
+# speak-God
 m.fact("ben_li_zequnayv",
        "la_moed_asher_diber_elohim")
 
@@ -42,8 +45,8 @@ m.fact("ben_li_zequnayv",
 # "And Abraham called the name of his son that was born unto him, whom Sarah
 # bore to him, Isaac."
 m.step("Gen.21.3")
-# ‹וַיִּקְרָא אַבְרָהָם אֶת־שֶׁם־בְּנוֹ … יִצְחָק› named: yitzchaq :=
-# Yitzchaq
+# ‹וַיִּקְרָא אַבְרָהָם אֶת־שֶׁם־בְּנוֹ … יִצְחָק› (“and-call Abraham obj-
+# marker name son-him/its … Isaac”) — named: Isaac := Yitzchaq
 m.name("yitzchaq", "Yitzchaq")
 
 # -------------------------- Gen.21.4 · THE_LAWS_SECOND_CASE_EXECUTES -------
@@ -52,10 +55,12 @@ m.name("yitzchaq", "Yitzchaq")
 # "And Abraham circumcised his son Isaac when he was eight days old, as God
 # had commanded him."
 m.step("Gen.21.4")
-# ‹וַיָּמָל אַבְרָהָם אֶת־יִצְחָק … כַּאֲשֶׁר צִוָּה אֹתוֹ אֱלֹהִים› event:
-# circumcise — agent avraham; theme yitzchaq
+# ‹וַיָּמָל אַבְרָהָם אֶת־יִצְחָק … כַּאֲשֶׁר צִוָּה אֹתוֹ אֱלֹהִים› (“and-
+# circumcise Abraham obj-marker Isaac … like-as/which command obj-marker-
+# him/its God”) — event: circumcise — agent Abraham; theme Isaac
 m.event("circumcise", agent="avraham", themes=["yitzchaq"])
-# ‹כַּאֲשֶׁר צִוָּה אֹתוֹ אֱלֹהִים› fact holds: like-which-tziva-it-God
+# ‹כַּאֲשֶׁר צִוָּה אֹתוֹ אֱלֹהִים› (“like-as/which command obj-marker-
+# him/its God”) — fact holds: like-which-command-it-God
 m.fact("ka_asher_tziva_oto_elohim")
 
 # -------------------------- Gen.21.5 · THE_HUNDRED_YEAR_FRAME --------------
@@ -63,7 +68,7 @@ m.fact("ka_asher_tziva_oto_elohim")
 # "And Abraham was a hundred years old, when his son Isaac was born unto
 # him."
 m.step("Gen.21.5")
-# ‹בֶּן־מְאַת שָׁנָה› fact holds: ben-meat-year
+# ‹בֶּן־מְאַת שָׁנָה› (“son hundred years”) — fact holds: son-hundred-year
 m.fact("ben_meat_shanah")
 
 # -------------------------- Gen.21.6 · THE_LAUGHTER_MADE_AND_CONJUGATED ----
@@ -71,8 +76,9 @@ m.fact("ben_meat_shanah")
 # "And Sarah said: 'God hath made laughter for me; every one that heareth
 # will laugh on account of me.'"
 m.step("Gen.21.6")
-# ‹צְחֹק עָשָׂה לִי אֱלֹהִים כָּל־הַשֹּׁמֵעַ יִצְחַק־לִי› fact holds:
-# tzechoq-make-to-me-God-all-the-shomea-yitzchaq-to-me
+# ‹צְחֹק עָשָׂה לִי אֱלֹהִים כָּל־הַשֹּׁמֵעַ יִצְחַק־לִי› (“laughter make
+# to-me/my God all the-hear laugh-outright to-me/my”) — fact holds:
+# laughter-make-to-me-God-all-the-hear-Isaac-to-me
 m.fact("tzechoq_asah_li_elohim_kol_ha_shomea_yitzchaq_li")
 
 # -------------------------- Gen.21.7 · THE_WHO_WOULD_HAVE_SAID -------------
@@ -81,8 +87,8 @@ m.fact("tzechoq_asah_li_elohim_kol_ha_shomea_yitzchaq_li")
 # "And she said: 'Who would have said unto Abraham, that Sarah should give
 # children suck? for I have borne him a son in his old age.'"
 m.step("Gen.21.7")
-# ‹מִי מִלֵּל לְאַבְרָהָם› fact holds: from-milel-to-avraham-heniqah-vanim-
-# sarah
+# ‹מִי מִלֵּל לְאַבְרָהָם› (“who? speak to-Abraham”) — fact holds:
+# who?-speak-to-Abraham-heniqah-son-sarah
 m.fact("mi_milel_le_avraham_heniqah_vanim_sarah")
 
 # -------------------------- Gen.21.8 · THE_WEANING_FEAST -------------------
@@ -91,8 +97,8 @@ m.fact("mi_milel_le_avraham_heniqah_vanim_sarah")
 # "And the child grew, and was weaned. And Abraham made a great feast on the
 # day that Isaac was weaned."
 m.step("Gen.21.8")
-# ‹וַיַּעַשׂ אַבְרָהָם מִשְׁתֶּה גָדוֹל› event: feast — agent avraham; theme
-# yitzchaq
+# ‹וַיַּעַשׂ אַבְרָהָם מִשְׁתֶּה גָדוֹל› (“and-make Abraham drink great”) —
+# event: feast — agent Abraham; theme Isaac
 m.event("feast", agent="avraham", themes=["yitzchaq"])
 
 # -------------------------- Gen.21.9 · THE_MOCKING_SEEN --------------------
@@ -101,11 +107,12 @@ m.event("feast", agent="avraham", themes=["yitzchaq"])
 # "And Sarah saw the son of Hagar the Egyptian, whom she had borne unto
 # Abraham, making sport."
 m.step("Gen.21.9")
-# ‹הָגָר הַמִּצְרִית› the world gains: hagar
+# ‹הָגָר הַמִּצְרִית› (“Hagar the-Egyptian”) — the world gains: Hagar
 m.install("hagar")
-# ‹בֶּן־הָגָר› the world gains: the-naar
+# ‹בֶּן־הָגָר› (“son Hagar”) — the world gains: the-boy
 m.install("ha_naar")
-# ‹וַתֵּרֶא שָׂרָה … מְצַחֵק› event: see — agent sarah; theme the-naar
+# ‹וַתֵּרֶא שָׂרָה … מְצַחֵק› (“and-see Sarah … laugh-outright”) — event:
+# see — agent sarah; theme the-boy
 m.event("see", agent="sarah", themes=["ha_naar"])
 
 # -------------------------- Gen.21.10 · THE_EXPULSION_DEMAND ---------------
@@ -115,12 +122,14 @@ m.event("see", agent="sarah", themes=["ha_naar"])
 # for the son of this bondwoman shall not be heir with my son, even with
 # Isaac.'"
 m.step("Gen.21.10")
-# ‹גָּרֵשׁ הָאָמָה הַזֹּאת וְאֶת־בְּנָהּ› sarah speaks a demand — LET:
-# garesh(the-cubit-and-benah)
+# ‹גָּרֵשׁ הָאָמָה הַזֹּאת וְאֶת־בְּנָהּ› (“drive-out-from-a-possession the-
+# maidservant the-this and-obj-marker son-her/its”) — sarah speaks a demand
+# — LET: drive-out-from-a-possession(the-cubit-and-obj-marker-benah)
 m.declare("sarah", "LET",
           "garesh(ha_amah_ve_et_benah)")
-# ‹כִּי לֹא יִירַשׁ בֶּן־הָאָמָה הַזֹּאת עִם־בְּנִי עִם־יִצְחָק› fact holds:
-# not-yirash-ben-the-cubit-if-beni-if-yitzchaq
+# ‹כִּי לֹא יִירַשׁ בֶּן־הָאָמָה הַזֹּאת עִם־בְּנִי עִם־יִצְחָק› (“that not
+# possess/inherit son the-maidservant the-this with son-me/my with Isaac”) —
+# fact holds: not-possess/inherit-son-the-cubit-with-beni-with-Isaac
 m.fact("lo_yirash_ben_ha_amah_im_beni_im_yitzchaq")
 
 # -------------------------- Gen.21.11 · THE_EVIL_IN_THE_FATHERS_EYES -------
@@ -128,8 +137,9 @@ m.fact("lo_yirash_ben_ha_amah_im_beni_im_yitzchaq")
 # "And the thing was very grievous in Abraham's sight on account of his
 # son."
 m.step("Gen.21.11")
-# ‹וַיֵּרַע הַדָּבָר מְאֹד בְּעֵינֵי אַבְרָהָם› fact holds: and-yera-the-
-# davar-very-in-eyes-of-avraham
+# ‹וַיֵּרַע הַדָּבָר מְאֹד בְּעֵינֵי אַבְרָהָם› (“and-spoil the-word/thing
+# very in-eye Abraham”) — fact holds: and-spoil-the-word/thing-very-in-eyes-
+# of-Abraham
 m.fact("va_yera_ha_davar_meod_be_einei_avraham")
 
 # -------------------------- Gen.21.12 · THE_ARBITRATION_IN_THREE_MOODS -----
@@ -140,15 +150,17 @@ m.fact("va_yera_ha_davar_meod_be_einei_avraham")
 # of the lad, and because of thy bondwoman; in all that Sarah saith unto
 # thee, hearken unto her voice; for in Isaac shall seed be called to thee."
 m.step("Gen.21.12")
-# ‹אַל־יֵרַע בְּעֵינֶיךָ› God speaks a demand — LET-NOT: yera(in-einekha)
+# ‹אַל־יֵרַע בְּעֵינֶיךָ› (“do-not spoil in-eye-you/your”) — God speaks a
+# demand — LET-NOT: spoil(in-einekha)
 m.declare("elohim", "LET-NOT",
           "yera(be_einekha)")
-# ‹כֹּל אֲשֶׁר תֹּאמַר אֵלֶיךָ שָׂרָה שְׁמַע בְּקֹלָהּ› God speaks a demand
-# — LET: hear(in-voice-sarah)
+# ‹כֹּל אֲשֶׁר תֹּאמַר אֵלֶיךָ שָׂרָה שְׁמַע בְּקֹלָהּ› (“all which say to-
+# you/your Sarah hear in-voice/sound-her/its”) — God speaks a demand — LET:
+# hear(in-voice/sound-sarah)
 m.declare("elohim", "LET",
           "shema(be_qol_sarah)")
-# ‹כִּי בְיִצְחָק יִקָּרֵא לְךָ זָרַע› fact holds: when-and-yitzchaq-yiqare-
-# to-you-zara
+# ‹כִּי בְיִצְחָק יִקָּרֵא לְךָ זָרַע› (“that in-Isaac call to-you/your
+# seed”) — fact holds: that-and-Isaac-call-to-you-seed
 m.fact("ki_ve_yitzchaq_yiqare_lekha_zara")
 
 # -------------------------- Gen.21.13 · THE_OTHER_NATION_PROMISE -----------
@@ -156,8 +168,8 @@ m.fact("ki_ve_yitzchaq_yiqare_lekha_zara")
 # "And also of the son of the bondwoman will I make a nation, because he is
 # thy seed.'"
 m.step("Gen.21.13")
-# ‹לְגוֹי אֲשִׂימֶנּוּ כִּי זַרְעֲךָ הוּא› fact holds: to-goy-asimenu-when-
-# zarakha-that
+# ‹לְגוֹי אֲשִׂימֶנּוּ כִּי זַרְעֲךָ הוּא› (“to-nation put/set-him/its that
+# seed-you/your he/it”) — fact holds: to-nation-asimenu-that-zarakha-he/it
 m.fact("le_goy_asimenu_ki_zarakha_hu")
 
 # -------------------------- Gen.21.14 · THE_DAWN_COMPLIANCE_IN_OTHER_VERBS -
@@ -169,14 +181,15 @@ m.fact("le_goy_asimenu_ki_zarakha_hu")
 # and sent her away; and she departed, and strayed in the wilderness of
 # Beer-sheba."
 m.step("Gen.21.14")
-# ‹וַיַּשְׁכֵּם … וַיִּקַּח … וַיִּתֵּן … וַיְשַׁלְּחֶהָ› event: send-away —
-# agent avraham; theme hagar
+# ‹וַיַּשְׁכֵּם … וַיִּקַּח … וַיִּתֵּן … וַיְשַׁלְּחֶהָ› (“and-rise-early …
+# and-take … and-set … and-send-her/its”) — event: send-away — agent
+# Abraham; theme Hagar
 m.event("send_away", agent="avraham", themes=["hagar"])
-# ‹וַיְשַׁלְּחֶהָ … וַתֵּתַע› fact holds: and-yashkem-and-yeshalcheha-and-
-# teta
+# ‹וַיְשַׁלְּחֶהָ … וַתֵּתַע› (“and-send-her/its … and-vacillate”) — fact
+# holds: and-rise-early-and-yeshalcheha-and-vacillate
 m.fact("va_yashkem_va_yeshalcheha_va_teta")
-# ‹בְּמִדְבַּר בְּאֵר שָׁבַע› reads without prior install (flag, not fix):
-# beer-seven
+# ‹בְּמִדְבַּר בְּאֵר שָׁבַע› (“in-pasture Beer-shebah”) — reads without
+# prior install (flag, not fix): pit-seven
 m.presupposed("beer_sheva")
 
 # -------------------------- Gen.21.15 · THE_SPENT_SKIN_AND_THE_CAST_CHILD --
@@ -185,7 +198,8 @@ m.presupposed("beer_sheva")
 # "And the water in the bottle was spent, and she cast the child under one
 # of the shrubs."
 m.step("Gen.21.15")
-# ‹וַתַּשְׁלֵךְ אֶת־הַיֶּלֶד› event: cast — agent hagar; theme the-naar
+# ‹וַתַּשְׁלֵךְ אֶת־הַיֶּלֶד› (“and-throw-out obj-marker the-child”) —
+# event: cast — agent Hagar; theme the-boy
 m.event("cast", agent="hagar", themes=["ha_naar"])
 
 # -------------------------- Gen.21.16 · THE_BOWSHOT_AND_THE_WEEPING --------
@@ -196,9 +210,11 @@ m.event("cast", agent="hagar", themes=["ha_naar"])
 # were a bow-shot; for she said: 'Let me not look upon the death of the
 # child.' And she sat over against him, and lifted up her voice, and wept."
 m.step("Gen.21.16")
-# ‹אַל־אֶרְאֶה בְּמוֹת הַיָּלֶד› fact holds: upon-ereh-in-dying-the-yaled
+# ‹אַל־אֶרְאֶה בְּמוֹת הַיָּלֶד› (“do-not see in-death the-child”) — fact
+# holds: over-ereh-in-death-the-child
 m.fact("al_ereh_be_mot_ha_yaled")
-# ‹וַתִּשָּׂא אֶת־קֹלָהּ וַתֵּבְךְּ› event: weep — agent hagar
+# ‹וַתִּשָּׂא אֶת־קֹלָהּ וַתֵּבְךְּ› (“and-lift/carry obj-marker
+# voice/sound-her/its and-weep”) — event: weep — agent Hagar
 m.event("weep", agent="hagar")
 
 # -------------------------- Gen.21.17 · THE_SKY_CALL_AND_THE_HEARD_NAME ----
@@ -209,13 +225,16 @@ m.event("weep", agent="hagar")
 # out of heaven, and said unto her: 'What aileth thee, Hagar? fear not; for
 # God hath heard the voice of the lad where he is."
 m.step("Gen.21.17")
-# ‹מַלְאַךְ אֱלֹהִים … מִן־הַשָּׁמַיִם› the world gains: malakh-God
+# ‹מַלְאַךְ אֱלֹהִים … מִן־הַשָּׁמַיִם› (“messenger God … from the-heavens”)
+# — the world gains: messenger-God
 m.install("malakh_elohim")
-# ‹אַל־תִּירְאִי› malakh-God speaks a demand — LET-NOT: tiri(hagar)
+# ‹אַל־תִּירְאִי› (“do-not fear”) — messenger-God speaks a demand — LET-NOT:
+# fear(Hagar)
 m.declare("malakh_elohim", "LET-NOT",
           "tiri(hagar)")
-# ‹כִּי־שָׁמַע אֱלֹהִים אֶל־קוֹל הַנַּעַר בַּאֲשֶׁר הוּא־שָׁם› fact holds:
-# shama-God-to-voice-the-naar-in-the-which-that-there
+# ‹כִּי־שָׁמַע אֱלֹהִים אֶל־קוֹל הַנַּעַר בַּאֲשֶׁר הוּא־שָׁם› (“that hear
+# God to voice/sound the-boy in-who he/it there”) — fact holds: hear-God-to-
+# voice/sound-the-boy-in-the-which-he/it-there
 m.fact("shama_elohim_el_qol_ha_naar_ba_asher_hu_sham")
 
 # -------------------------- Gen.21.18 · THE_COMPOUND_TRIPLE_THIRD_TOKEN ----
@@ -224,11 +243,14 @@ m.fact("shama_elohim_el_qol_ha_naar_ba_asher_hu_sham")
 # "Arise, lift up the lad, and hold him fast by thy hand; for I will make
 # him a great nation.'"
 m.step("Gen.21.18")
-# ‹קוּמִי שְׂאִי אֶת־הַנַּעַר וְהַחֲזִיקִי אֶת־יָדֵךְ בּוֹ› malakh-God
-# speaks a demand — LET: qumi-sei-and-hachaziqi(the-naar)
+# ‹קוּמִי שְׂאִי אֶת־הַנַּעַר וְהַחֲזִיקִי אֶת־יָדֵךְ בּוֹ› (“arise
+# lift/carry obj-marker the-boy and-fasten-upon obj-marker hand-you/your in-
+# him/its”) — messenger-God speaks a demand — LET: arise-lift/carry-and-
+# fasten-upon(obj-marker-the-boy)
 m.declare("malakh_elohim", "LET",
           "qumi_sei_ve_hachaziqi(et_ha_naar)")
-# ‹כִּי־לְגוֹי גָּדוֹל אֲשִׂימֶנּוּ› fact holds: when-to-goy-gadol-asimenu
+# ‹כִּי־לְגוֹי גָּדוֹל אֲשִׂימֶנּוּ› (“that to-nation great put/set-
+# him/its”) — fact holds: that-to-nation-great-asimenu
 m.fact("ki_le_goy_gadol_asimenu")
 
 # -------------------------- Gen.21.19 · THE_EYES_OPENED_AT_THE_WELL --------
@@ -237,10 +259,12 @@ m.fact("ki_le_goy_gadol_asimenu")
 # "And God opened her eyes, and she saw a well of water; and she went, and
 # filled the bottle with water, and gave the lad drink."
 m.step("Gen.21.19")
-# ‹וַיִּפְקַח אֱלֹהִים אֶת־עֵינֶיהָ› event: open-eyes — agent God
+# ‹וַיִּפְקַח אֱלֹהִים אֶת־עֵינֶיהָ› (“and-open God obj-marker eye-her/its”)
+# — event: open-eyes — agent God
 m.event("open_eyes", agent="elohim")
-# ‹וַתְּמַלֵּא אֶת־הַחֵמֶת מַיִם וַתַּשְׁקְ אֶת־הַנָּעַר› event: water —
-# agent hagar
+# ‹וַתְּמַלֵּא אֶת־הַחֵמֶת מַיִם וַתַּשְׁקְ אֶת־הַנָּעַר› (“and-fill obj-
+# marker the-skin-bottle waters and-give-drink obj-marker the-boy”) — event:
+# water — agent Hagar
 m.event("water", agent="hagar")
 
 # -------------------------- Gen.21.20 · GOD_WITH_THE_LAD -------------------
@@ -249,8 +273,8 @@ m.event("water", agent="hagar")
 # "And God was with the lad, and he grew; and he dwelt in the wilderness,
 # and became an archer."
 m.step("Gen.21.20")
-# ‹וַיְהִי אֱלֹהִים אֶת־הַנַּעַר וַיִּגְדָּל› fact holds: God-the-naar-and-
-# yigdal
+# ‹וַיְהִי אֱלֹהִים אֶת־הַנַּעַר וַיִּגְדָּל› (“and-be God with the-boy and-
+# be-large”) — fact holds: God-obj-marker-the-boy-and-be-large
 m.fact("elohim_et_ha_naar_va_yigdal")
 
 # -------------------------- Gen.21.21 · PARAN_AND_THE_EGYPTIAN_WIFE --------
@@ -259,10 +283,11 @@ m.fact("elohim_et_ha_naar_va_yigdal")
 # "And he dwelt in the wilderness of Paran; and his mother took him a wife
 # out of the land of Egypt."
 m.step("Gen.21.21")
-# ‹וַתִּקַּח־לוֹ אִמּוֹ אִשָּׁה› event: take-wife — agent hagar
+# ‹וַתִּקַּח־לוֹ אִמּוֹ אִשָּׁה› (“and-take to-him/its mother-him/its
+# woman”) — event: take-wife — agent Hagar
 m.event("take_wife", agent="hagar")
-# ‹בְּמִדְבַּר פָּארָן … מֵאֶרֶץ מִצְרָיִם› reads without prior install
-# (flag, not fix): paran, mitzrayim
+# ‹בְּמִדְבַּר פָּארָן … מֵאֶרֶץ מִצְרָיִם› (“in-pasture Paran … from-earth
+# Egypt”) — reads without prior install (flag, not fix): Paran, Egypt
 m.presupposed("paran", "mitzrayim")
 
 # -------------------------- Gen.21.22-24 · THE_PACT_OPENING_DEMAND_AND_COMMITMENT -
@@ -277,20 +302,22 @@ m.presupposed("paran", "mitzrayim")
 # the kindness that I have done unto thee, thou shalt do unto me, and to the
 # land wherein thou hast sojourned.' And Abraham said: 'I will swear.'"
 m.step("Gen.21.22-24")
-# ‹אֲבִימֶלֶךְ› the world gains: avimelekh
+# ‹אֲבִימֶלֶךְ› (“Abimelech”) — the world gains: Abimelech
 m.install("avimelekh")
-# ‹וּפִיכֹל שַׂר־צְבָאוֹ› the world gains: fikhol
+# ‹וּפִיכֹל שַׂר־צְבָאוֹ› (“and-Phichol officer host-him/its”) — the world
+# gains: Phichol
 m.install("fikhol")
 # ‹אֱלֹהִים עִמְּךָ בְּכֹל אֲשֶׁר־אַתָּה עֹשֶׂה … כַּחֶסֶד אֲשֶׁר־עָשִׂיתִי
-# עִמְּךָ› fact holds: God-imkha-in-all-which-you-oseh; like-chesed-which-
-# asiti-imkha
+# עִמְּךָ› (“God with-you/your in-all which you make … like-kindness which
+# make with-you/your”) — fact holds: God-imkha-in-all-which-you-oseh; like-
+# chesed-which-make-imkha
 m.fact("elohim_imkha_be_khol_asher_atah_oseh",
        "ka_chesed_asher_asiti_imkha")
-# ‹וְעַתָּה הִשָּׁבְעָה לִּי בֵאלֹהִים הֵנָּה› avimelekh speaks a demand —
-# LET: hishava(to-me-and-God)
+# ‹וְעַתָּה הִשָּׁבְעָה לִּי בֵאלֹהִים הֵנָּה› (“and-now swear-ward to-me/my
+# in-God hither”) — Abimelech speaks a demand — LET: hishava(to-me-and-God)
 m.declare("avimelekh", "LET",
           "hishava(li_ve_elohim)")
-# ‹אָנֹכִי אִשָּׁבֵעַ› fact holds: anokhi-ishavea
+# ‹אָנֹכִי אִשָּׁבֵעַ› (“swear”) — fact holds: anokhi-swear
 m.fact("anokhi_ishavea")
 
 # -------------------------- Gen.21.25 · THE_REPROOF_OVER_THE_STOLEN_WELL ---
@@ -299,8 +326,8 @@ m.fact("anokhi_ishavea")
 # "And Abraham reproved Abimelech because of the well of water, which
 # Abimelech's servants had violently taken away."
 m.step("Gen.21.25")
-# ‹וְהוֹכִחַ אַבְרָהָם אֶת־אֲבִימֶלֶךְ› event: reprove — agent avraham;
-# theme avimelekh
+# ‹וְהוֹכִחַ אַבְרָהָם אֶת־אֲבִימֶלֶךְ› (“and-be-right Abraham obj-marker
+# Abimelech”) — event: reprove — agent Abraham; theme Abimelech
 m.event("reprove", agent="avraham", themes=["avimelekh"])
 
 # -------------------------- Gen.21.26 · THE_TRIPLE_DENIAL ------------------
@@ -310,8 +337,8 @@ m.event("reprove", agent="avraham", themes=["avimelekh"])
 # "And Abimelech said: 'I know not who hath done this thing; neither didst
 # thou tell me, neither yet heard I of it, but to-day.'"
 m.step("Gen.21.26")
-# ‹לֹא יָדַעְתִּי … לֹא־הִגַּדְתָּ … לֹא שָׁמַעְתִּי› fact holds: not-
-# yadati-not-higadta-not-shamati-bilti-the-day
+# ‹לֹא יָדַעְתִּי … לֹא־הִגַּדְתָּ … לֹא שָׁמַעְתִּי› (“not know … not tell
+# … not hear”) — fact holds: not-know-not-tell-not-hear-failure-of-the-day
 m.fact("lo_yadati_lo_higadta_lo_shamati_bilti_ha_yom")
 
 # -------------------------- Gen.21.27 · THE_FIRST_HUMAN_HUMAN_CUT ----------
@@ -320,7 +347,8 @@ m.fact("lo_yadati_lo_higadta_lo_shamati_bilti_ha_yom")
 # "And Abraham took sheep and oxen, and gave them unto Abimelech; and they
 # two made a covenant."
 m.step("Gen.21.27")
-# ‹וַיִּכְרְתוּ שְׁנֵיהֶם בְּרִית› event: cut-covenant — agent avraham
+# ‹וַיִּכְרְתוּ שְׁנֵיהֶם בְּרִית› (“and-cut two-them/their covenant”) —
+# event: cut-covenant — agent Abraham
 m.event("cut_covenant", agent="avraham")
 
 # -------------------------- Gen.21.28-31 · THE_SEVEN_EWES_AND_THE_NAMING_REPORT -
@@ -335,19 +363,22 @@ m.event("cut_covenant", agent="avraham")
 # well.' Wherefore that place was called Beer-sheba; because there they
 # swore both of them."
 m.step("Gen.21.28-31")
-# ‹וַיַּצֵּב אַבְרָהָם אֶת־שֶׁבַע כִּבְשֹׂת הַצֹּאן לְבַדְּהֶן› event:
-# station — agent avraham; theme seven-kivsot
+# ‹וַיַּצֵּב אַבְרָהָם אֶת־שֶׁבַע כִּבְשֹׂת הַצֹּאן לְבַדְּהֶן› (“and-stand
+# Abraham obj-marker seven ewe the-flock to-separation-them/their”) — event:
+# station — agent Abraham; theme seven-ewe
 m.event("station", agent="avraham", themes=["sheva_kivsot"])
 # ‹תִּקַּח מִיָּדִי בַּעֲבוּר תִּהְיֶה־לִּי לְעֵדָה כִּי חָפַרְתִּי
-# אֶת־הַבְּאֵר› fact holds: seven-khevasot-tiqach-from-yadi-to-edah; when-
-# chafarti-the-beer
+# אֶת־הַבְּאֵר› (“take from-hand-me/my for-the-sake-of be to-me/my to-
+# testimony that dig obj-marker the-pit”) — fact holds: seven-khevasot-take-
+# who?-yadi-to-edah; that-dig-obj-marker-the-pit
 m.fact("sheva_khevasot_tiqach_mi_yadi_le_edah",
        "ki_chafarti_et_ha_beer")
-# ‹כִּי שָׁם נִשְׁבְּעוּ שְׁנֵיהֶם› demand settled (popped from the queue):
-# hishava(to-me-and-God)
+# ‹כִּי שָׁם נִשְׁבְּעוּ שְׁנֵיהֶם› (“that there swear two-them/their”) —
+# demand settled (popped from the queue): hishava(to-me-and-God)
 m.result("hishava(li_ve_elohim)", tmark="t1")
-# ‹עַל־כֵּן קָרָא לַמָּקוֹם הַהוּא בְּאֵר שָׁבַע› pattern recorded: upon-
-# ken-qara-to-maqom-beer-shava
+# ‹עַל־כֵּן קָרָא לַמָּקוֹם הַהוּא בְּאֵר שָׁבַע› (“over so call to-place
+# that Beer-shebah”) — pattern recorded: over-so-call-to-place-pit-Beer-
+# shebah
 m.pattern("al_ken_qara_la_maqom_beer_shava")
 
 # -------------------------- Gen.21.32 · THE_SECOND_CUT_AND_THE_RETURN ------
@@ -357,11 +388,11 @@ m.pattern("al_ken_qara_la_maqom_beer_shava")
 # the captain of his host, and they returned into the land of the
 # Philistines."
 m.step("Gen.21.32")
-# ‹וַיִּכְרְתוּ בְרִית בִּבְאֵר שָׁבַע› event: cut-covenant — agent
-# avimelekh
+# ‹וַיִּכְרְתוּ בְרִית בִּבְאֵר שָׁבַע› (“and-cut covenant in Beer-shebah”)
+# — event: cut-covenant — agent Abimelech
 m.event("cut_covenant", agent="avimelekh")
-# ‹אֶל־אֶרֶץ פְּלִשְׁתִּים› reads without prior install (flag, not fix):
-# earth-pelishtim
+# ‹אֶל־אֶרֶץ פְּלִשְׁתִּים› (“to earth Pelishtite”) — reads without prior
+# install (flag, not fix): earth-Pelishtite
 m.presupposed("eretz_pelishtim")
 
 # -------------------------- Gen.21.33 · THE_TAMARISK_AND_THE_EVERLASTING_NAME -
@@ -369,25 +400,28 @@ m.presupposed("eretz_pelishtim")
 # "And Abraham planted a tamarisk-tree in Beer-sheba, and called there on
 # the name of the LORD, the Everlasting God."
 m.step("Gen.21.33")
-# ‹וַיִּטַּע אֶשֶׁל … וַיִּקְרָא־שָׁם בְּשֵׁם יְהוָה› event: plant-and-call
-# — agent avraham
+# ‹וַיִּטַּע אֶשֶׁל … וַיִּקְרָא־שָׁם בְּשֵׁם יְהוָה› (“and-strike-in
+# tamarisk-tree … and-call there in-name YHWH”) — event: plant-and-call —
+# agent Abraham
 m.event("plant_and_call", agent="avraham")
-# ‹אֵל עוֹלָם› fact holds: and-yiqra-in-shem-the-LORD-to-olam
+# ‹אֵל עוֹלָם› (“strength forever”) — fact holds: and-call-in-name-the-LORD-
+# to-forever
 m.fact("va_yiqra_be_shem_YHWH_el_olam")
 
 # -------------------------- Gen.21.34 · THE_LONG_SOJOURN_CODA --------------
 # וַיָּגָר אַבְרָהָם בְּאֶרֶץ פְּלִשְׁתִּים יָמִים רַבִּים
 # "And Abraham sojourned in the land of the Philistines many days."
 m.step("Gen.21.34")
-# ‹וַיָּגָר אַבְרָהָם בְּאֶרֶץ פְּלִשְׁתִּים יָמִים רַבִּים› fact holds:
-# and-yagar-in-earth-pelishtim-seas-rabim
+# ‹וַיָּגָר אַבְרָהָם בְּאֶרֶץ פְּלִשְׁתִּים יָמִים רַבִּים› (“and-turn-
+# aside-from-the-road Abraham in-earth Pelishtite day many/great”) — fact
+# holds: and-turn-aside-from-the-road-in-earth-Pelishtite-day-many/great
 m.fact("va_yagar_be_eretz_pelishtim_yamim_rabim")
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
-    assert m.created_set() == {'malakh_elohim', 'yitzchaq', 'hagar', 'avimelekh', 'ha_naar', 'fikhol'}
-    assert m.presupposed_set() == {'paran', 'mitzrayim', 'eretz_pelishtim', 'beer_sheva'}
+    assert m.created_set() == {'yitzchaq', 'hagar', 'avimelekh', 'malakh_elohim', 'fikhol', 'ha_naar'}
+    assert m.presupposed_set() == {'paran', 'eretz_pelishtim', 'mitzrayim', 'beer_sheva'}
     assert m.REGISTRY["names"] == {'yitzchaq': 'Yitzchaq'}
     assert m.REGISTRY["writes"] == 1
     assert m.tests_list() == []

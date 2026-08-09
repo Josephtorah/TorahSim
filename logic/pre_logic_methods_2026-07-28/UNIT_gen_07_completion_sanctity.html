@@ -261,7 +261,8 @@ m = Machine(&quot;gen_07_completion_sanctity&quot;)
 # וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם
 # &quot;And the heaven and the earth were finished, and all the host of them.&quot;
 m.step(&quot;Gen.2.1&quot;)
-# ‹וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם› event: complete — theme
+# ‹וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם› (“and-they-were-finished
+# the-heavens and-the-earth and-all their-host”) — event: complete — theme
 # heavens, earth, their-host
 m.event(&quot;complete&quot;, themes=[&quot;shamayim&quot;, &quot;aretz&quot;, &quot;tzevaam&quot;])
 # reads without prior install (flag, not fix): heavens, earth
@@ -273,11 +274,11 @@ m.presupposed(&quot;shamayim&quot;, &quot;aretz&quot;)
 # &quot;And on the seventh day God finished His work which He had made; and He
 # rested on the seventh day from all His work which He had made.&quot;
 m.step(&quot;Gen.2.2&quot;)
-# ‹וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ› event: finish — agent
-# God
+# ‹וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ› (“and-he-finished God
+# on-the-day the-seventh his-work”) — event: finish — agent God
 m.event(&quot;finish&quot;, agent=&quot;Elohim&quot;)
-# ‹וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ› event: cease —
-# agent God
+# ‹וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ› (“and-he-ceased
+# on-the-day the-seventh from-all his-work”) — event: cease — agent God
 m.event(&quot;cease&quot;, agent=&quot;Elohim&quot;)
 
 # -------------------------- Gen.2.3 · BLESS_SANCTIFY -----------------------
@@ -286,10 +287,11 @@ m.event(&quot;cease&quot;, agent=&quot;Elohim&quot;)
 # &quot;And God blessed the seventh day, and hallowed it; because that in it He
 # rested from all His work which God in creating had made.&quot;
 m.step(&quot;Gen.2.3&quot;)
-# ‹וַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי› blessing: God blesses the-
-# seventh-day
+# ‹וַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי› (“and-blessed God obj-marker
+# day the-seventh”) — blessing: God blesses the-seventh-day
 m.bless(&quot;Elohim&quot;, &quot;yom_ha_shevii&quot;)
-# ‹וַיְקַדֵּשׁ אֹתוֹ› role assigned: the-seventh-day -&gt; holy
+# ‹וַיְקַדֵּשׁ אֹתוֹ› (“and-sanctified it”) — role assigned: the-seventh-day
+# -&gt; holy
 m.assign(&quot;yom_ha_shevii&quot;, &quot;kadosh&quot;)
 
 # -------------------------- machine truth (baked from the Stage D run) -------
@@ -310,4 +312,4 @@ if __name__ == &quot;__main__&quot;:
     assert len(m.EVENTS) == 5
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">FROZEN 2026-07-31 (owner approved, &quot;freeze 6 and 7&quot;; interpreter&#x27;s BLESS mandate made optional at freeze): seventh logic-derived unit — THE WEEK&#x27;S MODEL IS COMPLETE: all seven days derived and frozen. Central findings: the OPEN TRANSACTION confirmed as machine state (no test, no receipt, no commit — the LEDGER&#x27;s seventh row asserted absent in the scenarios, not narrated in prose); the corpus&#x27;s first agentless main-line event (the pual passive completion); the finishing act dated INSIDE the ceasing day (retained unharmonized by Onkelos, which glosses the ceasing itself as REST); the only speech-less day; the third BLESS with recipient a TIME object and no mandate (handler parameter, not essence); the Torah&#x27;s FIRST holiness write (kdsh), conferred on a non-entity; the la&#x27;asot (&#x27;to make&#x27;) purpose tail left open; and the negative-rarity watch-list finding — day 7 installs almost nothing in WORLD and nearly everything in the legal lexicon (Exod 20:11 re-runs this span verbatim as law). Narrative (ASK FIRST) and triage await owner order. Not binding religious law.</div><p class='meta'>Rendered 2026-08-08 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">FROZEN 2026-07-31 (owner approved, &quot;freeze 6 and 7&quot;; interpreter&#x27;s BLESS mandate made optional at freeze): seventh logic-derived unit — THE WEEK&#x27;S MODEL IS COMPLETE: all seven days derived and frozen. Central findings: the OPEN TRANSACTION confirmed as machine state (no test, no receipt, no commit — the LEDGER&#x27;s seventh row asserted absent in the scenarios, not narrated in prose); the corpus&#x27;s first agentless main-line event (the pual passive completion); the finishing act dated INSIDE the ceasing day (retained unharmonized by Onkelos, which glosses the ceasing itself as REST); the only speech-less day; the third BLESS with recipient a TIME object and no mandate (handler parameter, not essence); the Torah&#x27;s FIRST holiness write (kdsh), conferred on a non-entity; the la&#x27;asot (&#x27;to make&#x27;) purpose tail left open; and the negative-rarity watch-list finding — day 7 installs almost nothing in WORLD and nearly everything in the legal lexicon (Exod 20:11 re-runs this span verbatim as law). Narrative (ASK FIRST) and triage await owner order. Not binding religious law.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

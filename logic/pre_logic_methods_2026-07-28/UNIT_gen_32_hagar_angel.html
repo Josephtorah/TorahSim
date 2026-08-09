@@ -720,8 +720,10 @@ m = Machine(&quot;gen_32_hagar_angel&quot;)
 # &quot;Now Sarai Abram&#x27;s wife bore him no children; and she had a handmaid, an
 # Egyptian, whose name was Hagar.&quot;
 m.step(&quot;Gen.16.1&quot;)
-# ‹לֹא יָלְדָה לוֹ וְלָהּ שִׁפְחָה מִצְרִית וּשְׁמָהּ הָגָר› fact holds:
-# saray-not-yaldah-not; and-lah-shifchah-mitzrit-and-shemah-hagar
+# ‹לֹא יָלְדָה לוֹ וְלָהּ שִׁפְחָה מִצְרִית וּשְׁמָהּ הָגָר› (“not bear-
+# young to-him/its and-to-her/its female-slave Egyptian and-name-her/its
+# Hagar”) — fact holds: Sarai-not-yaldah-not; and-lah-shifchah-Egyptian-and-
+# shemah-Hagar
 m.fact(&quot;saray_lo_yaldah_lo&quot;,
        &quot;ve_lah_shifchah_mitzrit_u_shemah_hagar&quot;)
 
@@ -732,18 +734,20 @@ m.fact(&quot;saray_lo_yaldah_lo&quot;,
 # bearing; go in, I pray thee, unto my handmaid; it may be that I shall be
 # builded up through her.&#x27; And Abram hearkened to the voice of Sarai.&quot;
 m.step(&quot;Gen.16.2&quot;)
-# ‹וַתֹּאמֶר שָׂרַי אֶל־אַבְרָם› event: say — agent saray
+# ‹וַתֹּאמֶר שָׂרַי אֶל־אַבְרָם› (“and-say Sarai to Abram”) — event: say —
+# agent Sarai
 m.event(&quot;say&quot;, agent=&quot;saray&quot;)
-# ‹בֹּא־נָא אֶל־שִׁפְחָתִי› saray speaks a demand — LET: in-it(avram, to-
-# shifchati)
+# ‹בֹּא־נָא אֶל־שִׁפְחָתִי› (“come/bring please to female-slave-me/my”) —
+# Sarai speaks a demand — LET: come/bring(Abram, to-shifchati)
 m.declare(&quot;saray&quot;, &quot;LET&quot;,
           &quot;bo(avram, el_shifchati)&quot;)
-# ‹עֲצָרַנִי יְהוָה מִלֶּדֶת … אוּלַי אִבָּנֶה מִמֶּנָּה› fact holds:
-# atzarani-the-LORD-from-ledet; ulay-ibaneh-mimenah
+# ‹עֲצָרַנִי יְהוָה מִלֶּדֶת … אוּלַי אִבָּנֶה מִמֶּנָּה› (“close-me/my YHWH
+# from-bear-young … if-not build from-her/its”) — fact holds: atzarani-the-
+# LORD-from-bear-young; if-not-ibaneh-mimenah
 m.fact(&quot;atzarani_YHWH_mi_ledet&quot;,
        &quot;ulay_ibaneh_mimenah&quot;)
-# ‹וַיִּשְׁמַע אַבְרָם לְקוֹל שָׂרָי› event: hear — agent avram; theme
-# voice-saray
+# ‹וַיִּשְׁמַע אַבְרָם לְקוֹל שָׂרָי› (“and-hear Abram to-voice/sound
+# Sarai”) — event: hear — agent Abram; theme voice/sound-Sarai
 m.event(&quot;hear&quot;, agent=&quot;avram&quot;, themes=[&quot;qol_saray&quot;])
 
 # -------------------------- Gen.16.3 · THE_TAKE_AND_THE_GIVE ---------------
@@ -754,13 +758,16 @@ m.event(&quot;hear&quot;, agent=&quot;avram&quot;, themes=[&quot;qol_saray&quot;
 # had dwelt ten years in the land of Canaan, and gave her to Abram her
 # husband to be his wife.&quot;
 m.step(&quot;Gen.16.3&quot;)
-# ‹וַתִּקַּח שָׂרַי … אֶת־הָגָר› event: take — agent saray; theme hagar
+# ‹וַתִּקַּח שָׂרַי … אֶת־הָגָר› (“and-take Sarai … obj-marker Hagar”) —
+# event: take — agent Sarai; theme Hagar
 m.event(&quot;take&quot;, agent=&quot;saray&quot;, themes=[&quot;hagar&quot;])
-# ‹וַתִּתֵּן אֹתָהּ לְאַבְרָם אִישָׁהּ לוֹ לְאִשָּׁה› event: give — agent
-# saray; theme hagar
+# ‹וַתִּתֵּן אֹתָהּ לְאַבְרָם אִישָׁהּ לוֹ לְאִשָּׁה› (“and-set obj-marker-
+# her/its to-Abram man-her/its to-him/its to-woman”) — event: give — agent
+# Sarai; theme Hagar
 m.event(&quot;give&quot;, agent=&quot;saray&quot;, themes=[&quot;hagar&quot;])
-# ‹מִקֵּץ עֶשֶׂר שָׁנִים לְשֶׁבֶת אַבְרָם בְּאֶרֶץ כְּנָעַן› fact holds:
-# from-qetz-eser-shanim-to-shevet-avram-in-earth-kenaan
+# ‹מִקֵּץ עֶשֶׂר שָׁנִים לְשֶׁבֶת אַבְרָם בְּאֶרֶץ כְּנָעַן› (“from-end ten
+# years to-dwell/sit Abram in-earth Canaan”) — fact holds: from-end-ten-
+# years-to-dwell/sit-Abram-in-earth-Canaan
 m.fact(&quot;mi_qetz_eser_shanim_le_shevet_avram_be_eretz_kenaan&quot;)
 
 # -------------------------- Gen.16.4 · THE_COMPLIANCE_AND_THE_CONTEMPT -----
@@ -769,15 +776,16 @@ m.fact(&quot;mi_qetz_eser_shanim_le_shevet_avram_be_eretz_kenaan&quot;)
 # &quot;And he went in unto Hagar, and she conceived; and when she saw that she
 # had conceived, her mistress was despised in her eyes.&quot;
 m.step(&quot;Gen.16.4&quot;)
-# ‹וַיָּבֹא אֶל־הָגָר› event: come — agent avram
+# ‹וַיָּבֹא אֶל־הָגָר› (“and-come/bring to Hagar”) — event: come — agent
+# Abram
 m.event(&quot;come&quot;, agent=&quot;avram&quot;)
-# ‹וַיָּבֹא אֶל־הָגָר› demand settled (popped from the queue): in-it(avram,
-# to-shifchati)
+# ‹וַיָּבֹא אֶל־הָגָר› (“and-come/bring to Hagar”) — demand settled (popped
+# from the queue): come/bring(Abram, to-shifchati)
 m.result(&quot;bo(avram, el_shifchati)&quot;, tmark=&quot;t1&quot;)
-# ‹וַתַּהַר› event: conceive — agent hagar
+# ‹וַתַּהַר› (“and-be-pregnant”) — event: conceive — agent Hagar
 m.event(&quot;conceive&quot;, agent=&quot;hagar&quot;)
-# ‹וַתֵּקַל גְּבִרְתָּהּ בְּעֵינֶיהָ› fact holds: and-teqal-gevirtah-in-
-# eineha
+# ‹וַתֵּקַל גְּבִרְתָּהּ בְּעֵינֶיהָ› (“and-be-light mistress-her/its in-
+# eye-her/its”) — fact holds: and-be-light-gevirtah-in-eineha
 m.fact(&quot;va_teqal_gevirtah_be_eineha&quot;)
 
 # -------------------------- Gen.16.5 · THE_GRIEVANCE_AND_THE_DEMAND_ON_GOD -
@@ -788,14 +796,17 @@ m.fact(&quot;va_teqal_gevirtah_be_eineha&quot;)
 # into thy bosom; and when she saw that she had conceived, I was despised in
 # her eyes: the LORD judge between me and thee.&#x27;&quot;
 m.step(&quot;Gen.16.5&quot;)
-# ‹וַתֹּאמֶר שָׂרַי אֶל־אַבְרָם› event: say — agent saray
+# ‹וַתֹּאמֶר שָׂרַי אֶל־אַבְרָם› (“and-say Sarai to Abram”) — event: say —
+# agent Sarai
 m.event(&quot;say&quot;, agent=&quot;saray&quot;)
-# ‹חֲמָסִי עָלֶיךָ אָנֹכִי נָתַתִּי שִׁפְחָתִי בְּחֵיקֶךָ› fact holds:
-# chamasi-alekha; anokhi-natati-shifchati-in-cheqekha
+# ‹חֲמָסִי עָלֶיךָ אָנֹכִי נָתַתִּי שִׁפְחָתִי בְּחֵיקֶךָ› (“violence-me/my
+# over-you/your set female-slave-me/my in-bosom-you/your”) — fact holds:
+# chamasi-alekha; anokhi-set-shifchati-in-cheqekha
 m.fact(&quot;chamasi_alekha&quot;,
        &quot;anokhi_natati_shifchati_be_cheqekha&quot;)
-# ‹יִשְׁפֹּט יְהוָה בֵּינִי וּבֵינֶיךָ› saray speaks a demand — LET:
-# yishpot(the-LORD, beini-and-veinekha)
+# ‹יִשְׁפֹּט יְהוָה בֵּינִי וּבֵינֶיךָ› (“judge YHWH between-me/my and-
+# between-you/your”) — Sarai speaks a demand — LET: judge(the-LORD, beini-
+# and-veinekha)
 m.declare(&quot;saray&quot;, &quot;LET&quot;,
           &quot;yishpot(YHWH, beini_u_veinekha)&quot;)
 
@@ -806,15 +817,19 @@ m.declare(&quot;saray&quot;, &quot;LET&quot;,
 # that which is good in thine eyes.&#x27; And Sarai dealt harshly with her, and
 # she fled from her face.&quot;
 m.step(&quot;Gen.16.6&quot;)
-# ‹וַיֹּאמֶר אַבְרָם אֶל־שָׂרַי› event: say — agent avram
+# ‹וַיֹּאמֶר אַבְרָם אֶל־שָׂרַי› (“and-say Abram to Sarai”) — event: say —
+# agent Abram
 m.event(&quot;say&quot;, agent=&quot;avram&quot;)
-# ‹עֲשִׂי־לָהּ הַטּוֹב בְּעֵינָיִךְ› avram speaks a demand — LET: asi(saray,
-# to-hagar-the-good-in-einayikh)
+# ‹עֲשִׂי־לָהּ הַטּוֹב בְּעֵינָיִךְ› (“make to-her/its the-good in-eye-
+# you/your”) — Abram speaks a demand — LET: make(Sarai, to-Hagar-the-good-
+# in-einayikh)
 m.declare(&quot;avram&quot;, &quot;LET&quot;,
           &quot;asi(saray, la_hagar_ha_tov_be_einayikh)&quot;)
-# ‹וַתְּעַנֶּהָ שָׂרַי› event: afflict — agent saray; theme hagar
+# ‹וַתְּעַנֶּהָ שָׂרַי› (“and-afflict-literally-her/its Sarai”) — event:
+# afflict — agent Sarai; theme Hagar
 m.event(&quot;afflict&quot;, agent=&quot;saray&quot;, themes=[&quot;hagar&quot;])
-# ‹וַתִּבְרַח מִפָּנֶיהָ› event: flee — agent hagar
+# ‹וַתִּבְרַח מִפָּנֶיהָ› (“and-bolt from-face-her/its”) — event: flee —
+# agent Hagar
 m.event(&quot;flee&quot;, agent=&quot;hagar&quot;)
 
 # -------------------------- Gen.16.7 · THE_ANGEL_FINDS_HER -----------------
@@ -823,10 +838,10 @@ m.event(&quot;flee&quot;, agent=&quot;hagar&quot;)
 # &quot;And the angel of the LORD found her by a fountain of water in the
 # wilderness, by the fountain in the way to Shur.&quot;
 m.step(&quot;Gen.16.7&quot;)
-# ‹וַיִּמְצָאָהּ מַלְאַךְ יְהוָה› event: find — agent malakh-the-LORD; theme
-# hagar
+# ‹וַיִּמְצָאָהּ מַלְאַךְ יְהוָה› (“and-find-her/its messenger YHWH”) —
+# event: find — agent messenger-the-LORD; theme Hagar
 m.event(&quot;find&quot;, agent=&quot;malakh_YHWH&quot;, themes=[&quot;hagar&quot;])
-# reads without prior install (flag, not fix): shur
+# reads without prior install (flag, not fix): Shur
 m.presupposed(&quot;shur&quot;)
 
 # -------------------------- Gen.16.8 · THE_WHERE_QUESTIONS_AND_THE_RUNAWAY_ANSWER -
@@ -835,16 +850,17 @@ m.presupposed(&quot;shur&quot;)
 # &quot;And he said: &#x27;Hagar, Sarai&#x27;s handmaid, whence camest thou? and whither
 # goest thou?&#x27; And she said: &#x27;I flee from the face of my mistress Sarai.&#x27;&quot;
 m.step(&quot;Gen.16.8&quot;)
-# ‹וַיֹּאמַר הָגָר שִׁפְחַת שָׂרַי אֵי־מִזֶּה בָאת וְאָנָה תֵלֵכִי› event:
-# say — agent malakh-the-LORD
+# ‹וַיֹּאמַר הָגָר שִׁפְחַת שָׂרַי אֵי־מִזֶּה בָאת וְאָנָה תֵלֵכִי› (“and-
+# say Hagar female-slave Sarai how? from-this come/bring and-where? go”) —
+# event: say — agent messenger-the-LORD
 m.event(&quot;say&quot;, agent=&quot;malakh_YHWH&quot;)
-# ‹אֵי־מִזֶּה בָאת וְאָנָה תֵלֵכִי› fact holds: ei-mizeh-vat-and-anah-
-# telekhi
+# ‹אֵי־מִזֶּה בָאת וְאָנָה תֵלֵכִי› (“how? from-this come/bring and-where?
+# go”) — fact holds: ei-mizeh-come/bring-and-anah-go
 m.fact(&quot;ei_mizeh_vat_ve_anah_telekhi&quot;)
-# ‹וַתֹּאמֶר› event: say — agent hagar
+# ‹וַתֹּאמֶר› (“and-say”) — event: say — agent Hagar
 m.event(&quot;say&quot;, agent=&quot;hagar&quot;)
-# ‹מִפְּנֵי שָׂרַי גְּבִרְתִּי אָנֹכִי בֹּרַחַת› fact holds: from-face-of-
-# saray-gevirti-anokhi-borachat
+# ‹מִפְּנֵי שָׂרַי גְּבִרְתִּי אָנֹכִי בֹּרַחַת› (“from-face Sarai mistress-
+# me/my bolt”) — fact holds: from-face-of-Sarai-gevirti-anokhi-bolt
 m.fact(&quot;mi_pnei_saray_gevirti_anokhi_borachat&quot;)
 
 # -------------------------- Gen.16.9 · THE_RETURN_AND_SUBMIT_COMMAND -------
@@ -853,10 +869,13 @@ m.fact(&quot;mi_pnei_saray_gevirti_anokhi_borachat&quot;)
 # &quot;And the angel of the LORD said unto her: &#x27;Return to thy mistress, and
 # submit thyself under her hands.&#x27;&quot;
 m.step(&quot;Gen.16.9&quot;)
-# ‹וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה› event: say — agent malakh-the-LORD
+# ‹וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה› (“and-say to-her/its messenger YHWH”) —
+# event: say — agent messenger-the-LORD
 m.event(&quot;say&quot;, agent=&quot;malakh_YHWH&quot;)
-# ‹שׁוּבִי אֶל־גְּבִרְתֵּךְ וְהִתְעַנִּי תַּחַת יָדֶיהָ› malakh-the-LORD
-# speaks a demand — LET: shuvi-and-hitani(hagar, to-gevirtekh-tachat-yadeha)
+# ‹שׁוּבִי אֶל־גְּבִרְתֵּךְ וְהִתְעַנִּי תַּחַת יָדֶיהָ› (“return to
+# mistress-you/your and-afflict-literally under hand-her/its”) — messenger-
+# the-LORD speaks a demand — LET: return-and-afflict-literally(Hagar, to-
+# gevirtekh-under-yadeha)
 m.declare(&quot;malakh_YHWH&quot;, &quot;LET&quot;,
           &quot;shuvi_ve_hitani(hagar, el_gevirtekh_tachat_yadeha)&quot;)
 
@@ -866,10 +885,12 @@ m.declare(&quot;malakh_YHWH&quot;, &quot;LET&quot;,
 # &quot;And the angel of the LORD said unto her: &#x27;I will greatly multiply thy
 # seed, that it shall not be numbered for multitude.&#x27;&quot;
 m.step(&quot;Gen.16.10&quot;)
-# ‹וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה› event: say — agent malakh-the-LORD
+# ‹וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה› (“and-say to-her/its messenger YHWH”) —
+# event: say — agent messenger-the-LORD
 m.event(&quot;say&quot;, agent=&quot;malakh_YHWH&quot;)
-# ‹הַרְבָּה אַרְבֶּה אֶת־זַרְעֵךְ וְלֹא יִסָּפֵר מֵרֹב› fact holds: greatly-
-# I-will-multiply-zarekh; and-not-yisafer-from-rov
+# ‹הַרְבָּה אַרְבֶּה אֶת־זַרְעֵךְ וְלֹא יִסָּפֵר מֵרֹב› (“multiply multiply
+# obj-marker seed-you/your and-not count from-abundance”) — fact holds:
+# greatly-I-will-multiply-obj-marker-zarekh; and-not-count-from-abundance
 m.fact(&quot;harbah_arbeh_et_zarekh&quot;,
        &quot;ve_lo_yisafer_me_rov&quot;)
 
@@ -880,11 +901,14 @@ m.fact(&quot;harbah_arbeh_et_zarekh&quot;,
 # and shalt bear a son; and thou shalt call his name Ishmael, because the
 # LORD hath heard thy affliction.&#x27;&quot;
 m.step(&quot;Gen.16.11&quot;)
-# ‹וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה› event: say — agent malakh-the-LORD
+# ‹וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה› (“and-say to-her/its messenger YHWH”) —
+# event: say — agent messenger-the-LORD
 m.event(&quot;say&quot;, agent=&quot;malakh_YHWH&quot;)
 # ‹הִנָּךְ הָרָה וְיֹלַדְתְּ בֵּן וְקָרָאת שְׁמוֹ יִשְׁמָעֵאל כִּי־שָׁמַע
-# יְהוָה אֶל־עָנְיֵךְ› fact holds: hinakh-harah-and-yoladt-ben; and-qarat-
-# shemo-yishmael; when-shama-the-LORD-to-onyekh
+# יְהוָה אֶל־עָנְיֵךְ› (“behold-you/your pregnant and-bear-young son and-
+# call name-him/its Ishmael that hear YHWH to affliction-you/your”) — fact
+# holds: hinakh-harah-and-bear-young-son; and-call-shemo-Ishmael; that-hear-
+# the-LORD-to-onyekh
 m.fact(&quot;hinakh_harah_ve_yoladt_ben&quot;,
        &quot;ve_qarat_shemo_yishmael&quot;,
        &quot;ki_shama_YHWH_el_onyekh&quot;)
@@ -897,8 +921,9 @@ m.fact(&quot;hinakh_harah_ve_yoladt_ben&quot;,
 # his brethren.&#x27;&quot;
 m.step(&quot;Gen.16.12&quot;)
 # ‹פֶּרֶא אָדָם יָדוֹ בַכֹּל וְיַד כֹּל בּוֹ וְעַל־פְּנֵי כָל־אֶחָיו
-# יִשְׁכֹּן› fact holds: pere-human-his-hand-and-all-and-yad-all-in-it;
-# upon-face-of-all-echav-yishkon
+# יִשְׁכֹּן› (“onager human hand-him/its in-all and-hand all in-him/its and-
+# over face all brother-him/its reside”) — fact holds: onager-human-his-
+# hand-and-all-and-hand-all-come/bring; over-face-of-all-echav-reside
 m.fact(&quot;pere_adam_yado_va_khol_ve_yad_kol_bo&quot;,
        &quot;al_pnei_khol_echav_yishkon&quot;)
 
@@ -908,11 +933,11 @@ m.fact(&quot;pere_adam_yado_va_khol_ve_yad_kol_bo&quot;,
 # &quot;And she called the name of the LORD that spoke unto her, Thou art a God
 # of seeing; for she said: &#x27;Have I even here seen Him that seeth Me?&#x27;&quot;
 m.step(&quot;Gen.16.13&quot;)
-# ‹וַתִּקְרָא שֵׁם־יְהוָה הַדֹּבֵר אֵלֶיהָ אַתָּה אֵל רֳאִי› named: the-LORD
-# := El-Roi
+# ‹וַתִּקְרָא שֵׁם־יְהוָה הַדֹּבֵר אֵלֶיהָ אַתָּה אֵל רֳאִי› (“and-call name
+# YHWH the-speak to-her/its you strength sight”) — named: the-LORD := El-Roi
 m.name(&quot;YHWH&quot;, &quot;El_Roi&quot;)
-# ‹כִּי אָמְרָה הֲגַם הֲלֹם רָאִיתִי אַחֲרֵי רֹאִי› fact holds: hagam-halom-
-# raiti-acharei-roi
+# ‹כִּי אָמְרָה הֲגַם הֲלֹם רָאִיתִי אַחֲרֵי רֹאִי› (“that say the-also
+# hither see after see-me/my”) — fact holds: hagam-hither-see-acharei-sight
 m.fact(&quot;hagam_halom_raiti_acharei_roi&quot;)
 
 # -------------------------- Gen.16.14 · THE_WELL_OF_THE_LIVING_ONE_WHO_SEES -
@@ -921,13 +946,13 @@ m.fact(&quot;hagam_halom_raiti_acharei_roi&quot;)
 # &quot;Wherefore the well was called &#x27;Beer-lahai-roi; behold, it is between
 # Kadesh and Bered.&quot;
 m.step(&quot;Gen.16.14&quot;)
-# ‹עַל־כֵּן קָרָא לַבְּאֵר בְּאֵר לַחַי רֹאִי› pattern recorded: upon-ken-
-# qara-to-beer-beer-lachai-roi
+# ‹עַל־כֵּן קָרָא לַבְּאֵר בְּאֵר לַחַי רֹאִי› (“over so call to-pit Beer-
+# lahai-roi”) — pattern recorded: over-so-call-to-pit-pit-lachai-sight
 m.pattern(&quot;al_ken_qara_la_beer_beer_lachai_roi&quot;)
-# ‹הִנֵּה בֵין־קָדֵשׁ וּבֵין בָּרֶד› fact holds: hineh-vein-qadesh-and-vein-
-# bared
+# ‹הִנֵּה בֵין־קָדֵשׁ וּבֵין בָּרֶד› (“behold between Kadesh and-between
+# Bered”) — fact holds: hineh-vein-Kadesh-and-vein-Bered
 m.fact(&quot;hineh_vein_qadesh_u_vein_bared&quot;)
-# reads without prior install (flag, not fix): qadesh, bered
+# reads without prior install (flag, not fix): Kadesh, bered
 m.presupposed(&quot;qadesh&quot;, &quot;bered&quot;)
 
 # -------------------------- Gen.16.15 · THE_BIRTH_AND_THE_FATHERS_NAMING ---
@@ -936,9 +961,11 @@ m.presupposed(&quot;qadesh&quot;, &quot;bered&quot;)
 # &quot;And Hagar bore Abram a son; and Abram called the name of his son, whom
 # Hagar bore, Ishmael.&quot;
 m.step(&quot;Gen.16.15&quot;)
-# ‹וַתֵּלֶד הָגָר לְאַבְרָם בֵּן› event: bear — agent hagar; theme yishmael
+# ‹וַתֵּלֶד הָגָר לְאַבְרָם בֵּן› (“and-bear-young Hagar to-Abram son”) —
+# event: bear — agent Hagar; theme Ishmael
 m.event(&quot;bear&quot;, agent=&quot;hagar&quot;, themes=[&quot;yishmael&quot;])
-# ‹וַיִּקְרָא אַבְרָם שֶׁם־בְּנוֹ … יִשְׁמָעֵאל› named: yishmael := Yishmael
+# ‹וַיִּקְרָא אַבְרָם שֶׁם־בְּנוֹ … יִשְׁמָעֵאל› (“and-call Abram name son-
+# him/its … Ishmael”) — named: Ishmael := Yishmael
 m.name(&quot;yishmael&quot;, &quot;Yishmael&quot;)
 
 # -------------------------- Gen.16.16 · THE_AGE_FRAME ----------------------
@@ -947,8 +974,8 @@ m.name(&quot;yishmael&quot;, &quot;Yishmael&quot;)
 # &quot;And Abram was fourscore and six years old, when Hagar bore Ishmael to
 # Abram.&quot;
 m.step(&quot;Gen.16.16&quot;)
-# ‹וְאַבְרָם בֶּן־שְׁמֹנִים שָׁנָה וְשֵׁשׁ שָׁנִים› fact holds: avram-ben-
-# shemonim-year-and-shesh-shanim
+# ‹וְאַבְרָם בֶּן־שְׁמֹנִים שָׁנָה וְשֵׁשׁ שָׁנִים› (“and-Abram son eighty
+# years and-six years”) — fact holds: Abram-son-eighty-year-and-six-years
 m.fact(&quot;avram_ben_shemonim_shanah_ve_shesh_shanim&quot;)
 
 # -------------------------- machine truth (baked from the Stage D run) -------
@@ -968,4 +995,4 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 25
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-08 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

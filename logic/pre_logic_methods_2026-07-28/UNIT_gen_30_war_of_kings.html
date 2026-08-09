@@ -858,14 +858,15 @@ m = Machine(&quot;gen_30_war_of_kings&quot;)
 # king of Bela — the same is Zoar. All these came as allies unto the vale of
 # Siddim — the same is the Salt Sea.&quot;
 m.step(&quot;Gen.14.1&quot;)
-# ‹עָשׂוּ מִלְחָמָה אֶת־בֶּרַע מֶלֶךְ סְדֹם› event: make-war — agent arbaat-
-# the-melakhim
+# ‹עָשׂוּ מִלְחָמָה אֶת־בֶּרַע מֶלֶךְ סְדֹם› (“Esau battle obj-marker in-bad
+# king Sodom”) — event: make-war — agent arbaat-the-king
 m.event(&quot;make_war&quot;, agent=&quot;arbaat_ha_melakhim&quot;)
-# ‹כָּל־אֵלֶּה חָבְרוּ אֶל־עֵמֶק הַשִּׂדִּים הוּא יָם הַמֶּלַח› fact holds:
-# all-these-chavru-to-emeq-the-sidim-that-yam-the-melach
+# ‹כָּל־אֵלֶּה חָבְרוּ אֶל־עֵמֶק הַשִּׂדִּים הוּא יָם הַמֶּלַח› (“all these
+# join to deep the-Siddim he/it seas the-powder”) — fact holds: all-these-
+# chavru-to-vale-the-Siddim-he/it-yam-the-melach
 m.fact(&quot;kol_eleh_chavru_el_emeq_ha_sidim_hu_yam_ha_melach&quot;)
-# reads without prior install (flag, not fix): shinar, elasar, elam, sedom,
-# amora, admah, tzevoyim, tzoar, emeq-the-sidim, yam-the-melach
+# reads without prior install (flag, not fix): Shinar, Ellasar, Elam, Sodom,
+# Gomorrah, admah, Zeboiim, Zoar, vale-the-Siddim, yam-the-melach
 m.presupposed(&quot;shinar&quot;, &quot;elasar&quot;, &quot;elam&quot;, &quot;sedom&quot;, &quot;amora&quot;, &quot;admah&quot;, &quot;tzevoyim&quot;, &quot;tzoar&quot;, &quot;emeq_ha_sidim&quot;, &quot;yam_ha_melach&quot;)
 
 # -------------------------- Gen.14.4 · THE_CLOCK_AND_THE_SWEEP -------------
@@ -882,12 +883,15 @@ m.presupposed(&quot;shinar&quot;, &quot;elasar&quot;, &quot;elam&quot;, &quot;se
 # Amorites, that dwelt in Hazazon-tamar.&quot;
 m.step(&quot;Gen.14.4&quot;)
 # ‹שְׁתֵּים עֶשְׂרֵה שָׁנָה עָבְדוּ … וּשְׁלֹשׁ־עֶשְׂרֵה שָׁנָה מָרָדוּ›
-# fact holds: shtem--teen-year-avdu-kedarlaomer-and-shelosh--teen-maradu
+# (“two -teen years work/serve … and-three -teen years rebel”) — fact holds:
+# shtem--teen-year-work/serve-obj-marker-Chedorlaomer-and-three--teen-rebel
 m.fact(&quot;shtem_esreh_shanah_avdu_et_kedarlaomer_u_shelosh_esreh_maradu&quot;)
 # ‹וַיַּכּוּ אֶת־רְפָאִים … וְאֶת־הַזּוּזִים … וְאֵת הָאֵימִים …
-# וְאֶת־הַחֹרִי … אֶת־כָּל־שְׂדֵה הָעֲמָלֵקִי וְגַם אֶת־הָאֱמֹרִי› event:
-# strike — agent kedarlaomer-and-the-melakhim; theme refaim-zuzim-emim-
-# chori-amaleqi-emori
+# וְאֶת־הַחֹרִי … אֶת־כָּל־שְׂדֵה הָעֲמָלֵקִי וְגַם אֶת־הָאֱמֹרִי› (“and-
+# strike obj-marker Rapha&#x27; … and-obj-marker the-Zuzites … and-obj-marker
+# the-Emims … and-obj-marker the-Chorite … obj-marker all field the-
+# Amalekite and-also obj-marker the-Emorite”) — event: strike — agent
+# Chedorlaomer-and-the-king; theme refaim-zuzim-emim-chori-amaleqi-Emorite
 m.event(&quot;strike&quot;, agent=&quot;kedarlaomer_ve_ha_melakhim&quot;, themes=[&quot;refaim_zuzim_emim_chori_amaleqi_emori&quot;])
 # reads without prior install (flag, not fix): ashterot-qarnayim, ham,
 # shaveh-qiryatayim, har-seir, to-paran, en-mishpat-qadesh, chatzetzon-tamar
@@ -905,22 +909,25 @@ m.presupposed(&quot;ashterot_qarnayim&quot;, &quot;ham&quot;, &quot;shaveh_qirya
 # the goods of Sodom and Gomorrah, and all their victuals, and went their
 # way.&quot;
 m.step(&quot;Gen.14.8&quot;)
-# ‹וַיַּעַרְכוּ אִתָּם מִלְחָמָה› event: array-battle — agent chameshet-the-
-# melakhim
+# ‹וַיַּעַרְכוּ אִתָּם מִלְחָמָה› (“and-set-in-a-row with-them/their
+# battle”) — event: array-battle — agent chameshet-the-king
 m.event(&quot;array_battle&quot;, agent=&quot;chameshet_ha_melakhim&quot;)
 # ‹אַרְבָּעָה מְלָכִים אֶת־הַחֲמִשָּׁה … וְעֵמֶק הַשִׂדִּים בֶּאֱרֹת
-# בֶּאֱרֹת חֵמָר› fact holds: four-melakhim-the-chamishah; emeq-the-sidim-
-# beerot-beerot-chemar
+# בֶּאֱרֹת חֵמָר› (“four king obj-marker the-five … and-vale the-Siddim pit
+# pit male-ass”) — fact holds: four-king-obj-marker-the-chamishah; vale-the-
+# Siddim-beerot-beerot-chemar
 m.fact(&quot;arbaah_melakhim_et_ha_chamishah&quot;,
        &quot;emeq_ha_sidim_beerot_beerot_chemar&quot;)
-# ‹וַיָּנֻסוּ מֶלֶךְ־סְדֹם וַעֲמֹרָה וַיִּפְּלוּ־שָׁמָּה› event: flee —
-# agent melekh-sedom-and-amorah
+# ‹וַיָּנֻסוּ מֶלֶךְ־סְדֹם וַעֲמֹרָה וַיִּפְּלוּ־שָׁמָּה› (“and-flit king
+# Sodom and-Gomorrah and-fall there-ward”) — event: flee — agent king-Sodom-
+# and-amorah
 m.event(&quot;flee&quot;, agent=&quot;melekh_sedom_va_amorah&quot;)
 # ‹וַיִּקְחוּ אֶת־כָּל־רְכֻשׁ סְדֹם וַעֲמֹרָה וְאֶת־כָּל־אָכְלָם וַיֵּלֵכוּ›
-# event: take — agent arbaat-the-melakhim; theme all-rekhush-sedom-and-
-# amorah
+# (“and-take obj-marker all lay-up Sodom and-Gomorrah and-obj-marker all
+# food-them/their and-go”) — event: take — agent arbaat-the-king; theme all-
+# property-Sodom-and-amorah
 m.event(&quot;take&quot;, agent=&quot;arbaat_ha_melakhim&quot;, themes=[&quot;kol_rekhush_sedom_va_amorah&quot;])
-# reads without prior install (flag, not fix): goyim-land
+# reads without prior install (flag, not fix): Gentile-land
 m.presupposed(&quot;goyim_land&quot;)
 
 # -------------------------- Gen.14.12 · THE_TAKING_OF_LOT ------------------
@@ -929,10 +936,11 @@ m.presupposed(&quot;goyim_land&quot;)
 # &quot;And they took Lot, Abram&#x27;s brother&#x27;s son, who dwelt in Sodom, and his
 # goods, and departed.&quot;
 m.step(&quot;Gen.14.12&quot;)
-# ‹וַיִּקְחוּ אֶת־לוֹט וְאֶת־רְכֻשׁוֹ› event: take — agent arbaat-the-
-# melakhim; theme lot
+# ‹וַיִּקְחוּ אֶת־לוֹט וְאֶת־רְכֻשׁוֹ› (“and-take obj-marker Lot and-obj-
+# marker property-him/its”) — event: take — agent arbaat-the-king; theme Lot
 m.event(&quot;take&quot;, agent=&quot;arbaat_ha_melakhim&quot;, themes=[&quot;lot&quot;])
-# ‹וְהוּא יֹשֵׁב בִּסְדֹם› fact holds: and-that-yoshev-bi-sedom
+# ‹וְהוּא יֹשֵׁב בִּסְדֹם› (“and-he/it dwell/sit in-Sodom”) — fact holds:
+# and-he/it-dwell/sit-bi-Sodom
 m.fact(&quot;ve_hu_yoshev_bi_sedom&quot;)
 
 # -------------------------- Gen.14.13 · THE_REFUGEE_AND_THE_HEBREW ---------
@@ -943,11 +951,14 @@ m.fact(&quot;ve_hu_yoshev_bi_sedom&quot;)
 # dwelt by the terebinths of Mamre the Amorite, brother of Eshcol, and
 # brother of Aner; and these were confederate with Abram.&quot;
 m.step(&quot;Gen.14.13&quot;)
-# ‹וַיָּבֹא הַפָּלִיט› event: come — agent the-palit
+# ‹וַיָּבֹא הַפָּלִיט› (“and-come/bring the-refugee”) — event: come — agent
+# the-refugee
 m.event(&quot;come&quot;, agent=&quot;ha_palit&quot;)
-# ‹וַיַּגֵּד לְאַבְרָם הָעִבְרִי› event: tell — agent the-palit
+# ‹וַיַּגֵּד לְאַבְרָם הָעִבְרִי› (“and-tell to-Abram the-Hebrew”) — event:
+# tell — agent the-refugee
 m.event(&quot;tell&quot;, agent=&quot;ha_palit&quot;)
-# ‹וְהֵם בַּעֲלֵי בְרִית־אַבְרָם› fact holds: and-hem-baalei-verit-avram
+# ‹וְהֵם בַּעֲלֵי בְרִית־אַבְרָם› (“and-they master covenant Abram”) — fact
+# holds: and-they-baalei-covenant-Abram
 m.fact(&quot;ve_hem_baalei_verit_avram&quot;)
 
 # -------------------------- Gen.14.14 · THE_MUSTER_OF_THE_318 --------------
@@ -957,17 +968,20 @@ m.fact(&quot;ve_hem_baalei_verit_avram&quot;)
 # trained men, born in his house, three hundred and eighteen, and pursued as
 # far as Dan.&quot;
 m.step(&quot;Gen.14.14&quot;)
-# ‹וַיִּשְׁמַע אַבְרָם כִּי נִשְׁבָּה אָחִיו› event: hear — agent avram
+# ‹וַיִּשְׁמַע אַבְרָם כִּי נִשְׁבָּה אָחִיו› (“and-hear Abram that
+# transport-into-captivity brother-him/its”) — event: hear — agent Abram
 m.event(&quot;hear&quot;, agent=&quot;avram&quot;)
-# ‹וַיָּרֶק אֶת־חֲנִיכָיו יְלִידֵי בֵיתוֹ› event: muster — agent avram;
+# ‹וַיָּרֶק אֶת־חֲנִיכָיו יְלִידֵי בֵיתוֹ› (“and-pour-out obj-marker
+# initiated-him/its born house-him/its”) — event: muster — agent Abram;
 # theme chanikhav
 m.event(&quot;muster&quot;, agent=&quot;avram&quot;, themes=[&quot;chanikhav&quot;])
-# ‹שְׁמֹנָה עָשָׂר וּשְׁלֹשׁ מֵאוֹת› fact holds: chanikhav-yelidei-veito-
-# shmonah-asar-and-shelosh-meot
+# ‹שְׁמֹנָה עָשָׂר וּשְׁלֹשׁ מֵאוֹת› (“number -teen and-three hundred”) —
+# fact holds: chanikhav-yelidei-veito-shmonah--teen-and-three-hundred
 m.fact(&quot;chanikhav_yelidei_veito_shmonah_asar_u_shelosh_meot&quot;)
-# ‹וַיִּרְדֹּף עַד־דָּן› event: pursue — agent avram
+# ‹וַיִּרְדֹּף עַד־דָּן› (“and-run-after-gone-by) until Daniel”) — event:
+# pursue — agent Abram
 m.event(&quot;pursue&quot;, agent=&quot;avram&quot;)
-# reads without prior install (flag, not fix): dan
+# reads without prior install (flag, not fix): Daniel
 m.presupposed(&quot;dan&quot;)
 
 # -------------------------- Gen.14.15 · THE_NIGHT_SPLIT --------------------
@@ -977,14 +991,17 @@ m.presupposed(&quot;dan&quot;)
 # smote them, and pursued them unto Hobah, which is on the left hand of
 # Damascus.&quot;
 m.step(&quot;Gen.14.15&quot;)
-# ‹וַיֵּחָלֵק עֲלֵיהֶם לַיְלָה› event: split — agent avram-and-avadav
+# ‹וַיֵּחָלֵק עֲלֵיהֶם לַיְלָה› (“and-be-smooth over-them/their night”) —
+# event: split — agent Abram-and-avadav
 m.event(&quot;split&quot;, agent=&quot;avram_va_avadav&quot;)
-# ‹וַיַּכֵּם› event: strike — agent avram-and-avadav
+# ‹וַיַּכֵּם› (“and-strike-them/their”) — event: strike — agent Abram-and-
+# avadav
 m.event(&quot;strike&quot;, agent=&quot;avram_va_avadav&quot;)
-# ‹וַיִּרְדְּפֵם עַד־חוֹבָה אֲשֶׁר מִשְּׂמֹאל לְדַמָּשֶׂק› event: pursue —
-# agent avram-and-avadav
+# ‹וַיִּרְדְּפֵם עַד־חוֹבָה אֲשֶׁר מִשְּׂמֹאל לְדַמָּשֶׂק› (“and-run-after-
+# gone-by)-them/their until Hobah which from-dark to-Damascus”) — event:
+# pursue — agent Abram-and-avadav
 m.event(&quot;pursue&quot;, agent=&quot;avram_va_avadav&quot;)
-# reads without prior install (flag, not fix): chovah, damaseq
+# reads without prior install (flag, not fix): chovah, Damascus
 m.presupposed(&quot;chovah&quot;, &quot;damaseq&quot;)
 
 # -------------------------- Gen.14.16 · THE_BRINGING_BACK ------------------
@@ -993,8 +1010,9 @@ m.presupposed(&quot;chovah&quot;, &quot;damaseq&quot;)
 # &quot;And he brought back all the goods, and also brought back his brother Lot,
 # and his goods, and the women also, and the people.&quot;
 m.step(&quot;Gen.14.16&quot;)
-# ‹וַיָּשֶׁב אֵת כָּל־הָרְכֻשׁ … הֵשִׁיב› event: bring-back — agent avram;
-# theme all-the-rekhush-and-lot-and-the-nashim-and-the-am
+# ‹וַיָּשֶׁב אֵת כָּל־הָרְכֻשׁ … הֵשִׁיב› (“and-return obj-marker all the-
+# property … return”) — event: bring-back — agent Abram; theme all-the-
+# property-and-Lot-and-the-woman-and-the-people
 m.event(&quot;bring_back&quot;, agent=&quot;avram&quot;, themes=[&quot;kol_ha_rekhush_ve_lot_ve_ha_nashim_ve_ha_am&quot;])
 
 # -------------------------- Gen.14.17 · THE_KINGS_MEETING ------------------
@@ -1005,9 +1023,10 @@ m.event(&quot;bring_back&quot;, agent=&quot;avram&quot;, themes=[&quot;kol_ha_re
 # slaughter of Chedorlaomer and the kings that were with him, at the vale of
 # Shaveh — the same is the King&#x27;s Vale.&quot;
 m.step(&quot;Gen.14.17&quot;)
-# ‹וַיֵּצֵא מֶלֶךְ־סְדֹם לִקְרָאתוֹ› event: go-out — agent melekh-sedom
+# ‹וַיֵּצֵא מֶלֶךְ־סְדֹם לִקְרָאתוֹ› (“and-bring-forth king Sodom to-
+# encountering-him/its”) — event: go-out — agent king-Sodom
 m.event(&quot;go_out&quot;, agent=&quot;melekh_sedom&quot;)
-# reads without prior install (flag, not fix): emeq-shaveh
+# reads without prior install (flag, not fix): vale-shaveh
 m.presupposed(&quot;emeq_shaveh&quot;)
 
 # -------------------------- Gen.14.18 · BREAD_WINE_AND_A_PRIEST ------------
@@ -1016,12 +1035,13 @@ m.presupposed(&quot;emeq_shaveh&quot;)
 # &quot;And Melchizedek king of Salem brought forth bread and wine; and he was
 # priest of God the Most High.&quot;
 m.step(&quot;Gen.14.18&quot;)
-# ‹הוֹצִיא לֶחֶם וָיָיִן› event: bring-out — agent malki-tzedeq; theme
-# lechem-and-yayin
+# ‹הוֹצִיא לֶחֶם וָיָיִן› (“bring-forth food and-wine”) — event: bring-out —
+# agent I-Melchizedek; theme food-and-wine
 m.event(&quot;bring_out&quot;, agent=&quot;malki_tzedeq&quot;, themes=[&quot;lechem_va_yayin&quot;])
-# ‹וְהוּא כֹהֵן לְאֵל עֶלְיוֹן› fact holds: and-that-khohen-to-to-elyon
+# ‹וְהוּא כֹהֵן לְאֵל עֶלְיוֹן› (“and-he/it priest to-God Most-High”) — fact
+# holds: and-he/it-priest-to-to-Most-High
 m.fact(&quot;ve_hu_khohen_le_el_elyon&quot;)
-# reads without prior install (flag, not fix): shalem
+# reads without prior install (flag, not fix): Salem
 m.presupposed(&quot;shalem&quot;)
 
 # -------------------------- Gen.14.19 · THE_BLESSING_OF_ABRAM --------------
@@ -1030,10 +1050,12 @@ m.presupposed(&quot;shalem&quot;)
 # &quot;And he blessed him, and said: &#x27;Blessed be Abram of God Most High, Maker
 # of heaven and earth;&quot;
 m.step(&quot;Gen.14.19&quot;)
-# ‹וַיְבָרְכֵהוּ› blessing: malki-tzedeq blesses avram
+# ‹וַיְבָרְכֵהוּ› (“and-bless-him/its”) — blessing: I-Melchizedek blesses
+# Abram
 m.bless(&quot;malki_tzedeq&quot;, &quot;avram&quot;)
-# ‹בָּרוּךְ אַבְרָם לְאֵל עֶלְיוֹן קֹנֵה שָׁמַיִם וָאָרֶץ› fact holds:
-# barukh-avram-to-to-elyon-qoneh-heavens-and-earth
+# ‹בָּרוּךְ אַבְרָם לְאֵל עֶלְיוֹן קֹנֵה שָׁמַיִם וָאָרֶץ› (“bless Abram to-
+# God Most-High possessor heavens and-earth”) — fact holds: bless-Abram-to-
+# to-Most-High-qoneh-heavens-and-earth
 m.fact(&quot;barukh_avram_le_el_elyon_qoneh_shamayim_va_aretz&quot;)
 
 # -------------------------- Gen.14.20 · THE_BLESSING_OF_EL_ELYON_AND_THE_TENTH -
@@ -1042,12 +1064,14 @@ m.fact(&quot;barukh_avram_le_el_elyon_qoneh_shamayim_va_aretz&quot;)
 # &quot;and blessed be God the Most High, who hath delivered thine enemies into
 # thy hand.&#x27; And he gave him a tenth of all.&quot;
 m.step(&quot;Gen.14.20&quot;)
-# ‹וּבָרוּךְ אֵל עֶלְיוֹן› blessing: malki-tzedeq blesses to-elyon
+# ‹וּבָרוּךְ אֵל עֶלְיוֹן› (“and-bless strength Most-High”) — blessing:
+# I-Melchizedek blesses to-Most-High
 m.bless(&quot;malki_tzedeq&quot;, &quot;el_elyon&quot;)
-# ‹אֲשֶׁר־מִגֵּן צָרֶיךָ בְּיָדֶךָ› fact holds: which-miggen-tzarekha-in-
-# yadekha
+# ‹אֲשֶׁר־מִגֵּן צָרֶיךָ בְּיָדֶךָ› (“which shield narrow-you/your in-hand-
+# you/your”) — fact holds: which-miggen-tzarekha-in-yadekha
 m.fact(&quot;asher_miggen_tzarekha_be_yadekha&quot;)
-# ‹וַיִּתֶּן־לוֹ מַעֲשֵׂר מִכֹּל› event: give — theme maaser-from-all
+# ‹וַיִּתֶּן־לוֹ מַעֲשֵׂר מִכֹּל› (“and-set to-him/its tenth from-all”) —
+# event: give — theme tenth-from-all
 m.event(&quot;give&quot;, themes=[&quot;maaser_mi_kol&quot;])
 
 # -------------------------- Gen.14.21 · THE_KINGS_DEMANDS ------------------
@@ -1055,14 +1079,15 @@ m.event(&quot;give&quot;, themes=[&quot;maaser_mi_kol&quot;])
 # &quot;And the king of Sodom said unto Abram: &#x27;Give me the persons, and take the
 # goods to thyself.&#x27;&quot;
 m.step(&quot;Gen.14.21&quot;)
-# ‹וַיֹּאמֶר מֶלֶךְ־סְדֹם אֶל־אַבְרָם› event: say — agent melekh-sedom
+# ‹וַיֹּאמֶר מֶלֶךְ־סְדֹם אֶל־אַבְרָם› (“and-say king Sodom to Abram”) —
+# event: say — agent king-Sodom
 m.event(&quot;say&quot;, agent=&quot;melekh_sedom&quot;)
-# ‹תֶּן־לִי הַנֶּפֶשׁ› melekh-sedom speaks a demand — LET: ten(avram, the-
-# nefesh)
+# ‹תֶּן־לִי הַנֶּפֶשׁ› (“set to-me/my the-living-being”) — king-Sodom speaks
+# a demand — LET: set(Abram, the-living-being)
 m.declare(&quot;melekh_sedom&quot;, &quot;LET&quot;,
           &quot;ten(avram, ha_nefesh)&quot;)
-# ‹וְהָרְכֻשׁ קַח־לָךְ› melekh-sedom speaks a demand — LET: qach(avram, the-
-# rekhush)
+# ‹וְהָרְכֻשׁ קַח־לָךְ› (“and-the-property take to-you/your”) — king-Sodom
+# speaks a demand — LET: take(Abram, the-property)
 m.declare(&quot;melekh_sedom&quot;, &quot;LET&quot;,
           &quot;qach(avram, ha_rekhush)&quot;)
 
@@ -1072,10 +1097,13 @@ m.declare(&quot;melekh_sedom&quot;, &quot;LET&quot;,
 # &quot;And Abram said to the king of Sodom: &#x27;I have lifted up my hand unto the
 # LORD, God Most High, Maker of heaven and earth,&quot;
 m.step(&quot;Gen.14.22&quot;)
-# ‹וַיֹּאמֶר אַבְרָם אֶל־מֶלֶךְ סְדֹם› event: say — agent avram
+# ‹וַיֹּאמֶר אַבְרָם אֶל־מֶלֶךְ סְדֹם› (“and-say Abram to king Sodom”) —
+# event: say — agent Abram
 m.event(&quot;say&quot;, agent=&quot;avram&quot;)
-# ‹הֲרִימֹתִי יָדִי אֶל־יְהוָה אֵל עֶלְיוֹן קֹנֵה שָׁמַיִם וָאָרֶץ› fact
-# holds: harimoti-yadi-to-the-LORD-to-elyon-qoneh-heavens-and-earth
+# ‹הֲרִימֹתִי יָדִי אֶל־יְהוָה אֵל עֶלְיוֹן קֹנֵה שָׁמַיִם וָאָרֶץ› (“rise-
+# high hand-me/my to YHWH strength Most-High possessor heavens and-earth”) —
+# fact holds: rise-high-yadi-to-the-LORD-to-Most-High-qoneh-heavens-and-
+# earth
 m.fact(&quot;harimoti_yadi_el_YHWH_el_elyon_qoneh_shamayim_va_aretz&quot;)
 
 # -------------------------- Gen.14.23 · THE_THREAD_AND_THE_THONG -----------
@@ -1085,8 +1113,10 @@ m.fact(&quot;harimoti_yadi_el_YHWH_el_elyon_qoneh_shamayim_va_aretz&quot;)
 # lest thou shouldest say: I have made Abram rich;&quot;
 m.step(&quot;Gen.14.23&quot;)
 # ‹אִם־מִחוּט וְעַד שְׂרוֹךְ־נַעַל וְאִם־אֶקַּח … וְלֹא תֹאמַר אֲנִי
-# הֶעֱשַׁרְתִּי אֶת־אַבְרָם› fact holds: if-from-chut-and-until-serokh-naal-
-# and-if-eqach-from-all-which-to-you; and-not-tomar-ani-heesharti-avram
+# הֶעֱשַׁרְתִּי אֶת־אַבְרָם› (“if from-string and-until thong sandal-tongue
+# and-if take … and-not say accumulate obj-marker Abram”) — fact holds: if-
+# from-string-and-until-thong-sandal-tongue-and-if-take-from-all-which-to-
+# you; and-not-say-ani-accumulate-obj-marker-Abram
 m.fact(&quot;im_mi_chut_ve_ad_serokh_naal_ve_im_eqach_mi_kol_asher_lakh&quot;,
        &quot;ve_lo_tomar_ani_heesharti_et_avram&quot;)
 
@@ -1097,11 +1127,12 @@ m.fact(&quot;im_mi_chut_ve_ad_serokh_naal_ve_im_eqach_mi_kol_asher_lakh&quot;,
 # which went with me, Aner, Eshcol, and Mamre, let them take their
 # portion.&#x27;&quot;
 m.step(&quot;Gen.14.24&quot;)
-# ‹בִּלְעָדַי רַק אֲשֶׁר אָכְלוּ הַנְּעָרִים› fact holds: biladai-raq-which-
-# akhlu-the-nearim
+# ‹בִּלְעָדַי רַק אֲשֶׁר אָכְלוּ הַנְּעָרִים› (“except-me/my leanness which
+# eat the-boy”) — fact holds: biladai-leanness-which-eat-the-boy
 m.fact(&quot;biladai_raq_asher_akhlu_ha_nearim&quot;)
-# ‹עָנֵר אֶשְׁכֹּל וּמַמְרֵא הֵם יִקְחוּ חֶלְקָם› avram speaks a demand —
-# LET: yiqchu(aner-eshkol-mamre, chelqam)
+# ‹עָנֵר אֶשְׁכֹּל וּמַמְרֵא הֵם יִקְחוּ חֶלְקָם› (“Aner Eshcol and-Mamre
+# they take smoothness-them/their”) — Abram speaks a demand — LET:
+# take(Aner-Eshcol-Mamre, chelqam)
 m.declare(&quot;avram&quot;, &quot;LET&quot;,
           &quot;yiqchu(aner_eshkol_mamre, chelqam)&quot;)
 
@@ -1109,7 +1140,7 @@ m.declare(&quot;avram&quot;, &quot;LET&quot;,
 if __name__ == &quot;__main__&quot;:
     m.report()
     assert m.created_set() == set()
-    assert m.presupposed_set() == {&#x27;shinar&#x27;, &#x27;elam&#x27;, &#x27;en_mishpat_qadesh&#x27;, &#x27;ashterot_qarnayim&#x27;, &#x27;admah&#x27;, &#x27;chovah&#x27;, &#x27;chatzetzon_tamar&#x27;, &#x27;dan&#x27;, &#x27;ham&#x27;, &#x27;har_seir&#x27;, &#x27;goyim_land&#x27;, &#x27;shaveh_qiryatayim&#x27;, &#x27;yam_ha_melach&#x27;, &#x27;shalem&#x27;, &#x27;emeq_shaveh&#x27;, &#x27;elasar&#x27;, &#x27;tzevoyim&#x27;, &#x27;el_paran&#x27;, &#x27;amora&#x27;, &#x27;sedom&#x27;, &#x27;tzoar&#x27;, &#x27;damaseq&#x27;, &#x27;emeq_ha_sidim&#x27;}
+    assert m.presupposed_set() == {&#x27;yam_ha_melach&#x27;, &#x27;tzevoyim&#x27;, &#x27;goyim_land&#x27;, &#x27;emeq_shaveh&#x27;, &#x27;emeq_ha_sidim&#x27;, &#x27;shinar&#x27;, &#x27;dan&#x27;, &#x27;en_mishpat_qadesh&#x27;, &#x27;amora&#x27;, &#x27;elam&#x27;, &#x27;tzoar&#x27;, &#x27;elasar&#x27;, &#x27;chatzetzon_tamar&#x27;, &#x27;shaveh_qiryatayim&#x27;, &#x27;damaseq&#x27;, &#x27;har_seir&#x27;, &#x27;sedom&#x27;, &#x27;ham&#x27;, &#x27;admah&#x27;, &#x27;ashterot_qarnayim&#x27;, &#x27;chovah&#x27;, &#x27;shalem&#x27;, &#x27;el_paran&#x27;}
     assert m.REGISTRY[&quot;names&quot;] == {}
     assert m.REGISTRY[&quot;writes&quot;] == 0
     assert m.tests_list() == []
@@ -1122,4 +1153,4 @@ if __name__ == &quot;__main__&quot;:
     assert m.WORLD[&quot;partitions&quot;] == []
     assert len(m.EVENTS) == 25
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
-</pre><p class='meta'>Rendered 2026-08-08 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

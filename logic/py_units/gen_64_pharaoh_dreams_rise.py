@@ -19,8 +19,9 @@ m = Machine("gen_64_pharaoh_dreams_rise")
 # "[EN-AID] And it was at the end of two years of days, and Pharaoh was
 # dreaming — and behold, standing over the Nile."
 m.step("Gen.41.1")
-# ‹וַיְהִי מִקֵּץ שְׁנָתַיִם יָמִים וּפַרְעֹה חֹלֵם› event: chalam — agent
-# paro; theme chalom-the-parot
+# ‹וַיְהִי מִקֵּץ שְׁנָתַיִם יָמִים וּפַרְעֹה חֹלֵם› (“and-be from-end years
+# day and-Pharaoh dreaming”) — event: chalam — agent Pharaoh; theme dream-
+# the-cow
 m.event("chalam", agent="paro", themes=["chalom_ha_parot"])
 
 # -------------------------- Gen.41.2 · SEVEN_FAIR_COWS ---------------------
@@ -29,7 +30,8 @@ m.event("chalam", agent="paro", themes=["chalom_ha_parot"])
 # "[EN-AID] And behold, from the Nile came up seven cows, fair of appearance
 # and healthy of flesh; and they grazed in the reed-grass."
 m.step("Gen.41.2")
-# ‹וַתִּרְעֶינָה בָּאָחוּ› fact holds: seven-parot-yefot-olot-from-the-yeor
+# ‹וַתִּרְעֶינָה בָּאָחוּ› (“and-graze in-reed-grass”) — fact holds: seven-
+# cow-beautiful-go-up-from-the-Nile
 m.fact("sheva_parot_yefot_olot_min_ha_yeor")
 
 # -------------------------- Gen.41.3 · SEVEN_ILL_COWS ----------------------
@@ -40,7 +42,8 @@ m.fact("sheva_parot_yefot_olot_min_ha_yeor")
 # evil of appearance and thin of flesh; and they stood beside the cows on
 # the bank of the Nile."
 m.step("Gen.41.3")
-# ‹אֲחֵרוֹת עֹלוֹת אַחֲרֵיהֶן› fact holds: seven-parot-raot-olot-acharehen
+# ‹אֲחֵרוֹת עֹלוֹת אַחֲרֵיהֶן› (“other go-up after-them/their”) — fact
+# holds: seven-cow-bad-go-up-acharehen
 m.fact("sheva_parot_raot_olot_acharehen")
 
 # -------------------------- Gen.41.4 · THE_FIRST_SWALLOW -------------------
@@ -49,8 +52,9 @@ m.fact("sheva_parot_raot_olot_acharehen")
 # "[EN-AID] And the cows evil of appearance and thin of flesh ate the seven
 # cows fair of appearance and healthy; and Pharaoh awoke."
 m.step("Gen.41.4")
-# ‹וַתֹּאכַלְנָה הַפָּרוֹת רָעוֹת הַמַּרְאֶה וְדַקֹּת הַבָּשָׂר› fact holds:
-# akhlu-the-raot-the-yafot(parot)
+# ‹וַתֹּאכַלְנָה הַפָּרוֹת רָעוֹת הַמַּרְאֶה וְדַקֹּת הַבָּשָׂר› (“and-eat
+# the-cow bad the-appearance and-thin the-flesh”) — fact holds: akhlu-the-
+# bad-obj-marker-the-yafot(cow)
 m.fact("akhlu_ha_raot_et_ha_yafot(parot)")
 
 # -------------------------- Gen.41.5 · SEVEN_GOOD_EARS ---------------------
@@ -59,8 +63,9 @@ m.fact("akhlu_ha_raot_et_ha_yafot(parot)")
 # "[EN-AID] And he slept and dreamed a second time — and behold, seven ears
 # coming up on one stalk, healthy and good."
 m.step("Gen.41.5")
-# ‹וְהִנֵּה שֶׁבַע שִׁבֳּלִים עֹלוֹת בְּקָנֶה אֶחָד› event: chalam — agent
-# paro; theme chalom-the-shibolim
+# ‹וְהִנֵּה שֶׁבַע שִׁבֳּלִים עֹלוֹת בְּקָנֶה אֶחָד› (“and-behold seven
+# ears-of-grain go-up in-reed one”) — event: chalam — agent Pharaoh; theme
+# dream-the-ears-of-grain
 m.event("chalam", agent="paro", themes=["chalom_ha_shibolim"])
 
 # -------------------------- Gen.41.6 · SEVEN_BLASTED_EARS ------------------
@@ -68,8 +73,9 @@ m.event("chalam", agent="paro", themes=["chalom_ha_shibolim"])
 # "[EN-AID] And behold, seven ears, thin and blasted by the east wind,
 # sprouting after them."
 m.step("Gen.41.6")
-# ‹וְהִנֵּה שֶׁבַע שִׁבֳּלִים דַּקּוֹת וּשְׁדוּפֹת קָדִים› fact holds:
-# seven-shibolim-daqot-shedufot-qadim
+# ‹וְהִנֵּה שֶׁבַע שִׁבֳּלִים דַּקּוֹת וּשְׁדוּפֹת קָדִים› (“and-behold
+# seven ears-of-grain thin and-scorch east-wind”) — fact holds: seven-ears-
+# of-grain-thin-scorch-east-wind
 m.fact("sheva_shibolim_daqot_shedufot_qadim")
 
 # -------------------------- Gen.41.7 · THE_EARS_SWALLOW --------------------
@@ -79,7 +85,9 @@ m.fact("sheva_shibolim_daqot_shedufot_qadim")
 # Pharaoh awoke — and behold, a dream."
 m.step("Gen.41.7")
 # ‹וַתִּבְלַעְנָה הַשִּׁבֳּלִים הַדַּקּוֹת אֵת שֶׁבַע הַשִּׁבֳּלִים
-# הַבְּרִיאוֹת וְהַמְּלֵאוֹת› fact holds: and-tivlana-the-daqot-the-beriot
+# הַבְּרִיאוֹת וְהַמְּלֵאוֹת› (“and-swallow the-ears-of-grain the-thin obj-
+# marker seven the-ears-of-grain the-fatted and-the-full”) — fact holds:
+# and-swallow-the-thin-obj-marker-the-fatted
 m.fact("va_tivlana_ha_daqot_et_ha_beriot")
 
 # -------------------------- Gen.41.8 · NO_INTERPRETER ----------------------
@@ -90,7 +98,8 @@ m.fact("va_tivlana_ha_daqot_et_ha_beriot")
 # sent and called all the magicians of Egypt and all its wise men; and
 # Pharaoh told them his dream, and none could interpret them for Pharaoh."
 m.step("Gen.41.8")
-# ‹וְאֵין־פּוֹתֵר אוֹתָם לְפַרְעֹה› fact holds: en-poter-otam-to-faro
+# ‹וְאֵין־פּוֹתֵר אוֹתָם לְפַרְעֹה› (“and-there-is-not open-up obj-marker-
+# them/their to-Pharaoh”) — fact holds: there-is-not-open-up-otam-to-Pharaoh
 m.fact("en_poter_otam_le_faro")
 
 # -------------------------- Gen.41.9 · THE_CUPBEARER_REMEMBERS -------------
@@ -99,8 +108,9 @@ m.fact("en_poter_otam_le_faro")
 # "[EN-AID] And the chief of the cupbearers spoke to Pharaoh, saying: My
 # offenses I remember today."
 m.step("Gen.41.9")
-# ‹אֶת־חֲטָאַי אֲנִי מַזְכִּיר הַיּוֹם› fact holds: chataay-ani-mazkir-the-
-# day(sar-the-mashqim)
+# ‹אֶת־חֲטָאַי אֲנִי מַזְכִּיר הַיּוֹם› (“obj-marker crime-me/my mark the-
+# day”) — fact holds: obj-marker-chataay-I-mark-the-day(officer-the-causing-
+# to-drink)
 m.fact("et_chataay_ani_mazkir_ha_yom(sar_ha_mashqim)")
 
 # -------------------------- Gen.41.10 · THE_RETELLING_OF_THE_PRISON --------
@@ -110,8 +120,8 @@ m.fact("et_chataay_ani_mazkir_ha_yom(sar_ha_mashqim)")
 # the house of the chief of the slaughterers — me and the chief of the
 # bakers."
 m.step("Gen.41.10")
-# ‹פַּרְעֹה קָצַף עַל־עֲבָדָיו› fact holds: sipur-the-mishmar(sar-the-
-# mashqim)
+# ‹פַּרְעֹה קָצַף עַל־עֲבָדָיו› (“Pharaoh crack-off over servant-him/its”) —
+# fact holds: sipur-the-guard(officer-the-causing-to-drink)
 m.fact("sipur_ha_mishmar(sar_ha_mashqim)")
 
 # -------------------------- Gen.41.11 · EACH_HIS_DREAM ---------------------
@@ -120,8 +130,9 @@ m.fact("sipur_ha_mishmar(sar_ha_mashqim)")
 # "[EN-AID] And we dreamed a dream in one night, I and he; each according to
 # the interpretation of his dream we dreamed."
 m.step("Gen.41.11")
-# ‹אִישׁ כְּפִתְרוֹן חֲלֹמוֹ חָלָמְנוּ› fact holds: man-like-fitron-chalomo-
-# chalamnu
+# ‹אִישׁ כְּפִתְרוֹן חֲלֹמוֹ חָלָמְנוּ› (“man like-interpretation dream-
+# him/its bind-firmly”) — fact holds: man-like-interpretation-chalomo-bind-
+# firmly
 m.fact("ish_ke_fitron_chalomo_chalamnu")
 
 # -------------------------- Gen.41.12 · A_HEBREW_LAD -----------------------
@@ -131,8 +142,8 @@ m.fact("ish_ke_fitron_chalomo_chalamnu")
 # slaughterers; and we told him, and he interpreted for us our dreams — each
 # according to his dream he interpreted."
 m.step("Gen.41.12")
-# ‹נַעַר עִבְרִי עֶבֶד לְשַׂר הַטַּבָּחִים› fact holds: naar-ivri-eved-and-
-# yiftar-lanu
+# ‹נַעַר עִבְרִי עֶבֶד לְשַׂר הַטַּבָּחִים› (“boy Hebrew servant to-officer
+# the-butcher”) — fact holds: boy-Hebrew-servant-and-open-up-lanu
 m.fact("naar_ivri_eved_va_yiftar_lanu")
 
 # -------------------------- Gen.41.13 · AS_HE_INTERPRETED_SO_IT_WAS --------
@@ -141,8 +152,8 @@ m.fact("naar_ivri_eved_va_yiftar_lanu")
 # "[EN-AID] And it was, as he interpreted for us, so it was: me he restored
 # to my post, and him he hanged."
 m.step("Gen.41.13")
-# ‹וַיְהִי כַּאֲשֶׁר פָּתַר־לָנוּ כֵּן הָיָה› fact holds: like-which-patar-
-# ken-haya
+# ‹וַיְהִי כַּאֲשֶׁר פָּתַר־לָנוּ כֵּן הָיָה› (“and-be like-as/which open-up
+# to-us/our so be”) — fact holds: like-which-open-up-so-be
 m.fact("ka_asher_patar_ken_haya")
 
 # -------------------------- Gen.41.14 · RUSHED_FROM_THE_PIT ----------------
@@ -151,8 +162,8 @@ m.fact("ka_asher_patar_ken_haya")
 # "[EN-AID] And Pharaoh sent and called Joseph, and they rushed him from the
 # pit; and he shaved and changed his garments and came to Pharaoh."
 m.step("Gen.41.14")
-# ‹יוֹסֵף וַיְרִיצֻהוּ מִן־הַבּוֹר› fact holds: and-yeritzuhu-from-the-
-# bor(yosef)
+# ‹יוֹסֵף וַיְרִיצֻהוּ מִן־הַבּוֹר› (“Joseph and-run-him/its from the-pit”)
+# — fact holds: and-yeritzuhu-from-the-pit(Joseph)
 m.fact("va_yeritzuhu_min_ha_bor(yosef)")
 
 # -------------------------- Gen.41.15 · I_HEARD_OF_YOU ---------------------
@@ -162,8 +173,9 @@ m.fact("va_yeritzuhu_min_ha_bor(yosef)")
 # interpret it; and I have heard of you, saying: you hear a dream to
 # interpret it."
 m.step("Gen.41.15")
-# ‹חֲלוֹם חָלַמְתִּי וּפֹתֵר אֵין אֹתוֹ› fact holds: chalom-chalamti-and-
-# foter-en-it(paro)
+# ‹חֲלוֹם חָלַמְתִּי וּפֹתֵר אֵין אֹתוֹ› (“dream bind-firmly and-open-up
+# there-is-not obj-marker-him/its”) — fact holds: dream-bind-firmly-and-
+# open-up-there-is-not-it(Pharaoh)
 m.fact("chalom_chalamti_u_foter_en_oto(paro)")
 
 # -------------------------- Gen.41.16 · NOT_I_GOD --------------------------
@@ -172,8 +184,9 @@ m.fact("chalom_chalamti_u_foter_en_oto(paro)")
 # "[EN-AID] And Joseph answered Pharaoh, saying: Not I — God will answer the
 # peace of Pharaoh."
 m.step("Gen.41.16")
-# ‹בִּלְעָדָי אֱלֹהִים יַעֲנֶה אֶת־שְׁלוֹם פַּרְעֹה› fact holds: biladay-
-# God-yaane-shelom-paro(yosef)
+# ‹בִּלְעָדָי אֱלֹהִים יַעֲנֶה אֶת־שְׁלוֹם פַּרְעֹה› (“except-me/my God eye
+# obj-marker safe Pharaoh”) — fact holds: biladay-God-eye-obj-marker-safe-
+# Pharaoh(Joseph)
 m.fact("biladay_Elohim_yaane_et_shelom_paro(yosef)")
 
 # -------------------------- Gen.41.17 · THE_RETELLING_BEGINS ---------------
@@ -181,8 +194,9 @@ m.fact("biladay_Elohim_yaane_et_shelom_paro(yosef)")
 # "[EN-AID] And Pharaoh spoke to Joseph: In my dream — behold, I was
 # standing on the bank of the Nile."
 m.step("Gen.41.17")
-# ‹בַּחֲלֹמִי הִנְנִי עֹמֵד עַל־שְׂפַת הַיְאֹר› fact holds: in-the-chalomi-
-# omed-upon-sefat-the-yeor(paro)
+# ‹בַּחֲלֹמִי הִנְנִי עֹמֵד עַל־שְׂפַת הַיְאֹר› (“in-dream-me/my lo!-me/my
+# stand over lip the-Nile”) — fact holds: in-the-chalomi-stand-over-lip-the-
+# Nile(Pharaoh)
 m.fact("ba_chalomi_omed_al_sefat_ha_yeor(paro)")
 
 # -------------------------- Gen.41.18 · THE_COWS_RETOLD --------------------
@@ -191,7 +205,8 @@ m.fact("ba_chalomi_omed_al_sefat_ha_yeor(paro)")
 # "[EN-AID] And behold, from the Nile came up seven cows, healthy of flesh
 # and fair of form; and they grazed in the reed-grass."
 m.step("Gen.41.18")
-# ‹וַתִּרְעֶינָה בָּאָחוּ› fact holds: seven-parot-beriot-vi-yfot-toar
+# ‹וַתִּרְעֶינָה בָּאָחוּ› (“and-graze in-reed-grass”) — fact holds: seven-
+# cow-fatted-vi-yfot-outline
 m.fact("sheva_parot_beriot_vi_yfot_toar")
 
 # -------------------------- Gen.41.19 · THE_WORST_COWS ---------------------
@@ -202,8 +217,9 @@ m.fact("sheva_parot_beriot_vi_yfot_toar")
 # evil of form and thin of flesh — I have not seen their like in all the
 # land of Egypt for evil."
 m.step("Gen.41.19")
-# ‹לֹא־רָאִיתִי כָהֵנָּה בְּכָל־אֶרֶץ מִצְרַיִם לָרֹעַ› fact holds: dalot-
-# and-raot-very-not-raiti-khahena
+# ‹לֹא־רָאִיתִי כָהֵנָּה בְּכָל־אֶרֶץ מִצְרַיִם לָרֹעַ› (“not see like-
+# themselves in-all earth Egypt to-badness”) — fact holds: something-
+# dangling-and-bad-very-not-see-khahena
 m.fact("dalot_ve_raot_meod_lo_raiti_khahena")
 
 # -------------------------- Gen.41.20 · THE_SWALLOW_RETOLD_EAT -------------
@@ -211,8 +227,9 @@ m.fact("dalot_ve_raot_meod_lo_raiti_khahena")
 # הָרִאשֹׁנוֹת הַבְּרִיאֹת
 # "[EN-AID] And the thin and evil cows ate the seven first, healthy cows."
 m.step("Gen.41.20")
-# ‹וַתֹּאכַלְנָה הַפָּרוֹת הָרַקּוֹת וְהָרָעוֹת› fact holds: and-tokhalna-
-# the-raqot-the-rishonot
+# ‹וַתֹּאכַלְנָה הַפָּרוֹת הָרַקּוֹת וְהָרָעוֹת› (“and-eat the-cow the-
+# emaciated and-the-bad”) — fact holds: and-eat-the-emaciated-obj-marker-
+# the-first
 m.fact("va_tokhalna_ha_raqot_et_ha_rishonot")
 
 # -------------------------- Gen.41.21 · UNKNOWABLE -------------------------
@@ -222,8 +239,9 @@ m.fact("va_tokhalna_ha_raqot_et_ha_rishonot")
 # they had come into their midst, and their appearance was evil as at the
 # beginning; and I awoke."
 m.step("Gen.41.21")
-# ‹וְלֹא נוֹדַע כִּי־בָאוּ אֶל־קִרְבֶּנָה› fact holds: and-not-noda-when-
-# vau-to-qirbena
+# ‹וְלֹא נוֹדַע כִּי־בָאוּ אֶל־קִרְבֶּנָה› (“and-not know that come/bring to
+# nearest-part-them/their”) — fact holds: and-not-know-that-come/bring-to-
+# qirbena
 m.fact("ve_lo_noda_ki_vau_el_qirbena")
 
 # -------------------------- Gen.41.22 · THE_EARS_RETOLD --------------------
@@ -232,8 +250,9 @@ m.fact("ve_lo_noda_ki_vau_el_qirbena")
 # "[EN-AID] And I saw in my dream — and behold, seven ears coming up on one
 # stalk, full and good."
 m.step("Gen.41.22")
-# ‹וְהִנֵּה שֶׁבַע שִׁבֳּלִים עֹלֹת בְּקָנֶה אֶחָד מְלֵאֹת› fact holds:
-# seven-shibolim-in-qane-echad-meleot
+# ‹וְהִנֵּה שֶׁבַע שִׁבֳּלִים עֹלֹת בְּקָנֶה אֶחָד מְלֵאֹת› (“and-behold
+# seven ears-of-grain go-up in-reed one full”) — fact holds: seven-ears-of-
+# grain-in-reed-one-full
 m.fact("sheva_shibolim_be_qane_echad_meleot")
 
 # -------------------------- Gen.41.23 · WITHERED_BLASTED -------------------
@@ -242,7 +261,8 @@ m.fact("sheva_shibolim_be_qane_echad_meleot")
 # "[EN-AID] And behold, seven ears, withered, thin, blasted by the east
 # wind, sprouting after them."
 m.step("Gen.41.23")
-# ‹צֹמְחוֹת אַחֲרֵיהֶם› fact holds: tzenumot-daqot-shedufot-qadim
+# ‹צֹמְחוֹת אַחֲרֵיהֶם› (“sprout after-them/their”) — fact holds: blast-
+# thin-scorch-east-wind
 m.fact("tzenumot_daqot_shedufot_qadim")
 
 # -------------------------- Gen.41.24 · THE_SWALLOW_STRAIGHTENED -----------
@@ -252,7 +272,8 @@ m.fact("tzenumot_daqot_shedufot_qadim")
 # to the magicians, and none could tell me."
 m.step("Gen.41.24")
 # ‹וַתִּבְלַעְןָ הָשִׁבֳּלִים הַדַּקֹּת אֵת שֶׁבַע הַשִׁבֳּלִים הַטֹּבוֹת›
-# fact holds: and-tivlan-the-daqot-the-tovot
+# (“and-swallow the-ears-of-grain the-thin obj-marker seven the-ears-of-
+# grain the-good”) — fact holds: and-tivlan-the-thin-obj-marker-the-good
 m.fact("va_tivlan_ha_daqot_et_ha_tovot")
 
 # -------------------------- Gen.41.25 · ONE_DREAM --------------------------
@@ -261,7 +282,8 @@ m.fact("va_tivlan_ha_daqot_et_ha_tovot")
 # "[EN-AID] And Joseph said to Pharaoh: The dream of Pharaoh is ONE; what
 # God is doing He has told Pharaoh."
 m.step("Gen.41.25")
-# ‹חֲלוֹם פַּרְעֹה אֶחָד הוּא› fact holds: chalom-paro-echad-that(yosef)
+# ‹חֲלוֹם פַּרְעֹה אֶחָד הוּא› (“dream Pharaoh one he/it”) — fact holds:
+# dream-Pharaoh-one-he/it(Joseph)
 m.fact("chalom_paro_echad_hu(yosef)")
 
 # -------------------------- Gen.41.26 · THE_GOOD_SEVENS --------------------
@@ -270,7 +292,8 @@ m.fact("chalom_paro_echad_hu(yosef)")
 # "[EN-AID] The seven good cows are seven years, and the seven good ears are
 # seven years — the dream is one."
 m.step("Gen.41.26")
-# ‹שֶׁבַע פָּרֹת הַטֹּבֹת› fact holds: seven-parot-seven-shanim-hena
+# ‹שֶׁבַע פָּרֹת הַטֹּבֹת› (“seven cow the-good”) — fact holds: seven-cow-
+# seven-years-themselves
 m.fact("sheva_parot_sheva_shanim_hena")
 
 # -------------------------- Gen.41.27 · THE_EVIL_SEVENS --------------------
@@ -281,7 +304,8 @@ m.fact("sheva_parot_sheva_shanim_hena")
 # years, and the seven empty ears blasted by the east wind — they will be
 # seven years of famine."
 m.step("Gen.41.27")
-# ‹וְשֶׁבַע הַפָּרוֹת הָרַקּוֹת וְהָרָעֹת› fact holds: seven-shene-raav-hena
+# ‹וְשֶׁבַע הַפָּרוֹת הָרַקּוֹת וְהָרָעֹת› (“and-seven the-cow the-emaciated
+# and-the-bad”) — fact holds: seven-years-hunger-themselves
 m.fact("sheva_shene_raav_hena")
 
 # -------------------------- Gen.41.28 · WHAT_GOD_DOES ----------------------
@@ -290,8 +314,9 @@ m.fact("sheva_shene_raav_hena")
 # "[EN-AID] That is the word which I spoke to Pharaoh: what God is doing He
 # has shown Pharaoh."
 m.step("Gen.41.28")
-# ‹אֲשֶׁר הָאֱלֹהִים עֹשֶׂה הֶרְאָה אֶת־פַּרְעֹה› fact holds: which-the-God-
-# ose-hera-paro
+# ‹אֲשֶׁר הָאֱלֹהִים עֹשֶׂה הֶרְאָה אֶת־פַּרְעֹה› (“which the-God make see
+# obj-marker Pharaoh”) — fact holds: which-the-God-make-see-obj-marker-
+# Pharaoh
 m.fact("asher_ha_Elohim_ose_hera_et_paro")
 
 # -------------------------- Gen.41.29 · THE_PLENTY_COMES -------------------
@@ -299,7 +324,8 @@ m.fact("asher_ha_Elohim_ose_hera_et_paro")
 # "[EN-AID] Behold, seven years are coming — great plenty in all the land of
 # Egypt."
 m.step("Gen.41.29")
-# ‹הִנֵּה שֶׁבַע שָׁנִים בָּאוֹת› fact holds: seven-shanim-baot-sava-gadol
+# ‹הִנֵּה שֶׁבַע שָׁנִים בָּאוֹת› (“behold seven years come/bring”) — fact
+# holds: seven-years-come/bring-plenty-great
 m.fact("sheva_shanim_baot_sava_gadol")
 
 # -------------------------- Gen.41.30 · THE_FAMINE_CONSUMES ----------------
@@ -309,8 +335,8 @@ m.fact("sheva_shanim_baot_sava_gadol")
 # plenty will be forgotten in the land of Egypt; and the famine will consume
 # the land."
 m.step("Gen.41.30")
-# ‹וְנִשְׁכַּח כָּל־הַשָּׂבָע בְּאֶרֶץ מִצְרָיִם› fact holds: and-nishkach-
-# kal-the-sava
+# ‹וְנִשְׁכַּח כָּל־הַשָּׂבָע בְּאֶרֶץ מִצְרָיִם› (“and-forget all the-
+# plenty in-earth Egypt”) — fact holds: and-forget-all-the-plenty
 m.fact("ve_nishkach_kal_ha_sava")
 
 # -------------------------- Gen.41.31 · THE_PLENTY_UNKNOWN -----------------
@@ -319,7 +345,8 @@ m.fact("ve_nishkach_kal_ha_sava")
 # "[EN-AID] And the plenty will not be known in the land because of that
 # famine afterward, for it will be very heavy."
 m.step("Gen.41.31")
-# ‹וְלֹא־יִוָּדַע הַשָּׂבָע› fact holds: and-not-yivada-the-sava
+# ‹וְלֹא־יִוָּדַע הַשָּׂבָע› (“and-not know the-plenty”) — fact holds: and-
+# not-know-the-plenty
 m.fact("ve_lo_yivada_ha_sava")
 
 # -------------------------- Gen.41.32 · THE_DOUBLING -----------------------
@@ -329,7 +356,8 @@ m.fact("ve_lo_yivada_ha_sava")
 # is established from God, and God hastens to do it."
 m.step("Gen.41.32")
 # ‹כִּי־נָכוֹן הַדָּבָר מֵעִם הָאֱלֹהִים וּמְמַהֵר הָאֱלֹהִים לַעֲשֹׂתוֹ›
-# fact holds: nakhon-the-davar-and-memaher-the-God
+# (“that be-erect the-word/thing from-with the-God and-hasten the-God to-
+# make-him/its”) — fact holds: be-erect-the-word/thing-and-hasten-the-God
 m.fact("nakhon_ha_davar_u_memaher_ha_Elohim")
 
 # -------------------------- Gen.41.33 · THE_COUNSEL_BEGINS -----------------
@@ -338,8 +366,9 @@ m.fact("nakhon_ha_davar_u_memaher_ha_Elohim")
 # "[EN-AID] And now let Pharaoh look for a man discerning and wise, and set
 # him over the land of Egypt."
 m.step("Gen.41.33")
-# ‹וְעַתָּה יֵרֶא פַרְעֹה אִישׁ נָבוֹן וְחָכָם› yosef speaks a demand — LET:
-# yere-faro-man-navon-and-chakham
+# ‹וְעַתָּה יֵרֶא פַרְעֹה אִישׁ נָבוֹן וְחָכָם› (“and-now see Pharaoh man
+# separate-mentally and-wise”) — Joseph speaks a demand — LET: see-Pharaoh-
+# man-separate-mentally-and-wise
 m.declare("yosef", "LET",
           "yere_faro_ish_navon_ve_chakham")
 
@@ -349,8 +378,9 @@ m.declare("yosef", "LET",
 # "[EN-AID] Let Pharaoh act, and appoint overseers over the land, and take
 # the fifth of the land of Egypt in the seven years of plenty."
 m.step("Gen.41.34")
-# ‹יַעֲשֶׂה פַרְעֹה וְיַפְקֵד פְּקִדִים עַל־הָאָרֶץ› yosef speaks a demand —
-# LET: yafqed-peqidim-and-chimesh
+# ‹יַעֲשֶׂה פַרְעֹה וְיַפְקֵד פְּקִדִים עַל־הָאָרֶץ› (“make Pharaoh and-
+# count/visit superintendent over the-earth”) — Joseph speaks a demand —
+# LET: count/visit-superintendent-and-tax-a-fifth
 m.declare("yosef", "LET",
           "yafqed_peqidim_ve_chimesh")
 
@@ -360,7 +390,8 @@ m.declare("yosef", "LET",
 # "[EN-AID] And let them gather all the food of these good years coming, and
 # pile up grain under Pharaoh's hand — food in the cities — and guard it."
 m.step("Gen.41.35")
-# ‹וְיִקְבְּצוּ אֶת־כָּל־אֹכֶל› fact holds: yiqbetzu-okhel-and-yitzberu-var
+# ‹וְיִקְבְּצוּ אֶת־כָּל־אֹכֶל› (“and-grasp obj-marker all food”) — fact
+# holds: yiqbetzu-food-and-yitzberu-grain-of-any-kind
 m.fact("yiqbetzu_okhel_ve_yitzberu_var")
 
 # -------------------------- Gen.41.36 · THE_DEPOSIT ------------------------
@@ -370,8 +401,8 @@ m.fact("yiqbetzu_okhel_ve_yitzberu_var")
 # of famine which will be in the land of Egypt, and the land will not be cut
 # off in the famine."
 m.step("Gen.41.36")
-# ‹וְהָיָה הָאֹכֶל לְפִקָּדוֹן לָאָרֶץ› fact holds: and-haya-the-okhel-to-
-# fiqadon
+# ‹וְהָיָה הָאֹכֶל לְפִקָּדוֹן לָאָרֶץ› (“and-be the-food to-deposit to-
+# earth”) — fact holds: and-be-the-food-to-deposit
 m.fact("ve_haya_ha_okhel_le_fiqadon")
 
 # -------------------------- Gen.41.37 · GOOD_IN_ALL_EYES -------------------
@@ -379,8 +410,9 @@ m.fact("ve_haya_ha_okhel_le_fiqadon")
 # "[EN-AID] And the word was good in the eyes of Pharaoh and in the eyes of
 # all his servants."
 m.step("Gen.41.37")
-# ‹וַיִּיטַב הַדָּבָר בְּעֵינֵי פַרְעֹה› fact holds: and-yitav-the-davar-in-
-# ene-faro
+# ‹וַיִּיטַב הַדָּבָר בְּעֵינֵי פַרְעֹה› (“and-be-make-well the-word/thing
+# in-eye Pharaoh”) — fact holds: and-be-make-well-the-word/thing-in-eye-
+# Pharaoh
 m.fact("va_yitav_ha_davar_be_ene_faro")
 
 # -------------------------- Gen.41.38 · A_MAN_WITH_THE_SPIRIT --------------
@@ -389,8 +421,9 @@ m.fact("va_yitav_ha_davar_be_ene_faro")
 # "[EN-AID] And Pharaoh said to his servants: Shall we find such a one — a
 # man in whom is the spirit of God?"
 m.step("Gen.41.38")
-# ‹הֲנִמְצָא כָזֶה אִישׁ אֲשֶׁר רוּחַ אֱלֹהִים בּוֹ› fact holds: the-nimtza-
-# khaze-man-which-spirit-wind-God-in-it
+# ‹הֲנִמְצָא כָזֶה אִישׁ אֲשֶׁר רוּחַ אֱלֹהִים בּוֹ› (“the-find like-this
+# man which spirit God in-him/its”) — fact holds: the-find-khaze-man-which-
+# spirit-wind-God-in-it
 m.fact("ha_nimtza_khaze_ish_asher_ruach_Elohim_bo")
 
 # -------------------------- Gen.41.39 · NONE_SO_DISCERNING -----------------
@@ -399,8 +432,9 @@ m.fact("ha_nimtza_khaze_ish_asher_ruach_Elohim_bo")
 # "[EN-AID] And Pharaoh said to Joseph: After God has made known to you all
 # this, there is none discerning and wise as you."
 m.step("Gen.41.39")
-# ‹אֵין־נָבוֹן וְחָכָם כָּמוֹךָ› fact holds: en-navon-and-chakham-
-# kamokha(paro)
+# ‹אֵין־נָבוֹן וְחָכָם כָּמוֹךָ› (“there-is-not separate-mentally and-wise
+# form-of-the-prefix-'k-'-you/your”) — fact holds: there-is-not-separate-
+# mentally-and-wise-kamokha(Pharaoh)
 m.fact("en_navon_ve_chakham_kamokha(paro)")
 
 # -------------------------- Gen.41.40 · OVER_MY_HOUSE ----------------------
@@ -409,8 +443,8 @@ m.fact("en_navon_ve_chakham_kamokha(paro)")
 # "[EN-AID] You shall be over my house, and on your mouth all my people
 # shall kiss; only the throne shall I make greater than you."
 m.step("Gen.41.40")
-# ‹וְעַל־פִּיךָ יִשַּׁק כָּל־עַמִּי› fact holds: ata-tihye-upon-beti-and-
-# upon-pikha-yishaq
+# ‹וְעַל־פִּיךָ יִשַּׁק כָּל־עַמִּי› (“and-over mouth-you/your kiss all
+# people-me/my”) — fact holds: now-be-over-beti-and-over-pikha-kiss
 m.fact("ata_tihye_al_beti_ve_al_pikha_yishaq")
 
 # -------------------------- Gen.41.41 · SET_OVER_EGYPT ---------------------
@@ -419,8 +453,9 @@ m.fact("ata_tihye_al_beti_ve_al_pikha_yishaq")
 # "[EN-AID] And Pharaoh said to Joseph: See, I have set you over all the
 # land of Egypt."
 m.step("Gen.41.41")
-# ‹רְאֵה נָתַתִּי אֹתְךָ עַל כָּל־אֶרֶץ מִצְרָיִם› demand settled (popped
-# from the queue): yere-faro-man-navon-and-chakham
+# ‹רְאֵה נָתַתִּי אֹתְךָ עַל כָּל־אֶרֶץ מִצְרָיִם› (“see set obj-marker-
+# you/your over all earth Egypt”) — demand settled (popped from the queue):
+# see-Pharaoh-man-separate-mentally-and-wise
 m.result("yere_faro_ish_navon_ve_chakham", tmark="t1")
 
 # -------------------------- Gen.41.42 · RING_LINEN_CHAIN -------------------
@@ -431,8 +466,9 @@ m.result("yere_faro_ish_navon_ve_chakham", tmark="t1")
 # Joseph's hand, and clothed him in garments of fine linen, and set the gold
 # chain on his neck."
 m.step("Gen.41.42")
-# ‹וַיַּלְבֵּשׁ אֹתוֹ בִּגְדֵי־שֵׁשׁ› fact holds: tabaat-bigde-shesh-revid-
-# gold
+# ‹וַיַּלְבֵּשׁ אֹתוֹ בִּגְדֵי־שֵׁשׁ› (“and-wrap-around obj-marker-him/its
+# garment bleached-stuff”) — fact holds: tabaat-garment-bleached-stuff-
+# collar-gold
 m.fact("tabaat_bigde_shesh_revid_zahav")
 
 # -------------------------- Gen.41.43 · AVREKH -----------------------------
@@ -441,7 +477,8 @@ m.fact("tabaat_bigde_shesh_revid_zahav")
 # "[EN-AID] And he made him ride in the second chariot which was his, and
 # they called before him Avrekh; and he set him over all the land of Egypt."
 m.step("Gen.41.43")
-# ‹וַיִּקְרְאוּ לְפָנָיו אַבְרֵךְ› fact holds: and-yiqreu-lefanav-avrekh
+# ‹וַיִּקְרְאוּ לְפָנָיו אַבְרֵךְ› (“and-call to-face-him/its kneel”) — fact
+# holds: and-yiqreu-lefanav-kneel
 m.fact("va_yiqreu_lefanav_avrekh")
 
 # -------------------------- Gen.41.44 · I_AM_PHARAOH -----------------------
@@ -450,7 +487,8 @@ m.fact("va_yiqreu_lefanav_avrekh")
 # "[EN-AID] And Pharaoh said to Joseph: I am Pharaoh — and without you no
 # man shall lift his hand or his foot in all the land of Egypt."
 m.step("Gen.41.44")
-# ‹אֲנִי פַרְעֹה› fact holds: ani-faro-and-viladekha-not-yarim-man
+# ‹אֲנִי פַרְעֹה› (“Pharaoh”) — fact holds: I-Pharaoh-and-viladekha-not-
+# rise-high-man
 m.fact("ani_faro_u_viladekha_lo_yarim_ish")
 
 # -------------------------- Gen.41.45 · THE_NEW_NAME -----------------------
@@ -461,11 +499,11 @@ m.fact("ani_faro_u_viladekha_lo_yarim_ish")
 # Asnat, daughter of Poti-fera priest of On, as a wife; and Joseph went out
 # over the land of Egypt."
 m.step("Gen.41.45")
-# ‹וַיִּקְרָא פַרְעֹה שֵׁם־יוֹסֵף› reads without prior install (flag, not
-# fix): yosef
+# ‹וַיִּקְרָא פַרְעֹה שֵׁם־יוֹסֵף› (“and-call Pharaoh name Joseph”) — reads
+# without prior install (flag, not fix): Joseph
 m.presupposed("yosef")
-# ‹וַיִּקְרָא פַרְעֹה שֵׁם־יוֹסֵף צָפְנַת פַּעְנֵחַ› named: yosef :=
-# tzafnat-paneach
+# ‹וַיִּקְרָא פַרְעֹה שֵׁם־יוֹסֵף צָפְנַת פַּעְנֵחַ› (“and-call Pharaoh name
+# Joseph Zaphnath-paaneah”) — named: Joseph := tzafnat-paneach
 m.name("yosef", "tzafnat_paneach")
 
 # -------------------------- Gen.41.46 · THIRTY_YEARS_OLD -------------------
@@ -476,16 +514,17 @@ m.name("yosef", "tzafnat_paneach")
 # king of Egypt; and Joseph went out from before Pharaoh, and passed through
 # all the land of Egypt."
 m.step("Gen.41.46")
-# ‹וְיוֹסֵף בֶּן־שְׁלֹשִׁים שָׁנָה› fact holds: ben-sheloshim-shana-in-amdo-
-# lifne-faro
+# ‹וְיוֹסֵף בֶּן־שְׁלֹשִׁים שָׁנָה› (“and-Joseph son thirty years”) — fact
+# holds: son-thirty-years-in-amdo-lifne-Pharaoh
 m.fact("ben_sheloshim_shana_be_amdo_lifne_faro")
 
 # -------------------------- Gen.41.47 · BY_HANDFULS ------------------------
 # וַתַּעַשׂ הָאָרֶץ בְּשֶׁבַע שְׁנֵי הַשָּׂבָע לִקְמָצִים
 # "[EN-AID] And the land produced in the seven years of plenty by handfuls."
 m.step("Gen.41.47")
-# ‹וַתַּעַשׂ הָאָרֶץ בְּשֶׁבַע שְׁנֵי הַשָּׂבָע לִקְמָצִים› fact holds: and-
-# taas-the-earth-to-me-qematzim
+# ‹וַתַּעַשׂ הָאָרֶץ בְּשֶׁבַע שְׁנֵי הַשָּׂבָע לִקְמָצִים› (“and-make the-
+# earth in-seven years the-plenty to-grasp”) — fact holds: and-make-the-
+# earth-to-me-qematzim
 m.fact("va_taas_ha_aretz_li_qematzim")
 
 # -------------------------- Gen.41.48 · THE_GATHERING ----------------------
@@ -496,8 +535,9 @@ m.fact("va_taas_ha_aretz_li_qematzim")
 # the land of Egypt, and put food in the cities — the food of the field
 # around each city he put within it."
 m.step("Gen.41.48")
-# ‹וַיִּקְבֹּץ אֶת־כָּל־אֹכֶל› demand settled (popped from the queue):
-# yafqed-peqidim-and-chimesh
+# ‹וַיִּקְבֹּץ אֶת־כָּל־אֹכֶל› (“and-grasp obj-marker all food”) — demand
+# settled (popped from the queue): count/visit-superintendent-and-tax-a-
+# fifth
 m.result("yafqed_peqidim_ve_chimesh", tmark="t1")
 
 # -------------------------- Gen.41.49 · SAND_OF_THE_SEA --------------------
@@ -506,8 +546,9 @@ m.result("yafqed_peqidim_ve_chimesh", tmark="t1")
 # "[EN-AID] And Joseph piled up grain as the sand of the sea, very much,
 # until he ceased counting — for it was without number."
 m.step("Gen.41.49")
-# ‹בָּר כְּחוֹל הַיָּם הַרְבֵּה מְאֹד› fact holds: bar-like-chol-the-yam-en-
-# mispar
+# ‹בָּר כְּחוֹל הַיָּם הַרְבֵּה מְאֹד› (“grain-of-any-kind like-sand the-
+# seas multiply very”) — fact holds: grain-of-any-kind-like-sand-the-seas-
+# there-is-not-number
 m.fact("bar_ke_chol_ha_yam_en_mispar")
 
 # -------------------------- Gen.41.50 · TWO_SONS_BEFORE_THE_FAMINE ---------
@@ -516,8 +557,8 @@ m.fact("bar_ke_chol_ha_yam_en_mispar")
 # "[EN-AID] And to Joseph were born two sons before the year of famine came,
 # whom Asnat daughter of Poti-fera priest of On bore to him."
 m.step("Gen.41.50")
-# ‹וּלְיוֹסֵף יֻלַּד שְׁנֵי בָנִים› fact holds: yulad-shene-vanim-in-not-
-# yet-shenat-the-raav
+# ‹וּלְיוֹסֵף יֻלַּד שְׁנֵי בָנִים› (“and-to-Joseph bear-young two son”) —
+# fact holds: bear-young-years-son-in-non-occurrence-years-the-hunger
 m.fact("yulad_shene_vanim_be_terem_shenat_ha_raav")
 
 # -------------------------- Gen.41.51 · MENASHE_NAMED ----------------------
@@ -526,10 +567,11 @@ m.fact("yulad_shene_vanim_be_terem_shenat_ha_raav")
 # "[EN-AID] And Joseph called the name of the firstborn Menashe: for God has
 # made me forget all my toil and all my father's house."
 m.step("Gen.41.51")
-# ‹וַיִּקְרָא יוֹסֵף אֶת־שֵׁם הַבְּכוֹר מְנַשֶּׁה› the world gains: menashe
+# ‹וַיִּקְרָא יוֹסֵף אֶת־שֵׁם הַבְּכוֹר מְנַשֶּׁה› (“and-call Joseph obj-
+# marker name the-firstborn Manasseh”) — the world gains: Manasseh
 m.install("menashe")
-# ‹מְנַשֶּׁה כִּי־נַשַּׁנִי אֱלֹהִים אֶת־כָּל־עֲמָלִי› named: menashe :=
-# menashe
+# ‹מְנַשֶּׁה כִּי־נַשַּׁנִי אֱלֹהִים אֶת־כָּל־עֲמָלִי› (“Manasseh that
+# forget-me/my God obj-marker all toil-me/my”) — named: Manasseh := Manasseh
 m.name("menashe", "menashe")
 
 # -------------------------- Gen.41.52 · EFRAYIM_NAMED ----------------------
@@ -538,9 +580,11 @@ m.name("menashe", "menashe")
 # "[EN-AID] And the name of the second he called Efrayim: for God has made
 # me fruitful in the land of my affliction."
 m.step("Gen.41.52")
-# ‹וְאֵת שֵׁם הַשֵּׁנִי קָרָא אֶפְרָיִם› the world gains: efrayim
+# ‹וְאֵת שֵׁם הַשֵּׁנִי קָרָא אֶפְרָיִם› (“and-obj-marker name the-second
+# call Ephraim”) — the world gains: Ephraim
 m.install("efrayim")
-# ‹כִּי־הִפְרַנִי אֱלֹהִים בְּאֶרֶץ עָנְיִי› named: efrayim := efrayim
+# ‹כִּי־הִפְרַנִי אֱלֹהִים בְּאֶרֶץ עָנְיִי› (“that be-fruitful-me/my God
+# in-earth affliction-me/my”) — named: Ephraim := Ephraim
 m.name("efrayim", "efrayim")
 
 # -------------------------- Gen.41.53 · THE_PLENTY_ENDS --------------------
@@ -548,8 +592,8 @@ m.name("efrayim", "efrayim")
 # "[EN-AID] And the seven years of plenty which was in the land of Egypt
 # ended."
 m.step("Gen.41.53")
-# ‹וַתִּכְלֶינָה שֶׁבַע שְׁנֵי הַשָּׂבָע› fact holds: and-tikhlena-seven-
-# shene-the-sava
+# ‹וַתִּכְלֶינָה שֶׁבַע שְׁנֵי הַשָּׂבָע› (“and-be-complete seven years the-
+# plenty”) — fact holds: and-be-complete-seven-years-the-plenty
 m.fact("va_tikhlena_sheva_shene_ha_sava")
 
 # -------------------------- Gen.41.54 · THE_FAMINE_BEGINS ------------------
@@ -559,8 +603,8 @@ m.fact("va_tikhlena_sheva_shene_ha_sava")
 # and there was famine in all the lands, but in all the land of Egypt there
 # was bread."
 m.step("Gen.41.54")
-# ‹לָבוֹא כַּאֲשֶׁר אָמַר יוֹסֵף› fact holds: like-which-amar-yosef-and-
-# yehi-raav
+# ‹לָבוֹא כַּאֲשֶׁר אָמַר יוֹסֵף› (“to-come/bring like-as/which say Joseph”)
+# — fact holds: like-which-say-Joseph-and-be-hunger
 m.fact("ka_asher_amar_yosef_va_yehi_raav")
 
 # -------------------------- Gen.41.55 · GO_TO_JOSEPH -----------------------
@@ -571,7 +615,8 @@ m.fact("ka_asher_amar_yosef_va_yehi_raav")
 # Pharaoh for bread; and Pharaoh said to all Egypt: Go to Joseph; what he
 # says to you, do."
 m.step("Gen.41.55")
-# ‹לְכוּ אֶל־יוֹסֵף› paro speaks a demand — LET: lekhu-to-yosef
+# ‹לְכוּ אֶל־יוֹסֵף› (“go to Joseph”) — Pharaoh speaks a demand — LET: go-
+# to-Joseph
 m.declare("paro", "LET",
           "lekhu_el_yosef")
 
@@ -582,8 +627,10 @@ m.declare("paro", "LET",
 # opened all that was in them, and sold to Egypt; and the famine grew strong
 # in the land of Egypt."
 m.step("Gen.41.56")
-# ‹וַיִּפְתַּח יוֹסֵף אֶת־כָּל־אֲשֶׁר בָּהֶם וַיִּשְׁבֹּר לְמִצְרַיִם› fact
-# holds: and-yiftach-yosef-and-yishbor-to-mitzrayim
+# ‹וַיִּפְתַּח יוֹסֵף אֶת־כָּל־אֲשֶׁר בָּהֶם וַיִּשְׁבֹּר לְמִצְרַיִם›
+# (“and-open-wide Joseph obj-marker all which in-them/their and-deal-in-
+# grain to-Egyptian”) — fact holds: and-open-wide-Joseph-and-deal-in-grain-
+# to-Egypt
 m.fact("va_yiftach_yosef_va_yishbor_le_mitzrayim")
 
 # -------------------------- Gen.41.57 · ALL_THE_EARTH_COMES ----------------
@@ -592,14 +639,15 @@ m.fact("va_yiftach_yosef_va_yishbor_le_mitzrayim")
 # "[EN-AID] And all the earth came to Egypt to buy, to Joseph — for the
 # famine was strong in all the earth."
 m.step("Gen.41.57")
-# ‹וְכָל־הָאָרֶץ בָּאוּ מִצְרַיְמָה לִשְׁבֹּר אֶל־יוֹסֵף› demand settled
-# (popped from the queue): lekhu-to-yosef
+# ‹וְכָל־הָאָרֶץ בָּאוּ מִצְרַיְמָה לִשְׁבֹּר אֶל־יוֹסֵף› (“and-all the-
+# earth come/bring Egypt-ward to-deal-in-grain to Joseph”) — demand settled
+# (popped from the queue): go-to-Joseph
 m.result("lekhu_el_yosef", tmark="t2")
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
-    assert m.created_set() == {'menashe', 'efrayim'}
+    assert m.created_set() == {'efrayim', 'menashe'}
     assert m.presupposed_set() == {'yosef'}
     assert m.REGISTRY["names"] == {'yosef': 'tzafnat_paneach', 'menashe': 'menashe', 'efrayim': 'efrayim'}
     assert m.REGISTRY["writes"] == 3

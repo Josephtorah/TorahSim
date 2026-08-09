@@ -601,8 +601,9 @@ m = Machine(&quot;gen_22_covenant_bow&quot;)
 # וַיֹּאמֶר אֱלֹהִים אֶל־נֹחַ וְאֶל־בָּנָיו אִתּוֹ לֵאמֹר
 # &quot;And God spoke unto Noah, and to his sons with him, saying:&quot;
 m.step(&quot;Gen.9.8&quot;)
-# ‹וַיֹּאמֶר אֱלֹהִים אֶל־נֹחַ וְאֶל־בָּנָיו אִתּוֹ› event: speak — agent
-# God; theme to-Noach-and-to-banav
+# ‹וַיֹּאמֶר אֱלֹהִים אֶל־נֹחַ וְאֶל־בָּנָיו אִתּוֹ› (“and-He-said God to
+# Noah and-to his-sons with-him”) — event: speak — agent God; theme to-
+# Noach-and-to-banav
 m.event(&quot;speak&quot;, agent=&quot;elohim&quot;, themes=[&quot;el_noach_ve_el_banav&quot;])
 # reads without prior install (flag, not fix): Noach, banav, ark
 m.presupposed(&quot;noach&quot;, &quot;banav&quot;, &quot;tevah&quot;)
@@ -612,8 +613,9 @@ m.presupposed(&quot;noach&quot;, &quot;banav&quot;, &quot;tevah&quot;)
 # &quot;&#x27;As for Me, behold, I establish My covenant with you, and with your seed
 # after you;&quot;
 m.step(&quot;Gen.9.9&quot;)
-# ‹הִנְנִי מֵקִים אֶת־בְּרִיתִי אִתְּכֶם וְאֶת־זַרְעֲכֶם› fact holds: hinni-
-# mekim-obj-marker·et-My-covenant-itkhem
+# ‹הִנְנִי מֵקִים אֶת־בְּרִיתִי אִתְּכֶם וְאֶת־זַרְעֲכֶם› (“behold-I
+# establishing obj-marker My-covenant with-you and-with your-seed”) — fact
+# holds: hinni-mekim-obj-marker·et-My-covenant-itkhem
 m.fact(&quot;hinni_mekim_et_briti_itkhem&quot;)
 
 # -------------------------- Gen.9.10 · EVERY_LIVING_SOUL_A_PARTY -----------
@@ -625,7 +627,9 @@ m.fact(&quot;hinni_mekim_et_briti_itkhem&quot;)
 # every beast of the earth.&quot;
 m.step(&quot;Gen.9.10&quot;)
 # ‹וְאֵת כָּל־נֶפֶשׁ הַחַיָּה אֲשֶׁר אִתְּכֶם … מִכֹּל יֹצְאֵי הַתֵּבָה›
-# fact holds: and-obj-marker·et-all-soul-of-the-beast-which-itkhem
+# (“and-with all soul-of the-living which with-you … from-all goers-out-of
+# the-ark”) — fact holds: and-obj-marker·et-all-soul-of-the-beast-which-
+# itkhem
 m.fact(&quot;ve_et_kol_nefesh_ha_chayah_asher_itkhem&quot;)
 
 # -------------------------- Gen.9.11 · THE_CUT_VERB_BORN_REFUSING ----------
@@ -635,14 +639,18 @@ m.fact(&quot;ve_et_kol_nefesh_ha_chayah_asher_itkhem&quot;)
 # off any more by the waters of the flood; neither shall there any more be a
 # flood to destroy the earth.&#x27;&quot;
 m.step(&quot;Gen.9.11&quot;)
-# ‹וַהֲקִמֹתִי אֶת־בְּרִיתִי אִתְּכֶם› fact holds: and-I-will-establish-obj-
-# marker·et-My-covenant-itkhem
+# ‹וַהֲקִמֹתִי אֶת־בְּרִיתִי אִתְּכֶם› (“and-I-will-establish obj-marker My-
+# covenant with-you”) — fact holds: and-I-will-establish-obj-marker·et-My-
+# covenant-itkhem
 m.fact(&quot;va_hakimoti_et_briti_itkhem&quot;)
-# ‹וְלֹא־יִכָּרֵת כָּל־בָּשָׂר עוֹד מִמֵּי הַמַּבּוּל› standing constraint:
-# and-not-yikkaret-all-flesh-still/again-from-waters-of-the-deluge
+# ‹וְלֹא־יִכָּרֵת כָּל־בָּשָׂר עוֹד מִמֵּי הַמַּבּוּל› (“and-not be-cut-off
+# all flesh still/again from-the-waters-of the-deluge”) — standing
+# constraint: and-not-yikkaret-all-flesh-still/again-from-waters-of-the-
+# deluge
 m.invariant(&quot;ve_lo_yikkaret_kol_basar_od_mi_mei_ha_mabul&quot;)
-# ‹וְלֹא־יִהְיֶה עוֹד מַבּוּל לְשַׁחֵת הָאָרֶץ› standing constraint: and-
-# not-yihyeh-still/again-deluge-to-destroy-the-earth
+# ‹וְלֹא־יִהְיֶה עוֹד מַבּוּל לְשַׁחֵת הָאָרֶץ› (“and-not be still/again
+# deluge to-destroy the-earth”) — standing constraint: and-not-yihyeh-
+# still/again-deluge-to-destroy-the-earth
 m.invariant(&quot;ve_lo_yihyeh_od_mabul_le_shachet_ha_aretz&quot;)
 
 # -------------------------- Gen.9.12 · THE_FRAME_REOPENS_ON_THE_SIGN -------
@@ -652,11 +660,12 @@ m.invariant(&quot;ve_lo_yihyeh_od_mabul_le_shachet_ha_aretz&quot;)
 # and you and every living creature that is with you, for perpetual
 # generations:&quot;
 m.step(&quot;Gen.9.12&quot;)
-# ‹וַיֹּאמֶר אֱלֹהִים זֹאת אוֹת־הַבְּרִית› event: speak — agent God; theme
-# this-sign-of-the-brit
+# ‹וַיֹּאמֶר אֱלֹהִים זֹאת אוֹת־הַבְּרִית› (“and-He-said God this sign-of
+# the-covenant”) — event: speak — agent God; theme this-sign-of-the-brit
 m.event(&quot;speak&quot;, agent=&quot;elohim&quot;, themes=[&quot;zot_ot_ha_brit&quot;])
-# ‹אֲשֶׁר־אֲנִי נֹתֵן בֵּינִי וּבֵינֵיכֶם … לְדֹרֹת עוֹלָם› fact holds:
-# I-giving-beini-and-veineikhem-to-generations-of-everlasting
+# ‹אֲשֶׁר־אֲנִי נֹתֵן בֵּינִי וּבֵינֵיכֶם … לְדֹרֹת עוֹלָם› (“which I giving
+# between-Me and-between-you … for-generations-of everlasting”) — fact
+# holds: I-giving-beini-and-veineikhem-to-generations-of-everlasting
 m.fact(&quot;ani_noten_beini_u_veineikhem_le_dorot_olam&quot;)
 
 # -------------------------- Gen.9.13 · MY_BOW_IN_THE_CLOUD -----------------
@@ -665,7 +674,8 @@ m.fact(&quot;ani_noten_beini_u_veineikhem_le_dorot_olam&quot;)
 # &quot;I have set My bow in the cloud, and it shall be for a token of a covenant
 # between Me and the earth.&quot;
 m.step(&quot;Gen.9.13&quot;)
-# ‹אֶת־קַשְׁתִּי נָתַתִּי בֶּעָנָן וְהָיְתָה לְאוֹת בְּרִית› fact holds:
+# ‹אֶת־קַשְׁתִּי נָתַתִּי בֶּעָנָן וְהָיְתָה לְאוֹת בְּרִית› (“obj-marker
+# My-bow I-have-set in-the-cloud and-be for-a-sign covenant”) — fact holds:
 # obj-marker·et-qashti-I-have-set-in-cloud; and-haytah-to-sign-of-brit-
 # beini-and-vein-the-earth
 m.fact(&quot;et_qashti_natati_be_anan&quot;,
@@ -676,7 +686,8 @@ m.fact(&quot;et_qashti_natati_be_anan&quot;,
 # &quot;And it shall come to pass, when I bring clouds over the earth, and the
 # bow is seen in the cloud,&quot;
 m.step(&quot;Gen.9.14&quot;)
-# ‹וְהָיָה בְּעַנְנִי עָנָן … וְנִרְאֲתָה הַקֶּשֶׁת … וְזָכַרְתִּי› standing
+# ‹וְהָיָה בְּעַנְנִי עָנָן … וְנִרְאֲתָה הַקֶּשֶׁת … וְזָכַרְתִּי› (“and-be
+# when-I-cloud-up cloud … and-is-seen the-bow … and-mark”) — standing
 # handler — if in-anni-cloud-and-nireatah-the-bow then and-I-will-remember-
 # obj-marker·et-My-covenant
 m.handler(&quot;be_anni_anan_ve_nireatah_ha_qeshet&quot;,
@@ -690,9 +701,11 @@ m.handler(&quot;be_anni_anan_ve_nireatah_ha_qeshet&quot;,
 # living creature of all flesh; and the waters shall no more become a flood
 # to destroy all flesh.&quot;
 m.step(&quot;Gen.9.15&quot;)
-# ‹וְזָכַרְתִּי אֶת־בְּרִיתִי … וְלֹא־יִהְיֶה עוֹד הַמַּיִם לְמַבּוּל› fact
-# holds: and-I-will-remember-obj-marker·et-My-covenant-beini-and-veineikhem;
-# and-not-yihyeh-still/again-the-waters-to-deluge
+# ‹וְזָכַרְתִּי אֶת־בְּרִיתִי … וְלֹא־יִהְיֶה עוֹד הַמַּיִם לְמַבּוּל›
+# (“and-I-will-remember obj-marker My-covenant … and-not be still/again the-
+# waters into-a-deluge”) — fact holds: and-I-will-remember-obj-marker·et-My-
+# covenant-beini-and-veineikhem; and-not-yihyeh-still/again-the-waters-to-
+# deluge
 m.fact(&quot;ve_zakharti_et_briti_beini_u_veineikhem&quot;,
        &quot;ve_lo_yihyeh_od_ha_mayim_le_mabul&quot;)
 
@@ -704,7 +717,9 @@ m.fact(&quot;ve_zakharti_et_briti_beini_u_veineikhem&quot;,
 # all flesh that is upon the earth.&#x27;&quot;
 m.step(&quot;Gen.9.16&quot;)
 # ‹וּרְאִיתִיהָ לִזְכֹּר בְּרִית עוֹלָם בֵּין אֱלֹהִים וּבֵין כָּל־נֶפֶשׁ
-# חַיָּה› fact holds: and-reitiha-to-me-zekor-brit-everlasting
+# חַיָּה› (“and-I-will-see-it to-remember covenant everlasting between God
+# and-between all living-soul living”) — fact holds: and-reitiha-to-me-
+# zekor-brit-everlasting
 m.fact(&quot;u_reitiha_li_zekor_brit_olam&quot;)
 
 # -------------------------- Gen.9.17 · THE_SEAL_I_HAVE_ESTABLISHED ---------
@@ -713,17 +728,19 @@ m.fact(&quot;u_reitiha_li_zekor_brit_olam&quot;)
 # &quot;And God said unto Noah: &#x27;This is the token of the covenant which I have
 # established between Me and all flesh that is upon the earth.&#x27;&quot;
 m.step(&quot;Gen.9.17&quot;)
-# ‹וַיֹּאמֶר אֱלֹהִים אֶל־נֹחַ› event: speak — agent God; theme to-Noach
+# ‹וַיֹּאמֶר אֱלֹהִים אֶל־נֹחַ› (“and-He-said God to Noah”) — event: speak —
+# agent God; theme to-Noach
 m.event(&quot;speak&quot;, agent=&quot;elohim&quot;, themes=[&quot;el_noach&quot;])
-# ‹זֹאת אוֹת־הַבְּרִית אֲשֶׁר הֲקִמֹתִי› fact holds: this-sign-of-the-brit-
-# which-I-will-establish
+# ‹זֹאת אוֹת־הַבְּרִית אֲשֶׁר הֲקִמֹתִי› (“this sign-of the-covenant which
+# I-have-established”) — fact holds: this-sign-of-the-brit-which-I-will-
+# establish
 m.fact(&quot;zot_ot_ha_brit_asher_hakimoti&quot;)
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == &quot;__main__&quot;:
     m.report()
     assert m.created_set() == set()
-    assert m.presupposed_set() == {&#x27;tevah&#x27;, &#x27;banav&#x27;, &#x27;noach&#x27;}
+    assert m.presupposed_set() == {&#x27;banav&#x27;, &#x27;noach&#x27;, &#x27;tevah&#x27;}
     assert m.REGISTRY[&quot;names&quot;] == {}
     assert m.REGISTRY[&quot;writes&quot;] == 0
     assert m.tests_list() == []
@@ -737,4 +754,4 @@ if __name__ == &quot;__main__&quot;:
     assert len(m.EVENTS) == 4
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">FROZEN 2026-08-03 (persistent derivation agent; freeze-after-review by the main loop — NO agent freeze; fourth unit under the PIPELINE + DEBUT-MAP process): twenty-third-unit candidate — THE COVENANT AND THE BOW; thirteenth extension-free derivation candidate in a row. One covenant in three speech-acts (the machine&#x27;s only three events), every call precedent-matched with encodings quoted: the ASPECT-LADDER as facts in three grammars (participle TIR-031 per gen_17&#x27;s anokhi-mamtir; weqatal TIR-029 per gen_16&#x27;s OWN 6:18 encoding of the same verb — re-sounded plural here; closing perfect) — the establishment never takes a narrative deed-verb; BRIT tokens 2-8 of its first eight all in-span; KARAT (&#x27;cut&#x27;) born NEGATED — the covenant-cutting verb&#x27;s Torah debut refuses a cutting-off [crown]; the public never-again pair as INVARIANT x2 (gen_20&#x27;s interior pledges externalized, delta named) with the decree&#x27;s destroy-verb quoted inside; the war-bow (all later tokens weaponry) hung in the cloud (whose next tokens are the pillar of cloud) — held as FACTS on the Cain-mark precedent, ASSIGN and INSTALL declined; the weather-wired memory-duty as HANDLER (gen_12&#x27;s class; the letter&#x27;s own when-then chain crossing the 9:14/15 break); ZAKHAR tokens 2-3 landing frozen gen_19&#x27;s prediction; the third-person Elohim clause held as the letter&#x27;s strangest turn; the repetition-table (brit x7, bein x12) as the letter&#x27;s own structure. Onkelos seats the Memra in God&#x27;s place five times, keeps the self-pledged remembering active against its 8:1 precedent, keeps MY-bow, loses the cut-play — dual-track. Machine state: t0 empty, zero installs (+3 presupposed), zero writes, zero queue traffic, zero tests, three events, two invariants, one handler, nine facts, three read-flags — the counter-decree completed, at rest.</div><p class='meta'>Rendered 2026-08-08 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">FROZEN 2026-08-03 (persistent derivation agent; freeze-after-review by the main loop — NO agent freeze; fourth unit under the PIPELINE + DEBUT-MAP process): twenty-third-unit candidate — THE COVENANT AND THE BOW; thirteenth extension-free derivation candidate in a row. One covenant in three speech-acts (the machine&#x27;s only three events), every call precedent-matched with encodings quoted: the ASPECT-LADDER as facts in three grammars (participle TIR-031 per gen_17&#x27;s anokhi-mamtir; weqatal TIR-029 per gen_16&#x27;s OWN 6:18 encoding of the same verb — re-sounded plural here; closing perfect) — the establishment never takes a narrative deed-verb; BRIT tokens 2-8 of its first eight all in-span; KARAT (&#x27;cut&#x27;) born NEGATED — the covenant-cutting verb&#x27;s Torah debut refuses a cutting-off [crown]; the public never-again pair as INVARIANT x2 (gen_20&#x27;s interior pledges externalized, delta named) with the decree&#x27;s destroy-verb quoted inside; the war-bow (all later tokens weaponry) hung in the cloud (whose next tokens are the pillar of cloud) — held as FACTS on the Cain-mark precedent, ASSIGN and INSTALL declined; the weather-wired memory-duty as HANDLER (gen_12&#x27;s class; the letter&#x27;s own when-then chain crossing the 9:14/15 break); ZAKHAR tokens 2-3 landing frozen gen_19&#x27;s prediction; the third-person Elohim clause held as the letter&#x27;s strangest turn; the repetition-table (brit x7, bein x12) as the letter&#x27;s own structure. Onkelos seats the Memra in God&#x27;s place five times, keeps the self-pledged remembering active against its 8:1 precedent, keeps MY-bow, loses the cut-play — dual-track. Machine state: t0 empty, zero installs (+3 presupposed), zero writes, zero queue traffic, zero tests, three events, two invariants, one handler, nine facts, three read-flags — the counter-decree completed, at rest.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

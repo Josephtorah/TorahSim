@@ -19,8 +19,9 @@ m = Machine("gen_52_send_me_speckled_wage_rods")
 # "[EN-AID] And it was, when Rachel had borne Joseph, that Jacob said to
 # Laban: Send me away, that I may go to my own place and to my land."
 m.step("Gen.30.25")
-# ‹שַׁלְּחֵנִי וְאֵלְכָה אֶל־מְקוֹמִי וּלְאַרְצִי› yaaqov speaks a demand —
-# LET: shalcheni(lavan)
+# ‹שַׁלְּחֵנִי וְאֵלְכָה אֶל־מְקוֹמִי וּלְאַרְצִי› (“send-me/my and-go to
+# place-me/my and-to-earth-me/my”) — Jacob speaks a demand — LET:
+# shalcheni(Laban)
 m.declare("yaaqov", "LET",
           "shalcheni(lavan)")
 
@@ -30,8 +31,9 @@ m.declare("yaaqov", "LET",
 # "[EN-AID] Give my wives and my children, for whom I have served you, and
 # let me go; for you know my service which I have served you."
 m.step("Gen.30.26")
-# ‹תְּנָה אֶת־נָשַׁי וְאֶת־יְלָדַי› yaaqov speaks a demand — LET: tena-
-# nashai-viladai(lavan)
+# ‹תְּנָה אֶת־נָשַׁי וְאֶת־יְלָדַי› (“set-ward obj-marker woman-me/my and-
+# obj-marker child-me/my”) — Jacob speaks a demand — LET: tena-nashai-
+# viladai(Laban)
 m.declare("yaaqov", "LET",
           "tena_nashai_viladai(lavan)")
 
@@ -41,16 +43,17 @@ m.declare("yaaqov", "LET",
 # "[EN-AID] And Laban said to him: If now I have found favor in your eyes —
 # I have divined that YHWH has blessed me for your sake."
 m.step("Gen.30.27")
-# ‹נִחַשְׁתִּי וַיְבָרֲכֵנִי יְהוָה בִּגְלָלֶךָ› fact holds: berakh-the-
-# LORD-biglal-yaaqov(lavan)
+# ‹נִחַשְׁתִּי וַיְבָרֲכֵנִי יְהוָה בִּגְלָלֶךָ› (“hiss and-bless-me/my YHWH
+# in-circumstance-you/your”) — fact holds: berakh-the-LORD-biglal-
+# Jacob(Laban)
 m.fact("berakh_YHWH_biglal_yaaqov(lavan)")
 
 # -------------------------- Gen.30.28 · THE_WAGE_DESIGNATION_DEMAND --------
 # וַיֹּאמַר נָקְבָה שְׂכָרְךָ עָלַי וְאֶתֵּנָה
 # "[EN-AID] And he said: Designate your wage upon me, and I will give it."
 m.step("Gen.30.28")
-# ‹נָקְבָה שְׂכָרְךָ עָלַי וְאֶתֵּנָה› lavan speaks a demand — LET: naqva-
-# sekhar(yaaqov)
+# ‹נָקְבָה שְׂכָרְךָ עָלַי וְאֶתֵּנָה› (“puncture-ward wage-you/your over-
+# me/my and-set”) — Laban speaks a demand — LET: naqva-sekhar(Jacob)
 m.declare("lavan", "LET",
           "naqva_sekhar(yaaqov)")
 
@@ -60,8 +63,8 @@ m.declare("lavan", "LET",
 # "[EN-AID] And he said to him: You know how I have served you, and how your
 # livestock has fared with me."
 m.step("Gen.30.29")
-# ‹אַתָּה יָדַעְתָּ אֵת אֲשֶׁר עֲבַדְתִּיךָ› fact holds: yadata-
-# avodati(lavan)
+# ‹אַתָּה יָדַעְתָּ אֵת אֲשֶׁר עֲבַדְתִּיךָ› (“you know obj-marker which
+# work/serve-you/your”) — fact holds: know-avodati(Laban)
 m.fact("yadata_avodati(lavan)")
 
 # -------------------------- Gen.30.30 · THE_BREAK_OUT_AUDIT ----------------
@@ -71,8 +74,9 @@ m.fact("yadata_avodati(lavan)")
 # and YHWH has blessed you at my foot; and now, when shall I do for my own
 # house also?"
 m.step("Gen.30.30")
-# ‹וַיִּפְרֹץ לָרֹב וַיְבָרֶךְ יְהוָה אֹתְךָ לְרַגְלִי› fact holds: paratz-
-# to-rov-to-ragli(miqne-lavan)
+# ‹וַיִּפְרֹץ לָרֹב וַיְבָרֶךְ יְהוָה אֹתְךָ לְרַגְלִי› (“and-break-out to-
+# abundance and-bless YHWH obj-marker-you/your to-foot-me/my”) — fact holds:
+# paratz-to-abundance-to-ragli(miqne-Laban)
 m.fact("paratz_la_rov_le_ragli(miqne_lavan)")
 
 # -------------------------- Gen.30.31 · THE_NOTHING_WAGE -------------------
@@ -82,7 +86,8 @@ m.fact("paratz_la_rov_le_ragli(miqne_lavan)")
 # not give me anything. If you will do this thing for me, I will again feed
 # and keep your flock:"
 m.step("Gen.30.31")
-# ‹לֹא־תִתֶּן־לִי מְאוּמָה› fact holds: not-titen-to-me-meuma(exchange)
+# ‹לֹא־תִתֶּן־לִי מְאוּמָה› (“not set to-me/my speck”) — fact holds: not-
+# set-to-me-speck(exchange)
 m.fact("lo_titen_li_meuma(exchange)")
 
 # -------------------------- Gen.30.32 · THE_WAGE_NAMED_POP -----------------
@@ -92,8 +97,8 @@ m.fact("lo_titen_li_meuma(exchange)")
 # every speckled and spotted lamb, and every dark lamb among the sheep, and
 # the spotted and speckled among the goats; and that shall be my wage."
 m.step("Gen.30.32")
-# ‹וְהָיָה שְׂכָרִי› demand settled (popped from the queue): naqva-
-# sekhar(yaaqov)
+# ‹וְהָיָה שְׂכָרִי› (“and-be wage-me/my”) — demand settled (popped from the
+# queue): naqva-sekhar(Jacob)
 m.result("naqva_sekhar(yaaqov)", tmark="t3")
 
 # -------------------------- Gen.30.33 · THE_RIGHTEOUSNESS_CLAUSE -----------
@@ -104,8 +109,8 @@ m.result("naqva_sekhar(yaaqov)", tmark="t3")
 # you come concerning my wage before you: every one that is not speckled and
 # spotted among the goats and dark among the sheep, it is stolen with me."
 m.step("Gen.30.33")
-# ‹וְעָנְתָה־בִּי צִדְקָתִי בְּיוֹם מָחָר› fact holds: tzedaqa-ana-in-day-
-# machar(yaaqov)
+# ‹וְעָנְתָה־בִּי צִדְקָתִי בְּיוֹם מָחָר› (“and-eye in-me/my rightness-
+# me/my in-day deferred”) — fact holds: tzedaqa-ana-in-day-deferred(Jacob)
 m.fact("tzedaqa_ana_be_yom_machar(yaaqov)")
 
 # -------------------------- Gen.30.34 · THE_YEHI_ACCEPTANCE ----------------
@@ -113,7 +118,8 @@ m.fact("tzedaqa_ana_be_yom_machar(yaaqov)")
 # "[EN-AID] And Laban said: Behold, would that it be according to your
 # word."
 m.step("Gen.30.34")
-# ‹לוּ יְהִי כִדְבָרֶךָ› fact holds: lu-yehi-khi-devarekha(lavan)
+# ‹לוּ יְהִי כִדְבָרֶךָ› (“conditional-particle be like-word/thing-
+# you/your”) — fact holds: conditional-particle-be-khi-devarekha(Laban)
 m.fact("lu_yehi_khi_devarekha(lavan)")
 
 # -------------------------- Gen.30.35 · THE_SAME_DAY_REMOVAL ---------------
@@ -125,8 +131,8 @@ m.fact("lu_yehi_khi_devarekha(lavan)")
 # and every dark one among the sheep, and gave them into the hand of his
 # sons."
 m.step("Gen.30.35")
-# ‹וַיָּסַר בַּיּוֹם הַהוּא› fact holds: hesir-lavan-in-the-day-the-
-# that(the-aqudim)
+# ‹וַיָּסַר בַּיּוֹם הַהוּא› (“and-turn-aside in-day that”) — fact holds:
+# hesir-Laban-in-the-day-the-he/it(the-striped)
 m.fact("hesir_lavan_ba_yom_ha_hu(ha_aqudim)")
 
 # -------------------------- Gen.30.36 · THE_THREE_DAYS_GAP -----------------
@@ -135,8 +141,9 @@ m.fact("hesir_lavan_ba_yom_ha_hu(ha_aqudim)")
 # "[EN-AID] And he set a way of three days between himself and Jacob; and
 # Jacob was shepherding the remnant of Laban's flock."
 m.step("Gen.30.36")
-# ‹וַיָּשֶׂם דֶּרֶךְ שְׁלֹשֶׁת יָמִים בֵּינוֹ וּבֵין יַעֲקֹב› fact holds:
-# derekh-sheloshet-seas(ben-lavan-and-ven-yaaqov)
+# ‹וַיָּשֶׂם דֶּרֶךְ שְׁלֹשֶׁת יָמִים בֵּינוֹ וּבֵין יַעֲקֹב› (“and-put/set
+# way/road three day between-him/its and-between Jacob”) — fact holds:
+# way/road-three-day(ben-Laban-and-between-Jacob)
 m.fact("derekh_sheloshet_yamim(ben_lavan_u_ven_yaaqov)")
 
 # -------------------------- Gen.30.37 · THE_WHITE_PEELED -------------------
@@ -146,8 +153,9 @@ m.fact("derekh_sheloshet_yamim(ben_lavan_u_ven_yaaqov)")
 # plane, and peeled white peelings in them, laying bare the white which was
 # on the rods."
 m.step("Gen.30.37")
-# ‹וַיְפַצֵּל בָּהֵן פְּצָלוֹת לְבָנוֹת מַחְשֹׂף הַלָּבָן› fact holds:
-# pitzel-machsof-the-lavan(maqlot)
+# ‹וַיְפַצֵּל בָּהֵן פְּצָלוֹת לְבָנוֹת מַחְשֹׂף הַלָּבָן› (“and-peel in-
+# them/their peeling white peeling the-white”) — fact holds: peel-peeling-
+# the-Laban(shoot)
 m.fact("pitzel_machsof_ha_lavan(maqlot)")
 
 # -------------------------- Gen.30.38 · THE_TROUGH_SIGHTLINE ---------------
@@ -159,7 +167,9 @@ m.fact("pitzel_machsof_ha_lavan(maqlot)")
 # they came to heat when they came to drink."
 m.step("Gen.30.38")
 # ‹וַיַּצֵּג אֶת־הַמַּקְלוֹת אֲשֶׁר פִּצֵּל בָּרֳהָטִים בְּשִׁקֲתוֹת
-# הַמָּיִם› fact holds: maqlot-in-the-rehatim(to-nokhach-the-tzon)
+# הַמָּיִם› (“and-place-permanently obj-marker the-shoot which peel in-
+# channel in-trough the-waters”) — fact holds: shoot-in-the-rehatim(to-
+# front-part-the-flock)
 m.fact("maqlot_ba_rehatim(le_nokhach_ha_tzon)")
 
 # -------------------------- Gen.30.39 · THE_FLOCK_CONCEIVES_STRIPED --------
@@ -168,8 +178,9 @@ m.fact("maqlot_ba_rehatim(le_nokhach_ha_tzon)")
 # "[EN-AID] And the flock conceived-heat at the rods; and the flock bore
 # striped, speckled, and spotted."
 m.step("Gen.30.39")
-# ‹וַתֵּלַדְןָ הַצֹּאן עֲקֻדִּים נְקֻדִּים וּטְלֻאִים› fact holds: teladna-
-# aqudim-nequdim-teluim(the-tzon)
+# ‹וַתֵּלַדְןָ הַצֹּאן עֲקֻדִּים נְקֻדִּים וּטְלֻאִים› (“and-bear-young the-
+# flock striped spotted and-cover-with-pieces”) — fact holds: bear-young-
+# striped-spotted-cover-with-pieces(the-flock)
 m.fact("teladna_aqudim_nequdim_teluim(ha_tzon)")
 
 # -------------------------- Gen.30.40 · THE_SEPARATION ---------------------
@@ -180,7 +191,8 @@ m.fact("teladna_aqudim_nequdim_teluim(ha_tzon)")
 # toward the striped and every dark one in Laban's flock; and he set himself
 # droves alone, and did not set them with Laban's flock."
 m.step("Gen.30.40")
-# ‹וְהַכְּשָׂבִים הִפְרִיד יַעֲקֹב› fact holds: hifrid-adarim-alone(yaaqov)
+# ‹וְהַכְּשָׂבִים הִפְרִיד יַעֲקֹב› (“and-the-young-sheep break-through
+# Jacob”) — fact holds: break-through-arrangement-alone(Jacob)
 m.fact("hifrid_adarim_levado(yaaqov)")
 
 # -------------------------- Gen.30.41 · THE_STRONG_ONES --------------------
@@ -190,8 +202,8 @@ m.fact("hifrid_adarim_levado(yaaqov)")
 # that Jacob set the rods before the eyes of the flock in the runnels, to
 # make them conceive among the rods."
 m.step("Gen.30.41")
-# ‹וְשָׂם יַעֲקֹב אֶת־הַמַּקְלוֹת› fact holds: maqlot-to-ene-the-
-# mequsharot(yaaqov)
+# ‹וְשָׂם יַעֲקֹב אֶת־הַמַּקְלוֹת› (“and-put/set Jacob obj-marker the-
+# shoot”) — fact holds: shoot-to-eye-the-tie(Jacob)
 m.fact("maqlot_le_ene_ha_mequsharot(yaaqov)")
 
 # -------------------------- Gen.30.42 · THE_SORT ---------------------------
@@ -200,8 +212,9 @@ m.fact("maqlot_le_ene_ha_mequsharot(yaaqov)")
 # "[EN-AID] And when the flock were feeble, he did not set them; and the
 # feeble were Laban's, and the bound-strong Jacob's."
 m.step("Gen.30.42")
-# ‹וְהָיָה הָעֲטֻפִים לְלָבָן וְהַקְּשֻׁרִים לְיַעֲקֹב› fact holds: atufim-
-# to-lavan-qeshurim-to-yaaqov(the-tzon)
+# ‹וְהָיָה הָעֲטֻפִים לְלָבָן וְהַקְּשֻׁרִים לְיַעֲקֹב› (“and-be the-shroud
+# to-Laban and-the-tie to-Jacob”) — fact holds: shroud-to-Laban-tie-to-
+# Jacob(the-flock)
 m.fact("atufim_le_lavan_qeshurim_le_yaaqov(ha_tzon)")
 
 # -------------------------- Gen.30.43 · THE_BREAK_OUT_DOUBLED --------------
@@ -210,7 +223,8 @@ m.fact("atufim_le_lavan_qeshurim_le_yaaqov(ha_tzon)")
 # "[EN-AID] And the man broke out exceedingly, exceedingly; and he had many
 # flocks, and maidservants and menservants, and camels and donkeys."
 m.step("Gen.30.43")
-# ‹וַיִּפְרֹץ הָאִישׁ מְאֹד מְאֹד› fact holds: paratz-very-very(the-man)
+# ‹וַיִּפְרֹץ הָאִישׁ מְאֹד מְאֹד› (“and-break-out the-man very very”) —
+# fact holds: paratz-very-very(the-man)
 m.fact("paratz_meod_meod(ha_ish)")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

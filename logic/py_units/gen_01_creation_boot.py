@@ -19,8 +19,8 @@ m = Machine("gen_01_creation_boot")
 m.step("Gen.1.1")
 # clock anchored: t0 := beginning
 m.time_anchor("reshit")
-# ‹אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ› event: create — agent God; theme heavens,
-# earth
+# ‹אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ› (“obj-marker the-heavens and-obj-marker
+# the-earth”) — event: create — agent God; theme heavens, earth
 m.event("create", agent="Elohim", themes=["shamayim", "aretz"])
 # the world gains: heavens, earth
 m.install("shamayim", "aretz")
@@ -34,7 +34,8 @@ m.step("Gen.1.2")
 # fact holds: formless(earth) ∧ void(earth); over(darkness, face(deep))
 m.fact("tohu(aretz) ∧ vohu(aretz)",
        "over(choshekh, face(tehom))")
-# ‹מְרַחֶפֶת› standing constraint: hover(spirit-God, face(waters))
+# ‹מְרַחֶפֶת› (“hovering”) — standing constraint: hover(spirit-God,
+# face(waters))
 m.invariant("hover(ruach-Elohim, face(mayim))")
 # note: zero events in this verse
 m.note_zero_events()
@@ -46,12 +47,14 @@ m.presupposed("choshekh", "tehom", "mayim", "ruach")
 # וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר וַיְהִי־אוֹר
 # "[EN-AID] God said: let there be light — and there was light."
 m.step("Gen.1.3")
-# ‹יְהִי אוֹר› God speaks a demand — LET: exists(light)
+# ‹יְהִי אוֹר› (“let-there-be light”) — God speaks a demand — LET:
+# exists(light)
 m.declare("Elohim", "LET",
           "exists(or)")
 # open question logged: exists(light)
 m.triple("exists(or)")
-# ‹וַיְהִי־אוֹר› demand settled (popped from the queue): exists(light)
+# ‹וַיְהִי־אוֹר› (“and-there-was light”) — demand settled (popped from the
+# queue): exists(light)
 m.result("exists(or)", tmark="t1")
 
 # -------------------------- Gen.1.4 · TEST_AND_PARTITION -------------------
@@ -60,9 +63,10 @@ m.result("exists(or)", tmark="t1")
 # "[EN-AID] God saw the light, that it was good; and God divided the light
 # from the darkness."
 m.step("Gen.1.4")
-# ‹כִּי־טוֹב› test PASS — oracle-word good, on light
+# ‹כִּי־טוֹב› (“that good”) — test PASS — oracle-word good, on light
 m.test("PASS", "tov", "or")
-# ‹בֵּין הָאוֹר וּבֵין הַחֹשֶׁךְ› partition between light and darkness
+# ‹בֵּין הָאוֹר וּבֵין הַחֹשֶׁךְ› (“between the-light and-between the-
+# darkness”) — partition between light and darkness
 m.partition("or", "choshekh")
 
 # -------------------------- Gen.1.5 · NAME_AND_COMMIT ----------------------
@@ -71,18 +75,18 @@ m.partition("or", "choshekh")
 # "[EN-AID] God called the light Day and the darkness Night; evening,
 # morning — day one."
 m.step("Gen.1.5")
-# ‹לָאוֹר יוֹם … וְלַחֹשֶׁךְ … לָיְלָה› named: light := Day; darkness :=
-# Night
+# ‹לָאוֹר יוֹם … וְלַחֹשֶׁךְ … לָיְלָה› (“to-the-light Day … and-to-the-
+# darkness … Night”) — named: light := Day; darkness := Night
 m.name("or", "yom")
 m.name("choshekh", "layla")
-# ‹יוֹם אֶחָד› ledger: day 1 committed
+# ‹יוֹם אֶחָד› (“Day one”) — ledger: day 1 committed
 m.commit(1, label_form="cardinal", label_translit="yom echad")
 
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
-    assert m.created_set() == {'aretz', 'or', 'shamayim'}
-    assert m.presupposed_set() == {'mayim', 'ruach', 'tehom', 'choshekh'}
+    assert m.created_set() == {'aretz', 'shamayim', 'or'}
+    assert m.presupposed_set() == {'choshekh', 'ruach', 'mayim', 'tehom'}
     assert m.REGISTRY["names"] == {'or': 'yom', 'choshekh': 'layla'}
     assert m.REGISTRY["writes"] == 2
     assert m.tests_list() == [('PASS', 'tov', 'or')]

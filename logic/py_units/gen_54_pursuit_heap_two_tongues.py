@@ -17,8 +17,9 @@ m = Machine("gen_54_pursuit_heap_two_tongues")
 # וַיֻּגַּד לְלָבָן בַּיּוֹם הַשְּׁלִישִׁי כִּי בָרַח יַעֲקֹב
 # "[EN-AID] And it was told to Laban on the third day that Jacob had fled."
 m.step("Gen.31.22")
-# ‹וַיֻּגַּד לְלָבָן בַּיּוֹם הַשְּׁלִישִׁי כִּי בָרַח יַעֲקֹב› fact holds:
-# hugad-to-lavan-when-varach-yaaqov(day-shelishi)
+# ‹וַיֻּגַּד לְלָבָן בַּיּוֹם הַשְּׁלִישִׁי כִּי בָרַח יַעֲקֹב› (“and-tell
+# to-Laban in-day the-third that bolt Jacob”) — fact holds: hugad-to-Laban-
+# that-bolt-Jacob(day-third)
 m.fact("hugad_le_lavan_ki_varach_yaaqov(yom_shelishi)")
 
 # -------------------------- Gen.31.23 · THE_SEVEN_DAY_PURSUIT --------------
@@ -27,8 +28,9 @@ m.fact("hugad_le_lavan_ki_varach_yaaqov(yom_shelishi)")
 # "[EN-AID] And he took his kinsmen with him and pursued after him a seven
 # days' journey, and overtook him in the hill-country of Gilead."
 m.step("Gen.31.23")
-# ‹וַיִּרְדֹּף אַחֲרָיו דֶּרֶךְ שִׁבְעַת יָמִים› fact holds: radaf-and-
-# yadbeq(lavan, echav, seven-seas, har-the-gilad)
+# ‹וַיִּרְדֹּף אַחֲרָיו דֶּרֶךְ שִׁבְעַת יָמִים› (“and-run-after-gone-by)
+# after-him/its way/road seven day”) — fact holds: radaf-and-impinge(Laban,
+# echav, seven-day, mountain-the-Gilead)
 m.fact("radaf_va_yadbeq(lavan, echav, shivat_yamim, har_ha_gilad)")
 
 # -------------------------- Gen.31.24 · THE_DREAM_GUARD --------------------
@@ -37,8 +39,9 @@ m.fact("radaf_va_yadbeq(lavan, echav, shivat_yamim, har_ha_gilad)")
 # "[EN-AID] And God came to Laban the Aramean in a dream of the night and
 # said to him: Guard yourself, lest you speak with Jacob from good to bad."
 m.step("Gen.31.24")
-# ‹הִשָּׁמֶר לְךָ פֶּן־תְּדַבֵּר עִם־יַעֲקֹב מִטּוֹב עַד־רָע› God speaks a
-# demand — LET: hishamer(lavan, lest-tedaber-if-yaaqov-from-good-until-evil)
+# ‹הִשָּׁמֶר לְךָ פֶּן־תְּדַבֵּר עִם־יַעֲקֹב מִטּוֹב עַד־רָע› (“keep/guard
+# to-you/your lest speak with Jacob from-good until bad”) — God speaks a
+# demand — LET: keep/guard(Laban, lest-speak-with-Jacob-from-good-until-bad)
 m.declare("Elohim", "LET",
           "hishamer(lavan, pen_tedaber_im_yaaqov_mi_tov_ad_ra)")
 
@@ -49,8 +52,8 @@ m.declare("Elohim", "LET",
 # in the mountain, and Laban with his kinsmen pitched in the hill-country of
 # Gilead."
 m.step("Gen.31.25")
-# ‹וַיַּשֵּׂג לָבָן אֶת־יַעֲקֹב› fact holds: taqa-ohel-mul-ohel(yaaqov,
-# lavan, har-the-gilad)
+# ‹וַיַּשֵּׂג לָבָן אֶת־יַעֲקֹב› (“and-reach Laban obj-marker Jacob”) — fact
+# holds: clatter-tent-mul-tent(Jacob, Laban, mountain-the-Gilead)
 m.fact("taqa_ohel_mul_ohel(yaaqov, lavan, har_ha_gilad)")
 
 # -------------------------- Gen.31.26 · THE_HEART_THEFT_CHARGE -------------
@@ -59,8 +62,8 @@ m.fact("taqa_ohel_mul_ohel(yaaqov, lavan, har_ha_gilad)")
 # "[EN-AID] And Laban said to Jacob: What have you done, that you stole my
 # heart and led away my daughters like captives of the sword?"
 m.step("Gen.31.26")
-# ‹מֶה עָשִׂיתָ וַתִּגְנֹב אֶת־לְבָבִי› fact holds: from-asita-ganavta-
-# levavi(lavan, divre-riv)
+# ‹מֶה עָשִׂיתָ וַתִּגְנֹב אֶת־לְבָבִי› (“what make and-steal obj-marker
+# heart-me/my”) — fact holds: what-make-steal-levavi(Laban, divre-riv)
 m.fact("me_asita_ganavta_levavi(lavan, divre_riv)")
 
 # -------------------------- Gen.31.27 · THE_UNPLAYED_BAND ------------------
@@ -70,8 +73,9 @@ m.fact("me_asita_ganavta_levavi(lavan, divre_riv)")
 # tell me — I would have sent you away with joy and with songs, with timbrel
 # and with lyre —"
 m.step("Gen.31.27")
-# ‹לָמָּה נַחְבֵּאתָ לִבְרֹחַ וַתִּגְנֹב אֹתִי› fact holds: nachbeta-and-
-# ashalechakha-in-simcha(lavan, irrealis)
+# ‹לָמָּה נַחְבֵּאתָ לִבְרֹחַ וַתִּגְנֹב אֹתִי› (“to-what secrete to-bolt
+# and-steal obj-marker-me/my”) — fact holds: secrete-and-ashalechakha-in-
+# blithesomeness(Laban, irrealis)
 m.fact("nachbeta_va_ashalechakha_be_simcha(lavan, irrealis)")
 
 # -------------------------- Gen.31.28 · THE_DENIED_KISS --------------------
@@ -80,8 +84,9 @@ m.fact("nachbeta_va_ashalechakha_be_simcha(lavan, irrealis)")
 # "[EN-AID] And did not allow me to kiss my sons and my daughters? Now you
 # have done foolishly."
 m.step("Gen.31.28")
-# ‹וְלֹא נְטַשְׁתַּנִי לְנַשֵּׁק לְבָנַי וְלִבְנֹתָי› fact holds: not-
-# netashtani-to-nasheq(lavan, hiskalta-aso)
+# ‹וְלֹא נְטַשְׁתַּנִי לְנַשֵּׁק לְבָנַי וְלִבְנֹתָי› (“and-not pound-me/my
+# to-kiss to-son-me/my and-to-daughter-me/my”) — fact holds: not-netashtani-
+# to-kiss(Laban, be-silly-make)
 m.fact("lo_netashtani_le_nasheq(lavan, hiskalta_aso)")
 
 # -------------------------- Gen.31.29 · THE_POWER_AND_THE_RETELL -----------
@@ -91,8 +96,9 @@ m.fact("lo_netashtani_le_nasheq(lavan, hiskalta_aso)")
 # your father last night said to me: Guard yourself from speaking with Jacob
 # from good to bad."
 m.step("Gen.31.29")
-# ‹הִשָּׁמֶר לְךָ מִדַּבֵּר עִם־יַעֲקֹב מִטּוֹב עַד־רָע› fact holds: retell-
-# hishamer-emesh(lavan, letter-delta-from-daber)
+# ‹הִשָּׁמֶר לְךָ מִדַּבֵּר עִם־יַעֲקֹב מִטּוֹב עַד־רָע› (“keep/guard to-
+# you/your from-speak with Jacob from-good until bad”) — fact holds: retell-
+# keep/guard-yesterday(Laban, letter-delta-from-speak)
 m.fact("retell_hishamer_emesh(lavan, letter_delta_mi_daber)")
 
 # -------------------------- Gen.31.30 · THE_LONGING_AND_THE_GODS -----------
@@ -101,7 +107,8 @@ m.fact("retell_hishamer_emesh(lavan, letter_delta_mi_daber)")
 # "[EN-AID] And now, going you went because longing you longed for your
 # father's house — why did you steal my gods?"
 m.step("Gen.31.30")
-# ‹לָמָּה גָנַבְתָּ אֶת־אֱלֹהָי› fact holds: lama-ganavta-elohay(lavan)
+# ‹לָמָּה גָנַבְתָּ אֶת־אֱלֹהָי› (“to-what steal obj-marker God-me/my”) —
+# fact holds: lama-steal-obj-marker-elohay(Laban)
 m.fact("lama_ganavta_et_elohay(lavan)")
 
 # -------------------------- Gen.31.31 · THE_FEAR_ANSWER --------------------
@@ -110,7 +117,8 @@ m.fact("lama_ganavta_et_elohay(lavan)")
 # "[EN-AID] And Jacob answered and said to Laban: Because I was afraid, for
 # I said: Lest you tear your daughters away from me."
 m.step("Gen.31.31")
-# ‹כִּי יָרֵאתִי כִּי אָמַרְתִּי› fact holds: yareti-lest-tigzol(yaaqov)
+# ‹כִּי יָרֵאתִי כִּי אָמַרְתִּי› (“that fear that say”) — fact holds: fear-
+# lest-pluck-off(Jacob)
 m.fact("yareti_pen_tigzol(yaaqov)")
 
 # -------------------------- Gen.31.32 · THE_DEATH_OATH_AND_THE_WARRANT -----
@@ -120,15 +128,18 @@ m.fact("yareti_pen_tigzol(yaaqov)")
 # kinsmen, identify what of yours is with me and take it. And Jacob did not
 # know that Rachel had stolen them."
 m.step("Gen.31.32")
-# ‹עִם אֲשֶׁר תִּמְצָא אֶת־אֱלֹהֶיךָ לֹא יִחְיֶה› fact holds: if-timtza-not-
-# yichye(oath-content)
+# ‹עִם אֲשֶׁר תִּמְצָא אֶת־אֱלֹהֶיךָ לֹא יִחְיֶה› (“with which find obj-
+# marker God-you/your not live”) — fact holds: with-find-not-live(oath-
+# content)
 m.fact("im_timtza_lo_yichye(oath_content)")
-# ‹הַכֶּר־לְךָ מָה עִמָּדִי וְקַח־לָךְ› yaaqov speaks a demand — LET: haker-
-# and-qach(lavan, ma-with-me)
+# ‹הַכֶּר־לְךָ מָה עִמָּדִי וְקַח־לָךְ› (“scrutinize to-you/your what along-
+# with-me/my and-take to-you/your”) — Jacob speaks a demand — LET:
+# scrutinize-and-take(Laban, what-with-me)
 m.declare("yaaqov", "LET",
           "haker_ve_qach(lavan, ma_imadi)")
-# ‹וְלֹא־יָדַע יַעֲקֹב כִּי רָחֵל גְּנָבָתַם› fact holds: velo-yada-yaaqov-
-# when-rachel-genavatam(narrator)
+# ‹וְלֹא־יָדַע יַעֲקֹב כִּי רָחֵל גְּנָבָתַם› (“and-not know Jacob that
+# Rachel steal-them/their”) — fact holds: velo-know-Jacob-that-Rachel-
+# genavatam(narrator)
 m.fact("velo_yada_yaaqov_ki_rachel_genavatam(narrator)")
 
 # -------------------------- Gen.31.33 · THE_FOUR_TENTS ---------------------
@@ -138,7 +149,8 @@ m.fact("velo_yada_yaaqov_ki_rachel_genavatam(narrator)")
 # the tent of the two maidservants, and did not find; and he went out of
 # Leah's tent and came into Rachel's tent."
 m.step("Gen.31.33")
-# ‹וַיָּבֹא בְּאֹהֶל רָחֵל› fact holds: not-matza-rishon(lavan, arba-ohalim)
+# ‹וַיָּבֹא בְּאֹהֶל רָחֵל› (“and-come/bring in-tent Rachel”) — fact holds:
+# not-find-rishon(Laban, four-ohalim)
 m.fact("lo_matza_rishon(lavan, arba_ohalim)")
 
 # -------------------------- Gen.31.34 · THE_SITTING_ON_THE_GODS ------------
@@ -148,8 +160,9 @@ m.fact("lo_matza_rishon(lavan, arba_ohalim)")
 # saddle-cushion and sat upon them. And Laban felt through all the tent and
 # did not find."
 m.step("Gen.31.34")
-# ‹וְרָחֵל לָקְחָה אֶת־הַתְּרָפִים› fact holds: and-tesimem-and-teshev-
-# aleihem(rachel, the-terafim)
+# ‹וְרָחֵל לָקְחָה אֶת־הַתְּרָפִים› (“and-Rachel take obj-marker the-
+# Teraphim-a-family-idol”) — fact holds: and-tesimem-and-dwell/sit-
+# aleihem(Rachel, the-Teraphim-a-family-idol)
 m.fact("va_tesimem_va_teshev_aleihem(rachel, ha_terafim)")
 
 # -------------------------- Gen.31.35 · THE_WAY_OF_WOMEN_AND_THE_JUSSIVE ---
@@ -159,12 +172,12 @@ m.fact("va_tesimem_va_teshev_aleihem(rachel, ha_terafim)")
 # lord that I cannot rise before you, for the way of women is upon me. And
 # he searched and did not find the terafim."
 m.step("Gen.31.35")
-# ‹יִחַר בְּעֵינֵי אֲדֹנִי› rachel speaks a demand — LET-NOT: yichar(in-ene-
-# adoni)
+# ‹יִחַר בְּעֵינֵי אֲדֹנִי› (“glow in-eye lord-me/my”) — Rachel speaks a
+# demand — LET-NOT: glow(in-eye-adoni)
 m.declare("rachel", "LET-NOT",
           "yichar(be_ene_adoni)")
-# ‹וַיְחַפֵּשׂ וְלֹא מָצָא אֶת› fact holds: not-matza-the-terafim(lavan,
-# sof-chipus)
+# ‹וַיְחַפֵּשׂ וְלֹא מָצָא אֶת› (“and-seek and-not find obj-marker”) — fact
+# holds: not-find-obj-marker-the-Teraphim-a-family-idol(Laban, sof-chipus)
 m.fact("lo_matza_et_ha_terafim(lavan, sof_chipus)")
 
 # -------------------------- Gen.31.36 · THE_BURN_LANDS_WRONG ---------------
@@ -174,8 +187,8 @@ m.fact("lo_matza_et_ha_terafim(lavan, sof_chipus)")
 # answered and said to Laban: What is my transgression, what is my sin, that
 # you have hotly pursued after me?"
 m.step("Gen.31.36")
-# ‹וַיִּחַר לְיַעֲקֹב וַיָּרֶב בְּלָבָן› fact holds: and-yichar-to-
-# yaaqov(the-charon-in-the-enayim-acherot)
+# ‹וַיִּחַר לְיַעֲקֹב וַיָּרֶב בְּלָבָן› (“and-glow to-Jacob and-toss in-
+# Laban”) — fact holds: and-glow-to-Jacob(the-charon-in-the-enayim-acherot)
 m.fact("va_yichar_le_yaaqov(ha_charon_ba_enayim_acherot)")
 
 # -------------------------- Gen.31.37 · THE_TRIBUNAL_DEMAND ----------------
@@ -185,8 +198,9 @@ m.fact("va_yichar_le_yaaqov(ha_charon_ba_enayim_acherot)")
 # of all your house's vessels? Set it here before my kinsmen and your
 # kinsmen, and let them decide between the two of us."
 m.step("Gen.31.37")
-# ‹שִׂים כֹּה נֶגֶד אַחַי וְאַחֶיךָ› yaaqov speaks a demand — LET:
-# sim(lavan, ko-neged-achai-and-achekha)
+# ‹שִׂים כֹּה נֶגֶד אַחַי וְאַחֶיךָ› (“put/set like-this front brother-me/my
+# and-brother-you/your”) — Jacob speaks a demand — LET: put/set(Laban, this-
+# front-achai-and-achekha)
 m.declare("yaaqov", "LET",
           "sim(lavan, ko_neged_achai_ve_achekha)")
 
@@ -196,8 +210,8 @@ m.declare("yaaqov", "LET",
 # "[EN-AID] These twenty years I have been with you: your ewes and your she-
 # goats have not miscarried, and the rams of your flock I have not eaten."
 m.step("Gen.31.38")
-# ‹זֶה עֶשְׂרִים שָׁנָה אָנֹכִי עִמָּךְ› fact holds: esrim-shana-not-
-# shikelu(yaaqov, cheshbon)
+# ‹זֶה עֶשְׂרִים שָׁנָה אָנֹכִי עִמָּךְ› (“this twenty years with-you/your”)
+# — fact holds: twenty-years-not-miscarry(Jacob, cheshbon)
 m.fact("esrim_shana_lo_shikelu(yaaqov, cheshbon)")
 
 # -------------------------- Gen.31.39 · THE_SHEPHERD_LAW_SEED --------------
@@ -206,8 +220,8 @@ m.fact("esrim_shana_lo_shikelu(yaaqov, cheshbon)")
 # "[EN-AID] A torn animal I did not bring you — I bore its loss; from my
 # hand you would seek it, stolen by day or stolen by night."
 m.step("Gen.31.39")
-# ‹טְרֵפָה לֹא־הֵבֵאתִי אֵלֶיךָ› fact holds: terefa-anokhi-achatena(yaaqov,
-# cheshbon)
+# ‹טְרֵפָה לֹא־הֵבֵאתִי אֵלֶיךָ› (“prey not come/bring to-you/your”) — fact
+# holds: prey-anokhi-achatena(Jacob, cheshbon)
 m.fact("terefa_anokhi_achatena(yaaqov, cheshbon)")
 
 # -------------------------- Gen.31.40 · THE_HEAT_AND_THE_FROST -------------
@@ -216,8 +230,9 @@ m.fact("terefa_anokhi_achatena(yaaqov, cheshbon)")
 # "[EN-AID] I was: by day heat consumed me, and frost by night; and my sleep
 # fled from my eyes."
 m.step("Gen.31.40")
-# ‹הָיִיתִי בַיּוֹם אֲכָלַנִי חֹרֶב וְקֶרַח בַּלָּיְלָה› fact holds: chorev-
-# qerach-nadad-shena(yaaqov, cheshbon)
+# ‹הָיִיתִי בַיּוֹם אֲכָלַנִי חֹרֶב וְקֶרַח בַּלָּיְלָה› (“be in-day eat-
+# me/my drought and-ice in-night”) — fact holds: drought-ice-nadad-
+# shena(Jacob, cheshbon)
 m.fact("chorev_qerach_nadad_shena(yaaqov, cheshbon)")
 
 # -------------------------- Gen.31.41 · THE_TWENTY_YEARS_LEDGER ------------
@@ -228,8 +243,9 @@ m.fact("chorev_qerach_nadad_shena(yaaqov, cheshbon)")
 # fourteen years for your two daughters and six years for your flock, and
 # you changed my wages ten countings."
 m.step("Gen.31.41")
-# ‹וַתַּחֲלֵף אֶת־מַשְׂכֻּרְתִּי עֲשֶׂרֶת מֹנִים› fact holds: arba-esre-and-
-# shesh-aseret-monim(yaaqov, cheshbon)
+# ‹וַתַּחֲלֵף אֶת־מַשְׂכֻּרְתִּי עֲשֶׂרֶת מֹנִים› (“and-slide-by obj-marker
+# wages-me/my ten something-weighed-out”) — fact holds: four--teen-and-six-
+# ten-something-weighed-out(Jacob, cheshbon)
 m.fact("arba_esre_ve_shesh_aseret_monim(yaaqov, cheshbon)")
 
 # -------------------------- Gen.31.42 · THE_ADJUDICATION_ALREADY_HELD ------
@@ -241,11 +257,12 @@ m.fact("arba_esre_ve_shesh_aseret_monim(yaaqov, cheshbon)")
 # affliction and the toil of my palms God has seen — and he adjudicated last
 # night."
 m.step("Gen.31.42")
-# ‹לוּלֵי אֱלֹהֵי אָבִי אֱלֹהֵי אַבְרָהָם וּפַחַד יִצְחָק› fact holds: lule-
-# elohe-avi-and-fachad-yitzchaq(yaaqov)
+# ‹לוּלֵי אֱלֹהֵי אָבִי אֱלֹהֵי אַבְרָהָם וּפַחַד יִצְחָק› (“if-not God
+# father-me/my God Abraham and-alarm Isaac”) — fact holds: if-not-God-avi-
+# and-alarm-Isaac(Jacob)
 m.fact("lule_elohe_avi_u_fachad_yitzchaq(yaaqov)")
-# ‹וַיּוֹכַח אָמֶשׁ› fact holds: raa-God-and-yokhach-amesh(landing-sim-
-# tribunal)
+# ‹וַיּוֹכַח אָמֶשׁ› (“and-be-right yesterday”) — fact holds: see-God-and-
+# be-right-yesterday(landing-put/set-tribunal)
 m.fact("raa_Elohim_va_yokhach_amesh(landing_sim_tribunal)")
 
 # -------------------------- Gen.31.43 · THE_EVERYTHING_IS_MINE -------------
@@ -257,8 +274,8 @@ m.fact("raa_Elohim_va_yokhach_amesh(landing_sim_tribunal)")
 # you see — it is mine. And for my daughters, what can I do for these today,
 # or for their sons whom they have borne?"
 m.step("Gen.31.43")
-# ‹וְכֹל אֲשֶׁר־אַתָּה רֹאֶה לִי־הוּא› fact holds: the-all-to-me-that-and-
-# ma-eese(lavan)
+# ‹וְכֹל אֲשֶׁר־אַתָּה רֹאֶה לִי־הוּא› (“and-all which you see to-me/my
+# he/it”) — fact holds: the-all-to-me-he/it-and-what-make(Laban)
 m.fact("ha_kol_li_hu_u_ma_eese(lavan)")
 
 # -------------------------- Gen.31.44 · THE_COVENANT_COHORTATIVE -----------
@@ -267,8 +284,9 @@ m.fact("ha_kol_li_hu_u_ma_eese(lavan)")
 # "[EN-AID] And now, come, let us cut a covenant, I and you; and let it be
 # for a witness between me and you."
 m.step("Gen.31.44")
-# ‹וְעַתָּה לְכָה נִכְרְתָה בְרִית אֲנִי וָאָתָּה› lavan speaks a demand —
-# CMD-US?: nikhreta(verit-ani-and-ata)
+# ‹וְעַתָּה לְכָה נִכְרְתָה בְרִית אֲנִי וָאָתָּה› (“and-now go-ward cut
+# covenant and-you”) — Laban speaks a demand — CMD-US?: nikhreta(covenant-
+# ani-and-now)
 m.declare("lavan", "CMD-US?",
           "nikhreta(verit_ani_va_ata)")
 
@@ -276,8 +294,8 @@ m.declare("lavan", "CMD-US?",
 # וַיִּקַּח יַעֲקֹב אָבֶן וַיְרִימֶהָ מַצֵּבָה
 # "[EN-AID] And Jacob took a stone and raised it up as a pillar."
 m.step("Gen.31.45")
-# ‹וַיִּקַּח יַעֲקֹב אָבֶן וַיְרִימֶהָ מַצֵּבָה› the world gains: the-
-# matzeva
+# ‹וַיִּקַּח יַעֲקֹב אָבֶן וַיְרִימֶהָ מַצֵּבָה› (“and-take Jacob stone and-
+# rise-high-her/its pillar”) — the world gains: the-pillar
 m.install("ha_matzeva")
 
 # -------------------------- Gen.31.46 · THE_HEAP_AND_THE_WRONG_VERB --------
@@ -286,10 +304,12 @@ m.install("ha_matzeva")
 # "[EN-AID] And Jacob said to his kinsmen: Gather stones! And they took
 # stones and made a heap, and they ate there upon the heap."
 m.step("Gen.31.46")
-# ‹לִקְטוּ אֲבָנִים› yaaqov speaks a demand — LET: liqtu(echav, avanim)
+# ‹לִקְטוּ אֲבָנִים› (“pick-up stone”) — Jacob speaks a demand — LET: pick-
+# up(echav, stone)
 m.declare("yaaqov", "LET",
           "liqtu(echav, avanim)")
-# ‹וַיִּקְחוּ אֲבָנִים וַיַּעֲשׂוּ־גָל› the world gains: the-gal
+# ‹וַיִּקְחוּ אֲבָנִים וַיַּעֲשׂוּ־גָל› (“and-take stone and-make something-
+# rolled”) — the world gains: the-something-rolled
 m.install("ha_gal")
 
 # -------------------------- Gen.31.47 · THE_TWO_TONGUES --------------------
@@ -297,9 +317,12 @@ m.install("ha_gal")
 # "[EN-AID] And Laban called it Yegar-Sahaduta [heap of witness, in
 # Aramaic], and Jacob called it Galed [heap of witness, in Hebrew]."
 m.step("Gen.31.47")
-# ‹וַיִּקְרָא־לוֹ לָבָן יְגַר שָׂהֲדוּתָא› named: the-gal := yegar-sahaduta
+# ‹וַיִּקְרָא־לוֹ לָבָן יְגַר שָׂהֲדוּתָא› (“and-call to-him/its Laban
+# Jegar-Sahadutha Jegar-Sahadutha”) — named: the-something-rolled := Jegar-
+# Sahadutha-Jegar-Sahadutha
 m.name("ha_gal", "yegar_sahaduta")
-# ‹וְיַעֲקֹב קָרָא לוֹ גַּלְעֵד› named: the-gal := galed
+# ‹וְיַעֲקֹב קָרָא לוֹ גַּלְעֵד› (“and-Jacob call to-him/its Galeed”) —
+# named: the-something-rolled := Galeed
 m.name("ha_gal", "galed")
 
 # -------------------------- Gen.31.48 · THE_ETIOLOGY_REPORT ----------------
@@ -308,8 +331,8 @@ m.name("ha_gal", "galed")
 # "[EN-AID] And Laban said: This heap is witness between me and you today.
 # Therefore its name was called Galed,"
 m.step("Gen.31.48")
-# ‹עַל־כֵּן קָרָא־שְׁמוֹ גַּלְעֵד› fact holds: the-gal-mist-upon-ken-
-# galed(report-only)
+# ‹עַל־כֵּן קָרָא־שְׁמוֹ גַּלְעֵד› (“over so call name-him/its Galeed”) —
+# fact holds: the-something-rolled-concretely-over-so-Galeed(report-only)
 m.fact("ha_gal_ed_al_ken_galed(report_only)")
 
 # -------------------------- Gen.31.49 · THE_WATCHPOST_PRAYER ---------------
@@ -318,8 +341,9 @@ m.fact("ha_gal_ed_al_ken_galed(report_only)")
 # "[EN-AID] And the Mitzpah [watchpost], because he said: May YHWH watch
 # between me and you when we are hidden each from his fellow."
 m.step("Gen.31.49")
-# ‹יִצֶף יְהוָה בֵּינִי וּבֵינֶךָ› lavan speaks a demand — LET: yitzef(the-
-# LORD, beni-and-venekha)
+# ‹יִצֶף יְהוָה בֵּינִי וּבֵינֶךָ› (“lean-forward YHWH between-me/my and-
+# between-you/your”) — Laban speaks a demand — LET: lean-forward(the-LORD,
+# beni-and-venekha)
 m.declare("lavan", "LET",
           "yitzef(YHWH, beni_u_venekha)")
 
@@ -329,8 +353,9 @@ m.declare("lavan", "LET",
 # "[EN-AID] If you afflict my daughters, and if you take wives over my
 # daughters — no man is with us; see, God is witness between me and you."
 m.step("Gen.31.50")
-# ‹רְאֵה אֱלֹהִים עֵד בֵּינִי וּבֵינֶךָ› fact holds: if-teane-if-tiqach-
-# oath-content(lavan)
+# ‹רְאֵה אֱלֹהִים עֵד בֵּינִי וּבֵינֶךָ› (“see God concretely between-me/my
+# and-between-you/your”) — fact holds: with-afflict-literally-with-take-
+# oath-content(Laban)
 m.fact("im_teane_im_tiqach_oath_content(lavan)")
 
 # -------------------------- Gen.31.51 · THE_CLAIMED_CASTER -----------------
@@ -339,8 +364,9 @@ m.fact("im_teane_im_tiqach_oath_content(lavan)")
 # "[EN-AID] And Laban said to Jacob: Behold this heap and behold the pillar
 # which I have cast between me and you."
 m.step("Gen.31.51")
-# ‹הִנֵּה הַגַּל הַזֶּה וְהִנֵּה הַמַצֵּבָה› fact holds: hine-the-gal-and-
-# the-matzeva-yariti(lavan)
+# ‹הִנֵּה הַגַּל הַזֶּה וְהִנֵּה הַמַצֵּבָה› (“behold the-something-rolled
+# the-this and-behold the-pillar”) — fact holds: behold-the-something-
+# rolled-and-the-pillar-flow-as-water(Laban)
 m.fact("hine_ha_gal_ve_ha_matzeva_yariti(lavan)")
 
 # -------------------------- Gen.31.52 · THE_BOUNDARY_OATH ------------------
@@ -351,8 +377,9 @@ m.fact("hine_ha_gal_ve_ha_matzeva_yariti(lavan)")
 # pass beyond this heap to you, and that you will not pass beyond this heap
 # and this pillar to me, for harm."
 m.step("Gen.31.52")
-# ‹עֵד הַגַּל הַזֶּה וְעֵדָה הַמַּצֵּבָה› fact holds: mist-the-gal-and-eda-
-# the-matzeva-not-naavor(oath-content)
+# ‹עֵד הַגַּל הַזֶּה וְעֵדָה הַמַּצֵּבָה› (“concretely the-something-rolled
+# the-this and-testimony the-pillar”) — fact holds: concretely-the-
+# something-rolled-and-testimony-the-pillar-not-naavor(oath-content)
 m.fact("ed_ha_gal_ve_eda_ha_matzeva_lo_naavor(oath_content)")
 
 # -------------------------- Gen.31.53 · THE_OATH_BY_THE_FEAR ---------------
@@ -361,11 +388,13 @@ m.fact("ed_ha_gal_ve_eda_ha_matzeva_lo_naavor(oath_content)")
 # "[EN-AID] The God of Abraham and the god of Nahor judge between us — the
 # god of their father. And Jacob swore by the Fear of his father Isaac."
 m.step("Gen.31.53")
-# ‹אֱלֹהֵי אַבְרָהָם וֵאלֹהֵי נָחוֹר יִשְׁפְּטוּ› fact holds: yishptu-
-# imperfect-fenced(elohe-avraham-and-lohe-nachor)
+# ‹אֱלֹהֵי אַבְרָהָם וֵאלֹהֵי נָחוֹר יִשְׁפְּטוּ› (“God Abraham and-God
+# Nahor judge”) — fact holds: judge-imperfect-fenced(God-Abraham-and-God-
+# Nahor)
 m.fact("yishptu_imperfect_fenced(elohe_avraham_ve_lohe_nachor)")
-# ‹וַיִּשָּׁבַע יַעֲקֹב בְּפַחַד אָבִיו יִצְחָק› fact holds: and-yishava-
-# yaaqov-in-fachad-aviv(other-root-performance)
+# ‹וַיִּשָּׁבַע יַעֲקֹב בְּפַחַד אָבִיו יִצְחָק› (“and-swear Jacob in-alarm
+# father-him/its Isaac”) — fact holds: and-swear-Jacob-in-alarm-aviv(other-
+# root-performance)
 m.fact("va_yishava_yaaqov_be_fachad_aviv(other_root_performance)")
 
 # -------------------------- Gen.31.54 · THE_FIRST_SACRIFICE ----------------
@@ -374,8 +403,9 @@ m.fact("va_yishava_yaaqov_be_fachad_aviv(other_root_performance)")
 # "[EN-AID] And Jacob sacrificed a sacrifice on the mountain and called his
 # kinsmen to eat bread; and they ate bread and lodged on the mountain."
 m.step("Gen.31.54")
-# ‹וַיִּזְבַּח יַעֲקֹב זֶבַח בָּהָר› fact holds: and-yizbach-zevach-and-
-# yokhlu-and-yalinu(yaaqov, echav, in-the-har)
+# ‹וַיִּזְבַּח יַעֲקֹב זֶבַח בָּהָר› (“and-slaughter-an-animal Jacob
+# sacrifice in-mountain”) — fact holds: and-slaughter-an-animal-sacrifice-
+# and-eat-and-stop(Jacob, echav, mountain)
 m.fact("va_yizbach_zevach_va_yokhlu_va_yalinu(yaaqov, echav, ba_har)")
 
 # -------------------------- machine truth (baked from the Stage D run) -------

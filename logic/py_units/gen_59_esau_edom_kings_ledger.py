@@ -17,8 +17,8 @@ m = Machine("gen_59_esau_edom_kings_ledger")
 # וְאֵלֶּה תֹּלְדוֹת עֵשָׂו הוּא אֱדוֹם
 # "[EN-AID] And these are the generations of Esau — he is Edom."
 m.step("Gen.36.1")
-# ‹וְאֵלֶּה תֹּלְדוֹת עֵשָׂו› fact holds: toldot-esav-that-edom(kotev-
-# rishon)
+# ‹וְאֵלֶּה תֹּלְדוֹת עֵשָׂו› (“and-these generations Esau”) — fact holds:
+# generations-Esau-he/it-Edom(kotev-rishon)
 m.fact("toldot_esav_hu_edom(kotev_rishon)")
 
 # -------------------------- Gen.36.2 · THE_WIVES_OF_CANAAN -----------------
@@ -28,23 +28,24 @@ m.fact("toldot_esav_hu_edom(kotev_rishon)")
 # of Elon the Hittite; and Aholivamah, daughter of Ana, daughter of Tzivon
 # the Hivite;"
 m.step("Gen.36.2")
-# ‹עֵשָׂו לָקַח אֶת־נָשָׁיו› fact holds: laqach-nashav-from-benot-
-# kenaan(esav, ada-and-aholivama)
+# ‹עֵשָׂו לָקַח אֶת־נָשָׁיו› (“Esau take obj-marker woman-him/its”) — fact
+# holds: take-nashav-from-daughter-Canaan(Esau, Adah-and-Aholibamah)
 m.fact("laqach_nashav_mi_benot_kenaan(esav, ada_ve_aholivama)")
 
 # -------------------------- Gen.36.3 · THE_ISHMAEL_WIFE --------------------
 # וְאֶת־בָּשְׂמַת בַּת־יִשְׁמָעֵאל אֲחוֹת נְבָיוֹת
 # "[EN-AID] and Basmat, daughter of Ishmael, sister of Nevayot."
 m.step("Gen.36.3")
-# ‹וְאֶת־בָּשְׂמַת בַּת› fact holds: basmat-bat-yishmael(achot-nevayot)
+# ‹וְאֶת־בָּשְׂמַת בַּת› (“and-obj-marker Bashemath daughter”) — fact holds:
+# Bashemath-daughter-Ishmael(sister-Nebaioth)
 m.fact("basmat_bat_yishmael(achot_nevayot)")
 
 # -------------------------- Gen.36.4 · THE_FIRSTBORN_SONS ------------------
 # וַתֵּלֶד עָדָה לְעֵשָׂו אֶת־אֱלִיפָז וּבָשְׂמַת יָלְדָה אֶת־רְעוּאֵל
 # "[EN-AID] And Ada bore to Esau Elifaz; and Basmat bore Reuel;"
 m.step("Gen.36.4")
-# ‹וַתֵּלֶד עָדָה לְעֵשָׂו אֶת› fact holds: and-teled-ada-and-vasmat(elifaz-
-# and-reuel)
+# ‹וַתֵּלֶד עָדָה לְעֵשָׂו אֶת› (“and-bear-young Adah to-Esau obj-marker”) —
+# fact holds: and-bear-young-Adah-and-Bashemath(Eliphaz-and-Raguel)
 m.fact("va_teled_ada_u_vasmat(elifaz_u_reuel)")
 
 # -------------------------- Gen.36.5 · THE_CANAAN_BORN_CLOSE ---------------
@@ -53,8 +54,8 @@ m.fact("va_teled_ada_u_vasmat(elifaz_u_reuel)")
 # "[EN-AID] and Aholivamah bore Yeush and Yalam and Korach. These are the
 # sons of Esau who were born to him in the land of Canaan."
 m.step("Gen.36.5")
-# ‹וְאָהֳלִיבָמָה יָלְדָה› fact holds: ele-bene-esav(yuldu-not-in-earth-
-# kenaan)
+# ‹וְאָהֳלִיבָמָה יָלְדָה› (“and-Aholibamah bear-young”) — fact holds:
+# these-son-Esau(bear-young-not-in-earth-Canaan)
 m.fact("ele_bene_esav(yuldu_lo_be_eretz_kenaan)")
 
 # -------------------------- Gen.36.6 · THE_WITHDRAWAL ----------------------
@@ -67,8 +68,8 @@ m.fact("ele_bene_esav(yuldu_lo_be_eretz_kenaan)")
 # property that he had acquired in the land of Canaan; and he went to a
 # land, away from before Jacob his brother."
 m.step("Gen.36.6")
-# ‹וַיֵּלֶךְ אֶל־אֶרֶץ מִפְּנֵי יַעֲקֹב› fact holds: and-yelekh-to-
-# earth(esav, from-pene-yaaqov-his-brother)
+# ‹וַיֵּלֶךְ אֶל־אֶרֶץ מִפְּנֵי יַעֲקֹב› (“and-go to earth from-face Jacob”)
+# — fact holds: and-go-to-earth(Esau, from-face-Jacob-his-brother)
 m.fact("va_yelekh_el_eretz(esav, mi_pene_yaaqov_achiv)")
 
 # -------------------------- Gen.36.7 · THE_LAND_THAT_COULD_NOT_BEAR --------
@@ -78,16 +79,17 @@ m.fact("va_yelekh_el_eretz(esav, mi_pene_yaaqov_achiv)")
 # land of their sojournings could not bear them, because of their
 # livestock."
 m.step("Gen.36.7")
-# ‹כִּי־הָיָה רְכוּשָׁם רָב› fact holds: not-yakhla-earth-megurehem-to-set-
-# otam(rekhusham-rav)
+# ‹כִּי־הָיָה רְכוּשָׁם רָב› (“that be property-them/their many/great”) —
+# fact holds: not-be-able-earth-megurehem-to-lift/carry-otam(rekhusham-
+# many/great)
 m.fact("lo_yakhla_eretz_megurehem_la_set_otam(rekhusham_rav)")
 
 # -------------------------- Gen.36.8 · SEIR_SETTLED ------------------------
 # וַיֵּשֶׁב עֵשָׂו בְּהַר שֵׂעִיר עֵשָׂו הוּא אֱדוֹם
 # "[EN-AID] And Esau dwelt in the hill-country of Seir — Esau, he is Edom."
 m.step("Gen.36.8")
-# ‹וַיֵּשֶׁב עֵשָׂו בְּהַר שֵׂעִיר› fact holds: and-yeshev-esav-in-har-
-# seir(that-edom)
+# ‹וַיֵּשֶׁב עֵשָׂו בְּהַר שֵׂעִיר› (“and-dwell/sit Esau in-mountain Seir”)
+# — fact holds: and-dwell/sit-Esau-in-mountain-Seir(he/it-Edom)
 m.fact("va_yeshev_esav_be_har_seir(hu_edom)")
 
 # -------------------------- Gen.36.9 · THE_SECOND_HEADER -------------------
@@ -95,8 +97,8 @@ m.fact("va_yeshev_esav_be_har_seir(hu_edom)")
 # "[EN-AID] And these are the generations of Esau, father of Edom, in the
 # hill-country of Seir."
 m.step("Gen.36.9")
-# ‹וְאֵלֶּה תֹּלְדוֹת עֵשָׂו אֲבִי› fact holds: toldot-esav-avi-edom(kotev-
-# sheni, in-har-seir)
+# ‹וְאֵלֶּה תֹּלְדוֹת עֵשָׂו אֲבִי› (“and-these generations Esau father”) —
+# fact holds: generations-Esau-father-Edom(kotev-sheni, in-mountain-Seir)
 m.fact("toldot_esav_avi_edom(kotev_sheni, be_har_seir)")
 
 # -------------------------- Gen.36.10 · THE_SONS_NAMED ---------------------
@@ -105,8 +107,8 @@ m.fact("toldot_esav_avi_edom(kotev_sheni, be_har_seir)")
 # "[EN-AID] These are the names of the sons of Esau: Elifaz son of Ada,
 # Esau's wife; Reuel son of Basmat, Esau's wife."
 m.step("Gen.36.10")
-# ‹אֵלֶּה שְׁמוֹת בְּנֵי־עֵשָׂו› fact holds: ele-names-bene-esav(elifaz-and-
-# reuel)
+# ‹אֵלֶּה שְׁמוֹת בְּנֵי־עֵשָׂו› (“these name son Esau”) — fact holds:
+# these-name-son-Esau(Eliphaz-and-Raguel)
 m.fact("ele_shemot_bene_esav(elifaz_u_reuel)")
 
 # -------------------------- Gen.36.11 · ELIFAZ_S_FIVE ----------------------
@@ -114,7 +116,8 @@ m.fact("ele_shemot_bene_esav(elifaz_u_reuel)")
 # "[EN-AID] And the sons of Elifaz were: Teman, Omar, Tzefo, and Gatam, and
 # Kenaz."
 m.step("Gen.36.11")
-# ‹וַיִּהְיוּ בְּנֵי אֱלִיפָז› fact holds: bene-elifaz(teman-until-qenaz)
+# ‹וַיִּהְיוּ בְּנֵי אֱלִיפָז› (“and-be son Eliphaz”) — fact holds: son-
+# Eliphaz(Teyman-until-Kenaz)
 m.fact("bene_elifaz(teman_ad_qenaz)")
 
 # -------------------------- Gen.36.12 · AMALEK_BORN ------------------------
@@ -123,8 +126,8 @@ m.fact("bene_elifaz(teman_ad_qenaz)")
 # "[EN-AID] And Timna was concubine to Elifaz, son of Esau, and she bore to
 # Elifaz Amalek. These are the sons of Ada, Esau's wife."
 m.step("Gen.36.12")
-# ‹וְתִמְנַע הָיְתָה פִילֶגֶשׁ לֶאֱלִיפַז› fact holds: and-teled-timna-to-
-# elifaz(amaleq)
+# ‹וְתִמְנַע הָיְתָה פִילֶגֶשׁ לֶאֱלִיפַז› (“and-Timna be concubine to-
+# Eliphaz”) — fact holds: and-bear-young-Timna-to-Eliphaz(obj-marker-Amalek)
 m.fact("va_teled_timna_le_elifaz(et_amaleq)")
 
 # -------------------------- Gen.36.13 · REUEL_S_FOUR -----------------------
@@ -133,7 +136,8 @@ m.fact("va_teled_timna_le_elifaz(et_amaleq)")
 # "[EN-AID] And these are the sons of Reuel: Nachat and Zerach, Shama and
 # Miza. These were the sons of Basmat, Esau's wife."
 m.step("Gen.36.13")
-# ‹וְאֵלֶּה בְּנֵי רְעוּאֵל› fact holds: bene-reuel(nachat-until-miza)
+# ‹וְאֵלֶּה בְּנֵי רְעוּאֵל› (“and-these son Raguel”) — fact holds: son-
+# Raguel(Nahath-until-Mizzah)
 m.fact("bene_reuel(nachat_ad_miza)")
 
 # -------------------------- Gen.36.14 · AHOLIVAMAH_S_THREE -----------------
@@ -142,8 +146,8 @@ m.fact("bene_reuel(nachat_ad_miza)")
 # "[EN-AID] And these were the sons of Aholivamah, daughter of Ana, daughter
 # of Tzivon, Esau's wife: she bore to Esau Yeush and Yalam and Korach."
 m.step("Gen.36.14")
-# ‹וְאֵלֶּה הָיוּ בְּנֵי אָהֳלִיבָמָה› fact holds: bene-aholivama(yeush-
-# yalam-qorach)
+# ‹וְאֵלֶּה הָיוּ בְּנֵי אָהֳלִיבָמָה› (“and-these be son Aholibamah”) —
+# fact holds: son-Aholibamah(Jehush-Jalam-Korah)
 m.fact("bene_aholivama(yeush_yalam_qorach)")
 
 # -------------------------- Gen.36.15 · THE_CHIEF_TITLE_MINTED -------------
@@ -152,7 +156,8 @@ m.fact("bene_aholivama(yeush_yalam_qorach)")
 # "[EN-AID] These are the chiefs of the sons of Esau. The sons of Elifaz,
 # Esau's firstborn: chief Teman, chief Omar, chief Tzefo, chief Kenaz,"
 m.step("Gen.36.15")
-# ‹אֵלֶּה אַלּוּפֵי בְנֵי› fact holds: ele-alufe-vene-esav(alufe-elifaz)
+# ‹אֵלֶּה אַלּוּפֵי בְנֵי› (“these familiar son”) — fact holds: these-
+# familiar-son-Esau(familiar-Eliphaz)
 m.fact("ele_alufe_vene_esav(alufe_elifaz)")
 
 # -------------------------- Gen.36.16 · ELIFAZ_S_CHIEFS_CLOSE --------------
@@ -161,7 +166,8 @@ m.fact("ele_alufe_vene_esav(alufe_elifaz)")
 # "[EN-AID] chief Korach, chief Gatam, chief Amalek. These are the chiefs of
 # Elifaz in the land of Edom; these are the sons of Ada."
 m.step("Gen.36.16")
-# ‹אַלּוּף־קֹרַח אַלּוּף› fact holds: alufe-elifaz-in-earth-edom(bene-ada)
+# ‹אַלּוּף־קֹרַח אַלּוּף› (“familiar Korah familiar”) — fact holds:
+# familiar-Eliphaz-in-earth-Edom(son-Adah)
 m.fact("alufe_elifaz_be_eretz_edom(bene_ada)")
 
 # -------------------------- Gen.36.17 · REUEL_S_CHIEFS ---------------------
@@ -172,8 +178,8 @@ m.fact("alufe_elifaz_be_eretz_edom(bene_ada)")
 # Zerach, chief Shama, chief Miza. These are the chiefs of Reuel in the land
 # of Edom; these are the sons of Basmat, Esau's wife."
 m.step("Gen.36.17")
-# ‹וְאֵלֶּה בְּנֵי רְעוּאֵל בֶּן־עֵשָׂו אַלּוּף› fact holds: alufe-reuel-in-
-# earth-edom(bene-vasmat)
+# ‹וְאֵלֶּה בְּנֵי רְעוּאֵל בֶּן־עֵשָׂו אַלּוּף› (“and-these son Raguel son
+# Esau familiar”) — fact holds: familiar-Raguel-in-earth-Edom(son-Bashemath)
 m.fact("alufe_reuel_be_eretz_edom(bene_vasmat)")
 
 # -------------------------- Gen.36.18 · AHOLIVAMAH_S_CHIEFS ----------------
@@ -183,8 +189,8 @@ m.fact("alufe_reuel_be_eretz_edom(bene_vasmat)")
 # chief Yalam, chief Korach. These are the chiefs of Aholivamah, daughter of
 # Ana, Esau's wife."
 m.step("Gen.36.18")
-# ‹וְאֵלֶּה בְּנֵי אָהֳלִיבָמָה אֵשֶׁת עֵשָׂו› fact holds: alufe-
-# aholivama(yeush-yalam-qorach)
+# ‹וְאֵלֶּה בְּנֵי אָהֳלִיבָמָה אֵשֶׁת עֵשָׂו› (“and-these son Aholibamah
+# woman Esau”) — fact holds: familiar-Aholibamah(Jehush-Jalam-Korah)
 m.fact("alufe_aholivama(yeush_yalam_qorach)")
 
 # -------------------------- Gen.36.19 · THE_FIRST_LEDGER_SEALS -------------
@@ -192,7 +198,8 @@ m.fact("alufe_aholivama(yeush_yalam_qorach)")
 # "[EN-AID] These are the sons of Esau, and these their chiefs — he is
 # Edom."
 m.step("Gen.36.19")
-# ‹אֵלֶּה בְנֵי› fact holds: ele-vene-esav-and-alufehem(that-edom)
+# ‹אֵלֶּה בְנֵי› (“these son”) — fact holds: these-son-Esau-and-
+# alufehem(he/it-Edom)
 m.fact("ele_vene_esav_ve_alufehem(hu_edom)")
 
 # -------------------------- Gen.36.20 · THE_HORITES_ENTER ------------------
@@ -201,8 +208,8 @@ m.fact("ele_vene_esav_ve_alufehem(hu_edom)")
 # "[EN-AID] These are the sons of Seir the Horite, the dwellers of the land:
 # Lotan and Shoval and Tzivon and Ana,"
 m.step("Gen.36.20")
-# ‹אֵלֶּה בְנֵי־שֵׂעִיר הַחֹרִי› fact holds: bene-seir-the-chori(yoshve-the-
-# earth)
+# ‹אֵלֶּה בְנֵי־שֵׂעִיר הַחֹרִי› (“these son Seir the-Chorite”) — fact
+# holds: son-Seir-the-Chorite(dwell/sit-the-earth)
 m.fact("bene_seir_ha_chori(yoshve_ha_aretz)")
 
 # -------------------------- Gen.36.21 · THE_HORITE_SEVEN -------------------
@@ -211,7 +218,8 @@ m.fact("bene_seir_ha_chori(yoshve_ha_aretz)")
 # "[EN-AID] and Dishon and Etzer and Dishan. These are the chiefs of the
 # Horites, the sons of Seir, in the land of Edom."
 m.step("Gen.36.21")
-# ‹וְדִשׁוֹן וְאֵצֶר וְדִישָׁן› fact holds: alufe-the-chori(bene-seir)
+# ‹וְדִשׁוֹן וְאֵצֶר וְדִישָׁן› (“and-Dishon and-Ezer and-Dishan”) — fact
+# holds: familiar-the-Chorite(son-Seir)
 m.fact("alufe_ha_chori(bene_seir)")
 
 # -------------------------- Gen.36.22 · TIMNA_THE_SISTER -------------------
@@ -219,7 +227,8 @@ m.fact("alufe_ha_chori(bene_seir)")
 # "[EN-AID] And the sons of Lotan were Chori and Hemam; and Lotan's sister
 # was Timna."
 m.step("Gen.36.22")
-# ‹וַאֲחוֹת לוֹטָן תִּמְנָע› fact holds: and-achot-lotan(timna)
+# ‹וַאֲחוֹת לוֹטָן תִּמְנָע› (“and-sister Lotan Timna”) — fact holds: and-
+# sister-Lotan(Timna)
 m.fact("va_achot_lotan(timna)")
 
 # -------------------------- Gen.36.23 · SHOVAL_S_FIVE ----------------------
@@ -227,7 +236,8 @@ m.fact("va_achot_lotan(timna)")
 # "[EN-AID] And these are the sons of Shoval: Alvan and Manachat and Eval,
 # Shefo and Onam."
 m.step("Gen.36.23")
-# ‹וְאֵלֶּה בְּנֵי שׁוֹבָל› fact holds: bene-shoval(alvan-until-onam)
+# ‹וְאֵלֶּה בְּנֵי שׁוֹבָל› (“and-these son Shobal”) — fact holds: son-
+# Shobal(Alian-until-Onam)
 m.fact("bene_shoval(alvan_ad_onam)")
 
 # -------------------------- Gen.36.24 · THE_YEMIM_FINDER -------------------
@@ -237,8 +247,8 @@ m.fact("bene_shoval(alvan_ad_onam)")
 # who found the yemim in the wilderness, while pasturing the donkeys for
 # Tzivon his father."
 m.step("Gen.36.24")
-# ‹הוּא עֲנָה אֲשֶׁר מָצָא› fact holds: that-ana-which-matza-the-yemim(in-
-# the-midbar)
+# ‹הוּא עֲנָה אֲשֶׁר מָצָא› (“he/it Anah which find”) — fact holds: he/it-
+# Anah-which-find-obj-marker-the-warm-spring(pasture)
 m.fact("hu_ana_asher_matza_et_ha_yemim(ba_midbar)")
 
 # -------------------------- Gen.36.25 · ANA_S_TWO --------------------------
@@ -246,7 +256,8 @@ m.fact("hu_ana_asher_matza_et_ha_yemim(ba_midbar)")
 # "[EN-AID] And these are the sons of Ana: Dishon; and Aholivamah, daughter
 # of Ana."
 m.step("Gen.36.25")
-# ‹וְאֵלֶּה בְנֵי־עֲנָה› fact holds: bene-ana(dishon-and-aholivama)
+# ‹וְאֵלֶּה בְנֵי־עֲנָה› (“and-these son Anah”) — fact holds: son-
+# Anah(Dishon-and-Aholibamah)
 m.fact("bene_ana(dishon_ve_aholivama)")
 
 # -------------------------- Gen.36.26 · DISHAN_S_FOUR ----------------------
@@ -254,22 +265,24 @@ m.fact("bene_ana(dishon_ve_aholivama)")
 # "[EN-AID] And these are the sons of Dishan: Chemdan and Eshban and Yitran
 # and Cheran."
 m.step("Gen.36.26")
-# ‹וְאֵלֶּה בְּנֵי דִישָׁן› fact holds: bene-dishan-rishon(chemdan-until-
-# kheran)
+# ‹וְאֵלֶּה בְּנֵי דִישָׁן› (“and-these son Dishan”) — fact holds: son-
+# Dishan-rishon(Hemdan-until-Cheran)
 m.fact("bene_dishan_rishon(chemdan_ad_kheran)")
 
 # -------------------------- Gen.36.27 · ETZER_S_THREE ----------------------
 # אֵלֶּה בְּנֵי־אֵצֶר בִּלְהָן וְזַעֲוָן וַעֲקָן
 # "[EN-AID] These are the sons of Etzer: Bilhan and Zaavan and Akan."
 m.step("Gen.36.27")
-# ‹אֵלֶּה בְּנֵי־אֵצֶר› fact holds: bene-etzer(bilhan-zaavan-aqan)
+# ‹אֵלֶּה בְּנֵי־אֵצֶר› (“these son Ezer”) — fact holds: son-Ezer(Bilhan-
+# Zaavan-Akan)
 m.fact("bene_etzer(bilhan_zaavan_aqan)")
 
 # -------------------------- Gen.36.28 · DISHAN_S_TWO -----------------------
 # אֵלֶּה בְנֵי־דִישָׁן עוּץ וַאֲרָן
 # "[EN-AID] These are the sons of Dishan: Utz and Aran."
 m.step("Gen.36.28")
-# ‹אֵלֶּה בְנֵי־דִישָׁן› fact holds: bene-dishan(utz-and-aran)
+# ‹אֵלֶּה בְנֵי־דִישָׁן› (“these son Dishan”) — fact holds: son-Dishan(Uz-
+# and-Aran)
 m.fact("bene_dishan(utz_va_aran)")
 
 # -------------------------- Gen.36.29 · THE_HORITE_CHIEFS ------------------
@@ -278,8 +291,8 @@ m.fact("bene_dishan(utz_va_aran)")
 # "[EN-AID] These are the chiefs of the Horites: chief Lotan, chief Shoval,
 # chief Tzivon, chief Ana,"
 m.step("Gen.36.29")
-# ‹אֵלֶּה אַלּוּפֵי הַחֹרִי› fact holds: alufe-the-chori-rishon(lotan-until-
-# ana)
+# ‹אֵלֶּה אַלּוּפֵי הַחֹרִי› (“these familiar the-Chorite”) — fact holds:
+# familiar-the-Chorite-rishon(Lotan-until-Anah)
 m.fact("alufe_ha_chori_rishon(lotan_ad_ana)")
 
 # -------------------------- Gen.36.30 · THE_HORITE_LEDGER_SEALS ------------
@@ -288,7 +301,8 @@ m.fact("alufe_ha_chori_rishon(lotan_ad_ana)")
 # "[EN-AID] chief Dishon, chief Etzer, chief Dishan. These are the chiefs of
 # the Horites, by their chiefdoms, in the land of Seir."
 m.step("Gen.36.30")
-# ‹אַלּוּף דִּשֹׁן› fact holds: alufe-the-chori-to-alufehem(in-earth-seir)
+# ‹אַלּוּף דִּשֹׁן› (“familiar Dishon”) — fact holds: familiar-the-Chorite-
+# to-alufehem(in-earth-Seir)
 m.fact("alufe_ha_chori_le_alufehem(be_eretz_seir)")
 
 # -------------------------- Gen.36.31 · THE_KINGS_BEFORE_THE_KINGS ---------
@@ -297,8 +311,9 @@ m.fact("alufe_ha_chori_le_alufehem(be_eretz_seir)")
 # "[EN-AID] And these are the kings who reigned in the land of Edom, before
 # a king reigned for the sons of Israel."
 m.step("Gen.36.31")
-# ‹וְאֵלֶּה הַמְּלָכִים אֲשֶׁר מָלְכוּ בְּאֶרֶץ אֱדוֹם› fact holds: the-
-# melakhim-which-malkhu-in-edom(to-me-fene-melakh-melekh-to-me-vene-yisrael)
+# ‹וְאֵלֶּה הַמְּלָכִים אֲשֶׁר מָלְכוּ בְּאֶרֶץ אֱדוֹם› (“and-these the-king
+# which reign in-earth Edom”) — fact holds: the-king-which-reign-in-Edom(to-
+# me-fene-reign-king-to-me-son-Israel)
 m.fact("ha_melakhim_asher_malkhu_be_edom(li_fene_melakh_melekh_li_vene_yisrael)")
 
 # -------------------------- Gen.36.32 · THE_FIRST_KING ---------------------
@@ -306,8 +321,8 @@ m.fact("ha_melakhim_asher_malkhu_be_edom(li_fene_melakh_melekh_li_vene_yisrael)"
 # "[EN-AID] And Bela son of Beor reigned in Edom; and the name of his city
 # was Dinhava."
 m.step("Gen.36.32")
-# ‹וַיִּמְלֹךְ בֶּאֱדוֹם בֶּלַע בֶּן› fact holds: and-yimlokh-bela-ben-
-# beor(ir-dinhava)
+# ‹וַיִּמְלֹךְ בֶּאֱדוֹם בֶּלַע בֶּן› (“and-reign in-Edom Bela son”) — fact
+# holds: and-reign-Bela-son-Beor(ir-Dinhaban)
 m.fact("va_yimlokh_bela_ben_beor(ir_dinhava)")
 
 # -------------------------- Gen.36.33 · THE_CHAIN_BEGINS -------------------
@@ -315,8 +330,8 @@ m.fact("va_yimlokh_bela_ben_beor(ir_dinhava)")
 # "[EN-AID] And Bela died; and Yovav son of Zerach, from Botzra, reigned in
 # his place."
 m.step("Gen.36.33")
-# ‹וַיָּמָת בָּלַע› fact holds: and-yamat-bela-and-yimlokh(yovav-from-
-# batzra)
+# ‹וַיָּמָת בָּלַע› (“and-die Bela”) — fact holds: and-die-Bela-and-
+# reign(Jobab-from-Bozrah)
 m.fact("va_yamat_bela_va_yimlokh(yovav_mi_batzra)")
 
 # -------------------------- Gen.36.34 · THE_THIRD_KING ---------------------
@@ -324,8 +339,8 @@ m.fact("va_yamat_bela_va_yimlokh(yovav_mi_batzra)")
 # "[EN-AID] And Yovav died; and Chusham, from the land of the Temanite,
 # reigned in his place."
 m.step("Gen.36.34")
-# ‹וַיָּמָת יוֹבָב› fact holds: and-yamat-yovav-and-yimlokh(chusham-the-
-# temani)
+# ‹וַיָּמָת יוֹבָב› (“and-die Jobab”) — fact holds: and-die-Jobab-and-
+# reign(Husham-the-Temanite)
 m.fact("va_yamat_yovav_va_yimlokh(chusham_ha_temani)")
 
 # -------------------------- Gen.36.35 · THE_KING_WHO_STRUCK_MIDIAN ---------
@@ -335,16 +350,17 @@ m.fact("va_yamat_yovav_va_yimlokh(chusham_ha_temani)")
 # the field of Moab — reigned in his place; and the name of his city was
 # Avit."
 m.step("Gen.36.35")
-# ‹הַמַּכֶּה אֶת־מִדְיָן בִּשְׂדֵה› fact holds: and-yimlokh-hadad(the-make-
-# midyan-bi-sede-moav)
+# ‹הַמַּכֶּה אֶת־מִדְיָן בִּשְׂדֵה› (“the-strike obj-marker Midian in-
+# field”) — fact holds: and-reign-Hadad(the-strike-obj-marker-Midian-bi-
+# sede-Moab)
 m.fact("va_yimlokh_hadad(ha_make_et_midyan_bi_sede_moav)")
 
 # -------------------------- Gen.36.36 · THE_FIFTH_KING ---------------------
 # וַיָּמָת הֲדָד וַיִּמְלֹךְ תַּחְתָּיו שַׂמְלָה מִמַּשְׂרֵקָה
 # "[EN-AID] And Hadad died; and Samla, from Masreka, reigned in his place."
 m.step("Gen.36.36")
-# ‹וַיָּמָת הֲדָד› fact holds: and-yamat-hadad-and-yimlokh(samla-from-
-# masreqa)
+# ‹וַיָּמָת הֲדָד› (“and-die Hadad”) — fact holds: and-die-Hadad-and-
+# reign(Samlah-from-Masrekah)
 m.fact("va_yamat_hadad_va_yimlokh(samla_mi_masreqa)")
 
 # -------------------------- Gen.36.37 · THE_KING_FROM_THE_WIDE_PLACES ------
@@ -352,8 +368,8 @@ m.fact("va_yamat_hadad_va_yimlokh(samla_mi_masreqa)")
 # "[EN-AID] And Samla died; and Shaul, from Rechovot-of-the-river, reigned
 # in his place."
 m.step("Gen.36.37")
-# ‹וַיִּמְלֹךְ תַּחְתָּיו שָׁאוּל מֵרְחֹבוֹת› fact holds: and-yimlokh-
-# shaul(from-rechovot-the-river)
+# ‹וַיִּמְלֹךְ תַּחְתָּיו שָׁאוּל מֵרְחֹבוֹת› (“and-reign under-him/its Saul
+# from-Rehoboth”) — fact holds: and-reign-Saul(from-Rehoboth-the-river)
 m.fact("va_yimlokh_shaul(me_rechovot_ha_nahar)")
 
 # -------------------------- Gen.36.38 · THE_SEVENTH_KING -------------------
@@ -361,8 +377,8 @@ m.fact("va_yimlokh_shaul(me_rechovot_ha_nahar)")
 # "[EN-AID] And Shaul died; and Baal-Chanan son of Akhbor reigned in his
 # place."
 m.step("Gen.36.38")
-# ‹וַיָּמָת שָׁאוּל› fact holds: and-yamat-shaul-and-yimlokh(baal-chanan-
-# ben-akhbor)
+# ‹וַיָּמָת שָׁאוּל› (“and-die Saul”) — fact holds: and-die-Saul-and-
+# reign(baal-Baal-hanan-son-Achbor)
 m.fact("va_yamat_shaul_va_yimlokh(baal_chanan_ben_akhbor)")
 
 # -------------------------- Gen.36.39 · THE_LAST_KING_AND_THE_QUEEN_LINE ---
@@ -372,8 +388,9 @@ m.fact("va_yamat_shaul_va_yimlokh(baal_chanan_ben_akhbor)")
 # place; and the name of his city was Pau; and his wife's name was
 # Mehetavel, daughter of Matred, daughter of Me-zahav."
 m.step("Gen.36.39")
-# ‹וְשֵׁם אִשְׁתּוֹ מְהֵיטַבְאֵל בַּת־מַטְרֵד בַּת מֵי זָהָב› fact holds:
-# and-yimlokh-hadar(his-wife-mehetavel-bat-from-gold)
+# ‹וְשֵׁם אִשְׁתּוֹ מְהֵיטַבְאֵל בַּת־מַטְרֵד בַּת מֵי זָהָב› (“and-name
+# woman-him/its Mehetabeel daughter Matred daughter Mezahab”) — fact holds:
+# and-reign-Hadar(his-wife-Mehetabeel-daughter-from-Mezahab)
 m.fact("va_yimlokh_hadar(ishto_mehetavel_bat_me_zahav)")
 
 # -------------------------- Gen.36.40 · THE_CLOSING_LIST_OPENS -------------
@@ -383,24 +400,25 @@ m.fact("va_yimlokh_hadar(ishto_mehetavel_bat_me_zahav)")
 # families, by their places, by their names: chief Timna, chief Alva, chief
 # Yetet,"
 m.step("Gen.36.40")
-# ‹וְאֵלֶּה שְׁמוֹת אַלּוּפֵי עֵשָׂו לְמִשְׁפְּחֹתָם לִמְקֹמֹתָם› fact
-# holds: alufe-esav-to-mishpechotam(to-me-meqomotam-bi-shemotam)
+# ‹וְאֵלֶּה שְׁמוֹת אַלּוּפֵי עֵשָׂו לְמִשְׁפְּחֹתָם לִמְקֹמֹתָם› (“and-
+# these name familiar Esau to-family-them/their to-place-them/their”) — fact
+# holds: familiar-Esau-to-mishpechotam(to-me-meqomotam-bi-shemotam)
 m.fact("alufe_esav_le_mishpechotam(li_meqomotam_bi_shemotam)")
 
 # -------------------------- Gen.36.41 · THE_LIST_RUNS ----------------------
 # אַלּוּף אָהֳלִיבָמָה אַלּוּף אֵלָה אַלּוּף פִּינֹן
 # "[EN-AID] chief Aholivamah, chief Ela, chief Pinon,"
 m.step("Gen.36.41")
-# ‹אַלּוּף אָהֳלִיבָמָה אַלּוּף אֵלָה› fact holds: aluf-aholivama-ela-
-# pinon(reshima)
+# ‹אַלּוּף אָהֳלִיבָמָה אַלּוּף אֵלָה› (“familiar Aholibamah familiar Elah”)
+# — fact holds: familiar-Aholibamah-Elah-Pinon(reshima)
 m.fact("aluf_aholivama_ela_pinon(reshima)")
 
 # -------------------------- Gen.36.42 · THE_LIST_NEARS_ITS_END -------------
 # אַלּוּף קְנַז אַלּוּף תֵּימָן אַלּוּף מִבְצָר
 # "[EN-AID] chief Kenaz, chief Teman, chief Mivtzar,"
 m.step("Gen.36.42")
-# ‹אַלּוּף קְנַז אַלּוּף תֵּימָן› fact holds: aluf-qenaz-teman-
-# mivtzar(reshima)
+# ‹אַלּוּף קְנַז אַלּוּף תֵּימָן› (“familiar Kenaz familiar Teyman”) — fact
+# holds: familiar-Kenaz-Teyman-Mibzar(reshima)
 m.fact("aluf_qenaz_teman_mivtzar(reshima)")
 
 # -------------------------- Gen.36.43 · THE_BRACKET_CLOSES -----------------
@@ -410,8 +428,9 @@ m.fact("aluf_qenaz_teman_mivtzar(reshima)")
 # their dwellings, in the land of their holding — he is Esau, father of
 # Edom."
 m.step("Gen.36.43")
-# ‹אֵלֶּה אַלּוּפֵי אֱדוֹם לְמֹשְׁבֹתָם בְּאֶרֶץ אֲחֻזָּתָם› fact holds:
-# ele-alufe-edom-in-earth-achuzatam(that-esav-avi-edom)
+# ‹אֵלֶּה אַלּוּפֵי אֱדוֹם לְמֹשְׁבֹתָם בְּאֶרֶץ אֲחֻזָּתָם› (“these
+# familiar Edom to-seat-them/their in-earth something-seized-them/their”) —
+# fact holds: these-familiar-Edom-in-earth-achuzatam(he/it-Esau-father-Edom)
 m.fact("ele_alufe_edom_be_eretz_achuzatam(hu_esav_avi_edom)")
 
 # -------------------------- machine truth (baked from the Stage D run) -------
