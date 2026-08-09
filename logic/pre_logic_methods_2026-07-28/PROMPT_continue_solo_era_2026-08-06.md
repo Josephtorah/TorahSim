@@ -703,6 +703,57 @@ python3 run_unit.py gen_59_esau_edom_kings_ledger --scenarios | tail -1
 for f in $(grep -l "status: frozen" logic/units/*.yaml); do n=$(grep -c "VERIFIED: SNAPSHOT]" $f); [ "$n" -gt 0 ] && echo "$f: $n"; done
 ```
 
+## GLOSS DISPLAY LAYER (2026-08-09, owner order: "add translations where needed")
+Every quoted Hebrew span in ALL 67 py renderings now carries word-by-word
+English inline: ‹span› ("gloss gloss") — the absolute rule discharged at
+operator level corpus-wide. NEW STANDING TOOLING: gloss_db.py (repo root)
+— per-word English from the SNAPSHOT DB's gloss column, corrected by
+logic/glosses/word_gloss_overrides.yaml (by_gloss exact / replace substring
+/ by_ref / by_skeleton — the shibolim "ears-of-grain-not-stream" homograph
+class lives there), unit tree_coverage tables taking precedence where
+present (gen_01–25); render_unit_py.py upgraded (op_comment span
+translation + DB gloss layer under GLOSS_UNIT). Audited: 2,026 spans, 0
+misses, junk classes cleared (3-round review; audit tooling in session
+scratchpad). All 67 py renderings regenerated GREEN; all 67 undated
+canonical UNIT_*.html re-rendered; ALL_UNITS corpus proof GREEN. Frozen
+YAMLs UNTOUCHED (display-only change — no amendment). COMMITTED 7e88f89
+(2026-08-09). Future units inherit the layer automatically (the
+renderer reads the DB; overrides file grows as bad lemma glosses surface).
+
+## THE CORPUS WORLD (2026-08-09, owner order: "lets go" — the simulation layer)
+Owner's frame (verbatim rulings): "I think of this as a simulation. The
+world will change many times but the code will not"; "There is only one
+world, not multiple worlds"; close NOTHING by hand (multiple passes
+planned — settlement always computed or authored-with-citation);
+identity decisions delegated ("I need you to make these decisions as
+best you can. if uncertain mark in comments"). BUILT: corpus_world.py
+(repo root) — folds ALL frozen units in canonical text order into ONE
+world (corpus_world.sqlite: facts/events/demands/mentions/names/standing/
+tests/ledger/checkpoints + append-only journal = the one world's revision
+history); per-unit consistency gate vs the Stage D interpreter (any drift
+= hard stop; fold mirrors h_result fiat-installs, ASSIGN registry writes,
+BLESS-mandate/CASE/HANDLER/PATTERN/STATUTE standing facts, machine-event
+counts); logic/corpus/entity_registry.yaml (authored who-is-who: divine
+names linked-not-merged; token SPLITS: shekhem town/son, ha_naar
+servant-lad/Ishmael, paro Abram-era/Joseph-era, mitzrayim son/place;
+UNCERTAIN flags: Avimelech+Pikhol two-era split, angel-of-the-LORD,
+Peniel wrestler, bnei-ha-elohim, house_voice; default: unlisted token =
+singleton); logic/corpus/settlement_links.yaml (3 authored cross-unit
+settlements: cupbearer zekhartani gen_63→Gen.41.9 CERTAIN, flood machah
+gen_15→Gen.7.23 CERTAIN, deliverance hatzileni gen_55→Gen.33.4
+UNCERTAIN; AWAITING Gen 42 hooks); logic/corpus/CORPUS_TRUTH.py
+(generated proof, reruns the fold + asserts). STATE: 67 units → 1,160
+facts · 519 events · 74 names · 215 standing · 223 demands = 66 settled
+(63 in-unit + 3 authored) + 157 OPEN (census in the DB; earliest open:
+the garden LET?/LET-NOT pair Gen 2:16-17); journal at revision 3, hash
+8644183bb70456c7; verify GREEN, truth GREEN. Frozen YAMLs/interpreter
+UNTOUCHED. COMMITTED ce15ca6 (2026-08-09; corpus_world.sqlite stays
+untracked per the *.sqlite ignore rule — regenerate on demand; NEW
+untracked open_ledger/ workspace + elijah_docket gitlink drift both
+EXCLUDED from the sweep, owner to rule).
+NEXT candidates on owner word: fold hook into freeze_ritual; corpus HTML
+report; more settlement links as owner reviews the open census.
+
 ## DISCLOSURE (never commit to main repo; owner's private docs)
 "God's Open Source Software Project" (LeBlanc_Epic_Certainty_layperson doc)
 has its own PRIVATE git repo inside Disclosure/. EVERY edit = diff in thread
