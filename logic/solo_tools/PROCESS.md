@@ -1,5 +1,49 @@
 # TORAH_GROK PROCESS — ORAL-FIRST ERA (rewritten 2026-08-08, owner order)
 
+## FORWARD ERA (2026-08-08, owner order: "continue with the rest of the
+## books as I direct")
+
+The RETRO AUDIT PROGRAM IS COMPLETE (run 8, 2026-08-08): all 62 frozen
+units carry a chain-attested, DB-verified oral layer — zero FAILED
+rows across all eight runs. The retro pipeline section below is kept
+as HISTORY; the NEW-UNIT PIPELINE is now the sole forward path.
+
+Forward-era rules:
+- BLOCK ORDER IS OWNER-DIRECTED. No self-scheduled queue, no canon
+  order by default: wait for the owner to name the next span/book;
+  derive exactly that block, report, stop.
+- Standing orders (owner, 2026-08-08, runs 7-8) apply to all forward
+  work: NO subagents ever (the coordinator does every block directly,
+  one at a time); NO task-list tool; LEAN-RECORD MODE for audit
+  records and notes. Machine-derivation rigor and ALL gates are
+  unchanged by lean-record.
+- FREEZE REVIEW WAIVED (owner, 2026-08-08: "I don't want to do the
+  review step. lets keep on like we did in retro runs"): new units
+  freeze on the mechanical gates alone — verify_claims.py 0 FAILED +
+  preflight ALL GREEN + gloss_lint clean — no external review, no
+  subagents. The gates are absolute: a unit with any FAILED row or
+  red scenario never freezes.
+- The oral layer is built IN-PIPELINE at derivation time (steps 2-4
+  below) — new units freeze with their oral_audit manifest verified
+  (zero FAILED) and the insight layer sourced from it; no retro pass
+  needed ever again.
+- MIRROR COVERAGE CONFIRMED all five books (checked 2026-08-08):
+  Minchat Shai, Kitzur Baal HaTurim, Rashi, all five Rabbah
+  collections, Mekhilta, Sifra, both Sifrei, Tanchuma, Onkelos — all
+  present in export_texts for Genesis through Deuteronomy. Web
+  remains gap-filler only (FETCHLOG discipline).
+- LEGACY DRAFTS: logic/units/ holds ~212 status:draft yamls across
+  all five books (tree_derived_v1, the superseded pre-logic era —
+  e.g. exo_01..., num_01..., deu_...). They are NOT current-method
+  units: treat them as span-planning reference only. A new derivation
+  for a span supersedes its legacy draft; do not freeze, fold, or
+  render legacy drafts.
+- Lev 25 (three draft units) remains ON HOLD until the owner resumes
+  it.
+- Verifier wish-list (unordered; would green recent UNCHECKABLEs):
+  gematria/letter-count check, span-restricted count check,
+  not-contains check.
+
 Owner orders this rewrite encodes (2026-08-08): (1) "get rid of our own
 search for crowns" — NO self-directed crown mining, ever; (2) insights
 come from the Oral Torah — LOCAL-FIRST from the Data/sefaria_export/
@@ -109,7 +153,8 @@ review-FAIL class (5 units running). This rewrite deletes that cost.
 8. Freeze ritual; watchlist (slim: arms only from the sources' own
    cross-references or machine needs); state doc; owner commit word.
 
-## RETRO AUDIT PIPELINE (all frozen blocks, owner order — not forward-only)
+## RETRO AUDIT PIPELINE — **COMPLETE 2026-08-08 (kept as history)**
+## (all frozen blocks, owner order — not forward-only)
 
 Per frozen unit, in canon order starting gen_08:
 1. Oral scan + harvest + manifest + verify_claims.py (steps 2-4 above).
