@@ -666,3 +666,31 @@ mid-run owner pause and the switch to lean-record mode at block
 4). Index 54 of 62 audited; Gen 1:1-8 + 2:4-36:43 oral layer
 done — remaining: gen_03-07 (creation week) + lev_04, lev_13,
 lev_19.
+
+## 2026-08-08 — RUN 8 (retro oral audits, gen_03-07 + lev_04/13/19) — RETRO PROGRAM COMPLETE
+
+ZERO web fetches — full run served from the local mirror
+(export_texts: Minchat Shai, Kitzur Baal HaTurim, Rashi; span
+maps via export_links). EIGHT blocks: gen_03-07 (creation week,
+Gen 1:9-2:3) then the three Leviticus units (Lev 4:1-35, Lev
+13:1-8, Lev 19:1-37 — the corpus's first Leviticus oral audits).
+73 verifier rows: 67 VERIFIED / 0 FAILED / 6 UNCHECKABLE. 41m08s
+wall (~5m08s/block; blocks 351/227/402/252/182/592/117/345s).
+INDEX 62 of 62 AUDITED — the retro oral-audit program is
+COMPLETE: every frozen unit carries a chain-attested, DB-verified
+oral layer.
+
+## 2026-08-08 — RUN FWD-1 (forward era, first derivation run: gen_60-64, Gen 37-41)
+
+ZERO web fetches — oral scans in-pipeline from the local mirror
+(Minchat Shai ×105 notes, Kitzur Baal HaTurim ×75 across the five
+chapters). FIVE new units DERIVED + FROZEN (review waived by owner
+2026-08-08 — mechanical gates only): gen_60 (Gen 37, 13/0/0), gen_61
+(Gen 38, 12/0/0), gen_62 (Gen 39, 11/0/1), gen_63 (Gen 40, 12/0/0),
+gen_64 (Gen 41, 13/0/0). Manifest totals: 61 VERIFIED / 0 FAILED / 1
+UNCHECKABLE. All freeze rituals complete (verify_text + interpreter +
+corpus regression + py layer + indexes + ALL_UNITS proof green each
+time; 67 frozen units, regression 67/67 at close). 60m44s wall
+(~12m09s/block incl. the one-time generator build; blocks
+1256/1786*/492/479/750s — *block-2 timer misread, actual ~25m).
+Joseph cycle now frozen Gen 37:1-41:57.
