@@ -15,12 +15,63 @@
 #     basis_en:   one sentence: why this verse settles that demand
 #     uncertain:  true|false (+ comment when true)
 #
-# AWAITING (hooks armed at units outside the current corpus — enter here
-# when Gen 42+ freezes): Joseph's dreams (gen_60) vs "and Joseph
-# remembered the dreams" Gen 42:9; Simeon taken 42:24; the
-# recognize-pair 42:7-8.
+# AWAITING (hooks armed at units outside the current corpus): the
+# scripted answer (gen_69's va-amartem, 46:34) vs its performance at
+# Gen 47:3; Pharaoh's chase-binding (Exod 14:6, the bindings file).
 
 links:
+  - demand: "et_achikhem_ha_qaton_taviu_elai"
+    from_unit: gen_65_first_descent
+    settled_by: {unit: gen_66_second_descent, ref: Gen.43.26}
+    basis_en: >
+      "Your youngest brother you shall bring TO ME" (Gen 42:20) is
+      satisfied when Benjamin stands in Joseph's own house and bows
+      with the gift (Gen 43:26; the descent with Benjamin at 43:15,
+      the seeing at 43:16): brought, and brought to him.
+    uncertain: false
+
+  - demand: "alu_le_shalom_el_avikhem"
+    from_unit: gen_67_cup_and_surety
+    settled_by: {unit: gen_68_i_am_yosef, ref: Gen.45.25}
+    basis_en: >
+      "Go up in peace to your father" (Gen 44:17) — refused in the
+      moment (Judah steps closer instead) — finally happens at "and
+      they went UP from Egypt... to Jacob their father" (Gen 45:25),
+      with Benjamin free, Simeon out, and peace actual.
+    uncertain: false
+
+  - demand: "yeshev_na_avdekha_tachat_ha_naar"
+    from_unit: gen_67_cup_and_surety
+    settled_by: {unit: gen_68_i_am_yosef, ref: Gen.45.3}
+    basis_en: >
+      Judah's substitution offer ("let your servant stay instead of
+      the lad", Gen 44:33) receives no grant and no refusal — the
+      unmasking (Gen 45:3-4) dissolves the trial that demanded a
+      slave: no one stays, everyone goes up.
+    uncertain: true
+    # UNCERTAIN — the demand was TRANSCENDED, not granted: reading
+    # the unmasking as its settlement is a judgment about what
+    # answers a demand; the queue's alternative (leave it open
+    # forever) reads the offer as never answered. Owner may re-rule.
+
+  - demand: "el_shaday_yiten_lakhem_rachamim"
+    from_unit: gen_66_second_descent
+    settled_by: {unit: gen_68_i_am_yosef, ref: Gen.45.25}
+    basis_en: >
+      Jacob's prayer (Gen 43:14) asked mercy before the man, the
+      release of "your other brother," and Benjamin. Simeon walked at
+      43:23 (the partial); by the ascent of 45:25 every son is alive,
+      free, and going up together: the prayer's full basket.
+    uncertain: false
+
+  - demand: "u_qchu_et_avikhem_u_vou_elai"
+    from_unit: gen_68_i_am_yosef
+    settled_by: {unit: gen_69_descent_seventy, ref: Gen.46.6}
+    basis_en: >
+      Pharaoh's summons "take your father and your households and
+      come TO ME" (Gen 45:18) meets its arrival-verse: "and they came
+      to Egypt — Jacob, and all his seed with him" (Gen 46:6-7).
+    uncertain: false
   - demand: "zekhartani_ve_hizkartani_el_paro"
     from_unit: gen_63_two_dreams_prison
     settled_by: {unit: gen_64_pharaoh_dreams_rise, ref: Gen.41.9}

@@ -694,3 +694,18 @@ time; 67 frozen units, regression 67/67 at close). 60m44s wall
 (~12m09s/block incl. the one-time generator build; blocks
 1256/1786*/492/479/750s — *block-2 timer misread, actual ~25m).
 Joseph cycle now frozen Gen 37:1-41:57.
+
+## RUN FWD-2 (2026-08-09) — gen_65-69 (Gen 42-46, the reunion arc)
+Five chapters derived + frozen in-pipeline (owner: "do the next 5
+blocks"): gen_65_first_descent (42, 13 rows), gen_66_second_descent
+(43, 13), gen_67_cup_and_surety (44, 13), gen_68_i_am_yosef (45, 13),
+gen_69_descent_seventy (46, 13) — 65 claims, 65 VERIFIED / 0 FAILED /
+0 UNCHECKABLE, zero web fetches (local mirror only). 72 frozen units;
+regression 72/72; ALL_UNITS + CORPUS_TRUTH green (world at 1,283
+facts, 164 open demands, 8 authored settlement links). Marquees: the
+dageshed ALEF (43:26); Ben Asher-era mark-splits (paseq/munach 46:2;
+Puvah's dagesh with Radak vs the Hilleli 46:13); the 27 Egypt-ward
+descents exact; the two-comings stress pair (46:26/27); the three
+bindings closed (Simeon soft / chariot hard); הורדהו pair (39:1/44:21);
+the harvest-pair invariant collision (8:22/45:6); the healed speech
+(37:4→45:15).

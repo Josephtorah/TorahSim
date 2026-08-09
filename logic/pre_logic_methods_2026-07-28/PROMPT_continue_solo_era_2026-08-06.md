@@ -754,6 +754,39 @@ EXCLUDED from the sweep, owner to rule).
 NEXT candidates on owner word: fold hook into freeze_ritual; corpus HTML
 report; more settlement links as owner reviews the open census.
 
+## RUN FWD-2 COMPLETE (2026-08-09, owner: "do the next 5 blocks") — 72 FROZEN
+gen_65_first_descent (Gen 42) · gen_66_second_descent (43) ·
+gen_67_cup_and_surety (44) · gen_68_i_am_yosef (45) ·
+gen_69_descent_seventy (46). 65 oral claims 65/0/0, zero fetches;
+regression 72/72; ALL_UNITS + CORPUS_TRUTH green. WORLD refolded:
+1,283 facts · 247 demands · 83 settled (75 in-unit + 8 AUTHORED
+LINKS: cupbearer, flood, deliverance[unc], carrying→43:26,
+dismissal→45:25, substitution→45:3[unc — transcended-not-granted,
+owner may re-rule], prayer→45:25, summons→46:6) · 164 OPEN · hash
+c4105f60451db14a. MACHINE ARC: dead-by-revision class debuts both
+directions (Joseph 42:16; Jacob 43:2); dead-by-refusal (Reuben's
+pledge); two same-verse discharges at the unmasking (45:1, 45:4);
+gen_69 = 2 DECLAREs 0 RESULTs (the divine fear-not + the scripted
+answer, both open by design); the seventy-ledger SECTION (REGISTRY 0
+by restraint — the ledger lists, it does not install). ORAL MARQUEE:
+the DAGESHED ALEF in-stream (ויביאו 43:26, the Masorah's four);
+מצרימה = 27 exact (the Ramah); the two-comings stress pair (46:26/27
+end/fore, MS's upper-above-lower-below); the three bindings CLOSED
+(Simeon chataf-segol 42:24 / chariot bare-sheva 46:29; Exod 14:6
+armed); הורדהו pair (the Ishmaelites' deed / the father's plea);
+ketiv/qere on the bow-word (43:28, two tokens in-stream); the seven
+full Benjamins exact; the two lean tellings closed at 45:26; the
+harvest-pair collision resolved (8:22/45:6); the healed speech
+(37:4→45:15); TWO mark-splits carried named (paseq/munach at
+Jacob-Jacob; Puvah's vav with RADAK against the Hilleli). Tooling:
+unitgen split-fallback aligned to verify_text's mark-rank rule;
+build scripts build_gen65..69_{unit,manifest}.py in scratchpad.
+Audits AUDIT_gen_65..69_2026-08-09.md; FETCHLOG entry. NOT
+COMMITTED — awaiting owner word. NEXT on owner word: Gen 47+ (the
+scripted answer performs at 47:3; Goshen ratified 47:6; the fifth
+institutionalized 47:13-26 — gen_64's watchlist), Exod 1:1 names-
+header armed by the seventy-ledger.
+
 ## DISCLOSURE (never commit to main repo; owner's private docs)
 "God's Open Source Software Project" (LeBlanc_Epic_Certainty_layperson doc)
 has its own PRIVATE git repo inside Disclosure/. EVERY edit = diff in thread
