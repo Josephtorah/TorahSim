@@ -781,8 +781,10 @@ harvest-pair collision resolved (8:22/45:6); the healed speech
 Jacob-Jacob; Puvah's vav with RADAK against the Hilleli). Tooling:
 unitgen split-fallback aligned to verify_text's mark-rank rule;
 build scripts build_gen65..69_{unit,manifest}.py in scratchpad.
-Audits AUDIT_gen_65..69_2026-08-09.md; FETCHLOG entry. NOT
-COMMITTED — awaiting owner word. NEXT on owner word: Gen 47+ (the
+Audits AUDIT_gen_65..69_2026-08-09.md; FETCHLOG entry. COMMITTED
+369517e + compaction stamp (2026-08-09; origin synced; tree clean
+except grok-mockups/, elijah_docket gitlink, open_ledger/ — all
+owner-ruled exclusions) · COMPACTION POINT #13. NEXT on owner word: Gen 47+ (the
 scripted answer performs at 47:3; Goshen ratified 47:6; the fifth
 institutionalized 47:13-26 — gen_64's watchlist), Exod 1:1 names-
 header armed by the seventy-ledger.
