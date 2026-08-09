@@ -731,3 +731,33 @@ the Torah (the Ramah's rule verified, 49:21); the two lean deaths —
 Aaron's and Moses' alone (50:16 rule); the paqod-yifqod password ×3
 ending at Exod 13:19 (the bones-demand's receipt pre-armed); MS's
 colophon carried ("Complete and finished is the book of Genesis").
+
+## 2026-08-09 — RUN FWD-4 (exo_01-05, Exod 1-5): EXODUS OPENS
+In-pipeline oral audits for the run's five blocks (owner order "do the
+first 5 blocks of exodus"): exo_01_names_and_midwives (Exod 1, 13
+rows), exo_02_drawn_from_the_water (2, 13), exo_03_bush_and_name (3,
+13), exo_04_signs_and_firstborn (4, 13), exo_05_bricks_without_straw
+(5, 13) — 65 claims, 65 VERIFIED / 0 FAILED / 0 UNCHECKABLE, zero web
+fetches (local mirror only). 81 frozen units; regression 81/81;
+ALL_UNITS + CORPUS_TRUTH green (world at 1,451 facts, 174 open
+demands, 14 authored settlement links — 2 new: elders-script →
+Exod 4:29, court-script → Exod 5:3 — hash e4e113a6e3b4a92c).
+Marquees: the lean midwives (the printed Masorah's "unique" ruled an
+error — full-form census EMPTY, nine lean stations); the TWO ARKS
+(תבת "ark of" — Noah's gopher-ark Gen 6:14 and the reed-basket Exod
+2:3, the Torah's only pair of the lean construct); the Name in the
+FINALS of the name-question (3:13, לי מה שמו מה) and in the INITIALS
+of the brother's appointment (4:14, ידבר הוא וגם הנה) — twin
+mechanical crowns; the password's past tense (פקד פקדתי 3:16
+completing the four-station stream file from Gen 50:24-25 to Exod
+13:19); the holy ground's two unique-full words (רגליך/עומד, 3:5);
+the strike-word all-full with two Masorot ruled corruptions (והכיתי
+×3); Moses-Moses without the pause-line (the four doubled names);
+the double-stroke's five-station census (5:15, the Torah's rarest
+accent); the BABEL DOUBLE (bricks-pair Gen 11:3/Exod 5:18 +
+scatter-pair Gen 11:8/Exod 5:12); Abel's cry-word at the quota (Gen
+4:10/Exod 5:8); the three ill-dealings in three spellings (5:22);
+a genuine stream-vs-chain split carried named (the second throw-word
+of 4:3 — the Ramah's eight-lean list vs the stream's full letter).
+Blocks ran ~11-14 minutes each (run start 13:49, block 5 frozen
+~15:00).
