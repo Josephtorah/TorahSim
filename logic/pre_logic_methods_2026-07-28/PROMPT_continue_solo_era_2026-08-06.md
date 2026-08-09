@@ -834,8 +834,10 @@ is the book of Genesis — praise to the Former of beginnings").
 Tooling: NAME-op scenario base clause = "REGISTRY 1 writes" (the
 gen_45-remediation pattern). Build scripts
 build_gen70..73_{unit,manifest}.py in scratchpad. Audits
-AUDIT_gen_70..73_2026-08-09.md; FETCHLOG entry. NOT YET COMMITTED —
-awaiting owner word. OPEN QUEUE at book-close (16): the bones (Exod
+AUDIT_gen_70..73_2026-08-09.md; FETCHLOG entry. COMMITTED d06888f +
+state-doc stamp (2026-08-09; origin synced; tree clean except
+grok-mockups/, elijah_docket gitlink, open_ledger/ — all owner-ruled
+exclusions) · COMPACTION POINT #14 (Genesis complete). OPEN QUEUE at book-close (16): the bones (Exod
 13:19 armed); the refused right-hand (48:18, permanent by class);
 the divine fear-not (46:3) + fear-not/quarrel-ban class (43:23,
 45:24); Tamar's execution-order (38:24, superseded); the
