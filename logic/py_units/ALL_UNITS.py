@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""ALL_UNITS.py — frozen only (gen_69 frozen 2026-08-09; 72 frozen units)."""
+"""ALL_UNITS.py — frozen only (gen_73 frozen 2026-08-09; 76 frozen units)."""
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
@@ -19628,6 +19628,1346 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 5
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: gen_70_goshen_and_the_fifth
+###############################################################################
+
+m = Machine("gen_70_goshen_and_the_fifth")
+
+# -------------------------- Gen.47.1 · THE_BRIEFING_DELIVERED --------------
+# וַיָּבֹא יוֹסֵף וַיַּגֵּד לְפַרְעֹה וַיֹּאמֶר אָבִי וְאַחַי וְצֹאנָם
+# וּבְקָרָם וְכָל־אֲשֶׁר לָהֶם בָּאוּ מֵאֶרֶץ כְּנָעַן וְהִנָּם בְּאֶרֶץ
+# גֹּשֶׁן
+# "[EN-AID] And Joseph came and told Pharaoh, and said: My father and my
+# brothers, with their flocks and their herds and all that is theirs, have
+# come from the land of Canaan; and behold, they are in the land of Goshen."
+m.step("Gen.47.1")
+# ‹וַיָּבֹא יוֹסֵף וַיַּגֵּד לְפַרְעֹה› (“and-come/bring Joseph and-tell to-
+# Pharaoh”) — fact holds: and-tell-to-Pharaoh-come/bring-from-earth-Canaan
+m.fact("va_yaged_le_faro_bau_me_eretz_kenaan")
+
+# -------------------------- Gen.47.2 · FIVE_FROM_THE_EDGE ------------------
+# וּמִקְצֵה אֶחָיו לָקַח חֲמִשָּׁה אֲנָשִׁים וַיַּצִּגֵם לִפְנֵי פַרְעֹה
+# "[EN-AID] And from the edge of his brothers he took five men, and
+# presented them before Pharaoh."
+m.step("Gen.47.2")
+# ‹וּמִקְצֵה אֶחָיו לָקַח חֲמִשָּׁה אֲנָשִׁים› (“and-from-end brother-
+# him/its take five man”) — fact holds: five-man-lifne-Pharaoh
+m.fact("chamisha_anashim_lifne_faro")
+
+# -------------------------- Gen.47.3 · THE_SCRIPT_PERFORMED ----------------
+# וַיֹּאמֶר פַּרְעֹה אֶל־אֶחָיו מַה־מַּעֲשֵׂיכֶם וַיֹּאמְרוּ אֶל־פַּרְעֹה
+# רֹעֵה צֹאן עֲבָדֶיךָ גַּם־אֲנַחְנוּ גַּם־אֲבוֹתֵינוּ
+# "[EN-AID] And Pharaoh said to his brothers: What is your work? And they
+# said to Pharaoh: Your servants are a shepherd of flocks, both we and our
+# fathers."
+m.step("Gen.47.3")
+# ‹רֹעֵה צֹאן עֲבָדֶיךָ גַּם־אֲנַחְנוּ גַּם־אֲבוֹתֵינוּ› (“graze flock
+# servant-you/your also we also father-us/our”) — fact holds: graze-flock-
+# avadekha-also-we-also-avotenu
+m.fact("roe_tzon_avadekha_gam_anachnu_gam_avotenu")
+
+# -------------------------- Gen.47.4 · LET_US_DWELL_IN_GOSHEN --------------
+# וַיֹּאמְרוּ אֶל־פַּרְעֹה לָגוּר בָּאָרֶץ בָּאנוּ כִּי־אֵין מִרְעֶה לַצֹּאן
+# אֲשֶׁר לַעֲבָדֶיךָ כִּי־כָבֵד הָרָעָב בְּאֶרֶץ כְּנָעַן וְעַתָּה
+# יֵשְׁבוּ־נָא עֲבָדֶיךָ בְּאֶרֶץ גֹּשֶׁן
+# "[EN-AID] And they said to Pharaoh: To sojourn in the land we have come,
+# for there is no pasture for the flock of your servants, for the famine is
+# heavy in the land of Canaan; and now, let your servants dwell, pray, in
+# the land of Goshen."
+m.step("Gen.47.4")
+# ‹וְעַתָּה יֵשְׁבוּ־נָא עֲבָדֶיךָ בְּאֶרֶץ גֹּשֶׁן› (“and-now dwell/sit
+# please servant-you/your in-earth Goshen”) — bene-Jacob speaks a demand —
+# LET: dwell/sit-please-avadekha-in-earth-Goshen
+m.declare("bene_yaaqov", "LET",
+          "yeshvu_na_avadekha_be_eretz_goshen")
+
+# -------------------------- Gen.47.5 · THEY_HAVE_COME_TO_YOU ---------------
+# וַיֹּאמֶר פַּרְעֹה אֶל־יוֹסֵף לֵאמֹר אָבִיךָ וְאַחֶיךָ בָּאוּ אֵלֶיךָ
+# "[EN-AID] And Pharaoh said to Joseph, saying: Your father and your
+# brothers have come to you."
+m.step("Gen.47.5")
+# ‹אָבִיךָ וְאַחֶיךָ בָּאוּ אֵלֶיךָ› (“father-you/your and-brother-you/your
+# come/bring to-you/your”) — fact holds: avikha-and-achekha-come/bring-to-
+# you
+m.fact("avikha_ve_achekha_bau_elekha")
+
+# -------------------------- Gen.47.6 · THE_LAND_BEFORE_YOU -----------------
+# אֶרֶץ מִצְרַיִם לְפָנֶיךָ הִוא בְּמֵיטַב הָאָרֶץ הוֹשֵׁב אֶת־אָבִיךָ
+# וְאֶת־אַחֶיךָ יֵשְׁבוּ בְּאֶרֶץ גֹּשֶׁן וְאִם־יָדַעְתָּ וְיֶשׁ־בָּם
+# אַנְשֵׁי־חַיִל וְשַׂמְתָּם שָׂרֵי מִקְנֶה עַל־אֲשֶׁר־לִי
+# "[EN-AID] The land of Egypt is before you: in the best of the land settle
+# your father and your brothers; let them dwell in the land of Goshen. And
+# if you know that there are able men among them, set them as chiefs of
+# livestock over what is mine."
+m.step("Gen.47.6")
+# ‹יֵשְׁבוּ בְּאֶרֶץ גֹּשֶׁן› (“dwell/sit in-earth Goshen”) — demand settled
+# (popped from the queue): dwell/sit-please-avadekha-in-earth-Goshen
+m.result("yeshvu_na_avadekha_be_eretz_goshen", tmark="t1")
+
+# -------------------------- Gen.47.7 · JACOB_BLESSES_PHARAOH ---------------
+# וַיָּבֵא יוֹסֵף אֶת־יַעֲקֹב אָבִיו וַיַּעֲמִדֵהוּ לִפְנֵי פַרְעֹה
+# וַיְבָרֶךְ יַעֲקֹב אֶת־פַּרְעֹה
+# "[EN-AID] And Joseph brought Jacob his father, and stood him before
+# Pharaoh; and Jacob blessed Pharaoh."
+m.step("Gen.47.7")
+# ‹וַיְבָרֶךְ יַעֲקֹב אֶת־פַּרְעֹה› (“and-bless Jacob obj-marker Pharaoh”) —
+# blessing: Jacob blesses Pharaoh
+m.bless("yaaqov", "paro")
+
+# -------------------------- Gen.47.8 · HOW_MANY_YOUR_DAYS ------------------
+# וַיֹּאמֶר פַּרְעֹה אֶל־יַעֲקֹב כַּמָּה יְמֵי שְׁנֵי חַיֶּיךָ
+# "[EN-AID] And Pharaoh said to Jacob: How many are the days of the years of
+# your life?"
+m.step("Gen.47.8")
+# ‹כַּמָּה יְמֵי שְׁנֵי חַיֶּיךָ› (“like-what day years alive-you/your”) —
+# fact holds: kama-day-years-your-life
+m.fact("kama_yeme_shene_chayekha")
+
+# -------------------------- Gen.47.9 · FEW_AND_EVIL ------------------------
+# וַיֹּאמֶר יַעֲקֹב אֶל־פַּרְעֹה יְמֵי שְׁנֵי מְגוּרַי שְׁלֹשִׁים וּמְאַת
+# שָׁנָה מְעַט וְרָעִים הָיוּ יְמֵי שְׁנֵי חַיַּי וְלֹא הִשִּׂיגוּ אֶת־יְמֵי
+# שְׁנֵי חַיֵּי אֲבֹתַי בִּימֵי מְגוּרֵיהֶם
+# "[EN-AID] And Jacob said to Pharaoh: The days of the years of my
+# sojournings are a hundred and thirty years; few and evil have been the
+# days of the years of my life, and they have not reached the days of the
+# years of the lives of my fathers in the days of their sojournings."
+m.step("Gen.47.9")
+# ‹מְעַט וְרָעִים הָיוּ יְמֵי שְׁנֵי חַיַּי› (“little and-bad be day years
+# alive-me/my”) — fact holds: hundred-and-bad-day-years-chayai
+m.fact("meat_ve_raim_yeme_shene_chayai")
+
+# -------------------------- Gen.47.10 · THE_SECOND_BLESSING ----------------
+# וַיְבָרֶךְ יַעֲקֹב אֶת־פַּרְעֹה וַיֵּצֵא מִלִּפְנֵי פַרְעֹה
+# "[EN-AID] And Jacob blessed Pharaoh, and went out from before Pharaoh."
+m.step("Gen.47.10")
+# ‹וַיְבָרֶךְ יַעֲקֹב אֶת־פַּרְעֹה› (“and-bless Jacob obj-marker Pharaoh”) —
+# event: berakh — agent Jacob; theme Pharaoh
+m.event("berakh", agent="yaaqov", themes=["paro"])
+
+# -------------------------- Gen.47.11 · SETTLED_IN_RAMESES -----------------
+# וַיּוֹשֵׁב יוֹסֵף אֶת־אָבִיו וְאֶת־אֶחָיו וַיִּתֵּן לָהֶם אֲחֻזָּה
+# בְּאֶרֶץ מִצְרַיִם בְּמֵיטַב הָאָרֶץ בְּאֶרֶץ רַעְמְסֵס כַּאֲשֶׁר צִוָּה
+# פַרְעֹה
+# "[EN-AID] And Joseph settled his father and his brothers, and gave them a
+# holding in the land of Egypt, in the best of the land, in the land of
+# Rameses, as Pharaoh had commanded."
+m.step("Gen.47.11")
+# ‹בְּמֵיטַב הָאָרֶץ בְּאֶרֶץ רַעְמְסֵס› (“in-best-part the-earth in-earth
+# Raamses”) — fact holds: something-seized-in-earth-Raamses-kaasher-command-
+# Pharaoh
+m.fact("achuza_be_eretz_ramses_kaasher_tziva_faro")
+
+# -------------------------- Gen.47.12 · BREAD_FOR_THE_MOUTHS ---------------
+# וַיְכַלְכֵּל יוֹסֵף אֶת־אָבִיו וְאֶת־אֶחָיו וְאֵת כָּל־בֵּית אָבִיו לֶחֶם
+# לְפִי הַטָּף
+# "[EN-AID] And Joseph sustained his father, and his brothers, and all his
+# father's house, with bread, by the mouth of the little ones."
+m.step("Gen.47.12")
+# ‹לֶחֶם לְפִי הַטָּף› (“food to-mouth the-family”) — fact holds: and-keep-
+# in-food-lefi-hataf
+m.fact("va_yekhalkel_lechem_lefi_hataf")
+
+# -------------------------- Gen.47.13 · THE_LAND_LANGUISHES ----------------
+# וְלֶחֶם אֵין בְּכָל־הָאָרֶץ כִּי־כָבֵד הָרָעָב מְאֹד וַתֵּלַהּ אֶרֶץ
+# מִצְרַיִם וְאֶרֶץ כְּנַעַן מִפְּנֵי הָרָעָב
+# "[EN-AID] And there was no bread in all the land, for the famine was very
+# heavy; and the land of Egypt and the land of Canaan languished before the
+# famine."
+m.step("Gen.47.13")
+# ‹וַתֵּלַהּ אֶרֶץ מִצְרַיִם וְאֶרֶץ כְּנַעַן מִפְּנֵי הָרָעָב› (“and-be-
+# rabid earth Egypt and-earth Canaan from-face the-hunger”) — fact holds:
+# and-telah-earth-Egypt-and-earth-Canaan
+m.fact("va_telah_eretz_mitzrayim_ve_eretz_kenaan")
+
+# -------------------------- Gen.47.14 · THE_SILVER_GATHERED ----------------
+# וַיְלַקֵּט יוֹסֵף אֶת־כָּל־הַכֶּסֶף הַנִּמְצָא בְאֶרֶץ־מִצְרַיִם וּבְאֶרֶץ
+# כְּנַעַן בַּשֶּׁבֶר אֲשֶׁר־הֵם שֹׁבְרִים וַיָּבֵא יוֹסֵף אֶת־הַכֶּסֶף
+# בֵּיתָה פַרְעֹה
+# "[EN-AID] And Joseph gleaned all the silver found in the land of Egypt and
+# in the land of Canaan for the grain which they were buying; and Joseph
+# brought the silver into Pharaoh's house."
+m.step("Gen.47.14")
+# ‹וַיָּבֵא יוֹסֵף אֶת־הַכֶּסֶף בֵּיתָה פַרְעֹה› (“and-come/bring Joseph
+# obj-marker the-silver house-ward Pharaoh”) — fact holds: all-the-silver-
+# beta-Pharaoh
+m.fact("kol_ha_kesef_beta_faro")
+
+# -------------------------- Gen.47.15 · GIVE_US_BREAD ----------------------
+# וַיִּתֹּם הַכֶּסֶף מֵאֶרֶץ מִצְרַיִם וּמֵאֶרֶץ כְּנַעַן וַיָּבֹאוּ
+# כָל־מִצְרַיִם אֶל־יוֹסֵף לֵאמֹר הָבָה־לָּנוּ לֶחֶם וְלָמָּה נָמוּת
+# נֶגְדֶּךָ כִּי אָפֵס כָּסֶף
+# "[EN-AID] And the silver was spent from the land of Egypt and from the
+# land of Canaan; and all Egypt came to Joseph, saying: Give us bread — and
+# why should we die before you, for the silver is gone."
+m.step("Gen.47.15")
+# ‹הָבָה־לָּנוּ לֶחֶם› (“give-ward to-us/our food”) — Egypt speaks a demand
+# — LET: hava-lanu-food
+m.declare("mitzrayim", "LET",
+          "hava_lanu_lechem")
+
+# -------------------------- Gen.47.16 · GIVE_YOUR_LIVESTOCK ----------------
+# וַיֹּאמֶר יוֹסֵף הָבוּ מִקְנֵיכֶם וְאֶתְּנָה לָכֶם בְּמִקְנֵיכֶם אִם־אָפֵס
+# כָּסֶף
+# "[EN-AID] And Joseph said: Give your livestock, and I will give you for
+# your livestock, if the silver is gone."
+m.step("Gen.47.16")
+# ‹הָבוּ מִקְנֵיכֶם וְאֶתְּנָה לָכֶם בְּמִקְנֵיכֶם› (“give something-bought-
+# you/your(pl) and-set to-you/your(pl) in-something-bought-you/your”) — fact
+# holds: give-miqnekhem-and-set-lakhem
+m.fact("havu_miqnekhem_ve_etna_lakhem")
+
+# -------------------------- Gen.47.17 · BREAD_FOR_THE_HERDS ----------------
+# וַיָּבִיאוּ אֶת־מִקְנֵיהֶם אֶל־יוֹסֵף וַיִּתֵּן לָהֶם יוֹסֵף לֶחֶם
+# בַּסּוּסִים וּבְמִקְנֵה הַצֹּאן וּבְמִקְנֵה הַבָּקָר וּבַחֲמֹרִים
+# וַיְנַהֲלֵם בַּלֶּחֶם בְּכָל־מִקְנֵהֶם בַּשָּׁנָה הַהִוא
+# "[EN-AID] And they brought their livestock to Joseph; and Joseph gave them
+# bread for the horses, and for the livestock of the flocks, and for the
+# livestock of the herds, and for the donkeys; and he carried them with
+# bread for all their livestock that year."
+m.step("Gen.47.17")
+# ‹וַיְנַהֲלֵם בַּלֶּחֶם בְּכָל־מִקְנֵהֶם› (“and-run-with-asparkle-
+# them/their in-food in-all something-bought-them/their”) — demand settled
+# (popped from the queue): hava-lanu-food
+m.result("hava_lanu_lechem", tmark="t2")
+
+# -------------------------- Gen.47.18 · BODY_AND_GROUND --------------------
+# וַתִּתֹּם הַשָּׁנָה הַהִוא וַיָּבֹאוּ אֵלָיו בַּשָּׁנָה הַשֵּׁנִית
+# וַיֹּאמְרוּ לוֹ לֹא־נְכַחֵד מֵאֲדֹנִי כִּי אִם־תַּם הַכֶּסֶף וּמִקְנֵה
+# הַבְּהֵמָה אֶל־אֲדֹנִי לֹא נִשְׁאַר לִפְנֵי אֲדֹנִי בִּלְתִּי
+# אִם־גְּוִיָּתֵנוּ וְאַדְמָתֵנוּ
+# "[EN-AID] And that year ended, and they came to him the second year and
+# said to him: We will not hide from my lord that the silver is spent, and
+# the herds of beasts are my lord's; nothing is left before my lord but our
+# body and our ground."
+m.step("Gen.47.18")
+# ‹בִּלְתִּי אִם־גְּוִיָּתֵנוּ וְאַדְמָתֵנוּ› (“failure-of if body-us/our
+# and-ground-us/our”) — fact holds: failure-of-if-geviyatenu-and-admatenu
+m.fact("bilti_im_geviyatenu_ve_admatenu")
+
+# -------------------------- Gen.47.19 · BUY_US_GIVE_SEED -------------------
+# לָמָּה נָמוּת לְעֵינֶיךָ גַּם־אֲנַחְנוּ גַּם אַדְמָתֵנוּ קְנֵה־אֹתָנוּ
+# וְאֶת־אַדְמָתֵנוּ בַּלָּחֶם וְנִהְיֶה אֲנַחְנוּ וְאַדְמָתֵנוּ עֲבָדִים
+# לְפַרְעֹה וְתֶן־זֶרַע וְנִחְיֶה וְלֹא נָמוּת וְהָאֲדָמָה לֹא תֵשָׁם
+# "[EN-AID] Why should we die before your eyes, both we and our ground too?
+# Buy us and our ground for bread, and we with our ground will be servants
+# to Pharaoh; and give seed, that we may live and not die, and the ground
+# not be desolate."
+m.step("Gen.47.19")
+# ‹קְנֵה־אֹתָנוּ וְאֶת־אַדְמָתֵנוּ בַּלָּחֶם› (“possessor obj-marker-us/our
+# and-obj-marker ground-us/our in-food”) — Egypt speaks a demand — LET:
+# possessor-otanu-and-set-seed
+m.declare("mitzrayim", "LET",
+          "qene_otanu_ve_ten_zera")
+
+# -------------------------- Gen.47.20 · THE_LAND_TO_PHARAOH ----------------
+# וַיִּקֶן יוֹסֵף אֶת־כָּל־אַדְמַת מִצְרַיִם לְפַרְעֹה כִּי־מָכְרוּ
+# מִצְרַיִם אִישׁ שָׂדֵהוּ כִּי־חָזַק עֲלֵהֶם הָרָעָב וַתְּהִי הָאָרֶץ
+# לְפַרְעֹה
+# "[EN-AID] And Joseph bought all the ground of Egypt for Pharaoh, for Egypt
+# sold every man his field, for the famine was strong upon them; and the
+# land became Pharaoh's."
+m.step("Gen.47.20")
+# ‹וַיִּקֶן יוֹסֵף אֶת־כָּל־אַדְמַת מִצְרַיִם לְפַרְעֹה› (“and-erect Joseph
+# obj-marker all ground Egypt to-Pharaoh”) — fact holds: and-be-the-earth-
+# to-Pharaoh
+m.fact("va_tehi_ha_aretz_le_faro")
+
+# -------------------------- Gen.47.21 · THE_PEOPLE_TO_CITIES ---------------
+# וְאֶת־הָעָם הֶעֱבִיר אֹתוֹ לֶעָרִים מִקְצֵה גְבוּל־מִצְרַיִם וְעַד־קָצֵהוּ
+# "[EN-AID] And the people — he moved them to the cities, from one end of
+# the border of Egypt to its other end."
+m.step("Gen.47.21")
+# ‹וְאֶת־הָעָם הֶעֱבִיר אֹתוֹ לֶעָרִים› (“and-obj-marker the-people pass-
+# over obj-marker-him/its to-city”) — fact holds: pass-over-it-to-city
+m.fact("heevir_oto_le_arim")
+
+# -------------------------- Gen.47.22 · THE_PRIESTS_EXEMPT -----------------
+# רַק אַדְמַת הַכֹּהֲנִים לֹא קָנָה כִּי חֹק לַכֹּהֲנִים מֵאֵת פַּרְעֹה
+# וְאָכְלוּ אֶת־חֻקָּם אֲשֶׁר נָתַן לָהֶם פַּרְעֹה עַל־כֵּן לֹא מָכְרוּ
+# אֶת־אַדְמָתָם
+# "[EN-AID] Only the ground of the priests he did not buy, for the priests
+# had a statute-portion from Pharaoh, and they ate their statute-portion
+# which Pharaoh gave them; therefore they did not sell their ground."
+m.step("Gen.47.22")
+# ‹רַק אַדְמַת הַכֹּהֲנִים לֹא קָנָה› (“leanness ground the-priest not
+# possessor”) — fact holds: leanness-ground-the-priest-not-possessor
+m.fact("raq_admat_ha_kohanim_lo_qana")
+
+# -------------------------- Gen.47.23 · HERE_IS_SEED -----------------------
+# וַיֹּאמֶר יוֹסֵף אֶל־הָעָם הֵן קָנִיתִי אֶתְכֶם הַיּוֹם וְאֶת־אַדְמַתְכֶם
+# לְפַרְעֹה הֵא־לָכֶם זֶרַע וּזְרַעְתֶּם אֶת־הָאֲדָמָה
+# "[EN-AID] And Joseph said to the people: Behold, I have bought you this
+# day and your ground for Pharaoh; here is seed for you — and you shall sow
+# the ground."
+m.step("Gen.47.23")
+# ‹הֵא־לָכֶם זֶרַע› (“lo! to-you/your(pl) seed”) — demand settled (popped
+# from the queue): possessor-otanu-and-set-seed
+m.result("qene_otanu_ve_ten_zera", tmark="t3")
+
+# -------------------------- Gen.47.24 · THE_FIFTH_NAMED --------------------
+# וְהָיָה בַּתְּבוּאֹת וּנְתַתֶּם חֲמִישִׁית לְפַרְעֹה וְאַרְבַּע הַיָּדֹת
+# יִהְיֶה לָכֶם לְזֶרַע הַשָּׂדֶה וּלְאָכְלְכֶם וְלַאֲשֶׁר בְּבָתֵּיכֶם
+# וְלֶאֱכֹל לְטַפְּכֶם
+# "[EN-AID] And it shall be at the ingatherings, that you shall give a fifth
+# to Pharaoh; and four hands shall be yours: for seed of the field, and for
+# your food, and for those in your houses, and for your little ones to eat."
+m.step("Gen.47.24")
+# ‹וּנְתַתֶּם חֲמִישִׁית לְפַרְעֹה› (“and-set fifth to-Pharaoh”) — fact
+# holds: and-set-fifth-to-Pharaoh
+m.fact("u_netatem_chamishit_le_faro")
+
+# -------------------------- Gen.47.25 · YOU_HAVE_KEPT_US_ALIVE -------------
+# וַיֹּאמְרוּ הֶחֱיִתָנוּ נִמְצָא־חֵן בְּעֵינֵי אֲדֹנִי וְהָיִינוּ עֲבָדִים
+# לְפַרְעֹה
+# "[EN-AID] And they said: You have kept us alive; let us find favor in the
+# eyes of my lord, and we will be servants to Pharaoh."
+m.step("Gen.47.25")
+# ‹וַיֹּאמְרוּ הֶחֱיִתָנוּ› (“and-say live-us/our”) — fact holds:
+# hecheyitanu-find-graciousness
+m.fact("hecheyitanu_nimtza_chen")
+
+# -------------------------- Gen.47.26 · THE_FIFTH_A_STATUTE ----------------
+# וַיָּשֶׂם אֹתָהּ יוֹסֵף לְחֹק עַד־הַיּוֹם הַזֶּה עַל־אַדְמַת מִצְרַיִם
+# לְפַרְעֹה לַחֹמֶשׁ רַק אַדְמַת הַכֹּהֲנִים לְבַדָּם לֹא הָיְתָה לְפַרְעֹה
+# "[EN-AID] And Joseph set it as a statute to this day upon the ground of
+# Egypt: to Pharaoh a fifth; only the ground of the priests alone did not
+# become Pharaoh's."
+m.step("Gen.47.26")
+# ‹וַיָּשֶׂם אֹתָהּ יוֹסֵף לְחֹק עַד־הַיּוֹם הַזֶּה עַל־אַדְמַת מִצְרַיִם
+# לְפַרְעֹה לַחֹמֶשׁ› (“and-put/set obj-marker-her/its Joseph to-enactment
+# until the-day the-this over ground Egypt to-Pharaoh to-fifth-tax”) —
+m.statute("BIND", "le_faro_la_chomesh")
+
+# -------------------------- Gen.47.27 · FRUITFUL_IN_GOSHEN -----------------
+# וַיֵּשֶׁב יִשְׂרָאֵל בְּאֶרֶץ מִצְרַיִם בְּאֶרֶץ גֹּשֶׁן וַיֵּאָחֲזוּ בָהּ
+# וַיִּפְרוּ וַיִּרְבּוּ מְאֹד
+# "[EN-AID] And Israel dwelt in the land of Egypt, in the land of Goshen;
+# and they took holding in it, and were fruitful, and multiplied greatly."
+m.step("Gen.47.27")
+# ‹וַיֵּאָחֲזוּ בָהּ וַיִּפְרוּ וַיִּרְבּוּ מְאֹד› (“and-seize in-her/its
+# and-be-fruitful and-multiply very”) — fact holds: and-be-fruitful-and-
+# multiply-very
+m.fact("va_yifru_va_yirbu_meod")
+
+# -------------------------- Gen.47.28 · SEVENTEEN_YEARS --------------------
+# וַיְחִי יַעֲקֹב בְּאֶרֶץ מִצְרַיִם שְׁבַע עֶשְׂרֵה שָׁנָה וַיְהִי
+# יְמֵי־יַעֲקֹב שְׁנֵי חַיָּיו שֶׁבַע שָׁנִים וְאַרְבָּעִים וּמְאַת שָׁנָה
+# "[EN-AID] And Jacob lived in the land of Egypt seventeen years; and the
+# days of Jacob, the years of his life, were seven years and forty and a
+# hundred years."
+m.step("Gen.47.28")
+# ‹וַיְחִי יַעֲקֹב בְּאֶרֶץ מִצְרַיִם שְׁבַע עֶשְׂרֵה שָׁנָה› (“and-live
+# Jacob in-earth Egypt seven -teen years”) — fact holds: day-Jacob-seven-
+# forty-and-hundred-years
+m.fact("yeme_yaaqov_sheva_arbaim_u_meat_shana")
+
+# -------------------------- Gen.47.29 · THE_THIGH_AND_THE_BAN --------------
+# וַיִּקְרְבוּ יְמֵי־יִשְׂרָאֵל לָמוּת וַיִּקְרָא לִבְנוֹ לְיוֹסֵף וַיֹּאמֶר
+# לוֹ אִם־נָא מָצָאתִי חֵן בְּעֵינֶיךָ שִׂים־נָא יָדְךָ תַּחַת יְרֵכִי
+# וְעָשִׂיתָ עִמָּדִי חֶסֶד וֶאֱמֶת אַל־נָא תִקְבְּרֵנִי בְּמִצְרָיִם
+# "[EN-AID] And the days of Israel drew near to die; and he called his son
+# Joseph, and said to him: If, pray, I have found favor in your eyes, put,
+# pray, your hand under my thigh, and do with me kindness and truth: do not,
+# pray, bury me in Egypt."
+m.step("Gen.47.29")
+# ‹אַל־נָא תִקְבְּרֵנִי בְּמִצְרָיִם› (“do-not please inter-me/my in-Egypt”)
+# — Israel speaks a demand — LET-NOT: over-please-tiqbreni-in-Egypt
+m.declare("yisrael", "LET-NOT",
+          "al_na_tiqbreni_be_mitzrayim")
+
+# -------------------------- Gen.47.30 · CARRY_ME_AND_BURY_ME ---------------
+# וְשָׁכַבְתִּי עִם־אֲבֹתַי וּנְשָׂאתַנִי מִמִּצְרַיִם וּקְבַרְתַּנִי
+# בִּקְבֻרָתָם וַיֹּאמַר אָנֹכִי אֶעֱשֶׂה כִדְבָרֶךָ
+# "[EN-AID] And I will lie with my fathers, and you shall carry me from
+# Egypt, and bury me in their burying-place. And he said: I will do
+# according to your word."
+m.step("Gen.47.30")
+# ‹וּנְשָׂאתַנִי מִמִּצְרַיִם וּקְבַרְתַּנִי בִּקְבֻרָתָם› (“and-lift/carry-
+# me/my from-Egypt and-inter-me/my in-sepulture-them/their”) — Israel speaks
+# a demand — LET: and-qevartani-bi-qvuratam
+m.declare("yisrael", "LET",
+          "u_qevartani_bi_qvuratam")
+
+# -------------------------- Gen.47.31 · SWEAR_TO_ME ------------------------
+# וַיֹּאמֶר הִשָּׁבְעָה לִי וַיִּשָּׁבַע לוֹ וַיִּשְׁתַּחוּ יִשְׂרָאֵל
+# עַל־רֹאשׁ הַמִּטָּה
+# "[EN-AID] And he said: Swear to me. And he swore to him. And Israel bowed
+# upon the head of the bed."
+m.step("Gen.47.31")
+# ‹וַיֹּאמֶר הִשָּׁבְעָה לִי› (“and-say swear-ward to-me/my”) — Israel
+# speaks a demand — LET: hishava-to-me
+m.declare("yisrael", "LET",
+          "hishava_li")
+# ‹וַיִּשָּׁבַע לוֹ› (“and-swear to-him/its”) — demand settled (popped from
+# the queue): hishava-to-me
+m.result("hishava_li", tmark="t4")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == ['al_na_tiqbreni_be_mitzrayim', 'u_qevartani_bi_qvuratam']
+    assert len(m.SPECS["log"]) == 6
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted(['va_yaged_le_faro_bau_me_eretz_kenaan', 'chamisha_anashim_lifne_faro', 'roe_tzon_avadekha_gam_anachnu_gam_avotenu', 'avikha_ve_achekha_bau_elekha', 'kama_yeme_shene_chayekha', 'meat_ve_raim_yeme_shene_chayai', 'achuza_be_eretz_ramses_kaasher_tziva_faro', 'va_yekhalkel_lechem_lefi_hataf', 'va_telah_eretz_mitzrayim_ve_eretz_kenaan', 'kol_ha_kesef_beta_faro', 'havu_miqnekhem_ve_etna_lakhem', 'bilti_im_geviyatenu_ve_admatenu', 'va_tehi_ha_aretz_le_faro', 'heevir_oto_le_arim', 'raq_admat_ha_kohanim_lo_qana', 'u_netatem_chamishit_le_faro', 'hecheyitanu_nimtza_chen', 'statute: BIND(le_faro_la_chomesh)', 'va_yifru_va_yirbu_meod', 'yeme_yaaqov_sheva_arbaim_u_meat_shana'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 13
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: gen_71_crossed_hands
+###############################################################################
+
+m = Machine("gen_71_crossed_hands")
+
+# -------------------------- Gen.48.1 · YOUR_FATHER_IS_ILL ------------------
+# וַיְהִי אַחֲרֵי הַדְּבָרִים הָאֵלֶּה וַיֹּאמֶר לְיוֹסֵף הִנֵּה אָבִיךָ
+# חֹלֶה וַיִּקַּח אֶת־שְׁנֵי בָנָיו עִמּוֹ אֶת־מְנַשֶּׁה וְאֶת־אֶפְרָיִם
+# "[EN-AID] And it was after these things, that one said to Joseph: Behold,
+# your father is ill. And he took his two sons with him, Manasseh and
+# Ephraim."
+m.step("Gen.48.1")
+# ‹הִנֵּה אָבִיךָ חֹלֶה› (“behold father-you/your be-rubbed”) — fact holds:
+# behold-avikha-be-rubbed
+m.fact("hine_avikha_chole")
+
+# -------------------------- Gen.48.2 · STRENGTHENED_ON_THE_BED -------------
+# וַיַּגֵּד לְיַעֲקֹב וַיֹּאמֶר הִנֵּה בִּנְךָ יוֹסֵף בָּא אֵלֶיךָ
+# וַיִּתְחַזֵּק יִשְׂרָאֵל וַיֵּשֶׁב עַל־הַמִּטָּה
+# "[EN-AID] And one told Jacob, and said: Behold, your son Joseph comes to
+# you. And Israel strengthened himself, and sat upon the bed."
+m.step("Gen.48.2")
+# ‹וַיִּתְחַזֵּק יִשְׂרָאֵל וַיֵּשֶׁב עַל־הַמִּטָּה› (“and-fasten-upon
+# Israel and-dwell/sit over the-bed-forsleeping”) — fact holds: and-fasten-
+# upon-Israel-and-dwell/sit-over-the-bed-forsleeping
+m.fact("va_yitchazeq_yisrael_va_yeshev_al_ha_mita")
+
+# -------------------------- Gen.48.3 · EL_SHADAY_AT_LUZ --------------------
+# וַיֹּאמֶר יַעֲקֹב אֶל־יוֹסֵף אֵל שַׁדַּי נִרְאָה־אֵלַי בְּלוּז בְּאֶרֶץ
+# כְּנָעַן וַיְבָרֶךְ אֹתִי
+# "[EN-AID] And Jacob said to Joseph: El Shaddai appeared to me at Luz in
+# the land of Canaan, and blessed me."
+m.step("Gen.48.3")
+# ‹אֵל שַׁדַּי נִרְאָה־אֵלַי בְּלוּז› (“strength Almighty see to-me/my in-
+# Luz”) — fact holds: to-Almighty-see-elai-in-Luz
+m.fact("el_shaday_nira_elai_be_luz")
+
+# -------------------------- Gen.48.4 · THE_PROMISE_RECALLED ----------------
+# וַיֹּאמֶר אֵלַי הִנְנִי מַפְרְךָ וְהִרְבִּיתִךָ וּנְתַתִּיךָ לִקְהַל
+# עַמִּים וְנָתַתִּי אֶת־הָאָרֶץ הַזֹּאת לְזַרְעֲךָ אַחֲרֶיךָ אֲחֻזַּת
+# עוֹלָם
+# "[EN-AID] And He said to me: Behold, I will make you fruitful and multiply
+# you, and I will make you a company of peoples; and I will give this land
+# to your seed after you, an everlasting holding."
+m.step("Gen.48.4")
+# ‹אֲחֻזַּת עוֹלָם› (“something-seized forever”) — fact holds: something-
+# seized-forever-to-zarakha
+m.fact("achuzat_olam_le_zarakha")
+
+# -------------------------- Gen.48.5 · EPHRAIM_AND_MANASSEH_MINE -----------
+# וְעַתָּה שְׁנֵי־בָנֶיךָ הַנּוֹלָדִים לְךָ בְּאֶרֶץ מִצְרַיִם עַד־בֹּאִי
+# אֵלֶיךָ מִצְרַיְמָה לִי־הֵם אֶפְרַיִם וּמְנַשֶּׁה כִּרְאוּבֵן וְשִׁמְעוֹן
+# יִהְיוּ־לִי
+# "[EN-AID] And now, your two sons, who were born to you in the land of
+# Egypt before I came to you to Egypt — mine they are: Ephraim and Manasseh,
+# as Reuben and Simeon, shall be mine."
+m.step("Gen.48.5")
+# ‹אֶפְרַיִם וּמְנַשֶּׁה כִּרְאוּבֵן וְשִׁמְעוֹן יִהְיוּ־לִי› (“Ephraim and-
+# Manasseh like-Reuben and-Simeon be to-me/my”) — fact holds: Ephraim-and-
+# Manasseh-that-reuven-and-Simeon-be-to-me
+m.fact("efrayim_u_menashe_ki_reuven_ve_shimon_yihyu_li")
+
+# -------------------------- Gen.48.6 · AFTER_THEM_YOURS --------------------
+# וּמוֹלַדְתְּךָ אֲשֶׁר־הוֹלַדְתָּ אַחֲרֵיהֶם לְךָ יִהְיוּ עַל שֵׁם אֲחֵיהֶם
+# יִקָּרְאוּ בְּנַחֲלָתָם
+# "[EN-AID] And your offspring whom you beget after them shall be yours; by
+# the name of their brothers they shall be called in their inheritance."
+m.step("Gen.48.6")
+# ‹עַל שֵׁם אֲחֵיהֶם יִקָּרְאוּ בְּנַחֲלָתָם› (“over name brother-them/their
+# call in-inheritance-them/their”) — fact holds: over-name-achehem-call-in-
+# nachalatam
+m.fact("al_shem_achehem_yiqaru_be_nachalatam")
+
+# -------------------------- Gen.48.7 · RACHEL_ON_THE_ROAD ------------------
+# וַאֲנִי בְּבֹאִי מִפַּדָּן מֵתָה עָלַי רָחֵל בְּאֶרֶץ כְּנַעַן בַּדֶּרֶךְ
+# בְּעוֹד כִּבְרַת־אֶרֶץ לָבֹא אֶפְרָתָה וָאֶקְבְּרֶהָ שָּׁם בְּדֶרֶךְ
+# אֶפְרָת הִוא בֵּית לָחֶם
+# "[EN-AID] And I — when I came from Paddan, Rachel died on me in the land
+# of Canaan, on the road, while yet a stretch of land to come to Ephrath;
+# and I buried her there on the road of Ephrath — that is Bethlehem."
+m.step("Gen.48.7")
+# ‹בְּעוֹד כִּבְרַת־אֶרֶץ לָבֹא אֶפְרָתָה› (“in-still/again length earth to-
+# come/bring 'Ephrath”) — fact holds: die-alai-Rachel-come/bring-way/road
+m.fact("meta_alai_rachel_ba_derekh")
+
+# -------------------------- Gen.48.8 · WHO_ARE_THESE -----------------------
+# וַיַּרְא יִשְׂרָאֵל אֶת־בְּנֵי יוֹסֵף וַיֹּאמֶר מִי־אֵלֶּה
+# "[EN-AID] And Israel saw Joseph's sons, and said: Who are these?"
+m.step("Gen.48.8")
+# ‹וַיַּרְא יִשְׂרָאֵל אֶת־בְּנֵי יוֹסֵף› (“and-see Israel obj-marker son
+# Joseph”) — fact holds: and-see-Israel-obj-marker-son-Joseph
+m.fact("va_yar_yisrael_et_bene_yosef")
+
+# -------------------------- Gen.48.9 · TAKE_THEM_TO_ME ---------------------
+# וַיֹּאמֶר יוֹסֵף אֶל־אָבִיו בָּנַי הֵם אֲשֶׁר־נָתַן־לִי אֱלֹהִים בָּזֶה
+# וַיֹּאמַר קָחֶם־נָא אֵלַי וַאֲבָרֲכֵם
+# "[EN-AID] And Joseph said to his father: They are my sons, whom God has
+# given me in this place. And he said: Take them, pray, to me, and I will
+# bless them."
+m.step("Gen.48.9")
+# ‹קָחֶם־נָא אֵלַי וַאֲבָרֲכֵם› (“take-them/their please to-me/my and-bless-
+# them/their”) — Israel speaks a demand — LET: qachem-please-elai
+m.declare("yisrael", "LET",
+          "qachem_na_elai")
+
+# -------------------------- Gen.48.10 · KISSED_AND_EMBRACED ----------------
+# וְעֵינֵי יִשְׂרָאֵל כָּבְדוּ מִזֹּקֶן לֹא יוּכַל לִרְאוֹת וַיַּגֵּשׁ אֹתָם
+# אֵלָיו וַיִּשַּׁק לָהֶם וַיְחַבֵּק לָהֶם
+# "[EN-AID] And Israel's eyes were heavy from age — he could not see. And he
+# brought them near to him; and he kissed them, and embraced them."
+m.step("Gen.48.10")
+# ‹וַיַּגֵּשׁ אֹתָם אֵלָיו וַיִּשַּׁק לָהֶם וַיְחַבֵּק לָהֶם› (“and-be obj-
+# marker-them/their to-him/its and-kiss to-them/their and-clasp to-
+# them/their”) — demand settled (popped from the queue): qachem-please-elai
+m.result("qachem_na_elai", tmark="t1")
+
+# -------------------------- Gen.48.11 · I_NEVER_JUDGED_TO_SEE --------------
+# וַיֹּאמֶר יִשְׂרָאֵל אֶל־יוֹסֵף רְאֹה פָנֶיךָ לֹא פִלָּלְתִּי וְהִנֵּה
+# הֶרְאָה אֹתִי אֱלֹהִים גַּם אֶת־זַרְעֶךָ
+# "[EN-AID] And Israel said to Joseph: To see your face I had not judged —
+# and behold, God has shown me your seed too."
+m.step("Gen.48.11")
+# ‹רְאֹה פָנֶיךָ לֹא פִלָּלְתִּי› (“see face-you/your not judge”) — fact
+# holds: see-fanekha-not-judge
+m.fact("reo_fanekha_lo_filalti")
+
+# -------------------------- Gen.48.12 · FROM_BETWEEN_HIS_KNEES -------------
+# וַיּוֹצֵא יוֹסֵף אֹתָם מֵעִם בִּרְכָּיו וַיִּשְׁתַּחוּ לְאַפָּיו אָרְצָה
+# "[EN-AID] And Joseph brought them out from between his knees; and he bowed
+# with his face to the earth."
+m.step("Gen.48.12")
+# ‹וַיִּשְׁתַּחוּ לְאַפָּיו אָרְצָה› (“and-afflict to-nose-him/its earth-
+# ward”) — fact holds: and-afflict-to-his-nostrils-artza
+m.fact("va_yishtachu_le_apav_artza")
+
+# -------------------------- Gen.48.13 · THE_ARRANGEMENT --------------------
+# וַיִּקַּח יוֹסֵף אֶת־שְׁנֵיהֶם אֶת־אֶפְרַיִם בִּימִינוֹ מִשְּׂמֹאל
+# יִשְׂרָאֵל וְאֶת־מְנַשֶּׁה בִשְׂמֹאלוֹ מִימִין יִשְׂרָאֵל וַיַּגֵּשׁ
+# אֵלָיו
+# "[EN-AID] And Joseph took the two of them — Ephraim at his right, toward
+# Israel's left, and Manasseh at his left, toward Israel's right — and
+# brought them near to him."
+m.step("Gen.48.13")
+# ‹אֶת־אֶפְרַיִם בִּימִינוֹ מִשְּׂמֹאל יִשְׂרָאֵל וְאֶת־מְנַשֶּׁה
+# בִשְׂמֹאלוֹ מִימִין יִשְׂרָאֵל› (“obj-marker Ephraim in-right-hand-him/its
+# from-dark Israel and-obj-marker Manasseh in-dark-him/its from-right-hand
+# Israel”) — fact holds: Ephraim-bimino-Manasseh-vismolo
+m.fact("efrayim_bimino_menashe_vismolo")
+
+# -------------------------- Gen.48.14 · THE_HANDS_CROSSED ------------------
+# וַיִּשְׁלַח יִשְׂרָאֵל אֶת־יְמִינוֹ וַיָּשֶׁת עַל־רֹאשׁ אֶפְרַיִם וְהוּא
+# הַצָּעִיר וְאֶת־שְׂמֹאלוֹ עַל־רֹאשׁ מְנַשֶּׁה שִׂכֵּל אֶת־יָדָיו כִּי
+# מְנַשֶּׁה הַבְּכוֹר
+# "[EN-AID] And Israel sent out his right hand and set it on Ephraim's head
+# — and he was the younger — and his left hand on Manasseh's head; he
+# crossed his hands, for Manasseh was the firstborn."
+m.step("Gen.48.14")
+# ‹שִׂכֵּל אֶת־יָדָיו כִּי מְנַשֶּׁה הַבְּכוֹר› (“be-circumspect-and-hence
+# obj-marker hand-him/its that Manasseh the-firstborn”) — event: be-
+# circumspect-and-hence-yadav — agent Israel
+m.event("sikel_yadav", agent="yisrael")
+
+# -------------------------- Gen.48.15 · THE_SHEPHERD_GOD -------------------
+# וַיְבָרֶךְ אֶת־יוֹסֵף וַיֹּאמַר הָאֱלֹהִים אֲשֶׁר הִתְהַלְּכוּ אֲבֹתַי
+# לְפָנָיו אַבְרָהָם וְיִצְחָק הָאֱלֹהִים הָרֹעֶה אֹתִי מֵעוֹדִי עַד־הַיּוֹם
+# הַזֶּה
+# "[EN-AID] And he blessed Joseph, and said: The God before whom my fathers
+# walked, Abraham and Isaac, the God who shepherds me from my beginning
+# until this day —"
+m.step("Gen.48.15")
+# ‹הָאֱלֹהִים הָרֹעֶה אֹתִי מֵעוֹדִי› (“the-God the-graze obj-marker-me/my
+# from-still/again-me/my”) — blessing: Israel blesses Joseph
+m.bless("yisrael", "yosef")
+
+# -------------------------- Gen.48.16 · THE_REDEEMING_ANGEL ----------------
+# הַמַּלְאָךְ הַגֹּאֵל אֹתִי מִכָּל־רָע יְבָרֵךְ אֶת־הַנְּעָרִים וְיִקָּרֵא
+# בָהֶם שְׁמִי וְשֵׁם אֲבֹתַי אַבְרָהָם וְיִצְחָק וְיִדְגּוּ לָרֹב בְּקֶרֶב
+# הָאָרֶץ
+# "[EN-AID] The angel who redeems me from all evil — may he bless the lads;
+# and let my name be called in them, and the name of my fathers, Abraham and
+# Isaac; and may they teem like fish into a multitude in the midst of the
+# earth."
+m.step("Gen.48.16")
+# ‹הַמַּלְאָךְ הַגֹּאֵל אֹתִי מִכָּל־רָע יְבָרֵךְ אֶת־הַנְּעָרִים› (“the-
+# messenger the-be-the-next-of-kin obj-marker-me/my from-all bad bless obj-
+# marker the-boy”) — fact holds: the-messenger-the-be-the-next-of-kin-bless-
+# obj-marker-the-boy
+m.fact("ha_malakh_ha_goel_yevarekh_et_ha_nearim")
+
+# -------------------------- Gen.48.17 · EVIL_IN_HIS_EYES -------------------
+# וַיַּרְא יוֹסֵף כִּי־יָשִׁית אָבִיו יַד־יְמִינוֹ עַל־רֹאשׁ אֶפְרַיִם
+# וַיֵּרַע בְּעֵינָיו וַיִּתְמֹךְ יַד־אָבִיו לְהָסִיר אֹתָהּ מֵעַל
+# רֹאשׁ־אֶפְרַיִם עַל־רֹאשׁ מְנַשֶּׁה
+# "[EN-AID] And Joseph saw that his father was setting his right hand on
+# Ephraim's head, and it was evil in his eyes; and he took hold of his
+# father's hand, to remove it from Ephraim's head onto Manasseh's head."
+m.step("Gen.48.17")
+# ‹וַיֵּרַע בְּעֵינָיו› (“and-spoil in-eye-him/its”) — fact holds: and-
+# spoil-in-enav
+m.fact("va_yera_be_enav")
+
+# -------------------------- Gen.48.18 · NOT_SO_MY_FATHER -------------------
+# וַיֹּאמֶר יוֹסֵף אֶל־אָבִיו לֹא־כֵן אָבִי כִּי־זֶה הַבְּכֹר שִׂים
+# יְמִינְךָ עַל־רֹאשׁוֹ
+# "[EN-AID] And Joseph said to his father: Not so, my father — for this is
+# the firstborn; set your right hand on his head."
+m.step("Gen.48.18")
+# ‹כִּי־זֶה הַבְּכֹר שִׂים יְמִינְךָ עַל־רֹאשׁוֹ› (“that this the-firstborn
+# put/set right-hand-you/your over head-him/its”) — Joseph speaks a demand —
+# LET: put/set-yeminkha-over-rosho
+m.declare("yosef", "LET",
+          "sim_yeminkha_al_rosho")
+
+# -------------------------- Gen.48.19 · I_KNOW_MY_SON_I_KNOW ---------------
+# וַיְמָאֵן אָבִיו וַיֹּאמֶר יָדַעְתִּי בְנִי יָדַעְתִּי גַּם־הוּא
+# יִהְיֶה־לְּעָם וְגַם־הוּא יִגְדָּל וְאוּלָם אָחִיו הַקָּטֹן יִגְדַּל
+# מִמֶּנּוּ וְזַרְעוֹ יִהְיֶה מְלֹא־הַגּוֹיִם
+# "[EN-AID] And his father refused, and said: I know, my son, I know — he
+# too shall become a people, and he too shall be great; but his younger
+# brother shall be greater than he, and his seed shall be the fullness of
+# the nations."
+m.step("Gen.48.19")
+# ‹וַיְמָאֵן אָבִיו וַיֹּאמֶר יָדַעְתִּי בְנִי יָדַעְתִּי› (“and-refuse
+# father-him/its and-say know son-me/my know”) — fact holds: and-refuse-
+# aviv-know-veni-know
+m.fact("va_yemaen_aviv_yadati_veni_yadati")
+
+# -------------------------- Gen.48.20 · BY_YOU_SHALL_ISRAEL_BLESS ----------
+# וַיְבָרֲכֵם בַּיּוֹם הַהוּא לֵאמוֹר בְּךָ יְבָרֵךְ יִשְׂרָאֵל לֵאמֹר
+# יְשִׂמְךָ אֱלֹהִים כְּאֶפְרַיִם וְכִמְנַשֶּׁה וַיָּשֶׂם אֶת־אֶפְרַיִם
+# לִפְנֵי מְנַשֶּׁה
+# "[EN-AID] And he blessed them that day, saying: By you shall Israel bless,
+# saying: God make you as Ephraim and as Manasseh. And he set Ephraim before
+# Manasseh."
+m.step("Gen.48.20")
+# ‹יְשִׂמְךָ אֱלֹהִים כְּאֶפְרַיִם וְכִמְנַשֶּׁה› (“put/set-you/your God
+# like-Ephraim and-like-Manasseh”) — blessing: Israel blesses Ephraim-and-
+# Manasseh
+m.bless("yisrael", "efrayim_u_menashe")
+
+# -------------------------- Gen.48.21 · GOD_WILL_RETURN_YOU ----------------
+# וַיֹּאמֶר יִשְׂרָאֵל אֶל־יוֹסֵף הִנֵּה אָנֹכִי מֵת וְהָיָה אֱלֹהִים
+# עִמָּכֶם וְהֵשִׁיב אֶתְכֶם אֶל־אֶרֶץ אֲבֹתֵיכֶם
+# "[EN-AID] And Israel said to Joseph: Behold, I die; and God will be with
+# you, and will return you to the land of your fathers."
+m.step("Gen.48.21")
+# ‹וְהֵשִׁיב אֶתְכֶם אֶל־אֶרֶץ אֲבֹתֵיכֶם› (“and-return obj-marker-
+# you/your(pl) to earth father-you/your(pl)”) — fact holds: and-return-
+# etkhem-to-earth-avotekhem
+m.fact("ve_heshiv_etkhem_el_eretz_avotekhem")
+
+# -------------------------- Gen.48.22 · SHEKHEM_ABOVE_YOUR_BROTHERS --------
+# וַאֲנִי נָתַתִּי לְךָ שְׁכֶם אַחַד עַל־אַחֶיךָ אֲשֶׁר לָקַחְתִּי מִיַּד
+# הָאֱמֹרִי בְּחַרְבִּי וּבְקַשְׁתִּי
+# "[EN-AID] And I give you one portion above your brothers, which I took
+# from the hand of the Amorite with my sword and with my bow."
+m.step("Gen.48.22")
+# ‹וַאֲנִי נָתַתִּי לְךָ שְׁכֶם אַחַד› (“and-I set to-you/your neck-as-the-
+# place-of-burden one”) — fact holds: set-to-you-neck-as-the-place-of-
+# burden-one
+m.fact("natati_lekha_shekhem_achad")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == ['sim_yeminkha_al_rosho']
+    assert len(m.SPECS["log"]) == 2
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted(['hine_avikha_chole', 'va_yitchazeq_yisrael_va_yeshev_al_ha_mita', 'el_shaday_nira_elai_be_luz', 'achuzat_olam_le_zarakha', 'efrayim_u_menashe_ki_reuven_ve_shimon_yihyu_li', 'al_shem_achehem_yiqaru_be_nachalatam', 'meta_alai_rachel_ba_derekh', 'va_yar_yisrael_et_bene_yosef', 'reo_fanekha_lo_filalti', 'va_yishtachu_le_apav_artza', 'efrayim_bimino_menashe_vismolo', 'ha_malakh_ha_goel_yevarekh_et_ha_nearim', 'va_yera_be_enav', 'va_yemaen_aviv_yadati_veni_yadati', 've_heshiv_etkhem_el_eretz_avotekhem', 'natati_lekha_shekhem_achad'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 6
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: gen_72_testament_twelve
+###############################################################################
+
+m = Machine("gen_72_testament_twelve")
+
+# -------------------------- Gen.49.1 · GATHER_AND_I_WILL_TELL --------------
+# וַיִּקְרָא יַעֲקֹב אֶל־בָּנָיו וַיֹּאמֶר הֵאָסְפוּ וְאַגִּידָה לָכֶם אֵת
+# אֲשֶׁר־יִקְרָא אֶתְכֶם בְּאַחֲרִית הַיָּמִים
+# "[EN-AID] And Jacob called to his sons, and said: Gather, and I will tell
+# you that which shall befall you in the end of days."
+m.step("Gen.49.1")
+# ‹הֵאָסְפוּ וְאַגִּידָה לָכֶם› (“gather-for-any-purpose and-tell to-
+# you/your(pl)”) — section divre-Jacob-to-vanav: son-Leah, son-the-
+# shefachot, son-rachel
+m.section("divre_yaaqov_le_vanav", "bene_lea", "bene_ha_shefachot", "bene_rachel")
+
+# -------------------------- Gen.49.2 · HEAR_TO_ISRAEL_YOUR_FATHER ----------
+# הִקָּבְצוּ וְשִׁמְעוּ בְּנֵי יַעֲקֹב וְשִׁמְעוּ אֶל־יִשְׂרָאֵל אֲבִיכֶם
+# "[EN-AID] Assemble and hear, sons of Jacob; and hear to Israel your
+# father."
+m.step("Gen.49.2")
+# ‹וְשִׁמְעוּ אֶל־יִשְׂרָאֵל אֲבִיכֶם› (“and-hear to Israel father-
+# you/your(pl)”) — fact holds: hear-to-Israel-avikhem
+m.fact("shimu_el_yisrael_avikhem")
+
+# -------------------------- Gen.49.3 · REUBEN_MY_FIRSTBORN -----------------
+# רְאוּבֵן בְּכֹרִי אַתָּה כֹּחִי וְרֵאשִׁית אוֹנִי יֶתֶר שְׂאֵת וְיֶתֶר עָז
+# "[EN-AID] Reuben, my firstborn are you — my strength and the first of my
+# vigor: excess of dignity and excess of power."
+m.step("Gen.49.3")
+# ‹רְאוּבֵן בְּכֹרִי אַתָּה› (“Reuben firstborn-me/my you”) — fact holds:
+# Reuben-bekhori-you
+m.fact("reuven_bekhori_ata")
+
+# -------------------------- Gen.49.4 · UNSTABLE_AS_WATER -------------------
+# פַּחַז כַּמַּיִם אַל־תּוֹתַר כִּי עָלִיתָ מִשְׁכְּבֵי אָבִיךָ אָז
+# חִלַּלְתָּ יְצוּעִי עָלָה
+# "[EN-AID] Unstable as water, you shall not excel — for you went up to your
+# father's bed; then you profaned — he went up to my couch!"
+m.step("Gen.49.4")
+# ‹פַּחַז כַּמַּיִם אַל־תּוֹתַר› (“ebullition like-waters do-not jut-over”)
+# — fact holds: ebullition-like-waters-over-jut-over
+m.fact("pachaz_ka_mayim_al_totar")
+
+# -------------------------- Gen.49.5 · SIMEON_AND_LEVI_BROTHERS ------------
+# שִׁמְעוֹן וְלֵוִי אַחִים כְּלֵי חָמָס מְכֵרֹתֵיהֶם
+# "[EN-AID] Simeon and Levi are brothers — instruments of violence their
+# trade."
+m.step("Gen.49.5")
+# ‹שִׁמְעוֹן וְלֵוִי אַחִים› (“Simeon and-Levi brother”) — fact holds:
+# Simeon-and-Levi-brother
+m.fact("shimon_ve_levi_achim")
+
+# -------------------------- Gen.49.6 · LET_MY_HONOR_NOT_UNITE --------------
+# בְּסֹדָם אַל־תָּבֹא נַפְשִׁי בִּקְהָלָם אַל־תֵּחַד כְּבֹדִי כִּי בְאַפָּם
+# הָרְגוּ אִישׁ וּבִרְצֹנָם עִקְּרוּ־שׁוֹר
+# "[EN-AID] Into their council let my soul not come; with their assembly let
+# my honor not unite — for in their anger they killed a man, and in their
+# pleasure they hamstrung an ox."
+m.step("Gen.49.6")
+# ‹בִּקְהָלָם אַל־תֵּחַד כְּבֹדִי› (“in-assemblage-them/their do-not be-one
+# weight-me/my”) — fact holds: bi-qhalam-over-be-one-kevodi
+m.fact("bi_qhalam_al_techad_kevodi")
+
+# -------------------------- Gen.49.7 · CURSED_THEIR_ANGER ------------------
+# אָרוּר אַפָּם כִּי עָז וְעֶבְרָתָם כִּי קָשָׁתָה אֲחַלְּקֵם בְּיַעֲקֹב
+# וַאֲפִיצֵם בְּיִשְׂרָאֵל
+# "[EN-AID] Cursed be their anger, for it is fierce, and their fury, for it
+# is hard: I will divide them in Jacob, and scatter them in Israel."
+m.step("Gen.49.7")
+# ‹אֲחַלְּקֵם בְּיַעֲקֹב וַאֲפִיצֵם בְּיִשְׂרָאֵל› (“be-smooth-them/their
+# in-Jacob and-dash-in-pieces-them/their in-Israel”) — fact holds: achalqem-
+# in-Jacob-and-afitzem-in-Israel
+m.fact("achalqem_be_yaaqov_va_afitzem_be_yisrael")
+
+# -------------------------- Gen.49.8 · JUDAH_YOUR_BROTHERS_PRAISE_YOU ------
+# יְהוּדָה אַתָּה יוֹדוּךָ אַחֶיךָ יָדְךָ בְּעֹרֶף אֹיְבֶיךָ יִשְׁתַּחֲוּוּ
+# לְךָ בְּנֵי אָבִיךָ
+# "[EN-AID] Judah — you, your brothers shall praise you; your hand on the
+# neck of your enemies; the sons of your father shall bow to you."
+m.step("Gen.49.8")
+# ‹יְהוּדָה אַתָּה יוֹדוּךָ אַחֶיךָ› (“Judah you physically-you/your
+# brother-you/your”) — fact holds: yodukha-achekha
+m.fact("yodukha_achekha")
+
+# -------------------------- Gen.49.9 · LION_WHELP_JUDAH --------------------
+# גּוּר אַרְיֵה יְהוּדָה מִטֶּרֶף בְּנִי עָלִיתָ כָּרַע רָבַץ כְּאַרְיֵה
+# וּכְלָבִיא מִי יְקִימֶנּוּ
+# "[EN-AID] A lion's whelp is Judah — from the prey, my son, you went up; he
+# crouched, he lay as a lion, and as a lioness — who shall raise him?"
+m.step("Gen.49.9")
+# ‹מִטֶּרֶף בְּנִי עָלִיתָ› (“from-something-torn son-me/my go-up”) — fact
+# holds: who?-something-torn-son-go-up
+m.fact("mi_teref_beni_alita")
+
+# -------------------------- Gen.49.10 · UNTIL_SHILOH_COMES -----------------
+# לֹא־יָסוּר שֵׁבֶט מִיהוּדָה וּמְחֹקֵק מִבֵּין רַגְלָיו עַד כִּי־יָבֹא שילה
+# שִׁילוֹ וְלוֹ יִקְּהַת עַמִּים
+# "[EN-AID] The scepter shall not depart from Judah, nor the ruler's staff
+# from between his feet, until Shiloh comes; and to him the obedience of
+# peoples."
+m.step("Gen.49.10")
+# ‹לֹא־יָסוּר שֵׁבֶט מִיהוּדָה וּמְחֹקֵק מִבֵּין רַגְלָיו› (“not turn-aside
+# scion from-Judah and-hack from-between foot-him/its”) — fact holds: not-
+# turn-aside-scion-who?-Judah-until-that-come/bring-Shiloh
+m.fact("lo_yasur_shevet_mi_yhuda_ad_ki_yavo_shilo")
+
+# -------------------------- Gen.49.11 · BINDING_HIS_FOAL_TO_THE_VINE -------
+# אֹסְרִי לַגֶּפֶן עירה עִירוֹ וְלַשֹּׂרֵקָה בְּנִי אֲתֹנוֹ כִּבֵּס
+# בַּיַּיִן לְבֻשׁוֹ וּבְדַם־עֲנָבִים סותה סוּתוֹ
+# "[EN-AID] Binding his foal to the vine, and his donkey's colt to the
+# choice tendril; he washes his garment in wine, and his robe in the blood
+# of grapes."
+m.step("Gen.49.11")
+# ‹אֹסְרִי לַגֶּפֶן עירה עִירוֹ› (“yoke to-vine young-ass-him/its young-ass-
+# him/its”) — fact holds: yoke-to-vine-iro
+m.fact("osri_la_gefen_iro")
+
+# -------------------------- Gen.49.12 · EYES_DARK_FROM_WINE ----------------
+# חַכְלִילִי עֵינַיִם מִיָּיִן וּלְבֶן־שִׁנַּיִם מֵחָלָב
+# "[EN-AID] Eyes darkened from wine, and teeth white from milk."
+m.step("Gen.49.12")
+# ‹חַכְלִילִי עֵינַיִם מִיָּיִן› (“darkly-flashing eye from-wine”) — fact
+# holds: darkly-flashing-eye-who?-wine
+m.fact("chakhlili_enayim_mi_yayin")
+
+# -------------------------- Gen.49.13 · ZEBULUN_AT_THE_SHORE ---------------
+# זְבוּלֻן לְחוֹף יַמִּים יִשְׁכֹּן וְהוּא לְחוֹף אֳנִיּוֹת וְיַרְכָתוֹ
+# עַל־צִידֹן
+# "[EN-AID] Zebulun shall dwell at the shore of seas — and he is at the
+# shore of ships, and his flank upon Sidon."
+m.step("Gen.49.13")
+# ‹זְבוּלֻן לְחוֹף יַמִּים יִשְׁכֹּן› (“Zebulun to-cove seas reside”) — fact
+# holds: Zebulun-to-cove-day-reside
+m.fact("zevulun_le_chof_yamim_yishkon")
+
+# -------------------------- Gen.49.14 · ISSACHAR_STRONG_DONKEY -------------
+# יִשָּׂשכָר חֲמֹר גָּרֶם רֹבֵץ בֵּין הַמִּשְׁפְּתָיִם
+# "[EN-AID] Issachar is a strong-boned donkey, crouching between the
+# sheepfolds."
+m.step("Gen.49.14")
+# ‹יִשָּׂשכָר חֲמֹר גָּרֶם› (“Issachar male-ass bone”) — fact holds:
+# Issachar-male-ass-bone
+m.fact("yisashkhar_chamor_garem")
+
+# -------------------------- Gen.49.15 · HE_BENT_HIS_SHOULDER ---------------
+# וַיַּרְא מְנֻחָה כִּי טוֹב וְאֶת־הָאָרֶץ כִּי נָעֵמָה וַיֵּט שִׁכְמוֹ
+# לִסְבֹּל וַיְהִי לְמַס־עֹבֵד
+# "[EN-AID] And he saw a resting-place, that it was good, and the land, that
+# it was pleasant; and he bent his shoulder to bear, and became a toiling
+# serf."
+m.step("Gen.49.15")
+# ‹וַיֵּט שִׁכְמוֹ לִסְבֹּל› (“and-stretch neck-as-the-place-of-burden-
+# him/its to-carry”) — fact holds: and-stretch-shikhmo-lisbol
+m.fact("va_yet_shikhmo_lisbol")
+
+# -------------------------- Gen.49.16 · DAN_SHALL_JUDGE --------------------
+# דָּן יָדִין עַמּוֹ כְּאַחַד שִׁבְטֵי יִשְׂרָאֵל
+# "[EN-AID] Dan shall judge his people, as one of the tribes of Israel."
+m.step("Gen.49.16")
+# ‹דָּן יָדִין עַמּוֹ› (“Daniel straight-course people-him/its”) — fact
+# holds: Daniel-straight-course-amo
+m.fact("dan_yadin_amo")
+
+# -------------------------- Gen.49.17 · SERPENT_ON_THE_WAY -----------------
+# יְהִי־דָן נָחָשׁ עֲלֵי־דֶרֶךְ שְׁפִיפֹן עֲלֵי־אֹרַח הַנֹּשֵׁךְ
+# עִקְּבֵי־סוּס וַיִּפֹּל רֹכְבוֹ אָחוֹר
+# "[EN-AID] May Dan be a serpent on the way, a horned viper on the path —
+# that bites the horse's heels, and its rider falls backward."
+m.step("Gen.49.17")
+# ‹הַנֹּשֵׁךְ עִקְּבֵי־סוּס› (“the-strike-with-a-sting heel horse”) — fact
+# holds: the-strike-with-a-sting-heel-horse
+m.fact("ha_noshekh_iqve_sus")
+
+# -------------------------- Gen.49.18 · FOR_YOUR_SALVATION_I_WAIT ----------
+# לִישׁוּעָתְךָ קִוִּיתִי יְהוָה
+# "[EN-AID] For Your salvation I wait, O LORD."
+m.step("Gen.49.18")
+# ‹לִישׁוּעָתְךָ קִוִּיתִי יְהוָה› (“to-something-saved-you/your bind-
+# together YHWH”) — fact holds: to-me-yshuatkha-bind-together-the-LORD
+m.fact("li_yshuatkha_qiviti_YHWH")
+
+# -------------------------- Gen.49.19 · GAD_RAIDERS_RAID_HIM ---------------
+# גָּד גְּדוּד יְגוּדֶנּוּ וְהוּא יָגֻד עָקֵב
+# "[EN-AID] Gad — a raiding troop shall raid him; and he shall raid at the
+# heel."
+m.step("Gen.49.19")
+# ‹גָּד גְּדוּד יְגוּדֶנּוּ› (“Gad crowd crowd-upon-him/its”) — fact holds:
+# Gad-crowd-yegudenu
+m.fact("gad_gedud_yegudenu")
+
+# -------------------------- Gen.49.20 · ASHERS_BREAD_IS_RICH ---------------
+# מֵאָשֵׁר שְׁמֵנָה לַחְמוֹ וְהוּא יִתֵּן מַעֲדַנֵּי־מֶלֶךְ
+# "[EN-AID] From Asher — his bread is rich; and he shall give king's
+# delicacies."
+m.step("Gen.49.20")
+# ‹מֵאָשֵׁר שְׁמֵנָה לַחְמוֹ› (“from-Asher greasy food-him/its”) — fact
+# holds: from-which-greasy-lachmo
+m.fact("me_asher_shemena_lachmo")
+
+# -------------------------- Gen.49.21 · NAPHTALI_A_HIND_SENT_FORTH ---------
+# נַפְתָּלִי אַיָּלָה שְׁלֻחָה הַנֹּתֵן אִמְרֵי־שָׁפֶר
+# "[EN-AID] Naphtali is a hind sent forth, who gives fair sayings."
+m.step("Gen.49.21")
+# ‹אַיָּלָה שְׁלֻחָה הַנֹּתֵן אִמְרֵי־שָׁפֶר› (“doe send the-set something-
+# said beauty”) — fact holds: doe-send-the-set-something-said-beauty
+m.fact("ayala_shelucha_ha_noten_imre_shafer")
+
+# -------------------------- Gen.49.22 · FRUITFUL_SON_BY_THE_SPRING ---------
+# בֵּן פֹּרָת יוֹסֵף בֵּן פֹּרָת עֲלֵי־עָיִן בָּנוֹת צָעֲדָה עֲלֵי־שׁוּר
+# "[EN-AID] A fruitful son is Joseph, a fruitful son by the spring —
+# daughters marched upon the wall."
+m.step("Gen.49.22")
+# ‹בֵּן פֹּרָת יוֹסֵף› (“son be-fruitful Joseph”) — fact holds: between-be-
+# fruitful-Joseph
+m.fact("ben_porat_yosef")
+
+# -------------------------- Gen.49.23 · THE_ARCHERS_EMBITTERED_HIM ---------
+# וַיְמָרֲרֻהוּ וָרֹבּוּ וַיִּשְׂטְמֻהוּ בַּעֲלֵי חִצִּים
+# "[EN-AID] And they embittered him, and shot, and hated him — the masters
+# of arrows."
+m.step("Gen.49.23")
+# ‹וַיְמָרֲרֻהוּ וָרֹבּוּ וַיִּשְׂטְמֻהוּ› (“and-be-bitter-him/its and-
+# shoot-an-arrow and-lurk-for-him/its”) — fact holds: and-yemararuhu-and-
+# shoot-an-arrow
+m.fact("va_yemararuhu_va_robu")
+
+# -------------------------- Gen.49.24 · HIS_BOW_STAYED_FIRM ----------------
+# וַתֵּשֶׁב בְּאֵיתָן קַשְׁתּוֹ וַיָּפֹזּוּ זְרֹעֵי יָדָיו מִידֵי אֲבִיר
+# יַעֲקֹב מִשָּׁם רֹעֶה אֶבֶן יִשְׂרָאֵל
+# "[EN-AID] And his bow stayed in strength, and the arms of his hands were
+# made agile — from the hands of the Mighty One of Jacob, from there, the
+# Shepherd, the Stone of Israel."
+m.step("Gen.49.24")
+# ‹וַתֵּשֶׁב בְּאֵיתָן קַשְׁתּוֹ› (“and-dwell/sit in-permanence bow-
+# him/its”) — fact holds: and-dwell/sit-in-permanence-qashto
+m.fact("va_teshev_be_etan_qashto")
+
+# -------------------------- Gen.49.25 · BLESSINGS_OF_HEAVEN_AND_DEEP -------
+# מֵאֵל אָבִיךָ וְיַעְזְרֶךָּ וְאֵת שַׁדַּי וִיבָרְכֶךָּ בִּרְכֹת שָׁמַיִם
+# מֵעָל בִּרְכֹת תְּהוֹם רֹבֶצֶת תָּחַת בִּרְכֹת שָׁדַיִם וָרָחַם
+# "[EN-AID] From the God of your father — may He help you — and with Shaddai
+# — may He bless you: blessings of heaven above, blessings of the deep
+# crouching below, blessings of breasts and womb."
+m.step("Gen.49.25")
+# ‹בִּרְכֹת שָׁמַיִם מֵעָל› (“blessing heavens from-over”) — fact holds:
+# blessing-heavens-from-over
+m.fact("birkhot_shamayim_me_al")
+
+# -------------------------- Gen.49.26 · CROWN_OF_THE_SET_APART -------------
+# בִּרְכֹת אָבִיךָ גָּבְרוּ עַל־בִּרְכֹת הוֹרַי עַד־תַּאֲוַת גִּבְעֹת עוֹלָם
+# תִּהְיֶין לְרֹאשׁ יוֹסֵף וּלְקָדְקֹד נְזִיר אֶחָיו
+# "[EN-AID] The blessings of your father have prevailed above the blessings
+# of my parents, to the utmost bound of the everlasting hills: may they be
+# for the head of Joseph, and for the crown of the one set apart from his
+# brothers."
+m.step("Gen.49.26")
+# ‹תִּהְיֶין לְרֹאשׁ יוֹסֵף› (“be to-head Joseph”) — fact holds: tihyena-to-
+# head-Joseph
+m.fact("tihyena_le_rosh_yosef")
+
+# -------------------------- Gen.49.27 · BENJAMIN_TEARING_WOLF --------------
+# בִּנְיָמִין זְאֵב יִטְרָף בַּבֹּקֶר יֹאכַל עַד וְלָעֶרֶב יְחַלֵּק שָׁלָל
+# "[EN-AID] Benjamin is a wolf that tears: in the morning he devours spoil,
+# and at evening he divides plunder."
+m.step("Gen.49.27")
+# ‹בִּנְיָמִין זְאֵב יִטְרָף› (“Benjamin wolf pluck-off”) — fact holds:
+# Benjamin-wolf-pluck-off
+m.fact("binyamin_zeev_yitraf")
+
+# -------------------------- Gen.49.28 · EACH_BY_HIS_BLESSING ---------------
+# כָּל־אֵלֶּה שִׁבְטֵי יִשְׂרָאֵל שְׁנֵים עָשָׂר וְזֹאת אֲשֶׁר־דִּבֶּר לָהֶם
+# אֲבִיהֶם וַיְבָרֶךְ אוֹתָם אִישׁ אֲשֶׁר כְּבִרְכָתוֹ בֵּרַךְ אֹתָם
+# "[EN-AID] All these are the tribes of Israel, twelve; and this is what
+# their father spoke to them, and he blessed them — each man according to
+# his blessing he blessed them."
+m.step("Gen.49.28")
+# ‹כָּל־אֵלֶּה שִׁבְטֵי יִשְׂרָאֵל שְׁנֵים עָשָׂר› (“all these scion Israel
+# two -teen”) — blessing: Jacob blesses scion-Israel-two--teen
+m.bless("yaaqov", "shivte_yisrael_shenem_asar")
+
+# -------------------------- Gen.49.29 · BURY_ME_WITH_MY_FATHERS ------------
+# וַיְצַו אוֹתָם וַיֹּאמֶר אֲלֵהֶם אֲנִי נֶאֱסָף אֶל־עַמִּי קִבְרוּ אֹתִי
+# אֶל־אֲבֹתָי אֶל־הַמְּעָרָה אֲשֶׁר בִּשְׂדֵה עֶפְרוֹן הַחִתִּי
+# "[EN-AID] And he charged them, and said to them: I am being gathered to my
+# people; bury me with my fathers, in the cave which is in the field of
+# Ephron the Hittite."
+m.step("Gen.49.29")
+# ‹קִבְרוּ אֹתִי אֶל־אֲבֹתָי אֶל־הַמְּעָרָה› (“bury obj-marker-me/my to
+# father-me/my to the-cavern”) — Jacob speaks a demand — LET: bury-me-to-
+# avotai
+m.declare("yaaqov", "LET",
+          "qivru_oti_el_avotai")
+
+# -------------------------- Gen.49.30 · THE_DEED_RECITED -------------------
+# בַּמְּעָרָה אֲשֶׁר בִּשְׂדֵה הַמַּכְפֵּלָה אֲשֶׁר עַל־פְּנֵי־מַמְרֵא
+# בְּאֶרֶץ כְּנָעַן אֲשֶׁר קָנָה אַבְרָהָם אֶת־הַשָּׂדֶה מֵאֵת עֶפְרֹן
+# הַחִתִּי לַאֲחֻזַּת־קָבֶר
+# "[EN-AID] In the cave which is in the field of Machpelah, which is before
+# Mamre, in the land of Canaan — which Abraham bought with the field from
+# Ephron the Hittite for a holding of burial."
+m.step("Gen.49.30")
+# ‹אֲשֶׁר קָנָה אַבְרָהָם אֶת־הַשָּׂדֶה מֵאֵת עֶפְרֹן הַחִתִּי
+# לַאֲחֻזַּת־קָבֶר› (“which possessor Abraham obj-marker the-field from-with
+# Ephron the-Chittite to-something-seized sepulchre”) — fact holds: which-
+# possessor-Abraham-to-something-seized-sepulchre
+m.fact("asher_qana_avraham_la_achuzat_qaver")
+
+# -------------------------- Gen.49.31 · THE_SIX_BURIED_THERE ---------------
+# שָׁמָּה קָבְרוּ אֶת־אַבְרָהָם וְאֵת שָׂרָה אִשְׁתּוֹ שָׁמָּה קָבְרוּ
+# אֶת־יִצְחָק וְאֵת רִבְקָה אִשְׁתּוֹ וְשָׁמָּה קָבַרְתִּי אֶת־לֵאָה
+# "[EN-AID] There they buried Abraham and Sarah his wife; there they buried
+# Isaac and Rebekah his wife; and there I buried Leah."
+m.step("Gen.49.31")
+# ‹וְשָׁמָּה קָבַרְתִּי אֶת־לֵאָה› (“and-there-ward bury obj-marker Leah”) —
+# fact holds: and-shama-bury-obj-marker-Leah
+m.fact("ve_shama_qavarti_et_lea")
+
+# -------------------------- Gen.49.32 · PURCHASE_FROM_THE_SONS_OF_HET ------
+# מִקְנֵה הַשָּׂדֶה וְהַמְּעָרָה אֲשֶׁר־בּוֹ מֵאֵת בְּנֵי־חֵת
+# "[EN-AID] The purchase of the field and the cave which is in it — from the
+# sons of Heth."
+m.step("Gen.49.32")
+# ‹מִקְנֵה הַשָּׂדֶה וְהַמְּעָרָה› (“something-bought the-field and-the-
+# cavern”) — fact holds: something-bought-the-field-from-obj-marker-son-Heth
+m.fact("miqne_ha_sade_me_et_bene_chet")
+
+# -------------------------- Gen.49.33 · GATHERED_TO_HIS_PEOPLE -------------
+# וַיְכַל יַעֲקֹב לְצַוֺּת אֶת־בָּנָיו וַיֶּאֱסֹף רַגְלָיו אֶל־הַמִּטָּה
+# וַיִּגְוַע וַיֵּאָסֶף אֶל־עַמָּיו
+# "[EN-AID] And Jacob finished charging his sons, and he gathered his feet
+# into the bed; and he expired, and was gathered to his people."
+m.step("Gen.49.33")
+# ‹וַיִּגְוַע וַיֵּאָסֶף אֶל־עַמָּיו› (“and-breathe-out and-gather-for-any-
+# purpose to people-him/its”) — event: gava — agent Jacob
+m.event("gava", agent="yaaqov")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == ['qivru_oti_el_avotai']
+    assert len(m.SPECS["log"]) == 1
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted(['shimu_el_yisrael_avikhem', 'reuven_bekhori_ata', 'pachaz_ka_mayim_al_totar', 'shimon_ve_levi_achim', 'bi_qhalam_al_techad_kevodi', 'achalqem_be_yaaqov_va_afitzem_be_yisrael', 'yodukha_achekha', 'mi_teref_beni_alita', 'lo_yasur_shevet_mi_yhuda_ad_ki_yavo_shilo', 'osri_la_gefen_iro', 'chakhlili_enayim_mi_yayin', 'zevulun_le_chof_yamim_yishkon', 'yisashkhar_chamor_garem', 'va_yet_shikhmo_lisbol', 'dan_yadin_amo', 'ha_noshekh_iqve_sus', 'li_yshuatkha_qiviti_YHWH', 'gad_gedud_yegudenu', 'me_asher_shemena_lachmo', 'ayala_shelucha_ha_noten_imre_shafer', 'ben_porat_yosef', 'va_yemararuhu_va_robu', 'va_teshev_be_etan_qashto', 'birkhot_shamayim_me_al', 'tihyena_le_rosh_yosef', 'binyamin_zeev_yitraf', 'asher_qana_avraham_la_achuzat_qaver', 've_shama_qavarti_et_lea', 'miqne_ha_sade_me_et_bene_chet'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 4
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: gen_73_coffin_in_egypt
+###############################################################################
+
+m = Machine("gen_73_coffin_in_egypt")
+
+# -------------------------- Gen.50.1 · WEEPING_ON_THE_FACE -----------------
+# וַיִּפֹּל יוֹסֵף עַל־פְּנֵי אָבִיו וַיֵּבְךְּ עָלָיו וַיִּשַּׁק־לוֹ
+# "[EN-AID] And Joseph fell on his father's face, and wept on him, and
+# kissed him."
+m.step("Gen.50.1")
+# ‹וַיֵּבְךְּ עָלָיו וַיִּשַּׁק־לוֹ› (“and-weep over-him/its and-kiss to-
+# him/its”) — fact holds: and-weep-alav-and-kiss-not
+m.fact("va_yevk_alav_va_yishaq_lo")
+
+# -------------------------- Gen.50.2 · THE_PHYSICIANS_EMBALM ---------------
+# וַיְצַו יוֹסֵף אֶת־עֲבָדָיו אֶת־הָרֹפְאִים לַחֲנֹט אֶת־אָבִיו וַיַּחַנְטוּ
+# הָרֹפְאִים אֶת־יִשְׂרָאֵל
+# "[EN-AID] And Joseph commanded his servants the physicians to embalm his
+# father; and the physicians embalmed Israel."
+m.step("Gen.50.2")
+# ‹וַיַּחַנְטוּ הָרֹפְאִים אֶת־יִשְׂרָאֵל› (“and-spice the-mend obj-marker
+# Israel”) — fact holds: and-spice-the-mend-obj-marker-Israel
+m.fact("va_yachantu_ha_rofim_et_yisrael")
+
+# -------------------------- Gen.50.3 · FORTY_AND_SEVENTY_DAYS --------------
+# וַיִּמְלְאוּ־לוֹ אַרְבָּעִים יוֹם כִּי כֵּן יִמְלְאוּ יְמֵי הַחֲנֻטִים
+# וַיִּבְכּוּ אֹתוֹ מִצְרַיִם שִׁבְעִים יוֹם
+# "[EN-AID] And forty days were fulfilled for him, for so are fulfilled the
+# days of the embalmed; and Egypt wept for him seventy days."
+m.step("Gen.50.3")
+# ‹וַיִּבְכּוּ אֹתוֹ מִצְרַיִם שִׁבְעִים יוֹם› (“and-weep obj-marker-him/its
+# Egyptian seventy day”) — fact holds: and-weep-it-Egyptian-seventy-day
+m.fact("va_yivku_oto_mitzrayim_shivim_yom")
+
+# -------------------------- Gen.50.4 · SPEAK_IN_PHARAOHS_EARS --------------
+# וַיַּעַבְרוּ יְמֵי בְכִיתוֹ וַיְדַבֵּר יוֹסֵף אֶל־בֵּית פַּרְעֹה לֵאמֹר
+# אִם־נָא מָצָאתִי חֵן בְּעֵינֵיכֶם דַּבְּרוּ־נָא בְּאָזְנֵי פַרְעֹה לֵאמֹר
+# "[EN-AID] And the days of his weeping passed, and Joseph spoke to the
+# house of Pharaoh, saying: If, pray, I have found favor in your eyes,
+# speak, pray, in the ears of Pharaoh, saying:"
+m.step("Gen.50.4")
+# ‹דַּבְּרוּ־נָא בְּאָזְנֵי פַרְעֹה לֵאמֹר› (“speak please in-
+# broadness.-i.e.-the-ear Pharaoh to-say”) — fact holds: speak-please-in-
+# broadness.-i.e.-the-ear-Pharaoh
+m.fact("dabru_na_be_azne_faro")
+
+# -------------------------- Gen.50.5 · MY_FATHER_MADE_ME_SWEAR -------------
+# אָבִי הִשְׁבִּיעַנִי לֵאמֹר הִנֵּה אָנֹכִי מֵת בְּקִבְרִי אֲשֶׁר כָּרִיתִי
+# לִי בְּאֶרֶץ כְּנַעַן שָׁמָּה תִּקְבְּרֵנִי וְעַתָּה אֶעֱלֶה־נָּא
+# וְאֶקְבְּרָה אֶת־אָבִי וְאָשׁוּבָה
+# "[EN-AID] My father made me swear, saying: Behold, I die — in my grave
+# which I dug for myself in the land of Canaan, there shall you bury me. And
+# now, let me go up, pray, and bury my father, and return."
+m.step("Gen.50.5")
+# ‹וְעַתָּה אֶעֱלֶה־נָּא וְאֶקְבְּרָה אֶת־אָבִי וְאָשׁוּבָה› (“and-now go-up
+# please and-bury obj-marker father-me/my and-return”) — Joseph speaks a
+# demand — LET: go-up-please-and-eqbera-obj-marker-avi
+m.declare("yosef", "LET",
+          "eele_na_ve_eqbera_et_avi")
+
+# -------------------------- Gen.50.6 · GO_UP_AND_BURY ----------------------
+# וַיֹּאמֶר פַּרְעֹה עֲלֵה וּקְבֹר אֶת־אָבִיךָ כַּאֲשֶׁר הִשְׁבִּיעֶךָ
+# "[EN-AID] And Pharaoh said: Go up, and bury your father, as he made you
+# swear."
+m.step("Gen.50.6")
+# ‹עֲלֵה וּקְבֹר אֶת־אָבִיךָ כַּאֲשֶׁר הִשְׁבִּיעֶךָ› (“go-up and-bury obj-
+# marker father-you/your like-as/which swear-you/your”) — demand settled
+# (popped from the queue): go-up-please-and-eqbera-obj-marker-avi
+m.result("eele_na_ve_eqbera_et_avi", tmark="t1")
+
+# -------------------------- Gen.50.7 · ALL_THE_ELDERS_GO_UP ----------------
+# וַיַּעַל יוֹסֵף לִקְבֹּר אֶת־אָבִיו וַיַּעֲלוּ אִתּוֹ כָּל־עַבְדֵי פַרְעֹה
+# זִקְנֵי בֵיתוֹ וְכֹל זִקְנֵי אֶרֶץ־מִצְרָיִם
+# "[EN-AID] And Joseph went up to bury his father; and there went up with
+# him all the servants of Pharaoh, the elders of his house, and all the
+# elders of the land of Egypt."
+m.step("Gen.50.7")
+# ‹וַיַּעֲלוּ אִתּוֹ כָּל־עַבְדֵי פַרְעֹה› (“and-go-up with-him/its all
+# servant Pharaoh”) — fact holds: and-go-up-with-him-all-servant-Pharaoh
+m.fact("va_yaalu_ito_kol_avde_faro")
+
+# -------------------------- Gen.50.8 · ONLY_THE_LITTLE_ONES_REMAIN ---------
+# וְכֹל בֵּית יוֹסֵף וְאֶחָיו וּבֵית אָבִיו רַק טַפָּם וְצֹאנָם וּבְקָרָם
+# עָזְבוּ בְּאֶרֶץ גֹּשֶׁן
+# "[EN-AID] And all the house of Joseph, and his brothers, and his father's
+# house; only their little ones, and their flocks, and their herds, they
+# left in the land of Goshen."
+m.step("Gen.50.8")
+# ‹רַק טַפָּם וְצֹאנָם וּבְקָרָם עָזְבוּ בְּאֶרֶץ גֹּשֶׁן› (“leanness
+# family-them/their and-flock-them/their and-herd-them/their loosen in-earth
+# Goshen”) — fact holds: leanness-tapam-and-tzonam-loosen-in-Goshen
+m.fact("raq_tapam_ve_tzonam_azvu_be_goshen")
+
+# -------------------------- Gen.50.9 · CHARIOTS_AND_HORSEMEN ---------------
+# וַיַּעַל עִמּוֹ גַּם־רֶכֶב גַּם־פָּרָשִׁים וַיְהִי הַמַּחֲנֶה כָּבֵד מְאֹד
+# "[EN-AID] And there went up with him both chariots and horsemen; and the
+# camp was very heavy."
+m.step("Gen.50.9")
+# ‹וַיְהִי הַמַּחֲנֶה כָּבֵד מְאֹד› (“and-be the-camp heavy very”) — fact
+# holds: and-be-the-camp-heavy-very
+m.fact("va_yehi_ha_machane_kaved_meod")
+
+# -------------------------- Gen.50.10 · THE_MOURNING_AT_THE_THRESHING_FLOOR -
+# וַיָּבֹאוּ עַד־גֹּרֶן הָאָטָד אֲשֶׁר בְּעֵבֶר הַיַּרְדֵּן
+# וַיִּסְפְּדוּ־שָׁם מִסְפֵּד גָּדוֹל וְכָבֵד מְאֹד וַיַּעַשׂ לְאָבִיו אֵבֶל
+# שִׁבְעַת יָמִים
+# "[EN-AID] And they came to the threshing floor of Atad, which is across
+# the Jordan, and they mourned there a great and very heavy mourning; and he
+# made for his father a mourning of seven days."
+m.step("Gen.50.10")
+# ‹וַיַּעַשׂ לְאָבִיו אֵבֶל שִׁבְעַת יָמִים› (“and-make to-father-him/its
+# lamentation seven day”) — fact holds: lamentation-seven-day
+m.fact("evel_shivat_yamim")
+
+# -------------------------- Gen.50.11 · MOURNING_OF_EGYPT ------------------
+# וַיַּרְא יוֹשֵׁב הָאָרֶץ הַכְּנַעֲנִי אֶת־הָאֵבֶל בְּגֹרֶן הָאָטָד
+# וַיֹּאמְרוּ אֵבֶל־כָּבֵד זֶה לְמִצְרָיִם עַל־כֵּן קָרָא שְׁמָהּ אָבֵל
+# מִצְרַיִם אֲשֶׁר בְּעֵבֶר הַיַּרְדֵּן
+# "[EN-AID] And the Canaanite inhabitant of the land saw the mourning at the
+# threshing floor of Atad, and they said: This is a heavy mourning for
+# Egypt. Therefore its name was called Avel Mitzrayim, which is across the
+# Jordan."
+m.step("Gen.50.11")
+# ‹כֵּן קָרָא שְׁמָהּ אָבֵל מִצְרַיִם› (“so call name-her/its Abel-mizraim”)
+# — named: threshing-floor-the-atad := avel-Egyptian
+m.name("goren_ha_atad", "avel_mitzrayim")
+
+# -------------------------- Gen.50.12 · AS_HE_CHARGED_THEM -----------------
+# וַיַּעֲשׂוּ בָנָיו לוֹ כֵּן כַּאֲשֶׁר צִוָּם
+# "[EN-AID] And his sons did for him so, exactly as he charged them."
+m.step("Gen.50.12")
+# ‹וַיַּעֲשׂוּ בָנָיו לוֹ כֵּן כַּאֲשֶׁר צִוָּם› (“and-make son-him/its to-
+# him/its so like-as/which command-them/their”) — fact holds: and-make-
+# vanav-not-so-kaasher-tzivam
+m.fact("va_yaasu_vanav_lo_ken_kaasher_tzivam")
+
+# -------------------------- Gen.50.13 · BURIED_IN_MACHPELAH ----------------
+# וַיִּשְׂאוּ אֹתוֹ בָנָיו אַרְצָה כְּנַעַן וַיִּקְבְּרוּ אֹתוֹ בִּמְעָרַת
+# שְׂדֵה הַמַּכְפֵּלָה אֲשֶׁר קָנָה אַבְרָהָם אֶת־הַשָּׂדֶה לַאֲחֻזַּת־קֶבֶר
+# מֵאֵת עֶפְרֹן הַחִתִּי עַל־פְּנֵי מַמְרֵא
+# "[EN-AID] And his sons carried him to the land of Canaan, and buried him
+# in the cave of the field of Machpelah — which field Abraham had bought for
+# a burial holding from Ephron the Hittite, before Mamre."
+m.step("Gen.50.13")
+# ‹וַיִּקְבְּרוּ אֹתוֹ בִּמְעָרַת שְׂדֵה הַמַּכְפֵּלָה› (“and-bury obj-
+# marker-him/its in-cavern field the-Machpelah”) — fact holds: and-yiqberu-
+# it-bi-mearat-field-the-Machpelah
+m.fact("va_yiqberu_oto_bi_mearat_sede_ha_makhpela")
+
+# -------------------------- Gen.50.14 · THE_RETURN_KEPT --------------------
+# וַיָּשָׁב יוֹסֵף מִצְרַיְמָה הוּא וְאֶחָיו וְכָל־הָעֹלִים אִתּוֹ לִקְבֹּר
+# אֶת־אָבִיו אַחֲרֵי קָבְרוֹ אֶת־אָבִיו
+# "[EN-AID] And Joseph returned to Egypt, he and his brothers, and all who
+# went up with him to bury his father, after he had buried his father."
+m.step("Gen.50.14")
+# ‹וַיָּשָׁב יוֹסֵף מִצְרַיְמָה› (“and-return Joseph Egypt-ward”) — fact
+# holds: and-return-Joseph-mitzrayma
+m.fact("va_yashav_yosef_mitzrayma")
+
+# -------------------------- Gen.50.15 · WHAT_IF_JOSEPH_HATES_US ------------
+# וַיִּרְאוּ אֲחֵי־יוֹסֵף כִּי־מֵת אֲבִיהֶם וַיֹּאמְרוּ לוּ יִשְׂטְמֵנוּ
+# יוֹסֵף וְהָשֵׁב יָשִׁיב לָנוּ אֵת כָּל־הָרָעָה אֲשֶׁר גָּמַלְנוּ אֹתוֹ
+# "[EN-AID] And Joseph's brothers saw that their father was dead, and they
+# said: What if Joseph hates us, and surely returns to us all the evil which
+# we dealt him."
+m.step("Gen.50.15")
+# ‹וַיֹּאמְרוּ לוּ יִשְׂטְמֵנוּ יוֹסֵף› (“and-say conditional-particle lurk-
+# for-us/our Joseph”) — fact holds: conditional-particle-yistemenu-Joseph
+m.fact("lu_yistemenu_yosef")
+
+# -------------------------- Gen.50.16 · THE_FABRICATED_CHARGE --------------
+# וַיְצַוּוּ אֶל־יוֹסֵף לֵאמֹר אָבִיךָ צִוָּה לִפְנֵי מוֹתוֹ לֵאמֹר
+# "[EN-AID] And they commanded to Joseph, saying: Your father charged before
+# his death, saying:"
+m.step("Gen.50.16")
+# ‹אָבִיךָ צִוָּה לִפְנֵי מוֹתוֹ› (“father-you/your command to-face death-
+# him/its”) — fact holds: avikha-command-lifne-moto
+m.fact("avikha_tziva_lifne_moto")
+
+# -------------------------- Gen.50.17 · FORGIVE_THE_CRIME ------------------
+# כֹּה־תֹאמְרוּ לְיוֹסֵף אָנָּא שָׂא נָא פֶּשַׁע אַחֶיךָ וְחַטָּאתָם
+# כִּי־רָעָה גְמָלוּךָ וְעַתָּה שָׂא נָא לְפֶשַׁע עַבְדֵי אֱלֹהֵי אָבִיךָ
+# וַיֵּבְךְּ יוֹסֵף בְּדַבְּרָם אֵלָיו
+# "[EN-AID] So shall you say to Joseph: Please, forgive, pray, the crime of
+# your brothers and their sin, for evil they dealt you; and now, forgive,
+# pray, the crime of the servants of the God of your father. And Joseph wept
+# at their speaking to him."
+m.step("Gen.50.17")
+# ‹וְעַתָּה שָׂא נָא לְפֶשַׁע עַבְדֵי אֱלֹהֵי אָבִיךָ› (“and-now lift/carry
+# please to-revolt servant God father-you/your”) — brother-Joseph speaks a
+# demand — LET: lift/carry-please-to-revolt-servant-God-avikha
+m.declare("ache_yosef", "LET",
+          "sa_na_le_fesha_avde_elohe_avikha")
+
+# -------------------------- Gen.50.18 · BEHOLD_US_AS_SERVANTS --------------
+# וַיֵּלְכוּ גַּם־אֶחָיו וַיִּפְּלוּ לְפָנָיו וַיֹּאמְרוּ הִנֶּנּוּ לְךָ
+# לַעֲבָדִים
+# "[EN-AID] And his brothers went also and fell before him; and they said:
+# Behold us — yours, as servants."
+m.step("Gen.50.18")
+# ‹וַיֹּאמְרוּ הִנֶּנּוּ לְךָ לַעֲבָדִים› (“and-say behold-us/our to-
+# you/your to-servant”) — fact holds: hinenu-to-you-to-servant
+m.fact("hinenu_lekha_la_avadim")
+
+# -------------------------- Gen.50.19 · AM_I_IN_PLACE_OF_GOD ---------------
+# וַיֹּאמֶר אֲלֵהֶם יוֹסֵף אַל־תִּירָאוּ כִּי הֲתַחַת אֱלֹהִים אָנִי
+# "[EN-AID] And Joseph said to them: Fear not — for am I in place of God?"
+m.step("Gen.50.19")
+# ‹כִּי הֲתַחַת אֱלֹהִים אָנִי› (“that the-under God”) — fact holds: the-
+# under-God-ani
+m.fact("ha_tachat_elohim_ani")
+
+# -------------------------- Gen.50.20 · YOU_DEVISED_GOD_DEVISED ------------
+# וְאַתֶּם חֲשַׁבְתֶּם עָלַי רָעָה אֱלֹהִים חֲשָׁבָהּ לְטֹבָה לְמַעַן עֲשֹׂה
+# כַּיּוֹם הַזֶּה לְהַחֲיֹת עַם־רָב
+# "[EN-AID] And you — you devised evil against me; God devised it for good,
+# in order to do as this day — to keep alive a great people."
+m.step("Gen.50.20")
+# ‹אֱלֹהִים חֲשָׁבָהּ לְטֹבָה› (“God plait-her/its to-good-in-the-widest-
+# sense”) — fact holds: God-chashavah-to-tovah
+m.fact("elohim_chashavah_le_tovah")
+
+# -------------------------- Gen.50.21 · I_WILL_SUSTAIN_YOU -----------------
+# וְעַתָּה אַל־תִּירָאוּ אָנֹכִי אֲכַלְכֵּל אֶתְכֶם וְאֶת־טַפְּכֶם וַיְנַחֵם
+# אוֹתָם וַיְדַבֵּר עַל־לִבָּם
+# "[EN-AID] And now, fear not — I will sustain you, and your little ones.
+# And he comforted them, and spoke to their heart."
+m.step("Gen.50.21")
+# ‹וַיְנַחֵם אוֹתָם וַיְדַבֵּר עַל־לִבָּם› (“and-sigh obj-marker-them/their
+# and-speak over heart-them/their”) — demand settled (popped from the
+# queue): lift/carry-please-to-revolt-servant-God-avikha
+m.result("sa_na_le_fesha_avde_elohe_avikha", tmark="t2")
+
+# -------------------------- Gen.50.22 · A_HUNDRED_AND_TEN ------------------
+# וַיֵּשֶׁב יוֹסֵף בְּמִצְרַיִם הוּא וּבֵית אָבִיו וַיְחִי יוֹסֵף מֵאָה
+# וָעֶשֶׂר שָׁנִים
+# "[EN-AID] And Joseph dwelt in Egypt, he and his father's house; and Joseph
+# lived a hundred and ten years."
+m.step("Gen.50.22")
+# ‹וַיְחִי יוֹסֵף מֵאָה וָעֶשֶׂר שָׁנִים› (“and-live Joseph hundred and-ten
+# years”) — fact holds: and-live-Joseph-hundred-and-ten-years
+m.fact("va_yechi_yosef_mea_va_eser_shanim")
+
+# -------------------------- Gen.50.23 · ON_JOSEPHS_KNEES -------------------
+# וַיַּרְא יוֹסֵף לְאֶפְרַיִם בְּנֵי שִׁלֵּשִׁים גַּם בְּנֵי מָכִיר
+# בֶּן־מְנַשֶּׁה יֻלְּדוּ עַל־בִּרְכֵּי יוֹסֵף
+# "[EN-AID] And Joseph saw, of Ephraim, children of the third generation;
+# also the sons of Machir, son of Manasseh, were born on Joseph's knees."
+m.step("Gen.50.23")
+# ‹יֻלְּדוּ עַל־בִּרְכֵּי יוֹסֵף› (“bear-young over knee Joseph”) — fact
+# holds: bear-young-over-knee-Joseph
+m.fact("yuldu_al_birke_yosef")
+
+# -------------------------- Gen.50.24 · GOD_WILL_SURELY_VISIT --------------
+# וַיֹּאמֶר יוֹסֵף אֶל־אֶחָיו אָנֹכִי מֵת וֵאלֹהִים פָּקֹד יִפְקֹד אֶתְכֶם
+# וְהֶעֱלָה אֶתְכֶם מִן־הָאָרֶץ הַזֹּאת אֶל־הָאָרֶץ אֲשֶׁר נִשְׁבַּע
+# לְאַבְרָהָם לְיִצְחָק וּלְיַעֲקֹב
+# "[EN-AID] And Joseph said to his brothers: I die; and God will surely
+# visit you, and bring you up from this land to the land which He swore to
+# Abraham, to Isaac, and to Jacob."
+m.step("Gen.50.24")
+# ‹וֵאלֹהִים פָּקֹד יִפְקֹד אֶתְכֶם› (“and-God count/visit count/visit obj-
+# marker-you/your(pl)”) — fact holds: God-count/visit-count/visit-etkhem
+m.fact("elohim_paqod_yifqod_etkhem")
+
+# -------------------------- Gen.50.25 · THE_BONES_OATH ---------------------
+# וַיַּשְׁבַּע יוֹסֵף אֶת־בְּנֵי יִשְׂרָאֵל לֵאמֹר פָּקֹד יִפְקֹד אֱלֹהִים
+# אֶתְכֶם וְהַעֲלִתֶם אֶת־עַצְמֹתַי מִזֶּה
+# "[EN-AID] And Joseph made the sons of Israel swear, saying: God will
+# surely visit you — and you shall bring up my bones from here."
+m.step("Gen.50.25")
+# ‹וְהַעֲלִתֶם אֶת־עַצְמֹתַי מִזֶּה› (“and-go-up obj-marker bone-me/my from-
+# this”) — Joseph speaks a demand — LET: and-go-up-obj-marker-atzmotai-from-
+# this
+m.declare("yosef", "LET",
+          "ve_haalitem_et_atzmotai_mi_ze")
+
+# -------------------------- Gen.50.26 · A_COFFIN_IN_EGYPT ------------------
+# וַיָּמָת יוֹסֵף בֶּן־מֵאָה וָעֶשֶׂר שָׁנִים וַיַּחַנְטוּ אֹתוֹ וַיִּישֶׂם
+# בָּאָרוֹן בְּמִצְרָיִם
+# "[EN-AID] And Joseph died, a hundred and ten years old; and they embalmed
+# him, and he was placed in a coffin in Egypt."
+m.step("Gen.50.26")
+# ‹וַיַּחַנְטוּ אֹתוֹ וַיִּישֶׂם בָּאָרוֹן בְּמִצְרָיִם› (“and-spice obj-
+# marker-him/its and-place in-ark in-Egypt”) — event: die — agent Joseph
+m.event("met", agent="yosef")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {'goren_ha_atad': 'avel_mitzrayim'}
+    assert m.REGISTRY["writes"] == 1
+    assert m.tests_list() == []
+    assert m.open_demands() == ['ve_haalitem_et_atzmotai_mi_ze']
+    assert len(m.SPECS["log"]) == 3
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {'named_before_any_presence': 1}
+    assert sorted(m.WORLD["facts"]) == sorted(['va_yevk_alav_va_yishaq_lo', 'va_yachantu_ha_rofim_et_yisrael', 'va_yivku_oto_mitzrayim_shivim_yom', 'dabru_na_be_azne_faro', 'va_yaalu_ito_kol_avde_faro', 'raq_tapam_ve_tzonam_azvu_be_goshen', 'va_yehi_ha_machane_kaved_meod', 'evel_shivat_yamim', 'va_yaasu_vanav_lo_ken_kaasher_tzivam', 'va_yiqberu_oto_bi_mearat_sede_ha_makhpela', 'va_yashav_yosef_mitzrayma', 'lu_yistemenu_yosef', 'avikha_tziva_lifne_moto', 'hinenu_lekha_la_avadim', 'ha_tachat_elohim_ani', 'elohim_chashavah_le_tovah', 'va_yechi_yosef_mea_va_eser_shanim', 'yuldu_al_birke_yosef', 'elohim_paqod_yifqod_etkhem'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 7
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
 
 

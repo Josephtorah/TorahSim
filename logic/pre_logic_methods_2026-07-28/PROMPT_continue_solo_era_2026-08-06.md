@@ -789,6 +789,64 @@ scripted answer performs at 47:3; Goshen ratified 47:6; the fifth
 institutionalized 47:13-26 — gen_64's watchlist), Exod 1:1 names-
 header armed by the seventy-ledger.
 
+## RUN FWD-3 COMPLETE (2026-08-09, owner: "do the next 4 blocks and
+## finish genesis") — 76 FROZEN · GENESIS COMPLETE 1:1-50:26 GAPLESS
+gen_70_goshen_and_the_fifth (Gen 47) · gen_71_crossed_hands (48) ·
+gen_72_testament_twelve (49) · gen_73_coffin_in_egypt (50). 52 oral
+claims 52/0/0, zero fetches; regression 76/76; ALL_UNITS +
+CORPUS_TRUTH green. WORLD refolded + VERIFY GREEN: 1,367 facts · 259
+demands · 94 settled (82 in-unit + 12 AUTHORED LINKS — four new this
+run: scripted-answer→47:3, burial-ban→50:13, burial-charge→50:13,
+twelve's-charge→50:13 [ken-receipt at 50:12]) · 165 OPEN · hash
+2c281ba6a39b7ed5. MACHINE ARC: gen_70 = 6D/4R + 2 BLESS (the audience
+bracketed) + STATUTE (the fifth, "to this day") — the four
+transactions of the famine economy; gen_71 = the refused right-hand
+demand (sim-yeminkha 48:18, dead-by-refusal, stays open FOREVER by
+class law) + the crossing EVENT + registry restraint on the adoption;
+gen_72 = the testament machine (1 DECLARE only — poem-address installs
+no demands; SECTION + BLESS-of-the-twelve + death EVENT with NO
+die-word in the verse); gen_73 = the recorded oath of 47:31 deployed
+as legal tender at 50:5-6; the GREAT SETTLEMENT (50:12-13 discharges
+three demands across two units); NAME Avel Mitzrayim (Genesis' last
+naming, REGISTRY 1); the BONES OATH (50:25) open across the
+book-boundary — receipt-verse Exod 13:19 already carries paqod-yifqod
+verbatim (the password ×3: spoken/sworn/redeemed). ORAL MARQUEE: the
+FULL-OF-FULL "our fathers" — Torah-unique at the performance verse
+(47:3) with the script's own token LEAN (46:34): the delivery one vav
+fuller than the rehearsal; Rameses' one-vowel two-cities map (sheva
+at the dwelling + all three departures, patach at the store-city
+alone); the Sura/Nehardea academies' split "until Ezra comes"
+(47:19, the Ramah's three-token vav pattern exact); the Torah's ONE
+full "saying" opening the living blessing-formula with its lean twin
+in the same verse (48:20); the blessing/curse shared skeleton
+(ישמך ↔ Jer 29:22); the SHILOH word carried whole (ketiv
+yod-and-he with the Ramah, qere vav; MS against the printed glosses);
+the LAST four-letter Name of Genesis at the three-word salvation cry
+(49:18 — none after, stream census); TWO galgal-vs-munach mark-splits
+(47:26 va-yasem; 49:9 beni — the accents-as-arbiters note); ZERO
+full giver-forms in the Torah (the Ramah's rule verified whole —
+"and my heart rejoiced," MS); the seventh full Benjamin closing the
+file at the wolf (49:27); the TWO LEAN DEATHS — Aaron's and Moses'
+alone in the whole Torah (the Ramah's rule verified, 50:16); TWO
+rejected large letters carried as rejections (chakhlili 49:12,
+shileshim 50:23); MS's book colophon carried ("Complete and finished
+is the book of Genesis — praise to the Former of beginnings").
+Tooling: NAME-op scenario base clause = "REGISTRY 1 writes" (the
+gen_45-remediation pattern). Build scripts
+build_gen70..73_{unit,manifest}.py in scratchpad. Audits
+AUDIT_gen_70..73_2026-08-09.md; FETCHLOG entry. NOT YET COMMITTED —
+awaiting owner word. OPEN QUEUE at book-close (16): the bones (Exod
+13:19 armed); the refused right-hand (48:18, permanent by class);
+the divine fear-not (46:3) + fear-not/quarrel-ban class (43:23,
+45:24); Tamar's execution-order (38:24, superseded); the
+shikhva-imi pair (39:7,12); Reuben's refused pledge (42:37); the
+one-of-you hostage plan (42:16, superseded); the little-food
+request (43:2); Gen 37's four brother-vows; Lev daber-demands (2).
+NEXT on owner word: EXODUS (Exod 1:1 names-header armed by the
+seventy-ledger; 1:7 the increase-verbs; 1:8 the king who knew not;
+3:16 paqod paqadti; 13:19 the bones taken; 14:6 Pharaoh's binding —
+the file's last station).
+
 ## DISCLOSURE (never commit to main repo; owner's private docs)
 "God's Open Source Software Project" (LeBlanc_Epic_Certainty_layperson doc)
 has its own PRIVATE git repo inside Disclosure/. EVERY edit = diff in thread

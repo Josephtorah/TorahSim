@@ -709,3 +709,25 @@ descents exact; the two-comings stress pair (46:26/27); the three
 bindings closed (Simeon soft / chariot hard); הורדהו pair (39:1/44:21);
 the harvest-pair invariant collision (8:22/45:6); the healed speech
 (37:4→45:15).
+
+## 2026-08-09 — RUN FWD-3 (forward era, run 3: Gen 47-50 — GENESIS COMPLETE)
+
+In-pipeline oral audits for the run's four blocks (owner order "do the
+next 4 blocks and finish genesis"): gen_70_goshen_and_the_fifth (47,
+13 rows), gen_71_crossed_hands (48, 13), gen_72_testament_twelve (49,
+13), gen_73_coffin_in_egypt (50, 13) — 52 claims, 52 VERIFIED / 0
+FAILED / 0 UNCHECKABLE, zero web fetches (local mirror only). 76
+frozen units; regression 76/76; ALL_UNITS + CORPUS_TRUTH green (world
+at 1,367 facts, 165 open demands, 12 authored settlement links, hash
+2c281ba6a39b7ed5). GENESIS COMPLETE: 1:1-50:26 gapless. Marquees: the
+full-of-full "our fathers" at the performance verse (47:3, script
+lean at 46:34); Rameses' vowel splitting two cities (47:11 sheva vs
+Exod 1:11 patach); the Sura/Nehardea split "until Ezra comes" (47:19);
+the Torah's one full "saying" opening the living blessing-formula
+(48:20, lean twin in-verse); the Shiloh word carried whole (49:10);
+the LAST four-letter Name of Genesis at the salvation cry (49:18); two
+galgal-vs-munach mark-splits (47:26, 49:9); zero full giver-forms in
+the Torah (the Ramah's rule verified, 49:21); the two lean deaths —
+Aaron's and Moses' alone (50:16 rule); the paqod-yifqod password ×3
+ending at Exod 13:19 (the bones-demand's receipt pre-armed); MS's
+colophon carried ("Complete and finished is the book of Genesis").
