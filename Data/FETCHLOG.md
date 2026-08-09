@@ -653,3 +653,16 @@ HaTurim, Bereshit Rabbah span maps, Rashi scan). 69 verifier rows:
 64 VERIFIED / 0 FAILED / 5 UNCHECKABLE. 29m41s wall
 (18:07:25-18:37:06 CDT). Index 44 of 62 audited; Gen 2:4-30:24
 oral layer gapless (creation week deferred).
+
+## 2026-08-08 — RUN 7 (retro oral audits, gen_52-59 + gen_01-02)
+
+ZERO web fetches — full run served from the local mirror
+(export_texts/export_links: Minchat Shai, Kitzur Baal HaTurim,
+Bereshit Rabbah span maps, Rashi scans). TEN blocks: gen_52-59
+(Gen 30:25-36:43) then creation week begins (gen_01-02, Gen
+1:1-8). 107 verifier rows: 101 VERIFIED / 0 FAILED / 6
+UNCHECKABLE. 58m17s wall (18:47:08-19:45:25 CDT, incl. a
+mid-run owner pause and the switch to lean-record mode at block
+4). Index 54 of 62 audited; Gen 1:1-8 + 2:4-36:43 oral layer
+done — remaining: gen_03-07 (creation week) + lev_04, lev_13,
+lev_19.
