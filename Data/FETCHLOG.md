@@ -761,3 +761,119 @@ a genuine stream-vs-chain split carried named (the second throw-word
 of 4:3 — the Ramah's eight-lean list vs the stream's full letter).
 Blocks ran ~11-14 minutes each (run start 13:49, block 5 frozen
 ~15:00).
+
+## 2026-08-09 — RUN FWD-5 (exo_06-10, Exod 6-10): THE PLAGUE CYCLE
+
+ZERO WEB FETCHES. All five blocks ran wholly on the local mirror
+(export_texts: Minchat Shai on Torah + Kitzur Baal HaTurim on
+Exodus, chapters 6-10 — 70 MS notes + 58 KB notes read) and the
+SNAPSHOT databases. Five units derived + frozen in one run:
+exo_06_i_am_the_lord (Exod 6, 30 vv) · exo_07_staff_and_blood
+(Exod 7, 29 vv) · exo_08_frogs_lice_swarms (Exod 8, 28 vv) ·
+exo_09_pestilence_boils_hail (Exod 9, 35 vv) ·
+exo_10_locusts_and_darkness (Exod 10, 29 vv) — 151 verses, the
+whole plague-cycle through the severed audience. Oral manifests:
+66 claims, 66 VERIFIED / 0 FAILED / 0 UNCHECKABLE. Corpus: 86
+frozen units, regression 86/86; world refolded VERIFY GREEN
+(1,561 facts / 308 demands / 181 open / 16 authored links, hash
+dee671001e8fa3b8). Marquee: the dageshed-lamed rule censused
+whole (93 stations, two-sided, with a discrepancy observation
+against Or Torah's except-one); the magician-word FRONT-RANK
+discrepancy (the stream splits the Masorah's two-lean pair —
+full with the Hilleli at 8:15, lean with the ruling at 9:11);
+the frogs' soft-tzadi passage-rule whole across the block-seam
+(ten soft plurals, the one hard singular); the thunder-word
+file with Sinai's lean bonus (19:16 in the same census); the
+Babel cease-pair (bond three: bricks, scatter, cease); the
+light-in-the-dwellings pair (10:23 + Num 31:10); the one full
+going-word (Joseph's caravan, Gen 37:25); the jussive eat- and
+remove-threes isolated by the vav's half-vowel; the curse that
+circles back (10:28 + Deut 3:26) and the double never-again
+(10:29 + Gen 8:21); the kingless locust-verse (the Masorah:
+"the locust has no king"); the majority-principle applied by
+the Ramah to the text's own letters (10:4); FIVE printed-
+authority corrections; TWO binder-divergences dual-tracked.
+Blocks ran ~13-20 minutes each (run start 15:45, block 5 frozen
+17:02; block 1 carried the run setup).
+
+## 2026-08-09 — RUN FWD-6 (exo_11-15, Exod 11-15): MIDNIGHT TO MARAH
+## (bookkeeping written post-transfer; block 5 REDONE after the crash)
+
+ZERO WEB FETCHES. All five blocks ran wholly on the local mirror
+(export_texts: Minchat Shai on Torah + Kitzur Baal HaTurim on
+Exodus, chapters 11-15) and the SNAPSHOT databases. Five units
+derived + frozen: exo_11_one_more_plague (Exod 11, 10 vv) ·
+exo_12_passover_and_exodus (Exod 12, 51 vv) ·
+exo_13_consecration_and_pillars (Exod 13, 22 vv) ·
+exo_14_the_sea_splits (Exod 14, 31 vv) ·
+exo_15_the_song_and_marah (Exod 15, 27 vv) — 141 verses:
+midnight, the exodus, the sea, the Song, Marah. RUN HISTORY: the
+session died 2026-08-09 18:27:53 with blocks 1-4 frozen and
+exo_15's manifest verified but no unit built; the machine then
+moved (old Mac retired); exo_15 was rebuilt from the verified
+manifest inheritance on owner order ("redo exodus 15") the same
+evening on the new machine — redo wall time 19m06s (t0 20:50:58,
+ritual complete 21:10:04; first-session spend on the block ~7m).
+Oral manifests this run: 65 claims (13+13+13+13+13), 65 VERIFIED
+/ 0 FAILED / 0 UNCHECKABLE. Corpus: 91 frozen units, regression
+91/91; world refolded VERIFY GREEN (1,681 facts / 324 demands /
+188 open / 18 authored links, hash 1db42dfddc0d2f64). Run-6
+bookkeeping (this entry, the state-doc section, the registry and
+settlement appends) was owed from the crash and written at the
+exo_15 redo: registry gained MIRYAM (the 2:4 sister signed at
+15:20); settlement links gained TWO (exo_06's joint charge →
+Exod.12.51; gen_73's bones-oath → Exod.13.19 — both pre-queued
+by the prior runs' own notes; the open-count holds at 188: two
+new perpetual/unnarrated opens exactly offset by the two
+settlements). Marquee (exo_15): the guard-dageshim (Micah barred
+from the Song by one dot); the two lean like-You's in one verse
+(the mute-reading); the ten songs on a yod; the people formed
+twice; the dwelling-cipher (752=752); the anagram-pharmacy
+(disease = the bread = the salt, 83 on the gall); the
+reign-cutoff chain-vs-stream divergence (dual-tracked); the
+once-vocalization of the cover-word; the nostril-pair (Adam's
+sweat / the Name's blast); the five sendings (the Akeda's stayed
+hand to the mother-bird); the three refoundings on statute-and-
+ordinance (Marah, Shechem, Ezra); the butchered choice; the
+Song-layout law CLOSED (one column, five lines before and
+after). Machine firsts: the corpus's first song-event, first
+repair-miracle (the sweetening), first statute-station, first
+conditional covenant (the if-clause), first woman titled
+prophetess; the murmur-form's Torah-three asserted (Marah, the
+spies, after Korah); the refrain verbatim (15:1 = 15:21, seven
+tokens); the could-not-drink clause returned (7:21 → 15:23,
+full vs lean).
+
+## 2026-08-09 — RUN FWD-7 (exo_16, Exod 16): THE MANNA
+
+ZERO WEB FETCHES. One block on owner order ("do one more block"),
+wholly on the local mirror (Minchat Shai on Exod 16, 20 notes +
+Kitzur Baal HaTurim on Exod 16, 21 notes) and the SNAPSHOT
+databases. exo_16_manna_and_sabbath (Exod 16, 36 vv) derived +
+frozen — the manna, the murmurings, the test's first verdict, the
+first human Sabbath. TWO ketiv/qere pairs in-span, both on the
+murmur-verb. Oral manifest: 13 claims, 13 VERIFIED / 0 FAILED /
+0 UNCHECKABLE first run (the initial_letters check type's first
+use — the Elijah acrostic machine-verified). Machine: 7D/6R/2E/
+1N/1 TEST-FAIL — five cards pop on narrated compliance-formulas;
+leave-none-over stands perpetual (breached once — the worms);
+the boundary-card pops on va-yishbetu (Torah-unique: THE FIRST
+HUMAN SABBATH); the glory's first public appearance (16:10);
+Marah's armed test pays at 16:4 and FAILS at 16:28 on Pharaoh's
+own refuse-verb (מאנתם "you refuse" — Torah-unique, asserted);
+the house names the manna (first collective naming, REGISTRY 1).
+Corpus: 92 frozen units, regression 92/92; world refolded VERIFY
+GREEN (1,703 facts / 331 demands / 189 open / 18 authored links,
+hash c8cc330a578d5d49; +1 open = the perpetual daily rule).
+Marquee: the unique murmurings spelling (printed Masorah
+corrected); the Ramah's THREE LEAN SEVENTHS census-exact (12:15,
+16:30, Lev 25:9 — the three great cessations); the quail-pair
+(the gift and the grave); the alphabet-verse (all 22 letters in
+the omer-law); the Elijah initials on the keepsake-clause; the
+fence-order (rest-word before Sabbath uniquely here); the
+boundary-adjacency unique (rest as geometry); Sin = the bush
+(120=120); the 248-limb hapax; the wormless Sabbath; the
+three-dot lifting vowel (worm-rise pointed apart from
+glory-rise). TIMING (owner-requested): block wall 21:30:38 →
+~21:46:25 CDT ≈ 15m50s to ritual-complete (+~2m fold and
+records); manifest verified first-run.

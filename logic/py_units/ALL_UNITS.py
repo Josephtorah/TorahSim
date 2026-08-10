@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""ALL_UNITS.py — frozen only (exo_05 frozen 2026-08-09; 81 frozen units)."""
+"""ALL_UNITS.py — frozen only (exo_16 frozen 2026-08-09; 92 frozen units)."""
 import sys, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
@@ -22492,6 +22492,4038 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 5
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: exo_06_i_am_the_lord
+###############################################################################
+
+m = Machine("exo_06_i_am_the_lord")
+
+# -------------------------- Exod.6.1 · NOW_YOU_SHALL_SEE -------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה עַתָּה תִרְאֶה אֲשֶׁר אֶעֱשֶׂה לְפַרְעֹה כִּי
+# בְיָד חֲזָקָה יְשַׁלְּחֵם וּבְיָד חֲזָקָה יְגָרְשֵׁם מֵאַרְצוֹ
+# "[EN-AID] And the LORD said to Moses: Now you shall see what I will do to
+# Pharaoh; for by a strong hand he shall send them, and by a strong hand he
+# shall drive them out of his land."
+m.step("Exod.6.1")
+# ‹עַתָּה תִרְאֶה אֲשֶׁר אֶעֱשֶׂה לְפַרְעֹה› (“now see which make to-
+# Pharaoh”) — fact holds: now-see-which-make-to-Pharaoh
+m.fact("ata_tire_asher_eese_le_faro")
+
+# -------------------------- Exod.6.2 · I_AM_YHWH ---------------------------
+# וַיְדַבֵּר אֱלֹהִים אֶל־מֹשֶׁה וַיֹּאמֶר אֵלָיו אֲנִי יְהוָה
+# "[EN-AID] And God spoke to Moses, and said to him: I am the LORD."
+m.step("Exod.6.2")
+# ‹אֲנִי יְהוָה› (“YHWH”) — fact holds: I-the-LORD
+m.fact("ani_YHWH")
+
+# -------------------------- Exod.6.3 · NOT_BY_MY_NAME_KNOWN ----------------
+# וָאֵרָא אֶל־אַבְרָהָם אֶל־יִצְחָק וְאֶל־יַעֲקֹב בְּאֵל שַׁדָּי וּשְׁמִי
+# יְהוָה לֹא נוֹדַעְתִּי לָהֶם
+# "[EN-AID] And I appeared to Abraham, to Isaac, and to Jacob as God
+# Almighty; but by My name the LORD I was not known to them."
+m.step("Exod.6.3")
+# ‹וָאֵרָא אֶל־אַבְרָהָם› (“and-see to Abraham”) — fact holds: and-shemi-
+# the-LORD-not-know-to-them
+m.fact("u_shemi_YHWH_lo_nodati_lahem")
+
+# -------------------------- Exod.6.4 · THE_COVENANT_STOOD ------------------
+# וְגַם הֲקִמֹתִי אֶת־בְּרִיתִי אִתָּם לָתֵת לָהֶם אֶת־אֶרֶץ כְּנָעַן אֵת
+# אֶרֶץ מְגֻרֵיהֶם אֲשֶׁר־גָּרוּ בָהּ
+# "[EN-AID] And I also established My covenant with them, to give them the
+# land of Canaan, the land of their sojournings, wherein they sojourned."
+m.step("Exod.6.4")
+# ‹אֵת אֶרֶץ מְגֻרֵיהֶם אֲשֶׁר־גָּרוּ בָהּ› (“obj-marker earth sojourning-
+# them/their which turn-aside-from-the-road in-her/its”) — fact holds:
+# arise-obj-marker-beriti
+m.fact("haqimoti_et_beriti")
+
+# -------------------------- Exod.6.5 · THE_GROANING_HEARD ------------------
+# וְגַם אֲנִי שָׁמַעְתִּי אֶת־נַאֲקַת בְּנֵי יִשְׂרָאֵל אֲשֶׁר מִצְרַיִם
+# מַעֲבִדִים אֹתָם וָאֶזְכֹּר אֶת־בְּרִיתִי
+# "[EN-AID] And I also heard the groaning of the sons of Israel, whom Egypt
+# holds in bondage; and I remembered My covenant."
+m.step("Exod.6.5")
+# ‹שָׁמַעְתִּי אֶת־נַאֲקַת בְּנֵי יִשְׂרָאֵל› (“hear obj-marker groan son
+# Israel”) — fact holds: hear-and-mark
+m.fact("shamati_va_ezkor")
+
+# -------------------------- Exod.6.6 · THEREFORE_SAY -----------------------
+# לָכֵן אֱמֹר לִבְנֵי־יִשְׂרָאֵל אֲנִי יְהוָה וְהוֹצֵאתִי אֶתְכֶם מִתַּחַת
+# סִבְלֹת מִצְרַיִם וְהִצַּלְתִּי אֶתְכֶם מֵעֲבֹדָתָם וְגָאַלְתִּי אֶתְכֶם
+# בִּזְרוֹעַ נְטוּיָה וּבִשְׁפָטִים גְּדֹלִים
+# "[EN-AID] Therefore say to the sons of Israel: I am the LORD; and I will
+# bring you out from under the burdens of Egypt, and I will deliver you from
+# their bondage; and I will redeem you with an outstretched arm, and with
+# great judgments."
+m.step("Exod.6.6")
+# ‹לָכֵן אֱמֹר לִבְנֵי־יִשְׂרָאֵל אֲנִי יְהוָה› (“to-so say to-son Israel
+# YHWH”) — the-LORD speaks a demand — LET: say-to-me-son-Israel-I-the-LORD
+m.declare("YHWH", "LET",
+          "emor_li_vene_yisrael_ani_YHWH")
+
+# -------------------------- Exod.6.7 · I_WILL_TAKE_YOU ---------------------
+# וְלָקַחְתִּי אֶתְכֶם לִי לְעָם וְהָיִיתִי לָכֶם לֵאלֹהִים וִידַעְתֶּם כִּי
+# אֲנִי יְהוָה אֱלֹהֵיכֶם הַמּוֹצִיא אֶתְכֶם מִתַּחַת סִבְלוֹת מִצְרָיִם
+# "[EN-AID] And I will take you to Me for a people, and I will be to you a
+# God; and you shall know that I am the LORD your God, who brings you out
+# from under the burdens of Egypt."
+m.step("Exod.6.7")
+# ‹וְלָקַחְתִּי אֶתְכֶם לִי לְעָם› (“and-take obj-marker-you/your(pl) to-
+# me/my to-people”) — fact holds: and-take-etkhem-to-me-to-people
+m.fact("ve_laqachti_etkhem_li_le_am")
+
+# -------------------------- Exod.6.8 · I_WILL_BRING_YOU_IN -----------------
+# וְהֵבֵאתִי אֶתְכֶם אֶל־הָאָרֶץ אֲשֶׁר נָשָׂאתִי אֶת־יָדִי לָתֵת אֹתָהּ
+# לְאַבְרָהָם לְיִצְחָק וּלְיַעֲקֹב וְנָתַתִּי אֹתָהּ לָכֶם מוֹרָשָׁה אֲנִי
+# יְהוָה
+# "[EN-AID] And I will bring you into the land which I lifted My hand to
+# give to Abraham, to Isaac, and to Jacob; and I will give it to you as a
+# heritage: I am the LORD."
+m.step("Exod.6.8")
+# ‹וְנָתַתִּי אֹתָהּ לָכֶם מוֹרָשָׁה אֲנִי יְהוָה› (“and-set obj-marker-
+# her/its to-you/your(pl) possession YHWH”) — fact holds: and-come/bring-
+# etkhem-to-the-earth
+m.fact("ve_heveti_etkhem_el_ha_aretz")
+
+# -------------------------- Exod.6.9 · MOSES_SPOKE_SO ----------------------
+# וַיְדַבֵּר מֹשֶׁה כֵּן אֶל־בְּנֵי יִשְׂרָאֵל וְלֹא שָׁמְעוּ אֶל־מֹשֶׁה
+# מִקֹּצֶר רוּחַ וּמֵעֲבֹדָה קָשָׁה
+# "[EN-AID] And Moses spoke so to the sons of Israel; but they did not hear
+# Moses, from shortness of breath and from hard bondage."
+m.step("Exod.6.9")
+# ‹וַיְדַבֵּר מֹשֶׁה כֵּן אֶל־בְּנֵי יִשְׂרָאֵל› (“and-speak Moses so to son
+# Israel”) — demand settled (popped from the queue): say-to-me-son-Israel-I-
+# the-LORD
+m.result("emor_li_vene_yisrael_ani_YHWH", tmark="t1")
+
+# -------------------------- Exod.6.10 · THE_GO_SPEAK_FRAME -----------------
+# וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר
+# "[EN-AID] And the LORD spoke to Moses, saying:"
+m.step("Exod.6.10")
+# ‹וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר› (“and-speak YHWH to Moses to-say”)
+# — fact holds: and-speak-the-LORD-to-Moses-lemor
+m.fact("va_yedaber_YHWH_el_moshe_lemor")
+
+# -------------------------- Exod.6.11 · GO_SPEAK_TO_PHARAOH ----------------
+# בֹּא דַבֵּר אֶל־פַּרְעֹה מֶלֶךְ מִצְרָיִם וִישַׁלַּח אֶת־בְּנֵי־יִשְׂרָאֵל
+# מֵאַרְצוֹ
+# "[EN-AID] Go, speak to Pharaoh king of Egypt, that he send the sons of
+# Israel out of his land."
+m.step("Exod.6.11")
+# ‹בֹּא דַבֵּר אֶל־פַּרְעֹה מֶלֶךְ מִצְרָיִם› (“come/bring speak to Pharaoh
+# king Egypt”) — the-LORD speaks a demand — LET: come/bring-speak-to-Pharaoh
+m.declare("YHWH", "LET",
+          "bo_daber_el_paro")
+
+# -------------------------- Exod.6.12 · UNCIRCUMCISED_LIPS -----------------
+# וַיְדַבֵּר מֹשֶׁה לִפְנֵי יְהוָה לֵאמֹר הֵן בְּנֵי־יִשְׂרָאֵל לֹא־שָׁמְעוּ
+# אֵלַי וְאֵיךְ יִשְׁמָעֵנִי פַרְעֹה וַאֲנִי עֲרַל שְׂפָתָיִם
+# "[EN-AID] And Moses spoke before the LORD, saying: Behold, the sons of
+# Israel have not heard me; how then shall Pharaoh hear me — and I am of
+# uncircumcised lips."
+m.step("Exod.6.12")
+# ‹וְאֵיךְ יִשְׁמָעֵנִי פַרְעֹה וַאֲנִי עֲרַל שְׂפָתָיִם› (“and-how? hear-
+# me/my Pharaoh and-I uncircumcised lip”) — fact holds: lo!-not-hear-elay
+m.fact("hen_lo_shamu_elay")
+
+# -------------------------- Exod.6.13 · THE_JOINT_CHARGE -------------------
+# וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה וְאֶל־אַהֲרֹן וַיְצַוֵּם אֶל־בְּנֵי
+# יִשְׂרָאֵל וְאֶל־פַּרְעֹה מֶלֶךְ מִצְרָיִם לְהוֹצִיא אֶת־בְּנֵי־יִשְׂרָאֵל
+# מֵאֶרֶץ מִצְרָיִם
+# "[EN-AID] And the LORD spoke to Moses and to Aaron, and gave them a charge
+# to the sons of Israel, and to Pharaoh king of Egypt, to bring the sons of
+# Israel out of the land of Egypt."
+m.step("Exod.6.13")
+# ‹וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה וְאֶל־אַהֲרֹן› (“and-speak YHWH to Moses
+# and-to Aaron”) — the-LORD speaks a demand — LET: bring-forth-obj-marker-
+# son-Israel-from-earth-Egypt
+m.declare("YHWH", "LET",
+          "hotzi_et_bene_yisrael_me_eretz_mitzrayim")
+
+# -------------------------- Exod.6.14 · THE_REGISTRY_OPENS -----------------
+# אֵלֶּה רָאשֵׁי בֵית־אֲבֹתָם בְּנֵי רְאוּבֵן בְּכֹר יִשְׂרָאֵל חֲנוֹךְ
+# וּפַלּוּא חֶצְרוֹן וְכַרְמִי אֵלֶּה מִשְׁפְּחֹת רְאוּבֵן
+# "[EN-AID] These are the heads of their fathers' houses: the sons of
+# Reuben, Israel's firstborn — Enoch and Pallu, Hezron and Carmi; these are
+# the families of Reuben."
+m.step("Exod.6.14")
+# ‹אֵלֶּה רָאשֵׁי בֵית־אֲבֹתָם› (“these head house father-them/their”) —
+# fact holds: these-head-house-avotam
+m.fact("ele_rashe_vet_avotam")
+
+# -------------------------- Exod.6.15 · SIMEONS_SONS -----------------------
+# וּבְנֵי שִׁמְעוֹן יְמוּאֵל וְיָמִין וְאֹהַד וְיָכִין וְצֹחַר וְשָׁאוּל
+# בֶּן־הַכְּנַעֲנִית אֵלֶּה מִשְׁפְּחֹת שִׁמְעוֹן
+# "[EN-AID] And the sons of Simeon: Jemuel, and Jamin, and Ohad, and Jachin,
+# and Zohar, and Saul the son of the Canaanite woman; these are the families
+# of Simeon."
+m.step("Exod.6.15")
+# ‹וּבְנֵי שִׁמְעוֹן› (“and-son Simeon”) — fact holds: these-mishpechot-
+# Simeon
+m.fact("ele_mishpechot_shimon")
+
+# -------------------------- Exod.6.16 · LEVIS_YEARS ------------------------
+# וְאֵלֶּה שְׁמוֹת בְּנֵי־לֵוִי לְתֹלְדֹתָם גֵּרְשׁוֹן וּקְהָת וּמְרָרִי
+# וּשְׁנֵי חַיֵּי לֵוִי שֶׁבַע וּשְׁלֹשִׁים וּמְאַת שָׁנָה
+# "[EN-AID] And these are the names of the sons of Levi by their
+# generations: Gershon, and Kohath, and Merari; and the years of Levi's life
+# were seven and thirty and a hundred years."
+m.step("Exod.6.16")
+# ‹וְאֵלֶּה שְׁמוֹת בְּנֵי־לֵוִי לְתֹלְדֹתָם› (“and-these name son Levi to-
+# generations-them/their”) — fact holds: and-years-alive-Levi
+m.fact("u_shene_chaye_levi")
+
+# -------------------------- Exod.6.17 · GERSHONS_SONS ----------------------
+# בְּנֵי גֵרְשׁוֹן לִבְנִי וְשִׁמְעִי לְמִשְׁפְּחֹתָם
+# "[EN-AID] The sons of Gershon: Libni and Shimei, by their families."
+m.step("Exod.6.17")
+# ‹בְּנֵי גֵרְשׁוֹן לִבְנִי וְשִׁמְעִי› (“son Gershon Libni and-Shimeah”) —
+# fact holds: son-Gershon
+m.fact("bene_gershon")
+
+# -------------------------- Exod.6.18 · KOHATHS_SONS -----------------------
+# וּבְנֵי קְהָת עַמְרָם וְיִצְהָר וְחֶבְרוֹן וְעֻזִּיאֵל וּשְׁנֵי חַיֵּי
+# קְהָת שָׁלֹשׁ וּשְׁלֹשִׁים וּמְאַת שָׁנָה
+# "[EN-AID] And the sons of Kohath: Amram, and Izhar, and Hebron, and
+# Uzziel; and the years of Kohath's life were three and thirty and a hundred
+# years."
+m.step("Exod.6.18")
+# ‹עַמְרָם› (“Amram”) — fact holds: and-son-Kohath
+m.fact("u_vene_qehat")
+
+# -------------------------- Exod.6.19 · MERARIS_SONS -----------------------
+# וּבְנֵי מְרָרִי מַחְלִי וּמוּשִׁי אֵלֶּה מִשְׁפְּחֹת הַלֵּוִי לְתֹלְדֹתָם
+# "[EN-AID] And the sons of Merari: Machli and Mushi; these are the families
+# of the Levite by their generations."
+m.step("Exod.6.19")
+# ‹מַחְלִי וּמוּשִׁי› (“Mahli and-Mushi”) — fact holds: and-son-Merari
+m.fact("u_vene_merari")
+
+# -------------------------- Exod.6.20 · AMRAM_TAKES_YOKHEVED ---------------
+# וַיִּקַּח עַמְרָם אֶת־יוֹכֶבֶד דֹּדָתוֹ לוֹ לְאִשָּׁה וַתֵּלֶד לוֹ
+# אֶת־אַהֲרֹן וְאֶת־מֹשֶׁה וּשְׁנֵי חַיֵּי עַמְרָם שֶׁבַע וּשְׁלֹשִׁים
+# וּמְאַת שָׁנָה
+# "[EN-AID] And Amram took Yokheved his father's sister to himself as wife,
+# and she bore him Aaron and Moses; and the years of Amram's life were seven
+# and thirty and a hundred years."
+m.step("Exod.6.20")
+# ‹וַיִּקַּח עַמְרָם אֶת־יוֹכֶבֶד דֹּדָתוֹ› (“and-take Amram obj-marker
+# Jochebed aunt-him/its”) — fact holds: and-take-Amram-obj-marker-Jochebed
+m.fact("va_yiqach_amram_et_yokheved")
+
+# -------------------------- Exod.6.21 · IZHARS_SONS ------------------------
+# וּבְנֵי יִצְהָר קֹרַח וָנֶפֶג וְזִכְרִי
+# "[EN-AID] And the sons of Izhar: Korach, and Nepheg, and Zichri."
+m.step("Exod.6.21")
+# ‹קֹרַח› (“Korah”) — fact holds: and-son-Izhar
+m.fact("u_vene_yitzhar")
+
+# -------------------------- Exod.6.22 · UZZIELS_SONS -----------------------
+# וּבְנֵי עֻזִּיאֵל מִישָׁאֵל וְאֶלְצָפָן וְסִתְרִי
+# "[EN-AID] And the sons of Uzziel: Mishael, and Elzaphan, and Sithri."
+m.step("Exod.6.22")
+# ‹מִישָׁאֵל וְאֶלְצָפָן› (“Mishael and-Elizaphan”) — fact holds: and-son-
+# Uzziel
+m.fact("u_vene_uziel")
+
+# -------------------------- Exod.6.23 · AARON_TAKES_ELISHEVA ---------------
+# וַיִּקַּח אַהֲרֹן אֶת־אֱלִישֶׁבַע בַּת־עַמִּינָדָב אֲחוֹת נַחְשׁוֹן לוֹ
+# לְאִשָּׁה וַתֵּלֶד לוֹ אֶת־נָדָב וְאֶת־אֲבִיהוּא אֶת־אֶלְעָזָר
+# וְאֶת־אִיתָמָר
+# "[EN-AID] And Aaron took Elisheva, daughter of Amminadav, sister of
+# Nachshon, to himself as wife; and she bore him Nadav and Avihu, Elazar and
+# Itamar."
+m.step("Exod.6.23")
+# ‹וַיִּקַּח אַהֲרֹן אֶת־אֱלִישֶׁבַע בַּת־עַמִּינָדָב אֲחוֹת נַחְשׁוֹן›
+# (“and-take Aaron obj-marker Elisheba daughter Amminadab sister Naashon”) —
+# fact holds: and-take-Aaron-obj-marker-Elisheba
+m.fact("va_yiqach_aharon_et_elisheva")
+
+# -------------------------- Exod.6.24 · KORACHS_SONS -----------------------
+# וּבְנֵי קֹרַח אַסִּיר וְאֶלְקָנָה וַאֲבִיאָסָף אֵלֶּה מִשְׁפְּחֹת
+# הַקָּרְחִי
+# "[EN-AID] And the sons of Korach: Assir, and Elkanah, and Aviasaph; these
+# are the families of the Korahite."
+m.step("Exod.6.24")
+# ‹אַסִּיר וְאֶלְקָנָה וַאֲבִיאָסָף› (“Assir and-Elkanah and-Abiasaph”) —
+# fact holds: and-son-Korah
+m.fact("u_vene_qorach")
+
+# -------------------------- Exod.6.25 · ELAZAR_AND_PINCHAS -----------------
+# וְאֶלְעָזָר בֶּן־אַהֲרֹן לָקַח־לוֹ מִבְּנוֹת פּוּטִיאֵל לוֹ לְאִשָּׁה
+# וַתֵּלֶד לוֹ אֶת־פִּינְחָס אֵלֶּה רָאשֵׁי אֲבוֹת הַלְוִיִּם
+# לְמִשְׁפְּחֹתָם
+# "[EN-AID] And Elazar, Aaron's son, took for himself of the daughters of
+# Putiel as wife; and she bore him Pinchas. These are the heads of the
+# fathers of the Levites by their families."
+m.step("Exod.6.25")
+# ‹וַתֵּלֶד לוֹ אֶת־פִּינְחָס› (“and-bear-young to-him/its obj-marker
+# Phinehas”) — fact holds: and-bear-young-not-obj-marker-Phinehas
+m.fact("va_teled_lo_et_pinchas")
+
+# -------------------------- Exod.6.26 · THAT_AARON_AND_MOSES ---------------
+# הוּא אַהֲרֹן וּמֹשֶׁה אֲשֶׁר אָמַר יְהוָה לָהֶם הוֹצִיאוּ אֶת־בְּנֵי
+# יִשְׂרָאֵל מֵאֶרֶץ מִצְרַיִם עַל־צִבְאֹתָם
+# "[EN-AID] This is that Aaron and Moses, to whom the LORD said: Bring out
+# the sons of Israel from the land of Egypt by their hosts."
+m.step("Exod.6.26")
+# ‹הוּא אַהֲרֹן וּמֹשֶׁה› (“he/it Aaron and-Moses”) — fact holds: he/it-
+# Aaron-and-Moses
+m.fact("hu_aharon_u_moshe")
+
+# -------------------------- Exod.6.27 · THE_SPEAKERS_FLIPPED ---------------
+# הֵם הַמְדַבְּרִים אֶל־פַּרְעֹה מֶלֶךְ־מִצְרַיִם לְהוֹצִיא
+# אֶת־בְּנֵי־יִשְׂרָאֵל מִמִּצְרָיִם הוּא מֹשֶׁה וְאַהֲרֹן
+# "[EN-AID] They are the ones who speak to Pharaoh king of Egypt, to bring
+# out the sons of Israel from Egypt: this is that Moses and Aaron."
+m.step("Exod.6.27")
+# ‹הוּא מֹשֶׁה וְאַהֲרֹן› (“he/it Moses and-Aaron”) — fact holds: he/it-
+# Moses-and-Aaron
+m.fact("hu_moshe_ve_aharon")
+
+# -------------------------- Exod.6.28 · THE_RESUMPTION_DAY -----------------
+# וַיְהִי בְּיוֹם דִּבֶּר יְהוָה אֶל־מֹשֶׁה בְּאֶרֶץ מִצְרָיִם
+# "[EN-AID] And it came to pass, on the day the LORD spoke to Moses in the
+# land of Egypt:"
+m.step("Exod.6.28")
+# ‹וַיְהִי בְּיוֹם דִּבֶּר יְהוָה אֶל־› (“and-be in-day speak YHWH to”) —
+# fact holds: and-be-in-day-speak
+m.fact("va_yehi_be_yom_diber")
+
+# -------------------------- Exod.6.29 · SPEAK_ALL_THAT_I_SPEAK -------------
+# וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר אֲנִי יְהוָה דַּבֵּר אֶל־פַּרְעֹה
+# מֶלֶךְ מִצְרַיִם אֵת כָּל־אֲשֶׁר אֲנִי דֹּבֵר אֵלֶיךָ
+# "[EN-AID] And the LORD spoke to Moses, saying: I am the LORD; speak to
+# Pharaoh king of Egypt all that I speak to you."
+m.step("Exod.6.29")
+# ‹דַּבֵּר אֶל־פַּרְעֹה מֶלֶךְ מִצְרַיִם› (“speak to Pharaoh king Egypt”) —
+# fact holds: speak-to-Pharaoh-obj-marker-all-which-I-speak
+m.fact("daber_el_paro_et_kol_asher_ani_dover")
+
+# -------------------------- Exod.6.30 · THE_SECOND_PLEA --------------------
+# וַיֹּאמֶר מֹשֶׁה לִפְנֵי יְהוָה הֵן אֲנִי עֲרַל שְׂפָתַיִם וְאֵיךְ
+# יִשְׁמַע אֵלַי פַּרְעֹה
+# "[EN-AID] And Moses said before the LORD: Behold, I am of uncircumcised
+# lips; how shall Pharaoh hear me?"
+m.step("Exod.6.30")
+# ‹הֵן אֲנִי עֲרַל שְׂפָתַיִם› (“lo! uncircumcised lip”) — fact holds:
+# lo!-I-uncircumcised-lip
+m.fact("hen_ani_aral_sefatayim")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == ['bo_daber_el_paro', 'hotzi_et_bene_yisrael_me_eretz_mitzrayim']
+    assert len(m.SPECS["log"]) == 3
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted(['ata_tire_asher_eese_le_faro', 'ani_YHWH', 'u_shemi_YHWH_lo_nodati_lahem', 'haqimoti_et_beriti', 'shamati_va_ezkor', 've_laqachti_etkhem_li_le_am', 've_heveti_etkhem_el_ha_aretz', 'va_yedaber_YHWH_el_moshe_lemor', 'hen_lo_shamu_elay', 'ele_rashe_vet_avotam', 'ele_mishpechot_shimon', 'u_shene_chaye_levi', 'bene_gershon', 'u_vene_qehat', 'u_vene_merari', 'va_yiqach_amram_et_yokheved', 'u_vene_yitzhar', 'u_vene_uziel', 'va_yiqach_aharon_et_elisheva', 'u_vene_qorach', 'va_teled_lo_et_pinchas', 'hu_aharon_u_moshe', 'hu_moshe_ve_aharon', 'va_yehi_be_yom_diber', 'daber_el_paro_et_kol_asher_ani_dover', 'hen_ani_aral_sefatayim'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 4
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: exo_07_staff_and_blood
+###############################################################################
+
+m = Machine("exo_07_staff_and_blood")
+
+# -------------------------- Exod.7.1 · SEE_I_HAVE_SET_YOU ------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה רְאֵה נְתַתִּיךָ אֱלֹהִים לְפַרְעֹה וְאַהֲרֹן
+# אָחִיךָ יִהְיֶה נְבִיאֶךָ
+# "[EN-AID] And the LORD said to Moses: See, I have set you as God to
+# Pharaoh; and Aaron your brother shall be your prophet."
+m.step("Exod.7.1")
+# ‹רְאֵה נְתַתִּיךָ אֱלֹהִים לְפַרְעֹה› (“see set-you/your God to-Pharaoh”)
+# — fact holds: netaticha-God-to-Pharaoh
+m.fact("netaticha_elohim_le_faro")
+
+# -------------------------- Exod.7.2 · THE_RELAY_STATED --------------------
+# אַתָּה תְדַבֵּר אֵת כָּל־אֲשֶׁר אֲצַוֶּךָּ וְאַהֲרֹן אָחִיךָ יְדַבֵּר
+# אֶל־פַּרְעֹה וְשִׁלַּח אֶת־בְּנֵי־יִשְׂרָאֵל מֵאַרְצוֹ
+# "[EN-AID] You shall speak all that I command you; and Aaron your brother
+# shall speak to Pharaoh, that he send the sons of Israel out of his land."
+m.step("Exod.7.2")
+# ‹אַתָּה תְדַבֵּר אֵת כָּל־אֲשֶׁר אֲצַוֶּךָּ› (“you speak obj-marker all
+# which command-you/your”) — fact holds: you-speak-obj-marker-all-which-
+# atzaveka
+m.fact("ata_tedaber_et_kol_asher_atzaveka")
+
+# -------------------------- Exod.7.3 · I_WILL_HARDEN -----------------------
+# וַאֲנִי אַקְשֶׁה אֶת־לֵב פַּרְעֹה וְהִרְבֵּיתִי אֶת־אֹתֹתַי וְאֶת־מוֹפְתַי
+# בְּאֶרֶץ מִצְרָיִם
+# "[EN-AID] And I will harden Pharaoh's heart, and multiply My signs and My
+# wonders in the land of Egypt."
+m.step("Exod.7.3")
+# ‹וַאֲנִי אַקְשֶׁה אֶת־לֵב פַּרְעֹה› (“and-I be-dense obj-marker heart
+# Pharaoh”) — fact holds: and-I-be-dense-obj-marker-heart-Pharaoh
+m.fact("va_ani_aqshe_et_lev_paro")
+
+# -------------------------- Exod.7.4 · HE_WILL_NOT_HEAR --------------------
+# וְלֹא־יִשְׁמַע אֲלֵכֶם פַּרְעֹה וְנָתַתִּי אֶת־יָדִי בְּמִצְרָיִם
+# וְהוֹצֵאתִי אֶת־צִבְאֹתַי אֶת־עַמִּי בְנֵי־יִשְׂרָאֵל מֵאֶרֶץ מִצְרַיִם
+# בִּשְׁפָטִים גְּדֹלִים
+# "[EN-AID] And Pharaoh will not hear you; and I will lay My hand on Egypt,
+# and bring out My hosts, My people the sons of Israel, from the land of
+# Egypt with great judgments."
+m.step("Exod.7.4")
+# ‹וְהוֹצֵאתִי אֶת־צִבְאֹתַי אֶת־עַמִּי בְנֵי־יִשְׂרָאֵל מֵאֶרֶץ מִצְרַיִם›
+# (“and-bring-forth obj-marker host-me/my obj-marker people-me/my son Israel
+# from-earth Egypt”) — fact holds: and-not-hear-alekhem-Pharaoh
+m.fact("ve_lo_yishma_alekhem_paro")
+
+# -------------------------- Exod.7.5 · EGYPT_SHALL_KNOW --------------------
+# וְיָדְעוּ מִצְרַיִם כִּי־אֲנִי יְהוָה בִּנְטֹתִי אֶת־יָדִי עַל־מִצְרָיִם
+# וְהוֹצֵאתִי אֶת־בְּנֵי־יִשְׂרָאֵל מִתּוֹכָם
+# "[EN-AID] And Egypt shall know that I am the LORD, when I stretch out My
+# hand over Egypt; and I will bring out the sons of Israel from among them."
+m.step("Exod.7.5")
+# ‹וְיָדְעוּ מִצְרַיִם כִּי־אֲנִי יְהוָה› (“and-know Egyptian that YHWH”) —
+# fact holds: and-know-Egypt-that-I-the-LORD
+m.fact("ve_yadu_mitzrayim_ki_ani_YHWH")
+
+# -------------------------- Exod.7.6 · THEY_DID_AS_COMMANDED ---------------
+# וַיַּעַשׂ מֹשֶׁה וְאַהֲרֹן כַּאֲשֶׁר צִוָּה יְהוָה אֹתָם כֵּן עָשׂוּ
+# "[EN-AID] And Moses and Aaron did as the LORD commanded them; so they
+# did."
+m.step("Exod.7.6")
+# ‹כַּאֲשֶׁר צִוָּה יְהוָה אֹתָם כֵּן עָשׂוּ› (“like-as/which command YHWH
+# obj-marker-them/their so make”) — fact holds: like-which-command-the-LORD-
+# so-make
+m.fact("ka_asher_tziva_YHWH_ken_asu")
+
+# -------------------------- Exod.7.7 · EIGHTY_AND_EIGHTY_THREE -------------
+# וּמֹשֶׁה בֶּן־שְׁמֹנִים שָׁנָה וְאַהֲרֹן בֶּן־שָׁלֹשׁ וּשְׁמֹנִים שָׁנָה
+# בְּדַבְּרָם אֶל־פַּרְעֹה
+# "[EN-AID] And Moses was eighty years old, and Aaron eighty-three years
+# old, when they spoke to Pharaoh."
+m.step("Exod.7.7")
+# ‹וּמֹשֶׁה בֶּן־שְׁמֹנִים שָׁנָה› (“and-Moses son eighty years”) — fact
+# holds: and-Moses-son-eighty-years
+m.fact("u_moshe_ben_shemonim_shana")
+
+# -------------------------- Exod.7.8 · THE_COMPOUND_FRAME ------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה וְאֶל־אַהֲרֹן לֵאמֹר
+# "[EN-AID] And the LORD said to Moses and to Aaron, saying:"
+m.step("Exod.7.8")
+# ‹וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה וְאֶל־אַהֲרֹן לֵאמֹר› (“and-say YHWH to Moses
+# and-to Aaron to-say”) — fact holds: and-say-the-LORD-to-Moses-and-to-Aaron
+m.fact("va_yomer_YHWH_el_moshe_ve_el_aharon")
+
+# -------------------------- Exod.7.9 · THE_WONDER_SCRIPT -------------------
+# כִּי יְדַבֵּר אֲלֵכֶם פַּרְעֹה לֵאמֹר תְּנוּ לָכֶם מוֹפֵת וְאָמַרְתָּ
+# אֶל־אַהֲרֹן קַח אֶת־מַטְּךָ וְהַשְׁלֵךְ לִפְנֵי־פַרְעֹה יְהִי לְתַנִּין
+# "[EN-AID] When Pharaoh speaks to you, saying: Give a wonder for yourselves
+# — then you shall say to Aaron: Take your staff and throw it before
+# Pharaoh; let it become a serpent."
+m.step("Exod.7.9")
+# ‹קַח אֶת־מַטְּךָ וְהַשְׁלֵךְ לִפְנֵי־פַרְעֹה יְהִי לְתַנִּין› (“take obj-
+# marker staff/tribe-you/your and-throw-out to-face Pharaoh be to-sea-
+# monster”) — the-LORD speaks a demand — LET: take-obj-marker-matkha-and-
+# throw-out
+m.declare("YHWH", "LET",
+          "qach_et_matkha_ve_hashlekh")
+
+# -------------------------- Exod.7.10 · PERFORMED_AS_COMMANDED -------------
+# וַיָּבֹא מֹשֶׁה וְאַהֲרֹן אֶל־פַּרְעֹה וַיַּעַשׂוּ כֵן כַּאֲשֶׁר צִוָּה
+# יְהוָה וַיַּשְׁלֵךְ אַהֲרֹן אֶת־מַטֵּהוּ לִפְנֵי פַרְעֹה וְלִפְנֵי
+# עֲבָדָיו וַיְהִי לְתַנִּין
+# "[EN-AID] And Moses and Aaron came to Pharaoh, and they did so, as the
+# LORD had commanded; and Aaron threw his staff before Pharaoh and before
+# his servants, and it became a serpent."
+m.step("Exod.7.10")
+# ‹וַיַּשְׁלֵךְ אַהֲרֹן אֶת־מַטֵּהוּ לִפְנֵי פַרְעֹה וְלִפְנֵי עֲבָדָיו
+# וַיְהִי לְתַנִּין› (“and-throw-out Aaron obj-marker staff/tribe-him/its
+# to-face Pharaoh and-to-face servant-him/its and-be to-sea-monster”) —
+# demand settled (popped from the queue): take-obj-marker-matkha-and-throw-
+# out
+m.result("qach_et_matkha_ve_hashlekh", tmark="t1")
+
+# -------------------------- Exod.7.11 · THE_MAGICIANS_MATCH ----------------
+# וַיִּקְרָא גַּם־פַּרְעֹה לַחֲכָמִים וְלַמְכַשְּׁפִים וַיַּעֲשׂוּ גַם־הֵם
+# חַרְטֻמֵּי מִצְרַיִם בְּלַהֲטֵיהֶם כֵּן
+# "[EN-AID] And Pharaoh also called the wise men and the sorcerers; and they
+# also, the magicians of Egypt, did so with their secret arts."
+m.step("Exod.7.11")
+# ‹וַיַּעֲשׂוּ גַם־הֵם חַרְטֻמֵּי מִצְרַיִם בְּלַהֲטֵיהֶם› (“and-make also
+# they horoscopist Egypt in-blaze-them/their”) — fact holds: and-make-also-
+# they-in-lahatehem
+m.fact("va_yaasu_gam_hem_be_lahatehem")
+
+# -------------------------- Exod.7.12 · THE_SWALLOWING ---------------------
+# וַיַּשְׁלִיכוּ אִישׁ מַטֵּהוּ וַיִּהְיוּ לְתַנִּינִם וַיִּבְלַע
+# מַטֵּה־אַהֲרֹן אֶת־מַטֹּתָם
+# "[EN-AID] And they threw down every man his staff, and they became
+# serpents; and Aaron's staff swallowed their staffs."
+m.step("Exod.7.12")
+# ‹וַיִּבְלַע מַטֵּה־אַהֲרֹן אֶת־מַטֹּתָם› (“and-swallow staff/tribe Aaron
+# obj-marker staff/tribe-them/their”) — event: bala — agent staff/tribe-
+# Aaron
+m.event("bala", agent="mate_aharon")
+
+# -------------------------- Exod.7.13 · THE_HEART_STRENGTHENED -------------
+# וַיֶּחֱזַק לֵב פַּרְעֹה וְלֹא שָׁמַע אֲלֵהֶם כַּאֲשֶׁר דִּבֶּר יְהוָה
+# "[EN-AID] And Pharaoh's heart was strengthened, and he did not hear them,
+# as the LORD had spoken."
+m.step("Exod.7.13")
+# ‹וַיֶּחֱזַק לֵב פַּרְעֹה› (“and-fasten-upon heart Pharaoh”) — fact holds:
+# and-fasten-upon-heart-Pharaoh
+m.fact("va_yechezaq_lev_paro")
+
+# -------------------------- Exod.7.14 · THE_HEAVY_HEART --------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה כָּבֵד לֵב פַּרְעֹה מֵאֵן לְשַׁלַּח הָעָם
+# "[EN-AID] And the LORD said to Moses: Pharaoh's heart is heavy; he refuses
+# to send the people."
+m.step("Exod.7.14")
+# ‹כָּבֵד לֵב פַּרְעֹה› (“heavy heart Pharaoh”) — fact holds: heavy-heart-
+# Pharaoh
+m.fact("kaved_lev_paro")
+
+# -------------------------- Exod.7.15 · THE_MORNING_STATION ----------------
+# לֵךְ אֶל־פַּרְעֹה בַּבֹּקֶר הִנֵּה יֹצֵא הַמַּיְמָה וְנִצַּבְתָּ
+# לִקְרָאתוֹ עַל־שְׂפַת הַיְאֹר וְהַמַּטֶּה אֲשֶׁר־נֶהְפַּךְ לְנָחָשׁ
+# תִּקַּח בְּיָדֶךָ
+# "[EN-AID] Go to Pharaoh in the morning — behold, he goes out to the water
+# — and station yourself to meet him on the bank of the Nile; and the staff
+# which was turned to a snake take in your hand."
+m.step("Exod.7.15")
+# ‹לֵךְ אֶל־פַּרְעֹה בַּבֹּקֶר› (“go to Pharaoh in-morning”) — the-LORD
+# speaks a demand — LET: go-to-Pharaoh-in-the-morning
+m.declare("YHWH", "LET",
+          "lekh_el_paro_ba_boqer")
+
+# -------------------------- Exod.7.16 · THE_RIVERSIDE_SCRIPT ---------------
+# וְאָמַרְתָּ אֵלָיו יְהוָה אֱלֹהֵי הָעִבְרִים שְׁלָחַנִי אֵלֶיךָ לֵאמֹר
+# שַׁלַּח אֶת־עַמִּי וְיַעַבְדֻנִי בַּמִּדְבָּר וְהִנֵּה לֹא־שָׁמַעְתָּ
+# עַד־כֹּה
+# "[EN-AID] And you shall say to him: The LORD, the God of the Hebrews, sent
+# me to you, saying: Send My people, that they may serve Me in the
+# wilderness; and behold, you have not heard until now."
+m.step("Exod.7.16")
+# ‹שַׁלַּח אֶת־עַמִּי וְיַעַבְדֻנִי בַּמִּדְבָּר› (“send obj-marker people-
+# me/my and-work/serve-me/my in-pasture”) — fact holds: send-obj-marker-ami-
+# and-yaavduni
+m.fact("shalach_et_ami_ve_yaavduni")
+
+# -------------------------- Exod.7.17 · BY_THIS_YOU_SHALL_KNOW -------------
+# כֹּה אָמַר יְהוָה בְּזֹאת תֵּדַע כִּי אֲנִי יְהוָה הִנֵּה אָנֹכִי מַכֶּה
+# בַּמַּטֶּה אֲשֶׁר־בְּיָדִי עַל־הַמַּיִם אֲשֶׁר בַּיְאֹר וְנֶהֶפְכוּ לְדָם
+# "[EN-AID] Thus says the LORD: By this you shall know that I am the LORD —
+# behold, I strike with the staff that is in my hand upon the waters that
+# are in the Nile, and they shall be turned to blood."
+m.step("Exod.7.17")
+# ‹בְּזֹאת תֵּדַע כִּי אֲנִי יְהוָה› (“in-this know that YHWH”) — fact
+# holds: in-this-know-that-I-the-LORD
+m.fact("be_zot_teda_ki_ani_YHWH")
+
+# -------------------------- Exod.7.18 · THE_NILE_UNDRINKABLE ---------------
+# וְהַדָּגָה אֲשֶׁר־בַּיְאֹר תָּמוּת וּבָאַשׁ הַיְאֹר וְנִלְאוּ מִצְרַיִם
+# לִשְׁתּוֹת מַיִם מִן־הַיְאֹר
+# "[EN-AID] And the fish that is in the Nile shall die, and the Nile shall
+# stink; and Egypt shall be weary of drinking water from the Nile."
+m.step("Exod.7.18")
+# ‹וְנִלְאוּ מִצְרַיִם לִשְׁתּוֹת מַיִם› (“and-tire Egyptian to-drink
+# waters”) — fact holds: and-tire-Egypt-lishtot
+m.fact("ve_nilu_mitzrayim_lishtot")
+
+# -------------------------- Exod.7.19 · STRETCH_OUT_YOUR_HAND --------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה אֱמֹר אֶל־אַהֲרֹן קַח מַטְּךָ וּנְטֵה־יָדְךָ
+# עַל־מֵימֵי מִצְרַיִם עַל־נַהֲרֹתָם עַל־יְאֹרֵיהֶם וְעַל־אַגְמֵיהֶם וְעַל
+# כָּל־מִקְוֵה מֵימֵיהֶם וְיִהְיוּ־דָם וְהָיָה דָם בְּכָל־אֶרֶץ מִצְרַיִם
+# וּבָעֵצִים וּבָאֲבָנִים
+# "[EN-AID] And the LORD said to Moses: Say to Aaron: Take your staff and
+# stretch out your hand over the waters of Egypt — over their rivers, over
+# their Niles, and over their pools, and over every gathering of their
+# waters — and they shall become blood; and there shall be blood in all the
+# land of Egypt, both in the wooden vessels and in the stone vessels."
+m.step("Exod.7.19")
+# ‹אֱמֹר אֶל־אַהֲרֹן קַח מַטְּךָ וּנְטֵה־יָדְךָ עַל־מֵימֵי מִצְרַיִם› (“say
+# to Aaron take staff/tribe-you/your and-stretch hand-you/your over waters
+# Egypt”) — the-LORD speaks a demand — LET: stretch-yadkha-over-waters-Egypt
+m.declare("YHWH", "LET",
+          "nete_yadkha_al_meme_mitzrayim")
+
+# -------------------------- Exod.7.20 · THE_NILE_STRUCK --------------------
+# וַיַּעֲשׂוּ־כֵן מֹשֶׁה וְאַהֲרֹן כַּאֲשֶׁר צִוָּה יְהוָה וַיָּרֶם
+# בַּמַּטֶּה וַיַּךְ אֶת־הַמַּיִם אֲשֶׁר בַּיְאֹר לְעֵינֵי פַרְעֹה
+# וּלְעֵינֵי עֲבָדָיו וַיֵּהָפְכוּ כָּל־הַמַּיִם אֲשֶׁר־בַּיְאֹר לְדָם
+# "[EN-AID] And Moses and Aaron did so, as the LORD commanded; and he raised
+# the staff and struck the waters that were in the Nile, before the eyes of
+# Pharaoh and before the eyes of his servants; and all the waters that were
+# in the Nile were turned to blood."
+m.step("Exod.7.20")
+# ‹וַיָּרֶם בַּמַּטֶּה וַיַּךְ אֶת־הַמַּיִם אֲשֶׁר בַּיְאֹר› (“and-rise-high
+# in-staff/tribe and-strike obj-marker the-waters which in-Nile”) — demand
+# settled (popped from the queue): stretch-yadkha-over-waters-Egypt
+m.result("nete_yadkha_al_meme_mitzrayim", tmark="t1")
+
+# -------------------------- Exod.7.21 · THE_FISH_DIED ----------------------
+# וְהַדָּגָה אֲשֶׁר־בַּיְאֹר מֵתָה וַיִּבְאַשׁ הַיְאֹר וְלֹא־יָכְלוּ
+# מִצְרַיִם לִשְׁתּוֹת מַיִם מִן־הַיְאֹר וַיְהִי הַדָּם בְּכָל־אֶרֶץ
+# מִצְרָיִם
+# "[EN-AID] And the fish that was in the Nile died, and the Nile stank, and
+# Egypt could not drink water from the Nile; and the blood was in all the
+# land of Egypt."
+m.step("Exod.7.21")
+# ‹וַיִּבְאַשׁ הַיְאֹר› (“and-smell-bad the-Nile”) — fact holds: and-smell-
+# bad-the-Nile
+m.fact("va_yivash_ha_yeor")
+
+# -------------------------- Exod.7.22 · THE_MAGICIANS_MATCH_AGAIN ----------
+# וַיַּעֲשׂוּ־כֵן חַרְטֻמֵּי מִצְרַיִם בְּלָטֵיהֶם וַיֶּחֱזַק לֵב־פַּרְעֹה
+# וְלֹא־שָׁמַע אֲלֵהֶם כַּאֲשֶׁר דִּבֶּר יְהוָה
+# "[EN-AID] And the magicians of Egypt did so with their secret arts; and
+# Pharaoh's heart was strengthened, and he did not hear them, as the LORD
+# had spoken."
+m.step("Exod.7.22")
+# ‹וַיֶּחֱזַק לֵב־פַּרְעֹה וְלֹא־שָׁמַע אֲלֵהֶם› (“and-fasten-upon heart
+# Pharaoh and-not hear to-them/their”) — fact holds: and-fasten-upon-heart-
+# Pharaoh-2
+m.fact("va_yechezaq_lev_paro_2")
+
+# -------------------------- Exod.7.23 · PHARAOH_TURNS_HOME -----------------
+# וַיִּפֶן פַּרְעֹה וַיָּבֹא אֶל־בֵּיתוֹ וְלֹא־שָׁת לִבּוֹ גַּם־לָזֹאת
+# "[EN-AID] And Pharaoh turned and came into his house; and he did not set
+# his heart even to this."
+m.step("Exod.7.23")
+# ‹וְלֹא־שָׁת לִבּוֹ גַּם־לָזֹאת› (“and-not place heart-him/its also to-
+# this”) — fact holds: and-not-place-His-heart-also-to-this
+m.fact("ve_lo_shat_libo_gam_la_zot")
+
+# -------------------------- Exod.7.24 · EGYPT_DIGS -------------------------
+# וַיַּחְפְּרוּ כָל־מִצְרַיִם סְבִיבֹת הַיְאֹר מַיִם לִשְׁתּוֹת כִּי לֹא
+# יָכְלוּ לִשְׁתֹּת מִמֵּימֵי הַיְאֹר
+# "[EN-AID] And all Egypt dug round about the Nile for water to drink; for
+# they could not drink of the waters of the Nile."
+m.step("Exod.7.24")
+# ‹וַיַּחְפְּרוּ כָל־מִצְרַיִם סְבִיבֹת הַיְאֹר מַיִם לִשְׁתּוֹת› (“and-dig
+# all Egyptian circle the-Nile waters to-drink”) — fact holds: and-dig-all-
+# Egypt
+m.fact("va_yachpru_khol_mitzrayim")
+
+# -------------------------- Exod.7.25 · SEVEN_DAYS_FILLED ------------------
+# וַיִּמָּלֵא שִׁבְעַת יָמִים אַחֲרֵי הַכּוֹת־יְהוָה אֶת־הַיְאֹר
+# "[EN-AID] And seven days were filled, after the LORD had struck the Nile."
+m.step("Exod.7.25")
+# ‹וַיִּמָּלֵא שִׁבְעַת יָמִים› (“and-fill seven day”) — fact holds: and-
+# fill-seven-day
+m.fact("va_yimale_shivat_yamim")
+
+# -------------------------- Exod.7.26 · GO_SAY_SEND ------------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה בֹּא אֶל־פַּרְעֹה וְאָמַרְתָּ אֵלָיו כֹּה
+# אָמַר יְהוָה שַׁלַּח אֶת־עַמִּי וְיַעַבְדֻנִי
+# "[EN-AID] And the LORD said to Moses: Come to Pharaoh, and say to him:
+# Thus says the LORD: Send My people, that they may serve Me."
+m.step("Exod.7.26")
+# ‹בֹּא אֶל־פַּרְעֹה› (“come/bring to Pharaoh”) — the-LORD speaks a demand —
+# LET: come/bring-to-Pharaoh-and-say
+m.declare("YHWH", "LET",
+          "bo_el_paro_ve_amarta")
+
+# -------------------------- Exod.7.27 · IF_YOU_REFUSE_FROGS ----------------
+# וְאִם־מָאֵן אַתָּה לְשַׁלֵּחַ הִנֵּה אָנֹכִי נֹגֵף אֶת־כָּל־גְּבוּלְךָ
+# בַּצְפַרְדְּעִים
+# "[EN-AID] And if you refuse to send them — behold, I strike all your
+# border with frogs."
+m.step("Exod.7.27")
+# ‹הִנֵּה אָנֹכִי נֹגֵף אֶת־כָּל־גְּבוּלְךָ בַּצְפַרְדְּעִים› (“behold push
+# obj-marker all cord-you/your in-marsh-leaper”) — fact holds: and-if-
+# unwilling-you-to-shaleach
+m.fact("ve_im_maen_ata_le_shaleach")
+
+# -------------------------- Exod.7.28 · THE_INVASION_ROUTE -----------------
+# וְשָׁרַץ הַיְאֹר צְפַרְדְּעִים וְעָלוּ וּבָאוּ בְּבֵיתֶךָ וּבַחֲדַר
+# מִשְׁכָּבְךָ וְעַל־מִטָּתֶךָ וּבְבֵית עֲבָדֶיךָ וּבְעַמֶּךָ
+# וּבְתַנּוּרֶיךָ וּבְמִשְׁאֲרוֹתֶיךָ
+# "[EN-AID] And the Nile shall swarm frogs, and they shall come up and come
+# into your house, and into your bedchamber, and onto your bed, and into the
+# house of your servants, and among your people, and into your ovens, and
+# into your kneading-troughs."
+m.step("Exod.7.28")
+# ‹וְשָׁרַץ הַיְאֹר צְפַרְדְּעִים› (“and-swarm the-Nile marsh-leaper”) —
+# fact holds: and-swarm-the-Nile-tzfardeim
+m.fact("ve_sharatz_ha_yeor_tzfardeim")
+
+# -------------------------- Exod.7.29 · AND_INTO_YOU -----------------------
+# וּבְכָה וּבְעַמְּךָ וּבְכָל־עֲבָדֶיךָ יַעֲלוּ הַצְפַרְדְּעִים
+# "[EN-AID] And into you, and into your people, and into all your servants,
+# the frogs shall come up."
+m.step("Exod.7.29")
+# ‹וּבְכָה וּבְעַמְּךָ וּבְכָל־עֲבָדֶיךָ› (“and-in-you/your and-in-people-
+# you/your and-in-all servant-you/your”) — fact holds: and-vekha-and-and-
+# amkha
+m.fact("u_vekha_u_ve_amkha")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == ['lekh_el_paro_ba_boqer', 'bo_el_paro_ve_amarta']
+    assert len(m.SPECS["log"]) == 4
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted(['netaticha_elohim_le_faro', 'ata_tedaber_et_kol_asher_atzaveka', 'va_ani_aqshe_et_lev_paro', 've_lo_yishma_alekhem_paro', 've_yadu_mitzrayim_ki_ani_YHWH', 'ka_asher_tziva_YHWH_ken_asu', 'u_moshe_ben_shemonim_shana', 'va_yomer_YHWH_el_moshe_ve_el_aharon', 'va_yaasu_gam_hem_be_lahatehem', 'va_yechezaq_lev_paro', 'kaved_lev_paro', 'shalach_et_ami_ve_yaavduni', 'be_zot_teda_ki_ani_YHWH', 've_nilu_mitzrayim_lishtot', 'va_yivash_ha_yeor', 'va_yechezaq_lev_paro_2', 've_lo_shat_libo_gam_la_zot', 'va_yachpru_khol_mitzrayim', 'va_yimale_shivat_yamim', 've_im_maen_ata_le_shaleach', 've_sharatz_ha_yeor_tzfardeim', 'u_vekha_u_ve_amkha'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 7
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: exo_08_frogs_lice_swarms
+###############################################################################
+
+m = Machine("exo_08_frogs_lice_swarms")
+
+# -------------------------- Exod.8.1 · BRING_UP_THE_FROGS ------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה אֱמֹר אֶל־אַהֲרֹן נְטֵה אֶת־יָדְךָ בְּמַטֶּךָ
+# עַל־הַנְּהָרֹת עַל־הַיְאֹרִים וְעַל־הָאֲגַמִּים וְהַעַל
+# אֶת־הַצְפַרְדְּעִים עַל־אֶרֶץ מִצְרָיִם
+# "[EN-AID] And the LORD said to Moses: Say to Aaron: Stretch out your hand
+# with your staff over the rivers, over the Niles, and over the pools, and
+# bring up the frogs onto the land of Egypt."
+m.step("Exod.8.1")
+# ‹וְהַעַל אֶת־הַצְפַרְדְּעִים עַל־אֶרֶץ מִצְרָיִם› (“and-go-up obj-marker
+# the-marsh-leaper over earth Egypt”) — the-LORD speaks a demand — LET: and-
+# go-up-obj-marker-the-tzfardeim
+m.declare("YHWH", "LET",
+          "ve_haal_et_ha_tzfardeim")
+
+# -------------------------- Exod.8.2 · THE_FROG_CAME_UP --------------------
+# וַיֵּט אַהֲרֹן אֶת־יָדוֹ עַל מֵימֵי מִצְרָיִם וַתַּעַל הַצְּפַרְדֵּעַ
+# וַתְּכַס אֶת־אֶרֶץ מִצְרָיִם
+# "[EN-AID] And Aaron stretched out his hand over the waters of Egypt; and
+# the frog came up, and covered the land of Egypt."
+m.step("Exod.8.2")
+# ‹וַתַּעַל הַצְּפַרְדֵּעַ וַתְּכַס אֶת־אֶרֶץ מִצְרָיִם› (“and-go-up the-
+# marsh-leaper and-plump obj-marker earth Egypt”) — demand settled (popped
+# from the queue): and-go-up-obj-marker-the-tzfardeim
+m.result("ve_haal_et_ha_tzfardeim", tmark="t1")
+
+# -------------------------- Exod.8.3 · THE_MAGICIANS_MATCH_FROGS -----------
+# וַיַּעֲשׂוּ־כֵן הַחֲרְטֻמִּים בְּלָטֵיהֶם וַיַּעֲלוּ אֶת־הַצְפַרְדְּעִים
+# עַל־אֶרֶץ מִצְרָיִם
+# "[EN-AID] And the magicians did so with their secret arts, and brought up
+# the frogs onto the land of Egypt."
+m.step("Exod.8.3")
+# ‹וַיַּעֲלוּ אֶת־הַצְפַרְדְּעִים עַל־אֶרֶץ מִצְרָיִם› (“and-go-up obj-
+# marker the-marsh-leaper over earth Egypt”) — fact holds: and-go-up-the-
+# horoscopist
+m.fact("va_yaalu_ha_chartumim")
+
+# -------------------------- Exod.8.4 · PHARAOHS_FIRST_BARGAIN --------------
+# וַיִּקְרָא פַרְעֹה לְמֹשֶׁה וּלְאַהֲרֹן וַיֹּאמֶר הַעְתִּירוּ אֶל־יְהוָה
+# וְיָסֵר הַצְפַרְדְּעִים מִמֶּנִּי וּמֵעַמִּי וַאֲשַׁלְּחָה אֶת־הָעָם
+# וְיִזְבְּחוּ לַיהוָה
+# "[EN-AID] And Pharaoh called for Moses and for Aaron, and said: Entreat
+# the LORD, that He take away the frogs from me and from my people; and I
+# will send the people, that they may sacrifice to the LORD."
+m.step("Exod.8.4")
+# ‹הַעְתִּירוּ אֶל־יְהוָה וְיָסֵר הַצְפַרְדְּעִים מִמֶּנִּי וּמֵעַמִּי›
+# (“burn-incense-in-worship to YHWH and-turn-aside the-marsh-leaper from-
+# me/my and-from-people-me/my”) — Pharaoh speaks a demand — LET: burn-
+# incense-in-worship-to-the-LORD
+m.declare("paro", "LET",
+          "hatiru_el_YHWH")
+
+# -------------------------- Exod.8.5 · GLORY_OVER_ME -----------------------
+# וַיֹּאמֶר מֹשֶׁה לְפַרְעֹה הִתְפָּאֵר עָלַי לְמָתַי אַעְתִּיר לְךָ
+# וְלַעֲבָדֶיךָ וּלְעַמְּךָ לְהַכְרִית הַצֲפַרְדְּעִים מִמְּךָ וּמִבָּתֶּיךָ
+# רַק בַּיְאֹר תִּשָּׁאַרְנָה
+# "[EN-AID] And Moses said to Pharaoh: Glory over me — for when shall I
+# entreat for you, and for your servants, and for your people, to cut off
+# the frogs from you and from your houses? Only in the Nile shall they
+# remain."
+m.step("Exod.8.5")
+# ‹הִתְפָּאֵר עָלַי לְמָתַי אַעְתִּיר לְךָ› (“gleam over-me/my to-extent
+# burn-incense-in-worship to-you/your”) — fact holds: gleam-alai-to-matai
+m.fact("hitpaer_alai_le_matai")
+
+# -------------------------- Exod.8.6 · FOR_TOMORROW ------------------------
+# וַיֹּאמֶר לְמָחָר וַיֹּאמֶר כִּדְבָרְךָ לְמַעַן תֵּדַע כִּי־אֵין כַּיהוָה
+# אֱלֹהֵינוּ
+# "[EN-AID] And he said: For tomorrow. And he said: According to your word —
+# that you may know that there is none like the LORD our God."
+m.step("Exod.8.6")
+# ‹לְמַעַן תֵּדַע כִּי־אֵין כַּיהוָה אֱלֹהֵינוּ› (“so-that know that there-
+# is-not like-YHWH God-us/our”) — fact holds: that-devarkha-so-that-know
+m.fact("ki_devarkha_lemaan_teda")
+
+# -------------------------- Exod.8.7 · THE_REMOVAL_FORECAST ----------------
+# וְסָרוּ הַצְפַרְדְּעִים מִמְּךָ וּמִבָּתֶּיךָ וּמֵעֲבָדֶיךָ וּמֵעַמֶּךָ
+# רַק בַּיְאֹר תִּשָּׁאַרְנָה
+# "[EN-AID] And the frogs shall turn aside from you, and from your houses,
+# and from your servants, and from your people; only in the Nile shall they
+# remain."
+m.step("Exod.8.7")
+# ‹וְסָרוּ הַצְפַרְדְּעִים מִמְּךָ וּמִבָּתֶּיךָ וּמֵעֲבָדֶיךָ וּמֵעַמֶּךָ›
+# (“and-turn-aside the-marsh-leaper from-you/your and-from-house-you/your
+# and-from-servant-you/your and-from-people-you/your”) — fact holds: and-
+# turn-aside-the-tzfardeim
+m.fact("ve_saru_ha_tzfardeim")
+
+# -------------------------- Exod.8.8 · MOSES_CRIES_TO_YHWH -----------------
+# וַיֵּצֵא מֹשֶׁה וְאַהֲרֹן מֵעִם פַּרְעֹה וַיִּצְעַק מֹשֶׁה אֶל־יְהוָה
+# עַל־דְּבַר הַצְפַרְדְּעִים אֲשֶׁר־שָׂם לְפַרְעֹה
+# "[EN-AID] And Moses and Aaron went out from Pharaoh; and Moses cried to
+# the LORD over the matter of the frogs which He had set upon Pharaoh."
+m.step("Exod.8.8")
+# ‹וַיִּצְעַק מֹשֶׁה אֶל־יְהוָה› (“and-shriek Moses to YHWH”) — demand
+# settled (popped from the queue): burn-incense-in-worship-to-the-LORD
+m.result("hatiru_el_YHWH", tmark="t1")
+
+# -------------------------- Exod.8.9 · PER_THE_WORD_OF_MOSES ---------------
+# וַיַּעַשׂ יְהוָה כִּדְבַר מֹשֶׁה וַיָּמֻתוּ הַצְפַרְדְּעִים מִן־הַבָּתִּים
+# מִן־הַחֲצֵרֹת וּמִן־הַשָּׂדֹת
+# "[EN-AID] And the LORD did according to the word of Moses; and the frogs
+# died from the houses, from the courtyards, and from the fields."
+m.step("Exod.8.9")
+# ‹וַיַּעַשׂ יְהוָה כִּדְבַר מֹשֶׁה› (“and-make YHWH like-word/thing Moses”)
+# — fact holds: and-make-the-LORD-that-word/thing-Moses
+m.fact("va_yaas_YHWH_ki_devar_moshe")
+
+# -------------------------- Exod.8.10 · HEAPS_UPON_HEAPS -------------------
+# וַיִּצְבְּרוּ אֹתָם חֳמָרִם חֳמָרִם וַתִּבְאַשׁ הָאָרֶץ
+# "[EN-AID] And they gathered them heaps upon heaps; and the land stank."
+m.step("Exod.8.10")
+# ‹חֳמָרִם חֳמָרִם› (“bubbling-up bubbling-up”) — fact holds: bubbling-up-
+# bubbling-up
+m.fact("chomarim_chomarim")
+
+# -------------------------- Exod.8.11 · THE_BREATHING_SPACE ----------------
+# וַיַּרְא פַּרְעֹה כִּי הָיְתָה הָרְוָחָה וְהַכְבֵּד אֶת־לִבּוֹ וְלֹא
+# שָׁמַע אֲלֵהֶם כַּאֲשֶׁר דִּבֶּר יְהוָה
+# "[EN-AID] And Pharaoh saw that there was relief, and he made his heart
+# heavy, and did not hear them, as the LORD had spoken."
+m.step("Exod.8.11")
+# ‹וְהַכְבֵּד אֶת־לִבּוֹ› (“and-be-heavy obj-marker heart-him/its”) — fact
+# holds: and-be-heavy-obj-marker-His-heart
+m.fact("ve_hakhbed_et_libo")
+
+# -------------------------- Exod.8.12 · STRIKE_THE_DUST --------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה אֱמֹר אֶל־אַהֲרֹן נְטֵה אֶת־מַטְּךָ וְהַךְ
+# אֶת־עֲפַר הָאָרֶץ וְהָיָה לְכִנִּם בְּכָל־אֶרֶץ מִצְרָיִם
+# "[EN-AID] And the LORD said to Moses: Say to Aaron: Stretch out your
+# staff, and strike the dust of the earth, and it shall become lice in all
+# the land of Egypt."
+m.step("Exod.8.12")
+# ‹נְטֵה אֶת־מַטְּךָ וְהַךְ אֶת־עֲפַר הָאָרֶץ› (“stretch obj-marker
+# staff/tribe-you/your and-strike obj-marker dust the-earth”) — the-LORD
+# speaks a demand — LET: and-strike-obj-marker-dust-the-earth
+m.declare("YHWH", "LET",
+          "ve_hakh_et_afar_ha_aretz")
+
+# -------------------------- Exod.8.13 · THE_DUST_BECOMES_LICE --------------
+# וַיַּעֲשׂוּ־כֵן וַיֵּט אַהֲרֹן אֶת־יָדוֹ בְמַטֵּהוּ וַיַּךְ אֶת־עֲפַר
+# הָאָרֶץ וַתְּהִי הַכִּנָּם בָּאָדָם וּבַבְּהֵמָה כָּל־עֲפַר הָאָרֶץ הָיָה
+# כִנִּים בְּכָל־אֶרֶץ מִצְרָיִם
+# "[EN-AID] And they did so: and Aaron stretched out his hand with his
+# staff, and struck the dust of the earth, and the lice came on man and on
+# beast; all the dust of the earth became lice in all the land of Egypt."
+m.step("Exod.8.13")
+# ‹כָּל־עֲפַר הָאָרֶץ הָיָה כִנִּים בְּכָל־אֶרֶץ מִצְרָיִם› (“all dust the-
+# earth be gnat in-all earth Egypt”) — demand settled (popped from the
+# queue): and-strike-obj-marker-dust-the-earth
+m.result("ve_hakh_et_afar_ha_aretz", tmark="t1")
+
+# -------------------------- Exod.8.14 · THE_CRAFT_FAILS --------------------
+# וַיַּעֲשׂוּ־כֵן הַחַרְטֻמִּים בְּלָטֵיהֶם לְהוֹצִיא אֶת־הַכִּנִּים וְלֹא
+# יָכֹלוּ וַתְּהִי הַכִּנָּם בָּאָדָם וּבַבְּהֵמָה
+# "[EN-AID] And the magicians did so with their secret arts, to bring forth
+# the lice — but they could not; and the lice were on man and on beast."
+m.step("Exod.8.14")
+# ‹וְלֹא יָכֹלוּ› (“and-not be-able”) — fact holds: and-not-be-able
+m.fact("ve_lo_yakholu")
+
+# -------------------------- Exod.8.15 · THE_FINGER_OF_GOD ------------------
+# וַיֹּאמְרוּ הַחַרְטֻמִּים אֶל־פַּרְעֹה אֶצְבַּע אֱלֹהִים הִוא וַיֶּחֱזַק
+# לֵב־פַּרְעֹה וְלֹא־שָׁמַע אֲלֵהֶם כַּאֲשֶׁר דִּבֶּר יְהוָה
+# "[EN-AID] And the magicians said to Pharaoh: It is the finger of God. And
+# Pharaoh's heart was strengthened, and he did not hear them, as the LORD
+# had spoken."
+m.step("Exod.8.15")
+# ‹אֶצְבַּע אֱלֹהִים הִוא› (“something-to-sieze-with God he/it”) — fact
+# holds: something-to-sieze-with-God-he/it
+m.fact("etzba_elohim_hiv")
+
+# -------------------------- Exod.8.16 · RISE_EARLY_STAND_BEFORE ------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה הַשְׁכֵּם בַּבֹּקֶר וְהִתְיַצֵּב לִפְנֵי
+# פַרְעֹה הִנֵּה יוֹצֵא הַמָּיְמָה וְאָמַרְתָּ אֵלָיו כֹּה אָמַר יְהוָה
+# שַׁלַּח עַמִּי וְיַעַבְדֻנִי
+# "[EN-AID] And the LORD said to Moses: Rise early in the morning, and
+# station yourself before Pharaoh — behold, he goes out to the water — and
+# say to him: Thus says the LORD: Send My people, that they may serve Me."
+m.step("Exod.8.16")
+# ‹הַשְׁכֵּם בַּבֹּקֶר וְהִתְיַצֵּב לִפְנֵי פַרְעֹה› (“rise-early in-morning
+# and-place to-face Pharaoh”) — the-LORD speaks a demand — LET: rise-early-
+# and-place-lifne-Pharaoh
+m.declare("YHWH", "LET",
+          "hashkem_ve_hityatzev_lifne_paro")
+
+# -------------------------- Exod.8.17 · THE_SWARMS_THREATENED --------------
+# כִּי אִם־אֵינְךָ מְשַׁלֵּחַ אֶת־עַמִּי הִנְנִי מַשְׁלִיחַ בְּךָ
+# וּבַעֲבָדֶיךָ וּבְעַמְּךָ וּבְבָתֶּיךָ אֶת־הֶעָרֹב וּמָלְאוּ בָּתֵּי
+# מִצְרַיִם אֶת־הֶעָרֹב וְגַם הָאֲדָמָה אֲשֶׁר־הֵם עָלֶיהָ
+# "[EN-AID] For if you do not send My people — behold, I set loose upon you,
+# and upon your servants, and upon your people, and into your houses, the
+# swarms; and the houses of Egypt shall be full of the swarms, and also the
+# ground on which they are."
+m.step("Exod.8.17")
+# ‹אֵינְךָ מְשַׁלֵּחַ אֶת־עַמִּי הִנְנִי מַשְׁלִיחַ בְּךָ› (“there-is-not-
+# you/your send obj-marker people-me/my lo!-me/my send in-you/your”) — fact
+# holds: behold-I-mashliach-obj-marker-he-mosquito
+m.fact("hineni_mashliach_et_he_arov")
+
+# -------------------------- Exod.8.18 · GOSHEN_SET_APART -------------------
+# וְהִפְלֵיתִי בַיּוֹם הַהוּא אֶת־אֶרֶץ גֹּשֶׁן אֲשֶׁר עַמִּי עֹמֵד עָלֶיהָ
+# לְבִלְתִּי הֱיוֹת־שָׁם עָרֹב לְמַעַן תֵּדַע כִּי אֲנִי יְהוָה בְּקֶרֶב
+# הָאָרֶץ
+# "[EN-AID] And I will set apart on that day the land of Goshen, on which My
+# people stands, that no swarm shall be there — that you may know that I am
+# the LORD in the midst of the earth."
+m.step("Exod.8.18")
+# ‹וְהִפְלֵיתִי בַיּוֹם הַהוּא אֶת־אֶרֶץ גֹּשֶׁן› (“and-distinguish in-day
+# that obj-marker earth Goshen”) — fact holds: and-distinguish-obj-marker-
+# earth-Goshen
+m.fact("ve_hifleti_et_eretz_goshen")
+
+# -------------------------- Exod.8.19 · THE_DIVISION_SET -------------------
+# וְשַׂמְתִּי פְדֻת בֵּין עַמִּי וּבֵין עַמֶּךָ לְמָחָר יִהְיֶה הָאֹת הַזֶּה
+# "[EN-AID] And I will set a division between My people and your people; for
+# tomorrow shall this sign be."
+m.step("Exod.8.19")
+# ‹וְשַׂמְתִּי פְדֻת בֵּין עַמִּי וּבֵין עַמֶּךָ› (“and-put/set distinction
+# between people-me/my and-between people-you/your”) — fact holds: and-
+# put/set-distinction
+m.fact("ve_samti_fedut")
+
+# -------------------------- Exod.8.20 · THE_LAND_RUINED --------------------
+# וַיַּעַשׂ יְהוָה כֵּן וַיָּבֹא עָרֹב כָּבֵד בֵּיתָה פַרְעֹה וּבֵית
+# עֲבָדָיו וּבְכָל־אֶרֶץ מִצְרַיִם תִּשָּׁחֵת הָאָרֶץ מִפְּנֵי הֶעָרֹב
+# "[EN-AID] And the LORD did so; and heavy swarms came into the house of
+# Pharaoh, and the house of his servants, and in all the land of Egypt the
+# land was ruined from before the swarms."
+m.step("Exod.8.20")
+# ‹תִּשָּׁחֵת הָאָרֶץ מִפְּנֵי הֶעָרֹב› (“decay the-earth from-face the-
+# mosquito”) — fact holds: decay-the-earth
+m.fact("tishachet_ha_aretz")
+
+# -------------------------- Exod.8.21 · SACRIFICE_IN_THE_LAND --------------
+# וַיִּקְרָא פַרְעֹה אֶל־מֹשֶׁה וּלְאַהֲרֹן וַיֹּאמֶר לְכוּ זִבְחוּ
+# לֵאלֹהֵיכֶם בָּאָרֶץ
+# "[EN-AID] And Pharaoh called to Moses and to Aaron, and said: Go,
+# sacrifice to your God — in the land."
+m.step("Exod.8.21")
+# ‹וַיֹּאמֶר לְכוּ זִבְחוּ לֵאלֹהֵיכֶם בָּאָרֶץ› (“and-say go slaughter-an-
+# animal to-God-you/your(pl) in-earth”) — Pharaoh speaks a demand — LET: go-
+# slaughter-an-animal-in-the-earth
+m.declare("paro", "LET",
+          "lekhu_zivchu_ba_aretz")
+
+# -------------------------- Exod.8.22 · NOT_RIGHT_TO_DO_SO -----------------
+# וַיֹּאמֶר מֹשֶׁה לֹא נָכוֹן לַעֲשׂוֹת כֵּן כִּי תּוֹעֲבַת מִצְרַיִם
+# נִזְבַּח לַיהוָה אֱלֹהֵינוּ הֵן נִזְבַּח אֶת־תּוֹעֲבַת מִצְרַיִם
+# לְעֵינֵיהֶם וְלֹא יִסְקְלֻנוּ
+# "[EN-AID] And Moses said: It is not right to do so; for the abomination of
+# Egypt we would sacrifice to the LORD our God — behold, if we sacrifice the
+# abomination of Egypt before their eyes, will they not stone us?"
+m.step("Exod.8.22")
+# ‹לֹא נָכוֹן לַעֲשׂוֹת כֵּן› (“not be-erect to-make so”) — fact holds: not-
+# be-erect-laasot-so
+m.fact("lo_nakhon_laasot_ken")
+
+# -------------------------- Exod.8.23 · THREE_DAYS_AS_HE_SAYS --------------
+# דֶּרֶךְ שְׁלֹשֶׁת יָמִים נֵלֵךְ בַּמִּדְבָּר וְזָבַחְנוּ לַיהוָה
+# אֱלֹהֵינוּ כַּאֲשֶׁר יֹאמַר אֵלֵינוּ
+# "[EN-AID] A journey of three days we will go into the wilderness, and
+# sacrifice to the LORD our God, as He shall say to us."
+m.step("Exod.8.23")
+# ‹דֶּרֶךְ שְׁלֹשֶׁת יָמִים נֵלֵךְ בַּמִּדְבָּר› (“way/road three day go in-
+# pasture”) — fact holds: way/road-three-day-go
+m.fact("derekh_sheloshet_yamim_nelekh")
+
+# -------------------------- Exod.8.24 · ONLY_NOT_FAR -----------------------
+# וַיֹּאמֶר פַּרְעֹה אָנֹכִי אֲשַׁלַּח אֶתְכֶם וּזְבַחְתֶּם לַיהוָה
+# אֱלֹהֵיכֶם בַּמִּדְבָּר רַק הַרְחֵק לֹא־תַרְחִיקוּ לָלֶכֶת הַעְתִּירוּ
+# בַּעֲדִי
+# "[EN-AID] And Pharaoh said: I will send you, and you shall sacrifice to
+# the LORD your God in the wilderness — only you shall not go far; entreat
+# for me."
+m.step("Exod.8.24")
+# ‹הַעְתִּירוּ בַּעֲדִי› (“burn-incense-in-worship in-up-to-me/my”) —
+# Pharaoh speaks a demand — LET: burn-incense-in-worship-baadi
+m.declare("paro", "LET",
+          "hatiru_baadi")
+
+# -------------------------- Exod.8.25 · LET_PHARAOH_NOT_DECEIVE ------------
+# וַיֹּאמֶר מֹשֶׁה הִנֵּה אָנֹכִי יוֹצֵא מֵעִמָּךְ וְהַעְתַּרְתִּי
+# אֶל־יְהוָה וְסָר הֶעָרֹב מִפַּרְעֹה מֵעֲבָדָיו וּמֵעַמּוֹ מָחָר רַק
+# אַל־יֹסֵף פַּרְעֹה הָתֵל לְבִלְתִּי שַׁלַּח אֶת־הָעָם לִזְבֹּחַ לַיהוָה
+# "[EN-AID] And Moses said: Behold, I go out from you, and I will entreat
+# the LORD, and the swarms shall turn aside from Pharaoh, from his servants,
+# and from his people tomorrow — only let Pharaoh not continue to deceive,
+# not to send the people to sacrifice to the LORD."
+m.step("Exod.8.25")
+# ‹רַק אַל־יֹסֵף פַּרְעֹה הָתֵל› (“leanness do-not add Pharaoh deride”) —
+# fact holds: over-add-Pharaoh-deride
+m.fact("al_yosef_paro_hatel")
+
+# -------------------------- Exod.8.26 · MOSES_ENTREATS ---------------------
+# וַיֵּצֵא מֹשֶׁה מֵעִם פַּרְעֹה וַיֶּעְתַּר אֶל־יְהוָה
+# "[EN-AID] And Moses went out from Pharaoh, and entreated the LORD."
+m.step("Exod.8.26")
+# ‹וַיֶּעְתַּר אֶל־יְהוָה› (“and-burn-incense-in-worship to YHWH”) — demand
+# settled (popped from the queue): burn-incense-in-worship-baadi
+m.result("hatiru_baadi", tmark="t1")
+
+# -------------------------- Exod.8.27 · NOT_ONE_REMAINED -------------------
+# וַיַּעַשׂ יְהוָה כִּדְבַר מֹשֶׁה וַיָּסַר הֶעָרֹב מִפַּרְעֹה מֵעֲבָדָיו
+# וּמֵעַמּוֹ לֹא נִשְׁאַר אֶחָד
+# "[EN-AID] And the LORD did according to the word of Moses, and turned
+# aside the swarms from Pharaoh, from his servants, and from his people; not
+# one remained."
+m.step("Exod.8.27")
+# ‹לֹא נִשְׁאַר אֶחָד› (“not swell-up one”) — fact holds: not-swell-up-one
+m.fact("lo_nishar_echad")
+
+# -------------------------- Exod.8.28 · THIS_TIME_ALSO ---------------------
+# וַיַּכְבֵּד פַּרְעֹה אֶת־לִבּוֹ גַּם בַּפַּעַם הַזֹּאת וְלֹא שִׁלַּח
+# אֶת־הָעָם
+# "[EN-AID] And Pharaoh made his heart heavy this time also, and did not
+# send the people."
+m.step("Exod.8.28")
+# ‹וַיַּכְבֵּד פַּרְעֹה אֶת־לִבּוֹ גַּם בַּפַּעַם הַזֹּאת› (“and-be-heavy
+# Pharaoh obj-marker heart-him/its also in-stroke the-this”) — fact holds:
+# and-be-heavy-Pharaoh-obj-marker-His-heart
+m.fact("va_yakhbed_paro_et_libo")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == ['hashkem_ve_hityatzev_lifne_paro', 'lekhu_zivchu_ba_aretz']
+    assert len(m.SPECS["log"]) == 6
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted(['va_yaalu_ha_chartumim', 'hitpaer_alai_le_matai', 'ki_devarkha_lemaan_teda', 've_saru_ha_tzfardeim', 'va_yaas_YHWH_ki_devar_moshe', 'chomarim_chomarim', 've_hakhbed_et_libo', 've_lo_yakholu', 'etzba_elohim_hiv', 'hineni_mashliach_et_he_arov', 've_hifleti_et_eretz_goshen', 've_samti_fedut', 'tishachet_ha_aretz', 'lo_nakhon_laasot_ken', 'derekh_sheloshet_yamim_nelekh', 'al_yosef_paro_hatel', 'lo_nishar_echad', 'va_yakhbed_paro_et_libo'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 10
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: exo_09_pestilence_boils_hail
+###############################################################################
+
+m = Machine("exo_09_pestilence_boils_hail")
+
+# -------------------------- Exod.9.1 · THE_CATTLE_ERRAND -------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה בֹּא אֶל־פַּרְעֹה וְדִבַּרְתָּ אֵלָיו
+# כֹּה־אָמַר יְהוָה אֱלֹהֵי הָעִבְרִים שַׁלַּח אֶת־עַמִּי וְיַעַבְדֻנִי
+# "[EN-AID] And the LORD said to Moses: Come to Pharaoh, and speak to him:
+# Thus says the LORD, the God of the Hebrews: Send My people, that they may
+# serve Me."
+m.step("Exod.9.1")
+# ‹בֹּא אֶל־פַּרְעֹה› (“come/bring to Pharaoh”) — the-LORD speaks a demand —
+# LET: come/bring-to-Pharaoh-and-speak
+m.declare("YHWH", "LET",
+          "bo_el_paro_ve_dibarta")
+
+# -------------------------- Exod.9.2 · IF_YOU_REFUSE_TO_SEND ---------------
+# כִּי אִם־מָאֵן אַתָּה לְשַׁלֵּחַ וְעוֹדְךָ מַחֲזִיק בָּם
+# "[EN-AID] For if you refuse to send, and still hold them fast —"
+m.step("Exod.9.2")
+# ‹וְעוֹדְךָ מַחֲזִיק בָּם› (“and-still/again-you/your fasten-upon in-
+# them/their”) — fact holds: and-odkha-fasten-upon-bam
+m.fact("ve_odkha_machaziq_bam")
+
+# -------------------------- Exod.9.3 · THE_HAND_ON_THE_CATTLE --------------
+# הִנֵּה יַד־יְהוָה הוֹיָה בְּמִקְנְךָ אֲשֶׁר בַּשָּׂדֶה בַּסּוּסִים
+# בַּחֲמֹרִים בַּגְּמַלִּים בַּבָּקָר וּבַצֹּאן דֶּבֶר כָּבֵד מְאֹד
+# "[EN-AID] Behold, the hand of the LORD is upon your cattle which are in
+# the field — upon the horses, upon the donkeys, upon the camels, upon the
+# herds, and upon the flocks — a very heavy pestilence."
+m.step("Exod.9.3")
+# ‹הִנֵּה יַד־יְהוָה הוֹיָה› (“behold hand YHWH be”) — fact holds: hand-the-
+# LORD-be-in-miqnekha
+m.fact("yad_YHWH_hoya_be_miqnekha")
+
+# -------------------------- Exod.9.4 · THE_SET_APART -----------------------
+# וְהִפְלָה יְהוָה בֵּין מִקְנֵה יִשְׂרָאֵל וּבֵין מִקְנֵה מִצְרָיִם וְלֹא
+# יָמוּת מִכָּל־לִבְנֵי יִשְׂרָאֵל דָּבָר
+# "[EN-AID] And the LORD will set apart between the cattle of Israel and the
+# cattle of Egypt; and nothing shall die of all that belongs to the sons of
+# Israel."
+m.step("Exod.9.4")
+# ‹וְהִפְלָה יְהוָה בֵּין מִקְנֵה יִשְׂרָאֵל וּבֵין מִקְנֵה מִצְרָיִם›
+# (“and-distinguish YHWH between something-bought Israel and-between
+# something-bought Egypt”) — fact holds: and-distinguish-the-LORD-between-
+# something-bought
+m.fact("ve_hifla_YHWH_ben_miqne")
+
+# -------------------------- Exod.9.5 · THE_APPOINTED_TIME ------------------
+# וַיָּשֶׂם יְהוָה מוֹעֵד לֵאמֹר מָחָר יַעֲשֶׂה יְהוָה הַדָּבָר הַזֶּה
+# בָּאָרֶץ
+# "[EN-AID] And the LORD set an appointed time, saying: Tomorrow the LORD
+# will do this thing in the land."
+m.step("Exod.9.5")
+# ‹וַיָּשֶׂם יְהוָה מוֹעֵד לֵאמֹר› (“and-put/set YHWH seasons to-say”) —
+# fact holds: and-put/set-the-LORD-seasons
+m.fact("va_yasem_YHWH_moed")
+
+# -------------------------- Exod.9.6 · THE_CATTLE_DIE ----------------------
+# וַיַּעַשׂ יְהוָה אֶת־הַדָּבָר הַזֶּה מִמָּחֳרָת וַיָּמָת כֹּל מִקְנֵה
+# מִצְרָיִם וּמִמִּקְנֵה בְנֵי־יִשְׂרָאֵל לֹא־מֵת אֶחָד
+# "[EN-AID] And the LORD did this thing on the morrow: and all the cattle of
+# Egypt died; and of the cattle of the sons of Israel not one died."
+m.step("Exod.9.6")
+# ‹וַיָּמָת כֹּל מִקְנֵה מִצְרָיִם› (“and-die all something-bought
+# Egyptian”) — fact holds: and-die-all-something-bought-Egypt
+m.fact("va_yamat_kol_miqne_mitzrayim")
+
+# -------------------------- Exod.9.7 · THE_AUDIT ---------------------------
+# וַיִּשְׁלַח פַּרְעֹה וְהִנֵּה לֹא־מֵת מִמִּקְנֵה יִשְׂרָאֵל עַד־אֶחָד
+# וַיִּכְבַּד לֵב פַּרְעֹה וְלֹא שִׁלַּח אֶת־הָעָם
+# "[EN-AID] And Pharaoh sent — and behold, not even one of the cattle of
+# Israel had died; and Pharaoh's heart grew heavy, and he did not send the
+# people."
+m.step("Exod.9.7")
+# ‹וַיִּשְׁלַח פַּרְעֹה וְהִנֵּה› (“and-send Pharaoh and-behold”) — fact
+# holds: and-send-Pharaoh-and-behold
+m.fact("va_yishlach_paro_ve_hine")
+
+# -------------------------- Exod.9.8 · SOOT_HEAVENWARD ---------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה וְאֶל־אַהֲרֹן קְחוּ לָכֶם מְלֹא חָפְנֵיכֶם
+# פִּיחַ כִּבְשָׁן וּזְרָקוֹ מֹשֶׁה הַשָּׁמַיְמָה לְעֵינֵי פַרְעֹה
+# "[EN-AID] And the LORD said to Moses and to Aaron: Take for yourselves
+# handfuls of soot of the furnace, and let Moses throw it heavenward before
+# the eyes of Pharaoh."
+m.step("Exod.9.8")
+# ‹קְחוּ לָכֶם מְלֹא חָפְנֵיכֶם פִּיחַ כִּבְשָׁן› (“take to-you/your(pl)
+# fulness fist-you/your(pl) powder smelting-furnace”) — the-LORD speaks a
+# demand — LET: take-piach-and-zeraqo
+m.declare("YHWH", "LET",
+          "qechu_piach_u_zeraqo")
+
+# -------------------------- Exod.9.9 · THE_DUST_OF_BOILS -------------------
+# וְהָיָה לְאָבָק עַל כָּל־אֶרֶץ מִצְרָיִם וְהָיָה עַל־הָאָדָם
+# וְעַל־הַבְּהֵמָה לִשְׁחִין פֹּרֵחַ אֲבַעְבֻּעֹת בְּכָל־אֶרֶץ מִצְרָיִם
+# "[EN-AID] And it shall become fine dust over all the land of Egypt, and it
+# shall become on man and on beast boils blooming with blisters, in all the
+# land of Egypt."
+m.step("Exod.9.9")
+# ‹לִשְׁחִין פֹּרֵחַ אֲבַעְבֻּעֹת› (“to-inflammation break-forth-as-a-bud
+# inflammatory-pustule”) — fact holds: and-be-to-light-particles
+m.fact("ve_haya_le_avaq")
+
+# -------------------------- Exod.9.10 · THE_BOILS_BLOOM --------------------
+# וַיִּקְחוּ אֶת־פִּיחַ הַכִּבְשָׁן וַיַּעַמְדוּ לִפְנֵי פַרְעֹה וַיִּזְרֹק
+# אֹתוֹ מֹשֶׁה הַשָּׁמָיְמָה וַיְהִי שְׁחִין אֲבַעְבֻּעֹת פֹּרֵחַ בָּאָדָם
+# וּבַבְּהֵמָה
+# "[EN-AID] And they took the soot of the furnace, and stood before Pharaoh;
+# and Moses threw it heavenward; and it became boils of blisters, blooming
+# on man and on beast."
+m.step("Exod.9.10")
+# ‹וַיְהִי שְׁחִין אֲבַעְבֻּעֹת פֹּרֵחַ› (“and-be inflammation inflammatory-
+# pustule break-forth-as-a-bud”) — demand settled (popped from the queue):
+# take-piach-and-zeraqo
+m.result("qechu_piach_u_zeraqo", tmark="t1")
+
+# -------------------------- Exod.9.11 · THE_CRAFT_CANNOT_STAND -------------
+# וְלֹא־יָכְלוּ הַחַרְטֻמִּים לַעֲמֹד לִפְנֵי מֹשֶׁה מִפְּנֵי הַשְּׁחִין
+# כִּי־הָיָה הַשְּׁחִין בַּחֲרְטֻמִּם וּבְכָל־מִצְרָיִם
+# "[EN-AID] And the magicians could not stand before Moses because of the
+# boils; for the boils were on the magicians, and on all Egypt."
+m.step("Exod.9.11")
+# ‹וְלֹא־יָכְלוּ הַחַרְטֻמִּים לַעֲמֹד לִפְנֵי מֹשֶׁה› (“and-not be-able
+# the-horoscopist to-stand to-face Moses”) — fact holds: and-not-be-able-
+# the-horoscopist-laamod
+m.fact("ve_lo_yakhlu_ha_chartumim_laamod")
+
+# -------------------------- Exod.9.12 · THE_DIVINE_HARDENING ---------------
+# וַיְחַזֵּק יְהוָה אֶת־לֵב פַּרְעֹה וְלֹא שָׁמַע אֲלֵהֶם כַּאֲשֶׁר דִּבֶּר
+# יְהוָה אֶל־מֹשֶׁה
+# "[EN-AID] And the LORD strengthened the heart of Pharaoh, and he did not
+# hear them, as the LORD had spoken to Moses."
+m.step("Exod.9.12")
+# ‹וַיְחַזֵּק יְהוָה אֶת־לֵב פַּרְעֹה› (“and-fasten-upon YHWH obj-marker
+# heart Pharaoh”) — fact holds: and-fasten-upon-the-LORD-obj-marker-heart-
+# Pharaoh
+m.fact("va_yechazeq_YHWH_et_lev_paro")
+
+# -------------------------- Exod.9.13 · THE_HAIL_ERRAND --------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה הַשְׁכֵּם בַּבֹּקֶר וְהִתְיַצֵּב לִפְנֵי
+# פַרְעֹה וְאָמַרְתָּ אֵלָיו כֹּה־אָמַר יְהוָה אֱלֹהֵי הָעִבְרִים שַׁלַּח
+# אֶת־עַמִּי וְיַעַבְדֻנִי
+# "[EN-AID] And the LORD said to Moses: Rise early in the morning, and
+# station yourself before Pharaoh, and say to him: Thus says the LORD, the
+# God of the Hebrews: Send My people, that they may serve Me."
+m.step("Exod.9.13")
+# ‹הַשְׁכֵּם בַּבֹּקֶר וְהִתְיַצֵּב לִפְנֵי פַרְעֹה› (“rise-early in-morning
+# and-place to-face Pharaoh”) — the-LORD speaks a demand — LET: rise-early-
+# and-place-2
+m.declare("YHWH", "LET",
+          "hashkem_ve_hityatzev_2")
+
+# -------------------------- Exod.9.14 · ALL_MY_PLAGUES_TO_YOUR_HEART -------
+# כִּי בַּפַּעַם הַזֹּאת אֲנִי שֹׁלֵחַ אֶת־כָּל־מַגֵּפֹתַי אֶל־לִבְּךָ
+# וּבַעֲבָדֶיךָ וּבְעַמֶּךָ בַּעֲבוּר תֵּדַע כִּי אֵין כָּמֹנִי
+# בְּכָל־הָאָרֶץ
+# "[EN-AID] For this time I send all My plagues to your heart, and on your
+# servants, and on your people — in order that you may know that there is
+# none like Me in all the earth."
+m.step("Exod.9.14")
+# ‹בַּעֲבוּר תֵּדַע כִּי אֵין כָּמֹנִי בְּכָל־הָאָרֶץ› (“for-the-sake-of
+# know that there-is-not form-of-the-prefix-'k-'-me/my in-all the-earth”) —
+# fact holds: there-is-not-kamoni-in-all-the-earth
+m.fact("en_kamoni_be_khol_ha_aretz")
+
+# -------------------------- Exod.9.15 · BY_NOW_I_COULD_HAVE ----------------
+# כִּי עַתָּה שָׁלַחְתִּי אֶת־יָדִי וָאַךְ אוֹתְךָ וְאֶת־עַמְּךָ בַּדָּבֶר
+# וַתִּכָּחֵד מִן־הָאָרֶץ
+# "[EN-AID] For by now I could have sent out My hand, and struck you and
+# your people with the pestilence; and you would have been effaced from the
+# earth."
+m.step("Exod.9.15")
+# ‹כִּי עַתָּה שָׁלַחְתִּי אֶת־יָדִי› (“that now send obj-marker hand-
+# me/my”) — fact holds: very-widely-used-as-a-relati-you-send-obj-marker-
+# yadi
+m.fact("ki_ata_shalachti_et_yadi")
+
+# -------------------------- Exod.9.16 · I_MADE_YOU_STAND -------------------
+# וְאוּלָם בַּעֲבוּר זֹאת הֶעֱמַדְתִּיךָ בַּעֲבוּר הַרְאֹתְךָ אֶת־כֹּחִי
+# וּלְמַעַן סַפֵּר שְׁמִי בְּכָל־הָאָרֶץ
+# "[EN-AID] But for this very cause I have made you stand: in order to show
+# you My power, and that My Name be declared in all the earth."
+m.step("Exod.9.16")
+# ‹וּלְמַעַן סַפֵּר שְׁמִי בְּכָל־הָאָרֶץ› (“and-so-that count name-me/my
+# in-all the-earth”) — fact holds: heemadtikha-baavur-harotkha
+m.fact("heemadtikha_baavur_harotkha")
+
+# -------------------------- Exod.9.17 · STILL_EXALTING_YOURSELF ------------
+# עוֹדְךָ מִסְתּוֹלֵל בְּעַמִּי לְבִלְתִּי שַׁלְּחָם
+# "[EN-AID] You still exalt yourself over My people, not to send them."
+m.step("Exod.9.17")
+# ‹עוֹדְךָ מִסְתּוֹלֵל בְּעַמִּי› (“still/again-you/your mound-up in-people-
+# me/my”) — fact holds: odkha-mound-up-in-ami
+m.fact("odkha_mistolel_be_ami")
+
+# -------------------------- Exod.9.18 · HAIL_TOMORROW ----------------------
+# הִנְנִי מַמְטִיר כָּעֵת מָחָר בָּרָד כָּבֵד מְאֹד אֲשֶׁר לֹא־הָיָה כָמֹהוּ
+# בְּמִצְרַיִם לְמִן־הַיּוֹם הִוָּסְדָה וְעַד־עָתָּה
+# "[EN-AID] Behold, about this time tomorrow I rain a very heavy hail, such
+# as has not been in Egypt from the day it was founded until now."
+m.step("Exod.9.18")
+# ‹הִנְנִי מַמְטִיר כָּעֵת מָחָר› (“lo!-me/my rain like-time deferred”) —
+# fact holds: behold-I-rain-kaet-deferred
+m.fact("hineni_mamtir_kaet_machar")
+
+# -------------------------- Exod.9.19 · THE_FLEE_WARNING -------------------
+# וְעַתָּה שְׁלַח הָעֵז אֶת־מִקְנְךָ וְאֵת כָּל־אֲשֶׁר לְךָ בַּשָּׂדֶה
+# כָּל־הָאָדָם וְהַבְּהֵמָה אֲשֶׁר־יִמָּצֵא בַשָּׂדֶה וְלֹא יֵאָסֵף
+# הַבַּיְתָה וְיָרַד עֲלֵהֶם הַבָּרָד וָמֵתוּ
+# "[EN-AID] And now — send, bring your cattle and all that is yours in the
+# field into safety: every man and beast that is found in the field and not
+# gathered into the house — the hail shall come down on them, and they shall
+# die."
+m.step("Exod.9.19")
+# ‹וְעַתָּה שְׁלַח הָעֵז› (“and-now send be-strong”) — fact holds: and-you-
+# send-be-strong
+m.fact("ve_ata_shelach_haez")
+
+# -------------------------- Exod.9.20 · THE_FEARER -------------------------
+# הַיָּרֵא אֶת־דְּבַר יְהוָה מֵעַבְדֵי פַּרְעֹה הֵנִיס אֶת־עֲבָדָיו
+# וְאֶת־מִקְנֵהוּ אֶל־הַבָּתִּים
+# "[EN-AID] He who feared the word of the LORD among the servants of Pharaoh
+# made his servants and his cattle flee into the houses."
+m.step("Exod.9.20")
+# ‹הַיָּרֵא אֶת־דְּבַר יְהוָה› (“the-fear obj-marker word/thing YHWH”) —
+# fact holds: the-fear-obj-marker-word/thing-the-LORD
+m.fact("ha_yare_et_devar_YHWH")
+
+# -------------------------- Exod.9.21 · THE_HEEDLESS -----------------------
+# וַאֲשֶׁר לֹא־שָׂם לִבּוֹ אֶל־דְּבַר יְהוָה וַיַּעֲזֹב אֶת־עֲבָדָיו
+# וְאֶת־מִקְנֵהוּ בַּשָּׂדֶה
+# "[EN-AID] And he who did not set his heart to the word of the LORD left
+# his servants and his cattle in the field."
+m.step("Exod.9.21")
+# ‹וַאֲשֶׁר לֹא־שָׂם לִבּוֹ› (“and-which not put/set heart-him/its”) — fact
+# holds: and-which-not-put/set-His-heart
+m.fact("va_asher_lo_sam_libo")
+
+# -------------------------- Exod.9.22 · STRETCH_TOWARD_HEAVEN --------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה נְטֵה אֶת־יָדְךָ עַל־הַשָּׁמַיִם וִיהִי בָרָד
+# בְּכָל־אֶרֶץ מִצְרָיִם עַל־הָאָדָם וְעַל־הַבְּהֵמָה וְעַל כָּל־עֵשֶׂב
+# הַשָּׂדֶה בְּאֶרֶץ מִצְרָיִם
+# "[EN-AID] And the LORD said to Moses: Stretch out your hand toward heaven,
+# and there shall be hail in all the land of Egypt — on man, and on beast,
+# and on every herb of the field in the land of Egypt."
+m.step("Exod.9.22")
+# ‹נְטֵה אֶת־יָדְךָ עַל־הַשָּׁמַיִם› (“stretch obj-marker hand-you/your over
+# the-heavens”) — the-LORD speaks a demand — LET: stretch-yadkha-over-the-
+# heavens
+m.declare("YHWH", "LET",
+          "nete_yadkha_al_ha_shamayim")
+
+# -------------------------- Exod.9.23 · FIRE_WALKS_TO_EARTH ----------------
+# וַיֵּט מֹשֶׁה אֶת־מַטֵּהוּ עַל־הַשָּׁמַיִם וַיהוָה נָתַן קֹלֹת וּבָרָד
+# וַתִּהֲלַךְ אֵשׁ אָרְצָה וַיַּמְטֵר יְהוָה בָּרָד עַל־אֶרֶץ מִצְרָיִם
+# "[EN-AID] And Moses stretched out his staff toward heaven; and the LORD
+# gave voices and hail, and fire went walking to earth; and the LORD rained
+# hail on the land of Egypt."
+m.step("Exod.9.23")
+# ‹וַיַּמְטֵר יְהוָה בָּרָד עַל־אֶרֶץ מִצְרָיִם› (“and-rain YHWH hail over
+# earth Egypt”) — demand settled (popped from the queue): stretch-yadkha-
+# over-the-heavens
+m.result("nete_yadkha_al_ha_shamayim", tmark="t1")
+
+# -------------------------- Exod.9.24 · FIRE_IN_THE_ICE --------------------
+# וַיְהִי בָרָד וְאֵשׁ מִתְלַקַּחַת בְּתוֹךְ הַבָּרָד כָּבֵד מְאֹד אֲשֶׁר
+# לֹא־הָיָה כָמֹהוּ בְּכָל־אֶרֶץ מִצְרַיִם מֵאָז הָיְתָה לְגוֹי
+# "[EN-AID] And there was hail, and fire taking hold of itself within the
+# hail, very heavy, such as had not been in all the land of Egypt since it
+# became a nation."
+m.step("Exod.9.24")
+# ‹וְאֵשׁ מִתְלַקַּחַת בְּתוֹךְ הַבָּרָד› (“and-fire take in-midst the-
+# hail”) — fact holds: and-fire-take-betokh-the-hail
+m.fact("ve_esh_mitlaqachat_betokh_ha_barad")
+
+# -------------------------- Exod.9.25 · THE_STRIKE_CENSUS ------------------
+# וַיַּךְ הַבָּרָד בְּכָל־אֶרֶץ מִצְרַיִם אֵת כָּל־אֲשֶׁר בַּשָּׂדֶה מֵאָדָם
+# וְעַד־בְּהֵמָה וְאֵת כָּל־עֵשֶׂב הַשָּׂדֶה הִכָּה הַבָּרָד וְאֶת־כָּל־עֵץ
+# הַשָּׂדֶה שִׁבֵּר
+# "[EN-AID] And the hail struck in all the land of Egypt all that was in the
+# field, from man to beast; and every herb of the field the hail struck, and
+# every tree of the field it shattered."
+m.step("Exod.9.25")
+# ‹וַיַּךְ הַבָּרָד› (“and-strike the-hail”) — fact holds: and-strike-the-
+# hail
+m.fact("va_yakh_ha_barad")
+
+# -------------------------- Exod.9.26 · ONLY_GOSHEN ------------------------
+# רַק בְּאֶרֶץ גֹּשֶׁן אֲשֶׁר־שָׁם בְּנֵי יִשְׂרָאֵל לֹא הָיָה בָּרָד
+# "[EN-AID] Only in the land of Goshen, where the sons of Israel were, there
+# was no hail."
+m.step("Exod.9.26")
+# ‹רַק בְּאֶרֶץ גֹּשֶׁן› (“leanness in-earth Goshen”) — fact holds:
+# leanness-in-earth-Goshen
+m.fact("raq_be_eretz_goshen")
+
+# -------------------------- Exod.9.27 · I_HAVE_SINNED ----------------------
+# וַיִּשְׁלַח פַּרְעֹה וַיִּקְרָא לְמֹשֶׁה וּלְאַהֲרֹן וַיֹּאמֶר אֲלֵהֶם
+# חָטָאתִי הַפָּעַם יְהוָה הַצַּדִּיק וַאֲנִי וְעַמִּי הָרְשָׁעִים
+# "[EN-AID] And Pharaoh sent and called for Moses and for Aaron, and said to
+# them: I have sinned this time; the LORD is the righteous one, and I and my
+# people are the wicked."
+m.step("Exod.9.27")
+# ‹חָטָאתִי הַפָּעַם יְהוָה הַצַּדִּיק וַאֲנִי וְעַמִּי הָרְשָׁעִים› (“sin
+# the-stroke YHWH the-just and-I and-people-me/my the-wrong”) — fact holds:
+# sin-the-stroke
+m.fact("chatati_ha_paam")
+
+# -------------------------- Exod.9.28 · ENTREAT_ENOUGH ---------------------
+# הַעְתִּירוּ אֶל־יְהוָה וְרַב מִהְיֹת קֹלֹת אֱלֹהִים וּבָרָד וַאֲשַׁלְּחָה
+# אֶתְכֶם וְלֹא תֹסִפוּן לַעֲמֹד
+# "[EN-AID] Entreat the LORD — and enough of there being voices of God and
+# hail — and I will send you, and you shall not continue to stand."
+m.step("Exod.9.28")
+# ‹הַעְתִּירוּ אֶל־יְהוָה› (“burn-incense-in-worship to YHWH”) — Pharaoh
+# speaks a demand — LET: burn-incense-in-worship-to-the-LORD-3
+m.declare("paro", "LET",
+          "hatiru_el_YHWH_3")
+
+# -------------------------- Exod.9.29 · PALMS_SPREAD_THE_PROMISE -----------
+# וַיֹּאמֶר אֵלָיו מֹשֶׁה כְּצֵאתִי אֶת־הָעִיר אֶפְרֹשׂ אֶת־כַּפַּי
+# אֶל־יְהוָה הַקֹּלוֹת יֶחְדָּלוּן וְהַבָּרָד לֹא יִהְיֶה־עוֹד לְמַעַן
+# תֵּדַע כִּי לַיהוָה הָאָרֶץ
+# "[EN-AID] And Moses said to him: As I go out of the city, I will spread
+# out my palms to the LORD; the thunders shall cease, and the hail shall be
+# no more — in order that you may know that the earth is the LORD's."
+m.step("Exod.9.29")
+# ‹הַקֹּלוֹת יֶחְדָּלוּן וְהַבָּרָד לֹא יִהְיֶה־עוֹד› (“the-voice/sound
+# cease-ward and-the-hail not be still/again”) — fact holds: the-
+# voice/sound-yechdalun
+m.fact("ha_qolot_yechdalun")
+
+# -------------------------- Exod.9.30 · NOT_YET_FEARING --------------------
+# וְאַתָּה וַעֲבָדֶיךָ יָדַעְתִּי כִּי טֶרֶם תִּירְאוּן מִפְּנֵי יְהוָה
+# אֱלֹהִים
+# "[EN-AID] And you and your servants — I know that you do not yet fear
+# before the LORD God."
+m.step("Exod.9.30")
+# ‹יָדַעְתִּי כִּי טֶרֶם תִּירְאוּן› (“know that non-occurrence fear-ward”)
+# — fact holds: non-occurrence-tiraun
+m.fact("terem_tiraun")
+
+# -------------------------- Exod.9.31 · FLAX_AND_BARLEY --------------------
+# וְהַפִּשְׁתָּה וְהַשְּׂעֹרָה נֻכָּתָה כִּי הַשְּׂעֹרָה אָבִיב
+# וְהַפִּשְׁתָּה גִּבְעֹל
+# "[EN-AID] And the flax and the barley were struck; for the barley was in
+# the ear, and the flax was in bud."
+m.step("Exod.9.31")
+# ‹וְהַפִּשְׁתָּה וְהַשְּׂעֹרָה נֻכָּתָה› (“and-the-flax and-the-barley
+# strike”) — fact holds: and-the-flax-and-the-barley-strike
+m.fact("ve_ha_pishta_ve_ha_seora_nukata")
+
+# -------------------------- Exod.9.32 · WHEAT_AND_SPELT --------------------
+# וְהַחִטָּה וְהַכֻּסֶּמֶת לֹא נֻכּוּ כִּי אֲפִילֹת הֵנָּה
+# "[EN-AID] And the wheat and the spelt were not struck; for they are late."
+m.step("Exod.9.32")
+# ‹כִּי אֲפִילֹת הֵנָּה› (“that unripe themselves”) — fact holds: very-
+# widely-used-as-a-relati-unripe-themselves
+m.fact("ki_afilot_hena")
+
+# -------------------------- Exod.9.33 · THE_CEASING ------------------------
+# וַיֵּצֵא מֹשֶׁה מֵעִם פַּרְעֹה אֶת־הָעִיר וַיִּפְרֹשׂ כַּפָּיו אֶל־יְהוָה
+# וַיַּחְדְּלוּ הַקֹּלוֹת וְהַבָּרָד וּמָטָר לֹא־נִתַּךְ אָרְצָה
+# "[EN-AID] And Moses went out of the city from Pharaoh, and spread out his
+# palms to the LORD; and the thunders and the hail ceased, and rain was not
+# poured to earth."
+m.step("Exod.9.33")
+# ‹וַיַּחְדְּלוּ הַקֹּלוֹת וְהַבָּרָד וּמָטָר לֹא־נִתַּךְ אָרְצָה› (“and-
+# cease the-voice/sound and-the-hail and-rain not flow-forth earth-ward”) —
+# demand settled (popped from the queue): burn-incense-in-worship-to-the-
+# LORD-3
+m.result("hatiru_el_YHWH_3", tmark="t1")
+
+# -------------------------- Exod.9.34 · SINNING_AGAIN ----------------------
+# וַיַּרְא פַּרְעֹה כִּי־חָדַל הַמָּטָר וְהַבָּרָד וְהַקֹּלֹת וַיֹּסֶף
+# לַחֲטֹא וַיַּכְבֵּד לִבּוֹ הוּא וַעֲבָדָיו
+# "[EN-AID] And Pharaoh saw that the rain and the hail and the thunders had
+# ceased — and he continued to sin, and made his heart heavy, he and his
+# servants."
+m.step("Exod.9.34")
+# ‹וַיֹּסֶף לַחֲטֹא› (“and-add to-sin”) — fact holds: and-add-to-sin
+m.fact("va_yosef_la_chato")
+
+# -------------------------- Exod.9.35 · THE_SEAL_BY_MOSES_HAND -------------
+# וַיֶּחֱזַק לֵב פַּרְעֹה וְלֹא שִׁלַּח אֶת־בְּנֵי יִשְׂרָאֵל כַּאֲשֶׁר
+# דִּבֶּר יְהוָה בְּיַד־מֹשֶׁה
+# "[EN-AID] And the heart of Pharaoh was strengthened, and he did not send
+# the sons of Israel, as the LORD had spoken by the hand of Moses."
+m.step("Exod.9.35")
+# ‹כַּאֲשֶׁר דִּבֶּר יְהוָה בְּיַד־מֹשֶׁה› (“like-as/which speak YHWH in-
+# hand Moses”) — fact holds: like-which-speak-the-LORD-in-hand-Moses
+m.fact("ka_asher_diber_YHWH_be_yad_moshe")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == ['bo_el_paro_ve_dibarta', 'hashkem_ve_hityatzev_2']
+    assert len(m.SPECS["log"]) == 5
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted(['ve_odkha_machaziq_bam', 'yad_YHWH_hoya_be_miqnekha', 've_hifla_YHWH_ben_miqne', 'va_yasem_YHWH_moed', 'va_yamat_kol_miqne_mitzrayim', 'va_yishlach_paro_ve_hine', 've_haya_le_avaq', 've_lo_yakhlu_ha_chartumim_laamod', 'va_yechazeq_YHWH_et_lev_paro', 'en_kamoni_be_khol_ha_aretz', 'ki_ata_shalachti_et_yadi', 'heemadtikha_baavur_harotkha', 'odkha_mistolel_be_ami', 'hineni_mamtir_kaet_machar', 've_ata_shelach_haez', 'ha_yare_et_devar_YHWH', 'va_asher_lo_sam_libo', 've_esh_mitlaqachat_betokh_ha_barad', 'va_yakh_ha_barad', 'raq_be_eretz_goshen', 'chatati_ha_paam', 'ha_qolot_yechdalun', 'terem_tiraun', 've_ha_pishta_ve_ha_seora_nukata', 'ki_afilot_hena', 'va_yosef_la_chato', 'ka_asher_diber_YHWH_be_yad_moshe'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 8
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: exo_10_locusts_and_darkness
+###############################################################################
+
+m = Machine("exo_10_locusts_and_darkness")
+
+# -------------------------- Exod.10.1 · COME_FOR_I_HAVE_HARDENED -----------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה בֹּא אֶל־פַּרְעֹה כִּי־אֲנִי הִכְבַּדְתִּי
+# אֶת־לִבּוֹ וְאֶת־לֵב עֲבָדָיו לְמַעַן שִׁתִי אֹתֹתַי אֵלֶּה בְּקִרְבּוֹ
+# "[EN-AID] And the LORD said to Moses: Come to Pharaoh; for I have made his
+# heart heavy, and the heart of his servants, in order to set these My signs
+# in his midst."
+m.step("Exod.10.1")
+# ‹בֹּא אֶל־פַּרְעֹה› (“come/bring to Pharaoh”) — the-LORD speaks a demand —
+# LET: come/bring-to-Pharaoh-locust
+m.declare("YHWH", "LET",
+          "bo_el_paro_arbe")
+
+# -------------------------- Exod.10.2 · TELL_YOUR_SON ----------------------
+# וּלְמַעַן תְּסַפֵּר בְּאָזְנֵי בִנְךָ וּבֶן־בִּנְךָ אֵת אֲשֶׁר
+# הִתְעַלַּלְתִּי בְּמִצְרַיִם וְאֶת־אֹתֹתַי אֲשֶׁר־שַׂמְתִּי בָם
+# וִידַעְתֶּם כִּי־אֲנִי יְהוָה
+# "[EN-AID] And in order that you may tell in the ears of your son, and your
+# son's son, how I dealt with Egypt, and My signs which I set among them —
+# and you shall know that I am the LORD."
+m.step("Exod.10.2")
+# ‹וּלְמַעַן תְּסַפֵּר בְּאָזְנֵי בִנְךָ וּבֶן־בִּנְךָ› (“and-so-that count
+# in-broadness.-i.e.-the-ear son-you/your and-son son-you/your”) — fact
+# holds: so-that-count-in-ozne-binkha
+m.fact("lemaan_tesaper_be_ozne_binkha")
+
+# -------------------------- Exod.10.3 · THE_DELIVERY_ON_STAGE --------------
+# וַיָּבֹא מֹשֶׁה וְאַהֲרֹן אֶל־פַּרְעֹה וַיֹּאמְרוּ אֵלָיו כֹּה־אָמַר
+# יְהוָה אֱלֹהֵי הָעִבְרִים עַד־מָתַי מֵאַנְתָּ לֵעָנֹת מִפָּנָי שַׁלַּח
+# עַמִּי וְיַעַבְדֻנִי
+# "[EN-AID] And Moses and Aaron came to Pharaoh, and said to him: Thus says
+# the LORD, the God of the Hebrews: How long have you refused to humble
+# yourself before Me? Send My people, that they may serve Me."
+m.step("Exod.10.3")
+# ‹וַיָּבֹא מֹשֶׁה וְאַהֲרֹן אֶל־פַּרְעֹה› (“and-come/bring Moses and-Aaron
+# to Pharaoh”) — demand settled (popped from the queue): come/bring-to-
+# Pharaoh-locust
+m.result("bo_el_paro_arbe", tmark="t1")
+
+# -------------------------- Exod.10.4 · LOCUSTS_IN_YOUR_BORDER -------------
+# כִּי אִם־מָאֵן אַתָּה לְשַׁלֵּחַ אֶת־עַמִּי הִנְנִי מֵבִיא מָחָר אַרְבֶּה
+# בִּגְבֻלֶךָ
+# "[EN-AID] For if you refuse to send My people — behold, tomorrow I bring
+# locusts into your border."
+m.step("Exod.10.4")
+# ‹הִנְנִי מֵבִיא מָחָר אַרְבֶּה בִּגְבֻלֶךָ› (“lo!-me/my come/bring
+# deferred locust in-cord-you/your”) — fact holds: behold-I-come/bring-
+# deferred-locust
+m.fact("hineni_mevi_machar_arbe")
+
+# -------------------------- Exod.10.5 · THE_EYE_OF_THE_LAND ----------------
+# וְכִסָּה אֶת־עֵין הָאָרֶץ וְלֹא יוּכַל לִרְאֹת אֶת־הָאָרֶץ וְאָכַל
+# אֶת־יֶתֶר הַפְּלֵטָה הַנִּשְׁאֶרֶת לָכֶם מִן־הַבָּרָד וְאָכַל
+# אֶת־כָּל־הָעֵץ הַצֹּמֵחַ לָכֶם מִן־הַשָּׂדֶה
+# "[EN-AID] And it shall cover the eye of the land, and none shall be able
+# to see the land; and it shall eat the remnant of what escaped, what
+# remains to you from the hail, and shall eat every tree that sprouts for
+# you from the field."
+m.step("Exod.10.5")
+# ‹וְכִסָּה אֶת־עֵין הָאָרֶץ וְלֹא› (“and-plump obj-marker eye the-earth
+# and-not”) — fact holds: and-plump-obj-marker-eye-the-earth
+m.fact("ve_khisa_et_en_ha_aretz")
+
+# -------------------------- Exod.10.6 · YOUR_FATHERS_NEVER_SAW -------------
+# וּמָלְאוּ בָתֶּיךָ וּבָתֵּי כָל־עֲבָדֶיךָ וּבָתֵּי כָל־מִצְרַיִם אֲשֶׁר
+# לֹא־רָאוּ אֲבֹתֶיךָ וַאֲבוֹת אֲבֹתֶיךָ מִיּוֹם הֱיוֹתָם עַל־הָאֲדָמָה עַד
+# הַיּוֹם הַזֶּה וַיִּפֶן וַיֵּצֵא מֵעִם פַּרְעֹה
+# "[EN-AID] And your houses shall be filled, and the houses of all your
+# servants, and the houses of all Egypt — such as your fathers and your
+# fathers' fathers have not seen, from the day of their being on the ground
+# until this day. And he turned, and went out from Pharaoh."
+m.step("Exod.10.6")
+# ‹רָאוּ אֲבֹתֶיךָ וַאֲבוֹת אֲבֹתֶיךָ מִיּוֹם› (“see father-you/your and-
+# father father-you/your from-day”) — fact holds: which-not-see-avotekha
+m.fact("asher_lo_rau_avotekha")
+
+# -------------------------- Exod.10.7 · THE_SERVANTS_REVOLT ----------------
+# וַיֹּאמְרוּ עַבְדֵי פַרְעֹה אֵלָיו עַד־מָתַי יִהְיֶה זֶה לָנוּ לְמוֹקֵשׁ
+# שַׁלַּח אֶת־הָאֲנָשִׁים וְיַעַבְדוּ אֶת־יְהוָה אֱלֹהֵיהֶם הֲטֶרֶם תֵּדַע
+# כִּי אָבְדָה מִצְרָיִם
+# "[EN-AID] And the servants of Pharaoh said to him: How long shall this one
+# be a snare to us? Send the men, that they may serve the LORD their God. Do
+# you not yet know that Egypt is destroyed?"
+m.step("Exod.10.7")
+# ‹הֲטֶרֶם תֵּדַע כִּי אָבְדָה מִצְרָיִם› (“the-non-occurrence know that
+# wander-away Egypt”) — fact holds: the-non-occurrence-know-that-wander-
+# away-Egypt
+m.fact("ha_terem_teda_ki_avda_mitzrayim")
+
+# -------------------------- Exod.10.8 · WHO_AND_WHO_ARE_GOING --------------
+# וַיּוּשַׁב אֶת־מֹשֶׁה וְאֶת־אַהֲרֹן אֶל־פַּרְעֹה וַיֹּאמֶר אֲלֵהֶם לְכוּ
+# עִבְדוּ אֶת־יְהוָה אֱלֹהֵיכֶם מִי וָמִי הַהֹלְכִים
+# "[EN-AID] And Moses and Aaron were brought back to Pharaoh, and he said to
+# them: Go, serve the LORD your God — who and who are the ones going?"
+m.step("Exod.10.8")
+# ‹אֱלֹהֵיכֶם מִי וָמִי הַהֹלְכִים› (“God-you/your(pl) who? and-who? the-
+# walk/go”) — fact holds: who?-and-who?-the-walk/go
+m.fact("mi_va_mi_ha_holkhim")
+
+# -------------------------- Exod.10.9 · WITH_OUR_YOUNG_AND_OLD -------------
+# וַיֹּאמֶר מֹשֶׁה בִּנְעָרֵינוּ וּבִזְקֵנֵינוּ נֵלֵךְ בְּבָנֵינוּ
+# וּבִבְנוֹתֵנוּ בְּצֹאנֵנוּ וּבִבְקָרֵנוּ נֵלֵךְ כִּי חַג־יְהוָה לָנוּ
+# "[EN-AID] And Moses said: With our young and with our old we will go; with
+# our sons and with our daughters, with our flocks and with our herds we
+# will go — for it is the LORD's feast for us."
+m.step("Exod.10.9")
+# ‹כִּי חַג־יְהוָה לָנוּ› (“that festival YHWH to-us/our”) — fact holds:
+# that-festival-the-LORD-lanu
+m.fact("ki_chag_YHWH_lanu")
+
+# -------------------------- Exod.10.10 · THE_BLOOD_STAR --------------------
+# וַיֹּאמֶר אֲלֵהֶם יְהִי כֵן יְהוָה עִמָּכֶם כַּאֲשֶׁר אֲשַׁלַּח אֶתְכֶם
+# וְאֶת־טַפְּכֶם רְאוּ כִּי רָעָה נֶגֶד פְּנֵיכֶם
+# "[EN-AID] And he said to them: So be the LORD with you, as I send you and
+# your little ones — see, for evil is before your faces."
+m.step("Exod.10.10")
+# ‹רְאוּ כִּי רָעָה נֶגֶד פְּנֵיכֶם› (“see that bad front face-
+# you/your(pl)”) — fact holds: see-that-bad-front-penekhem
+m.fact("reu_ki_raa_neged_penekhem")
+
+# -------------------------- Exod.10.11 · THE_EXPULSION ---------------------
+# לֹא כֵן לְכוּ־נָא הַגְּבָרִים וְעִבְדוּ אֶת־יְהוָה כִּי אֹתָהּ אַתֶּם
+# מְבַקְשִׁים וַיְגָרֶשׁ אֹתָם מֵאֵת פְּנֵי פַרְעֹה
+# "[EN-AID] Not so — go now, you men, and serve the LORD, for that is what
+# you are seeking. And they were driven out from before Pharaoh."
+m.step("Exod.10.11")
+# ‹וַיְגָרֶשׁ אֹתָם מֵאֵת פְּנֵי› (“and-drive-out-from-a-possession obj-
+# marker-them/their from-with face”) — event: gerush
+m.event("gerush")
+
+# -------------------------- Exod.10.12 · STRETCH_FOR_THE_LOCUSTS -----------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה נְטֵה יָדְךָ עַל־אֶרֶץ מִצְרַיִם בָּאַרְבֶּה
+# וְיַעַל עַל־אֶרֶץ מִצְרָיִם וְיֹאכַל אֶת־כָּל־עֵשֶׂב הָאָרֶץ אֵת
+# כָּל־אֲשֶׁר הִשְׁאִיר הַבָּרָד
+# "[EN-AID] And the LORD said to Moses: Stretch out your hand over the land
+# of Egypt for the locusts, that they may come up over the land of Egypt,
+# and eat every herb of the land — all that the hail left."
+m.step("Exod.10.12")
+# ‹נְטֵה יָדְךָ עַל־אֶרֶץ מִצְרַיִם› (“stretch hand-you/your over earth
+# Egypt”) — the-LORD speaks a demand — LET: stretch-yadkha-in-the-locust
+m.declare("YHWH", "LET",
+          "nete_yadkha_ba_arbe")
+
+# -------------------------- Exod.10.13 · THE_EAST_WIND ---------------------
+# וַיֵּט מֹשֶׁה אֶת־מַטֵּהוּ עַל־אֶרֶץ מִצְרַיִם וַיהוָה נִהַג רוּחַ קָדִים
+# בָּאָרֶץ כָּל־הַיּוֹם הַהוּא וְכָל־הַלָּיְלָה הַבֹּקֶר הָיָה וְרוּחַ
+# הַקָּדִים נָשָׂא אֶת־הָאַרְבֶּה
+# "[EN-AID] And Moses stretched out his staff over the land of Egypt, and
+# the LORD drove an east wind through the land all that day and all the
+# night; the morning came — and the east wind had borne the locusts."
+m.step("Exod.10.13")
+# ‹וַיהוָה נִהַג רוּחַ קָדִים› (“and-YHWH drive-forth spirit east-wind”) —
+# demand settled (popped from the queue): stretch-yadkha-in-the-locust
+m.result("nete_yadkha_ba_arbe", tmark="t1")
+
+# -------------------------- Exod.10.14 · THE_LOCUST_RESTS ------------------
+# וַיַּעַל הָאַרְבֶּה עַל כָּל־אֶרֶץ מִצְרַיִם וַיָּנַח בְּכֹל גְּבוּל
+# מִצְרָיִם כָּבֵד מְאֹד לְפָנָיו לֹא־הָיָה כֵן אַרְבֶּה כָּמֹהוּ וְאַחֲרָיו
+# לֹא יִהְיֶה־כֵּן
+# "[EN-AID] And the locust came up over all the land of Egypt, and rested in
+# all the border of Egypt — very heavy: before it there was no locust like
+# it, and after it there shall be none such."
+m.step("Exod.10.14")
+# ‹וַיָּנַח בְּכֹל גְּבוּל מִצְרָיִם› (“and-rest in-all cord Egypt”) — fact
+# holds: and-rest-in-all-cord
+m.fact("va_yanach_be_khol_gevul")
+
+# -------------------------- Exod.10.15 · NOTHING_GREEN ---------------------
+# וַיְכַס אֶת־עֵין כָּל־הָאָרֶץ וַתֶּחְשַׁךְ הָאָרֶץ וַיֹּאכַל
+# אֶת־כָּל־עֵשֶׂב הָאָרֶץ וְאֵת כָּל־פְּרִי הָעֵץ אֲשֶׁר הוֹתִיר הַבָּרָד
+# וְלֹא־נוֹתַר כָּל־יֶרֶק בָּעֵץ וּבְעֵשֶׂב הַשָּׂדֶה בְּכָל־אֶרֶץ מִצְרָיִם
+# "[EN-AID] And it covered the eye of all the land, and the land was
+# darkened; and it ate every herb of the land and all the fruit of the trees
+# which the hail had left; and nothing green was left in the tree or in the
+# herb of the field in all the land of Egypt."
+m.step("Exod.10.15")
+# ‹וַיְכַס אֶת־עֵין כָּל־הָאָרֶץ וַתֶּחְשַׁךְ הָאָרֶץ› (“and-plump obj-
+# marker eye all the-earth and-be-dark the-earth”) — fact holds: and-be-
+# dark-the-earth
+m.fact("va_techshakh_ha_aretz")
+
+# -------------------------- Exod.10.16 · I_HAVE_SINNED_AGAINST_BOTH --------
+# וַיְמַהֵר פַּרְעֹה לִקְרֹא לְמֹשֶׁה וּלְאַהֲרֹן וַיֹּאמֶר חָטָאתִי לַיהוָה
+# אֱלֹהֵיכֶם וְלָכֶם
+# "[EN-AID] And Pharaoh hurried to call for Moses and for Aaron; and he
+# said: I have sinned against the LORD your God, and against you."
+m.step("Exod.10.16")
+# ‹וַיֹּאמֶר חָטָאתִי לַיהוָה אֱלֹהֵיכֶם וְלָכֶם› (“and-say sin to-YHWH God-
+# you/your(pl) and-to-you/your(pl)”) — fact holds: sin-to-the-LORD-and-
+# lakhem
+m.fact("chatati_la_YHWH_ve_lakhem")
+
+# -------------------------- Exod.10.17 · REMOVE_THIS_DEATH -----------------
+# וְעַתָּה שָׂא נָא חַטָּאתִי אַךְ הַפַּעַם וְהַעְתִּירוּ לַיהוָה אֱלֹהֵיכֶם
+# וְיָסֵר מֵעָלַי רַק אֶת־הַמָּוֶת הַזֶּה
+# "[EN-AID] And now, forgive, pray, my sin only this once, and entreat the
+# LORD your God, that He remove from me only this death."
+m.step("Exod.10.17")
+# ‹וְיָסֵר מֵעָלַי רַק אֶת־הַמָּוֶת הַזֶּה› (“and-turn-aside from-over-me/my
+# leanness obj-marker the-death the-this”) — Pharaoh speaks a demand — LET:
+# burn-incense-in-worship-4
+m.declare("paro", "LET",
+          "hatiru_4")
+
+# -------------------------- Exod.10.18 · THE_NAMELESS_EXIT -----------------
+# וַיֵּצֵא מֵעִם פַּרְעֹה וַיֶּעְתַּר אֶל־יְהוָה
+# "[EN-AID] And he went out from Pharaoh, and entreated the LORD."
+m.step("Exod.10.18")
+# ‹וַיֵּצֵא מֵעִם פַּרְעֹה› (“and-bring-forth from-with Pharaoh”) — demand
+# settled (popped from the queue): burn-incense-in-worship-4
+m.result("hatiru_4", tmark="t1")
+
+# -------------------------- Exod.10.19 · INTO_THE_REED_SEA -----------------
+# וַיַּהֲפֹךְ יְהוָה רוּחַ־יָם חָזָק מְאֹד וַיִּשָּׂא אֶת־הָאַרְבֶּה
+# וַיִּתְקָעֵהוּ יָמָּה סּוּף לֹא נִשְׁאַר אַרְבֶּה אֶחָד בְּכֹל גְּבוּל
+# מִצְרָיִם
+# "[EN-AID] And the LORD turned a very strong sea-wind, and it bore the
+# locusts and thrust them into the Reed Sea; not one locust was left in all
+# the border of Egypt."
+m.step("Exod.10.19")
+# ‹נִשְׁאַר אַרְבֶּה אֶחָד בְּכֹל› (“swell-up locust one in-all”) — fact
+# holds: and-yitqaehu-yama-reed
+m.fact("va_yitqaehu_yama_suf")
+
+# -------------------------- Exod.10.20 · HARDENED_AGAIN --------------------
+# וַיְחַזֵּק יְהוָה אֶת־לֵב פַּרְעֹה וְלֹא שִׁלַּח אֶת־בְּנֵי יִשְׂרָאֵל
+# "[EN-AID] And the LORD strengthened Pharaoh's heart, and he did not send
+# the sons of Israel."
+m.step("Exod.10.20")
+# ‹וַיְחַזֵּק יְהוָה אֶת־לֵב פַּרְעֹה› (“and-fasten-upon YHWH obj-marker
+# heart Pharaoh”) — fact holds: and-fasten-upon-2
+m.fact("va_yechazeq_2")
+
+# -------------------------- Exod.10.21 · DARKNESS_THAT_IS_FELT -------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה נְטֵה יָדְךָ עַל־הַשָּׁמַיִם וִיהִי חֹשֶׁךְ
+# עַל־אֶרֶץ מִצְרָיִם וְיָמֵשׁ חֹשֶׁךְ
+# "[EN-AID] And the LORD said to Moses: Stretch out your hand toward heaven,
+# and there shall be darkness over the land of Egypt — and the darkness
+# shall be felt."
+m.step("Exod.10.21")
+# ‹חֹשֶׁךְ עַל־אֶרֶץ מִצְרָיִם וְיָמֵשׁ חֹשֶׁךְ› (“darkness over earth Egypt
+# and-feel-of darkness”) — the-LORD speaks a demand — LET: stretch-yadkha-
+# darkness
+m.declare("YHWH", "LET",
+          "nete_yadkha_choshekh")
+
+# -------------------------- Exod.10.22 · THREE_DAYS_OF_DARK ----------------
+# וַיֵּט מֹשֶׁה אֶת־יָדוֹ עַל־הַשָּׁמָיִם וַיְהִי חֹשֶׁךְ־אֲפֵלָה
+# בְּכָל־אֶרֶץ מִצְרַיִם שְׁלֹשֶׁת יָמִים
+# "[EN-AID] And Moses stretched out his hand toward heaven; and there was
+# thick darkness in all the land of Egypt three days."
+m.step("Exod.10.22")
+# ‹וַיְהִי חֹשֶׁךְ־אֲפֵלָה בְּכָל־אֶרֶץ מִצְרַיִם שְׁלֹשֶׁת יָמִים› (“and-be
+# darkness duskiness in-all earth Egypt three day”) — demand settled (popped
+# from the queue): stretch-yadkha-darkness
+m.result("nete_yadkha_choshekh", tmark="t1")
+
+# -------------------------- Exod.10.23 · LIGHT_IN_THE_DWELLINGS ------------
+# לֹא־רָאוּ אִישׁ אֶת־אָחִיו וְלֹא־קָמוּ אִישׁ מִתַּחְתָּיו שְׁלֹשֶׁת יָמִים
+# וּלְכָל־בְּנֵי יִשְׂרָאֵל הָיָה אוֹר בְּמוֹשְׁבֹתָם
+# "[EN-AID] No man saw his brother, nor did any man rise from his place,
+# three days; but for all the sons of Israel there was light in their
+# dwellings."
+m.step("Exod.10.23")
+# ‹וּלְכָל־בְּנֵי יִשְׂרָאֵל הָיָה אוֹר בְּמוֹשְׁבֹתָם› (“and-to-all son
+# Israel be light in-seat-them/their”) — fact holds: light-in-moshvotam
+m.fact("or_be_moshvotam")
+
+# -------------------------- Exod.10.24 · ONLY_YOUR_FLOCKS_STAY -------------
+# וַיִּקְרָא פַרְעֹה אֶל־מֹשֶׁה וַיֹּאמֶר לְכוּ עִבְדוּ אֶת־יְהוָה רַק
+# צֹאנְכֶם וּבְקַרְכֶם יֻצָּג גַּם־טַפְּכֶם יֵלֵךְ עִמָּכֶם
+# "[EN-AID] And Pharaoh called to Moses, and said: Go, serve the LORD — only
+# your flocks and your herds shall be held back; your little ones shall also
+# go with you."
+m.step("Exod.10.24")
+# ‹לְכוּ עִבְדוּ אֶת־יְהוָה רַק צֹאנְכֶם וּבְקַרְכֶם יֻצָּג› (“go work/serve
+# obj-marker YHWH leanness flock-you/your(pl) and-herd-you/your(pl) place-
+# permanently”) — Pharaoh speaks a demand — LET: go-leanness-tzonkhem-place-
+# permanently
+m.declare("paro", "LET",
+          "lekhu_raq_tzonkhem_yutzag")
+
+# -------------------------- Exod.10.25 · YOU_YOURSELF_WILL_GIVE ------------
+# וַיֹּאמֶר מֹשֶׁה גַּם־אַתָּה תִּתֵּן בְּיָדֵנוּ זְבָחִים וְעֹלוֹת
+# וְעָשִׂינוּ לַיהוָה אֱלֹהֵינוּ
+# "[EN-AID] And Moses said: You yourself will also give into our hand
+# sacrifices and burnt-offerings, and we will offer them to the LORD our
+# God."
+m.step("Exod.10.25")
+# ‹גַּם־אַתָּה תִּתֵּן בְּיָדֵנוּ זְבָחִים וְעֹלוֹת› (“also you set in-hand-
+# us/our sacrifice and-burnt-offering”) — fact holds: also-you-set-in-our-
+# hands
+m.fact("gam_ata_titen_be_yadenu")
+
+# -------------------------- Exod.10.26 · NOT_A_HOOF ------------------------
+# וְגַם־מִקְנֵנוּ יֵלֵךְ עִמָּנוּ לֹא תִשָּׁאֵר פַּרְסָה כִּי מִמֶּנּוּ
+# נִקַּח לַעֲבֹד אֶת־יְהוָה אֱלֹהֵינוּ וַאֲנַחְנוּ לֹא־נֵדַע מַה־נַּעֲבֹד
+# אֶת־יְהוָה עַד־בֹּאֵנוּ שָׁמָּה
+# "[EN-AID] And our cattle shall also go with us — not a hoof shall be left
+# — for from it we must take to serve the LORD our God; and we do not know
+# with what we shall serve the LORD until we come there."
+m.step("Exod.10.26")
+# ‹לֹא תִשָּׁאֵר פַּרְסָה› (“not swell-up claw”) — fact holds: not-swell-up-
+# claw
+m.fact("lo_tishaer_parsa")
+
+# -------------------------- Exod.10.27 · NOT_WILLING -----------------------
+# וַיְחַזֵּק יְהוָה אֶת־לֵב פַּרְעֹה וְלֹא אָבָה לְשַׁלְּחָם
+# "[EN-AID] And the LORD strengthened Pharaoh's heart, and he was not
+# willing to send them."
+m.step("Exod.10.27")
+# ‹וְלֹא אָבָה לְשַׁלְּחָם› (“and-not breathe-after to-send-them/their”) —
+# fact holds: and-not-breathe-after-to-shalcham
+m.fact("ve_lo_ava_le_shalcham")
+
+# -------------------------- Exod.10.28 · SEE_MY_FACE_NO_MORE ---------------
+# וַיֹּאמֶר־לוֹ פַרְעֹה לֵךְ מֵעָלָי הִשָּׁמֶר לְךָ אֶל־תֹּסֶף רְאוֹת פָּנַי
+# כִּי בְּיוֹם רְאֹתְךָ פָנַי תָּמוּת
+# "[EN-AID] And Pharaoh said to him: Go from me! Guard yourself — do not
+# again see my face, for on the day you see my face you shall die."
+m.step("Exod.10.28")
+# ‹מֵעָלָי הִשָּׁמֶר לְךָ אֶל־תֹּסֶף› (“from-over-me/my keep/guard to-
+# you/your do-not add”) — Pharaoh speaks a demand — LET: over-add-see-panai
+m.declare("paro", "LET",
+          "al_tosef_reot_panai")
+
+# -------------------------- Exod.10.29 · I_WILL_NOT_AGAIN ------------------
+# וַיֹּאמֶר מֹשֶׁה כֵּן דִּבַּרְתָּ לֹא־אֹסִף עוֹד רְאוֹת פָּנֶיךָ
+# "[EN-AID] And Moses said: You have spoken well — I will not again see your
+# face."
+m.step("Exod.10.29")
+# ‹דִּבַּרְתָּ לֹא־אֹסִף עוֹד רְאוֹת פָּנֶיךָ› (“speak not add still/again
+# see face-you/your”) — demand settled (popped from the queue): over-add-
+# see-panai
+m.result("al_tosef_reot_panai", tmark="t1")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == ['lekhu_raq_tzonkhem_yutzag']
+    assert len(m.SPECS["log"]) == 6
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted(['lemaan_tesaper_be_ozne_binkha', 'hineni_mevi_machar_arbe', 've_khisa_et_en_ha_aretz', 'asher_lo_rau_avotekha', 'ha_terem_teda_ki_avda_mitzrayim', 'mi_va_mi_ha_holkhim', 'ki_chag_YHWH_lanu', 'reu_ki_raa_neged_penekhem', 'va_yanach_be_khol_gevul', 'va_techshakh_ha_aretz', 'chatati_la_YHWH_ve_lakhem', 'va_yitqaehu_yama_suf', 'va_yechazeq_2', 'or_be_moshvotam', 'gam_ata_titen_be_yadenu', 'lo_tishaer_parsa', 've_lo_ava_le_shalcham'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 12
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: exo_11_one_more_plague
+###############################################################################
+
+m = Machine("exo_11_one_more_plague")
+
+# -------------------------- Exod.11.1 · ONE_PLAGUE_MORE --------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה עוֹד נֶגַע אֶחָד אָבִיא עַל־פַּרְעֹה
+# וְעַל־מִצְרַיִם אַחֲרֵי־כֵן יְשַׁלַּח אֶתְכֶם מִזֶּה כְּשַׁלְּחוֹ כָּלָה
+# גָּרֵשׁ יְגָרֵשׁ אֶתְכֶם מִזֶּה
+# "[EN-AID] And the LORD said to Moses: One plague more I bring upon Pharaoh
+# and upon Egypt; afterwards he will send you from here — when he sends,
+# completely, driving he shall drive you out from here."
+m.step("Exod.11.1")
+# ‹עוֹד נֶגַע אֶחָד אָבִיא עַל־פַּרְעֹה וְעַל־מִצְרַיִם› (“still/again blow
+# one come/bring over Pharaoh and-over Egypt”) — fact holds: still/again-
+# blow-one-come/bring
+m.fact("od_nega_echad_avi")
+
+# -------------------------- Exod.11.2 · ASK_OF_YOUR_NEIGHBOR ---------------
+# דַּבֶּר־נָא בְּאָזְנֵי הָעָם וְיִשְׁאֲלוּ אִישׁ מֵאֵת רֵעֵהוּ וְאִשָּׁה
+# מֵאֵת רְעוּתָהּ כְּלֵי־כֶסֶף וּכְלֵי זָהָב
+# "[EN-AID] Speak, pray, in the ears of the people: let them ask, each man
+# of his neighbor and each woman of her neighbor, vessels of silver and
+# vessels of gold."
+m.step("Exod.11.2")
+# ‹דַּבֶּר־נָא בְּאָזְנֵי הָעָם› (“speak please in-broadness.-i.e.-the-ear
+# the-people”) — the-LORD speaks a demand — LET: and-inquire-man-vessel-
+# silver
+m.declare("YHWH", "LET",
+          "ve_yishalu_ish_kele_khesef")
+
+# -------------------------- Exod.11.3 · THE_MAN_MOSES ----------------------
+# וַיִּתֵּן יְהוָה אֶת־חֵן הָעָם בְּעֵינֵי מִצְרָיִם גַּם הָאִישׁ מֹשֶׁה
+# גָּדוֹל מְאֹד בְּאֶרֶץ מִצְרַיִם בְּעֵינֵי עַבְדֵי־פַרְעֹה וּבְעֵינֵי
+# הָעָם
+# "[EN-AID] And the LORD gave the people favor in the eyes of Egypt; also
+# the man Moses was very great in the land of Egypt, in the eyes of
+# Pharaoh's servants and in the eyes of the people."
+m.step("Exod.11.3")
+# ‹וַיִּתֵּן יְהוָה אֶת־חֵן הָעָם בְּעֵינֵי מִצְרָיִם› (“and-set YHWH obj-
+# marker graciousness the-people in-eye Egyptian”) — fact holds: and-set-
+# graciousness-the-people
+m.fact("va_yiten_chen_ha_am")
+
+# -------------------------- Exod.11.4 · ABOUT_MIDNIGHT ---------------------
+# וַיֹּאמֶר מֹשֶׁה כֹּה אָמַר יְהוָה כַּחֲצֹת הַלַּיְלָה אֲנִי יוֹצֵא
+# בְּתוֹךְ מִצְרָיִם
+# "[EN-AID] And Moses said: Thus says the LORD: About midnight I go out in
+# the midst of Egypt."
+m.step("Exod.11.4")
+# ‹כַּחֲצֹת הַלַּיְלָה אֲנִי יוֹצֵא בְּתוֹךְ מִצְרָיִם› (“like-middle the-
+# night bring-forth in-midst Egypt”) — fact holds: like-chatzot-ani-bring-
+# forth
+m.fact("ka_chatzot_ani_yotze")
+
+# -------------------------- Exod.11.5 · EVERY_FIRSTBORN_DIES ---------------
+# וּמֵת כָּל־בְּכוֹר בְּאֶרֶץ מִצְרַיִם מִבְּכוֹר פַּרְעֹה הַיֹּשֵׁב
+# עַל־כִּסְאוֹ עַד בְּכוֹר הַשִּׁפְחָה אֲשֶׁר אַחַר הָרֵחָיִם וְכֹל בְּכוֹר
+# בְּהֵמָה
+# "[EN-AID] And every firstborn in the land of Egypt shall die, from the
+# firstborn of Pharaoh who sits on his throne to the firstborn of the slave-
+# girl who is behind the millstones, and every firstborn of beast."
+m.step("Exod.11.5")
+# ‹וּמֵת כָּל־בְּכוֹר בְּאֶרֶץ מִצְרַיִם› (“and-die all firstborn in-earth
+# Egypt”) — fact holds: and-die-all-firstborn
+m.fact("u_met_kol_bekhor")
+
+# -------------------------- Exod.11.6 · A_CRY_LIKE_NO_OTHER ----------------
+# וְהָיְתָה צְעָקָה גְדֹלָה בְּכָל־אֶרֶץ מִצְרָיִם אֲשֶׁר כָּמֹהוּ לֹא
+# נִהְיָתָה וְכָמֹהוּ לֹא תֹסִף
+# "[EN-AID] And there shall be a great cry in all the land of Egypt, such as
+# like it never was and like it shall never be again."
+m.step("Exod.11.6")
+# ‹וְהָיְתָה צְעָקָה גְדֹלָה בְּכָל־אֶרֶץ מִצְרָיִם› (“and-be shriek great
+# in-all earth Egypt”) — fact holds: shriek-great-kamohu-not-be
+m.fact("tzeaqa_gedola_kamohu_lo_nihyata")
+
+# -------------------------- Exod.11.7 · NOT_A_DOG_SHALL_SHARPEN ------------
+# וּלְכֹל בְּנֵי יִשְׂרָאֵל לֹא יֶחֱרַץ־כֶּלֶב לְשֹׁנוֹ לְמֵאִישׁ
+# וְעַד־בְּהֵמָה לְמַעַן תֵּדְעוּן אֲשֶׁר יַפְלֶה יְהוָה בֵּין מִצְרַיִם
+# וּבֵין יִשְׂרָאֵל
+# "[EN-AID] And against all the sons of Israel not a dog shall sharpen its
+# tongue, against man or beast — in order that you may know that the LORD
+# distinguishes between Egypt and Israel."
+m.step("Exod.11.7")
+# ‹וּלְכֹל בְּנֵי יִשְׂרָאֵל לֹא יֶחֱרַץ־כֶּלֶב לְשֹׁנוֹ› (“and-to-all son
+# Israel not point-sharply dog tongue-him/its”) — fact holds: not-point-
+# sharply-dog-leshono
+m.fact("lo_yecheratz_kelev_leshono")
+
+# -------------------------- Exod.11.8 · YOUR_SERVANTS_WILL_BOW -------------
+# וְיָרְדוּ כָל־עֲבָדֶיךָ אֵלֶּה אֵלַי וְהִשְׁתַּחֲוּוּ־לִי לֵאמֹר צֵא
+# אַתָּה וְכָל־הָעָם אֲשֶׁר־בְּרַגְלֶיךָ וְאַחֲרֵי־כֵן אֵצֵא וַיֵּצֵא
+# מֵעִם־פַּרְעֹה בָּחֳרִי־אָף
+# "[EN-AID] And all these your servants shall come down to me and bow to me,
+# saying: Go out, you and all the people at your feet — and after that I
+# will go out. And he went out from Pharaoh in hot anger."
+m.step("Exod.11.8")
+# ‹וְיָרְדוּ כָל־עֲבָדֶיךָ אֵלֶּה אֵלַי וְהִשְׁתַּחֲוּוּ־לִי לֵאמֹר› (“and-
+# go-down all servant-you/your these to-me/my and-afflict to-me/my to-say”)
+# — fact holds: and-go-down-avadekha-these
+m.fact("ve_yardu_avadekha_ele")
+
+# -------------------------- Exod.11.9 · HE_WILL_NOT_LISTEN -----------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה לֹא־יִשְׁמַע אֲלֵיכֶם פַּרְעֹה לְמַעַן רְבוֹת
+# מוֹפְתַי בְּאֶרֶץ מִצְרָיִם
+# "[EN-AID] And the LORD said to Moses: Pharaoh will not listen to you — in
+# order that My wonders may be multiplied in the land of Egypt."
+m.step("Exod.11.9")
+# ‹לֹא־יִשְׁמַע אֲלֵיכֶם פַּרְעֹה› (“not hear to-you/your(pl) Pharaoh”) —
+# fact holds: not-hear-alekhem-Pharaoh-2
+m.fact("lo_yishma_alekhem_paro_2")
+
+# -------------------------- Exod.11.10 · THE_CYCLE_COLOPHON ----------------
+# וּמֹשֶׁה וְאַהֲרֹן עָשׂוּ אֶת־כָּל־הַמֹּפְתִים הָאֵלֶּה לִפְנֵי פַרְעֹה
+# וַיְחַזֵּק יְהוָה אֶת־לֵב פַּרְעֹה וְלֹא־שִׁלַּח אֶת־בְּנֵי־יִשְׂרָאֵל
+# מֵאַרְצוֹ
+# "[EN-AID] And Moses and Aaron did all these wonders before Pharaoh; and
+# the LORD strengthened Pharaoh's heart, and he did not send the sons of
+# Israel out of his land."
+m.step("Exod.11.10")
+# ‹וּמֹשֶׁה וְאַהֲרֹן עָשׂוּ אֶת־כָּל־הַמֹּפְתִים הָאֵלֶּה› (“and-Moses and-
+# Aaron make obj-marker all the-miracle the-these”) — fact holds: and-Moses-
+# and-Aaron-make
+m.fact("u_moshe_ve_aharon_asu")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == ['ve_yishalu_ish_kele_khesef']
+    assert len(m.SPECS["log"]) == 1
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted(['od_nega_echad_avi', 'va_yiten_chen_ha_am', 'ka_chatzot_ani_yotze', 'u_met_kol_bekhor', 'tzeaqa_gedola_kamohu_lo_nihyata', 'lo_yecheratz_kelev_leshono', 've_yardu_avadekha_ele', 'lo_yishma_alekhem_paro_2', 'u_moshe_ve_aharon_asu'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 1
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: exo_12_passover_and_exodus
+###############################################################################
+
+m = Machine("exo_12_passover_and_exodus")
+
+# -------------------------- Exod.12.1 · IN_THE_LAND_OF_EGYPT ---------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה וְאֶל־אַהֲרֹן בְּאֶרֶץ מִצְרַיִם לֵאמֹר
+# "[EN-AID] And the LORD said to Moses and to Aaron in the land of Egypt,
+# saying:"
+m.step("Exod.12.1")
+# ‹וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה וְאֶל־אַהֲרֹן בְּאֶרֶץ מִצְרַיִם לֵאמֹר›
+# (“and-say YHWH to Moses and-to Aaron in-earth Egypt to-say”) — fact holds:
+# daber-in-earth-Egypt
+m.fact("daber_be_eretz_mitzrayim")
+
+# -------------------------- Exod.12.2 · HEAD_OF_MONTHS ---------------------
+# הַחֹדֶשׁ הַזֶּה לָכֶם רֹאשׁ חֳדָשִׁים רִאשׁוֹן הוּא לָכֶם לְחָדְשֵׁי
+# הַשָּׁנָה
+# "[EN-AID] This month is for you the head of months; first is it for you of
+# the months of the year."
+m.step("Exod.12.2")
+# ‹הַחֹדֶשׁ הַזֶּה לָכֶם רֹאשׁ חֳדָשִׁים› (“the-new-moon the-this to-
+# you/your(pl) head new-moon”) — the-LORD speaks a demand — LET: the-new-
+# moon-the-this-head
+m.declare("YHWH", "LET",
+          "ha_chodesh_ha_ze_rosh")
+
+# -------------------------- Exod.12.3 · A_LAMB_FOR_A_HOUSE -----------------
+# דַּבְּרוּ אֶל־כָּל־עֲדַת יִשְׂרָאֵל לֵאמֹר בֶּעָשֹׂר לַחֹדֶשׁ הַזֶּה
+# וְיִקְחוּ לָהֶם אִישׁ שֶׂה לְבֵית־אָבֹת שֶׂה לַבָּיִת
+# "[EN-AID] Speak to all the congregation of Israel, saying: On the tenth of
+# this month let them take, each man, a lamb for a fathers' house, a lamb
+# for a house."
+m.step("Exod.12.3")
+# ‹וְיִקְחוּ לָהֶם אִישׁ שֶׂה לְבֵית־אָבֹת שֶׂה לַבָּיִת› (“and-take to-
+# them/their man member-of-a-flock to-house father member-of-a-flock to-
+# house”) — the-LORD speaks a demand — LET: and-take-man-member-of-a-flock-
+# to-house
+m.declare("YHWH", "LET",
+          "ve_yiqchu_ish_se_la_bayit")
+
+# -------------------------- Exod.12.4 · ACCORDING_TO_HIS_EATING ------------
+# וְאִם־יִמְעַט הַבַּיִת מִהְיֹת מִשֶּׂה וְלָקַח הוּא וּשְׁכֵנוֹ הַקָּרֹב
+# אֶל־בֵּיתוֹ בְּמִכְסַת נְפָשֹׁת אִישׁ לְפִי אָכְלוֹ תָּכֹסּוּ עַל־הַשֶּׂה
+# "[EN-AID] And if the house be too little for a lamb, then he and his
+# neighbor next to his house shall take, by the count of souls; each man
+# according to his eating you shall count for the lamb."
+m.step("Exod.12.4")
+# ‹בְּמִכְסַת נְפָשֹׁת אִישׁ לְפִי אָכְלוֹ› (“in-enumeration living-being
+# man to-mouth food-him/its”) — fact holds: in-enumeration-living-being
+m.fact("be_mikhsat_nefashot")
+
+# -------------------------- Exod.12.5 · A_LAMB_UNBLEMISHED -----------------
+# שֶׂה תָמִים זָכָר בֶּן־שָׁנָה יִהְיֶה לָכֶם מִן־הַכְּבָשִׂים
+# וּמִן־הָעִזִּים תִּקָּחוּ
+# "[EN-AID] An unblemished lamb, a male, a year old shall it be for you;
+# from the sheep and from the goats shall you take it."
+m.step("Exod.12.5")
+# ‹שֶׂה תָמִים זָכָר בֶּן־שָׁנָה יִהְיֶה לָכֶם› (“member-of-a-flock entire
+# male son years be to-you/your(pl)”) — fact holds: member-of-a-flock-
+# entire-male-son-years
+m.fact("se_tamim_zakhar_ben_shana")
+
+# -------------------------- Exod.12.6 · BETWEEN_THE_EVENINGS ---------------
+# וְהָיָה לָכֶם לְמִשְׁמֶרֶת עַד אַרְבָּעָה עָשָׂר יוֹם לַחֹדֶשׁ הַזֶּה
+# וְשָׁחֲטוּ אֹתוֹ כֹּל קְהַל עֲדַת־יִשְׂרָאֵל בֵּין הָעַרְבָּיִם
+# "[EN-AID] And it shall be for you for a keeping until the fourteenth day
+# of this month; and the whole assembly of the congregation of Israel shall
+# slaughter it between the evenings."
+m.step("Exod.12.6")
+# ‹וְשָׁחֲטוּ אֹתוֹ כֹּל קְהַל עֲדַת־יִשְׂרָאֵל בֵּין הָעַרְבָּיִם› (“and-
+# slaughter obj-marker-him/its all assemblage congregation Israel between
+# the-evening”) — fact holds: and-slaughter-son-the-evening
+m.fact("ve_shachatu_ben_ha_arbayim")
+
+# -------------------------- Exod.12.7 · BLOOD_ON_THE_DOORPOSTS -------------
+# וְלָקְחוּ מִן־הַדָּם וְנָתְנוּ עַל־שְׁתֵּי הַמְּזוּזֹת וְעַל־הַמַּשְׁקוֹף
+# עַל הַבָּתִּים אֲשֶׁר־יֹאכְלוּ אֹתוֹ בָּהֶם
+# "[EN-AID] And they shall take of the blood, and put it on the two
+# doorposts and on the lintel, on the houses in which they eat it."
+m.step("Exod.12.7")
+# ‹וְנָתְנוּ עַל־שְׁתֵּי הַמְּזוּזֹת וְעַל־הַמַּשְׁקוֹף› (“and-set over two
+# the-door-post and-over the-lintel”) — fact holds: and-set-over-two-of-the-
+# door-post
+m.fact("ve_natnu_al_shte_ha_mezuzot")
+
+# -------------------------- Exod.12.8 · ROASTED_IN_FIRE --------------------
+# וְאָכְלוּ אֶת־הַבָּשָׂר בַּלַּיְלָה הַזֶּה צְלִי־אֵשׁ וּמַצּוֹת
+# עַל־מְרֹרִים יֹאכְלֻהוּ
+# "[EN-AID] And they shall eat the flesh in this night, roasted in fire; and
+# unleavened bread, with bitter herbs they shall eat it."
+m.step("Exod.12.8")
+# ‹וְאָכְלוּ אֶת־הַבָּשָׂר בַּלַּיְלָה הַזֶּה› (“and-eat obj-marker the-
+# flesh in-night the-this”) — fact holds: and-eat-obj-marker-the-flesh-in-
+# the-night
+m.fact("ve_akhlu_et_ha_basar_ba_layla")
+
+# -------------------------- Exod.12.9 · NOT_RAW_NOR_BOILED -----------------
+# אַל־תֹּאכְלוּ מִמֶּנּוּ נָא וּבָשֵׁל מְבֻשָּׁל בַּמָּיִם כִּי
+# אִם־צְלִי־אֵשׁ רֹאשׁוֹ עַל־כְּרָעָיו וְעַל־קִרְבּוֹ
+# "[EN-AID] Do not eat of it raw, nor boiled at all in water — but roasted
+# in fire, its head with its legs and with its inner parts."
+m.step("Exod.12.9")
+# ‹אַל־תֹּאכְלוּ מִמֶּנּוּ נָא וּבָשֵׁל מְבֻשָּׁל בַּמָּיִם› (“do-not eat
+# from-us/our tough and-boiled boil-up in-waters”) — fact holds: over-eat-
+# tough-and-boiled
+m.fact("al_tokhlu_na_u_vashel")
+
+# -------------------------- Exod.12.10 · NOTHING_LEFT_TILL_MORNING ---------
+# וְלֹא־תוֹתִירוּ מִמֶּנּוּ עַד־בֹּקֶר וְהַנֹּתָר מִמֶּנּוּ עַד־בֹּקֶר
+# בָּאֵשׁ תִּשְׂרֹפוּ
+# "[EN-AID] And you shall not leave any of it until morning; and what
+# remains of it until morning you shall burn in fire."
+m.step("Exod.12.10")
+# ‹וְהַנֹּתָר מִמֶּנּוּ עַד־בֹּקֶר בָּאֵשׁ תִּשְׂרֹפוּ› (“and-the-jut-over
+# from-us/our until morning in-fire be-on-fire”) — fact holds: and-the-jut-
+# over-in-the-fire-be-on-fire
+m.fact("ve_ha_notar_ba_esh_tisrofu")
+
+# -------------------------- Exod.12.11 · EAT_IT_IN_HASTE -------------------
+# וְכָכָה תֹּאכְלוּ אֹתוֹ מָתְנֵיכֶם חֲגֻרִים נַעֲלֵיכֶם בְּרַגְלֵיכֶם
+# וּמַקֶּלְכֶם בְּיֶדְכֶם וַאֲכַלְתֶּם אֹתוֹ בְּחִפָּזוֹן פֶּסַח הוּא
+# לַיהוָה
+# "[EN-AID] And thus shall you eat it: your loins girded, your shoes on your
+# feet, and your staff in your hand; and you shall eat it in haste — it is a
+# passover to the LORD."
+m.step("Exod.12.11")
+# ‹פֶּסַח הוּא לַיהוָה› (“pretermission he/it to-YHWH”) — fact holds:
+# pretermission-he/it-to-the-LORD
+m.fact("pesach_hu_la_YHWH")
+
+# -------------------------- Exod.12.12 · JUDGMENTS_ON_ALL_THE_GODS ---------
+# וְעָבַרְתִּי בְאֶרֶץ־מִצְרַיִם בַּלַּיְלָה הַזֶּה וְהִכֵּיתִי כָל־בְּכוֹר
+# בְּאֶרֶץ מִצְרַיִם מֵאָדָם וְעַד־בְּהֵמָה וּבְכָל־אֱלֹהֵי מִצְרַיִם
+# אֶעֱשֶׂה שְׁפָטִים אֲנִי יְהוָה
+# "[EN-AID] And I will pass through the land of Egypt in this night, and I
+# will strike every firstborn in the land of Egypt, from man to beast; and
+# on all the gods of Egypt I will do judgments — I am the LORD."
+m.step("Exod.12.12")
+# ‹וּבְכָל־אֱלֹהֵי מִצְרַיִם אֶעֱשֶׂה שְׁפָטִים אֲנִי יְהוָה› (“and-in-all
+# God Egypt make sentence YHWH”) — fact holds: and-pass-over-and-strike-all-
+# firstborn
+m.fact("ve_avarti_ve_hiketi_khol_bekhor")
+
+# -------------------------- Exod.12.13 · THE_BLOOD_A_SIGN ------------------
+# וְהָיָה הַדָּם לָכֶם לְאֹת עַל הַבָּתִּים אֲשֶׁר אַתֶּם שָׁם וְרָאִיתִי
+# אֶת־הַדָּם וּפָסַחְתִּי עֲלֵכֶם וְלֹא־יִהְיֶה בָכֶם נֶגֶף לְמַשְׁחִית
+# בְּהַכֹּתִי בְּאֶרֶץ מִצְרָיִם
+# "[EN-AID] And the blood shall be for you a sign on the houses where you
+# are; and I will see the blood and pass over you, and there shall be no
+# plague on you for a destroyer, when I strike in the land of Egypt."
+m.step("Exod.12.13")
+# ‹וְרָאִיתִי אֶת־הַדָּם וּפָסַחְתִּי עֲלֵכֶם› (“and-see obj-marker the-
+# blood and-hop over-you/your(pl)”) — fact holds: and-evil-iti-obj-marker-
+# the-blood-and-hop
+m.fact("ve_ra_iti_et_ha_dam_u_fasachti")
+
+# -------------------------- Exod.12.14 · A_MEMORIAL_FEAST_FOREVER ----------
+# וְהָיָה הַיּוֹם הַזֶּה לָכֶם לְזִכָּרוֹן וְחַגֹּתֶם אֹתוֹ חַג לַיהוָה
+# לְדֹרֹתֵיכֶם חֻקַּת עוֹלָם תְּחָגֻּהוּ
+# "[EN-AID] And this day shall be for you for a memorial, and you shall
+# feast it as a feast to the LORD; through your generations, an everlasting
+# statute you shall feast it."
+m.step("Exod.12.14")
+# ‹וְהָיָה הַיּוֹם הַזֶּה לָכֶם לְזִכָּרוֹן וְחַגֹּתֶם אֹתוֹ חַג לַיהוָה›
+# (“and-be the-day the-this to-you/your(pl) to-memento and-move-in-acircle
+# obj-marker-him/its festival to-YHWH”) — the-LORD speaks a demand — LET:
+# and-move-in-acircle-it-festival
+m.declare("YHWH", "LET",
+          "ve_chagotem_oto_chag")
+
+# -------------------------- Exod.12.15 · SEVEN_DAYS_UNLEAVENED -------------
+# שִׁבְעַת יָמִים מַצּוֹת תֹּאכֵלוּ אַךְ בַּיּוֹם הָרִאשׁוֹן תַּשְׁבִּיתוּ
+# שְּׂאֹר מִבָּתֵּיכֶם כִּי כָּל־אֹכֵל חָמֵץ וְנִכְרְתָה הַנֶּפֶשׁ הַהִוא
+# מִיִּשְׂרָאֵל מִיּוֹם הָרִאשֹׁן עַד־יוֹם הַשְּׁבִעִי
+# "[EN-AID] Seven days you shall eat unleavened bread; but on the first day
+# you shall remove leaven from your houses — for whoever eats leavened
+# bread, that soul shall be cut off from Israel, from the first day until
+# the seventh day."
+m.step("Exod.12.15")
+# ‹שִׁבְעַת יָמִים מַצּוֹת תֹּאכֵלוּ› (“seven day sweetness eat”) — the-LORD
+# speaks a demand — LET: seven-day-sweetness-eat
+m.declare("YHWH", "LET",
+          "shivat_yamim_matzot_tokhelu")
+
+# -------------------------- Exod.12.16 · HOLY_CONVOCATIONS -----------------
+# וּבַיּוֹם הָרִאשׁוֹן מִקְרָא־קֹדֶשׁ וּבַיּוֹם הַשְּׁבִיעִי מִקְרָא־קֹדֶשׁ
+# יִהְיֶה לָכֶם כָּל־מְלָאכָה לֹא־יֵעָשֶׂה בָהֶם אַךְ אֲשֶׁר יֵאָכֵל
+# לְכָל־נֶפֶשׁ הוּא לְבַדּוֹ יֵעָשֶׂה לָכֶם
+# "[EN-AID] And on the first day a holy convocation, and on the seventh day
+# a holy convocation shall be for you; no work shall be done on them — only
+# what is eaten by every soul, that alone may be done for you."
+m.step("Exod.12.16")
+# ‹וּבַיּוֹם הָרִאשׁוֹן מִקְרָא־קֹדֶשׁ וּבַיּוֹם הַשְּׁבִיעִי מִקְרָא־קֹדֶשׁ
+# יִהְיֶה לָכֶם› (“and-in-day the-first something-called-out holiness and-
+# in-day the-seventh something-called-out holiness be to-you/your(pl)”) —
+# fact holds: something-called-out-holiness-first-and-seventh
+m.fact("miqra_qodesh_rishon_u_shevii")
+
+# -------------------------- Exod.12.17 · GUARD_THE_MATZOT ------------------
+# וּשְׁמַרְתֶּם אֶת־הַמַּצּוֹת כִּי בְּעֶצֶם הַיּוֹם הַזֶּה הוֹצֵאתִי
+# אֶת־צִבְאוֹתֵיכֶם מֵאֶרֶץ מִצְרָיִם וּשְׁמַרְתֶּם אֶת־הַיּוֹם הַזֶּה
+# לְדֹרֹתֵיכֶם חֻקַּת עוֹלָם
+# "[EN-AID] And you shall guard the unleavened bread, for on this very day I
+# brought out your hosts from the land of Egypt; and you shall guard this
+# day through your generations, an everlasting statute."
+m.step("Exod.12.17")
+# ‹וּשְׁמַרְתֶּם אֶת־הַמַּצּוֹת› (“and-keep/guard obj-marker the-sweetness”)
+# — fact holds: and-keep/guard-obj-marker-the-sweetness
+m.fact("u_shemartem_et_ha_matzot")
+
+# -------------------------- Exod.12.18 · THE_FOUR_LEAN_MATZOT --------------
+# בָּרִאשֹׁן בְּאַרְבָּעָה עָשָׂר יוֹם לַחֹדֶשׁ בָּעֶרֶב תֹּאכְלוּ מַצֹּת
+# עַד יוֹם הָאֶחָד וְעֶשְׂרִים לַחֹדֶשׁ בָּעָרֶב
+# "[EN-AID] In the first month, on the fourteenth day of the month in the
+# evening, you shall eat unleavened bread, until the twenty-first day of the
+# month in the evening."
+m.step("Exod.12.18")
+# ‹בָּרִאשֹׁן בְּאַרְבָּעָה עָשָׂר יוֹם לַחֹדֶשׁ בָּעֶרֶב תֹּאכְלוּ מַצֹּת›
+# (“in-first in-four -teen day to-new-moon in-evening eat sweetness”) — fact
+# holds: in-the-web-eat-sweetness
+m.fact("ba_erev_tokhlu_matzot")
+
+# -------------------------- Exod.12.19 · NO_LEAVEN_IN_YOUR_HOUSES ----------
+# שִׁבְעַת יָמִים שְׂאֹר לֹא יִמָּצֵא בְּבָתֵּיכֶם כִּי כָּל־אֹכֵל מַחְמֶצֶת
+# וְנִכְרְתָה הַנֶּפֶשׁ הַהִוא מֵעֲדַת יִשְׂרָאֵל בַּגֵּר וּבְאֶזְרַח
+# הָאָרֶץ
+# "[EN-AID] Seven days leaven shall not be found in your houses; for whoever
+# eats what is leavened, that soul shall be cut off from the congregation of
+# Israel — among the sojourner and among the native of the land."
+m.step("Exod.12.19")
+# ‹בַּגֵּר וּבְאֶזְרַח הָאָרֶץ› (“in-sojourner and-in-spontaneous-growth
+# the-earth”) — fact holds: in-the-sojourner-and-and-spontaneous-growth-the-
+# earth
+m.fact("ba_ger_u_ve_ezrach_ha_aretz")
+
+# -------------------------- Exod.12.20 · IN_ALL_YOUR_DWELLINGS -------------
+# כָּל־מַחְמֶצֶת לֹא תֹאכֵלוּ בְּכֹל מוֹשְׁבֹתֵיכֶם תֹּאכְלוּ מַצּוֹת
+# "[EN-AID] You shall eat nothing leavened; in all your dwellings you shall
+# eat unleavened bread."
+m.step("Exod.12.20")
+# ‹בְּכֹל מוֹשְׁבֹתֵיכֶם תֹּאכְלוּ מַצּוֹת› (“in-all seat-you/your(pl) eat
+# sweetness”) — fact holds: in-all-moshvotekhem-sweetness
+m.fact("be_khol_moshvotekhem_matzot")
+
+# -------------------------- Exod.12.21 · DRAW_OUT_AND_TAKE -----------------
+# וַיִּקְרָא מֹשֶׁה לְכָל־זִקְנֵי יִשְׂרָאֵל וַיֹּאמֶר אֲלֵהֶם מִשְׁכוּ
+# וּקְחוּ לָכֶם צֹאן לְמִשְׁפְּחֹתֵיכֶם וְשַׁחֲטוּ הַפָּסַח
+# "[EN-AID] And Moses called for all the elders of Israel, and said to them:
+# Draw out and take for yourselves flocks according to your families, and
+# slaughter the passover."
+m.step("Exod.12.21")
+# ‹מִשְׁכוּ וּקְחוּ לָכֶם צֹאן לְמִשְׁפְּחֹתֵיכֶם וְשַׁחֲטוּ הַפָּסַח›
+# (“draw and-take to-you/your(pl) flock to-family-you/your(pl) and-slaughter
+# the-pretermission”) — Moses speaks a demand — LET: draw-and-take-flock
+m.declare("moshe", "LET",
+          "mishkhu_u_qechu_tzon")
+
+# -------------------------- Exod.12.22 · HYSSOP_AND_THRESHOLD --------------
+# וּלְקַחְתֶּם אֲגֻדַּת אֵזוֹב וּטְבַלְתֶּם בַּדָּם אֲשֶׁר־בַּסַּף
+# וְהִגַּעְתֶּם אֶל־הַמַּשְׁקוֹף וְאֶל־שְׁתֵּי הַמְּזוּזֹת מִן־הַדָּם אֲשֶׁר
+# בַּסָּף וְאַתֶּם לֹא תֵצְאוּ אִישׁ מִפֶּתַח־בֵּיתוֹ עַד־בֹּקֶר
+# "[EN-AID] And you shall take a bundle of hyssop, and dip it in the blood
+# that is in the basin, and touch the lintel and the two doorposts with the
+# blood that is in the basin; and you — none of you shall go out from the
+# opening of his house until morning."
+m.step("Exod.12.22")
+# ‹וְאַתֶּם לֹא תֵצְאוּ אִישׁ מִפֶּתַח־בֵּיתוֹ עַד־בֹּקֶר› (“and-you not
+# bring-forth man from-opening house-him/its until morning”) — fact holds:
+# not-bring-forth-man-from-opening-beto
+m.fact("lo_tetzu_ish_mi_petach_beto")
+
+# -------------------------- Exod.12.23 · HE_WILL_NOT_LET_THE_DESTROYER -----
+# וְעָבַר יְהוָה לִנְגֹּף אֶת־מִצְרַיִם וְרָאָה אֶת־הַדָּם עַל־הַמַּשְׁקוֹף
+# וְעַל שְׁתֵּי הַמְּזוּזֹת וּפָסַח יְהוָה עַל־הַפֶּתַח וְלֹא יִתֵּן
+# הַמַּשְׁחִית לָבֹא אֶל־בָּתֵּיכֶם לִנְגֹּף
+# "[EN-AID] And the LORD will pass through to strike Egypt, and He will see
+# the blood on the lintel and on the two doorposts; and the LORD will pass
+# over the opening, and will not let the destroyer come into your houses to
+# strike."
+m.step("Exod.12.23")
+# ‹וּפָסַח יְהוָה עַל־הַפֶּתַח› (“and-hop YHWH over the-opening”) — fact
+# holds: and-hop-the-LORD-over-the-opening
+m.fact("u_fasach_YHWH_al_ha_petach")
+
+# -------------------------- Exod.12.24 · A_STATUTE_FOREVER -----------------
+# וּשְׁמַרְתֶּם אֶת־הַדָּבָר הַזֶּה לְחָק־לְךָ וּלְבָנֶיךָ עַד־עוֹלָם
+# "[EN-AID] And you shall guard this thing as a statute for you and for your
+# sons, forever."
+m.step("Exod.12.24")
+# ‹לְחָק־לְךָ וּלְבָנֶיךָ עַד־עוֹלָם› (“to-enactment to-you/your and-to-son-
+# you/your until forever”) — fact holds: to-enactment-to-you-and-to-your-
+# sons
+m.fact("le_chaq_lekha_u_le_vanekha")
+
+# -------------------------- Exod.12.25 · WHEN_YOU_COME_TO_THE_LAND ---------
+# וְהָיָה כִּי־תָבֹאוּ אֶל־הָאָרֶץ אֲשֶׁר יִתֵּן יְהוָה לָכֶם כַּאֲשֶׁר
+# דִּבֵּר וּשְׁמַרְתֶּם אֶת־הָעֲבֹדָה הַזֹּאת
+# "[EN-AID] And it shall be, when you come to the land which the LORD will
+# give you, as He has spoken, that you shall guard this service."
+m.step("Exod.12.25")
+# ‹וְהָיָה כִּי־תָבֹאוּ אֶל־הָאָרֶץ› (“and-be that come/bring to the-earth”)
+# — fact holds: very-widely-used-as-a-relati-come/bring-to-the-earth
+m.fact("ki_tavou_el_ha_aretz")
+
+# -------------------------- Exod.12.26 · WHEN_YOUR_SONS_ASK ----------------
+# וְהָיָה כִּי־יֹאמְרוּ אֲלֵיכֶם בְּנֵיכֶם מָה הָעֲבֹדָה הַזֹּאת לָכֶם
+# "[EN-AID] And it shall be, when your sons say to you: What is this service
+# to you?"
+m.step("Exod.12.26")
+# ‹וְהָיָה כִּי־יֹאמְרוּ אֲלֵיכֶם בְּנֵיכֶם› (“and-be that say to-
+# you/your(pl) son-you/your(pl)”) — the-LORD speaks a demand — LET: and-say-
+# sacrifice-pretermission
+m.declare("YHWH", "LET",
+          "va_amartem_zevach_pesach")
+
+# -------------------------- Exod.12.27 · THE_ANSWER_AND_THE_BOW ------------
+# וַאֲמַרְתֶּם זֶבַח־פֶּסַח הוּא לַיהוָה אֲשֶׁר פָּסַח עַל־בָּתֵּי
+# בְנֵי־יִשְׂרָאֵל בְּמִצְרַיִם בְּנָגְפּוֹ אֶת־מִצְרַיִם וְאֶת־בָּתֵּינוּ
+# הִצִּיל וַיִּקֹּד הָעָם וַיִּשְׁתַּחֲוּוּ
+# "[EN-AID] Then you shall say: It is a passover-sacrifice to the LORD, who
+# passed over the houses of the sons of Israel in Egypt when He struck
+# Egypt, and our houses He rescued. And the people bowed and prostrated
+# themselves."
+m.step("Exod.12.27")
+# ‹וַיִּקֹּד הָעָם וַיִּשְׁתַּחֲוּוּ› (“and-shrivel-up the-people and-
+# afflict”) — fact holds: and-shrivel-up-the-people-and-yishtachavu
+m.fact("va_yiqod_ha_am_va_yishtachavu")
+
+# -------------------------- Exod.12.28 · AND_THEY_DID_SO -------------------
+# וַיֵּלְכוּ וַיַּעֲשׂוּ בְּנֵי יִשְׂרָאֵל כַּאֲשֶׁר צִוָּה יְהוָה
+# אֶת־מֹשֶׁה וְאַהֲרֹן כֵּן עָשׂוּ
+# "[EN-AID] And the sons of Israel went and did as the LORD had commanded
+# Moses and Aaron — so they did."
+m.step("Exod.12.28")
+# ‹וַיֵּלְכוּ וַיַּעֲשׂוּ בְּנֵי יִשְׂרָאֵל› (“and-go and-make son Israel”)
+# — demand settled (popped from the queue): and-take-man-member-of-a-flock-
+# to-house
+m.result("ve_yiqchu_ish_se_la_bayit", tmark="t1")
+# ‹כֵּן עָשׂוּ› (“so make”) — demand settled (popped from the queue): draw-
+# and-take-flock
+m.result("mishkhu_u_qechu_tzon", tmark="t1")
+
+# -------------------------- Exod.12.29 · MIDNIGHT --------------------------
+# וַיְהִי בַּחֲצִי הַלַּיְלָה וַיהוָה הִכָּה כָל־בְּכוֹר בְּאֶרֶץ מִצְרַיִם
+# מִבְּכֹר פַּרְעֹה הַיֹּשֵׁב עַל־כִּסְאוֹ עַד בְּכוֹר הַשְּׁבִי אֲשֶׁר
+# בְּבֵית הַבּוֹר וְכֹל בְּכוֹר בְּהֵמָה
+# "[EN-AID] And it was at half of the night: the LORD struck every firstborn
+# in the land of Egypt, from the firstborn of Pharaoh sitting on his throne
+# to the firstborn of the captive in the dungeon-house, and every firstborn
+# of beast."
+m.step("Exod.12.29")
+# ‹וַיְהִי בַּחֲצִי הַלַּיְלָה וַיהוָה הִכָּה כָל־בְּכוֹר בְּאֶרֶץ
+# מִצְרַיִם› (“and-be in-half the-night and-YHWH strike all firstborn in-
+# earth Egypt”) — event: makat-bekhorot — agent the-LORD
+m.event("makat_bekhorot", agent="YHWH")
+
+# -------------------------- Exod.12.30 · NO_HOUSE_WITHOUT_A_DEAD -----------
+# וַיָּקָם פַּרְעֹה לַיְלָה הוּא וְכָל־עֲבָדָיו וְכָל־מִצְרַיִם וַתְּהִי
+# צְעָקָה גְדֹלָה בְּמִצְרָיִם כִּי־אֵין בַּיִת אֲשֶׁר אֵין־שָׁם מֵת
+# "[EN-AID] And Pharaoh rose at night, he and all his servants and all
+# Egypt, and there was a great cry in Egypt — for there was no house where
+# there was not a dead one."
+m.step("Exod.12.30")
+# ‹וַתְּהִי צְעָקָה גְדֹלָה בְּמִצְרָיִם› (“and-be shriek great in-Egypt”) —
+# fact holds: shriek-great-in-Egypt
+m.fact("tzeaqa_gedola_be_mitzrayim")
+
+# -------------------------- Exod.12.31 · RISE_GO_OUT -----------------------
+# וַיִּקְרָא לְמֹשֶׁה וּלְאַהֲרֹן לַיְלָה וַיֹּאמֶר קוּמוּ צְּאוּ מִתּוֹךְ
+# עַמִּי גַּם־אַתֶּם גַּם־בְּנֵי יִשְׂרָאֵל וּלְכוּ עִבְדוּ אֶת־יְהוָה
+# כְּדַבֶּרְכֶם
+# "[EN-AID] And he called for Moses and for Aaron by night, and said: Rise,
+# go out from among my people, both you and the sons of Israel — and go,
+# serve the LORD as you have spoken."
+m.step("Exod.12.31")
+# ‹וַיֹּאמֶר קוּמוּ צְּאוּ מִתּוֹךְ עַמִּי› (“and-say arise bring-forth
+# from-midst people-me/my”) — fact holds: arise-bring-forth-work/serve-
+# khedaberkhem
+m.fact("qumu_tzeu_ivdu_khedaberkhem")
+
+# -------------------------- Exod.12.32 · BLESS_ME_ALSO ---------------------
+# גַּם־צֹאנְכֶם גַּם־בְּקַרְכֶם קְחוּ כַּאֲשֶׁר דִּבַּרְתֶּם וָלֵכוּ
+# וּבֵרַכְתֶּם גַּם־אֹתִי
+# "[EN-AID] Both your flocks and your herds take, as you have spoken, and go
+# — and bless me also."
+m.step("Exod.12.32")
+# ‹וּבֵרַכְתֶּם גַּם־אֹתִי› (“and-bless also obj-marker-me/my”) — fact
+# holds: and-bless-also-me
+m.fact("u_verakhtem_gam_oti")
+
+# -------------------------- Exod.12.33 · EGYPT_PRESSES ---------------------
+# וַתֶּחֱזַק מִצְרַיִם עַל־הָעָם לְמַהֵר לְשַׁלְּחָם מִן־הָאָרֶץ כִּי
+# אָמְרוּ כֻּלָּנוּ מֵתִים
+# "[EN-AID] And Egypt pressed hard upon the people, to hasten to send them
+# out of the land — for they said: We are all dead men."
+m.step("Exod.12.33")
+# ‹כִּי אָמְרוּ כֻּלָּנוּ מֵתִים› (“that say all-us/our die”) — fact holds:
+# kulanu-die
+m.fact("kulanu_metim")
+
+# -------------------------- Exod.12.34 · DOUGH_BEFORE_LEAVENING ------------
+# וַיִּשָּׂא הָעָם אֶת־בְּצֵקוֹ טֶרֶם יֶחְמָץ מִשְׁאֲרֹתָם צְרֻרֹת
+# בְּשִׂמְלֹתָם עַל־שִׁכְמָם
+# "[EN-AID] And the people carried their dough before it could leaven, their
+# kneading-troughs bound in their garments on their shoulders."
+m.step("Exod.12.34")
+# ‹וַיִּשָּׂא הָעָם אֶת־בְּצֵקוֹ טֶרֶם יֶחְמָץ› (“and-lift/carry the-people
+# obj-marker dough-him/its non-occurrence be-pungent”) — fact holds: non-
+# occurrence-be-pungent
+m.fact("terem_yechmatz")
+
+# -------------------------- Exod.12.35 · THEY_ASKED_AS_MOSES_SAID ----------
+# וּבְנֵי־יִשְׂרָאֵל עָשׂוּ כִּדְבַר מֹשֶׁה וַיִּשְׁאֲלוּ מִמִּצְרַיִם
+# כְּלֵי־כֶסֶף וּכְלֵי זָהָב וּשְׂמָלֹת
+# "[EN-AID] And the sons of Israel did according to the word of Moses: they
+# asked of Egypt vessels of silver and vessels of gold, and garments."
+m.step("Exod.12.35")
+# ‹וַיִּשְׁאֲלוּ מִמִּצְרַיִם כְּלֵי־כֶסֶף וּכְלֵי זָהָב וּשְׂמָלֹת› (“and-
+# inquire from-Egypt vessel silver and-vessel gold and-dress”) — fact holds:
+# and-inquire-vessel-silver-and-gold
+m.fact("va_yishalu_kele_khesef_u_zahav")
+
+# -------------------------- Exod.12.36 · THEY_STRIPPED_EGYPT ---------------
+# וַיהוָה נָתַן אֶת־חֵן הָעָם בְּעֵינֵי מִצְרַיִם וַיַּשְׁאִלוּם
+# וַיְנַצְּלוּ אֶת־מִצְרָיִם
+# "[EN-AID] And the LORD gave the people favor in the eyes of Egypt, and
+# they granted their request — and they stripped Egypt."
+m.step("Exod.12.36")
+# ‹וַיְנַצְּלוּ אֶת־מִצְרָיִם› (“and-snatch-away obj-marker Egypt”) — fact
+# holds: and-snatch-away-obj-marker-Egypt
+m.fact("va_yenatzlu_et_mitzrayim")
+
+# -------------------------- Exod.12.37 · RAMESES_TO_SUCCOTH ----------------
+# וַיִּסְעוּ בְנֵי־יִשְׂרָאֵל מֵרַעְמְסֵס סֻכֹּתָה כְּשֵׁשׁ־מֵאוֹת אֶלֶף
+# רַגְלִי הַגְּבָרִים לְבַד מִטָּף
+# "[EN-AID] And the sons of Israel journeyed from Rameses toward Succoth,
+# about six hundred thousand on foot, the men, besides children."
+m.step("Exod.12.37")
+# ‹וַיִּסְעוּ בְנֵי־יִשְׂרָאֵל מֵרַעְמְסֵס סֻכֹּתָה› (“and-journey son
+# Israel from-Raamses Succoth-ward”) — fact holds: and-journey-from-Raamses-
+# sukota
+m.fact("va_yisu_me_ramses_sukota")
+
+# -------------------------- Exod.12.38 · THE_MIXED_MULTITUDE ---------------
+# וְגַם־עֵרֶב רַב עָלָה אִתָּם וְצֹאן וּבָקָר מִקְנֶה כָּבֵד מְאֹד
+# "[EN-AID] And also a mixed multitude went up with them, and flocks and
+# herds — very heavy livestock."
+m.step("Exod.12.38")
+# ‹וְגַם־עֵרֶב רַב עָלָה אִתָּם› (“and-also web many/great go-up with-
+# them/their”) — fact holds: web-many/great-go-up-itam
+m.fact("erev_rav_ala_itam")
+
+# -------------------------- Exod.12.39 · CAKES_OF_MATZA --------------------
+# וַיֹּאפוּ אֶת־הַבָּצֵק אֲשֶׁר הוֹצִיאוּ מִמִּצְרַיִם עֻגֹת מַצּוֹת כִּי
+# לֹא חָמֵץ כִּי־גֹרְשׁוּ מִמִּצְרַיִם וְלֹא יָכְלוּ לְהִתְמַהְמֵהַּ
+# וְגַם־צֵדָה לֹא־עָשׂוּ לָהֶם
+# "[EN-AID] And they baked the dough which they brought out of Egypt into
+# cakes of unleavened bread, for it had not leavened — for they were driven
+# out of Egypt and could not delay, and also provisions they had not made
+# for themselves."
+m.step("Exod.12.39")
+# ‹כִּי־גֹרְשׁוּ מִמִּצְרַיִם› (“that drive-out-from-a-possession from-
+# Egypt”) — fact holds: very-widely-used-as-a-relati-drive-out-from-a-
+# possession-from-Egypt
+m.fact("ki_gorshu_mi_mitzrayim")
+
+# -------------------------- Exod.12.40 · FOUR_HUNDRED_THIRTY_YEARS ---------
+# וּמוֹשַׁב בְּנֵי יִשְׂרָאֵל אֲשֶׁר יָשְׁבוּ בְּמִצְרָיִם שְׁלֹשִׁים שָׁנָה
+# וְאַרְבַּע מֵאוֹת שָׁנָה
+# "[EN-AID] And the dwelling of the sons of Israel, which they dwelt in
+# Egypt, was thirty years and four hundred years."
+m.step("Exod.12.40")
+# ‹שְׁלֹשִׁים שָׁנָה וְאַרְבַּע מֵאוֹת שָׁנָה› (“thirty years and-four
+# hundred years”) — fact holds: seat-430-years
+m.fact("moshav_430_shana")
+
+# -------------------------- Exod.12.41 · THE_VERY_DAY_THE_HOSTS_WENT_OUT ---
+# וַיְהִי מִקֵּץ שְׁלֹשִׁים שָׁנָה וְאַרְבַּע מֵאוֹת שָׁנָה וַיְהִי בְּעֶצֶם
+# הַיּוֹם הַזֶּה יָצְאוּ כָּל־צִבְאוֹת יְהוָה מֵאֶרֶץ מִצְרָיִם
+# "[EN-AID] And it was at the end of thirty years and four hundred years —
+# and it was on this very day: all the hosts of the LORD went out from the
+# land of Egypt."
+m.step("Exod.12.41")
+# ‹וַיְהִי בְּעֶצֶם הַיּוֹם הַזֶּה יָצְאוּ כָּל־צִבְאוֹת יְהוָה› (“and-be
+# in-bone the-day the-this bring-forth all host YHWH”) — fact holds: bring-
+# forth-all-host-the-LORD
+m.fact("yatzu_kol_tzivot_YHWH")
+
+# -------------------------- Exod.12.42 · NIGHT_OF_WATCHINGS ----------------
+# לֵיל שִׁמֻּרִים הוּא לַיהוָה לְהוֹצִיאָם מֵאֶרֶץ מִצְרָיִם הוּא־הַלַּיְלָה
+# הַזֶּה לַיהוָה שִׁמֻּרִים לְכָל־בְּנֵי יִשְׂרָאֵל לְדֹרֹתָם
+# "[EN-AID] A night of watchings is it to the LORD, to bring them out from
+# the land of Egypt; it is this night to the LORD — watchings for all the
+# sons of Israel through their generations."
+m.step("Exod.12.42")
+# ‹לֵיל שִׁמֻּרִים הוּא לַיהוָה› (“night observance he/it to-YHWH”) — fact
+# holds: night-observance-to-dorotam
+m.fact("lel_shimurim_le_dorotam")
+
+# -------------------------- Exod.12.43 · THE_ORDINANCE_OF_THE_PASSOVER -----
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה וְאַהֲרֹן זֹאת חֻקַּת הַפָּסַח כָּל־בֶּן־נֵכָר
+# לֹא־יֹאכַל בּוֹ
+# "[EN-AID] And the LORD said to Moses and Aaron: This is the ordinance of
+# the passover: no foreigner shall eat of it."
+m.step("Exod.12.43")
+# ‹זֹאת חֻקַּת הַפָּסַח› (“this statute the-pretermission”) — the-LORD
+# speaks a demand — LET: this-statute-the-pretermission
+m.declare("YHWH", "LET",
+          "zot_chuqat_ha_pasach")
+
+# -------------------------- Exod.12.44 · BOUGHT_AND_CIRCUMCISED ------------
+# וְכָל־עֶבֶד אִישׁ מִקְנַת־כָּסֶף וּמַלְתָּה אֹתוֹ אָז יֹאכַל בּוֹ
+# "[EN-AID] And every man's servant, bought with silver — you shall
+# circumcise him; then he may eat of it."
+m.step("Exod.12.44")
+# ‹וּמַלְתָּה אֹתוֹ אָז יֹאכַל בּוֹ› (“and-circumcise obj-marker-him/its at-
+# that-time eat in-him/its”) — fact holds: and-circumcise-it-at-that-time-
+# eat
+m.fact("u_malta_oto_az_yokhal")
+
+# -------------------------- Exod.12.45 · SOJOURNER_AND_HIRELING ------------
+# תּוֹשָׁב וְשָׂכִיר לֹא־יֹאכַל־בּוֹ
+# "[EN-AID] A settler and a hireling shall not eat of it."
+m.step("Exod.12.45")
+# ‹תּוֹשָׁב וְשָׂכִיר לֹא־יֹאכַל־בּוֹ› (“resident-alien and-man-at-wages-by-
+# the-day not eat in-him/its”) — fact holds: resident-alien-and-man-at-
+# wages-by-the-day-not-eat
+m.fact("toshav_ve_sakhir_lo_yokhal")
+
+# -------------------------- Exod.12.46 · NO_BONE_BROKEN --------------------
+# בְּבַיִת אֶחָד יֵאָכֵל לֹא־תוֹצִיא מִן־הַבַּיִת מִן־הַבָּשָׂר חוּצָה
+# וְעֶצֶם לֹא תִשְׁבְּרוּ־בוֹ
+# "[EN-AID] In one house shall it be eaten; you shall not take any of the
+# flesh outside from the house; and a bone you shall not break in it."
+m.step("Exod.12.46")
+# ‹וְעֶצֶם לֹא תִשְׁבְּרוּ־בוֹ› (“and-bone not burst in-him/its”) — fact
+# holds: and-bone-not-tishberu-come/bring
+m.fact("ve_etzem_lo_tishberu_vo")
+
+# -------------------------- Exod.12.47 · ALL_THE_CONGREGATION --------------
+# כָּל־עֲדַת יִשְׂרָאֵל יַעֲשׂוּ אֹתוֹ
+# "[EN-AID] All the congregation of Israel shall do it."
+m.step("Exod.12.47")
+# ‹כָּל־עֲדַת יִשְׂרָאֵל יַעֲשׂוּ אֹתוֹ› (“all congregation Israel make obj-
+# marker-him/its”) — fact holds: all-congregation-Israel-make
+m.fact("kol_adat_yisrael_yaasu")
+
+# -------------------------- Exod.12.48 · THE_GER_WHO_DRAWS_NEAR ------------
+# וְכִי־יָגוּר אִתְּךָ גֵּר וְעָשָׂה פֶסַח לַיהוָה הִמּוֹל לוֹ כָל־זָכָר
+# וְאָז יִקְרַב לַעֲשֹׂתוֹ וְהָיָה כְּאֶזְרַח הָאָרֶץ וְכָל־עָרֵל לֹא־יֹאכַל
+# בּוֹ
+# "[EN-AID] And when a sojourner sojourns with you and would do a passover
+# to the LORD, every male of his shall be circumcised, and then he may draw
+# near to do it, and he shall be as a native of the land; and no
+# uncircumcised one shall eat of it."
+m.step("Exod.12.48")
+# ‹וְהָיָה כְּאֶזְרַח הָאָרֶץ› (“and-be like-spontaneous-growth the-earth”)
+# — fact holds: and-be-like-spontaneous-growth-the-earth
+m.fact("ve_haya_ke_ezrach_ha_aretz")
+
+# -------------------------- Exod.12.49 · ONE_TORAH -------------------------
+# תּוֹרָה אַחַת יִהְיֶה לָאֶזְרָח וְלַגֵּר הַגָּר בְּתוֹכְכֶם
+# "[EN-AID] One law shall there be for the native and for the sojourner who
+# sojourns in your midst."
+m.step("Exod.12.49")
+# ‹תּוֹרָה אַחַת יִהְיֶה לָאֶזְרָח› (“precept one be to-spontaneous-growth”)
+# — fact holds: precept-one-to-spontaneous-growth-and-to-sojourner
+m.fact("tora_achat_la_ezrach_ve_la_ger")
+
+# -------------------------- Exod.12.50 · AS_COMMANDED_SO_THEY_DID ----------
+# וַיַּעֲשׂוּ כָּל־בְּנֵי יִשְׂרָאֵל כַּאֲשֶׁר צִוָּה יְהוָה אֶת־מֹשֶׁה
+# וְאֶת־אַהֲרֹן כֵּן עָשׂוּ
+# "[EN-AID] And all the sons of Israel did as the LORD had commanded Moses
+# and Aaron — so they did."
+m.step("Exod.12.50")
+# ‹וַיַּעֲשׂוּ כָּל־בְּנֵי יִשְׂרָאֵל› (“and-make all son Israel”) — demand
+# settled (popped from the queue): this-statute-the-pretermission
+m.result("zot_chuqat_ha_pasach", tmark="t1")
+
+# -------------------------- Exod.12.51 · ON_THIS_VERY_DAY_HE_BROUGHT_THEM_OUT -
+# וַיְהִי בְּעֶצֶם הַיּוֹם הַזֶּה הוֹצִיא יְהוָה אֶת־בְּנֵי יִשְׂרָאֵל
+# מֵאֶרֶץ מִצְרַיִם עַל־צִבְאֹתָם
+# "[EN-AID] And it was on this very day: the LORD brought out the sons of
+# Israel from the land of Egypt, by their hosts."
+m.step("Exod.12.51")
+# ‹הוֹצִיא יְהוָה אֶת־בְּנֵי יִשְׂרָאֵל מֵאֶרֶץ מִצְרַיִם עַל־צִבְאֹתָם›
+# (“bring-forth YHWH obj-marker son Israel from-earth Egypt over host-
+# them/their”) — event: yetziat-Egypt — agent the-LORD
+m.event("yetziat_mitzrayim", agent="YHWH")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == ['ha_chodesh_ha_ze_rosh', 've_chagotem_oto_chag', 'shivat_yamim_matzot_tokhelu', 'va_amartem_zevach_pesach']
+    assert len(m.SPECS["log"]) == 7
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted(['daber_be_eretz_mitzrayim', 'be_mikhsat_nefashot', 'se_tamim_zakhar_ben_shana', 've_shachatu_ben_ha_arbayim', 've_natnu_al_shte_ha_mezuzot', 've_akhlu_et_ha_basar_ba_layla', 'al_tokhlu_na_u_vashel', 've_ha_notar_ba_esh_tisrofu', 'pesach_hu_la_YHWH', 've_avarti_ve_hiketi_khol_bekhor', 've_ra_iti_et_ha_dam_u_fasachti', 'miqra_qodesh_rishon_u_shevii', 'u_shemartem_et_ha_matzot', 'ba_erev_tokhlu_matzot', 'ba_ger_u_ve_ezrach_ha_aretz', 'be_khol_moshvotekhem_matzot', 'lo_tetzu_ish_mi_petach_beto', 'u_fasach_YHWH_al_ha_petach', 'le_chaq_lekha_u_le_vanekha', 'ki_tavou_el_ha_aretz', 'va_yiqod_ha_am_va_yishtachavu', 'tzeaqa_gedola_be_mitzrayim', 'qumu_tzeu_ivdu_khedaberkhem', 'u_verakhtem_gam_oti', 'kulanu_metim', 'terem_yechmatz', 'va_yishalu_kele_khesef_u_zahav', 'va_yenatzlu_et_mitzrayim', 'va_yisu_me_ramses_sukota', 'erev_rav_ala_itam', 'ki_gorshu_mi_mitzrayim', 'moshav_430_shana', 'yatzu_kol_tzivot_YHWH', 'lel_shimurim_le_dorotam', 'u_malta_oto_az_yokhal', 'toshav_ve_sakhir_lo_yokhal', 've_etzem_lo_tishberu_vo', 'kol_adat_yisrael_yaasu', 've_haya_ke_ezrach_ha_aretz', 'tora_achat_la_ezrach_ve_la_ger'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 12
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: exo_13_consecration_and_pillars
+###############################################################################
+
+m = Machine("exo_13_consecration_and_pillars")
+
+# -------------------------- Exod.13.1 · THE_FRAME --------------------------
+# וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר
+# "[EN-AID] And the LORD spoke to Moses, saying:"
+m.step("Exod.13.1")
+# ‹וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר› (“and-speak YHWH to Moses to-say”)
+# — fact holds: and-speak-to-Moses
+m.fact("va_yedaber_el_moshe")
+
+# -------------------------- Exod.13.2 · CONSECRATE_THE_FIRSTBORN -----------
+# קַדֶּשׁ־לִי כָל־בְּכוֹר פֶּטֶר כָּל־רֶחֶם בִּבְנֵי יִשְׂרָאֵל בָּאָדָם
+# וּבַבְּהֵמָה לִי הוּא
+# "[EN-AID] Consecrate to Me every firstborn, opener of every womb among the
+# sons of Israel, in man and in beast — Mine is it."
+m.step("Exod.13.2")
+# ‹קַדֶּשׁ־לִי כָל־בְּכוֹר› (“sanctify to-me/my all firstborn”) — the-LORD
+# speaks a demand — LET: sanctify-to-me-all-firstborn
+m.declare("YHWH", "LET",
+          "qadesh_li_khol_bekhor")
+
+# -------------------------- Exod.13.3 · REMEMBER_THIS_DAY ------------------
+# וַיֹּאמֶר מֹשֶׁה אֶל־הָעָם זָכוֹר אֶת־הַיּוֹם הַזֶּה אֲשֶׁר יְצָאתֶם
+# מִמִּצְרַיִם מִבֵּית עֲבָדִים כִּי בְּחֹזֶק יָד הוֹצִיא יְהֹוָה אֶתְכֶם
+# מִזֶּה וְלֹא יֵאָכֵל חָמֵץ
+# "[EN-AID] And Moses said to the people: Remember this day on which you
+# went out from Egypt, from the house of slaves — for by strength of hand
+# the LORD brought you out from this place; and no leavened bread shall be
+# eaten."
+m.step("Exod.13.3")
+# ‹זָכוֹר אֶת־הַיּוֹם הַזֶּה› (“mark obj-marker the-day the-this”) — Moses
+# speaks a demand — LET: mark-obj-marker-the-day-the-this
+m.declare("moshe", "LET",
+          "zakhor_et_ha_yom_ha_ze")
+
+# -------------------------- Exod.13.4 · IN_THE_MONTH_OF_AVIV ---------------
+# הַיּוֹם אַתֶּם יֹצְאִים בְּחֹדֶשׁ הָאָבִיב
+# "[EN-AID] Today you are going out, in the month of the Aviv."
+m.step("Exod.13.4")
+# ‹הַיּוֹם אַתֶּם יֹצְאִים בְּחֹדֶשׁ הָאָבִיב› (“the-day you bring-forth in-
+# new-moon the-green”) — fact holds: in-new-moon-the-green
+m.fact("be_chodesh_ha_aviv")
+
+# -------------------------- Exod.13.5 · THE_SERVICE_IN_THE_LAND ------------
+# וְהָיָה כִי־יְבִיאֲךָ יְהוָה אֶל־אֶרֶץ הַכְּנַעֲנִי וְהַחִתִּי וְהָאֱמֹרִי
+# וְהַחִוִּי וְהַיְבוּסִי אֲשֶׁר נִשְׁבַּע לַאֲבֹתֶיךָ לָתֶת לָךְ אֶרֶץ
+# זָבַת חָלָב וּדְבָשׁ וְעָבַדְתָּ אֶת־הָעֲבֹדָה הַזֹּאת בַּחֹדֶשׁ הַזֶּה
+# "[EN-AID] And it shall be, when the LORD brings you to the land of the
+# Canaanite and the Hittite and the Amorite and the Hivvite and the
+# Jebusite, which He swore to your fathers to give you, a land flowing with
+# milk and honey — you shall serve this service in this month."
+m.step("Exod.13.5")
+# ‹אֶת־הָעֲבֹדָה הַזֹּאת בַּחֹדֶשׁ הַזֶּה› (“obj-marker the-service/work
+# the-this in-new-moon the-this”) — fact holds: and-work/serve-obj-marker-
+# the-service/work
+m.fact("ve_avadta_et_ha_avoda")
+
+# -------------------------- Exod.13.6 · SEVEN_DAYS_AND_A_FEAST -------------
+# שִׁבְעַת יָמִים תֹּאכַל מַצֹּת וּבַיּוֹם הַשְּׁבִיעִי חַג לַיהוָה
+# "[EN-AID] Seven days you shall eat unleavened bread, and on the seventh
+# day is a feast to the LORD."
+m.step("Exod.13.6")
+# ‹שִׁבְעַת יָמִים תֹּאכַל מַצֹּת› (“seven day eat sweetness”) — fact holds:
+# seven-day-eat-sweetness
+m.fact("shivat_yamim_tokhal_matzot")
+
+# -------------------------- Exod.13.7 · NO_LEAVEN_SEEN ---------------------
+# מַצּוֹת יֵאָכֵל אֵת שִׁבְעַת הַיָּמִים וְלֹא־יֵרָאֶה לְךָ חָמֵץ
+# וְלֹא־יֵרָאֶה לְךָ שְׂאֹר בְּכָל־גְּבֻלֶךָ
+# "[EN-AID] Unleavened bread shall be eaten the seven days; and nothing
+# leavened shall be seen for you, and no leaven shall be seen for you in all
+# your border."
+m.step("Exod.13.7")
+# ‹וְלֹא־יֵרָאֶה לְךָ חָמֵץ וְלֹא־יֵרָאֶה› (“and-not see to-you/your ferment
+# and-not see”) — fact holds: not-see-to-you-ferment
+m.fact("lo_yerae_lekha_chametz")
+
+# -------------------------- Exod.13.8 · AND_YOU_SHALL_TELL_YOUR_SON --------
+# וְהִגַּדְתָּ לְבִנְךָ בַּיּוֹם הַהוּא לֵאמֹר בַּעֲבוּר זֶה עָשָׂה יְהוָה
+# לִי בְּצֵאתִי מִמִּצְרָיִם
+# "[EN-AID] And you shall tell your son in that day, saying: For the sake of
+# this the LORD acted for me in my going out from Egypt."
+m.step("Exod.13.8")
+# ‹וְהִגַּדְתָּ לְבִנְךָ בַּיּוֹם הַהוּא לֵאמֹר› (“and-tell to-son-you/your
+# in-day that to-say”) — fact holds: and-tell-to-vinkha
+m.fact("ve_higadta_le_vinkha")
+
+# -------------------------- Exod.13.9 · A_SIGN_ON_YOUR_HAND ----------------
+# וְהָיָה לְךָ לְאוֹת עַל־יָדְךָ וּלְזִכָּרוֹן בֵּין עֵינֶיךָ לְמַעַן
+# תִּהְיֶה תּוֹרַת יְהוָה בְּפִיךָ כִּי בְּיָד חֲזָקָה הוֹצִאֲךָ יְהֹוָה
+# מִמִּצְרָיִם
+# "[EN-AID] And it shall be for you for a sign on your hand and for a
+# memorial between your eyes, in order that the Torah of the LORD be in your
+# mouth — for with a strong hand the LORD brought you out from Egypt."
+m.step("Exod.13.9")
+# ‹וְהָיָה לְךָ לְאוֹת עַל־יָדְךָ וּלְזִכָּרוֹן בֵּין עֵינֶיךָ› (“and-be to-
+# you/your to-signs over hand-you/your and-to-memento between eye-you/your”)
+# — fact holds: to-signs-over-yadkha-and-to-memento
+m.fact("le_ot_al_yadkha_u_le_zikaron")
+
+# -------------------------- Exod.13.10 · AT_ITS_SEASON ---------------------
+# וְשָׁמַרְתָּ אֶת־הַחֻקָּה הַזֹּאת לְמוֹעֲדָהּ מִיָּמִים יָמִימָה
+# "[EN-AID] And you shall keep this statute at its season, from days to
+# days."
+m.step("Exod.13.10")
+# ‹הַזֹּאת לְמוֹעֲדָהּ מִיָּמִים יָמִימָה› (“the-this to-seasons-her/its
+# from-day day-ward”) — fact holds: to-moada-from-day-yamima
+m.fact("la_moada_mi_yamim_yamima")
+
+# -------------------------- Exod.13.11 · WHEN_HE_BRINGS_YOU_LEAN -----------
+# וְהָיָה כִּי־יְבִאֲךָ יְהוָה אֶל־אֶרֶץ הַכְּנַעֲנִי כַּאֲשֶׁר נִשְׁבַּע
+# לְךָ וְלַאֲבֹתֶיךָ וּנְתָנָהּ לָךְ
+# "[EN-AID] And it shall be, when the LORD brings you to the land of the
+# Canaanite, as He swore to you and to your fathers, and gives it to you:"
+m.step("Exod.13.11")
+# ‹וְהָיָה כִּי־יְבִאֲךָ יְהוָה› (“and-be that come/bring-you/your YHWH”) —
+# fact holds: that-yeviakha-lean
+m.fact("ki_yeviakha_lean")
+
+# -------------------------- Exod.13.12 · PASS_THE_WOMB_OPENERS -------------
+# וְהַעֲבַרְתָּ כָל־פֶּטֶר־רֶחֶם לַיהֹוָה וְכָל־פֶּטֶר שֶׁגֶר בְּהֵמָה
+# אֲשֶׁר יִהְיֶה לְךָ הַזְּכָרִים לַיהוָה
+# "[EN-AID] Then you shall pass every opener of the womb to the LORD; and
+# every firstling dropped of beast which you have, the males — to the LORD."
+m.step("Exod.13.12")
+# ‹וְהַעֲבַרְתָּ כָל־פֶּטֶר־רֶחֶם לַיהֹוָה› (“and-pass-over all fissure womb
+# to-YHWH”) — fact holds: and-pass-over-all-fissure-womb
+m.fact("ve_haavarta_khol_peter_rechem")
+
+# -------------------------- Exod.13.13 · THE_DONKEY_AND_THE_LAMB -----------
+# וְכָל־פֶּטֶר חֲמֹר תִּפְדֶּה בְשֶׂה וְאִם־לֹא תִפְדֶּה וַעֲרַפְתּוֹ וְכֹל
+# בְּכוֹר אָדָם בְּבָנֶיךָ תִּפְדֶּה
+# "[EN-AID] And every firstling of a donkey you shall redeem with a lamb,
+# and if you do not redeem — you shall break its neck; and every firstborn
+# of man among your sons you shall redeem."
+m.step("Exod.13.13")
+# ‹וְכָל־פֶּטֶר חֲמֹר תִּפְדֶּה בְשֶׂה› (“and-all fissure male-ass sever in-
+# member-of-a-flock”) — fact holds: fissure-male-ass-sever-and-member-of-a-
+# flock
+m.fact("peter_chamor_tifde_ve_se")
+
+# -------------------------- Exod.13.14 · WHEN_YOUR_SON_ASKS_TOMORROW -------
+# וְהָיָה כִּי־יִשְׁאָלְךָ בִנְךָ מָחָר לֵאמֹר מַה־זֹּאת וְאָמַרְתָּ אֵלָיו
+# בְּחֹזֶק יָד הוֹצִיאָנוּ יְהוָה מִמִּצְרַיִם מִבֵּית עֲבָדִים
+# "[EN-AID] And it shall be, when your son asks you tomorrow, saying: What
+# is this? — you shall say to him: By strength of hand the LORD brought us
+# out from Egypt, from the house of slaves."
+m.step("Exod.13.14")
+# ‹וְהָיָה כִּי־יִשְׁאָלְךָ בִנְךָ מָחָר לֵאמֹר› (“and-be that inquire-
+# you/your son-you/your deferred to-say”) — fact holds: that-yishalkha-
+# vinkha-deferred
+m.fact("ki_yishalkha_vinkha_machar")
+
+# -------------------------- Exod.13.15 · WHEN_PHARAOH_HARDENED -------------
+# וַיְהִי כִּי־הִקְשָׁה פַרְעֹה לְשַׁלְּחֵנוּ וַיַּהֲרֹג יְהֹוָה
+# כָּל־בְּכוֹר בְּאֶרֶץ מִצְרַיִם מִבְּכֹר אָדָם וְעַד־בְּכוֹר בְּהֵמָה
+# עַל־כֵּן אֲנִי זֹבֵחַ לַיהוָה כָּל־פֶּטֶר רֶחֶם הַזְּכָרִים וְכָל־בְּכוֹר
+# בָּנַי אֶפְדֶּה
+# "[EN-AID] And it was, when Pharaoh hardened against sending us, the LORD
+# slew every firstborn in the land of Egypt, from the firstborn of man to
+# the firstborn of beast; therefore I sacrifice to the LORD every opener of
+# the womb, the males, and every firstborn of my sons I redeem."
+m.step("Exod.13.15")
+# ‹וַיְהִי כִּי־הִקְשָׁה פַרְעֹה לְשַׁלְּחֵנוּ וַיַּהֲרֹג› (“and-be that be-
+# dense Pharaoh to-send-us/our and-smite-with-deadly-intent”) — fact holds:
+# and-be-that-be-dense-Pharaoh
+m.fact("va_yehi_ki_hiqsha_paro")
+
+# -------------------------- Exod.13.16 · THE_WEAK_HAND ---------------------
+# וְהָיָה לְאוֹת עַל־יָדְכָה וּלְטוֹטָפֹת בֵּין עֵינֶיךָ כִּי בְּחֹזֶק יָד
+# הוֹצִיאָנוּ יְהוָה מִמִּצְרָיִם
+# "[EN-AID] And it shall be for a sign on your hand and for frontlets
+# between your eyes — for by strength of hand the LORD brought us out from
+# Egypt."
+m.step("Exod.13.16")
+# ‹וְהָיָה לְאוֹת עַל־יָדְכָה וּלְטוֹטָפֹת› (“and-be to-signs over hand-
+# you/your and-to-fillet-for-the-forehead”) — fact holds: to-signs-over-
+# yadkha-he
+m.fact("le_ot_al_yadkha_he")
+
+# -------------------------- Exod.13.17 · NOT_BY_THE_NEAR_WAY ---------------
+# וַיְהִי בְּשַׁלַּח פַּרְעֹה אֶת־הָעָם וְלֹא־נָחָם אֱלֹהִים דֶּרֶךְ אֶרֶץ
+# פְּלִשְׁתִּים כִּי קָרוֹב הוּא כִּי אָמַר אֱלֹהִים פֶּן־יִנָּחֵם הָעָם
+# בִּרְאֹתָם מִלְחָמָה וְשָׁבוּ מִצְרָיְמָה
+# "[EN-AID] And it was, when Pharaoh sent the people, God did not lead them
+# the way of the land of the Philistines, for it was near — for God said:
+# Lest the people repent when they see war, and return to Egypt."
+m.step("Exod.13.17")
+# ‹וְלֹא־נָחָם אֱלֹהִים דֶּרֶךְ אֶרֶץ פְּלִשְׁתִּים› (“and-not guide-
+# them/their God way/road earth Pelishtite”) — fact holds: and-not-nacham-
+# way/road-Pelishtite
+m.fact("ve_lo_nacham_derekh_pelishtim")
+
+# -------------------------- Exod.13.18 · BY_THE_REED_SEA_ROAD --------------
+# וַיַּסֵּב אֱלֹהִים אֶת־הָעָם דֶּרֶךְ הַמִּדְבָּר יַם־סוּף וַחֲמֻשִׁים
+# עָלוּ בְנֵי־יִשְׂרָאֵל מֵאֶרֶץ מִצְרָיִם
+# "[EN-AID] And God turned the people the way of the wilderness of the Reed
+# Sea; and armed the sons of Israel went up from the land of Egypt."
+m.step("Exod.13.18")
+# ‹דֶּרֶךְ הַמִּדְבָּר יַם־סוּף› (“way/road the-pasture seas reed”) — fact
+# holds: way/road-the-pasture-seas-reed
+m.fact("derekh_ha_midbar_yam_suf")
+
+# -------------------------- Exod.13.19 · THE_BONES_OF_JOSEPH ---------------
+# וַיִּקַּח מֹשֶׁה אֶת־עַצְמוֹת יוֹסֵף עִמּוֹ כִּי הַשְׁבֵּעַ הִשְׁבִּיעַ
+# אֶת־בְּנֵי יִשְׂרָאֵל לֵאמֹר פָּקֹד יִפְקֹד אֱלֹהִים אֶתְכֶם וְהַעֲלִיתֶם
+# אֶת־עַצְמֹתַי מִזֶּה אִתְּכֶם
+# "[EN-AID] And Moses took the bones of Joseph with him; for he had surely
+# sworn the sons of Israel, saying: God will surely visit you, and you shall
+# bring up my bones from here with you."
+m.step("Exod.13.19")
+# ‹וַיִּקַּח מֹשֶׁה אֶת־עַצְמוֹת יוֹסֵף› (“and-take Moses obj-marker bone
+# Joseph”) — fact holds: and-take-Moses-obj-marker-bone-Joseph
+m.fact("va_yiqach_moshe_et_atzmot_yosef")
+
+# -------------------------- Exod.13.20 · ETHAM_AT_THE_WILDERNESS_EDGE ------
+# וַיִּסְעוּ מִסֻּכֹּת וַיַּחֲנוּ בְאֵתָם בִּקְצֵה הַמִּדְבָּר
+# "[EN-AID] And they journeyed from Succoth, and camped in Etham, at the
+# edge of the wilderness."
+m.step("Exod.13.20")
+# ‹וַיִּסְעוּ מִסֻּכֹּת וַיַּחֲנוּ› (“and-journey from-Succoth and-encamp”)
+# — fact holds: and-encamp-and-Etham
+m.fact("va_yachanu_ve_etam")
+
+# -------------------------- Exod.13.21 · PILLAR_OF_CLOUD_PILLAR_OF_FIRE ----
+# וַיהוָה הֹלֵךְ לִפְנֵיהֶם יוֹמָם בְּעַמּוּד עָנָן לַנְחֹתָם הַדֶּרֶךְ
+# וְלַיְלָה בְּעַמּוּד אֵשׁ לְהָאִיר לָהֶם לָלֶכֶת יוֹמָם וָלָיְלָה
+# "[EN-AID] And the LORD was going before them: by day in a pillar of cloud
+# to lead them the way, and by night in a pillar of fire to give them light
+# — to go by day and by night."
+m.step("Exod.13.21")
+# ‹וַיהוָה הֹלֵךְ לִפְנֵיהֶם יוֹמָם בְּעַמּוּד עָנָן› (“and-YHWH walk/go to-
+# face-them/their daily in-column cloud”) — fact holds: column-cloud-and-
+# column-fire
+m.fact("amud_anan_ve_amud_esh")
+
+# -------------------------- Exod.13.22 · IT_SHALL_NOT_DEPART ---------------
+# לֹא־יָמִישׁ עַמּוּד הֶעָנָן יוֹמָם וְעַמּוּד הָאֵשׁ לָיְלָה לִפְנֵי הָעָם
+# "[EN-AID] The pillar of cloud shall not depart by day, nor the pillar of
+# fire by night, before the people."
+m.step("Exod.13.22")
+# ‹לֹא־יָמִישׁ עַמּוּד הֶעָנָן› (“not withdraw column the-cloud”) — fact
+# holds: not-withdraw-column-he-cloud
+m.fact("lo_yamish_amud_he_anan")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == ['qadesh_li_khol_bekhor', 'zakhor_et_ha_yom_ha_ze']
+    assert len(m.SPECS["log"]) == 2
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted(['va_yedaber_el_moshe', 'be_chodesh_ha_aviv', 've_avadta_et_ha_avoda', 'shivat_yamim_tokhal_matzot', 'lo_yerae_lekha_chametz', 've_higadta_le_vinkha', 'le_ot_al_yadkha_u_le_zikaron', 'la_moada_mi_yamim_yamima', 'ki_yeviakha_lean', 've_haavarta_khol_peter_rechem', 'peter_chamor_tifde_ve_se', 'ki_yishalkha_vinkha_machar', 'va_yehi_ki_hiqsha_paro', 'le_ot_al_yadkha_he', 've_lo_nacham_derekh_pelishtim', 'derekh_ha_midbar_yam_suf', 'va_yiqach_moshe_et_atzmot_yosef', 'va_yachanu_ve_etam', 'amud_anan_ve_amud_esh', 'lo_yamish_amud_he_anan'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 2
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: exo_14_the_sea_splits
+###############################################################################
+
+m = Machine("exo_14_the_sea_splits")
+
+# -------------------------- Exod.14.1 · THE_FRAME --------------------------
+# וַיְדַבֵּר יְהֹוָה אֶל־מֹשֶׁה לֵּאמֹר
+# "[EN-AID] And the LORD spoke to Moses, saying:"
+m.step("Exod.14.1")
+# ‹וַיְדַבֵּר יְהֹוָה אֶל־מֹשֶׁה לֵּאמֹר› (“and-speak YHWH to Moses to-say”)
+# — fact holds: and-speak-14
+m.fact("va_yedaber_14")
+
+# -------------------------- Exod.14.2 · TURN_BACK_AND_CAMP -----------------
+# דַּבֵּר אֶל־בְּנֵי יִשְׂרָאֵל וְיָשֻׁבוּ וְיַחֲנוּ לִפְנֵי פִּי הַחִירֹת
+# בֵּין מִגְדֹּל וּבֵין הַיָּם לִפְנֵי בַּעַל צְפֹן נִכְחוֹ תַחֲנוּ
+# עַל־הַיָּם
+# "[EN-AID] Speak to the sons of Israel, that they turn back and camp before
+# Pi-hahiroth, between Migdol and the sea, before Baal-zephon; opposite it
+# shall you camp, by the sea."
+m.step("Exod.14.2")
+# ‹דַּבֵּר אֶל־בְּנֵי יִשְׂרָאֵל וְיָשֻׁבוּ וְיַחֲנוּ לִפְנֵי› (“speak to
+# son Israel and-return and-encamp to-face”) — the-LORD speaks a demand —
+# LET: and-return-and-encamp
+m.declare("YHWH", "LET",
+          "ve_yashuvu_ve_yachanu")
+
+# -------------------------- Exod.14.3 · THEY_ARE_ENTANGLED -----------------
+# וְאָמַר פַּרְעֹה לִבְנֵי יִשְׂרָאֵל נְבֻכִים הֵם בָּאָרֶץ סָגַר עֲלֵיהֶם
+# הַמִּדְבָּר
+# "[EN-AID] And Pharaoh will say of the sons of Israel: They are entangled
+# in the land — the wilderness has shut upon them."
+m.step("Exod.14.3")
+# ‹הֵם בָּאָרֶץ סָגַר עֲלֵיהֶם הַמִּדְבָּר› (“they in-earth shut-up over-
+# them/their the-pasture”) — fact holds: involve-they-in-the-earth
+m.fact("nevukhim_hem_ba_aretz")
+
+# -------------------------- Exod.14.4 · I_WILL_BE_HONORED ------------------
+# וְחִזַּקְתִּי אֶת־לֵב־פַּרְעֹה וְרָדַף אַחֲרֵיהֶם וְאִכָּבְדָה בְּפַרְעֹה
+# וּבְכָל־חֵילוֹ וְיָדְעוּ מִצְרַיִם כִּי־אֲנִי יְהוָה וַיַּעֲשׂוּ־כֵן
+# "[EN-AID] And I will strengthen Pharaoh's heart, and he will pursue them;
+# and I will be honored through Pharaoh and through all his host, and Egypt
+# shall know that I am the LORD. And they did so."
+m.step("Exod.14.4")
+# ‹וַיַּעֲשׂוּ־כֵן› (“and-make so”) — demand settled (popped from the
+# queue): and-return-and-encamp
+m.result("ve_yashuvu_ve_yachanu", tmark="t1")
+
+# -------------------------- Exod.14.5 · THE_HEART_TURNED -------------------
+# וַיֻּגַּד לְמֶלֶךְ מִצְרַיִם כִּי בָרַח הָעָם וַיֵּהָפֵךְ לְבַב פַּרְעֹה
+# וַעֲבָדָיו אֶל־הָעָם וַיֹּאמרוּ מַה־זֹּאת עָשִׂינוּ כִּי־שִׁלַּחְנוּ
+# אֶת־יִשְׂרָאֵל מֵעָבְדֵנוּ
+# "[EN-AID] And it was told the king of Egypt that the people had fled; and
+# the heart of Pharaoh and his servants was turned about toward the people,
+# and they said: What is this we have done, that we sent Israel from serving
+# us?"
+m.step("Exod.14.5")
+# ‹וַיֵּהָפֵךְ לְבַב פַּרְעֹה וַעֲבָדָיו אֶל־הָעָם› (“and-turn-about heart
+# Pharaoh and-servant-him/its to the-people”) — fact holds: and-turn-about-
+# heart-Pharaoh
+m.fact("va_yehafekh_levav_paro")
+
+# -------------------------- Exod.14.6 · HE_HARNESSED_HIS_CHARIOT -----------
+# וַיֶּאְסֹר אֶת־רִכְבּוֹ וְאֶת־עַמּוֹ לָקַח עִמּוֹ
+# "[EN-AID] And he harnessed his chariot, and took his people with him."
+m.step("Exod.14.6")
+# ‹וַיֶּאְסֹר אֶת־רִכְבּוֹ› (“and-yoke obj-marker vehicle-him/its”) — fact
+# holds: and-yoke-obj-marker-rikhbo
+m.fact("va_yesor_et_rikhbo")
+
+# -------------------------- Exod.14.7 · SIX_HUNDRED_CHOSEN -----------------
+# וַיִּקַּח שֵׁשׁ־מֵאוֹת רֶכֶב בָּחוּר וְכֹל רֶכֶב מִצְרָיִם וְשָׁלִשִׁם
+# עַל־כֻּלּוֹ
+# "[EN-AID] And he took six hundred chosen chariots, and all the chariots of
+# Egypt, and officers over all of it."
+m.step("Exod.14.7")
+# ‹וַיִּקַּח שֵׁשׁ־מֵאוֹת רֶכֶב בָּחוּר› (“and-take six hundred vehicle
+# try”) — fact holds: six-hundred-vehicle-try
+m.fact("shesh_meot_rekhev_bachur")
+
+# -------------------------- Exod.14.8 · WITH_A_HIGH_HAND -------------------
+# וַיְחַזֵּק יְהֹוָה אֶת־לֵב פַּרְעֹה מֶלֶךְ מִצְרַיִם וַיִּרְדֹּף אַחֲרֵי
+# בְּנֵי יִשְׂרָאֵל וּבְנֵי יִשְׂרָאֵל יֹצְאִים בְּיָד רָמָה
+# "[EN-AID] And the LORD strengthened the heart of Pharaoh king of Egypt,
+# and he pursued the sons of Israel; and the sons of Israel were going out
+# with a high hand."
+m.step("Exod.14.8")
+# ‹וּבְנֵי יִשְׂרָאֵל יֹצְאִים בְּיָד רָמָה› (“and-son Israel bring-forth
+# in-hand rise-high”) — fact holds: bring-forth-in-hand-rise-high
+m.fact("yotzim_be_yad_rama")
+
+# -------------------------- Exod.14.9 · OVERTAKEN_AT_THE_CAMP --------------
+# וַיִּרְדְּפוּ מִצְרַיִם אַחֲרֵיהֶם וַיַּשִּׂיגוּ אוֹתָם חֹנִים עַל־הַיָּם
+# כָּל־סוּס רֶכֶב פַּרְעֹה וּפָרָשָׁיו וְחֵילוֹ עַל־פִּי הַחִירֹת לִפְנֵי
+# בַּעַל צְפֹן
+# "[EN-AID] And Egypt pursued after them — every chariot-horse of Pharaoh,
+# and his horsemen, and his host — and overtook them camping by the sea, by
+# Pi-hahiroth, before Baal-zephon."
+m.step("Exod.14.9")
+# ‹סוּס רֶכֶב פַּרְעֹה וּפָרָשָׁיו וְחֵילוֹ› (“horse vehicle Pharaoh and-
+# steed-him/its and-force-him/its”) — fact holds: and-reach-otam-encamp
+m.fact("va_yasigu_otam_chonim")
+
+# -------------------------- Exod.14.10 · PHARAOH_DREW_NEAR -----------------
+# וּפַרְעֹה הִקְרִיב וַיִּשְׂאוּ בְנֵי־יִשְׂרָאֵל אֶת־עֵינֵיהֶם וְהִנֵּה
+# מִצְרַיִם נֹסֵעַ אַחֲרֵיהֶם וַיִּירְאוּ מְאֹד וַיִּצְעֲקוּ
+# בְנֵי־יִשְׂרָאֵל אֶל־יְהוָה
+# "[EN-AID] And Pharaoh drew near; and the sons of Israel lifted their eyes,
+# and behold — Egypt journeying after them; and they feared greatly, and the
+# sons of Israel cried out to the LORD."
+m.step("Exod.14.10")
+# ‹וַיִּצְעֲקוּ בְנֵי־יִשְׂרָאֵל אֶל־יְהוָה› (“and-shriek son Israel to
+# YHWH”) — fact holds: and-shriek-to-the-LORD
+m.fact("va_yitzaqu_el_YHWH")
+
+# -------------------------- Exod.14.11 · NO_GRAVES_IN_EGYPT ----------------
+# וַיֹּאמְרוּ אֶל־מֹשֶׁה הַמִבְּלִי אֵין־קְבָרִים בְּמִצְרַיִם לְקַחְתָּנוּ
+# לָמוּת בַּמִּדְבָּר מַה־זֹּאת עָשִׂיתָ לָּנוּ לְהוֹצִיאָנוּ מִמִּצְרָיִם
+# "[EN-AID] And they said to Moses: Is it from a lack of graves in Egypt
+# that you took us to die in the wilderness? What is this you have done to
+# us, to bring us out of Egypt?"
+m.step("Exod.14.11")
+# ‹מֹשֶׁה הַמִבְּלִי אֵין־קְבָרִים בְּמִצְרַיִם לְקַחְתָּנוּ› (“Moses the-
+# from-failure there-is-not sepulchre in-Egypt take-us/our”) — fact holds:
+# the-mibli-there-is-not-sepulchre
+m.fact("ha_mibli_en_qevarim")
+
+# -------------------------- Exod.14.12 · LEAVE_US_TO_SERVE_EGYPT -----------
+# הֲלֹא־זֶה הַדָּבָר אֲשֶׁר דִּבַּרְנוּ אֵלֶיךָ בְמִצְרַיִם לֵאמֹר חֲדַל
+# מִמֶּנּוּ וְנַעַבְדָה אֶת־מִצְרָיִם כִּי טוֹב לָנוּ עֲבֹד אֶת־מִצְרַיִם
+# מִמֻּתֵנוּ בַּמִּדְבָּר
+# "[EN-AID] Is not this the word which we spoke to you in Egypt, saying:
+# Leave us, and we will serve Egypt? For serving Egypt is better for us than
+# our dying in the wilderness."
+m.step("Exod.14.12")
+# ‹חֲדַל מִמֶּנּוּ וְנַעַבְדָה אֶת־מִצְרָיִם› (“cease from-us/our and-
+# work/serve obj-marker Egyptian”) — fact holds: cease-from-it-and-
+# work/serve
+m.fact("chadal_mimenu_ve_naavda")
+
+# -------------------------- Exod.14.13 · STAND_STILL_AND_SEE ---------------
+# וַיֹּאמֶר מֹשֶׁה אֶל־הָעָם אַל־תִּירָאוּ הִתְיַצְבוּ וּרְאוּ אֶת־יְשׁוּעַת
+# יְהוָה אֲשֶׁר־יַעֲשֶׂה לָכֶם הַיּוֹם כִּי אֲשֶׁר רְאִיתֶם אֶת־מִצְרַיִם
+# הַיּוֹם לֹא תֹסִיפוּ לִרְאֹתָם עוֹד עַד־עוֹלָם
+# "[EN-AID] And Moses said to the people: Fear not — stand firm, and see the
+# salvation of the LORD, which He will do for you today; for as you have
+# seen Egypt today — you shall never see them again, forever."
+m.step("Exod.14.13")
+# ‹הִתְיַצְבוּ וּרְאוּ אֶת־יְשׁוּעַת יְהוָה› (“place and-see obj-marker
+# something-saved YHWH”) — fact holds: see-obj-marker-something-saved-the-
+# LORD
+m.fact("reu_et_yeshuat_YHWH")
+
+# -------------------------- Exod.14.14 · THE_LORD_WILL_FIGHT ---------------
+# יְהוָה יִלָּחֵם לָכֶם וְאַתֶּם תַּחֲרִישׁוּן
+# "[EN-AID] The LORD will fight for you — and you shall be silent."
+m.step("Exod.14.14")
+# ‹יְהוָה יִלָּחֵם לָכֶם וְאַתֶּם תַּחֲרִישׁוּן› (“YHWH feed-on to-
+# you/your(pl) and-you scratch-ward”) — fact holds: the-LORD-feed-on-lakhem
+m.fact("YHWH_yilachem_lakhem")
+
+# -------------------------- Exod.14.15 · WHY_DO_YOU_CRY_TO_ME --------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה מַה־תִּצְעַק אֵלָי דַּבֵּר
+# אֶל־בְּנֵי־יִשְׂרָאֵל וְיִסָּעוּ
+# "[EN-AID] And the LORD said to Moses: Why do you cry to Me? Speak to the
+# sons of Israel, that they journey."
+m.step("Exod.14.15")
+# ‹דַּבֵּר אֶל־בְּנֵי־יִשְׂרָאֵל וְיִסָּעוּ› (“speak to son Israel and-
+# journey”) — fact holds: speak-and-journey
+m.fact("daber_ve_yisau")
+
+# -------------------------- Exod.14.16 · LIFT_YOUR_STAFF_AND_SPLIT ---------
+# וְאַתָּה הָרֵם אֶת־מַטְּךָ וּנְטֵה אֶת־יָדְךָ עַל־הַיָּם וּבְקָעֵהוּ
+# וְיָבֹאוּ בְנֵי־יִשְׂרָאֵל בְּתוֹךְ הַיָּם בַּיַּבָּשָׁה
+# "[EN-AID] And you — lift your staff, and stretch out your hand over the
+# sea, and split it; and the sons of Israel shall come into the midst of the
+# sea on the dry ground."
+m.step("Exod.14.16")
+# ‹וְאַתָּה הָרֵם אֶת־מַטְּךָ וּנְטֵה אֶת־יָדְךָ עַל־› (“and-you rise-high
+# obj-marker staff/tribe-you/your and-stretch obj-marker hand-you/your
+# over”) — the-LORD speaks a demand — LET: neteh-yadkha-and-veqaehu
+m.declare("YHWH", "LET",
+          "neteh_yadkha_u_veqaehu")
+
+# -------------------------- Exod.14.17 · I_STRENGTHEN_EGYPT ----------------
+# וַאֲנִי הִנְנִי מְחַזֵּק אֶת־לֵב מִצְרַיִם וְיָבֹאוּ אַחֲרֵיהֶם
+# וְאִכָּבְדָה בְּפַרְעֹה וּבְכָל־חֵילוֹ בְּרִכְבּוֹ וּבְפָרָשָׁיו
+# "[EN-AID] And I — behold, I strengthen the heart of Egypt, and they will
+# come after them; and I will be honored through Pharaoh and through all his
+# host, through his chariots and through his horsemen."
+m.step("Exod.14.17")
+# ‹וַאֲנִי הִנְנִי מְחַזֵּק אֶת־לֵב מִצְרַיִם› (“and-I lo!-me/my fasten-upon
+# obj-marker heart Egyptian”) — fact holds: and-I-behold-I-fasten-upon
+m.fact("va_ani_hineni_mechazeq")
+
+# -------------------------- Exod.14.18 · EGYPT_SHALL_KNOW ------------------
+# וְיָדְעוּ מִצְרַיִם כִּי־אֲנִי יְהוָה בְּהִכָּבְדִי בְּפַרְעֹה בְּרִכְבּוֹ
+# וּבְפָרָשָׁיו
+# "[EN-AID] And Egypt shall know that I am the LORD, when I am honored
+# through Pharaoh, through his chariots and through his horsemen."
+m.step("Exod.14.18")
+# ‹וְיָדְעוּ מִצְרַיִם כִּי־אֲנִי יְהוָה› (“and-know Egyptian that YHWH”) —
+# fact holds: and-know-Egyptian-2
+m.fact("ve_yadu_mitzrayim_2")
+
+# -------------------------- Exod.14.19 · THE_ANGEL_MOVES_BEHIND ------------
+# וַיִּסַּע מַלְאַךְ הָאֱלֹהִים הַהֹלֵךְ לִפְנֵי מַחֲנֵה יִשְׂרָאֵל
+# וַיֵּלֶךְ מֵאַחֲרֵיהֶם וַיִּסַּע עַמּוּד הֶעָנָן מִפְּנֵיהֶם וַיַּעֲמֹד
+# מֵאַחֲרֵיהֶם
+# "[EN-AID] And the angel of God, going before the camp of Israel, moved and
+# went behind them; and the pillar of cloud moved from before them, and
+# stood behind them."
+m.step("Exod.14.19")
+# ‹וַיִּסַּע מַלְאַךְ הָאֱלֹהִים הַהֹלֵךְ לִפְנֵי מַחֲנֵה יִשְׂרָאֵל› (“and-
+# journey messenger the-God the-walk/go to-face camp Israel”) — fact holds:
+# and-stand-from-acharehem
+m.fact("va_yaamod_me_acharehem")
+
+# -------------------------- Exod.14.20 · THE_NIGHT_OF_TWO_CAMPS ------------
+# וַיָּבֹא בֵּין מַחֲנֵה מִצְרַיִם וּבֵין מַחֲנֵה יִשְׂרָאֵל וַיְהִי הֶעָנָן
+# וְהַחֹשֶׁךְ וַיָּאֶר אֶת־הַלָּיְלָה וְלֹא־קָרַב זֶה אֶל־זֶה
+# כָּל־הַלָּיְלָה
+# "[EN-AID] And it came between the camp of Egypt and the camp of Israel;
+# and there was the cloud and the darkness, and it lit the night; and the
+# one came not near the other all the night."
+m.step("Exod.14.20")
+# ‹וְלֹא־קָרַב זֶה אֶל־זֶה› (“and-not bring-near this to this”) — fact
+# holds: and-is-it-not-bring-near-this-to-this
+m.fact("ve_lo_qarav_ze_el_ze")
+
+# -------------------------- Exod.14.21 · THE_SEA_SPLITS --------------------
+# וַיֵּט מֹשֶׁה אֶת־יָדוֹ עַל־הַיָּם וַיּוֹלֶךְ יְהוָה אֶת־הַיָּם בְּרוּחַ
+# קָדִים עַזָּה כָּל־הַלַּיְלָה וַיָּשֶׂם אֶת־הַיָּם לֶחָרָבָה וַיִּבָּקְעוּ
+# הַמָּיִם
+# "[EN-AID] And Moses stretched out his hand over the sea; and the LORD led
+# the sea with a strong east wind all the night, and made the sea into dry
+# land — and the waters were split."
+m.step("Exod.14.21")
+# ‹וַיֵּט מֹשֶׁה אֶת־יָדוֹ עַל־הַיָּם› (“and-stretch Moses obj-marker hand-
+# him/its over the-seas”) — demand settled (popped from the queue): neteh-
+# yadkha-and-veqaehu
+m.result("neteh_yadkha_u_veqaehu", tmark="t1")
+# ‹וַיּוֹלֶךְ יְהוָה אֶת־הַיָּם בְּרוּחַ קָדִים עַזָּה› (“and-go YHWH obj-
+# marker the-seas in-spirit east-wind strong”) — event: qriat-seas-suf —
+# agent the-LORD
+m.event("qriat_yam_suf", agent="YHWH")
+
+# -------------------------- Exod.14.22 · WALL_ON_RIGHT_AND_LEFT ------------
+# וַיָּבֹאוּ בְנֵי־יִשְׂרָאֵל בְּתוֹךְ הַיָּם בַּיַּבָּשָׁה וְהַמַּיִם לָהֶם
+# חֹמָה מִימִינָם וּמִשְּׂמֹאלָם
+# "[EN-AID] And the sons of Israel came into the midst of the sea on the dry
+# ground; and the waters were for them a wall on their right and on their
+# left."
+m.step("Exod.14.22")
+# ‹לָהֶם חֹמָה מִימִינָם וּמִשְּׂמֹאלָם› (“to-them/their wall-of-protection
+# from-right-hand-them/their and-from-dark-them/their”) — fact holds: and-
+# the-waters-to-them-wall-of-protection
+m.fact("ve_ha_mayim_lahem_choma")
+
+# -------------------------- Exod.14.23 · EGYPT_COMES_IN_AFTER --------------
+# וַיִּרְדְּפוּ מִצְרַיִם וַיָּבֹאוּ אַחֲרֵיהֶם כֹּל סוּס פַּרְעֹה רִכְבּוֹ
+# וּפָרָשָׁיו אֶל־תּוֹךְ הַיָּם
+# "[EN-AID] And Egypt pursued, and came in after them — every horse of
+# Pharaoh, his chariots and his horsemen — into the midst of the sea."
+m.step("Exod.14.23")
+# ‹וַיִּרְדְּפוּ מִצְרַיִם וַיָּבֹאוּ אַחֲרֵיהֶם כֹּל› (“and-run-after-gone-
+# by) Egyptian and-come/bring after-them/their all”) — fact holds: and-
+# come/bring-acharehem-to-midst-the-seas
+m.fact("va_yavou_acharehem_el_tokh_ha_yam")
+
+# -------------------------- Exod.14.24 · THE_MORNING_WATCH -----------------
+# וַיְהִי בְּאַשְׁמֹרֶת הַבֹּקֶר וַיַּשְׁקֵף יְהוָה אֶל־מַחֲנֵה מִצְרַיִם
+# בְּעַמּוּד אֵשׁ וְעָנָן וַיָּהָם אֵת מַחֲנֵה מִצְרָיִם
+# "[EN-AID] And it was in the morning watch: the LORD looked down upon the
+# camp of Egypt in a pillar of fire and cloud, and routed the camp of
+# Egypt."
+m.step("Exod.14.24")
+# ‹אֶל־מַחֲנֵה מִצְרַיִם בְּעַמּוּד אֵשׁ וְעָנָן וַיָּהָם› (“to camp
+# Egyptian in-column fire and-cloud and-put-in-commotion”) — fact holds:
+# and-yahom-obj-marker-camp-Egyptian
+m.fact("va_yahom_et_machane_mitzrayim")
+
+# -------------------------- Exod.14.25 · LET_ME_FLEE -----------------------
+# וַיָּסַר אֵת אֹפַן מַרְכְּבֹתָיו וַיְנַהֲגֵהוּ בִּכְבֵדֻת וַיֹּאמֶר
+# מִצְרַיִם אָנוּסָה מִפְּנֵי יִשְׂרָאֵל כִּי יְהוָה נִלְחָם לָהֶם
+# בְּמִצְרָיִם
+# "[EN-AID] And He removed the wheel of his chariots, and drove them with
+# heaviness; and Egypt said: Let me flee from before Israel — for the LORD
+# fights for them against Egypt."
+m.step("Exod.14.25")
+# ‹וַיְנַהֲגֵהוּ בִּכְבֵדֻת וַיֹּאמֶר מִצְרַיִם› (“and-drive-forth-him/its
+# in-difficulty and-say Egypt”) — fact holds: flit-mipne-Israel
+m.fact("anusa_mipne_yisrael")
+
+# -------------------------- Exod.14.26 · STRETCH_BACK_YOUR_HAND ------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה נְטֵה אֶת־יָדְךָ עַל־הַיָּם וְיָשֻׁבוּ
+# הַמַּיִם עַל־מִצְרַיִם עַל־רִכְבּוֹ וְעַל־פָּרָשָׁיו
+# "[EN-AID] And the LORD said to Moses: Stretch out your hand over the sea,
+# and the waters shall return upon Egypt, upon his chariots and upon his
+# horsemen."
+m.step("Exod.14.26")
+# ‹נְטֵה אֶת־יָדְךָ עַל־הַיָּם› (“stretch obj-marker hand-you/your over the-
+# seas”) — the-LORD speaks a demand — LET: neteh-and-return-the-waters
+m.declare("YHWH", "LET",
+          "neteh_ve_yashuvu_ha_mayim")
+
+# -------------------------- Exod.14.27 · BACK_TO_ITS_CONDITIONS ------------
+# וַיֵּט מֹשֶׁה אֶת־יָדוֹ עַל־הַיָּם וַיָּשָׁב הַיָּם לִפְנוֹת בֹּקֶר
+# לְאֵיתָנוֹ וּמִצְרַיִם נָסִים לִקְרָאתוֹ וַיְנַעֵר יְהוָה אֶת־מִצְרַיִם
+# בְּתוֹךְ הַיָּם
+# "[EN-AID] And Moses stretched out his hand over the sea, and the sea
+# returned, at the turn of morning, to its strength — and Egypt fleeing to
+# meet it; and the LORD shook Egypt into the midst of the sea."
+m.step("Exod.14.27")
+# ‹עַל־הַיָּם וַיָּשָׁב הַיָּם לִפְנוֹת בֹּקֶר› (“over the-seas and-return
+# the-seas to-turn morning”) — demand settled (popped from the queue):
+# neteh-and-return-the-waters
+m.result("neteh_ve_yashuvu_ha_mayim", tmark="t1")
+
+# -------------------------- Exod.14.28 · NOT_ONE_OF_THEM_REMAINED ----------
+# וַיָּשֻׁבוּ הַמַּיִם וַיְכַסּוּ אֶת־הָרֶכֶב וְאֶת־הַפָּרָשִׁים לְכֹל חֵיל
+# פַּרְעֹה הַבָּאִים אַחֲרֵיהֶם בַּיָּם לֹא־נִשְׁאַר בָּהֶם עַד־אֶחָד
+# "[EN-AID] And the waters returned, and covered the chariots and the
+# horsemen, of all the host of Pharaoh coming after them into the sea; there
+# remained not among them so much as one."
+m.step("Exod.14.28")
+# ‹לֹא־נִשְׁאַר בָּהֶם עַד־אֶחָד› (“not swell-up in-them/their until one”) —
+# fact holds: is-it-not-swell-up-bahem-until-one
+m.fact("lo_nishar_bahem_ad_echad")
+
+# -------------------------- Exod.14.29 · THE_WALKED_ON_DRY -----------------
+# וּבְנֵי יִשְׂרָאֵל הָלְכוּ בַיַּבָּשָׁה בְּתוֹךְ הַיָּם וְהַמַּיִם לָהֶם
+# חֹמָה מִימִינָם וּמִשְּׂמֹאלָם
+# "[EN-AID] And the sons of Israel walked on the dry ground in the midst of
+# the sea, and the waters were for them a wall on their right and on their
+# left."
+m.step("Exod.14.29")
+# ‹הַיָּם וְהַמַּיִם לָהֶם חֹמָה מִימִינָם וּמִשְּׂמֹאלָם› (“the-seas and-
+# the-waters to-them/their wall-of-protection from-right-hand-them/their
+# and-from-dark-them/their”) — fact holds: walk/go-and-dry-land
+m.fact("halkhu_va_yabasha")
+
+# -------------------------- Exod.14.30 · THE_SALVATION ---------------------
+# וַיּוֹשַׁע יְהוָה בַּיּוֹם הַהוּא אֶת־יִשְׂרָאֵל מִיַּד מִצְרָיִם וַיַּרְא
+# יִשְׂרָאֵל אֶת־מִצְרַיִם מֵת עַל־שְׂפַת הַיָּם
+# "[EN-AID] And the LORD saved Israel in that day from the hand of Egypt;
+# and Israel saw Egypt dead on the shore of the sea."
+m.step("Exod.14.30")
+# ‹וַיּוֹשַׁע יְהוָה בַּיּוֹם הַהוּא אֶת־יִשְׂרָאֵל› (“and-be-open YHWH in-
+# day that obj-marker Israel”) — event: something-saved-the-LORD — agent
+# the-LORD
+m.event("yeshuat_YHWH", agent="YHWH")
+
+# -------------------------- Exod.14.31 · AND_THEY_BELIEVED -----------------
+# וַיַּרְא יִשְׂרָאֵל אֶת־הַיָּד הַגְּדֹלָה אֲשֶׁר עָשָׂה יְהוָה
+# בְּמִצְרַיִם וַיִּירְאוּ הָעָם אֶת־יְהוָה וַיַּאֲמִינוּ בַּיהוָה
+# וּבְמֹשֶׁה עַבְדּוֹ
+# "[EN-AID] And Israel saw the great hand which the LORD had done against
+# Egypt, and the people feared the LORD; and they believed in the LORD and
+# in Moses His servant."
+m.step("Exod.14.31")
+# ‹יְהוָה וַיַּאֲמִינוּ בַּיהוָה› (“YHWH and-build-up in-YHWH”) — fact
+# holds: and-build-up-in-the-the-LORD-and-and-Moses
+m.fact("va_yaaminu_ba_YHWH_u_ve_moshe")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {}
+    assert m.REGISTRY["writes"] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS["log"]) == 3
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD["facts"]) == sorted(['va_yedaber_14', 'nevukhim_hem_ba_aretz', 'va_yehafekh_levav_paro', 'va_yesor_et_rikhbo', 'shesh_meot_rekhev_bachur', 'yotzim_be_yad_rama', 'va_yasigu_otam_chonim', 'va_yitzaqu_el_YHWH', 'ha_mibli_en_qevarim', 'chadal_mimenu_ve_naavda', 'reu_et_yeshuat_YHWH', 'YHWH_yilachem_lakhem', 'daber_ve_yisau', 'va_ani_hineni_mechazeq', 've_yadu_mitzrayim_2', 'va_yaamod_me_acharehem', 've_lo_qarav_ze_el_ze', 've_ha_mayim_lahem_choma', 'va_yavou_acharehem_el_tokh_ha_yam', 'va_yahom_et_machane_mitzrayim', 'anusa_mipne_yisrael', 'lo_nishar_bahem_ad_echad', 'halkhu_va_yabasha', 'va_yaaminu_ba_YHWH_u_ve_moshe'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 8
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: exo_15_the_song_and_marah
+###############################################################################
+
+m = Machine("exo_15_the_song_and_marah")
+
+# -------------------------- Exod.15.1 · THEN_SANG_MOSES --------------------
+# אָז יָשִׁיר־מֹשֶׁה וּבְנֵי יִשְׂרָאֵל אֶת־הַשִּׁירָה הַזֹּאת לַיהוָה
+# וַיֹּאמְרוּ לֵאמֹר אָשִׁירָה לַיהוָה כִּי־גָאֹה גָּאָה סוּס וְרֹכְבוֹ
+# רָמָה בַיָּם
+# "[EN-AID] Then sang Moses and the sons of Israel this song to the LORD,
+# and they spoke, saying: I will sing to the LORD, for He is highly exalted;
+# the horse and its rider He has thrown into the sea."
+m.step("Exod.15.1")
+# ‹אָז יָשִׁיר־מֹשֶׁה וּבְנֵי יִשְׂרָאֵל אֶת־הַשִּׁירָה הַזֹּאת לַיהוָה
+# וַיֹּאמְרוּ לֵאמֹר› (“at-that-time sing Moses and-son Israel obj-marker
+# the-song the-this to-YHWH and-say to-say”) — event: shirat-the-seas —
+# agent Moses; theme bene-yisrael
+m.event("shirat_ha_yam", agent="moshe", themes=["bene-yisrael"])
+# ‹אָשִׁירָה לַיהוָה כִּי־גָאֹה גָּאָה סוּס וְרֹכְבוֹ רָמָה בַיָּם› (“sing
+# to-YHWH that mount-up mount-up horse and-ride-him/its hurl in-seas”) —
+# fact holds: that-mount-up-mount-up-horse-and-rokhvo
+m.fact("ki_gao_gaa_sus_ve_rokhvo")
+
+# -------------------------- Exod.15.2 · MY_STRENGTH_AND_SONG ---------------
+# עָזִּי וְזִמְרָת יָהּ וַיְהִי־לִי לִישׁוּעָה זֶה אֵלִי וְאַנְוֵהוּ אֱלֹהֵי
+# אָבִי וַאֲרֹמְמֶנְהוּ
+# "[EN-AID] My strength and song is the LORD, and He has become my
+# salvation; this is my God, and I will glorify Him — my father's God, and I
+# will exalt Him."
+m.step("Exod.15.2")
+# ‹עָזִּי וְזִמְרָת יָהּ וַיְהִי־לִי לִישׁוּעָה› (“strength-in-various-
+# applicat-me/my and-instrumental-music Jah and-be to-me/my to-something-
+# saved”) — fact holds: uzi-and-instrumental-music-yah
+m.fact("uzi_ve_zimrat_yah")
+# ‹זֶה אֵלִי וְאַנְוֵהוּ אֱלֹהֵי אָבִי וַאֲרֹמְמֶנְהוּ› (“this strength-
+# me/my and-rest-him/its God father-me/my and-rise-high-him/its”) — fact
+# holds: this-eli-and-anvehu
+m.fact("ze_eli_ve_anvehu")
+
+# -------------------------- Exod.15.3 · A_MAN_OF_WAR -----------------------
+# יְהוָה אִישׁ מִלְחָמָה יְהוָה שְׁמוֹ
+# "[EN-AID] The LORD is a man of war; the LORD is His name."
+m.step("Exod.15.3")
+# ‹יְהוָה אִישׁ מִלְחָמָה יְהוָה שְׁמוֹ› (“YHWH man battle YHWH name-
+# him/its”) — fact holds: the-LORD-man-battle
+m.fact("YHWH_ish_milchama")
+
+# -------------------------- Exod.15.4 · CAST_INTO_THE_SEA ------------------
+# מַרְכְּבֹת פַּרְעֹה וְחֵילוֹ יָרָה בַיָּם וּמִבְחַר שָׁלִשָׁיו טֻבְּעוּ
+# בְיַם־סוּף
+# "[EN-AID] Pharaoh's chariots and his host He has cast into the sea; and
+# the choice of his officers are sunk in the Reed Sea."
+m.step("Exod.15.4")
+# ‹וּמִבְחַר שָׁלִשָׁיו טֻבְּעוּ בְיַם־סוּף› (“and-select triple-him/its
+# sink in-seas reed”) — fact holds: and-select-shalishav-sink
+m.fact("u_mivchar_shalishav_tubu")
+
+# -------------------------- Exod.15.5 · THE_DEEPS_COVER_THEM ---------------
+# תְּהֹמֹת יְכַסְיֻמוּ יָרְדוּ בִמְצוֹלֹת כְּמוֹ־אָבֶן
+# "[EN-AID] The deeps cover them — they went down into the depths like a
+# stone."
+m.step("Exod.15.5")
+# ‹תְּהֹמֹת יְכַסְיֻמוּ› (“deep plump-them/their”) — fact holds: deep-
+# yekhasyumu
+m.fact("tehomot_yekhasyumu")
+
+# -------------------------- Exod.15.6 · YOUR_RIGHT_HAND_DOUBLED ------------
+# יְמִינְךָ יְהוָה נֶאְדָּרִי בַּכֹּחַ יְמִינְךָ יְהוָה תִּרְעַץ אוֹיֵב
+# "[EN-AID] Your right hand, O LORD, majestic in power — Your right hand, O
+# LORD, shatters the enemy."
+m.step("Exod.15.6")
+# ‹יְמִינְךָ יְהוָה נֶאְדָּרִי בַּכֹּחַ› (“right-hand-you/your YHWH expand
+# in-vigor”) — fact holds: yeminkha-the-LORD-expand-come/bring-koach
+m.fact("yeminkha_YHWH_nedari_va_koach")
+
+# -------------------------- Exod.15.7 · LIKE_STUBBLE -----------------------
+# וּבְרֹב גְּאוֹנְךָ תַּהֲרֹס קָמֶיךָ תְּשַׁלַּח חֲרֹנְךָ יֹאכְלֵמוֹ
+# כַּקַּשׁ
+# "[EN-AID] And in the greatness of Your exaltation You overthrow those who
+# rise against You; You send forth Your burning — it consumes them like
+# stubble."
+m.step("Exod.15.7")
+# ‹תְּשַׁלַּח חֲרֹנְךָ יֹאכְלֵמוֹ כַּקַּשׁ› (“send burning-of-anger-you/your
+# eat-them/their like-straw”) — fact holds: send-charonkha
+m.fact("teshalach_charonkha")
+
+# -------------------------- Exod.15.8 · THE_WIND_OF_YOUR_NOSTRILS ----------
+# וּבְרוּחַ אַפֶּיךָ נֶעֶרְמוּ מַיִם נִצְּבוּ כְמוֹ־נֵד נֹזְלִים קָפְאוּ
+# תְהֹמֹת בְּלֶב־יָם
+# "[EN-AID] And by the wind of Your nostrils the waters were heaped up — the
+# streams stood like a mound; the deeps congealed in the heart of the sea."
+m.step("Exod.15.8")
+# ‹וּבְרוּחַ אַפֶּיךָ נֶעֶרְמוּ מַיִם נִצְּבוּ כְמוֹ־נֵד נֹזְלִים› (“and-in-
+# spirit nose-you/your pile-up waters stand form-of-the-prefix-'k-' mound
+# drip”) — fact holds: and-and-spirit-wind-your-nostrils-pile-up-waters
+m.fact("u_ve_ruach_apekha_neermu_mayim")
+
+# -------------------------- Exod.15.9 · THE_ENEMY_SAID ---------------------
+# אָמַר אוֹיֵב אֶרְדֹּף אַשִּׂיג אֲחַלֵּק שָׁלָל תִּמְלָאֵמוֹ נַפְשִׁי
+# אָרִיק חַרְבִּי תּוֹרִישֵׁמוֹ יָדִי
+# "[EN-AID] The enemy said: I will pursue, I will overtake, I will divide
+# spoil; my desire shall be filled of them — I will draw my sword, my hand
+# shall dispossess them."
+m.step("Exod.15.9")
+# ‹אָמַר אוֹיֵב אֶרְדֹּף אַשִּׂיג אֲחַלֵּק שָׁלָל› (“say hating run-after-
+# gone-by) reach be-smooth booty”) — fact holds: say-hating-run-after-gone-
+# by)-reach
+m.fact("amar_oyev_erdof_asig")
+
+# -------------------------- Exod.15.10 · SANK_LIKE_LEAD --------------------
+# נָשַׁפְתָּ בְרוּחֲךָ כִּסָּמוֹ יָם צָלֲלוּ כַּעוֹפֶרֶת בְּמַיִם אַדִּירִים
+# "[EN-AID] You blew with Your wind — the sea covered them; they sank like
+# lead in the mighty waters."
+m.step("Exod.15.10")
+# ‹צָלֲלוּ כַּעוֹפֶרֶת בְּמַיִם אַדִּירִים› (“tumble-down like-lead in-
+# waters wide”) — fact holds: tumble-down-like-oferet
+m.fact("tzalalu_ka_oferet")
+
+# -------------------------- Exod.15.11 · WHO_IS_LIKE_YOU -------------------
+# מִי־כָמֹכָה בָּאֵלִם יְהוָה מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא
+# תְהִלֹּת עֹשֵׂה פֶלֶא
+# "[EN-AID] Who is like You among the mighty, O LORD? Who is like You,
+# majestic in holiness — feared in praises, doing wonder?"
+m.step("Exod.15.11")
+# ‹מִי־כָמֹכָה בָּאֵלִם יְהוָה מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ› (“who?
+# form-of-the-prefix-'k-'-you/your in-strength YHWH who? form-of-the-
+# prefix-'k-'-you/your expand in-holiness”) — fact holds: who?-khamokha-in-
+# the-elim
+m.fact("mi_khamokha_ba_elim")
+# ‹נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא› (“fear laudation make miracle”) — fact
+# holds: fear-laudation-make-miracle
+m.fact("nora_tehilot_ose_fele")
+
+# -------------------------- Exod.15.12 · THE_EARTH_SWALLOWED ---------------
+# נָטִיתָ יְמִינְךָ תִּבְלָעֵמוֹ אָרֶץ
+# "[EN-AID] You stretched out Your right hand — the earth swallowed them."
+m.step("Exod.15.12")
+# ‹נָטִיתָ יְמִינְךָ תִּבְלָעֵמוֹ אָרֶץ› (“stretch right-hand-you/your
+# swallow-them/their earth”) — fact holds: tivlaemo-earth
+m.fact("tivlaemo_aretz")
+
+# -------------------------- Exod.15.13 · YOU_GUIDED_IN_KINDNESS ------------
+# נָחִיתָ בְחַסְדְּךָ עַם־זוּ גָּאָלְתָּ נֵהַלְתָּ בְעָזְּךָ אֶל־נְוֵה
+# קָדְשֶׁךָ
+# "[EN-AID] You guided in Your kindness the people You redeemed; You led
+# them in Your strength to Your holy habitation."
+m.step("Exod.15.13")
+# ‹נָחִיתָ בְחַסְדְּךָ עַם־זוּ גָּאָלְתָּ› (“guide in-kindness-you/your
+# people this be-the-next-of-kin”) — fact holds: people-this-be-the-next-of-
+# kin
+m.fact("am_zu_gaalta")
+
+# -------------------------- Exod.15.14 · THE_PEOPLES_HEARD -----------------
+# שָׁמְעוּ עַמִּים יִרְגָּזוּן חִיל אָחַז יֹשְׁבֵי פְּלָשֶׁת
+# "[EN-AID] The peoples heard — they tremble; pang seized the dwellers of
+# Philistia."
+m.step("Exod.15.14")
+# ‹שָׁמְעוּ עַמִּים יִרְגָּזוּן› (“hear people quiver-ward”) — fact holds:
+# hear-people-yirgazun
+m.fact("shamu_amim_yirgazun")
+
+# -------------------------- Exod.15.15 · THE_CHIEFS_DISMAYED ---------------
+# אָז נִבְהֲלוּ אַלּוּפֵי אֱדוֹם אֵילֵי מוֹאָב יֹאחֲזֵמוֹ רָעַד נָמֹגוּ כֹּל
+# יֹשְׁבֵי כְנָעַן
+# "[EN-AID] Then were the chiefs of Edom dismayed; the rams of Moab —
+# trembling seizes them; all the dwellers of Canaan are melted away."
+m.step("Exod.15.15")
+# ‹נָמֹגוּ כֹּל יֹשְׁבֵי כְנָעַן› (“melt all dwell/sit Canaan”) — fact
+# holds: melt-all-dwell/sit-Canaan
+m.fact("namogu_kol_yoshve_khenaan")
+
+# -------------------------- Exod.15.16 · STILL_AS_A_STONE ------------------
+# תִּפֹּל עֲלֵיהֶם אֵימָתָה וָפַחַד בִּגְדֹל זְרוֹעֲךָ יִדְּמוּ כָּאָבֶן
+# עַד־יַעֲבֹר עַמְּךָ יְהוָה עַד־יַעֲבֹר עַם־זוּ קָנִיתָ
+# "[EN-AID] Terror and dread fall upon them; by the greatness of Your arm
+# they are still as a stone — till Your people cross over, O LORD, till the
+# people You acquired cross over."
+m.step("Exod.15.16")
+# ‹עַד־יַעֲבֹר עַמְּךָ יְהוָה עַד־יַעֲבֹר עַם־זוּ קָנִיתָ› (“until pass-over
+# people-you/your YHWH until pass-over people this possessor”) — fact holds:
+# until-pass-over-people-this-possessor
+m.fact("ad_yaavor_am_zu_qanita")
+
+# -------------------------- Exod.15.17 · PLANT_THEM_ON_YOUR_MOUNTAIN -------
+# תְּבִאֵמוֹ וְתִטָּעֵמוֹ בְּהַר נַחֲלָתְךָ מָכוֹן לְשִׁבְתְּךָ פָּעַלְתָּ
+# יְהוָה מִקְּדָשׁ אֲדֹנָי כּוֹנְנוּ יָדֶיךָ
+# "[EN-AID] You will bring them in and plant them on the mountain of Your
+# inheritance — the place for Your dwelling which You made, O LORD; the
+# sanctuary, O Lord, which Your hands established."
+m.step("Exod.15.17")
+# ‹מָכוֹן לְשִׁבְתְּךָ פָּעַלְתָּ יְהוָה› (“fixture to-dwell/sit-you/your do
+# YHWH”) — fact holds: fixture-to-shivtekha-do
+m.fact("makhon_le_shivtekha_paalta")
+
+# -------------------------- Exod.15.18 · THE_REIGN_FOREVER -----------------
+# יְהוָה יִמְלֹךְ לְעֹלָם וָעֶד
+# "[EN-AID] The LORD shall reign forever and ever."
+m.step("Exod.15.18")
+# ‹יְהוָה יִמְלֹךְ לְעֹלָם וָעֶד› (“YHWH reign to-forever and-terminus”) —
+# fact holds: the-LORD-reign-to-forever-come/bring-terminus
+m.fact("YHWH_yimlokh_le_olam_va_ed")
+
+# -------------------------- Exod.15.19 · THE_PROSE_SEAL --------------------
+# כִּי בָא סוּס פַּרְעֹה בְּרִכְבּוֹ וּבְפָרָשָׁיו בַּיָּם וַיָּשֶׁב יְהוָה
+# עֲלֵהֶם אֶת־מֵי הַיָּם וּבְנֵי יִשְׂרָאֵל הָלְכוּ בַיַּבָּשָׁה בְּתוֹךְ
+# הַיָּם
+# "[EN-AID] For the horse of Pharaoh came, with his chariots and with his
+# horsemen, into the sea, and the LORD returned upon them the waters of the
+# sea; and the sons of Israel walked on the dry ground in the midst of the
+# sea."
+m.step("Exod.15.19")
+# ‹כִּי בָא סוּס פַּרְעֹה בְּרִכְבּוֹ וּבְפָרָשָׁיו בַּיָּם› (“that
+# come/bring horse Pharaoh in-vehicle-him/its and-in-steed-him/its in-seas”)
+# — fact holds: that-come/bring-horse-Pharaoh-in-the-seas
+m.fact("ki_va_sus_paro_ba_yam")
+
+# -------------------------- Exod.15.20 · MIRIAM_TAKES_THE_TIMBREL ----------
+# וַתִּקַּח מִרְיָם הַנְּבִיאָה אֲחוֹת אַהֲרֹן אֶת־הַתֹּף בְּיָדָהּ
+# וַתֵּצֶאןָ כָל־הַנָּשִׁים אַחֲרֶיהָ בְּתֻפִּים וּבִמְחֹלֹת
+# "[EN-AID] And Miriam the prophetess, the sister of Aaron, took the timbrel
+# in her hand; and all the women went out after her, with timbrels and with
+# dances."
+m.step("Exod.15.20")
+# ‹וַתִּקַּח מִרְיָם הַנְּבִיאָה אֲחוֹת אַהֲרֹן אֶת־הַתֹּף בְּיָדָהּ› (“and-
+# take Miriam the-prophetess sister Aaron obj-marker the-tambourine in-hand-
+# her/its”) — fact holds: come/bring-take-Miriam-obj-marker-the-tambourine
+m.fact("va_tiqach_miryam_et_ha_tof")
+
+# -------------------------- Exod.15.21 · SING_TO_THE_LORD ------------------
+# וַתַּעַן לָהֶם מִרְיָם שִׁירוּ לַיהוָה כִּי־גָאֹה גָּאָה סוּס וְרֹכְבוֹ
+# רָמָה בַיָּם
+# "[EN-AID] And Miriam answered them: Sing to the LORD, for He is highly
+# exalted; the horse and its rider He has thrown into the sea."
+m.step("Exod.15.21")
+# ‹שִׁירוּ לַיהוָה כִּי־גָאֹה גָּאָה סוּס וְרֹכְבוֹ רָמָה בַיָּם› (“sing to-
+# YHWH that mount-up mount-up horse and-ride-him/its hurl in-seas”) — Miriam
+# speaks a demand — LET: sing-to-the-LORD
+m.declare("miryam", "LET",
+          "shiru_la_YHWH")
+
+# -------------------------- Exod.15.22 · THREE_DAYS_NO_WATER ---------------
+# וַיַּסַּע מֹשֶׁה אֶת־יִשְׂרָאֵל מִיַּם־סוּף וַיֵּצְאוּ אֶל־מִדְבַּר־שׁוּר
+# וַיֵּלְכוּ שְׁלֹשֶׁת־יָמִים בַּמִּדְבָּר וְלֹא־מָצְאוּ מָיִם
+# "[EN-AID] And Moses made Israel journey from the Reed Sea, and they went
+# out to the wilderness of Shur; and they went three days in the wilderness,
+# and found no water."
+m.step("Exod.15.22")
+# ‹וַיֵּלְכוּ שְׁלֹשֶׁת־יָמִים בַּמִּדְבָּר וְלֹא־מָצְאוּ מָיִם› (“and-go
+# three day in-pasture and-not find waters”) — fact holds: three-day-and-
+# not-find-waters
+m.fact("sheloshet_yamim_ve_lo_matzu_mayim")
+
+# -------------------------- Exod.15.23 · MARAH_NAMED -----------------------
+# וַיָּבֹאוּ מָרָתָה וְלֹא יָכְלוּ לִשְׁתֹּת מַיִם מִמָּרָה כִּי מָרִים הֵם
+# עַל־כֵּן קָרָא־שְׁמָהּ מָרָה
+# "[EN-AID] And they came to Marah, and could not drink the waters of Marah,
+# for they were bitter; therefore its name was called Marah."
+m.step("Exod.15.23")
+# ‹עַל־כֵּן קָרָא־שְׁמָהּ מָרָה› (“over so call name-her/its Marah”) —
+# named: maqom := Mara
+m.name("maqom", "Mara")
+
+# -------------------------- Exod.15.24 · WHAT_SHALL_WE_DRINK ---------------
+# וַיִּלֹּנוּ הָעָם עַל־מֹשֶׁה לֵּאמֹר מַה־נִּשְׁתֶּה
+# "[EN-AID] And the people murmured against Moses, saying: What shall we
+# drink?"
+m.step("Exod.15.24")
+# ‹וַיִּלֹּנוּ הָעָם עַל־מֹשֶׁה לֵּאמֹר מַה־נִּשְׁתֶּה› (“and-stop the-
+# people over Moses to-say what drink”) — the-people speaks a demand — LET:
+# what-drink
+m.declare("ha_am", "LET",
+          "ma_nishte")
+
+# -------------------------- Exod.15.25 · THE_TREE_AND_THE_STATUTE ----------
+# וַיִּצְעַק אֶל־יְהוָה וַיּוֹרֵהוּ יְהוָה עֵץ וַיַּשְׁלֵךְ אֶל־הַמַּיִם
+# וַיִּמְתְּקוּ הַמָּיִם שָׁם שָׂם לוֹ חֹק וּמִשְׁפָּט וְשָׁם נִסָּהוּ
+# "[EN-AID] And he cried out to the LORD, and the LORD showed him a tree;
+# and he cast it into the waters, and the waters were sweetened. There He
+# set for him a statute and an ordinance, and there He tested him."
+m.step("Exod.15.25")
+# ‹וַיִּצְעַק אֶל־יְהוָה וַיּוֹרֵהוּ יְהוָה עֵץ וַיַּשְׁלֵךְ אֶל־הַמַּיִם
+# וַיִּמְתְּקוּ› (“and-shriek to YHWH and-flow-as-water-him/its YHWH tree
+# and-throw-out to the-waters and-suck”) — event: hamtaqat-the-waters —
+# agent Moses; theme ha-mayim
+m.event("hamtaqat_ha_mayim", agent="moshe", themes=["ha-mayim"])
+# ‹וַיִּמְתְּקוּ הַמָּיִם› (“and-suck the-waters”) — demand settled (popped
+# from the queue): what-drink
+m.result("ma_nishte", tmark="t1")
+# ‹שָׁם שָׂם לוֹ חֹק וּמִשְׁפָּט› (“there put/set to-him/its enactment and-
+# judgment”) — fact holds: there-put/set-not-enactment-and-judgment
+m.fact("sham_sam_lo_choq_u_mishpat")
+# ‹וְשָׁם נִסָּהוּ› (“and-there test-him/its”) — fact holds: and-there-
+# nisahu
+m.fact("ve_sham_nisahu")
+
+# -------------------------- Exod.15.26 · I_AM_YOUR_HEALER ------------------
+# וַיֹּאמֶר אִם־שָׁמוֹעַ תִּשְׁמַע לְקוֹל יְהוָה אֱלֹהֶיךָ וְהַיָּשָׁר
+# בְּעֵינָיו תַּעֲשֶׂה וְהַאֲזַנְתָּ לְמִצְוֺתָיו וְשָׁמַרְתָּ כָּל־חֻקָּיו
+# כָּל־הַמַּחֲלָה אֲשֶׁר־שַׂמְתִּי בְמִצְרַיִם לֹא־אָשִׂים עָלֶיךָ כִּי
+# אֲנִי יְהוָה רֹפְאֶךָ
+# "[EN-AID] And He said: If you diligently listen to the voice of the LORD
+# your God, and do what is right in His eyes, and give ear to His
+# commandments, and keep all His statutes — all the disease which I set upon
+# Egypt I will not set upon you; for I am the LORD your healer."
+m.step("Exod.15.26")
+# ‹וַיֹּאמֶר אִם־שָׁמוֹעַ תִּשְׁמַע לְקוֹל יְהוָה אֱלֹהֶיךָ וְהַיָּשָׁר
+# בְּעֵינָיו תַּעֲשֶׂה וְהַאֲזַנְתָּ לְמִצְוֺתָיו וְשָׁמַרְתָּ כָּל־חֻקָּיו›
+# (“and-say if hear hear to-voice/sound YHWH God-you/your and-the-straight
+# in-eye-him/its make and-broaden-out-the-ear to-commandment-him/its and-
+# keep/guard all enactment-him/its”) — the-LORD speaks a demand — LET: if-
+# hear-hear
+m.declare("YHWH", "LET",
+          "im_shamoa_tishma")
+# ‹כָּל־הַמַּחֲלָה אֲשֶׁר־שַׂמְתִּי בְמִצְרַיִם לֹא־אָשִׂים עָלֶיךָ כִּי
+# אֲנִי יְהוָה רֹפְאֶךָ› (“all the-sickness which put/set in-Egypt not
+# put/set over-you/your that YHWH mend-you/your”) — fact holds: ani-the-
+# LORD-rofekha
+m.fact("ani_YHWH_rofekha")
+
+# -------------------------- Exod.15.27 · TWELVE_SPRINGS_SEVENTY_PALMS ------
+# וַיָּבֹאוּ אֵילִמָה וְשָׁם שְׁתֵּים עֶשְׂרֵה עֵינֹת מַיִם וְשִׁבְעִים
+# תְּמָרִים וַיַּחֲנוּ־שָׁם עַל־הַמָּיִם
+# "[EN-AID] And they came to Elim, and there — twelve springs of water and
+# seventy palm trees; and they camped there by the waters."
+m.step("Exod.15.27")
+# ‹וְשָׁם שְׁתֵּים עֶשְׂרֵה עֵינֹת מַיִם וְשִׁבְעִים תְּמָרִים› (“and-there
+# two -teen eye waters and-seventy palm-tree”) — fact holds: shtem--teen-
+# eye-and-seventy-palm-tree
+m.fact("shtem_esre_enot_ve_shivim_temarim")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {'maqom': 'Mara'}
+    assert m.REGISTRY["writes"] == 1
+    assert m.tests_list() == []
+    assert m.open_demands() == ['shiru_la_YHWH', 'im_shamoa_tishma']
+    assert len(m.SPECS["log"]) == 3
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {'named_before_any_presence': 1}
+    assert sorted(m.WORLD["facts"]) == sorted(['ki_gao_gaa_sus_ve_rokhvo', 'uzi_ve_zimrat_yah', 'ze_eli_ve_anvehu', 'YHWH_ish_milchama', 'u_mivchar_shalishav_tubu', 'tehomot_yekhasyumu', 'yeminkha_YHWH_nedari_va_koach', 'teshalach_charonkha', 'u_ve_ruach_apekha_neermu_mayim', 'amar_oyev_erdof_asig', 'tzalalu_ka_oferet', 'mi_khamokha_ba_elim', 'nora_tehilot_ose_fele', 'tivlaemo_aretz', 'am_zu_gaalta', 'shamu_amim_yirgazun', 'namogu_kol_yoshve_khenaan', 'ad_yaavor_am_zu_qanita', 'makhon_le_shivtekha_paalta', 'YHWH_yimlokh_le_olam_va_ed', 'ki_va_sus_paro_ba_yam', 'va_tiqach_miryam_et_ha_tof', 'sheloshet_yamim_ve_lo_matzu_mayim', 'sham_sam_lo_choq_u_mishpat', 've_sham_nisahu', 'ani_YHWH_rofekha', 'shtem_esre_enot_ve_shivim_temarim'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 7
+    print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
+
+
+###############################################################################
+# UNIT: exo_16_manna_and_sabbath
+###############################################################################
+
+m = Machine("exo_16_manna_and_sabbath")
+
+# -------------------------- Exod.16.1 · INTO_THE_WILDERNESS_OF_SIN ---------
+# וַיִּסְעוּ מֵאֵילִם וַיָּבֹאוּ כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל
+# אֶל־מִדְבַּר־סִין אֲשֶׁר בֵּין־אֵילִם וּבֵין סִינָי בַּחֲמִשָּׁה עָשָׂר
+# יוֹם לַחֹדֶשׁ הַשֵּׁנִי לְצֵאתָם מֵאֶרֶץ מִצְרָיִם
+# "[EN-AID] And they journeyed from Elim, and all the congregation of the
+# sons of Israel came to the wilderness of Sin, which is between Elim and
+# Sinai, on the fifteenth day of the second month after their going out from
+# the land of Egypt."
+m.step("Exod.16.1")
+# ‹וַיִּסְעוּ מֵאֵילִם וַיָּבֹאוּ כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל
+# אֶל־מִדְבַּר־סִין אֲשֶׁר בֵּין־אֵילִם וּבֵין סִינָי› (“and-journey from-
+# Elim and-come/bring all congregation son Israel to pasture Sin which
+# between Elim and-between Sinai”) — fact holds: and-come/bring-to-pasture-
+# Sin
+m.fact("va_yavou_el_midbar_sin")
+
+# -------------------------- Exod.16.2 · THE_WHOLE_CONGREGATION_MURMURS -----
+# וילינו וַיִּלּוֹנוּ כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל עַל־מֹשֶׁה וְעַל־אַהֲרֹן
+# בַּמִּדְבָּר
+# "[EN-AID] And all the congregation of the sons of Israel murmured against
+# Moses and against Aaron in the wilderness."
+m.step("Exod.16.2")
+# ‹וילינו וַיִּלּוֹנוּ כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל עַל־מֹשֶׁה וְעַל־אַהֲרֹן
+# בַּמִּדְבָּר› (“and-stop and-stop all congregation son Israel over Moses
+# and-over Aaron in-pasture”) — fact holds: and-stop-over-Moses-and-over-
+# Aaron
+m.fact("va_yilonu_al_moshe_ve_al_aharon")
+
+# -------------------------- Exod.16.3 · THE_FLESH_POTS ---------------------
+# וַיֹּאמְרוּ אֲלֵהֶם בְּנֵי יִשְׂרָאֵל מִי־יִתֵּן מוּתֵנוּ בְיַד־יְהוָה
+# בְּאֶרֶץ מִצְרַיִם בְּשִׁבְתֵּנוּ עַל־סִיר הַבָּשָׂר בְּאָכְלֵנוּ לֶחֶם
+# לָשֹׂבַע כִּי־הוֹצֵאתֶם אֹתָנוּ אֶל־הַמִּדְבָּר הַזֶּה לְהָמִית
+# אֶת־כָּל־הַקָּהָל הַזֶּה בָּרָעָב
+# "[EN-AID] And the sons of Israel said to them: Would that we had died by
+# the hand of the LORD in the land of Egypt, when we sat by the flesh-pot,
+# when we ate bread to the full — for you have brought us out to this
+# wilderness, to kill this whole assembly with hunger."
+m.step("Exod.16.3")
+# ‹מִי־יִתֵּן מוּתֵנוּ בְיַד־יְהוָה בְּאֶרֶץ מִצְרַיִם בְּשִׁבְתֵּנוּ
+# עַל־סִיר הַבָּשָׂר בְּאָכְלֵנוּ לֶחֶם לָשֹׂבַע› (“who? set die-us/our in-
+# hand YHWH in-earth Egypt in-dwell/sit-us/our over pot the-flesh in-eat-
+# us/our food to-satisfaction-joy)”) — fact holds: who?-set-mutenu
+m.fact("mi_yiten_mutenu")
+
+# -------------------------- Exod.16.4 · BREAD_FROM_HEAVEN ------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה הִנְנִי מַמְטִיר לָכֶם לֶחֶם מִן־הַשָּׁמָיִם
+# וְיָצָא הָעָם וְלָקְטוּ דְּבַר־יוֹם בְּיוֹמוֹ לְמַעַן אֲנַסֶּנּוּ הֲיֵלֵךְ
+# בְּתוֹרָתִי אִם־לֹא
+# "[EN-AID] And the LORD said to Moses: Behold, I rain for you bread from
+# the heavens; and the people shall go out and gather the day's portion in
+# its day, that I may test him — will he walk in My law, or not?"
+m.step("Exod.16.4")
+# ‹הִנְנִי מַמְטִיר לָכֶם לֶחֶם מִן־הַשָּׁמָיִם› (“lo!-me/my rain to-
+# you/your(pl) food from the-heavens”) — the-LORD speaks a demand — LET:
+# and-pick-up-word/thing-day-in-yomo
+m.declare("YHWH", "LET",
+          "ve_laqtu_devar_yom_be_yomo")
+
+# -------------------------- Exod.16.5 · DOUBLE_ON_THE_SIXTH ----------------
+# וְהָיָה בַּיּוֹם הַשִּׁשִּׁי וְהֵכִינוּ אֵת אֲשֶׁר־יָבִיאוּ וְהָיָה
+# מִשְׁנֶה עַל אֲשֶׁר־יִלְקְטוּ יוֹם יוֹם
+# "[EN-AID] And it shall be on the sixth day, that they shall prepare that
+# which they bring in; and it shall be double what they gather day by day."
+m.step("Exod.16.5")
+# ‹וְהָיָה בַּיּוֹם הַשִּׁשִּׁי וְהֵכִינוּ אֵת אֲשֶׁר־יָבִיאוּ וְהָיָה
+# מִשְׁנֶה› (“and-be in-day the-sixth and-be-erect obj-marker which
+# come/bring and-be repetition”) — the-LORD speaks a demand — LET: and-be-
+# erect-repetition
+m.declare("YHWH", "LET",
+          "ve_hekhinu_mishne")
+
+# -------------------------- Exod.16.6 · EVENING_AND_YOU_SHALL_KNOW ---------
+# וַיֹּאמֶר מֹשֶׁה וְאַהֲרֹן אֶל־כָּל־בְּנֵי יִשְׂרָאֵל עֶרֶב וִידַעְתֶּם
+# כִּי יְהוָה הוֹצִיא אֶתְכֶם מֵאֶרֶץ מִצְרָיִם
+# "[EN-AID] And Moses and Aaron said to all the sons of Israel: At evening —
+# and you shall know that the LORD has brought you out from the land of
+# Egypt."
+m.step("Exod.16.6")
+# ‹עֶרֶב וִידַעְתֶּם כִּי יְהוָה הוֹצִיא אֶתְכֶם מֵאֶרֶץ מִצְרָיִם›
+# (“evening and-know that YHWH bring-forth obj-marker-you/your(pl) from-
+# earth Egypt”) — fact holds: evening-vi-ydatem
+m.fact("erev_vi_ydatem")
+
+# -------------------------- Exod.16.7 · MORNING_AND_THE_GLORY --------------
+# וּבֹקֶר וּרְאִיתֶם אֶת־כְּבוֹד יְהוָה בְּשָׁמְעוֹ אֶת־תְּלֻנֹּתֵיכֶם
+# עַל־יְהוָה וְנַחְנוּ מָה כִּי תלונו תַלִּינוּ עָלֵינוּ
+# "[EN-AID] And at morning — and you shall see the glory of the LORD, in His
+# hearing your murmurings against the LORD; and we — what are we, that you
+# murmur against us?"
+m.step("Exod.16.7")
+# ‹וּבֹקֶר וּרְאִיתֶם אֶת־כְּבוֹד יְהוָה בְּשָׁמְעוֹ אֶת־תְּלֻנֹּתֵיכֶם
+# עַל־יְהוָה› (“and-morning and-see obj-marker weight YHWH in-hear-him/its
+# obj-marker grumbling-you/your(pl) over YHWH”) — fact holds: and-see-obj-
+# marker-weight-the-LORD
+m.fact("u_reitem_et_kevod_YHWH")
+
+# -------------------------- Exod.16.8 · NOT_AGAINST_US ---------------------
+# וַיֹּאמֶר מֹשֶׁה בְּתֵת יְהוָה לָכֶם בָּעֶרֶב בָּשָׂר לֶאֱכֹל וְלֶחֶם
+# בַּבֹּקֶר לִשְׂבֹּעַ בִּשְׁמֹעַ יְהוָה אֶת־תְּלֻנֹּתֵיכֶם אֲשֶׁר־אַתֶּם
+# מַלִּינִם עָלָיו וְנַחְנוּ מָה לֹא־עָלֵינוּ תְלֻנֹּתֵיכֶם כִּי עַל־יְהוָה
+# "[EN-AID] And Moses said: In the LORD's giving you flesh at evening to
+# eat, and bread at morning to the full — in the LORD's hearing your
+# murmurings which you murmur against Him; and we — what are we? Not against
+# us are your murmurings, but against the LORD."
+m.step("Exod.16.8")
+# ‹וְנַחְנוּ מָה לֹא־עָלֵינוּ תְלֻנֹּתֵיכֶם כִּי עַל־יְהוָה› (“and-we what
+# not over-us/our grumbling-you/your(pl) that over YHWH”) — fact holds: not-
+# alenu-telunotekhem
+m.fact("lo_alenu_telunotekhem")
+
+# -------------------------- Exod.16.9 · DRAW_NEAR --------------------------
+# וַיֹּאמֶר מֹשֶׁה אֶל־אַהֲרֹן אֱמֹר אֶל־כָּל־עֲדַת בְּנֵי יִשְׂרָאֵל
+# קִרְבוּ לִפְנֵי יְהוָה כִּי שָׁמַע אֵת תְּלֻנֹּתֵיכֶם
+# "[EN-AID] And Moses said to Aaron: Say to all the congregation of the sons
+# of Israel: Draw near before the LORD — for He has heard your murmurings."
+m.step("Exod.16.9")
+# ‹אֱמֹר אֶל־כָּל־עֲדַת בְּנֵי יִשְׂרָאֵל קִרְבוּ לִפְנֵי יְהוָה› (“say to
+# all congregation son Israel bring-near to-face YHWH”) — Moses speaks a
+# demand — LET: bring-near-lifne-the-LORD
+m.declare("moshe", "LET",
+          "qirvu_lifne_YHWH")
+
+# -------------------------- Exod.16.10 · THE_GLORY_IN_THE_CLOUD ------------
+# וַיְהִי כְּדַבֵּר אַהֲרֹן אֶל־כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל וַיִּפְנוּ
+# אֶל־הַמִּדְבָּר וְהִנֵּה כְּבוֹד יְהוָה נִרְאָה בֶּעָנָן
+# "[EN-AID] And it was, as Aaron spoke to all the congregation of the sons
+# of Israel, that they turned toward the wilderness; and behold — the glory
+# of the LORD appeared in the cloud."
+m.step("Exod.16.10")
+# ‹וַיְהִי כְּדַבֵּר אַהֲרֹן אֶל־כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל› (“and-be
+# like-speak Aaron to all congregation son Israel”) — demand settled (popped
+# from the queue): bring-near-lifne-the-LORD
+m.result("qirvu_lifne_YHWH", tmark="t1")
+# ‹וְהִנֵּה כְּבוֹד יְהוָה נִרְאָה בֶּעָנָן› (“and-behold weight YHWH see
+# in-cloud”) — event: nirat-weight-the-LORD — theme kevod-YHWH
+m.event("nirat_kevod_YHWH", themes=["kevod-YHWH"])
+
+# -------------------------- Exod.16.11 · THE_FRAME -------------------------
+# וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר
+# "[EN-AID] And the LORD spoke to Moses, saying:"
+m.step("Exod.16.11")
+# ‹וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר› (“and-speak YHWH to Moses to-say”)
+# — fact holds: and-speak-16
+m.fact("va_yedaber_16")
+
+# -------------------------- Exod.16.12 · I_HAVE_HEARD ----------------------
+# שָׁמַעְתִּי אֶת־תְּלוּנֹּת בְּנֵי יִשְׂרָאֵל דַּבֵּר אֲלֵהֶם לֵאמֹר בֵּין
+# הָעַרְבַּיִם תֹּאכְלוּ בָשָׂר וּבַבֹּקֶר תִּשְׂבְּעוּ־לָחֶם וִידַעְתֶּם
+# כִּי אֲנִי יְהוָה אֱלֹהֵיכֶם
+# "[EN-AID] I have heard the murmurings of the sons of Israel — speak to
+# them, saying: Between the evenings you shall eat flesh, and at morning you
+# shall be filled with bread; and you shall know that I am the LORD your
+# God."
+m.step("Exod.16.12")
+# ‹שָׁמַעְתִּי אֶת־תְּלוּנֹּת בְּנֵי יִשְׂרָאֵל› (“hear obj-marker grumbling
+# son Israel”) — fact holds: hear-obj-marker-grumbling
+m.fact("shamati_et_telunot")
+# ‹וִידַעְתֶּם כִּי אֲנִי יְהוָה אֱלֹהֵיכֶם› (“and-know that YHWH God-
+# you/your(pl)”) — fact holds: ani-the-LORD-elohekhem
+m.fact("ani_YHWH_elohekhem")
+
+# -------------------------- Exod.16.13 · QUAIL_AND_DEW ---------------------
+# וַיְהִי בָעֶרֶב וַתַּעַל הַשְּׂלָו וַתְּכַס אֶת־הַמַּחֲנֶה וּבַבֹּקֶר
+# הָיְתָה שִׁכְבַת הַטַּל סָבִיב לַמַּחֲנֶה
+# "[EN-AID] And it was at evening, that the quail came up and covered the
+# camp; and at morning there was a layer of dew around the camp."
+m.step("Exod.16.13")
+# ‹וַיְהִי בָעֶרֶב וַתַּעַל הַשְּׂלָו וַתְּכַס אֶת־הַמַּחֲנֶה› (“and-be in-
+# evening and-go-up the-quail-collectively and-plump obj-marker the-camp”) —
+# event: matan-flesh-and-food — agent the-LORD; theme ha-selav
+m.event("matan_basar_va_lechem", agent="YHWH", themes=["ha-selav"])
+# ‹וּבַבֹּקֶר הָיְתָה שִׁכְבַת הַטַּל סָבִיב לַמַּחֲנֶה› (“and-in-morning be
+# lying-down the-dew circle to-camp”) — fact holds: lying-down-the-dew
+m.fact("shikhvat_ha_tal")
+
+# -------------------------- Exod.16.14 · FINE_AS_FROST ---------------------
+# וַתַּעַל שִׁכְבַת הַטָּל וְהִנֵּה עַל־פְּנֵי הַמִּדְבָּר דַּק מְחֻסְפָּס
+# דַּק כַּכְּפֹר עַל־הָאָרֶץ
+# "[EN-AID] And the layer of dew went up, and behold — on the face of the
+# wilderness a fine flake-like thing, fine as frost on the ground."
+m.step("Exod.16.14")
+# ‹וְהִנֵּה עַל־פְּנֵי הַמִּדְבָּר דַּק מְחֻסְפָּס דַּק כַּכְּפֹר
+# עַל־הָאָרֶץ› (“and-behold over face the-pasture thin shred thin like-cover
+# over the-earth”) — fact holds: thin-shred
+m.fact("daq_mechuspas")
+
+# -------------------------- Exod.16.15 · WHAT_IS_IT ------------------------
+# וַיִּרְאוּ בְנֵי־יִשְׂרָאֵל וַיֹּאמְרוּ אִישׁ אֶל־אָחִיו מָן הוּא כִּי לֹא
+# יָדְעוּ מַה־הוּא וַיֹּאמֶר מֹשֶׁה אֲלֵהֶם הוּא הַלֶּחֶם אֲשֶׁר נָתַן
+# יְהוָה לָכֶם לְאָכְלָה
+# "[EN-AID] And the sons of Israel saw, and said each to his brother: What
+# is it? — for they knew not what it was; and Moses said to them: It is the
+# bread which the LORD has given you to eat."
+m.step("Exod.16.15")
+# ‹מָן הוּא כִּי לֹא יָדְעוּ מַה־הוּא› (“whatness he/it that not know what
+# he/it”) — fact holds: whatness-he/it
+m.fact("man_hu")
+
+# -------------------------- Exod.16.16 · AN_OMER_A_HEAD --------------------
+# זֶה הַדָּבָר אֲשֶׁר צִוָּה יְהוָה לִקְטוּ מִמֶּנּוּ אִישׁ לְפִי אָכְלוֹ
+# עֹמֶר לַגֻּלְגֹּלֶת מִסְפַּר נַפְשֹׁתֵיכֶם אִישׁ לַאֲשֶׁר בְּאָהֳלוֹ
+# תִּקָּחוּ
+# "[EN-AID] This is the thing which the LORD commanded: Gather of it, each
+# man according to his eating; an omer a head, by the number of your souls —
+# each man for those in his tent shall you take."
+m.step("Exod.16.16")
+# ‹זֶה הַדָּבָר אֲשֶׁר צִוָּה יְהוָה לִקְטוּ מִמֶּנּוּ אִישׁ לְפִי אָכְלוֹ›
+# (“this the-word/thing which command YHWH pick-up from-us/our man to-mouth
+# food-him/its”) — fact holds: heap-to-skull
+m.fact("omer_la_gulgolet")
+
+# -------------------------- Exod.16.17 · GREAT_AND_SMALL -------------------
+# וַיַּעֲשׂוּ־כֵן בְּנֵי יִשְׂרָאֵל וַיִּלְקְטוּ הַמַּרְבֶּה וְהַמַּמְעִיט
+# "[EN-AID] And the sons of Israel did so; and they gathered — he who took
+# much, and he who took little."
+m.step("Exod.16.17")
+# ‹וַיַּעֲשׂוּ־כֵן בְּנֵי יִשְׂרָאֵל› (“and-make so son Israel”) — demand
+# settled (popped from the queue): and-pick-up-word/thing-day-in-yomo
+m.result("ve_laqtu_devar_yom_be_yomo", tmark="t1")
+
+# -------------------------- Exod.16.18 · NO_LACK_NO_SURPLUS ----------------
+# וַיָּמֹדּוּ בָעֹמֶר וְלֹא הֶעְדִּיף הַמַּרְבֶּה וְהַמַּמְעִיט לֹא הֶחְסִיר
+# אִישׁ לְפִי־אָכְלוֹ לָקָטוּ
+# "[EN-AID] And they measured with the omer, and he who took much had
+# nothing over, and he who took little lacked nothing; each man according to
+# his eating had they gathered."
+m.step("Exod.16.18")
+# ‹וַיָּמֹדּוּ בָעֹמֶר וְלֹא הֶעְדִּיף הַמַּרְבֶּה וְהַמַּמְעִיט לֹא
+# הֶחְסִיר› (“and-stretch in-heap and-not be-redundant the-multiply and-the-
+# pare-off not lack”) — fact holds: not-be-redundant-and-not-lack
+m.fact("lo_hedif_ve_lo_hechsir")
+
+# -------------------------- Exod.16.19 · LEAVE_NONE_TILL_MORNING -----------
+# וַיֹּאמֶר מֹשֶׁה אֲלֵהֶם אִישׁ אַל־יוֹתֵר מִמֶּנּוּ עַד־בֹּקֶר
+# "[EN-AID] And Moses said to them: Let no man leave over of it till
+# morning."
+m.step("Exod.16.19")
+# ‹אִישׁ אַל־יוֹתֵר מִמֶּנּוּ עַד־בֹּקֶר› (“man do-not jut-over from-us/our
+# until morning”) — Moses speaks a demand — LET: over-jut-over-from-it-
+# until-morning
+m.declare("moshe", "LET",
+          "al_yoter_mimenu_ad_boqer")
+
+# -------------------------- Exod.16.20 · WORMS_AND_WRATH -------------------
+# וְלֹא־שָׁמְעוּ אֶל־מֹשֶׁה וַיּוֹתִרוּ אֲנָשִׁים מִמֶּנּוּ עַד־בֹּקֶר
+# וַיָּרֻם תּוֹלָעִים וַיִּבְאַשׁ וַיִּקְצֹף עֲלֵהֶם מֹשֶׁה
+# "[EN-AID] And they listened not to Moses, and men left over of it till
+# morning, and it bred worms and stank; and Moses was angry with them."
+m.step("Exod.16.20")
+# ‹וַיּוֹתִרוּ אֲנָשִׁים מִמֶּנּוּ עַד־בֹּקֶר וַיָּרֻם תּוֹלָעִים
+# וַיִּבְאַשׁ› (“and-jut-over man from-us/our until morning and-rise-high
+# crimson-grub and-smell-bad”) — fact holds: and-rise-high-crimson-grub
+m.fact("va_yarum_tolaim")
+
+# -------------------------- Exod.16.21 · MORNING_BY_MORNING ----------------
+# וַיִּלְקְטוּ אֹתוֹ בַּבֹּקֶר בַּבֹּקֶר אִישׁ כְּפִי אָכְלוֹ וְחַם
+# הַשֶּׁמֶשׁ וְנָמָס
+# "[EN-AID] And they gathered it morning by morning, each man according to
+# his eating; and when the sun grew hot, it melted."
+m.step("Exod.16.21")
+# ‹וְחַם הַשֶּׁמֶשׁ וְנָמָס› (“and-be-hot the-sun and-liquefy”) — fact
+# holds: and-be-hot-the-sun-and-liquefy
+m.fact("ve_cham_ha_shemesh_ve_namas")
+
+# -------------------------- Exod.16.22 · THE_SIXTH_DAY_DOUBLE --------------
+# וַיְהִי בַּיּוֹם הַשִּׁשִּׁי לָקְטוּ לֶחֶם מִשְׁנֶה שְׁנֵי הָעֹמֶר לָאֶחָד
+# וַיָּבֹאוּ כָּל־נְשִׂיאֵי הָעֵדָה וַיַּגִּידוּ לְמֹשֶׁה
+# "[EN-AID] And it was on the sixth day, that they gathered double bread —
+# two omers for the one; and all the princes of the congregation came and
+# told Moses."
+m.step("Exod.16.22")
+# ‹וַיְהִי בַּיּוֹם הַשִּׁשִּׁי לָקְטוּ לֶחֶם מִשְׁנֶה שְׁנֵי הָעֹמֶר
+# לָאֶחָד› (“and-be in-day the-sixth pick-up food repetition two the-heap
+# to-one”) — demand settled (popped from the queue): and-be-erect-repetition
+m.result("ve_hekhinu_mishne", tmark="t1")
+
+# -------------------------- Exod.16.23 · TOMORROW_IS_THE_REST --------------
+# וַיֹּאמֶר אֲלֵהֶם הוּא אֲשֶׁר דִּבֶּר יְהוָה שַׁבָּתוֹן שַׁבַּת־קֹדֶשׁ
+# לַיהוָה מָחָר אֵת אֲשֶׁר־תֹּאפוּ אֵפוּ וְאֵת אֲשֶׁר־תְּבַשְּׁלוּ
+# בַּשֵּׁלוּ וְאֵת כָּל־הָעֹדֵף הַנִּיחוּ לָכֶם לְמִשְׁמֶרֶת עַד־הַבֹּקֶר
+# "[EN-AID] And he said to them: This is what the LORD spoke — a solemn
+# rest, a holy sabbath to the LORD, is tomorrow; that which you would bake —
+# bake, and that which you would boil — boil, and all the surplus lay up for
+# yourselves in keeping until the morning."
+m.step("Exod.16.23")
+# ‹שַׁבָּתוֹן שַׁבַּת־קֹדֶשׁ לַיהוָה מָחָר› (“sabbatism intermission
+# holiness to-YHWH deferred”) — Moses speaks a demand — LET: obj-marker-the-
+# be-redundant-deposit-to-watch
+m.declare("moshe", "LET",
+          "et_ha_odef_hanichu_le_mishmeret")
+
+# -------------------------- Exod.16.24 · IT_DID_NOT_STINK ------------------
+# וַיַּנִּיחוּ אֹתוֹ עַד־הַבֹּקֶר כַּאֲשֶׁר צִוָּה מֹשֶׁה וְלֹא הִבְאִישׁ
+# וְרִמָּה לֹא־הָיְתָה בּוֹ
+# "[EN-AID] And they laid it up until the morning, as Moses commanded; and
+# it did not stink, and no worm was in it."
+m.step("Exod.16.24")
+# ‹וַיַּנִּיחוּ אֹתוֹ עַד־הַבֹּקֶר כַּאֲשֶׁר צִוָּה מֹשֶׁה› (“and-deposit
+# obj-marker-him/its until the-morning like-as/which command Moses”) —
+# demand settled (popped from the queue): obj-marker-the-be-redundant-
+# deposit-to-watch
+m.result("et_ha_odef_hanichu_le_mishmeret", tmark="t1")
+
+# -------------------------- Exod.16.25 · EAT_IT_TODAY ----------------------
+# וַיֹּאמֶר מֹשֶׁה אִכְלֻהוּ הַיּוֹם כִּי־שַׁבָּת הַיּוֹם לַיהוָה הַיּוֹם
+# לֹא תִמְצָאֻהוּ בַּשָּׂדֶה
+# "[EN-AID] And Moses said: Eat it today, for today is a sabbath to the
+# LORD; today you shall not find it in the field."
+m.step("Exod.16.25")
+# ‹אִכְלֻהוּ הַיּוֹם כִּי־שַׁבָּת הַיּוֹם לַיהוָה› (“eat-him/its the-day
+# that intermission the-day to-YHWH”) — fact holds: intermission-the-day-to-
+# the-LORD
+m.fact("shabat_ha_yom_la_YHWH")
+
+# -------------------------- Exod.16.26 · SIX_DAYS_AND_THE_SEVENTH ----------
+# שֵׁשֶׁת יָמִים תִּלְקְטֻהוּ וּבַיּוֹם הַשְּׁבִיעִי שַׁבָּת לֹא
+# יִהְיֶה־בּוֹ
+# "[EN-AID] Six days you shall gather it; and on the seventh day — a
+# sabbath: it shall not be in it."
+m.step("Exod.16.26")
+# ‹שֵׁשֶׁת יָמִים תִּלְקְטֻהוּ וּבַיּוֹם הַשְּׁבִיעִי שַׁבָּת לֹא
+# יִהְיֶה־בּוֹ› (“six day pick-up-him/its and-in-day the-seventh
+# intermission not be in-him/its”) — fact holds: six-day-tilqetuhu
+m.fact("sheshet_yamim_tilqetuhu")
+
+# -------------------------- Exod.16.27 · THEY_FOUND_NOTHING ----------------
+# וַיְהִי בַּיּוֹם הַשְּׁבִיעִי יָצְאוּ מִן־הָעָם לִלְקֹט וְלֹא מָצָאוּ
+# "[EN-AID] And it was on the seventh day, that some of the people went out
+# to gather — and they found none."
+m.step("Exod.16.27")
+# ‹וַיְהִי בַּיּוֹם הַשְּׁבִיעִי יָצְאוּ מִן־הָעָם לִלְקֹט וְלֹא מָצָאוּ›
+# (“and-be in-day the-seventh bring-forth from the-people to-pick-up and-not
+# find”) — fact holds: bring-forth-from-the-people-lilqot
+m.fact("yatzu_min_ha_am_lilqot")
+
+# -------------------------- Exod.16.28 · HOW_LONG_DO_YOU_REFUSE ------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה עַד־אָנָה מֵאַנְתֶּם לִשְׁמֹר מִצְוֺתַי
+# וְתוֹרֹתָי
+# "[EN-AID] And the LORD said to Moses: How long do you refuse to keep My
+# commandments and My laws?"
+m.step("Exod.16.28")
+# ‹עַד־אָנָה מֵאַנְתֶּם לִשְׁמֹר מִצְוֺתַי וְתוֹרֹתָי› (“until where? refuse
+# to-keep/guard commandment-me/my and-precept-me/my”) — test FAIL — oracle-
+# word anasenu, on the-go-in-torati
+m.test("FAIL", "anasenu", "ha_yelekh_be_torati")
+
+# -------------------------- Exod.16.29 · LET_NO_MAN_GO_OUT -----------------
+# רְאוּ כִּי־יְהוָה נָתַן לָכֶם הַשַּׁבָּת עַל־כֵּן הוּא נֹתֵן לָכֶם
+# בַּיּוֹם הַשִּׁשִּׁי לֶחֶם יוֹמָיִם שְׁבוּ אִישׁ תַּחְתָּיו אַל־יֵצֵא
+# אִישׁ מִמְּקֹמוֹ בַּיּוֹם הַשְּׁבִיעִי
+# "[EN-AID] See, that the LORD has given you the Sabbath — therefore He
+# gives you on the sixth day bread for two days; sit every man in his place:
+# let no man go out of his place on the seventh day."
+m.step("Exod.16.29")
+# ‹שְׁבוּ אִישׁ תַּחְתָּיו אַל־יֵצֵא אִישׁ מִמְּקֹמוֹ בַּיּוֹם הַשְּׁבִיעִי›
+# (“dwell/sit man under-him/its do-not bring-forth man from-place-him/its
+# in-day the-seventh”) — the-LORD speaks a demand — LET: over-bring-forth-
+# man-who?-meqomo
+m.declare("YHWH", "LET",
+          "al_yetze_ish_mi_meqomo")
+
+# -------------------------- Exod.16.30 · AND_THE_PEOPLE_RESTED -------------
+# וַיִּשְׁבְּתוּ הָעָם בַּיּוֹם הַשְּׁבִעִי
+# "[EN-AID] And the people rested on the seventh day."
+m.step("Exod.16.30")
+# ‹וַיִּשְׁבְּתוּ הָעָם בַּיּוֹם הַשְּׁבִעִי› (“and-cease the-people in-day
+# the-seventh”) — demand settled (popped from the queue): over-bring-forth-
+# man-who?-meqomo
+m.result("al_yetze_ish_mi_meqomo", tmark="t1")
+
+# -------------------------- Exod.16.31 · THE_HOUSE_NAMED_IT_MANNA ----------
+# וַיִּקְרְאוּ בֵית־יִשְׂרָאֵל אֶת־שְׁמוֹ מָן וְהוּא כְּזֶרַע גַּד לָבָן
+# וְטַעְמוֹ כְּצַפִּיחִת בִּדְבָשׁ
+# "[EN-AID] And the house of Israel called its name Manna; and it was like
+# coriander seed, white, and its taste like a wafer in honey."
+m.step("Exod.16.31")
+# ‹וַיִּקְרְאוּ בֵית־יִשְׂרָאֵל אֶת־שְׁמוֹ מָן› (“and-call house Israel obj-
+# marker name-him/its whatness”) — named: ha-lechem := Man
+m.name("ha-lechem", "Man")
+
+# -------------------------- Exod.16.32 · A_KEEPSAKE_FOR_GENERATIONS --------
+# וַיֹּאמֶר מֹשֶׁה זֶה הַדָּבָר אֲשֶׁר צִוָּה יְהוָה מְלֹא הָעֹמֶר מִמֶּנּוּ
+# לְמִשְׁמֶרֶת לְדֹרֹתֵיכֶם לְמַעַן יִרְאוּ אֶת־הַלֶּחֶם אֲשֶׁר הֶאֱכַלְתִּי
+# אֶתְכֶם בַּמִּדְבָּר בְּהוֹצִיאִי אֶתְכֶם מֵאֶרֶץ מִצְרָיִם
+# "[EN-AID] And Moses said: This is the thing which the LORD commanded: The
+# fill of the omer of it in keeping for your generations — that they may see
+# the bread which I fed you in the wilderness, when I brought you out from
+# the land of Egypt."
+m.step("Exod.16.32")
+# ‹לְמַעַן יִרְאוּ אֶת־הַלֶּחֶם› (“so-that see obj-marker the-food”) — fact
+# holds: fulness-the-heap-to-watch
+m.fact("melo_ha_omer_le_mishmeret")
+
+# -------------------------- Exod.16.33 · THE_JAR ---------------------------
+# וַיֹּאמֶר מֹשֶׁה אֶל־אַהֲרֹן קַח צִנְצֶנֶת אַחַת וְתֶן־שָׁמָּה
+# מְלֹא־הָעֹמֶר מָן וְהַנַּח אֹתוֹ לִפְנֵי יְהוָה לְמִשְׁמֶרֶת לְדֹרֹתֵיכֶם
+# "[EN-AID] And Moses said to Aaron: Take one jar, and put there the fill of
+# the omer of manna; and lay it before the LORD, in keeping for your
+# generations."
+m.step("Exod.16.33")
+# ‹קַח צִנְצֶנֶת אַחַת וְתֶן־שָׁמָּה מְלֹא־הָעֹמֶר מָן› (“take vase one and-
+# set there-ward fulness the-heap whatness”) — Moses speaks a demand — LET:
+# take-vase-one
+m.declare("moshe", "LET",
+          "qach_tzintzenet_achat")
+
+# -------------------------- Exod.16.34 · BEFORE_THE_TESTIMONY --------------
+# כַּאֲשֶׁר צִוָּה יְהוָה אֶל־מֹשֶׁה וַיַּנִּיחֵהוּ אַהֲרֹן לִפְנֵי הָעֵדֻת
+# לְמִשְׁמָרֶת
+# "[EN-AID] As the LORD commanded Moses, so Aaron laid it before the
+# Testimony, in keeping."
+m.step("Exod.16.34")
+# ‹וַיַּנִּיחֵהוּ אַהֲרֹן לִפְנֵי הָעֵדֻת לְמִשְׁמָרֶת› (“and-deposit-
+# him/its Aaron to-face the-testimony to-watch”) — demand settled (popped
+# from the queue): take-vase-one
+m.result("qach_tzintzenet_achat", tmark="t1")
+
+# -------------------------- Exod.16.35 · FORTY_YEARS -----------------------
+# וּבְנֵי יִשְׂרָאֵל אָכְלוּ אֶת־הַמָּן אַרְבָּעִים שָׁנָה עַד־בֹּאָם
+# אֶל־אֶרֶץ נוֹשָׁבֶת אֶת־הַמָּן אָכְלוּ עַד־בֹּאָם אֶל־קְצֵה אֶרֶץ כְּנָעַן
+# "[EN-AID] And the sons of Israel ate the manna forty years, until their
+# coming to an inhabited land; the manna they ate, until their coming to the
+# edge of the land of Canaan."
+m.step("Exod.16.35")
+# ‹וּבְנֵי יִשְׂרָאֵל אָכְלוּ אֶת־הַמָּן אַרְבָּעִים שָׁנָה עַד־בֹּאָם
+# אֶל־אֶרֶץ נוֹשָׁבֶת› (“and-son Israel eat obj-marker the-whatness forty
+# years until come/bring-them/their to earth dwell/sit”) — fact holds: eat-
+# obj-marker-the-whatness-forty-years
+m.fact("akhlu_et_ha_man_arbaim_shana")
+
+# -------------------------- Exod.16.36 · THE_OMER_GLOSS --------------------
+# וְהָעֹמֶר עֲשִׂרִית הָאֵיפָה הוּא
+# "[EN-AID] And the omer — a tenth of the efa it is."
+m.step("Exod.16.36")
+# ‹וְהָעֹמֶר עֲשִׂרִית הָאֵיפָה הוּא› (“and-the-heap tenth the-ephah he/it”)
+# — fact holds: and-the-heap-tenth-the-ephah
+m.fact("ve_ha_omer_asirit_ha_efa")
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == "__main__":
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY["names"] == {'ha-lechem': 'Man'}
+    assert m.REGISTRY["writes"] == 1
+    assert m.tests_list() == [('FAIL', 'anasenu', 'ha_yelekh_be_torati')]
+    assert m.open_demands() == ['al_yoter_mimenu_ad_boqer']
+    assert len(m.SPECS["log"]) == 7
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {'named_before_any_presence': 1}
+    assert sorted(m.WORLD["facts"]) == sorted(['va_yavou_el_midbar_sin', 'va_yilonu_al_moshe_ve_al_aharon', 'mi_yiten_mutenu', 'erev_vi_ydatem', 'u_reitem_et_kevod_YHWH', 'lo_alenu_telunotekhem', 'va_yedaber_16', 'shamati_et_telunot', 'ani_YHWH_elohekhem', 'shikhvat_ha_tal', 'daq_mechuspas', 'man_hu', 'omer_la_gulgolet', 'lo_hedif_ve_lo_hechsir', 'va_yarum_tolaim', 've_cham_ha_shemesh_ve_namas', 'shabat_ha_yom_la_YHWH', 'sheshet_yamim_tilqetuhu', 'yatzu_min_ha_am_lilqot', 'melo_ha_omer_le_mishmeret', 'akhlu_et_ha_man_arbaim_shana', 've_ha_omer_asirit_ha_efa'])
+    assert m.WORLD["invariants"] == []
+    assert m.WORLD["partitions"] == []
+    assert len(m.EVENTS) == 16
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
 
 
