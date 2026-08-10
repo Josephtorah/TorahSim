@@ -1363,6 +1363,23 @@ word); gloss_lint self-check habit adopted (the three recurring
 flag patterns); ritual regression grows with corpus size (noted;
 no change proposed — gate law untouched). COMPACTION POINT #17 =
 the commit of this stamp.
+TOOLCHAIN INTO REPO — DONE 2026-08-10 (owner: "ok fix it"):
+logic/solo_tools/fwd/ created — unitgen.py, prestage_dump.py
+(generalized, any book), oral_dump.py (mirror KB+MS per chapter),
+probes.py (census/adjacency/gematria, probe-before-claim law),
+CONVENTIONS.md (pipeline map, archive note, gloss_lint self-check
+patterns), and builds/ with BYTE-EXACT archives of every build
+script this session held (exo_14 template through exo_21, 18
+files — the scripts that built the frozen units now sit beside
+them). Tested end to end from repo root: prestage + oral dump
+reproduce the run's exact outputs, unitgen + probes import from
+the repo path and verify known facts, verify_claims untouched
+13/13. NO gate, NO law, NO frozen byte changed. Archived scripts
+keep their original scratchpad import line (records first) — to
+re-run one, repoint sys.path at logic/solo_tools/fwd (documented
+in CONVENTIONS.md). Future block-1 starts here, not the
+scratchpad: the ~6-minute cold-start tax is gone. UNCOMMITTED —
+rides with the owner's next commit word (per the agreed plan).
 
 ## DISCLOSURE (never commit to main repo; owner's private docs)
 "God's Open Source Software Project" (LeBlanc_Epic_Certainty_layperson doc)
