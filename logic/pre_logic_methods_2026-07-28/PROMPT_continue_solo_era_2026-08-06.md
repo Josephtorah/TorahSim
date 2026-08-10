@@ -936,6 +936,338 @@ for ANY purpose, ever; all work in the main thread (memory
 agent-derivation-trial broadened accordingly). COMPACTION POINT
 #15 = the commit of this stamp.
 
+## RUN FWD-5 COMPLETE (2026-08-09, owner: "do 5 more exodus blocks
+## and keep up with how much time it takes") — 86 FROZEN · THE
+## PLAGUE CYCLE: EXOD 1-10 CONTINUOUS
+exo_06_i_am_the_lord (Exod 6) · exo_07_staff_and_blood (7) ·
+exo_08_frogs_lice_swarms (8) · exo_09_pestilence_boils_hail (9) ·
+exo_10_locusts_and_darkness (10). 66 oral claims 66/0/0, zero
+fetches; regression 86/86; ALL_UNITS + CORPUS_TRUTH green. WORLD
+refolded + VERIFY GREEN: 1,561 facts · 308 demands · 127 settled
+(16 AUTHORED LINKS — two new this run: exo_06's go-speak →
+Exod.7.6 [the doubled did-as-commanded]; exo_04's wonders-charge
+→ Exod.7.10 [the performance verse]) · 181 OPEN · hash
+dee671001e8fa3b8. Entity registry gained amram, yokheved (2:1's
+withheld parents SIGNED at 6:20 — exo_02's restraint paid),
+elisheva, pinchas. TIMING (owner-requested): run 15:45:21 →
+17:02:23 CDT = 77m02s wall for five blocks (~15.4 min/block;
+block 1 19m48s carried run setup — process re-read, FWD-4
+toolchain recovery from the old session scratchpad, gate
+discovery; blocks 2-5 averaged ~13m45s: exo_07 13m55s, exo_08
+14m02s, exo_09 12m29s, exo_10 13m19s) + ~8 min run-end world
+fold. MACHINE ARC: exo_06 = 3D/1R + the registry bracket
+(6:14-25, the credential-file; the twin attestation order-flip
+asserted) + the say-command popped on the compliance-adverb ken
+(6:9); exo_07 = 4D/2R/1E — plague one; the wonder-duel; the
+SWALLOWING event; the hardening-ledger opens (policy 7:3,
+stations 7:13/7:22 sealed as-He-had-spoken); TWO cross-unit
+receipts land in-span (7:6, 7:10 — authored links, one-world
+law); exo_08 = 6D/4R + DEAD-BY-REFUSAL member 2 (Pharaoh's
+in-the-land grant refused by MOSES at 8:22 — the first human
+refusal OF the throne) — the run's machine-richest: Pharaoh's
+first bargain popped by the right-address cry (8:8 vs 5:15),
+the promise-ledger opens (va-ashalcha breached 8:11 + 8:28,
+NAMED hatel by Moses at 8:25), the craft exits (could-not 8:14,
+finger-confession 8:15), the distinction debuts (8:18-19);
+exo_09 = 5D/3R — THE TURN: the FIRST DIVINE HARDENING at 9:12
+(7:3's policy activates); the seal gains BE-YAD MOSHE (9:35);
+the confession-ledger opens and expires in-span (9:27→9:34,
+graded by 9:30); plague five executes OFF-STAGE (the appointed
+word alone); the branching verse-pair 9:20-21; exo_10 = 6D/5R/
+1E/1 dead-by-refusal — the FIRST ON-STAGE ERRAND-DELIVERY
+(10:3 breaks the unnarrated-compliance pattern at the seventh
+summons); the story-clause debuts (10:2, the Haggada charter);
+the servants' revolt (10:7); the expulsion EVENT (10:11 — 6:1's
+drive-verb spent early on the deliverers); the Reed Sea named
+first (10:19); NOT-A-HOOF kills the flocks-stay grant (10:26,
+dead-by-refusal member 4); the FACE-BAN pushed and accepted
+(10:28-29) with the ISSUER-BREACH armed at 12:31. ORAL MARQUEE:
+the DAGESHED-LAMED rule censused whole (93 stations two-sided;
+Or Torah's except-one meets a second soft — discrepancy filed);
+the MAGICIAN-WORD FRONT-RANK DISCREPANCY (the stream SPLITS the
+Masorah's two-lean pair: FULL with the Hilleli at 8:15, lean
+with the ruling at 9:11 — the second Hilleli-siding since
+gen_58); the FROGS' SOFT TZADI whole across the seam (ten
+plurals soft, the ONE singular hard at 8:2); the FOUR TONGUES
+priced as once-only words (three Torah-unique + the three-
+station bring-out all in the commissioning); the THUNDER-WORD
+file (the Ramah's two lean-first-full-last exact — and Sinai's
+19:16 in the same lean census under the Kitzur's they-return-
+at-Sinai); the BABEL CEASE-PAIR (bond three); the LIGHT-IN-THE-
+DWELLINGS pair (10:23 + Num 31:10's burned cities); the ONE
+FULL GOING-WORD (Joseph's caravan Gen 37:25 — the exile's first
+walk the only one spelled full); the jussive EAT-three and
+REMOVE-three isolated by the vav's half-vowel (feeding-merits;
+the serpents-with-the-plagues); the CURSE THAT CIRCLES BACK
+(אל־תסף "do not again": 10:28 + Deut 3:26) and the DOUBLE
+NEVER-AGAIN (אסף עוד: 10:29 + the flood's Gen 8:21); the
+KINGLESS VERSE (10:18 without Moses' name — the Masorah: "the
+locust has no king," Prov 30:27); the MAJORITY-PRINCIPLE
+station (10:4 — the Ramah fixing the letter by Exod 23:2's own
+after-the-many); the 430 in the short breath (מקצר = 12:41's
+number); the sojournings file closed (gen_59's 2-full-1-lean at
+6:4); gen_40's four lean drink-words re-landing with 7:24's
+one-verse double; the he/alef pair attesting the machine's own
+UNWARNED-THIRDS grid (9:4 + Deut 28:59); TWO sealed-finals
+crowns (the mute fathers 6:3; the blood-star 10:10); the
+sevirin FESTIVAL (four new stations: 7:14, 8:13, 8:20 ×2);
+galgal stations 10-11 (incl. the first word-internal secondary
+— gap deepened — and the first NEGATIVE ruling 9:6); FIVE
+printed-authority corrections; TWO binder-divergences
+dual-tracked (9:23, 10:13). Tooling: FWD-4 toolchain recovered
+cross-session (unitgen.py + fwd4_prestage/notes copied to this
+session's scratchpad); build scripts build_exo06..10_{unit,
+manifest}.py + probes in scratchpad; codepoint-order lesson
+re-learned twice (dagesh-before-vowel in substring asserts).
+Audits AUDIT_exo_06..10_2026-08-09.md; FETCHLOG entry. NOT YET
+COMMITTED — awaiting owner word. OPEN QUEUE additions (9 new):
+exo_06's joint charge (→12:51); exo_07's morning-station +
+frog-errand (unnarrated class); exo_08's swarms-errand +
+in-the-land grant (dead); exo_09's cattle-errand + hail-errand;
+exo_10's flocks-stay (dead) + face-ban (popped, issuer-breach
+armed 12:31). NEXT on owner word: EXOD 11+ (11:1-8 the
+midnight-speech in the severed audience's own doorway — the
+next unit opens MID-SCENE; 11:2 the vessels-borrowing the
+Kitzur pre-armed at 10:1's search-the-houses reading; 12:1-28
+the first commandment-block — the calendar, the lamb, the
+Haggada's own script 12:26; 12:29-36 midnight itself: the
+send-demand's receipt 12:31-32, the ban's issuer-breach, the
+expulsion 12:39; 12:41's 430 = מקצר's cipher; 12:51 the
+charge's receipt; 13:19 the bones-oath receipt armed since
+gen_73).
+PENDING AT COMPACTION (2026-08-09 ~17:3x, owner compacting
+in-thread): (1) FWD-5 NOT YET COMMITTED — tree holds run
+material (5 yamls + 5 py + 5 html + 5 audits + 5 manifests +
+corpus files + FETCHLOG + state doc + UNIT_INDEX + ALL_UNITS)
+plus the three standing exclusions AND one OWNER-MADE edit:
+dev_server.py gained a loopback-guard on /regen (NOT
+Claude's; owner to rule whether it rides with the commit).
+(2) Scroll-app data STALE again (five freezes since the last
+export_web.py chain run; regen chain or app ⟳ after commit).
+(3) OWNER ORDERS this thread: NO agents of any type ever, all
+work in the main thread (memory broadened); commit trailer =
+Co-Authored-By Claude Fable 5 + Claude-Session link (see
+ca502a7/da248b0 for format). RESUME MECHANICS (post-compact
+re-warm): toolchain in THIS session's scratchpad
+<scratch-root>/
+d4eefe05-2c05-49e2-84ff-9e2aeb395520/scratchpad/ — unitgen.py
+(skeleton generator; per-unit build scripts sys.path it),
+fwd4_prestage.py N (chapter dump), fwd4_notes.py ms|kb N
+(oral dumps), build_exo06..10_{unit,manifest}.py (TEMPLATES —
+copy the newest pair for the next block), fwd5_probe_*.py
+(probe patterns), fwd5_t0.txt (block stamps). ALL scripts run
+from REPO ROOT (DBs are root-relative). Gate sequence per
+block: build manifest py → verify_claims.py <manifest> (0
+FAILED) → build unit py → gloss_lint.py <yaml> --no-translit
+→ verify_text.py <uid> → preflight.py <uid> → freeze_ritual.py
+<uid> → audit md → next block. Run-end: settlement links +
+entity registry appends → python3 corpus_world.py → python3
+logic/corpus/CORPUS_TRUTH.py (green) → FETCHLOG → state doc.
+CONVENTIONS re-learned this run (do not re-derive): dagesh
+PRECEDES vowel in codepoints (substring asserts: use לּ/מּ/סַפּ
+forms, never letter+vowel+dagesh); meteg may precede vowel;
+gloss_lint flags hyphenated compounds with non-dictionary
+parts (no "-ing" compounds; use Hebrew script + gloss for
+stroke-jargon in oral notes; machine-op prose translit is
+fine); REFUSED demands encode as PRECONDITION_STATE (exo_01
+precedent), never RESULT-without-HOLDS, and the dead card
+stays in expects as pushed-and-OPEN; verse_token_count
+translit must match the DB column exactly (hyphenated, e.g.
+u-vi-zeqene-nu); scenario expects list only OPEN cards +
+BASE "no test, no name."; unit title_he sliced from DB via
+join_tokens, never retyped.
+
+## MACHINE TRANSFER + RECOVERY (2026-08-09 evening) — READ THIS
+## FIRST ON THE NEW MACHINE. 90 FROZEN · EXOD 1-14 CONTINUOUS ·
+## exo_15 MID-BLOCK (manifest verified, unit not built)
+THE CRASH + THE UNRECORDED SIXTH RUN: after the FWD-5 compaction,
+owner ordered "Process the next 5 blocks of exodus" (17:22 CDT;
+run start stamp 17:23:07). Blocks exo_11_one_more_plague (Exod
+11) · exo_12_passover_and_exodus (12) · exo_13_consecration_and_
+pillars (13) · exo_14_the_sea_splits (14) all DERIVED + FROZEN
+with full artifacts (yaml/py/html/audit/manifest; AUDIT_exo_11..
+14_2026-08-09.md; ALL_UNITS + UNIT_INDEX at 90; world refolded
+through exo_14, CORPUS_TRUTH updated 90 units / 1,654 facts /
+321 demands / 188 open, hash 00a89de730fb8e70). Block 5 = exo_15
+(Exod 15, the Song + Marah): manifest BUILT + VERIFIED 13/13/0
+in-session at 18:27:44, session DIED 18:27:53 mid-first-look at
+the Song's verse structures — NO unit yaml/py/html/audit for
+exo_15. Block timings (t0 + file mtimes + in-run narration):
+exo_11 ~10m, exo_12 ~21m, exo_13 ~12m, exo_14 ~14m03s, exo_15
+~7m to crash. Process lesson from exo_11: a he_contains check
+misfires against the accented column (vowels interleave) — use
+translit token count instead. RUN-6 RUN-END BOOKKEEPING NEVER
+RAN: no FETCHLOG entry, no state-doc run section, no registry/
+settlement appends — write these before/at commit. The machine
+then MOVED: old Mac (<old-home>/code/Torah_Grok)
+RETIRED — never modify it; <repo-old> is the SOLE
+TRUTH. TRANSFER AUDIT (same evening, this machine) ALL GREEN:
+ALL_UNITS 90/90 self-proof · CORPUS_TRUTH green · verify_text +
+preflight green on exo_14 · exo_15 manifest re-verified 13/13 ·
+Sefaria mirror intact (92 files, 697M) · both sqlite DBs intact
+· origin synced at da248b0 (HEAD = FWD-4 stamp; TWO runs
+uncommitted: FWD-5 with bookkeeping done + run-6 without).
+TRANSCRIPT FORENSICS (old-Mac transcripts recovered + mined):
+NO unrecorded owner orders (last owner message = the run order),
+NO unwritten findings (the verified manifest is exo_15's whole
+inheritance). OLD MEMORY PORTED: all 14 memory files now in this
+machine's memory dir + merged index (standing laws incl. the
+ABSOLUTE Hebrew-glossing rule survive). TOOLCHAIN RECOVERED +
+VERIFIED (build_exo15_manifest.py re-run BYTE-IDENTICAL):
+working copy in session scratchpad /private/tmp/claude-501/
+<project-folder-old>/84f240ea-617c-4804-a559-b7b14425d931/
+scratchpad/ (unitgen.py, fwd4_prestage.py, fwd4_notes.py,
+build_exo06..14_{unit,manifest}.py templates, build_exo15_
+manifest.py, fwd6_prestage/ms/kb_exo15.txt + fwd6_probe_exo15.py
+already pulled); DURABLE backups in DISPOSABLE_scan/:
+old_mac_tmp_scratchpads_backup.zip (toolchain — working set
+under d4eefe05-*/scratchpad/) + <old-mac-project-folder>
+Grok.zip (transcripts + memory). If the scratchpad is gone
+(reboot), re-extract from the zip. open_ledger/ provenance
+RESOLVED: owner's own doc-45 resolver workspace (own git, like
+elijah_docket; see elijah-ezekiel-deferral memory) — untracked
+pending owner word. PENDING (owner rulings): (1) commit word
+for both runs (trailer: Co-Authored-By Claude Fable 5 + Claude-
+Session link, see ca502a7); (2) dev_server.py loopback guard =
+OWNER'S edit, rides or not on owner word; (3) scroll-app data
+now TEN freezes stale — regen chain after commit; (4) standing
+elijah_docket-gitlink + Nakh-XML question; (5) recommend
+committing the toolchain into the repo (e.g. logic/solo_tools/
+fwd/) so a machine change can't cost it again. NEXT on owner
+word: run-6 bookkeeping → commit → exo_15 resumes at the
+BUILD-UNIT step (gate sequence and conventions per the FWD-5
+RESUME MECHANICS above; all standing orders unchanged — no
+agents ever, all work in the main thread).
+
+## RUN FWD-6 COMPLETE (2026-08-09; blocks 1-4 pre-crash, block 5
+## REDONE post-transfer on owner order "redo exodus 15") — 91
+## FROZEN · EXOD 1-15 CONTINUOUS · RUN-6 BOOKKEEPING WRITTEN
+exo_11_one_more_plague (Exod 11) · exo_12_passover_and_exodus
+(12) · exo_13_consecration_and_pillars (13) · exo_14_the_sea_
+splits (14) · exo_15_the_song_and_marah (15). 65 oral claims
+65/0/0, zero fetches; regression 91/91; ALL_UNITS + UNIT_INDEX
+at 91; ALL GATES GREEN on exo_15 (build asserts first-run green;
+gloss_lint 3 flags fixed at source → 0; verify_text; preflight —
+one honest flag, the Marah name-write before presence;
+freeze_ritual complete). WORLD refolded + VERIFY GREEN: 1,681
+facts · 324 demands · 188 OPEN · 18 AUTHORED LINKS (two new,
+both pre-queued by prior runs' notes: exo_06's joint charge →
+Exod.12.51; gen_73's bones-oath → Exod.13.19 — the open-count
+holds at 188: the two new opens [Miriam's shiru, unnarrated
+class; the listen-covenant, perpetual class] exactly offset the
+two settlements) · hash 1db42dfddc0d2f64. Registry gained
+MIRYAM (the 2:4 sister signed at 15:20, titled prophetess —
+exo_02's restraint pays its third installment). TIMING
+(owner-requested): exo_15 redo 20:50:58 → 21:10:04 CDT =
+19m06s wall (inheritance re-read + conventions ~9m, authoring
+~7m, gates ~3m; first-session spend pre-crash ~7m). exo_15
+MACHINE: 3D/1R/2E/1N — the SONG EVENT (refrain's seven tokens
+returned VERBATIM at 15:21, asserted); the enemy's five dead
+vows quoted unpushed (15:9); the murmur-form's Torah-three
+asserted (15:24 + Num 14:2 + Num 17:6); ma-nishte pushed 15:24
+POPPED 15:25 by the SWEETENING EVENT (first repair-miracle;
+7:21's could-not-drink returned at 15:23, full vs lean); Marah
+NAMED (REGISTRY 1); the first statute-station + verdict-less
+test (TESTS 0; 16:4 armed); the LISTEN-COVENANT perpetual-OPEN
+(19:5 armed); Elim closes the water-arc. ORAL MARQUEE: the
+guard-dageshim (MICAH barred from the Song by one dot; defiled
+barred from the redeemed; the stone barred from silencing); the
+TWO LEAN LIKE-YOU'S both in one verse (census exact) with the
+mute-reading (the darkest praise); the TEN SONGS on the yod;
+the people FORMED TWICE (redemption as second creation); the
+dwelling-cipher (752=752); the ANAGRAM-PHARMACY (disease = the
+bread = the salt; 83 on the gall; springs juxtaposed); the
+REIGN-CUTOFF chain-vs-stream divergence (the Kitzur's paseq vs
+the stream's unbroken reign — dual-tracked); the
+ONCE-VOCALIZATION (Rashi's nothing-like-it on the cover-word);
+the NOSTRIL-PAIR (Adam's sweat / the Name's blast — MS's own
+pair-note); the FIVE SENDINGS (stayed knife to released bird);
+the THREE REFOUNDINGS (Marah, Shechem, Ezra); the BUTCHERED
+CHOICE; the SONG-LAYOUT LAW CLOSED at 15:20 (one column, five
+lines before and five after — 14:25's arm executed). Artifacts:
+yaml/py/html/audit/manifest complete; AUDIT_exo_15_2026-08-09.md
+carries the full timing. RUN-6 BOOKKEEPING WRITTEN AT THE REDO
+(owed from the crash): FETCHLOG run-entry, this section, the
+registry + settlement appends. PENDING (owner rulings): (1)
+COMMIT WORD — the tree now holds runs FWD-5 + FWD-6 complete
+(trailer: Co-Authored-By Claude Fable 5 + Claude-Session link,
+see ca502a7); (2) dev_server.py loopback guard = OWNER'S edit,
+rides or not on owner word; (3) scroll-app data ELEVEN freezes
+stale — regen chain after commit; (4) standing elijah_docket-
+gitlink + Nakh-XML question; (5) toolchain-into-repo
+recommendation stands (logic/solo_tools/fwd/); build_exo15_
+unit.py currently in session scratchpad f4075c2e-*/scratchpad/
+(+ durable zips in DISPOSABLE_scan/). NEXT on owner word: Exod
+16+ (the manna — 16:2's murmur WITH AARON armed; 16:4 the
+test-verb's next station; the Sabbath's first narrated law) —
+or as the owner directs. CLEAN COMPACTION POINT: this is one
+(run complete, world green, bookkeeping written, nothing
+mid-flight but the commit word).
+
+## RUN FWD-7 COMPLETE (2026-08-09, owner: "do one more block") —
+## 92 FROZEN · EXOD 1-16 CONTINUOUS
+exo_16_manna_and_sabbath (Exod 16, 36 vv — the manna, the
+murmurings, the test's verdict, the first human Sabbath). 13
+oral claims 13/0/0 FIRST RUN, zero fetches; regression 92/92;
+ALL_UNITS + UNIT_INDEX at 92; all gates green (gloss_lint one
+flag fixed at source). WORLD refolded + VERIFY GREEN: 1,703
+facts · 331 demands · 189 OPEN (+1 = the perpetual daily rule)
+· 18 authored links (none new) · hash c8cc330a578d5d49. No
+registry/settlement appends (no debuts; no cross-unit receipts
+— 16:2's Aaron-add and 16:4's test-verb were exo_15 ARMS, both
+PAID on schedule). TIMING: block 21:30:38 → ~21:46:25 CDT ≈
+15m50s to ritual-complete (prestage+probes ~7m, manifest ~4m
+verified first-run, build ~4m, gates green). MACHINE: 7D/6R/2E/
+1N/1 TEST-FAIL — the corpus's first LAW-LOOP chapter (five
+compliance-formula pops: va-yaasu-khen 16:17, the double 16:22,
+as-Aaron-spoke 16:10, as-Moses-commanded 16:24, as-the-LORD-
+commanded 16:34); leave-none-over PERPETUAL (breached once —
+the worms 16:20 — kept 16:21); THE FIRST HUMAN SABBATH pops the
+boundary-card (16:30, va-yishbetu Torah-unique asserted; Gen
+2:2 answered); the glory's first public appearance (16:10); the
+TEST of 16:4 (Marah's nisahu paid) FAILS at 16:28 on מאנתם
+("you refuse" — Torah-unique plural: PHARAOH'S verb handed to
+Israel); the house names the manna MAN (first collective
+naming; the man-hu question hardened into a noun; REGISTRY 1);
+two ketiv/qere pairs, both on the murmur-verb; the rain-verb's
+Torah-three (flood→hail→bread); the wrath-verb five (Moses'
+first anger); know-ledger opens Israel's account (6:7 paid at
+supper). ORAL MARQUEE: the UNIQUE MURMURINGS spelling (printed
+Masorah corrected — the file's next station); the Ramah's THREE
+LEAN SEVENTHS census-exact (leaven-day, first-rest, Jubilee-
+horn); the QUAIL-PAIR (gift/grave); the ALPHABET-VERSE (all 22
+letters in the omer-law); the ELIJAH INITIALS machine-verified
+(initial_letters check debut); the FENCE-ORDER (weekday added
+to holy at both ends); the BOUNDARY unique (rest as geometry);
+SIN = THE BUSH (120=120); the 248 hapax; the WORMLESS SABBATH;
+the THREE-DOT lifting vowel (worm-rise vs glory-rise). Artifacts
+complete (yaml/py/html/audit/manifest; AUDIT_exo_16_2026-08-09.
+md carries timing). PENDING unchanged from FWD-6 note: commit
+word for FWD-5 + FWD-6 + FWD-7 (three runs now in the tree);
+dev_server.py owner-edit ruling; scroll-app data TWELVE freezes
+stale; elijah_docket/Nakh-XML standing question; toolchain-into-
+repo recommendation (build_exo15/16_* in session scratchpad
+f4075c2e-*/scratchpad/). NEXT on owner word: Exod 17 (Rephidim
+— the thirst repeated at Massah-Meribah, the cry 17:4 armed;
+Amalek 17:8; the staff and the hands) — or as the owner
+directs. CLEAN COMPACTION POINT: run complete, world green,
+bookkeeping written, nothing mid-flight but the commit word.
+RESOLVED 2026-08-10 (owner: "commit push"): RUNS FWD-5+6+7
+COMMITTED+PUSHED fec1e72 (61 files, 40,571 insertions — all
+eleven units exo_06-16 with audits, manifests, py renderings,
+HTML pages, world files; origin synced). Exclusions stand:
+grok-mockups/, elijah_docket gitlink, open_ledger/ (the three
+owner-ruled), plus DISPOSABLE_scan/ transfer zips (untracked)
+and dev_server.py (owner's loopback-guard edit, still unruled —
+sits modified-unstaged in the tree). STILL PENDING: scroll-app
+data regen (TWELVE freezes now stale: exo_06-16 absent from
+web/scroll/data — the ~5-min chain index_units -> index_triage
+-> export_web on owner word); elijah_docket/Nakh-XML standing
+question; toolchain-into-repo recommendation (build_exo15/16_*
+only in session scratchpad f4075c2e-*/scratchpad/ + the
+DISPOSABLE_scan zips). COMPACTION POINT #16 = the commit of
+this stamp.
+
 ## DISCLOSURE (never commit to main repo; owner's private docs)
 "God's Open Source Software Project" (LeBlanc_Epic_Certainty_layperson doc)
 has its own PRIVATE git repo inside Disclosure/. EVERY edit = diff in thread
