@@ -877,3 +877,14 @@ three-dot lifting vowel (worm-rise pointed apart from
 glory-rise). TIMING (owner-requested): block wall 21:30:38 →
 ~21:46:25 CDT ≈ 15m50s to ritual-complete (+~2m fold and
 records); manifest verified first-run.
+
+## RUN FWD-8 (2026-08-10) — exo_17..exo_21 (Exod 17-21, five blocks)
+
+ZERO WEB FETCHES. All oral scans from the local mirror
+(torah_grok.sqlite export_texts): Minchat Shai + Kitzur Baal HaTurim
+per chapter (17: 10+13 notes; 18: 18+18; 19: 16+16 + targeted Rashi
+pulls 19:1-2, 19:20-25; 20: 30+22 incl. the double-cantillation
+essay; 21: 19+34). Five manifests, 65 rows, all VERIFIED first run
+(one row self-sharpened at EX17-05: the pausal or-not pair). Two
+tradition-vs-SNAPSHOT divergences filed openly at exo_19 (19:11's
+second third-word; 19:19's shofar) — dual-tracked, stream standing.
