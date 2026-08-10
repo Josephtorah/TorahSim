@@ -1268,6 +1268,102 @@ only in session scratchpad f4075c2e-*/scratchpad/ + the
 DISPOSABLE_scan zips). COMPACTION POINT #16 = the commit of
 this stamp.
 
+## RUN FWD-8 COMPLETE (2026-08-10, owner: "lets do 5 more blocks")
+## — 97 FROZEN · EXOD 1-21 CONTINUOUS · THE MOUNTAIN REACHED,
+## THE LAW GIVEN, THE CODE OPENED
+exo_17_massah_and_amalek (Exod 17) · exo_18_jethro_and_the_judges
+(18) · exo_19_sinai_and_the_covenant (19) ·
+exo_20_the_ten_utterances (20) · exo_21_the_ordinances (21).
+65 oral claims 65/0/0 across five manifests, ALL FIRST-RUN CLEAN
+(one row self-sharpened: EX17-05's or-not census is a PAUSAL-form
+pair — stronger than drafted); zero fetches; regression 97/97.
+WORLD refolded + VERIFY GREEN: 1,809 facts · 341 demands · 191
+OPEN · hash 8b8fff1fa28953af (the +2 opens are the two cards the
+text leaves standing: Sinai's fence 19:12 awaiting its
+ram's-horn, and the write-command against Amalek 17:14). Entity
+registry gained yehoshua, chur, eliezer_ben_moshe (the
+longest-deferred name — surfaced report-class at 18:4), amaleq.
+No settlement links (3:12's mountain-sign was mandate-class, no
+card; the wire lives in exo_19's prose). MACHINE ARC: exo_17 =
+4D/3R/2E/2N — two theaters (the water court: the people's first
+imperative demand + the strike-order both pop on one va-yaas-ken;
+the war: Joshua's debut-compliance; the TORAH'S FIRST
+WRITE-COMMAND stands OPEN; two NAMEs on one naming-verb — the
+double charge-sheet Masa-u-Meriva and the banner-altar; the
+im-lo/im-ayin mirror; the kaved-root crosses to Moses' hands).
+exo_18 = 1D/1R/1E — the corpus's first ADVISORY declare
+(Jethro's counsel, self-gated on ve-tzivkha, popped ear-to-ear
+with 18:1's hearing); the know-ledger's first voluntary foreign
+deposit; the Torah's TWO not-goods (Eden's alone / Jethro's
+alone, census exact — machine evidence). exo_19 = 4D/3R/2E —
+the corpus's largest exchange (the covenant offer pops on the
+unanimous naase; the condition runs perpetual); the warning
+pops MID-SENTENCE at 19:25 (the open mouth); the singular camp
+(va-yichan Torah-three: Isaac, Jacob, ISRAEL — one man, one
+heart, Rashi in-mirror); the kaved-root reaches the Presence
+(the heavy cloud). exo_20 = FOURTEEN STATUTES/1D/1R/1E — the
+STATUTE-CLASS DEBUT in the stack: the Ten installed one per
+utterance (STATUTES 10 standing at 20:17, machine-counted),
+the altar-code's four after; THE DECALOGUE'S ARITHMETIC
+MACHINE-VERIFIED: 620 letters = KETER, 172 words = EQEV,
+alef-to-kaf, the Torah's ONLY six two-word verses (both
+Decalogues), the double-pointed tokens (the two-reading
+system's trace in the SNAPSHOT); the mediation-demand pops IN
+GEOMETRY (the people far, Moses into the arafel = shekhina,
+385); the kaved-arc REDEEMED into KABED (honor). exo_21 =
+9 CASES/14 HANDLERS/4 STATUTES/0D/0R/0E — the first PURE
+CASUISTIC CODE (lev_13's operators at their source; the first
+exodus unit with no narrative op; the queue closes empty);
+19:13's stoning-pair lands at the ox IN-SPAN; Marah's Healer
+answered by the physician's license (ירפא the Torah's only,
+with English: "he shall surely heal"); the awl's 400; the
+vav-to-vav freedom verses (26 words = the limbs); the thief's
+pericope runs past the chapter (armed to Exod 22). ORAL
+MARQUEES: the blot-pair (the FLOOD and AMALEK, the Torah's
+only two I-will-blot-outs) + this-is-Haman (107); the fly
+acrostic (initials of the write-command = זבוב, "a fly,"
+machine-checked); the throne-oath's ciphers (David 24, the
+days of Messiah 448; כס יה the hapax + half-Name; five
+two-letter words); the three lean rescues (two in Jethro's
+chapter); the two counselors (Jethro and BALAAM, the only
+Torah pair); the printed Masorah corrected/convicted FOUR
+times (the on-account four, the ascent-roster's forgotten
+fourth, the voices/torches inversion, the full asehu); the
+crown-count 620/172 verified on the SNAPSHOT itself. TIMING
+(owner-requested): run t0 07:01:17 → block 5 ritual complete
+08:11:18 CDT = 70m01s wall for FIVE blocks (~14m0s/block:
+exo_17 18m12s carried the post-compaction setup; exo_18
+11m52s; exo_19 12m28s; exo_20 11m54s — the Decalogue under
+twelve minutes; exo_21 12m39s, 37 verses) + ~7m run-end
+(registry, fold, records). All five manifests first-run
+clean — the process's first zero-FAILED-zero-retry run.
+NOT YET COMMITTED — awaiting owner word (FWD-8 only; FWD-5/6/7
+committed fec1e72 + stamp 899459e, pushed). PENDING unchanged:
+dev_server.py owner-edit ruling; scroll-app data now SEVENTEEN
+freezes stale (exo_06-21 + prior); elijah_docket/Nakh-XML
+standing question; toolchain-into-repo recommendation (all
+build_exo* scripts in session scratchpad f4075c2e-*/scratchpad/).
+NEXT on owner word: Exod 22 (the code continues — the
+tunneler, the four bailees, the seducer, the sorceress, the
+poor man's cloak at sunset: 17:12's lean sun-twin arrives) —
+or as the owner directs. CLEAN COMPACTION POINT: run complete,
+world green, bookkeeping written, nothing mid-flight but the
+commit word.
+RESOLVED 2026-08-10 (owner: "commit and push"): RUN FWD-8
+COMMITTED+PUSHED 7983f3b (30 files, 16,470 insertions — all five
+units exo_17-21 with audits, manifests, py renderings, HTML
+pages, world files; origin synced). Exclusions stand:
+grok-mockups/, elijah_docket gitlink, open_ledger/,
+DISPOSABLE_scan/ zips, dev_server.py (owner's edit, still
+unruled). TIMING REVIEW DELIVERED same thread (owner: "review
+the steps"): per ~12m block — unit-authoring ~30-35%,
+input-reading ~25-30%, manifest ~25%, ritual ~12%, probes ~10%;
+block-1 setup tax ~6m (toolchain-into-repo is the fix, on owner
+word); gloss_lint self-check habit adopted (the three recurring
+flag patterns); ritual regression grows with corpus size (noted;
+no change proposed — gate law untouched). COMPACTION POINT #17 =
+the commit of this stamp.
+
 ## DISCLOSURE (never commit to main repo; owner's private docs)
 "God's Open Source Software Project" (LeBlanc_Epic_Certainty_layperson doc)
 has its own PRIVATE git repo inside Disclosure/. EVERY edit = diff in thread
