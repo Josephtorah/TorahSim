@@ -1507,6 +1507,14 @@ coverage accumulates toward exo_21_the_ordinances re-derivation). Scan notes:
 scratchpad law01_scan_notes.md (digest per batch, gen_08 style). gen_08
 check CLOSED: reports on Desktop (epub + v1-vs-v2 md); findings ledgered,
 254 readable unread, resumable; dupe rate ~1-in-4 of 90 MAJORs measured.
+COMMITTED 2026-08-11 (owner word): block-1 scan completion committed +
+PUSHED as 11a6b03 (ledger 1,962 rows, 430KB notes mirror with 84 digests,
+patched dump, state doc updates 8-9). Next move agreed: block-1 CODING
+phase — distill the 84 digests into a claims/insight manifest for 21:1-11
+(oral_audit manifest form), then derive the v2 machine structure with
+oral-Torah witnesses per element; exo_21 v2 freeze waits on blocks 2-3
+scans (chapter gate). Unit-structure question (one v2 unit vs sub-units)
+deferred to freeze-time, owner's call.
 ★ BLOCK 1 SCAN COMPLETE 2026-08-10 (9th update, after bite 84): 1,962/1,962
 required listings read-and-ledgered (100%) in 84 bites — 1,936 readable +
 26 Tanakh crossrefs (--tanakh mode; law01_dump.py patched he_plain->he for
