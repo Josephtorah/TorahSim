@@ -1545,7 +1545,13 @@ dump calls MUST redirect stdout (> law02_batchN.txt — bite 8 was
 reconstructed from ledger+DB after a stdout slip). NEXT: bite 20 (dump →
 read → digest), 503 readable left ≈ 8-12 bites, then 28 tanakh crossrefs
 (--tanakh), then block 3 (Exod 21:28-36 goring ox) extends the same
-ledger toward the exo_21 chapter gate. ALL UNCOMMITTED, await word.
+ledger toward the exo_21 chapter gate. COMMITTED+PUSHED 2026-08-11 on
+owner word as eff6806 (block-1 coding bundle + block-2 scan bites 1-19 +
+law02 mirror + state doc updates 10-11; origin synced, tree clean except
+the standing never-commit leftovers). COMPACTION POINT #19 stamped here —
+resume: read this doc, then bite 20 per the law02 notes RESUME HEADER
+(scratchpad kit repoint per session; mirror copy in
+logic/law_era/scratch_mirror/).
 ★ BLOCK-1 v2 DERIVATION DRAFTED 2026-08-11 (10th update, owner word "derive
 the logic"): the coding phase ran — (1) CLAIMS MANIFEST
 logic/oral_audit/manifests/law01_exo_21_1_11_claims.json: 39 claims
