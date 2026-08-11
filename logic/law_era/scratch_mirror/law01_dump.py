@@ -100,7 +100,7 @@ def main():
             print("=== %s ===" % sr)
             for v in range(v1, v2 + 1):
                 he = " ".join(x[0].replace("/", "") for x in tdb.execute(
-                    """SELECT w.he_plain FROM words w JOIN verses vv
+                    """SELECT w.he FROM words w JOIN verses vv
                        ON w.verse_id=vv.id WHERE vv.book=? AND vv.chapter=?
                        AND vv.verse=? ORDER BY w.idx""", (b, c, v)))
                 print("%s %d:%d  %s" % (b, c, v, he))

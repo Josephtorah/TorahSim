@@ -1507,6 +1507,95 @@ coverage accumulates toward exo_21_the_ordinances re-derivation). Scan notes:
 scratchpad law01_scan_notes.md (digest per batch, gen_08 style). gen_08
 check CLOSED: reports on Desktop (epub + v1-vs-v2 md); findings ledgered,
 254 readable unread, resumable; dupe rate ~1-in-4 of 90 MAJORs measured.
+★ BLOCK 1 SCAN COMPLETE 2026-08-10 (9th update, after bite 84): 1,962/1,962
+required listings read-and-ledgered (100%) in 84 bites — 1,936 readable +
+26 Tanakh crossrefs (--tanakh mode; law01_dump.py patched he_plain->he for
+the new-Mac tanakh.sqlite). BLOCK-1 GATE GREEN, verified mechanically
+(required set fully ledgered, 0 unread, 0 unruled). The chapter-wide
+oral_coverage gate for exo_21_the_ordinances remains FAIL BY DESIGN: 2,943
+unread rows anchor at 21:12-37 — blocks 2-3 territory, accumulating in the
+same ledger (now 1,962 rows). This is the FULL ORAL TORAH LAW's first
+completed full-inversion scan. Bites 81-84 closed the Yalkut stratum + the
+Tanakh ring: the Mechilta/Kiddushin weave (the four-times transmission
+protocol at our header; the dayo-principle on the convert; the עבודת-עבד
+ban unpacked [no foot-washing/litter-carrying]; Rava's perutah-window for
+the declaration; the kohen-shifchah Rav/Shmuel fork; התורה אמרה במרצע
+והלכה אמרה בכל דבר verbatim at remez 317 + the THREE-PLACES row closed at
+898:7 [הלכה עוקרת מקרא: dust/get/awl — our מרצע canonical]); the TRIAD
+PERMUTATION TABLE (Yalkut 321: R. Yoshiyah food/clothing/conjugal vs R.
+Yonatan age- and SEASON-indexed clothing vs Rebbi conjugal/clothing/food —
+every member migrates; Rav Yosef's body-closeness against the Persian
+manner; "I in my garment, she in hers" = divorce + ketubah); the
+SALE-PROPORTIONALITY sugya (342:6: not-less-not-more, sold WHOLE never
+half, the victim's sell-or-note OPTION, the recidivism asymmetry — coerced
+redemption for her, not him, "he would sell himself again"); the
+severance-grant eligibility table (898:3, with R. Meir's flip and the
+sick-slave's free idleness); MOSES AS THE NIRTZA (814:3 — the Jordan
+plea in OUR declaration-formula: לא אצא חפשי "I do not wish to die,"
+Deut 3 ↔ 21:5 settlement-link CONFIRMED at its locus); kiddushin-by-money
+FOUNDED on our אין כסף (936:5 — tractate Kiddushin's opening derivation);
+the father's-rights table rooted in the amah verse (320:2-3); the
+three-way בבגדו fork (betrayal/reneged-master/garment-canopy, 320:4);
+לעם נכרי as a warning TO THE COURT; the woman-owner propriety ban
+(665:11, converging with the Rogatchover); Maharshal's two-witness door
+(no door without its post — the piercing-scene needs two witnesses); the
+yefat-toar terminating in OUR triad (925:1); and the Tanakh ring itself —
+בשפטים גדולים (the Exodus as court-act), מר דרור (the release-word in the
+anointing oil), II Kgs 4:1 (the creditor coming for the widow's two
+children — the live abuse-case Elisha reverses), כי לי בני ישראל עבדים in
+situ. NEXT: the coding/derivation phase for block 1 on owner word ("we
+will code later"); blocks 2-3 scans extend the same ledger machinery.
+PROGRESS 2026-08-10 (8th update, after bite 80): 80 bites read, 1,896/1,962
+(96.6%); ledger 1,896 rows; notes mirror re-copied (408KB). Bites 69-80
+closed the R-T strata: RALBAG complete (the 31 numbered roots — law-as-code
+in the medieval original: child-support six-year floor FROM the term-length,
+the sick-slave interpolation between hireling and resident, three judges by
+parity-argument from the plural אלהים ["judges"], the causal-lapse principle
+[when the cause lapses the effect lapses — pierced slave serves no heir],
+the fruit-sale temporal-title analogy [none can sell more time than he
+owns]); RASHBAM complete (the peshat manifesto AT OUR HEADER — "halakhah
+uproots the text" as the declared two-layer architecture; peshat forks
+logged: לעולם ["forever"] = lifetime, עונתה = DWELLING not conjugal right);
+RAV HIRSCH complete (the lecture-notes manifesto in full — written Torah =
+short notes on the lived lecture, "sphinxes to the uninitiated"; the
+NO-PRISON thesis; repayment-not-punishment + the proportionality gate [sale
+only if theft ≥ six years' work-value] + the victim's veto; the six/seven
+theology of the term; the anti-forced-marriage law [forbidden to betroth a
+minor until she says "THIS is the man I want"]; the hairbreadth maxim —
+Torah's only husband-duties law legislated on the beggar's child, "not by
+one hairbreadth may treatment differ"; crime-and-poverty placed AT THE HEAD
+of the rights-code); SHEILTOT 58 (the geonic court-constitution on our
+header: three-judge derivation duel, layman-agency, error liability,
+compromise-as-mitzvah); SHULCHAN ARUKH rows (agency doctrine codified CM
+1:1; consent cannot cure a gentile judge CM 22:2; the מורד rebellion-fines
+running on OUR לא יגרע ["he shall not diminish"] EH 77); TRACTATE AVADIM
+(the minor tractate: piercing as formal kinyan-mode, yiud unwaivable by
+contract [מתנה על מה שכתוב בתורה], yiud-beats-redemption priority algebra,
+brother excluded, the Yishmael/Akiva piercing-conditions fork); the
+ROGATCHOVER (piercing admits no agent — essential-actor formalism;
+body-title cannot vest by halves; the yiud-to-son power DERIVED from the
+marry-off-your-son duty; four stacked readings of אין כסף ["no money"];
+pilegesh = amah-yiud grade); TANNA DEBEI ELIYAHU 23 (the women's-law
+charter: the amah never sent to market — the Mahari Bruna precedent's
+aggadic source; famine-exploitation analysis grounding the daughters-first
+estate takkanah; professional-liability midrash — physician/flogger/
+teacher/judge who killed leave their profession); TOLEDOT YITZCHAK (the
+market-clearing analysis: the shifchah-license exists to make the married
+thief SALEABLE — pricing, not welfare; the door/ear/reformed-thief
+trust-certification); SIFTEI KOHEN (Decalogue→Mishpatim expansion map with
+OUR yiud/onah clauses as the adultery-commandment's machinery; the
+judge-virtue compensation map — code sections tailored to the four missing
+judicial virtues; Zohar: slaves EXEMPT from the yoke of Heaven — human
+mastery and divine Kingship as exclusive occupancies; the Torah-as-amah
+allegory with the Ark as her litter); plus Saadia's Arabic renderings
+(header = "RECITE before them," onah = "her times," piercing = branding),
+Soferim's qere-ketiv triple (לא יעדה canonical), ShirR's esoteric fork on
+תשים (graded concealment vs universal promulgation), the flood-as-
+lawlessness lexeme anchor (אין משים אלא דין from OUR header), Hagar under
+OUR לעם נכרי sale-ban (Gen 16 ↔ 21:8), and Moses' commission as the שימה-
+reversal of מי שמך. NEXT: ~40 readable rows (~2-3 bites), then 26 Tanakh
+crossrefs (--tanakh mode) = full coverage; then the coding phase on owner
+word. NOTE: owner said "Do 10 more" — 12 were done (69-80, overshot by 2).
 COMMITTED 2026-08-10 (owner word, post-compaction #18): the day's law-era
 work committed + PUSHED as 1cfb827 — FULL ORAL TORAH LAW codified in
 PROCESS.md, oral coverage gate wired into freeze_ritual.py, Talmud shelf
