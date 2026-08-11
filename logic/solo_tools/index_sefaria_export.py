@@ -31,10 +31,12 @@ BOOKS = {"Genesis": "Gen", "Exodus": "Exod", "Leviticus": "Lev",
 
 
 def walk(node, path, out):
-    """Recursively walk a merged.json text node; emit (ref_suffix, text)."""
+    """Recursively walk a merged.json text node; emit (path_tuple, text).
+    List indices become ints (1-based), dict keys stay strings — the ref
+    formatter needs the distinction (Sefaria citation form)."""
     if isinstance(node, str):
         if node.strip():
-            out.append((":".join(str(p) for p in path), node))
+            out.append((tuple(path), node))
     elif isinstance(node, list):
         for i, child in enumerate(node, 1):
             walk(child, path + [i], out)
@@ -43,20 +45,54 @@ def walk(node, path, out):
             walk(child, path + [k], out)
 
 
+def daf(n):
+    """1-based outer section index -> Talmud folio ref: 3 -> '2a', 4 -> '2b'.
+    (Verified: Berakhot section 3 opens the tractate's first words at
+    folio 2a — the export convention; sections 1-2 = folio 1, empty.)"""
+    return "%d%s" % ((n + 1) // 2, "a" if n % 2 else "b")
+
+
+def make_ref(title, path, is_daf):
+    """Sefaria citation form (matches export_links source_ref): named
+    sections join with ', ', the numeric tail joins with ' ' then ':'.
+    'Mekhilta DeRabbi Yishmael' + ('Tractate Pischa', 5, 6) ->
+    'Mekhilta DeRabbi Yishmael, Tractate Pischa 5:6';
+    'Sifra' + ('Acharei Mot', 'Chapter 4', 11) ->
+    'Sifra, Acharei Mot, Chapter 4 11'. Numeric-only paths reproduce
+    the pre-2026-08-10 refs byte-identically ('Sifrei Devarim 334:3',
+    'Kitzur Ba'al HaTurim on Exodus 21:6:1'); daf works folio-map the
+    first numeric ('Berakhot 2a:7')."""
+    i = 0
+    while i < len(path) and isinstance(path[i], str):
+        i += 1
+    named, nums = path[:i], list(path[i:])
+    if is_daf and nums:
+        nums = [daf(nums[0])] + nums[1:]
+    ref = title
+    for nm in named:
+        if nm.strip():  # complex-schema default nodes carry a "" key
+            ref += ", " + nm
+    if nums:
+        ref += " " + ":".join(str(n) for n in nums)
+    return ref
+
+
 def load_work(dirpath):
-    segs = {}  # ref_suffix -> [he, en]
+    segs = {}  # path_tuple -> [he, en]
+    title, is_daf = dirpath.name, False
     for lang, fname in (("he", "he.json"), ("en", "en.json")):
         f = dirpath / fname
         if not f.exists():
             continue
         data = json.loads(f.read_text(encoding="utf-8"))
         title = data.get("title", dirpath.name)
+        is_daf = (data.get("sectionNames") or [None])[0] == "Daf"
         out = []
         walk(data.get("text", []), [], out)
-        for suffix, txt in out:
-            segs.setdefault(suffix, ["", ""])
-            segs[suffix][0 if lang == "he" else 1] = txt
-    return title, segs
+        for ptuple, txt in out:
+            segs.setdefault(ptuple, ["", ""])
+            segs[ptuple][0 if lang == "he" else 1] = txt
+    return title, is_daf, segs
 
 
 def build(db):
@@ -74,9 +110,9 @@ def build(db):
     for d in sorted(MIRROR.iterdir()):
         if not d.is_dir() or d.name == "links":
             continue
-        title, segs = load_work(d)
-        rows = [(title, "%s %s" % (title, suffix.replace(":", ":")), he, en)
-                for suffix, (he, en) in sorted(segs.items())]
+        title, is_daf, segs = load_work(d)
+        rows = [(title, make_ref(title, p, is_daf), he, en)
+                for p, (he, en) in sorted(segs.items(), key=lambda kv: [str(x) for x in kv[0]])]
         db.executemany("INSERT INTO export_texts VALUES (?,?,?,?)", rows)
         nseg += len(rows)
         print("  %-55s %6d segments" % (title, len(rows)), flush=True)

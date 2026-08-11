@@ -1,5 +1,31 @@
 # TORAH_GROK PROCESS — ORAL-FIRST ERA (rewritten 2026-08-08, owner order)
 
+## ⚠ FULL ORAL TORAH LAW (2026-08-10, owner — ABSOLUTE, supersedes any
+## narrower scan practice anywhere below)
+
+Owner, verbatim: "this effort is useless without the full use of the
+oral torah. I need to re derive every verse using the full oral torah
+as insight into the logic. ... We need the whole oral torah reference.
+And we can never allow this drift again."
+
+1. FULL INVERSION, EVERY BLOCK: the oral scan inverts export_links for
+   the whole span and reads EVERY locally-readable listing — all
+   categories. No anchor-only shortcuts, no sampling. The Oral Torah
+   is insight into the LOGIC (the machine derivation: ops, cases,
+   demands), not only a letter-claim source.
+2. MECHANICAL COVERAGE GATE: per-block coverage (linked /
+   locally-readable / read-and-logged) is counted by script and
+   recorded in the audit. A readable-but-unread listing = a FAILED
+   gate = no freeze. Same standing as verify_claims 0-FAILED.
+3. WHOLE-SHELF DUTY: the mirror must hold the whole Oral Torah
+   reference. Works the link graph cites that are absent from the
+   shelf are surfaced to the owner by name — never silently skipped.
+4. RE-DERIVATION ORDERED: every v1 frozen unit (97 as of this law) is
+   to be re-derived under this law; order and pacing owner-directed.
+5. NO NARROWING EVER without an explicit owner ruling recorded in the
+   state doc BEFORE proceeding. The 2026-08-08..10 drift (two anchor
+   works standing in for the full inversion) is the forbidden pattern.
+
 ## FORWARD ERA (2026-08-08, owner order: "continue with the rest of the
 ## books as I direct")
 
@@ -97,51 +123,51 @@ review-FAIL class (5 units running). This rewrite deletes that cost.
 0. Prestage: `python3 logic/solo_tools/prestage.py <Book> ch:v-ch:v` —
    still required (token map, anchors, subs census, volitive census,
    register evidence). Read for MACHINE needs only.
-1. Derive machine structure (registers, cases/handlers/statutes/cards,
-   per-verse step plan). Facts the machine derivation touches for its
-   own reasons (volitive census, frame-signature, re-typing witnesses)
-   are MACHINE EVIDENCE, not crowns — they stay, unhunted.
-2. ORAL SCAN (replaces crown-hunting) — LOCAL-FIRST (2026-08-08, owner
-   order: "download and do these searches on our machine"). The curated
-   Sefaria-Export mirror lives in Data/sefaria_export/ (fetched by
-   logic/solo_tools/fetch_sefaria_export.py, MIRROR_MANIFEST.txt lists
-   every file; refresh optional — the bucket regenerates monthly).
-   Indexed into torah_grok.sqlite by
-   logic/solo_tools/index_sefaria_export.py:
-     export_links — every Sefaria citation anchored to a Torah verse
-       (query the block's span first: what does the tradition SAY here);
-     export_texts — FTS5 full-text over the mirror (read the RAW
-       sources — Hebrew + English, no paraphrasing model in the loop;
-       verbatim quotes come from here).
-   Per block: span query on export_links -> read the loci in
-   export_texts -> harvest. WEB (Sefaria API/WebFetch) is the
-   GAP-FILLER only — for works absent from the mirror — and every web
-   fetch still logs to Data/FETCHLOG.md. Legacy web reference set per
-   block (now local where mirrored):
-   - Rashi on <Book> <span>
-   - Kitzur Baal HaTurim on <Book> <span>  (census-class conduit)
-   - Minchat Shai on Torah, <Book> <span>  (Masorah spellings/pointing)
-   - The block's midrash chapters (Bereshit/Shemot/Vayikra/Bamidbar
-     Rabbah; Sifra for Leviticus, Sifrei for Numbers/Deuteronomy;
-     Mekhilta for Exodus law)
-   - Talmud loci NAMED by the above or by Sefaria's related-links API.
-   Sefaria reference formats that work (chapter fetch returns only the
-   first segment — use VERSE RANGES):
-   `api/texts/Kitzur_Baal_HaTurim_on_Genesis.2.4-2.17`,
-   `api/texts/Minchat_Shai_on_Torah,_Genesis.2.4-2.17`,
-   `api/texts/Rashi_on_Genesis.2.4-2.9`, `api/texts/Bereshit_Rabbah.14`,
-   `api/related/Genesis.2.4` (lists which commentaries exist).
-   NOTE: `Baal_HaTurim_on_Genesis` is an EMPTY index — use Kitzur.
-3. HARVEST: sort the take into (a) letter-CLAIMS (counts, spellings,
-   anagrams, acrostics, accents, phrase-rules, adjacencies) -> claims
-   manifest; (b) interpretive READINGS -> watchlist, named-only,
-   unclaimed; (c) instrument-gap items (letter size, manuscript
-   pointing variants) -> watchlist, flagged UNCHECKABLE.
-4. VERIFY: manifest at `logic/oral_audit/manifests/<uid>_claims.json`;
-   `python3 logic/solo_tools/verify_claims.py <manifest>` must show
-   zero FAILED. A FAILED row either kills the claim or files to the
-   watchlist as a DISCREPANCY observation (tradition vs SNAPSHOT —
-   itself reportable); it never enters the unit as a crown.
+1. FULL-INVERSION ORAL SCAN — FIRST, before any machine derivation
+   (Full Oral Torah Law 2026-08-10; the Oral Torah is insight into
+   the LOGIC, so the chain is read before the machine is built).
+   Tools (all read chain_scope.yaml — scope changes ONLY by owner
+   ruling recorded there):
+     `chain_scan.py <Book> <ch> [--to <ch>] --list`  classification
+       census: READABLE / TANAKH-VERSE / OUT(ruling named) / UNRULED.
+       Any UNRULED work -> STOP, surface to owner (gate will not pass).
+     `chain_scan.py ... --works` then `--work "<Work>"` per work —
+       dump and READ every chain-readable listing, He+En. Each dumped
+       listing is logged to the DISK ledger incrementally
+       (logic/oral_audit/ledgers/<span>.jsonl — compaction/crash
+       survivable; re-runs skip already-logged refs).
+     `chain_scan.py ... --tanakh` — Bible cross-refs, resolved from
+       elijah_docket/tanakh.sqlite.
+   Reading order per block: Torah Temimah first (the per-verse Talmud
+   concordance — it maps the sugyot), then Talmud/Mishnah/Tosefta,
+   midrash halakhah, midrash aggadah, targums, rishonim, acharonim,
+   codes. WEB fetch = gap-filler only, FETCHLOG discipline unchanged.
+2. HARVEST, two streams:
+   (a) LOGIC NOTES — the chain's reading of the span's cases,
+       conditions, consequences, and derivations (who is liable, what
+       fires when, what a word's presence/absence teaches), named per
+       source, written to the audit BEFORE machine derivation. These
+       feed the ops/cases/demands directly.
+   (b) letter-CLAIMS (counts, spellings, anagrams, acrostics, accents,
+       adjacencies) -> claims manifest, probe-before-claim as always;
+       interpretive readings -> watchlist named-only; instrument-gap
+       items -> watchlist UNCHECKABLE.
+3. Derive machine structure (registers, cases/handlers/statutes/cards,
+   per-verse step plan) WITH the logic notes in view. Machine-evidence
+   facts stay unhunted, as before. Divergence between the chain's
+   case-logic and the machine's derivation is RECORDED in the audit
+   (named, both sides) — never silently resolved either way.
+4. VERIFY, two gates:
+   (a) `verify_claims.py <manifest>` — zero FAILED (unchanged; FAILED
+       kills the claim or files as DISCREPANCY, never enters a unit).
+   (b) `oral_coverage.py <Book> <ch> [--to <ch>]` — the COVERAGE GATE:
+       every READABLE + TANAKH-VERSE listing in the ledger, zero
+       UNRULED. Exit 1 = NO FREEZE. Paste its COVERAGE block into the
+       audit. Same standing as 0-FAILED.
+   [HISTORY: the 2026-08-08..10 anchor-scan step text (KB+MS per
+   chapter + ad hoc pulls, Sefaria API verse-range formats) is
+   preserved in git history at commit 68a1553 — it is the drift-era
+   procedure the Full Oral Torah Law forbids.]
 5. AUTHOR the content module: machine layer as before; the insight
    layer = VERIFIED manifest rows only, one or two prose lines each,
    citing source + claim id. Per-op prose cap: ~5 lines unless a

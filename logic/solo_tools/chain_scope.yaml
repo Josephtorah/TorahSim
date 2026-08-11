@@ -1,0 +1,83 @@
+# CHAIN SCOPE RULINGS — machine-readable form of the owner's scope law.
+# Owner 2026-08-10: "Only use oral torah in the chain of transmission."
+# Read by chain_scan.py (the inversion scanner) and oral_coverage.py
+# (the freeze-blocking gate). Classification of every linked listing:
+#   READABLE     — source work present in export_texts -> MUST be read
+#   TANAKH-VERSE — a Bible cross-reference -> resolved via the Tanakh DB
+#   OUT          — matches a ruled_out entry below (ruling named)
+#   UNRULED      — matches nothing -> surfaced to owner, BLOCKS the gate
+# (law: absences surfaced by name, never silently skipped).
+# NO entry may be added/removed here without an explicit owner ruling.
+
+ruled_out_categories:
+  # Streams outside the halakhic-aggadic chain of transmission
+  # (owner reading confirmed 2026-08-10: Avot 1:1 / Rambam-intro line;
+  # mystical & devotional streams stay out unless ruled in).
+  - {category: Chasidut,       ruling: outside-chain 2026-08-10}
+  - {category: Kabbalah,       ruling: outside-chain 2026-08-10}
+  - {category: Musar,          ruling: outside-chain 2026-08-10}
+  - {category: Jewish Thought, ruling: outside-chain 2026-08-10}
+  - {category: Liturgy,        ruling: outside-chain 2026-08-10}
+  - {category: Second Temple,  ruling: pre-rabbinic, outside the chain 2026-08-10}
+  - {category: Reference,      ruling: dictionaries/apparatus, not sources 2026-08-10}
+  - {category: Responsa,       ruling: PENDING owner ruling (chain literature,
+      not yet fetched; surfaced 2026-08-10 — rules in on word, then fetch)}
+
+ruled_out_works:
+  # Modern academic / haskalah-method / duplicative — each surfaced to
+  # owner 2026-08-10 in the Phase 1 report and the fetch-script headers.
+  - {pattern: '^Steinsaltz',        ruling: modern elucidation; the Gemara itself is read}
+  - {pattern: '^Introductions to',  ruling: modern reference apparatus}
+  - {pattern: '^Daf Shevui',        ruling: modern}
+  - {pattern: '^Notes by',          ruling: modern editorial notes}
+  - {pattern: 'Guggenheimer',       ruling: modern academic}
+  - {pattern: '^Abraham Cohen Footnotes', ruling: modern academic}
+  - {pattern: '^Rereading the Rabbis',    ruling: modern academic}
+  - {pattern: '^A Dictionary of the Talmud', ruling: apparatus}
+  - {pattern: '^Rif\b|^Rif ',       ruling: duplicative of the Bavli text (owner-surfaced)}
+  - {pattern: '^Ein Yaakov',        ruling: duplicative compilation of Bavli aggadah}
+  - {pattern: '^Reggio\b|^Shadal\b|^Ohev Ger', ruling: haskalah-method (owner may rule in)}
+  - {pattern: '^Yein Levanon',      ruling: haskalah-method}
+  - {pattern: '^Legends of the Jews', ruling: modern compilation}
+  - {pattern: '^Otzar Midrashim',   ruling: modern compilation (Eisenstein)}
+  - {pattern: '\(Lerner\)',         ruling: modern academic edition}
+  - {pattern: '^The Midrash of Philo', ruling: pre-rabbinic/academic}
+  - {pattern: '^David Zvi Hoffmann|^Cassuto|^Birkat Asher|^Hoil Moshe',
+     ruling: modern-method commentary (owner may rule in)}
+  - {pattern: '^Torat Chaim \(Kasher\)|^Torah Shelemah', ruling: modern compilation}
+  - {pattern: '^Depths of Yonah|^From the Depths',       ruling: modern}
+  - {pattern: '^Redeeming Relevance|^Covenant & Conversation|^Peninei Halakhah',
+     ruling: contemporary}
+  - {pattern: '^JPS |^The Torah: a Modern Commentary|^Tanakh: The Holy Scriptures',
+     ruling: modern translation/commentary}
+  # Census additions 2026-08-10 (post-pass-3 UNRULED sweep):
+  - {pattern: "^Tze.enah Ure.enah", ruling: homiletic anthology (apostrophe-safe re-rule)}
+  - {pattern: "^The Torah; A Women.s Commentary|^The Kehot Chumash",
+     ruling: modern / chasidic-stream}
+  - {pattern: '^English Explanation of|^A New Israeli Commentary|^Mishnat Eretz Yisrael',
+     ruling: modern academic}
+  - {pattern: '^Ohr LaYesharim', ruling: contemporary JT elucidation}
+  - {pattern: '^Notes and Corrections', ruling: apparatus}
+  - {pattern: '^MeAvur HaAretz', ruling: modern}
+  - {pattern: '^Arukh HaShulchan', ruling: later digest per surfaced Phase-1 list (owner may rule in)}
+  - {pattern: '^Kitzur Shulchan Arukh', ruling: later digest per surfaced Phase-1 list (owner may rule in)}
+  - {pattern: '^Ben Ish Hai, Halachot', ruling: later digest per surfaced Phase-1 list (owner may rule in)}
+  - {pattern: '^Peninei Halakhah|^Tzurba M', ruling: contemporary}
+  - {pattern: '^Covenant and Conversation|^Lessons in Leadership|^Essays in Ethics|^I Believe;|^Ceremony & Celebration|^Studies in Spirituality',
+     ruling: contemporary (R. Sacks corpus)}
+  - {pattern: '^The Five Books of Moses|^Moses; A Human Life|^Learning to Read Midrash|^Contemporary Halakhic Problems',
+     ruling: modern}
+  - {pattern: '^Chibbah Yeteirah', ruling: Sefaria-classified Modern Commentary
+      (fetched in error, pruned 2026-08-10; owner may identify + rule in)}
+  - {pattern: '^German Commentary', ruling: modern academic}
+  - {pattern: '^Masoret HaTosefta|^Tosefta Kifshutah', ruling: modern academic apparatus (Lieberman — owner may rule in)}
+  - {pattern: '^Reshimot Shiurim', ruling: contemporary shiurim (owner may rule in)}
+  - {pattern: '^Sheilat Shalom', ruling: kept-local commentary on Sheiltot; in-scope via shelf}
+  - {pattern: '^Gray Matter|^Rabbinic Authority|^A Lifetime Companion|^From Sinai to Ethiopia|^Karati Bekhol Lev|^HaHalakhah; Kochah|^Sefer Daniel; Opportunity|^Judaism.s Life Changing Ideas',
+     ruling: contemporary}
+  - {pattern: '^Sefer Charedim', ruling: devotional (surfaced Phase-1; owner may rule in)}
+  - {pattern: '^Meiri on (Shevuot|Ketubot|Bava Kamma)', ruling: chain work ABSENT from the
+      export bucket (bucket gap recorded 2026-08-10; web gap-filler if needed)}
+  - {pattern: '^Brief Commentary|^Variants on', ruling: modern academic apparatus
+      (Lieberman Tosefta layers, pruned 2026-08-10)}
+  - {pattern: '^Sefer Puah', ruling: contemporary}

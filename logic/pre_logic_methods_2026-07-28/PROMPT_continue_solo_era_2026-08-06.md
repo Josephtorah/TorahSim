@@ -1380,6 +1380,286 @@ re-run one, repoint sys.path at logic/solo_tools/fwd (documented
 in CONVENTIONS.md). Future block-1 starts here, not the
 scratchpad: the ~6-minute cold-start tax is gone. UNCOMMITTED —
 rides with the owner's next commit word (per the agreed plan).
+RESOLVED: committed 68a1553 + pushed on owner word 2026-08-10
+(24 files, 5,369 ins). Known scar: the commit's Claude-Session
+trailer says "claude.ac" not "claude.ai" — typo, already in
+history, owner informed (amend+force-push offered, no word).
+
+## TALMUD-SHELF MIRROR EXTENSION (2026-08-10, owner: "fetch it")
+## — THE BAVLI IS LOCAL
+
+Owner audit question ("how are we doing oral torah checks when we
+don't even have the talmud") exposed the hole: the 2026-08-08
+mirror had 53,391 Talmud LINKS but no Talmud TEXT — zero-fetch
+discipline meant Bavli loci were named, never read. On owner word
+("hes fetch it"): fetch_sefaria_export_talmud.py (NEW, in
+logic/solo_tools/, manifest-APPENDING) pulled from the sanctioned
+bulk bucket: Bavli all 37 tractates (text only), Mishnah all 63,
+Tosefta both editions — 498 files, 0 failures; 132 stray
+Tosefta-commentary dirs pruned same day (prune list in
+MIRROR_MANIFEST.txt). Mirror 794 MB / 231 works.
+index_sefaria_export.py gained the daf formatter (section n ->
+folio (n+1)//2 side a/b by parity; verified Berakhot 2a "From
+when"); rebuild: export_texts 41,114 -> 134,746 segments,
+torah_grok.sqlite 362 -> 525 MB. VERIFIED on Exod 1-21: all
+1,620 Bavli-text links resolve locally (Exod 21:24 lands on the
+real eye-for-eye pages, Bava Kamma 83b-84a); unresolved = by-design
+absent commentary (Steinsaltz 2,433, JT 816, Rif/intros/minor 412).
+PROCESS.md oral-scan step amended: Talmud loci READ LOCALLY —
+per block, invert export_links (Talmud/Mishnah/Tosefta categories)
+for the span, read in export_texts, harvest into the standard
+probe-before-claim manifest. FETCHLOG entry written. NO gate/law
+change; no frozen byte touched. RETRO QUESTION OPEN for owner:
+retro Talmud-layer scan of the 97 frozen units (~2-3k distinct
+segments after commentary dedup) — precedent exists (era-2 retro
+audits); no scan without word. Optional future adds: Jerusalem
+Talmud; Tractate Soferim (scribal law — letter-fact material).
+UNCOMMITTED — awaits owner commit word.
+
+## ⚠ FULL ORAL TORAH LAW + RE-DERIVATION PROGRAM (2026-08-10, owner)
+
+Owner, verbatim: "this effort is useless without the full use of the
+oral torah. I need to re derive every verse using the full oral torah
+as insight into the logic. ... We need the whole oral torah
+reference. And we can never allow this drift again." Scope ruling:
+"Only use oral torah in the chain of transmission." The law (also in
+PROCESS.md head + memory full-oral-torah-law.md): (1) full link
+inversion every block, every locally-readable listing READ; (2)
+mechanical coverage gate, freeze-blocking, read-ledger written to
+disk incrementally; (3) whole-shelf duty, absences surfaced never
+skipped; (4) all 97 v1 units to be re-derived; (5) NO scan narrowing
+without explicit owner ruling first. The 2026-08-08..10 drift (two
+anchors standing in for the inversion; 53 of 8,181 listings read on
+Exod 21; the v1 oral layer = 800 MS + 414 KB rows of 1,248 total) is
+the forbidden pattern.
+
+PHASE PLAN (approved): 1 shelf completion ~2h; 2 instrumentation
+(ref-alias DONE in ph.1, coverage gate, inversion scanner) ~3-4h;
+3 pilot re-derive exo_21 ~3-5h; 4 campaign 96 units, ~200-300h,
+owner-directed blocks, re-quote after pilot.
+
+PHASE 1 — DONE 2026-08-10 (owner: "phase 1 go"). See FETCHLOG
+CHAIN-OF-TRANSMISSION entry for the full shelf list. Mirror 1.3 GB /
+896 works; export_texts 594,636 segments; DB 1.4 GB. Acceptance on
+Exod 1-21: 51% of ALL 91,579 anchored links resolve locally; the
+whole non-resolving mass is outside-chain-by-ruling works + 75
+coarse-ref residue (prefix-resolvable) + one OPEN SEAM for owner:
+Talmud/Mishnah-side chain commentaries (Rashi on Bavli, Tosafot,
+Bartenura on Mishnah, Derekh Chayyim, Nachalat Avot) not yet
+fetched — recommend pass 3 on word. Excluded+surfaced list in the
+fetch script header (haskalah-method, duplicative-of-Bavli, later
+digests). Ref formatter generalized (Sefaria citation form,
+unit-tested, 12-ref spot-check green, old refs byte-identical).
+New/changed files (UNCOMMITTED, await word):
+logic/solo_tools/fetch_sefaria_export_talmud.py + _chain.py,
+index_sefaria_export.py (daf + make_ref), PROCESS.md (law head +
+Talmud-local scan step), FETCHLOG, MIRROR_MANIFEST. NEXT: Phase 2
+instrumentation (oral_coverage.py gate + inversion scanner +
+read-ledger), then exo_21 pilot — each on owner word.
+
+PASSES 3-5 + PHASE 2 — DONE 2026-08-10 (owner: "yes fetch talmud
+side chain commentariries" + "keep going"). Talmud-side chain
+commentary complete (Rashi/Tosafot/rishonim/acharonim on Bavli, JT
+chain commentary, Mishnah-side), Tafsir Rasag + Targum Jerusalem +
+Halakhah-rishonim shelf + Sheiltot (geonic) + Ben Ish Hai + Perla.
+Neofiti excluded (not transmitted); Chibbah Yeteirah pruned
+(Sefaria-Modern). Mirror 1.9 GB / ~3,345 works; index 1,512,045
+segments; DB 2.3 GB. INSTRUMENTATION LIVE: chain_scope.yaml
+(rulings file), chain_scan.py (inversion scanner + incremental disk
+read-ledger logic/oral_audit/ledgers/), oral_coverage.py (gate),
+freeze_ritual.py step-0 gate wiring (red = no freeze), PROCESS.md
+steps rewritten (inversion first, logic notes before machine, two
+gates). Exod 21 pilot-ready: 4,804 readable + 63 tanakh-verse to
+read; 67 UNRULED remain = NOSEI-KELIM SEAM awaiting owner ruling
+(Beit Yosef/Bach/Sma/Taz/Ketzot/Peri Megadim/Mishneh LaMelech/
+Minchat Chinukh, ~450 MB closes it; recommend fetch) + a few
+contemporary strays to pattern on ruling. Gate will not pass with
+UNRULED>0 — pilot waits on that ruling. ALL UNCOMMITTED, await
+word.
+
+SHELF CLOSED 2026-08-10 (owner: "yes fetch" — pass 6 nosei kelim,
+1,979 files + 6b stragglers; FETCHLOG entry): mirror 2.3 GB /
+~5,230 works / 1,952,179 segments. EXOD 21 GATE-CLEAN: 4,842
+readable + 63 tanakh-verse = 4,905 required readings, 2,624 OUT
+(named), 0 UNRULED. Meiri Shevuot/Ketubot/BK = bucket gaps
+(recorded). Exod 1-21: 166 unruled left in the other 20 chapters —
+per-block cleanup during campaign. CLEAN COMPACTION POINT HERE —
+compact BEFORE the pilot reading (4,905 listings want a fresh
+window). Pilot resume: chain_scan.py Exod 21 --works, read per
+work (Torah Temimah first), ledger fills at
+logic/oral_audit/ledgers/Exod_21.jsonl, then derivation, gates,
+freeze. Commit word still outstanding for the whole day's work.
+
+## LAW ERA (opened 2026-08-10, owner order)
+Narrative analysis PAUSED; law focus. Ten showcase blocks approved, canonical
+list at logic/law_era/TOP10_LAW_BLOCKS.md — all get the full-inversion oral
+scan (Core Shelf NOT adopted; still needs explicit ruling). BLOCK 1 OPEN:
+Exod 21:1-11 (slave-term laws) = opening slice of the exo_21 pilot. Census
+(scratchpad law01_census.py, FTS5-safe): 3,286 listings -> 1,936 READABLE +
+26 TANAKH = 1,962 required, 1,324 OUT, 0 UNRULED. Side DB law01_texts.sqlite
+2,086 segs (He 1.91M / En 1.39M ch). Law-profile confirmed: Kiddushin 56
+listings, Mekhilta Nezikin 27, Yerushalmi Kiddushin 21, Mishneh Torah Slaves
+17, Chinukh 21, SMaG, three Tur divisions — THE CODES ARE IN THE INVERSION.
+Reader law01_dump.py (law priority order: TT -> midrash halakhah -> Mishnah/
+Tosefta/Bavli -> Targums -> ...) writes the REPO GATE LEDGER
+logic/oral_audit/ledgers/Exod_21.jsonl (shared with blocks 2-3 = chapter
+coverage accumulates toward exo_21_the_ordinances re-derivation). Scan notes:
+scratchpad law01_scan_notes.md (digest per batch, gen_08 style). gen_08
+check CLOSED: reports on Desktop (epub + v1-vs-v2 md); findings ledgered,
+254 readable unread, resumable; dupe rate ~1-in-4 of 90 MAJORs measured.
+PROGRESS 2026-08-10 (7th update, after bite 68): 68 bites read,
+1,659/1,962 (84.6%). Bites 64-68 added: OR HACHAIM complete (the
+rights-notice principle — a release-right unpublished is void, so
+תשים לפניהם commands universal promulgation of THIS law; the
+consent-symmetry find — the ketiv לא יעדה = HER veto, the qere = his;
+the anti-retention rationale — the wife-first condition bans
+golden-handcuffs attachment; the exile-lawsuit allegory arguing FROM
+our statute, dated אלף ותרע"ב; "her torments suffice for her ransom");
+Paaneach Raza (the self-sale-for-shifchah perverse-incentive attack;
+the Marah acrostic at its Tosafist source); PARDES YOSEF complete —
+the king-track constitutional cluster on our header (fixed law to
+judges, hora'at-sha'ah to the king; no royal pardon of court
+convicts; sword-only executions; the Name-engraved sword), the
+night-get literature citing OUR Ohr Zarua find (Noda BiYehudah
+backing; willing-get vs forced-get court-requirements), the MAHARI
+BRUNA precedent (a hired maid CANNOT be sent to the market — לא תצא
+כצאת העבדים as live 15th-century labor law), the three-year
+rabbi-contract cap (Chatam Sofer structuring modern contracts by
+משנה שכר שכיר), the slave-is-muchzak-in-his-body doctrine with the
+calendar-edge case (29 Adar work-stop lest the month be sanctified),
+the poverty-gate harmonization of yiud vs the minor-kiddushin ban,
+the guardian-stars-at-Sinai answer (even slaves' mazalot heard),
+and the eved-ivri edge-rule appendix (insolvency-only sale,
+gentile/hekdesh-theft not sold, consent-carve on transfers,
+mitzvah-sale resolving Jacob's seven years, compelled current-value
+redemption); Penei David (the bar-metzra defense — Israel's judging
+makes them God's PARTNERS, defeating the angels' neighbor-claim to
+the Torah; the sovereignty-inalienability allegory); Pesikta DeRav
+Kahana 12:8 (the matron-with-weapons midrash at source — fore-guard
+MARAH, aft-guard our header). All in digests 64-68. Earlier: 6th
+update (after bite 63): Bites 44-63 added the H-O alphabetical stretch:
+HaKtav VeHaKabbalah (full core), NETZIV (Haamek Davar + Harchev Davar
++ Haamek Sheilah), Hadar Zekenim, KETZOT HACHOSHEN CM 3, KLI YAKAR
+complete, Levush HaOrah, MALBIM complete (with the Ayelet HaShachar
+rule-system), Maskil LeDavid, Megalleh Amukkot, MESHEKH CHOKHMAH,
+Metzudot lexicon set, MIZRACHI/Re'em complete, Nachal Kedumim,
+Netinah LaGer (Onkelos-as-posek), Od Yosef Chai, OHR ZARUA I 744
+(giant responsum, in full). New headline finds: the NIGHT-GET ruling
+(Ohr Zarua: get-delivery is a משפט from OUR HEADER — "not before
+laymen" sugya — so night-delivery is void even post facto: the
+header-verse generating family-law procedure); the Ketzot's
+judgment/COERCION power-split (תשים לפניהם = the coercion toolkit
+vested in the ordained; modern courts run both on agency); Meshekh
+Chokhmah's compilation-placement principle (gentile-party case-law
+CANNOT sit in the לפניהם-pericope — the addressee-header constrains
+chapter content) and his yovel-lapse contingency (ועבדו לעולם turns
+literal if yovel is abolished mid-term); Malbim's conditional-syntax
+system (כי opens a statute, אם forks its branches — our two laws as
+the paradigm case-trees; subject-first = God-facing law, verb-first =
+man-facing law) + the term-clock/calendar-clock gate (שביעית without
+שנה = the sale-clock) + the מרצע listed in the tannaitic הלכה עוקבת
+מקרא registry (Yerushalmi — one of three, with the GRA manifesto's
+pedigree); the compelled-divorce institution rooted in שלש אלה
+(Meshekh Chokhmah: "a broad source for all the sages' כופין אותו
+להוציא"); Kli Yakar's bribery-as-acceleration model (שוחד = SHARP —
+whets the knife that cuts judgment early) + the Great-Assembly
+three-dicta as anti-collapse patches + the Joseph-sale as national
+precedent for thief-slavery (settlement-link Gen 37 ↔ Exod 21:2,
+reinforced kabbalistically by Megalleh Amukkot at Marah); the
+Netinah LaGer's Onkelos-as-posek cluster (עברי rendered בר ישראל
+ONLY in the slave-verses — a fence against the beyond-the-river
+scope; שארה = זיונה rules maintenance deoraita); the Levush's
+one-subject-one-pericope compilation principle; the Re'em's
+title-amplification oddity (Israel acquires BODY-title from a
+gentile seller who held labor-title only); Mizrachi's consent-
+curability split at source (laymen curable by consent, gentile
+courts never — even where their law matches); and the two-channel
+Sinai promulgation topology (Levush HaOrah: Decalogue by public
+thunder, mishpatim to Moses alone in the fog, relayed post-descent).
+All in notes digests 44-63. Earlier: 5th update (after bite 43): Bites 34-43 added: Alshekh Exodus rows, Bach,
+Bartenura-on-Rashi, Beit Yosef CM 26, Ben Ish Chai, Chanukat HaTorah,
+CHATAM SOFER, Chida, R. PERLA on Rasag, Da'at Zekenim, MAHARAL
+(Derekh Chayyim + Gur Aryeh complete), Benamozegh, and more. New
+headline finds: grammatical PERSON as addressee-selector (R. Perla:
+non-imperative יצא = the COURT's duty, imperative תשלחנו = the
+adon's — one release, two addressees); the yovel dependency-graph
+(court shofar gates all yovel-commands, majority non-compliance
+disables the module); composition-consistency as the divine code's
+signature (Alshekh: laws must stay proportional JOINTLY); the
+sub-threshold theft attack (flood generation gamed the perutah
+threshold → extra-judicial response); exit-rights analysis (Chatam
+Sofer: liquidity-gated exit is no exit — selling forbidden, hiring
+permitted); the wife-here/children-in-Behar difference COMPUTED from
+term=6 × maintenance-window=6 (Chatam Sofer); gender-parity clause on
+our header (Bach: השוה הכתוב אשה לאיש); Maharal: rationale-cannot-
+override-semantics, protection-scaled-to-opacity, the triple as
+PRESUPPOSED CUSTOM (protective-of-custom retyping of the deoraita
+fork), the two-pass חנם/אין-כסף re-parse, the yiud-premium option-
+pricing, and his CORRUPTION-OF-DEPLOYMENT record (ignorant chiefs
+seizing the bench, the verse darshened for disgrace). All in notes
+digests 34-43. Bites 24-33 added: Sforno, Radak,
+CHIZKUNI, Kitzur Ba'al HaTurim, the TUR (HaArokh + the DEPLOYED CODE
+sections EH 70/72/76 maintenance+onah modules, OC 240 conduct layer,
+YD 267 the complete 41k-char slave module with its dormancy flags),
+Rabbeinu Bahya (+the full 13-middot catalog with our block as middah
+#9's example), Bekhor Shor, Minchat Shai masorah apparatus (ketiv/qere
+registry + tikkun-soferim essay), Abarbanel (essays), and the GRA's
+Aderet Eliyahu. Crown find: THE GRA'S OVERRIDE MANIFESTO — "the
+halakhah UPROOTS the Scripture, and so in MOST OF THIS PARASHAH and
+many parashiot — the Oral Torah turns [the written] like clay under a
+seal; one must know the pshat to know the seal" — the override
+declared the NORM; plus the yovel as global override passage; the
+piercing as height-matched lock-and-key credential (Chizkuni);
+seniority-of-liens release theory (שטרי קודם); promulgation-as-
+contract-foundation (Kimchi via Tur); Tur EH 72 vow-cannot-defeat-
+maintenance (deployed anti-override); the two-implementations
+metaphysics (Alshekh: same civil I/O, only the revealed code emits
+holiness); Decalogue-parent fork (murder/coveting/sanctions-table);
+canonical-source selection (Abarbanel: derive from the COMPLETE
+instantiation); the term-as-theological-signature (six years
+non-derivable from reason). All in the notes file digests 24-33. Bites 19-23 added: Tanchuma both recensions +
+Midrash Tannaim + Shemot Rabbah 30 petichta cycle + IBN EZRA both
+recensions + RAMBAN on the block. New headline finds: forum exclusivity
+doubled ("not before gentiles, not before LAYMEN") with SPLIT CONSENT
+SEMANTICS (parties may accept a lay judge — binding; nothing cures
+foreign jurisdiction — Ramban); the ordination collapse (semikhah
+ceased → "we are laymen," modern courts run on the שליחותייהו agency
+fiction — Ramban Deut 16:18); the divine co-processor axiom DERIVING
+law (executed → zomemin witnesses go free, Ramban Deut 19:19, anchored
+at our 21:6); IE's ASMAKHTA MODEL as a competing compilation theory
+(oral law known by transmission, verses as mnemonic anchors — vs
+derivation realism; project-level fork); IE's qere-priority doctrine;
+Ramban's substitution model (master enters the husband's place, w/
+exclusion table + slave's conjugal-autonomy floor); BeHaG/Ramban's
+inverted exit-clause (לא תצא as protective lav riding "no derivation
+from penalties"); yiud as the sale's DEFAULT state; promulgation-
+precedes-liability + executor-overreach + conditional-grant (ShR 30);
+civil law implements "do not covet." Earlier finds paragraph (bites
+14-18) retained below.
+[superseded progress note, bites 14-18:] 18 bites read, 681/1,962
+(34.7%) — TT + both Mekhiltas + Sifra/Sifrei + Mishnah/Tosefta
++ Yerushalmi Kiddushin + Bavli Kiddushin core + cross-tractate web
+(Yev/Ket/BK/San/Nid/Ned/Shev/Arakh/Bekh/Tem) + THE CODES (MT, Sefer
+HaMitzvot+Shorashim, SMaG, SMaK, Chinukh) + ALL TARGUMS (Onkelos minimal-
+resolver vs TJ oral-law-inlined — different binding times on לעלם "forever"
+vs until-yovel; Minei Targuma: Onkelos's one word זיונה "sustenance" is
+load-bearing psak authority for maintenance-is-biblical) + RASHI complete
+(+ Taz apparatus + Rashi Tanakh/Bavli crossrefs) + Midrash Aggadah +
+Lekach Tov + Sekhel Tov + Tanchuma-Mishpatim intro. New headline finds
+(bites 14-18, all in notes): halakhah-overrides formula VERBATIM in LT
+(הלכה עוקבת מקרא "halakhah circumvents Scripture" on the awl);
+agency-doctrine override (piercing personally, "he and not his agent");
+dueling-K"V deadlock → explicit hekesh required; flat-rate vs market-rate
+vs pro-slave-directional amortization (3 functions, 3 test vectors);
+min()-over-exit-events explicit in Rashi (כל הקודם קודם); forum
+exclusivity (no gentile courts even with identical output) + coerced-get
+agency composition (gentile muscle under Jewish court = valid); notarikon
+המשפטים = settlement-before-judgment; adversarial-robustness rationale
+for redundant words (no opening for the litigant); power-exhaustion
+(father's one-shot kiddushin right); written/oral split BY DESIGN
+(Tanchuma Ki Tisa); two-tier enforcement (din below preempts din above;
+God self-bound). Next strata: Tur, the bench (IE/Ramban/Radak/Sforno/
+Chizkuni), formalizers, long tail + 26 Tanakh crossrefs.
 
 ## DISCLOSURE (never commit to main repo; owner's private docs)
 "God's Open Source Software Project" (LeBlanc_Epic_Certainty_layperson doc)

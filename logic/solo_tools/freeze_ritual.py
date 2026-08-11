@@ -69,6 +69,28 @@ def main():
     if not yaml_path.exists():
         sys.exit("no such unit: %s" % yaml_path)
 
+    # 0. FULL ORAL TORAH coverage gate (owner law 2026-08-10): every
+    # chain-readable listing on the span read-and-ledgered, zero
+    # unruled works. Exit 1 here = no freeze, same standing as the
+    # other gates.
+    import re as _re
+    ytxt = yaml_path.read_text()
+    mb = _re.search(r"book_en:\s*(\w+)", ytxt)
+    ms = _re.search(r'unit_span_planned:\s*"?(\d+):\d+-(?:(\d+):)?\d+', ytxt)
+    abbrev = {"Genesis": "Gen", "Exodus": "Exod", "Leviticus": "Lev",
+              "Numbers": "Num", "Deuteronomy": "Deut"}
+    if mb and ms:
+        book = abbrev[mb.group(1)]
+        c1 = ms.group(1)
+        c2 = ms.group(2) or c1
+        rc, out = run([PY, str(TOOLS / "oral_coverage.py"), book, c1,
+                       "--to", c2])
+        gl = [l.strip() for l in out.split("\n")
+              if "GATE:" in l or "read-and" in l]
+        step("oral coverage gate", rc == 0, "; ".join(gl) or out[-80:])
+    else:
+        step("oral coverage gate", False, "no span metadata — cannot gate")
+
     # 1. text layer
     rc, out = run([PY, str(TOOLS / "verify_text.py"), uid])
     step("text layer", rc == 0, out.split("\n")[-1])

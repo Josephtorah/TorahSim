@@ -888,3 +888,161 @@ essay; 21: 19+34). Five manifests, 65 rows, all VERIFIED first run
 (one row self-sharpened at EX17-05: the pausal or-not pair). Two
 tradition-vs-SNAPSHOT divergences filed openly at exo_19 (19:11's
 second third-word; 19:19's shofar) — dual-tracked, stream standing.
+
+## TALMUD-SHELF MIRROR EXTENSION (2026-08-10) — owner order "fetch it"
+
+Cause: owner audit question ("how are we doing oral torah checks when
+we don't even have the talmud") exposed the coverage hole — the
+2026-08-08 mirror carried the verse-anchored shelf (Rashi, Kitzur,
+Minchat Shai, targums, midrash) and 53,391 Talmud links, but the
+Talmud TEXT was absent; zero-fetch discipline meant named Bavli loci
+were never read. Fixed before Exod 22 (the ordinances continue into
+Bava Kamma territory) rather than repeat the gap knowingly.
+
+FETCHED (sanctioned bulk bucket, storage.googleapis.com/sefaria-export,
+via logic/solo_tools/fetch_sefaria_export_talmud.py — listing-API
+discovery, He+En merged.json, resumable, 0.4s pacing):
+- Talmud Bavli — all 37 tractates (six Seder dirs; TEXT only, no
+  Steinsaltz/Rishonim/Acharonim layers)
+- Mishnah — all 63 tractates (incl. Pirkei Avot)
+- Tosefta — both editions (Vilna "Tosefta X" + Lieberman
+  "Tosefta X (Lieberman)")
+498 files, 0 failures. 132 stray commentary dirs (Tosefta editions'
+Brief Commentary / Variants subtrees, swept by a loose pattern)
+PRUNED same day — prune list appended to MIRROR_MANIFEST.txt.
+Mirror: 794 MB, 231 work dirs.
+
+INDEXED: index_sefaria_export.py gained a daf-aware ref formatter
+(sectionNames[0]=="Daf" -> 1-based section n maps to folio (n+1)//2,
+side a/b by parity; verified: Berakhot section 3 = folio 2a, the
+tractate's famous first words "From when do we recite the Shema").
+Rebuild: export_texts 41,114 -> 134,746 segments (231 works);
+export_links unchanged (668,695). torah_grok.sqlite 362 -> 525 MB.
+
+VERIFIED (Exod 1-21 span, the frozen corpus): all 1,620 Bavli-text
+links resolve to local segments across 37 tractates (the only 7
+non-resolving Bavli refs are coarse ranges like "Niddah 45b-46a" —
+text present, prefix-query reachable); Exod 21:24 links land on the
+actual eye-for-eye pages (Bava Kamma 83b-84a); Mishnah/Tosefta text
+links resolve (263 + 140). Unresolved remainder is by-design absent
+commentary/reference (Steinsaltz 2,433, Jerusalem Talmud 816, Rif/
+Introductions/minor tractates 412). Optional future adds noted:
+Jerusalem Talmud; Tractate Soferim (the scribal-law minor tractate —
+letter-fact material). Zero-fetch discipline RESUMES from here with
+the Talmud inside it.
+
+## CHAIN-OF-TRANSMISSION SHELF COMPLETION (2026-08-10) — PHASE 1 of the
+## re-derivation program (owner: "phase 1 go"; scope ruling: "Only use
+## oral torah in the chain of transmission")
+
+FETCHED (fetch_sefaria_export_chain.py, 538 files + pass-2 sweep 605
+files, 0 failures across both): Jerusalem Talmud all 39 text
+tractates; all 15 Bavli minor tractates (incl. Soferim); chain
+midrash completions (Yalkut Shimoni Torah+Nach, Lekach Tov, Sekhel
+Tov, both Pesiktas, Tanna DeBei Eliyahu x2, Seder Olam x2, Midrash
+Tehillim/Mishlei/Shmuel/Aggadah, Bereshit Rabbati, Mishnat Rabbi
+Eliezer, Sefer HaYashar, Yelamdenu, five Megillot Rabbahs; Sifrei
+Zuta + Midrash Tannaim); the rishonim on Torah (Ibn Ezra + HaKatzar,
+Ramban, Rashbam, Chizkuni, Bekhor Shor, Rabbeinu Bahya, Rabbeinu
+Chananel, Saadia Gaon, Sforno, Radak-Genesis, Da'at/Hadar Zekenim,
+Paaneach Raza, Riva, Rosh, Toledot Yitzchak, Tzror HaMor, Tur
+HaArokh, Ralbag, Abarbanel, Bartenura-on-Torah, Gevia Kesef, Ateret
+Zekeinim); the classical acharonim on Torah (Torah Temimah, Or
+HaChaim, Kli Yakar, Malbim + Ayelet HaShachar, Gur Aryeh x5,
+Mizrachi, Siftei Chakhamim, Levush HaOrah, Divrei David, Maskil
+LeDavid, Nachalat Ya'akov, HaKtav VeHaKabalah, Haamek+Harchev Davar,
+Meshekh Chokhmah, both Aderet Eliyahus (Gra; Ben Ish Chai), Chatam
+Sofer, Beit HaLevi, Meshech-era anthologies Pardes Yosef, Chida set,
+Chanukat HaTorah, Avi Ezer, Em LaMikra, Netinah LaGer, Tevat Gome,
+Alshekh...); the codes: Halakhot Gedolot (geonic), Mishneh Torah
+complete (61 books incl. Transmission of the Oral Law), Tur,
+Shulchan Arukh (4 sections), six mitzvot-codes (Chinukh, Rambam +
+Rasag Sefer HaMitzvot, SMAG, SMAK, Yereim). Pass 2 also carried the
+two categories' Nach-book chain commentaries (kept: chain-authored,
+Tanakh-side program will use them; prune-on-word possible via
+manifest). EXCLUDED + SURFACED (script header): Reggio, Shadal, Ohev
+Ger (haskalah-method); Ein Yaakov + Rif (duplicative of Bavli);
+Otzar Midrashim, Legends of the Jews, Ruth Rabbah Lerner (modern
+compilations); Tze'enah Ure'enah; Minchat Chinukh, Sefer Charedim,
+Arukh HaShulchan, Kitzur Shulchan Arukh, Chayyei/Chokhmat Adam, Ben
+Ish Hai, Shulchan Arukh HaRav (later digests/comment layers — owner
+may rule in). OPEN SCOPE SEAM for owner: Talmud/Mishnah-side chain
+commentaries (Rashi on Bavli, Tosafot, Bartenura on Mishnah,
+Maharal's Derekh Chayyim, Abarbanel's Nachalat Avot) — chain works,
+not yet fetched.
+
+MIRROR: 794 MB -> 1.3 GB, 231 -> 896 works. INDEXED with the
+generalized Sefaria-citation ref formatter (named sections ", ",
+numeric tail " N:N", empty complex-nodes skipped, daf folios;
+unit-tested + 12-ref convention spot-check, old refs byte-identical):
+export_texts 134,746 -> 594,636 segments; torah_grok.sqlite 525 MB ->
+1.4 GB. ACCEPTANCE (Exod 1-21): 91,579 anchored links, 46,550 resolve
+locally (51%); held-but-unjoined residue 75 (coarse/range cites —
+prefix-resolvable); ALL remaining non-resolution is works outside the
+chain ruling (Chasidut/Kabbalah/Musar/Jewish Thought/Reference/
+Steinsaltz/modern) or the surfaced seam above. Midrash 91%, Tanakh
+72% resolution. Zero-fetch discipline RESUMES.
+
+## CHAIN PASSES 3-5 + PHASE 2 INSTRUMENTATION (2026-08-10)
+
+PASS 3 (owner: "yes fetch talmud side chain commentariries"): 2,661
+files, 0 failures — Bavli Rishonim on Talmud complete (Rashi, Tosafot,
+Ramban/Rashba/Ritva/Ran chiddushim, Meiri, Rosh, Mordechai, Rabbeinu
+Chananel/Gershom, Tosafot variants...), Bavli Acharonim (Maharsha x2,
+Maharam, Penei Yehoshua, Rabbi Akiva Eiger, Rashash, Ben Yehoyada...),
+minor-tractate commentary, Yerushalmi chain commentary (Penei Moshe,
+Korban HaEdah, Sheyarei Korban, Beur HaGra, Sirilio, Ridbaz...),
+Mishnah-side rishonim+acharonim (Rambam, Bartenura, Rash MiShantz,
+Tosafot Yom Tov, Melekhet Shelomoh, Derekh Chayyim, Nachalat Avot...).
+Excluded: Guggenheimer notes, Yein Levanon, Rif (standing rulings).
+PASS 4 (census-driven): 135 files — Tafsir Rasag (579 Exod-1-21
+listings!), Targum Jerusalem, Halakhah-rishonim shelf (Ohr Zarua,
+Machzor Vitry, Kol Bo, Abudarham, Sefer Chasidim, Siddur Rashi...),
+midrash chain commentaries (Radal), Sefer HaMitzvot HaKatzar. Targum
+Neofiti EXCLUDED (rediscovered 1949, not transmitted — chain
+criterion fails; surfaced). PASS 5a-e: Ben Ish Hai, Perla on Rasag's
+Sefer HaMitzvot (18.4 MB), Sheiltot d'Rav Achai Gaon (geonic — found
+via its Netziv commentary in the census) + Haamek Sheilah. Chibbah
+Yeteirah fetched on mistaken chain identification, PRUNED same hour
+(Sefaria-classified Modern; surfaced).
+
+MIRROR: 1.9 GB, ~3,345 works. INDEX: 1,512,045 segments; DB 2.3 GB.
+chain_scope.yaml grew census-driven OUT rulings (modern academic,
+contemporary, apparatus — each named, owner-overridable). Exod 21
+final classification: 7,529 listings = 4,804 READABLE + 63
+TANAKH-VERSE + 2,595 OUT (rulings named) + 67 UNRULED, of which the
+mass is the NOSEI-KELIM SEAM awaiting owner ruling (Beit Yosef, Bach,
+Sma, Taz, Ketzot, Peri Megadim, Mishneh LaMelech, Minchat Chinukh...;
+~450 MB to close) + a handful of contemporary works.
+
+PHASE 2 INSTRUMENTATION BUILT same day: chain_scope.yaml (rulings,
+machine-readable), chain_scan.py (full-inversion scanner; incremental
+DISK read-ledger at logic/oral_audit/ledgers/; daf/range/prefix
+resolution; Tanakh cross-refs via elijah_docket/tanakh.sqlite),
+oral_coverage.py (the freeze-blocking coverage gate), freeze_ritual.py
+step-0 wiring (red gate = no freeze flip), PROCESS.md pipeline steps
+rewritten (inversion FIRST, logic notes BEFORE machine derivation,
+two-gate verify; drift-era text retired to git history).
+
+## PASS 6 + SHELF CLOSURE (2026-08-10, owner: "yes fetch" — nosei kelim)
+
+PASS 6: 1,979 files, 0 failures — the codes' commentary layer whole:
+Shulchan Arukh nosei kelim (Sma, Shach, Taz, Magen Avraham, Ketzot,
+Netivot, Eliyah Rabbah, Peri Megadim incl. both components...), Tur
+layer (Beit Yosef, Bach, Darkhei Moshe, Prisha...), Mishneh Torah
+layer (Kessef/Maggid/Lechem Mishneh, Mishneh LaMelech, Radbaz, Kiryat
+Sefer, Tzafnat Pa'neach...), Halakhah acharonim (Shev Shmateta...),
+Minchat Chinukh (owner-ruled in), Marganita Tava, pass-6b stragglers.
+Excluded: contemporary (Gray Matter, Rabbinic Authority...), devotional
+(Sefer Charedim — surfaced). Meiri on Shevuot/Ketubot/Bava Kamma:
+cited by links but ABSENT FROM THE EXPORT BUCKET — bucket gap recorded
+in chain_scope.yaml, web gap-filler if ever needed.
+
+FINAL SHELF: 2.3 GB, ~5,230 works; export_texts 1,952,179 segments;
+torah_grok.sqlite ~3 GB-class. PILOT CHAPTER GATE-CLEAN: Exod 21 =
+7,529 listings -> 4,842 READABLE + 63 TANAKH-VERSE (4,905 required
+readings) + 2,624 OUT (rulings named) + 0 UNRULED. Exod 1-21 overall:
+42,439 readable; 166 unruled remain across the other 20 chapters —
+cleaned per-block during the campaign by the same census procedure.
+Zero-fetch discipline resumes; the chain of transmission is CLOSED
+LOCAL.

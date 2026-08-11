@@ -67,9 +67,14 @@ class Handler(SimpleHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(body)
 
+    def _loopback(self):
+        return self.client_address[0] in ("127.0.0.1", "::1")
+
     def do_GET(self):
         path = urlparse(self.path).path
         if path == "/regen/ping":
+            if not self._loopback():
+                return self._json(403, {"ok": False})
             return self._json(200, {"ok": True})
         if path.startswith("/units/"):
             name = Path(path[len("/units/"):]).name
@@ -87,6 +92,8 @@ class Handler(SimpleHTTPRequestHandler):
         return super().do_GET()
 
     def do_POST(self):
+        if not self._loopback():
+            return self._json(403, {"ok": False, "log": "regen is loopback-only"})
         u = urlparse(self.path)
         if u.path == "/regen/data":
             try:
@@ -120,8 +127,15 @@ class Handler(SimpleHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    srv = ThreadingHTTPServer(("127.0.0.1", PORT), Handler)
+    # --lan: also serve the local network (phones/tablets). READ-ONLY from
+    # the network: every /regen/* endpoint stays loopback-only (the house
+    # rule keeps script execution off the LAN; remote clients never see the
+    # regen buttons because /regen/ping answers 403 to them).
+    host = "0.0.0.0" if "--lan" in sys.argv[1:] else "127.0.0.1"
+    srv = ThreadingHTTPServer((host, PORT), Handler)
     print("dev server: http://localhost:%d/  (scroll app)" % PORT)
     print("            http://localhost:%d/units/<UNIT_...html>  (unit review pages)" % PORT)
     print("            regen endpoints live; buttons will show in the apps")
+    if host == "0.0.0.0":
+        print("            LAN mode: reachable from the local network; regen loopback-only")
     srv.serve_forever()
