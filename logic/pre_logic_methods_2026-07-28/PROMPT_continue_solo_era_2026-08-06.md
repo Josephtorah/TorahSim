@@ -1507,6 +1507,106 @@ coverage accumulates toward exo_21_the_ordinances re-derivation). Scan notes:
 scratchpad law01_scan_notes.md (digest per batch, gen_08 style). gen_08
 check CLOSED: reports on Desktop (epub + v1-vs-v2 md); findings ledgered,
 254 readable unread, resumable; dupe rate ~1-in-4 of 90 MAJORs measured.
+★ BLOCK-2 SCAN OPEN 2026-08-11 (11th update): Exod 21:12-27 (homicide &
+injury) full oral inversion running. Census (law02_census.py): 2,450
+listings -> 1,668 required (1,639 readable + 29 tanakh-verse; 29 already
+read in block 1 — shared chapter ledger is the cursor), 782 OUT, 0
+UNRULED. Progress: 19 bites read+digested, 1,108 block-2 ledger rows
+(chapter ledger now 3,070 total), remaining 531 (503 readable + 28
+tanakh). Strata done: TT + Rambam stratum (MT modules, Sefer HaMitzvot,
+SMaG/SMaK) + all Targums + Rashi complete + Lekach Tov/Sekhel Tov/Midrash
+Aggadah/Tanchuma + Ibn Ezra both recensions + Ramban core + Chizkuni +
+Kitzur BhT + Sforno + Radak + Bahya + Bekhor Shor + Minchat Shai rows +
+Tur (HaArokh, CM 1, CM 420, YD 241) + Abarbanel (Torah essays + Kings/
+Samuel) + Aderet Eliyahu + Alshekh + Bartenura-on-Rashi + Bamidbar/
+Bereshit Rabbah + Rabbati + Ben Ish Hai + Chida + Chatam Sofer + R. Perla
+on Rasag + Bavli/Eruvin source-rows + Gur Aryeh (Maharal) + Da'at
+Zekenim/Hadar Zekenim + Em LaMikra + HaKtav VeHaKabbalah (+GRA ms) +
+Haamek Davar (Netziv) + Keli Chemdah. Later-run marquee adds: the
+rov-epistemology derived from OUR verses (Chullin 11b + the Chatam
+Sofer's altar-wordplay); the altar/crown-jurisdiction machloket (GRA vs
+Netziv); the Sadducees refuted by preposition (נפש בנפש vs our תחת,
+HaKtav VeHaKabbalah); the Twelve Tables parallel (Em LaMikra); Samael
+taken from Botzrah per 21:14 (Bereshit Rabbati). Marquee so far (index
+in notes RESUME HEADER):
+block-seam kam-leih (אין כסף -> מכה איש, LT + Tur dual), TJ's inlined
+five-heads verse 21:19 + מעת לעת window, Saadia–Ben Zuta debate whole,
+Ramban's earmarked physician-fee, Bahya's two-tablets architecture +
+healing dagesh-law (human hard/divine soft — DB-checkable), Sforno's
+estimation-deficit money-rationale, Chizkuni's לא-זו-אף-זו ladder, the
+GRA's altar-as-jurisdictional-filter + הלכה עוקרת planted on eye-for-eye,
+Minchat Shai spelling ledger (יזד defective, ענוש malei, בפללים yods).
+SESSION LOSS + RECOVERY: original thread died mid-bite-7 (2026-08-11
+~11:15); all work recovered from the dead session's scratchpad — kit +
+notes now in session 4ca32657-770b-417a-8a21-73333c8d5f75 scratchpad AND
+mirrored to repo logic/law_era/scratch_mirror/ (law02_census/dump/queue/
+scan_notes); law02_dump.py SCRATCH path repointed (repoint per session);
+dump calls MUST redirect stdout (> law02_batchN.txt — bite 8 was
+reconstructed from ledger+DB after a stdout slip). NEXT: bite 20 (dump →
+read → digest), 503 readable left ≈ 8-12 bites, then 28 tanakh crossrefs
+(--tanakh), then block 3 (Exod 21:28-36 goring ox) extends the same
+ledger toward the exo_21 chapter gate. ALL UNCOMMITTED, await word.
+★ BLOCK-1 v2 DERIVATION DRAFTED 2026-08-11 (10th update, owner word "derive
+the logic"): the coding phase ran — (1) CLAIMS MANIFEST
+logic/oral_audit/manifests/law01_exo_21_1_11_claims.json: 39 claims
+(L1-01..L11-05), distilled from all 84 digests re-read in full, every claim
+multi-witnessed with sources; (2) THE MACHINE
+logic/law_era/exo_21_v2_block1_DRAFT.py: the runnable assert-backed block-1
+v2 — statute 0 (the header's runtime environment: forum/coercion/
+promulgation/parity), CASE 1 court-sale with the proportionality gate
+(sold-whole-never-half, victim's option), fault-typed timer (runaway
+completes, sick-3 exits, sick-4 completes, needle-work carve), chinam
+auto-expiry, heir-service (son only; pierced/amah none), maintenance
+substitution-model (wife fit-and-with-him; children to the six-year floor),
+shifchah anti-retention gate, matrilineal branch, the declaration protocol
+(two sayings in Rava's last-perutah window + the bilateral checklist +
+kohen bar), the piercing rite (two-witness door, right ear, override
+registry awl->anything, essential-actor, no batching), CASE 3 father-sale
+(poverty gate, minor-only, yiud-operable validity), yiud (consent-symmetry,
+absorbing branch, unwaivable), flat-rate subsidized redemption (the codes'
+three test vectors pass: 60/6-worked-3->30, 60/4->20, 100/6-worked-2->
+refund 2/3), no-resale one-way door, the TRIAD (parameterized, onah
+unwaivable, vow-proof), exits as min() over events, severance table — ALL
+ASSERTIONS GREEN; (3) WEB: /units/LAW01_DERIVATION_exo_21_1-11.html (run
+output + all 39 claims + source, linked to the scan page); the scan page
+/units/LAW01_ORAL_SCAN_exo_21_1-11.html (84 digests) also live; dev server
+running on 8011. NOT frozen: chapter gate needs blocks 2-3; v2 YAML
+assembles at freeze-time. UNCOMMITTED: both pages + renderer, the manifest,
+the draft machine — awaiting owner word. ADDED SAME DAY (owner ask "prove
+the code depends on earlier verses"): the DEPENDENCY PROOF — DEPENDS table
+(22 declared import-edges) + verify_dependencies() checking each source
+verse against torah_grok.sqlite's frozen-unit spans: 15 RESOLVED to named
+frozen units (creation week gen_06 + manna exo_16 + Shabbat exo_20 → the
+six-and-one term; Gen 15:13 gen_31 → the awl's 400; Exod 12:7 exo_12 → the
+door-witnesses; Gen 37:28 gen_60 → the Joseph-sale precedent; Gen 29:18
+gen_50, Gen 16:6 gen_32, Gen 31:15 gen_53, Gen 28:20 gen_48, Exod 18:21
+exo_18, Exod 15:25 exo_15, Exod 20 exo_20, Lev 19:20 lev_19) and 7 FORWARD
+demands on underived verses (Lev 25:10/39/41/55 yovel+self-seller+lien,
+Lev 14:14 right-ear, Lev 22:10 category pair, Deut 15:12 severance) — the
+assert enforces the declared direction, and it CAUGHT one misdeclaration
+(Lev 19:20 was already frozen). The machine's imports are now mechanically
+checkable against the corpus-world. NARRATIVE EPUB (owner ask, for
+ElevenLabs listening): logic/law_era/exo_21_block1_inheritance_narrative
+.epub — 9 chapters, ~6,100 words (~40 min audio): the experiment's story +
+each of the 15 resolved inheritances in detail (the six-and-one constant's
+three declarations; the awl's 400/doorpost-witnesses/Sinai-ear rite props;
+the five Genesis family-files; the Marah/Jethro/altar courtroom; the
+caught Lev 19:20 error) + the 7 forward debts + the one-program closing.
+TTS-oriented English prose, transliterated terms glossed inline, no Hebrew
+script in the audio body. Delivered to owner; uncommitted. REWRITTEN on
+owner feedback ("too confusing — software explanations not bible
+readings"): exo_21_block1_code_report.epub — developer-voice code review,
+10 chapters ~6,900 words, verse-by-verse IN SEQUENCE with REAL DATA pulled
+from torah_grok.sqlite: the cantillation trees (21:1 is the block's ONLY
+verse with no etnachta = header-not-law; every law splits at etnachta into
+condition|consequence), the morphology tags (tasim 2ms vs yaavod 3ms =
+addressee routing; amor=infinitive absolute + yomar = the doubling
+operator; tihye 3fs singular w/ compound subject = the matrilineal status
+bit; the 21:8 qere/ketiv BOTH present in the words table as two channels;
+shelash construct-state), the oral layer as spec/linker/patch-registry,
+and the 15+7 import graph as a linker report incl. the caught lev_19
+misdeclaration. Both epubs in logic/law_era/; the code report is the
+primary deliverable, the story version stands aside.
 COMMITTED 2026-08-11 (owner word): block-1 scan completion committed +
 PUSHED as 11a6b03 (ledger 1,962 rows, 430KB notes mirror with 84 digests,
 patched dump, state doc updates 8-9). Next move agreed: block-1 CODING

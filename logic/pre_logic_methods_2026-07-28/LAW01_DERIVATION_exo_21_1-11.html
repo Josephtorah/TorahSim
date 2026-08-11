@@ -1,0 +1,564 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>exo_21 v2 block 1 — DRAFT derivation (Exod 21:1-11)</title>
+<style>
+body { font: 15px/1.6 Georgia, serif; max-width: 1050px; margin: 2rem auto;
+       padding: 0 1rem; color: #232019; background: #fbfaf6; }
+h1 { font-size: 1.45rem; } h2 { font-size: 1.1rem; margin-top: 2rem;
+     border-bottom: 1px solid #ddd6c3; padding-bottom: .25rem; }
+.meta { color: #6b6455; font-size: .9rem; }
+.draft { background: #fff7e0; border: 1px solid #e0cf90; color: #6a5210;
+         padding: .6rem .9rem; margin: 1rem 0; font-size: .95rem; }
+.run { background: #e8f5e9; border: 1px solid #9ccc9c; color: #0a5a1f;
+       padding: .6rem .9rem; font-family: ui-monospace, monospace;
+       font-size: .82rem; white-space: pre-wrap; }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { border: 1px solid #ddd6c3; padding: .35rem .5rem; text-align: left;
+         vertical-align: top; }
+th { background: #f0ecdf; font-size: .78rem; text-transform: uppercase; }
+.code { font-family: ui-monospace, monospace; font-size: .8rem; white-space: nowrap; }
+.src { color: #6b6455; font-size: .78rem; }
+pre { background: #f7f5ee; border: 1px solid #e3ddc9; padding: .8rem;
+      overflow-x: auto; font-size: .78rem; line-height: 1.45; }
+a { color: #4a6da7; }
+</style></head><body>
+<h1>exo_21 v2 — block 1 DRAFT derivation: Exodus 21:1-11 (the slave-term laws)</h1>
+<div class="meta">derived 2026-08-11 under the FULL ORAL TORAH LAW from the complete 84-bite inversion ·
+<a href="LAW01_ORAL_SCAN_exo_21_1-11.html">⇄ the scan (84 digests)</a> ·
+<a href="UNIT_exo_21_the_ordinances.html">v1 unit page (pre-law)</a> ·
+<a href="UNIT_INDEX.html">unit index</a></div>
+<div class="draft">⚠ DRAFT — pre-freeze. The frozen unit spans 21:1-37; the oral-coverage
+gate is chapter-wide and stays FAIL until blocks 2-3 (21:12-37) are scanned. This is the
+block-1 slice of the v2 machine: runnable now, frozen after block 3. Canonical files:
+logic/law_era/exo_21_v2_block1_DRAFT.py ·
+logic/oral_audit/manifests/law01_exo_21_1_11_claims.json.</div>
+<h2>The machine, run just now (assert-backed)</h2>
+<div class="run">$ python3 logic/law_era/exo_21_v2_block1_DRAFT.py
+exo_21 v2 block-1 DRAFT: all assertions hold.
+  39 witnessed claims | gates: proportionality, poverty, consent-
+  symmetry, bilateral checklist | clocks: sale-anniversary, yovel
+  | exits: min() over events, one absorbing branch (yiud) |
+  overrides: awl-&gt;anything (the registry) | triad: 3 fields,
+  parameterized, onah unwaivable. Freeze waits on blocks 2-3.
+
+DEPENDENCY PROOF — 22 edges verified against torah_grok.sqlite:
+  RESOLVED (source verse inside a frozen unit): 15
+    TERM_YEARS six-and-one frame         &lt;- Genesis 1:31   [L11-04] unit=gen_06_land_adam_dominion
+    TERM_YEARS six-and-one frame         &lt;- Exodus 16:26   [L11-04] unit=exo_16_manna_and_sabbath
+    TERM_YEARS six-and-one frame         &lt;- Exodus 20:9    [L11-04] unit=exo_20_the_ten_utterances
+    PIERCING_RITE: the awl&#x27;s 400         &lt;- Genesis 15:13  [L6-04] unit=gen_31_covenant_pieces
+    PIERCING_RITE: door+post witnesses   &lt;- Exodus 12:7    [L6-04] unit=exo_12_passover_and_exodus
+    PIERCING_RITE: the ear that heard    &lt;- Exodus 20:13   [L6-04] unit=exo_20_the_ten_utterances
+    court_sale: national precedent       &lt;- Genesis 37:28  [L11-05] unit=gen_60_dreamer_sold
+    court_sale: mitzvah-sale carve       &lt;- Genesis 29:18  [L11-05] unit=gen_50_wage_seven_years_switched_bride
+    resale: the no-degradation ban       &lt;- Genesis 16:6   [L11-05] unit=gen_32_hagar_angel
+    yiud: the betrayal lexeme            &lt;- Genesis 31:15  [L8-03] unit=gen_53_flight_over_the_river
+    TRIAD: the vow-parallel              &lt;- Genesis 28:20  [L10-01] unit=gen_48_bethel_ladder_vow
+    RUNTIME: lifnehem&#x27;s antecedent       &lt;- Exodus 18:21   [L1-01] unit=exo_18_jethro_and_the_judges
+    RUNTIME: the Marah generalities      &lt;- Exodus 15:25   [L1-04] unit=exo_15_the_song_and_marah
+    RUNTIME: the altar adjacency         &lt;- Exodus 20:23   [L1-05] unit=exo_20_the_ten_utterances
+    shifchah interface                   &lt;- Leviticus 19:20 [L4-01] unit=lev_19_holiness_duty_ledger
+  FORWARD demands (source verse NOT yet derived): 7
+    YOVEL_YEAR = 50; le-olam bound       &lt;- Leviticus 25:10 [L6-03] OPEN
+    court_sale: the class split          &lt;- Leviticus 25:39 [L2-01] OPEN
+    the sugya-anchor of the block        &lt;- Leviticus 25:55 [L6-04] OPEN
+    master_owes_maintenance: children    &lt;- Leviticus 25:41 [L3-01] OPEN
+    PIERCING_RITE: right-ear source      &lt;- Leviticus 14:14 [L6-01] OPEN
+    heir_service: the category pair      &lt;- Leviticus 22:10 [L2-06] OPEN
+    SEVERANCE table; the parallel law    &lt;- Deuteronomy 15:12 [L11-02] OPEN
+</div>
+<h2>The witness layer — 39 claims, every rule sourced to the chain</h2>
+<table><tr><th>id</th><th>ref</th><th>claim</th><th>sources (from the 84-bite scan)</th></tr>
+<tr id="L1-01"><td class="code">L1-01</td><td class="code">Exod 21:1</td><td dir="auto">JURISDICTION: lifnehem (&#x27;before THEM&#x27;) defines the runtime environment — ordained judges in a chain to Moses; NEVER gentile courts (even where their law matches ours — outcome-identity does not license forum substitution; consent cannot cure); laymen barred from COERCION but curable by both parties&#x27; consent; today&#x27;s courts run on the agency fiction (shelichutayhu) of the ordained.</td><td class="src" dir="auto">TT 1:9 (Git 88b); Rashi 21:1; Ramban 21:1; Mizrachi 21:1:3; Ketzot CM 3:1; Ramban Deut 16:18; SA CM 22:2; Beit Yosef CM 26; Sheiltot 58; Tanchuma 6:1</td></tr>
+<tr id="L1-02"><td class="code">L1-02</td><td class="code">Exod 21:1</td><td dir="auto">JUDGMENT/COERCION POWER SPLIT: tasim = the judges&#x27; INSTRUMENTS (strap, lash, shofar, sandal) — the coercion toolkit vests only in the ordained (lifnehem = the seventy elders); bare adjudication may sit lower. Modern gittin-coercion runs on agency.</td><td class="src" dir="auto">TT 1:6 (San 7b); Lekach Tov 21:1; Ketzot HaChoshen CM 3:1; Pardes Yosef 21:1:3 (deterrence-by-display)</td></tr>
+<tr id="L1-03"><td class="code">L1-03</td><td class="code">Exod 21:1</td><td dir="auto">PROMULGATION DUTY (rights-notice): tasim lifnehem = set like a laid table — teach REASONS, not rulings (Eruvin 54b: &#x27;show them the faces&#x27;); and the law must reach ALL: a release-right unpublished is void — the sold man must know God freed him after six, else he cannot claim it; published defaults underwrite price-formation (no ignorance-based rescission).</td><td class="src" dir="auto">TT 1:7; MdRS 21:1 (R. Akiva relay-spec); Or HaChaim 21:1:6; Tur HaArokh 21:1 (R. Yosef Kimchi); ShR 30:11 (promulgation precedes liability); Hirsch 21:1:2 (set-table philology); Netziv 21:1:2</td></tr>
+<tr id="L1-04"><td class="code">L1-04</td><td class="code">Exod 21:1</td><td dir="auto">VAV-APPEND OPERATOR: ve-ele adds — &#x27;as the former are from Sinai, so these&#x27;: the civil code joined to the Decalogue in one revelation; Marah gave the generalities (klal), Sinai the details (prat) — two-phase legislation.</td><td class="src" dir="auto">Mekhilta (TT 1:1); MdRS 21:1; Mizrachi 21:1:1; Maskil LeDavid 21:1:1; Kli Yakar Exod 15:23 (the Marah acrostic: sof-tevot of va-ele ha-mishpatim asher = מרה &#x27;Marah&#x27;)</td></tr>
+<tr id="L1-05"><td class="code">L1-05</td><td class="code">Exod 21:1</td><td dir="auto">VENUE: the Sanhedrin sits BESIDE THE ALTAR (adjacency of Exod 20:23 to 21:1) — whatever disqualifies at the altar disqualifies the bench; capital jurisdiction is gated on the venue (suspended when the court exiled itself).</td><td class="src" dir="auto">TT 1:5; Rashi 21:1; ShR 30; Kli Yakar 21:1 (the Solomon&#x27;s-throne isomorphism); SMaG Pos 102 (venue-dependency); Yeriot Shlomo 21:1; Marot HaTzoveot I Kings 2:28 (Joab)</td></tr>
+<tr id="L1-06"><td class="code">L1-06</td><td class="code">Exod 21:1</td><td dir="auto">GENDER PARITY: lifnehem — Scripture equated woman to man for ALL monetary law (BK 15a); where &#x27;ish&#x27; is written it excludes the minor, not the woman.</td><td class="src" dir="auto">TT 1:8 (Kid 35a); Bach CM 349; Pardes Yosef 21:1 (the tav-prefix dual-gender grammar); Yer.BK 1:3:2</td></tr>
+<tr id="L1-07"><td class="code">L1-07</td><td class="code">Exod 21:1</td><td dir="auto">COMPROMISE-FIRST: the judge is commanded to offer settlement BEFORE judgment (only before the ruling is clear; requires both parties&#x27; consent; compromise-competence requires din-competence — the layman&#x27;s compromise is robbery); judgment itself = mercy mixed with din.</td><td class="src" dir="auto">Midrash Aggadah 21:1 (notarikon); Kitzur Ba&#x27;al HaTurim; Sheiltot 58 (mitzvah livtzoa); Tzror HaMor 21:1 (flee-from-din; hedyot-compromise rule)</td></tr>
+<tr id="L2-01"><td class="code">L2-01</td><td class="code">Exod 21:2</td><td dir="auto">ENTRY PATHS (class split): ki tiqne = the COURT-SOLD THIEF only (male; insolvent; sold for the PRINCIPAL never the fine; witnesses required, no confession-sale) — the self-seller (Lev 25) is a distinct class: no piercing, no shifchah (fork: R. Eliezer grants via mishneh sekhar sakhir), term by contract (6+ allowed), no severance (fork), exits with children always.</td><td class="src" dir="auto">TT 2:1; Mekhilta; Malbim 21:2:1; Yalkut 310; PY 21:11 appendix; Yer.Sotah 3:8:7 (bi-gnevato ve-lo bi-khfelo); Levush HaOrah 21:2:1 (one-subject-one-pericope)</td></tr>
+<tr id="L2-02"><td class="code">L2-02</td><td class="code">Exod 21:2</td><td dir="auto">SALE PROPORTIONALITY GATE: sold only if the theft &gt;= his worth (&#x27;sold WHOLE, never half&#x27; — nimkar kullo ve-lo chetzyo); theft 500/worth 1000 → NOT sold (labor impounded instead); the VICTIM holds an option: sell, or take a promissory note; never resold to the same man for one theft; two thefts → resale possible.</td><td class="src" dir="auto">Yalkut 342:6 (Mechilta); Kid 18a (Hirsch 21:6:8); Mishneh LaMelech Slaves 2:3 (damav muvla&#x27;in); Abarbanel 21:1 essay</td></tr>
+<tr id="L2-03"><td class="code">L2-03</td><td class="code">Exod 21:2</td><td dir="auto">THE TWO CLOCKS: u-va-sheviit WITHOUT &#x27;shanah&#x27; = the seventh of the SALE (anniversary clock, me&#x27;et le&#x27;et, day-to-day) — NOT the calendar shemittah (which never frees him; yovel does). Exit at the START of year seven; leap-year edge: a term ending in Adar extends to Adar II&#x27;s end; calendar-edge: term ending Rosh Chodesh Nisan bars work already on 29 Adar (retroactive month-sanctification risk).</td><td class="src" dir="auto">TT 2:7 (Arakh 18b), 2:8 (Yer.Kid), 2:10; Malbim Ayelet 84; Rashbam 21:2:2; Lev 25:15:4 (Hirsch: the reckoning taxonomy); PY 21:2:3 (Minchat Chinukh edge; muchzak-in-his-own-body)</td></tr>
+<tr id="L2-04"><td class="code">L2-04</td><td class="code">Exod 21:2</td><td dir="auto">TIMER SEMANTICS (fault-typed): the RUNAWAY completes his term (left the domain); the SICK exit ON TIME — sick ≤3 years counts, sick 4+ (majority) completes; light-duty capability (needle-work) keeps the clock running; composite sequences resolved by but-for counterfactuals; chinam = no repayment of idle-time, food, or medical outlays.</td><td class="src" dir="auto">TT 2:5 (Kid 17a); Rav Sheshet (Kid 17a, ma&#x27;aseh machat); Yer.Kid 1:2:7; Malbim 21:2:7 (state/domain distinction); Midrash Tannaim Deut 15; RB 21:2:4 (the Isaiah 16:14 three-year constant)</td></tr>
+<tr id="L2-05"><td class="code">L2-05</td><td class="code">Exod 21:2</td><td dir="auto">CHINAM (exit-free): the term expires AUTOMATICALLY — no manumission document, no payment (auto-expiry vs sanctity-acquisition semantics: his body is acquired, yet the acquisition is non-absolute); EARLY status-change (waiver of remaining money) still requires the instrument (Rava: his body is acquired).</td><td class="src" dir="auto">Netziv 21:2:3; Lekach Tov 21:2; SMaG Pos 83 (Rava); Alshekh 21:1:9 (self-executing exit)</td></tr>
+<tr id="L2-06"><td class="code">L2-06</td><td class="code">Exod 21:2</td><td dir="auto">SERVICE INHERITANCE: the term passes to the SON only (not daughter/brother/heir) — son-substitution outranks yibbum-substitution (&#x27;is there yibbum where there is a son?&#x27;); the pierced slave and the amah serve NO heir.</td><td class="src" dir="auto">TT 2:6; Yalkut 311:3, 898:3 (Kid 17b); Rashbam BB 108b; Tractate Avadim; Hadar Zekenim 21:2:1 (ribbui+miut composition)</td></tr>
+<tr id="L2-07"><td class="code">L2-07</td><td class="code">Exod 21:2</td><td dir="auto">DIGNITY FLOOR: &#x27;eved&#x27; is a technical status tag, not a permitted insult (&#x27;the Torah called him slave against its will&#x27;); no slave-labor customs (foot-washing, sandal-carrying, litter, bathhouse gear); no trade-switch, no public-serving trade; equality in food, drink, bedding (&#x27;who buys a Hebrew slave buys himself a master&#x27; — the one-bed case: the slave gets it, kofin al middat Sedom); work only at his prior craft, by day.</td><td class="src" dir="auto">TT 2:2; Yalkut 310-311; Sifra Behar 7:3 (the imakh parity spec); Hirsch 21:5 (Kid 22a); Lev 25:39:5 (Tosafot Kid 20a); Divrei David 21:2:4; Malbim 21:2:3 (asymmetric address)</td></tr>
+<tr id="L2-08"><td class="code">L2-08</td><td class="code">Exod 21:2</td><td dir="auto">MODULE DEPENDENCY: the Hebrew slave law operates ONLY while yovel operates (dormant now); mass non-compliance disables yovel itself (majority-compliance as a runtime dependency); slave-release was the FIRST law given (precondition of redemption) and Jeremiah 34 makes its breach the fall of the state.</td><td class="src" dir="auto">ShM Pos 233; Tur YD 267 (dormancy flag); R. Perla Pos 64:11; Gittin 65a (Chinukh 43:4); Arakhin 33a; Hirsch 21:6:11 (Yer. RH: the first law); MC Mishpatim 7 (yovel-lapse contingency)</td></tr>
+<tr id="L3-01"><td class="code">L3-01</td><td class="code">Exod 21:3</td><td dir="auto">MAINTENANCE: the master feeds the slave&#x27;s WIFE (from &#x27;his wife goes out with him&#x27; — &#x27;was SHE sold?!&#x27;; the exit reveals the entry-state) and his CHILDREN to age six (from Lev 25:41) — the master ENTERS THE HUSBAND&#x27;S PLACE (substitution model; expectation-preservation); excludes the betrothed (not &#x27;with him&#x27;), the levirate-widow, and forbidden unions (the fit-to-remain predicate); their earnings are the SLAVE&#x27;s, not the master&#x27;s.</td><td class="src" dir="auto">TT 3:4 (Kid 22a); Ramban 21:3; MdRS 21:3; Malbim 21:3:3; HKV Lev 25:41 (Behar as derivation parent); Chatam Sofer 4 (the computed delta: term=6 x maintenance-window=6); Rambam/Ramban earnings fork (Hirsch 21:3)</td></tr>
+<tr id="L3-02"><td class="code">L3-02</td><td class="code">Exod 21:3</td><td dir="auto">CHILD-SUPPORT SIX-YEAR FLOOR: from the term-length the chain derives the father&#x27;s duty to maintain his minor children to age SIX (the sale-term generates the obligation-length); beyond six — charity-coercion only, with public shaming (&#x27;a raven wants its young!&#x27;).</td><td class="src" dir="auto">Ralbag root 9 (Ketubot ch.5); SMaG Neg 81; Chatam Sofer 4; PY Lev 25:41</td></tr>
+<tr id="L4-01"><td class="code">L4-01</td><td class="code">Exod 21:4</td><td dir="auto">SHIFCHAH PROVISION: master MAY (permission per R. Yishmael; Deut&#x27;s doubling adds compulsion-power; the slave&#x27;s own consent is a separate track) give a Canaanite bondwoman to the MARRIED slave only — the union exclusive (meyuchedet lo, not hefker), one wife to one slave; the wife-first condition is ANTI-RETENTION ENGINEERING (the single man would attach and refuse exit — golden-handcuffs ban; also a perverse-incentive block: a single man might self-sell FOR a shifchah) and PRICING (the married thief is unsaleable without the breeding-right compensating his family&#x27;s upkeep).</td><td class="src" dir="auto">TT 3:2; Chizkuni 21:3:2; Or HaChaim 21:4:1-3; Paaneach Raza 5; Toledot Yitzchak (market-clearing); Kli Yakar 21:4:1; Tur HaArokh 21:3; Yalkut 312-313; HKV 21:3:1 (the two permission-tracks); Maskil LeDavid (compulsion via mishneh sekhar sakhir — &#x27;his night-work is the shifchah&#x27;)</td></tr>
+<tr id="L4-02"><td class="code">L4-02</td><td class="code">Exod 21:4</td><td dir="auto">MATRILINEAL DESCENT RULE: &#x27;the woman and her children shall be her master&#x27;s&#x27; — wherever kiddushin cannot hold, the child follows the MOTHER (the shifchah branch of the four-case descent algorithm; the nokhrit branch from Deut 7); cascades: no levirate bond via a slave-brother, sibling-predicates excluded, R. Tarfon&#x27;s mamzer-purification algorithm; children include tumtum/androginos; the singular tihyeh marks the mother as principal.</td><td class="src" dir="auto">TT 4:5-9 (Yev/Kid); M.Kid 3:12; Yalkut 100:2; Malbim 21:4:3; Hirsch 21:4:2 (Kid 66b); GA Vayikra 18:9</td></tr>
+<tr id="L5-01"><td class="code">L5-01</td><td class="code">Exod 21:5</td><td dir="auto">DECLARATION PROTOCOL: &#x27;amor yomar&#x27; = said TWICE, while still a slave, within the LAST-PERUTAH WINDOW (start and end of the final perutah&#x27;s worth — before it begins or after it ends the saying is void even if doubled); the content is an existence-checked parameter list (&#x27;my master, my wife, my children&#x27;).</td><td class="src" dir="auto">TT 5:1, 5:4 (Kid 22a); Yalkut 315:3 (Rava&#x27;s window); MdRS 21:5 (three-sayings recension fork); Ralbag (the first-plurality arithmetic)</td></tr>
+<tr id="L5-02"><td class="code">L5-02</td><td class="code">Exod 21:5</td><td dir="auto">THE BILATERAL CHECKLIST: piercing requires — he has wife+children AND the master has wife+children; love on BOTH sides; NEITHER party sick (both sick = teyku); the master&#x27;s property BLESSED through him; each condition a hasty-decision guard (Hirsch&#x27;s decision-theory). Tannaitic fork: R. Yishmael (conditions gate) vs R. Akiva (pierced either way).</td><td class="src" dir="auto">MdRS 21:5; Yalkut 316:1; Yer.Kid 1:2:32; Tractate Avadim 3:1; Hirsch 21:5:1; RB 21:5 (per-word anchors); MC Mishpatim 6 (consent-scope: the son never consented to)</td></tr>
+<tr id="L6-01"><td class="code">L6-01</td><td class="code">Exod 21:6</td><td dir="auto">PIERCING PROCEDURE: presentation to THE JUDGES (his sellers — the same court; elohim = judges, the resolver ruling; the court REBUKES first), then at the master&#x27;s house: door OR doorpost valid for the STANDING stage, piercing into the DOOR only (standing, mounted — the door counts as two witnesses, for no door lacks its post); RIGHT ear (azen-azen from the metzora — the parameter server), cartilage vs lobe forked on the kohen-question (R. Meir: no kohen pierced ever); the MASTER PERSONALLY — no agent, no son, no court officer (essential-actor: &#x27;that HE pierce from beginning to end&#x27;); no batching (two slaves at once barred; body-title cannot vest by halves).</td><td class="src" dir="auto">TT 6:1-7; LM Slaves 3:9 (two-stage decomposition); Yalkut 317; Rogatchover 21:6, 21:8; Yeriot Shlomo 21:6 (two-witness door); Mizrachi/Maskil venue forks; Chizkuni 21:6:2 (the bore-matching credential); Netziv 21:6:1 (rebuke-first)</td></tr>
+<tr id="L6-02"><td class="code">L6-02</td><td class="code">Exod 21:6</td><td dir="auto">THE OVERRIDE REGISTRY (halakhah uproots the text): &#x27;the Torah said WITH AN AWL — the halakhah said: with anything&#x27; — one of the canonical THREE (dust/get/awl; Yer. adds a fourth vs the derivation-output); the GRA&#x27;s manifesto: the override is THE NORM (&#x27;so in most of this parashah — the Oral Torah turns the material like clay under the seal&#x27;); counter-programs preserved: Rabbi (metal only, kelal-uferat; rejects the override), HKV (the halakhah found INSIDE the lexicon — olam = ascent/yovel, no uprooting needed), Rashi (semantic rebinding: &#x27;fifty years are CALLED olam&#x27;).</td><td class="src" dir="auto">Sifrei Dev 122:1; LT 21:6:5; Yalkut 898:7; GRA Aderet Eliyahu 21:6:2; Malbim 21:6:5 (tannaitic pedigree); Yer.Kid 1:2:29; HKV 21:6:2; Rashi 21:6:4; Rashbam manifesto 21:1:1</td></tr>
+<tr id="L6-03"><td class="code">L6-03</td><td class="code">Exod 21:6</td><td dir="auto">LE-OLAM = TO THE YOVEL (the pierced one&#x27;s bounded forever): the four-verse mutual lock (Kid 15a) assigns each yovel-release verse to its case; the pierced serves the master ALONE (causal-lapse: when the love&#x27;s object dies the effect lapses) and exits at yovel or the master&#x27;s death; the pshat layer (&#x27;all his days&#x27; — Rashbam) preserved as the second channel; Samuel&#x27;s ad-olam = 50 as the bounded witness.</td><td class="src" dir="auto">TT 6:12 (Kid 15a); GA Lev 25:10:3 (the 4-verse lock); Ralbag root 12; Rashbam 21:6:3 (fork); Malbim 21:6:6-7; Yalkut 899:2 (olamo shel yovel)</td></tr>
+<tr id="L6-04"><td class="code">L6-04</td><td class="code">Exod 21:6</td><td dir="auto">RATIONALE LAYER (organ/instrument selection): the EAR that heard at Sinai (&#x27;do not steal&#x27; — the property-theft ban nested in the Decalogue&#x27;s headline; or &#x27;they are MY slaves — not slaves of slaves&#x27; for the self-seller); DOOR AND DOORPOST the Egypt witnesses (Passover blood); the awl&#x27;s 400 = Egypt&#x27;s decreed term; the piercing punishes the free CHOICE at six, not the coerced sale (no double jeopardy; retroactive disclosure); slaves are EXEMPT from the yoke of Heaven — human mastery and divine Kingship as exclusive occupancies (the Zohar&#x27;s chinam).</td><td class="src" dir="auto">TT 6:3, 6:9 (Kid 22b); Chizkuni 21:6 (la-tignovu precision); Mizrachi 21:6:4 (nesting); Kli Yakar 21:5:1-2; Rosh 21:6 (bitachon-reading; gematria 400); Siftei Kohen/Zohar (the yoke); Hirsch 21:6:10 (door=belonging, posts=home)</td></tr>
+<tr id="L7-01"><td class="code">L7-01</td><td class="code">Exod 21:7</td><td dir="auto">AMAH ENTRY: only the FATHER sells (not mother, not self, never for her theft — women are never sold or pierced), only a MINOR (the sale-window closes at signs — the already-sold exits at signs, a-fortiori the unsold cannot enter; the male signs-exit is DEAD CODE: no reachable male-minor-slave state), only under TOTAL DESTITUTION (house, land, last shirt sold first — the sofei-tevot &#x27;yerushato&#x27;), and only to a marriage-possible buyer: THE SALE IS MARRIAGE-TRACK BY DESIGN (yiud as the sale&#x27;s default state — &#x27;she is designated by default&#x27;; every sale of a daughter is a betrayal).</td><td class="src" dir="auto">MdRS 21:7; Yalkut 319; Kid 20a/Rambam 4:2 (Hirsch 21:7:2); Chizkuni 21:7 (dead-code); Hadar Zekenim 21:7; Ramban 21:8 (default-yiud); Siftei Kohen acrostic; TT 7:4 (Arakh 29b)</td></tr>
+<tr id="L7-02"><td class="code">L7-02</td><td class="code">Exod 21:7</td><td dir="auto">LO TETZE KE-TZET HA-AVADIM (multi-reading, all preserved): (a) halakhic — she does not exit by limb-loss like Canaanites (damages instead; the hekesh extends the male the same way); (b) dignity — indoor work only, never sent to the market (&#x27;the king&#x27;s daughter&#x27;s honor is within&#x27; — the Mahari Bruna precedent: a hired maid cannot be compelled to outdoor errands; TDbE&#x27;s famine-exploitation rationale grounding the daughters-first estate takkanah); (c) Rambam shoresh 8: the clause is a NEGATION (information), not a prohibition — the statement-type doctrine.</td><td class="src" dir="auto">TT 3:1, 7:8; Mahari Bruna 241 (PY 21:7:1); TDbE 23:1; Chizkuni 21:7; Shorashim 8:4; BeHaG/Ramban 21:7 (protective-lav fork); Netziv 21:7:1 (no slave-exit applies — purchase-intent)</td></tr>
+<tr id="L8-01"><td class="code">L8-01</td><td class="code">Exod 21:8</td><td dir="auto">YIUD MECHANICS: designation = EIRUSIN by the ORIGINAL purchase-money (&#x27;the first monies were given for kiddushin&#x27; — retroactive conversion; fork: R. Yose b.R. Yehudah), no new act needed; requires HER consent (ein yiud ela mi-da&#x27;atah — the word yi&#x27;ed itself encodes mutual union; Rambam vs Tosafot fork) AND his — the qere lo (&#x27;to him&#x27;) carries his refusal, the KETIV lo (&#x27;not&#x27;) carries HER veto (consent-symmetry); the mitzvah of yiud PRECEDES redemption (the canonical priority ladder) and is UNWAIVABLE BY CONTRACT (sale &#x27;on condition of no yiud&#x27;: sale valid, condition VOID — matneh al ma she-katuv ba-Torah; R. Meir/R. Akiva forks preserved); no designating two at once.</td><td class="src" dir="auto">TT 8:4-6; MdRS 21:8 (consent + generalized to all women); Or HaChaim 21:8:1; Tractate Avadim 1:5-6; Yer.Kid 1:2:25 (waivability typology); Hirsch 21:8:1 (yi&#x27;ed/yachad philology; qere-primacy); Soferim 6:5 + Minchat Shai (the ketiv/qere registry); Malbim 21:8:1 (the revealed-intent trigger)</td></tr>
+<tr id="L8-02"><td class="code">L8-02</td><td class="code">Exod 21:8</td><td dir="auto">REDEMPTION (ve-hefdah): GRADUATED, FLAT-RATE, SUBSIDIZED — price prorated linearly by years served at the ORIGINAL per-year rate (deduction at cost, not market: she was bought weak and cheap, is now grown and worth more — the master genuinely subsidizes; anti-appraisal made explicit; fork: Maharal&#x27;s concession-against-ownership vs the value-curve); the master MUST cooperate (causative ve-hefdah, &#x27;he reckons with her&#x27;); the father is FORCED to redeem if able, the family liable after him (&#x27;we redeem her against the father&#x27;s will, for the family&#x27;s blemish&#x27;); the master must accept current-value assessment and she exits against his will; a sale is VALID ONLY IF ITS RELEASE-MECHANISM IS OPERABLE (no purchase without a working exit — sale to a relative where yiud is impossible is no sale; no amah for one perutah).</td><td class="src" dir="auto">TT 8:5-6 (Kid 14b); Rosh 21:8:1; Chizkuni 21:8:4; Hadar Zekenim 21:8:2 (Orleans value-curve); GA 21:8:4; Riva 21:8:1 (the dumya-de-yiud principle); Hirsch 21:8:2; Chinukh 44 (worked vector); PY 21:11 appendix</td></tr>
+<tr id="L8-03"><td class="code">L8-03</td><td class="code">Exod 21:8</td><td dir="auto">NO-RESALE (le-am nokhri lo yimshol): the no-transfer rule — master may never resell or gift; the father may not resell after yiud-track betrayal (bevigdo bah = the ONE-WAY DOOR / absorbing state; the fork three ways: garment-spread = marriage / betrayal = deceit / dominion — plus the vocalization channels ruled BOTH operative); addressee forks preserved (another man / actual gentile / the buyer&#x27;s household / the convert community / warning TO THE COURT); &#x27;psychological foreignness&#x27;: after betrayal every new house is a foreign people; the attempted sale is VOID, not lashable.</td><td class="src" dir="auto">TT 8:7-8; Onkelos/Chinukh 45; Ramban 21:8; Levush 21:8:1; Malbim 21:8:3-4 (the fork mapped to divorce-law systems); RB 21:8:2 (yesh em la-mikra/masoret); Hirsch 21:8:3 (am = circle; ein mokhrah li-krovim); LT 21:8 (azharah le-beit-din)</td></tr>
+<tr id="L9-01"><td class="code">L9-01</td><td class="code">Exod 21:9</td><td dir="auto">SON-SUBSTITUTION: the master may designate her to his SON (in the father&#x27;s lifetime; the son needs the ADULT son&#x27;s assent per the psak) — the son inherits the paid consideration (&#x27;you are designated to me by the money my father received&#x27;); the BROTHER never (son stands in for TWO institutions — yiud and the ancestral field — the brother only for yibbum; the yibbum k&#x27;v blocked by &#x27;his son&#x27;); the power DERIVED from the father&#x27;s duty to marry off his son (hence no grandson-yiud, no yiud by a woman owner).</td><td class="src" dir="auto">TT 9:1; Tractate Avadim 1:7; Yalkut 320:6; Rogatchover 21:10 (duty-derived power); Rashi 21:9 (the formula); MT Slaves 4 (adult-son assent); Bartenura 21:2 (standings-count)</td></tr>
+<tr id="L9-02"><td class="code">L9-02</td><td class="code">Exod 21:9</td><td dir="auto">KE-MISHPAT HA-BANOT — THE INVERSION OPERATOR: &#x27;it came to teach and ended up taught&#x27; (ba lelamed ve-nimtza lamed): the daughters&#x27;-law the verse cites is WRITTEN NOWHERE — the amah-clause is the SOURCE of every Jewish wife&#x27;s rights (R. Yoshiyah; R. Yonatan reads the direction reversed — both preserved with Malbim&#x27;s formal rule); stated at the SON because there disrespect is most likely (the extreme-example drafting canon); the Torah&#x27;s only husband-duties law is legislated on the beggar&#x27;s child — &#x27;not by one hairbreadth may the treatment differ&#x27; (olah imo ve-einah yoredet, the station-ratchet).</td><td class="src" dir="auto">TT 9:2; Mekhilta (Siftei Chakhamim 21:9:3); Yalkut 320:7; Malbim 21:9:2; Hirsch 21:9-10 (hairbreadth maxim); MdRS 21:9 (bidirectional); Chinukh 46</td></tr>
+<tr id="L10-01"><td class="code">L10-01</td><td class="code">Exod 21:10</td><td dir="auto">THE TRIAD (she&#x27;erah kesutah ve-onatah): the three-field obligation record — the tannaitic PERMUTATION TABLE preserved (R. Yoshiyah: food/clothing/conjugal; Rebbi: conjugal/clothing/food; R. Yonatan: all three = clothing, age- and season-indexed; Rashbam&#x27;s peshat: food/clothing/DWELLING; Saadia: &#x27;her times&#x27;); toggles independently deoraita/derabbanan (the psak cascade rides Onkelos&#x27;s ONE WORD she&#x27;erah=zionah &#x27;her sustenance&#x27;); runtime-parameterized: clothing by age and season, food by locale-median, onah by OCCUPATION (the Ketubot 61b table: idle nightly … sailors six-monthly; scholars Shabbat-eve) and health; the station-ratchet (rises with him, never descends).</td><td class="src" dir="auto">TT 10:4-5 (Ket 47b-48a); Yalkut 321:1 (the permutation table); Minei Targuma (the mega-fork + psak cascade); Netinah LaGer; Rashbam 21:10:3; Tafsir Rasag; Tur EH 70/76 (deployed constants); SMaG Neg 81 (locale re-binding); Rasag Pos 70-72 (three separate commandments)</td></tr>
+<tr id="L10-02"><td class="code">L10-02</td><td class="code">Exod 21:10</td><td dir="auto">LO YIGRA (the no-diminish lav): protects the ALREADY-designated first holder against the new match; violation carries no lashes (actless negative); vows CANNOT defeat the duty (the pre-existing lien beats the vow — the anti-override registry); WAIVABILITY TYPOLOGY: money-duties (food/clothing) waivable by her, ONAH never (tzaara de-gufa — body-rights are not stipulable); who-waives distinguished from what-is-waived; the rebellion-fine system runs on this verse (mored: +36 barley-weights of silver weekly onto her ketubah; moredet −7 dinars); withholding-to-pain violates the lav; illness tolls six months max, then permission or divorce+ketubah; polygamy capped by the SCHEDULE ARITHMETIC (each wife&#x27;s monthly onah) and by capacity (resource-constraint precondition).</td><td class="src" dir="auto">TT 10:6-7 (Ned 15b); Yer.Kid 1:2:25; Gittin 84b; Tur EH 72/76-77; SA EH 76:11, 77:1; M.Ket 5:7; MT Marriage 12:2, 14:7-15; Sforno 21:10 (capacity); MC Mishpatim 8-10 (the compelled-divorce source: &#x27;kofin oto lehotzi&#x27;)</td></tr>
+<tr id="L11-01"><td class="code">L11-01</td><td class="code">Exod 21:11</td><td dir="auto">SHELOSH ELEH: the three = yiud-to-him / yiud-to-son / redemption (NOT the triad — post-yiud she is a WIFE exiting only by get; the halakhot &#x27;said at Sinai and attached to the verse&#x27;); Or HaChaim&#x27;s pshat layer and Ibn Ezra&#x27;s triad-reading preserved (MC&#x27;s rehabilitation: breach of the triad = compelled release, &#x27;a broad source for all compelled divorces&#x27;); the three form a state machine with ONE ABSORBING BRANCH (yiud kills the signs-exit; redemption leaves it live); mutually exclusive by construction (to him AND his son unsatisfiable → disjunction).</td><td class="src" dir="auto">TT 11:1; MdRS 21:11 (both tannaitic ways); Yalkut 321:2; Taz 21:11:1 (absorbing-state); GA 21:11:1; Or HaChaim 21:9-11; MC Mishpatim 8-10; Rosh 21:11 (the get-proof); Maskil (the construct-sheva grammar)</td></tr>
+<tr id="L11-02"><td class="code">L11-02</td><td class="code">Exod 21:11</td><td dir="auto">THE DOUBLED EXIT (chinam / ein kasef): two exit-times — naarut (signs) and bagrut — both written &#x27;to give the litigant no opening to distinguish&#x27; (adversarial-robustness redundancy); the AILONIT edge (no naarut ever — the bagrut clause carries her case); ein kasef = &#x27;no money for THIS master, but there IS for another master — THE FATHER&#x27;: kiddushin-money and the father&#x27;s-rights table derived from negation-scope; and the FOUNDING role: tractate Kiddushin&#x27;s opening derivation — a wife is acquired by money FROM THIS CLAUSE; exit-instrument rule: free of money, NOT free of the get where designated; deduction-exit and flight carry NO severance-grant (the eligibility table; R. Meir&#x27;s flip preserved).</td><td class="src" dir="auto">TT 11:2-3 (Ket 46b, Kid 4a); Rashi 21:11:2; Riva 21:11:1; GA 21:11:2 (two-pass read); Yalkut 320:3, 936:5; Hirsch 21:11:1-3; Rogatchover 21:11 (four stacked readings); Yalkut 898:3 (severance table); LT 21:11:2</td></tr>
+<tr id="L11-03"><td class="code">L11-03</td><td class="code">Exod 21:11</td><td dir="auto">EXIT PRIORITY: the amah&#x27;s release = MIN() over exit-events — six years, yovel, signs, master&#x27;s death (she serves no heir), redemption — &#x27;whichever comes first precedes to free her&#x27; (kol ha-kodem kodem le-cheruta); the male&#x27;s four (years/yovel/deduction/master&#x27;s-death-without-son), the pierced one&#x27;s two (yovel/master&#x27;s death); the delta-table (&#x27;in her what is not in him&#x27;): signs-exit, forced redemption, never sold twice — vs his resale for a second theft.</td><td class="src" dir="auto">Rashi 21:7:2 (the explicit min()); RB 21:3:2 (the numeric table); MdRS 21:2 (the five-exit summary as Mishnah-output); Yalkut 898:2; Tos.Sotah 2:8 (the gender asymmetry-table)</td></tr>
+<tr id="L11-04"><td class="code">L11-04</td><td class="code">Exod 21:1-11</td><td dir="auto">THE BLOCK&#x27;S DESIGN THESIS: the rights-code OPENS with the criminal and the beggar&#x27;s child — &#x27;crime and poverty, the two factors that bring respect for a human being to zero, placed AT THE HEAD of the laws of human rights&#x27;; the ONLY deprivation of freedom in Torah law, and it is not punishment (repayment ≠ punishment; no prison in Torah jurisprudence); the six/seven term = the week&#x27;s theology run as penology (&#x27;Six enslaves you, Seven makes you free&#x27;); the code compiled under a chapter-header that bars gentile-party case-law (the addressee-header constrains chapter content).</td><td class="src" dir="auto">Hirsch 21:2:1-3, 21:6:5-9, 21:11:4; Ramban 21:2 (the 7-clock fractal); Abarbanel 21:2 (the non-derivable constant); Bachya/Siftei Kohen 21:2:1; MC Emor 123 (the header-constraint); Alshekh 21:1 (composition-consistency)</td></tr>
+<tr id="L11-05"><td class="code">L11-05</td><td class="code">Exod 21:1-11</td><td dir="auto">SETTLEMENT-LINK CANDIDATES (corpus-world wires): Gen 37 ↔ 21:2 (the Joseph-sale as national thief-slavery precedent; Megalleh Amukkot&#x27;s Marah scene); Gen 29:18 ↔ 21:2 (Jacob&#x27;s seven years vs the six — mitzvah-sale resolution); Gen 16/21 ↔ 21:8 (Hagar under the no-degradation ban); Gen 31:15 ↔ 21:8 (&#x27;he has SOLD us&#x27; — the daughters-betrayal); Gen 28:20 ↔ 21:10 (Jacob&#x27;s vow = the triad); Gen 30:15 ↔ 21:10 (the Rachel/Leah onah-claim); Deut 3:23-26 ↔ 21:5 (Moses as the nirtza refusing exit — closed on the two-sayings technicality); I Kings 2:28-34 ↔ 21:14 (Joab at the altar = the Sanhedrin&#x27;s seat); II Kings 4:1 ↔ the block (the creditor and the widow&#x27;s children — the live abuse-case); Isa 52:3 (chinam sold / redeemed without silver — the national amah typology).</td><td class="src" dir="auto">Kli Yakar 21:2:1; OC Gen 29:18/30:15; Yalkut 79:6, 814:3; LT Gen 16:6; Sforno 21:7-8; MA Vayetzei 23; Marot HaTzoveot; Chanukat HaTorah 150; PY 21:5:1, 21:11 appendix</td></tr></table>
+<h2>The machine (source, with the dependency proof)</h2>
+<pre dir="ltr">#!/usr/bin/env python3
+# =============================================================================
+# LAW ERA v2 DERIVATION — DRAFT (pre-freeze)
+# exo_21 block 1: Exodus 21:1-11 — the slave-term laws
+#
+# Derived 2026-08-11 from the COMPLETE oral inversion (84 bites, 1,962/1,962
+# listings, BLOCK-1 GATE GREEN). Witness layer:
+#   logic/oral_audit/manifests/law01_exo_21_1_11_claims.json  (claims L1..L11)
+# Every rule below carries its claim-ID; every claim carries its sources.
+#
+# STATUS: DRAFT. The frozen unit exo_21_the_ordinances spans 21:1-37; the
+# freeze-ritual&#x27;s oral-coverage gate is chapter-wide and stays FAIL until
+# blocks 2-3 (21:12-37) are scanned. This file is the block-1 slice of the
+# v2 machine, runnable now; the v2 YAML + freeze land after block 3.
+# Experimental model — not binding religious law.
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# STATUTE 0 — THE HEADER (21:1): the runtime environment          [L1-01..07]
+# ואלה המשפטים אשר תשים לפניהם (&quot;and these are the ordinances which you
+# shall set before them&quot;)
+# ---------------------------------------------------------------------------
+RUNTIME = {
+    &quot;forum&quot;: &quot;ordained-chain-to-Moses&quot;,      # [L1-01] lifnehem: never gentile
+    &quot;gentile_court_even_same_law&quot;: False,     #   courts — outcome-identity does
+    &quot;layman_curable_by_consent&quot;: True,        #   not license the forum; laymen
+    &quot;gentile_curable_by_consent&quot;: False,      #   cured by consent, gentiles never
+    &quot;coercion_requires_ordination&quot;: True,     # [L1-02] the judgment/coercion split
+    &quot;promulgation_is_precondition&quot;: True,     # [L1-03] a release-right unpublished
+    &quot;gender_parity_all_monetary_law&quot;: True,   # [L1-06]        is void
+    &quot;compromise_offered_before_verdict&quot;: True # [L1-07]
+}
+
+# The module dependency: the whole block runs only while yovel runs. [L2-08]
+YOVEL_OPERATES = True          # historical runtime flag (dormant today)
+YOVEL_YEAR = 50                # the epoch-constant: le-olam = to the yovel
+
+TERM_YEARS = 6                 # the non-derivable constant: the week&#x27;s
+                               # theology run as penology [L11-04]
+CHILD_SUPPORT_YEARS = 6        # derived FROM the term-length [L3-02]
+
+# ---------------------------------------------------------------------------
+# CASE 1 — כי תקנה עבד עברי (&quot;when you acquire a Hebrew slave&quot;), 21:2
+# ---------------------------------------------------------------------------
+def court_sale(theft, worth_six_years_labor, male=True, insolvent=True,
+               by_witnesses=True, victim_consents_to_sale=True):
+    &quot;&quot;&quot;Entry path 1: the court-sold thief. Returns a slave-record or a
+    rejection (reason). The self-seller (Lev 25) is a DIFFERENT class. [L2-01]&quot;&quot;&quot;
+    if not YOVEL_OPERATES:
+        return None, &quot;module dormant: eved ivri runs only while yovel runs [L2-08]&quot;
+    if not male:
+        return None, &quot;bi-gnevato ve-lo bi-gnevatah: a woman is never sold [L2-01]&quot;
+    if not by_witnesses:
+        return None, &quot;no confession-sale: witnesses required [L2-01]&quot;
+    if not insolvent:
+        return None, &quot;assets exist: forced payment, sale invalid [L2-01]&quot;
+    # THE PROPORTIONALITY GATE [L2-02]: sold whole, never half.
+    if theft &lt; worth_six_years_labor:
+        return None, &quot;nimkar kullo ve-lo chetzyo: labor impounded, freedom untouched [L2-02]&quot;
+    if not victim_consents_to_sale:
+        return None, &quot;the victim&#x27;s option: a promissory note instead [L2-02]&quot;
+    return {
+        &quot;class&quot;: &quot;eved_ivri&quot;, &quot;entry&quot;: &quot;court_sale&quot;,
+        &quot;term_start_day&quot;: 0,                       # the SALE-clock, me&#x27;et le&#x27;et:
+        &quot;term_days&quot;: TERM_YEARS * 365,             # anniversary years, never the
+        &quot;clock&quot;: &quot;sale-anniversary&quot;,               # calendar shemittah [L2-03]
+        &quot;served_days&quot;: 0, &quot;sick_days&quot;: 0, &quot;fled_days&quot;: 0,
+        &quot;married_at_entry&quot;: None, &quot;pierced&quot;: False,
+        &quot;dignity&quot;: DIGNITY_FLOOR,                  # [L2-07]
+    }, &quot;sold for the PRINCIPAL only, never the fine [L2-01]&quot;
+
+DIGNITY_FLOOR = {
+    &quot;status_word_is_tag_not_insult&quot;: True,   # &quot;the Torah called him slave
+    &quot;slave_customs_banned&quot;: [&quot;foot-washing&quot;, &quot;sandal-carrying&quot;,   # against its
+                             &quot;litter&quot;, &quot;bathhouse-gear&quot;],         # will&quot; [L2-07]
+    &quot;trade_switch_banned&quot;: True, &quot;public_serving_trade_banned&quot;: True,
+    &quot;equality&quot;: &quot;food, drink, bedding equal to the master&#x27;s&quot;,
+    &quot;one_bed_case&quot;: &quot;the slave gets the bed (kofin al middat Sedom)&quot;,
+}
+
+# ---------------------------------------------------------------------------
+# HANDLER — the timer semantics (fault-typed)                         [L2-04]
+# ---------------------------------------------------------------------------
+def term_status(slave, elapsed_days):
+    &quot;&quot;&quot;The runaway completes; the sick exit ON TIME unless idle a majority
+    of the term (light-duty &#x27;needle-work&#x27; capability keeps the clock).&quot;&quot;&quot;
+    effective = elapsed_days - slave[&quot;fled_days&quot;]      # flight tolls the clock
+    sick_years = slave[&quot;sick_days&quot;] / 365.0
+    must_complete = sick_years &gt;= 4                    # sick 4+ = completes;
+    if effective &gt;= slave[&quot;term_days&quot;] and not must_complete:
+        return &quot;FREE&quot;                                  # sick &lt;=3 exits on time
+    return &quot;SERVING&quot;
+
+def exit_cost(medical_outlays_by_master):
+    &quot;&quot;&quot;חנם (&#x27;for nothing&#x27;): no document, no payment, no repayment of idle
+    time, food, or medicine. Auto-expiry — the term ends, he walks. [L2-05]&quot;&quot;&quot;
+    return 0
+
+def heir_service(slave, master_has_son):
+    &quot;&quot;&quot;The term passes to the SON only; the pierced and the amah serve no
+    heir (causal-lapse: the love was person-specific). [L2-06, L6-03]&quot;&quot;&quot;
+    if slave.get(&quot;pierced&quot;) or slave[&quot;class&quot;] == &quot;amah&quot;:
+        return &quot;FREE at master&#x27;s death&quot;
+    return &quot;serves the SON&quot; if master_has_son else &quot;FREE (no other heir)&quot;
+
+# ---------------------------------------------------------------------------
+# HANDLER — maintenance: the substitution model (21:3)          [L3-01, L3-02]
+# אם בעל אשה הוא ויצאה אשתו עמו (&quot;if he is a husband, his wife goes out
+# with him&quot; — was SHE sold?! → the master owes her keep)
+# ---------------------------------------------------------------------------
+def master_owes_maintenance(dependent):
+    kind, status, age = dependent          # (&quot;wife&quot;, fitness, None) / (&quot;child&quot;, None, age)
+    if kind == &quot;wife&quot;:
+        return status in (&quot;married-with-him&quot;,)     # excludes the betrothed
+        # (not &#x27;with him&#x27;), the levirate-widow, forbidden unions [L3-01]
+    if kind == &quot;child&quot;:
+        return age &lt; CHILD_SUPPORT_YEARS           # the six-year floor, derived
+    return False                                   # from the term-length [L3-02]
+
+# ---------------------------------------------------------------------------
+# HANDLER — the shifchah provision (21:4): anti-retention engineering [L4-01]
+# ---------------------------------------------------------------------------
+def may_receive_shifchah(slave):
+    &quot;&quot;&quot;Master&#x27;s grant only to the MARRIED slave (wife at ENTRY) — the ban on
+    golden-handcuffs retention; the union exclusive, one to one.&quot;&quot;&quot;
+    return slave[&quot;entry&quot;] == &quot;court_sale&quot; and slave[&quot;married_at_entry&quot;] is True
+
+def child_status(mother_class):
+    &quot;&quot;&quot;האשה וילדיה תהיה לאדוניה — the matrilineal branch: where kiddushin
+    cannot hold, the child follows the MOTHER (incl. tumtum/androginos). [L4-02]&quot;&quot;&quot;
+    return &quot;follows-mother (master&#x27;s)&quot; if mother_class == &quot;shifchah&quot; else &quot;follows-father&quot;
+
+# ---------------------------------------------------------------------------
+# CASE 2 — the declaration and the awl (21:5-6)
+# ואם אמר יאמר העבד אהבתי את אדוני (&quot;and if the slave shall SAY, SAY:
+# I love my master...&quot;)
+# ---------------------------------------------------------------------------
+def piercing(said_count, said_within_last_perutah, still_slave,
+             slave_has_family, master_has_family, mutual_love,
+             slave_healthy, master_healthy, slave_is_kohen):
+    &quot;&quot;&quot;The full protocol. R. Yishmael&#x27;s conditions-gate encoded (R. Akiva&#x27;s
+    &#x27;either way&#x27; preserved in the manifest). [L5-01, L5-02, L6-01]&quot;&quot;&quot;
+    if slave_is_kohen:
+        return &quot;NOT PIERCED: a kohen is never pierced (the blemish bars his return) [L6-01]&quot;
+    if said_count &lt; 2 or not said_within_last_perutah or not still_slave:
+        return &quot;NOT PIERCED: two sayings inside the last-perutah window, as a slave [L5-01]&quot;
+    checklist = (slave_has_family and master_has_family and mutual_love
+                 and slave_healthy and master_healthy)      # both-sick = teyku
+    if not checklist:
+        return &quot;NOT PIERCED: the bilateral checklist failed [L5-02]&quot;
+    return PIERCING_RITE
+
+PIERCING_RITE = {
+    &quot;presentation&quot;: &quot;to the judges — his sellers; the court rebukes first [L6-01]&quot;,
+    &quot;site&quot;: &quot;standing mounted DOOR (the two-witness assembly: no door &quot;
+            &quot;without its post); presentation may use the doorpost [L6-01]&quot;,
+    &quot;ear&quot;: &quot;RIGHT (azen-azen from the metzora — the parameter server) [L6-01]&quot;,
+    &quot;instrument&quot;: &quot;the Torah said AWL — the halakhah: ANYTHING &quot;
+                  &quot;(the override registry&#x27;s canonical third) [L6-02]&quot;,
+    &quot;actor&quot;: &quot;the MASTER personally — no agent, no son, no court officer; &quot;
+             &quot;no batching (body-title cannot vest by halves) [L6-01]&quot;,
+    &quot;result&quot;: &quot;serves to YOVEL or the master&#x27;s death — le-olam = the bounded &quot;
+              &quot;forever; serves no heir [L6-03]&quot;,
+}
+
+# ---------------------------------------------------------------------------
+# CASE 3 — וכי ימכור איש את בתו לאמה (&quot;and when a man sells his daughter
+# as a maidservant&quot;), 21:7-11
+# ---------------------------------------------------------------------------
+def father_sale(seller_is_father, daughter_is_minor, father_destitute,
+                inheritance_already_sold, buyer_can_marry_her):
+    &quot;&quot;&quot;Entry path 2: marriage-track by design. [L7-01]&quot;&quot;&quot;
+    if not seller_is_father:
+        return None, &quot;only the father sells — not mother, not self [L7-01]&quot;
+    if not daughter_is_minor:
+        return None, &quot;the sale-window closes at signs (the already-sold exits &quot;\
+                     &quot;at signs — a fortiori the unsold cannot enter) [L7-01]&quot;
+    if not (father_destitute and inheritance_already_sold):
+        return None, &quot;the poverty gate: house, land, last shirt first [L7-01]&quot;
+    if not buyer_can_marry_her:
+        return None, &quot;sale valid only where yiud can operate — no purchase &quot;\
+                     &quot;without a working exit [L8-02]&quot;
+    return {
+        &quot;class&quot;: &quot;amah&quot;, &quot;entry&quot;: &quot;father_sale&quot;,
+        &quot;term_days&quot;: TERM_YEARS * 365, &quot;clock&quot;: &quot;sale-anniversary&quot;,
+        &quot;purchase_price&quot;: None, &quot;served_days&quot;: 0,
+        &quot;designated&quot;: False,            # yiud = the sale&#x27;s DEFAULT state
+        &quot;dignity&quot;: &quot;indoor work only — never sent to the market &quot;
+                   &quot;(lo tetze ke-tzet ha-avadim, the Mahari Bruna rule) [L7-02]&quot;,
+    }, &quot;the sale is marriage-track by design [L7-01]&quot;
+
+def yiud(amah, her_consent, his_will, to_son=False, son_is_adult_assenting=True):
+    &quot;&quot;&quot;Designation = EIRUSIN by the ORIGINAL purchase-money; her consent AND
+    his (qere = his refusal, ketiv = her veto); unwaivable by contract;
+    yiud PRECEDES redemption in the priority ladder. [L8-01, L9-01]&quot;&quot;&quot;
+    if to_son and not son_is_adult_assenting:
+        return &quot;NO YIUD: the son&#x27;s own assent required (and never the brother) [L9-01]&quot;
+    if not (her_consent and his_will):
+        return &quot;NO YIUD: consent-symmetry failed → the redemption duty fires [L8-01]&quot;
+    amah[&quot;designated&quot;] = True           # THE ABSORBING BRANCH: she is a wife;
+    amah[&quot;exits&quot;] = [&quot;get&quot;]             # signs/six/yovel no longer free her
+    return &quot;EIRUSIN by the first monies; her rights = ke-mishpat ha-banot [L9-02]&quot;
+
+def redemption_price(purchase_price, years_served):
+    &quot;&quot;&quot;FLAT pro-rata at the ORIGINAL per-year rate — deduction at cost, not
+    market (she is worth MORE now: the master subsidizes; anti-appraisal
+    explicit). The master must cooperate and accept assessment. [L8-02]&quot;&quot;&quot;
+    assert 0 &lt;= years_served &lt;= TERM_YEARS
+    return purchase_price * (TERM_YEARS - years_served) / TERM_YEARS
+
+def resale(actor):
+    &quot;&quot;&quot;le-am nokhri lo yimshol: the one-way door — nobody resells, ever.&quot;&quot;&quot;
+    return &quot;VOID (not lashable): master never had the power; the father &quot;\
+           &quot;after betrayal never regains it [L8-03]&quot;
+
+# ---------------------------------------------------------------------------
+# STATUTE — the triad (21:10): שארה כסותה ועונתה לא יגרע
+# (&quot;her food, her clothing, her marital rights he shall not diminish&quot;)
+# ---------------------------------------------------------------------------
+TRIAD = {
+    &quot;fields&quot;: (&quot;she&#x27;er — her food&quot;, &quot;kesut — her clothing&quot;, &quot;onah — her time&quot;),
+    &quot;permutation_table_preserved&quot;: True,        # every field migrates across
+    &quot;parameters&quot;: {                             # the tannaim [L10-01]
+        &quot;clothing&quot;: &quot;by her age and the season (new in the rains)&quot;,
+        &quot;food&quot;: &quot;the locale&#x27;s median, scaled by his wealth; rises with him, &quot;
+                &quot;never descends (the station-ratchet)&quot;,
+        &quot;onah&quot;: &quot;by occupation — idle nightly; workers 2/wk; donkey-drivers &quot;
+                &quot;weekly; camel-drivers monthly; sailors 6-monthly; &quot;
+                &quot;scholars Shabbat-eve — and by health&quot;,
+    },
+    &quot;waivability&quot;: {&quot;she&#x27;er&quot;: &quot;waivable by her&quot;, &quot;kesut&quot;: &quot;waivable by her&quot;,
+                    &quot;onah&quot;: &quot;NEVER (tzaara de-gufa — body-rights bind)&quot;},  # [L10-02]
+    &quot;vow_proof&quot;: &quot;his vow cannot defeat the duty — the prior lien wins&quot;,
+    &quot;enforcement&quot;: &quot;no lashes (actless lav); the rebellion-fines (+36 barley-&quot;
+                   &quot;weights weekly) and the compelled divorce run on it&quot;,
+    &quot;source_inversion&quot;: &quot;written of the AMAH, taught to ALL daughters — &quot;
+                        &quot;ba lelamed ve-nimtza lamed [L9-02]&quot;,
+}
+
+# ---------------------------------------------------------------------------
+# HANDLER — the exits: min() over events (21:11)            [L11-01..03]
+# ---------------------------------------------------------------------------
+def amah_exit(amah, elapsed_years, signs, yovel_arrived, master_died,
+              redeemed):
+    &quot;&quot;&quot;&#x27;Whichever comes first precedes to free her.&#x27; Post-yiud the machine
+    switches: wife — get only.&quot;&quot;&quot;
+    if amah[&quot;designated&quot;]:
+        return &quot;WIFE: exits only by get (chinam min ha-kesef, lo min ha-get)&quot;
+    events = []
+    if elapsed_years &gt;= TERM_YEARS: events.append(&quot;six years&quot;)
+    if signs:                       events.append(&quot;signs (naarut — ein kasef)&quot;)
+    if yovel_arrived:               events.append(&quot;yovel&quot;)
+    if master_died:                 events.append(&quot;master&#x27;s death (no heir-service)&quot;)
+    if redeemed:                    events.append(&quot;graduated redemption&quot;)
+    return (&quot;FREE: &quot; + events[0] + &quot; — no money to THIS master (there IS for &quot;
+            &quot;another master: the father)&quot;) if events else &quot;SERVING&quot;
+
+SEVERANCE = {   # the eligibility table [L11-02]
+    &quot;six-years&quot;: True, &quot;yovel&quot;: True, &quot;master&#x27;s death&quot;: True, &quot;signs&quot;: True,
+    &quot;flight&quot;: False, &quot;deduction-exit&quot;: False,   # &#x27;his sending is not from you&#x27;
+    &quot;fork&quot;: &quot;R. Meir flips the deduction-exiter to eligible&quot;,
+}
+
+# ===========================================================================
+# TEST VECTORS — the tradition&#x27;s own worked examples
+# ===========================================================================
+def run():
+    # -- proportionality gate [L2-02]: the 1000/500 table
+    s, why = court_sale(theft=1000, worth_six_years_labor=500)
+    assert s is not None                       # theft &gt;= worth → sold
+    s2, why2 = court_sale(theft=500, worth_six_years_labor=1000)
+    assert s2 is None and &quot;chetzyo&quot; in why2    # sold whole, never half
+    s3, why3 = court_sale(theft=1000, worth_six_years_labor=500, male=False)
+    assert s3 is None                          # a woman is never sold
+    s4, why4 = court_sale(1000, 500, victim_consents_to_sale=False)
+    assert s4 is None and &quot;note&quot; in why4       # the victim&#x27;s veto
+
+    # -- timer semantics [L2-04]: the illness table
+    sl, _ = court_sale(1000, 500)
+    sl[&quot;sick_days&quot;] = 3 * 365                  # sick three years —
+    assert term_status(sl, 6 * 365) == &quot;FREE&quot;  #   exits on time
+    sl[&quot;sick_days&quot;] = 4 * 365                  # sick four —
+    assert term_status(sl, 6 * 365) == &quot;SERVING&quot;   # completes
+    sl[&quot;sick_days&quot;] = 0; sl[&quot;fled_days&quot;] = 200     # the runaway
+    assert term_status(sl, 6 * 365) == &quot;SERVING&quot;   # completes his flight
+    assert term_status(sl, 6 * 365 + 200) == &quot;FREE&quot;
+    assert exit_cost(medical_outlays_by_master=300) == 0   # chinam [L2-05]
+
+    # -- maintenance [L3-01..02]
+    assert master_owes_maintenance((&quot;wife&quot;, &quot;married-with-him&quot;, None))
+    assert not master_owes_maintenance((&quot;wife&quot;, &quot;betrothed&quot;, None))
+    assert master_owes_maintenance((&quot;child&quot;, None, 5))
+    assert not master_owes_maintenance((&quot;child&quot;, None, 7))   # the six-floor
+
+    # -- shifchah [L4-01..02]: anti-retention
+    m, _ = court_sale(1000, 500); m[&quot;married_at_entry&quot;] = True
+    b, _ = court_sale(1000, 500); b[&quot;married_at_entry&quot;] = False
+    assert may_receive_shifchah(m) and not may_receive_shifchah(b)
+    assert child_status(&quot;shifchah&quot;).startswith(&quot;follows-mother&quot;)
+
+    # -- the declaration window [L5-01..02] and the kohen bar
+    ok = piercing(2, True, True, True, True, True, True, True, False)
+    assert ok is PIERCING_RITE
+    assert &quot;window&quot; in piercing(2, False, True, True, True, True, True, True, False)
+    assert &quot;checklist&quot; in piercing(2, True, True, True, False, True, True, True, False)
+    assert &quot;kohen&quot; in piercing(2, True, True, True, True, True, True, True, True)
+    assert heir_service({&quot;class&quot;: &quot;eved_ivri&quot;, &quot;pierced&quot;: True}, True).startswith(&quot;FREE&quot;)
+    assert heir_service({&quot;class&quot;: &quot;eved_ivri&quot;, &quot;pierced&quot;: False}, True) == &quot;serves the SON&quot;
+
+    # -- amah entry gates [L7-01]
+    a, _ = father_sale(True, True, True, True, True)
+    assert a is not None
+    assert father_sale(True, False, True, True, True)[0] is None   # minor only
+    assert father_sale(True, True, False, True, True)[0] is None   # poverty gate
+    assert father_sale(True, True, True, True, False)[0] is None   # yiud-operable
+
+    # -- redemption arithmetic [L8-02]: the codes&#x27; three vectors
+    assert redemption_price(60, 3) == 30      # Chinukh 44: 60 din./6yr, worked 3
+    assert redemption_price(60, 4) == 20      # SMaG: 60/4yr remaining → 20
+    assert abs(redemption_price(100, 2) - 100 * 4 / 6) &lt; 1e-9   # Rashi: maneh,
+                                              # worked 2 → refund two-thirds
+    # -- the exits: min() and the absorbing branch [L11-01..03]
+    a[&quot;served_days&quot;] = 0
+    assert amah_exit(a, 2, signs=True, yovel_arrived=False,
+                     master_died=False, redeemed=False).startswith(&quot;FREE: signs&quot;)
+    assert amah_exit(a, 2, False, False, True, False).startswith(&quot;FREE: master&quot;)
+    a2, _ = father_sale(True, True, True, True, True)
+    a2[&quot;purchase_price&quot;] = 60
+    msg = yiud(a2, her_consent=True, his_will=True)
+    assert msg.startswith(&quot;EIRUSIN&quot;)
+    assert amah_exit(a2, 7, True, True, True, False).startswith(&quot;WIFE&quot;)  # absorbing
+    a3, _ = father_sale(True, True, True, True, True)
+    assert &quot;redemption duty&quot; in yiud(a3, her_consent=False, his_will=True)
+    assert &quot;VOID&quot; in resale(&quot;master&quot;) and &quot;VOID&quot; in resale(&quot;father&quot;)
+
+    # -- the triad [L10-01..02]
+    assert TRIAD[&quot;waivability&quot;][&quot;onah&quot;].startswith(&quot;NEVER&quot;)
+    assert SEVERANCE[&quot;deduction-exit&quot;] is False and SEVERANCE[&quot;signs&quot;] is True
+
+    print(&quot;exo_21 v2 block-1 DRAFT: all assertions hold.&quot;)
+    print(&quot;  39 witnessed claims | gates: proportionality, poverty, consent-&quot;)
+    print(&quot;  symmetry, bilateral checklist | clocks: sale-anniversary, yovel&quot;)
+    print(&quot;  | exits: min() over events, one absorbing branch (yiud) |&quot;)
+    print(&quot;  overrides: awl-&gt;anything (the registry) | triad: 3 fields,&quot;)
+    print(&quot;  parameterized, onah unwaivable. Freeze waits on blocks 2-3.&quot;)
+
+
+# ===========================================================================
+# CROSS-VERSE DEPENDENCY PROOF                        [owner ask, 2026-08-11]
+# The machine&#x27;s imports declared as edges and VERIFIED against the corpus:
+# an edge is RESOLVED if its source verse lies inside a FROZEN unit
+# (torah_grok.sqlite, the same index the web app runs on), else it is a
+# FORWARD demand — a constant consumed from a verse not yet derived.
+# ===========================================================================
+DEPENDS = [
+    # (machine element, book, chap, verse, expect, claim, what is imported)
+    (&quot;TERM_YEARS six-and-one frame&quot;, &quot;Genesis&quot;, 1, 31, &quot;back&quot;, &quot;L11-04&quot;,
+     &quot;the creation week — the seventh-frees shape (its third scale)&quot;),
+    (&quot;TERM_YEARS six-and-one frame&quot;, &quot;Exodus&quot;, 16, 26, &quot;back&quot;, &quot;L11-04&quot;,
+     &quot;the manna week — six gather, the seventh rests&quot;),
+    (&quot;TERM_YEARS six-and-one frame&quot;, &quot;Exodus&quot;, 20, 9, &quot;back&quot;, &quot;L11-04&quot;,
+     &quot;the Shabbat command — six days&#x27; labor, the seventh holy&quot;),
+    (&quot;PIERCING_RITE: the awl&#x27;s 400&quot;, &quot;Genesis&quot;, 15, 13, &quot;back&quot;, &quot;L6-04&quot;,
+     &quot;the decreed 400 years — the awl&#x27;s gematria re-enters the closed term&quot;),
+    (&quot;PIERCING_RITE: door+post witnesses&quot;, &quot;Exodus&quot;, 12, 7, &quot;back&quot;, &quot;L6-04&quot;,
+     &quot;the Passover blood on the two doorposts — the Egypt witnesses&quot;),
+    (&quot;PIERCING_RITE: the ear that heard&quot;, &quot;Exodus&quot;, 20, 13, &quot;back&quot;, &quot;L6-04&quot;,
+     &quot;the Decalogue&#x27;s theft-ban (property-theft nested in the headline)&quot;),
+    (&quot;court_sale: national precedent&quot;, &quot;Genesis&quot;, 37, 28, &quot;back&quot;, &quot;L11-05&quot;,
+     &quot;the Joseph-sale — the nation itself sold for a theft, then freed&quot;),
+    (&quot;court_sale: mitzvah-sale carve&quot;, &quot;Genesis&quot;, 29, 18, &quot;back&quot;, &quot;L11-05&quot;,
+     &quot;Jacob&#x27;s seven years — self-hire beyond the cap, for marriage&quot;),
+    (&quot;resale: the no-degradation ban&quot;, &quot;Genesis&quot;, 16, 6, &quot;back&quot;, &quot;L11-05&quot;,
+     &quot;Hagar — &#x27;having made her a mistress we cannot re-enslave her&#x27;&quot;),
+    (&quot;yiud: the betrayal lexeme&quot;, &quot;Genesis&quot;, 31, 15, &quot;back&quot;, &quot;L8-03&quot;,
+     &quot;Rachel and Leah — &#x27;he has SOLD us; are we not foreigners to him?&#x27;&quot;),
+    (&quot;TRIAD: the vow-parallel&quot;, &quot;Genesis&quot;, 28, 20, &quot;back&quot;, &quot;L10-01&quot;,
+     &quot;Jacob&#x27;s vow — bread, garment, and the LORD-with-me = the three fields&quot;),
+    (&quot;RUNTIME: lifnehem&#x27;s antecedent&quot;, &quot;Exodus&quot;, 18, 21, &quot;back&quot;, &quot;L1-01&quot;,
+     &quot;Yitro&#x27;s court-pyramid — the judges the header addresses&quot;),
+    (&quot;RUNTIME: the Marah generalities&quot;, &quot;Exodus&quot;, 15, 25, &quot;back&quot;, &quot;L1-04&quot;,
+     &quot;sham sam lo chok u-mishpat — the klal this pericope details&quot;),
+    (&quot;RUNTIME: the altar adjacency&quot;, &quot;Exodus&quot;, 20, 23, &quot;back&quot;, &quot;L1-05&quot;,
+     &quot;no steps upon My altar — the bench beside the altar, deliberate&quot;),
+    # ---- forward demands: constants consumed from verses NOT yet derived --
+    (&quot;YOVEL_YEAR = 50; le-olam bound&quot;, &quot;Leviticus&quot;, 25, 10, &quot;fwd&quot;, &quot;L6-03&quot;,
+     &quot;the yovel proclamation — the epoch that bounds every &#x27;forever&#x27;&quot;),
+    (&quot;court_sale: the class split&quot;, &quot;Leviticus&quot;, 25, 39, &quot;fwd&quot;, &quot;L2-01&quot;,
+     &quot;the self-seller&#x27;s own pericope — the other entry path&quot;),
+    (&quot;the sugya-anchor of the block&quot;, &quot;Leviticus&quot;, 25, 55, &quot;fwd&quot;, &quot;L6-04&quot;,
+     &quot;&#x27;for MINE are the children of Israel as slaves&#x27; — the prior lien&quot;),
+    (&quot;master_owes_maintenance: children&quot;, &quot;Leviticus&quot;, 25, 41, &quot;fwd&quot;, &quot;L3-01&quot;,
+     &quot;&#x27;he and his children with him&#x27; — the children&#x27;s-board parent verse&quot;),
+    (&quot;PIERCING_RITE: right-ear source&quot;, &quot;Leviticus&quot;, 14, 14, &quot;fwd&quot;, &quot;L6-01&quot;,
+     &quot;the metzora&#x27;s right ear — the azen-azen parameter server&quot;),
+    (&quot;shifchah interface&quot;, &quot;Leviticus&quot;, 19, 20, &quot;back&quot;, &quot;L4-01&quot;,
+     &quot;the shifchah charufah — defined BY our 21:4 provision&quot;),
+    (&quot;heir_service: the category pair&quot;, &quot;Leviticus&quot;, 22, 10, &quot;fwd&quot;, &quot;L2-06&quot;,
+     &quot;toshav=pierced / sachir=six-year in the terumah law&quot;),
+    (&quot;SEVERANCE table; the parallel law&quot;, &quot;Deuteronomy&quot;, 15, 12, &quot;fwd&quot;, &quot;L11-02&quot;,
+     &quot;the haanakah grant + the Re&#x27;eh restatement (the diff-pass)&quot;),
+]
+
+def _frozen_spans():
+    import sqlite3, re, os
+    db = sqlite3.connect(os.path.join(os.path.dirname(__file__),
+                                      &quot;..&quot;, &quot;..&quot;, &quot;torah_grok.sqlite&quot;))
+    spans = []
+    for uid, book, refs in db.execute(
+            &quot;SELECT unit_id, book_en, refs FROM units WHERE status=&#x27;frozen&#x27;&quot;):
+        m = re.match(r&quot;^(\d+):(\d+)-(?:(\d+):)?(\d+)$&quot;, refs.strip())
+        if not m:
+            continue
+        c1, v1 = int(m.group(1)), int(m.group(2))
+        c2 = int(m.group(3)) if m.group(3) else c1
+        v2 = int(m.group(4))
+        spans.append((book, c1, v1, c2, v2, uid))
+    return spans
+
+def verify_dependencies(verbose=True):
+    spans = _frozen_spans()
+    def resolve(book, ch, vs):
+        for b, c1, v1, c2, v2, uid in spans:
+            if b != book: continue
+            if (ch, vs) &gt;= (c1, v1) and (ch, vs) &lt;= (c2, v2):
+                return uid
+        return None
+    resolved, forward = [], []
+    for elem, book, ch, vs, expect, claim, what in DEPENDS:
+        uid = resolve(book, ch, vs)
+        row = (elem, &quot;%s %d:%d&quot; % (book, ch, vs), claim, what, uid)
+        if uid: resolved.append(row)
+        else:   forward.append(row)
+        # the PROOF: every declared-backward edge must land in a frozen unit,
+        # and every declared-forward edge must NOT (else the declaration lies)
+        assert (uid is not None) == (expect == &quot;back&quot;), \
+            &quot;dependency misdeclared: %s &lt;- %s (%s)&quot; % (elem, row[1], uid)
+    if verbose:
+        print(&quot;\nDEPENDENCY PROOF — %d edges verified against torah_grok.sqlite:&quot;
+              % len(DEPENDS))
+        print(&quot;  RESOLVED (source verse inside a frozen unit): %d&quot; % len(resolved))
+        for elem, ref, claim, what, uid in resolved:
+            print(&quot;    %-36s &lt;- %-14s [%s] unit=%s&quot; % (elem[:36], ref, claim, uid))
+        print(&quot;  FORWARD demands (source verse NOT yet derived): %d&quot; % len(forward))
+        for elem, ref, claim, what, uid in forward:
+            print(&quot;    %-36s &lt;- %-14s [%s] OPEN&quot; % (elem[:36], ref, claim))
+    return resolved, forward
+
+if __name__ == &quot;__main__&quot;:
+    run()
+    verify_dependencies()
+</pre>
+</body></html>
