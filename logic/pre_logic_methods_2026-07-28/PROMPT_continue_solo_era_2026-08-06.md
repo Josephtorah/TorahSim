@@ -1507,6 +1507,17 @@ coverage accumulates toward exo_21_the_ordinances re-derivation). Scan notes:
 scratchpad law01_scan_notes.md (digest per batch, gen_08 style). gen_08
 check CLOSED: reports on Desktop (epub + v1-vs-v2 md); findings ledgered,
 254 readable unread, resumable; dupe rate ~1-in-4 of 90 MAJORs measured.
+COMMITTED 2026-08-10 (owner word, post-compaction #18): the day's law-era
+work committed + PUSHED as 1cfb827 — FULL ORAL TORAH LAW codified in
+PROCESS.md, oral coverage gate wired into freeze_ritual.py, Talmud shelf
+manifest + fetch/index toolchain, logic/law_era/ (TOP10 + scratch_mirror
+incl. 326KB scan notes), gate ledger Exod_21.jsonl at 1,659 rows,
+dev_server --lan, elijah_docket deferral pointer, this state doc through
+the 7th update. Uncommitted leftovers (owner-flagged, awaiting word):
+grok-mockups/, DISPOSABLE_scan/ (never commit), open_ledger/ (own git),
+elijah_docket untracked RETURN_DOSSIER_2026-08-10.md (submodule's own git).
+Compaction point #18 stamped (owner compacted after bite 68; scan resumes
+at bite 69 per the notes-file resume header).
 PROGRESS 2026-08-10 (7th update, after bite 68): 68 bites read,
 1,659/1,962 (84.6%). Bites 64-68 added: OR HACHAIM complete (the
 rights-notice principle — a release-right unpublished is void, so
