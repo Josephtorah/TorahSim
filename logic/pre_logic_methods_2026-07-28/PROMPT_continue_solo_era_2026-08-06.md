@@ -1572,10 +1572,12 @@ stoning (Resh Lakish); the pit measured by its victim (Elazar HaKappar)
 + pursuit-counter mu'ad (Yerushalmi). NEXT: bite 11 per law03 notes
 RESUME HEADER (Bekhor Shor tail + Minchat Shai + the alphabetical
 acharon tail next in priority order), then --tanakh close (6 verses).
-UNCOMMITTED as of this stamp: the two days' block-3 scan rows in the
-chapter ledger (3,601->4,331), the law03 kit + notes mirror in
-logic/law_era/scratch_mirror/, the TOP10 block-2 status row edit, and
-the state-doc 12th update — commit awaits owner word. COMPACTION POINT
+COMMITTED+PUSHED 2026-08-12 on owner word as 01adcc9 (block-2 scan
+COMPLETE bites 20-36 + block-3 census + bites 1-10, ledger
+3,070->4,331, law02+law03 mirrors, TOP10 row, state-doc 12th update;
+origin synced; standing never-commit leftovers untouched; NOTE
+logic/gork/ scene catalog from the block-1 coding day remains
+UNTRACKED — flagged to owner, add on word). COMPACTION POINT
 #21 stamped here 2026-08-12 (block-3 scan mid-run, 10 bites done, 394
 readable + 6 tanakh left ≈ 7-8 bites) — resume: read this doc, then
 bite 11 per the law03 notes RESUME HEADER (scratchpad kit in session
