@@ -1507,6 +1507,16 @@ coverage accumulates toward exo_21_the_ordinances re-derivation). Scan notes:
 scratchpad law01_scan_notes.md (digest per batch, gen_08 style). gen_08
 check CLOSED: reports on Desktop (epub + v1-vs-v2 md); findings ledgered,
 254 readable unread, resumable; dupe rate ~1-in-4 of 90 MAJORs measured.
+★ LAW-ERA DAY COMMITTED+PUSHED 2026-08-12 (17th update, owner word
+"commit and push"): everything from updates 14-16 landed in ONE commit
+ce0deeb (15 files, +8,963): chapter gate green (ledger 4,903), all of
+logic/law_era/tanakh_run/ (plan + harvest + 57-scene catalog + session
+log), block-3 machine + 28-claim manifest, TOP10 row, this state doc.
+Standing exclusions honored (elijah_docket submodule / DISPOSABLE_scan/
+grok-mockups/open_ledger untracked); logic/gork/ remains untracked,
+flagged. NOTHING UNCOMMITTED from the law-era line as of this stamp.
+NEXT (owner-paced): block-2 coding day -> chapter assembly -> pass-2
+web app.
 ★ BLOCK-3 CODING DAY COMPLETE 2026-08-12 (16th update, owner word
 "ok continue next task"): the block-3 (+21:37 tail) machine COMPILED and
 GREEN on first run. Deliverables: (1) claims manifest
