@@ -1507,13 +1507,89 @@ coverage accumulates toward exo_21_the_ordinances re-derivation). Scan notes:
 scratchpad law01_scan_notes.md (digest per batch, gen_08 style). gen_08
 check CLOSED: reports on Desktop (epub + v1-vs-v2 md); findings ledgered,
 254 readable unread, resumable; dupe rate ~1-in-4 of 90 MAJORs measured.
+★ BLOCK-3 SCAN OPEN 2026-08-11 (12th update, owner word "next block"):
+Exod 21:28-36 (goring ox + pit + ox-vs-ox) full oral inversion running —
+the LAST block inside Exod 21; closing it completes chapter coverage
+toward the exo_21 gate. Census (law03_census.py): 1,702 listings -> 1,180
+required (1,174 readable + 6 tanakh-verse; 50 already read in blocks 1-2
+— shared chapter ledger is the cursor), 522 OUT, 0 UNRULED; 1,263 needed
+segs, He 861k ch. Block-3 own load 1,124 readable + 6 tanakh = 1,130;
+target at close 4,731 ledger rows. Kit law03_census/dump/queue/texts/
+seen_segs + law03_scan_notes.md in session scratchpad
+4ca32657-770b-417a-8a21-73333c8d5f75, mirrored to repo
+logic/law_era/scratch_mirror/; NOTE for the chapter gate: verse 21:37
+(ox/sheep theft opener, Hebrew numbering) sits outside blocks 1-3 as
+listed in TOP10 — flag at block-4 census / gate assembly. OPENING CLIP
+(bites 1-5, 364 rows): TORAH TEMIMAH complete, MdRShbY whole, Mekhilta
+d'RY rows, Sifrei, Mishnah spine + tail, Tosefta BK both recensions,
+Bartenura + TYT + Hon Ashir + Ikar TYT, Yerushalmi BK whole stratum +
+Yerushalmi Ketubot/Kiddushin rows, Bavli BK source-spine 2a-112b, Rashi/
+Tosafot rows, Ben Yehoyada, Yad Ramah. Ledger 3,601 -> 3,965; remaining
+760 readable + 6 tanakh (~17 bites at pace). SECOND CLIP 2026-08-12
+(owner word "do 5 more bites", bites 6-10, 366 rows): RAMBAM STRATUM
+whole (MT Damages codified end-to-end + satellites + mitzvah-count with
+the Shorashim lo-ambiguity essay), Sanhedrin Yannai sugya + Agnatos,
+TARGUMS whole (TJ inlining six oral rulings), RASHI COMPLETE + his
+cross-Tanakh grammar rows, LEKACH TOV whole, IBN EZRA both recensions,
+RAMBAN core (+ Gen 9:5 flood-covenant essay), Sforno, Radak polemic
+rows, CHIZKUNI whole, TUR code layer (CM 389+410), RABBEINU BAHYA whole
+(satan-between-the-horns + Taanit plague-isomorphism), Kitzur Baal
+HaTurim gematria battery, Bekhor Shor opening. Ledger 3,965 -> 4,331;
+remaining 394 readable + 6 tanakh (~7-8 bites). Late marquee adds: the
+stoned ox is "entirely money, its stoning a decree" (Yerushalmi Sanh) +
+RYbZ's double answer to Agnatos; the stoned ROOSTER of Jerusalem;
+insanity defined by the mu'ad template (Chagigah 4a); the half-slave
+split across kenas+cofer; the 30 recycled as the ha'anakah floor (MT
+Slaves 3:14); the golden-calf ransom priced off the ox-tariff, God
+discounting to half a shekel; the stone-clearer parable + Bavel
+tefisah/excommunication regime; Rashi's grammar hub (או=אם etc.) vs
+Ramban's "all false witnesses"; Ramban rooting the stoning in Gen 9:5;
+the ox filed BOTH as chok (Tanchuma) and as intelligible law (Chinukh);
+Radak's Ps 22 pierced-hands polemic on our dig-verb; Chizkuni's
+case-frequency rationale for the flat 30; Bekhor Shor's heirs' option
+(death or money, shame of taking coin for a father's blood); Joseph's
+300 = 10x30 (Benjamin); no-mu'ad-today (Tur: every ox permanently tam
+without semikhah). Marquee so far (index in
+law03 notes): the tam/mu'ad HYSTERESIS (3-day escalation vs one-day
+reversion) exported to Maharam Rothenburg's liturgy rule; the ox's full
+capital due process (23 judges, presence, warning) + Yannai summoned via
+והועד בבעליו ("warning was given to its owner") — royal accountability
+from the ox-docket, and its failure births "a king neither judges nor is
+judged"; document-authentication due process from the same clause (BK
+112b); R. Yishmael's "man purchases himself from Heaven" at the cofer;
+the Gra's plene/defective vav-machine on the three pit-spellings (9+1
+completer-liability in orthography) + Hon Ashir's bor-gematria=10 twin;
+TT's goring-ox apologia (R. Abbahu's Habakkuk forfeiture) + MdRShbY's
+older Paran twin with ger-toshav excluded; victim+damager as PARTNERS in
+the tam (R. Akiva) + "the Merciful One pitied the damager" capped by
+owners-pay-never-collect; the Sadducee taunt answered by incentive
+design (Yadayim 4:7); the two philosophies of half-damage (mercy-
+discount vs deterrence-fine, Ketubot 41a); verdict-not-execution carries
+the issur (Keritot 6:2); Shabbat-indexed mu'ad (Tosefta) + R. Yehudah's
+ownerless-exempt anti-tradition vs the seven-shor ribbui; Shimon
+HaAmsoni's every-את retreat anchored on את בשרו; the fine rides on the
+stoning (Resh Lakish); the pit measured by its victim (Elazar HaKappar)
++ pursuit-counter mu'ad (Yerushalmi). NEXT: bite 11 per law03 notes
+RESUME HEADER (Bekhor Shor tail + Minchat Shai + the alphabetical
+acharon tail next in priority order), then --tanakh close (6 verses).
+UNCOMMITTED as of this stamp: the two days' block-3 scan rows in the
+chapter ledger (3,601->4,331), the law03 kit + notes mirror in
+logic/law_era/scratch_mirror/, the TOP10 block-2 status row edit, and
+the state-doc 12th update — commit awaits owner word. COMPACTION POINT
+#21 stamped here 2026-08-12 (block-3 scan mid-run, 10 bites done, 394
+readable + 6 tanakh left ≈ 7-8 bites) — resume: read this doc, then
+bite 11 per the law03 notes RESUME HEADER (scratchpad kit in session
+4ca32657-770b-417a-8a21-73333c8d5f75, repoint dump SCRATCH path if the
+session changes; durable mirror in logic/law_era/scratch_mirror/; dump
+calls MUST redirect stdout: python3 law03_dump.py > law03_batchN.txt).
 ★ BLOCK-2 SCAN OPEN 2026-08-11 (11th update): Exod 21:12-27 (homicide &
 injury) full oral inversion running. Census (law02_census.py): 2,450
 listings -> 1,668 required (1,639 readable + 29 tanakh-verse; 29 already
 read in block 1 — shared chapter ledger is the cursor), 782 OUT, 0
-UNRULED. Progress: 19 bites read+digested, 1,108 block-2 ledger rows
-(chapter ledger now 3,070 total), remaining 531 (503 readable + 28
-tanakh). Strata done: TT + Rambam stratum (MT modules, Sefer HaMitzvot,
+UNRULED. ★ SCAN COMPLETE 2026-08-11: 36 bites, 1,639 block-2 rows
+(1,611 readable + 28 tanakh-verse) — census fully satisfied; chapter
+ledger Exod_21.jsonl 3,601 rows (1,962 block-1 + 1,639 block-2), queue
+0/0. BLOCK-2 GATE GREEN. Strata done: TT + Rambam stratum (MT modules, Sefer HaMitzvot,
 SMaG/SMaK) + all Targums + Rashi complete + Lekach Tov/Sekhel Tov/Midrash
 Aggadah/Tanchuma + Ibn Ezra both recensions + Ramban core + Chizkuni +
 Kitzur BhT + Sforno + Radak + Bahya + Bekhor Shor + Minchat Shai rows +
@@ -1522,7 +1598,45 @@ Samuel) + Aderet Eliyahu + Alshekh + Bartenura-on-Rashi + Bamidbar/
 Bereshit Rabbah + Rabbati + Ben Ish Hai + Chida + Chatam Sofer + R. Perla
 on Rasag + Bavli/Eruvin source-rows + Gur Aryeh (Maharal) + Da'at
 Zekenim/Hadar Zekenim + Em LaMikra + HaKtav VeHaKabbalah (+GRA ms) +
-Haamek Davar (Netziv) + Keli Chemdah. Later-run marquee adds: the
+Haamek Davar (Netziv) + Keli Chemdah + Kli Yakar + Levush HaOrah +
+MALBIM whole (core run + Ayelet HaShachar rules + Leviticus crossrefs
+incl. the vav-algebra essay) + Maskil LeDavid + Sema + Mechokekei
+Yehudah + Megalleh Amukkot + Metzudot lexicon + Meshekh Chokhmah +
+MIZRACHI whole + Nachal Kedumim (Chida) + Nachalat Avot + Netinah LaGer
++ Od Yosef Chai + Or HaChaim whole + Paaneach Raza + Pardes Yosef
+opening. Bites 20-36 completed the remaining strata: Kli Yakar, Levush
+HaOrah, MALBIM whole (vav-algebra essay), Maskil LeDavid, Sema,
+Mechokekei Yehudah, Megalleh Amukkot, Metzudot, Meshekh Chokhmah,
+MIZRACHI whole, Nachal Kedumim, Nachalat Avot, Netinah LaGer, Od Yosef
+Chai, Or HaChaim whole, Paaneach Raza, PARDES YOSEF whole, Penei
+David, Peri Megadim, Pesikta pair (DRK + Rabbati), RALBAG 50-shoresh
+codification, RASHBAM, RAV HIRSCH whole, Riva, Rosh, Rasag rows +
+TAFSIR whole, Shulchan Arukh rows, SIFTEI CHAKHAMIM whole, Siftei
+Kohen (kabbalistic), Tevat Gome, Toledot Yitzchak, Torat HaAdam,
+TZAFNAT PANEACH (Rogatchover), Tzror HaMor, YALKUT SHIMONI whole,
+Yeriot Shlomo + the 28 Tanakh crossref verses. Late-run marquee adds:
+Malbim's Shabbat-limit from the refuge-city + vav-algebra; the
+master-pays-himself loop (Ralbag first, then Malbim); Maskil LeDavid's
+atonement arithmetic; Meshekh Chokhmah's priest-murderer profile +
+Shiloh asylum-forfeiture; Netinah LaGer's Sadducee-filter law of
+Onkelos; Od Yosef Chai's cave-parable; Or HaChaim's two-courts
+delegation architecture (tannaitic in Yalkut 325) + exile-indexing;
+the Kotzker's hefker-mechanism at day-or-two; Pesikta Rabbati's
+"I will MANUMIT Jerusalem" (God bound by His own slave-eye law); the
+Ham-loop (slavery enters by eye+mouth, exits by eye+tooth — Bahya,
+Rosh, Yalkut); Tafsir Rasag's diya written into 21:24; Hirsch's
+no-clemency doctrine + community-as-goel; R. Chama's blind student
+("free for the World to Come" via our manumission clause). NEXT:
+block 3 (Exod 21:28-36, goring ox) extends the same ledger toward the
+exo_21 chapter gate — owner-directed start. UNCOMMITTED as of this stamp: the day's
+scan rows in the chapter ledger (3,070→3,601), the law02 notes mirror
+refresh, and this state-doc update — commit awaits owner word.
+COMPACTION POINT #20 stamped here 2026-08-11 (block-2 scan COMPLETE,
+36 bites) — resume: read this doc; no scan work remains in block 2;
+next move is owner-directed (block 3 Exod 21:28-36, and/or the
+commit). Scratchpad kit + notes live in session
+4ca32657-770b-417a-8a21-73333c8d5f75, durable mirror in
+logic/law_era/scratch_mirror/. Later-run marquee adds: the
 rov-epistemology derived from OUR verses (Chullin 11b + the Chatam
 Sofer's altar-wordplay); the altar/crown-jurisdiction machloket (GRA vs
 Netziv); the Sadducees refuted by preposition (נפש בנפש vs our תחת,

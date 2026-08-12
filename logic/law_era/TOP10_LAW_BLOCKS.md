@@ -8,8 +8,8 @@ re-derivation of the covering units.
 
 | # | Block | Span | Code concept | Chain decompiler | Status |
 |---|-------|------|--------------|------------------|--------|
-| 1 | Slave-term laws | Exod 21:1-11 | first case-law cascade: כי ("when/if") conditionals, 6-yr timer, ear-rite opt-out flag | Kiddushin ch.1, Mekhilta Nezikin | **SCAN OPEN 2026-08-10** |
-| 2 | Homicide & injury | Exod 21:12-27 | mens-rea fork, refuge commutation, עין תחת עין ("eye for eye") -> damages semantics | Bava Kamma 83b-84a, Sanhedrin, Makkot | queued |
+| 1 | Slave-term laws | Exod 21:1-11 | first case-law cascade: כי ("when/if") conditionals, 6-yr timer, ear-rite opt-out flag | Kiddushin ch.1, Mekhilta Nezikin | **SCAN COMPLETE**; draft machine `exo_21_v2_block1_DRAFT.py`; **scene catalog** `logic/gork/scene_catalog_exo_21_block1_2026-08-11.json` (48 fixtures for later tests / Pass B) |
+| 2 | Homicide & injury | Exod 21:12-27 | mens-rea fork, refuge commutation, עין תחת עין ("eye for eye") -> damages semantics | Bava Kamma 83b-84a, Sanhedrin, Makkot | **SCAN COMPLETE** 2026-08-11: 36 bites, 1,639 rows, census satisfied; chapter ledger at 3,601; notes mirror `scratch_mirror/law02_scan_notes.md` |
 | 3 | Goring ox | Exod 21:28-36 | state machine: תם ("innocent") -> מועד ("forewarned"), liability escalation | Bava Kamma ch.1-4 | queued |
 | 4 | Theft & four guardians | Exod 22:1-14 | liability lookup table (4 custody classes × fates) reconstructed by the chain | Bava Kamma ch.7, Bava Metzia ch.3+7, Shevuot | queued |
 | 5 | Skin-affliction protocol | Lev 13-14 | decision tree with 7-day timers, re-inspection loops, טמא/טהור ("impure/pure") states | Negaim (Mishnah), Sifra Tazria | queued |

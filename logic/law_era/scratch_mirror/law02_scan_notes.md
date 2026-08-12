@@ -17,8 +17,13 @@ RESUME HEADER (keep current — updated every bite)
   / law02_seen_segs.txt (scratchpad; census+dump mirrored to repo
   logic/law_era/scratch_mirror/). Bite = one default-cap (32k ch) dump call
   → law02_batchN.txt → read → digest below. Block-1 pace: 84 bites for 1,962.
-- Progress: bite 19 done (batches 1-19 digested). 1,108 block-2 rows
-  written. Remaining after bite 19: 531 (503 readable + 28 tanakh).
+- ★ BLOCK-2 SCAN COMPLETE 2026-08-11: 36 bites (35 readable + 1
+  tanakh). 1,639 block-2 rows written (1,611 readable + 28
+  tanakh-verse) — census fully satisfied (1,668 required, 29 shared
+  rows read in block 1). Chapter ledger Exod_21.jsonl now 3,601 rows
+  (1,962 block-1 + 1,639 block-2). Queue: 0 readable, 0 tanakh.
+  NEXT: block 3 (Exod 21:28-36, goring ox) extends the same ledger
+  toward the exo_21 chapter gate — awaiting owner word.
   SESSION NOTE 2026-08-11: bites 7-14 ran in the resumed session (prior
   thread lost mid-bite-7); kit + notes live in scratchpad session
   4ca32657-770b-417a-8a21-73333c8d5f75, mirrored to repo
@@ -28,6 +33,202 @@ RESUME HEADER (keep current — updated every bite)
 
 MARQUEE FINDS SO FAR (index — details in batch digests)
 -------------------------------------------------------
+- (B35) Yalkut 850: R. Chama saw a BLIND MAN toiling in Torah and
+  greeted him "Peace to you, FREE MAN"; "I am a son of slaves"; "I
+  meant: free for the WORLD TO COME" — R. Yudan grounds it in OUR ואם
+  שן עבדו: the manumission clause applied eschatologically to the
+  suffering student. The Yalkut states the HAM-rationale in its own
+  voice at 339:5 ("why does the slave exit by tooth and eye? Because
+  it is written: and Ham SAW... and TOLD"). Subjective PAIN codified:
+  loaded-with-stones and snow-on-his-head as pure-pain cases, and
+  "if he was soft and delicate, his pain is DOUBLED." The pregnant
+  convict is NOT delayed for birth — the husband's fetus-money
+  overridden by "they shall die ALSO both of them" (the fetus
+  included).
+- (B34) The two-courts architecture in TANNAITIC voice (Yalkut 325,
+  Asi b. Akiva): "Before the Torah was given we were warned on
+  bloodshed; after the Torah — in that they made it STRICTER they
+  made it LIGHTER: exempt in human courts, his judgment handed to
+  Heaven" (Or HaChaim's B25 doctrine, sourced). R. Shimon b. Menasya
+  derives PIKUACH NEFESH from OUR verse: execution overrides the
+  service (מעם מזבחי), the service overrides Shabbat — life-saving,
+  which overrides the service, surely overrides Shabbat: the
+  rescue-law standing on the executioner's clause. The
+  Sanhedrin-beside-the-altar taught with Yoav as its זכר לדבר.
+- (B33) TAFSIR RASAG writes the DIYA into the verse: ודית עין בדל עין
+  — "the INDEMNITY of an eye in place of an eye" — Saadia renders the
+  money-reading inside the translation itself (and כי כספו הוא as
+  "because he is his MASTER"). Siftei Kohen's SIEGE-TARIFF: the whole
+  talion-list historicized against Jerusalem's destroyers — the
+  pregnant woman = the city great-with-people, her children = the
+  exiles; eye for eye = the Temple (the world's eye) repaid on Rome
+  and Tyre; foot for foot = the trampled PILGRIM-FESTIVALS (רגל)
+  repaid by the Poor One on the donkey; the seven tariff-items mapped
+  to the SEVEN following pericopes as kal-vachomers. The
+  Rogatchover's three ASSESSMENT-TYPES: umdena-as-fact (iron;
+  tereifah — physicians' domain, revisable) vs umdena-as-DIN
+  (stone/fist, the Torah's own shiur — court-grade, acquittal
+  irreversible). And אם יקום והתהלך בחוץ = acrostic איוב (the
+  Job-allegory of the whole pericope).
+- (B32) Siftei Kohen's THREE-PARTNERS diyuk at the kidnap-verse:
+  ונמצא בידו = the child was conceived with only TWO of the three
+  partners — God absent from the union ("he who comes to defile, they
+  open for him") — the mystical etiology of the parent-striker; and
+  the repair-map: change of place / name / deed correspond to the
+  three partners. The YETZER-SLAVE at 21:20: he who beats his evil
+  inclination to DEATH by fasting is avenged — creation needs the
+  living opponent ("not for chaos did He create it"). Rosh closes the
+  HAM-loop (B28): the manumission-organs are the CURSE-organs — the
+  tooth that mocked, the eye that saw. Bahya's healing dagesh-law
+  third-attested (Siftei Kohen) WITH its reason: human healing is
+  written hard because it passes through pain (the bitter drug, the
+  lancet); God's healing "adds no sorrow." Hirsch (Num 35): "one drop
+  of innocent blood shed unnoticed drops a stitch in the bond which
+  connects the land with the nation and both with God."
+- (B31) HIRSCH's ונתתה doctrine: the community GIVES the murderer's
+  life (never ולקחת "takes") — execution as restitution to the
+  destroyed ideals of justice; no self-incrimination exists because
+  the life "is not his to give"; "with every death, even a
+  murderer's, the community suffers a loss." The COAT-HOLE argument
+  for kam-leih: demanding from a forfeited life "the paltry price of
+  the hole his dagger made in the coat" — dignity tolerates no
+  money-question. The COMMUNITY as the slave's blood-avenger (נקם
+  ינקם: he has no kin, so Israel itself is his goel). The
+  DENTIST-master (BK 26b): freedom even for well-intentioned
+  carelessness, and the flat rate (eye = tooth) proves KNAS — care
+  owed slaves must EXCEED care owed free men. Gen 9:6: Jewish
+  punishment is neither deterrence nor talion — all punishment is
+  KAPPARAH, self-rehabilitation reaching past the execution.
+- (B30) HIRSCH's no-clemency doctrine at מעם מזבחי: "In Jewry there
+  are not two principles which mutually control and modify each
+  other, like Church and State, Justice and Mercy" — the Sanhedrin's
+  chamber sat beside the sword-hating altar because both teach ONE
+  principle; pardon-power is absent because judgment is God's, and
+  the execution is itself ATONEMENT of the altar's own kind. His
+  restoration-not-fine doctrine at 21:18: Torah money-payments are
+  compensation, owed even where no court could convict (no
+  witnesses) — and after FULL payment the guilt stands before God
+  until the VICTIM forgives (BK 92). Rashbam's structural peshat: the
+  block = the Decalogue's PENALTY-APPENDIX (לא תגנב read as kidnap by
+  context) — Bahya's two-tablets architecture in peshat form; and
+  אגרוף per the peshat = a STONE or brick (Onkelos), not a fist.
+- (B29) RALBAG's 50-SHORESH CODIFICATION — the whole block re-derived
+  as a deductive system with civic-purpose rationales (the Torah's aim
+  = תקון הקבוץ המדיני, repair of the civic order): the fetus as a LIMB
+  of the mother (nourished from her liver's blood — Aristotelian
+  physiology); kofer = ATONEMENT not damages, so every doubt resolves
+  STRINGENT and joint owners EACH pay a full kofer; the
+  indirect killer (set a dog, bound-and-starved) pays NO kofer — "his
+  sin is too great to be borne by ransom"; eye-for-eye = money by a
+  six-argument battery (incommensurability of body- and
+  money-penalties chief among them); and an open RULING AGAINST
+  Rambam on the wife's shame-and-injury payments, wielding Hai Gaon's
+  "a settled talmud is not rejected for strained answers." The
+  slave-manumission SELF-PAYMENT loop (B21 Malbim) already here: the
+  eye-money cannot be paid to the slave, so the Torah converts it
+  into his ransom from his master's hand.
+- (B28) Pesikta Rabbati 8: אחפש את ירושלים ("I will search Jerusalem",
+  Zeph 1:12) read with sin for samekh — "I will MANUMIT Jerusalem" —
+  under OUR slave-eye law: "I struck both their eyes ('He closed their
+  eyes') — is it not the law that they go FREE?" — God binds HIMSELF
+  by 21:26 and the redemption follows as manumission. R. Bahya (via
+  Pardes Yosef): slavery ENTERED the world through Ham's eye and mouth
+  ("he saw... and told") — so it EXITS through eye and tooth: the
+  manumission clause as measure-for-measure undoing of the first
+  slavery-curse. Pesikta DeRav Kahana: וכי יזיד as the PLOTTING-lexeme
+  (Jacob's pottage cognate) powering "in the scheme they schemed it
+  was schemed to them." Pesikta Rabbati 21's chizzuk-grid: each soft
+  Sinai word backed by OUR enforcement verses (curser; kidnapper) —
+  Bahya's two-tablets architecture (B13) attested in the Pesikta.
+- (B27) The KOTZKER's hefker-mechanism at יום או יומים: killing your
+  slave at once = ABANDONMENT (the freed slave dies a FREE man →
+  murder); surviving the day proves no abandonment → still "his money"
+  → exempt — the exemption and the liability from ONE ownership-move.
+  The RESURRECTION file (Pardes Yosef on 21:18-19): does reviving the
+  victim clear the murderer (Rabbah slaughtered R. Zeira and revived
+  him); is the revived man's widow released; Rasag — at the
+  resurrection the twice-married wife belongs to the LAST husband
+  (death = divorce) vs the Zohar's return-to-the-first; the
+  25-years-past-death man still counted alive (Chatam Sofer). The
+  Gra's structural rule: עבד ואמה juxtaposed always = CANAANITES — a
+  Hebrew pair is demographically impossible.
+- (B26) The altar as JURISDICTIONAL CLOCK (Amrot Hashem via Pardes
+  Yosef): מעם מזבחי ("from beside My altar you take him to die") =
+  capital courts run only while the Sanhedrin sits BESIDE the altar
+  (Lishkat HaGazit; the forty-years-before-the-destruction cessation
+  when they exiled from the chamber) — third leg of the
+  altar-jurisdiction thread (B14 GRA / B19 Netziv / B21 Malbim). The
+  MARS-DEFENSE refuted (Kisei HaTzaddik): the killer pleads "born
+  under Mars" (Shabbat 156) — answer: the star could be channeled to
+  slaughter (butcher/mohel), so "from My altar" (מזובחי, from My
+  slaughterers) comes his death-sentence. The Ramah's two-who-killed
+  exemption read off OUR נפש תחת נפש — "A soul for A soul, not two
+  souls for one." Exile is ATONEMENT, proven by the dead convict's
+  BONES going into exile.
+- (B25) Or HaChaim's TWO-COURTS ARCHITECTURE: the doubled מות יומת
+  ("he shall surely be put to death") = the two jurisdictions — ALL
+  death-deserving stand in Heaven's docket, and God DELEGATED a subset
+  to earthly courts ("he is a son of death even if not killed by you";
+  Ketubot 30's undying penalties); the ox-owner's יומת stays
+  un-delegated; the same architecture reused at Shabbat, hekdesh
+  bailees, and land-fraud ("I removed its judgment to Myself"). His
+  exile-INDEXING dual-attests Sforno (B12): the term is unfixed
+  because it pays a HIDDEN prior debt — one exile even for ten
+  killings; refuse the voluntary exile and Heaven schedules a second.
+  Paaneach Raza's Yoav: he grasped the horns because David's CURSE was
+  his commuted sentence — "I stay until the curse is lifted."
+- (B24) Netinah LaGer's SADDUCEE-FILTER law of Onkelos: the Targum
+  renders by the received tradition exactly where the SADDUCEES
+  disputed the Sages, and stays literal where they conceded — tested
+  on OUR נפש תחת נפש ("life in place of life", left literal) vs
+  pseudo-Jonathan's inserted "money"; plus Onkelos's cunning
+  word-choice חברא (faith-fellow) over מרחמא (any friend) at על רעהו —
+  "a word that neither contradicts nor confirms the kabbalah." Od
+  Yosef Chai's CAVE-PARABLE: the three men at the spring — the
+  three-generation purse — as the engine of והאלהים אנה לידו ("and God
+  caused it to his hand"). Chida citing the Ari: אשר ינוס שמה — שמה is
+  the letters of משה (Moses, the no-witnesses killer of the Egyptian);
+  no-witnesses is itself Heaven's verdict-sign.
+- (B23) Meshekh Chokhmah's PRIEST-MURDERER profile: מעם מזבחי ("from
+  My altar") because PRIESTS are the likeliest cunning-killers — a
+  divorcee is forbidden them, so the coveter of a married woman may
+  see killing her husband as his only route, and women's
+  childbirth/zavah offerings give him the access (the
+  Pharaoh/Abimelech scenario turned inward). And SHILOH's asylum
+  forfeiture: only two camps there (Zevachim 116) because Micah's
+  hired LEVITE profaned the Levite camp's sanctity — it stopped
+  sheltering. Plus יעמד as a COURT verb: assessed to stand a day =
+  acquitted even if he later dies.
+- (B22) Maskil LeDavid's ATONEMENT ARITHMETIC: the measure-for-measure
+  roof-faller dies a HARSHER death than his court-due because sudden
+  death lacks the condemned man's anticipatory anguish — the grade is
+  raised so the atonement comes out equal. Malbim's אם-rule (Vayikra
+  294): a multi-condition antecedent never takes אם ("if") — OUR אם
+  יקום ("if he rises", 21:19) is the lone elision of והיה, PROVEN by
+  its standing as a separate verse. Megalleh Amukkot: the TEN MARTYRS
+  as the kidnap-verse's enforcement — מות יומת ("he shall surely die")
+  = the second death, gilgul collecting Joseph's sale across
+  generations; Benjamin's goblet ונמצא בידו re-enacted.
+- (B21) Malbim's VAV-ALGEBRA essay (Kedoshim 101, anchored to OUR
+  stone-or-fist and eye-or-tooth): three-term lexicon — יחדו
+  ("together") = AND only, או ("or") = OR only, vav = AND/OR — with the
+  machloket confined to CONDITIONAL clauses; even R. Yonatan needs או
+  wherever combining acts would change the law (both eyes ≠ one
+  freedom). The SELF-PAYMENT LOOP at 21:26: a master fined for maiming
+  his slave would pay HIMSELF (what a slave acquires his master
+  acquires) — so the Torah escalates to FREEDOM. נקם ינקם ("avenged be
+  avenged"): vengeance-HEAT commanded — the slave is their brother;
+  execute his killer as blood-avengers.
+- (B20) Malbim: the SHABBAT LIMIT derived from the refuge-city — מקום
+  ("place") = the city PLUS its 2,000-cubit surround, so אל יצא איש
+  ממקומו ("let no man go out of his place", Exod 16:29) = the techum
+  (Sabbath limit), Issi's dictum. Yoav fled to the SANHEDRIN seated
+  beside the altar (king executes → crown INHERITS; the court finishes
+  his trial while he stands on the altar). Levush HaOrah: the
+  capital-assault hava-amina mapped by the SHABBAT-DANGER list; דרכיה
+  דרכי נועם ("her ways are ways of pleasantness") wielded as a legal
+  axiom against Maharal's death-as-payment. Kli Yakar: dignity pushes
+  aside SEVEN SHEEP (the 4-vs-11 restitution arithmetic).
 - (B16) The ROV-foundation: Chullin 11b derives majority-following from
   OUR verses (father-striker; murderer/tereifah) — with the Chatam
   Sofer's מעם מזבחי "LEARN from My altar" closing the scheming
@@ -2341,3 +2542,1719 @@ stringency and gmar-din renders the accused "as if killed."
 
 Ledger: 51 rows this batch (1,108 block-2 total). Remaining after batch:
 531 (503 readable + 28 tanakh).
+
+
+## Bite 20 (batch 20) — 31 listings: KLI YAKAR + LEVUSH HAORAH + MALBIM
+OPENS (Ayelet HaShachar rules + Exod 21:12-18)
+
+**Kli Yakar (2).**
+- 21:12:2 (MARQUEE, on the theft-law): the 4-vs-11 ARITHMETIC — by
+  Jacob's herd-ratios (one bull breeds four cows) a stolen ram should
+  cost ELEVEN sheep (ten mates + the penalty head), yet the Torah says
+  four: it docked SEVEN for the thief's shame in carrying the sheep on
+  his shoulder — "great is human dignity: it pushes aside seven sheep";
+  and Prov 6:31 ישלם שבעתים ("he shall pay sevenfold") is Solomon
+  deriving exactly that dignity-discount (via Ralbag).
+- 21:21: medicine says the wound peaks on day THREE (Gen 34:25 "on the
+  third day, when they were in pain"), so death then should PROVE
+  causation; יומים ("two days") teaches the REVERSE presumption,
+  powered by כי כספו הוא ("for he is his money"): no man destroys his
+  own money, so the blow is presumed non-mortal and the death is
+  attributed to a newly-arisen cause.
+
+**Levush HaOrah (3) — the Re'em defended against Gur Aryeh.**
+- 21:13 (MARQUEE): demolishes Maharal's death-as-CONVERTED-payment for
+  the under-perutah blow — the under-perutah exemption itself flows
+  from Israel's MERCY (they forgive trifles; Rashi on gezel under a
+  perutah), and you cannot build a death-penalty on the victim's own
+  forgivingness; likewise "no money → execute him" is unthinkable —
+  דרכיה דרכי נועם ("her ways are ways of pleasantness") wielded as a
+  legal axiom ("and where is its pleasantness?"). His own resolution
+  of Rashi's hava-amina: capital assault would be mapped by the
+  SHABBAT-DANGER LIST — striking any spot for which Shabbat is
+  desecrated in treatment is a "blow of the soul" (even a slap: a
+  loosened tooth is from-the-teeth-inward danger, Tur OC 325); ומכה
+  איש ומת ("and he who strikes a man, and he dies") comes to demand an
+  actual death-blow.
+- 21:16: the woman-thief inclusion defended: איש ("man", not
+  נפש/אדם "soul/person") excludes the non-viable infant, mirroring
+  Rashi's paired derivation at 21:12 ("moreover" — one word, two
+  exclusions).
+- 21:20: the Re'em's exit-from-class dialectic reconstructed — does the
+  slave-clause "teach about the whole class" (a day-or-two rule for
+  every victim) or does כי כספו הוא ("for he is his money") prove the
+  exit teaches only itself — and thence the difference between
+  left-to-teach and left-to-be-judged-by-a-new-matter.
+
+**Malbim — Ayelet HaShachar rules (4 + 2 Beur Hamilot).** Instrument-
+nouns are often mere EXAMPLES (stone/fist, rod, axe) vs sometimes exact
+(the fist-full, the finger); man-to-God pericopes front the noun (אדם
+כי יקריב "a man, when he offers") while man-to-man pericopes front the
+condition (כי יכה איש "when a man strikes") — Leviticus vs Mishpatim as
+SYNTAX; the lamed-infinitive = intent alone or intent+deed (להרגו
+בערמה "to kill him by cunning" — and he killed); the vav
+joins-vs-divides machloket (R. Yoshiah/R. Yonatan) is confined to
+conditional clauses. Beur Hamilot Isa 1:6: פצע ("wound", sword-cut that
+opens flesh) vs חבורה ("bruise", blood congealed under skin from
+stone/fist) — so 21:25's order descends severe→light, and Isaiah's
+pair must mean a bruise atop the wound; Prov 13:10: מצה ("strife") =
+a quarrel already at blows, citing our pericope.
+
+**Malbim on Exodus 21:12-18 (core run, 12 listings).**
+- 21:12: our verse vs Lev 24's כל נפש ("any soul") = the rabbis vs R.
+  Yehudah b. Beteira (ten strikers in sequence, Sanhedrin 78) — "until
+  the WHOLE soul departs, by his blow alone." The ish/adam grid
+  distributes victim-inclusions (woman, minor) and striker-exclusions
+  across the two verses, both excluding the eight-month infant.
+  Execution = the SWORD, from דמו ישפך ("his blood shall be shed") +
+  the heifer's broken neck standing in for the murderer's beheading +
+  נקם ינקם ("avenged be avenged" — vengeance is by sword, Sanhedrin
+  52b); both witnesses must warn (Makkot 6).
+- 21:13 (MARQUEE): מקום ("place") = the city PLUS its 2,000-cubit
+  surround (the refuge-boundary shelters, Makkot 12) — and from it the
+  SHABBAT LIMIT is derived: אל יצא איש ממקומו ("let no man go out of
+  his place", Exod 16:29) = 2,000 cubits, Issi's dictum (Eruvin 51,
+  Yerushalmi Eruvin 4:1). The wilderness refuge = the LEVITE CAMP
+  (ושמתי לך "and I will appoint for you — your place, in your
+  lifetime", Makkot 12/Zevachim 117). And אנה לידו ("caused it to his
+  hand") vs קרה ("happened"): God supplies the CAUSE, not the event —
+  Providence pairs the hidden old shogeg-killer with the hidden mezid
+  ("from the wicked comes forth wickedness", Reish Lakish, Makkot 10b);
+  Rambam: the pairing is wonder-like, not the way of most times.
+- 21:14: בערמה ("by cunning") excludes the physician and the court's
+  flogger — intentional but not SCHEMING (every schemer is intentional,
+  not every intender schemes); execution defers to Shabbat (met-mitzvah
+  burial overrides service yet not Shabbat; plus לא תלין "you shall not
+  leave overnight" — can't execute where you can't bury). The YOAV file
+  (MARQUEE): per the Yerushalmi he fled not to the altar's horns but to
+  the SANHEDRIN SEATED BESIDE IT — so the king could not kill him and
+  INHERIT him (executed-by-the-king property escheats to the crown);
+  תקחנו למות ("you shall take him to die") = the court finishes his
+  trial WHILE he stands on the altar (Benayahu = head of the
+  Sanhedrin); sources for Rambam's two rules (only a priest with
+  service in hand; the king-fearer who grasps the altar is saved, even
+  a non-priest). — joins the B14/B19 altar-jurisdiction thread.
+- 21:15-17: the parent-striker vav-machloket WIRED to the
+  chenek-severity machloket — if strangling is the GRAVER death (R.
+  Yonatan) one could misread מכה ("striker") as killer, since the
+  parent-killer would then deserve the graver end; azharah from לא
+  יוסיף ("he shall not add", Deut 25:3). Kidnap doubled with Deut 24:7
+  — FOUR new teachings here: sale-witnesses required; the minor-thief
+  excluded; whole-sale only (the half-freed slave is still called
+  "slave" — the doubled ומכרו "and sells him" makes the pronoun total);
+  בידו ("in his hand") = his DOMAIN (sold while still in his domain =
+  liable; never entered his domain = exempt). The Decalogue's לא תגנב
+  ("you shall not steal") = kidnap BY CONTEXT (its neighbors are
+  capital), Lev 19's plural = property (its neighbors monetary).
+  Cursing = with the NAME (Shem HaMeforash), death by stoning.
+- 21:18: ריב ("quarrel") vs מצה ("strife") — strife is already at
+  blows, where the STARTER forfeits lost-time and healing payments
+  (Choshen Mishpat 421:13); כי יריבון ("when men quarrel") = words-only
+  quarrel, so full liability. Women included: R. Yishmael from והמית
+  איש או אשה ("and it kills a man or a woman", the goring-ox doubling
+  teaching the whole passage) vs the asher-tasim whole-sidra rule (BK
+  15). באבן או באגרוף ("with a stone or with a fist"): the "or" needed
+  even per R. Yonatan for the TWO-BLOW split — one blow
+  assessed-for-death suspends the payments till he walks outside, but
+  two blows where only the SUM kills may owe on the first at once
+  (Shabbat 5's two-forces-in-one-man query).
+
+Ledger: 31 rows this batch (1,139 block-2 total). Remaining after batch:
+500 (472 readable + 28 tanakh).
+
+
+## Bite 21 (batch 21) — 33 listings: MALBIM CORE RUN CLOSES (21:18-27)
++ his Leviticus crossrefs (Achrei Mot / Emor / Kedoshim vav-essay)
+
+**Malbim on Exodus 21:18-19 (assessment & recovery).**
+- 21:18:4-5: stone and fist as the TWO POLES of assessment — stone =
+  instrument-lethality (Num 35:17 "a stone of the hand by which one
+  may die"), fist = SPOT-lethality (a fist kills only at a special
+  place, e.g. opposite the heart; Ramban: fist = fingers gathered into
+  the palm); both require אומד (assessment). R. Natan's mutual hekesh
+  run through the writes-last rules (Ayelet HaShachar 198/200): the
+  DEFINER is written last even when the defined has the bigger chiddush
+  — here each defines the other, so fist (spot + more chiddush) closes.
+- 21:18:6: ולא ימות ("and he dies not") seemingly redundant — by
+  nature the quarrel-blow should kill at once, or he was ASSESSED for
+  death and jailed; he fell to bed instead, yet stays jailed until he
+  walks outside (rabbis vs R. Nechemiah, Sanhedrin 78); only then do
+  the payments attach.
+- 21:19:1: והתהלך ("and walks about", hitpael) = strolling to and fro
+  — OUTSIDE, proof of real recovery (air harms the sick); על משענתו
+  ("on his support") with R. Yishmael's possessive dyuk: HIS OWN
+  support — the young man on his restored strength ("the support of
+  youths"), the old man on his staff.
+- 21:19:2-3: ונקה המכה ("the striker is cleared") = cleared from
+  IMPRISONMENT (they hold him in custody pending the outcome, as with
+  the blasphemer and the wood-gatherer — but those one-time holdings
+  can't teach for the generations; it is learned from HERE). רק
+  ("only") restricts the PRECEDING clause (vs אך restricting what
+  follows — Ayelet HaShachar 591): cleared, yet NOT from lost-time and
+  healing.
+- 21:19:4 (MARQUEE): ורפא ירפא ("heal, he shall heal") — the doubled
+  infinitive = REPEATED action: the wound recurs even four or five
+  times → heal again; growths from the wound → heal; growths NOT from
+  the wound → exempt (the hekesh to lost-time caps it, per R. Yehudah's
+  רק-reading, BK 85). And the piel-grammar: מרפא = healing VIA OTHERS →
+  he must provide a PAID physician — the victim need not accept "I'll
+  heal you myself" or "my friend doctors for free" ("a physician who
+  heals for nothing is worth nothing"). R. Yishmael instead reads the
+  doubling as the Torah's LICENSE TO HEAL — consistent with his
+  Torah-speaks-as-people-speak position.
+
+**Malbim on Exodus 21:20-21 (the slave clauses).**
+- 21:20: "his slave" = the CANAANITE slave (R. Eliezer from Lev 25
+  "from them you may buy"; R. Yishmael from כי כספו "for he is his
+  money" — money-purchase = perpetual acquisition); the
+  PARTNERSHIP-slave excluded by the possessives (his slave / his money,
+  BK 90). בשבט ("with the rod") = the PERMITTED discipline instrument
+  (Prov 23:14 "beat him with a rod"; 13:24 "who spares his rod hates
+  his son") — Rambam: the day-or-two mitigation ONLY for rod-blows
+  (struck with right); Rashbam: rod is the way of rebuke, sword the way
+  of murder; a partner's slave may not be struck at all → no
+  mitigation; extended to the tithe's "all that passes under the ROD"
+  — partnership animals exempt from tithe because neither partner may
+  strike them. תחת ידו ("under his hand") = under his AUTHORITY (the
+  24-hour window precludes "while his hands strike"): sold-to-another
+  excluded. נקם ינקם (MARQUEE): Ibn Ezra's survey — vengeance-language
+  = slaughter (Midian; Samson; Ps 149's two-edged sword) — the form
+  chosen to command vengeance-HEAT: the slave is their BROTHER in the
+  commandments; his murder must burn them like blood-avengers.
+- 21:21: the 24-HOUR COMPUTATION — struck at evening, one day = 24
+  hours; struck midday, "two days" = part of each summing to 24 ("part
+  of the day is as the whole"); t"k and R. Yose HaGelili split over
+  which word is literal, wired again to אך vs רק (אך splits the day,
+  Pesachim 5) and to מיום אל יום (Nedarim 76b) and כיום תמים ("as a
+  whole day", Josh 10 = the 24-hour sun-stand). כי כספו הוא as REASON:
+  though if his OX gored this slave the owner would die — the slave is
+  a full soul — the master himself is exempt: he is his money.
+
+**Malbim on Exodus 21:22-25 (the fray, the fetus, the tariff).**
+- 21:22: why the UN-AIMED woman scenario — it teaches TWO monetary
+  rules at once (fetus-value to the husband; the wife's wound-value to
+  the husband): an aimed-at-woman case would trigger the
+  greater-liability swallow and teach nothing. T"k = transferred
+  intent still capital (נפש ממש), Rebbi = נפש תחת נפש is MONEY; R.
+  Yitzchak (= R. Shimon + Tanna d'vei Chizkiyah) needs the pericope to
+  prove FETUSES ARE NOT a soul (else the eight-month exclusion is
+  redundant); the Noahide IS liable for fetuses ("blood of man IN
+  man", Sanhedrin 57) — anticipating the Noda BiYehudah's question.
+  אשה הרה ("a pregnant woman") redundant → strike near the WOMB (R.
+  Eliezer b. Yaakov) or pregnancy-ENHANCEMENT value to the husband (BK
+  49); בעל האשה ("the woman's husband", not "the children's father") —
+  the husband is always the CLAIMANT: pregnant by another man, the
+  husband takes the enhancement, the begetter the fetus-value.
+  ילדיה plural fits one fetus (sac and blood exit too); ענוש יענש =
+  MONEY (onesh = fine: the hundred-talent fine on the land, II Kings
+  23:33; "wine of the fined", Amos 2:8); כאשר ישית ("as he sets") ≠
+  the husband's whim (בפלילים = judges' assessment) — Rashi: when the
+  husband SUES; Ramban: fetuses have no market-measurable loss ("who
+  knows if they would prosper") → an assessed FINE proportioned to his
+  cherishing, capped by the judges.
+- 21:24: the eye-for-eye conversion PROVEN three ways — R. Yitzchak
+  from KOFER (ransom avails where "he shall die" is written — a
+  fortiori for limbs; and the intentional maimer pays from Lev 24's
+  "as he gives a blemish in a man", the kelal-uferat-ukelal covering
+  all permanent blemishes); Rambam from חבורה תחת חבורה + the
+  healing-clause (Rav Papa: if literal, the retaliated party ALSO
+  needs a doctor — the healing-payment proves money); and "אין נתינה
+  אלא ממון" — netinah as enacted LAW (Esther's "that a decree be
+  given") = the rendered sentence.
+- 21:25: כויה ("burn") = pure PAIN payment where no damage (the
+  spit-burn on the fingernail); wound and bruise written AFTER the
+  lighter burn because they DEFINE it (else we'd demand blood or bruise
+  with the burn) — the definer-last rule again; once burn teaches
+  pain-without-damage, wound teaches pain-ALONGSIDE-damage is paid
+  separately.
+
+**Malbim on Exodus 21:26-27 (limb-manumission).**
+- 21:26:1 (MARQUEE): the ORDER-question — the slave-eye clause belongs
+  beside the slave-death clause; it sits after eye-for-eye because it
+  EXITS from it: the free victim takes eye-value, but a master fined
+  for his own slave would pay HIMSELF (what a slave acquires his
+  master acquires) — license for cruelty "without judgment"; so the
+  Torah escalates: limb-loss = FREEDOM, the stringency riding on
+  לעולם בהם תעבדו ("forever you shall work them").
+- 21:26:2-3: ושחתה ("and destroys it") excludes the removable
+  cataract-film (irreversibility required); כי יכה demands a physical
+  ACT (Tosefta BK 9; BK 91's fright-blow discussion — blows exist
+  through air, like the plague-blow). תחת עינו/שנו redundancies: t"k —
+  NO manumission deed needed (the eye itself frees him); eye then
+  tooth in sequence — freed by the first, PAID for the second [struck
+  together: freedom only — against the Yam Shel Shlomo's Rambam]; R.
+  Eliezer: even the MINOR slave freed, and the deed IS required from
+  ישלחנו ("he shall send him" — sending = by document, as in
+  divorce; else it would say "he shall go out" as with the Hebrew).
+- 21:27: tooth+eye = EXAMPLES for all 24 non-returning limb-tips
+  (Kiddushin 24 — why both: tooth alone would include the milk-tooth;
+  eye alone only born-with-him organs). WHY freedom at all: through
+  his SUFFERINGS he goes free — not as self-redemption (a Canaanite
+  slave cannot be redeemed against the master's will) — and Berachot
+  5's kal-vachomer stands on it: "from Your Torah we learn it" —
+  if tooth-and-eye sufferings free a slave, how much more do
+  sufferings cleanse the whole man.
+
+**Malbim's Leviticus crossrefs.** Achrei Mot 146: the lamed-infinitive
+rule with OUR two verses as paradigm (להרגו בערמה "to kill him by
+cunning" — and killed; תקחנו למות "take him to die" — and he dies),
+feeding the approach-vs-act machloket at "do not draw near to
+uncover". Emor 245: the ish/nefesh/adam victim-striker grid restated.
+Emor 249: כן ינתן בו ("so shall it be given in him") — BK 84's proofs +
+Saadia vs Ben Zuta (via Ibn Ezra); bodies and pain-constitutions
+differ (one-third of the eye's light already gone; some feel no pain,
+some die of a small pain) → money; לא תקחו כפר לנפש רצח אשר הוא רשע
+למות ("no ransom for a murderer's life — who is guilty of death"): the
+qualifier proves ransom AVAILS below capital; the misplaced
+beast-verse signals the switch to money-mode. Kedoshim 53: the
+או-hekesh rule (or-paired items compare) → half-redemption teaches
+half-deed manumission (Rebbi, Gittin 41). Kedoshim 98: the three
+curse-verses distributed across R. Yehudah (the CERTAIN father only —
+the safek excluded), R. Yose HaGelili, R. Akiva (the ger excluded).
+- Kedoshim 101 (MARQUEE — the VAV-ALGEBRA essay, anchored on our
+  verses): the R. Yoshiah/R. Yonatan machloket SYSTEMATIZED — in plain
+  COMMAND all agree vav joins; in plain PROHIBITION all agree it
+  divides (vav = AND/OR: "widow and divorcee... he shall not take"
+  bans each AND both — had it said או we would PERMIT the
+  combination!); the dispute lives only in CONDITIONAL clauses (does
+  the antecedent govern, like a command — R. Yoshiah joins; or the
+  penalty-consequent, like a prohibition — R. Yonatan divides). The
+  three-term lexicon: יחדו ("together") = AND only; או ("or") = OR
+  only; vav = both. And the closing refinement: even R. Yonatan
+  REQUIRES או wherever combined action would change the law — both
+  eyes struck must not collapse into one freedom; the Mechilta's eight
+  או-derashot in our parashah (stone-or-fist, eye-or-tooth,
+  slave-or-maid, bull-or-donkey...) all survive under it. Sweep
+  through Yoma 57 (blood-mixing), Menachot 91, BM 94, Chullin
+  78/86/137, Zevachim 107; the Ritva/R. Pinchas HaLevi rule assessed;
+  Shitah Mekubetzet convergence noted.
+
+Ledger: 33 rows this batch (1,172 block-2 total). Remaining after batch:
+467 (439 readable + 28 tanakh).
+
+
+## Bite 22 (batch 22) — 25 listings: MALBIM Vayikra crossref + MASHMIA
+YESHUAH + MASKIL LEDAVID + Sema + Gra-school lexicon + MEGALLEH AMUKKOT
+
+**Malbim, Vayikra 294 (MARQUEE — the אם-rule).** A new grammar law
+mined with OUR verses as showcase: a conditional whose antecedent
+stacks several conditions (21:22's four — they fight, they strike a
+pregnant woman, her children come out, no ason) NEVER takes אם ("if")
+between them; אם may open only a NEW division after the consequence is
+stated. Two apparent breaches resolved: OUR אם יקום ("if he rises",
+21:19) = והיה אם with the והיה elided — PROVEN by its standing as a
+separate verse; and Exod 22:6's אם is licensed by its following ואם
+("and if"). The lone true anomaly (Lev 5:1 אם לא יגיד "if he does not
+tell") is what R. Akiva's derash feeds on.
+
+**Mashmia Yeshuah (Abarbanel).** Intro: ונתן בפלילים ("and he shall
+give by the judges", 21:22) turned as a flourish against the deniers
+of the messianic prophecies reported by Sefer HaIkkarim. Third Herald:
+the redeemed age's knowledge-flood voiced through 21:18's phrase —
+no more shall איש את רעהו ("a man his fellow") teach.
+
+**Maskil LeDavid (David Pardo on Rashi, 12 listings).**
+- 21:12 — rescues Rashi's hava-amina from the Re'em: כל נפש ("ALL the
+  soul") could read as PART of the soul = drawing blood ("the blood is
+  the soul"; part of a soul is as the whole) → a decree-death for
+  wounding IF warned for death, with פצע תחת פצע covering the unwarned
+  (on the model of R. Yochanan's warned/unwarned split for the fine at
+  Ketubot); מכה איש ומת comes to demand the WHOLE soul's departure.
+  And why a verse must EXCLUDE the minor killer: one might convict him
+  "for the settlement of the world" — the ben-sorer judged for his
+  end, the kipah confinement, the king's summary executions of
+  murderers (Rambam Melakhim 3) — murder-law already runs on
+  end-directed policing; same hava-amina at kidnap and parent-curse.
+- 21:13 (MARQUEE — atonement arithmetic): why does the
+  measure-for-measure executor die by a stoning-like FALL when his due
+  was the sword? An un-anticipated death lacks the condemned man's
+  anguish of "sitting and watching for his candle to go out"; Heaven
+  raises the GRADE so the sudden harsher death equals the anticipated
+  lighter one — and his sin is atoned in full.
+- 21:15-17: parent-striker without a wound = ordinary damages (Rambam
+  Mamrim 5). The stam-death machloket (R. Yoshiah: you may only pull
+  DOWN to the lightest; R. Yonatan: stam = strangulation) mapped onto
+  R. Shimon vs the rabbis on which death is light. The kidnap-clause
+  INTERPOSED to block analogies: no liability for striking a DEAD
+  parent (a wound needs flesh) while the curse reaches beyond death;
+  yet the hekesh survives for woman-inclusion, minor-exclusion, and
+  the wicked-parent exemption ("among your people"). At the curse:
+  Rashi chose binyan-av over the Mechilta's gezerah shavah lest
+  no-half-g"sh drag the ov's lip-movement-as-act chatat onto the
+  curser.
+- 21:19-20: lost-time is owed EVEN alongside limb-value (not swallowed
+  by paying for the hand). The victim may refuse care from the striker
+  even if the striker is himself a physician — "you are to me a
+  LURKING LION" — and demand a hired one. The day-or-two clause = exit
+  TO A NEW MATTER (it contradicts the class: in the class, death even
+  a year later convicts) — so no return to the class; yet the
+  freeman-killer's sword still derives from נקם ינקם because a
+  KAL-VACHOMER (slave's killer by sword → freeman's not lighter) runs
+  where mah-matzinu is barred, and "no punishing from inference"
+  doesn't block a mere gilui-milta on מות יומת — Rambam and Smag
+  vindicated against the Re'em. Sword = from the neck: why not the
+  back? "Love your fellow as yourself — choose him a beautiful death."
+- 21:22: why no death for the fetus even under transferred intent —
+  the warning is SAFEK-warning (its months may never have completed);
+  Maskil's own chain: the fetus stands in a chazakah of non-viability,
+  join the miscarrying MINORITY to that chazakah → the viability
+  majority is impaired → an even doubt → doubtful warning → exempt.
+  ענוש = money: the Mechilta's g"sh from וענשו אתו (Deut 22) vs Rashi
+  reading it straight from בפללים ("a thing given hand to hand").
+- 21:24: eye-not-life (BK 84): under literal talion the blinded man
+  might die of TERROR awaiting the blinding — "an eye for an eye, not
+  a life for an eye."
+
+**Sema (Me'irat Einayim, CM 423).** The codified residue: liability
+though he aimed at no woman (from "when men fight"); ason in the WOMAN
+voids the fetus-payment (the greater swallows); the Torah AWARDED the
+fetus-money to the husband.
+
+**Gra-school lexicon (Mechokekei Yehudah, 5).** Wessely's הולך vs
+מתהלך: walking-toward vs walking-for-itself — the recovering patient
+of OUR 21:19 strolls to habituate limbs and air, whence Enoch's
+thought-walks with God. Onkelos's ledger: ערמה for right = בחוכמא
+(Gibeonites) but OUR להרגו בערמה = בנכילו ("by treachery"); Rambam:
+permitted stratagem = haaramah, forbidden = mirmah — Torah-language
+and Sages-language diverge. התנכל = hiding the deed from OTHERS; ערמה
+= the victim himself never senses it. ערום to genai when aimed at
+another's loss (OUR 21:14), to praise when protective; foxes have
+cunning, not wisdom. And the Gra: the vav of גנבתי לילה = OR, like the
+vav of ומכה אביו (21:15).
+
+**Megalleh Amukkot (4, MARQUEE — the kidnap-gilgul network).** The
+kidnap-verse as the Joseph-sale's enforcement engine: ונמצא בידו ("and
+he is found in his hand") = the Zohar's ten drops from Joseph's
+fingernails; the TEN MARTYRS stand against the ten tribes — מות יומת
+read as the SECOND death, gilgul collecting the sale across
+generations (R. Akiva = letters of אביר יעקב "the Mighty One of
+Jacob", carrying Shechem's 24,000; Elijah the FIFTH gilgul = five
+garments to Benjamin); Reuben's "lay no hand on him" = do not breach
+the kidnap-law itself; the four sales = four exiles; Benjamin's goblet
+"found in his hand" re-enacts the verse. The Calf tied in through יד
+ליד לא ינקה רע ("hand to hand, the evil goes not unpunished").
+
+Ledger: 25 rows this batch (1,197 block-2 total). Remaining after batch:
+442 (414 readable + 28 tanakh).
+
+
+## Bite 23 (batch 23) — 37 listings: MESHEKH CHOKHMAH Mishpatim run +
+METZUDOT lexicon layer + Megillah source-row + Menot HaLevi + MIZRACHI
+FOUNTAINHEAD (21:12)
+
+**Megalleh Amukkot, Vayikra 8.** The ten-martyrs network again: the
+small alef of ויקרא ("and He called") = gematria R. Akiva (whose soul
+left with "One"); the ten pearls shown Moses = the martyrs = Joseph's
+ten drops; ונמצא בידו ("found in his hand") read precisely against
+ויפזו זרעי ידיו ("his arms were made agile"); Yoma's
+fingernails-vs-belly dictum re-keyed to the drops.
+
+**Talmud source-row.** Megillah 15b: Isaiah's פקו פליליה ("judgment
+totters") — פליליה = JUDGES, proven from OUR ונתן בפלילים ("and he
+shall give by the judges").
+
+**Meiri on Psalms (2).** לא תאנה ("no evil shall befall you", Ps 91)
+from OUR אנה לידו ("caused it to his hand") — even by cause and
+roundabout; ויפלל (Pinchas "executed judgment", Ps 106) = OUR
+bifelilim: he judged them as adulterers under
+zealots-strike-the-Aramean-bedder.
+
+**Menot HaLevi (Alkabetz on Esther 4:14).** Mordecai's "if you keep
+silent" built on Prov 24's rescue-law (הצל לקוחים למות "rescue those
+taken to death"): failing to scheme a rescue makes YOUR strength the
+oppressor; Saul's sparing of Agag as the house-debt Esther must repay.
+Anchored to us by the vav=OR note: "אם מצאת וְיש אחרית" read like OUR
+ומקלל אביו ואמו ("who curses his father OR his mother").
+
+**Meshekh Chokhmah (8 — the Mishpatim run).**
+- Ki Tetze 164: Deut 25's fray is NOT Mishpatim's deadly fray
+  (Sanhedrin 74 "a fray involving death") — were it, the wife would be
+  rescuing her husband from a rodef and owe no boshet; the text flags
+  it: there איש ואחיו ("a man and his brother") — brothers who still
+  came to blows; Sifrei: "no peace comes out of a quarrel."
+- Mishpatim 12 (MARQUEE): Shiloh had only TWO camps for refuge
+  (Zevachim 116) — because Micah's idol stood "all the days the house
+  of God was in Shiloh," and his hired LEVITE was the stumbling: the
+  Levite camp's sanctity was profaned by its own member's apostasy and
+  LOST its asylum power (with "Bilgah's window is sealed" as the
+  precedent-form).
+- Mishpatim 13 (MARQUEE — the priest-murderer): the cunning-killer
+  clause targets the Pharaoh/Abimelech scenario ("they will kill me
+  for my wife") turned inward: a man covets his fellow's wife and
+  kills to marry her; מעם מזבחי because PRIESTS are the likeliest —
+  the divorcee is forbidden them (no route but the husband's death),
+  and the women come to THEM with childbirth and zavah offerings:
+  access plus temptation; the serpent's cunning ("kill Adam, marry
+  Eve", Sotah 9b) as the archetype.
+- Mishpatim 15: the minor-killer exemption needed even for an ADULT
+  victim — and needed at all because NOAHIDES are warned on murder.
+- Mishpatim 18 (R. Yitzchak mechanized): if "father and mother" meant
+  BOTH, the stringency would breed a leniency — striking the father
+  alone would escape even LASHES, since a lav handed over to
+  court-death cannot flog while a later blow to the mother could
+  complete the capital case (on the model of hakchashah as the start
+  of hazamah, BK 74) — while striking a stranger flogs; so: father OR
+  mother.
+- Mishpatim 19: kidnap = theft of a SOUL from its family (selling to
+  relatives exempt — "until he removes him from his brothers'
+  domain"); placed between striker and curser: even the wretch who
+  embitters his mother and strikes his father — even HIM if a man
+  sells, death; "the Torah banished the acquisition of slavery from
+  human society."
+- Mishpatim 20-21: ונקה would have suggested flog-not-pay
+  (warned-for-graver covers the lighter); רק שבתו יתן teaches payment
+  — mechanics via Hagahot Ashri (where nezek is paid, no lashes even
+  if warned). And the ROD + KIPAH reading: with full witnesses and
+  warning (common when a master beats a slave openly) — the sword;
+  without them — the KIPAH cell (barley feeding), and THAT is the
+  נקם; day-or-two = no kipah either; the dagesh in לא יֻקם standing
+  for the elided nun hints the full-height standing cell.
+- Mishpatim 22-23: struck-then-SOLD-then-died = exempt (Mechilta) —
+  but then every warning is safek-warning (maybe he'll sell!): prefers
+  the Gra's text, concedes the Tosefta reads as ours; distinct from
+  "the law changed, the execution changed" (the change is in the
+  victim, not the killer). And יעמד (MARQUEE) as a COURT verb: the
+  court ASSESSES him fit to stand a full day from this blow → acquit,
+  no vengeance even if he later dies — why the verse says "stand,"
+  not "live."
+
+**Metzudot lexicon layer (17 rows).** The whole-Tanakh dictionary
+keyed to our block: צודה/צדה = ambush (I Sam 24, Dan 11's Onkelos
+"דלא כמן" — without lying-in-wait); אנה = befall/supply-the-cause (Ps
+91); פלילים = judges (Ps 106, Megillah's row); חפש = freedman (Ezek
+27); נגף = blow (Isa 19, Josh 24); אגרף = the hand curled over its
+fingers (Isa 58); חבורה = congealed-blood mark, cognate to the
+leopard's חברברות spots (Isa 1, Jer 13); פצע = blood-drawing wound
+(Prov 23, Song 5); כוה = burn (Prov 6); תחת = in-place-of (Job 34);
+and Neh 6:12's וסנבלט with vav = OR — like OUR ומקלל אביו ואמו. Plus
+Metzudat David twice on the intent+deed pattern of להרגו בערמה
+("thought to kill and did") at II Chr 32:1 and Isa 38:20.
+
+**Mizrachi (Re'em) on 21:12 — the FOUNTAINHEAD (4 listings).** The
+source-text whose questions four later strata we've read (Gur Aryeh,
+Levush HaOrah, Maskil LeDavid, Siftei Chakhamim) are all answering:
+(1) why Rashi announces all the murder-verses and expounds two; (2)
+THE objection — how could striking-without-death ever be capital? (the
+stone-fist verse pays; Rashi's own "would you think he's killed who
+didn't kill?"; the parent-striker verse would be superfluous; the
+stone-fist hekesh demands lethal-grade instruments) — compounded by
+the Mechilta's "even a slap" and left in צריך עיון; and the
+derash-DIRECTION question (why not read the pair the other way?),
+answered: the Sages' received tradition (kabbalah) decides which way
+the verses are read — the derashot are anchors, not derivations; (3)
+where do we find a MINOR punished, that a verse must exclude him —
+with the ben-sorer judged-for-his-end analogy and the Sifra's
+nine-year-old whose intercourse convicts the shifchah-charufah woman
+though he himself is exempt; (4) the Noahide-fetus problem — "is there
+anything permitted to an Israelite but forbidden to a Noahide?" — the
+full sugya-sweep (yefat-toar via conquest-eligibility; under-perutah
+via mercy-not-license; Shabbat/Torah-study as Israel's mitzvot; the
+limb-from-the-living analysis through chatzi-shiur and the
+slaughter-gate), ending with the holder of "no inviting a Cuthean to
+innards" simply REJECTING the principle.
+
+Ledger: 37 rows this batch (1,234 block-2 total). Remaining after batch:
+405 (377 readable + 28 tanakh).
+
+
+## Bite 24 (batch 24) — 51 listings: MIZRACHI RUN CLOSES (21:13-26) +
+NACHAL KEDUMIM (Chida) + NACHALAT AVOT + NETINAH LAGER (Onkelos) + OD
+YOSEF CHAI
+
+**Mizrachi (Re'em), 21:13-26 (20 listings) — the fountainhead run.**
+- 21:13: לא ארב ("did not lie in wait") cannot be precise — the
+  transferred-intent killer is exempt from death AND exile ("close to
+  intentional": no refuge shelters him, Rambam Rotzeach 4+6); Rashi
+  only glosses צדה as ambush-language (against Menachem's
+  hunting-root; with Onkelos's ודלא כמן "and did not ambush"). The
+  ladder-case falls on the DESCENT (descending = exile, ascending =
+  exempt). The refuge-of-the-hour = the Levite camp, by the
+  manos/manos gezerah-shavah with the Levite cities.
+- 21:14: which shogeg needs excluding from DEATH — the near-mezid
+  (part-negligent; aimed at a beast and killed a man): exile doesn't
+  cover him either, "his sin remains." And the Temple-service sugya in
+  full: מעם מזבחי not מעל — a priest MID-SERVICE on the altar roof is
+  left to FINISH; only the not-yet-started is taken; execution
+  overrides even PUBLIC service (מזבחי "MY altar" = the tamid) yet not
+  Shabbat — the whole kal-vachomer lattice (service / Shabbat /
+  met-mitzvah burial) stabilized by the מושבות gezerah-shavah, with
+  Tosafot Yevamot's answers, R. Tarfon's dayo-exception, and the
+  can't-lift-palms rule (accuser can't turn defender) demoted to a
+  stringency.
+- 21:15-17: the wound-requirement's two sources (Mechilta's
+  kal-vachomer from damages; Torat Kohanim's beast-hekesh); vav = OR
+  via R. Yochanan's "until Scripture specifies יחדו (together)" as at
+  ox-and-donkey; stam death = strangulation; the kidnap
+  derash-DIRECTION worry again (why not the mirrored reading?) —
+  answered: the tanna resolves verse-REDUNDANCY, revealing part here
+  and part there, plus: wherever איש is written where a participle
+  would do, it excludes (the minor), while the equal-punishment rule
+  (Kiddushin) covers only generic masculine phrasing. ונמצא בידו
+  defended for Rashi against Ramban: witnesses to theft AND entry into
+  his domain BEFORE the sale. דמיו בו = stoning as binyan-av (not
+  g"sh) because דמיו/דמיהם differ — "one learns ish from ish, not ish
+  from ha-ish."
+- 21:18-19: the pericope legislates ONLY lost-time and healing (pain
+  and shame from elsewhere); Onkelos ויפל לבטלן — idleness names the
+  sickbed; משענתו = health-metaphor, one of R. Yishmael's THREE
+  mashal-readings (with sun = peace, spread-garment = clear-as-cloth);
+  the shevet is illness-period only (limb-value separately paid);
+  physician-fee, not self-healing.
+- 21:20-21: WHY the freeman escapes day-or-two — exit-to-a-new-matter
+  (can't return to the class), worked through the asham-metzora model;
+  the sword-derivation left in tzarich-iyun for Rambam/Smag (resolved
+  later by Maskil LeDavid's kal-vachomer, B22); rod = lethal-grade
+  (from "a wooden hand-tool by which he may die"); limb-lethality from
+  וארב לו; and בשבט needed because "we do not punish from inference."
+  כי כספו הוא = the RETURN-clause: it restores the slave to the class
+  for the after-24-hours case (the asham-metzora return model) — else
+  he'd stay in his new-matter status entirely.
+- 21:22: the fray is man-vs-man (aimed at a man, struck the woman);
+  ason must be in the WOMAN since fetuses are not נפש — presumed
+  non-viable until birth, so the warning is SAFEK-warning (the source
+  Maskil LeDavid B22 build on); the Noahide-fetus "is there anything
+  permitted an Israelite yet forbidden a Noahide?" — two answers: the
+  Torah is STRICTER on the Noahide here (his warning IS his death), or
+  Israel is exempt-but-forbidden. ענוש יענש = "shall COLLECT from him"
+  (not "pay" — בפלילים shows it not yet paid); "as the husband sets" =
+  when he SUES (else the judges-clause contradicts).
+- 21:26: the Hebrew slave-woman excluded via the "as the Hebrew"
+  hekesh; the 24 limb-tips binyan-av from tooth+eye (permanent
+  blemishes, limb-tips, visible, intentional); a flesh-cut excluded —
+  a RETURNING blemish.
+
+**Nachal Kedumim (Chida, 4).**
+- 21:13 (MARQUEE): the Ari — אשר ינוס שמה ("where he shall flee"):
+  שמה = the letters of משה (Moses), who killed the Egyptian; ויפן כה
+  וכה וירא כי אין איש ("he looked this way and that and saw there was
+  no man") — killing with NO WITNESSES is itself Heaven's sign (per
+  Maharach Vital: no worthy offspring would have come of him), and the
+  angels concurred; ושמתי לְךָ — "for YOU."
+- 21:14: the Ashkenazi rov-chain (the B16 Chullin 11b marquee, now in
+  Chida's hand): the tereifah-doubt defeated by majority, PROVEN from
+  the olah wholly burned — מעם מזבחי "from the ALTAR'S OWN LAW you
+  take him to die"; and paternity-by-majority is the reason of מכה
+  אביו.
+- 21:15: once warning is accepted the parent CANNOT waive (Paaneach
+  Raza) — against the Sheiltot: blow and curse are unwaivable
+  altogether, only honor is waivable (his Shiyurei Berachah YD 240).
+- 21:21: Mahari of Posen's homiletic — "if a day (Kippur) or two days
+  (Rosh Hashanah) he STANDS" in fear-driven repentance, לא יקם "it has
+  no standing — for it is his money": repentance-for-parnassah.
+
+**Nachalat Avot (Abarbanel on Avot, 3).** The Providence pericope:
+the wicked executioner is God's rod AND is judged — והאלהים אנה לידו
+with Pharaoh/Sancheriv/Nebuchadnezzar/Baasha as the series, "one
+through whom his fellow is punished enters not the Presence's
+partition," the drowned-you dictum closing it. R. Chiyya's
+wheel-of-fortune: society survives only when איש את רעהו ("a man his
+fellow", 21:18's phrase) helps. And bar-mitzvah at 13 keyed to איש
+איש — the boundary of "man" is begetting-capacity.
+
+**Netinah LaGer (R. Nathan Adler on Onkelos, 12).**
+- 21:12: ויקטלנה "and KILLS him" (knowing act) vs the ox's וימות "and
+  he dies" — the deliberate-agency verb answers the Re'em; and ודלא
+  כמן ליה = did not ambush FOR A DEATH-BLOW — rescuing Onkelos from
+  the transferred-intent-exile trap.
+- 21:14 (MARQUEE): על רעהו = על חברה without "of Israel" — does
+  Onkelos dispute the Mechilta's not-the-idolater? No: he adds the
+  received qualifier only where ANOTHER VERSE spells it out (as at
+  kidnap, from Deut 24:7's "of his brothers, of the children of
+  Israel"); and the word-choice itself is the answer — חברא = the
+  faith-fellow, מרחמא = any friend: "the language of the cunning — a
+  word that neither contradicts nor confirms the kabbalah."
+- 21:18-19: אגרוף = כורמיזא — clod/stone (Ramban, Rashbam's brick, the
+  Greek keramis discussion) against "fist"; למשכב = לבוטלן (idleness);
+  משענתו = על בוריה (his health); ורפא ירפא = אגר אסיא ישלם "he shall
+  pay the PHYSICIAN'S FEE" — Onkelos siding with "a physician who
+  heals for nothing is worth nothing" over the license/repeat
+  derashot.
+- 21:20-22: נקם ינקם = אתדנא יתדן "he shall surely be JUDGED" (no מות
+  יומת written — though the Mechilta/Sanhedrin 52 name the sword);
+  ונתן בפלילים = "by the word of the JUDGES," and his resolution of
+  the Rashi/Ramban/Ibn Ezra triangle: אתגבאה יתגבי = COURT-COLLECTED
+  (as at Deut 22:19) — the court collects what the husband sets,
+  capped at value, extracting even against the striker's will "so that
+  he gain atonement."
+- 21:23 (MARQUEE — the SADDUCEE FILTER): נפשא חלף נפשא left literal —
+  his law of the Targum: Onkelos deviates into the received
+  halakhah exactly where the SADDUCEES disputed the Sages, and renders
+  plain where they conceded (against the
+  Rapoport/Chajes private-vs-court theory); pseudo-Jonathan's added
+  דמי ("the VALUE of a life") proves the other channel. Plus פצע cognate
+  to פצץ/בזע (split), ושחתה = ויחבלינה (irreversible wounding).
+
+**Od Yosef Chai (Ben Ish Chai), Mishpatim 11 (MARQUEE — the
+cave-parable).** Why does the verse legislate for the rare witnessed
+murder and double מות יומת? The hermit in the inner cave watches three
+men at the spring: one forgets a purse; the second (who came only to
+cool himself, and did not pray) takes it; the third, innocent and
+praying, is killed by the returning owner. The dream-answer: in the
+prior round the third had robbed AND murdered the second — the purse
+is the very same purse, and the first is the third's son, heir of the
+stolen coin; now the purse returns to its owner and the old murderer
+dies by the hand of the victim's own line. והאלהים אנה לידו as the
+engine that pays hidden debts through apparent injustice — the
+watcher's outrage is the verse's own pedagogy.
+
+Ledger: 51 rows this batch (1,285 block-2 total). Remaining after batch:
+354 (326 readable + 28 tanakh).
+
+
+## Bite 25 (batch 25) — 47 listings: OR HACHAIM whole + PAANEACH RAZA
+Mishpatim set + PARDES YOSEF composites (note: 6th bite this session,
+run past the requested five because the dump had already ledgered —
+read in full per the law)
+
+**Or HaChaim (17).**
+- 21:12 (MARQUEE — the two-courts architecture): the doubled מות יומת
+  = the TWO JURISDICTIONS. All who deserve death stand in Heaven's
+  docket; God delegated a SUBSET to earthly courts — "the son of death
+  shall be killed by you, for a son of death he is even if not killed
+  by you" (so Ketubot 30: the courts lapsed, the penalties did not);
+  the goring ox's וגם בעליו יומת remains UN-delegated (death by Heaven
+  only). Reused across his commentary: hekdesh bailees exempt even for
+  negligence (that docket reserved), Shabbat's doubled מות יומת (the
+  karet-clause names Heaven's half), and land-fraud — "I removed its
+  judgment to Myself, for no court can see will from fraud in a
+  land-price; the Knower of hearts judges it."
+- 21:12: מכה איש ומת — the mezid is liable though death comes DAYS
+  later from the blow's force (unless he rises); the SHOGEG exiles
+  only if the man dies under his hand at once (Gittin 70's
+  cut-two-signs case — convulsion or wind may have hastened);
+  the diyuk: mezid = "strikes and [later] dies," shogeg = אנה לידו
+  "to his HAND"; Rambam Rotzeach 5 for, Raavad against ("his words
+  cannot stand in any way in the world").
+- 21:13 (MARQUEE — exile INDEXING, dual-attesting Sforno B12): the
+  pundak-pairing pays a HIDDEN prior debt, so the new exile is for
+  what preceded — hence ONE exile even for ten killings (one cause);
+  hence the term is deliberately UNFIXED (until the high priest dies):
+  "the matter is handed to the Lord of all the earth, who judges in
+  righteousness how much he needs — one or two." And if Heaven's hint
+  (the first hidden killing) is refused — no voluntary exile — a
+  second arranged killing DOUBLES the term. The verse's two clauses
+  mapped to Rambam Rotzeach 6: לא צדה excludes the freak accident
+  (ones — exempt), והאלהים אנה לידו excludes the HATER (any hatred and
+  the event was "from him, not from God" — no refuge).
+- 21:14: למות "to die — not to be judged, not flogged, NOT EXILED":
+  Yoav fled BEFORE judgment; against Rambam's
+  altar-shelters-the-shogeg — the beraita's "not to exile" stands
+  against him, and Mishneh LaMelech's leveling of shogeg/mezid is
+  rejected: "we may only deny the altar's shelter where Scripture
+  excluded explicitly."
+- 21:18-19: ולא ימות needed — the payments exist only if he does NOT
+  die; his safek: assessed-for-death who survives = a miracle (like
+  the tereifah that lived) — do the lapsed payments revive? (Rambam
+  ch. 4: liable.) The Mechilta's lethal-blow exemption harmonized:
+  exemption only when he DIES of the lethal blow; dies of a NON-lethal
+  one (striker exempt from death) → pays the HEIRS all that was owed
+  the father. רק = the CAP-clause: the pre-agreed lump assessment
+  (Rambam Chovel 2) ends liability when the illness overruns; without
+  a set sum he pays until full recovery. ורפא ירפא (not "yiten") — the
+  striker cannot say "give me the money, I'll heal myself."
+- 21:20-21: Rambam's only-with-a-rod rule read as INTENT-EVIDENCE: the
+  rod shows discipline (God granted the day's grace); a knife in the
+  belly at the vital organs shows killing — liable even a year later.
+  The slave-SHOGEG: exile runs with NO day-or-two distinction (that
+  mitigation is mezid-law only).
+- 21:22-23: both fighters intend to kill EACH OTHER; ונגפו plural — if
+  both struck her they SPLIT the payment (Rambam Chovel 1); אשה הרה =
+  the woman KNOWN to be present — arrived unseen, they are exempt
+  entirely (the Yerushalmi sleeping-man ones-rule); ונתתה hand-to-hand
+  for the money-holders; for the life-holders it replaces the
+  fetus-payment except where the ason came in a non-liable
+  configuration.
+- 21:26-27: Kiddushin 24's machloket (intent to DESTROY vs intent at
+  the eye) and why יכה not ישחית; destruction surfacing AFTER TIME
+  still frees (unlike the shogeg's at-once death rule). Why tooth and
+  eye are TWO clauses: R. Sheshet's dimmed-then-gouged eye — the eye
+  has two freedom-triggers (loss of USE though intact; gouging even of
+  a blind eye); one clause would have taught eye like tooth — freedom
+  only by falling out.
+
+**Paaneach Raza (13, the Tosafist workshop).**
+- If striking-without-death were capital, what would the parent-verse
+  add? Stranger = lethal-grade blows only; parent = even non-lethal
+  (Mahar"r Yaakov). The pundak-problem worked like Maskil LeDavid
+  (B24) but resolved MECHANICALLY: the witnessed mezid deserves the
+  sword, and the roof-fall is stoning-like — so the faller falls
+  KNIFE IN HAND and kills by blade (sword-like death) — a machloket
+  of mechanisms with B24's atonement-arithmetic.
+- Yoav (MARQUEE): he knew our verse — he grasped the horns because he
+  had already accepted David's curse ("may they fall on Yoav's head"):
+  the curse was his commuted sentence — "this is my punishment, and I
+  will not leave until the king lifts his father's curse from me."
+- Strike = strangulation but curse = stoning, though striking seems
+  graver? The curse reaches AFTER DEATH and OUT OF HIS PRESENCE — the
+  wider crime carries the graver death. Kidnap interposed because the
+  kidnapped child in time will not RECOGNIZE his parents — and comes
+  to strike and curse them (the causal-biography, third attestation
+  after Hadar Zekenim B19 and Meshekh Chokhmah B23's placement-logic);
+  or by shared death-mode (strike+kidnap = chenek, curse = stoning),
+  with the לא-זו-אף-זו ladder: killer → wound-only parent-striker →
+  no-blow kidnapper → SPEECH-only curser.
+- The waiver-lock (the source Chida cited, B24): once warning is
+  accepted before witnesses, the father can no longer waive. The
+  cursing-WOMAN ribui needed because she's exempt from kibbud (a
+  husband's authority over her) — one might extend the exemption.
+  ורפא ירפא = license, THREE readings: even self-arisen illness ("God
+  smites and he heals?"); license from the outset (no sam-fear,
+  Mahar"r Chaim); license to take a FEE. Day-or-two doesn't teach the
+  class: כי כספו הוא excludes — an Israelite is not his money. The
+  fetus-payment vs maybe-a-nefel: ROV again (as the murderer's
+  tereifah-rov). And פצע תחת פצע = ones liable as ratzon — reconciled:
+  ones exempts from DEATH not money, and the jars-case's total ones
+  (he preceded the jars) is the true exemption.
+
+**Pardes Yosef (3 composite essays).**
+- Exod 2:14 (MARQUEE — killing by the NAME): "will you kill me as you
+  killed the Egyptian" — to kill a gentile HALF the Name suffices
+  (Yod-He), an Israelite needs all four letters; Moses' heavy mouth
+  could not utter the full Name — so the taunt is a PROOF for Rambam
+  Melakhim 10:7 (a Noahide who strikes an Israelite dies by Heaven,
+  not court); spiraling into the miracle-labor casebook (writing by
+  Name on Shabbat, Moses' thirteen scrolls on his death-Shabbat, the
+  phonograph-as-writing and telephone-voice-for-gittin queries) — all
+  anchored by crossref to OUR 21:18.
+- Exod 11:2: the ish/re'ehu GENDER megasugya (mishloach manot): woman
+  and arvut (the Rosh's rule, R. Akiva Eiger, the Dagul Mervavah
+  doubt), and whether the SLAVE is "his brother" — BK 88 on OUR כי
+  ינצו אנשים... איש ואחיו, with the Re'em at OUR 21:20 holding the
+  slave IS within רעהו; agent-delivery via chazakah
+  shali'ach-oseh-shlichuto (grounded in arvut — so a woman's agency
+  differs).
+- Exod 12:15 + 18:6: anchored to us by crossrefs (the wicked father's
+  honor/disgrace boundary at 21:15; the Gra's all-seven-days matzah
+  at the 21:20 note).
+
+Ledger: 47 rows this batch (1,332 block-2 total). Remaining after batch:
+307 (279 readable + 28 tanakh).
+
+
+## Bite 26 (batch 26) — 6 listings: PARDES YOSEF composites
+(20:8/20:12 gender+kibbud megasugyot; 21:12-14)
+
+**Pardes Yosef 20:8 + 20:12 (anchored by 21:15/22:1 crossrefs).** The
+kiddush gender-web (women in zachor-from-shamor; hekesh-l'chumra vs
+Rambam's lenient safek rule) carrying the machteret twist: the
+bat-kohen who killed her FATHER in the tunnel — only the father is
+forbidden to kill there ("the sun shone" — a father's mercy is
+certain), so if he's not her father she is exempt entirely and the
+two-deaths rov-problem dissolves. The kibbud-av web: Bahya's rationale
+(aged parents become a burden — the length-of-days reward is aimed at
+that temptation); the waiver-ladder (honor waivable; per the Rdbz the
+mitzvah remains; the Sheiltot — blow and curse unwaivable; the
+Paaneach Raza warning-lock recited); honoring a WICKED father (Rambam
+vs Tur, the mar'it-ayin theory — why Maharam of Rothenburg would not
+live in his father's city); Chizkuni's question (why a verse that
+kibbud yields to Shabbat — the son is coerced, a
+courtyard-planted-against-his-will!) answered by
+two-who-did-it: when BOTH parents command the desecration, or via
+Chelkat Yoav's rule that in Shabbat even a commander-plus-agent counts
+as two-who-did-one-act (both exempt) — so the verse is needed.
+
+**Pardes Yosef 21:12 (two essays).** Woman = אדם source-chain (Pirkei
+DeR. Eliezer's "the field is the woman"). The chenek-severity problem
+run at the Mechilta (Beit Shlomo): even for the
+strangulation-is-graver holder, מכה אביו can't convict — perhaps
+not-his-father AND perhaps-tereifah = TWO minorities, and with two
+minorities we do not follow the majority — forcing the
+warned-as-both construction. The Gr"l Charif question (B19's
+unrebuttable-testimony paradox) with the full answer-set: the
+grew-up-mid-trial case; R. David's tereifah-model (killed before the
+court needs no hazamah — a minor could kill in the court's presence);
+Pardes Yosef's own youth-answer — witnesses against a minor still
+carry seizable MONEY-liability (tefisah per the Hagahot Ashri) and
+lashes for "you shall not testify falsely," so the testimony is
+rebuttable after all; and the KIPAH answer via the Chiddushei HaRim —
+confinement needs only civil-grade evidence (no hazamah), so absent
+the verse the minor might have gone to the cell. The false-JUDGE
+question: is a court that kills through false judgment a murderer (the
+executioners are its agents)? — into the two-who-killed web: the
+Ramah (MARQUEE) reads OUR נפש תחת נפש as "A soul for A soul — not two
+souls for one": two who killed jointly are EXEMPT from death (yet
+liable as wounders → lashes, or heir-payments per the Hagahot Ashri);
+tied to Or HaChaim's both-struck-her plural (B25): if only one was
+warned, he alone dies.
+
+**Pardes Yosef 21:13.** The pundak/mashal-hakadmoni workshop: the
+knife-in-hand mechanism (Paaneach Raza B25) sourced in Tosafot Sotah
+8b + Maharsha Makkot 9-10. Exile is ATONEMENT, not mere shelter —
+proofs: the convict who died before fleeing has his BONES carried to
+the refuge city; the ger for whom the court APPOINTS an avenger;
+Sifrei — even with no avenger at all, he exiles (Chinukh 410); and
+atonement for the dead exists (Horayot 6's living-and-dead
+communal atonement; redeeming the dead by tzedakah). May the
+blood-avenger kill on confession or relatives' word? Maharsha and
+RADAK (II Sam 14:7): the avenger needs no witnesses if he knows the
+truth ("for his heart burns"); the rishonim (Ritva, Rambam Rotzeach
+6:5 with Raavad opposing): witnesses required — with pseudo-Jonathan's
+"on the word of witnesses who SAW in order to testify"
+(intent-to-testify requirement, as Tosafot Keritot 12) as the
+Raavad's proof-text; and the avenger may kill even the killer's
+AGENT — "his heart is hot" extends to the hand that did it.
+
+**Pardes Yosef 21:14.** Execution overrides the service even when no
+other priest exists (Tosafot Yevamot 7), sweetened by the Midrash
+"whoever sheds the blood of the wicked is as one who offered a
+korban"; the mid-service split (Rashi/Yoma's let-him-finish vs
+TJ/Yerushalmi/Mechilta/Rambam's take-him-from-the-altar-top); the
+Rashba's fourth-Yoav-error question again; the rov-from-the-olah
+wordplay recited (לקח "learn" from My altar). Amrot Hashem (MARQUEE):
+מעם מזבחי = the JURISDICTIONAL CLOCK — the death-courts run only
+while the Sanhedrin sits beside the altar (Lishkat HaGazit; "forty
+years before the destruction they ceased capital cases, for they were
+exiled from the chamber"; Berachot: "from the day of our exile we
+have no authority to kill"; Ramban Masei citing a Mechilta not in our
+texts). And Kisei HaTzaddik (MARQUEE): the killer's ASTROLOGY defense
+— "I was born under Mars, a blood-shedder" (Shabbat 156) — refuted
+inside the verse: Mars can be channeled to butcher or mohel, so "from
+My altar" — from My slaughterers (מזובחי) — "you shall take him to
+die": the altar itself convicts the star.
+
+Ledger: 6 rows this batch (1,338 block-2 total). Remaining after batch:
+301 (273 readable + 28 tanakh).
+
+
+## Bite 27 (batch 27) — 20 listings: PARDES YOSEF 21:14-22 (karet file,
+Radbaz interposition, resurrection file, Kotzker mechanism)
+
+**21:14-15.** The mid-service split harmonized with Rambam 5:14: a
+death-verdict takes him even mid-service; an exile-verdict likewise
+(no waiting for the service's end). The KARET question: Sefer
+HaMitzvot LT 352 lists ten capital crimes WITHOUT karet (kidnapper,
+murderer, parent-striker/curser among them) vs Chinukh 48 giving the
+parent-striker karet, and the Yerushalmi giving the CURSER karet
+(text-emendation battles follow). Pre-AUTHORIZATION: parents who say
+"strike me / curse me" remove the lav entirely (Minchat Chinukh; proof
+from "strike me" to the prophet's fellow, I Kings 20:35). The
+tereifah-father still protected for wounding (Minchat Chinukh vs
+Tosafot Niddah 2b). The shogeg parent-killer: Makkot 8b has a son
+EXILE for his father — against the rule that strangulation-grade
+shegagot get no exile-atonement (tzarich iyun gadol). Two sons
+striking jointly: liable even both-able (Shaarei Tzion: each
+half-drop of blood independently carries death). The rov-derivation
+polished: "his MOTHER" anchors it (she is certain; the hekesh lifts
+the father to certain-grade); Pilpula Charifta — if not his father,
+the mother was adulterous = not "of your people," no liability either
+way; Amrei David — a father's honor (likened to God's) might defeat
+capital-leniency-in-doubt, so only the mother proves rov.
+
+**21:16 (Radbaz 2:295 — the interposition responsum).** Kidnap sits
+between striker and curser to be DARSHENED both ways: from
+strike-after-death — the kidnapper whose victim died before trial =
+"not found in his hand," exempt; tried before the death — liable. And
+the reason kidnap is capital AT ALL: the victim is presumptively a
+MINOR sold as a Canaanite slave, who grows up not knowing his parents
+— and comes to strike and curse them; "the CAUSER dies" (the
+Rasag/Ibn Ezra/Ramban chain, now sourced in Bamidbar Rabbah Naso
+9:7). The stripped-mitzvot objection answered: not capital-grade, and
+the slave may still opt in. Ramban: liability requires the buyer's
+literal DOMAIN (kinyan by lifting insufficient) — feeding the Torat
+Gittin/Netivot exchange on יד in divorce law.
+
+**21:17.** Why curse-after-death is liable but striking not: Sefer
+Chasidim — the curse wounds the father's SOUL, which lives; Rashi — no
+wound in the dead; "the mouth is graver than the deed" (Arachin 15).
+The authorization-vs-waiver boundary (Kesef Mishneh: permission
+BEFORE = no sin; after = unwaivable); the ben-sorer waiver windows
+(Rambam: until gmar-din; Rashi: until arraignment) rubbed against the
+warning-lock. Mere verbal DISGRACE = makkot mardut, not stoning
+(Rambam Mamrim 5:9).
+
+**21:18-19.** R. Yehonatan: better they had struck each other than
+feud by slander — a blow heals (ורפא ירפא), gossip never. The
+wicked-victim exemptions: striking a rasha exempt ("not doing the
+deeds of your people"); repented = liable; being led to execution =
+exempt though repentant. The RESURRECTION file (MARQUEE): making a
+man tereifah is itself death-grade (witnesses huzam against a
+tereifah-maker aren't flogged — "they sought to kill a dead man");
+THE question — the victim revived by miracle: is the murderer
+cleared? (Rabbah slaughtered R. Zeira and revived him — Abaye's
+tally omits it); is the revived man's WIDOW released (Birkei Yosef);
+Rasag: at the resurrection the twice-married wife belongs to the LAST
+husband (death = divorce) vs the Zohar's return-to-the-first; the man
+who lived 25 years after "death" still counts alive for
+halanat-hametim (Chatam Sofer YD 338); the Sinai mass-death ("return
+to your tents = to your wives" — did the died-and-revived need new
+kiddushin?); the golem-minyan and Eliyahu's body/soul split (he
+re-robes in his body on visitation days — only THEN may halakhah be
+fixed by him). Chassidic pair on ונקה: Cherem HaTzvi — the
+bittul-Torah debt is unpayable, UNLESS the healed man strolls with
+the idlers, proving his spirit was never the striker's victim — then
+"the striker is cleared"; the Ruzhiner — אם יקום (grows rich) והתהלך
+בחוץ (new ways) על משענתו ("my strength and my might") — the cure:
+שבתו יתן, give the money away. The physician-license casebook:
+healing = returning his BODY (Sanhedrin 73's "his body's loss");
+Chizkiyahu's hidden Book of Cures with Rambam's mockery of the
+trust-theory ("is eating bread a denial of trust?"); the cherem
+against using Talmudic remedies (unidentifiable now; mockers will
+scoff); Ibn Ezra's boundary — the license covers wounds WITHOUT, not
+illness within; Ramban — in prophetic times one sought the prophet
+(Asa's sin was the physicians).
+
+**21:20-21.** The Gra (MARQUEE): wherever עבד ואמה are JUXTAPOSED the
+text means Canaanites — a Hebrew pair cannot exist (the amah must be
+a minor, leaving at puberty; a male Hebrew slave cannot be a minor —
+no father sells a son, and self-sale needs adulthood). The rod-k"v
+mechanics (Kenesset HaGedolah): ein-onshin blocks even a
+leniency-shaped inference when it lands as stringency — the test
+falls on the blood-AVENGER's fate (rescue-of-the-slave rodef-law,
+Baal HaTurim's priority noted). Rambam 2:14 (rod only) proven by
+Tzafnat Paneach from the Mechilta's OX: an ox that killed a slave
+dies even after the day's delay — "as the owner's death, so the
+ox's" forces the owner's limitation to rod-blows. Pseudo-Jonathan's
+תרי יומין קטיעין ("two truncated days") per the Mishnah Acharonah:
+need NOT total 24 hours (struck before Friday sunset, lives past
+Shabbat dawn = two truncated days) — against the standard reading.
+The KOTZKER (MARQUEE): why does the day matter at all? Killing your
+slave at once = HEFKER (abandonment frees him — he dies a FREE man →
+murder); surviving the day proves no abandonment → still "his money"
+→ exempt. R. Bunim of Pshischa: the Kippur/Rosh-Hashanah penitent
+whose standing doesn't stand — "for it is his money" (he prays for
+parnassah, not the Shekhinah) — with "why has the son of Jesse not
+come, yesterday or today" read on the two Rosh Hashanah days: the
+prayers are about bread.
+
+**21:22.** Zera Baruch: TWO who struck her jointly split ONE payment
+(the plural ונגפו against the singular ונתן) — unlike the
+partners'-ox kofer (atonement needs a whole unit each; damages
+don't). The fetus-rov priority claim: the Noda BiYehudah's "chiddush"
+(viability-rov doesn't run before birth) was already in the Mizrachi
+— with counter-proofs (Niddah 29a's river-miscarriage korban; Yevamot
+36). דמי ולדות = KNAS (Ramban + pseudo-Jonathan) — solving Tosafot
+Sanhedrin 84b via R. Meir's fine-though-death-liable novelty. Closing
+remez: when the scholars quarrel (אנשים = talmidei chachamim), watch
+the pregnant woman's pangs — the Messiah's birth-pangs.
+
+Ledger: 20 rows this batch (1,358 block-2 total). Remaining after batch:
+281 (253 readable + 28 tanakh).
+
+
+## Bite 28 (batch 28) — 11 listings: PARDES YOSEF closes (21:25-26) +
+Penei David + PERI MEGADIM rows + Maharzu + PESIKTA pair
+
+**Pardes Yosef 21:26 (the freedom-as-zechut file).** The Rivash's
+safek: the SLAVE started the quarrel and lost the eye — free anyway?
+Job 31:13 read on it ("if I despised the cause of my slave... in
+their contention WITH ME — what shall I do when God rises?"): deny
+them the freedom-verdict and we, who started against God, lose ours;
+Ps 123:2's slave-eyes likewise (sufferings cleanse as tooth-and-eye
+free). The KOTZKER's question: Gittin 11b calls manumission a DEBIT
+(the kohen's slave loses his terumah) — then the eye-strike ADDS
+injury? Answers: escape from an eye-striking master is a benefit; and
+the Torah judges by the TRUE ledger — freedom obligates all the
+mitzvot, an objective zechut; he who counts it a debit is "a child
+fleeing school" (with the Rashba: even money-GIFTS are no pure
+benefit — "the hater of gifts shall live"). R. Bahya (MARQUEE):
+slavery ENTERED through Ham's eye and mouth ("saw his father's
+nakedness and told") and was cursed with bondage — when the sinning
+organs are struck, the body exits bondage: eye-and-tooth manumission
+as the measure-for-measure UNDOING of the first slavery-curse
+(Midrash Rabbah/Tanchuma Noach). Plus the fine-mechanics: R. Gamliel
+blinding Tavi's eye — his glad ADMISSION blocked the fine
+(modeh-biknas); the Shabbat-strike kam-leih question against the
+freedom-exit; tefisah (the slave holds himself!).
+
+**Pardes Yosef Lev 26:11 + Penei David.** The physician-file
+completed: the license = the CHARITY model (feeding the hungry though
+poverty is decreed; "we don't means-test for bread"); Chizkiyahu's
+genizah fit only his Torah-saturated generation — answering the
+Maharsha's "why record cures at all." Penei David (Chida): the verse
+opens and closes with ALEF — Baal HaTurim: "sufferings are FAITHFUL
+in their mission" (they leave on schedule); Mahar"i Fiammetta's
+"worthless physicians are you all" — shrine-healings and
+doctor-healings alike are the appointed hour arriving (the idol did
+nothing; neither, ultimately, did the doctor) — the verse re-read as
+the man who credits the idol: he "walks outside" holiness leaning on
+it, and the blow "rests" only because its term ended.
+
+**Peri Megadim rows.** The ger's DOUBLE lav (oppression + wronging)
+against the nitak-le'aseh flogging rule (one aseh cannot uproot two
+lavin). The slave-in-re'ehu ruling of the Re'em at OUR 21:20 cited
+into hand-washing law (a Canaanite slave counts as "your fellow,"
+even "your brother" — against the not-called-adam line). And the
+Siftei Da'at's four-way parsing of OUR 21:22-23 (rabbis: first ason
+literal, second din-ason; R. Shimon/Rebbi: both literal; Tanna d'vei
+Chizkiyah: first literal, second din) proving Rambam ruled like
+TD"Ch — ason WITHOUT warning still cancels the payments (Naarah
+1:13) — against the Maggid Mishneh.
+
+**Pesikta pair (MARQUEE).** DeRav Kahana 11:5: Hannah's
+"speak no more proudly" — the Egyptians repaid "in the pot they
+cooked, in the SCHEME they schemed" — proof-text OUR וכי יזיד ("when
+a man schemes against his fellow"), yazid = plotting, cognate to
+Jacob's pottage (ויזד) — our verse as the measure-for-measure
+engine's lexeme. Rabbati 8:1: אחפש את ירושלים בנרות — R. Acha: read
+the samekh as SHIN: "I will MANUMIT Jerusalem" — for God struck both
+His slave's eyes ("He closed their eyes," Isa 29:10), "is it not the
+law that they go free?" (OUR 21:26 binding God Himself); R.
+Berechiah adds the six-years verse ("in the seventh he goes out
+free"). Rabbati 21:1: the great Anokhi homily carrying the
+chizzuk-grid — every gentle Sinai word backed by a hard enforcement
+verse, with OUR ומקלל אביו ואמו מות יומת behind "honor your father"
+and OUR וגונב איש מות יומת behind "you shall not steal" (kidnap as
+the Decalogue's theft, the B21 Malbim/Mechilta architecture in the
+Pesikta's own voice); the violator-list (Absalom broke "honor,"
+Yoav "murder," Zimri "adultery," Achan "theft"...); and R. Yochanan
+b. Zakkai's ear: the pierced ear HEARD "I am the LORD" at Sinai and
+went and acquired another master.
+
+Ledger: 11 rows this batch (1,369 block-2 total). Remaining after batch:
+270 (242 readable + 28 tanakh).
+
+
+## Bite 29 (batch 29) — 6 listings: Pesikta Rabbati 23 + RALBAG (Beur
+HaMilot + the 50-shoresh codification)
+
+**Pesikta Rabbati 23-24 (Shabbat + kibbud homily).** Anchored at OUR
+21:17: R. Shimon b. Yochai — God EQUATED the parents' honor to His
+honor, their fear to His fear, their CURSE to His curse (ומקלל אביו
+ואמו against "a man who curses his God") — "but for STRIKING no
+heavenly parallel can be said; and rightly, for the three of them are
+partners in him." Around it: the kibbud casebook (Dama ben Netina
+refusing to wake his father over the jasper of Benjamin — repaid by
+the red heifer born that night; R. Tarfon's hands under his mother's
+feet — "not half the honor"; "one feeds his father fatted birds and
+inherits Gehinnom; one grinds at the mill and inherits Eden"); Esau's
+royal-garment service delaying Jacob's reward; the court COMPELS a
+son to feed his father (R. Yonatan's reversal fixed as law).
+
+**Ralbag, Beur HaMilot (4 rows).** צדה = deliberate ambush-intent
+("you hunt my soul to take it"); והאלהים אנה לידו = He PREPARED and
+arranged — chance attributed to God per the Guide's usage, or
+providential causation per his own Milchamot IV and Job commentary;
+נקם ינקם = the COURT takes his vengeance, by sword; בפלילים = judges.
+
+**Ralbag on Torah 21:12ff — the 50-SHORESH CODIFICATION (MARQUEE).**
+The entire block restated as a deductive system, each rule pinned to
+verse-logic plus a rationale from the Torah's civic purpose (תקון
+הקבוץ המדיני — "the Torah commanded the removal of harms so the civic
+order be whole"):
+- Exposition highlights: איש = the common case only (woman, tumtum,
+  androgynos strikers equally liable — proven from the Torah's
+  punishing the woman of the grasping hand); the altar shelters only
+  the priest with service in hand (מעם not מעל); בערמה excludes the
+  deaf-mute/shoteh/minor AND the physician/disciplinarian
+  (non-schemers); the parent-blow needs a wound, derived from the
+  three-grade context of "blow" (killing-blow / bare blow /
+  wound-blow); the rod = discipline-evidence (with Rambam's Moreh:
+  sword-blows are murder-evidence, no day-window).
+- The FETUS is a LIMB of the mother — "nourished from the blood formed
+  in its mother's liver like her other limbs" (Aristotelian
+  physiology grounding the money-penalty).
+- Eye-for-eye = MONEY by a six-argument battery: the shevet/ripui
+  clauses already run in money-mode; fetus-damage (the graver) gets
+  money, and the graver harm cannot draw the lighter penalty-KIND;
+  body-penalty and money-penalty are INCOMMENSURABLE (no common
+  measure — they cannot share one act); the slave-parallel (master's
+  penalty and stranger's should differ in degree, not kind); נפש תחת
+  נפש at beast-killing is payment; and לא תקחו כפר לנפש רצח implies
+  ransom AVAILS below death. Boshet = mamon not knas (self-admission
+  pays; the fixed Babylonian tariffs are the true knas).
+- Assessment methods (shoresh 18): nezek by slave-market
+  depreciation; tzaar by what such a man would pay to lose the limb
+  painlessly; shevet by his own trade; ripui by his station; boshet
+  by the rank of shamer and shamed. Fright-damage (scream that
+  deafens) exempt — no perceptible contact.
+- דמי ולדות to the husband; if he DIED — to HER, not his heirs (the
+  Torah granted only him); nezek, tzaar and boshet are HERS — an open
+  ruling AGAINST Rambam ("the Moreh followed a lone opinion... a
+  settled talmud is not rejected for strained answers" — Hai Gaon).
+- The half-freed slave's limbo: neither he nor the master can collect
+  from a third-party wounder; his own seizure stands (safek).
+- The ox-code (sherashim 31-50): stoning = hazard-removal +
+  owner-warning; the tereifah-ox and tereifah-victim exempt (the
+  un-rebuttable-testimony rule surfacing again); trial in the ox's AND
+  owner's presence; KOFER = KAPPARAH for a death-by-Heaven liability —
+  therefore every doubt resolves STRINGENT (unlike money), joint
+  owners EACH pay a full kofer, the no-atonement-capacity owner
+  (minor, shoteh, or the dead) pays none, and the known-nagach-in-the-
+  herd case obligates guarding the WHOLE herd; the INDIRECT killer
+  (set a dog or snake, bound him before a lion, starved him) dies by
+  Heaven with NO kofer — "his sin is too great to be borne by
+  ransom"; the sold mu'ad reverts to tam; mu'ad-by-TIME (the
+  every-tenth-day ox, the Shabbat-only ox — "a humor rules it that
+  stirs only at that season"); mu'ad per-species and even per-HORN.
+- The closing rationale-section: curse graver than blow (it reaches
+  past death and out of presence — and people curse more readily);
+  kidnap capital because it tears the victim from the Torah's frame
+  and risks incest-by-ignorance; money-penalties because talion gives
+  the victim NOTHING, is inexact, and might kill him; and the
+  SELF-PAYMENT loop (before Malbim B21): the master owes his maimed
+  slave the limb's value, but cannot pay money to his own slave — so
+  the Torah made that money the slave's RANSOM from his master's
+  hand: freedom.
+
+Ledger: 6 rows this batch (1,375 block-2 total). Remaining after batch:
+264 (236 readable + 28 tanakh).
+
+
+## Bite 30 (batch 30) — 43 listings: RASHBAM complete + RAV HIRSCH
+(Deuteronomy crossrefs + Exodus 21:12-19)
+
+**Rashbam (17 — the peshat spine).**
+- 21:13: ושמתי לך מקום "when there will be cities"; and the
+  STRUCTURAL claim (MARQUEE): the block exists because Sinai just
+  said "you shall not murder," "honor your father," "you shall not
+  steal" — Mishpatim now SPECIFIES their penalties; לא תגנב read as
+  kidnap by davar-halamed-me'inyano (its neighbors are capital) —
+  the Decalogue-penalty-appendix architecture in peshat form.
+- 21:18: אגרוף per the peshat = a kind of STONE or brick (Onkelos's
+  kurmiza; Torat Kohanim's turmusin at house-plagues; "to smite with
+  the fist of wickedness" likewise) — the verse speaks of thrown
+  stones. 21:19-21: the freeman's striker dies even if death comes
+  much later; the slave only under his hand — rod = the admonition
+  instrument, sword = "not the way of rebuke but the way of murder"
+  and liable even past the day, BY THE PESHAT; the Hebrew slave is
+  "as a hired worker" — an Israelite in every law.
+- 21:24-25: money ("the value of an eye like it"); verse 24 = the
+  limb-loss list, verse 25 = the no-limb-lost payments (pain, shame,
+  healing); פצע = sword-wound, חבורה = a fingernail scratch, a
+  trifle. 23:7 crossref: the judge who senses a RIGGED case must
+  withdraw — and if the court wrongly acquits, "I will not acquit
+  him": God executes via אנה לידו.
+
+**Rav Hirsch — Deuteronomy crossrefs (9).**
+- 19:11: the transferred-intent machloket hangs on how OUR 21:23 is
+  parsed; the missile-into-the-crowd case — ONE tereifah present and
+  no conviction is possible (the act did not necessarily entail
+  capital murder). 19:21: נפש בְּנפש with BET — attempted harm never
+  inflicted carries pure RETRIBUTION, not indemnification (the
+  tachat/bet preposition-switch, B18's HaKtav VeHaKabbalah point in
+  Hirsch's voice).
+- 22:7: the lav-nitak-le'aseh mechanics (bitel-vs-kiyem wired to
+  warning-of-doubt), OUR 21:14 cited for hatra'ah. 22:8: "the
+  FALLING one" — destined to fall since creation, yet "merit is
+  brought through the meritorious, guilt through the guilty" = OUR
+  והאלהים אנה לידו, with Solomon's "the Great Master hires fools and
+  hires transgressors in His service." 24:1: שלח = RELEASE, never
+  expulsion — proof-chain includes OUR לחפשי ישלחנו; Onkelos's פטר.
+  24:7: kidnap = "murder of SPIRITUAL life" (the physical murderer
+  by sword, this one by chenek). 25:11: boshet alone of the five
+  requires INTENT; "cut off her hand" figurative for the fine; the
+  provocation-context read as the Torah's call to keep decency in
+  justified passion.
+- Exod 21:12-13: the complementary-verse grid (mechanized like
+  Malbim); blow and death SEPARATED — death need not be immediate;
+  the two exile-exclusions calibrated as a guilt-WINDOW: קרוב למזיד
+  — guilt too great for exile to atone; קרוב לאונס — too small to
+  need it; and the diyuk אנה לְיָדוֹ, not אנה אותו: "his HAND was a
+  prime factor, not the sole factor" — the possibility lay in his
+  act, God actualized it.
+- 21:14 (MARQUEE — the no-clemency passage): the altar grants no
+  shelter because Jewry has no paired powers checking each other —
+  no Church-and-State, no Justice-and-Mercy; the chamber of the high
+  court stood BESIDE the sword-hating altar because both teach one
+  principle; the pardon-right is absent since judgment is God's, and
+  the execution is "itself the most considerate atonement —
+  atonement for the community, the land, the criminal — in quite the
+  same way as that brought about by the altar."
+- 21:15-17: wounding parents RAISED to the killing-category; kidnap
+  = "freedom is a treasure whose robbing is SOCIAL murder"; the
+  curse = even the expressed WISH for their ruin, even after death;
+  the four execution-modes' meaning deferred to Lev 20.
+- 21:18-19: ריב = word-fight (vs the deadly נצו) — so the
+  compensation-duty is INDEPENDENT of provocation or intent: Torah
+  money-payments are NOT fines but RESTORATION, owed "even if no
+  court condemns him, or if through lack of witnesses no court could"
+  (MARQUEE); the intent-gradient (nezek always — awake or asleep;
+  pain/healing/lost-work need danger-consciousness; shame needs
+  intent); and after full payment the guilt REMAINS before God until
+  the victim's forgiveness (BK 92, Rambam Chovel 5:9). Stone and
+  fist named so the court must ASSESS instrument against result (יש
+  אומד לנזקין); משענתו = his OWN normal support = full recovery (the
+  crutch-reading impossible — a lamed man could never be "cleared"
+  by expenses); ונקה = from CUSTODY, with the Sanhedrin 78b
+  assessment-grid (assessed-to-die who lives: exempt but pays five;
+  assessed-to-live who dies: exempt; lightened-then-worsened: dies);
+  רק excludes the malingerer and the patient who disobeys the
+  doctor; ורפא ירפא — the Torah "takes it for granted that medical
+  aid is used, and actually DEMANDS it," against the pious error
+  that medicine betrays trust.
+
+Ledger: 43 rows this batch (1,418 block-2 total). Remaining after batch:
+221 (193 readable + 28 tanakh).
+
+
+## Bite 31 (batch 31) — 24 listings: RAV HIRSCH closes (21:20-27 +
+Gen 9:6 + Lev 24 complements)
+
+**21:20-21.** The rod = the legally permitted correction-instrument,
+and only when USED for correction (Rambam 2:14). נקם ינקם (MARQUEE):
+murder scorns the tzelem-Elohim of the whole human race; the ordinary
+victim has a blood-champion — "a slave has no relative to take up his
+cause; he finds this goel in the COMMUNITY OF ISRAEL," which rises as
+avenger of a trampled godly dignity. The 24-hour window: Temple-days
+begin at morning, civil days at evening — every 24-hour span is one
+day by one reckoning and two by the other ("a day that is as two
+days," Mechilta). כי כספו הוא ≠ lesser humanity (all others are fully
+liable for him): the mechanism is causation-doubt — delayed death +
+the chastisement-right, as the Gittin convulsion-rule limits exile.
+
+**21:22-23.** The fight is a fight-to-the-death (Sanhedrin 74); the
+kam-leih principle in full: capital-liable even shogeg pay nothing,
+via Tanna d'vei Chizkiyah's beast/man contrast — and the DIGNITY
+rationale (MARQUEE): "imagine demanding from a murderer, in addition
+to his life, the paltry price for repairing the hole in the coat that
+his dagger made!" — extended even to simultaneous OTHER damage (the
+missile's collateral property), and to the RODEF who breaks vessels
+on his murder-path (his life was already forfeit — and precisely
+therefore the fetus-payment proves the could-have-wounded rule: he
+who kills a pursuer he could have stopped by wounding is himself
+guilty). ונתתה נפש תחת נפש (MARQUEE): the community GIVES the life —
+not ולקחת "takes": no self-accusation exists in Jewish law
+(confession has no bearing on the verdict; only before execution is
+he urged to confess for his atonement); execution is restitution to
+the shattered ideals — all reading of it as revenge, deterrent, or
+repayment is OPPOSED by the verb; "each life belongs to God and the
+community, and with every death, even a murderer's, the community
+suffers a loss."
+
+**21:24-25 (the tachat word-study).** The four organs as
+activity-representatives (eye = perception; tooth = maintenance and
+speech; hand = production; foot = movement); burn/wound/swelling =
+the wound's THREE PHASES (pain, cut, inflammation — from Prov 20:30's
+"the swellings of a wound scour the evil"). תחת = "in the place of" =
+REPLACEMENT (the closed flesh instead of the rib; gold instead of
+brass; the Shimei-case resolved) — so "an eye for an eye" can only
+mean refilling the emptied place: "by putting out the doer's eye the
+victim in no wise gets his eye back... the law can mean nothing but
+full compensation" — with talion morally impossible for equity (the
+one-eyed maimer; death from the punishment-wound), R. Ashi's
+tachat-tachat gezerah shavah as the simple closer, and the ב of the
+false-witness verse likewise compensatory (worked-FOR-Rachel).
+פצע תחת פצע extends the duty both ways: pain paid ALONGSIDE
+permanent damage, and nezek paid shogeg-as-mezid. Boshet possibly
+housed in חבורה (disfigurement).
+
+**21:26-27.** Unmarked עבד ואמה always = Canaanite; tooth/eye =
+examples widened by the doubled ישלחנו (all visible non-returning
+blemishes; the tooth named because invisible at birth). NO intent
+needed — the slave goes free even for well-intentioned carelessness:
+"the master was a DENTIST, meant to scale the tooth, and knocked it
+out" (BK 26b, Kiddushin 24b). And since the freedom-award far exceeds
+the damage and is FLAT (eye = tooth, דבר קצוב), it is KNAS — a
+preventive punishment demanding "equanimity, mildness, and a greater
+degree of care in the handling of slaves than one must exercise with
+free men."
+
+**Gen 9:6 + Lev 24 (the theory and the complements).** Gen 9:6
+(MARQUEE): Jewish punishment rests on NEITHER deterrence NOR talion —
+no circumstantial evidence, no confession, warning required (all
+easily avoided by the premeditating criminal) refute deterrence; the
+four "all Israel shall hear and fear" cases (plotting witnesses,
+ben-sorer, zaken mamre, mesit) are punished for their ENDS, and there
+publicity, not the penalty, carries the deterrent; eye-for-eye
+teaches the rights-principle — a man holds his rights only while
+respecting his fellow's, and payment restores his own; ALL punishment
+is KAPPARAH, self-rehabilitation: the executed criminal "goes to meet
+a new existence with regained purity." Lev 24:17-20 as complements of
+OUR verses: שבר תחת שבר limited to human injurers (an ox pays nezek
+only); the under-perutah blow = LASHES (there being nothing to pay);
+the one-crime-one-penalty rule (כדי רשעתו — never flog AND pay;
+wounding and plotted-witness cases are the exceptions: pay, don't
+flog); the shever/shen/ayin gradient = temporary loss /
+permanent-but-replaceable / irreparable; and כן ינתן בו = "given
+THROUGH him" — through the judges' verdict, as "God gave victory
+through him."
+
+Ledger: 24 rows this batch (1,442 block-2 total). Remaining after batch:
+197 (169 readable + 28 tanakh).
+
+
+## Bite 32 (batch 32) — 72 listings: HIRSCH crossrefs close + RIVA +
+ROSH + RASAG rows + SHULCHAN ARUKH + SIFTEI CHAKHAMIM whole + SIFTEI
+KOHEN (kabbalistic)
+
+**Hirsch closes (6).** Lev 24:21: נפש אדם is a PERSON, נפש בהמה a
+THING — the body and limbs are the person's possessions (his tools),
+so wounding sins against person AND God at once; where payment can
+rectify, the person-side leads and lashes suspend. Num 15:34: OUR
+21:19's custody-on-remand generalized (the mekoshesh knew death was
+due, not WHICH death — R. Yehudah's warning-requirement makes it a
+horaat-shaah). Num 35: the refuge-arrangement referenced back to OUR
+21:13 as a founding social law; "ONE drop of innocent blood shed and
+no notice taken drops a stitch in the bond which connects the land
+with the nation and both with God" (MARQUEE); the murder-law =
+executing Gen 9:6, with the overwhelming acquittal-tendency and — once
+convicted — NO reprieve-authority anywhere.
+
+**Riva (9 — the Tosafist workshop on Rashi).** The
+striking-without-death hava-amina rescued by lethal-INSTRUMENT blows
+(as Levush B20); R"I: stranger needs a wound, father not even that;
+Rer"A: the walks-outside clearance covers only non-lethal instruments.
+The woman-killed-woman gap closed from the doubled "he is a MURDERER."
+The minor-exclusion question (where do we find minors punished?) —
+answered by judged-for-his-end. Warning derived from וכי יזיד itself
+("still deliberate AFTER warning," Sanhedrin's mnin-lehatra'ah) — the
+unwarned killer can plead shogeg. The kidnap-interposition per the
+Shantz Tosafot: a descending severity-LADDER (death-blow →
+wound-without-death → no blow at all → no touch, mere speech), or the
+causal-biography (struck his fellow → struck his father → fled his
+court-death → kidnapped for want of a trade → the stolen child grows
+to curse the parents he cannot know); or the shared-chenek grouping.
+The two-leniencies rule at נקם ינקם: even for
+strangulation-is-graver, the verse is needed lest the day-or-two
+leniency breed a second one. The fetus-rov question answered: NO
+death-liability for any creature until it exits to the world's air
+(Arachin), while the Noahide differs — his warning IS his death.
+
+**Rosh (7).** The strike-azharah found in Emor's beast/man
+juxtaposition (wound-grade liability with no other candidate but the
+father); the kidnap-interposition = the grows-up-not-knowing
+biography; the curse graver than the blow — it reaches the Father in
+Heaven too, and reaches past death; ורפא ירפא = the physician's FEE
+(Onkelos); נקם = sword (the freeman-k"v); eye-for-eye = money ("he
+might die of the gouging — life for an eye"); and the HAM-closure
+(MARQUEE): tooth-and-eye are the manumission organs because Canaan's
+slavery-curse CAME through them — the tooth that mocked, the eye that
+saw the nakedness — with Malachi's "a son honors his father, a
+servant his master": the son who will not honor becomes the servant.
+
+**Rasag + Saadia on Ezra.** The versified command-rows (wounding; the
+pregnant woman; the eye-destroyer; the rod-striker; the parent-curser
+and striker — "I have grieved them"); Ezra 7:26's Persian
+court-powers ("to fine of goods") glossed from OUR ענוש יענש.
+
+**Shir HaShirim Rabbah.** "On my bed at nights" = on my SICKBED (from
+OUR ונפל למשכב): exile-nights joined to each other because Israel
+"slept from the Torah and the mitzvot."
+
+**Shulchan Arukh (6 codifications).** CM 15:2 — case-ordering: the
+orphan's case precedes the widow's, hers the scholar's, the WOMAN's
+precedes the man's. CM 420:28 — assessment for DAMAGES as for death
+(from באבן או באגרוף): the pebble and splinter exempt (shame only —
+even spitting pays shame); the instrument is brought before the court
+and assessed; if lost, the victim SWEARS and collects. CM 423:4 — the
+fetus-payment grid codified (aimed-at-her + her death = exempt even
+shogeg; aimed-at-another = pays; Raavad: exempt either way). YD
+267:37 — the half-slave and partner-slave excluded from
+limb-manumission ("his slave, uniquely his"). YD 336:1 — the
+physician's code: license, MITZVAH, within pikuach-nefesh;
+withholding oneself = shedding blood; requires expertise and no
+greater practitioner present; erred with court-license = exempt below,
+liable in Heaven's court; killed and knows it — EXILE.
+
+**Siftei Chakhamim (26 — the consolidator).** The Re'em's
+tzarich-iyun answered twice more: the parent-analogy hava-amina
+(father even without wound → stranger with wound → מכה איש ומת cuts
+it); or the COFER-MODEL (Sanhedrin 15): death imposed where he
+refuses to pay. The minor-ribui answer (Nachalat Yaakov): מכה
+unqualified might have INCLUDED the minor killer, so the exclusion
+verse earns its place. Fetus-liability only after birth (Tosafot
+Sanhedrin 84). The knife-in-hand mechanism again; the chaver
+needs-no-warning answer for the shogeg/mezid boundary; the
+physician-refusal pair ("a lion lies in wait for me"; "a physician
+for nothing is worth nothing" — מגן = Onkelos's "free"). The
+interposition-logic run mechanically: kidnap breaks the strike/curse
+hekesh so the striker takes CHENEK from his kidnap-neighbor, not
+stoning from the curser.
+
+**Siftei Kohen (4 — the kabbalistic layer, MARQUEE).** The
+parent-striker's etiology: the union drew an OUTSIDER-soul ("he who
+comes to defile, they open for him") — and ונמצא בידו = found in his
+hand WITHOUT the third Partner's consent: only two of the three
+partners in the child (God absent from that union) — hence the
+kidnap-verse sits between striker and curser as their cause. Yet the
+curser stays liable: repair was in his hands — change of place (the
+Omnipresent), change of deed (the mother who builds the body), change
+of name (the father who names), and the Torah's fire that re-smelts
+what passes through it. The quarrel-allegory: yetzer-tov vs yetzer-ra
+("men" at fourteen; the stone = the heart of stone; rising and
+walking outside = repentance, gematria 528; רעהו = רפא — the 248
+mitzvot as the 248 limbs' medicine). Bahya's DAGESH-LAW quoted with
+its reason (MARQUEE): every flesh-and-blood healing in Scripture is
+written HARD (dagesh) because it passes through pain — the bitter
+drug, the lancet, the amputation; God's healing is written soft, "the
+blessing of the LORD makes rich and adds no sorrow." And the
+YETZER-SLAVE (MARQUEE): he who beats his inclination-slave to DEATH
+by fastings is AVENGED (נקם ינקם) — "not for chaos did He create it;
+He formed it to be inhabited": annihilate the opponent and the man is
+compelled, his labor unrewarded — free will requires the living
+adversary.
+
+Ledger: 72 rows this batch (1,514 block-2 total). Remaining after batch:
+125 (97 readable + 28 tanakh).
+
+
+## Bite 33 (batch 33) — 47 listings: SIFTEI KOHEN closes + TAFSIR
+RASAG whole + Tevat Gome + Toledot Yitzchak + TORAT HAADAM (Ramban) +
+TZAFNAT PANEACH (Rogatchover) + Tzror HaMor + Yalkut Shimoni 297
+
+**Siftei Kohen closes (12).**
+- 21:21 allegory: the yetzer WANTS to be defeated-but-alive (the
+  Zohar's harlot-parable) — לא יקם כי כספו הוא read on נכסף: the
+  tempter himself craves his own defeat.
+- 21:22 (MARQUEE — the SIEGE-TARIFF): the striving men = Sennacherib,
+  Nebuchadnezzar, Antiochus, Vespasian — all who warred on Jerusalem;
+  the PREGNANT WOMAN = the city רבתי עם (great with people), ויצאו
+  ילדיה = her children into exile; no ason (Sennacherib) → ענוש יענש,
+  his own sons slew him; ason (Nebuchadnezzar, Titus) → God collects
+  נפש תחת נפש soul by soul. The tariff historicized: EYE for eye —
+  they blinded the world's eye (the Temple) → their world-eye
+  destroyed; TOOTH — they gnashed teeth → God gnashes at Amalek and
+  Nebuchadnezzar; HAND — their "yad vashem" broken; FOOT — they
+  trampled the PILGRIM-FESTIVALS (רגל!) under horses → the Poor
+  One's feet (the Messiah on the donkey) tread them; BURN — they
+  fired the Temple → Tyre turned to pitch, and God rebuilds with fire
+  ("I will be to her a wall of fire"); WOUND/STRIPE — Zechariah 14's
+  rotting plague and the leprosy of the wicked empire. The SEVEN
+  tariff-items then mapped to the SEVEN following pericopes
+  (slave-eye, goring ox, pit, ox-vs-ox, theft, grazing, fire) — each
+  a kal-vachomer proving the destroyers have no restoration.
+- 21:24: Recanati — why word it as talion at all, "giving the
+  heretics room"? Seventy faces: the wording carries the SOD (man's
+  limbs mirror the Supernal Adam; a blemish in "the known Adam" is
+  given ABOVE — כן ינתן בו); Saadia's Sefer HaTemunot on inner and
+  outer Torah. Bahya's Michael-and-Samael midrash (the fray above;
+  the woman = Knesset Yisrael; Samael fined; the husband = God), with
+  the slandered-queen parable (the house wrecked in the king's rage
+  and rebuilt greater); Bahya's precision-argument (no wound can be
+  calibrated in length, breadth and depth — so money), or כן יֵעָשֶׂה
+  read passive: GOD executes the exact measure man cannot (Samson's
+  "as they did to me" — unequal acts, equal evil).
+- 21:26: the manumission k"v against the destroyers (the enslaved
+  Canaanite freed for an eye — Israel, God's CHILDREN, tortured:
+  surely no repentance for the tormentors); Ham's telling engaged the
+  TEETH-LETTERS (zayin-samekh-shin-resh-tzadi are the shin-row) — the
+  telling was by tooth, not lip: why the TOOTH frees; the 26 WORDS of
+  the slave-eye pericope = the 26 freeing organs (24 limb-tips + eye
+  + tooth). The Job-allegory (MARQUEE): the quarrel = God and Job
+  (both called "man"); the STONE = Satan ("the heart of stone"); "he
+  shall not die" = "only spare his life"; the sickbed = Job's twelve
+  months; אם יקום והתהלך בחוץ = acrostic איוב — he rose, justified
+  the judgment (ונקה המכה), and ורפא ירפא = the DOUBLED restoration.
+- Yazid gematria = "this is Yoav"; ושמתי לך — for you, not for him.
+
+**Tafsir Rasag (16 — the whole block in Judeo-Arabic).** 21:14
+"bimakr" (by cunning); 21:19 walks "in the MARKET, on his own
+self-care" (recovered); 21:21 כי כספו הוא = "because he is his
+MASTER" (lordship, not property!); 21:23 "IMPOSE a soul in place of a
+soul" (addressed to the judge); and (MARQUEE) 21:24: ודית עין בדל
+עין — "the DIYA (indemnity) of an eye in place of an eye" — Saadia
+writes the money-halakhah into the translation itself.
+
+**Tevat Gome + Toledot Yitzchak.** The chenek-severity/rov tangles
+(the Beit Shlomo B26 problem worked); the bat-kohen answer: without
+rov she'd be unmarried entirely — exempt, not otherwise-executed (so
+the rov must carry). Toledot Yitzchak: the license covers WOUNDS
+(sword-blows); inner illness is God's (Asa's reproach) — and the fee
+goes to the DOCTOR, not the victim's pocket.
+
+**Torat HaAdam (Ramban).** The fetus-Shabbat sugya: though a fetus is
+not a nefesh (head-out rule; our dmei-vladot verse), we DESECRATE
+Shabbat for it — "violate one Shabbat for him that he may keep many"
+— even under forty days (Baal Halachot), against the
+mother's-danger-only dissent. The physician-license: the doctor might
+refuse ("what need I of this trouble? I may err and be an inadvertent
+killer") — the Torah licensed him; harmonized with the Tosefta's
+exiled physician: he is like a JUDGE — unknowing error = no liability
+("the judge has only what his eyes see"); discovered error = exempt
+in human court, pays in HEAVEN's, and for a death — EXILE.
+
+**Tzafnat Paneach (Rogatchover, 11).** The mezid/shogeg altar-grid
+(mid-service interruption; sotrin-dino applied to the altar as to the
+land-border). The THREE ASSESSMENT-TYPES (MARQUEE): (1) the VICTIM's
+tereifah-status = natural fact — physicians' domain; (2) IRON — no
+Torah-shiur, so its assessment is fact, an error revisable; (3)
+STONE/FIST — the Torah demands a shiur, so the assessment is DIN:
+assessed-to-live who dies = "left court innocent," irreversible. The
+mixed-stones machloket (Tosefta: assess by the lightest; Mechilta:
+exempt) = do we assess the INSTRUMENT or the RESULT; the instrument
+is brought to court for damages but not for murder. No BAIL for the
+assessed wounder (the Mechilta excludes guarantors — body-custody
+cannot be pledged). The partnership-slave excluded by the בשבט/בשבט
+gezerah-shavah from the animal-tithe's rod (against Tosafot BK 90);
+the two-complete-identities impossibility (the half-kofer logic). Is
+limb-manumission a PAYMENT to the slave or a FINE on the master? —
+nafka minas: the licensed master-dentist; the under-perutah wound
+(lashes AND freedom = flog-and-pay?); the Shabbat-strike kam-leih.
+The eye/tooth split sharpened: the EYE frees even blind-and-gouged
+(the organ itself), the tooth only as function. And the slave who
+first knocked out his MASTER's teeth — struck back, he still goes
+free: Berachot 5's kal-vachomer is from sufferings for ONE'S OWN
+SINS, so even the guilty slave exits (the Rivash's B28 safek
+answered from the derash itself).
+
+**Tzror HaMor + Yalkut Shimoni.** Gen 2:18 borrows our idiom for the
+household economy (he "rises and walks outside on his support" —
+bread and water — while she keeps within); Gen 44 (MARQUEE-adjacent):
+Joseph refuses to be Israel's OPPRESSOR-COLLECTOR — "God has found
+the sin; He will collect, not through me" — for the collector who
+exceeds his standing is himself judged (Assyria the rod, woe to it;
+OUR pundak-midrash cited; the pilegesh-beGivah defeat: Israel made
+themselves collectors of Benjamin's debt without a court's standing).
+Yalkut Shimoni 297: the kibbud-anthology — the three equations
+(honor, fear, curse likened to God's; STRIKING has no Heaven-parallel
+"and rightly so, for the three are partners in him"); "had I dwelt
+among them they would have grieved Me"; Dama ben Netina (jasper +
+the torn golden garment, unshamed); Avimi running to the door past
+his five ordained sons; Rav Yosef's "I rise before the approaching
+Shekhinah" at his mother's footsteps; Isi ben Yehudah's rule (if
+others can do the mitzvah, the father's water comes first) = law;
+compelling a son to feed his father fixed as law.
+
+Ledger: 47 rows this batch (1,561 block-2 total). Remaining after batch:
+78 (50 readable + 28 tanakh).
+
+
+## Bite 34 (batch 34) — 30 listings: YALKUT SHIMONI 297-338 (the
+compilation over the whole block; mostly Mechilta/Bavli parallels of
+material met in the source-texts, digested lean)
+
+Notable rows beyond the parallels:
+- 298/322: לא תגנב as the kidnap-azharah ("three commands in the
+  matter, two explicit, one plain — the plain learns from the
+  explicit: capital-grade"); the sword-derivation ladder closed
+  against the bleed-him-from-two-limbs objection by the
+  eglah-arufah beheading-hekesh.
+- 323: the Levite who kills exiles DISTRICT to district — and his own
+  district shelters him: "for in the city of his refuge he shall
+  SIT — it absorbed him already."
+- 325 (MARQUEE): Chizkiyah's school — איש מזיד ומזריע ("a man both
+  schemes and seeds; a minor can neither") with yazid = the
+  cooking-lexeme (Jacob's pottage); and Asi b. Akiva: "BEFORE the
+  Torah we were warned on bloodshed; after the Torah — in that they
+  made it stricter they made it LIGHTER: exempt in human court, his
+  judgment handed to HEAVEN" — the two-courts doctrine tannaitic.
+- 326: the full execution/service/Shabbat lattice with the
+  Sanhedrin-beside-the-altar (Yoav the זכר); and R. Shimon b.
+  Menasya's kal-vachomer — PIKUACH NEFESH overrides Shabbat derived
+  from OUR clause (execution pushes aside the service; the service
+  pushes aside Shabbat; life-saving pushes aside the service...);
+  "מזבחי the altar UNIQUE to Me = the tamid."
+- 327-328: the chenek-procedure described (sunk in dung to the knees,
+  hard cloths within soft, pulled both ways); the strike-azharah
+  kal-vachomer from "forty he shall strike — he shall not add"; the
+  HEALING exemption — may a son bloodlet his father? (Rav Matna: from
+  "love your fellow"; Rav Dimi: the beast-hekesh's heal-exemption) —
+  with the sages who would not let their sons pull their splinters
+  (shegagat CHENEK vs a stranger's shegagat lav); and the
+  MESIT-exception: a son is never made the court's agent to strike or
+  curse his father — except against the seducer, "you shall not pity."
+- 329-330: kidnap rows — sale-witnesses; half-sale exempt; stealing
+  SLAVES exempt; the schoolteachers "as if found in their hand" and
+  exempt; the sold-to-relatives and half-slave machlokot
+  (miut-achar-miut); the curse's Name-requirement with R. Chananiah
+  b. Idi's oath-parallel (as the oath is by the Name, the curse is by
+  the Name).
+- 331-333: stone-and-fist = "SIGNS of death" (instrument-and-spot);
+  Shimon HaTimni vs R. Akiva — must the instrument be "known to the
+  witnesses," or is the assessment-of-record enough ("did they see on
+  his shin or on his life-spot he struck?"); R. Nechemiah's
+  market-walker argument ("does THIS one walk in the market while
+  THAT one is killed?!" — the lightened-then-worsened exemption);
+  custody sourced from mekoshesh vs megadef (horaat-shaah traded);
+  the honey-eater against doctor's orders (the גרגותני growth) —
+  exempted by רק; pain-alongside-damage measured on the severed
+  WRITING-hand: what such a man pays to lose it by drug rather than
+  sword.
+- 334-335: the slave-pericope tannaitic grid (R. Eliezer's
+  gadol/katan symmetry-proof for Canaanites; R. Yishmael's
+  kaspo/perpetual-acquisition; the rod ein-onshin; Rebbi's rod-g"sh
+  to the tithe); "choose him a beautiful death" (no gistera); the
+  THIRTY-DAYS-SERVICE sale fourfold machloket (R. Meir / R. Yehudah /
+  R. Yose / R. Elazar on kinyan-perot — with R. Yose ruling BOTH
+  under the day-window because "capital doubt goes LENIENT"); the
+  rodef-law derived from OUR fray-verse (could-save-by-a-limb); Rav
+  Papa's womb-strike boundary ("wherever the heat reaches the child —
+  excluding hand and foot"); the fetus-money rows (to the husband
+  even from a zenut-union; no husband → his heirs? — to HERS; the
+  freed shifchah and giyoret → exempt; the ox that gored a shifchah
+  pays — "a pregnant donkey was damaged"); the incest-kanas
+  exemptions through כדי רשעתו.
+- 337-338: the canonical eye-for-eye sugya complete (the five
+  payments with their assessment-methods; R. Dostai's
+  big-eye/small-eye and its light-for-light rebuttal; R. Shimon b.
+  Yochai's blind-maimer with "where possible, possible; where not,
+  not"; R. Eliezer's "mamash" domesticated as
+  value-the-MAZIK; the kofer kal-vachomer; the klal-uferat-uklal;
+  Abaye's eye-and-soul; Rav Ashi's tachat-tachat here drawn from
+  תחת אשר ענה — the rapist's FINE as the money-anchor).
+
+Ledger: 30 rows this batch (1,591 block-2 total). Remaining after batch:
+48 (20 readable + 28 tanakh).
+
+
+## Bite 35 (batch 35) — 20 listings: YALKUT SHIMONI closes (339-933) +
+Yeriot Shlomo + Yoma/Zevachim source-rows — READABLE QUEUE COMPLETE
+
+- 339: the burn/bruise ordering machloket (Rebbi vs Ben Azzai;
+  distant klal-uferat; the doubled payment for burn-with-bruise); the
+  PURE-PAIN catalogue — burned the footsole without a mark, LOADED
+  HIM WITH STONES, chilled his head with snow: pays pain; and the
+  pampered man's pain is DOUBLED (tzaar is subjective). The slave-eye
+  rows: struck AT the eye and blinded = free; struck NEAR it (the
+  air-blow) = not free, "until he does a DEED" (R. Chanina b.
+  Gamliel); both organs at once = free and takes nothing; in sequence
+  = free on the first, PAID for the second. And the compilation's own
+  voice on WHY tooth-and-eye free the slave: "because it is written —
+  and Ham the father of Canaan SAW, and TOLD" (the B28/B32 Ham-loop,
+  fourth attestation).
+- 339:10-340: the ox-rows (all beasts as ox by the Sinai
+  gezerah-shavah; all death-modes as goring; the flesh/hide
+  prohibition k"v-chains; בעל השור נקי fourfold — clear in HEAVEN's
+  court / from half-damages / from the slave's thirty / from
+  fetus-money); R. Akiva's hekesh — a woman's damages go to her
+  HEIRS, with Reish Lakish limiting it to KOFER (paid after death =
+  an expectancy, and the husband takes no expectancies).
+- 523/658/787/788: the limb-g"sh network built on OUR tariff (יד יד
+  for the fistful, רגל רגל for chalitzah, אזן אזן for the awl); the
+  refuge-rows (the avenger is a MITZVAH; no avenger → the COURT
+  APPOINTS one — B26's detail sourced; rolled boulders = liable
+  anyway, "he is a murderer"); the BLIND-man machloket (R. Yehudah
+  exempts him from exile, shame, court-death, lashes, all judgments,
+  all mitzvot — with Rav Yosef's feast-reversal on hearing "greater
+  is the commanded-and-doing").
+- 850:5 (MARQUEE): R. Chama and the blind Torah-student — "Peace to
+  you, free man... free for the World to Come," grounded by R. Yudan
+  in OUR ואם שן עבדו: sufferings manumit for the next world.
+- 921/929/933: the thrown-into-the-crowd kavua rule (nine Israelites
+  + one FIXED gentile = half-and-half → lenient); ben-sorer keyed to
+  OUR כי יזיד ("when does he become an ish? when he can seed" — the
+  yazid puberty-pun); "all these are the King's decree" (R. Yose);
+  the pregnant convict NOT delayed for birth (the husband's
+  fetus-money overridden by "also both of them" — the fetus dies with
+  her); Ulla's pay-not-flog rule drawn by tachat/tachat from OUR
+  eye-for-eye.
+- Yeriot Shlomo (Maharshal): the interposition teaches the striker
+  CHENEK from his kidnap-neighbor; ונתן = the STRIKER alone pays —
+  no fine on the quarrel-partner who caused the fight. Yoma 85a
+  (מעם ולא מעל) and Zevachim 117a (wilderness exile = the Levite
+  camp) as source-rows.
+
+Ledger: 20 rows this batch — 1,611 block-2 readable rows total:
+READABLE QUEUE COMPLETE (1,611/1,611 per census). Remaining: the 28
+Tanakh crossrefs (--tanakh dump).
+
+
+## Bite 36 (tanakh batch) — 28 Tanakh crossref verses: SCAN COMPLETE
+
+The crossref-verse targets read in full Hebrew: the REFUGE-CITIES
+corpus (Deut 4:42 Moses' three cities; Deut 19:1-12 whole — the
+prepared roads, the axe-head case, the hot-hearted avenger, the
+elders' extradition; Num 35:9-34 whole — the six cities, the
+iron/stone/wood instrument-grid, the avenger's mitzvah, the
+congregation's rescue-and-return, the high priest's death, the
+no-ransom pair, and the land-pollution closing "for the blood
+pollutes the land, and the land has no atonement for blood shed in
+it except by the blood of him who shed it... for I the LORD dwell
+among the children of Israel"); the TALION-parallels (Deut 19:21
+nefesh-BE-nefesh of the plotting witnesses — the bet-preposition
+B18/B30 marquee in situ; Lev 24:17-21 the Emor complement with שבר
+תחת שבר and כן ינתן בו); the KIDNAP-parallel (Deut 24:7 with והתעמר
+בו); the grasping wife (Deut 25:11-12 וקצתה את כפה); ואיבינו פלילים
+(Deut 32:31); כבד את אביך (Exod 20:12); the intra-block anchors
+(21:7 the amah's non-exit; 21:12; 21:15; 21:19; 21:24; 21:25); the
+Canaanite-slave acquisition frame (Lev 25:44-46 לעלם בהם תעבדו with
+its own coda "and over your brothers... you shall not rule with
+rigor"); the curse-verses (Lev 19:14 the deaf; Lev 20:9 דמיו בו).
+And the two NARRATIVE tachat-attestations the commentators leaned
+on: Judah's surety-speech (Gen 44:31-33 — "let your servant remain
+INSTEAD OF (תחת) the lad as a slave": substitution offered in
+person) and Rahab's covenant (Josh 2:14 — "our life TACHAT yours to
+die": the substitution-idiom sworn in the flesh).
+
+Ledger: 28 tanakh rows — BLOCK-2 COMPLETE: 1,639 rows this block,
+3,601 in the chapter ledger. Queue empty.
