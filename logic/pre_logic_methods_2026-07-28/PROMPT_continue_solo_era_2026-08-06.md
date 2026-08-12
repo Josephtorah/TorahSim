@@ -1507,6 +1507,15 @@ coverage accumulates toward exo_21_the_ordinances re-derivation). Scan notes:
 scratchpad law01_scan_notes.md (digest per batch, gen_08 style). gen_08
 check CLOSED: reports on Desktop (epub + v1-vs-v2 md); findings ledgered,
 254 readable unread, resumable; dupe rate ~1-in-4 of 90 MAJORs measured.
+★ BLOCK-2 + ASSEMBLY COMMITTED+PUSHED 2026-08-12 (20th update, owner
+word "commit and push"): everything from updates 18-19 landed in ONE
+commit bde7c91 (7 files, +1,549): block-2 manifest (43) + machine,
+the chapter assembly exo_21_v2_DRAFT.py, TOP10 + plan-doc stamps,
+the session log's second half (recipes included), this state doc.
+Standing exclusions honored; logic/gork/ remains untracked, flagged.
+NOTHING UNCOMMITTED from the law-era line as of this stamp. NEXT
+(owner-paced): PASS-2 live web app over the 57 scenes; v2 freeze
+still awaits owner word.
 ★ CHAPTER ASSEMBLY COMPLETE 2026-08-12 (19th update, owner word "ok
 contiue to next step"): exo_21_v2 ASSEMBLED — logic/law_era/
 exo_21_v2_DRAFT.py imports the three block machines UNCHANGED and adds
