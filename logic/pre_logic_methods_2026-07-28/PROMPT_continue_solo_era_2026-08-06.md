@@ -1507,6 +1507,81 @@ coverage accumulates toward exo_21_the_ordinances re-derivation). Scan notes:
 scratchpad law01_scan_notes.md (digest per batch, gen_08 style). gen_08
 check CLOSED: reports on Desktop (epub + v1-vs-v2 md); findings ledgered,
 254 readable unread, resumable; dupe rate ~1-in-4 of 90 MAJORs measured.
+★ CHAPTER ASSEMBLY COMPLETE 2026-08-12 (19th update, owner word "ok
+contiue to next step"): exo_21_v2 ASSEMBLED — logic/law_era/
+exo_21_v2_DRAFT.py imports the three block machines UNCHANGED and adds
+three layers: (1) World — statute-0 (21:1's ordained forum, b1.RUNTIME)
+as a persistent-state runtime: slave clocks and ox registries on ONE
+world clock, verdicts as STATE-WRITES at גמר דין ("verdict-completion";
+the benefit-ban rides the standing verdict), snapshot() as the pass-2
+replay scrubber's read-model; (2) SEVEN seam laws — chapter-level law
+existing only ACROSS blocks, each asserted: BK 8:2 (man five heads +
+fetus vs ox nezek-only + naki), the mu'ad-template isomorphism (man
+born forewarned vs ox acquires the state), the slave victim's two
+tracks (master -> sword vs ox-owner -> the flat 30), BK 3:10's chiasmus
+both legs (master's blow frees / his ox's blow frees no one; ox pays
+the parent / the son is capital with payment absorbed), Rav Ashi's
+תחת↔תחת ("in place of") anchor — 21:36 is a block-3 verse feeding
+block-2 law, now SELF-SUPPLIED inside the chapter — and statute-0
+gender parity instantiated in all three blocks; (3) the CHAPTER
+dependency proof — the three DEPENDS tables merged: 60 edges = 2
+INTERNAL (the 21:11 kim-leih seam + the 21:37 tariff verse,
+reclassified self-supplied) + 31 RESOLVED across 28 unique verses in
+17 frozen units (Gen 1:31 creation week -> gen_06; Gen 9:5+6, 9:22,
+15:13, 16:6, 28:20, 29:18, 31:15, 37:24+28, 42:38, 44:33; Exod 2:12,
+8:22, 12:7+23, 15:25+26, 16:26+29, 18:21, 19:13, 20:9+12+13+23; Lev
+19:20 -> lev_19_holiness_duty_ledger, a resolution not previously
+mapped) + 27 FORWARD across 26 unique open verses (the Lev/Num/Deut
+demand ledger + the tanakh-run scene verses 1 Kgs 2:28, 2 Sam 3:27,
+1 Sam 24:14, Zech 11:12, 2 Sam 12:6, 1 Kgs 20:39). ALL GREEN FIRST
+RUN (3 block batteries + 7 seams + World demo); gloss_lint 0 flags.
+The v2 YAML + freeze still wait on OWNER WORD per the forward-era
+law. NEXT (owner-paced): PASS 2 — the live web app (scene runner +
+form binder + replay timeline over World.snapshot()) executing the 57
+scenes. UNCOMMITTED: exo_21_v2_DRAFT.py, block-2 manifest + machine,
+TOP10 (block-2 row + assembly note), plan doc steps 3-4 stamps, state
+doc updates 18-19. COMPACTION POINT #27 stamped here 2026-08-12.
+★ BLOCK-2 CODING DAY COMPLETE 2026-08-12 (18th update, owner word
+"block 2 go"): the LAST uncoded block (Exod 21:12-27, the biggest —
+1,639 scan rows, 36 digests read in full as the spec) COMPILED and
+GREEN. Deliverables: (1) claims manifest
+logic/oral_audit/manifests/law02_exo_21_12_27_claims.json — 43
+multi-witnessed claims (L12-01..L26-05 + L0-01..03 system claims);
+(2) the machine logic/law_era/exo_21_v2_block2_DRAFT.py (block-1/3
+architecture) — ALL ASSERTS GREEN + gloss_lint CLEAN (13 manifest +
+4 machine gloss fixes applied to satisfy the lint's 90-char window):
+the homicide fork over the two-verse grid (mezid/shogeg/karov-le-mezid/
+karov-le-ones; whole-soul causation, ten-sticks; ger-toshav -> Heaven's
+docket); refuge as atonement (divinely-indexed term, 2,000-cubit techum
+off the makom-chain); the altar as jurisdictional filter (mid-service
+finishes; GRA-vs-Netziv crown machloket ON RECORD as data) + the
+jurisdiction clock and execution calendar (pikuach nefesh derived from
+the executioner's clause); parent laws (wound gate, vav=OR, rov
+epistemology, wicked/repentance flags, waiver-lock); the kidnap element
+pipeline (+ Joseph exempt on the element list — joseph_case() runs
+Gen 37 live); the injury engine (omed, custody, the Tosefta BK 9:2
+typed state machine); the FIVE HEADS struct with per-head mens-rea
+gates (shogeg pays nezek only; boshet needs intent; pampered pain
+doubled); kim leih family (block-seam law, Heaven's ason weld,
+sequential split, Ulla's pay-don't-flog); the slave two-key gate +
+rod-only + 24h window (community as the slave's goel); fetus clause
+(conception-timestamp routing, ason swallow); the tachat series
+(type boundary via Num 35:31; Onkelos's Sadducee filter); limb-tip
+manumission (predicate + kenas/Tabi + self-payment loop + Ham
+aetiology + composition); 3 system rules (ein onshin min hadin,
+class-exit operator, two-tablets architecture). DEPENDENCY PROOF: 24
+edges — 12 RESOLVED (Exod 20:12+13, 21:11 seam, Gen 9:6, Gen 9:22 ->
+gen_23_vineyard_curse, Gen 37:28, Gen 42:38 -> gen_65_first_descent,
+Gen 44:33 Judah's tachat-offer -> gen_67_cup_and_surety, Exod 2:12,
+16:29, 15:26, 12:23) + 12 FORWARD (Lev 24:20, Num 35:25+31, Deut
+19:21, 24:7, 25:3+11, Lev 25:46, 20:9, 1 Kgs 2:28 Joab, 2 Sam 3:27,
+1 Sam 24:14 — the three Tanakh rows are tanakh-run scene verses now
+formal machine demands). ALL THREE EXOD-21 BLOCKS NOW CODED. NEXT
+(owner-paced): chapter assembly (exo_21_v2 = statute-0 runtime +
+blocks 1-3 + tail; freeze on owner word) -> pass-2 web app.
+UNCOMMITTED: the block-2 manifest + machine, TOP10 row, plan doc
+step-3 stamp, this entry. COMPACTION POINT #26 stamped here
+2026-08-12.
 ★ LAW-ERA DAY COMMITTED+PUSHED 2026-08-12 (17th update, owner word
 "commit and push"): everything from updates 14-16 landed in ONE commit
 ce0deeb (15 files, +8,963): chapter gate green (ledger 4,903), all of

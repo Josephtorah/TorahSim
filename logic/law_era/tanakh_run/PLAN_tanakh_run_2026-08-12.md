@@ -113,12 +113,40 @@ coding days real fixtures, and block-1 scenes (Joseph, Jer 34, Neh 5,
    because they head for the frozen layer via chapter assembly; this
    folder stays experimental and only CONSUMES the machine — pass-2
    executors will import it from there, as gork imports block 1.
-3. **Block-2 coding day** — 36 digests → homicide fork (mens rea),
-   altar/refuge, עין תחת עין ("eye for eye") damages semantics, the five
-   injury heads, slave-striking, fetus/כופר.
-4. **Chapter assembly** — `exo_21_v2`: statute-0 runtime + blocks 1-3 +
-   the 21:37 opener; all asserts green; freeze on owner word (chapter
-   gate + preflight + gloss_lint per the forward-era law).
+3. **Block-2 coding day** — ✅ **DONE 2026-08-12** (owner word "block 2
+   go"): claims manifest
+   `logic/oral_audit/manifests/law02_exo_21_12_27_claims.json` (43
+   multi-witnessed claims, the biggest block's lean cap) + the machine
+   `logic/law_era/exo_21_v2_block2_DRAFT.py` — asserts GREEN, gloss_lint
+   CLEAN; 24-edge dependency proof: 12 resolved into frozen units (incl.
+   Gen 44:33 Judah's תחת "in place of" substitution-offer →
+   gen_67_cup_and_surety; Gen 42:38 Jacob's אסון "calamity" →
+   gen_65_first_descent; Gen 9:22 Ham → gen_23_vineyard_curse) + 12
+   forward (incl. 1 Kgs 2:28 Joab at the altar, 2 Sam 3:27 Abner,
+   1 Sam 24:14 the ancients' proverb — tanakh-run scene verses now
+   formal machine demands). Homicide fork / refuge / altar filter /
+   parents / kidnap pipeline / injury state machine / five heads /
+   kim leih / slave window / fetus / tachat series / manumission +
+   3 system rules. **ALL THREE BLOCKS CODED — next: chapter assembly.**
+4. **Chapter assembly** — ✅ **DONE 2026-08-12** (owner word "ok contiue
+   to next step"): `logic/law_era/exo_21_v2_DRAFT.py` — the three block
+   machines IMPORTED unchanged + three new layers: (1) **World** — the
+   statute-0 runtime (21:1's ordained forum) as a persistent state
+   object (slave clocks, ox registries, standing verdicts as
+   state-writes at גמר דין "verdict-completion") — THE state layer
+   pass-2's replay executor folds events over, with `snapshot()` as the
+   scrubber's read-model; (2) **seven SEAM laws** asserted (BK 8:2
+   man-five-heads vs ox-nezek-only; born-forewarned vs acquired-mu'ad
+   templates; slave victim sword-vs-thirty; BK 3:10 manumission-actor +
+   parent-victim chiasmus; Rav Ashi's תחת↔תחת "in place of" anchor
+   21:36 now SELF-SUPPLIED; statute-0 gender parity instantiated in all
+   3 blocks); (3) **chapter dependency proof** — the 3 DEPENDS tables
+   merged: 60 edges = 2 INTERNAL (21:11 seam, 21:37 tariff — the seams
+   now self-supplied) + 31 RESOLVED across 28 unique frozen-unit verses
+   + 27 FORWARD across 26 unique open verses. ALL GREEN first run;
+   gloss_lint clean. Freeze of the v2 unit itself still waits on owner
+   word (chapter gate + preflight per the forward-era law). **Next:
+   step 6 — PASS 2, the web app over the 57 scenes.**
 5. **PASS 1 — the harvest:** ✅ **DONE 2026-08-12** (owner word "pass
    one harvest go"; runs second under the harvest-first reorder). All
    three channels run: `harvest_pass1.py` → `harvest_ch1_links.json`

@@ -9,7 +9,7 @@ re-derivation of the covering units.
 | # | Block | Span | Code concept | Chain decompiler | Status |
 |---|-------|------|--------------|------------------|--------|
 | 1 | Slave-term laws | Exod 21:1-11 | first case-law cascade: כי ("when/if") conditionals, 6-yr timer, ear-rite opt-out flag | Kiddushin ch.1, Mekhilta Nezikin | **SCAN COMPLETE**; draft machine `exo_21_v2_block1_DRAFT.py`; **scene catalog** `logic/gork/scene_catalog_exo_21_block1_2026-08-11.json` (48 fixtures for later tests / Pass B) |
-| 2 | Homicide & injury | Exod 21:12-27 | mens-rea fork, refuge commutation, עין תחת עין ("eye for eye") -> damages semantics | Bava Kamma 83b-84a, Sanhedrin, Makkot | **SCAN COMPLETE** 2026-08-11: 36 bites, 1,639 rows, census satisfied; chapter ledger at 3,601; notes mirror `scratch_mirror/law02_scan_notes.md` |
+| 2 | Homicide & injury | Exod 21:12-27 | mens-rea fork, refuge commutation, עין תחת עין ("eye for eye") -> damages semantics | Bava Kamma 83b-84a, Sanhedrin, Makkot | **SCAN COMPLETE** 2026-08-11: 36 bites, 1,639 rows, census satisfied; chapter ledger at 3,601; notes mirror `scratch_mirror/law02_scan_notes.md`; **MACHINE CODED** 2026-08-12: `exo_21_v2_block2_DRAFT.py` asserts green + 24-edge dependency proof (12 resolved incl. Judah's surety-תחת "in place of" and Jacob's אסון "calamity" / 12 forward incl. 1 Kgs 2:28 Joab); claims `manifests/law02_exo_21_12_27_claims.json` (43); gloss_lint clean — **ALL THREE EXOD-21 BLOCKS NOW CODED** |
 | 3 | Goring ox | Exod 21:28-36 (+21:37 tail) | state machine: תם ("innocent") -> מועד ("forewarned"), liability escalation; tail adds the 4/5 theft tariff of 21:37 | Bava Kamma ch.1-4, ch.7 | **SCAN COMPLETE** 2026-08-12 + **21:37 TAIL COMPLETE** same day: 23 clips block proper (1,130 rows) + 4 tail clips (bites 24-27 + tanakh close, 172 rows); chapter ledger 4,903 = census EXACT — **EXOD 21 CHAPTER GATE GREEN, coverage continuous 21:1-37** (full exo_21_the_ordinances span); notes mirror `scratch_mirror/law03_scan_notes.md`; **MACHINE CODED** 2026-08-12: `exo_21_v2_block3_DRAFT.py` asserts green + 14-edge dependency proof; claims `manifests/law03_exo_21_28_37_claims.json` (28) |
 | 4 | Theft & four guardians | Exod 22:1-14 | liability lookup table (4 custody classes × fates) reconstructed by the chain | Bava Kamma ch.7, Bava Metzia ch.3+7, Shevuot | queued |
 | 5 | Skin-affliction protocol | Lev 13-14 | decision tree with 7-day timers, re-inspection loops, טמא/טהור ("impure/pure") states | Negaim (Mishnah), Sifra Tazria | queued |
@@ -26,6 +26,11 @@ lookup table), Num 19 (red heifer — flagship underivable constant).
 
 Unit mapping note: blocks 1-3 subdivide frozen unit exo_21_the_ordinances
 (span 21:1-37, FWD-8); block 4 falls in exo_22_property_social territory.
+**CHAPTER ASSEMBLED 2026-08-12: `exo_21_v2_DRAFT.py`** — blocks 1-3
+imported unchanged under one World (statute-0 runtime, persistent state,
+verdicts as state-writes) + 7 cross-block seam laws asserted + the merged
+60-edge chapter dependency proof (2 internal / 31 resolved / 27 forward);
+all green, gloss_lint clean. v2 freeze awaits owner word.
 The July-24 exo_2x files (slave_person, ox_pit, decalogue_altar) are
 drift-era drafts, not the current frozen layer.
 
