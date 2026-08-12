@@ -1507,6 +1507,167 @@ coverage accumulates toward exo_21_the_ordinances re-derivation). Scan notes:
 scratchpad law01_scan_notes.md (digest per batch, gen_08 style). gen_08
 check CLOSED: reports on Desktop (epub + v1-vs-v2 md); findings ledgered,
 254 readable unread, resumable; dupe rate ~1-in-4 of 90 MAJORs measured.
+★ BLOCK-3 CODING DAY COMPLETE 2026-08-12 (16th update, owner word
+"ok continue next task"): the block-3 (+21:37 tail) machine COMPILED and
+GREEN on first run. Deliverables: (1) claims manifest
+logic/oral_audit/manifests/law03_exo_21_28_37_claims.json — 28
+multi-witnessed claims (L28-01..L37-06 + L0 system claims) distilled
+from the 28 digests + ~120 marquee entries; (2) the machine
+logic/law_era/exo_21_v2_block3_DRAFT.py (block-1 architecture:
+claim-tagged rules, assert battery, DEPENDS + verify_dependencies) —
+ALL ASSERTS GREEN: the תם->מועד ("innocent"->"forewarned") state
+machine with R. Yehudah's 3-days rule + one-petting-day HYSTERESIS +
+context-indexing (Sabbath-only mu'ad; species; beast-kills never vest
+toward man — mazal) + owner-present vesting (Yannai's clause); the
+stoning court (23 judges, one-vote conviction, goaded/stadium exempt
+but altar-barred, transferred-intent bounds, ownerless included,
+benefit-ban riding the STANDING VERDICT per Keritot 6:2); kofer
+(full per partner, victim's value, after-death only, Resh Lakish
+no-stoning-no-payment coupling, teshuvah rider, admissibility
+boundary: never for the human murderer or the pit-death); the flat 30
+(melog wife takes it, 15 half-slave split); ownership-continuity
+(ownerless-after-goring: money dies, stoning stands, collect from
+plow-earnings); the pit (missing-ומת depth law: 10 death / 9 injury /
+6 impact, completer-pays per the Gra, worm-eaten cover clear,
+Nechunya hand-to-public exempt, karka olam, man/vessels by decree to
+Heaven's court, uninheritable per the Rogatchover, ungendered); ox-vs-ox
+(three-case table, no-profit fence, palga-nizka-is-a-fine with the
+Babylonia enforcement geography, hekdesh asymmetry, meitav); and the
+21:37 tariff (5/4 composed of kefel+increment, hekdesh/gentile
+collapse "not three-and-four", כולו בעינן, irreversibility,
+act-causes-prohibition exemption, change-acquisition, the agency
+exception, confession-kills-fines, jurisdiction decay, R. Meir's
+5=2×2+1 arithmetic assert). DEPENDENCY PROOF: 14 edges — 6 RESOLVED
+(Gen 9:5 -> gen_21_blessing_blood_law; Gen 37:24 -> gen_60_dreamer_sold;
+Exod 19:13, 20:13, 8:22, 21:37 in their frozen units) + 8 FORWARD
+(Num 35:31, Lev 24:18, Lev 27:4, Exod 22:1+3, Zech 11:12, 2 Sam 12:6,
+1 Kgs 20:39 — the last three being tanakh-run scene verses declared as
+demands). NEXT (owner-paced): block-2 coding day -> chapter assembly ->
+pass-2 executors/web app. UNCOMMITTED additionally: the manifest + the
+machine. COMPACTION POINT #25 stamped here 2026-08-12.
+★ PASS-1 HARVEST COMPLETE 2026-08-12 (15th update, owner word "pass one
+harvest go"): the TANAKH RUN's harvest pass ran end to end in
+logic/law_era/tanakh_run/. Channels: (1) export_links Tanakh crossrefs
+anchored Exod 21 filtered to TRUE verse refs via tanakh_ref — 70 rows
+(the category also holds commentaries-on-Tanakh; filter essential);
+(2) the law01/02/03 scan digests mined; (3) lexical sweep with the
+lemma list DERIVED FROM THE STATUTE ITSELF — every Exod 21:1-37 +
+22:1-3 lemma with whole-Tanakh frequency <=90 swept in FULL via the
+words-table lemma index (tanakh.sqlite carries full morphology: 305,507
+words lemma+morph tagged, so NO tree-parsing needed — owner's question
+answered: extraction is one indexed query per root), 31 lemmas + 5
+surface patterns (~700 candidate verses). Deliverables (all in
+tanakh_run/): harvest_pass1.py, harvest_ch1_links.json,
+harvest_ch3_lexical.json, scene_catalog_tanakh_run_2026-08-12.json —
+57 SCENES (21 P0 / 22 P1 / 14 P2, 157 refs, 50 chronology-keyed for
+the replay fold + 7 achronic doctrine, 5 FORWARD-touching stubs),
+HARVEST_PASS1_REPORT_2026-08-12.md. Headline new finds beyond the nine
+plan flagships: Achan's ox STONED WITH HIM (Josh 7:24-25, cherem
+jurisdiction inverting 21:28); Sinai's perimeter running the
+goring-ox stoning protocol on any beast that touches (Exod 19:12-13);
+Samuel's clearance audit in the statute's own nouns — whose OX, whose
+KOFER (1 Sam 12:3, with Amos 5:12 as the audit failed); Jeremiah
+citing the burglar clause's LIMITS as indictment (Jer 2:34, the
+machteret lemma's only non-statute hit); Zech 5's flying scroll =
+heavenly enforcement of the theft parashah's pair (thief + false
+swearer) where jurisdiction-decay leaves courts powerless; Esther
+pleading the sale-SCALE (Esth 7:4); Yehosheba's rescue-THEFT of Joash
+(2 Kgs 11:2 = 2 Chr 22:11, also a clean parallel-merge test row with
+1 Kgs 22:11 = 2 Chr 18:10); the goblet plant's graded verdicts (Gen
+44); negative finding CONFIRMED mechanically — 13 נגח hits in all
+Tanakh, zero narrative ox-gores-man. Replay showcases: Nathan's
+fourfold as persistent debt discharged across four later events;
+the Gibeonite famine reading Saul's decades-old massacre state;
+Naboth's blood-debt discharged at Jehu's purge; Jer 34's release
+state written-reverted-sanctioned. NEXT (owner-paced, reordered plan):
+block-3 coding day -> block-2 coding day -> chapter assembly -> PASS 2
+executors over the 57 scenes (CONFIRM/DIVERGE/NO-VERDICT per scene);
+early option: block-1 scenes vs the existing block-1 machine now.
+UNCOMMITTED additionally: logic/law_era/tanakh_run/ (plan + harvest
+files + SESSION_LOG_2026-08-12_tail_and_harvest.md — owner-requested
+process log of the whole day for a later learning narrative). COMPACTION POINT #24 stamped here 2026-08-12 (chapter gate
+green + pass-1 harvest done; catalog is the pass-2 work-queue; law03
+kit still scratchpad session 4ca32657..., dumps MUST redirect stdout).
+★ 21:37 TAIL COMPLETE -> EXOD 21 CHAPTER GATE GREEN 2026-08-12 (14th
+update, owner call "you make the call" -> tail now, then HARVEST-FIRST):
+the block-3b tail scan of Exod 21:37 (ox/sheep theft opener) ran end to
+end in 4 clips — bites 24-27 (169/169 readable listings) + the tanakh
+close (3/3: Exod 22:1, Exod 22:3, 2 Sam 12:6 — David's ארבעתים "fourfold"
+verdict is the chapter ledger's final row). Ledger 4,731 -> 4,903 =
+census target EXACT (1,962 + 1,639 + 1,130 + 172); dump --status
+verified 0 readable + 0 tanakh remaining. EXOD 21 SCAN COVERAGE
+COMPLETE AND CONTINUOUS 21:1-37 = the full span of frozen unit
+exo_21_the_ordinances. Census kit: law03_census.py span widened
+28->37, queue+side DB rebuilt, ledger-as-cursor skipped all prior
+rows (kit still scratchpad session 4ca32657..., mirrors updated in
+logic/law_era/scratch_mirror/). Notes law03_scan_notes.md now carry
+27 bite digests + the two tanakh closes + ~120 marquee entries.
+Tail marquee highlights: Hirsch's public-trust theory of the double
+(confession restores the principle -> modeh-biknas derived) + his
+dissolution of the three agency-in-sin exceptions (liability rides
+personal status, not the acting hand); the agency ribui או/תחת (or /
+in-place-of) three ways (Kiddushin 43a) fenced by two-verses-as-one;
+the composed tariff (4/5 = double + increment, so hekdesh/gentile
+collapse it: "not three-and-four"); the golden calf paid at the
+ox-rate THREE ways (Shemot Rabbah 48:6 five ornaments; Bahya's
+national ledger — calf=stolen ox -> five punishments, Joseph=stolen
+lamb -> 400 Egypt years + four kingdoms; the Gra's 600×5=3,000 body
+count); David's fourfold pre-computed (Abarbanel/Metzudat/Maharsha:
+child-Amnon-Tamar-Absalom, Tamar the dignity-unit, no-pity = din's
+five) — the flagship tanakh-run scene arrived as the last ledger row;
+gezerat-melekh constant (Mekhilta d'R. Shimon) vs FOUR derivations of
+5/4 (kefel-of-kefel+labor, decree-minus-dignity, breeding ratios with
+seven forgiven, trouble-pity of Kallah Rabbati); valuation-time fixed
+by rationale choice (Meshekh Chokhmah on BK 65); jurisdiction decay
+(Tur 348: no fines-courts today, self-sale only under Yovel) = the
+tanakh_run application_mode flags in the sources. NEXT (per the
+delegated call, owner-paced): PASS-1 HARVEST — sweep the 24 books
+through the three channels into a scene catalog in
+logic/law_era/tanakh_run/; coding days for blocks 3/2 + chapter
+assembly follow (plan steps reordered harvest-first, recorded in the
+plan doc's step list note below). UNCOMMITTED now additionally:
+Exod_21.jsonl (4,731 -> 4,903), law03 notes + census mirrors,
+TOP10 block-3 row (tail + gate green). COMPACTION POINT #23 stamped
+here 2026-08-12 (chapter scan gate GREEN + tanakh-run step 1 done;
+next move = pass-1 harvest kickoff, owner-paced; law03 kit remains
+in scratchpad session 4ca32657..., dumps MUST redirect stdout).
+★ TANAKH-RUN TEST PLANNED 2026-08-12 (13th update, owner-directed): the
+law-code test design agreed and stamped —
+logic/law_era/tanakh_run/PLAN_tanakh_run_2026-08-12.md (folder created,
+PLAN ONLY, no code; experimental/not-binding like logic/gork/). The
+experiment: compile Exod 21 into one machine, sweep all 24 books for the
+data the chapter runs on (3 harvest channels: export_links Tanakh
+crossrefs / the 143 scan digests' crossref index / lexical sweep of
+tanakh.sqlite on operative roots), then TWO PASSES — pass 1 initializes
+the world, pass 2 runs the code. BOTH execution modes agreed (owner: "do
+it both ways"): FIXTURE mode (per-scene, self-contained facts, gork
+runner form) + REPLAY mode (sequential event-stream fold: consult state
+-> judge -> write state); the modes cross-validate — diff hand-declared
+vs replay-derived state per scene, divergences are findings. Era/
+jurisdiction flags (pre-Sinai typology / binding / foreign comparative;
+Gen 9:5 Noahide layer for the goring ox per Hirsch). Flagship expected
+scenes: 1 Kgs 2:28-34 (Solomon executes 21:14 on Yoav VERBATIM), 2 Sam
+12 (David outputs the ארבעתים fourfold of 21:37), Jer 34 breach, 1 Kgs
+20:39, Neh 5, 2 Kgs 4:1, 2 Sam 21; expected negative finding: no
+narrative ox-gores-man in Tanakh. PREREQS in order (each on owner word):
+(1) 21:37 tail scan — census run 2026-08-12: 256 anchors -> 189 required,
+17 dual-anchor already ledgered, 172 NEW rows ≈ one clip -> chapter gate
+GREEN; (2) block-3 coding day; (3) block-2 coding day; (4) exo_21_v2
+chapter assembly; (5) pass-1 harvest -> scene catalog in tanakh_run/;
+(6) pass-2 executors + CONFIRM/DIVERGE/NO-VERDICT report. OPEN OWNER
+RULINGS (in the plan doc): timeline semantics (canonical vs chronology
+key — merge Samuel/Kings↔Chronicles parallels as one event, two
+witnesses, recommended), replay scope (Exod-21 lens only, recommended),
+21:37 routing (block-3b tail now, recommended). UNCOMMITTED as of this
+stamp: the tanakh_run/ folder + plan doc, law03 notes mirror, TOP10
+block-3 row, Exod_21.jsonl (4,331 -> 4,731), this state doc; also still
+untracked on flag: logic/gork/. Commit only on owner word. COMPACTION
+POINT #22 stamped here 2026-08-12 (block-3 scan COMPLETE + gate green +
+tanakh-run plan on disk; next move owner-directed per the plan's step
+list — likely the 21:37 tail clip; law03 kit in scratchpad session
+4ca32657-770b-417a-8a21-73333c8d5f75, repoint dump SCRATCH per session;
+durable mirrors in logic/law_era/scratch_mirror/; dump calls MUST
+redirect stdout).
 ★ BLOCK-3 SCAN OPEN 2026-08-11 (12th update, owner word "next block"):
 Exod 21:28-36 (goring ox + pit + ox-vs-ox) full oral inversion running —
 the LAST block inside Exod 21; closing it completes chapter coverage
@@ -1569,9 +1730,56 @@ the issur (Keritot 6:2); Shabbat-indexed mu'ad (Tosefta) + R. Yehudah's
 ownerless-exempt anti-tradition vs the seven-shor ribbui; Shimon
 HaAmsoni's every-את retreat anchored on את בשרו; the fine rides on the
 stoning (Resh Lakish); the pit measured by its victim (Elazar HaKappar)
-+ pursuit-counter mu'ad (Yerushalmi). NEXT: bite 11 per law03 notes
-RESUME HEADER (Bekhor Shor tail + Minchat Shai + the alphabetical
-acharon tail next in priority order), then --tanakh close (6 verses).
++ pursuit-counter mu'ad (Yerushalmi). THIRD CLIP 2026-08-12 (owner word
+"Do the rest of the block", bites 11-22 + tanakh close, 394 rows):
+★ BLOCK-3 SCAN COMPLETE — 23 clips total, 1,130 block-3 rows (1,124
+readable + 6 tanakh), census satisfied EXACTLY; chapter ledger
+Exod_21.jsonl 4,731 rows (1,962 + 1,639 + 1,130), queue 0/0 + tanakh
+0/6. BLOCK-3 GATE GREEN. Exod 21 oral coverage now CONTINUOUS 21:1-36
+across three blocks -> the exo_21 CHAPTER GATE / v2 freeze work is
+unblocked (owner-directed). TOP10 row updated; notes mirrored to
+scratch_mirror/law03_scan_notes.md (~90 marquee-index entries, 23
+digests). Late-run strata: Bekhor Shor tail, Minchat Shai masoretic
+layer, the whole alphabetical acharon tail (Abarbanel, both Aderet
+Eliyahus, Alshekh, Bartenura-on-Torah, Chatam Sofer, Chizkuni-era
+supercommentaries Gur Aryeh/Levush/Mizrachi/Siftei Chakhamim/Maskil
+LeDavid/Riva, Da'at Zekenim + Hadar Zekenim w/ R. Tam coinage,
+HaKtav VeHaKabbalah, Haamek Davar, Kli Yakar, MALBIM whole, Meshekh
+Chokhmah, Or HaChaim, Pardes Yosef, RALBAG 44-shoresh code, Rashbam,
+RAV HIRSCH whole, Rogatchover, Netinah LaGer, Tafsir Rasag in
+Judeo-Arabic, Ben Ish Hai, Megalleh Amukkot, Pesikta Rabbati, Yalkut
+Shimoni 25+ units, Ibn Ezra Sabbath Epistle). Marquee highlights of
+the second half: the Gra's "halakhah uproots the verse" + peshat-vs-
+halakhah splits (Gra, Rashbam); the two MESSIAHS in the pit (Zohar
+via Abarbanel's Mashmia Yeshuah + Megalleh Amukkot — shor = Messiah
+b. Joseph, chamor = Messiah b. David, bar-nafli); Chatam Sofer's
+mu'ad-veset isomorphism + Tosafot-Yom-HaKippurim's three-sins-
+forgiveness (mu'ad template in penitential theology); Mecklenburg's
+וגם-as-loss philology reading the mishnah out of one word + the
+bound-suffix guarding grammar; Netziv's murderer-in-formation peshat
+of וגם בעליו יומת + teshuvah-on-top-of-cofer; Malbim's rescue of
+Rambam 4:4 from the doubled ולא ישמרנו + the את-after-passive grammar
+rescue; Meshekh Chokhmah's missing-ומת (the 9/10 pit handed to the
+sages) + two-evidentiary-regimes (והועד vs נודע); Hirsch's dignity
+rationale for the flat 30, delegated-Gen-9:5 stoning, moral-hazard
+traffic law, no-judge-for-hekdesh anti-hierarchy proof, chassid-of-
+damages; Ralbag's anti-spoilage economics of והמת יהיה לו + lost-
+option-value in theft + victim-becomes-partner liability; the
+shepherd's-wage 30 from Zech 11:12 (Hadar Zekenim); the tariff in
+Abbasid mithqals (Saadia) and 13th-c. esterlins (R. Tam); Em
+LaMikra's Draco-of-Athens comparison; Tiferet Shlomo's death-
+splitting segulah (מת + חצי = מחצית); the Rogatchover's uninheritable
+pit; Nechunya the ditch-digger's theodicy; God as the liable
+arsonist rebuilding Zion (Yalkut 345); gender equality from the
+pit's nouns (Yalkut 701); pelga-nizka doesn't cross to Babylon.
+UNCOMMITTED as of this stamp: law03 notes mirror (updated),
+TOP10_LAW_BLOCKS.md (block-3 row), Exod_21.jsonl (4,331 -> 4,731),
+this state doc. Commit only on owner word. NEXT (owner-directed):
+block 4 (Exod 22:1-14 theft & guardians) census via a law04 kit
+clone, or the exo_21 chapter-gate assembly — owner's call; also
+still open: the verse-21:37 flag (ox/sheep theft opener sits outside
+blocks 1-3 as listed — rule at block-4 census), logic/gork/ untracked
+(add on word).
 COMMITTED+PUSHED 2026-08-12 on owner word as 01adcc9 (block-2 scan
 COMPLETE bites 20-36 + block-3 census + bites 1-10, ledger
 3,070->4,331, law02+law03 mirrors, TOP10 row, state-doc 12th update;

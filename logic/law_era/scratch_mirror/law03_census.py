@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""LAW ERA block 3 census — Exod 21:28-36 (goring-ox laws), FTS5-safe.
+"""LAW ERA block 3 census — Exod 21:28-37 (goring-ox laws + theft opener;
+span widened to 37 on 2026-08-12 for the block-3b tail clip), FTS5-safe.
 Same design as law02_census.py: single pass over export_texts, classify
 per chain_scope, second pass fills an indexed side DB.
 Scratchpad-only — no repo writes."""
@@ -41,7 +42,7 @@ shelf = Shelf2()
 rows = db.execute(
     """SELECT DISTINCT source_ref, source_work, category
        FROM export_links WHERE anchor_book='Exod' AND anchor_chapter=21
-       AND anchor_verse BETWEEN 28 AND 36""").fetchall()
+       AND anchor_verse BETWEEN 28 AND 37""").fetchall()
 print("links: %d distinct source rows" % len(rows), flush=True)
 
 cls = {}
@@ -67,7 +68,7 @@ for sr, sw, cat in rows:
         cls[sr] = (sw, cat, "UNRULED", None)
 
 kc = Counter(k for _, _, k, _ in cls.values())
-print("Exod 21:28-36: %d distinct listings | %s" % (
+print("Exod 21:28-37: %d distinct listings | %s" % (
     len(cls), " ".join("%s %d" % kv for kv in sorted(kc.items()))),
     flush=True)
 
