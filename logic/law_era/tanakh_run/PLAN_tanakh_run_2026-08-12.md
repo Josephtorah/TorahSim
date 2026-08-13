@@ -159,23 +159,48 @@ coding days real fixtures, and block-1 scenes (Joseph, Jer 34, Neh 5,
    confirmed mechanically (no narrative ox-gores-man in 13 total נגח
    "gore" hits). Entity-registry join deferred to pass-2 world-init
    (registry ends at Exod 21; scene entities are scene-local tokens).
-6. **PASS 2 — the executors:** fixture runner + sequential replay; per
-   scene record: the code's verdict, the narrative's own outcome, and a
-   **CONFIRM / DIVERGE / NO-VERDICT-IN-TEXT** comparison. Divergences
-   are the treasure: jurisdiction fact, pre-Sinai typology, or genuine
-   finding. **Deliverable AMENDED by owner ruling 2026-08-12: a LIVE
-   WEB APP, not a report** — the executors serve a local web UI: (a)
-   run any catalog scene and show the machine's verdict beside the
-   narrative outcome; (b) the form binder (gork's "not yet" item):
-   enter custom facts, watch the chapter rule; (c) replay mode as a
-   timeline scrubber over the chronology keys (world-state visible:
-   the תם→מועד "innocent"→"forewarned" flip, Nathan's fourfold debt
-   discharging). Architecture: small local Python server (stdlib or
-   Flask) over the machine + tanakh.sqlite; Hebrew glossed via
-   gloss_db.py per the absolute rule; UI sketches exist in
-   grok-mockups/ (untracked). Public hosting = separate later
-   decision. The chapter-level summary ("the law ran N times across
-   the Tanakh") lives as a page IN the app.
+6. **PASS 2 — the executors:** ✅ **BUILT 2026-08-12** (owner word
+   "build the web app"): **`app.py` — the live web app is running**
+   (stdlib only, binds 127.0.0.1:**8021** — port = the chapter;
+   `python3 logic/law_era/tanakh_run/app.py`). All 57 scenes WIRED
+   with real handlers — every stamp rests on actual machine calls,
+   listed per scene in the UI. **First full run of the law across the
+   Tanakh: 37 CONFIRM / 5 DIVERGE / 6 FORWARD / 9 NO-VERDICT-IN-TEXT.**
+   The five divergences are the promised treasure, each a finding:
+   Achan (cherem jurisdiction, not damages-law), Samson (war
+   jurisdiction), Naboth (protocol abused — the zomemim patch is a
+   declared FORWARD demand), Tekoa (crown clemency vs the machine's
+   no-pardon architecture), Jacob-vs-Laban (the pre-statute world as
+   the statute's rationale). Tabs: (a) SCENES — machine-vs-narrative
+   panels + stamps + the machine-calls transcript; (b) CUSTOM FACTS —
+   12 form-bound engines (tariff, homicide fork, slave window,
+   manumission, kidnap, five heads, fetus, pit, ox-vs-ox, ox lifecycle
+   on a live World, court sale, altar); (c) REPLAY — scrubber over the
+   50 chronology-keyed events in canonical order (opens with Cain,
+   pre-flood — the fold is chronological, not book-order); (d)
+   SUMMARY — "the law ran 57 times," stamps by mode + the machine's
+   dependency numbers. Verse panel: INTERLINEAR Hebrew-with-English —
+   lemma-bridge lexicon (3,409 Strong's entries from the Torah
+   SNAPSHOT glosses) + skeleton fallback + hand supplement; sample
+   coverage 374 words / 6 pending (pendings labeled in English,
+   honest). gloss_lint clean. Public hosting = separate later
+   decision.
+
+## PASS 3 — the SIMULATION direction (recorded 2026-08-13, not started)
+
+Owner question "if this were a simulation, what would the code look
+like" answered with a running prototype: `sim_sketch_house_of_david.py`
+(this folder; findings in its header + session-log Part 13). The three
+upgrades over the pass-2 judge: laws fire AUTOMATICALLY on every event
+(physics, not petitions); liability is STATE (court + Heaven dockets as
+persistent ledgers across generations); consequences are COMPUTED and
+diffable against the narrative (first run: David's ledger correctly
+ends OPEN=1 — the sword-clause — after the fourfold discharges; and
+the crown-collects-Heaven question surfaced as a design decision =
+the GRA-Netziv machloket). Full pass 3 = chapter machines plugged into
+corpus_world.py as the legal physics layer + the SILENT DOCKET (~15
+cases with no ruling on the page — enumerated 2026-08-13 in chat, to
+be formalized) run through the simulation. Owner-paced.
 
 ## Open owner rulings (needed before pass 1)
 

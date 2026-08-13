@@ -1507,6 +1507,104 @@ coverage accumulates toward exo_21_the_ordinances re-derivation). Scan notes:
 scratchpad law01_scan_notes.md (digest per batch, gen_08 style). gen_08
 check CLOSED: reports on Desktop (epub + v1-vs-v2 md); findings ledgered,
 254 readable unread, resumable; dupe rate ~1-in-4 of 90 MAJORs measured.
+★ PASS-3 DIRECTION RECORDED: THE SIMULATION 2026-08-13 (23rd update,
+owner questions "if this were a simulation, what would the code look
+like" + "where can we record this"): prototype BUILT and RUN —
+logic/law_era/tanakh_run/sim_sketch_house_of_david.py (moved from
+scratchpad into the repo; findings in its header). The three upgrades
+over the pass-2 judge: laws fire AUTOMATICALLY (physics, not
+petitions); liability is STATE (court + Heaven dockets as ledgers
+across generations); consequences COMPUTED and diffable vs the
+narrative. First-run findings: (1) David's ledger correctly ends
+OPEN=1 after the fourfold — the four discharge the EWE; the open 1 is
+Uriah's blood, the sword-never-departs clause the text never closes —
+the sim corrected its author's naive balance-check; (2) the
+crown-collects-Heaven's-docket question surfaced as a design decision
+= the GRA-Netziv machloket, with Solomon's 'the LORD shall RETURN his
+blood' as the yes-voice. Also enumerated in chat: the SILENT DOCKET —
+~15 cases with NO ruling on the page (Absalom-Amnon, Joab-Absalom,
+Nob, Ishmael b. Nethaniah, Jehoiakim-Uriah, Gibeah-process, 2 Kgs 4
+creditor, Micaiah slap, Pashhur, 2 Kgs 4/1 Sam 30 slave cases, Ziklag,
+Naaman's girl, Micah's confessed theft, Shechem) + ~7 Heaven-only-
+ruled — formalization pending. Recorded in: sketch header, session-log
+Part 13, plan doc PASS 3 section, this entry. All lint clean. Full
+pass 3 = chapter machines as corpus_world.py's legal physics layer —
+owner-paced, NOT started. UNCOMMITTED grows by: the sketch, log part
+13, plan pass-3 section, this entry.
+★ THE DOCKET + CATALOG v2 (64 SCENES) 2026-08-13 (22nd update, owner
+words "look for cases... and get a verdict" then "yes fold them"):
+NEW MODE PROVEN — the machine as SITTING JUDGE: narrative fact-
+patterns fed to the rules engine, verdicts returned. Ten-case docket
+run live; SEVEN cases were new beyond the 57-scene catalog and are
+now FOLDED IN (catalog 57 -> 64 scenes; meta.docket_addendum stamps
+the provenance): david_uriah_agency (court: no death — agency + no
+process; Heaven bills the fourfold; ck 72.9 sits immediately before
+nathan_fourfold in the replay), amaziah_fathers_not_sons (THE JEWEL:
+2 Kgs 14:5-6 — a named king executes the killers and spares their
+sons 'as it is WRITTEN in the book of the Torah of Moses'; the
+machine on the same facts produces his exact ruling — no vicarious-
+liability path exists anywhere in the system), abner_asahel_rodef
+(rodef proportionality — Sanhedrin 49a's own conviction ground —
+collected at the GATE), rechab_baanah_confession (no conviction on
+confession; the crown track executes in the gap; David speaks Gen
+9:5's demand-verb), adonibezek_ideal_measure (the ideal-measure
+doctrine in the defendant's mouth), zechariah_ben_jehoiada (execution
+without jurisdiction = murder; Heaven collects five verses later),
+jeremiah_capital_trial (a working courtroom with PRECEDENT citation —
+the machine DECLINES: Deut 18 not yet derived; the decline is the
+verdict). App handlers added for all seven; regression: 64 scenes, 0
+errors, stamps now 43 CONFIRM / 5 DIVERGE / 7 FORWARD / 9
+NO-VERDICT-IN-TEXT. ALSO: gloss-audit of the harvest-day catalog —
+15 unglossed Hebrew passages in committed scenes fixed (the absolute
+rule enforced retroactively); app + catalog lint 0 flags. Earlier
+same session: the TUTORIAL (owner ask 'demonstrate how this is
+computer code') — logic/law_era/tanakh_run/TUTORIAL_exo21_as_code_
+2026-08-12.md + .epub (11 chapters, builder in scratch_mirror/,
+Desktop copy); the INHERITANCE mockups grok-mockups/inheritance-flow
+.html + -v2.html (donor-walk + click-for-verse-and-code, 31 edges
+hand-laid from the verified proof; body-click = links, chip = popup);
+and the owner's judgment formed and sharpened: 'consistency
+certified, agency absent' — scoped to one chapter proven + a method
+that scales. UNCOMMITTED: app.py (docket handlers + earlier build),
+catalog v2, tutorial md + epub + builder, session-log parts 11-12,
+plan step-6 stamp, state doc updates 21-22. Mockups stay untracked
+by standing rule. COMPACTION POINT #29 stamped here 2026-08-13.
+★ PASS-2 WEB APP BUILT + FIRST FULL TANAKH RUN 2026-08-12 (21st
+update, owner word "build the web app"): THE TEST RAN — the deliverable
+of the whole tanakh_run program exists and is LIVE.
+logic/law_era/tanakh_run/app.py (stdlib-only local server,
+127.0.0.1:8021 — port = the chapter): all 57 catalog scenes WIRED with
+real handlers over the assembled machine (exo_21_v2 World + blocks
+1-3); every stamp rests on actual machine calls shown per scene.
+FIRST-RUN RESULT: 37 CONFIRM / 5 DIVERGE / 6 FORWARD / 9
+NO-VERDICT-IN-TEXT. The divergences are the promised treasure, each
+classified: Achan (cherem, a jurisdiction fact), Samson (war
+jurisdiction), Naboth (honest-witness assumption abused; the zomemim
+patch is a declared forward demand), Tekoa widow (crown clemency vs
+the no-pardon architecture), Jacob-Laban (the pre-statute world as
+the statute's grievance list). Flagships confirmed by live calls:
+Nathan's fourfold = theft_tariff('sheep') multiplier 4 WITH the
+kim-leih note (Nathan withheld the murder — no payment where he
+dies); Yoav = altar_shelter court/crown pair (the GRA-Netziv
+machloket as the scene's own two readings); Gibeonites =
+kofer_admissible('human_murderer') False; Jer 34 = term_status FREE
+at six years + the covenant sanction; Joseph = joseph_case() element
+exemption. UI: 4 tabs (scenes / custom facts / replay / summary) —
+12 form-bound engines incl. an ox-lifecycle on a live World; replay
+scrubber over 50 chronology-keyed events in CHRONOLOGICAL order
+(opens with Cain, pre-flood); summary = "the law ran 57 times" +
+stamps by mode + the machine's 2/31/27 dependency numbers.
+Verse panel: interlinear Hebrew-with-English via the LEMMA BRIDGE —
+Strong's-keyed lexicon (3,409 entries) built from the Torah SNAPSHOT
+glosses reaches all 24 books through tanakh.sqlite's lemma column +
+skeleton fallback + hand supplement (ארבעתים "fourfold" etc.); sample
+coverage 374 words / 6 pending (labeled in English). gloss_lint 0
+flags on the app. Server left RUNNING for the owner. Plan doc step 6
+stamped — ALL SIX PLAN STEPS NOW DONE. NEXT (owner-paced): use the
+app / commit checkpoint / v2 freeze word / deeper replay
+state-simulation or hosting as later decisions. UNCOMMITTED: app.py,
+plan step-6 stamp, session log part 11 (pending), this entry.
+COMPACTION POINT #28 stamped here 2026-08-12.
 ★ BLOCK-2 + ASSEMBLY COMMITTED+PUSHED 2026-08-12 (20th update, owner
 word "commit and push"): everything from updates 18-19 landed in ONE
 commit bde7c91 (7 files, +1,549): block-2 manifest (43) + machine,
