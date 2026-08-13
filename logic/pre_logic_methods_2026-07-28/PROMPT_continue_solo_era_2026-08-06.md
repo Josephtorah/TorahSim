@@ -1507,6 +1507,17 @@ coverage accumulates toward exo_21_the_ordinances re-derivation). Scan notes:
 scratchpad law01_scan_notes.md (digest per batch, gen_08 style). gen_08
 check CLOSED: reports on Desktop (epub + v1-vs-v2 md); findings ledgered,
 254 readable unread, resumable; dupe rate ~1-in-4 of 90 MAJORs measured.
+★ TWO-DAY ARC COMMITTED+PUSHED 2026-08-13 (24th update, owner word
+"commit and push"): everything from updates 21-23 landed in ONE commit
+b400acc (9 files, +3,872): the live app (64 scenes wired), catalog v2
+with the docket fold + retro gloss-audit, the tutorial md+epub+builder,
+the pass-3 sim sketch, session-log parts 11-13, plan pass-3 section,
+this state doc. Standing exclusions honored; grok-mockups (incl. the
+two inheritance-flow mockups) stay untracked by standing rule.
+NOTHING UNCOMMITTED from the law-era line as of this stamp. NEXT
+(owner-paced): silent-docket formalization / pass-3 simulation /
+inheritance tab into the app / v2 freeze word — all offered, none
+started. CLEAN COMPACTION POINT.
 ★ PASS-3 DIRECTION RECORDED: THE SIMULATION 2026-08-13 (23rd update,
 owner questions "if this were a simulation, what would the code look
 like" + "where can we record this"): prototype BUILT and RUN —
