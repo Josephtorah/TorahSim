@@ -1507,6 +1507,65 @@ coverage accumulates toward exo_21_the_ordinances re-derivation). Scan notes:
 scratchpad law01_scan_notes.md (digest per batch, gen_08 style). gen_08
 check CLOSED: reports on Desktop (epub + v1-vs-v2 md); findings ledgered,
 254 readable unread, resumable; dupe rate ~1-in-4 of 90 MAJORs measured.
+★ TORAHCODE PUBLIC 2026-08-13 (26th update — THE PUBLICATION DAY):
+owner order "lets discuss creating a cleaned up project to make public
+on github" → built same-day, step-laddered with owner gates, LIVE at
+https://github.com/Josephtorah/TorahCode (PUBLIC, first commit c7aa4d1
+"TorahCode 1.0", 232 files, ~31MB; description = owner's words: "The
+Hebrew Bible as a simulation. The entire oral and written Torah
+compiles as a simulation of creation"). FRESH repo <home>/
+TorahCode (copied+cleaned, NEVER filtered history). Ships: docs/
+(PROCESS_OVERVIEW premise+8-step pipeline; CHAIN_OF_TRANSMISSION 13
+works in order; METHOD_LAWS the 9 rules; SOURCES deriver's kit;
+ROADMAP_SIMULATION 9-component map + fence), data/ (tanakh.sqlite
+25MB WLC+OSHB; lexicon.json 3,409+12,847 glosses exported from
+SNAPSHOT; units_index.json 97 units), machines/exo21/ (block1/2/3 +
+chapter, _frozen_spans reads units_index.json, output BYTE-IDENTICAL
+to home, MIT headers), units/ (97 renderings + machine.py, 97/97
+GREEN, run_all.py replaces ALL_UNITS concatenation), scans/ (4,903-row
+ledger + 100 manifests + 3 law notes as PRESERVED-RECORD class — owner
+ruling: ship as-is, declared in scans/README + method law 8, ~570
+flags reported not hidden), app/ (64 scenes 43/5/7/9, rewired to
+data/, 64/64 verified identical vs home side-by-side), viz/
+(inheritance.html promoted from mockup, 31 edges MACHINE==VIZ
+verified), sim/ (house_of_david.py repo-relative, output matches
+home), tools/ (fetch_links/fetch_texts with politeness contract +
+license capture — LIVE-TESTED on Exod 21:1, 546 links; public
+gloss_lint.py with py_mode/section/english-head awareness + 7-token
+documented ALLOW list). LICENSE MIT+CC BY 4.0 dual (owner choice);
+ATTRIBUTION (WLC public domain, OSHB CC BY 4.0, Strong's 1890,
+oral-law cited-not-redistributed). LEARNING MATERIALS LEFT OUT (owner
+2026-08-13: "lets leave the learning material out" — tutorial/epub/
+how-to stay home). Sefaria caches NOT shipped — deriver's kit
+replaces them (owner insight: public needs the chain works to
+continue deriving). FINDINGS FOLDED BACK HOME this build: block3 +2
+manifest gloss fixes; TRUE CLAIM COUNT 117 (39+43+35) not 110 —
+law03 has 35 claims, stale 28 fixed in chapter header + app template
++ app summary + home app 57→64; 3 builder scripts in scratch_mirror
+(build_torahcode_data/machines/units.py = the regeneration path).
+Home tree: these fixes + builders committed with this entry (one
+sweep, owner word "ok"). NEXT open: silent docket, pass 3 proper,
+inheritance tab live in app, v2 freeze, block 4 (Exod 22:1-14).
+★ PASS-3 COMPONENT MAP APPROVED 2026-08-13 (25th update, owner
+question "what components should it have" + "yes [stamp it]"): the
+NINE-COMPONENT design of record stamped into the plan doc's PASS 3
+section (PLAN_tanakh_run_2026-08-12.md, from line 189): (1) clock +
+era table; (2) entities with persistent identity incl. the HOUSE-
+lineage layer (debts attach to houses); (3) the ledgers — liability
+as state (court/Heaven dockets, clocks, standing verdicts, breachable
+covenants); (4) chapter machines as pluggable physics — THE SIM AND
+THE DERIVATION PROGRAM ARE THE SAME PROJECT (each TOP10 block = a
+physics module); (5) the jurisdiction router (court/crown/war/
+foreign/cherem/Heaven — load-bearing per the docket); (6)
+institutional state history flips (Shiloh's asylum lapse, the Temple,
+the chamber-exile, YOVEL_OPERATES dormancy); (7) the prophet channel
+— prophets read Heaven's ledger aloud; validation: every prophetic
+indictment must match an open simulated entry; (8) the diff engine
+with DOCTRINE-AWARE balance checks (the sword-clause lesson); (9)
+validation harness (the 64 stamps as regression baseline) + glossed
+display. Fence: NO invented events, ever. UNCOMMITTED: the plan-doc
+component map + this entry (one commit sweeps both on owner word).
+COMPACTION POINT #30 stamped here 2026-08-13.
 ★ TWO-DAY ARC COMMITTED+PUSHED 2026-08-13 (24th update, owner word
 "commit and push"): everything from updates 21-23 landed in ONE commit
 b400acc (9 files, +3,872): the live app (64 scenes wired), catalog v2

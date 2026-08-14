@@ -150,7 +150,7 @@ def kofer_admissible(defendant):
             }[defendant]
 
 # ---------------------------------------------------------------------------
-# CASE — ownership continuity (21:36 בעליו)                      [L36-01]
+# CASE — ownership continuity (21:36 בעליו, "its owner")         [L36-01]
 # ---------------------------------------------------------------------------
 def money_claim_survives(ownerless_after_goring, condemned=False):
     if ownerless_after_goring:
@@ -196,7 +196,7 @@ def pit_liability(depth, victim="ox", outcome="death", pit_kind="hevel",
             "hauling": "the pit-owner pays the lift-out (Ralbag) [L34-01]",
             "heir_transfer": False,   # the Rogatchover: no yerushah on a
             "buyer_donee_transfer": True,  # liability without substance [L33-04]
-            "gendered": False}        # בעל הבור ungendered [L33-04]
+            "gendered": False}   # בעל הבור ("pit-owner") ungendered [L33-04]
 
 # ---------------------------------------------------------------------------
 # CASE — ox vs ox (21:35-36)                                    [L35, L36]
@@ -441,7 +441,8 @@ DEPENDS = [
     ("KEFEL's parent ban", "Exodus", 20, 13, "back", "L37-06",
      "the Decalogue's theft-ban — the double's constitutional layer"),
     ("the stoning verb's register", "Exodus", 8, 22, "back", "L28-02",
-     "הן נזבח... ולא יסקלנו — stoning as the mob-execution verb"),
+     "הן נזבח ולא יסקלנו (\"let us slaughter, not stone him\") — the "
+     "mob-execution verb"),
     ("the tariff's own verse", "Exodus", 21, 37, "back", "L37-04",
      "inside frozen unit exo_21_the_ordinances (21:1-37, FWD-8)"),
     # ---- forward demands: constants consumed from verses NOT yet derived --

@@ -202,6 +202,59 @@ corpus_world.py as the legal physics layer + the SILENT DOCKET (~15
 cases with no ruling on the page — enumerated 2026-08-13 in chat, to
 be formalized) run through the simulation. Owner-paced.
 
+**THE COMPONENT MAP (design of record, owner-approved 2026-08-13):**
+
+1. **The clock + era table** — world-time with named eras; laws gate
+   on era (pre-Sinai = Gen-9 physics only). Have: chronology keys on
+   57 scenes. Missing: the era table as a first-class object.
+2. **Entities with persistent identity** — people, HOUSES (debts
+   attach to houses across generations: David's, Saul's, Ahab's),
+   animals with legal state (the תם/מועד "innocent/forewarned" ox),
+   property, places. Have: entity_registry.yaml (ends at Exod 21,
+   linked-not-merged) + scene-local tokens. Missing: the
+   house-lineage layer.
+3. **The ledgers — liability as state** — court docket, Heaven's
+   docket, ownership registry, slave-term clocks, standing verdicts,
+   covenant states (Jer 34's release-covenant as a breachable world
+   object). Have: the sketch's two dockets + World's verdict
+   state-writes. The sim's heart.
+4. **The law layer — chapter machines as pluggable physics** — every
+   event passes through every registered law, unasked; each TOP10
+   block derived = a new physics module (Lev 13 timers, Lev 25
+   schedulers, Num 35 refuge). Have: 1 chapter of ~10. THE SIM AND
+   THE DERIVATION PROGRAM ARE THE SAME PROJECT.
+5. **The jurisdiction router** — every event routes: court (witnesses
+   + warning + a SEATED court), crown, war, foreign, cherem, Heaven.
+   The docket proved this is load-bearing (Achan, Samson,
+   Rechab-Baanah, Jeremiah's trial were all routing questions).
+   Missing: one explicit router all laws consult.
+6. **Institutional state history flips** — the law's own runtime
+   flags change with narrative events: refuge exists only after
+   conquest; Shiloh's asylum LAPSES; the Temple turns capital
+   jurisdiction on; the Sanhedrin's chamber-exile turns it off forty
+   years early; yovel stopping puts the Hebrew-slave module to sleep
+   (b1.YOVEL_OPERATES already exists as the flag). Same crime,
+   different century, lawfully different process.
+7. **The prophet channel** — prophets READ HEAVEN'S LEDGER ALOUD
+   (Nathan). An observer announcing open ledger state at narrative
+   moments — and the validation it enables: does every prophetic
+   indictment in the corpus match an open entry in the simulated
+   ledger? (Amos on the kofer-takers; Elijah at Jezreel; Zechariah's
+   dying demand.)
+8. **The diff engine** — computed state vs declared state (the plan's
+   original cross-validation), sharpened by the sword-clause lesson:
+   balance-checks must encode DOCTRINE, not naive arithmetic — a
+   ledger that ends OPEN can be the correct ending.
+9. **Validation harness + display** — the 64 stamps as regression
+   baseline (any sim change that flips a CONFIRM must answer for it);
+   the app as the window (scrubber over real computed snapshots);
+   every surface glossed per the absolute rule.
+
+**Deliberately absent: invented events.** The sim never generates
+history — it computes law over the text's own events. A what-if
+sandbox may exist later, fenced and labeled, never mixed into the
+record.
+
 ## Open owner rulings (needed before pass 1)
 
 - **Timeline semantics:** canonical book-order vs narrative chronology

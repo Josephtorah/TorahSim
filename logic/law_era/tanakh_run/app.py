@@ -3,7 +3,7 @@
 # TANAKH RUN — PASS 2: the live web app (owner ruling 2026-08-12)
 #
 # Serves the assembled Exodus 21 machine (exo_21_v2_DRAFT: blocks 1-3 +
-# World) against the 57-scene catalog harvested from all 24 books.
+# World) against the 64-scene catalog harvested from all 24 books.
 #
 #   (a) SCENE RUNNER  — run any catalog scene; the machine's verdict beside
 #       the narrative's own outcome; stamped CONFIRM / DIVERGE /
@@ -1112,7 +1112,7 @@ def build_summary():
     _, resolved, forward = M.chapter_dependency_proof(verbose=False)
     return {"scenes": len(SCENES), "stamps": stamps, "by_mode": by_mode,
             "machine": {"blocks": 3, "claims": {"block1": 39, "block2": 43,
-                                                "block3": 28},
+                                                "block3": 35},
                         "dependency_edges": {"internal": 2,
                                              "resolved": len(resolved),
                                              "forward": len(forward)}},
@@ -1343,7 +1343,7 @@ Object.entries(s.by_mode[m]).map(([k,v])=>k+': '+v).join(' &middot; ')+
 '</td></tr>';}
 h+='</table></div>';
 h+='<div class="panel"><h3>The machine underneath</h3><p class="note">'+
-'Three blocks, '+(39+43+28)+' witnessed claims; chapter dependency '+
+'Three blocks, '+(39+43+35)+' witnessed claims; chapter dependency '+
 'proof: '+s.machine.dependency_edges.internal+' internal + '+
 s.machine.dependency_edges.resolved+' resolved + '+
 s.machine.dependency_edges.forward+' forward edges. Epigraph: '+

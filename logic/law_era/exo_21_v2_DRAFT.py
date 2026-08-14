@@ -10,7 +10,7 @@
 #
 # Assembled 2026-08-12. Scan side: chapter ledger 4,903 rows = census EXACT,
 # EXOD 21 CHAPTER GATE GREEN. Witness layer: the three claims manifests
-# (law01: 39, law02: 43, law03: 28 = 110 claims) in oral_audit/manifests/.
+# (law01: 39, law02: 43, law03: 35 = 117 claims) in oral_audit/manifests/.
 #
 # WHAT ASSEMBLY ADDS (nothing in the blocks is changed — they are imported):
 #   1. World — the statute-0 runtime (21:1's ordained forum) as a persistent
