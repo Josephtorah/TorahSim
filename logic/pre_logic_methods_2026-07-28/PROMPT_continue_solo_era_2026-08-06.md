@@ -1510,7 +1510,7 @@ check CLOSED: reports on Desktop (epub + v1-vs-v2 md); findings ledgered,
 ★ TORAHCODE PUBLIC 2026-08-13 (26th update — THE PUBLICATION DAY; home sweep committed 8b93eda + pushed; COMPACTION POINT #31 stamped here):
 owner order "lets discuss creating a cleaned up project to make public
 on github" → built same-day, step-laddered with owner gates, LIVE at
-https://github.com/Josephtorah/TorahCode (PUBLIC, first commit c7aa4d1
+https://github.com/Josephtorah/TorahCode (PUBLIC, first commit cddeca8 (was c7aa4d1; amended+force-pushed same hour — fresh repo fell back to the Mac account name "Shari", global git identity now set to Brian LeBlanc/josephtorah@gmail.com so every future repo inherits it)
 "TorahCode 1.0", 232 files, ~31MB; description = owner's words: "The
 Hebrew Bible as a simulation. The entire oral and written Torah
 compiles as a simulation of creation"). FRESH repo <home>/
