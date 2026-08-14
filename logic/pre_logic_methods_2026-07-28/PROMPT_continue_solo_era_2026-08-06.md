@@ -1507,7 +1507,7 @@ coverage accumulates toward exo_21_the_ordinances re-derivation). Scan notes:
 scratchpad law01_scan_notes.md (digest per batch, gen_08 style). gen_08
 check CLOSED: reports on Desktop (epub + v1-vs-v2 md); findings ledgered,
 254 readable unread, resumable; dupe rate ~1-in-4 of 90 MAJORs measured.
-★ TORAHCODE PUBLIC 2026-08-13 (26th update — THE PUBLICATION DAY):
+★ TORAHCODE PUBLIC 2026-08-13 (26th update — THE PUBLICATION DAY; home sweep committed 8b93eda + pushed; COMPACTION POINT #31 stamped here):
 owner order "lets discuss creating a cleaned up project to make public
 on github" → built same-day, step-laddered with owner gates, LIVE at
 https://github.com/Josephtorah/TorahCode (PUBLIC, first commit c7aa4d1
