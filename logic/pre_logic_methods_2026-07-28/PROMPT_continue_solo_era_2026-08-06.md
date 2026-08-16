@@ -1507,6 +1507,54 @@ coverage accumulates toward exo_21_the_ordinances re-derivation). Scan notes:
 scratchpad law01_scan_notes.md (digest per batch, gen_08 style). gen_08
 check CLOSED: reports on Desktop (epub + v1-vs-v2 md); findings ledgered,
 254 readable unread, resumable; dupe rate ~1-in-4 of 90 MAJORs measured.
+★ DISCLOSURE ERA COMMITTED 2026-08-16 (27th update — the writing
+days 8/14-8/16, all in Disclosure/ — which is a STANDALONE git repo of its own
+(history since 2026-08-05: Steps, Rest of the Library, the ten
+inheritances...); the era is committed INSIDE that repo, and the
+outer repo keeps ignoring the folder as before): (1) THE LAW THAT RUNS draft addition (Epic Certainty
+voice, law+docket+simulation) + epub; (2) LeBlanc_Torah_As_Simulation
+standalone (ten-part simulation anatomy vs the Torah, comparison
+card, what-is-demonstrated boundary) + epub, FOLDED WHOLE into the
+layperson story (owner: verbatim, after Oral Torah); (3)
+LeBlanc_Language_And_Keepers standalone (word=machine-with-settings,
+consonant forks, Masoretes freeze grammar in ink, OSHB tagging update,
+the hinge argument; DB-verified examples incl. HC/Vpi1cs/Sp2ms) +
+epub, FOLDED into the story after the Masoretes chapter (owner cut
+See-it-once + the morphology teaser; two-gifts intro became handoff);
+(4) UB_Epic_LeBlanc_layperson_2026-08-15 — the full re-voicing of the
+layperson story in the Urantia Part-IV commission voice (voice studied
+from fetched papers 122/196), 15 numbered sections + THE PROPOSITION
+prologue (owner-driven: theory/inventory/canon-map with open ports +
+Deut 30:19 cited/pedigree/test; Amaziah receipt added then removed to
+sec 10 as the three-address argument Deut 24:16 -> 2Kgs 14 -> machine);
+heavy editorial arc with owner as cold reader: section 8 rebuilt
+around THE FIVE CLOCKS (sequence/day-seal/calendar-at-boot/era
+ledger/timers), ten inheritances carved to SIX fully-walked laws
+(omen-verb, circumcision, firstborn-deed, sojourner entries REMOVED on
+owner rulings; Sabbath/Amalek/Passover/two-pointers rewritten with
+full quotes+citations; Passover closes on the law-layer-governed
+line), Claims-written-down + Small-perfections sections REMOVED (all
+cross-refs repaired: sec 12 examples, sec 10 table cell), Ark coda =
+case/code/BUILD-INSTRUCTIONS (Oral Torah), sec 9 closes on the
+SECOND-EXECUTION-LOG argument (oral worked examples + histories =
+two independent traces, one compile agrees with both); (5) GLOBAL
+RULES across the era: NO em/en dashes (141 removed 8/14 + born-clean
+after), word 'honest' BANNED and swept (12 occurrences reworded),
+Hebrew-Bible vs Torah verse counts corrected (23,213/5,853),
+ten-centuries fix (Amaziah->Mishnah, was 'eight centuries', in 4
+files), cantillation claims rescoped (marks=24 books; tree check
+run=Torah only); command-paid claim DB-verified and found overbroad
+(Gen 47:27 installment + Gen 6:11 corrupted fill + 9:7 swarm
+re-issue) — lifecycle version written, owner removed the section from
+the recital (survives in this doc's history + original story
+unchanged); (6) build_disclosure_epub.py (generic md->EPUB3 packager:
+nav.xhtml TOC properties=nav for ElevenLabs import, dcterms:modified,
+XHTML5; bold-italic fix) + build_law_that_runs_epub.py committed;
+all epubs EPUB 3 with real TOCs. Original Epic Certainty layperson
+EXTENDED (two examinations folded; Midrash glossed; orchard cited
+Chagigah 14b in both files). Owner rulings to remember: prologue
+theory-first with receipt, no self-praising candor framing, every
+quote carries its address, entries that need an argument get cut.
 ★ TORAHCODE PUBLIC 2026-08-13 (26th update — THE PUBLICATION DAY; home sweep committed 8b93eda + pushed; COMPACTION POINT #31 stamped here):
 owner order "lets discuss creating a cleaned up project to make public
 on github" → built same-day, step-laddered with owner gates, LIVE at
