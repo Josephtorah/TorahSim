@@ -1507,7 +1507,7 @@ coverage accumulates toward exo_21_the_ordinances re-derivation). Scan notes:
 scratchpad law01_scan_notes.md (digest per batch, gen_08 style). gen_08
 check CLOSED: reports on Desktop (epub + v1-vs-v2 md); findings ledgered,
 254 readable unread, resumable; dupe rate ~1-in-4 of 90 MAJORs measured.
-★ DISCLOSURE ERA COMMITTED 2026-08-16 (27th update — the writing
+★ DISCLOSURE ERA COMMITTED 2026-08-16 (27th update; outer repo 0ce140f pushed, inner Disclosure repo ea09e72 committed, no remote for inner; COMPACTION POINT #32 stamped here — the writing
 days 8/14-8/16, all in Disclosure/ — which is a STANDALONE git repo of its own
 (history since 2026-08-05: Steps, Rest of the Library, the ten
 inheritances...); the era is committed INSIDE that repo, and the
