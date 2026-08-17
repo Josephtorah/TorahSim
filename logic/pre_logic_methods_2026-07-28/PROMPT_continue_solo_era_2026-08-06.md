@@ -1507,6 +1507,145 @@ coverage accumulates toward exo_21_the_ordinances re-derivation). Scan notes:
 scratchpad law01_scan_notes.md (digest per batch, gen_08 style). gen_08
 check CLOSED: reports on Desktop (epub + v1-vs-v2 md); findings ledgered,
 254 readable unread, resumable; dupe rate ~1-in-4 of 90 MAJORs measured.
+★ SEFER YETZIRAH ON THE SHELF + TORAHCODE CORPUS TOOL 2026-08-17
+(29th update; UNCOMMITTED both repos, awaiting owner word): owner ask:
+compare Sefer Yetzirah's letter-schema against the DB morphology
+format, then "yes fetch the sy... make sure it is in the torahcode
+system and update the script they use to download the corpus".
+COMPARISON (chat): both are fixed-schema feature records over a
+complete symbol inventory — tight overlaps: gender field w/ identical
+vocabulary זכר ונקבה ("male and female"); the doubles' two-tongues
+toggle physically in-stream as dagesh (grammar's toggle set בגד כפת =
+6 letters vs SY's 7 incl. resh — DB shows 19 dageshed-resh tokens,
+the known crux); 7 core verb stems (3 active/passive pairs +
+reflexive mediator) rhyming w/ 7 doubles-each-a-binary; triads w/
+deciding middle (א חק מכריע "alef the deciding statute" ~ dual/both/
+common middle values); 231 gates = C(22,2) + the factorial houses ~
+morpheme segmentation; בשלשה ספרים "in three books" (writing/number/
+telling) = text/address/gloss columns. Misses printed: type-vs-token,
+no person axis in SY, planets/months/organs stipulated not derivable,
+arities disjoint. FETCH: new logic/solo_tools/
+fetch_sefaria_export_yetzirah.py (house style, manifest-appending) ->
+Data/sefaria_export/Sefer_Yetzirah{,_Gra_Version}/{he,en}.json — both
+recensions 6 chapters (base 14/6/8/12/4/4, Gra 14/6/9/16/10/7); every
+comparison phrase verified in the fetched stream incl. the factorial
+ladder שתי אבנים בונות שני בתים ("two stones build two houses"...
+5,040). Commentaries available in bucket, NOT fetched (owner word):
+Rasag/Saadia, Ra'avad, Ramban, HaGra, Pri Yitzhak. TORAHCODE (public
+repo <home>/TorahCode, changes UNCOMMITTED): NEW
+tools/fetch_corpus.py — the whole-work corpus mirror (Sefaria-Export
+bucket, politeness contract, resumable, --plan/--only) reproducing
+shelf/corpus/ (Bavli/Yerushalmi/Mishnah/Tosefta/Mishneh Torah/
+midrash-halakhah/Rabbahs/Minchat Shai/Zohar/JPS1917/links/Strong's)
++ SEFER YETZIRAH both recensions He+En; --plan validated against the
+312-file cache (class counts exact; diffs = Sefaria transliteration
+drift ~20 names, links shards now 0-16, 9 Rambam sections gained
+English); SY fetched THROUGH the public script into shelf/corpus/ (4
+files); docs/SOURCES.md rewritten to "the three commands" + new
+whole-work-corpus section; README repo-map line updated. NEXT: commit
+words pending (outer: this update + yetzirah fetcher + 28th-update
+batch; TorahCode: fetch_corpus.py + docs).
+★ RESEARCH ERA 2026-08-16..17 (28th update — the search days;
+ALL UNCOMMITTED, awaiting owner word; COMPACTION POINT #33 stamped
+here 2026-08-17): (1) PURITY-LAW HARVEST
+(tanakh_run/PURITY_LAW_harvest_2026-08-16.md): lemma sweep
+טמא/טהר/נדה/צרעת/זוב/נבלה = 249 use-site verses outside the codes ->
+42 curated cases in 5 blocks (pre-Sinai mode-flags incl. Gen 7:2;
+Torah-internal executions incl. Num 5:2-4 receipt; 17 monarchy cases;
+12 prophet console-reads; restoration bundle); jewels: UZZIAH (2Kgs
+15:5+2Chr 26, king quarantined for life, co-regency), HEZEKIAH'S
+PASSOVER (2Chr 30:17-20, mass violation + prayer override, narrator
+cites 'not as written'), HAGGAI 2:11-14 (recorded priestly Q&A,
+gradeable answer key), JOSIAH (2Kgs 23, tumah as WRITE-operation);
+all FORWARD until purity machine compiles (seed = frozen
+lev_13_intake_quarantine). (2) DANIEL-JEREMIAH CONSOLE CHAIN
+(DANIEL_JEREMIAH_console_chain_2026-08-16.md + Daniel_Jeremiah_Chain
+.epub): the 70-years oracle's full lifecycle: 16 שבעים שנה sites -> 7
+chain-links (Jer 25:11,12; 29:10; Dan 9:2; Zech 1:12; 7:5; 2Chr
+36:21); steps: dated emission 605 (Jer 25:1 dual calendar) ->
+letter-persistence (Jer 29) -> DELETION-RESISTANCE (Jer 36 scroll
+burned/rewritten+supplement) -> the read בספרים (Dan 9:2) ->
+computation (two termini 605-539 service / 586-516 desolation; Zech
+1:12 second reader polling) -> Lev 26:40 confession protocol executed
+-> 70x7 rescale -> sabbath-ledger settlement (2Chr 36:21 = Lev
+26:34) -> Cyrus receipt w/ message-ID (36:22=Ezra 1:1); EXPANDED
+2026-08-16 eve: step 8 (3-role attribution cause/agent/channel;
+'stirred spirit' actuator formula 1Chr 5:26/2Chr 21:16; Cyrus terms:
+mashiach Isa 45:1, not-for-price 45:13, not-known-Me 45:4; agent's
+own decree Ezra 1:2; CATCHWORD SEAM 2Chr 36:22-23=Ezra 1:1-3, canon
+ends mid-imperative ויעל 'let him go up') + NEW step 9 (Ezra 5-6
+ARCHIVE RETRIEVAL: Tattenai challenge, Ecbatana search, memorandum
+found+enforced; dual registers herald/דכרונה) + boundaries (Isaiah
+dating predictive-vs-structural; Cyrus Cylinder policy-not-Judah) +
+SEVENTY-SEVENS ADDENDUM: (A) Dan 9:25 ETNACHTA ON שבעה verified in
+DB -> 7|62|1 two-anointed structure (popular 69-week join crosses the
+break); (B) anchor = Jeremiah's word (9:23 idiom; Jer 30:18/31:38);
+first segment CHECKS 586->537=49yrs to anointed (Cyrus/Joshua); 490 =
+70 x Lev 26 sevenfold = 10 jubilees; (C) final week
+CONDITION-GATED: v24 = six closing conditions; 5 precedents for
+suspended final unit (segmented count; timers pause=jubilee flag;
+condition-termini; re-issue at maturity; correct-ledger-ends-open).
+CYRUS BIBLE-LIFE told in chat (4 books; decree outlives man);
+east/north/Medes-Persians triangulation (Dan 8 two-horn ram) resolved.
+(3) RECEIPT-PAIRS HARVEST (RECEIPT_PAIRS_harvest_2026-08-16.md): the
+26 כדבר יהוה sites paired to emissions; long-range: Josh 6:26->1Kgs
+16:34 (Jericho curse, longest), 1Sam 2->1Kgs 2:27 (Eli 'to fulfill'),
+1Kgs 13:2->2Kgs 23:16 (Josiah named-key); classes: AMENDED-SENTENCE
+receipt (Ahab 1Kgs 21:29 deferral->2Kgs 9:25 lands on amended terms),
+receipt-WITHOUT-emission (Jonah 2Kgs 14:25), receipt-INSIDE-read (Dan
+9:12), aggregate (2Kgs 24:2), escrow-join (Jer 32:8); EXCEPTION
+HANDLER Jer 18:7-10 + exercised (Nineveh/Hezekiah+15/Ahab); strained
+receipt PRINTED (Huldah 'in peace' vs Megiddo). (4) SEAL SUBSYSTEM
+(SEAL_SUBSYSTEM_2026-08-16.md): חתם 27 sites = full doc-security:
+VAULT Deut 32:34-35 (sealed judgments 'in due time'), ESCROW Jer
+32:10-15 (dual sealed/open deed in jar vs 70yr maturity), sealed
+testimony Isa 8:16/29:11, TIME-LOCK Dan 12:4,9, sin-bag Job 14:17,
+IRREVERSIBILITY Esth 8:8, FORGERY 1Kgs 21:8 (Jezebel), signatures
+Neh 10:1-2; queued: ring/טבעת extension. (5) RARE-PAIR SCANNER
+(scratch_mirror/rare_pair_scan.py + RARE_PAIR_SCANNER_pilot report):
+industrial gezerah-shavah: unpointed n-grams occurring EXACTLY TWICE
+cross-book: 3,235 trigram + 1,233 tetragram pairs (parallel blocks
+auto-set-aside 3,597/3,021; residual caveat Jer 52/2Kgs 25); FIRST
+FRUITS: Dan 3:1‖Ezra 6:3 (אמין שתין... the ONLY two 60-cubit Aramaic
+specs = idol vs Cyrus-memorandum Temple!), Dan 9:4‖Deut 7:9
+(covenant-keeper formula EXCLUSIVE = mechanical receipt for the
+covenant-protocol claim), 1Sam 2:8‖Ps 113:7 (Hannah), Gen 15:18‖Deut
+1:7 (Euphrates boundary), 2Kgs 19:29‖Isa 65:21; queued: 2-gram run w/
+commonness filter; full lists in session scratchpad (rare_pairs_3/4
+.txt — REGENERABLE by rerunning the script). (6) SEALED-TERM REPORT
+(SEALED_TERM_report_2026-08-16.md + Sealed_Term.epub, layperson-full,
+all verses quoted): the 4 clarities on Dan 9: NO-RECEIPT finding (70
+years receipted 2x, 70 SEVENS never — open item by corpus's own
+bookkeeping), SEAL=ESCROW (2000yrs failed computation = seal working
+as specified), covenant wiring (excl. join + Lev 26 protocol +
+sevenfold; also שבעה oath/seven root: 9:11 shevu'ah -> 9:24 shavu'im,
+flagged suggestive), movable-sentence precedent; + SIX-CONDITIONS
+SCAN: cond 1+2 UNIQUE pairings (no other address in Tanakh), cond 4
+excl. pair w/ Ps 119:142 (God's own law-linked righteousness), cond 6
+excl. pair w/ Exod 40:10 (sanctuary-commissioning anointing; person
+option = Aaron 1Chr 23:13), cond 3 = 10-site mechanism corpus (incl.
+negative-atonement 1Sam 3:14/Isa 22:14; Isa 27:9 idol-removal
+condition), cond 5 = 9-site channel-ops corpus (active/false/dark ->
+sealed = console retirement). SCHOLARSHIP CALIBRATION (chat, honest):
+known = Fishbane inner-biblical exegesis (Dan 9 via Jer+Lev 26),
+Qumran jubilees reading, von Rad fulfillment-notices, etnachta
+debate, Jer 32 double-deed practice, rabbinic anti-end-calculation;
+OURS (unverified vs literature) = missing-receipt argument,
+seal-as-specification, measured exclusivities, systems assembly;
+OFFERED+PENDING: 'relation to scholarship' section for Sealed Term.
+(7) UB RECITAL upgrades (inner Disclosure repo, UNCOMMITTED since
+ea09e72): section 10 REBUILT on standalone architecture then
+INTERLEAVED per owner (each of ten parts followed by its text-check;
+'Here are the five' intro fix; validation check restored
+receipts+withheld-approval so the card's every-row-shown promise
+holds); section 9 + middot ACCESS-MANUAL paragraph (gezerah
+shavah=join, kal va-chomer, ein-ketiv diff; 'build instructions,
+execution log, access manual'); pair 8 + DANIEL-CHAIN lifecycle
+close; open-ports passage + canon-close 'let him go up' sentence.
+NEXT QUEUE: commit word (inner Disclosure + outer tanakh_run reports
++ scanner + this update); scholarship section; 2-gram scanner run;
+purity machine (Lev 11-15+Num 19) whose 42-case docket now waits;
+Jer 34 console-vs-ledger test on existing Exod 21 machine.
 ★ DISCLOSURE ERA COMMITTED 2026-08-16 (27th update; outer repo 0ce140f pushed, inner Disclosure repo ea09e72 committed, no remote for inner; COMPACTION POINT #32 stamped here — the writing
 days 8/14-8/16, all in Disclosure/ — which is a STANDALONE git repo of its own
 (history since 2026-08-05: Steps, Rest of the Library, the ten
