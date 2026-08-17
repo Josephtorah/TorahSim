@@ -1508,7 +1508,8 @@ scratchpad law01_scan_notes.md (digest per batch, gen_08 style). gen_08
 check CLOSED: reports on Desktop (epub + v1-vs-v2 md); findings ledgered,
 254 readable unread, resumable; dupe rate ~1-in-4 of 90 MAJORs measured.
 ★ SEFER YETZIRAH ON THE SHELF + TORAHCODE CORPUS TOOL 2026-08-17
-(29th update; UNCOMMITTED both repos, awaiting owner word): owner ask:
+(29th update; COMMITTED+PUSHED: outer cc1cc87, TorahCode 16f2cf3,
+inner Disclosure 692c9fe committed no-remote): owner ask:
 compare Sefer Yetzirah's letter-schema against the DB morphology
 format, then "yes fetch the sy... make sure it is in the torahcode
 system and update the script they use to download the corpus".
@@ -1542,11 +1543,18 @@ midrash-halakhah/Rabbahs/Minchat Shai/Zohar/JPS1917/links/Strong's)
 drift ~20 names, links shards now 0-16, 9 Rambam sections gained
 English); SY fetched THROUGH the public script into shelf/corpus/ (4
 files); docs/SOURCES.md rewritten to "the three commands" + new
-whole-work-corpus section; README repo-map line updated. NEXT: commit
-words pending (outer: this update + yetzirah fetcher + 28th-update
-batch; TorahCode: fetch_corpus.py + docs).
+whole-work-corpus section; README repo-map line updated. ALL
+COMMITTED+PUSHED 2026-08-17 on owner word: outer cc1cc87 (research
+era whole: 6 reports + 2 epubs + scanner + yetzirah fetcher +
+manifest + state doc) · TorahCode 16f2cf3 (fetch_corpus.py + docs) ·
+inner Disclosure 692c9fe (recital + epub; no remote exists, commit
+only). NEXT: owner directs — queued: scholarship section for Sealed
+Term; 2-gram scanner run; Jer 34 console-vs-ledger test; purity
+machine (Lev 11-15 + Num 19, the 42-case docket waits); SY
+commentaries fetch (Rasag/Ra'avad/Ramban/HaGra/Pri Yitzhak).
 ★ RESEARCH ERA 2026-08-16..17 (28th update — the search days;
-ALL UNCOMMITTED, awaiting owner word; COMPACTION POINT #33 stamped
+COMMITTED 2026-08-17 in cc1cc87 [outer] + 692c9fe [inner Disclosure
+recital]; COMPACTION POINT #33 stamped
 here 2026-08-17): (1) PURITY-LAW HARVEST
 (tanakh_run/PURITY_LAW_harvest_2026-08-16.md): lemma sweep
 טמא/טהר/נדה/צרעת/זוב/נבלה = 249 use-site verses outside the codes ->
