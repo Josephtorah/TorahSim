@@ -1507,13 +1507,62 @@ coverage accumulates toward exo_21_the_ordinances re-derivation). Scan notes:
 scratchpad law01_scan_notes.md (digest per batch, gen_08 style). gen_08
 check CLOSED: reports on Desktop (epub + v1-vs-v2 md); findings ledgered,
 254 readable unread, resumable; dupe rate ~1-in-4 of 90 MAJORs measured.
+★ RECITAL SEC 8 MERGED INTO THE SIMULATION 2026-08-17 (31st update;
+inner Disclosure COMMITTED 2c9e8d0, no remote exists): owner spotted sec 8/sec
+10 overlap; review confirmed: 3 of 10 simulation checks leaned on
+sec-8 exhibits (part 2 clock = full five-clocks reprise
+self-flagged "recited in their own place"; part 7 jubilee; part 9
+withheld-check/open-ledger), while sec 8's six-laws + greatest-open
+were unique. Owner order: remove sec 8, append non-repeats to the
+simulation section. EXECUTED (chat-drafted first, approved): five
+clocks full version DELETED (part 2's compressed check now owns the
+material, reworded, rescued closer "No book needs five clocks to
+tell a story. A world needs exactly that."); SIX LAWS subsection
+moved after the card w/ new bridge ("A simulation is not ten parts
+lying in a heap; the parts read each other"), entries verbatim;
+GREATEST ITEMS LEFT OPEN moved after it, verbatim; sections
+RENUMBERED 9-15 -> 8-14 (recital now 14 numbered sections; only
+name-based cross-refs existed, nothing dangles). Epub REBUILT (16
+chapters, verified: old heading gone, merge present, renumbering
+right, canon-close intact); Desktop copy. Inner commit 2c9e8d0
+carries the whole recital day (sec 7 + intro fix + this merge).
+★ RECITAL SECTION 7 REBUILT 2026-08-17 (30th update; inner Disclosure
+committed 2c9e8d0 w/ the 31st-update merge): owner found sec 7 "The Logics That
+Awaited Their Text" thinner than remembered; history verified: the
+section was BORN compressed on 08-15 (never reduced in-repo; the
+full ~1,019-word treatment lives in LeBlanc_Epic_Certainty_layperson
+_2026-08-05.md "Old logics of language"). Rebuilt on owner word to
+ten numbered entries (~907 words, chat-drafted first; intro's
+precision comment REWRITTEN on owner correction: simple consistency
+statement, "precise and consistent in its use of language... Logic
+can only take hold in a text that keeps its own terms," the
+letter-dissection wording rejected): Frege claim/subjects + אשר ("which") groups · Austin speech-
+acts + נתתי ("I HAVE given") deed-grammar · von Wright demands ·
+Hoare pre/op/post + day-2 withheld check · Davidson roles + את
+("et") flag · Prior time + cardinal day-one · invariant מרחפת/מבדיל
+("hovering"/"dividing") · Alt case-vs-absolute · Kripke rigid names
++ Avram registry echo · hand-trace six lists; close = several logics
+per verse is architecture. Epub REBUILT (18 xhtml, needles verified,
+Desktop copy); sec-7 gloss_lint 0 flags, no dashes.
 ★ SEFER YETZIRAH ON THE SHELF + TORAHCODE CORPUS TOOL 2026-08-17
 (29th update; COMMITTED+PUSHED: outer cc1cc87, TorahCode 16f2cf3,
 inner Disclosure 692c9fe committed no-remote): owner ask:
 compare Sefer Yetzirah's letter-schema against the DB morphology
 format, then "yes fetch the sy... make sure it is in the torahcode
 system and update the script they use to download the corpus".
-COMPARISON (chat): both are fixed-schema feature records over a
+COMPARISON (chat; then REPORT written 2026-08-17 on owner word:
+tanakh_run/SEFER_YETZIRAH_morphology_2026-08-17.md, gloss_lint 0
+flags, all quotes cited base-recension chapter:paragraph,
+UNCOMMITTED; + PROJECTION TEST section added on owner word: word tag
+compiles to letters at 99.9-100% for person/stem prefixes, bound
+grammar = 25.1% of all letter tokens, closed 11-letter servile class
+[פ ס ט zero bound sites ever], top-3 operators ו ה י = SY's
+Name-seal letters at 1:13, gender-by-letter-ORDER 3:6 vs
+gender-by-final-heh; directional-he Sd measured: 1,080 sites,
+carrier ה 1,079/1,080, Gen 28:14 four-compass sweep all Sd-tagged;
+ADDED to report as convergence 3 "THE DIRECTION SLOT" on owner word,
+report now 3 convergences + misses, lint 0 flags): both are
+fixed-schema feature records over a
 complete symbol inventory — tight overlaps: gender field w/ identical
 vocabulary זכר ונקבה ("male and female"); the doubles' two-tongues
 toggle physically in-stream as dagesh (grammar's toggle set בגד כפת =
