@@ -1553,7 +1553,8 @@ system and update the script they use to download the corpus".
 COMPARISON (chat; then REPORT written 2026-08-17 on owner word:
 tanakh_run/SEFER_YETZIRAH_morphology_2026-08-17.md, gloss_lint 0
 flags, all quotes cited base-recension chapter:paragraph,
-UNCOMMITTED; + PROJECTION TEST section added on owner word: word tag
+COMMITTED+PUSHED c99ab5b w/ the projection test and direction slot
+and the 29th-31st state updates; + PROJECTION TEST section added on owner word: word tag
 compiles to letters at 99.9-100% for person/stem prefixes, bound
 grammar = 25.1% of all letter tokens, closed 11-letter servile class
 [פ ס ט zero bound sites ever], top-3 operators ו ה י = SY's
