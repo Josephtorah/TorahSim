@@ -1689,6 +1689,48 @@ epub rebuilt + verified. ALSO our-code "machine" renamed "the
 program" (Amaziah passage x2 + echo fix; owner rejected "rules
 engine" as law-flavored; machines-as-computers + word-as-machine
 metaphor + "verified by machine" idiom all KEPT); epub rebuilt.
+★ SIMULATION-SECTION REBUILD + PDF 2026-08-18 (35th update; inner
+Disclosure COMMITTED 83b0ae1; COMPACTION POINT #35 stamped here):
+owner-paced recital session, all display-first. (1) sec 9 RETITLED
+on owner wording "The Hebrew Bible - A Simulation of Reality" (sole
+occurrence, verified). (2) boot-flag passage told plainly on owner
+ask (darkness/deep/waters read-before-installed, commentators mark
+the same lines); dense original replaced. (3) registry examples
+extended to later Torah: Moses renames Hoshea (Num 13:16), Hermon
+alias table (Deut 3:9); DB-verified incl. Sarai-vs-princes lemma
+contamination caught (Sarai 8297 last=Gen 17:15, the rename verse);
+Jacob keeps 73 reads after Gen 35:10 (lemma 3290) = alias not
+retirement, Berachot 13a - in chat record, NOT added (owner chose
+short version). (4) part-5/sec-8 DUPLICATION found (Exod 21
+pipeline told twice); part 5 REPLACED by the manna (law written
+Gen 2:3, enforced by bread Exod 16:20-27, verses DB-verified),
+sixty dependencies kept, "checked by the program"; 4,903 now
+appears ONCE in the doc. (5) six-laws subsection REMOVED whole
+(122 lines; cases live in git history). (6) Genesis pass entered
+in "What stands demonstrated": all 1,533 Genesis verses + Exod
+1-21 (582) + 3 Lev probes = the 97 units, GitHub address given
+inline; limit filed in not-yet half (lighter reading, marked for
+redo under the full rule; "debt" wording BANNED by owner, "We say
+so plainly" sentence dropped on owner order). (7) NEW method
+section "How a verse becomes logic, and logic becomes code": six
+flush-left steps (tree from the marks w/ cluster-leaves owner fix,
+morph tags, open the Oral Torah, match the verse to its logics
+[sec-7 roll], write the logic = THE SPECIFICATION, code from the
+logic + freeze); critical-tier sentence added after audit verdict
+"discipline yes, certification no". (8) owner IDE edits respected
+(Proposition heading now "The Hebrew Bible is a simulation" +
+prologue rewrites). (9) PDF RENDERING born: NEW TOOL logic/law_era/
+scratch_mirror/build_disclosure_pdf.py (TextKit via pyobjc, --user
+installed Cocoa+Quartz wheels, py3.14 OK); blank-pages-after-2 bug
+fixed by forcing full glyph layout + frame grow; 30 pages, zero
+empty, Hebrew RTL verified visually (page 3 render), PDFKit
+extraction reads Hebrew in visual order (artifact, not defect).
+Epub rebuilt after every edit. STILL OPEN (unruled): marks-passage
+upgrade to 23,213/23,213; card row "Laws firing automatically"
+still cites Exod 21 while part 5 now shows manna (flagged); one
+"verified by machine" site remains in demonstrated sec (optional
+program-swap); PDF heading trailing periods (TTS layer riding into
+print, strip offered).
 ★ VOICE-EDIT SESSION 2026-08-18 (34th update; inner Disclosure
 COMMITTED c6ba7e4; COMPACTION POINT #34 stamped here): owner
 line-edited the recital by voice, six passages reworked on owner
