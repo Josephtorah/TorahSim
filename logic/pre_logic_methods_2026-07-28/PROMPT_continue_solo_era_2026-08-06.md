@@ -1680,7 +1680,8 @@ hand-edits on disk respected (stale-IDE-buffer near-miss handled w/
 scratchpad backup, disk verified byte-identical after discard).
 COMMITTED+PUSHED 2026-08-18 on owner word: inner Disclosure fda1995
 (the whole editorial day); TorahCode 75914f6 pushed
-(docs/ARK_AND_THE_BOOK.md + README map).
+(docs/ARK_AND_THE_BOOK.md + README map); outer be87064 pushed (ark
+report + epub + TTS builder + this update).
 ★ RECITAL SECTION 7 REBUILT 2026-08-17 (30th update; inner Disclosure
 committed 2c9e8d0 w/ the 31st-update merge): owner found sec 7 "The Logics That
 Awaited Their Text" thinner than remembered; history verified: the
