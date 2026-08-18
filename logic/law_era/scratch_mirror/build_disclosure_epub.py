@@ -19,12 +19,19 @@ def esc(s):
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 def inline(s):
+    s = s.replace(" · ", ", ")   # TTS: middle-dot separators read badly
     s = esc(s)
     s = re.sub(r"\*\*\*(.+?)\*\*\*", r"<b><i>\1</i></b>", s)
     s = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", s)
     s = re.sub(r"`([^`]+)`", r"<code>\1</code>", s)
     s = re.sub(r"\*(.+?)\*", r"<i>\1</i>", s)
     return s
+
+def punct(s):
+    """TTS pause helper: text-to-speech readers run a heading or table
+    cell straight into the next block unless it ends in punctuation."""
+    s = s.rstrip()
+    return s if s.endswith((".", "!", "?", ":", ";")) else s + "."
 
 def md_to_xhtml(md):
     out, i, lines = [], 0, md.split("\n")
@@ -48,17 +55,17 @@ def md_to_xhtml(md):
             html = ["<table>"]
             for r in rows:
                 html.append("<tr>" + "".join(
-                    "<%s>%s</%s>" % (tag, inline(c), tag) for c in r)
+                    "<%s>%s</%s>" % (tag, inline(punct(c)), tag) for c in r)
                     + "</tr>")
                 tag = "td"
             html.append("</table>")
             out.append("".join(html))
         elif ln.startswith("### "):
-            flush(); out.append("<h3>%s</h3>" % inline(ln[4:]))
+            flush(); out.append("<h3>%s</h3>" % inline(punct(ln[4:])))
         elif ln.startswith("## "):
-            flush(); out.append("<h2>%s</h2>" % inline(ln[3:]))
+            flush(); out.append("<h2>%s</h2>" % inline(punct(ln[3:])))
         elif ln.startswith("# "):
-            flush(); out.append("<h1>%s</h1>" % inline(ln[2:]))
+            flush(); out.append("<h1>%s</h1>" % inline(punct(ln[2:])))
         elif ln.startswith("- "):
             flush()
             items = []
@@ -71,7 +78,7 @@ def md_to_xhtml(md):
                 i += 1
             i -= 1
             out.append("<ul>%s</ul>" % "".join(
-                "<li>%s</li>" % inline(x) for x in items))
+                "<li>%s</li>" % inline(punct(x)) for x in items))
         elif ln.strip() in ("---", "***"):
             flush(); out.append("<hr/>")
         elif not ln.strip():

@@ -1526,6 +1526,161 @@ name-based cross-refs existed, nothing dangles). Epub REBUILT (16
 chapters, verified: old heading gone, merge present, renumbering
 right, canon-close intact); Desktop copy. Inner commit 2c9e8d0
 carries the whole recital day (sec 7 + intro fix + this merge).
+POST-COMMIT (owner 2026-08-17, UNCOMMITTED): six-laws entries
+reformatted flush-left bold numbers (**N. style, list indent
+removed, matching the ten parts); then WHOLE-DOC FORMAT NORMALIZED
+on owner report of messed-up formatting (structural scan clean: no
+broken bold/tables/indents; the mess was mixed wrapping from the
+editing history, 10 overlong lines incl. a 310-char line + 6 jagged
+fragments) — every prose paragraph rewrapped to 74 cols, headings/
+tables untouched, content PROVEN identical modulo whitespace
+(assert), all 14 headings verified; epub rebuilt + needles green.
+THEN TTS-PAUSE BUILD (owner: ElevenReader glides from headers into
+sentences, stray symbols pronounced): investigated — current epub
+text layer has ZERO ">" (the greater-thans were from an earlier
+import, likely the raw md), but headings/table-cells lacked terminal
+punctuation and " · " separators read badly. build_disclosure_epub
+.py (OUTER repo, uncommitted) gained punct() layer: headings + table
+cells get terminal periods, " · " -> ", "; rebuilt + verified (0
+unpunctuated headings/cells, 0 middots). Re-import the fresh epub.
+THEN EDITORIAL PASS (owner asked for scientific-editor review of the
+whole recital; memo delivered, rulings executed 2026-08-17,
+UNCOMMITTED): REMOVED sec 12 What-Is-Known (contradicted sec 9's
+not-a-theorem calibration) + sec 10 Twenty-Four-Books (generic,
+repeated prologue mapping); renumbered -> 12 sections; FIXED sec
+Hour-and-Tool dangling ref to the deleted command-paid finding (now
+the Amalek store/retrieve example); "two centuries" VERIFIED CORRECT
+(Vilna Gaon vs Netziv dispute per the draft doc) but disputants now
+NAMED to kill the sages-ambiguity; 2,107/189 introduced in clock
+prose; letters-vs-words scoped (Torah's letters / Bible's words, 3
+spots); "every such program ever constructed" -> "recognizably
+built"; Gen 1:1 accent-tree rebuilt as clean 6-item list (was
+flattened by the rewrap); third Choose-life (sec-9 close standing-
+prompt clause) CUT, 3 remain (prologue/greatest-items/final words;
+memo had miscounted 3, real count was 4); ADDED verification-address
+paragraph to Hour-and-Tool: github.com/Josephtorah/TorahCode +
+Discord channel announced (way in via repo pages); builder: punct()
+now also on <li> for TTS. Epub rebuilt (14 chapters), every change
+verified present/absent. HELD by owner: strongest-objection
+subsection (#6, discuss); sec-2-merge unruled, untouched. THEN
+PROLOGUE EXPANDED (owner picked ideas 1 roadmap, 2 define-simulation,
+3 what-this-is-not/no-hidden-messages, 6 strongest-rival-account;
+4 numbers-taste and 5 concrete-miss DECLINED; #6 PROVISIONAL, owner
+may remove after review): four insertions in The Proposition, epub
+rebuilt + verified. #6 now lives in the prologue, not sec 9.
+★ ARK REPORT 2026-08-18 (32nd update; UNCOMMITTED): owner asked what
+the Bible says about the Ark (chat survey delivered: aron census 202
+tokens, 4 construct names, 1Sam dominates w/ 40), then the
+project-filter analysis, then "write a detailed report... lesson to
+the unknowing public" -> tanakh_run/ARK_AND_THE_BOOK_report_
+2026-08-18.md + Ark_And_The_Book.epub (15 chapters, TTS-punct build,
+Desktop copy). THE FINDING: the canon executes the ark->book handoff
+on the record. 12 verified clues: prophets mention ark ONCE = Jer
+3:16 deprecation (+3:17 throne->Jerusalem); names all constructs
+(pointer); 1Kgs 8:9 audit = only text; Deut 31:26 scroll deposited
+לעד ("as witness") beside the עדות ("testimony") = same legal office;
+2Chr 35:3 last mention = ארון הקדש ("the holy ark") = the synagogue
+cabinet's exact name (DB-verified, single-verse caveat printed);
+poles-never-removed portability statute + shoulders + leads-the-camp
+Num 10:33; custody protocol = scroll law genre (Uzzah + 1Chr 15:15
+receipt); 1Sam 4-6 capture arc = diaspora rehearsal (גלה exile verb
+at Ichabod); spoils/return inventories count pomegranates/5,400
+vessels but never the ark (loud silence); Neh 8 = Exod 25:22 meeting
+relocated to scroll-on-platform; Ezek 40-48 blueprint has ZERO ark +
+זאת תורת הבית ("this is the torah of the house") doubled at 43:12;
+TALMUD SHELF verbatim: BB14 לוחות ושברי לוחות ("tablets and broken
+tablets") in ark = version control/never-delete, Sotah 13 two chests
+(Joseph coffin + Presence), Yoma משנגנז ארון ("when the ark was
+stored away") = GENIZAH VERB for the ark's fate + Second Temple ran
+empty. Boundaries: hiding traditions (Yoma Josiah / Babylon / 2Macc)
+printed, no archaeology claim, single-verse flags. Recital sec-4
+enrichment offered, not ordered. FULL SWEEP COMPLETED on owner order
+2026-08-18 ("did you scan the whole hebrew bible if not do so"): all
+174 ark verses enumerated (22 were outside the report's episodes, all
+read) + companion fields swept (kapporet 22, tablets 33, edut 57,
+footstool 6, menuchah 22). Report gained sec 12 "The full sweep" (7
+witnesses): Num 14:44 second experiment arm (box absent+presumption =
+defeat; +Saul's aborted oracle 1Sam 14:18-19); 1Sam 3:1-4 Samuel
+called BESIDE the ark (last voice-by-the-box, a reader
+commissioned); Lev 16:2 access control (one read/year); 2Sam 11:11
+URIAH cites the ark refusing home (inside the Nathan-console case!);
+titles gathered (1Chr 28:2 footstool+house-of-REST answering Num
+10:33's search, Ps 132 found-it+rest, 1Chr 28:18 cherubim called
+המרכבה "the chariot", Lam 2:1 mourned by title only, Isa 66:1
+scale-up); 2Kgs 11:12 crown+TESTIMONY as regalia + Deut 17:18-19
+king writes own copy; Deut 6:6-9 ark miniaturized (tefillin/mezuzah
+= text-cases on every person/door); CROWN: tablets relocate to the
+HEART, Prov 3:3/7:3 + Jer 17:1 לוח לבם ("tablet of their heart") +
+Jer 31:31-33 new covenant written on hearts = SAME PROPHET as the
+3:16 deprecation (retirement and relocation in one book, one voice).
+Synthesis close extended ("boxed to travel, traveled to arrive").
+Old sec 12 -> 13. Epub rebuilt (16 chapters), lint 0, verified.
+THEN OWNER INSIGHT 2026-08-18 (broken tablets ~ shattered light; two
+scrolls in the Torah, plain + secret): shelf-verified the whole
+chain VERBATIM: Chagigah 12a + BR 3:6 hidden light עמד וגנזו ("He
+stored it away") לצדיקים לעתיד לבא = SAME VERB גנז as ark (Yoma) +
+texts (genizah; Shabbat's Gamliel Job-Targum גנזו find); BR 3:7
+worlds built/destroyed; Eruvin 54a first tablets = no-forgetting
+higher edition; Menachot 99a derivation from Deut 10:2 אשר שברת
+ושמתם בארון (DB-verified); Berakhot 8b honored broken scholar; JT
+Shekalim white-fire/black-fire taught AMID THE ARK VERSES; Zohar
+custody chain (light lent to infant Moses, returned AT SINAI to
+receive the Torah; נהורא עלאה... לזמנא דאתי); AZ 18a letters flying;
+Dan 12:3 יזהרו כזהר = the Zohar's name from the sealed-book chapter
+(access policy match to sealed-term report). ADDED to ark report as
+sec 13 "The broken tablets and the stored light: the two scrolls"
+(sec 13->14 system reading renumbered, synthesis + preamble
+extended, Luria chain-position boundary printed); lint 0, epub
+rebuilt (17 chapters). THEN SY FULL READ on owner question (does SY
+speak of shattered light): NEGATIVE verified, no אור/שבר/גנז/נצוצ/
+זהר in either recension, world unruptured; but full read (both
+recensions, ~15k tokens) found the architecture under SY's own
+vocabulary: 2:4 the WHEEL forward/backward w/ its sign ענג/נגע
+("delight/plague") = SAME 3 LETTERS reordered -> damage = wrong
+permutation, repair = re-ordering (the secret scroll = the wheel
+turned the other way; joins Ramban's Names-parse + tziruf); 6:2
+טובה שמורה לטובים ("good stored up for the good") = the storage
+doctrine under verb שמר; 1:5 depth-of-evil axis; 5:2/6:3 designed
+war, organs cleaving; 1:4/4:2 השב יוצר על מכונו restore imperative;
+2:6 tohu substrate ~ later "world of tohu" naming; luminous images
+only: bazak flash 1:6 + flame-bound-to-coal 1:7. FOLDED into ark
+report sec 13 as "WHAT THE BOOK OF FORMATION ADDS" + boundary
+extended (SY bridges = later readings/our synthesis); lint 0, epub
+rebuilt (17 chapters, 9,279 words). THEN CROSS-REFERENCED on owner
+word: UB recital sec 4 (The Ark and Its Cargo) gained a closing
+paragraph naming the companion report (202 occurrences walked, the
+handoff executed, retirement never-missed) and pointing to the
+TorahCode repository "named later in this recital"; recital epub
+rebuilt (14 chapters, verified). Report COPIED VERBATIM to the
+public repo as TorahCode/docs/ARK_AND_THE_BOOK.md (side by side with
+the instrument; TorahCode README docs-map line updated). Canonical
+copy stays in tanakh_run/; the docs/ copy is the published mirror.
+THEN SEC 11 THREEFOLD INVITATION REMOVED (owner "I don't like
+the three fold invitation. lets just take it out"): section deleted
+whole, Final Words renumbered 12->11 (recital now 11 numbered
+sections), prologue roadmap's "and the invitation" clause fixed to
+"and the final words"; epub rebuilt (13 chapters), verified no
+invitation/threefold remains. THEN "GOD'S OPEN SOURCE PROJECT" WOVEN IN (owner idea): subtitle
+line under the title; prologue paragraph after the test-promise
+(SOURCE = the world's specification, OPEN = self-commanded
+publication: Deut 31:10-12 seventh-year public reading + king's own
+copy + לא בשמים הוא "it is not in heaven" Deut 30:12 DB-verified,
+PROJECT = ports open + Oral Torah maintainers' log; closes "a code
+review three thousand years in the making"); Hour-and-Tool line ("An
+open repository is the only fitting reading room..."); Final Words
+echo ("The source is open, as its Author published it"). Exact
+phrase x3 + echo; epub rebuilt (13 chapters), verified. THEN
+final prologue polish (owner): 24-book scope sentences ("the claim
+under test is the whole shelf... final unfinished decree of
+Chronicles"); open-source paragraph REWRITTEN SHORT on owner order
+(dev plain-speech: source published, license לא בשמים הוא "not in
+heaven", letter-perfect maintainers, append-only, disputes both
+sides, open items open, "What follows is the code review"); owner
+hand-edits on disk respected (stale-IDE-buffer near-miss handled w/
+scratchpad backup, disk verified byte-identical after discard).
+COMMITTED+PUSHED 2026-08-18 on owner word: inner Disclosure fda1995
+(the whole editorial day); TorahCode 75914f6 pushed
+(docs/ARK_AND_THE_BOOK.md + README map).
 ★ RECITAL SECTION 7 REBUILT 2026-08-17 (30th update; inner Disclosure
 committed 2c9e8d0 w/ the 31st-update merge): owner found sec 7 "The Logics That
 Awaited Their Text" thinner than remembered; history verified: the
