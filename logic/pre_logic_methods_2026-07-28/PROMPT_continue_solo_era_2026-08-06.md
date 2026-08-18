@@ -1681,7 +1681,35 @@ scratchpad backup, disk verified byte-identical after discard).
 COMMITTED+PUSHED 2026-08-18 on owner word: inner Disclosure fda1995
 (the whole editorial day); TorahCode 75914f6 pushed
 (docs/ARK_AND_THE_BOOK.md + README map); outer be87064 pushed (ark
-report + epub + TTS builder + this update).
+report + epub + TTS builder + this update). POST-COMMIT 2026-08-18
+(UNCOMMITTED, inner): owner exercised the reserved review right on
+prologue idea #6: rival-account paragraph REMOVED whole; roadmap
+close fixed ("Carry the two readings..." -> "Judge at the end.");
+epub rebuilt + verified. ALSO our-code "machine" renamed "the
+program" (Amaziah passage x2 + echo fix; owner rejected "rules
+engine" as law-flavored; machines-as-computers + word-as-machine
+metaphor + "verified by machine" idiom all KEPT); epub rebuilt.
+★ FULL-TANAKH ACCENT-TREE PARSE 2026-08-18 (33rd update; milestone,
+UNCOMMITTED): owner asked the recital's marks passage to reference
+the whole Bible, not just the Torah; per project law the claim
+required the test, so the sweep ran: taamim_tree_parse.parse_verse
+over ALL 23,213 verses of all 24 books (39 OSHB XMLs, poetry system
+incl. Job prose-frame) under rules v3 -> 23,213/23,213 unique +
+leaf_complete, ZERO exceptions, zero errors. The 2026-07-27 Torah
+result (5,853/5,853 under v1) now extends to the COMPLETE CANON.
+Driver: logic/solo_tools/full_tanakh_parse_sweep.py (copied from
+scratchpad); result JSON in scratchpad (regenerable). Recital
+passage currently carries the honest hedge ("the same check runs
+onward through them") + Torah numbers; UPGRADE to the full 23,213
+claim OFFERED, awaiting owner word. Also owner-directed recital
+polish batch (uncommitted past fda1995): rival-account paragraph
+OUT, machine->program renames + computer swap, container-instead-of-
+treasure, sec-5 heading "The Masoretes - The Guardians of the
+Letters", sec-6 heading finalized by owner "Morphology and the
+Hebrew Language - Words Built Like Code", marks passage widened;
+owner ALSO deleted the roadmap paragraph in their own IDE edit
+(intentional, prologue lands on the code-review line). COMMITTED
+inner e7eae8f 2026-08-18 on owner word (the whole polish batch).
 ★ RECITAL SECTION 7 REBUILT 2026-08-17 (30th update; inner Disclosure
 committed 2c9e8d0 w/ the 31st-update merge): owner found sec 7 "The Logics That
 Awaited Their Text" thinner than remembered; history verified: the
