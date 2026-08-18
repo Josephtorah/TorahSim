@@ -1689,6 +1689,36 @@ epub rebuilt + verified. ALSO our-code "machine" renamed "the
 program" (Amaziah passage x2 + echo fix; owner rejected "rules
 engine" as law-flavored; machines-as-computers + word-as-machine
 metaphor + "verified by machine" idiom all KEPT); epub rebuilt.
+★ VOICE-EDIT SESSION 2026-08-18 (34th update; inner Disclosure
+COMMITTED c6ba7e4; COMPACTION POINT #34 stamped here): owner
+line-edited the recital by voice, six passages reworked on owner
+wording + drafts: (1) sec-6 difficulty opener -> DIRECT dependency
+statement "This project depends on work done before it: the
+Masoretes, who fixed the reading of every word in ink, and the
+modern tools that defined its grammar in detail. Without both,
+nothing in this recital would be possible."; (2) reconstruction
+sentence extended "...least of all at the precision that today
+allows a programmer to derive code from a verse."; (3) sec-8 opener
+now spells out BOTH halves ("The first half of the design is the
+written text itself, the twenty-four books whose housing, letters,
+and grammar this recital has now walked."); (4) "absurd" -> "would
+make no sense over ordinary literature"; (5) ONKELOS PASSAGE made
+plain w/ full verses + TRUTH-AUDITED on owner ask: Gen 18:22/19:27
+עמד ("stood") vs Onkelos משמש בצלו ("ministering in prayer") both
+shelf-verified; pray-verb התפלל Torah debut Gen 20:7 CONFIRMED in
+canonical order (then 20:17, 48:11); Onkelos 20:7 ויצלי = SAME root
+(clincher); nuance disclosed: Onkelos also uses צלי at 12:8/13:4
+for called-on-the-name (natural there); claim tightened to "the
+Hebrew verb for praying"; (6) execution-log paragraph -> developer
+pipeline version (one chapter of source Exod 21 THIRTY-SEVEN verses
+[DB-verified], compile 4,903 rows + 117 claims, unit tests = the
+tradition's worked examples, integration run = 64 cases bare-facts-
+in-verdict-out, 43/5/7/9), "in our day" eliminated doc-wide. Epub
+rebuilt after every edit, all verified. STILL OPEN: marks-passage
+upgrade to 23,213/23,213 (offered, unruled); commit word for this
+batch. Owner works with the md open in the IDE: WATCH the stale-
+buffer hazard (one save-clobber near-miss already; reload before
+reading, owner edits land directly on disk and are respected).
 ★ FULL-TANAKH ACCENT-TREE PARSE 2026-08-18 (33rd update; milestone,
 UNCOMMITTED): owner asked the recital's marks passage to reference
 the whole Bible, not just the Torah; per project law the claim
