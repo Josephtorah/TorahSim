@@ -1709,7 +1709,8 @@ Letters", sec-6 heading finalized by owner "Morphology and the
 Hebrew Language - Words Built Like Code", marks passage widened;
 owner ALSO deleted the roadmap paragraph in their own IDE edit
 (intentional, prologue lands on the code-review line). COMMITTED
-inner e7eae8f 2026-08-18 on owner word (the whole polish batch).
+inner e7eae8f 2026-08-18 on owner word (the whole polish batch);
+outer c99efb0 PUSHED (parse milestone + sweep driver + this update).
 ★ RECITAL SECTION 7 REBUILT 2026-08-17 (30th update; inner Disclosure
 committed 2c9e8d0 w/ the 31st-update merge): owner found sec 7 "The Logics That
 Awaited Their Text" thinner than remembered; history verified: the
