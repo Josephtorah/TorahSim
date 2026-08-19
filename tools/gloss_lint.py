@@ -63,6 +63,10 @@ ALLOW = {
     ("gen_33_shaddai_covenant_flesh.py", "silver-bi-khlal"),
     ("gen_34_mamre_laugh_plea.py", "relati-khavdah-very"),
     ("gen_38_moriah_binding_oath.py", "inherit-gate-oyvav"),
+    # dictionary-dependent: the [:-2] variant of "ameha" hits the obscure
+    # word "ame" in macOS's Web2 list but misses in Ubuntu's wamerican-large,
+    # so CI flagged what the Mac passed — pinned here to end the difference
+    ("gen_33_shaddai_covenant_flesh.py", "hi-from-ameha"),
     # CSS property/value tokens in the scroll reader's stylesheet that the
     # transliteration heuristic misreads as Hebrew compounds
     ("index.html", "webkit-text-size-adjust"),
@@ -236,7 +240,7 @@ def main(paths):
             if (base, tok) in ALLOW:
                 continue
             total += 1
-            print("FLAG  %-24s ...%s..." % (tok, ctx.strip()))
+            print("FLAG  %-24s %s  ...%s..." % (tok, p, ctx.strip()))
     print("gloss_lint: %d flag(s)" % total)
     sys.exit(1 if total else 0)
 
