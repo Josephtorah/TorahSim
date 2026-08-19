@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 # TorahSim — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
-"""export_site.py — the Tanakh-run app, frozen for static hosting.
+"""export_site.py — torahsim.org, frozen for static hosting.
 
-The live app (app/app.py) is one self-contained page and six JSON
-endpoints. This program renders every endpoint to a file under site/
-and patches the page's fetch paths, so the identical interface serves
+The site's front door is Epic Disclosure (Disclosure/Epic_Disclosure.md
+rendered to site/index.html by the small markdown converter below —
+stock Python, no packages). The Tanakh-run app lives under site/run/:
+the live app (app/app.py) is one self-contained page and six JSON
+endpoints, and this program renders every endpoint to a file and
+patches the page's fetch paths, so the identical interface serves
 from any static host (torahsim.org rides Cloudflare Pages):
 
   api/scenes.json  api/run/<id>.json  api/verse/<ref>.json
@@ -42,8 +45,11 @@ app = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(app)
 
 
+DISC = os.path.join(ROOT, "Disclosure", "Epic_Disclosure.md")
+
+
 def dump(rel, obj):
-    path = os.path.join(SITE, rel)
+    path = os.path.join(SITE, "run", rel)
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(obj, f, ensure_ascii=False, default=str)
@@ -162,20 +168,263 @@ def build_page():
               "$('fout').textContent=JSON.stringify(r,null,2);}")
     p = patch(p, "experimental model, not binding law</small>",
               "experimental model, not binding law &middot; "
-              '<a href="scroll/" style="color:var(--gold);'
+              '<a href="../" style="color:var(--gold);'
+              'text-decoration:none">Epic Disclosure</a> &middot; '
+              '<a href="../scroll/" style="color:var(--gold);'
               'text-decoration:none">the scroll</a></small>')
     p = patch(p, "TorahSim &middot; MIT license",
               "TorahSim &middot; "
               '<a href="https://github.com/Josephtorah/TorahSim" '
               'style="color:inherit">source</a> &middot; MIT license')
-    with open(os.path.join(SITE, "index.html"), "w", encoding="utf-8") as f:
+    with open(os.path.join(SITE, "run", "index.html"), "w",
+              encoding="utf-8") as f:
         f.write(p)
+
+
+# ---------------------------------------------------------------------------
+# EPIC DISCLOSURE — the front door: Disclosure/Epic_Disclosure.md rendered
+# to site/index.html by this small converter (headers, emphasis, lists, one
+# table — the only markdown the recital uses). The design was settled in
+# mockup review 2026-08-19: one long scroll, fixed table of contents, the
+# button masthead, minimum linking into the instruments.
+# ---------------------------------------------------------------------------
+import html as _html
+
+DISC_LINKS = [
+    ("github.com/Josephtorah/TorahSim",
+     "https://github.com/Josephtorah/TorahSim", 2),
+    ("Genesis 1:1", "scroll/#Gen/1/1", 1),
+    ("Sixty-four recorded cases", "run/", 1),
+    ("The Ark and the Book",
+     "https://github.com/Josephtorah/TorahSim/blob/main/docs/"
+     "ARK_AND_THE_BOOK.md", 1),
+    ("a Discord channel for this project",
+     "https://discord.gg/UXZUguY9Pb", 1),
+    ("Ninety-seven units", "scroll/units/UNIT_INDEX.html", 1),
+]
+
+GITHUB_SVG = ('<svg class="ic" viewBox="0 0 16 16" aria-hidden="true">'
+              '<path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 '
+              '2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49'
+              '-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15'
+              '-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33'
+              '.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87'
+              '.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82'
+              '.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2'
+              '-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87'
+              ' 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0'
+              ' .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>'
+              '</svg>')
+DISCORD_SVG = ('<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">'
+               '<path fill="currentColor" d="M20.317 4.3698a19.7913 19.7913 '
+               '0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753'
+               '-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0'
+               '-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785'
+               '-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321'
+               '.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00'
+               '.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777'
+               '.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a'
+               '.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722'
+               '-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923'
+               '.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 '
+               '1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246'
+               '.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 '
+               '01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 '
+               '1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 '
+               '3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004'
+               '-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312'
+               '-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0'
+               '-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 '
+               '2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c'
+               '-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 '
+               '2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332'
+               '-.946 2.4189-2.1568 2.4189Z"/></svg>')
+
+DISC_PAGE = """<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TorahSim — Epic Disclosure</title>
+<style>
+:root{--bg:#faf7f0;--ink:#151009;--dim:#57503f;--gold:#6e5417;
+--bright:#b08a3e;--line:#e4dcc8;--panel:#f3eee1}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:20px/1.7 Georgia,'Times New Roman',serif}
+header.site{border-bottom:2px solid var(--gold);padding:0 22px;
+display:flex;align-items:center;gap:18px;height:54px;
+position:sticky;top:0;background:var(--bg);z-index:20}
+header.site .brand{font-size:20px;color:var(--gold);font-weight:bold}
+header.site nav{display:flex;gap:10px;font-size:14px;align-items:center}
+header.site nav.mid{position:absolute;left:50%%;transform:translateX(-50%%)}
+header.site nav.ext{margin-left:auto}
+header.site nav a{border:1px solid var(--bright);border-radius:6px;
+padding:6px 15px;color:var(--gold);text-decoration:none;
+font-family:Georgia,serif;white-space:nowrap;line-height:1}
+header.site nav a:hover{background:var(--panel)}
+header.site nav a.on{background:var(--gold);color:var(--bg);
+border-color:var(--gold);font-weight:bold}
+header.site nav.ext a{border:none;padding:6px 4px}
+svg.ic{width:15px;height:15px;vertical-align:-2px;margin-right:5px}
+main{display:flex;max-width:1320px;margin:0 auto}
+#toc{width:330px;flex-shrink:0;position:sticky;top:54px;
+align-self:flex-start;max-height:calc(100vh - 80px);overflow-y:auto;
+padding:26px 20px;font-size:inherit;line-height:1.4;
+border-right:1px solid var(--line)}
+#toc a{display:block;color:var(--dim);text-decoration:none;padding:7px 0}
+#toc a:hover{color:var(--gold)}
+article{max-width:46em;padding:30px 34px 90px;min-width:0}
+h1{font-size:44px;line-height:1.15;color:var(--gold);font-weight:normal;
+margin:26px 0 6px;letter-spacing:.01em}
+h1 + p b{font-size:19px;color:var(--dim);font-weight:normal;
+font-style:italic}
+h2{font-size:29px;color:var(--gold);font-weight:normal;
+margin:56px 0 12px;border-bottom:1px solid var(--line);padding-bottom:8px;
+scroll-margin-top:72px}
+h3{font-size:21px;color:var(--ink);margin:34px 0 8px}
+p{margin:0 0 1.05em}
+a{color:var(--gold);text-decoration:none;
+border-bottom:1px dotted var(--bright)}
+code{font:14px ui-monospace,Menlo,monospace;background:var(--panel);
+padding:1px 5px;border-radius:3px}
+ul{margin:0 0 1.05em;padding-left:1.4em}
+hr{border:none;border-top:1px solid var(--line);margin:34px 0}
+.tablewrap{overflow-x:auto;margin:0 0 1.05em}
+table{border-collapse:collapse;font-size:14.5px;line-height:1.5}
+th,td{border:1px solid var(--line);padding:7px 12px;text-align:left;
+vertical-align:top}
+th{background:var(--panel);color:var(--gold);font-weight:normal;
+text-transform:uppercase;font-size:11.5px;letter-spacing:.09em}
+footer{border-top:1px solid var(--line);color:var(--dim);
+font-size:12.5px;padding:18px 34px;text-align:center}
+#menu{display:none;background:none;border:1px solid var(--line);
+border-radius:5px;color:var(--gold);font-size:19px;line-height:1;
+padding:5px 9px;cursor:pointer}
+@media(max-width:900px){
+header.site{height:auto;padding:8px 14px;flex-wrap:wrap}
+header.site nav.mid{position:static;transform:none;margin-left:auto}
+#toc{display:none}
+#toc.open{display:block;position:fixed;top:54px;left:0;bottom:0;
+width:min(300px,85vw);background:var(--bg);z-index:10;
+border-right:1px solid var(--line);box-shadow:4px 0 18px rgba(0,0,0,.12)}
+#menu{display:inline-block}
+article{padding:20px 18px 70px}
+body{font-size:18px}}
+</style></head><body>
+<header class="site">
+  <button id="menu" aria-label="contents"
+    onclick="document.getElementById('toc').classList.toggle('open')">&#9776;</button>
+  <span class="brand">TorahSim</span>
+  <nav class="mid">
+    <a class="on" href="./">Epic Disclosure</a>
+    <a href="scroll/">The Scroll</a>
+    <a href="run/">The Run</a>
+  </nav>
+  <nav class="ext">
+    <a href="https://github.com/Josephtorah/TorahSim" target="_blank" rel="noopener">%s github</a>
+    <a href="https://discord.gg/UXZUguY9Pb" target="_blank" rel="noopener">%s discord</a>
+  </nav>
+</header>
+<main>
+<nav id="toc" onclick="if(event.target.tagName==='A')this.classList.remove('open')">%s</nav>
+<article>
+%s
+</article>
+</main>
+<footer>TorahSim &middot; Epic Disclosure &middot; %s &middot;
+experimental model &mdash; not binding religious law &middot;
+<a href="https://github.com/Josephtorah/TorahSim" style="color:inherit">source</a></footer>
+</body></html>
+"""
+
+
+def _md_inline(s):
+    s = _html.escape(s, quote=False)
+    s = re.sub(r"`([^`]+)`", r"<code>\1</code>", s)
+    s = re.sub(r"\*\*([^*]+)\*\*", r"<b>\1</b>", s)
+    s = re.sub(r"\*([^*]+)\*", r"<i>\1</i>", s)
+    return s
+
+
+def build_disclosure():
+    text = open(DISC, encoding="utf-8").read()
+    m = re.search(r"\*\*Date:\*\* (\S+)\n*", text)
+    page_date = m.group(1) if m else ""
+    if m:
+        text = text.replace(m.group(0), "", 1)
+
+    body, toc = [], []
+    lines = text.split("\n")
+    i, para = 0, []
+
+    def flush():
+        if para:
+            body.append("<p>" + _md_inline(" ".join(para)) + "</p>")
+            para.clear()
+
+    while i < len(lines):
+        ln = lines[i]
+        if ln.startswith("# "):
+            flush(); body.append("<h1>" + _md_inline(ln[2:]) + "</h1>")
+        elif ln.startswith("## "):
+            flush()
+            sid = "s%d" % (len(toc) + 1)
+            toc.append((sid, ln[3:]))
+            body.append('<h2 id="%s">%s</h2>' % (sid, _md_inline(ln[3:])))
+        elif ln.startswith("### "):
+            flush(); body.append("<h3>" + _md_inline(ln[4:]) + "</h3>")
+        elif ln.startswith("- "):
+            flush()
+            items = []
+            while i < len(lines) and lines[i].startswith("- "):
+                items.append("<li>" + _md_inline(lines[i][2:]) + "</li>")
+                i += 1
+            body.append("<ul>" + "".join(items) + "</ul>")
+            continue
+        elif ln.startswith("|"):
+            flush()
+            rows = []
+            while i < len(lines) and lines[i].startswith("|"):
+                cells = [c.strip() for c in lines[i].strip("|").split("|")]
+                if not set("".join(cells)) <= set("- :"):
+                    tag = "th" if not rows else "td"
+                    rows.append("<tr>" + "".join(
+                        "<%s>%s</%s>" % (tag, _md_inline(c), tag)
+                        for c in cells) + "</tr>")
+                i += 1
+            body.append('<div class="tablewrap"><table>%s</table></div>'
+                        % "".join(rows))
+            continue
+        elif ln.strip() == "---":
+            flush(); body.append("<hr>")
+        elif ln.strip() == "":
+            flush()
+        else:
+            para.append(ln.strip())
+        i += 1
+    flush()
+    content = "\n".join(body)
+
+    for phrase, url, count in DISC_LINKS:
+        assert content.count(phrase) >= count, phrase
+        target = "" if url.startswith("http") is False else \
+            ' target="_blank" rel="noopener"'
+        content = content.replace(
+            phrase, '<a href="%s"%s>%s</a>' % (url, target, phrase), count)
+
+    toc_html = "".join('<a href="#%s">%s</a>'
+                       % (sid, _html.escape(t)) for sid, t in toc)
+    page = DISC_PAGE % (GITHUB_SVG, DISCORD_SVG, toc_html, content,
+                        _html.escape(page_date))
+    with open(os.path.join(SITE, "index.html"), "w", encoding="utf-8") as f:
+        f.write(page)
+    print("  disclosure             %5d sections rendered" % len(toc))
 
 
 def main():
     if os.path.isdir(SITE):
         shutil.rmtree(SITE)
-    os.makedirs(SITE)
+    os.makedirs(os.path.join(SITE, "run"))
+    build_disclosure()
 
     scenes = []
     for s in app.CAT["scenes"]:

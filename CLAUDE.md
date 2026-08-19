@@ -31,13 +31,17 @@ whole Torah, with the 97 derivation review pages under `scroll/units/`).
 
 ## The public site — torahsim.org
 
-The app is served publicly at **torahsim.org** as a static export on
+The site is served publicly at **torahsim.org** as a static export on
 Cloudflare Pages (project `torahsim`; torahsim.com 301-redirects to
-.org at the zone level). The export is built by `tools/export_site.py`
-into `site/` (gitignored, generated): every scene, verse, replay event,
-and custom-forms result is a real machine call frozen at build time —
-free-typed parameters become curated value lists so the whole space
-precomputes. To publish a change:
+.org at the zone level). The front door is **Epic Disclosure** —
+`Disclosure/Epic_Disclosure.md` is the canonical text, rendered to the
+root page by the exporter's own markdown converter. The Tanakh-run app
+lives at **/run/** and the scroll reader at **/scroll/**. The export is
+built by `tools/export_site.py` into `site/` (gitignored, generated):
+every scene, verse, replay event, and custom-forms result is a real
+machine call frozen at build time — free-typed parameters become
+curated value lists so the whole space precomputes. To publish a
+change:
 
 ```
 python3 tools/check.py                 # green first, always
