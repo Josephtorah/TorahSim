@@ -31,9 +31,10 @@ whole Torah, with the 97 derivation review pages under `scroll/units/`).
 
 ## The public site — torahsim.org
 
-The site is served publicly at **torahsim.org** as a static export on
-Cloudflare Pages (project `torahsim`; torahsim.com 301-redirects to
-.org at the zone level). The front door is **Epic Disclosure** —
+The site is served publicly at **torahsimulation.org** as a static
+export on Cloudflare Pages (project `torahsim`; torahsimulation.com,
+torahsim.org, and torahsim.com all 301-redirect to it at the zone
+level). The front door is **Epic Disclosure** —
 `Disclosure/Epic_Disclosure.md` is the canonical text, rendered to the
 root page by the exporter's own markdown converter. The Tanakh-run app
 lives at **/run/** and the scroll reader at **/scroll/**. The export is
