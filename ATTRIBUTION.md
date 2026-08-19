@@ -1,6 +1,6 @@
 # Attribution and data provenance
 
-TorahCode builds on the work of others. This file records exactly what came
+TorahSim builds on the work of others. This file records exactly what came
 from where, and under what terms.
 
 ## Hebrew text — Westminster Leningrad Codex (public domain)

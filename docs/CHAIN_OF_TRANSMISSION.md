@@ -1,6 +1,6 @@
 # The chain of transmission
 
-TorahCode computes with the Written Torah as explained by the Oral Torah.
+TorahSim computes with the Written Torah as explained by the Oral Torah.
 The oral explanation did not float free for three thousand years — it was
 carried by an ordered, named, dated sequence of works, each building on the
 ones before it. This document lists each work in the chain as it occurs,

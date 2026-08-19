@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# TorahCode — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
+# TorahSim — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
 # =============================================================================
 # SIMULATION SKETCH — what the Exodus 21 machine looks like as a WORLD,
 # not a judge. Prototype (a sketch, not a stamped machine), run on the

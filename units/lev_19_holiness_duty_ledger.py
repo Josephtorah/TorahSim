@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# TorahCode — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
+# TorahSim — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
 # =============================================================================
 # lev_19_holiness_duty_ledger — 19:1-37
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.

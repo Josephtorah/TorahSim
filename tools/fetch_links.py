@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# TorahCode — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
+# TorahSim — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
 """
 fetch_links.py — step 1 of building your local source shelf: pull Sefaria's
 link index (every cataloged oral-law source anchored to a verse) into

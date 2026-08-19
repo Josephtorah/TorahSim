@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# TorahCode — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
+# TorahSim — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
 # =============================================================================
 # THE TANAKH RUN — the live web app
 #
@@ -1331,7 +1331,7 @@ $('detail').innerHTML=h;}
 boot();
 </script>
 <div style="margin:26px 0 12px;padding-top:10px;border-top:1px solid #333;
-font-size:11px;opacity:.65">TorahCode &middot; MIT license &middot;
+font-size:11px;opacity:.65">TorahSim &middot; MIT license &middot;
 data attributions in ATTRIBUTION.md at the repo root &middot;
 experimental model &mdash; not binding religious law</div>
 </body></html>

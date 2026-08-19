@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# TorahCode — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
+# TorahSim — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
 # =============================================================================
 # gen_09_helper_woman_first_speech — 2:18-25
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.

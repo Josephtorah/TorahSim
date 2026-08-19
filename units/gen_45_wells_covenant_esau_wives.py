@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# TorahCode — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
+# TorahSim — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
 # =============================================================================
 # gen_45_wells_covenant_esau_wives — 26:17-35
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.

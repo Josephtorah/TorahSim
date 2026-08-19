@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# TorahCode — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
+# TorahSim — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
 """fetch_corpus.py — build the WHOLE-WORK local corpus: shelf/corpus/.
 
 Where fetch_links.py + fetch_texts.py build a per-verse-span source shelf,

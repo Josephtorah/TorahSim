@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# TorahCode — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
+# TorahSim — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
 # =============================================================================
 # gen_47_grudge_flight_paddan_send — 27:41-28:9
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.

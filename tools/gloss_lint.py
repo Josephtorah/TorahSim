@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# TorahCode — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
+# TorahSim — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
 # -*- coding: utf-8 -*-
 """gloss_lint.py — Hebrew-glossing check (method law 8: no Hebrew term,
 in script, transliterated, or as jargon, without an English counterpart

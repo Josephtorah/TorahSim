@@ -1,4 +1,4 @@
-# TorahCode
+# TorahSim
 
 **The laws of the Hebrew Bible, as explained by its own oral tradition,
 rewritten as running computer code — and tested against the rest of the

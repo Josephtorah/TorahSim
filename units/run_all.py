@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# TorahCode — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
+# TorahSim — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
 """run_all.py — run every derivation unit in this directory, in canon
 order, and report. Each unit file re-proves itself: its assertion block
 was baked from the derivation machine's actual final state, so a GREEN

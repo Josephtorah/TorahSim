@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# TorahCode — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
+# TorahSim — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
 # =============================================================================
 # LAW ERA v2 DERIVATION — DRAFT (pre-freeze)
 # exo_21 block 3 (+tail): Exodus 21:28-37 — goring ox, pit, ox-vs-ox, theft

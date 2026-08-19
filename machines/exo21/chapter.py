@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# TorahCode — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
+# TorahSim — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
 # =============================================================================
 # LAW ERA v2 — CHAPTER ASSEMBLY (pre-freeze DRAFT)
 # exo_21_v2: Exodus 21:1-37 — the full span of frozen unit

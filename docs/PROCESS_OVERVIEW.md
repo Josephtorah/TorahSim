@@ -1,6 +1,6 @@
-# TorahCode — process overview
+# TorahSim — process overview
 
-TorahCode is a verification instrument. It takes the laws of the Hebrew
+TorahSim is a verification instrument. It takes the laws of the Hebrew
 Bible, as explained by the oral tradition, rewrites them as running computer
 code, and then tests that code against the rest of the Hebrew Bible — feeding
 it the recorded cases of the Prophets and Writings and checking whether the

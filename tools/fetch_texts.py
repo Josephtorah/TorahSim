@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# TorahCode — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
+# TorahSim — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
 """
 fetch_texts.py — step 2 of building your local source shelf: download the
 TEXT of every oral-law source that the link index (shelf/links/, built by

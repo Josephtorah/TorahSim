@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# TorahCode — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
+# TorahSim — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
 # =============================================================================
 # gen_50_wage_seven_years_switched_bride — 29:15-30
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
