@@ -1,0 +1,1276 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_24_nations_table — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_24_nations_table?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The nations table: of these the nations divided after the flood (10:1-32) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_24_nations_table</b> · Genesis 10:1-32 · derive logic_derived_v1 · phase C-24</div>
+<div class="meta"><a href="../#Gen/10/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">וְאֵלֶּה תּוֹלְדֹת בְּנֵי־נֹחַ — וּמֵאֵלֶּה נִפְרְדוּ הַגּוֹיִם</span> · <i>ve-eleh toledot bnei-Noach — u-me-eleh nifredu ha-goyim</i> · &#x27;And these are the generations of the sons of Noach&#x27; — &#x27;and of these the nations divided&#x27;</p>
+<div class="note">REVIEW PASSED and FROZEN 2026-08-03 by the main loop: precedent quotes (gen_16 SECTION, gen_14 row-class, gen_13 city-install, gen_09 PATTERN, gen_23 subject-ambiguity discipline) verified verbatim; eleven censuses independently re-run (goy 1-6+7, mishpachah 2-6+7, reshit 1-2, mamlakhah, gibbor&#x27;s five, the palag hapax, putz token 1, gevul/bekhor/sedom debuts, Bavel&#x27;s two, YHWH x2-in-the-proverb-only, the 287 count); all three flagged bold choices RATIFIED; glossing airtight; nothing invented. Derived 2026-08-03 by the second-generation derivation agent (freeze-after-review by the main loop — no agent freeze); its second unit, sixth under the PIPELINE + DEBUT-MAP process. SPAN OWNER-RULED: whole table as ONE ledger-genre unit (the agent&#x27;s staged recommendation accepted; boot steps grouped on the letter&#x27;s own paragraphs — twelve steps, grouping recorded in step B). Precedents pulled verbatim before drafting: gen_16&#x27;s heading (&#x27;SECTION(toledot_noach, eleh toledot noach — the third generations header)&#x27;), gen_09&#x27;s PATTERN (&#x27;PATTERN(azav(ish, av_ve_em) ∧ davak(ish, be_ishto) ∧ hayu(basar_echad))&#x27; — the al-ken &#x27;therefore&#x27; etiology class), gen_13&#x27;s city (&#x27;WORLD += {ir}&#x27; — the first HUMAN install, on a mere participle) and its begetting-chain-as-EVENTs discipline (TIR-032 on passives), gen_14&#x27;s ledger row-facts (&#x27;HOLDS(banim_u_vanot(adam), t0)&#x27;). Calibrated coverage (charter 4.1): Onkelos read Tier-A at derive time (32 sequential fetches, Data/FETCHLOG.md — the buffer RESOLVES the Ashur-ambiguity (&#x27;the ASSYRIAN went out and built&#x27;), ACTUALIZES the map (Shinar -&gt; &#x27;the land of BABEL&#x27;; Kaftorim -&gt; Cappadocians; the Sinite -&gt; an actualized people), NORMALIZES away the closings&#x27; one-preposition delta, doubles Nimrod&#x27;s mighty-word with an intensifier, and levels the Hebrew scatter-triple to an Aramaic pair); trees from the DB&#x27;s stored tree_json. TWENTIETH PROSPECTIVE MIDDOT RUN (logic/middot_scan/WATCHLIST_gen24_prospective_2026-08-03.md): cache holds ZERO sources for Gen 10:1-32 — EIGHTEENTH tripwire in a row. INTERPRETER: ZERO extensions — fifteenth extension-free derivation candidate in a row.</div>
+<div class="note">Logic-derived v1: v3 ta&#x27;amim trees (from DB tree_json) -&gt; leaf role frames from OSHB morph -&gt; operator lines citing TIR rules -&gt; machine-state scenarios. Machine tokens apostrophe-free and underscore-joined (reshit_mamlakhto_bavel, u_me_eleh_nifredu_ha_goyim_ba_aretz_achar_ha_mabul).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (retro, oral-first era; manifest logic/oral_audit/manifests/gen_24_nations_table_claims.json — 10 VERIFIED, 0 FAILED, 1 UNCHECKABLE; record logic/oral_audit/AUDIT_gen_24_2026-08-08.md). The edge-richest span yet — six attested inheritance edges. CROWNS (chain-attested, DB-verified): (1) G24-03 the proverb&#x27;s full spelling: כנמרד גבור ציד (&quot;like Nimrod, a MIGHTY hunter&quot;) — the Masorah: this גבור alone plene in the Torah in this phrasing, the narrative&#x27;s mighty-words bare (10:8 and the verse&#x27;s own first): the SAYING carries the full spelling the story withholds. (2) G24-07 יאמר (&quot;it is SAID,&quot; passive) — exactly two Torah tokens: Nimrod&#x27;s proverb (10:9) and the Book of the Wars of the LORD (Num 21:14); the Kitzur Baal HaTurim&#x27;s trio adds Zion&#x27;s every-native-mighty verse (Ps 87:5) — an inheritance edge. (3) G24-01 וצבים (&quot;and Tzevoyim&quot;) — written doubly defective, READ וצבוים (the Ramah&#x27;s four-member written/read list); instrument note: single-token encoding here vs 8:17&#x27;s dual-token. (4) G24-02 ותבל (&quot;and Tubal,&quot; Japheth&#x27;s son) defective — the same Ramah note gen_13 verified from Tubal-Cain&#x27;s side, now locked at both anchors. (5) G24-06 לגויהם (&quot;BY their nations,&quot; 10:31) with LAMED per all books and the Ramah, the Hilleli&#x27;s bet recorded — and the TRANSLATIONS split as witnesses: Onkelos like the bet, Yonatan ben Uzziel precisely the lamed; 10:32&#x27;s true בגויהם (bet) locked beside it. (6) G24-05/08/09 name-spellings: רחבת (&quot;Rehovot-City,&quot; 10:11) unique-defective; חצרמות (&quot;Hazarmavet,&quot; 10:26) ONE word per the Ramah; עובל (&quot;Obal,&quot; 10:28) plene here where Chronicles writes yod — a cross-book variant the tradition itself indexes. (7) G24-04/10 the free-standing כנמרד (no maqqef, the joining hyphen); the dotted gimel of נפרדו הגוים (&quot;the nations divided,&quot; 10:32). DISCREPANCIES: none. INHERITANCE EDGES (attested; Torah side verified, inheritor wording pending): Gen 10:1-30 → I Chronicles 1:5 and 10:4 → I Chr 1:7 — the Chronicles MIRROR-LIST, the whole table inherited as the opening of Israel&#x27;s genealogy; Gen 10:12 → Jonah 1:2 — Nineveh &quot;the GREAT city&quot; built here, inherited by Jonah&#x27;s commission; Gen 10:14 → Amos 9:7 and → Jeremiah 47:4 — the Caphtorim and &quot;the Philistines from Caphtor&quot;; Gen 10:18 → Ezekiel 27:8 — the Arvadite in Tyre&#x27;s lament-roster; G24-07&#x27;s Psalms leg rides verified. INSTRUMENT GAP: G24-11 the 10:6 paragraph DISPUTE — Hilleli has a break, the Jerusalem and Ashkenaz scrolls with Rambam and Meiri have none, the printer&#x27;s break &quot;an error&quot; (Or Torah): paragraph class (G12-11) now holding a documented two-camp case. READINGS (named-only): Nimrod the city-taker (Kitzur 10:9); the Sephardic vowel-splits on וכלנה (&quot;and Calneh&quot;) and הערקי (&quot;the Arkite&quot;) and the soft-letter notes on גררה (&quot;toward Gerar&quot;) and ורעמה (&quot;and Raamah&quot;) — pronunciation class, no letter at stake.</div>
+<div class="meta">confidence: structure tested; operator readings tested-per-TIR; intent hypothesis</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>The nations table (10:1-32), whole — SPAN OWNER-RULED after the staged recommendation: the letter frames the chapter as one object (the 10:1/10:32 inclusio; the three closings&#x27; cross-section compare; the duplicate-name pairs spanning Ham&#x27;s and Shem&#x27;s lines), and gen_14&#x27;s 32-verse ledger is the scale precedent. 11:1 opens Babel (the next unit&#x27;s seam; 11:10 the next toledot). Inside: the heading (10:1), Yefet&#x27;s rows and the anomalous close (10:2-5), Ham&#x27;s rows (10:6-7), the Nimrod block (10:8-12), Mitzrayim&#x27;s rows (10:13-14), Canaan&#x27;s rows with the spread and the border (10:15-19), Ham&#x27;s close (10:20), Shem&#x27;s opener and rows (10:21-24), Peleg and Yoktan (10:25-29), the dwelling and Shem&#x27;s close (10:30-31), the grand close (10:32).</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Hebrew source + trees</td><td>All 32 verses from DB tree_json (rule set v3, unique, pure binary; ascii rendered 2026-08-03). BOOT-STEP GROUPING (recorded): twelve steps on the letter&#x27;s own paragraphs — 10:1 / 10:2-5 / 10:6-7 / 10:8-9 / 10:10-12 / 10:13-14 / 10:15-19 / 10:20 / 10:21-24 / 10:25-29 / 10:30-31 / 10:32; grouped steps carry the LEAD verse&#x27;s etnachta (major mid-verse rest) arms in tree_left/tree_right, and every verse&#x27;s full tree stands in binary_trees. Tree facts: 10:1 [the heading roster (etnachta after the three names) | the birth-note ending achar ha-mabul]; 10:9 [the Nimrod fact (etnachta on &#x27;before YHWH&#x27;) | the PROVERB gets its own arm: al-ken yeamar...]; 10:11 [from that land went out Ashur (etnachta) | and built Ninveh, Rechovot-Ir, Kalach]; 10:14 [NO etnachta — the top split severs the last list-item; the Philistine origin-note sits mid-verse]; 10:19 [the border from Tzidon toward Gerar to Azzah (etnachta) | toward Sodom, Gomorrah, Admah, Tzevoyim, to Lasha]; 10:20 and 10:31 [the twin closings split identically: families+tongues (etnachta) | lands+nations]; 10:25 [to Ever two sons (etnachta) | the Peleg naming-reason and Yoktan]; 10:32 [the summary roster (etnachta) | &#x27;and of these the nations divided in the earth AFTER THE DELUGE&#x27;]. THE INCLUSIO IS TREE-VISIBLE: 10:1 and 10:32 both end on the identical verse-final arm — achar ha-mabul (&#x27;after the deluge&#x27;) [tree fact].</td><td>tested</td></tr>
+<tr><td><b>C</b></td><td>Segment structure</td><td>Verb morphology (#IMPOSED OSHB, DB-verified 2026-08-03); survey complete via the debut map (122 flagged lemmas in 287 tokens; 110 proper-name tokens, 79 distinct name-lemmas). THE TABLE IS 91% VERBLESS — 26 verb tokens in 287, pooled in the Nimrod block and the two border-formulas: gen_14&#x27;s ledger signature. Row-grammar: the u-vnei (&#x27;and the sons of&#x27;) formula x14. Beget-grammar splits by line [morphology- verified]: active YALAD (&#x27;begot&#x27;) x6 — Kush, Mitzrayim, Canaan, Arpakhshad, Shelach, Yoktan; passive YULAD (&#x27;was born to&#x27;) x2 — BOTH in Shem&#x27;s line (10:21, 10:25); the niphal at the heading (10:1 va-yivaldu). Zero imperatives, zero jussives. GOY (&#x27;nation&#x27;) BORN IN THE TABLE: Torah tokens 1-6 all in-span; token 7 = 12:2 — &#x27;I will make you a great NATION&#x27;; MISHPACHAH (&#x27;family&#x27;) tokens 2-6 in-span (token 1 = 8:19), token 7 = 12:3 — &#x27;all the FAMILIES of the earth shall be blessed&#x27;: the two refrain-words hand off to the same two Abram-promise verses [the Abram-bridge pair]. THE THREE CLOSINGS word-for-word [letter facts]: Ham&#x27;s (10:20) and Shem&#x27;s (10:31) identical except ONE PREPOSITION — be-goyehem (&#x27;IN their nations&#x27;) vs le-goyehem (&#x27;BY their nations&#x27;); Yefet&#x27;s (10:5) ANOMALOUS — no these-are-the-sons opener, singular ish li-leshono (&#x27;each to his tongue&#x27;) against the others&#x27; plurals, different item order. LASHON (&#x27;tongue&#x27;) debuts in the closings — six Torah tokens total, the first three here; Babel&#x27;s word is the SIBLING saphah (&#x27;lip&#x27;, 11:1-9) — sibling-word split named. THE NIMROD BLOCK: RESHIT (&#x27;beginning&#x27;) token 2 = 10:10 (token 1 = 1:1&#x27;s be-reshit — creation&#x27;s beginning, then the KINGDOM&#x27;s); MAMLAKHAH (&#x27;kingdom&#x27;) Torah debut in the same clause; BAVEL — two Torah tokens, 10:10 and 11:9: the name before the story. GIBBOR (&#x27;mighty&#x27;) — exactly FIVE Torah tokens: 6:4&#x27;s antediluvian mighty-ones, Nimrod x3, and the fifth is GOD (Deut 10:17). The 10:9 proverb rides the al-ken (&#x27;therefore&#x27;) formula — gen_09&#x27;s PATTERN class; 11:9&#x27;s Babel-naming reuses it — and carries the span&#x27;s ONLY divine-name tokens (YHWH x2; Elohim ZERO). TZAYID (&#x27;hunting&#x27;) debuts x2; tokens 3+ are all Esau. CHALAL (&#x27;begin&#x27;) token 4 — the staged threshold-chain (4:26, 6:1, 9:20, Nimrod, Babel 11:6). THE BABEL-ANTICIPATION SET: PALAG (&#x27;split&#x27;) — TORAH HAPAX at 10:25 (niflegah, &#x27;the earth was DIVIDED&#x27;) inside Peleg&#x27;s naming-reason, the table&#x27;s only ki (&#x27;because&#x27;) clause, and a REPORT-naming (no va-yiqra formula); PUTZ (&#x27;scatter&#x27;) token 1 = 10:18 — the Canaanite families SPREAD: the verb Babel fears and receives (11:4, 11:8-9); PARAD (&#x27;separate&#x27;) tokens 2-3 (10:5, 10:32; token 1 = 2:10, Eden&#x27;s river dividing); 9:19&#x27;s NAFTZAH hapax completes the bracketing family; QEDEM (&#x27;east&#x27;) token 3 = 10:30 (token 4 = 11:2); SHINAR token 1 = 10:10 (token 2 = 11:2). CANAAN&#x27;S ROWS: GEVUL (&#x27;border&#x27;) Torah token 1 draws the CANAANITE border (10:19); Sodom (token 1 of 23), Gomorrah, Admah, Tzevoyim, Gerar, Azzah all debut as map-points on it; the KENAANI gentilic debuts (tokens 1-2; token 5 = 15:21, the covenant-of-pieces list); BEKHOR (&#x27;firstborn&#x27; — the Exodus word, 69 tokens) debuts as Canaan&#x27;s firstborn Tzidon. BUILD/CITY CAREERS: BANAH (&#x27;build&#x27;) token 4 = 10:11 — rib (2:22), Cain&#x27;s city (4:17), Noach&#x27;s altar (8:20), Nimrod&#x27;s Ninveh, Babel&#x27;s tower (tokens 5-6); IR (&#x27;city&#x27;) tokens 3-4 between Cain&#x27;s (1-2) and Babel&#x27;s (5-7); GADOL tokens 5-6 — &#x27;the GREAT city&#x27; (10:12) and &#x27;the ELDER brother&#x27; (10:21, pairing 9:24&#x27;s small-son; who-is-elder [OPEN]). DUPLICATE NAMES across lines [no harmonizing]: Sheva (10:7 Ham / 10:28 Shem); Chavilah (10:7 / 10:29; token 1 = 2:11, Eden&#x27;s gold-land); Ashur (10:22 Shem&#x27;s son / 10:11 the block&#x27;s place; token 1 = 2:14, Eden&#x27;s river-map); Lud/Ludim. The 10:11 subject-ambiguity (Ashur went out / he went out to Ashur) is the letter&#x27;s own [OPEN]. THE COUNT: raw 79 distinct name-lemmas / 110 tokens (fathers, places, gentilics included); the chain&#x27;s SEVENTY is [OPEN, named-only]; name-identifications with later nations are the chain&#x27;s — named-only; the two dozen hapax names are letter facts. TOLEDOT series tokens 1-5 = 2:4, 5:1, 6:9, 10:1, 10:32 (token 6 = 11:10); MABUL (&#x27;deluge&#x27;) tokens 10-11 = the inclusio pair (last token = 11:10). NO date in span.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Predicates &amp; outcomes</td><td>The chapter is the flood&#x27;s demographic receipt: one family becomes a world, and the letter files it as a table — rows, refrains, a heading and a matching close — while planting every fuse the next stories light: the nations-word and the family-word born here hand off to Abram&#x27;s promise; the kingdom&#x27;s first &#x27;beginning&#x27; is Babel, named a chapter before its tower; the scatter-vocabulary rehearses on the Canaanites and on Peleg&#x27;s divided earth before Babel makes it a sentence; the Canaanite border pre-loads Sodom and the covenant&#x27;s map; and the one proverb the table preserves hangs the era&#x27;s only divine-name tokens on a hunter. The machine&#x27;s shape is the genre&#x27;s: facts in rows, events only where the letter conjugates, one label, one standing pattern, four cities — and silence in every register the table never touches.</td><td>tested</td></tr>
+<tr><td><b>E</b></td><td>Logic format choice</td><td>Operator lines; NO LEDGER-register row (gen_14&#x27;s discipline). THE HEADING as SECTION [precedent quoted]: gen_16&#x27;s &#x27;SECTION(toledot_noach, eleh toledot noach — the third generations header)&#x27; — a header LABELS, installs nothing; the heading&#x27;s birth-note as EVENT (niphal va-yivaldu, the passive class TIR-032 per gen_13). ROWS as PRECONDITION_STATE facts [precedent quoted]: gen_14&#x27;s &#x27;HOLDS(banim_u_vanot(adam), t0)&#x27; — the ledger row class; the closings and border-formulas likewise facts with deltas NAMED. BEGET-VERBS as EVENTs (gen_13&#x27;s begetting-chain discipline): six actives with Agents, three passives agentless-born (be_born events), the heading&#x27;s niphal the first. THE PROVERB as PATTERN [precedent quoted]: gen_09&#x27;s &#x27;PATTERN(azav(ish, av_ve_em) ∧ davak(ish, be_ishto) ∧ hayu(basar_echad))&#x27; — 10:9&#x27;s al-ken yeamar (&#x27;therefore it is said&#x27;) is the same narrator-etiology formula: a standing generalization, no trigger, no addressee. THE BUILD DECISION [recorded, precedents quoted]: gen_13 installed Cain&#x27;s city on a PARTICIPLE (&#x27;WORLD += {ir}&#x27; — &#x27;he WAS BUILDING&#x27;); the completed-build chain (ark, altar 8:20, vineyard 9:20) installs on wayyiqtol builds; 10:11&#x27;s va-yiven is one of the table&#x27;s only wayyiqtol deed-verbs — the four cities INSTALL: WORLD += {ninveh, rechovot_ir, kalach, resen} (a fortiori from the participle precedent; the table&#x27;s one builder is where the table&#x27;s genre breaks into narrative, and the machine breaks mode exactly there). THE BUILDER AMBIGUITY: the build-EVENT carries NO Agent — the letter&#x27;s subject is readable as Ashur-went-out or he-went-out-to-Ashur [OPEN; the gen_23 dwell-subject discipline; Onkelos resolves it — dual-track]. THE PELEG CLAUSE: fact, NO NAME op — the naming is a REPORT (shem ha-echad Peleg — no va-yiqra &#x27;and-he-called&#x27; formula; the NAME op requires the calling-formula per its introduction; distinction recorded). NO TIME_ANCHOR (no date). NO DECLARE, NO TEST, NO INVARIANT, NO HANDLER — the queue sleeps end to end [letter fact: zero imperatives, zero jussives]. NOTE_PRESUPPOSED: noach ONLY (decision recorded: the sons enter by the heading&#x27;s own roster-facts; every beget-Agent is an event-agent, no presence check). Interpreter extensions: NONE.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Bilingual logic objects</td><td>Every operator line carries he + he_translit + en. Machine tokens apostrophe-free: toledot_bnei_noach, banim_achar_ha_mabul, bnei_yefet_gomer_u_magog, u_me_eleh_nifredu_iyei_ha_goyim_be_artzotam, ish_li_leshono_le_mishpechotam_be_goyehem, hu_hechel_lihyot_gibbor_ba_aretz, ke_nimrod_gibbor_tzayid_lifnei_yhwh, reshit_mamlakhto_bavel_be_eretz_shinar, min_ha_aretz_ha_hi_yatza_ashur, hi_ha_ir_ha_gedolah, asher_yatzu_mi_sham_pelishtim, ve_achar_nafotzu_mishpechot_ha_kenaani, gevul_ha_kenaani_mi_tzidon_ad_azah_ad_lasha, avi_kol_bnei_ever_achi_yefet_ha_gadol, shem_ha_echad_peleg_ki_ve_yamav_niflegah_ha_aretz, kol_yemei — (not used) — kol_eleh_bnei_yoktan, moshavam_mi_mesha_har_ha_qedem, u_me_eleh_nifredu_ha_goyim_ba_aretz_achar_ha_mabul.</td><td>established</td></tr>
+<tr><td><b>G</b></td><td>Oral (named only) + Tier-A translation check</td><td>Named but NOT read (cache: zero for Gen 10:1-32 — EIGHTEENTH tripwire; gen_24 Tier-A queue): Bavli Yoma 10a (&#x27;Bavli&#x27; = Babylonian Talmud; the table&#x27;s name-identifications — the rabbis&#x27; own geography); Bavli Eruvin 53a and Chullin 89a (Nimrod as Amrafel; the rebellion-etymology); Bavli Pesachim 94b; Bavli Sukkah 55b (the seventy bulls for the seventy nations); Bereshit Rabbah 37 (the span); Rashi at 10:8-9 (the ensnarer of mouths), 10:11 (the Ashur reading), 10:21 (the elder-brother question), 10:25 (the division dated). Tier-A Onkelos (32 fetches, FETCHLOG 2026-08-03): the buffer RESOLVES THE ASHUR-AMBIGUITY — &#x27;the ASSYRIAN went out and built&#x27; (nefak Aturaah u-vena, the gentilic: subject decided; the machine holds the letter&#x27;s ambiguity; dual-track); ACTUALIZES THE MAP [the predicted geography-actualization class, confirmed]: Shinar -&gt; &#x27;the land of BABEL&#x27;, Kaftorim -&gt; Cappadocians, the Sinite -&gt; an actualized people-name; NORMALIZES the closings — 10:31&#x27;s le-goyehem rendered with the same in-their-peoples ending as 10:20: the letter&#x27;s one-preposition delta erased (and goy -&gt; am throughout: the nations-word leveled to the people-word; mishpachah -&gt; zaryata, the family-word rendered with the SEED-root); DOUBLES Nimrod&#x27;s might — gibbor -&gt; gibbar TAKKIF (&#x27;mighty STRONG one&#x27;) x3, with lifnei YHWH -&gt; kodam YY (the standard reverential &#x27;before&#x27;); the proverb kept a proverb (al ken yitamar). The beget-voices preserved exactly (olid x6 active / ityelid passives); the Peleg clause&#x27;s split-verb kept cognate (itpeligat) and the naming stays a report; the scatter-triple LEVELED to a pair — putz AND 9:19&#x27;s nafatz both -&gt; the bdr-root (&#x27;disperse&#x27;), parad -&gt; the prsh-root (&#x27;separate&#x27;): the hapax-vs-Babel-verb distinction is invisible in Aramaic (flagged); gevul -&gt; techum (the boundary-word); mabul -&gt; tofana at both inclusio arms — batar tofana closing 10:1 and 10:32 alike.</td><td>tested</td></tr>
+<tr><td><b>H</b></td><td>Scenarios</td><td>S1 the heading labels, installs nothing (one read-flag, queue empty). S2 Yefet&#x27;s rows + the anomalous close hold. S3 the Nimrod pattern on the books. S4 the four cities installed (the machine&#x27;s only installs). S5 the Canaanite spread + the border drawn. S6 Ham&#x27;s close holds. S7 the earth divided in Peleg&#x27;s days. S8 Shem&#x27;s close — the one-letter delta pinned. S9 the grand close seals the inclusio, queue still empty. S10_negative: LET? contract guard; S11_negative: flag-never-block.</td><td>tested</td></tr>
+<tr><td><b>I</b></td><td>English leakage review</td><td>Operators derive from morph codes (the verbless-row census; the active/passive beget split; the two wayyiqtol deed-verbs; zero imperatives/jussives verified) and the complete debut-map survey plus precedent pulls run BEFORE drafting (goy / lashon / saphah / mishpachah / parad / palag / putz / gibbor / tzayid / mamlakhah / reshit / bavel / shinar / ir / banah / ashur / bekhor / gevul / sedom / kenaani / gadol / qedem / chavilah / sheva / toledot / mabul careers; the closings compare; the u-vnei count; the Np-per-section stats; the divine-name scan). NOT supplied: the seventy-count, any name-identification with later nations, the who-is-elder resolution, the Ashur-subject resolution, the Nimrod etymologies, the division&#x27;s dating — every one [OPEN] or named-only; the buffer&#x27;s map-updates and its erasure of the preposition-delta stay dual-track.</td><td>established</td></tr>
+<tr><td><b>J</b></td><td>Pre-flight (draft; freeze is the main loop&#x27;s)</td><td>Pre-flight 2026-08-03 against the UNMODIFIED repo interpreter — zero injected prototypes; GREEN (12/12 steps, 11/11 scenarios). Delivered status DRAFT — review and freeze stay with the main loop (freeze-after-review; the agent never freezes).</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_10_1 · Gen.10.1 · <span class='expr'>THE_FOURTH_TOLEDOT_HEADING</span></h3>
+<p><span class="he">וְאֵלֶּה תּוֹלְדֹת בְּנֵי־נֹחַ שֵׁם חָם וָיָפֶת וַיִּוָּלְדוּ לָהֶם בָּנִים אַחַר הַמַּבּוּל</span> · <i>ve-eleh toledot bnei-Noach Shem Cham va-Yafet va-yivaldu lahem banim achar ha-mabul</i> · [EN-AID/JPS] Now these are the generations of the sons of Noah: Shem, Ham, and Japheth; and unto them were sons born after the flood.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ואלה תולדת בני נח שם חם ויפת</span> · <i>ve-eleh toledot bnei-Noach Shem Cham va-Yafet</i> · the heading roster: these are the generations of the sons of Noach (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויולדו להם בנים אחר המבול</span> · <i>va-yivaldu lahem banim achar ha-mabul</i> · and sons were born to them AFTER THE DELUGE (the inclusio&#x27;s first arm)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>SECTION</td><td><span class="expr">SECTION(toledot_bnei_noach, shem, cham, yefet)</span><br><span class="gloss">= SECTION(generations-sons-of-Noach, Sem, Ham, Japheth)</span><br>THE FOURTH TOLEDOT (&#x27;generations&#x27;) HEADING — the series: token 1 = 2:4 (heavens and earth), 2 = 5:1 (Adam&#x27;s book), 3 = 6:9 (Noach), 4 = here, 5 = 10:32&#x27;s own close, 6 = 11:10 (Shem — the next seam). The class per frozen gen_16: &#x27;SECTION(toledot_noach, eleh toledot noach — the third generations header)&#x27; — a header LABELS; it installs NOTHING [precedent quoted]. The three sons enter by the letter&#x27;s own roster [decision recorded: no presupposition flags for the sons].
+</td><td><span class="he">וְאֵלֶּה תּוֹלְדֹת בְּנֵי־נֹחַ שֵׁם חָם וָיָפֶת</span> · <i>ve-eleh toledot bnei-Noach Shem Cham va-Yafet</i><br><span class="gloss">= these generations sons-of-Noach Shem Cham and-Yafet</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">be_born(e1) ∧ Theme(e1, banim_achar_ha_mabul)</span><br><span class="gloss">= in-born(e1) ∧ Theme(e1, sons-of-after-the-deluge)</span><br>The birth-note: NIPHAL (&#x27;and sons WERE BORN to them&#x27;) — the passive-birth class (TIR-032, gen_13&#x27;s discipline). ACHAR HA-MABUL (&#x27;after the deluge&#x27;) — MABUL token 10; token 11 closes 10:32: THE INCLUSIO — heading and grand close end on the identical two-word arm [tree fact].
+</td><td><span class="he">וַיִּוָּלְדוּ לָהֶם בָּנִים אַחַר הַמַּבּוּל</span> · <i>va-yivaldu lahem banim achar ha-mabul</i><br><span class="gloss">= were-born to-them sons-of after deluge</span></td><td class='cite'>TIR-032</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">noach are READ without prior install (standalone machine; the sons enter by the heading roster)</span><br><span class="gloss">= Noach are READ without prior install (standalone machine; the sons enter by the heading roster)</span><br>flag, not fix</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The corpus opens its atlas: a header, three names, and the flood already receding into a date-line.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_10_2_5 · Gen.10.2-5 · <span class='expr'>YEFET_ROWS_AND_THE_ANOMALOUS_CLOSE</span></h3>
+<p><span class="he">בְּנֵי יֶפֶת גֹּמֶר וּמָגוֹג וּמָדַי וְיָוָן וְתֻבָל וּמֶשֶׁךְ וְתִירָס … מֵאֵלֶּה נִפְרְדוּ אִיֵּי הַגּוֹיִם בְּאַרְצֹתָם אִישׁ לִלְשֹׁנוֹ לְמִשְׁפְּחֹתָם בְּגוֹיֵהֶם</span> · <i>bnei Yefet Gomer u-Magog u-Maday ve-Yavan ve-Tuval u-Meshekh ve-Tiras … me-eleh nifredu iyei ha-goyim be-artzotam ish li-leshono le-mishpechotam be-goyehem</i> · [EN-AID/JPS] The sons of Japheth: Gomer, Magog, Madai, Javan, Tubal, Meshech, Tiras — and the sons of Gomer and of Javan — of these were the isles of the nations divided in their lands, every one after his tongue, after their families, in their nations.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">מאלה נפרדו איי הגוים בארצתם איש ללשנו</span> · <i>me-eleh nifredu iyei ha-goyim be-artzotam ish li-leshono</i> · of these the coast-nations divided, EACH TO HIS TONGUE (10:5 lead-verse etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">למשפחתם בגויהם</span> · <i>le-mishpechotam be-goyehem</i> · by their families, in their nations</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(bnei_yefet_gomer_u_magog_u_maday_ve_yavan, t1)</span><br><span class="gloss">= HOLDS(sons-of-Japheth-Gomer-and-Magog-and-Madai-and-Javan, t1)</span><br>Yefet&#x27;s rows held as ledger facts (gen_14&#x27;s row class: &#x27;HOLDS(banim_u_vanot(adam), t0)&#x27; — quoted): seven sons, then Gomer&#x27;s three and Yavan&#x27;s four — fourteen names, most of them one-token or two-token words [name-identifications with later nations are the chain&#x27;s: named-only].
+</td><td><span class="he">בְּנֵי יֶפֶת גֹּמֶר וּמָגוֹג וּמָדַי וְיָוָן וְתֻבָל וּמֶשֶׁךְ וְתִירָס</span> · <i>bnei Yefet Gomer u-Magog u-Maday ve-Yavan ve-Tuval u-Meshekh ve-Tiras</i><br><span class="gloss">= sons-of Yefet Gomer and-Magog and-Maday and-Yavan and-Tuval and-Meshekh and-Tiras</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(u_me_eleh_nifredu_iyei_ha_goyim_be_artzotam, t1) ∧ HOLDS(ish_li_leshono_le_mishpechotam_be_goyehem, t1)</span><br><span class="gloss">= HOLDS(and-from-these-nifredu-iyei-the-nations-in-artzotam, t1) ∧ HOLDS(each-to-me-leshono-to-mishpechotam-in-goyehem, t1)</span><br>THE ANOMALOUS CLOSE [letter facts, deltas named]: no &#x27;these are the sons of Yefet&#x27; opener (the other two closings have it); SINGULAR ish li-leshono (&#x27;EACH to his tongue&#x27;) against the others&#x27; plural tongue-forms; the item order differs (lands-tongue-families-nations). Inside it, three debuts: GOY (&#x27;nation&#x27;) tokens 1-2 — the nations-word BORN in the table (token 7 = 12:2&#x27;s great-NATION promise [cited]); LASHON (&#x27;tongue&#x27;) token 1 of six in the Torah (Babel&#x27;s word is the sibling saphah, &#x27;lip&#x27; — split named); PARAD (&#x27;separate&#x27;) token 2 — token 1 = 2:10, Eden&#x27;s river dividing into four heads; iyei (&#x27;coastlands of&#x27;) a Torah hapax.
+</td><td><span class="he">מֵאֵלֶּה נִפְרְדוּ אִיֵּי הַגּוֹיִם … אִישׁ לִלְשֹׁנוֹ</span> · <i>me-eleh nifredu iyei ha-goyim … ish li-leshono</i><br><span class="gloss">= these nifredu iyei nations each to-me-leshono</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The first section runs to sea: coastland peoples, each with a tongue — the table says quietly what Babel will say loud.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_10_6_7 · Gen.10.6-7 · <span class='expr'>HAM_ROWS_KUSH_TO_DEDAN</span></h3>
+<p><span class="he">וּבְנֵי חָם כּוּשׁ וּמִצְרַיִם וּפוּט וּכְנָעַן וּבְנֵי כוּשׁ סְבָא וַחֲוִילָה וְסַבְתָּה וְרַעְמָה וְסַבְתְּכָא וּבְנֵי רַעְמָה שְׁבָא וּדְדָן</span> · <i>u-vnei Cham Kush u-Mitzrayim u-Fut u-Khenaan u-vnei Khush Seva va-Chavilah ve-Savtah ve-Ramah ve-Savtekha u-vnei Ramah Sheva u-Dedan</i> · [EN-AID/JPS] And the sons of Ham: Cush, and Mizraim, and Put, and Canaan. And the sons of Cush: Seba, and Havilah, and Sabtah, and Raamah, and Sabteca; and the sons of Raamah: Sheba, and Dedan.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ובני חם</span> · <i>u-vnei Cham</i> · and the sons of Ham (10:6 lead-verse etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">כוש ומצרים ופוט וכנען</span> · <i>Kush u-Mitzrayim u-Fut u-Khenaan</i> · Kush, Mitzrayim, Put — and Canaan</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(bnei_cham_kush_u_mitzrayim_u_fut_u_khenaan, t1) ∧ HOLDS(bnei_khush_seva_va_chavilah_u_vnei_ramah, t1)</span><br><span class="gloss">= HOLDS(sons-of-Ham-Chush-and-Egypt-and-Phut-and-Canaan, t1) ∧ HOLDS(sons-of-Chush-Seba-and-Havilah-and-vnei-ramah, t1)</span><br>Ham&#x27;s rows as ledger facts: MITZRAYIM (&#x27;Egypt&#x27;) — the name&#x27;s Torah token 1 (314 tokens follow); Canaan the fourth son (cursed in the previous span — prose echo, no receipt). DUPLICATE NAMES begin [letter facts, no harmonizing]: CHAVILAH here (token 2 — token 1 = 2:11, EDEN&#x27;S GOLD-LAND) returns as a SHEM-line son at 10:29; SHEVA here (10:7) returns at 10:28 in Shem&#x27;s line — the table lets two brothers hold one name.
+</td><td><span class="he">וּבְנֵי חָם כּוּשׁ וּמִצְרַיִם וּפוּט וּכְנָעַן …</span> · <i>u-vnei Cham Kush u-Mitzrayim u-Fut u-Khenaan …</i><br><span class="gloss">= and-vnei Cham Kush and-Mitzrayim and-Fut and-Khenaan</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The southern rows begin, and the map starts rhyming with itself: Eden&#x27;s gold-land is suddenly somebody&#x27;s son.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_10_8_9 · Gen.10.8-9 · <span class='expr'>NIMROD_AND_THE_PROVERB</span></h3>
+<p><span class="he">וְכוּשׁ יָלַד אֶת־נִמְרֹד הוּא הֵחֵל לִהְיוֹת גִּבֹּר בָּאָרֶץ הוּא־הָיָה גִבֹּר־צַיִד לִפְנֵי יְהוָה עַל־כֵּן יֵאָמַר כְּנִמְרֹד גִּבּוֹר צַיִד לִפְנֵי יְהוָה</span> · <i>ve-Khush yalad et-Nimrod hu hechel lihyot gibbor ba-aretz hu-hayah gibbor-tzayid lifnei YHWH al-ken yeamar ke-Nimrod gibbor tzayid lifnei YHWH</i> · [EN-AID/JPS] And Cush begot Nimrod; he began to be a mighty one in the earth. He was a mighty hunter before the LORD; wherefore it is said: &#x27;Like Nimrod a mighty hunter before the LORD.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">הוא היה גבר ציד לפני יהוה</span> · <i>hu-hayah gibbor-tzayid lifnei YHWH</i> · he was a mighty hunter before YHWH (10:9 lead-verse etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">על כן יאמר כנמרד גבור ציד לפני יהוה</span> · <i>al-ken yeamar ke-Nimrod gibbor tzayid lifnei YHWH</i> · THEREFORE IT IS SAID: like Nimrod, a mighty hunter before YHWH (the proverb&#x27;s own arm)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">beget(e2) ∧ Agent(e2, kush) ∧ Theme(e2, nimrod)</span><br><span class="gloss">= beget(e2) ∧ Agent(e2, Chush) ∧ Theme(e2, Nimrod)</span><br>The table breaks into narrative — its ONLY interruption: the first active beget-verb (YALAD, perfect; gen_13&#x27;s begetting-chain EVENT class). NIMROD — two Torah tokens, both here [the rebellion-etymology is the chain&#x27;s: named-only].
+</td><td><span class="he">וְכוּשׁ יָלַד אֶת־נִמְרֹד</span> · <i>ve-Khush yalad et-Nimrod</i><br><span class="gloss">= and-Khush begot obj-marker·et-Nimrod</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hu_hechel_lihyot_gibbor_ba_aretz, t1) ∧ HOLDS(gibbor_tzayid_lifnei_yhwh, t1)</span><br><span class="gloss">= HOLDS(he-began-lihyot-gibbor-in-the-earth, t1) ∧ HOLDS(gibbor-hunter-lifnei-yhwh, t1)</span><br>HECHEL (&#x27;he BEGAN&#x27;) — the begin-verb&#x27;s token 4 in the staged threshold-chain (4:26 calling begun, 6:1 multiplying, 9:20 the vineyard, here the MIGHT, 11:6 Babel next). GIBBOR (&#x27;mighty&#x27;) — the Torah holds exactly FIVE tokens: 6:4&#x27;s antediluvian mighty-ones, Nimrod&#x27;s three, and the fifth is GOD (Deut 10:17) [cited]. TZAYID (&#x27;hunting&#x27;) debuts x2 — its later Torah career is all Esau. LIFNEI YHWH (&#x27;before YHWH&#x27;) x2 — the span&#x27;s ONLY divine-name tokens; Elohim ZERO in the whole chapter [letter fact; Onkelos doubles the might: gibbar takkif, &#x27;mighty STRONG one&#x27; — dual-track].
+</td><td><span class="he">הוּא הֵחֵל לִהְיוֹת גִּבֹּר בָּאָרֶץ … גִבֹּר־צַיִד לִפְנֵי יְהוָה</span> · <i>hu hechel lihyot gibbor ba-aretz … gibbor-tzayid lifnei YHWH</i><br><span class="gloss">= he began lihyot gibbor earth gibbor-hunter lifnei the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PATTERN</td><td><span class="expr">PATTERN(ke_nimrod_gibbor_tzayid_lifnei_yhwh)</span><br><span class="gloss">= PATTERN(like-Nimrod-gibbor-hunter-lifnei-yhwh)</span><br>THE TABLE&#x27;S ONE PROVERB as PATTERN [precedent quoted]: gen_09 encoded 2:24&#x27;s al-ken (&#x27;therefore&#x27;) etiology as &#x27;PATTERN(azav(ish, av_ve_em) ∧ davak(ish, be_ishto) ∧ hayu(basar_echad))&#x27; — a standing generalization in the narrator&#x27;s mouth, NO trigger, NO addressee. AL-KEN YEAMAR (&#x27;therefore it is said&#x27;) is the same formula bent to a SAYING: the proverb, not the practice — 11:9&#x27;s Babel-naming will reuse the al-ken [letter fact]. The saying stands on the books forever; nothing fires it.
+</td><td><span class="he">עַל־כֵּן יֵאָמַר כְּנִמְרֹד גִּבּוֹר צַיִד לִפְנֵי יְהוָה</span> · <i>al-ken yeamar ke-Nimrod gibbor tzayid lifnei YHWH</i><br><span class="gloss">= therefore-so it-is-said like-Nimrod gibbor hunter lifnei the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">One man gets a story inside the spreadsheet — and the story hardens instantly into a saying the narrator can still hear.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_10_10_12 · Gen.10.10-12 · <span class='expr'>THE_KINGDOM_AND_THE_FOUR_CITIES</span></h3>
+<p><span class="he">וַתְּהִי רֵאשִׁית מַמְלַכְתּוֹ בָּבֶל וְאֶרֶךְ וְאַכַּד וְכַלְנֵה בְּאֶרֶץ שִׁנְעָר מִן־הָאָרֶץ הַהִוא יָצָא אַשּׁוּר וַיִּבֶן אֶת־נִינְוֵה וְאֶת־רְחֹבֹת עִיר וְאֶת־כָּלַח וְאֶת־רֶסֶן בֵּין נִינְוֵה וּבֵין כָּלַח הִוא הָעִיר הַגְּדֹלָה</span> · <i>va-tehi reshit mamlakhto Bavel ve-Erekh ve-Akkad ve-Khalneh be-eretz Shinar min-ha-aretz ha-hi yatza Ashur va-yiven et-Ninveh ve-et-Rechovot Ir ve-et-Kalach ve-et-Resen bein Ninveh u-vein Kalach hi ha-ir ha-gedolah</i> · [EN-AID/JPS] And the beginning of his kingdom was Babel, and Erech, and Accad, and Calneh, in the land of Shinar. Out of that land went forth Asshur, and builded Nineveh, and Rehoboth-ir, and Calah, and Resen between Nineveh and Calah — the same is the great city.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">מן הארץ ההוא יצא אשור</span> · <i>min-ha-aretz ha-hi yatza Ashur</i> · from that land went out Ashur — OR he went out to Ashur (10:11 lead-verse etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויבן את נינוה ואת רחבת עיר ואת כלח</span> · <i>va-yiven et-Ninveh ve-et-Rechovot Ir ve-et-Kalach</i> · and BUILT Ninveh, Rechovot-Ir, and Kalach</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(reshit_mamlakhto_bavel_be_eretz_shinar, t1) ∧ HOLDS(min_ha_aretz_ha_hi_yatza_ashur, t1)</span><br><span class="gloss">= HOLDS(beginning-of-mamlakhto-Babel-in-land-Shinar, t1) ∧ HOLDS(from-the-earth-the-hi-went-out-Ashur, t1)</span><br>RESHIT (&#x27;beginning&#x27;) token 2 — token 1 is 1:1&#x27;s BE-RESHIT: creation&#x27;s beginning, then the KINGDOM&#x27;s beginning [cited]. MAMLAKHAH (&#x27;kingdom&#x27;) — Torah token 1. And the kingdom is BAVEL: the name&#x27;s two Torah tokens are here and 11:9 — the name BEFORE the story [cited]. SHINAR token 1 (token 2 = 11:2, Babel&#x27;s journey). The went-out clause held as fact with its SUBJECT UNRESOLVED: &#x27;from that land went out Ashur&#x27; or &#x27;he went out to Ashur&#x27; — the letter&#x27;s own ambiguity [OPEN; Onkelos decides it: &#x27;the ASSYRIAN went out&#x27; — dual-track, flagged; and actualizes Shinar to &#x27;the land of BABEL&#x27; — the geography-actualization class].
+</td><td><span class="he">וַתְּהִי רֵאשִׁית מַמְלַכְתּוֹ בָּבֶל … בְּאֶרֶץ שִׁנְעָר</span> · <i>va-tehi reshit mamlakhto Bavel … be-eretz Shinar</i><br><span class="gloss">= was beginning-of mamlakhto Bavel land Shinar</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">build(e3) ∧ Theme(e3, ninveh) ∧ Theme(e3, rechovot_ir) ∧ Theme(e3, kalach) ∧ Theme(e3, resen)</span><br><span class="gloss">= build(e3) ∧ Theme(e3, ninveh) ∧ Theme(e3, Rehoboth-city) ∧ Theme(e3, Calah) ∧ Theme(e3, Resen)</span><br>VA-YIVEN (&#x27;and he built&#x27;) — one of the table&#x27;s only wayyiqtol deed-verbs, carried AGENTLESS: the builder is the unresolved subject (the gen_23 dwell-subject discipline) [decision recorded]. BANAH (&#x27;build&#x27;) token 4 — the career: the rib (2:22, God builds the woman), Cain&#x27;s city, Noach&#x27;s altar, Ninveh, Babel&#x27;s tower (tokens 5-6) [cited]. IR (&#x27;city&#x27;) tokens 3-4 — between Cain&#x27;s city and Babel&#x27;s.
+</td><td><span class="he">וַיִּבֶן אֶת־נִינְוֵה וְאֶת־רְחֹבֹת עִיר וְאֶת־כָּלַח וְאֶת־רֶסֶן</span> · <i>va-yiven et-Ninveh ve-et-Rechovot Ir ve-et-Kalach ve-et-Resen</i><br><span class="gloss">= he-built obj-marker·et-Ninveh and-obj-marker·et-Rechovot Ir and-obj-marker·et-Kalach and-obj-marker·et-Resen</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>REGISTRY_INSTALL</td><td><span class="expr">WORLD += {ninveh, rechovot_ir, kalach, resen}</span><br><span class="gloss">= WORLD += {ninveh, Rehoboth-city, Calah, Resen}</span><br>THE BUILD DECISION [recorded, precedents quoted]: frozen gen_13 installed Cain&#x27;s city on a PARTICIPLE — &#x27;WORLD += {ir}&#x27;, &#x27;he WAS BUILDING&#x27; — and the completed builds install throughout the chain (ark; altar 8:20; vineyard 9:20): a wayyiqtol build with four named, persistent objects installs A FORTIORI. The machine breaks into installs exactly where the table breaks into narrative.
+</td><td><span class="he">נִינְוֵה וְרְחֹבֹת עִיר וְכָלַח וְרֶסֶן</span> · <i>Ninveh ve-Rechovot Ir ve-Khalach ve-Resen</i><br><span class="gloss">= Ninveh and-Rechovot Ir and-Khalach and-Resen</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hi_ha_ir_ha_gedolah, t1)</span><br><span class="gloss">= HOLDS(hi-the-city-the-gedolah, t1)</span><br>&#x27;The same is THE GREAT CITY&#x27; — GADOL token 5 (token 6 is 10:21&#x27;s elder brother; tokens 1-3 were the great lights and the great sea-creatures) [letter fact; which city the tag crowns is the letter&#x27;s own looseness — held].
+</td><td><span class="he">הִוא הָעִיר הַגְּדֹלָה</span> · <i>hi ha-ir ha-gedolah</i><br><span class="gloss">= hi city the-gedolah</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The first kingdom files its beginning under Babel, and the spreadsheet quietly builds four cities on an unresolved pronoun.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_10_13_14 · Gen.10.13-14 · <span class='expr'>MITZRAYIM_ROWS_AND_THE_PHILISTINE_NOTE</span></h3>
+<p><span class="he">וּמִצְרַיִם יָלַד אֶת־לוּדִים וְאֶת־עֲנָמִים וְאֶת־לְהָבִים וְאֶת־נַפְתֻּחִים וְאֶת־פַּתְרֻסִים וְאֶת־כַּסְלֻחִים אֲשֶׁר יָצְאוּ מִשָּׁם פְּלִשְׁתִּים וְאֶת־כַּפְתֹּרִים</span> · <i>u-Mitzrayim yalad et-Ludim ve-et-Anamim ve-et-Lehavim ve-et-Naftuchim ve-et-Patrusim ve-et-Kasluchim asher yatzu mi-sham Pelishtim ve-et-Kaftorim</i> · [EN-AID/JPS] And Mizraim begot Ludim, and Anamim, and Lehabim, and Naphtuhim, and Pathrusim, and Casluhim — whence went forth the Philistines — and Caphtorim.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ואת פתרסים ואת כסלחים אשר יצאו משם פלשתים</span> · <i>ve-et-Patrusim ve-et-Kasluchim asher yatzu mi-sham Pelishtim</i> · Patrusim, Kasluchim — whence WENT OUT the Philistines (10:14: NO etnachta; the origin-note sits mid-verse)</div><div class="arm"><b>RIGHT</b><br><span class="he">ואת כפתרים</span> · <i>ve-et-Kaftorim</i> · and the Kaftorim (the top split severs the last list-item)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">beget(e4) ∧ Agent(e4, mitzrayim) ∧ Theme(e4, shivat_amamim)</span><br><span class="gloss">= beget(e4) ∧ Agent(e4, Egypt) ∧ Theme(e4, seven-amamim)</span><br>The second active beget: Mitzrayim (&#x27;Egypt&#x27;) begets seven -im plural peoples — rows born as nations, not men [letter fact]. LUDIM here against LUD in Shem&#x27;s line (10:22) — another cross-line double.
+</td><td><span class="he">וּמִצְרַיִם יָלַד אֶת־לוּדִים …</span> · <i>u-Mitzrayim yalad et-Ludim …</i><br><span class="gloss">= and-Mitzrayim begot obj-marker·et-Ludim</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(asher_yatzu_mi_sham_pelishtim, t1)</span><br><span class="gloss">= HOLDS(who-bring-forth-from-there-Philistines, t1)</span><br>The Philistine origin-note held as fact: PELISHTIM token 1 — &#x27;whence WENT OUT the Philistines&#x27;, parked mid-verse between two list-items [tree fact: 10:14 has NO etnachta; Onkelos actualizes the next name: Kaftorim -&gt; Cappadocians — the map-update class, dual-track].
+</td><td><span class="he">אֲשֶׁר יָצְאוּ מִשָּׁם פְּלִשְׁתִּים</span> · <i>asher yatzu mi-sham Pelishtim</i><br><span class="gloss">= who bring-forth there Pelishtim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Egypt&#x27;s rows read like a gazetteer, with one aside the later wars will remember: the Philistines came out of here.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_10_15_19 · Gen.10.15-19 · <span class='expr'>CANAAN_ROWS_SPREAD_AND_BORDER</span></h3>
+<p><span class="he">וּכְנַעַן יָלַד אֶת־צִידֹן בְּכֹרוֹ וְאֶת־חֵת … וְאַחַר נָפֹצוּ מִשְׁפְּחוֹת הַכְּנַעֲנִי וַיְהִי גְּבוּל הַכְּנַעֲנִי מִצִּידֹן … עַד־לָשַׁע</span> · <i>u-Khenaan yalad et-Tzidon bekhoro ve-et-Chet … ve-achar nafotzu mishpechot ha-Kenaani va-yehi gevul ha-Kenaani mi-Tzidon … ad-Lasha</i> · [EN-AID/JPS] And Canaan begot Zidon his firstborn, and Heth; and the Jebusite, and the Amorite, and the Girgashite; and the Hivite, and the Arkite, and the Sinite; and the Arvadite, and the Zemarite, and the Hamathite; and afterward were the families of the Canaanite spread abroad. And the border of the Canaanite was from Zidon, as thou goest toward Gerar, unto Gaza; as thou goest toward Sodom and Gomorrah and Admah and Zeboiim, unto Lasha.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויהי גבול הכנעני מצידן באכה גררה עד עזה</span> · <i>va-yehi gevul ha-Kenaani mi-Tzidon boakha Gerarah ad-Azzah</i> · the Canaanite border, from Tzidon toward Gerar to Azzah (10:19 lead-verse etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">באכה סדמה ועמרה ואדמה וצבים עד לשע</span> · <i>boakha Sedomah va-Amorah ve-Admah u-Tzevoyim ad-Lasha</i> · toward SODOM and GOMORRAH and Admah and Tzevoyim, to Lasha</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">beget(e5) ∧ Agent(e5, kenaan) ∧ Theme(e5, tzidon_bekhoro) ∧ Theme(e5, chet)</span><br><span class="gloss">= beget(e5) ∧ Agent(e5, kenaan) ∧ Theme(e5, Sidon-bekhoro) ∧ Theme(e5, Heth)</span><br>The third active beget — and a heavy debut inside it: BEKHOR (&#x27;firstborn&#x27;) — the Exodus word&#x27;s Torah token 1 (69 tokens) is CANAAN&#x27;S firstborn Tzidon [cited].
+</td><td><span class="he">וּכְנַעַן יָלַד אֶת־צִידֹן בְּכֹרוֹ וְאֶת־חֵת</span> · <i>u-Khenaan yalad et-Tzidon bekhoro ve-et-Chet</i><br><span class="gloss">= and-Khenaan begot obj-marker·et-Tzidon bekhoro and-obj-marker·et-Chet</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(eleh_ha_kenaani_asarah_amamim, t1) ∧ HOLDS(ve_achar_nafotzu_mishpechot_ha_kenaani, t1)</span><br><span class="gloss">= HOLDS(these-the-Canaanite-asarah-amamim, t1) ∧ HOLDS(and-after-were-spread-mishpechot-the-Canaanite, t1)</span><br>The gentilic rows (Yevusi, Emori, Girgashi, Chivi, Arki, Sini, Arvadi, Tzemari, Chamati — the KENAANI gentilic&#x27;s own debut is 10:18-19; its token 5 = 15:21, the covenant-of-pieces list [cited]) — then the SPREAD: NAFOTZU — PUTZ (&#x27;scatter&#x27;) Torah token 1: the very verb Babel fears and receives (11:4 pen-nafutz, &#x27;lest we be scattered&#x27;; 11:8-9) debuts on the CANAANITE families [cited; Onkelos renders it with the same disperse-root it gave 9:19&#x27;s hapax — the Hebrew scatter-triple leveled to an Aramaic pair; dual-track].
+</td><td><span class="he">וְאֶת־הַיְבוּסִי וְאֶת־הָאֱמֹרִי … וְאַחַר נָפֹצוּ מִשְׁפְּחוֹת הַכְּנַעֲנִי</span> · <i>ve-et-ha-Yevusi ve-et-ha-Emori … ve-achar nafotzu mishpechot ha-Kenaani</i><br><span class="gloss">= and-obj-marker·et-the-Yevusi and-obj-marker·et-the-Emori after were-spread mishpechot the-Kenaani</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(gevul_ha_kenaani_mi_tzidon_ad_azah_ad_lasha, t1)</span><br><span class="gloss">= HOLDS(border-of-the-Canaanite-from-Sidon-until-azah-until-Lasha, t1)</span><br>GEVUL (&#x27;border&#x27;) — the border-word&#x27;s Torah token 1 draws the CANAANITE border: the land the covenant will promise gets its first survey here [cited]. On the line, six debuts as map-points: Gerar, Azzah, SODOM (token 1 of 23), Gomorrah, Admah, Tzevoyim — the doomed cities enter the corpus as geography [letter facts; Onkelos: gevul -&gt; techum, the boundary-word; dual-track].
+</td><td><span class="he">וַיְהִי גְּבוּל הַכְּנַעֲנִי מִצִּידֹן … עַד־לָשַׁע</span> · <i>va-yehi gevul ha-Kenaani mi-Tzidon … ad-Lasha</i><br><span class="gloss">= was border-of the-Kenaani from-Tzidon until-Lasha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The cursed line gets the longest section, the first firstborn, the first border — and the border runs straight through the cities the fire is coming for.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_10_20 · Gen.10.20 · <span class='expr'>HAM_CLOSE</span></h3>
+<p><span class="he">אֵלֶּה בְנֵי־חָם לְמִשְׁפְּחֹתָם לִלְשֹׁנֹתָם בְּאַרְצֹתָם בְּגוֹיֵהֶם</span> · <i>eleh vnei-Cham le-mishpechotam li-leshonotam be-artzotam be-goyehem</i> · [EN-AID/JPS] These are the sons of Ham, after their families, after their tongues, in their lands, in their nations.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אלה בני חם למשפחתם ללשנתם</span> · <i>eleh vnei-Cham le-mishpechotam li-leshonotam</i> · these are the sons of Ham, by their families, by their tongues (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">בארצתם בגויהם</span> · <i>be-artzotam be-goyehem</i> · in their lands, IN their nations (be-goyehem — hold the preposition)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(eleh_vnei_cham_le_mishpechotam_li_leshonotam_be_artzotam_be_goyehem, t1)</span><br><span class="gloss">= HOLDS(these-vnei-Ham-to-mishpechotam-to-me-leshonotam-in-artzotam-in-goyehem, t1)</span><br>Ham&#x27;s close — the refrain in full: families, tongues, lands, nations, ending BE-goyehem (&#x27;IN their nations&#x27;). The twin closing at 10:31 will differ by exactly ONE PREPOSITION [letter fact — the delta lands at step 11; the trees split the twins identically: families+tongues | lands+nations].
+</td><td><span class="he">אֵלֶּה בְנֵי־חָם … בְּגוֹיֵהֶם</span> · <i>eleh vnei-Cham … be-goyehem</i><br><span class="gloss">= these vnei-Cham in-goyehem</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The ledger rules a line under the southern rows and recites its four-beat refrain.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_10_21_24 · Gen.10.21-24 · <span class='expr'>SHEM_OPENER_AND_ROWS</span></h3>
+<p><span class="he">וּלְשֵׁם יֻלַּד גַּם־הוּא אֲבִי כָּל־בְּנֵי־עֵבֶר אֲחִי יֶפֶת הַגָּדוֹל בְּנֵי שֵׁם עֵילָם וְאַשּׁוּר וְאַרְפַּכְשַׁד וְלוּד וַאֲרָם … וְאַרְפַּכְשַׁד יָלַד אֶת־שָׁלַח וְשֶׁלַח יָלַד אֶת־עֵבֶר</span> · <i>u-le-Shem yullad gam-hu avi kol-bnei-Ever achi Yefet ha-gadol bnei Shem Eilam ve-Ashur ve-Arpakhshad ve-Lud va-Aram … ve-Arpakhshad yalad et-Shalach ve-Shelach yalad et-Ever</i> · [EN-AID/JPS] And unto Shem, the father of all the children of Eber, the elder brother of Japheth, to him also were children born. The sons of Shem: Elam, and Asshur, and Arpachshad, and Lud, and Aram. And the sons of Aram: Uz, and Hul, and Gether, and Mash. And Arpachshad begot Shelah; and Shelah begot Eber.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ולשם ילד גם הוא</span> · <i>u-le-Shem yullad gam-hu</i> · and to Shem was born — he also (10:21 lead-verse etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">אבי כל בני עבר אחי יפת הגדול</span> · <i>avi kol-bnei-Ever achi Yefet ha-gadol</i> · father of all the sons of Ever, brother of Yefet THE ELDER — whose elder? [OPEN]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">be_born(e6) ∧ Theme(e6, le_shem_gam_hu)</span><br><span class="gloss">= in-born(e6) ∧ Theme(e6, to-Sem-also-he)</span><br>Shem&#x27;s section opens PASSIVE: YULLAD (&#x27;was born to&#x27;) — pual; the beget-grammar splits by line [morphology fact]: Ham&#x27;s line begets ACTIVE (yalad x3 so far), Shem&#x27;s line RECEIVES (the table&#x27;s only two passives, 10:21 and 10:25, both his; TIR-032 per gen_13&#x27;s passive-birth class).
+</td><td><span class="he">וּלְשֵׁם יֻלַּד גַּם־הוּא</span> · <i>u-le-Shem yullad gam-hu</i><br><span class="gloss">= and-to-Shem yullad also-he</span></td><td class='cite'>TIR-032</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(avi_kol_bnei_ever_achi_yefet_ha_gadol, t1) ∧ HOLDS(bnei_shem_eilam_ve_ashur_ve_arpakhshad, t1)</span><br><span class="gloss">= HOLDS(father-of-all-sons-of-Ever-brother-Japheth-the-elder, t1) ∧ HOLDS(sons-of-Sem-eilam-and-Ashur-and-Arphaxad, t1)</span><br>Two titles held as facts: &#x27;father of all the sons of EVER&#x27; (the Ever-line the narrative will follow) and &#x27;ACHI YEFET HA-GADOL&#x27; — &#x27;the elder brother of Yefet&#x27; OR &#x27;the brother of Yefet the elder&#x27;: GADOL token 6, pairing 9:24&#x27;s beno ha-qatan (&#x27;his small son&#x27;); the who-is-elder is the letter&#x27;s own ambiguity [OPEN, held; the chain&#x27;s resolutions named-only; Onkelos keeps the word order — ambiguity kept]. The rows: ASHUR as Shem&#x27;s SON (10:22) against the block&#x27;s place (10:11; token 1 = 2:14, Eden&#x27;s river-map) — the cross-line double again [no harmonizing].
+</td><td><span class="he">אֲבִי כָּל־בְּנֵי־עֵבֶר אֲחִי יֶפֶת הַגָּדוֹל … בְּנֵי שֵׁם עֵילָם וְאַשּׁוּר</span> · <i>avi kol-bnei-Ever achi Yefet ha-gadol … bnei Shem Eilam ve-Ashur</i><br><span class="gloss">= father-of all-sons-of-Ever brother Yefet elder sons-of Shem Eilam and-Ashur</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">beget(e7) ∧ Agent(e7, arpakhshad) ∧ Theme(e7, shelach)</span><br><span class="gloss">= beget(e7) ∧ Agent(e7, Arphaxad) ∧ Theme(e7, Salah)</span><br>The line towards Ever begins: Arpakhshad begets Shelach [the 11:10 toledot will re-run this rail with years].</td><td><span class="he">וְאַרְפַּכְשַׁד יָלַד אֶת־שָׁלַח</span> · <i>ve-Arpakhshad yalad et-Shalach</i><br><span class="gloss">= and-Arpakhshad begot obj-marker·et-Shalach</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">beget(e8) ∧ Agent(e8, shelach) ∧ Theme(e8, ever)</span><br><span class="gloss">= beget(e8) ∧ Agent(e8, Salah) ∧ Theme(e8, Ever)</span><br>and Shelach begets EVER — the eponym the chain reads onto the Hebrews [named-only; the letter only builds the rail].</td><td><span class="he">וְשֶׁלַח יָלַד אֶת־עֵבֶר</span> · <i>ve-Shelach yalad et-Ever</i><br><span class="gloss">= and-Shelach begot obj-marker·et-Ever</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The chosen line enters last and passive, carrying two titles and one deliberate ambiguity about age.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_10_25_29 · Gen.10.25-29 · <span class='expr'>PELEG_AND_THE_YOKTAN_ROWS</span></h3>
+<p><span class="he">וּלְעֵבֶר יֻלַּד שְׁנֵי בָנִים שֵׁם הָאֶחָד פֶּלֶג כִּי בְיָמָיו נִפְלְגָה הָאָרֶץ וְשֵׁם אָחִיו יָקְטָן וְיָקְטָן יָלַד … כָּל־אֵלֶּה בְּנֵי יָקְטָן</span> · <i>u-le-Ever yullad shnei vanim shem ha-echad Peleg ki ve-yamav niflegah ha-aretz ve-shem achiv Yoktan ve-Yoktan yalad … kol-eleh bnei Yoktan</i> · [EN-AID/JPS] And unto Eber were born two sons; the name of the one was Peleg; for in his days was the earth divided; and his brother&#x27;s name was Joktan. And Joktan begot Almodad, and Sheleph, and Hazarmaveth, and Jerah; and Hadoram, and Uzal, and Diklah; and Obal, and Abimael, and Sheba; and Ophir, and Havilah, and Jobab; all these were the sons of Joktan.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ולעבר ילד שני בנים</span> · <i>u-le-Ever yullad shnei vanim</i> · and to Ever were born two sons (10:25 lead-verse etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">שם האחד פלג כי בימיו נפלגה הארץ ושם אחיו יקטן</span> · <i>shem ha-echad Peleg ki ve-yamav niflegah ha-aretz ve-shem achiv Yoktan</i> · the one&#x27;s name Peleg — FOR IN HIS DAYS THE EARTH WAS DIVIDED — and his brother&#x27;s name Yoktan</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">be_born(e9) ∧ Theme(e9, le_ever_shnei_vanim)</span><br><span class="gloss">= in-born(e9) ∧ Theme(e9, to-Ever-shnei-sons-of)</span><br>The second passive birth (pual again — Shem&#x27;s line keeps receiving; TIR-032).
+</td><td><span class="he">וּלְעֵבֶר יֻלַּד שְׁנֵי בָנִים</span> · <i>u-le-Ever yullad shnei vanim</i><br><span class="gloss">= and-to-Ever yullad shnei sons-of</span></td><td class='cite'>TIR-032</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shem_ha_echad_peleg_ki_ve_yamav_niflegah_ha_aretz, t1) ∧ HOLDS(ve_shem_achiv_yoktan, t1)</span><br><span class="gloss">= HOLDS(Sem-the-one-Peleg-that-and-his-days-niflegah-the-earth, t1) ∧ HOLDS(and-Sem-his-brother-yoktan, t1)</span><br>THE TABLE&#x27;S ONLY KI (&#x27;because&#x27;) CLAUSE — and a TORAH HAPAX inside it: NIFLEGAH (&#x27;was DIVIDED&#x27;) — PALAG&#x27;s one Torah token, dividing the EARTH in Peleg&#x27;s days: the Babel-event pre-echoed as an entry in a birth register [cited; the division&#x27;s dating is the chain&#x27;s — named-only]. NO NAME op [decision recorded]: &#x27;the name of the one was Peleg&#x27; is a REPORT-naming — no va-yiqra (&#x27;and-he-called&#x27;) formula, and the NAME device requires the calling-formula. With 10:18&#x27;s scatter-debut, 10:5/32&#x27;s divide-verb, and 9:19&#x27;s hapax, the scatter-family now brackets the table [letter facts].
+</td><td><span class="he">שֵׁם הָאֶחָד פֶּלֶג כִּי בְיָמָיו נִפְלְגָה הָאָרֶץ</span> · <i>shem ha-echad Peleg ki ve-yamav niflegah ha-aretz</i><br><span class="gloss">= Sem one Peleg that his-days niflegah earth</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">beget(e10) ∧ Agent(e10, yoktan) ∧ Theme(e10, shloshah_asar_banim)</span><br><span class="gloss">= beget(e10) ∧ Agent(e10, yoktan) ∧ Theme(e10, shloshah-asar-sons-of)</span><br>The last active beget: Yoktan&#x27;s THIRTEEN — the table&#x27;s longest single brood, ten of the names Torah hapaxes [letter facts]; SHEVA and CHAVILAH re-sound Ham&#x27;s line (10:7) — the cross-line doubles complete [no harmonizing; Chavilah token 1 = 2:11, Eden&#x27;s gold-land].
+</td><td><span class="he">וְיָקְטָן יָלַד אֶת־אַלְמוֹדָד … וְאֶת־יוֹבָב</span> · <i>ve-Yoktan yalad et-Almodad … ve-et-Yovav</i><br><span class="gloss">= and-Yoktan begot obj-marker·et-Almodad and-obj-marker·et-Yovav</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(kol_eleh_bnei_yoktan, t1)</span><br><span class="gloss">= HOLDS(all-these-sons-of-yoktan, t1)</span><br>The brood&#x27;s own sub-close: &#x27;all these were the sons of Yoktan&#x27; — the table&#x27;s smallest refrain.</td><td><span class="he">כָּל־אֵלֶּה בְּנֵי יָקְטָן</span> · <i>kol-eleh bnei Yoktan</i><br><span class="gloss">= all-these sons-of Yoktan</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">A world-event hides in a birth notice: the earth split in the days of a boy named Split.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_10_30_31 · Gen.10.30-31 · <span class='expr'>THE_DWELLING_AND_SHEM_CLOSE</span></h3>
+<p><span class="he">וַיְהִי מוֹשָׁבָם מִמֵּשָׁא בֹּאֲכָה סְפָרָה הַר הַקֶּדֶם אֵלֶּה בְנֵי־שֵׁם לְמִשְׁפְּחֹתָם לִלְשֹׁנֹתָם בְּאַרְצֹתָם לְגוֹיֵהֶם</span> · <i>va-yehi moshavam mi-Mesha boakha Sefarah har ha-qedem eleh vnei-Shem le-mishpechotam li-leshonotam be-artzotam le-goyehem</i> · [EN-AID/JPS] And their dwelling was from Mesha, as thou goest toward Sephar, unto the mountain of the east. These are the sons of Shem, after their families, after their tongues, in their lands, after their nations.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אלה בני שם למשפחתם ללשנתם</span> · <i>eleh vnei-Shem le-mishpechotam li-leshonotam</i> · these are the sons of Shem, by their families, by their tongues (10:31 lead-verse etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">בארצתם לגויהם</span> · <i>be-artzotam le-goyehem</i> · in their lands, BY their nations (LE-goyehem — the one-letter delta)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(moshavam_mi_mesha_har_ha_qedem, t1)</span><br><span class="gloss">= HOLDS(moshavam-from-Mesha-mountain-the-east, t1)</span><br>The Yoktanite dwelling-line: MOSHAV (&#x27;dwelling&#x27;) — Torah token 1; HAR HA-QEDEM (&#x27;the mountain of the EAST&#x27;) — QEDEM token 3: Eden planted mi-qedem (2:8), the cherubim stationed mi-qedem (3:24), now a dwelling toward the east-mountain — and token 4 is 11:2: Babel journeys mi-qedem to Shinar [the Babel-bridge; letter facts].
+</td><td><span class="he">וַיְהִי מוֹשָׁבָם מִמֵּשָׁא בֹּאֲכָה סְפָרָה הַר הַקֶּדֶם</span> · <i>va-yehi moshavam mi-Mesha boakha Sefarah har ha-qedem</i><br><span class="gloss">= was moshavam from-Mesha boakha Sefarah mountain east</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(eleh_vnei_shem_le_mishpechotam_li_leshonotam_be_artzotam_le_goyehem, t1)</span><br><span class="gloss">= HOLDS(these-vnei-Sem-to-mishpechotam-to-me-leshonotam-in-artzotam-to-goyehem, t1)</span><br>Shem&#x27;s close — identical to Ham&#x27;s (10:20) except ONE PREPOSITION: LE-goyehem (&#x27;BY their nations&#x27;) against BE-goyehem (&#x27;IN their nations&#x27;) — a one-letter delta between twin refrains [letter fact, held; Onkelos NORMALIZES both endings to the same in-their-peoples — the delta erased in the buffer; dual-track, flagged]. LASHON (&#x27;tongue&#x27;) token 3 closes the closings&#x27; set.
+</td><td><span class="he">אֵלֶּה בְנֵי־שֵׁם … לְגוֹיֵהֶם</span> · <i>eleh vnei-Shem … LE-goyehem</i><br><span class="gloss">= these vnei-Shem LE-goyehem</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The last section signs off with the refrain — one letter off from its twin, as if the table itself refused to be perfectly regular.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_10_32 · Gen.10.32 · <span class='expr'>THE_GRAND_CLOSE_SEALS_THE_INCLUSIO</span></h3>
+<p><span class="he">אֵלֶּה מִשְׁפְּחֹת בְּנֵי־נֹחַ לְתוֹלְדֹתָם בְּגוֹיֵהֶם וּמֵאֵלֶּה נִפְרְדוּ הַגּוֹיִם בָּאָרֶץ אַחַר הַמַּבּוּל</span> · <i>eleh mishpechot bnei-Noach le-toledotam be-goyehem u-me-eleh nifredu ha-goyim ba-aretz achar ha-mabul</i> · [EN-AID/JPS] These are the families of the sons of Noah, after their generations, in their nations; and of these were the nations divided in the earth after the flood.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אלה משפחת בני נח לתולדתם בגויהם</span> · <i>eleh mishpechot bnei-Noach le-toledotam be-goyehem</i> · the summary roster: the families of the sons of Noach, by their generations, in their nations (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ומאלה נפרדו הגוים בארץ אחר המבול</span> · <i>u-me-eleh nifredu ha-goyim ba-aretz achar ha-mabul</i> · and of these the nations DIVIDED in the earth — AFTER THE DELUGE (the inclusio&#x27;s second arm)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(eleh_mishpechot_bnei_noach_le_toledotam, t1) ∧ HOLDS(u_me_eleh_nifredu_ha_goyim_ba_aretz_achar_ha_mabul, t1)</span><br><span class="gloss">= HOLDS(these-mishpechot-sons-of-Noach-to-toledotam, t1) ∧ HOLDS(and-from-these-nifredu-the-nations-in-the-earth-after-the-deluge, t1)</span><br>THE GRAND CLOSE mirrors the heading and SEALS THE INCLUSIO: toledot token 5 answers 10:1&#x27;s token 4, and both verses end on the identical arm — ACHAR HA-MABUL (&#x27;after the deluge&#x27;), the deluge-word&#x27;s last pair (tokens 10-11; its final token is 11:10) [tree fact]. NIFREDU (&#x27;divided&#x27;) — PARAD token 3, answering 10:5&#x27;s token 2 (token 1 = Eden&#x27;s river, 2:10); GOY tokens 5-6 and MISHPACHAH token 6 close the words the table gave the Torah — and their next tokens are 12:2-3: the great-NATION promise and the all-FAMILIES blessing [the Abram-bridge, cited]. The echo of 9:19 (&#x27;from these the whole earth scattered&#x27;) completes the bracketing [prose echo, no receipt].
+</td><td><span class="he">אֵלֶּה מִשְׁפְּחֹת בְּנֵי־נֹחַ … וּמֵאֵלֶּה נִפְרְדוּ הַגּוֹיִם בָּאָרֶץ אַחַר הַמַּבּוּל</span> · <i>eleh mishpechot bnei-Noach … u-me-eleh nifredu ha-goyim ba-aretz achar ha-mabul</i><br><span class="gloss">= these mishpechot sons-of-Noach these nifredu nations earth after deluge</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The table closes its own cover: the same words that opened it, and a world now divided into everyone the promises will have to reach.</div>
+</div>
+<h2>State machine</h2>
+<div class="meta">The nations table (standalone; registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER).</div>
+<table><tr><th>state</th><th>meaning</th></tr>
+<tr><td><b>S_boot</b></td><td>Before 10:1 — all registers empty (standalone unit)</td></tr>
+<tr><td><b>S_heading</b></td><td>After 10:1 — the fourth toledot header labeled (installs nothing); the passive birth-note fired; noach flagged as read</td></tr>
+<tr><td><b>S_yefet</b></td><td>After 10:2-5 — Yefet&#x27;s rows hold; the anomalous close held with deltas named (singular each-to-his-tongue; no opener)</td></tr>
+<tr><td><b>S_ham_rows</b></td><td>After 10:6-7 — Ham&#x27;s rows hold (Egypt&#x27;s name-debut; the cross-line doubles begin)</td></tr>
+<tr><td><b>S_nimrod</b></td><td>After 10:8-9 — the table&#x27;s one narrative: the beget-event, the mighty-facts, and the PATTERN (the al-ken proverb) on the books</td></tr>
+<tr><td><b>S_kingdom</b></td><td>After 10:10-12 — the kingdom-facts hold (reshit token 2; Bavel named before its story); the agentless build fired; FOUR cities installed</td></tr>
+<tr><td><b>S_mitzrayim</b></td><td>After 10:13-14 — Egypt&#x27;s seven peoples begotten; the Philistine origin-note held</td></tr>
+<tr><td><b>S_canaan</b></td><td>After 10:15-19 — Canaan&#x27;s rows (the firstborn-debut); the SPREAD (the scatter-verb&#x27;s debut); the border drawn through the doomed cities</td></tr>
+<tr><td><b>S_ham_closed</b></td><td>After 10:20 — Ham&#x27;s refrain-close holds (be-goyehem, IN their nations)</td></tr>
+<tr><td><b>S_shem_rows</b></td><td>After 10:21-24 — Shem&#x27;s passive opener; the two titles (father of Ever&#x27;s sons; the elder-ambiguity held); the rail to Ever laid</td></tr>
+<tr><td><b>S_peleg</b></td><td>After 10:25-29 — the second passive birth; the divided-earth hapax held (no NAME op — report-naming); Yoktan&#x27;s thirteen</td></tr>
+<tr><td><b>S_shem_closed</b></td><td>After 10:30-31 — the east-mountain dwelling; Shem&#x27;s twin close with the one-preposition delta</td></tr>
+<tr><td><b>S_sealed</b></td><td>After 10:32 — the grand close seals the inclusio (achar ha-mabul answering 10:1); registers at rest, queue never woke</td></tr>
+</table><table><tr><th>from</th><th>to</th><th>via</th></tr>
+<tr><td>S_boot</td><td>S_heading</td><td>STEP_Gn_10_1</td></tr>
+<tr><td>S_heading</td><td>S_yefet</td><td>STEP_Gn_10_2_5</td></tr>
+<tr><td>S_yefet</td><td>S_ham_rows</td><td>STEP_Gn_10_6_7</td></tr>
+<tr><td>S_ham_rows</td><td>S_nimrod</td><td>STEP_Gn_10_8_9</td></tr>
+<tr><td>S_nimrod</td><td>S_kingdom</td><td>STEP_Gn_10_10_12</td></tr>
+<tr><td>S_kingdom</td><td>S_mitzrayim</td><td>STEP_Gn_10_13_14</td></tr>
+<tr><td>S_mitzrayim</td><td>S_canaan</td><td>STEP_Gn_10_15_19</td></tr>
+<tr><td>S_canaan</td><td>S_ham_closed</td><td>STEP_Gn_10_20</td></tr>
+<tr><td>S_ham_closed</td><td>S_shem_rows</td><td>STEP_Gn_10_21_24</td></tr>
+<tr><td>S_shem_rows</td><td>S_peleg</td><td>STEP_Gn_10_25_29</td></tr>
+<tr><td>S_peleg</td><td>S_shem_closed</td><td>STEP_Gn_10_30_31</td></tr>
+<tr><td>S_shem_closed</td><td>S_sealed</td><td>STEP_Gn_10_32</td></tr>
+</table>
+<div class="note"><b>AFTER_S_sealed</b> — TIME: t0 EMPTY (no date anywhere — &#x27;after the deluge&#x27; is an epoch tag, not an anchor). WORLD: FOUR installs — ninveh, rechovot_ir, kalach, resen (the table&#x27;s one builder, built on gen_13&#x27;s city precedent; the machine breaks into installs exactly where the letter breaks into narrative) — plus 1 presupposed (noach; the sons enter by the heading&#x27;s own roster). Standing facts (23): the rows of the three sections (gen_14&#x27;s ledger class), the three refrain-closings with their deltas named (Yefet&#x27;s anomalous; Ham/Shem twins one preposition apart), the two border-formulas (the Canaanite border through the doomed cities; the east-mountain dwelling), the Nimrod facts (the begin-threshold, the mighty-hunter pair), the kingdom-facts (creation&#x27;s beginning-word on Babel), the ambiguous went-out clause, the Philistine origin-note, the two Shem titles (the elder-ambiguity held), the Peleg clause (the divided-earth hapax; report-naming, no NAME write), Yoktan&#x27;s sub-close, and the grand close&#x27;s pair sealing the inclusio. PATTERN (1): ke-Nimrod (&#x27;like Nimrod a mighty hunter before YHWH&#x27;) — the narrator&#x27;s al-ken proverb, standing, untriggered (gen_09&#x27;s class). EVENTS: eleven — one SECTION label, ten births/builds (six active begets, three passive births TIR-032, one agentless build on the unresolved subject). REGISTRY: ZERO name-writes (the Peleg and Yoktan namings are REPORTS — no va-yiqra formula, no NAME op). SPECS: EMPTY end to end — the queue NEVER WAKES (zero imperatives, zero jussives in 287 tokens: the fourth zero-traffic unit). TESTS: EMPTY. LEDGER register: EMPTY (rows are facts, per gen_14). FLAGS (1): read_before_install x1 (noach). The machine ends as an atlas at rest: four cities, one proverb, twenty-three rows of world — and every register the story needs still silent, one chapter before Babel wakes them.</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>The heading labels, installs nothing: after STEP_Gn_10_1</td><td>All registers empty (standalone unit).</td><td>flags noach as read-before-install; SPECS empty.<br><span class="gloss">= flags Noach as read-before-install; SPECS empty.</span></td><td><span class="he">וְאֵלֶּה תּוֹלְדֹת בְּנֵי־נֹחַ</span> · <i>ve-eleh toledot bnei-Noach</i><br><span class="gloss">= these generations sons-of-Noach</span></td></tr>
+<tr><td><b>S2</b></td><td>Yefet&#x27;s rows and the anomalous close hold: after STEP_Gn_10_2_5</td><td>S1 state.</td><td>Facts nifredu-iyei HOLD; Facts ish-li-leshono HOLD.<br><span class="gloss">= Facts nifredu-iyei HOLD; Facts each-to-me-leshono HOLD.</span></td><td><span class="he">אִישׁ לִלְשֹׁנוֹ לְמִשְׁפְּחֹתָם בְּגוֹיֵהֶם</span> · <i>ish li-leshono le-mishpechotam be-goyehem</i><br><span class="gloss">= each to-me-leshono to-mishpechotam in-goyehem</span></td></tr>
+<tr><td><b>S3</b></td><td>The Nimrod pattern on the books: after STEP_Gn_10_8_9</td><td>S2 state + Ham&#x27;s rows (10:6-7).</td><td>Facts gibbor-tzayid HOLD; Facts pattern-ke-nimrod HOLD.<br><span class="gloss">= Facts gibbor-hunter HOLD; Facts pattern-like-Nimrod HOLD.</span></td><td><span class="he">עַל־כֵּן יֵאָמַר כְּנִמְרֹד גִּבּוֹר צַיִד לִפְנֵי יְהוָה</span> · <i>al-ken yeamar ke-Nimrod gibbor tzayid lifnei YHWH</i><br><span class="gloss">= therefore-so it-is-said like-Nimrod gibbor hunter lifnei the-LORD</span></td></tr>
+<tr><td><b>S4</b></td><td>The four cities installed on the agentless build: after STEP_Gn_10_10_12</td><td>S3 state.</td><td>WORLD = {ninveh, rechovot_ir, kalach, resen}; Facts reshit-mamlakhto-bavel HOLD.<br><span class="gloss">= WORLD = {ninveh, Rehoboth-city, Calah, Resen}; Facts beginning-of-mamlakhto-Babel HOLD.</span></td><td><span class="he">וַיִּבֶן אֶת־נִינְוֵה</span> · <i>va-yiven et-Ninveh</i><br><span class="gloss">= he-built obj-marker·et-Ninveh</span></td></tr>
+<tr><td><b>S5</b></td><td>The spread and the border drawn: after STEP_Gn_10_15_19</td><td>S4 state + Egypt&#x27;s rows (10:13-14).</td><td>Facts nafotzu-mishpechot HOLD; Facts gevul-ha-kenaani HOLD.<br><span class="gloss">= Facts were-spread-mishpechot HOLD; Facts border-of-the-Canaanite HOLD.</span></td><td><span class="he">וַיְהִי גְּבוּל הַכְּנַעֲנִי מִצִּידֹן</span> · <i>va-yehi gevul ha-Kenaani mi-Tzidon</i><br><span class="gloss">= was border-of the-Kenaani from-Tzidon</span></td></tr>
+<tr><td><b>S6</b></td><td>Ham&#x27;s close recites the refrain: after STEP_Gn_10_20</td><td>S5 state.</td><td>Facts vnei-cham-be-goyehem HOLD.<br><span class="gloss">= Facts vnei-Ham-in-goyehem HOLD.</span></td><td><span class="he">אֵלֶּה בְנֵי־חָם … בְּגוֹיֵהֶם</span> · <i>eleh vnei-Cham … be-goyehem</i><br><span class="gloss">= these vnei-Cham in-goyehem</span></td></tr>
+<tr><td><b>S7</b></td><td>The earth divided in Peleg&#x27;s days: after STEP_Gn_10_25_29</td><td>S6 state + Shem&#x27;s opener and rows (10:21-24).</td><td>Facts niflegah-ha-aretz HOLD.<br><span class="gloss">= Facts niflegah-the-earth HOLD.</span></td><td><span class="he">כִּי בְיָמָיו נִפְלְגָה הָאָרֶץ</span> · <i>ki ve-yamav niflegah ha-aretz</i><br><span class="gloss">= that his-days niflegah earth</span></td></tr>
+<tr><td><b>S8</b></td><td>Shem&#x27;s close pins the one-letter delta: after STEP_Gn_10_30_31</td><td>S7 state.</td><td>Facts shem-le-goyehem HOLD.<br><span class="gloss">= Facts Sem-to-goyehem HOLD.</span></td><td><span class="he">אֵלֶּה בְנֵי־שֵׁם … לְגוֹיֵהֶם</span> · <i>eleh vnei-Shem … le-goyehem</i><br><span class="gloss">= these vnei-Shem to-goyehem</span></td></tr>
+<tr><td><b>S9</b></td><td>The grand close seals the inclusio, the queue never woke: after STEP_Gn_10_32</td><td>S8 state.</td><td>Facts nifredu-ha-goyim-achar-ha-mabul HOLD; SPECS empty.<br><span class="gloss">= Facts nifredu-the-nations-after-the-deluge HOLD; SPECS empty.</span></td><td><span class="he">וּמֵאֵלֶּה נִפְרְדוּ הַגּוֹיִם בָּאָרֶץ אַחַר הַמַּבּוּל</span> · <i>u-me-eleh nifredu ha-goyim ba-aretz achar ha-mabul</i><br><span class="gloss">= these nifredu nations earth after deluge</span></td></tr>
+<tr><td><b>S10_negative</b></td><td>Negative: the machine&#x27;s ? stays guarded</td><td>A synthetic LET? demand (the machine&#x27;s own contract self-test).</td><td>LET? never auto-upgrades: resolution without citation must REFUSE; with a per-unit citation it may resolve — entries pop demands; nothing but citation moves a mood.</td><td></td></tr>
+<tr><td><b>S11_negative</b></td><td>Negative: flags never block</td><td>A synthetic commit with TESTS empty (the machine&#x27;s own contract self-test).</td><td>Cycle close with TESTS empty must be FLAGGED, never blocked.<br><span class="gloss">= Cycle close with TESTS empty must in FLAGGED, never blocked.</span></td><td></td></tr>
+</table>
+<h2>Exports (reusable patterns)</h2><table><tr><th>id</th><th>content</th></tr>
+<tr><td>EXPORT_goy_mishpachah_abram_bridge</td><td><span class="he">מֵאֵלֶּה נִפְרְדוּ הַגּוֹיִם … לְגוֹי גָּדוֹל</span> · <i>me-eleh nifredu ha-goyim … (12:2) le-goy gadol</i> · GOY (&#x27;nation&#x27;) is BORN in the table — Torah tokens 1-6 all in-span (the closings + the grand close), token 7 = 12:2&#x27;s &#x27;I will make you a great NATION&#x27;; MISHPACHAH (&#x27;family&#x27;) tokens 2-6 in-span, token 7 = 12:3&#x27;s &#x27;all the FAMILIES of the earth shall be blessed&#x27;: the table&#x27;s two refrain-words hand off to the same two Abram-promise verses — the atlas is the promise&#x27;s address book [the Abram-bridge pair]; LASHON (&#x27;tongue&#x27;) debuts in the closings (six Torah tokens; Babel&#x27;s word is the sibling saphah, &#x27;lip&#x27; — split named)</td></tr>
+<tr><td>EXPORT_three_closings_one_letter_delta</td><td><span class="he">בְּגוֹיֵהֶם … לְגוֹיֵהֶם</span> · <i>be-goyehem … le-goyehem</i> · the three section-closings word-for-word: Ham&#x27;s (10:20) and Shem&#x27;s (10:31) are twins ONE PREPOSITION apart (IN their nations / BY their nations — a one-letter delta the trees split identically); Yefet&#x27;s (10:5) is anomalous — no these-are-the-sons opener, SINGULAR each-to-his-tongue, different item order [letter facts held with deltas named; Onkelos NORMALIZES the twins&#x27; endings and the delta vanishes in the buffer — dual-track]; the 10:1/10:32 INCLUSIO is tree-visible: heading and grand close end on the identical arm, achar ha-mabul (&#x27;after the deluge&#x27;) — the deluge-word&#x27;s last pair</td></tr>
+<tr><td>EXPORT_nimrod_kingdom_pattern</td><td><span class="he">וַתְּהִי רֵאשִׁית מַמְלַכְתּוֹ בָּבֶל</span> · <i>va-tehi reshit mamlakhto Bavel</i> · the table&#x27;s one narrative: RESHIT (&#x27;beginning&#x27;) token 2 — creation&#x27;s beginning-word (1:1) reused for the KINGDOM&#x27;s beginning, and the kingdom is BAVEL (the name&#x27;s two Torah tokens: 10:10 before the story, 11:9 inside it); MAMLAKHAH (&#x27;kingdom&#x27;) Torah debut; GIBBOR (&#x27;mighty&#x27;) — five Torah tokens: the antediluvian mighty-ones, Nimrod x3, and GOD (Deut 10:17); the proverb as PATTERN (gen_09&#x27;s al-ken class): &#x27;like Nimrod a mighty hunter before YHWH&#x27; — carrying the chapter&#x27;s ONLY divine-name tokens (YHWH x2, Elohim ZERO); the four cities installed on an AGENTLESS build (the Ashur/he ambiguity held [OPEN]; Onkelos decides for the Assyrian — dual-track)</td></tr>
+<tr><td>EXPORT_scatter_family_brackets</td><td><span class="he">נָפֹצוּ … נִפְלְגָה … נִפְרְדוּ</span> · <i>nafotzu … niflegah … nifredu</i> · the Babel-anticipation set: PUTZ (&#x27;scatter&#x27;) Torah token 1 = 10:18, the Canaanite families spreading — the verb Babel fears and receives (11:4 pen-nafutz; 11:8-9); PALAG (&#x27;split&#x27;) — a TORAH HAPAX inside Peleg&#x27;s naming-reason (&#x27;in his days the earth was DIVIDED&#x27; — the table&#x27;s only because-clause; report-naming, no NAME op); PARAD (&#x27;separate&#x27;) tokens 2-3 framing the table (token 1 = 2:10, Eden&#x27;s river dividing into four); with 9:19&#x27;s naftzah hapax the scatter-vocabulary brackets the whole atlas; plus the bridges QEDEM token 3 (-&gt; 11:2&#x27;s journey from the east) and SHINAR token 1 (-&gt; 11:2) [Onkelos levels the Hebrew scatter-triple to an Aramaic pair — the hapax distinctions invisible; dual-track]</td></tr>
+<tr><td>EXPORT_canaan_border_covenant_map</td><td><span class="he">וַיְהִי גְּבוּל הַכְּנַעֲנִי … בֹּאֲכָה סְדֹמָה וַעֲמֹרָה</span> · <i>va-yehi gevul ha-Kenaani … boakha Sedomah va-Amorah</i> · the cursed line gets the longest section and the heaviest debuts: GEVUL (&#x27;border&#x27;) — the border-word&#x27;s Torah token 1 surveys the CANAANITE land (the covenant&#x27;s future grant), running through six place-debuts including SODOM (token 1 of 23) and Gomorrah — the doomed cities enter as map-points; BEKHOR (&#x27;firstborn&#x27; — the Exodus word) debuts as Canaan&#x27;s firstborn Tzidon; the KENAANI gentilic debuts (token 5 = 15:21&#x27;s covenant-of-pieces list); the cross-line doubles held without harmonizing (Sheva x2, Chavilah x2 with Eden&#x27;s gold-land token, Ashur son-and-place, Lud/Ludim); raw count 79 name-lemmas / 110 name-tokens — the chain&#x27;s SEVENTY is [OPEN, named-only]</td></tr>
+</table>
+<h2>Oral notes (named, tiered, dual-track — never merged)</h2>
+<div class="note"><span class="badge tier-o">observation</span> <b>Bavli Yoma 10a (the table&#x27;s name-identifications); Bavli Eruvin 53a + Chullin 89a (Nimrod as Amrafel; the rebellion-etymology); Bavli Pesachim 94b; Bavli Sukkah 55b (the seventy bulls for the seventy nations); Bereshit Rabbah 37 (the span); Rashi at 10:8-9, 10:11, 10:21, 10:25 — gen_24 Tier-A queue</b><br><span class="he">אֵלֶּה מִשְׁפְּחֹת בְּנֵי־נֹחַ</span> · <i>(queue — named only)</i> · Named, not read: the cache holds ZERO sources anchored to Gen 10:1-32 — EIGHTEENTH tripwire span. Detector classes predicted: the name-identifications are a GEOGRAPHY-ACTUALIZATION class (the chain mapping the table onto its own world — the same class the buffer performs); the Nimrod teachings a NAME-ETYMOLOGY class; the seventy-count a NUMBER-FROM-CENSUS class; the elder-brother and Ashur-subject resolutions an AMBIGUITY-RESOLUTION class (the letter leaves both readable; the chain decides).
+<br><i>Queue entry — no claim made beyond the naming.</i></div>
+<div class="note"><span class="badge tier-v">verified</span> <b>Onkelos Genesis 10:1-32 — read Tier-A at derive time (32 sequential fetches, Data/FETCHLOG.md 2026-08-03)</b><br><span class="he">נְפַק אֲתוּרָאָה וּבְנָא יָת נִינְוֵה</span> · <i>nefak Aturaah u-vena yat Ninveh</i> · The span&#x27;s translation witness: the buffer RESOLVES THE ASHUR-AMBIGUITY — &#x27;the ASSYRIAN went out and built&#x27; (the gentilic form: subject decided; the machine holds the letter&#x27;s ambiguity); ACTUALIZES THE MAP [the predicted geography class, confirmed]: Shinar -&gt; &#x27;the land of BABEL&#x27;, Kaftorim -&gt; CAPPADOCIANS, the Sinite -&gt; an actualized people-name; NORMALIZES the twin closings&#x27; endings — the letter&#x27;s one-preposition delta (in/by their nations) is erased; GOY -&gt; AM throughout (the nations-word leveled to the people-word) and MISHPACHAH -&gt; ZARYATA (the family-word rendered with the SEED-root); Nimrod&#x27;s might DOUBLED — gibbor -&gt; gibbar TAKKIF (&#x27;mighty STRONG one&#x27;) x3, lifnei YHWH -&gt; kodam YY (the reverential &#x27;before&#x27;), the proverb kept a proverb; the beget-voices preserved exactly (active olid x6, passive ityelid; the heading&#x27;s plural passive); the Peleg split-verb kept cognate (itpeligat) and the naming kept a report; the Hebrew scatter-triple LEVELED to an Aramaic pair (putz AND 9:19&#x27;s nafatz both -&gt; the disperse-root; parad -&gt; the separate-root) — the hapax-vs-Babel-verb distinction invisible in Aramaic; GEVUL -&gt; TECHUM (the boundary-word); MABUL -&gt; TOFANA at both inclusio arms — batar tofana closing 10:1 and 10:32 alike; textual variants embedded in the fetched text (the Rechovot-Ir and Mitzrayim readings) noted, not resolved.
+<br><i>Read from Data/sefaria_texts/ (local, gitignored; FETCHLOG is provenance). Dual-track; not merged.</i></div>
+<h2>Binary trees (ta'amim v3, glue bricks)</h2>
+<h3>Gen.10.1 · parser unique · 12 words</h3>
+<div class="meta"><span class="he">ואלה תולדת בני־נח שׁם חם ויפת ויולדו להם בנים אחר המבול</span> · <i>ve-ele toldot bene-nocha shem cham va-yafet va-yivaldu la-hem banim achar ha-mabul</i> · The fourth toledot heading — sons born after the deluge. [EN-AID]</div>
+<pre>PHRASE (binary 12w) וְ/אֵ֨לֶּה֙ תּוֹלְדֹ֣ת בְּנֵי נֹ֔חַ שֵׁ֖ם חָ֣ם …
+├── PHRASE (binary 7w) וְ/אֵ֨לֶּה֙ תּוֹלְדֹ֣ת בְּנֵי נֹ֔חַ שֵׁ֖ם חָ֣ם …
+│   ├── PHRASE (binary 4w) וְ/אֵ֨לֶּה֙ תּוֹלְדֹ֣ת בְּנֵי נֹ֔חַ
+│   │   ├── [0] וְ/אֵ֨לֶּה֙ (pashta, rank=3)
+│   │   └── [1-3] GLUE תּוֹלְדֹ֣ת בְּנֵי נֹ֔חַ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) שֵׁ֖ם חָ֣ם וָ/יָ֑פֶת
+│       ├── [4] שֵׁ֖ם (tifcha, rank=2)
+│       └── [5-6] GLUE חָ֣ם וָ/יָ֑פֶת (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) וַ/יִּוָּלְד֥וּ לָ/הֶ֛ם בָּנִ֖ים אַחַ֥ר הַ/מַּב…
+    ├── PHRASE (binary 3w) וַ/יִּוָּלְד֥וּ לָ/הֶ֛ם בָּנִ֖ים
+    │   ├── [7-8] GLUE וַ/יִּוָּלְד֥וּ לָ/הֶ֛ם (tevir, rank=3)
+    │   └── [9] בָּנִ֖ים (tifcha, rank=2)
+    └── [10-11] GLUE אַחַ֥ר הַ/מַּבּֽוּל (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.2 · parser unique · 9 words</h3>
+<div class="meta"><span class="he">בני יפת גמר ומגוג ומדי ויון ותבל ומשׁך ותירס</span> · <i>bene yefet gomer u-magog u-maday ve-yavan ve-tuval u-meshekh ve-tiras</i> · The sons of Yefet: seven coast-fathers. [EN-AID]</div>
+<pre>PHRASE (binary 9w) בְּנֵ֣י יֶ֔פֶת גֹּ֣מֶר וּ/מָג֔וֹג וּ/מָדַ֖י וְ/…
+├── PHRASE (binary 7w) בְּנֵ֣י יֶ֔פֶת גֹּ֣מֶר וּ/מָג֔וֹג וּ/מָדַ֖י וְ/…
+│   ├── [0-1] GLUE בְּנֵ֣י יֶ֔פֶת (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) גֹּ֣מֶר וּ/מָג֔וֹג וּ/מָדַ֖י וְ/יָוָ֣ן וְ/תֻבָ֑ל
+│       ├── [2-3] GLUE גֹּ֣מֶר וּ/מָג֔וֹג (zaqef qatan, rank=2)
+│       └── PHRASE (binary 3w) וּ/מָדַ֖י וְ/יָוָ֣ן וְ/תֻבָ֑ל
+│           ├── [4] וּ/מָדַ֖י (tifcha, rank=2)
+│           └── [5-6] GLUE וְ/יָוָ֣ן וְ/תֻבָ֑ל (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 2w) וּ/מֶ֖שֶׁךְ וְ/תִירָֽס
+    ├── [7] וּ/מֶ֖שֶׁךְ (tifcha, rank=2)
+    └── [8] וְ/תִירָֽס (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.3 · parser unique · 5 words</h3>
+<div class="meta"><span class="he">ובני גמר אשׁכנז וריפת ותגרמה</span> · <i>u-vene gomer ashkanaz ve-rifat ve-togarma</i> · The sons of Gomer: three. [EN-AID]</div>
+<pre>PHRASE (binary 5w) וּ/בְנֵ֖י גֹּ֑מֶר אַשְׁכֲּנַ֥ז וְ/רִיפַ֖ת וְ/תֹ…
+├── PHRASE (binary 2w) וּ/בְנֵ֖י גֹּ֑מֶר
+│   ├── [0] וּ/בְנֵ֖י (tifcha, rank=2)
+│   └── [1] גֹּ֑מֶר (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) אַשְׁכֲּנַ֥ז וְ/רִיפַ֖ת וְ/תֹגַרְמָֽה
+    ├── [2-3] GLUE אַשְׁכֲּנַ֥ז וְ/רִיפַ֖ת (tifcha, rank=2)
+    └── [4] וְ/תֹגַרְמָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.4 · parser unique · 6 words</h3>
+<div class="meta"><span class="he">ובני יון אלישׁה ותרשׁישׁ כתים ודדנים</span> · <i>u-vene yavan elisha ve-tarshish kitim ve-dodanim</i> · The sons of Yavan: four. [EN-AID]</div>
+<pre>PHRASE (binary 6w) וּ/בְנֵ֥י יָוָ֖ן אֱלִישָׁ֣ה וְ/תַרְשִׁ֑ישׁ כִּת…
+├── PHRASE (binary 4w) וּ/בְנֵ֥י יָוָ֖ן אֱלִישָׁ֣ה וְ/תַרְשִׁ֑ישׁ
+│   ├── [0-1] GLUE וּ/בְנֵ֥י יָוָ֖ן (tifcha, rank=2)
+│   └── [2-3] GLUE אֱלִישָׁ֣ה וְ/תַרְשִׁ֑ישׁ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 2w) כִּתִּ֖ים וְ/דֹדָנִֽים
+    ├── [4] כִּתִּ֖ים (tifcha, rank=2)
+    └── [5] וְ/דֹדָנִֽים (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.5 · parser unique · 9 words</h3>
+<div class="meta"><span class="he">מאלה נפרדו איי הגוים בארצתם אישׁ ללשׁנו למשׁפחתם בגויהם</span> · <i>me-ele nifrdu iye ha-goyim be-artzota-m ish li-leshon-o le-mishpchota-m be-goye-hem</i> · The anomalous close: coastlands divided, EACH to his tongue. [EN-AID]</div>
+<pre>PHRASE (binary 9w) מֵ֠/אֵלֶּה נִפְרְד֞וּ אִיֵּ֤י הַ/גּוֹיִם֙ בְּ/א…
+├── PHRASE (binary 7w) מֵ֠/אֵלֶּה נִפְרְד֞וּ אִיֵּ֤י הַ/גּוֹיִם֙ בְּ/א…
+│   ├── PHRASE (binary 5w) מֵ֠/אֵלֶּה נִפְרְד֞וּ אִיֵּ֤י הַ/גּוֹיִם֙ בְּ/א…
+│   │   ├── PHRASE (binary 4w) מֵ֠/אֵלֶּה נִפְרְד֞וּ אִיֵּ֤י הַ/גּוֹיִם֙
+│   │   │   ├── [0] מֵ֠/אֵלֶּה (telisha gedola, rank=4)
+│   │   │   └── PHRASE (binary 3w) נִפְרְד֞וּ אִיֵּ֤י הַ/גּוֹיִם֙
+│   │   │       ├── [1] נִפְרְד֞וּ (gershayim, rank=4)
+│   │   │       └── [2-3] GLUE אִיֵּ֤י הַ/גּוֹיִם֙ (pashta, rank=3)
+│   │   └── [4] בְּ/אַרְצֹתָ֔/ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 2w) אִ֖ישׁ לִ/לְשֹׁנ֑/וֹ
+│       ├── [5] אִ֖ישׁ (tifcha, rank=2)
+│       └── [6] לִ/לְשֹׁנ֑/וֹ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 2w) לְ/מִשְׁפְּחֹתָ֖/ם בְּ/גוֹיֵ/הֶֽם
+    ├── [7] לְ/מִשְׁפְּחֹתָ֖/ם (tifcha, rank=2)
+    └── [8] בְּ/גוֹיֵ/הֶֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.6 · parser unique · 6 words</h3>
+<div class="meta"><span class="he">ובני חם כושׁ ומצרים ופוט וכנען</span> · <i>u-vene cham kush u-mitzrayim u-fut u-khenaan</i> · The sons of Ham: Kush, Egypt, Put — and Canaan. [EN-AID]</div>
+<pre>PHRASE (binary 6w) וּ/בְנֵ֖י חָ֑ם כּ֥וּשׁ וּ/מִצְרַ֖יִם וּ/פ֥וּט ו…
+├── PHRASE (binary 2w) וּ/בְנֵ֖י חָ֑ם
+│   ├── [0] וּ/בְנֵ֖י (tifcha, rank=2)
+│   └── [1] חָ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) כּ֥וּשׁ וּ/מִצְרַ֖יִם וּ/פ֥וּט וּ/כְנָֽעַן
+    ├── [2-3] GLUE כּ֥וּשׁ וּ/מִצְרַ֖יִם (tifcha, rank=2)
+    └── [4-5] GLUE וּ/פ֥וּט וּ/כְנָֽעַן (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.7 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">ובני כושׁ סבא וחוילה וסבתה ורעמה וסבתכא ובני רעמה שׁבא ודדן</span> · <i>u-vene khush seva va-chavila ve-savta ve-rama ve-savtkha u-vene rama sheva u-dedan</i> · The sons of Kush — Eden&#x27;s gold-land is now a son. [EN-AID]</div>
+<pre>PHRASE (binary 11w) וּ/בְנֵ֣י כ֔וּשׁ סְבָא֙ וַֽ/חֲוִילָ֔ה וְ/סַבְתּ…
+├── PHRASE (binary 7w) וּ/בְנֵ֣י כ֔וּשׁ סְבָא֙ וַֽ/חֲוִילָ֔ה וְ/סַבְתּ…
+│   ├── [0-1] GLUE וּ/בְנֵ֣י כ֔וּשׁ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) סְבָא֙ וַֽ/חֲוִילָ֔ה וְ/סַבְתָּ֥ה וְ/רַעְמָ֖ה ו…
+│       ├── PHRASE (binary 2w) סְבָא֙ וַֽ/חֲוִילָ֔ה
+│       │   ├── [2] סְבָא֙ (pashta, rank=3)
+│       │   └── [3] וַֽ/חֲוִילָ֔ה (zaqef qatan, rank=2)
+│       └── PHRASE (binary 3w) וְ/סַבְתָּ֥ה וְ/רַעְמָ֖ה וְ/סַבְתְּכָ֑א
+│           ├── [4-5] GLUE וְ/סַבְתָּ֥ה וְ/רַעְמָ֖ה (tifcha, rank=2)
+│           └── [6] וְ/סַבְתְּכָ֑א (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וּ/בְנֵ֥י רַעְמָ֖ה שְׁבָ֥א וּ/דְדָֽן
+    ├── [7-8] GLUE וּ/בְנֵ֥י רַעְמָ֖ה (tifcha, rank=2)
+    └── [9-10] GLUE שְׁבָ֥א וּ/דְדָֽן (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.8 · parser unique · 9 words</h3>
+<div class="meta"><span class="he">וכושׁ ילד את־נמרד הוא החל להיות גבר בארץ</span> · <i>ve-khush yalad et-nimrod hu hechel li-heot gibor ba-aretz</i> · Kush begot Nimrod: he began to be a mighty one. [EN-AID]</div>
+<pre>PHRASE (binary 9w) וְ/כ֖וּשׁ יָלַ֣ד אֶת נִמְרֹ֑ד ה֣וּא הֵחֵ֔ל לִֽ/…
+├── PHRASE (binary 4w) וְ/כ֖וּשׁ יָלַ֣ד אֶת נִמְרֹ֑ד
+│   ├── [0] וְ/כ֖וּשׁ (tifcha, rank=2)
+│   └── [1-3] GLUE יָלַ֣ד אֶת נִמְרֹ֑ד (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) ה֣וּא הֵחֵ֔ל לִֽ/הְי֥וֹת גִּבֹּ֖ר בָּ/אָֽרֶץ
+    ├── [4-5] GLUE ה֣וּא הֵחֵ֔ל (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) לִֽ/הְי֥וֹת גִּבֹּ֖ר בָּ/אָֽרֶץ
+        ├── [6-7] GLUE לִֽ/הְי֥וֹת גִּבֹּ֖ר (tifcha, rank=2)
+        └── [8] בָּ/אָֽרֶץ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.9 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">הוא־היה גבר־ציד לפני יהוה על־כן יאמר כנמרד גבור ציד לפני יהוה</span> · <i>hu-haya gibor-tzayid li-fene YHWH al-ken yeamar ke-nimrod gibor tzayid li-fene YHWH</i> · A mighty hunter before YHWH — therefore it is said. [EN-AID]</div>
+<pre>PHRASE (binary 14w) הֽוּא הָיָ֥ה גִבֹּֽר צַ֖יִד לִ/פְנֵ֣י יְהוָ֑ה ע…
+├── PHRASE (binary 6w) הֽוּא הָיָ֥ה גִבֹּֽר צַ֖יִד לִ/פְנֵ֣י יְהוָ֑ה
+│   ├── [0-3] GLUE הֽוּא הָיָ֥ה גִבֹּֽר צַ֖יִד (tifcha, rank=2)
+│   └── [4-5] GLUE לִ/פְנֵ֣י יְהוָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) עַל כֵּן֙ יֵֽאָמַ֔ר כְּ/נִמְרֹ֛ד גִּבּ֥וֹר צַ֖י…
+    ├── PHRASE (binary 3w) עַל כֵּן֙ יֵֽאָמַ֔ר
+    │   ├── [6-7] GLUE עַל כֵּן֙ (pashta, rank=3)
+    │   └── [8] יֵֽאָמַ֔ר (zaqef qatan, rank=2)
+    └── PHRASE (binary 5w) כְּ/נִמְרֹ֛ד גִּבּ֥וֹר צַ֖יִד לִ/פְנֵ֥י יְהוָֽה
+        ├── PHRASE (binary 3w) כְּ/נִמְרֹ֛ד גִּבּ֥וֹר צַ֖יִד
+        │   ├── [9] כְּ/נִמְרֹ֛ד (tevir, rank=3)
+        │   └── [10-11] GLUE גִּבּ֥וֹר צַ֖יִד (tifcha, rank=2)
+        └── [12-13] GLUE לִ/פְנֵ֥י יְהוָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.10 · parser unique · 9 words</h3>
+<div class="meta"><span class="he">ותהי ראשׁית ממלכתו בבל וארך ואכד וכלנה בארץ שׁנער</span> · <i>va-tehi reshit mamlakht-o bavel ve-erekh ve-akad ve-khalne be-eretz shinar</i> · The kingdom&#x27;s beginning: Babel, in the land of Shinar. [EN-AID]</div>
+<pre>PHRASE (binary 9w) וַ/תְּהִ֨י רֵאשִׁ֤ית מַמְלַכְתּ/וֹ֙ בָּבֶ֔ל וְ/…
+├── PHRASE (binary 7w) וַ/תְּהִ֨י רֵאשִׁ֤ית מַמְלַכְתּ/וֹ֙ בָּבֶ֔ל וְ/…
+│   ├── PHRASE (binary 4w) וַ/תְּהִ֨י רֵאשִׁ֤ית מַמְלַכְתּ/וֹ֙ בָּבֶ֔ל
+│   │   ├── [0-2] GLUE וַ/תְּהִ֨י רֵאשִׁ֤ית מַמְלַכְתּ/וֹ֙ (pashta, rank=3)
+│   │   └── [3] בָּבֶ֔ל (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) וְ/אֶ֖רֶךְ וְ/אַכַּ֣ד וְ/כַלְנֵ֑ה
+│       ├── [4] וְ/אֶ֖רֶךְ (tifcha, rank=2)
+│       └── [5-6] GLUE וְ/אַכַּ֣ד וְ/כַלְנֵ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 2w) בְּ/אֶ֖רֶץ שִׁנְעָֽר
+    ├── [7] בְּ/אֶ֖רֶץ (tifcha, rank=2)
+    └── [8] שִׁנְעָֽר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.11 · parser unique · 13 words</h3>
+<div class="meta"><span class="he">מן־הארץ ההוא יצא אשׁור ויבן את־נינוה ואת־רחבת עיר ואת־כלח</span> · <i>min-ha-aretz ha-hiv yatza ashur va-yiven et-ninve ve-et-rechovot ir ve-et-kalach</i> · From that land — Ashur, or he to Ashur — and built Ninveh. [EN-AID]</div>
+<pre>PHRASE (binary 13w) מִן הָ/אָ֥רֶץ הַ/הִ֖וא יָצָ֣א אַשּׁ֑וּר וַ/יִּ֨…
+├── PHRASE (binary 5w) מִן הָ/אָ֥רֶץ הַ/הִ֖וא יָצָ֣א אַשּׁ֑וּר
+│   ├── [0-2] GLUE מִן הָ/אָ֥רֶץ הַ/הִ֖וא (tifcha, rank=2)
+│   └── [3-4] GLUE יָצָ֣א אַשּׁ֑וּר (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) וַ/יִּ֨בֶן֙ אֶת נִ֣ינְוֵ֔ה וְ/אֶת רְחֹבֹ֥ת עִ֖י…
+    ├── PHRASE (binary 3w) וַ/יִּ֨בֶן֙ אֶת נִ֣ינְוֵ֔ה
+    │   ├── [5] וַ/יִּ֨בֶן֙ (pashta, rank=3)
+    │   └── [6-7] GLUE אֶת נִ֣ינְוֵ֔ה (zaqef qatan, rank=2)
+    └── PHRASE (binary 5w) וְ/אֶת רְחֹבֹ֥ת עִ֖יר וְ/אֶת כָּֽלַח
+        ├── [8-10] GLUE וְ/אֶת רְחֹבֹ֥ת עִ֖יר (tifcha, rank=2)
+        └── [11-12] GLUE וְ/אֶת כָּֽלַח (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.12 · parser unique · 9 words</h3>
+<div class="meta"><span class="he">ואת־רסן בין נינוה ובין כלח הוא העיר הגדלה</span> · <i>ve-et-resen ben ninve u-ven kalach hiv ha-ir ha-gedola</i> · And Resen between Ninveh and Kalach: the great city. [EN-AID]</div>
+<pre>PHRASE (binary 9w) וְֽ/אֶת רֶ֔סֶן בֵּ֥ין נִֽינְוֵ֖ה וּ/בֵ֣ין כָּ֑ל…
+├── PHRASE (binary 6w) וְֽ/אֶת רֶ֔סֶן בֵּ֥ין נִֽינְוֵ֖ה וּ/בֵ֣ין כָּ֑ל…
+│   ├── [0-1] GLUE וְֽ/אֶת רֶ֔סֶן (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) בֵּ֥ין נִֽינְוֵ֖ה וּ/בֵ֣ין כָּ֑לַח
+│       ├── [2-3] GLUE בֵּ֥ין נִֽינְוֵ֖ה (tifcha, rank=2)
+│       └── [4-5] GLUE וּ/בֵ֣ין כָּ֑לַח (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) הִ֖וא הָ/עִ֥יר הַ/גְּדֹלָֽה
+    ├── [6] הִ֖וא (tifcha, rank=2)
+    └── [7-8] GLUE הָ/עִ֥יר הַ/גְּדֹלָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.13 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">ומצרים ילד את־לודים ואת־ענמים ואת־להבים ואת־נפתחים</span> · <i>u-mitzrayim yalad et-ludim ve-et-anamim ve-et-lehavim ve-et-naftuchim</i> · Egypt begot seven peoples in the plural. [EN-AID]</div>
+<pre>PHRASE (binary 10w) וּ/מִצְרַ֡יִם יָלַ֞ד אֶת לוּדִ֧ים וְ/אֶת עֲנָמִ…
+├── PHRASE (binary 8w) וּ/מִצְרַ֡יִם יָלַ֞ד אֶת לוּדִ֧ים וְ/אֶת עֲנָמִ…
+│   ├── PHRASE (binary 6w) וּ/מִצְרַ֡יִם יָלַ֞ד אֶת לוּדִ֧ים וְ/אֶת עֲנָמִ…
+│   │   ├── [0] וּ/מִצְרַ֡יִם (pazer, rank=4)
+│   │   └── PHRASE (binary 5w) יָלַ֞ד אֶת לוּדִ֧ים וְ/אֶת עֲנָמִ֛ים
+│   │       ├── [1] יָלַ֞ד (gershayim, rank=4)
+│   │       └── [2-5] GLUE אֶת לוּדִ֧ים וְ/אֶת עֲנָמִ֛ים (tevir, rank=3)
+│   └── [6-7] GLUE וְ/אֶת לְהָבִ֖ים (tifcha, rank=2)
+└── [8-9] GLUE וְ/אֶת נַפְתֻּחִֽים (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.14 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">ואת־פתרסים ואת־כסלחים אשׁר יצאו משׁם פלשׁתים ואת־כפתרים</span> · <i>ve-et-patrusim ve-et-kasluchim asher yatzu mi-sham pelishtim ve-et-kaftorim</i> · — whence the Philistines went out — and the Kaftorim. [EN-AID]</div>
+<pre>PHRASE (binary 10w) וְֽ/אֶת פַּתְרֻסִ֞ים וְ/אֶת כַּסְלֻחִ֗ים אֲשֶׁ֨…
+├── PHRASE (binary 8w) וְֽ/אֶת פַּתְרֻסִ֞ים וְ/אֶת כַּסְלֻחִ֗ים אֲשֶׁ֨…
+│   ├── PHRASE (binary 4w) וְֽ/אֶת פַּתְרֻסִ֞ים וְ/אֶת כַּסְלֻחִ֗ים
+│   │   ├── [0-1] GLUE וְֽ/אֶת פַּתְרֻסִ֞ים (gershayim, rank=4)
+│   │   └── [2-3] GLUE וְ/אֶת כַּסְלֻחִ֗ים (revia, rank=3)
+│   └── PHRASE (binary 4w) אֲשֶׁ֨ר יָצְא֥וּ מִ/שָּׁ֛ם פְּלִשְׁתִּ֖ים
+│       ├── [4-6] GLUE אֲשֶׁ֨ר יָצְא֥וּ מִ/שָּׁ֛ם (tevir, rank=3)
+│       └── [7] פְּלִשְׁתִּ֖ים (tifcha, rank=2)
+└── [8-9] GLUE וְ/אֶת כַּפְתֹּרִֽים (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.15 · parser unique · 7 words</h3>
+<div class="meta"><span class="he">וכנען ילד את־צידן בכרו ואת־חת</span> · <i>u-khenaan yalad et-tzidon bekhor-o ve-et-chet</i> · Canaan begot Tzidon his FIRSTBORN, and Chet. [EN-AID]</div>
+<pre>PHRASE (binary 7w) וּ/כְנַ֗עַן יָלַ֛ד אֶת צִידֹ֥ן בְּכֹר֖/וֹ וְ/אֶ…
+├── PHRASE (binary 5w) וּ/כְנַ֗עַן יָלַ֛ד אֶת צִידֹ֥ן בְּכֹר֖/וֹ
+│   ├── [0] וּ/כְנַ֗עַן (revia, rank=3)
+│   └── PHRASE (binary 4w) יָלַ֛ד אֶת צִידֹ֥ן בְּכֹר֖/וֹ
+│       ├── [1] יָלַ֛ד (tevir, rank=3)
+│       └── [2-4] GLUE אֶת צִידֹ֥ן בְּכֹר֖/וֹ (tifcha, rank=2)
+└── [5-6] GLUE וְ/אֶת חֵֽת (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.16 · parser unique · 6 words</h3>
+<div class="meta"><span class="he">ואת־היבוסי ואת־האמרי ואת הגרגשׁי</span> · <i>ve-et-ha-yevusi ve-et-ha-emori ve-et ha-girgashi</i> · The Yevusite, the Emorite, the Girgashite. [EN-AID]</div>
+<pre>PHRASE (binary 6w) וְ/אֶת הַ/יְבוּסִי֙ וְ/אֶת הָ֣/אֱמֹרִ֔י וְ/אֵ֖ת…
+├── PHRASE (binary 4w) וְ/אֶת הַ/יְבוּסִי֙ וְ/אֶת הָ֣/אֱמֹרִ֔י
+│   ├── [0-1] GLUE וְ/אֶת הַ/יְבוּסִי֙ (pashta, rank=3)
+│   └── [2-3] GLUE וְ/אֶת הָ֣/אֱמֹרִ֔י (zaqef qatan, rank=2)
+└── PHRASE (binary 2w) וְ/אֵ֖ת הַ/גִּרְגָּשִֽׁי
+    ├── [4] וְ/אֵ֖ת (tifcha, rank=2)
+    └── [5] הַ/גִּרְגָּשִֽׁי (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.17 · parser unique · 6 words</h3>
+<div class="meta"><span class="he">ואת־החוי ואת־הערקי ואת־הסיני</span> · <i>ve-et-ha-chivi ve-et-ha-arqi ve-et-ha-sini</i> · The Chivite, the Arkite, the Sinite. [EN-AID]</div>
+<pre>PHRASE (binary 6w) וְ/אֶת הַֽ/חִוִּ֥י וְ/אֶת הַֽ/עַרְקִ֖י וְ/אֶת ה…
+├── [0-3] GLUE וְ/אֶת הַֽ/חִוִּ֥י וְ/אֶת הַֽ/עַרְקִ֖י (tifcha, rank=2)
+└── [4-5] GLUE וְ/אֶת הַ/סִּינִֽי (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.18 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">ואת־הארודי ואת־הצמרי ואת־החמתי ואחר נפצו משׁפחות הכנעני</span> · <i>ve-et-ha-arvadi ve-et-ha-tzemari ve-et-ha-chamati ve-achar nafotzu mishpchot ha-kenaani</i> · The coast-peoples — and afterward the Canaanite families SPREAD. [EN-AID]</div>
+<pre>PHRASE (binary 10w) וְ/אֶת הָֽ/אַרְוָדִ֥י וְ/אֶת הַ/צְּמָרִ֖י וְ/אֶ…
+├── PHRASE (binary 6w) וְ/אֶת הָֽ/אַרְוָדִ֥י וְ/אֶת הַ/צְּמָרִ֖י וְ/אֶ…
+│   ├── [0-3] GLUE וְ/אֶת הָֽ/אַרְוָדִ֥י וְ/אֶת הַ/צְּמָרִ֖י (tifcha, rank=2)
+│   └── [4-5] GLUE וְ/אֶת הַֽ/חֲמָתִ֑י (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וְ/אַחַ֣ר נָפֹ֔צוּ מִשְׁפְּח֖וֹת הַֽ/כְּנַעֲנִֽי
+    ├── [6-7] GLUE וְ/אַחַ֣ר נָפֹ֔צוּ (zaqef qatan, rank=2)
+    └── PHRASE (binary 2w) מִשְׁפְּח֖וֹת הַֽ/כְּנַעֲנִֽי
+        ├── [8] מִשְׁפְּח֖וֹת (tifcha, rank=2)
+        └── [9] הַֽ/כְּנַעֲנִֽי (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.19 · parser unique · 15 words</h3>
+<div class="meta"><span class="he">ויהי גבול הכנעני מצידן באכה גררה עד־עזה באכה סדמה ועמרה ואדמה וצבים עד־לשׁע</span> · <i>va-yehi gevul ha-kenaani mi-tzidon boa-kha gerara-ה ad-aza boa-kha sedoma-ה va-amora ve-adma u-tzevoyim ad-lasha</i> · The Canaanite border — through Sodom and Gomorrah, to Lasha. [EN-AID]</div>
+<pre>PHRASE (binary 15w) וַֽ/יְהִ֞י גְּב֤וּל הַֽ/כְּנַעֲנִי֙ מִ/צִּידֹ֔ן…
+├── PHRASE (binary 8w) וַֽ/יְהִ֞י גְּב֤וּל הַֽ/כְּנַעֲנִי֙ מִ/צִּידֹ֔ן…
+│   ├── PHRASE (binary 4w) וַֽ/יְהִ֞י גְּב֤וּל הַֽ/כְּנַעֲנִי֙ מִ/צִּידֹ֔ן
+│   │   ├── PHRASE (binary 3w) וַֽ/יְהִ֞י גְּב֤וּל הַֽ/כְּנַעֲנִי֙
+│   │   │   ├── [0] וַֽ/יְהִ֞י (gershayim, rank=4)
+│   │   │   └── [1-2] GLUE גְּב֤וּל הַֽ/כְּנַעֲנִי֙ (pashta, rank=3)
+│   │   └── [3] מִ/צִּידֹ֔ן (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) בֹּאֲ/כָ֥ה גְרָ֖רָ/ה עַד עַזָּ֑ה
+│       ├── [4-5] GLUE בֹּאֲ/כָ֥ה גְרָ֖רָ/ה (tifcha, rank=2)
+│       └── [6-7] GLUE עַד עַזָּ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) בֹּאֲ/כָ֞ה סְדֹ֧מָ/ה וַ/עֲמֹרָ֛ה וְ/אַדְמָ֥ה וּ…
+    ├── PHRASE (binary 5w) בֹּאֲ/כָ֞ה סְדֹ֧מָ/ה וַ/עֲמֹרָ֛ה וְ/אַדְמָ֥ה וּ…
+    │   ├── PHRASE (binary 3w) בֹּאֲ/כָ֞ה סְדֹ֧מָ/ה וַ/עֲמֹרָ֛ה
+    │   │   ├── [8] בֹּאֲ/כָ֞ה (gershayim, rank=4)
+    │   │   └── [9-10] GLUE סְדֹ֧מָ/ה וַ/עֲמֹרָ֛ה (tevir, rank=3)
+    │   └── [11-12] GLUE וְ/אַדְמָ֥ה וּ/צְבֹיִ֖ם (tifcha, rank=2)
+    └── [13-14] GLUE עַד לָֽשַׁע (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.20 · parser unique · 7 words</h3>
+<div class="meta"><span class="he">אלה בני־חם למשׁפחתם ללשׁנתם בארצתם בגויהם</span> · <i>ele vene-cham le-mishpchota-m li-leshonota-m be-artzota-m be-goye-hem</i> · Ham&#x27;s close: families, tongues, lands, IN their nations. [EN-AID]</div>
+<pre>PHRASE (binary 7w) אֵ֣לֶּה בְנֵי חָ֔ם לְ/מִשְׁפְּחֹתָ֖/ם לִ/לְשֹֽׁ…
+├── PHRASE (binary 5w) אֵ֣לֶּה בְנֵי חָ֔ם לְ/מִשְׁפְּחֹתָ֖/ם לִ/לְשֹֽׁ…
+│   ├── [0-2] GLUE אֵ֣לֶּה בְנֵי חָ֔ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 2w) לְ/מִשְׁפְּחֹתָ֖/ם לִ/לְשֹֽׁנֹתָ֑/ם
+│       ├── [3] לְ/מִשְׁפְּחֹתָ֖/ם (tifcha, rank=2)
+│       └── [4] לִ/לְשֹֽׁנֹתָ֑/ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 2w) בְּ/אַרְצֹתָ֖/ם בְּ/גוֹיֵ/הֶֽם
+    ├── [5] בְּ/אַרְצֹתָ֖/ם (tifcha, rank=2)
+    └── [6] בְּ/גוֹיֵ/הֶֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.21 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">ולשׁם ילד גם־הוא אבי כל־בני־עבר אחי יפת הגדול</span> · <i>u-le-shem yulad gam-hu avi kal-bene-ever achi yefet ha-gadol</i> · To Shem was born — father of Ever&#x27;s sons, the elder question. [EN-AID]</div>
+<pre>PHRASE (binary 11w) וּ/לְ/שֵׁ֥ם יֻלַּ֖ד גַּם ה֑וּא אֲבִי֙ כָּל בְּנ…
+├── PHRASE (binary 4w) וּ/לְ/שֵׁ֥ם יֻלַּ֖ד גַּם ה֑וּא
+│   ├── [0-1] GLUE וּ/לְ/שֵׁ֥ם יֻלַּ֖ד (tifcha, rank=2)
+│   └── [2-3] GLUE גַּם ה֑וּא (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) אֲבִי֙ כָּל בְּנֵי עֵ֔בֶר אֲחִ֖י יֶ֥פֶת הַ/גָּד…
+    ├── PHRASE (binary 4w) אֲבִי֙ כָּל בְּנֵי עֵ֔בֶר
+    │   ├── [4] אֲבִי֙ (pashta, rank=3)
+    │   └── [5-7] GLUE כָּל בְּנֵי עֵ֔בֶר (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) אֲחִ֖י יֶ֥פֶת הַ/גָּדֽוֹל
+        ├── [8] אֲחִ֖י (tifcha, rank=2)
+        └── [9-10] GLUE יֶ֥פֶת הַ/גָּדֽוֹל (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.22 · parser unique · 7 words</h3>
+<div class="meta"><span class="he">בני שׁם עילם ואשׁור וארפכשׁד ולוד וארם</span> · <i>bene shem elam ve-ashur ve-arpakhshad ve-lud va-aram</i> · The sons of Shem: five, Ashur among them again. [EN-AID]</div>
+<pre>PHRASE (binary 7w) בְּנֵ֥י שֵׁ֖ם עֵילָ֣ם וְ/אַשּׁ֑וּר וְ/אַרְפַּכְ…
+├── PHRASE (binary 4w) בְּנֵ֥י שֵׁ֖ם עֵילָ֣ם וְ/אַשּׁ֑וּר
+│   ├── [0-1] GLUE בְּנֵ֥י שֵׁ֖ם (tifcha, rank=2)
+│   └── [2-3] GLUE עֵילָ֣ם וְ/אַשּׁ֑וּר (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וְ/אַרְפַּכְשַׁ֖ד וְ/ל֥וּד וַֽ/אֲרָֽם
+    ├── [4] וְ/אַרְפַּכְשַׁ֖ד (tifcha, rank=2)
+    └── [5-6] GLUE וְ/ל֥וּד וַֽ/אֲרָֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.23 · parser unique · 6 words</h3>
+<div class="meta"><span class="he">ובני ארם עוץ וחול וגתר ומשׁ</span> · <i>u-vene aram utz ve-chul ve-geter va-mash</i> · The sons of Aram: four. [EN-AID]</div>
+<pre>PHRASE (binary 6w) וּ/בְנֵ֖י אֲרָ֑ם ע֥וּץ וְ/ח֖וּל וְ/גֶ֥תֶר וָ/מַ…
+├── PHRASE (binary 2w) וּ/בְנֵ֖י אֲרָ֑ם
+│   ├── [0] וּ/בְנֵ֖י (tifcha, rank=2)
+│   └── [1] אֲרָ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) ע֥וּץ וְ/ח֖וּל וְ/גֶ֥תֶר וָ/מַֽשׁ
+    ├── [2-3] GLUE ע֥וּץ וְ/ח֖וּל (tifcha, rank=2)
+    └── [4-5] GLUE וְ/גֶ֥תֶר וָ/מַֽשׁ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.24 · parser unique · 8 words</h3>
+<div class="meta"><span class="he">וארפכשׁד ילד את־שׁלח ושׁלח ילד את־עבר</span> · <i>ve-arpakhshad yalad et-shalach ve-shelach yalad et-ever</i> · Arpakhshad begot Shelach; Shelach begot Ever. [EN-AID]</div>
+<pre>PHRASE (binary 8w) וְ/אַרְפַּכְשַׁ֖ד יָלַ֣ד אֶת שָׁ֑לַח וְ/שֶׁ֖לַח…
+├── PHRASE (binary 4w) וְ/אַרְפַּכְשַׁ֖ד יָלַ֣ד אֶת שָׁ֑לַח
+│   ├── [0] וְ/אַרְפַּכְשַׁ֖ד (tifcha, rank=2)
+│   └── [1-3] GLUE יָלַ֣ד אֶת שָׁ֑לַח (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וְ/שֶׁ֖לַח יָלַ֥ד אֶת עֵֽבֶר
+    ├── [4] וְ/שֶׁ֖לַח (tifcha, rank=2)
+    └── [5-7] GLUE יָלַ֥ד אֶת עֵֽבֶר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.25 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">ולעבר ילד שׁני בנים שׁם האחד פלג כי בימיו נפלגה הארץ ושׁם אחיו יקטן</span> · <i>u-le-ever yulad shene vanim shem ha-echad peleg ki ve-yamay-v niflga ha-aretz ve-shem achi-v yaqtan</i> · Two sons: Peleg — in his days the earth was DIVIDED — and Yoktan. [EN-AID]</div>
+<pre>PHRASE (binary 14w) וּ/לְ/עֵ֥בֶר יֻלַּ֖ד שְׁנֵ֣י בָנִ֑ים שֵׁ֣ם הָֽ/…
+├── PHRASE (binary 4w) וּ/לְ/עֵ֥בֶר יֻלַּ֖ד שְׁנֵ֣י בָנִ֑ים
+│   ├── [0-1] GLUE וּ/לְ/עֵ֥בֶר יֻלַּ֖ד (tifcha, rank=2)
+│   └── [2-3] GLUE שְׁנֵ֣י בָנִ֑ים (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 10w) שֵׁ֣ם הָֽ/אֶחָ֞ד פֶּ֗לֶג כִּ֤י בְ/יָמָי/ו֙ נִפְ…
+    ├── PHRASE (binary 7w) שֵׁ֣ם הָֽ/אֶחָ֞ד פֶּ֗לֶג כִּ֤י בְ/יָמָי/ו֙ נִפְ…
+    │   ├── PHRASE (binary 3w) שֵׁ֣ם הָֽ/אֶחָ֞ד פֶּ֗לֶג
+    │   │   ├── [4-5] GLUE שֵׁ֣ם הָֽ/אֶחָ֞ד (gershayim, rank=4)
+    │   │   └── [6] פֶּ֗לֶג (revia, rank=3)
+    │   └── PHRASE (binary 4w) כִּ֤י בְ/יָמָי/ו֙ נִפְלְגָ֣ה הָ/אָ֔רֶץ
+    │       ├── [7-8] GLUE כִּ֤י בְ/יָמָי/ו֙ (pashta, rank=3)
+    │       └── [9-10] GLUE נִפְלְגָ֣ה הָ/אָ֔רֶץ (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) וְ/שֵׁ֥ם אָחִ֖י/ו יָקְטָֽן
+        ├── [11-12] GLUE וְ/שֵׁ֥ם אָחִ֖י/ו (tifcha, rank=2)
+        └── [13] יָקְטָֽן (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.26 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">ויקטן ילד את־אלמודד ואת־שׁלף ואת־חצרמות ואת־ירח</span> · <i>ve-yaqtan yalad et-almodad ve-et-shalef ve-et-chatzarmavet ve-et-yarach</i> · Yoktan begot Almodad, Shelef, Chatzarmavet, Yerach, [EN-AID]</div>
+<pre>PHRASE (binary 10w) וְ/יָקְטָ֣ן יָלַ֔ד אֶת אַלְמוֹדָ֖ד וְ/אֶת שָׁ֑ל…
+├── PHRASE (binary 6w) וְ/יָקְטָ֣ן יָלַ֔ד אֶת אַלְמוֹדָ֖ד וְ/אֶת שָׁ֑ל…
+│   ├── [0-1] GLUE וְ/יָקְטָ֣ן יָלַ֔ד (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) אֶת אַלְמוֹדָ֖ד וְ/אֶת שָׁ֑לֶף
+│       ├── [2-3] GLUE אֶת אַלְמוֹדָ֖ד (tifcha, rank=2)
+│       └── [4-5] GLUE וְ/אֶת שָׁ֑לֶף (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וְ/אֶת חֲצַרְמָ֖וֶת וְ/אֶת יָֽרַח
+    ├── [6-7] GLUE וְ/אֶת חֲצַרְמָ֖וֶת (tifcha, rank=2)
+    └── [8-9] GLUE וְ/אֶת יָֽרַח (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.27 · parser unique · 6 words</h3>
+<div class="meta"><span class="he">ואת־הדורם ואת־אוזל ואת־דקלה</span> · <i>ve-et-hadoram ve-et-uzal ve-et-diqla</i> · Hadoram, Uzal, Diklah, [EN-AID]</div>
+<pre>PHRASE (binary 6w) וְ/אֶת הֲדוֹרָ֥ם וְ/אֶת אוּזָ֖ל וְ/אֶת דִּקְלָֽה
+├── [0-3] GLUE וְ/אֶת הֲדוֹרָ֥ם וְ/אֶת אוּזָ֖ל (tifcha, rank=2)
+└── [4-5] GLUE וְ/אֶת דִּקְלָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.28 · parser unique · 6 words</h3>
+<div class="meta"><span class="he">ואת־עובל ואת־אבימאל ואת־שׁבא</span> · <i>ve-et-oval ve-et-avimael ve-et-sheva</i> · Oval, Avimael, Sheva, [EN-AID]</div>
+<pre>PHRASE (binary 6w) וְ/אֶת עוֹבָ֥ל וְ/אֶת אֲבִֽימָאֵ֖ל וְ/אֶת שְׁבָ…
+├── [0-3] GLUE וְ/אֶת עוֹבָ֥ל וְ/אֶת אֲבִֽימָאֵ֖ל (tifcha, rank=2)
+└── [4-5] GLUE וְ/אֶת שְׁבָֽא (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.29 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">ואת־אופר ואת־חוילה ואת־יובב כל־אלה בני יקטן</span> · <i>ve-et-ofir ve-et-chavila ve-et-yovav kal-ele bene yaqtan</i> · Ofir, Chavilah, Yovav: all these the sons of Yoktan. [EN-AID]</div>
+<pre>PHRASE (binary 10w) וְ/אֶת אוֹפִ֥ר וְ/אֶת חֲוִילָ֖ה וְ/אֶת יוֹבָ֑ב …
+├── PHRASE (binary 6w) וְ/אֶת אוֹפִ֥ר וְ/אֶת חֲוִילָ֖ה וְ/אֶת יוֹבָ֑ב
+│   ├── [0-3] GLUE וְ/אֶת אוֹפִ֥ר וְ/אֶת חֲוִילָ֖ה (tifcha, rank=2)
+│   └── [4-5] GLUE וְ/אֶת יוֹבָ֑ב (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) כָּל אֵ֖לֶּה בְּנֵ֥י יָקְטָֽן
+    ├── [6-7] GLUE כָּל אֵ֖לֶּה (tifcha, rank=2)
+    └── [8-9] GLUE בְּנֵ֥י יָקְטָֽן (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.30 · parser unique · 7 words</h3>
+<div class="meta"><span class="he">ויהי מושׁבם ממשׁא באכה ספרה הר הקדם</span> · <i>va-yehi moshava-m mi-mesha boa-kha sefara-ה har ha-qedem</i> · Their dwelling: from Mesha toward Sefar, the east-mountain. [EN-AID]</div>
+<pre>PHRASE (binary 7w) וַֽ/יְהִ֥י מוֹשָׁבָ֖/ם מִ/מֵּשָׁ֑א בֹּאֲ/כָ֥ה ס…
+├── PHRASE (binary 3w) וַֽ/יְהִ֥י מוֹשָׁבָ֖/ם מִ/מֵּשָׁ֑א
+│   ├── [0-1] GLUE וַֽ/יְהִ֥י מוֹשָׁבָ֖/ם (tifcha, rank=2)
+│   └── [2] מִ/מֵּשָׁ֑א (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) בֹּאֲ/כָ֥ה סְפָ֖רָ/ה הַ֥ר הַ/קֶּֽדֶם
+    ├── [3-4] GLUE בֹּאֲ/כָ֥ה סְפָ֖רָ/ה (tifcha, rank=2)
+    └── [5-6] GLUE הַ֥ר הַ/קֶּֽדֶם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.31 · parser unique · 7 words</h3>
+<div class="meta"><span class="he">אלה בני־שׁם למשׁפחתם ללשׁנתם בארצתם לגויהם</span> · <i>ele vene-shem le-mishpchota-m li-leshonota-m be-artzota-m le-goye-hem</i> · Shem&#x27;s close: families, tongues, lands, BY their nations. [EN-AID]</div>
+<pre>PHRASE (binary 7w) אֵ֣לֶּה בְנֵי שֵׁ֔ם לְ/מִשְׁפְּחֹתָ֖/ם לִ/לְשֹׁ…
+├── PHRASE (binary 5w) אֵ֣לֶּה בְנֵי שֵׁ֔ם לְ/מִשְׁפְּחֹתָ֖/ם לִ/לְשֹׁ…
+│   ├── [0-2] GLUE אֵ֣לֶּה בְנֵי שֵׁ֔ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 2w) לְ/מִשְׁפְּחֹתָ֖/ם לִ/לְשֹׁנֹתָ֑/ם
+│       ├── [3] לְ/מִשְׁפְּחֹתָ֖/ם (tifcha, rank=2)
+│       └── [4] לִ/לְשֹׁנֹתָ֑/ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 2w) בְּ/אַרְצֹתָ֖/ם לְ/גוֹיֵ/הֶֽם
+    ├── [5] בְּ/אַרְצֹתָ֖/ם (tifcha, rank=2)
+    └── [6] לְ/גוֹיֵ/הֶֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.10.32 · parser unique · 12 words</h3>
+<div class="meta"><span class="he">אלה משׁפחת בני־נח לתולדתם בגויהם ומאלה נפרדו הגוים בארץ אחר המבול</span> · <i>ele mishpchot bene-nocha le-toldota-m be-goye-hem u-me-ele nifrdu ha-goyim ba-aretz achar ha-mabul</i> · The grand close: of these the nations divided, after the deluge. [EN-AID]</div>
+<pre>PHRASE (binary 12w) אֵ֣לֶּה מִשְׁפְּחֹ֧ת בְּנֵי נֹ֛חַ לְ/תוֹלְדֹתָ֖…
+├── PHRASE (binary 6w) אֵ֣לֶּה מִשְׁפְּחֹ֧ת בְּנֵי נֹ֛חַ לְ/תוֹלְדֹתָ֖…
+│   ├── PHRASE (binary 5w) אֵ֣לֶּה מִשְׁפְּחֹ֧ת בְּנֵי נֹ֛חַ לְ/תוֹלְדֹתָ֖…
+│   │   ├── [0-3] GLUE אֵ֣לֶּה מִשְׁפְּחֹ֧ת בְּנֵי נֹ֛חַ (tevir, rank=3)
+│   │   └── [4] לְ/תוֹלְדֹתָ֖/ם (tifcha, rank=2)
+│   └── [5] בְּ/גוֹיֵ/הֶ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) וּ/מֵ/אֵ֜לֶּה נִפְרְד֧וּ הַ/גּוֹיִ֛ם בָּ/אָ֖רֶץ…
+    ├── PHRASE (binary 4w) וּ/מֵ/אֵ֜לֶּה נִפְרְד֧וּ הַ/גּוֹיִ֛ם בָּ/אָ֖רֶץ
+    │   ├── PHRASE (binary 3w) וּ/מֵ/אֵ֜לֶּה נִפְרְד֧וּ הַ/גּוֹיִ֛ם
+    │   │   ├── [6] וּ/מֵ/אֵ֜לֶּה (geresh, rank=4)
+    │   │   └── [7-8] GLUE נִפְרְד֧וּ הַ/גּוֹיִ֛ם (tevir, rank=3)
+    │   └── [9] בָּ/אָ֖רֶץ (tifcha, rank=2)
+    └── [10-11] GLUE אַחַ֥ר הַ/מַּבּֽוּל (silluq (verse-end emperor), rank=1)
+</pre>
+<h2>Word coverage — 287/287 words with named roles</h2>
+<table><tr><th>ref</th><th>#</th><th>Hebrew</th><th>translit</th><th>English</th><th>role</th><th>kind</th><th>rule</th></tr>
+<tr><td>Gen.10.1</td><td>0</td><td class='he-cell'>ואלה</td><td>ve-ele</td><td>and-these</td><td>and-these</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.1</td><td>1</td><td class='he-cell'>תולדת</td><td>toldot</td><td>generations-of</td><td>TOLEDOT_token_4_the_series</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.1</td><td>2</td><td class='he-cell'>בני</td><td>bene</td><td>sons-of</td><td>sons-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.1</td><td>3</td><td class='he-cell'>נח</td><td>nocha</td><td>Noah</td><td>name_nocha</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.1</td><td>4</td><td class='he-cell'>שם</td><td>shem</td><td>Sem</td><td>name_shem</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.1</td><td>5</td><td class='he-cell'>חם</td><td>cham</td><td>Ham</td><td>name_cham</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.1</td><td>6</td><td class='he-cell'>ויפת</td><td>va-yafet</td><td>and-Japheth</td><td>and-Japheth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.1</td><td>7</td><td class='he-cell'>ויולדו</td><td>va-yivaldu</td><td>and-were-born</td><td>niphal_birth_note_TIR_032</td><td>logic_bearing</td><td class='cite'>TIR-032</td></tr>
+<tr><td>Gen.10.1</td><td>8</td><td class='he-cell'>להם</td><td>la-hem</td><td>to-them</td><td>to-them</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.1</td><td>9</td><td class='he-cell'>בנים</td><td>banim</td><td>sons-of</td><td>sons-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.1</td><td>10</td><td class='he-cell'>אחר</td><td>achar</td><td>after</td><td>after</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.1</td><td>11</td><td class='he-cell'>המבול</td><td>ha-mabul</td><td>the-deluge</td><td>MABUL_token_10_inclusio_arm_one</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.2</td><td>0</td><td class='he-cell'>בני</td><td>bene</td><td>sons-of</td><td>sons-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.2</td><td>1</td><td class='he-cell'>יפת</td><td>yefet</td><td>Japheth</td><td>name_yefet</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.2</td><td>2</td><td class='he-cell'>גמר</td><td>gomer</td><td>Gomer</td><td>name_gomer</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.2</td><td>3</td><td class='he-cell'>ומגוג</td><td>u-magog</td><td>and-Magog</td><td>and-Magog</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.2</td><td>4</td><td class='he-cell'>ומדי</td><td>u-maday</td><td>and-Madai</td><td>and-Madai</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.2</td><td>5</td><td class='he-cell'>ויון</td><td>ve-yavan</td><td>and-Javan</td><td>and-Javan</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.2</td><td>6</td><td class='he-cell'>ותבל</td><td>ve-tuval</td><td>and-Tubal</td><td>and-Tubal</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.2</td><td>7</td><td class='he-cell'>ומשך</td><td>u-meshekh</td><td>and-Mesech</td><td>and-Mesech</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.2</td><td>8</td><td class='he-cell'>ותירס</td><td>ve-tiras</td><td>and-Tiras</td><td>and-Tiras</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.3</td><td>0</td><td class='he-cell'>ובני</td><td>u-vene</td><td>and-son</td><td>and-son</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.3</td><td>1</td><td class='he-cell'>גמר</td><td>gomer</td><td>Gomer</td><td>name_gomer</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.3</td><td>2</td><td class='he-cell'>אשכנז</td><td>ashkanaz</td><td>Ashkenaz</td><td>name_ashkanaz</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.3</td><td>3</td><td class='he-cell'>וריפת</td><td>ve-rifat</td><td>and-Riphath</td><td>and-Riphath</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.3</td><td>4</td><td class='he-cell'>ותגרמה</td><td>ve-togarma</td><td>and-Togarmah</td><td>and-Togarmah</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.4</td><td>0</td><td class='he-cell'>ובני</td><td>u-vene</td><td>and-son</td><td>and-son</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.4</td><td>1</td><td class='he-cell'>יון</td><td>yavan</td><td>Javan</td><td>name_yavan</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.4</td><td>2</td><td class='he-cell'>אלישה</td><td>elisha</td><td>Elishah</td><td>name_elisha</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.4</td><td>3</td><td class='he-cell'>ותרשיש</td><td>ve-tarshish</td><td>and-Tarshish</td><td>and-Tarshish</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.4</td><td>4</td><td class='he-cell'>כתים</td><td>kitim</td><td>Chittim</td><td>name_kitim</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.4</td><td>5</td><td class='he-cell'>ודדנים</td><td>ve-dodanim</td><td>and-Dodanim</td><td>and-Dodanim</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.5</td><td>0</td><td class='he-cell'>מאלה</td><td>me-ele</td><td>from-these</td><td>from-these</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.5</td><td>1</td><td class='he-cell'>נפרדו</td><td>nifrdu</td><td>divided</td><td>PARAD_token_2_eden_river_first</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.5</td><td>2</td><td class='he-cell'>איי</td><td>iye</td><td>coastlands-of</td><td>iyei_torah_hapax</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.5</td><td>3</td><td class='he-cell'>הגוים</td><td>ha-goyim</td><td>the-nations</td><td>GOY_TOKEN_1_born_in_the_table</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.5</td><td>4</td><td class='he-cell'>בארצתם</td><td>be-artzota-m</td><td>in-their-lands</td><td>in-their-lands</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.5</td><td>5</td><td class='he-cell'>איש</td><td>ish</td><td>each</td><td>ish_li_leshono_SINGULAR_anomalous_close</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.5</td><td>6</td><td class='he-cell'>ללשנו</td><td>li-leshon-o</td><td>to-his-tongue</td><td>LASHON_TOKEN_1_of_six</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.5</td><td>7</td><td class='he-cell'>למשפחתם</td><td>le-mishpchota-m</td><td>by-their-families</td><td>by-their-families</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.5</td><td>8</td><td class='he-cell'>בגויהם</td><td>be-goye-hem</td><td>in-their-nations</td><td>goy_token_2</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.6</td><td>0</td><td class='he-cell'>ובני</td><td>u-vene</td><td>and-son</td><td>and-son</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.6</td><td>1</td><td class='he-cell'>חם</td><td>cham</td><td>Ham</td><td>name_cham</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.6</td><td>2</td><td class='he-cell'>כוש</td><td>kush</td><td>Chush</td><td>name_kush</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.6</td><td>3</td><td class='he-cell'>ומצרים</td><td>u-mitzrayim</td><td>and-Egypt</td><td>MITZRAYIM_token_1_of_314</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.6</td><td>4</td><td class='he-cell'>ופוט</td><td>u-fut</td><td>and-Phut</td><td>and-Phut</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.6</td><td>5</td><td class='he-cell'>וכנען</td><td>u-khenaan</td><td>and-Canaan</td><td>the_cursed_son_a_table_father</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.7</td><td>0</td><td class='he-cell'>ובני</td><td>u-vene</td><td>and-son</td><td>and-son</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.7</td><td>1</td><td class='he-cell'>כוש</td><td>khush</td><td>Chush</td><td>name_khush</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.7</td><td>2</td><td class='he-cell'>סבא</td><td>seva</td><td>Seba</td><td>name_seva</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.7</td><td>3</td><td class='he-cell'>וחוילה</td><td>va-chavila</td><td>and-Chavilah</td><td>CHAVILAH_token_2_edens_gold_land_first</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.7</td><td>4</td><td class='he-cell'>וסבתה</td><td>ve-savta</td><td>and-Sabta</td><td>and-Sabta</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.7</td><td>5</td><td class='he-cell'>ורעמה</td><td>ve-rama</td><td>and-Raamah</td><td>and-Raamah</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.7</td><td>6</td><td class='he-cell'>וסבתכא</td><td>ve-savtkha</td><td>and-Sabtecha</td><td>and-Sabtecha</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.7</td><td>7</td><td class='he-cell'>ובני</td><td>u-vene</td><td>and-son</td><td>and-son</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.7</td><td>8</td><td class='he-cell'>רעמה</td><td>rama</td><td>Raamah</td><td>name_rama</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.7</td><td>9</td><td class='he-cell'>שבא</td><td>sheva</td><td>Sheva</td><td>SHEVA_cross_line_double_10_28</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.7</td><td>10</td><td class='he-cell'>ודדן</td><td>u-dedan</td><td>and-Dedan</td><td>and-Dedan</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.8</td><td>0</td><td class='he-cell'>וכוש</td><td>ve-khush</td><td>and-Chush</td><td>and-Chush</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.8</td><td>1</td><td class='he-cell'>ילד</td><td>yalad</td><td>begot</td><td>first_active_yalad_gen_13_event_class</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.8</td><td>2</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.10.8</td><td>3</td><td class='he-cell'>נמרד</td><td>nimrod</td><td>Nimrod</td><td>NIMROD_two_tokens_both_here</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.8</td><td>4</td><td class='he-cell'>הוא</td><td>hu</td><td>he</td><td>he</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.8</td><td>5</td><td class='he-cell'>החל</td><td>hechel</td><td>began</td><td>CHALAL_token_4_threshold_chain</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.8</td><td>6</td><td class='he-cell'>להיות</td><td>li-heot</td><td>to-be</td><td>to-be</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.8</td><td>7</td><td class='he-cell'>גבר</td><td>gibor</td><td>mighty</td><td>GIBBOR_token_2_of_five</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.8</td><td>8</td><td class='he-cell'>בארץ</td><td>ba-aretz</td><td>in-the-land</td><td>in-the-land</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.9</td><td>0</td><td class='he-cell'>הוא</td><td>hu</td><td>he</td><td>he</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.9</td><td>1</td><td class='he-cell'>היה</td><td>haya</td><td>was</td><td>was</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.9</td><td>2</td><td class='he-cell'>גבר</td><td>gibor</td><td>mighty</td><td>gibbor_token_3</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.9</td><td>3</td><td class='he-cell'>ציד</td><td>tzayid</td><td>hunter</td><td>TZAYID_TOKEN_1_esau_next</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.9</td><td>4</td><td class='he-cell'>לפני</td><td>li-fene</td><td>to-face</td><td>to-face</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.9</td><td>5</td><td class='he-cell'>יהוה</td><td>YHWH</td><td>YHWH</td><td>the_chapters_only_divine_names</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.9</td><td>6</td><td class='he-cell'>על</td><td>al</td><td>therefore</td><td>AL_KEN_the_pattern_formula_gen_09</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.9</td><td>7</td><td class='he-cell'>כן</td><td>ken</td><td>so</td><td>so</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.9</td><td>8</td><td class='he-cell'>יאמר</td><td>yeamar</td><td>it-is-said</td><td>the_proverb_yeamar</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.9</td><td>9</td><td class='he-cell'>כנמרד</td><td>ke-nimrod</td><td>like-Nimrod</td><td>PATTERN_ke_nimrod</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.9</td><td>10</td><td class='he-cell'>גבור</td><td>gibor</td><td>mighty</td><td>mighty</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.9</td><td>11</td><td class='he-cell'>ציד</td><td>tzayid</td><td>hunter</td><td>hunter</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.9</td><td>12</td><td class='he-cell'>לפני</td><td>li-fene</td><td>to-face</td><td>to-face</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.9</td><td>13</td><td class='he-cell'>יהוה</td><td>YHWH</td><td>YHWH</td><td>name_YHWH</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.10</td><td>0</td><td class='he-cell'>ותהי</td><td>va-tehi</td><td>and-was</td><td>va_tehi_wayyiqtol_one_of_two</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.10</td><td>1</td><td class='he-cell'>ראשית</td><td>reshit</td><td>beginning-of</td><td>RESHIT_token_2_after_1_1</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.10</td><td>2</td><td class='he-cell'>ממלכתו</td><td>mamlakht-o</td><td>his-kingdom</td><td>MAMLAKHAH_TOKEN_1</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.10</td><td>3</td><td class='he-cell'>בבל</td><td>bavel</td><td>Babel</td><td>BAVEL_token_1_name_before_story</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.10</td><td>4</td><td class='he-cell'>וארך</td><td>ve-erekh</td><td>and-Erech</td><td>and-Erech</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.10</td><td>5</td><td class='he-cell'>ואכד</td><td>ve-akad</td><td>and-Accad</td><td>and-Accad</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.10</td><td>6</td><td class='he-cell'>וכלנה</td><td>ve-khalne</td><td>and-Calneh</td><td>and-Calneh</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.10</td><td>7</td><td class='he-cell'>בארץ</td><td>be-eretz</td><td>in-the-land</td><td>in-the-land</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.10</td><td>8</td><td class='he-cell'>שנער</td><td>shinar</td><td>Shinar</td><td>SHINAR_token_1_babel_bridge</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.11</td><td>0</td><td class='he-cell'>מן</td><td>min</td><td>from</td><td>from</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.11</td><td>1</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.11</td><td>2</td><td class='he-cell'>ההוא</td><td>ha-hiv</td><td>that</td><td>that</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.11</td><td>3</td><td class='he-cell'>יצא</td><td>yatza</td><td>went-out</td><td>the_ambiguous_subject_OPEN</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.11</td><td>4</td><td class='he-cell'>אשור</td><td>ashur</td><td>Ashur</td><td>ashur_son_or_place_onkelos_decides</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.11</td><td>5</td><td class='he-cell'>ויבן</td><td>va-yiven</td><td>and-he-built</td><td>BANAH_token_4_rib_city_altar_ninveh_tower</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.11</td><td>6</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.10.11</td><td>7</td><td class='he-cell'>נינוה</td><td>ninve</td><td>Ninveh</td><td>installed_city_one</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.11</td><td>8</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.10.11</td><td>9</td><td class='he-cell'>רחבת</td><td>rechovot</td><td>Rehoboth</td><td>name_rechovot</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.11</td><td>10</td><td class='he-cell'>עיר</td><td>ir</td><td>city</td><td>name_ir</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.11</td><td>11</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.10.11</td><td>12</td><td class='he-cell'>כלח</td><td>kalach</td><td>Calah</td><td>name_kalach</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.12</td><td>0</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.10.12</td><td>1</td><td class='he-cell'>רסן</td><td>resen</td><td>Resen</td><td>name_resen</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.12</td><td>2</td><td class='he-cell'>בין</td><td>ben</td><td>between</td><td>between</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.12</td><td>3</td><td class='he-cell'>נינוה</td><td>ninve</td><td>Nineveh</td><td>name_ninve</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.12</td><td>4</td><td class='he-cell'>ובין</td><td>u-ven</td><td>and-between</td><td>and-between</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.12</td><td>5</td><td class='he-cell'>כלח</td><td>kalach</td><td>Calah</td><td>name_kalach</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.12</td><td>6</td><td class='he-cell'>הוא</td><td>hiv</td><td>he</td><td>he</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.12</td><td>7</td><td class='he-cell'>העיר</td><td>ha-ir</td><td>the-city</td><td>IR_token_4</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.12</td><td>8</td><td class='he-cell'>הגדלה</td><td>ha-gedola</td><td>the-great</td><td>GADOL_token_5_elder_next</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.13</td><td>0</td><td class='he-cell'>ומצרים</td><td>u-mitzrayim</td><td>and-Egypt</td><td>and-Egypt</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.13</td><td>1</td><td class='he-cell'>ילד</td><td>yalad</td><td>begot</td><td>mitzrayim_active_yalad</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.13</td><td>2</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.10.13</td><td>3</td><td class='he-cell'>לודים</td><td>ludim</td><td>Ludite</td><td>Ludite</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.13</td><td>4</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.10.13</td><td>5</td><td class='he-cell'>ענמים</td><td>anamim</td><td>Anamim</td><td>Anamim</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.13</td><td>6</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.10.13</td><td>7</td><td class='he-cell'>להבים</td><td>lehavim</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.10.13</td><td>8</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.10.13</td><td>9</td><td class='he-cell'>נפתחים</td><td>naftuchim</td><td>Naphtuchim</td><td>Naphtuchim</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.14</td><td>0</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.10.14</td><td>1</td><td class='he-cell'>פתרסים</td><td>patrusim</td><td>Pathrusite</td><td>Pathrusite</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.14</td><td>2</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.10.14</td><td>3</td><td class='he-cell'>כסלחים</td><td>kasluchim</td><td>Casluchim</td><td>Casluchim</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.14</td><td>4</td><td class='he-cell'>אשר</td><td>asher</td><td>who</td><td>who</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.14</td><td>5</td><td class='he-cell'>יצאו</td><td>yatzu</td><td>bring-forth</td><td>bring-forth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.14</td><td>6</td><td class='he-cell'>משם</td><td>mi-sham</td><td>from-there</td><td>from-there</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.14</td><td>7</td><td class='he-cell'>פלשתים</td><td>pelishtim</td><td>Philistines</td><td>PELISHTIM_token_1_origin_note</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.14</td><td>8</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.10.14</td><td>9</td><td class='he-cell'>כפתרים</td><td>kaftorim</td><td>Kaftorim</td><td>onkelos_cappadocians_dual_track</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.15</td><td>0</td><td class='he-cell'>וכנען</td><td>u-khenaan</td><td>and-Canaan</td><td>and-Canaan</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.15</td><td>1</td><td class='he-cell'>ילד</td><td>yalad</td><td>begot</td><td>canaan_active_yalad</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.15</td><td>2</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.10.15</td><td>3</td><td class='he-cell'>צידן</td><td>tzidon</td><td>Sidon</td><td>name_tzidon</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.15</td><td>4</td><td class='he-cell'>בכרו</td><td>bekhor-o</td><td>his-firstborn</td><td>BEKHOR_TOKEN_1_the_exodus_word</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.15</td><td>5</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.10.15</td><td>6</td><td class='he-cell'>חת</td><td>chet</td><td>Heth</td><td>name_chet</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.16</td><td>0</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.10.16</td><td>1</td><td class='he-cell'>היבוסי</td><td>ha-yevusi</td><td>the-Jebusite</td><td>the-Jebusite</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.16</td><td>2</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.10.16</td><td>3</td><td class='he-cell'>האמרי</td><td>ha-emori</td><td>the-Emorite</td><td>the-Emorite</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.16</td><td>4</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.10.16</td><td>5</td><td class='he-cell'>הגרגשי</td><td>ha-girgashi</td><td>the-Girgashite</td><td>the-Girgashite</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.17</td><td>0</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.10.17</td><td>1</td><td class='he-cell'>החוי</td><td>ha-chivi</td><td>the-Chivvite</td><td>the-Chivvite</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.17</td><td>2</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.10.17</td><td>3</td><td class='he-cell'>הערקי</td><td>ha-arqi</td><td>the-Arkite</td><td>the-Arkite</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.17</td><td>4</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.10.17</td><td>5</td><td class='he-cell'>הסיני</td><td>ha-sini</td><td>the-Sinite</td><td>the-Sinite</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.18</td><td>0</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.10.18</td><td>1</td><td class='he-cell'>הארודי</td><td>ha-arvadi</td><td>the-Arvadite</td><td>the-Arvadite</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.18</td><td>2</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.10.18</td><td>3</td><td class='he-cell'>הצמרי</td><td>ha-tzemari</td><td>the-Tsemarite</td><td>the-Tsemarite</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.18</td><td>4</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.10.18</td><td>5</td><td class='he-cell'>החמתי</td><td>ha-chamati</td><td>the-Chamathite</td><td>the-Chamathite</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.18</td><td>6</td><td class='he-cell'>ואחר</td><td>ve-achar</td><td>and-afterward</td><td>ve_achar_the_spread_clause</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.18</td><td>7</td><td class='he-cell'>נפצו</td><td>nafotzu</td><td>were-spread</td><td>PUTZ_TOKEN_1_babels_verb_debuts</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.18</td><td>8</td><td class='he-cell'>משפחות</td><td>mishpchot</td><td>families-of</td><td>mishpachah_token_3</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.18</td><td>9</td><td class='he-cell'>הכנעני</td><td>ha-kenaani</td><td>the-Canaanite</td><td>KENAANI_gentilic_token_1</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.19</td><td>0</td><td class='he-cell'>ויהי</td><td>va-yehi</td><td>and-was</td><td>va_yehi_border_formula</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.19</td><td>1</td><td class='he-cell'>גבול</td><td>gevul</td><td>border-of</td><td>GEVUL_TOKEN_1_the_covenant_map</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.19</td><td>2</td><td class='he-cell'>הכנעני</td><td>ha-kenaani</td><td>the-Kenaanite</td><td>the-Kenaanite</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.19</td><td>3</td><td class='he-cell'>מצידן</td><td>mi-tzidon</td><td>from-Sidon</td><td>from-Sidon</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.19</td><td>4</td><td class='he-cell'>באכה</td><td>boa-kha</td><td>as-you-come</td><td>as-you-come</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.19</td><td>5</td><td class='he-cell'>גררה</td><td>gerara-h</td><td>Gerar-suffix</td><td>name_gerara_ה</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.19</td><td>6</td><td class='he-cell'>עד</td><td>ad</td><td>until</td><td>until</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.19</td><td>7</td><td class='he-cell'>עזה</td><td>aza</td><td>Azzah</td><td>name_aza</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.19</td><td>8</td><td class='he-cell'>באכה</td><td>boa-kha</td><td>as-you-come</td><td>as-you-come</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.19</td><td>9</td><td class='he-cell'>סדמה</td><td>sedoma-h</td><td>toward-Sodom</td><td>SODOM_token_1_of_23_a_map_point</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.19</td><td>10</td><td class='he-cell'>ועמרה</td><td>va-amora</td><td>and-Gomorrah</td><td>and-Gomorrah</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.19</td><td>11</td><td class='he-cell'>ואדמה</td><td>ve-adma</td><td>and-Admah</td><td>and-Admah</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.19</td><td>12</td><td class='he-cell'>וצבים</td><td>u-tzevoyim</td><td>and-Zeboiim</td><td>and-Zeboiim</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.19</td><td>13</td><td class='he-cell'>עד</td><td>ad</td><td>until</td><td>until</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.19</td><td>14</td><td class='he-cell'>לשע</td><td>lasha</td><td>Lasha</td><td>name_lasha</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.20</td><td>0</td><td class='he-cell'>אלה</td><td>ele</td><td>these</td><td>these</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.20</td><td>1</td><td class='he-cell'>בני</td><td>vene</td><td>sons-of</td><td>sons-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.20</td><td>2</td><td class='he-cell'>חם</td><td>cham</td><td>Ham</td><td>name_cham</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.20</td><td>3</td><td class='he-cell'>למשפחתם</td><td>le-mishpchota-m</td><td>by-their-families</td><td>by-their-families</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.20</td><td>4</td><td class='he-cell'>ללשנתם</td><td>li-leshonota-m</td><td>by-their-tongues</td><td>by-their-tongues</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.20</td><td>5</td><td class='he-cell'>בארצתם</td><td>be-artzota-m</td><td>in-their-lands</td><td>in-their-lands</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.20</td><td>6</td><td class='he-cell'>בגויהם</td><td>be-goye-hem</td><td>in-their-nations</td><td>BE_goyehem_the_twin_preposition</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.21</td><td>0</td><td class='he-cell'>ולשם</td><td>u-le-shem</td><td>and-to-Sem</td><td>and-to-Sem</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.21</td><td>1</td><td class='he-cell'>ילד</td><td>yulad</td><td>was-born</td><td>YULLAD_pual_shems_line_receives</td><td>logic_bearing</td><td class='cite'>TIR-032</td></tr>
+<tr><td>Gen.10.21</td><td>2</td><td class='he-cell'>גם</td><td>gam</td><td>also</td><td>also</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.21</td><td>3</td><td class='he-cell'>הוא</td><td>hu</td><td>he</td><td>he</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.21</td><td>4</td><td class='he-cell'>אבי</td><td>avi</td><td>father-of</td><td>father-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.21</td><td>5</td><td class='he-cell'>כל</td><td>kal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.21</td><td>6</td><td class='he-cell'>בני</td><td>bene</td><td>sons-of</td><td>sons-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.21</td><td>7</td><td class='he-cell'>עבר</td><td>ever</td><td>Ever</td><td>EVER_token_1_the_rail</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.21</td><td>8</td><td class='he-cell'>אחי</td><td>achi</td><td>brother</td><td>brother</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.21</td><td>9</td><td class='he-cell'>יפת</td><td>yefet</td><td>Japheth</td><td>name_yefet</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.21</td><td>10</td><td class='he-cell'>הגדול</td><td>ha-gadol</td><td>the-elder</td><td>GADOL_token_6_who_is_elder_OPEN</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.22</td><td>0</td><td class='he-cell'>בני</td><td>bene</td><td>sons-of</td><td>sons-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.22</td><td>1</td><td class='he-cell'>שם</td><td>shem</td><td>Sem</td><td>name_shem</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.22</td><td>2</td><td class='he-cell'>עילם</td><td>elam</td><td>Elam</td><td>name_elam</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.22</td><td>3</td><td class='he-cell'>ואשור</td><td>ve-ashur</td><td>and-Ashur</td><td>ashur_shems_son_cross_line_double</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.22</td><td>4</td><td class='he-cell'>וארפכשד</td><td>ve-arpakhshad</td><td>and-Arphaxad</td><td>and-Arphaxad</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.22</td><td>5</td><td class='he-cell'>ולוד</td><td>ve-lud</td><td>and-Lud</td><td>and-Lud</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.22</td><td>6</td><td class='he-cell'>וארם</td><td>va-aram</td><td>and-Aram</td><td>and-Aram</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.23</td><td>0</td><td class='he-cell'>ובני</td><td>u-vene</td><td>and-son</td><td>and-son</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.23</td><td>1</td><td class='he-cell'>ארם</td><td>aram</td><td>Aram</td><td>name_aram</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.23</td><td>2</td><td class='he-cell'>עוץ</td><td>utz</td><td>Uz</td><td>name_utz</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.23</td><td>3</td><td class='he-cell'>וחול</td><td>ve-chul</td><td>and-Hul</td><td>and-Hul</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.23</td><td>4</td><td class='he-cell'>וגתר</td><td>ve-geter</td><td>and-Gether</td><td>and-Gether</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.23</td><td>5</td><td class='he-cell'>ומש</td><td>va-mash</td><td>and-Mash</td><td>and-Mash</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.24</td><td>0</td><td class='he-cell'>וארפכשד</td><td>ve-arpakhshad</td><td>and-Arphaxad</td><td>and-Arphaxad</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.24</td><td>1</td><td class='he-cell'>ילד</td><td>yalad</td><td>begot</td><td>the_rail_arpakhshad_shelach</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.24</td><td>2</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.10.24</td><td>3</td><td class='he-cell'>שלח</td><td>shalach</td><td>Salah</td><td>name_shalach</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.24</td><td>4</td><td class='he-cell'>ושלח</td><td>ve-shelach</td><td>and-Salah</td><td>and-Salah</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.24</td><td>5</td><td class='he-cell'>ילד</td><td>yalad</td><td>begot</td><td>the_rail_shelach_ever</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.24</td><td>6</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.10.24</td><td>7</td><td class='he-cell'>עבר</td><td>ever</td><td>Eber</td><td>name_ever</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.25</td><td>0</td><td class='he-cell'>ולעבר</td><td>u-le-ever</td><td>and-to-Eber</td><td>and-to-Eber</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.25</td><td>1</td><td class='he-cell'>ילד</td><td>yulad</td><td>was-born</td><td>yullad_pual_two_TIR_032</td><td>logic_bearing</td><td class='cite'>TIR-032</td></tr>
+<tr><td>Gen.10.25</td><td>2</td><td class='he-cell'>שני</td><td>shene</td><td>two</td><td>two</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.25</td><td>3</td><td class='he-cell'>בנים</td><td>vanim</td><td>sons-of</td><td>sons-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.25</td><td>4</td><td class='he-cell'>שם</td><td>shem</td><td>name</td><td>name</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.25</td><td>5</td><td class='he-cell'>האחד</td><td>ha-echad</td><td>the-one</td><td>the-one</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.25</td><td>6</td><td class='he-cell'>פלג</td><td>peleg</td><td>Peleg</td><td>PELEG_report_naming_no_NAME_op</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.25</td><td>7</td><td class='he-cell'>כי</td><td>ki</td><td>that</td><td>that</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.25</td><td>8</td><td class='he-cell'>בימיו</td><td>ve-yamay-v</td><td>in-his-days</td><td>in-his-days</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.25</td><td>9</td><td class='he-cell'>נפלגה</td><td>niflga</td><td>was-divided</td><td>PALAG_TORAH_HAPAX_babel_pre_echo</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.25</td><td>10</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.25</td><td>11</td><td class='he-cell'>ושם</td><td>ve-shem</td><td>and-name</td><td>and-name</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.25</td><td>12</td><td class='he-cell'>אחיו</td><td>achi-v</td><td>his-brother</td><td>his-brother</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.25</td><td>13</td><td class='he-cell'>יקטן</td><td>yaqtan</td><td>Joktan</td><td>name_yaqtan</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.26</td><td>0</td><td class='he-cell'>ויקטן</td><td>ve-yaqtan</td><td>and-Joktan</td><td>and-Joktan</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.26</td><td>1</td><td class='he-cell'>ילד</td><td>yalad</td><td>begot</td><td>yoktan_active_yalad_thirteen</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.26</td><td>2</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.10.26</td><td>3</td><td class='he-cell'>אלמודד</td><td>almodad</td><td>Almodad</td><td>name_almodad</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.26</td><td>4</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.10.26</td><td>5</td><td class='he-cell'>שלף</td><td>shalef</td><td>Sheleph</td><td>name_shalef</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.26</td><td>6</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.10.26</td><td>7</td><td class='he-cell'>חצרמות</td><td>chatzarmavet</td><td>Hazarmaveth</td><td>name_chatzarmavet</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.26</td><td>8</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.10.26</td><td>9</td><td class='he-cell'>ירח</td><td>yarach</td><td>Jerah</td><td>name_yarach</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.27</td><td>0</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.10.27</td><td>1</td><td class='he-cell'>הדורם</td><td>hadoram</td><td>Hadoram</td><td>name_hadoram</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.27</td><td>2</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.10.27</td><td>3</td><td class='he-cell'>אוזל</td><td>uzal</td><td>Uzal</td><td>name_uzal</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.27</td><td>4</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.10.27</td><td>5</td><td class='he-cell'>דקלה</td><td>diqla</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.10.28</td><td>0</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.10.28</td><td>1</td><td class='he-cell'>עובל</td><td>oval</td><td>Obal</td><td>name_oval</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.28</td><td>2</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.10.28</td><td>3</td><td class='he-cell'>אבימאל</td><td>avimael</td><td>Abimael</td><td>name_avimael</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.28</td><td>4</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.10.28</td><td>5</td><td class='he-cell'>שבא</td><td>sheva</td><td>and-Sheva</td><td>sheva_cross_line_double_10_7</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.29</td><td>0</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.10.29</td><td>1</td><td class='he-cell'>אופר</td><td>ofir</td><td>Ophir</td><td>name_ofir</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.29</td><td>2</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.10.29</td><td>3</td><td class='he-cell'>חוילה</td><td>chavila</td><td>and-Chavilah</td><td>chavilah_token_3_both_lines</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.29</td><td>4</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.10.29</td><td>5</td><td class='he-cell'>יובב</td><td>yovav</td><td>Jobab</td><td>name_yovav</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.29</td><td>6</td><td class='he-cell'>כל</td><td>kal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.29</td><td>7</td><td class='he-cell'>אלה</td><td>ele</td><td>these</td><td>these</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.29</td><td>8</td><td class='he-cell'>בני</td><td>bene</td><td>sons-of</td><td>sons-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.29</td><td>9</td><td class='he-cell'>יקטן</td><td>yaqtan</td><td>Joktan</td><td>name_yaqtan</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.30</td><td>0</td><td class='he-cell'>ויהי</td><td>va-yehi</td><td>and-was</td><td>and-was</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.30</td><td>1</td><td class='he-cell'>מושבם</td><td>moshava-m</td><td>their-dwelling</td><td>MOSHAV_token_1</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.30</td><td>2</td><td class='he-cell'>ממשא</td><td>mi-mesha</td><td>from-Mesha</td><td>from-Mesha</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.30</td><td>3</td><td class='he-cell'>באכה</td><td>boa-kha</td><td>as-you-come</td><td>as-you-come</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.30</td><td>4</td><td class='he-cell'>ספרה</td><td>sefara-h</td><td>Sephar-suffix</td><td>name_sefara_ה</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.30</td><td>5</td><td class='he-cell'>הר</td><td>har</td><td>mountain</td><td>mountain</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.30</td><td>6</td><td class='he-cell'>הקדם</td><td>ha-qedem</td><td>the-east</td><td>QEDEM_token_3_to_babels_journey</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.31</td><td>0</td><td class='he-cell'>אלה</td><td>ele</td><td>these</td><td>these</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.31</td><td>1</td><td class='he-cell'>בני</td><td>vene</td><td>sons-of</td><td>sons-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.31</td><td>2</td><td class='he-cell'>שם</td><td>shem</td><td>Sem</td><td>name_shem</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.31</td><td>3</td><td class='he-cell'>למשפחתם</td><td>le-mishpchota-m</td><td>by-their-families</td><td>by-their-families</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.31</td><td>4</td><td class='he-cell'>ללשנתם</td><td>li-leshonota-m</td><td>by-their-tongues</td><td>by-their-tongues</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.31</td><td>5</td><td class='he-cell'>בארצתם</td><td>be-artzota-m</td><td>in-their-lands</td><td>in-their-lands</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.31</td><td>6</td><td class='he-cell'>לגויהם</td><td>le-goye-hem</td><td>by-their-nations</td><td>LE_goyehem_the_one_letter_delta</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.32</td><td>0</td><td class='he-cell'>אלה</td><td>ele</td><td>these</td><td>these</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.32</td><td>1</td><td class='he-cell'>משפחת</td><td>mishpchot</td><td>families-of</td><td>mishpachah_token_6_abram_bridge</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.32</td><td>2</td><td class='he-cell'>בני</td><td>bene</td><td>sons-of</td><td>sons-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.32</td><td>3</td><td class='he-cell'>נח</td><td>nocha</td><td>Noah</td><td>name_nocha</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.32</td><td>4</td><td class='he-cell'>לתולדתם</td><td>le-toldota-m</td><td>by-their-generations</td><td>toledot_token_5_answers_10_1</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.32</td><td>5</td><td class='he-cell'>בגויהם</td><td>be-goye-hem</td><td>in-their-nations</td><td>in-their-nations</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.32</td><td>6</td><td class='he-cell'>ומאלה</td><td>u-me-ele</td><td>and-from-these</td><td>and-from-these</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.32</td><td>7</td><td class='he-cell'>נפרדו</td><td>nifrdu</td><td>divided</td><td>PARAD_token_3</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.32</td><td>8</td><td class='he-cell'>הגוים</td><td>ha-goyim</td><td>the-nations</td><td>GOY_token_6</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.32</td><td>9</td><td class='he-cell'>בארץ</td><td>ba-aretz</td><td>in-the-land</td><td>in-the-land</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.32</td><td>10</td><td class='he-cell'>אחר</td><td>achar</td><td>after</td><td>after</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.10.32</td><td>11</td><td class='he-cell'>המבול</td><td>ha-mabul</td><td>the-deluge</td><td>MABUL_token_11_inclusio_sealed</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_24_nations_table — The nations table: of these the nations divided after the flood (10:1-32) [frozen]
+
+final state: WORLD=[&#x27;kalach&#x27;, &#x27;ninveh&#x27;, &#x27;rechovot_ir&#x27;, &#x27;resen&#x27;] (+1 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[&#x27;read_before_install&#x27;]
+
+=== S1 — The heading labels, installs nothing: after STEP_Gn_10_1
+    וְאֵלֶּה תּוֹלְדֹת בְּנֵי־נֹחַ (ve-eleh toledot bnei-Noach)
+    PASS  flags noach as read-before-install  (flagged=[&#x27;noach&#x27;])
+    PASS  SPECS empty.  (queue=0)
+
+=== S2 — Yefet&#x27;s rows and the anomalous close hold: after STEP_Gn_10_2_5
+    אִישׁ לִלְשֹׁנוֹ לְמִשְׁפְּחֹתָם בְּגוֹיֵהֶם (ish li-leshono le-mishpechotam be-goyehem)
+    PASS  Facts nifredu-iyei HOLD  (3 facts)
+    PASS  Facts ish-li-leshono HOLD.  (3 facts)
+
+=== S3 — The Nimrod pattern on the books: after STEP_Gn_10_8_9
+    עַל־כֵּן יֵאָמַר כְּנִמְרֹד גִּבּוֹר צַיִד לִפְנֵי יְהוָה (al-ken yeamar ke-Nimrod gibbor tzayid lifnei YHWH)
+    PASS  Facts gibbor-tzayid HOLD  (8 facts)
+    PASS  Facts pattern-ke-nimrod HOLD.  (8 facts)
+
+=== S4 — The four cities installed on the agentless build: after STEP_Gn_10_10_12
+    וַיִּבֶן אֶת־נִינְוֵה (va-yiven et-Ninveh)
+    PASS  WORLD = {ninveh, rechovot_ir, kalach, resen}  (created=[&#x27;kalach&#x27;, &#x27;ninveh&#x27;, &#x27;rechovot_ir&#x27;, &#x27;resen&#x27;])
+    PASS  Facts reshit-mamlakhto-bavel HOLD.  (11 facts)
+
+=== S5 — The spread and the border drawn: after STEP_Gn_10_15_19
+    וַיְהִי גְּבוּל הַכְּנַעֲנִי מִצִּידֹן (va-yehi gevul ha-Kenaani mi-Tzidon)
+    PASS  Facts nafotzu-mishpechot HOLD  (15 facts)
+    PASS  Facts gevul-ha-kenaani HOLD.  (15 facts)
+
+=== S6 — Ham&#x27;s close recites the refrain: after STEP_Gn_10_20
+    אֵלֶּה בְנֵי־חָם … בְּגוֹיֵהֶם (eleh vnei-Cham … be-goyehem)
+    PASS  Facts vnei-cham-be-goyehem HOLD.  (16 facts)
+
+=== S7 — The earth divided in Peleg&#x27;s days: after STEP_Gn_10_25_29
+    כִּי בְיָמָיו נִפְלְגָה הָאָרֶץ (ki ve-yamav niflegah ha-aretz)
+    PASS  Facts niflegah-ha-aretz HOLD.  (21 facts)
+
+=== S8 — Shem&#x27;s close pins the one-letter delta: after STEP_Gn_10_30_31
+    אֵלֶּה בְנֵי־שֵׁם … לְגוֹיֵהֶם (eleh vnei-Shem … le-goyehem)
+    PASS  Facts shem-le-goyehem HOLD.  (23 facts)
+
+=== S9 — The grand close seals the inclusio, the queue never woke: after STEP_Gn_10_32
+    וּמֵאֵלֶּה נִפְרְדוּ הַגּוֹיִם בָּאָרֶץ אַחַר הַמַּבּוּל (u-me-eleh nifredu ha-goyim ba-aretz achar ha-mabul)
+    PASS  Facts nifredu-ha-goyim-achar-ha-mabul HOLD  (25 facts)
+    PASS  SPECS empty.  (queue=0)
+
+=== S10_negative — Negative: the machine&#x27;s ? stays guarded
+    PASS  imperfect-in-command parsed as LET? (question mark kept)  (mood=LET?)
+    PASS  auto-upgrade REFUSED  (TIR-028: LET? never auto-upgrades to LET — a per-unit judgme...)
+    PASS  upgrade WITH citation allowed  (cite=per-unit judgment (owner), TIR-028 resolution)
+
+=== S11_negative — Negative: flags never block
+    PASS  commit proceeded (not blocked)  (LEDGER=[99])
+    PASS  pattern deviation FLAGGED  (flags=[&#x27;commit_without_test&#x27;])
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_24_nations_table.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_24_nations_table — 10:1-32
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_24_nations_table.yaml) is CANONICAL (Pre-Code);
+# this file is a derived, runnable rendering. Do not edit — regenerate. The
+# assertion block at the bottom is baked from the Stage D interpreter&#x27;s
+# actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;The nations table: of these the nations divided after the flood (10:1-32)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_24_nations_table&quot;)
+
+# -------------------------- Gen.10.1 · THE_FOURTH_TOLEDOT_HEADING ----------
+# וְאֵלֶּה תּוֹלְדֹת בְּנֵי־נֹחַ שֵׁם חָם וָיָפֶת וַיִּוָּלְדוּ לָהֶם
+# בָּנִים אַחַר הַמַּבּוּל
+# &quot;Now these are the generations of the sons of Noah: Shem, Ham, and
+# Japheth; and unto them were sons born after the flood.&quot;
+m.step(&quot;Gen.10.1&quot;)
+# ‹וְאֵלֶּה תּוֹלְדֹת בְּנֵי־נֹחַ שֵׁם חָם וָיָפֶת› (“and-these generations-
+# of sons-of Noah Sem Ham and-Japheth”) — section generations-sons-of-Noach:
+# Sem, Ham, Japheth
+m.section(&quot;toledot_bnei_noach&quot;, &quot;shem&quot;, &quot;cham&quot;, &quot;yefet&quot;)
+# ‹וַיִּוָּלְדוּ לָהֶם בָּנִים אַחַר הַמַּבּוּל› (“and-were-born to-them
+# sons-of after the-deluge”) — event: in-born — theme sons-of-after-the-
+# deluge
+m.event(&quot;be_born&quot;, themes=[&quot;banim_achar_ha_mabul&quot;])
+# reads without prior install (flag, not fix): Noach
+m.presupposed(&quot;noach&quot;)
+
+# -------------------------- Gen.10.2-5 · YEFET_ROWS_AND_THE_ANOMALOUS_CLOSE -
+# בְּנֵי יֶפֶת גֹּמֶר וּמָגוֹג וּמָדַי וְיָוָן וְתֻבָל וּמֶשֶׁךְ וְתִירָס …
+# מֵאֵלֶּה נִפְרְדוּ אִיֵּי הַגּוֹיִם בְּאַרְצֹתָם אִישׁ לִלְשֹׁנוֹ
+# לְמִשְׁפְּחֹתָם בְּגוֹיֵהֶם
+# &quot;The sons of Japheth: Gomer, Magog, Madai, Javan, Tubal, Meshech, Tiras —
+# and the sons of Gomer and of Javan — of these were the isles of the
+# nations divided in their lands, every one after his tongue, after their
+# families, in their nations.&quot;
+m.step(&quot;Gen.10.2-5&quot;)
+# ‹בְּנֵי יֶפֶת גֹּמֶר וּמָגוֹג וּמָדַי וְיָוָן וְתֻבָל וּמֶשֶׁךְ וְתִירָס›
+# (“son Japheth Gomer and-Magog and-Madai and-Javan and-Tubal and-Mesech
+# and-Tiras”) — fact holds: sons-of-Japheth-Gomer-and-Magog-and-Madai-and-
+# Javan
+m.fact(&quot;bnei_yefet_gomer_u_magog_u_maday_ve_yavan&quot;)
+# ‹מֵאֵלֶּה נִפְרְדוּ אִיֵּי הַגּוֹיִם … אִישׁ לִלְשֹׁנוֹ› (“from-these
+# break-through habitable-spot the-nation … man to-tongue-him/its”) — fact
+# holds: and-from-these-nifredu-iyei-the-nations-in-artzotam; each-to-me-
+# leshono-to-mishpechotam-in-goyehem
+m.fact(&quot;u_me_eleh_nifredu_iyei_ha_goyim_be_artzotam&quot;,
+       &quot;ish_li_leshono_le_mishpechotam_be_goyehem&quot;)
+
+# -------------------------- Gen.10.6-7 · HAM_ROWS_KUSH_TO_DEDAN ------------
+# וּבְנֵי חָם כּוּשׁ וּמִצְרַיִם וּפוּט וּכְנָעַן וּבְנֵי כוּשׁ סְבָא
+# וַחֲוִילָה וְסַבְתָּה וְרַעְמָה וְסַבְתְּכָא וּבְנֵי רַעְמָה שְׁבָא
+# וּדְדָן
+# &quot;And the sons of Ham: Cush, and Mizraim, and Put, and Canaan. And the sons
+# of Cush: Seba, and Havilah, and Sabtah, and Raamah, and Sabteca; and the
+# sons of Raamah: Sheba, and Dedan.&quot;
+m.step(&quot;Gen.10.6-7&quot;)
+# ‹וּבְנֵי חָם כּוּשׁ וּמִצְרַיִם וּפוּט וּכְנָעַן …› (“and-son Ham Chush
+# and-Egypt and-Phut and-Canaan”) — fact holds: sons-of-Ham-Chush-and-Egypt-
+# and-Phut-and-Canaan; sons-of-Chush-Seba-and-Havilah-and-vnei-ramah
+m.fact(&quot;bnei_cham_kush_u_mitzrayim_u_fut_u_khenaan&quot;,
+       &quot;bnei_khush_seva_va_chavilah_u_vnei_ramah&quot;)
+
+# -------------------------- Gen.10.8-9 · NIMROD_AND_THE_PROVERB ------------
+# וְכוּשׁ יָלַד אֶת־נִמְרֹד הוּא הֵחֵל לִהְיוֹת גִּבֹּר בָּאָרֶץ הוּא־הָיָה
+# גִבֹּר־צַיִד לִפְנֵי יְהוָה עַל־כֵּן יֵאָמַר כְּנִמְרֹד גִּבּוֹר צַיִד
+# לִפְנֵי יְהוָה
+# &quot;And Cush begot Nimrod; he began to be a mighty one in the earth. He was a
+# mighty hunter before the LORD; wherefore it is said: &#x27;Like Nimrod a mighty
+# hunter before the LORD.&#x27;&quot;
+m.step(&quot;Gen.10.8-9&quot;)
+# ‹וְכוּשׁ יָלַד אֶת־נִמְרֹד› (“and-Chush bear-young obj-marker Nimrod”) —
+# event: beget — agent Chush; theme Nimrod
+m.event(&quot;beget&quot;, agent=&quot;kush&quot;, themes=[&quot;nimrod&quot;])
+# ‹הוּא הֵחֵל לִהְיוֹת גִּבֹּר בָּאָרֶץ … גִבֹּר־צַיִד לִפְנֵי יְהוָה›
+# (“he/it bore to-be powerful in-earth … powerful chase to-face YHWH”) —
+# fact holds: he-began-lihyot-gibbor-in-the-earth; gibbor-hunter-lifnei-yhwh
+m.fact(&quot;hu_hechel_lihyot_gibbor_ba_aretz&quot;,
+       &quot;gibbor_tzayid_lifnei_yhwh&quot;)
+# ‹עַל־כֵּן יֵאָמַר כְּנִמְרֹד גִּבּוֹר צַיִד לִפְנֵי יְהוָה› (“over so say
+# like-Nimrod powerful chase to-face YHWH”) — pattern recorded: like-Nimrod-
+# gibbor-hunter-lifnei-yhwh
+m.pattern(&quot;ke_nimrod_gibbor_tzayid_lifnei_yhwh&quot;)
+
+# -------------------------- Gen.10.10-12 · THE_KINGDOM_AND_THE_FOUR_CITIES -
+# וַתְּהִי רֵאשִׁית מַמְלַכְתּוֹ בָּבֶל וְאֶרֶךְ וְאַכַּד וְכַלְנֵה בְּאֶרֶץ
+# שִׁנְעָר מִן־הָאָרֶץ הַהִוא יָצָא אַשּׁוּר וַיִּבֶן אֶת־נִינְוֵה
+# וְאֶת־רְחֹבֹת עִיר וְאֶת־כָּלַח וְאֶת־רֶסֶן בֵּין נִינְוֵה וּבֵין כָּלַח
+# הִוא הָעִיר הַגְּדֹלָה
+# &quot;And the beginning of his kingdom was Babel, and Erech, and Accad, and
+# Calneh, in the land of Shinar. Out of that land went forth Asshur, and
+# builded Nineveh, and Rehoboth-ir, and Calah, and Resen between Nineveh and
+# Calah — the same is the great city.&quot;
+m.step(&quot;Gen.10.10-12&quot;)
+# ‹וַתְּהִי רֵאשִׁית מַמְלַכְתּוֹ בָּבֶל … בְּאֶרֶץ שִׁנְעָר› (“and-be
+# beginning dominion-him/its Babel … in-earth Shinar”) — fact holds:
+# beginning-of-mamlakhto-Babel-in-land-Shinar; from-the-earth-the-hi-went-
+# out-Ashur
+m.fact(&quot;reshit_mamlakhto_bavel_be_eretz_shinar&quot;,
+       &quot;min_ha_aretz_ha_hi_yatza_ashur&quot;)
+# ‹וַיִּבֶן אֶת־נִינְוֵה וְאֶת־רְחֹבֹת עִיר וְאֶת־כָּלַח וְאֶת־רֶסֶן› (“and-
+# build obj-marker Nineveh and-obj-marker Rehoboth city and-obj-marker Calah
+# and-obj-marker Resen”) — event: build — theme ninveh, Rehoboth-city,
+# Calah, Resen
+m.event(&quot;build&quot;, themes=[&quot;ninveh&quot;, &quot;rechovot_ir&quot;, &quot;kalach&quot;, &quot;resen&quot;])
+# ‹נִינְוֵה וְרְחֹבֹת עִיר וְכָלַח וְרֶסֶן› (“Nineveh and-Rehoboth city and-
+# Calah and-Resen”) — the world gains: ninveh, Rehoboth-city, Calah, Resen
+m.install(&quot;ninveh&quot;, &quot;rechovot_ir&quot;, &quot;kalach&quot;, &quot;resen&quot;)
+# ‹הִוא הָעִיר הַגְּדֹלָה› (“he/it the-city the-great”) — fact holds: hi-
+# the-city-the-gedolah
+m.fact(&quot;hi_ha_ir_ha_gedolah&quot;)
+
+# -------------------------- Gen.10.13-14 · MITZRAYIM_ROWS_AND_THE_PHILISTINE_NOTE -
+# וּמִצְרַיִם יָלַד אֶת־לוּדִים וְאֶת־עֲנָמִים וְאֶת־לְהָבִים
+# וְאֶת־נַפְתֻּחִים וְאֶת־פַּתְרֻסִים וְאֶת־כַּסְלֻחִים אֲשֶׁר יָצְאוּ
+# מִשָּׁם פְּלִשְׁתִּים וְאֶת־כַּפְתֹּרִים
+# &quot;And Mizraim begot Ludim, and Anamim, and Lehabim, and Naphtuhim, and
+# Pathrusim, and Casluhim — whence went forth the Philistines — and
+# Caphtorim.&quot;
+m.step(&quot;Gen.10.13-14&quot;)
+# ‹וּמִצְרַיִם יָלַד אֶת־לוּדִים …› (“and-Egypt bear-young obj-marker
+# Ludite”) — event: beget — agent Egypt; theme seven-amamim
+m.event(&quot;beget&quot;, agent=&quot;mitzrayim&quot;, themes=[&quot;shivat_amamim&quot;])
+# ‹אֲשֶׁר יָצְאוּ מִשָּׁם פְּלִשְׁתִּים› (“which bring-forth from-there
+# Pelishtite”) — fact holds: who-bring-forth-from-there-Philistines
+m.fact(&quot;asher_yatzu_mi_sham_pelishtim&quot;)
+
+# -------------------------- Gen.10.15-19 · CANAAN_ROWS_SPREAD_AND_BORDER ---
+# וּכְנַעַן יָלַד אֶת־צִידֹן בְּכֹרוֹ וְאֶת־חֵת … וְאַחַר נָפֹצוּ
+# מִשְׁפְּחוֹת הַכְּנַעֲנִי וַיְהִי גְּבוּל הַכְּנַעֲנִי מִצִּידֹן …
+# עַד־לָשַׁע
+# &quot;And Canaan begot Zidon his firstborn, and Heth; and the Jebusite, and the
+# Amorite, and the Girgashite; and the Hivite, and the Arkite, and the
+# Sinite; and the Arvadite, and the Zemarite, and the Hamathite; and
+# afterward were the families of the Canaanite spread abroad. And the border
+# of the Canaanite was from Zidon, as thou goest toward Gerar, unto Gaza; as
+# thou goest toward Sodom and Gomorrah and Admah and Zeboiim, unto Lasha.&quot;
+m.step(&quot;Gen.10.15-19&quot;)
+# ‹וּכְנַעַן יָלַד אֶת־צִידֹן בְּכֹרוֹ וְאֶת־חֵת› (“and-Canaan bear-young
+# obj-marker Sidon firstborn-him/its and-obj-marker Heth”) — event: beget —
+# agent kenaan; theme Sidon-bekhoro, Heth
+m.event(&quot;beget&quot;, agent=&quot;kenaan&quot;, themes=[&quot;tzidon_bekhoro&quot;, &quot;chet&quot;])
+# ‹וְאֶת־הַיְבוּסִי וְאֶת־הָאֱמֹרִי … וְאַחַר נָפֹצוּ מִשְׁפְּחוֹת
+# הַכְּנַעֲנִי› (“and-obj-marker the-Jebusite and-obj-marker the-Emorite …
+# and-after dash-in-pieces family the-Kenaanite”) — fact holds: these-the-
+# Canaanite-asarah-amamim; and-after-were-spread-mishpechot-the-Canaanite
+m.fact(&quot;eleh_ha_kenaani_asarah_amamim&quot;,
+       &quot;ve_achar_nafotzu_mishpechot_ha_kenaani&quot;)
+# ‹וַיְהִי גְּבוּל הַכְּנַעֲנִי מִצִּידֹן … עַד־לָשַׁע› (“and-be cord the-
+# Kenaanite from-Sidon … until Lasha”) — fact holds: border-of-the-
+# Canaanite-from-Sidon-until-azah-until-Lasha
+m.fact(&quot;gevul_ha_kenaani_mi_tzidon_ad_azah_ad_lasha&quot;)
+
+# -------------------------- Gen.10.20 · HAM_CLOSE --------------------------
+# אֵלֶּה בְנֵי־חָם לְמִשְׁפְּחֹתָם לִלְשֹׁנֹתָם בְּאַרְצֹתָם בְּגוֹיֵהֶם
+# &quot;These are the sons of Ham, after their families, after their tongues, in
+# their lands, in their nations.&quot;
+m.step(&quot;Gen.10.20&quot;)
+# ‹אֵלֶּה בְנֵי־חָם … בְּגוֹיֵהֶם› (“these sons-of Ham … in-their-nations”)
+# — fact holds: these-vnei-Ham-to-mishpechotam-to-me-leshonotam-in-artzotam-
+# in-goyehem
+m.fact(&quot;eleh_vnei_cham_le_mishpechotam_li_leshonotam_be_artzotam_be_goyehem&quot;)
+
+# -------------------------- Gen.10.21-24 · SHEM_OPENER_AND_ROWS ------------
+# וּלְשֵׁם יֻלַּד גַּם־הוּא אֲבִי כָּל־בְּנֵי־עֵבֶר אֲחִי יֶפֶת הַגָּדוֹל
+# בְּנֵי שֵׁם עֵילָם וְאַשּׁוּר וְאַרְפַּכְשַׁד וְלוּד וַאֲרָם …
+# וְאַרְפַּכְשַׁד יָלַד אֶת־שָׁלַח וְשֶׁלַח יָלַד אֶת־עֵבֶר
+# &quot;And unto Shem, the father of all the children of Eber, the elder brother
+# of Japheth, to him also were children born. The sons of Shem: Elam, and
+# Asshur, and Arpachshad, and Lud, and Aram. And the sons of Aram: Uz, and
+# Hul, and Gether, and Mash. And Arpachshad begot Shelah; and Shelah begot
+# Eber.&quot;
+m.step(&quot;Gen.10.21-24&quot;)
+# ‹וּלְשֵׁם יֻלַּד גַּם־הוּא› (“and-to-Sem bear-young also he/it”) — event:
+# in-born — theme to-Sem-also-he
+m.event(&quot;be_born&quot;, themes=[&quot;le_shem_gam_hu&quot;])
+# ‹אֲבִי כָּל־בְּנֵי־עֵבֶר אֲחִי יֶפֶת הַגָּדוֹל … בְּנֵי שֵׁם עֵילָם
+# וְאַשּׁוּר› (“father all son Eber brother Japheth the-great … son Sem Elam
+# and-Asshur”) — fact holds: father-of-all-sons-of-Ever-brother-Japheth-the-
+# elder; sons-of-Sem-eilam-and-Ashur-and-Arphaxad
+m.fact(&quot;avi_kol_bnei_ever_achi_yefet_ha_gadol&quot;,
+       &quot;bnei_shem_eilam_ve_ashur_ve_arpakhshad&quot;)
+# ‹וְאַרְפַּכְשַׁד יָלַד אֶת־שָׁלַח› (“and-Arphaxad bear-young obj-marker
+# Salah”) — event: beget — agent Arphaxad; theme Salah
+m.event(&quot;beget&quot;, agent=&quot;arpakhshad&quot;, themes=[&quot;shelach&quot;])
+# ‹וְשֶׁלַח יָלַד אֶת־עֵבֶר› (“and-Salah bear-young obj-marker Eber”) —
+# event: beget — agent Salah; theme Ever
+m.event(&quot;beget&quot;, agent=&quot;shelach&quot;, themes=[&quot;ever&quot;])
+
+# -------------------------- Gen.10.25-29 · PELEG_AND_THE_YOKTAN_ROWS -------
+# וּלְעֵבֶר יֻלַּד שְׁנֵי בָנִים שֵׁם הָאֶחָד פֶּלֶג כִּי בְיָמָיו נִפְלְגָה
+# הָאָרֶץ וְשֵׁם אָחִיו יָקְטָן וְיָקְטָן יָלַד … כָּל־אֵלֶּה בְּנֵי יָקְטָן
+# &quot;And unto Eber were born two sons; the name of the one was Peleg; for in
+# his days was the earth divided; and his brother&#x27;s name was Joktan. And
+# Joktan begot Almodad, and Sheleph, and Hazarmaveth, and Jerah; and
+# Hadoram, and Uzal, and Diklah; and Obal, and Abimael, and Sheba; and
+# Ophir, and Havilah, and Jobab; all these were the sons of Joktan.&quot;
+m.step(&quot;Gen.10.25-29&quot;)
+# ‹וּלְעֵבֶר יֻלַּד שְׁנֵי בָנִים› (“and-to-Eber bear-young two son”) —
+# event: in-born — theme to-Ever-shnei-sons-of
+m.event(&quot;be_born&quot;, themes=[&quot;le_ever_shnei_vanim&quot;])
+# ‹שֵׁם הָאֶחָד פֶּלֶג כִּי בְיָמָיו נִפְלְגָה הָאָרֶץ› (“name the-one Peleg
+# that in-day-him/its split the-earth”) — fact holds: Sem-the-one-Peleg-
+# that-and-his-days-niflegah-the-earth; and-Sem-his-brother-yoktan
+m.fact(&quot;shem_ha_echad_peleg_ki_ve_yamav_niflegah_ha_aretz&quot;,
+       &quot;ve_shem_achiv_yoktan&quot;)
+# ‹וְיָקְטָן יָלַד אֶת־אַלְמוֹדָד … וְאֶת־יוֹבָב› (“and-Joktan bear-young
+# obj-marker Almodad … and-obj-marker Jobab”) — event: beget — agent yoktan;
+# theme shloshah-asar-sons-of
+m.event(&quot;beget&quot;, agent=&quot;yoktan&quot;, themes=[&quot;shloshah_asar_banim&quot;])
+# ‹כָּל־אֵלֶּה בְּנֵי יָקְטָן› (“all these son Joktan”) — fact holds: all-
+# these-sons-of-yoktan
+m.fact(&quot;kol_eleh_bnei_yoktan&quot;)
+
+# -------------------------- Gen.10.30-31 · THE_DWELLING_AND_SHEM_CLOSE -----
+# וַיְהִי מוֹשָׁבָם מִמֵּשָׁא בֹּאֲכָה סְפָרָה הַר הַקֶּדֶם אֵלֶּה
+# בְנֵי־שֵׁם לְמִשְׁפְּחֹתָם לִלְשֹׁנֹתָם בְּאַרְצֹתָם לְגוֹיֵהֶם
+# &quot;And their dwelling was from Mesha, as thou goest toward Sephar, unto the
+# mountain of the east. These are the sons of Shem, after their families,
+# after their tongues, in their lands, after their nations.&quot;
+m.step(&quot;Gen.10.30-31&quot;)
+# ‹וַיְהִי מוֹשָׁבָם מִמֵּשָׁא בֹּאֲכָה סְפָרָה הַר הַקֶּדֶם› (“and-be seat-
+# them/their from-Mesha come/bring-you/your Sephar-ward mountain the-front”)
+# — fact holds: moshavam-from-Mesha-mountain-the-east
+m.fact(&quot;moshavam_mi_mesha_har_ha_qedem&quot;)
+# ‹אֵלֶּה בְנֵי־שֵׁם … לְגוֹיֵהֶם› (“these son Sem … to-nation-them/their”)
+# — fact holds: these-vnei-Sem-to-mishpechotam-to-me-leshonotam-in-artzotam-
+# to-goyehem
+m.fact(&quot;eleh_vnei_shem_le_mishpechotam_li_leshonotam_be_artzotam_le_goyehem&quot;)
+
+# -------------------------- Gen.10.32 · THE_GRAND_CLOSE_SEALS_THE_INCLUSIO -
+# אֵלֶּה מִשְׁפְּחֹת בְּנֵי־נֹחַ לְתוֹלְדֹתָם בְּגוֹיֵהֶם וּמֵאֵלֶּה
+# נִפְרְדוּ הַגּוֹיִם בָּאָרֶץ אַחַר הַמַּבּוּל
+# &quot;These are the families of the sons of Noah, after their generations, in
+# their nations; and of these were the nations divided in the earth after
+# the flood.&quot;
+m.step(&quot;Gen.10.32&quot;)
+# ‹אֵלֶּה מִשְׁפְּחֹת בְּנֵי־נֹחַ … וּמֵאֵלֶּה נִפְרְדוּ הַגּוֹיִם בָּאָרֶץ
+# אַחַר הַמַּבּוּל› (“these families-of sons-of Noah … and-from-these
+# divided the-nations in-the-land after the-deluge”) — fact holds: these-
+# mishpechot-sons-of-Noach-to-toledotam; and-from-these-nifredu-the-nations-
+# in-the-earth-after-the-deluge
+m.fact(&quot;eleh_mishpechot_bnei_noach_le_toledotam&quot;,
+       &quot;u_me_eleh_nifredu_ha_goyim_ba_aretz_achar_ha_mabul&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == {&#x27;kalach&#x27;, &#x27;rechovot_ir&#x27;, &#x27;resen&#x27;, &#x27;ninveh&#x27;}
+    assert m.presupposed_set() == {&#x27;noach&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS[&quot;log&quot;]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;read_before_install&#x27;: 1}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;bnei_yefet_gomer_u_magog_u_maday_ve_yavan&#x27;, &#x27;u_me_eleh_nifredu_iyei_ha_goyim_be_artzotam&#x27;, &#x27;ish_li_leshono_le_mishpechotam_be_goyehem&#x27;, &#x27;bnei_cham_kush_u_mitzrayim_u_fut_u_khenaan&#x27;, &#x27;bnei_khush_seva_va_chavilah_u_vnei_ramah&#x27;, &#x27;hu_hechel_lihyot_gibbor_ba_aretz&#x27;, &#x27;gibbor_tzayid_lifnei_yhwh&#x27;, &#x27;pattern: ke_nimrod_gibbor_tzayid_lifnei_yhwh&#x27;, &#x27;reshit_mamlakhto_bavel_be_eretz_shinar&#x27;, &#x27;min_ha_aretz_ha_hi_yatza_ashur&#x27;, &#x27;hi_ha_ir_ha_gedolah&#x27;, &#x27;asher_yatzu_mi_sham_pelishtim&#x27;, &#x27;eleh_ha_kenaani_asarah_amamim&#x27;, &#x27;ve_achar_nafotzu_mishpechot_ha_kenaani&#x27;, &#x27;gevul_ha_kenaani_mi_tzidon_ad_azah_ad_lasha&#x27;, &#x27;eleh_vnei_cham_le_mishpechotam_li_leshonotam_be_artzotam_be_goyehem&#x27;, &#x27;avi_kol_bnei_ever_achi_yefet_ha_gadol&#x27;, &#x27;bnei_shem_eilam_ve_ashur_ve_arpakhshad&#x27;, &#x27;shem_ha_echad_peleg_ki_ve_yamav_niflegah_ha_aretz&#x27;, &#x27;ve_shem_achiv_yoktan&#x27;, &#x27;kol_eleh_bnei_yoktan&#x27;, &#x27;moshavam_mi_mesha_har_ha_qedem&#x27;, &#x27;eleh_vnei_shem_le_mishpechotam_li_leshonotam_be_artzotam_le_goyehem&#x27;, &#x27;eleh_mishpechot_bnei_noach_le_toledotam&#x27;, &#x27;u_me_eleh_nifredu_ha_goyim_ba_aretz_achar_ha_mabul&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 12
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre>
+<div class="note">FROZEN 2026-08-03 (second-generation derivation agent; freeze-after-review by the main loop — NO agent freeze; sixth unit under the PIPELINE + DEBUT-MAP process, the agent&#x27;s second): twenty-fifth-unit candidate — THE NATIONS TABLE, span OWNER-RULED whole (32 verses as one ledger-genre unit; boot steps grouped on the letter&#x27;s own twelve paragraphs); fifteenth extension-free derivation candidate in a row. The table is 91 percent verbless and the machine mirrors it: one SECTION that labels and installs nothing (gen_16&#x27;s toledot device — the series&#x27; tokens 4-5 bracket the span), twenty-three row-facts (gen_14&#x27;s ledger class), ten birth/build events (the beget-grammar&#x27;s active/passive split by line held, TIR-032), one PATTERN for the table&#x27;s one proverb (gen_09&#x27;s al-ken class — carrying the chapter&#x27;s only divine-name tokens), FOUR city installs on an AGENTLESS build (gen_13&#x27;s city precedent a fortiori; the Ashur/he subject held [OPEN] while Onkelos decides it), and a queue that NEVER WAKES — zero imperatives, zero jussives, no demand, no test, no invariant, no handler, no clock. The letter&#x27;s own architecture carried as facts: the 10:1/10:32 achar-ha-mabul INCLUSIO [tree fact], the three closings with deltas named (Yefet&#x27;s anomalous; the Ham/Shem twins ONE PREPOSITION apart — a delta Onkelos erases), GOY and MISHPACHAH born here and handing off to 12:2-3&#x27;s promises [the Abram-bridge], the scatter-family bracketing the atlas (the putz debut on the Canaanites; the palag hapax in Peleg&#x27;s naming-reason — report-naming, no NAME op; parad from Eden&#x27;s river), the Canaanite border pre-loading Sodom and the covenant map, the firstborn-word debuting on Canaan&#x27;s Tzidon, the kingdom&#x27;s Babel-first beginning on creation&#x27;s beginning-word, and the cross-line name-doubles held without harmonizing. The seventy-count stays the chain&#x27;s [OPEN, named-only; raw census 79 lemmas / 110 tokens]. Machine state: t0 empty, four installs (+1 presupposed), zero registry writes, zero queue traffic, zero tests, eleven events, one pattern, twenty-three facts, one read-flag — an atlas at rest, one chapter before Babel.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

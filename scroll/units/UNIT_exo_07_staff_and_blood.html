@@ -1,0 +1,880 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>exo_07_staff_and_blood — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/exo_07_staff_and_blood?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The staff and the blood (7:1-29) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>exo_07_staff_and_blood</b> · Exodus 7:1-29 · derive logic_derived_v1 · phase FWD-21</div>
+<div class="meta"><a href="../#Exod/7/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">בְּזֹ֣את תֵּדַ֔ע כִּ֖י אֲנִ֣י יְהוָ֑ה</span> · <i>be-zot teda ki ani YHWH</i> · &#x27;by this you shall know that I am the LORD&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DERIVED 2026-08-09 · FORWARD ERA unit #21 (run FWD-5 block 2; Exod 1-7 continuous behind it). Span: 7:1-29, whole Masoretic chapter (the frog-warning 7:26-29 included): 29 verses (SNAPSHOT-verified), one without an etnachta (7:8, the compound frame — split at its strongest disjunctive). Oral layer IN-PIPELINE: manifest 12/12 VERIFIED, zero FAILED — see oral_audit_note_en. MACHINE PROFILE. FOUR DECLAREs, TWO RESULTs, ONE EVENT. The WONDER-SCRIPT (7:9, conditional: when Pharaoh demands — take, throw, let-it-become) pops at 7:10 (performed as commanded); the STRETCH-COMMAND (7:19, the five water-classes) pops at 7:20 — PLAGUE ONE lands as its RESULT; the MORNING-STATION demand (7:15, the riverside ultimatum) stays OPEN by the unnarrated-compliance class (the delivery is never shown — exo_04&#x27;s sandal-precedent); the FROG-WARNING errand (7:26) stays OPEN — the chapter ends INSIDE its speech, the frogs one verse over the border (8:1-2 armed). ONE EVENT: Aaron&#x27;s staff SWALLOWS the counter-staffs (7:12). TWO CROSS-UNIT RECEIPTS land in-span, both settled by AUTHORED LINKS at the fold (one-world law, no in-unit pops): exo_06&#x27;s go-speak demand -&gt; 7:6 (did-as-commanded, doubled formula); exo_04&#x27;s wonders-charge -&gt; 7:10 (the performance verse). The HARDENING-LEDGER opens: policy declared 7:3, stations 7:13 + 7:22 (both sealed ka-asher diber YHWH — as-He-had-spoken, asserted verbatim pair), the heavy heart 7:14, the unset heart 7:23 (the vocabulary spread filed). The send-formula sounds twice (7:16, 7:26) — re-pressings of exo_05&#x27;s standing card, no new push. REGISTRY 0; TESTS 0; LEDGER: the seven-day plague-clock stamped (7:25). Queue at close: TWO OPEN in-unit (the morning-station; the frog-errand). CARE-POINTS: the relay-mechanism (7:1-2: Moses to Aaron to throne) runs every command in-span (7:9 say-to-Aaron, 7:19 say-to-Aaron); the two serpent-vocabularies kept apart (the bush&#x27;s snake-word at the river 7:15, the crocodile-word at court 7:9-12, asserted); the compound soft-lamed frame at 7:8 (exo_06&#x27;s rule, other half); the know-ledger&#x27;s columns (5:2 answered at 7:17 be-zot teda; Egypt&#x27;s column armed 7:5 -&gt; 14:4/18); the three so-they-dids (7:6, 7:10, 7:20) vs the imitators&#x27; so-they-did (7:11, 7:22). WATCHLIST ARMS: 8:1-2 (the frogs execute; the ONE dageshed frog), 8:4 (Pharaoh&#x27;s first bargaining), 12:31-32 (the send-demand&#x27;s grant), 14:4/14:18 (Egypt shall know), 15:27 (the twelve springs repayment), 16:20 (the manna&#x27;s stink-twin).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-09 (IN-PIPELINE, forward era; manifest logic/oral_audit/manifests/exo_07_staff_and_blood_claims.json 12/12 VERIFIED, zero FAILED; record logic/oral_audit/AUDIT_exo_07_2026-08-09.md). CROWNS (chain-attested + DB-verified). THE FROGS&#x27; SOFT LETTER [EX07-01, MS on 7:27 quoting the Michlol and Levyat Chen] — THE UNIT&#x27;S MARQUEE: the Masorah&#x27;s passage-rule — the frogs-word&#x27;s tzadi SOFT through the whole passage, dageshed in ONE place — verified WHOLE across two chapters: eleven tokens, soft at all ten PLURAL stations (7:27-8:9), the one hard letter exactly at the one SINGULAR — ותעל הצפרדע (&quot;and the FROG came up,&quot; 8:2): a pointing-law running across the block-seam on the plague&#x27;s own name. THE TWO STINKINGS [EX07-02, Kitzur on 7:21]: ויבאש (&quot;and it stank&quot;) — exact Torah-pair: the struck Nile (7:21) and the hoarded manna (16:20); the worms-in-the-Nile reading named. THE FIVE IN THE EXTRA LETTER [EX07-03, MS + Rabbenu Bachya on 7:29]: ובכה (&quot;and into you&quot;) FULL with final he, ONCE in the Torah against three lean stations — the added he (five) teaching every plague was FIVE plagues (the Haggada&#x27;s arithmetic on one letter); the troops-and-refuge psalms named. THE FOUR LEAN DRINK-WORDS [EX07-04, MS on 7:18]: לשתת (&quot;to drink&quot;) lean exactly four times — Rebecca&#x27;s well (Gen 24:19), the diggers (7:24), Marah (15:23), Rephidim (17:1) — the printed authority corrected (&quot;the printer became confused&quot;), gen_40&#x27;s file re-landing; and 7:24 carries the word in BOTH spellings in one verse (full in the seeking, lean in the failing). UPON THE WATERS [EX07-05, Kitzur on 7:17]: על המים (&quot;upon the waters&quot;) — the Torah&#x27;s three adjacencies exact (the striking 7:17, Elim&#x27;s camp 15:27, the leper&#x27;s bird Lev 14:6), the Kings-fourth named (Moab&#x27;s blood-red water); the recognizable-blood ratio and the twelve-springs repayment named. THE SWALLOWED STAFFS [EX07-06, Kitzur on 7:12]: מטתם (&quot;their staffs&quot;) LEAN — the form&#x27;s only Torah station; the full partner at Korach&#x27;s ledger (Num 17:21); the midrash of a second swallowing with the lean המטת (&quot;the staffs,&quot; Num 17:24) named and asserted. THE ONE FULL-OF-FULL TROUGH [EX07-07, MS on 7:28, the Ramah]: ובמשארותיך (&quot;and in your kneading-troughs&quot;) — vav and yod both written, ONCE in the Torah; the lean troughs of 12:34 and Deut 28:5/17 asserted: the Ramah&#x27;s rule whole. THE PRESUMED OBJECT-MARKER [EX07-08, MS on 7:14]: לשלח העם (&quot;to send the people&quot;) — unique adjacency, readers PRESUME the object-marker; the presumed-readings class at its refusal-station. THE SERPENT&#x27;S GRAMMAR [EX07-09, MS on 7:10; Kitzur on 7:9]: the script says יהי (&quot;let it become&quot;), the performance ויהי (&quot;and it became&quot;) — both checked; the hard nun of לתנין (&quot;into a serpent&quot;) verified; Pharaoh&#x27;s crocodile self-title (Ezekiel 29:3) and the dry-wood ending named. THE LETTER-AND-ACCENT FILE [EX07-10, MS]: אליו (&quot;to him,&quot; 7:16) on its pause-mark in the precise books (checked); תדבר (&quot;you shall speak,&quot; 7:2) tav SOFT with the many books against the grammarians&#x27; rule (transmission over rule, recorded); ונהפכו (&quot;and they shall be turned,&quot; 7:17) on its segol; the soft kaf of כל (&quot;all,&quot; 7:24); the מאריך (&quot;lengthener&quot;) stroke on ובעמך (&quot;and on your people,&quot; 7:29); the few-books binder at 7:5 present in-stream (books-divided, recorded). THE MULTIPLY-WORD WHOLE [EX07-11, MS on 7:3, the Ramah]: והרביתי (&quot;and I will multiply&quot;) — five Torah stations, all full, lean skeleton ZERO: the promise-grammar and the plague-grammar in one spelling; the old tikkun&#x27;s emendation rejected. READINGS (named-only) [EX07-12]: the invasion and the affliction in OPPOSITE orders (house-servants-people vs you-people-servants — the counselors struck first; anchored + asserted); עד כה (&quot;until now&quot;) in atbash — the twice-scoffer&#x27;s 240 (forty in Egypt, two hundred at the sea); עקש (&quot;crooked&quot;) = the king of Egypt (named).</div>
+<div class="meta">confidence: structure tested; oral layer verified 12/12</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>FORWARD ERA run 5, block 2. Canon continuation: Exod 7:1-29 — the offices, the wonder-duel, blood, the frog-warning; the whole Masoretic chapter (7:26-29 the warning&#x27;s opening).</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Span + source + conventions</td><td>SNAPSHOT prestage: 29 verses; one without an etnachta (7:8) split at the strongest disjunctive. No ketiv/qere pairs in-span. Volitive census: the wonder-script (7:9, conditional say-to-Aaron), the morning-station (7:15 lekh + ve-nitzavta + tiqach), the stretch-command (7:19 emor + qach + u-nete), the frog-errand (7:26 bo + ve-amarta) — four DECLAREs; the send-formulas at 7:16 and 7:26 are re-pressings of exo_05&#x27;s standing card (no new push); 7:2&#x27;s tedaber is the open go-speak card&#x27;s mechanism, not a new demand.</td><td>established</td></tr>
+<tr><td><b>C</b></td><td>Machine structure</td><td>Four DECLAREs, two RESULTs (7:9-&gt;7:10; 7:19-&gt;7:20 = plague one), one EVENT (the swallowing 7:12). The morning-station demand OPEN by the unnarrated-compliance class; the frog-errand OPEN with the chapter ending inside its speech. Cross-unit receipts at 7:6 (exo_06&#x27;s go-speak) and 7:10 (exo_04&#x27;s wonders-charge) — authored links at the fold, no in-unit pops. Hardening-ledger opened: policy 7:3, stations 7:13/7:22 with the as-He-had-spoken seal asserted verbatim, heavy 7:14, unset 7:23. Plague-clock stamped 7:25. Queue at close: two open in-unit.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Exod 7 (15 notes) + Kitzur Baal HaTurim on Exod 7 (8 notes). Manifest 12 rows: 12 VERIFIED / 0 FAILED / 0 UNCHECKABLE. The frogs&#x27; soft-tzadi passage-rule verified whole across the block-seam; the four lean drink-words exact with the one-verse double at 7:24; the full-of-full trough; the third printed-authority correction of the run.</td><td>established</td></tr>
+<tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 12/12 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-09 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits. Run FWD-5 block 2: Exod 1-7 continuous.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Ex_7_1 · Exod.7.1 · <span class='expr'>SEE_I_HAVE_SET_YOU</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה רְאֵה נְתַתִּיךָ אֱלֹהִים לְפַרְעֹה וְאַהֲרֹן אָחִיךָ יִהְיֶה נְבִיאֶךָ</span> · <i>va-yomer YHWH el-moshe ree netati-kha Elohim le-faro ve-aharon achi-kha yihye nevie-kha</i> · And the LORD said to Moses: See, I have set you as God to Pharaoh; and Aaron your brother shall be your prophet.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה רְאֵ֛ה נְתַתִּ֥יךָ אֱלֹהִ֖ים לְפַרְעֹ֑ה</span> · <i>va-yomer YHWH el-moshe ree netati-kha Elohim le-faro</i> · and the LORD said to Moses: see, I have set you as God to Pharaoh (etnachta on le-faro) [VERIFIED: SNAPSHOT Exod.7.1 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאַהֲרֹ֥ן אָחִ֖יךָ יִהְיֶ֥ה נְבִיאֶֽךָ</span> · <i>ve-aharon achi-kha yihye nevie-kha</i> · and Aaron your brother shall be your prophet (verse-final nevie-kha) [VERIFIED: SNAPSHOT Exod.7.1 idx8-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(netaticha_elohim_le_faro, t0)</span><br><span class="gloss">= HOLDS(netaticha-God-to-faro, t0)</span><br>THE OFFICES. ree NETATICHA elohim le-faro — &#x27;SEE, I have SET YOU as God to Pharaoh&#x27;: exo_06 closed on the second lips-plea (6:30) and the reply opens this unit — the cross-seam answer-shape for the second run running (a narrative answer: the plea was never a card); ve-AHARON achikha yihye NEVIEKHA — &#x27;and Aaron your brother shall be your PROPHET&#x27;: the relay-office coined (the readings on elohim-and- prophet — the judge and his mouth — named): the machine files the standing mechanism the whole plague-cycle will run on: the word descends Moses-to-Aaron-to-throne.
+</td><td><span class="he">רְאֵה נְתַתִּיךָ אֱלֹהִים לְפַרְעֹה</span> · <i>ree netati-kha Elohim le-faro</i><br><span class="gloss">= ree netati-kha God to-faro</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The answer to the lips-plea; the offices stated.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_2 · Exod.7.2 · <span class='expr'>THE_RELAY_STATED</span></h3>
+<p><span class="he">אַתָּה תְדַבֵּר אֵת כָּל־אֲשֶׁר אֲצַוֶּךָּ וְאַהֲרֹן אָחִיךָ יְדַבֵּר אֶל־פַּרְעֹה וְשִׁלַּח אֶת־בְּנֵי־יִשְׂרָאֵל מֵאַרְצוֹ</span> · <i>ata tedaber et kal-asher atzave-ka ve-aharon achi-kha yedaber el-paro ve-shilach et-bene-yisrael me-artz-o</i> · You shall speak all that I command you; and Aaron your brother shall speak to Pharaoh, that he send the sons of Israel out of his land.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אַתָּ֣ה תְדַבֵּ֔ר אֵ֖ת כָּל אֲשֶׁ֣ר אֲצַוֶּ֑ךָּ</span> · <i>ata tedaber et kal-asher atzave-ka</i> · you shall speak all that I command you (etnachta on atzave-ka) [VERIFIED: SNAPSHOT Exod.7.2 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאַהֲרֹ֤ן אָחִ֨יךָ֙ יְדַבֵּ֣ר אֶל פַּרְעֹ֔ה וְשִׁלַּ֥ח אֶת בְּנֵֽי יִשְׂרָאֵ֖ל מֵאַרְצֽוֹ</span> · <i>ve-aharon achi-kha yedaber el-paro ve-shilach et-bene-yisrael me-artz-o</i> · and Aaron your brother shall speak to Pharaoh, that he send the sons of Israel out of his land (verse-final me-artz-o) [VERIFIED: SNAPSHOT Exod.7.2 idx6-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ata_tedaber_et_kol_asher_atzaveka, t0)</span><br><span class="gloss">= HOLDS(ata-tedaber-all-which-atzaveka, t0)</span><br>THE MECHANISM [EX07-10]. ata TEDABER et kol-asher atzaveka — &#x27;YOU shall speak ALL that I command you&#x27;: the widened content of exo_06&#x27;s still-open go-speak card (6:29&#x27;s &#x27;all that I speak&#x27;) given its working shape — Moses to Aaron, Aaron to Pharaoh; and the speak- verb&#x27;s tav is SOFT with Or Torah and the many precise books against one hard manuscript (MS concedes the grammarians&#x27; rule would harden it, &#x27;but the soft books are many, and after them we go&#x27; — transmission over rule, recorded; asserted in-stream); ve-SHILACH et bene yisrael me-artzo — the send-verb and the land-word again (6:11&#x27;s demand restated inside its own mechanism).
+</td><td><span class="he">אַתָּה תְדַבֵּר אֵת כָּל־אֲשֶׁר אֲצַוֶּךָּ</span> · <i>ata tedaber et kal-asher atzave-ka</i><br><span class="gloss">= ata tedaber et kal-which atzave-like</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The open card&#x27;s mechanism; the tav soft with the many books.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_3 · Exod.7.3 · <span class='expr'>I_WILL_HARDEN</span></h3>
+<p><span class="he">וַאֲנִי אַקְשֶׁה אֶת־לֵב פַּרְעֹה וְהִרְבֵּיתִי אֶת־אֹתֹתַי וְאֶת־מוֹפְתַי בְּאֶרֶץ מִצְרָיִם</span> · <i>va-ani aqshe et-lev paro ve-hirbeti et-otota-y ve-et-mofta-y be-eretz mitzrayim</i> · And I will harden Pharaoh&#x27;s heart, and multiply My signs and My wonders in the land of Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַאֲנִ֥י אַקְשֶׁ֖ה אֶת לֵ֣ב פַּרְעֹ֑ה</span> · <i>va-ani aqshe et-lev paro</i> · and I will harden Pharaoh&#x27;s heart (etnachta on paro) [VERIFIED: SNAPSHOT Exod.7.3 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהִרְבֵּיתִ֧י אֶת אֹתֹתַ֛י וְאֶת מוֹפְתַ֖י בְּאֶ֥רֶץ מִצְרָֽיִם</span> · <i>ve-hirbeti et-otota-y ve-et-mofta-y be-eretz mitzrayim</i> · and multiply My signs and My wonders in the land of Egypt (verse-final mitzrayim) [VERIFIED: SNAPSHOT Exod.7.3 idx5-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_ani_aqshe_et_lev_paro, t0)</span><br><span class="gloss">= HOLDS(and-ani-aqshe-lev-paro, t0)</span><br>THE POLICY [EX07-11]. va-ANI AQSHE et-LEV paro — &#x27;and I will HARDEN Pharaoh&#x27;s heart&#x27;: the hardening-file opens as declared policy (the heart-ledger this book will keep: strengthened 7:13, 7:22, heavy 7:14 — the corpus files each station as it lands; the crooked-with- the-crooked gematria named [EX07-12]); ve-HIRBETI et ototai ve-et moftai — &#x27;and I will MULTIPLY My signs and My wonders&#x27;: an old tikkun had emended the word LEAN, and MS answers with the Ramah — &#x27;full with yod, and all the Torah likewise&#x27; — the census VERIFIED whole: five stations, all full, the lean skeleton zero — the multiply-verb of the fathers&#x27; promises (Ishmael&#x27;s 17:20, Isaac&#x27;s 26:4/24, the rain of Lev 26:9) and of the signs here, one unbroken spelling.
+</td><td><span class="he">וַאֲנִי אַקְשֶׁה אֶת־לֵב פַּרְעֹה</span> · <i>va-ani aqshe et-lev paro</i><br><span class="gloss">= and-ani aqshe lev paro</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The hardening-policy declared; the multiply-word full.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_4 · Exod.7.4 · <span class='expr'>HE_WILL_NOT_HEAR</span></h3>
+<p><span class="he">וְלֹא־יִשְׁמַע אֲלֵכֶם פַּרְעֹה וְנָתַתִּי אֶת־יָדִי בְּמִצְרָיִם וְהוֹצֵאתִי אֶת־צִבְאֹתַי אֶת־עַמִּי בְנֵי־יִשְׂרָאֵל מֵאֶרֶץ מִצְרַיִם בִּשְׁפָטִים גְּדֹלִים</span> · <i>ve-lo-yishma el-khem paro ve-natati et-yadi-y be-mitzrayim ve-hotzeti et-tzivota-y et-ami-y vene-yisrael me-eretz mitzrayim bi-shefatim gedolim</i> · And Pharaoh will not hear you; and I will lay My hand on Egypt, and bring out My hosts, My people the sons of Israel, from the land of Egypt with great judgments.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְלֹֽא יִשְׁמַ֤ע אֲלֵכֶם֙ פַּרְעֹ֔ה וְנָתַתִּ֥י אֶת יָדִ֖י בְּמִצְרָ֑יִם</span> · <i>ve-lo-yishma el-khem paro ve-natati et-yadi-y be-mitzrayim</i> · and Pharaoh will not hear you; and I will lay My hand on Egypt (etnachta on be-mitzrayim) [VERIFIED: SNAPSHOT Exod.7.4 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהוֹצֵאתִ֨י אֶת צִבְאֹתַ֜י אֶת עַמִּ֤י בְנֵֽי יִשְׂרָאֵל֙ מֵאֶ֣רֶץ מִצְרַ֔יִם בִּשְׁפָטִ֖ים גְּדֹלִֽים</span> · <i>ve-hotzeti et-tzivota-y et-ami-y vene-yisrael me-eretz mitzrayim bi-shefatim gedolim</i> · and bring out My hosts, My people the sons of Israel, from the land of Egypt with great judgments (verse-final gedolim) [VERIFIED: SNAPSHOT Exod.7.4 idx8-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_lo_yishma_alekhem_paro, t0)</span><br><span class="gloss">= HOLDS(and-not-yishma-alekhem-paro, t0)</span><br>THE FORECAST. ve-lo-YISHMA alekhem paro — &#x27;Pharaoh will NOT HEAR you&#x27;: the not-hearing pre-written (7:13 and 7:22 will each land ka- asher diber YHWH — &#x27;AS the LORD had SPOKEN&#x27;: the forecast&#x27;s own receipt-formula); ve-HOTZETI et-TZIVOTAI — &#x27;and I will bring out MY HOSTS&#x27;: the bring-out verb&#x27;s second station (the three-station career all in this commissioning, VERIFIED under EX06-02) with the hosts-word 6:26 coined (al-tzivotam — the charge&#x27;s term re-pressed); u-vi-SHEFATIM gedolim — &#x27;with great JUDGMENTS&#x27;: 6:6&#x27;s judgment-word repeated (the fourth-tongue speech billed here as the hand&#x27;s method).
+</td><td><span class="he">וְהוֹצֵאתִי אֶת־צִבְאֹתַי אֶת־עַמִּי בְנֵי־יִשְׂרָאֵל מֵאֶרֶץ מִצְרַיִם</span> · <i>ve-hotzeti et-tzivota-y et-ami-y vene-yisrael me-eretz mitzrayim</i><br><span class="gloss">= and-hotzeti tzivota-y ami-y vene-yisrael earth mitzrayim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The not-hearing forecast; the hosts named.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_5 · Exod.7.5 · <span class='expr'>EGYPT_SHALL_KNOW</span></h3>
+<p><span class="he">וְיָדְעוּ מִצְרַיִם כִּי־אֲנִי יְהוָה בִּנְטֹתִי אֶת־יָדִי עַל־מִצְרָיִם וְהוֹצֵאתִי אֶת־בְּנֵי־יִשְׂרָאֵל מִתּוֹכָם</span> · <i>ve-yadu mitzrayim ki-ani YHWH bi-netoti-y et-yadi-y al-mitzrayim ve-hotzeti et-bene-yisrael mi-tokha-m</i> · And Egypt shall know that I am the LORD, when I stretch out My hand over Egypt; and I will bring out the sons of Israel from among them.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְיָדְע֤וּ מִצְרַ֨יִם֙ כִּֽי אֲנִ֣י יְהוָ֔ה בִּנְטֹתִ֥י אֶת יָדִ֖י עַל מִצְרָ֑יִם</span> · <i>ve-yadu mitzrayim ki-ani YHWH bi-netoti-y et-yadi-y al-mitzrayim</i> · and Egypt shall know that I am the LORD, when I stretch out My hand over Egypt (etnachta on mitzrayim) [VERIFIED: SNAPSHOT Exod.7.5 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהוֹצֵאתִ֥י אֶת בְּנֵֽי יִשְׂרָאֵ֖ל מִתּוֹכָֽם</span> · <i>ve-hotzeti et-bene-yisrael mi-tokha-m</i> · and I will bring out the sons of Israel from among them (verse-final mi-tokha-m) [VERIFIED: SNAPSHOT Exod.7.5 idx10-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_yadu_mitzrayim_ki_ani_YHWH, t0)</span><br><span class="gloss">= HOLDS(and-yadu-mitzrayim-when-ani-the-LORD, t0)</span><br>THE KNOWING. ve-YADU mitzrayim ki-ani YHWH — &#x27;and EGYPT shall KNOW that I am the LORD&#x27;: the know-ledger&#x27;s last column armed (5:2 lo yadati the refusal; 6:3 lo nodati the fathers; 6:7 vi-ydatem Israel&#x27;s promise; now EGYPT&#x27;s — receipt armed at the sea, 14:4/14:18 &#x27;and Egypt shall know&#x27;); bi-netoti et-YADI — &#x27;when I STRETCH OUT My hand&#x27;: the stretch-verb that 7:19 will hand to Aaron&#x27;s staff; ve- hotzeti — the bring-out verb&#x27;s third station (the career closes in- span, VERIFIED under EX06-02): the commissioning ends with every ledger named.
+</td><td><span class="he">וְיָדְעוּ מִצְרַיִם כִּי־אֲנִי יְהוָה</span> · <i>ve-yadu mitzrayim ki-ani YHWH</i><br><span class="gloss">= and-yadu mitzrayim when-ani the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The know-ledger&#x27;s Egypt column armed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_6 · Exod.7.6 · <span class='expr'>THEY_DID_AS_COMMANDED</span></h3>
+<p><span class="he">וַיַּעַשׂ מֹשֶׁה וְאַהֲרֹן כַּאֲשֶׁר צִוָּה יְהוָה אֹתָם כֵּן עָשׂוּ</span> · <i>va-yaas moshe ve-aharon ka-asher tziva YHWH et-m ken asu</i> · And Moses and Aaron did as the LORD commanded them; so they did.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּ֥עַשׂ מֹשֶׁ֖ה וְאַהֲרֹ֑ן</span> · <i>va-yaas moshe ve-aharon</i> · and Moses and Aaron did (etnachta on ve-aharon) [VERIFIED: SNAPSHOT Exod.7.6 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כַּאֲשֶׁ֨ר צִוָּ֧ה יְהוָ֛ה אֹתָ֖ם כֵּ֥ן עָשֽׂוּ</span> · <i>ka-asher tziva YHWH et-m ken asu</i> · as the LORD commanded them; so they did (verse-final asu) [VERIFIED: SNAPSHOT Exod.7.6 idx3-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ka_asher_tziva_YHWH_ken_asu, t0)</span><br><span class="gloss">= HOLDS(like-which-tziva-the-LORD-ken-asu, t0)</span><br>THE COMPLIANCE. va-yaas moshe ve-aharon KA-ASHER TZIVA YHWH otam KEN ASU — &#x27;as the LORD commanded them, SO THEY DID&#x27;: the doubled compliance-formula (did — as commanded — so they did: the letter signs it twice in one verse); THE CROSS-UNIT LANDING: exo_06&#x27;s go- speak demand (6:11, re-pressed and widened 6:29) receipts on this verse — the machine files NO in-unit pop (one-world law): the settlement link for exo_06&#x27;s card is authored at the fold, citing 7:6; the machine notes the shape — the demand pushed in one unit is paid in the next unit&#x27;s sixth verse, and the doubled so-they-did covers the resumption&#x27;s widening (&#x27;all that I speak&#x27;).
+</td><td><span class="he">כַּאֲשֶׁר צִוָּה יְהוָה אֹתָם כֵּן עָשׂוּ</span> · <i>ka-asher tziva YHWH et-m ken asu</i><br><span class="gloss">= like-which tziva the-LORD m ken asu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The compliance-verse; exo_06&#x27;s card lands here.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_7 · Exod.7.7 · <span class='expr'>EIGHTY_AND_EIGHTY_THREE</span></h3>
+<p><span class="he">וּמֹשֶׁה בֶּן־שְׁמֹנִים שָׁנָה וְאַהֲרֹן בֶּן־שָׁלֹשׁ וּשְׁמֹנִים שָׁנָה בְּדַבְּרָם אֶל־פַּרְעֹה</span> · <i>u-moshe ben-shemonim shana ve-aharon ben-shalosh u-shemonim shana be-dabra-m el-paro</i> · And Moses was eighty years old, and Aaron eighty-three years old, when they spoke to Pharaoh.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּמֹשֶׁה֙ בֶּן שְׁמֹנִ֣ים שָׁנָ֔ה וְאַֽהֲרֹ֔ן בֶּן שָׁלֹ֥שׁ וּשְׁמֹנִ֖ים שָׁנָ֑ה</span> · <i>u-moshe ben-shemonim shana ve-aharon ben-shalosh u-shemonim shana</i> · and Moses was eighty years old, and Aaron eighty-three years old (etnachta on shana) [VERIFIED: SNAPSHOT Exod.7.7 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">בְּדַבְּרָ֖ם אֶל פַּרְעֹֽה</span> · <i>be-dabra-m el-paro</i> · when they spoke to Pharaoh (verse-final paro) [VERIFIED: SNAPSHOT Exod.7.7 idx9-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(u_moshe_ben_shemonim_shana, t0)</span><br><span class="gloss">= HOLDS(and-Moses-ben-shemonim-shana, t0)</span><br>THE CLOCK. u-moshe ben-SHEMONIM shana ve-aharon ben-shalosh u-shemonim — the ages stamped at the errand&#x27;s start (eighty and eighty-three: the registry&#x27;s life-totals of 6:16-20 now running; gen_14&#x27;s eighty-word file noted, unhunted); be-dabram el-paro — &#x27;WHEN THEY SPOKE to Pharaoh&#x27;: the participle files them mid-office: the machine takes the verse as the ledger-line between commission and performance.
+</td><td><span class="he">וּמֹשֶׁה בֶּן־שְׁמֹנִים שָׁנָה</span> · <i>u-moshe ben-shemonim shana</i><br><span class="gloss">= Moses ben-shemonim shana</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The clock-verse.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_8 · Exod.7.8 · <span class='expr'>THE_COMPOUND_FRAME</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה וְאֶל־אַהֲרֹן לֵאמֹר</span> · <i>va-yomer YHWH el-moshe ve-el-aharon le-mor</i> · And the LORD said to Moses and to Aaron, saying:</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֣אמֶר יְהוָ֔ה</span> · <i>va-yomer YHWH</i> · and the LORD said (NO etnachta in verse: split at zaqef qatan on YHWH) [VERIFIED: SNAPSHOT Exod.7.8 idx1 zaqef qatan; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֶל מֹשֶׁ֥ה וְאֶֽל אַהֲרֹ֖ן לֵאמֹֽר</span> · <i>el-moshe ve-el-aharon le-mor</i> · to Moses and to Aaron, saying (verse-final le-mor) [VERIFIED: SNAPSHOT Exod.7.8 idx2-6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yomer_YHWH_el_moshe_ve_el_aharon, t0)</span><br><span class="gloss">= HOLDS(and-yomer-the-LORD-to-Moses-and-to-Aaron, t0)</span><br>THE COMPOUND FRAME. va-yomer YHWH el-moshe VE-el-aharon LEMOR — the two-man address (6:13&#x27;s compound resumed for the wonder-script); and the frame carries the Michlol&#x27;s rule from the other side: after Moses-AND-Aaron the saying-word&#x27;s lamed is SOFT — one of the fourteen compound stations censused whole at exo_06 (VERIFIED under EX06-01): the divine frame that never drops its hardening dot after Moses alone never once carries it after the pair: the rule&#x27;s two halves now both attested in-span across the two units that share it.
+</td><td><span class="he">וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה וְאֶל־אַהֲרֹן לֵאמֹר</span> · <i>va-yomer YHWH el-moshe ve-el-aharon le-mor</i><br><span class="gloss">= and-yomer the-LORD to-Moses and-to-Aaron to-mor</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The soft-lamed frame.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_9 · Exod.7.9 · <span class='expr'>THE_WONDER_SCRIPT</span></h3>
+<p><span class="he">כִּי יְדַבֵּר אֲלֵכֶם פַּרְעֹה לֵאמֹר תְּנוּ לָכֶם מוֹפֵת וְאָמַרְתָּ אֶל־אַהֲרֹן קַח אֶת־מַטְּךָ וְהַשְׁלֵךְ לִפְנֵי־פַרְעֹה יְהִי לְתַנִּין</span> · <i>ki yedaber el-khem paro le-mor tenu la-khem mofet ve-amarta el-aharon qach et-mat-kha ve-hashlekh li-fene-faro yehi le-tanin</i> · When Pharaoh speaks to you, saying: Give a wonder for yourselves — then you shall say to Aaron: Take your staff and throw it before Pharaoh; let it become a serpent.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">כִּי֩ יְדַבֵּ֨ר אֲלֵכֶ֤ם פַּרְעֹה֙ לֵאמֹ֔ר תְּנ֥וּ לָכֶ֖ם מוֹפֵ֑ת</span> · <i>ki yedaber el-khem paro le-mor tenu la-khem mofet</i> · when Pharaoh speaks to you, saying: give a wonder for yourselves (etnachta on mofet) [VERIFIED: SNAPSHOT Exod.7.9 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאָמַרְתָּ֣ אֶֽל אַהֲרֹ֗ן קַ֧ח אֶֽת מַטְּךָ֛ וְהַשְׁלֵ֥ךְ לִפְנֵֽי פַרְעֹ֖ה יְהִ֥י לְתַנִּֽין</span> · <i>ve-amarta el-aharon qach et-mat-kha ve-hashlekh li-fene-faro yehi le-tanin</i> · then you shall say to Aaron: take your staff and throw it before Pharaoh; let it become a serpent (verse-final le-tanin) [VERIFIED: SNAPSHOT Exod.7.9 idx8-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(qach_et_matkha_ve_hashlekh))</span><br><span class="gloss">= DECLARE(the-LORD, LET(qach-matkha-and-hashlekh))</span><br>THE SCRIPT [EX07-09]. ki yedaber alekhem paro lemor TENU lakhem MOFET — &#x27;when Pharaoh says: GIVE a wonder&#x27;: the demand pre-scripted in the adversary&#x27;s mouth (the machine files the conditional card: the wonder-script armed against the throne&#x27;s own challenge); ve- amarta el-aharon QACH et-matkha ve-HASHLEKH lifne faro YEHI le-tanin — &#x27;take your staff and THROW it — LET IT BECOME a serpent&#x27;: the Kitzur reads the script&#x27;s grammar — yehi, not va-yehi: &#x27;throw it FIRST, and then say to the staff: BECOME — so that Pharaoh HEARS that by your word it turns&#x27; (the script&#x27;s yehi against the performance&#x27;s va-yehi, both checked); &#x27;and why a TANIN? Pharaoh called himself THE GREAT CROCODILE couching in his Niles (Ezekiel 29:3) — as this serpent returned to dry wood, so he will return to dust and worm&#x27; (named): the sign is the king&#x27;s own title, thrown at his feet.
+</td><td><span class="he">קַח אֶת־מַטְּךָ וְהַשְׁלֵךְ לִפְנֵי־פַרְעֹה יְהִי לְתַנִּין</span> · <i>qach et-mat-kha ve-hashlekh li-fene-faro yehi le-tanin</i><br><span class="gloss">= qach mat-kha and-hashlekh to-me-fene-faro yehi to-tanin</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The conditional script pushed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_10 · Exod.7.10 · <span class='expr'>PERFORMED_AS_COMMANDED</span></h3>
+<p><span class="he">וַיָּבֹא מֹשֶׁה וְאַהֲרֹן אֶל־פַּרְעֹה וַיַּעַשׂוּ כֵן כַּאֲשֶׁר צִוָּה יְהוָה וַיַּשְׁלֵךְ אַהֲרֹן אֶת־מַטֵּהוּ לִפְנֵי פַרְעֹה וְלִפְנֵי עֲבָדָיו וַיְהִי לְתַנִּין</span> · <i>va-yavo moshe ve-aharon el-paro va-yaasu khen ka-asher tziva YHWH va-yashlekh aharon et-mate-hu li-fene faro ve-li-fene avaday-v va-yehi le-tanin</i> · And Moses and Aaron came to Pharaoh, and they did so, as the LORD had commanded; and Aaron threw his staff before Pharaoh and before his servants, and it became a serpent.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּבֹ֨א מֹשֶׁ֤ה וְאַהֲרֹן֙ אֶל פַּרְעֹ֔ה וַיַּ֣עַשׂוּ כֵ֔ן כַּאֲשֶׁ֖ר צִוָּ֣ה יְהוָ֑ה</span> · <i>va-yavo moshe ve-aharon el-paro va-yaasu khen ka-asher tziva YHWH</i> · and Moses and Aaron came to Pharaoh, and they did so, as the LORD had commanded (etnachta on YHWH) [VERIFIED: SNAPSHOT Exod.7.10 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּשְׁלֵ֨ךְ אַהֲרֹ֜ן אֶת מַטֵּ֗הוּ לִפְנֵ֥י פַרְעֹ֛ה וְלִפְנֵ֥י עֲבָדָ֖יו וַיְהִ֥י לְתַנִּֽין</span> · <i>va-yashlekh aharon et-mate-hu li-fene faro ve-li-fene avaday-v va-yehi le-tanin</i> · and Aaron threw his staff before Pharaoh and before his servants, and it became a serpent (verse-final le-tanin) [VERIFIED: SNAPSHOT Exod.7.10 idx10-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(qach_et_matkha_ve_hashlekh, t1)</span><br><span class="gloss">= RESULT: HOLDS(qach-matkha-and-hashlekh, t1)</span><br>THE PERFORMANCE [EX07-09]. va-yaasu KHEN ka-asher tziva YHWH — the compliance-formula again (the chapter&#x27;s second so-they-did); va- yashlekh AHARON et-matehu... va-YEHI le-TANIN — the throw performed and the word fulfilled (the script&#x27;s yehi paid by the narrative&#x27;s va-yehi — checked), the serpent-word on its DAGESHED nun (MS&#x27;s pointing, VERIFIED): the machine pops the wonder-script in its own next verse; AND THE SECOND LANDING: exo_04&#x27;s wonders-charge (4:21 — &#x27;see all the wonders... you shall do them before Pharaoh&#x27;) receipts on this same verse — the settlement link authored at the fold, citing 7:10: two units&#x27; cards paid on one verse-pair (7:6, 7:10) as the performance era opens.
+</td><td><span class="he">וַיַּשְׁלֵךְ אַהֲרֹן אֶת־מַטֵּהוּ לִפְנֵי פַרְעֹה וְלִפְנֵי עֲבָדָיו וַיְהִי לְתַנִּין</span> · <i>va-yashlekh aharon et-mate-hu li-fene faro ve-li-fene avaday-v va-yehi le-tanin</i><br><span class="gloss">= and-yashlekh Aaron mate-that to-me-fene faro and-to-me-fene avaday-v and-yehi to-tanin</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The script popped; exo_04&#x27;s charge lands too.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_11 · Exod.7.11 · <span class='expr'>THE_MAGICIANS_MATCH</span></h3>
+<p><span class="he">וַיִּקְרָא גַּם־פַּרְעֹה לַחֲכָמִים וְלַמְכַשְּׁפִים וַיַּעֲשׂוּ גַם־הֵם חַרְטֻמֵּי מִצְרַיִם בְּלַהֲטֵיהֶם כֵּן</span> · <i>va-yiqra gam-paro la-chakhamim ve-la-mekhashfim va-yaasu gam-hem chartume mitzrayim be-lahate-hem ken</i> · And Pharaoh also called the wise men and the sorcerers; and they also, the magicians of Egypt, did so with their secret arts.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּקְרָא֙ גַּם פַּרְעֹ֔ה לַֽחֲכָמִ֖ים וְלַֽמְכַשְּׁפִ֑ים</span> · <i>va-yiqra gam-paro la-chakhamim ve-la-mekhashfim</i> · and Pharaoh also called the wise men and the sorcerers (etnachta on ve-la-mekhashfim) [VERIFIED: SNAPSHOT Exod.7.11 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּֽעֲשׂ֨וּ גַם הֵ֜ם חַרְטֻמֵּ֥י מִצְרַ֛יִם בְּלַהֲטֵיהֶ֖ם כֵּֽן</span> · <i>va-yaasu gam-hem chartume mitzrayim be-lahate-hem ken</i> · and they also, the magicians of Egypt, did so with their secret arts (verse-final ken) [VERIFIED: SNAPSHOT Exod.7.11 idx5-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yaasu_gam_hem_be_lahatehem, t0)</span><br><span class="gloss">= HOLDS(and-yaasu-also-hem-in-lahatehem, t0)</span><br>THE COUNTER. va-yiqra GAM-paro la-CHAKHAMIM ve-la-MEKHASHFIM — &#x27;Pharaoh ALSO called&#x27;: the throne answers the sign with a staff of its own (the gam-word doubled in the verse: also-Pharaoh, also- they); chartume mitzrayim BE-LAHATEHEM — &#x27;with their FLAMES&#x27; (the secret-arts word the readings split between blade and demon, named- only): va-yaasu KHEN — the same so-they-did formula the obedient pair carries (7:6, 7:10) now on the imitators: the machine files the duel of compliances the swallowing will settle.
+</td><td><span class="he">וַיַּעֲשׂוּ גַם־הֵם חַרְטֻמֵּי מִצְרַיִם בְּלַהֲטֵיהֶם</span> · <i>va-yaasu gam-hem chartume mitzrayim be-lahate-hem</i><br><span class="gloss">= and-yaasu also-hem chartume mitzrayim in-lahate-hem</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The counter-performance.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_12 · Exod.7.12 · <span class='expr'>THE_SWALLOWING</span></h3>
+<p><span class="he">וַיַּשְׁלִיכוּ אִישׁ מַטֵּהוּ וַיִּהְיוּ לְתַנִּינִם וַיִּבְלַע מַטֵּה־אַהֲרֹן אֶת־מַטֹּתָם</span> · <i>va-yashlikhu ish mate-hu va-yihyu le-taninim va-yivla mate-aharon et-matota-m</i> · And they threw down every man his staff, and they became serpents; and Aaron&#x27;s staff swallowed their staffs.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּשְׁלִ֨יכוּ֙ אִ֣ישׁ מַטֵּ֔הוּ וַיִּהְי֖וּ לְתַנִּינִ֑ם</span> · <i>va-yashlikhu ish mate-hu va-yihyu le-taninim</i> · and they threw down every man his staff, and they became serpents (etnachta on le-taninim) [VERIFIED: SNAPSHOT Exod.7.12 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּבְלַ֥ע מַטֵּֽה אַהֲרֹ֖ן אֶת מַטֹּתָֽם</span> · <i>va-yivla mate-aharon et-matota-m</i> · and Aaron&#x27;s staff swallowed their staffs (verse-final matota-m) [VERIFIED: SNAPSHOT Exod.7.12 idx5-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">bala(e1); Agent(e1, mate_aharon)</span><br><span class="gloss">= bala(e1); Agent(e1, mate-Aaron)</span><br>THE SWALLOWING [EX07-06]. va-yashliku ish matehu va-yihyu le-taninim — every man his staff, and the floor fills with serpents; va-YIVLA mate-aharon et-MATOTAM — &#x27;and AARON&#x27;S STAFF SWALLOWED their staffs&#x27;: the machine&#x27;s EVENT (the sign consumes the counter-signs — the readings: a staff again when it swallowed, wood eating wood, named); and the swallowed word is written LEAN — the form&#x27;s ONLY Torah station (VERIFIED), its Masorah-partner full at Korach&#x27;s ledger (Num 17:21): the Kitzur carries the midrash whole — &#x27;at Korach&#x27;s affair too Aaron&#x27;s staff swallowed their staffs and disgorged them when brought out; therefore it did not blossom then, and therefore ve- yotze... et kol ha-MATOT is written lean (Num 17:24), because it had swallowed them&#x27; (asserted): the one staff that ate a court of serpents keeps the habit, and the Masorah keeps the receipts.
+</td><td><span class="he">וַיִּבְלַע מַטֵּה־אַהֲרֹן אֶת־מַטֹּתָם</span> · <i>va-yivla mate-aharon et-matota-m</i><br><span class="gloss">= and-yivla mate-Aaron matota-m</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The event: the sign eats the counter-signs.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_13 · Exod.7.13 · <span class='expr'>THE_HEART_STRENGTHENED</span></h3>
+<p><span class="he">וַיֶּחֱזַק לֵב פַּרְעֹה וְלֹא שָׁמַע אֲלֵהֶם כַּאֲשֶׁר דִּבֶּר יְהוָה</span> · <i>va-yechezaq lev paro ve-lo shama el-hem ka-asher diber YHWH</i> · And Pharaoh&#x27;s heart was strengthened, and he did not hear them, as the LORD had spoken.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֶּחֱזַק֙ לֵ֣ב פַּרְעֹ֔ה וְלֹ֥א שָׁמַ֖ע אֲלֵהֶ֑ם</span> · <i>va-yechezaq lev paro ve-lo shama el-hem</i> · and Pharaoh&#x27;s heart was strengthened, and he did not hear them (etnachta on el-hem) [VERIFIED: SNAPSHOT Exod.7.13 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כַּאֲשֶׁ֖ר דִּבֶּ֥ר יְהוָֽה</span> · <i>ka-asher diber YHWH</i> · as the LORD had spoken (verse-final YHWH) [VERIFIED: SNAPSHOT Exod.7.13 idx6-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yechezaq_lev_paro, t0)</span><br><span class="gloss">= HOLDS(and-yechezaq-lev-paro, t0)</span><br>THE FIRST STATION. va-YECHEZAQ lev paro — &#x27;and Pharaoh&#x27;s heart WAS STRENGTHENED&#x27;: the hardening-ledger opens its narrative column (7:3&#x27;s declared policy landing station one — the passive-reflexive form: the heart strengthens itself before the I-will-harden verbs arrive at 9:12, the readings&#x27; five-and-five named-only); ve-lo shama alehem KA-ASHER DIBER YHWH — &#x27;as the LORD had SPOKEN&#x27;: 7:4&#x27;s not- hearing forecast sealed with its own receipt-formula (asserted; station two at 7:22 identical): the machine files the pattern — every refusal in this chapter arrives pre-predicted.
+</td><td><span class="he">וַיֶּחֱזַק לֵב פַּרְעֹה</span> · <i>va-yechezaq lev paro</i><br><span class="gloss">= and-yechezaq lev paro</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Hardening station one; the forecast&#x27;s seal.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_14 · Exod.7.14 · <span class='expr'>THE_HEAVY_HEART</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה כָּבֵד לֵב פַּרְעֹה מֵאֵן לְשַׁלַּח הָעָם</span> · <i>va-yomer YHWH el-moshe kaved lev paro meen le-shalach ha-am</i> · And the LORD said to Moses: Pharaoh&#x27;s heart is heavy; he refuses to send the people.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה כָּבֵ֖ד לֵ֣ב פַּרְעֹ֑ה</span> · <i>va-yomer YHWH el-moshe kaved lev paro</i> · and the LORD said to Moses: Pharaoh&#x27;s heart is heavy (etnachta on paro) [VERIFIED: SNAPSHOT Exod.7.14 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">מֵאֵ֖ן לְשַׁלַּ֥ח הָעָֽם</span> · <i>meen le-shalach ha-am</i> · he refuses to send the people (verse-final ha-am) [VERIFIED: SNAPSHOT Exod.7.14 idx7-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(kaved_lev_paro, t0)</span><br><span class="gloss">= HOLDS(kaved-lev-paro, t0)</span><br>THE HEAVY HEART [EX07-08]. KAVED lev paro — &#x27;Pharaoh&#x27;s heart is HEAVY&#x27;: the weight-word&#x27;s triangle closes (the heavy MOUTH 4:10, the heavy SERVICE 5:9, the heavy HEART here — the root the hardening- file will conjugate through the cycle); MEEN le-shalach ha-am — &#x27;he REFUSES to send the people&#x27;: 4:23&#x27;s refuse-verb file re-lands; and MS posts the concordance-guard on the phrase (VERIFIED): &#x27;unique, that none err — readers PRESUME le-shalach ET ha-am&#x27; — the presumed- readings class (sevirin) at its refusal-station: the stream withholds the object-marker the grammar expects, and the Masorah stands guard over the leaner letter.
+</td><td><span class="he">כָּבֵד לֵב פַּרְעֹה</span> · <i>kaved lev paro</i><br><span class="gloss">= kaved lev paro</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The triangle closes; the presumed object-marker.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_15 · Exod.7.15 · <span class='expr'>THE_MORNING_STATION</span></h3>
+<p><span class="he">לֵךְ אֶל־פַּרְעֹה בַּבֹּקֶר הִנֵּה יֹצֵא הַמַּיְמָה וְנִצַּבְתָּ לִקְרָאתוֹ עַל־שְׂפַת הַיְאֹר וְהַמַּטֶּה אֲשֶׁר־נֶהְפַּךְ לְנָחָשׁ תִּקַּח בְּיָדֶךָ</span> · <i>lekh el-paro ba-boqer hine yotze ha-mayma-ה ve-nitzavta li-qerat-o al-sefat ha-yeor ve-ha-mate asher-nehpakh le-nachash tiqach be-yade-kha</i> · Go to Pharaoh in the morning — behold, he goes out to the water — and station yourself to meet him on the bank of the Nile; and the staff which was turned to a snake take in your hand.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">לֵ֣ךְ אֶל פַּרְעֹ֞ה בַּבֹּ֗קֶר הִנֵּה֙ יֹצֵ֣א הַמַּ֔יְמָה וְנִצַּבְתָּ֥ לִקְרָאת֖וֹ עַל שְׂפַ֣ת הַיְאֹ֑ר</span> · <i>lekh el-paro ba-boqer hine yotze ha-mayma-ה ve-nitzavta li-qerat-o al-sefat ha-yeor</i> · go to Pharaoh in the morning — behold, he goes out to the water — and station yourself to meet him on the bank of the Nile (etnachta on ha-yeor) [VERIFIED: SNAPSHOT Exod.7.15 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהַמַּטֶּ֛ה אֲשֶׁר נֶהְפַּ֥ךְ לְנָחָ֖שׁ תִּקַּ֥ח בְּיָדֶֽךָ</span> · <i>ve-ha-mate asher-nehpakh le-nachash tiqach be-yade-kha</i> · and the staff which was turned to a snake take in your hand (verse-final be-yade-kha) [VERIFIED: SNAPSHOT Exod.7.15 idx12-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(lekh_el_paro_ba_boqer))</span><br><span class="gloss">= DECLARE(the-LORD, LET(lekh-to-paro-in-the-morning))</span><br>THE MORNING STATION. LEKH el-paro BA-BOQER hine yotze ha-MAYMA — &#x27;GO to Pharaoh in the morning — behold, he goes out to the WATER&#x27; (the readings on the river-god&#x27;s morning privacy, named-only); ve- NITZAVTA liqrato — &#x27;and STATION yourself to meet him&#x27;: Miriam&#x27;s stand-verb (2:4) and the corridor&#x27;s (5:20) now commanded; ve-ha-mate asher nehpakh le-NACHASH — &#x27;the staff which was turned to a SNAKE&#x27;: the BUSH&#x27;S word (4:3&#x27;s nachash), not the court&#x27;s tanin (asserted — the letter keeps two serpent-vocabularies: the sign-for-Israel&#x27;s snake at the river, the crocodile at the throne); the machine pushes the card and the narrative never narrates the riverside delivery — the demand stays OPEN by the unnarrated-compliance class (exo_04&#x27;s sandal-precedent): the speech is given, the meeting is never shown, and 7:19 cuts straight to the next command.
+</td><td><span class="he">לֵךְ אֶל־פַּרְעֹה בַּבֹּקֶר</span> · <i>lekh el-paro ba-boqer</i><br><span class="gloss">= lekh to-paro morning</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The riverside demand pushed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_16 · Exod.7.16 · <span class='expr'>THE_RIVERSIDE_SCRIPT</span></h3>
+<p><span class="he">וְאָמַרְתָּ אֵלָיו יְהוָה אֱלֹהֵי הָעִבְרִים שְׁלָחַנִי אֵלֶיךָ לֵאמֹר שַׁלַּח אֶת־עַמִּי וְיַעַבְדֻנִי בַּמִּדְבָּר וְהִנֵּה לֹא־שָׁמַעְתָּ עַד־כֹּה</span> · <i>ve-amarta elay-v YHWH elohe ha-ivrim shelacha-ni ele-kha le-mor shalach et-ami-y ve-yaavdu-ni ba-midbar ve-hine lo-shamata ad-ko</i> · And you shall say to him: The LORD, the God of the Hebrews, sent me to you, saying: Send My people, that they may serve Me in the wilderness; and behold, you have not heard until now.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאָמַרְתָּ֣ אֵלָ֗יו יְהוָ֞ה אֱלֹהֵ֤י הָעִבְרִים֙ שְׁלָחַ֤נִי אֵלֶ֨יךָ֙ לֵאמֹ֔ר שַׁלַּח֙ אֶת עַמִּ֔י וְיַֽעַבְדֻ֖נִי בַּמִּדְבָּ֑ר</span> · <i>ve-amarta elay-v YHWH elohe ha-ivrim shelacha-ni ele-kha le-mor shalach et-ami-y ve-yaavdu-ni ba-midbar</i> · and you shall say to him: the LORD, the God of the Hebrews, sent me to you, saying: send My people, that they may serve Me in the wilderness (etnachta on ba-midbar) [VERIFIED: SNAPSHOT Exod.7.16 idx12 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהִנֵּ֥ה לֹא שָׁמַ֖עְתָּ עַד כֹּֽה</span> · <i>ve-hine lo-shamata ad-ko</i> · and behold, you have not heard until now (verse-final ko) [VERIFIED: SNAPSHOT Exod.7.16 idx13-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shalach_et_ami_ve_yaavduni, t0)</span><br><span class="gloss">= HOLDS(shalach-ami-and-yaavduni, t0)</span><br>THE SCRIPT&#x27;S CONTENT [EX07-10; EX07-12]. YHWH elohe ha-IVRIM shelachani elekha — the Hebrews&#x27;-God credential (3:18&#x27;s court-script formula in its second sounding); SHALACH et-AMI ve-yaavduni ba- midbar — &#x27;SEND MY PEOPLE, that they may SERVE Me&#x27;: the book&#x27;s standing demand re-pressed (5:1&#x27;s card, still open, still armed at 12:31 — no new push: the machine files the re-issue); ve-hine lo- shamata AD-KO — &#x27;you have not heard UNTIL NOW&#x27;: and the Kitzur reads the now-word&#x27;s cipher [EX07-12, named]: ko in atbash is the SCOFFER, and ko-with-ko counts 240 — &#x27;forty plagues in Egypt and two hundred at the sea: you will not hear until struck by the count of ko-and- ko&#x27;; ve-amarta ELAV on its REVIA in the precise books (VERIFIED [EX07-10]): the ultimatum carries its own arithmetic.
+</td><td><span class="he">שַׁלַּח אֶת־עַמִּי וְיַעַבְדֻנִי בַּמִּדְבָּר</span> · <i>shalach et-ami-y ve-yaavdu-ni ba-midbar</i><br><span class="gloss">= shalach ami-y and-yaavdu-ni in-the-midbar</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The send-formula re-pressed; the scoffer&#x27;s count named.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_17 · Exod.7.17 · <span class='expr'>BY_THIS_YOU_SHALL_KNOW</span></h3>
+<p><span class="he">כֹּה אָמַר יְהוָה בְּזֹאת תֵּדַע כִּי אֲנִי יְהוָה הִנֵּה אָנֹכִי מַכֶּה בַּמַּטֶּה אֲשֶׁר־בְּיָדִי עַל־הַמַּיִם אֲשֶׁר בַּיְאֹר וְנֶהֶפְכוּ לְדָם</span> · <i>ko amar YHWH be-zot teda ki ani YHWH hine anokhi make ba-mate asher-be-yadi-y al-ha-mayim asher ba-yeor ve-nehefkhu le-dam</i> · Thus says the LORD: By this you shall know that I am the LORD — behold, I strike with the staff that is in my hand upon the waters that are in the Nile, and they shall be turned to blood.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">כֹּ֚ה אָמַ֣ר יְהוָ֔ה בְּזֹ֣את תֵּדַ֔ע כִּ֖י אֲנִ֣י יְהוָ֑ה</span> · <i>ko amar YHWH be-zot teda ki ani YHWH</i> · thus says the LORD: by this you shall know that I am the LORD (etnachta on YHWH) [VERIFIED: SNAPSHOT Exod.7.17 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">הִנֵּ֨ה אָנֹכִ֜י מַכֶּ֣ה בַּמַּטֶּ֣ה אֲשֶׁר בְּיָדִ֗י עַל הַמַּ֛יִם אֲשֶׁ֥ר בַּיְאֹ֖ר וְנֶהֶפְכ֥וּ לְדָֽם</span> · <i>hine anokhi make ba-mate asher-be-yadi-y al-ha-mayim asher ba-yeor ve-nehefkhu le-dam</i> · behold, I strike with the staff that is in my hand upon the waters that are in the Nile, and they shall be turned to blood (verse-final le-dam) [VERIFIED: SNAPSHOT Exod.7.17 idx8-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(be_zot_teda_ki_ani_YHWH, t0)</span><br><span class="gloss">= HOLDS(in-this-teda-when-ani-the-LORD, t0)</span><br>THE SYLLABUS [EX07-05]. be-ZOT TEDA ki ani YHWH — &#x27;BY THIS you shall KNOW that I am the LORD&#x27;: 5:2&#x27;s who-is-the-LORD receives its curriculum (the knowing Egypt was promised at 7:5 begins with a struck river); hine anokhi MAKE... al ha-MAYIM — &#x27;behold, I STRIKE... UPON THE WATERS&#x27;: the phrase&#x27;s Torah-file counts three exact (VERIFIED): the striking here, Elim&#x27;s camp upon the waters (15:27 — the twelve springs), the leper&#x27;s bird over living water (Lev 14:6), the Kings-fourth named (Moab&#x27;s water red as blood) — the Kitzur: the rite requires blood RECOGNIZABLE in water, and so the plague showed it; &#x27;and by merit of the water-commandment they found twelve springs&#x27;: the struck water of this verse repaid at Elim; ve- NEHEFKHU le-dam — the turned-verb on its segol-pointed he (Chizkuni, asserted): &#x27;and they shall be TURNED to BLOOD.&#x27;
+</td><td><span class="he">בְּזֹאת תֵּדַע כִּי אֲנִי יְהוָה</span> · <i>be-zot teda ki ani YHWH</i><br><span class="gloss">= in-this teda when ani the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The know-answer; the waters-file.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_18 · Exod.7.18 · <span class='expr'>THE_NILE_UNDRINKABLE</span></h3>
+<p><span class="he">וְהַדָּגָה אֲשֶׁר־בַּיְאֹר תָּמוּת וּבָאַשׁ הַיְאֹר וְנִלְאוּ מִצְרַיִם לִשְׁתּוֹת מַיִם מִן־הַיְאֹר</span> · <i>ve-ha-daga asher-ba-yeor tamut u-vaash ha-yeor ve-nilu mitzrayim li-shetot mayim min-ha-yeor</i> · And the fish that is in the Nile shall die, and the Nile shall stink; and Egypt shall be weary of drinking water from the Nile.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהַדָּגָ֧ה אֲשֶׁר בַּיְאֹ֛ר תָּמ֖וּת וּבָאַ֣שׁ הַיְאֹ֑ר</span> · <i>ve-ha-daga asher-ba-yeor tamut u-vaash ha-yeor</i> · and the fish that is in the Nile shall die, and the Nile shall stink (etnachta on ha-yeor) [VERIFIED: SNAPSHOT Exod.7.18 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְנִלְא֣וּ מִצְרַ֔יִם לִשְׁתּ֥וֹת מַ֖יִם מִן הַיְאֹֽר</span> · <i>ve-nilu mitzrayim li-shetot mayim min-ha-yeor</i> · and Egypt shall be weary of drinking water from the Nile (verse-final ha-yeor) [VERIFIED: SNAPSHOT Exod.7.18 idx6-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_nilu_mitzrayim_lishtot, t0)</span><br><span class="gloss">= HOLDS(and-nilu-mitzrayim-lishtot, t0)</span><br>THE FORECAST [EX07-04]. ve-ha-daga... TAMUT u-vaash ha-yeor — the fish shall die, the river shall stink (7:21 will pay both words); ve-NILU mitzrayim LISHTOT mayim — &#x27;Egypt shall be WEARY of DRINKING&#x27;: and MS posts the transmission-file on the drink-word — FULL here &#x27;in the Hilleli, the precise manuscripts, and the first printings, for it is NOT of the FOUR LEAN ones the Masorah lists at Chayye Sarah — and the printer became confused&#x27; (the run&#x27;s third printed-authority correction): the four-lean census verifies EXACT (VERIFIED): Rebecca&#x27;s well (Gen 24:19), the diggers of 7:24, Marah (15:23), Rephidim (17:1) — three of the four are water-crises, and this chapter holds one of them six verses ahead.
+</td><td><span class="he">וְנִלְאוּ מִצְרַיִם לִשְׁתּוֹת מַיִם</span> · <i>ve-nilu mitzrayim li-shetot mayim</i><br><span class="gloss">= and-nilu mitzrayim to-me-shetot waters</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The forecast; the printer corrected on the drink-word.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_19 · Exod.7.19 · <span class='expr'>STRETCH_OUT_YOUR_HAND</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה אֱמֹר אֶל־אַהֲרֹן קַח מַטְּךָ וּנְטֵה־יָדְךָ עַל־מֵימֵי מִצְרַיִם עַל־נַהֲרֹתָם עַל־יְאֹרֵיהֶם וְעַל־אַגְמֵיהֶם וְעַל כָּל־מִקְוֵה מֵימֵיהֶם וְיִהְיוּ־דָם וְהָיָה דָם בְּכָל־אֶרֶץ מִצְרַיִם וּבָעֵצִים וּבָאֲבָנִים</span> · <i>va-yomer YHWH el-moshe emor el-aharon qach mat-kha u-nete-yad-kha al-meme mitzrayim al-naharota-m al-yeore-hem ve-al-agme-hem ve-al kal-miqve meme-hem ve-yihyu-dam ve-haya dam be-khal-eretz mitzrayim u-va-etzim u-va-avanim</i> · And the LORD said to Moses: Say to Aaron: Take your staff and stretch out your hand over the waters of Egypt — over their rivers, over their Niles, and over their pools, and over every gathering of their waters — and they shall become blood; and there shall be blood in all the land of Egypt, both in the wooden vessels and in the stone vessels.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר יְהוָ֜ה אֶל מֹשֶׁ֗ה אֱמֹ֣ר אֶֽל אַהֲרֹ֡ן קַ֣ח מַטְּךָ֣ וּנְטֵֽה יָדְךָ֩ עַל מֵימֵ֨י מִצְרַ֜יִם עַֽל נַהֲרֹתָ֣ם עַל יְאֹרֵיהֶ֣ם וְעַל אַגְמֵיהֶ֗ם וְעַ֛ל כָּל מִקְוֵ֥ה מֵימֵיהֶ֖ם וְיִֽהְיוּ דָ֑ם</span> · <i>va-yomer YHWH el-moshe emor el-aharon qach mat-kha u-nete-yad-kha al-meme mitzrayim al-naharota-m al-yeore-hem ve-al-agme-hem ve-al kal-miqve meme-hem ve-yihyu-dam</i> · say to Aaron: take your staff and stretch out your hand over the waters of Egypt — rivers, Niles, pools, every gathering of water — and they shall become blood (etnachta on dam) [VERIFIED: SNAPSHOT Exod.7.19 idx25 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהָ֤יָה דָם֙ בְּכָל אֶ֣רֶץ מִצְרַ֔יִם וּבָעֵצִ֖ים וּבָאֲבָנִֽים</span> · <i>ve-haya dam be-khal-eretz mitzrayim u-va-etzim u-va-avanim</i> · and there shall be blood in all the land of Egypt, both in wood and in stone (verse-final u-va-avanim) [VERIFIED: SNAPSHOT Exod.7.19 idx26-32]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(nete_yadkha_al_meme_mitzrayim))</span><br><span class="gloss">= DECLARE(the-LORD, LET(nete-yadkha-upon-meme-mitzrayim))</span><br>THE STRETCH-COMMAND. emor el-AHARON qach matkha u-NETE-yadkha al MEME mitzrayim — &#x27;say to Aaron: take your staff and STRETCH OUT your hand over the WATERS of Egypt&#x27;: 7:5&#x27;s stretch-verb handed to Aaron&#x27;s staff (the relay of 7:1-2 running: the word descends, the hand is Aaron&#x27;s); the FIVE water-classes enumerated — rivers, Niles, pools, every gathering — ve-yihyu-DAM: &#x27;and they shall become BLOOD&#x27;; u-va- ETZIM u-va-AVANIM — &#x27;in the wood and in the stone&#x27; (the readings&#x27; household jars, named-only): the machine pushes the plague-command whose pop is one verse away.
+</td><td><span class="he">אֱמֹר אֶל־אַהֲרֹן קַח מַטְּךָ וּנְטֵה־יָדְךָ עַל־מֵימֵי מִצְרַיִם</span> · <i>emor el-aharon qach mat-kha u-nete-yad-kha al-meme mitzrayim</i><br><span class="gloss">= emor to-Aaron qach mat-kha and-nete-yad-kha upon-meme mitzrayim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The stretch-command pushed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_20 · Exod.7.20 · <span class='expr'>THE_NILE_STRUCK</span></h3>
+<p><span class="he">וַיַּעֲשׂוּ־כֵן מֹשֶׁה וְאַהֲרֹן כַּאֲשֶׁר צִוָּה יְהוָה וַיָּרֶם בַּמַּטֶּה וַיַּךְ אֶת־הַמַּיִם אֲשֶׁר בַּיְאֹר לְעֵינֵי פַרְעֹה וּלְעֵינֵי עֲבָדָיו וַיֵּהָפְכוּ כָּל־הַמַּיִם אֲשֶׁר־בַּיְאֹר לְדָם</span> · <i>va-yaasu-khen moshe ve-aharon ka-asher tziva YHWH va-yarem ba-mate va-yakh et-ha-mayim asher ba-yeor le-ene faro u-le-ene avaday-v va-yehafkhu kal-ha-mayim asher-ba-yeor le-dam</i> · And Moses and Aaron did so, as the LORD commanded; and he raised the staff and struck the waters that were in the Nile, before the eyes of Pharaoh and before the eyes of his servants; and all the waters that were in the Nile were turned to blood.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּֽעֲשׂוּ כֵן֩ מֹשֶׁ֨ה וְאַהֲרֹ֜ן כַּאֲשֶׁ֣ר צִוָּ֣ה יְהוָ֗ה וַיָּ֤רֶם בַּמַּטֶּה֙ וַיַּ֤ךְ אֶת הַמַּ֨יִם֙ אֲשֶׁ֣ר בַּיְאֹ֔ר לְעֵינֵ֣י פַרְעֹ֔ה וּלְעֵינֵ֖י עֲבָדָ֑יו</span> · <i>va-yaasu-khen moshe ve-aharon ka-asher tziva YHWH va-yarem ba-mate va-yakh et-ha-mayim asher ba-yeor le-ene faro u-le-ene avaday-v</i> · and Moses and Aaron did so, as the LORD commanded; and he raised the staff and struck the waters of the Nile, before the eyes of Pharaoh and his servants (etnachta on avaday-v) [VERIFIED: SNAPSHOT Exod.7.20 idx17 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֵּהָֽפְכ֛וּ כָּל הַמַּ֥יִם אֲשֶׁר בַּיְאֹ֖ר לְדָֽם</span> · <i>va-yehafkhu kal-ha-mayim asher-ba-yeor le-dam</i> · and all the waters that were in the Nile were turned to blood (verse-final le-dam) [VERIFIED: SNAPSHOT Exod.7.20 idx18-23]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(nete_yadkha_al_meme_mitzrayim, t1)</span><br><span class="gloss">= RESULT: HOLDS(nete-yadkha-upon-meme-mitzrayim, t1)</span><br>PLAGUE ONE. va-yaasu-KHEN moshe ve-aharon KA-ASHER TZIVA YHWH — the third so-they-did of the chapter (the compliance-formula now the plague-cycle&#x27;s own meter); va-YAREM ba-mate va-YAKH et-ha-MAYIM — &#x27;he RAISED the staff and STRUCK the waters&#x27;: the strike-verb of 2:11-13 institutionalized into the sign-war; le-ENE faro u-le-ene avadav — &#x27;before the EYES of Pharaoh and his servants&#x27;: the publicity-clause (the sign demands witnesses); va-YEHAFKHU kol-ha- mayim... le-DAM — &#x27;and ALL the waters were TURNED to blood&#x27;: the machine pops the stretch-command in its own next verse and files the first entry of the plague-ledger the book will now keep.
+</td><td><span class="he">וַיָּרֶם בַּמַּטֶּה וַיַּךְ אֶת־הַמַּיִם אֲשֶׁר בַּיְאֹר</span> · <i>va-yarem ba-mate va-yakh et-ha-mayim asher ba-yeor</i><br><span class="gloss">= and-yarem in-the-mate and-yakh the-waters which in-the-yeor</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The first plague lands.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_21 · Exod.7.21 · <span class='expr'>THE_FISH_DIED</span></h3>
+<p><span class="he">וְהַדָּגָה אֲשֶׁר־בַּיְאֹר מֵתָה וַיִּבְאַשׁ הַיְאֹר וְלֹא־יָכְלוּ מִצְרַיִם לִשְׁתּוֹת מַיִם מִן־הַיְאֹר וַיְהִי הַדָּם בְּכָל־אֶרֶץ מִצְרָיִם</span> · <i>ve-ha-daga asher-ba-yeor meta va-yivash ha-yeor ve-lo-yakhlu mitzrayim li-shetot mayim min-ha-yeor va-yehi ha-dam be-khal-eretz mitzrayim</i> · And the fish that was in the Nile died, and the Nile stank, and Egypt could not drink water from the Nile; and the blood was in all the land of Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהַדָּגָ֨ה אֲשֶׁר בַּיְאֹ֥ר מֵ֨תָה֙ וַיִּבְאַ֣שׁ הַיְאֹ֔ר וְלֹא יָכְל֣וּ מִצְרַ֔יִם לִשְׁתּ֥וֹת מַ֖יִם מִן הַיְאֹ֑ר</span> · <i>ve-ha-daga asher-ba-yeor meta va-yivash ha-yeor ve-lo-yakhlu mitzrayim li-shetot mayim min-ha-yeor</i> · and the fish that was in the Nile died, and the Nile stank, and Egypt could not drink water from the Nile (etnachta on ha-yeor) [VERIFIED: SNAPSHOT Exod.7.21 idx12 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיְהִ֥י הַדָּ֖ם בְּכָל אֶ֥רֶץ מִצְרָֽיִם</span> · <i>va-yehi ha-dam be-khal-eretz mitzrayim</i> · and the blood was in all the land of Egypt (verse-final mitzrayim) [VERIFIED: SNAPSHOT Exod.7.21 idx13-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yivash_ha_yeor, t0)</span><br><span class="gloss">= HOLDS(and-yivash-the-yeor, t0)</span><br>THE STINK [EX07-02]. ve-ha-daga... META va-YIVASH ha-yeor — &#x27;the fish DIED, and the Nile STANK&#x27;: 7:18&#x27;s forecast paid word for word — and the stank-verb stands exactly TWICE in the Torah (VERIFIED): the struck NILE here and the hoarded MANNA (16:20, &#x27;it bred worms and stank&#x27;) — the Kitzur: &#x27;in the Nile too WORMS grew&#x27; — one verb of corruption shared by Egypt&#x27;s god-river under judgment and Israel&#x27;s bread under disobedience; ve-lo-yakhlu mitzrayim LISHTOT — &#x27;could not drink&#x27; (the full drink-word again; its lean twin waits three verses): the machine files the plague&#x27;s yield: the river that ate the sons is undrinkable.
+</td><td><span class="he">וַיִּבְאַשׁ הַיְאֹר</span> · <i>va-yivash ha-yeor</i><br><span class="gloss">= and-yivash the-yeor</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The stank-pair&#x27;s first station.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_22 · Exod.7.22 · <span class='expr'>THE_MAGICIANS_MATCH_AGAIN</span></h3>
+<p><span class="he">וַיַּעֲשׂוּ־כֵן חַרְטֻמֵּי מִצְרַיִם בְּלָטֵיהֶם וַיֶּחֱזַק לֵב־פַּרְעֹה וְלֹא־שָׁמַע אֲלֵהֶם כַּאֲשֶׁר דִּבֶּר יְהוָה</span> · <i>va-yaasu-khen chartume mitzrayim be-late-hem va-yechezaq lev-paro ve-lo-shama el-hem ka-asher diber YHWH</i> · And the magicians of Egypt did so with their secret arts; and Pharaoh&#x27;s heart was strengthened, and he did not hear them, as the LORD had spoken.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּֽעֲשׂוּ כֵ֛ן חַרְטֻמֵּ֥י מִצְרַ֖יִם בְּלָטֵיהֶ֑ם</span> · <i>va-yaasu-khen chartume mitzrayim be-late-hem</i> · and the magicians of Egypt did so with their secret arts (etnachta on be-late-hem) [VERIFIED: SNAPSHOT Exod.7.22 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֶּחֱזַ֤ק לֵב פַּרְעֹה֙ וְלֹא שָׁמַ֣ע אֲלֵהֶ֔ם כַּאֲשֶׁ֖ר דִּבֶּ֥ר יְהוָֽה</span> · <i>va-yechezaq lev-paro ve-lo-shama el-hem ka-asher diber YHWH</i> · and Pharaoh&#x27;s heart was strengthened, and he did not hear them, as the LORD had spoken (verse-final YHWH) [VERIFIED: SNAPSHOT Exod.7.22 idx5-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yechezaq_lev_paro_2, t0)</span><br><span class="gloss">= HOLDS(and-yechezaq-lev-paro-2, t0)</span><br>THE SECOND STATION. va-yaasu-KHEN chartume mitzrayim be-LATEHEM — the imitators again (the secret-arts word spelled leaner here than 7:11 — the readings&#x27; two vocabularies, named-only); va-YECHEZAQ lev- paro ve-lo shama alehem KA-ASHER DIBER YHWH — the hardening-ledger&#x27;s station two, sealed with the same as-He-had-spoken formula (asserted: 7:13&#x27;s seal verbatim): the machine files the refrain the cycle will drum — counter-sign, strengthened heart, unheard word, fulfilled forecast.
+</td><td><span class="he">וַיֶּחֱזַק לֵב־פַּרְעֹה וְלֹא־שָׁמַע אֲלֵהֶם</span> · <i>va-yechezaq lev-paro ve-lo-shama el-hem</i><br><span class="gloss">= and-yechezaq lev-paro and-not-shama to-hem</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Hardening station two.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_23 · Exod.7.23 · <span class='expr'>PHARAOH_TURNS_HOME</span></h3>
+<p><span class="he">וַיִּפֶן פַּרְעֹה וַיָּבֹא אֶל־בֵּיתוֹ וְלֹא־שָׁת לִבּוֹ גַּם־לָזֹאת</span> · <i>va-yifen paro va-yavo el-bet-o ve-lo-shat lib-o gam-la-zot</i> · And Pharaoh turned and came into his house; and he did not set his heart even to this.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּ֣פֶן פַּרְעֹ֔ה וַיָּבֹ֖א אֶל בֵּית֑וֹ</span> · <i>va-yifen paro va-yavo el-bet-o</i> · and Pharaoh turned and came into his house (etnachta on bet-o) [VERIFIED: SNAPSHOT Exod.7.23 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְלֹא שָׁ֥ת לִבּ֖וֹ גַּם לָזֹֽאת</span> · <i>ve-lo-shat lib-o gam-la-zot</i> · and he did not set his heart even to this (verse-final la-zot) [VERIFIED: SNAPSHOT Exod.7.23 idx5-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_lo_shat_libo_gam_la_zot, t0)</span><br><span class="gloss">= HOLDS(and-not-shat-His-heart-also-to-this, t0)</span><br>THE TURNING. va-YIFEN paro — &#x27;and Pharaoh TURNED&#x27; (the turn-verb: the king&#x27;s whole answer is his back); va-yavo el-BETO — into the house the frogs are already promised to enter (7:28 armed); ve-lo- SHAT LIBO gam-la-ZOT — &#x27;he did not SET HIS HEART even to THIS&#x27;: the heart-ledger&#x27;s third idiom in one chapter (strengthened, heavy, unset — the machine files the vocabulary spread): the plague stands in every jar of Egypt and the king walks past it.
+</td><td><span class="he">וְלֹא־שָׁת לִבּוֹ גַּם־לָזֹאת</span> · <i>ve-lo-shat lib-o gam-la-zot</i><br><span class="gloss">= and-not-shat lib-o also-to-this</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The unset heart.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_24 · Exod.7.24 · <span class='expr'>EGYPT_DIGS</span></h3>
+<p><span class="he">וַיַּחְפְּרוּ כָל־מִצְרַיִם סְבִיבֹת הַיְאֹר מַיִם לִשְׁתּוֹת כִּי לֹא יָכְלוּ לִשְׁתֹּת מִמֵּימֵי הַיְאֹר</span> · <i>va-yachpru khal-mitzrayim sevivot ha-yeor mayim li-shetot ki lo yakhlu li-shetot mi-meme ha-yeor</i> · And all Egypt dug round about the Nile for water to drink; for they could not drink of the waters of the Nile.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּחְפְּר֧וּ כָל מִצְרַ֛יִם סְבִיבֹ֥ת הַיְאֹ֖ר מַ֣יִם לִשְׁתּ֑וֹת</span> · <i>va-yachpru khal-mitzrayim sevivot ha-yeor mayim li-shetot</i> · and all Egypt dug round about the Nile for water to drink (etnachta on li-shetot) [VERIFIED: SNAPSHOT Exod.7.24 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּ֣י לֹ֤א יָֽכְלוּ֙ לִשְׁתֹּ֔ת מִמֵּימֵ֖י הַיְאֹֽר</span> · <i>ki lo yakhlu li-shetot mi-meme ha-yeor</i> · for they could not drink of the waters of the Nile (verse-final ha-yeor) [VERIFIED: SNAPSHOT Exod.7.24 idx7-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yachpru_khol_mitzrayim, t0)</span><br><span class="gloss">= HOLDS(and-yachpru-all-mitzrayim, t0)</span><br>THE DIGGERS [EX07-04]. va-yachpru KHOL-mitzrayim sevivot ha-yeor MAYIM LISHTOT — &#x27;ALL Egypt DUG round about the Nile for water TO DRINK&#x27; (the kaf of khol SOFT — MS&#x27;s ruling, asserted): the drink- word FULL in the seeking; ki lo yakhlu LISHTOT mi-meme ha-yeor — and LEAN in the failing (li-shtot, one of the Masorah&#x27;s FOUR lean stations, VERIFIED [EX07-04]): ONE VERSE carries the word in both spellings — full at &#x27;water to drink,&#x27; lean at &#x27;could not drink&#x27; — the diggers&#x27; verse splitting the letter between what they sought and what the river refused: gen_40&#x27;s four-lean file lands its Exodus station inside a spelling-chiasm.
+</td><td><span class="he">וַיַּחְפְּרוּ כָל־מִצְרַיִם סְבִיבֹת הַיְאֹר מַיִם לִשְׁתּוֹת</span> · <i>va-yachpru khal-mitzrayim sevivot ha-yeor mayim li-shetot</i><br><span class="gloss">= and-yachpru khal-mitzrayim sevivot the-yeor waters to-me-shetot</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The one-verse double of the drink-word.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_25 · Exod.7.25 · <span class='expr'>SEVEN_DAYS_FILLED</span></h3>
+<p><span class="he">וַיִּמָּלֵא שִׁבְעַת יָמִים אַחֲרֵי הַכּוֹת־יְהוָה אֶת־הַיְאֹר</span> · <i>va-yimale shivat yamim achare hakot-YHWH et-ha-yeor</i> · And seven days were filled, after the LORD had struck the Nile.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּמָּלֵ֖א שִׁבְעַ֣ת יָמִ֑ים</span> · <i>va-yimale shivat yamim</i> · and seven days were filled (etnachta on yamim) [VERIFIED: SNAPSHOT Exod.7.25 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אַחֲרֵ֥י הַכּוֹת יְהוָ֖ה אֶת הַיְאֹֽר</span> · <i>achare hakot-YHWH et-ha-yeor</i> · after the LORD had struck the Nile (verse-final ha-yeor) [VERIFIED: SNAPSHOT Exod.7.25 idx3-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yimale_shivat_yamim, t0)</span><br><span class="gloss">= HOLDS(and-yimale-seven-seas, t0)</span><br>THE CLOCK. va-yimale SHIVAT YAMIM — &#x27;and SEVEN DAYS were FILLED&#x27;: the plague-week counted in creation&#x27;s own measure (the filled-verb on the days: the readings&#x27; warning-thirds and plague-weeks, named- only); achare hakot-YHWH et-ha-yeor — &#x27;after THE LORD had struck the Nile&#x27;: the striking re-attributed to its Owner (Aaron&#x27;s hand, 7:19; the LORD&#x27;s blow, here — the relay of 7:1 read backward): the machine closes plague one&#x27;s file and stamps its duration.
+</td><td><span class="he">וַיִּמָּלֵא שִׁבְעַת יָמִים</span> · <i>va-yimale shivat yamim</i><br><span class="gloss">= and-yimale seven seas</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The plague-clock.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_26 · Exod.7.26 · <span class='expr'>GO_SAY_SEND</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה בֹּא אֶל־פַּרְעֹה וְאָמַרְתָּ אֵלָיו כֹּה אָמַר יְהוָה שַׁלַּח אֶת־עַמִּי וְיַעַבְדֻנִי</span> · <i>va-yomer YHWH el-moshe bo el-paro ve-amarta elay-v ko amar YHWH shalach et-ami-y ve-yaavdu-ni</i> · And the LORD said to Moses: Come to Pharaoh, and say to him: Thus says the LORD: Send My people, that they may serve Me.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה בֹּ֖א אֶל פַּרְעֹ֑ה</span> · <i>va-yomer YHWH el-moshe bo el-paro</i> · and the LORD said to Moses: come to Pharaoh (etnachta on paro) [VERIFIED: SNAPSHOT Exod.7.26 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאָמַרְתָּ֣ אֵלָ֗יו כֹּ֚ה אָמַ֣ר יְהוָ֔ה שַׁלַּ֥ח אֶת עַמִּ֖י וְיַֽעַבְדֻֽנִי</span> · <i>ve-amarta elay-v ko amar YHWH shalach et-ami-y ve-yaavdu-ni</i> · and say to him: thus says the LORD: send My people, that they may serve Me (verse-final ve-yaavdu-ni) [VERIFIED: SNAPSHOT Exod.7.26 idx7-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(bo_el_paro_ve_amarta))</span><br><span class="gloss">= DECLARE(the-LORD, LET(in-it-to-paro-and-amarta))</span><br>THE SECOND SUMMONS. BO el-paro — &#x27;COME to Pharaoh&#x27; (the come-word over the go-word: the readings&#x27; with-you reading, named-only); ve- amarta elav KO AMAR YHWH — the thus-says formula (5:1&#x27;s duel resumed); SHALACH et-AMI ve-yaavduni — the send-formula&#x27;s third sounding in the book (5:1, 7:16, here — the standing card re- pressed, no new push for the send itself): the machine pushes the WARNING-ERRAND as its card (go, say) — the delivery is never narrated in-span (the unnarrated-compliance class again), the threatened plague executes at 8:1-2 (next unit), and the chapter will end inside this speech&#x27;s own forecast.
+</td><td><span class="he">בֹּא אֶל־פַּרְעֹה</span> · <i>bo el-paro</i><br><span class="gloss">= in-it to-paro</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The frog-warning pushed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_27 · Exod.7.27 · <span class='expr'>IF_YOU_REFUSE_FROGS</span></h3>
+<p><span class="he">וְאִם־מָאֵן אַתָּה לְשַׁלֵּחַ הִנֵּה אָנֹכִי נֹגֵף אֶת־כָּל־גְּבוּלְךָ בַּצְפַרְדְּעִים</span> · <i>ve-im-maen ata le-shalecha hine anokhi nogef et-kal-gevul-kha ba-tzefardim</i> · And if you refuse to send them — behold, I strike all your border with frogs.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאִם מָאֵ֥ן אַתָּ֖ה לְשַׁלֵּ֑חַ</span> · <i>ve-im-maen ata le-shalecha</i> · and if you refuse to send them (etnachta on le-shalecha) [VERIFIED: SNAPSHOT Exod.7.27 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">הִנֵּ֣ה אָנֹכִ֗י נֹגֵ֛ף אֶת כָּל גְּבוּלְךָ֖ בַּֽצְפַרְדְּעִֽים</span> · <i>hine anokhi nogef et-kal-gevul-kha ba-tzefardim</i> · behold, I strike all your border with frogs (verse-final ba-tzefardim) [VERIFIED: SNAPSHOT Exod.7.27 idx4-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_im_maen_ata_le_shaleach, t0)</span><br><span class="gloss">= HOLDS(and-if-maen-ata-to-shaleach, t0)</span><br>THE CONDITION [EX07-01]. ve-im-MAEN ata le-shaleach — &#x27;if you REFUSE to send&#x27; (7:14&#x27;s refuse-word handed back to the king as his own branch of the decision-tree: the machine files the conditional structure — the plague is priced, the choice is his); hine anokhi NOGEF et-kol-GEVULKHA ba-TZFARDEIM — &#x27;behold, I STRIKE all your BORDER with FROGS&#x27;: the plague named on its soft tzadi (the Masorah&#x27;s passage-rule opens here — soft through all ten plural stations, VERIFIED under EX07-01): the second plague enters the book as a threat with its pointing-law already running.
+</td><td><span class="he">הִנֵּה אָנֹכִי נֹגֵף אֶת־כָּל־גְּבוּלְךָ בַּצְפַרְדְּעִים</span> · <i>hine anokhi nogef et-kal-gevul-kha ba-tzefardim</i><br><span class="gloss">= hine anokhi nogef kal-gevul-kha in-the-tzefardim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The conditional; the plague named.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_28 · Exod.7.28 · <span class='expr'>THE_INVASION_ROUTE</span></h3>
+<p><span class="he">וְשָׁרַץ הַיְאֹר צְפַרְדְּעִים וְעָלוּ וּבָאוּ בְּבֵיתֶךָ וּבַחֲדַר מִשְׁכָּבְךָ וְעַל־מִטָּתֶךָ וּבְבֵית עֲבָדֶיךָ וּבְעַמֶּךָ וּבְתַנּוּרֶיךָ וּבְמִשְׁאֲרוֹתֶיךָ</span> · <i>ve-sharatz ha-yeor tzefardim ve-alu u-vau be-vete-kha u-va-chadar mishkav-kha ve-al-mitate-kha u-ve-vet avade-kha u-ve-ame-kha u-ve-tanure-kha u-ve-misharote-kha</i> · And the Nile shall swarm frogs, and they shall come up and come into your house, and into your bedchamber, and onto your bed, and into the house of your servants, and among your people, and into your ovens, and into your kneading-troughs.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְשָׁרַ֣ץ הַיְאֹר֮ צְפַרְדְּעִים֒ וְעָלוּ֙ וּבָ֣אוּ בְּבֵיתֶ֔ךָ וּבַחֲדַ֥ר מִשְׁכָּבְךָ֖ וְעַל מִטָּתֶ֑ךָ</span> · <i>ve-sharatz ha-yeor tzefardim ve-alu u-vau be-vete-kha u-va-chadar mishkav-kha ve-al-mitate-kha</i> · and the Nile shall swarm frogs, and they shall come up and come into your house, and into your bedchamber, and onto your bed (etnachta on mitate-kha) [VERIFIED: SNAPSHOT Exod.7.28 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּבְבֵ֤ית עֲבָדֶ֨יךָ֙ וּבְעַמֶּ֔ךָ וּבְתַנּוּרֶ֖יךָ וּבְמִשְׁאֲרוֹתֶֽיךָ</span> · <i>u-ve-vet avade-kha u-ve-ame-kha u-ve-tanure-kha u-ve-misharote-kha</i> · and into the house of your servants, and among your people, and into your ovens, and into your kneading-troughs (verse-final u-ve-misharote-kha) [VERIFIED: SNAPSHOT Exod.7.28 idx10-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_sharatz_ha_yeor_tzfardeim, t0)</span><br><span class="gloss">= HOLDS(and-sharatz-the-yeor-tzfardeim, t0)</span><br>THE ROUTE [EX07-07; EX07-12]. ve-SHARATZ ha-yeor — &#x27;and the Nile shall SWARM&#x27;: creation&#x27;s swarm-verb (Gen 1:20) turned against the god-river; the invasion runs palace-inward — your house, your BEDCHAMBER, your BED, then servants, then people, then ovens, then TROUGHS (the order the Kitzur will flip at 7:29, asserted [EX07-12]); u-ve-MISHAROTEKHA — &#x27;and into your KNEADING-TROUGHS&#x27;: the Ramah&#x27;s FULL-OF-FULL — vav and yod both written, the form ONCE in the Torah (VERIFIED [EX07-07]), against the lean troughs of the going-out (12:34) and of the blessing-and-curse (Deut 28:5/17): the frogs are promised into the one trough the Torah spells to its last letter.
+</td><td><span class="he">וְשָׁרַץ הַיְאֹר צְפַרְדְּעִים</span> · <i>ve-sharatz ha-yeor tzefardim</i><br><span class="gloss">= and-sharatz the-yeor tzefardim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The route; the full-of-full trough.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_7_29 · Exod.7.29 · <span class='expr'>AND_INTO_YOU</span></h3>
+<p><span class="he">וּבְכָה וּבְעַמְּךָ וּבְכָל־עֲבָדֶיךָ יַעֲלוּ הַצְפַרְדְּעִים</span> · <i>u-ve-kha u-ve-am-kha u-ve-khal-avade-kha yaalu ha-tzefardim</i> · And into you, and into your people, and into all your servants, the frogs shall come up.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבְכָ֥ה וּֽבְעַמְּךָ֖ וּבְכָל עֲבָדֶ֑יךָ</span> · <i>u-ve-kha u-ve-am-kha u-ve-khal-avade-kha</i> · and into you, and into your people, and into all your servants (etnachta on avade-kha) [VERIFIED: SNAPSHOT Exod.7.29 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">יַעֲל֖וּ הַֽצְפַרְדְּעִֽים</span> · <i>yaalu ha-tzefardim</i> · the frogs shall come up (verse-final ha-tzefardim) [VERIFIED: SNAPSHOT Exod.7.29 idx4-5]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(u_vekha_u_ve_amkha, t0)</span><br><span class="gloss">= HOLDS(and-vekha-and-and-amkha, t0)</span><br>THE LAST WORD [EX07-03 MARQUEE; EX07-12]. u-VEKHA u-ve-AMKHA u-ve- khol-avadekha — &#x27;and INTO YOU, and into your PEOPLE, and into all your SERVANTS&#x27;: the affliction-order flips the invasion-route (the Kitzur: the people who COUNSELED first — 1:9&#x27;s and-he-said-to-his- people — are struck beside the king first; asserted [EX07-12]); and the into-you word is written FULL with a final he — ONCE in the Torah against three lean stations (VERIFIED [EX07-03]) — Rabbenu Bachya on the added letter: &#x27;the extra HE (five) teaches that EVERY plague was FIVE plagues&#x27; (the Haggada&#x27;s multiplication stamped into one letter); the meteg on the vav of u-ve-amkha (MS, asserted): the chapter ends INSIDE the warning — the frog-errand&#x27;s card open, the frogs themselves one verse over the border (8:1-2 armed), the third unit running that closes mid-speech.
+</td><td><span class="he">וּבְכָה וּבְעַמְּךָ וּבְכָל־עֲבָדֶיךָ</span> · <i>u-ve-kha u-ve-am-kha u-ve-khal-avade-kha</i><br><span class="gloss">= and-and-kha and-and-am-kha and-and-khal-avade-kha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The full and-into-you; the chapter ends mid-warning.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Ex_7_1 — see, I have set you</td><td>And the LORD said to Moses: See, I have set you as God to Pharaoh; and Aaron your brother shall be your prophet.</td><td>no test, no name.</td><td><span class="he">וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה</span> · <i>va-yomer YHWH el-moshe</i><br><span class="gloss">= and-yomer the-LORD to-Moses</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Ex_7_2 — the relay stated</td><td>You shall speak all that I command you; and Aaron your brother shall speak to Pharaoh, that he send the sons of Israel out of his land.</td><td>no test, no name.</td><td><span class="he">אַתָּ֣ה תְדַבֵּ֔ר אֵ֖ת כָּל</span> · <i>ata tedaber et kal-</i><br><span class="gloss">= ata tedaber et kal</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Ex_7_3 — I will harden</td><td>And I will harden Pharaoh&#x27;s heart, and multiply My signs and My wonders in the land of Egypt.</td><td>no test, no name.</td><td><span class="he">וַאֲנִ֥י אַקְשֶׁ֖ה אֶת לֵ֣ב</span> · <i>va-ani aqshe et-lev</i><br><span class="gloss">= and-ani aqshe lev</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Ex_7_4 — he will not hear</td><td>And Pharaoh will not hear you; and I will lay My hand on Egypt, and bring out My hosts, My people the sons of Israel, from the land of Egypt with great judgments.</td><td>no test, no name.</td><td><span class="he">וְלֹֽא יִשְׁמַ֤ע אֲלֵכֶם֙ פַּרְעֹ֔ה</span> · <i>ve-lo-yishma el-khem paro</i><br><span class="gloss">= and-not-yishma to-khem paro</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Ex_7_5 — Egypt shall know</td><td>And Egypt shall know that I am the LORD, when I stretch out My hand over Egypt; and I will bring out the sons of Israel from among them.</td><td>no test, no name.</td><td><span class="he">וְיָדְע֤וּ מִצְרַ֨יִם֙ כִּֽי אֲנִ֣י</span> · <i>ve-yadu mitzrayim ki-ani</i><br><span class="gloss">= and-yadu mitzrayim when-ani</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Ex_7_6 — they did as commanded</td><td>And Moses and Aaron did as the LORD commanded them; so they did.</td><td>no test, no name.</td><td><span class="he">וַיַּ֥עַשׂ מֹשֶׁ֖ה וְאַהֲרֹ֑ן כַּאֲשֶׁ֨ר</span> · <i>va-yaas moshe ve-aharon ka-asher</i><br><span class="gloss">= and-yaas Moses Aaron like-which</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Ex_7_7 — eighty and eighty-three</td><td>And Moses was eighty years old, and Aaron eighty-three years old, when they spoke to Pharaoh.</td><td>no test, no name.</td><td><span class="he">וּמֹשֶׁה֙ בֶּן שְׁמֹנִ֣ים שָׁנָ֔ה</span> · <i>u-moshe ben-shemonim shana</i><br><span class="gloss">= Moses ben-shemonim shana</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Ex_7_8 — the compound frame</td><td>And the LORD said to Moses and to Aaron, saying:</td><td>no test, no name.</td><td><span class="he">וַיֹּ֣אמֶר יְהוָ֔ה אֶל מֹשֶׁ֥ה</span> · <i>va-yomer YHWH el-moshe</i><br><span class="gloss">= and-yomer the-LORD to-Moses</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Ex_7_9 — the wonder-script</td><td>When Pharaoh speaks to you, saying: Give a wonder for yourselves — then you shall say to Aaron: Take your staff and throw it before Pharaoh; let it become a serpent.</td><td>LET(qach_et_matkha_ve_hashlekh) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qach-matkha-and-hashlekh) pushed and OPEN; no test, no name.</span></td><td><span class="he">כִּי֩ יְדַבֵּ֨ר אֲלֵכֶ֤ם פַּרְעֹה֙</span> · <i>ki yedaber el-khem paro</i><br><span class="gloss">= when yedaber to-khem paro</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Ex_7_10 — performed as commanded</td><td>And Moses and Aaron came to Pharaoh, and they did so, as the LORD had commanded; and Aaron threw his staff before Pharaoh and before his servants, and it became a serpent.</td><td>no test, no name.</td><td><span class="he">וַיָּבֹ֨א מֹשֶׁ֤ה וְאַהֲרֹן֙ אֶל</span> · <i>va-yavo moshe ve-aharon el-</i><br><span class="gloss">= and-yavo Moses Aaron to</span></td></tr>
+<tr><td><b>S11</b></td><td>after STEP_Ex_7_11 — the magicians match</td><td>And Pharaoh also called the wise men and the sorcerers; and they also, the magicians of Egypt, did so with their secret arts.</td><td>no test, no name.</td><td><span class="he">וַיִּקְרָא֙ גַּם פַּרְעֹ֔ה לַֽחֲכָמִ֖ים</span> · <i>va-yiqra gam-paro la-chakhamim</i><br><span class="gloss">= and-yiqra also-paro to-chakhamim</span></td></tr>
+<tr><td><b>S12</b></td><td>after STEP_Ex_7_12 — the swallowing</td><td>And they threw down every man his staff, and they became serpents; and Aaron&#x27;s staff swallowed their staffs.</td><td>no test, no name.</td><td><span class="he">וַיַּשְׁלִ֨יכוּ֙ אִ֣ישׁ מַטֵּ֔הוּ וַיִּהְי֖וּ</span> · <i>va-yashlikhu ish mate-hu va-yihyu</i><br><span class="gloss">= and-yashlikhu man mate-that and-yihyu</span></td></tr>
+<tr><td><b>S13</b></td><td>after STEP_Ex_7_13 — the heart strengthened</td><td>And Pharaoh&#x27;s heart was strengthened, and he did not hear them, as the LORD had spoken.</td><td>no test, no name.</td><td><span class="he">וַיֶּחֱזַק֙ לֵ֣ב פַּרְעֹ֔ה וְלֹ֥א</span> · <i>va-yechezaq lev paro ve-lo</i><br><span class="gloss">= and-yechezaq lev paro and-not</span></td></tr>
+<tr><td><b>S14</b></td><td>after STEP_Ex_7_14 — the heavy heart</td><td>And the LORD said to Moses: Pharaoh&#x27;s heart is heavy; he refuses to send the people.</td><td>no test, no name.</td><td><span class="he">וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה</span> · <i>va-yomer YHWH el-moshe</i><br><span class="gloss">= and-yomer the-LORD to-Moses</span></td></tr>
+<tr><td><b>S15</b></td><td>after STEP_Ex_7_15 — the morning station</td><td>Go to Pharaoh in the morning — behold, he goes out to the water — and station yourself to meet him on the bank of the Nile; and the staff which was turned to a snake take in your hand.</td><td>LET(lekh_el_paro_ba_boqer) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(lekh-to-paro-in-the-morning) pushed and OPEN; no test, no name.</span></td><td><span class="he">לֵ֣ךְ אֶל פַּרְעֹ֞ה בַּבֹּ֗קֶר</span> · <i>lekh el-paro ba-boqer</i><br><span class="gloss">= lekh to-paro morning</span></td></tr>
+<tr><td><b>S16</b></td><td>after STEP_Ex_7_16 — the riverside script</td><td>And you shall say to him: The LORD, the God of the Hebrews, sent me to you, saying: Send My people, that they may serve Me in the wilderness; and behold, you have not heard until now.</td><td>LET(lekh_el_paro_ba_boqer) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(lekh-to-paro-in-the-morning) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְאָמַרְתָּ֣ אֵלָ֗יו יְהוָ֞ה אֱלֹהֵ֤י</span> · <i>ve-amarta elay-v YHWH elohe</i><br><span class="gloss">= and-amarta elay-v the-LORD elohe</span></td></tr>
+<tr><td><b>S17</b></td><td>after STEP_Ex_7_17 — by this you shall know</td><td>Thus says the LORD: By this you shall know that I am the LORD — behold, I strike with the staff that is in my hand upon the waters that are in the Nile, and they shall be turned to blood.</td><td>LET(lekh_el_paro_ba_boqer) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(lekh-to-paro-in-the-morning) pushed and OPEN; no test, no name.</span></td><td><span class="he">כֹּ֚ה אָמַ֣ר יְהוָ֔ה בְּזֹ֣את</span> · <i>ko amar YHWH be-zot</i><br><span class="gloss">= ko amar the-LORD in-this</span></td></tr>
+<tr><td><b>S18</b></td><td>after STEP_Ex_7_18 — the Nile undrinkable</td><td>And the fish that is in the Nile shall die, and the Nile shall stink; and Egypt shall be weary of drinking water from the Nile.</td><td>LET(lekh_el_paro_ba_boqer) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(lekh-to-paro-in-the-morning) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהַדָּגָ֧ה אֲשֶׁר בַּיְאֹ֛ר תָּמ֖וּת</span> · <i>ve-ha-daga asher-ba-yeor tamut</i><br><span class="gloss">= and-the-daga which-in-the-yeor you-shall-die</span></td></tr>
+<tr><td><b>S19</b></td><td>after STEP_Ex_7_19 — stretch out your hand</td><td>And the LORD said to Moses: Say to Aaron: Take your staff and stretch out your hand over the waters of Egypt — over their rivers, over their Niles, and over their pools, and over every gathering of their waters — and they shall become blood; and there shall be blood in all the land of Egypt, both in the wooden vessels and in the stone vessels.</td><td>LET(lekh_el_paro_ba_boqer) pushed and OPEN; LET(nete_yadkha_al_meme_mitzrayim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(lekh-to-paro-in-the-morning) pushed and OPEN; LET(nete-yadkha-upon-meme-mitzrayim) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֨אמֶר יְהוָ֜ה אֶל מֹשֶׁ֗ה</span> · <i>va-yomer YHWH el-moshe</i><br><span class="gloss">= and-yomer the-LORD to-Moses</span></td></tr>
+<tr><td><b>S20</b></td><td>after STEP_Ex_7_20 — the Nile struck</td><td>And Moses and Aaron did so, as the LORD commanded; and he raised the staff and struck the waters that were in the Nile, before the eyes of Pharaoh and before the eyes of his servants; and all the waters that were in the Nile were turned to blood.</td><td>LET(lekh_el_paro_ba_boqer) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(lekh-to-paro-in-the-morning) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיַּֽעֲשׂוּ כֵן֩ מֹשֶׁ֨ה וְאַהֲרֹ֜ן</span> · <i>va-yaasu-khen moshe ve-aharon</i><br><span class="gloss">= and-yaasu-so Moses Aaron</span></td></tr>
+<tr><td><b>S21</b></td><td>after STEP_Ex_7_21 — the fish died</td><td>And the fish that was in the Nile died, and the Nile stank, and Egypt could not drink water from the Nile; and the blood was in all the land of Egypt.</td><td>LET(lekh_el_paro_ba_boqer) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(lekh-to-paro-in-the-morning) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהַדָּגָ֨ה אֲשֶׁר בַּיְאֹ֥ר מֵ֨תָה֙</span> · <i>ve-ha-daga asher-ba-yeor meta</i><br><span class="gloss">= and-the-daga which-in-the-yeor meta</span></td></tr>
+<tr><td><b>S22</b></td><td>after STEP_Ex_7_22 — the magicians match again</td><td>And the magicians of Egypt did so with their secret arts; and Pharaoh&#x27;s heart was strengthened, and he did not hear them, as the LORD had spoken.</td><td>LET(lekh_el_paro_ba_boqer) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(lekh-to-paro-in-the-morning) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיַּֽעֲשׂוּ כֵ֛ן חַרְטֻמֵּ֥י מִצְרַ֖יִם</span> · <i>va-yaasu-khen chartume mitzrayim</i><br><span class="gloss">= and-yaasu-so chartume mitzrayim</span></td></tr>
+<tr><td><b>S23</b></td><td>after STEP_Ex_7_23 — Pharaoh turns home</td><td>And Pharaoh turned and came into his house; and he did not set his heart even to this.</td><td>LET(lekh_el_paro_ba_boqer) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(lekh-to-paro-in-the-morning) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּ֣פֶן פַּרְעֹ֔ה וַיָּבֹ֖א אֶל</span> · <i>va-yifen paro va-yavo el-</i><br><span class="gloss">= and-yifen paro and-yavo to</span></td></tr>
+<tr><td><b>S24</b></td><td>after STEP_Ex_7_24 — Egypt digs</td><td>And all Egypt dug round about the Nile for water to drink; for they could not drink of the waters of the Nile.</td><td>LET(lekh_el_paro_ba_boqer) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(lekh-to-paro-in-the-morning) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיַּחְפְּר֧וּ כָל מִצְרַ֛יִם סְבִיבֹ֥ת</span> · <i>va-yachpru khal-mitzrayim sevivot</i><br><span class="gloss">= and-yachpru khal-mitzrayim sevivot</span></td></tr>
+<tr><td><b>S25</b></td><td>after STEP_Ex_7_25 — seven days filled</td><td>And seven days were filled, after the LORD had struck the Nile.</td><td>LET(lekh_el_paro_ba_boqer) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(lekh-to-paro-in-the-morning) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּמָּלֵ֖א שִׁבְעַ֣ת יָמִ֑ים אַחֲרֵ֥י</span> · <i>va-yimale shivat yamim achare</i><br><span class="gloss">= and-yimale seven seas achare</span></td></tr>
+<tr><td><b>S26</b></td><td>after STEP_Ex_7_26 — go, say: send</td><td>And the LORD said to Moses: Come to Pharaoh, and say to him: Thus says the LORD: Send My people, that they may serve Me.</td><td>LET(lekh_el_paro_ba_boqer) pushed and OPEN; LET(bo_el_paro_ve_amarta) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(lekh-to-paro-in-the-morning) pushed and OPEN; LET(in-it-to-paro-and-amarta) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה</span> · <i>va-yomer YHWH el-moshe</i><br><span class="gloss">= and-yomer the-LORD to-Moses</span></td></tr>
+<tr><td><b>S27</b></td><td>after STEP_Ex_7_27 — if you refuse — frogs</td><td>And if you refuse to send them — behold, I strike all your border with frogs.</td><td>LET(lekh_el_paro_ba_boqer) pushed and OPEN; LET(bo_el_paro_ve_amarta) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(lekh-to-paro-in-the-morning) pushed and OPEN; LET(in-it-to-paro-and-amarta) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְאִם מָאֵ֥ן אַתָּ֖ה לְשַׁלֵּ֑חַ</span> · <i>ve-im-maen ata le-shalecha</i><br><span class="gloss">= and-if-maen ata to-shalecha</span></td></tr>
+<tr><td><b>S28</b></td><td>after STEP_Ex_7_28 — the invasion route</td><td>And the Nile shall swarm frogs, and they shall come up and come into your house, and into your bedchamber, and onto your bed, and into the house of your servants, and among your people, and into your ovens, and into your kneading-troughs.</td><td>LET(lekh_el_paro_ba_boqer) pushed and OPEN; LET(bo_el_paro_ve_amarta) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(lekh-to-paro-in-the-morning) pushed and OPEN; LET(in-it-to-paro-and-amarta) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְשָׁרַ֣ץ הַיְאֹר֮ צְפַרְדְּעִים֒ וְעָלוּ֙</span> · <i>ve-sharatz ha-yeor tzefardim ve-alu</i><br><span class="gloss">= and-sharatz the-yeor tzefardim and-alu</span></td></tr>
+<tr><td><b>S29</b></td><td>after STEP_Ex_7_29 — and into you</td><td>And into you, and into your people, and into all your servants, the frogs shall come up.</td><td>LET(lekh_el_paro_ba_boqer) pushed and OPEN; LET(bo_el_paro_ve_amarta) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(lekh-to-paro-in-the-morning) pushed and OPEN; LET(in-it-to-paro-and-amarta) pushed and OPEN; no test, no name.</span></td><td><span class="he">וּבְכָ֥ה וּֽבְעַמְּךָ֖ וּבְכָל עֲבָדֶ֑יךָ</span> · <i>u-ve-kha u-ve-am-kha u-ve-khal-avade-kha</i><br><span class="gloss">= and-and-kha and-and-am-kha and-and-khal-avade-kha</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: exo_07_staff_and_blood — The staff and the blood (7:1-29) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — after STEP_Ex_7_1 — see, I have set you
+    וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה (va-yomer YHWH el-moshe)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Ex_7_2 — the relay stated
+    אַתָּ֣ה תְדַבֵּ֔ר אֵ֖ת כָּל (ata tedaber et kal-)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Ex_7_3 — I will harden
+    וַאֲנִ֥י אַקְשֶׁ֖ה אֶת לֵ֣ב (va-ani aqshe et-lev)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Ex_7_4 — he will not hear
+    וְלֹֽא יִשְׁמַ֤ע אֲלֵכֶם֙ פַּרְעֹ֔ה (ve-lo-yishma el-khem paro)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Ex_7_5 — Egypt shall know
+    וְיָדְע֤וּ מִצְרַ֨יִם֙ כִּֽי אֲנִ֣י (ve-yadu mitzrayim ki-ani)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Ex_7_6 — they did as commanded
+    וַיַּ֥עַשׂ מֹשֶׁ֖ה וְאַהֲרֹ֑ן כַּאֲשֶׁ֨ר (va-yaas moshe ve-aharon ka-asher)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — after STEP_Ex_7_7 — eighty and eighty-three
+    וּמֹשֶׁה֙ בֶּן שְׁמֹנִ֣ים שָׁנָ֔ה (u-moshe ben-shemonim shana)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S8 — after STEP_Ex_7_8 — the compound frame
+    וַיֹּ֣אמֶר יְהוָ֔ה אֶל מֹשֶׁ֥ה (va-yomer YHWH el-moshe)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S9 — after STEP_Ex_7_9 — the wonder-script
+    כִּי֩ יְדַבֵּ֨ר אֲלֵכֶ֤ם פַּרְעֹה֙ (ki yedaber el-khem paro)
+    PASS  LET(qach_et_matkha_ve_hashlekh) pushed and OPEN  (queue=[&#x27;qach_et_matkha_ve_hashlekh&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S10 — after STEP_Ex_7_10 — performed as commanded
+    וַיָּבֹ֨א מֹשֶׁ֤ה וְאַהֲרֹן֙ אֶל (va-yavo moshe ve-aharon el-)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S11 — after STEP_Ex_7_11 — the magicians match
+    וַיִּקְרָא֙ גַּם פַּרְעֹ֔ה לַֽחֲכָמִ֖ים (va-yiqra gam-paro la-chakhamim)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S12 — after STEP_Ex_7_12 — the swallowing
+    וַיַּשְׁלִ֨יכוּ֙ אִ֣ישׁ מַטֵּ֔הוּ וַיִּהְי֖וּ (va-yashlikhu ish mate-hu va-yihyu)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S13 — after STEP_Ex_7_13 — the heart strengthened
+    וַיֶּחֱזַק֙ לֵ֣ב פַּרְעֹ֔ה וְלֹ֥א (va-yechezaq lev paro ve-lo)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S14 — after STEP_Ex_7_14 — the heavy heart
+    וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה (va-yomer YHWH el-moshe)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S15 — after STEP_Ex_7_15 — the morning station
+    לֵ֣ךְ אֶל פַּרְעֹ֞ה בַּבֹּ֗קֶר (lekh el-paro ba-boqer)
+    PASS  LET(lekh_el_paro_ba_boqer) pushed and OPEN  (queue=[&#x27;lekh_el_paro_ba_boqer&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S16 — after STEP_Ex_7_16 — the riverside script
+    וְאָמַרְתָּ֣ אֵלָ֗יו יְהוָ֞ה אֱלֹהֵ֤י (ve-amarta elay-v YHWH elohe)
+    PASS  LET(lekh_el_paro_ba_boqer) pushed and OPEN  (queue=[&#x27;lekh_el_paro_ba_boqer&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S17 — after STEP_Ex_7_17 — by this you shall know
+    כֹּ֚ה אָמַ֣ר יְהוָ֔ה בְּזֹ֣את (ko amar YHWH be-zot)
+    PASS  LET(lekh_el_paro_ba_boqer) pushed and OPEN  (queue=[&#x27;lekh_el_paro_ba_boqer&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S18 — after STEP_Ex_7_18 — the Nile undrinkable
+    וְהַדָּגָ֧ה אֲשֶׁר בַּיְאֹ֛ר תָּמ֖וּת (ve-ha-daga asher-ba-yeor tamut)
+    PASS  LET(lekh_el_paro_ba_boqer) pushed and OPEN  (queue=[&#x27;lekh_el_paro_ba_boqer&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S19 — after STEP_Ex_7_19 — stretch out your hand
+    וַיֹּ֨אמֶר יְהוָ֜ה אֶל מֹשֶׁ֗ה (va-yomer YHWH el-moshe)
+    PASS  LET(lekh_el_paro_ba_boqer) pushed and OPEN  (queue=[&#x27;lekh_el_paro_ba_boqer&#x27;, &#x27;nete_yadkha_al_meme_mitzrayim&#x27;])
+    PASS  LET(nete_yadkha_al_meme_mitzrayim) pushed and OPEN  (queue=[&#x27;lekh_el_paro_ba_boqer&#x27;, &#x27;nete_yadkha_al_meme_mitzrayim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S20 — after STEP_Ex_7_20 — the Nile struck
+    וַיַּֽעֲשׂוּ כֵן֩ מֹשֶׁ֨ה וְאַהֲרֹ֜ן (va-yaasu-khen moshe ve-aharon)
+    PASS  LET(lekh_el_paro_ba_boqer) pushed and OPEN  (queue=[&#x27;lekh_el_paro_ba_boqer&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S21 — after STEP_Ex_7_21 — the fish died
+    וְהַדָּגָ֨ה אֲשֶׁר בַּיְאֹ֥ר מֵ֨תָה֙ (ve-ha-daga asher-ba-yeor meta)
+    PASS  LET(lekh_el_paro_ba_boqer) pushed and OPEN  (queue=[&#x27;lekh_el_paro_ba_boqer&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S22 — after STEP_Ex_7_22 — the magicians match again
+    וַיַּֽעֲשׂוּ כֵ֛ן חַרְטֻמֵּ֥י מִצְרַ֖יִם (va-yaasu-khen chartume mitzrayim)
+    PASS  LET(lekh_el_paro_ba_boqer) pushed and OPEN  (queue=[&#x27;lekh_el_paro_ba_boqer&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S23 — after STEP_Ex_7_23 — Pharaoh turns home
+    וַיִּ֣פֶן פַּרְעֹ֔ה וַיָּבֹ֖א אֶל (va-yifen paro va-yavo el-)
+    PASS  LET(lekh_el_paro_ba_boqer) pushed and OPEN  (queue=[&#x27;lekh_el_paro_ba_boqer&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S24 — after STEP_Ex_7_24 — Egypt digs
+    וַיַּחְפְּר֧וּ כָל מִצְרַ֛יִם סְבִיבֹ֥ת (va-yachpru khal-mitzrayim sevivot)
+    PASS  LET(lekh_el_paro_ba_boqer) pushed and OPEN  (queue=[&#x27;lekh_el_paro_ba_boqer&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S25 — after STEP_Ex_7_25 — seven days filled
+    וַיִּמָּלֵ֖א שִׁבְעַ֣ת יָמִ֑ים אַחֲרֵ֥י (va-yimale shivat yamim achare)
+    PASS  LET(lekh_el_paro_ba_boqer) pushed and OPEN  (queue=[&#x27;lekh_el_paro_ba_boqer&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S26 — after STEP_Ex_7_26 — go, say: send
+    וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה (va-yomer YHWH el-moshe)
+    PASS  LET(lekh_el_paro_ba_boqer) pushed and OPEN  (queue=[&#x27;lekh_el_paro_ba_boqer&#x27;, &#x27;bo_el_paro_ve_amarta&#x27;])
+    PASS  LET(bo_el_paro_ve_amarta) pushed and OPEN  (queue=[&#x27;lekh_el_paro_ba_boqer&#x27;, &#x27;bo_el_paro_ve_amarta&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S27 — after STEP_Ex_7_27 — if you refuse — frogs
+    וְאִם מָאֵ֥ן אַתָּ֖ה לְשַׁלֵּ֑חַ (ve-im-maen ata le-shalecha)
+    PASS  LET(lekh_el_paro_ba_boqer) pushed and OPEN  (queue=[&#x27;lekh_el_paro_ba_boqer&#x27;, &#x27;bo_el_paro_ve_amarta&#x27;])
+    PASS  LET(bo_el_paro_ve_amarta) pushed and OPEN  (queue=[&#x27;lekh_el_paro_ba_boqer&#x27;, &#x27;bo_el_paro_ve_amarta&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S28 — after STEP_Ex_7_28 — the invasion route
+    וְשָׁרַ֣ץ הַיְאֹר֮ צְפַרְדְּעִים֒ וְעָלוּ֙ (ve-sharatz ha-yeor tzefardim ve-alu)
+    PASS  LET(lekh_el_paro_ba_boqer) pushed and OPEN  (queue=[&#x27;lekh_el_paro_ba_boqer&#x27;, &#x27;bo_el_paro_ve_amarta&#x27;])
+    PASS  LET(bo_el_paro_ve_amarta) pushed and OPEN  (queue=[&#x27;lekh_el_paro_ba_boqer&#x27;, &#x27;bo_el_paro_ve_amarta&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S29 — after STEP_Ex_7_29 — and into you
+    וּבְכָ֥ה וּֽבְעַמְּךָ֖ וּבְכָל עֲבָדֶ֑יךָ (u-ve-kha u-ve-am-kha u-ve-khal-avade-kha)
+    PASS  LET(lekh_el_paro_ba_boqer) pushed and OPEN  (queue=[&#x27;lekh_el_paro_ba_boqer&#x27;, &#x27;bo_el_paro_ve_amarta&#x27;])
+    PASS  LET(bo_el_paro_ve_amarta) pushed and OPEN  (queue=[&#x27;lekh_el_paro_ba_boqer&#x27;, &#x27;bo_el_paro_ve_amarta&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/exo_07_staff_and_blood.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# exo_07_staff_and_blood — 7:1-29
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/exo_07_staff_and_blood.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;The staff and the blood (7:1-29)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;exo_07_staff_and_blood&quot;)
+
+# -------------------------- Exod.7.1 · SEE_I_HAVE_SET_YOU ------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה רְאֵה נְתַתִּיךָ אֱלֹהִים לְפַרְעֹה וְאַהֲרֹן
+# אָחִיךָ יִהְיֶה נְבִיאֶךָ
+# &quot;[EN-AID] And the LORD said to Moses: See, I have set you as God to
+# Pharaoh; and Aaron your brother shall be your prophet.&quot;
+m.step(&quot;Exod.7.1&quot;)
+# ‹רְאֵה נְתַתִּיךָ אֱלֹהִים לְפַרְעֹה› (“see set-you/your God to-Pharaoh”)
+# — fact holds: netaticha-God-to-Pharaoh
+m.fact(&quot;netaticha_elohim_le_faro&quot;)
+
+# -------------------------- Exod.7.2 · THE_RELAY_STATED --------------------
+# אַתָּה תְדַבֵּר אֵת כָּל־אֲשֶׁר אֲצַוֶּךָּ וְאַהֲרֹן אָחִיךָ יְדַבֵּר
+# אֶל־פַּרְעֹה וְשִׁלַּח אֶת־בְּנֵי־יִשְׂרָאֵל מֵאַרְצוֹ
+# &quot;[EN-AID] You shall speak all that I command you; and Aaron your brother
+# shall speak to Pharaoh, that he send the sons of Israel out of his land.&quot;
+m.step(&quot;Exod.7.2&quot;)
+# ‹אַתָּה תְדַבֵּר אֵת כָּל־אֲשֶׁר אֲצַוֶּךָּ› (“you speak obj-marker all
+# which command-you/your”) — fact holds: you-speak-obj-marker-all-which-
+# atzaveka
+m.fact(&quot;ata_tedaber_et_kol_asher_atzaveka&quot;)
+
+# -------------------------- Exod.7.3 · I_WILL_HARDEN -----------------------
+# וַאֲנִי אַקְשֶׁה אֶת־לֵב פַּרְעֹה וְהִרְבֵּיתִי אֶת־אֹתֹתַי וְאֶת־מוֹפְתַי
+# בְּאֶרֶץ מִצְרָיִם
+# &quot;[EN-AID] And I will harden Pharaoh&#x27;s heart, and multiply My signs and My
+# wonders in the land of Egypt.&quot;
+m.step(&quot;Exod.7.3&quot;)
+# ‹וַאֲנִי אַקְשֶׁה אֶת־לֵב פַּרְעֹה› (“and-I be-dense obj-marker heart
+# Pharaoh”) — fact holds: and-I-be-dense-obj-marker-heart-Pharaoh
+m.fact(&quot;va_ani_aqshe_et_lev_paro&quot;)
+
+# -------------------------- Exod.7.4 · HE_WILL_NOT_HEAR --------------------
+# וְלֹא־יִשְׁמַע אֲלֵכֶם פַּרְעֹה וְנָתַתִּי אֶת־יָדִי בְּמִצְרָיִם
+# וְהוֹצֵאתִי אֶת־צִבְאֹתַי אֶת־עַמִּי בְנֵי־יִשְׂרָאֵל מֵאֶרֶץ מִצְרַיִם
+# בִּשְׁפָטִים גְּדֹלִים
+# &quot;[EN-AID] And Pharaoh will not hear you; and I will lay My hand on Egypt,
+# and bring out My hosts, My people the sons of Israel, from the land of
+# Egypt with great judgments.&quot;
+m.step(&quot;Exod.7.4&quot;)
+# ‹וְהוֹצֵאתִי אֶת־צִבְאֹתַי אֶת־עַמִּי בְנֵי־יִשְׂרָאֵל מֵאֶרֶץ מִצְרַיִם›
+# (“and-bring-forth obj-marker host-me/my obj-marker people-me/my son Israel
+# from-earth Egypt”) — fact holds: and-not-hear-alekhem-Pharaoh
+m.fact(&quot;ve_lo_yishma_alekhem_paro&quot;)
+
+# -------------------------- Exod.7.5 · EGYPT_SHALL_KNOW --------------------
+# וְיָדְעוּ מִצְרַיִם כִּי־אֲנִי יְהוָה בִּנְטֹתִי אֶת־יָדִי עַל־מִצְרָיִם
+# וְהוֹצֵאתִי אֶת־בְּנֵי־יִשְׂרָאֵל מִתּוֹכָם
+# &quot;[EN-AID] And Egypt shall know that I am the LORD, when I stretch out My
+# hand over Egypt; and I will bring out the sons of Israel from among them.&quot;
+m.step(&quot;Exod.7.5&quot;)
+# ‹וְיָדְעוּ מִצְרַיִם כִּי־אֲנִי יְהוָה› (“and-know Egyptian that YHWH”) —
+# fact holds: and-know-Egypt-that-I-the-LORD
+m.fact(&quot;ve_yadu_mitzrayim_ki_ani_YHWH&quot;)
+
+# -------------------------- Exod.7.6 · THEY_DID_AS_COMMANDED ---------------
+# וַיַּעַשׂ מֹשֶׁה וְאַהֲרֹן כַּאֲשֶׁר צִוָּה יְהוָה אֹתָם כֵּן עָשׂוּ
+# &quot;[EN-AID] And Moses and Aaron did as the LORD commanded them; so they
+# did.&quot;
+m.step(&quot;Exod.7.6&quot;)
+# ‹כַּאֲשֶׁר צִוָּה יְהוָה אֹתָם כֵּן עָשׂוּ› (“like-as/which command YHWH
+# obj-marker-them/their so make”) — fact holds: like-which-command-the-LORD-
+# so-make
+m.fact(&quot;ka_asher_tziva_YHWH_ken_asu&quot;)
+
+# -------------------------- Exod.7.7 · EIGHTY_AND_EIGHTY_THREE -------------
+# וּמֹשֶׁה בֶּן־שְׁמֹנִים שָׁנָה וְאַהֲרֹן בֶּן־שָׁלֹשׁ וּשְׁמֹנִים שָׁנָה
+# בְּדַבְּרָם אֶל־פַּרְעֹה
+# &quot;[EN-AID] And Moses was eighty years old, and Aaron eighty-three years
+# old, when they spoke to Pharaoh.&quot;
+m.step(&quot;Exod.7.7&quot;)
+# ‹וּמֹשֶׁה בֶּן־שְׁמֹנִים שָׁנָה› (“and-Moses son eighty years”) — fact
+# holds: and-Moses-son-eighty-years
+m.fact(&quot;u_moshe_ben_shemonim_shana&quot;)
+
+# -------------------------- Exod.7.8 · THE_COMPOUND_FRAME ------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה וְאֶל־אַהֲרֹן לֵאמֹר
+# &quot;[EN-AID] And the LORD said to Moses and to Aaron, saying:&quot;
+m.step(&quot;Exod.7.8&quot;)
+# ‹וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה וְאֶל־אַהֲרֹן לֵאמֹר› (“and-say YHWH to Moses
+# and-to Aaron to-say”) — fact holds: and-say-the-LORD-to-Moses-and-to-Aaron
+m.fact(&quot;va_yomer_YHWH_el_moshe_ve_el_aharon&quot;)
+
+# -------------------------- Exod.7.9 · THE_WONDER_SCRIPT -------------------
+# כִּי יְדַבֵּר אֲלֵכֶם פַּרְעֹה לֵאמֹר תְּנוּ לָכֶם מוֹפֵת וְאָמַרְתָּ
+# אֶל־אַהֲרֹן קַח אֶת־מַטְּךָ וְהַשְׁלֵךְ לִפְנֵי־פַרְעֹה יְהִי לְתַנִּין
+# &quot;[EN-AID] When Pharaoh speaks to you, saying: Give a wonder for yourselves
+# — then you shall say to Aaron: Take your staff and throw it before
+# Pharaoh; let it become a serpent.&quot;
+m.step(&quot;Exod.7.9&quot;)
+# ‹קַח אֶת־מַטְּךָ וְהַשְׁלֵךְ לִפְנֵי־פַרְעֹה יְהִי לְתַנִּין› (“take obj-
+# marker staff/tribe-you/your and-throw-out to-face Pharaoh be to-sea-
+# monster”) — the-LORD speaks a demand — LET: take-obj-marker-matkha-and-
+# throw-out
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;qach_et_matkha_ve_hashlekh&quot;)
+
+# -------------------------- Exod.7.10 · PERFORMED_AS_COMMANDED -------------
+# וַיָּבֹא מֹשֶׁה וְאַהֲרֹן אֶל־פַּרְעֹה וַיַּעַשׂוּ כֵן כַּאֲשֶׁר צִוָּה
+# יְהוָה וַיַּשְׁלֵךְ אַהֲרֹן אֶת־מַטֵּהוּ לִפְנֵי פַרְעֹה וְלִפְנֵי
+# עֲבָדָיו וַיְהִי לְתַנִּין
+# &quot;[EN-AID] And Moses and Aaron came to Pharaoh, and they did so, as the
+# LORD had commanded; and Aaron threw his staff before Pharaoh and before
+# his servants, and it became a serpent.&quot;
+m.step(&quot;Exod.7.10&quot;)
+# ‹וַיַּשְׁלֵךְ אַהֲרֹן אֶת־מַטֵּהוּ לִפְנֵי פַרְעֹה וְלִפְנֵי עֲבָדָיו
+# וַיְהִי לְתַנִּין› (“and-throw-out Aaron obj-marker staff/tribe-him/its
+# to-face Pharaoh and-to-face servant-him/its and-be to-sea-monster”) —
+# demand settled (popped from the queue): take-obj-marker-matkha-and-throw-
+# out
+m.result(&quot;qach_et_matkha_ve_hashlekh&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Exod.7.11 · THE_MAGICIANS_MATCH ----------------
+# וַיִּקְרָא גַּם־פַּרְעֹה לַחֲכָמִים וְלַמְכַשְּׁפִים וַיַּעֲשׂוּ גַם־הֵם
+# חַרְטֻמֵּי מִצְרַיִם בְּלַהֲטֵיהֶם כֵּן
+# &quot;[EN-AID] And Pharaoh also called the wise men and the sorcerers; and they
+# also, the magicians of Egypt, did so with their secret arts.&quot;
+m.step(&quot;Exod.7.11&quot;)
+# ‹וַיַּעֲשׂוּ גַם־הֵם חַרְטֻמֵּי מִצְרַיִם בְּלַהֲטֵיהֶם› (“and-make also
+# they horoscopist Egypt in-blaze-them/their”) — fact holds: and-make-also-
+# they-in-lahatehem
+m.fact(&quot;va_yaasu_gam_hem_be_lahatehem&quot;)
+
+# -------------------------- Exod.7.12 · THE_SWALLOWING ---------------------
+# וַיַּשְׁלִיכוּ אִישׁ מַטֵּהוּ וַיִּהְיוּ לְתַנִּינִם וַיִּבְלַע
+# מַטֵּה־אַהֲרֹן אֶת־מַטֹּתָם
+# &quot;[EN-AID] And they threw down every man his staff, and they became
+# serpents; and Aaron&#x27;s staff swallowed their staffs.&quot;
+m.step(&quot;Exod.7.12&quot;)
+# ‹וַיִּבְלַע מַטֵּה־אַהֲרֹן אֶת־מַטֹּתָם› (“and-swallow staff/tribe Aaron
+# obj-marker staff/tribe-them/their”) — event: bala — agent staff/tribe-
+# Aaron
+m.event(&quot;bala&quot;, agent=&quot;mate_aharon&quot;)
+
+# -------------------------- Exod.7.13 · THE_HEART_STRENGTHENED -------------
+# וַיֶּחֱזַק לֵב פַּרְעֹה וְלֹא שָׁמַע אֲלֵהֶם כַּאֲשֶׁר דִּבֶּר יְהוָה
+# &quot;[EN-AID] And Pharaoh&#x27;s heart was strengthened, and he did not hear them,
+# as the LORD had spoken.&quot;
+m.step(&quot;Exod.7.13&quot;)
+# ‹וַיֶּחֱזַק לֵב פַּרְעֹה› (“and-fasten-upon heart Pharaoh”) — fact holds:
+# and-fasten-upon-heart-Pharaoh
+m.fact(&quot;va_yechezaq_lev_paro&quot;)
+
+# -------------------------- Exod.7.14 · THE_HEAVY_HEART --------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה כָּבֵד לֵב פַּרְעֹה מֵאֵן לְשַׁלַּח הָעָם
+# &quot;[EN-AID] And the LORD said to Moses: Pharaoh&#x27;s heart is heavy; he refuses
+# to send the people.&quot;
+m.step(&quot;Exod.7.14&quot;)
+# ‹כָּבֵד לֵב פַּרְעֹה› (“heavy heart Pharaoh”) — fact holds: heavy-heart-
+# Pharaoh
+m.fact(&quot;kaved_lev_paro&quot;)
+
+# -------------------------- Exod.7.15 · THE_MORNING_STATION ----------------
+# לֵךְ אֶל־פַּרְעֹה בַּבֹּקֶר הִנֵּה יֹצֵא הַמַּיְמָה וְנִצַּבְתָּ
+# לִקְרָאתוֹ עַל־שְׂפַת הַיְאֹר וְהַמַּטֶּה אֲשֶׁר־נֶהְפַּךְ לְנָחָשׁ
+# תִּקַּח בְּיָדֶךָ
+# &quot;[EN-AID] Go to Pharaoh in the morning — behold, he goes out to the water
+# — and station yourself to meet him on the bank of the Nile; and the staff
+# which was turned to a snake take in your hand.&quot;
+m.step(&quot;Exod.7.15&quot;)
+# ‹לֵךְ אֶל־פַּרְעֹה בַּבֹּקֶר› (“go to Pharaoh in-morning”) — the-LORD
+# speaks a demand — LET: go-to-Pharaoh-in-the-morning
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;lekh_el_paro_ba_boqer&quot;)
+
+# -------------------------- Exod.7.16 · THE_RIVERSIDE_SCRIPT ---------------
+# וְאָמַרְתָּ אֵלָיו יְהוָה אֱלֹהֵי הָעִבְרִים שְׁלָחַנִי אֵלֶיךָ לֵאמֹר
+# שַׁלַּח אֶת־עַמִּי וְיַעַבְדֻנִי בַּמִּדְבָּר וְהִנֵּה לֹא־שָׁמַעְתָּ
+# עַד־כֹּה
+# &quot;[EN-AID] And you shall say to him: The LORD, the God of the Hebrews, sent
+# me to you, saying: Send My people, that they may serve Me in the
+# wilderness; and behold, you have not heard until now.&quot;
+m.step(&quot;Exod.7.16&quot;)
+# ‹שַׁלַּח אֶת־עַמִּי וְיַעַבְדֻנִי בַּמִּדְבָּר› (“send obj-marker people-
+# me/my and-work/serve-me/my in-pasture”) — fact holds: send-obj-marker-ami-
+# and-yaavduni
+m.fact(&quot;shalach_et_ami_ve_yaavduni&quot;)
+
+# -------------------------- Exod.7.17 · BY_THIS_YOU_SHALL_KNOW -------------
+# כֹּה אָמַר יְהוָה בְּזֹאת תֵּדַע כִּי אֲנִי יְהוָה הִנֵּה אָנֹכִי מַכֶּה
+# בַּמַּטֶּה אֲשֶׁר־בְּיָדִי עַל־הַמַּיִם אֲשֶׁר בַּיְאֹר וְנֶהֶפְכוּ לְדָם
+# &quot;[EN-AID] Thus says the LORD: By this you shall know that I am the LORD —
+# behold, I strike with the staff that is in my hand upon the waters that
+# are in the Nile, and they shall be turned to blood.&quot;
+m.step(&quot;Exod.7.17&quot;)
+# ‹בְּזֹאת תֵּדַע כִּי אֲנִי יְהוָה› (“in-this know that YHWH”) — fact
+# holds: in-this-know-that-I-the-LORD
+m.fact(&quot;be_zot_teda_ki_ani_YHWH&quot;)
+
+# -------------------------- Exod.7.18 · THE_NILE_UNDRINKABLE ---------------
+# וְהַדָּגָה אֲשֶׁר־בַּיְאֹר תָּמוּת וּבָאַשׁ הַיְאֹר וְנִלְאוּ מִצְרַיִם
+# לִשְׁתּוֹת מַיִם מִן־הַיְאֹר
+# &quot;[EN-AID] And the fish that is in the Nile shall die, and the Nile shall
+# stink; and Egypt shall be weary of drinking water from the Nile.&quot;
+m.step(&quot;Exod.7.18&quot;)
+# ‹וְנִלְאוּ מִצְרַיִם לִשְׁתּוֹת מַיִם› (“and-tire Egyptian to-drink
+# waters”) — fact holds: and-tire-Egypt-lishtot
+m.fact(&quot;ve_nilu_mitzrayim_lishtot&quot;)
+
+# -------------------------- Exod.7.19 · STRETCH_OUT_YOUR_HAND --------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה אֱמֹר אֶל־אַהֲרֹן קַח מַטְּךָ וּנְטֵה־יָדְךָ
+# עַל־מֵימֵי מִצְרַיִם עַל־נַהֲרֹתָם עַל־יְאֹרֵיהֶם וְעַל־אַגְמֵיהֶם וְעַל
+# כָּל־מִקְוֵה מֵימֵיהֶם וְיִהְיוּ־דָם וְהָיָה דָם בְּכָל־אֶרֶץ מִצְרַיִם
+# וּבָעֵצִים וּבָאֲבָנִים
+# &quot;[EN-AID] And the LORD said to Moses: Say to Aaron: Take your staff and
+# stretch out your hand over the waters of Egypt — over their rivers, over
+# their Niles, and over their pools, and over every gathering of their
+# waters — and they shall become blood; and there shall be blood in all the
+# land of Egypt, both in the wooden vessels and in the stone vessels.&quot;
+m.step(&quot;Exod.7.19&quot;)
+# ‹אֱמֹר אֶל־אַהֲרֹן קַח מַטְּךָ וּנְטֵה־יָדְךָ עַל־מֵימֵי מִצְרַיִם› (“say
+# to Aaron take staff/tribe-you/your and-stretch hand-you/your over waters
+# Egypt”) — the-LORD speaks a demand — LET: stretch-yadkha-over-waters-Egypt
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;nete_yadkha_al_meme_mitzrayim&quot;)
+
+# -------------------------- Exod.7.20 · THE_NILE_STRUCK --------------------
+# וַיַּעֲשׂוּ־כֵן מֹשֶׁה וְאַהֲרֹן כַּאֲשֶׁר צִוָּה יְהוָה וַיָּרֶם
+# בַּמַּטֶּה וַיַּךְ אֶת־הַמַּיִם אֲשֶׁר בַּיְאֹר לְעֵינֵי פַרְעֹה
+# וּלְעֵינֵי עֲבָדָיו וַיֵּהָפְכוּ כָּל־הַמַּיִם אֲשֶׁר־בַּיְאֹר לְדָם
+# &quot;[EN-AID] And Moses and Aaron did so, as the LORD commanded; and he raised
+# the staff and struck the waters that were in the Nile, before the eyes of
+# Pharaoh and before the eyes of his servants; and all the waters that were
+# in the Nile were turned to blood.&quot;
+m.step(&quot;Exod.7.20&quot;)
+# ‹וַיָּרֶם בַּמַּטֶּה וַיַּךְ אֶת־הַמַּיִם אֲשֶׁר בַּיְאֹר› (“and-rise-high
+# in-staff/tribe and-strike obj-marker the-waters which in-Nile”) — demand
+# settled (popped from the queue): stretch-yadkha-over-waters-Egypt
+m.result(&quot;nete_yadkha_al_meme_mitzrayim&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Exod.7.21 · THE_FISH_DIED ----------------------
+# וְהַדָּגָה אֲשֶׁר־בַּיְאֹר מֵתָה וַיִּבְאַשׁ הַיְאֹר וְלֹא־יָכְלוּ
+# מִצְרַיִם לִשְׁתּוֹת מַיִם מִן־הַיְאֹר וַיְהִי הַדָּם בְּכָל־אֶרֶץ
+# מִצְרָיִם
+# &quot;[EN-AID] And the fish that was in the Nile died, and the Nile stank, and
+# Egypt could not drink water from the Nile; and the blood was in all the
+# land of Egypt.&quot;
+m.step(&quot;Exod.7.21&quot;)
+# ‹וַיִּבְאַשׁ הַיְאֹר› (“and-smell-bad the-Nile”) — fact holds: and-smell-
+# bad-the-Nile
+m.fact(&quot;va_yivash_ha_yeor&quot;)
+
+# -------------------------- Exod.7.22 · THE_MAGICIANS_MATCH_AGAIN ----------
+# וַיַּעֲשׂוּ־כֵן חַרְטֻמֵּי מִצְרַיִם בְּלָטֵיהֶם וַיֶּחֱזַק לֵב־פַּרְעֹה
+# וְלֹא־שָׁמַע אֲלֵהֶם כַּאֲשֶׁר דִּבֶּר יְהוָה
+# &quot;[EN-AID] And the magicians of Egypt did so with their secret arts; and
+# Pharaoh&#x27;s heart was strengthened, and he did not hear them, as the LORD
+# had spoken.&quot;
+m.step(&quot;Exod.7.22&quot;)
+# ‹וַיֶּחֱזַק לֵב־פַּרְעֹה וְלֹא־שָׁמַע אֲלֵהֶם› (“and-fasten-upon heart
+# Pharaoh and-not hear to-them/their”) — fact holds: and-fasten-upon-heart-
+# Pharaoh-2
+m.fact(&quot;va_yechezaq_lev_paro_2&quot;)
+
+# -------------------------- Exod.7.23 · PHARAOH_TURNS_HOME -----------------
+# וַיִּפֶן פַּרְעֹה וַיָּבֹא אֶל־בֵּיתוֹ וְלֹא־שָׁת לִבּוֹ גַּם־לָזֹאת
+# &quot;[EN-AID] And Pharaoh turned and came into his house; and he did not set
+# his heart even to this.&quot;
+m.step(&quot;Exod.7.23&quot;)
+# ‹וְלֹא־שָׁת לִבּוֹ גַּם־לָזֹאת› (“and-not place heart-him/its also to-
+# this”) — fact holds: and-not-place-His-heart-also-to-this
+m.fact(&quot;ve_lo_shat_libo_gam_la_zot&quot;)
+
+# -------------------------- Exod.7.24 · EGYPT_DIGS -------------------------
+# וַיַּחְפְּרוּ כָל־מִצְרַיִם סְבִיבֹת הַיְאֹר מַיִם לִשְׁתּוֹת כִּי לֹא
+# יָכְלוּ לִשְׁתֹּת מִמֵּימֵי הַיְאֹר
+# &quot;[EN-AID] And all Egypt dug round about the Nile for water to drink; for
+# they could not drink of the waters of the Nile.&quot;
+m.step(&quot;Exod.7.24&quot;)
+# ‹וַיַּחְפְּרוּ כָל־מִצְרַיִם סְבִיבֹת הַיְאֹר מַיִם לִשְׁתּוֹת› (“and-dig
+# all Egyptian circle the-Nile waters to-drink”) — fact holds: and-dig-all-
+# Egypt
+m.fact(&quot;va_yachpru_khol_mitzrayim&quot;)
+
+# -------------------------- Exod.7.25 · SEVEN_DAYS_FILLED ------------------
+# וַיִּמָּלֵא שִׁבְעַת יָמִים אַחֲרֵי הַכּוֹת־יְהוָה אֶת־הַיְאֹר
+# &quot;[EN-AID] And seven days were filled, after the LORD had struck the Nile.&quot;
+m.step(&quot;Exod.7.25&quot;)
+# ‹וַיִּמָּלֵא שִׁבְעַת יָמִים› (“and-fill seven day”) — fact holds: and-
+# fill-seven-day
+m.fact(&quot;va_yimale_shivat_yamim&quot;)
+
+# -------------------------- Exod.7.26 · GO_SAY_SEND ------------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה בֹּא אֶל־פַּרְעֹה וְאָמַרְתָּ אֵלָיו כֹּה
+# אָמַר יְהוָה שַׁלַּח אֶת־עַמִּי וְיַעַבְדֻנִי
+# &quot;[EN-AID] And the LORD said to Moses: Come to Pharaoh, and say to him:
+# Thus says the LORD: Send My people, that they may serve Me.&quot;
+m.step(&quot;Exod.7.26&quot;)
+# ‹בֹּא אֶל־פַּרְעֹה› (“come/bring to Pharaoh”) — the-LORD speaks a demand —
+# LET: come/bring-to-Pharaoh-and-say
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;bo_el_paro_ve_amarta&quot;)
+
+# -------------------------- Exod.7.27 · IF_YOU_REFUSE_FROGS ----------------
+# וְאִם־מָאֵן אַתָּה לְשַׁלֵּחַ הִנֵּה אָנֹכִי נֹגֵף אֶת־כָּל־גְּבוּלְךָ
+# בַּצְפַרְדְּעִים
+# &quot;[EN-AID] And if you refuse to send them — behold, I strike all your
+# border with frogs.&quot;
+m.step(&quot;Exod.7.27&quot;)
+# ‹הִנֵּה אָנֹכִי נֹגֵף אֶת־כָּל־גְּבוּלְךָ בַּצְפַרְדְּעִים› (“behold push
+# obj-marker all cord-you/your in-marsh-leaper”) — fact holds: and-if-
+# unwilling-you-to-shaleach
+m.fact(&quot;ve_im_maen_ata_le_shaleach&quot;)
+
+# -------------------------- Exod.7.28 · THE_INVASION_ROUTE -----------------
+# וְשָׁרַץ הַיְאֹר צְפַרְדְּעִים וְעָלוּ וּבָאוּ בְּבֵיתֶךָ וּבַחֲדַר
+# מִשְׁכָּבְךָ וְעַל־מִטָּתֶךָ וּבְבֵית עֲבָדֶיךָ וּבְעַמֶּךָ
+# וּבְתַנּוּרֶיךָ וּבְמִשְׁאֲרוֹתֶיךָ
+# &quot;[EN-AID] And the Nile shall swarm frogs, and they shall come up and come
+# into your house, and into your bedchamber, and onto your bed, and into the
+# house of your servants, and among your people, and into your ovens, and
+# into your kneading-troughs.&quot;
+m.step(&quot;Exod.7.28&quot;)
+# ‹וְשָׁרַץ הַיְאֹר צְפַרְדְּעִים› (“and-swarm the-Nile marsh-leaper”) —
+# fact holds: and-swarm-the-Nile-tzfardeim
+m.fact(&quot;ve_sharatz_ha_yeor_tzfardeim&quot;)
+
+# -------------------------- Exod.7.29 · AND_INTO_YOU -----------------------
+# וּבְכָה וּבְעַמְּךָ וּבְכָל־עֲבָדֶיךָ יַעֲלוּ הַצְפַרְדְּעִים
+# &quot;[EN-AID] And into you, and into your people, and into all your servants,
+# the frogs shall come up.&quot;
+m.step(&quot;Exod.7.29&quot;)
+# ‹וּבְכָה וּבְעַמְּךָ וּבְכָל־עֲבָדֶיךָ› (“and-in-you/your and-in-people-
+# you/your and-in-all servant-you/your”) — fact holds: and-vekha-and-and-
+# amkha
+m.fact(&quot;u_vekha_u_ve_amkha&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;lekh_el_paro_ba_boqer&#x27;, &#x27;bo_el_paro_ve_amarta&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 4
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;netaticha_elohim_le_faro&#x27;, &#x27;ata_tedaber_et_kol_asher_atzaveka&#x27;, &#x27;va_ani_aqshe_et_lev_paro&#x27;, &#x27;ve_lo_yishma_alekhem_paro&#x27;, &#x27;ve_yadu_mitzrayim_ki_ani_YHWH&#x27;, &#x27;ka_asher_tziva_YHWH_ken_asu&#x27;, &#x27;u_moshe_ben_shemonim_shana&#x27;, &#x27;va_yomer_YHWH_el_moshe_ve_el_aharon&#x27;, &#x27;va_yaasu_gam_hem_be_lahatehem&#x27;, &#x27;va_yechezaq_lev_paro&#x27;, &#x27;kaved_lev_paro&#x27;, &#x27;shalach_et_ami_ve_yaavduni&#x27;, &#x27;be_zot_teda_ki_ani_YHWH&#x27;, &#x27;ve_nilu_mitzrayim_lishtot&#x27;, &#x27;va_yivash_ha_yeor&#x27;, &#x27;va_yechezaq_lev_paro_2&#x27;, &#x27;ve_lo_shat_libo_gam_la_zot&#x27;, &#x27;va_yachpru_khol_mitzrayim&#x27;, &#x27;va_yimale_shivat_yamim&#x27;, &#x27;ve_im_maen_ata_le_shaleach&#x27;, &#x27;ve_sharatz_ha_yeor_tzfardeim&#x27;, &#x27;u_vekha_u_ve_amkha&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 7
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

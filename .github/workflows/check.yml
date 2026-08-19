@@ -1,0 +1,20 @@
+# TorahSim — the one green button, run on every push: the five gates of
+# tools/check.py (gloss lint, 97 units, chapter machine + dependency
+# proof, the 64 frozen scene stamps, the simulation sketch).
+name: check
+on:
+  push:
+  pull_request:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # The gloss lint reads /usr/share/dict/words to tell English
+      # hyphenated compounds from Hebrew transliteration; the runner
+      # ships without one. wamerican-large approximates the macOS list
+      # the gate was tuned on.
+      - name: english word list for the gloss lint
+        run: sudo apt-get update -q && sudo apt-get install -y -q wamerican-large
+      - name: the five gates
+        run: python3 tools/check.py

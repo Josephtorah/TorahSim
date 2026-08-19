@@ -1,0 +1,777 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>exo_02_drawn_from_the_water — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/exo_02_drawn_from_the_water?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Drawn from the water (2:1-25) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>exo_02_drawn_from_the_water</b> · Exodus 2:1-25 · derive logic_derived_v1 · phase FWD-16</div>
+<div class="meta"><a href="../#Exod/2/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">כִּי מִן הַמַּיִם מְשִׁיתִהוּ</span> · <i>ki min ha-mayim meshitihu</i> · &#x27;for from the water I drew him&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DERIVED 2026-08-09 · FORWARD ERA unit #16 (run FWD-4 block 2). Span: 2:1-25, whole chapter: 25 verses (SNAPSHOT-verified), every verse with an etnachta (the mid-verse pause). Oral layer IN-PIPELINE: manifest 13/13 VERIFIED, zero FAILED — see oral_audit_note_en. MACHINE PROFILE. THREE DECLAREs, THREE RESULTs — two of them SAME-VERSE discharges back to back: the princess&#x27;s one-word LEKHI (&#x27;Go,&#x27; 2:8 — the shortest demand in the corpus&#x27;s ledger, performed before its verse closes) and the nursing commission (2:9 — pushed and performed in one verse, the mother hired to nurse her own son); the third, Reuel&#x27;s invitation (qiren lo, 2:20), pops in its OUTCOME (2:21 — the called man consents to dwell; the calling itself never narrated, the acceptance is: care-point). TWO NAMES: MOSHE (2:10, REGISTRY 1 — the princess coins the redeemer&#x27;s name in Hebrew, in her own first person) and GERSHOM (2:22, REGISTRY 2 — the sevirin station: readers presume SHE called, the letter writes HE). TWO EVENTs: the strike (2:12 — Moses&#x27; first recorded deed, neither praised nor sentenced) and the king&#x27;s death (2:23 — exo_01&#x27;s arisen king goes down; the seek-to-kill of 2:15 held as standing fact, not demand — its receipt armed at 4:19). Queue at close: ZERO open in-unit (exo_01&#x27;s two — the refused kill-order and the Nile decree — stand open at corpus level). REGISTRY 2; TESTS 0; LEDGER 0. CARE-POINTS: 2:3 PLACES the son in the Nile — the decree of 1:22 subverted by compliance (the machine files the irony, authors NO settlement: a standing decree is not discharged by one mother&#x27;s dark obedience); the covenant-hinge at 2:24 — the remember-verb of the flood&#x27;s turning aimed at the PIECES-COVENANT by its three signatories (gen_31: the four hundred years, the exit with great property — the book&#x27;s engine turns over here); the know-ledger (the king who knew not 1:8 → the sister to-know 2:4 → the thing known 2:14 → AND GOD KNEW 2:25 — the two-word close); the flood&#x27;s ark-noun returns for one child (2:3). WATCHLIST ARMS: 3:1 (Jethro/Reuel — the seven-names file), 4:19 (the seekers dead — 2:15&#x27;s receipt), 4:25 (Zipporah&#x27;s flint — the lean bird-name&#x27;s second station), 13:18 (the reed-word names the sea), 14:30 (the drawn-out man draws a nation), 18:2-3 (Zipporah and Gershom re-enter), 6:20 (the parents named in the roster).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-09 (IN-PIPELINE, forward era; manifest logic/oral_audit/manifests/exo_02_drawn_from_the_water_claims.json 13/13 VERIFIED, zero FAILED; record logic/oral_audit/AUDIT_exo_02_2026-08-09.md). CROWNS (chain-attested + DB-verified). THE TWO ARKS [EX02-02, MS on 2:3; the Ramah&#x27;s whole-Torah rule] — THE UNIT&#x27;S MARQUEE: תבת (&quot;ark of&quot;) written LEAN by the Ramah&#x27;s rule — and the construct ark-word stands exactly TWICE in the whole Torah: NOAH&#x27;S ark of gopher wood (Gen 6:14) and the mother&#x27;s ark of reeds here — the flood&#x27;s rescue-vessel noun returns once, sized for one child on the Nile. THE THREE LEAN ZIPPORAHS [EX02-01, MS on 2:21]: צפרה (&quot;Zipporah&quot;) — the Masorah&#x27;s three-lean with sign verified exact (2:21, 4:25, 18:2; full form ZERO); the two-count Masorah ruled &#x27;a corruption&#x27; by MS. THE DRAW-NAME [EX02-03, MS on 2:10; the Ramah]: משיתהו (&quot;I drew him&quot;) — Torah-unique, full first yod lean last, letter-perfect in-stream; the Yerushalmi transposition named. THE PRESUMED SHE [EX02-04, MS on 2:22]: ויקרא (&quot;and HE called&quot;) at Gershom&#x27;s naming — one of the Masorah&#x27;s three sevirin (&quot;presumed&quot;) stations: readers presume the she-form, the letter writes the he. THE RESCUE-VERSE&#x27;S TWO SPELLINGS [EX02-05, MS on 2:17]: ויגרשום (&quot;and they drove them off&quot;) FULL with the Ramah&#x27;s precise copies (a minority Masorah&#x27;s lean named); ויושען (&quot;and he saved them&quot;) LEAN yod with the Hilleli — the deliverer&#x27;s first saving one yod short. THE MAIDSERVANT&#x27;S VOWEL [EX02-06, MS on 2:5; Sota]: אמתה (&quot;her maidservant/ her arm&quot;) — the Talmud&#x27;s dispute carried in half a vowel; the stream points the half-vowel with the soft mem: the maidservant camp, split named. THE NURSING FILE [EX02-07, MS on 2:9; the Ramah&#x27;s five]: והינקהו (&quot;and nurse him&quot;) — the qof on its short vowel, one yod before the nun; ותניקהו (&quot;and she nursed him&quot;) one yod before the qof — the Torah&#x27;s five full nursing-words unrolled from Sarah&#x27;s double-yod announcement. THE LETTER-AND-MARK FILE [EX02-08, MS; the Mikhlol]: the for-splendor dot in הצפינו (&quot;to hide him&quot;); the Masorah&#x27;s three interchanged dot-words; the reed-word&#x27;s dotted gimel; the soft bet of בחמר (&quot;with mortar&quot;) by the quiescent he; the wheel-mark-against-joining-stroke split at 2:12&#x27;s כי אין (&quot;that there was no&quot;) — the class&#x27;s next station; the soft lamed of הלהרגני (&quot;to kill me&quot;). THE FIRST AND LAST REDEEMER [EX02-09, Kitzur on 2:1]: וילך איש (&quot;and a man went&quot;) — Torah-unique adjacency; Ruth&#x27;s twin named: by this walking the first redeemer, by that the last. THE COUNTED MONTHS [EX02-10, Kitzur on 2:2; Sota]: ירחים (&quot;months&quot;) — Torah-pair exact (2:2, Deut 33:14); the censors&#x27; nine-month miscount named. THE TWO COULD-NOTS [EX02-11, Kitzur on 2:3]: ולא יכלה (&quot;and she/it could not&quot;) — Torah-pair exact (Gen 36:7, Exod 2:3); the reed-word&#x27;s Scripture-three named. THE DESCENT&#x27;S LETTERS [EX02-12, Kitzur on 2:5]: the final letters of ותרד בת פרעה (&quot;and Pharaoh&#x27;s daughter went down&quot;) spell דתה (&quot;her law&quot;) — checked mechanically; the maidens&#x27; three with Rebekah&#x27;s named. READINGS (named-only) [EX02-13]: the bare taking-clause CHECKED (no object-marker — &#x27;people err and say et,&#x27; MS against the mouths); the rejected large tet (the run&#x27;s file continues); the five crowns; Aaron at the basket; the האלך (&quot;shall I go&quot;) three; the striving-word three; the priest-three; the open paragraph at 2:23.</div>
+<div class="meta">confidence: structure tested; oral layer verified 13/13</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>FORWARD ERA run 4, block 2. Canon continuation: Exod 2:1-25 — the birth, the ark, the two namings, the flight, the remembering; whole chapter.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Span + source + conventions</td><td>SNAPSHOT prestage: 25 verses, every verse with an etnachta (the mid-verse pause). No ketiv/qere pairs in-span; one sevirin (&quot;presumed&quot;) station carried named (2:22). Volitive census: lekhi (2:8), helikhi + ve-heniqihu (2:9), qiren (2:20) — three DECLAREs; 2:7&#x27;s shall-I-go is a question (installs nothing); 2:15&#x27;s seek-to-kill is narrative intent (standing fact, no imperative uttered).</td><td>established</td></tr>
+<tr><td><b>C</b></td><td>Machine structure</td><td>Three DECLAREs, three RESULTs — two same-verse discharges back to back (2:8, 2:9), one outcome-pop (2:20→21, the acceptance narrated, the calling implied: care-point). Two NAMEs: moshe (2:10, REGISTRY 1), gershom (2:22, REGISTRY 2). Two EVENTs: the strike (2:12), the king&#x27;s death (2:23). Queue at close: zero open in-unit. REGISTRY 2; TESTS 0; LEDGER 0.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Exod 2 (19 notes) + Kitzur Baal HaTurim on Exod 2 (11 notes). Manifest 13 rows: 13 VERIFIED / 0 FAILED / 0 UNCHECKABLE. The Ramah&#x27;s ark-rule verified as a Torah-pair (Noah&#x27;s ark / the reed basket); a two-count Masorah ruled a corruption and the three-count verified; a Talmudic dispute carried in half a vowel with the stream&#x27;s camp identified.</td><td>established</td></tr>
+<tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 13/13 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-09 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Ex_2_1 · Exod.2.1 · <span class='expr'>A_MAN_WENT</span></h3>
+<p><span class="he">וַיֵּלֶךְ אִישׁ מִבֵּית לֵוִי וַיִּקַּח אֶת־בַּת־לֵוִי</span> · <i>va-yelekh ish mi-bet levi va-yiqach et-bat-levi</i> · And a man went from the house of Levi, and took a daughter of Levi.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֵּ֥לֶךְ אִ֖ישׁ מִבֵּ֣ית לֵוִ֑י</span> · <i>va-yelekh ish mi-bet levi</i> · a man went from the house of Levi (etnachta on levi) [VERIFIED: SNAPSHOT Exod.2.1 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּקַּ֖ח אֶת בַּת לֵוִֽי</span> · <i>va-yiqach et-bat-levi</i> · and took a daughter of Levi (verse-final levi) [VERIFIED: SNAPSHOT Exod.2.1 idx4-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ish_mi_bet_levi_et_bat_levi, t0)</span><br><span class="gloss">= HOLDS(man-from-bet-levi-bat-levi, t0)</span><br>THE WALK [EX02-09]. va-YELEKH ish mi-bet LEVI — &#x27;a MAN WENT from the house of Levi&#x27;: the walking-pair&#x27;s Torah station (its one twin: Ruth&#x27;s &#x27;a man went from Bethlehem&#x27; — &#x27;by THIS walking came the first redeemer, by THAT will come the last,&#x27; the Kitzur&#x27;s whole arc of redemption between two identical steps) [VERIFIED: manifest EX02-09]; the letter withholds every name — the man, the daughter, the son to come are all anonymous until the princess speaks: the machine files the restraint (the parents are gen-era registry persons, Amram and Yokheved armed at the roster of 6:20, named there not here).
+</td><td><span class="he">וַיֵּלֶךְ אִישׁ מִבֵּית לֵוִי</span> · <i>va-yelekh ish mi-bet levi</i><br><span class="gloss">= and-yelekh man from-bet levi</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The unnamed walk that opens the redeemer&#x27;s file.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_2_2 · Exod.2.2 · <span class='expr'>GOOD_AND_HIDDEN</span></h3>
+<p><span class="he">וַתַּהַר הָאִשָּׁה וַתֵּלֶד בֵּן וַתֵּרֶא אֹתוֹ כִּי־טוֹב הוּא וַתִּצְפְּנֵהוּ שְׁלֹשָׁה יְרָחִים</span> · <i>va-tahar ha-isha va-teled ben va-tere et-o ki-tov hu va-titzpne-hu shelosha yerachim</i> · And the woman conceived, and bore a son; and she saw him, that he was good; and she hid him three months.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתַּ֥הַר הָאִשָּׁ֖ה וַתֵּ֣לֶד בֵּ֑ן</span> · <i>va-tahar ha-isha va-teled ben</i> · the woman conceived and bore a son, and saw him, that he was good (etnachta on ben) [VERIFIED: SNAPSHOT Exod.2.2 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתֵּ֤רֶא אֹתוֹ֙ כִּי ט֣וֹב ה֔וּא וַֽתִּצְפְּנֵ֖הוּ שְׁלֹשָׁ֥ה יְרָחִֽים</span> · <i>va-tere et-o ki-tov hu va-titzpne-hu shelosha yerachim</i> · and she hid him three months (verse-final yerachim) [VERIFIED: SNAPSHOT Exod.2.2 idx4-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_tere_oto_ki_tov_hu, t0)</span><br><span class="gloss">= HOLDS(and-tere-it-when-good-that, t0)</span><br>THE GOOD [EX02-10; EX02-13]. va-TERE oto KI-TOV hu — &#x27;she SAW him, that he was GOOD&#x27;: creation&#x27;s own verdict-formula (va-yar... ki-tov, gen_01&#x27;s refrain) spoken over a baby under a death-decree — the readings&#x27; light-filled-house named, the REJECTED large tet carried as a rejection (one variant list against our Masorah, the run&#x27;s rejected-large file) and the five crowns named [EX02-13]; va- titzpenehu SHELOSHA yerachim — &#x27;she HID him THREE MONTHS&#x27;: Sota&#x27;s arithmetic verified at the month-word&#x27;s Torah-pair (the censors counted nine from the remarriage; she had three in hand) [VERIFIED: manifest EX02-10]: the chapter&#x27;s first number is a miscount the letter keeps.
+</td><td><span class="he">וַתֵּרֶא אֹתוֹ כִּי־טוֹב הוּא</span> · <i>va-tere et-o ki-tov hu</i><br><span class="gloss">= and-tere o when-good that</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Creation&#x27;s verdict-word on a newborn.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_2_3 · Exod.2.3 · <span class='expr'>AN_ARK_OF_REEDS</span></h3>
+<p><span class="he">וְלֹא־יָכְלָה עוֹד הַצְּפִינוֹ וַתִּקַּח־לוֹ תֵּבַת גֹּמֶא וַתַּחְמְרָה בַחֵמָר וּבַזָּפֶת וַתָּשֶׂם בָּהּ אֶת־הַיֶּלֶד וַתָּשֶׂם בַּסּוּף עַל־שְׂפַת הַיְאֹר</span> · <i>ve-lo-yakhla od hatzfin-o va-tiqach-l-o tevat gome va-tachmra-ה va-chemar u-va-zafet va-tasem ba-ה et-ha-yeled va-tasem ba-suf al-sefat ha-yeor</i> · And when she could no longer hide him, she took for him an ark of reeds, and daubed it with mortar and with pitch; and she placed the child in it, and placed it in the rushes by the bank of the Nile.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְלֹא יָכְלָ֣ה עוֹד֮ הַצְּפִינוֹ֒ וַתִּֽקַּֽח לוֹ֙ תֵּ֣בַת גֹּ֔מֶא וַתַּחְמְרָ֥ה בַחֵמָ֖ר וּבַזָּ֑פֶת</span> · <i>ve-lo-yakhla od hatzfin-o va-tiqach-l-o tevat gome va-tachmra-ה va-chemar u-va-zafet</i> · she could no longer hide him; she took an ark of reeds, daubed with mortar and pitch (etnachta on u-va-zafet) [VERIFIED: SNAPSHOT Exod.2.3 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתָּ֤שֶׂם בָּהּ֙ אֶת הַיֶּ֔לֶד וַתָּ֥שֶׂם בַּסּ֖וּף עַל שְׂפַ֥ת הַיְאֹֽר</span> · <i>va-tasem ba-ה et-ha-yeled va-tasem ba-suf al-sefat ha-yeor</i> · she placed the child in it, and placed it in the rushes by the Nile&#x27;s bank (verse-final ha-yeor) [VERIFIED: SNAPSHOT Exod.2.3 idx11-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(tevat_gome_al_sefat_ha_yeor, t0)</span><br><span class="gloss">= HOLDS(tevat-gome-upon-sefat-the-yeor, t0)</span><br>THE ARK [EX02-02 MARQUEE; EX02-11]. ve-LO YAKHLA od hatzfino — the could-not pair&#x27;s second station (the land could not bear the herds, Gen 36:7; the mother cannot hide the child — the cave-midrash named) [VERIFIED: manifest EX02-11]; va-tiqach lo TEVAT GOME — &#x27;an ARK of reeds&#x27;: the construct ark-word stands exactly TWICE in the Torah, both LEAN by the Ramah&#x27;s rule — NOAH&#x27;S gopher-ark (Gen 6:14) and this basket: the flood&#x27;s rescue-noun returns once, sized for one child [VERIFIED: manifest EX02-02]; va-tachmerah VA-CHEMAR u-va- ZAFET — the LEAN mortar-word&#x27;s second and last Torah token (the bondage&#x27;s mortar, 1:14 — slavery&#x27;s substance waterproofing the rescue; exo_01&#x27;s file closes); u-va-SUF — in the rushes: the reed- word that will name the SEA (yam suf, 13:18 armed); and the verse PLACES the son in the Nile — the decree of 1:22 subverted by compliance (the readings: she fulfilled the letter of the cast-order — the machine files the irony, no settlement: a decree is not discharged by one mother&#x27;s dark obedience): the Torah&#x27;s smallest ship sails on the state&#x27;s own murder-weapon.
+</td><td><span class="he">וַתִּקַּח־לוֹ תֵּבַת גֹּמֶא וַתַּחְמְרָה בַחֵמָר וּבַזָּפֶת</span> · <i>va-tiqach-l-o tevat gome va-tachmra-ה va-chemar u-va-zafet</i><br><span class="gloss">= and-tiqach-l-o tevat gome and-tachmra-ה and-chemar and-and-zafet</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The flood&#x27;s vessel, sized for one.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_2_4 · Exod.2.4 · <span class='expr'>THE_SISTER_STATIONED</span></h3>
+<p><span class="he">וַתֵּתַצַּב אֲחֹתוֹ מֵרָחֹק לְדֵעָה מַה־יֵּעָשֶׂה לוֹ</span> · <i>va-tetatzav achot-o me-rachoq le-dea ma-yease l-o</i> · And his sister stationed herself far off, to know what would be done to him.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתֵּתַצַּ֥ב אֲחֹת֖וֹ מֵרָחֹ֑ק</span> · <i>va-tetatzav achot-o me-rachoq</i> · his sister stationed herself far off (etnachta on me-rachoq) [VERIFIED: SNAPSHOT Exod.2.4 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לְדֵעָ֕ה מַה יֵּעָשֶׂ֖ה לֽוֹ</span> · <i>le-dea ma-yease l-o</i> · to know what would be done to him (verse-final l-o) [VERIFIED: SNAPSHOT Exod.2.4 idx3-6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_tetatzav_achoto_me_rachoq, t0)</span><br><span class="gloss">= HOLDS(and-tetatzav-achoto-from-rachoq, t0)</span><br>THE STATION. va-TETATZAV achoto me-RACHOQ — &#x27;his sister STATIONED herself afar&#x27;: the stand-firm verb (the readings hear the Presence&#x27;s own stationing-word, armed at the sea&#x27;s &#x27;stand and see&#x27; 14:13 and the cleft 34:5); le-DEA ma-YEASE lo — &#x27;to KNOW what would be DONE to him&#x27;: the know-verb in a seven-year-old&#x27;s hands (the chapter will close with the same verb in God&#x27;s, 2:25 — the machine notes the arc); Miriam unnamed here (her prophecy at the ha-elekh file, named [EX02-13]): the corpus&#x27;s first sentinel.
+</td><td><span class="he">וַתֵּתַצַּב אֲחֹתוֹ מֵרָחֹק</span> · <i>va-tetatzav achot-o me-rachoq</i><br><span class="gloss">= and-tetatzav achot-o from-rachoq</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The watcher; the know-verb&#x27;s small sentinel.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_2_5 · Exod.2.5 · <span class='expr'>THE_DESCENT_THAT_CHANGED_HER_LAW</span></h3>
+<p><span class="he">וַתֵּרֶד בַּת־פַּרְעֹה לִרְחֹץ עַל־הַיְאֹר וְנַעֲרֹתֶיהָ הֹלְכֹת עַל־יַד הַיְאֹר וַתֵּרֶא אֶת־הַתֵּבָה בְּתוֹךְ הַסּוּף וַתִּשְׁלַח אֶת־אֲמָתָהּ וַתִּקָּחֶהָ</span> · <i>va-tered bat-paro li-rechotz al-ha-yeor ve-naarote-ha holkhot al-yad ha-yeor va-tere et-ha-teva be-tokh ha-suf va-tishlach et-amata-ה va-tiqache-ha</i> · And Pharaoh&#x27;s daughter went down to bathe at the Nile, and her maidens walked by the Nile&#x27;s side; and she saw the ark among the rushes, and sent her maidservant, and took it.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתֵּ֤רֶד בַּת פַּרְעֹה֙ לִרְחֹ֣ץ עַל הַיְאֹ֔ר וְנַעֲרֹתֶ֥יהָ הֹלְכֹ֖ת עַל יַ֣ד הַיְאֹ֑ר</span> · <i>va-tered bat-paro li-rechotz al-ha-yeor ve-naarote-ha holkhot al-yad ha-yeor</i> · Pharaoh&#x27;s daughter went down to bathe, her maidens by the Nile&#x27;s side (etnachta on ha-yeor) [VERIFIED: SNAPSHOT Exod.2.5 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתֵּ֤רֶא אֶת הַתֵּבָה֙ בְּת֣וֹךְ הַסּ֔וּף וַתִּשְׁלַ֥ח אֶת אֲמָתָ֖הּ וַתִּקָּחֶֽהָ</span> · <i>va-tere et-ha-teva be-tokh ha-suf va-tishlach et-amata-ה va-tiqache-ha</i> · she saw the ark among the rushes, and sent her maidservant, and took it (verse-final va-tiqache-ha) [VERIFIED: SNAPSHOT Exod.2.5 idx11-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_tishlach_et_amatah_va_tiqacheha, t0)</span><br><span class="gloss">= HOLDS(and-tishlach-amatah-and-tiqacheha, t0)</span><br>THE TAKING [EX02-06; EX02-12]. va-TERED bat-PARO — &#x27;and Pharaoh&#x27;s DAUGHTER went DOWN&#x27;: the final letters of the descent-clause spell DATAH, &#x27;her law&#x27; — the Kitzur: she went down to convert (checked mechanically — the verse&#x27;s own letters carry the crossing) [VERIFIED: manifest EX02-12]; her maidens&#x27; Masorah-three with REBEKAH&#x27;S rising maidens (the she-seized-the-mothers&#x27;-deeds reading; the darker maiden-thread named); va-tishlach et AMATAH — Sota&#x27;s dispute (her ARM / her MAIDSERVANT) carried in HALF A VOWEL: the arm-camp needs patach and a dotted mem (Saadya, the Targum), our books point chataf-patach and soft mem — the stream sides with the MAIDSERVANT camp, the split named never merged [VERIFIED: manifest EX02-06]: the king&#x27;s daughter reaches into the king&#x27;s river and takes out the king&#x27;s undoing.
+</td><td><span class="he">וַתִּשְׁלַח אֶת־אֲמָתָהּ וַתִּקָּחֶהָ</span> · <i>va-tishlach et-amata-ה va-tiqache-ha</i><br><span class="gloss">= and-tishlach amata-ה and-tiqache-the</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The letters of the descent spell her conversion.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_2_6 · Exod.2.6 · <span class='expr'>A_WEEPING_YOUTH</span></h3>
+<p><span class="he">וַתִּפְתַּח וַתִּרְאֵהוּ אֶת־הַיֶּלֶד וְהִנֵּה־נַעַר בֹּכֶה וַתַּחְמֹל עָלָיו וַתֹּאמֶר מִיַּלְדֵי הָעִבְרִים זֶה</span> · <i>va-tiftach va-tire-hu et-ha-yeled ve-hine-naar bokhe va-tachmol alay-v va-tomer mi-yalde ha-ivrim ze</i> · And she opened it, and saw him — the child, and behold, a youth weeping; and she had pity on him, and said: This is one of the Hebrews&#x27; children.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתִּפְתַּח֙ וַתִּרְאֵ֣הוּ אֶת הַיֶּ֔לֶד וְהִנֵּה נַ֖עַר בֹּכֶ֑ה</span> · <i>va-tiftach va-tire-hu et-ha-yeled ve-hine-naar bokhe</i> · she opened and saw the child, and behold, a youth weeping (etnachta on bokhe) [VERIFIED: SNAPSHOT Exod.2.6 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתַּחְמֹ֣ל עָלָ֔יו וַתֹּ֕אמֶר מִיַּלְדֵ֥י הָֽעִבְרִ֖ים זֶֽה</span> · <i>va-tachmol alay-v va-tomer mi-yalde ha-ivrim ze</i> · she had pity on him, and said: this is of the Hebrews&#x27; children (verse-final ze) [VERIFIED: SNAPSHOT Exod.2.6 idx7-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_tachmol_alav, t0)</span><br><span class="gloss">= HOLDS(and-tachmol-alav, t0)</span><br>THE PITY [EX02-13]. va-tiftach va-TIREHU et ha-YELED — she opens and SEES (the seeing that began the chapter, 2:2&#x27;s ki-tov, now hers); ve-hine NAAR bokhe — &#x27;behold, a YOUTH weeping&#x27;: the child-word and the youth-word in one clause (the readings&#x27; voice-of-a-youth; the gematria naming AARON stationed at the basket, named [EX02-13]); va- TACHMOL alav — &#x27;she had PITY on him&#x27;: the pity-verb against her father&#x27;s decree — the machine files the chapter&#x27;s law: every rescue in it is a woman&#x27;s insubordination (the midwives, the mother, the sister, the princess, the maid); mi-yalde ha-IVRIM ze — she names the child&#x27;s people and shelters him anyway.
+</td><td><span class="he">וַתַּחְמֹל עָלָיו</span> · <i>va-tachmol alay-v</i><br><span class="gloss">= and-tachmol alay-v</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The pity that outranks the decree.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_2_7 · Exod.2.7 · <span class='expr'>SHALL_I_GO_AND_CALL</span></h3>
+<p><span class="he">וַתֹּאמֶר אֲחֹתוֹ אֶל־בַּת־פַּרְעֹה הַאֵלֵךְ וְקָרָאתִי לָךְ אִשָּׁה מֵינֶקֶת מִן הָעִבְרִיֹּת וְתֵינִק לָךְ אֶת־הַיָּלֶד</span> · <i>va-tomer achot-o el-bat-paro ha-elekh ve-qarati la-khe isha meneqet min ha-ivriyot ve-teniq la-khe et-ha-yaled</i> · And his sister said to Pharaoh&#x27;s daughter: Shall I go and call you a nursing woman of the Hebrews, that she may nurse the child for you?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתֹּ֣אמֶר אֲחֹתוֹ֮ אֶל בַּת פַּרְעֹה֒ הַאֵלֵ֗ךְ וְקָרָ֤אתִי לָךְ֙ אִשָּׁ֣ה מֵינֶ֔קֶת מִ֖ן הָעִבְרִיֹּ֑ת</span> · <i>va-tomer achot-o el-bat-paro ha-elekh ve-qarati la-khe isha meneqet min ha-ivriyot</i> · his sister said to Pharaoh&#x27;s daughter (etnachta on ha-ivriyot) [VERIFIED: SNAPSHOT Exod.2.7 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְתֵינִ֥ק לָ֖ךְ אֶת הַיָּֽלֶד</span> · <i>ve-teniq la-khe et-ha-yaled</i> · shall I go and call you a nursing woman of the Hebrews, to nurse the child for you? (verse-final ha-yaled) [VERIFIED: SNAPSHOT Exod.2.7 idx12-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ha_elekh_ve_qarati_meneqet, t0)</span><br><span class="gloss">= HOLDS(the-elekh-and-qarati-meneqet, t0)</span><br>THE OFFER [EX02-13]. HA-ELEKH ve-qarati lakh isha MENEQET min ha- ivriyot — &#x27;SHALL I GO and call you a NURSING woman of the Hebrews?&#x27;: the sentinel of 2:4 closes her distance at the exact moment (the readings: he refused the Egyptian breast — the mouth that would speak with the Presence, named); the ha-elekh word&#x27;s Scripture-three carried named (Miriam here, David&#x27;s two — &#x27;the prophets&#x27; words stand like the Urim&#x27;: her prophecy that her mother would bear the deliverer, named [EX02-13]): the machine files the question as the hinge — the princess&#x27;s next word will hand the child back to his own mother.
+</td><td><span class="he">הַאֵלֵךְ וְקָרָאתִי לָךְ אִשָּׁה מֵינֶקֶת</span> · <i>ha-elekh ve-qarati la-khe isha meneqet</i><br><span class="gloss">= the-elekh and-qarati to-khe isha meneqet</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The sentinel speaks; the offer.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_2_8 · Exod.2.8 · <span class='expr'>GO_AND_SHE_WENT</span></h3>
+<p><span class="he">וַתֹּאמֶר־לָהּ בַּת־פַּרְעֹה לֵכִי וַתֵּלֶךְ הָעַלְמָה וַתִּקְרָא אֶת־אֵם הַיָּלֶד</span> · <i>va-tomer-la-ה bat-paro lekhi va-telekh ha-alma va-tiqra et-em ha-yaled</i> · And Pharaoh&#x27;s daughter said to her: Go. And the maiden went, and called the child&#x27;s mother.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתֹּֽאמֶר לָ֥הּ בַּת פַּרְעֹ֖ה לֵ֑כִי</span> · <i>va-tomer-la-ה bat-paro lekhi</i> · Pharaoh&#x27;s daughter said to her: Go (etnachta on lekhi) [VERIFIED: SNAPSHOT Exod.2.8 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתֵּ֨לֶךְ֙ הָֽעַלְמָ֔ה וַתִּקְרָ֖א אֶת אֵ֥ם הַיָּֽלֶד</span> · <i>va-telekh ha-alma va-tiqra et-em ha-yaled</i> · and the maiden went, and called the child&#x27;s mother (verse-final ha-yaled) [VERIFIED: SNAPSHOT Exod.2.8 idx5-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(bat_paro, LET(lekhi))</span><br><span class="gloss">= DECLARE(bat-paro, LET(lekhi))</span><br>THE ONE-WORD DEMAND. va-tomer lah bat-paro LEKHI — &#x27;GO&#x27;: the shortest demand in the corpus&#x27;s ledger — one imperative token (MS&#x27;s tiny file on the verse: the joining-stroke between the saying and the to-her, named at the letter-file); the machine pushes it and watches it land inside its own verse.
+</td><td><span class="he">לֵכִי</span> · <i>lekhi</i><br><span class="gloss">= lekhi</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(lekhi, t1)</span><br>THE SAME-VERSE PERFORMANCE. va-TELEKH ha-ALMA va-tiqra et EM ha- yaled — &#x27;and the MAIDEN went, and called the child&#x27;s MOTHER&#x27;: the go-word performed before the verse closes (the same-verse discharge class, gen_70&#x27;s oath); ha-ALMA — the maiden-word (the readings: she went with vigor, alummah); em ha-yaled — the letter says THE MOTHER plainly to the reader while the princess hears only a nurse: the machine notes the double-ledger — one queue, two knowledges.
+</td><td><span class="he">וַתֵּלֶךְ הָעַלְמָה וַתִּקְרָא אֶת־אֵם הַיָּלֶד</span> · <i>va-telekh ha-alma va-tiqra et-em ha-yaled</i><br><span class="gloss">= and-telekh the-alma and-tiqra mother the-yaled</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">One word pushed; performed in the same verse.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_2_9 · Exod.2.9 · <span class='expr'>NURSE_HIM_FOR_ME</span></h3>
+<p><span class="he">וַתֹּאמֶר לָהּ בַּת־פַּרְעֹה הֵילִיכִי אֶת־הַיֶּלֶד הַזֶּה וְהֵינִקִהוּ לִי וַאֲנִי אֶתֵּן אֶת־שְׂכָרֵךְ וַתִּקַּח הָאִשָּׁה הַיֶּלֶד וַתְּנִיקֵהוּ</span> · <i>va-tomer la-ה bat-paro helikhi et-ha-yeled ha-ze ve-heniqi-hu li-y va-ani eten et-sekhare-khe va-tiqach ha-isha ha-yeled va-teniqe-hu</i> · And Pharaoh&#x27;s daughter said to her: Take this child, and nurse him for me, and I will give your wages. And the woman took the child, and nursed him.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתֹּ֧אמֶר לָ֣הּ בַּת פַּרְעֹ֗ה הֵילִ֜יכִי אֶת הַיֶּ֤לֶד הַזֶּה֙ וְהֵינִקִ֣הוּ לִ֔י וַאֲנִ֖י אֶתֵּ֣ן אֶת שְׂכָרֵ֑ךְ</span> · <i>va-tomer la-ה bat-paro helikhi et-ha-yeled ha-ze ve-heniqi-hu li-y va-ani eten et-sekhare-khe</i> · take this child and nurse him for me, and I will give your wages (etnachta on sekhare-khe) [VERIFIED: SNAPSHOT Exod.2.9 idx13 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתִּקַּ֧ח הָאִשָּׁ֛ה הַיֶּ֖לֶד וַתְּנִיקֵֽהוּ</span> · <i>va-tiqach ha-isha ha-yeled va-teniqe-hu</i> · and the woman took the child, and nursed him (verse-final va-teniqe-hu) [VERIFIED: SNAPSHOT Exod.2.9 idx14-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(bat_paro, LET(helikhi_et_ha_yeled_ve_heniqihu))</span><br><span class="gloss">= DECLARE(bat-paro, LET(helikhi-the-yeled-and-heniqihu))</span><br>THE COMMISSION [EX02-07]. HELIKHI et ha-yeled ha-ze ve-HENIQIHU li — &#x27;TAKE this child and NURSE him FOR ME&#x27;: the nurse-word with its qof- chiriq and one-yod skeleton exactly as the Ramah&#x27;s five-word nursing file rules (Sarah&#x27;s full-of-full announcement at the file&#x27;s head — the milk-arithmetic of the whole Torah) [VERIFIED: manifest EX02-07]; va-ani eten et SEKHAREKH — &#x27;and I will give your WAGES&#x27;: the princess pays the mother to nurse her own son (Sota&#x27;s relish named): the demand pushed.
+</td><td><span class="he">הֵילִיכִי אֶת־הַיֶּלֶד הַזֶּה וְהֵינִקִהוּ לִי</span> · <i>helikhi et-ha-yeled ha-ze ve-heniqi-hu li-y</i><br><span class="gloss">= helikhi the-yeled the-ze and-heniqi-that to-me-y</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(helikhi_et_ha_yeled_ve_heniqihu, t2)</span><br><span class="gloss">= RESULT: HOLDS(helikhi-the-yeled-and-heniqihu, t2)</span><br>THE SAME-VERSE PERFORMANCE [EX02-13]. va-TIQACH ha-isha ha-YELED va- teniqehu — &#x27;and the woman TOOK the child, and NURSED him&#x27;: the second same-verse discharge in a row — and the letter runs the taking-clause BARE, with no object-marker between the woman and the child (&#x27;people err and SAY et&#x27; — MS&#x27;s note against the common tongue, the adjacency verified as the Torah&#x27;s only woman-child pairing) [VERIFIED: manifest EX02-13]: the mother holds her son by contract, and the letter holds the clause one word tighter than the mouths do.
+</td><td><span class="he">וַתִּקַּח הָאִשָּׁה הַיֶּלֶד וַתְּנִיקֵהוּ</span> · <i>va-tiqach ha-isha ha-yeled va-teniqe-hu</i><br><span class="gloss">= and-tiqach the-isha the-yeled and-teniqe-that</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The mother hired; performed in the same verse.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_2_10 · Exod.2.10 · <span class='expr'>MOSES_NAMED</span></h3>
+<p><span class="he">וַיִגְדַּל הַיֶּלֶד וַתְּבִאֵהוּ לְבַת־פַּרְעֹה וַיְהִי־לָהּ לְבֵן וַתִּקְרָא שְׁמוֹ מֹשֶׁה וַתֹּאמֶר כִּי מִן־הַמַּיִם מְשִׁיתִהוּ</span> · <i>va-yigdal ha-yeled va-tevie-hu le-vat-paro va-yehi-la-ה le-ven va-tiqra shem-o moshe va-tomer ki min-ha-mayim meshiti-hu</i> · And the child grew, and she brought him to Pharaoh&#x27;s daughter, and he became her son; and she called his name Moses, and said: For from the water I drew him.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִגְדַּ֣ל הַיֶּ֗לֶד וַתְּבִאֵ֨הוּ֙ לְבַת פַּרְעֹ֔ה וַֽיְהִי לָ֖הּ לְבֵ֑ן</span> · <i>va-yigdal ha-yeled va-tevie-hu le-vat-paro va-yehi-la-ה le-ven</i> · the child grew, and she brought him to Pharaoh&#x27;s daughter, and he became her son (etnachta on le-ven) [VERIFIED: SNAPSHOT Exod.2.10 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתִּקְרָ֤א שְׁמוֹ֙ מֹשֶׁ֔ה וַתֹּ֕אמֶר כִּ֥י מִן הַמַּ֖יִם מְשִׁיתִֽהוּ</span> · <i>va-tiqra shem-o moshe va-tomer ki min-ha-mayim meshiti-hu</i> · she called his name Moses: for from the water I drew him (verse-final meshiti-hu) [VERIFIED: SNAPSHOT Exod.2.10 idx8-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>NAME</td><td><span class="expr">name(ha_yeled) := moshe</span><br><span class="gloss">= name(the-yeled) := Moses</span><br>THE NAME [EX02-03]. va-yehi lah le-VEN — &#x27;he became her SON&#x27;: the adoption stated (the readings on the raised-in-the-palace reversal — exo_01&#x27;s born-word file, the hunted child in the hunter&#x27;s house); va-tiqra shemo MOSHE ki min ha-MAYIM MESHITIHU — &#x27;MOSES: for from the WATER I DREW him&#x27;: the draw-verb Torah-unique, its two-yod arithmetic ruled by the Ramah (full first, lean last — the stream letter-perfect; the old copy&#x27;s transposed variant named) [VERIFIED: manifest EX02-03] — an Egyptian princess coins the redeemer&#x27;s name in Hebrew, in HER first person (&#x27;I drew&#x27;) — the readings&#x27; prophecy- note named (a drawer-out who will draw a nation from water, 14:30 armed): REGISTRY writes its first key: the child has a name, and the Torah will use no other.
+</td><td><span class="he">וַתִּקְרָא שְׁמוֹ מֹשֶׁה</span> · <i>va-tiqra shem-o moshe</i><br><span class="gloss">= and-tiqra shem-o Moses</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The naming; registry write one.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_2_11 · Exod.2.11 · <span class='expr'>HE_SAW_THEIR_BURDENS</span></h3>
+<p><span class="he">וַיְהִי בַּיָּמִים הָהֵם וַיִּגְדַּל מֹשֶׁה וַיֵּצֵא אֶל־אֶחָיו וַיַּרְא בְּסִבְלֹתָם וַיַּרְא אִישׁ מִצְרִי מַכֶּה אִישׁ־עִבְרִי מֵאֶחָיו</span> · <i>va-yehi ba-yamim ha-hem va-yigdal moshe va-yetze el-echay-v va-yar be-sivlota-m va-yar ish mitzri make ish-ivri me-echay-v</i> · And it was in those days, and Moses grew, and went out to his brothers, and saw their burdens; and he saw an Egyptian man striking a Hebrew man, of his brothers.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֣י בַּיָּמִ֣ים הָהֵ֗ם וַיִּגְדַּ֤ל מֹשֶׁה֙ וַיֵּצֵ֣א אֶל אֶחָ֔יו וַיַּ֖רְא בְּסִבְלֹתָ֑ם</span> · <i>va-yehi ba-yamim ha-hem va-yigdal moshe va-yetze el-echay-v va-yar be-sivlota-m</i> · Moses grew, and went out to his brothers, and saw their burdens (etnachta on be-sivlota-m) [VERIFIED: SNAPSHOT Exod.2.11 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּרְא֙ אִ֣ישׁ מִצְרִ֔י מַכֶּ֥ה אִישׁ עִבְרִ֖י מֵאֶחָֽיו</span> · <i>va-yar ish mitzri make ish-ivri me-echay-v</i> · he saw an Egyptian striking a Hebrew, of his brothers (verse-final me-echay-v) [VERIFIED: SNAPSHOT Exod.2.11 idx10-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yar_be_sivlotam, t0)</span><br><span class="gloss">= HOLDS(and-yar-in-sivlotam, t0)</span><br>THE SEEING [exo_01&#x27;s file]. va-YIGDAL moshe — the second grew-word (2:10&#x27;s was of body, this of station — the readings&#x27; pair named); va-YETZE el ECHAV — &#x27;he WENT OUT to his BROTHERS&#x27;: the palace-son claims the slave-line (the brothers-word doubled in the verse — the letter insists on the kinship twice); va-YAR be-SIVLOTAM — &#x27;and SAW their BURDENS&#x27;: exo_01&#x27;s burden-word (1:11, the taskmasters&#x27; instrument) now in Moses&#x27; eyes — the readings: he gave his eyes and heart to grieve over them (the seeing that the chapter&#x27;s God-verses will repeat, 2:25): the machine files the education of the deliverer — first he sees, then he strikes, then he flees, then he draws water for strangers.
+</td><td><span class="he">וַיַּרְא בְּסִבְלֹתָם</span> · <i>va-yar be-sivlota-m</i><br><span class="gloss">= and-yar in-sivlota-m</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The burdens-file lands; the going-out.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_2_12 · Exod.2.12 · <span class='expr'>HE_STRUCK_THE_EGYPTIAN</span></h3>
+<p><span class="he">וַיִּפֶן כֹּה וָכֹה וַיַּרְא כִּי אֵין אִישׁ וַיַּךְ אֶת־הַמִּצְרִי וַיִּטְמְנֵהוּ בַּחוֹל</span> · <i>va-yifen ko va-kho va-yar ki en ish va-yakh et-ha-mitzri va-yitmne-hu ba-chol</i> · And he turned this way and that way, and saw that there was no man; and he struck the Egyptian, and hid him in the sand.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּ֤פֶן כֹּה֙ וָכֹ֔ה וַיַּ֖רְא כִּ֣י אֵ֣ין אִ֑ישׁ</span> · <i>va-yifen ko va-kho va-yar ki en ish</i> · he turned this way and that, and saw there was no man (etnachta on ish) [VERIFIED: SNAPSHOT Exod.2.12 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּךְ֙ אֶת הַמִּצְרִ֔י וַֽיִּטְמְנֵ֖הוּ בַּחֽוֹל</span> · <i>va-yakh et-ha-mitzri va-yitmne-hu ba-chol</i> · he struck the Egyptian, and hid him in the sand (verse-final ba-chol) [VERIFIED: SNAPSHOT Exod.2.12 idx7-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">hika(e1); Agent(e1, moshe)</span><br><span class="gloss">= hika(e1); Agent(e1, Moses)</span><br>THE STRIKE [EX02-08]. va-yifen KO va-KHO — &#x27;he turned THIS way and THAT&#x27; (the readings&#x27; two turnings named — no witness / no future proselyte in the man&#x27;s line); va-yar KI EN ISH — &#x27;he saw there was NO MAN&#x27; (the ki hung on the galgal in the precise books against the stream&#x27;s joining-stroke — the mark-split class&#x27;s next station, carried named [VERIFIED under EX02-08]; the readings: no man who would stand up — the ish-word that 2:14 will throw back at him); va- YAKH et ha-MITZRI — the strike-verb: the machine&#x27;s EVENT — Moses&#x27; first recorded deed is a killing the letter neither praises nor sentences (the smite-verb that will run through the plagues, armed); va-yitmenehu ba-CHOL — hidden in the sand: the machine files the concealment as the next verse&#x27;s fuse.
+</td><td><span class="he">וַיַּךְ אֶת־הַמִּצְרִי</span> · <i>va-yakh et-ha-mitzri</i><br><span class="gloss">= and-yakh the-mitzri</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The strike; the machine&#x27;s first event of the unit&#x27;s second half.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_2_13 · Exod.2.13 · <span class='expr'>TWO_HEBREWS_STRIVING</span></h3>
+<p><span class="he">וַיֵּצֵא בַּיּוֹם הַשֵּׁנִי וְהִנֵּה שְׁנֵי־אֲנָשִׁים עִבְרִים נִצִּים וַיֹּאמֶר לָרָשָׁע לָמָּה תַכֶּה רֵעֶךָ</span> · <i>va-yetze ba-yom ha-sheni ve-hine shene-anashim ivrim nitzim va-yomer la-rasha la-ma take ree-kha</i> · And he went out on the second day, and behold, two Hebrew men striving; and he said to the wicked one: Why do you strike your fellow?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֵּצֵא֙ בַּיּ֣וֹם הַשֵּׁנִ֔י וְהִנֵּ֛ה שְׁנֵֽי אֲנָשִׁ֥ים עִבְרִ֖ים נִצִּ֑ים</span> · <i>va-yetze ba-yom ha-sheni ve-hine shene-anashim ivrim nitzim</i> · he went out the second day, and behold, two Hebrew men striving (etnachta on nitzim) [VERIFIED: SNAPSHOT Exod.2.13 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּ֨אמֶר֙ לָֽרָשָׁ֔ע לָ֥מָּה תַכֶּ֖ה רֵעֶֽךָ</span> · <i>va-yomer la-rasha la-ma take ree-kha</i> · he said to the wicked one: why do you strike your fellow? (verse-final ree-kha) [VERIFIED: SNAPSHOT Exod.2.13 idx8-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lama_take_reekha, t0)</span><br><span class="gloss">= HOLDS(lama-take-reekha, t0)</span><br>THE REBUKE [EX02-13]. shene anashim ivrim NITZIM — &#x27;two Hebrew men STRIVING&#x27;: the striving-word&#x27;s one Torah token (Sennacherib&#x27;s ruin- heaps its Scripture-echo; Datan and Abiram named by the readings — the pair that will dog the wilderness) [VERIFIED under EX02-13]; va- yomer la-RASHA — the letter passes verdict before the blow lands (&#x27;the wicked one&#x27; — the readings: a raised hand is already called wicked); LAMA TAKE reekha — &#x27;WHY do you STRIKE your FELLOW&#x27;: Moses&#x27; strike-verb from yesterday handed back as a question — the machine files the symmetry the next verse will weaponize.
+</td><td><span class="he">וַיֹּאמֶר לָרָשָׁע לָמָּה תַכֶּה רֵעֶךָ</span> · <i>va-yomer la-rasha la-ma take ree-kha</i><br><span class="gloss">= and-yomer to-rasha to-ma take ree-kha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The second going-out; the first rebuke.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_2_14 · Exod.2.14 · <span class='expr'>WHO_SET_YOU</span></h3>
+<p><span class="he">וַיֹּאמֶר מִי שָׂמְךָ לְאִישׁ שַׂר וְשֹׁפֵט עָלֵינוּ הַלְהָרְגֵנִי אַתָּה אֹמֵר כַּאֲשֶׁר הָרַגְתָּ אֶת־הַמִּצְרִי וַיִּירָא מֹשֶׁה וַיֹּאמַר אָכֵן נוֹדַע הַדָּבָר</span> · <i>va-yomer mi sam-kha le-ish sar ve-shofet ale-nu ha-le-harge-ni ata omer ka-asher haragta et-ha-mitzri va-yira moshe va-yomar akhen noda ha-davar</i> · And he said: Who set you as a man, prince and judge over us? Do you say to kill me, as you killed the Egyptian? And Moses feared, and said: Surely the thing is known.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַ֠יֹּאמֶר מִ֣י שָֽׂמְךָ֞ לְאִ֨ישׁ שַׂ֤ר וְשֹׁפֵט֙ עָלֵ֔ינוּ הַלְהָרְגֵ֨נִי֙ אַתָּ֣ה אֹמֵ֔ר כַּאֲשֶׁ֥ר הָרַ֖גְתָּ אֶת הַמִּצְרִ֑י</span> · <i>va-yomer mi sam-kha le-ish sar ve-shofet ale-nu ha-le-harge-ni ata omer ka-asher haragta et-ha-mitzri</i> · who set you as a man, prince and judge over us? do you say to kill me, as you killed the Egyptian? (etnachta on ha-mitzri) [VERIFIED: SNAPSHOT Exod.2.14 idx13 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּירָ֤א מֹשֶׁה֙ וַיֹּאמַ֔ר אָכֵ֖ן נוֹדַ֥ע הַדָּבָֽר</span> · <i>va-yira moshe va-yomar akhen noda ha-davar</i> · and Moses feared, and said: surely the thing is known (verse-final ha-davar) [VERIFIED: SNAPSHOT Exod.2.14 idx14-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(akhen_noda_ha_davar, t0)</span><br><span class="gloss">= HOLDS(akhen-noda-the-davar, t0)</span><br>THE EXPOSURE [EX02-08]. MI SAMKHA le-ISH sar ve-shofet ALENU — &#x27;WHO SET YOU as a man, PRINCE and JUDGE over us?&#x27;: the corpus files the question the speaker cannot know he is asking (the readings: he will be exactly that — the office-words armed at 18:13&#x27;s judging and the elders&#x27; seat); ha-le-HORGENI ata omer — &#x27;do you SAY to kill me?&#x27; (the say-to-kill idiom — the readings: the Name, the killing by speech, named; the word&#x27;s soft lamed and bare he per the Mikhlol, checked in-stream [VERIFIED under EX02-08]); va-YIRA moshe — Moses FEARS (the fear-verb&#x27;s first token on him); AKHEN NODA ha-davar — &#x27;surely the thing is KNOWN&#x27;: the know-root again (the readings&#x27; second sense — now I know why they are enslaved — named, never merged): the machine files the chapter&#x27;s know-ledger growing.
+</td><td><span class="he">אָכֵן נוֹדַע הַדָּבָר</span> · <i>akhen noda ha-davar</i><br><span class="gloss">= akhen noda the-davar</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The question that will echo forty years.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_2_15 · Exod.2.15 · <span class='expr'>PHARAOH_SEEKS_MOSES_FLEES</span></h3>
+<p><span class="he">וַיִּשְׁמַע פַּרְעֹה אֶת־הַדָּבָר הַזֶּה וַיְבַקֵּשׁ לַהֲרֹג אֶת־מֹשֶׁה וַיִּבְרַח מֹשֶׁה מִפְּנֵי פַרְעֹה וַיֵּשֶׁב בְּאֶרֶץ־מִדְיָן וַיֵּשֶׁב עַל־הַבְּאֵר</span> · <i>va-yishma paro et-ha-davar ha-ze va-yevaqesh la-harog et-moshe va-yivrach moshe mi-pene faro va-yeshev be-eretz-midyan va-yeshev al-ha-beer</i> · And Pharaoh heard this thing, and sought to kill Moses; and Moses fled from before Pharaoh, and dwelt in the land of Midian, and sat by the well.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּשְׁמַ֤ע פַּרְעֹה֙ אֶת הַדָּבָ֣ר הַזֶּ֔ה וַיְבַקֵּ֖שׁ לַהֲרֹ֣ג אֶת מֹשֶׁ֑ה</span> · <i>va-yishma paro et-ha-davar ha-ze va-yevaqesh la-harog et-moshe</i> · Pharaoh heard, and sought to kill Moses (etnachta on moshe) [VERIFIED: SNAPSHOT Exod.2.15 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּבְרַ֤ח מֹשֶׁה֙ מִפְּנֵ֣י פַרְעֹ֔ה וַיֵּ֥שֶׁב בְּאֶֽרֶץ מִדְיָ֖ן וַיֵּ֥שֶׁב עַֽל הַבְּאֵֽר</span> · <i>va-yivrach moshe mi-pene faro va-yeshev be-eretz-midyan va-yeshev al-ha-beer</i> · Moses fled, and dwelt in Midian, and sat by the well (verse-final ha-beer) [VERIFIED: SNAPSHOT Exod.2.15 idx9-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yevaqesh_la_harog_et_moshe, t0)</span><br><span class="gloss">= HOLDS(and-yevaqesh-to-harog-Moses, t0)</span><br>THE FLIGHT. va-YEVAQESH la-harog et moshe — Pharaoh SEEKS to kill: the machine holds the seeking as a standing fact, not a demand (no imperative is uttered — a hunt has no ledger-entry to pop), and arms its receipt: &#x27;all the men who SOUGHT your life have died&#x27; (4:19 — the seek-word&#x27;s own discharge-verse, in this run); va-YIVRACH moshe — the flee-verb (Jacob&#x27;s road, gen_53&#x27;s class: the corpus&#x27;s deliverers all flee before they return); va-yeshev AL ha-BEER — &#x27;he SAT BY THE WELL&#x27;: the well-station (the readings: he learned from the fathers — the bride-meetings of gen_40 and gen_50 at their wells, the pattern the next verse performs).
+</td><td><span class="he">וַיִּבְרַח מֹשֶׁה מִפְּנֵי פַרְעֹה</span> · <i>va-yivrach moshe mi-pene faro</i><br><span class="gloss">= and-yivrach Moses from-pene faro</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The seeking armed; the well-station.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_2_16 · Exod.2.16 · <span class='expr'>SEVEN_DAUGHTERS</span></h3>
+<p><span class="he">וּלְכֹהֵן מִדְיָן שֶׁבַע בָּנוֹת וַתָּבֹאנָה וַתִּדְלֶנָה וַתְּמַלֶּאנָה אֶת־הָרְהָטִים לְהַשְׁקוֹת צֹאן אֲבִיהֶן</span> · <i>u-le-khohen midyan sheva banot va-tavona va-tidlena va-temalena et-ha-rehatim le-hashqot tzon avi-hen</i> · And the priest of Midian had seven daughters; and they came, and drew, and filled the troughs, to water their father&#x27;s flock.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּלְכֹהֵ֥ן מִדְיָ֖ן שֶׁ֣בַע בָּנ֑וֹת</span> · <i>u-le-khohen midyan sheva banot</i> · the priest of Midian had seven daughters (etnachta on banot) [VERIFIED: SNAPSHOT Exod.2.16 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתָּבֹ֣אנָה וַתִּדְלֶ֗נָה וַתְּמַלֶּ֨אנָה֙ אֶת הָ֣רְהָטִ֔ים לְהַשְׁק֖וֹת צֹ֥אן אֲבִיהֶֽן</span> · <i>va-tavona va-tidlena va-temalena et-ha-rehatim le-hashqot tzon avi-hen</i> · they came and drew and filled the troughs, to water their father&#x27;s flock (verse-final avi-hen) [VERIFIED: SNAPSHOT Exod.2.16 idx4-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(u_le_khohen_midyan_sheva_banot, t0)</span><br><span class="gloss">= HOLDS(and-to-khohen-midyan-seven-daughters, t0)</span><br>THE SEVEN [EX02-13]. u-le-KHOHEN midyan SHEVA banot — &#x27;the PRIEST of Midian had SEVEN daughters&#x27;: the priest-word&#x27;s Torah station (its Scripture-file at Micah&#x27;s shrine named — Jethro&#x27;s history and Gershom&#x27;s grandson, &#x27;the fault hung on the faulted&#x27; [VERIFIED under EX02-13]); the daughters DRAW and FILL (the draw-verb dalah — the name-verb&#x27;s cousin: the drawn-out man is about to draw): the machine opens the Midian file (Reuel/Jethro&#x27;s names, the readings&#x27; seven- names note, armed at 3:1 and 18:1).
+</td><td><span class="he">וּלְכֹהֵן מִדְיָן שֶׁבַע בָּנוֹת</span> · <i>u-le-khohen midyan sheva banot</i><br><span class="gloss">= and-to-khohen midyan seven daughters</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The Midian file opens.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_2_17 · Exod.2.17 · <span class='expr'>MOSES_SAVES_AND_WATERS</span></h3>
+<p><span class="he">וַיָּבֹאוּ הָרֹעִים וַיְגָרְשׁוּם וַיָּקָם מֹשֶׁה וַיּוֹשִׁעָן וַיַּשְׁקְ אֶת־צֹאנָם</span> · <i>va-yavou ha-roim va-yegarshu-m va-yaqam moshe va-yoshia-n va-yashq et-tzona-m</i> · And the shepherds came and drove them off; and Moses rose, and saved them, and watered their flock.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּבֹ֥אוּ הָרֹעִ֖ים וַיְגָרְשׁ֑וּם</span> · <i>va-yavou ha-roim va-yegarshu-m</i> · the shepherds came and drove them off (etnachta on va-yegarshu-m) [VERIFIED: SNAPSHOT Exod.2.17 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיָּ֤קָם מֹשֶׁה֙ וַיּ֣וֹשִׁעָ֔ן וַיַּ֖שְׁקְ אֶת צֹאנָֽם</span> · <i>va-yaqam moshe va-yoshia-n va-yashq et-tzona-m</i> · Moses rose, and saved them, and watered their flock (verse-final tzona-m) [VERIFIED: SNAPSHOT Exod.2.17 idx3-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yoshian_va_yashq_et_tzonam, t0)</span><br><span class="gloss">= HOLDS(and-yoshian-and-yashq-tzonam, t0)</span><br>THE RESCUE [EX02-05]. va-yavou ha-roim va-YEGARSHUM — the shepherds DRIVE THEM OFF (the expel-verb FULL with the Ramah&#x27;s precise copies, a minority Masorah&#x27;s lean carried named — the split in the stream&#x27;s favor) [VERIFIED under EX02-05]; va-yaqam moshe va-YOSHIAN — &#x27;Moses rose and SAVED them&#x27;: the save-verb&#x27;s Torah-unique token, written LEAN by the Hilleli, the Ramah, and Minchat Kohen — the deliverer&#x27;s first saving enters the Torah one yod short [VERIFIED: manifest EX02-05]; va-YASHQ et tzonam — he waters the flock (the readings: the fugitive&#x27;s third rescue in three scenes — Hebrew, Hebrew, stranger: the machine files the résumé the bush will hire).
+</td><td><span class="he">וַיָּקָם מֹשֶׁה וַיּוֹשִׁעָן וַיַּשְׁקְ אֶת־צֹאנָם</span> · <i>va-yaqam moshe va-yoshia-n va-yashq et-tzona-m</i><br><span class="gloss">= and-yaqam Moses and-yoshia-n and-yashq tzona-m</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The lean saving-verb.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_2_18 · Exod.2.18 · <span class='expr'>WHY_SO_SOON_TODAY</span></h3>
+<p><span class="he">וַתָּבֹאנָה אֶל־רְעוּאֵל אֲבִיהֶן וַיֹּאמֶר מַדּוּעַ מִהַרְתֶּן בֹּא הַיּוֹם</span> · <i>va-tavona el-reuel avi-hen va-yomer madua miharten bo ha-yom</i> · And they came to Reuel their father; and he said: Why have you hurried to come today?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתָּבֹ֕אנָה אֶל רְעוּאֵ֖ל אֲבִיהֶ֑ן</span> · <i>va-tavona el-reuel avi-hen</i> · they came to Reuel their father (etnachta on avi-hen) [VERIFIED: SNAPSHOT Exod.2.18 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּ֕אמֶר מַדּ֛וּעַ מִהַרְתֶּ֥ן בֹּ֖א הַיּֽוֹם</span> · <i>va-yomer madua miharten bo ha-yom</i> · why have you hurried to come today? (verse-final ha-yom) [VERIFIED: SNAPSHOT Exod.2.18 idx4-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(madua_miharten_bo_ha_yom, t0)</span><br><span class="gloss">= HOLDS(madua-miharten-in-it-the-day, t0)</span><br>THE QUESTION. va-tavona el REUEL avihen — REUEL the father (the name-file: Reuel here, Jethro at 3:1 — the readings&#x27; seven-names note armed, carried named-never-merged at 18:1); MADUA miharten BO ha-yom — &#x27;WHY have you HURRIED today?&#x27;: the question certifies the routine (every other day the shepherds&#x27; expulsion cost them hours — the readings): the machine files the household evidence of the rescue.
+</td><td><span class="he">וַיֹּאמֶר מַדּוּעַ מִהַרְתֶּן בֹּא הַיּוֹם</span> · <i>va-yomer madua miharten bo ha-yom</i><br><span class="gloss">= and-yomer madua miharten in-it day</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The father&#x27;s question.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_2_19 · Exod.2.19 · <span class='expr'>AN_EGYPTIAN_MAN_DELIVERED_US</span></h3>
+<p><span class="he">וַתֹּאמַרְןָ אִישׁ מִצְרִי הִצִּילָנוּ מִיַּד הָרֹעִים וְגַם־דָּלֹה דָלָה לָנוּ וַיַּשְׁקְ אֶת־הַצֹּאן</span> · <i>va-tomarna ish mitzri hitzila-nu mi-yad ha-roim ve-gam-dalo dala la-nu va-yashq et-ha-tzon</i> · And they said: An Egyptian man delivered us from the hand of the shepherds; and he also surely drew for us, and watered the flock.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתֹּאמַ֕רְןָ אִ֣ישׁ מִצְרִ֔י הִצִּילָ֖נוּ מִיַּ֣ד הָרֹעִ֑ים</span> · <i>va-tomarna ish mitzri hitzila-nu mi-yad ha-roim</i> · an Egyptian man delivered us from the hand of the shepherds (etnachta on ha-roim) [VERIFIED: SNAPSHOT Exod.2.19 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְגַם דָּלֹ֤ה דָלָה֙ לָ֔נוּ וַיַּ֖שְׁקְ אֶת הַצֹּֽאן</span> · <i>ve-gam-dalo dala la-nu va-yashq et-ha-tzon</i> · he also surely drew for us, and watered the flock (verse-final ha-tzon) [VERIFIED: SNAPSHOT Exod.2.19 idx6-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ish_mitzri_hitzilanu, t0)</span><br><span class="gloss">= HOLDS(man-mitzri-hitzilanu, t0)</span><br>THE REPORT. ISH MITZRI hitzilanu — &#x27;an EGYPTIAN man delivered us&#x27;: the daughters file the deliverer under the empire he fled (the readings&#x27; two hearings — the dress of the palace; or the Egyptian he struck as the cause of his coming — named, never merged); ve-gam DALO DALA lanu — &#x27;he also SURELY DREW for us&#x27;: the draw-verb doubled (the infinitive-absolute — the letter leans on the drawing twice, over the drawn-out man whose name means drawing): the machine notes the corpus&#x27;s habit of hiding the point in a servant-girl&#x27;s verb.
+</td><td><span class="he">אִישׁ מִצְרִי הִצִּילָנוּ מִיַּד הָרֹעִים</span> · <i>ish mitzri hitzila-nu mi-yad ha-roim</i><br><span class="gloss">= man mitzri hitzila-nu from-yad the-roim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The identity-irony; the doubled drawing.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_2_20 · Exod.2.20 · <span class='expr'>CALL_HIM_TO_EAT_BREAD</span></h3>
+<p><span class="he">וַיֹּאמֶר אֶל־בְּנֹתָיו וְאַיּוֹ לָמָּה זֶּה עֲזַבְתֶּן אֶת־הָאִישׁ קִרְאֶן לוֹ וְיֹאכַל לָחֶם</span> · <i>va-yomer el-benotay-v ve-ay-o la-ma ze azavten et-ha-ish qiren l-o ve-yokhal lachem</i> · And he said to his daughters: And where is he? Why is it that you left the man? Call him, and let him eat bread.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֥אמֶר אֶל בְּנֹתָ֖יו וְאַיּ֑וֹ</span> · <i>va-yomer el-benotay-v ve-ay-o</i> · and where is he? why have you left the man? (etnachta on ve-ay-o) [VERIFIED: SNAPSHOT Exod.2.20 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לָ֤מָּה זֶּה֙ עֲזַבְתֶּ֣ן אֶת הָאִ֔ישׁ קִרְאֶ֥ן ל֖וֹ וְיֹ֥אכַל לָֽחֶם</span> · <i>la-ma ze azavten et-ha-ish qiren l-o ve-yokhal lachem</i> · call him, and let him eat bread (verse-final lachem) [VERIFIED: SNAPSHOT Exod.2.20 idx4-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(reuel, LET(qiren_lo_ve_yokhal_lachem))</span><br><span class="gloss">= DECLARE(reuel, LET(qiren-not-and-yokhal-lachem))</span><br>THE INVITATION. ve-AYO — &#x27;and WHERE is he?&#x27;: the father&#x27;s rebuke (the readings: a man who waters your flock is not left at wells); QIREN LO ve-yokhal LACHEM — &#x27;CALL him, and let him eat BREAD&#x27;: the demand pushed on the seven (the bread-word — the readings&#x27; marriage- hearing named: as &#x27;bread&#x27; elsewhere veils a wife, the table set here becomes a household): the machine records the invitation and waits for its landing.
+</td><td><span class="he">קִרְאֶן לוֹ וְיֹאכַל לָחֶם</span> · <i>qiren l-o ve-yokhal lachem</i><br><span class="gloss">= qiren l-o and-yokhal lachem</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The invitation pushed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_2_21 · Exod.2.21 · <span class='expr'>MOSES_CONSENTS_ZIPPORAH_GIVEN</span></h3>
+<p><span class="he">וַיּוֹאֶל מֹשֶׁה לָשֶׁבֶת אֶת־הָאִישׁ וַיִּתֵּן אֶת־צִפֹּרָה בִתּוֹ לְמֹשֶׁה</span> · <i>va-yoel moshe la-shevet et-ha-ish va-yiten et-tzipora vit-o le-moshe</i> · And Moses consented to dwell with the man; and he gave Zipporah his daughter to Moses.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיּ֥וֹאֶל מֹשֶׁ֖ה לָשֶׁ֣בֶת אֶת הָאִ֑ישׁ</span> · <i>va-yoel moshe la-shevet et-ha-ish</i> · Moses consented to dwell with the man (etnachta on ha-ish) [VERIFIED: SNAPSHOT Exod.2.21 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּתֵּ֛ן אֶת צִפֹּרָ֥ה בִתּ֖וֹ לְמֹשֶֽׁה</span> · <i>va-yiten et-tzipora vit-o le-moshe</i> · and he gave Zipporah his daughter to Moses (verse-final le-moshe) [VERIFIED: SNAPSHOT Exod.2.21 idx5-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(qiren_lo_ve_yokhal_lachem, t3)</span><br><span class="gloss">= RESULT: HOLDS(qiren-not-and-yokhal-lachem, t3)</span><br>THE ACCEPTANCE [EX02-01]. va-YOEL moshe la-SHEVET et ha-ish — &#x27;Moses CONSENTED to DWELL with the man&#x27;: the call-demand discharges in its outcome — the man who was to be called for one meal stays for a generation (the machine notes the pop&#x27;s basis: the calling itself is never narrated; its acceptance is — the readings&#x27; oath-hearing on va-yoel named, never merged); va-yiten et TZIPORA vito le-moshe — ZIPPORAH given: the bird-name written LEAN as at all its exactly- three Torah stations (the two-count Masorah ruled a corruption by MS&#x27;s collation — the giving here, the taking at the night-encounter 4:25 armed, the wife-clause 18:2 armed) [VERIFIED: manifest EX02-01]: the well-meeting closes in the fathers&#x27; pattern — flock watered, bread offered, bride given.
+</td><td><span class="he">וַיּוֹאֶל מֹשֶׁה לָשֶׁבֶת אֶת־הָאִישׁ</span> · <i>va-yoel moshe la-shevet et-ha-ish</i><br><span class="gloss">= and-yoel Moses to-shevet the-man</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The invitation lands in a household.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_2_22 · Exod.2.22 · <span class='expr'>GERSHOM_NAMED</span></h3>
+<p><span class="he">וַתֵּלֶד בֵּן וַיִּקְרָא אֶת־שְׁמוֹ גֵּרְשֹׁם כִּי אָמַר גֵּר הָיִיתִי בְּאֶרֶץ נָכְרִיָּה</span> · <i>va-teled ben va-yiqra et-shem-o gershom ki amar ger hayiti be-eretz nakhriya</i> · And she bore a son, and he called his name Gershom; for he said: A stranger have I been in a foreign land.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתֵּ֣לֶד בֵּ֔ן וַיִּקְרָ֥א אֶת שְׁמ֖וֹ גֵּרְשֹׁ֑ם</span> · <i>va-teled ben va-yiqra et-shem-o gershom</i> · she bore a son, and he called his name Gershom (etnachta on gershom) [VERIFIED: SNAPSHOT Exod.2.22 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּ֣י אָמַ֔ר גֵּ֣ר הָיִ֔יתִי בְּאֶ֖רֶץ נָכְרִיָּֽה</span> · <i>ki amar ger hayiti be-eretz nakhriya</i> · for he said: a stranger have I been in a foreign land (verse-final nakhriya) [VERIFIED: SNAPSHOT Exod.2.22 idx6-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>NAME</td><td><span class="expr">name(ben_moshe) := gershom</span><br><span class="gloss">= name(ben-Moses) := gershom</span><br>THE SECOND NAME [EX02-04]. va-YIQRA et shemo GERSHOM — &#x27;and HE called his name Gershom&#x27;: one of the Masorah&#x27;s THREE presumed- stations — readers PRESUME va-tiqra (&#x27;and SHE called,&#x27; for she bore him), but the letter writes the he-form: the naming is MOSES&#x27; (the sevirin class continues its run-file — presumed-until, presumed- which, now presumed-she) [VERIFIED: manifest EX02-04]; ki GER hayiti be-eretz NAKHRIYA — &#x27;a STRANGER have I been in a FOREIGN land&#x27;: the stranger-word of the pieces-covenant (ger yihye zarakha, 15:13, gen_31) taken as his son&#x27;s name — the palace-son files himself under the prophecy&#x27;s first noun: REGISTRY writes its second key.
+</td><td><span class="he">וַיִּקְרָא אֶת־שְׁמוֹ גֵּרְשֹׁם</span> · <i>va-yiqra et-shem-o gershom</i><br><span class="gloss">= and-yiqra shem-o gershom</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The second naming; the presumed she.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_2_23 · Exod.2.23 · <span class='expr'>THE_KING_DIES_THE_CRY_GOES_UP</span></h3>
+<p><span class="he">וַיְהִי בַיָּמִים הָרַבִּים הָהֵם וַיָּמָת מֶלֶךְ מִצְרַיִם וַיֵּאָנְחוּ בְנֵי־יִשְׂרָאֵל מִן־הָעֲבֹדָה וַיִּזְעָקוּ וַתַּעַל שַׁוְעָתָם אֶל־הָאֱלֹהִים מִן־הָעֲבֹדָה</span> · <i>va-yehi va-yamim ha-rabim ha-hem va-yamat melekh mitzrayim va-yeanchu vene-yisrael min-ha-avoda va-yizaqu va-taal shavata-m el-ha-Elohim min-ha-avoda</i> · And it was in those many days, and the king of Egypt died; and the sons of Israel groaned from the service, and cried out; and their outcry went up to God from the service.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִי֩ בַיָּמִ֨ים הָֽרַבִּ֜ים הָהֵ֗ם וַיָּ֨מָת֙ מֶ֣לֶךְ מִצְרַ֔יִם וַיֵּאָנְח֧וּ בְנֵֽי יִשְׂרָאֵ֛ל מִן הָעֲבֹדָ֖ה וַיִּזְעָ֑קוּ</span> · <i>va-yehi va-yamim ha-rabim ha-hem va-yamat melekh mitzrayim va-yeanchu vene-yisrael min-ha-avoda va-yizaqu</i> · in those many days, the king of Egypt died; the sons of Israel groaned from the service (etnachta on va-yizaqu) [VERIFIED: SNAPSHOT Exod.2.23 idx12 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתַּ֧עַל שַׁוְעָתָ֛ם אֶל הָאֱלֹהִ֖ים מִן הָעֲבֹדָֽה</span> · <i>va-taal shavata-m el-ha-Elohim min-ha-avoda</i> · and they cried out, and their outcry went up to God from the service (verse-final ha-avoda) [VERIFIED: SNAPSHOT Exod.2.23 idx13-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">met(e2); Agent(e2, melekh_mitzrayim)</span><br><span class="gloss">= met(e2); Agent(e2, melekh-mitzrayim)</span><br>THE DEATH AND THE CRY [EX02-13]. va-YAMAT melekh mitzrayim — the king of Egypt DIES: the machine&#x27;s second EVENT (the arisen king of exo_01&#x27;s hinge goes down; the readings&#x27; leprosy-hearing named — a king &#x27;dead&#x27; to his court; the seek-to-kill of 2:15 begins to lapse, its receipt at 4:19 armed); MS&#x27;s open-paragraph ruling here carried named (&#x27;the printers erred&#x27; — paragraphing beyond the stream&#x27;s layer [VERIFIED under EX02-13]); va-YEANCHU... va-YIZAQU — they GROAN, they CRY OUT; va-TAAL shavatam el ha-ELOHIM min ha-avoda — &#x27;their outcry WENT UP to God from the service&#x27;: the ascent-verb on a sound (the readings: the cry, not yet a prayer, rises anyway — the service-word bracketing the verse twice): the machine files the covenant-clock&#x27;s chime — the next verse names the contract.
+</td><td><span class="he">וַיָּמָת מֶלֶךְ מִצְרַיִם</span> · <i>va-yamat melekh mitzrayim</i><br><span class="gloss">= and-yamat melekh mitzrayim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The oppressor dies; the cry ascends.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_2_24 · Exod.2.24 · <span class='expr'>GOD_REMEMBERED_THE_COVENANT</span></h3>
+<p><span class="he">וַיִּשְׁמַע אֱלֹהִים אֶת־נַאֲקָתָם וַיִּזְכֹּר אֱלֹהִים אֶת־בְּרִיתוֹ אֶת־אַבְרָהָם אֶת־יִצְחָק וְאֶת־יַעֲקֹב</span> · <i>va-yishma Elohim et-naaqata-m va-yizkor Elohim et-berit-o et-avraham et-yitzchaq ve-et-yaaqov</i> · And God heard their groaning; and God remembered His covenant with Abraham, with Isaac, and with Jacob.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּשְׁמַ֥ע אֱלֹהִ֖ים אֶת נַאֲקָתָ֑ם</span> · <i>va-yishma Elohim et-naaqata-m</i> · God heard their groaning (etnachta on naaqata-m) [VERIFIED: SNAPSHOT Exod.2.24 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּזְכֹּ֤ר אֱלֹהִים֙ אֶת בְּרִית֔וֹ אֶת אַבְרָהָ֖ם אֶת יִצְחָ֥ק וְאֶֽת יַעֲקֹֽב</span> · <i>va-yizkor Elohim et-berit-o et-avraham et-yitzchaq ve-et-yaaqov</i> · and God remembered His covenant with Abraham, with Isaac, and with Jacob (verse-final yaaqov) [VERIFIED: SNAPSHOT Exod.2.24 idx4-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yizkor_elohim_et_brito, t0)</span><br><span class="gloss">= HOLDS(and-yizkor-God-brito, t0)</span><br>THE REMEMBERING [the corpus hinge]. va-yishma ELOHIM et naaqatam — God HEARS the groaning (the naaqa-word — the readings: the wordless groan is the unit of prayer the letter counts first); va-YIZKOR Elohim et BRITO — &#x27;God REMEMBERED His COVENANT&#x27;: the remember-verb of the flood&#x27;s turning (8:1&#x27;s va-yizkor, gen_19 — the corpus&#x27;s hinge-verb: when the letter says God remembers, the world turns) now aimed at the PIECES-COVENANT by its three names — et AVRAHAM et YITZCHAQ ve-et YAAQOV: gen_31&#x27;s contract (the four hundred years, the judged nation, the great-property exit) called up by signatory: the machine files the moment the book&#x27;s engine turns over — everything after this verse is that covenant executing.
+</td><td><span class="he">וַיִּזְכֹּר אֱלֹהִים אֶת־בְּרִיתוֹ</span> · <i>va-yizkor Elohim et-berit-o</i><br><span class="gloss">= and-yizkor God berit-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The remembering: the pieces-covenant invoked by name.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_2_25 · Exod.2.25 · <span class='expr'>AND_GOD_KNEW</span></h3>
+<p><span class="he">וַיַּרְא אֱלֹהִים אֶת־בְּנֵי יִשְׂרָאֵל וַיֵּדַע אֱלֹהִים</span> · <i>va-yar Elohim et-bene yisrael va-yeda Elohim</i> · And God saw the sons of Israel; and God knew.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּ֥רְא אֱלֹהִ֖ים אֶת בְּנֵ֣י יִשְׂרָאֵ֑ל</span> · <i>va-yar Elohim et-bene yisrael</i> · God saw the sons of Israel (etnachta on yisrael) [VERIFIED: SNAPSHOT Exod.2.25 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֵּ֖דַע אֱלֹהִֽים</span> · <i>va-yeda Elohim</i> · and God knew (verse-final Elohim) [VERIFIED: SNAPSHOT Exod.2.25 idx5-6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yeda_elohim, t0)</span><br><span class="gloss">= HOLDS(and-yeda-God, t0)</span><br>THE KNOWING. va-YAR Elohim et bene yisrael — God SEES (the seeing Moses did at 2:11, now from above); va-YEDA Elohim — &#x27;and God KNEW&#x27;: the chapter&#x27;s know-ledger closes — the king who KNEW NOT Joseph (1:8), the sister stationed TO KNOW (2:4), the thing that BECAME KNOWN (2:14), and now the knowing with no stated object (the readings: He knew their pain — the object withheld because it is everything): the machine ends the unit on a two-word verse whose second word answers the book&#x27;s first villain — the not-knowing king is dead, and God knows.
+</td><td><span class="he">וַיֵּדַע אֱלֹהִים</span> · <i>va-yeda Elohim</i><br><span class="gloss">= and-yeda God</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The know-verb answered.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Ex_2_1 — a man went</td><td>And a man went from the house of Levi, and took a daughter of Levi.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיֵּ֥לֶךְ אִ֖ישׁ מִבֵּ֣ית לֵוִ֑י</span> · <i>va-yelekh ish mi-bet levi</i><br><span class="gloss">= and-yelekh man from-bet levi</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Ex_2_2 — good, and hidden</td><td>And the woman conceived, and bore a son; and she saw him, that he was good; and she hid him three months.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַתַּ֥הַר הָאִשָּׁ֖ה וַתֵּ֣לֶד בֵּ֑ן</span> · <i>va-tahar ha-isha va-teled ben</i><br><span class="gloss">= and-tahar the-isha and-teled ben</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Ex_2_3 — an ark of reeds</td><td>And when she could no longer hide him, she took for him an ark of reeds, and daubed it with mortar and with pitch; and she placed the child in it, and placed it in the rushes by the bank of the Nile.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וְלֹא יָכְלָ֣ה עוֹד֮ הַצְּפִינוֹ֒</span> · <i>ve-lo-yakhla od hatzfin-o</i><br><span class="gloss">= and-not-yakhla od hatzfin-o</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Ex_2_4 — the sister stationed</td><td>And his sister stationed herself far off, to know what would be done to him.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַתֵּתַצַּ֥ב אֲחֹת֖וֹ מֵרָחֹ֑ק לְדֵעָ֕ה</span> · <i>va-tetatzav achot-o me-rachoq le-dea</i><br><span class="gloss">= and-tetatzav achot-o from-rachoq to-dea</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Ex_2_5 — the descent that changed her law</td><td>And Pharaoh&#x27;s daughter went down to bathe at the Nile, and her maidens walked by the Nile&#x27;s side; and she saw the ark among the rushes, and sent her maidservant, and took it.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַתֵּ֤רֶד בַּת פַּרְעֹה֙ לִרְחֹ֣ץ</span> · <i>va-tered bat-paro li-rechotz</i><br><span class="gloss">= and-tered bat-paro to-me-rechotz</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Ex_2_6 — a weeping youth</td><td>And she opened it, and saw him — the child, and behold, a youth weeping; and she had pity on him, and said: This is one of the Hebrews&#x27; children.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַתִּפְתַּח֙ וַתִּרְאֵ֣הוּ אֶת הַיֶּ֔לֶד</span> · <i>va-tiftach va-tire-hu et-ha-yeled</i><br><span class="gloss">= and-tiftach and-tire-that the-yeled</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Ex_2_7 — shall I go and call</td><td>And his sister said to Pharaoh&#x27;s daughter: Shall I go and call you a nursing woman of the Hebrews, that she may nurse the child for you?</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַתֹּ֣אמֶר אֲחֹתוֹ֮ אֶל בַּת</span> · <i>va-tomer achot-o el-bat-</i><br><span class="gloss">= and-tomer achot-o to-bat</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Ex_2_8 — Go — and she went</td><td>And Pharaoh&#x27;s daughter said to her: Go. And the maiden went, and called the child&#x27;s mother.</td><td>LET(lekhi) pushed then satisfied in the SAME verse; no test, no name.</td><td><span class="he">וַתֹּֽאמֶר לָ֥הּ בַּת פַּרְעֹ֖ה</span> · <i>va-tomer-la-ה bat-paro</i><br><span class="gloss">= and-tomer-to-ה bat-paro</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Ex_2_9 — nurse him for me</td><td>And Pharaoh&#x27;s daughter said to her: Take this child, and nurse him for me, and I will give your wages. And the woman took the child, and nursed him.</td><td>LET(helikhi_et_ha_yeled_ve_heniqihu) pushed then satisfied in the SAME verse; no test, no name.<br><span class="gloss">= LET(helikhi-the-yeled-and-heniqihu) pushed then satisfied in the SAME verse; no test, no name.</span></td><td><span class="he">וַתֹּ֧אמֶר לָ֣הּ בַּת פַּרְעֹ֗ה</span> · <i>va-tomer la-ה bat-paro</i><br><span class="gloss">= and-tomer to-ה bat-paro</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Ex_2_10 — Moses named</td><td>And the child grew, and she brought him to Pharaoh&#x27;s daughter, and he became her son; and she called his name Moses, and said: For from the water I drew him.</td><td>SPECS empty; REGISTRY 1 writes</td><td><span class="he">וַיִגְדַּ֣ל הַיֶּ֗לֶד וַתְּבִאֵ֨הוּ֙ לְבַת</span> · <i>va-yigdal ha-yeled va-tevie-hu le-vat-</i><br><span class="gloss">= and-yigdal the-yeled and-tevie-that to-vat</span></td></tr>
+<tr><td><b>S11</b></td><td>after STEP_Ex_2_11 — he saw their burdens</td><td>And it was in those days, and Moses grew, and went out to his brothers, and saw their burdens; and he saw an Egyptian man striking a Hebrew man, of his brothers.</td><td>SPECS empty; REGISTRY 1 writes</td><td><span class="he">וַיְהִ֣י בַּיָּמִ֣ים הָהֵ֗ם וַיִּגְדַּ֤ל</span> · <i>va-yehi ba-yamim ha-hem va-yigdal</i><br><span class="gloss">= and-yehi seas the-hem and-yigdal</span></td></tr>
+<tr><td><b>S12</b></td><td>after STEP_Ex_2_12 — he struck the Egyptian</td><td>And he turned this way and that way, and saw that there was no man; and he struck the Egyptian, and hid him in the sand.</td><td>SPECS empty; REGISTRY 1 writes</td><td><span class="he">וַיִּ֤פֶן כֹּה֙ וָכֹ֔ה וַיַּ֖רְא</span> · <i>va-yifen ko va-kho va-yar</i><br><span class="gloss">= and-yifen ko and-kho and-yar</span></td></tr>
+<tr><td><b>S13</b></td><td>after STEP_Ex_2_13 — two Hebrews striving</td><td>And he went out on the second day, and behold, two Hebrew men striving; and he said to the wicked one: Why do you strike your fellow?</td><td>SPECS empty; REGISTRY 1 writes</td><td><span class="he">וַיֵּצֵא֙ בַּיּ֣וֹם הַשֵּׁנִ֔י וְהִנֵּ֛ה</span> · <i>va-yetze ba-yom ha-sheni ve-hine</i><br><span class="gloss">= and-yetze day the-sheni and-hine</span></td></tr>
+<tr><td><b>S14</b></td><td>after STEP_Ex_2_14 — who set you</td><td>And he said: Who set you as a man, prince and judge over us? Do you say to kill me, as you killed the Egyptian? And Moses feared, and said: Surely the thing is known.</td><td>SPECS empty; REGISTRY 1 writes</td><td><span class="he">וַ֠יֹּאמֶר מִ֣י שָֽׂמְךָ֞ לְאִ֨ישׁ</span> · <i>va-yomer mi sam-kha le-ish</i><br><span class="gloss">= and-yomer from sam-kha man</span></td></tr>
+<tr><td><b>S15</b></td><td>after STEP_Ex_2_15 — Pharaoh seeks, Moses flees</td><td>And Pharaoh heard this thing, and sought to kill Moses; and Moses fled from before Pharaoh, and dwelt in the land of Midian, and sat by the well.</td><td>SPECS empty; REGISTRY 1 writes</td><td><span class="he">וַיִּשְׁמַ֤ע פַּרְעֹה֙ אֶת הַדָּבָ֣ר</span> · <i>va-yishma paro et-ha-davar</i><br><span class="gloss">= and-yishma paro the-davar</span></td></tr>
+<tr><td><b>S16</b></td><td>after STEP_Ex_2_16 — seven daughters</td><td>And the priest of Midian had seven daughters; and they came, and drew, and filled the troughs, to water their father&#x27;s flock.</td><td>SPECS empty; REGISTRY 1 writes</td><td><span class="he">וּלְכֹהֵ֥ן מִדְיָ֖ן שֶׁ֣בַע בָּנ֑וֹת</span> · <i>u-le-khohen midyan sheva banot</i><br><span class="gloss">= and-to-khohen midyan seven daughters</span></td></tr>
+<tr><td><b>S17</b></td><td>after STEP_Ex_2_17 — Moses saves and waters</td><td>And the shepherds came and drove them off; and Moses rose, and saved them, and watered their flock.</td><td>SPECS empty; REGISTRY 1 writes</td><td><span class="he">וַיָּבֹ֥אוּ הָרֹעִ֖ים וַיְגָרְשׁ֑וּם וַיָּ֤קָם</span> · <i>va-yavou ha-roim va-yegarshu-m va-yaqam</i><br><span class="gloss">= and-yavou the-roim and-yegarshu-m and-yaqam</span></td></tr>
+<tr><td><b>S18</b></td><td>after STEP_Ex_2_18 — why so soon today</td><td>And they came to Reuel their father; and he said: Why have you hurried to come today?</td><td>SPECS empty; REGISTRY 1 writes</td><td><span class="he">וַתָּבֹ֕אנָה אֶל רְעוּאֵ֖ל אֲבִיהֶ֑ן</span> · <i>va-tavona el-reuel avi-hen</i><br><span class="gloss">= and-tavona to-reuel avi-hen</span></td></tr>
+<tr><td><b>S19</b></td><td>after STEP_Ex_2_19 — an Egyptian man delivered us</td><td>And they said: An Egyptian man delivered us from the hand of the shepherds; and he also surely drew for us, and watered the flock.</td><td>SPECS empty; REGISTRY 1 writes</td><td><span class="he">וַתֹּאמַ֕רְןָ אִ֣ישׁ מִצְרִ֔י הִצִּילָ֖נוּ</span> · <i>va-tomarna ish mitzri hitzila-nu</i><br><span class="gloss">= and-tomarna man mitzri hitzila-nu</span></td></tr>
+<tr><td><b>S20</b></td><td>after STEP_Ex_2_20 — call him to eat bread</td><td>And he said to his daughters: And where is he? Why is it that you left the man? Call him, and let him eat bread.</td><td>LET(qiren_lo_ve_yokhal_lachem) pushed and OPEN; REGISTRY 1 writes<br><span class="gloss">= LET(qiren-not-and-yokhal-lachem) pushed and OPEN; REGISTRY 1 writes</span></td><td><span class="he">וַיֹּ֥אמֶר אֶל בְּנֹתָ֖יו וְאַיּ֑וֹ</span> · <i>va-yomer el-benotay-v ve-ay-o</i><br><span class="gloss">= and-yomer to-benotay-v and-ay-o</span></td></tr>
+<tr><td><b>S21</b></td><td>after STEP_Ex_2_21 — Moses consents; Zipporah given</td><td>And Moses consented to dwell with the man; and he gave Zipporah his daughter to Moses.</td><td>SPECS empty; REGISTRY 1 writes</td><td><span class="he">וַיּ֥וֹאֶל מֹשֶׁ֖ה לָשֶׁ֣בֶת אֶת</span> · <i>va-yoel moshe la-shevet et-</i><br><span class="gloss">= and-yoel Moses to-shevet et-</span></td></tr>
+<tr><td><b>S22</b></td><td>after STEP_Ex_2_22 — Gershom named</td><td>And she bore a son, and he called his name Gershom; for he said: A stranger have I been in a foreign land.</td><td>SPECS empty; REGISTRY 2 writes</td><td><span class="he">וַתֵּ֣לֶד בֵּ֔ן וַיִּקְרָ֥א אֶת</span> · <i>va-teled ben va-yiqra et-</i><br><span class="gloss">= and-teled ben and-yiqra et-</span></td></tr>
+<tr><td><b>S23</b></td><td>after STEP_Ex_2_23 — the king dies; the cry goes up</td><td>And it was in those many days, and the king of Egypt died; and the sons of Israel groaned from the service, and cried out; and their outcry went up to God from the service.</td><td>SPECS empty; REGISTRY 2 writes</td><td><span class="he">וַיְהִי֩ בַיָּמִ֨ים הָֽרַבִּ֜ים הָהֵ֗ם</span> · <i>va-yehi va-yamim ha-rabim ha-hem</i><br><span class="gloss">= and-yehi seas the-rabim the-hem</span></td></tr>
+<tr><td><b>S24</b></td><td>after STEP_Ex_2_24 — God remembered the covenant</td><td>And God heard their groaning; and God remembered His covenant with Abraham, with Isaac, and with Jacob.</td><td>SPECS empty; REGISTRY 2 writes</td><td><span class="he">וַיִּשְׁמַ֥ע אֱלֹהִ֖ים אֶת נַאֲקָתָ֑ם</span> · <i>va-yishma Elohim et-naaqata-m</i><br><span class="gloss">= and-yishma God naaqata-m</span></td></tr>
+<tr><td><b>S25</b></td><td>after STEP_Ex_2_25 — and God knew</td><td>And God saw the sons of Israel; and God knew.</td><td>SPECS empty; REGISTRY 2 writes</td><td><span class="he">וַיַּ֥רְא אֱלֹהִ֖ים אֶת בְּנֵ֣י</span> · <i>va-yar Elohim et-bene</i><br><span class="gloss">= and-yar God bene</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: exo_02_drawn_from_the_water — Drawn from the water (2:1-25) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={&#x27;ha_yeled&#x27;: &#x27;moshe&#x27;, &#x27;ben_moshe&#x27;: &#x27;gershom&#x27;} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[&#x27;named_before_any_presence&#x27;, &#x27;named_before_any_presence&#x27;]
+
+=== S1 — after STEP_Ex_2_1 — a man went
+    וַיֵּ֥לֶךְ אִ֖ישׁ מִבֵּ֣ית לֵוִ֑י (va-yelekh ish mi-bet levi)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Ex_2_2 — good, and hidden
+    וַתַּ֥הַר הָאִשָּׁ֖ה וַתֵּ֣לֶד בֵּ֑ן (va-tahar ha-isha va-teled ben)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Ex_2_3 — an ark of reeds
+    וְלֹא יָכְלָ֣ה עוֹד֮ הַצְּפִינוֹ֒ (ve-lo-yakhla od hatzfin-o)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Ex_2_4 — the sister stationed
+    וַתֵּתַצַּ֥ב אֲחֹת֖וֹ מֵרָחֹ֑ק לְדֵעָ֕ה (va-tetatzav achot-o me-rachoq le-dea)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Ex_2_5 — the descent that changed her law
+    וַתֵּ֤רֶד בַּת פַּרְעֹה֙ לִרְחֹ֣ץ (va-tered bat-paro li-rechotz)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Ex_2_6 — a weeping youth
+    וַתִּפְתַּח֙ וַתִּרְאֵ֣הוּ אֶת הַיֶּ֔לֶד (va-tiftach va-tire-hu et-ha-yeled)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — after STEP_Ex_2_7 — shall I go and call
+    וַתֹּ֣אמֶר אֲחֹתוֹ֮ אֶל בַּת (va-tomer achot-o el-bat-)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S8 — after STEP_Ex_2_8 — Go — and she went
+    וַתֹּֽאמֶר לָ֥הּ בַּת פַּרְעֹ֖ה (va-tomer-la-ה bat-paro)
+    PASS  LET(lekhi) pushed then satisfied in the SAME verse  (pushed=Exod.2.8 satisfied=Exod.2.8)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S9 — after STEP_Ex_2_9 — nurse him for me
+    וַתֹּ֧אמֶר לָ֣הּ בַּת פַּרְעֹ֗ה (va-tomer la-ה bat-paro)
+    PASS  LET(helikhi_et_ha_yeled_ve_heniqihu) pushed then satisfied in the SAME verse  (pushed=Exod.2.9 satisfied=Exod.2.9)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S10 — after STEP_Ex_2_10 — Moses named
+    וַיִגְדַּ֣ל הַיֶּ֗לֶד וַתְּבִאֵ֨הוּ֙ לְבַת (va-yigdal ha-yeled va-tevie-hu le-vat-)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY 1 writes  (writes=1 names=[&#x27;ha_yeled&#x27;])
+
+=== S11 — after STEP_Ex_2_11 — he saw their burdens
+    וַיְהִ֣י בַּיָּמִ֣ים הָהֵ֗ם וַיִּגְדַּ֤ל (va-yehi ba-yamim ha-hem va-yigdal)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY 1 writes  (writes=1 names=[&#x27;ha_yeled&#x27;])
+
+=== S12 — after STEP_Ex_2_12 — he struck the Egyptian
+    וַיִּ֤פֶן כֹּה֙ וָכֹ֔ה וַיַּ֖רְא (va-yifen ko va-kho va-yar)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY 1 writes  (writes=1 names=[&#x27;ha_yeled&#x27;])
+
+=== S13 — after STEP_Ex_2_13 — two Hebrews striving
+    וַיֵּצֵא֙ בַּיּ֣וֹם הַשֵּׁנִ֔י וְהִנֵּ֛ה (va-yetze ba-yom ha-sheni ve-hine)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY 1 writes  (writes=1 names=[&#x27;ha_yeled&#x27;])
+
+=== S14 — after STEP_Ex_2_14 — who set you
+    וַ֠יֹּאמֶר מִ֣י שָֽׂמְךָ֞ לְאִ֨ישׁ (va-yomer mi sam-kha le-ish)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY 1 writes  (writes=1 names=[&#x27;ha_yeled&#x27;])
+
+=== S15 — after STEP_Ex_2_15 — Pharaoh seeks, Moses flees
+    וַיִּשְׁמַ֤ע פַּרְעֹה֙ אֶת הַדָּבָ֣ר (va-yishma paro et-ha-davar)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY 1 writes  (writes=1 names=[&#x27;ha_yeled&#x27;])
+
+=== S16 — after STEP_Ex_2_16 — seven daughters
+    וּלְכֹהֵ֥ן מִדְיָ֖ן שֶׁ֣בַע בָּנ֑וֹת (u-le-khohen midyan sheva banot)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY 1 writes  (writes=1 names=[&#x27;ha_yeled&#x27;])
+
+=== S17 — after STEP_Ex_2_17 — Moses saves and waters
+    וַיָּבֹ֥אוּ הָרֹעִ֖ים וַיְגָרְשׁ֑וּם וַיָּ֤קָם (va-yavou ha-roim va-yegarshu-m va-yaqam)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY 1 writes  (writes=1 names=[&#x27;ha_yeled&#x27;])
+
+=== S18 — after STEP_Ex_2_18 — why so soon today
+    וַתָּבֹ֕אנָה אֶל רְעוּאֵ֖ל אֲבִיהֶ֑ן (va-tavona el-reuel avi-hen)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY 1 writes  (writes=1 names=[&#x27;ha_yeled&#x27;])
+
+=== S19 — after STEP_Ex_2_19 — an Egyptian man delivered us
+    וַתֹּאמַ֕רְןָ אִ֣ישׁ מִצְרִ֔י הִצִּילָ֖נוּ (va-tomarna ish mitzri hitzila-nu)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY 1 writes  (writes=1 names=[&#x27;ha_yeled&#x27;])
+
+=== S20 — after STEP_Ex_2_20 — call him to eat bread
+    וַיֹּ֥אמֶר אֶל בְּנֹתָ֖יו וְאַיּ֑וֹ (va-yomer el-benotay-v ve-ay-o)
+    PASS  LET(qiren_lo_ve_yokhal_lachem) pushed and OPEN  (queue=[&#x27;qiren_lo_ve_yokhal_lachem&#x27;])
+    PASS  REGISTRY 1 writes  (writes=1 names=[&#x27;ha_yeled&#x27;])
+
+=== S21 — after STEP_Ex_2_21 — Moses consents; Zipporah given
+    וַיּ֥וֹאֶל מֹשֶׁ֖ה לָשֶׁ֣בֶת אֶת (va-yoel moshe la-shevet et-)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY 1 writes  (writes=1 names=[&#x27;ha_yeled&#x27;])
+
+=== S22 — after STEP_Ex_2_22 — Gershom named
+    וַתֵּ֣לֶד בֵּ֔ן וַיִּקְרָ֥א אֶת (va-teled ben va-yiqra et-)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY 2 writes  (writes=2 names=[&#x27;ben_moshe&#x27;, &#x27;ha_yeled&#x27;])
+
+=== S23 — after STEP_Ex_2_23 — the king dies; the cry goes up
+    וַיְהִי֩ בַיָּמִ֨ים הָֽרַבִּ֜ים הָהֵ֗ם (va-yehi va-yamim ha-rabim ha-hem)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY 2 writes  (writes=2 names=[&#x27;ben_moshe&#x27;, &#x27;ha_yeled&#x27;])
+
+=== S24 — after STEP_Ex_2_24 — God remembered the covenant
+    וַיִּשְׁמַ֥ע אֱלֹהִ֖ים אֶת נַאֲקָתָ֑ם (va-yishma Elohim et-naaqata-m)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY 2 writes  (writes=2 names=[&#x27;ben_moshe&#x27;, &#x27;ha_yeled&#x27;])
+
+=== S25 — after STEP_Ex_2_25 — and God knew
+    וַיַּ֥רְא אֱלֹהִ֖ים אֶת בְּנֵ֣י (va-yar Elohim et-bene)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY 2 writes  (writes=2 names=[&#x27;ben_moshe&#x27;, &#x27;ha_yeled&#x27;])
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/exo_02_drawn_from_the_water.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# exo_02_drawn_from_the_water — 2:1-25
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/exo_02_drawn_from_the_water.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Drawn from the water (2:1-25)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;exo_02_drawn_from_the_water&quot;)
+
+# -------------------------- Exod.2.1 · A_MAN_WENT --------------------------
+# וַיֵּלֶךְ אִישׁ מִבֵּית לֵוִי וַיִּקַּח אֶת־בַּת־לֵוִי
+# &quot;[EN-AID] And a man went from the house of Levi, and took a daughter of
+# Levi.&quot;
+m.step(&quot;Exod.2.1&quot;)
+# ‹וַיֵּלֶךְ אִישׁ מִבֵּית לֵוִי› (“and-go man from-house Levi”) — fact
+# holds: man-who?-house-Levi-obj-marker-daughter-Levi
+m.fact(&quot;ish_mi_bet_levi_et_bat_levi&quot;)
+
+# -------------------------- Exod.2.2 · GOOD_AND_HIDDEN ---------------------
+# וַתַּהַר הָאִשָּׁה וַתֵּלֶד בֵּן וַתֵּרֶא אֹתוֹ כִּי־טוֹב הוּא
+# וַתִּצְפְּנֵהוּ שְׁלֹשָׁה יְרָחִים
+# &quot;[EN-AID] And the woman conceived, and bore a son; and she saw him, that
+# he was good; and she hid him three months.&quot;
+m.step(&quot;Exod.2.2&quot;)
+# ‹וַתֵּרֶא אֹתוֹ כִּי־טוֹב הוּא› (“and-see obj-marker-him/its that good
+# he/it”) — fact holds: and-see-it-that-good-he/it
+m.fact(&quot;va_tere_oto_ki_tov_hu&quot;)
+
+# -------------------------- Exod.2.3 · AN_ARK_OF_REEDS ---------------------
+# וְלֹא־יָכְלָה עוֹד הַצְּפִינוֹ וַתִּקַּח־לוֹ תֵּבַת גֹּמֶא וַתַּחְמְרָה
+# בַחֵמָר וּבַזָּפֶת וַתָּשֶׂם בָּהּ אֶת־הַיֶּלֶד וַתָּשֶׂם בַּסּוּף
+# עַל־שְׂפַת הַיְאֹר
+# &quot;[EN-AID] And when she could no longer hide him, she took for him an ark
+# of reeds, and daubed it with mortar and with pitch; and she placed the
+# child in it, and placed it in the rushes by the bank of the Nile.&quot;
+m.step(&quot;Exod.2.3&quot;)
+# ‹וַתִּקַּח־לוֹ תֵּבַת גֹּמֶא וַתַּחְמְרָה בַחֵמָר וּבַזָּפֶת› (“and-take
+# to-him/its ark absorbent and-boil-up-her/its in-bitumen and-in-asphalt”) —
+# fact holds: ark-absorbent-over-lip-the-Nile
+m.fact(&quot;tevat_gome_al_sefat_ha_yeor&quot;)
+
+# -------------------------- Exod.2.4 · THE_SISTER_STATIONED ----------------
+# וַתֵּתַצַּב אֲחֹתוֹ מֵרָחֹק לְדֵעָה מַה־יֵּעָשֶׂה לוֹ
+# &quot;[EN-AID] And his sister stationed herself far off, to know what would be
+# done to him.&quot;
+m.step(&quot;Exod.2.4&quot;)
+# ‹וַתֵּתַצַּב אֲחֹתוֹ מֵרָחֹק› (“and-place sister-him/its from-remote”) —
+# fact holds: and-place-achoto-from-remote
+m.fact(&quot;va_tetatzav_achoto_me_rachoq&quot;)
+
+# -------------------------- Exod.2.5 · THE_DESCENT_THAT_CHANGED_HER_LAW ----
+# וַתֵּרֶד בַּת־פַּרְעֹה לִרְחֹץ עַל־הַיְאֹר וְנַעֲרֹתֶיהָ הֹלְכֹת עַל־יַד
+# הַיְאֹר וַתֵּרֶא אֶת־הַתֵּבָה בְּתוֹךְ הַסּוּף וַתִּשְׁלַח אֶת־אֲמָתָהּ
+# וַתִּקָּחֶהָ
+# &quot;[EN-AID] And Pharaoh&#x27;s daughter went down to bathe at the Nile, and her
+# maidens walked by the Nile&#x27;s side; and she saw the ark among the rushes,
+# and sent her maidservant, and took it.&quot;
+m.step(&quot;Exod.2.5&quot;)
+# ‹וַתִּשְׁלַח אֶת־אֲמָתָהּ וַתִּקָּחֶהָ› (“and-send obj-marker maidservant-
+# her/its and-take-her/its”) — fact holds: and-send-obj-marker-amatah-and-
+# tiqacheha
+m.fact(&quot;va_tishlach_et_amatah_va_tiqacheha&quot;)
+
+# -------------------------- Exod.2.6 · A_WEEPING_YOUTH ---------------------
+# וַתִּפְתַּח וַתִּרְאֵהוּ אֶת־הַיֶּלֶד וְהִנֵּה־נַעַר בֹּכֶה וַתַּחְמֹל
+# עָלָיו וַתֹּאמֶר מִיַּלְדֵי הָעִבְרִים זֶה
+# &quot;[EN-AID] And she opened it, and saw him — the child, and behold, a youth
+# weeping; and she had pity on him, and said: This is one of the Hebrews&#x27;
+# children.&quot;
+m.step(&quot;Exod.2.6&quot;)
+# ‹וַתַּחְמֹל עָלָיו› (“and-commiserate over-him/its”) — fact holds: and-
+# commiserate-alav
+m.fact(&quot;va_tachmol_alav&quot;)
+
+# -------------------------- Exod.2.7 · SHALL_I_GO_AND_CALL -----------------
+# וַתֹּאמֶר אֲחֹתוֹ אֶל־בַּת־פַּרְעֹה הַאֵלֵךְ וְקָרָאתִי לָךְ אִשָּׁה
+# מֵינֶקֶת מִן הָעִבְרִיֹּת וְתֵינִק לָךְ אֶת־הַיָּלֶד
+# &quot;[EN-AID] And his sister said to Pharaoh&#x27;s daughter: Shall I go and call
+# you a nursing woman of the Hebrews, that she may nurse the child for you?&quot;
+m.step(&quot;Exod.2.7&quot;)
+# ‹הַאֵלֵךְ וְקָרָאתִי לָךְ אִשָּׁה מֵינֶקֶת› (“the-go and-call to-you/your
+# woman suck”) — fact holds: the-go-and-call-suck
+m.fact(&quot;ha_elekh_ve_qarati_meneqet&quot;)
+
+# -------------------------- Exod.2.8 · GO_AND_SHE_WENT ---------------------
+# וַתֹּאמֶר־לָהּ בַּת־פַּרְעֹה לֵכִי וַתֵּלֶךְ הָעַלְמָה וַתִּקְרָא אֶת־אֵם
+# הַיָּלֶד
+# &quot;[EN-AID] And Pharaoh&#x27;s daughter said to her: Go. And the maiden went, and
+# called the child&#x27;s mother.&quot;
+m.step(&quot;Exod.2.8&quot;)
+# ‹לֵכִי› (“go”) — daughter-Pharaoh speaks a demand — LET: go
+m.declare(&quot;bat_paro&quot;, &quot;LET&quot;,
+          &quot;lekhi&quot;)
+# ‹וַתֵּלֶךְ הָעַלְמָה וַתִּקְרָא אֶת־אֵם הַיָּלֶד› (“and-go the-lass and-
+# call obj-marker mother the-child”) — demand settled (popped from the
+# queue): go
+m.result(&quot;lekhi&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Exod.2.9 · NURSE_HIM_FOR_ME --------------------
+# וַתֹּאמֶר לָהּ בַּת־פַּרְעֹה הֵילִיכִי אֶת־הַיֶּלֶד הַזֶּה וְהֵינִקִהוּ
+# לִי וַאֲנִי אֶתֵּן אֶת־שְׂכָרֵךְ וַתִּקַּח הָאִשָּׁה הַיֶּלֶד
+# וַתְּנִיקֵהוּ
+# &quot;[EN-AID] And Pharaoh&#x27;s daughter said to her: Take this child, and nurse
+# him for me, and I will give your wages. And the woman took the child, and
+# nursed him.&quot;
+m.step(&quot;Exod.2.9&quot;)
+# ‹הֵילִיכִי אֶת־הַיֶּלֶד הַזֶּה וְהֵינִקִהוּ לִי› (“go obj-marker the-child
+# the-this and-suck-him/its to-me/my”) — daughter-Pharaoh speaks a demand —
+# LET: go-obj-marker-the-child-and-heniqihu
+m.declare(&quot;bat_paro&quot;, &quot;LET&quot;,
+          &quot;helikhi_et_ha_yeled_ve_heniqihu&quot;)
+# ‹וַתִּקַּח הָאִשָּׁה הַיֶּלֶד וַתְּנִיקֵהוּ› (“and-take the-woman the-
+# child and-suckle-him/its”) — demand settled (popped from the queue): go-
+# obj-marker-the-child-and-heniqihu
+m.result(&quot;helikhi_et_ha_yeled_ve_heniqihu&quot;, tmark=&quot;t2&quot;)
+
+# -------------------------- Exod.2.10 · MOSES_NAMED ------------------------
+# וַיִגְדַּל הַיֶּלֶד וַתְּבִאֵהוּ לְבַת־פַּרְעֹה וַיְהִי־לָהּ לְבֵן
+# וַתִּקְרָא שְׁמוֹ מֹשֶׁה וַתֹּאמֶר כִּי מִן־הַמַּיִם מְשִׁיתִהוּ
+# &quot;[EN-AID] And the child grew, and she brought him to Pharaoh&#x27;s daughter,
+# and he became her son; and she called his name Moses, and said: For from
+# the water I drew him.&quot;
+m.step(&quot;Exod.2.10&quot;)
+# ‹וַתִּקְרָא שְׁמוֹ מֹשֶׁה› (“and-call name-him/its Moses”) — named: the-
+# child := Moses
+m.name(&quot;ha_yeled&quot;, &quot;moshe&quot;)
+
+# -------------------------- Exod.2.11 · HE_SAW_THEIR_BURDENS ---------------
+# וַיְהִי בַּיָּמִים הָהֵם וַיִּגְדַּל מֹשֶׁה וַיֵּצֵא אֶל־אֶחָיו וַיַּרְא
+# בְּסִבְלֹתָם וַיַּרְא אִישׁ מִצְרִי מַכֶּה אִישׁ־עִבְרִי מֵאֶחָיו
+# &quot;[EN-AID] And it was in those days, and Moses grew, and went out to his
+# brothers, and saw their burdens; and he saw an Egyptian man striking a
+# Hebrew man, of his brothers.&quot;
+m.step(&quot;Exod.2.11&quot;)
+# ‹וַיַּרְא בְּסִבְלֹתָם› (“and-see in-porterage-them/their”) — fact holds:
+# and-see-in-sivlotam
+m.fact(&quot;va_yar_be_sivlotam&quot;)
+
+# -------------------------- Exod.2.12 · HE_STRUCK_THE_EGYPTIAN -------------
+# וַיִּפֶן כֹּה וָכֹה וַיַּרְא כִּי אֵין אִישׁ וַיַּךְ אֶת־הַמִּצְרִי
+# וַיִּטְמְנֵהוּ בַּחוֹל
+# &quot;[EN-AID] And he turned this way and that way, and saw that there was no
+# man; and he struck the Egyptian, and hid him in the sand.&quot;
+m.step(&quot;Exod.2.12&quot;)
+# ‹וַיַּךְ אֶת־הַמִּצְרִי› (“and-strike obj-marker the-Egyptian”) — event:
+# hika — agent Moses
+m.event(&quot;hika&quot;, agent=&quot;moshe&quot;)
+
+# -------------------------- Exod.2.13 · TWO_HEBREWS_STRIVING ---------------
+# וַיֵּצֵא בַּיּוֹם הַשֵּׁנִי וְהִנֵּה שְׁנֵי־אֲנָשִׁים עִבְרִים נִצִּים
+# וַיֹּאמֶר לָרָשָׁע לָמָּה תַכֶּה רֵעֶךָ
+# &quot;[EN-AID] And he went out on the second day, and behold, two Hebrew men
+# striving; and he said to the wicked one: Why do you strike your fellow?&quot;
+m.step(&quot;Exod.2.13&quot;)
+# ‹וַיֹּאמֶר לָרָשָׁע לָמָּה תַכֶּה רֵעֶךָ› (“and-say to-wrong to-what
+# strike associate-you/your”) — fact holds: lama-strike-reekha
+m.fact(&quot;lama_take_reekha&quot;)
+
+# -------------------------- Exod.2.14 · WHO_SET_YOU ------------------------
+# וַיֹּאמֶר מִי שָׂמְךָ לְאִישׁ שַׂר וְשֹׁפֵט עָלֵינוּ הַלְהָרְגֵנִי אַתָּה
+# אֹמֵר כַּאֲשֶׁר הָרַגְתָּ אֶת־הַמִּצְרִי וַיִּירָא מֹשֶׁה וַיֹּאמַר אָכֵן
+# נוֹדַע הַדָּבָר
+# &quot;[EN-AID] And he said: Who set you as a man, prince and judge over us? Do
+# you say to kill me, as you killed the Egyptian? And Moses feared, and
+# said: Surely the thing is known.&quot;
+m.step(&quot;Exod.2.14&quot;)
+# ‹אָכֵן נוֹדַע הַדָּבָר› (“firmly know the-word/thing”) — fact holds:
+# firmly-know-the-word/thing
+m.fact(&quot;akhen_noda_ha_davar&quot;)
+
+# -------------------------- Exod.2.15 · PHARAOH_SEEKS_MOSES_FLEES ----------
+# וַיִּשְׁמַע פַּרְעֹה אֶת־הַדָּבָר הַזֶּה וַיְבַקֵּשׁ לַהֲרֹג אֶת־מֹשֶׁה
+# וַיִּבְרַח מֹשֶׁה מִפְּנֵי פַרְעֹה וַיֵּשֶׁב בְּאֶרֶץ־מִדְיָן וַיֵּשֶׁב
+# עַל־הַבְּאֵר
+# &quot;[EN-AID] And Pharaoh heard this thing, and sought to kill Moses; and
+# Moses fled from before Pharaoh, and dwelt in the land of Midian, and sat
+# by the well.&quot;
+m.step(&quot;Exod.2.15&quot;)
+# ‹וַיִּבְרַח מֹשֶׁה מִפְּנֵי פַרְעֹה› (“and-bolt Moses from-face Pharaoh”)
+# — fact holds: and-search-out-to-smite-with-deadly-intent-obj-marker-Moses
+m.fact(&quot;va_yevaqesh_la_harog_et_moshe&quot;)
+
+# -------------------------- Exod.2.16 · SEVEN_DAUGHTERS --------------------
+# וּלְכֹהֵן מִדְיָן שֶׁבַע בָּנוֹת וַתָּבֹאנָה וַתִּדְלֶנָה וַתְּמַלֶּאנָה
+# אֶת־הָרְהָטִים לְהַשְׁקוֹת צֹאן אֲבִיהֶן
+# &quot;[EN-AID] And the priest of Midian had seven daughters; and they came, and
+# drew, and filled the troughs, to water their father&#x27;s flock.&quot;
+m.step(&quot;Exod.2.16&quot;)
+# ‹וּלְכֹהֵן מִדְיָן שֶׁבַע בָּנוֹת› (“and-to-priest Midian seven daughter”)
+# — fact holds: and-to-priest-Midian-seven-daughter
+m.fact(&quot;u_le_khohen_midyan_sheva_banot&quot;)
+
+# -------------------------- Exod.2.17 · MOSES_SAVES_AND_WATERS -------------
+# וַיָּבֹאוּ הָרֹעִים וַיְגָרְשׁוּם וַיָּקָם מֹשֶׁה וַיּוֹשִׁעָן וַיַּשְׁקְ
+# אֶת־צֹאנָם
+# &quot;[EN-AID] And the shepherds came and drove them off; and Moses rose, and
+# saved them, and watered their flock.&quot;
+m.step(&quot;Exod.2.17&quot;)
+# ‹וַיָּקָם מֹשֶׁה וַיּוֹשִׁעָן וַיַּשְׁקְ אֶת־צֹאנָם› (“and-arise Moses
+# and-be-open-them/their and-give-drink obj-marker flock-them/their”) — fact
+# holds: and-yoshian-and-give-drink-obj-marker-tzonam
+m.fact(&quot;va_yoshian_va_yashq_et_tzonam&quot;)
+
+# -------------------------- Exod.2.18 · WHY_SO_SOON_TODAY ------------------
+# וַתָּבֹאנָה אֶל־רְעוּאֵל אֲבִיהֶן וַיֹּאמֶר מַדּוּעַ מִהַרְתֶּן בֹּא
+# הַיּוֹם
+# &quot;[EN-AID] And they came to Reuel their father; and he said: Why have you
+# hurried to come today?&quot;
+m.step(&quot;Exod.2.18&quot;)
+# ‹וַיֹּאמֶר מַדּוּעַ מִהַרְתֶּן בֹּא הַיּוֹם› (“and-say what-known? hasten
+# come/bring the-day”) — fact holds: what-known?-hasten-come/bring-the-day
+m.fact(&quot;madua_miharten_bo_ha_yom&quot;)
+
+# -------------------------- Exod.2.19 · AN_EGYPTIAN_MAN_DELIVERED_US -------
+# וַתֹּאמַרְןָ אִישׁ מִצְרִי הִצִּילָנוּ מִיַּד הָרֹעִים וְגַם־דָּלֹה דָלָה
+# לָנוּ וַיַּשְׁקְ אֶת־הַצֹּאן
+# &quot;[EN-AID] And they said: An Egyptian man delivered us from the hand of the
+# shepherds; and he also surely drew for us, and watered the flock.&quot;
+m.step(&quot;Exod.2.19&quot;)
+# ‹אִישׁ מִצְרִי הִצִּילָנוּ מִיַּד הָרֹעִים› (“man Egyptian snatch-away-
+# us/our from-hand the-graze”) — fact holds: man-Egyptian-hitzilanu
+m.fact(&quot;ish_mitzri_hitzilanu&quot;)
+
+# -------------------------- Exod.2.20 · CALL_HIM_TO_EAT_BREAD --------------
+# וַיֹּאמֶר אֶל־בְּנֹתָיו וְאַיּוֹ לָמָּה זֶּה עֲזַבְתֶּן אֶת־הָאִישׁ
+# קִרְאֶן לוֹ וְיֹאכַל לָחֶם
+# &quot;[EN-AID] And he said to his daughters: And where is he? Why is it that
+# you left the man? Call him, and let him eat bread.&quot;
+m.step(&quot;Exod.2.20&quot;)
+# ‹קִרְאֶן לוֹ וְיֹאכַל לָחֶם› (“call to-him/its and-eat food”) — Raguel
+# speaks a demand — LET: call-not-and-eat-food
+m.declare(&quot;reuel&quot;, &quot;LET&quot;,
+          &quot;qiren_lo_ve_yokhal_lachem&quot;)
+
+# -------------------------- Exod.2.21 · MOSES_CONSENTS_ZIPPORAH_GIVEN ------
+# וַיּוֹאֶל מֹשֶׁה לָשֶׁבֶת אֶת־הָאִישׁ וַיִּתֵּן אֶת־צִפֹּרָה בִתּוֹ
+# לְמֹשֶׁה
+# &quot;[EN-AID] And Moses consented to dwell with the man; and he gave Zipporah
+# his daughter to Moses.&quot;
+m.step(&quot;Exod.2.21&quot;)
+# ‹וַיּוֹאֶל מֹשֶׁה לָשֶׁבֶת אֶת־הָאִישׁ› (“and-yield Moses to-dwell/sit
+# with the-man”) — demand settled (popped from the queue): call-not-and-eat-
+# food
+m.result(&quot;qiren_lo_ve_yokhal_lachem&quot;, tmark=&quot;t3&quot;)
+
+# -------------------------- Exod.2.22 · GERSHOM_NAMED ----------------------
+# וַתֵּלֶד בֵּן וַיִּקְרָא אֶת־שְׁמוֹ גֵּרְשֹׁם כִּי אָמַר גֵּר הָיִיתִי
+# בְּאֶרֶץ נָכְרִיָּה
+# &quot;[EN-AID] And she bore a son, and he called his name Gershom; for he said:
+# A stranger have I been in a foreign land.&quot;
+m.step(&quot;Exod.2.22&quot;)
+# ‹וַיִּקְרָא אֶת־שְׁמוֹ גֵּרְשֹׁם› (“and-call obj-marker name-him/its
+# Gershom”) — named: son-Moses := Gershom
+m.name(&quot;ben_moshe&quot;, &quot;gershom&quot;)
+
+# -------------------------- Exod.2.23 · THE_KING_DIES_THE_CRY_GOES_UP ------
+# וַיְהִי בַיָּמִים הָרַבִּים הָהֵם וַיָּמָת מֶלֶךְ מִצְרַיִם וַיֵּאָנְחוּ
+# בְנֵי־יִשְׂרָאֵל מִן־הָעֲבֹדָה וַיִּזְעָקוּ וַתַּעַל שַׁוְעָתָם
+# אֶל־הָאֱלֹהִים מִן־הָעֲבֹדָה
+# &quot;[EN-AID] And it was in those many days, and the king of Egypt died; and
+# the sons of Israel groaned from the service, and cried out; and their
+# outcry went up to God from the service.&quot;
+m.step(&quot;Exod.2.23&quot;)
+# ‹וַיָּמָת מֶלֶךְ מִצְרַיִם› (“and-die king Egypt”) — event: met — agent
+# king-Egypt
+m.event(&quot;met&quot;, agent=&quot;melekh_mitzrayim&quot;)
+
+# -------------------------- Exod.2.24 · GOD_REMEMBERED_THE_COVENANT --------
+# וַיִּשְׁמַע אֱלֹהִים אֶת־נַאֲקָתָם וַיִּזְכֹּר אֱלֹהִים אֶת־בְּרִיתוֹ
+# אֶת־אַבְרָהָם אֶת־יִצְחָק וְאֶת־יַעֲקֹב
+# &quot;[EN-AID] And God heard their groaning; and God remembered His covenant
+# with Abraham, with Isaac, and with Jacob.&quot;
+m.step(&quot;Exod.2.24&quot;)
+# ‹וַיִּזְכֹּר אֱלֹהִים אֶת־בְּרִיתוֹ› (“and-mark God obj-marker covenant-
+# him/its”) — fact holds: and-mark-God-obj-marker-brito
+m.fact(&quot;va_yizkor_elohim_et_brito&quot;)
+
+# -------------------------- Exod.2.25 · AND_GOD_KNEW -----------------------
+# וַיַּרְא אֱלֹהִים אֶת־בְּנֵי יִשְׂרָאֵל וַיֵּדַע אֱלֹהִים
+# &quot;[EN-AID] And God saw the sons of Israel; and God knew.&quot;
+m.step(&quot;Exod.2.25&quot;)
+# ‹וַיֵּדַע אֱלֹהִים› (“and-know God”) — fact holds: and-know-God
+m.fact(&quot;va_yeda_elohim&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {&#x27;ha_yeled&#x27;: &#x27;moshe&#x27;, &#x27;ben_moshe&#x27;: &#x27;gershom&#x27;}
+    assert m.REGISTRY[&quot;writes&quot;] == 2
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS[&quot;log&quot;]) == 3
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;named_before_any_presence&#x27;: 2}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;ish_mi_bet_levi_et_bat_levi&#x27;, &#x27;va_tere_oto_ki_tov_hu&#x27;, &#x27;tevat_gome_al_sefat_ha_yeor&#x27;, &#x27;va_tetatzav_achoto_me_rachoq&#x27;, &#x27;va_tishlach_et_amatah_va_tiqacheha&#x27;, &#x27;va_tachmol_alav&#x27;, &#x27;ha_elekh_ve_qarati_meneqet&#x27;, &#x27;va_yar_be_sivlotam&#x27;, &#x27;lama_take_reekha&#x27;, &#x27;akhen_noda_ha_davar&#x27;, &#x27;va_yevaqesh_la_harog_et_moshe&#x27;, &#x27;u_le_khohen_midyan_sheva_banot&#x27;, &#x27;va_yoshian_va_yashq_et_tzonam&#x27;, &#x27;madua_miharten_bo_ha_yom&#x27;, &#x27;ish_mitzri_hitzilanu&#x27;, &#x27;va_yizkor_elohim_et_brito&#x27;, &#x27;va_yeda_elohim&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 10
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

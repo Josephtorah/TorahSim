@@ -1,0 +1,1140 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>exo_16_manna_and_sabbath — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/exo_16_manna_and_sabbath?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The manna and the Sabbath (16:1-36) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>exo_16_manna_and_sabbath</b> · Exodus 16:1-36 · derive logic_derived_v1 · phase FWD-30</div>
+<div class="meta"><a href="../#Exod/16/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">לֶ֖חֶם מִן הַשָּׁמָ֑יִם</span> · <i>lechem min-ha-shamayim</i> · &#x27;bread from the heavens&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DERIVED 2026-08-09 · FORWARD ERA unit #30 (run FWD-7 block 1; Exod 1-16 continuous behind it). Span: 16:1-36, whole chapter: 36 verses (SNAPSHOT-verified; 16:2, 16:11, 16:30, 16:36 without etnachta; TWO ketiv-and-qere pairs in-span, BOTH on the murmur-verb — 16:2 and 16:7, adjacent-token convention, gen_59 precedent). Oral layer IN-PIPELINE: manifest 13/13 VERIFIED, zero FAILED — see oral_audit_note_en. MACHINE PROFILE. SEVEN DECLAREs, SIX RESULTs, TWO EVENTS, ONE NAME, ONE TEST-FAIL. The command-densest block since exo_12, and the corpus&#x27;s first LAW-LOOP chapter: five of the seven cards pop in-span on narrated compliance (gather-daily 16:4→16:17 va-yaasu-khen; prepare-double 16:5→16:22; draw-near 16:9→16:10 as-Aaron-spoke; Sabbath-keeping 16:23→16:24 as-Moses-commanded; the jar 16:33→16:34 as-the-LORD-commanded), one stands as PERPETUAL DAILY LAW (leave-none-over 16:19 — breached its first night at 16:20, kept thereafter 16:21, excepted by the Sabbath-law 16:23), and the boundary-card (16:29) pops at 16:30 on the FIRST HUMAN SABBATH. TWO EVENTS: the glory&#x27;s first public appearance (16:10 — summoned by a bread-complaint) and the provision (16:13). THE TEST OF 16:4 (15:25&#x27;s armed nisahu PAYS: lemaan anasenu, ha-yelekh be-torati im-lo) RETURNS THE CORPUS&#x27;S SECOND FAIL at 16:28 — Tier-A textual warrant: ad-ana MEANTEM (the refuse-verb, Torah-unique in this plural, asserted — PHARAOH&#x27;S verb handed to Israel; verdicts are data). ONE NAME: the house of Israel names the bread MAN (16:31 — the corpus&#x27;s first collective naming; REGISTRY 1). The know-ledger opens Israel&#x27;s account (16:6 hotzi, 16:12 ani-YHWH-elohekhem — 6:7&#x27;s promise paid at supper). MACHINE EVIDENCE asserted at the build: the rain-causative&#x27;s Torah-three (flood Gen 7:4 → hail 9:18 → bread 16:4); the wrath-verb&#x27;s five (Pharaoh Gen 40:2 → Moses&#x27; first anger 16:20 → Lev 10:16, Num 31:14, Deut 1:34); va-yishbetu Torah-unique (God&#x27;s rest Gen 2:2, the people&#x27;s here); the manna-skeleton&#x27;s seven stations incl. Eden&#x27;s from-question (Gen 3:11). Queue at close: ONE OPEN in-unit (leave-none-over — perpetual daily law of the manna era) plus the standing opens. REGISTRY 1; TESTS 1 FAIL. CARE-POINTS: the dual-written murmur (ketiv/qere twice, both on the complaint-verb); the unordered double (16:22 complies before 16:23 explains — miracle ahead of law); the same act rot-then-religion (16:20 vs 16:24 — keeping manna overnight cursed Thursday, commanded Friday); the partitive breaches (anashim 16:20, min-ha-am 16:27 — guilt narrowing); the three todays (16:25); the hapax-cluster (mechuspas, tzapichit, tzintzenet); the two forward-leaning seams (the Testimony 16:34 before 25:16; the forty years 16:35). WATCHLIST ARMS: 17:1-7 (Rephidim — the thirst-cycle&#x27;s second station, from Sin by journeys), 20:8-11 (the Sabbath commanded at Sinai — the manna&#x27;s six-and-one frame scaled to law), 25:16 (the Testimony receives its ark), Num 11 (the quail&#x27;s dark twin, VERIFIED pair; the craving), Deut 8:3 (man-by-man — the manna moralized). Outside-Torah names (named-only): Josh 5:12 (the manna ceases at the omer), 2 Kgs 4:44 (Elisha&#x27;s left-over blessing), Ezek 10:4 (the glory lifts), Job 21:26 (the worm-covered grave), Judg 6:20-21 (Gideon&#x27;s rock).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-09 (IN-PIPELINE, forward era; manifest logic/oral_audit/manifests/exo_16_manna_and_sabbath_claims.json 13/13 VERIFIED, zero FAILED; record logic/oral_audit/AUDIT_exo_16_2026-08-09.md). CROWNS (chain-attested + DB-verified). THE UNIQUE MURMURINGS [EX16-01, MS on 16:12 + Lekach Tov — THE MARQUEE]: תלונת (&quot;murmurings&quot;) in a spelling with NO TWIN in the Torah (census 1, checked) — the PRINTED MASORAH&#x27;S pair-note ruled AN ERROR by MS (printed-authority file); Lekach Tov: the lean letter = &quot;diminished from their merits,&quot; and the frame&#x27;s mercy: &quot;all complaints are as one — and though they murmur, THEY ARE MY SONS.&quot; THE THREE LEAN SEVENTHS [EX16-02, MS on 16:30 citing the Ramah]: השבעי (&quot;the seventh&quot;) lean exactly THREE times in the Torah (census exact, checked): the leaven-removal day (12:15), THE FIRST HUMAN SABBATH (16:30), and the Jubilee&#x27;s horn (Lev 25:9) — the three great cessations on one thinned skeleton. THE QUAIL PAIR [EX16-03, KB + MS + Yoma]: השלו (&quot;the quail&quot;) exactly twice (here + Num 11:32 the graves of craving) — &quot;here too it ceased, and they murmured again&quot;; lean-yod per the Ramah; Yoma: the righteous eat it in peace, to the wicked it is thorns. THE LEFT-OVER AND THE LIFTINGS [EX16-04, KB + MS on 16:20]: ויותרו (&quot;and they left over&quot;) Torah-unique — Elisha&#x27;s twin: by the word a blessing, against the word a curse; וירם (&quot;and it bred/lifted&quot;) with the THREE-DOT vowel, &quot;in our Masorah NONE OTHER&quot; — pointed apart from the GLORY&#x27;s lifting (Ezek 10:4); the heart that lifts, lifts worms. THE WORMLESS SABBATH [EX16-05, KB on 16:24]: ורמה (&quot;and no worm&quot;) Torah-unique — Job&#x27;s grave its twin: the worm powerless over the Sabbath and the manna-eaters. THE 248 [EX16-06, KB on 16:14]: מחספס (&quot;flake-like&quot;) an absolute hapax = 248 (asserted) — &quot;absorbed in the 248 limbs.&quot; THE ALPHABET-VERSE [EX16-07, KB on 16:16/4/5]: all TWENTY-TWO letters stand in the omer-verse (asserted) — &quot;whoever upholds the Torah is fed without toil, like the manna-eaters&quot;; &quot;the Torah was given only to the eaters of the manna&quot; (16:4); everything of the Sabbath DOUBLE (16:5). THE ELIJAH INITIALS [EX16-08, KB on 16:32]: the initials of למען יראו את הלחם (&quot;that they may see the bread&quot;) = the letters of אליה (ELIJAH, checked) — &quot;kept until Elijah comes.&quot; THE FENCE-ORDER [EX16-09, KB on 16:23]: שבתון (&quot;solemn rest&quot;) before שבת (&quot;sabbath&quot;) UNIQUELY here (adjacency checked; Vayaqhel reverses) — &quot;we add from the weekday onto the holy at entry and exit.&quot; THE BOUNDARY [EX16-10, KB on 16:29]: אל יצא (&quot;let none go out&quot;) adjacency Torah-unique (checked) — four cubits, the Sabbath-limit, the court&#x27;s lash: rest as geometry. SIN AND THE BUSH [EX16-11, KB + MS on 16:1]: סין = הסנה (&quot;the bush,&quot; 120=120, asserted); Sinai = Sin + the yod of the ten utterances; the station-word&#x27;s Torah-four (checked); every Sin full, every Tzin lean (MS). THE JAR [EX16-12, KB on 16:33/36]: צנצנת (&quot;jar&quot;) an absolute hapax (checked); והנח (&quot;and lay it&quot;) — Gideon&#x27;s rock: two self-consuming meals; the omer-gloss juxtaposed — manna until the OMER is offered (Josh 5). THE LETTER-FILE [EX16-13, MS + KB]: kol-adat&#x27;s kaf dageshed (16:2, checked); the murmur dual-written twice (16:2, 16:7 — ketiv/qere both times); תלונת&#x27;s nun dageshed for the swallowed letter; לגלגלת (&quot;a head&quot;) — both gimels dageshed (checked at the build); no lengtheners in 16:18&#x27;s he&#x27;s; ונמס (&quot;it melted&quot;) pausal — the grammarians&#x27; divergence dual-tracked; כזרע (&quot;like seed&quot;) per the Chizkuni; books that add את (the object-marker) to the Sabbath-giving of 16:29 &quot;are IN ERROR&quot; (printed-authority); בשמעו three (the just complaint heard); לשבע four (fish free even in Egypt); the clouds by AARON&#x27;S MERIT (16:10).</div>
+<div class="meta">confidence: structure tested; oral layer verified 13/13</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>FORWARD ERA run 7, block 1 (owner: &quot;do one more block&quot;). Canon continuation: Exod 16:1-36 — the manna-chapter, whole.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Span + source + conventions</td><td>SNAPSHOT prestage: 36 verses; 16:2, 16:11, 16:30, 16:36 without etnachta. TWO ketiv/qere pairs in-span, both on the murmur-verb (16:2, 16:7 — adjacent-token convention). Volitive census: seven real pushes (16:4 gather-daily, 16:5 prepare-double, 16:9 draw-near, 16:19 leave-none, 16:23 keep-surplus, 16:29 boundary, 16:33 the jar); 16:3&#x27;s death-wish is quoted-optative (no push); 16:25-26&#x27;s eat-today/six-days folds into the standing frame.</td><td>established</td></tr>
+<tr><td><b>C</b></td><td>Machine structure</td><td>7D/6R/2E/1N/1 TEST-FAIL. Five cards pop on narrated compliance-formulas; leave-none-over stands as perpetual daily law (breached 16:20, kept 16:21); the boundary pops on the first human Sabbath (16:30, va-yishbetu Torah-unique asserted). The glory-event (16:10) and the provision-event (16:13). The 16:4 test returns FAIL at 16:28 on the text&#x27;s own refuse-verb (meantem Torah-unique, asserted — Pharaoh&#x27;s verb handed on). The house names the manna (16:31, REGISTRY 1). Asserted machine evidence: mamtir&#x27;s flood-hail-bread three; the wrath-verb five; the manna-skeleton&#x27;s seven stations.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Exod 16 (20 notes) + Kitzur Baal HaTurim on Exod 16 (21 notes). Manifest 13 rows: 13 VERIFIED / 0 FAILED / 0 UNCHECKABLE, first run. The unique murmurings (printed Masorah corrected); the three lean sevenths (the Ramah&#x27;s census exact); the quail pair; the left-over/liftings file; the wormless Sabbath; the 248; the alphabet-verse; the Elijah initials (initial_letters check); the fence-order; the boundary; Sin=the-bush; the jar; the letter-file.</td><td>established</td></tr>
+<tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 13/13 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-09 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits. Exod 1-16 continuous.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Ex_16_1 · Exod.16.1 · <span class='expr'>INTO_THE_WILDERNESS_OF_SIN</span></h3>
+<p><span class="he">וַיִּסְעוּ מֵאֵילִם וַיָּבֹאוּ כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל אֶל־מִדְבַּר־סִין אֲשֶׁר בֵּין־אֵילִם וּבֵין סִינָי בַּחֲמִשָּׁה עָשָׂר יוֹם לַחֹדֶשׁ הַשֵּׁנִי לְצֵאתָם מֵאֶרֶץ מִצְרָיִם</span> · <i>va-yisu me-elim va-yavou kal-adat bene-yisrael el-midbar-sin asher ben-elim u-ven sinay ba-chamisha asar yom la-chodesh ha-sheni le-tzeta-m me-eretz mitzrayim</i> · And they journeyed from Elim, and all the congregation of the sons of Israel came to the wilderness of Sin, which is between Elim and Sinai, on the fifteenth day of the second month after their going out from the land of Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּסְעוּ֙ מֵֽאֵילִ֔ם וַיָּבֹ֜אוּ כָּל עֲדַ֤ת בְּנֵֽי יִשְׂרָאֵל֙ אֶל מִדְבַּר סִ֔ין אֲשֶׁ֥ר בֵּין אֵילִ֖ם וּבֵ֣ין סִינָ֑י</span> · <i>va-yisu me-elim va-yavou kal-adat bene-yisrael el-midbar-sin asher ben-elim u-ven sinay</i> · and they journeyed from Elim, and all the congregation of the sons of Israel came to the wilderness of Sin, which is between Elim and Sinai (etnachta on sinay) [VERIFIED: SNAPSHOT Exod.16.1 idx14 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">בַּחֲמִשָּׁ֨ה עָשָׂ֥ר יוֹם֙ לַחֹ֣דֶשׁ הַשֵּׁנִ֔י לְצֵאתָ֖ם מֵאֶ֥רֶץ מִצְרָֽיִם</span> · <i>ba-chamisha asar yom la-chodesh ha-sheni le-tzeta-m me-eretz mitzrayim</i> · on the fifteenth day of the second month after their going out from the land of Egypt (verse-final mitzrayim) [VERIFIED: SNAPSHOT Exod.16.1 idx15-22]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yavou_el_midbar_sin, t0)</span><br><span class="gloss">= HOLDS(and-yavou-to-midbar-sin, t0)</span><br>THE STATION [EX16-11 CROWN]. va-yisu me-ELIM... el-midbar-SIN — from the twelve springs to the wilderness of SIN: the desert&#x27;s name counts THE BUSH (asserted at the build: 120 = 120 — the Kitzur: named for the thornbush of the calling; &#x27;and it is called SINAI for the TEN utterances given on it&#x27;: the desert plus its yod — the mountain named as the wilderness plus its commandments); the station-word&#x27;s Torah-census exactly FOUR (VERIFIED: the arrival, the departure 17:1, the itinerary&#x27;s pair) — with MS&#x27;s spelling-law over the file: every Sin with the samekh FULL, every Tzin with the tzadi LEAN (two deserts kept apart by orthography); ben-ELIM u-ven SINAI — the address given as a span between water and law; ba-CHAMISHA ASAR yom la-chodesh ha-SHENI — the corpus&#x27;s second full date (12:2&#x27;s calendar-card paying: the itinerary now keeps time in the new reckoning — one month from the exodus, the machine notes the ledger: the bread of Egypt ran out on the day the manna-chapter opens, the readings named-only).
+</td><td><span class="he">וַיִּסְעוּ מֵאֵילִם וַיָּבֹאוּ כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל אֶל־מִדְבַּר־סִין אֲשֶׁר בֵּין־אֵילִם וּבֵין סִינָי</span> · <i>va-yisu me-elim va-yavou kal-adat bene-yisrael el-midbar-sin asher ben-elim u-ven sinay</i><br><span class="gloss">= and-yisu from-elim and-yavou kal-adat bene-yisrael to-midbar-sin which ben-elim and-ven sinay</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The dated station; the bush-cipher.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_2 · Exod.16.2 · <span class='expr'>THE_WHOLE_CONGREGATION_MURMURS</span></h3>
+<p><span class="he">וילינו וַיִּלּוֹנוּ כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל עַל־מֹשֶׁה וְעַל־אַהֲרֹן בַּמִּדְבָּר</span> · <i>v-ylynv va-yilonu kal-adat bene-yisrael al-moshe ve-al-aharon ba-midbar</i> · And all the congregation of the sons of Israel murmured against Moses and against Aaron in the wilderness.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וילינו וַיִּלּ֜וֹנוּ כָּל עֲדַ֧ת בְּנֵי יִשְׂרָאֵ֛ל עַל מֹשֶׁ֥ה וְעַֽל אַהֲרֹ֖ן</span> · <i>v-ylynv va-yilonu kal-adat bene-yisrael al-moshe ve-al-aharon</i> · and all the congregation of the sons of Israel murmured against Moses and against Aaron (NO etnachta in verse: split at tifcha on aharon) [VERIFIED: SNAPSHOT Exod.16.2 idx9 tifcha; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">בַּמִּדְבָּֽר</span> · <i>ba-midbar</i> · in the wilderness (verse-final ba-midbar) [VERIFIED: SNAPSHOT Exod.16.2 idx10-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yilonu_al_moshe_ve_al_aharon, t0)</span><br><span class="gloss">= HOLDS(and-yilonu-upon-Moses-and-upon-Aaron, t0)</span><br>THE MURMUR DOUBLED [EX16-13]. va-YILONU kol-adat bene-yisrael — &#x27;and all the congregation MURMURED&#x27;: exo_15&#x27;s arm PAYS (15:24&#x27;s target was Moses alone; 16:2 adds AARON — the escalation armed at Marah arrives on schedule) — and the verb itself is DUAL-WRITTEN (asserted at the build: written one way, READ va-yilonu — the ketiv-and-qere convention, gen_59&#x27;s adjacent-token precedent): the murmuring reaches the page spelled one way and voiced another — the corpus&#x27;s complaint-verb refusing to sit still even as a word; kol-ADAT — the kaf DAGESHED (VERIFIED in-token: the guard-class again); the WHOLE congregation (15:24&#x27;s ha-am widened): ba-MIDBAR — the machine notes the address-line: the wilderness itself joins the sentence, the theater of the test named as party.
+</td><td><span class="he">וילינו וַיִּלּוֹנוּ כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל עַל־מֹשֶׁה וְעַל־אַהֲרֹן בַּמִּדְבָּר</span> · <i>v-ylynv va-yilonu kal-adat bene-yisrael al-moshe ve-al-aharon ba-midbar</i><br><span class="gloss">= v-ylynv and-yilonu kal-adat bene-yisrael upon-Moses and-upon-Aaron in-the-midbar</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The dual-written murmur; Aaron added.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_3 · Exod.16.3 · <span class='expr'>THE_FLESH_POTS</span></h3>
+<p><span class="he">וַיֹּאמְרוּ אֲלֵהֶם בְּנֵי יִשְׂרָאֵל מִי־יִתֵּן מוּתֵנוּ בְיַד־יְהוָה בְּאֶרֶץ מִצְרַיִם בְּשִׁבְתֵּנוּ עַל־סִיר הַבָּשָׂר בְּאָכְלֵנוּ לֶחֶם לָשֹׂבַע כִּי־הוֹצֵאתֶם אֹתָנוּ אֶל־הַמִּדְבָּר הַזֶּה לְהָמִית אֶת־כָּל־הַקָּהָל הַזֶּה בָּרָעָב</span> · <i>va-yomru el-hem bene yisrael mi-yiten mute-nu ve-yad-YHWH be-eretz mitzrayim be-shivte-nu al-sir ha-basar be-akhle-nu lechem la-sova ki-hotzetem et-nu el-ha-midbar ha-ze le-hamit et-kal-ha-qahal ha-ze ba-raav</i> · And the sons of Israel said to them: Would that we had died by the hand of the LORD in the land of Egypt, when we sat by the flesh-pot, when we ate bread to the full — for you have brought us out to this wilderness, to kill this whole assembly with hunger.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּאמְר֨וּ אֲלֵהֶ֜ם בְּנֵ֣י יִשְׂרָאֵ֗ל מִֽי יִתֵּ֨ן מוּתֵ֤נוּ בְיַד יְהוָה֙ בְּאֶ֣רֶץ מִצְרַ֔יִם בְּשִׁבְתֵּ֨נוּ֙ עַל סִ֣יר הַבָּשָׂ֔ר בְּאָכְלֵ֥נוּ לֶ֖חֶם לָשֹׂ֑בַע</span> · <i>va-yomru el-hem bene yisrael mi-yiten mute-nu ve-yad-YHWH be-eretz mitzrayim be-shivte-nu al-sir ha-basar be-akhle-nu lechem la-sova</i> · and the sons of Israel said to them: would that we had died by the hand of the LORD in the land of Egypt, when we sat by the flesh-pot, when we ate bread to the full (etnachta on la-sova) [VERIFIED: SNAPSHOT Exod.16.3 idx17 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּֽי הוֹצֵאתֶ֤ם אֹתָ֨נוּ֙ אֶל הַמִּדְבָּ֣ר הַזֶּ֔ה לְהָמִ֛ית אֶת כָּל הַקָּהָ֥ל הַזֶּ֖ה בָּרָעָֽב</span> · <i>ki-hotzetem et-nu el-ha-midbar ha-ze le-hamit et-kal-ha-qahal ha-ze ba-raav</i> · for you have brought us out to this wilderness, to kill this whole assembly with hunger (verse-final ba-raav) [VERIFIED: SNAPSHOT Exod.16.3 idx18-29]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(mi_yiten_mutenu, t0)</span><br><span class="gloss">= HOLDS(from-yiten-mutenu, t0)</span><br>THE WISH [EX16-13]. MI-YITEN mutenu ve-yad-YHWH be-eretz mitzrayim — &#x27;WOULD THAT we had died by the hand of the LORD in Egypt&#x27;: the death-wish in the optative frame (the quoted-wish class — no push: a longing, not a demand; 14:11-12&#x27;s grave-complaint escalated from irony to appetite); be-shivtenu al-SIR HA-BASAR be-akhlenu lechem LA-SOVA — &#x27;when we sat by the FLESH-POT, when we ate bread TO THE FULL&#x27;: the remembered menu (the Kitzur&#x27;s four fill-words named: &#x27;even in Egypt He summoned their fill — the fish free of charge&#x27;: the corpus&#x27;s own audit of the nostalgia — the fullness they credit to Egypt the chain credits to the same Hand they wish had killed them); le-hamit et-kol-ha-qahal ha-ze BA-RAAV — &#x27;to kill this whole assembly WITH HUNGER&#x27;: the HUNGER-FILE opens (exo_15 opened thirst, exo_16 opens famine — the wilderness-cycle testing one organ at a time).
+</td><td><span class="he">מִי־יִתֵּן מוּתֵנוּ בְיַד־יְהוָה בְּאֶרֶץ מִצְרַיִם בְּשִׁבְתֵּנוּ עַל־סִיר הַבָּשָׂר בְּאָכְלֵנוּ לֶחֶם לָשֹׂבַע</span> · <i>mi-yiten mute-nu ve-yad-YHWH be-eretz mitzrayim be-shivte-nu al-sir ha-basar be-akhle-nu lechem la-sova</i><br><span class="gloss">= from-yiten mute-nu and-yad-the-LORD earth mitzrayim in-shivte-nu upon-sir flesh in-akhle-nu lechem to-sova</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The death-wish; the hunger-file opens.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_4 · Exod.16.4 · <span class='expr'>BREAD_FROM_HEAVEN</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה הִנְנִי מַמְטִיר לָכֶם לֶחֶם מִן־הַשָּׁמָיִם וְיָצָא הָעָם וְלָקְטוּ דְּבַר־יוֹם בְּיוֹמוֹ לְמַעַן אֲנַסֶּנּוּ הֲיֵלֵךְ בְּתוֹרָתִי אִם־לֹא</span> · <i>va-yomer YHWH el-moshe hin-ni mamtir la-khem lechem min-ha-shamayim ve-yatza ha-am ve-laqtu devar-yom be-yom-o lemaan anase-nu ha-yelekh be-torati-y im-lo</i> · And the LORD said to Moses: Behold, I rain for you bread from the heavens; and the people shall go out and gather the day&#x27;s portion in its day, that I may test him — will he walk in My law, or not?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה הִנְנִ֨י מַמְטִ֥יר לָכֶ֛ם לֶ֖חֶם מִן הַשָּׁמָ֑יִם</span> · <i>va-yomer YHWH el-moshe hin-ni mamtir la-khem lechem min-ha-shamayim</i> · and the LORD said to Moses: behold, I rain for you bread from the heavens (etnachta on ha-shamayim) [VERIFIED: SNAPSHOT Exod.16.4 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְיָצָ֨א הָעָ֤ם וְלָֽקְטוּ֙ דְּבַר י֣וֹם בְּיוֹמ֔וֹ לְמַ֧עַן אֲנַסֶּ֛נּוּ הֲיֵלֵ֥ךְ בְּתוֹרָתִ֖י אִם לֹֽא</span> · <i>ve-yatza ha-am ve-laqtu devar-yom be-yom-o lemaan anase-nu ha-yelekh be-torati-y im-lo</i> · and the people shall go out and gather the day&#x27;s portion in its day, that I may test him — will he walk in My law, or not (verse-final lo) [VERIFIED: SNAPSHOT Exod.16.4 idx10-21]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(ve_laqtu_devar_yom_be_yomo))</span><br><span class="gloss">= DECLARE(the-LORD, LET(and-laqtu-devar-day-in-yomo))</span><br>THE RATION [EX16-07]. hineni MAMTIR lakhem LECHEM min-ha-SHAMAYIM — &#x27;behold, I RAIN for you BREAD from the HEAVENS&#x27;: the rain- causative&#x27;s Torah-career exactly THREE (asserted at the build): the FLOOD (Gen 7:4), the HAIL (9:18), and the BREAD — the corpus&#x27;s own arc: the verb that drowned a world and broke Egypt&#x27;s stalks now sets the table (exo_15&#x27;s repair-turn continued: the weapon-grammar re- tooled for provision); ve-yatzu ha-am VE-LAQTU devar-yom BE-YOMO — &#x27;and the people shall go out and GATHER the DAY&#x27;S PORTION IN ITS DAY&#x27;: the card pushed — bread by subscription, not by barn (the readings on daily trust, named-only); LEMAAN ANASENU — &#x27;that I may TEST him&#x27;: 15:25&#x27;s armed test-verb PAYS ON SCHEDULE (the verdict- less test of Marah gains its named instrument: bread), ha-YELEKH be- TORATI IM-LO — &#x27;will he walk in MY LAW, OR NOT&#x27;: the test&#x27;s oracle spelled as a question with both answers left standing (the machine arms the im-lo: 16:20 and 16:27 will answer it) — and the Kitzur beside it: &#x27;THE TORAH WAS GIVEN ONLY TO THE EATERS OF THE MANNA.&#x27;
+</td><td><span class="he">הִנְנִי מַמְטִיר לָכֶם לֶחֶם מִן־הַשָּׁמָיִם</span> · <i>hin-ni mamtir la-khem lechem min-ha-shamayim</i><br><span class="gloss">= hin-ni mamtir to-khem lechem from-the-heavens</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The rain-verb&#x27;s third career; the test named.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_5 · Exod.16.5 · <span class='expr'>DOUBLE_ON_THE_SIXTH</span></h3>
+<p><span class="he">וְהָיָה בַּיּוֹם הַשִּׁשִּׁי וְהֵכִינוּ אֵת אֲשֶׁר־יָבִיאוּ וְהָיָה מִשְׁנֶה עַל אֲשֶׁר־יִלְקְטוּ יוֹם יוֹם</span> · <i>ve-haya ba-yom ha-shishi ve-hekhinu et asher-yaviu ve-haya mishne al asher-yilqtu yom yom</i> · And it shall be on the sixth day, that they shall prepare that which they bring in; and it shall be double what they gather day by day.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהָיָה֙ בַּיּ֣וֹם הַשִּׁשִּׁ֔י וְהֵכִ֖ינוּ אֵ֣ת אֲשֶׁר יָבִ֑יאוּ</span> · <i>ve-haya ba-yom ha-shishi ve-hekhinu et asher-yaviu</i> · and it shall be on the sixth day, that they shall prepare that which they bring in (etnachta on yaviu) [VERIFIED: SNAPSHOT Exod.16.5 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהָיָ֣ה מִשְׁנֶ֔ה עַ֥ל אֲשֶֽׁר יִלְקְט֖וּ י֥וֹם יֽוֹם</span> · <i>ve-haya mishne al asher-yilqtu yom yom</i> · and it shall be double what they gather day by day (verse-final yom) [VERIFIED: SNAPSHOT Exod.16.5 idx7-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(ve_hekhinu_mishne))</span><br><span class="gloss">= DECLARE(the-LORD, LET(and-hekhinu-mishne))</span><br>THE SIXTH [EX16-07]. ve-haya ba-yom ha-SHISHI ve-HEKHINU et asher- yaviu — &#x27;on the SIXTH day they shall PREPARE what they bring in&#x27;: the second card pushed — a calendar hidden inside a ration (the Sabbath not yet named: the machine notes the pedagogy&#x27;s order — the people will meet the double before they hear its reason, 16:22-23); ve-haya MISHNE — &#x27;and it shall be DOUBLE&#x27;: the Kitzur&#x27;s rule of the day: &#x27;EVERYTHING of the Sabbath is DOUBLE — two lambs, two loaves, two lights, REMEMBER and KEEP&#x27;: the mishne-word filed as the Sabbath&#x27;s signature arithmetic, pushed here and popped at 16:22&#x27;s two omers.
+</td><td><span class="he">וְהָיָה בַּיּוֹם הַשִּׁשִּׁי וְהֵכִינוּ אֵת אֲשֶׁר־יָבִיאוּ וְהָיָה מִשְׁנֶה</span> · <i>ve-haya ba-yom ha-shishi ve-hekhinu et asher-yaviu ve-haya mishne</i><br><span class="gloss">= and-haya day the-shishi and-hekhinu et which-yaviu and-haya mishne</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The double armed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_6 · Exod.16.6 · <span class='expr'>EVENING_AND_YOU_SHALL_KNOW</span></h3>
+<p><span class="he">וַיֹּאמֶר מֹשֶׁה וְאַהֲרֹן אֶל־כָּל־בְּנֵי יִשְׂרָאֵל עֶרֶב וִידַעְתֶּם כִּי יְהוָה הוֹצִיא אֶתְכֶם מֵאֶרֶץ מִצְרָיִם</span> · <i>va-yomer moshe ve-aharon el-kal-bene yisrael erev vi-ydatem ki YHWH hotzi et-khem me-eretz mitzrayim</i> · And Moses and Aaron said to all the sons of Israel: At evening — and you shall know that the LORD has brought you out from the land of Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר מֹשֶׁה֙ וְאַהֲרֹ֔ן אֶֽל כָּל בְּנֵ֖י יִשְׂרָאֵ֑ל</span> · <i>va-yomer moshe ve-aharon el-kal-bene yisrael</i> · and Moses and Aaron said to all the sons of Israel (etnachta on yisrael) [VERIFIED: SNAPSHOT Exod.16.6 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">עֶ֕רֶב וִֽידַעְתֶּ֕ם כִּ֧י יְהוָ֛ה הוֹצִ֥יא אֶתְכֶ֖ם מֵאֶ֥רֶץ מִצְרָֽיִם</span> · <i>erev vi-ydatem ki YHWH hotzi et-khem me-eretz mitzrayim</i> · at evening — and you shall know that the LORD has brought you out from the land of Egypt (verse-final mitzrayim) [VERIFIED: SNAPSHOT Exod.16.6 idx7-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(erev_vi_ydatem, t0)</span><br><span class="gloss">= HOLDS(evening-vi-ydatem, t0)</span><br>THE KNOWING. EREV — vi-YDATEM ki YHWH hotzi etkhem me-eretz mitzrayim — &#x27;at EVENING — and you shall KNOW that the LORD brought you out&#x27;: the know-ledger OPENS A SECOND ACCOUNT (Egypt&#x27;s closed underwater at 14:25; Israel&#x27;s opens at supper): the same formula that priced the plagues now prices the quail — the machine files the ledger&#x27;s turn: knowledge by judgment for Egypt, knowledge by provision for Israel — and the exodus re-attributed (the murmur said YOU brought us out, 16:3; the answer: THE LORD brought you out — the pronoun corrected before the meat arrives).
+</td><td><span class="he">עֶרֶב וִידַעְתֶּם כִּי יְהוָה הוֹצִיא אֶתְכֶם מֵאֶרֶץ מִצְרָיִם</span> · <i>erev vi-ydatem ki YHWH hotzi et-khem me-eretz mitzrayim</i><br><span class="gloss">= evening vi-ydatem when the-LORD hotzi khem earth mitzrayim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The know-ledger turns home.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_7 · Exod.16.7 · <span class='expr'>MORNING_AND_THE_GLORY</span></h3>
+<p><span class="he">וּבֹקֶר וּרְאִיתֶם אֶת־כְּבוֹד יְהוָה בְּשָׁמְעוֹ אֶת־תְּלֻנֹּתֵיכֶם עַל־יְהוָה וְנַחְנוּ מָה כִּי תלונו תַלִּינוּ עָלֵינוּ</span> · <i>u-voqer u-reitem et-kevod YHWH be-sham-o et-telunote-khem al-YHWH ve-nachnu ma ki tlvnv talinu ale-nu</i> · And at morning — and you shall see the glory of the LORD, in His hearing your murmurings against the LORD; and we — what are we, that you murmur against us?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבֹ֗קֶר וּרְאִיתֶם֙ אֶת כְּב֣וֹד יְהוָ֔ה בְּשָׁמְע֥וֹ אֶת תְּלֻנֹּתֵיכֶ֖ם עַל יְהוָ֑ה</span> · <i>u-voqer u-reitem et-kevod YHWH be-sham-o et-telunote-khem al-YHWH</i> · and at morning — and you shall see the glory of the LORD, in His hearing your murmurings against the LORD (etnachta on YHWH) [VERIFIED: SNAPSHOT Exod.16.7 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְנַ֣חְנוּ מָ֔ה כִּ֥י תלונו תַלִּ֖ינוּ עָלֵֽינוּ</span> · <i>ve-nachnu ma ki tlvnv talinu ale-nu</i> · and we — what are we, that you murmur against us? (verse-final ale-nu) [VERIFIED: SNAPSHOT Exod.16.7 idx10-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(u_reitem_et_kevod_YHWH, t0)</span><br><span class="gloss">= HOLDS(and-reitem-kevod-the-LORD, t0)</span><br>THE FORECAST [EX16-13]. u-VOQER — u-reitem et-KEVOD YHWH — &#x27;at MORNING — you shall SEE the GLORY of the LORD&#x27; (the glory-word&#x27;s first forecast to the nation — armed, paid at 16:10); be-SHAM&#x27;O et- telunotekhem — &#x27;in His HEARING your murmurings&#x27; (the Kitzur&#x27;s three hearings named: &#x27;in distress and justly murmuring — He heard; the self-blesser at peace — He will not hear&#x27;: the heard complaint filed as the LAWFUL kind); ve-NACHNU MA — &#x27;and we — WHAT are we?&#x27;: the deflection (the readings on the humility greater than Abraham&#x27;s dust-and-ashes, named-only) — and the murmur-verb DUAL-WRITTEN A SECOND TIME (asserted at the build: written talonu, READ talinu — the chapter&#x27;s second ketiv-and-qere, both on the complaint-verb): the machine notes the pattern: the word the chapter cannot spell one way is the word the people cannot stop saying.
+</td><td><span class="he">וּבֹקֶר וּרְאִיתֶם אֶת־כְּבוֹד יְהוָה בְּשָׁמְעוֹ אֶת־תְּלֻנֹּתֵיכֶם עַל־יְהוָה</span> · <i>u-voqer u-reitem et-kevod YHWH be-sham-o et-telunote-khem al-YHWH</i><br><span class="gloss">= and-voqer and-reitem kevod the-LORD in-there-o telunote-khem upon-the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The what-are-we; the second dual-writing.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_8 · Exod.16.8 · <span class='expr'>NOT_AGAINST_US</span></h3>
+<p><span class="he">וַיֹּאמֶר מֹשֶׁה בְּתֵת יְהוָה לָכֶם בָּעֶרֶב בָּשָׂר לֶאֱכֹל וְלֶחֶם בַּבֹּקֶר לִשְׂבֹּעַ בִּשְׁמֹעַ יְהוָה אֶת־תְּלֻנֹּתֵיכֶם אֲשֶׁר־אַתֶּם מַלִּינִם עָלָיו וְנַחְנוּ מָה לֹא־עָלֵינוּ תְלֻנֹּתֵיכֶם כִּי עַל־יְהוָה</span> · <i>va-yomer moshe be-tet YHWH la-khem ba-erev basar le-ekhol ve-lechem ba-boqer li-seboa bi-shemoa YHWH et-telunote-khem asher-atem malinim alay-v ve-nachnu ma lo-ale-nu telunote-khem ki al-YHWH</i> · And Moses said: In the LORD&#x27;s giving you flesh at evening to eat, and bread at morning to the full — in the LORD&#x27;s hearing your murmurings which you murmur against Him; and we — what are we? Not against us are your murmurings, but against the LORD.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֣אמֶר מֹשֶׁ֗ה בְּתֵ֣ת יְהוָה֩ לָכֶ֨ם בָּעֶ֜רֶב בָּשָׂ֣ר לֶאֱכֹ֗ל וְלֶ֤חֶם בַּבֹּ֨קֶר֙ לִשְׂבֹּ֔עַ בִּשְׁמֹ֤עַ יְהוָה֙ אֶת תְּלֻנֹּ֣תֵיכֶ֔ם אֲשֶׁר אַתֶּ֥ם מַלִּינִ֖ם עָלָ֑יו</span> · <i>va-yomer moshe be-tet YHWH la-khem ba-erev basar le-ekhol ve-lechem ba-boqer li-seboa bi-shemoa YHWH et-telunote-khem asher-atem malinim alay-v</i> · and Moses said: in the LORD&#x27;s giving you flesh at evening to eat, and bread at morning to the full — in the LORD&#x27;s hearing your murmurings which you murmur against Him (etnachta on alay-v) [VERIFIED: SNAPSHOT Exod.16.8 idx18 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְנַ֣חְנוּ מָ֔ה לֹא עָלֵ֥ינוּ תְלֻנֹּתֵיכֶ֖ם כִּ֥י עַל יְהוָֽה</span> · <i>ve-nachnu ma lo-ale-nu telunote-khem ki al-YHWH</i> · and we — what are we? Not against us are your murmurings, but against the LORD (verse-final YHWH) [VERIFIED: SNAPSHOT Exod.16.8 idx19-26]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lo_alenu_telunotekhem, t0)</span><br><span class="gloss">= HOLDS(not-alenu-telunotekhem, t0)</span><br>THE RE-ADDRESS. be-tet YHWH lakhem ba-erev BASAR... ve-LECHEM ba- boqer lisboa — the menu itemized before it falls (flesh at evening, bread at morning: the forecast the night will keep); ve-nachnu MA — the what-are-we doubled (16:7&#x27;s deflection repeated verbatim-class); LO-ALENU telunotekhem KI AL-YHWH — &#x27;NOT AGAINST US are your murmurings, BUT AGAINST THE LORD&#x27;: the address-correction (8:8&#x27;s right-address cry taught Pharaoh where petitions go; 16:8 teaches Israel where complaints land — the machine files the routing-rule: murmuring at the visible officers is murmuring at the invisible King; the readings named-only).
+</td><td><span class="he">וְנַחְנוּ מָה לֹא־עָלֵינוּ תְלֻנֹּתֵיכֶם כִּי עַל־יְהוָה</span> · <i>ve-nachnu ma lo-ale-nu telunote-khem ki al-YHWH</i><br><span class="gloss">= and-nachnu ma not-ale-nu telunote-khem when upon-the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The address corrected.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_9 · Exod.16.9 · <span class='expr'>DRAW_NEAR</span></h3>
+<p><span class="he">וַיֹּאמֶר מֹשֶׁה אֶל־אַהֲרֹן אֱמֹר אֶל־כָּל־עֲדַת בְּנֵי יִשְׂרָאֵל קִרְבוּ לִפְנֵי יְהוָה כִּי שָׁמַע אֵת תְּלֻנֹּתֵיכֶם</span> · <i>va-yomer moshe el-aharon emor el-kal-adat bene yisrael qirvu li-fene YHWH ki shama et telunote-khem</i> · And Moses said to Aaron: Say to all the congregation of the sons of Israel: Draw near before the LORD — for He has heard your murmurings.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר מֹשֶׁה֙ אֶֽל אַהֲרֹ֔ן אֱמֹ֗ר אֶֽל כָּל עֲדַת֙ בְּנֵ֣י יִשְׂרָאֵ֔ל קִרְב֖וּ לִפְנֵ֣י יְהוָ֑ה</span> · <i>va-yomer moshe el-aharon emor el-kal-adat bene yisrael qirvu li-fene YHWH</i> · and Moses said to Aaron: say to all the congregation of the sons of Israel: draw near before the LORD (etnachta on YHWH) [VERIFIED: SNAPSHOT Exod.16.9 idx12 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּ֣י שָׁמַ֔ע אֵ֖ת תְּלֻנֹּתֵיכֶֽם</span> · <i>ki shama et telunote-khem</i> · for He has heard your murmurings (verse-final telunote-khem) [VERIFIED: SNAPSHOT Exod.16.9 idx13-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(moshe, LET(qirvu_lifne_YHWH))</span><br><span class="gloss">= DECLARE(Moses, LET(qirvu-lifne-the-LORD))</span><br>THE SUMMONS. emor el-kol-adat... QIRVU lifne YHWH — &#x27;SAY to all the congregation: DRAW NEAR before the LORD&#x27;: the card pushed through AARON (the say-command relay-class of 6:10ff — Moses to Aaron to the assembly: the chain of command the credential-file certified); ki SHAMA et telunotekhem — &#x27;for He has HEARD your murmurings&#x27;: the summons&#x27;s warrant is the complaint itself — the machine notes the inversion: the murmur, lawful in hunger (16:7&#x27;s hearing-rule), becomes the very writ that convenes the court.
+</td><td><span class="he">אֱמֹר אֶל־כָּל־עֲדַת בְּנֵי יִשְׂרָאֵל קִרְבוּ לִפְנֵי יְהוָה</span> · <i>emor el-kal-adat bene yisrael qirvu li-fene YHWH</i><br><span class="gloss">= emor to-kal-adat bene yisrael qirvu to-me-fene the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The summons.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_10 · Exod.16.10 · <span class='expr'>THE_GLORY_IN_THE_CLOUD</span></h3>
+<p><span class="he">וַיְהִי כְּדַבֵּר אַהֲרֹן אֶל־כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל וַיִּפְנוּ אֶל־הַמִּדְבָּר וְהִנֵּה כְּבוֹד יְהוָה נִרְאָה בֶּעָנָן</span> · <i>va-yehi ke-daber aharon el-kal-adat bene-yisrael va-yifnu el-ha-midbar ve-hine kevod YHWH nira be-anan</i> · And it was, as Aaron spoke to all the congregation of the sons of Israel, that they turned toward the wilderness; and behold — the glory of the LORD appeared in the cloud.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֗י כְּדַבֵּ֤ר אַהֲרֹן֙ אֶל כָּל עֲדַ֣ת בְּנֵֽי יִשְׂרָאֵ֔ל וַיִּפְנ֖וּ אֶל הַמִּדְבָּ֑ר</span> · <i>va-yehi ke-daber aharon el-kal-adat bene-yisrael va-yifnu el-ha-midbar</i> · and it was, as Aaron spoke to all the congregation of the sons of Israel, that they turned toward the wilderness (etnachta on ha-midbar) [VERIFIED: SNAPSHOT Exod.16.10 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהִנֵּה֙ כְּב֣וֹד יְהוָ֔ה נִרְאָ֖ה בֶּעָנָֽן</span> · <i>ve-hine kevod YHWH nira be-anan</i> · and behold — the glory of the LORD appeared in the cloud (verse-final be-anan) [VERIFIED: SNAPSHOT Exod.16.10 idx11-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(qirvu_lifne_YHWH, t1)</span><br><span class="gloss">= RESULT: HOLDS(qirvu-lifne-the-LORD, t1)</span><br>THE COMPLIANCE. va-yehi KE-DABER AHARON el-kol-adat — &#x27;as AARON SPOKE to all the congregation&#x27;: the draw-near card POPS on the speaking itself (the compliance narrated in the relay&#x27;s own verb) — and the Kitzur reads the name: &#x27;as AARON spoke — and not Moses — for BY AARON&#x27;S MERIT WERE THE CLOUDS; therefore it is juxtaposed: and the glory appeared IN THE CLOUD&#x27; (the speaker matched to the vessel: the cloud-man&#x27;s word answered in cloud).
+</td><td><span class="he">וַיְהִי כְּדַבֵּר אַהֲרֹן אֶל־כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל</span> · <i>va-yehi ke-daber aharon el-kal-adat bene-yisrael</i><br><span class="gloss">= and-yehi like-daber Aaron to-kal-adat bene-yisrael</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">nirat_kevod_YHWH(e1); Theme(e1, kevod-YHWH)</span><br><span class="gloss">= nirat-kevod-the-LORD(e1); Theme(e1, kevod-the-LORD)</span><br>THE APPEARANCE. va-yifnu el-ha-MIDBAR — &#x27;they turned toward the WILDERNESS&#x27; (toward the empty quarter — the readings: toward the place with nothing in it, named-only); ve-hine KEVOD YHWH nira BE- ANAN — &#x27;and behold, the GLORY of the LORD APPEARED IN THE CLOUD&#x27;: THE EVENT — the glory&#x27;s first narrated appearance to the nation (13:21&#x27;s pillar was guidance-infrastructure; 16:10 is DISCLOSURE: the machine stamps the corpus&#x27;s first public theophany — summoned not by Sinai&#x27;s thunder but by a bread-complaint: the glory shows itself to answer a menu).
+</td><td><span class="he">וְהִנֵּה כְּבוֹד יְהוָה נִרְאָה בֶּעָנָן</span> · <i>ve-hine kevod YHWH nira be-anan</i><br><span class="gloss">= and-hine kevod the-LORD nira in-anan</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The event; the card pops.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_11 · Exod.16.11 · <span class='expr'>THE_FRAME</span></h3>
+<p><span class="he">וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר</span> · <i>va-yedaber YHWH el-moshe le-mor</i> · And the LORD spoke to Moses, saying:</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְדַבֵּ֥ר יְהוָ֖ה</span> · <i>va-yedaber YHWH</i> · and the LORD spoke (NO etnachta in verse: split at tifcha on YHWH) [VERIFIED: SNAPSHOT Exod.16.11 idx1 tifcha; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֶל מֹשֶׁ֥ה לֵּאמֹֽר</span> · <i>el-moshe le-mor</i> · to Moses, saying (verse-final le-mor) [VERIFIED: SNAPSHOT Exod.16.11 idx2-4]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yedaber_16, t0)</span><br><span class="gloss">= HOLDS(and-yedaber-16, t0)</span><br>THE FRAME. va-yedaber YHWH el-moshe LEMOR — the five-word frame (no etnachta; the class of 13:1 and 14:1): the machine notes the placement — the frame drops mid-chapter, AFTER the glory-event: the speech it opens (16:12) will be the chapter&#x27;s only direct divine oration to Moses since 16:4 — the provision-decree&#x27;s second half, spoken with the cloud still lit.
+</td><td><span class="he">וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר</span> · <i>va-yedaber YHWH el-moshe le-mor</i><br><span class="gloss">= and-yedaber the-LORD to-Moses to-mor</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The frame.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_12 · Exod.16.12 · <span class='expr'>I_HAVE_HEARD</span></h3>
+<p><span class="he">שָׁמַעְתִּי אֶת־תְּלוּנֹּת בְּנֵי יִשְׂרָאֵל דַּבֵּר אֲלֵהֶם לֵאמֹר בֵּין הָעַרְבַּיִם תֹּאכְלוּ בָשָׂר וּבַבֹּקֶר תִּשְׂבְּעוּ־לָחֶם וִידַעְתֶּם כִּי אֲנִי יְהוָה אֱלֹהֵיכֶם</span> · <i>shamati et-telunot bene yisrael daber el-hem le-mor ben ha-arbayim tokhlu vasar u-va-boqer tisbu-lachem vi-ydatem ki ani YHWH elohe-khem</i> · I have heard the murmurings of the sons of Israel — speak to them, saying: Between the evenings you shall eat flesh, and at morning you shall be filled with bread; and you shall know that I am the LORD your God.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">שָׁמַ֗עְתִּי אֶת תְּלוּנֹּת֮ בְּנֵ֣י יִשְׂרָאֵל֒ דַּבֵּ֨ר אֲלֵהֶ֜ם לֵאמֹ֗ר בֵּ֤ין הָֽעַרְבַּ֨יִם֙ תֹּאכְל֣וּ בָשָׂ֔ר וּבַבֹּ֖קֶר תִּשְׂבְּעוּ לָ֑חֶם</span> · <i>shamati et-telunot bene yisrael daber el-hem le-mor ben ha-arbayim tokhlu vasar u-va-boqer tisbu-lachem</i> · I have heard the murmurings of the sons of Israel — speak to them, saying: between the evenings you shall eat flesh, and at morning you shall be filled with bread (etnachta on lachem) [VERIFIED: SNAPSHOT Exod.16.12 idx14 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וִֽידַעְתֶּ֕ם כִּ֛י אֲנִ֥י יְהוָ֖ה אֱלֹהֵיכֶֽם</span> · <i>vi-ydatem ki ani YHWH elohe-khem</i> · and you shall know that I am the LORD your God (verse-final elohe-khem) [VERIFIED: SNAPSHOT Exod.16.12 idx15-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shamati_et_telunot, t0)</span><br><span class="gloss">= HOLDS(shamati-telunot, t0)</span><br>THE HEARING [EX16-01 CROWN — THE MARQUEE]. SHAMATI et-TELUNOT bene yisrael — &#x27;I have HEARD the MURMURINGS of the sons of Israel&#x27;: the murmurings-word in a spelling with NO TWIN in the Torah (VERIFIED: full first vav, lean second — once) — and MS corrects the PRINTED MASORAH to prove it (the note that claimed a pair ruled AN ERROR: the census stands at one — the printed-authority file&#x27;s next station); Lekach Tov reads the lean letter: &#x27;they were being DIMINISHED FROM THEIR MERITS&#x27; — and the same midrash&#x27;s mercy kept whole: &#x27;all the complaints are as ONE COMPLAINT — and though they murmur, THEY ARE MY SONS: sons of Abraham, sons of Isaac bound for My name&#x27;; the nun DAGESHED for the swallowed rest-letter (MS, the Mikhlol): the verse where the Name repeats the people&#x27;s murmuring back spells it as nothing else in the Torah — the machine files the crown: the complaint, heard on high, comes back with one letter of merit missing and all its sonship intact.
+</td><td><span class="he">שָׁמַעְתִּי אֶת־תְּלוּנֹּת בְּנֵי יִשְׂרָאֵל</span> · <i>shamati et-telunot bene yisrael</i><br><span class="gloss">= shamati telunot bene yisrael</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ani_YHWH_elohekhem, t0)</span><br><span class="gloss">= HOLDS(ani-the-LORD-elohekhem, t0)</span><br>THE FORMULA HOME. ben ha-arbayim tokhlu VASAR u-va-boqer tisbeu- LACHEM — flesh between the evenings, bread-fullness at morning (16:8&#x27;s itemization now in the first person); vi-ydatem KI ANI YHWH ELOHEKHEM — &#x27;and you shall know that I AM THE LORD YOUR GOD&#x27;: the spine-formula (6:2&#x27;s self-declaration; 6:7&#x27;s promise &#x27;you shall know that I am the LORD your God who brings you out&#x27;) lands its receipt — the machine closes the wire: the sentence promised in Egypt&#x27;s brickyards is paid at a wilderness supper: the know-ledger&#x27;s home account funded by quail.
+</td><td><span class="he">וִידַעְתֶּם כִּי אֲנִי יְהוָה אֱלֹהֵיכֶם</span> · <i>vi-ydatem ki ani YHWH elohe-khem</i><br><span class="gloss">= vi-ydatem when ani the-LORD elohe-khem</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The unique spelling; the formula comes home.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_13 · Exod.16.13 · <span class='expr'>QUAIL_AND_DEW</span></h3>
+<p><span class="he">וַיְהִי בָעֶרֶב וַתַּעַל הַשְּׂלָו וַתְּכַס אֶת־הַמַּחֲנֶה וּבַבֹּקֶר הָיְתָה שִׁכְבַת הַטַּל סָבִיב לַמַּחֲנֶה</span> · <i>va-yehi va-erev va-taal ha-selav va-tekhas et-ha-machane u-va-boqer hayta shikhvat ha-tal saviv la-machane</i> · And it was at evening, that the quail came up and covered the camp; and at morning there was a layer of dew around the camp.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֣י בָעֶ֔רֶב וַתַּ֣עַל הַשְּׂלָ֔ו וַתְּכַ֖ס אֶת הַֽמַּחֲנֶ֑ה</span> · <i>va-yehi va-erev va-taal ha-selav va-tekhas et-ha-machane</i> · and it was at evening, that the quail came up and covered the camp (etnachta on ha-machane) [VERIFIED: SNAPSHOT Exod.16.13 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּבַבֹּ֗קֶר הָֽיְתָה֙ שִׁכְבַ֣ת הַטַּ֔ל סָבִ֖יב לַֽמַּחֲנֶֽה</span> · <i>u-va-boqer hayta shikhvat ha-tal saviv la-machane</i> · and at morning there was a layer of dew around the camp (verse-final la-machane) [VERIFIED: SNAPSHOT Exod.16.13 idx7-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">matan_basar_va_lechem(e2); Agent(e2, YHWH); Theme(e2, ha-selav)</span><br><span class="gloss">= matan-flesh-and-lechem(e2); Agent(e2, the-LORD); Theme(e2, the-selav)</span><br>THE SUPPER [EX16-03 CROWN]. va-yehi va-EREV va-taal HA-SELAV va- tekhas et-ha-machane — &#x27;at EVENING the QUAIL came up and COVERED the camp&#x27;: THE EVENT — the forecast of 16:8/12 pays on its own clock (evening flesh first, morning bread after: the promise&#x27;s word-order kept); and the quail-word stands exactly TWICE in the Torah (VERIFIED): this supper and KIVROT-HATTAAVA (Num 11:32, the graves of craving) — the Kitzur: &#x27;here too they gathered MUCH, but it CEASED — and so they went back and murmured over it&#x27; (one bird, the gift and the grave: the machine arms the pair&#x27;s dark half); the word LEAN-yod in the precise books (MS with the Ramah, against the Chizkuni), and Yoma&#x27;s pointed reading carried: &#x27;the righteous eat it IN PEACE; to the wicked it is THORNS&#x27; — the cover-verb (va-TEKHAS) making its first benign appearance since the sea covered the pursuit (14:28): the same verb, dinner instead of drowning.
+</td><td><span class="he">וַיְהִי בָעֶרֶב וַתַּעַל הַשְּׂלָו וַתְּכַס אֶת־הַמַּחֲנֶה</span> · <i>va-yehi va-erev va-taal ha-selav va-tekhas et-ha-machane</i><br><span class="gloss">= and-yehi evening and-taal the-selav and-tekhas the-machane</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shikhvat_ha_tal, t0)</span><br><span class="gloss">= HOLDS(shikhvat-the-tal, t0)</span><br>THE LAYER. u-va-boqer hayta shikhvat HA-TAL saviv la-machane — &#x27;at morning a LAYER OF DEW around the camp&#x27;: the bread arrives wrapped (the readings on the dew above and below — the manna served between linens like the showbread, named-only): the machine holds the verse at its surface — the gift comes covered, and 16:14 lifts the lid.
+</td><td><span class="he">וּבַבֹּקֶר הָיְתָה שִׁכְבַת הַטַּל סָבִיב לַמַּחֲנֶה</span> · <i>u-va-boqer hayta shikhvat ha-tal saviv la-machane</i><br><span class="gloss">= morning hayta shikhvat the-tal saviv to-machane</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The event; the quail-pair.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_14 · Exod.16.14 · <span class='expr'>FINE_AS_FROST</span></h3>
+<p><span class="he">וַתַּעַל שִׁכְבַת הַטָּל וְהִנֵּה עַל־פְּנֵי הַמִּדְבָּר דַּק מְחֻסְפָּס דַּק כַּכְּפֹר עַל־הָאָרֶץ</span> · <i>va-taal shikhvat ha-tal ve-hine al-pene ha-midbar daq mechuspas daq ka-kefor al-ha-aretz</i> · And the layer of dew went up, and behold — on the face of the wilderness a fine flake-like thing, fine as frost on the ground.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתַּ֖עַל שִׁכְבַ֣ת הַטָּ֑ל</span> · <i>va-taal shikhvat ha-tal</i> · and the layer of dew went up (etnachta on ha-tal) [VERIFIED: SNAPSHOT Exod.16.14 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהִנֵּ֞ה עַל פְּנֵ֤י הַמִּדְבָּר֙ דַּ֣ק מְחֻסְפָּ֔ס דַּ֥ק כַּכְּפֹ֖ר עַל הָאָֽרֶץ</span> · <i>ve-hine al-pene ha-midbar daq mechuspas daq ka-kefor al-ha-aretz</i> · and behold, on the face of the wilderness a fine flake-like thing, fine as frost on the ground (verse-final ha-aretz) [VERIFIED: SNAPSHOT Exod.16.14 idx3-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(daq_mechuspas, t0)</span><br><span class="gloss">= HOLDS(daq-mechuspas, t0)</span><br>THE REVEAL [EX16-06 CROWN]. va-taal shikhvat ha-tal — the dew-layer LIFTS (the unveiling verb — the same aliyah-verb that raised the quail raises the cover); ve-hine al-pene ha-midbar DAQ MECHUSPAS — &#x27;a fine FLAKE-LIKE thing&#x27;: the flake-word an absolute Torah-HAPAX (VERIFIED — the language uses it once, for a food no one had seen twice), and the Kitzur counts it: MECHUSPAS = 248 (asserted at the build) — &#x27;for the manna was ABSORBED IN THE 248 LIMBS&#x27; (the bread with no waste: its one-time word carrying the body&#x27;s own census); daq KA-KEFOR al-ha-aretz — &#x27;fine as FROST on the ground&#x27;: the machine notes the descriptive crisis the verse performs — the text reaching for three comparisons in one line for a thing that is only like itself.
+</td><td><span class="he">וְהִנֵּה עַל־פְּנֵי הַמִּדְבָּר דַּק מְחֻסְפָּס דַּק כַּכְּפֹר עַל־הָאָרֶץ</span> · <i>ve-hine al-pene ha-midbar daq mechuspas daq ka-kefor al-ha-aretz</i><br><span class="gloss">= and-hine upon-pene the-midbar daq mechuspas daq like-kefor upon-the-earth</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The hapax; the 248.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_15 · Exod.16.15 · <span class='expr'>WHAT_IS_IT</span></h3>
+<p><span class="he">וַיִּרְאוּ בְנֵי־יִשְׂרָאֵל וַיֹּאמְרוּ אִישׁ אֶל־אָחִיו מָן הוּא כִּי לֹא יָדְעוּ מַה־הוּא וַיֹּאמֶר מֹשֶׁה אֲלֵהֶם הוּא הַלֶּחֶם אֲשֶׁר נָתַן יְהוָה לָכֶם לְאָכְלָה</span> · <i>va-yiru vene-yisrael va-yomru ish el-achi-v man hu ki lo yadu ma-hu va-yomer moshe el-hem hu ha-lechem asher natan YHWH la-khem le-akhla</i> · And the sons of Israel saw, and said each to his brother: What is it? — for they knew not what it was; and Moses said to them: It is the bread which the LORD has given you to eat.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּרְא֣וּ בְנֵֽי יִשְׂרָאֵ֗ל וַיֹּ֨אמְר֜וּ אִ֤ישׁ אֶל אָחִיו֙ מָ֣ן ה֔וּא כִּ֛י לֹ֥א יָדְע֖וּ מַה ה֑וּא</span> · <i>va-yiru vene-yisrael va-yomru ish el-achi-v man hu ki lo yadu ma-hu</i> · and the sons of Israel saw, and said each to his brother: What is it? — for they knew not what it was (etnachta on hu) [VERIFIED: SNAPSHOT Exod.16.15 idx13 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּ֤אמֶר מֹשֶׁה֙ אֲלֵהֶ֔ם ה֣וּא הַלֶּ֔חֶם אֲשֶׁ֨ר נָתַ֧ן יְהוָ֛ה לָכֶ֖ם לְאָכְלָֽה</span> · <i>va-yomer moshe el-hem hu ha-lechem asher natan YHWH la-khem le-akhla</i> · and Moses said to them: it is the bread which the LORD has given you to eat (verse-final le-akhla) [VERIFIED: SNAPSHOT Exod.16.15 idx14-23]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(man_hu, t0)</span><br><span class="gloss">= HOLDS(man-that, t0)</span><br>THE QUESTION. va-yomru ish el-achiv MAN HU — &#x27;and they said each to his brother: WHAT IS IT?&#x27; — ki LO YADU ma-hu — &#x27;for they KNEW NOT what it was&#x27;: the question-word that will become the food&#x27;s NAME (16:31 armed: the corpus&#x27;s only entity named for the question it raised — the machine notes the epistemic comedy the chapter builds: the know-ledger&#x27;s chapter [16:6, 16:12 — you shall KNOW] pivots on a breakfast nobody can identify); va-yomer moshe... HU HA-LECHEM asher natan YHWH lakhem le-akhla — &#x27;it IS THE BREAD which the LORD has GIVEN you&#x27;: Moses answers the what with a whence (the readings on bread-of-the-mighty, named-only) — the giving-verb that will run the chapter (natan 16:15, noten 16:29 twice-given Sabbath) starts its count.
+</td><td><span class="he">מָן הוּא כִּי לֹא יָדְעוּ מַה־הוּא</span> · <i>man hu ki lo yadu ma-hu</i><br><span class="gloss">= man that when not yadu ma-that</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The question that will be the name.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_16 · Exod.16.16 · <span class='expr'>AN_OMER_A_HEAD</span></h3>
+<p><span class="he">זֶה הַדָּבָר אֲשֶׁר צִוָּה יְהוָה לִקְטוּ מִמֶּנּוּ אִישׁ לְפִי אָכְלוֹ עֹמֶר לַגֻּלְגֹּלֶת מִסְפַּר נַפְשֹׁתֵיכֶם אִישׁ לַאֲשֶׁר בְּאָהֳלוֹ תִּקָּחוּ</span> · <i>ze ha-davar asher tziva YHWH liqtu mime-nu ish le-fi akhl-o omer la-gulgolet mispar nafshote-khem ish la-asher be-ahol-o tiqachu</i> · This is the thing which the LORD commanded: Gather of it, each man according to his eating; an omer a head, by the number of your souls — each man for those in his tent shall you take.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">זֶ֤ה הַדָּבָר֙ אֲשֶׁ֣ר צִוָּ֣ה יְהוָ֔ה לִקְט֣וּ מִמֶּ֔נּוּ אִ֖ישׁ לְפִ֣י אָכְל֑וֹ</span> · <i>ze ha-davar asher tziva YHWH liqtu mime-nu ish le-fi akhl-o</i> · this is the thing which the LORD commanded: gather of it, each man according to his eating (etnachta on akhl-o) [VERIFIED: SNAPSHOT Exod.16.16 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">עֹ֣מֶר לַגֻּלְגֹּ֗לֶת מִסְפַּר֙ נַפְשֹׁ֣תֵיכֶ֔ם אִ֛ישׁ לַאֲשֶׁ֥ר בְּאָהֳל֖וֹ תִּקָּֽחוּ</span> · <i>omer la-gulgolet mispar nafshote-khem ish la-asher be-ahol-o tiqachu</i> · an omer a head, by the number of your souls — each man for those in his tent shall you take (verse-final tiqachu) [VERIFIED: SNAPSHOT Exod.16.16 idx10-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(omer_la_gulgolet, t0)</span><br><span class="gloss">= HOLDS(omer-to-gulgolet, t0)</span><br>THE MEASURE [EX16-07 CROWN]. ze ha-davar asher TZIVA YHWH — &#x27;this is the thing the LORD COMMANDED&#x27;: the errand-delivery (16:4&#x27;s ration- card handed down with its measure attached — the delivery-class of 10:3); LIQTU mimenu ish LE-FI OKHLO — &#x27;GATHER of it, each according to his EATING&#x27;; OMER la-GULGOLET — &#x27;an OMER A HEAD, by the number of your souls&#x27; (both gimels of the skull-word dageshed — MS, asserted at the build): and the verse carrying the law carries THE WHOLE ALPHABET (VERIFIED at the build: all twenty-two letters stand in 16:16) — the Kitzur: &#x27;whoever UPHOLDS THE TORAH, the Holy One summons him his sustenance WITHOUT TOIL, like the eaters of the manna&#x27; — the machine files the crown: the ration-verse written with every letter the Torah owns, the alphabet itself vouching for the table.
+</td><td><span class="he">זֶה הַדָּבָר אֲשֶׁר צִוָּה יְהוָה לִקְטוּ מִמֶּנּוּ אִישׁ לְפִי אָכְלוֹ</span> · <i>ze ha-davar asher tziva YHWH liqtu mime-nu ish le-fi akhl-o</i><br><span class="gloss">= ze the-davar which tziva the-LORD liqtu mime-nu man to-fi akhl-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The alphabet-verse; the measure.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_17 · Exod.16.17 · <span class='expr'>GREAT_AND_SMALL</span></h3>
+<p><span class="he">וַיַּעֲשׂוּ־כֵן בְּנֵי יִשְׂרָאֵל וַיִּלְקְטוּ הַמַּרְבֶּה וְהַמַּמְעִיט</span> · <i>va-yaasu-khen bene yisrael va-yilqtu ha-marbe ve-ha-mamit</i> · And the sons of Israel did so; and they gathered — he who took much, and he who took little.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּעֲשׂוּ כֵ֖ן בְּנֵ֣י יִשְׂרָאֵ֑ל</span> · <i>va-yaasu-khen bene yisrael</i> · and the sons of Israel did so (etnachta on yisrael) [VERIFIED: SNAPSHOT Exod.16.17 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַֽיִּלְקְט֔וּ הַמַּרְבֶּ֖ה וְהַמַּמְעִֽיט</span> · <i>va-yilqtu ha-marbe ve-ha-mamit</i> · and they gathered — he who took much, and he who took little (verse-final ve-ha-mamit) [VERIFIED: SNAPSHOT Exod.16.17 idx4-6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(ve_laqtu_devar_yom_be_yomo, t1)</span><br><span class="gloss">= RESULT: HOLDS(and-laqtu-devar-day-in-yomo, t1)</span><br>THE COMPLIANCE. VA-YAASU-KHEN bene yisrael — &#x27;and the sons of Israel DID SO&#x27; (asserted): the gather-card POPS on the corpus&#x27;s compliance- formula (14:4&#x27;s va-yaasu-khen class); va-yilqetu HA-MARBE VE-HA- MAMIT — &#x27;he who took MUCH and he who took LITTLE&#x27;: the machine holds the verse&#x27;s suspense — obedience narrated with its variance showing (the leveling waits one verse: the corpus lets the unequal baskets walk home unequal before 16:18 weighs them).
+</td><td><span class="he">וַיַּעֲשׂוּ־כֵן בְּנֵי יִשְׂרָאֵל</span> · <i>va-yaasu-khen bene yisrael</i><br><span class="gloss">= and-yaasu-so bene yisrael</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The card pops.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_18 · Exod.16.18 · <span class='expr'>NO_LACK_NO_SURPLUS</span></h3>
+<p><span class="he">וַיָּמֹדּוּ בָעֹמֶר וְלֹא הֶעְדִּיף הַמַּרְבֶּה וְהַמַּמְעִיט לֹא הֶחְסִיר אִישׁ לְפִי־אָכְלוֹ לָקָטוּ</span> · <i>va-yamodu va-omer ve-lo hedif ha-marbe ve-ha-mamit lo hechsir ish le-fi-akhl-o laqatu</i> · And they measured with the omer, and he who took much had nothing over, and he who took little lacked nothing; each man according to his eating had they gathered.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּמֹ֣דּוּ בָעֹ֔מֶר וְלֹ֤א הֶעְדִּיף֙ הַמַּרְבֶּ֔ה וְהַמַּמְעִ֖יט לֹ֣א הֶחְסִ֑יר</span> · <i>va-yamodu va-omer ve-lo hedif ha-marbe ve-ha-mamit lo hechsir</i> · and they measured with the omer, and he who took much had nothing over, and he who took little lacked nothing (etnachta on hechsir) [VERIFIED: SNAPSHOT Exod.16.18 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אִ֥ישׁ לְפִֽי אָכְל֖וֹ לָקָֽטוּ</span> · <i>ish le-fi-akhl-o laqatu</i> · each man according to his eating had they gathered (verse-final laqatu) [VERIFIED: SNAPSHOT Exod.16.18 idx8-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lo_hedif_ve_lo_hechsir, t0)</span><br><span class="gloss">= HOLDS(not-hedif-and-not-hechsir, t0)</span><br>THE LEVELING [EX16-13]. va-yamodu VA-OMER — &#x27;they MEASURED with the omer&#x27;; ve-LO HEDIF ha-marbe ve-ha-mamit LO HECHSIR — &#x27;the much-taker had NOTHING OVER, the little-taker LACKED NOTHING&#x27; (neither he carries a lengthener — MS&#x27;s stroke-note): the measured miracle — the machine files the economy the chapter legislates: effort varies, the omer does not (the readings on the manna as the corpus&#x27;s one perfectly progressive commodity, named-only): ish le-fi okhlo LAQATU — the eating-phrase file (MS: the first two le-fi, the third ke-fi at 16:21 — the Masorah tracking even the ration&#x27;s prepositions).
+</td><td><span class="he">וַיָּמֹדּוּ בָעֹמֶר וְלֹא הֶעְדִּיף הַמַּרְבֶּה וְהַמַּמְעִיט לֹא הֶחְסִיר</span> · <i>va-yamodu va-omer ve-lo hedif ha-marbe ve-ha-mamit lo hechsir</i><br><span class="gloss">= and-yamodu and-omer and-not hedif the-marbe and-the-mamit not hechsir</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The leveled measure.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_19 · Exod.16.19 · <span class='expr'>LEAVE_NONE_TILL_MORNING</span></h3>
+<p><span class="he">וַיֹּאמֶר מֹשֶׁה אֲלֵהֶם אִישׁ אַל־יוֹתֵר מִמֶּנּוּ עַד־בֹּקֶר</span> · <i>va-yomer moshe el-hem ish el-yoter mime-nu ad-boqer</i> · And Moses said to them: Let no man leave over of it till morning.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֥אמֶר מֹשֶׁ֖ה אֲלֵהֶ֑ם</span> · <i>va-yomer moshe el-hem</i> · and Moses said to them (etnachta on el-hem) [VERIFIED: SNAPSHOT Exod.16.19 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אִ֕ישׁ אַל יוֹתֵ֥ר מִמֶּ֖נּוּ עַד בֹּֽקֶר</span> · <i>ish el-yoter mime-nu ad-boqer</i> · let no man leave over of it till morning (verse-final boqer) [VERIFIED: SNAPSHOT Exod.16.19 idx3-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(moshe, LET(al_yoter_mimenu_ad_boqer))</span><br><span class="gloss">= DECLARE(Moses, LET(upon-yoter-from-it-until-morning))</span><br>THE PROHIBITION. ish AL-YOTER mimenu AD-BOQER — &#x27;let NO MAN LEAVE OVER of it TILL MORNING&#x27;: the card pushed — the ration&#x27;s second law (gather daily; KEEP NOTHING): trust legislated as an empty shelf (the readings: bread in the basket overnight is tomorrow held hostage — named-only); the machine files the card&#x27;s class: a STANDING DAILY RULE of the manna era (no single pop can close it — it stays OPEN as law), and arms the breach one verse ahead.
+</td><td><span class="he">אִישׁ אַל־יוֹתֵר מִמֶּנּוּ עַד־בֹּקֶר</span> · <i>ish el-yoter mime-nu ad-boqer</i><br><span class="gloss">= man to-yoter mime-nu until-morning</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The standing daily rule.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_20 · Exod.16.20 · <span class='expr'>WORMS_AND_WRATH</span></h3>
+<p><span class="he">וְלֹא־שָׁמְעוּ אֶל־מֹשֶׁה וַיּוֹתִרוּ אֲנָשִׁים מִמֶּנּוּ עַד־בֹּקֶר וַיָּרֻם תּוֹלָעִים וַיִּבְאַשׁ וַיִּקְצֹף עֲלֵהֶם מֹשֶׁה</span> · <i>ve-lo-shamu el-moshe va-yotiru anashim mime-nu ad-boqer va-yarum tolaim va-yivash va-yiqtzof ale-hem moshe</i> · And they listened not to Moses, and men left over of it till morning, and it bred worms and stank; and Moses was angry with them.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְלֹא שָׁמְע֣וּ אֶל מֹשֶׁ֗ה וַיּוֹתִ֨רוּ אֲנָשִׁ֤ים מִמֶּ֨נּוּ֙ עַד בֹּ֔קֶר וַיָּ֥רֻם תּוֹלָעִ֖ים וַיִּבְאַ֑שׁ</span> · <i>ve-lo-shamu el-moshe va-yotiru anashim mime-nu ad-boqer va-yarum tolaim va-yivash</i> · and they listened not to Moses, and men left over of it till morning, and it bred worms and stank (etnachta on va-yivash) [VERIFIED: SNAPSHOT Exod.16.20 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּקְצֹ֥ף עֲלֵהֶ֖ם מֹשֶֽׁה</span> · <i>va-yiqtzof ale-hem moshe</i> · and Moses was angry with them (verse-final moshe) [VERIFIED: SNAPSHOT Exod.16.20 idx12-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yarum_tolaim, t0)</span><br><span class="gloss">= HOLDS(and-yarum-tolaim, t0)</span><br>THE BREACH [EX16-04 CROWN]. ve-LO-SHAMU el-moshe — &#x27;and they LISTENED NOT to Moses&#x27;: the prohibition BREACHED in its first night (the card stands open and defied — the test&#x27;s im-lo takes its first negative datum); va-YOTIRU anashim mimenu — &#x27;and men LEFT OVER of it&#x27;: the left-over form Torah-UNIQUE (VERIFIED), its Scripture-twin ELISHA&#x27;S BREAD (&#x27;they ate AND LEFT OVER, by the word of the LORD&#x27;) — the Kitzur: &#x27;there BY the word, a BLESSING sent into it; here AGAINST the word, a CURSE&#x27; (one verb, the obedient surplus and the hoarded rot); va-YARUM tolaim va-yivash — &#x27;and it BRED (lifted) WORMS and stank&#x27;: the lifting-word with the Kitzur&#x27;s three named (the worms lift, the GLORY lifts from the cherub, the HEART lifts — &#x27;whoever&#x27;s heart lifts will lift worms: the hope of man is the worm&#x27;) and MS&#x27;s letter-crown VERIFIED: the resh&#x27;s vowel THREE DOTS, &#x27;in our Masorah NONE OTHER&#x27; — pointed apart precisely from the GLORY&#x27;s lifting (Ezek 10:4): worm-rise and glory-rise, one skeleton, one dot-row of difference; va-YIQTZOF alehem moshe — &#x27;and Moses was ANGRY&#x27;: the wrath-verb&#x27;s Torah-five (asserted at the build): Pharaoh at his servants, MOSES HERE (his first anger at the people), Moses at the priests, Moses at the officers, and the LORD at the generation — the anger-ledger opens its Moses-column on hoarded bread.
+</td><td><span class="he">וַיּוֹתִרוּ אֲנָשִׁים מִמֶּנּוּ עַד־בֹּקֶר וַיָּרֻם תּוֹלָעִים וַיִּבְאַשׁ</span> · <i>va-yotiru anashim mime-nu ad-boqer va-yarum tolaim va-yivash</i><br><span class="gloss">= and-yotiru anashim mime-nu until-morning and-yarum tolaim and-yivash</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The breach; the three liftings.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_21 · Exod.16.21 · <span class='expr'>MORNING_BY_MORNING</span></h3>
+<p><span class="he">וַיִּלְקְטוּ אֹתוֹ בַּבֹּקֶר בַּבֹּקֶר אִישׁ כְּפִי אָכְלוֹ וְחַם הַשֶּׁמֶשׁ וְנָמָס</span> · <i>va-yilqtu et-o ba-boqer ba-boqer ish ke-fi akhl-o ve-cham ha-shemesh ve-namas</i> · And they gathered it morning by morning, each man according to his eating; and when the sun grew hot, it melted.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּלְקְט֤וּ אֹתוֹ֙ בַּבֹּ֣קֶר בַּבֹּ֔קֶר אִ֖ישׁ כְּפִ֣י אָכְל֑וֹ</span> · <i>va-yilqtu et-o ba-boqer ba-boqer ish ke-fi akhl-o</i> · and they gathered it morning by morning, each man according to his eating (etnachta on akhl-o) [VERIFIED: SNAPSHOT Exod.16.21 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְחַ֥ם הַשֶּׁ֖מֶשׁ וְנָמָֽס</span> · <i>ve-cham ha-shemesh ve-namas</i> · and when the sun grew hot, it melted (verse-final ve-namas) [VERIFIED: SNAPSHOT Exod.16.21 idx7-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_cham_ha_shemesh_ve_namas, t0)</span><br><span class="gloss">= HOLDS(and-cham-the-shemesh-and-namas, t0)</span><br>THE RHYTHM [EX16-13]. va-yilqetu oto BA-BOQER BA-BOQER — &#x27;morning by MORNING&#x27; (the doubled adverb: the law of 16:4 become habit — after the worms, the verse of compliance without comment); ish KE-FI okhlo — the third eating-phrase (ke-fi now — MS&#x27;s preposition-file closing); ve-CHAM ha-shemesh VE-NAMAS — &#x27;when the sun grew HOT, it MELTED&#x27; (the pausal long vowel closing the verse — MS walking the grammarians&#x27; dispute, dual-tracked; the Kitzur&#x27;s Yoma-file named: the melted manna ran to the streams, the nations&#x27; hunters TASTED the run-off and ground their teeth — and the sun-hot phrase itself the tradition&#x27;s ORACLE: disputed paternity, disputed betrothal, disputed servants settled by WHERE THE OMER TURNED UP — the manna as the wilderness&#x27;s court of record): the machine files the daily physics: what obedience gathers keeps; what waits for the sun is water.
+</td><td><span class="he">וְחַם הַשֶּׁמֶשׁ וְנָמָס</span> · <i>ve-cham ha-shemesh ve-namas</i><br><span class="gloss">= and-cham the-shemesh and-namas</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The settled rhythm; the oracle of the sun.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_22 · Exod.16.22 · <span class='expr'>THE_SIXTH_DAY_DOUBLE</span></h3>
+<p><span class="he">וַיְהִי בַּיּוֹם הַשִּׁשִּׁי לָקְטוּ לֶחֶם מִשְׁנֶה שְׁנֵי הָעֹמֶר לָאֶחָד וַיָּבֹאוּ כָּל־נְשִׂיאֵי הָעֵדָה וַיַּגִּידוּ לְמֹשֶׁה</span> · <i>va-yehi ba-yom ha-shishi laqtu lechem mishne shene ha-omer la-echad va-yavou kal-nesie ha-eda va-yagidu le-moshe</i> · And it was on the sixth day, that they gathered double bread — two omers for the one; and all the princes of the congregation came and told Moses.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֣י בַּיּ֣וֹם הַשִּׁשִּׁ֗י לָֽקְט֥וּ לֶ֨חֶם֙ מִשְׁנֶ֔ה שְׁנֵ֥י הָעֹ֖מֶר לָאֶחָ֑ד</span> · <i>va-yehi ba-yom ha-shishi laqtu lechem mishne shene ha-omer la-echad</i> · and it was on the sixth day, that they gathered double bread — two omers for the one (etnachta on la-echad) [VERIFIED: SNAPSHOT Exod.16.22 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיָּבֹ֨אוּ֙ כָּל נְשִׂיאֵ֣י הָֽעֵדָ֔ה וַיַּגִּ֖ידוּ לְמֹשֶֽׁה</span> · <i>va-yavou kal-nesie ha-eda va-yagidu le-moshe</i> · and all the princes of the congregation came and told Moses (verse-final le-moshe) [VERIFIED: SNAPSHOT Exod.16.22 idx9-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(ve_hekhinu_mishne, t1)</span><br><span class="gloss">= RESULT: HOLDS(and-hekhinu-mishne, t1)</span><br>THE DOUBLE. va-yehi ba-yom ha-SHISHI laqtu LECHEM MISHNE shene ha- omer la-echad — &#x27;on the SIXTH day they gathered DOUBLE bread, two omers for the one&#x27;: 16:5&#x27;s card POPS on the ground (the double arrives in the baskets before its law arrives in words — the machine notes the sequence: the miracle complies BEFORE the people are told why); va-yavou kol-NESIE ha-eda va-yagidu le-moshe — &#x27;and all the PRINCES came and TOLD Moses&#x27;: the roster&#x27;s officers report an unordered surplus (the readings: Moses had not yet relayed 16:5 — named-only): the corpus&#x27;s first recorded audit — leadership discovering law by inventory.
+</td><td><span class="he">וַיְהִי בַּיּוֹם הַשִּׁשִּׁי לָקְטוּ לֶחֶם מִשְׁנֶה שְׁנֵי הָעֹמֶר לָאֶחָד</span> · <i>va-yehi ba-yom ha-shishi laqtu lechem mishne shene ha-omer la-echad</i><br><span class="gloss">= and-yehi day the-shishi laqtu lechem mishne shene the-omer to-echad</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The double lands; the card pops.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_23 · Exod.16.23 · <span class='expr'>TOMORROW_IS_THE_REST</span></h3>
+<p><span class="he">וַיֹּאמֶר אֲלֵהֶם הוּא אֲשֶׁר דִּבֶּר יְהוָה שַׁבָּתוֹן שַׁבַּת־קֹדֶשׁ לַיהוָה מָחָר אֵת אֲשֶׁר־תֹּאפוּ אֵפוּ וְאֵת אֲשֶׁר־תְּבַשְּׁלוּ בַּשֵּׁלוּ וְאֵת כָּל־הָעֹדֵף הַנִּיחוּ לָכֶם לְמִשְׁמֶרֶת עַד־הַבֹּקֶר</span> · <i>va-yomer el-hem hu asher diber YHWH shabaton shabat-qodesh la-YHWH machar et asher-tofu efu ve-et asher-tevashlu bashelu ve-et kal-ha-odef hanichu la-khem le-mishmeret ad-ha-boqer</i> · And he said to them: This is what the LORD spoke — a solemn rest, a holy sabbath to the LORD, is tomorrow; that which you would bake — bake, and that which you would boil — boil, and all the surplus lay up for yourselves in keeping until the morning.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֣אמֶר אֲלֵהֶ֗ם ה֚וּא אֲשֶׁ֣ר דִּבֶּ֣ר יְהוָ֔ה שַׁבָּת֧וֹן שַׁבַּת קֹ֛דֶשׁ לַֽיהוָ֖ה מָחָ֑ר</span> · <i>va-yomer el-hem hu asher diber YHWH shabaton shabat-qodesh la-YHWH machar</i> · and he said to them: this is what the LORD spoke — a solemn rest, a holy sabbath to the LORD, is tomorrow (etnachta on machar) [VERIFIED: SNAPSHOT Exod.16.23 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֵ֣ת אֲשֶׁר תֹּאפ֞וּ אֵפ֗וּ וְאֵ֤ת אֲשֶֽׁר תְּבַשְּׁלוּ֙ בַּשֵּׁ֔לוּ וְאֵת֙ כָּל הָ֣עֹדֵ֔ף הַנִּ֧יחוּ לָכֶ֛ם לְמִשְׁמֶ֖רֶת עַד הַבֹּֽקֶר</span> · <i>et asher-tofu efu ve-et asher-tevashlu bashelu ve-et kal-ha-odef hanichu la-khem le-mishmeret ad-ha-boqer</i> · that which you would bake — bake, and that which you would boil — boil, and all the surplus lay up for yourselves in keeping until the morning (verse-final ha-boqer) [VERIFIED: SNAPSHOT Exod.16.23 idx11-26]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(moshe, LET(et_ha_odef_hanichu_le_mishmeret))</span><br><span class="gloss">= DECLARE(Moses, LET(the-odef-hanichu-to-mishmeret))</span><br>THE FIRST SABBATH-LAW [EX16-09 CROWN]. hu asher diber YHWH — &#x27;this is what the LORD spoke&#x27; (16:5&#x27;s withheld reason delivered); SHABBATON shabbat-QODESH la-YHWH MACHAR — &#x27;a SOLEMN REST, a HOLY SABBATH to the LORD, is TOMORROW&#x27;: THE SABBATH NAMED IN LAW for the first time in the corpus (Gen 2:2-3&#x27;s seventh day, sanctified at creation and silent since, surfaces as legislation — before Sinai, over bread) — and the word-order itself the crown (VERIFIED: the rest-word-before-Sabbath adjacency stands here UNIQUELY; Vayaqhel reverses it): the Kitzur — &#x27;to teach that WE ADD FROM THE WEEKDAY ONTO THE HOLY at its ENTRY and at its EXIT&#x27; (the day fenced on both sides by its two word-orders — the tailor&#x27;s needle down before dark); et asher-tofu EFU... bashelu — &#x27;bake what you would bake, boil what you would boil&#x27; (tomorrow&#x27;s kitchen closed tonight); ve-et kol-ha-ODEF hanichu LE-MISHMERET — &#x27;lay up the SURPLUS IN KEEPING till morning&#x27;: the card pushed — yesterday&#x27;s crime (16:19-20) made tonight&#x27;s commandment: the machine files the inversion crown-side: the SAME ACT (keeping manna overnight) is rot on Thursday and religion on Friday — the difference is only the word it obeys.
+</td><td><span class="he">שַׁבָּתוֹן שַׁבַּת־קֹדֶשׁ לַיהוָה מָחָר</span> · <i>shabaton shabat-qodesh la-YHWH machar</i><br><span class="gloss">= shabaton shabat-qodesh to-the-LORD machar</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The Sabbath named; the fence-order.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_24 · Exod.16.24 · <span class='expr'>IT_DID_NOT_STINK</span></h3>
+<p><span class="he">וַיַּנִּיחוּ אֹתוֹ עַד־הַבֹּקֶר כַּאֲשֶׁר צִוָּה מֹשֶׁה וְלֹא הִבְאִישׁ וְרִמָּה לֹא־הָיְתָה בּוֹ</span> · <i>va-yanichu et-o ad-ha-boqer ka-asher tziva moshe ve-lo hivish ve-rima lo-hayta b-o</i> · And they laid it up until the morning, as Moses commanded; and it did not stink, and no worm was in it.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּנִּ֤יחוּ אֹתוֹ֙ עַד הַבֹּ֔קֶר כַּאֲשֶׁ֖ר צִוָּ֣ה מֹשֶׁ֑ה</span> · <i>va-yanichu et-o ad-ha-boqer ka-asher tziva moshe</i> · and they laid it up until the morning, as Moses commanded (etnachta on moshe) [VERIFIED: SNAPSHOT Exod.16.24 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְלֹ֣א הִבְאִ֔ישׁ וְרִמָּ֖ה לֹא הָ֥יְתָה בּֽוֹ</span> · <i>ve-lo hivish ve-rima lo-hayta b-o</i> · and it did not stink, and no worm was in it (verse-final b-o) [VERIFIED: SNAPSHOT Exod.16.24 idx7-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(et_ha_odef_hanichu_le_mishmeret, t1)</span><br><span class="gloss">= RESULT: HOLDS(the-odef-hanichu-to-mishmeret, t1)</span><br>THE KEEPING [EX16-05 CROWN]. va-yanichu oto ad-ha-boqer KA-ASHER TZIVA MOSHE — &#x27;they laid it up... AS MOSES COMMANDED&#x27; (asserted): the card POPS on the exact obedience-formula — and the manna answers the obedience in kind: ve-LO hivish ve-RIMA lo-hayta bo — &#x27;it did NOT stink, and NO WORM was in it&#x27;: the worm-word Torah-UNIQUE (VERIFIED), its Scripture-twin JOB&#x27;S GRAVE (&#x27;together they lie in the dust, and the WORM covers them&#x27;) — the Kitzur: &#x27;the worm has NO POWER over the Sabbath, and no power over the manna-eaters&#x27;: 16:20&#x27;s Thursday worms and 16:24&#x27;s Friday stillness, one substance two verdicts — the machine seals the chapter&#x27;s central experiment: the variable was never the bread.
+</td><td><span class="he">וַיַּנִּיחוּ אֹתוֹ עַד־הַבֹּקֶר כַּאֲשֶׁר צִוָּה מֹשֶׁה</span> · <i>va-yanichu et-o ad-ha-boqer ka-asher tziva moshe</i><br><span class="gloss">= and-yanichu o until-the-morning like-which tziva Moses</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The clean surplus; the card pops.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_25 · Exod.16.25 · <span class='expr'>EAT_IT_TODAY</span></h3>
+<p><span class="he">וַיֹּאמֶר מֹשֶׁה אִכְלֻהוּ הַיּוֹם כִּי־שַׁבָּת הַיּוֹם לַיהוָה הַיּוֹם לֹא תִמְצָאֻהוּ בַּשָּׂדֶה</span> · <i>va-yomer moshe ikhlu-hu ha-yom ki-shabat ha-yom la-YHWH ha-yom lo timtzau-hu ba-sade</i> · And Moses said: Eat it today, for today is a sabbath to the LORD; today you shall not find it in the field.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר מֹשֶׁה֙ אִכְלֻ֣הוּ הַיּ֔וֹם כִּֽי שַׁבָּ֥ת הַיּ֖וֹם לַיהוָ֑ה</span> · <i>va-yomer moshe ikhlu-hu ha-yom ki-shabat ha-yom la-YHWH</i> · and Moses said: eat it today, for today is a sabbath to the LORD (etnachta on la-YHWH) [VERIFIED: SNAPSHOT Exod.16.25 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">הַיּ֕וֹם לֹ֥א תִמְצָאֻ֖הוּ בַּשָּׂדֶֽה</span> · <i>ha-yom lo timtzau-hu ba-sade</i> · today you shall not find it in the field (verse-final ba-sade) [VERIFIED: SNAPSHOT Exod.16.25 idx8-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shabat_ha_yom_la_YHWH, t0)</span><br><span class="gloss">= HOLDS(shabat-the-day-to-the-LORD, t0)</span><br>THE TODAY. ikhluhu HA-YOM ki-shabat HA-YOM la-YHWH HA-YOM lo timtzauhu ba-sade — &#x27;eat it TODAY, for TODAY is a sabbath to the LORD; TODAY you shall not find it&#x27;: the today-word TRIPLED in one verse (asserted in-span: the readings hang the three meals of the Sabbath on the three todays, named-only) — the machine files the verse&#x27;s rhetoric: rest argued from the calendar&#x27;s own insistence; lo timtzauhu BA-SADE — the field emptied by decree: the first negative provision (what the LORD gives on six days He withholds as deliberately on the seventh — absence as signature).
+</td><td><span class="he">אִכְלֻהוּ הַיּוֹם כִּי־שַׁבָּת הַיּוֹם לַיהוָה</span> · <i>ikhlu-hu ha-yom ki-shabat ha-yom la-YHWH</i><br><span class="gloss">= ikhlu-that day when-shabat day to-the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The three todays.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_26 · Exod.16.26 · <span class='expr'>SIX_DAYS_AND_THE_SEVENTH</span></h3>
+<p><span class="he">שֵׁשֶׁת יָמִים תִּלְקְטֻהוּ וּבַיּוֹם הַשְּׁבִיעִי שַׁבָּת לֹא יִהְיֶה־בּוֹ</span> · <i>sheshet yamim tilqtu-hu u-va-yom ha-shevii shabat lo yihye-b-o</i> · Six days you shall gather it; and on the seventh day — a sabbath: it shall not be in it.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">שֵׁ֥שֶׁת יָמִ֖ים תִּלְקְטֻ֑הוּ</span> · <i>sheshet yamim tilqtu-hu</i> · six days you shall gather it (etnachta on tilqtu-hu) [VERIFIED: SNAPSHOT Exod.16.26 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּבַיּ֧וֹם הַשְּׁבִיעִ֛י שַׁבָּ֖ת לֹ֥א יִֽהְיֶה בּֽוֹ</span> · <i>u-va-yom ha-shevii shabat lo yihye-b-o</i> · and on the seventh day — a sabbath: it shall not be in it (verse-final b-o) [VERIFIED: SNAPSHOT Exod.16.26 idx3-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(sheshet_yamim_tilqetuhu, t0)</span><br><span class="gloss">= HOLDS(sheshet-seas-tilqetuhu, t0)</span><br>THE WEEK. SHESHET YAMIM tilqetuhu — &#x27;SIX DAYS you shall gather it&#x27; — u-va-yom ha-SHEVII shabat LO YIHYE-BO — &#x27;and on the seventh, a sabbath: IT SHALL NOT BE&#x27;: the creation-week&#x27;s shape (Gen 2:2&#x27;s six- and-one) re-cut in bread — the machine notes the formula&#x27;s future: this exact six-and-the-seventh frame is the Decalogue&#x27;s skeleton (20:9 armed: six days shall you labor — the manna teaching the commandment before the mountain speaks it); the readings on the double negative — no gathering AND nothing to gather — named-only.
+</td><td><span class="he">שֵׁשֶׁת יָמִים תִּלְקְטֻהוּ וּבַיּוֹם הַשְּׁבִיעִי שַׁבָּת לֹא יִהְיֶה־בּוֹ</span> · <i>sheshet yamim tilqtu-hu u-va-yom ha-shevii shabat lo yihye-b-o</i><br><span class="gloss">= sheshet seas tilqtu-that day seventh shabat not yihye-b-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The week legislated.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_27 · Exod.16.27 · <span class='expr'>THEY_FOUND_NOTHING</span></h3>
+<p><span class="he">וַיְהִי בַּיּוֹם הַשְּׁבִיעִי יָצְאוּ מִן־הָעָם לִלְקֹט וְלֹא מָצָאוּ</span> · <i>va-yehi ba-yom ha-shevii yatzu min-ha-am li-leqot ve-lo matzau</i> · And it was on the seventh day, that some of the people went out to gather — and they found none.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַֽיְהִי֙ בַּיּ֣וֹם הַשְּׁבִיעִ֔י יָצְא֥וּ מִן הָעָ֖ם לִלְקֹ֑ט</span> · <i>va-yehi ba-yom ha-shevii yatzu min-ha-am li-leqot</i> · and it was on the seventh day, that some of the people went out to gather (etnachta on li-leqot) [VERIFIED: SNAPSHOT Exod.16.27 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְלֹ֖א מָצָֽאוּ</span> · <i>ve-lo matzau</i> · and they found none (verse-final matzau) [VERIFIED: SNAPSHOT Exod.16.27 idx7-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(yatzu_min_ha_am_lilqot, t0)</span><br><span class="gloss">= HOLDS(yatzu-from-the-am-lilqot, t0)</span><br>THE SECOND BREACH [EX16-13]. va-yehi ba-yom ha-shevii YATZU min-ha- am LILQOT — &#x27;on the seventh day SOME OF THE PEOPLE went out TO GATHER&#x27; (min-ha-am — the partitive mercy: not the people, some of it — the machine notes the census-grammar of guilt narrowing since 16:20&#x27;s anashim); ve-LO MATZAU — &#x27;and they FOUND NONE&#x27;: the second breach breaks against a kept field (the first breach spoiled the bread; the second finds the LORD keeping His own commandment — the field observes the Sabbath the gatherers do not); the Kitzur&#x27;s gleaning-wire named: &#x27;TWO are gleanings, THREE are not — two omers they gathered on the sixth; on the Sabbath they went out for the THIRD and found nothing&#x27; (the field-law of Peah read back into the manna-field: the wilderness keeping the corner-statutes before the Land exists).
+</td><td><span class="he">וַיְהִי בַּיּוֹם הַשְּׁבִיעִי יָצְאוּ מִן־הָעָם לִלְקֹט וְלֹא מָצָאוּ</span> · <i>va-yehi ba-yom ha-shevii yatzu min-ha-am li-leqot ve-lo matzau</i><br><span class="gloss">= and-yehi day seventh yatzu from-the-am to-me-leqot and-not matzau</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The second breach.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_28 · Exod.16.28 · <span class='expr'>HOW_LONG_DO_YOU_REFUSE</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה עַד־אָנָה מֵאַנְתֶּם לִשְׁמֹר מִצְוֺתַי וְתוֹרֹתָי</span> · <i>va-yomer YHWH el-moshe ad-ana meantem li-shemor mitzvota-y ve-torota-y</i> · And the LORD said to Moses: How long do you refuse to keep My commandments and My laws?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֥אמֶר יְהוָ֖ה אֶל מֹשֶׁ֑ה</span> · <i>va-yomer YHWH el-moshe</i> · and the LORD said to Moses (etnachta on moshe) [VERIFIED: SNAPSHOT Exod.16.28 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">עַד אָ֨נָה֙ מֵֽאַנְתֶּ֔ם לִשְׁמֹ֥ר מִצְוֺתַ֖י וְתוֹרֹתָֽי</span> · <i>ad-ana meantem li-shemor mitzvota-y ve-torota-y</i> · how long do you refuse to keep My commandments and My laws? (verse-final ve-torota-y) [VERIFIED: SNAPSHOT Exod.16.28 idx4-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>TEST</td><td><span class="expr">TESTS += FAIL(anasenu, ha_yelekh_be_torati)</span><br><span class="gloss">= TESTS += FAIL(anasenu, the-yelekh-in-torati)</span><br>THE VERDICT. AD-ANA MEANTEM lishmor mitzvotai ve-torotai — &#x27;HOW LONG do you REFUSE to keep My commandments and My laws?&#x27;: THE TEST OF 16:4 RETURNS ITS FIRST VERDICT — FAIL (the corpus&#x27;s second FAIL, Tier-A textual warrant: the oracle&#x27;s own im-lo answered by the text&#x27;s refusal-verb) — and the refusal-verb is PHARAOH&#x27;S (asserted at the build: the me&#x27;en-form here is Torah-unique in this plural, and the root is the throne&#x27;s — &#x27;he REFUSES to let the people go,&#x27; 7:14/10:3: the machine files the bitterest handover in the ledger: the verb of Egypt&#x27;s king passing to Egypt&#x27;s freedmen inside two chapters); ad-ANA — &#x27;how long&#x27; (10:3&#x27;s ad-matai to Pharaoh, ad-ana to Israel — the how-long file); and the plural MEANTEM aimed through Moses at the nation (the readings on the leader bundled with his people, named-only): TESTS ledger 1 FAIL — the verdict is DATA, and the next verse answers it with a gift.
+</td><td><span class="he">עַד־אָנָה מֵאַנְתֶּם לִשְׁמֹר מִצְוֺתַי וְתוֹרֹתָי</span> · <i>ad-ana meantem li-shemor mitzvota-y ve-torota-y</i><br><span class="gloss">= until-ana meantem to-me-shemor mitzvota-y and-torota-y</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The verdict; the test fails.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_29 · Exod.16.29 · <span class='expr'>LET_NO_MAN_GO_OUT</span></h3>
+<p><span class="he">רְאוּ כִּי־יְהוָה נָתַן לָכֶם הַשַּׁבָּת עַל־כֵּן הוּא נֹתֵן לָכֶם בַּיּוֹם הַשִּׁשִּׁי לֶחֶם יוֹמָיִם שְׁבוּ אִישׁ תַּחְתָּיו אַל־יֵצֵא אִישׁ מִמְּקֹמוֹ בַּיּוֹם הַשְּׁבִיעִי</span> · <i>reu ki-YHWH natan la-khem ha-shabat al-ken hu noten la-khem ba-yom ha-shishi lechem yomayim shevu ish tachtay-v el-yetze ish mi-meqom-o ba-yom ha-shevii</i> · See, that the LORD has given you the Sabbath — therefore He gives you on the sixth day bread for two days; sit every man in his place: let no man go out of his place on the seventh day.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">רְא֗וּ כִּֽי יְהוָה֮ נָתַ֣ן לָכֶ֣ם הַשַּׁבָּת֒ עַל כֵּ֠ן ה֣וּא נֹתֵ֥ן לָכֶ֛ם בַּיּ֥וֹם הַשִּׁשִּׁ֖י לֶ֣חֶם יוֹמָ֑יִם</span> · <i>reu ki-YHWH natan la-khem ha-shabat al-ken hu noten la-khem ba-yom ha-shishi lechem yomayim</i> · see, that the LORD has given you the Sabbath — therefore He gives you on the sixth day bread for two days (etnachta on yomayim) [VERIFIED: SNAPSHOT Exod.16.29 idx14 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">שְׁב֣וּ אִ֣ישׁ תַּחְתָּ֗יו אַל יֵ֥צֵא אִ֛ישׁ מִמְּקֹמ֖וֹ בַּיּ֥וֹם הַשְּׁבִיעִֽי</span> · <i>shevu ish tachtay-v el-yetze ish mi-meqom-o ba-yom ha-shevii</i> · sit every man in his place: let no man go out of his place on the seventh day (verse-final ha-shevii) [VERIFIED: SNAPSHOT Exod.16.29 idx15-23]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(al_yetze_ish_mi_meqomo))</span><br><span class="gloss">= DECLARE(the-LORD, LET(upon-yetze-man-from-meqomo))</span><br>THE BOUNDARY [EX16-10 CROWN]. REU ki-YHWH NATAN lakhem HA-SHABAT — &#x27;SEE, that the LORD has GIVEN you the Sabbath&#x27;: the Sabbath as GIFT (the give-verb doubled: natan the Sabbath, noten the double bread — the day and its groceries one grant; and the printed-authority file gains its station: &#x27;books that write ET here are IN ERROR,&#x27; MS — the object-marker struck from the giving); SHEVU ish tachtav — &#x27;SIT every man in his place&#x27;; AL-YETZE ish mi-meqomo ba-yom ha-shevii — &#x27;LET NO MAN GO OUT of his place on the seventh day&#x27;: the let-none- go-out adjacency Torah-UNIQUE (VERIFIED) — the corpus&#x27;s first SPATIAL law: rest legislated as geometry — with the Kitzur&#x27;s three courts named (&#x27;OF HIS PLACE — four cubits; the fugitive OF THE CITY — the Sabbath-limit; come-strike-them — the court flogs boundary- breaches from the Torah&#x27;): the card pushed — the machine notes the day acquiring its second dimension: 16:23 fenced its time, 16:29 fences its space.
+</td><td><span class="he">שְׁבוּ אִישׁ תַּחְתָּיו אַל־יֵצֵא אִישׁ מִמְּקֹמוֹ בַּיּוֹם הַשְּׁבִיעִי</span> · <i>shevu ish tachtay-v el-yetze ish mi-meqom-o ba-yom ha-shevii</i><br><span class="gloss">= shevu man tachtay-v to-yetze man from-meqom-o day seventh</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The Sabbath given; the boundary.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_30 · Exod.16.30 · <span class='expr'>AND_THE_PEOPLE_RESTED</span></h3>
+<p><span class="he">וַיִּשְׁבְּתוּ הָעָם בַּיּוֹם הַשְּׁבִעִי</span> · <i>va-yishbtu ha-am ba-yom ha-shevii</i> · And the people rested on the seventh day.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּשְׁבְּת֥וּ הָעָ֖ם</span> · <i>va-yishbtu ha-am</i> · and the people rested (NO etnachta in verse: split at tifcha on ha-am) [VERIFIED: SNAPSHOT Exod.16.30 idx1 tifcha; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">בַּיּ֥וֹם הַשְּׁבִעִֽי</span> · <i>ba-yom ha-shevii</i> · on the seventh day (verse-final ha-shevii) [VERIFIED: SNAPSHOT Exod.16.30 idx2-3]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(al_yetze_ish_mi_meqomo, t1)</span><br><span class="gloss">= RESULT: HOLDS(upon-yetze-man-from-meqomo, t1)</span><br>THE REST [EX16-02 CROWN — THE MARQUEE&#x27;S TWIN]. va-YISHBETU ha-am ba- yom HA-SHEVII — &#x27;and the people RESTED on the seventh day&#x27;: the boundary-card POPS on the four-word verse — and the verse is a double crown: the rest-verb in this form is Torah-UNIQUE (asserted at the build: Gen 2:2&#x27;s va-yishbot was GOD&#x27;s rest; 16:30 is the only &#x27;and-they-rested&#x27; — THE FIRST HUMAN SABBATH in the corpus, performed by the nation entire), and the seventh-word is written LEAN — one of the Ramah&#x27;s THREE lean sevenths in the whole Torah (VERIFIED census exact: the leaven-removal day 12:15, THIS FIRST REST, and the Jubilee&#x27;s horn Lev 25:9 — the day the leaven goes, the day the people first stop, the day liberty is blown: the Torah&#x27;s three great cessations sharing one thinned skeleton): the machine stamps the smallest verse in the chapter as its summit — creation&#x27;s rest, on loan since Genesis 2, finally answered in kind.
+</td><td><span class="he">וַיִּשְׁבְּתוּ הָעָם בַּיּוֹם הַשְּׁבִעִי</span> · <i>va-yishbtu ha-am ba-yom ha-shevii</i><br><span class="gloss">= and-yishbtu the-am day seventh</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The card pops; the lean seventh.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_31 · Exod.16.31 · <span class='expr'>THE_HOUSE_NAMED_IT_MANNA</span></h3>
+<p><span class="he">וַיִּקְרְאוּ בֵית־יִשְׂרָאֵל אֶת־שְׁמוֹ מָן וְהוּא כְּזֶרַע גַּד לָבָן וְטַעְמוֹ כְּצַפִּיחִת בִּדְבָשׁ</span> · <i>va-yiqru vet-yisrael et-shem-o man ve-hu ke-zera gad lavan ve-tam-o ke-tzapichit bi-devash</i> · And the house of Israel called its name Manna; and it was like coriander seed, white, and its taste like a wafer in honey.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּקְרְא֧וּ בֵֽית יִשְׂרָאֵ֛ל אֶת שְׁמ֖וֹ מָ֑ן</span> · <i>va-yiqru vet-yisrael et-shem-o man</i> · and the house of Israel called its name Manna (etnachta on man) [VERIFIED: SNAPSHOT Exod.16.31 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְה֗וּא כְּזֶ֤רַע גַּד֙ לָבָ֔ן וְטַעְמ֖וֹ כְּצַפִּיחִ֥ת בִּדְבָֽשׁ</span> · <i>ve-hu ke-zera gad lavan ve-tam-o ke-tzapichit bi-devash</i> · and it was like coriander seed, white; and its taste like a wafer in honey (verse-final bi-devash) [VERIFIED: SNAPSHOT Exod.16.31 idx6-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>NAME</td><td><span class="expr">name(ha-lechem) := Man</span><br><span class="gloss">= name(the-lechem) := Man</span><br>THE NAMING. va-yiqreu VET-YISRAEL et-shemo MAN — &#x27;and the HOUSE OF ISRAEL called its name MANNA&#x27;: the naming-verb spent by the nation (the corpus&#x27;s first collective naming — not Moses, not the Name: the HOUSE names its bread), and the name IS the question (16:15&#x27;s man hu — &#x27;what is it?&#x27; — hardened into a noun: the only entity in the corpus named for the ignorance it caused; and the skeleton&#x27;s own file asserted at the build: the same two letters open Eden&#x27;s indictment — &#x27;HAVE YOU [eaten] FROM the tree?&#x27; Gen 3:11 — and the craving&#x27;s cry, Num 11:6: the what-bread of the wilderness written with the from-word of the first eating); ve-hu ke-zera GAD lavan — &#x27;like coriander seed, white&#x27; (ke-zera&#x27;s pointing per the Chizkuni, MS); ve-tamo ke-TZAPICHIT bi-devash — &#x27;its taste like a WAFER IN HONEY&#x27;: a second hapax for the same food (16:14&#x27;s flake-word, 16:31&#x27;s wafer-word — the vocabulary spent on the manna used once and retired, like the thing it describes).
+</td><td><span class="he">וַיִּקְרְאוּ בֵית־יִשְׂרָאֵל אֶת־שְׁמוֹ מָן</span> · <i>va-yiqru vet-yisrael et-shem-o man</i><br><span class="gloss">= and-yiqru vet-yisrael shem-o man</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The name written.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_32 · Exod.16.32 · <span class='expr'>A_KEEPSAKE_FOR_GENERATIONS</span></h3>
+<p><span class="he">וַיֹּאמֶר מֹשֶׁה זֶה הַדָּבָר אֲשֶׁר צִוָּה יְהוָה מְלֹא הָעֹמֶר מִמֶּנּוּ לְמִשְׁמֶרֶת לְדֹרֹתֵיכֶם לְמַעַן יִרְאוּ אֶת־הַלֶּחֶם אֲשֶׁר הֶאֱכַלְתִּי אֶתְכֶם בַּמִּדְבָּר בְּהוֹצִיאִי אֶתְכֶם מֵאֶרֶץ מִצְרָיִם</span> · <i>va-yomer moshe ze ha-davar asher tziva YHWH melo ha-omer mime-nu le-mishmeret le-dorote-khem lemaan yiru et-ha-lechem asher heekhalti et-khem ba-midbar be-hotzii-y et-khem me-eretz mitzrayim</i> · And Moses said: This is the thing which the LORD commanded: The fill of the omer of it in keeping for your generations — that they may see the bread which I fed you in the wilderness, when I brought you out from the land of Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֣אמֶר מֹשֶׁ֗ה זֶ֤ה הַדָּבָר֙ אֲשֶׁ֣ר צִוָּ֣ה יְהוָ֔ה מְלֹ֤א הָעֹ֨מֶר֙ מִמֶּ֔נּוּ לְמִשְׁמֶ֖רֶת לְדֹרֹתֵיכֶ֑ם</span> · <i>va-yomer moshe ze ha-davar asher tziva YHWH melo ha-omer mime-nu le-mishmeret le-dorote-khem</i> · and Moses said: this is the thing which the LORD commanded: the fill of the omer of it in keeping for your generations (etnachta on le-dorote-khem) [VERIFIED: SNAPSHOT Exod.16.32 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לְמַ֣עַן יִרְא֣וּ אֶת הַלֶּ֗חֶם אֲשֶׁ֨ר הֶאֱכַ֤לְתִּי אֶתְכֶם֙ בַּמִּדְבָּ֔ר בְּהוֹצִיאִ֥י אֶתְכֶ֖ם מֵאֶ֥רֶץ מִצְרָֽיִם</span> · <i>lemaan yiru et-ha-lechem asher heekhalti et-khem ba-midbar be-hotzii-y et-khem me-eretz mitzrayim</i> · that they may see the bread which I fed you in the wilderness, when I brought you out from the land of Egypt (verse-final mitzrayim) [VERIFIED: SNAPSHOT Exod.16.32 idx12-23]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(melo_ha_omer_le_mishmeret, t0)</span><br><span class="gloss">= HOLDS(melo-the-omer-to-mishmeret, t0)</span><br>THE KEEPSAKE [EX16-08 CROWN]. ze ha-davar asher tziva YHWH: MELO HA- OMER mimenu LE-MISHMERET le-dorotekhem — &#x27;the FILL OF THE OMER in KEEPING FOR YOUR GENERATIONS&#x27;: the manna made museum-piece by command (the corpus&#x27;s first commanded RELIC — history curated in advance); LEMAAN YIRU ET HA-LECHEM — &#x27;THAT THEY MAY SEE THE BREAD&#x27;: and the purpose-clause signs itself (VERIFIED: the four words&#x27; initial letters are the letters of ELIJAH) — the Kitzur: &#x27;to say it shall be KEPT UNTIL ELIJAH COMES&#x27;: the jar&#x27;s audience named in acrostic — the generations addressed include a prophet not yet born (the machine files the arc: the bread kept for the far end of history, its label already carrying the herald&#x27;s name); asher HEEKHALTI etkhem ba-midbar — the feeding claimed in the first person: the exhibit&#x27;s caption is the Name&#x27;s own testimony.
+</td><td><span class="he">לְמַעַן יִרְאוּ אֶת־הַלֶּחֶם</span> · <i>lemaan yiru et-ha-lechem</i><br><span class="gloss">= lemaan yiru the-lechem</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The Elijah initials.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_33 · Exod.16.33 · <span class='expr'>THE_JAR</span></h3>
+<p><span class="he">וַיֹּאמֶר מֹשֶׁה אֶל־אַהֲרֹן קַח צִנְצֶנֶת אַחַת וְתֶן־שָׁמָּה מְלֹא־הָעֹמֶר מָן וְהַנַּח אֹתוֹ לִפְנֵי יְהוָה לְמִשְׁמֶרֶת לְדֹרֹתֵיכֶם</span> · <i>va-yomer moshe el-aharon qach tzintzenet achat ve-ten-shama-ה melo-ha-omer man ve-hanach et-o li-fene YHWH le-mishmeret le-dorote-khem</i> · And Moses said to Aaron: Take one jar, and put there the fill of the omer of manna; and lay it before the LORD, in keeping for your generations.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר מֹשֶׁ֜ה אֶֽל אַהֲרֹ֗ן קַ֚ח צִנְצֶ֣נֶת אַחַ֔ת וְתֶן שָׁ֥מָּה מְלֹֽא הָעֹ֖מֶר מָ֑ן</span> · <i>va-yomer moshe el-aharon qach tzintzenet achat ve-ten-shama-ה melo-ha-omer man</i> · and Moses said to Aaron: take one jar, and put there the fill of the omer of manna (etnachta on man) [VERIFIED: SNAPSHOT Exod.16.33 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהַנַּ֤ח אֹתוֹ֙ לִפְנֵ֣י יְהוָ֔ה לְמִשְׁמֶ֖רֶת לְדֹרֹתֵיכֶֽם</span> · <i>ve-hanach et-o li-fene YHWH le-mishmeret le-dorote-khem</i> · and lay it before the LORD, in keeping for your generations (verse-final le-dorote-khem) [VERIFIED: SNAPSHOT Exod.16.33 idx12-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(moshe, LET(qach_tzintzenet_achat))</span><br><span class="gloss">= DECLARE(Moses, LET(qach-tzintzenet-achat))</span><br>THE VESSEL [EX16-12 CROWN]. qach TZINTZENET achat — &#x27;take ONE JAR&#x27;: the jar-word an absolute Torah-HAPAX (VERIFIED) — the vessel that must outlive its era named once, like both words for its contents (the hapax-cluster the machine tracks: mechuspas, tzapichit, tzintzenet — the manna surrounded by single-use vocabulary); VE- HANACH oto lifne YHWH — &#x27;and LAY IT before the LORD&#x27;: the lay-word&#x27;s Masorah-pair named — GIDEON&#x27;S ROCK (where the fire consumed the meal of itself): the Kitzur — &#x27;as there it was consumed of itself, so the manna was ABSORBED IN THE LIMBS&#x27; (one verb for the two self- consuming meals); the card pushed to AARON — the relay of 16:9 reversed into custody: the speaker becomes the keeper.
+</td><td><span class="he">קַח צִנְצֶנֶת אַחַת וְתֶן־שָׁמָּה מְלֹא־הָעֹמֶר מָן</span> · <i>qach tzintzenet achat ve-ten-shama-ה melo-ha-omer man</i><br><span class="gloss">= qach tzintzenet achat and-ten-shama-ה melo-the-omer man</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The hapax vessel.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_34 · Exod.16.34 · <span class='expr'>BEFORE_THE_TESTIMONY</span></h3>
+<p><span class="he">כַּאֲשֶׁר צִוָּה יְהוָה אֶל־מֹשֶׁה וַיַּנִּיחֵהוּ אַהֲרֹן לִפְנֵי הָעֵדֻת לְמִשְׁמָרֶת</span> · <i>ka-asher tziva YHWH el-moshe va-yaniche-hu aharon li-fene ha-edut le-mishmaret</i> · As the LORD commanded Moses, so Aaron laid it before the Testimony, in keeping.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">כַּאֲשֶׁ֛ר צִוָּ֥ה יְהוָ֖ה אֶל מֹשֶׁ֑ה</span> · <i>ka-asher tziva YHWH el-moshe</i> · as the LORD commanded Moses (etnachta on moshe) [VERIFIED: SNAPSHOT Exod.16.34 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּנִּיחֵ֧הוּ אַהֲרֹ֛ן לִפְנֵ֥י הָעֵדֻ֖ת לְמִשְׁמָֽרֶת</span> · <i>va-yaniche-hu aharon li-fene ha-edut le-mishmaret</i> · and Aaron laid it before the Testimony, in keeping (verse-final le-mishmaret) [VERIFIED: SNAPSHOT Exod.16.34 idx5-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(qach_tzintzenet_achat, t1)</span><br><span class="gloss">= RESULT: HOLDS(qach-tzintzenet-achat, t1)</span><br>THE PLACEMENT. ka-asher tziva YHWH el-moshe — the obedience-formula; va-YANICHEHU AHARON lifne HA-EDUT le-mishmaret — &#x27;and AARON LAID IT before THE TESTIMONY&#x27; (asserted): the card POPS — before an ark that does not yet exist (the Testimony named eight chapters before its pattern is shown, 25:16 armed — the readings on the verse written from the Tabernacle&#x27;s vantage, named-only): the machine files the narrative&#x27;s second forward-leaning seam (with 16:35&#x27;s forty years): the manna-chapter keeps its receipts in a future tense the grammar hides.
+</td><td><span class="he">וַיַּנִּיחֵהוּ אַהֲרֹן לִפְנֵי הָעֵדֻת לְמִשְׁמָרֶת</span> · <i>va-yaniche-hu aharon li-fene ha-edut le-mishmaret</i><br><span class="gloss">= and-yaniche-that Aaron to-me-fene the-edut to-mishmaret</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The card pops; the anachrony.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_35 · Exod.16.35 · <span class='expr'>FORTY_YEARS</span></h3>
+<p><span class="he">וּבְנֵי יִשְׂרָאֵל אָכְלוּ אֶת־הַמָּן אַרְבָּעִים שָׁנָה עַד־בֹּאָם אֶל־אֶרֶץ נוֹשָׁבֶת אֶת־הַמָּן אָכְלוּ עַד־בֹּאָם אֶל־קְצֵה אֶרֶץ כְּנָעַן</span> · <i>u-vene yisrael akhlu et-ha-man arbaim shana ad-boa-m el-eretz noshavet et-ha-man akhlu ad-boa-m el-qetze eretz kenaan</i> · And the sons of Israel ate the manna forty years, until their coming to an inhabited land; the manna they ate, until their coming to the edge of the land of Canaan.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבְנֵ֣י יִשְׂרָאֵ֗ל אָֽכְל֤וּ אֶת הַמָּן֙ אַרְבָּעִ֣ים שָׁנָ֔ה עַד בֹּאָ֖ם אֶל אֶ֣רֶץ נוֹשָׁ֑בֶת</span> · <i>u-vene yisrael akhlu et-ha-man arbaim shana ad-boa-m el-eretz noshavet</i> · and the sons of Israel ate the manna forty years, until their coming to an inhabited land (etnachta on noshavet) [VERIFIED: SNAPSHOT Exod.16.35 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֶת הַמָּן֙ אָֽכְל֔וּ עַד בֹּאָ֕ם אֶל קְצֵ֖ה אֶ֥רֶץ כְּנָֽעַן</span> · <i>et-ha-man akhlu ad-boa-m el-qetze eretz kenaan</i> · the manna they ate, until their coming to the edge of the land of Canaan (verse-final kenaan) [VERIFIED: SNAPSHOT Exod.16.35 idx12-20]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(akhlu_et_ha_man_arbaim_shana, t0)</span><br><span class="gloss">= HOLDS(akhlu-the-man-arbaim-shana, t0)</span><br>THE RETROSPECT. u-vene yisrael akhlu et-HA-MAN ARBAIM SHANA — &#x27;and the sons of Israel ate the manna FORTY YEARS&#x27;: the corpus&#x27;s longest forward look narrated as past (the verse stands at the manna&#x27;s first week and speaks from beyond its last — the readings on Moses&#x27; hand in the line, named-only; Joshua&#x27;s cessation named, outside the Torah: the day after the Passover of Gilgal); ad-boam el-ERETZ NOSHAVET... el-qetze eretz KENAAN — the doubled until (an inhabited land; the edge of Canaan — the readings split the two arrivals, named-only): the machine files the chapter&#x27;s closing symmetry: it opened on a dated day (16:1) and closes on a measured era — the manna bracketed by calendar at both ends.
+</td><td><span class="he">וּבְנֵי יִשְׂרָאֵל אָכְלוּ אֶת־הַמָּן אַרְבָּעִים שָׁנָה עַד־בֹּאָם אֶל־אֶרֶץ נוֹשָׁבֶת</span> · <i>u-vene yisrael akhlu et-ha-man arbaim shana ad-boa-m el-eretz noshavet</i><br><span class="gloss">= and-vene yisrael akhlu the-man arbaim shana until-boa-m to-earth noshavet</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The longest receipt.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_16_36 · Exod.16.36 · <span class='expr'>THE_OMER_GLOSS</span></h3>
+<p><span class="he">וְהָעֹמֶר עֲשִׂרִית הָאֵיפָה הוּא</span> · <i>ve-ha-omer asirit ha-efa hu</i> · And the omer — a tenth of the efa it is.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהָעֹ֕מֶר</span> · <i>ve-ha-omer</i> · and the omer — a tenth of the efa (NO etnachta in verse: split at zaqef gadol on ve-ha-omer) [VERIFIED: SNAPSHOT Exod.16.36 idx0 zaqef gadol; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">עֲשִׂרִ֥ית הָאֵיפָ֖ה הֽוּא</span> · <i>asirit ha-efa hu</i> · it is (verse-final hu) [VERIFIED: SNAPSHOT Exod.16.36 idx1-3]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_ha_omer_asirit_ha_efa, t0)</span><br><span class="gloss">= HOLDS(and-the-omer-asirit-the-efa, t0)</span><br>THE GLOSS [EX16-12]. ve-HA-OMER asirit HA-EFA hu — &#x27;and the omer — a TENTH OF THE EFA it is&#x27;: the corpus&#x27;s first metrological footnote (the text glossing its own unit for readers who no longer measure in omers — the machine notes the audience-seam: the verse presumes the generations of 16:32-33, not the gatherers); and the Kitzur reads the juxtaposition: &#x27;the OMER beside the manna-chapter — a hint that they would eat the manna UNTIL THEY OFFERED THE OMER&#x27; (the measure- word naming the offering whose arrival ends the miracle, Josh 5 named): the chapter closes by weighing its bread in the unit of its own expiry.
+</td><td><span class="he">וְהָעֹמֶר עֲשִׂרִית הָאֵיפָה הוּא</span> · <i>ve-ha-omer asirit ha-efa hu</i><br><span class="gloss">= and-the-omer asirit the-efa that</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The metrological footnote.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Ex_16_1 — into the wilderness of Sin</td><td>And they journeyed from Elim, and all the congregation of the sons of Israel came to the wilderness of Sin, which is between Elim and Sinai, on the fifteenth day of the second month after their going out from the land of Egypt.</td><td>no test, no name.</td><td><span class="he">וַיִּסְעוּ֙ מֵֽאֵילִ֔ם וַיָּבֹ֜אוּ כָּל</span> · <i>va-yisu me-elim va-yavou kal-</i><br><span class="gloss">= and-yisu from-elim and-yavou kal</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Ex_16_2 — the whole congregation murmurs</td><td>And all the congregation of the sons of Israel murmured against Moses and against Aaron in the wilderness.</td><td>no test, no name.</td><td><span class="he">וילינו וַיִּלּ֜וֹנוּ כָּל עֲדַ֧ת</span> · <i>v-ylynv va-yilonu kal-adat</i><br><span class="gloss">= v-ylynv and-yilonu kal-adat</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Ex_16_3 — the flesh-pots</td><td>And the sons of Israel said to them: Would that we had died by the hand of the LORD in the land of Egypt, when we sat by the flesh-pot, when we ate bread to the full — for you have brought us out to this wilderness, to kill this whole assembly with hunger.</td><td>no test, no name.</td><td><span class="he">וַיֹּאמְר֨וּ אֲלֵהֶ֜ם בְּנֵ֣י יִשְׂרָאֵ֗ל</span> · <i>va-yomru el-hem bene yisrael</i><br><span class="gloss">= and-yomru to-hem bene yisrael</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Ex_16_4 — bread from heaven</td><td>And the LORD said to Moses: Behold, I rain for you bread from the heavens; and the people shall go out and gather the day&#x27;s portion in its day, that I may test him — will he walk in My law, or not?</td><td>LET(ve_laqtu_devar_yom_be_yomo) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-laqtu-devar-day-in-yomo) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה</span> · <i>va-yomer YHWH el-moshe</i><br><span class="gloss">= and-yomer the-LORD to-Moses</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Ex_16_5 — double on the sixth</td><td>And it shall be on the sixth day, that they shall prepare that which they bring in; and it shall be double what they gather day by day.</td><td>LET(ve_laqtu_devar_yom_be_yomo) pushed and OPEN; LET(ve_hekhinu_mishne) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-laqtu-devar-day-in-yomo) pushed and OPEN; LET(and-hekhinu-mishne) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהָיָה֙ בַּיּ֣וֹם הַשִּׁשִּׁ֔י וְהֵכִ֖ינוּ</span> · <i>ve-haya ba-yom ha-shishi ve-hekhinu</i><br><span class="gloss">= and-haya day the-shishi and-hekhinu</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Ex_16_6 — evening, and you shall know</td><td>And Moses and Aaron said to all the sons of Israel: At evening — and you shall know that the LORD has brought you out from the land of Egypt.</td><td>LET(ve_laqtu_devar_yom_be_yomo) pushed and OPEN; LET(ve_hekhinu_mishne) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-laqtu-devar-day-in-yomo) pushed and OPEN; LET(and-hekhinu-mishne) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֤אמֶר מֹשֶׁה֙ וְאַהֲרֹ֔ן אֶֽל</span> · <i>va-yomer moshe ve-aharon el-</i><br><span class="gloss">= and-yomer Moses Aaron to</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Ex_16_7 — morning, and the glory</td><td>And at morning — and you shall see the glory of the LORD, in His hearing your murmurings against the LORD; and we — what are we, that you murmur against us?</td><td>LET(ve_laqtu_devar_yom_be_yomo) pushed and OPEN; LET(ve_hekhinu_mishne) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-laqtu-devar-day-in-yomo) pushed and OPEN; LET(and-hekhinu-mishne) pushed and OPEN; no test, no name.</span></td><td><span class="he">וּבֹ֗קֶר וּרְאִיתֶם֙ אֶת כְּב֣וֹד</span> · <i>u-voqer u-reitem et-kevod</i><br><span class="gloss">= and-voqer and-reitem kevod</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Ex_16_8 — not against us</td><td>And Moses said: In the LORD&#x27;s giving you flesh at evening to eat, and bread at morning to the full — in the LORD&#x27;s hearing your murmurings which you murmur against Him; and we — what are we? Not against us are your murmurings, but against the LORD.</td><td>LET(ve_laqtu_devar_yom_be_yomo) pushed and OPEN; LET(ve_hekhinu_mishne) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-laqtu-devar-day-in-yomo) pushed and OPEN; LET(and-hekhinu-mishne) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֣אמֶר מֹשֶׁ֗ה בְּתֵ֣ת יְהוָה֩</span> · <i>va-yomer moshe be-tet YHWH</i><br><span class="gloss">= and-yomer Moses in-tet the-LORD</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Ex_16_9 — draw near</td><td>And Moses said to Aaron: Say to all the congregation of the sons of Israel: Draw near before the LORD — for He has heard your murmurings.</td><td>LET(ve_laqtu_devar_yom_be_yomo) pushed and OPEN; LET(ve_hekhinu_mishne) pushed and OPEN; LET(qirvu_lifne_YHWH) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-laqtu-devar-day-in-yomo) pushed and OPEN; LET(and-hekhinu-mishne) pushed and OPEN; LET(qirvu-lifne-the-LORD) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֤אמֶר מֹשֶׁה֙ אֶֽל אַהֲרֹ֔ן</span> · <i>va-yomer moshe el-aharon</i><br><span class="gloss">= and-yomer Moses to-Aaron</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Ex_16_10 — the glory in the cloud</td><td>And it was, as Aaron spoke to all the congregation of the sons of Israel, that they turned toward the wilderness; and behold — the glory of the LORD appeared in the cloud.</td><td>LET(ve_laqtu_devar_yom_be_yomo) pushed and OPEN; LET(ve_hekhinu_mishne) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-laqtu-devar-day-in-yomo) pushed and OPEN; LET(and-hekhinu-mishne) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְהִ֗י כְּדַבֵּ֤ר אַהֲרֹן֙ אֶל</span> · <i>va-yehi ke-daber aharon el-</i><br><span class="gloss">= and-yehi like-daber Aaron to</span></td></tr>
+<tr><td><b>S11</b></td><td>after STEP_Ex_16_11 — the frame</td><td>And the LORD spoke to Moses, saying:</td><td>LET(ve_laqtu_devar_yom_be_yomo) pushed and OPEN; LET(ve_hekhinu_mishne) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-laqtu-devar-day-in-yomo) pushed and OPEN; LET(and-hekhinu-mishne) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְדַבֵּ֥ר יְהוָ֖ה אֶל מֹשֶׁ֥ה</span> · <i>va-yedaber YHWH el-moshe</i><br><span class="gloss">= and-yedaber the-LORD to-Moses</span></td></tr>
+<tr><td><b>S12</b></td><td>after STEP_Ex_16_12 — I have heard</td><td>I have heard the murmurings of the sons of Israel — speak to them, saying: Between the evenings you shall eat flesh, and at morning you shall be filled with bread; and you shall know that I am the LORD your God.</td><td>LET(ve_laqtu_devar_yom_be_yomo) pushed and OPEN; LET(ve_hekhinu_mishne) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-laqtu-devar-day-in-yomo) pushed and OPEN; LET(and-hekhinu-mishne) pushed and OPEN; no test, no name.</span></td><td><span class="he">שָׁמַ֗עְתִּי אֶת תְּלוּנֹּת֮ בְּנֵ֣י</span> · <i>shamati et-telunot bene</i><br><span class="gloss">= shamati telunot bene</span></td></tr>
+<tr><td><b>S13</b></td><td>after STEP_Ex_16_13 — quail and dew</td><td>And it was at evening, that the quail came up and covered the camp; and at morning there was a layer of dew around the camp.</td><td>LET(ve_laqtu_devar_yom_be_yomo) pushed and OPEN; LET(ve_hekhinu_mishne) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-laqtu-devar-day-in-yomo) pushed and OPEN; LET(and-hekhinu-mishne) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְהִ֣י בָעֶ֔רֶב וַתַּ֣עַל הַשְּׂלָ֔ו</span> · <i>va-yehi va-erev va-taal ha-selav</i><br><span class="gloss">= and-yehi evening and-taal the-selav</span></td></tr>
+<tr><td><b>S14</b></td><td>after STEP_Ex_16_14 — fine as frost</td><td>And the layer of dew went up, and behold — on the face of the wilderness a fine flake-like thing, fine as frost on the ground.</td><td>LET(ve_laqtu_devar_yom_be_yomo) pushed and OPEN; LET(ve_hekhinu_mishne) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-laqtu-devar-day-in-yomo) pushed and OPEN; LET(and-hekhinu-mishne) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַתַּ֖עַל שִׁכְבַ֣ת הַטָּ֑ל וְהִנֵּ֞ה</span> · <i>va-taal shikhvat ha-tal ve-hine</i><br><span class="gloss">= and-taal shikhvat the-tal and-hine</span></td></tr>
+<tr><td><b>S15</b></td><td>after STEP_Ex_16_15 — what is it</td><td>And the sons of Israel saw, and said each to his brother: What is it? — for they knew not what it was; and Moses said to them: It is the bread which the LORD has given you to eat.</td><td>LET(ve_laqtu_devar_yom_be_yomo) pushed and OPEN; LET(ve_hekhinu_mishne) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-laqtu-devar-day-in-yomo) pushed and OPEN; LET(and-hekhinu-mishne) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּרְא֣וּ בְנֵֽי יִשְׂרָאֵ֗ל וַיֹּ֨אמְר֜וּ</span> · <i>va-yiru vene-yisrael va-yomru</i><br><span class="gloss">= and-yiru vene-yisrael and-yomru</span></td></tr>
+<tr><td><b>S16</b></td><td>after STEP_Ex_16_16 — an omer a head</td><td>This is the thing which the LORD commanded: Gather of it, each man according to his eating; an omer a head, by the number of your souls — each man for those in his tent shall you take.</td><td>LET(ve_laqtu_devar_yom_be_yomo) pushed and OPEN; LET(ve_hekhinu_mishne) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-laqtu-devar-day-in-yomo) pushed and OPEN; LET(and-hekhinu-mishne) pushed and OPEN; no test, no name.</span></td><td><span class="he">זֶ֤ה הַדָּבָר֙ אֲשֶׁ֣ר צִוָּ֣ה</span> · <i>ze ha-davar asher tziva</i><br><span class="gloss">= ze the-davar which tziva</span></td></tr>
+<tr><td><b>S17</b></td><td>after STEP_Ex_16_17 — great and small</td><td>And the sons of Israel did so; and they gathered — he who took much, and he who took little.</td><td>LET(ve_hekhinu_mishne) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-hekhinu-mishne) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיַּעֲשׂוּ כֵ֖ן בְּנֵ֣י יִשְׂרָאֵ֑ל</span> · <i>va-yaasu-khen bene yisrael</i><br><span class="gloss">= and-yaasu-so bene yisrael</span></td></tr>
+<tr><td><b>S18</b></td><td>after STEP_Ex_16_18 — no lack, no surplus</td><td>And they measured with the omer, and he who took much had nothing over, and he who took little lacked nothing; each man according to his eating had they gathered.</td><td>LET(ve_hekhinu_mishne) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-hekhinu-mishne) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיָּמֹ֣דּוּ בָעֹ֔מֶר וְלֹ֤א הֶעְדִּיף֙</span> · <i>va-yamodu va-omer ve-lo hedif</i><br><span class="gloss">= and-yamodu and-omer and-not hedif</span></td></tr>
+<tr><td><b>S19</b></td><td>after STEP_Ex_16_19 — leave none till morning</td><td>And Moses said to them: Let no man leave over of it till morning.</td><td>LET(ve_hekhinu_mishne) pushed and OPEN; LET(al_yoter_mimenu_ad_boqer) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-hekhinu-mishne) pushed and OPEN; LET(upon-yoter-from-it-until-morning) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֥אמֶר מֹשֶׁ֖ה אֲלֵהֶ֑ם אִ֕ישׁ</span> · <i>va-yomer moshe el-hem ish</i><br><span class="gloss">= and-yomer Moses to-hem man</span></td></tr>
+<tr><td><b>S20</b></td><td>after STEP_Ex_16_20 — worms and wrath</td><td>And they listened not to Moses, and men left over of it till morning, and it bred worms and stank; and Moses was angry with them.</td><td>LET(ve_hekhinu_mishne) pushed and OPEN; LET(al_yoter_mimenu_ad_boqer) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-hekhinu-mishne) pushed and OPEN; LET(upon-yoter-from-it-until-morning) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְלֹא שָׁמְע֣וּ אֶל מֹשֶׁ֗ה</span> · <i>ve-lo-shamu el-moshe</i><br><span class="gloss">= and-not-shamu to-Moses</span></td></tr>
+<tr><td><b>S21</b></td><td>after STEP_Ex_16_21 — morning by morning</td><td>And they gathered it morning by morning, each man according to his eating; and when the sun grew hot, it melted.</td><td>LET(ve_hekhinu_mishne) pushed and OPEN; LET(al_yoter_mimenu_ad_boqer) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-hekhinu-mishne) pushed and OPEN; LET(upon-yoter-from-it-until-morning) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּלְקְט֤וּ אֹתוֹ֙ בַּבֹּ֣קֶר בַּבֹּ֔קֶר</span> · <i>va-yilqtu et-o ba-boqer ba-boqer</i><br><span class="gloss">= and-yilqtu o morning morning</span></td></tr>
+<tr><td><b>S22</b></td><td>after STEP_Ex_16_22 — the sixth day double</td><td>And it was on the sixth day, that they gathered double bread — two omers for the one; and all the princes of the congregation came and told Moses.</td><td>LET(al_yoter_mimenu_ad_boqer) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(upon-yoter-from-it-until-morning) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְהִ֣י בַּיּ֣וֹם הַשִּׁשִּׁ֗י לָֽקְט֥וּ</span> · <i>va-yehi ba-yom ha-shishi laqtu</i><br><span class="gloss">= and-yehi day the-shishi laqtu</span></td></tr>
+<tr><td><b>S23</b></td><td>after STEP_Ex_16_23 — tomorrow is the rest</td><td>And he said to them: This is what the LORD spoke — a solemn rest, a holy sabbath to the LORD, is tomorrow; that which you would bake — bake, and that which you would boil — boil, and all the surplus lay up for yourselves in keeping until the morning.</td><td>LET(al_yoter_mimenu_ad_boqer) pushed and OPEN; LET(et_ha_odef_hanichu_le_mishmeret) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(upon-yoter-from-it-until-morning) pushed and OPEN; LET(the-odef-hanichu-to-mishmeret) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֣אמֶר אֲלֵהֶ֗ם ה֚וּא אֲשֶׁ֣ר</span> · <i>va-yomer el-hem hu asher</i><br><span class="gloss">= and-yomer to-hem that which</span></td></tr>
+<tr><td><b>S24</b></td><td>after STEP_Ex_16_24 — it did not stink</td><td>And they laid it up until the morning, as Moses commanded; and it did not stink, and no worm was in it.</td><td>LET(al_yoter_mimenu_ad_boqer) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(upon-yoter-from-it-until-morning) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיַּנִּ֤יחוּ אֹתוֹ֙ עַד הַבֹּ֔קֶר</span> · <i>va-yanichu et-o ad-ha-boqer</i><br><span class="gloss">= and-yanichu o until-the-morning</span></td></tr>
+<tr><td><b>S25</b></td><td>after STEP_Ex_16_25 — eat it today</td><td>And Moses said: Eat it today, for today is a sabbath to the LORD; today you shall not find it in the field.</td><td>LET(al_yoter_mimenu_ad_boqer) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(upon-yoter-from-it-until-morning) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֤אמֶר מֹשֶׁה֙ אִכְלֻ֣הוּ הַיּ֔וֹם</span> · <i>va-yomer moshe ikhlu-hu ha-yom</i><br><span class="gloss">= and-yomer Moses ikhlu-that day</span></td></tr>
+<tr><td><b>S26</b></td><td>after STEP_Ex_16_26 — six days and the seventh</td><td>Six days you shall gather it; and on the seventh day — a sabbath: it shall not be in it.</td><td>LET(al_yoter_mimenu_ad_boqer) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(upon-yoter-from-it-until-morning) pushed and OPEN; no test, no name.</span></td><td><span class="he">שֵׁ֥שֶׁת יָמִ֖ים תִּלְקְטֻ֑הוּ וּבַיּ֧וֹם</span> · <i>sheshet yamim tilqtu-hu u-va-yom</i><br><span class="gloss">= sheshet seas tilqtu-that day</span></td></tr>
+<tr><td><b>S27</b></td><td>after STEP_Ex_16_27 — they found nothing</td><td>And it was on the seventh day, that some of the people went out to gather — and they found none.</td><td>LET(al_yoter_mimenu_ad_boqer) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(upon-yoter-from-it-until-morning) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַֽיְהִי֙ בַּיּ֣וֹם הַשְּׁבִיעִ֔י יָצְא֥וּ</span> · <i>va-yehi ba-yom ha-shevii yatzu</i><br><span class="gloss">= and-yehi day seventh yatzu</span></td></tr>
+<tr><td><b>S28</b></td><td>after STEP_Ex_16_28 — how long do you refuse</td><td>And the LORD said to Moses: How long do you refuse to keep My commandments and My laws?</td><td>LET(al_yoter_mimenu_ad_boqer) pushed and OPEN; TESTS += FAIL(anasenu, ha_yelekh_be_torati);<br><span class="gloss">= LET(upon-yoter-from-it-until-morning) pushed and OPEN; TESTS += FAIL(anasenu, the-yelekh-in-torati);</span></td><td><span class="he">וַיֹּ֥אמֶר יְהוָ֖ה אֶל מֹשֶׁ֑ה</span> · <i>va-yomer YHWH el-moshe</i><br><span class="gloss">= and-yomer the-LORD to-Moses</span></td></tr>
+<tr><td><b>S29</b></td><td>after STEP_Ex_16_29 — let no man go out</td><td>See, that the LORD has given you the Sabbath — therefore He gives you on the sixth day bread for two days; sit every man in his place: let no man go out of his place on the seventh day.</td><td>LET(al_yoter_mimenu_ad_boqer) pushed and OPEN; LET(al_yetze_ish_mi_meqomo) pushed and OPEN; TESTS += FAIL(anasenu, ha_yelekh_be_torati);<br><span class="gloss">= LET(upon-yoter-from-it-until-morning) pushed and OPEN; LET(upon-yetze-man-from-meqomo) pushed and OPEN; TESTS += FAIL(anasenu, the-yelekh-in-torati);</span></td><td><span class="he">רְא֗וּ כִּֽי יְהוָה֮ נָתַ֣ן</span> · <i>reu ki-YHWH natan</i><br><span class="gloss">= reu when-the-LORD natan</span></td></tr>
+<tr><td><b>S30</b></td><td>after STEP_Ex_16_30 — and the people rested</td><td>And the people rested on the seventh day.</td><td>LET(al_yoter_mimenu_ad_boqer) pushed and OPEN; TESTS += FAIL(anasenu, ha_yelekh_be_torati);<br><span class="gloss">= LET(upon-yoter-from-it-until-morning) pushed and OPEN; TESTS += FAIL(anasenu, the-yelekh-in-torati);</span></td><td><span class="he">וַיִּשְׁבְּת֥וּ הָעָ֖ם בַּיּ֥וֹם הַשְּׁבִעִֽי</span> · <i>va-yishbtu ha-am ba-yom ha-shevii</i><br><span class="gloss">= and-yishbtu the-am day seventh</span></td></tr>
+<tr><td><b>S31</b></td><td>after STEP_Ex_16_31 — the house named it Manna</td><td>And the house of Israel called its name Manna; and it was like coriander seed, white, and its taste like a wafer in honey.</td><td>LET(al_yoter_mimenu_ad_boqer) pushed and OPEN; TESTS += FAIL(anasenu, ha_yelekh_be_torati); REGISTRY: ha-lechem-&gt;Man (1 write)<br><span class="gloss">= LET(upon-yoter-from-it-until-morning) pushed and OPEN; TESTS += FAIL(anasenu, the-yelekh-in-torati); REGISTRY: the-lechem-&gt;Man (1 write)</span></td><td><span class="he">וַיִּקְרְא֧וּ בֵֽית יִשְׂרָאֵ֛ל אֶת</span> · <i>va-yiqru vet-yisrael et-</i><br><span class="gloss">= and-yiqru vet-yisrael et-</span></td></tr>
+<tr><td><b>S32</b></td><td>after STEP_Ex_16_32 — a keepsake for generations</td><td>And Moses said: This is the thing which the LORD commanded: The fill of the omer of it in keeping for your generations — that they may see the bread which I fed you in the wilderness, when I brought you out from the land of Egypt.</td><td>LET(al_yoter_mimenu_ad_boqer) pushed and OPEN; TESTS += FAIL(anasenu, ha_yelekh_be_torati); REGISTRY: ha-lechem-&gt;Man (1 write)<br><span class="gloss">= LET(upon-yoter-from-it-until-morning) pushed and OPEN; TESTS += FAIL(anasenu, the-yelekh-in-torati); REGISTRY: the-lechem-&gt;Man (1 write)</span></td><td><span class="he">וַיֹּ֣אמֶר מֹשֶׁ֗ה זֶ֤ה הַדָּבָר֙</span> · <i>va-yomer moshe ze ha-davar</i><br><span class="gloss">= and-yomer Moses ze the-davar</span></td></tr>
+<tr><td><b>S33</b></td><td>after STEP_Ex_16_33 — the jar</td><td>And Moses said to Aaron: Take one jar, and put there the fill of the omer of manna; and lay it before the LORD, in keeping for your generations.</td><td>LET(al_yoter_mimenu_ad_boqer) pushed and OPEN; LET(qach_tzintzenet_achat) pushed and OPEN; TESTS += FAIL(anasenu, ha_yelekh_be_torati); REGISTRY: ha-lechem-&gt;Man (1 write)<br><span class="gloss">= LET(upon-yoter-from-it-until-morning) pushed and OPEN; LET(qach-tzintzenet-achat) pushed and OPEN; TESTS += FAIL(anasenu, the-yelekh-in-torati); REGISTRY: the-lechem-&gt;Man (1 write)</span></td><td><span class="he">וַיֹּ֨אמֶר מֹשֶׁ֜ה אֶֽל אַהֲרֹ֗ן</span> · <i>va-yomer moshe el-aharon</i><br><span class="gloss">= and-yomer Moses to-Aaron</span></td></tr>
+<tr><td><b>S34</b></td><td>after STEP_Ex_16_34 — before the Testimony</td><td>As the LORD commanded Moses, so Aaron laid it before the Testimony, in keeping.</td><td>LET(al_yoter_mimenu_ad_boqer) pushed and OPEN; TESTS += FAIL(anasenu, ha_yelekh_be_torati); REGISTRY: ha-lechem-&gt;Man (1 write)<br><span class="gloss">= LET(upon-yoter-from-it-until-morning) pushed and OPEN; TESTS += FAIL(anasenu, the-yelekh-in-torati); REGISTRY: the-lechem-&gt;Man (1 write)</span></td><td><span class="he">כַּאֲשֶׁ֛ר צִוָּ֥ה יְהוָ֖ה אֶל</span> · <i>ka-asher tziva YHWH el-</i><br><span class="gloss">= like-which tziva the-LORD to</span></td></tr>
+<tr><td><b>S35</b></td><td>after STEP_Ex_16_35 — forty years</td><td>And the sons of Israel ate the manna forty years, until their coming to an inhabited land; the manna they ate, until their coming to the edge of the land of Canaan.</td><td>LET(al_yoter_mimenu_ad_boqer) pushed and OPEN; TESTS += FAIL(anasenu, ha_yelekh_be_torati); REGISTRY: ha-lechem-&gt;Man (1 write)<br><span class="gloss">= LET(upon-yoter-from-it-until-morning) pushed and OPEN; TESTS += FAIL(anasenu, the-yelekh-in-torati); REGISTRY: the-lechem-&gt;Man (1 write)</span></td><td><span class="he">וּבְנֵ֣י יִשְׂרָאֵ֗ל אָֽכְל֤וּ אֶת</span> · <i>u-vene yisrael akhlu et-</i><br><span class="gloss">= and-vene yisrael akhlu et-</span></td></tr>
+<tr><td><b>S36</b></td><td>after STEP_Ex_16_36 — the omer gloss</td><td>And the omer — a tenth of the efa it is.</td><td>LET(al_yoter_mimenu_ad_boqer) pushed and OPEN; TESTS += FAIL(anasenu, ha_yelekh_be_torati); REGISTRY: ha-lechem-&gt;Man (1 write)<br><span class="gloss">= LET(upon-yoter-from-it-until-morning) pushed and OPEN; TESTS += FAIL(anasenu, the-yelekh-in-torati); REGISTRY: the-lechem-&gt;Man (1 write)</span></td><td><span class="he">וְהָעֹ֕מֶר עֲשִׂרִ֥ית הָאֵיפָ֖ה הֽוּא</span> · <i>ve-ha-omer asirit ha-efa hu</i><br><span class="gloss">= and-the-omer asirit the-efa that</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: exo_16_manna_and_sabbath — The manna and the Sabbath (16:1-36) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={&#x27;ha-lechem&#x27;: &#x27;Man&#x27;} | TESTS=1 PASS | LEDGER days=[] | FLAGS=[&#x27;named_before_any_presence&#x27;]
+
+=== S1 — after STEP_Ex_16_1 — into the wilderness of Sin
+    וַיִּסְעוּ֙ מֵֽאֵילִ֔ם וַיָּבֹ֜אוּ כָּל (va-yisu me-elim va-yavou kal-)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Ex_16_2 — the whole congregation murmurs
+    וילינו וַיִּלּ֜וֹנוּ כָּל עֲדַ֧ת (v-ylynv va-yilonu kal-adat)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Ex_16_3 — the flesh-pots
+    וַיֹּאמְר֨וּ אֲלֵהֶ֜ם בְּנֵ֣י יִשְׂרָאֵ֗ל (va-yomru el-hem bene yisrael)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Ex_16_4 — bread from heaven
+    וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה (va-yomer YHWH el-moshe)
+    PASS  LET(ve_laqtu_devar_yom_be_yomo) pushed and OPEN  (queue=[&#x27;ve_laqtu_devar_yom_be_yomo&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Ex_16_5 — double on the sixth
+    וְהָיָה֙ בַּיּ֣וֹם הַשִּׁשִּׁ֔י וְהֵכִ֖ינוּ (ve-haya ba-yom ha-shishi ve-hekhinu)
+    PASS  LET(ve_laqtu_devar_yom_be_yomo) pushed and OPEN  (queue=[&#x27;ve_laqtu_devar_yom_be_yomo&#x27;, &#x27;ve_hekhinu_mishne&#x27;])
+    PASS  LET(ve_hekhinu_mishne) pushed and OPEN  (queue=[&#x27;ve_laqtu_devar_yom_be_yomo&#x27;, &#x27;ve_hekhinu_mishne&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Ex_16_6 — evening, and you shall know
+    וַיֹּ֤אמֶר מֹשֶׁה֙ וְאַהֲרֹ֔ן אֶֽל (va-yomer moshe ve-aharon el-)
+    PASS  LET(ve_laqtu_devar_yom_be_yomo) pushed and OPEN  (queue=[&#x27;ve_laqtu_devar_yom_be_yomo&#x27;, &#x27;ve_hekhinu_mishne&#x27;])
+    PASS  LET(ve_hekhinu_mishne) pushed and OPEN  (queue=[&#x27;ve_laqtu_devar_yom_be_yomo&#x27;, &#x27;ve_hekhinu_mishne&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — after STEP_Ex_16_7 — morning, and the glory
+    וּבֹ֗קֶר וּרְאִיתֶם֙ אֶת כְּב֣וֹד (u-voqer u-reitem et-kevod)
+    PASS  LET(ve_laqtu_devar_yom_be_yomo) pushed and OPEN  (queue=[&#x27;ve_laqtu_devar_yom_be_yomo&#x27;, &#x27;ve_hekhinu_mishne&#x27;])
+    PASS  LET(ve_hekhinu_mishne) pushed and OPEN  (queue=[&#x27;ve_laqtu_devar_yom_be_yomo&#x27;, &#x27;ve_hekhinu_mishne&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S8 — after STEP_Ex_16_8 — not against us
+    וַיֹּ֣אמֶר מֹשֶׁ֗ה בְּתֵ֣ת יְהוָה֩ (va-yomer moshe be-tet YHWH)
+    PASS  LET(ve_laqtu_devar_yom_be_yomo) pushed and OPEN  (queue=[&#x27;ve_laqtu_devar_yom_be_yomo&#x27;, &#x27;ve_hekhinu_mishne&#x27;])
+    PASS  LET(ve_hekhinu_mishne) pushed and OPEN  (queue=[&#x27;ve_laqtu_devar_yom_be_yomo&#x27;, &#x27;ve_hekhinu_mishne&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S9 — after STEP_Ex_16_9 — draw near
+    וַיֹּ֤אמֶר מֹשֶׁה֙ אֶֽל אַהֲרֹ֔ן (va-yomer moshe el-aharon)
+    PASS  LET(ve_laqtu_devar_yom_be_yomo) pushed and OPEN  (queue=[&#x27;ve_laqtu_devar_yom_be_yomo&#x27;, &#x27;ve_hekhinu_mishne&#x27;, &#x27;qirvu_lifne_YHWH&#x27;])
+    PASS  LET(ve_hekhinu_mishne) pushed and OPEN  (queue=[&#x27;ve_laqtu_devar_yom_be_yomo&#x27;, &#x27;ve_hekhinu_mishne&#x27;, &#x27;qirvu_lifne_YHWH&#x27;])
+    PASS  LET(qirvu_lifne_YHWH) pushed and OPEN  (queue=[&#x27;ve_laqtu_devar_yom_be_yomo&#x27;, &#x27;ve_hekhinu_mishne&#x27;, &#x27;qirvu_lifne_YHWH&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S10 — after STEP_Ex_16_10 — the glory in the cloud
+    וַיְהִ֗י כְּדַבֵּ֤ר אַהֲרֹן֙ אֶל (va-yehi ke-daber aharon el-)
+    PASS  LET(ve_laqtu_devar_yom_be_yomo) pushed and OPEN  (queue=[&#x27;ve_laqtu_devar_yom_be_yomo&#x27;, &#x27;ve_hekhinu_mishne&#x27;])
+    PASS  LET(ve_hekhinu_mishne) pushed and OPEN  (queue=[&#x27;ve_laqtu_devar_yom_be_yomo&#x27;, &#x27;ve_hekhinu_mishne&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S11 — after STEP_Ex_16_11 — the frame
+    וַיְדַבֵּ֥ר יְהוָ֖ה אֶל מֹשֶׁ֥ה (va-yedaber YHWH el-moshe)
+    PASS  LET(ve_laqtu_devar_yom_be_yomo) pushed and OPEN  (queue=[&#x27;ve_laqtu_devar_yom_be_yomo&#x27;, &#x27;ve_hekhinu_mishne&#x27;])
+    PASS  LET(ve_hekhinu_mishne) pushed and OPEN  (queue=[&#x27;ve_laqtu_devar_yom_be_yomo&#x27;, &#x27;ve_hekhinu_mishne&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S12 — after STEP_Ex_16_12 — I have heard
+    שָׁמַ֗עְתִּי אֶת תְּלוּנֹּת֮ בְּנֵ֣י (shamati et-telunot bene)
+    PASS  LET(ve_laqtu_devar_yom_be_yomo) pushed and OPEN  (queue=[&#x27;ve_laqtu_devar_yom_be_yomo&#x27;, &#x27;ve_hekhinu_mishne&#x27;])
+    PASS  LET(ve_hekhinu_mishne) pushed and OPEN  (queue=[&#x27;ve_laqtu_devar_yom_be_yomo&#x27;, &#x27;ve_hekhinu_mishne&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S13 — after STEP_Ex_16_13 — quail and dew
+    וַיְהִ֣י בָעֶ֔רֶב וַתַּ֣עַל הַשְּׂלָ֔ו (va-yehi va-erev va-taal ha-selav)
+    PASS  LET(ve_laqtu_devar_yom_be_yomo) pushed and OPEN  (queue=[&#x27;ve_laqtu_devar_yom_be_yomo&#x27;, &#x27;ve_hekhinu_mishne&#x27;])
+    PASS  LET(ve_hekhinu_mishne) pushed and OPEN  (queue=[&#x27;ve_laqtu_devar_yom_be_yomo&#x27;, &#x27;ve_hekhinu_mishne&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S14 — after STEP_Ex_16_14 — fine as frost
+    וַתַּ֖עַל שִׁכְבַ֣ת הַטָּ֑ל וְהִנֵּ֞ה (va-taal shikhvat ha-tal ve-hine)
+    PASS  LET(ve_laqtu_devar_yom_be_yomo) pushed and OPEN  (queue=[&#x27;ve_laqtu_devar_yom_be_yomo&#x27;, &#x27;ve_hekhinu_mishne&#x27;])
+    PASS  LET(ve_hekhinu_mishne) pushed and OPEN  (queue=[&#x27;ve_laqtu_devar_yom_be_yomo&#x27;, &#x27;ve_hekhinu_mishne&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S15 — after STEP_Ex_16_15 — what is it
+    וַיִּרְא֣וּ בְנֵֽי יִשְׂרָאֵ֗ל וַיֹּ֨אמְר֜וּ (va-yiru vene-yisrael va-yomru)
+    PASS  LET(ve_laqtu_devar_yom_be_yomo) pushed and OPEN  (queue=[&#x27;ve_laqtu_devar_yom_be_yomo&#x27;, &#x27;ve_hekhinu_mishne&#x27;])
+    PASS  LET(ve_hekhinu_mishne) pushed and OPEN  (queue=[&#x27;ve_laqtu_devar_yom_be_yomo&#x27;, &#x27;ve_hekhinu_mishne&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S16 — after STEP_Ex_16_16 — an omer a head
+    זֶ֤ה הַדָּבָר֙ אֲשֶׁ֣ר צִוָּ֣ה (ze ha-davar asher tziva)
+    PASS  LET(ve_laqtu_devar_yom_be_yomo) pushed and OPEN  (queue=[&#x27;ve_laqtu_devar_yom_be_yomo&#x27;, &#x27;ve_hekhinu_mishne&#x27;])
+    PASS  LET(ve_hekhinu_mishne) pushed and OPEN  (queue=[&#x27;ve_laqtu_devar_yom_be_yomo&#x27;, &#x27;ve_hekhinu_mishne&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S17 — after STEP_Ex_16_17 — great and small
+    וַיַּעֲשׂוּ כֵ֖ן בְּנֵ֣י יִשְׂרָאֵ֑ל (va-yaasu-khen bene yisrael)
+    PASS  LET(ve_hekhinu_mishne) pushed and OPEN  (queue=[&#x27;ve_hekhinu_mishne&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S18 — after STEP_Ex_16_18 — no lack, no surplus
+    וַיָּמֹ֣דּוּ בָעֹ֔מֶר וְלֹ֤א הֶעְדִּיף֙ (va-yamodu va-omer ve-lo hedif)
+    PASS  LET(ve_hekhinu_mishne) pushed and OPEN  (queue=[&#x27;ve_hekhinu_mishne&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S19 — after STEP_Ex_16_19 — leave none till morning
+    וַיֹּ֥אמֶר מֹשֶׁ֖ה אֲלֵהֶ֑ם אִ֕ישׁ (va-yomer moshe el-hem ish)
+    PASS  LET(ve_hekhinu_mishne) pushed and OPEN  (queue=[&#x27;ve_hekhinu_mishne&#x27;, &#x27;al_yoter_mimenu_ad_boqer&#x27;])
+    PASS  LET(al_yoter_mimenu_ad_boqer) pushed and OPEN  (queue=[&#x27;ve_hekhinu_mishne&#x27;, &#x27;al_yoter_mimenu_ad_boqer&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S20 — after STEP_Ex_16_20 — worms and wrath
+    וְלֹא שָׁמְע֣וּ אֶל מֹשֶׁ֗ה (ve-lo-shamu el-moshe)
+    PASS  LET(ve_hekhinu_mishne) pushed and OPEN  (queue=[&#x27;ve_hekhinu_mishne&#x27;, &#x27;al_yoter_mimenu_ad_boqer&#x27;])
+    PASS  LET(al_yoter_mimenu_ad_boqer) pushed and OPEN  (queue=[&#x27;ve_hekhinu_mishne&#x27;, &#x27;al_yoter_mimenu_ad_boqer&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S21 — after STEP_Ex_16_21 — morning by morning
+    וַיִּלְקְט֤וּ אֹתוֹ֙ בַּבֹּ֣קֶר בַּבֹּ֔קֶר (va-yilqtu et-o ba-boqer ba-boqer)
+    PASS  LET(ve_hekhinu_mishne) pushed and OPEN  (queue=[&#x27;ve_hekhinu_mishne&#x27;, &#x27;al_yoter_mimenu_ad_boqer&#x27;])
+    PASS  LET(al_yoter_mimenu_ad_boqer) pushed and OPEN  (queue=[&#x27;ve_hekhinu_mishne&#x27;, &#x27;al_yoter_mimenu_ad_boqer&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S22 — after STEP_Ex_16_22 — the sixth day double
+    וַיְהִ֣י בַּיּ֣וֹם הַשִּׁשִּׁ֗י לָֽקְט֥וּ (va-yehi ba-yom ha-shishi laqtu)
+    PASS  LET(al_yoter_mimenu_ad_boqer) pushed and OPEN  (queue=[&#x27;al_yoter_mimenu_ad_boqer&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S23 — after STEP_Ex_16_23 — tomorrow is the rest
+    וַיֹּ֣אמֶר אֲלֵהֶ֗ם ה֚וּא אֲשֶׁ֣ר (va-yomer el-hem hu asher)
+    PASS  LET(al_yoter_mimenu_ad_boqer) pushed and OPEN  (queue=[&#x27;al_yoter_mimenu_ad_boqer&#x27;, &#x27;et_ha_odef_hanichu_le_mishmeret&#x27;])
+    PASS  LET(et_ha_odef_hanichu_le_mishmeret) pushed and OPEN  (queue=[&#x27;al_yoter_mimenu_ad_boqer&#x27;, &#x27;et_ha_odef_hanichu_le_mishmeret&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S24 — after STEP_Ex_16_24 — it did not stink
+    וַיַּנִּ֤יחוּ אֹתוֹ֙ עַד הַבֹּ֔קֶר (va-yanichu et-o ad-ha-boqer)
+    PASS  LET(al_yoter_mimenu_ad_boqer) pushed and OPEN  (queue=[&#x27;al_yoter_mimenu_ad_boqer&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S25 — after STEP_Ex_16_25 — eat it today
+    וַיֹּ֤אמֶר מֹשֶׁה֙ אִכְלֻ֣הוּ הַיּ֔וֹם (va-yomer moshe ikhlu-hu ha-yom)
+    PASS  LET(al_yoter_mimenu_ad_boqer) pushed and OPEN  (queue=[&#x27;al_yoter_mimenu_ad_boqer&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S26 — after STEP_Ex_16_26 — six days and the seventh
+    שֵׁ֥שֶׁת יָמִ֖ים תִּלְקְטֻ֑הוּ וּבַיּ֧וֹם (sheshet yamim tilqtu-hu u-va-yom)
+    PASS  LET(al_yoter_mimenu_ad_boqer) pushed and OPEN  (queue=[&#x27;al_yoter_mimenu_ad_boqer&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S27 — after STEP_Ex_16_27 — they found nothing
+    וַֽיְהִי֙ בַּיּ֣וֹם הַשְּׁבִיעִ֔י יָצְא֥וּ (va-yehi ba-yom ha-shevii yatzu)
+    PASS  LET(al_yoter_mimenu_ad_boqer) pushed and OPEN  (queue=[&#x27;al_yoter_mimenu_ad_boqer&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S28 — after STEP_Ex_16_28 — how long do you refuse
+    וַיֹּ֥אמֶר יְהוָ֖ה אֶל מֹשֶׁ֑ה (va-yomer YHWH el-moshe)
+    PASS  LET(al_yoter_mimenu_ad_boqer) pushed and OPEN  (queue=[&#x27;al_yoter_mimenu_ad_boqer&#x27;])
+    PASS  TESTS += FAIL(anasenu, ha_yelekh_be_torati)  (tests=[(&#x27;FAIL&#x27;, &#x27;anasenu&#x27;, &#x27;ha_yelekh_be_torati&#x27;)])
+
+=== S29 — after STEP_Ex_16_29 — let no man go out
+    רְא֗וּ כִּֽי יְהוָה֮ נָתַ֣ן (reu ki-YHWH natan)
+    PASS  LET(al_yoter_mimenu_ad_boqer) pushed and OPEN  (queue=[&#x27;al_yoter_mimenu_ad_boqer&#x27;, &#x27;al_yetze_ish_mi_meqomo&#x27;])
+    PASS  LET(al_yetze_ish_mi_meqomo) pushed and OPEN  (queue=[&#x27;al_yoter_mimenu_ad_boqer&#x27;, &#x27;al_yetze_ish_mi_meqomo&#x27;])
+    PASS  TESTS += FAIL(anasenu, ha_yelekh_be_torati)  (tests=[(&#x27;FAIL&#x27;, &#x27;anasenu&#x27;, &#x27;ha_yelekh_be_torati&#x27;)])
+
+=== S30 — after STEP_Ex_16_30 — and the people rested
+    וַיִּשְׁבְּת֥וּ הָעָ֖ם בַּיּ֥וֹם הַשְּׁבִעִֽי (va-yishbtu ha-am ba-yom ha-shevii)
+    PASS  LET(al_yoter_mimenu_ad_boqer) pushed and OPEN  (queue=[&#x27;al_yoter_mimenu_ad_boqer&#x27;])
+    PASS  TESTS += FAIL(anasenu, ha_yelekh_be_torati)  (tests=[(&#x27;FAIL&#x27;, &#x27;anasenu&#x27;, &#x27;ha_yelekh_be_torati&#x27;)])
+
+=== S31 — after STEP_Ex_16_31 — the house named it Manna
+    וַיִּקְרְא֧וּ בֵֽית יִשְׂרָאֵ֛ל אֶת (va-yiqru vet-yisrael et-)
+    PASS  LET(al_yoter_mimenu_ad_boqer) pushed and OPEN  (queue=[&#x27;al_yoter_mimenu_ad_boqer&#x27;])
+    PASS  TESTS += FAIL(anasenu, ha_yelekh_be_torati)  (tests=[(&#x27;FAIL&#x27;, &#x27;anasenu&#x27;, &#x27;ha_yelekh_be_torati&#x27;)])
+    PASS  REGISTRY: ha-lechem-&gt;Man (1 write)  (names={&#x27;ha-lechem&#x27;: &#x27;Man&#x27;} writes=1)
+
+=== S32 — after STEP_Ex_16_32 — a keepsake for generations
+    וַיֹּ֣אמֶר מֹשֶׁ֗ה זֶ֤ה הַדָּבָר֙ (va-yomer moshe ze ha-davar)
+    PASS  LET(al_yoter_mimenu_ad_boqer) pushed and OPEN  (queue=[&#x27;al_yoter_mimenu_ad_boqer&#x27;])
+    PASS  TESTS += FAIL(anasenu, ha_yelekh_be_torati)  (tests=[(&#x27;FAIL&#x27;, &#x27;anasenu&#x27;, &#x27;ha_yelekh_be_torati&#x27;)])
+    PASS  REGISTRY: ha-lechem-&gt;Man (1 write)  (names={&#x27;ha-lechem&#x27;: &#x27;Man&#x27;} writes=1)
+
+=== S33 — after STEP_Ex_16_33 — the jar
+    וַיֹּ֨אמֶר מֹשֶׁ֜ה אֶֽל אַהֲרֹ֗ן (va-yomer moshe el-aharon)
+    PASS  LET(al_yoter_mimenu_ad_boqer) pushed and OPEN  (queue=[&#x27;al_yoter_mimenu_ad_boqer&#x27;, &#x27;qach_tzintzenet_achat&#x27;])
+    PASS  LET(qach_tzintzenet_achat) pushed and OPEN  (queue=[&#x27;al_yoter_mimenu_ad_boqer&#x27;, &#x27;qach_tzintzenet_achat&#x27;])
+    PASS  TESTS += FAIL(anasenu, ha_yelekh_be_torati)  (tests=[(&#x27;FAIL&#x27;, &#x27;anasenu&#x27;, &#x27;ha_yelekh_be_torati&#x27;)])
+    PASS  REGISTRY: ha-lechem-&gt;Man (1 write)  (names={&#x27;ha-lechem&#x27;: &#x27;Man&#x27;} writes=1)
+
+=== S34 — after STEP_Ex_16_34 — before the Testimony
+    כַּאֲשֶׁ֛ר צִוָּ֥ה יְהוָ֖ה אֶל (ka-asher tziva YHWH el-)
+    PASS  LET(al_yoter_mimenu_ad_boqer) pushed and OPEN  (queue=[&#x27;al_yoter_mimenu_ad_boqer&#x27;])
+    PASS  TESTS += FAIL(anasenu, ha_yelekh_be_torati)  (tests=[(&#x27;FAIL&#x27;, &#x27;anasenu&#x27;, &#x27;ha_yelekh_be_torati&#x27;)])
+    PASS  REGISTRY: ha-lechem-&gt;Man (1 write)  (names={&#x27;ha-lechem&#x27;: &#x27;Man&#x27;} writes=1)
+
+=== S35 — after STEP_Ex_16_35 — forty years
+    וּבְנֵ֣י יִשְׂרָאֵ֗ל אָֽכְל֤וּ אֶת (u-vene yisrael akhlu et-)
+    PASS  LET(al_yoter_mimenu_ad_boqer) pushed and OPEN  (queue=[&#x27;al_yoter_mimenu_ad_boqer&#x27;])
+    PASS  TESTS += FAIL(anasenu, ha_yelekh_be_torati)  (tests=[(&#x27;FAIL&#x27;, &#x27;anasenu&#x27;, &#x27;ha_yelekh_be_torati&#x27;)])
+    PASS  REGISTRY: ha-lechem-&gt;Man (1 write)  (names={&#x27;ha-lechem&#x27;: &#x27;Man&#x27;} writes=1)
+
+=== S36 — after STEP_Ex_16_36 — the omer gloss
+    וְהָעֹ֕מֶר עֲשִׂרִ֥ית הָאֵיפָ֖ה הֽוּא (ve-ha-omer asirit ha-efa hu)
+    PASS  LET(al_yoter_mimenu_ad_boqer) pushed and OPEN  (queue=[&#x27;al_yoter_mimenu_ad_boqer&#x27;])
+    PASS  TESTS += FAIL(anasenu, ha_yelekh_be_torati)  (tests=[(&#x27;FAIL&#x27;, &#x27;anasenu&#x27;, &#x27;ha_yelekh_be_torati&#x27;)])
+    PASS  REGISTRY: ha-lechem-&gt;Man (1 write)  (names={&#x27;ha-lechem&#x27;: &#x27;Man&#x27;} writes=1)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/exo_16_manna_and_sabbath.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# exo_16_manna_and_sabbath — 16:1-36
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/exo_16_manna_and_sabbath.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;The manna and the Sabbath (16:1-36)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;exo_16_manna_and_sabbath&quot;)
+
+# -------------------------- Exod.16.1 · INTO_THE_WILDERNESS_OF_SIN ---------
+# וַיִּסְעוּ מֵאֵילִם וַיָּבֹאוּ כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל
+# אֶל־מִדְבַּר־סִין אֲשֶׁר בֵּין־אֵילִם וּבֵין סִינָי בַּחֲמִשָּׁה עָשָׂר
+# יוֹם לַחֹדֶשׁ הַשֵּׁנִי לְצֵאתָם מֵאֶרֶץ מִצְרָיִם
+# &quot;[EN-AID] And they journeyed from Elim, and all the congregation of the
+# sons of Israel came to the wilderness of Sin, which is between Elim and
+# Sinai, on the fifteenth day of the second month after their going out from
+# the land of Egypt.&quot;
+m.step(&quot;Exod.16.1&quot;)
+# ‹וַיִּסְעוּ מֵאֵילִם וַיָּבֹאוּ כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל
+# אֶל־מִדְבַּר־סִין אֲשֶׁר בֵּין־אֵילִם וּבֵין סִינָי› (“and-journey from-
+# Elim and-come/bring all congregation son Israel to pasture Sin which
+# between Elim and-between Sinai”) — fact holds: and-come/bring-to-pasture-
+# Sin
+m.fact(&quot;va_yavou_el_midbar_sin&quot;)
+
+# -------------------------- Exod.16.2 · THE_WHOLE_CONGREGATION_MURMURS -----
+# וילינו וַיִּלּוֹנוּ כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל עַל־מֹשֶׁה וְעַל־אַהֲרֹן
+# בַּמִּדְבָּר
+# &quot;[EN-AID] And all the congregation of the sons of Israel murmured against
+# Moses and against Aaron in the wilderness.&quot;
+m.step(&quot;Exod.16.2&quot;)
+# ‹וילינו וַיִּלּוֹנוּ כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל עַל־מֹשֶׁה וְעַל־אַהֲרֹן
+# בַּמִּדְבָּר› (“and-stop and-stop all congregation son Israel over Moses
+# and-over Aaron in-pasture”) — fact holds: and-stop-over-Moses-and-over-
+# Aaron
+m.fact(&quot;va_yilonu_al_moshe_ve_al_aharon&quot;)
+
+# -------------------------- Exod.16.3 · THE_FLESH_POTS ---------------------
+# וַיֹּאמְרוּ אֲלֵהֶם בְּנֵי יִשְׂרָאֵל מִי־יִתֵּן מוּתֵנוּ בְיַד־יְהוָה
+# בְּאֶרֶץ מִצְרַיִם בְּשִׁבְתֵּנוּ עַל־סִיר הַבָּשָׂר בְּאָכְלֵנוּ לֶחֶם
+# לָשֹׂבַע כִּי־הוֹצֵאתֶם אֹתָנוּ אֶל־הַמִּדְבָּר הַזֶּה לְהָמִית
+# אֶת־כָּל־הַקָּהָל הַזֶּה בָּרָעָב
+# &quot;[EN-AID] And the sons of Israel said to them: Would that we had died by
+# the hand of the LORD in the land of Egypt, when we sat by the flesh-pot,
+# when we ate bread to the full — for you have brought us out to this
+# wilderness, to kill this whole assembly with hunger.&quot;
+m.step(&quot;Exod.16.3&quot;)
+# ‹מִי־יִתֵּן מוּתֵנוּ בְיַד־יְהוָה בְּאֶרֶץ מִצְרַיִם בְּשִׁבְתֵּנוּ
+# עַל־סִיר הַבָּשָׂר בְּאָכְלֵנוּ לֶחֶם לָשֹׂבַע› (“who? set die-us/our in-
+# hand YHWH in-earth Egypt in-dwell/sit-us/our over pot the-flesh in-eat-
+# us/our food to-satisfaction-joy)”) — fact holds: who?-set-mutenu
+m.fact(&quot;mi_yiten_mutenu&quot;)
+
+# -------------------------- Exod.16.4 · BREAD_FROM_HEAVEN ------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה הִנְנִי מַמְטִיר לָכֶם לֶחֶם מִן־הַשָּׁמָיִם
+# וְיָצָא הָעָם וְלָקְטוּ דְּבַר־יוֹם בְּיוֹמוֹ לְמַעַן אֲנַסֶּנּוּ הֲיֵלֵךְ
+# בְּתוֹרָתִי אִם־לֹא
+# &quot;[EN-AID] And the LORD said to Moses: Behold, I rain for you bread from
+# the heavens; and the people shall go out and gather the day&#x27;s portion in
+# its day, that I may test him — will he walk in My law, or not?&quot;
+m.step(&quot;Exod.16.4&quot;)
+# ‹הִנְנִי מַמְטִיר לָכֶם לֶחֶם מִן־הַשָּׁמָיִם› (“lo!-me/my rain to-
+# you/your(pl) food from the-heavens”) — the-LORD speaks a demand — LET:
+# and-pick-up-word/thing-day-in-yomo
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;ve_laqtu_devar_yom_be_yomo&quot;)
+
+# -------------------------- Exod.16.5 · DOUBLE_ON_THE_SIXTH ----------------
+# וְהָיָה בַּיּוֹם הַשִּׁשִּׁי וְהֵכִינוּ אֵת אֲשֶׁר־יָבִיאוּ וְהָיָה
+# מִשְׁנֶה עַל אֲשֶׁר־יִלְקְטוּ יוֹם יוֹם
+# &quot;[EN-AID] And it shall be on the sixth day, that they shall prepare that
+# which they bring in; and it shall be double what they gather day by day.&quot;
+m.step(&quot;Exod.16.5&quot;)
+# ‹וְהָיָה בַּיּוֹם הַשִּׁשִּׁי וְהֵכִינוּ אֵת אֲשֶׁר־יָבִיאוּ וְהָיָה
+# מִשְׁנֶה› (“and-be in-day the-sixth and-be-erect obj-marker which
+# come/bring and-be repetition”) — the-LORD speaks a demand — LET: and-be-
+# erect-repetition
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;ve_hekhinu_mishne&quot;)
+
+# -------------------------- Exod.16.6 · EVENING_AND_YOU_SHALL_KNOW ---------
+# וַיֹּאמֶר מֹשֶׁה וְאַהֲרֹן אֶל־כָּל־בְּנֵי יִשְׂרָאֵל עֶרֶב וִידַעְתֶּם
+# כִּי יְהוָה הוֹצִיא אֶתְכֶם מֵאֶרֶץ מִצְרָיִם
+# &quot;[EN-AID] And Moses and Aaron said to all the sons of Israel: At evening —
+# and you shall know that the LORD has brought you out from the land of
+# Egypt.&quot;
+m.step(&quot;Exod.16.6&quot;)
+# ‹עֶרֶב וִידַעְתֶּם כִּי יְהוָה הוֹצִיא אֶתְכֶם מֵאֶרֶץ מִצְרָיִם›
+# (“evening and-know that YHWH bring-forth obj-marker-you/your(pl) from-
+# earth Egypt”) — fact holds: evening-vi-ydatem
+m.fact(&quot;erev_vi_ydatem&quot;)
+
+# -------------------------- Exod.16.7 · MORNING_AND_THE_GLORY --------------
+# וּבֹקֶר וּרְאִיתֶם אֶת־כְּבוֹד יְהוָה בְּשָׁמְעוֹ אֶת־תְּלֻנֹּתֵיכֶם
+# עַל־יְהוָה וְנַחְנוּ מָה כִּי תלונו תַלִּינוּ עָלֵינוּ
+# &quot;[EN-AID] And at morning — and you shall see the glory of the LORD, in His
+# hearing your murmurings against the LORD; and we — what are we, that you
+# murmur against us?&quot;
+m.step(&quot;Exod.16.7&quot;)
+# ‹וּבֹקֶר וּרְאִיתֶם אֶת־כְּבוֹד יְהוָה בְּשָׁמְעוֹ אֶת־תְּלֻנֹּתֵיכֶם
+# עַל־יְהוָה› (“and-morning and-see obj-marker weight YHWH in-hear-him/its
+# obj-marker grumbling-you/your(pl) over YHWH”) — fact holds: and-see-obj-
+# marker-weight-the-LORD
+m.fact(&quot;u_reitem_et_kevod_YHWH&quot;)
+
+# -------------------------- Exod.16.8 · NOT_AGAINST_US ---------------------
+# וַיֹּאמֶר מֹשֶׁה בְּתֵת יְהוָה לָכֶם בָּעֶרֶב בָּשָׂר לֶאֱכֹל וְלֶחֶם
+# בַּבֹּקֶר לִשְׂבֹּעַ בִּשְׁמֹעַ יְהוָה אֶת־תְּלֻנֹּתֵיכֶם אֲשֶׁר־אַתֶּם
+# מַלִּינִם עָלָיו וְנַחְנוּ מָה לֹא־עָלֵינוּ תְלֻנֹּתֵיכֶם כִּי עַל־יְהוָה
+# &quot;[EN-AID] And Moses said: In the LORD&#x27;s giving you flesh at evening to
+# eat, and bread at morning to the full — in the LORD&#x27;s hearing your
+# murmurings which you murmur against Him; and we — what are we? Not against
+# us are your murmurings, but against the LORD.&quot;
+m.step(&quot;Exod.16.8&quot;)
+# ‹וְנַחְנוּ מָה לֹא־עָלֵינוּ תְלֻנֹּתֵיכֶם כִּי עַל־יְהוָה› (“and-we what
+# not over-us/our grumbling-you/your(pl) that over YHWH”) — fact holds: not-
+# alenu-telunotekhem
+m.fact(&quot;lo_alenu_telunotekhem&quot;)
+
+# -------------------------- Exod.16.9 · DRAW_NEAR --------------------------
+# וַיֹּאמֶר מֹשֶׁה אֶל־אַהֲרֹן אֱמֹר אֶל־כָּל־עֲדַת בְּנֵי יִשְׂרָאֵל
+# קִרְבוּ לִפְנֵי יְהוָה כִּי שָׁמַע אֵת תְּלֻנֹּתֵיכֶם
+# &quot;[EN-AID] And Moses said to Aaron: Say to all the congregation of the sons
+# of Israel: Draw near before the LORD — for He has heard your murmurings.&quot;
+m.step(&quot;Exod.16.9&quot;)
+# ‹אֱמֹר אֶל־כָּל־עֲדַת בְּנֵי יִשְׂרָאֵל קִרְבוּ לִפְנֵי יְהוָה› (“say to
+# all congregation son Israel bring-near to-face YHWH”) — Moses speaks a
+# demand — LET: bring-near-lifne-the-LORD
+m.declare(&quot;moshe&quot;, &quot;LET&quot;,
+          &quot;qirvu_lifne_YHWH&quot;)
+
+# -------------------------- Exod.16.10 · THE_GLORY_IN_THE_CLOUD ------------
+# וַיְהִי כְּדַבֵּר אַהֲרֹן אֶל־כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל וַיִּפְנוּ
+# אֶל־הַמִּדְבָּר וְהִנֵּה כְּבוֹד יְהוָה נִרְאָה בֶּעָנָן
+# &quot;[EN-AID] And it was, as Aaron spoke to all the congregation of the sons
+# of Israel, that they turned toward the wilderness; and behold — the glory
+# of the LORD appeared in the cloud.&quot;
+m.step(&quot;Exod.16.10&quot;)
+# ‹וַיְהִי כְּדַבֵּר אַהֲרֹן אֶל־כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל› (“and-be
+# like-speak Aaron to all congregation son Israel”) — demand settled (popped
+# from the queue): bring-near-lifne-the-LORD
+m.result(&quot;qirvu_lifne_YHWH&quot;, tmark=&quot;t1&quot;)
+# ‹וְהִנֵּה כְּבוֹד יְהוָה נִרְאָה בֶּעָנָן› (“and-behold weight YHWH see
+# in-cloud”) — event: nirat-weight-the-LORD — theme kevod-YHWH
+m.event(&quot;nirat_kevod_YHWH&quot;, themes=[&quot;kevod-YHWH&quot;])
+
+# -------------------------- Exod.16.11 · THE_FRAME -------------------------
+# וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר
+# &quot;[EN-AID] And the LORD spoke to Moses, saying:&quot;
+m.step(&quot;Exod.16.11&quot;)
+# ‹וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר› (“and-speak YHWH to Moses to-say”)
+# — fact holds: and-speak-16
+m.fact(&quot;va_yedaber_16&quot;)
+
+# -------------------------- Exod.16.12 · I_HAVE_HEARD ----------------------
+# שָׁמַעְתִּי אֶת־תְּלוּנֹּת בְּנֵי יִשְׂרָאֵל דַּבֵּר אֲלֵהֶם לֵאמֹר בֵּין
+# הָעַרְבַּיִם תֹּאכְלוּ בָשָׂר וּבַבֹּקֶר תִּשְׂבְּעוּ־לָחֶם וִידַעְתֶּם
+# כִּי אֲנִי יְהוָה אֱלֹהֵיכֶם
+# &quot;[EN-AID] I have heard the murmurings of the sons of Israel — speak to
+# them, saying: Between the evenings you shall eat flesh, and at morning you
+# shall be filled with bread; and you shall know that I am the LORD your
+# God.&quot;
+m.step(&quot;Exod.16.12&quot;)
+# ‹שָׁמַעְתִּי אֶת־תְּלוּנֹּת בְּנֵי יִשְׂרָאֵל› (“hear obj-marker grumbling
+# son Israel”) — fact holds: hear-obj-marker-grumbling
+m.fact(&quot;shamati_et_telunot&quot;)
+# ‹וִידַעְתֶּם כִּי אֲנִי יְהוָה אֱלֹהֵיכֶם› (“and-know that YHWH God-
+# you/your(pl)”) — fact holds: ani-the-LORD-elohekhem
+m.fact(&quot;ani_YHWH_elohekhem&quot;)
+
+# -------------------------- Exod.16.13 · QUAIL_AND_DEW ---------------------
+# וַיְהִי בָעֶרֶב וַתַּעַל הַשְּׂלָו וַתְּכַס אֶת־הַמַּחֲנֶה וּבַבֹּקֶר
+# הָיְתָה שִׁכְבַת הַטַּל סָבִיב לַמַּחֲנֶה
+# &quot;[EN-AID] And it was at evening, that the quail came up and covered the
+# camp; and at morning there was a layer of dew around the camp.&quot;
+m.step(&quot;Exod.16.13&quot;)
+# ‹וַיְהִי בָעֶרֶב וַתַּעַל הַשְּׂלָו וַתְּכַס אֶת־הַמַּחֲנֶה› (“and-be in-
+# evening and-go-up the-quail-collectively and-plump obj-marker the-camp”) —
+# event: matan-flesh-and-food — agent the-LORD; theme ha-selav
+m.event(&quot;matan_basar_va_lechem&quot;, agent=&quot;YHWH&quot;, themes=[&quot;ha-selav&quot;])
+# ‹וּבַבֹּקֶר הָיְתָה שִׁכְבַת הַטַּל סָבִיב לַמַּחֲנֶה› (“and-in-morning be
+# lying-down the-dew circle to-camp”) — fact holds: lying-down-the-dew
+m.fact(&quot;shikhvat_ha_tal&quot;)
+
+# -------------------------- Exod.16.14 · FINE_AS_FROST ---------------------
+# וַתַּעַל שִׁכְבַת הַטָּל וְהִנֵּה עַל־פְּנֵי הַמִּדְבָּר דַּק מְחֻסְפָּס
+# דַּק כַּכְּפֹר עַל־הָאָרֶץ
+# &quot;[EN-AID] And the layer of dew went up, and behold — on the face of the
+# wilderness a fine flake-like thing, fine as frost on the ground.&quot;
+m.step(&quot;Exod.16.14&quot;)
+# ‹וְהִנֵּה עַל־פְּנֵי הַמִּדְבָּר דַּק מְחֻסְפָּס דַּק כַּכְּפֹר
+# עַל־הָאָרֶץ› (“and-behold over face the-pasture thin shred thin like-cover
+# over the-earth”) — fact holds: thin-shred
+m.fact(&quot;daq_mechuspas&quot;)
+
+# -------------------------- Exod.16.15 · WHAT_IS_IT ------------------------
+# וַיִּרְאוּ בְנֵי־יִשְׂרָאֵל וַיֹּאמְרוּ אִישׁ אֶל־אָחִיו מָן הוּא כִּי לֹא
+# יָדְעוּ מַה־הוּא וַיֹּאמֶר מֹשֶׁה אֲלֵהֶם הוּא הַלֶּחֶם אֲשֶׁר נָתַן
+# יְהוָה לָכֶם לְאָכְלָה
+# &quot;[EN-AID] And the sons of Israel saw, and said each to his brother: What
+# is it? — for they knew not what it was; and Moses said to them: It is the
+# bread which the LORD has given you to eat.&quot;
+m.step(&quot;Exod.16.15&quot;)
+# ‹מָן הוּא כִּי לֹא יָדְעוּ מַה־הוּא› (“whatness he/it that not know what
+# he/it”) — fact holds: whatness-he/it
+m.fact(&quot;man_hu&quot;)
+
+# -------------------------- Exod.16.16 · AN_OMER_A_HEAD --------------------
+# זֶה הַדָּבָר אֲשֶׁר צִוָּה יְהוָה לִקְטוּ מִמֶּנּוּ אִישׁ לְפִי אָכְלוֹ
+# עֹמֶר לַגֻּלְגֹּלֶת מִסְפַּר נַפְשֹׁתֵיכֶם אִישׁ לַאֲשֶׁר בְּאָהֳלוֹ
+# תִּקָּחוּ
+# &quot;[EN-AID] This is the thing which the LORD commanded: Gather of it, each
+# man according to his eating; an omer a head, by the number of your souls —
+# each man for those in his tent shall you take.&quot;
+m.step(&quot;Exod.16.16&quot;)
+# ‹זֶה הַדָּבָר אֲשֶׁר צִוָּה יְהוָה לִקְטוּ מִמֶּנּוּ אִישׁ לְפִי אָכְלוֹ›
+# (“this the-word/thing which command YHWH pick-up from-us/our man to-mouth
+# food-him/its”) — fact holds: heap-to-skull
+m.fact(&quot;omer_la_gulgolet&quot;)
+
+# -------------------------- Exod.16.17 · GREAT_AND_SMALL -------------------
+# וַיַּעֲשׂוּ־כֵן בְּנֵי יִשְׂרָאֵל וַיִּלְקְטוּ הַמַּרְבֶּה וְהַמַּמְעִיט
+# &quot;[EN-AID] And the sons of Israel did so; and they gathered — he who took
+# much, and he who took little.&quot;
+m.step(&quot;Exod.16.17&quot;)
+# ‹וַיַּעֲשׂוּ־כֵן בְּנֵי יִשְׂרָאֵל› (“and-make so son Israel”) — demand
+# settled (popped from the queue): and-pick-up-word/thing-day-in-yomo
+m.result(&quot;ve_laqtu_devar_yom_be_yomo&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Exod.16.18 · NO_LACK_NO_SURPLUS ----------------
+# וַיָּמֹדּוּ בָעֹמֶר וְלֹא הֶעְדִּיף הַמַּרְבֶּה וְהַמַּמְעִיט לֹא הֶחְסִיר
+# אִישׁ לְפִי־אָכְלוֹ לָקָטוּ
+# &quot;[EN-AID] And they measured with the omer, and he who took much had
+# nothing over, and he who took little lacked nothing; each man according to
+# his eating had they gathered.&quot;
+m.step(&quot;Exod.16.18&quot;)
+# ‹וַיָּמֹדּוּ בָעֹמֶר וְלֹא הֶעְדִּיף הַמַּרְבֶּה וְהַמַּמְעִיט לֹא
+# הֶחְסִיר› (“and-stretch in-heap and-not be-redundant the-multiply and-the-
+# pare-off not lack”) — fact holds: not-be-redundant-and-not-lack
+m.fact(&quot;lo_hedif_ve_lo_hechsir&quot;)
+
+# -------------------------- Exod.16.19 · LEAVE_NONE_TILL_MORNING -----------
+# וַיֹּאמֶר מֹשֶׁה אֲלֵהֶם אִישׁ אַל־יוֹתֵר מִמֶּנּוּ עַד־בֹּקֶר
+# &quot;[EN-AID] And Moses said to them: Let no man leave over of it till
+# morning.&quot;
+m.step(&quot;Exod.16.19&quot;)
+# ‹אִישׁ אַל־יוֹתֵר מִמֶּנּוּ עַד־בֹּקֶר› (“man do-not jut-over from-us/our
+# until morning”) — Moses speaks a demand — LET: over-jut-over-from-it-
+# until-morning
+m.declare(&quot;moshe&quot;, &quot;LET&quot;,
+          &quot;al_yoter_mimenu_ad_boqer&quot;)
+
+# -------------------------- Exod.16.20 · WORMS_AND_WRATH -------------------
+# וְלֹא־שָׁמְעוּ אֶל־מֹשֶׁה וַיּוֹתִרוּ אֲנָשִׁים מִמֶּנּוּ עַד־בֹּקֶר
+# וַיָּרֻם תּוֹלָעִים וַיִּבְאַשׁ וַיִּקְצֹף עֲלֵהֶם מֹשֶׁה
+# &quot;[EN-AID] And they listened not to Moses, and men left over of it till
+# morning, and it bred worms and stank; and Moses was angry with them.&quot;
+m.step(&quot;Exod.16.20&quot;)
+# ‹וַיּוֹתִרוּ אֲנָשִׁים מִמֶּנּוּ עַד־בֹּקֶר וַיָּרֻם תּוֹלָעִים
+# וַיִּבְאַשׁ› (“and-jut-over man from-us/our until morning and-rise-high
+# crimson-grub and-smell-bad”) — fact holds: and-rise-high-crimson-grub
+m.fact(&quot;va_yarum_tolaim&quot;)
+
+# -------------------------- Exod.16.21 · MORNING_BY_MORNING ----------------
+# וַיִּלְקְטוּ אֹתוֹ בַּבֹּקֶר בַּבֹּקֶר אִישׁ כְּפִי אָכְלוֹ וְחַם
+# הַשֶּׁמֶשׁ וְנָמָס
+# &quot;[EN-AID] And they gathered it morning by morning, each man according to
+# his eating; and when the sun grew hot, it melted.&quot;
+m.step(&quot;Exod.16.21&quot;)
+# ‹וְחַם הַשֶּׁמֶשׁ וְנָמָס› (“and-be-hot the-sun and-liquefy”) — fact
+# holds: and-be-hot-the-sun-and-liquefy
+m.fact(&quot;ve_cham_ha_shemesh_ve_namas&quot;)
+
+# -------------------------- Exod.16.22 · THE_SIXTH_DAY_DOUBLE --------------
+# וַיְהִי בַּיּוֹם הַשִּׁשִּׁי לָקְטוּ לֶחֶם מִשְׁנֶה שְׁנֵי הָעֹמֶר לָאֶחָד
+# וַיָּבֹאוּ כָּל־נְשִׂיאֵי הָעֵדָה וַיַּגִּידוּ לְמֹשֶׁה
+# &quot;[EN-AID] And it was on the sixth day, that they gathered double bread —
+# two omers for the one; and all the princes of the congregation came and
+# told Moses.&quot;
+m.step(&quot;Exod.16.22&quot;)
+# ‹וַיְהִי בַּיּוֹם הַשִּׁשִּׁי לָקְטוּ לֶחֶם מִשְׁנֶה שְׁנֵי הָעֹמֶר
+# לָאֶחָד› (“and-be in-day the-sixth pick-up food repetition two the-heap
+# to-one”) — demand settled (popped from the queue): and-be-erect-repetition
+m.result(&quot;ve_hekhinu_mishne&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Exod.16.23 · TOMORROW_IS_THE_REST --------------
+# וַיֹּאמֶר אֲלֵהֶם הוּא אֲשֶׁר דִּבֶּר יְהוָה שַׁבָּתוֹן שַׁבַּת־קֹדֶשׁ
+# לַיהוָה מָחָר אֵת אֲשֶׁר־תֹּאפוּ אֵפוּ וְאֵת אֲשֶׁר־תְּבַשְּׁלוּ
+# בַּשֵּׁלוּ וְאֵת כָּל־הָעֹדֵף הַנִּיחוּ לָכֶם לְמִשְׁמֶרֶת עַד־הַבֹּקֶר
+# &quot;[EN-AID] And he said to them: This is what the LORD spoke — a solemn
+# rest, a holy sabbath to the LORD, is tomorrow; that which you would bake —
+# bake, and that which you would boil — boil, and all the surplus lay up for
+# yourselves in keeping until the morning.&quot;
+m.step(&quot;Exod.16.23&quot;)
+# ‹שַׁבָּתוֹן שַׁבַּת־קֹדֶשׁ לַיהוָה מָחָר› (“sabbatism intermission
+# holiness to-YHWH deferred”) — Moses speaks a demand — LET: obj-marker-the-
+# be-redundant-deposit-to-watch
+m.declare(&quot;moshe&quot;, &quot;LET&quot;,
+          &quot;et_ha_odef_hanichu_le_mishmeret&quot;)
+
+# -------------------------- Exod.16.24 · IT_DID_NOT_STINK ------------------
+# וַיַּנִּיחוּ אֹתוֹ עַד־הַבֹּקֶר כַּאֲשֶׁר צִוָּה מֹשֶׁה וְלֹא הִבְאִישׁ
+# וְרִמָּה לֹא־הָיְתָה בּוֹ
+# &quot;[EN-AID] And they laid it up until the morning, as Moses commanded; and
+# it did not stink, and no worm was in it.&quot;
+m.step(&quot;Exod.16.24&quot;)
+# ‹וַיַּנִּיחוּ אֹתוֹ עַד־הַבֹּקֶר כַּאֲשֶׁר צִוָּה מֹשֶׁה› (“and-deposit
+# obj-marker-him/its until the-morning like-as/which command Moses”) —
+# demand settled (popped from the queue): obj-marker-the-be-redundant-
+# deposit-to-watch
+m.result(&quot;et_ha_odef_hanichu_le_mishmeret&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Exod.16.25 · EAT_IT_TODAY ----------------------
+# וַיֹּאמֶר מֹשֶׁה אִכְלֻהוּ הַיּוֹם כִּי־שַׁבָּת הַיּוֹם לַיהוָה הַיּוֹם
+# לֹא תִמְצָאֻהוּ בַּשָּׂדֶה
+# &quot;[EN-AID] And Moses said: Eat it today, for today is a sabbath to the
+# LORD; today you shall not find it in the field.&quot;
+m.step(&quot;Exod.16.25&quot;)
+# ‹אִכְלֻהוּ הַיּוֹם כִּי־שַׁבָּת הַיּוֹם לַיהוָה› (“eat-him/its the-day
+# that intermission the-day to-YHWH”) — fact holds: intermission-the-day-to-
+# the-LORD
+m.fact(&quot;shabat_ha_yom_la_YHWH&quot;)
+
+# -------------------------- Exod.16.26 · SIX_DAYS_AND_THE_SEVENTH ----------
+# שֵׁשֶׁת יָמִים תִּלְקְטֻהוּ וּבַיּוֹם הַשְּׁבִיעִי שַׁבָּת לֹא
+# יִהְיֶה־בּוֹ
+# &quot;[EN-AID] Six days you shall gather it; and on the seventh day — a
+# sabbath: it shall not be in it.&quot;
+m.step(&quot;Exod.16.26&quot;)
+# ‹שֵׁשֶׁת יָמִים תִּלְקְטֻהוּ וּבַיּוֹם הַשְּׁבִיעִי שַׁבָּת לֹא
+# יִהְיֶה־בּוֹ› (“six day pick-up-him/its and-in-day the-seventh
+# intermission not be in-him/its”) — fact holds: six-day-tilqetuhu
+m.fact(&quot;sheshet_yamim_tilqetuhu&quot;)
+
+# -------------------------- Exod.16.27 · THEY_FOUND_NOTHING ----------------
+# וַיְהִי בַּיּוֹם הַשְּׁבִיעִי יָצְאוּ מִן־הָעָם לִלְקֹט וְלֹא מָצָאוּ
+# &quot;[EN-AID] And it was on the seventh day, that some of the people went out
+# to gather — and they found none.&quot;
+m.step(&quot;Exod.16.27&quot;)
+# ‹וַיְהִי בַּיּוֹם הַשְּׁבִיעִי יָצְאוּ מִן־הָעָם לִלְקֹט וְלֹא מָצָאוּ›
+# (“and-be in-day the-seventh bring-forth from the-people to-pick-up and-not
+# find”) — fact holds: bring-forth-from-the-people-lilqot
+m.fact(&quot;yatzu_min_ha_am_lilqot&quot;)
+
+# -------------------------- Exod.16.28 · HOW_LONG_DO_YOU_REFUSE ------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה עַד־אָנָה מֵאַנְתֶּם לִשְׁמֹר מִצְוֺתַי
+# וְתוֹרֹתָי
+# &quot;[EN-AID] And the LORD said to Moses: How long do you refuse to keep My
+# commandments and My laws?&quot;
+m.step(&quot;Exod.16.28&quot;)
+# ‹עַד־אָנָה מֵאַנְתֶּם לִשְׁמֹר מִצְוֺתַי וְתוֹרֹתָי› (“until where? refuse
+# to-keep/guard commandment-me/my and-precept-me/my”) — test FAIL — oracle-
+# word anasenu, on the-go-in-torati
+m.test(&quot;FAIL&quot;, &quot;anasenu&quot;, &quot;ha_yelekh_be_torati&quot;)
+
+# -------------------------- Exod.16.29 · LET_NO_MAN_GO_OUT -----------------
+# רְאוּ כִּי־יְהוָה נָתַן לָכֶם הַשַּׁבָּת עַל־כֵּן הוּא נֹתֵן לָכֶם
+# בַּיּוֹם הַשִּׁשִּׁי לֶחֶם יוֹמָיִם שְׁבוּ אִישׁ תַּחְתָּיו אַל־יֵצֵא
+# אִישׁ מִמְּקֹמוֹ בַּיּוֹם הַשְּׁבִיעִי
+# &quot;[EN-AID] See, that the LORD has given you the Sabbath — therefore He
+# gives you on the sixth day bread for two days; sit every man in his place:
+# let no man go out of his place on the seventh day.&quot;
+m.step(&quot;Exod.16.29&quot;)
+# ‹שְׁבוּ אִישׁ תַּחְתָּיו אַל־יֵצֵא אִישׁ מִמְּקֹמוֹ בַּיּוֹם הַשְּׁבִיעִי›
+# (“dwell/sit man under-him/its do-not bring-forth man from-place-him/its
+# in-day the-seventh”) — the-LORD speaks a demand — LET: over-bring-forth-
+# man-who?-meqomo
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;al_yetze_ish_mi_meqomo&quot;)
+
+# -------------------------- Exod.16.30 · AND_THE_PEOPLE_RESTED -------------
+# וַיִּשְׁבְּתוּ הָעָם בַּיּוֹם הַשְּׁבִעִי
+# &quot;[EN-AID] And the people rested on the seventh day.&quot;
+m.step(&quot;Exod.16.30&quot;)
+# ‹וַיִּשְׁבְּתוּ הָעָם בַּיּוֹם הַשְּׁבִעִי› (“and-cease the-people in-day
+# the-seventh”) — demand settled (popped from the queue): over-bring-forth-
+# man-who?-meqomo
+m.result(&quot;al_yetze_ish_mi_meqomo&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Exod.16.31 · THE_HOUSE_NAMED_IT_MANNA ----------
+# וַיִּקְרְאוּ בֵית־יִשְׂרָאֵל אֶת־שְׁמוֹ מָן וְהוּא כְּזֶרַע גַּד לָבָן
+# וְטַעְמוֹ כְּצַפִּיחִת בִּדְבָשׁ
+# &quot;[EN-AID] And the house of Israel called its name Manna; and it was like
+# coriander seed, white, and its taste like a wafer in honey.&quot;
+m.step(&quot;Exod.16.31&quot;)
+# ‹וַיִּקְרְאוּ בֵית־יִשְׂרָאֵל אֶת־שְׁמוֹ מָן› (“and-call house Israel obj-
+# marker name-him/its whatness”) — named: ha-lechem := Man
+m.name(&quot;ha-lechem&quot;, &quot;Man&quot;)
+
+# -------------------------- Exod.16.32 · A_KEEPSAKE_FOR_GENERATIONS --------
+# וַיֹּאמֶר מֹשֶׁה זֶה הַדָּבָר אֲשֶׁר צִוָּה יְהוָה מְלֹא הָעֹמֶר מִמֶּנּוּ
+# לְמִשְׁמֶרֶת לְדֹרֹתֵיכֶם לְמַעַן יִרְאוּ אֶת־הַלֶּחֶם אֲשֶׁר הֶאֱכַלְתִּי
+# אֶתְכֶם בַּמִּדְבָּר בְּהוֹצִיאִי אֶתְכֶם מֵאֶרֶץ מִצְרָיִם
+# &quot;[EN-AID] And Moses said: This is the thing which the LORD commanded: The
+# fill of the omer of it in keeping for your generations — that they may see
+# the bread which I fed you in the wilderness, when I brought you out from
+# the land of Egypt.&quot;
+m.step(&quot;Exod.16.32&quot;)
+# ‹לְמַעַן יִרְאוּ אֶת־הַלֶּחֶם› (“so-that see obj-marker the-food”) — fact
+# holds: fulness-the-heap-to-watch
+m.fact(&quot;melo_ha_omer_le_mishmeret&quot;)
+
+# -------------------------- Exod.16.33 · THE_JAR ---------------------------
+# וַיֹּאמֶר מֹשֶׁה אֶל־אַהֲרֹן קַח צִנְצֶנֶת אַחַת וְתֶן־שָׁמָּה
+# מְלֹא־הָעֹמֶר מָן וְהַנַּח אֹתוֹ לִפְנֵי יְהוָה לְמִשְׁמֶרֶת לְדֹרֹתֵיכֶם
+# &quot;[EN-AID] And Moses said to Aaron: Take one jar, and put there the fill of
+# the omer of manna; and lay it before the LORD, in keeping for your
+# generations.&quot;
+m.step(&quot;Exod.16.33&quot;)
+# ‹קַח צִנְצֶנֶת אַחַת וְתֶן־שָׁמָּה מְלֹא־הָעֹמֶר מָן› (“take vase one and-
+# set there-ward fulness the-heap whatness”) — Moses speaks a demand — LET:
+# take-vase-one
+m.declare(&quot;moshe&quot;, &quot;LET&quot;,
+          &quot;qach_tzintzenet_achat&quot;)
+
+# -------------------------- Exod.16.34 · BEFORE_THE_TESTIMONY --------------
+# כַּאֲשֶׁר צִוָּה יְהוָה אֶל־מֹשֶׁה וַיַּנִּיחֵהוּ אַהֲרֹן לִפְנֵי הָעֵדֻת
+# לְמִשְׁמָרֶת
+# &quot;[EN-AID] As the LORD commanded Moses, so Aaron laid it before the
+# Testimony, in keeping.&quot;
+m.step(&quot;Exod.16.34&quot;)
+# ‹וַיַּנִּיחֵהוּ אַהֲרֹן לִפְנֵי הָעֵדֻת לְמִשְׁמָרֶת› (“and-deposit-
+# him/its Aaron to-face the-testimony to-watch”) — demand settled (popped
+# from the queue): take-vase-one
+m.result(&quot;qach_tzintzenet_achat&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Exod.16.35 · FORTY_YEARS -----------------------
+# וּבְנֵי יִשְׂרָאֵל אָכְלוּ אֶת־הַמָּן אַרְבָּעִים שָׁנָה עַד־בֹּאָם
+# אֶל־אֶרֶץ נוֹשָׁבֶת אֶת־הַמָּן אָכְלוּ עַד־בֹּאָם אֶל־קְצֵה אֶרֶץ כְּנָעַן
+# &quot;[EN-AID] And the sons of Israel ate the manna forty years, until their
+# coming to an inhabited land; the manna they ate, until their coming to the
+# edge of the land of Canaan.&quot;
+m.step(&quot;Exod.16.35&quot;)
+# ‹וּבְנֵי יִשְׂרָאֵל אָכְלוּ אֶת־הַמָּן אַרְבָּעִים שָׁנָה עַד־בֹּאָם
+# אֶל־אֶרֶץ נוֹשָׁבֶת› (“and-son Israel eat obj-marker the-whatness forty
+# years until come/bring-them/their to earth dwell/sit”) — fact holds: eat-
+# obj-marker-the-whatness-forty-years
+m.fact(&quot;akhlu_et_ha_man_arbaim_shana&quot;)
+
+# -------------------------- Exod.16.36 · THE_OMER_GLOSS --------------------
+# וְהָעֹמֶר עֲשִׂרִית הָאֵיפָה הוּא
+# &quot;[EN-AID] And the omer — a tenth of the efa it is.&quot;
+m.step(&quot;Exod.16.36&quot;)
+# ‹וְהָעֹמֶר עֲשִׂרִית הָאֵיפָה הוּא› (“and-the-heap tenth the-ephah he/it”)
+# — fact holds: and-the-heap-tenth-the-ephah
+m.fact(&quot;ve_ha_omer_asirit_ha_efa&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {&#x27;ha-lechem&#x27;: &#x27;Man&#x27;}
+    assert m.REGISTRY[&quot;writes&quot;] == 1
+    assert m.tests_list() == [(&#x27;FAIL&#x27;, &#x27;anasenu&#x27;, &#x27;ha_yelekh_be_torati&#x27;)]
+    assert m.open_demands() == [&#x27;al_yoter_mimenu_ad_boqer&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 7
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;named_before_any_presence&#x27;: 1}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;va_yavou_el_midbar_sin&#x27;, &#x27;va_yilonu_al_moshe_ve_al_aharon&#x27;, &#x27;mi_yiten_mutenu&#x27;, &#x27;erev_vi_ydatem&#x27;, &#x27;u_reitem_et_kevod_YHWH&#x27;, &#x27;lo_alenu_telunotekhem&#x27;, &#x27;va_yedaber_16&#x27;, &#x27;shamati_et_telunot&#x27;, &#x27;ani_YHWH_elohekhem&#x27;, &#x27;shikhvat_ha_tal&#x27;, &#x27;daq_mechuspas&#x27;, &#x27;man_hu&#x27;, &#x27;omer_la_gulgolet&#x27;, &#x27;lo_hedif_ve_lo_hechsir&#x27;, &#x27;va_yarum_tolaim&#x27;, &#x27;ve_cham_ha_shemesh_ve_namas&#x27;, &#x27;shabat_ha_yom_la_YHWH&#x27;, &#x27;sheshet_yamim_tilqetuhu&#x27;, &#x27;yatzu_min_ha_am_lilqot&#x27;, &#x27;melo_ha_omer_le_mishmeret&#x27;, &#x27;akhlu_et_ha_man_arbaim_shana&#x27;, &#x27;ve_ha_omer_asirit_ha_efa&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 16
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

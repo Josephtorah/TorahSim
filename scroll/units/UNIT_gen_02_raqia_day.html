@@ -1,0 +1,337 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_02_raqia_day — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_02_raqia_day?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Day two: firmament — build, divide, name; commit without test (1:6-8) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_02_raqia_day</b> · Genesis 1:6-8 · derive logic_derived_v1 · phase C-2</div>
+<div class="meta"><a href="../#Gen/1/6">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">יוֹם שֵׁנִי — רָקִיעַ</span> · <i>yom sheni — raqia</i> · second day — firmament</p>
+<div class="note">Derived 2026-07-30 at owner&#x27;s order (&quot;derive day two&quot;); FROZEN 2026-07-30 on owner approval (&quot;Yes keep the ? also freeze day two&quot;). Owner explicitly reviewed the LET? on vi-yhi mavdil and chose to RETAIN the question mark — a recorded non-upgrade decision, not an oversight (TIR-028). First unit derived after the Stage D interpreter existed; its scenarios include the day-2 signature — a cycle close with TESTS empty, which the interpreter must FLAG, never block (the S6 contract on real text).</div>
+<div class="note">Logic-derived v1: v3 ta&#x27;amim trees (glue bricks, pure binary) -&gt; leaf role frames from OSHB morph -&gt; operator lines citing TIR-026..033 -&gt; machine-state scenarios (registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (retro, oral-first era; record: logic/oral_audit/AUDIT_gen_02_2026-08-08.md; manifest 2/2 VERIFIED, zero FAILED — thin oral layer, proportionate audit). CROWNS (chain-attested + DB-verified). THE STOLEN LETTER&#x27;S WRITTEN TRACE [G02-01, the Michlol via Minchat Shai]: רקיע (&quot;let there be a FIRMAMENT,&quot; 1:6) ends in a guttural the mouth reaches through an unwritten glide — the Michlol&#x27;s &quot;stolen letter,&quot; sounded but never written (we say the firmament-word as if an aleph slipped in before the ayin). The stream carries the rule&#x27;s one visible trace: the patach (the short a) written directly ON the final ayin, out of the letter-then-vowel order every other vowel keeps (DB-checked) — the pointing system&#x27;s own mark for the sound that has no letter. ABOVE THE FIRMAMENT, TWICE [G02-02, Kitzur Baal HaTurim]: the phrase מעל לרקיע (&quot;the waters ABOVE THE FIRMAMENT,&quot; 1:7) stands exactly once in the Torah; its one Scripture partner is the voice from above the firmament of Ezekiel&#x27;s chariot-vision (Ezek 1:25, named) — the Kitzur binding the two guarded teachings, creation and the chariot, by the two phrases that reach above the sky. READINGS (named-only): Minchat Shai&#x27;s full account of the stolen-letter reading custom (the Michlol, Et Sofer, and the grammarians&#x27; chain, quoted at length in his note).</div>
+<div class="meta">confidence: structure tested; operator readings tested-per-TIR; intent hypothesis</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>Day-2 unit (1:6-8) chosen as the second Stage C unit: the first DEVIATION day — the transaction commits with no PASS(tov) anywhere, making it the real-text exercise of the interpreter&#x27;s flag-not-block contract (S6). Also carries the first registry collision (shamayim).</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Hebrew source + trees</td><td>All 3 verses via taamim_tree_parse.py rule set v3: status unique, pure_binary true. tree_ascii recorded below (regenerated 2026-07-30 from the DB tree_json).</td><td>tested</td></tr>
+<tr><td><b>C</b></td><td>Segment structure</td><td>Leaves = conjunctive-glued bricks closed by disjunctives. Verb morphology (#IMPOSED OSHB, verified by DB query 2026-07-30): yehi Vqj3ms JUSSIVE; vi-yhi Vqi3ms IMPERFECT; mavdil Vhrmsa hifil PARTICIPLE; va-ya&#x27;as / va-yavdel / va-yiqra / va-yehi wayyiqtol.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Predicates &amp; outcomes</td><td>Candidate operators: DECLARE wrapping a TWO-MOOD spec (jussive existence + imperfect job), participle INVARIANT as job description, build+divide events, generic RESULT (va-yehi khen), naming write, cycle commit with NO test. The missing test is a finding, not a defect of the derivation.</td><td>tested</td></tr>
+<tr><td><b>E</b></td><td>Logic format choice</td><td>Operator lines (deontic/event/temporal per TIR-026..033) + registry write + day-ledger row. No casuistic frames in this block.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Bilingual logic objects</td><td>Every operator line carries he + he_translit + en; register values keep Hebrew where the text supplies them (raqia, shamayim, sheni).</td><td>established</td></tr>
+<tr><td><b>G</b></td><td>Oral (named only)</td><td>All four citations below verified from local Data (2026-07-28 pass, reused): BR 4:2 (fluid-&gt;solid, on 1:6), BR 4:6 (why no tov on day 2), BR 4:7 + Chagigah 12a (shamayim naming/etymology, on 1:8).</td><td>tested</td></tr>
+<tr><td><b>H</b></td><td>Scenarios</td><td>S1-S3 register deltas per verse, written against the Stage D interpreter&#x27;s assertion vocabulary (extended 2026-07-30: OPEN specs, mood-remains, single-write registry, ORDINAL label, commit-flag check); S4_negative re-asserts the LET? upgrade contract.</td><td>tested</td></tr>
+<tr><td><b>I</b></td><td>English leakage review</td><td>Operators derive from verb forms (jussive/imperfect/participle/ wayyiqtol), the bein pair and le-/la- prefixes, and tree arms — not from English glosses. The LET? on vi-yhi mavdil keeps its question mark; resolution would need an owner ruling with citation (TIR-028).</td><td>established</td></tr>
+<tr><td><b>J</b></td><td>Freeze</td><td>status: frozen 2026-07-30 on owner approval. Owner reviewed the LET? on vi-yhi mavdil and chose to RETAIN the ? (recorded non-upgrade, TIR-028). Changes require a new derive pass, not silent edits. Oral audit 2026-08-08 folded same day (run 7 block 10 — run complete): 2 VERIFIED, 0 FAILED (thin layer, proportionate); headline: the stolen letter&#x27;s written trace on the firmament-word.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_1_6 · Gen.1.6 · <span class='expr'>DECLARE_TWO_MOOD_SPEC</span></h3>
+<p><span class="he">וַיֹּאמֶר אֱלֹהִים יְהִי רָקִיעַ בְּתוֹךְ הַמָּיִם וִיהִי מַבְדִּיל בֵּין מַיִם לָמָיִם</span> · <i>va-yomer Elohim yehi raqia be-tokh ha-mayim vi-yhi mavdil bein mayim la-mayim</i> · [EN-AID/JPS] And God said: &#x27;Let there be a firmament in the midst of the waters, and let it divide the waters from the waters.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר אלהים יהי רקיע בתוך המים</span> · <i>va-yomer Elohim yehi raqia be-tokh ha-mayim</i> · speech act + existence fiat + location (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויהי מבדיל בין מים למים</span> · <i>vi-yhi mavdil bein mayim la-mayim</i> · the job spec: a standing divider between waters</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(Elohim, LET(exists(raqia)))</span><br><span class="gloss">= DECLARE(God, LET(exists(firmament)))</span><br>yehi here is CODED JUSSIVE (Vqj3ms) — a clean LET; location rider be-tokh ha-mayim (in the midst of the waters)</td><td><span class="he">יְהִי רָקִיעַ</span> · <i>yehi raqia</i><br><span class="gloss">= let-there-be firmament</span></td><td class='cite'>TIR-026</td><td>tested</td></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(Elohim, LET?(mavdil(raqia, mayim|mayim)))</span><br><span class="gloss">= DECLARE(God, LET?(dividing(firmament, waters|waters)))</span><br>SAME speech act, second directive. vi-yhi is CODED IMPERFECT (Vqi3ms) — the ? is mandatory and never auto-upgraded; contrast the jussive yehi two words earlier: the text itself switches mood between the existence demand and the job demand</td><td><span class="he">וִיהִי מַבְדִּיל</span> · <i>vi-yhi mavdil</i><br><span class="gloss">= let-it-be dividing</span></td><td class='cite'>TIR-028</td><td>tested as flag; resolution per-unit only</td></tr>
+<tr class="opline"><td>INVARIANT</td><td><span class="expr">INVARIANT(mavdil(raqia, mayim|mayim)) during t_open</span><br><span class="gloss">= INVARIANT(dividing(firmament, waters|waters)) during t-open</span><br>participle (Vhrmsa, hifil) = a STANDING JOB, not an event: the firmament&#x27;s duty is continuous division — spec as invariant</td><td><span class="he">מַבְדִּיל</span> · <i>mavdil</i><br><span class="gloss">= dividing</span></td><td class='cite'>TIR-031</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">mayim are READ without prior install (standalone machine; gen_01 installed them by narration — cross-unit chaining is Stage E)</span><br><span class="gloss">= waters are READ without prior install (standalone machine; gen-01 installed them by narration — cross-unit chaining is Stage E)</span><br>flag, not fix</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Top split L=etnachta after ha-mayim: [fiat+location | job spec]. The two-mood spec is the verse&#x27;s signature: jussive for BE, imperfect for DO — existence commanded cleanly, function stated with the form that cannot distinguish command from future (TIR-028 discipline).</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_1_7 · Gen.1.7 · <span class='expr'>BUILD_DIVIDE_RESULT</span></h3>
+<p><span class="he">וַיַּעַשׂ אֱלֹהִים אֶת־הָרָקִיעַ וַיַּבְדֵּל בֵּין הַמַּיִם אֲשֶׁר מִתַּחַת לָרָקִיעַ וּבֵין הַמַּיִם אֲשֶׁר מֵעַל לָרָקִיעַ וַיְהִי־כֵן</span> · <i>va-ya&#x27;as Elohim et-ha-raqia va-yavdel bein ha-mayim asher mi-tachat la-raqia u-vein ha-mayim asher me-al la-raqia va-yehi khen</i> · [EN-AID/JPS] And God made the firmament, and divided the waters which were under the firmament from the waters which were above the firmament; and it was so.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויעש אלהים את הרקיע ויבדל בין המים אשר מתחת לרקיע ובין המים אשר מעל לרקיע</span> · <i>va-ya&#x27;as … va-yavdel … me-al la-raqia</i> · build event + partition event with asher-located sides (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויהי כן</span> · <i>va-yehi khen</i> · the generic RESULT formula</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">make(e1) ∧ Agent(e1, Elohim) ∧ Theme(e1, raqia)</span><br><span class="gloss">= make(e1) ∧ Agent(e1, God) ∧ Theme(e1, firmament)</span><br>wayyiqtol build event; et marks the Theme</td><td><span class="he">וַיַּעַשׂ אֱלֹהִים אֶת־הָרָקִיעַ</span> · <i>va-ya&#x27;as Elohim et-ha-raqia</i><br><span class="gloss">= made God obj-marker-the-firmament</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT_PARTITION</td><td><span class="expr">divide(e2, Agent Elohim, between(mayim-under, mayim-over)) ⇒ mayim-under ∩ mayim-over = ∅</span><br><span class="gloss">= divide(e2, Agent God, between(waters-under, waters-over)) ⇒ waters-under ∩ waters-over = ∅</span><br>the two sides are LOCATED by asher-clauses (which-under / which-over la-raqia): the partition is defined relative to the thing just built</td><td><span class="he">בֵּין הַמַּיִם … וּבֵין הַמַּיִם</span> · <i>bein ha-mayim … u-vein ha-mayim</i><br><span class="gloss">= between waters between waters</span></td><td class='cite'>—</td><td>event tested; partition reading hypothesis</td></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">HOLDS(exists(raqia), t2) — va-yehi khen pops the jussive spec</span><br><span class="gloss">= HOLDS(exists(firmament), t2) — and-let-there-be so pops the jussive spec</span><br>GENERIC result formula (&#x27;and it was so&#x27;) — a summary discharge, NOT a verbatim echo of the spec (day 1 remains the only verbatim day)</td><td><span class="he">וַיְהִי־כֵן</span> · <i>va-yehi khen</i><br><span class="gloss">= let-there-be so</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">HOLDS(mavdil(raqia, mayim|mayim), t2) — the job demand discharged by the divide event</span><br><span class="gloss">= HOLDS(dividing(firmament, waters|waters), t2) — the job demand discharged by the divide event</span><br>satisfaction is NOT upgrade: the demand is met, but its mood stays LET? on the log (TIR-028 — the ? records what the FORM could not tell us)</td><td><span class="he">וַיַּבְדֵּל</span> · <i>va-yavdel</i><br><span class="gloss">= divided</span></td><td class='cite'>TIR-028</td><td>tested</td></tr>
+</table>
+<div class="meta">Build verse: two events, one summary RESULT covering both demands. NOTE the absence beginning here: no inspection, no PASS(tov) — day 2 has no test anywhere.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_1_8 · Gen.1.8 · <span class='expr'>NAME_AND_COMMIT_NO_TEST</span></h3>
+<p><span class="he">וַיִּקְרָא אֱלֹהִים לָרָקִיעַ שָׁמָיִם וַיְהִי־עֶרֶב וַיְהִי־בֹקֶר יוֹם שֵׁנִי</span> · <i>va-yiqra Elohim la-raqia shamayim va-yehi erev va-yehi voqer yom sheni</i> · [EN-AID/JPS] And God called the firmament Heaven. And there was evening and there was morning, a second day.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויקרא אלהים לרקיע שמים</span> · <i>va-yiqra Elohim la-raqia shamayim</i> · one registry write via the naming formula</div><div class="arm"><b>RIGHT</b><br><span class="he">ויהי ערב ויהי בקר יום שני</span> · <i>va-yehi erev va-yehi voqer yom sheni</i> · cycle close + day ledger entry — with no test on the books</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>NAME</td><td><span class="expr">REGISTRY: name(raqia) := shamayim</span><br><span class="gloss">= REGISTRY: name(firmament) := Heavens</span><br>dative la- marks the receiver; bare word after = label. COLLISION (cross-unit): the label shamayim already denotes the 1:1 narration-entity — within this standalone unit the write is clean; the collision is recorded here and resolved only on the named Oral track (BR 4:7, Chagigah 12a)</td><td><span class="he">לָרָקִיעַ שָׁמָיִם</span> · <i>la-raqia shamayim</i><br><span class="gloss">= firmament Heavens</span></td><td class='cite'>TIR-022</td><td>tested</td></tr>
+<tr class="opline"><td>COMMIT</td><td><span class="expr">cycle(erev -&gt; boqer); LEDGER[day 2] := {spec ✓, names 1}</span><br><span class="gloss">= cycle(evening -&gt; morning); LEDGER[day 2] := {spec ✓, names 1}</span><br>sheni = ORDINAL &#x27;second&#x27; — the ordinal series begins here (day 1 was cardinal echad). The claim set has NO test entry because the text has none: TESTS is empty at commit and the interpreter must FLAG commit_without_test and proceed — deviation is data (S6 on real text)</td><td><span class="he">יוֹם שֵׁנִי</span> · <i>yom sheni</i><br><span class="gloss">= day second</span></td><td class='cite'>—</td><td>commit tested; ordinal-series significance [OPEN]</td></tr>
+</table>
+<div class="meta">Day-2 transaction: spec (1:6, two moods) -&gt; build+result (1:7) -&gt; name+commit (1:8). Checklist vs day-1 baseline: RESULT present (generic), TEST ABSENT, name 1, commit present. The missing tov is the unit&#x27;s central finding; three named Oral voices address it (see oral_notes).</div>
+</div>
+<h2>State machine</h2>
+<div class="meta">Day-2 transaction machine (standalone; registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER).</div>
+<table><tr><th>state</th><th>meaning</th></tr>
+<tr><td><b>S_boot</b></td><td>Before 1:6 — all registers empty (standalone unit; Elohim presupposed constant)</td></tr>
+<tr><td><b>S_spec_open</b></td><td>After 1:6 — LET(exists(raqia)) open; LET?(mavdil…) open with ? intact; mavdil INVARIANT job-spec loaded; mayim flagged read-before-install</td></tr>
+<tr><td><b>S_built_divided</b></td><td>After 1:7 — WORLD += raqia; partition mayim-under|mayim-over recorded; both demands satisfied (mood of the second still LET?); SPECS empty</td></tr>
+<tr><td><b>S_day2_committed_flagged</b></td><td>After 1:8 — REGISTRY raqia-&gt;shamayim; LEDGER[2] closed WITHOUT test; FLAGS += commit_without_test</td></tr>
+</table><table><tr><th>from</th><th>to</th><th>via</th></tr>
+<tr><td>S_boot</td><td>S_spec_open</td><td>STEP_Gn_1_6</td></tr>
+<tr><td>S_spec_open</td><td>S_built_divided</td><td>STEP_Gn_1_7</td></tr>
+<tr><td>S_built_divided</td><td>S_day2_committed_flagged</td><td>STEP_Gn_1_8</td></tr>
+</table>
+<div class="note"><b>AFTER_S_day2_committed_flagged</b> — WORLD: raqia (created) + mayim (presupposed, flagged). REGISTRY: raqia-&gt;shamayim (1 write; cross-unit collision noted). TESTS: empty — and that emptiness is the finding. LEDGER: day 2 committed (ordinal), flagged commit_without_test. SPECS: empty; the mavdil entry retains mood LET? on the log forever unless an owner ruling upgrades it.</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>Two-mood spec: after STEP_Gn_1_6</td><td>All registers empty (standalone unit).</td><td>SPECS: LET(exists(raqia)) pushed and OPEN; LET?(mavdil(raqia, mayim|mayim)) mood remains LET?; mavdil INVARIANT active; machine flags mayim as read-before-install (presupposed).<br><span class="gloss">= SPECS: LET(exists(firmament)) pushed and OPEN; LET?(dividing(firmament, waters|waters)) mood remains LET?; dividing INVARIANT active; machine flags waters as read-before-install (presupposed).</span></td><td><span class="he">יְהִי רָקִיעַ</span> · <i>yehi raqia</i><br><span class="gloss">= let-there-be firmament</span></td></tr>
+<tr><td><b>S2</b></td><td>Build + discharge: after STEP_Gn_1_7</td><td>S1 state.</td><td>WORLD += raqia; SPECS empty; LET?(mavdil(raqia, mayim|mayim)) mood remains LET?.<br><span class="gloss">= WORLD += firmament; SPECS empty; LET?(dividing(firmament, waters|waters)) mood remains LET?.</span></td><td><span class="he">וַיְהִי־כֵן</span> · <i>va-yehi khen</i><br><span class="gloss">= let-there-be so</span></td></tr>
+<tr><td><b>S3</b></td><td>Name + commit WITHOUT test: after STEP_Gn_1_8</td><td>S2 state.</td><td>REGISTRY: raqia-&gt;shamayim (1 write); LEDGER[day 2] committed with spec ✓ / names 1; day label is ORDINAL sheni; machine flags commit-without-test.<br><span class="gloss">= REGISTRY: firmament-&gt;Heavens (1 write); LEDGER[day 2] committed with spec ✓ / names 1; day label is ORDINAL second; machine flags commit-without-test.</span></td><td><span class="he">יוֹם שֵׁנִי</span> · <i>yom sheni</i><br><span class="gloss">= day second</span></td></tr>
+<tr><td><b>S4_negative</b></td><td>Negative: LET? never auto-upgrades</td><td>The unit&#x27;s own vi-yhi mavdil demand, mood LET?.</td><td>Operator stays LET?(p) with the question mark (TIR-028); any resolution to LET/CMD! must cite a per-unit owner judgment, or the run fails validation.<br><span class="gloss">= Operator stays LET?(p) with the question mark (TIR-028); any resolution to LET/CMD! must cite a per-unit owner judgment, light the run fails validation.</span></td><td></td></tr>
+</table>
+<h2>Exports (reusable patterns)</h2><table><tr><th>id</th><th>content</th></tr>
+<tr><td>EXPORT_commit_without_test</td><td>the day-2 deviation pattern: a full transaction that closes with TESTS empty — baseline contrast for days 1/3/4/5/6</td></tr>
+<tr><td>EXPORT_two_mood_spec</td><td><span class="he">יְהִי … וִיהִי מַבְדִּיל</span> · <i>yehi … vi-yhi mavdil</i> · jussive existence + imperfect job in one speech act — the mood switch is the text&#x27;s own</td></tr>
+<tr><td>EXPORT_job_spec_participle</td><td><span class="he">מַבְדִּיל</span> · <i>mavdil</i> · participle as standing-duty spec (INVARIANT), reused at 1:14 (le-havdil purpose frame) and beyond</td></tr>
+<tr><td>EXPORT_generic_result</td><td><span class="he">וַיְהִי־כֵן</span> · <i>va-yehi khen</i> · the generic RESULT formula — summary discharge (first occurrence; recurs days 3,4,6)</td></tr>
+</table>
+<h2>Oral notes (named, tiered, dual-track — never merged)</h2>
+<div class="note"><span class="badge tier-v">verified</span> <b>Bereshit Rabbah 4:6 (on the missing ki-tov, 1:7)</b><br><span class="he">למה אין כתיב בשני כי טוב — שבו נבראת גיהנם</span> · <i>lamah ein ketiv ba-sheni ki tov — she-bo nivre&#x27;at Gehinnom</i> · &quot;Why is &#x27;that it was good&#x27; not written on the second day? Because Gehinnom was created on it.&quot; One of the named answers to exactly the absence the machine flags. (The parallel BR answer — the water-work begun on day 2 finishes only on day 3, so the tov waits — is the reason day 3 carries TWO tests.)
+<br><i>Verified from Data/bereshit_rabbah_he.json (2026-07-28 pass). Dual-track; not merged.</i></div>
+<div class="note"><span class="badge tier-v">verified</span> <b>Bereshit Rabbah 4:2 (on yehi raqia, 1:6)</b><br><span class="he">לחים היו מעשיהם ביום הראשון ובשני קרשו. יהי רקיע — יחזק הרקיע</span> · <i>lachim hayu ma&#x27;aseihem ba-yom ha-rishon u-va-sheni karshu; yehi raqia — yechezaq ha-raqia</i> · &quot;The works were fluid on the first day, and on the second they solidified: &#x27;let there be a firmament&#x27; — let the firmament be STRENGTHENED.&quot; A two-phase build reading of the fiat itself.
+<br><i>Verified from local Data. Dual-track.</i></div>
+<div class="note"><span class="badge tier-v">verified</span> <b>Bereshit Rabbah 4:7 + Bavli Chagigah 12a (on the naming, 1:8)</b><br><span class="he">נטל הקב&quot;ה אש ומים ופתכן זה בזה ומהן נעשו שמים</span> · <i>natal HKB&#x27;H esh u-mayim u-fetakhan zeh ba-zeh u-mehen na&#x27;asu shamayim</i> · &quot;The Holy One took fire and water and kneaded them into each other, and from them the heavens were made&quot; (esh+mayim -&gt; shamayim); Chagigah 12a carries the same etymology (sham mayim / esh u-mayim). These voices attach the NAME to the day-2 entity — addressing the collision with the 1:1 narration-entity by giving THIS shamayim its own derivation.
+<br><i>Both verified from local Data. Dual-track resolution of the registry collision.</i></div>
+<div class="note"><span class="badge tier-v">verified</span> <b>Bereshit Rabbah 4:4 (upper waters suspended by the word) — enrichment, surfaced by the oral_links coverage review</b><br><span class="he">אפשר המים העליונים תלוים במאמר, אמר לו הן</span> · <i>efshar ha-mayim ha-elyonim teluyim be-ma&#x27;amar? amar lo: hen</i> · A challenger asks R. Meir: &quot;Is it possible the upper waters hang suspended by the ma&#x27;amar (the spoken word)?&quot; — &quot;Yes.&quot; Standing suspension-by-utterance: a classical echo of this unit&#x27;s INVARIANT reading (the firmament&#x27;s duty as a standing rule installed by speech). BR 4:3 (R. Tanchuma) similarly argues from the wording be-tokh ha-mayim (&quot;in the MIDST of the waters&quot;) that the firmament sits exactly midway.
+<br><i>Verified from Data/bereshit_rabbah_he.json 2026-07-30. Enrichment only; no operator change.</i></div>
+<div class="note"><span class="badge tier-o">observation</span> <b>Oral policy</b><br><br><i>Named location only; never silent-merge.</i></div>
+<h2>Binary trees (ta'amim v3, glue bricks)</h2>
+<h3>Gen.1.6 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">וַיֹּאמֶר אֱלֹהִים יְהִי רָקִיעַ בְּתוֹךְ הַמָּיִם וִיהִי מַבְדִּיל בֵּין מַיִם לָמָיִם</span> · <i>va-yomer Elohim yehi raqia be-tokh ha-mayim vi-yhi mavdil bein mayim la-mayim</i> · Let there be a firmament in the midst of the waters, dividing waters from waters. [EN-AID]</div>
+<pre>PHRASE (binary 11w) וַ/יֹּ֣אמֶר אֱלֹהִ֔ים יְהִ֥י רָקִ֖יעַ בְּ/ת֣וֹ…
+├── PHRASE (binary 6w) וַ/יֹּ֣אמֶר אֱלֹהִ֔ים יְהִ֥י רָקִ֖יעַ בּ…
+│   ├── [0-1] GLUE וַ/יֹּ֣אמֶר אֱלֹהִ֔ים (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) יְהִ֥י רָקִ֖יעַ בְּ/ת֣וֹךְ הַ/מָּ֑יִם
+│       ├── [2-3] GLUE יְהִ֥י רָקִ֖יעַ (tifcha, rank=2)
+│       └── [4-5] GLUE בְּ/ת֣וֹךְ הַ/מָּ֑יִם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) וִ/יהִ֣י מַבְדִּ֔יל בֵּ֥ין מַ֖יִם לָ/מָֽ…
+    ├── [6-7] GLUE וִ/יהִ֣י מַבְדִּ֔יל (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) בֵּ֥ין מַ֖יִם לָ/מָֽיִם
+        ├── [8-9] GLUE בֵּ֥ין מַ֖יִם (tifcha, rank=2)
+        └── [10] לָ/מָֽיִם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.1.7 · parser unique · 17 words</h3>
+<div class="meta"><span class="he">וַיַּעַשׂ אֱלֹהִים אֶת־הָרָקִיעַ וַיַּבְדֵּל בֵּין הַמַּיִם אֲשֶׁר מִתַּחַת לָרָקִיעַ וּבֵין הַמַּיִם אֲשֶׁר מֵעַל לָרָקִיעַ וַיְהִי־כֵן</span> · <i>va-ya&#x27;as Elohim et-ha-raqia va-yavdel bein ha-mayim asher mi-tachat la-raqia u-vein ha-mayim asher me-al la-raqia va-yehi khen</i> · God made the firmament and divided under-waters from over-waters — and it was so. [EN-AID]</div>
+<pre>PHRASE (binary 17w) וַ/יַּ֣עַשׂ אֱלֹהִים֮ אֶת הָ/רָקִיעַ֒ וַ/יַּבְ…
+├── PHRASE (binary 15w) וַ/יַּ֣עַשׂ אֱלֹהִים֮ אֶת הָ/רָקִיעַ֒ וַ…
+│   ├── PHRASE (binary 4w) וַ/יַּ֣עַשׂ אֱלֹהִים֮ אֶת הָ/רָקִיעַ֒
+│   │   ├── [0-1] GLUE וַ/יַּ֣עַשׂ אֱלֹהִים֮ (zinor, rank=3)
+│   │   └── [2-3] GLUE אֶת הָ/רָקִיעַ֒ (segol, rank=2)
+│   └── PHRASE (binary 11w) וַ/יַּבְדֵּ֗ל בֵּ֤ין הַ/מַּ֨יִם֙ אֲשֶׁר֙…
+│       ├── PHRASE (binary 6w) וַ/יַּבְדֵּ֗ל בֵּ֤ין הַ/מַּ֨יִם֙ אֲשֶׁר֙…
+│       │   ├── [4] וַ/יַּבְדֵּ֗ל (revia, rank=3)
+│       │   └── PHRASE (binary 5w) בֵּ֤ין הַ/מַּ֨יִם֙ אֲשֶׁר֙ מִ/תַּ֣חַת לָ…
+│       │       ├── [5-6] GLUE בֵּ֤ין הַ/מַּ֨יִם֙ (pashta, rank=3)
+│       │       └── PHRASE (binary 3w) אֲשֶׁר֙ מִ/תַּ֣חַת לָ/רָקִ֔יעַ
+│       │           ├── [7] אֲשֶׁר֙ (pashta, rank=3)
+│       │           └── [8-9] GLUE מִ/תַּ֣חַת לָ/רָקִ֔יעַ (zaqef qatan, rank=2)
+│       └── PHRASE (binary 5w) וּ/בֵ֣ין הַ/מַּ֔יִם אֲשֶׁ֖ר מֵ/עַ֣ל לָ/ר…
+│           ├── [10-11] GLUE וּ/בֵ֣ין הַ/מַּ֔יִם (zaqef qatan, rank=2)
+│           └── PHRASE (binary 3w) אֲשֶׁ֖ר מֵ/עַ֣ל לָ/רָקִ֑יעַ
+│               ├── [12] אֲשֶׁ֖ר (tifcha, rank=2)
+│               └── [13-14] GLUE מֵ/עַ֣ל לָ/רָקִ֑יעַ (etnachta (major mid-verse rest), rank=1)
+└── [15-16] GLUE וַֽ/יְהִי כֵֽן (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.1.8 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">וַיִּקְרָא אֱלֹהִים לָרָקִיעַ שָׁמָיִם וַיְהִי־עֶרֶב וַיְהִי־בֹקֶר יוֹם שֵׁנִי</span> · <i>va-yiqra Elohim la-raqia shamayim va-yehi erev va-yehi voqer yom sheni</i> · God called the firmament Heaven; evening, morning — a second day. [EN-AID]</div>
+<pre>PHRASE (binary 10w) וַ/יִּקְרָ֧א אֱלֹהִ֛ים לָֽ/רָקִ֖יעַ שָׁמָ֑יִם…
+├── PHRASE (binary 4w) וַ/יִּקְרָ֧א אֱלֹהִ֛ים לָֽ/רָקִ֖יעַ שָׁמ…
+│   ├── PHRASE (binary 3w) וַ/יִּקְרָ֧א אֱלֹהִ֛ים לָֽ/רָקִ֖יעַ
+│   │   ├── [0-1] GLUE וַ/יִּקְרָ֧א אֱלֹהִ֛ים (tevir, rank=3)
+│   │   └── [2] לָֽ/רָקִ֖יעַ (tifcha, rank=2)
+│   └── [3] שָׁמָ֑יִם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) וַֽ/יְהִי עֶ֥רֶב וַֽ/יְהִי בֹ֖קֶר י֥וֹם…
+    ├── [4-7] GLUE וַֽ/יְהִי עֶ֥רֶב וַֽ/יְהִי בֹ֖קֶר (tifcha, rank=2)
+    └── [8-9] GLUE י֥וֹם שֵׁנִֽי (silluq (verse-end emperor), rank=1)
+</pre>
+<h2>Word coverage — 38/38 words with named roles</h2>
+<table><tr><th>ref</th><th>#</th><th>Hebrew</th><th>translit</th><th>English</th><th>role</th><th>kind</th><th>rule</th></tr>
+<tr><td>Gen.1.6</td><td>0</td><td class='he-cell'>ויאמר</td><td>va-yomer</td><td>and-said</td><td>speech_verb_declare</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.6</td><td>1</td><td class='he-cell'>אלהים</td><td>Elohim</td><td>God</td><td>agent</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.6</td><td>2</td><td class='he-cell'>יהי</td><td>yehi</td><td>let-there-be</td><td>jussive_directive</td><td>logic_bearing</td><td class='cite'>TIR-026</td></tr>
+<tr><td>Gen.1.6</td><td>3</td><td class='he-cell'>רקיע</td><td>raqia</td><td>firmament</td><td>directive_theme</td><td>logic_bearing</td><td class='cite'>TIR-026</td></tr>
+<tr><td>Gen.1.6</td><td>4</td><td class='he-cell'>בתוך</td><td>be-tokh</td><td>in-midst-of</td><td>location_prep</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.1.6</td><td>5</td><td class='he-cell'>המים</td><td>ha-mayim</td><td>the-waters</td><td>location_ref_presupposed</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.6</td><td>6</td><td class='he-cell'>ויהי</td><td>vi-yhi</td><td>and-let-it-be</td><td>imperfect_directive_hypothesis</td><td>logic_bearing</td><td class='cite'>TIR-028</td></tr>
+<tr><td>Gen.1.6</td><td>7</td><td class='he-cell'>מבדיל</td><td>mavdil</td><td>dividing</td><td>job_participle</td><td>logic_bearing</td><td class='cite'>TIR-031</td></tr>
+<tr><td>Gen.1.6</td><td>8</td><td class='he-cell'>בין</td><td>bein</td><td>between</td><td>pair_boundary_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.1.6</td><td>9</td><td class='he-cell'>מים</td><td>mayim</td><td>waters</td><td>pair_member_a</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.6</td><td>10</td><td class='he-cell'>למים</td><td>la-mayim</td><td>to-waters</td><td>pair_member_b</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.7</td><td>0</td><td class='he-cell'>ויעש</td><td>va-ya&#x27;as</td><td>and-made</td><td>event_verb_make</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.7</td><td>1</td><td class='he-cell'>אלהים</td><td>Elohim</td><td>God</td><td>agent</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.7</td><td>2</td><td class='he-cell'>את</td><td>et</td><td>obj-marker</td><td>glue_object_marker</td><td>glue</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.1.7</td><td>3</td><td class='he-cell'>הרקיע</td><td>ha-raqia</td><td>the-firmament</td><td>build_theme</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.1.7</td><td>4</td><td class='he-cell'>ויבדל</td><td>va-yavdel</td><td>and-divided</td><td>event_verb_partition</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.7</td><td>5</td><td class='he-cell'>בין</td><td>bein</td><td>between</td><td>pair_boundary_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.1.7</td><td>6</td><td class='he-cell'>המים</td><td>ha-mayim</td><td>the-waters</td><td>pair_member_a</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.7</td><td>7</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>relativizer</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.1.7</td><td>8</td><td class='he-cell'>מתחת</td><td>mi-tachat</td><td>from-under</td><td>location_prep</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.1.7</td><td>9</td><td class='he-cell'>לרקיע</td><td>la-raqia</td><td>to-the-firmament</td><td>location_ref</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.7</td><td>10</td><td class='he-cell'>ובין</td><td>u-vein</td><td>and-between</td><td>pair_boundary_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.1.7</td><td>11</td><td class='he-cell'>המים</td><td>ha-mayim</td><td>the-waters</td><td>pair_member_b</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.7</td><td>12</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>relativizer</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.1.7</td><td>13</td><td class='he-cell'>מעל</td><td>me-al</td><td>from-above</td><td>location_prep</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.1.7</td><td>14</td><td class='he-cell'>לרקיע</td><td>la-raqia</td><td>to-the-firmament</td><td>location_ref</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.7</td><td>15</td><td class='he-cell'>ויהי</td><td>va-yehi</td><td>and-there-was</td><td>result_wayyiqtol</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.7</td><td>16</td><td class='he-cell'>כן</td><td>khen</td><td>so</td><td>result_summary</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.8</td><td>0</td><td class='he-cell'>ויקרא</td><td>va-yiqra</td><td>and-called</td><td>naming_verb</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.8</td><td>1</td><td class='he-cell'>אלהים</td><td>Elohim</td><td>God</td><td>agent</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.8</td><td>2</td><td class='he-cell'>לרקיע</td><td>la-raqia</td><td>to-the-firmament</td><td>name_receiver_dative</td><td>logic_bearing</td><td class='cite'>TIR-022</td></tr>
+<tr><td>Gen.1.8</td><td>3</td><td class='he-cell'>שמים</td><td>shamayim</td><td>Heavens</td><td>name_label_installed_collision</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.8</td><td>4</td><td class='he-cell'>ויהי</td><td>va-yehi</td><td>and-there-was</td><td>cycle_verb</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.8</td><td>5</td><td class='he-cell'>ערב</td><td>erev</td><td>evening</td><td>cycle_time_unit</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.8</td><td>6</td><td class='he-cell'>ויהי</td><td>va-yehi</td><td>and-there-was</td><td>cycle_verb</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.8</td><td>7</td><td class='he-cell'>בקר</td><td>voqer</td><td>morning</td><td>cycle_time_unit</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.8</td><td>8</td><td class='he-cell'>יום</td><td>yom</td><td>day</td><td>ledger_day_noun</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.1.8</td><td>9</td><td class='he-cell'>שני</td><td>sheni</td><td>second</td><td>ledger_count_ordinal</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_02_raqia_day — Day two: firmament — build, divide, name; commit without test (1:6-8) [frozen]
+
+final state: WORLD=[&#x27;raqia&#x27;] (+1 presupposed) | REGISTRY={&#x27;raqia&#x27;: &#x27;shamayim&#x27;} | TESTS=0 PASS | LEDGER days=[2] | FLAGS=[&#x27;read_before_install&#x27;, &#x27;commit_without_test&#x27;]
+
+=== S1 — Two-mood spec: after STEP_Gn_1_6
+    יְהִי רָקִיעַ (yehi raqia)
+    PASS  SPECS: LET(exists(raqia)) pushed and OPEN  (queue=[&#x27;exists(raqia)&#x27;, &#x27;mavdil(raqia, mayim|mayim)&#x27;])
+    PASS  LET?(mavdil(raqia, mayim|mayim)) mood remains LET?  (mood=LET?)
+    PASS  mavdil INVARIANT active  (invariants=[&#x27;mavdil(raqia, mayim|mayim)&#x27;])
+    PASS  machine flags mayim as read-before-install (presupposed).  (flagged=[&#x27;mayim&#x27;])
+
+=== S2 — Build + discharge: after STEP_Gn_1_7
+    וַיְהִי־כֵן (va-yehi khen)
+    PASS  WORLD += raqia  (entity={&#x27;mode&#x27;: &#x27;created&#x27;, &#x27;by&#x27;: &#x27;fiat-result&#x27;, &#x27;step&#x27;: &#x27;Gen.1.7&#x27;})
+    PASS  SPECS empty  (queue=0)
+    PASS  LET?(mavdil(raqia, mayim|mayim)) mood remains LET?.  (mood=LET?)
+
+=== S3 — Name + commit WITHOUT test: after STEP_Gn_1_8
+    יוֹם שֵׁנִי (yom sheni)
+    PASS  REGISTRY: raqia-&gt;shamayim (1 write)  (names={&#x27;raqia&#x27;: &#x27;shamayim&#x27;} writes=1)
+    PASS  LEDGER[day 2] committed with spec ✓ / names 1  (entry={&#x27;closed&#x27;: True, &#x27;spec_ok&#x27;: True, &#x27;test_pass&#x27;: False, &#x27;names&#x27;: 1, &#x27;label_form&#x27;: &#x27;ordinal&#x27;, &#x27;label_he&#x27;: &#x27;יוֹם שֵׁנִי&#x27;, &#x27;label_translit&#x27;: &#x27;yom sheni&#x27;, &#x27;step&#x27;: &#x27;Gen.1.8&#x27;})
+    PASS  day label is ORDINAL sheni  (label=yom sheni form=ordinal)
+    PASS  machine flags commit-without-test.  (flags=[&#x27;commit_without_test&#x27;, &#x27;read_before_install&#x27;])
+
+=== S4_negative — Negative: LET? never auto-upgrades
+    PASS  imperfect-in-command parsed as LET? (question mark kept)  (mood=LET?)
+    PASS  auto-upgrade REFUSED  (TIR-028: LET? never auto-upgrades to LET — a per-unit judgme...)
+    PASS  upgrade WITH citation allowed  (cite=per-unit judgment (owner), TIR-028 resolution)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_02_raqia_day.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_02_raqia_day — 1:6-8
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_02_raqia_day.yaml) is CANONICAL (Pre-Code); this
+# file is a derived, runnable rendering. Do not edit — regenerate. The
+# assertion block at the bottom is baked from the Stage D interpreter&#x27;s
+# actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Day two: firmament — build, divide, name; commit without test (1:6-8)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_02_raqia_day&quot;)
+
+# -------------------------- Gen.1.6 · DECLARE_TWO_MOOD_SPEC ----------------
+# וַיֹּאמֶר אֱלֹהִים יְהִי רָקִיעַ בְּתוֹךְ הַמָּיִם וִיהִי מַבְדִּיל בֵּין
+# מַיִם לָמָיִם
+# &quot;And God said: &#x27;Let there be a firmament in the midst of the waters, and
+# let it divide the waters from the waters.&#x27;&quot;
+m.step(&quot;Gen.1.6&quot;)
+# ‹יְהִי רָקִיעַ› (“let-there-be firmament”) — God speaks a demand — LET:
+# exists(firmament)
+m.declare(&quot;Elohim&quot;, &quot;LET&quot;,
+          &quot;exists(raqia)&quot;)
+# ‹וִיהִי מַבְדִּיל› (“and-let-it-be dividing”) — God speaks a demand —
+# LET?: dividing(firmament, waters|waters)
+m.declare(&quot;Elohim&quot;, &quot;LET?&quot;,
+          &quot;mavdil(raqia, mayim|mayim)&quot;)
+# ‹מַבְדִּיל› (“dividing”) — standing constraint: dividing(firmament,
+# waters|waters)
+m.invariant(&quot;mavdil(raqia, mayim|mayim)&quot;)
+# reads without prior install (flag, not fix): waters
+m.presupposed(&quot;mayim&quot;)
+
+# -------------------------- Gen.1.7 · BUILD_DIVIDE_RESULT ------------------
+# וַיַּעַשׂ אֱלֹהִים אֶת־הָרָקִיעַ וַיַּבְדֵּל בֵּין הַמַּיִם אֲשֶׁר
+# מִתַּחַת לָרָקִיעַ וּבֵין הַמַּיִם אֲשֶׁר מֵעַל לָרָקִיעַ וַיְהִי־כֵן
+# &quot;And God made the firmament, and divided the waters which were under the
+# firmament from the waters which were above the firmament; and it was so.&quot;
+m.step(&quot;Gen.1.7&quot;)
+# ‹וַיַּעַשׂ אֱלֹהִים אֶת־הָרָקִיעַ› (“and-made God obj-marker the-
+# firmament”) — event: make — agent God; theme firmament
+m.event(&quot;make&quot;, agent=&quot;Elohim&quot;, themes=[&quot;raqia&quot;])
+# ‹בֵּין הַמַּיִם … וּבֵין הַמַּיִם› (“between the-waters … and-between the-
+# waters”) — partition between mayim-under and mayim-over
+m.partition(&quot;mayim-under&quot;, &quot;mayim-over&quot;)
+# ‹וַיְהִי־כֵן› (“and-there-was so”) — demand settled (popped from the
+# queue): exists(firmament)
+m.result(&quot;exists(raqia)&quot;, tmark=&quot;t2&quot;)
+# ‹וַיַּבְדֵּל› (“and-divided”) — demand settled (popped from the queue):
+# dividing(firmament, waters|waters)
+m.result(&quot;mavdil(raqia, mayim|mayim)&quot;, tmark=&quot;t2&quot;)
+
+# -------------------------- Gen.1.8 · NAME_AND_COMMIT_NO_TEST --------------
+# וַיִּקְרָא אֱלֹהִים לָרָקִיעַ שָׁמָיִם וַיְהִי־עֶרֶב וַיְהִי־בֹקֶר יוֹם
+# שֵׁנִי
+# &quot;And God called the firmament Heaven. And there was evening and there was
+# morning, a second day.&quot;
+m.step(&quot;Gen.1.8&quot;)
+# ‹לָרָקִיעַ שָׁמָיִם› (“to-the-firmament Heavens”) — named: firmament :=
+# Heavens
+m.name(&quot;raqia&quot;, &quot;shamayim&quot;)
+# ‹יוֹם שֵׁנִי› (“day second”) — ledger: day 2 committed
+m.commit(2, label_form=&quot;ordinal&quot;, label_translit=&quot;yom sheni&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == {&#x27;raqia&#x27;}
+    assert m.presupposed_set() == {&#x27;mayim&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {&#x27;raqia&#x27;: &#x27;shamayim&#x27;}
+    assert m.REGISTRY[&quot;writes&quot;] == 1
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS[&quot;log&quot;]) == 2
+    assert sorted(m.LEDGER) == [2]
+    assert m.flag_counts() == {&#x27;read_before_install&#x27;: 1, &#x27;commit_without_test&#x27;: 1}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([])
+    assert m.WORLD[&quot;invariants&quot;] == [&#x27;mavdil(raqia, mayim|mayim)&#x27;]
+    assert m.WORLD[&quot;partitions&quot;] == [(&#x27;mayim-under&#x27;, &#x27;mayim-over&#x27;)]
+    assert len(m.EVENTS) == 7
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre>
+<div class="note">FROZEN 2026-07-30 (owner approved; LET? on vi-yhi mavdil RETAINED by owner decision): second logic-derived unit, first derived after the interpreter existed. Central finding: day 2 commits without a test — the machine flags it (S6 on real text), and three verified Oral voices address it by name. Not binding religious law.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

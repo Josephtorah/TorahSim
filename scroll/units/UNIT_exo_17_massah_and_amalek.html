@@ -1,0 +1,540 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>exo_17_massah_and_amalek — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/exo_17_massah_and_amalek?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Massah-Meribah and Amalek (17:1-16) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>exo_17_massah_and_amalek</b> · Exodus 17:1-16 · derive logic_derived_v1 · phase FWD-31</div>
+<div class="meta"><a href="../#Exod/17/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">יְהוָ֥ה נִסִּֽי</span> · <i>YHWH nisi-y</i> · &#x27;the LORD is my banner&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DERIVED 2026-08-10 · FORWARD ERA unit #31 (run FWD-8 block 1; Exod 1-17 continuous behind it). Span: 17:1-16, whole chapter: 16 verses (SNAPSHOT-verified; 17:13 the only verse without a mid-verse rest — the kill-sentence takes no breath). Oral layer IN-PIPELINE: manifest 13/13 VERIFIED, zero FAILED — see oral_audit_note_en. MACHINE PROFILE. FOUR DECLAREs, THREE RESULTs, TWO EVENTS, TWO NAMEs. Two theaters in one chapter: the WATER COURT (17:1-7) and the WAR (17:8-16). The people&#x27;s demand (17:2 tenu-lanu — the corpus&#x27;s first imperative demand from below) and the strike-order (17:5) both pop at 17:6 on va-yaas-ken; Joshua&#x27;s commission (17:9) pops at 17:10 on the full obedience-formula; the WRITE-COMMAND (17:14 — the Torah&#x27;s first, and zikaron&#x27;s first station) stands OPEN with no in-span receipt: the blotting of Amalek is homework for the canon (Deut 25:19 armed). TWO EVENTS: Amalek&#x27;s attack (17:8 — the corpus&#x27;s first pitched battle) and Joshua&#x27;s weakening (17:13 — the unique verb: the battle ends without an ending). TWO NAMEs, one naming-verb: the place named for the shame (17:7 Masa-u-Meriva, the corpus&#x27;s first DOUBLE place-name — the charge sheet) and the altar for the victory (17:15 YHWH-Nisi); REGISTRY 2. The know-ledger&#x27;s mirror: 16:4&#x27;s im-lo (will they walk, OR NOT) returns as 17:7&#x27;s im-ayin (is He among us, OR NOT) — the test-grammar seized by the tested. MACHINE EVIDENCE asserted at the build: tenasun unique (the inverted test-verb); the station-name&#x27;s spelling arc (full at arrival 17:1 and departure 19:2, LEAN at the attack 17:8 + its Num 33:14 memorial); the weaken-verb unique; Hur&#x27;s whole career the three ve-chur tokens (17:10, 17:12, 24:14); the kaved-root crossing from Pharaoh&#x27;s heart to Moses&#x27; hands (17:12 kevedim); zikaron&#x27;s first station; the three ciphers (blot-pair = this-is-Haman 107; yod+hand = David 24; from-generation = days-of-Messiah 448); five two-letter words in the oath-clause. Queue at close: ONE OPEN in-unit (the write-command) plus the standing opens. REGISTRY 2; TESTS 0. CARE-POINTS: the double pop at 17:6 (strike-order and water-demand close on one compliance-formula; the drinking itself unnarrated — banked on warranty); the unintroduced debuts (Joshua 17:9, Hur 17:10 — no patronym, no office); the control loop (17:11 — a hand as the battle&#x27;s state-variable, sampled both directions); the supported leader (17:12 — the office propped by other hands); the perpetual war held as mandate-class (17:16 — the LORD&#x27;s standing commitments transcend the queue, BLESS precedent). WATCHLIST ARMS: 19:2 (the departure from Rephidim, full spelling — the Sinai arrival); 24:14 (Hur&#x27;s regency — his third and last token); Num 13:20 (the or-not pair&#x27;s second station — the spies); Num 20:1-13 (Meribah-Kadesh: the thirst repeated, the strike gone wrong — heelitanu&#x27;s third station); Deut 25:17-19 (remember Amalek — the write-command&#x27;s far receipt); Deut 6:16 (you shall not test as you tested at Massah). Outside-Torah names (named-only): Josh 8 (the write-successor writes), 1 Sam 15 (Saul and Agag), Esther (Haman the Agagite), Isa 49:22 (the ensign), 2 Sam 17 (Absalom&#x27;s counsel), Judg 6:31 (the Baal-quarrel), Job 33:13.</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-10 (IN-PIPELINE, forward era; manifest logic/oral_audit/manifests/exo_17_massah_and_amalek_claims.json 13/13 VERIFIED, zero FAILED; record logic/oral_audit/AUDIT_exo_17_2026-08-10.md). CROWNS (chain-attested + DB-verified). THE QUARREL-FILE [EX17-01, KB + MS on 17:2]: תריבון (&quot;you quarrel&quot;) Torah-unique (checked; the Kitzur&#x27;s Scripture-three: Gideon&#x27;s Baal-quarrel, Job — &quot;whoever quarrels with his master quarrels with the Holy One&quot;); תנסון (&quot;you test&quot;) equally alone (asserted): 16:4&#x27;s test-verb inverted on the Tester; both lean (Chizkuni); one of the Masorah&#x27;s EIGHT double-מה (&quot;what... what...&quot;) verses; printed-authority: תנו (&quot;give,&quot; plural) defended against presses&#x27; תנה (MS). THE BROUGHT-US-UP FILE [EX17-02, KB on 17:3]: העליתנו (&quot;you brought us up&quot;) exactly FOUR in the Torah (census exact): Rephidim, Korach (Num 16:13 — &quot;the very same men,&quot; the Masorah&#x27;s pair-wire), Meribah-Kadesh (Num 20:5), the serpents (Num 21:5) — the forty-year accusation under one verb; למים (&quot;for water&quot;) a Torah-pair: the thirst here and the creation-division (Gen 1:6). THE STONING-WORD [EX17-03, MS on 17:4]: וסקלני (&quot;and they will stone me&quot;) Torah-unique (checked); lean after the lamed, final yod written AND read — the Sura tradition&#x27;s vav rejected by the Ramah. BEN ASHER&#x27;S STROKE [EX17-04, MS on 17:6]: על־הצור (&quot;on the rock&quot;) — the preposition bound to its rock by the binder-stroke with the little lengthener in-token, &quot;so it is for Ben Asher&quot; (the binder-stroke checked in the SNAPSHOT column): the LORD stands ON the thing about to be struck. THE OR-NOT PAIR [EX17-05, KB on 17:7]: אם אין (&quot;or not?&quot;) in the long pausal form exactly TWICE (adjacency checked): the presence-question and the spies&#x27; wood-question (Num 13:20) — the Kitzur wiring both to war: &quot;because they said is-the-LORD-in-our-midst-or-not, Amalek came.&quot; THE SLACK HANDS [EX17-06, KB on 17:8]: ברפידם (&quot;in Rephidim&quot;) LEAN exactly at the attack and its itinerary-memorial (Num 33:14, census pair, checked); full at arrival and departure (17:1, 19:2, asserted) — the Kitzur: Rephidim = רפו ידים (&quot;they weakened their hands from the commandments, therefore Amalek came&quot;). THE GO-OUT PAIR [EX17-07, KB on 17:9]: וצא (&quot;and go out&quot;) exactly twice (checked): Moses to Joshua and Isaac to Esau (Gen 27:3) — &quot;out beyond the clouds&quot;; the corpus adds: the verb that sent Esau hunting sends Israel against Esau&#x27;s grandson. THE BARE AARON [EX17-08, MS on 17:10]: ומשה אהרן וחור (&quot;and Moses, Aaron, and Hur&quot;) — printed-authority: &quot;some err writing ve-Aharon&quot; (the name checked bare in-verse); Hur&#x27;s debut — his whole career three tokens (asserted). THE FULL HANDS [EX17-09, MS + KB on 17:12]: ידיו (&quot;his hands&quot;) PLENE defended — the Recanati&#x27;s lean ידו &quot;a copyist&#x27;s error; in all our books full with yod&quot; (checked in-verse); the derash rides the grammar (ויהי singular, hands plural — Ibn Ezra, the Zohar&#x27;s right hand); the Kitzur: אמונה (&quot;faithfulness&quot;) = Abraham, עד בא (&quot;until the coming&quot;) = Isaac, השמש (&quot;the sun&quot;) = Jacob — three fathers holding the line. THE LEAN SUN [EX17-10, MS on 17:12]: בא (&quot;coming&quot;) written lean here and at Mishpatim&#x27;s pledge-sunset (22:25) — the printed Masorah&#x27;s roster of full spellings corrected, the Ramah arbitrating (skeleton checked at the build). THE BLOT-PAIR [EX17-11, KB on 17:14]: אמחה (&quot;I will blot out&quot;) exactly TWICE in the Torah (census pair, checked): the FLOOD (Gen 6:7) and Amalek — &quot;as there all was blotted, so Amalek wholly; and Saul was punished for the remnant&quot;; מחה אמחה (&quot;utterly blot&quot;) = זה המן (&quot;this is Haman,&quot; 107 = 107, asserted); זכרון (&quot;memorial&quot;) — the word&#x27;s first Torah station (asserted): the first commanded text is an erasure notice. THE FLY [EX17-12, KB on 17:14]: the initials of זכרון בספר ושים באזני (&quot;a memorial in the book, and set it in the ears&quot;) spell זבוב (&quot;a FLY,&quot; machine-checked) — &quot;Amalek chased after the blood of Israel like a fly.&quot; THE THRONE-FILE [EX17-13, KB + MS on 17:15-16]: כס (&quot;throne&quot;) a Torah-hapax bound uniquely to the half-Name יה (adjacency checked) — neither throne nor Name written whole while Amalek remains; the two-word ruling (Radak&#x27;s one word vs the Ramah and Meiri&#x27;s two; West/East codices split; the Pesachim dispute — dual-tracked; the SNAPSHOT writes two); FIVE consecutive two-letter words (asserted; the Masorah&#x27;s six-verse file); נסי (&quot;my banner&quot;) Torah-unique (asserted; the Kitzur: &quot;a REAL banner&quot; — Isaiah&#x27;s ensign its Scripture-twin); מדר דר (&quot;from generation to generation&quot;) both lean (MS; first form unique, asserted); the ciphers: yod + יד (&quot;hand&quot;) = דויד (David, 24 = 24) and מדר דר = לימי משיח (&quot;to the days of Messiah,&quot; 448 = 448, asserted) — the war&#x27;s two future generals signed into the oath.</div>
+<div class="meta">confidence: structure tested; oral layer verified 13/13</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>FORWARD ERA run 8, block 1 (owner: &quot;lets do 5 more blocks&quot;). Canon continuation: Exod 17:1-16 — Massah-Meribah and Amalek, whole chapter.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Span + source + conventions</td><td>SNAPSHOT prestage: 16 verses; 17:13 the only verse without etnachta (split at tifcha). Volitive census: four real pushes (17:2 the people&#x27;s water-demand, 17:5 the strike-order, 17:9 Joshua&#x27;s commission, 17:14 the write-command); 17:16&#x27;s perpetual war is mandate-class (no push — the LORD&#x27;s standing commitments transcend the queue); 17:6&#x27;s strike instruction folds into 17:5&#x27;s card.</td><td>established</td></tr>
+<tr><td><b>C</b></td><td>Machine structure</td><td>4D/3R/2E/2N. The water court (demand + order both pop at 17:6 on va-yaas-ken) and the war (commission pops 17:10; the write-command stands OPEN — the chapter&#x27;s one unreceipted card). Events: the attack (17:8), the weakening (17:13, unique verb). Two names on one naming-verb: the charge sheet (17:7, the corpus&#x27;s first double place-name) and the banner-altar (17:15). REGISTRY 2. Asserted machine evidence: tenasun unique; the Rephidim spelling arc; ve-chur&#x27;s three; kevedim on the deliverer&#x27;s hands; zikaron&#x27;s debut; the three ciphers; the five two-letter words.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Exod 17 (10 notes) + Kitzur Baal HaTurim on Exod 17 (13 notes). Manifest 13 rows: 13 VERIFIED / 0 FAILED / 0 UNCHECKABLE. One row sharpened by the verifier itself: the or-not census is a PAUSAL-FORM pair (17:7 + Num 13:20), not a four — the two long or-nots are exactly the two the Kitzur wires to war. The quarrel-file; the four brought-us-ups; the stoning-word; Ben Asher&#x27;s stroke; the slack hands; the go-out pair; the bare Aaron; the full hands + three fathers; the lean sun; the blot-pair + this-is-Haman; the fly initials; the throne-file with David and Messiah.</td><td>established</td></tr>
+<tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 13/13 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-10 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits. Exod 1-17 continuous.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Ex_17_1 · Exod.17.1 · <span class='expr'>NO_WATER_IN_REPHIDIM</span></h3>
+<p><span class="he">וַיִּסְעוּ כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל מִמִּדְבַּר־סִין לְמַסְעֵיהֶם עַל־פִּי יְהוָה וַיַּחֲנוּ בִּרְפִידִים וְאֵין מַיִם לִשְׁתֹּת הָעָם</span> · <i>va-yisu kal-adat bene-yisrael mi-midbar-sin le-mase-hem al-pi YHWH va-yachanu bi-refidim ve-en mayim li-shetot ha-am</i> · And all the congregation of the sons of Israel journeyed from the wilderness of Sin, by their journeys, according to the mouth of the LORD; and they camped in Rephidim — and there was no water for the people to drink.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַ֠יִּסְעוּ כָּל עֲדַ֨ת בְּנֵֽי יִשְׂרָאֵ֧ל מִמִּדְבַּר סִ֛ין לְמַסְעֵיהֶ֖ם עַל פִּ֣י יְהוָ֑ה</span> · <i>va-yisu kal-adat bene-yisrael mi-midbar-sin le-mase-hem al-pi YHWH</i> · and all the congregation of the sons of Israel journeyed from the wilderness of Sin, by their journeys, according to the mouth of the LORD (etnachta on YHWH) [VERIFIED: SNAPSHOT Exod.17.1 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַֽיַּחֲנוּ֙ בִּרְפִידִ֔ים וְאֵ֥ין מַ֖יִם לִשְׁתֹּ֥ת הָעָֽם</span> · <i>va-yachanu bi-refidim ve-en mayim li-shetot ha-am</i> · and they camped in Rephidim, and there was no water for the people to drink (verse-final ha-am) [VERIFIED: SNAPSHOT Exod.17.1 idx11-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yachanu_bi_refidim_ve_en_mayim, t0)</span><br><span class="gloss">= HOLDS(and-yachanu-bi-refidim-and-en-waters, t0)</span><br>THE STATION [EX17-06]. va-yisu... mi-midbar-SIN le-MASE-HEM al-PI YHWH — &#x27;by their JOURNEYS, according to the MOUTH of the LORD&#x27;: the itinerary marches on orders (the machine notes the bitter arithmetic the verse sets up: the dry camp is REACHED BY OBEDIENCE — the route to no-water was commanded); va-yachanu BI-REFIDIM — the station-name FULL-spelled at the arrival (asserted at the build: the arrival 17:1 and the departure 19:2 both full; the name thins only where the enemy lands, 17:8) — ve-EN MAYIM lishtot ha-am — &#x27;and NO WATER for the people to drink&#x27;: the thirst-file reopens (15:22&#x27;s three dry days, 15:27&#x27;s twelve springs — the cycle&#x27;s third station arrives at zero): exo_16 tested with too much bread kept; 17 tests with no water at all.
+</td><td><span class="he">וַיַּחֲנוּ בִּרְפִידִים וְאֵין מַיִם לִשְׁתֹּת הָעָם</span> · <i>va-yachanu bi-refidim ve-en mayim li-shetot ha-am</i><br><span class="gloss">= and-yachanu bi-refidim and-en waters to-me-shetot the-am</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The dry station; the full spelling.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_17_2 · Exod.17.2 · <span class='expr'>GIVE_US_WATER</span></h3>
+<p><span class="he">וַיָּרֶב הָעָם עִם־מֹשֶׁה וַיֹּאמְרוּ תְּנוּ־לָנוּ מַיִם וְנִשְׁתֶּה וַיֹּאמֶר לָהֶם מֹשֶׁה מַה־תְּרִיבוּן עִמָּדִי מַה־תְּנַסּוּן אֶת־יְהוָה</span> · <i>va-yarev ha-am im-moshe va-yomru tenu-la-nu mayim ve-nishte va-yomer la-hem moshe ma-terivu-n imadi-y ma-tenasu-n et-YHWH</i> · And the people quarreled with Moses, and said: Give us water, that we may drink. And Moses said to them: Why do you quarrel with me? Why do you test the LORD?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּ֤רֶב הָעָם֙ עִם מֹשֶׁ֔ה וַיֹּ֣אמְר֔וּ תְּנוּ לָ֥נוּ מַ֖יִם וְנִשְׁתֶּ֑ה</span> · <i>va-yarev ha-am im-moshe va-yomru tenu-la-nu mayim ve-nishte</i> · and the people quarreled with Moses, and said: give us water, that we may drink (etnachta on ve-nishte) [VERIFIED: SNAPSHOT Exod.17.2 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּ֤אמֶר לָהֶם֙ מֹשֶׁ֔ה מַה תְּרִיבוּן֙ עִמָּדִ֔י מַה תְּנַסּ֖וּן אֶת יְהוָֽה</span> · <i>va-yomer la-hem moshe ma-terivu-n imadi-y ma-tenasu-n et-YHWH</i> · and Moses said to them: why do you quarrel with me? why do you test the LORD? (verse-final YHWH) [VERIFIED: SNAPSHOT Exod.17.2 idx9-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(ha_am, LET(tenu_lanu_mayim))</span><br><span class="gloss">= DECLARE(the-am, LET(tenu-lanu-waters))</span><br>THE DEMAND [EX17-01 CROWN]. va-YAREV ha-am im-moshe — &#x27;and the people QUARRELED with Moses&#x27; (the quarrel-verb: not murmuring now — litigation); TENU-lanu MAYIM ve-nishte — &#x27;GIVE us water, that we may drink&#x27;: the card pushed BY THE PEOPLE at the throne&#x27;s officer (the corpus&#x27;s first imperative demand from below — 15:24 asked what- shall-we-drink ABOUT Moses; 17:2 commands GIVE at him; and the printed-authority file opens here: books reading tena for TENU struck, MS); ma TERIVUN imadi — the quarrel-verb Torah-unique (VERIFIED; the Kitzur&#x27;s Scripture-three: Gideon&#x27;s Baal-quarrel, Job — &#x27;whoever quarrels with his master quarrels with the Holy One&#x27;); ma TENASUN et-YHWH — &#x27;why do you TEST the LORD?&#x27;: the test-verb equally alone (asserted) — the machine files the INVERSION crown-side: 16:4&#x27;s lemaan anasenu (I test THEM) answered within a chapter by tenasun (they test HIM) — the examiner&#x27;s verb seized by the examined; both verbs lean, the eight double-ma verses named (MS).
+</td><td><span class="he">תְּנוּ־לָנוּ מַיִם וְנִשְׁתֶּה</span> · <i>tenu-la-nu mayim ve-nishte</i><br><span class="gloss">= tenu-to-nu waters and-nishte</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The demand pushed; the test inverted.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_17_3 · Exod.17.3 · <span class='expr'>WHY_DID_YOU_BRING_US_UP</span></h3>
+<p><span class="he">וַיִּצְמָא שָׁם הָעָם לַמַּיִם וַיָּלֶן הָעָם עַל־מֹשֶׁה וַיֹּאמֶר לָמָּה זֶּה הֶעֱלִיתָנוּ מִמִּצְרַיִם לְהָמִית אֹתִי וְאֶת־בָּנַי וְאֶת־מִקְנַי בַּצָּמָא</span> · <i>va-yitzma sham ha-am la-mayim va-yalen ha-am al-moshe va-yomer la-ma ze heelita-nu mi-mitzrayim le-hamit et-y ve-et-bana-y ve-et-miqna-y ba-tzama</i> · And the people thirsted there for water, and the people murmured against Moses, and said: Why is this — you brought us up from Egypt, to kill me and my sons and my cattle with thirst?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּצְמָ֨א שָׁ֤ם הָעָם֙ לַמַּ֔יִם וַיָּ֥לֶן הָעָ֖ם עַל מֹשֶׁ֑ה</span> · <i>va-yitzma sham ha-am la-mayim va-yalen ha-am al-moshe</i> · and the people thirsted there for water, and the people murmured against Moses (etnachta on moshe) [VERIFIED: SNAPSHOT Exod.17.3 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּ֗אמֶר לָ֤מָּה זֶּה֙ הֶעֱלִיתָ֣נוּ מִמִּצְרַ֔יִם לְהָמִ֥ית אֹתִ֛י וְאֶת בָּנַ֥י וְאֶת מִקְנַ֖י בַּצָּמָֽא</span> · <i>va-yomer la-ma ze heelita-nu mi-mitzrayim le-hamit et-y ve-et-bana-y ve-et-miqna-y ba-tzama</i> · and he said: why is this — you brought us up from Egypt, to kill me and my sons and my cattle with thirst? (verse-final ba-tzama) [VERIFIED: SNAPSHOT Exod.17.3 idx8-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yalen_ha_am_al_moshe, t0)</span><br><span class="gloss">= HOLDS(and-yalen-the-am-upon-Moses, t0)</span><br>THE THIRST [EX17-02 CROWN]. va-yitzma sham ha-am LA-MAYIM — &#x27;and the people THIRSTED there for water&#x27;: the thirst-word&#x27;s Torah-pair (VERIFIED at the build: here and the CREATION-DIVISION, &#x27;between waters and waters,&#x27; Gen 1:6 — the word that first sundered the waters returns where there are none; the Kitzur&#x27;s Scripture-five named: Elisha&#x27;s healed spring, Isaiah&#x27;s ho-every-thirsty, Jeremiah&#x27;s drought, Amos&#x27;s famine-of-hearing); va-YALEN ha-am — the murmur-verb again (16&#x27;s chapter-verb carried forward, singular now); lama ze HEELITANU mi-mitzrayim — &#x27;why is this — you BROUGHT US UP from Egypt&#x27;: the accusation-verb&#x27;s Torah-FOUR (VERIFIED census exact): Rephidim, KORACH (&#x27;the very same men,&#x27; the Kitzur&#x27;s Masorah-wire), MERIBAH-KADESH, the SERPENTS — the forty-year complaint-file opened here under one verb; le-hamit OTI ve-et-BANAI ve-et-MIQNAI — &#x27;to kill ME and MY SONS and MY CATTLE&#x27;: the machine notes the grammar&#x27;s narrowing — the congregation&#x27;s plural grievance collapsing into one man&#x27;s household inventory (each speaker suddenly alone with his children and his herd).
+</td><td><span class="he">וַיָּלֶן הָעָם עַל־מֹשֶׁה</span> · <i>va-yalen ha-am al-moshe</i><br><span class="gloss">= and-yalen the-am upon-Moses</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The four-station accusation-file opens.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_17_4 · Exod.17.4 · <span class='expr'>THEY_WILL_STONE_ME</span></h3>
+<p><span class="he">וַיִּצְעַק מֹשֶׁה אֶל־יְהוָה לֵאמֹר מָה אֶעֱשֶׂה לָעָם הַזֶּה עוֹד מְעַט וּסְקָלֻנִי</span> · <i>va-yitzaq moshe el-YHWH le-mor ma eese la-am ha-ze od meat u-seqalu-ni</i> · And Moses cried to the LORD, saying: What shall I do for this people? Yet a little — and they will stone me.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּצְעַ֤ק מֹשֶׁה֙ אֶל יְהוָ֣ה לֵאמֹ֔ר מָ֥ה אֶעֱשֶׂ֖ה לָעָ֣ם הַזֶּ֑ה</span> · <i>va-yitzaq moshe el-YHWH le-mor ma eese la-am ha-ze</i> · and Moses cried to the LORD, saying: what shall I do for this people? (etnachta on ha-ze) [VERIFIED: SNAPSHOT Exod.17.4 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">ע֥וֹד מְעַ֖ט וּסְקָלֻֽנִי</span> · <i>od meat u-seqalu-ni</i> · yet a little — and they will stone me (verse-final u-seqalu-ni) [VERIFIED: SNAPSHOT Exod.17.4 idx9-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(od_meat_u_seqaluni, t0)</span><br><span class="gloss">= HOLDS(od-meat-and-seqaluni, t0)</span><br>THE CRY [EX17-03 CROWN]. va-YITZAQ moshe el-YHWH — &#x27;and Moses CRIED to the LORD&#x27;: THE ARMED CRY PAYS (the watchlist&#x27;s wire from the sea: 14:10&#x27;s people-cry and 15:25&#x27;s Marah-cry now Moses&#x27; own — the third station of the leader crying the people&#x27;s verb); ma eese la-AM ha-ze — &#x27;what shall I do for THIS people&#x27;: the question of office (5:22&#x27;s why-have-You-dealt-ill matured into operational despair); OD MEAT u-SEQALUNI — &#x27;YET A LITTLE — and they will STONE ME&#x27;: the stoning- word Torah-unique (VERIFIED) with MS&#x27;s letter-law: lean after the lamed, final yod WRITTEN AND READ (&#x27;all precise texts&#x27; — the Sura tradition&#x27;s vav rejected, the Ramah ruling): the corpus&#x27;s first named lynching-threat, priced by its own spelling to a single exact skeleton — the machine files the escalation: 16 murmured about menus; 17 reaches for rocks.
+</td><td><span class="he">עוֹד מְעַט וּסְקָלֻנִי</span> · <i>od meat u-seqalu-ni</i><br><span class="gloss">= od meat and-seqalu-ni</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The cry; the armed receipt.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_17_5 · Exod.17.5 · <span class='expr'>PASS_BEFORE_THE_PEOPLE</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה עֲבֹר לִפְנֵי הָעָם וְקַח אִתְּךָ מִזִּקְנֵי יִשְׂרָאֵל וּמַטְּךָ אֲשֶׁר הִכִּיתָ בּוֹ אֶת־הַיְאֹר קַח בְּיָדְךָ וְהָלָכְתָּ</span> · <i>va-yomer YHWH el-moshe avor li-fene ha-am ve-qach et-kha mi-ziqne yisrael u-mat-kha asher hikita b-o et-ha-yeor qach be-yad-kha ve-halakhta</i> · And the LORD said to Moses: Pass before the people, and take with you of the elders of Israel; and your staff, with which you struck the Nile, take in your hand — and go.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר יְהוָ֜ה אֶל מֹשֶׁ֗ה עֲבֹר֙ לִפְנֵ֣י הָעָ֔ם וְקַ֥ח אִתְּךָ֖ מִזִּקְנֵ֣י יִשְׂרָאֵ֑ל</span> · <i>va-yomer YHWH el-moshe avor li-fene ha-am ve-qach et-kha mi-ziqne yisrael</i> · and the LORD said to Moses: pass before the people, and take with you of the elders of Israel (etnachta on yisrael) [VERIFIED: SNAPSHOT Exod.17.5 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּמַטְּךָ֗ אֲשֶׁ֨ר הִכִּ֤יתָ בּוֹ֙ אֶת הַיְאֹ֔ר קַ֥ח בְּיָדְךָ֖ וְהָלָֽכְתָּ</span> · <i>u-mat-kha asher hikita b-o et-ha-yeor qach be-yad-kha ve-halakhta</i> · and your staff, with which you struck the Nile, take in your hand — and go (verse-final ve-halakhta) [VERIFIED: SNAPSHOT Exod.17.5 idx11-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(avor_lifne_ha_am_ve_hikita))</span><br><span class="gloss">= DECLARE(the-LORD, LET(avor-lifne-the-am-and-hikita))</span><br>THE ORDER. AVOR lifne ha-am — &#x27;PASS BEFORE the people&#x27;: the answer to stone-fear is proximity (the readings: walk past them and see — named-only); ve-qach itkha mi-ZIQNE yisrael — the elders taken as witnesses (the protocol needs a bench); u-MAT-KHA asher HIKITA BO et-ha-YEOR — &#x27;and your STAFF, WITH WHICH YOU STRUCK THE NILE&#x27;: the corpus&#x27;s first TOOL-RESUME — the instrument cited by its own service record (7:20&#x27;s blood-strike recalled at the water-lack: the machine notes the pointed symmetry: the staff that turned water undrinkable is fetched to make water drinkable — one rod, both valves); QACH be- yadkha ve-HALAKHTA — &#x27;take it in your hand, and GO&#x27;: the card pushed with its kit-list.
+</td><td><span class="he">עֲבֹר לִפְנֵי הָעָם וְקַח אִתְּךָ מִזִּקְנֵי יִשְׂרָאֵל</span> · <i>avor li-fene ha-am ve-qach et-kha mi-ziqne yisrael</i><br><span class="gloss">= avor to-me-fene the-am and-qach kha from-ziqne yisrael</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The staff&#x27;s resume; the card pushed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_17_6 · Exod.17.6 · <span class='expr'>THE_ROCK_AT_HOREB</span></h3>
+<p><span class="he">הִנְנִי עֹמֵד לְפָנֶיךָ שָּׁם עַל־הַצּוּר בְּחֹרֵב וְהִכִּיתָ בַצּוּר וְיָצְאוּ מִמֶּנּוּ מַיִם וְשָׁתָה הָעָם וַיַּעַשׂ כֵּן מֹשֶׁה לְעֵינֵי זִקְנֵי יִשְׂרָאֵל</span> · <i>hin-ni omed le-fane-kha sham al-ha-tzur be-chorev ve-hikita va-tzur ve-yatzu mime-nu mayim ve-shata ha-am va-yaas ken moshe le-ene ziqne yisrael</i> · Behold, I stand before you there on the rock at Horeb; and you shall strike the rock, and water shall come out of it, and the people shall drink. And Moses did so before the eyes of the elders of Israel.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">הִנְנִ֣י עֹמֵד֩ לְפָנֶ֨יךָ שָּׁ֥ם עַֽל הַצּוּר֮ בְּחֹרֵב֒ וְהִכִּ֣יתָ בַצּ֗וּר וְיָצְא֥וּ מִמֶּ֛נּוּ מַ֖יִם וְשָׁתָ֣ה הָעָ֑ם</span> · <i>hin-ni omed le-fane-kha sham al-ha-tzur be-chorev ve-hikita va-tzur ve-yatzu mime-nu mayim ve-shata ha-am</i> · behold, I stand before you there on the rock at Horeb; and you shall strike the rock, and water shall come out of it, and the people shall drink (etnachta on ha-am) [VERIFIED: SNAPSHOT Exod.17.6 idx13 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּ֤עַשׂ כֵּן֙ מֹשֶׁ֔ה לְעֵינֵ֖י זִקְנֵ֥י יִשְׂרָאֵֽל</span> · <i>va-yaas ken moshe le-ene ziqne yisrael</i> · and Moses did so before the eyes of the elders of Israel (verse-final yisrael) [VERIFIED: SNAPSHOT Exod.17.6 idx14-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(avor_lifne_ha_am_ve_hikita, t1)</span><br><span class="gloss">= RESULT: HOLDS(avor-lifne-the-am-and-hikita, t1)</span><br>THE COMPLIANCE [EX17-04 CROWN]. hineni OMED lefanekha sham AL-HA- TZUR be-CHOREV — &#x27;behold, I STAND before you there ON THE ROCK at Horeb&#x27;: the Presence takes a position ON the thing to be struck (the machine files the staggering routing: the im-ayin of 17:7 — is the LORD in our midst? — is answered BEFORE it is asked: He is standing on the rock, and the rock is about to take the blow; the readings on the mercy of that geometry, named-only) — with Ben Asher&#x27;s own stroke on the preposition (VERIFIED: the AL bound to its rock by the binder-stroke, the little lengthener in-token — MS: &#x27;so it is for Ben Asher&#x27;); ve-hikita VA-TZUR ve-yatzu mimenu MAYIM — strike, and water; va-YAAS KEN moshe — &#x27;and Moses DID SO&#x27; (asserted): the card POPS on the compliance-formula, le-ENE ziqne yisrael — before the bench that was convened for it.
+</td><td><span class="he">וַיַּעַשׂ כֵּן מֹשֶׁה</span> · <i>va-yaas ken moshe</i><br><span class="gloss">= and-yaas ken Moses</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(tenu_lanu_mayim, t1)</span><br><span class="gloss">= RESULT: HOLDS(tenu-lanu-waters, t1)</span><br>THE DEMAND PAID. ve-SHATA ha-am — &#x27;and the people shall DRINK&#x27;: the give-us-water card POPS with the protocol (the machine notes the terse ledger: the drinking itself is never narrated — the corpus closes the demand on the command&#x27;s own warranty, the water leaving the rock offstage: 15:25&#x27;s sweetened water was tasted in-verse; 17:6&#x27;s rock-water is banked sight-unseen).
+</td><td><span class="he">וְיָצְאוּ מִמֶּנּוּ מַיִם וְשָׁתָה הָעָם</span> · <i>ve-yatzu mime-nu mayim ve-shata ha-am</i><br><span class="gloss">= and-yatzu mime-nu waters and-shata the-am</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The Presence on the rock; both cards pop.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_17_7 · Exod.17.7 · <span class='expr'>MASSAH_AND_MERIBAH</span></h3>
+<p><span class="he">וַיִּקְרָא שֵׁם הַמָּקוֹם מַסָּה וּמְרִיבָה עַל־רִיב בְּנֵי יִשְׂרָאֵל וְעַל נַסֹּתָם אֶת־יְהוָה לֵאמֹר הֲיֵשׁ יְהוָה בְּקִרְבֵּנוּ אִם־אָיִן</span> · <i>va-yiqra shem ha-maqom masa u-meriva al-riv bene yisrael ve-al nasota-m et-YHWH le-mor ha-yesh YHWH be-qirbe-nu im-ayin</i> · And he called the name of the place Massah and Meribah, for the quarrel of the sons of Israel, and for their testing the LORD, saying: Is the LORD in our midst, or not?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּקְרָא֙ שֵׁ֣ם הַמָּק֔וֹם מַסָּ֖ה וּמְרִיבָ֑ה</span> · <i>va-yiqra shem ha-maqom masa u-meriva</i> · and he called the name of the place Massah and Meribah (etnachta on u-meriva) [VERIFIED: SNAPSHOT Exod.17.7 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">עַל רִ֣יב בְּנֵ֣י יִשְׂרָאֵ֗ל וְעַ֨ל נַסֹּתָ֤ם אֶת יְהוָה֙ לֵאמֹ֔ר הֲיֵ֧שׁ יְהוָ֛ה בְּקִרְבֵּ֖נוּ אִם אָֽיִן</span> · <i>al-riv bene yisrael ve-al nasota-m et-YHWH le-mor ha-yesh YHWH be-qirbe-nu im-ayin</i> · for the quarrel of the sons of Israel, and for their testing the LORD, saying: is the LORD in our midst, or not? (verse-final ayin) [VERIFIED: SNAPSHOT Exod.17.7 idx5-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>NAME</td><td><span class="expr">name(maqom_refidim) := Masa_u_Meriva</span><br><span class="gloss">= name(maqom-refidim) := Masa-and-Meriva</span><br>THE NAMING [EX17-05 CROWN]. va-yiqra shem ha-maqom MASA u-MERIVA — &#x27;and he called the name of the place TESTING-AND-QUARREL&#x27;: the corpus&#x27;s first DOUBLE place-name (Mara carried one sin; Rephidim is filed under two — the site indicted on both counts of 17:2&#x27;s double question, ma terivun / ma tenasun: the name is the charge sheet); al-RIV bene yisrael ve-al NASOTAM et-YHWH — the two counts recited in the deed; lemor ha-YESH YHWH be-qirbenu IM-AYIN — &#x27;is the LORD in our midst — OR NOT?&#x27;: the or-not question in its long pausal form stands exactly TWICE in the Torah (VERIFIED): here and the SPIES&#x27; is-there-wood (Num 13:20) — the Kitzur running both to WAR (&#x27;because they said is-the-LORD-in-our-midst-or-not, AMALEK CAME&#x27;): the machine seals the mirror: 16:4&#x27;s im-lo (will they walk in My law, OR NOT) is handed back as im-ayin (is He among us, OR NOT) — the test- grammar reversed on the Tester, and the next verse is the invoice.
+</td><td><span class="he">וַיִּקְרָא שֵׁם הַמָּקוֹם מַסָּה וּמְרִיבָה</span> · <i>va-yiqra shem ha-maqom masa u-meriva</i><br><span class="gloss">= and-yiqra shem the-maqom masa and-meriva</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The double name; the or-not pair.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_17_8 · Exod.17.8 · <span class='expr'>AMALEK_COMES</span></h3>
+<p><span class="he">וַיָּבֹא עֲמָלֵק וַיִּלָּחֶם עִם־יִשְׂרָאֵל בִּרְפִידִם</span> · <i>va-yavo amaleq va-yilachem im-yisrael bi-refidim</i> · And Amalek came, and fought with Israel in Rephidim.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּבֹ֖א עֲמָלֵ֑ק</span> · <i>va-yavo amaleq</i> · and Amalek came (etnachta on amaleq) [VERIFIED: SNAPSHOT Exod.17.8 idx1 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּלָּ֥חֶם עִם יִשְׂרָאֵ֖ל בִּרְפִידִֽם</span> · <i>va-yilachem im-yisrael bi-refidim</i> · and fought with Israel in Rephidim (verse-final bi-refidim) [VERIFIED: SNAPSHOT Exod.17.8 idx2-5]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">milchemet_amaleq(e1); Agent(e1, amaleq); Theme(e1, yisrael)</span><br><span class="gloss">= milchemet-amaleq(e1); Agent(e1, amaleq); Theme(e1, yisrael)</span><br>THE ATTACK [EX17-06 CROWN]. va-YAVO AMALEQ — &#x27;and AMALEK CAME&#x27;: THE EVENT — the corpus&#x27;s first pitched battle against Israel (Egypt drowned without Israel lifting a hand, 14:14 &#x27;the LORD will fight for you&#x27;; Amalek must be fought — the covering fire has an edge, and the machine opens the WAR-LEDGER on the far side of it); va-yilachem im-yisrael BI-REFIDIM — the station-name written LEAN at the attack (VERIFIED: the thin spelling stands here and in the itinerary&#x27;s memorial of this camp, Num 33:14 — while the arrival 17:1 and departure 19:2 write it full): the Kitzur reads the missing letter: REFIDIM = REFU YADAYIM, &#x27;they WEAKENED THEIR HANDS from the commandments, therefore Amalek came&#x27; (the tradition&#x27;s own arithmetic-face named) — the name slackens in the verse where the enemy lands, and the chapter will answer the slack hands with raised ones.
+</td><td><span class="he">וַיָּבֹא עֲמָלֵק וַיִּלָּחֶם עִם־יִשְׂרָאֵל בִּרְפִידִם</span> · <i>va-yavo amaleq va-yilachem im-yisrael bi-refidim</i><br><span class="gloss">= and-yavo amaleq and-yilachem if-yisrael bi-refidim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The war-event; the thinned name.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_17_9 · Exod.17.9 · <span class='expr'>CHOOSE_US_MEN</span></h3>
+<p><span class="he">וַיֹּאמֶר מֹשֶׁה אֶל־יְהוֹשֻׁעַ בְּחַר־לָנוּ אֲנָשִׁים וְצֵא הִלָּחֵם בַּעֲמָלֵק מָחָר אָנֹכִי נִצָּב עַל־רֹאשׁ הַגִּבְעָה וּמַטֵּה הָאֱלֹהִים בְּיָדִי</span> · <i>va-yomer moshe el-yehoshua bechar-la-nu anashim ve-tze hilachem ba-amaleq machar anokhi nitzav al-rosh ha-giva u-mate ha-Elohim be-yadi-y</i> · And Moses said to Joshua: Choose us men, and go out, fight against Amalek; tomorrow I stand on the top of the hill, and the staff of God in my hand.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר מֹשֶׁ֤ה אֶל יְהוֹשֻׁ֨עַ֙ בְּחַר לָ֣נוּ אֲנָשִׁ֔ים וְצֵ֖א הִלָּחֵ֣ם בַּעֲמָלֵ֑ק</span> · <i>va-yomer moshe el-yehoshua bechar-la-nu anashim ve-tze hilachem ba-amaleq</i> · and Moses said to Joshua: choose us men, and go out, fight against Amalek (etnachta on ba-amaleq) [VERIFIED: SNAPSHOT Exod.17.9 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">מָחָ֗ר אָנֹכִ֤י נִצָּב֙ עַל רֹ֣אשׁ הַגִּבְעָ֔ה וּמַטֵּ֥ה הָאֱלֹהִ֖ים בְּיָדִֽי</span> · <i>machar anokhi nitzav al-rosh ha-giva u-mate ha-Elohim be-yadi-y</i> · tomorrow I stand on the top of the hill, and the staff of God in my hand (verse-final be-yadi-y) [VERIFIED: SNAPSHOT Exod.17.9 idx10-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(moshe, LET(bechar_lanu_anashim_ve_tze))</span><br><span class="gloss">= DECLARE(Moses, LET(bechar-lanu-anashim-and-tze))</span><br>THE COMMISSION [EX17-07 CROWN]. va-yomer moshe el-YEHOSHUA — &#x27;and Moses said to JOSHUA&#x27;: THE SUCCESSOR&#x27;S DEBUT — unintroduced, unpatronymed, no office (the corpus meets the man who will end the book of its books mid-battle-order: the machine files the entrance- class with Hur&#x27;s, one verse down); BECHAR-lanu anashim VE-TZE hilachem ba-amaleq — &#x27;choose us men and GO OUT, fight&#x27;: the card pushed — and the go-out imperative stands exactly TWICE in the Torah (VERIFIED): Moses to Joshua here and ISAAC TO ESAU (&#x27;go out to the field and hunt me game,&#x27; Gen 27:3) — the Kitzur: &#x27;out BEYOND THE CLOUDS&#x27; (the battle is outside the cover); the corpus adds the pair&#x27;s unnamed edge: the verb that sent Esau hunting sends Israel against Esau&#x27;s GRANDSON (Amalek son of Eliphaz son of Esau, Gen 36:12) — one imperative, the first feud and its farthest descendant; machar anokhi NITZAV al-rosh ha-giva u-MATE ha-ELOHIM be-yadi — &#x27;tomorrow I STAND on the hilltop, the STAFF OF GOD in my hand&#x27;: the resume-staff (17:5) renamed for its highest posting.
+</td><td><span class="he">בְּחַר־לָנוּ אֲנָשִׁים וְצֵא הִלָּחֵם בַּעֲמָלֵק</span> · <i>bechar-la-nu anashim ve-tze hilachem ba-amaleq</i><br><span class="gloss">= bechar-to-nu anashim and-tze hilachem in-the-amaleq</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Joshua&#x27;s debut; the card pushed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_17_10 · Exod.17.10 · <span class='expr'>UP_THE_HILL</span></h3>
+<p><span class="he">וַיַּעַשׂ יְהוֹשֻׁעַ כַּאֲשֶׁר אָמַר־לוֹ מֹשֶׁה לְהִלָּחֵם בַּעֲמָלֵק וּמֹשֶׁה אַהֲרֹן וְחוּר עָלוּ רֹאשׁ הַגִּבְעָה</span> · <i>va-yaas yehoshua ka-asher amar-l-o moshe le-hilachem ba-amaleq u-moshe aharon ve-chur alu rosh ha-giva</i> · And Joshua did as Moses had said to him, to fight against Amalek; and Moses, Aaron, and Hur went up the top of the hill.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּ֣עַשׂ יְהוֹשֻׁ֗עַ כַּאֲשֶׁ֤ר אָֽמַר לוֹ֙ מֹשֶׁ֔ה לְהִלָּחֵ֖ם בַּעֲמָלֵ֑ק</span> · <i>va-yaas yehoshua ka-asher amar-l-o moshe le-hilachem ba-amaleq</i> · and Joshua did as Moses had said to him, to fight against Amalek (etnachta on ba-amaleq) [VERIFIED: SNAPSHOT Exod.17.10 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּמֹשֶׁה֙ אַהֲרֹ֣ן וְח֔וּר עָל֖וּ רֹ֥אשׁ הַגִּבְעָֽה</span> · <i>u-moshe aharon ve-chur alu rosh ha-giva</i> · and Moses, Aaron, and Hur went up the top of the hill (verse-final ha-giva) [VERIFIED: SNAPSHOT Exod.17.10 idx8-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(bechar_lanu_anashim_ve_tze, t1)</span><br><span class="gloss">= RESULT: HOLDS(bechar-lanu-anashim-and-tze, t1)</span><br>THE COMPLIANCE [EX17-08 CROWN]. va-YAAS yehoshua KA-ASHER AMAR LO moshe — &#x27;and Joshua DID AS MOSES HAD SAID to him&#x27; (asserted): the card POPS on the exact obedience-formula — the successor&#x27;s FIRST NARRATED ACT is compliance without commentary (the machine files the credential: the man who will inherit the book enters it obeying it); u-moshe AHARON ve-chur — &#x27;and Moses, AARON, and Hur&#x27;: the printed- authority file&#x27;s station (VERIFIED: aharon stands bare in the verse — MS: &#x27;some err writing ve-Aharon&#x27;; one vav serves the list); ve- CHUR — HUR&#x27;S DEBUT: unintroduced like Joshua one verse up, and his whole Torah career is THREE tokens (asserted at the build): the hands here, the hands at 17:12, the regency at 24:14 — the corpus&#x27;s most economical officer: he exists to hold things up; alu ROSH ha- giva — the command post manned: the battle now runs on two elevations (the readings on the hilltop as the war&#x27;s true front, named-only).
+</td><td><span class="he">וַיַּעַשׂ יְהוֹשֻׁעַ כַּאֲשֶׁר אָמַר־לוֹ מֹשֶׁה</span> · <i>va-yaas yehoshua ka-asher amar-l-o moshe</i><br><span class="gloss">= and-yaas yehoshua like-which amar-l-o Moses</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The card pops; Hur&#x27;s debut.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_17_11 · Exod.17.11 · <span class='expr'>THE_HANDS_AND_THE_BATTLE</span></h3>
+<p><span class="he">וְהָיָה כַּאֲשֶׁר יָרִים מֹשֶׁה יָדוֹ וְגָבַר יִשְׂרָאֵל וְכַאֲשֶׁר יָנִיחַ יָדוֹ וְגָבַר עֲמָלֵק</span> · <i>ve-haya ka-asher yarim moshe yad-o ve-gavar yisrael ve-kha-asher yanicha yad-o ve-gavar amaleq</i> · And it was, when Moses would raise his hand, that Israel prevailed; and when he would rest his hand, that Amalek prevailed.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהָיָ֗ה כַּאֲשֶׁ֨ר יָרִ֥ים מֹשֶׁ֛ה יָד֖וֹ וְגָבַ֣ר יִשְׂרָאֵ֑ל</span> · <i>ve-haya ka-asher yarim moshe yad-o ve-gavar yisrael</i> · and it was, when Moses would raise his hand, that Israel prevailed (etnachta on yisrael) [VERIFIED: SNAPSHOT Exod.17.11 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְכַאֲשֶׁ֥ר יָנִ֛יחַ יָד֖וֹ וְגָבַ֥ר עֲמָלֵֽק</span> · <i>ve-kha-asher yanicha yad-o ve-gavar amaleq</i> · and when he would rest his hand, that Amalek prevailed (verse-final amaleq) [VERIFIED: SNAPSHOT Exod.17.11 idx7-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ka_asher_yarim_ve_gavar_yisrael, t0)</span><br><span class="gloss">= HOLDS(like-which-yarim-and-gavar-yisrael, t0)</span><br>THE MECHANISM. ka-asher YARIM moshe yad-o ve-GAVAR yisrael — &#x27;when Moses would RAISE his hand, ISRAEL PREVAILED&#x27;; ve-kha-asher YANICHA yad-o ve-gavar AMALEQ — and the converse: the corpus&#x27;s first narrated CONTROL LOOP — a visible state-variable (one man&#x27;s hand) driving a battlefield in real time, sampled in both directions by the verse&#x27;s own if-and-if frame (the machine notes what the loop is made of: not a weapon — the hand holds the staff but the verse tracks the HAND; the readings the Mishna itself asks here — &#x27;do Moses&#x27; hands make or break the war?&#x27; — named-only, with its answer: the hands aimed the eyes upward, and the heart followed): the battle below become an instrument reading of the posture above.
+</td><td><span class="he">וְהָיָה כַּאֲשֶׁר יָרִים מֹשֶׁה יָדוֹ וְגָבַר יִשְׂרָאֵל</span> · <i>ve-haya ka-asher yarim moshe yad-o ve-gavar yisrael</i><br><span class="gloss">= and-haya like-which yarim Moses yad-o and-gavar yisrael</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The control loop.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_17_12 · Exod.17.12 · <span class='expr'>HANDS_OF_FAITHFULNESS</span></h3>
+<p><span class="he">וִידֵי מֹשֶׁה כְּבֵדִים וַיִּקְחוּ־אֶבֶן וַיָּשִׂימוּ תַחְתָּיו וַיֵּשֶׁב עָלֶיהָ וְאַהֲרֹן וְחוּר תָּמְכוּ בְיָדָיו מִזֶּה אֶחָד וּמִזֶּה אֶחָד וַיְהִי יָדָיו אֱמוּנָה עַד־בֹּא הַשָּׁמֶשׁ</span> · <i>vi-yde moshe kevedim va-yiqchu-even va-yasimu tachtay-v va-yeshev ale-ha ve-aharon ve-chur tamkhu ve-yaday-v mi-ze echad u-mi-ze echad va-yehi yaday-v emuna ad-bo ha-shamesh</i> · And Moses&#x27; hands were heavy; and they took a stone and put it under him, and he sat on it; and Aaron and Hur supported his hands, from this side one and from this side one; and his hands were faithfulness until the coming of the sun.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וִידֵ֤י מֹשֶׁה֙ כְּבֵדִ֔ים וַיִּקְחוּ אֶ֛בֶן וַיָּשִׂ֥ימוּ תַחְתָּ֖יו וַיֵּ֣שֶׁב עָלֶ֑יהָ</span> · <i>vi-yde moshe kevedim va-yiqchu-even va-yasimu tachtay-v va-yeshev ale-ha</i> · and Moses&#x27; hands were heavy; and they took a stone and put it under him, and he sat on it (etnachta on ale-ha) [VERIFIED: SNAPSHOT Exod.17.12 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאַהֲרֹ֨ן וְח֜וּר תָּֽמְכ֣וּ בְיָדָ֗יו מִזֶּ֤ה אֶחָד֙ וּמִזֶּ֣ה אֶחָ֔ד וַיְהִ֥י יָדָ֛יו אֱמוּנָ֖ה עַד בֹּ֥א הַשָּֽׁמֶשׁ</span> · <i>ve-aharon ve-chur tamkhu ve-yaday-v mi-ze echad u-mi-ze echad va-yehi yaday-v emuna ad-bo ha-shamesh</i> · and Aaron and Hur supported his hands, from this side one and from this side one; and his hands were faithfulness until the coming of the sun (verse-final ha-shamesh) [VERIFIED: SNAPSHOT Exod.17.12 idx9-22]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(yadav_emuna_ad_bo_ha_shamesh, t0)</span><br><span class="gloss">= HOLDS(yadav-emuna-until-in-it-the-shamesh, t0)</span><br>THE HOLDING [EX17-09 + EX17-10 CROWNS]. vi-yde moshe KEVEDIM — &#x27;and Moses&#x27; hands were HEAVY&#x27;: the kaved-root CROSSES THE LEDGER (asserted in-span: the root that ran Pharaoh&#x27;s heavy heart through nine plagues lands on the deliverer&#x27;s hands — the machine files the transfer: heaviness is no longer a moral verdict but a physical bill, and it is PAYABLE: a stone, two officers); va-yiqchu EVEN — the stone-seat (the readings: he refused a cushion — &#x27;Israel is in distress, I am with them in distress&#x27; — named-only); ve-AHARON ve- CHUR tamkhu ve-yadav mi-ze echad u-mi-ze echad — one on each side: the corpus&#x27;s first SUPPORTED leader (the office propped by other hands — the priest-to-be and the officer with no biography); va-yehi YADAV EMUNA ad-BO ha-shamesh — &#x27;and his hands WERE FAITHFULNESS until the coming of the sun&#x27;: the plene YADAV defended (VERIFIED in- verse; MS: the Recanati&#x27;s lean yado &#x27;a copyist&#x27;s error — in ALL our books full with yod,&#x27; the Masorah proving it), the derash riding the GRAMMAR instead (va-yehi SINGULAR with plural hands — Ibn Ezra: each hand severally; the Zohar: all hangs on the right); the Kitzur reading the closing phrase as THREE FATHERS holding the line (EMUNA Abraham-who-believed, AD-BO Isaac-who-came, HA-SHAMESH Jacob-whose- sun-set); and BO written LEAN (VERIFIED skeleton; MS walking the Masorah-lists with the Ramah arbitrating: the battle-sunset and Mishpatim&#x27;s mercy-sunset, 22:25, share one thinned word).
+</td><td><span class="he">וַיְהִי יָדָיו אֱמוּנָה עַד־בֹּא הַשָּׁמֶשׁ</span> · <i>va-yehi yaday-v emuna ad-bo ha-shamesh</i><br><span class="gloss">= and-yehi yaday-v emuna until-in-it the-shamesh</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The heavy hands held; the three fathers.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_17_13 · Exod.17.13 · <span class='expr'>BY_THE_MOUTH_OF_THE_SWORD</span></h3>
+<p><span class="he">וַיַּחֲלֹשׁ יְהוֹשֻׁעַ אֶת־עֲמָלֵק וְאֶת־עַמּוֹ לְפִי־חָרֶב</span> · <i>va-yachalosh yehoshua et-amaleq ve-et-am-o le-fi-charev</i> · And Joshua weakened Amalek and his people by the mouth of the sword.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּחֲלֹ֧שׁ יְהוֹשֻׁ֛עַ אֶת עֲמָלֵ֥ק וְאֶת עַמּ֖וֹ</span> · <i>va-yachalosh yehoshua et-amaleq ve-et-am-o</i> · and Joshua weakened Amalek and his people (NO etnachta in verse: split at tifcha on am-o) [VERIFIED: SNAPSHOT Exod.17.13 idx5 tifcha; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">לְפִי חָֽרֶב</span> · <i>le-fi-charev</i> · by the mouth of the sword (verse-final charev) [VERIFIED: SNAPSHOT Exod.17.13 idx6-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">va_yachalosh_yehoshua(e2); Agent(e2, yehoshua); Theme(e2, amaleq)</span><br><span class="gloss">= and-yachalosh-yehoshua(e2); Agent(e2, yehoshua); Theme(e2, amaleq)</span><br>THE WEAKENING. va-YACHALOSH yehoshua et-amaleq ve-et-am-o — &#x27;and Joshua WEAKENED Amalek and his people&#x27;: THE EVENT — and the verb is Torah-unique (asserted at the build: not defeated, not destroyed — WEAKENED: the corpus&#x27;s first battle ends without an ending, and 17:14-16 legislates the remainder); le-FI CHAREV — &#x27;by the MOUTH of the sword&#x27;: the machine notes the closing figure: a battle steered all day by HANDS is settled by a MOUTH — the idiom hands the sword the chapter&#x27;s own anatomy (the verse itself runs straight through with NO mid-verse rest, asserted from the trope-file: the one verse in the chapter without the divider-accent — the kill-sentence takes no breath).
+</td><td><span class="he">וַיַּחֲלֹשׁ יְהוֹשֻׁעַ אֶת־עֲמָלֵק וְאֶת־עַמּוֹ לְפִי־חָרֶב</span> · <i>va-yachalosh yehoshua et-amaleq ve-et-am-o le-fi-charev</i><br><span class="gloss">= and-yachalosh yehoshua amaleq and-am-o to-fi-charev</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The event; the unique verb.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_17_14 · Exod.17.14 · <span class='expr'>WRITE_THIS_IN_THE_BOOK</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה כְּתֹב זֹאת זִכָּרוֹן בַּסֵּפֶר וְשִׂים בְּאָזְנֵי יְהוֹשֻׁעַ כִּי־מָחֹה אֶמְחֶה אֶת־זֵכֶר עֲמָלֵק מִתַּחַת הַשָּׁמָיִם</span> · <i>va-yomer YHWH el-moshe ketov zot zikaron ba-sefer ve-sim be-azne yehoshua ki-macho emche et-zekher amaleq mi-tachat ha-shamayim</i> · And the LORD said to Moses: Write this, a memorial in the book, and set it in the ears of Joshua: that I will utterly blot out the memory of Amalek from under the heavens.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר יְהוָ֜ה אֶל מֹשֶׁ֗ה כְּתֹ֨ב זֹ֤את זִכָּרוֹן֙ בַּסֵּ֔פֶר וְשִׂ֖ים בְּאָזְנֵ֣י יְהוֹשֻׁ֑עַ</span> · <i>va-yomer YHWH el-moshe ketov zot zikaron ba-sefer ve-sim be-azne yehoshua</i> · and the LORD said to Moses: write this, a memorial in the book, and set it in the ears of Joshua (etnachta on yehoshua) [VERIFIED: SNAPSHOT Exod.17.14 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּֽי מָחֹ֤ה אֶמְחֶה֙ אֶת זֵ֣כֶר עֲמָלֵ֔ק מִתַּ֖חַת הַשָּׁמָֽיִם</span> · <i>ki-macho emche et-zekher amaleq mi-tachat ha-shamayim</i> · that I will utterly blot out the memory of Amalek from under the heavens (verse-final ha-shamayim) [VERIFIED: SNAPSHOT Exod.17.14 idx11-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(ketov_zot_zikaron_ba_sefer))</span><br><span class="gloss">= DECLARE(the-LORD, LET(ketov-this-zikaron-in-the-sefer))</span><br>THE WRITE-COMMAND [EX17-11 + EX17-12 CROWNS]. KETOV zot ZIKARON ba- SEFER — &#x27;WRITE this, a memorial, IN THE BOOK&#x27;: THE TORAH&#x27;S FIRST WRITE-COMMAND (and zikaron&#x27;s first station, asserted) — the corpus, itself a written thing, here records the order that founds its own medium: and the first commissioned text is an ERASURE NOTICE (write, so that a blotting-out is never forgotten — the machine files the paradox as the card&#x27;s own terms); ve-SIM be-AZNE yehoshua — the successor briefed by ear as well as ink; and the four words&#x27; INITIALS spell ZEVUV, THE FLY (VERIFIED by machine: &#x27;Amalek chased after the blood of Israel like a fly&#x27; — the Kitzur): the enemy&#x27;s portrait signed inside his own death warrant; ki MACHO EMCHE et- ZEKHER amaleq — &#x27;I will UTTERLY BLOT OUT the memory of Amalek&#x27;: the blot-verb&#x27;s Torah-pair (VERIFIED): THE FLOOD (Gen 6:7) and here — the Kitzur: &#x27;as there ALL was blotted, so Amalek wholly — and SAUL was punished for the remnant&#x27; (1 Sam 15 named), the doubled verb carrying the remnant&#x27;s name in cipher (MACHO EMCHE = ZE HAMAN, 107=107, asserted — Esther&#x27;s Agagite as the unfinished business); the card stands OPEN — the one command in the chapter with no in- span receipt (Deut 25:19 armed: the blotting is homework for the whole canon).
+</td><td><span class="he">כְּתֹב זֹאת זִכָּרוֹן בַּסֵּפֶר וְשִׂים בְּאָזְנֵי יְהוֹשֻׁעַ</span> · <i>ketov zot zikaron ba-sefer ve-sim be-azne yehoshua</i><br><span class="gloss">= ketov this zikaron in-the-sefer and-sim in-azne yehoshua</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The first write-command; the blot-pair.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_17_15 · Exod.17.15 · <span class='expr'>THE_LORD_IS_MY_BANNER</span></h3>
+<p><span class="he">וַיִּבֶן מֹשֶׁה מִזְבֵּחַ וַיִּקְרָא שְׁמוֹ יְהוָה נִסִּי</span> · <i>va-yiven moshe mizbecha va-yiqra shem-o YHWH nisi-y</i> · And Moses built an altar, and called its name: The LORD is my banner.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּ֥בֶן מֹשֶׁ֖ה מִזְבֵּ֑חַ</span> · <i>va-yiven moshe mizbecha</i> · and Moses built an altar (etnachta on mizbecha) [VERIFIED: SNAPSHOT Exod.17.15 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּקְרָ֥א שְׁמ֖וֹ יְהוָ֥ה נִסִּֽי</span> · <i>va-yiqra shem-o YHWH nisi-y</i> · and he called its name: the LORD is my banner (verse-final nisi-y) [VERIFIED: SNAPSHOT Exod.17.15 idx3-6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>NAME</td><td><span class="expr">name(mizbeach) := YHWH_Nisi</span><br><span class="gloss">= name(altar) := the-LORD-Nisi</span><br>THE ALTAR [EX17-13]. va-yiven moshe MIZBEACH — &#x27;and Moses built an ALTAR&#x27;: MOSES&#x27; FIRST ALTAR (the corpus&#x27;s altar-file — Noah after the flood, Abraham&#x27;s four, Isaac&#x27;s, Jacob&#x27;s — gains its first since Genesis, and the first built on a battlefield); va-yiqra shem-o YHWH NISI — &#x27;and he called its name THE LORD IS MY BANNER&#x27;: the naming- verb&#x27;s second spend this chapter (17:7 named the shame; 17:15 names the victory — one chapter files both deeds under va-yiqra); and the banner-word&#x27;s only Torah station (VERIFIED at the build; the Kitzur&#x27;s Scripture-twin named: &#x27;I will raise My BANNER to the peoples,&#x27; Isaiah — &#x27;a REAL banner: he called the Holy One my banner and my standard&#x27;): the machine notes the sound the name carries: NISI rings against MASA&#x27;s testing (nes/nisa — the tradition&#x27;s own pun, named as pun): the place named for the test, the altar named for the standard.
+</td><td><span class="he">וַיִּקְרָא שְׁמוֹ יְהוָה נִסִּי</span> · <i>va-yiqra shem-o YHWH nisi-y</i><br><span class="gloss">= and-yiqra shem-o the-LORD nisi-y</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The altar named.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_17_16 · Exod.17.16 · <span class='expr'>THE_THRONE_OATH</span></h3>
+<p><span class="he">וַיֹּאמֶר כִּי־יָד עַל־כֵּס יָהּ מִלְחָמָה לַיהוָה בַּעֲמָלֵק מִדֹּר דֹּר</span> · <i>va-yomer ki-yad al-kes ya milchama la-YHWH ba-amaleq mi-dor dor</i> · And he said: For a hand is upon the throne of YH — war for the LORD against Amalek, from generation to generation.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֗אמֶר כִּֽי יָד֙ עַל כֵּ֣ס יָ֔הּ מִלְחָמָ֥ה לַיהוָ֖ה בַּֽעֲמָלֵ֑ק</span> · <i>va-yomer ki-yad al-kes ya milchama la-YHWH ba-amaleq</i> · and he said: for a hand is upon the throne of YH — war for the LORD against Amalek (etnachta on ba-amaleq) [VERIFIED: SNAPSHOT Exod.17.16 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">מִדֹּ֖ר דֹּֽר</span> · <i>mi-dor dor</i> · from generation to generation (verse-final dor) [VERIFIED: SNAPSHOT Exod.17.16 idx9-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(milchama_la_YHWH_ba_amaleq_mi_dor_dor, t0)</span><br><span class="gloss">= HOLDS(milchama-to-the-LORD-in-the-amaleq-from-dor-dor, t0)</span><br>THE OATH [EX17-13 CROWN]. ki-YAD al-KES YAH — &#x27;for a HAND is upon the THRONE OF YH&#x27;: the throne-word KES a Torah-hapax bound uniquely to the HALF-NAME (VERIFIED adjacency) — the tradition beneath the shortened pair: NEITHER THE THRONE NOR THE NAME IS WRITTEN WHOLE while Amalek remains (the oath sworn on a broken seal); MS files the era&#x27;s ruling on the words themselves: Radak read ONE word, the West&#x27;s codices one, the EAST&#x27;S two, the Talmud&#x27;s amoraim split (Pesachim) — &#x27;and the Ramah ruled: in precise texts TWO WORDS&#x27; (the Meiri concurring; the SNAPSHOT writes two — dual-tracked as the grammarians&#x27; file); the verse one of the Masorah&#x27;s SIX with FIVE consecutive two-letter words (asserted: ki, yad, al, kes, yah — the oath-clause built entirely of two-letter bricks, the syntax itself in fragments); MILCHAMA la-YHWH ba-amaleq — &#x27;WAR FOR THE LORD against Amalek&#x27;: the LORD&#x27;s own standing war (not pushed as a card: His commitments transcend the queue — the mandate-class); mi-DOR DOR — &#x27;from GENERATION to GENERATION&#x27;: both lean (MS; the first form Torah-unique, asserted) — and the Kitzur signs the war&#x27;s two future generals in cipher (asserted at the build): the yod of ki plus YAD = DAVID (24), and MI-DOR DOR = LI-YEME MASHIACH, &#x27;to the days of MESSIAH&#x27; (448): the throne completed by the hand of one, the war ended in the days of the other.
+</td><td><span class="he">וַיֹּאמֶר כִּי־יָד עַל־כֵּס יָהּ מִלְחָמָה לַיהוָה בַּעֲמָלֵק</span> · <i>va-yomer ki-yad al-kes ya milchama la-YHWH ba-amaleq</i><br><span class="gloss">= and-yomer when-yad upon-kes ya milchama to-the-LORD in-the-amaleq</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The shortened throne; the perpetual war.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Ex_17_1 — no water in Rephidim</td><td>And all the congregation of the sons of Israel journeyed from the wilderness of Sin, by their journeys, according to the mouth of the LORD; and they camped in Rephidim — and there was no water for the people to drink.</td><td>no test, no name.</td><td><span class="he">וַ֠יִּסְעוּ כָּל עֲדַ֨ת בְּנֵֽי</span> · <i>va-yisu kal-adat bene-</i><br><span class="gloss">= and-yisu kal-adat bene</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Ex_17_2 — give us water</td><td>And the people quarreled with Moses, and said: Give us water, that we may drink. And Moses said to them: Why do you quarrel with me? Why do you test the LORD?</td><td>LET(tenu_lanu_mayim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(tenu-lanu-waters) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיָּ֤רֶב הָעָם֙ עִם מֹשֶׁ֔ה</span> · <i>va-yarev ha-am im-moshe</i><br><span class="gloss">= and-yarev the-am if-Moses</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Ex_17_3 — why did you bring us up</td><td>And the people thirsted there for water, and the people murmured against Moses, and said: Why is this — you brought us up from Egypt, to kill me and my sons and my cattle with thirst?</td><td>LET(tenu_lanu_mayim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(tenu-lanu-waters) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּצְמָ֨א שָׁ֤ם הָעָם֙ לַמַּ֔יִם</span> · <i>va-yitzma sham ha-am la-mayim</i><br><span class="gloss">= and-yitzma there the-am waters</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Ex_17_4 — they will stone me</td><td>And Moses cried to the LORD, saying: What shall I do for this people? Yet a little — and they will stone me.</td><td>LET(tenu_lanu_mayim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(tenu-lanu-waters) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּצְעַ֤ק מֹשֶׁה֙ אֶל יְהוָ֣ה</span> · <i>va-yitzaq moshe el-YHWH</i><br><span class="gloss">= and-yitzaq Moses to-the-LORD</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Ex_17_5 — pass before the people</td><td>And the LORD said to Moses: Pass before the people, and take with you of the elders of Israel; and your staff, with which you struck the Nile, take in your hand — and go.</td><td>LET(tenu_lanu_mayim) pushed and OPEN; LET(avor_lifne_ha_am_ve_hikita) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(tenu-lanu-waters) pushed and OPEN; LET(avor-lifne-the-am-and-hikita) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֨אמֶר יְהוָ֜ה אֶל מֹשֶׁ֗ה</span> · <i>va-yomer YHWH el-moshe</i><br><span class="gloss">= and-yomer the-LORD to-Moses</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Ex_17_6 — the rock at Horeb</td><td>Behold, I stand before you there on the rock at Horeb; and you shall strike the rock, and water shall come out of it, and the people shall drink. And Moses did so before the eyes of the elders of Israel.</td><td>no test, no name.</td><td><span class="he">הִנְנִ֣י עֹמֵד֩ לְפָנֶ֨יךָ שָּׁ֥ם</span> · <i>hin-ni omed le-fane-kha sham</i><br><span class="gloss">= hin-ni omed to-fane-kha there</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Ex_17_7 — Massah and Meribah</td><td>And he called the name of the place Massah and Meribah, for the quarrel of the sons of Israel, and for their testing the LORD, saying: Is the LORD in our midst, or not?</td><td>REGISTRY: maqom_refidim-&gt;Masa_u_Meriva (1 write)<br><span class="gloss">= REGISTRY: maqom-refidim-&gt;Masa-and-Meriva (1 write)</span></td><td><span class="he">וַיִּקְרָא֙ שֵׁ֣ם הַמָּק֔וֹם מַסָּ֖ה</span> · <i>va-yiqra shem ha-maqom masa</i><br><span class="gloss">= and-yiqra shem the-maqom masa</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Ex_17_8 — Amalek comes</td><td>And Amalek came, and fought with Israel in Rephidim.</td><td>REGISTRY: maqom_refidim-&gt;Masa_u_Meriva (1 write)<br><span class="gloss">= REGISTRY: maqom-refidim-&gt;Masa-and-Meriva (1 write)</span></td><td><span class="he">וַיָּבֹ֖א עֲמָלֵ֑ק וַיִּלָּ֥חֶם עִם</span> · <i>va-yavo amaleq va-yilachem im-</i><br><span class="gloss">= and-yavo amaleq and-yilachem if</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Ex_17_9 — choose us men</td><td>And Moses said to Joshua: Choose us men, and go out, fight against Amalek; tomorrow I stand on the top of the hill, and the staff of God in my hand.</td><td>LET(bechar_lanu_anashim_ve_tze) pushed and OPEN; REGISTRY: maqom_refidim-&gt;Masa_u_Meriva (1 write)<br><span class="gloss">= LET(bechar-lanu-anashim-and-tze) pushed and OPEN; REGISTRY: maqom-refidim-&gt;Masa-and-Meriva (1 write)</span></td><td><span class="he">וַיֹּ֨אמֶר מֹשֶׁ֤ה אֶל יְהוֹשֻׁ֨עַ֙</span> · <i>va-yomer moshe el-yehoshua</i><br><span class="gloss">= and-yomer Moses to-yehoshua</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Ex_17_10 — up the hill</td><td>And Joshua did as Moses had said to him, to fight against Amalek; and Moses, Aaron, and Hur went up the top of the hill.</td><td>REGISTRY: maqom_refidim-&gt;Masa_u_Meriva (1 write)<br><span class="gloss">= REGISTRY: maqom-refidim-&gt;Masa-and-Meriva (1 write)</span></td><td><span class="he">וַיַּ֣עַשׂ יְהוֹשֻׁ֗עַ כַּאֲשֶׁ֤ר אָֽמַר</span> · <i>va-yaas yehoshua ka-asher amar-</i><br><span class="gloss">= and-yaas yehoshua like-which amar</span></td></tr>
+<tr><td><b>S11</b></td><td>after STEP_Ex_17_11 — the hands and the battle</td><td>And it was, when Moses would raise his hand, that Israel prevailed; and when he would rest his hand, that Amalek prevailed.</td><td>REGISTRY: maqom_refidim-&gt;Masa_u_Meriva (1 write)<br><span class="gloss">= REGISTRY: maqom-refidim-&gt;Masa-and-Meriva (1 write)</span></td><td><span class="he">וְהָיָ֗ה כַּאֲשֶׁ֨ר יָרִ֥ים מֹשֶׁ֛ה</span> · <i>ve-haya ka-asher yarim moshe</i><br><span class="gloss">= and-haya like-which yarim Moses</span></td></tr>
+<tr><td><b>S12</b></td><td>after STEP_Ex_17_12 — hands of faithfulness</td><td>And Moses&#x27; hands were heavy; and they took a stone and put it under him, and he sat on it; and Aaron and Hur supported his hands, from this side one and from this side one; and his hands were faithfulness until the coming of the sun.</td><td>REGISTRY: maqom_refidim-&gt;Masa_u_Meriva (1 write)<br><span class="gloss">= REGISTRY: maqom-refidim-&gt;Masa-and-Meriva (1 write)</span></td><td><span class="he">וִידֵ֤י מֹשֶׁה֙ כְּבֵדִ֔ים וַיִּקְחוּ</span> · <i>vi-yde moshe kevedim va-yiqchu-</i><br><span class="gloss">= vi-yde Moses kevedim and-yiqchu</span></td></tr>
+<tr><td><b>S13</b></td><td>after STEP_Ex_17_13 — by the mouth of the sword</td><td>And Joshua weakened Amalek and his people by the mouth of the sword.</td><td>REGISTRY: maqom_refidim-&gt;Masa_u_Meriva (1 write)<br><span class="gloss">= REGISTRY: maqom-refidim-&gt;Masa-and-Meriva (1 write)</span></td><td><span class="he">וַיַּחֲלֹ֧שׁ יְהוֹשֻׁ֛עַ אֶת עֲמָלֵ֥ק</span> · <i>va-yachalosh yehoshua et-amaleq</i><br><span class="gloss">= and-yachalosh yehoshua amaleq</span></td></tr>
+<tr><td><b>S14</b></td><td>after STEP_Ex_17_14 — write this in the book</td><td>And the LORD said to Moses: Write this, a memorial in the book, and set it in the ears of Joshua: that I will utterly blot out the memory of Amalek from under the heavens.</td><td>LET(ketov_zot_zikaron_ba_sefer) pushed and OPEN; REGISTRY: maqom_refidim-&gt;Masa_u_Meriva (1 write)<br><span class="gloss">= LET(ketov-this-zikaron-in-the-sefer) pushed and OPEN; REGISTRY: maqom-refidim-&gt;Masa-and-Meriva (1 write)</span></td><td><span class="he">וַיֹּ֨אמֶר יְהוָ֜ה אֶל מֹשֶׁ֗ה</span> · <i>va-yomer YHWH el-moshe</i><br><span class="gloss">= and-yomer the-LORD to-Moses</span></td></tr>
+<tr><td><b>S15</b></td><td>after STEP_Ex_17_15 — the LORD is my banner</td><td>And Moses built an altar, and called its name: The LORD is my banner.</td><td>LET(ketov_zot_zikaron_ba_sefer) pushed and OPEN; REGISTRY: maqom_refidim-&gt;Masa_u_Meriva, mizbeach-&gt;YHWH_Nisi (2 writes)<br><span class="gloss">= LET(ketov-this-zikaron-in-the-sefer) pushed and OPEN; REGISTRY: maqom-refidim-&gt;Masa-and-Meriva, altar-&gt;the-LORD-Nisi (2 writes)</span></td><td><span class="he">וַיִּ֥בֶן מֹשֶׁ֖ה מִזְבֵּ֑חַ וַיִּקְרָ֥א</span> · <i>va-yiven moshe mizbecha va-yiqra</i><br><span class="gloss">= and-yiven Moses mizbecha and-yiqra</span></td></tr>
+<tr><td><b>S16</b></td><td>after STEP_Ex_17_16 — the throne oath</td><td>And he said: For a hand is upon the throne of YH — war for the LORD against Amalek, from generation to generation.</td><td>LET(ketov_zot_zikaron_ba_sefer) pushed and OPEN; REGISTRY: maqom_refidim-&gt;Masa_u_Meriva, mizbeach-&gt;YHWH_Nisi (2 writes)<br><span class="gloss">= LET(ketov-this-zikaron-in-the-sefer) pushed and OPEN; REGISTRY: maqom-refidim-&gt;Masa-and-Meriva, altar-&gt;the-LORD-Nisi (2 writes)</span></td><td><span class="he">וַיֹּ֗אמֶר כִּֽי יָד֙ עַל</span> · <i>va-yomer ki-yad al-</i><br><span class="gloss">= and-yomer when-yad upon</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: exo_17_massah_and_amalek — Massah-Meribah and Amalek (17:1-16) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={&#x27;maqom_refidim&#x27;: &#x27;Masa_u_Meriva&#x27;, &#x27;mizbeach&#x27;: &#x27;YHWH_Nisi&#x27;} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[&#x27;named_before_any_presence&#x27;, &#x27;named_before_any_presence&#x27;]
+
+=== S1 — after STEP_Ex_17_1 — no water in Rephidim
+    וַ֠יִּסְעוּ כָּל עֲדַ֨ת בְּנֵֽי (va-yisu kal-adat bene-)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Ex_17_2 — give us water
+    וַיָּ֤רֶב הָעָם֙ עִם מֹשֶׁ֔ה (va-yarev ha-am im-moshe)
+    PASS  LET(tenu_lanu_mayim) pushed and OPEN  (queue=[&#x27;tenu_lanu_mayim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Ex_17_3 — why did you bring us up
+    וַיִּצְמָ֨א שָׁ֤ם הָעָם֙ לַמַּ֔יִם (va-yitzma sham ha-am la-mayim)
+    PASS  LET(tenu_lanu_mayim) pushed and OPEN  (queue=[&#x27;tenu_lanu_mayim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Ex_17_4 — they will stone me
+    וַיִּצְעַ֤ק מֹשֶׁה֙ אֶל יְהוָ֣ה (va-yitzaq moshe el-YHWH)
+    PASS  LET(tenu_lanu_mayim) pushed and OPEN  (queue=[&#x27;tenu_lanu_mayim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Ex_17_5 — pass before the people
+    וַיֹּ֨אמֶר יְהוָ֜ה אֶל מֹשֶׁ֗ה (va-yomer YHWH el-moshe)
+    PASS  LET(tenu_lanu_mayim) pushed and OPEN  (queue=[&#x27;tenu_lanu_mayim&#x27;, &#x27;avor_lifne_ha_am_ve_hikita&#x27;])
+    PASS  LET(avor_lifne_ha_am_ve_hikita) pushed and OPEN  (queue=[&#x27;tenu_lanu_mayim&#x27;, &#x27;avor_lifne_ha_am_ve_hikita&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Ex_17_6 — the rock at Horeb
+    הִנְנִ֣י עֹמֵד֩ לְפָנֶ֨יךָ שָּׁ֥ם (hin-ni omed le-fane-kha sham)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — after STEP_Ex_17_7 — Massah and Meribah
+    וַיִּקְרָא֙ שֵׁ֣ם הַמָּק֔וֹם מַסָּ֖ה (va-yiqra shem ha-maqom masa)
+    PASS  REGISTRY: maqom_refidim-&gt;Masa_u_Meriva (1 write)  (names={&#x27;maqom_refidim&#x27;: &#x27;Masa_u_Meriva&#x27;} writes=1)
+
+=== S8 — after STEP_Ex_17_8 — Amalek comes
+    וַיָּבֹ֖א עֲמָלֵ֑ק וַיִּלָּ֥חֶם עִם (va-yavo amaleq va-yilachem im-)
+    PASS  REGISTRY: maqom_refidim-&gt;Masa_u_Meriva (1 write)  (names={&#x27;maqom_refidim&#x27;: &#x27;Masa_u_Meriva&#x27;} writes=1)
+
+=== S9 — after STEP_Ex_17_9 — choose us men
+    וַיֹּ֨אמֶר מֹשֶׁ֤ה אֶל יְהוֹשֻׁ֨עַ֙ (va-yomer moshe el-yehoshua)
+    PASS  LET(bechar_lanu_anashim_ve_tze) pushed and OPEN  (queue=[&#x27;bechar_lanu_anashim_ve_tze&#x27;])
+    PASS  REGISTRY: maqom_refidim-&gt;Masa_u_Meriva (1 write)  (names={&#x27;maqom_refidim&#x27;: &#x27;Masa_u_Meriva&#x27;} writes=1)
+
+=== S10 — after STEP_Ex_17_10 — up the hill
+    וַיַּ֣עַשׂ יְהוֹשֻׁ֗עַ כַּאֲשֶׁ֤ר אָֽמַר (va-yaas yehoshua ka-asher amar-)
+    PASS  REGISTRY: maqom_refidim-&gt;Masa_u_Meriva (1 write)  (names={&#x27;maqom_refidim&#x27;: &#x27;Masa_u_Meriva&#x27;} writes=1)
+
+=== S11 — after STEP_Ex_17_11 — the hands and the battle
+    וְהָיָ֗ה כַּאֲשֶׁ֨ר יָרִ֥ים מֹשֶׁ֛ה (ve-haya ka-asher yarim moshe)
+    PASS  REGISTRY: maqom_refidim-&gt;Masa_u_Meriva (1 write)  (names={&#x27;maqom_refidim&#x27;: &#x27;Masa_u_Meriva&#x27;} writes=1)
+
+=== S12 — after STEP_Ex_17_12 — hands of faithfulness
+    וִידֵ֤י מֹשֶׁה֙ כְּבֵדִ֔ים וַיִּקְחוּ (vi-yde moshe kevedim va-yiqchu-)
+    PASS  REGISTRY: maqom_refidim-&gt;Masa_u_Meriva (1 write)  (names={&#x27;maqom_refidim&#x27;: &#x27;Masa_u_Meriva&#x27;} writes=1)
+
+=== S13 — after STEP_Ex_17_13 — by the mouth of the sword
+    וַיַּחֲלֹ֧שׁ יְהוֹשֻׁ֛עַ אֶת עֲמָלֵ֥ק (va-yachalosh yehoshua et-amaleq)
+    PASS  REGISTRY: maqom_refidim-&gt;Masa_u_Meriva (1 write)  (names={&#x27;maqom_refidim&#x27;: &#x27;Masa_u_Meriva&#x27;} writes=1)
+
+=== S14 — after STEP_Ex_17_14 — write this in the book
+    וַיֹּ֨אמֶר יְהוָ֜ה אֶל מֹשֶׁ֗ה (va-yomer YHWH el-moshe)
+    PASS  LET(ketov_zot_zikaron_ba_sefer) pushed and OPEN  (queue=[&#x27;ketov_zot_zikaron_ba_sefer&#x27;])
+    PASS  REGISTRY: maqom_refidim-&gt;Masa_u_Meriva (1 write)  (names={&#x27;maqom_refidim&#x27;: &#x27;Masa_u_Meriva&#x27;} writes=1)
+
+=== S15 — after STEP_Ex_17_15 — the LORD is my banner
+    וַיִּ֥בֶן מֹשֶׁ֖ה מִזְבֵּ֑חַ וַיִּקְרָ֥א (va-yiven moshe mizbecha va-yiqra)
+    PASS  LET(ketov_zot_zikaron_ba_sefer) pushed and OPEN  (queue=[&#x27;ketov_zot_zikaron_ba_sefer&#x27;])
+    PASS  REGISTRY: maqom_refidim-&gt;Masa_u_Meriva, mizbeach-&gt;YHWH_Nisi (2 writes)  (names={&#x27;maqom_refidim&#x27;: &#x27;Masa_u_Meriva&#x27;, &#x27;mizbeach&#x27;: &#x27;YHWH_Nisi&#x27;} writes=2)
+
+=== S16 — after STEP_Ex_17_16 — the throne oath
+    וַיֹּ֗אמֶר כִּֽי יָד֙ עַל (va-yomer ki-yad al-)
+    PASS  LET(ketov_zot_zikaron_ba_sefer) pushed and OPEN  (queue=[&#x27;ketov_zot_zikaron_ba_sefer&#x27;])
+    PASS  REGISTRY: maqom_refidim-&gt;Masa_u_Meriva, mizbeach-&gt;YHWH_Nisi (2 writes)  (names={&#x27;maqom_refidim&#x27;: &#x27;Masa_u_Meriva&#x27;, &#x27;mizbeach&#x27;: &#x27;YHWH_Nisi&#x27;} writes=2)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/exo_17_massah_and_amalek.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# exo_17_massah_and_amalek — 17:1-16
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/exo_17_massah_and_amalek.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Massah-Meribah and Amalek (17:1-16)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;exo_17_massah_and_amalek&quot;)
+
+# -------------------------- Exod.17.1 · NO_WATER_IN_REPHIDIM ---------------
+# וַיִּסְעוּ כָּל־עֲדַת בְּנֵי־יִשְׂרָאֵל מִמִּדְבַּר־סִין לְמַסְעֵיהֶם
+# עַל־פִּי יְהוָה וַיַּחֲנוּ בִּרְפִידִים וְאֵין מַיִם לִשְׁתֹּת הָעָם
+# &quot;[EN-AID] And all the congregation of the sons of Israel journeyed from
+# the wilderness of Sin, by their journeys, according to the mouth of the
+# LORD; and they camped in Rephidim — and there was no water for the people
+# to drink.&quot;
+m.step(&quot;Exod.17.1&quot;)
+# ‹וַיַּחֲנוּ בִּרְפִידִים וְאֵין מַיִם לִשְׁתֹּת הָעָם› (“and-encamp in-
+# Rephidim and-there-is-not waters to-drink the-people”) — fact holds: and-
+# encamp-bi-refidim-and-there-is-not-waters
+m.fact(&quot;va_yachanu_bi_refidim_ve_en_mayim&quot;)
+
+# -------------------------- Exod.17.2 · GIVE_US_WATER ----------------------
+# וַיָּרֶב הָעָם עִם־מֹשֶׁה וַיֹּאמְרוּ תְּנוּ־לָנוּ מַיִם וְנִשְׁתֶּה
+# וַיֹּאמֶר לָהֶם מֹשֶׁה מַה־תְּרִיבוּן עִמָּדִי מַה־תְּנַסּוּן אֶת־יְהוָה
+# &quot;[EN-AID] And the people quarreled with Moses, and said: Give us water,
+# that we may drink. And Moses said to them: Why do you quarrel with me? Why
+# do you test the LORD?&quot;
+m.step(&quot;Exod.17.2&quot;)
+# ‹תְּנוּ־לָנוּ מַיִם וְנִשְׁתֶּה› (“set to-us/our waters and-drink”) — the-
+# people speaks a demand — LET: set-lanu-waters
+m.declare(&quot;ha_am&quot;, &quot;LET&quot;,
+          &quot;tenu_lanu_mayim&quot;)
+
+# -------------------------- Exod.17.3 · WHY_DID_YOU_BRING_US_UP ------------
+# וַיִּצְמָא שָׁם הָעָם לַמַּיִם וַיָּלֶן הָעָם עַל־מֹשֶׁה וַיֹּאמֶר לָמָּה
+# זֶּה הֶעֱלִיתָנוּ מִמִּצְרַיִם לְהָמִית אֹתִי וְאֶת־בָּנַי וְאֶת־מִקְנַי
+# בַּצָּמָא
+# &quot;[EN-AID] And the people thirsted there for water, and the people murmured
+# against Moses, and said: Why is this — you brought us up from Egypt, to
+# kill me and my sons and my cattle with thirst?&quot;
+m.step(&quot;Exod.17.3&quot;)
+# ‹וַיָּלֶן הָעָם עַל־מֹשֶׁה› (“and-stop the-people over Moses”) — fact
+# holds: and-stop-the-people-over-Moses
+m.fact(&quot;va_yalen_ha_am_al_moshe&quot;)
+
+# -------------------------- Exod.17.4 · THEY_WILL_STONE_ME -----------------
+# וַיִּצְעַק מֹשֶׁה אֶל־יְהוָה לֵאמֹר מָה אֶעֱשֶׂה לָעָם הַזֶּה עוֹד מְעַט
+# וּסְקָלֻנִי
+# &quot;[EN-AID] And Moses cried to the LORD, saying: What shall I do for this
+# people? Yet a little — and they will stone me.&quot;
+m.step(&quot;Exod.17.4&quot;)
+# ‹עוֹד מְעַט וּסְקָלֻנִי› (“still/again little and-be-weighty-me/my”) —
+# fact holds: still/again-little-and-seqaluni
+m.fact(&quot;od_meat_u_seqaluni&quot;)
+
+# -------------------------- Exod.17.5 · PASS_BEFORE_THE_PEOPLE -------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה עֲבֹר לִפְנֵי הָעָם וְקַח אִתְּךָ מִזִּקְנֵי
+# יִשְׂרָאֵל וּמַטְּךָ אֲשֶׁר הִכִּיתָ בּוֹ אֶת־הַיְאֹר קַח בְּיָדְךָ
+# וְהָלָכְתָּ
+# &quot;[EN-AID] And the LORD said to Moses: Pass before the people, and take
+# with you of the elders of Israel; and your staff, with which you struck
+# the Nile, take in your hand — and go.&quot;
+m.step(&quot;Exod.17.5&quot;)
+# ‹עֲבֹר לִפְנֵי הָעָם וְקַח אִתְּךָ מִזִּקְנֵי יִשְׂרָאֵל› (“pass-over to-
+# face the-people and-take with-you/your from-old Israel”) — the-LORD speaks
+# a demand — LET: pass-over-lifne-the-people-and-strike
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;avor_lifne_ha_am_ve_hikita&quot;)
+
+# -------------------------- Exod.17.6 · THE_ROCK_AT_HOREB ------------------
+# הִנְנִי עֹמֵד לְפָנֶיךָ שָּׁם עַל־הַצּוּר בְּחֹרֵב וְהִכִּיתָ בַצּוּר
+# וְיָצְאוּ מִמֶּנּוּ מַיִם וְשָׁתָה הָעָם וַיַּעַשׂ כֵּן מֹשֶׁה לְעֵינֵי
+# זִקְנֵי יִשְׂרָאֵל
+# &quot;[EN-AID] Behold, I stand before you there on the rock at Horeb; and you
+# shall strike the rock, and water shall come out of it, and the people
+# shall drink. And Moses did so before the eyes of the elders of Israel.&quot;
+m.step(&quot;Exod.17.6&quot;)
+# ‹וַיַּעַשׂ כֵּן מֹשֶׁה› (“and-make so Moses”) — demand settled (popped
+# from the queue): pass-over-lifne-the-people-and-strike
+m.result(&quot;avor_lifne_ha_am_ve_hikita&quot;, tmark=&quot;t1&quot;)
+# ‹וְיָצְאוּ מִמֶּנּוּ מַיִם וְשָׁתָה הָעָם› (“and-bring-forth from-us/our
+# waters and-drink the-people”) — demand settled (popped from the queue):
+# set-lanu-waters
+m.result(&quot;tenu_lanu_mayim&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Exod.17.7 · MASSAH_AND_MERIBAH -----------------
+# וַיִּקְרָא שֵׁם הַמָּקוֹם מַסָּה וּמְרִיבָה עַל־רִיב בְּנֵי יִשְׂרָאֵל
+# וְעַל נַסֹּתָם אֶת־יְהוָה לֵאמֹר הֲיֵשׁ יְהוָה בְּקִרְבֵּנוּ אִם־אָיִן
+# &quot;[EN-AID] And he called the name of the place Massah and Meribah, for the
+# quarrel of the sons of Israel, and for their testing the LORD, saying: Is
+# the LORD in our midst, or not?&quot;
+m.step(&quot;Exod.17.7&quot;)
+# ‹וַיִּקְרָא שֵׁם הַמָּקוֹם מַסָּה וּמְרִיבָה› (“and-call name the-place
+# Massah and-Meribah”) — named: place-refidim := Masa-and-Meriva
+m.name(&quot;maqom_refidim&quot;, &quot;Masa_u_Meriva&quot;)
+
+# -------------------------- Exod.17.8 · AMALEK_COMES -----------------------
+# וַיָּבֹא עֲמָלֵק וַיִּלָּחֶם עִם־יִשְׂרָאֵל בִּרְפִידִם
+# &quot;[EN-AID] And Amalek came, and fought with Israel in Rephidim.&quot;
+m.step(&quot;Exod.17.8&quot;)
+# ‹וַיָּבֹא עֲמָלֵק וַיִּלָּחֶם עִם־יִשְׂרָאֵל בִּרְפִידִם› (“and-come/bring
+# Amalek and-feed-on with Israel in-Rephidim”) — event: milchemet-Amalek —
+# agent Amalek; theme Israel
+m.event(&quot;milchemet_amaleq&quot;, agent=&quot;amaleq&quot;, themes=[&quot;yisrael&quot;])
+
+# -------------------------- Exod.17.9 · CHOOSE_US_MEN ----------------------
+# וַיֹּאמֶר מֹשֶׁה אֶל־יְהוֹשֻׁעַ בְּחַר־לָנוּ אֲנָשִׁים וְצֵא הִלָּחֵם
+# בַּעֲמָלֵק מָחָר אָנֹכִי נִצָּב עַל־רֹאשׁ הַגִּבְעָה וּמַטֵּה הָאֱלֹהִים
+# בְּיָדִי
+# &quot;[EN-AID] And Moses said to Joshua: Choose us men, and go out, fight
+# against Amalek; tomorrow I stand on the top of the hill, and the staff of
+# God in my hand.&quot;
+m.step(&quot;Exod.17.9&quot;)
+# ‹בְּחַר־לָנוּ אֲנָשִׁים וְצֵא הִלָּחֵם בַּעֲמָלֵק› (“try to-us/our man
+# and-bring-forth feed-on in-Amalek”) — Moses speaks a demand — LET: try-
+# lanu-man-and-bring-forth
+m.declare(&quot;moshe&quot;, &quot;LET&quot;,
+          &quot;bechar_lanu_anashim_ve_tze&quot;)
+
+# -------------------------- Exod.17.10 · UP_THE_HILL -----------------------
+# וַיַּעַשׂ יְהוֹשֻׁעַ כַּאֲשֶׁר אָמַר־לוֹ מֹשֶׁה לְהִלָּחֵם בַּעֲמָלֵק
+# וּמֹשֶׁה אַהֲרֹן וְחוּר עָלוּ רֹאשׁ הַגִּבְעָה
+# &quot;[EN-AID] And Joshua did as Moses had said to him, to fight against
+# Amalek; and Moses, Aaron, and Hur went up the top of the hill.&quot;
+m.step(&quot;Exod.17.10&quot;)
+# ‹וַיַּעַשׂ יְהוֹשֻׁעַ כַּאֲשֶׁר אָמַר־לוֹ מֹשֶׁה› (“and-make Jehoshua
+# like-as/which say to-him/its Moses”) — demand settled (popped from the
+# queue): try-lanu-man-and-bring-forth
+m.result(&quot;bechar_lanu_anashim_ve_tze&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Exod.17.11 · THE_HANDS_AND_THE_BATTLE ----------
+# וְהָיָה כַּאֲשֶׁר יָרִים מֹשֶׁה יָדוֹ וְגָבַר יִשְׂרָאֵל וְכַאֲשֶׁר
+# יָנִיחַ יָדוֹ וְגָבַר עֲמָלֵק
+# &quot;[EN-AID] And it was, when Moses would raise his hand, that Israel
+# prevailed; and when he would rest his hand, that Amalek prevailed.&quot;
+m.step(&quot;Exod.17.11&quot;)
+# ‹וְהָיָה כַּאֲשֶׁר יָרִים מֹשֶׁה יָדוֹ וְגָבַר יִשְׂרָאֵל› (“and-be like-
+# as/which rise-high Moses hand-him/its and-be-strong Israel”) — fact holds:
+# like-which-rise-high-and-be-strong-Israel
+m.fact(&quot;ka_asher_yarim_ve_gavar_yisrael&quot;)
+
+# -------------------------- Exod.17.12 · HANDS_OF_FAITHFULNESS -------------
+# וִידֵי מֹשֶׁה כְּבֵדִים וַיִּקְחוּ־אֶבֶן וַיָּשִׂימוּ תַחְתָּיו וַיֵּשֶׁב
+# עָלֶיהָ וְאַהֲרֹן וְחוּר תָּמְכוּ בְיָדָיו מִזֶּה אֶחָד וּמִזֶּה אֶחָד
+# וַיְהִי יָדָיו אֱמוּנָה עַד־בֹּא הַשָּׁמֶשׁ
+# &quot;[EN-AID] And Moses&#x27; hands were heavy; and they took a stone and put it
+# under him, and he sat on it; and Aaron and Hur supported his hands, from
+# this side one and from this side one; and his hands were faithfulness
+# until the coming of the sun.&quot;
+m.step(&quot;Exod.17.12&quot;)
+# ‹וַיְהִי יָדָיו אֱמוּנָה עַד־בֹּא הַשָּׁמֶשׁ› (“and-be hand-him/its
+# firmness until come/bring the-sun”) — fact holds: yadav-firmness-until-
+# come/bring-the-sun
+m.fact(&quot;yadav_emuna_ad_bo_ha_shamesh&quot;)
+
+# -------------------------- Exod.17.13 · BY_THE_MOUTH_OF_THE_SWORD ---------
+# וַיַּחֲלֹשׁ יְהוֹשֻׁעַ אֶת־עֲמָלֵק וְאֶת־עַמּוֹ לְפִי־חָרֶב
+# &quot;[EN-AID] And Joshua weakened Amalek and his people by the mouth of the
+# sword.&quot;
+m.step(&quot;Exod.17.13&quot;)
+# ‹וַיַּחֲלֹשׁ יְהוֹשֻׁעַ אֶת־עֲמָלֵק וְאֶת־עַמּוֹ לְפִי־חָרֶב› (“and-
+# prostrate Jehoshua obj-marker Amalek and-obj-marker people-him/its to-
+# mouth drought”) — event: and-prostrate-Jehoshua — agent Jehoshua; theme
+# Amalek
+m.event(&quot;va_yachalosh_yehoshua&quot;, agent=&quot;yehoshua&quot;, themes=[&quot;amaleq&quot;])
+
+# -------------------------- Exod.17.14 · WRITE_THIS_IN_THE_BOOK ------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה כְּתֹב זֹאת זִכָּרוֹן בַּסֵּפֶר וְשִׂים
+# בְּאָזְנֵי יְהוֹשֻׁעַ כִּי־מָחֹה אֶמְחֶה אֶת־זֵכֶר עֲמָלֵק מִתַּחַת
+# הַשָּׁמָיִם
+# &quot;[EN-AID] And the LORD said to Moses: Write this, a memorial in the book,
+# and set it in the ears of Joshua: that I will utterly blot out the memory
+# of Amalek from under the heavens.&quot;
+m.step(&quot;Exod.17.14&quot;)
+# ‹כְּתֹב זֹאת זִכָּרוֹן בַּסֵּפֶר וְשִׂים בְּאָזְנֵי יְהוֹשֻׁעַ› (“grave
+# this memento in-writing and-put/set in-broadness.-i.e.-the-ear Jehoshua”)
+# — the-LORD speaks a demand — LET: grave-this-memento-in-the-sefer
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;ketov_zot_zikaron_ba_sefer&quot;)
+
+# -------------------------- Exod.17.15 · THE_LORD_IS_MY_BANNER -------------
+# וַיִּבֶן מֹשֶׁה מִזְבֵּחַ וַיִּקְרָא שְׁמוֹ יְהוָה נִסִּי
+# &quot;[EN-AID] And Moses built an altar, and called its name: The LORD is my
+# banner.&quot;
+m.step(&quot;Exod.17.15&quot;)
+# ‹וַיִּקְרָא שְׁמוֹ יְהוָה נִסִּי› (“and-call name-him/its Jehovah-Nissi-
+# me/my”) — named: altar := the-LORD-Nisi
+m.name(&quot;mizbeach&quot;, &quot;YHWH_Nisi&quot;)
+
+# -------------------------- Exod.17.16 · THE_THRONE_OATH -------------------
+# וַיֹּאמֶר כִּי־יָד עַל־כֵּס יָהּ מִלְחָמָה לַיהוָה בַּעֲמָלֵק מִדֹּר דֹּר
+# &quot;[EN-AID] And he said: For a hand is upon the throne of YH — war for the
+# LORD against Amalek, from generation to generation.&quot;
+m.step(&quot;Exod.17.16&quot;)
+# ‹וַיֹּאמֶר כִּי־יָד עַל־כֵּס יָהּ מִלְחָמָה לַיהוָה בַּעֲמָלֵק› (“and-say
+# that hand over flag Jah battle to-YHWH in-Amalek”) — fact holds: battle-
+# to-the-LORD-in-the-Amalek-from-generation-generation
+m.fact(&quot;milchama_la_YHWH_ba_amaleq_mi_dor_dor&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {&#x27;maqom_refidim&#x27;: &#x27;Masa_u_Meriva&#x27;, &#x27;mizbeach&#x27;: &#x27;YHWH_Nisi&#x27;}
+    assert m.REGISTRY[&quot;writes&quot;] == 2
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;ketov_zot_zikaron_ba_sefer&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 4
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;named_before_any_presence&#x27;: 2}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;va_yachanu_bi_refidim_ve_en_mayim&#x27;, &#x27;va_yalen_ha_am_al_moshe&#x27;, &#x27;od_meat_u_seqaluni&#x27;, &#x27;ka_asher_yarim_ve_gavar_yisrael&#x27;, &#x27;yadav_emuna_ad_bo_ha_shamesh&#x27;, &#x27;milchama_la_YHWH_ba_amaleq_mi_dor_dor&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 11
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-10 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

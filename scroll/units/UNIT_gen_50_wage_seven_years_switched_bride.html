@@ -1,0 +1,542 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_50_wage_seven_years_switched_bride — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_50_wage_seven_years_switched_bride?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The wage, the seven years, and the switched bride (29:15-30) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_50_wage_seven_years_switched_bride</b> · Genesis 29:15-30 · derive  · phase </div>
+<div class="meta"><a href="../#Gen/29/15">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">וְהִנֵּה־הִוא לֵאָה</span> · <i>ve-hine-hiv leah</i> · &#x27;And behold — she was Leah&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DRAFT 2026-08-07 · SOLO ERA unit #3 (Claude coordinator+deriver; external fresh-context adversarial review before freeze per standing law). Span: 29:15–30, the wage-to-double-marriage boundary (29:31 opens the womb arc). 16 verses · 185 tokens (SNAPSHOT-verified). SNAPSHOT + debut_map. bar C. Conventions: step he: = plain (no accents/meteg; maqqef ־ per snapshot); tree halves = accents kept, slashes stripped; split at etnachta — EXCEPT 29:22, which has NO etnachta: split at its strongest disjunctive, the tifcha at idx5 (precedent: gen_03&#x27;s 1:13 class of etnachta-less verses). Onkelos BUFFER PENDING. UNIT SHAPE — the deception INSIDE the demand mechanics: five volitives (four imperatives + one purpose-cohortative) → FOUR pushes, THREE pops, and the unit&#x27;s centerpiece is a NON-POP: at 29:23 Laban delivers a woman to the man who demanded &quot;MY WIFE&quot; — the object is the WRONG DAUGHTER, so LET(hava_ishti) holds OPEN through the wedding night. The switch is machine-visible as a card that refuses to clear. It pops only at 29:28 when the contracted wife is finally given. Depth walk: 0→1→0→1→2→(non-pop)→3→1; ends depth 1 OPEN (sheva_imadi — the dwell-root never returns in-span). INSTRUMENT NOTE: tov &quot;good&quot; 2896 tok28 WAKES at 29:19 — first in-span instrument token since gen_45 — but as Laban&#x27;s comparative inside speech (&quot;BETTER I give her to you&quot;): attribute-fenced per gen_46&#x27;s 27:9 tovim; NO TEST fires. TESTS 0. REGISTRY 0 (Leah/Zilpah/Bilhah are narrator introductions, no va-yiqra-shem formula). CARE-POINTS (filed before derivation; every ordinal DB-verified): (1) 29:15 THE WAGE QUESTION. serve-verb 5647 tok12 va-avadtani — toks 9-10-11-12 CONSECUTIVE: 25:23 the oracle (&quot;the elder shall SERVE the younger&quot;) → 27:29 the blessing (&quot;peoples SERVE you&quot;) → 27:40 the anti-blessing (&quot;your brother you SERVE&quot;) → &quot;should you SERVE me for nothing?&quot; — and SIX serve-tokens in-span (12-17): the verb promised TO Jacob becomes his own fourteen years. chinam 2600 tok1/4 DEBUT (&quot;for nothing&quot;; toks 2-3 = Exod 21:2,11 — the slave freed for nothing); maskoret 4909 tok1/3 DEBUT (wages; toks 2-3 = 31:7,41 &quot;changed my wages&quot;). PUSH: hagida-li (5046 tok15 HVhv2ms) = LET(hagida_maskoret (yaaqov)) — tell-me-your-wage. (2) 29:16 the two daughters: ha-gedola 1419 tok25 / ha-qetana 6996 tok6 — THE ELDER/YOUNGER PAIR RETURNS: 27:1/15/42 used it for the brothers (1419 toks 18-19, 22); now the daughters. Leah 3812 tok1/33 DEBUT. (3) 29:17 the eyes and the form. ene Leah rakot — eyes 5869 tok38; rakh 7390 tok2/6 (tok1 = 18:7 Abraham&#x27;s TENDER calf; tok3 = 33:13 Jacob&#x27;s own &quot;the children are tender&quot;); Rachel yefat-toar — toar 8389 tok1/5 DEBUT (tok2 = 39:6 JOSEPH yefe-toar: the mother&#x27;s beauty-word passes to her son; toks 3-4 = Pharaoh&#x27;s cows). (4) 29:18 THE ANSWER = THE POP. va-yeehav 157 tok8 — love toks 5-6-7 are the DECEPTION&#x27;S FOOD-LOVE (27:4/9/14 &quot;delicacies as he loved&quot;); tok8 = the first man-loves-woman-before-marriage in the corpus&#x27;s span. POP LET(hagida_maskoret): the wage is TOLD — &quot;I will serve you seven years for Rachel your younger daughter&quot; (content-performance; the demand was to tell, and the telling names object, price, and term). Depth 0. (5) 29:19 THE FENCED INSTRUMENT + NEW PUSH. tov 2896 tok28 — the good-instrument&#x27;s first in-span token since gen_45, as Laban&#x27;s COMPARATIVE inside speech (&quot;BETTER my giving her to you than to another man&quot;) — attribute-fenced (gen_46 27:9 tovim precedent), NO TEST. give-verb 5414 toks 63-64 (titi/mi-titi — Laban&#x27;s giving- economy opens); PUSH: shevah imadi (3427 tok41 HVqv2ms+Sh) = LET(sheva_imadi(yaaqov)) — dwell with me: the DWELL-FAMILY&#x27;s third movement (27:44 mother&#x27;s ve-yashavta limb, frozen OPEN in gen_47 → 29:14 the month-dwell landing → now Laban DEMANDS the dwelling). (6) 29:20 THE FEW-DAYS SEAM. ke-yamim achadim — 259 toks 21-22-23: 27:44 &quot;yamim achadim&quot; (the mother&#x27;s promised few days) → 27:45 &quot;yom echad&quot; (her both-sons fear) → 29:20 the seven years &quot;were in his eyes AS A FEW DAYS.&quot; Her word for the exile&#x27;s length returns as the feeling of its first seven years. eyes 5869 tok39 (toks 38-39 in-span: Leah&#x27;s eyes → his eyes); love tok9 be-ahavato. (7) 29:21 THE BABEL IMPERATIVE. hava 3051 tok4/11 — toks 1-2-3 are ALL BABEL (11:3,4,7 &quot;come, let us…&quot;): the collective tower-imperative returns as one man&#x27;s &quot;GIVE my wife.&quot; PUSH: LET(hava_ishti(lavan)) — the demanded object is THE CONTRACTED WIFE (29:18 named her: Rachel). ve-avoa (935 tok91 HC/Vqh1cs) = purpose-cohortative CONTENT (gen_46 27:4 ve-okhela class — not a separate push). malu yamay — male 4390 tok10 (see care 14). (8) 29:22 THE FEAST (no etnachta — tifcha split). mishteh 4960 tok4/5 (toks 1-3 = Lot&#x27;s feast, the weaning feast, the Gerar pact-feast; tok5 = 40:20 Pharaoh&#x27;s birthday); asah tok94 (see care 11&#x27;s walk); maqom 4725 tok32 (&quot;the men of THE PLACE&quot; — the place-word after Bethel&#x27;s naming run). (9) 29:23 THE NON-POP — the unit&#x27;s centerpiece. va-yiqach 3947 tok86 — take-career toks 79-86: the prohibition (28:1), the push on JACOB (28:2 ve-qach), the seen command ×2 (28:6), ESAU&#x27;s mirror-take (28:9), the two stones (28:11,18) — and now LABAN takes LEAH. Cross-wall landing-note: gen_47&#x27;s qum_lekh_qach demanded Jacob TAKE a wife from Laban&#x27;s daughters; the take arrives performed by the WRONG AGENT with the WRONG DAUGHTER (frozen ledger untouched). IN-UNIT: LET(hava_ishti) does NOT pop — the demand named &quot;my wife&quot; (the contracted Rachel, 29:18); Leah is delivered → OBJECT-MISMATCH → NO POP. The switch is visible in the machine as a demand that refuses to clear on the wedding night. bo-chain: va-yave (hiphil tok92, LABAN brings) → va-yavo (tok93, he goes in) — the purpose-cohortative&#x27;s content performed on the wrong object. erev 6153 tok11 (evening — the switch happens at the day-boundary word of 1:5). (10) 29:24 Zilpah 2153 tok1/7 DEBUT; shifcha 8198 toks 11-12. (11) 29:25 THE MORNING AND THE FORMULA. va-yehi va-boqer ve-hine hiv LEAH — boqer 1242 tok14 (tok13 = 28:18 Bethel&#x27;s early rise: the morning after the ladder vs the morning after the switch). ma-zot asita li — the DECEIVED-ACCUSER FORMULA (3:13 to the woman, 12:18 Pharaoh, 20:9 + 26:10 Avimelech) now in JACOB&#x27;s mouth; asah walk toks 92-97 CONSECUTIVE: 27:45 &quot;what you DID to him&quot; (the flee-reason) → 28:15 &quot;until I have DONE what I spoke&quot; (God&#x27;s pledge) → the feast → &quot;what have you DONE to me&quot; → &quot;it is not DONE so&quot; → &quot;Jacob DID so.&quot; rimitani 7411 tok1/4 — THE DECEIVE-VERB DEBUTS in the deceiver&#x27;s own mouth: the Torah&#x27;s ONLY piel &quot;deceive&quot; (toks 2-4 are the qal &quot;threw&quot; of Exod 15:1,21 + Num 15:30&#x27;s high hand). mirma&#x27;s verb finally conjugates — 27:35&#x27;s &quot;your brother came BE-MIRMA&quot; answered by &quot;why have you RIMITANI.&quot; (12) 29:26 THE CUSTOM — chapter 27 inverted. lo yease khen bi-mqomenu: la-tet ha-TZEIRA lifne ha-BEKHIRA. tzeira 6810 tok6/8 — toks 1-4 = LOT&#x27;S DAUGHTERS ×4; tok5 = 25:23 THE ORACLE (&quot;the elder shall serve the TZAIR&quot;) — the oracle&#x27;s own younger-word, now refused by custom. bekhirah 1067 tok5/5 — CAREER CLOSES: toks 1-4 = Lot&#x27;s firstborn daughter ×4; the feminine firstborn-word exists in the Torah only for Lot&#x27;s daughters and Laban&#x27;s law. Said to the man who went before HIS firstborn brother wearing his clothes. (13) 29:27 THE WEEK AND THE SERVICE-NOUN. male shevua zot — shevua 7620 toks 1-2/9 DEBUT (the bridal week; the week-word&#x27;s career runs to the Feast of Weeks); PUSH: LET(male_shevua(yaaqov)). avodah 5656 tok1/83 DEBUT — THE SERVICE-NOUN IS BORN HERE (&quot;ba-avoda asher taavod&quot;): its 83-token career becomes Egypt&#x27;s bondage and the tabernacle service — born naming marriage-labor. (14) 29:28 THE DOUBLE POP. male 4390 toks 10-11-12: malu yamay (29:21, my days are FULFILLED) → male! (29:27, the imperative) → va-yemale (29:28, compliance) — statement, demand, performance on one root; POP male_shevua, latency one verse. va-yiten et-RACHEL — the CONTRACTED wife delivered at last → POP hava_ishti (content-performance; the 29:23 delivery could not pop it, this one does — the contrast IS the derivation). give-verb 5414 toks 63-69: SEVEN in-span (Laban gives daughters, maids, and excuses; after gen_48&#x27;s 60-62 grant-vow-tithe walk). (15) 29:29 Bilhah 1090 tok1/9 DEBUT; shifcha toks 13-14. (16) 29:30 END. va-yavo gam el-Rachel; va-yeehav — love tok10: &quot;loved Rachel MORE THAN LEAH&quot; (the preference-formula that will drive the womb arc); va-yaavod 5647 tok17 — od sheva shanim acherot: the serve-verb closes the unit as it opened it. UNIT END: SPECS depth 1 OPEN — LET(sheva_imadi(yaaqov)): the dwell-root (yashav) never returns in-span; Jacob&#x27;s fourteen years answer it in life but never on the letter&#x27;s surface. SETTLED 3 (hagida_maskoret · hava_ishti · male_shevua). REGISTRY 0. TESTS 0.</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (retro, oral-first era; record: logic/oral_audit/AUDIT_gen_50_2026-08-08.md; manifest verified 11/11 checkable, zero FAILED, zero manual — the run&#x27;s first all-checkable manifest). CROWNS (chain-attested + DB-verified). THE WAGE-VERB AGAINST TWO ANOMALIES [G50-01, Minchat Shai here and at 28:15]: אעבדך (&quot;I will SERVE YOU seven years for Rachel,&quot; 29:18) — bet in plain qamatz (the long a), NOT the Chizkuni&#x27;s compound pointing; the root&#x27;s first letter standard, NOT the Jerusalem manuscript&#x27;s reading Minchat Shai calls &quot;a great anomaly&quot;; exactly one pashta (the forward-leaning accent), on the final letter, none on the bet — the promise-verb twin banked at Bethel (&quot;I will not leave you,&quot; 28:15) lands here: SNAPSHOT sides with Minchat Shai at both stations of his own cross-reference. THE TENDER EYES STAND AS WRITTEN [G50-03, Minchat Shai; Kitzur]: רכות (&quot;and Leah&#x27;s eyes were TENDER,&quot; 29:17) — the Torah&#x27;s ONLY token of the word, written with no aleph: Ben Efraim&#x27;s emendation (read it &quot;long&quot;) refuted by the letter itself — &quot;he lacked nothing but wisdom&quot; — while the enduring-gifts derash (priesthood, Levites, kingship) rides the word as written; the soft-words pair is Writings-side, named. THE TWO VERSE-INITIAL EYES [G50-04, Kitzur]: ועיני (&quot;and the eyes of...&quot;) opens a verse exactly TWICE in the Torah — Leah&#x27;s tender eyes (29:17) and ISRAEL&#x27;s age-heavy eyes (48:10): the woman who feared marrying Esau, and the man her eyes feared for, grown old, blessing her rival&#x27;s grandsons; the third of the Kitzur&#x27;s triple (the failing eyes of the wicked) is Writings-side, named. THE DEMAND AND ITS PURPOSE, BOTH MARKED [G50-05/06, Minchat Shai]: הבה (&quot;GIVE my wife,&quot; 29:21 — the tower-imperative in one man&#x27;s mouth) end-stressed as ruled; ואבואה (&quot;that I may COME to her&quot;) — the form&#x27;s ONE full-spelled token in the Torah (&quot;full with vav, all the rest lean&quot;): the demanded wedding carries the Torah&#x27;s one full coming. POINTING AS RULED [G50-02/07/08/10, Minchat Shai]: הקטנה (&quot;the YOUNGER&quot;) with the dageshed nun; זאת (&quot;what is THIS you have done,&quot; 29:25 — the deceived-accuser formula in Jacob&#x27;s mouth) with the hard zayin; the also-words of the double marriage (גם at 29:27 and twice at 29:30) dageshed and joined; וימלא (&quot;and he FULFILLED her week,&quot; 29:28 — the root the machine popped) with the lamed in tzere (the long e). THE SECOND TO-HIM STANDS [G50-11, Minchat Shai]: 29:28 carries לו (&quot;to him&quot;) TWICE — &quot;and he gave TO HIM Rachel his daughter, TO HIM as wife&quot;: some books drop the second; the codices of Spain and the books of R. Meir and R. Gershom keep it, and SNAPSHOT keeps both — the letter says twice whose wife she is, on the verse that finally clears the give-my-wife card. INSTRUMENT GAP [G50-09]: אשר of the service-clause (29:27) — ruled &quot;with galgal (the rare wheel-accent), not with maqqef&quot;: SNAPSHOT agrees on the testable half (no maqqef, an accent present) but stores munach (the common sustaining accent) where the ruling names galgal — the galgal layer remains uninstrumented, the standing run-4 gap now source-anchored at its first probed instance. READINGS (named-only, unclaimed): the linked eye-readings (Leah fearing Esau&#x27;s lot; Israel&#x27;s eyes heavy at Jeroboam and Ahab); the Talmud&#x27;s real-tears-to-her-praise reading against the enduring-gifts reading; &quot;the elder Leah, great in her gifts.&quot;</div>
+<div class="meta">confidence: </div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Reconstruction notice (2026-08-08)</td><td>This unit was frozen in the lean era (meta + scenarios + boot steps; no step table was written at freeze). The steps below were reconstructed on 2026-08-08 from the freeze-era draft note (meta.draft_note_en, displayed on the unit page), the era&#x27;s continue-docs, and git history. No new derivation claims are introduced: every entry restates recorded decisions, and the full per-verse machine record is the boot steps below.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Source + span + structure</td><td>Genesis 29:15-30, the wage-to-double-marriage boundary (29:31 opens the womb arc): 16 verses, 185 tokens, source-verified. Trees split at the mid-verse rest — EXCEPT 29:22, which has none: split at its strongest disjunctive instead, on the frozen precedent for restless verses. Evidence: the SNAPSHOT database plus the debut-map attachment.</td><td>reconstructed</td></tr>
+<tr><td><b>C</b></td><td>Draft path + review</td><td>Solo-era unit #3: Claude as coordinator and deriver, with an external fresh-context adversarial review before freeze per the standing law. Frozen 2026-08-07.</td><td>reconstructed</td></tr>
+<tr><td><b>D</b></td><td>Care-point ledger (distilled)</td><td>Sixteen care-points filed before derivation, every ordinal source-verified, including: the serve-verb&#x27;s four consecutive tokens walk the oracle, the blessing, the anti-blessing, and Laban&#x27;s wage question — the verb promised TO Jacob becomes his own fourteen years; the elder/younger pair returns from the brothers to the daughters; the collective tower-imperative of Babel returns as one man&#x27;s &quot;GIVE my wife&quot;; the deceive-verb DEBUTS in the deceiver&#x27;s own mouth — &quot;why have you deceived me&quot; answers &quot;your brother came in deceit&quot;; the deceived-accuser formula (&quot;what is this you have done&quot;) arrives in Jacob&#x27;s mouth after the woman, Pharaoh, and Abimelech twice; the custom clause inverts chapter 27 — the feminine firstborn-word exists in the Torah only for Lot&#x27;s daughters and Laban&#x27;s law, said to the man who went before HIS firstborn; the service-noun is BORN here naming marriage-labor, its career running to Egypt&#x27;s bondage and the tabernacle service; the good-word WAKES at 29:19 for the first time since the wells unit but as Laban&#x27;s comparative inside speech — attribute-fenced, no test.</td><td>reconstructed</td></tr>
+<tr><td><b>E</b></td><td>Machine design</td><td>The deception INSIDE the demand mechanics: five volitives (four imperatives and one purpose-content), FOUR pushes, THREE pops — and the centerpiece is a NON-POP. At 29:23 Laban delivers a woman to the man who demanded &quot;my wife,&quot; but the demand named the contracted wife — the object is the WRONG DAUGHTER, so the give-my-wife demand holds OPEN through the wedding night: the switch is machine-visible as a card that refuses to clear. It pops only at 29:28 when the contracted wife is finally given. Also settled: tell-me-your-wage (the telling names object, price, and term) and fulfill-the-week (statement, demand, and performance on one root, latency one verse). Open at the wall: dwell-with-me — the dwell-root never returns in-span; the fourteen years answer it in life but never on the letter&#x27;s surface. Zero registry writes (the wives and maids are narrator introductions, no name-formula), zero tests.</td><td>reconstructed</td></tr>
+<tr><td><b>F</b></td><td>Freeze + later history</td><td>Frozen at commit 71c6dea (2026-08-07, &quot;Freeze gen_50: wage, seven years, switched bride&quot;). Oral audit 2026-08-08 folded same day (run 6 block 4): 11 VERIFIED, 0 FAILED, 0 manual — the run&#x27;s first all-checkable manifest (record: logic/oral_audit/AUDIT_gen_50_2026-08-08.md; the crowns are displayed in the audit note above).</td><td>reconstructed</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_29_15 · Gen.29.15 · <span class='expr'>THE_WAGE_QUESTION_PUSH</span></h3>
+<p><span class="he">וַיֹּאמֶר לָבָן לְיַעֲקֹב הֲכִי־אָחִי אַתָּה וַעֲבַדְתַּנִי חִנָּם הַגִּידָה לִּי מַה־מַּשְׂכֻּרְתֶּךָ</span> · <i>va-yomer lavan le-yaaqov ha-khi-achi ata va-avadtani chinam hagida li ma-maskurtekha</i> · And Laban said to Jacob: Because you are my brother, should you serve me for nothing? Tell me, what is your wage?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר לָבָן֙ לְיַעֲקֹ֔ב הֲכִי אָחִ֣י אַ֔תָּה וַעֲבַדְתַּ֖נִי חִנָּ֑ם</span> · <i>va-yomer lavan le-yaaqov ha-khi achi ata va-avadtani chinam</i> · because you are my brother, should you serve me for nothing (etnachta on chinam) [VERIFIED: SNAPSHOT Gen.29.15 idx7 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">הַגִּ֥ידָה לִּ֖י מַה מַּשְׂכֻּרְתֶּֽךָ</span> · <i>hagida li ma maskurtekha</i> · tell me what your wage is (verse-final maskurtekha) [VERIFIED: SNAPSHOT Gen.29.15 idx8-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(lavan, LET(hagida_maskoret(yaaqov)))</span><br><span class="gloss">= DECLARE(lavan, LET(hagida-maskoret(yaaqov)))</span><br>THE WAGE QUESTION [care 1]. hagida (5046 tok15/55 HVhv2ms+Sh paragogic) [VERIFIED: SNAPSHOT Gen.29.15 idx8 morph=HVhv2ms/Sh ordinal=15/55] — tell-me imperative = LET(hagida_maskoret(yaaqov)), depth 1. va-avadtani (5647 tok12/113) [VERIFIED: idx6 ordinal=12/113] — SERVE-VERB toks 9-10-11-12 CONSECUTIVE: 25:23 the oracle (&quot;the elder shall SERVE the younger&quot;) → 27:29 the blessing (&quot;peoples SERVE you&quot;) → 27:40 the anti-blessing (&quot;your brother you SERVE&quot;) → &quot;should you SERVE me for nothing?&quot; — six serve-tokens follow in-span (12-17). chinam (2600 tok1/4 DEBUT) [VERIFIED: idx7 ordinal=1/4] — &quot;for nothing&quot;; toks 2-3 = Exod 21:2,11, the slave freed for nothing. maskurtekha (4909 tok1/3 DEBUT) [VERIFIED: idx11 ordinal=1/3] — wages; toks 2-3 = 31:7,41 &quot;you changed my wages.&quot; REGISTRY 0. TESTS 0. Onkelos BUFFER PENDING.
+</td><td><span class="he">הַגִּידָה לִּי מַה־מַּשְׂכֻּרְתֶּךָ</span> · <i>hagida li ma-maskurtekha</i><br><span class="gloss">= hagida to-me ma-maskurtekha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Laban&#x27;s tell-me-your-wage imperative opens the ledger; depth 1.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_29_16 · Gen.29.16 · <span class='expr'>THE_TWO_DAUGHTERS</span></h3>
+<p><span class="he">וּלְלָבָן שְׁתֵּי בָנוֹת שֵׁם הַגְּדֹלָה לֵאָה וְשֵׁם הַקְּטַנָּה רָחֵל</span> · <i>u-le-lavan shete vanot shem ha-gedolah leah ve-shem ha-qetanah rachel</i> · And Laban had two daughters: the name of the elder was Leah, and the name of the younger was Rachel.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּלְלָבָ֖ן שְׁתֵּ֣י בָנ֑וֹת</span> · <i>u-le-lavan shete vanot</i> · and Laban had two daughters (etnachta on vanot) [VERIFIED: SNAPSHOT Gen.29.16 idx2 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">שֵׁ֤ם הַגְּדֹלָה֙ לֵאָ֔ה וְשֵׁ֥ם הַקְּטַנָּ֖ה רָחֵֽל</span> · <i>shem ha-gedolah leah ve-shem ha-qetanah rachel</i> · the elder&#x27;s name Leah, the younger&#x27;s name Rachel (verse-final rachel) [VERIFIED: SNAPSHOT Gen.29.16 idx3-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(two_daughters_gedola_leah_qetana_rachel, t0) ∧ depth_SPECS=1</span><br><span class="gloss">= HOLDS(two-daughters-gedola-leah-qetana-rachel, t0) ∧ depth-SPECS=1</span><br>THE PAIR RETURNS [care 2]. ha-gedola (1419 tok25/102) [VERIFIED: SNAPSHOT Gen.29.16 idx4 ordinal=25/102] / ha-qetana (6996 tok6/26) [VERIFIED: idx7 ordinal=6/26] — the ELDER/YOUNGER pair that carried the brothers through the deception (27:1/15/42) re-enters as DAUGHTERS. Leah (3812 tok1/33 DEBUT) [VERIFIED: idx5 ordinal=1/33] — narrator introduction, no naming formula, no REGISTRY write. Depth 1. REGISTRY 0. TESTS 0.
+</td><td><span class="he">שֵׁם הַגְּדֹלָה לֵאָה וְשֵׁם הַקְּטַנָּה רָחֵל</span> · <i>shem ha-gedolah leah ve-shem ha-qetanah rachel</i><br><span class="gloss">= shem the-gedolah leah and-shem the-qetanah rachel</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Elder and younger again — daughters this time; depth 1.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_29_17 · Gen.29.17 · <span class='expr'>THE_EYES_AND_THE_FORM</span></h3>
+<p><span class="he">וְעֵינֵי לֵאָה רַכּוֹת וְרָחֵל הָיְתָה יְפַת־תֹּאַר וִיפַת מַרְאֶה</span> · <i>ve-ene leah rakot ve-rachel hayta yefat-toar vi-yfat mareh</i> · And Leah&#x27;s eyes were tender; but Rachel was beautiful of form and beautiful of appearance.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְעֵינֵ֥י לֵאָ֖ה רַכּ֑וֹת</span> · <i>ve-ene leah rakot</i> · and Leah&#x27;s eyes were tender (etnachta on rakot) [VERIFIED: SNAPSHOT Gen.29.17 idx2 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְרָחֵל֙ הָֽיְתָ֔ה יְפַת תֹּ֖אַר וִיפַ֥ת מַרְאֶֽה</span> · <i>ve-rachel hayta yefat toar vi-yfat mareh</i> · and Rachel was beautiful of form and appearance (verse-final mareh) [VERIFIED: SNAPSHOT Gen.29.17 idx3-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(leah_eyes_tender_rachel_beautiful, t0) ∧ depth_SPECS=1</span><br><span class="gloss">= HOLDS(leah-eyes-tender-rachel-beautiful, t0) ∧ depth-SPECS=1</span><br>EYES AND FORM [care 3]. ene (5869 tok38/231) [VERIFIED: SNAPSHOT Gen.29.17 idx0 ordinal=38/231] — the eye-career continues (35-37 = dim eyes, feared eyes, the father&#x27;s eyes; 38-39 in-span: Leah&#x27;s eyes → his eyes at 29:20). rakot (7390 tok2/6) [VERIFIED: idx2 ordinal=2/6] — TENDER: tok1 = 18:7, Abraham&#x27;s tender calf; tok3 = 33:13, Jacob&#x27;s own &quot;the children are tender.&quot; toar (8389 tok1/5 DEBUT) [VERIFIED: idx6 ordinal=1/5] — FORM debuts on Rachel; tok2 = 39:6 JOSEPH yefe-toar (the mother&#x27;s beauty-word passes to her son); toks 3-4 = Pharaoh&#x27;s cows. Both descriptions FACT — the letter records, never ranks. Depth 1. REGISTRY 0. TESTS 0.
+</td><td><span class="he">וְעֵינֵי לֵאָה רַכּוֹת … יְפַת־תֹּאַר</span> · <i>ve-ene leah rakot … yefat-toar</i><br><span class="gloss">= and-ene leah rakot yefat-toar</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Tender eyes, beautiful form — facts only; depth 1.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_29_18 · Gen.29.18 · <span class='expr'>THE_WAGE_TOLD_POP</span></h3>
+<p><span class="he">וַיֶּאֱהַב יַעֲקֹב אֶת־רָחֵל וַיֹּאמֶר אֶעֱבָדְךָ שֶׁבַע שָׁנִים בְּרָחֵל בִּתְּךָ הַקְּטַנָּה</span> · <i>va-yeehav yaaqov et-rachel va-yomer eevadkha sheva shanim be-rachel bitkha ha-qetanah</i> · And Jacob loved Rachel; and he said: I will serve you seven years for Rachel your younger daughter.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֶּאֱהַ֥ב יַעֲקֹ֖ב אֶת רָחֵ֑ל</span> · <i>va-yeehav yaaqov et rachel</i> · and Jacob loved Rachel (etnachta on rachel) [VERIFIED: SNAPSHOT Gen.29.18 idx3 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּ֗אמֶר אֶֽעֱבָדְךָ֙ שֶׁ֣בַע שָׁנִ֔ים בְּרָחֵ֥ל בִּתְּךָ֖ הַקְּטַנָּֽה</span> · <i>va-yomer eevadkha sheva shanim be-rachel bitkha ha-qetanah</i> · I will serve you seven years for Rachel your younger daughter (verse-final ha-qetanah) [VERIFIED: SNAPSHOT Gen.29.18 idx4-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">HOLDS(hagida_maskoret(yaaqov), t1)</span><br><span class="gloss">= HOLDS(hagida-maskoret(yaaqov), t1)</span><br>THE WAGE IS TOLD [care 4]. The demand was hagida — TELL your wage; the answer names term, price, and object: &quot;I will SERVE you (5647 tok13) [VERIFIED: SNAPSHOT Gen.29.18 idx5 ordinal=13/113] SEVEN YEARS for RACHEL your younger daughter.&quot; Content performed → POP LET(hagida_maskoret(yaaqov)), latency three verses. THE CONTRACT NAMES THE WIFE — the pop that arms 29:23&#x27;s non-pop. Depth 0.
+</td><td><span class="he">אֶעֱבָדְךָ שֶׁבַע שָׁנִים בְּרָחֵל</span> · <i>eevadkha sheva shanim be-rachel</i><br><span class="gloss">= eevadkha seven shanim in-rachel</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(yaaqov_loves_rachel_contract_names_her, t0) ∧ SPECS=[]</span><br><span class="gloss">= HOLDS(yaaqov-loves-rachel-contract-names-her, t0) ∧ SPECS=[]</span><br>va-yeehav (157 tok8/41) [VERIFIED: idx0 ordinal=8/41] — the love-career&#x27;s immediately prior tokens are the deception&#x27;s FOOD-LOVE (27:4/9/14 toks 5-6-7, &quot;delicacies as he loved&quot;); before that: Abraham-Isaac (22:2), Isaac-Rivqah (24:67), the parental split (25:28 ×2). Tok8 = the corpus&#x27;s first man-loves-woman BEFORE marriage. sheva shanim (7651 tok24) [VERIFIED: idx6 ordinal=24/185]. REGISTRY 0. TESTS 0.
+</td><td><span class="he">וַיֶּאֱהַב יַעֲקֹב אֶת־רָחֵל</span> · <i>va-yeehav yaaqov et-rachel</i><br><span class="gloss">= and-yeehav yaaqov rachel</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The wage told — seven years, for Rachel by name; queue empty.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_29_19 · Gen.29.19 · <span class='expr'>THE_FENCED_TOV_AND_DWELL_PUSH</span></h3>
+<p><span class="he">וַיֹּאמֶר לָבָן טוֹב תִּתִּי אֹתָהּ לָךְ מִתִּתִּי אֹתָהּ לְאִישׁ אַחֵר שְׁבָה עִמָּדִי</span> · <i>va-yomer lavan tov titi otah lakh mi-titi otah le-ish acher shevah imadi</i> · And Laban said: Better that I give her to you than that I give her to another man — dwell with me.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֣אמֶר לָבָ֗ן ט֚וֹב תִּתִּ֣י אֹתָ֣הּ לָ֔ךְ מִתִּתִּ֥י אֹתָ֖הּ לְאִ֣ישׁ אַחֵ֑ר</span> · <i>va-yomer lavan tov titi otah lakh mi-titi otah le-ish acher</i> · better my giving her to you than to another man (etnachta on acher) [VERIFIED: SNAPSHOT Gen.29.19 idx9 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">שְׁבָ֖ה עִמָּדִֽי</span> · <i>shevah imadi</i> · dwell with me (verse-final imadi) [VERIFIED: SNAPSHOT Gen.29.19 idx10-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(lavan, LET(sheva_imadi(yaaqov)))</span><br><span class="gloss">= DECLARE(lavan, LET(seven-with-me(yaaqov)))</span><br>DWELL WITH ME [care 5]. shevah (3427 tok41/199 HVqv2ms+Sh) [VERIFIED: SNAPSHOT Gen.29.19 idx10 morph=HVqv2ms/Sh ordinal=41/199] = LET(sheva_imadi(yaaqov)) — the DWELL-FAMILY&#x27;s third movement: 27:44 the mother&#x27;s ve-yashavta limb (frozen OPEN in gen_47&#x27;s wall) → 29:14 the month-dwell landing → now Laban DEMANDS the dwelling. Depth 1.
+</td><td><span class="he">שְׁבָה עִמָּדִי</span> · <i>shevah imadi</i><br><span class="gloss">= shevah with-me</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(tov_comparative_fenced_in_speech, t0) ∧ depth_SPECS=1</span><br><span class="gloss">= HOLDS(good-comparative-fenced-in-speech, t0) ∧ depth-SPECS=1</span><br>THE INSTRUMENT WAKES — FENCED [care 5]. tov (2896 tok28/86) [VERIFIED: idx2 ordinal=28/86] — the good-instrument&#x27;s first in-span token since gen_45, as Laban&#x27;s COMPARATIVE inside speech: attribute-fenced (gen_46 27:9 tovim precedent) — NO TEST fires. TESTS 0. titi/mi-titi (5414 toks 63-64) [VERIFIED: idx3 ordinal=63/647; idx6 ordinal=64/647] — the give-verb enters Laban&#x27;s mouth; his giving-economy runs seven tokens in-span (63-69). REGISTRY 0.
+</td><td><span class="he">טוֹב תִּתִּי אֹתָהּ לָךְ</span> · <i>tov titi otah lakh</i><br><span class="gloss">= good titi her to-you</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Laban&#x27;s fenced &quot;better&quot; and the dwell-demand; depth 1.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_29_20 · Gen.29.20 · <span class='expr'>THE_SEVEN_YEARS_AS_FEW_DAYS</span></h3>
+<p><span class="he">וַיַּעֲבֹד יַעֲקֹב בְּרָחֵל שֶׁבַע שָׁנִים וַיִּהְיוּ בְעֵינָיו כְּיָמִים אֲחָדִים בְּאַהֲבָתוֹ אֹתָהּ</span> · <i>va-yaavod yaaqov be-rachel sheva shanim va-yihyu ve-enav ke-yamim achadim be-ahavato otah</i> · And Jacob served seven years for Rachel; and they were in his eyes as a few days, in his love for her.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּעֲבֹ֧ד יַעֲקֹ֛ב בְּרָחֵ֖ל שֶׁ֣בַע שָׁנִ֑ים</span> · <i>va-yaavod yaaqov be-rachel sheva shanim</i> · Jacob served seven years for Rachel (etnachta on shanim) [VERIFIED: SNAPSHOT Gen.29.20 idx4 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּהְי֤וּ בְעֵינָיו֙ כְּיָמִ֣ים אֲחָדִ֔ים בְּאַהֲבָת֖וֹ אֹתָֽהּ</span> · <i>va-yihyu ve-enav ke-yamim achadim be-ahavato otah</i> · they were in his eyes as a few days, in his love for her (verse-final otah) [VERIFIED: SNAPSHOT Gen.29.20 idx5-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(seven_years_served_as_few_days, t0) ∧ depth_SPECS=1</span><br><span class="gloss">= HOLDS(seven-years-served-as-few-days, t0) ∧ depth-SPECS=1</span><br>THE FEW-DAYS SEAM [care 6]. va-yaavod (5647 tok14) [VERIFIED: SNAPSHOT Gen.29.20 idx0 ordinal=14/113]. ke-yamim ACHADIM (259 tok23/400) [VERIFIED: idx8 ordinal=23/400] — the few-word&#x27;s toks 21-22-23: 27:44 &quot;yamim achadim&quot; (the MOTHER&#x27;S promised few days) → 27:45 &quot;yom echad&quot; (her both-sons fear) → the seven years &quot;were in his eyes AS A FEW DAYS.&quot; Her word for the exile&#x27;s length returns as the feeling of its first seven years. ve-enav (5869 tok39) [VERIFIED: idx6 ordinal=39/231] — eyes toks 38-39 in-span: Leah&#x27;s eyes, then his. be-ahavato (157 tok9) [VERIFIED: idx9 ordinal=9/41]. Depth 1. REGISTRY 0. TESTS 0.
+</td><td><span class="he">וַיַּעֲבֹד … כְּיָמִים אֲחָדִים</span> · <i>va-yaavod … ke-yamim achadim</i><br><span class="gloss">= and-yaavod seas achadim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Seven years like the mother&#x27;s promised few days; depth 1.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_29_21 · Gen.29.21 · <span class='expr'>THE_BABEL_IMPERATIVE_GIVE_MY_WIFE</span></h3>
+<p><span class="he">וַיֹּאמֶר יַעֲקֹב אֶל־לָבָן הָבָה אֶת־אִשְׁתִּי כִּי מָלְאוּ יָמָי וְאָבוֹאָה אֵלֶיהָ</span> · <i>va-yomer yaaqov el-lavan hava et-ishti ki malu yamai ve-avoa eleha</i> · And Jacob said to Laban: Give my wife, for my days are fulfilled, that I may go in to her.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר יַעֲקֹ֤ב אֶל לָבָן֙ הָבָ֣ה אֶת אִשְׁתִּ֔י כִּ֥י מָלְא֖וּ יָמָ֑י</span> · <i>va-yomer yaaqov el lavan hava et ishti ki malu yamai</i> · give my wife, for my days are fulfilled (etnachta on yamai) [VERIFIED: SNAPSHOT Gen.29.21 idx9 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאָב֖וֹאָה אֵלֶֽיהָ</span> · <i>ve-avoa eleha</i> · that I may go in to her (verse-final eleha) [VERIFIED: SNAPSHOT Gen.29.21 idx10-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yaaqov, LET(hava_ishti(lavan)))</span><br><span class="gloss">= DECLARE(yaaqov, LET(hava-ishti(lavan)))</span><br>GIVE MY WIFE [care 7]. hava (3051 tok4/11 HVqv2ms+Sh) [VERIFIED: SNAPSHOT Gen.29.21 idx4 morph=HVqv2ms/Sh ordinal=4/11] — THE BABEL IMPERATIVE: toks 1-2-3 are ALL the tower (11:3,4,7 &quot;come, let us…&quot;); the collective come-word returns as one man&#x27;s demand. LET(hava_ishti(lavan)), depth 2 — and the demanded object is THE CONTRACTED WIFE: 29:18 named her, &quot;Rachel your younger daughter.&quot; ki malu yamai — male (4390 tok10/57) [VERIFIED: idx8 ordinal=10/57] opens the fulfill-root&#x27;s three-token walk (care 14). ve-avoa (935 tok91 HC/Vqh1cs) [VERIFIED: idx10 morph=HC/Vqh1cs ordinal=91/619] — purpose-cohortative CONTENT under the demand (gen_46 27:4 ve-okhela class; not a separate push; not in the four-imperative count). REGISTRY 0. TESTS 0.
+</td><td><span class="he">הָבָה אֶת־אִשְׁתִּי</span> · <i>hava et-ishti</i><br><span class="gloss">= hava ishti</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Babel&#x27;s imperative aimed at a bride; the contract&#x27;s object armed; depth 2.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_29_22 · Gen.29.22 · <span class='expr'>THE_FEAST_OF_THE_PLACE</span></h3>
+<p><span class="he">וַיֶּאֱסֹף לָבָן אֶת־כָּל־אַנְשֵׁי הַמָּקוֹם וַיַּעַשׂ מִשְׁתֶּה</span> · <i>va-yeesof lavan et-kol-anshe ha-maqom va-yaas mishteh</i> · And Laban gathered all the men of the place, and made a feast.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֶּאֱסֹ֥ף לָבָ֛ן אֶת כָּל אַנְשֵׁ֥י הַמָּק֖וֹם</span> · <i>va-yeesof lavan et kol anshe ha-maqom</i> · Laban gathered all the men of the place (NO etnachta in verse; split at tifcha idx5 — gen_03 1:13 precedent for etnachta-less verses) [VERIFIED: SNAPSHOT Gen.29.22 idx5 mark_id=tifcha mark_rank=2; no etnachta row in verse]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּ֥עַשׂ מִשְׁתֶּֽה</span> · <i>va-yaas mishteh</i> · and made a feast (verse-final mishteh) [VERIFIED: SNAPSHOT Gen.29.22 idx6-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(feast_gathered_men_of_the_place, t0) ∧ depth_SPECS=2</span><br><span class="gloss">= HOLDS(feast-gathered-men-fowl-the-place, t0) ∧ depth-SPECS=2</span><br>THE FEAST [care 8]. mishteh (4960 tok4/5) [VERIFIED: SNAPSHOT Gen.29.22 idx7 ordinal=4/5] — feast career: 19:3 Lot&#x27;s, 21:8 the weaning, 26:30 the Gerar pact — and tok5 = 40:20, Pharaoh&#x27;s birthday. va-yaas (6213 tok94) [VERIFIED: idx6 ordinal=94/860] — the do-verb&#x27;s six-token walk runs through this unit (care 11). ha-maqom (4725 tok32) [VERIFIED: idx5 ordinal=32/133]. Depth 2. REGISTRY 0. TESTS 0.
+</td><td><span class="he">וַיַּעַשׂ מִשְׁתֶּה</span> · <i>va-yaas mishteh</i><br><span class="gloss">= and-yaas mishteh</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The wedding feast; the only etnachta-less verse in the span; depth 2.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_29_23 · Gen.29.23 · <span class='expr'>THE_SWITCH_OBJECT_MISMATCH_NO_POP</span></h3>
+<p><span class="he">וַיְהִי בָעֶרֶב וַיִּקַּח אֶת־לֵאָה בִתּוֹ וַיָּבֵא אֹתָהּ אֵלָיו וַיָּבֹא אֵלֶיהָ</span> · <i>va-yehi va-erev va-yiqach et-leah vito va-yave otah elav va-yavo eleha</i> · And it was in the evening: he took Leah his daughter and brought her to him; and he went in to her.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֣י בָעֶ֔רֶב וַיִּקַּח֙ אֶת לֵאָ֣ה בִתּ֔וֹ וַיָּבֵ֥א אֹתָ֖הּ אֵלָ֑יו</span> · <i>va-yehi va-erev va-yiqach et leah vito va-yave otah elav</i> · in the evening he took Leah his daughter and brought her to him (etnachta on elav) [VERIFIED: SNAPSHOT Gen.29.23 idx8 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיָּבֹ֖א אֵלֶֽיהָ</span> · <i>va-yavo eleha</i> · and he went in to her (verse-final eleha) [VERIFIED: SNAPSHOT Gen.29.23 idx9-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(leah_delivered_object_mismatch_no_pop, t0) ∧ depth_SPECS=2</span><br><span class="gloss">= HOLDS(leah-delivered-object-mismatch-no-pop, t0) ∧ depth-SPECS=2</span><br>THE NON-POP — the unit&#x27;s centerpiece [care 9]. va-yiqach (3947 tok86/393) [VERIFIED: SNAPSHOT Gen.29.23 idx2 ordinal=86/393] — take-career toks 79-86: the prohibition (28:1), the push on JACOB (28:2 ve-qach), the seen command ×2 (28:6), ESAU&#x27;s mirror-take (28:9), the two stones (28:11,18) — and now LABAN TAKES LEAH. Cross-wall landing-note: gen_47&#x27;s qum_lekh_qach demanded Jacob take a wife from Laban&#x27;s daughters; the take arrives by the WRONG AGENT with the WRONG DAUGHTER (frozen ledger untouched). IN-UNIT: LET(hava_ishti(lavan)) does NOT pop — the demand&#x27;s object is &quot;MY WIFE,&quot; the contracted Rachel (named 29:18); Leah is delivered → OBJECT-MISMATCH → NO POP. The switch is machine-visible: the demand card holds OPEN through the wedding night. va-yave (935 tok92 hiphil) → va-yavo (tok93) [VERIFIED: idx6 ordinal=92/619; idx9 ordinal=93/619] — the purpose-cohortative&#x27;s content (ve-avoa) performed on the wrong object. va-erev (6153 tok11) [VERIFIED: idx1 ordinal=11/77] — the switch rides the evening, 1:5&#x27;s first day-boundary word. Depth 2. REGISTRY 0. TESTS 0.
+</td><td><span class="he">וַיִּקַּח אֶת־לֵאָה … וַיָּבֹא אֵלֶיהָ</span> · <i>va-yiqach et-leah … va-yavo eleha</i><br><span class="gloss">= and-yiqach leah and-yavo eleha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Leah delivered in the evening; the demand refuses to clear; depth 2.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_29_24 · Gen.29.24 · <span class='expr'>THE_FIRST_MAID_ZILPAH</span></h3>
+<p><span class="he">וַיִּתֵּן לָבָן לָהּ אֶת־זִלְפָּה שִׁפְחָתוֹ לְלֵאָה בִתּוֹ שִׁפְחָה</span> · <i>va-yiten lavan lah et-zilpah shifchato le-leah vito shifchah</i> · And Laban gave her Zilpah his maid — to Leah his daughter as a maid.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּתֵּ֤ן לָבָן֙ לָ֔הּ אֶת זִלְפָּ֖ה שִׁפְחָת֑וֹ</span> · <i>va-yiten lavan lah et zilpah shifchato</i> · Laban gave her Zilpah his maid (etnachta on shifchato) [VERIFIED: SNAPSHOT Gen.29.24 idx5 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">לְלֵאָ֥ה בִתּ֖וֹ שִׁפְחָֽה</span> · <i>le-leah vito shifchah</i> · to Leah his daughter as a maid (verse-final shifchah) [VERIFIED: SNAPSHOT Gen.29.24 idx6-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(zilpah_given_to_leah, t0) ∧ depth_SPECS=2</span><br><span class="gloss">= HOLDS(zilpah-given-to-leah, t0) ∧ depth-SPECS=2</span><br>THE FIRST MAID [care 10]. Zilpah (2153 tok1/7 DEBUT) [VERIFIED: SNAPSHOT Gen.29.24 idx4 ordinal=1/7] — narrator introduction, no naming formula. shifcha (8198 toks 11-12) [VERIFIED: idx5 ordinal=11/31; idx8 ordinal=12/31]. va-yiten (5414 tok65) [VERIFIED: idx0 ordinal=65/647] — Laban gives a maid on the night he withholds the bride. Depth 2. REGISTRY 0. TESTS 0.
+</td><td><span class="he">אֶת־זִלְפָּה שִׁפְחָתוֹ</span> · <i>et-zilpah shifchato</i><br><span class="gloss">= zilpah shifchato</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Zilpah to Leah; the giving continues around the withheld object.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_29_25 · Gen.29.25 · <span class='expr'>THE_MORNING_BEHOLD_LEAH</span></h3>
+<p><span class="he">וַיְהִי בַבֹּקֶר וְהִנֵּה־הִוא לֵאָה וַיֹּאמֶר אֶל־לָבָן מַה־זֹּאת עָשִׂיתָ לִּי הֲלֹא בְרָחֵל עָבַדְתִּי עִמָּךְ וְלָמָּה רִמִּיתָנִי</span> · <i>va-yehi va-boqer ve-hine-hiv leah va-yomer el-lavan ma-zot asita li ha-lo ve-rachel avadti imakh ve-lama rimitani</i> · And it was in the morning — behold, she was Leah. And he said to Laban: What is this you have done to me? Did I not serve with you for Rachel? Why have you deceived me?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֣י בַבֹּ֔קֶר וְהִנֵּה הִ֖וא לֵאָ֑ה</span> · <i>va-yehi va-boqer ve-hine hiv leah</i> · in the morning — behold, she was Leah (etnachta on leah) [VERIFIED: SNAPSHOT Gen.29.25 idx4 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּ֣אמֶר אֶל לָבָ֗ן מַה זֹּאת֙ עָשִׂ֣יתָ לִּ֔י הֲלֹ֤א בְרָחֵל֙ עָבַ֣דְתִּי עִמָּ֔ךְ וְלָ֖מָּה רִמִּיתָֽנִי</span> · <i>va-yomer el lavan ma zot asita li ha-lo ve-rachel avadti imakh ve-lama rimitani</i> · what have you done to me — did I not serve for Rachel — why have you deceived me (verse-final rimitani) [VERIFIED: SNAPSHOT Gen.29.25 idx5-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(morning_revelation_accusation_rimitani, t0) ∧ depth_SPECS=2</span><br><span class="gloss">= HOLDS(morning-revelation-accusation-rimitani, t0) ∧ depth-SPECS=2</span><br>THE MORNING AND THE FORMULA [care 11]. va-boqer (1242 tok14) [VERIFIED: SNAPSHOT Gen.29.25 idx1 ordinal=14/80] — tok13 was 28:18, Bethel&#x27;s early rise: the ladder&#x27;s morning, then the switch&#x27;s. ma-zot ASITA li (6213 tok95) [VERIFIED: idx10 ordinal=95/860] — the DECEIVED-ACCUSER FORMULA (3:13 to the woman, 12:18 Pharaoh, 20:9 and 26:10 Avimelech) — now in JACOB&#x27;S mouth; the do-verb walks six consecutive tokens 92-97: 27:45 &quot;what you DID to him&quot; (the flee-reason) → 28:15 God&#x27;s &quot;until I have DONE&quot; → the feast (94) → the accusation (95) → &quot;it is not DONE so&quot; (96) → &quot;Jacob DID so&quot; (97). avadti (5647 tok15) [VERIFIED: idx14 ordinal=15/113]. rimitani (7411 tok1/4 DEBUT) [VERIFIED: idx17 morph=HVpp2ms/Sp1cs ordinal=1/4] — THE DECEIVE-VERB IS BORN IN THE DECEIVER&#x27;S MOUTH: the Torah&#x27;s only piel &quot;deceive&quot; (toks 2-4 = the qal &quot;threw&quot; of the Sea-song, Exod 15:1,21, + Num 15:30). 27:35&#x27;s &quot;your brother came BE-MIRMA&quot; is answered by &quot;why have you RIMITANI.&quot; The accusation is FACT; no SPECS motion. Depth 2. REGISTRY 0. TESTS 0.
+</td><td><span class="he">וְהִנֵּה־הִוא לֵאָה … וְלָמָּה רִמִּיתָנִי</span> · <i>ve-hine-hiv leah … ve-lama rimitani</i><br><span class="gloss">= and-hine-hiv leah and-lama rimitani</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Morning: Leah. The deceiver speaks the deceived&#x27;s formula; the deceive-verb debuts on him; depth 2.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_29_26 · Gen.29.26 · <span class='expr'>THE_CUSTOM_YOUNGER_NOT_BEFORE_FIRSTBORN</span></h3>
+<p><span class="he">וַיֹּאמֶר לָבָן לֹא־יֵעָשֶׂה כֵן בִּמְקוֹמֵנוּ לָתֵת הַצְּעִירָה לִפְנֵי הַבְּכִירָה</span> · <i>va-yomer lavan lo-yease khen bi-mqomenu la-tet ha-tzeirah lifne ha-bekhirah</i> · And Laban said: It is not done so in our place, to give the younger before the firstborn.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֣אמֶר לָבָ֔ן לֹא יֵעָשֶׂ֥ה כֵ֖ן בִּמְקוֹמֵ֑נוּ</span> · <i>va-yomer lavan lo yease khen bi-mqomenu</i> · it is not done so in our place (etnachta on bi-mqomenu) [VERIFIED: SNAPSHOT Gen.29.26 idx5 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">לָתֵ֥ת הַצְּעִירָ֖ה לִפְנֵ֥י הַבְּכִירָֽה</span> · <i>la-tet ha-tzeirah lifne ha-bekhirah</i> · to give the younger before the firstborn (verse-final ha-bekhirah) [VERIFIED: SNAPSHOT Gen.29.26 idx6-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(custom_tzeira_not_before_bekhira, t0) ∧ depth_SPECS=2</span><br><span class="gloss">= HOLDS(custom-tzeira-not-before-bekhira, t0) ∧ depth-SPECS=2</span><br>CHAPTER 27 INVERTED [care 12]. ha-tzeira (6810 tok6/8) [VERIFIED: SNAPSHOT Gen.29.26 idx7 ordinal=6/8] — the YOUNGER-word: toks 1-4 = LOT&#x27;S DAUGHTERS ×4; tok5 = 25:23 THE ORACLE (&quot;the elder shall serve the TZAIR&quot;) — the oracle&#x27;s own younger-word, here refused by custom. ha-bekhira (1067 tok5/5) [VERIFIED: idx9 ordinal=5/5] — the feminine FIRSTBORN-word CLOSES ITS CAREER: toks 1-4 = Lot&#x27;s firstborn daughter ×4; the word exists in the Torah only for Lot&#x27;s daughters and Laban&#x27;s law. Spoken to the man who went before HIS firstborn brother wearing his clothes. lo yease (6213 tok96) [VERIFIED: idx3 ordinal=96/860]. FACT speech — the custom is recorded, never adjudicated. Depth 2. REGISTRY 0. TESTS 0.
+</td><td><span class="he">הַצְּעִירָה לִפְנֵי הַבְּכִירָה</span> · <i>ha-tzeirah lifne ha-bekhirah</i><br><span class="gloss">= the-tzeirah lifne the-bekhirah</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">&quot;Not the younger before the firstborn&quot; — said to the younger who went first; depth 2.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_29_27 · Gen.29.27 · <span class='expr'>THE_FULFILL_WEEK_PUSH</span></h3>
+<p><span class="he">מַלֵּא שְׁבֻעַ זֹאת וְנִתְּנָה לְךָ גַּם־אֶת־זֹאת בַּעֲבֹדָה אֲשֶׁר תַּעֲבֹד עִמָּדִי עוֹד שֶׁבַע־שָׁנִים אֲחֵרוֹת</span> · <i>male shevua zot ve-nitnah lekha gam-et-zot ba-avodah asher taavod imadi od sheva-shanim acherot</i> · Fulfill the week of this one, and we will give you also the other, for the service that you shall serve with me — seven more years.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">מַלֵּ֖א שְׁבֻ֣עַ זֹ֑את</span> · <i>male shevua zot</i> · fulfill the week of this one (etnachta on zot) [VERIFIED: SNAPSHOT Gen.29.27 idx2 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְנִתְּנָ֨ה לְךָ֜ גַּם אֶת זֹ֗את בַּעֲבֹדָה֙ אֲשֶׁ֣ר תַּעֲבֹ֣ד עִמָּדִ֔י ע֖וֹד שֶֽׁבַע שָׁנִ֥ים אֲחֵרֽוֹת</span> · <i>ve-nitnah lekha gam et zot ba-avodah asher taavod imadi od sheva shanim acherot</i> · and this one too will be given, for seven more years of service (verse-final acherot) [VERIFIED: SNAPSHOT Gen.29.27 idx3-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(lavan, LET(male_shevua(yaaqov)))</span><br><span class="gloss">= DECLARE(lavan, LET(male-shevua(yaaqov)))</span><br>FULFILL THE WEEK [care 13]. male (4390 tok11/57 HVpv2ms) [VERIFIED: SNAPSHOT Gen.29.27 idx0 morph=HVpv2ms ordinal=11/57] = LET(male_shevua(yaaqov)), depth 3. shevua (7620 tok1/9 DEBUT) [VERIFIED: idx1 ordinal=1/9] — the WEEK-word debuts at the switched wedding (career → the Feast of Weeks). ba-avodah (5656 tok1/83 DEBUT) [VERIFIED: idx8 ordinal=1/83] — THE SERVICE-NOUN IS BORN HERE: its 83-token career becomes Egypt&#x27;s bondage and the tabernacle service — first named as marriage-labor. taavod (5647 tok16) [VERIFIED: idx10 ordinal=16/113] — future-condition content inside Laban&#x27;s speech, not a volitive. ve-nitna (5414 tok67 niphal) [VERIFIED: idx3 ordinal=67/647]. REGISTRY 0. TESTS 0.
+</td><td><span class="he">מַלֵּא שְׁבֻעַ זֹאת</span> · <i>male shevua zot</i><br><span class="gloss">= male shevua this</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Fulfill-the-week pushed; the service-noun and the week-word born; depth 3.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_29_28 · Gen.29.28 · <span class='expr'>THE_DOUBLE_POP_RACHEL_GIVEN</span></h3>
+<p><span class="he">וַיַּעַשׂ יַעֲקֹב כֵּן וַיְמַלֵּא שְׁבֻעַ זֹאת וַיִּתֶּן־לוֹ אֶת־רָחֵל בִּתּוֹ לוֹ לְאִשָּׁה</span> · <i>va-yaas yaaqov ken va-yemale shevua zot va-yiten-lo et-rachel bito lo le-ishah</i> · And Jacob did so, and fulfilled her week; and he gave him Rachel his daughter as his wife.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּ֤עַשׂ יַעֲקֹב֙ כֵּ֔ן וַיְמַלֵּ֖א שְׁבֻ֣עַ זֹ֑את</span> · <i>va-yaas yaaqov ken va-yemale shevua zot</i> · Jacob did so and fulfilled her week (etnachta on zot) [VERIFIED: SNAPSHOT Gen.29.28 idx5 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּתֶּן ל֛וֹ אֶת רָחֵ֥ל בִּתּ֖וֹ ל֥וֹ לְאִשָּֽׁה</span> · <i>va-yiten lo et rachel bito lo le-ishah</i> · and he gave him Rachel his daughter as wife (verse-final le-ishah) [VERIFIED: SNAPSHOT Gen.29.28 idx6-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">HOLDS(male_shevua(yaaqov), t1)</span><br><span class="gloss">= HOLDS(male-shevua(yaaqov), t1)</span><br>FIRST POP [care 14]. va-yemale (4390 tok12/57) [VERIFIED: SNAPSHOT Gen.29.28 idx3 morph=HC/Vpw3ms ordinal=12/57] — the fulfill-root&#x27;s three-token walk closes: malu yamai (29:21, statement) → male! (29:27, imperative) → va-yemale (compliance) — toks 10-11-12 CONSECUTIVE, push→pop latency one verse. POP male_shevua.
+</td><td><span class="he">וַיְמַלֵּא שְׁבֻעַ זֹאת</span> · <i>va-yemale shevua zot</i><br><span class="gloss">= and-yemale shevua this</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">HOLDS(hava_ishti(lavan), t1)</span><br><span class="gloss">= HOLDS(hava-ishti(lavan), t1)</span><br>SECOND POP [care 14]. va-yiten et-RACHEL (5414 tok68) [VERIFIED: idx6 ordinal=68/647] — THE CONTRACTED WIFE IS DELIVERED: the demand&#x27;s object (29:18 &quot;Rachel your younger daughter&quot;) finally arrives → POP hava_ishti. The 29:23 delivery could not pop it (object-mismatch); this one does — the contrast between the two deliveries IS the unit&#x27;s derivation. Give-verb toks 63-69: seven in-span. Depth 1. REGISTRY 0. TESTS 0.
+</td><td><span class="he">וַיִּתֶּן־לוֹ אֶת־רָחֵל בִּתּוֹ</span> · <i>va-yiten-lo et-rachel bito</i><br><span class="gloss">= and-yiten-not rachel bito</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Week fulfilled, Rachel given — both demands clear; depth 1.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_29_29 · Gen.29.29 · <span class='expr'>THE_SECOND_MAID_BILHAH</span></h3>
+<p><span class="he">וַיִּתֵּן לָבָן לְרָחֵל בִּתּוֹ אֶת־בִּלְהָה שִׁפְחָתוֹ לָהּ לְשִׁפְחָה</span> · <i>va-yiten lavan le-rachel bito et-bilhah shifchato lah le-shifchah</i> · And Laban gave to Rachel his daughter Bilhah his maid, as her maid.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּתֵּ֤ן לָבָן֙ לְרָחֵ֣ל בִּתּ֔וֹ אֶת בִּלְהָ֖ה שִׁפְחָת֑וֹ</span> · <i>va-yiten lavan le-rachel bito et bilhah shifchato</i> · Laban gave to Rachel his daughter Bilhah his maid (etnachta on shifchato) [VERIFIED: SNAPSHOT Gen.29.29 idx6 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">לָ֖הּ לְשִׁפְחָֽה</span> · <i>lah le-shifchah</i> · as her maid (verse-final le-shifchah) [VERIFIED: SNAPSHOT Gen.29.29 idx7-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(bilhah_given_to_rachel, t0) ∧ depth_SPECS=1</span><br><span class="gloss">= HOLDS(bilhah-given-to-rachel, t0) ∧ depth-SPECS=1</span><br>THE SECOND MAID [care 15]. Bilhah (1090 tok1/9 DEBUT) [VERIFIED: SNAPSHOT Gen.29.29 idx5 ordinal=1/9] — narrator introduction, no naming formula. shifcha (8198 toks 13-14) [VERIFIED: idx6 ordinal=13/31; idx8 ordinal=14/31]. va-yiten (5414 tok69) [VERIFIED: idx0 ordinal=69/647] — the give-economy&#x27;s seventh in-span token. Depth 1. REGISTRY 0. TESTS 0.
+</td><td><span class="he">אֶת־בִּלְהָה שִׁפְחָתוֹ</span> · <i>et-bilhah shifchato</i><br><span class="gloss">= bilhah shifchato</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Bilhah to Rachel; the giving-economy closes at seven; depth 1.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_29_30 · Gen.29.30 · <span class='expr'>THE_PREFERENCE_AND_SEVEN_MORE</span></h3>
+<p><span class="he">וַיָּבֹא גַּם אֶל־רָחֵל וַיֶּאֱהַב גַּם־אֶת־רָחֵל מִלֵּאָה וַיַּעֲבֹד עִמּוֹ עוֹד שֶׁבַע־שָׁנִים אֲחֵרוֹת</span> · <i>va-yavo gam el-rachel va-yeehav gam-et-rachel mi-leah va-yaavod imo od sheva-shanim acherot</i> · And he went in also to Rachel, and loved also Rachel more than Leah; and he served with him seven more years.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּבֹא֙ גַּ֣ם אֶל רָחֵ֔ל וַיֶּאֱהַ֥ב גַּֽם אֶת רָחֵ֖ל מִלֵּאָ֑ה</span> · <i>va-yavo gam el rachel va-yeehav gam et rachel mi-leah</i> · he went in also to Rachel and loved Rachel more than Leah (etnachta on mi-leah) [VERIFIED: SNAPSHOT Gen.29.30 idx8 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּעֲבֹ֣ד עִמּ֔וֹ ע֖וֹד שֶֽׁבַע שָׁנִ֥ים אֲחֵרֽוֹת</span> · <i>va-yaavod imo od sheva shanim acherot</i> · and served with him seven more years (verse-final acherot) [VERIFIED: SNAPSHOT Gen.29.30 idx9-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(rachel_loved_more_seven_more_years, t0) ∧ depth_SPECS=1</span><br><span class="gloss">= HOLDS(rachel-loved-more-seven-more-years, t0) ∧ depth-SPECS=1</span><br>THE PREFERENCE AND THE PRICE [care 16]. va-yavo (935 tok94) [VERIFIED: SNAPSHOT Gen.29.30 idx0 ordinal=94/619] — the go-in chain completes on the contracted wife. va-yeehav (157 tok10/41) [VERIFIED: idx4 ordinal=10/41] — &quot;loved Rachel MORE THAN LEAH&quot;: the preference-formula that will drive the womb arc (29:31 &quot;YHWH saw that Leah was hated&quot;). va-yaavod (5647 tok17) [VERIFIED: idx9 ordinal=17/113] od sheva shanim acherot — the serve-verb closes the unit as it opened it: six in-span tokens, fourteen years. UNIT END: SPECS depth 1 OPEN — LET(sheva_imadi(yaaqov)): the dwell-root (yashav) never returns in-span; the fourteen years answer it in life but never on the letter&#x27;s surface. SETTLED 3 (hagida_maskoret · hava_ishti · male_shevua). REGISTRY 0. TESTS 0 (instrument woke once, fenced). Onkelos BUFFER PENDING.
+</td><td><span class="he">וַיֶּאֱהַב גַּם־אֶת־רָחֵל מִלֵּאָה … עוֹד שֶׁבַע־שָׁנִים</span> · <i>va-yeehav gam-et-rachel mi-leah … od sheva-shanim</i><br><span class="gloss">= and-yeehav also-rachel from-leah od seven-shanim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Rachel loved more; seven more years; unit ends depth 1 OPEN, three settled. END OF UNIT.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S15</b></td><td>after STEP_Gn_29_15 — wage question pushed; depth 1</td><td>Because you are my brother, should you serve me for nothing? Tell me your wage.</td><td>LET(hagida_maskoret(yaaqov)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(hagida-maskoret(yaaqov)) pushed and OPEN; no test, no name.</span></td><td><span class="he">הַגִּ֥ידָה לִּ֖י מַה מַּשְׂכֻּרְתֶּֽךָ</span> · <i>hagida li ma maskurtekha</i><br><span class="gloss">= hagida to-me ma maskurtekha</span></td></tr>
+<tr><td><b>S16</b></td><td>after STEP_Gn_29_16 — two daughters named; depth still 1</td><td>Laban had two daughters: the elder Leah, the younger Rachel.</td><td>LET(hagida_maskoret(yaaqov)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(hagida-maskoret(yaaqov)) pushed and OPEN; no test, no name.</span></td><td><span class="he">שֵׁ֤ם הַגְּדֹלָה֙ לֵאָ֔ה</span> · <i>shem ha-gedolah leah</i><br><span class="gloss">= shem the-gedolah leah</span></td></tr>
+<tr><td><b>S17</b></td><td>after STEP_Gn_29_17 — eyes and form; depth still 1</td><td>Leah&#x27;s eyes were tender; Rachel was beautiful of form and appearance.</td><td>LET(hagida_maskoret(yaaqov)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(hagida-maskoret(yaaqov)) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְעֵינֵ֥י לֵאָ֖ה רַכּ֑וֹת</span> · <i>ve-ene leah rakot</i><br><span class="gloss">= and-ene leah rakot</span></td></tr>
+<tr><td><b>S18</b></td><td>after STEP_Gn_29_18 — the wage told; hagida POPS; SPECS empty</td><td>Jacob loved Rachel: I will serve you seven years for Rachel your younger daughter.</td><td>SPECS empty; no test, no name.</td><td><span class="he">אֶֽעֱבָדְךָ֙ שֶׁ֣בַע שָׁנִ֔ים</span> · <i>eevadkha sheva shanim</i><br><span class="gloss">= eevadkha seven shanim</span></td></tr>
+<tr><td><b>S19</b></td><td>after STEP_Gn_29_19 — dwell-with-me pushed; tov fenced; depth 1</td><td>Better my giving her to you than to another man — dwell with me.</td><td>LET(sheva_imadi(yaaqov)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(seven-with-me(yaaqov)) pushed and OPEN; no test, no name.</span></td><td><span class="he">שְׁבָ֖ה עִמָּדִֽי</span> · <i>shevah imadi</i><br><span class="gloss">= shevah with-me</span></td></tr>
+<tr><td><b>S20</b></td><td>after STEP_Gn_29_20 — seven years as a few days; depth still 1</td><td>Jacob served seven years; they were in his eyes as a few days in his love.</td><td>LET(sheva_imadi(yaaqov)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(seven-with-me(yaaqov)) pushed and OPEN; no test, no name.</span></td><td><span class="he">כְּיָמִ֣ים אֲחָדִ֔ים</span> · <i>ke-yamim achadim</i><br><span class="gloss">= seas achadim</span></td></tr>
+<tr><td><b>S21</b></td><td>after STEP_Gn_29_21 — give-my-wife pushed; depth 2</td><td>Give my wife, for my days are fulfilled, that I may go in to her.</td><td>LET(sheva_imadi(yaaqov)) pushed and OPEN; LET(hava_ishti(lavan)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(seven-with-me(yaaqov)) pushed and OPEN; LET(hava-ishti(lavan)) pushed and OPEN; no test, no name.</span></td><td><span class="he">הָבָ֣ה אֶת אִשְׁתִּ֔י</span> · <i>hava et ishti</i><br><span class="gloss">= hava et ishti</span></td></tr>
+<tr><td><b>S22</b></td><td>after STEP_Gn_29_22 — the feast; depth still 2</td><td>Laban gathered all the men of the place and made a feast.</td><td>LET(sheva_imadi(yaaqov)) pushed and OPEN; LET(hava_ishti(lavan)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(seven-with-me(yaaqov)) pushed and OPEN; LET(hava-ishti(lavan)) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיַּ֥עַשׂ מִשְׁתֶּֽה</span> · <i>va-yaas mishteh</i><br><span class="gloss">= and-yaas mishteh</span></td></tr>
+<tr><td><b>S23</b></td><td>after STEP_Gn_29_23 — Leah delivered; hava_ishti does NOT pop; depth still 2</td><td>In the evening he took Leah his daughter and brought her to him.</td><td>LET(sheva_imadi(yaaqov)) pushed and OPEN; LET(hava_ishti(lavan)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(seven-with-me(yaaqov)) pushed and OPEN; LET(hava-ishti(lavan)) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּקַּח֙ אֶת לֵאָ֣ה בִתּ֔וֹ</span> · <i>va-yiqach et leah vito</i><br><span class="gloss">= and-yiqach et leah vito</span></td></tr>
+<tr><td><b>S24</b></td><td>after STEP_Gn_29_24 — Zilpah given; depth still 2</td><td>Laban gave Zilpah his maid to Leah his daughter as a maid.</td><td>LET(sheva_imadi(yaaqov)) pushed and OPEN; LET(hava_ishti(lavan)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(seven-with-me(yaaqov)) pushed and OPEN; LET(hava-ishti(lavan)) pushed and OPEN; no test, no name.</span></td><td><span class="he">אֶת זִלְפָּ֖ה שִׁפְחָת֑וֹ</span> · <i>et zilpah shifchato</i><br><span class="gloss">= et zilpah shifchato</span></td></tr>
+<tr><td><b>S25</b></td><td>after STEP_Gn_29_25 — morning: behold Leah; the accusation; depth still 2</td><td>In the morning, behold she was Leah: what have you done to me? Why have you deceived me?</td><td>LET(sheva_imadi(yaaqov)) pushed and OPEN; LET(hava_ishti(lavan)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(seven-with-me(yaaqov)) pushed and OPEN; LET(hava-ishti(lavan)) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהִנֵּה הִ֖וא לֵאָ֑ה</span> · <i>ve-hine hiv leah</i><br><span class="gloss">= and-hine hiv leah</span></td></tr>
+<tr><td><b>S26</b></td><td>after STEP_Gn_29_26 — the custom; depth still 2</td><td>It is not done so in our place, to give the younger before the firstborn.</td><td>LET(sheva_imadi(yaaqov)) pushed and OPEN; LET(hava_ishti(lavan)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(seven-with-me(yaaqov)) pushed and OPEN; LET(hava-ishti(lavan)) pushed and OPEN; no test, no name.</span></td><td><span class="he">הַצְּעִירָ֖ה לִפְנֵ֥י הַבְּכִירָֽה</span> · <i>ha-tzeirah lifne ha-bekhirah</i><br><span class="gloss">= the-tzeirah lifne the-bekhirah</span></td></tr>
+<tr><td><b>S27</b></td><td>after STEP_Gn_29_27 — fulfill-the-week pushed; depth 3</td><td>Fulfill the week of this one, and we will give you also the other for seven more years.</td><td>LET(sheva_imadi(yaaqov)) pushed and OPEN; LET(hava_ishti(lavan)) pushed and OPEN; LET(male_shevua(yaaqov)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(seven-with-me(yaaqov)) pushed and OPEN; LET(hava-ishti(lavan)) pushed and OPEN; LET(male-shevua(yaaqov)) pushed and OPEN; no test, no name.</span></td><td><span class="he">מַלֵּ֖א שְׁבֻ֣עַ זֹ֑את</span> · <i>male shevua zot</i><br><span class="gloss">= male shevua this</span></td></tr>
+<tr><td><b>S28</b></td><td>after STEP_Gn_29_28 — week fulfilled, Rachel given: DOUBLE POP; depth 1</td><td>Jacob did so and fulfilled her week; and he gave him Rachel his daughter as wife.</td><td>LET(sheva_imadi(yaaqov)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(seven-with-me(yaaqov)) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְמַלֵּ֖א שְׁבֻ֣עַ זֹ֑את</span> · <i>va-yemale shevua zot</i><br><span class="gloss">= and-yemale shevua this</span></td></tr>
+<tr><td><b>S29</b></td><td>after STEP_Gn_29_29 — Bilhah given; depth still 1</td><td>Laban gave Bilhah his maid to Rachel his daughter as her maid.</td><td>LET(sheva_imadi(yaaqov)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(seven-with-me(yaaqov)) pushed and OPEN; no test, no name.</span></td><td><span class="he">אֶת בִּלְהָ֖ה שִׁפְחָת֑וֹ</span> · <i>et bilhah shifchato</i><br><span class="gloss">= et bilhah shifchato</span></td></tr>
+<tr><td><b>S30</b></td><td>after STEP_Gn_29_30 — Rachel loved more; seven more years; unit end depth 1</td><td>He went in also to Rachel and loved Rachel more than Leah, and served seven more years.</td><td>LET(sheva_imadi(yaaqov)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(seven-with-me(yaaqov)) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֶּאֱהַ֥ב גַּֽם אֶת רָחֵ֖ל מִלֵּאָ֑ה</span> · <i>va-yeehav gam et rachel mi-leah</i><br><span class="gloss">= and-yeehav also et rachel from-leah</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_50_wage_seven_years_switched_bride — The wage, the seven years, and the switched bride (29:15-30) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S15 — after STEP_Gn_29_15 — wage question pushed; depth 1
+    הַגִּ֥ידָה לִּ֖י מַה מַּשְׂכֻּרְתֶּֽךָ (hagida li ma maskurtekha)
+    PASS  LET(hagida_maskoret(yaaqov)) pushed and OPEN  (queue=[&#x27;hagida_maskoret(yaaqov)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S16 — after STEP_Gn_29_16 — two daughters named; depth still 1
+    שֵׁ֤ם הַגְּדֹלָה֙ לֵאָ֔ה (shem ha-gedolah leah)
+    PASS  LET(hagida_maskoret(yaaqov)) pushed and OPEN  (queue=[&#x27;hagida_maskoret(yaaqov)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S17 — after STEP_Gn_29_17 — eyes and form; depth still 1
+    וְעֵינֵ֥י לֵאָ֖ה רַכּ֑וֹת (ve-ene leah rakot)
+    PASS  LET(hagida_maskoret(yaaqov)) pushed and OPEN  (queue=[&#x27;hagida_maskoret(yaaqov)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S18 — after STEP_Gn_29_18 — the wage told; hagida POPS; SPECS empty
+    אֶֽעֱבָדְךָ֙ שֶׁ֣בַע שָׁנִ֔ים (eevadkha sheva shanim)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S19 — after STEP_Gn_29_19 — dwell-with-me pushed; tov fenced; depth 1
+    שְׁבָ֖ה עִמָּדִֽי (shevah imadi)
+    PASS  LET(sheva_imadi(yaaqov)) pushed and OPEN  (queue=[&#x27;sheva_imadi(yaaqov)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S20 — after STEP_Gn_29_20 — seven years as a few days; depth still 1
+    כְּיָמִ֣ים אֲחָדִ֔ים (ke-yamim achadim)
+    PASS  LET(sheva_imadi(yaaqov)) pushed and OPEN  (queue=[&#x27;sheva_imadi(yaaqov)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S21 — after STEP_Gn_29_21 — give-my-wife pushed; depth 2
+    הָבָ֣ה אֶת אִשְׁתִּ֔י (hava et ishti)
+    PASS  LET(sheva_imadi(yaaqov)) pushed and OPEN  (queue=[&#x27;sheva_imadi(yaaqov)&#x27;, &#x27;hava_ishti(lavan)&#x27;])
+    PASS  LET(hava_ishti(lavan)) pushed and OPEN  (queue=[&#x27;sheva_imadi(yaaqov)&#x27;, &#x27;hava_ishti(lavan)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S22 — after STEP_Gn_29_22 — the feast; depth still 2
+    וַיַּ֥עַשׂ מִשְׁתֶּֽה (va-yaas mishteh)
+    PASS  LET(sheva_imadi(yaaqov)) pushed and OPEN  (queue=[&#x27;sheva_imadi(yaaqov)&#x27;, &#x27;hava_ishti(lavan)&#x27;])
+    PASS  LET(hava_ishti(lavan)) pushed and OPEN  (queue=[&#x27;sheva_imadi(yaaqov)&#x27;, &#x27;hava_ishti(lavan)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S23 — after STEP_Gn_29_23 — Leah delivered; hava_ishti does NOT pop; depth still 2
+    וַיִּקַּח֙ אֶת לֵאָ֣ה בִתּ֔וֹ (va-yiqach et leah vito)
+    PASS  LET(sheva_imadi(yaaqov)) pushed and OPEN  (queue=[&#x27;sheva_imadi(yaaqov)&#x27;, &#x27;hava_ishti(lavan)&#x27;])
+    PASS  LET(hava_ishti(lavan)) pushed and OPEN  (queue=[&#x27;sheva_imadi(yaaqov)&#x27;, &#x27;hava_ishti(lavan)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S24 — after STEP_Gn_29_24 — Zilpah given; depth still 2
+    אֶת זִלְפָּ֖ה שִׁפְחָת֑וֹ (et zilpah shifchato)
+    PASS  LET(sheva_imadi(yaaqov)) pushed and OPEN  (queue=[&#x27;sheva_imadi(yaaqov)&#x27;, &#x27;hava_ishti(lavan)&#x27;])
+    PASS  LET(hava_ishti(lavan)) pushed and OPEN  (queue=[&#x27;sheva_imadi(yaaqov)&#x27;, &#x27;hava_ishti(lavan)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S25 — after STEP_Gn_29_25 — morning: behold Leah; the accusation; depth still 2
+    וְהִנֵּה הִ֖וא לֵאָ֑ה (ve-hine hiv leah)
+    PASS  LET(sheva_imadi(yaaqov)) pushed and OPEN  (queue=[&#x27;sheva_imadi(yaaqov)&#x27;, &#x27;hava_ishti(lavan)&#x27;])
+    PASS  LET(hava_ishti(lavan)) pushed and OPEN  (queue=[&#x27;sheva_imadi(yaaqov)&#x27;, &#x27;hava_ishti(lavan)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S26 — after STEP_Gn_29_26 — the custom; depth still 2
+    הַצְּעִירָ֖ה לִפְנֵ֥י הַבְּכִירָֽה (ha-tzeirah lifne ha-bekhirah)
+    PASS  LET(sheva_imadi(yaaqov)) pushed and OPEN  (queue=[&#x27;sheva_imadi(yaaqov)&#x27;, &#x27;hava_ishti(lavan)&#x27;])
+    PASS  LET(hava_ishti(lavan)) pushed and OPEN  (queue=[&#x27;sheva_imadi(yaaqov)&#x27;, &#x27;hava_ishti(lavan)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S27 — after STEP_Gn_29_27 — fulfill-the-week pushed; depth 3
+    מַלֵּ֖א שְׁבֻ֣עַ זֹ֑את (male shevua zot)
+    PASS  LET(sheva_imadi(yaaqov)) pushed and OPEN  (queue=[&#x27;sheva_imadi(yaaqov)&#x27;, &#x27;hava_ishti(lavan)&#x27;, &#x27;male_shevua(yaaqov)&#x27;])
+    PASS  LET(hava_ishti(lavan)) pushed and OPEN  (queue=[&#x27;sheva_imadi(yaaqov)&#x27;, &#x27;hava_ishti(lavan)&#x27;, &#x27;male_shevua(yaaqov)&#x27;])
+    PASS  LET(male_shevua(yaaqov)) pushed and OPEN  (queue=[&#x27;sheva_imadi(yaaqov)&#x27;, &#x27;hava_ishti(lavan)&#x27;, &#x27;male_shevua(yaaqov)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S28 — after STEP_Gn_29_28 — week fulfilled, Rachel given: DOUBLE POP; depth 1
+    וַיְמַלֵּ֖א שְׁבֻ֣עַ זֹ֑את (va-yemale shevua zot)
+    PASS  LET(sheva_imadi(yaaqov)) pushed and OPEN  (queue=[&#x27;sheva_imadi(yaaqov)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S29 — after STEP_Gn_29_29 — Bilhah given; depth still 1
+    אֶת בִּלְהָ֖ה שִׁפְחָת֑וֹ (et bilhah shifchato)
+    PASS  LET(sheva_imadi(yaaqov)) pushed and OPEN  (queue=[&#x27;sheva_imadi(yaaqov)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S30 — after STEP_Gn_29_30 — Rachel loved more; seven more years; unit end depth 1
+    וַיֶּאֱהַ֥ב גַּֽם אֶת רָחֵ֖ל מִלֵּאָ֑ה (va-yeehav gam et rachel mi-leah)
+    PASS  LET(sheva_imadi(yaaqov)) pushed and OPEN  (queue=[&#x27;sheva_imadi(yaaqov)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_50_wage_seven_years_switched_bride.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_50_wage_seven_years_switched_bride — 29:15-30
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_50_wage_seven_years_switched_bride.yaml) is
+# CANONICAL (Pre-Code); this file is a derived, runnable rendering. Do not
+# edit — regenerate. The assertion block at the bottom is baked from the
+# Stage D interpreter&#x27;s actual final state: running this file re-proves the
+# unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;The wage, the seven years, and the switched bride (29:15-30)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_50_wage_seven_years_switched_bride&quot;)
+
+# -------------------------- Gen.29.15 · THE_WAGE_QUESTION_PUSH -------------
+# וַיֹּאמֶר לָבָן לְיַעֲקֹב הֲכִי־אָחִי אַתָּה וַעֲבַדְתַּנִי חִנָּם
+# הַגִּידָה לִּי מַה־מַּשְׂכֻּרְתֶּךָ
+# &quot;[EN-AID] And Laban said to Jacob: Because you are my brother, should you
+# serve me for nothing? Tell me, what is your wage?&quot;
+m.step(&quot;Gen.29.15&quot;)
+# ‹הַגִּידָה לִּי מַה־מַּשְׂכֻּרְתֶּךָ› (“tell-ward to-me/my what wages-
+# you/your”) — Laban speaks a demand — LET: hagida-maskoret(Jacob)
+m.declare(&quot;lavan&quot;, &quot;LET&quot;,
+          &quot;hagida_maskoret(yaaqov)&quot;)
+
+# -------------------------- Gen.29.16 · THE_TWO_DAUGHTERS ------------------
+# וּלְלָבָן שְׁתֵּי בָנוֹת שֵׁם הַגְּדֹלָה לֵאָה וְשֵׁם הַקְּטַנָּה רָחֵל
+# &quot;[EN-AID] And Laban had two daughters: the name of the elder was Leah, and
+# the name of the younger was Rachel.&quot;
+m.step(&quot;Gen.29.16&quot;)
+# ‹שֵׁם הַגְּדֹלָה לֵאָה וְשֵׁם הַקְּטַנָּה רָחֵל› (“name the-great Leah
+# and-name the-abbreviated Rachel”) — fact holds: two-daughters-great-leah-
+# abbreviated-Rachel
+m.fact(&quot;two_daughters_gedola_leah_qetana_rachel&quot;)
+
+# -------------------------- Gen.29.17 · THE_EYES_AND_THE_FORM --------------
+# וְעֵינֵי לֵאָה רַכּוֹת וְרָחֵל הָיְתָה יְפַת־תֹּאַר וִיפַת מַרְאֶה
+# &quot;[EN-AID] And Leah&#x27;s eyes were tender; but Rachel was beautiful of form
+# and beautiful of appearance.&quot;
+m.step(&quot;Gen.29.17&quot;)
+# ‹וְעֵינֵי לֵאָה רַכּוֹת … יְפַת־תֹּאַר› (“and-eye Leah tender … beautiful
+# outline”) — fact holds: leah-eyes-tender-Rachel-beautiful
+m.fact(&quot;leah_eyes_tender_rachel_beautiful&quot;)
+
+# -------------------------- Gen.29.18 · THE_WAGE_TOLD_POP ------------------
+# וַיֶּאֱהַב יַעֲקֹב אֶת־רָחֵל וַיֹּאמֶר אֶעֱבָדְךָ שֶׁבַע שָׁנִים בְּרָחֵל
+# בִּתְּךָ הַקְּטַנָּה
+# &quot;[EN-AID] And Jacob loved Rachel; and he said: I will serve you seven
+# years for Rachel your younger daughter.&quot;
+m.step(&quot;Gen.29.18&quot;)
+# ‹אֶעֱבָדְךָ שֶׁבַע שָׁנִים בְּרָחֵל› (“work/serve-you/your seven years in-
+# Rachel”) — demand settled (popped from the queue): hagida-maskoret(Jacob)
+m.result(&quot;hagida_maskoret(yaaqov)&quot;, tmark=&quot;t1&quot;)
+# ‹וַיֶּאֱהַב יַעֲקֹב אֶת־רָחֵל› (“and-have-affection-for Jacob obj-marker
+# Rachel”) — fact holds: Jacob-loves-Rachel-contract-names-her
+m.fact(&quot;yaaqov_loves_rachel_contract_names_her&quot;)
+
+# -------------------------- Gen.29.19 · THE_FENCED_TOV_AND_DWELL_PUSH ------
+# וַיֹּאמֶר לָבָן טוֹב תִּתִּי אֹתָהּ לָךְ מִתִּתִּי אֹתָהּ לְאִישׁ אַחֵר
+# שְׁבָה עִמָּדִי
+# &quot;[EN-AID] And Laban said: Better that I give her to you than that I give
+# her to another man — dwell with me.&quot;
+m.step(&quot;Gen.29.19&quot;)
+# ‹שְׁבָה עִמָּדִי› (“dwell/sit-ward along-with-me/my”) — Laban speaks a
+# demand — LET: seven-with-me(Jacob)
+m.declare(&quot;lavan&quot;, &quot;LET&quot;,
+          &quot;sheva_imadi(yaaqov)&quot;)
+# ‹טוֹב תִּתִּי אֹתָהּ לָךְ› (“good set-me/my obj-marker-her/its to-
+# you/your”) — fact holds: good-comparative-fenced-in-speech
+m.fact(&quot;tov_comparative_fenced_in_speech&quot;)
+
+# -------------------------- Gen.29.20 · THE_SEVEN_YEARS_AS_FEW_DAYS --------
+# וַיַּעֲבֹד יַעֲקֹב בְּרָחֵל שֶׁבַע שָׁנִים וַיִּהְיוּ בְעֵינָיו כְּיָמִים
+# אֲחָדִים בְּאַהֲבָתוֹ אֹתָהּ
+# &quot;[EN-AID] And Jacob served seven years for Rachel; and they were in his
+# eyes as a few days, in his love for her.&quot;
+m.step(&quot;Gen.29.20&quot;)
+# ‹וַיַּעֲבֹד … כְּיָמִים אֲחָדִים› (“and-work/serve … like-day one”) — fact
+# holds: seven-years-served-as-few-days
+m.fact(&quot;seven_years_served_as_few_days&quot;)
+
+# -------------------------- Gen.29.21 · THE_BABEL_IMPERATIVE_GIVE_MY_WIFE --
+# וַיֹּאמֶר יַעֲקֹב אֶל־לָבָן הָבָה אֶת־אִשְׁתִּי כִּי מָלְאוּ יָמָי
+# וְאָבוֹאָה אֵלֶיהָ
+# &quot;[EN-AID] And Jacob said to Laban: Give my wife, for my days are
+# fulfilled, that I may go in to her.&quot;
+m.step(&quot;Gen.29.21&quot;)
+# ‹הָבָה אֶת־אִשְׁתִּי› (“give-ward obj-marker woman-me/my”) — Jacob speaks
+# a demand — LET: hava-ishti(Laban)
+m.declare(&quot;yaaqov&quot;, &quot;LET&quot;,
+          &quot;hava_ishti(lavan)&quot;)
+
+# -------------------------- Gen.29.22 · THE_FEAST_OF_THE_PLACE -------------
+# וַיֶּאֱסֹף לָבָן אֶת־כָּל־אַנְשֵׁי הַמָּקוֹם וַיַּעַשׂ מִשְׁתֶּה
+# &quot;[EN-AID] And Laban gathered all the men of the place, and made a feast.&quot;
+m.step(&quot;Gen.29.22&quot;)
+# ‹וַיַּעַשׂ מִשְׁתֶּה› (“and-make drink”) — fact holds: feast-gathered-men-
+# fowl-the-place
+m.fact(&quot;feast_gathered_men_of_the_place&quot;)
+
+# -------------------------- Gen.29.23 · THE_SWITCH_OBJECT_MISMATCH_NO_POP --
+# וַיְהִי בָעֶרֶב וַיִּקַּח אֶת־לֵאָה בִתּוֹ וַיָּבֵא אֹתָהּ אֵלָיו וַיָּבֹא
+# אֵלֶיהָ
+# &quot;[EN-AID] And it was in the evening: he took Leah his daughter and brought
+# her to him; and he went in to her.&quot;
+m.step(&quot;Gen.29.23&quot;)
+# ‹וַיִּקַּח אֶת־לֵאָה … וַיָּבֹא אֵלֶיהָ› (“and-take obj-marker Leah … and-
+# come/bring to-her/its”) — fact holds: leah-delivered-object-mismatch-no-
+# pop
+m.fact(&quot;leah_delivered_object_mismatch_no_pop&quot;)
+
+# -------------------------- Gen.29.24 · THE_FIRST_MAID_ZILPAH --------------
+# וַיִּתֵּן לָבָן לָהּ אֶת־זִלְפָּה שִׁפְחָתוֹ לְלֵאָה בִתּוֹ שִׁפְחָה
+# &quot;[EN-AID] And Laban gave her Zilpah his maid — to Leah his daughter as a
+# maid.&quot;
+m.step(&quot;Gen.29.24&quot;)
+# ‹אֶת־זִלְפָּה שִׁפְחָתוֹ› (“obj-marker Zilpah female-slave-him/its”) —
+# fact holds: zilpah-given-to-leah
+m.fact(&quot;zilpah_given_to_leah&quot;)
+
+# -------------------------- Gen.29.25 · THE_MORNING_BEHOLD_LEAH ------------
+# וַיְהִי בַבֹּקֶר וְהִנֵּה־הִוא לֵאָה וַיֹּאמֶר אֶל־לָבָן מַה־זֹּאת
+# עָשִׂיתָ לִּי הֲלֹא בְרָחֵל עָבַדְתִּי עִמָּךְ וְלָמָּה רִמִּיתָנִי
+# &quot;[EN-AID] And it was in the morning — behold, she was Leah. And he said to
+# Laban: What is this you have done to me? Did I not serve with you for
+# Rachel? Why have you deceived me?&quot;
+m.step(&quot;Gen.29.25&quot;)
+# ‹וְהִנֵּה־הִוא לֵאָה … וְלָמָּה רִמִּיתָנִי› (“and-behold he/it Leah …
+# and-to-what hurl-me/my”) — fact holds: morning-revelation-accusation-
+# rimitani
+m.fact(&quot;morning_revelation_accusation_rimitani&quot;)
+
+# -------------------------- Gen.29.26 · THE_CUSTOM_YOUNGER_NOT_BEFORE_FIRSTBORN -
+# וַיֹּאמֶר לָבָן לֹא־יֵעָשֶׂה כֵן בִּמְקוֹמֵנוּ לָתֵת הַצְּעִירָה לִפְנֵי
+# הַבְּכִירָה
+# &quot;[EN-AID] And Laban said: It is not done so in our place, to give the
+# younger before the firstborn.&quot;
+m.step(&quot;Gen.29.26&quot;)
+# ‹הַצְּעִירָה לִפְנֵי הַבְּכִירָה› (“the-little to-face the-eldest-
+# daughter”) — fact holds: custom-little-not-before-eldest-daughter
+m.fact(&quot;custom_tzeira_not_before_bekhira&quot;)
+
+# -------------------------- Gen.29.27 · THE_FULFILL_WEEK_PUSH --------------
+# מַלֵּא שְׁבֻעַ זֹאת וְנִתְּנָה לְךָ גַּם־אֶת־זֹאת בַּעֲבֹדָה אֲשֶׁר
+# תַּעֲבֹד עִמָּדִי עוֹד שֶׁבַע־שָׁנִים אֲחֵרוֹת
+# &quot;[EN-AID] Fulfill the week of this one, and we will give you also the
+# other, for the service that you shall serve with me — seven more years.&quot;
+m.step(&quot;Gen.29.27&quot;)
+# ‹מַלֵּא שְׁבֻעַ זֹאת› (“fill sevened this”) — Laban speaks a demand — LET:
+# fill-sevened(Jacob)
+m.declare(&quot;lavan&quot;, &quot;LET&quot;,
+          &quot;male_shevua(yaaqov)&quot;)
+
+# -------------------------- Gen.29.28 · THE_DOUBLE_POP_RACHEL_GIVEN --------
+# וַיַּעַשׂ יַעֲקֹב כֵּן וַיְמַלֵּא שְׁבֻעַ זֹאת וַיִּתֶּן־לוֹ אֶת־רָחֵל
+# בִּתּוֹ לוֹ לְאִשָּׁה
+# &quot;[EN-AID] And Jacob did so, and fulfilled her week; and he gave him Rachel
+# his daughter as his wife.&quot;
+m.step(&quot;Gen.29.28&quot;)
+# ‹וַיְמַלֵּא שְׁבֻעַ זֹאת› (“and-fill sevened this”) — demand settled
+# (popped from the queue): fill-sevened(Jacob)
+m.result(&quot;male_shevua(yaaqov)&quot;, tmark=&quot;t1&quot;)
+# ‹וַיִּתֶּן־לוֹ אֶת־רָחֵל בִּתּוֹ› (“and-set to-him/its obj-marker Rachel
+# daughter-him/its”) — demand settled (popped from the queue): hava-
+# ishti(Laban)
+m.result(&quot;hava_ishti(lavan)&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Gen.29.29 · THE_SECOND_MAID_BILHAH -------------
+# וַיִּתֵּן לָבָן לְרָחֵל בִּתּוֹ אֶת־בִּלְהָה שִׁפְחָתוֹ לָהּ לְשִׁפְחָה
+# &quot;[EN-AID] And Laban gave to Rachel his daughter Bilhah his maid, as her
+# maid.&quot;
+m.step(&quot;Gen.29.29&quot;)
+# ‹אֶת־בִּלְהָה שִׁפְחָתוֹ› (“obj-marker Bilhah female-slave-him/its”) —
+# fact holds: bilhah-given-to-Rachel
+m.fact(&quot;bilhah_given_to_rachel&quot;)
+
+# -------------------------- Gen.29.30 · THE_PREFERENCE_AND_SEVEN_MORE ------
+# וַיָּבֹא גַּם אֶל־רָחֵל וַיֶּאֱהַב גַּם־אֶת־רָחֵל מִלֵּאָה וַיַּעֲבֹד
+# עִמּוֹ עוֹד שֶׁבַע־שָׁנִים אֲחֵרוֹת
+# &quot;[EN-AID] And he went in also to Rachel, and loved also Rachel more than
+# Leah; and he served with him seven more years.&quot;
+m.step(&quot;Gen.29.30&quot;)
+# ‹וַיֶּאֱהַב גַּם־אֶת־רָחֵל מִלֵּאָה … עוֹד שֶׁבַע־שָׁנִים› (“and-have-
+# affection-for also obj-marker Rachel from-Leah … still/again seven years”)
+# — fact holds: Rachel-loved-more-seven-more-years
+m.fact(&quot;rachel_loved_more_seven_more_years&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;sheva_imadi(yaaqov)&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 4
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;two_daughters_gedola_leah_qetana_rachel&#x27;, &#x27;leah_eyes_tender_rachel_beautiful&#x27;, &#x27;yaaqov_loves_rachel_contract_names_her&#x27;, &#x27;tov_comparative_fenced_in_speech&#x27;, &#x27;seven_years_served_as_few_days&#x27;, &#x27;feast_gathered_men_of_the_place&#x27;, &#x27;leah_delivered_object_mismatch_no_pop&#x27;, &#x27;zilpah_given_to_leah&#x27;, &#x27;morning_revelation_accusation_rimitani&#x27;, &#x27;custom_tzeira_not_before_bekhira&#x27;, &#x27;bilhah_given_to_rachel&#x27;, &#x27;rachel_loved_more_seven_more_years&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 7
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

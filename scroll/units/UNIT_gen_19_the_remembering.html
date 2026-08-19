@@ -1,0 +1,1081 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_19_the_remembering — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_19_the_remembering?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The remembering: God remembers Noach, the waters go home, the earth dries (8:1-14) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_19_the_remembering</b> · Genesis 8:1-14 · derive logic_derived_v1 · phase C-19</div>
+<div class="meta"><a href="../#Gen/8/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">וַיִּזְכֹּר אֱלֹהִים אֶת־נֹחַ — יָבְשָׁה הָאָרֶץ</span> · <i>va-yizkor Elohim et-Noach — yavshah ha-aretz</i> · &#x27;and God remembered Noach&#x27; — &#x27;the earth was dry&#x27;</p>
+<div class="note">Derived 2026-08-01 by the persistent derivation agent (post-trial; freeze-after-review by the main loop — no agent freeze). REVIEW PASSED and FROZEN 2026-08-01 by the main loop: all prose read; load-bearing censuses independently re-verified against the raw snapshot (remember-verb debut, the rest-verb&#x27;s sibling-lemma split, the hapax trio, the evening refrain count, the dust-to- dust pair, the dropped totalizers, the manoach clause-match, the name/speech/imperative zero-scans); glossing airtight; [OPEN] discipline intact; nothing invented. First unit derived under the PIPELINE + DEBUT-MAP process: the corpus survey was COMPLETE (68 flagged lemmas in 192 tokens, staged before the seed) rather than curated. Calibrated coverage (charter 4.1): Onkelos read Tier-A at derive time (14 sequential fetches, Data/FETCHLOG.md — the buffer renders the remembering as a mindful STATE, levels Elohim to the LORD-name, gives the waters the rest-verb early, renames Ararat to Kardu, merges the sky-lattice and ark-window words, and levels the two wait-verbs; it preserves the hapax stop-up verb, the abate-root, the appearance-passive, and the span&#x27;s speechlessness); trees from the DB&#x27;s stored tree_json. FIFTEENTH PROSPECTIVE MIDDOT RUN (logic/middot_scan/WATCHLIST_gen19_prospective_2026-08-01.md): cache holds ZERO sources for Gen 8:1-14 — thirteenth tripwire in a row. INTERPRETER: ZERO extensions — tenth extension-free derivation candidate in a row.</div>
+<div class="note">Logic-derived v1: v3 ta&#x27;amim trees (from DB tree_json) -&gt; leaf role frames from OSHB morph -&gt; operator lines citing TIR rules -&gt; machine-state scenarios. Machine tokens apostrophe-free and underscore-joined (shnat_601_chodesh_1_yom_1, lo_matzah_ha_yonah_manoach).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (retro, oral-first era; manifest logic/oral_audit/manifests/gen_19_the_remembering_claims.json — 10 VERIFIED, 0 FAILED, 1 UNCHECKABLE; record logic/oral_audit/AUDIT_gen_19_2026-08-08.md). CROWNS (chain-attested, DB-verified): (1) G19-01 ויכלא (&quot;and it was RESTRAINED&quot;) — exactly two Torah tokens: the rain restrained (8:2) and the Tabernacle donors restrained from bringing (Exod 36:6) — &quot;by Israel&#x27;s merit the rain ceased&quot; (Kitzur Baal HaTurim). (2) G19-03 ותנח (&quot;and it RESTED&quot;) — the ark on Ararat (8:4) and the spirit on Eldad and Medad (Num 11:26): &quot;the holy spirit rested on those left in the ark&quot; (Kitzur); census locks the third consonant-twin (the garment laid, 39:16 — another stem, outside the pair). (3) G19-07 טרף בפיה (&quot;a torn-off [leaf] in her mouth,&quot; 8:11) — a recorded grammatical DISPUTE: Radak rules qamatz (the long a-vowel) in both syllables — an adjective, against Rashi&#x27;s verb reading; SNAPSHOT points both vowels qamatz: the Radak camp, arbitrated at the vowels. (4) G19-09/10 the first-camp package at the drying date (8:13): telisha gedola (&quot;detached,&quot; the disjunctive sign) on ויהי AND dagesh (doubling dot) in the bet of באחת — the accent-to-dagesh pairing Minchat Shai reports as a package, locked in two columns; the rival camp (small sign + soft bet) recorded. (5) G19-02/06 dagesh in the rain-word&#x27;s gimel (8:2); cholam (the o-vowel) in the drying-word&#x27;s bet (8:7). INHERITANCE EDGES (attested; Torah side verified, inheritor wording pending the Prophets/Writings instrument): Gen 8:12 → Psalms 55:7 (&quot;wings like the dove — I would fly away and REST&quot;); G19-04 אררט (&quot;Ararat&quot;) — the Torah&#x27;s only token → II Kings 19:37 / Isaiah 37:38 (Sennacherib&#x27;s assassins; the ark-plank homily); G19-05 ושוב (&quot;and returning&quot;) — the waters (8:3) and the raven (8:7), the Torah&#x27;s only two → Ezekiel 1:14 (the creatures running and returning; the fire-river homily); G19-08 טרף → Hosea 6:1 (&quot;He has TORN and He will heal us&quot; — the breaking that signals mercy). DISCREPANCIES: none (the 8:20 altar-verse plene deviation stays banked for gen_20). INSTRUMENT GAP: G19-11 galgal (&quot;wheel&quot; accent) on הקלו (&quot;had the waters lightened,&quot; 8:8) vs SNAPSHOT&#x27;s munach (a plain conjunctive accent) — galgal variant class, recurrence #3. READINGS (named-only, unclaimed): the holy-spirit reading on the resting (Kitzur 8:4); the fire-river homily on the going and returning (Kitzur 8:3); the ark-plank idol of Sennacherib&#x27;s line (Kitzur 8:4, the Sanhedrin 96a tradition); the double-pashta manuscript habit on ויסר נח (&quot;and Noah removed [the cover],&quot; 8:13 — sign-count not instrumented).</div>
+<div class="meta">confidence: structure tested; operator readings tested-per-TIR; intent hypothesis</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>The remembering (8:1-14): from the remember-verb&#x27;s debut to the dry earth — 8:15 opens the exit-command (the first divine SPEECH since 7:4), the next unit&#x27;s seam. Inside: the remembering, the wind, the shut-mirror, the waters&#x27; commute, the resting, the appearing tops, the window, the raven, the dove three times on seven-day rhythms, the olive leaf at evening, the two waits, new year&#x27;s day with the cover off, and the second dry-date. The unit ends dry and SEALED-IN: the earth is ready and nobody has been told to leave.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Hebrew source + trees</td><td>All 14 verses from DB tree_json (rule set v3, unique, pure binary; ascii rendered 2026-08-01). Tree facts: 8:1 [the remembering of Noach and every animal | the wind passes, the waters subside]; 8:2 [fountains and windows stopped | the rain restrained]; 8:3 [the waters return, going-and-returning | they diminish at the 150-day mark]; 8:4 [the ark rests, month 7 day 17 | on the mountains of Ararat]; 8:5 [the waters going-and-diminishing to month 10 | day 1: the tops appear]; 8:6 [the end of forty days | Noach opens the window he made]; 8:7 [the raven sent | going-out-and-returning until the drying]; 8:8 [the dove sent | to see whether the waters lightened]; 8:9 [no resting-place, the return, waters on all the earth | the hand: sent, took, brought her in]; 8:10 [the first wait | the second sending]; 8:11 [the dove at evening-time, the leaf | and Noach KNEW]; 8:12 [the second wait | the third sending — and the verse ends on the lone word OD (&#x27;any more&#x27;)]; 8:13 [year 601, month 1, day 1: the waters dried | the cover off, and behold — the ground&#x27;s face dried]; 8:14 [month 2 day 27 | THE EARTH WAS DRY — a two-word verse-end arm closing the unit].</td><td>tested</td></tr>
+<tr><td><b>C</b></td><td>Segment structure</td><td>Verb morphology (#IMPOSED OSHB, DB-verified 2026-08-01); corpus survey COMPLETE via the debut map (68 flagged lemmas), careers pulled before drafting. 8:1 VA-YIZKOR (&#x27;and God REMEMBERED&#x27;) — ZAKHAR, the remember-verb, FIRST TOKEN of 42: object Noach AND every living thing with him; career: the rainbow (9:15-16), Lot (19:29), Rachel (30:22), then the butler who did NOT remember (40:14, 40:23). ELOHIM x2 — the span&#x27;s only divine-name tokens: the Name back, speech not. VA-YAAVER (&#x27;and He PASSED&#x27;) — AVAR, the pass-over verb, FIRST TOKEN of 130 (career: Abram crossing the land 12:6, the covenant-pieces 15:17), its object RUACH (&#x27;wind/spirit&#x27;, token 7) — 1:2&#x27;s hovering word now moving [lexically real mirror]. VA-YASHOKU (&#x27;and the waters SUBSIDED&#x27;) — a two-token Torah verb; the other token is Num 17:20, God subsiding the murmurings. 8:2 the SHUT-MIRROR, near-verbatim: 7:11&#x27;s list in order, but KOL (&#x27;all&#x27;) and RABBAH (&#x27;great&#x27;) DROPPED — the totalizers do not return [DB compare]; the shut-verb VA-YISAKHRU (&#x27;were STOPPED UP&#x27;) is a TORAH HAPAX — NOT 7:16&#x27;s door-verb sagar: door and sky get different shut-words; VA-YIKKALE (&#x27;was RESTRAINED&#x27;) — KALA debut of 4 (token 3 = Exod 36:6, restraining the Tabernacle donations); ARUBOT (&#x27;windows/lattices&#x27;) token 2 OF 2 — the pair closes; MAYAN (&#x27;fountain&#x27;) token 2 of 3; GESHEM (&#x27;rain-shower&#x27;) token 2 of 3; TEHOM (&#x27;deep&#x27;) token 3 of 8. 8:3 HALOKH VA-SHOV (&#x27;going and returning&#x27; — infinitive pair): SHUV (&#x27;return&#x27;) tokens 3-7 all in-span, and tokens 1-2 are 3:19&#x27;s dust-to-dust — the return-verb debuts as the death-sentence and does its first narrative work bringing the flood home; the 150-phrase token 2 OF 2 — 7:24&#x27;s bracket CLOSED; VA-YACHSERU (&#x27;and they DIMINISHED&#x27;) — CHASAR debut (token 3 = 18:28: &#x27;shall lack five&#x27; — Abraham&#x27;s mercy-arithmetic at Sodom). 8:4 VA-TANACH (&#x27;and it RESTED&#x27;) — NUACH debut of 13 (career: God rests, Exod 20:11; &#x27;I will give you rest,&#x27; Exod 33:14), landing on the consonants of NOACH&#x27;s name [5:29 derived the name from the COMFORT-verb nacham — the letter plays the sound, not the etymology; both verses on the page, held]; HAREI ARARAT (the toponym a Torah hapax); month 7 day 17 — five months to the day from 7:11 [letter arithmetic]; gen_18&#x27;s drowned-at-debut mountains carry the ark at their token 3. 8:5 NIRU (&#x27;were SEEN / appeared&#x27;) — the see-verb in niphal, the SAME verb and stem as 1:9&#x27;s VE-TERAEH (&#x27;let the dry land BE SEEN&#x27;): day 3&#x27;s appearance-formula re-runs on the mountaintops [verified]; month 10 day 1. 8:6 MI-QETZ (&#x27;at the END of&#x27;) — QETZ token 3: 4:3 (Cain&#x27;s offering-time), 6:13 (&#x27;the END of all flesh&#x27; — the decree), now forty days to a window; CHALON (&#x27;window&#x27;) — 2 Torah tokens (the other: Abimelech&#x27;s, 26:8); ASHER ASAH (&#x27;which he had MADE&#x27;) — the make-receipt resumed; PATACH (&#x27;open&#x27;) token 2 — token 1 was 7:11&#x27;s heavens OPENED agentless; token 2 is a man&#x27;s hand on his own window. 8:7-12 the birds: SHALACH (&#x27;send&#x27;) tokens 1-2 are the EDEN EXPULSION (3:22-23), tokens 3-7 ALL in-span — raven, dove, the hand, dove, dove; the bird-sendings are PIEL (release-stem), the hand-send QAL [morph split]; OREV (&#x27;raven&#x27;) debut of 3 (career: the unclean lists); YATZO VA-SHOV (&#x27;going out and returning&#x27;); YAVESH (&#x27;be dry&#x27;) — BOTH Torah tokens in-span (8:7 the raven&#x27;s horizon, 8:14 the earth&#x27;s last word), the verb-root of 1:9&#x27;s YABBASHAH (&#x27;dry land&#x27;); YONAH (&#x27;dove&#x27;) tokens 1-5 of 15 (career: the poor offerer&#x27;s birds, Lev 1:14, 5:7; the new mother&#x27;s, Lev 12:6); MATZA (&#x27;find&#x27;): 2:20 no-helper-found, 6:8 Noach-found-grace, 8:9 the dove finds NO MANOACH (&#x27;resting-place&#x27;) — and manoach is a TWO-token word whose other token is Deut 28:65: VE-LO YIHYEH MANOACH LE-KHAF RAGLEKHA (&#x27;no resting-place for the sole of your foot&#x27;) — the exile-curse quotes the dove&#x27;s clause VERBATIM [DB-verified; chain side named-only]; at 8:9 VA-YISHLACH YADO (&#x27;he SENT his hand&#x27;) VA-YIKKACHEHA (&#x27;took her&#x27;) VA-YAVE (&#x27;and BROUGHT her in&#x27; — the boarding-verb bo, &#x27;come&#x27;, in causative stem: what came by itself in gen_17 is carried in by hand). 8:10/8:12 the TWO WAITS in TWO DIFFERENT verbs: VA-YACHEL (the chul-root, piel; token 1 of 3) then VA-YIYACHEL (the yachal-root, niphal — a TORAH HAPAX lemma); 8:12 ends on the lone accent-isolated word OD (&#x27;any more&#x27;). 8:11 VA-TAVO (&#x27;and she CAME&#x27;) LE-ET EREV (&#x27;at EVENING-time&#x27;): EREV token 7 — tokens 1-6 are the creation refrain (and-there-was-evening, 1:5-31): the first evening told since the week [verified]; ET (&#x27;time&#x27;) debuts inside the phrase; ALEH (&#x27;leaf&#x27;) — exactly 3 Torah tokens: the fig-leaves over shame (3:7), the olive leaf of good news (here), the driven leaf of the exile-curse (Lev 26:36); ZAYIT (&#x27;olive&#x27;) debut of 10 (career: the lamp oil, Exod 27:20; the anointing oil; the land&#x27;s trees); TARAF (&#x27;freshly-plucked&#x27;) — a TORAH HAPAX; VA-YEDA NOACH (&#x27;and Noach KNEW that the waters had abated&#x27;) — QALAL (&#x27;be light/abate&#x27;) tokens 1-2 in-span, token 3 = 8:21 LE-QALEL (&#x27;to CURSE&#x27; — &#x27;I will not again curse the ground&#x27;): the abate-verb and the never-again-curse verb are ONE ROOT, all early tokens inside the flood&#x27;s resolution [letter fact; chain side named-only]. 8:13 the corpus&#x27;s SECOND full calendar date — year 601, month 1, day 1 — with RISHON (&#x27;first&#x27;) debuting INSIDE the date (career: &#x27;the FIRST of months,&#x27; Exod 12:2); CHAREV (&#x27;be parched&#x27;) — BOTH Torah tokens inside this one verse (the waters, the ground&#x27;s face); MIKHSEH (&#x27;covering&#x27;) token 1 of 16 — tokens 2-16 are ALL sanctuary fabric (the Tabernacle&#x27;s covering, Exod 26-40; the march-coverings, Num 3-4); SUR (&#x27;remove&#x27;) debut of 55; VA-YAR VE-HINNEH (&#x27;and he SAW, and behold&#x27;) — the week&#x27;s inspection verb with NO verdict-word: seeing without judging. 8:14 month 2 day 27 — ten days past the entry-date&#x27;s slot one year on [letter arithmetic; the solar/lunar reading is the chain&#x27;s, named-only]; YAVSHAH HA-ARETZ (&#x27;the earth WAS DRY&#x27;) — two dry-words on two dates (parched 8:13, dry 8:14).</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Predicates &amp; outcomes</td><td>The unit is a reversal log driven by one interior event: God remembers, and everything the flood did starts running backward — the breach shuts (with a gentler, one-time verb), the waters commute home, the ark exchanges floating for resting, the mountains exchange drowning for appearing, and a man at a window runs the corpus&#x27;s first instrument-based inquiry: three sendings, two waits, one leaf, one knowing. The calendar resumes with the year&#x27;s first FIRST; the earth is declared dry twice, in two words, on two dates — and the span ends with the door still shut from outside: readiness without permission, the exit unspoken until 8:15.</td><td>tested</td></tr>
+<tr><td><b>E</b></td><td>Logic format choice</td><td>Operator lines; NO ledger row, NO installs, NO registry writes, NO SPECS traffic (no commands anywhere in-span), NO TEST — DECISION: the dove&#x27;s LO-MATZAH (&#x27;did not find&#x27;) is a HOLDS fact, NOT the corpus&#x27;s first TESTS-FAIL: the TESTS register has only ever carried the see-verb + verdict-adjective inspection formula (tov at the week, shaah at the offerings, tzaddik at 7:1); 8:9 has no inspecting oracle and no verdict-word, and gen_15&#x27;s matza-chen (&#x27;found grace&#x27;) precedent encodes finding-verbs as facts. TIME DECISION: ONE TIME_ANCHOR — t0 := shnat_601_chodesh_1_ yom_1 at 8:13, the date ladder&#x27;s only YEAR-BEARING rung, formatted exactly like gen_17&#x27;s t0; the interpreter holds a single t0 register and re-anchoring would silently overwrite (no interpreter change permitted or needed): the other rungs (8:4, 8:5, 8:14) enter as HOLDS facts. EVENTS carry the arc (23): remember + pass (Agent: elohim — the register-level difference from nameless gen_18) + subside; the two agentless shuttings (niphal, TIR-032); return + diminish; rest; open; send x5 (raven, dove, the hand, dove, dove); the dove&#x27;s return, the take, the bring-in; wait x2; the evening come; the know; the cover-removal; the see. Convention (gen_18&#x27;s, kept): narrative and-then forms are EVENTS, perfects are FACTS (niru, charvu x2, yavshah, lo-matzah, lo-yasfah all perfects -&gt; facts); intransitive subjects go to Agent when the verb is agentive (return, come) and Theme when patient-like (subside, diminish, rest) — recorded. NOTE_PRESUPPOSED: noach, tevah, mayim at 8:1. Interpreter extensions: NONE.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Bilingual logic objects</td><td>Every operator line carries he + he_translit + en. Machine tokens apostrophe-free: shnat_601_chodesh_1_yom_1, mi_qetze_chamishim_u_meat_yom, ba_chodesh_ha_shevii_be_ shivah_asar_yom, lo_matzah_ha_yonah_manoach_le_khaf_raglah, aleh_zayit_taraf_be_fiha, ve_lo_yasfah_shuv_elav_od.</td><td>established</td></tr>
+<tr><td><b>G</b></td><td>Oral (named only) + Tier-A translation check</td><td>Named but NOT read (cache: zero for Gen 8:1-14 — thirteenth tripwire; gen_19 Tier-A queue): Bavli Rosh Hashanah 11b-12a (the flood chronology — the Marcheshvan/Iyyar calendar debate that lives on this span&#x27;s date ladder); Bavli Sanhedrin 108b (the raven&#x27;s retort; the dove&#x27;s bitter-olive prayer — also Eruvin 18b); Bereshit Rabbah 33 (the span); Rashi at 8:1 (the remembering; the Name), 8:4 (the draught arithmetic), 8:5 (the reckonings), 8:7 (the raven), 8:11 (the olive&#x27;s bitterness). Tier-A Onkelos (14 fetches, FETCHLOG 2026-08-01): the remember-EVENT rendered as a mindful STATE (u-dekhir, &#x27;was mindful&#x27; — the buffer&#x27;s anti-interior move) and ELOHIM leveled BOTH times to YY (the LORD-name) — the span&#x27;s name-texture erased (flagged); the waters given the REST-verb early (ve-nachu, &#x27;and they rested,&#x27; for the subside-verb — diluting the Hebrew&#x27;s reserve of nuach for the ark; flagged); ARARAT renamed KARDU (the translator&#x27;s geography; bolded variant; flagged); the sky-lattices and the ark-window MERGED into one kavva-word (&#x27;lattice&#x27;) where the Hebrew separates arubot from chalon (flagged); the hand-send broken out of the shalach-run (ve-oshit, &#x27;he stretched out&#x27; — the five-beat anaphora reduced; flagged); the two wait-verbs leveled to one (ve-orikh x2; flagged); the hapax TARAF (&#x27;freshly-plucked&#x27;) absorbed as the Aramaic LEAF-word with TEVIR (&#x27;broken&#x27;) and a bolded NACHIT (&#x27;carried down&#x27;) variant (flagged). KEPT: the hapax stop-up verb in its own cognate (istekharu), the abate-root (qalliu), the appearance-passive (itchaziu), manoach as menach (the Deut 28:65 echo survives), the dry-verbs, the digit-exact dates (the 150 again reversed big-first), the knowledge-event (vida Noach) — and the speechlessness: no speech introduced.</td><td>tested</td></tr>
+<tr><td><b>H</b></td><td>Scenarios</td><td>S1 the remembering: flags noach/tevah/mayim as read; queue empty (no command anywhere). S2 the commute and the closed bracket (8:3 facts). S3 the resting date and place. S4 the tops appear. S5 the dove&#x27;s no-find and the waters-fact. S6 the leaf at evening. S7 the non-return, the last OD. S8 new year&#x27;s day: TIME t0 = the second calendar value; the parched-facts hold. S9 the dry earth, queue still empty. S10_negative: LET? contract guard; S11_negative: flag-never-block.</td><td>tested</td></tr>
+<tr><td><b>I</b></td><td>English leakage review</td><td>Operators derive from morph codes (and-then forms vs perfects; niphal agentless TIR-032 on the two shuttings; the piel/qal send-split observed; the covert-free named agent Elohim on remember/pass) and the COMPLETE debut-map survey run BEFORE the seed (zakhar / avar / ruach / shakhakh / sakhar / kala / arubah / mayan / geshem / tehom / shuv / chasar / nuach / manoach / ararat / rishon / asiri / patach / chalon / shalach / orev / yavesh / yonah / matza / kaf / chul / yachal / et / erev / aleh / zayit / taraf / qalal / charev / mikhseh / sur careers; the 7:11-vs-8:2 word compare; the Deut 28:65 quote-match; the speech/name zero-scans; the 1:9 and erev mirror verifications). NOT supplied: why the raven differs from the dove, any reading of the remembering&#x27;s interior, the month-system identity (Marcheshvan vs Iyyar — the chain&#x27;s debate, named-only), the ten-day arithmetic&#x27;s meaning (solar/lunar — named-only), or the tzohar/chalon fork [OPEN, stands]; the Onkelos levelings stay dual-track.</td><td>established</td></tr>
+<tr><td><b>J</b></td><td>Pre-flight + freeze-after-review (agent derivation)</td><td>Pre-flight 2026-08-01 against the UNMODIFIED repo interpreter — zero injected prototypes; GREEN (14/14 steps, 11/11 scenarios, 21/21 clause checks). The agent delivered status DRAFT; the MAIN LOOP reviewed the full prose (glossing, independent census re-verification against the raw snapshot, [OPEN] discipline, no invention) and froze on a passing review — freeze-after-review #2. Changes henceforth require an amend order, not silent edits.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_8_1 · Gen.8.1 · <span class='expr'>THE_REMEMBERING_THE_WIND</span></h3>
+<p><span class="he">וַיִּזְכֹּר אֱלֹהִים אֶת־נֹחַ וְאֵת כָּל־הַחַיָּה וְאֶת־כָּל־הַבְּהֵמָה אֲשֶׁר אִתּוֹ בַּתֵּבָה וַיַּעֲבֵר אֱלֹהִים רוּחַ עַל־הָאָרֶץ וַיָּשֹׁכּוּ הַמָּיִם</span> · <i>va-yizkor Elohim et-Noach ve-et kol-ha-chayah ve-et-kol-ha-behemah asher ito ba-tevah va-yaaver Elohim ruach al-ha-aretz va-yashoku ha-mayim</i> · [EN-AID/JPS] And God remembered Noah, and every living thing, and all the cattle that were with him in the ark; and God made a wind to pass over the earth, and the waters assuaged;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויזכר אלהים את נח ואת כל החיה ואת כל הבהמה אשר אתו בתבה</span> · <i>va-yizkor Elohim et-Noach ve-et kol-ha-chayah ve-et-kol-ha-behemah asher ito ba-tevah</i> · God remembered Noach and every animal with him (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויעבר אלהים רוח על הארץ וישכו המים</span> · <i>va-yaaver Elohim ruach al-ha-aretz va-yashoku ha-mayim</i> · God passed a wind over the earth, and the waters subsided</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">remember(e1) ∧ Agent(e1, elohim) ∧ Theme(e1, noach) ∧ Theme(e1, kol_ha_chayah_ve_ha_behemah)</span><br><span class="gloss">= remember(e1) ∧ Agent(e1, God) ∧ Theme(e1, Noach) ∧ Theme(e1, all-the-beast-and-the-livestock)</span><br>VA-YIZKOR ELOHIM — &#x27;and God REMEMBERED&#x27;: ZAKHAR, the remember-verb, FIRST TOKEN of 42 in the Torah, born with Noach AND every living thing as its object — the animals are remembered by name-class alongside the man. The Name returns to the page (Elohim x2, the span&#x27;s only divine-name tokens — gen_18 had none) but SPEECH does not: the first divine interior event since gen_15&#x27;s regret-and-grief, and the voice stays silent until 8:15. Career: the rainbow (9:15-16), Lot (19:29), Rachel (30:22) — then the butler who did NOT remember Joseph (40:14, 40:23) [Onkelos renders a mindful STATE (u-dekhir, &#x27;was mindful&#x27;) and levels Elohim to the LORD-name — dual-track, flagged].
+</td><td><span class="he">וַיִּזְכֹּר אֱלֹהִים אֶת־נֹחַ וְאֵת כָּל־הַחַיָּה וְאֶת־כָּל־הַבְּהֵמָה</span> · <i>va-yizkor Elohim et-Noach ve-et kol-ha-chayah ve-et-kol-ha-behemah</i><br><span class="gloss">= He-remembered God obj-marker·et-Noach obj-marker·et all-the-beast and-obj-marker·et-all-the-livestock</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">pass(e2) ∧ Agent(e2, elohim) ∧ Theme(e2, ruach_al_ha_aretz)</span><br><span class="gloss">= pass(e2) ∧ Agent(e2, God) ∧ Theme(e2, spirit-wind-over-the-earth)</span><br>VA-YAAVER — &#x27;and He PASSED a wind/spirit over the earth&#x27;: AVAR, the pass-over verb, FIRST TOKEN of 130 (career: Abram crossing the land 12:6, the covenant-pieces passing 15:17) — and its first object is RUACH (&#x27;wind/spirit&#x27;, token 7): 1:2&#x27;s hovering word set MOVING over the flood [lexically real creation-mirror: ruach + over; hover -&gt; pass].
+</td><td><span class="he">וַיַּעֲבֵר אֱלֹהִים רוּחַ עַל־הָאָרֶץ</span> · <i>va-yaaver Elohim ruach al-ha-aretz</i><br><span class="gloss">= He-passed God spirit-wind over-the-earth</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">subside(e3) ∧ Theme(e3, ha_mayim)</span><br><span class="gloss">= subside(e3) ∧ Theme(e3, the-waters)</span><br>VA-YASHOKU — &#x27;and the waters SUBSIDED&#x27;: a TWO-token Torah verb; its only other token is Num 17:20 — God subsiding the camp&#x27;s murmurings: both tokens calm an uprising [letter fact, held; Onkelos renders the REST-verb (ve-nachu) — handing the waters, three verses early, the root the Hebrew saves for the ark; dual-track, flagged].
+</td><td><span class="he">וַיָּשֹׁכּוּ הַמָּיִם</span> · <i>va-yashoku ha-mayim</i><br><span class="gloss">= they-subsided waters</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">noach, tevah, mayim are READ without prior install (the boarder, the build, the waters — the standing trio resumed)</span><br><span class="gloss">= Noach, ark, waters are READ without prior install (the boarder, the build, the waters — the standing trio resumed)</span><br>flag, not fix</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The turn of the whole flood is a silent interior verb with a passenger list attached: God remembers a man and a zoo.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_8_2 · Gen.8.2 · <span class='expr'>THE_SHUT_MIRROR</span></h3>
+<p><span class="he">וַיִּסָּכְרוּ מַעְיְנֹת תְּהוֹם וַאֲרֻבֹּת הַשָּׁמָיִם וַיִּכָּלֵא הַגֶּשֶׁם מִן־הַשָּׁמָיִם</span> · <i>va-yisakhru mayenot tehom va-arubot ha-shamayim va-yikkale ha-geshem min-ha-shamayim</i> · [EN-AID/JPS] the fountains also of the deep and the windows of heaven were stopped, and the rain from heaven was restrained.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויסכרו מעינת תהום וארבת השמים</span> · <i>va-yisakhru mayenot tehom va-arubot ha-shamayim</i> · the fountains of the deep and heaven&#x27;s windows were stopped (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויכלא הגשם מן השמים</span> · <i>va-yikkale ha-geshem min-ha-shamayim</i> · and the rain from heaven was restrained</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">stop_up(e4) ∧ Theme(e4, mayenot_tehom_va_arubot_ha_shamayim)</span><br><span class="gloss">= stop-up(e4) ∧ Theme(e4, fountains-of-deep-and-windows-of-the-heavens)</span><br>VA-YISAKHRU — &#x27;and they were STOPPED UP&#x27; (niphal, agentless, TIR-032): 7:11&#x27;s double breach shut in ONE agentless verb — and the verb is a TORAH HAPAX (sakhar: this token and no other), NOT 7:16&#x27;s door-verb sagar (&#x27;shut&#x27;): the door and the sky get different shut-words [letter fact]. The mirror is NEAR-verbatim: the same nouns in order — fountains of the deep, windows of the heavens — but 7:11&#x27;s KOL (&#x27;all&#x27;) and RABBAH (&#x27;great&#x27;) are DROPPED: the totalizers do not come back [DB compare, held]. ARUBOT (&#x27;windows/lattices&#x27;) token 2 OF 2: the two-token word closes its own bracket (opened 7:11); MAYAN token 2 of 3; TEHOM (&#x27;deep&#x27;) token 3 of 8.
+</td><td><span class="he">וַיִּסָּכְרוּ מַעְיְנֹת תְּהוֹם וַאֲרֻבֹּת הַשָּׁמָיִם</span> · <i>va-yisakhru mayenot tehom va-arubot ha-shamayim</i><br><span class="gloss">= were-stopped-up fountains-of deep windows-of heavens</span></td><td class='cite'>TIR-032</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">restrain(e5) ∧ Theme(e5, ha_geshem)</span><br><span class="gloss">= restrain(e5) ∧ Theme(e5, the-rain)</span><br>VA-YIKKALE — &#x27;and the rain was RESTRAINED&#x27; (niphal, agentless, TIR-032): KALA, the restrain-verb, FIRST TOKEN of 4 — career token 3 is Exod 36:6: RESTRAINING the Tabernacle donations (rain from heaven, generosity in the camp — the verb&#x27;s two great stoppages). GESHEM (&#x27;rain-shower&#x27;) token 2 of 3: began 7:12, restrained here, given back as blessing at Lev 26:4.
+</td><td><span class="he">וַיִּכָּלֵא הַגֶּשֶׁם מִן־הַשָּׁמָיִם</span> · <i>va-yikkale ha-geshem min-ha-shamayim</i><br><span class="gloss">= and-yikkale rain from-the-heavens</span></td><td class='cite'>TIR-032</td><td>tested</td></tr>
+</table>
+<div class="meta">The breach closes more quietly than it opened: no ALL, no GREAT, and a shut-verb the Torah will never use again.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_8_3 · Gen.8.3 · <span class='expr'>THE_WATERS_COMMUTE_BRACKET_CLOSED</span></h3>
+<p><span class="he">וַיָּשֻׁבוּ הַמַּיִם מֵעַל הָאָרֶץ הָלוֹךְ וָשׁוֹב וַיַּחְסְרוּ הַמַּיִם מִקְצֵה חֲמִשִּׁים וּמְאַת יוֹם</span> · <i>va-yashuvu ha-mayim me-al ha-aretz halokh va-shov va-yachseru ha-mayim mi-qetzeh chamishim u-meat yom</i> · [EN-AID/JPS] And the waters returned from off the earth continually; and after the end of a hundred and fifty days the waters decreased.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וישבו המים מעל הארץ הלוך ושוב</span> · <i>va-yashuvu ha-mayim me-al ha-aretz halokh va-shov</i> · the waters returned, going and returning (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויחסרו המים מקצה חמשים ומאת יום</span> · <i>va-yachseru ha-mayim mi-qetzeh chamishim u-meat yom</i> · and the waters diminished at the end of the hundred and fifty days</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">return(e6) ∧ Agent(e6, ha_mayim)</span><br><span class="gloss">= return(e6) ∧ Agent(e6, the-waters)</span><br>VA-YASHUVU — &#x27;and the waters RETURNED&#x27;: SHUV, the return-verb, tokens 3-7 all in this span — and its tokens 1-2 are 3:19&#x27;s sentence (&#x27;until you RETURN to the ground... to dust you shall RETURN&#x27;): the verb that debuted as the death-sentence does its first narrative work sending the flood home [letter fact].
+</td><td><span class="he">וַיָּשֻׁבוּ הַמַּיִם מֵעַל הָאָרֶץ</span> · <i>va-yashuvu ha-mayim me-al ha-aretz</i><br><span class="gloss">= they-returned waters over earth</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(halokh_va_shov, t1) ∧ HOLDS(mi_qetze_chamishim_u_meat_yom, t1)</span><br><span class="gloss">= HOLDS(going-and-returning, t1) ∧ HOLDS(from-at-the-end-of-fifty-and-hundred-day, t1)</span><br>HALOKH VA-SHOV — &#x27;going and returning&#x27;, the infinitive pair: the walk-verb that carried the ark (7:18) now paces the retreat. And the 150-phrase (&#x27;fifty and a hundred days&#x27;) — token 2 OF 2 in the Torah: 7:24&#x27;s bracket CLOSED, same digits, same small-first order. MI-QETZEH (&#x27;at the end of&#x27;) — the qetzeh end-word&#x27;s first token, opening the span&#x27;s countdown grammar.
+</td><td><span class="he">הָלוֹךְ וָשׁוֹב … מִקְצֵה חֲמִשִּׁים וּמְאַת יוֹם</span> · <i>halokh va-shov … mi-qetzeh chamishim u-meat yom</i><br><span class="gloss">= going returning from-qetzeh fifty hundred day</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">diminish(e7) ∧ Theme(e7, ha_mayim)</span><br><span class="gloss">= diminish(e7) ∧ Theme(e7, the-waters)</span><br>VA-YACHSERU — &#x27;and the waters DIMINISHED&#x27;: CHASAR, the lack-verb, FIRST TOKEN of 7 (tokens 1-2 both in-span); career token 3 = 18:28 — &#x27;perhaps the fifty righteous shall LACK five&#x27;: the diminish-verb&#x27;s next job is Abraham&#x27;s mercy-arithmetic over Sodom.
+</td><td><span class="he">וַיַּחְסְרוּ הַמַּיִם</span> · <i>va-yachseru ha-mayim</i><br><span class="gloss">= and-yachseru waters</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The flood leaves the way a tide does — commuting — and the letter closes its own 150-day parenthesis on the way out.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_8_4 · Gen.8.4 · <span class='expr'>THE_ARK_RESTS</span></h3>
+<p><span class="he">וַתָּנַח הַתֵּבָה בַּחֹדֶשׁ הַשְּׁבִיעִי בְּשִׁבְעָה־עָשָׂר יוֹם לַחֹדֶשׁ עַל הָרֵי אֲרָרָט</span> · <i>va-tanach ha-tevah ba-chodesh ha-shevii be-shivah-asar yom la-chodesh al harei Ararat</i> · [EN-AID/JPS] And the ark rested in the seventh month, on the seventeenth day of the month, upon the mountains of Ararat.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ותנח התבה בחדש השביעי בשבעה עשר יום לחדש</span> · <i>va-tanach ha-tevah ba-chodesh ha-shevii be-shivah-asar yom la-chodesh</i> · the ark rested — month seven, day seventeen (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">על הרי אררט</span> · <i>al harei Ararat</i> · on the mountains of Ararat</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">rest(e8) ∧ Theme(e8, ha_tevah)</span><br><span class="gloss">= rest(e8) ∧ Theme(e8, the-ark)</span><br>VA-TANACH — &#x27;and the ark RESTED&#x27;: NUACH, the rest-verb, FIRST TOKEN of 13 in the Torah (career: God RESTS on the seventh day, Exod 20:11; &#x27;My presence will go and I will give you REST,&#x27; Exod 33:14) — landing on the consonants of NOACH&#x27;s own name. His naming-verse (5:29) derived the name from the COMFORT-verb (nacham, &#x27;this one will comfort us&#x27;): the letter here plays the name&#x27;s SOUND, not its stated etymology [both verses on the page; held]. And the resting-place is gen_18&#x27;s mountains — drowned at their debut, bearing the ark at token 3 [Onkelos renames Ararat to KARDU — the translator&#x27;s geography; dual-track, flagged].
+</td><td><span class="he">וַתָּנַח הַתֵּבָה</span> · <i>va-tanach ha-tevah</i><br><span class="gloss">= it-rested ark</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ba_chodesh_ha_shevii_be_shivah_asar_yom, t1) ∧ HOLDS(al_harei_ararat, t1)</span><br><span class="gloss">= HOLDS(in-the-of-month-the-seventh-in-seven-teen-day, t1) ∧ HOLDS(over-mountains-of-Ararat, t1)</span><br>The calendar returns: month SEVEN, day SEVENTEEN — five months to the day from 7:11&#x27;s month-2-day-17 [letter arithmetic, both dates on the page]. A date-ladder rung held as FACT, not anchor: the span&#x27;s one year-bearing date (8:13) takes the t0 register (decision recorded). ARARAT — the place-name a Torah HAPAX.
+</td><td><span class="he">בַּחֹדֶשׁ הַשְּׁבִיעִי בְּשִׁבְעָה־עָשָׂר יוֹם לַחֹדֶשׁ עַל הָרֵי אֲרָרָט</span> · <i>ba-chodesh ha-shevii be-shivah-asar yom la-chodesh al harei Ararat</i><br><span class="gloss">= of-month seventh in-seven-teen day of-month over mountains-of Ararat</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The ark&#x27;s one verb of arrival is its builder&#x27;s name said softly.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_8_5 · Gen.8.5 · <span class='expr'>THE_TOPS_APPEAR</span></h3>
+<p><span class="he">וְהַמַּיִם הָיוּ הָלוֹךְ וְחָסוֹר עַד הַחֹדֶשׁ הָעֲשִׂירִי בָּעֲשִׂירִי בְּאֶחָד לַחֹדֶשׁ נִרְאוּ רָאשֵׁי הֶהָרִים</span> · <i>ve-ha-mayim hayu halokh ve-chasor ad ha-chodesh ha-asiri ba-asiri be-echad la-chodesh niru rashei he-harim</i> · [EN-AID/JPS] And the waters decreased continually until the tenth month; in the tenth month, on the first day of the month, were the tops of the mountains seen.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">והמים היו הלוך וחסור עד החדש העשירי</span> · <i>ve-ha-mayim hayu halokh ve-chasor ad ha-chodesh ha-asiri</i> · the waters going and diminishing to the tenth month (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">בעשירי באחד לחדש נראו ראשי ההרים</span> · <i>ba-asiri be-echad la-chodesh niru rashei he-harim</i> · on day one of the tenth month the mountaintops APPEARED</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(halokh_ve_chasor_ad_ha_chodesh_ha_asiri, t1) ∧ HOLDS(ba_asiri_be_echad_niru_rashei_he_harim, t1)</span><br><span class="gloss">= HOLDS(going-and-diminishing-until-the-of-month-the-tenth, t1) ∧ HOLDS(in-the-tenth-in-one-were-seen-tops-of-he-mountains, t1)</span><br>HALOKH VE-CHASOR — &#x27;going and diminishing&#x27;: the second infinitive pair (the waters&#x27; gait slowed to a wasting). NIRU RASHEI HE-HARIM — &#x27;the tops of the mountains WERE SEEN / appeared&#x27; (perfect, held as fact per the morphology convention): the see-verb in the NIPHAL — the SAME verb and stem as 1:9&#x27;s VE-TERAEH (&#x27;and let the dry land BE SEEN&#x27;) [lexically verified]: day 3&#x27;s appearance-formula re-runs on the mountaintops, dated month 10, day 1 (a ladder rung, held as fact — the anchor waits for the year-bearing date).
+</td><td><span class="he">הָלוֹךְ וְחָסוֹר … נִרְאוּ רָאשֵׁי הֶהָרִים</span> · <i>halokh ve-chasor … niru rashei he-harim</i><br><span class="gloss">= going diminishing were-seen tops-of mountain</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Creation&#x27;s stage direction — let it be seen — plays again, one peak at a time.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_8_6 · Gen.8.6 · <span class='expr'>THE_WINDOW_HE_MADE</span></h3>
+<p><span class="he">וַיְהִי מִקֵּץ אַרְבָּעִים יוֹם וַיִּפְתַּח נֹחַ אֶת־חַלּוֹן הַתֵּבָה אֲשֶׁר עָשָׂה</span> · <i>va-yehi mi-qetz arbaim yom va-yiftach Noach et-chalon ha-tevah asher asah</i> · [EN-AID/JPS] And it came to pass at the end of forty days, that Noah opened the window of the ark which he had made.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויהי מקץ ארבעים יום</span> · <i>va-yehi mi-qetz arbaim yom</i> · at the end of forty days (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויפתח נח את חלון התבה אשר עשה</span> · <i>va-yiftach Noach et-chalon ha-tevah asher asah</i> · Noach opened the window of the ark which he had MADE</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(mi_qetz_arbaim_yom, t1)</span><br><span class="gloss">= HOLDS(from-at-the-end-of-forty-day, t1)</span><br>MI-QETZ — &#x27;at the END of forty days&#x27;: QETZ token 3 — token 1 = 4:3 (Cain&#x27;s offering &#x27;at the end of days&#x27;), token 2 = 6:13 (&#x27;the END of all flesh is come before Me&#x27; — the decree&#x27;s own word): the end-word that announced the killing now counts down to a window opening. The forty re-used: the rain&#x27;s number becomes the waiting&#x27;s.
+</td><td><span class="he">מִקֵּץ אַרְבָּעִים יוֹם</span> · <i>mi-qetz arbaim yom</i><br><span class="gloss">= at-the-end-of forty day</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">open(e9) ∧ Agent(e9, noach) ∧ Theme(e9, chalon_ha_tevah)</span><br><span class="gloss">= open(e9) ∧ Agent(e9, Noach) ∧ Theme(e9, window-the-ark)</span><br>VA-YIFTACH — &#x27;and Noach OPENED&#x27;: PATACH token 2 — token 1 was 7:11, heaven&#x27;s windows OPENED with no agent; token 2 is a man&#x27;s hand on his own window: the same verb passed from sky to hand. CHALON (&#x27;window&#x27;) — 2 Torah tokens (the other: Abimelech&#x27;s window, 26:8) — ASHER ASAH, &#x27;which he had MADE&#x27;: the make-verb receipt, gen_16&#x27;s build resumed mid-story [chalon is a DIFFERENT word from gen_16&#x27;s tzohar (&#x27;light/window&#x27;? — the hapax): the [OPEN] fork stands, named and unresolved; Onkelos merges chalon AND 7:11&#x27;s lattices into ONE word (kavva) — the letter&#x27;s sky/ark distinction leveled; dual-track, flagged].
+</td><td><span class="he">וַיִּפְתַּח נֹחַ אֶת־חַלּוֹן הַתֵּבָה אֲשֶׁר עָשָׂה</span> · <i>va-yiftach Noach et-chalon ha-tevah asher asah</i><br><span class="gloss">= he-opened Noach obj-marker·et-window ark which make</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The first thing a man does in the new world is open something he built for exactly this day.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_8_7 · Gen.8.7 · <span class='expr'>THE_RAVEN</span></h3>
+<p><span class="he">וַיְשַׁלַּח אֶת־הָעֹרֵב וַיֵּצֵא יָצוֹא וָשׁוֹב עַד־יְבֹשֶׁת הַמַּיִם מֵעַל הָאָרֶץ</span> · <i>va-yeshallach et-ha-orev va-yetze yatzo va-shov ad-yevoshet ha-mayim me-al ha-aretz</i> · [EN-AID/JPS] And he sent forth a raven, and it went forth to and fro, until the waters were dried up from off the earth.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וישלח את הערב</span> · <i>va-yeshallach et-ha-orev</i> · and he sent the raven (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויצא יצוא ושוב עד יבשת המים מעל הארץ</span> · <i>va-yetze yatzo va-shov ad-yevoshet ha-mayim me-al ha-aretz</i> · it went out, going out and returning, until the drying of the waters</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">send(e10) ∧ Agent(e10, noach) ∧ Theme(e10, ha_orev)</span><br><span class="gloss">= send(e10) ∧ Agent(e10, Noach) ∧ Theme(e10, the-raven)</span><br>VA-YESHALLACH — &#x27;and he SENT the raven&#x27; (piel, the release-stem): SHALACH&#x27;s tokens 1-2 are the EDEN EXPULSION (3:22-23 — humankind sent from the garden); tokens 3-7 are ALL this span&#x27;s sendings [letter fact]: the verb that exiled now scouts a way home. OREV (&#x27;raven&#x27;) — FIRST TOKEN of 3 (career: the unclean lists, Lev 11:15 / Deut 14:14).
+</td><td><span class="he">וַיְשַׁלַּח אֶת־הָעֹרֵב</span> · <i>va-yeshallach et-ha-orev</i><br><span class="gloss">= and-yeshallach obj-marker·et-the-raven</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(yatzo_va_shov_ad_yevoshet_ha_mayim, t1)</span><br><span class="gloss">= HOLDS(going-out-and-returning-until-drying-of-the-waters, t1)</span><br>YATZO VA-SHOV — &#x27;going out and returning&#x27; (the third infinitive pair: the raven adopts the waters&#x27; own gait). AD-YEVOSHET — &#x27;until the DRYING&#x27;: YAVESH (&#x27;be dry&#x27;) — BOTH its Torah tokens are in this span (here as the raven&#x27;s horizon; 8:14 as the earth&#x27;s closing fact), and it is the verb-root of 1:9&#x27;s YABBASHAH (&#x27;dry land&#x27;) [root-family echo, verified]. The raven never reports; it commutes.
+</td><td><span class="he">יָצוֹא וָשׁוֹב עַד־יְבֹשֶׁת הַמַּיִם</span> · <i>yatzo va-shov ad-yevoshet ha-mayim</i><br><span class="gloss">= going-out returning until-drying-of waters</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The first scout is a shuttle, not a messenger: it keeps the waters&#x27; own rhythm until the drying.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_8_8 · Gen.8.8 · <span class='expr'>THE_DOVE_THE_QUESTION</span></h3>
+<p><span class="he">וַיְשַׁלַּח אֶת־הַיּוֹנָה מֵאִתּוֹ לִרְאוֹת הֲקַלּוּ הַמַּיִם מֵעַל פְּנֵי הָאֲדָמָה</span> · <i>va-yeshallach et-ha-yonah me-ito li-reot ha-qalu ha-mayim me-al pnei ha-adamah</i> · [EN-AID/JPS] And he sent forth a dove from him, to see if the waters were abated from off the face of the ground.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וישלח את היונה מאתו</span> · <i>va-yeshallach et-ha-yonah me-ito</i> · and he sent the dove from him (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">לראות הקלו המים מעל פני האדמה</span> · <i>li-reot ha-qalu ha-mayim me-al pnei ha-adamah</i> · to SEE whether the waters had abated from the face of the ground</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">send(e11) ∧ Agent(e11, noach) ∧ Theme(e11, ha_yonah)</span><br><span class="gloss">= send(e11) ∧ Agent(e11, Noach) ∧ Theme(e11, the-dove)</span><br>The second sending (piel again — the release-stem): YONAH (&#x27;dove&#x27;) — FIRST TOKEN; tokens 1-5 of its Torah 15 are all in this span, and its later career is the poor offerer&#x27;s birds (Lev 1:14, 5:7) and the new mother&#x27;s (Lev 12:6): the scout-species becomes the smallest-sacrifice species. ME-ITO — &#x27;from HIM&#x27;: the dove is sent from his person, where the raven was sent plain [letter fact].
+</td><td><span class="he">וַיְשַׁלַּח אֶת־הַיּוֹנָה מֵאִתּוֹ</span> · <i>va-yeshallach et-ha-yonah me-ito</i><br><span class="gloss">= and-yeshallach obj-marker·et-the-dove with-him</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(li_reot_ha_qalu_ha_mayim, t1)</span><br><span class="gloss">= HOLDS(to-me-see-the-whether-they-abated-the-waters, t1)</span><br>LI-REOT — &#x27;to SEE whether the waters had ABATED&#x27;: the week&#x27;s inspection verb handed to a bird as PURPOSE — a question, not a verdict: no oracle inspects, no verdict-word attaches; TESTS stay empty (decision recorded at E). QALAL (&#x27;be light / abate&#x27;) — FIRST TOKEN; token 2 = 8:11 (the knowing), token 3 = 8:21 — LE-QALEL, &#x27;I will not again CURSE the ground&#x27;: the abate-verb and the never-again-curse verb are ONE ROOT, all early tokens inside the flood&#x27;s resolution [letter fact; the chain&#x27;s readings named-only].
+</td><td><span class="he">לִרְאוֹת הֲקַלּוּ הַמַּיִם</span> · <i>li-reot ha-qalu ha-mayim</i><br><span class="gloss">= see whether-they-abated waters</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The corpus&#x27;s first instrument-based inquiry: a question tied to a bird&#x27;s feet.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_8_9 · Gen.8.9 · <span class='expr'>NO_RESTING_PLACE_THE_HAND</span></h3>
+<p><span class="he">וְלֹא־מָצְאָה הַיּוֹנָה מָנוֹחַ לְכַף־רַגְלָהּ וַתָּשָׁב אֵלָיו אֶל־הַתֵּבָה כִּי־מַיִם עַל־פְּנֵי כָל־הָאָרֶץ וַיִּשְׁלַח יָדוֹ וַיִּקָּחֶהָ וַיָּבֵא אֹתָהּ אֵלָיו אֶל־הַתֵּבָה</span> · <i>ve-lo-matzah ha-yonah manoach le-khaf-raglah va-tashav elav el-ha-tevah ki-mayim al-pnei khol-ha-aretz va-yishlach yado va-yikkacheha va-yave otah elav el-ha-tevah</i> · [EN-AID/JPS] But the dove found no rest for the sole of her foot, and she returned unto him to the ark, for the waters were on the face of the whole earth; and he put forth his hand, and took her, and brought her in unto him into the ark.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ולא מצאה היונה מנוח לכף רגלה ותשב אליו אל התבה כי מים על פני כל הארץ</span> · <i>ve-lo-matzah ha-yonah manoach le-khaf-raglah va-tashav elav el-ha-tevah ki-mayim al-pnei khol-ha-aretz</i> · no resting-place for her foot&#x27;s sole — she returned: waters on all the earth (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וישלח ידו ויקחה ויבא אתה אליו אל התבה</span> · <i>va-yishlach yado va-yikkacheha va-yave otah elav el-ha-tevah</i> · he sent his hand, took her, and brought her in to him</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lo_matzah_ha_yonah_manoach_le_khaf_raglah, t1) ∧ HOLDS(ki_mayim_al_pnei_khol_ha_aretz, t1)</span><br><span class="gloss">= HOLDS(not-found-the-dove-resting-place-to-sole-of-her-foot, t1) ∧ HOLDS(that-waters-over-face-of-all-the-earth, t1)</span><br>LO-MATZAH — &#x27;she FOUND no resting-place for the sole of her foot&#x27; — held as FACT, not a TESTS-FAIL (decision: the TESTS register carries only the see-verb + verdict-adjective formula; no oracle, no verdict-word here; gen_15&#x27;s found-grace precedent governs finding-verbs). MATZA&#x27;s early career is a triptych: no helper FOUND for the man (2:20), Noach FOUND grace (6:8), the dove FINDS nothing (8:9). MANOACH (&#x27;resting-place&#x27;) — a TWO-token Torah word: its only other token is Deut 28:65, VE-LO YIHYEH MANOACH LE-KHAF RAGLEKHA (&#x27;no resting-place for the sole of your foot&#x27;) — the exile-curse quotes the dove&#x27;s clause VERBATIM [DB-verified; the chain&#x27;s use named-only]. And the reason-clause: waters on the face of ALL the earth — the totalizer the shut-verse dropped still true at ground level.
+</td><td><span class="he">וְלֹא־מָצְאָה הַיּוֹנָה מָנוֹחַ לְכַף־רַגְלָהּ כִּי־מַיִם עַל־פְּנֵי כָל־הָאָרֶץ</span> · <i>ve-lo-matzah ha-yonah manoach le-khaf-raglah ki-mayim al-pnei khol-ha-aretz</i><br><span class="gloss">= and-not-found dove resting-place to-sole-of-her-foot that-waters over-face-of all-the-earth</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">return(e12) ∧ Agent(e12, ha_yonah)</span><br><span class="gloss">= return(e12) ∧ Agent(e12, the-dove)</span><br>VA-TASHAV — &#x27;and she RETURNED to him, to the ark&#x27;: the return-verb again — the dove keeps the span&#x27;s homing grammar.
+</td><td><span class="he">וַתָּשָׁב אֵלָיו אֶל־הַתֵּבָה</span> · <i>va-tashav elav el-ha-tevah</i><br><span class="gloss">= return to-him to-the-ark</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">send(e13) ∧ Agent(e13, noach) ∧ Theme(e13, yado)</span><br><span class="gloss">= send(e13) ∧ Agent(e13, Noach) ∧ Theme(e13, his-hand)</span><br>VA-YISHLACH YADO — &#x27;and he SENT his HAND&#x27;: the same send-verb as the birds, but QAL where the sendings are piel [morph split, letter fact]: the fifth send of the span is a rescue reach [Onkelos breaks the run here — &#x27;he stretched out&#x27; (oshit); dual-track, flagged].
+</td><td><span class="he">וַיִּשְׁלַח יָדוֹ</span> · <i>va-yishlach yado</i><br><span class="gloss">= he-sent his-hand</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">take(e14) ∧ Agent(e14, noach) ∧ Theme(e14, ha_yonah)</span><br><span class="gloss">= take(e14) ∧ Agent(e14, Noach) ∧ Theme(e14, the-dove)</span><br>VA-YIKKACHEHA — &#x27;and he TOOK her&#x27;: the take-verb&#x27;s next token (8:20) takes of the clean animals for the altar — the same hand, two takings [letter fact, named].
+</td><td><span class="he">וַיִּקָּחֶהָ</span> · <i>va-yikkacheha</i><br><span class="gloss">= and-yikkacheha</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">bring(e15) ∧ Agent(e15, noach) ∧ Theme(e15, ha_yonah)</span><br><span class="gloss">= bring(e15) ∧ Agent(e15, Noach) ∧ Theme(e15, the-dove)</span><br>VA-YAVE — &#x27;and he BROUGHT her in&#x27;: BO (&#x27;come&#x27;), the boarding-verb, in its CAUSATIVE stem — what came by itself in gen_17 (the self-loading cargo) is carried in by hand now: the come-verb&#x27;s arc bends through this verse [letter fact].
+</td><td><span class="he">וַיָּבֵא אֹתָהּ אֵלָיו אֶל־הַתֵּבָה</span> · <i>va-yave otah elav el-ha-tevah</i><br><span class="gloss">= brought-her-in her to-him to-the-ark</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The verse the exile-curse will quote: no rest for the sole of the foot — answered, this once, by a hand through a window.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_8_10 · Gen.8.10 · <span class='expr'>THE_FIRST_WAIT</span></h3>
+<p><span class="he">וַיָּחֶל עוֹד שִׁבְעַת יָמִים אֲחֵרִים וַיֹּסֶף שַׁלַּח אֶת־הַיּוֹנָה מִן־הַתֵּבָה</span> · <i>va-yachel od shivat yamim acherim va-yosef shallach et-ha-yonah min-ha-tevah</i> · [EN-AID/JPS] And he stayed yet other seven days; and again he sent forth the dove out of the ark.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויחל עוד שבעת ימים אחרים</span> · <i>va-yachel od shivat yamim acherim</i> · he waited yet another seven days (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויסף שלח את היונה מן התבה</span> · <i>va-yosef shallach et-ha-yonah min-ha-tevah</i> · and again sent the dove from the ark</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">wait(e16) ∧ Agent(e16, noach)</span><br><span class="gloss">= wait(e16) ∧ Agent(e16, Noach)</span><br>VA-YACHEL — &#x27;and he WAITED&#x27;: the chul-root wait-verb, token 1 of 3 — the FIRST of the two waits, in the FIRST of two different wait-verbs [letter fact; Onkelos levels both to one verb — dual-track, flagged].
+</td><td><span class="he">וַיָּחֶל עוֹד שִׁבְעַת יָמִים אֲחֵרִים</span> · <i>va-yachel od shivat yamim acherim</i><br><span class="gloss">= he-waited again seven day other</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(od_shivat_yamim_acherim, t1)</span><br><span class="gloss">= HOLDS(again-seven-day-other, t1)</span><br>&#x27;Yet ANOTHER seven days&#x27;: the dove flies on the week&#x27;s own rhythm — the seven re-used as patience (7:4&#x27;s countdown seven, now a waiting seven).
+</td><td><span class="he">עוֹד שִׁבְעַת יָמִים אֲחֵרִים</span> · <i>od shivat yamim acherim</i><br><span class="gloss">= again seven day other</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">send(e17) ∧ Agent(e17, noach) ∧ Theme(e17, ha_yonah)</span><br><span class="gloss">= send(e17) ∧ Agent(e17, Noach) ∧ Theme(e17, the-dove)</span><br>VA-YOSEF SHALLACH — &#x27;and he AGAIN sent&#x27;: the add-verb (yasaf) rides the send-verb — the inquiry becomes a repeated experiment.
+</td><td><span class="he">וַיֹּסֶף שַׁלַּח אֶת־הַיּוֹנָה</span> · <i>va-yosef shallach et-ha-yonah</i><br><span class="gloss">= he-again shallach obj-marker·et-the-dove</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Patience enters the method: the question waits a week before it is asked again.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_8_11 · Gen.8.11 · <span class='expr'>THE_LEAF_AT_EVENING</span></h3>
+<p><span class="he">וַתָּבֹא אֵלָיו הַיּוֹנָה לְעֵת עֶרֶב וְהִנֵּה עֲלֵה־זַיִת טָרָף בְּפִיהָ וַיֵּדַע נֹחַ כִּי־קַלּוּ הַמַּיִם מֵעַל הָאָרֶץ</span> · <i>va-tavo elav ha-yonah le-et erev ve-hinneh aleh-zayit taraf be-fiha va-yeda Noach ki-qalu ha-mayim me-al ha-aretz</i> · [EN-AID/JPS] And the dove came in to him at eventide; and lo in her mouth an olive-leaf freshly plucked; so Noah knew that the waters were abated from off the earth.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ותבא אליו היונה לעת ערב והנה עלה זית טרף בפיה</span> · <i>va-tavo elav ha-yonah le-et erev ve-hinneh aleh-zayit taraf be-fiha</i> · the dove came at evening-time — behold, an olive leaf freshly plucked (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וידע נח כי קלו המים מעל הארץ</span> · <i>va-yeda Noach ki-qalu ha-mayim me-al ha-aretz</i> · and Noach KNEW that the waters had abated</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">come(e18) ∧ Agent(e18, ha_yonah) ∧ Theme(e18, le_et_erev)</span><br><span class="gloss">= come(e18) ∧ Agent(e18, the-dove) ∧ Theme(e18, to-obj-marker·et-evening)</span><br>VA-TAVO — &#x27;and she CAME to him&#x27; (the come-verb, plain qal — the boarding&#x27;s verb once more) LE-ET EREV — &#x27;at EVENING-time&#x27;: EREV (&#x27;evening&#x27;) token 7 — tokens 1-6 are the creation refrain (and-there-was-evening, 1:5-31): the FIRST evening the corpus tells since the week falls on the dove&#x27;s return [verified]; and ET (&#x27;time&#x27;) itself debuts inside the phrase (token 1 of 36): clock-time enters the corpus at dusk, on a bird.
+</td><td><span class="he">וַתָּבֹא אֵלָיו הַיּוֹנָה לְעֵת עֶרֶב</span> · <i>va-tavo elav ha-yonah le-et erev</i><br><span class="gloss">= come/bring to-him dove obj-marker·et evening</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(aleh_zayit_taraf_be_fiha, t1)</span><br><span class="gloss">= HOLDS(leaf-olive-freshly-plucked-in-her-mouth, t1)</span><br>&#x27;Behold: an olive LEAF, freshly plucked, in her mouth.&#x27; ALEH (&#x27;leaf&#x27;) — exactly 3 Torah tokens: the fig-leaves sewn over shame (3:7), this leaf of good news, and Lev 26:36&#x27;s DRIVEN leaf whose sound chases the exiled — shame, hope, terror: one word, three lives [letter fact]. ZAYIT (&#x27;olive&#x27;) — FIRST TOKEN of 10 (career: the lamp oil, Exod 27:20 / Lev 24:2; the anointing oil; the land&#x27;s own trees, Deut 6:11, 8:8): the rescue-token species becomes the sanctuary&#x27;s fuel. TARAF (&#x27;freshly-plucked&#x27;) — a TORAH HAPAX [Onkelos absorbs it as its LEAF-word (teraf) with &#x27;broken&#x27; (tevir) — the hapax digested whole; dual-track, flagged].
+</td><td><span class="he">וְהִנֵּה עֲלֵה־זַיִת טָרָף בְּפִיהָ</span> · <i>ve-hinneh aleh-zayit taraf be-fiha</i><br><span class="gloss">= behold leaf-olive freshly-plucked her-mouth</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">know(e19) ∧ Agent(e19, noach) ∧ Theme(e19, ki_qalu_ha_mayim)</span><br><span class="gloss">= know(e19) ∧ Agent(e19, Noach) ∧ Theme(e19, that-whether-they-abated-the-waters)</span><br>VA-YEDA — &#x27;and Noach KNEW that the waters had ABATED&#x27;: knowledge from a carried sign — the inquiry closes in the knowing-verb, not in speech. QALU — the abate-root&#x27;s token 2 (its token 3 is 8:21&#x27;s never-again-CURSE: one root, abate and curse, all early tokens in the flood&#x27;s resolution [letter fact, named-only]).
+</td><td><span class="he">וַיֵּדַע נֹחַ כִּי־קַלּוּ הַמַּיִם</span> · <i>va-yeda Noach ki-qalu ha-mayim</i><br><span class="gloss">= he-knew Noach that-whether-they-abated waters</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The world&#x27;s all-clear is one leaf wide, delivered at the first evening since the week.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_8_12 · Gen.8.12 · <span class='expr'>THE_SECOND_WAIT_THE_LAST_OD</span></h3>
+<p><span class="he">וַיִּיָּחֶל עוֹד שִׁבְעַת יָמִים אֲחֵרִים וַיְשַׁלַּח אֶת־הַיּוֹנָה וְלֹא־יָסְפָה שׁוּב־אֵלָיו עוֹד</span> · <i>va-yiyachel od shivat yamim acherim va-yeshallach et-ha-yonah ve-lo-yasfah shuv-elav od</i> · [EN-AID/JPS] And he stayed yet other seven days; and sent forth the dove; and she returned not again unto him any more.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וייחל עוד שבעת ימים אחרים</span> · <i>va-yiyachel od shivat yamim acherim</i> · he waited yet another seven days (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וישלח את היונה ולא יספה שוב אליו עוד</span> · <i>va-yeshallach et-ha-yonah ve-lo-yasfah shuv-elav od</i> · he sent the dove — and she returned to him no more</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">wait(e20) ∧ Agent(e20, noach)</span><br><span class="gloss">= wait(e20) ∧ Agent(e20, Noach)</span><br>VA-YIYACHEL — &#x27;and he WAITED&#x27;: the SECOND wait in a SECOND verb — the yachal-root (&#x27;wait/hope&#x27;), a TORAH HAPAX lemma (this token and no other): the letter spends a once-word on the second patience [letter fact; Onkelos levels both waits to one verb — dual-track, flagged].
+</td><td><span class="he">וַיִּיָּחֶל עוֹד שִׁבְעַת יָמִים אֲחֵרִים</span> · <i>va-yiyachel od shivat yamim acherim</i><br><span class="gloss">= he-waited again seven day other</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">send(e21) ∧ Agent(e21, noach) ∧ Theme(e21, ha_yonah)</span><br><span class="gloss">= send(e21) ∧ Agent(e21, Noach) ∧ Theme(e21, the-dove)</span><br>The THIRD sending (piel) — SHALACH token 7: the last of the span&#x27;s five send-tokens; the next send in the corpus&#x27;s story is no longer a scout&#x27;s.
+</td><td><span class="he">וַיְשַׁלַּח אֶת־הַיּוֹנָה</span> · <i>va-yeshallach et-ha-yonah</i><br><span class="gloss">= and-yeshallach obj-marker·et-the-dove</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_lo_yasfah_shuv_elav_od, t1)</span><br><span class="gloss">= HOLDS(and-not-did-again-return-to-him-again, t1)</span><br>&#x27;And she did not RETURN to him ANY MORE&#x27; (perfect, held as fact): the good news this time is an absence — and the accents end the verse on the lone word OD (&#x27;any more&#x27;): the last thing the letter says about the dove is the word for AGAIN, negated [tree fact].
+</td><td><span class="he">וְלֹא־יָסְפָה שׁוּב־אֵלָיו עוֹד</span> · <i>ve-lo-yasfah shuv-elav od</i><br><span class="gloss">= and-not-did-again return-to-him again</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The experiment succeeds by silence: no bird, no leaf, no return — the world is habitable because the messenger stayed.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_8_13 · Gen.8.13 · <span class='expr'>NEW_YEARS_DAY_THE_COVER_OFF</span></h3>
+<p><span class="he">וַיְהִי בְּאַחַת וְשֵׁשׁ־מֵאוֹת שָׁנָה בָּרִאשׁוֹן בְּאֶחָד לַחֹדֶשׁ חָרְבוּ הַמַּיִם מֵעַל הָאָרֶץ וַיָּסַר נֹחַ אֶת־מִכְסֵה הַתֵּבָה וַיַּרְא וְהִנֵּה חָרְבוּ פְּנֵי הָאֲדָמָה</span> · <i>va-yehi be-achat ve-shesh-meot shanah ba-rishon be-echad la-chodesh charvu ha-mayim me-al ha-aretz va-yasar Noach et-mikhseh ha-tevah va-yar ve-hinneh charvu pnei ha-adamah</i> · [EN-AID/JPS] And it came to pass in the six hundred and first year, in the first month, the first day of the month, the waters were dried up from off the earth; and Noah removed the covering of the ark, and looked, and behold, the face of the ground was dried.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויהי באחת ושש מאות שנה בראשון באחד לחדש חרבו המים מעל הארץ</span> · <i>va-yehi be-achat ve-shesh-meot shanah ba-rishon be-echad la-chodesh charvu ha-mayim me-al ha-aretz</i> · year 601, month 1, day 1 — the waters were dried (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויסר נח את מכסה התבה וירא והנה חרבו פני האדמה</span> · <i>va-yasar Noach et-mikhseh ha-tevah va-yar ve-hinneh charvu pnei ha-adamah</i> · Noach removed the ark&#x27;s covering, saw — and behold, the ground&#x27;s face was dried</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>TIME_ANCHOR</td><td><span class="expr">t0 := shnat_601_chodesh_1_yom_1</span><br><span class="gloss">= t0 := year-of-601-of-month-1-day-1</span><br>THE CORPUS&#x27;S SECOND FULL CALENDAR DATE — year 601, month 1, day 1: new year&#x27;s day of the year after the flood — and the TIME register anchors here (decision: the date ladder&#x27;s ONLY year-bearing rung, formatted like gen_17&#x27;s t0; the machine holds one t0 — the other rungs are held as facts). RISHON (&#x27;first&#x27;) — FIRST TOKEN of 55, debuting INSIDE the date (career: &#x27;this month is for you the FIRST of months,&#x27; Exod 12:2): the first-word is born on a first-of-firsts.
+</td><td><span class="he">בְּאַחַת וְשֵׁשׁ־מֵאוֹת שָׁנָה בָּרִאשׁוֹן בְּאֶחָד לַחֹדֶשׁ</span> · <i>be-achat ve-shesh-meot shanah ba-rishon be-echad la-chodesh</i><br><span class="gloss">= one and-six-hundred year first-month one of-month</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(charvu_ha_mayim_me_al_ha_aretz, t1)</span><br><span class="gloss">= HOLDS(were-parched-the-waters-from-over-the-earth, t1)</span><br>CHARVU — &#x27;the waters were PARCHED/dried&#x27; (perfect, held as fact): CHAREV — BOTH its Torah tokens sit inside this single verse (the waters here; the ground&#x27;s face below): a two-token verb spent in one breath [letter fact].
+</td><td><span class="he">חָרְבוּ הַמַּיִם מֵעַל הָאָרֶץ</span> · <i>charvu ha-mayim me-al ha-aretz</i><br><span class="gloss">= were-parched waters over earth</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">remove(e22) ∧ Agent(e22, noach) ∧ Theme(e22, mikhseh_ha_tevah)</span><br><span class="gloss">= remove(e22) ∧ Agent(e22, Noach) ∧ Theme(e22, covering-the-ark)</span><br>VA-YASAR — &#x27;and Noach REMOVED the COVERING of the ark&#x27;: SUR (&#x27;remove/turn aside&#x27;) FIRST TOKEN of 55; MIKHSEH (&#x27;covering&#x27;) FIRST TOKEN of 16 — and tokens 2-16 are ALL sanctuary fabric: the Tabernacle&#x27;s covering (Exod 26-40) and the packed coverings of the march (Num 3-4): the ark&#x27;s lid is the word&#x27;s only non-sanctuary token — the first roof taken off in the corpus [letter fact].
+</td><td><span class="he">וַיָּסַר נֹחַ אֶת־מִכְסֵה הַתֵּבָה</span> · <i>va-yasar Noach et-mikhseh ha-tevah</i><br><span class="gloss">= he-removed Noach obj-marker·et-covering ark</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">see(e23) ∧ Agent(e23, noach) ∧ Theme(e23, pnei_ha_adamah)</span><br><span class="gloss">= see(e23) ∧ Agent(e23, Noach) ∧ Theme(e23, face-of-the-ground)</span><br>VA-YAR VE-HINNEH — &#x27;and he SAW, and BEHOLD&#x27;: the week&#x27;s inspection verb hands a man the whole horizon — and the letter withholds the verdict-word (no tov, no adjective at all): seeing without judging; TESTS stay empty [decision recorded].
+</td><td><span class="he">וַיַּרְא וְהִנֵּה חָרְבוּ פְּנֵי הָאֲדָמָה</span> · <i>va-yar ve-hinneh charvu pnei ha-adamah</i><br><span class="gloss">= he-saw behold were-parched face-of ground</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_hinneh_charvu_pnei_ha_adamah, t1)</span><br><span class="gloss">= HOLDS(and-behold-were-parched-face-of-the-ground, t1)</span><br>The seen state, held: the face of the ground — the adamah whose face the wipe cleared (7:23) — dried before his eyes (perfect, fact).
+</td><td><span class="he">וְהִנֵּה חָרְבוּ פְּנֵי הָאֲדָמָה</span> · <i>ve-hinneh charvu pnei ha-adamah</i><br><span class="gloss">= behold were-parched face-of ground</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The new year opens with a man on a roofless boat, looking at a world that dried while he waited.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_8_14 · Gen.8.14 · <span class='expr'>THE_EARTH_DRY</span></h3>
+<p><span class="he">וּבַחֹדֶשׁ הַשֵּׁנִי בְּשִׁבְעָה וְעֶשְׂרִים יוֹם לַחֹדֶשׁ יָבְשָׁה הָאָרֶץ</span> · <i>u-va-chodesh ha-sheni be-shivah ve-esrim yom la-chodesh yavshah ha-aretz</i> · [EN-AID/JPS] And in the second month, on the seven and twentieth day of the month, was the earth dry.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ובחדש השני בשבעה ועשרים יום לחדש</span> · <i>u-va-chodesh ha-sheni be-shivah ve-esrim yom la-chodesh</i> · month two, day twenty-seven (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">יבשה הארץ</span> · <i>yavshah ha-aretz</i> · THE EARTH WAS DRY — a two-word close</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ba_chodesh_ha_sheni_be_shivah_ve_esrim_yom, t1) ∧ HOLDS(yavshah_ha_aretz, t1)</span><br><span class="gloss">= HOLDS(in-the-of-month-the-second-in-seven-and-twenty-day, t1) ∧ HOLDS(was-dry-the-earth, t1)</span><br>Month 2, day 27 — TEN DAYS past the entry-date&#x27;s slot one year on (7:11&#x27;s month-2-day-17) [letter arithmetic; the solar/lunar-year doctrine built on the gap is the chain&#x27;s — named-only]. YAVSHAH HA-ARETZ — &#x27;the earth WAS DRY&#x27; (perfect, fact): YAVESH&#x27;s second and last Torah token (the first was the raven&#x27;s horizon, 8:7), the verb-root of 1:9&#x27;s dry-land noun — two dry-words on two dates (parched 8:13, dry 8:14), and the unit ends in a two-word verse-arm with everyone still inside: the earth is ready; the exit-word (8:15) belongs to the next unit.
+</td><td><span class="he">בְּשִׁבְעָה וְעֶשְׂרִים יוֹם לַחֹדֶשׁ יָבְשָׁה הָאָרֶץ</span> · <i>be-shivah ve-esrim yom la-chodesh yavshah ha-aretz</i><br><span class="gloss">= seven twenty day of-month was-dry earth</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Dry land, closed door: readiness without permission is the unit&#x27;s final state.</div>
+</div>
+<h2>State machine</h2>
+<div class="meta">The remembering (standalone; registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER).</div>
+<table><tr><th>state</th><th>meaning</th></tr>
+<tr><td><b>S_boot</b></td><td>Before 8:1 — all registers empty (standalone unit)</td></tr>
+<tr><td><b>S_remembered</b></td><td>After 8:1 — the remember-event (Agent: elohim — the Name back, speech not); the wind passes; the waters subside; noach/tevah/mayim flagged as read</td></tr>
+<tr><td><b>S_shut</b></td><td>After 8:2 — the near-verbatim shut-mirror: fountains and windows stopped (hapax verb, agentless), the rain restrained (agentless)</td></tr>
+<tr><td><b>S_receding</b></td><td>After 8:3-5 — the waters commute (going-and-returning); the 150-bracket closed; the ark RESTS on Ararat (month 7 day 17, fact); the tops appear by day 3&#x27;s formula (month 10 day 1, fact)</td></tr>
+<tr><td><b>S_inquiring</b></td><td>After 8:6-8 — the window he made opened (end of forty days); the raven shuttling; the dove sent to SEE whether the waters abated</td></tr>
+<tr><td><b>S_returned_empty</b></td><td>After 8:9 — no resting-place for the sole of her foot (fact, not FAIL); the return; the hand sent, the take, the bring-in</td></tr>
+<tr><td><b>S_leaf</b></td><td>After 8:10-11 — the first wait (verb one); the second sending; the dove back at the first evening since the week, olive leaf in mouth; Noach KNOWS the waters abated</td></tr>
+<tr><td><b>S_released</b></td><td>After 8:12 — the second wait (verb two, the hapax); the third sending; she returns no more — the verse ends on the lone word OD (&#x27;any more&#x27;)</td></tr>
+<tr><td><b>S_anchored_dry</b></td><td>After 8:13 — TIME t0 = year-601/month-1/day-1 (the second full calendar date); the waters parched (fact); the cover removed; the seeing without a verdict-word</td></tr>
+<tr><td><b>S_dry_sealed_in</b></td><td>After 8:14 — month 2 day 27: the earth dry (fact); queue empty as it began — readiness without permission; the exit-word belongs to 8:15</td></tr>
+</table><table><tr><th>from</th><th>to</th><th>via</th></tr>
+<tr><td>S_boot</td><td>S_remembered</td><td>STEP_Gn_8_1</td></tr>
+<tr><td>S_remembered</td><td>S_shut</td><td>STEP_Gn_8_2</td></tr>
+<tr><td>S_shut</td><td>S_receding</td><td>STEP_Gn_8_3</td></tr>
+<tr><td>S_receding</td><td>S_receding</td><td>STEP_Gn_8_4</td></tr>
+<tr><td>S_receding</td><td>S_receding</td><td>STEP_Gn_8_5</td></tr>
+<tr><td>S_receding</td><td>S_inquiring</td><td>STEP_Gn_8_6</td></tr>
+<tr><td>S_inquiring</td><td>S_inquiring</td><td>STEP_Gn_8_7</td></tr>
+<tr><td>S_inquiring</td><td>S_inquiring</td><td>STEP_Gn_8_8</td></tr>
+<tr><td>S_inquiring</td><td>S_returned_empty</td><td>STEP_Gn_8_9</td></tr>
+<tr><td>S_returned_empty</td><td>S_leaf</td><td>STEP_Gn_8_10</td></tr>
+<tr><td>S_leaf</td><td>S_leaf</td><td>STEP_Gn_8_11</td></tr>
+<tr><td>S_leaf</td><td>S_released</td><td>STEP_Gn_8_12</td></tr>
+<tr><td>S_released</td><td>S_anchored_dry</td><td>STEP_Gn_8_13</td></tr>
+<tr><td>S_anchored_dry</td><td>S_dry_sealed_in</td><td>STEP_Gn_8_14</td></tr>
+</table>
+<div class="note"><b>AFTER_S_dry_sealed_in</b> — TIME: t0 = shnat_601_chodesh_1_yom_1 — the register&#x27;s SECOND full calendar value (gen_17&#x27;s was year-600/month-2/day-17; this is new year&#x27;s day of the year after), anchored at the date ladder&#x27;s only year-bearing rung; the other rungs (month 7 day 17; month 10 day 1; month 2 day 27) held as facts — single-anchor decision recorded. WORLD: ZERO installs (+3 presupposed: noach, tevah, mayim — the standing trio). Standing facts (18): the two infinitive-pair gaits (going-and-returning; going-and-diminishing), the closed 150-bracket, the resting date and Ararat, the appearing tops, the end-of-forty, the raven&#x27;s shuttle-horizon, the dove&#x27;s question, the NO-RESTING-PLACE (fact, not FAIL — the clause Deut 28:65 will quote verbatim), the waters-on-all-the-earth, the second seven, the olive leaf, the no-more-return, the parched waters, the parched ground-face, the exit-less dry-date pair. EVENTS (23): the REMEMBER and the PASS with a NAMED divine agent (elohim — the register-level difference from nameless gen_18), the subside, the two agentless shuttings (the hapax stop-up + the restrain), the return and diminish, the REST (the builder&#x27;s name-sound), the window OPEN (sky-verb to hand), five SENDS (raven, dove, the hand, dove, dove — the Eden-expulsion verb turned scout), the dove&#x27;s return, the take, the BRING-IN (the boarding-verb gone causative), two WAITS in two different verbs (the second a Torah hapax), the evening COME, the KNOW (knowledge from a carried sign), the cover-REMOVE, and the SEE with no verdict-word. REGISTRY: ZERO writes (fifth unit running). SPECS: EMPTY THROUGHOUT — second zero-traffic queue in a row: the remembering commands nothing; the exit-command is 8:15&#x27;s (next unit). TESTS: EMPTY — the dove&#x27;s lo-matzah (&#x27;did not find&#x27;) held OUT of the register by decision (no oracle, no verdict-adjective; the see-verb appears only as purpose and as verdict-less looking). LEDGER: EMPTY. FLAGS (3): read_before_install x3 (noach, tevah, mayim). NO spec-delta. The machine ends dry and sealed-in: a new clock, a known answer, an empty queue — and no permission yet to leave.</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>The remembering — the Name back, speech not: after STEP_Gn_8_1</td><td>All registers empty (standalone unit).</td><td>flags noach/tevah/mayim as read-before-install; SPECS empty.<br><span class="gloss">= flags Noach/ark/waters as read-before-install; SPECS empty.</span></td><td><span class="he">וַיִּזְכֹּר אֱלֹהִים אֶת־נֹחַ</span> · <i>va-yizkor Elohim et-Noach</i><br><span class="gloss">= He-remembered God obj-marker·et-Noach</span></td></tr>
+<tr><td><b>S2</b></td><td>The waters commute and the 150-bracket closes: after STEP_Gn_8_3</td><td>S1 state + the shut-mirror (8:2).</td><td>Facts halokh_va_shov/mi_qetze_chamishim_u_meat_yom HOLD; SPECS empty.<br><span class="gloss">= Facts going-and-returning/from-at-the-end-of-fifty-and-hundred-day HOLD; SPECS empty.</span></td><td><span class="he">הָלוֹךְ וָשׁוֹב</span> · <i>halokh va-shov</i><br><span class="gloss">= going returning</span></td></tr>
+<tr><td><b>S3</b></td><td>The ark rests on Ararat, month seven day seventeen: after STEP_Gn_8_4</td><td>S2 state.</td><td>Facts ba_chodesh_ha_shevii_be_shivah_asar_yom/al_harei_ararat HOLD.<br><span class="gloss">= Facts in-the-of-month-the-seventh-in-seven-teen-day/over-mountains-of-Ararat HOLD.</span></td><td><span class="he">וַתָּנַח הַתֵּבָה</span> · <i>va-tanach ha-tevah</i><br><span class="gloss">= it-rested ark</span></td></tr>
+<tr><td><b>S4</b></td><td>The tops appear by day 3&#x27;s formula: after STEP_Gn_8_5</td><td>S3 state.</td><td>Facts niru_rashei_he_harim HOLD.<br><span class="gloss">= Facts were-seen-tops-of-he-mountains HOLD.</span></td><td><span class="he">נִרְאוּ רָאשֵׁי הֶהָרִים</span> · <i>niru rashei he-harim</i><br><span class="gloss">= were-seen tops-of mountain</span></td></tr>
+<tr><td><b>S5</b></td><td>No resting-place for the sole of her foot: after STEP_Gn_8_9</td><td>S4 state + the window, the raven, the dove&#x27;s question (8:6-8).</td><td>Facts lo_matzah_ha_yonah_manoach/ki_mayim_al_pnei_khol_ha_aretz HOLD; SPECS empty.<br><span class="gloss">= Facts not-found-the-dove-resting-place/that-waters-over-face-of-all-the-earth HOLD; SPECS empty.</span></td><td><span class="he">וְלֹא־מָצְאָה הַיּוֹנָה מָנוֹחַ לְכַף־רַגְלָהּ</span> · <i>ve-lo-matzah ha-yonah manoach le-khaf-raglah</i><br><span class="gloss">= and-not-found dove resting-place to-sole-of-her-foot</span></td></tr>
+<tr><td><b>S6</b></td><td>The olive leaf at the first evening since the week: after STEP_Gn_8_11</td><td>S5 state + the first wait and second sending (8:10).</td><td>Facts aleh_zayit_taraf_be_fiha HOLD.<br><span class="gloss">= Facts leaf-olive-freshly-plucked-in-her-mouth HOLD.</span></td><td><span class="he">עֲלֵה־זַיִת טָרָף בְּפִיהָ</span> · <i>aleh-zayit taraf be-fiha</i><br><span class="gloss">= leaf-olive freshly-plucked her-mouth</span></td></tr>
+<tr><td><b>S7</b></td><td>She returns no more — the last OD: after STEP_Gn_8_12</td><td>S6 state.</td><td>Facts ve_lo_yasfah_shuv_elav_od HOLD.<br><span class="gloss">= Facts and-not-did-again-return-to-him-again HOLD.</span></td><td><span class="he">וְלֹא־יָסְפָה שׁוּב־אֵלָיו עוֹד</span> · <i>ve-lo-yasfah shuv-elav od</i><br><span class="gloss">= and-not-did-again return-to-him again</span></td></tr>
+<tr><td><b>S8</b></td><td>New year&#x27;s day — the second calendar anchor: after STEP_Gn_8_13</td><td>S7 state.</td><td>TIME t0 = shnat_601_chodesh_1_yom_1; Facts charvu_ha_mayim/ve_hinneh_charvu_pnei_ha_adamah HOLD.<br><span class="gloss">= TIME t0 = year-of-601-of-month-1-day-1; Facts were-parched-the-waters/and-behold-were-parched-face-of-the-ground HOLD.</span></td><td><span class="he">בָּרִאשׁוֹן בְּאֶחָד לַחֹדֶשׁ</span> · <i>ba-rishon be-echad la-chodesh</i><br><span class="gloss">= first-month one of-month</span></td></tr>
+<tr><td><b>S9</b></td><td>The earth dry, the queue still empty: after STEP_Gn_8_14</td><td>S8 state.</td><td>Facts yavshah_ha_aretz HOLD; SPECS empty.<br><span class="gloss">= Facts was-dry-the-earth HOLD; SPECS empty.</span></td><td><span class="he">יָבְשָׁה הָאָרֶץ</span> · <i>yavshah ha-aretz</i><br><span class="gloss">= was-dry earth</span></td></tr>
+<tr><td><b>S10_negative</b></td><td>Negative: the machine&#x27;s ? stays guarded</td><td>A synthetic LET? demand (the machine&#x27;s own contract self-test).</td><td>LET? never auto-upgrades: resolution without citation must REFUSE; with a per-unit citation it may resolve — entries pop demands; nothing but citation moves a mood.</td><td></td></tr>
+<tr><td><b>S11_negative</b></td><td>Negative: flags never block</td><td>A synthetic commit with TESTS empty (the machine&#x27;s own contract self-test).</td><td>Cycle close with TESTS empty must be FLAGGED, never blocked.<br><span class="gloss">= Cycle close with TESTS empty must in FLAGGED, never blocked.</span></td><td></td></tr>
+</table>
+<h2>Exports (reusable patterns)</h2><table><tr><th>id</th><th>content</th></tr>
+<tr><td>EXPORT_remember_debut</td><td><span class="he">וַיִּזְכֹּר אֱלֹהִים אֶת־נֹחַ וְאֵת כָּל־הַחַיָּה</span> · <i>va-yizkor Elohim et-Noach ve-et kol-ha-chayah</i> · ZAKHAR (&#x27;remember&#x27;) — the remember-verb&#x27;s Torah debut, on Noach AND every animal together; the Name back on the page (Elohim x2, the span&#x27;s only name-tokens) with NO speech until 8:15 — the second speechless span but not a nameless one; career: the rainbow&#x27;s I-will-remember (9:15-16), Lot (19:29), Rachel (30:22), the butler who did not (40:14, 40:23); Onkelos renders a mindful STATE and levels the Name — dual-track</td></tr>
+<tr><td>EXPORT_wind_over_the_flood</td><td><span class="he">וַיַּעֲבֵר אֱלֹהִים רוּחַ עַל־הָאָרֶץ</span> · <i>va-yaaver Elohim ruach al-ha-aretz</i> · AVAR (&#x27;pass over&#x27;) debuts carrying RUACH (&#x27;wind/spirit&#x27;, token 7): 1:2&#x27;s hovering word set moving — the lexically real creation-mirror opening the reversal; the pass-verb&#x27;s career runs to Abram&#x27;s crossing (12:6) and the covenant-pieces (15:17); the subside-verb (shakhakh) is a two-token word shared only with God subsiding the murmurings (Num 17:20)</td></tr>
+<tr><td>EXPORT_shut_mirror_hapax</td><td><span class="he">וַיִּסָּכְרוּ מַעְיְנֹת תְּהוֹם וַאֲרֻבֹּת הַשָּׁמָיִם</span> · <i>va-yisakhru mayenot tehom va-arubot ha-shamayim</i> · 7:11&#x27;s double breach shut in ONE agentless verb — and the verb is a TORAH HAPAX (sakhar, &#x27;stop up&#x27;), not 7:16&#x27;s door-verb sagar: door and sky get different shut-words; the mirror is NEAR-verbatim — KOL (&#x27;all&#x27;) and RABBAH (&#x27;great&#x27;) dropped: the totalizers do not come back; the two-token window-word (arubot) closes its own bracket; the rain RESTRAINED by the verb whose third token restrains Tabernacle donations (Exod 36:6)</td></tr>
+<tr><td>EXPORT_the_ark_rests_on_the_name</td><td><span class="he">וַתָּנַח הַתֵּבָה … עַל הָרֵי אֲרָרָט</span> · <i>va-tanach ha-tevah … al harei Ararat</i> · NUACH (&#x27;rest&#x27;) debuts as the ark&#x27;s arrival-verb, on the consonants of NOACH&#x27;s own name (5:29 named him from the COMFORT-verb nacham — the letter plays the sound, not the etymology); career: God rests (Exod 20:11), the promised rest (Exod 33:14); the resting is dated month-7-day-17 — five months to the day from the breach — on the mountains that debuted drowned (gen_18) and now carry; Ararat a Torah hapax (Onkelos: Kardu — dual-track)</td></tr>
+<tr><td>EXPORT_day3_formula_reruns</td><td><span class="he">נִרְאוּ רָאשֵׁי הֶהָרִים</span> · <i>niru rashei he-harim</i> · the mountaintops APPEAR by creation&#x27;s own formula — the see-verb in niphal, the same verb and stem as 1:9&#x27;s ve-teraeh (&#x27;let the dry land BE SEEN&#x27;) [lexically verified]; the dry-root family completes the mirror: yavesh (&#x27;be dry&#x27;) — both Torah tokens in-span (the raven&#x27;s horizon 8:7, the earth&#x27;s last word 8:14) — is the verb-root of 1:9&#x27;s yabbashah (&#x27;dry land&#x27;)</td></tr>
+<tr><td>EXPORT_sendings_and_the_hand</td><td><span class="he">וַיְשַׁלַּח … וַיִּשְׁלַח יָדוֹ … וַיָּבֵא אֹתָהּ</span> · <i>va-yeshallach … va-yishlach yado … va-yave otah</i> · SHALACH (&#x27;send&#x27;): tokens 1-2 are the Eden EXPULSION (3:22-23); tokens 3-7 are this span&#x27;s five sendings — raven, dove, the HAND, dove, dove (birds in piel, the hand in qal): the exile-verb turned scout, and its fifth beat is a rescue reach; the take-verb&#x27;s next token takes the altar&#x27;s animals (8:20); the bring-in is BO (&#x27;come&#x27;) gone causative — gen_17&#x27;s self-boarding cargo now carried in by hand</td></tr>
+<tr><td>EXPORT_manoach_and_the_curse</td><td><span class="he">וְלֹא־מָצְאָה הַיּוֹנָה מָנוֹחַ לְכַף־רַגְלָהּ</span> · <i>ve-lo-matzah ha-yonah manoach le-khaf-raglah</i> · the dove FINDS no MANOACH (&#x27;resting-place&#x27;) — matza&#x27;s early triptych: no helper found (2:20), Noach found grace (6:8), the dove finds nothing (8:9); and manoach is a TWO-token Torah word whose only other token is Deut 28:65 — &#x27;no resting-place for the sole of your foot&#x27;: the exile-curse quotes the dove&#x27;s clause VERBATIM (DB-verified); encoded as FACT, not the corpus&#x27;s first FAIL — the TESTS register keeps its verdict-formula discipline</td></tr>
+<tr><td>EXPORT_leaf_evening_knowing</td><td><span class="he">עֲלֵה־זַיִת טָרָף בְּפִיהָ … לְעֵת עֶרֶב</span> · <i>aleh-zayit taraf be-fiha … le-et erev</i> · the dove returns at the FIRST EVENING since the week (erev tokens 1-6 = the creation refrain; token 7 = here) with ET (&#x27;time&#x27;) debuting inside the phrase; ALEH (&#x27;leaf&#x27;) — 3 Torah tokens: shame&#x27;s fig-leaves (3:7), this good-news leaf, the exile&#x27;s driven leaf (Lev 26:36); ZAYIT (&#x27;olive&#x27;) debuts en route to the lamp oil (Exod 27:20); TARAF (&#x27;freshly-plucked&#x27;) a Torah hapax; and Noach KNOWS — the inquiry closes in knowledge, not speech; the abate-root of that knowledge (qalal) is the root of 8:21&#x27;s never-again-CURSE</td></tr>
+<tr><td>EXPORT_two_waits_two_verbs</td><td><span class="he">וַיָּחֶל … וַיִּיָּחֶל</span> · <i>va-yachel … va-yiyachel</i> · the two seven-day waits come in two DIFFERENT wait-verbs — the chul-root (token 1 of 3), then the yachal-root, a TORAH HAPAX lemma: the letter spends a once-word on the second patience; 8:12 ends on the accent-isolated word OD (&#x27;any more&#x27;) — the dove&#x27;s story closes on a negated AGAIN; Onkelos levels both waits to one verb — the distinction does not survive translation</td></tr>
+<tr><td>EXPORT_new_year_cover_off</td><td><span class="he">בָּרִאשׁוֹן בְּאֶחָד לַחֹדֶשׁ … וַיָּסַר נֹחַ אֶת־מִכְסֵה הַתֵּבָה</span> · <i>ba-rishon be-echad la-chodesh … va-yasar Noach et-mikhseh ha-tevah</i> · the corpus&#x27;s SECOND full calendar date — year 601, month 1, day 1 — anchors the TIME register (single-anchor decision; the ladder&#x27;s other rungs held as facts), with RISHON (&#x27;first&#x27;) debuting inside the date (career: Exod 12:2&#x27;s first-of-months); MIKHSEH (&#x27;covering&#x27;) token 1 — every other Torah token is sanctuary fabric (Tabernacle and march-coverings); CHAREV (&#x27;be parched&#x27;) spends both its Torah tokens in one verse; the see-verb gets no verdict-word; 8:14&#x27;s exit-less close sits ten days past the entry-date&#x27;s slot one year on [letter arithmetic; the chain&#x27;s solar/lunar reading named-only]</td></tr>
+</table>
+<h2>Oral notes (named, tiered, dual-track — never merged)</h2>
+<div class="note"><span class="badge tier-o">observation</span> <b>Bavli Rosh Hashanah 11b-12a (the flood chronology — the Marcheshvan/Iyyar month-system debate on this span&#x27;s date ladder); Bavli Sanhedrin 108b (the raven&#x27;s retort; the dove&#x27;s bitter-olive prayer — also Eruvin 18b); Bereshit Rabbah 33 (the span; the dove and the leaf); Rashi at 8:1 (the remembering; the Name), 8:4 (the draught arithmetic), 8:5 (the reckonings), 8:7 (the raven), 8:11 (the olive&#x27;s bitterness) — gen_19 Tier-A queue</b><br><span class="he">וַיִּזְכֹּר אֱלֹהִים אֶת־נֹחַ</span> · <i>(queue — named only)</i> · Named, not read: the cache holds ZERO sources anchored to Gen 8:1-14 — thirteenth tripwire span. Detector classes predicted: the date-ladder harmonizations are a calendar-system class (doctrine from reconciling the span&#x27;s five dates); the raven dialogue is a narrative-gap-filling class; the bitter-olive teaching is a symbol-inversion class (the rescue-token read as a prayer for hard freedom over sweet dependence).
+<br><i>Queue entry — no claim made beyond the naming.</i></div>
+<div class="note"><span class="badge tier-v">verified</span> <b>Onkelos Genesis 8:1-14 — read Tier-A at derive time (14 sequential fetches, Data/FETCHLOG.md 2026-08-01)</b><br><span class="he">וּדְכִיר יְיָ יָת נֹחַ</span> · <i>u-dekhir YY yat Noach</i> · The span&#x27;s translation witness: the remember-EVENT rendered as a mindful STATE (&#x27;and the LORD was MINDFUL of Noach&#x27; — the buffer&#x27;s anti-interior move) with ELOHIM leveled both times to YY, the LORD-name — the letter&#x27;s name-texture erased (flagged); the waters given the REST-verb three verses early (ve-nachu, &#x27;and they rested&#x27; — diluting the Hebrew&#x27;s reserve of nuach for the ark; flagged); ARARAT renamed KARDU (the translator&#x27;s geography, a bolded variant; flagged); the sky-lattices and the ark-window MERGED into one kavva-word (&#x27;lattice&#x27;) where the letter separates arubot from chalon (flagged); the hand-send broken out of the send-run (ve-oshit, &#x27;he stretched out&#x27; — the five-beat anaphora reduced to four; flagged); the two wait-verbs leveled to one (ve-orikh both times; flagged); the hapax TARAF (&#x27;freshly-plucked&#x27;) absorbed as the Aramaic LEAF-word with TEVIR (&#x27;broken&#x27;) and a bolded NACHIT (&#x27;carried down&#x27;) variant (flagged). KEPT: the hapax stop-up verb in its own cognate (istekharu), the abate-root (qalliu — the road to 8:21 stays root-visible), the appearance-passive (itchaziu), manoach as menach (the Deut 28:65 echo survives), the dry-verbs in cognate, the digit-exact date ladder (the 150 again reversed big-first), the knowledge-event (vida Noach) — and the span&#x27;s speechlessness: no speech introduced anywhere.
+<br><i>Read from Data/sefaria_texts/ (local, gitignored; FETCHLOG is provenance). Dual-track; not merged.</i></div>
+<h2>Binary trees (ta'amim v3, glue bricks)</h2>
+<h3>Gen.8.1 · parser unique · 20 words</h3>
+<div class="meta"><span class="he">ויזכר אלהים את־נח ואת כל־החיה ואת־כל־הבהמה אשׁר אתו בתבה ויעבר אלהים רוח על־הארץ וישׁכו המים</span> · <i>va-yizkor Elohim et-nocha ve-et kal-ha-chaya ve-et-kal-ha-behema asher et-o ba-teva va-yaaver Elohim rucha al-ha-aretz va-yashoku ha-mayim</i> · God REMEMBERED Noach and every animal — a wind passed, the waters subsided. [EN-AID]</div>
+<pre>PHRASE (binary 20w) וַ/יִּזְכֹּ֤ר אֱלֹהִים֙ אֶת נֹ֔חַ וְ/אֵ֤ת כָּל …
+├── PHRASE (binary 13w) וַ/יִּזְכֹּ֤ר אֱלֹהִים֙ אֶת נֹ֔חַ וְ/אֵ֤ת כָּל …
+│   ├── PHRASE (binary 4w) וַ/יִּזְכֹּ֤ר אֱלֹהִים֙ אֶת נֹ֔חַ
+│   │   ├── [0-1] GLUE וַ/יִּזְכֹּ֤ר אֱלֹהִים֙ (pashta, rank=3)
+│   │   └── [2-3] GLUE אֶת נֹ֔חַ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 9w) וְ/אֵ֤ת כָּל הַֽ/חַיָּה֙ וְ/אֶת כָּל הַ/בְּהֵמָ…
+│       ├── PHRASE (binary 6w) וְ/אֵ֤ת כָּל הַֽ/חַיָּה֙ וְ/אֶת כָּל הַ/בְּהֵמָ…
+│       │   ├── [4-6] GLUE וְ/אֵ֤ת כָּל הַֽ/חַיָּה֙ (pashta, rank=3)
+│       │   └── [7-9] GLUE וְ/אֶת כָּל הַ/בְּהֵמָ֔ה (zaqef qatan, rank=2)
+│       └── PHRASE (binary 3w) אֲשֶׁ֥ר אִתּ֖/וֹ בַּ/תֵּבָ֑ה
+│           ├── [10-11] GLUE אֲשֶׁ֥ר אִתּ֖/וֹ (tifcha, rank=2)
+│           └── [12] בַּ/תֵּבָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) וַ/יַּעֲבֵ֨ר אֱלֹהִ֥ים ר֨וּחַ֙ עַל הָ/אָ֔רֶץ וַ…
+    ├── PHRASE (binary 5w) וַ/יַּעֲבֵ֨ר אֱלֹהִ֥ים ר֨וּחַ֙ עַל הָ/אָ֔רֶץ
+    │   ├── [13-15] GLUE וַ/יַּעֲבֵ֨ר אֱלֹהִ֥ים ר֨וּחַ֙ (pashta, rank=3)
+    │   └── [16-17] GLUE עַל הָ/אָ֔רֶץ (zaqef qatan, rank=2)
+    └── PHRASE (binary 2w) וַ/יָּשֹׁ֖כּוּ הַ/מָּֽיִם
+        ├── [18] וַ/יָּשֹׁ֖כּוּ (tifcha, rank=2)
+        └── [19] הַ/מָּֽיִם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.8.2 · parser unique · 9 words</h3>
+<div class="meta"><span class="he">ויסכרו מעינת תהום וארבת השׁמים ויכלא הגשׁם מן־השׁמים</span> · <i>va-yisakhru maynot tehom va-arubot ha-shamayim va-yikale ha-geshem min-ha-shamayim</i> · Fountains and windows stopped (a once-word), the rain restrained. [EN-AID]</div>
+<pre>PHRASE (binary 9w) וַ/יִּסָּֽכְרוּ֙ מַעְיְנֹ֣ת תְּה֔וֹם וַֽ/אֲרֻבּ…
+├── PHRASE (binary 5w) וַ/יִּסָּֽכְרוּ֙ מַעְיְנֹ֣ת תְּה֔וֹם וַֽ/אֲרֻבּ…
+│   ├── PHRASE (binary 3w) וַ/יִּסָּֽכְרוּ֙ מַעְיְנֹ֣ת תְּה֔וֹם
+│   │   ├── [0] וַ/יִּסָּֽכְרוּ֙ (pashta, rank=3)
+│   │   └── [1-2] GLUE מַעְיְנֹ֣ת תְּה֔וֹם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 2w) וַֽ/אֲרֻבֹּ֖ת הַ/שָּׁמָ֑יִם
+│       ├── [3] וַֽ/אֲרֻבֹּ֖ת (tifcha, rank=2)
+│       └── [4] הַ/שָּׁמָ֑יִם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וַ/יִּכָּלֵ֥א הַ/גֶּ֖שֶׁם מִן הַ/שָּׁמָֽיִם
+    ├── [5-6] GLUE וַ/יִּכָּלֵ֥א הַ/גֶּ֖שֶׁם (tifcha, rank=2)
+    └── [7-8] GLUE מִן הַ/שָּׁמָֽיִם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.8.3 · parser unique · 12 words</h3>
+<div class="meta"><span class="he">וישׁבו המים מעל הארץ הלוך ושׁוב ויחסרו המים מקצה חמשׁים ומאת יום</span> · <i>va-yashuvu ha-mayim me-al ha-aretz halokh va-shov va-yachsru ha-mayim mi-qetze chamishim u-meat yom</i> · The waters returned, going and returning — the 150 days closed. [EN-AID]</div>
+<pre>PHRASE (binary 12w) וַ/יָּשֻׁ֧בוּ הַ/מַּ֛יִם מֵ/עַ֥ל הָ/אָ֖רֶץ הָל֣…
+├── PHRASE (binary 6w) וַ/יָּשֻׁ֧בוּ הַ/מַּ֛יִם מֵ/עַ֥ל הָ/אָ֖רֶץ הָל֣…
+│   ├── PHRASE (binary 4w) וַ/יָּשֻׁ֧בוּ הַ/מַּ֛יִם מֵ/עַ֥ל הָ/אָ֖רֶץ
+│   │   ├── [0-1] GLUE וַ/יָּשֻׁ֧בוּ הַ/מַּ֛יִם (tevir, rank=3)
+│   │   └── [2-3] GLUE מֵ/עַ֥ל הָ/אָ֖רֶץ (tifcha, rank=2)
+│   └── [4-5] GLUE הָל֣וֹךְ וָ/שׁ֑וֹב (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) וַ/יַּחְסְר֣וּ הַ/מַּ֔יִם מִ/קְצֵ֕ה חֲמִשִּׁ֥ים…
+    ├── [6-7] GLUE וַ/יַּחְסְר֣וּ הַ/מַּ֔יִם (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) מִ/קְצֵ֕ה חֲמִשִּׁ֥ים וּ/מְאַ֖ת יֽוֹם
+        ├── [8] מִ/קְצֵ֕ה (zaqef gadol, rank=2)
+        └── PHRASE (binary 3w) חֲמִשִּׁ֥ים וּ/מְאַ֖ת יֽוֹם
+            ├── [9-10] GLUE חֲמִשִּׁ֥ים וּ/מְאַ֖ת (tifcha, rank=2)
+            └── [11] יֽוֹם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.8.4 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">ותנח התבה בחדשׁ השׁביעי בשׁבעה־עשׂר יום לחדשׁ על הרי אררט</span> · <i>va-tanach ha-teva ba-chodesh ha-shevii be-shiva-asar yom la-chodesh al hare ararat</i> · The ark RESTED — month 7, day 17 — on the mountains of Ararat. [EN-AID]</div>
+<pre>PHRASE (binary 11w) וַ/תָּ֤נַח הַ/תֵּבָה֙ בַּ/חֹ֣דֶשׁ הַ/שְּׁבִיעִ֔…
+├── PHRASE (binary 8w) וַ/תָּ֤נַח הַ/תֵּבָה֙ בַּ/חֹ֣דֶשׁ הַ/שְּׁבִיעִ֔…
+│   ├── PHRASE (binary 4w) וַ/תָּ֤נַח הַ/תֵּבָה֙ בַּ/חֹ֣דֶשׁ הַ/שְּׁבִיעִ֔י
+│   │   ├── [0-1] GLUE וַ/תָּ֤נַח הַ/תֵּבָה֙ (pashta, rank=3)
+│   │   └── [2-3] GLUE בַּ/חֹ֣דֶשׁ הַ/שְּׁבִיעִ֔י (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) בְּ/שִׁבְעָה עָשָׂ֥ר י֖וֹם לַ/חֹ֑דֶשׁ
+│       ├── [4-6] GLUE בְּ/שִׁבְעָה עָשָׂ֥ר י֖וֹם (tifcha, rank=2)
+│       └── [7] לַ/חֹ֑דֶשׁ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) עַ֖ל הָרֵ֥י אֲרָרָֽט
+    ├── [8] עַ֖ל (tifcha, rank=2)
+    └── [9-10] GLUE הָרֵ֥י אֲרָרָֽט (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.8.5 · parser unique · 13 words</h3>
+<div class="meta"><span class="he">והמים היו הלוך וחסור עד החדשׁ העשׂירי בעשׂירי באחד לחדשׁ נראו ראשׁי ההרים</span> · <i>ve-ha-mayim hayu halokh ve-chasor ad ha-chodesh ha-asiri ba-asiri be-echad la-chodesh niru rashe he-harim</i> · Waning to month 10, day 1: the mountaintops APPEARED. [EN-AID]</div>
+<pre>PHRASE (binary 13w) וְ/הַ/מַּ֗יִם הָיוּ֙ הָל֣וֹךְ וְ/חָס֔וֹר עַ֖ד ה…
+├── PHRASE (binary 7w) וְ/הַ/מַּ֗יִם הָיוּ֙ הָל֣וֹךְ וְ/חָס֔וֹר עַ֖ד ה…
+│   ├── PHRASE (binary 4w) וְ/הַ/מַּ֗יִם הָיוּ֙ הָל֣וֹךְ וְ/חָס֔וֹר
+│   │   ├── [0] וְ/הַ/מַּ֗יִם (revia, rank=3)
+│   │   └── PHRASE (binary 3w) הָיוּ֙ הָל֣וֹךְ וְ/חָס֔וֹר
+│   │       ├── [1] הָיוּ֙ (pashta, rank=3)
+│   │       └── [2-3] GLUE הָל֣וֹךְ וְ/חָס֔וֹר (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) עַ֖ד הַ/חֹ֣דֶשׁ הָֽ/עֲשִׂירִ֑י
+│       ├── [4] עַ֖ד (tifcha, rank=2)
+│       └── [5-6] GLUE הַ/חֹ֣דֶשׁ הָֽ/עֲשִׂירִ֑י (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) בָּֽ/עֲשִׂירִי֙ בְּ/אֶחָ֣ד לַ/חֹ֔דֶשׁ נִרְא֖וּ …
+    ├── PHRASE (binary 3w) בָּֽ/עֲשִׂירִי֙ בְּ/אֶחָ֣ד לַ/חֹ֔דֶשׁ
+    │   ├── [7] בָּֽ/עֲשִׂירִי֙ (pashta, rank=3)
+    │   └── [8-9] GLUE בְּ/אֶחָ֣ד לַ/חֹ֔דֶשׁ (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) נִרְא֖וּ רָאשֵׁ֥י הֶֽ/הָרִֽים
+        ├── [10] נִרְא֖וּ (tifcha, rank=2)
+        └── [11-12] GLUE רָאשֵׁ֥י הֶֽ/הָרִֽים (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.8.6 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">ויהי מקץ ארבעים יום ויפתח נח את־חלון התבה אשׁר עשׂה</span> · <i>va-yehi mi-qetz arbaim yom va-yiftach nocha et-chalon ha-teva asher asa</i> · At the end of forty days Noach opened the window he had made. [EN-AID]</div>
+<pre>PHRASE (binary 11w) וַֽ/יְהִ֕י מִ/קֵּ֖ץ אַרְבָּעִ֣ים י֑וֹם וַ/יִּפְ…
+├── PHRASE (binary 4w) וַֽ/יְהִ֕י מִ/קֵּ֖ץ אַרְבָּעִ֣ים י֑וֹם
+│   ├── [0] וַֽ/יְהִ֕י (zaqef gadol, rank=2)
+│   └── PHRASE (binary 3w) מִ/קֵּ֖ץ אַרְבָּעִ֣ים י֑וֹם
+│       ├── [1] מִ/קֵּ֖ץ (tifcha, rank=2)
+│       └── [2-3] GLUE אַרְבָּעִ֣ים י֑וֹם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) וַ/יִּפְתַּ֣ח נֹ֔חַ אֶת חַלּ֥וֹן הַ/תֵּבָ֖ה אֲש…
+    ├── [4-5] GLUE וַ/יִּפְתַּ֣ח נֹ֔חַ (zaqef qatan, rank=2)
+    └── PHRASE (binary 5w) אֶת חַלּ֥וֹן הַ/תֵּבָ֖ה אֲשֶׁ֥ר עָשָֽׂה
+        ├── [6-8] GLUE אֶת חַלּ֥וֹן הַ/תֵּבָ֖ה (tifcha, rank=2)
+        └── [9-10] GLUE אֲשֶׁ֥ר עָשָֽׂה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.8.7 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">וישׁלח את־הערב ויצא יצוא ושׁוב עד־יבשׁת המים מעל הארץ</span> · <i>va-yeshalach et-ha-orev va-yetze yatzo va-shov ad-yevoshet ha-mayim me-al ha-aretz</i> · The raven: out and back, out and back, until the drying. [EN-AID]</div>
+<pre>PHRASE (binary 11w) וַ/יְשַׁלַּ֖ח אֶת הָֽ/עֹרֵ֑ב וַ/יֵּצֵ֤א יָצוֹא֙…
+├── PHRASE (binary 3w) וַ/יְשַׁלַּ֖ח אֶת הָֽ/עֹרֵ֑ב
+│   ├── [0] וַ/יְשַׁלַּ֖ח (tifcha, rank=2)
+│   └── [1-2] GLUE אֶת הָֽ/עֹרֵ֑ב (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) וַ/יֵּצֵ֤א יָצוֹא֙ וָ/שׁ֔וֹב עַד יְבֹ֥שֶׁת הַ/מ…
+    ├── PHRASE (binary 3w) וַ/יֵּצֵ֤א יָצוֹא֙ וָ/שׁ֔וֹב
+    │   ├── [3-4] GLUE וַ/יֵּצֵ֤א יָצוֹא֙ (pashta, rank=3)
+    │   └── [5] וָ/שׁ֔וֹב (zaqef qatan, rank=2)
+    └── PHRASE (binary 5w) עַד יְבֹ֥שֶׁת הַ/מַּ֖יִם מֵ/עַ֥ל הָ/אָֽרֶץ
+        ├── [6-8] GLUE עַד יְבֹ֥שֶׁת הַ/מַּ֖יִם (tifcha, rank=2)
+        └── [9-10] GLUE מֵ/עַ֥ל הָ/אָֽרֶץ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.8.8 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">וישׁלח את־היונה מאתו לראות הקלו המים מעל פני האדמה</span> · <i>va-yeshalach et-ha-yona me-et-o li-reot ha-qalu ha-mayim me-al pene ha-adama</i> · The dove sent — to SEE whether the waters had abated. [EN-AID]</div>
+<pre>PHRASE (binary 10w) וַ/יְשַׁלַּ֥ח אֶת הַ/יּוֹנָ֖ה מֵ/אִתּ֑/וֹ לִ/רְ…
+├── PHRASE (binary 4w) וַ/יְשַׁלַּ֥ח אֶת הַ/יּוֹנָ֖ה מֵ/אִתּ֑/וֹ
+│   ├── [0-2] GLUE וַ/יְשַׁלַּ֥ח אֶת הַ/יּוֹנָ֖ה (tifcha, rank=2)
+│   └── [3] מֵ/אִתּ֑/וֹ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) לִ/רְאוֹת֙ הֲ/קַ֣לּוּ הַ/מַּ֔יִם מֵ/עַ֖ל פְּנֵ֥…
+    ├── PHRASE (binary 3w) לִ/רְאוֹת֙ הֲ/קַ֣לּוּ הַ/מַּ֔יִם
+    │   ├── [4] לִ/רְאוֹת֙ (pashta, rank=3)
+    │   └── [5-6] GLUE הֲ/קַ֣לּוּ הַ/מַּ֔יִם (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) מֵ/עַ֖ל פְּנֵ֥י הָֽ/אֲדָמָֽה
+        ├── [7] מֵ/עַ֖ל (tifcha, rank=2)
+        └── [8-9] GLUE פְּנֵ֥י הָֽ/אֲדָמָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.8.9 · parser unique · 24 words</h3>
+<div class="meta"><span class="he">ולא־מצאה היונה מנוח לכף־רגלה ותשׁב אליו אל־התבה כי־מים על־פני כל־הארץ וישׁלח ידו ויקחה ויבא אתה אליו אל־התבה</span> · <i>ve-lo-matza ha-yona manocha le-khaf-ragla-ה va-tashav elay-v el-ha-teva ki-mayim al-pene khal-ha-aretz va-yishlach yad-o va-yiqache-ha va-yave et-ה elay-v el-ha-teva</i> · No resting-place for her foot&#x27;s sole — the hand, the take, the bringing-in. [EN-AID]</div>
+<pre>PHRASE (binary 24w) וְ/לֹֽא מָצְאָה֩ הַ/יּוֹנָ֨ה מָנ֜וֹחַ לְ/כַף רַ…
+├── PHRASE (binary 16w) וְ/לֹֽא מָצְאָה֩ הַ/יּוֹנָ֨ה מָנ֜וֹחַ לְ/כַף רַ…
+│   ├── PHRASE (binary 10w) וְ/לֹֽא מָצְאָה֩ הַ/יּוֹנָ֨ה מָנ֜וֹחַ לְ/כַף רַ…
+│   │   ├── PHRASE (binary 6w) וְ/לֹֽא מָצְאָה֩ הַ/יּוֹנָ֨ה מָנ֜וֹחַ לְ/כַף רַ…
+│   │   │   ├── [0-3] GLUE וְ/לֹֽא מָצְאָה֩ הַ/יּוֹנָ֨ה מָנ֜וֹחַ (geresh, rank=4)
+│   │   │   └── [4-5] GLUE לְ/כַף רַגְלָ֗/הּ (revia, rank=3)
+│   │   └── PHRASE (binary 4w) וַ/תָּ֤שָׁב אֵלָי/ו֙ אֶל הַ/תֵּבָ֔ה
+│   │       ├── [6-7] GLUE וַ/תָּ֤שָׁב אֵלָי/ו֙ (pashta, rank=3)
+│   │       └── [8-9] GLUE אֶל הַ/תֵּבָ֔ה (zaqef qatan, rank=2)
+│   └── PHRASE (binary 6w) כִּי מַ֖יִם עַל פְּנֵ֣י כָל הָ/אָ֑רֶץ
+│       ├── [10-11] GLUE כִּי מַ֖יִם (tifcha, rank=2)
+│       └── [12-15] GLUE עַל פְּנֵ֣י כָל הָ/אָ֑רֶץ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) וַ/יִּשְׁלַ֤ח יָד/וֹ֙ וַ/יִּקָּחֶ֔/הָ וַ/יָּבֵ֥…
+    ├── PHRASE (binary 3w) וַ/יִּשְׁלַ֤ח יָד/וֹ֙ וַ/יִּקָּחֶ֔/הָ
+    │   ├── [16-17] GLUE וַ/יִּשְׁלַ֤ח יָד/וֹ֙ (pashta, rank=3)
+    │   └── [18] וַ/יִּקָּחֶ֔/הָ (zaqef qatan, rank=2)
+    └── PHRASE (binary 5w) וַ/יָּבֵ֥א אֹתָ֛/הּ אֵלָ֖י/ו אֶל הַ/תֵּבָֽה
+        ├── PHRASE (binary 3w) וַ/יָּבֵ֥א אֹתָ֛/הּ אֵלָ֖י/ו
+        │   ├── [19-20] GLUE וַ/יָּבֵ֥א אֹתָ֛/הּ (tevir, rank=3)
+        │   └── [21] אֵלָ֖י/ו (tifcha, rank=2)
+        └── [22-23] GLUE אֶל הַ/תֵּבָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.8.10 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">ויחל עוד שׁבעת ימים אחרים ויסף שׁלח את־היונה מן־התבה</span> · <i>va-yachel od shivat yamim acherim va-yosef shalach et-ha-yona min-ha-teva</i> · He waited another seven days and sent the dove again. [EN-AID]</div>
+<pre>PHRASE (binary 11w) וַ/יָּ֣חֶל ע֔וֹד שִׁבְעַ֥ת יָמִ֖ים אֲחֵרִ֑ים וַ…
+├── PHRASE (binary 5w) וַ/יָּ֣חֶל ע֔וֹד שִׁבְעַ֥ת יָמִ֖ים אֲחֵרִ֑ים
+│   ├── [0-1] GLUE וַ/יָּ֣חֶל ע֔וֹד (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) שִׁבְעַ֥ת יָמִ֖ים אֲחֵרִ֑ים
+│       ├── [2-3] GLUE שִׁבְעַ֥ת יָמִ֖ים (tifcha, rank=2)
+│       └── [4] אֲחֵרִ֑ים (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) וַ/יֹּ֛סֶף שַׁלַּ֥ח אֶת הַ/יּוֹנָ֖ה מִן הַ/תֵּב…
+    ├── PHRASE (binary 4w) וַ/יֹּ֛סֶף שַׁלַּ֥ח אֶת הַ/יּוֹנָ֖ה
+    │   ├── [5] וַ/יֹּ֛סֶף (tevir, rank=3)
+    │   └── [6-8] GLUE שַׁלַּ֥ח אֶת הַ/יּוֹנָ֖ה (tifcha, rank=2)
+    └── [9-10] GLUE מִן הַ/תֵּבָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.8.11 · parser unique · 17 words</h3>
+<div class="meta"><span class="he">ותבא אליו היונה לעת ערב והנה עלה־זית טרף בפיה וידע נח כי־קלו המים מעל הארץ</span> · <i>va-tavo elay-v ha-yona le-et erev ve-hine ale-zayit taraf be-fi-ha va-yeda nocha ki-qalu ha-mayim me-al ha-aretz</i> · At evening-time an olive leaf, freshly plucked — and Noach KNEW. [EN-AID]</div>
+<pre>PHRASE (binary 17w) וַ/תָּבֹ֨א אֵלָ֤י/ו הַ/יּוֹנָה֙ לְ/עֵ֣ת עֶ֔רֶב …
+├── PHRASE (binary 10w) וַ/תָּבֹ֨א אֵלָ֤י/ו הַ/יּוֹנָה֙ לְ/עֵ֣ת עֶ֔רֶב …
+│   ├── PHRASE (binary 5w) וַ/תָּבֹ֨א אֵלָ֤י/ו הַ/יּוֹנָה֙ לְ/עֵ֣ת עֶ֔רֶב
+│   │   ├── [0-2] GLUE וַ/תָּבֹ֨א אֵלָ֤י/ו הַ/יּוֹנָה֙ (pashta, rank=3)
+│   │   └── [3-4] GLUE לְ/עֵ֣ת עֶ֔רֶב (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) וְ/הִנֵּ֥ה עֲלֵה זַ֖יִת טָרָ֣ף בְּ/פִ֑י/הָ
+│       ├── [5-7] GLUE וְ/הִנֵּ֥ה עֲלֵה זַ֖יִת (tifcha, rank=2)
+│       └── [8-9] GLUE טָרָ֣ף בְּ/פִ֑י/הָ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) וַ/יֵּ֣דַע נֹ֔חַ כִּי קַ֥לּוּ הַ/מַּ֖יִם מֵ/עַ֥…
+    ├── [10-11] GLUE וַ/יֵּ֣דַע נֹ֔חַ (zaqef qatan, rank=2)
+    └── PHRASE (binary 5w) כִּי קַ֥לּוּ הַ/מַּ֖יִם מֵ/עַ֥ל הָ/אָֽרֶץ
+        ├── [12-14] GLUE כִּי קַ֥לּוּ הַ/מַּ֖יִם (tifcha, rank=2)
+        └── [15-16] GLUE מֵ/עַ֥ל הָ/אָֽרֶץ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.8.12 · parser unique · 13 words</h3>
+<div class="meta"><span class="he">וייחל עוד שׁבעת ימים אחרים וישׁלח את־היונה ולא־יספה שׁוב־אליו עוד</span> · <i>va-yiyachel od shivat yamim acherim va-yeshalach et-ha-yona ve-lo-yasfa shuv-elay-v od</i> · Another seven days, a third sending — she returned no more. [EN-AID]</div>
+<pre>PHRASE (binary 13w) וַ/יִּיָּ֣חֶל ע֔וֹד שִׁבְעַ֥ת יָמִ֖ים אֲחֵרִ֑ים…
+├── PHRASE (binary 5w) וַ/יִּיָּ֣חֶל ע֔וֹד שִׁבְעַ֥ת יָמִ֖ים אֲחֵרִ֑ים
+│   ├── [0-1] GLUE וַ/יִּיָּ֣חֶל ע֔וֹד (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) שִׁבְעַ֥ת יָמִ֖ים אֲחֵרִ֑ים
+│       ├── [2-3] GLUE שִׁבְעַ֥ת יָמִ֖ים (tifcha, rank=2)
+│       └── [4] אֲחֵרִ֑ים (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) וַ/יְשַׁלַּח֙ אֶת הַ/יּוֹנָ֔ה וְ/לֹֽא יָסְפָ֥ה …
+    ├── PHRASE (binary 3w) וַ/יְשַׁלַּח֙ אֶת הַ/יּוֹנָ֔ה
+    │   ├── [5] וַ/יְשַׁלַּח֙ (pashta, rank=3)
+    │   └── [6-7] GLUE אֶת הַ/יּוֹנָ֔ה (zaqef qatan, rank=2)
+    └── PHRASE (binary 5w) וְ/לֹֽא יָסְפָ֥ה שׁוּב אֵלָ֖י/ו עֽוֹד
+        ├── [8-11] GLUE וְ/לֹֽא יָסְפָ֥ה שׁוּב אֵלָ֖י/ו (tifcha, rank=2)
+        └── [12] עֽוֹד (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.8.13 · parser unique · 22 words</h3>
+<div class="meta"><span class="he">ויהי באחת ושׁשׁ־מאות שׁנה בראשׁון באחד לחדשׁ חרבו המים מעל הארץ ויסר נח את־מכסה התבה וירא והנה חרבו פני האדמה</span> · <i>va-yehi be-achat ve-shesh-meot shana ba-rishon be-echad la-chodesh charvu ha-mayim me-al ha-aretz va-yasar nocha et-mikhse ha-teva va-yar ve-hine charvu pene ha-adama</i> · Year 601, month 1, day 1: the cover off — the ground&#x27;s face dried. [EN-AID]</div>
+<pre>PHRASE (binary 22w) וַֽ֠/יְהִי בְּ/אַחַ֨ת וְ/שֵׁשׁ מֵא֜וֹת שָׁנָ֗ה …
+├── PHRASE (binary 12w) וַֽ֠/יְהִי בְּ/אַחַ֨ת וְ/שֵׁשׁ מֵא֜וֹת שָׁנָ֗ה …
+│   ├── PHRASE (binary 8w) וַֽ֠/יְהִי בְּ/אַחַ֨ת וְ/שֵׁשׁ מֵא֜וֹת שָׁנָ֗ה …
+│   │   ├── PHRASE (binary 5w) וַֽ֠/יְהִי בְּ/אַחַ֨ת וְ/שֵׁשׁ מֵא֜וֹת שָׁנָ֗ה
+│   │   │   ├── [0] וַֽ֠/יְהִי (telisha gedola, rank=4)
+│   │   │   └── PHRASE (binary 4w) בְּ/אַחַ֨ת וְ/שֵׁשׁ מֵא֜וֹת שָׁנָ֗ה
+│   │   │       ├── [1-3] GLUE בְּ/אַחַ֨ת וְ/שֵׁשׁ מֵא֜וֹת (geresh, rank=4)
+│   │   │       └── [4] שָׁנָ֗ה (revia, rank=3)
+│   │   └── PHRASE (binary 3w) בָּֽ/רִאשׁוֹן֙ בְּ/אֶחָ֣ד לַ/חֹ֔דֶשׁ
+│   │       ├── [5] בָּֽ/רִאשׁוֹן֙ (pashta, rank=3)
+│   │       └── [6-7] GLUE בְּ/אֶחָ֣ד לַ/חֹ֔דֶשׁ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) חָֽרְב֥וּ הַ/מַּ֖יִם מֵ/עַ֣ל הָ/אָ֑רֶץ
+│       ├── [8-9] GLUE חָֽרְב֥וּ הַ/מַּ֖יִם (tifcha, rank=2)
+│       └── [10-11] GLUE מֵ/עַ֣ל הָ/אָ֑רֶץ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 10w) וַ/יָּ֤סַר נֹ֨חַ֙ אֶת מִכְסֵ֣ה הַ/תֵּבָ֔ה וַ/יּ…
+    ├── PHRASE (binary 5w) וַ/יָּ֤סַר נֹ֨חַ֙ אֶת מִכְסֵ֣ה הַ/תֵּבָ֔ה
+    │   ├── [12-13] GLUE וַ/יָּ֤סַר נֹ֨חַ֙ (pashta, rank=3)
+    │   └── [14-16] GLUE אֶת מִכְסֵ֣ה הַ/תֵּבָ֔ה (zaqef qatan, rank=2)
+    └── PHRASE (binary 5w) וַ/יַּ֕רְא וְ/הִנֵּ֥ה חָֽרְב֖וּ פְּנֵ֥י הָֽ/אֲד…
+        ├── [17] וַ/יַּ֕רְא (zaqef gadol, rank=2)
+        └── PHRASE (binary 4w) וְ/הִנֵּ֥ה חָֽרְב֖וּ פְּנֵ֥י הָֽ/אֲדָמָֽה
+            ├── [18-19] GLUE וְ/הִנֵּ֥ה חָֽרְב֖וּ (tifcha, rank=2)
+            └── [20-21] GLUE פְּנֵ֥י הָֽ/אֲדָמָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.8.14 · parser unique · 8 words</h3>
+<div class="meta"><span class="he">ובחדשׁ השׁני בשׁבעה ועשׂרים יום לחדשׁ יבשׁה הארץ</span> · <i>u-va-chodesh ha-sheni be-shiva ve-esrim yom la-chodesh yavsha ha-aretz</i> · Month 2, day 27: the earth was dry. [EN-AID]</div>
+<pre>PHRASE (binary 8w) וּ/בַ/חֹ֨דֶשׁ֙ הַ/שֵּׁנִ֔י בְּ/שִׁבְעָ֧ה וְ/עֶש…
+├── PHRASE (binary 6w) וּ/בַ/חֹ֨דֶשׁ֙ הַ/שֵּׁנִ֔י בְּ/שִׁבְעָ֧ה וְ/עֶש…
+│   ├── PHRASE (binary 2w) וּ/בַ/חֹ֨דֶשׁ֙ הַ/שֵּׁנִ֔י
+│   │   ├── [0] וּ/בַ/חֹ֨דֶשׁ֙ (pashta, rank=3)
+│   │   └── [1] הַ/שֵּׁנִ֔י (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) בְּ/שִׁבְעָ֧ה וְ/עֶשְׂרִ֛ים י֖וֹם לַ/חֹ֑דֶשׁ
+│       ├── PHRASE (binary 3w) בְּ/שִׁבְעָ֧ה וְ/עֶשְׂרִ֛ים י֖וֹם
+│       │   ├── [2-3] GLUE בְּ/שִׁבְעָ֧ה וְ/עֶשְׂרִ֛ים (tevir, rank=3)
+│       │   └── [4] י֖וֹם (tifcha, rank=2)
+│       └── [5] לַ/חֹ֑דֶשׁ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 2w) יָבְשָׁ֖ה הָ/אָֽרֶץ
+    ├── [6] יָבְשָׁ֖ה (tifcha, rank=2)
+    └── [7] הָ/אָֽרֶץ (silluq (verse-end emperor), rank=1)
+</pre>
+<h2>Word coverage — 192/192 words with named roles</h2>
+<table><tr><th>ref</th><th>#</th><th>Hebrew</th><th>translit</th><th>English</th><th>role</th><th>kind</th><th>rule</th></tr>
+<tr><td>Gen.8.1</td><td>0</td><td class='he-cell'>ויזכר</td><td>va-yizkor</td><td>and-He-remembered</td><td>ZAKHAR_FIRST_TOKEN_rainbow_next</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.1</td><td>1</td><td class='he-cell'>אלהים</td><td>Elohim</td><td>God</td><td>ELOHIM_name_back_no_speech</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.1</td><td>2</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.8.1</td><td>3</td><td class='he-cell'>נח</td><td>nocha</td><td>Noah</td><td>name_nocha</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.1</td><td>4</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.8.1</td><td>5</td><td class='he-cell'>כל</td><td>kal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.1</td><td>6</td><td class='he-cell'>החיה</td><td>ha-chaya</td><td>the-beast</td><td>the-beast</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.1</td><td>7</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.8.1</td><td>8</td><td class='he-cell'>כל</td><td>kal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.1</td><td>9</td><td class='he-cell'>הבהמה</td><td>ha-behema</td><td>the-livestock</td><td>the-livestock</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.1</td><td>10</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>which</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.1</td><td>11</td><td class='he-cell'>אתו</td><td>et-o</td><td>with-him</td><td>with-him</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.1</td><td>12</td><td class='he-cell'>בתבה</td><td>ba-teva</td><td>in-box</td><td>in-box</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.1</td><td>13</td><td class='he-cell'>ויעבר</td><td>va-yaaver</td><td>and-He-passed</td><td>AVAR_FIRST_TOKEN_covenant_pieces_next</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.1</td><td>14</td><td class='he-cell'>אלהים</td><td>Elohim</td><td>God</td><td>the_acting_name</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.1</td><td>15</td><td class='he-cell'>רוח</td><td>rucha</td><td>wind/spirit</td><td>RUACH_token_7_1_2_echo</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.1</td><td>16</td><td class='he-cell'>על</td><td>al</td><td>over</td><td>over</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.1</td><td>17</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.1</td><td>18</td><td class='he-cell'>וישכו</td><td>va-yashoku</td><td>and-they-subsided</td><td>SHAKHAKH_two_token_murmurings_twin</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.1</td><td>19</td><td class='he-cell'>המים</td><td>ha-mayim</td><td>the-waters</td><td>the-waters</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.2</td><td>0</td><td class='he-cell'>ויסכרו</td><td>va-yisakhru</td><td>and-were-stopped-up</td><td>SAKHAR_TORAH_HAPAX_not_the_door_verb</td><td>logic_bearing</td><td class='cite'>TIR-032</td></tr>
+<tr><td>Gen.8.2</td><td>1</td><td class='he-cell'>מעינת</td><td>maynot</td><td>fountains-of</td><td>mayan_token_2_of_3</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.2</td><td>2</td><td class='he-cell'>תהום</td><td>tehom</td><td>the-deep</td><td>the-deep</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.2</td><td>3</td><td class='he-cell'>וארבת</td><td>va-arubot</td><td>and-windows-of</td><td>ARUBAH_token_2_of_2_pair_closed</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.2</td><td>4</td><td class='he-cell'>השמים</td><td>ha-shamayim</td><td>the-heavens</td><td>the-heavens</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.2</td><td>5</td><td class='he-cell'>ויכלא</td><td>va-yikale</td><td>and-was-restrained</td><td>KALA_FIRST_TOKEN_donations_next</td><td>logic_bearing</td><td class='cite'>TIR-032</td></tr>
+<tr><td>Gen.8.2</td><td>6</td><td class='he-cell'>הגשם</td><td>ha-geshem</td><td>the-rain</td><td>geshem_token_2_of_3</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.2</td><td>7</td><td class='he-cell'>מן</td><td>min</td><td>from</td><td>from</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.2</td><td>8</td><td class='he-cell'>השמים</td><td>ha-shamayim</td><td>the-heavens</td><td>the-heavens</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.3</td><td>0</td><td class='he-cell'>וישבו</td><td>va-yashuvu</td><td>and-they-returned</td><td>SHUV_first_narrative_work_3_19_was_first</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.3</td><td>1</td><td class='he-cell'>המים</td><td>ha-mayim</td><td>the-waters</td><td>the-waters</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.3</td><td>2</td><td class='he-cell'>מעל</td><td>me-al</td><td>from-over</td><td>from-over</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.3</td><td>3</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.3</td><td>4</td><td class='he-cell'>הלוך</td><td>halokh</td><td>going</td><td>halokh_infinitive_pair</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.3</td><td>5</td><td class='he-cell'>ושוב</td><td>va-shov</td><td>and-returning</td><td>va_shov_infinitive_pair</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.3</td><td>6</td><td class='he-cell'>ויחסרו</td><td>va-yachsru</td><td>and-they-diminished</td><td>CHASAR_FIRST_TOKEN_mercy_arithmetic_next</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.3</td><td>7</td><td class='he-cell'>המים</td><td>ha-mayim</td><td>the-waters</td><td>the-waters</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.3</td><td>8</td><td class='he-cell'>מקצה</td><td>mi-qetze</td><td>at-the-end-of</td><td>QETZEH_first_token</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.3</td><td>9</td><td class='he-cell'>חמשים</td><td>chamishim</td><td>fifty</td><td>fifty</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.3</td><td>10</td><td class='he-cell'>ומאת</td><td>u-meat</td><td>and-hundred</td><td>and-hundred</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.3</td><td>11</td><td class='he-cell'>יום</td><td>yom</td><td>day</td><td>day</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.4</td><td>0</td><td class='he-cell'>ותנח</td><td>va-tanach</td><td>and-it-rested</td><td>NUACH_FIRST_TOKEN_name_sound</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.4</td><td>1</td><td class='he-cell'>התבה</td><td>ha-teva</td><td>the-box</td><td>the-box</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.4</td><td>2</td><td class='he-cell'>בחדש</td><td>ba-chodesh</td><td>in-month</td><td>in-month</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.4</td><td>3</td><td class='he-cell'>השביעי</td><td>ha-shevii</td><td>the-seventh</td><td>the-seventh</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.4</td><td>4</td><td class='he-cell'>בשבעה</td><td>be-shiva</td><td>in-seven</td><td>in-seven</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.4</td><td>5</td><td class='he-cell'>עשר</td><td>asar</td><td>teen</td><td>day_17</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.4</td><td>6</td><td class='he-cell'>יום</td><td>yom</td><td>day</td><td>day</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.4</td><td>7</td><td class='he-cell'>לחדש</td><td>la-chodesh</td><td>of-month</td><td>of-month</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.4</td><td>8</td><td class='he-cell'>על</td><td>al</td><td>over</td><td>over</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.4</td><td>9</td><td class='he-cell'>הרי</td><td>hare</td><td>mountain</td><td>mountain</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.4</td><td>10</td><td class='he-cell'>אררט</td><td>ararat</td><td>Ararat</td><td>ARARAT_torah_hapax</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.5</td><td>0</td><td class='he-cell'>והמים</td><td>ve-ha-mayim</td><td>and-the-waters</td><td>and-the-waters</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.5</td><td>1</td><td class='he-cell'>היו</td><td>hayu</td><td>be</td><td>be</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.5</td><td>2</td><td class='he-cell'>הלוך</td><td>halokh</td><td>going</td><td>halokh_infinitive_pair</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.5</td><td>3</td><td class='he-cell'>וחסור</td><td>ve-chasor</td><td>and-diminishing</td><td>ve_chasor_infinitive_pair</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.5</td><td>4</td><td class='he-cell'>עד</td><td>ad</td><td>until</td><td>until</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.5</td><td>5</td><td class='he-cell'>החדש</td><td>ha-chodesh</td><td>the-month</td><td>the-month</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.5</td><td>6</td><td class='he-cell'>העשירי</td><td>ha-asiri</td><td>the-tenth</td><td>the-tenth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.5</td><td>7</td><td class='he-cell'>בעשירי</td><td>ba-asiri</td><td>in-the-tenth</td><td>in-the-tenth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.5</td><td>8</td><td class='he-cell'>באחד</td><td>be-echad</td><td>in-one</td><td>in-one</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.5</td><td>9</td><td class='he-cell'>לחדש</td><td>la-chodesh</td><td>of-month</td><td>of-month</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.5</td><td>10</td><td class='he-cell'>נראו</td><td>niru</td><td>were-seen</td><td>NIRU_day_3_formula_reruns</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.5</td><td>11</td><td class='he-cell'>ראשי</td><td>rashe</td><td>the-tops-of</td><td>rashei_he_harim</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.5</td><td>12</td><td class='he-cell'>ההרים</td><td>he-harim</td><td>the-mountain</td><td>the-mountain</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.6</td><td>0</td><td class='he-cell'>ויהי</td><td>va-yehi</td><td>and-be</td><td>and-be</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.6</td><td>1</td><td class='he-cell'>מקץ</td><td>mi-qetz</td><td>at-the-end-of</td><td>QETZ_token_3_decree_word_counts_down</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.6</td><td>2</td><td class='he-cell'>ארבעים</td><td>arbaim</td><td>forty</td><td>forty</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.6</td><td>3</td><td class='he-cell'>יום</td><td>yom</td><td>day</td><td>day</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.6</td><td>4</td><td class='he-cell'>ויפתח</td><td>va-yiftach</td><td>and-he-opened</td><td>PATACH_token_2_sky_to_hand</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.6</td><td>5</td><td class='he-cell'>נח</td><td>nocha</td><td>Noah</td><td>name_nocha</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.6</td><td>6</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.8.6</td><td>7</td><td class='he-cell'>חלון</td><td>chalon</td><td>window</td><td>CHALON_two_token_word_not_tzohar</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.6</td><td>8</td><td class='he-cell'>התבה</td><td>ha-teva</td><td>the-box</td><td>the-box</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.6</td><td>9</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>which</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.6</td><td>10</td><td class='he-cell'>עשה</td><td>asa</td><td>he-had-made</td><td>make_receipt_resumed</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.7</td><td>0</td><td class='he-cell'>וישלח</td><td>va-yeshalach</td><td>and-he-sent</td><td>SHALACH_token_3_eden_verb_turned_scout</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.7</td><td>1</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.8.7</td><td>2</td><td class='he-cell'>הערב</td><td>ha-orev</td><td>the-raven</td><td>OREV_FIRST_TOKEN_unclean_list_next</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.7</td><td>3</td><td class='he-cell'>ויצא</td><td>va-yetze</td><td>and-it-went-out</td><td>va_yetze</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.7</td><td>4</td><td class='he-cell'>יצוא</td><td>yatzo</td><td>going-out</td><td>yatzo_infinitive_pair</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.7</td><td>5</td><td class='he-cell'>ושוב</td><td>va-shov</td><td>and-returning</td><td>va_shov_infinitive_pair</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.7</td><td>6</td><td class='he-cell'>עד</td><td>ad</td><td>until</td><td>until</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.7</td><td>7</td><td class='he-cell'>יבשת</td><td>yevoshet</td><td>the-drying-of</td><td>YAVESH_two_token_bracket_opens</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.7</td><td>8</td><td class='he-cell'>המים</td><td>ha-mayim</td><td>the-waters</td><td>the-waters</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.7</td><td>9</td><td class='he-cell'>מעל</td><td>me-al</td><td>from-over</td><td>from-over</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.7</td><td>10</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.8</td><td>0</td><td class='he-cell'>וישלח</td><td>va-yeshalach</td><td>and-he-sent</td><td>shalach_token_4_piel_release</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.8</td><td>1</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.8.8</td><td>2</td><td class='he-cell'>היונה</td><td>ha-yona</td><td>the-dove</td><td>YONAH_FIRST_TOKEN_poor_offering_next</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.8</td><td>3</td><td class='he-cell'>מאתו</td><td>me-et-o</td><td>from-him</td><td>me_ito_from_his_person</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.8</td><td>4</td><td class='he-cell'>לראות</td><td>li-reot</td><td>to-see</td><td>li_reot_the_question</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.8</td><td>5</td><td class='he-cell'>הקלו</td><td>ha-qalu</td><td>whether-they-abated</td><td>QALAL_FIRST_TOKEN_root_of_8_21_curse</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.8</td><td>6</td><td class='he-cell'>המים</td><td>ha-mayim</td><td>the-waters</td><td>the-waters</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.8</td><td>7</td><td class='he-cell'>מעל</td><td>me-al</td><td>from-over</td><td>from-over</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.8</td><td>8</td><td class='he-cell'>פני</td><td>pene</td><td>face</td><td>face</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.8</td><td>9</td><td class='he-cell'>האדמה</td><td>ha-adama</td><td>the-ground</td><td>the-ground</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.9</td><td>0</td><td class='he-cell'>ולא</td><td>ve-lo</td><td>and-not</td><td>and-not</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.9</td><td>1</td><td class='he-cell'>מצאה</td><td>matza</td><td>she-found</td><td>LO_MATZAH_fact_not_fail</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.9</td><td>2</td><td class='he-cell'>היונה</td><td>ha-yona</td><td>the-dove</td><td>the-dove</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.9</td><td>3</td><td class='he-cell'>מנוח</td><td>manocha</td><td>resting-place</td><td>MANOACH_two_token_deut_28_65_quotes</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.9</td><td>4</td><td class='he-cell'>לכף</td><td>le-khaf</td><td>for-the-sole-of</td><td>le_khaf</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.9</td><td>5</td><td class='he-cell'>רגלה</td><td>ragla-h</td><td>her-foot</td><td>raglah</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.9</td><td>6</td><td class='he-cell'>ותשב</td><td>va-tashav</td><td>and-return</td><td>and-return</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.9</td><td>7</td><td class='he-cell'>אליו</td><td>elay-v</td><td>to-him</td><td>to-him</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.9</td><td>8</td><td class='he-cell'>אל</td><td>el</td><td>to</td><td>to</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.9</td><td>9</td><td class='he-cell'>התבה</td><td>ha-teva</td><td>the-box</td><td>the-box</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.9</td><td>10</td><td class='he-cell'>כי</td><td>ki</td><td>that</td><td>that</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.9</td><td>11</td><td class='he-cell'>מים</td><td>mayim</td><td>waters</td><td>waters</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.9</td><td>12</td><td class='he-cell'>על</td><td>al</td><td>over</td><td>over</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.9</td><td>13</td><td class='he-cell'>פני</td><td>pene</td><td>face</td><td>face</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.9</td><td>14</td><td class='he-cell'>כל</td><td>khal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.9</td><td>15</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.9</td><td>16</td><td class='he-cell'>וישלח</td><td>va-yishlach</td><td>and-he-sent</td><td>shalach_token_5_qal_the_hand</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.9</td><td>17</td><td class='he-cell'>ידו</td><td>yad-o</td><td>hand-him/its</td><td>hand-him_its</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.9</td><td>18</td><td class='he-cell'>ויקחה</td><td>va-yiqache-ha</td><td>and-took-her</td><td>lakach_altar_take_next</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.9</td><td>19</td><td class='he-cell'>ויבא</td><td>va-yave</td><td>and-brought-her-in</td><td>BO_causative_boarding_verb</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.9</td><td>20</td><td class='he-cell'>אתה</td><td>et-h</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.8.9</td><td>21</td><td class='he-cell'>אליו</td><td>elay-v</td><td>to-him</td><td>to-him</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.9</td><td>22</td><td class='he-cell'>אל</td><td>el</td><td>to</td><td>to</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.9</td><td>23</td><td class='he-cell'>התבה</td><td>ha-teva</td><td>the-box</td><td>the-box</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.10</td><td>0</td><td class='he-cell'>ויחל</td><td>va-yachel</td><td>and-he-waited</td><td>CHUL_wait_one_token_1_of_3</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.10</td><td>1</td><td class='he-cell'>עוד</td><td>od</td><td>again</td><td>od</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.10</td><td>2</td><td class='he-cell'>שבעת</td><td>shivat</td><td>seven</td><td>seven</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.10</td><td>3</td><td class='he-cell'>ימים</td><td>yamim</td><td>day</td><td>day</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.10</td><td>4</td><td class='he-cell'>אחרים</td><td>acherim</td><td>other</td><td>acherim</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.10</td><td>5</td><td class='he-cell'>ויסף</td><td>va-yosef</td><td>and-he-again</td><td>yosef_the_add_verb</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.10</td><td>6</td><td class='he-cell'>שלח</td><td>shalach</td><td>to-send</td><td>shallach_token_6</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.10</td><td>7</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.8.10</td><td>8</td><td class='he-cell'>היונה</td><td>ha-yona</td><td>the-dove</td><td>the-dove</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.10</td><td>9</td><td class='he-cell'>מן</td><td>min</td><td>from</td><td>from</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.10</td><td>10</td><td class='he-cell'>התבה</td><td>ha-teva</td><td>the-box</td><td>the-box</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.11</td><td>0</td><td class='he-cell'>ותבא</td><td>va-tavo</td><td>and-come/bring</td><td>and-come_bring</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.11</td><td>1</td><td class='he-cell'>אליו</td><td>elay-v</td><td>to-him</td><td>to-him</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.11</td><td>2</td><td class='he-cell'>היונה</td><td>ha-yona</td><td>the-dove</td><td>the-dove</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.11</td><td>3</td><td class='he-cell'>לעת</td><td>le-et</td><td>at-the-time-of</td><td>ET_FIRST_TOKEN_in_evening_phrase</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.11</td><td>4</td><td class='he-cell'>ערב</td><td>erev</td><td>evening</td><td>EREV_token_7_first_since_the_week</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.11</td><td>5</td><td class='he-cell'>והנה</td><td>ve-hine</td><td>and-behold</td><td>and-behold</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.11</td><td>6</td><td class='he-cell'>עלה</td><td>ale</td><td>leaf</td><td>ALEH_token_2_of_3_shame_hope_terror</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.11</td><td>7</td><td class='he-cell'>זית</td><td>zayit</td><td>olive</td><td>ZAYIT_FIRST_TOKEN_lamp_oil_next</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.11</td><td>8</td><td class='he-cell'>טרף</td><td>taraf</td><td>freshly-plucked</td><td>TARAF_TORAH_HAPAX</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.11</td><td>9</td><td class='he-cell'>בפיה</td><td>be-fi-ha</td><td>in-her-mouth</td><td>be_fiha</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.11</td><td>10</td><td class='he-cell'>וידע</td><td>va-yeda</td><td>and-he-knew</td><td>YEDA_knowledge_from_a_sign</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.11</td><td>11</td><td class='he-cell'>נח</td><td>nocha</td><td>Noah</td><td>name_nocha</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.11</td><td>12</td><td class='he-cell'>כי</td><td>ki</td><td>that</td><td>that</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.11</td><td>13</td><td class='he-cell'>קלו</td><td>qalu</td><td>abated</td><td>qalal_token_2</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.11</td><td>14</td><td class='he-cell'>המים</td><td>ha-mayim</td><td>the-waters</td><td>the-waters</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.11</td><td>15</td><td class='he-cell'>מעל</td><td>me-al</td><td>from-over</td><td>from-over</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.11</td><td>16</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.12</td><td>0</td><td class='he-cell'>וייחל</td><td>va-yiyachel</td><td>and-he-waited</td><td>YACHAL_TORAH_HAPAX_wait_two</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.12</td><td>1</td><td class='he-cell'>עוד</td><td>od</td><td>again</td><td>od</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.12</td><td>2</td><td class='he-cell'>שבעת</td><td>shivat</td><td>seven</td><td>seven</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.12</td><td>3</td><td class='he-cell'>ימים</td><td>yamim</td><td>day</td><td>day</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.12</td><td>4</td><td class='he-cell'>אחרים</td><td>acherim</td><td>other</td><td>acherim</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.12</td><td>5</td><td class='he-cell'>וישלח</td><td>va-yeshalach</td><td>and-he-sent</td><td>shalach_token_7_third_sending</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.12</td><td>6</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.8.12</td><td>7</td><td class='he-cell'>היונה</td><td>ha-yona</td><td>the-dove</td><td>the-dove</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.12</td><td>8</td><td class='he-cell'>ולא</td><td>ve-lo</td><td>and-not</td><td>and-not</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.12</td><td>9</td><td class='he-cell'>יספה</td><td>yasfa</td><td>added</td><td>lo_yasfah_negated_again</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.12</td><td>10</td><td class='he-cell'>שוב</td><td>shuv</td><td>to-return</td><td>shuv</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.12</td><td>11</td><td class='he-cell'>אליו</td><td>elay-v</td><td>to-him</td><td>to-him</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.12</td><td>12</td><td class='he-cell'>עוד</td><td>od</td><td>any-more</td><td>OD_alone_on_verse_end</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.13</td><td>0</td><td class='he-cell'>ויהי</td><td>va-yehi</td><td>and-be</td><td>and-be</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.13</td><td>1</td><td class='he-cell'>באחת</td><td>be-achat</td><td>in-one</td><td>in-one</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.13</td><td>2</td><td class='he-cell'>ושש</td><td>ve-shesh</td><td>and-six</td><td>and-six</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.13</td><td>3</td><td class='he-cell'>מאות</td><td>meot</td><td>hundred</td><td>hundred</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.13</td><td>4</td><td class='he-cell'>שנה</td><td>shana</td><td>year</td><td>year</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.13</td><td>5</td><td class='he-cell'>בראשון</td><td>ba-rishon</td><td>in-the-first-month</td><td>RISHON_FIRST_TOKEN_inside_the_date</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.13</td><td>6</td><td class='he-cell'>באחד</td><td>be-echad</td><td>in-one</td><td>in-one</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.13</td><td>7</td><td class='he-cell'>לחדש</td><td>la-chodesh</td><td>of-month</td><td>of-month</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.13</td><td>8</td><td class='he-cell'>חרבו</td><td>charvu</td><td>were-parched</td><td>CHAREV_token_1_of_2_same_verse</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.13</td><td>9</td><td class='he-cell'>המים</td><td>ha-mayim</td><td>the-waters</td><td>the-waters</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.13</td><td>10</td><td class='he-cell'>מעל</td><td>me-al</td><td>from-over</td><td>from-over</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.13</td><td>11</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.13</td><td>12</td><td class='he-cell'>ויסר</td><td>va-yasar</td><td>and-he-removed</td><td>SUR_FIRST_TOKEN</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.13</td><td>13</td><td class='he-cell'>נח</td><td>nocha</td><td>Noah</td><td>name_nocha</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.13</td><td>14</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.8.13</td><td>15</td><td class='he-cell'>מכסה</td><td>mikhse</td><td>covering</td><td>MIKHSEH_token_1_sanctuary_word</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.13</td><td>16</td><td class='he-cell'>התבה</td><td>ha-teva</td><td>the-box</td><td>the-box</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.13</td><td>17</td><td class='he-cell'>וירא</td><td>va-yar</td><td>and-he-saw</td><td>verdictless_seeing</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.13</td><td>18</td><td class='he-cell'>והנה</td><td>ve-hine</td><td>and-behold</td><td>and-behold</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.13</td><td>19</td><td class='he-cell'>חרבו</td><td>charvu</td><td>were-parched</td><td>CHAREV_token_2_of_2_same_verse</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.13</td><td>20</td><td class='he-cell'>פני</td><td>pene</td><td>face</td><td>face</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.13</td><td>21</td><td class='he-cell'>האדמה</td><td>ha-adama</td><td>the-ground</td><td>the-ground</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.14</td><td>0</td><td class='he-cell'>ובחדש</td><td>u-va-chodesh</td><td>and-in-month</td><td>and-in-month</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.14</td><td>1</td><td class='he-cell'>השני</td><td>ha-sheni</td><td>the-second</td><td>the-second</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.14</td><td>2</td><td class='he-cell'>בשבעה</td><td>be-shiva</td><td>in-seven</td><td>in-seven</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.14</td><td>3</td><td class='he-cell'>ועשרים</td><td>ve-esrim</td><td>and-twenty</td><td>and-twenty</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.14</td><td>4</td><td class='he-cell'>יום</td><td>yom</td><td>day</td><td>day</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.14</td><td>5</td><td class='he-cell'>לחדש</td><td>la-chodesh</td><td>of-month</td><td>of-month</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.14</td><td>6</td><td class='he-cell'>יבשה</td><td>yavsha</td><td>was-dry</td><td>YAVESH_token_2_closes_bracket</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.8.14</td><td>7</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_19_the_remembering — The remembering: God remembers Noach, the waters go home, the earth dries (8:1-14) [frozen]
+
+final state: WORLD=[] (+3 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[&#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;]
+
+=== S1 — The remembering — the Name back, speech not: after STEP_Gn_8_1
+    וַיִּזְכֹּר אֱלֹהִים אֶת־נֹחַ (va-yizkor Elohim et-Noach)
+    PASS  flags noach/tevah/mayim as read-before-install  (flagged=[&#x27;mayim&#x27;, &#x27;noach&#x27;, &#x27;tevah&#x27;])
+    PASS  SPECS empty.  (queue=0)
+
+=== S2 — The waters commute and the 150-bracket closes: after STEP_Gn_8_3
+    הָלוֹךְ וָשׁוֹב (halokh va-shov)
+    PASS  Facts halokh_va_shov/mi_qetze_chamishim_u_meat_yom HOLD  (2 facts)
+    PASS  SPECS empty.  (queue=0)
+
+=== S3 — The ark rests on Ararat, month seven day seventeen: after STEP_Gn_8_4
+    וַתָּנַח הַתֵּבָה (va-tanach ha-tevah)
+    PASS  Facts ba_chodesh_ha_shevii_be_shivah_asar_yom/al_harei_ararat HOLD.  (4 facts)
+
+=== S4 — The tops appear by day 3&#x27;s formula: after STEP_Gn_8_5
+    נִרְאוּ רָאשֵׁי הֶהָרִים (niru rashei he-harim)
+    PASS  Facts niru_rashei_he_harim HOLD.  (6 facts)
+
+=== S5 — No resting-place for the sole of her foot: after STEP_Gn_8_9
+    וְלֹא־מָצְאָה הַיּוֹנָה מָנוֹחַ לְכַף־רַגְלָהּ (ve-lo-matzah ha-yonah manoach le-khaf-raglah)
+    PASS  Facts lo_matzah_ha_yonah_manoach/ki_mayim_al_pnei_khol_ha_aretz HOLD  (11 facts)
+    PASS  SPECS empty.  (queue=0)
+
+=== S6 — The olive leaf at the first evening since the week: after STEP_Gn_8_11
+    עֲלֵה־זַיִת טָרָף בְּפִיהָ (aleh-zayit taraf be-fiha)
+    PASS  Facts aleh_zayit_taraf_be_fiha HOLD.  (13 facts)
+
+=== S7 — She returns no more — the last OD: after STEP_Gn_8_12
+    וְלֹא־יָסְפָה שׁוּב־אֵלָיו עוֹד (ve-lo-yasfah shuv-elav od)
+    PASS  Facts ve_lo_yasfah_shuv_elav_od HOLD.  (14 facts)
+
+=== S8 — New year&#x27;s day — the second calendar anchor: after STEP_Gn_8_13
+    בָּרִאשׁוֹן בְּאֶחָד לַחֹדֶשׁ (ba-rishon be-echad la-chodesh)
+    PASS  TIME t0 = shnat_601_chodesh_1_yom_1  (t0=shnat_601_chodesh_1_yom_1)
+    PASS  Facts charvu_ha_mayim/ve_hinneh_charvu_pnei_ha_adamah HOLD.  (16 facts)
+
+=== S9 — The earth dry, the queue still empty: after STEP_Gn_8_14
+    יָבְשָׁה הָאָרֶץ (yavshah ha-aretz)
+    PASS  Facts yavshah_ha_aretz HOLD  (18 facts)
+    PASS  SPECS empty.  (queue=0)
+
+=== S10_negative — Negative: the machine&#x27;s ? stays guarded
+    PASS  imperfect-in-command parsed as LET? (question mark kept)  (mood=LET?)
+    PASS  auto-upgrade REFUSED  (TIR-028: LET? never auto-upgrades to LET — a per-unit judgme...)
+    PASS  upgrade WITH citation allowed  (cite=per-unit judgment (owner), TIR-028 resolution)
+
+=== S11_negative — Negative: flags never block
+    PASS  commit proceeded (not blocked)  (LEDGER=[99])
+    PASS  pattern deviation FLAGGED  (flags=[&#x27;commit_without_test&#x27;])
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_19_the_remembering.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_19_the_remembering — 8:1-14
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_19_the_remembering.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;The remembering: God remembers Noach, the waters go home, the earth dries (8:1-14)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_19_the_remembering&quot;)
+
+# -------------------------- Gen.8.1 · THE_REMEMBERING_THE_WIND -------------
+# וַיִּזְכֹּר אֱלֹהִים אֶת־נֹחַ וְאֵת כָּל־הַחַיָּה וְאֶת־כָּל־הַבְּהֵמָה
+# אֲשֶׁר אִתּוֹ בַּתֵּבָה וַיַּעֲבֵר אֱלֹהִים רוּחַ עַל־הָאָרֶץ וַיָּשֹׁכּוּ
+# הַמָּיִם
+# &quot;And God remembered Noah, and every living thing, and all the cattle that
+# were with him in the ark; and God made a wind to pass over the earth, and
+# the waters assuaged;&quot;
+m.step(&quot;Gen.8.1&quot;)
+# ‹וַיִּזְכֹּר אֱלֹהִים אֶת־נֹחַ וְאֵת כָּל־הַחַיָּה וְאֶת־כָּל־הַבְּהֵמָה›
+# (“and-He-remembered God obj-marker Noah obj-marker all the-beast obj-
+# marker all the-livestock”) — event: remember — agent God; theme Noach,
+# all-the-beast-and-the-livestock
+m.event(&quot;remember&quot;, agent=&quot;elohim&quot;, themes=[&quot;noach&quot;, &quot;kol_ha_chayah_ve_ha_behemah&quot;])
+# ‹וַיַּעֲבֵר אֱלֹהִים רוּחַ עַל־הָאָרֶץ› (“and-He-passed God wind/spirit
+# over the-earth”) — event: pass — agent God; theme spirit-wind-over-the-
+# earth
+m.event(&quot;pass&quot;, agent=&quot;elohim&quot;, themes=[&quot;ruach_al_ha_aretz&quot;])
+# ‹וַיָּשֹׁכּוּ הַמָּיִם› (“and-they-subsided the-waters”) — event: subside
+# — theme the-waters
+m.event(&quot;subside&quot;, themes=[&quot;ha_mayim&quot;])
+# reads without prior install (flag, not fix): Noach, ark, waters
+m.presupposed(&quot;noach&quot;, &quot;tevah&quot;, &quot;mayim&quot;)
+
+# -------------------------- Gen.8.2 · THE_SHUT_MIRROR ----------------------
+# וַיִּסָּכְרוּ מַעְיְנֹת תְּהוֹם וַאֲרֻבֹּת הַשָּׁמָיִם וַיִּכָּלֵא
+# הַגֶּשֶׁם מִן־הַשָּׁמָיִם
+# &quot;the fountains also of the deep and the windows of heaven were stopped,
+# and the rain from heaven was restrained.&quot;
+m.step(&quot;Gen.8.2&quot;)
+# ‹וַיִּסָּכְרוּ מַעְיְנֹת תְּהוֹם וַאֲרֻבֹּת הַשָּׁמָיִם› (“and-were-
+# stopped-up fountains-of the-deep and-windows-of the-heavens”) — event:
+# stop-up — theme fountains-of-deep-and-windows-of-the-heavens
+m.event(&quot;stop_up&quot;, themes=[&quot;mayenot_tehom_va_arubot_ha_shamayim&quot;])
+# ‹וַיִּכָּלֵא הַגֶּשֶׁם מִן־הַשָּׁמָיִם› (“and-was-restrained the-rain from
+# the-heavens”) — event: restrain — theme the-rain
+m.event(&quot;restrain&quot;, themes=[&quot;ha_geshem&quot;])
+
+# -------------------------- Gen.8.3 · THE_WATERS_COMMUTE_BRACKET_CLOSED ----
+# וַיָּשֻׁבוּ הַמַּיִם מֵעַל הָאָרֶץ הָלוֹךְ וָשׁוֹב וַיַּחְסְרוּ הַמַּיִם
+# מִקְצֵה חֲמִשִּׁים וּמְאַת יוֹם
+# &quot;And the waters returned from off the earth continually; and after the end
+# of a hundred and fifty days the waters decreased.&quot;
+m.step(&quot;Gen.8.3&quot;)
+# ‹וַיָּשֻׁבוּ הַמַּיִם מֵעַל הָאָרֶץ› (“and-they-returned the-waters from-
+# over the-earth”) — event: return — agent the-waters
+m.event(&quot;return&quot;, agent=&quot;ha_mayim&quot;)
+# ‹הָלוֹךְ וָשׁוֹב … מִקְצֵה חֲמִשִּׁים וּמְאַת יוֹם› (“going and-returning
+# … at-the-end-of fifty and-hundred day”) — fact holds: going-and-returning;
+# from-at-the-end-of-fifty-and-hundred-day
+m.fact(&quot;halokh_va_shov&quot;,
+       &quot;mi_qetze_chamishim_u_meat_yom&quot;)
+# ‹וַיַּחְסְרוּ הַמַּיִם› (“and-they-diminished the-waters”) — event:
+# diminish — theme the-waters
+m.event(&quot;diminish&quot;, themes=[&quot;ha_mayim&quot;])
+
+# -------------------------- Gen.8.4 · THE_ARK_RESTS ------------------------
+# וַתָּנַח הַתֵּבָה בַּחֹדֶשׁ הַשְּׁבִיעִי בְּשִׁבְעָה־עָשָׂר יוֹם לַחֹדֶשׁ
+# עַל הָרֵי אֲרָרָט
+# &quot;And the ark rested in the seventh month, on the seventeenth day of the
+# month, upon the mountains of Ararat.&quot;
+m.step(&quot;Gen.8.4&quot;)
+# ‹וַתָּנַח הַתֵּבָה› (“and-it-rested the-ark”) — event: rest — theme the-
+# ark
+m.event(&quot;rest&quot;, themes=[&quot;ha_tevah&quot;])
+# ‹בַּחֹדֶשׁ הַשְּׁבִיעִי בְּשִׁבְעָה־עָשָׂר יוֹם לַחֹדֶשׁ עַל הָרֵי
+# אֲרָרָט› (“in-month the-seventh in-seven teen day of-month over mountain
+# Ararat”) — fact holds: in-the-of-month-the-seventh-in-seven-teen-day;
+# over-mountains-of-Ararat
+m.fact(&quot;ba_chodesh_ha_shevii_be_shivah_asar_yom&quot;,
+       &quot;al_harei_ararat&quot;)
+
+# -------------------------- Gen.8.5 · THE_TOPS_APPEAR ----------------------
+# וְהַמַּיִם הָיוּ הָלוֹךְ וְחָסוֹר עַד הַחֹדֶשׁ הָעֲשִׂירִי בָּעֲשִׂירִי
+# בְּאֶחָד לַחֹדֶשׁ נִרְאוּ רָאשֵׁי הֶהָרִים
+# &quot;And the waters decreased continually until the tenth month; in the tenth
+# month, on the first day of the month, were the tops of the mountains
+# seen.&quot;
+m.step(&quot;Gen.8.5&quot;)
+# ‹הָלוֹךְ וְחָסוֹר … נִרְאוּ רָאשֵׁי הֶהָרִים› (“going and-diminishing …
+# were-seen the-tops-of the-mountain”) — fact holds: going-and-diminishing-
+# until-the-of-month-the-tenth; in-the-tenth-in-one-were-seen-tops-of-he-
+# mountains
+m.fact(&quot;halokh_ve_chasor_ad_ha_chodesh_ha_asiri&quot;,
+       &quot;ba_asiri_be_echad_niru_rashei_he_harim&quot;)
+
+# -------------------------- Gen.8.6 · THE_WINDOW_HE_MADE -------------------
+# וַיְהִי מִקֵּץ אַרְבָּעִים יוֹם וַיִּפְתַּח נֹחַ אֶת־חַלּוֹן הַתֵּבָה
+# אֲשֶׁר עָשָׂה
+# &quot;And it came to pass at the end of forty days, that Noah opened the window
+# of the ark which he had made.&quot;
+m.step(&quot;Gen.8.6&quot;)
+# ‹מִקֵּץ אַרְבָּעִים יוֹם› (“at-the-end-of forty day”) — fact holds: from-
+# at-the-end-of-forty-day
+m.fact(&quot;mi_qetz_arbaim_yom&quot;)
+# ‹וַיִּפְתַּח נֹחַ אֶת־חַלּוֹן הַתֵּבָה אֲשֶׁר עָשָׂה› (“and-he-opened Noah
+# obj-marker window the-ark which he-had-made”) — event: open — agent Noach;
+# theme window-the-ark
+m.event(&quot;open&quot;, agent=&quot;noach&quot;, themes=[&quot;chalon_ha_tevah&quot;])
+
+# -------------------------- Gen.8.7 · THE_RAVEN ----------------------------
+# וַיְשַׁלַּח אֶת־הָעֹרֵב וַיֵּצֵא יָצוֹא וָשׁוֹב עַד־יְבֹשֶׁת הַמַּיִם
+# מֵעַל הָאָרֶץ
+# &quot;And he sent forth a raven, and it went forth to and fro, until the waters
+# were dried up from off the earth.&quot;
+m.step(&quot;Gen.8.7&quot;)
+# ‹וַיְשַׁלַּח אֶת־הָעֹרֵב› (“and-he-sent obj-marker the-raven”) — event:
+# send — agent Noach; theme the-raven
+m.event(&quot;send&quot;, agent=&quot;noach&quot;, themes=[&quot;ha_orev&quot;])
+# ‹יָצוֹא וָשׁוֹב עַד־יְבֹשֶׁת הַמַּיִם› (“going-out and-returning until
+# the-drying-of the-waters”) — fact holds: going-out-and-returning-until-
+# drying-of-the-waters
+m.fact(&quot;yatzo_va_shov_ad_yevoshet_ha_mayim&quot;)
+
+# -------------------------- Gen.8.8 · THE_DOVE_THE_QUESTION ----------------
+# וַיְשַׁלַּח אֶת־הַיּוֹנָה מֵאִתּוֹ לִרְאוֹת הֲקַלּוּ הַמַּיִם מֵעַל פְּנֵי
+# הָאֲדָמָה
+# &quot;And he sent forth a dove from him, to see if the waters were abated from
+# off the face of the ground.&quot;
+m.step(&quot;Gen.8.8&quot;)
+# ‹וַיְשַׁלַּח אֶת־הַיּוֹנָה מֵאִתּוֹ› (“and-he-sent obj-marker the-dove
+# from-him”) — event: send — agent Noach; theme the-dove
+m.event(&quot;send&quot;, agent=&quot;noach&quot;, themes=[&quot;ha_yonah&quot;])
+# ‹לִרְאוֹת הֲקַלּוּ הַמַּיִם› (“to-see whether-they-abated the-waters”) —
+# fact holds: to-me-see-the-whether-they-abated-the-waters
+m.fact(&quot;li_reot_ha_qalu_ha_mayim&quot;)
+
+# -------------------------- Gen.8.9 · NO_RESTING_PLACE_THE_HAND ------------
+# וְלֹא־מָצְאָה הַיּוֹנָה מָנוֹחַ לְכַף־רַגְלָהּ וַתָּשָׁב אֵלָיו
+# אֶל־הַתֵּבָה כִּי־מַיִם עַל־פְּנֵי כָל־הָאָרֶץ וַיִּשְׁלַח יָדוֹ
+# וַיִּקָּחֶהָ וַיָּבֵא אֹתָהּ אֵלָיו אֶל־הַתֵּבָה
+# &quot;But the dove found no rest for the sole of her foot, and she returned
+# unto him to the ark, for the waters were on the face of the whole earth;
+# and he put forth his hand, and took her, and brought her in unto him into
+# the ark.&quot;
+m.step(&quot;Gen.8.9&quot;)
+# ‹וְלֹא־מָצְאָה הַיּוֹנָה מָנוֹחַ לְכַף־רַגְלָהּ כִּי־מַיִם עַל־פְּנֵי
+# כָל־הָאָרֶץ› (“and-not she-found the-dove resting-place for-the-sole-of
+# her-foot that waters over face all the-earth”) — fact holds: not-found-
+# the-dove-resting-place-to-sole-of-her-foot; that-waters-over-face-of-all-
+# the-earth
+m.fact(&quot;lo_matzah_ha_yonah_manoach_le_khaf_raglah&quot;,
+       &quot;ki_mayim_al_pnei_khol_ha_aretz&quot;)
+# ‹וַתָּשָׁב אֵלָיו אֶל־הַתֵּבָה› (“and-return to-him to the-ark”) — event:
+# return — agent the-dove
+m.event(&quot;return&quot;, agent=&quot;ha_yonah&quot;)
+# ‹וַיִּשְׁלַח יָדוֹ› (“and-he-sent hand-him/its”) — event: send — agent
+# Noach; theme his-hand
+m.event(&quot;send&quot;, agent=&quot;noach&quot;, themes=[&quot;yado&quot;])
+# ‹וַיִּקָּחֶהָ› (“and-took-her”) — event: take — agent Noach; theme the-
+# dove
+m.event(&quot;take&quot;, agent=&quot;noach&quot;, themes=[&quot;ha_yonah&quot;])
+# ‹וַיָּבֵא אֹתָהּ אֵלָיו אֶל־הַתֵּבָה› (“and-brought-her-in obj-marker to-
+# him to the-ark”) — event: bring — agent Noach; theme the-dove
+m.event(&quot;bring&quot;, agent=&quot;noach&quot;, themes=[&quot;ha_yonah&quot;])
+
+# -------------------------- Gen.8.10 · THE_FIRST_WAIT ----------------------
+# וַיָּחֶל עוֹד שִׁבְעַת יָמִים אֲחֵרִים וַיֹּסֶף שַׁלַּח אֶת־הַיּוֹנָה
+# מִן־הַתֵּבָה
+# &quot;And he stayed yet other seven days; and again he sent forth the dove out
+# of the ark.&quot;
+m.step(&quot;Gen.8.10&quot;)
+# ‹וַיָּחֶל עוֹד שִׁבְעַת יָמִים אֲחֵרִים› (“and-he-waited again seven day
+# other”) — event: wait — agent Noach
+m.event(&quot;wait&quot;, agent=&quot;noach&quot;)
+# ‹עוֹד שִׁבְעַת יָמִים אֲחֵרִים› (“again seven day other”) — fact holds:
+# again-seven-day-other
+m.fact(&quot;od_shivat_yamim_acherim&quot;)
+# ‹וַיֹּסֶף שַׁלַּח אֶת־הַיּוֹנָה› (“and-he-again to-send obj-marker the-
+# dove”) — event: send — agent Noach; theme the-dove
+m.event(&quot;send&quot;, agent=&quot;noach&quot;, themes=[&quot;ha_yonah&quot;])
+
+# -------------------------- Gen.8.11 · THE_LEAF_AT_EVENING -----------------
+# וַתָּבֹא אֵלָיו הַיּוֹנָה לְעֵת עֶרֶב וְהִנֵּה עֲלֵה־זַיִת טָרָף בְּפִיהָ
+# וַיֵּדַע נֹחַ כִּי־קַלּוּ הַמַּיִם מֵעַל הָאָרֶץ
+# &quot;And the dove came in to him at eventide; and lo in her mouth an olive-
+# leaf freshly plucked; so Noah knew that the waters were abated from off
+# the earth.&quot;
+m.step(&quot;Gen.8.11&quot;)
+# ‹וַתָּבֹא אֵלָיו הַיּוֹנָה לְעֵת עֶרֶב› (“and-come/bring to-him the-dove
+# at-the-time-of evening”) — event: come — agent the-dove; theme to-obj-
+# marker·et-evening
+m.event(&quot;come&quot;, agent=&quot;ha_yonah&quot;, themes=[&quot;le_et_erev&quot;])
+# ‹וְהִנֵּה עֲלֵה־זַיִת טָרָף בְּפִיהָ› (“and-behold leaf olive freshly-
+# plucked in-her-mouth”) — fact holds: leaf-olive-freshly-plucked-in-her-
+# mouth
+m.fact(&quot;aleh_zayit_taraf_be_fiha&quot;)
+# ‹וַיֵּדַע נֹחַ כִּי־קַלּוּ הַמַּיִם› (“and-he-knew Noah that abated the-
+# waters”) — event: know — agent Noach; theme that-whether-they-abated-the-
+# waters
+m.event(&quot;know&quot;, agent=&quot;noach&quot;, themes=[&quot;ki_qalu_ha_mayim&quot;])
+
+# -------------------------- Gen.8.12 · THE_SECOND_WAIT_THE_LAST_OD ---------
+# וַיִּיָּחֶל עוֹד שִׁבְעַת יָמִים אֲחֵרִים וַיְשַׁלַּח אֶת־הַיּוֹנָה
+# וְלֹא־יָסְפָה שׁוּב־אֵלָיו עוֹד
+# &quot;And he stayed yet other seven days; and sent forth the dove; and she
+# returned not again unto him any more.&quot;
+m.step(&quot;Gen.8.12&quot;)
+# ‹וַיִּיָּחֶל עוֹד שִׁבְעַת יָמִים אֲחֵרִים› (“and-he-waited again seven
+# day other”) — event: wait — agent Noach
+m.event(&quot;wait&quot;, agent=&quot;noach&quot;)
+# ‹וַיְשַׁלַּח אֶת־הַיּוֹנָה› (“and-he-sent obj-marker the-dove”) — event:
+# send — agent Noach; theme the-dove
+m.event(&quot;send&quot;, agent=&quot;noach&quot;, themes=[&quot;ha_yonah&quot;])
+# ‹וְלֹא־יָסְפָה שׁוּב־אֵלָיו עוֹד› (“and-not added to-return to-him again”)
+# — fact holds: and-not-did-again-return-to-him-again
+m.fact(&quot;ve_lo_yasfah_shuv_elav_od&quot;)
+
+# -------------------------- Gen.8.13 · NEW_YEARS_DAY_THE_COVER_OFF ---------
+# וַיְהִי בְּאַחַת וְשֵׁשׁ־מֵאוֹת שָׁנָה בָּרִאשׁוֹן בְּאֶחָד לַחֹדֶשׁ
+# חָרְבוּ הַמַּיִם מֵעַל הָאָרֶץ וַיָּסַר נֹחַ אֶת־מִכְסֵה הַתֵּבָה וַיַּרְא
+# וְהִנֵּה חָרְבוּ פְּנֵי הָאֲדָמָה
+# &quot;And it came to pass in the six hundred and first year, in the first
+# month, the first day of the month, the waters were dried up from off the
+# earth; and Noah removed the covering of the ark, and looked, and behold,
+# the face of the ground was dried.&quot;
+m.step(&quot;Gen.8.13&quot;)
+# ‹בְּאַחַת וְשֵׁשׁ־מֵאוֹת שָׁנָה בָּרִאשׁוֹן בְּאֶחָד לַחֹדֶשׁ› (“in-one
+# and-six hundred year in-the-first-month in-one of-month”) — clock
+# anchored: t0 := year-of-601-of-month-1-day-1
+m.time_anchor(&quot;shnat_601_chodesh_1_yom_1&quot;)
+# ‹חָרְבוּ הַמַּיִם מֵעַל הָאָרֶץ› (“were-parched the-waters from-over the-
+# earth”) — fact holds: were-parched-the-waters-from-over-the-earth
+m.fact(&quot;charvu_ha_mayim_me_al_ha_aretz&quot;)
+# ‹וַיָּסַר נֹחַ אֶת־מִכְסֵה הַתֵּבָה› (“and-he-removed Noah obj-marker
+# covering the-ark”) — event: remove — agent Noach; theme covering-the-ark
+m.event(&quot;remove&quot;, agent=&quot;noach&quot;, themes=[&quot;mikhseh_ha_tevah&quot;])
+# ‹וַיַּרְא וְהִנֵּה חָרְבוּ פְּנֵי הָאֲדָמָה› (“and-he-saw and-behold were-
+# parched face the-ground”) — event: see — agent Noach; theme face-of-the-
+# ground
+m.event(&quot;see&quot;, agent=&quot;noach&quot;, themes=[&quot;pnei_ha_adamah&quot;])
+# ‹וְהִנֵּה חָרְבוּ פְּנֵי הָאֲדָמָה› (“and-behold were-parched face the-
+# ground”) — fact holds: and-behold-were-parched-face-of-the-ground
+m.fact(&quot;ve_hinneh_charvu_pnei_ha_adamah&quot;)
+
+# -------------------------- Gen.8.14 · THE_EARTH_DRY -----------------------
+# וּבַחֹדֶשׁ הַשֵּׁנִי בְּשִׁבְעָה וְעֶשְׂרִים יוֹם לַחֹדֶשׁ יָבְשָׁה
+# הָאָרֶץ
+# &quot;And in the second month, on the seven and twentieth day of the month, was
+# the earth dry.&quot;
+m.step(&quot;Gen.8.14&quot;)
+# ‹בְּשִׁבְעָה וְעֶשְׂרִים יוֹם לַחֹדֶשׁ יָבְשָׁה הָאָרֶץ› (“in-seven and-
+# twenty day of-month was-dry the-earth”) — fact holds: in-the-of-month-the-
+# second-in-seven-and-twenty-day; was-dry-the-earth
+m.fact(&quot;ba_chodesh_ha_sheni_be_shivah_ve_esrim_yom&quot;,
+       &quot;yavshah_ha_aretz&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == {&#x27;noach&#x27;, &#x27;tevah&#x27;, &#x27;mayim&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS[&quot;log&quot;]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;read_before_install&#x27;: 3}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;halokh_va_shov&#x27;, &#x27;mi_qetze_chamishim_u_meat_yom&#x27;, &#x27;ba_chodesh_ha_shevii_be_shivah_asar_yom&#x27;, &#x27;al_harei_ararat&#x27;, &#x27;halokh_ve_chasor_ad_ha_chodesh_ha_asiri&#x27;, &#x27;ba_asiri_be_echad_niru_rashei_he_harim&#x27;, &#x27;mi_qetz_arbaim_yom&#x27;, &#x27;yatzo_va_shov_ad_yevoshet_ha_mayim&#x27;, &#x27;li_reot_ha_qalu_ha_mayim&#x27;, &#x27;lo_matzah_ha_yonah_manoach_le_khaf_raglah&#x27;, &#x27;ki_mayim_al_pnei_khol_ha_aretz&#x27;, &#x27;od_shivat_yamim_acherim&#x27;, &#x27;aleh_zayit_taraf_be_fiha&#x27;, &#x27;ve_lo_yasfah_shuv_elav_od&#x27;, &#x27;charvu_ha_mayim_me_al_ha_aretz&#x27;, &#x27;ve_hinneh_charvu_pnei_ha_adamah&#x27;, &#x27;ba_chodesh_ha_sheni_be_shivah_ve_esrim_yom&#x27;, &#x27;yavshah_ha_aretz&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 23
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre>
+<div class="note">FROZEN 2026-08-01 (persistent derivation agent, post-trial; freeze-after-review #2 — review PASSED; first unit under the PIPELINE + DEBUT-MAP process, the survey COMPLETE before the seed): twentieth frozen unit — THE REMEMBERING; tenth extension-free derivation in a row. Central findings, all DB-verified before drafting: ZAKHAR (&#x27;remember&#x27;) born on Noach and the animals together — the Name back on the page (Elohim x2, the only name-tokens) in a span with ZERO speech and ZERO imperatives: the second speechless span, but not nameless; AVAR (&#x27;pass over&#x27;) debuts carrying 1:2&#x27;s RUACH (&#x27;wind/spirit&#x27;) — the hover set moving; the shut-mirror NEAR-verbatim (the totalizers KOL &#x27;all&#x27; and RABBAH &#x27;great&#x27; dropped) with a TORAH-HAPAX stop-up verb — door and sky get different shut-words; the 150-bracket closed in its own digits; the ark RESTS (nuach debut) on the sound of its builder&#x27;s name, month 7 day 17, on the mountains that debuted drowned; the tops APPEAR by 1:9&#x27;s own niphal see-verb; the decree&#x27;s end-word counts down to a window he MADE; the Eden-expulsion send-verb turned scout (five sendings — birds piel, the hand qal); the dove finds no MANOACH (&#x27;resting-place&#x27;) — the two-token word the exile-curse quotes verbatim (Deut 28:65), held as FACT not FAIL; the first evening since the week&#x27;s refrain carries an olive leaf (aleh — shame, hope, terror: 3 tokens) and Noach KNOWS; two waits in two verbs (the second a Torah hapax); year 601 month 1 day 1 anchors the TIME register (the second full calendar date; RISHON &#x27;first&#x27; debuting inside it); CHAREV (&#x27;be parched&#x27;) spends both tokens in one verse; MIKHSEH (&#x27;covering&#x27;) debuts with an all-sanctuary future; the earth dry ten days past the entry-date&#x27;s slot one year on — and the unit ends dry, silent, and sealed-in: the exit-word belongs to 8:15. Machine state: t0 = the new year, zero installs (+3 presupposed), zero writes, zero queue traffic, zero tests, twenty-three events, eighteen facts, three read-flags.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

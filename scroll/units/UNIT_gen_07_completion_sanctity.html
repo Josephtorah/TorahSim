@@ -1,0 +1,315 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_07_completion_sanctity — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_07_completion_sanctity?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Day seven: completion and sanctity — the open transaction (2:1-3) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_07_completion_sanctity</b> · Genesis 2:1-3 · derive logic_derived_v1 · phase C-7</div>
+<div class="meta"><a href="../#Gen/2/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">יוֹם הַשְּׁבִיעִי — הַכְּלוּלָה וְהַקְּדֻשָּׁה</span> · <i>yom ha-shevi&#x27;i — ha-kelulah ve-ha-kedushah</i> · the seventh day — the completion and the sanctity</p>
+<div class="note">Derived 2026-07-31 at owner&#x27;s order (&quot;Lets finish the 7 days&quot;), same session as gen_06, under the calibrated coverage protocol (charter section 4.1): the span&#x27;s Onkelos was read Tier-A at derive time (3 sequential per-verse fetches, logged in Data/FETCHLOG.md) and the accumulated triage findings anchored to 2:1-3 were queried before writing (PRE 18:4 seven-dedications; Bereshit Rabbati 58 reveal; Megillah 30b:10 liturgical bracket — all day-1 triage rows). SECOND PROSPECTIVE MIDDOT RUN (logic/middot_scan/ WATCHLIST_gen07_prospective_2026-07-31.md): the corpus-side finding is deliberately NEGATIVE — day 7&#x27;s vocabulary fails the rarity filter because it seeds whole legal systems (melakhah 65x; kdsh first here, then the entire holiness register; Exod 20:11 re-runs 2:2-3 verbatim as the fourth commandment&#x27;s reason clause). Interpreter vocabulary extension required at freeze: BLESS with the MANDATE clause OPTIONAL (this unit&#x27;s blessing quotes no speech) — pre-flight ran all scenarios green with the prototype injected. FROZEN 2026-07-31 on owner order (&quot;freeze 6 and 7&quot;): the interpreter&#x27;s BLESS mandate went optional and the two new scenario checks (assigned-before-presence; LEDGER stays EMPTY) landed; the unit was re-verified green through the real interpreter at freeze. THE SEVEN DAYS ARE COMPLETE.</div>
+<div class="note">Logic-derived v1: v3 ta&#x27;amim trees (glue bricks, pure binary) -&gt; leaf role frames from OSHB morph -&gt; operator lines citing TIR rules -&gt; machine-state scenarios. Machine tokens apostrophe-free (yom_ha_shevii, tzevaam) where checker regexes require word characters.</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (retro, oral-first era; record: logic/oral_audit/AUDIT_gen_07_2026-08-08.md; manifest 5/5 VERIFIED, zero FAILED). CROWNS (chain-attested + DB-verified). THE 72-LETTER FINISH [G07-01, Minchat Shai]: ויכלו (&quot;and they were finished,&quot; 2:1) is written LEAN — no second vav — &quot;for its letter-count is 72,&quot; the Name-count MS cites, hinted at creation&#x27;s close (letter-sum asserted at build; a letter-count check type is still unordered). The skeleton stands exactly twice in the Torah: here passive, and re-pointed active as Hagar&#x27;s water FINISHED from the skin (Gen 21:15). THE THREE WORKS [G07-02, Kitzur Baal HaTurim]: מלאכתו (&quot;His work&quot;) three times in the Sabbath passage — &quot;for the three works He rested from: heavens, earth, and sea&quot; — the count exact (twice in 2:2, once in 2:3), and the Torah gives the word to only ONE station afterward: Joseph&#x27;s work in Potiphar&#x27;s house (Gen 39:11). THE MISSING EVENING [G07-03, Kitzur]: &quot;no evening-and-morning is written for the seventh day, for we add from the profane onto the holy&quot; — and the formula ויהי ערב (&quot;and there was evening&quot;) stands EXACTLY SIX times in the whole Torah, days one through six, never again: the seventh day&#x27;s openness verified as a whole-stream census. THE REST THAT RETURNS AS MANNA [G07-04, Kitzur; the Masorah; Kiddushin 38a]: וישבת (&quot;and He rested,&quot; 2:2) — the Masorah pairs it with &quot;the manna RESTED&quot; (Josh 5:12, outside the Torah instrument): the Sabbath blessed in manna and hallowed in manna. In the Torah the rest-form stands ONCE, while its skeleton collides seven-fold with &quot;and you shall DWELL&quot; — another skeleton-collision member. THE THREE HAND-OFFS OF BLESSING [G07-05, Kitzur]: ויברך אלהים (&quot;and God blessed,&quot; the two words adjacent) exactly THREE times — the Sabbath at creation, Noah when the world stood renewed after the flood, and Isaac: &quot;until now I blessed My creatures; from now on the blessings are handed to you.&quot; Exact in the stream. READINGS (named-only): Rashi/Bereshit Rabbah — blessed it with manna (double bread on the sixth), hallowed it with manna (none fell on Sabbath), &quot;the verse is written about the future&quot;; R. Simeon&#x27;s hair&#x27;s-breadth entry into the seventh day; Targum Yerushalmi&#x27;s &quot;and He DESIRED the seventh day&quot; (the desired of days); BR 11:9 — the work fit for the Sabbath done double on the sixth.</div>
+<div class="meta">confidence: structure tested; operator readings tested-per-TIR; intent hypothesis</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>Day-7 unit (2:1-3): the week&#x27;s closing span, defined by ABSENCES the six prior units make measurable. No va-yomer — the corpus&#x27;s ONLY speech-less day (the ten-utterances census has zero members here). No demand — the first unit whose SPECS log ends empty. No build — zero WORLD installs. No test — no tov. No receipt — no va-yehi khen. And NO COMMIT — no evening, no morning, no day label: the transaction opened by the evening-morning cycle at 1:5 never closes on the seventh. The learning-pass model called this the OPEN TRANSACTION; the machine now holds it as a ledger with six closed rows and a seventh day that exists only as an OPERAND (blessed, sanctified) — never as a row. What the span DOES contain: the passive completion, the dated finishing act, the third blessing (aimed at a time object, with no quoted mandate), and the Torah&#x27;s first holiness write.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Hebrew source + trees</td><td>All 3 verses via taamim_tree_parse.py rule set v3: status unique, pure_binary true. tree_ascii regenerated 2026-07-31 from DB tree_json. Tree facts: 2:2 splits into two MIRRORED halves at the etnachta ([finished on-the-seventh his-work which-he-made | ceased on-the-seventh from-all-his-work which-he-made] — same four-part shape twice); 2:3 splits [blessed the seventh day + sanctified it | the reason clause], isolating the ki-clause with the la&#x27;asot tail as the right arm.</td><td>tested</td></tr>
+<tr><td><b>C</b></td><td>Segment structure</td><td>Verb morphology (#IMPOSED OSHB, DB-verified 2026-07-31): va-yekhulu VPw3mp — PUAL (passive intensive) wayyiqtol — the completion is AGENTLESS: &#x27;they WERE finished&#x27; (the TIR-032 agentless-passive class; the rule was written for the niphal — the pual is the same agentless family, noted). va-yekhal Vpw3ms — PIEL ACTIVE — &#x27;He finished&#x27;, dated BA-YOM HA-SHEVI&#x27;I (&#x27;ON the seventh day&#x27;) — recorded [OPEN]: an act of finishing located inside the ceasing day. va-yishbot Vqw3ms — &#x27;and He CEASED&#x27; (shavat — the verb that will name the Sabbath, here only a verb; the noun shabbat does not occur in the span). va-yevarekh Vpw3ms — the third BLESS. va-yekadesh Vpw3ms — PIEL &#x27;sanctified&#x27;: lemma 6942 kdsh, the corpus&#x27;s FIRST holiness token (DB-verified; next occurrence in the whole Torah: Exod 13:2). shavat Vqp3ms — the perfect inside the reason clause. bara Vqp3ms + la&#x27;asot Vqc — &#x27;which God CREATED to MAKE&#x27;: perfect + purpose infinitive (TIR-030), recorded [OPEN]. melakhah (&#x27;work&#x27;) x3 — new register term, unknown to days 1-6. tzeva&#x27;am (&#x27;their HOST/array&#x27;) — new summary term over the whole inventory. yom ha-shevi&#x27;i x3, all with the definite article — day 6&#x27;s heh yeterah (&#x27;extra heh&#x27;) is now the norm.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Predicates &amp; outcomes</td><td>2:1 — system-wide PASSIVE completion: heavens, earth, and all their tzava (&#x27;host&#x27;) are finished, with no named finisher — the corpus&#x27;s first agentless main-line event. 2:2 — the ACTIVE completion, dated ON the seventh day [OPEN: what finishing remained after day 6&#x27;s global pass? — chain answers queued: PRE 18:4 reads va-yekhal as DEDICATION; BR 10:9 answers &#x27;menuchah — rest itself was created&#x27;; Onkelos retains the seventh-day dating unharmonized where other ancient versions flinch]; then the CEASING — va-yishbot, rendered by Onkelos as ve-NACH (&#x27;and He RESTED&#x27;): the translation&#x27;s interpretive gloss, cessation as rest. 2:3 — the day is BLESSED (third BLESS; the recipient is a TIME object, not a creature; NO le-mor, NO quoted mandate — the blessing that empowered creatures toward increase on days 5-6 here confers standing WITHOUT instructions) and SANCTIFIED (the first kdsh — a REGISTRY status write, the day-4 ASSIGN device carrying the corpus&#x27;s first holiness), with a reason clause (ki vo shavat — &#x27;for in it He ceased&#x27;) whose tail is the strangest infinitive of the account: asher bara Elohim LA&#x27;ASOT — &#x27;which God created TO MAKE&#x27; [OPEN]. Then NOTHING: no test, no receipt, no evening-morning, no label. The machine ends with the LEDGER&#x27;s seventh row simply absent.</td><td>tested</td></tr>
+<tr><td><b>E</b></td><td>Logic format choice</td><td>Operator lines + one REGISTRY write + NO ledger row. The open transaction is represented by ABSENCE, not by a pseudo-commit: the unit contains no COMMIT operator, so the machine&#x27;s LEDGER ends without a day-7 entry — asserted positively in the scenarios (LEDGER stays EMPTY). The blessing uses BLESS with no MANDATE clause — interpreter extension at verification (the day-5 handler required the mandate; this unit shows the mandate was a parameter, not part of the operator&#x27;s essence). The sanctification is an ASSIGN (day-4 dative-role precedent): yom_ha_shevii -&gt; kadosh — and the machine flags that the write&#x27;s target exists in no WORLD register (assigned-before-presence): the day is a TIME object — the corpus&#x27;s first status write to something that is not a thing.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Bilingual logic objects</td><td>Every operator line carries he + he_translit + en. Machine tokens apostrophe-free: yom_ha_shevii, tzevaam; display fields keep the apostrophes (shevi&#x27;i, tzeva&#x27;am).</td><td>established</td></tr>
+<tr><td><b>G</b></td><td>Oral (named only) + Tier-A translation check</td><td>Verified from local Data at derive time: Pirkei DeRabbi Eliezer 18:4 (the seven dedications — day-1 triage row 410); Bereshit Rabbati, Parashat Bereshit 58 (va-yekhulu as REVEAL — day-1 row 463); Megillah 30b:10 (Gen 1:1-2:3 as one liturgical unit — day-1 row 55). Named but not yet read (observation tier, day-7 Tier-A queue): Bereshit Rabbah 10 (the va-yekhulu dossier; 10:9 — menuchah created on the seventh); Bavli Shabbat 119b (the va-yekhulu recitation — verify at triage). Tier-A Onkelos read at derive time (FETCHLOG 2026-07-31): ve-ishtakhlelu — the agentless passive RETAINED; chayil (&#x27;force/host&#x27;) for tzava; the SEVENTH-day dating of va-yekhal retained unharmonized; ve-NACH (&#x27;and He RESTED&#x27;) for va-yishbot BOTH times — the translation glosses cessation as rest; kadish yateh retained; the la&#x27;asot tail retained (di vra le-me&#x27;bad).</td><td>tested</td></tr>
+<tr><td><b>H</b></td><td>Scenarios</td><td>S1 the agentless completion with the presupposition flags; S2 the quietest state in the corpus (no test, no name — asserted by the machine&#x27;s own emptiness checks); S3 the holiness write, the TIME-object flag, and the POSITIVE assertion that the LEDGER stays EMPTY — the open transaction as a checked machine state, not prose. S4_negative re-asserts flag-never-block. No demand exists in the unit, so no mood-contract scenario applies — itself a first.</td><td>tested</td></tr>
+<tr><td><b>I</b></td><td>English leakage review</td><td>Operators derive from morph codes (VPw pual passive -&gt; agentless EVENT; Vpw piel actives; Vqw wayyiqtol; Vqp perfects; Vqc purpose infinitive TIR-030; To object markers TIR-014) and from measured ABSENCE against the six-unit baseline (no Vqv imperatives, no jussives, no va-yomer, no tov, no va-yehi khen, no erev/boqer pair) — the open-transaction reading rests on token counts from our own DB, not on doctrine. The first-occurrence claim for kdsh is a corpus query.</td><td>established</td></tr>
+<tr><td><b>J</b></td><td>Pre-flight + freeze gate</td><td>Pre-flight 2026-07-31: BLESS-without-mandate prototype + the two new checker patterns (assigned-before-presence; LEDGER stays EMPTY) injected in the scratchpad harness (repo file untouched); all scenarios green. FROZEN 2026-07-31 on owner order (&quot;freeze 6 and 7&quot;): h_bless mandate made optional, check_clause gained the two patterns; unit re-verified green through the real interpreter. Narrative (ASK FIRST) and triage remain on owner order. Changes require a new derive pass, not silent edits. Oral audit 2026-08-08 folded same day (run 8 block 5): 5 VERIFIED / 0 FAILED — see meta oral_audit_note_en; machine layer untouched. Creation week (Gen 1:1-2:3) oral layer complete with this fold.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_2_1 · Gen.2.1 · <span class='expr'>COMPLETION_PASSIVE</span></h3>
+<p><span class="he">וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם</span> · <i>va-yekhulu ha-shamayim ve-ha-aretz ve-khol-tzeva&#x27;am</i> · [EN-AID/JPS] And the heaven and the earth were finished, and all the host of them.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויכלו השמים והארץ</span> · <i>va-yekhulu ha-shamayim ve-ha-aretz</i> · the passive completion over the two registries (tifcha arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וכל צבאם</span> · <i>ve-khol tzeva&#x27;am</i> · the inventory summarized under the new term: all their HOST</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">complete(e1) ∧ Theme(e1, shamayim) ∧ Theme(e1, aretz) ∧ Theme(e1, tzevaam)</span><br><span class="gloss">= complete(e1) ∧ Theme(e1, heavens) ∧ Theme(e1, earth) ∧ Theme(e1, their-host)</span><br>PUAL wayyiqtol 3MP (VPw3mp) — &#x27;and they WERE FINISHED&#x27;: the corpus&#x27;s first main-line AGENTLESS event — no subject performs it; the two registries of 1:1 (heavens, earth) and their whole contents simply arrive at completion. The event carries NO Agent term — the machine records what the letter records (TIR-032&#x27;s agentless class; the rule was written for the niphal, the pual is the same family — noted, not stretched). The contents are summarized under a NEW term: tzeva&#x27;am (&#x27;their HOST/array&#x27; — an order/muster word; Onkelos: chayil, &#x27;force&#x27;), [OPEN]: the inventory the week built piece by piece is renamed wholesale as an ARRAY. Bereshit Rabbati 58 (read, day-1 row 463) hears kalah/reveal in the verb: completion as disclosure.
+</td><td><span class="he">וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם</span> · <i>va-yekhulu ha-shamayim ve-ha-aretz ve-khol-tzeva&#x27;am</i><br><span class="gloss">= they-were-finished heavens earth and-all-their-host</span></td><td class='cite'>TIR-032</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">shamayim, aretz are READ without prior install (standalone machine; installed in gen_01/gen_02/gen_03 — cross-unit chaining is Stage E)</span><br><span class="gloss">= heavens, earth are READ without prior install (standalone machine; installed in gen-01/gen-02/gen-03 — cross-unit chaining is Stage E)</span><br>flag, not fix — the completion&#x27;s subjects are the corpus&#x27;s first two registries</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Five words, no agent, no speech: the span opens by closing — the 1:1 pair (heavens and earth) returns as the subject of a passive, bracketing the account. The liturgical chain (Megillah 30b:10) reads 1:1-2:3 as one unit; the letter&#x27;s bracket is this echo.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_2_2 · Gen.2.2 · <span class='expr'>COMPLETE_CEASE</span></h3>
+<p><span class="he">וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ אֲשֶׁר עָשָׂה וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ אֲשֶׁר עָשָׂה</span> · <i>va-yekhal Elohim ba-yom ha-shevi&#x27;i melakhto asher asah va-yishbot ba-yom ha-shevi&#x27;i mi-kol-melakhto asher asah</i> · [EN-AID/JPS] And on the seventh day God finished His work which He had made; and He rested on the seventh day from all His work which He had made.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויכל אלהים ביום השביעי מלאכתו אשר עשה</span> · <i>va-yekhal Elohim ba-yom ha-shevi&#x27;i melakhto asher asah</i> · the ACTIVE completion, dated ON the seventh (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וישבת ביום השביעי מכל מלאכתו אשר עשה</span> · <i>va-yishbot ba-yom ha-shevi&#x27;i mi-kol-melakhto asher asah</i> · the ceasing — the mirrored half</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">finish(e2) ∧ Agent(e2, Elohim)</span><br><span class="gloss">= finish(e2) ∧ Agent(e2, God)</span><br>PIEL ACTIVE (Vpw3ms) — &#x27;and God FINISHED, ON THE SEVENTH DAY, His work&#x27;: the passive completion of 2:1 is followed by an active finishing act explicitly dated INSIDE the ceasing day — recorded [OPEN] (what act of finishing remained after 1:31&#x27;s global pass?). The chain&#x27;s dossier is queued: PRE 18:4 (read) makes va-yekhal a DEDICATION ceremony; BR 10:9 (named) answers &#x27;menuchah — REST itself was the seventh day&#x27;s creation&#x27;. Onkelos (Tier-A) retains the seventh-day dating unharmonized — the received text stood where other ancient versions moved the finishing to the sixth. The work-word is NEW: melakhah — unknown to days 1-6, x3 in this span, and destined to be the Sabbath law&#x27;s operative term (65 occurrences Torah-wide; the prospective watch-list&#x27;s negative-rarity finding).
+</td><td><span class="he">וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ</span> · <i>va-yekhal Elohim ba-yom ha-shevi&#x27;i melakhto</i><br><span class="gloss">= he-finished God day seventh his-work</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">cease(e3) ∧ Agent(e3, Elohim)</span><br><span class="gloss">= cease(e3) ∧ Agent(e3, God)</span><br>&#x27;And He CEASED on the seventh day from all His work&#x27; — va-yishbot (Vqw3ms): the verb that will name the Sabbath, appearing here as plain narrative. The accent tree gives the verse two MIRRORED halves — [finished | ceased], each with the same four members (verb, seventh-day date, work-word, asher asah tail): completion and cessation as parallel transactions. Onkelos renders ve-NACH (&#x27;and He RESTED&#x27;) — the translation&#x27;s interpretive gloss, cessation read as rest; the Hebrew says only that the working STOPPED.
+</td><td><span class="he">וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ</span> · <i>va-yishbot ba-yom ha-shevi&#x27;i mi-kol-melakhto</i><br><span class="gloss">= he-ceased day seventh from-all-his-work</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Two events, one agent, zero products: the corpus&#x27;s first verse whose only content is the ENDING of activity. No speech opens it, no receipt closes it. The day being entered (ba-yom ha-shevi&#x27;i, definite x2) has no LEDGER row anywhere ahead.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_2_3 · Gen.2.3 · <span class='expr'>BLESS_SANCTIFY</span></h3>
+<p><span class="he">וַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ כִּי בוֹ שָׁבַת מִכָּל־מְלַאכְתּוֹ אֲשֶׁר־בָּרָא אֱלֹהִים לַעֲשׂוֹת</span> · <i>va-yevarekh Elohim et-yom ha-shevi&#x27;i va-yekadesh oto ki vo shavat mi-kol-melakhto asher-bara Elohim la&#x27;asot</i> · [EN-AID/JPS] And God blessed the seventh day, and hallowed it; because that in it He rested from all His work which God in creating had made.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויברך אלהים את יום השביעי ויקדש אתו</span> · <i>va-yevarekh Elohim et-yom ha-shevi&#x27;i va-yekadesh oto</i> · the double act: blessed + sanctified (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">כי בו שבת מכל מלאכתו אשר ברא אלהים לעשות</span> · <i>ki vo shavat mi-kol-melakhto asher-bara Elohim la&#x27;asot</i> · the reason clause, with the la&#x27;asot tail</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>BLESS</td><td><span class="expr">BLESS(Elohim, yom_ha_shevii)</span><br><span class="gloss">= BLESS(God, the-seventh-day)</span><br>The third BLESS of the corpus — and both prior parameters are gone: the recipient is not a creature but a TIME OBJECT (the seventh day, et-marked as a direct object), and there is NO QUOTED MANDATE — no le-mor (&#x27;saying&#x27;), no imperatives, no speech at all (this span is the corpus&#x27;s only speech-less day: zero census utterances). Days 5-6 blessed AND commissioned; day 7 blesses and commissions NOTHING — the standing is conferred on the day itself, not on any agent&#x27;s future action. INTERPRETER NOTE: the day-5 BLESS handler required the mandate clause; this unit shows the mandate was a parameter, not the operator&#x27;s essence — vocabulary extension at verification (mandate optional).
+</td><td><span class="he">וַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי</span> · <i>va-yevarekh Elohim et-yom ha-shevi&#x27;i</i><br><span class="gloss">= blessed God obj-marker-day seventh</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>ASSIGN</td><td><span class="expr">REGISTRY: yom_ha_shevii-&gt;kadosh — the corpus&#x27;s FIRST holiness write (kdsh lemma 6942, first occurrence in the Torah; next: Exod 13:2)</span><br><span class="gloss">= REGISTRY: the-seventh-day-&gt;holy — the corpus&#x27;s FIRST holiness write (kdsh lemma 6942, first occurrence in the Torah; next: Exod 13:2)</span><br>&#x27;And He SANCTIFIED it&#x27; — the Torah&#x27;s first kdsh token (DB-verified). The machine records it with the day-4 ASSIGN device: a REGISTRY status write, yom_ha_shevii -&gt; kadosh (&#x27;holy/set-apart&#x27;) — and FLAGS what the letter makes strange: the write&#x27;s target exists in no WORLD register (assigned-before-presence). The day is not a thing; it is a position in TIME — the corpus&#x27;s first status conferred on a non-entity. From this single write descends the holiness register the law will build (the firstborn, Exod 13:2; the Tabernacle; the priesthood; &#x27;you shall be holy&#x27;). The reason clause follows — ki vo shavat (&#x27;for in it He ceased&#x27;) — and closes on the account&#x27;s strangest tail: asher bara Elohim LA&#x27;ASOT, &#x27;which God created TO MAKE&#x27; — perfect + purpose infinitive (TIR-030), recorded [OPEN] (created... in order to keep making? the chain&#x27;s continuing-creation readings are triage material). Onkelos retains the tail untouched.
+</td><td><span class="he">וַיְקַדֵּשׁ אֹתוֹ</span> · <i>va-yekadesh oto</i><br><span class="gloss">= sanctified it</span></td><td class='cite'>TIR-030</td><td>tested</td></tr>
+</table>
+<div class="meta">And then nothing. No test — the six-day instrument is not applied to the seventh. No receipt — nothing was demanded. No evening, no morning, no label — the cycle formula that closed six rows is absent, and the LEDGER&#x27;s seventh row never comes into being. The machine ends the week holding an OPEN TRANSACTION: a day blessed and sanctified but never committed — standing, not closed. The learning-pass model predicted the shape; the scenarios assert it as machine state (LEDGER stays EMPTY).</div>
+</div>
+<h2>State machine</h2>
+<div class="meta">Day-7 close-out (standalone; registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER).</div>
+<table><tr><th>state</th><th>meaning</th></tr>
+<tr><td><b>S_boot</b></td><td>Before 2:1 — all registers empty (standalone unit)</td></tr>
+<tr><td><b>S_completed_passive</b></td><td>After 2:1 — agentless completion over shamayim/aretz/tzava; both registries flagged presupposed; nothing installed</td></tr>
+<tr><td><b>S_finished_ceased</b></td><td>After 2:2 — active finish + cease, both dated ON the seventh; no test, no name, no demand anywhere</td></tr>
+<tr><td><b>S_blessed_sanctified_open</b></td><td>After 2:3 — the day blessed (no mandate) and sanctified (REGISTRY: kadosh, 1 write, target outside WORLD); LEDGER EMPTY — the transaction never closes</td></tr>
+</table><table><tr><th>from</th><th>to</th><th>via</th></tr>
+<tr><td>S_boot</td><td>S_completed_passive</td><td>STEP_Gn_2_1</td></tr>
+<tr><td>S_completed_passive</td><td>S_finished_ceased</td><td>STEP_Gn_2_2</td></tr>
+<tr><td>S_finished_ceased</td><td>S_blessed_sanctified_open</td><td>STEP_Gn_2_3</td></tr>
+</table>
+<div class="note"><b>AFTER_S_blessed_sanctified_open</b> — WORLD: NOTHING created — the first unit with zero installs; only shamayim, aretz presupposed (flagged). REGISTRY: 1 write — yom_ha_shevii -&gt; kadosh: the corpus&#x27;s first holiness status, written to a TIME object that no WORLD register holds (flagged assigned-before-presence). SPECS: log EMPTY — the first demand-less unit: nothing pushed, nothing owed. TESTS: empty — the tov instrument was not applied. LEDGER: SIX closed rows exist in the week&#x27;s model; the seventh is ABSENT — no commit operator exists in this unit, and the machine&#x27;s ledger ends open. TIME: the seventh day referenced x3 (definite), entered, never closed. FLAGS: read_before_install x2 (shamayim, aretz), assigned_before_any_ presence x1 (yom_ha_shevii) — none blocking; and no commit_without_test flag exists because no commit was attempted: the deviation is deeper than the flag system&#x27;s categories — it is recorded as the assertable ABSENCE of the row itself.</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>Agentless completion; nothing installed: after STEP_Gn_2_1</td><td>All registers empty (standalone unit).</td><td>SPECS empty; machine flags shamayim/aretz as read-before-install (presupposed).<br><span class="gloss">= SPECS empty; machine flags heavens/earth as read-before-install (presupposed).</span></td><td><span class="he">וַיְכֻלּוּ</span> · <i>va-yekhulu</i><br><span class="gloss">= they-were-finished</span></td></tr>
+<tr><td><b>S2</b></td><td>Finish and cease — the quietest state in the corpus: after STEP_Gn_2_2</td><td>S1 state.</td><td>no test, no name; SPECS empty.</td><td><span class="he">וַיִּשְׁבֹּת</span> · <i>va-yishbot</i><br><span class="gloss">= he-ceased</span></td></tr>
+<tr><td><b>S3</b></td><td>Blessed, sanctified, never committed — the open transaction: after STEP_Gn_2_3</td><td>S2 state.</td><td>REGISTRY: yom_ha_shevii-&gt;kadosh (1 write); machine flags yom_ha_shevii as assigned-before-presence; LEDGER stays EMPTY (open transaction); SPECS empty.<br><span class="gloss">= REGISTRY: the-seventh-day-&gt;holy (1 write); machine flags the-seventh-day as assigned-before-presence; LEDGER stays EMPTY (open transaction); SPECS empty.</span></td><td><span class="he">וַיְקַדֵּשׁ אֹתוֹ</span> · <i>va-yekadesh oto</i><br><span class="gloss">= sanctified it</span></td></tr>
+<tr><td><b>S4_negative</b></td><td>Negative: flags never block the ledger</td><td>A synthetic commit with TESTS empty (the machine&#x27;s own contract self-test).</td><td>Cycle close with TESTS empty must be FLAGGED, never blocked — the rule that would have governed a day-7 commit had one existed; the unit&#x27;s deviation is deeper: no commit is attempted at all, and the ledger&#x27;s seventh row is asserted ABSENT in S3.<br><span class="gloss">= Cycle close with TESTS empty must in FLAGGED, never blocked — the rule that would have governed a day-7 commit had one existed; the unit&#x27;s deviation is deeper: no commit is attempted at all, and the ledger&#x27;s seventh row is asserted ABSENT in S3.</span></td><td></td></tr>
+</table>
+<h2>Exports (reusable patterns)</h2><table><tr><th>id</th><th>content</th></tr>
+<tr><td>EXPORT_open_transaction</td><td><span class="he">(וַיְהִי־עֶרֶב וַיְהִי־בֹקֶר — absent)</span> · <i>(va-yehi erev va-yehi voqer — absent)</i> · the seventh day never commits: no cycle formula, no label, no ledger row — the week ends with an open transaction; the chain&#x27;s Sabbath (a standing day re-entered weekly) is the halakhic afterlife of exactly this openness — check against Exod 20:8-11, which cites this span as law</td></tr>
+<tr><td>EXPORT_first_holiness</td><td><span class="he">וַיְקַדֵּשׁ אֹתוֹ</span> · <i>va-yekadesh oto</i> · the Torah&#x27;s first kdsh (&#x27;sanctify&#x27;) — written to a day, not a thing; next occurrence Exod 13:2 (the firstborn), then the whole holiness register: the corpus&#x27;s holiness system boots on a TIME object</td></tr>
+<tr><td>EXPORT_melakhah_register</td><td><span class="he">מְלַאכְתּוֹ ×3</span> · <i>melakhto x3</i> · the work-word installed here becomes the Sabbath law&#x27;s operative term (Exod 20:10 &#x27;you shall do no melakhah&#x27;) and the Tabernacle build ledger&#x27;s term (Exod 35-40) — 65 occurrences Torah-wide; Exod 20:11 re-runs this span&#x27;s whole vocabulary (rested/blessed/THE seventh/sanctified) as the fourth commandment&#x27;s reason clause</td></tr>
+<tr><td>EXPORT_speechless_day</td><td><span class="he">(וַיֹּאמֶר — absent)</span> · <i>(va-yomer — absent)</i> · the only day with zero utterances — the ten-utterances census&#x27;s complement: the week&#x27;s speech budget ends at day 6; day 7 acts (blesses, sanctifies) without a single quoted word</td></tr>
+<tr><td>EXPORT_finished_on_seventh</td><td><span class="he">וַיְכַל … בַּיּוֹם הַשְּׁבִיעִי</span> · <i>va-yekhal … ba-yom ha-shevi&#x27;i</i> · the finishing act dated INSIDE the ceasing day [OPEN] — Onkelos retains it unharmonized; chain dossier: PRE 18:4 (dedication), BR 10:9 (menuchah — rest itself created) — queued</td></tr>
+<tr><td>EXPORT_laasot_tail</td><td><span class="he">אֲשֶׁר־בָּרָא אֱלֹהִים לַעֲשׂוֹת</span> · <i>asher-bara Elohim la&#x27;asot</i> · &#x27;which God created TO MAKE&#x27; — the account&#x27;s closing purpose infinitive (TIR-030), [OPEN]: creation handed forward as an unfinished doing — the continuing-creation readings are triage material</td></tr>
+<tr><td>EXPORT_tzava_summary</td><td><span class="he">וְכָל־צְבָאָם</span> · <i>ve-khol-tzeva&#x27;am</i> · the week&#x27;s inventory renamed wholesale as a HOST/array (tzava) — the term returns as the muster/census word of Numbers and the &#x27;LORD of hosts&#x27; title beyond the Torah; observation tier</td></tr>
+</table>
+<h2>Oral notes (named, tiered, dual-track — never merged)</h2>
+<div class="note"><span class="badge tier-v">verified</span> <b>Pirkei DeRabbi Eliezer 18:4 — on the 2:2 finish event; read at the day-1 triage (row 410), re-verified local 2026-07-31</b><br><span class="he">שֶׁבַע חֲנֻכּוֹת</span> · <i>sheva chanukot</i> · The SEVEN DEDICATIONS: &#x27;each day the Holy One finished His work and DEDICATED it&#x27; — the chain reading va-yekhal (&#x27;He finished&#x27;) as a dedication ceremony performed daily and consummated on the seventh: the finishing-ON-the-seventh [OPEN] answered by making the finish a rite rather than a work. Dual-track beside the machine&#x27;s dated-finish flag.
+<br><i>Verified from Data/sefaria_texts/ (local). Dual-track; not merged.</i></div>
+<div class="note"><span class="badge tier-v">verified</span> <b>Bereshit Rabbati, Parashat Bereshit 58 — on the 2:1 passive completion; read at the day-1 triage (row 463), re-verified local 2026-07-31</b><br><span class="he">וַיְכֻלּוּ</span> · <i>va-yekhulu</i> · The completion verb heard as REVEAL (the kalah/disclosure wordplay): &#x27;as long as tohu va-vohu (unformed-and-void) was in the world&#x27; the works were hidden; when it passed, the works were revealed — completion as disclosure of what the week had built. Beside the machine&#x27;s agentless-passive reading (no agent named because the event is the STATE of the whole system).
+<br><i>Verified from Data/sefaria_texts/ (local). Dual-track; not merged.</i></div>
+<div class="note"><span class="badge tier-v">verified</span> <b>Bavli Megillah 30b:10 — the span boundary; read at the day-1 triage (row 55), re-verified local</b><br><span class="he">מַעֲשֵׂה בְרֵאשִׁית</span> · <i>ma&#x27;aseh vereshit</i> · The non-priestly watches read the act of creation as Gen 1:1 THROUGH 2:3 — the chain&#x27;s own canonical bracket includes this span inside the creation account: the unit boundary the machine draws (the week = seven units ending at 2:3) is the chain&#x27;s liturgical boundary.
+<br><i>Verified from Data/sefaria_texts/ (local). Dual-track; not merged.</i></div>
+<div class="note"><span class="badge tier-o">observation</span> <b>Bereshit Rabbah 10 (the va-yekhulu dossier; 10:9 — menuchah, &#x27;rest&#x27;, as the seventh day&#x27;s own creation) and Bavli Shabbat 119b (the va-yekhulu recitation) — day-7 Tier-A queue</b><br><span class="he">מְנוּחָה</span> · <i>menuchah</i> · Named, not yet read (observation tier): the chain&#x27;s answers to the finished-ON-the-seventh [OPEN] (what was created on the seventh? — rest itself) and the recitation practice that makes 2:1-3 a standing weekly testimony. Queued for the day-7 triage under section 4.1.
+<br><i>Queue entry — no claim made beyond the naming.</i></div>
+<h2>Binary trees (ta'amim v3, glue bricks)</h2>
+<h3>Gen.2.1 · parser unique · 5 words</h3>
+<div class="meta"><span class="he">וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם</span> · <i>va-yekhulu ha-shamayim ve-ha-aretz ve-khol-tzeva&#x27;am</i> · The heavens and the earth were finished — and all their host. [EN-AID]</div>
+<pre>PHRASE (binary 5w) וַ/יְכֻלּ֛וּ הַ/שָּׁמַ֥יִם וְ/הָ/אָ֖רֶץ וְ/כָל …
+├── PHRASE (binary 3w) וַ/יְכֻלּ֛וּ הַ/שָּׁמַ֥יִם וְ/הָ/אָ֖רֶץ
+│   ├── [0] וַ/יְכֻלּ֛וּ (tevir, rank=3)
+│   └── [1-2] GLUE הַ/שָּׁמַ֥יִם וְ/הָ/אָ֖רֶץ (tifcha, rank=2)
+└── [3-4] GLUE וְ/כָל צְבָאָֽ/ם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.2.2 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ אֲשֶׁר עָשָׂה וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ אֲשֶׁר עָשָׂה</span> · <i>va-yekhal Elohim ba-yom ha-shevi&#x27;i melakhto asher asah va-yishbot ba-yom ha-shevi&#x27;i mi-kol-melakhto asher asah</i> · Finished on the seventh — ceased on the seventh: two mirrored halves. [EN-AID]</div>
+<pre>PHRASE (binary 14w) וַ/יְכַ֤ל אֱלֹהִים֙ בַּ/יּ֣וֹם הַ/שְּׁבִיעִ֔י מ…
+├── PHRASE (binary 7w) וַ/יְכַ֤ל אֱלֹהִים֙ בַּ/יּ֣וֹם הַ/שְּׁבִיעִ֔י מ…
+│   ├── PHRASE (binary 4w) וַ/יְכַ֤ל אֱלֹהִים֙ בַּ/יּ֣וֹם הַ/שְּׁבִיעִ֔י
+│   │   ├── [0-1] GLUE וַ/יְכַ֤ל אֱלֹהִים֙ (pashta, rank=3)
+│   │   └── [2-3] GLUE בַּ/יּ֣וֹם הַ/שְּׁבִיעִ֔י (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) מְלַאכְתּ֖/וֹ אֲשֶׁ֣ר עָשָׂ֑ה
+│       ├── [4] מְלַאכְתּ֖/וֹ (tifcha, rank=2)
+│       └── [5-6] GLUE אֲשֶׁ֣ר עָשָׂ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) וַ/יִּשְׁבֹּת֙ בַּ/יּ֣וֹם הַ/שְּׁבִיעִ֔י מִ/כָּ…
+    ├── PHRASE (binary 3w) וַ/יִּשְׁבֹּת֙ בַּ/יּ֣וֹם הַ/שְּׁבִיעִ֔י
+    │   ├── [7] וַ/יִּשְׁבֹּת֙ (pashta, rank=3)
+    │   └── [8-9] GLUE בַּ/יּ֣וֹם הַ/שְּׁבִיעִ֔י (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) מִ/כָּל מְלַאכְתּ֖/וֹ אֲשֶׁ֥ר עָשָֽׂה
+        ├── [10-11] GLUE מִ/כָּל מְלַאכְתּ֖/וֹ (tifcha, rank=2)
+        └── [12-13] GLUE אֲשֶׁ֥ר עָשָֽׂה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.2.3 · parser unique · 16 words</h3>
+<div class="meta"><span class="he">וַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ כִּי בוֹ שָׁבַת מִכָּל־מְלַאכְתּוֹ אֲשֶׁר־בָּרָא אֱלֹהִים לַעֲשׂוֹת</span> · <i>va-yevarekh Elohim et-yom ha-shevi&#x27;i va-yekadesh oto ki vo shavat mi-kol-melakhto asher-bara Elohim la&#x27;asot</i> · Blessed and sanctified the seventh day — for in it He ceased from all the work God created to make. [EN-AID]</div>
+<pre>PHRASE (binary 16w) וַ/יְבָ֤רֶךְ אֱלֹהִים֙ אֶת י֣וֹם הַ/שְּׁבִיעִ֔י…
+├── PHRASE (binary 7w) וַ/יְבָ֤רֶךְ אֱלֹהִים֙ אֶת י֣וֹם הַ/שְּׁבִיעִ֔י…
+│   ├── PHRASE (binary 5w) וַ/יְבָ֤רֶךְ אֱלֹהִים֙ אֶת י֣וֹם הַ/שְּׁבִיעִ֔י
+│   │   ├── [0-1] GLUE וַ/יְבָ֤רֶךְ אֱלֹהִים֙ (pashta, rank=3)
+│   │   └── [2-4] GLUE אֶת י֣וֹם הַ/שְּׁבִיעִ֔י (zaqef qatan, rank=2)
+│   └── PHRASE (binary 2w) וַ/יְקַדֵּ֖שׁ אֹת֑/וֹ
+│       ├── [5] וַ/יְקַדֵּ֖שׁ (tifcha, rank=2)
+│       └── [6] אֹת֑/וֹ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 9w) כִּ֣י ב֤/וֹ שָׁבַת֙ מִ/כָּל מְלַאכְתּ֔/וֹ אֲשֶׁ…
+    ├── PHRASE (binary 5w) כִּ֣י ב֤/וֹ שָׁבַת֙ מִ/כָּל מְלַאכְתּ֔/וֹ
+    │   ├── [7-9] GLUE כִּ֣י ב֤/וֹ שָׁבַת֙ (pashta, rank=3)
+    │   └── [10-11] GLUE מִ/כָּל מְלַאכְתּ֔/וֹ (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) אֲשֶׁר בָּרָ֥א אֱלֹהִ֖ים לַ/עֲשֽׂוֹת
+        ├── [12-14] GLUE אֲשֶׁר בָּרָ֥א אֱלֹהִ֖ים (tifcha, rank=2)
+        └── [15] לַ/עֲשֽׂוֹת (silluq (verse-end emperor), rank=1)
+</pre>
+<h2>Word coverage — 35/35 words with named roles</h2>
+<table><tr><th>ref</th><th>#</th><th>Hebrew</th><th>translit</th><th>English</th><th>role</th><th>kind</th><th>rule</th></tr>
+<tr><td>Gen.2.1</td><td>0</td><td class='he-cell'>ויכלו</td><td>va-yekhulu</td><td>and-they-were-finished</td><td>passive_completion_pual_agentless</td><td>logic_bearing</td><td class='cite'>TIR-032</td></tr>
+<tr><td>Gen.2.1</td><td>1</td><td class='he-cell'>השמים</td><td>ha-shamayim</td><td>the-heavens</td><td>completed_registry_presupposed</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.1</td><td>2</td><td class='he-cell'>והארץ</td><td>ve-ha-aretz</td><td>and-the-earth</td><td>completed_registry_presupposed</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.1</td><td>3</td><td class='he-cell'>וכל</td><td>ve-khol</td><td>and-all</td><td>totality_quantifier</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.1</td><td>4</td><td class='he-cell'>צבאם</td><td>tzeva&#x27;am</td><td>their-host</td><td>inventory_summary_term_new_open</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.2</td><td>0</td><td class='he-cell'>ויכל</td><td>va-yekhal</td><td>and-he-finished</td><td>active_completion_piel_dated_open</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.2</td><td>1</td><td class='he-cell'>אלהים</td><td>Elohim</td><td>God</td><td>agent</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.2</td><td>2</td><td class='he-cell'>ביום</td><td>ba-yom</td><td>on-the-day</td><td>time_locus</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.2</td><td>3</td><td class='he-cell'>השביעי</td><td>ha-shevi&#x27;i</td><td>the-seventh</td><td>time_locus_definite_ordinal</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.2</td><td>4</td><td class='he-cell'>מלאכתו</td><td>melakhto</td><td>his-work</td><td>work_register_term_new</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.2</td><td>5</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>relative_scope_opener</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.2</td><td>6</td><td class='he-cell'>עשה</td><td>asah</td><td>he-made</td><td>scope_work_made</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.2</td><td>7</td><td class='he-cell'>וישבת</td><td>va-yishbot</td><td>and-he-ceased</td><td>cessation_verb_first</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.2</td><td>8</td><td class='he-cell'>ביום</td><td>ba-yom</td><td>on-the-day</td><td>time_locus</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.2</td><td>9</td><td class='he-cell'>השביעי</td><td>ha-shevi&#x27;i</td><td>the-seventh</td><td>time_locus_definite_ordinal</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.2</td><td>10</td><td class='he-cell'>מכל</td><td>mi-kol</td><td>from-all</td><td>totality_quantifier</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.2</td><td>11</td><td class='he-cell'>מלאכתו</td><td>melakhto</td><td>his-work</td><td>work_register_term</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.2</td><td>12</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>relative_scope_opener</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.2</td><td>13</td><td class='he-cell'>עשה</td><td>asah</td><td>he-made</td><td>scope_work_made</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.3</td><td>0</td><td class='he-cell'>ויברך</td><td>va-yevarekh</td><td>and-blessed</td><td>bless_verb_piel_third_no_mandate</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.3</td><td>1</td><td class='he-cell'>אלהים</td><td>Elohim</td><td>God</td><td>agent</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.3</td><td>2</td><td class='he-cell'>את</td><td>et</td><td>obj-marker</td><td>obj_marker_time_recipient</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.2.3</td><td>3</td><td class='he-cell'>יום</td><td>yom</td><td>day</td><td>recipient_time_object</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.3</td><td>4</td><td class='he-cell'>השביעי</td><td>ha-shevi&#x27;i</td><td>the-seventh</td><td>recipient_time_object_definite</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.3</td><td>5</td><td class='he-cell'>ויקדש</td><td>va-yekadesh</td><td>and-sanctified</td><td>sanctify_verb_first_holiness</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.3</td><td>6</td><td class='he-cell'>אתו</td><td>oto</td><td>it</td><td>obj_pronoun_sanctified</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.2.3</td><td>7</td><td class='he-cell'>כי</td><td>ki</td><td>for</td><td>reason_conjunction</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.2.3</td><td>8</td><td class='he-cell'>בו</td><td>vo</td><td>in-it</td><td>time_locus_pronoun</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.3</td><td>9</td><td class='he-cell'>שבת</td><td>shavat</td><td>he-ceased</td><td>cessation_perfect_reason</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.3</td><td>10</td><td class='he-cell'>מכל</td><td>mi-kol</td><td>from-all</td><td>totality_quantifier</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.3</td><td>11</td><td class='he-cell'>מלאכתו</td><td>melakhto</td><td>his-work</td><td>work_register_term</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.3</td><td>12</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>relative_scope_opener</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.3</td><td>13</td><td class='he-cell'>ברא</td><td>bara</td><td>he-created</td><td>build_verb_bara_final</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.3</td><td>14</td><td class='he-cell'>אלהים</td><td>Elohim</td><td>God</td><td>agent</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.3</td><td>15</td><td class='he-cell'>לעשות</td><td>la&#x27;asot</td><td>to-make</td><td>purpose_infinitive_open</td><td>logic_bearing</td><td class='cite'>TIR-030</td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_07_completion_sanctity — Day seven: completion and sanctity — the open transaction (2:1-3) [frozen]
+
+final state: WORLD=[] (+2 presupposed) | REGISTRY={&#x27;yom_ha_shevii&#x27;: &#x27;kadosh&#x27;} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[&#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;assigned_before_any_presence&#x27;]
+
+=== S1 — Agentless completion; nothing installed: after STEP_Gn_2_1
+    וַיְכֻלּוּ (va-yekhulu)
+    PASS  SPECS empty  (queue=0)
+    PASS  machine flags shamayim/aretz as read-before-install (presupposed).  (flagged=[&#x27;aretz&#x27;, &#x27;shamayim&#x27;])
+
+=== S2 — Finish and cease — the quietest state in the corpus: after STEP_Gn_2_2
+    וַיִּשְׁבֹּת (va-yishbot)
+    PASS  no test, no name  (tests=0 names=0)
+    PASS  SPECS empty.  (queue=0)
+
+=== S3 — Blessed, sanctified, never committed — the open transaction: after STEP_Gn_2_3
+    וַיְקַדֵּשׁ אֹתוֹ (va-yekadesh oto)
+    PASS  REGISTRY: yom_ha_shevii-&gt;kadosh (1 write)  (names={&#x27;yom_ha_shevii&#x27;: &#x27;kadosh&#x27;} writes=1)
+    PASS  machine flags yom_ha_shevii as assigned-before-presence  (flagged=[&#x27;yom_ha_shevii&#x27;])
+    PASS  LEDGER stays EMPTY (open transaction)  (ledger_days=[])
+    PASS  SPECS empty.  (queue=0)
+
+=== S4_negative — Negative: flags never block the ledger
+    PASS  commit proceeded (not blocked)  (LEDGER=[99])
+    PASS  pattern deviation FLAGGED  (flags=[&#x27;commit_without_test&#x27;])
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_07_completion_sanctity.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_07_completion_sanctity — 2:1-3
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_07_completion_sanctity.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Day seven: completion and sanctity — the open transaction (2:1-3)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_07_completion_sanctity&quot;)
+
+# -------------------------- Gen.2.1 · COMPLETION_PASSIVE -------------------
+# וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם
+# &quot;And the heaven and the earth were finished, and all the host of them.&quot;
+m.step(&quot;Gen.2.1&quot;)
+# ‹וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם› (“and-they-were-finished
+# the-heavens and-the-earth and-all their-host”) — event: complete — theme
+# heavens, earth, their-host
+m.event(&quot;complete&quot;, themes=[&quot;shamayim&quot;, &quot;aretz&quot;, &quot;tzevaam&quot;])
+# reads without prior install (flag, not fix): heavens, earth
+m.presupposed(&quot;shamayim&quot;, &quot;aretz&quot;)
+
+# -------------------------- Gen.2.2 · COMPLETE_CEASE -----------------------
+# וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ אֲשֶׁר עָשָׂה
+# וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ אֲשֶׁר עָשָׂה
+# &quot;And on the seventh day God finished His work which He had made; and He
+# rested on the seventh day from all His work which He had made.&quot;
+m.step(&quot;Gen.2.2&quot;)
+# ‹וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ› (“and-he-finished God
+# on-the-day the-seventh his-work”) — event: finish — agent God
+m.event(&quot;finish&quot;, agent=&quot;Elohim&quot;)
+# ‹וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ› (“and-he-ceased
+# on-the-day the-seventh from-all his-work”) — event: cease — agent God
+m.event(&quot;cease&quot;, agent=&quot;Elohim&quot;)
+
+# -------------------------- Gen.2.3 · BLESS_SANCTIFY -----------------------
+# וַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ כִּי בוֹ
+# שָׁבַת מִכָּל־מְלַאכְתּוֹ אֲשֶׁר־בָּרָא אֱלֹהִים לַעֲשׂוֹת
+# &quot;And God blessed the seventh day, and hallowed it; because that in it He
+# rested from all His work which God in creating had made.&quot;
+m.step(&quot;Gen.2.3&quot;)
+# ‹וַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי› (“and-blessed God obj-marker
+# day the-seventh”) — blessing: God blesses the-seventh-day
+m.bless(&quot;Elohim&quot;, &quot;yom_ha_shevii&quot;)
+# ‹וַיְקַדֵּשׁ אֹתוֹ› (“and-sanctified it”) — role assigned: the-seventh-day
+# -&gt; holy
+m.assign(&quot;yom_ha_shevii&quot;, &quot;kadosh&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == {&#x27;aretz&#x27;, &#x27;shamayim&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {&#x27;yom_ha_shevii&#x27;: &#x27;kadosh&#x27;}
+    assert m.REGISTRY[&quot;writes&quot;] == 1
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS[&quot;log&quot;]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;read_before_install&#x27;: 2, &#x27;assigned_before_any_presence&#x27;: 1}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 5
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre>
+<div class="note">FROZEN 2026-07-31 (owner approved, &quot;freeze 6 and 7&quot;; interpreter&#x27;s BLESS mandate made optional at freeze): seventh logic-derived unit — THE WEEK&#x27;S MODEL IS COMPLETE: all seven days derived and frozen. Central findings: the OPEN TRANSACTION confirmed as machine state (no test, no receipt, no commit — the LEDGER&#x27;s seventh row asserted absent in the scenarios, not narrated in prose); the corpus&#x27;s first agentless main-line event (the pual passive completion); the finishing act dated INSIDE the ceasing day (retained unharmonized by Onkelos, which glosses the ceasing itself as REST); the only speech-less day; the third BLESS with recipient a TIME object and no mandate (handler parameter, not essence); the Torah&#x27;s FIRST holiness write (kdsh), conferred on a non-entity; the la&#x27;asot (&#x27;to make&#x27;) purpose tail left open; and the negative-rarity watch-list finding — day 7 installs almost nothing in WORLD and nearly everything in the legal lexicon (Exod 20:11 re-runs this span verbatim as law). Narrative (ASK FIRST) and triage await owner order. Not binding religious law.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

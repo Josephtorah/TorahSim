@@ -1,0 +1,1206 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_38_moriah_binding_oath — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_38_moriah_binding_oath?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The test, the binding, the oath (22:1-24) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_38_moriah_binding_oath</b> · Genesis 22:1-24 · derive logic_derived_v1 · phase C-38</div>
+<div class="meta"><a href="../#Gen/22/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">וְהָאֱלֹהִים נִסָּה אֶת־אַבְרָהָם</span> · <i>ve-ha-elohim nisah et-avraham</i> · &#x27;And God tested Abraham&#x27;</p>
+<div class="note">Derivation from the Hebrew letter (DB snapshot source-snapshot.sqlite) with the frozen corpus gen_01..gen_37 as precedent; every frozen quote verified against the frozen YAML this session; censuses run fresh against the snapshot + debut map. JPS 1917 as English aid only.</div>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DRAFT by the gen-7 block agent (second unit of its tenure; mechanics only; never freezes, never commits, never amends). Span per the coordinator-ratified pre-stage (this agent&#x27;s own): ONE UNIT Gen 22:1-24, HYBRID 20 steps — per-verse 1-19 (the Aqedah&#x27;s dialogue is too dense to group) + 20-24 GROUPED (the Nachor coda, the letter&#x27;s own roster-paragraph), seam at 23:1 (Sarah&#x27;s death owns its own unit). THE DRAFT&#x27;S FLAGGED CHOICES (ratify-or-reverse, per flag): (1) NAME CHOICE: gen_38_moriah_binding_oath. Alternatives: gen_38_the_binding, gen_38_aqedah_ram_oath. (2) THE CROWN FORK — STAGED BOTH WAYS, NOT RESOLVED [owner-grade triage per the coordinator&#x27;s order; the 15:6-pattern]. The letter: (a) 22:2 pushes the COMPOUND TRIPLE&#x27;s token 4 — QACH-NA... VE-LEKH-LEKHA... VE-HAALEHU (&#x27;TAKE, please, your son... and GO for yourself... and OFFER HIM UP&#x27;) — three volitives, one breath, one addressee, in GOD&#x27;S mouth (the class: 18:6 -&gt; 19:2 -&gt; 21:18 -&gt; here; frozen gen_34&#x27;s new-class line + gen_35&#x27;s and gen_37&#x27;s tokens); (b) 22:12 pushes TWO LET-NOTs from the sky (al-tishlach yadkha el-ha-naar; ve-al-taas lo meumah) — the roster&#x27;s FIRST DIRECT COUNTERMAND of a live divine demand; (c) 22:13 performs ALL THREE demanded roots in sequence as foreground deeds by the demandee — va-yelekh... va-yiqach... VA-YAALEHU (go, take, offer- up: root and stem, alah hiphil with the same object-suffix -hu) — ON A SUBSTITUTE: et-ha-ayil... TACHAT BENO (&#x27;the ram... IN PLACE OF his son&#x27;). THE BASE ENCODING FIRES NO RESULT — the compound stays OPEN — on these grounds: (i) the RESULT contract pops only an EXACT match of the demand, and the demand names the son (et-binkha et-yechidkha); the deed&#x27;s object is the ram, marked by the letter&#x27;s own substitution-word tachat; (ii) no frozen precedent pops a demand on a switched object (cycles #1-14 all paid on the demanded object); (iii) leaving the demand open loses nothing — the deed is fully recorded in EVENTs and the RESULT is one edit away if the owner rules completion. THE STRONGEST CASE FOR THE OTHER SIDE [side A, argued for the owner]: the deed meets every element of the frozen echo-receipt standard THREE TIMES OVER (root+stem, demandee, foreground narrative — the full sequence go/take/offer in the demand&#x27;s own order, the only verse in the span where the third root appears at all); the letter RESERVED the demanded verb: across 22:3-10 Abraham does everything EXCEPT alah (&#x27;offer up&#x27;) to the son — the demanded verb fires exactly once in the whole span, at 22:13, on the ram; GOD&#x27;S OWN RECEIPT-SPEECH at 22:16 declares the thing DONE (&#x27;yaan asher ASITA et-ha-davar ha-zeh&#x27; — &#x27;because you have DONE this thing&#x27;); and the Onkelos buffer welds substitute to recompense in one exchange-word (CHALAF beno at 22:13 / CHALAF DI asita at 22:16). If side A is ratified, SETTLED CYCLE #15 is its consequence (numbering per gen_27&#x27;s pattern — NOT claimed in this base encoding). THE COUNTERMAND&#x27;S STATUS [same fork, second prong]: no cancel operator exists and none is invented — the LET and the two LET-NOTs COEXIST on the queue from 22:12 on (S8&#x27;s scenario shows the collision: the offer-up demand and the touch-not prohibitions standing together — the letter&#x27;s trial IS that queue); note the LET-NOTs forbid harm to THE BOY and are not breached by the ram-offering (no violated-prohibition event fires). The machine does not adjudicate; the owner does. (3) THE COMPOUND&#x27;S PARTIAL RETURNS EN ROUTE [flag 2&#x27;s fence, frozen law applied]: 22:3 already returns TWO of the three roots same-verse (va-yiqach the lads and Isaac, va-yelekh to the place) — partial root-returns NEVER pop a compound (ratified twice in gen_35, applied in gen_37): the machine holds through every partial; the third root waits ten verses and lands on the ram. The take-verb&#x27;s in-span run (tokens 46-51, six takes: son, wood, fire-and-knife x2, knife, ram) is the demand&#x27;s own root threading the whole ascent [census]. (4) THE TWO LET-NOTS ARE TWO PUSHES, NOT A COMPOUND [frozen shape followed]: frozen gen_35 encoded 19:17&#x27;s al-pair as two separate LET-NOT demands (&#x27;DECLARE(ha_malakhim, LET-NOT(tabit(acherekha)))&#x27; + &#x27;DECLARE(ha_malakhim, LET-NOT(taamod(be_khol_ha_kikar)))&#x27; — both quoted this session): 22:12 follows that exact shape. The inherited asymmetry (positive volitive chains compound into ONE demand; al-pairs push separately) is the frozen corpus&#x27;s own and is noted, not invented. Both stand OPEN forever (S10 contract). (5) THE STAY-DEMAND OPEN FOREVER [gen_37&#x27;s other-verb class]: 22:5&#x27;s SHEVU (&#x27;SIT here with the donkey&#x27;) — imperative to the two lads, pushed; the letter never sits them: at 22:19 they RISE and WALK (va-yaqumu va-yelkhu) — the demanded root never returns on the demandees; the demand&#x27;s own until-clause (&#x27;until we return&#x27;) expires at 22:19 in the letter&#x27;s structure, and the machine still holds the word unpaid per the verb-identity standard [prose + flag]. Onkelos reads the intent, not the verb: ORIKHU (&#x27;WAIT here&#x27;) — the buffer performs the other-verb substitution itself [dual-track]. (6) THE COHORTATIVE TRIO IS FACT [gen_31/33&#x27;s class]: 22:5&#x27;s nelkha... ve-nishtachaveh ve-nashuvah (&#x27;let us go... and worship and return&#x27;) — first-person-plural volitives spoken TO the lads ABOUT Abraham-and-Isaac: the we EXCLUDES the addressees — not the council CMD-US shape (there issuer and demandee-collective are one); volitives on no one push nothing. VE-NASHUVAH (&#x27;and WE will return&#x27; — the plural) is held exactly as written; the chain&#x27;s file on it is named-only. (7) 22:14&#x27;s NAMING-GRAMMAR HYBRID [staged with alternative]: the verse carries a FULL naming formula on a PLACE — va-yiqra avraham SHEM-ha-maqom ha-hu YHWH YIREH (&#x27;YHWH will see&#x27;) — namer, name- word, object, name: the gen_12/13 formula-class fires a NAME op (registry write: ha_maqom -&gt; YHWH_Yireh). THE FENCE: the named entity is THE PLACE, not YHWH — the open NAME-on-YHWH triage (gen_32&#x27;s 16:13) is one word away and NOT touched; the sentence- name precedent is gen_32&#x27;s ratified El_Roi write (a seeing- sentence as name). The appended saying-clause — asher yeamer ha-yom be-har YHWH yeraeh (&#x27;as it is said today: on the mount of YHWH it is seen/He appears&#x27;) — rides a PATTERN (gen_25&#x27;s proverb genre; the al-ken-less variant flagged: the class&#x27;s first saying-token without its particle). ALTERNATIVE STAGED: the whole verse as report, registry silent (if the owner reads the imperfect sentence-name as proverb, not write). THE MACHINE&#x27;S OWN FLAG: the interpreter raises named_before_any_presence on ha_maqom — the place receives a name without ever being a WORLD entity (the letter kept it &#x27;the place&#x27; for four tokens and the machine kept the record): the flag stands, never auto-resolved, and is itself letter-true. The active/ passive pair yireh/yeraeh holds the verse&#x27;s two rests [tree fact]. Onkelos: the verse DISSOLVES into worship-narrative (no name given) — flag 14&#x27;s headline; the delta recorded, never merged. (8) TWO CENSUS FIRSTS, PRECISELY CUT [counterexample hunted]: (a) 22:1&#x27;s hineni (&#x27;here I am&#x27;) is the FIRST HUMAN here-I-am in the Torah — Genesis&#x27; only earlier token (6:17) is GOD announcing the flood; the chapter holds THREE (to God, to the son, to the angel) plus 27:1/18&#x27;s sequels; (b) 22:11&#x27;s AVRAHAM AVRAHAM is the Torah&#x27;s FIRST DOUBLED-NAME CALL — the earlier adjacent doublings (6:9, 11:10, 11:27, 25:19) are all toledot-frame repetitions across clause boundaries, not vocatives; the call- class runs 22:11 -&gt; 46:2 (yaaqov yaaqov) -&gt; Exod 3:4 (moshe moshe), with Exod 34:6&#x27;s YHWH YHWH the name itself doubled [census-exact, hunt shown in derivation_log]. (9) THE OATH-SPEECH IS PROMISE-FACT THROUGHOUT [gen_27&#x27;s rule]: 22:16-18 pushes nothing — bi NISHBATI (&#x27;by Myself I have sworn&#x27; — shava token 4: frozen gen_37&#x27;s watch LANDS, quoted) grounds VAREKH AVAREKHKHA / VE-HARBAH ARBEH (two infinitive-absolute doublings — the emphatic class of mot-tamut and shov-ashuv: facts), ve-yirash (imperfect), ve-hitbarakhu (weqatal — the HITPAEL where 12:1-3&#x27;s blessing ran niphal: the stem-split between the call&#x27;s venivrekhu and the oath&#x27;s ve-hitbarakhu is the letter&#x27;s own, named in prose). NEUM (&#x27;oracle&#x27;) debuts inside the Torah&#x27;s first divine self-oath — the prophetic formula born here [census]. (10) THE INSTRUMENT-SILENT CHAPTER AGAIN — WITH THE TEST-VERB DEBUTING [the machine irony, said loudly]: NISAH (&#x27;test&#x27;) Torah debut at 22:1 and tov/shaah/tzaddiq/nichoach ALL x0 (verified) — the SECOND consecutive instrument-silent chapter: the letter&#x27;s own test-word arrives exactly where the TESTS register cannot be tempted. The chapter about testing fires no machine TEST; nisa is a narrative fact. ZERO owner-triage contact again. (11) MORIAH IS SPEECH-CONTENT, NOT A MACHINE READ: eretz ha-moriyah (a Torah hapax) arrives inside God&#x27;s command with the letter&#x27;s own deferral — asher OMAR elekha (&#x27;which I will TELL you&#x27;): the destination is marked unknown-to-the-hearer; no NOTE_PRESUPPOSED fires (nothing is read as known by the narrator). THE DEFERRED-DESTINATION PAIR: 12:1&#x27;s asher AREKA (&#x27;that I will SHOW you&#x27; — frozen gen_27, quoted) and 22:2&#x27;s asher omar elekha — both lekh-lekha commands defer their destination: the two-token summons carries a two-token mystery [census + frozen quote; prose]. (12) THE CODA IS REPORT-CONTENT — NO INSTALLS, REGISTRY SILENT: 22:20-24 sits entirely inside VA-YUGAD... LEMOR (&#x27;it was TOLD to Abraham, saying&#x27;) — the tell-verb&#x27;s first PASSIVE (hophal; nagad tokens 5-6 are adjacent: 21:26&#x27;s denial lo-higadta, then this news). The twelve sons, Milkah, Betuel, Reumah are message-content: FACTS, no WORLD entities, no registry writes (22:24&#x27;s u-shemah reumah is a shem-notice, not a naming formula). RIVQAH&#x27;S MINT is census prose: token 1 of 30 arrives eight verses after the knife, inside a genealogy — the next matriarch is delivered as news. TEN name-hapaxes ride the coda (Buz, Kesed, Chazo, Pildash, Yidlaf, Tevach, Gacham, Tachash, Maakhah, Reumah — census-verified 1/1 each); UTZ is one skeleton, THREE men (10:23 Shem&#x27;s line, 22:21 Nachor&#x27;s firstborn, 36:28 the Horite — the same-lemma-multiple-men class); QEMUEL 1/2 (the other a Num 34:24 chief); BEKHOR (&#x27;firstborn&#x27;) token 2 — tokens 1-2 are both NON-line genealogies (Canaan&#x27;s Sidon, Nachor&#x27;s Utz) [census]. (13) THE RAM IS NOT INSTALLED [convention choice, alternative named]: the era&#x27;s WORLD entities are persons (and person- classed angels); the ram acts only as seen/caught/taken/ offered — held as event-participant. The alternative (WORLD += the corpus&#x27;s first acting animal since the dove) is named for review. (14) ONKELOS HEADLINES [dual-track, never merged]: (a) THE 22:14 WORSHIP-RECOMPOSITION — the era&#x27;s boldest buffer intervention, exceeding the frozen 20:13 record: the naming- verse becomes &#x27;Abraham WORSHIPPED AND PRAYED there (u-felach VE-TZALI)... &quot;here shall the GENERATIONS worship (palchan darayya)&quot;... therefore it is said: &quot;on this mountain Abraham worshipped BEFORE THE LORD&quot;&#x27; — the name dissolved into generational worship, NO name given (the delta on this unit&#x27;s NAME op, recorded); the prayer-family (tzali) fires its THIRD consecutive unit (frozen 12:8/13:4/21:33 records + 20:7/17). (b) THE MEMRA-OATH PAIR: bi nishbati -&gt; BE-MEMRI QAYEMIT (&#x27;by MY WORD I have sworn&#x27;) and 22:18&#x27;s shamata be-qoli -&gt; QABELTA LE-MEMRI (&#x27;you ACCEPTED My Word&#x27;) — frozen gen_37&#x27;s qayem-weld and qabel-family cross into the divine mouth: the oath sworn by the Word, the obedience received as accepting the Word. (c) THE CHALAF-WELD: the ram offered CHALAF beno (&#x27;in EXCHANGE for his son&#x27;, 22:13) and the blessing granted CHALAF DI asita (&#x27;in exchange for that you did&#x27;, 22:16) — substitute and recompense share one exchange-word: the buffer&#x27;s own comment on the crown fork. (d) The lead-for-take policy ON ISAAC (qach-na -&gt; DEVAR kean &#x27;LEAD now&#x27; — the frozen animacy class applied to the son); ha-moriyah -&gt; ARA PULCHANA (&#x27;land of WORSHIP&#x27; — the identification class); 22:8&#x27;s provide -&gt; QODAM YYA GELEI (&#x27;before the LORD the lamb is REVEALED&#x27; — the reveal-family with kodam-distancing); 22:20&#x27;s va-yugad -&gt; VE-ITCHAVA (the reveal-family again, on news); NISA KEPT (the buffer does not soften the divine testing); shevu -&gt; ORIKHU (flag 5); shaar -&gt; QIRVEI (&#x27;the CITIES of their enemies&#x27; — the metonym generalized); pilegesh -&gt; lechenata. (15) SEED-NUMBER NOTE: 367 tokens / 24 verses / 138 normalized strongs / 91 flagged VERIFIED census-exact. ONE single-arm verse: 22:4 (the third-day sighting — its only rank-1 rest is verse-final; gen_35&#x27;s flag-20 convention, full-verse arm). NAME-TEXTURE [letter fact, prose]: Elohim tokens 114-118 and YHWH tokens 100-104 split the span five-and-five — the God-name owns the test and the providing (22:1-12), YHWH owns the rescue and the oath (22:11-16): the knife is stayed under the covenant name [named in derivation_log; the gen_20 name-texture class]. (16) INSTALL ROSTER [the standalone convention]: yitzchaq (22:3 — re-created behind frozen gen_37&#x27;s wall, first narrative presence), shnei_nearav (22:3 — the two lads, the pair-device of gen_35&#x27;s shnei_ha_malakhim), malakh_YHWH (22:11 — the sky-caller; malakh tokens 8-9 land frozen gen_37&#x27;s census line, quoted). Presupposed read: beer_sheva (22:19 — the name minted by frozen gen_37&#x27;s PATTERN behind the wall, read as known geography; gen_36&#x27;s gerar-basis class). (17) FROZEN LANDINGS CARRIED (all quoted from frozen YAML opened this session): lekh-lekha &#x27;exactly TWO Torah tokens: 12:1 and 22:2 (the binding)&#x27; (gen_27); olah &#x27;tokens 2-7 are ALL the binding of Isaac&#x27; + the altar-career naming &#x27;the binding&#x27;s&#x27; (gen_20); the withhold-arc naming 22:12/16 as &#x27;the AQEDAH&#x27;s crown&#x27; (gen_36); shava token 4 + the sky-call tokens 8-9 + shakham token 5 = 22:3 (gen_37); the ram-word&#x27;s token 1 inside cycle #8&#x27;s demand string (gen_31); yere elohim (&#x27;God-FEARING&#x27;, conferred at 22:12) landing gen_36&#x27;s yirat-elohim guess-line as a title.</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (retro, oral-first era; record: logic/oral_audit/AUDIT_gen_38_2026-08-08.md; manifest verified 29/29 checkable, zero FAILED, one builder-asserted manual row). CROWNS (chain-attested + DB-verified). THE TWO FATHER-ANSWERS [G38-04/05/06, Minchat Shai on 22:7]: of the Torah&#x27;s 22 הנני (&quot;here I am&quot;) tokens, exactly TWO carry the dageshed suffix-nun the Masorah counts — Abraham answering Isaac on the way to the binding (&quot;here I am, MY SON,&quot; 22:7: first nun in segol — the short e-vowel — both nuns dotted, no maqqef) and Isaac answering Jacob at the blessing-deception (&quot;here I am; who are you, my son,&quot; 27:18): the only two doubled here-I-ams in the Torah are a father answering &quot;my son.&quot; THE ONE LEAN INHERITANCE [G38-07/08/09, Minchat Shai on 22:17, the Ramah&#x27;s rule]: וירש (&quot;and your seed shall INHERIT the gate of his enemies&quot;) — the Torah&#x27;s ONE single-yod defective inherit-verb; the five plene twins censused whole: Sarah&#x27;s exclusion (&quot;shall NOT inherit with my son,&quot; 21:10), Rebecca&#x27;s echo-blessing (24:60), the Amorite conquests (Num 21:24, 21:32), the locust-curse (Deut 28:42) — the Aqedah&#x27;s inheritance-promise is the lean one. THE RAMAH&#x27;S ONE FULL OFFERING [G38-28/29, Minchat Shai on 22:6]: העלה (&quot;the wood of the BURNT-OFFERING&quot;) defective per the whole-Torah rule — and the rule censused whole on SNAPSHOT: the Torah&#x27;s ONE plene עולה is Num 28:27, the first-fruits-day offering in Pinchas, precisely the Ramah&#x27;s own sign-verse: one full offering in the Torah, and it is the new grain&#x27;s. THE THREE DOUBLED CALLS [G38-01/02/03, Minchat Shai on 22:11]: אברהם אברהם (the knife-stopping sky-call, 22:11), יעקב יעקב (the night-visions, 46:2), משה משה (the bush, Exod 3:4) — all three answered הנני (&quot;here I am&quot;); consonant-adjacency also surfaces the toledot-seam doubling (&quot;the son of Abraham; Abraham fathered Isaac,&quot; 25:19) that the tradition&#x27;s list of paseq strokes (the vertical divider) excludes — the stroke itself uninstrumented (gap). THE TWO RETURNS [G38-14, Kitzur Baal HaTurim on 22:5]: ונשובה (&quot;and we will RETURN&quot;) — exactly twice in the Torah, LETTER-IDENTICAL tokens (builder-asserted): Abraham&#x27;s worship-return from Moriah (22:5) against the spies&#x27; &quot;let us appoint a head and RETURN to Egypt&quot; (Num 14:4) — the same written word carries the ascent and the desertion; the Masorah&#x27;s six-list adds the repentance verses (Hosea, Lamentations; edges) — &quot;all in Abraham&#x27;s merit.&quot; THE GATE SPLITS BY ONE WORD [G38-10/11, Minchat Shai on 22:17]: Abraham&#x27;s seed inherits שער איביו (&quot;the gate of his ENEMIES,&quot; 22:17); Rebecca&#x27;s seed שער שנאיו (&quot;the gate of his HATERS,&quot; 24:60) — the father&#x27;s and the bride&#x27;s blessings differ by exactly one word; the Masorah&#x27;s mnemonic: &quot;upon your enemies and upon your haters who pursued you&quot; (Deut 30:7). THE TWO DAWN-SADDLERS [G38-12/13, Minchat Shai on 22:3]: Abraham&#x27;s lads אתו (&quot;WITH him,&quot; 22:3) against Balaam&#x27;s lads עמו (the other with-word, Num 22:22) — the Masorah&#x27;s own filing of the midrashic pair, verified at both legs. THE COVENANT IN THE FINALS [G38-18, Kitzur on 22:18]: עקב אשר שמעת בקלי (&quot;because you have LISTENED to My voice&quot; — the oath&#x27;s closing four words) — final letters ב-ר-ת-י, the letters of ברית (&quot;covenant&quot;). UNIQUE WORDS [G38-15/16/17, Kitzur]: לשחט (&quot;to SLAUGHTER his son,&quot; 22:10) — one Torah token, defective (pair: Ezekiel&#x27;s altar-service, Ezek 40:39 — &quot;the daily lamb was bound like Isaac&quot;); וכחול (&quot;as the sand,&quot; 22:17) — one Torah token (pair: Job 29:18, days multiplied); בהר יהוה (&quot;the mount of YHWH,&quot; 22:14) — one Torah site, the three-in-Tanakh legs Isa 30:29 + Ps 24:3, one per division, as the three festival ascents. THE CAUGHT RAM&#x27;S TWO PATACHS [G38-20/21, Minchat Shai on 22:13]: נאחז בסבך (&quot;caught in the THICKET&quot;) — chet patach and second-bet patach, one of the Masorah&#x27;s five adjacent patach-pairs; SNAPSHOT with the precise books and Or Torah against the printer&#x27;s emendation and the rival Masorah Rav Paalim found reading qamatz (the long a-vowel) as unique. MINUTIAE AS RULED [G38-22/23/24/25/26/27]: ולא חשכת (&quot;you did NOT withhold&quot;) free of maqqef (the joining stroke); the Nahor son-list&#x27;s seventh ואת (&quot;and&quot;) standing FREE — tzere, tipcha, no stroke — exactly at בתואל (Bethuel, Rebecca&#x27;s father) after six joined by maqqef: the letter un-joins at the bride&#x27;s line; שבו־לכם (&quot;STAY here&quot;) realizing Minchat Shai&#x27;s camp without qadma (the ascending accent), with maqqef + mercha (his &quot;lengthener&quot;) on לכם; מרחק (&quot;from afar,&quot; 22:4) defective — the Kitzur&#x27;s distancing-satan reading rides the missing yod. THE THREE SEEDS [G38-30, Kitzur on 22:17, manual]: זרעך (&quot;your seed&quot;) exactly three times in the oath (builder-asserted chapter census) — the three seed-callings of Israel. DISCREPANCY [G38-19, Minchat Shai on 22:18]: והתברכו (&quot;and all nations shall BLESS THEMSELVES in your seed&quot;) — the ruling wants the resh with plain sheva &quot;as our custom&quot;; SNAPSHOT points HATAF PATACH (the compound half-vowel): the bless-word vocalization split (the מברכיך &quot;those who bless you&quot; class, run 4) reaches the Aqedah&#x27;s own blessing. Watchlist. INSTRUMENT GAPS: the paseq layer (ruled at the doubled name 22:11 and after the Name at יהוה יראה &quot;YHWH will see,&quot; 22:14) — absent from the stream; 22:8&#x27;s יראה לו (&quot;will see for Himself&quot;) ga&#x27;ya (the small stress-stroke) manuscript split — named-only. READINGS (named-only, unclaimed): the Kitzur&#x27;s finals-gematria on the angel-call read as מיכאל (&quot;Michael&quot;); המריה (&quot;Moriah&quot;) and את המקום (&quot;the place&quot;) read toward Jerusalem; Bereshit Rabbah 56&#x27;s Tarmod note on the gate-verse with the Yefeh Toar&#x27;s scribal-error caution.</div>
+<div class="meta">confidence: structure tested; operator readings tested-per-TIR; intent hypothesis; the crown fork owner-staged</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Source fetch + verification</td><td>Hebrew: Data/Gen.xml via the DB snapshot; pointed lines regenerated (gen_22&#x27;s convention). English aid: JPS 1917. Span totals VERIFIED: 367 tokens / 24 verses / 138 normalized strongs / 91 scan-flagged [flag 15]. Onkelos Genesis 22:1-24 fetched Tier-A, sequential, 0.5s — cache MISS x24, all appended to Data/FETCHLOG.md 2026-08-05.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Census battery</td><td>Pre-stage scan plus ONE derive battery. THE DEBUT FIELD: NISAH (&#x27;test&#x27;) 1/15 (career: Marah, the manna, Massah, and Exod 20:20&#x27;s &#x27;God has come to TEST you&#x27; — the very verse frozen gen_36 linked as yirat-elohim token 2: the test-verb and the fear-title share a Sinai landing); AHAV (&#x27;love&#x27;) 1/41 in the command (token 2 = 24:67, Isaac loving Rivqah — the love-verb&#x27;s first two tokens are the father&#x27;s and the son&#x27;s); SHACHAT (&#x27;slaughter&#x27;) 1/47 (career: Joseph&#x27;s goat, then the Passover lamb x2 — the verb born over a bound son runs to the lamb that spares sons); NEUM (&#x27;oracle&#x27;) 1/8 inside the first divine self-oath; MEUMA (&#x27;anything&#x27;) 1/9 in the countermand; RACHOQ (&#x27;afar&#x27;) 1/12; QEREN (&#x27;horn&#x27;) 1/21; ACHAZ (&#x27;caught&#x27;) 1/11; SE (&#x27;lamb&#x27;) 1/28 x2 (the where-is-the-lamb exchange); CHOL (&#x27;sand&#x27;) 1/5; OYEV (&#x27;enemy&#x27;) 1/53; EQEV + YAAN (the because-words) both debut in the oath; CHAVASH (&#x27;saddle&#x27;) 1/4; YERE-adjective (&#x27;fearing&#x27;) 1/6 — the God-FEARING title CONFERRED at 22:12 where frozen gen_36&#x27;s 20:11 line had it GUESSED as a noun [LANDED-class]; RIVQAH 1/30 (the coda&#x27;s mint); PILEGESH (&#x27;concubine&#x27;) 1/4; BETUEL 1/9. TORAH HAPAXES: MORIAH, AQAD (&#x27;bind&#x27; — the verb that names the event exists once, 22:9), SEVAKH (&#x27;thicket&#x27;); MAAKHELET (&#x27;knife&#x27;) both Torah tokens in-span (22:6/10); YACHID (&#x27;only one&#x27;) = 3 Torah tokens, ALL in-span (22:2/12/16) — the whole lexeme is this trial [census-exact]; plus the coda&#x27;s TEN name- hapaxes [flag 12]. LANDINGS: lekh-lekha counterexample hunt (ANY go-imperative + l-pronoun, Torah-wide) returns EXACTLY 12:1 and 22:2 — frozen gen_27&#x27;s two-token line confirmed; olah tokens 2-7 ALL in-span (token 1 = 8:20, Noach — frozen gen_20&#x27;s line LANDS); chasakh tokens 2-3 (frozen gen_36&#x27;s withhold-arc LANDS); shava token 4 = 22:16 (frozen gen_37&#x27;s watch LANDS); malakh tokens 8-9 = 22:11/15 (frozen gen_37&#x27;s census line LANDS x2); shakham (&#x27;rise early&#x27;) token 5 = 22:3 (frozen gen_37&#x27;s line LANDS — Abraham&#x27;s three dawns: prayer-stand, expulsion, binding); AYIL (&#x27;ram&#x27;) tokens 2-3 = 22:13 (token 1 = 15:9 INSIDE frozen gen_31&#x27;s cycle-#8 demand string — the ram- word&#x27;s first two appearances are both Abraham&#x27;s offerings); qol (&#x27;voice&#x27;) token 11 = 22:18&#x27;s be-qoli — after the garden Voice, the indictment, the blood, Lemekh, Sarai, Sarah-commanded, Hagar-lifted, and the lad&#x27;s doubled voice, the eleventh token is GOD&#x27;S OWN, credited to Abraham&#x27;s ear; kokhav (&#x27;star&#x27;) token 3 (1:16 creation, 15:5 the count-promise, 22:17 the oath); ESH (&#x27;fire&#x27;) tokens 3-4 in-span — tokens 1-2 are the covenant torch (15:17) and Sodom&#x27;s fire-rain (19:24); token 5 is the burning bush [census-exact fire-ladder]; YACHDAV (&#x27;together&#x27;) tokens 3-5 — tokens 1-2 are BOTH 13:6 (the could-not-dwell-together, doubled), token 6 = 36:7 (Jacob-Esau&#x27;s same clause): born doubled in a separation, spent tripled on the binding walk; SHAAR (&#x27;gate&#x27;) token 2 (token 1 = 19:1, Lot in Sodom&#x27;s gate; token 3 = 23:10, next unit); AYEH (&#x27;where?&#x27;) token 3 — where-is-Sarah (18:9), where-are-the-men (19:5), where-is-the-lamb: promise, violence, sacrifice; NAGAD (&#x27;tell&#x27;) tokens 5-6 adjacent — the denial (21:26 lo-higadta) and the news (22:20 va-yugad, the verb&#x27;s FIRST PASSIVE, hophal); SHELISHI (&#x27;third&#x27;) token 4 — the first third DAY of narrative time (tokens 1-3: creation&#x27;s day, Eden&#x27;s river, the ark&#x27;s deck); BEKHOR token 2; UTZ one-skeleton-three- men; SHMONAH (&#x27;eight&#x27;) tokens 10-11 adjacent (21:4&#x27;s eighth-day circumcision, 22:23&#x27;s eight sons); HINENI: the first HUMAN here-I-am (Genesis&#x27; only earlier token, 6:17, is God&#x27;s flood-announcement), x3 in-span; DOUBLED- NAME CALL: 22:11 is the Torah&#x27;s first (the 6:9/11:10/ 11:27/25:19 doublings are toledot-frame repetitions; the call-class: 22:11 -&gt; 46:2 -&gt; Exod 3:4) [both hunts census-exact, flag 8]; NA (&#x27;please&#x27;) divine token 3 — 13:14 and 15:5 were both divine LOOK-commands at promises; 22:2 asks for the son the promises named. MOOD CENSUS: NINE volitives (qach-na + ve-lekh + ve-haalehu — the compound triple, flag 2; shevu — flag 5; nelkha + ve-nishtachaveh + ve-nashuvah — the exclusive-we trio, flag 6; al-tishlach + ve-al-taas — flag 4) = FOUR demands after compounding + three wish-facts; say-tokens 18 (22:7 alone carries FOUR); INSTRUMENT FIELD ALL-ZERO (tov/shaah/tzaddiq/nichoach x0) [flag 10].</td><td>established</td></tr>
+<tr><td><b>C</b></td><td>Structure choice</td><td>HYBRID 20 steps per the ratified pre-stage: per-verse 1-19 + grouped 20-24 (the coda). Tree anchors from mark_rank=1; ONE single-arm verse (22:4 — flag 15). Notable thrones: 22:1&#x27;s arms END on avraham / hineni (the call and the answer are the two rests); 22:2&#x27;s etnachta rests on ha-moriyah; 22:6 and 22:8 carry the IDENTICAL right arm — va-yelkhu shneihem yachdav (&#x27;and the two walked together&#x27;): the letter rests twice on the same three words around the lamb-exchange [tree twin]; 22:10&#x27;s whole silluq arm is li-shechot et-beno (&#x27;to slaughter his son&#x27;); 22:11&#x27;s silluq arm is va-yomer hineni (the answer alone); 22:12&#x27;s etnachta on meuma (&#x27;anything&#x27;), silluq on mimeni (&#x27;from Me&#x27;); 22:14&#x27;s two rests are YIREH / YERAEH — the active and passive of one see-verb hold the verse&#x27;s arms; 22:16&#x27;s etnachta on neum-YHWH (the newborn oracle-formula at the rest); 22:19&#x27;s silluq arm is va-yeshev avraham bi-veer shava (the dwell-verb closes the trial); 22:23&#x27;s etnachta rests on rivqah — the bride&#x27;s first token is an arm-end.</td><td>established</td></tr>
+<tr><td><b>D</b></td><td>Say-roster + speech map + name-texture</td><td>18 say-tokens, five voices: the narrator&#x27;s frame (nisa), God&#x27;s command (22:1-2), Abraham to the lads (22:5), the father-son exchange (22:7-8 — FOUR say-tokens in the chapter&#x27;s tenderest verse: said-said-said-said around avi/hineni-veni), the angel&#x27;s two sky-calls (22:11-12, 22:15-18 — the second carrying God&#x27;s oath in first person: the divine-first-person slide of frozen gen_32&#x27;s angel-class), the coda&#x27;s report (va-yugad... lemor). NAME-TEXTURE [flag 15]: Elohim tokens 114-118 vs YHWH tokens 100-104 — five and five, and the split is scenic: ha-Elohim tests and names the place (22:1-9), Elohim provides and is feared (22:8/12), YHWH owns every token of the rescue and the oath (22:11/14 x2/15/16): the knife is stayed under the covenant name [the gen_20 name-texture class, quoted this session].</td><td>established</td></tr>
+<tr><td><b>E</b></td><td>Onkelos read (Tier-A, dual-track)</td><td>Cache MISS x24. HEADLINE: the 22:14 WORSHIP-RECOMPOSITION (the era&#x27;s boldest — the naming-verse dissolved into &#x27;Abraham worshipped and PRAYED there... here shall the generations worship... on this mountain Abraham worshipped before the LORD&#x27;; no name given; the tzali prayer-family&#x27;s third consecutive unit) [flag 14a]. SECOND: the MEMRA-OATH pair (be-memri qayemit / qabelta le-memri) extending frozen gen_37&#x27;s qayem-weld and qabel-family into the divine mouth [flag 14b]. THIRD: the CHALAF-weld (the ram chalaf beno, the blessing chalaf di asita — substitute and recompense in one exchange-word) [flag 14c]. Repeat buffers consistent with frozen records: lead-for-take ON ISAAC (devar); the identification class (moriah -&gt; ara pulchana); kodam- distancing + the reveal-family (22:8&#x27;s provide, 22:20&#x27;s news); goy-&gt;am (amemaya, 22:18); the sit-demand read as intent (orikhu &#x27;wait&#x27;); nisa KEPT unbuffered — the letter&#x27;s divine testing stands in Aramaic [flag 14d]. Deltas recorded, never merged.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Machine design</td><td>FOUR demands pushed, ZERO popped in the base encoding, FOUR OPEN at close: the compound triple (flag 2 — THE CROWN FORK, both ways staged, RESULT withheld per the base grounds; side A&#x27;s cycle #15 named as consequence, not claimed), the stay-demand (flag 5), the two LET-NOTs (flag 4 — the countermand collision visible on the queue from S8 on). ONE registry write (22:14 NAME — flag 7, alternative staged) + ONE PATTERN (the saying-clause). THREE installs + ONE presupposed read (flag 16). TESTS: zero possible (flag 10 — the nisa-irony). LEDGER: empty. TIME: t0 only (no RESULT, no t1 mark — the first unit since gen_34 with an unmarked clock: the trial ends with nothing paid on the machine&#x27;s terms and everything paid on the letter&#x27;s). Scenario asserts designed with the facts; the queue&#x27;s collision-state asserted directly (S8, S9).</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_22_1 · Gen.22.1 · <span class='expr'>THE_FRAME_AND_THE_TEST</span></h3>
+<p><span class="he">וַיְהִי אַחַר הַדְּבָרִים הָאֵלֶּה וְהָאֱלֹהִים נִסָּה אֶת־אַבְרָהָם וַיֹּאמֶר אֵלָיו אַבְרָהָם וַיֹּאמֶר הִנֵּנִי</span> · <i>va-yehi achar ha-devarim ha-eleh ve-ha-elohim nisah et-avraham va-yomer elav avraham va-yomer hineni</i> · [EN-AID/JPS] And it came to pass after these things, that God did prove Abraham, and said unto him: &#x27;Abraham&#x27;; and he said: &#x27;Here am I.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויהי אחר הדברים האלה והאלהים נסה את־אברהם</span> · <i>va-yehi achar ha-devarim ha-ele ve-ha-Elohim nisa et-avraham</i> · after these things — GOD TESTED Abraham (etnachta on avraham)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויאמר אליו אברהם ויאמר הנני</span> · <i>va-yomer elay-v avraham va-yomer hineni-y</i> · He said: Abraham. He said: HERE I AM (verse-final hineni)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(achar_ha_devarim_ve_ha_elohim_nisah_et_avraham, t0) ∧ HOLDS(va_yomer_hineni, t0)</span><br><span class="gloss">= HOLDS(achar-the-devarim-and-the-God-nisah-avraham, t0) ∧ HOLDS(and-yomer-behold-I, t0)</span><br>NISAH (&#x27;tested&#x27;) — TORAH DEBUT 1/15, AND THE TESTS REGISTER CANNOT FIRE [flag 10, the machine irony]: the test-verb is born in a chapter whose instrument field is ALL-ZERO (the second such chapter running) — the letter&#x27;s own test-word arrives exactly where the machine&#x27;s TESTS cannot be tempted; nisa is held as narrative fact. Its career: Marah, the manna, Massah, and Exod 20:20&#x27;s &#x27;God has come to TEST you&#x27; — sharing a Sinai landing with frozen gen_36&#x27;s yirat-elohim line [census]. HINENI (&#x27;here I am&#x27;) — THE FIRST HUMAN HERE-I-AM in the Torah [flag 8, hunted]: Genesis&#x27; only earlier token (6:17) is God announcing the flood; the answer-word is born in Abraham and will sound three times this chapter (to God, to the son, to the angel). The verse&#x27;s two arms END on avraham / hineni — the call and the answer are the two rests [tree fact]. Onkelos: NASI KEPT — the buffer does not soften the divine testing [flag 14d, dual-track].
+</td><td><span class="he">וְהָאֱלֹהִים נִסָּה אֶת־אַבְרָהָם … הִנֵּנִי</span> · <i>ve-ha-elohim nisah et-avraham … hineni</i><br><span class="gloss">= God nisah avraham behold-I</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The frame-clause opens a trial the machine cannot grade: the test-verb debuts into an empty instrument field, and the whole examination will run on the SPECS queue instead — in demands.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_22_2 · Gen.22.2 · <span class='expr'>THE_CROWN_COMMAND</span></h3>
+<p><span class="he">וַיֹּאמֶר קַח־נָא אֶת־בִּנְךָ אֶת־יְחִידְךָ אֲשֶׁר־אָהַבְתָּ אֶת־יִצְחָק וְלֶךְ־לְךָ אֶל־אֶרֶץ הַמֹּרִיָּה וְהַעֲלֵהוּ שָׁם לְעֹלָה עַל אַחַד הֶהָרִים אֲשֶׁר אֹמַר אֵלֶיךָ</span> · <i>va-yomer qach-na et-binkha et-yechidkha asher-ahavta et-yitzchaq ve-lekh-lekha el-eretz ha-moriyah ve-haalehu sham le-olah al achad he-harim asher omar elekha</i> · [EN-AID/JPS] And He said: &#x27;Take now thy son, thine only son, whom thou lovest, even Isaac, and get thee into the land of Moriah; and offer him there for a burnt-offering upon one of the mountains which I will tell thee of.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר קח־נא את־בנך את־יחידך אשר־אהבת את־יצחק ולך־לך אל־ארץ המריה</span> · <i>va-yomer qach-na et-bin-kha et-yechid-kha asher-ahavta et-yitzchaq ve-lekh-le-kha el-eretz ha-moriya</i> · TAKE your son, your only one, whom you LOVE — GO to the land of Moriah (etnachta on ha-moriyah)</div><div class="arm"><b>RIGHT</b><br><span class="he">והעלהו שם לעלה על אחד ההרים אשר אמר אליך</span> · <i>ve-haale-hu sham le-ola al achad he-harim asher omar ele-kha</i> · and OFFER HIM UP there, on a mountain I will TELL you (verse-final elekha)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(elohim, LET(qach_lekh_ve_haalehu(et_binkha, le_olah)))</span><br><span class="gloss">= DECLARE(God, LET(qach-lekh-and-haalehu(binkha, to-burnt-offering)))</span><br>THE COMPOUND TRIPLE&#x27;S FOURTH TOKEN — IN GOD&#x27;S MOUTH [flag 2, THE CROWN]: three volitives, one breath, one addressee (qach &#x27;take&#x27; + lekh &#x27;go&#x27; + haalehu &#x27;offer him up&#x27; — Vqv, Vqv, Vhv with the object-suffix -hu, the son), riding ONE demand per the class (18:6 -&gt; 19:2 -&gt; 21:18 -&gt; here; the first divine token of the class). NA (&#x27;please&#x27;) — the THIRD divine na: 13:14 and 15:5 were both LOOK-commands at promises (the land, the stars); the third asks for the son the promises named [census]. LEKH-LEKHA — the summons&#x27; SECOND AND LAST Torah token: frozen gen_27&#x27;s line LANDS, quoted: &#x27;LEKH-LEKHA (go, you) — the doubled dative summons has exactly TWO Torah tokens: 12:1 and 22:2 (the binding)&#x27; — confirmed by a fresh Torah-wide hunt (any go- imperative + l-pronoun: exactly two) [LANDED]. And BOTH lekh-lekha commands DEFER their destination: 12:1&#x27;s asher AREKA (&#x27;that I will SHOW you&#x27;, frozen gen_27) / 22:2&#x27;s asher OMAR elekha (&#x27;that I will TELL you&#x27;) — the two-token summons carries a two-token mystery [flag 11]. The demand stands OPEN from here through the fork [flag 2]. Onkelos: DEVAR (&#x27;LEAD&#x27;) — the lead-for-take animacy policy applied to the son; ha-moriyah -&gt; ARA PULCHANA (&#x27;land of WORSHIP&#x27;); ve-asqeih QODAMAI (&#x27;offer him up BEFORE ME&#x27; — a kodam- insertion into the command itself) [flag 14, dual-track].
+</td><td><span class="he">קַח־נָא … וְלֶךְ־לְךָ … וְהַעֲלֵהוּ שָׁם לְעֹלָה</span> · <i>qach-na … ve-lekh-lekha … ve-haalehu sham le-olah</i><br><span class="gloss">= qach-na and-lekh-to-you and-haalehu there burnt-offering</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(et_binkha_et_yechidkha_asher_ahavta_et_yitzchaq, t0) ∧ HOLDS(el_eretz_ha_moriyah_asher_omar_elekha, t0)</span><br><span class="gloss">= HOLDS(binkha-yechidkha-which-ahavta-yitzchaq, t0) ∧ HOLDS(to-earth-the-moriyah-which-omar-to-you, t0)</span><br>THE FOUR-STEP ADDRESS: your son — your only one — whom you LOVE — Isaac: AHAV (&#x27;love&#x27;) makes its TORAH DEBUT inside the taking-command (token 2 = 24:67, Isaac loving Rivqah: the love-verb&#x27;s first two tokens are the father&#x27;s and the son&#x27;s) and YACHID (&#x27;only one&#x27;) opens a lexeme whose ENTIRE Torah life (3 tokens) is this trial [census-exact; flag 2&#x27;s lexicon]. MORIAH — a Torah hapax, SPEECH-CONTENT only [flag 11]: the destination arrives marked unknown-to-the-hearer (asher omar elekha); no machine read fires. OLAH (&#x27;burnt-offering&#x27;) token 2 — frozen gen_20&#x27;s line LANDS, quoted: &#x27;OLAH (burnt-offering) TOKEN 1 of 148 — tokens 2-7 are ALL the binding of Isaac&#x27; [LANDED].
+</td><td><span class="he">אֶת־בִּנְךָ אֶת־יְחִידְךָ אֲשֶׁר־אָהַבְתָּ אֶת־יִצְחָק</span> · <i>et-binkha et-yechidkha asher-ahavta et-yitzchaq</i><br><span class="gloss">= binkha yechidkha which-ahavta yitzchaq</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The gentlest grammar carries the hardest sentence: a please, a love-debut, a four-step address narrowing to one name, and the class of compound demands crossing into God&#x27;s mouth. The machine pushes one demand and will spend the whole unit unable to see it paid.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_22_3 · Gen.22.3 · <span class='expr'>THE_DAWN_OBEDIENCE_TWO_ROOTS_RETURN</span></h3>
+<p><span class="he">וַיַּשְׁכֵּם אַבְרָהָם בַּבֹּקֶר וַיַּחֲבֹשׁ אֶת־חֲמֹרוֹ וַיִּקַּח אֶת־שְׁנֵי נְעָרָיו אִתּוֹ וְאֵת יִצְחָק בְּנוֹ וַיְבַקַּע עֲצֵי עֹלָה וַיָּקָם וַיֵּלֶךְ אֶל־הַמָּקוֹם אֲשֶׁר־אָמַר־לוֹ הָאֱלֹהִים</span> · <i>va-yashkem avraham ba-boqer va-yachavosh et-chamoro va-yiqach et-shnei nearav ito ve-et yitzchaq beno va-yevaqa atzei olah va-yaqam va-yelekh el-ha-maqom asher-amar-lo ha-elohim</i> · [EN-AID/JPS] And Abraham rose early in the morning, and saddled his ass, and took two of his young men with him, and Isaac his son; and he cleaved the wood for the burnt-offering, and rose up, and went unto the place of which God had told him.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וישכם אברהם בבקר ויחבש את־חמרו ויקח את־שני נעריו אתו ואת יצחק בנו</span> · <i>va-yashkem avraham ba-boqer va-yachavosh et-chamor-o va-yiqach et-shene nearay-v et-o ve-et yitzchaq ben-o</i> · rose early, saddled, TOOK the lads and Isaac (etnachta on beno)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויבקע עצי עלה ויקם וילך אל־המקום אשר־אמר־לו האלהים</span> · <i>va-yevaqa atze ola va-yaqam va-yelekh el-ha-maqom asher-amar-l-o ha-Elohim</i> · split the wood, rose, WENT to the place God had said (verse-final ha-Elohim)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>REGISTRY_INSTALL</td><td><span class="expr">WORLD += {yitzchaq}</span><br>Isaac re-created behind frozen gen_37&#x27;s wall [flag 16 — the standalone convention]: his birth, name-write, and weaning are the frozen unit&#x27;s property; this unit&#x27;s Isaac begins here — TAKEN, silent, carrying nothing yet [prose].
+</td><td><span class="he">וְאֵת יִצְחָק בְּנוֹ</span> · <i>ve-et yitzchaq beno</i><br><span class="gloss">= and yitzchaq beno</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>REGISTRY_INSTALL</td><td><span class="expr">WORLD += {shnei_nearav}</span><br><span class="gloss">= WORLD += {shnei-nearav}</span><br>The two lads — the pair-device (frozen gen_35&#x27;s shnei_ha_malakhim install): individuated as a pair, demandees-to-be of 22:5&#x27;s stay-command [flag 16]. NAAR (&#x27;lad&#x27;) tokens 10-14 run through the span — and the word covers BOTH the servants and Isaac-from-heaven&#x27;s- view (22:12&#x27;s ha-naar is the bound son) [census; prose].
+</td><td><span class="he">אֶת־שְׁנֵי נְעָרָיו</span> · <i>et-shnei nearav</i><br><span class="gloss">= shnei nearav</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">dawn_journey(e1) ∧ Agent(e1, avraham) ∧ Companion(e1, yitzchaq)</span><br><span class="gloss">= dawn-journey(e1) ∧ Agent(e1, avraham) ∧ Companion(e1, yitzchaq)</span><br>SHAKHAM (&#x27;rise early&#x27;) TOKEN 5 — frozen gen_37&#x27;s line LANDS, quoted: &#x27;token 5 is 22:3, the Aqedah&#x27;s saddle&#x27; — Abraham&#x27;s three dawns are the prayer-stand, the expulsion, the binding [LANDED; census]. TWO OF THE THREE DEMANDED ROOTS RETURN SAME-VERSE [flag 3]: va-yiqach (the lads AND the son — qach&#x27;s root, on the demanded object among others) and va-yelekh (lekh&#x27;s root, toward the place) — PARTIAL ROOT-RETURNS NEVER POP A COMPOUND (frozen law, ratified twice in gen_35, applied in gen_37): the machine holds; the third root (alah &#x27;offer up&#x27;) is absent and will stay absent for ten verses. CHAVASH (&#x27;saddle&#x27;) debut; BAQA (&#x27;split&#x27;) token 2 — token 1 split the DEEP (7:11&#x27;s maayanot): the cleave-verb&#x27;s first two objects are the abyss and firewood [census]. The obedience is total and the receipt is zero — gen_37&#x27;s chapter-grammar carried into the trial [prose].
+</td><td><span class="he">וַיַּשְׁכֵּם … וַיַּחֲבֹשׁ … וַיִּקַּח … וַיְבַקַּע … וַיָּקָם וַיֵּלֶךְ</span> · <i>va-yashkem … va-yachavosh … va-yiqach … va-yevaqa … va-yaqam va-yelekh</i><br><span class="gloss">= and-yashkem and-yachavosh and-yiqach and-yevaqa and-yaqam and-yelekh</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yashkem_ba_boqer_va_yachavosh_et_chamoro, t0)</span><br><span class="gloss">= HOLDS(and-yashkem-in-the-morning-and-yachavosh-chamoro, t0)</span><br>The dawn-fact held for the gate: rose-early and saddled — the trial&#x27;s obedience begins in the same first motion as the expulsion&#x27;s (frozen gen_37&#x27;s 21:14) [cross-unit prose].
+</td><td><span class="he">וַיַּשְׁכֵּם אַבְרָהָם בַּבֹּקֶר וַיַּחֲבֹשׁ אֶת־חֲמֹרוֹ</span> · <i>va-yashkem avraham ba-boqer va-yachavosh et-chamoro</i><br><span class="gloss">= and-yashkem avraham morning and-yachavosh chamoro</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The fourth dawn-rise of the era saddles a donkey for the hardest journey. Two demanded roots come back at once and the machine — by frozen law — holds the compound whole: nothing pops on partials, and the third verb is nowhere in the verse.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_22_4 · Gen.22.4 · <span class='expr'>THE_THIRD_DAY_SIGHTING</span></h3>
+<p><span class="he">בַּיּוֹם הַשְּׁלִישִׁי וַיִּשָּׂא אַבְרָהָם אֶת־עֵינָיו וַיַּרְא אֶת־הַמָּקוֹם מֵרָחֹק</span> · <i>ba-yom ha-shelishi va-yisa avraham et-einav va-yar et-ha-maqom me-rachoq</i> · [EN-AID/JPS] On the third day Abraham lifted up his eyes, and saw the place afar off.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ביום השלישי וישא אברהם את־עיניו וירא את־המקום מרחק</span> · <i>ba-yom ha-shelishi va-yisa avraham et-enay-v va-yar et-ha-maqom me-rachoq</i> · on the THIRD DAY he lifted his eyes and saw the place AFAR (single-arm verse — flag 15; verse-final me-rachoq)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ba_yom_ha_shelishi_va_yar_et_ha_maqom_me_rachoq, t0)</span><br><span class="gloss">= HOLDS(in-the-day-the-shelishi-and-yar-the-maqom-from-rachoq, t0)</span><br>SHELISHI (&#x27;third&#x27;) token 4 — the first third DAY of narrative time (tokens 1-3: creation&#x27;s day, Eden&#x27;s third river, the ark&#x27;s third deck): three days of walking the letter never narrates — the silence is the letter&#x27;s own [census; prose]. RACHOQ (&#x27;afar&#x27;) TORAH DEBUT — the distance-word is born in the father&#x27;s eye (its adverb-cousin harcheq debuted in frozen gen_37&#x27;s bowshot: the two far-words of the corpus both measure a parent from a dying son) [census; cross-unit prose]. NASA (&#x27;lift&#x27;) token 12 — the eye-lift; token 13 is 22:13&#x27;s ram-sighting: the lift-verb&#x27;s next two tokens are the two seeings of this chapter [census]. HA-MAQOM (&#x27;the place&#x27;) tokens 16-19 run this span — thrice &#x27;the place&#x27; unnamed, then named by a sentence at 22:14 [census].
+</td><td><span class="he">בַּיּוֹם הַשְּׁלִישִׁי … מֵרָחֹק</span> · <i>ba-yom ha-shelishi … me-rachoq</i><br><span class="gloss">= day the-shelishi from-rachoq</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">A single-arm verse for a single act: three unnarrated days end in one lifted eye. The place is still only &#x27;the place&#x27; — its name is ten verses and one ram away.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_22_5 · Gen.22.5 · <span class='expr'>THE_STAY_DEMAND_AND_THE_EXCLUSIVE_WE</span></h3>
+<p><span class="he">וַיֹּאמֶר אַבְרָהָם אֶל־נְעָרָיו שְׁבוּ־לָכֶם פֹּה עִם־הַחֲמוֹר וַאֲנִי וְהַנַּעַר נֵלְכָה עַד־כֹּה וְנִשְׁתַּחֲוֶה וְנָשׁוּבָה אֲלֵיכֶם</span> · <i>va-yomer avraham el-nearav shevu-lakhem po im-ha-chamor va-ani ve-ha-naar nelkha ad-koh ve-nishtachaveh ve-nashuvah aleikhem</i> · [EN-AID/JPS] And Abraham said unto his young men: &#x27;Abide ye here with the ass, and I and the lad will go yonder; and we will worship, and come back to you.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר אברהם אל־נעריו שבו־לכם פה עם־החמור ואני והנער נלכה עד־כה</span> · <i>va-yomer avraham el-nearay-v shevu-la-khem po im-ha-chamor va-ani ve-ha-naar nelkha ad-ko</i> · SIT here with the donkey — I and the lad will go THUS FAR (etnachta on ad-ko)</div><div class="arm"><b>RIGHT</b><br><span class="he">ונשתחוה ונשובה אליכם</span> · <i>ve-nishtachave ve-nashuva ale-khem</i> · and we will WORSHIP and we will RETURN to you (verse-final aleikhem)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(avraham, LET(shevu(po_im_ha_chamor)))</span><br><span class="gloss">= DECLARE(avraham, LET(shevu(po-if-the-chamor)))</span><br>THE STAY-DEMAND [flag 5]: shevu (&#x27;SIT&#x27;) — imperative 2mp on the two lads, pushed — and it will stand OPEN FOREVER: the letter never sits them; at 22:19 they RISE and WALK (va-yaqumu va-yelkhu) — the demanded root never returns on the demandees (gen_37&#x27;s frozen other-verb class; the demand&#x27;s own until-clause &#x27;until we return to you&#x27; expires at 22:19 in the letter&#x27;s structure, and the machine still holds the word unpaid per the verb-identity standard). Onkelos reads intent over verb: ORIKHU (&#x27;WAIT here&#x27;) — the buffer performs the substitution the letter performs at 22:19 [flag 5; dual-track].
+</td><td><span class="he">שְׁבוּ־לָכֶם פֹּה עִם־הַחֲמוֹר</span> · <i>shevu-lakhem po im-ha-chamor</i><br><span class="gloss">= shevu-lakhem po if-the-chamor</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(nelkha_ve_nishtachaveh_ve_nashuvah_aleikhem, t0)</span><br><span class="gloss">= HOLDS(nelkha-and-nishtachaveh-and-nashuvah-aleikhem, t0)</span><br>THE EXCLUSIVE-WE TRIO IS FACT [flag 6]: three first- person-plural volitives spoken TO the lads ABOUT Abraham-and-Isaac — the we EXCLUDES the addressees: not the council CMD-US shape (there issuer and demandee-collective are one; gen_06&#x27;s naaseh, gen_35&#x27;s cave-councils); volitives on no one push nothing (gen_31/33&#x27;s class). VE-NASHUVAH (&#x27;and WE will RETURN&#x27; — the plural over one returning) is held exactly as written; the chain&#x27;s file is named-only. NISHTACHAVEH (&#x27;we will worship&#x27;) — the bow-verb&#x27;s token 3: the visitors bowed-to (18:2), Lot bowed (19:1), now &#x27;worship&#x27; names the trial&#x27;s act to the lads [census; prose].
+</td><td><span class="he">נֵלְכָה … וְנִשְׁתַּחֲוֶה וְנָשׁוּבָה אֲלֵיכֶם</span> · <i>nelkha … ve-nishtachaveh ve-nashuvah aleikhem</i><br><span class="gloss">= nelkha and-nishtachaveh and-nashuvah aleikhem</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">One demand that will never be paid and three we-verbs that cannot demand anything: the machine&#x27;s queue and the letter&#x27;s tenderness split the verse between them — and the plural return stands written over a single descent.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_22_6 · Gen.22.6 · <span class='expr'>THE_LOADED_WALK_TOGETHER</span></h3>
+<p><span class="he">וַיִּקַּח אַבְרָהָם אֶת־עֲצֵי הָעֹלָה וַיָּשֶׂם עַל־יִצְחָק בְּנוֹ וַיִּקַּח בְּיָדוֹ אֶת־הָאֵשׁ וְאֶת־הַמַּאֲכֶלֶת וַיֵּלְכוּ שְׁנֵיהֶם יַחְדָּו</span> · <i>va-yiqach avraham et-atzei ha-olah va-yasem al-yitzchaq beno va-yiqach be-yado et-ha-esh ve-et-ha-maakhelet va-yelkhu shneihem yachdav</i> · [EN-AID/JPS] And Abraham took the wood of the burnt-offering, and laid it upon Isaac his son; and he took in his hand the fire and the knife; and they went both of them together.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויקח אברהם את־עצי העלה וישם על־יצחק בנו ויקח בידו את־האש ואת־המאכלת</span> · <i>va-yiqach avraham et-atze ha-ola va-yasem al-yitzchaq ben-o va-yiqach be-yad-o et-ha-esh ve-et-ha-maakhelet</i> · the wood SET on Isaac; the FIRE and the KNIFE in his hand (etnachta on ha-maakhelet)</div><div class="arm"><b>RIGHT</b><br><span class="he">וילכו שניהם יחדו</span> · <i>va-yelkhu shene-hem yachdav</i> · and the two walked TOGETHER (verse-final yachdav)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">load_and_walk(e2) ∧ Agent(e2, avraham) ∧ Companion(e2, yitzchaq)</span><br><span class="gloss">= load-and-walk(e2) ∧ Agent(e2, avraham) ∧ Companion(e2, yitzchaq)</span><br>THE LOAD SPLIT: the wood on the son, the FIRE and the KNIFE in the father&#x27;s own hand — the letter keeps the dangerous things from the boy [prose]. ESH (&#x27;fire&#x27;) token 3 — the fire-ladder: the covenant torch (15:17), Sodom&#x27;s fire-rain (19:24), the father&#x27;s hand; token 5 is the burning bush [census-exact]. MAAKHELET (&#x27;knife&#x27;) — token 1 of 2: BOTH Torah tokens are this ascent [census-exact]. YACHDAV (&#x27;together&#x27;) token 3 — tokens 1-2 are BOTH 13:6&#x27;s could-not-dwell-TOGETHER (doubled in one verse): the together-word born in a separation spends its next three tokens on this walk [census]. SIM token 9 — the set-verb that loaded Hagar&#x27;s shoulder (frozen gen_37&#x27;s tokens 6-8) now loads the other son [census; cross-unit prose].
+</td><td><span class="he">וַיָּשֶׂם עַל־יִצְחָק בְּנוֹ … וַיֵּלְכוּ שְׁנֵיהֶם יַחְדָּו</span> · <i>va-yasem al-yitzchaq beno … va-yelkhu shneihem yachdav</i><br><span class="gloss">= and-yasem upon-yitzchaq beno and-yelkhu both-of-them yachdav</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+</table>
+<div class="meta">A father divides a burden by danger and the letter coins its refrain: the two walked together. The verse rests on the together-word — it will rest there again in two verses.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_22_7 · Gen.22.7 · <span class='expr'>THE_WHERE_IS_THE_LAMB</span></h3>
+<p><span class="he">וַיֹּאמֶר יִצְחָק אֶל־אַבְרָהָם אָבִיו וַיֹּאמֶר אָבִי וַיֹּאמֶר הִנֶּנִּי בְנִי וַיֹּאמֶר הִנֵּה הָאֵשׁ וְהָעֵצִים וְאַיֵּה הַשֶּׂה לְעֹלָה</span> · <i>va-yomer yitzchaq el-avraham aviv va-yomer avi va-yomer hineni veni va-yomer hinneh ha-esh ve-ha-etzim ve-ayeh ha-seh le-olah</i> · [EN-AID/JPS] And Isaac spoke unto Abraham his father, and said: &#x27;My father.&#x27; And he said: &#x27;Here am I, my son.&#x27; And he said: &#x27;Behold the fire and the wood; but where is the lamb for a burnt-offering?&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר יצחק אל־אברהם אביו ויאמר אבי ויאמר הנני בני</span> · <i>va-yomer yitzchaq el-avraham avi-v va-yomer avi-y va-yomer hineni-y veni-y</i> · MY FATHER — HERE I AM, MY SON (etnachta on veni)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויאמר הנה האש והעצים ואיה השה לעלה</span> · <i>va-yomer hine ha-esh ve-ha-etzim ve-aye ha-se le-ola</i> · the fire and the wood — but WHERE is the LAMB? (verse-final le-olah)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(avi_va_yomer_hineni_veni, t0) ∧ HOLDS(ve_ayeh_ha_seh_le_olah, t0)</span><br><span class="gloss">= HOLDS(avi-and-yomer-behold-I-veni, t0) ∧ HOLDS(and-ayeh-the-seh-to-burnt-offering, t0)</span><br>FOUR SAY-TOKENS IN ONE VERSE — the chapter&#x27;s tenderest exchange is nearly all speech-frames: said-said-said- said around two words each [census; prose]. HINENI #2 — the answer-word turns from God to the son: hineni VENI (&#x27;here I am, MY SON&#x27;) [flag 8]. ISAAC&#x27;S ONLY SPEECH of the entire trial is one question; the question class pushes nothing (gen_31&#x27;s law): AYEH (&#x27;where?&#x27;) token 3 — the where-word&#x27;s career: where is Sarah (18:9, the promise), where are the men (19:5, the violence), where is the lamb (the sacrifice) [census-exact]. SE (&#x27;lamb&#x27;) TORAH DEBUT x2 (22:7/8) — the lamb-word is born in the son&#x27;s question and answered in the father&#x27;s next breath [census].
+</td><td><span class="he">אָבִי … הִנֶּנִּי בְנִי … וְאַיֵּה הַשֶּׂה לְעֹלָה</span> · <i>avi … hineni veni … ve-ayeh ha-seh le-olah</i><br><span class="gloss">= avi behold-I veni and-ayeh the-seh burnt-offering</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The trial&#x27;s only father-son words: two vocatives, one here-I-am, one question the machine may not grade and the father may not answer. The next verse answers it anyway — sideways.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_22_8 · Gen.22.8 · <span class='expr'>THE_PROVIDE_ANSWER</span></h3>
+<p><span class="he">וַיֹּאמֶר אַבְרָהָם אֱלֹהִים יִרְאֶה־לּוֹ הַשֶּׂה לְעֹלָה בְּנִי וַיֵּלְכוּ שְׁנֵיהֶם יַחְדָּו</span> · <i>va-yomer avraham elohim yireh-lo ha-seh le-olah beni va-yelkhu shneihem yachdav</i> · [EN-AID/JPS] And Abraham said: &#x27;God will provide Himself the lamb for a burnt-offering, my son.&#x27; So they went both of them together.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר אברהם אלהים יראה־לו השה לעלה בני</span> · <i>va-yomer avraham Elohim yire-l-o ha-se le-ola beni-y</i> · God will SEE to the lamb, my son (etnachta on beni)</div><div class="arm"><b>RIGHT</b><br><span class="he">וילכו שניהם יחדו</span> · <i>va-yelkhu shene-hem yachdav</i> · and the two walked TOGETHER (verse-final yachdav — the refrain twice)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(elohim_yireh_lo_ha_seh_le_olah_beni, t0)</span><br><span class="gloss">= HOLDS(God-yireh-not-the-seh-to-burnt-offering-beni, t0)</span><br>THE PROVIDE-ANSWER: Elohim YIREH-lo (&#x27;God will SEE to&#x27; — the see-verb&#x27;s future doing provision-work): the answer is prophecy-shaped fact, and its verb will name the place at 22:14 (yireh/yeraeh — the same root three more times) [census: raah tokens 47-51, five in-span]. The answer ends BENI (&#x27;my son&#x27;) — the arm rests on the address, as 22:7&#x27;s rested on veni: the two arms of the exchange both end in the son [tree fact]. THE TREE TWIN: 22:6 and 22:8 carry the IDENTICAL right arm — va-yelkhu shneihem yachdav: the letter rests twice on the same three words around the lamb-exchange [tree fact; census: yachdav token 4]. Onkelos: QODAM YYA GELEI leih imra (&#x27;before the LORD the lamb is REVEALED&#x27;) — the reveal-family with kodam-distancing takes the provide-verb; the same family that opened Hagar&#x27;s eyes (frozen gen_37&#x27;s u-gela) now knows the lamb [flag 14, dual-track].
+</td><td><span class="he">אֱלֹהִים יִרְאֶה־לּוֹ הַשֶּׂה לְעֹלָה בְּנִי</span> · <i>elohim yireh-lo ha-seh le-olah beni</i><br><span class="gloss">= God yireh-not the-seh burnt-offering beni</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The father answers the question by handing it to God in the see-verb — the verb that will become the mountain&#x27;s name. And the letter closes the exchange with its refrain, note for note.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_22_9 · Gen.22.9 · <span class='expr'>THE_BINDING</span></h3>
+<p><span class="he">וַיָּבֹאוּ אֶל־הַמָּקוֹם אֲשֶׁר אָמַר־לוֹ הָאֱלֹהִים וַיִּבֶן שָׁם אַבְרָהָם אֶת־הַמִּזְבֵּחַ וַיַּעֲרֹךְ אֶת־הָעֵצִים וַיַּעֲקֹד אֶת־יִצְחָק בְּנוֹ וַיָּשֶׂם אֹתוֹ עַל־הַמִּזְבֵּחַ מִמַּעַל לָעֵצִים</span> · <i>va-yavou el-ha-maqom asher amar-lo ha-elohim va-yiven sham avraham et-ha-mizbeach va-yaarokh et-ha-etzim va-yaaqod et-yitzchaq beno va-yasem oto al-ha-mizbeach mi-maal la-etzim</i> · [EN-AID/JPS] And they came to the place which God had told him of; and Abraham built the altar there, and laid the wood in order, and bound Isaac his son, and laid him on the altar, upon the wood.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויבאו אל־המקום אשר אמר־לו האלהים ויבן שם אברהם את־המזבח ויערך את־העצים</span> · <i>va-yavou el-ha-maqom asher amar-l-o ha-Elohim va-yiven sham avraham et-ha-mizbecha va-yaarokh et-ha-etzim</i> · they came; he BUILT the altar, ARRANGED the wood (etnachta on ha-etzim)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויעקד את־יצחק בנו וישם אתו על־המזבח ממעל לעצים</span> · <i>va-yaaqod et-yitzchaq ben-o va-yasem et-o al-ha-mizbecha mi-maal la-etzim</i> · and BOUND Isaac his son and set him on the altar (verse-final la-etzim)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">bind(e3) ∧ Agent(e3, avraham) ∧ Theme(e3, yitzchaq)</span><br>AQAD (&#x27;bind&#x27;) — a TORAH HAPAX: the verb that names the whole event exists exactly once, here [census-exact]. MIZBEACH (&#x27;altar&#x27;) tokens 7-8 BOTH in this verse — the altar-word doubles in the binding verse; frozen gen_20&#x27;s career line LANDS, quoted: &#x27;MIZBEACH (altar) tokens 1-2 of 198 both in-verse (career: Abram&#x27;s altars, the binding&#x27;s, the Tabernacle&#x27;s)&#x27; — Noach&#x27;s double-token verse and this one are the word&#x27;s only doubled verses so far [LANDED; census]. HA-mizbeach — with the article: THE altar, on a mountain that never had one [prose; the chain&#x27;s file named-only]. ARAKH (&#x27;arrange&#x27;) token 2 — token 1 arranged nothing yet in Genesis but 14:8&#x27;s battle-line: the arrange-verb&#x27;s first two objects are war and wood [census]. The verse narrates FOUR deeds and not one is a demanded root — the compound holds through the binding itself [flag 3; prose].
+</td><td><span class="he">וַיַּעֲקֹד אֶת־יִצְחָק בְּנוֹ וַיָּשֶׂם אֹתוֹ עַל־הַמִּזְבֵּחַ</span> · <i>va-yaaqod et-yitzchaq beno va-yasem oto al-ha-mizbeach</i><br><span class="gloss">= and-yaaqod yitzchaq beno and-yasem it upon-the-altar</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yaaqod_et_yitzchaq_va_yasem_al_ha_mizbeach, t0)</span><br><span class="gloss">= HOLDS(and-yaaqod-yitzchaq-and-yasem-upon-the-altar, t0)</span><br>The binding-fact held for the gate: bound and set on the altar — the hapax&#x27;s one firing recorded as standing state [prose].
+</td><td><span class="he">וַיַּעֲקֹד אֶת־יִצְחָק בְּנוֹ וַיָּשֶׂם אֹתוֹ עַל־הַמִּזְבֵּחַ</span> · <i>va-yaaqod et-yitzchaq beno va-yasem oto al-ha-mizbeach</i><br><span class="gloss">= and-yaaqod yitzchaq beno and-yasem it upon-the-altar</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The hapax fires: one verb, once in the Torah, for one bound son. Even here the machine&#x27;s queue does not move — building, arranging, binding, setting are nobody&#x27;s demanded words.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_22_10 · Gen.22.10 · <span class='expr'>THE_HAND_AND_THE_KNIFE</span></h3>
+<p><span class="he">וַיִּשְׁלַח אַבְרָהָם אֶת־יָדוֹ וַיִּקַּח אֶת־הַמַּאֲכֶלֶת לִשְׁחֹט אֶת־בְּנוֹ</span> · <i>va-yishlach avraham et-yado va-yiqach et-ha-maakhelet li-shechot et-beno</i> · [EN-AID/JPS] And Abraham stretched forth his hand, and took the knife to slay his son.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וישלח אברהם את־ידו ויקח את־המאכלת</span> · <i>va-yishlach avraham et-yad-o va-yiqach et-ha-maakhelet</i> · he SENT his hand and TOOK the knife (etnachta on ha-maakhelet)</div><div class="arm"><b>RIGHT</b><br><span class="he">לשחט את־בנו</span> · <i>li-shechot et-ben-o</i> · TO SLAUGHTER HIS SON (the whole silluq arm is the purpose)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">reach_knife(e4) ∧ Agent(e4, avraham) ∧ Purpose(e4, shechitat_beno)</span><br><span class="gloss">= reach-knife(e4) ∧ Agent(e4, avraham) ∧ Purpose(e4, shechitat-beno)</span><br>SHACHAT (&#x27;slaughter&#x27;) — TORAH DEBUT, in the infinitive of purpose: the slaughter-verb is born in a father&#x27;s reach and never fires as a finite deed here — its career runs to Joseph&#x27;s goat and the PASSOVER lamb x2: the verb born over a bound son becomes the verb of the lamb that spares sons [census]. THE WHOLE SILLUQ ARM is the purpose-clause: li-shechot et-beno (&#x27;to slaughter his son&#x27;) — the verse rests on the unfinished infinitive [tree fact]. VA-YISHLACH et-yado (&#x27;he SENT his hand&#x27;) — the exact phrase the next verse&#x27;s jussive will negate: al-TISHLACH yadkha — the letter builds the countermand from this verse&#x27;s own words [prose]. MAAKHELET token 2 of 2 — the knife&#x27;s Torah life ends mid-reach [census-exact].
+</td><td><span class="he">וַיִּשְׁלַח … אֶת־יָדוֹ וַיִּקַּח אֶת־הַמַּאֲכֶלֶת לִשְׁחֹט</span> · <i>va-yishlach … et-yado va-yiqach et-ha-maakhelet li-shechot</i><br><span class="gloss">= and-yishlach his-hand and-yiqach the-maakhelet to-me-shechot</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+</table>
+<div class="meta">The queue&#x27;s starkest picture: the demand stands open, the knife is in the hand, and the verse ends on an infinitive that never becomes finite. Between this arm and the next verse stands everything.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_22_11 · Gen.22.11 · <span class='expr'>THE_FIRST_DOUBLED_NAME_CALL</span></h3>
+<p><span class="he">וַיִּקְרָא אֵלָיו מַלְאַךְ יְהוָה מִן־הַשָּׁמַיִם וַיֹּאמֶר אַבְרָהָם אַבְרָהָם וַיֹּאמֶר הִנֵּנִי</span> · <i>va-yiqra elav malakh YHWH min-ha-shamayim va-yomer avraham avraham va-yomer hineni</i> · [EN-AID/JPS] And the angel of the LORD called unto him out of heaven, and said: &#x27;Abraham, Abraham.&#x27; And he said: &#x27;Here am I.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויקרא אליו מלאך יהוה מן־השמים ויאמר אברהם אברהם</span> · <i>va-yiqra elay-v malakh YHWH min-ha-shamayim va-yomer avraham avraham</i> · the angel of YHWH called from heaven: ABRAHAM, ABRAHAM (etnachta on the doubled name)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויאמר הנני</span> · <i>va-yomer hineni-y</i> · and he said: HERE I AM (the whole silluq arm is the answer)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>REGISTRY_INSTALL</td><td><span class="expr">WORLD += {malakh_YHWH}</span><br><span class="gloss">= WORLD += {malakh-the-LORD}</span><br>MALAKH (&#x27;angel&#x27;) TOKEN 8 — frozen gen_37&#x27;s census line LANDS, quoted: &#x27;tokens 8-9 = 22:11/22:15 — BOTH Aqedah sky-calls, next unit&#x27; [LANDED]: the angel-class&#x27;s second heaven-call, and the first under the YHWH-name since Hagar&#x27;s spring — the name-texture turns at exactly this verse: every divine token from here to the oath is YHWH [flag 15; census]. Installed as the unit&#x27;s sky-caller (the issuer of the countermand) [flag 16].
+</td><td><span class="he">מַלְאַךְ יְהוָה מִן־הַשָּׁמַיִם</span> · <i>malakh YHWH min-ha-shamayim</i><br><span class="gloss">= malakh the-LORD from-the-heavens</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(avraham_avraham_va_yomer_hineni, t0)</span><br><span class="gloss">= HOLDS(avraham-avraham-and-yomer-behold-I, t0)</span><br>THE TORAH&#x27;S FIRST DOUBLED-NAME CALL [flag 8, hunted]: avraham avraham — the earlier adjacent doublings (6:9, 11:10, 11:27, 25:19) are toledot-frame repetitions across clause boundaries, not vocatives; the call- class runs 22:11 -&gt; 46:2 (yaaqov yaaqov) -&gt; Exod 3:4 (moshe moshe): the doubled call is born stopping a knife [census-exact]. HINENI #3 — the answer-word&#x27;s third addressee: God, the son, the angel; the whole silluq arm is the one word [flag 8; tree fact].
+</td><td><span class="he">אַבְרָהָם אַבְרָהָם … הִנֵּנִי</span> · <i>avraham avraham … hineni</i><br><span class="gloss">= avraham avraham behold-I</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Heaven interrupts with the corpus&#x27;s first doubled name, and the man with the knife answers with the word he coined ten verses ago. The next verse files the roster&#x27;s first countermand.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_22_12 · Gen.22.12 · <span class='expr'>THE_COUNTERMAND_AND_THE_CONFERRED_TITLE</span></h3>
+<p><span class="he">וַיֹּאמֶר אַל־תִּשְׁלַח יָדְךָ אֶל־הַנַּעַר וְאַל־תַּעַשׂ לוֹ מְאוּמָה כִּי עַתָּה יָדַעְתִּי כִּי־יְרֵא אֱלֹהִים אַתָּה וְלֹא חָשַׂכְתָּ אֶת־בִּנְךָ אֶת־יְחִידְךָ מִמֶּנִּי</span> · <i>va-yomer al-tishlach yadkha el-ha-naar ve-al-taas lo meumah ki atah yadati ki-yere elohim atah ve-lo chasakhta et-binkha et-yechidkha mimeni</i> · [EN-AID/JPS] And he said: &#x27;Lay not thy hand upon the lad, neither do thou any thing unto him; for now I know that thou art a God-fearing man, seeing thou hast not withheld thy son, thine only son, from Me.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר אל־תשלח ידך אל־הנער ואל־תעש לו מאומה</span> · <i>va-yomer el-tishlach yad-kha el-ha-naar ve-el-taas l-o meuma</i> · SEND NOT your hand — DO NOTHING to him (etnachta on meumah)</div><div class="arm"><b>RIGHT</b><br><span class="he">כי עתה ידעתי כי־ירא אלהים אתה ולא חשכת את־בנך את־יחידך ממני</span> · <i>ki ata yadati ki-yere Elohim ata ve-lo chasakhta et-bin-kha et-yechid-kha mime-ni</i> · NOW I know you FEAR God — you did not WITHHOLD your only son from Me (verse-final mimeni)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(malakh_YHWH, LET-NOT(tishlach(yadkha_el_ha_naar)))</span><br><span class="gloss">= DECLARE(malakh-the-LORD, LET-NOT(tishlach(yadkha-to-the-naar)))</span><br>THE ROSTER&#x27;S FIRST DIRECT COUNTERMAND [flag 2, second prong]: al + jussive negating the very deed the open demand requires — and the letter builds it from 22:10&#x27;s own words (va-yishlach et-yado -&gt; al-TISHLACH yadkha). Pushed as LET-NOT on frozen gen_35&#x27;s 19:17 two-push shape [flag 4], stands OPEN forever (S10 contract). NO CANCEL OPERATOR EXISTS and none is invented: from this verse the queue holds the offer-up demand AND its countermand together — the collision IS the encoding; the machine does not adjudicate [flag 2; the owner does]. Note the fence: the LET-NOTs forbid harm to THE BOY — the ram-offering at 22:13 breaches neither (no violated-prohibition event fires).
+</td><td><span class="he">אַל־תִּשְׁלַח יָדְךָ אֶל־הַנַּעַר</span> · <i>al-tishlach yadkha el-ha-naar</i><br><span class="gloss">= upon-tishlach yadkha to-the-naar</span></td><td class='cite'>TIR-034</td><td>tested</td></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(malakh_YHWH, LET-NOT(taas(lo_meumah)))</span><br><span class="gloss">= DECLARE(malakh-the-LORD, LET-NOT(taas(not-meumah)))</span><br>The second push [flag 4 — gen_35&#x27;s frozen shape, quoted: two separate LET-NOT demands for one al-pair]: MEUMA (&#x27;anything&#x27;) — Torah debut: the nothing-word is born in the widest prohibition the corpus has seen — do not do to him ANY thing [census]. The etnachta rests on it [tree fact].
+</td><td><span class="he">וְאַל־תַּעַשׂ לוֹ מְאוּמָה</span> · <i>ve-al-taas lo meumah</i><br><span class="gloss">= and-upon-taas not meumah</span></td><td class='cite'>TIR-034</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(atah_yadati_ki_yere_elohim_atah, t0) ∧ HOLDS(ve_lo_chasakhta_et_binkha_et_yechidkha, t0)</span><br><span class="gloss">= HOLDS(you-yadati-when-yere-God-you, t0) ∧ HOLDS(and-not-chasakhta-binkha-yechidkha, t0)</span><br>THE CONFERRED TITLE: YERE ELOHIM (&#x27;God-FEARING&#x27;) — the adjective&#x27;s TORAH DEBUT: frozen gen_36&#x27;s line LANDS as its answer — 20:11&#x27;s ein-YIRAT-elohim was Abraham&#x27;s wrong GUESS about Gerar (&#x27;no fear of God in this place&#x27;); the quality he guessed absent is now CONFERRED on him from heaven, in the adjective [LANDED-class; census: token 2 = 32:12&#x27;s Jacob... verified 1/6]. ATAH YADATI (&#x27;NOW I know&#x27;) — the trial&#x27;s stated yield is knowledge, spoken in the divine first person through the angel&#x27;s mouth (frozen gen_32&#x27;s slide-class) [prose]. LO CHASAKHTA (&#x27;you did not WITHHOLD&#x27;) — chasakh token 2: frozen gen_36&#x27;s withhold-arc LANDS, quoted: &#x27;its four Torah tokens run to the AQEDAH&#x27;s crown (22:12/16&#x27;s lo chasakhta)&#x27; — God withheld a king from sin; the father withholds nothing [LANDED]. Onkelos: LO MENATA (&#x27;you did not deny&#x27;); the countermand pair rendered plain [dual-track].
+</td><td><span class="he">כִּי עַתָּה יָדַעְתִּי כִּי־יְרֵא אֱלֹהִים אַתָּה וְלֹא חָשַׂכְתָּ</span> · <i>ki atah yadati ki-yere elohim atah ve-lo chasakhta</i><br><span class="gloss">= when you yadati when-yere God you and-not chasakhta</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Two prohibitions land against a standing demand and the machine holds all three — no operator cancels, none is invented, and the queue itself becomes the theology: the word that commanded and the words that stay it, together, forever open. Between them a title is conferred that a frozen unit watched for.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_22_13 · Gen.22.13 · <span class='expr'>THE_RAM_AND_THE_CROWN_FORK</span></h3>
+<p><span class="he">וַיִּשָּׂא אַבְרָהָם אֶת־עֵינָיו וַיַּרְא וְהִנֵּה־אַיִל אַחַר נֶאֱחַז בַּסְּבַךְ בְּקַרְנָיו וַיֵּלֶךְ אַבְרָהָם וַיִּקַּח אֶת־הָאַיִל וַיַּעֲלֵהוּ לְעֹלָה תַּחַת בְּנוֹ</span> · <i>va-yisa avraham et-einav va-yar ve-hinneh-ayil achar neechaz ba-sevakh be-qarnav va-yelekh avraham va-yiqach et-ha-ayil va-yaalehu le-olah tachat beno</i> · [EN-AID/JPS] And Abraham lifted up his eyes, and looked, and behold behind him a ram caught in the thicket by his horns. And Abraham went and took the ram, and offered him up for a burnt-offering in the stead of his son.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וישא אברהם את־עיניו וירא והנה־איל אחר נאחז בסבך בקרניו</span> · <i>va-yisa avraham et-enay-v va-yar ve-hine-ayil achar neechaz ba-sevakh be-qarnay-v</i> · he lifted his eyes: a RAM, CAUGHT in the thicket by its horns (etnachta on be-qarnav)</div><div class="arm"><b>RIGHT</b><br><span class="he">וילך אברהם ויקח את־האיל ויעלהו לעלה תחת בנו</span> · <i>va-yelekh avraham va-yiqach et-ha-ayil va-yaale-hu le-ola tachat ben-o</i> · he WENT and TOOK the ram and OFFERED IT UP — IN PLACE OF HIS SON (verse-final beno)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">see_ram(e5) ∧ Agent(e5, avraham)</span><br><span class="gloss">= see-ram(e5) ∧ Agent(e5, avraham)</span><br>AYIL (&#x27;ram&#x27;) tokens 2-3 — TOKEN 1 IS 15:9, inside frozen gen_31&#x27;s cycle-#8 demand string (&#x27;LET(qechah (avram, eglah_ez_AYIL_tor_ve_gozal))&#x27;, quoted): the ram-word&#x27;s first two appearances are both Abraham&#x27;s offerings — the pieces and the substitute [LANDED; census]. ACHAZ (&#x27;caught&#x27;) debut + SEVAKH (&#x27;thicket&#x27;) hapax + QEREN (&#x27;horn&#x27;) debut — the seizure-vocabulary is born holding the substitute in place [census]. The ram is held as event-participant, not a WORLD entity [flag 13; alternative named]. NASA token 13 — the second eye-lift: the first saw THE PLACE, this one sees THE RAM [census; prose].
+</td><td><span class="he">וְהִנֵּה־אַיִל אַחַר נֶאֱחַז בַּסְּבַךְ בְּקַרְנָיו</span> · <i>ve-hinneh-ayil achar neechaz ba-sevakh be-qarnav</i><br><span class="gloss">= and-behold-ayil achar neechaz in-the-sevakh in-qarnav</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">offer_substitute(e6) ∧ Agent(e6, avraham) ∧ Theme(e6, ha_ayil) ∧ Instead(e6, yitzchaq)</span><br><span class="gloss">= offer-substitute(e6) ∧ Agent(e6, avraham) ∧ Theme(e6, the-ayil) ∧ Instead(e6, yitzchaq)</span><br>THE CROWN FORK&#x27;S VERSE [flag 2 — NO RESULT FIRES; the base encoding]: ALL THREE demanded roots return in sequence, in the demand&#x27;s own order, as foreground deeds by the demandee — va-yeLEKH (go), va-yiQACH (take), va-yaALEHU (offer up: root and stem, alah hiphil, the same object-suffix -hu) — and the object is the RAM, marked by the letter&#x27;s own substitution- word: TACHAT BENO (&#x27;in place of his son&#x27;). The machine withholds the pop: the RESULT contract matches exact demand-strings, the demand named the son, and no frozen precedent pops on a switched object [grounds in flag 2]. THE LETTER&#x27;S RESERVATION [side A&#x27;s strongest card, stated here for the owner]: across 22:3-10 Abraham performs eleven deeds and NEVER the demanded alah — the demanded verb fires exactly ONCE in the span, in this verse, on the substitute: the letter saved the word for the ram. OLAH token 7 closes the six-token in-span run [census]. Onkelos: CHALAF beno (&#x27;in EXCHANGE for his son&#x27;) — and 22:16&#x27;s reward comes CHALAF DI (&#x27;in exchange for that&#x27;) you did: substitute and recompense in one exchange-word — the buffer&#x27;s own comment on this fork [flag 14c, dual-track].
+</td><td><span class="he">וַיֵּלֶךְ אַבְרָהָם וַיִּקַּח אֶת־הָאַיִל וַיַּעֲלֵהוּ לְעֹלָה תַּחַת בְּנוֹ</span> · <i>va-yelekh avraham va-yiqach et-ha-ayil va-yaalehu le-olah tachat beno</i><br><span class="gloss">= and-yelekh avraham and-yiqach the-ayil and-yaalehu burnt-offering tachat beno</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ayil_neechaz_ba_sevakh_be_qarnav, t0) ∧ HOLDS(va_yaalehu_le_olah_tachat_beno, t0)</span><br><span class="gloss">= HOLDS(ayil-neechaz-in-the-sevakh-in-qarnav, t0) ∧ HOLDS(and-yaalehu-to-burnt-offering-tachat-beno, t0)</span><br>The fork&#x27;s two facts held for the gate: the ram caught, the substitute offered IN PLACE OF his son — the letter&#x27;s tachat recorded as standing state beside the demand it may or may not pay [flag 2].
+</td><td><span class="he">אַיִל … נֶאֱחַז בַּסְּבַךְ … וַיַּעֲלֵהוּ לְעֹלָה תַּחַת בְּנוֹ</span> · <i>ayil … neechaz ba-sevakh … va-yaalehu le-olah tachat beno</i><br><span class="gloss">= ayil neechaz in-the-sevakh and-yaalehu burnt-offering tachat beno</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The demanded verb, saved for ten verses, lands on a substitute the letter marks with one word: instead. The machine records everything and pops nothing — whether that deed pays that demand is the owner&#x27;s question now, laid out both ways in the draft note.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_22_14 · Gen.22.14 · <span class='expr'>THE_SENTENCE_NAME_AND_THE_SAYING</span></h3>
+<p><span class="he">וַיִּקְרָא אַבְרָהָם שֵׁם־הַמָּקוֹם הַהוּא יְהוָה יִרְאֶה אֲשֶׁר יֵאָמֵר הַיּוֹם בְּהַר יְהוָה יֵרָאֶה</span> · <i>va-yiqra avraham shem-ha-maqom ha-hu YHWH yireh asher yeamer ha-yom be-har YHWH yeraeh</i> · [EN-AID/JPS] And Abraham called the name of that place Adonai-jireh; as it is said to this day: &#x27;In the mount where the LORD is seen.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויקרא אברהם שם־המקום ההוא יהוה יראה</span> · <i>va-yiqra avraham shem-ha-maqom ha-hu YHWH yire</i> · he CALLED the place&#x27;s name: YHWH-YIREH (&#x27;YHWH will see&#x27; — etnachta on yireh)</div><div class="arm"><b>RIGHT</b><br><span class="he">אשר יאמר היום בהר יהוה יראה</span> · <i>asher yeamer ha-yom be-har YHWH yerae</i> · as it is SAID today: on YHWH&#x27;s mount it is SEEN (verse-final yeraeh)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>NAME</td><td><span class="expr">name(ha_maqom) := YHWH_Yireh</span><br><span class="gloss">= name(the-maqom) := the-LORD-Yireh</span><br>THE NAMING-GRAMMAR HYBRID [flag 7, alternative staged]: a FULL formula on a PLACE — namer, name-word, object, name — fires the registry&#x27;s one write (gen_12/13&#x27;s class); the name is a SENTENCE (YHWH yireh &#x27;YHWH will see&#x27; — Abraham&#x27;s own 22:8 answer promoted to toponym), on gen_32&#x27;s ratified sentence-name precedent (El_Roi). THE FENCE: the named entity is THE PLACE — the open NAME-on-YHWH triage is one word away and NOT touched. The report-only alternative (no write) is staged for the owner. Onkelos [flag 14a — the era&#x27;s boldest recomposition]: the verse dissolves into worship — &#x27;Abraham WORSHIPPED AND PRAYED there (u-felach VE-TZALI)... here shall the generations worship... on this mountain Abraham worshipped BEFORE THE LORD&#x27; — NO name given: the buffer&#x27;s delta on this very op, recorded, never merged; the tzali prayer-family fires its third consecutive unit.
+</td><td><span class="he">וַיִּקְרָא אַבְרָהָם שֵׁם־הַמָּקוֹם הַהוּא יְהוָה יִרְאֶה</span> · <i>va-yiqra avraham shem-ha-maqom ha-hu YHWH yireh</i><br><span class="gloss">= and-yiqra avraham shem-the-maqom the-that the-LORD yireh</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PATTERN</td><td><span class="expr">PATTERN(asher_yeamer_ha_yom_be_har_YHWH_yeraeh)</span><br><span class="gloss">= PATTERN(which-yeamer-the-day-in-har-the-LORD-yeraeh)</span><br>THE SAYING-CLAUSE [flag 7]: asher YEAMER ha-yom (&#x27;as it is SAID to this day&#x27;) — the proverb-PATTERN (gen_25&#x27;s saying-genre), its first token WITHOUT the al-ken particle [flagged variant]: the letter attaches a standing proverb to the fresh name, active turned passive — YIREH (&#x27;He will see&#x27;) / YERAEH (&#x27;He is seen&#x27;) hold the verse&#x27;s two rests: one verb, two voices, two arms [tree fact; census: raah tokens 50-51].
+</td><td><span class="he">אֲשֶׁר יֵאָמֵר הַיּוֹם בְּהַר יְהוָה יֵרָאֶה</span> · <i>asher yeamer ha-yom be-har YHWH yeraeh</i><br><span class="gloss">= which yeamer day in-har the-LORD yeraeh</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The answer becomes an address: what Abraham told his son on the way up, he tells the map on the way down, and the letter adds the proverb that keeps saying it. One write, one pattern — and the buffer, boldest in the era, writes worship where the letter wrote a name.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_22_15 · Gen.22.15 · <span class='expr'>THE_SECOND_SKY_CALL</span></h3>
+<p><span class="he">וַיִּקְרָא מַלְאַךְ יְהוָה אֶל־אַבְרָהָם שֵׁנִית מִן־הַשָּׁמָיִם</span> · <i>va-yiqra malakh YHWH el-avraham shenit min-ha-shamayim</i> · [EN-AID/JPS] And the angel of the LORD called unto Abraham a second time out of heaven,</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויקרא מלאך יהוה אל־אברהם</span> · <i>va-yiqra malakh YHWH el-avraham</i> · the angel of YHWH called to Abraham (etnachta on avraham)</div><div class="arm"><b>RIGHT</b><br><span class="he">שנית מן־השמים</span> · <i>shenit min-ha-shamayim</i> · a SECOND time from the heavens (verse-final ha-shamayim)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">sky_call(e7) ∧ Agent(e7, malakh_YHWH) ∧ Goal(e7, avraham)</span><br><span class="gloss">= sky-call(e7) ∧ Agent(e7, malakh-the-LORD) ∧ Goal(e7, avraham)</span><br>MALAKH TOKEN 9 — frozen gen_37&#x27;s census line completes its landing: the angel-class&#x27;s three heaven-calls are tokens 7-8-9 (Hagar&#x27;s rescue, the knife-stay, this) — all three interrupt or seal a dying-son scene [LANDED x2 complete; census]. SHENIT (&#x27;a second time&#x27;) — the letter counts its own calls: the first stayed the hand, the second pays the trial [prose]. The say-verb waits for the next verse: this verse is all address [prose].
+</td><td><span class="he">וַיִּקְרָא … שֵׁנִית מִן־הַשָּׁמָיִם</span> · <i>va-yiqra … shenit min-ha-shamayim</i><br><span class="gloss">= and-yiqra second-time from-the-heavens</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+</table>
+<div class="meta">The class that was born finding a runaway at a spring makes its third call from heaven — this one carrying not a stay but a wage.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_22_16 · Gen.22.16 · <span class='expr'>THE_DIVINE_SELF_OATH</span></h3>
+<p><span class="he">וַיֹּאמֶר בִּי נִשְׁבַּעְתִּי נְאֻם־יְהוָה כִּי יַעַן אֲשֶׁר עָשִׂיתָ אֶת־הַדָּבָר הַזֶּה וְלֹא חָשַׂכְתָּ אֶת־בִּנְךָ אֶת־יְחִידֶךָ</span> · <i>va-yomer bi nishbati neum-YHWH ki yaan asher asita et-ha-davar ha-zeh ve-lo chasakhta et-binkha et-yechidekha</i> · [EN-AID/JPS] and said: &#x27;By Myself have I sworn, saith the LORD, because thou hast done this thing, and hast not withheld thy son, thine only son,</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר בי נשבעתי נאם־יהוה</span> · <i>va-yomer bi-y nishbati neum-YHWH</i> · BY MYSELF I have SWORN — oracle of YHWH (etnachta on neum-YHWH)</div><div class="arm"><b>RIGHT</b><br><span class="he">כי יען אשר עשית את־הדבר הזה ולא חשכת את־בנך את־יחידך</span> · <i>ki yaan asher asita et-ha-davar ha-ze ve-lo chasakhta et-bin-kha et-yechide-kha</i> · because you have DONE this thing and not WITHHELD your only son (verse-final yechidekha)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(bi_nishbati_neum_YHWH, t0) ∧ HOLDS(yaan_asher_asita_ve_lo_chasakhta, t0)</span><br><span class="gloss">= HOLDS(bi-nishbati-neum-the-LORD, t0) ∧ HOLDS(yaan-which-asita-and-not-chasakhta, t0)</span><br>THE SWEAR-VERB&#x27;S DIVINE TURN: SHAVA TOKEN 4 — frozen gen_37&#x27;s watch LANDS, quoted: &#x27;Token 4 is 22:16 — GOD swearing BY HIMSELF at the Aqedah: the swear-verb&#x27;s divine turn, one unit ahead [watch]&#x27; — the verb whose whole debut field was the human well-pact (tokens 1-3) crosses to the divine mouth, BY HIMSELF, one chapter later [LANDED]. NEUM (&#x27;oracle&#x27;) — TORAH DEBUT: the prophetic formula neum-YHWH is born inside the Torah&#x27;s first divine self-oath, and the etnachta rests on it [census; tree fact]. THE RECEIPT-SPEECH [flag 2, side A&#x27;s card]: yaan asher ASITA et-ha-davar ha-zeh (&#x27;because you have DONE this thing&#x27;) — God&#x27;s own declaration that the thing was done, while the machine&#x27;s queue still holds the demand open: the letter&#x27;s receipt and the machine&#x27;s are not the same receipt — the fork&#x27;s sharpest sentence, held as fact [flag 2]. LO CHASAKHTA doubled — chasakh token 3: the withhold-arc&#x27;s second in-span token (frozen gen_36&#x27;s line) [LANDED; census]. YACHID token 3 of 3 — the only-word&#x27;s last Torah token [census-exact]. Onkelos: BE-MEMRI QAYEMIT (&#x27;by MY WORD I have sworn&#x27;) — the Memra-oath: frozen gen_37&#x27;s qayem-family (the human oath taken BY the Memra at 21:23) now carries the divine one [flag 14b, dual-track].
+</td><td><span class="he">בִּי נִשְׁבַּעְתִּי נְאֻם־יְהוָה … יַעַן אֲשֶׁר עָשִׂיתָ</span> · <i>bi nishbati neum-YHWH … yaan asher asita</i><br><span class="gloss">= bi nishbati neum-the-LORD yaan which asita</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">God swears by Himself in a formula prophecy will use for a thousand years — and grounds it in a deed the machine still lists as unpaid. The letter&#x27;s receipt and the queue&#x27;s disagree; the draft note hands the disagreement to the owner.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_22_17 · Gen.22.17 · <span class='expr'>THE_DOUBLED_BLESSINGS</span></h3>
+<p><span class="he">כִּי־בָרֵךְ אֲבָרֶכְךָ וְהַרְבָּה אַרְבֶּה אֶת־זַרְעֲךָ כְּכוֹכְבֵי הַשָּׁמַיִם וְכַחוֹל אֲשֶׁר עַל־שְׂפַת הַיָּם וְיִרַשׁ זַרְעֲךָ אֵת שַׁעַר אֹיְבָיו</span> · <i>ki-varekh avarekhkha ve-harbah arbeh et-zarakha ke-khokhvei ha-shamayim ve-kha-chol asher al-sefat ha-yam ve-yirash zarakha et shaar oyvav</i> · [EN-AID/JPS] that in blessing I will bless thee, and in multiplying I will multiply thy seed as the stars of the heaven, and as the sand which is upon the seashore; and thy seed shall possess the gate of his enemies;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">כי־ברך אברכך והרבה ארבה את־זרעך ככוכבי השמים וכחול אשר על־שפת הים</span> · <i>ki-varekh avarekh-kha ve-harba arbe et-zara-kha ke-khokhve ha-shamayim ve-kha-chol asher al-sefat ha-yam</i> · BLESSING I will BLESS, MULTIPLYING I will MULTIPLY — stars and sand (etnachta on ha-yam)</div><div class="arm"><b>RIGHT</b><br><span class="he">וירש זרעך את שער איביו</span> · <i>ve-yirash zara-kha et shaar oyvay-v</i> · your seed shall POSSESS the GATE of his enemies (verse-final oyvav)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(varekh_avarekhkha_ve_harbah_arbeh, t0) ∧ HOLDS(ke_khokhvei_ve_kha_chol_ve_yirash_shaar_oyvav, t0)</span><br><span class="gloss">= HOLDS(varekh-avarekhkha-and-greatly-I-will-multiply, t0) ∧ HOLDS(like-khokhvei-and-kha-chol-and-yirash-shaar-oyvav, t0)</span><br>TWO INFINITIVE-ABSOLUTE DOUBLINGS IN ONE BREATH — blessing-I-will-bless, multiplying-I-will-multiply: the emphatic class of mot-tamut and shov-ashuv, held as promise-FACTS (gen_27&#x27;s rule; nothing demanded) [morph: Vpa+Vpi, Vha+Vhi]. KOKHAV (&#x27;star&#x27;) token 3 — the count-promise re-cited under oath (1:16 creation, 15:5 the counting, 22:17 the swearing — frozen gen_31&#x27;s star-command behind the wall) [census]; CHOL (&#x27;sand&#x27;) debut — the second measure joins [census]; SHAAR (&#x27;gate&#x27;) token 2 — token 1 was Lot IN Sodom&#x27;s gate (19:1): the gate-word moves from the doomed city&#x27;s seat to the enemies&#x27; possession; token 3 waits at 23:10, the purchase [census; watch]. OYEV (&#x27;enemy&#x27;) debut — the enemy-word born inside a blessing [census]. Onkelos: QIRVEI sanaeihon (&#x27;the CITIES of their enemies&#x27;) — the metonym generalized [flag 14d, dual-track].
+</td><td><span class="he">בָרֵךְ אֲבָרֶכְךָ וְהַרְבָּה אַרְבֶּה … כְּכוֹכְבֵי … וְכַחוֹל</span> · <i>varekh avarekhkha ve-harbah arbeh … ke-khokhvei … ve-kha-chol</i><br><span class="gloss">= varekh avarekhkha greatly I-will-multiply like-khokhvei and-kha-chol</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The oath pays in doubled grammar: the corpus&#x27;s emphatic device, twice in one verse, over both measures of innumerability — and a gate last seen holding Lot.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_22_18 · Gen.22.18 · <span class='expr'>THE_LISTENED_VOICE_GROUND</span></h3>
+<p><span class="he">וְהִתְבָּרְכוּ בְזַרְעֲךָ כֹּל גּוֹיֵי הָאָרֶץ עֵקֶב אֲשֶׁר שָׁמַעְתָּ בְּקֹלִי</span> · <i>ve-hitbarakhu ve-zarakha kol goyei ha-aretz ekev asher shamata be-qoli</i> · [EN-AID/JPS] and in thy seed shall all the nations of the earth be blessed; because thou hast hearkened to My voice.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">והתברכו בזרעך כל גויי הארץ</span> · <i>ve-hitbarakhu ve-zara-kha kol goye ha-aretz</i> · all nations SHALL BLESS THEMSELVES in your seed (etnachta on ha-aretz)</div><div class="arm"><b>RIGHT</b><br><span class="he">עקב אשר שמעת בקלי</span> · <i>eqev asher shamata be-qoli-y</i> · BECAUSE you LISTENED to MY VOICE (verse-final be-qoli)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_hitbarakhu_ve_zarakha_kol_goyei_ha_aretz, t0) ∧ HOLDS(ekev_asher_shamata_be_qoli, t0)</span><br><span class="gloss">= HOLDS(and-hitbarakhu-and-zarakha-all-goyei-the-earth, t0) ∧ HOLDS(ekev-which-shamata-in-qoli, t0)</span><br>VE-HITBARAKHU — the bless-verb in HITPAEL where the call&#x27;s venivrekhu (12:3, frozen gen_27&#x27;s span) ran NIPHAL: the all-nations blessing returns with its stem shifted reflexive — the letter&#x27;s own two-stem pair across the two lekh-lekha commands [morph; cross-unit prose, nothing crosses]. THE VOICE-LADDER&#x27;S ELEVENTH RUNG: QOL token 11 — be-QOLI (&#x27;MY voice&#x27;): after the garden Voice, the indictment&#x27;s listened-voice (3:17), the blood, Lemekh, Sarai&#x27;s voice, Sarah&#x27;s voice COMMANDED (frozen gen_37&#x27;s 21:12), Hagar&#x27;s lifted voice, and the lad&#x27;s heard voice x2 — the eleventh token is GOD&#x27;S OWN, credited to Abraham&#x27;s ear: the idiom that indicted Adam and commanded Sarah&#x27;s hearing now grounds the oath [census-exact; cross-unit prose]. EQEV + YAAN — the because-words both debut in this one oath [census]. Onkelos: QABELTA LE-MEMRI (&#x27;you ACCEPTED My WORD&#x27;) — frozen gen_37&#x27;s qabel-family (21:12&#x27;s qabel minah) crossed with the Memra: the voice becomes the Word received [flag 14b, dual-track].
+</td><td><span class="he">וְהִתְבָּרְכוּ … עֵקֶב אֲשֶׁר שָׁמַעְתָּ בְּקֹלִי</span> · <i>ve-hitbarakhu … ekev asher shamata be-qoli</i><br><span class="gloss">= and-hitbarakhu ekev which shamata in-qoli</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The oath&#x27;s last ground is the corpus&#x27;s oldest idiom turned right side up: the listening that began as Adam&#x27;s indictment ends as Abraham&#x27;s credit — and the buffer reads the voice as the Word.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_22_19 · Gen.22.19 · <span class='expr'>THE_RETURN_AND_THE_DWELL</span></h3>
+<p><span class="he">וַיָּשָׁב אַבְרָהָם אֶל־נְעָרָיו וַיָּקֻמוּ וַיֵּלְכוּ יַחְדָּו אֶל־בְּאֵר שָׁבַע וַיֵּשֶׁב אַבְרָהָם בִּבְאֵר שָׁבַע</span> · <i>va-yashav avraham el-nearav va-yaqumu va-yelkhu yachdav el-beer shava va-yeshev avraham bi-veer shava</i> · [EN-AID/JPS] So Abraham returned unto his young men, and they rose up and went together to Beer-sheba; and Abraham dwelt at Beer-sheba.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וישב אברהם אל־נעריו ויקמו וילכו יחדו אל־באר שבע</span> · <i>va-yashav avraham el-nearay-v va-yaqumu va-yelkhu yachdav el-beer shava</i> · Abraham RETURNED to his lads; they ROSE and walked TOGETHER to Beer-sheva (etnachta on shava)</div><div class="arm"><b>RIGHT</b><br><span class="he">וישב אברהם בבאר שבע</span> · <i>va-yeshev avraham bi-veer shava</i> · and Abraham DWELT at Beer-sheva (verse-final shava)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">return_dwell(e8) ∧ Agent(e8, avraham) ∧ Goal(e8, beer_sheva)</span><br><span class="gloss">= return-dwell(e8) ∧ Agent(e8, avraham) ∧ Goal(e8, beer-seven)</span><br>THE STAY-DEMAND&#x27;S NON-RECEIPT [flag 5]: the lads were told SIT; the letter narrates them RISING and WALKING (va-yaqumu va-yelkhu) — the demanded root never returns on the demandees; the demand&#x27;s until-clause expires here and the word stays unpaid (gen_37&#x27;s other-verb class) [prose; the queue holds]. YACHDAV token 5 — the third and last together of the span: the father and the LADS walk together where the father and the son walked twice; the letter counts who returns together, and the count is the chain&#x27;s oldest question [census; the where-is-Isaac file named-only]. VA-YESHEV avraham bi-veer shava (&#x27;and Abraham DWELT at Beer-sheva&#x27;) — the dwell-verb at the sworn well: frozen gen_36&#x27;s dwell-grant (shev, OPEN behind two walls) meets its root in narrative at last — and NOTHING pops across a frozen wall (standing law): the letter-fact is named exactly as frozen gen_37&#x27;s 21:34 step named its sojourn [cross-unit prose; nothing crosses].
+</td><td><span class="he">וַיָּשָׁב … וַיָּקֻמוּ וַיֵּלְכוּ יַחְדָּו … וַיֵּשֶׁב</span> · <i>va-yashav … va-yaqumu va-yelkhu yachdav … va-yeshev</i><br><span class="gloss">= and-yashav and-yaqumu and-yelkhu yachdav and-yeshev</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">beer_sheva are READ without prior install (minted by frozen gen_37&#x27;s report-naming, read as known geography)</span><br><span class="gloss">= beer-seven are READ without prior install (minted by frozen gen-37&#x27;s report-naming, read as known geography)</span><br>The name frozen gen_37&#x27;s PATTERN minted (21:31, registry silent) is read here as known geography — the standalone convention&#x27;s cleanest case: a name minted by a frozen unit, presupposed by its successor [flag 16; gen_36&#x27;s gerar-basis class]. The verse carries the name TWICE — both arms end on shava [tree fact].
+</td><td><span class="he">אֶל־בְּאֵר שָׁבַע … בִּבְאֵר שָׁבַע</span> · <i>el-beer shava … bi-veer shava</i><br><span class="gloss">= to-beer shava bi-veer shava</span></td><td class='cite'>TIR-026</td><td>tested</td></tr>
+</table>
+<div class="meta">The trial closes on a verse whose two arms both rest on the sworn well&#x27;s name — with a demand still open over the risen lads, a grant still open behind two walls, and a son the return-verse does not mention. The letter&#x27;s silences are the chain&#x27;s oldest files; the machine holds only what is written.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_22_20_24 · Gen.22.20-24 · <span class='expr'>THE_CODA_REPORT_THE_BRIDE_MINTED</span></h3>
+<p><span class="he">וַיְהִי אַחֲרֵי הַדְּבָרִים הָאֵלֶּה וַיֻּגַּד לְאַבְרָהָם לֵאמֹר הִנֵּה יָלְדָה מִלְכָּה גַם־הִוא בָּנִים לְנָחוֹר אָחִיךָ … וּבְתוּאֵל יָלַד אֶת־רִבְקָה … וּפִילַגְשׁוֹ וּשְׁמָהּ רְאוּמָה וַתֵּלֶד גַּם־הִוא</span> · <i>va-yehi acharei ha-devarim ha-eleh va-yugad le-avraham lemor hinneh yaldah milkah gam-hi vanim le-nachor achikha … u-vetuel yalad et-rivqah … u-filagsho u-shemah reumah va-teled gam-hi</i> · [EN-AID/JPS] And it came to pass after these things, that it was told Abraham, saying: &#x27;Behold, Milcah, she also hath borne children unto thy brother Nahor: Uz his first-born, and Buz his brother, and Kemuel the father of Aram; and Chesed, and Hazo, and Pildash, and Jidlaph, and Bethuel.&#x27; And Bethuel begot Rebekah; these eight Milcah bore to Nahor, Abraham&#x27;s brother. And his concubine, whose name was Reumah, she also bore Tebah, and Gaham, and Tahash, and Maacah.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויהי אחרי הדברים האלה ויגד לאברהם לאמר</span> · <i>va-yehi achare ha-devarim ha-ele va-yugad le-avraham le-mor</i> · 22:20 arms: after these things it was TOLD to Abraham (etnachta on le-mor); the news of Milkah&#x27;s sons</div><div class="arm"><b>RIGHT</b><br><span class="he">ובתואל ילד את־רבקה … ופילגשו ושמה ראומה ותלד גם־הוא</span> · <i>u-vetuel yalad et-rivqa … u-filagsh-o u-shema-ה reuma va-teled gam-hiv</i> · 22:23&#x27;s etnachta rests on rivqah — the bride&#x27;s first token is an arm-end; 22:24 the concubine&#x27;s four</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yugad_le_avraham_hinneh_yaldah_milkah_gam_hi, t0) ∧ HOLDS(u_vetuel_yalad_et_rivqah, t0)</span><br><span class="gloss">= HOLDS(and-yugad-to-avraham-behold-yaldah-milkah-also-hi, t0) ∧ HOLDS(and-vetuel-yalad-rivqah, t0)</span><br>THE CODA IS REPORT-CONTENT [flag 12 — no installs, registry silent]: the whole roster sits inside VA-YUGAD (&#x27;it was TOLD&#x27;) — the tell-verb&#x27;s FIRST PASSIVE (hophal), and nagad tokens 5-6 are adjacent: 21:26&#x27;s denial (lo-higadta &#x27;you did NOT tell&#x27;) and this news [census]. The frame-clause of 22:1 re-runs (achar ha-devarim — davar tokens 17/19 bracket the unit): the letter files the trial and the pedigree under one formula [prose]. GAM-HI (&#x27;she TOO has borne&#x27;) — the letter pairs Nachor&#x27;s house with Abraham&#x27;s news: eight sons of Milkah answering the one son of Sarah [prose]. RIVQAH — TOKEN 1 of 30: the next matriarch is MINTED inside a genealogy report, eight verses after the knife (token 2 = 24:15, at the well with a pitcher); 22:23&#x27;s etnachta rests on her name [census; tree fact]. U-shemah reumah is a shem-notice, not a naming formula — no write [flag 12].
+</td><td><span class="he">וַיֻּגַּד לְאַבְרָהָם … הִנֵּה יָלְדָה מִלְכָּה גַם־הִוא … וּבְתוּאֵל יָלַד אֶת־רִבְקָה</span> · <i>va-yugad le-avraham … hinneh yaldah milkah gam-hi … u-vetuel yalad et-rivqah</i><br><span class="gloss">= and-yugad to-avraham behold yaldah milkah also-hi and-vetuel yalad rivqah</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shmonah_ele_yaldah_milkah_u_filagsho_reumah_arbaah, t0)</span><br><span class="gloss">= HOLDS(shmonah-ele-yaldah-milkah-and-filagsho-reumah-four, t0)</span><br>THE TWELVE OF NACHOR: eight of Milkah + four of Reumah — the letter counts the uncle&#x27;s sons to twelve exactly where the expelled son&#x27;s twelve princes stand promised behind the walls (17:20&#x27;s frozen decree; 25:13-16 ahead): two twelves flank the one bound son [census; cross-unit prose, nothing crosses]. SHMONAH (&#x27;eight&#x27;) tokens 10-11 adjacent: the eighth-day circumcision (21:4, frozen gen_37&#x27;s span) and Milkah&#x27;s eight [census]. PILEGESH (&#x27;concubine&#x27;) TORAH DEBUT (career: Keturah&#x27;s line, Bilhah, Timna) [census]. TEN NAME- HAPAXES ride the coda (Buz, Kesed, Chazo, Pildash, Yidlaf, Tevach, Gacham, Tachash, Maakhah, Reumah — 1/1 each); UTZ is one skeleton, THREE men (10:23 Shem&#x27;s line, here Nachor&#x27;s firstborn, 36:28 the Horite — the same-lemma-multiple-men class); QEMUEL 1/2; BEKHOR (&#x27;firstborn&#x27;) token 2 — tokens 1-2 are both NON-line genealogies (Canaan&#x27;s Sidon, Nachor&#x27;s Utz); ARAM token 3 — named as Qemuel&#x27;s son where 10:22 listed him as Shem&#x27;s: the letter&#x27;s two Arams, the chain&#x27;s file [census; named-only]. Onkelos: VE-ITCHAVA (&#x27;it was SHOWN&#x27;) — the reveal-family on the news; pilegesh -&gt; LECHENATA [flag 14, dual-track].
+</td><td><span class="he">שְׁמֹנָה אֵלֶּה יָלְדָה מִלְכָּה … וּפִילַגְשׁוֹ … וַתֵּלֶד גַּם־הִוא</span> · <i>shmonah eleh yaldah milkah … u-filagsho … va-teled gam-hi</i><br><span class="gloss">= shmonah these yaldah milkah and-filagsho and-teled also-hi</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The trial&#x27;s coda is a birth announcement in the passive voice: twelve sons counted in a message, ten names the Torah will never use again, and — resting on an etnachta — the girl the next generation turns on. The registry writes nothing; the letter has already aimed the story at a well in Aram.</div>
+</div>
+<h2>State machine</h2>
+<div class="meta">The test, the binding, the oath (standalone; registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER).</div>
+<table><tr><th>state</th><th>meaning</th></tr>
+<tr><td><b>S_boot</b></td><td>Before 22:1 — all registers empty (standalone unit; the sworn well behind the frame)</td></tr>
+<tr><td><b>S_tested</b></td><td>After 22:1 — nisa&#x27;s debut into an empty instrument field (the machine irony); the first human hineni</td></tr>
+<tr><td><b>S_commanded</b></td><td>After 22:2 — THE CROWN: the compound triple&#x27;s fourth token pushed (God&#x27;s own; lekh-lekha&#x27;s second and last Torah token; the love-debut; yachid&#x27;s lexeme opens)</td></tr>
+<tr><td><b>S_departed</b></td><td>After 22:3-4 — yitzchaq + shnei_nearav installed; the fifth dawn-rise; TWO demanded roots return (partials never pop); the third-day sighting</td></tr>
+<tr><td><b>S_stayed</b></td><td>After 22:5 — LET(shevu) pushed on the lads (open forever); the exclusive-we trio held as fact</td></tr>
+<tr><td><b>S_walking</b></td><td>After 22:6-8 — the load split by danger; the where-is-the-lamb question (fact); the provide-answer; the together-refrain twice</td></tr>
+<tr><td><b>S_bound</b></td><td>After 22:9-10 — the aqad hapax fires; the altar-word doubles; the knife taken li-shechot — the queue unmoved through the binding itself</td></tr>
+<tr><td><b>S_stayed_hand</b></td><td>After 22:11-12 — malakh_YHWH installed (sky-call token 8); the first doubled-name call; TWO LET-NOTs pushed against the live demand (THE COLLISION on the queue); yere-elohim conferred; chasakh token 2 lands</td></tr>
+<tr><td><b>S_substituted</b></td><td>After 22:13 — THE FORK&#x27;S VERSE: all three demanded roots return on the RAM, tachat beno; NO RESULT fires (base encoding; side A staged); the demand stays open</td></tr>
+<tr><td><b>S_named</b></td><td>After 22:14 — the registry&#x27;s one write (NAME ha_maqom := YHWH_Yireh) + the saying-PATTERN; yireh/yeraeh hold the two rests</td></tr>
+<tr><td><b>S_sworn</b></td><td>After 22:15-18 — sky-call token 9; the divine self-oath (shava token 4 lands; neum debuts); the doubled blessings; the listened-voice ground (qol token 11)</td></tr>
+<tr><td><b>S_returned</b></td><td>After 22:19 — the return without the son named; the lads rise (the stay-demand stays open); Abraham DWELLS at Beer-sheva (the frozen grant&#x27;s root, across two walls — nothing pops); beer_sheva read</td></tr>
+<tr><td><b>S_reported</b></td><td>After 22:20-24 — the coda report (va-yugad, the first passive tell); Nachor&#x27;s twelve; RIVQAH minted; ten name-hapaxes; registry silent</td></tr>
+</table><table><tr><th>from</th><th>to</th><th>via</th></tr>
+<tr><td>S_boot</td><td>S_tested</td><td>STEP_Gn_22_1</td></tr>
+<tr><td>S_tested</td><td>S_commanded</td><td>STEP_Gn_22_2</td></tr>
+<tr><td>S_commanded</td><td>S_departed</td><td>STEP_Gn_22_3</td></tr>
+<tr><td>S_departed</td><td>S_stayed</td><td>STEP_Gn_22_5</td></tr>
+<tr><td>S_stayed</td><td>S_walking</td><td>STEP_Gn_22_6</td></tr>
+<tr><td>S_walking</td><td>S_bound</td><td>STEP_Gn_22_9</td></tr>
+<tr><td>S_bound</td><td>S_stayed_hand</td><td>STEP_Gn_22_11</td></tr>
+<tr><td>S_stayed_hand</td><td>S_substituted</td><td>STEP_Gn_22_13</td></tr>
+<tr><td>S_substituted</td><td>S_named</td><td>STEP_Gn_22_14</td></tr>
+<tr><td>S_named</td><td>S_sworn</td><td>STEP_Gn_22_15</td></tr>
+<tr><td>S_sworn</td><td>S_returned</td><td>STEP_Gn_22_19</td></tr>
+<tr><td>S_returned</td><td>S_reported</td><td>STEP_Gn_22_20_24</td></tr>
+</table>
+<div class="note"><b>AFTER_S_reported</b> — TIME: t0 only — no RESULT, no t1 mark: the first unmarked clock since gen_34 (the trial ends with nothing paid on the machine&#x27;s terms and everything paid on the letter&#x27;s — flag 2). WORLD: THREE installs (yitzchaq; shnei_nearav; malakh_YHWH) + ONE presupposed read (beer_sheva — minted by frozen gen_37&#x27;s PATTERN, read as known; flag 16). REGISTRY: ONE write (ha_maqom -&gt; YHWH_Yireh — the sentence-name on the place, flag 7, alternative staged) + ONE silent PATTERN (the saying-clause). TESTS: ZERO — the second consecutive instrument-silent chapter, with the TEST-VERB ITSELF debuting into the emptiness (flag 10); zero triage contact. SPECS: FOUR pushed / ZERO popped / FOUR OPEN FOREVER: the compound triple qach_lekh_ve_haalehu (THE CROWN FORK — all three roots performed at 22:13 on the ram, tachat beno; the RESULT withheld in the base encoding, side A staged with cycle #15 as its consequence — flag 2), the stay-demand shevu (obeyed in no root — flag 5), and the two LET-NOTs (tishlach; taas — the roster&#x27;s first countermand, coexisting with the demand they counter from 22:12 on: the collision IS the encoding; flags 2, 4). LEDGER: EMPTY. EVENTS: the dawn journey, the loaded walk x2, the binding, the reach, the two sky-calls, the ram seen, the substitute offered, the return-and-dwell. FLAGS: read_before_install x1. The chapter&#x27;s grammar-lesson: a demand no reader wants paid, a countermand no operator can file, a deed that answers every root on another head, and a queue that keeps all of it — open — because the letter did.</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>The test into an empty field: after STEP_Gn_22_1</td><td>All registers empty (standalone unit; the sworn well behind the frame). (nisa debuts where no machine TEST can fire — flag 10; the first human hineni — flag 8.)</td><td>Facts achar-ha-devarim / ve-ha-elohim-nisah / va-yomer-hineni HOLD; no test, no name.<br><span class="gloss">= Facts achar-the-devarim / and-the-God-nisah / and-yomer-behold-I HOLD; no test, no name.</span></td><td><span class="he">וְהָאֱלֹהִים נִסָּה אֶת־אַבְרָהָם … הִנֵּנִי</span> · <i>ve-ha-elohim nisah et-avraham … hineni</i><br><span class="gloss">= God nisah avraham behold-I</span></td></tr>
+<tr><td><b>S2</b></td><td>The crown command: after STEP_Gn_22_2</td><td>S1 state. (The compound triple&#x27;s fourth token — God&#x27;s own, one demand; lekh-lekha&#x27;s second and last Torah token, frozen gen_27&#x27;s line landed; the love-debut; moriah as speech-content — flags 2, 11.)</td><td>LET(qach_lekh_ve_haalehu(et_binkha, le_olah)) pushed and OPEN; Facts yechidkha-asher-ahavta / asher-omar-elekha HOLD; no test, no name.<br><span class="gloss">= LET(qach-lekh-and-haalehu(binkha, to-burnt-offering)) pushed and OPEN; Facts yechidkha-which-ahavta / which-omar-to-you HOLD; no test, no name.</span></td><td><span class="he">קַח־נָא אֶת־בִּנְךָ אֶת־יְחִידְךָ … וְלֶךְ־לְךָ … וְהַעֲלֵהוּ</span> · <i>qach-na et-binkha et-yechidkha … ve-lekh-lekha … ve-haalehu</i><br><span class="gloss">= qach-na binkha yechidkha and-lekh-to-you and-haalehu</span></td></tr>
+<tr><td><b>S3</b></td><td>The dawn obedience — two roots, no pop: after STEP_Gn_22_3</td><td>S2 state. (yitzchaq and the lad-pair installed; shakham token 5 lands frozen gen_37&#x27;s line; TWO demanded roots return same-verse and partials never pop a compound — frozen gen_35&#x27;s rule; flag 3. The clause below proves the compound held.)</td><td>WORLD += yitzchaq; WORLD += shnei_nearav; LET(qach_lekh_ve_haalehu(et_binkha, le_olah)) pushed and OPEN; Facts va-yashkem-va-yachavosh HOLD.<br><span class="gloss">= WORLD += yitzchaq; WORLD += shnei-nearav; LET(qach-lekh-and-haalehu(binkha, to-burnt-offering)) pushed and OPEN; Facts and-yashkem-and-yachavosh HOLD.</span></td><td><span class="he">וַיַּשְׁכֵּם אַבְרָהָם בַּבֹּקֶר … וַיָּקָם וַיֵּלֶךְ</span> · <i>va-yashkem avraham ba-boqer … va-yaqam va-yelekh</i><br><span class="gloss">= and-yashkem avraham morning and-yaqam and-yelekh</span></td></tr>
+<tr><td><b>S4</b></td><td>The stay-demand and the exclusive we: after STEP_Gn_22_5</td><td>S3 state plus 22:4 (the third-day sighting; rachoq debut). (shevu pushed on the lads — open forever, flag 5; the cohortative trio is fact — the we excludes the addressees, flag 6.)</td><td>LET(shevu(po_im_ha_chamor)) pushed and OPEN; LET(qach_lekh_ve_haalehu(et_binkha, le_olah)) pushed and OPEN; Facts nelkha-ve-nishtachaveh-ve-nashuvah HOLD.<br><span class="gloss">= LET(shevu(po-if-the-chamor)) pushed and OPEN; LET(qach-lekh-and-haalehu(binkha, to-burnt-offering)) pushed and OPEN; Facts nelkha-and-nishtachaveh-and-nashuvah HOLD.</span></td><td><span class="he">שְׁבוּ־לָכֶם פֹּה עִם־הַחֲמוֹר … וְנָשׁוּבָה אֲלֵיכֶם</span> · <i>shevu-lakhem po im-ha-chamor … ve-nashuvah aleikhem</i><br><span class="gloss">= shevu-lakhem po if-the-chamor and-nashuvah aleikhem</span></td></tr>
+<tr><td><b>S5</b></td><td>The walk and the question: after STEP_Gn_22_8</td><td>S4 state plus 22:6-7 (the load split by danger; the four-say verse; hineni to the son; the where-ladder&#x27;s third token; the lamb-debut). (The provide-answer; the together-refrain twice — the tree twin.)</td><td>Facts avi-hineni-veni / ayeh-ha-seh HOLD; Facts elohim-yireh-lo HOLD; no test, no name.<br><span class="gloss">= Facts avi-behold-I-veni / ayeh-the-seh HOLD; Facts God-yireh-not HOLD; no test, no name.</span></td><td><span class="he">אֱלֹהִים יִרְאֶה־לּוֹ הַשֶּׂה לְעֹלָה בְּנִי</span> · <i>elohim yireh-lo ha-seh le-olah beni</i><br><span class="gloss">= God yireh-not the-seh burnt-offering beni</span></td></tr>
+<tr><td><b>S6</b></td><td>The binding and the knife — the queue unmoved: after STEP_Gn_22_10</td><td>S5 state plus 22:9 (the aqad hapax; the altar-word doubled; four deeds, none a demanded root). (The reach and the purpose-infinitive; the whole silluq arm is li-shechot et-beno. The clauses below prove the demand open with the knife in the hand — the machine&#x27;s starkest picture.)</td><td>LET(qach_lekh_ve_haalehu(et_binkha, le_olah)) pushed and OPEN; LET(shevu(po_im_ha_chamor)) pushed and OPEN; Facts va-yaaqod-va-yasem-al-ha-mizbeach HOLD; no test, no name.<br><span class="gloss">= LET(qach-lekh-and-haalehu(binkha, to-burnt-offering)) pushed and OPEN; LET(shevu(po-if-the-chamor)) pushed and OPEN; Facts and-yaaqod-and-yasem-upon-the-altar HOLD; no test, no name.</span></td><td><span class="he">וַיִּקַּח אֶת־הַמַּאֲכֶלֶת לִשְׁחֹט אֶת־בְּנוֹ</span> · <i>va-yiqach et-ha-maakhelet li-shechot et-beno</i><br><span class="gloss">= and-yiqach the-maakhelet to-me-shechot beno</span></td></tr>
+<tr><td><b>S7</b></td><td>The doubled call: after STEP_Gn_22_11</td><td>S6 state. (malakh_YHWH installed — sky-call token 8, frozen gen_37&#x27;s census line landed; the Torah&#x27;s first doubled-name call — flag 8; hineni&#x27;s third addressee.)</td><td>WORLD += malakh_YHWH; Facts avraham-avraham HOLD.<br><span class="gloss">= WORLD += malakh-the-LORD; Facts avraham-avraham HOLD.</span></td><td><span class="he">אַבְרָהָם אַבְרָהָם וַיֹּאמֶר הִנֵּנִי</span> · <i>avraham avraham va-yomer hineni</i><br><span class="gloss">= avraham avraham and-yomer behold-I</span></td></tr>
+<tr><td><b>S8</b></td><td>THE COLLISION — the countermand against the live demand: after STEP_Gn_22_12</td><td>S7 state. (The roster&#x27;s first direct countermand: two LET-NOTs per frozen gen_35&#x27;s 19:17 two-push shape — flags 2, 4; no cancel operator exists and none is invented. The three clauses below show the queue holding the offer-up demand AND its countermand together — the collision IS the encoding. yere-elohim conferred; chasakh token 2 lands frozen gen_36&#x27;s arc.)</td><td>LET(qach_lekh_ve_haalehu(et_binkha, le_olah)) pushed and OPEN; LET-NOT(tishlach(yadkha_el_ha_naar)) pushed and OPEN; LET-NOT(taas(lo_meumah)) pushed and OPEN; Facts atah-yadati-ki-yere-elohim / lo-chasakhta HOLD.<br><span class="gloss">= LET(qach-lekh-and-haalehu(binkha, to-burnt-offering)) pushed and OPEN; LET-NOT(tishlach(yadkha-to-the-naar)) pushed and OPEN; LET-NOT(taas(not-meumah)) pushed and OPEN; Facts you-yadati-when-yere-God / not-chasakhta HOLD.</span></td><td><span class="he">אַל־תִּשְׁלַח יָדְךָ אֶל־הַנַּעַר … וְלֹא חָשַׂכְתָּ</span> · <i>al-tishlach yadkha el-ha-naar … ve-lo chasakhta</i><br><span class="gloss">= upon-tishlach yadkha to-the-naar and-not chasakhta</span></td></tr>
+<tr><td><b>S9</b></td><td>The fork&#x27;s verse — the substitute, no pop fired: after STEP_Gn_22_14</td><td>S8 state plus 22:13 (ALL THREE demanded roots return on the RAM, tachat beno — THE CROWN FORK: the base encoding withholds the RESULT, side A staged whole in flag 2; the first clause below proves the demand STILL OPEN over the performed substitute). (22:14: the sentence-name written — the registry&#x27;s one write, flag 7; the saying-PATTERN; yireh/yeraeh on the two rests.)</td><td>LET(qach_lekh_ve_haalehu(et_binkha, le_olah)) pushed and OPEN; REGISTRY: ha_maqom-&gt;YHWH_Yireh (1 write); Facts ayil-neechaz-ba-sevakh / va-yaalehu-tachat-beno HOLD.<br><span class="gloss">= LET(qach-lekh-and-haalehu(binkha, to-burnt-offering)) pushed and OPEN; REGISTRY: the-maqom-&gt;the-LORD-Yireh (1 write); Facts ayil-neechaz-in-the-sevakh / and-yaalehu-tachat-beno HOLD.</span></td><td><span class="he">וַיַּעֲלֵהוּ לְעֹלָה תַּחַת בְּנוֹ … יְהוָה יִרְאֶה</span> · <i>va-yaalehu le-olah tachat beno … YHWH yireh</i><br><span class="gloss">= and-yaalehu burnt-offering tachat beno the-LORD yireh</span></td></tr>
+<tr><td><b>S10</b></td><td>The oath and the return: after STEP_Gn_22_19</td><td>S9 state plus 22:15-18 (sky-call token 9; shava token 4 lands frozen gen_37&#x27;s watch — the divine self-oath; neum debuts; the doubled blessings; qol token 11). (22:19: the lads RISE — the stay-demand&#x27;s non-receipt, flag 5; the dwell-verb at the sworn well across two frozen walls — nothing pops; beer_sheva read.)</td><td>LET(shevu(po_im_ha_chamor)) pushed and OPEN; Facts bi-nishbati-neum-YHWH / varekh-avarekhkha / ekev-asher-shamata HOLD; flags beer_sheva as read-before-install.<br><span class="gloss">= LET(shevu(po-if-the-chamor)) pushed and OPEN; Facts bi-nishbati-neum-the-LORD / varekh-avarekhkha / ekev-which-shamata HOLD; flags beer-seven as read-before-install.</span></td><td><span class="he">בִּי נִשְׁבַּעְתִּי נְאֻם־יְהוָה … וַיֵּשֶׁב אַבְרָהָם בִּבְאֵר שָׁבַע</span> · <i>bi nishbati neum-YHWH … va-yeshev avraham bi-veer shava</i><br><span class="gloss">= bi nishbati neum-the-LORD and-yeshev avraham bi-veer shava</span></td></tr>
+<tr><td><b>S11</b></td><td>The coda and the final ledger: after STEP_Gn_22_20_24</td><td>S10 state. (The coda inside the tell-verb&#x27;s first passive — no installs, registry silent, flag 12; Rivqah minted as news; Nachor&#x27;s twelve; the ten name-hapaxes. The set-clause below is created-only equality: three installs, one write, zero tests, zero pops, FOUR open forever, empty ledger — the trial&#x27;s whole machine-residue.)</td><td>WORLD = {yitzchaq, shnei_nearav, malakh_YHWH}; REGISTRY: ha_maqom-&gt;YHWH_Yireh (1 write); LET(qach_lekh_ve_haalehu(et_binkha, le_olah)) pushed and OPEN; LET(shevu(po_im_ha_chamor)) pushed and OPEN; LET-NOT(tishlach(yadkha_el_ha_naar)) pushed and OPEN; LET-NOT(taas(lo_meumah)) pushed and OPEN; Facts va-yugad-le-avraham / u-vetuel-yalad-et-rivqah HOLD; LEDGER stays EMPTY (open transaction); flags beer_sheva as read-before-install.<br><span class="gloss">= WORLD = {yitzchaq, shnei-nearav, malakh-the-LORD}; REGISTRY: the-maqom-&gt;the-LORD-Yireh (1 write); LET(qach-lekh-and-haalehu(binkha, to-burnt-offering)) pushed and OPEN; LET(shevu(po-if-the-chamor)) pushed and OPEN; LET-NOT(tishlach(yadkha-to-the-naar)) pushed and OPEN; LET-NOT(taas(not-meumah)) pushed and OPEN; Facts and-yugad-to-avraham / u-vetuel-yalad-et-rivqah HOLD; LEDGER stays EMPTY (open transaction); flags beer-seven as read-before-install.</span></td><td><span class="he">וּבְתוּאֵל יָלַד אֶת־רִבְקָה</span> · <i>u-vetuel yalad et-rivqah</i><br><span class="gloss">= and-vetuel yalad rivqah</span></td></tr>
+</table>
+<h2>Exports (reusable patterns)</h2><table><tr><th>id</th><th>content</th></tr>
+<tr><td>EXPORT_the_crown_fork</td><td><span class="he">קַח־נָא … וְהַעֲלֵהוּ … אַל־תִּשְׁלַח יָדְךָ … וַיַּעֲלֵהוּ לְעֹלָה תַּחַת בְּנוֹ</span> · <i>qach-na … ve-haalehu … al-tishlach yadkha … va-yaalehu le-olah tachat beno</i> · THE CROWN FORK — OWNER-GRADE, STAGED BOTH WAYS, UNRESOLVED [flag 2]: the compound triple&#x27;s FOURTH token is God&#x27;s own (qach-na + ve-lekh-lekha + ve-haalehu — take/go/offer-him-up, one breath, one demand; the class&#x27;s first divine token, with the third divine na); at 22:12 the roster&#x27;s FIRST DIRECT COUNTERMAND lands (two LET-NOTs per frozen gen_35&#x27;s 19:17 two-push shape — no cancel operator exists, the demand and its countermand COEXIST on the queue from there on); at 22:13 ALL THREE demanded roots return in the demand&#x27;s own order as foreground deeds by the demandee — va-yelekh, va-yiqach, va-yaalehu (root and stem, same object-suffix) — ON A SUBSTITUTE marked by the letter&#x27;s own word: TACHAT BENO. The base encoding fires NO RESULT (the demand names the son; no frozen precedent pops a switched object; the pop is one edit away); side A&#x27;s case is laid out whole: the echo-receipt standard met three-for-three, the demanded verb RESERVED by the letter for exactly this verse (eleven deeds in 22:3-10 and never alah), God&#x27;s own receipt-speech at 22:16 (yaan asher ASITA &#x27;because you have DONE&#x27;), and the buffer&#x27;s chalaf-weld (the ram CHALAF the son, the blessing CHALAF the deed). If side A is ratified, cycle #15 is its consequence — named, not claimed. Queue at close: FOUR OPEN FOREVER</td></tr>
+<tr><td>EXPORT_the_test_that_no_test_can_grade</td><td><span class="he">וְהָאֱלֹהִים נִסָּה אֶת־אַבְרָהָם … כִּי עַתָּה יָדַעְתִּי כִּי־יְרֵא אֱלֹהִים אַתָּה</span> · <i>ve-ha-elohim nisah et-avraham … ki atah yadati ki-yere elohim atah</i> · THE MACHINE IRONY [flag 10]: nisa (&#x27;test&#x27;) makes its Torah debut in the SECOND consecutive instrument-silent chapter (tov/shaah/tzaddiq/nichoach all x0) — the letter&#x27;s own test-word arrives exactly where the TESTS register cannot be tempted, and the trial runs entirely on the SPECS queue instead; its verdict is not a machine PASS but a CONFERRED TITLE — yere elohim (&#x27;God-FEARING&#x27;, the adjective&#x27;s debut) landing frozen gen_36&#x27;s 20:11 guess-line right side up — and its yield is knowledge (&#x27;NOW I know&#x27;), spoken in the divine first person through the angel (gen_32&#x27;s slide-class); the test-verb&#x27;s career runs to Marah, the manna, Massah, and Exod 20:20 — the same Sinai verse frozen gen_36 linked for the fear-noun: test and fear share a landing twice</td></tr>
+<tr><td>EXPORT_the_binding_lexicon</td><td><span class="he">וַיַּעֲקֹד … הַמַּאֲכֶלֶת … יְחִידְךָ … הִנֵּנִי … אַבְרָהָם אַבְרָהָם … יַחְדָּו</span> · <i>va-yaaqod … ha-maakhelet … yechidkha … hineni … avraham avraham … yachdav</i> · THE TRIAL SPENDS ONCE-WORDS [census-exact]: AQAD (&#x27;bind&#x27;) — the verb that names the event exists ONCE in the Torah; YACHID (&#x27;only one&#x27;) — the whole 3-token lexeme is this trial; MAAKHELET (&#x27;knife&#x27;) — both Torah tokens on this ascent, ending mid-reach; MORIAH and SEVAKH (&#x27;thicket&#x27;) hapaxes; the love-verb (ahav) debuts in the command (token 2 = Isaac loving Rivqah); HINENI — the first HUMAN here-I-am, three times (God, son, angel); AVRAHAM AVRAHAM — the Torah&#x27;s first doubled-name CALL (the class: 22:11 -&gt; 46:2 -&gt; Exod 3:4; hunt shown); the fire-ladder (covenant torch, Sodom&#x27;s rain, the father&#x27;s hand, the bush); YACHDAV born doubled in 13:6&#x27;s separation, spent tripled on this walk; the where-ladder (Sarah, the men of Sodom, the lamb); lekh-lekha exactly TWICE in the Torah — the call and the test, both deferring their destination (areka / omar elekha); shelishi&#x27;s first narrative third day; and the see-verb naming the mountain in two voices — YIREH / YERAEH on the verse&#x27;s two rests</td></tr>
+<tr><td>EXPORT_the_oath_and_the_coda</td><td><span class="he">בִּי נִשְׁבַּעְתִּי נְאֻם־יְהוָה … בָרֵךְ אֲבָרֶכְךָ … וּבְתוּאֵל יָלַד אֶת־רִבְקָה</span> · <i>bi nishbati neum-YHWH … varekh avarekhkha … u-vetuel yalad et-rivqah</i> · THE OATH AND THE BRIDE [flags 9, 12]: shava token 4 lands frozen gen_37&#x27;s watch — the swear-verb&#x27;s DIVINE turn (by Myself), one chapter after its human debut field, birthing NEUM (&#x27;oracle of YHWH&#x27; — the prophetic formula&#x27;s Torah debut, seated on the etnachta); two infinitive-absolute doublings pay the trial in emphatic grammar (blessing-I-will-bless, multiplying-I-will-multiply — promise-facts, nothing demanded); the stars of 15:5 re-cited under oath with the sand-debut beside them; the bless-verb returns HITPAEL where 12:3 ran niphal — the two lekh-lekha commands wear two stems of one blessing; qol token 11 — the voice-ladder ends at God&#x27;s own voice, credited to Abraham&#x27;s ear (the idiom that indicted Adam, commanded Sarah&#x27;s hearing, and heard the lad); the name-texture splits 5/5 (Elohim tests and provides, YHWH stays the knife and swears); and the coda — inside the tell-verb&#x27;s first passive — counts Nachor&#x27;s TWELVE (eight and four, flanking the bound son&#x27;s promised twelve princes across the walls), spends TEN name-hapaxes, and rests an etnachta on RIVQAH: the next matriarch minted as news, eight verses after the knife</td></tr>
+</table>
+<h2>Oral notes (named, tiered, dual-track — never merged)</h2>
+<div class="note"><span class="badge tier-o">observation</span> <b>Bereshit Rabbah 55-57 (the span); Rashi at 22:2 (the four-step address; ha-moriyah), 22:5 (ve-nashuvah), 22:12 (atah yadati), 22:14 (YHWH-yireh), 22:19 (where is Isaac?); Bavli Rosh Hashanah 16a (the shofar as this ram&#x27;s horn); Taanit 4a; Sanhedrin 89b (the frame-clause&#x27;s &#x27;after WHOSE words&#x27;); Pirqei de-R. Eliezer 31; the Zikhronot liturgy (the Aqedah remembered) — gen_38 Tier-A queue</b><br><span class="he">וַיַּעֲקֹד אֶת־יִצְחָק בְּנוֹ</span> · <i>(queue — named only)</i> · The chain&#x27;s files on this span: whose words the frame-clause follows, the ten trials&#x27; crown, the plural return, the ram waiting since twilight of the sixth day, the horn that became the shofar, the mountain that became the House, and the question the return-verse leaves open. ALL NAMED ONLY — ein adam dan me-atzmo (&#x27;one may not derive on his own&#x27;).
+</div>
+<div class="note"><span class="badge tier-o">observation</span> <b>Targum Onkelos Genesis 22 (Sefaria, fetched 2026-08-05)</b><br><span class="he">וּפְלַח וְצַלִּי אַבְרָהָם תַּמָּן … בְּמֵימְרִי קַיֵּמִית</span> · <i>u-felach ve-tzali avraham tamman … be-memri qayemit</i> · Buffer-record summary for the frozen ledger: THE 22:14 WORSHIP-RECOMPOSITION (the era&#x27;s boldest — the naming-verse dissolved into &#x27;Abraham worshipped and PRAYED there... here shall the generations worship... on this mountain Abraham worshipped before the LORD&#x27;; NO name given — the delta on this unit&#x27;s NAME op; the tzali prayer-family&#x27;s third consecutive unit); THE MEMRA-OATH PAIR (be-memri qayemit &#x27;by My Word I have sworn&#x27; / qabelta le-memri &#x27;you accepted My Word&#x27; — frozen gen_37&#x27;s qayem-weld and qabel-family crossing into the divine mouth); THE CHALAF-WELD (the ram chalaf beno, the blessing chalaf di asita — substitute and recompense in one exchange-word: the buffer&#x27;s comment on the crown fork); lead-for-take ON ISAAC (devar); moriah -&gt; ara pulchana (&#x27;land of worship&#x27; — the identification class); the reveal-family with kodam on the provide-verb (22:8) and the news (22:20); shevu -&gt; orikhu (&#x27;wait&#x27; — the buffer performs the other-verb substitution); goy-&gt;am; qirvei (&#x27;cities&#x27;) for the gate; nisa KEPT — the divine testing stands unsoftened. Deltas recorded, never merged.
+</div>
+<h2>Binary trees (ta'amim v3, glue bricks)</h2>
+<h3>Gen.22.1 · parser unique · 13 words</h3>
+<div class="meta"><span class="he">ויהי אחר הדברים האלה והאלהים נסה את־אברהם ויאמר אליו אברהם ויאמר הנני</span> · <i>va-yehi achar ha-devarim ha-ele ve-ha-Elohim nisa et-avraham va-yomer elay-v avraham va-yomer hineni-y</i> · After these things God tested Abraham: Abraham — here am I. [EN-AID]</div>
+<pre>PHRASE (binary 13w) וַ/יְהִ֗י אַחַר֙ הַ/דְּבָרִ֣ים הָ/אֵ֔לֶּה וְ/הָ…
+├── PHRASE (binary 8w) וַ/יְהִ֗י אַחַר֙ הַ/דְּבָרִ֣ים הָ/אֵ֔לֶּה וְ/הָ…
+│   ├── PHRASE (binary 4w) וַ/יְהִ֗י אַחַר֙ הַ/דְּבָרִ֣ים הָ/אֵ֔לֶּה
+│   │   ├── [0] וַ/יְהִ֗י (revia, rank=3)
+│   │   └── PHRASE (binary 3w) אַחַר֙ הַ/דְּבָרִ֣ים הָ/אֵ֔לֶּה
+│   │       ├── [1] אַחַר֙ (pashta, rank=3)
+│   │       └── [2-3] GLUE הַ/דְּבָרִ֣ים הָ/אֵ֔לֶּה (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) וְ/הָ֣/אֱלֹהִ֔ים נִסָּ֖ה אֶת אַבְרָהָ֑ם
+│       ├── [4] וְ/הָ֣/אֱלֹהִ֔ים (zaqef qatan, rank=2)
+│       └── PHRASE (binary 3w) נִסָּ֖ה אֶת אַבְרָהָ֑ם
+│           ├── [5] נִסָּ֖ה (tifcha, rank=2)
+│           └── [6-7] GLUE אֶת אַבְרָהָ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) וַ/יֹּ֣אמֶר אֵלָ֔י/ו אַבְרָהָ֖ם וַ/יֹּ֥אמֶר הִנ…
+    ├── [8-9] GLUE וַ/יֹּ֣אמֶר אֵלָ֔י/ו (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) אַבְרָהָ֖ם וַ/יֹּ֥אמֶר הִנֵּֽנִ/י
+        ├── [10] אַבְרָהָ֖ם (tifcha, rank=2)
+        └── [11-12] GLUE וַ/יֹּ֥אמֶר הִנֵּֽנִ/י (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.22.2 · parser unique · 25 words</h3>
+<div class="meta"><span class="he">ויאמר קח־נא את־בנך את־יחידך אשר־אהבת את־יצחק ולך־לך אל־ארץ המריה והעלהו שם לעלה על אחד ההרים אשר אמר אליך</span> · <i>va-yomer qach-na et-bin-kha et-yechid-kha asher-ahavta et-yitzchaq ve-lekh-le-kha el-eretz ha-moriya ve-haale-hu sham le-ola al achad he-harim asher omar ele-kha</i> · Take your son, your only one, whom you love — go, offer him up. [EN-AID]</div>
+<pre>PHRASE (binary 25w) וַ/יֹּ֡אמֶר קַח נָ֠א אֶת בִּנְ/ךָ֨ אֶת יְחִֽידְ…
+├── PHRASE (binary 16w) וַ/יֹּ֡אמֶר קַח נָ֠א אֶת בִּנְ/ךָ֨ אֶת יְחִֽידְ…
+│   ├── PHRASE (binary 11w) וַ/יֹּ֡אמֶר קַח נָ֠א אֶת בִּנְ/ךָ֨ אֶת יְחִֽידְ…
+│   │   ├── PHRASE (binary 9w) וַ/יֹּ֡אמֶר קַח נָ֠א אֶת בִּנְ/ךָ֨ אֶת יְחִֽידְ…
+│   │   │   ├── [0] וַ/יֹּ֡אמֶר (pazer, rank=4)
+│   │   │   └── PHRASE (binary 8w) קַח נָ֠א אֶת בִּנְ/ךָ֨ אֶת יְחִֽידְ/ךָ֤ אֲשֶׁר …
+│   │   │       ├── [1-2] GLUE קַח נָ֠א (telisha gedola, rank=4)
+│   │   │       └── [3-8] GLUE אֶת בִּנְ/ךָ֨ אֶת יְחִֽידְ/ךָ֤ אֲשֶׁר אָהַ֨בְתָּ֙ (pashta, rank=3)
+│   │   └── [9-10] GLUE אֶת יִצְחָ֔ק (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) וְ/לֶךְ לְ/ךָ֔ אֶל אֶ֖רֶץ הַ/מֹּרִיָּ֑ה
+│       ├── [11-12] GLUE וְ/לֶךְ לְ/ךָ֔ (zaqef qatan, rank=2)
+│       └── PHRASE (binary 3w) אֶל אֶ֖רֶץ הַ/מֹּרִיָּ֑ה
+│           ├── [13-14] GLUE אֶל אֶ֖רֶץ (tifcha, rank=2)
+│           └── [15] הַ/מֹּרִיָּ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 9w) וְ/הַעֲלֵ֤/הוּ שָׁם֙ לְ/עֹלָ֔ה עַ֚ל אַחַ֣ד הֶֽ/…
+    ├── PHRASE (binary 3w) וְ/הַעֲלֵ֤/הוּ שָׁם֙ לְ/עֹלָ֔ה
+    │   ├── [16-17] GLUE וְ/הַעֲלֵ֤/הוּ שָׁם֙ (pashta, rank=3)
+    │   └── [18] לְ/עֹלָ֔ה (zaqef qatan, rank=2)
+    └── PHRASE (binary 6w) עַ֚ל אַחַ֣ד הֶֽ/הָרִ֔ים אֲשֶׁ֖ר אֹמַ֥ר אֵלֶֽי/ךָ
+        ├── PHRASE (binary 3w) עַ֚ל אַחַ֣ד הֶֽ/הָרִ֔ים
+        │   ├── [19] עַ֚ל (yetiv, rank=3)
+        │   └── [20-21] GLUE אַחַ֣ד הֶֽ/הָרִ֔ים (zaqef qatan, rank=2)
+        └── PHRASE (binary 3w) אֲשֶׁ֖ר אֹמַ֥ר אֵלֶֽי/ךָ
+            ├── [22] אֲשֶׁ֖ר (tifcha, rank=2)
+            └── [23-24] GLUE אֹמַ֥ר אֵלֶֽי/ךָ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.22.3 · parser unique · 25 words</h3>
+<div class="meta"><span class="he">וישכם אברהם בבקר ויחבש את־חמרו ויקח את־שני נעריו אתו ואת יצחק בנו ויבקע עצי עלה ויקם וילך אל־המקום אשר־אמר־לו האלהים</span> · <i>va-yashkem avraham ba-boqer va-yachavosh et-chamor-o va-yiqach et-shene nearay-v et-o ve-et yitzchaq ben-o va-yevaqa atze ola va-yaqam va-yelekh el-ha-maqom asher-amar-l-o ha-Elohim</i> · Rose early, saddled, took the lads and Isaac, split wood, went. [EN-AID]</div>
+<pre>PHRASE (binary 25w) וַ/יַּשְׁכֵּ֨ם אַבְרָהָ֜ם בַּ/בֹּ֗קֶר וַֽ/יַּחֲ…
+├── PHRASE (binary 14w) וַ/יַּשְׁכֵּ֨ם אַבְרָהָ֜ם בַּ/בֹּ֗קֶר וַֽ/יַּחֲ…
+│   ├── PHRASE (binary 6w) וַ/יַּשְׁכֵּ֨ם אַבְרָהָ֜ם בַּ/בֹּ֗קֶר וַֽ/יַּחֲ…
+│   │   ├── PHRASE (binary 3w) וַ/יַּשְׁכֵּ֨ם אַבְרָהָ֜ם בַּ/בֹּ֗קֶר
+│   │   │   ├── [0-1] GLUE וַ/יַּשְׁכֵּ֨ם אַבְרָהָ֜ם (geresh, rank=4)
+│   │   │   └── [2] בַּ/בֹּ֗קֶר (revia, rank=3)
+│   │   └── PHRASE (binary 3w) וַֽ/יַּחֲבֹשׁ֙ אֶת חֲמֹר֔/וֹ
+│   │       ├── [3] וַֽ/יַּחֲבֹשׁ֙ (pashta, rank=3)
+│   │       └── [4-5] GLUE אֶת חֲמֹר֔/וֹ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 8w) וַ/יִּקַּ֞ח אֶת שְׁנֵ֤י נְעָרָי/ו֙ אִתּ֔/וֹ וְ/…
+│       ├── PHRASE (binary 5w) וַ/יִּקַּ֞ח אֶת שְׁנֵ֤י נְעָרָי/ו֙ אִתּ֔/וֹ
+│       │   ├── PHRASE (binary 4w) וַ/יִּקַּ֞ח אֶת שְׁנֵ֤י נְעָרָי/ו֙
+│       │   │   ├── [6] וַ/יִּקַּ֞ח (gershayim, rank=4)
+│       │   │   └── [7-9] GLUE אֶת שְׁנֵ֤י נְעָרָי/ו֙ (pashta, rank=3)
+│       │   └── [10] אִתּ֔/וֹ (zaqef qatan, rank=2)
+│       └── PHRASE (binary 3w) וְ/אֵ֖ת יִצְחָ֣ק בְּנ֑/וֹ
+│           ├── [11] וְ/אֵ֖ת (tifcha, rank=2)
+│           └── [12-13] GLUE יִצְחָ֣ק בְּנ֑/וֹ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 11w) וַ/יְבַקַּע֙ עֲצֵ֣י עֹלָ֔ה וַ/יָּ֣קָם וַ/יֵּ֔לֶ…
+    ├── PHRASE (binary 3w) וַ/יְבַקַּע֙ עֲצֵ֣י עֹלָ֔ה
+    │   ├── [14] וַ/יְבַקַּע֙ (pashta, rank=3)
+    │   └── [15-16] GLUE עֲצֵ֣י עֹלָ֔ה (zaqef qatan, rank=2)
+    └── PHRASE (binary 8w) וַ/יָּ֣קָם וַ/יֵּ֔לֶךְ אֶל הַ/מָּק֖וֹם אֲשֶׁר א…
+        ├── [17-18] GLUE וַ/יָּ֣קָם וַ/יֵּ֔לֶךְ (zaqef qatan, rank=2)
+        └── PHRASE (binary 6w) אֶל הַ/מָּק֖וֹם אֲשֶׁר אָֽמַר ל֥/וֹ הָ/אֱלֹהִֽים
+            ├── [19-20] GLUE אֶל הַ/מָּק֖וֹם (tifcha, rank=2)
+            └── [21-24] GLUE אֲשֶׁר אָֽמַר ל֥/וֹ הָ/אֱלֹהִֽים (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.22.4 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">ביום השלישי וישא אברהם את־עיניו וירא את־המקום מרחק</span> · <i>ba-yom ha-shelishi va-yisa avraham et-enay-v va-yar et-ha-maqom me-rachoq</i> · On the third day he saw the place afar off. [EN-AID]</div>
+<pre>PHRASE (binary 10w) בַּ/יּ֣וֹם הַ/שְּׁלִישִׁ֗י וַ/יִּשָּׂ֨א אַבְרָה…
+├── PHRASE (binary 9w) בַּ/יּ֣וֹם הַ/שְּׁלִישִׁ֗י וַ/יִּשָּׂ֨א אַבְרָה…
+│   ├── [0-1] GLUE בַּ/יּ֣וֹם הַ/שְּׁלִישִׁ֗י (revia, rank=3)
+│   └── PHRASE (binary 7w) וַ/יִּשָּׂ֨א אַבְרָהָ֧ם אֶת עֵינָ֛י/ו וַ/יַּ֥רְ…
+│       ├── [2-5] GLUE וַ/יִּשָּׂ֨א אַבְרָהָ֧ם אֶת עֵינָ֛י/ו (tevir, rank=3)
+│       └── [6-8] GLUE וַ/יַּ֥רְא אֶת הַ/מָּק֖וֹם (tifcha, rank=2)
+└── [9] מֵ/רָחֹֽק (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.22.5 · parser unique · 17 words</h3>
+<div class="meta"><span class="he">ויאמר אברהם אל־נעריו שבו־לכם פה עם־החמור ואני והנער נלכה עד־כה ונשתחוה ונשובה אליכם</span> · <i>va-yomer avraham el-nearay-v shevu-la-khem po im-ha-chamor va-ani ve-ha-naar nelkha ad-ko ve-nishtachave ve-nashuva ale-khem</i> · Sit here with the ass; we will worship and return to you. [EN-AID]</div>
+<pre>PHRASE (binary 17w) וַ/יֹּ֨אמֶר אַבְרָהָ֜ם אֶל נְעָרָ֗י/ו שְׁבוּ לָ…
+├── PHRASE (binary 14w) וַ/יֹּ֨אמֶר אַבְרָהָ֜ם אֶל נְעָרָ֗י/ו שְׁבוּ לָ…
+│   ├── PHRASE (binary 9w) וַ/יֹּ֨אמֶר אַבְרָהָ֜ם אֶל נְעָרָ֗י/ו שְׁבוּ לָ…
+│   │   ├── PHRASE (binary 4w) וַ/יֹּ֨אמֶר אַבְרָהָ֜ם אֶל נְעָרָ֗י/ו
+│   │   │   ├── [0-1] GLUE וַ/יֹּ֨אמֶר אַבְרָהָ֜ם (geresh, rank=4)
+│   │   │   └── [2-3] GLUE אֶל נְעָרָ֗י/ו (revia, rank=3)
+│   │   └── PHRASE (binary 5w) שְׁבוּ לָ/כֶ֥ם פֹּה֙ עִֽם הַ/חֲמ֔וֹר
+│   │       ├── [4-6] GLUE שְׁבוּ לָ/כֶ֥ם פֹּה֙ (pashta, rank=3)
+│   │       └── [7-8] GLUE עִֽם הַ/חֲמ֔וֹר (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) וַ/אֲנִ֣י וְ/הַ/נַּ֔עַר נֵלְכָ֖ה עַד כֹּ֑ה
+│       ├── [9-10] GLUE וַ/אֲנִ֣י וְ/הַ/נַּ֔עַר (zaqef qatan, rank=2)
+│       └── PHRASE (binary 3w) נֵלְכָ֖ה עַד כֹּ֑ה
+│           ├── [11] נֵלְכָ֖ה (tifcha, rank=2)
+│           └── [12-13] GLUE עַד כֹּ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וְ/נִֽשְׁתַּחֲוֶ֖ה וְ/נָשׁ֥וּבָה אֲלֵי/כֶֽם
+    ├── [14] וְ/נִֽשְׁתַּחֲוֶ֖ה (tifcha, rank=2)
+    └── [15-16] GLUE וְ/נָשׁ֥וּבָה אֲלֵי/כֶֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.22.6 · parser unique · 18 words</h3>
+<div class="meta"><span class="he">ויקח אברהם את־עצי העלה וישם על־יצחק בנו ויקח בידו את־האש ואת־המאכלת וילכו שניהם יחדו</span> · <i>va-yiqach avraham et-atze ha-ola va-yasem al-yitzchaq ben-o va-yiqach be-yad-o et-ha-esh ve-et-ha-maakhelet va-yelkhu shene-hem yachdav</i> · Wood on Isaac; fire and knife in hand — the two walked together. [EN-AID]</div>
+<pre>PHRASE (binary 18w) וַ/יִּקַּ֨ח אַבְרָהָ֜ם אֶת עֲצֵ֣י הָ/עֹלָ֗ה וַ/…
+├── PHRASE (binary 15w) וַ/יִּקַּ֨ח אַבְרָהָ֜ם אֶת עֲצֵ֣י הָ/עֹלָ֗ה וַ/…
+│   ├── PHRASE (binary 9w) וַ/יִּקַּ֨ח אַבְרָהָ֜ם אֶת עֲצֵ֣י הָ/עֹלָ֗ה וַ/…
+│   │   ├── PHRASE (binary 5w) וַ/יִּקַּ֨ח אַבְרָהָ֜ם אֶת עֲצֵ֣י הָ/עֹלָ֗ה
+│   │   │   ├── [0-1] GLUE וַ/יִּקַּ֨ח אַבְרָהָ֜ם (geresh, rank=4)
+│   │   │   └── [2-4] GLUE אֶת עֲצֵ֣י הָ/עֹלָ֗ה (revia, rank=3)
+│   │   └── PHRASE (binary 4w) וַ/יָּ֨שֶׂם֙ עַל יִצְחָ֣ק בְּנ֔/וֹ
+│   │       ├── [5] וַ/יָּ֨שֶׂם֙ (pashta, rank=3)
+│   │       └── [6-8] GLUE עַל יִצְחָ֣ק בְּנ֔/וֹ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 6w) וַ/יִּקַּ֣ח בְּ/יָד֔/וֹ אֶת הָ/אֵ֖שׁ וְ/אֶת הַֽ…
+│       ├── [9-10] GLUE וַ/יִּקַּ֣ח בְּ/יָד֔/וֹ (zaqef qatan, rank=2)
+│       └── PHRASE (binary 4w) אֶת הָ/אֵ֖שׁ וְ/אֶת הַֽ/מַּאֲכֶ֑לֶת
+│           ├── [11-12] GLUE אֶת הָ/אֵ֖שׁ (tifcha, rank=2)
+│           └── [13-14] GLUE וְ/אֶת הַֽ/מַּאֲכֶ֑לֶת (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וַ/יֵּלְכ֥וּ שְׁנֵי/הֶ֖ם יַחְדָּֽו
+    ├── [15-16] GLUE וַ/יֵּלְכ֥וּ שְׁנֵי/הֶ֖ם (tifcha, rank=2)
+    └── [17] יַחְדָּֽו (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.22.7 · parser unique · 17 words</h3>
+<div class="meta"><span class="he">ויאמר יצחק אל־אברהם אביו ויאמר אבי ויאמר הנני בני ויאמר הנה האש והעצים ואיה השה לעלה</span> · <i>va-yomer yitzchaq el-avraham avi-v va-yomer avi-y va-yomer hineni-y veni-y va-yomer hine ha-esh ve-ha-etzim ve-aye ha-se le-ola</i> · My father — here am I, my son. Where is the lamb? [EN-AID]</div>
+<pre>PHRASE (binary 17w) וַ/יֹּ֨אמֶר יִצְחָ֜ק אֶל אַבְרָהָ֤ם אָבִי/ו֙ וַ…
+├── PHRASE (binary 10w) וַ/יֹּ֨אמֶר יִצְחָ֜ק אֶל אַבְרָהָ֤ם אָבִי/ו֙ וַ…
+│   ├── PHRASE (binary 7w) וַ/יֹּ֨אמֶר יִצְחָ֜ק אֶל אַבְרָהָ֤ם אָבִי/ו֙ וַ…
+│   │   ├── PHRASE (binary 5w) וַ/יֹּ֨אמֶר יִצְחָ֜ק אֶל אַבְרָהָ֤ם אָבִי/ו֙
+│   │   │   ├── [0-1] GLUE וַ/יֹּ֨אמֶר יִצְחָ֜ק (geresh, rank=4)
+│   │   │   └── [2-4] GLUE אֶל אַבְרָהָ֤ם אָבִי/ו֙ (pashta, rank=3)
+│   │   └── [5-6] GLUE וַ/יֹּ֣אמֶר אָבִ֔/י (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) וַ/יֹּ֖אמֶר הִנֶּ֣נִּֽ/י בְנִ֑/י
+│       ├── [7] וַ/יֹּ֖אמֶר (tifcha, rank=2)
+│       └── [8-9] GLUE הִנֶּ֣נִּֽ/י בְנִ֑/י (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) וַ/יֹּ֗אמֶר הִנֵּ֤ה הָ/אֵשׁ֙ וְ/הָ֣/עֵצִ֔ים וְ/…
+    ├── PHRASE (binary 4w) וַ/יֹּ֗אמֶר הִנֵּ֤ה הָ/אֵשׁ֙ וְ/הָ֣/עֵצִ֔ים
+    │   ├── [10] וַ/יֹּ֗אמֶר (revia, rank=3)
+    │   └── PHRASE (binary 3w) הִנֵּ֤ה הָ/אֵשׁ֙ וְ/הָ֣/עֵצִ֔ים
+    │       ├── [11-12] GLUE הִנֵּ֤ה הָ/אֵשׁ֙ (pashta, rank=3)
+    │       └── [13] וְ/הָ֣/עֵצִ֔ים (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) וְ/אַיֵּ֥ה הַ/שֶּׂ֖ה לְ/עֹלָֽה
+        ├── [14-15] GLUE וְ/אַיֵּ֥ה הַ/שֶּׂ֖ה (tifcha, rank=2)
+        └── [16] לְ/עֹלָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.22.8 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">ויאמר אברהם אלהים יראה־לו השה לעלה בני וילכו שניהם יחדו</span> · <i>va-yomer avraham Elohim yire-l-o ha-se le-ola beni-y va-yelkhu shene-hem yachdav</i> · God will see to the lamb, my son — the two walked together. [EN-AID]</div>
+<pre>PHRASE (binary 11w) וַ/יֹּ֨אמֶר֙ אַבְרָהָ֔ם אֱלֹהִ֞ים יִרְאֶה לּ֥/ו…
+├── PHRASE (binary 8w) וַ/יֹּ֨אמֶר֙ אַבְרָהָ֔ם אֱלֹהִ֞ים יִרְאֶה לּ֥/ו…
+│   ├── PHRASE (binary 2w) וַ/יֹּ֨אמֶר֙ אַבְרָהָ֔ם
+│   │   ├── [0] וַ/יֹּ֨אמֶר֙ (pashta, rank=3)
+│   │   └── [1] אַבְרָהָ֔ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 6w) אֱלֹהִ֞ים יִרְאֶה לּ֥/וֹ הַ/שֶּׂ֛ה לְ/עֹלָ֖ה בּ…
+│       ├── PHRASE (binary 5w) אֱלֹהִ֞ים יִרְאֶה לּ֥/וֹ הַ/שֶּׂ֛ה לְ/עֹלָ֖ה
+│       │   ├── PHRASE (binary 4w) אֱלֹהִ֞ים יִרְאֶה לּ֥/וֹ הַ/שֶּׂ֛ה
+│       │   │   ├── [2] אֱלֹהִ֞ים (gershayim, rank=4)
+│       │   │   └── [3-5] GLUE יִרְאֶה לּ֥/וֹ הַ/שֶּׂ֛ה (tevir, rank=3)
+│       │   └── [6] לְ/עֹלָ֖ה (tifcha, rank=2)
+│       └── [7] בְּנִ֑/י (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וַ/יֵּלְכ֥וּ שְׁנֵי/הֶ֖ם יַחְדָּֽו
+    ├── [8-9] GLUE וַ/יֵּלְכ֥וּ שְׁנֵי/הֶ֖ם (tifcha, rank=2)
+    └── [10] יַחְדָּֽו (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.22.9 · parser unique · 25 words</h3>
+<div class="meta"><span class="he">ויבאו אל־המקום אשר אמר־לו האלהים ויבן שם אברהם את־המזבח ויערך את־העצים ויעקד את־יצחק בנו וישם אתו על־המזבח ממעל לעצים</span> · <i>va-yavou el-ha-maqom asher amar-l-o ha-Elohim va-yiven sham avraham et-ha-mizbecha va-yaarokh et-ha-etzim va-yaaqod et-yitzchaq ben-o va-yasem et-o al-ha-mizbecha mi-maal la-etzim</i> · He built the altar, bound Isaac, set him on the wood. [EN-AID]</div>
+<pre>PHRASE (binary 25w) וַ/יָּבֹ֗אוּ אֶֽל הַ/מָּקוֹם֮ אֲשֶׁ֣ר אָֽמַר ל֣…
+├── PHRASE (binary 15w) וַ/יָּבֹ֗אוּ אֶֽל הַ/מָּקוֹם֮ אֲשֶׁ֣ר אָֽמַר ל֣…
+│   ├── PHRASE (binary 7w) וַ/יָּבֹ֗אוּ אֶֽל הַ/מָּקוֹם֮ אֲשֶׁ֣ר אָֽמַר ל֣…
+│   │   ├── [0] וַ/יָּבֹ֗אוּ (revia, rank=3)
+│   │   └── PHRASE (binary 6w) אֶֽל הַ/מָּקוֹם֮ אֲשֶׁ֣ר אָֽמַר ל֣/וֹ הָ/אֱלֹהִ…
+│   │       ├── [1-2] GLUE אֶֽל הַ/מָּקוֹם֮ (zinor (poetic cousin; rare in prose), rank=3)
+│   │       └── [3-6] GLUE אֲשֶׁ֣ר אָֽמַר ל֣/וֹ הָ/אֱלֹהִים֒ (segol, rank=2)
+│   └── PHRASE (binary 8w) וַ/יִּ֨בֶן שָׁ֤ם אַבְרָהָם֙ אֶת הַ/מִּזְבֵּ֔חַ …
+│       ├── PHRASE (binary 5w) וַ/יִּ֨בֶן שָׁ֤ם אַבְרָהָם֙ אֶת הַ/מִּזְבֵּ֔חַ
+│       │   ├── [7-9] GLUE וַ/יִּ֨בֶן שָׁ֤ם אַבְרָהָם֙ (pashta, rank=3)
+│       │   └── [10-11] GLUE אֶת הַ/מִּזְבֵּ֔חַ (zaqef qatan, rank=2)
+│       └── PHRASE (binary 3w) וַֽ/יַּעֲרֹ֖ךְ אֶת הָ/עֵצִ֑ים
+│           ├── [12] וַֽ/יַּעֲרֹ֖ךְ (tifcha, rank=2)
+│           └── [13-14] GLUE אֶת הָ/עֵצִ֑ים (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 10w) וַֽ/יַּעֲקֹד֙ אֶת יִצְחָ֣ק בְּנ֔/וֹ וַ/יָּ֤שֶׂם…
+    ├── PHRASE (binary 4w) וַֽ/יַּעֲקֹד֙ אֶת יִצְחָ֣ק בְּנ֔/וֹ
+    │   ├── [15] וַֽ/יַּעֲקֹד֙ (pashta, rank=3)
+    │   └── [16-18] GLUE אֶת יִצְחָ֣ק בְּנ֔/וֹ (zaqef qatan, rank=2)
+    └── PHRASE (binary 6w) וַ/יָּ֤שֶׂם אֹת/וֹ֙ עַל הַ/מִּזְבֵּ֔חַ מִ/מַּ֖ע…
+        ├── PHRASE (binary 4w) וַ/יָּ֤שֶׂם אֹת/וֹ֙ עַל הַ/מִּזְבֵּ֔חַ
+        │   ├── [19-20] GLUE וַ/יָּ֤שֶׂם אֹת/וֹ֙ (pashta, rank=3)
+        │   └── [21-22] GLUE עַל הַ/מִּזְבֵּ֔חַ (zaqef qatan, rank=2)
+        └── PHRASE (binary 2w) מִ/מַּ֖עַל לָ/עֵצִֽים
+            ├── [23] מִ/מַּ֖עַל (tifcha, rank=2)
+            └── [24] לָ/עֵצִֽים (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.22.10 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">וישלח אברהם את־ידו ויקח את־המאכלת לשחט את־בנו</span> · <i>va-yishlach avraham et-yad-o va-yiqach et-ha-maakhelet li-shechot et-ben-o</i> · He sent his hand and took the knife to slay his son. [EN-AID]</div>
+<pre>PHRASE (binary 10w) וַ/יִּשְׁלַ֤ח אַבְרָהָם֙ אֶת יָד֔/וֹ וַ/יִּקַּ֖…
+├── PHRASE (binary 7w) וַ/יִּשְׁלַ֤ח אַבְרָהָם֙ אֶת יָד֔/וֹ וַ/יִּקַּ֖…
+│   ├── PHRASE (binary 4w) וַ/יִּשְׁלַ֤ח אַבְרָהָם֙ אֶת יָד֔/וֹ
+│   │   ├── [0-1] GLUE וַ/יִּשְׁלַ֤ח אַבְרָהָם֙ (pashta, rank=3)
+│   │   └── [2-3] GLUE אֶת יָד֔/וֹ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) וַ/יִּקַּ֖ח אֶת הַֽ/מַּאֲכֶ֑לֶת
+│       ├── [4] וַ/יִּקַּ֖ח (tifcha, rank=2)
+│       └── [5-6] GLUE אֶת הַֽ/מַּאֲכֶ֑לֶת (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) לִ/שְׁחֹ֖ט אֶת בְּנֽ/וֹ
+    ├── [7] לִ/שְׁחֹ֖ט (tifcha, rank=2)
+    └── [8-9] GLUE אֶת בְּנֽ/וֹ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.22.11 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">ויקרא אליו מלאך יהוה מן־השמים ויאמר אברהם אברהם ויאמר הנני</span> · <i>va-yiqra elay-v malakh YHWH min-ha-shamayim va-yomer avraham avraham va-yomer hineni-y</i> · The angel called from heaven: Abraham, Abraham — here am I. [EN-AID]</div>
+<pre>PHRASE (binary 11w) וַ/יִּקְרָ֨א אֵלָ֜י/ו מַלְאַ֤ךְ יְהוָה֙ מִן הַ/…
+├── PHRASE (binary 9w) וַ/יִּקְרָ֨א אֵלָ֜י/ו מַלְאַ֤ךְ יְהוָה֙ מִן הַ/…
+│   ├── PHRASE (binary 6w) וַ/יִּקְרָ֨א אֵלָ֜י/ו מַלְאַ֤ךְ יְהוָה֙ מִן הַ/…
+│   │   ├── PHRASE (binary 4w) וַ/יִּקְרָ֨א אֵלָ֜י/ו מַלְאַ֤ךְ יְהוָה֙
+│   │   │   ├── [0-1] GLUE וַ/יִּקְרָ֨א אֵלָ֜י/ו (geresh, rank=4)
+│   │   │   └── [2-3] GLUE מַלְאַ֤ךְ יְהוָה֙ (pashta, rank=3)
+│   │   └── [4-5] GLUE מִן הַ/שָּׁמַ֔יִם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) וַ/יֹּ֖אמֶר אַבְרָהָ֣ם אַבְרָהָ֑ם
+│       ├── [6] וַ/יֹּ֖אמֶר (tifcha, rank=2)
+│       └── [7-8] GLUE אַבְרָהָ֣ם אַבְרָהָ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 2w) וַ/יֹּ֖אמֶר הִנֵּֽנִ/י
+    ├── [9] וַ/יֹּ֖אמֶר (tifcha, rank=2)
+    └── [10] הִנֵּֽנִ/י (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.22.12 · parser unique · 24 words</h3>
+<div class="meta"><span class="he">ויאמר אל־תשלח ידך אל־הנער ואל־תעש לו מאומה כי עתה ידעתי כי־ירא אלהים אתה ולא חשכת את־בנך את־יחידך ממני</span> · <i>va-yomer el-tishlach yad-kha el-ha-naar ve-el-taas l-o meuma ki ata yadati ki-yere Elohim ata ve-lo chasakhta et-bin-kha et-yechid-kha mime-ni</i> · Lay not your hand on the lad — now I know you fear God. [EN-AID]</div>
+<pre>PHRASE (binary 24w) וַ/יֹּ֗אמֶר אַל תִּשְׁלַ֤ח יָֽדְ/ךָ֙ אֶל הַ/נַּ…
+├── PHRASE (binary 10w) וַ/יֹּ֗אמֶר אַל תִּשְׁלַ֤ח יָֽדְ/ךָ֙ אֶל הַ/נַּ…
+│   ├── PHRASE (binary 6w) וַ/יֹּ֗אמֶר אַל תִּשְׁלַ֤ח יָֽדְ/ךָ֙ אֶל הַ/נַּ…
+│   │   ├── [0] וַ/יֹּ֗אמֶר (revia, rank=3)
+│   │   └── PHRASE (binary 5w) אַל תִּשְׁלַ֤ח יָֽדְ/ךָ֙ אֶל הַ/נַּ֔עַר
+│   │       ├── [1-3] GLUE אַל תִּשְׁלַ֤ח יָֽדְ/ךָ֙ (pashta, rank=3)
+│   │       └── [4-5] GLUE אֶל הַ/נַּ֔עַר (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) וְ/אַל תַּ֥עַשׂ ל֖/וֹ מְא֑וּמָּה
+│       ├── [6-8] GLUE וְ/אַל תַּ֥עַשׂ ל֖/וֹ (tifcha, rank=2)
+│       └── [9] מְא֑וּמָּה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 14w) כִּ֣י עַתָּ֣ה יָדַ֗עְתִּי כִּֽי יְרֵ֤א אֱלֹהִים…
+    ├── PHRASE (binary 7w) כִּ֣י עַתָּ֣ה יָדַ֗עְתִּי כִּֽי יְרֵ֤א אֱלֹהִים…
+    │   ├── [10-12] GLUE כִּ֣י עַתָּ֣ה יָדַ֗עְתִּי (revia, rank=3)
+    │   └── PHRASE (binary 4w) כִּֽי יְרֵ֤א אֱלֹהִים֙ אַ֔תָּה
+    │       ├── [13-15] GLUE כִּֽי יְרֵ֤א אֱלֹהִים֙ (pashta, rank=3)
+    │       └── [16] אַ֔תָּה (zaqef qatan, rank=2)
+    └── PHRASE (binary 7w) וְ/לֹ֥א חָשַׂ֛כְתָּ אֶת בִּנְ/ךָ֥ אֶת יְחִידְ/ך…
+        ├── PHRASE (binary 6w) וְ/לֹ֥א חָשַׂ֛כְתָּ אֶת בִּנְ/ךָ֥ אֶת יְחִידְ/ך…
+        │   ├── [17-18] GLUE וְ/לֹ֥א חָשַׂ֛כְתָּ (tevir, rank=3)
+        │   └── [19-22] GLUE אֶת בִּנְ/ךָ֥ אֶת יְחִידְ/ךָ֖ (tifcha, rank=2)
+        └── [23] מִמֶּֽ/נִּי (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.22.13 · parser unique · 20 words</h3>
+<div class="meta"><span class="he">וישא אברהם את־עיניו וירא והנה־איל אחר נאחז בסבך בקרניו וילך אברהם ויקח את־האיל ויעלהו לעלה תחת בנו</span> · <i>va-yisa avraham et-enay-v va-yar ve-hine-ayil achar neechaz ba-sevakh be-qarnay-v va-yelekh avraham va-yiqach et-ha-ayil va-yaale-hu le-ola tachat ben-o</i> · A ram caught by its horns — offered up in place of his son. [EN-AID]</div>
+<pre>PHRASE (binary 20w) וַ/יִּשָּׂ֨א אַבְרָהָ֜ם אֶת עֵינָ֗י/ו וַ/יַּרְא…
+├── PHRASE (binary 11w) וַ/יִּשָּׂ֨א אַבְרָהָ֜ם אֶת עֵינָ֗י/ו וַ/יַּרְא…
+│   ├── PHRASE (binary 7w) וַ/יִּשָּׂ֨א אַבְרָהָ֜ם אֶת עֵינָ֗י/ו וַ/יַּרְא…
+│   │   ├── PHRASE (binary 4w) וַ/יִּשָּׂ֨א אַבְרָהָ֜ם אֶת עֵינָ֗י/ו
+│   │   │   ├── [0-1] GLUE וַ/יִּשָּׂ֨א אַבְרָהָ֜ם (geresh, rank=4)
+│   │   │   └── [2-3] GLUE אֶת עֵינָ֗י/ו (revia, rank=3)
+│   │   └── PHRASE (binary 3w) וַ/יַּרְא֙ וְ/הִנֵּה אַ֔יִל
+│   │       ├── [4] וַ/יַּרְא֙ (pashta, rank=3)
+│   │       └── [5-6] GLUE וְ/הִנֵּה אַ֔יִל (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) אַחַ֕ר נֶאֱחַ֥ז בַּ/סְּבַ֖ךְ בְּ/קַרְנָ֑י/ו
+│       ├── [7] אַחַ֕ר (zaqef gadol, rank=2)
+│       └── PHRASE (binary 3w) נֶאֱחַ֥ז בַּ/סְּבַ֖ךְ בְּ/קַרְנָ֑י/ו
+│           ├── [8-9] GLUE נֶאֱחַ֥ז בַּ/סְּבַ֖ךְ (tifcha, rank=2)
+│           └── [10] בְּ/קַרְנָ֑י/ו (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 9w) וַ/יֵּ֤לֶךְ אַבְרָהָם֙ וַ/יִּקַּ֣ח אֶת הָ/אַ֔יִ…
+    ├── PHRASE (binary 5w) וַ/יֵּ֤לֶךְ אַבְרָהָם֙ וַ/יִּקַּ֣ח אֶת הָ/אַ֔יִל
+    │   ├── [11-12] GLUE וַ/יֵּ֤לֶךְ אַבְרָהָם֙ (pashta, rank=3)
+    │   └── [13-15] GLUE וַ/יִּקַּ֣ח אֶת הָ/אַ֔יִל (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) וַ/יַּעֲלֵ֥/הוּ לְ/עֹלָ֖ה תַּ֥חַת בְּנֽ/וֹ
+        ├── [16-17] GLUE וַ/יַּעֲלֵ֥/הוּ לְ/עֹלָ֖ה (tifcha, rank=2)
+        └── [18-19] GLUE תַּ֥חַת בְּנֽ/וֹ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.22.14 · parser unique · 13 words</h3>
+<div class="meta"><span class="he">ויקרא אברהם שם־המקום ההוא יהוה יראה אשר יאמר היום בהר יהוה יראה</span> · <i>va-yiqra avraham shem-ha-maqom ha-hu YHWH yire asher yeamer ha-yom be-har YHWH yerae</i> · He called the place YHWH-yireh: on the mount it is seen. [EN-AID]</div>
+<pre>PHRASE (binary 13w) וַ/יִּקְרָ֧א אַבְרָהָ֛ם שֵֽׁם הַ/מָּק֥וֹם הַ/ה֖…
+├── PHRASE (binary 7w) וַ/יִּקְרָ֧א אַבְרָהָ֛ם שֵֽׁם הַ/מָּק֥וֹם הַ/ה֖…
+│   ├── PHRASE (binary 5w) וַ/יִּקְרָ֧א אַבְרָהָ֛ם שֵֽׁם הַ/מָּק֥וֹם הַ/ה֖…
+│   │   ├── [0-1] GLUE וַ/יִּקְרָ֧א אַבְרָהָ֛ם (tevir, rank=3)
+│   │   └── [2-4] GLUE שֵֽׁם הַ/מָּק֥וֹם הַ/ה֖וּא (tifcha, rank=2)
+│   └── [5-6] GLUE יְהוָ֣ה יִרְאֶ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) אֲשֶׁר֙ יֵאָמֵ֣ר הַ/יּ֔וֹם בְּ/הַ֥ר יְהוָ֖ה יֵר…
+    ├── PHRASE (binary 3w) אֲשֶׁר֙ יֵאָמֵ֣ר הַ/יּ֔וֹם
+    │   ├── [7] אֲשֶׁר֙ (pashta, rank=3)
+    │   └── [8-9] GLUE יֵאָמֵ֣ר הַ/יּ֔וֹם (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) בְּ/הַ֥ר יְהוָ֖ה יֵרָאֶֽה
+        ├── [10-11] GLUE בְּ/הַ֥ר יְהוָ֖ה (tifcha, rank=2)
+        └── [12] יֵרָאֶֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.22.15 · parser unique · 8 words</h3>
+<div class="meta"><span class="he">ויקרא מלאך יהוה אל־אברהם שנית מן־השמים</span> · <i>va-yiqra malakh YHWH el-avraham shenit min-ha-shamayim</i> · The angel called a second time from heaven. [EN-AID]</div>
+<pre>PHRASE (binary 8w) וַ/יִּקְרָ֛א מַלְאַ֥ךְ יְהוָ֖ה אֶל אַבְרָהָ֑ם ש…
+├── PHRASE (binary 5w) וַ/יִּקְרָ֛א מַלְאַ֥ךְ יְהוָ֖ה אֶל אַבְרָהָ֑ם
+│   ├── PHRASE (binary 3w) וַ/יִּקְרָ֛א מַלְאַ֥ךְ יְהוָ֖ה
+│   │   ├── [0] וַ/יִּקְרָ֛א (tevir, rank=3)
+│   │   └── [1-2] GLUE מַלְאַ֥ךְ יְהוָ֖ה (tifcha, rank=2)
+│   └── [3-4] GLUE אֶל אַבְרָהָ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) שֵׁנִ֖ית מִן הַ/שָּׁמָֽיִם
+    ├── [5] שֵׁנִ֖ית (tifcha, rank=2)
+    └── [6-7] GLUE מִן הַ/שָּׁמָֽיִם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.22.16 · parser unique · 18 words</h3>
+<div class="meta"><span class="he">ויאמר בי נשבעתי נאם־יהוה כי יען אשר עשית את־הדבר הזה ולא חשכת את־בנך את־יחידך</span> · <i>va-yomer bi-y nishbati neum-YHWH ki yaan asher asita et-ha-davar ha-ze ve-lo chasakhta et-bin-kha et-yechide-kha</i> · By Myself I have sworn — you did not withhold your only son. [EN-AID]</div>
+<pre>PHRASE (binary 18w) וַ/יֹּ֕אמֶר בִּ֥/י נִשְׁבַּ֖עְתִּי נְאֻם יְהוָ֑…
+├── PHRASE (binary 5w) וַ/יֹּ֕אמֶר בִּ֥/י נִשְׁבַּ֖עְתִּי נְאֻם יְהוָ֑ה
+│   ├── [0] וַ/יֹּ֕אמֶר (zaqef gadol, rank=2)
+│   └── PHRASE (binary 4w) בִּ֥/י נִשְׁבַּ֖עְתִּי נְאֻם יְהוָ֑ה
+│       ├── [1-2] GLUE בִּ֥/י נִשְׁבַּ֖עְתִּי (tifcha, rank=2)
+│       └── [3-4] GLUE נְאֻם יְהוָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 13w) כִּ֗י יַ֚עַן אֲשֶׁ֤ר עָשִׂ֨יתָ֙ אֶת הַ/דָּבָ֣ר …
+    ├── PHRASE (binary 7w) כִּ֗י יַ֚עַן אֲשֶׁ֤ר עָשִׂ֨יתָ֙ אֶת הַ/דָּבָ֣ר …
+    │   ├── [5] כִּ֗י (revia, rank=3)
+    │   └── PHRASE (binary 6w) יַ֚עַן אֲשֶׁ֤ר עָשִׂ֨יתָ֙ אֶת הַ/דָּבָ֣ר הַ/זֶּ…
+    │       ├── [6] יַ֚עַן (yetiv, rank=3)
+    │       └── PHRASE (binary 5w) אֲשֶׁ֤ר עָשִׂ֨יתָ֙ אֶת הַ/דָּבָ֣ר הַ/זֶּ֔ה
+    │           ├── [7-8] GLUE אֲשֶׁ֤ר עָשִׂ֨יתָ֙ (pashta, rank=3)
+    │           └── [9-11] GLUE אֶת הַ/דָּבָ֣ר הַ/זֶּ֔ה (zaqef qatan, rank=2)
+    └── PHRASE (binary 6w) וְ/לֹ֥א חָשַׂ֖כְתָּ אֶת בִּנְ/ךָ֥ אֶת יְחִידֶֽ/…
+        ├── [12-13] GLUE וְ/לֹ֥א חָשַׂ֖כְתָּ (tifcha, rank=2)
+        └── [14-17] GLUE אֶת בִּנְ/ךָ֥ אֶת יְחִידֶֽ/ךָ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.22.17 · parser unique · 19 words</h3>
+<div class="meta"><span class="he">כי־ברך אברכך והרבה ארבה את־זרעך ככוכבי השמים וכחול אשר על־שפת הים וירש זרעך את שער איביו</span> · <i>ki-varekh avarekh-kha ve-harba arbe et-zara-kha ke-khokhve ha-shamayim ve-kha-chol asher al-sefat ha-yam ve-yirash zara-kha et shaar oyvay-v</i> · Blessing I will bless — stars and sand; the enemies&#x27; gate. [EN-AID]</div>
+<pre>PHRASE (binary 19w) כִּֽי בָרֵ֣ךְ אֲבָרֶכְ/ךָ֗ וְ/הַרְבָּ֨ה אַרְבֶּ…
+├── PHRASE (binary 14w) כִּֽי בָרֵ֣ךְ אֲבָרֶכְ/ךָ֗ וְ/הַרְבָּ֨ה אַרְבֶּ…
+│   ├── PHRASE (binary 9w) כִּֽי בָרֵ֣ךְ אֲבָרֶכְ/ךָ֗ וְ/הַרְבָּ֨ה אַרְבֶּ…
+│   │   ├── [0-2] GLUE כִּֽי בָרֵ֣ךְ אֲבָרֶכְ/ךָ֗ (revia, rank=3)
+│   │   └── PHRASE (binary 6w) וְ/הַרְבָּ֨ה אַרְבֶּ֤ה אֶֽת זַרְעֲ/ךָ֙ כְּ/כוֹכ…
+│   │       ├── [3-6] GLUE וְ/הַרְבָּ֨ה אַרְבֶּ֤ה אֶֽת זַרְעֲ/ךָ֙ (pashta, rank=3)
+│   │       └── [7-8] GLUE כְּ/כוֹכְבֵ֣י הַ/שָּׁמַ֔יִם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) וְ/כַ/ח֕וֹל אֲשֶׁ֖ר עַל שְׂפַ֣ת הַ/יָּ֑ם
+│       ├── [9] וְ/כַ/ח֕וֹל (zaqef gadol, rank=2)
+│       └── PHRASE (binary 4w) אֲשֶׁ֖ר עַל שְׂפַ֣ת הַ/יָּ֑ם
+│           ├── [10] אֲשֶׁ֖ר (tifcha, rank=2)
+│           └── [11-13] GLUE עַל שְׂפַ֣ת הַ/יָּ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) וְ/יִרַ֣שׁ זַרְעֲ/ךָ֔ אֵ֖ת שַׁ֥עַר אֹיְבָֽי/ו
+    ├── [14-15] GLUE וְ/יִרַ֣שׁ זַרְעֲ/ךָ֔ (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) אֵ֖ת שַׁ֥עַר אֹיְבָֽי/ו
+        ├── [16] אֵ֖ת (tifcha, rank=2)
+        └── [17-18] GLUE שַׁ֥עַר אֹיְבָֽי/ו (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.22.18 · parser unique · 9 words</h3>
+<div class="meta"><span class="he">והתברכו בזרעך כל גויי הארץ עקב אשר שמעת בקלי</span> · <i>ve-hitbarakhu ve-zara-kha kol goye ha-aretz eqev asher shamata be-qoli-y</i> · All nations blessed in your seed — you heard My voice. [EN-AID]</div>
+<pre>PHRASE (binary 9w) וְ/הִתְבָּרֲכ֣וּ בְ/זַרְעֲ/ךָ֔ כֹּ֖ל גּוֹיֵ֣י ה…
+├── PHRASE (binary 5w) וְ/הִתְבָּרֲכ֣וּ בְ/זַרְעֲ/ךָ֔ כֹּ֖ל גּוֹיֵ֣י ה…
+│   ├── [0-1] GLUE וְ/הִתְבָּרֲכ֣וּ בְ/זַרְעֲ/ךָ֔ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) כֹּ֖ל גּוֹיֵ֣י הָ/אָ֑רֶץ
+│       ├── [2] כֹּ֖ל (tifcha, rank=2)
+│       └── [3-4] GLUE גּוֹיֵ֣י הָ/אָ֑רֶץ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) עֵ֕קֶב אֲשֶׁ֥ר שָׁמַ֖עְתָּ בְּ/קֹלִֽ/י
+    ├── [5] עֵ֕קֶב (zaqef gadol, rank=2)
+    └── PHRASE (binary 3w) אֲשֶׁ֥ר שָׁמַ֖עְתָּ בְּ/קֹלִֽ/י
+        ├── [6-7] GLUE אֲשֶׁ֥ר שָׁמַ֖עְתָּ (tifcha, rank=2)
+        └── [8] בְּ/קֹלִֽ/י (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.22.19 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">וישב אברהם אל־נעריו ויקמו וילכו יחדו אל־באר שבע וישב אברהם בבאר שבע</span> · <i>va-yashav avraham el-nearay-v va-yaqumu va-yelkhu yachdav el-beer shava va-yeshev avraham bi-veer shava</i> · They rose and went together; Abraham dwelt at Beer-sheba. [EN-AID]</div>
+<pre>PHRASE (binary 14w) וַ/יָּ֤שָׁב אַבְרָהָם֙ אֶל נְעָרָ֔י/ו וַ/יָּקֻ֛…
+├── PHRASE (binary 10w) וַ/יָּ֤שָׁב אַבְרָהָם֙ אֶל נְעָרָ֔י/ו וַ/יָּקֻ֛…
+│   ├── PHRASE (binary 4w) וַ/יָּ֤שָׁב אַבְרָהָם֙ אֶל נְעָרָ֔י/ו
+│   │   ├── [0-1] GLUE וַ/יָּ֤שָׁב אַבְרָהָם֙ (pashta, rank=3)
+│   │   └── [2-3] GLUE אֶל נְעָרָ֔י/ו (zaqef qatan, rank=2)
+│   └── PHRASE (binary 6w) וַ/יָּקֻ֛מוּ וַ/יֵּלְכ֥וּ יַחְדָּ֖ו אֶל בְּאֵ֣ר…
+│       ├── PHRASE (binary 3w) וַ/יָּקֻ֛מוּ וַ/יֵּלְכ֥וּ יַחְדָּ֖ו
+│       │   ├── [4] וַ/יָּקֻ֛מוּ (tevir, rank=3)
+│       │   └── [5-6] GLUE וַ/יֵּלְכ֥וּ יַחְדָּ֖ו (tifcha, rank=2)
+│       └── [7-9] GLUE אֶל בְּאֵ֣ר שָׁ֑בַע (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וַ/יֵּ֥שֶׁב אַבְרָהָ֖ם בִּ/בְאֵ֥ר שָֽׁבַע
+    ├── [10-11] GLUE וַ/יֵּ֥שֶׁב אַבְרָהָ֖ם (tifcha, rank=2)
+    └── [12-13] GLUE בִּ/בְאֵ֥ר שָֽׁבַע (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.22.20 · parser unique · 15 words</h3>
+<div class="meta"><span class="he">ויהי אחרי הדברים האלה ויגד לאברהם לאמר הנה ילדה מלכה גם־הוא בנים לנחור אחיך</span> · <i>va-yehi achare ha-devarim ha-ele va-yugad le-avraham le-mor hine yalda milka gam-hiv banim le-nachor achi-kha</i> · It was told Abraham: Milcah also has borne sons to Nahor. [EN-AID]</div>
+<pre>PHRASE (binary 15w) וַ/יְהִ֗י אַחֲרֵי֙ הַ/דְּבָרִ֣ים הָ/אֵ֔לֶּה וַ/…
+├── PHRASE (binary 7w) וַ/יְהִ֗י אַחֲרֵי֙ הַ/דְּבָרִ֣ים הָ/אֵ֔לֶּה וַ/…
+│   ├── PHRASE (binary 4w) וַ/יְהִ֗י אַחֲרֵי֙ הַ/דְּבָרִ֣ים הָ/אֵ֔לֶּה
+│   │   ├── [0] וַ/יְהִ֗י (revia, rank=3)
+│   │   └── PHRASE (binary 3w) אַחֲרֵי֙ הַ/דְּבָרִ֣ים הָ/אֵ֔לֶּה
+│   │       ├── [1] אַחֲרֵי֙ (pashta, rank=3)
+│   │       └── [2-3] GLUE הַ/דְּבָרִ֣ים הָ/אֵ֔לֶּה (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) וַ/יֻּגַּ֥ד לְ/אַבְרָהָ֖ם לֵ/אמֹ֑ר
+│       ├── [4-5] GLUE וַ/יֻּגַּ֥ד לְ/אַבְרָהָ֖ם (tifcha, rank=2)
+│       └── [6] לֵ/אמֹ֑ר (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) הִ֠נֵּה יָלְדָ֨ה מִלְכָּ֥ה גַם הִ֛וא בָּנִ֖ים ל…
+    ├── PHRASE (binary 6w) הִ֠נֵּה יָלְדָ֨ה מִלְכָּ֥ה גַם הִ֛וא בָּנִ֖ים
+    │   ├── PHRASE (binary 5w) הִ֠נֵּה יָלְדָ֨ה מִלְכָּ֥ה גַם הִ֛וא
+    │   │   ├── [7] הִ֠נֵּה (telisha gedola, rank=4)
+    │   │   └── [8-11] GLUE יָלְדָ֨ה מִלְכָּ֥ה גַם הִ֛וא (tevir, rank=3)
+    │   └── [12] בָּנִ֖ים (tifcha, rank=2)
+    └── [13-14] GLUE לְ/נָח֥וֹר אָחִֽי/ךָ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.22.21 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">את־עוץ בכרו ואת־בוז אחיו ואת־קמואל אבי ארם</span> · <i>et-utz bekhor-o ve-et-buz achi-v ve-et-qemuel avi aram</i> · Uz the firstborn, Buz, Kemuel father of Aram. [EN-AID]</div>
+<pre>PHRASE (binary 10w) אֶת ע֥וּץ בְּכֹר֖/וֹ וְ/אֶת בּ֣וּז אָחִ֑י/ו וְ/…
+├── PHRASE (binary 6w) אֶת ע֥וּץ בְּכֹר֖/וֹ וְ/אֶת בּ֣וּז אָחִ֑י/ו
+│   ├── [0-2] GLUE אֶת ע֥וּץ בְּכֹר֖/וֹ (tifcha, rank=2)
+│   └── [3-5] GLUE וְ/אֶת בּ֣וּז אָחִ֑י/ו (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וְ/אֶת קְמוּאֵ֖ל אֲבִ֥י אֲרָֽם
+    ├── [6-7] GLUE וְ/אֶת קְמוּאֵ֖ל (tifcha, rank=2)
+    └── [8-9] GLUE אֲבִ֥י אֲרָֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.22.22 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">ואת־כשד ואת־חזו ואת־פלדש ואת־ידלף ואת בתואל</span> · <i>ve-et-kesed ve-et-chazo ve-et-pildash ve-et-yidlaf ve-et betuel</i> · Chesed, Hazo, Pildash, Jidlaph — and Bethuel. [EN-AID]</div>
+<pre>PHRASE (binary 10w) וְ/אֶת כֶּ֣שֶׂד וְ/אֶת חֲז֔וֹ וְ/אֶת פִּלְדָּ֖ש…
+├── PHRASE (binary 8w) וְ/אֶת כֶּ֣שֶׂד וְ/אֶת חֲז֔וֹ וְ/אֶת פִּלְדָּ֖ש…
+│   ├── [0-3] GLUE וְ/אֶת כֶּ֣שֶׂד וְ/אֶת חֲז֔וֹ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) וְ/אֶת פִּלְדָּ֖שׁ וְ/אֶת יִדְלָ֑ף
+│       ├── [4-5] GLUE וְ/אֶת פִּלְדָּ֖שׁ (tifcha, rank=2)
+│       └── [6-7] GLUE וְ/אֶת יִדְלָ֑ף (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 2w) וְ/אֵ֖ת בְּתוּאֵֽל
+    ├── [8] וְ/אֵ֖ת (tifcha, rank=2)
+    └── [9] בְּתוּאֵֽל (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.22.23 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">ובתואל ילד את־רבקה שמנה אלה ילדה מלכה לנחור אחי אברהם</span> · <i>u-vetuel yalad et-rivqa shemona ele yalda milka le-nachor achi avraham</i> · Bethuel begot Rebekah; eight Milcah bore to Nahor. [EN-AID]</div>
+<pre>PHRASE (binary 11w) וּ/בְתוּאֵ֖ל יָלַ֣ד אֶת רִבְקָ֑ה שְׁמֹנָ֥ה אֵ֨ל…
+├── PHRASE (binary 4w) וּ/בְתוּאֵ֖ל יָלַ֣ד אֶת רִבְקָ֑ה
+│   ├── [0] וּ/בְתוּאֵ֖ל (tifcha, rank=2)
+│   └── [1-3] GLUE יָלַ֣ד אֶת רִבְקָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) שְׁמֹנָ֥ה אֵ֨לֶּה֙ יָלְדָ֣ה מִלְכָּ֔ה לְ/נָח֖וֹ…
+    ├── PHRASE (binary 4w) שְׁמֹנָ֥ה אֵ֨לֶּה֙ יָלְדָ֣ה מִלְכָּ֔ה
+    │   ├── [4-5] GLUE שְׁמֹנָ֥ה אֵ֨לֶּה֙ (pashta, rank=3)
+    │   └── [6-7] GLUE יָלְדָ֣ה מִלְכָּ֔ה (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) לְ/נָח֖וֹר אֲחִ֥י אַבְרָהָֽם
+        ├── [8] לְ/נָח֖וֹר (tifcha, rank=2)
+        └── [9-10] GLUE אֲחִ֥י אַבְרָהָֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.22.24 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">ופילגשו ושמה ראומה ותלד גם־הוא את־טבח ואת־גחם ואת־תחש ואת־מעכה</span> · <i>u-filagsh-o u-shema-ה reuma va-teled gam-hiv et-tevach ve-et-gacham ve-et-tachash ve-et-maakha</i> · His concubine Reumah also bore four. [EN-AID]</div>
+<pre>PHRASE (binary 14w) וּ/פִֽילַגְשׁ֖/וֹ וּ/שְׁמָ֣/הּ רְאוּמָ֑ה וַ/תֵּ…
+├── PHRASE (binary 3w) וּ/פִֽילַגְשׁ֖/וֹ וּ/שְׁמָ֣/הּ רְאוּמָ֑ה
+│   ├── [0] וּ/פִֽילַגְשׁ֖/וֹ (tifcha, rank=2)
+│   └── [1-2] GLUE וּ/שְׁמָ֣/הּ רְאוּמָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 11w) וַ/תֵּ֤לֶד גַּם הִוא֙ אֶת טֶ֣בַח וְ/אֶת גַּ֔חַם…
+    ├── PHRASE (binary 7w) וַ/תֵּ֤לֶד גַּם הִוא֙ אֶת טֶ֣בַח וְ/אֶת גַּ֔חַם
+    │   ├── [3-5] GLUE וַ/תֵּ֤לֶד גַּם הִוא֙ (pashta, rank=3)
+    │   └── [6-9] GLUE אֶת טֶ֣בַח וְ/אֶת גַּ֔חַם (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) וְ/אֶת תַּ֖חַשׁ וְ/אֶֽת מַעֲכָֽה
+        ├── [10-11] GLUE וְ/אֶת תַּ֖חַשׁ (tifcha, rank=2)
+        └── [12-13] GLUE וְ/אֶֽת מַעֲכָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_38_moriah_binding_oath — The test, the binding, the oath (22:1-24) [frozen]
+
+final state: WORLD=[&#x27;malakh_YHWH&#x27;, &#x27;shnei_nearav&#x27;, &#x27;yitzchaq&#x27;] (+1 presupposed) | REGISTRY={&#x27;ha_maqom&#x27;: &#x27;YHWH_Yireh&#x27;} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[&#x27;named_before_any_presence&#x27;, &#x27;read_before_install&#x27;]
+
+=== S1 — The test into an empty field: after STEP_Gn_22_1
+    וְהָאֱלֹהִים נִסָּה אֶת־אַבְרָהָם … הִנֵּנִי (ve-ha-elohim nisah et-avraham … hineni)
+    PASS  Facts achar-ha-devarim / ve-ha-elohim-nisah / va-yomer-hineni HOLD  (2 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — The crown command: after STEP_Gn_22_2
+    קַח־נָא אֶת־בִּנְךָ אֶת־יְחִידְךָ … וְלֶךְ־לְךָ … וְהַעֲלֵהוּ (qach-na et-binkha et-yechidkha … ve-lekh-lekha … ve-haalehu)
+    PASS  LET(qach_lekh_ve_haalehu(et_binkha, le_olah)) pushed and OPEN  (queue=[&#x27;qach_lekh_ve_haalehu(et_binkha, le_olah)&#x27;])
+    PASS  Facts yechidkha-asher-ahavta / asher-omar-elekha HOLD  (4 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — The dawn obedience — two roots, no pop: after STEP_Gn_22_3
+    וַיַּשְׁכֵּם אַבְרָהָם בַּבֹּקֶר … וַיָּקָם וַיֵּלֶךְ (va-yashkem avraham ba-boqer … va-yaqam va-yelekh)
+    PASS  WORLD += yitzchaq  (entity={&#x27;mode&#x27;: &#x27;created&#x27;, &#x27;by&#x27;: &#x27;narration&#x27;, &#x27;step&#x27;: &#x27;Gen.22.3&#x27;})
+    PASS  WORLD += shnei_nearav  (entity={&#x27;mode&#x27;: &#x27;created&#x27;, &#x27;by&#x27;: &#x27;narration&#x27;, &#x27;step&#x27;: &#x27;Gen.22.3&#x27;})
+    PASS  LET(qach_lekh_ve_haalehu(et_binkha, le_olah)) pushed and OPEN  (queue=[&#x27;qach_lekh_ve_haalehu(et_binkha, le_olah)&#x27;])
+    PASS  Facts va-yashkem-va-yachavosh HOLD.  (5 facts)
+
+=== S4 — The stay-demand and the exclusive we: after STEP_Gn_22_5
+    שְׁבוּ־לָכֶם פֹּה עִם־הַחֲמוֹר … וְנָשׁוּבָה אֲלֵיכֶם (shevu-lakhem po im-ha-chamor … ve-nashuvah aleikhem)
+    PASS  LET(shevu(po_im_ha_chamor)) pushed and OPEN  (queue=[&#x27;qach_lekh_ve_haalehu(et_binkha, le_olah)&#x27;, &#x27;shevu(po_im_ha_chamor)&#x27;])
+    PASS  LET(qach_lekh_ve_haalehu(et_binkha, le_olah)) pushed and OPEN  (queue=[&#x27;qach_lekh_ve_haalehu(et_binkha, le_olah)&#x27;, &#x27;shevu(po_im_ha_chamor)&#x27;])
+    PASS  Facts nelkha-ve-nishtachaveh-ve-nashuvah HOLD.  (7 facts)
+
+=== S5 — The walk and the question: after STEP_Gn_22_8
+    אֱלֹהִים יִרְאֶה־לּוֹ הַשֶּׂה לְעֹלָה בְּנִי (elohim yireh-lo ha-seh le-olah beni)
+    PASS  Facts avi-hineni-veni / ayeh-ha-seh HOLD  (10 facts)
+    PASS  Facts elohim-yireh-lo HOLD  (10 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — The binding and the knife — the queue unmoved: after STEP_Gn_22_10
+    וַיִּקַּח אֶת־הַמַּאֲכֶלֶת לִשְׁחֹט אֶת־בְּנוֹ (va-yiqach et-ha-maakhelet li-shechot et-beno)
+    PASS  LET(qach_lekh_ve_haalehu(et_binkha, le_olah)) pushed and OPEN  (queue=[&#x27;qach_lekh_ve_haalehu(et_binkha, le_olah)&#x27;, &#x27;shevu(po_im_ha_chamor)&#x27;])
+    PASS  LET(shevu(po_im_ha_chamor)) pushed and OPEN  (queue=[&#x27;qach_lekh_ve_haalehu(et_binkha, le_olah)&#x27;, &#x27;shevu(po_im_ha_chamor)&#x27;])
+    PASS  Facts va-yaaqod-va-yasem-al-ha-mizbeach HOLD  (11 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — The doubled call: after STEP_Gn_22_11
+    אַבְרָהָם אַבְרָהָם וַיֹּאמֶר הִנֵּנִי (avraham avraham va-yomer hineni)
+    PASS  WORLD += malakh_YHWH  (entity={&#x27;mode&#x27;: &#x27;created&#x27;, &#x27;by&#x27;: &#x27;narration&#x27;, &#x27;step&#x27;: &#x27;Gen.22.11&#x27;})
+    PASS  Facts avraham-avraham HOLD.  (12 facts)
+
+=== S8 — THE COLLISION — the countermand against the live demand: after STEP_Gn_22_12
+    אַל־תִּשְׁלַח יָדְךָ אֶל־הַנַּעַר … וְלֹא חָשַׂכְתָּ (al-tishlach yadkha el-ha-naar … ve-lo chasakhta)
+    PASS  LET(qach_lekh_ve_haalehu(et_binkha, le_olah)) pushed and OPEN  (queue=[&#x27;qach_lekh_ve_haalehu(et_binkha, le_olah)&#x27;, &#x27;shevu(po_im_ha_chamor)&#x27;, &#x27;tishlach(yadkha_el_ha_naar)&#x27;, &#x27;taas(lo_meumah)&#x27;])
+    PASS  LET-NOT(tishlach(yadkha_el_ha_naar)) pushed and OPEN  (queue=[&#x27;qach_lekh_ve_haalehu(et_binkha, le_olah)&#x27;, &#x27;shevu(po_im_ha_chamor)&#x27;, &#x27;tishlach(yadkha_el_ha_naar)&#x27;, &#x27;taas(lo_meumah)&#x27;])
+    PASS  LET-NOT(taas(lo_meumah)) pushed and OPEN  (queue=[&#x27;qach_lekh_ve_haalehu(et_binkha, le_olah)&#x27;, &#x27;shevu(po_im_ha_chamor)&#x27;, &#x27;tishlach(yadkha_el_ha_naar)&#x27;, &#x27;taas(lo_meumah)&#x27;])
+    PASS  Facts atah-yadati-ki-yere-elohim / lo-chasakhta HOLD.  (14 facts)
+
+=== S9 — The fork&#x27;s verse — the substitute, no pop fired: after STEP_Gn_22_14
+    וַיַּעֲלֵהוּ לְעֹלָה תַּחַת בְּנוֹ … יְהוָה יִרְאֶה (va-yaalehu le-olah tachat beno … YHWH yireh)
+    PASS  LET(qach_lekh_ve_haalehu(et_binkha, le_olah)) pushed and OPEN  (queue=[&#x27;qach_lekh_ve_haalehu(et_binkha, le_olah)&#x27;, &#x27;shevu(po_im_ha_chamor)&#x27;, &#x27;tishlach(yadkha_el_ha_naar)&#x27;, &#x27;taas(lo_meumah)&#x27;])
+    PASS  REGISTRY: ha_maqom-&gt;YHWH_Yireh (1 write)  (names={&#x27;ha_maqom&#x27;: &#x27;YHWH_Yireh&#x27;} writes=1)
+    PASS  Facts ayil-neechaz-ba-sevakh / va-yaalehu-tachat-beno HOLD.  (17 facts)
+
+=== S10 — The oath and the return: after STEP_Gn_22_19
+    בִּי נִשְׁבַּעְתִּי נְאֻם־יְהוָה … וַיֵּשֶׁב אַבְרָהָם בִּבְאֵר שָׁבַע (bi nishbati neum-YHWH … va-yeshev avraham bi-veer shava)
+    PASS  LET(shevu(po_im_ha_chamor)) pushed and OPEN  (queue=[&#x27;qach_lekh_ve_haalehu(et_binkha, le_olah)&#x27;, &#x27;shevu(po_im_ha_chamor)&#x27;, &#x27;tishlach(yadkha_el_ha_naar)&#x27;, &#x27;taas(lo_meumah)&#x27;])
+    PASS  Facts bi-nishbati-neum-YHWH / varekh-avarekhkha / ekev-asher-shamata HOLD  (23 facts)
+    PASS  flags beer_sheva as read-before-install.  (flagged=[&#x27;beer_sheva&#x27;])
+
+=== S11 — The coda and the final ledger: after STEP_Gn_22_20_24
+    וּבְתוּאֵל יָלַד אֶת־רִבְקָה (u-vetuel yalad et-rivqah)
+    PASS  WORLD = {yitzchaq, shnei_nearav, malakh_YHWH}  (created=[&#x27;malakh_YHWH&#x27;, &#x27;shnei_nearav&#x27;, &#x27;yitzchaq&#x27;])
+    PASS  REGISTRY: ha_maqom-&gt;YHWH_Yireh (1 write)  (names={&#x27;ha_maqom&#x27;: &#x27;YHWH_Yireh&#x27;} writes=1)
+    PASS  LET(qach_lekh_ve_haalehu(et_binkha, le_olah)) pushed and OPEN  (queue=[&#x27;qach_lekh_ve_haalehu(et_binkha, le_olah)&#x27;, &#x27;shevu(po_im_ha_chamor)&#x27;, &#x27;tishlach(yadkha_el_ha_naar)&#x27;, &#x27;taas(lo_meumah)&#x27;])
+    PASS  LET(shevu(po_im_ha_chamor)) pushed and OPEN  (queue=[&#x27;qach_lekh_ve_haalehu(et_binkha, le_olah)&#x27;, &#x27;shevu(po_im_ha_chamor)&#x27;, &#x27;tishlach(yadkha_el_ha_naar)&#x27;, &#x27;taas(lo_meumah)&#x27;])
+    PASS  LET-NOT(tishlach(yadkha_el_ha_naar)) pushed and OPEN  (queue=[&#x27;qach_lekh_ve_haalehu(et_binkha, le_olah)&#x27;, &#x27;shevu(po_im_ha_chamor)&#x27;, &#x27;tishlach(yadkha_el_ha_naar)&#x27;, &#x27;taas(lo_meumah)&#x27;])
+    PASS  LET-NOT(taas(lo_meumah)) pushed and OPEN  (queue=[&#x27;qach_lekh_ve_haalehu(et_binkha, le_olah)&#x27;, &#x27;shevu(po_im_ha_chamor)&#x27;, &#x27;tishlach(yadkha_el_ha_naar)&#x27;, &#x27;taas(lo_meumah)&#x27;])
+    PASS  Facts va-yugad-le-avraham / u-vetuel-yalad-et-rivqah HOLD  (26 facts)
+    PASS  LEDGER stays EMPTY (open transaction)  (ledger_days=[])
+    PASS  flags beer_sheva as read-before-install.  (flagged=[&#x27;beer_sheva&#x27;])
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_38_moriah_binding_oath.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_38_moriah_binding_oath — 22:1-24
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_38_moriah_binding_oath.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;The test, the binding, the oath (22:1-24)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_38_moriah_binding_oath&quot;)
+
+# -------------------------- Gen.22.1 · THE_FRAME_AND_THE_TEST --------------
+# וַיְהִי אַחַר הַדְּבָרִים הָאֵלֶּה וְהָאֱלֹהִים נִסָּה אֶת־אַבְרָהָם
+# וַיֹּאמֶר אֵלָיו אַבְרָהָם וַיֹּאמֶר הִנֵּנִי
+# &quot;And it came to pass after these things, that God did prove Abraham, and
+# said unto him: &#x27;Abraham&#x27;; and he said: &#x27;Here am I.&#x27;&quot;
+m.step(&quot;Gen.22.1&quot;)
+# ‹וְהָאֱלֹהִים נִסָּה אֶת־אַבְרָהָם … הִנֵּנִי› (“and-the-God test obj-
+# marker Abraham … behold-me/my”) — fact holds: after-the-word/thing-and-
+# the-God-nisah-obj-marker-Abraham; and-say-behold-I
+m.fact(&quot;achar_ha_devarim_ve_ha_elohim_nisah_et_avraham&quot;,
+       &quot;va_yomer_hineni&quot;)
+
+# -------------------------- Gen.22.2 · THE_CROWN_COMMAND -------------------
+# וַיֹּאמֶר קַח־נָא אֶת־בִּנְךָ אֶת־יְחִידְךָ אֲשֶׁר־אָהַבְתָּ אֶת־יִצְחָק
+# וְלֶךְ־לְךָ אֶל־אֶרֶץ הַמֹּרִיָּה וְהַעֲלֵהוּ שָׁם לְעֹלָה עַל אַחַד
+# הֶהָרִים אֲשֶׁר אֹמַר אֵלֶיךָ
+# &quot;And He said: &#x27;Take now thy son, thine only son, whom thou lovest, even
+# Isaac, and get thee into the land of Moriah; and offer him there for a
+# burnt-offering upon one of the mountains which I will tell thee of.&#x27;&quot;
+m.step(&quot;Gen.22.2&quot;)
+# ‹קַח־נָא … וְלֶךְ־לְךָ … וְהַעֲלֵהוּ שָׁם לְעֹלָה› (“take please … and-go
+# to-you/your … and-go-up-him/its there to-burnt-offering”) — God speaks a
+# demand — LET: take-go-and-haalehu(obj-marker-binkha, to-burnt-offering)
+m.declare(&quot;elohim&quot;, &quot;LET&quot;,
+          &quot;qach_lekh_ve_haalehu(et_binkha, le_olah)&quot;)
+# ‹אֶת־בִּנְךָ אֶת־יְחִידְךָ אֲשֶׁר־אָהַבְתָּ אֶת־יִצְחָק› (“obj-marker son-
+# you/your obj-marker united-you/your which have-affection-for obj-marker
+# Isaac”) — fact holds: obj-marker-binkha-obj-marker-yechidkha-which-have-
+# affection-for-obj-marker-Isaac; to-earth-the-moriyah-which-say-to-you
+m.fact(&quot;et_binkha_et_yechidkha_asher_ahavta_et_yitzchaq&quot;,
+       &quot;el_eretz_ha_moriyah_asher_omar_elekha&quot;)
+
+# -------------------------- Gen.22.3 · THE_DAWN_OBEDIENCE_TWO_ROOTS_RETURN -
+# וַיַּשְׁכֵּם אַבְרָהָם בַּבֹּקֶר וַיַּחֲבֹשׁ אֶת־חֲמֹרוֹ וַיִּקַּח
+# אֶת־שְׁנֵי נְעָרָיו אִתּוֹ וְאֵת יִצְחָק בְּנוֹ וַיְבַקַּע עֲצֵי עֹלָה
+# וַיָּקָם וַיֵּלֶךְ אֶל־הַמָּקוֹם אֲשֶׁר־אָמַר־לוֹ הָאֱלֹהִים
+# &quot;And Abraham rose early in the morning, and saddled his ass, and took two
+# of his young men with him, and Isaac his son; and he cleaved the wood for
+# the burnt-offering, and rose up, and went unto the place of which God had
+# told him.&quot;
+m.step(&quot;Gen.22.3&quot;)
+# ‹וְאֵת יִצְחָק בְּנוֹ› (“and-obj-marker Isaac son-him/its”) — the world
+# gains: Isaac
+m.install(&quot;yitzchaq&quot;)
+# ‹אֶת־שְׁנֵי נְעָרָיו› (“obj-marker two boy-him/its”) — the world gains:
+# shnei-nearav
+m.install(&quot;shnei_nearav&quot;)
+# ‹וַיַּשְׁכֵּם … וַיַּחֲבֹשׁ … וַיִּקַּח … וַיְבַקַּע … וַיָּקָם וַיֵּלֶךְ›
+# (“and-rise-early … and-wrap-firmly … and-take … and-cleave … and-arise
+# and-go”) — event: dawn-journey — agent Abraham
+m.event(&quot;dawn_journey&quot;, agent=&quot;avraham&quot;)
+# ‹וַיַּשְׁכֵּם אַבְרָהָם בַּבֹּקֶר וַיַּחֲבֹשׁ אֶת־חֲמֹרוֹ› (“and-rise-
+# early Abraham in-morning and-wrap-firmly obj-marker male-ass-him/its”) —
+# fact holds: and-rise-early-in-the-morning-and-wrap-firmly-obj-marker-
+# chamoro
+m.fact(&quot;va_yashkem_ba_boqer_va_yachavosh_et_chamoro&quot;)
+
+# -------------------------- Gen.22.4 · THE_THIRD_DAY_SIGHTING --------------
+# בַּיּוֹם הַשְּׁלִישִׁי וַיִּשָּׂא אַבְרָהָם אֶת־עֵינָיו וַיַּרְא
+# אֶת־הַמָּקוֹם מֵרָחֹק
+# &quot;On the third day Abraham lifted up his eyes, and saw the place afar off.&quot;
+m.step(&quot;Gen.22.4&quot;)
+# ‹בַּיּוֹם הַשְּׁלִישִׁי … מֵרָחֹק› (“in-day the-third … from-remote”) —
+# fact holds: in-the-day-the-third-and-see-obj-marker-the-place-from-remote
+m.fact(&quot;ba_yom_ha_shelishi_va_yar_et_ha_maqom_me_rachoq&quot;)
+
+# -------------------------- Gen.22.5 · THE_STAY_DEMAND_AND_THE_EXCLUSIVE_WE -
+# וַיֹּאמֶר אַבְרָהָם אֶל־נְעָרָיו שְׁבוּ־לָכֶם פֹּה עִם־הַחֲמוֹר וַאֲנִי
+# וְהַנַּעַר נֵלְכָה עַד־כֹּה וְנִשְׁתַּחֲוֶה וְנָשׁוּבָה אֲלֵיכֶם
+# &quot;And Abraham said unto his young men: &#x27;Abide ye here with the ass, and I
+# and the lad will go yonder; and we will worship, and come back to you.&#x27;&quot;
+m.step(&quot;Gen.22.5&quot;)
+# ‹שְׁבוּ־לָכֶם פֹּה עִם־הַחֲמוֹר› (“dwell/sit to-you/your(pl) this-place
+# with the-male-ass”) — Abraham speaks a demand — LET: dwell/sit(this-place-
+# with-the-male-ass)
+m.declare(&quot;avraham&quot;, &quot;LET&quot;,
+          &quot;shevu(po_im_ha_chamor)&quot;)
+# ‹נֵלְכָה … וְנִשְׁתַּחֲוֶה וְנָשׁוּבָה אֲלֵיכֶם› (“go … and-afflict and-
+# return to-you/your(pl)”) — fact holds: go-and-nishtachaveh-and-nashuvah-
+# aleikhem
+m.fact(&quot;nelkha_ve_nishtachaveh_ve_nashuvah_aleikhem&quot;)
+
+# -------------------------- Gen.22.6 · THE_LOADED_WALK_TOGETHER ------------
+# וַיִּקַּח אַבְרָהָם אֶת־עֲצֵי הָעֹלָה וַיָּשֶׂם עַל־יִצְחָק בְּנוֹ
+# וַיִּקַּח בְּיָדוֹ אֶת־הָאֵשׁ וְאֶת־הַמַּאֲכֶלֶת וַיֵּלְכוּ שְׁנֵיהֶם
+# יַחְדָּו
+# &quot;And Abraham took the wood of the burnt-offering, and laid it upon Isaac
+# his son; and he took in his hand the fire and the knife; and they went
+# both of them together.&quot;
+m.step(&quot;Gen.22.6&quot;)
+# ‹וַיָּשֶׂם עַל־יִצְחָק בְּנוֹ … וַיֵּלְכוּ שְׁנֵיהֶם יַחְדָּו› (“and-
+# put/set over Isaac son-him/its … and-go two-them/their unit”) — event:
+# load-and-walk — agent Abraham
+m.event(&quot;load_and_walk&quot;, agent=&quot;avraham&quot;)
+
+# -------------------------- Gen.22.7 · THE_WHERE_IS_THE_LAMB ---------------
+# וַיֹּאמֶר יִצְחָק אֶל־אַבְרָהָם אָבִיו וַיֹּאמֶר אָבִי וַיֹּאמֶר הִנֶּנִּי
+# בְנִי וַיֹּאמֶר הִנֵּה הָאֵשׁ וְהָעֵצִים וְאַיֵּה הַשֶּׂה לְעֹלָה
+# &quot;And Isaac spoke unto Abraham his father, and said: &#x27;My father.&#x27; And he
+# said: &#x27;Here am I, my son.&#x27; And he said: &#x27;Behold the fire and the wood; but
+# where is the lamb for a burnt-offering?&#x27;&quot;
+m.step(&quot;Gen.22.7&quot;)
+# ‹אָבִי … הִנֶּנִּי בְנִי … וְאַיֵּה הַשֶּׂה לְעֹלָה› (“father-me/my …
+# behold-me/my son-me/my … and-where? the-member-of-a-flock to-burnt-
+# offering”) — fact holds: father-and-say-behold-I-veni; and-ayeh-the-seh-
+# to-burnt-offering
+m.fact(&quot;avi_va_yomer_hineni_veni&quot;,
+       &quot;ve_ayeh_ha_seh_le_olah&quot;)
+
+# -------------------------- Gen.22.8 · THE_PROVIDE_ANSWER ------------------
+# וַיֹּאמֶר אַבְרָהָם אֱלֹהִים יִרְאֶה־לּוֹ הַשֶּׂה לְעֹלָה בְּנִי
+# וַיֵּלְכוּ שְׁנֵיהֶם יַחְדָּו
+# &quot;And Abraham said: &#x27;God will provide Himself the lamb for a burnt-
+# offering, my son.&#x27; So they went both of them together.&quot;
+m.step(&quot;Gen.22.8&quot;)
+# ‹אֱלֹהִים יִרְאֶה־לּוֹ הַשֶּׂה לְעֹלָה בְּנִי› (“God see to-him/its the-
+# member-of-a-flock to-burnt-offering son-me/my”) — fact holds: God-yireh-
+# not-the-seh-to-burnt-offering-beni
+m.fact(&quot;elohim_yireh_lo_ha_seh_le_olah_beni&quot;)
+
+# -------------------------- Gen.22.9 · THE_BINDING -------------------------
+# וַיָּבֹאוּ אֶל־הַמָּקוֹם אֲשֶׁר אָמַר־לוֹ הָאֱלֹהִים וַיִּבֶן שָׁם
+# אַבְרָהָם אֶת־הַמִּזְבֵּחַ וַיַּעֲרֹךְ אֶת־הָעֵצִים וַיַּעֲקֹד אֶת־יִצְחָק
+# בְּנוֹ וַיָּשֶׂם אֹתוֹ עַל־הַמִּזְבֵּחַ מִמַּעַל לָעֵצִים
+# &quot;And they came to the place which God had told him of; and Abraham built
+# the altar there, and laid the wood in order, and bound Isaac his son, and
+# laid him on the altar, upon the wood.&quot;
+m.step(&quot;Gen.22.9&quot;)
+# ‹וַיַּעֲקֹד אֶת־יִצְחָק בְּנוֹ וַיָּשֶׂם אֹתוֹ עַל־הַמִּזְבֵּחַ› (“and-
+# tie-with-thongs obj-marker Isaac son-him/its and-put/set obj-marker-
+# him/its over the-altar”) — event: bind — agent Abraham; theme Isaac
+m.event(&quot;bind&quot;, agent=&quot;avraham&quot;, themes=[&quot;yitzchaq&quot;])
+# ‹וַיַּעֲקֹד אֶת־יִצְחָק בְּנוֹ וַיָּשֶׂם אֹתוֹ עַל־הַמִּזְבֵּחַ› (“and-
+# tie-with-thongs obj-marker Isaac son-him/its and-put/set obj-marker-
+# him/its over the-altar”) — fact holds: and-tie-with-thongs-obj-marker-
+# Isaac-and-put/set-over-the-altar
+m.fact(&quot;va_yaaqod_et_yitzchaq_va_yasem_al_ha_mizbeach&quot;)
+
+# -------------------------- Gen.22.10 · THE_HAND_AND_THE_KNIFE -------------
+# וַיִּשְׁלַח אַבְרָהָם אֶת־יָדוֹ וַיִּקַּח אֶת־הַמַּאֲכֶלֶת לִשְׁחֹט
+# אֶת־בְּנוֹ
+# &quot;And Abraham stretched forth his hand, and took the knife to slay his
+# son.&quot;
+m.step(&quot;Gen.22.10&quot;)
+# ‹וַיִּשְׁלַח … אֶת־יָדוֹ וַיִּקַּח אֶת־הַמַּאֲכֶלֶת לִשְׁחֹט› (“and-send …
+# obj-marker hand-him/its and-take obj-marker the-something-to-eat-with to-
+# slaughter”) — event: reach-knife — agent Abraham
+m.event(&quot;reach_knife&quot;, agent=&quot;avraham&quot;)
+
+# -------------------------- Gen.22.11 · THE_FIRST_DOUBLED_NAME_CALL --------
+# וַיִּקְרָא אֵלָיו מַלְאַךְ יְהוָה מִן־הַשָּׁמַיִם וַיֹּאמֶר אַבְרָהָם
+# אַבְרָהָם וַיֹּאמֶר הִנֵּנִי
+# &quot;And the angel of the LORD called unto him out of heaven, and said:
+# &#x27;Abraham, Abraham.&#x27; And he said: &#x27;Here am I.&#x27;&quot;
+m.step(&quot;Gen.22.11&quot;)
+# ‹מַלְאַךְ יְהוָה מִן־הַשָּׁמַיִם› (“messenger YHWH from the-heavens”) —
+# the world gains: messenger-the-LORD
+m.install(&quot;malakh_YHWH&quot;)
+# ‹אַבְרָהָם אַבְרָהָם … הִנֵּנִי› (“Abraham Abraham … behold-me/my”) — fact
+# holds: Abraham-Abraham-and-say-behold-I
+m.fact(&quot;avraham_avraham_va_yomer_hineni&quot;)
+
+# -------------------------- Gen.22.12 · THE_COUNTERMAND_AND_THE_CONFERRED_TITLE -
+# וַיֹּאמֶר אַל־תִּשְׁלַח יָדְךָ אֶל־הַנַּעַר וְאַל־תַּעַשׂ לוֹ מְאוּמָה
+# כִּי עַתָּה יָדַעְתִּי כִּי־יְרֵא אֱלֹהִים אַתָּה וְלֹא חָשַׂכְתָּ
+# אֶת־בִּנְךָ אֶת־יְחִידְךָ מִמֶּנִּי
+# &quot;And he said: &#x27;Lay not thy hand upon the lad, neither do thou any thing
+# unto him; for now I know that thou art a God-fearing man, seeing thou hast
+# not withheld thy son, thine only son, from Me.&#x27;&quot;
+m.step(&quot;Gen.22.12&quot;)
+# ‹אַל־תִּשְׁלַח יָדְךָ אֶל־הַנַּעַר› (“do-not send hand-you/your to the-
+# boy”) — messenger-the-LORD speaks a demand — LET-NOT: send(yadkha-to-the-
+# boy)
+m.declare(&quot;malakh_YHWH&quot;, &quot;LET-NOT&quot;,
+          &quot;tishlach(yadkha_el_ha_naar)&quot;)
+# ‹וְאַל־תַּעַשׂ לוֹ מְאוּמָה› (“and-do-not make to-him/its speck”) —
+# messenger-the-LORD speaks a demand — LET-NOT: make(not-meumah)
+m.declare(&quot;malakh_YHWH&quot;, &quot;LET-NOT&quot;,
+          &quot;taas(lo_meumah)&quot;)
+# ‹כִּי עַתָּה יָדַעְתִּי כִּי־יְרֵא אֱלֹהִים אַתָּה וְלֹא חָשַׂכְתָּ›
+# (“that now know that fearing God you and-not restrain”) — fact holds: you-
+# know-that-fearing-God-you; and-not-restrain-obj-marker-binkha-obj-marker-
+# yechidkha
+m.fact(&quot;atah_yadati_ki_yere_elohim_atah&quot;,
+       &quot;ve_lo_chasakhta_et_binkha_et_yechidkha&quot;)
+
+# -------------------------- Gen.22.13 · THE_RAM_AND_THE_CROWN_FORK ---------
+# וַיִּשָּׂא אַבְרָהָם אֶת־עֵינָיו וַיַּרְא וְהִנֵּה־אַיִל אַחַר נֶאֱחַז
+# בַּסְּבַךְ בְּקַרְנָיו וַיֵּלֶךְ אַבְרָהָם וַיִּקַּח אֶת־הָאַיִל
+# וַיַּעֲלֵהוּ לְעֹלָה תַּחַת בְּנוֹ
+# &quot;And Abraham lifted up his eyes, and looked, and behold behind him a ram
+# caught in the thicket by his horns. And Abraham went and took the ram, and
+# offered him up for a burnt-offering in the stead of his son.&quot;
+m.step(&quot;Gen.22.13&quot;)
+# ‹וְהִנֵּה־אַיִל אַחַר נֶאֱחַז בַּסְּבַךְ בְּקַרְנָיו› (“and-behold ram
+# after seize in-copse in-horn-him/its”) — event: see-ram — agent Abraham
+m.event(&quot;see_ram&quot;, agent=&quot;avraham&quot;)
+# ‹וַיֵּלֶךְ אַבְרָהָם וַיִּקַּח אֶת־הָאַיִל וַיַּעֲלֵהוּ לְעֹלָה תַּחַת
+# בְּנוֹ› (“and-go Abraham and-take obj-marker the-ram and-go-up-him/its to-
+# burnt-offering under son-him/its”) — event: offer-substitute — agent
+# Abraham; theme the-ram
+m.event(&quot;offer_substitute&quot;, agent=&quot;avraham&quot;, themes=[&quot;ha_ayil&quot;])
+# ‹אַיִל … נֶאֱחַז בַּסְּבַךְ … וַיַּעֲלֵהוּ לְעֹלָה תַּחַת בְּנוֹ› (“ram …
+# seize in-copse … and-go-up-him/its to-burnt-offering under son-him/its”) —
+# fact holds: ram-seize-in-the-sevakh-in-qarnav; and-yaalehu-to-burnt-
+# offering-under-beno
+m.fact(&quot;ayil_neechaz_ba_sevakh_be_qarnav&quot;,
+       &quot;va_yaalehu_le_olah_tachat_beno&quot;)
+
+# -------------------------- Gen.22.14 · THE_SENTENCE_NAME_AND_THE_SAYING ---
+# וַיִּקְרָא אַבְרָהָם שֵׁם־הַמָּקוֹם הַהוּא יְהוָה יִרְאֶה אֲשֶׁר יֵאָמֵר
+# הַיּוֹם בְּהַר יְהוָה יֵרָאֶה
+# &quot;And Abraham called the name of that place Adonai-jireh; as it is said to
+# this day: &#x27;In the mount where the LORD is seen.&#x27;&quot;
+m.step(&quot;Gen.22.14&quot;)
+# ‹וַיִּקְרָא אַבְרָהָם שֵׁם־הַמָּקוֹם הַהוּא יְהוָה יִרְאֶה› (“and-call
+# Abraham name the-place that YHWH see”) — named: the-place := the-LORD-
+# Yireh
+m.name(&quot;ha_maqom&quot;, &quot;YHWH_Yireh&quot;)
+# ‹אֲשֶׁר יֵאָמֵר הַיּוֹם בְּהַר יְהוָה יֵרָאֶה› (“which say the-day in-
+# mountain YHWH see”) — pattern recorded: which-say-the-day-in-mountain-the-
+# LORD-yeraeh
+m.pattern(&quot;asher_yeamer_ha_yom_be_har_YHWH_yeraeh&quot;)
+
+# -------------------------- Gen.22.15 · THE_SECOND_SKY_CALL ----------------
+# וַיִּקְרָא מַלְאַךְ יְהוָה אֶל־אַבְרָהָם שֵׁנִית מִן־הַשָּׁמָיִם
+# &quot;And the angel of the LORD called unto Abraham a second time out of
+# heaven,&quot;
+m.step(&quot;Gen.22.15&quot;)
+# ‹וַיִּקְרָא … שֵׁנִית מִן־הַשָּׁמָיִם› (“and-call … second from the-
+# heavens”) — event: sky-call — agent messenger-the-LORD
+m.event(&quot;sky_call&quot;, agent=&quot;malakh_YHWH&quot;)
+
+# -------------------------- Gen.22.16 · THE_DIVINE_SELF_OATH ---------------
+# וַיֹּאמֶר בִּי נִשְׁבַּעְתִּי נְאֻם־יְהוָה כִּי יַעַן אֲשֶׁר עָשִׂיתָ
+# אֶת־הַדָּבָר הַזֶּה וְלֹא חָשַׂכְתָּ אֶת־בִּנְךָ אֶת־יְחִידֶךָ
+# &quot;and said: &#x27;By Myself have I sworn, saith the LORD, because thou hast done
+# this thing, and hast not withheld thy son, thine only son,&quot;
+m.step(&quot;Gen.22.16&quot;)
+# ‹בִּי נִשְׁבַּעְתִּי נְאֻם־יְהוָה … יַעַן אֲשֶׁר עָשִׂיתָ› (“in-me/my
+# swear oracle YHWH … heed which make”) — fact holds: bi-swear-oracle-the-
+# LORD; heed-which-make-and-not-restrain
+m.fact(&quot;bi_nishbati_neum_YHWH&quot;,
+       &quot;yaan_asher_asita_ve_lo_chasakhta&quot;)
+
+# -------------------------- Gen.22.17 · THE_DOUBLED_BLESSINGS --------------
+# כִּי־בָרֵךְ אֲבָרֶכְךָ וְהַרְבָּה אַרְבֶּה אֶת־זַרְעֲךָ כְּכוֹכְבֵי
+# הַשָּׁמַיִם וְכַחוֹל אֲשֶׁר עַל־שְׂפַת הַיָּם וְיִרַשׁ זַרְעֲךָ אֵת שַׁעַר
+# אֹיְבָיו
+# &quot;that in blessing I will bless thee, and in multiplying I will multiply
+# thy seed as the stars of the heaven, and as the sand which is upon the
+# seashore; and thy seed shall possess the gate of his enemies;&quot;
+m.step(&quot;Gen.22.17&quot;)
+# ‹בָרֵךְ אֲבָרֶכְךָ וְהַרְבָּה אַרְבֶּה … כְּכוֹכְבֵי … וְכַחוֹל› (“bless
+# bless-you/your and-multiply multiply … like-stars … and-like-sand”) — fact
+# holds: bless-avarekhkha-and-greatly-I-will-multiply; like-khokhvei-and-
+# you/your-chol-and-possess/inherit-gate-oyvav
+m.fact(&quot;varekh_avarekhkha_ve_harbah_arbeh&quot;,
+       &quot;ke_khokhvei_ve_kha_chol_ve_yirash_shaar_oyvav&quot;)
+
+# -------------------------- Gen.22.18 · THE_LISTENED_VOICE_GROUND ----------
+# וְהִתְבָּרְכוּ בְזַרְעֲךָ כֹּל גּוֹיֵי הָאָרֶץ עֵקֶב אֲשֶׁר שָׁמַעְתָּ
+# בְּקֹלִי
+# &quot;and in thy seed shall all the nations of the earth be blessed; because
+# thou hast hearkened to My voice.&#x27;&quot;
+m.step(&quot;Gen.22.18&quot;)
+# ‹וְהִתְבָּרְכוּ … עֵקֶב אֲשֶׁר שָׁמַעְתָּ בְּקֹלִי› (“and-bless … heel
+# which hear in-voice/sound-me/my”) — fact holds: and-bless-and-zarakha-all-
+# goyei-the-earth; ekev-which-hear-in-qoli
+m.fact(&quot;ve_hitbarakhu_ve_zarakha_kol_goyei_ha_aretz&quot;,
+       &quot;ekev_asher_shamata_be_qoli&quot;)
+
+# -------------------------- Gen.22.19 · THE_RETURN_AND_THE_DWELL -----------
+# וַיָּשָׁב אַבְרָהָם אֶל־נְעָרָיו וַיָּקֻמוּ וַיֵּלְכוּ יַחְדָּו אֶל־בְּאֵר
+# שָׁבַע וַיֵּשֶׁב אַבְרָהָם בִּבְאֵר שָׁבַע
+# &quot;So Abraham returned unto his young men, and they rose up and went
+# together to Beer-sheba; and Abraham dwelt at Beer-sheba.&quot;
+m.step(&quot;Gen.22.19&quot;)
+# ‹וַיָּשָׁב … וַיָּקֻמוּ וַיֵּלְכוּ יַחְדָּו … וַיֵּשֶׁב› (“and-return …
+# and-arise and-go unit … and-return”) — event: return-dwell — agent Abraham
+m.event(&quot;return_dwell&quot;, agent=&quot;avraham&quot;)
+# ‹אֶל־בְּאֵר שָׁבַע … בִּבְאֵר שָׁבַע› (“to Beer-shebah … in Beer-shebah”)
+# — reads without prior install (flag, not fix): beer-seven
+m.presupposed(&quot;beer_sheva&quot;)
+
+# -------------------------- Gen.22.20-24 · THE_CODA_REPORT_THE_BRIDE_MINTED -
+# וַיְהִי אַחֲרֵי הַדְּבָרִים הָאֵלֶּה וַיֻּגַּד לְאַבְרָהָם לֵאמֹר הִנֵּה
+# יָלְדָה מִלְכָּה גַם־הִוא בָּנִים לְנָחוֹר אָחִיךָ … וּבְתוּאֵל יָלַד
+# אֶת־רִבְקָה … וּפִילַגְשׁוֹ וּשְׁמָהּ רְאוּמָה וַתֵּלֶד גַּם־הִוא
+# &quot;And it came to pass after these things, that it was told Abraham, saying:
+# &#x27;Behold, Milcah, she also hath borne children unto thy brother Nahor: Uz
+# his first-born, and Buz his brother, and Kemuel the father of Aram; and
+# Chesed, and Hazo, and Pildash, and Jidlaph, and Bethuel.&#x27; And Bethuel
+# begot Rebekah; these eight Milcah bore to Nahor, Abraham&#x27;s brother. And
+# his concubine, whose name was Reumah, she also bore Tebah, and Gaham, and
+# Tahash, and Maacah.&quot;
+m.step(&quot;Gen.22.20-24&quot;)
+# ‹וַיֻּגַּד לְאַבְרָהָם … הִנֵּה יָלְדָה מִלְכָּה גַם־הִוא … וּבְתוּאֵל
+# יָלַד אֶת־רִבְקָה› (“and-tell to-Abraham … behold bear-young Milcah also
+# he/it … and-Bethuel bear-young obj-marker Rebekah”) — fact holds: and-
+# tell-to-Abraham-behold-yaldah-milkah-also-hi; and-Bethuel-bear-young-obj-
+# marker-rivqah
+m.fact(&quot;va_yugad_le_avraham_hinneh_yaldah_milkah_gam_hi&quot;,
+       &quot;u_vetuel_yalad_et_rivqah&quot;)
+# ‹שְׁמֹנָה אֵלֶּה יָלְדָה מִלְכָּה … וּפִילַגְשׁוֹ … וַתֵּלֶד גַּם־הִוא›
+# (“number these bear-young Milcah … and-concubine-him/its … and-bear-young
+# also he/it”) — fact holds: shmonah-these-yaldah-milkah-and-filagsho-
+# reumah-four
+m.fact(&quot;shmonah_ele_yaldah_milkah_u_filagsho_reumah_arbaah&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == {&#x27;yitzchaq&#x27;, &#x27;shnei_nearav&#x27;, &#x27;malakh_YHWH&#x27;}
+    assert m.presupposed_set() == {&#x27;beer_sheva&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {&#x27;ha_maqom&#x27;: &#x27;YHWH_Yireh&#x27;}
+    assert m.REGISTRY[&quot;writes&quot;] == 1
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;qach_lekh_ve_haalehu(et_binkha, le_olah)&#x27;, &#x27;shevu(po_im_ha_chamor)&#x27;, &#x27;tishlach(yadkha_el_ha_naar)&#x27;, &#x27;taas(lo_meumah)&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 4
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;named_before_any_presence&#x27;: 1, &#x27;read_before_install&#x27;: 1}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;achar_ha_devarim_ve_ha_elohim_nisah_et_avraham&#x27;, &#x27;va_yomer_hineni&#x27;, &#x27;et_binkha_et_yechidkha_asher_ahavta_et_yitzchaq&#x27;, &#x27;el_eretz_ha_moriyah_asher_omar_elekha&#x27;, &#x27;va_yashkem_ba_boqer_va_yachavosh_et_chamoro&#x27;, &#x27;ba_yom_ha_shelishi_va_yar_et_ha_maqom_me_rachoq&#x27;, &#x27;nelkha_ve_nishtachaveh_ve_nashuvah_aleikhem&#x27;, &#x27;avi_va_yomer_hineni_veni&#x27;, &#x27;ve_ayeh_ha_seh_le_olah&#x27;, &#x27;elohim_yireh_lo_ha_seh_le_olah_beni&#x27;, &#x27;va_yaaqod_et_yitzchaq_va_yasem_al_ha_mizbeach&#x27;, &#x27;avraham_avraham_va_yomer_hineni&#x27;, &#x27;atah_yadati_ki_yere_elohim_atah&#x27;, &#x27;ve_lo_chasakhta_et_binkha_et_yechidkha&#x27;, &#x27;ayil_neechaz_ba_sevakh_be_qarnav&#x27;, &#x27;va_yaalehu_le_olah_tachat_beno&#x27;, &#x27;pattern: asher_yeamer_ha_yom_be_har_YHWH_yeraeh&#x27;, &#x27;bi_nishbati_neum_YHWH&#x27;, &#x27;yaan_asher_asita_ve_lo_chasakhta&#x27;, &#x27;varekh_avarekhkha_ve_harbah_arbeh&#x27;, &#x27;ke_khokhvei_ve_kha_chol_ve_yirash_shaar_oyvav&#x27;, &#x27;ve_hitbarakhu_ve_zarakha_kol_goyei_ha_aretz&#x27;, &#x27;ekev_asher_shamata_be_qoli&#x27;, &#x27;va_yugad_le_avraham_hinneh_yaldah_milkah_gam_hi&#x27;, &#x27;u_vetuel_yalad_et_rivqah&#x27;, &#x27;shmonah_ele_yaldah_milkah_u_filagsho_reumah_arbaah&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 14
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

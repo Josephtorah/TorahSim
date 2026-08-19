@@ -1,0 +1,1015 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_26_shem_ledger — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_26_shem_ledger?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The deathless ledger: Shem to Terach, and the two deaths that land (11:10-32) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_26_shem_ledger</b> · Genesis 11:10-32 · derive logic_derived_v1 · phase C-26</div>
+<div class="meta"><a href="../#Gen/11/10">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">אֵלֶּה תּוֹלְדֹת שֵׁם</span> · <i>eleh toldot Shem</i> · &#x27;these are the generations of Shem&#x27;</p>
+<div class="note">REVIEW PASSED and FROZEN 2026-08-03 by the main loop: every census re-run independently against the raw snapshot and confirmed EXACT — death-verb (Strong 4191) 2 tokens in span (11:28, 11:32), ZERO in the nine rows 11:10-26, Gen 5&#x27;s refrain 8 (5:5-5:31); toledot (&#x27;descendants&#x27;) ordinals 6-7 at 11:10/11:27 with priors 2:4/5:1/6:9/10:1/10:32; akarah (&#x27;barren&#x27;) Torah token 1 at 11:30 (career 25:21 / 29:31 / Exod 23:26 / Deut 7:14); valad (&#x27;child&#x27;) and Yiska both TORAH HAPAXES; mabul (&#x27;deluge&#x27;) 12/12 verse-final at 11:10; Shem-the-name tokens 12-14 of 14; Haran-person (Strong 2039, heh) 6/6 in-span vs Charan-place (Strong 2771, chet) distinct lemmas — GLOSS_FIX ratified; Nachor (5152) grandfather tokens 1-4 / grandson 5-8; span word_total 271; settle-verb tokens 3-4 = 11:2 and 11:31, both verses closing on the identical two words va-yeshvu sham (&#x27;and they settled there&#x27;) — cross-unit arc held to prose, correctly; fronted perfects DB-verified (chay Vqp3ms at 11:12/11:14 vs wayyiqtol [&#x27;and-he-lived&#x27; narrative form] at 11:16); exactly ONE feminine finite verb in span (11:30 va-tehi); moledet (&#x27;birthplace&#x27;) tokens 1-2 = 11:28/12:1. Precedent quotes verified VERBATIM against frozen gen_14 (header-labels, open-row 5:32, triple-begetting, template genre note, beget/bulk/die classes, sever-the-refrain, ledger-is-genre) and gen_23 (the 950 close; &#x27;stands ALONE as the verse-final tree arm&#x27;). ALL SEVEN FLAGGED BOLD CHOICES RATIFIED. SPAN RULED by the main loop under the owner&#x27;s standing autonomous-run order: ONE UNIT 11:10-32, seam at 12:1 (staging recommendation adopted; the 11:27 header-seam counterargument recorded here). Onkelos (Aramaic translation) read Tier-A at derive time (23 sequential fetches, Data/FETCHLOG.md) — the buffer preserves the letter&#x27;s anomalies and splits the repeated take-verb (nesiv for wives / devar &#x27;led&#x27; for the road). TWENTY-SECOND PROSPECTIVE MIDDOT RUN (logic/middot_scan/WATCHLIST_gen26_prospective_2026-08-03.md): cache holds ZERO sources for Gen 11:10-32 — TWENTIETH tripwire in a row. INTERPRETER: ZERO extensions — seventeenth extension-free derivation in a row. Derived by the THIRD-GENERATION agent (its first unit; ninth agent-derived unit overall). THE DRAFT&#x27;S FLAGGED CHOICES (all ratified): (1) step format is a hybrid of two ratified devices — gen_24&#x27;s paragraph-grouped steps for the eight two-verse template rows, gen_14&#x27;s per-verse steps for the open row and the six deviation verses (15 boot steps for 23 verses); (2) the nine missing row-closes are DRAFT-NOTE / Stage E prose only, per seed order — no operator encodes an absence; (3) 11:27&#x27;s restatement of 11:26&#x27;s three sons fires NO second beget event (near-verbatim + named delta: wayyiqtol [&#x27;and-he-begot&#x27; narrative form] va-yoled -&gt; bare perfect holid [&#x27;begot&#x27;]; the header labels, the row already fired) — only Haran-begot-Lot is new and fires; (4) the two Nachors (one lemma, two men — grandfather 11:22-25, grandson 11:26-29) are split as machine tokens nachor_ben_serug / nachor_ben_terach (&#x27;Nachor son of Serug&#x27; / &#x27;Nachor son of Terach&#x27;) — the papponymy (grandchild named for grandfather) is the letter&#x27;s, the token-split is this draft&#x27;s disambiguation; (5) 11:28&#x27;s death is characterized as the genre&#x27;s triple inversion (son-before-father, numberless, LOCATED) — census facts exact, characterization mine; (6) 11:32&#x27;s total is held as yemei_terach_205_shanah, deliberately NOT kol_yemei (&#x27;all the days&#x27;) — the letter drops kol (&#x27;all&#x27;) and the machine token follows the letter; (7) the oral cache middot scan is NOT claimed here (main-loop gate) — the oral note is queue-only. GLOSS_FIX filings applied in this unit&#x27;s gloss layer: Strong 2039 person and Strong 2771 place are BOTH DB-glossed &#x27;Haran&#x27; — this unit renders the person Haran (spelled with heh, soft h) and the place Charan (spelled with chet, guttural ch) throughout; valad DB-glossed &#x27;boy&#x27; -&gt; &#x27;child/offspring&#x27;; akarah DB-glossed &#x27;sterile&#x27; -&gt; &#x27;barren&#x27;; Terach DB-glossed &#x27;Tarah&#x27; -&gt; &#x27;Terach&#x27;.</div>
+<div class="note">Logic-derived v1: v3 taamim (cantillation accents) trees from DB tree_json -&gt; leaf role frames from OSHB morph -&gt; operator lines citing TIR rules -&gt; machine-state scenarios. Machine tokens apostrophe-free and underscore-joined (yemei_terach_205_shanah, ein_lah_valad, la_lekhet_artzah_kenaan). Hybrid step format: grouped rows (gen_24&#x27;s ratified device) + per-verse deviations (gen_14&#x27;s device); the template rows share operator shape by design — the deviations carry the unit.</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (retro, oral-first era; manifest logic/oral_audit/manifests/gen_26_shem_ledger_claims.json — 1 VERIFIED, 0 FAILED, 1 UNCHECKABLE; record logic/oral_audit/AUDIT_gen_26_2026-08-08.md). The THINNEST oral layer of the program — the deathless ledger drew almost no Masorah (received-tradition) notes; the audit is proportionate: thin is a finding. CROWN (chain-attested, DB-verified): G26-01 ויחי תרח (&quot;and Terah lived,&quot; 11:26) joined by maqqef (the joining hyphen) per Minchat Shai — SNAPSHOT&#x27;s maqqef column agrees. INSTRUMENT GAP: G26-02 the inverted nun — בחרן (&quot;in Haran,&quot; Terah&#x27;s death notice, 11:32): Rashi — &quot;the nun is INVERTED, to tell you that until Abraham the fierce anger (חרון) of the Omnipotent burned against the world&quot;: a letter-FORM tradition SNAPSHOT cannot see — the fifth uninstrumented layer catalogued (letter-size; paseq, the separator bar; paragraph breaks; galgal, the wheel-accent; letter-form). INHERITANCE EDGES: none in span (checked absence; the Chronicles mirror anchors at chapter 10, recorded in gen_24&#x27;s audit). READINGS (named-only, unclaimed): יסכה (&quot;Jiscah,&quot; 11:29) is Sarah — &quot;she SAW by holy inspiration, and all gazed at her beauty&quot; (Megillah 14a via Rashi; the Kitzur Baal HaTurim adds the atbash letter-swap cipher — cipher-arithmetic class); &quot;he died in the presence of his father&quot; — the furnace tradition, Terah accusing Abram before Nimrod (Bereshit Rabbah 38:13 via Rashi 11:28); Terah&#x27;s death written before Abram&#x27;s departure though it followed it — &quot;the wicked are called dead in their lifetime&quot; (Rashi 11:32) — filed BESIDE this unit&#x27;s two-deaths-that-land analysis.</div>
+<div class="meta">confidence: structure tested; operator readings tested-per-TIR; intent hypothesis</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>Gen 11:10-32 as ONE UNIT (main-loop ruling on staged recommendation): the Shem toledot (&#x27;descendants&#x27;) header + nine ledger rows (11:10-26) and the Terach toledot header + narrative close (11:27-32); the seam is 12:1 (the call). Three legs, all precedent: gen_24&#x27;s two-headers-one-unit (10:1 + 10:32); gen_14&#x27;s single-object rule (&#x27;splitting it would sever the refrain from its one refusal&#x27; — quoted; here inverted: a split at 11:27 would sever the nine deathless rows from the only two deaths); and the open-row device — 11:26 opens Terach&#x27;s row in 5:32&#x27;s exact shape and 11:27-32 sits INSIDE it, closing at 11:32 in-span: a split would manufacture a cross-unit hostage arc (5:32-to-9:29&#x27;s class) that the letter does not force. 23 verses, 271 tokens. The 11:27 header-seam counterargument is filed in the review note.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Hebrew source + trees</td><td>All 23 verses from DB tree_json (rule set v3, all unique, pure binary; ascii rendered 2026-08-03). Tree facts (accent positions DB-verified for every verse): the template&#x27;s rest-splits are metronomic — every row verse rests (etnachta, major mid-verse rest) after shanah (&#x27;years&#x27;) or after the heir&#x27;s object-phrase, and the verse-end (silluq) seats the HEIR&#x27;S NAME on every begets-verse (Arpachshad, Shelach, Ever, Peleg, Reu, Serug, Nachor, Terach) and u-vanot (&#x27;and daughters&#x27;) on every after-verse — the slot Gen 5 isolated va-yamot (&#x27;and he died&#x27;) on is occupied by the next generation; 11:10 ends on ha-mabul (&#x27;the deluge&#x27;) — the flood-word&#x27;s FINAL Torah token (12 of 12) is the ledger&#x27;s first verse-end; 11:26 ends on Haran — the open row&#x27;s last word is the son about to die; 11:28 rests on aviv (&#x27;his father&#x27;) — [the death before the father | the geography]; 11:30 rests on akarah (&#x27;barren&#x27;) and ends on valad (&#x27;child&#x27;) — the state, then the hapax; 11:32 rests after shanah and the right arm is THREE words, va-yamat terach be-charan (&#x27;and Terach died in Charan&#x27;) — the refrain&#x27;s isolation gone.</td><td>tested</td></tr>
+<tr><td><b>C</b></td><td>Segment structure</td><td>Verb morphology (#IMPOSED OSHB, DB-verified 2026-08-03): the begetting verb HIPHIL (causative, &#x27;brought-to-birth&#x27;) throughout — gen_14&#x27;s patrilineal stem continues; va-yoled (&#x27;and he begot&#x27;, wayyiqtol narrative form) in the rows, holid (&#x27;begot&#x27;, bare perfect) twice in the 11:27 header (table tense, gen_24&#x27;s class); rows 2-3 ONLY break the wayyiqtol rhythm with fronted-subject PERFECT (ve-arpakhshad CHAY, ve-shelach CHAY — &#x27;and Arpachshad LIVED&#x27;, &#x27;and Shelach LIVED&#x27;; 11:12, 11:14), rows 4-9 revert [held, not explained]; the death-verb census: TWO tokens of Strong 4191 (&#x27;die&#x27;) in span — 11:28 and 11:32, both va-yamat (non-pausal &#x27;and he died&#x27; — neither is verse-final; Gen 5&#x27;s eight refrain tokens are all pausal va-yamot on the verse-end), ZERO in the nine rows; 11:10&#x27;s shem ben-meat shanah (&#x27;Shem, son-of-a-hundred-years&#x27; age idiom) — 5:32/7:6&#x27;s flood-era idiom, not the rows&#x27; lived-N; 11:29&#x27;s va-yiqach (&#x27;and he took&#x27;) SINGULAR with compound subject (Abram AND Nachor) and plural la-hem (&#x27;for themselves&#x27;) [wobble held]; 11:30&#x27;s va-tehi (&#x27;and she was&#x27;) — the span&#x27;s ONLY feminine verb against 22+ masculine finite verbs: the ledger&#x27;s one &#x27;she&#x27;, introducing the barren woman; 11:31&#x27;s va-yetzu itam (&#x27;and they went out WITH THEM&#x27; — et-m, Strong 854 &#x27;with&#x27;) [crux held, not resolved]; 11:31&#x27;s relation-obsession: ben-o (&#x27;his son&#x27;) x3 + ben (&#x27;son of&#x27;) x2 in one verse. Debut/exit censuses run BEFORE drafting: akarah (&#x27;barren&#x27;) Torah token 1 at 11:30 (career: 25:21 Rivkah, 29:31 Rachel, then Exod 23:26 + Deut 7:14 x2 — the law&#x27;s reversal; PROSE ONLY); valad (&#x27;child/offspring&#x27;) TORAH HAPAX at 11:30, verse-final; Yiska (&#x27;Iscah&#x27;) TORAH HAPAX at 11:29; moledet (&#x27;nativity/birthplace&#x27;) token 1 INSIDE the death notice at 11:28, token 2 = 12:1 [career fact; seam not encoded]; mabul (&#x27;deluge&#x27;) token 12/12 at 11:10; Shem-the-name tokens 12-14 of 14 (11:10 x2, 11:11) — the man exits the corpus at the head of his own ledger; the ENTIRE Torah careers of Haran-the-person (6 tokens), Reu (4), Serug (4) sit inside the span; Arpachshad (6), Shelach (6), Peleg (5) close their careers here (Peleg&#x27;s token 1 = 10:25, gen_24&#x27;s division verse); Ur (3 tokens) and Kasdim (&#x27;Chaldeans&#x27;, 3 tokens) travel only as the pair Ur Kasdim (11:28, 11:31, 15:7); Sarai tokens 1-3 of 17 (career ends at 17:15, the rename); Avram tokens 1-6 of 59 (career ends at 17:5, the rename); Lot tokens 1-2 of 32; Milcah tokens 1-2 of 10 (3-7 = Rivkah&#x27;s genealogy); Nachor ONE LEMMA TWO MEN (grandfather tokens 1-4, grandson 5-8; 9-16 all the grandson&#x27;s later line); Terach ONE LEMMA MAN AND PLACE (tokens 10-11 = the Num 33:27-28 wilderness station). Implicit lifespan sums (Shem 600, Arpachshad 438, Shelach 433, Ever 464, Peleg 239, Reu 239, Serug 230, Nachor 148) are ARITHMETIC, NOT LETTER — quarantined to prose; only Terach&#x27;s 205 is stated, and it is the span&#x27;s only total.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Predicates &amp; outcomes</td><td>gen_14 made DEVIATION the ledger&#x27;s signal; this ledger&#x27;s first deviation is the deletion of the ledger&#x27;s own ending. The machine&#x27;s model: rows as beget-events + bulk standing facts (gen_14&#x27;s classes, quoted), NO total-facts and NO die-events for nine rows because the letter writes none — the absence is genre delta held in prose, not machine state [seed order]. The unit&#x27;s meaning concentrates where death returns: (1) 11:28 — the corpus&#x27;s first son-to-die-before- his-father, verse-initial, numberless, and the first LOCATED death (in the land of his moledet [&#x27;birthplace&#x27;] — the word&#x27;s debut is inside a death notice); (2) 11:32 — the row-closure grammar of 9:29 with two named deltas: kol (&#x27;all&#x27;) dropped from the total, and the death-verb sharing its verse-final arm with a name and a place (&#x27;and Terach died in Charan&#x27;) where the frozen refrain stood alone. Between them: two wives taken (one with a genealogy, one with none — Sarai&#x27;s parentage withheld [OPEN]), the barren fact doubled (akarah + ein lah valad, &#x27;barren&#x27; + &#x27;she had no child&#x27;), and a journey that states its destination (artzah Kenaan, &#x27;toward the land of Canaan&#x27;), stops short (ad Charan, &#x27;as far as Charan&#x27;), and settles — the letter&#x27;s own suspension, standing open at the unit wall [OPEN].</td><td>tested</td></tr>
+<tr><td><b>E</b></td><td>Logic format choice</td><td>Operator lines; NO ledger-register row (gen_14, quoted: &#x27;the LEDGER register remains the creation week&#x27;s — this book&#x27;s &quot;ledger&quot; is genre, not machine state&#x27;). HYBRID STEP FORMAT [bold, flagged]: eight paragraph-grouped row steps (gen_24&#x27;s ratified device, ref style Gen.11.12-13) + seven per-verse steps (gen_14&#x27;s device) for 11:26-32. SECTION x2 (11:10, 11:27 — gen_08&#x27;s header device via gen_14: &#x27;A header labels; it installs nothing&#x27;; toledot [&#x27;descendants&#x27;] tokens 6 and 7, ordinals DB-verified). EVENTs (17): beget x10 (nine rows — 11:26 one event with three Themes, 5:32&#x27;s class quoted — plus Haran-begot-Lot in table perfect), die x2 (11:28, 11:32 — gen_14&#x27;s death-event class quoted), take x2 (11:29 wives; 11:31 the family), go_out x1 (11:31, the itam [&#x27;with them&#x27;] crux held), come x1 (11:31, ad Charan), settle x1 (11:31). Standing facts (16): Shem&#x27;s age-idiom + flood anchor (2), bulk sons-and-daughters x8 (gen_14&#x27;s HOLDS(banim_u_vanot(X)) class, quoted), the two wife-name facts + the Haran-fatherhood pair (11:29), saray_akarah + ein_lah_valad (11:30 — the letter doubles, the machine holds both), la_lekhet_artzah_kenaan (11:31 — the stated destination, standing unfinished [OPEN]), yemei_terach_205_shanah (11:32 — NOT kol_yemei; the letter drops &#x27;all&#x27; and the token follows). NAME x0 and REGISTRY x0: no va-yiqra (&#x27;and he called&#x27;) formula anywhere in span — gen_24&#x27;s report-naming rule; Sarai, Milcah, Yiska, Lot all enter by report. NO demands (SPECS empty end-to-end — gen_14&#x27;s class), NO tests, ZERO WORLD installs; NOTE_PRESUPPOSED x3 (ur_kasdim, charan, eretz_kenaan — geography read, never installed). The nine missing row-closes fire NOTHING: the machine&#x27;s negative space, gen_14&#x27;s Chanokh device generalized to a whole ledger. Interpreter extensions: NONE.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Bilingual logic objects</td><td>Every operator line carries he + he_translit + en. Machine tokens apostrophe-free: yemei_terach_205_shanah, ein_lah_valad, shenatayim_achar_ha_mabul, la_lekhet_artzah_kenaan, nachor_ben_serug / nachor_ben_terach (the papponymy split, flagged). Template rows share operator shape by design.</td><td>established</td></tr>
+<tr><td><b>G</b></td><td>Oral (named only) + Tier-A translation check</td><td>Named but NOT read (queue only — the prospective middot scan is the main loop&#x27;s gate, not claimed here): Bereshit Rabbah 38 end (the Ur-furnace reading of 11:28 — Haran&#x27;s death &#x27;in Ur of the Chaldeans&#x27; read as fire; a NAME-MIDRASH/ORDEAL class candidate); Bavli Megillah 14a + Sanhedrin 69b (Yiska identified with Sarai — an IDENTIFICATION class candidate; the letter withholds Sarai&#x27;s parentage and the chain fills it); Bavli Bava Batra 91a (Abram&#x27;s Ur years); Rashi at 11:28 (&#x27;in the presence of&#x27; = in his father&#x27;s lifetime; the furnace), 11:29 (Yiska = Sarai), 11:32 (the deferred death notice vs 12:1&#x27;s chronology — an ARITHMETIC-HARMONY class candidate: 70+75 vs 205). Tier-A Onkelos (Aramaic translation; 23 fetches, Data/FETCHLOG.md 2026-08-03): findings in ORAL_onkelos_tier_a — headline: the buffer PRESERVES the letter&#x27;s anomalies (the fronted perfects of 11:12/14, the kol-less total of 11:32, the itam crux as imhon [&#x27;with them&#x27;], the valad hapax as cognate velad) but SPLITS the take-verb the letter repeats (u-nesiv &#x27;and he took&#x27; for wives at 11:29; u-devar &#x27;and he LED&#x27; for persons on the road at 11:31).</td><td>tested</td></tr>
+<tr><td><b>H</b></td><td>Scenarios</td><td>S1 the header row: section labels, beget fires, flood-anchor facts hold, bulk holds — and no total, no death (prose assertion). S2 the fronted-perfect pair ran clean. S3 the papponymy row (grandfather Nachor). S4 the open row: three Themes in one beget. S5 the second header inside the row: no re-fire, Lot&#x27;s begetting fires. S6 the first death: die-event on the trace, deltas named. S7 the wives: take-event, name-facts, the withheld parentage flagged [OPEN]. S8 the barren state: both facts hold, verse-final hapax. S9 the stalled journey: four events fire, destination-fact stands unfinished, three geography flags. S10 the close: the kol-less total holds, die-event fires, SPECS empty at unit end — the ledger closes owing nothing. S11_negative LET? contract guard; S12_negative flag-never-block.</td><td>tested</td></tr>
+<tr><td><b>I</b></td><td>English leakage review</td><td>Operators derive from morph codes (hiphil begettings, the two qal wayyiqtol deaths, the fronted perfects, the 3fs singleton, TIR-014 object markers) and DB censuses run BEFORE drafting (the death-verb exact census; toledot ordinals 6-7; the debut/hapax/exit table; the accent positions; the age-idiom split; the Nachor and Terach lemma shares). NOT supplied: why nine rows lose their closes, why kol (&#x27;all&#x27;) drops at 11:32, who &#x27;them&#x27; is in va-yetzu itam (&#x27;and they went out with them&#x27;), Sarai&#x27;s parentage, any connection between the man Haran (heh-spelled) and the city Charan (chet-spelled — the letter separates them by consonant and this unit&#x27;s glosses keep them separate), the implicit sums, or the journey&#x27;s abort — every one [OPEN] or prose-only; the Onkelos deltas stay dual-track.</td><td>established</td></tr>
+<tr><td><b>J</b></td><td>Pre-flight + draft ship</td><td>Pre-flight 2026-08-03 against the UNMODIFIED repo interpreter — zero injected prototypes (scratchpad preflight_gen26.py; draft guard bypassed for preview only). This unit ships as STATUS: DRAFT by the gen-3 block agent (mechanics only). The main loop verifies every frozen-unit quote, re-runs the censuses independently, rules on the flagged bold choices, and freezes through the standard gate chain. Changes require a new derive pass, not silent edits.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_11_10_11 · Gen.11.10-11 · <span class='expr'>SHEM_HEADER_AND_THE_FIRST_DEATHLESS_ROW</span></h3>
+<p><span class="he">אֵלֶּה תּוֹלְדֹת שֵׁם שֵׁם בֶּן־מְאַת שָׁנָה וַיּוֹלֶד אֶת־אַרְפַּכְשָׁד שְׁנָתַיִם אַחַר הַמַּבּוּל … וַיּוֹלֶד בָּנִים וּבָנוֹת</span> · <i>eleh toldot shem shem ben-meat shana va-yoled et-arpakhshad shenatayim achar ha-mabul … va-yoled banim u-vanot</i> · [EN-AID/JPS] These are the generations of Shem. Shem was a hundred years old, and begot Arpachshad two years after the flood. And Shem lived after he begot Arpachshad five hundred years, and begot sons and daughters.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אלה תולדת שם שם בן־מאת שנה ויולד את־ארפכשד</span> · <i>ele toldot shem shem ben-meat shana va-yoled et-arpakhshad</i> · the header and the begetting at 100 (11:10 etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">שנתים אחר המבול</span> · <i>shenatayim achar ha-mabul</i> · two years after the deluge — the flood-word&#x27;s last Torah token, verse-final</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>SECTION</td><td><span class="expr">SECTION(toledot_shem, eleh toldot shem — the sixth toledot header labels; installs nothing)</span><br><span class="gloss">= SECTION(generations-shem, these toldot shem — the sixth generations header labels; installs nothing)</span><br>toledot (&#x27;descendants/generations&#x27;) TOKEN 6 (ordinals DB-verified: 2:4, 5:1, 6:9, 10:1, 10:32 before it) — gen_14&#x27;s header device, quoted: &#x27;A header labels; it installs nothing.&#x27; The name doubles across the seam (toldot SHEM: SHEM ben-meat shanah) — and these are Shem-the-name&#x27;s tokens 12-13 of 14; token 14 is the next verse. The man exits the corpus at the head of his own ledger [career fact; prose].
+</td><td><span class="he">אֵלֶּה תּוֹלְדֹת שֵׁם</span> · <i>eleh toldot shem</i><br><span class="gloss">= these toldot shem</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shem_ben_meat_shanah, t0) ∧ HOLDS(shenatayim_achar_ha_mabul, t0)</span><br><span class="gloss">= HOLDS(shem-ben-meat-year, t0) ∧ HOLDS(shenatayim-achar-the-mabul, t0)</span><br>Row 1 opens on the AGE IDIOM, not the rows&#x27; lived-N: ben-meat shanah (&#x27;son of a hundred years&#x27;) — 5:32&#x27;s and 7:6&#x27;s flood-era formula (Noach at 500, Noach at 600), here anchoring the ledger to the deluge: shenatayim achar ha-mabul (&#x27;two years after the deluge&#x27;) — and ha-mabul (&#x27;the deluge&#x27;) is the flood-word&#x27;s FINAL Torah token (12 of 12), seated on the verse-end. The ledger&#x27;s first line says farewell to the flood [letter facts; the chronology question 5:32/7:6/11:10 poses is the chain&#x27;s, not the machine&#x27;s — named-only].
+</td><td><span class="he">שֵׁם בֶּן־מְאַת שָׁנָה … שְׁנָתַיִם אַחַר הַמַּבּוּל</span> · <i>shem ben-meat shana … shenatayim achar ha-mabul</i><br><span class="gloss">= shem ben-meat shana shenatayim achar the-mabul</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">beget(e1) ∧ Agent(e1, shem) ∧ Theme(e1, arpakhshad)</span><br>gen_14&#x27;s row class, quoted: &#x27;beget(e4) ∧ Agent(e4, shet) ∧ Theme(e4, enosh)&#x27; — &#x27;Template row: Shet begets Enosh.&#x27; HIPHIL (&#x27;caused-to-be-born&#x27;) as through all of Gen 5: the ledger stays patrilineal to the stem; no mother is named in any row.
+</td><td><span class="he">וַיּוֹלֶד אֶת־אַרְפַּכְשָׁד</span> · <i>va-yoled et-arpakhshad</i><br><span class="gloss">= and-yoled arpakhshad</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(banim_u_vanot(shem), t0)</span><br><span class="gloss">= HOLDS(banim-and-vanot(shem), t0)</span><br>gen_14&#x27;s bulk class, quoted: &#x27;HOLDS(banim_u_vanot(shet), t0)&#x27; — &#x27;the bulk entry: unnamed, uncounted (gen_09&#x27;s bulk precedent: the letter withholds the values and the machine logs no ghosts).&#x27; Five hundred years after Arpachshad — and then the row STOPS. Where Gen 5 wrote &#x27;and all the days of X were N years, and he died&#x27;, this ledger writes NOTHING: no total, no refrain — nine rows in a row [the genre delta; prose only, no operator encodes an absence]. The verse-end seats u-vanot (&#x27;and daughters&#x27;) where Gen 5 seated the death-verb.
+</td><td><span class="he">וַיְחִי־שֵׁם אַחֲרֵי הוֹלִידוֹ אֶת־אַרְפַּכְשָׁד חֲמֵשׁ מֵאוֹת שָׁנָה וַיּוֹלֶד בָּנִים וּבָנוֹת</span> · <i>va-yechi-shem achare holid-o et-arpakhshad chamesh meot shana va-yoled banim u-vanot</i><br><span class="gloss">= and-yechi-shem achare holid-o arpakhshad chamesh meot shana and-yoled banim and-vanot</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The second ledger opens by burying the flood-word and deleting the death-column: a row that runs lived-begot-lived-begot and simply ends. Shem&#x27;s implicit 600 is arithmetic, not letter — the machine holds no total the text does not state.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_11_12_13 · Gen.11.12-13 · <span class='expr'>ARPACHSHAD_ROW_FRONTED_PERFECT</span></h3>
+<p><span class="he">וְאַרְפַּכְשַׁד חַי חָמֵשׁ וּשְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־שָׁלַח … וַיּוֹלֶד בָּנִים וּבָנוֹת</span> · <i>ve-arpakhshad chay chamesh u-sheloshim shana va-yoled et-shalach … va-yoled banim u-vanot</i> · [EN-AID/JPS] And Arpachshad lived five and thirty years, and begot Shelah. And Arpachshad lived after he begot Shelah four hundred and three years, and begot sons and daughters.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וארפכשד חי חמש ושלשים שנה</span> · <i>ve-arpakhshad chay chamesh u-sheloshim shana</i> · Arpachshad LIVED — fronted subject, perfect verb (11:12 etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויולד את־שלח</span> · <i>va-yoled et-shalach</i> · and begot Shelach — the heir on the verse-end</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">beget(e2) ∧ Agent(e2, arpakhshad) ∧ Theme(e2, shelach)</span><br>Template row — with the span&#x27;s quietest anomaly: ve-arpakhshad CHAY (&#x27;and Arpachshad LIVED&#x27; — fronted subject + PERFECT, morph Vqp3ms) where every Gen 5 row and rows 4-9 here run wayyiqtol va-yechi (&#x27;and-he-lived&#x27; narrative form). Rows 2 and 3 only [held, not explained; Onkelos PRESERVES the fronting — see ORAL_onkelos_tier_a].
+</td><td><span class="he">וְאַרְפַּכְשַׁד חַי חָמֵשׁ וּשְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־שָׁלַח</span> · <i>ve-arpakhshad chay chamesh u-sheloshim shana va-yoled et-shalach</i><br><span class="gloss">= and-arpakhshad chay chamesh and-sheloshim shana and-yoled shalach</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(banim_u_vanot(arpakhshad), t0)</span><br><span class="gloss">= HOLDS(banim-and-vanot(arpakhshad), t0)</span><br>The bulk entry (gen_14&#x27;s class): 403 after Shelach; sons and daughters; no close. Arpachshad&#x27;s Torah career CLOSES at 11:13 (tokens 3-6 of 6; 1-2 were the table&#x27;s, 10:22 and 10:24) — the ledger that never says he died is the last place he appears.
+</td><td><span class="he">וַיְחִי אַרְפַּכְשַׁד … שָׁלֹשׁ שָׁנִים וְאַרְבַּע מֵאוֹת שָׁנָה וַיּוֹלֶד בָּנִים וּבָנוֹת</span> · <i>va-yechi arpakhshad … shalosh shanim ve-arba meot shana va-yoled banim u-vanot</i><br><span class="gloss">= and-yechi arpakhshad shalosh shanim and-arba meot shana and-yoled banim and-vanot</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">A deathless row in a broken tense: the ledger&#x27;s rhythm stumbles for exactly two rows, then rights itself.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_11_14_15 · Gen.11.14-15 · <span class='expr'>SHELACH_ROW_FRONTED_PERFECT</span></h3>
+<p><span class="he">וְשֶׁלַח חַי שְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־עֵבֶר … וַיּוֹלֶד בָּנִים וּבָנוֹת</span> · <i>ve-shelach chay sheloshim shana va-yoled et-ever … va-yoled banim u-vanot</i> · [EN-AID/JPS] And Shelah lived thirty years, and begot Eber. And Shelah lived after he begot Eber four hundred and three years, and begot sons and daughters.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ושלח חי שלשים שנה</span> · <i>ve-shelach chay sheloshim shana</i> · Shelach LIVED — the second fronted perfect (11:14 etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויולד את־עבר</span> · <i>va-yoled et-ever</i> · and begot Ever</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">beget(e3) ∧ Agent(e3, shelach) ∧ Theme(e3, ever)</span><br>Template row; the fronted-perfect pair completes (ve-shelach CHAY — rows 2-3&#x27;s shared anomaly, then never again in the span). Ever (&#x27;Eber&#x27;) — the name the table hung the whole line on (10:21: Shem &#x27;father of all the children of Ever&#x27;).
+</td><td><span class="he">וְשֶׁלַח חַי שְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־עֵבֶר</span> · <i>ve-shelach chay sheloshim shana va-yoled et-ever</i><br><span class="gloss">= and-shelach chay sheloshim shana and-yoled ever</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(banim_u_vanot(shelach), t0)</span><br><span class="gloss">= HOLDS(banim-and-vanot(shelach), t0)</span><br>The bulk entry: 403 — the same after-count as his father&#x27;s row [letter fact]; Shelach&#x27;s Torah career closes at 11:15 (tokens 3-6 of 6).
+</td><td><span class="he">וַיְחִי־שֶׁלַח … שָׁלֹשׁ שָׁנִים וְאַרְבַּע מֵאוֹת שָׁנָה וַיּוֹלֶד בָּנִים וּבָנוֹת</span> · <i>va-yechi-shelach … shalosh shanim ve-arba meot shana va-yoled banim u-vanot</i><br><span class="gloss">= and-yechi-shelach shalosh shanim and-arba meot shana and-yoled banim and-vanot</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Two rows, one borrowed tense, twin 403s — the template absorbs its own anomalies and keeps walking.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_11_16_17 · Gen.11.16-17 · <span class='expr'>EVER_ROW_WAYYIQTOL_RESUMES</span></h3>
+<p><span class="he">וַיְחִי־עֵבֶר אַרְבַּע וּשְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־פָּלֶג … וַיּוֹלֶד בָּנִים וּבָנוֹת</span> · <i>va-yechi-ever arba u-sheloshim shana va-yoled et-paleg … va-yoled banim u-vanot</i> · [EN-AID/JPS] And Eber lived four and thirty years, and begot Peleg. And Eber lived after he begot Peleg four hundred and thirty years, and begot sons and daughters.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויחי־עבר ארבע ושלשים שנה</span> · <i>va-yechi-ever arba u-sheloshim shana</i> · va-yechi (&#x27;and he lived&#x27;) returns (11:16 etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויולד את־פלג</span> · <i>va-yoled et-paleg</i> · and begot Peleg — the division man begotten</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">beget(e4) ∧ Agent(e4, ever) ∧ Theme(e4, peleg)</span><br>Template row; wayyiqtol (&#x27;and-he-lived&#x27; narrative form) resumes and holds to the end. Peleg — token 1 was 10:25&#x27;s &#x27;for in his days the earth was divided&#x27; (frozen gen_24 ground); the ledger re-runs the name without the etiology.
+</td><td><span class="he">וַיְחִי־עֵבֶר אַרְבַּע וּשְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־פָּלֶג</span> · <i>va-yechi-ever arba u-sheloshim shana va-yoled et-paleg</i><br><span class="gloss">= and-yechi-ever arba and-sheloshim shana and-yoled paleg</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(banim_u_vanot(ever), t0)</span><br><span class="gloss">= HOLDS(banim-and-vanot(ever), t0)</span><br>The bulk entry: 430 after Peleg — the span&#x27;s LONGEST after-count, and the last of the long ones: the implicit sums fall off a cliff at the next row (464 to 239 — arithmetic, not letter; prose only). Ever&#x27;s span tokens are 4-7 of 8; one token remains in the whole Torah (Num 24:24, in Balaam&#x27;s oracle).
+</td><td><span class="he">וַיְחִי־עֵבֶר אַחֲרֵי הוֹלִידוֹ אֶת־פֶּלֶג שְׁלֹשִׁים שָׁנָה וְאַרְבַּע מֵאוֹת שָׁנָה וַיּוֹלֶד בָּנִים וּבָנוֹת</span> · <i>va-yechi-ever achare holid-o et-peleg sheloshim shana ve-arba meot shana va-yoled banim u-vanot</i><br><span class="gloss">= and-yechi-ever achare holid-o peleg sheloshim shana and-arba meot shana and-yoled banim and-vanot</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The line&#x27;s name-giver begets the division man; after this row the numbers halve — the letter never says so, it just counts.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_11_18_19 · Gen.11.18-19 · <span class='expr'>PELEG_ROW_CAREER_CLOSES</span></h3>
+<p><span class="he">וַיְחִי־פֶלֶג שְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־רְעוּ … וַיּוֹלֶד בָּנִים וּבָנוֹת</span> · <i>va-yechi-feleg sheloshim shana va-yoled et-reu … va-yoled banim u-vanot</i> · [EN-AID/JPS] And Peleg lived thirty years, and begot Reu. And Peleg lived after he begot Reu two hundred and nine years, and begot sons and daughters.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויחי־פלג שלשים שנה</span> · <i>va-yechi-feleg sheloshim shana</i> · Peleg at thirty (11:18 etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויולד את־רעו</span> · <i>va-yoled et-reu</i> · and begot Reu</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">beget(e5) ∧ Agent(e5, peleg) ∧ Theme(e5, reu)</span><br>Template row. Peleg&#x27;s Torah career CLOSES at 11:19 (tokens 2-5 of 5); Reu&#x27;s ENTIRE Torah career is these four tokens (11:18-21) — the ledger is the only place the Torah ever says his name.
+</td><td><span class="he">וַיְחִי־פֶלֶג שְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־רְעוּ</span> · <i>va-yechi-feleg sheloshim shana va-yoled et-reu</i><br><span class="gloss">= and-yechi-feleg sheloshim shana and-yoled reu</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(banim_u_vanot(peleg), t0)</span><br><span class="gloss">= HOLDS(banim-and-vanot(peleg), t0)</span><br>The bulk entry: 209 after Reu; no close. The division man&#x27;s row is the first of the short ones.
+</td><td><span class="he">וַיְחִי־פֶלֶג אַחֲרֵי הוֹלִידוֹ אֶת־רְעוּ תֵּשַׁע שָׁנִים וּמָאתַיִם שָׁנָה וַיּוֹלֶד בָּנִים וּבָנוֹת</span> · <i>va-yechi-feleg achare holid-o et-reu tesha shanim u-matayim shana va-yoled banim u-vanot</i><br><span class="gloss">= and-yechi-feleg achare holid-o reu tesha shanim and-matayim shana and-yoled banim and-vanot</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Men whose whole scriptural existence is a deathless ledger row: the span holds three of them, and this row begets the first.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_11_20_21 · Gen.11.20-21 · <span class='expr'>REU_ROW_WHOLE_CAREER_IN_SPAN</span></h3>
+<p><span class="he">וַיְחִי רְעוּ שְׁתַּיִם וּשְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־שְׂרוּג … וַיּוֹלֶד בָּנִים וּבָנוֹת</span> · <i>va-yechi reu shetayim u-sheloshim shana va-yoled et-serug … va-yoled banim u-vanot</i> · [EN-AID/JPS] And Reu lived two and thirty years, and begot Serug. And Reu lived after he begot Serug two hundred and seven years, and begot sons and daughters.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויחי רעו שתים ושלשים שנה</span> · <i>va-yechi reu shetayim u-sheloshim shana</i> · Reu at thirty-two (11:20 etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויולד את־שרוג</span> · <i>va-yoled et-serug</i> · and begot Serug</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">beget(e6) ∧ Agent(e6, reu) ∧ Theme(e6, serug)</span><br>Template row; Serug&#x27;s ENTIRE Torah career is likewise these four tokens (11:20-23).
+</td><td><span class="he">וַיְחִי רְעוּ שְׁתַּיִם וּשְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־שְׂרוּג</span> · <i>va-yechi reu shetayim u-sheloshim shana va-yoled et-serug</i><br><span class="gloss">= and-yechi reu shetayim and-sheloshim shana and-yoled serug</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(banim_u_vanot(reu), t0)</span><br><span class="gloss">= HOLDS(banim-and-vanot(reu), t0)</span><br>The bulk entry: 207 after Serug; no close. (Reu&#x27;s implicit 239 equals Peleg&#x27;s — twin sums, arithmetic only; prose.)
+</td><td><span class="he">וַיְחִי רְעוּ אַחֲרֵי הוֹלִידוֹ אֶת־שְׂרוּג שֶׁבַע שָׁנִים וּמָאתַיִם שָׁנָה וַיּוֹלֶד בָּנִים וּבָנוֹת</span> · <i>va-yechi reu achare holid-o et-serug sheva shanim u-matayim shana va-yoled banim u-vanot</i><br><span class="gloss">= and-yechi reu achare holid-o serug seven shanim and-matayim shana and-yoled banim and-vanot</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The template at its plainest: a man the Torah keeps for exactly four tokens and never closes.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_11_22_23 · Gen.11.22-23 · <span class='expr'>SERUG_ROW_BEGETS_THE_FIRST_NACHOR</span></h3>
+<p><span class="he">וַיְחִי שְׂרוּג שְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־נָחוֹר … וַיּוֹלֶד בָּנִים וּבָנוֹת</span> · <i>va-yechi serug sheloshim shana va-yoled et-nachor … va-yoled banim u-vanot</i> · [EN-AID/JPS] And Serug lived thirty years, and begot Nahor. And Serug lived after he begot Nahor two hundred years, and begot sons and daughters.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויחי שרוג שלשים שנה</span> · <i>va-yechi serug sheloshim shana</i> · Serug at thirty (11:22 etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויולד את־נחור</span> · <i>va-yoled et-nachor</i> · and begot Nachor — the grandfather</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">beget(e7) ∧ Agent(e7, serug) ∧ Theme(e7, nachor_ben_serug)</span><br><span class="gloss">= beget(e7) ∧ Agent(e7, serug) ∧ Theme(e7, nachor-ben-serug)</span><br>Template row. Nachor (&#x27;Nahor&#x27;) — ONE LEMMA, TWO MEN [flagged]: Strong 5152&#x27;s tokens 1-4 are THIS man (Serug&#x27;s son, Terach&#x27;s father); tokens 5-8 are his GRANDSON (Terach&#x27;s son, 11:26-29); the machine splits the tokens as nachor_ben_serug / nachor_ben_terach (&#x27;Nachor son of Serug&#x27; / &#x27;Nachor son of Terach&#x27;) — the papponymy (grandchild named for grandfather) is the letter&#x27;s; the DB cannot distinguish them and the token-split is this draft&#x27;s [bold, flagged for review].
+</td><td><span class="he">וַיְחִי שְׂרוּג שְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־נָחוֹר</span> · <i>va-yechi serug sheloshim shana va-yoled et-nachor</i><br><span class="gloss">= and-yechi serug sheloshim shana and-yoled nachor</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(banim_u_vanot(serug), t0)</span><br><span class="gloss">= HOLDS(banim-and-vanot(serug), t0)</span><br>The bulk entry: a round 200 after Nachor; no close. Serug&#x27;s whole Torah career ends here (tokens 1-4 of 4, all in-span).
+</td><td><span class="he">וַיְחִי שְׂרוּג אַחֲרֵי הוֹלִידוֹ אֶת־נָחוֹר מָאתַיִם שָׁנָה וַיּוֹלֶד בָּנִים וּבָנוֹת</span> · <i>va-yechi serug achare holid-o et-nachor matayim shana va-yoled banim u-vanot</i><br><span class="gloss">= and-yechi serug achare holid-o nachor matayim shana and-yoled banim and-vanot</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">A name enters that the span will use for two different men — the ledger hands it down before the reader can blink.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_11_24_25 · Gen.11.24-25 · <span class='expr'>NACHOR_ROW_BEGETS_TERACH</span></h3>
+<p><span class="he">וַיְחִי נָחוֹר תֵּשַׁע וְעֶשְׂרִים שָׁנָה וַיּוֹלֶד אֶת־תָּרַח … וַיּוֹלֶד בָּנִים וּבָנוֹת</span> · <i>va-yechi nachor tesha ve-esrim shana va-yoled et-tarach … va-yoled banim u-vanot</i> · [EN-AID/JPS] And Nahor lived nine and twenty years, and begot Terah. And Nahor lived after he begot Terah a hundred and nineteen years, and begot sons and daughters.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויחי נחור תשע ועשרים שנה</span> · <i>va-yechi nachor tesha ve-esrim shana</i> · Nachor at twenty-nine — the span&#x27;s youngest begetter (11:24 etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויולד את־תרח</span> · <i>va-yoled et-tarach</i> · and begot Terach</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">beget(e8) ∧ Agent(e8, nachor_ben_serug) ∧ Theme(e8, terach)</span><br><span class="gloss">= beget(e8) ∧ Agent(e8, nachor-ben-serug) ∧ Theme(e8, terach)</span><br>Template row: the only sub-thirty begetting in either ledger (29). Terach debuts — Strong 8646, whose own last two Torah tokens (Num 33:27-28) are a WILDERNESS STATION named Terach: one lemma, a man here and a place forty years of text later [lemma-share flagged; named-only].
+</td><td><span class="he">וַיְחִי נָחוֹר תֵּשַׁע וְעֶשְׂרִים שָׁנָה וַיּוֹלֶד אֶת־תָּרַח</span> · <i>va-yechi nachor tesha ve-esrim shana va-yoled et-tarach</i><br><span class="gloss">= and-yechi nachor tesha and-esrim shana and-yoled tarach</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(banim_u_vanot(nachor_ben_serug), t0)</span><br><span class="gloss">= HOLDS(banim-and-vanot(nachor-ben-serug), t0)</span><br>The bulk entry: 119 after Terach — the span&#x27;s SHORTEST after-count (implicit 148, the line&#x27;s minimum; arithmetic, prose). The eighth row ends the pure template: no row after this one will ever run clean again.
+</td><td><span class="he">וַיְחִי נָחוֹר אַחֲרֵי הוֹלִידוֹ אֶת־תֶּרַח תְּשַׁע־עֶשְׂרֵה שָׁנָה וּמְאַת שָׁנָה וַיּוֹלֶד בָּנִים וּבָנוֹת</span> · <i>va-yechi nachor achare holid-o et-terach tesha-esre shana u-meat shana va-yoled banim u-vanot</i><br><span class="gloss">= and-yechi nachor achare holid-o terach tesha-esre shana and-meat shana and-yoled banim and-vanot</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The template&#x27;s last clean run: the youngest father, the shortest remainder, and the man whose name will be a desert campsite.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_11_26 · Gen.11.26 · <span class='expr'>TERACH_ROW_OPENS_THREE_SONS</span></h3>
+<p><span class="he">וַיְחִי־תֶרַח שִׁבְעִים שָׁנָה וַיּוֹלֶד אֶת־אַבְרָם אֶת־נָחוֹר וְאֶת־הָרָן</span> · <i>va-yechi-terach shivim shana va-yoled et-avram et-nachor ve-et-haran</i> · [EN-AID/JPS] And Terah lived seventy years, and begot Abram, Nahor, and Haran.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויחי־תרח שבעים שנה</span> · <i>va-yechi-terach shivim shana</i> · Terach at seventy (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויולד את־אברם את־נחור ואת־הרן</span> · <i>va-yoled et-avram et-nachor ve-et-haran</i> · and begot Abram, Nachor, Haran — the verse ends on the son who will die</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">beget(e9) ∧ Agent(e9, terach) ∧ Theme(e9, avram) ∧ Theme(e9, nachor_ben_terach) ∧ Theme(e9, haran)</span><br><span class="gloss">= beget(e9) ∧ Agent(e9, terach) ∧ Theme(e9, avram) ∧ Theme(e9, nachor-ben-terach) ∧ Theme(e9, haran)</span><br>THE OPEN-ROW DEVICE RECURS — gen_14&#x27;s 5:32, quoted: &#x27;The first TRIPLE begetting — one event, three named sons: Shem, Cham, Yafet (first tokens, all three). The next unit&#x27;s whole cast in one verse.&#x27; and &#x27;The last row OPENS and does not close: Noach at five hundred — no &quot;lived after&quot;, no total, NO DEATH VERSE.&#x27; Here the SECOND triple begetting — Avram (&#x27;Abram&#x27;), Nachor (nachor_ben_terach — the grandfather&#x27;s name handed down two rows after we met it), Haran (heh-spelled; Strong 2039, all six of his Torah tokens inside this span) — and the row likewise gets NO after-line and NO bulk entry. The named delta against 5:32: THIS open row closes IN-SPAN, at 11:32 — the letter that held Noach&#x27;s total hostage across the flood holds Terach&#x27;s only six verses, and everything between is inside the row.
+</td><td><span class="he">וַיְחִי־תֶרַח שִׁבְעִים שָׁנָה וַיּוֹלֶד אֶת־אַבְרָם אֶת־נָחוֹר וְאֶת־הָרָן</span> · <i>va-yechi-terach shivim shana va-yoled et-avram et-nachor ve-et-haran</i><br><span class="gloss">= and-yechi-terach shivim shana and-yoled avram nachor and-haran</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+</table>
+<div class="meta">The ninth row opens and stays open: three sons, no middle line, and a header about to be raised inside it.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_11_27 · Gen.11.27 · <span class='expr'>TERACH_HEADER_INSIDE_THE_OPEN_ROW</span></h3>
+<p><span class="he">וְאֵלֶּה תּוֹלְדֹת תֶּרַח תֶּרַח הוֹלִיד אֶת־אַבְרָם אֶת־נָחוֹר וְאֶת־הָרָן וְהָרָן הוֹלִיד אֶת־לוֹט</span> · <i>ve-ele toldot terach terach holid et-avram et-nachor ve-et-haran ve-haran holid et-lot</i> · [EN-AID/JPS] Now these are the generations of Terah. Terah begot Abram, Nahor, and Haran; and Haran begot Lot.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ואלה תולדת תרח תרח הוליד את־אברם את־נחור ואת־הרן</span> · <i>ve-ele toldot terach terach holid et-avram et-nachor ve-et-haran</i> · the seventh header, restating the three sons (etnachta arm ends on Haran)</div><div class="arm"><b>RIGHT</b><br><span class="he">והרן הוליד את־לוט</span> · <i>ve-haran holid et-lot</i> · and Haran begot Lot — the new fact</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>SECTION</td><td><span class="expr">SECTION(toledot_terach, ve-eleh toldot terach — the seventh toledot header labels; installs nothing)</span><br><span class="gloss">= SECTION(generations-terach, and-these toldot terach — the seventh generations header labels; installs nothing)</span><br>toledot (&#x27;descendants/generations&#x27;) TOKEN 7 — the second header of the unit (gen_24&#x27;s two-headers precedent; gen_14&#x27;s device quoted: &#x27;A header labels; it installs nothing&#x27;). The name doubles across the seam again (toldot TERACH: TERACH holid). The header restates 11:26&#x27;s three sons NEAR-VERBATIM with one named delta: the begetting verb drops from wayyiqtol va-yoled (&#x27;and-he-begot&#x27;, narrative) to bare PERFECT holid (&#x27;begot&#x27; — table tense, gen_24&#x27;s class). The machine fires NO second beget-event for Avram, Nachor, Haran: the row already fired at 11:26; a header labels [bold choice, flagged for review].
+</td><td><span class="he">וְאֵלֶּה תּוֹלְדֹת תֶּרַח</span> · <i>ve-ele toldot terach</i><br><span class="gloss">= and-ele toldot terach</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">beget(e10) ∧ Agent(e10, haran) ∧ Theme(e10, lot)</span><br>The header&#x27;s ONE new fact fires: Haran begot Lot (table perfect; Lot&#x27;s Torah debut, token 1 of 32). The only third-generation begetting in the span — the letter reaches past its own sons exactly once, for the boy it will need at 11:31 [and the chain will need at Sodom; named-only].
+</td><td><span class="he">וְהָרָן הוֹלִיד אֶת־לוֹט</span> · <i>ve-haran holid et-lot</i><br><span class="gloss">= and-haran holid lot</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+</table>
+<div class="meta">A header raised inside an open row: the ledger genre and the narrative genre now share one unclosed line.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_11_28 · Gen.11.28 · <span class='expr'>HARAN_DIES_BEFORE_HIS_FATHER</span></h3>
+<p><span class="he">וַיָּמָת הָרָן עַל־פְּנֵי תֶּרַח אָבִיו בְּאֶרֶץ מוֹלַדְתּוֹ בְּאוּר כַּשְׂדִּים</span> · <i>va-yamat haran al-pene terach avi-v be-eretz moladt-o be-ur kasdim</i> · [EN-AID/JPS] And Haran died in the presence of his father Terah in the land of his nativity, in Ur of the Chaldees.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וימת הרן על־פני תרח אביו</span> · <i>va-yamat haran al-pene terach avi-v</i> · Haran died before the face of Terach his father (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">בארץ מולדתו באור כשדים</span> · <i>be-eretz moladt-o be-ur kasdim</i> · in the land of his birth, in Ur of the Chaldeans — a death with an address</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">die(e11) ∧ Agent(e11, haran)</span><br>gen_14&#x27;s death-event class, quoted: &#x27;die(e3) ∧ Agent(e3, adam)&#x27; — &#x27;VA-YAMOT (&quot;and he died&quot;) — the refrain.&#x27; But this is NOT the refrain [named deltas, census-exact]: the span&#x27;s first death-token after NINE deathless rows, and it inverts the class three ways — (1) VERSE-INITIAL va-yamat (&#x27;and he died&#x27;, non-pausal) where all eight Gen 5 tokens are verse-final pausal va-yamot alone on the verse-end; (2) NUMBERLESS — Haran is the only ledger man in two chapters with no age at all; (3) the dead man is a SON dying al-pene (&#x27;in the presence of&#x27;, lit. &#x27;upon the face of&#x27;) his FATHER — the corpus&#x27;s first son-before-father death, in the ledger genre whose entire engine is fathers dying after full centuries [characterization flagged; the chain reads al-pene as &#x27;in the lifetime of&#x27; — named-only; Onkelos keeps the face-idiom literally: al apei].
+</td><td><span class="he">וַיָּמָת הָרָן עַל־פְּנֵי תֶּרַח אָבִיו</span> · <i>va-yamat haran al-pene terach avi-v</i><br><span class="gloss">= and-yamat haran upon-pene terach avi-v</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(be_eretz_moladto_be_ur_kasdim(haran), t0)</span><br><span class="gloss">= HOLDS(in-earth-moladto-in-ur-kasdim(haran), t0)</span><br>THE FIRST LOCATED DEATH: no Gen 5 death has a place; Haran&#x27;s has two nested ones — the land of his moledet (&#x27;nativity/birthplace&#x27;: the word&#x27;s TORAH DEBUT is inside a death notice; its token 2 is 12:1&#x27;s &#x27;from your moledet&#x27; — career fact, prose, seam not encoded), and Ur Kasdim (&#x27;Ur of the Chaldees&#x27;: both lemmas&#x27; Torah debuts; the pair never separates in its three Torah tokens — 11:28, 11:31, 15:7).
+</td><td><span class="he">בְּאֶרֶץ מוֹלַדְתּוֹ בְּאוּר כַּשְׂדִּים</span> · <i>be-eretz moladt-o be-ur kasdim</i><br><span class="gloss">= earth moladt-o in-ur kasdim</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">ur_kasdim are READ without prior install (known geography)</span><br><span class="gloss">= ur-kasdim are READ without prior install (known geography)</span><br>flag, not fix</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Death returns to the ledger upside down: before the total, before the father, with an address — and carrying the birthplace-word the next unit&#x27;s first verse will demand be abandoned.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_11_29 · Gen.11.29 · <span class='expr'>THE_WIVES_TAKEN_ONE_GENEALOGY_WITHHELD</span></h3>
+<p><span class="he">וַיִּקַּח אַבְרָם וְנָחוֹר לָהֶם נָשִׁים שֵׁם אֵשֶׁת־אַבְרָם שָׂרָי וְשֵׁם אֵשֶׁת־נָחוֹר מִלְכָּה בַּת־הָרָן אֲבִי־מִלְכָּה וַאֲבִי יִסְכָּה</span> · <i>va-yiqach avram ve-nachor la-hem nashim shem eshet-avram saray ve-shem eshet-nachor milka bat-haran avi-milka va-avi yiska</i> · [EN-AID/JPS] And Abram and Nahor took them wives: the name of Abram&#x27;s wife was Sarai; and the name of Nahor&#x27;s wife, Milcah, the daughter of Haran, the father of Milcah, and the father of Iscah.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויקח אברם ונחור להם נשים</span> · <i>va-yiqach avram ve-nachor la-hem nashim</i> · Abram and Nachor took wives — singular verb, two takers (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">שם אשת־אברם שרי ושם אשת־נחור מלכה בת־הרן אבי־מלכה ואבי יסכה</span> · <i>shem eshet-avram saray ve-shem eshet-nachor milka bat-haran avi-milka va-avi yiska</i> · the two names: Sarai; Milcah daughter of Haran — the verse ends on Yiska</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">take(e12) ∧ Agent(e12, avram) ∧ Agent(e12, nachor_ben_terach) ∧ Theme(e12, nashim)</span><br><span class="gloss">= take(e12) ∧ Agent(e12, avram) ∧ Agent(e12, nachor-ben-terach) ∧ Theme(e12, nashim)</span><br>va-yiqach (&#x27;and he TOOK&#x27;) — SINGULAR verb, COMPOUND subject (Abram AND Nachor), plural la-hem (&#x27;for themselves&#x27;) [grammar wobble held, not smoothed]. The take-verb enters the span; it will move the whole family two verses later.
+</td><td><span class="he">וַיִּקַּח אַבְרָם וְנָחוֹר לָהֶם נָשִׁים</span> · <i>va-yiqach avram ve-nachor la-hem nashim</i><br><span class="gloss">= and-yiqach avram and-nachor to-hem nashim</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shem_eshet_avram_saray, t0) ∧ HOLDS(shem_eshet_nachor_milkah, t0)</span><br><span class="gloss">= HOLDS(shem-wife-of-avram-saray, t0) ∧ HOLDS(shem-wife-of-nachor-milkah, t0)</span><br>Two name-facts by REPORT — shem (&#x27;name of&#x27;, the common noun Strong 8034, two tokens here just after Shem-the-person&#x27;s lemma exits at 11:11): &#x27;the name of Abram&#x27;s wife: Sarai&#x27; (her Torah debut; her 17 tokens end at 17:15, the rename — career fact, prose), &#x27;the name of Nachor&#x27;s wife: Milcah&#x27; (debut; her line returns as Rivkah&#x27;s genealogy, 22:20-24:47 — prose). NO va-yiqra (&#x27;and he called&#x27;) formula, NO registry write (gen_24&#x27;s report-naming rule).
+</td><td><span class="he">שֵׁם אֵשֶׁת־אַבְרָם שָׂרָי וְשֵׁם אֵשֶׁת־נָחוֹר מִלְכָּה</span> · <i>shem eshet-avram saray ve-shem eshet-nachor milka</i><br><span class="gloss">= shem wife-of-avram saray and-shem wife-of-nachor milka</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(milkah_bat_haran, t0) ∧ HOLDS(haran_avi_milkah_va_avi_yiskah, t0)</span><br><span class="gloss">= HOLDS(milkah-bat-haran, t0) ∧ HOLDS(haran-avi-milkah-and-avi-yiskah, t0)</span><br>The letter documents ONE bride&#x27;s whole pedigree — Milcah, daughter of Haran, &#x27;father of Milcah and father of Yiska&#x27; (Yiska [&#x27;Iscah&#x27;] — a TORAH HAPAX: named once, verse-final, never seen again) — so Nachor married his dead brother&#x27;s daughter [letter fact, no comment] — and in the same verse gives SARAI NOTHING: no father, no line. The louder withholding for its neighbor [OPEN — held; the chain&#x27;s Yiska-is-Sarai identification and 20:12&#x27;s half-sister claim are named-only, out of machine].
+</td><td><span class="he">מִלְכָּה בַּת־הָרָן אֲבִי־מִלְכָּה וַאֲבִי יִסְכָּה</span> · <i>milka bat-haran avi-milka va-avi yiska</i><br><span class="gloss">= milka bat-haran avi-milka and-avi yiska</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Two brides enter on one singular verb: one arrives with a family tree grown from a dead man, the other with a name and a silence.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_11_30 · Gen.11.30 · <span class='expr'>SARAI_BARREN_THE_DOUBLED_ABSENCE</span></h3>
+<p><span class="he">וַתְּהִי שָׂרַי עֲקָרָה אֵין לָהּ וָלָד</span> · <i>va-tehi saray aqara en lah valad</i> · [EN-AID/JPS] And Sarai was barren; she had no child.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ותהי שרי עקרה</span> · <i>va-tehi saray aqara</i> · and Sarai was BARREN (etnachta arm rests on the barren-word)</div><div class="arm"><b>RIGHT</b><br><span class="he">אין לה ולד</span> · <i>en lah valad</i> · there-is-not to her a child — the hapax on the verse-end</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(saray_akarah, t0)</span><br><span class="gloss">= HOLDS(saray-akarah, t0)</span><br>akarah (&#x27;barren&#x27;) — TORAH DEBUT, on Sarai (DB gloss &#x27;sterile&#x27;; GLOSS_FIX applied). va-tehi (&#x27;and she was&#x27;) is the span&#x27;s ONLY FEMININE VERB — twenty-two masculine verbs live, beget, die, take, go, settle around it; the ledger&#x27;s one &#x27;she&#x27; IS the barren fact [morph fact, DB-verified]. The word&#x27;s career (25:21 Rivkah, 29:31 Rachel, then the law&#x27;s reversal at Exod 23:26 and Deut 7:14) is PROSE + [OPEN] — careers never enter machine state.
+</td><td><span class="he">וַתְּהִי שָׂרַי עֲקָרָה</span> · <i>va-tehi saray aqara</i><br><span class="gloss">= and-tehi saray aqara</span></td><td class='cite'>TIR-032</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ein_lah_valad, t0)</span><br><span class="gloss">= HOLDS(ein-lah-valad, t0)</span><br>The letter DOUBLES the absence — the state (akarah), then its consequence: ein lah valad (&#x27;there-is-not to her a child&#x27;). ein (&#x27;there-is-not&#x27;) token 4 — its early career is a chain of absences: no man to till (2:5), Chanokh who was-not (5:24, gen_14&#x27;s ve-einenu), and now no child. valad (&#x27;child/offspring&#x27;; DB gloss &#x27;boy&#x27;, GLOSS_FIX applied) — a TORAH HAPAX, seated verse-final: the ledger of begettings stops at a woman for the first time, to record the one child that does not exist. Both facts stand OPEN at the unit wall — nothing in-span answers them [the next unit&#x27;s first verse speaks into exactly this state; seam not encoded].
+</td><td><span class="he">אֵין לָהּ וָלָד</span> · <i>en lah valad</i><br><span class="gloss">= en lah valad</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Six words, the span&#x27;s shortest verse: the one feminine verb, the debut of barrenness, and a child-word the Torah will never use again — the deathless ledger meets the birthless row.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_11_31 · Gen.11.31 · <span class='expr'>THE_JOURNEY_STATED_STOPPED_SETTLED</span></h3>
+<p><span class="he">וַיִּקַּח תֶּרַח אֶת־אַבְרָם בְּנוֹ וְאֶת־לוֹט בֶּן־הָרָן בֶּן־בְּנוֹ וְאֵת שָׂרַי כַּלָּתוֹ אֵשֶׁת אַבְרָם בְּנוֹ וַיֵּצְאוּ אִתָּם מֵאוּר כַּשְׂדִּים לָלֶכֶת אַרְצָה כְּנַעַן וַיָּבֹאוּ עַד־חָרָן וַיֵּשְׁבוּ שָׁם</span> · <i>va-yiqach terach et-avram ben-o ve-et-lot ben-haran ben-ben-o ve-et saray kalat-o eshet avram ben-o va-yetzu et-m me-ur kasdim la-lekhet artza kenaan va-yavou ad-charan va-yeshvu sham</i> · [EN-AID/JPS] And Terah took Abram his son, and Lot the son of Haran, his son&#x27;s son, and Sarai his daughter-in-law, his son Abram&#x27;s wife; and they went forth with them from Ur of the Chaldees, to go into the land of Canaan; and they came unto Haran, and dwelt there.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויקח תרח את־אברם בנו ואת־לוט בן־הרן בן־בנו ואת שרי כלתו אשת אברם בנו</span> · <i>va-yiqach terach et-avram ben-o ve-et-lot ben-haran ben-ben-o ve-et saray kalat-o eshet avram ben-o</i> · the taking-roster: son, son&#x27;s son, daughter-in-law (etnachta arm ends on the third ben-o)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויצאו אתם מאור כשדים ללכת ארצה כנען ויבאו עד־חרן וישבו שם</span> · <i>va-yetzu et-m me-ur kasdim la-lekhet artza kenaan va-yavou ad-charan va-yeshvu sham</i> · out of Ur, toward Canaan, as far as Charan — and they settled there</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">take(e13) ∧ Agent(e13, terach) ∧ Theme(e13, avram) ∧ Theme(e13, lot) ∧ Theme(e13, saray)</span><br>The row-holder acts inside his own open row: Terach TAKES the three. The roster is relation-obsessed — ben-o (&#x27;his son&#x27;) x3 + ben (&#x27;son of&#x27;) x2, five son-words in one verse: Lot is &#x27;son of Haran, son of his son&#x27; (the dead man named in his boy&#x27;s pedigree), Sarai is kalato (&#x27;his daughter-in-law&#x27; — kalah&#x27;s Torah debut; its next tokens are Tamar&#x27;s, Gen 38, then the incest laws — prose) &#x27;wife of Abram his son&#x27;. The dead brother&#x27;s son and the barren wife: the take-list is the two open wounds of 11:28-30 [letter&#x27;s selection; Onkelos renders this take-verb u-devar (&#x27;and he LED&#x27;) while keeping 11:29&#x27;s wives-taking as u-nesiv (&#x27;and he took&#x27;) — the buffer splits by object; dual-track].
+</td><td><span class="he">וַיִּקַּח תֶּרַח אֶת־אַבְרָם בְּנוֹ וְאֶת־לוֹט בֶּן־הָרָן בֶּן־בְּנוֹ וְאֵת שָׂרַי כַּלָּתוֹ אֵשֶׁת אַבְרָם בְּנוֹ</span> · <i>va-yiqach terach et-avram ben-o ve-et-lot ben-haran ben-ben-o ve-et saray kalat-o eshet avram ben-o</i><br><span class="gloss">= and-yiqach terach avram ben-o and-lot ben-haran ben-ben-o and saray kalat-o wife-of avram ben-o</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">go_out(e14) ∧ Agent(e14, terach) ∧ Agent(e14, avram) ∧ Agent(e14, lot) ∧ Agent(e14, saray)</span><br><span class="gloss">= go-out(e14) ∧ Agent(e14, terach) ∧ Agent(e14, avram) ∧ Agent(e14, lot) ∧ Agent(e14, saray)</span><br>va-yetzu ITAM — &#x27;and they went out WITH THEM&#x27; (et-m, Strong 854 &#x27;with&#x27;): the taker took three, and the exit-verb is PLURAL with a with-them no antecedent cleanly serves [crux held OPEN, not resolved; Onkelos preserves it — u-nefaku IMHON, &#x27;and they went out with them&#x27;; the machine lists the four named travelers as Agents and decides nothing about &#x27;them&#x27;].
+</td><td><span class="he">וַיֵּצְאוּ אִתָּם מֵאוּר כַּשְׂדִּים</span> · <i>va-yetzu et-m me-ur kasdim</i><br><span class="gloss">= and-yetzu m from-ur kasdim</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(la_lekhet_artzah_kenaan, t0)</span><br><span class="gloss">= HOLDS(to-lekhet-artzah-kenaan, t0)</span><br>THE STATED DESTINATION: la-lekhet (&#x27;to go&#x27; — the go-verb&#x27;s token 4; token 5 is 12:1&#x27;s lekh, &#x27;go!&#x27; — career fact, prose, seam not encoded) artzah Kenaan (&#x27;toward the land of Canaan&#x27;, directional-heh suffix). A purpose the verse itself does not fulfill — held as a standing fact that nothing in-span receipts [OPEN: the letter&#x27;s own suspension; 12:5 repeats this exact phrase and adds &#x27;and they CAME&#x27; — out of span, named-only].
+</td><td><span class="he">לָלֶכֶת אַרְצָה כְּנַעַן</span> · <i>la-lekhet artza kenaan</i><br><span class="gloss">= to-lekhet artza kenaan</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">come(e15) ∧ Agent(e15, terach) ∧ Agent(e15, avram) ∧ Agent(e15, lot) ∧ Agent(e15, saray)</span><br>&#x27;And they came AS FAR AS Charan&#x27; — ad (&#x27;as far as/until&#x27;), the letter&#x27;s own measure of the shortfall. Charan the PLACE — chet-spelled (guttural ch), Strong 2771 — is NOT the man Haran — heh-spelled (soft h), Strong 2039 [GLOSS_FIX applied: the DB glosses BOTH &#x27;Haran&#x27;; this unit keeps them apart everywhere; any echo between the dead son&#x27;s name and the stopping-city&#x27;s is sound only, not letter — no connection encoded].
+</td><td><span class="he">וַיָּבֹאוּ עַד־חָרָן</span> · <i>va-yavou ad-charan</i><br><span class="gloss">= and-yavou until-charan</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">settle(e16) ∧ Agent(e16, terach) ∧ Agent(e16, avram) ∧ Agent(e16, lot) ∧ Agent(e16, saray)</span><br>va-yeshvu sham (&#x27;and they settled there&#x27;) — the EXACT two-word close of 11:2 (Babel&#x27;s settling in Shinar), and the settle- verb&#x27;s consecutive tokens (3 then 4). The family fleeing the scattered world re-runs its move [CROSS-UNIT ARC: 11:2 lives in frozen gen_25 — prose + [OPEN] per the standing calibration; NOT a settled cycle in this machine; nothing pops].
+</td><td><span class="he">וַיֵּשְׁבוּ שָׁם</span> · <i>va-yeshvu sham</i><br><span class="gloss">= and-yeshvu there</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">charan, eretz_kenaan are READ without prior install (known geography)</span><br><span class="gloss">= charan, earth-kenaan are READ without prior install (known geography)</span><br>flag, not fix (two flags: the stopping-city and the never-reached destination)</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The span&#x27;s longest verse carries its whole geography: out of the death-city, aimed at Canaan, halted at Charan — a journey the letter leaves standing exactly half-done.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_11_32 · Gen.11.32 · <span class='expr'>TERACH_ROW_CLOSES_WITHOUT_ALL</span></h3>
+<p><span class="he">וַיִּהְיוּ יְמֵי־תֶרַח חָמֵשׁ שָׁנִים וּמָאתַיִם שָׁנָה וַיָּמָת תֶּרַח בְּחָרָן</span> · <i>va-yihyu yeme-terach chamesh shanim u-matayim shana va-yamat terach be-charan</i> · [EN-AID/JPS] And the days of Terah were two hundred and five years; and Terah died in Haran.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויהיו ימי־תרח חמש שנים ומאתים שנה</span> · <i>va-yihyu yeme-terach chamesh shanim u-matayim shana</i> · the days of Terach: two hundred and five years (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וימת תרח בחרן</span> · <i>va-yamat terach be-charan</i> · and Terach died in Charan — three words on the arm the refrain held alone</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(yemei_terach_205_shanah, t0)</span><br><span class="gloss">= HOLDS(days-of-terach-205-year, t0)</span><br>The row that opened at 11:26 CLOSES — the span&#x27;s ONLY stated total, in the closure grammar of frozen gen_23&#x27;s 9:29, quoted: &#x27;HOLDS(kol_yemei_noach_950_shanah, t1)&#x27; … &#x27;va-yihyu kol-yemei-Noach tesha meot shanah va-chamishim shanah&#x27; — with NAMED DELTA #1: the letter writes yeme-terach (&#x27;the DAYS of Terach&#x27;), NOT kol-yemei (&#x27;ALL the days of&#x27;) — the first ledger total in the corpus without its &#x27;all&#x27;, and the machine token follows the letter: yemei_terach_205_shanah, not kol_yemei [bold token choice, flagged]. No &#x27;after begetting&#x27; middle line ever appeared; the arithmetic 70 + Abram&#x27;s years vs 205 is the chain&#x27;s famous problem, not the machine&#x27;s [named-only].
+</td><td><span class="he">וַיִּהְיוּ יְמֵי־תֶרַח חָמֵשׁ שָׁנִים וּמָאתַיִם שָׁנָה</span> · <i>va-yihyu yeme-terach chamesh shanim u-matayim shana</i><br><span class="gloss">= and-yihyu yeme-terach chamesh shanim and-matayim shana</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">die(e17) ∧ Agent(e17, terach)</span><br>gen_14&#x27;s death-event class (quoted at 11:28) fires a second and last time — with NAMED DELTA #2 against gen_23&#x27;s 9:29, quoted: &#x27;The refrain-word stands ALONE as the verse-final tree arm — one word on its own branch [tree fact].&#x27; HERE the verse-final arm is THREE words — va-yamat terach be-charan (&#x27;and Terach died in Charan&#x27;): the death-verb non-pausal, the dead man re-named, and the second LOCATED death of the span closing on the city&#x27;s name. The refrain&#x27;s isolation is gone; death now happens somewhere, to someone named, on the road to somewhere else [tree fact, DB-verified; characterization flagged].
+</td><td><span class="he">וַיָּמָת תֶּרַח בְּחָרָן</span> · <i>va-yamat terach be-charan</i><br><span class="gloss">= and-yamat terach in-charan</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The ledger gets its one close: two hundred and five, no &#x27;all&#x27;, and a place-name where the lone verb used to stand — the row-holder dies in the stopping-city with the destination still standing open one operator above.</div>
+</div>
+<h2>State machine</h2>
+<div class="meta">The deathless ledger (standalone; registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER).</div>
+<table><tr><th>state</th><th>meaning</th></tr>
+<tr><td><b>S_boot</b></td><td>Before 11:10 — all registers empty (standalone unit)</td></tr>
+<tr><td><b>S_row_shem</b></td><td>After 11:10-11 — the sixth toledot (&#x27;descendants&#x27;) header; row 1 fired and holds: beget + flood-anchor facts + bulk; NO total, NO death (genre delta, prose)</td></tr>
+<tr><td><b>S_ledger_runs</b></td><td>After 11:12-25 — seven more deathless rows run: beget-events e2-e8, bulk facts x7; the fronted-perfect pair (rows 2-3), the papponymy name handed down; zero death-tokens</td></tr>
+<tr><td><b>S_open_row</b></td><td>After 11:26 — Terach&#x27;s row OPENS in 5:32&#x27;s shape: one beget, three Themes; no after-line, no bulk, no close</td></tr>
+<tr><td><b>S_second_header</b></td><td>After 11:27 — the seventh toledot header raised INSIDE the open row; no re-fire for the three sons; Haran-begot-Lot fires</td></tr>
+<tr><td><b>S_first_grief</b></td><td>After 11:28 — die(e11): verse-initial, numberless, LOCATED (moledet [&#x27;birthplace&#x27;] debuts in a death notice); ur_kasdim flagged as read</td></tr>
+<tr><td><b>S_wives</b></td><td>After 11:29 — take(e12) singular-verb wobble; four name-facts by report (no registry writes); Sarai&#x27;s parentage withheld [OPEN]</td></tr>
+<tr><td><b>S_barren</b></td><td>After 11:30 — saray_akarah + ein_lah_valad HOLD (the doubled absence; the feminine singleton; the hapax verse-final); both open at the wall</td></tr>
+<tr><td><b>S_stalled</b></td><td>After 11:31 — take(e13), go_out(e14, itam crux held), come(e15, ad Charan), settle(e16); la_lekhet_artzah_kenaan stands unfinished [OPEN]; charan + eretz_kenaan flagged as read</td></tr>
+<tr><td><b>S_row_closed</b></td><td>After 11:32 — the open row closes: yemei_terach_205_shanah (no kol [&#x27;all&#x27;]) + die(e17) located; SPECS empty end-to-end; the unit ends at the wall of the call</td></tr>
+</table><table><tr><th>from</th><th>to</th><th>via</th></tr>
+<tr><td>S_boot</td><td>S_row_shem</td><td>STEP_Gn_11_10_11</td></tr>
+<tr><td>S_row_shem</td><td>S_ledger_runs</td><td>STEP_Gn_11_12_13</td></tr>
+<tr><td>S_ledger_runs</td><td>S_ledger_runs</td><td>STEP_Gn_11_14_15</td></tr>
+<tr><td>S_ledger_runs</td><td>S_ledger_runs</td><td>STEP_Gn_11_16_17</td></tr>
+<tr><td>S_ledger_runs</td><td>S_ledger_runs</td><td>STEP_Gn_11_18_19</td></tr>
+<tr><td>S_ledger_runs</td><td>S_ledger_runs</td><td>STEP_Gn_11_20_21</td></tr>
+<tr><td>S_ledger_runs</td><td>S_ledger_runs</td><td>STEP_Gn_11_22_23</td></tr>
+<tr><td>S_ledger_runs</td><td>S_ledger_runs</td><td>STEP_Gn_11_24_25</td></tr>
+<tr><td>S_ledger_runs</td><td>S_open_row</td><td>STEP_Gn_11_26</td></tr>
+<tr><td>S_open_row</td><td>S_second_header</td><td>STEP_Gn_11_27</td></tr>
+<tr><td>S_second_header</td><td>S_first_grief</td><td>STEP_Gn_11_28</td></tr>
+<tr><td>S_first_grief</td><td>S_wives</td><td>STEP_Gn_11_29</td></tr>
+<tr><td>S_wives</td><td>S_barren</td><td>STEP_Gn_11_30</td></tr>
+<tr><td>S_barren</td><td>S_stalled</td><td>STEP_Gn_11_31</td></tr>
+<tr><td>S_stalled</td><td>S_row_closed</td><td>STEP_Gn_11_32</td></tr>
+</table>
+<div class="note"><b>AFTER_S_row_closed</b> — TIME: t0 only. WORLD: ZERO installs; 3 presupposed reads flagged (ur_kasdim, charan, eretz_kenaan — geography read, never installed). REGISTRY: ZERO writes — no va-yiqra (&#x27;and he called&#x27;) formula in the span; Sarai, Milcah, Yiska, Lot, Charan all enter by report (gen_24&#x27;s rule). EVENTS: 17 — beget x10 (eight clean rows; the triple at 11:26; Haran-begot-Lot in table perfect), die x2 (BOTH deviant: 11:28 verse-initial/numberless/located/son- before-father; 11:32 kol-less total + located close sharing the verse-final arm), take x2, go_out x1 (the itam [&#x27;with them&#x27;] crux held), come x1 (ad [&#x27;as far as&#x27;] Charan), settle x1 (va-yeshvu sham — 11:2&#x27;s exact phrase; cross-unit arc, prose only). Standing facts (16): the age-idiom + flood-anchor pair (ha-mabul [&#x27;the deluge&#x27;] exits the corpus on row 1&#x27;s verse-end), bulk banim_u_vanot (&#x27;sons and daughters&#x27;) x8, the two wife-name facts + Milcah&#x27;s pedigree pair (Sarai&#x27;s parentage withheld [OPEN]), saray_akarah + ein_lah_valad (&#x27;Sarai barren&#x27; + &#x27;no child to her&#x27; — the doubled absence, BOTH OPEN at the wall), the located-death fact of 11:28, la_lekhet_artzah_kenaan (the stated destination, UNFINISHED [OPEN] — came as far as Charan, settled), and yemei_terach_205_shanah (the span&#x27;s only total — no kol [&#x27;all&#x27;]). THE GENRE DELTA (prose, not state): NINE rows run gen_14&#x27;s template minus its last two members — zero totals, zero death-tokens in 11:10-26 (census exact against Gen 5&#x27;s eight); the verse-end throne the refrain owned seats the heir&#x27;s name on every begets-verse and u-vanot (&#x27;and daughters&#x27;) on every after-verse; the missing closes fire NOTHING (gen_14&#x27;s Chanokh negative-space device, generalized). Corpus exits inside the span (prose): mabul 12/12, Shem-the-name 14/14 (inside his own header), Haran-the-person 6/6, Reu 4/4, Serug 4/4; Arpachshad, Shelach, Peleg close their careers in the rows. SPECS: EMPTY end-to-end (gen_14&#x27;s class — no demand is ever pushed; the unit owes nothing). TESTS: EMPTY. LEDGER: EMPTY (the register stays the creation week&#x27;s; this ledger is genre). FLAGS (3): read_before_install x3. The machine ends with a closed row, a barren fact doubled and open, and a journey stopped at ad (&#x27;as far as&#x27;) — the state 12:1 speaks into, one verse past the wall.</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>The header and the first deathless row: after STEP_Gn_11_10_11</td><td>All registers empty (standalone unit).</td><td>Facts shem-ben-meat-shanah / shenatayim-achar-ha-mabul HOLD; Facts banim-u-vanot(shem) HOLD; SPECS empty.<br><span class="gloss">= Facts shem-ben-meat-year / shenatayim-achar-the-mabul HOLD; Facts banim-u-vanot(shem) HOLD; SPECS empty.</span></td><td><span class="he">שְׁנָתַיִם אַחַר הַמַּבּוּל</span> · <i>shenatayim achar ha-mabul</i><br><span class="gloss">= shenatayim achar the-mabul</span></td></tr>
+<tr><td><b>S2</b></td><td>The fronted-perfect pair runs deathless: after STEP_Gn_11_14_15</td><td>S1 state plus row 2. (Rows 2-3 fired in the fronted perfect; zero die-events on the trace — the deathless run, asserted in prose per gen_14&#x27;s Chanokh device.)</td><td>Facts banim-u-vanot(arpakhshad) HOLD; Facts banim-u-vanot(shelach) HOLD; SPECS empty.</td><td><span class="he">וְשֶׁלַח חַי שְׁלֹשִׁים שָׁנָה</span> · <i>ve-shelach chay sheloshim shana</i><br><span class="gloss">= and-shelach chay sheloshim shana</span></td></tr>
+<tr><td><b>S3</b></td><td>The papponymy row, the name handed down: after STEP_Gn_11_24_25</td><td>S2 state plus rows 4-7. (Eight rows fired, zero die-events, zero totals held — prose assertion; the machine holds no total the letter does not state.)</td><td>Facts banim-u-vanot(nachor-ben-serug) HOLD; SPECS empty; no test, no name.</td><td><span class="he">וַיּוֹלֶד אֶת־תָּרַח</span> · <i>va-yoled et-tarach</i><br><span class="gloss">= and-yoled tarach</span></td></tr>
+<tr><td><b>S4</b></td><td>The open row: three sons, no close: after STEP_Gn_11_26</td><td>S3 state. (beget(e9) fired with three Themes — avram, nachor_ben_terach, haran; NO bulk fact and NO total for terach: the open row, asserted in prose — the absence is the state.)</td><td>SPECS empty; no test, no name; LEDGER stays EMPTY (open transaction).</td><td><span class="he">וַיּוֹלֶד אֶת־אַבְרָם אֶת־נָחוֹר וְאֶת־הָרָן</span> · <i>va-yoled et-avram et-nachor ve-et-haran</i><br><span class="gloss">= and-yoled avram nachor and-haran</span></td></tr>
+<tr><td><b>S5</b></td><td>The second header inside the row, one new begetting: after STEP_Gn_11_27</td><td>S4 state. (The SECTION labels only — no second beget-event fired for the three sons [the bold no-refire choice]; beget(e10, haran -&gt; lot) fired as the header&#x27;s one new fact — prose assertions.)</td><td>SPECS empty; no test, no name.</td><td><span class="he">וְהָרָן הוֹלִיד אֶת־לוֹט</span> · <i>ve-haran holid et-lot</i><br><span class="gloss">= and-haran holid lot</span></td></tr>
+<tr><td><b>S6</b></td><td>The first death, inverted and located: after STEP_Gn_11_28</td><td>S5 state. (die(e11, haran) fired — the span&#x27;s first death after nine deathless rows; verse-initial, numberless, located — prose assertion.)</td><td>Facts be-eretz-moladto-be-ur-kasdim HOLD; flags ur_kasdim as read-before-install.<br><span class="gloss">= Facts in-earth-moladto-in-ur-kasdim HOLD; flags ur-kasdim as read-before-install.</span></td><td><span class="he">וַיָּמָת הָרָן עַל־פְּנֵי תֶּרַח אָבִיו</span> · <i>va-yamat haran al-pene terach aviv</i><br><span class="gloss">= and-yamat haran upon-pene terach aviv</span></td></tr>
+<tr><td><b>S7</b></td><td>The wives by report, the withheld line: after STEP_Gn_11_29</td><td>S6 state. (take(e12) fired on the singular-verb wobble — prose assertion.)</td><td>Facts shem-eshet-avram-saray HOLD; Facts milkah-bat-haran HOLD; no test, no name.<br><span class="gloss">= Facts shem-wife-of-avram-saray HOLD; Facts milkah-bat-haran HOLD; no test, no name.</span></td><td><span class="he">שֵׁם אֵשֶׁת־אַבְרָם שָׂרָי</span> · <i>shem eshet-avram saray</i><br><span class="gloss">= shem wife-of-avram saray</span></td></tr>
+<tr><td><b>S8</b></td><td>The doubled absence holds open: after STEP_Gn_11_30</td><td>S7 state. (Nothing in-span answers either fact — both stand open at the unit wall; prose assertion.)</td><td>Facts saray-akarah HOLD; Facts ein-lah-valad HOLD; SPECS empty.</td><td><span class="he">אֵין לָהּ וָלָד</span> · <i>ein lah valad</i><br><span class="gloss">= ein lah valad</span></td></tr>
+<tr><td><b>S9</b></td><td>The journey stated, stopped, settled: after STEP_Gn_11_31</td><td>S8 state. (take(e13), go_out(e14 — the itam crux held), come(e15, ad Charan), settle(e16) fired; no arrival at kenaan on the trace — the unfinished journey, prose assertions.)</td><td>Facts la-lekhet-artzah-kenaan HOLD; flags charan/eretz_kenaan as read-before-install.<br><span class="gloss">= Facts to-lekhet-artzah-kenaan HOLD; flags charan/earth-kenaan as read-before-install.</span></td><td><span class="he">וַיָּבֹאוּ עַד־חָרָן וַיֵּשְׁבוּ שָׁם</span> · <i>va-yavou ad-charan va-yeshvu sham</i><br><span class="gloss">= and-yavou until-charan and-yeshvu there</span></td></tr>
+<tr><td><b>S10</b></td><td>The row closes without &#x27;all&#x27;, the unit owes nothing: after STEP_Gn_11_32</td><td>S9 state. (die(e17, terach) fired — the kol-less located close; WORLD installs zero — prose assertions.)</td><td>Facts yemei-terach-205-shanah HOLD; SPECS empty; no test, no name; LEDGER stays EMPTY (open transaction).<br><span class="gloss">= Facts days-of-terach-205-year HOLD; SPECS empty; no test, no name; LEDGER stays EMPTY (open transaction).</span></td><td><span class="he">וַיָּמָת תֶּרַח בְּחָרָן</span> · <i>va-yamat terach be-charan</i><br><span class="gloss">= and-yamat terach in-charan</span></td></tr>
+<tr><td><b>S11_negative</b></td><td>Negative: the LET? contract guard</td><td>A synthetic LET? demand (the machine&#x27;s own contract self-test).</td><td>LET? never auto-upgrades: resolution without citation must REFUSE; with a per-unit citation it may resolve — entries pop demands; nothing but citation moves a mood.</td><td><span class="he">וָלָד</span> · <i>valad</i><br><span class="gloss">= valad</span></td></tr>
+<tr><td><b>S12_negative</b></td><td>Negative: flags never block</td><td>A synthetic commit with TESTS empty (the machine&#x27;s own contract self-test).</td><td>Cycle close with TESTS empty must be FLAGGED, never blocked.<br><span class="gloss">= Cycle close with TESTS empty must in FLAGGED, never blocked.</span></td><td></td></tr>
+</table>
+<h2>Exports (reusable patterns)</h2><table><tr><th>id</th><th>content</th></tr>
+<tr><td>EXPORT_deathless_ledger</td><td><span class="he">וַיְחִי … וַיּוֹלֶד … וַיּוֹלֶד בָּנִים וּבָנוֹת</span> · <i>va-yechi … va-yoled … va-yoled banim u-vanot</i> · the corpus&#x27;s SECOND ledger deletes the death-column: gen_14&#x27;s six-member template (&#x27;lived N / begot X / lived after / sons-and-daughters / all-the-days N / AND HE DIED&#x27; — genre_note quoted) runs NINE times as four members — zero stated totals, ZERO death-verb tokens in 11:10-26 (census exact; Gen 5 had eight verse-final pausal refrains) — and the silluq (verse-end) throne the refrain owned seats the HEIR&#x27;S NAME on every begets-verse and u-vanot (&#x27;and daughters&#x27;) on every after-verse [accent facts]; the implicit sums (600/438/433/464/239/239/230/148) are arithmetic, not letter — the machine holds no total the text does not state; three men&#x27;s ENTIRE Torah careers (Haran 6/6, Reu 4/4, Serug 4/4) and the flood-word&#x27;s last token live inside the rows</td></tr>
+<tr><td>EXPORT_two_deviant_deaths</td><td><span class="he">וַיָּמָת הָרָן עַל־פְּנֵי תֶּרַח אָבִיו … וַיָּמָת תֶּרַח בְּחָרָן</span> · <i>va-yamat haran al-pene terach aviv … va-yamat terach be-charan</i> · death returns to the ledger twice, both times DEVIANT — 11:28: verse-initial va-yamat (&#x27;and he died&#x27;, non-pausal), NUMBERLESS, the corpus&#x27;s first SON-BEFORE-FATHER death (al-pene, &#x27;in the presence of&#x27; his father) and first LOCATED death (in the land of his moledet [&#x27;birthplace&#x27;] — the word DEBUTS inside a death notice; token 2 is 12:1&#x27;s &#x27;from your moledet&#x27;), in Ur Kasdim (&#x27;Ur of the Chaldees&#x27; — the pair never separates: 11:28, 11:31, 15:7); 11:32: the only close — yeme-terach WITHOUT kol (&#x27;all&#x27;; first kol-less ledger total, machine token follows the letter) and the death-verb sharing its verse-final arm with name and place against 9:29&#x27;s frozen &#x27;one word, alone on the verse-final arm&#x27; [named deltas]; both deaths located, where no Gen 5 death has a place: in this span death acquires geography</td></tr>
+<tr><td>EXPORT_akarah_debut_field</td><td><span class="he">וַתְּהִי שָׂרַי עֲקָרָה אֵין לָהּ וָלָד</span> · <i>va-tehi saray aqara ein lah valad</i> · the barren-field debuts as a DOUBLED absence: akarah (&#x27;barren&#x27;) Torah token 1 on Sarai + ein lah valad (&#x27;there-is-not to her a child&#x27;) with valad (&#x27;child/offspring&#x27;) a TORAH HAPAX on the verse-end — spoken by the span&#x27;s ONLY feminine verb (va-tehi, &#x27;and she was&#x27; — one &#x27;she&#x27; against twenty-two masculine verbs); ein&#x27;s early career is a chain of absences (2:5 no man, 5:24 Chanokh was-not, 11:30 no child); the word&#x27;s future (25:21 Rivkah, 29:31 Rachel, then Exod 23:26 + Deut 7:14 abolishing barrenness in the covenant land) is career-prose; BOTH facts stand OPEN at the unit wall — the state into which 12:1 speaks</td></tr>
+<tr><td>EXPORT_stalled_journey</td><td><span class="he">לָלֶכֶת אַרְצָה כְּנַעַן וַיָּבֹאוּ עַד־חָרָן וַיֵּשְׁבוּ שָׁם</span> · <i>la-lekhet artzah kenaan va-yavou ad-charan va-yeshvu sham</i> · the letter&#x27;s own suspension: destination STATED (la-lekhet artzah Kenaan, &#x27;to go toward the land of Canaan&#x27; — the go-verb&#x27;s token 4; token 5 is 12:1&#x27;s lekh, &#x27;go!&#x27;), arrival measured short (ad, &#x27;as far as&#x27; Charan — the chet-spelled city, NOT the heh-spelled dead son; DB glosses both &#x27;Haran&#x27;, GLOSS_FIX filed), and the close is 11:2&#x27;s EXACT two-word settling (va-yeshvu sham, &#x27;and they settled there&#x27; — consecutive tokens of the settle-verb; cross-unit arc with frozen gen_25, prose only, nothing pops); the take-verb splits in translation (Onkelos: nesiv &#x27;took&#x27; for wives, devar &#x27;LED&#x27; for the family); the itam (&#x27;with them&#x27;) crux held [OPEN]; the destination-fact stands unfinished [OPEN] — 12:5 repeats the phrase and finishes it, one unit away [named-only]</td></tr>
+</table>
+<h2>Oral notes (named, tiered, dual-track — never merged)</h2>
+<div class="note"><span class="badge tier-o">observation</span> <b>Bereshit Rabbah 38 end (Ur-furnace on 11:28); Bavli Megillah 14a + Sanhedrin 69b (Yiska = Sarai); Bavli Bava Batra 91a (the Ur years); Rashi at 11:28 (al-pene = in his father&#x27;s lifetime; the furnace), 11:29 (Yiska), 11:32 (the deferred death vs 12:1&#x27;s arithmetic) — gen_26 Tier-A queue</b><br><span class="he">בְּאוּר כַּשְׂדִּים</span> · <i>(queue — named only)</i> · Named, not read. The prospective middot scan of the oral cache is the MAIN LOOP&#x27;S gate and is not claimed by this draft [flagged]. Detector classes predicted from the letter: the Ur-furnace reading is a NAME-MIDRASH/ORDEAL class (ur read as &#x27;fire/flame&#x27;); the Yiska-Sarai identification is an IDENTIFICATION class filling the letter&#x27;s loudest withholding (Sarai&#x27;s parentage); the 205-vs-12:4 chronology is an ARITHMETIC-HARMONY class (the deferred death notice); the al-pene (&#x27;in the presence of&#x27;) gloss war is a LEXICAL-BUFFER class.
+<br><i>Queue entry — no claim made beyond the naming.</i></div>
+<div class="note"><span class="badge tier-v">verified</span> <b>Onkelos Genesis 11:10-32 — read Tier-A at derive time (23 sequential fetches, Data/FETCHLOG.md 2026-08-03)</b><br><span class="he">וּדְבַר תֶּרַח … וּנְפָקוּ עִמְּהוֹן</span> · <i>u-devar terach … u-nefaku imhon</i> · The span&#x27;s translation witness — headline: THE BUFFER PRESERVES THE LETTER&#x27;S ANOMALIES AND SPLITS ITS ONE REPEATED VERB. The take-verb the letter uses twice (va-yiqach, 11:29 and 11:31) forks in Aramaic: u-nesiv (&#x27;and he took&#x27;) for the WIVES, u-devar (&#x27;and he LED/conducted&#x27;) for the FAMILY on the road — the translation reads person-taking as leading exactly where the journey begins [find-class; dual-track]. Preserved wobbles: the fronted perfects of 11:12/11:14 (ve-arpakhshad chaya, ve-shelach chaya — the two-row anomaly survives word order); the itam crux (u-nefaku IMHON, &#x27;and they went out WITH THEM&#x27; — unresolved); 11:32&#x27;s kol-less total (va-havo yomei terach — no &#x27;all&#x27; in the Aramaic either); the doubled absence at 11:30 with the hapax kept as COGNATE (leit lah VELAD — the child-word survives translation as itself). ha-mabul (&#x27;the deluge&#x27;) exits as tufana (the Aramaic flood-word) in the same verse-final seat. 11:28&#x27;s father-idiom kept literal (al apei, &#x27;upon the face of&#x27; — the buffer does NOT insert &#x27;in the lifetime of&#x27;; the chain&#x27;s gloss war stays outside the translation). Ur becomes Ura de-Khasdaei; moledet (&#x27;birthplace&#x27;) becomes yaladuteih (&#x27;his birth&#x27;). The template stretch renders mechanically — begettings as oléd, the rows&#x27; rhythm intact; the plainest Aramaic since Gen 5, broken exactly where the Hebrew breaks.
+<br><i>Read from Data/sefaria_texts/ (local; FETCHLOG is provenance). Dual-track; not merged.</i></div>
+<h2>Binary trees (ta'amim v3, glue bricks)</h2>
+<h3>Gen.11.10 · parser unique · 13 words</h3>
+<div class="meta"><span class="he">אלה תולדת שם שם בן־מאת שנה ויולד את־ארפכשד שנתים אחר המבול</span> · <i>ele toldot shem shem ben-meat shana va-yoled et-arpakhshad shenatayim achar ha-mabul</i> · These are Shem&#x27;s generations: Shem, 100, begot Arpachshad two years after the deluge. [EN-AID]</div>
+<pre>PHRASE (binary 13w) אֵ֚לֶּה תּוֹלְדֹ֣ת שֵׁ֔ם שֵׁ֚ם בֶּן מְאַ֣ת שָׁנ…
+├── PHRASE (binary 10w) אֵ֚לֶּה תּוֹלְדֹ֣ת שֵׁ֔ם שֵׁ֚ם בֶּן מְאַ֣ת שָׁנ…
+│   ├── PHRASE (binary 3w) אֵ֚לֶּה תּוֹלְדֹ֣ת שֵׁ֔ם
+│   │   ├── [0] אֵ֚לֶּה (yetiv, rank=3)
+│   │   └── [1-2] GLUE תּוֹלְדֹ֣ת שֵׁ֔ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 7w) שֵׁ֚ם בֶּן מְאַ֣ת שָׁנָ֔ה וַ/יּ֖וֹלֶד אֶת אַרְפ…
+│       ├── PHRASE (binary 4w) שֵׁ֚ם בֶּן מְאַ֣ת שָׁנָ֔ה
+│       │   ├── [3] שֵׁ֚ם (yetiv, rank=3)
+│       │   └── [4-6] GLUE בֶּן מְאַ֣ת שָׁנָ֔ה (zaqef qatan, rank=2)
+│       └── PHRASE (binary 3w) וַ/יּ֖וֹלֶד אֶת אַרְפַּכְשָׁ֑ד
+│           ├── [7] וַ/יּ֖וֹלֶד (tifcha, rank=2)
+│           └── [8-9] GLUE אֶת אַרְפַּכְשָׁ֑ד (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) שְׁנָתַ֖יִם אַחַ֥ר הַ/מַּבּֽוּל
+    ├── [10] שְׁנָתַ֖יִם (tifcha, rank=2)
+    └── [11-12] GLUE אַחַ֥ר הַ/מַּבּֽוּל (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.11 · parser unique · 12 words</h3>
+<div class="meta"><span class="he">ויחי־שם אחרי הולידו את־ארפכשד חמש מאות שנה ויולד בנים ובנות</span> · <i>va-yechi-shem achare holid-o et-arpakhshad chamesh meot shana va-yoled banim u-vanot</i> · Shem lived after: 500 years; sons and daughters — no total, no death. [EN-AID]</div>
+<pre>PHRASE (binary 12w) וַֽ/יְחִי שֵׁ֗ם אַֽחֲרֵי֙ הוֹלִיד֣/וֹ אֶת אַרְפ…
+├── PHRASE (binary 9w) וַֽ/יְחִי שֵׁ֗ם אַֽחֲרֵי֙ הוֹלִיד֣/וֹ אֶת אַרְפ…
+│   ├── PHRASE (binary 6w) וַֽ/יְחִי שֵׁ֗ם אַֽחֲרֵי֙ הוֹלִיד֣/וֹ אֶת אַרְפ…
+│   │   ├── [0-1] GLUE וַֽ/יְחִי שֵׁ֗ם (revia, rank=3)
+│   │   └── PHRASE (binary 4w) אַֽחֲרֵי֙ הוֹלִיד֣/וֹ אֶת אַרְפַּכְשָׁ֔ד
+│   │       ├── [2] אַֽחֲרֵי֙ (pashta, rank=3)
+│   │       └── [3-5] GLUE הוֹלִיד֣/וֹ אֶת אַרְפַּכְשָׁ֔ד (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) חֲמֵ֥שׁ מֵא֖וֹת שָׁנָ֑ה
+│       ├── [6-7] GLUE חֲמֵ֥שׁ מֵא֖וֹת (tifcha, rank=2)
+│       └── [8] שָׁנָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וַ/יּ֥וֹלֶד בָּנִ֖ים וּ/בָנֽוֹת
+    ├── [9-10] GLUE וַ/יּ֥וֹלֶד בָּנִ֖ים (tifcha, rank=2)
+    └── [11] וּ/בָנֽוֹת (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.12 · parser unique · 8 words</h3>
+<div class="meta"><span class="he">וארפכשד חי חמש ושלשים שנה ויולד את־שלח</span> · <i>ve-arpakhshad chay chamesh u-sheloshim shana va-yoled et-shalach</i> · Arpachshad LIVED (fronted perfect) 35 and begot Shelach. [EN-AID]</div>
+<pre>PHRASE (binary 8w) וְ/אַרְפַּכְשַׁ֣ד חַ֔י חָמֵ֥שׁ וּ/שְׁלֹשִׁ֖ים ש…
+├── PHRASE (binary 5w) וְ/אַרְפַּכְשַׁ֣ד חַ֔י חָמֵ֥שׁ וּ/שְׁלֹשִׁ֖ים ש…
+│   ├── [0-1] GLUE וְ/אַרְפַּכְשַׁ֣ד חַ֔י (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) חָמֵ֥שׁ וּ/שְׁלֹשִׁ֖ים שָׁנָ֑ה
+│       ├── [2-3] GLUE חָמֵ֥שׁ וּ/שְׁלֹשִׁ֖ים (tifcha, rank=2)
+│       └── [4] שָׁנָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וַ/יּ֖וֹלֶד אֶת שָֽׁלַח
+    ├── [5] וַ/יּ֖וֹלֶד (tifcha, rank=2)
+    └── [6-7] GLUE אֶת שָֽׁלַח (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.13 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">ויחי ארפכשד אחרי הולידו את־שלח שלש שנים וארבע מאות שנה ויולד בנים ובנות</span> · <i>va-yechi arpakhshad achare holid-o et-shelach shalosh shanim ve-arba meot shana va-yoled banim u-vanot</i> · Arpachshad after: 403; sons and daughters. [EN-AID]</div>
+<pre>PHRASE (binary 14w) וַֽ/יְחִ֣י אַרְפַּכְשַׁ֗ד אַֽחֲרֵי֙ הוֹלִיד֣/וֹ…
+├── PHRASE (binary 11w) וַֽ/יְחִ֣י אַרְפַּכְשַׁ֗ד אַֽחֲרֵי֙ הוֹלִיד֣/וֹ…
+│   ├── PHRASE (binary 6w) וַֽ/יְחִ֣י אַרְפַּכְשַׁ֗ד אַֽחֲרֵי֙ הוֹלִיד֣/וֹ…
+│   │   ├── [0-1] GLUE וַֽ/יְחִ֣י אַרְפַּכְשַׁ֗ד (revia, rank=3)
+│   │   └── PHRASE (binary 4w) אַֽחֲרֵי֙ הוֹלִיד֣/וֹ אֶת שֶׁ֔לַח
+│   │       ├── [2] אַֽחֲרֵי֙ (pashta, rank=3)
+│   │       └── [3-5] GLUE הוֹלִיד֣/וֹ אֶת שֶׁ֔לַח (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) שָׁלֹ֣שׁ שָׁנִ֔ים וְ/אַרְבַּ֥ע מֵא֖וֹת שָׁנָ֑ה
+│       ├── [6-7] GLUE שָׁלֹ֣שׁ שָׁנִ֔ים (zaqef qatan, rank=2)
+│       └── PHRASE (binary 3w) וְ/אַרְבַּ֥ע מֵא֖וֹת שָׁנָ֑ה
+│           ├── [8-9] GLUE וְ/אַרְבַּ֥ע מֵא֖וֹת (tifcha, rank=2)
+│           └── [10] שָׁנָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וַ/יּ֥וֹלֶד בָּנִ֖ים וּ/בָנֽוֹת
+    ├── [11-12] GLUE וַ/יּ֥וֹלֶד בָּנִ֖ים (tifcha, rank=2)
+    └── [13] וּ/בָנֽוֹת (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.14 · parser unique · 7 words</h3>
+<div class="meta"><span class="he">ושלח חי שלשים שנה ויולד את־עבר</span> · <i>ve-shelach chay sheloshim shana va-yoled et-ever</i> · Shelach LIVED (fronted perfect) 30 and begot Ever. [EN-AID]</div>
+<pre>PHRASE (binary 7w) וְ/שֶׁ֥לַח חַ֖י שְׁלֹשִׁ֣ים שָׁנָ֑ה וַ/יּ֖וֹלֶד…
+├── PHRASE (binary 4w) וְ/שֶׁ֥לַח חַ֖י שְׁלֹשִׁ֣ים שָׁנָ֑ה
+│   ├── [0-1] GLUE וְ/שֶׁ֥לַח חַ֖י (tifcha, rank=2)
+│   └── [2-3] GLUE שְׁלֹשִׁ֣ים שָׁנָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וַ/יּ֖וֹלֶד אֶת עֵֽבֶר
+    ├── [4] וַ/יּ֖וֹלֶד (tifcha, rank=2)
+    └── [5-6] GLUE אֶת עֵֽבֶר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.15 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">ויחי־שלח אחרי הולידו את־עבר שלש שנים וארבע מאות שנה ויולד בנים ובנות</span> · <i>va-yechi-shelach achare holid-o et-ever shalosh shanim ve-arba meot shana va-yoled banim u-vanot</i> · Shelach after: 403; sons and daughters. [EN-AID]</div>
+<pre>PHRASE (binary 14w) וַֽ/יְחִי שֶׁ֗לַח אַחֲרֵי֙ הוֹלִיד֣/וֹ אֶת עֵ֔ב…
+├── PHRASE (binary 11w) וַֽ/יְחִי שֶׁ֗לַח אַחֲרֵי֙ הוֹלִיד֣/וֹ אֶת עֵ֔ב…
+│   ├── PHRASE (binary 6w) וַֽ/יְחִי שֶׁ֗לַח אַחֲרֵי֙ הוֹלִיד֣/וֹ אֶת עֵ֔ב…
+│   │   ├── [0-1] GLUE וַֽ/יְחִי שֶׁ֗לַח (revia, rank=3)
+│   │   └── PHRASE (binary 4w) אַחֲרֵי֙ הוֹלִיד֣/וֹ אֶת עֵ֔בֶר
+│   │       ├── [2] אַחֲרֵי֙ (pashta, rank=3)
+│   │       └── [3-5] GLUE הוֹלִיד֣/וֹ אֶת עֵ֔בֶר (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) שָׁלֹ֣שׁ שָׁנִ֔ים וְ/אַרְבַּ֥ע מֵא֖וֹת שָׁנָ֑ה
+│       ├── [6-7] GLUE שָׁלֹ֣שׁ שָׁנִ֔ים (zaqef qatan, rank=2)
+│       └── PHRASE (binary 3w) וְ/אַרְבַּ֥ע מֵא֖וֹת שָׁנָ֑ה
+│           ├── [8-9] GLUE וְ/אַרְבַּ֥ע מֵא֖וֹת (tifcha, rank=2)
+│           └── [10] שָׁנָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וַ/יּ֥וֹלֶד בָּנִ֖ים וּ/בָנֽוֹת
+    ├── [11-12] GLUE וַ/יּ֥וֹלֶד בָּנִ֖ים (tifcha, rank=2)
+    └── [13] וּ/בָנֽוֹת (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.16 · parser unique · 8 words</h3>
+<div class="meta"><span class="he">ויחי־עבר ארבע ושלשים שנה ויולד את־פלג</span> · <i>va-yechi-ever arba u-sheloshim shana va-yoled et-paleg</i> · Ever lived 34 and begot Peleg. [EN-AID]</div>
+<pre>PHRASE (binary 8w) וַֽ/יְחִי עֵ֕בֶר אַרְבַּ֥ע וּ/שְׁלֹשִׁ֖ים שָׁנָ…
+├── PHRASE (binary 5w) וַֽ/יְחִי עֵ֕בֶר אַרְבַּ֥ע וּ/שְׁלֹשִׁ֖ים שָׁנָ…
+│   ├── [0-1] GLUE וַֽ/יְחִי עֵ֕בֶר (zaqef gadol, rank=2)
+│   └── PHRASE (binary 3w) אַרְבַּ֥ע וּ/שְׁלֹשִׁ֖ים שָׁנָ֑ה
+│       ├── [2-3] GLUE אַרְבַּ֥ע וּ/שְׁלֹשִׁ֖ים (tifcha, rank=2)
+│       └── [4] שָׁנָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וַ/יּ֖וֹלֶד אֶת פָּֽלֶג
+    ├── [5] וַ/יּ֖וֹלֶד (tifcha, rank=2)
+    └── [6-7] GLUE אֶת פָּֽלֶג (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.17 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">ויחי־עבר אחרי הולידו את־פלג שלשים שנה וארבע מאות שנה ויולד בנים ובנות</span> · <i>va-yechi-ever achare holid-o et-peleg sheloshim shana ve-arba meot shana va-yoled banim u-vanot</i> · Ever after: 430; sons and daughters. [EN-AID]</div>
+<pre>PHRASE (binary 14w) וַֽ/יְחִי עֵ֗בֶר אַחֲרֵי֙ הוֹלִיד֣/וֹ אֶת פֶּ֔ל…
+├── PHRASE (binary 11w) וַֽ/יְחִי עֵ֗בֶר אַחֲרֵי֙ הוֹלִיד֣/וֹ אֶת פֶּ֔ל…
+│   ├── PHRASE (binary 6w) וַֽ/יְחִי עֵ֗בֶר אַחֲרֵי֙ הוֹלִיד֣/וֹ אֶת פֶּ֔ל…
+│   │   ├── [0-1] GLUE וַֽ/יְחִי עֵ֗בֶר (revia, rank=3)
+│   │   └── PHRASE (binary 4w) אַחֲרֵי֙ הוֹלִיד֣/וֹ אֶת פֶּ֔לֶג
+│   │       ├── [2] אַחֲרֵי֙ (pashta, rank=3)
+│   │       └── [3-5] GLUE הוֹלִיד֣/וֹ אֶת פֶּ֔לֶג (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) שְׁלֹשִׁ֣ים שָׁנָ֔ה וְ/אַרְבַּ֥ע מֵא֖וֹת שָׁנָ֑ה
+│       ├── [6-7] GLUE שְׁלֹשִׁ֣ים שָׁנָ֔ה (zaqef qatan, rank=2)
+│       └── PHRASE (binary 3w) וְ/אַרְבַּ֥ע מֵא֖וֹת שָׁנָ֑ה
+│           ├── [8-9] GLUE וְ/אַרְבַּ֥ע מֵא֖וֹת (tifcha, rank=2)
+│           └── [10] שָׁנָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וַ/יּ֥וֹלֶד בָּנִ֖ים וּ/בָנֽוֹת
+    ├── [11-12] GLUE וַ/יּ֥וֹלֶד בָּנִ֖ים (tifcha, rank=2)
+    └── [13] וּ/בָנֽוֹת (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.18 · parser unique · 7 words</h3>
+<div class="meta"><span class="he">ויחי־פלג שלשים שנה ויולד את־רעו</span> · <i>va-yechi-feleg sheloshim shana va-yoled et-reu</i> · Peleg lived 30 and begot Reu. [EN-AID]</div>
+<pre>PHRASE (binary 7w) וַֽ/יְחִי פֶ֖לֶג שְׁלֹשִׁ֣ים שָׁנָ֑ה וַ/יּ֖וֹלֶ…
+├── PHRASE (binary 4w) וַֽ/יְחִי פֶ֖לֶג שְׁלֹשִׁ֣ים שָׁנָ֑ה
+│   ├── [0-1] GLUE וַֽ/יְחִי פֶ֖לֶג (tifcha, rank=2)
+│   └── [2-3] GLUE שְׁלֹשִׁ֣ים שָׁנָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וַ/יּ֖וֹלֶד אֶת רְעֽוּ
+    ├── [4] וַ/יּ֖וֹלֶד (tifcha, rank=2)
+    └── [5-6] GLUE אֶת רְעֽוּ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.19 · parser unique · 13 words</h3>
+<div class="meta"><span class="he">ויחי־פלג אחרי הולידו את־רעו תשע שנים ומאתים שנה ויולד בנים ובנות</span> · <i>va-yechi-feleg achare holid-o et-reu tesha shanim u-matayim shana va-yoled banim u-vanot</i> · Peleg after: 209; sons and daughters. [EN-AID]</div>
+<pre>PHRASE (binary 13w) וַֽ/יְחִי פֶ֗לֶג אַחֲרֵי֙ הוֹלִיד֣/וֹ אֶת רְע֔ו…
+├── PHRASE (binary 10w) וַֽ/יְחִי פֶ֗לֶג אַחֲרֵי֙ הוֹלִיד֣/וֹ אֶת רְע֔ו…
+│   ├── PHRASE (binary 6w) וַֽ/יְחִי פֶ֗לֶג אַחֲרֵי֙ הוֹלִיד֣/וֹ אֶת רְע֔וּ
+│   │   ├── [0-1] GLUE וַֽ/יְחִי פֶ֗לֶג (revia, rank=3)
+│   │   └── PHRASE (binary 4w) אַחֲרֵי֙ הוֹלִיד֣/וֹ אֶת רְע֔וּ
+│   │       ├── [2] אַחֲרֵי֙ (pashta, rank=3)
+│   │       └── [3-5] GLUE הוֹלִיד֣/וֹ אֶת רְע֔וּ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) תֵּ֥שַׁע שָׁנִ֖ים וּ/מָאתַ֣יִם שָׁנָ֑ה
+│       ├── [6-7] GLUE תֵּ֥שַׁע שָׁנִ֖ים (tifcha, rank=2)
+│       └── [8-9] GLUE וּ/מָאתַ֣יִם שָׁנָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וַ/יּ֥וֹלֶד בָּנִ֖ים וּ/בָנֽוֹת
+    ├── [10-11] GLUE וַ/יּ֥וֹלֶד בָּנִ֖ים (tifcha, rank=2)
+    └── [12] וּ/בָנֽוֹת (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.20 · parser unique · 8 words</h3>
+<div class="meta"><span class="he">ויחי רעו שתים ושלשים שנה ויולד את־שרוג</span> · <i>va-yechi reu shetayim u-sheloshim shana va-yoled et-serug</i> · Reu lived 32 and begot Serug. [EN-AID]</div>
+<pre>PHRASE (binary 8w) וַ/יְחִ֣י רְע֔וּ שְׁתַּ֥יִם וּ/שְׁלֹשִׁ֖ים שָׁנ…
+├── PHRASE (binary 5w) וַ/יְחִ֣י רְע֔וּ שְׁתַּ֥יִם וּ/שְׁלֹשִׁ֖ים שָׁנ…
+│   ├── [0-1] GLUE וַ/יְחִ֣י רְע֔וּ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) שְׁתַּ֥יִם וּ/שְׁלֹשִׁ֖ים שָׁנָ֑ה
+│       ├── [2-3] GLUE שְׁתַּ֥יִם וּ/שְׁלֹשִׁ֖ים (tifcha, rank=2)
+│       └── [4] שָׁנָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וַ/יּ֖וֹלֶד אֶת שְׂרֽוּג
+    ├── [5] וַ/יּ֖וֹלֶד (tifcha, rank=2)
+    └── [6-7] GLUE אֶת שְׂרֽוּג (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.21 · parser unique · 13 words</h3>
+<div class="meta"><span class="he">ויחי רעו אחרי הולידו את־שרוג שבע שנים ומאתים שנה ויולד בנים ובנות</span> · <i>va-yechi reu achare holid-o et-serug sheva shanim u-matayim shana va-yoled banim u-vanot</i> · Reu after: 207; sons and daughters. [EN-AID]</div>
+<pre>PHRASE (binary 13w) וַ/יְחִ֣י רְע֗וּ אַחֲרֵי֙ הוֹלִיד֣/וֹ אֶת שְׂר֔…
+├── PHRASE (binary 10w) וַ/יְחִ֣י רְע֗וּ אַחֲרֵי֙ הוֹלִיד֣/וֹ אֶת שְׂר֔…
+│   ├── PHRASE (binary 6w) וַ/יְחִ֣י רְע֗וּ אַחֲרֵי֙ הוֹלִיד֣/וֹ אֶת שְׂר֔…
+│   │   ├── [0-1] GLUE וַ/יְחִ֣י רְע֗וּ (revia, rank=3)
+│   │   └── PHRASE (binary 4w) אַחֲרֵי֙ הוֹלִיד֣/וֹ אֶת שְׂר֔וּג
+│   │       ├── [2] אַחֲרֵי֙ (pashta, rank=3)
+│   │       └── [3-5] GLUE הוֹלִיד֣/וֹ אֶת שְׂר֔וּג (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) שֶׁ֥בַע שָׁנִ֖ים וּ/מָאתַ֣יִם שָׁנָ֑ה
+│       ├── [6-7] GLUE שֶׁ֥בַע שָׁנִ֖ים (tifcha, rank=2)
+│       └── [8-9] GLUE וּ/מָאתַ֣יִם שָׁנָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וַ/יּ֥וֹלֶד בָּנִ֖ים וּ/בָנֽוֹת
+    ├── [10-11] GLUE וַ/יּ֥וֹלֶד בָּנִ֖ים (tifcha, rank=2)
+    └── [12] וּ/בָנֽוֹת (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.22 · parser unique · 7 words</h3>
+<div class="meta"><span class="he">ויחי שרוג שלשים שנה ויולד את־נחור</span> · <i>va-yechi serug sheloshim shana va-yoled et-nachor</i> · Serug lived 30 and begot Nachor (the grandfather). [EN-AID]</div>
+<pre>PHRASE (binary 7w) וַ/יְחִ֥י שְׂר֖וּג שְׁלֹשִׁ֣ים שָׁנָ֑ה וַ/יּ֖וֹ…
+├── PHRASE (binary 4w) וַ/יְחִ֥י שְׂר֖וּג שְׁלֹשִׁ֣ים שָׁנָ֑ה
+│   ├── [0-1] GLUE וַ/יְחִ֥י שְׂר֖וּג (tifcha, rank=2)
+│   └── [2-3] GLUE שְׁלֹשִׁ֣ים שָׁנָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וַ/יּ֖וֹלֶד אֶת נָחֽוֹר
+    ├── [4] וַ/יּ֖וֹלֶד (tifcha, rank=2)
+    └── [5-6] GLUE אֶת נָחֽוֹר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.23 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">ויחי שרוג אחרי הולידו את־נחור מאתים שנה ויולד בנים ובנות</span> · <i>va-yechi serug achare holid-o et-nachor matayim shana va-yoled banim u-vanot</i> · Serug after: 200; sons and daughters. [EN-AID]</div>
+<pre>PHRASE (binary 11w) וַ/יְחִ֣י שְׂר֗וּג אַחֲרֵ֛י הוֹלִיד֥/וֹ אֶת נָח…
+├── PHRASE (binary 8w) וַ/יְחִ֣י שְׂר֗וּג אַחֲרֵ֛י הוֹלִיד֥/וֹ אֶת נָח…
+│   ├── PHRASE (binary 6w) וַ/יְחִ֣י שְׂר֗וּג אַחֲרֵ֛י הוֹלִיד֥/וֹ אֶת נָח…
+│   │   ├── [0-1] GLUE וַ/יְחִ֣י שְׂר֗וּג (revia, rank=3)
+│   │   └── PHRASE (binary 4w) אַחֲרֵ֛י הוֹלִיד֥/וֹ אֶת נָח֖וֹר
+│   │       ├── [2] אַחֲרֵ֛י (tevir, rank=3)
+│   │       └── [3-5] GLUE הוֹלִיד֥/וֹ אֶת נָח֖וֹר (tifcha, rank=2)
+│   └── [6-7] GLUE מָאתַ֣יִם שָׁנָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וַ/יּ֥וֹלֶד בָּנִ֖ים וּ/בָנֽוֹת
+    ├── [8-9] GLUE וַ/יּ֥וֹלֶד בָּנִ֖ים (tifcha, rank=2)
+    └── [10] וּ/בָנֽוֹת (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.24 · parser unique · 8 words</h3>
+<div class="meta"><span class="he">ויחי נחור תשע ועשרים שנה ויולד את־תרח</span> · <i>va-yechi nachor tesha ve-esrim shana va-yoled et-tarach</i> · Nachor lived 29 and begot Terach. [EN-AID]</div>
+<pre>PHRASE (binary 8w) וַ/יְחִ֣י נָח֔וֹר תֵּ֥שַׁע וְ/עֶשְׂרִ֖ים שָׁנָ֑…
+├── PHRASE (binary 5w) וַ/יְחִ֣י נָח֔וֹר תֵּ֥שַׁע וְ/עֶשְׂרִ֖ים שָׁנָ֑ה
+│   ├── [0-1] GLUE וַ/יְחִ֣י נָח֔וֹר (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) תֵּ֥שַׁע וְ/עֶשְׂרִ֖ים שָׁנָ֑ה
+│       ├── [2-3] GLUE תֵּ֥שַׁע וְ/עֶשְׂרִ֖ים (tifcha, rank=2)
+│       └── [4] שָׁנָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וַ/יּ֖וֹלֶד אֶת תָּֽרַח
+    ├── [5] וַ/יּ֖וֹלֶד (tifcha, rank=2)
+    └── [6-7] GLUE אֶת תָּֽרַח (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.25 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">ויחי נחור אחרי הולידו את־תרח תשע־עשרה שנה ומאת שנה ויולד בנים ובנות</span> · <i>va-yechi nachor achare holid-o et-terach tesha-esre shana u-meat shana va-yoled banim u-vanot</i> · Nachor after: 119; sons and daughters. [EN-AID]</div>
+<pre>PHRASE (binary 14w) וַ/יְחִ֣י נָח֗וֹר אַחֲרֵי֙ הוֹלִיד֣/וֹ אֶת תֶּ֔…
+├── PHRASE (binary 11w) וַ/יְחִ֣י נָח֗וֹר אַחֲרֵי֙ הוֹלִיד֣/וֹ אֶת תֶּ֔…
+│   ├── PHRASE (binary 6w) וַ/יְחִ֣י נָח֗וֹר אַחֲרֵי֙ הוֹלִיד֣/וֹ אֶת תֶּ֔…
+│   │   ├── [0-1] GLUE וַ/יְחִ֣י נָח֗וֹר (revia, rank=3)
+│   │   └── PHRASE (binary 4w) אַחֲרֵי֙ הוֹלִיד֣/וֹ אֶת תֶּ֔רַח
+│   │       ├── [2] אַחֲרֵי֙ (pashta, rank=3)
+│   │       └── [3-5] GLUE הוֹלִיד֣/וֹ אֶת תֶּ֔רַח (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) תְּשַֽׁע עֶשְׂרֵ֥ה שָׁנָ֖ה וּ/מְאַ֣ת שָׁנָ֑ה
+│       ├── [6-8] GLUE תְּשַֽׁע עֶשְׂרֵ֥ה שָׁנָ֖ה (tifcha, rank=2)
+│       └── [9-10] GLUE וּ/מְאַ֣ת שָׁנָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וַ/יּ֥וֹלֶד בָּנִ֖ים וּ/בָנֽוֹת
+    ├── [11-12] GLUE וַ/יּ֥וֹלֶד בָּנִ֖ים (tifcha, rank=2)
+    └── [13] וּ/בָנֽוֹת (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.26 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">ויחי־תרח שבעים שנה ויולד את־אברם את־נחור ואת־הרן</span> · <i>va-yechi-terach shivim shana va-yoled et-avram et-nachor ve-et-haran</i> · Terach, 70, begot Abram, Nachor, Haran — the row opens. [EN-AID]</div>
+<pre>PHRASE (binary 11w) וַֽ/יְחִי תֶ֖רַח שִׁבְעִ֣ים שָׁנָ֑ה וַ/יּ֨וֹלֶד…
+├── PHRASE (binary 4w) וַֽ/יְחִי תֶ֖רַח שִׁבְעִ֣ים שָׁנָ֑ה
+│   ├── [0-1] GLUE וַֽ/יְחִי תֶ֖רַח (tifcha, rank=2)
+│   └── [2-3] GLUE שִׁבְעִ֣ים שָׁנָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) וַ/יּ֨וֹלֶד֙ אֶת אַבְרָ֔ם אֶת נָח֖וֹר וְ/אֶת הָ…
+    ├── PHRASE (binary 3w) וַ/יּ֨וֹלֶד֙ אֶת אַבְרָ֔ם
+    │   ├── [4] וַ/יּ֨וֹלֶד֙ (pashta, rank=3)
+    │   └── [5-6] GLUE אֶת אַבְרָ֔ם (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) אֶת נָח֖וֹר וְ/אֶת הָרָֽן
+        ├── [7-8] GLUE אֶת נָח֖וֹר (tifcha, rank=2)
+        └── [9-10] GLUE וְ/אֶת הָרָֽן (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.27 · parser unique · 15 words</h3>
+<div class="meta"><span class="he">ואלה תולדת תרח תרח הוליד את־אברם את־נחור ואת־הרן והרן הוליד את־לוט</span> · <i>ve-ele toldot terach terach holid et-avram et-nachor ve-et-haran ve-haran holid et-lot</i> · Terach&#x27;s generations restated; Haran begot Lot. [EN-AID]</div>
+<pre>PHRASE (binary 15w) וְ/אֵ֨לֶּה֙ תּוֹלְדֹ֣ת תֶּ֔רַח תֶּ֚רַח הוֹלִ֣יד…
+├── PHRASE (binary 11w) וְ/אֵ֨לֶּה֙ תּוֹלְדֹ֣ת תֶּ֔רַח תֶּ֚רַח הוֹלִ֣יד…
+│   ├── PHRASE (binary 3w) וְ/אֵ֨לֶּה֙ תּוֹלְדֹ֣ת תֶּ֔רַח
+│   │   ├── [0] וְ/אֵ֨לֶּה֙ (pashta, rank=3)
+│   │   └── [1-2] GLUE תּוֹלְדֹ֣ת תֶּ֔רַח (zaqef qatan, rank=2)
+│   └── PHRASE (binary 8w) תֶּ֚רַח הוֹלִ֣יד אֶת אַבְרָ֔ם אֶת נָח֖וֹר וְ/אֶ…
+│       ├── PHRASE (binary 4w) תֶּ֚רַח הוֹלִ֣יד אֶת אַבְרָ֔ם
+│       │   ├── [3] תֶּ֚רַח (yetiv, rank=3)
+│       │   └── [4-6] GLUE הוֹלִ֣יד אֶת אַבְרָ֔ם (zaqef qatan, rank=2)
+│       └── PHRASE (binary 4w) אֶת נָח֖וֹר וְ/אֶת הָרָ֑ן
+│           ├── [7-8] GLUE אֶת נָח֖וֹר (tifcha, rank=2)
+│           └── [9-10] GLUE וְ/אֶת הָרָ֑ן (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וְ/הָרָ֖ן הוֹלִ֥יד אֶת לֽוֹט
+    ├── [11] וְ/הָרָ֖ן (tifcha, rank=2)
+    └── [12-14] GLUE הוֹלִ֥יד אֶת לֽוֹט (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.28 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">וימת הרן על־פני תרח אביו בארץ מולדתו באור כשדים</span> · <i>va-yamat haran al-pene terach avi-v be-eretz moladt-o be-ur kasdim</i> · Haran died before Terach his father, in Ur of the Chaldeans. [EN-AID]</div>
+<pre>PHRASE (binary 10w) וַ/יָּ֣מָת הָרָ֔ן עַל פְּנֵ֖י תֶּ֣רַח אָבִ֑י/ו …
+├── PHRASE (binary 6w) וַ/יָּ֣מָת הָרָ֔ן עַל פְּנֵ֖י תֶּ֣רַח אָבִ֑י/ו
+│   ├── [0-1] GLUE וַ/יָּ֣מָת הָרָ֔ן (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) עַל פְּנֵ֖י תֶּ֣רַח אָבִ֑י/ו
+│       ├── [2-3] GLUE עַל פְּנֵ֖י (tifcha, rank=2)
+│       └── [4-5] GLUE תֶּ֣רַח אָבִ֑י/ו (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) בְּ/אֶ֥רֶץ מוֹלַדְתּ֖/וֹ בְּ/א֥וּר כַּשְׂדִּֽים
+    ├── [6-7] GLUE בְּ/אֶ֥רֶץ מוֹלַדְתּ֖/וֹ (tifcha, rank=2)
+    └── [8-9] GLUE בְּ/א֥וּר כַּשְׂדִּֽים (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.29 · parser unique · 19 words</h3>
+<div class="meta"><span class="he">ויקח אברם ונחור להם נשים שם אשת־אברם שרי ושם אשת־נחור מלכה בת־הרן אבי־מלכה ואבי יסכה</span> · <i>va-yiqach avram ve-nachor la-hem nashim shem eshet-avram saray ve-shem eshet-nachor milka bat-haran avi-milka va-avi yiska</i> · Abram and Nachor took wives: Sarai; Milcah daughter of Haran. [EN-AID]</div>
+<pre>PHRASE (binary 19w) וַ/יִּקַּ֨ח אַבְרָ֧ם וְ/נָח֛וֹר לָ/הֶ֖ם נָשִׁ֑י…
+├── PHRASE (binary 5w) וַ/יִּקַּ֨ח אַבְרָ֧ם וְ/נָח֛וֹר לָ/הֶ֖ם נָשִׁ֑ים
+│   ├── PHRASE (binary 4w) וַ/יִּקַּ֨ח אַבְרָ֧ם וְ/נָח֛וֹר לָ/הֶ֖ם
+│   │   ├── [0-2] GLUE וַ/יִּקַּ֨ח אַבְרָ֧ם וְ/נָח֛וֹר (tevir, rank=3)
+│   │   └── [3] לָ/הֶ֖ם (tifcha, rank=2)
+│   └── [4] נָשִׁ֑ים (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 14w) שֵׁ֤ם אֵֽשֶׁת אַבְרָם֙ שָׂרָ֔י וְ/שֵׁ֤ם אֵֽשֶׁת…
+    ├── PHRASE (binary 4w) שֵׁ֤ם אֵֽשֶׁת אַבְרָם֙ שָׂרָ֔י
+    │   ├── [5-7] GLUE שֵׁ֤ם אֵֽשֶׁת אַבְרָם֙ (pashta, rank=3)
+    │   └── [8] שָׂרָ֔י (zaqef qatan, rank=2)
+    └── PHRASE (binary 10w) וְ/שֵׁ֤ם אֵֽשֶׁת נָחוֹר֙ מִלְכָּ֔ה בַּת הָרָ֥ן …
+        ├── PHRASE (binary 4w) וְ/שֵׁ֤ם אֵֽשֶׁת נָחוֹר֙ מִלְכָּ֔ה
+        │   ├── [9-11] GLUE וְ/שֵׁ֤ם אֵֽשֶׁת נָחוֹר֙ (pashta, rank=3)
+        │   └── [12] מִלְכָּ֔ה (zaqef qatan, rank=2)
+        └── PHRASE (binary 6w) בַּת הָרָ֥ן אֲבִֽי מִלְכָּ֖ה וַֽ/אֲבִ֥י יִסְכָּ…
+            ├── [13-16] GLUE בַּת הָרָ֥ן אֲבִֽי מִלְכָּ֖ה (tifcha, rank=2)
+            └── [17-18] GLUE וַֽ/אֲבִ֥י יִסְכָּֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.30 · parser unique · 6 words</h3>
+<div class="meta"><span class="he">ותהי שרי עקרה אין לה ולד</span> · <i>va-tehi saray aqara en la-ה valad</i> · Sarai was barren; there-is-not to her a child. [EN-AID]</div>
+<pre>PHRASE (binary 6w) וַ/תְּהִ֥י שָׂרַ֖י עֲקָרָ֑ה אֵ֥ין לָ֖/הּ וָלָֽד
+├── PHRASE (binary 3w) וַ/תְּהִ֥י שָׂרַ֖י עֲקָרָ֑ה
+│   ├── [0-1] GLUE וַ/תְּהִ֥י שָׂרַ֖י (tifcha, rank=2)
+│   └── [2] עֲקָרָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) אֵ֥ין לָ֖/הּ וָלָֽד
+    ├── [3-4] GLUE אֵ֥ין לָ֖/הּ (tifcha, rank=2)
+    └── [5] וָלָֽד (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.31 · parser unique · 29 words</h3>
+<div class="meta"><span class="he">ויקח תרח את־אברם בנו ואת־לוט בן־הרן בן־בנו ואת שרי כלתו אשת אברם בנו ויצאו אתם מאור כשדים ללכת ארצה כנען ויבאו עד־חרן וישבו שם</span> · <i>va-yiqach terach et-avram ben-o ve-et-lot ben-haran ben-ben-o ve-et saray kalat-o eshet avram ben-o va-yetzu et-m me-ur kasdim la-lekhet artza-ה kenaan va-yavou ad-charan va-yeshvu sham</i> · Terach took them; out of Ur toward Canaan; as far as Charan; settled there. [EN-AID]</div>
+<pre>PHRASE (binary 29w) וַ/יִּקַּ֨ח תֶּ֜רַח אֶת אַבְרָ֣ם בְּנ֗/וֹ וְ/אֶ…
+├── PHRASE (binary 17w) וַ/יִּקַּ֨ח תֶּ֜רַח אֶת אַבְרָ֣ם בְּנ֗/וֹ וְ/אֶ…
+│   ├── PHRASE (binary 11w) וַ/יִּקַּ֨ח תֶּ֜רַח אֶת אַבְרָ֣ם בְּנ֗/וֹ וְ/אֶ…
+│   │   ├── PHRASE (binary 5w) וַ/יִּקַּ֨ח תֶּ֜רַח אֶת אַבְרָ֣ם בְּנ֗/וֹ
+│   │   │   ├── [0-1] GLUE וַ/יִּקַּ֨ח תֶּ֜רַח (geresh, rank=4)
+│   │   │   └── [2-4] GLUE אֶת אַבְרָ֣ם בְּנ֗/וֹ (revia, rank=3)
+│   │   └── PHRASE (binary 6w) וְ/אֶת ל֤וֹט בֶּן הָרָן֙ בֶּן בְּנ֔/וֹ
+│   │       ├── [5-8] GLUE וְ/אֶת ל֤וֹט בֶּן הָרָן֙ (pashta, rank=3)
+│   │       └── [9-10] GLUE בֶּן בְּנ֔/וֹ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 6w) וְ/אֵת֙ שָׂרַ֣י כַּלָּת֔/וֹ אֵ֖שֶׁת אַבְרָ֣ם בּ…
+│       ├── PHRASE (binary 3w) וְ/אֵת֙ שָׂרַ֣י כַּלָּת֔/וֹ
+│       │   ├── [11] וְ/אֵת֙ (pashta, rank=3)
+│       │   └── [12-13] GLUE שָׂרַ֣י כַּלָּת֔/וֹ (zaqef qatan, rank=2)
+│       └── PHRASE (binary 3w) אֵ֖שֶׁת אַבְרָ֣ם בְּנ֑/וֹ
+│           ├── [14] אֵ֖שֶׁת (tifcha, rank=2)
+│           └── [15-16] GLUE אַבְרָ֣ם בְּנ֑/וֹ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 12w) וַ/יֵּצְא֨וּ אִתָּ֜/ם מֵ/א֣וּר כַּשְׂדִּ֗ים לָ/…
+    ├── PHRASE (binary 7w) וַ/יֵּצְא֨וּ אִתָּ֜/ם מֵ/א֣וּר כַּשְׂדִּ֗ים לָ/…
+    │   ├── PHRASE (binary 4w) וַ/יֵּצְא֨וּ אִתָּ֜/ם מֵ/א֣וּר כַּשְׂדִּ֗ים
+    │   │   ├── [17-18] GLUE וַ/יֵּצְא֨וּ אִתָּ֜/ם (geresh, rank=4)
+    │   │   └── [19-20] GLUE מֵ/א֣וּר כַּשְׂדִּ֗ים (revia, rank=3)
+    │   └── PHRASE (binary 3w) לָ/לֶ֨כֶת֙ אַ֣רְצָ/ה כְּנַ֔עַן
+    │       ├── [21] לָ/לֶ֨כֶת֙ (pashta, rank=3)
+    │       └── [22-23] GLUE אַ֣רְצָ/ה כְּנַ֔עַן (zaqef qatan, rank=2)
+    └── PHRASE (binary 5w) וַ/יָּבֹ֥אוּ עַד חָרָ֖ן וַ/יֵּ֥שְׁבוּ שָֽׁם
+        ├── [24-26] GLUE וַ/יָּבֹ֥אוּ עַד חָרָ֖ן (tifcha, rank=2)
+        └── [27-28] GLUE וַ/יֵּ֥שְׁבוּ שָֽׁם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.32 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">ויהיו ימי־תרח חמש שנים ומאתים שנה וימת תרח בחרן</span> · <i>va-yihyu yeme-terach chamesh shanim u-matayim shana va-yamat terach be-charan</i> · Terach&#x27;s days: 205 years; and Terach died in Charan. [EN-AID]</div>
+<pre>PHRASE (binary 10w) וַ/יִּהְי֣וּ יְמֵי תֶ֔רַח חָמֵ֥שׁ שָׁנִ֖ים וּ/מ…
+├── PHRASE (binary 7w) וַ/יִּהְי֣וּ יְמֵי תֶ֔רַח חָמֵ֥שׁ שָׁנִ֖ים וּ/מ…
+│   ├── [0-2] GLUE וַ/יִּהְי֣וּ יְמֵי תֶ֔רַח (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) חָמֵ֥שׁ שָׁנִ֖ים וּ/מָאתַ֣יִם שָׁנָ֑ה
+│       ├── [3-4] GLUE חָמֵ֥שׁ שָׁנִ֖ים (tifcha, rank=2)
+│       └── [5-6] GLUE וּ/מָאתַ֣יִם שָׁנָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וַ/יָּ֥מָת תֶּ֖רַח בְּ/חָרָֽן
+    ├── [7-8] GLUE וַ/יָּ֥מָת תֶּ֖רַח (tifcha, rank=2)
+    └── [9] בְּ/חָרָֽן (silluq (verse-end emperor), rank=1)
+</pre>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_26_shem_ledger — The deathless ledger: Shem to Terach, and the two deaths that land (11:10-32) [frozen]
+
+final state: WORLD=[] (+3 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[&#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;]
+
+=== S1 — The header and the first deathless row: after STEP_Gn_11_10_11
+    שְׁנָתַיִם אַחַר הַמַּבּוּל (shenatayim achar ha-mabul)
+    PASS  Facts shem-ben-meat-shanah / shenatayim-achar-ha-mabul HOLD  (3 facts)
+    PASS  Facts banim-u-vanot(shem) HOLD  (3 facts)
+    PASS  SPECS empty.  (queue=0)
+
+=== S2 — The fronted-perfect pair runs deathless: after STEP_Gn_11_14_15
+    וְשֶׁלַח חַי שְׁלֹשִׁים שָׁנָה (ve-shelach chay sheloshim shana)
+    PASS  Facts banim-u-vanot(arpakhshad) HOLD  (5 facts)
+    PASS  Facts banim-u-vanot(shelach) HOLD  (5 facts)
+    PASS  SPECS empty.  (queue=0)
+
+=== S3 — The papponymy row, the name handed down: after STEP_Gn_11_24_25
+    וַיּוֹלֶד אֶת־תָּרַח (va-yoled et-tarach)
+    PASS  Facts banim-u-vanot(nachor-ben-serug) HOLD  (10 facts)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — The open row: three sons, no close: after STEP_Gn_11_26
+    וַיּוֹלֶד אֶת־אַבְרָם אֶת־נָחוֹר וְאֶת־הָרָן (va-yoled et-avram et-nachor ve-et-haran)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name  (tests=0 names=0)
+    PASS  LEDGER stays EMPTY (open transaction).  (ledger_days=[])
+
+=== S5 — The second header inside the row, one new begetting: after STEP_Gn_11_27
+    וְהָרָן הוֹלִיד אֶת־לוֹט (ve-haran holid et-lot)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — The first death, inverted and located: after STEP_Gn_11_28
+    וַיָּמָת הָרָן עַל־פְּנֵי תֶּרַח אָבִיו (va-yamat haran al-pene terach aviv)
+    PASS  Facts be-eretz-moladto-be-ur-kasdim HOLD  (11 facts)
+    PASS  flags ur_kasdim as read-before-install.  (flagged=[&#x27;ur_kasdim&#x27;])
+
+=== S7 — The wives by report, the withheld line: after STEP_Gn_11_29
+    שֵׁם אֵשֶׁת־אַבְרָם שָׂרָי (shem eshet-avram saray)
+    PASS  Facts shem-eshet-avram-saray HOLD  (15 facts)
+    PASS  Facts milkah-bat-haran HOLD  (15 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S8 — The doubled absence holds open: after STEP_Gn_11_30
+    אֵין לָהּ וָלָד (ein lah valad)
+    PASS  Facts saray-akarah HOLD  (17 facts)
+    PASS  Facts ein-lah-valad HOLD  (17 facts)
+    PASS  SPECS empty.  (queue=0)
+
+=== S9 — The journey stated, stopped, settled: after STEP_Gn_11_31
+    וַיָּבֹאוּ עַד־חָרָן וַיֵּשְׁבוּ שָׁם (va-yavou ad-charan va-yeshvu sham)
+    PASS  Facts la-lekhet-artzah-kenaan HOLD  (18 facts)
+    PASS  flags charan/eretz_kenaan as read-before-install.  (flagged=[&#x27;charan&#x27;, &#x27;eretz_kenaan&#x27;, &#x27;ur_kasdim&#x27;])
+
+=== S10 — The row closes without &#x27;all&#x27;, the unit owes nothing: after STEP_Gn_11_32
+    וַיָּמָת תֶּרַח בְּחָרָן (va-yamat terach be-charan)
+    PASS  Facts yemei-terach-205-shanah HOLD  (19 facts)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name  (tests=0 names=0)
+    PASS  LEDGER stays EMPTY (open transaction).  (ledger_days=[])
+
+=== S11_negative — Negative: the LET? contract guard
+    וָלָד (valad)
+    PASS  imperfect-in-command parsed as LET? (question mark kept)  (mood=LET?)
+    PASS  auto-upgrade REFUSED  (TIR-028: LET? never auto-upgrades to LET — a per-unit judgme...)
+    PASS  upgrade WITH citation allowed  (cite=per-unit judgment (owner), TIR-028 resolution)
+
+=== S12_negative — Negative: flags never block
+    PASS  commit proceeded (not blocked)  (LEDGER=[99])
+    PASS  pattern deviation FLAGGED  (flags=[&#x27;commit_without_test&#x27;])
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_26_shem_ledger.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_26_shem_ledger — 11:10-32
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_26_shem_ledger.yaml) is CANONICAL (Pre-Code);
+# this file is a derived, runnable rendering. Do not edit — regenerate. The
+# assertion block at the bottom is baked from the Stage D interpreter&#x27;s
+# actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;The deathless ledger: Shem to Terach, and the two deaths that land (11:10-32)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_26_shem_ledger&quot;)
+
+# -------------------------- Gen.11.10-11 · SHEM_HEADER_AND_THE_FIRST_DEATHLESS_ROW -
+# אֵלֶּה תּוֹלְדֹת שֵׁם שֵׁם בֶּן־מְאַת שָׁנָה וַיּוֹלֶד אֶת־אַרְפַּכְשָׁד
+# שְׁנָתַיִם אַחַר הַמַּבּוּל … וַיּוֹלֶד בָּנִים וּבָנוֹת
+# &quot;These are the generations of Shem. Shem was a hundred years old, and
+# begot Arpachshad two years after the flood. And Shem lived after he begot
+# Arpachshad five hundred years, and begot sons and daughters.&quot;
+m.step(&quot;Gen.11.10-11&quot;)
+# ‹אֵלֶּה תּוֹלְדֹת שֵׁם› (“these generations Sem”) — section generations-
+# Sem: eleh toldot shem — the sixth toledot header labels; installs nothing
+m.section(&quot;toledot_shem&quot;, &quot;eleh toldot shem — the sixth toledot header labels; installs nothing&quot;)
+# ‹שֵׁם בֶּן־מְאַת שָׁנָה … שְׁנָתַיִם אַחַר הַמַּבּוּל› (“Sem son hundred
+# years … years after the-deluge”) — fact holds: Sem-son-hundred-year;
+# years-after-the-deluge
+m.fact(&quot;shem_ben_meat_shanah&quot;,
+       &quot;shenatayim_achar_ha_mabul&quot;)
+# ‹וַיּוֹלֶד אֶת־אַרְפַּכְשָׁד› (“and-bear-young obj-marker Arphaxad”) —
+# event: beget — agent Sem; theme Arphaxad
+m.event(&quot;beget&quot;, agent=&quot;shem&quot;, themes=[&quot;arpakhshad&quot;])
+# ‹וַיְחִי־שֵׁם אַחֲרֵי הוֹלִידוֹ אֶת־אַרְפַּכְשָׁד חֲמֵשׁ מֵאוֹת שָׁנָה
+# וַיּוֹלֶד בָּנִים וּבָנוֹת› (“and-live Sem after bear-young-him/its obj-
+# marker Arphaxad five hundred years and-bear-young son and-daughter”) —
+# fact holds: son-and-daughter(Sem)
+m.fact(&quot;banim_u_vanot(shem)&quot;)
+
+# -------------------------- Gen.11.12-13 · ARPACHSHAD_ROW_FRONTED_PERFECT --
+# וְאַרְפַּכְשַׁד חַי חָמֵשׁ וּשְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־שָׁלַח …
+# וַיּוֹלֶד בָּנִים וּבָנוֹת
+# &quot;And Arpachshad lived five and thirty years, and begot Shelah. And
+# Arpachshad lived after he begot Shelah four hundred and three years, and
+# begot sons and daughters.&quot;
+m.step(&quot;Gen.11.12-13&quot;)
+# ‹וְאַרְפַּכְשַׁד חַי חָמֵשׁ וּשְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־שָׁלַח›
+# (“and-Arphaxad live five and-thirty years and-bear-young obj-marker
+# Salah”) — event: beget — agent Arphaxad; theme Salah
+m.event(&quot;beget&quot;, agent=&quot;arpakhshad&quot;, themes=[&quot;shelach&quot;])
+# ‹וַיְחִי אַרְפַּכְשַׁד … שָׁלֹשׁ שָׁנִים וְאַרְבַּע מֵאוֹת שָׁנָה
+# וַיּוֹלֶד בָּנִים וּבָנוֹת› (“and-live Arphaxad … three years and-four
+# hundred years and-bear-young son and-daughter”) — fact holds: son-and-
+# daughter(Arphaxad)
+m.fact(&quot;banim_u_vanot(arpakhshad)&quot;)
+
+# -------------------------- Gen.11.14-15 · SHELACH_ROW_FRONTED_PERFECT -----
+# וְשֶׁלַח חַי שְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־עֵבֶר … וַיּוֹלֶד בָּנִים
+# וּבָנוֹת
+# &quot;And Shelah lived thirty years, and begot Eber. And Shelah lived after he
+# begot Eber four hundred and three years, and begot sons and daughters.&quot;
+m.step(&quot;Gen.11.14-15&quot;)
+# ‹וְשֶׁלַח חַי שְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־עֵבֶר› (“and-Salah live
+# thirty years and-bear-young obj-marker Eber”) — event: beget — agent
+# Salah; theme Eber
+m.event(&quot;beget&quot;, agent=&quot;shelach&quot;, themes=[&quot;ever&quot;])
+# ‹וַיְחִי־שֶׁלַח … שָׁלֹשׁ שָׁנִים וְאַרְבַּע מֵאוֹת שָׁנָה וַיּוֹלֶד
+# בָּנִים וּבָנוֹת› (“and-live Salah … three years and-four hundred years
+# and-bear-young son and-daughter”) — fact holds: son-and-daughter(Salah)
+m.fact(&quot;banim_u_vanot(shelach)&quot;)
+
+# -------------------------- Gen.11.16-17 · EVER_ROW_WAYYIQTOL_RESUMES ------
+# וַיְחִי־עֵבֶר אַרְבַּע וּשְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־פָּלֶג …
+# וַיּוֹלֶד בָּנִים וּבָנוֹת
+# &quot;And Eber lived four and thirty years, and begot Peleg. And Eber lived
+# after he begot Peleg four hundred and thirty years, and begot sons and
+# daughters.&quot;
+m.step(&quot;Gen.11.16-17&quot;)
+# ‹וַיְחִי־עֵבֶר אַרְבַּע וּשְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־פָּלֶג› (“and-
+# live Eber four and-thirty years and-bear-young obj-marker Peleg”) — event:
+# beget — agent Eber; theme Peleg
+m.event(&quot;beget&quot;, agent=&quot;ever&quot;, themes=[&quot;peleg&quot;])
+# ‹וַיְחִי־עֵבֶר אַחֲרֵי הוֹלִידוֹ אֶת־פֶּלֶג שְׁלֹשִׁים שָׁנָה וְאַרְבַּע
+# מֵאוֹת שָׁנָה וַיּוֹלֶד בָּנִים וּבָנוֹת› (“and-live Eber after bear-
+# young-him/its obj-marker Peleg thirty years and-four hundred years and-
+# bear-young son and-daughter”) — fact holds: son-and-daughter(Eber)
+m.fact(&quot;banim_u_vanot(ever)&quot;)
+
+# -------------------------- Gen.11.18-19 · PELEG_ROW_CAREER_CLOSES ---------
+# וַיְחִי־פֶלֶג שְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־רְעוּ … וַיּוֹלֶד בָּנִים
+# וּבָנוֹת
+# &quot;And Peleg lived thirty years, and begot Reu. And Peleg lived after he
+# begot Reu two hundred and nine years, and begot sons and daughters.&quot;
+m.step(&quot;Gen.11.18-19&quot;)
+# ‹וַיְחִי־פֶלֶג שְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־רְעוּ› (“and-live Peleg
+# thirty years and-bear-young obj-marker Reu”) — event: beget — agent Peleg;
+# theme Reu
+m.event(&quot;beget&quot;, agent=&quot;peleg&quot;, themes=[&quot;reu&quot;])
+# ‹וַיְחִי־פֶלֶג אַחֲרֵי הוֹלִידוֹ אֶת־רְעוּ תֵּשַׁע שָׁנִים וּמָאתַיִם
+# שָׁנָה וַיּוֹלֶד בָּנִים וּבָנוֹת› (“and-live Peleg after bear-young-
+# him/its obj-marker Reu nine years and-hundred years and-bear-young son
+# and-daughter”) — fact holds: son-and-daughter(Peleg)
+m.fact(&quot;banim_u_vanot(peleg)&quot;)
+
+# -------------------------- Gen.11.20-21 · REU_ROW_WHOLE_CAREER_IN_SPAN ----
+# וַיְחִי רְעוּ שְׁתַּיִם וּשְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־שְׂרוּג …
+# וַיּוֹלֶד בָּנִים וּבָנוֹת
+# &quot;And Reu lived two and thirty years, and begot Serug. And Reu lived after
+# he begot Serug two hundred and seven years, and begot sons and daughters.&quot;
+m.step(&quot;Gen.11.20-21&quot;)
+# ‹וַיְחִי רְעוּ שְׁתַּיִם וּשְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־שְׂרוּג› (“and-
+# live Reu two and-thirty years and-bear-young obj-marker Serug”) — event:
+# beget — agent Reu; theme Serug
+m.event(&quot;beget&quot;, agent=&quot;reu&quot;, themes=[&quot;serug&quot;])
+# ‹וַיְחִי רְעוּ אַחֲרֵי הוֹלִידוֹ אֶת־שְׂרוּג שֶׁבַע שָׁנִים וּמָאתַיִם
+# שָׁנָה וַיּוֹלֶד בָּנִים וּבָנוֹת› (“and-live Reu after bear-young-him/its
+# obj-marker Serug seven years and-hundred years and-bear-young son and-
+# daughter”) — fact holds: son-and-daughter(Reu)
+m.fact(&quot;banim_u_vanot(reu)&quot;)
+
+# -------------------------- Gen.11.22-23 · SERUG_ROW_BEGETS_THE_FIRST_NACHOR -
+# וַיְחִי שְׂרוּג שְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־נָחוֹר … וַיּוֹלֶד בָּנִים
+# וּבָנוֹת
+# &quot;And Serug lived thirty years, and begot Nahor. And Serug lived after he
+# begot Nahor two hundred years, and begot sons and daughters.&quot;
+m.step(&quot;Gen.11.22-23&quot;)
+# ‹וַיְחִי שְׂרוּג שְׁלֹשִׁים שָׁנָה וַיּוֹלֶד אֶת־נָחוֹר› (“and-live Serug
+# thirty years and-bear-young obj-marker Nahor”) — event: beget — agent
+# Serug; theme Nahor-son-Serug
+m.event(&quot;beget&quot;, agent=&quot;serug&quot;, themes=[&quot;nachor_ben_serug&quot;])
+# ‹וַיְחִי שְׂרוּג אַחֲרֵי הוֹלִידוֹ אֶת־נָחוֹר מָאתַיִם שָׁנָה וַיּוֹלֶד
+# בָּנִים וּבָנוֹת› (“and-live Serug after bear-young-him/its obj-marker
+# Nahor hundred years and-bear-young son and-daughter”) — fact holds: son-
+# and-daughter(Serug)
+m.fact(&quot;banim_u_vanot(serug)&quot;)
+
+# -------------------------- Gen.11.24-25 · NACHOR_ROW_BEGETS_TERACH --------
+# וַיְחִי נָחוֹר תֵּשַׁע וְעֶשְׂרִים שָׁנָה וַיּוֹלֶד אֶת־תָּרַח … וַיּוֹלֶד
+# בָּנִים וּבָנוֹת
+# &quot;And Nahor lived nine and twenty years, and begot Terah. And Nahor lived
+# after he begot Terah a hundred and nineteen years, and begot sons and
+# daughters.&quot;
+m.step(&quot;Gen.11.24-25&quot;)
+# ‹וַיְחִי נָחוֹר תֵּשַׁע וְעֶשְׂרִים שָׁנָה וַיּוֹלֶד אֶת־תָּרַח› (“and-
+# live Nahor nine and-twenty years and-bear-young obj-marker Tarah”) —
+# event: beget — agent Nahor-son-Serug; theme Tarah
+m.event(&quot;beget&quot;, agent=&quot;nachor_ben_serug&quot;, themes=[&quot;terach&quot;])
+# ‹וַיְחִי נָחוֹר אַחֲרֵי הוֹלִידוֹ אֶת־תֶּרַח תְּשַׁע־עֶשְׂרֵה שָׁנָה
+# וּמְאַת שָׁנָה וַיּוֹלֶד בָּנִים וּבָנוֹת› (“and-live Nahor after bear-
+# young-him/its obj-marker Tarah nine -teen years and-hundred years and-
+# bear-young son and-daughter”) — fact holds: son-and-daughter(Nahor-son-
+# Serug)
+m.fact(&quot;banim_u_vanot(nachor_ben_serug)&quot;)
+
+# -------------------------- Gen.11.26 · TERACH_ROW_OPENS_THREE_SONS --------
+# וַיְחִי־תֶרַח שִׁבְעִים שָׁנָה וַיּוֹלֶד אֶת־אַבְרָם אֶת־נָחוֹר
+# וְאֶת־הָרָן
+# &quot;And Terah lived seventy years, and begot Abram, Nahor, and Haran.&quot;
+m.step(&quot;Gen.11.26&quot;)
+# ‹וַיְחִי־תֶרַח שִׁבְעִים שָׁנָה וַיּוֹלֶד אֶת־אַבְרָם אֶת־נָחוֹר
+# וְאֶת־הָרָן› (“and-live Tarah seventy years and-bear-young obj-marker
+# Abram obj-marker Nahor and-obj-marker Haran”) — event: beget — agent
+# Tarah; theme Abram, Nahor-son-Tarah, Haran
+m.event(&quot;beget&quot;, agent=&quot;terach&quot;, themes=[&quot;avram&quot;, &quot;nachor_ben_terach&quot;, &quot;haran&quot;])
+
+# -------------------------- Gen.11.27 · TERACH_HEADER_INSIDE_THE_OPEN_ROW --
+# וְאֵלֶּה תּוֹלְדֹת תֶּרַח תֶּרַח הוֹלִיד אֶת־אַבְרָם אֶת־נָחוֹר
+# וְאֶת־הָרָן וְהָרָן הוֹלִיד אֶת־לוֹט
+# &quot;Now these are the generations of Terah. Terah begot Abram, Nahor, and
+# Haran; and Haran begot Lot.&quot;
+m.step(&quot;Gen.11.27&quot;)
+# ‹וְאֵלֶּה תּוֹלְדֹת תֶּרַח› (“and-these generations Tarah”) — section
+# generations-Tarah: ve-eleh toldot terach — the seventh toledot header
+# labels; installs nothing
+m.section(&quot;toledot_terach&quot;, &quot;ve-eleh toldot terach — the seventh toledot header labels; installs nothing&quot;)
+# ‹וְהָרָן הוֹלִיד אֶת־לוֹט› (“and-Haran bear-young obj-marker Lot”) —
+# event: beget — agent Haran; theme Lot
+m.event(&quot;beget&quot;, agent=&quot;haran&quot;, themes=[&quot;lot&quot;])
+
+# -------------------------- Gen.11.28 · HARAN_DIES_BEFORE_HIS_FATHER -------
+# וַיָּמָת הָרָן עַל־פְּנֵי תֶּרַח אָבִיו בְּאֶרֶץ מוֹלַדְתּוֹ בְּאוּר
+# כַּשְׂדִּים
+# &quot;And Haran died in the presence of his father Terah in the land of his
+# nativity, in Ur of the Chaldees.&quot;
+m.step(&quot;Gen.11.28&quot;)
+# ‹וַיָּמָת הָרָן עַל־פְּנֵי תֶּרַח אָבִיו› (“and-die Haran over face Tarah
+# father-him/its”) — event: die — agent Haran
+m.event(&quot;die&quot;, agent=&quot;haran&quot;)
+# ‹בְּאֶרֶץ מוֹלַדְתּוֹ בְּאוּר כַּשְׂדִּים› (“in-earth nativity-him/its in-
+# Ur Chaldeans”) — fact holds: in-earth-moladto-in-Ur-Chaldeans(Haran)
+m.fact(&quot;be_eretz_moladto_be_ur_kasdim(haran)&quot;)
+# reads without prior install (flag, not fix): Ur-Chaldeans
+m.presupposed(&quot;ur_kasdim&quot;)
+
+# -------------------------- Gen.11.29 · THE_WIVES_TAKEN_ONE_GENEALOGY_WITHHELD -
+# וַיִּקַּח אַבְרָם וְנָחוֹר לָהֶם נָשִׁים שֵׁם אֵשֶׁת־אַבְרָם שָׂרָי וְשֵׁם
+# אֵשֶׁת־נָחוֹר מִלְכָּה בַּת־הָרָן אֲבִי־מִלְכָּה וַאֲבִי יִסְכָּה
+# &quot;And Abram and Nahor took them wives: the name of Abram&#x27;s wife was Sarai;
+# and the name of Nahor&#x27;s wife, Milcah, the daughter of Haran, the father of
+# Milcah, and the father of Iscah.&quot;
+m.step(&quot;Gen.11.29&quot;)
+# ‹וַיִּקַּח אַבְרָם וְנָחוֹר לָהֶם נָשִׁים› (“and-take Abram and-Nahor to-
+# them/their woman”) — event: take — agent Abram; theme woman
+m.event(&quot;take&quot;, agent=&quot;avram&quot;, themes=[&quot;nashim&quot;])
+# ‹שֵׁם אֵשֶׁת־אַבְרָם שָׂרָי וְשֵׁם אֵשֶׁת־נָחוֹר מִלְכָּה› (“name woman
+# Abram Sarai and-name woman Nahor Milcah”) — fact holds: Sem-woman-Abram-
+# Sarai; Sem-woman-Nahor-milkah
+m.fact(&quot;shem_eshet_avram_saray&quot;,
+       &quot;shem_eshet_nachor_milkah&quot;)
+# ‹מִלְכָּה בַּת־הָרָן אֲבִי־מִלְכָּה וַאֲבִי יִסְכָּה› (“Milcah daughter
+# Haran father Milcah and-father Iscah”) — fact holds: milkah-daughter-
+# Haran; Haran-father-milkah-and-father-yiskah
+m.fact(&quot;milkah_bat_haran&quot;,
+       &quot;haran_avi_milkah_va_avi_yiskah&quot;)
+
+# -------------------------- Gen.11.30 · SARAI_BARREN_THE_DOUBLED_ABSENCE ---
+# וַתְּהִי שָׂרַי עֲקָרָה אֵין לָהּ וָלָד
+# &quot;And Sarai was barren; she had no child.&quot;
+m.step(&quot;Gen.11.30&quot;)
+# ‹וַתְּהִי שָׂרַי עֲקָרָה› (“and-be Sarai sterile”) — fact holds: Sarai-
+# akarah
+m.fact(&quot;saray_akarah&quot;)
+# ‹אֵין לָהּ וָלָד› (“there-is-not to-her/its boy”) — fact holds: ein-lah-
+# boy
+m.fact(&quot;ein_lah_valad&quot;)
+
+# -------------------------- Gen.11.31 · THE_JOURNEY_STATED_STOPPED_SETTLED -
+# וַיִּקַּח תֶּרַח אֶת־אַבְרָם בְּנוֹ וְאֶת־לוֹט בֶּן־הָרָן בֶּן־בְּנוֹ
+# וְאֵת שָׂרַי כַּלָּתוֹ אֵשֶׁת אַבְרָם בְּנוֹ וַיֵּצְאוּ אִתָּם מֵאוּר
+# כַּשְׂדִּים לָלֶכֶת אַרְצָה כְּנַעַן וַיָּבֹאוּ עַד־חָרָן וַיֵּשְׁבוּ שָׁם
+# &quot;And Terah took Abram his son, and Lot the son of Haran, his son&#x27;s son,
+# and Sarai his daughter-in-law, his son Abram&#x27;s wife; and they went forth
+# with them from Ur of the Chaldees, to go into the land of Canaan; and they
+# came unto Haran, and dwelt there.&quot;
+m.step(&quot;Gen.11.31&quot;)
+# ‹וַיִּקַּח תֶּרַח אֶת־אַבְרָם בְּנוֹ וְאֶת־לוֹט בֶּן־הָרָן בֶּן־בְּנוֹ
+# וְאֵת שָׂרַי כַּלָּתוֹ אֵשֶׁת אַבְרָם בְּנוֹ› (“and-take Tarah obj-marker
+# Abram son-him/its and-obj-marker Lot son Haran son son-him/its and-obj-
+# marker Sarai bride-him/its woman Abram son-him/its”) — event: take — agent
+# Tarah; theme Abram, Lot, Sarai
+m.event(&quot;take&quot;, agent=&quot;terach&quot;, themes=[&quot;avram&quot;, &quot;lot&quot;, &quot;saray&quot;])
+# ‹וַיֵּצְאוּ אִתָּם מֵאוּר כַּשְׂדִּים› (“and-bring-forth with-them/their
+# from-Ur Chaldeans”) — event: go-out — agent Tarah
+m.event(&quot;go_out&quot;, agent=&quot;terach&quot;)
+# ‹לָלֶכֶת אַרְצָה כְּנַעַן› (“to-go earth-ward Canaan”) — fact holds: to-
+# go-artzah-Canaan
+m.fact(&quot;la_lekhet_artzah_kenaan&quot;)
+# ‹וַיָּבֹאוּ עַד־חָרָן› (“and-come/bring until Haran”) — event: come —
+# agent Tarah
+m.event(&quot;come&quot;, agent=&quot;terach&quot;)
+# ‹וַיֵּשְׁבוּ שָׁם› (“and-dwell/sit there”) — event: settle — agent Tarah
+m.event(&quot;settle&quot;, agent=&quot;terach&quot;)
+# reads without prior install (flag, not fix): Haran, earth-Canaan
+m.presupposed(&quot;charan&quot;, &quot;eretz_kenaan&quot;)
+
+# -------------------------- Gen.11.32 · TERACH_ROW_CLOSES_WITHOUT_ALL ------
+# וַיִּהְיוּ יְמֵי־תֶרַח חָמֵשׁ שָׁנִים וּמָאתַיִם שָׁנָה וַיָּמָת תֶּרַח
+# בְּחָרָן
+# &quot;And the days of Terah were two hundred and five years; and Terah died in
+# Haran.&quot;
+m.step(&quot;Gen.11.32&quot;)
+# ‹וַיִּהְיוּ יְמֵי־תֶרַח חָמֵשׁ שָׁנִים וּמָאתַיִם שָׁנָה› (“and-be day
+# Tarah five years and-hundred years”) — fact holds: days-of-Tarah-205-year
+m.fact(&quot;yemei_terach_205_shanah&quot;)
+# ‹וַיָּמָת תֶּרַח בְּחָרָן› (“and-die Tarah in-Haran”) — event: die — agent
+# Tarah
+m.event(&quot;die&quot;, agent=&quot;terach&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == {&#x27;charan&#x27;, &#x27;ur_kasdim&#x27;, &#x27;eretz_kenaan&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS[&quot;log&quot;]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;read_before_install&#x27;: 3}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;shem_ben_meat_shanah&#x27;, &#x27;shenatayim_achar_ha_mabul&#x27;, &#x27;banim_u_vanot(shem)&#x27;, &#x27;banim_u_vanot(arpakhshad)&#x27;, &#x27;banim_u_vanot(shelach)&#x27;, &#x27;banim_u_vanot(ever)&#x27;, &#x27;banim_u_vanot(peleg)&#x27;, &#x27;banim_u_vanot(reu)&#x27;, &#x27;banim_u_vanot(serug)&#x27;, &#x27;banim_u_vanot(nachor_ben_serug)&#x27;, &#x27;be_eretz_moladto_be_ur_kasdim(haran)&#x27;, &#x27;shem_eshet_avram_saray&#x27;, &#x27;shem_eshet_nachor_milkah&#x27;, &#x27;milkah_bat_haran&#x27;, &#x27;haran_avi_milkah_va_avi_yiskah&#x27;, &#x27;saray_akarah&#x27;, &#x27;ein_lah_valad&#x27;, &#x27;la_lekhet_artzah_kenaan&#x27;, &#x27;yemei_terach_205_shanah&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 19
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

@@ -1,0 +1,680 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_27_the_call — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_27_the_call?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The call: go to the land I will show you (12:1-9) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_27_the_call</b> · Genesis 12:1-9 · derive logic_derived_v1 · phase C-27</div>
+<div class="meta"><a href="../#Gen/12/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">לֶךְ־לְךָ מֵאַרְצְךָ</span> · <i>lekh-lekha me-artzekha</i> · &#x27;go, you, from your land&#x27;</p>
+<div class="note">REVIEW PASSED and FROZEN 2026-08-03 by the main loop: every census re-run independently against the raw snapshot — bless-verb x4 in 12:2-3 (piel imperfect x2, plural participle, niphal) + berakhah (&#x27;blessing&#x27;) noun DEBUT at 12:2 (tokens 2-8 all the Gen 27-28:4 stolen-blessing cycle); qalal (&#x27;treat-lightly&#x27;) token 4 = 12:3 (1-2 the receding flood-waters, 3 = 8:21, 5-6 = Sarai at 16:4-5) vs arar (&#x27;curse&#x27;) token 6 = 12:3 with 7-8 = 27:29 — gen_14&#x27;s frozen census extended exactly; goy (&#x27;nation&#x27;) token 7 = 12:2 AND mishpachah (&#x27;family&#x27;) token 7 = 12:3 — BOTH halves of gen_24&#x27;s Abram-bridge export land as predicted; nasa (&#x27;journey&#x27;) token 2 = 12:9 — gen_25&#x27;s export lands; mizbeach (&#x27;altar&#x27;) tokens 3-4 = 12:7/12:8 of total 198 (the agent&#x27;s correction of the seed&#x27;s &#x27;tokens 2-3&#x27; CONFIRMED against gen_20&#x27;s frozen &#x27;tokens 1-2 of 198&#x27;); see-root niphal roster through Gen 12 exact (1:9 dry land, 8:5 mountaintops, 9:14 bow, then 12:7 va-yera + ha-nireh — the corpus&#x27;s FIRST divine appearance, twice in one verse); the invocation formula&#x27;s strict-adjacency census exact (4:26, 12:8, 26:25 adjacent; 13:4/21:33 are the sham-interposed variants, both LATER — &#x27;first named caller&#x27; holds on either reading; reviewer precision note); lekh-lekha (&#x27;go, you&#x27;) exactly two Torah tokens (12:1; 22:2 vav-prefixed); TRUE-IMPERATIVE morphs DB-verified (lekh HVqv2ms, ve-heyeh HC/Vqv2ms — no ?-guard needed, gen_06&#x27;s class covers coded forms only); az (&#x27;then&#x27;) tokens 1-3 = 4:26/12:6/13:7; zera (&#x27;seed&#x27;) token 13 = 12:7; ataq (&#x27;move on&#x27;) 2 tokens (12:8, 26:22); negev and rekhush debuts confirmed; span word_total 127. ALL TEN FLAGGED BOLD CHOICES RATIFIED, including SETTLED CYCLE #6 (lekh -&gt; va-yelekh + ka-asher dibber — numbering confirmed on gen_17&#x27;s #2 class), promises as FACTS not INVARIANTs (no perpetuity formula — class discipline correct), the tent natah/banah install split, and the two-altar sibling-naming. All 17 precedent quotes verified VERBATIM. Onkelos (Aramaic translation) read Tier-A at derive time (9 sequential fetches, Data/FETCHLOG.md) — headline find-class: the buffer UN-COMMISSIONS the second imperative (&#x27;be a blessing&#x27; -&gt; &#x27;be BLESSED&#x27;), dissolving exactly the demand the machine leaves open. TWENTY-THIRD PROSPECTIVE MIDDOT RUN (logic/middot_scan/WATCHLIST_gen27_prospective_2026-08-03.md): cache holds ZERO sources for Gen 12:1-9 — TWENTY-FIRST tripwire in a row. INTERPRETER: ZERO extensions — eighteenth extension-free derivation in a row. Derived by the THIRD-GENERATION agent (its second unit; tenth agent-derived unit overall; block 2 of the owner&#x27;s two-block autonomous order). THE DRAFT&#x27;S FLAGGED CHOICES (all ratified): (1) the seeded question &#x27;first divine command to a named individual?&#x27; is answered NO — frozen gen_16 already holds that first (&#x27;ASEH — imperative (TIR-027), and a corpus first: the divine imperative mood aimed at a NAMED INDIVIDUAL&#x27;), and 7:1&#x27;s bo (&#x27;come/ enter&#x27;) continued the class; 12:1&#x27;s real firsts are encoded instead: YHWH&#x27;s first speech TO ABRAM, the first command to LEAVE rather than build/enter, and the first command whose OBJECT IS WITHHELD (the ark came with cubit specs; the land comes as &#x27;that I will show you&#x27;) — overclaim declined. (2) The five divine self-commitments of 12:2-3 (+12:1&#x27;s areka, +12:7&#x27;s etten) are held as standing FACTS, not INVARIANTs — gen_20/21/22&#x27;s INVARIANT class carries perpetuity formulas (&#x27;all the days of the earth&#x27;, &#x27;never again&#x27;); these are coded-imperfect promises with no duration clause; choice flagged. (3) heyeh berakhah (&#x27;BE a blessing&#x27; — true imperative) is pushed as a LET demand and left OPEN at unit end: the letter writes no receipt for it (Onkelos dissolves the command into &#x27;and you will be BLESSED&#x27; — the buffer un-commissions exactly the demand this machine leaves open; dual-track). (4) lekh -&gt; va-yelekh + ka-asher dibber (&#x27;as He had spoken&#x27;) claimed as SETTLED CYCLE #6 — numbering for main-loop ratification. (5) The TENT of 12:8 is NOT installed — natah (&#x27;pitch/ stretch&#x27;) is not the banah (&#x27;build&#x27;) install class; the two altars install, the tent does not; flagged. (6) Two altar objects need two names: mizbeach_shekhem / mizbeach_beit_el (sibling-naming; frozen gen_20&#x27;s single token mizbeach stays Noach&#x27;s). (7) Mood-guard check run as ordered: lekh and heyeh are TRUE imperatives (Vqv2ms, DB-verified) — gen_06&#x27;s final-heh ?-guard does NOT apply (that class covers coded imperfects/cohortatives; no ambiguity here); 12:2&#x27;s va-agadelah carries a paragogic heh on a 1cs self-commitment — noted, but it is a promise-FACT, not a demand: no guard needed. (8) The seed&#x27;s &#x27;mizbeach tokens 2-3&#x27; corrected by census: 12:7 = token 3, 12:8 = token 4 (gen_20&#x27;s frozen encoding: &#x27;tokens 1-2 of 198, both in this verse&#x27; — 8:20). (9) ve-nivrekhu&#x27;s niphal (&#x27;be blessed / bless themselves&#x27;) stem-ambiguity held OPEN; Onkelos resolves to passive-causal (&#x27;shall be blessed FOR YOUR SAKE&#x27;) — dual-track only. (10) asah (&#x27;make&#x27;) on persons at 12:5 held OPEN; Onkelos votes converts (&#x27;the souls they had SUBJECTED TO THE TORAH in Charan&#x27;) — dual-track, named-only. GLOSS_FIX applied: the Beit-El compound rows carry a LITERAL &#x27;?&#x27; DB gloss (le-vet &#x27;to-?&#x27;, bet &#x27;?&#x27;) — rendered beit (&#x27;house of&#x27;) + El throughout; ha-negbah rendered &#x27;toward the Negev/South&#x27;.</div>
+<div class="note">Logic-derived v1: v3 taamim (cantillation accents) trees from DB tree_json -&gt; leaf role frames from OSHB morph -&gt; operator lines citing TIR rules -&gt; machine-state scenarios. Machine tokens apostrophe-free and underscore-joined (lekh(avram, el_ha_aretz_asher_areka), heyeh(avram, berakhah), le_zarakha_etten_et_ha_aretz_ha_zot). Per-verse steps (nine).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (retro, PROCESS.md oral-first era; manifest logic/oral_audit/manifests/gen_27_the_call_claims.json — 14 VERIFIED, 0 FAILED, 2 UNCHECKABLE; record logic/oral_audit/AUDIT_gen_27_2026-08-08.md). CROWNS (chain-attested + DB-verified): (1) THE BLESS-WORD LAW ACROSS A WHOLE CAREER (G27-05/07/08/09, Minchat Shai on 12:3 quoting a manuscript Masorah [received tradition]): accent on the bet — the resh reads simple sheva (murmur vowel); accent on the kaf — the resh takes hataf patach (the compound half-vowel). SNAPSHOT: ואברכה (&quot;and I will bless,&quot; 12:3, accent on the kaf-syllable) carries the compound vowel; מברכיך (&quot;those who bless you&quot;) has exactly TWO Torah tokens — 12:3 and Num 24:9, Balaam&#x27;s mouth — and they SPLIT exactly along the law: Balaam&#x27;s (kaf-accent) compound, ours (bet-sign) simple sheva, &quot;the way of the books&quot; per Minchat Shai&#x27;s own ruling line. The Kitzur&#x27;s letter-arithmetic on the curse-half names Balaam; the census delivers Balaam as the word&#x27;s only other holder. (2) מברכיך written with YOD, the plural marker, at both tokens (G27-06) — the Kitzur attests the held letter-fact: PLURAL blessers, SINGULAR belittler. (3) אהלה (&quot;his tent&quot; written with the feminine letter heh) — one of FOUR so written (G27-01, Minchat Shai; Bereshit Rabbah 39: he pitched SARAH&#x27;s tent first): SNAPSHOT exactly 9:21, 12:8, 13:3, 35:21. (4) הנראה (&quot;who APPEARED&quot;) — exactly two Torah tokens, 12:7 and 35:1 (G27-02, Kitzur): the first divine appearance paired with Jacob&#x27;s return — same word, same place (Beit El). (5) בית אל (&quot;Beit El&quot;) among the names written as TWO WORDS, never split across lines (G27-11/12, the divided-names lists via Minchat Shai): SNAPSHOT joins both 12:8 occurrences with maqqef (the joining hyphen). (6) The second ויבן (&quot;and he built,&quot; 12:8) without qadma (the forward accent-stroke) — SNAPSHOT: meteg (the small upright stroke) only (G27-13). (7) Two singletons with legs (G27-03/04): אראך (&quot;I will show you&quot;) — one Torah token (12:1), Masorah-paired into Zechariah (edge); ואברכה — one Torah token (12:3), paired with Ps 145:1&#x27;s &quot;I will bless Your name forever&quot; (edge). DISCREPANCY (filed, not merged): מזבח (&quot;altar,&quot; 12:8) — Minchat Shai rules the LAST pashta (postpositive accent) ALONE; SNAPSHOT (Leningrad line) writes the doubled sign (G27-14) — accent-writing convention split, Sephardic vs Leningrad. INHERITANCE EDGES (export_links, Torah side verified): 12:2 → Isa 19:24 and Zech 8:13 — והיה ברכה (&quot;BE a blessing&quot;), the demand this machine leaves OPEN at the wall, inherited whole (&quot;Israel shall be a blessing in the midst of the earth&quot;; &quot;so will I save you, and you shall be a blessing&quot;) — the open demand&#x27;s receipt lives outside the Torah; 12:2 → Jer 24:9 (the ladder inverted in judgment); 12:3 → Jer 2:3 (the guard-clause); 12:5 → Prov 11:30 (the souls made in Charan / &quot;he who acquires souls&quot;); 12:8 → Josh 8:9 (the camp between Beit El and the Ai re-used as the conquest&#x27;s ambush coordinates). INSTRUMENT GAPS: 12:1 opens a petucha (open paragraph) [G27-15]; THREE TAGIN (letter-crowns) on the final kaf of ואברכך (&quot;and I will bless you,&quot; 12:2) — the SEVENTH uninstrumented layer catalogued [G27-16]; Minchat Shai&#x27;s galgal (the wheel-sign) on the bet of מברכיך sits where SNAPSHOT encodes munach (the resting accent) — wheel-sign variant class, 4th recurrence [G27-10]. READINGS (named-only): the seven blessings of 12:2-3 (Kitzur; Bereshit Rabbah 39:11); the lekh-lekha (&quot;go, you&quot;) letter-arithmetic chains (100, 75, the exiles); אראך = בעננים (&quot;with clouds&quot;) by letter-value; ומקללך אאר = זה בלעם (&quot;this is Balaam&quot;) by letter-value — naming the very mouth the career census verified; the והיה (&quot;BE&quot;) six-member curated Masorah list; the world-creating SPEECH opening (Kitzur 12:1). Machine layer untouched.</div>
+<div class="meta">confidence: structure tested; operator readings tested-per-TIR; intent hypothesis</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>Gen 12:1-9 as ONE UNIT (main-loop ruling on staged recommendation): the call (12:1-3), the compliance and crossing (12:4-5), the itinerary with theophany and altars (12:6-9); the seam is 12:10 (&#x27;and there was a famine&#x27;) — the wife-sister episode is its own machine. 12:9&#x27;s durative pair (halokh ve-nasoa, &#x27;going on and journeying&#x27;) is the letter&#x27;s own suspended close: the unit ends mid-road, gen_26&#x27;s stall answered by motion that has not arrived. 9 verses, 127 tokens.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Hebrew source + trees</td><td>All 9 verses from DB tree_json (rule set v3, all unique, pure binary; ascii rendered 2026-08-03). Tree facts (accent positions DB-verified): 12:1 rests (etnachta, major mid-verse rest) on avikha (&#x27;your father&#x27;) — [the threefold FROM | the land I will show you]: the whole verse splits between what is left and what is withheld; 12:2 rests on shemekha (&#x27;your name&#x27;) and the verse-end (silluq) seats BERAKHAH (&#x27;blessing&#x27;) — the noun&#x27;s debut token is a verse-final throne; 12:3 rests on aor (&#x27;I-will-curse&#x27;) and ends on ha-adamah (&#x27;the GROUND&#x27; — the families are of the adamah, not the eretz [letter fact held]); 12:4 rests on lot and ends on me-charan; 12:5 rests on ve-charan and ends on kenaan — the verse&#x27;s two arms end on the two cities of gen_26&#x27;s stalled journey, origin and destination; 12:6 rests on moreh and ends on ba-aretz; 12:7 rests on ha-zot (&#x27;THIS [land]&#x27;) and ends on elav (&#x27;to him&#x27;); 12:8 rests on aholoh (&#x27;his tent&#x27;) and ends on YHWH — the verse that builds and calls ends on the Name; 12:9 is four groups ending ha-negbah (&#x27;toward the South&#x27;).</td><td>tested</td></tr>
+<tr><td><b>C</b></td><td>Segment structure</td><td>Verb morphology (#IMPOSED OSHB, DB-verified 2026-08-03): LEKH (12:1) and HEYEH (12:2) are TRUE IMPERATIVES (Vqv2ms both) — the ?-guard check ordered by the seed comes back negative: gen_06&#x27;s form-class discipline covers coded imperfects and final-heh cohortatives; plain imperatives take the LET demand class without a guard (gen_16&#x27;s TIR-027 precedent). The five self-commitments: ve-eeskha (Vqi1cs &#x27;I will make you&#x27;), va-avarekhkha (Vpi1cs &#x27;I will bless you&#x27;), va-agadelah (Vpi1cs + paragogic heh &#x27;I will make great&#x27;), va-avarakhah (Vpi1cs + paragogic heh &#x27;I will bless&#x27;), aor (Vqi1cs &#x27;I will curse&#x27;) — coded imperfects, first-person, no duration clause [FACT class, flagged choice]. ARE-KA (12:1) is HIPHIL imperfect (&#x27;I will cause you to SEE&#x27;); 12:7&#x27;s VA-YERA is NIPHAL of the same root (&#x27;He was SEEN/ appeared&#x27;) — the show-promise and the appearance share the see-root, causative then passive [internal arc, prose]. Censuses run BEFORE drafting: the nifal appear-verb&#x27;s prior subjects are the dry land (1:9), the mountaintops (8:5), the bow (9:14) — 12:7 is the FIRST YHWH-subject appearance in the corpus [exact]; berakhah (&#x27;blessing&#x27;, noun) TORAH DEBUT at 12:2 — tokens 2-8 are ALL Gen 27-28:4, the stolen-blessing cycle [career, prose]; the bless-root runs FIVE tokens in 12:2-3 (verb x4: piel imperfect x2, piel participle plural mevarakhekha, NIPHAL ve-nivrekhu; noun x1) [seed&#x27;s count verified]; the curse-pair SPLITS lemmas: u-meqallelkha (qalal &#x27;treat-lightly&#x27;, token 4 — tokens 1-2 are the flood waters ABATING 8:8/8:11, token 3 is 8:21&#x27;s &#x27;I will not again curse the ground&#x27;, tokens 5-6 are SARAI in Hagar&#x27;s eyes 16:4-5) vs aor (arar &#x27;curse&#x27;, token 6 — extending gen_14&#x27;s frozen census &#x27;the curse-root at 5:29 is token 4 (3:14, 3:17, 4:11 before it; 9:25 after — Noach&#x27;s own mouth)&#x27; [quoted]; tokens 7-8 = 27:29, the SAME bless/curse formula re-run for Yaakov); PLURAL mevarakhekha (&#x27;those who bless you&#x27;) against SINGULAR u-meqallelkha (&#x27;him who belittles you&#x27;) [letter fact, held]; goy (&#x27;nation&#x27;) token 7 = 12:2 and mishpachah (&#x27;family&#x27;) token 7 = 12:3 — BOTH halves of frozen gen_24&#x27;s Abram-bridge export LAND in this unit [quoted at the steps]; zera (&#x27;seed&#x27;) token 13 at 12:7 (tokens 1-6 plant-seed in Gen 1; 7-8 = 3:15 the serpent&#x27;s and the woman&#x27;s; 9 = 4:25 Shet; 11-12 = the covenant&#x27;s 9:9); mizbeach (&#x27;altar&#x27;) tokens 3-4 (12:7, 12:8) after gen_20&#x27;s 1-2 (both 8:20); az (&#x27;then&#x27;) token 2 at 12:6 (token 1 = 4:26 — both az-tokens sit beside qara-be-shem contexts; token 3 = 13:7, the twin Canaanite-notice); qara be-shem YHWH (&#x27;call on the name&#x27;) construction token 2 at 12:8 (token 1 = 4:26, hophal AGENTLESS — 12:8 is the formula&#x27;s FIRST NAMED CALLER); LEKH-LEKHA (&#x27;go, you&#x27;) — the doubled dative summons has exactly TWO Torah tokens: 12:1 and 22:2 (the binding) [career, named-only]; rekhush (&#x27;property&#x27;) debuts beside its own verb rakhashu (&#x27;they had acquired&#x27; — cognate figure); nasa (&#x27;journey&#x27;) token 2 = 12:9 and halakh token 8 = the durative halokh; ha-negbah (&#x27;toward the Negev/South&#x27;) TORAH DEBUT. 12:4&#x27;s age-notice: 75 (the 205-arithmetic of 11:32 is the chain&#x27;s, named-only per gen_26).</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Predicates &amp; outcomes</td><td>The machine&#x27;s first reopened queue in three units: one divine utterance pushes TWO demands — GO (object withheld: el-ha-aretz asher AREKA, &#x27;to the land that I will show you&#x27; — the letter defers the destination [OPEN at 12:1, pointed at by 12:7&#x27;s ha-aretz ha-ZOT]) and BE A BLESSING (no receipt anywhere in span). The go-demand pops at 12:4 in the letter&#x27;s own receipt grammar (ka-asher dibber elav YHWH, &#x27;as YHWH had spoken to him&#x27; — gen_17&#x27;s compliance-formula class); the be-demand stands open at the wall. Around the queue: seven promise-FACTS (nation, name, blessing given and guarded, families, seed, land), the arrival that the frozen wall&#x27;s stalled journey waited for (12:5 — cross-unit, prose), the first divine appearance, two altars (the WORLD register wakes: installs 4 and 5 of the corpus&#x27;s built things), the invocation formula&#x27;s first named caller, and a road south that never stops in-span.</td><td>tested</td></tr>
+<tr><td><b>E</b></td><td>Logic format choice</td><td>Operator lines; per-verse steps (nine — gen_25&#x27;s device; no template rows here). DECLARE x2 (both TIR-027 imperatives to Abram, LET class — gen_16&#x27;s precedent quoted; NO ?-guard: true imperative morphs). RESULT x1 (12:4 — gen_17&#x27;s class quoted; settled cycle #6 claimed, flagged). EVENTs (13): go (12:4 — Abram and Lot), take + go_out + come (12:5 — the arrival), pass (12:6), appear + say + build (12:7), move_on + pitch + build + call (12:8), journey (12:9). REGISTRY_INSTALL x2 (mizbeach_shekhem, mizbeach_beit_el — gen_20&#x27;s device quoted; the tent NOT installed, flagged). Standing facts (11): the FROM-ladder, the five commitment-facts across 12:2-3 (held as three fact-lines), the receipt-formula fact + the age fact (12:4), the property and souls facts (12:5), the Canaanite-then fact (12:6), the seed-pledge (12:7 — vs gen_21&#x27;s performative natati, delta named). NAME x0, REGISTRY x0 writes (qara be-shem YHWH is invocation, not naming — gen_13&#x27;s class). TESTS: empty. LEDGER: empty. NOTE_PRESUPPOSED x6 (charan, eretz_kenaan, shekhem, beit_el, ha_ai, ha_negev). Queue at rest: ONE open (heyeh berakhah). Interpreter extensions: NONE.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Bilingual logic objects</td><td>Every operator line carries he + he_translit + en. Machine tokens apostrophe-free: lekh(avram, el_ha_aretz_asher_areka), heyeh(avram, berakhah), ve_nivrekhu_vekha_kol_mishpechot_ha_adamah, le_zarakha_etten_et_ha_aretz_ha_zot, mizbeach_shekhem, mizbeach_beit_el.</td><td>established</td></tr>
+<tr><td><b>G</b></td><td>Oral (named only) + Tier-A translation check</td><td>Named but NOT read (queue only — the cache middot scan is the main loop&#x27;s gate): Bereshit Rabbah 39 (the span; the open-ended lekh-lekha as trial #1 of the ten); Bavli Rosh Hashanah 16b / Pesachim 117b (the 12:2 ladder parsed as liturgy — the Amidah&#x27;s magen Avraham anchor); Rashi at 12:1 (for your benefit), 12:2 (the three losses of travel), 12:5 (the souls = converts), 12:6 (az — the conquest chronology); Ramban&#x27;s programmatic maaseh-avot (&#x27;the deeds of the fathers&#x27;) reading opens HERE. Tier-A Onkelos (9 fetches, Data/FETCHLOG.md 2026-08-03): findings in ORAL_onkelos_tier_a — headline: the buffer UN-COMMISSIONS the second imperative (&#x27;be a blessing&#x27; -&gt; &#x27;and you will be BLESSED&#x27;) — dissolving exactly the demand this machine leaves open; levels the two curse-verbs to ONE root; resolves the niphal to &#x27;blessed FOR YOUR SAKE&#x27;; votes converts at 12:5 (&#x27;subjected to the Torah&#x27;); repeats gen_20&#x27;s altar distancing (&#x27;BEFORE the LORD&#x27;) and gen_25&#x27;s reveal-verb for the appearance; renders the call-formula as PRAYER (ve-tzali bi-shma — gen_13&#x27;s 4:26 prayer-reading, now positive).</td><td>tested</td></tr>
+<tr><td><b>H</b></td><td>Scenarios</td><td>S1 the call: the go-demand pushed and open, the FROM-ladder holds. S2 the ladder: the be-demand pushed and open; the nation-fact holds. S3 the asymmetry: the bless/curse facts and the families-fact hold. S4 the receipt: the compliance-formula fact holds, the be-demand still open (selective pop asserted in prose), charan flagged. S5 the arrival: the souls-fact holds, eretz_kenaan flagged. S6 the pass: the Canaanite-then fact, shekhem flagged. S7 the appearance: the seed-pledge holds, WORLD += mizbeach_shekhem. S8 the second altar: WORLD += mizbeach_beit_el, beit_el/ha_ai flagged. S9 the road: WORLD equals the two altars exactly, the be-demand STILL open at rest, ha_negev flagged. S10_negative LET? guard; S11_negative flag-never-block.</td><td>tested</td></tr>
+<tr><td><b>I</b></td><td>English leakage review</td><td>Operators derive from morph codes (true imperatives vs coded- imperfect commitments; hiphil areka vs nifal va-yera; the niphal ve-nivrekhu; TIR-014 object markers; TIR-027 imperative; TIR-032 passives) and DB censuses run BEFORE drafting (the nifal-raah subject roster; the bless-root five; the curse-pair careers; the goy/mishpachah ordinals; zera 13; mizbeach 3-4; az 1-2-3; the qara-be-shem roster; lekh-lekha&#x27;s two tokens; berakhah&#x27;s career). NOT supplied: where the withheld land is (the letter defers it; 12:7 points, never names), whether ve-nivrekhu is passive or reflexive, who the made souls are, the az chronology, why the belittler is singular, any 205/75 harmonization, or the settled-cycle number (claimed #6, flagged) — every one [OPEN], prose, or flagged; the Onkelos deltas stay dual-track.</td><td>established</td></tr>
+<tr><td><b>J</b></td><td>Pre-flight + draft ship</td><td>Pre-flight 2026-08-03 against the UNMODIFIED repo interpreter — zero injected prototypes (scratchpad preflight_gen27.py; draft guard bypassed for preview only). Ships as STATUS: DRAFT by the gen-3 block agent (mechanics only); the main loop verifies quotes, re-runs censuses, rules on the ten flagged choices, and freezes through the standard gate chain.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_12_1 · Gen.12.1 · <span class='expr'>THE_CALL_WITH_THE_OBJECT_WITHHELD</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֶל־אַבְרָם לֶךְ־לְךָ מֵאַרְצְךָ וּמִמּוֹלַדְתְּךָ וּמִבֵּית אָבִיךָ אֶל־הָאָרֶץ אֲשֶׁר אַרְאֶךָּ</span> · <i>va-yomer YHWH el-avram lekh-lekha me-artzekha u-mi-moladtekha u-mi-beit avikha el-ha-aretz asher areka</i> · [EN-AID/JPS] Now the LORD said unto Abram: &#x27;Get thee out of thy country, and from thy kindred, and from thy father&#x27;s house, unto the land that I will show thee.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר יהוה אל־אברם לך־לך מארצך וממולדתך ומבית אביך</span> · <i>va-yomer YHWH el-avram lekh-lekha me-artzekha u-mi-moladtekha u-mi-beit avikha</i> · the summons and the threefold FROM (etnachta arm ends on &#x27;your father&#x27;)</div><div class="arm"><b>RIGHT</b><br><span class="he">אל־הארץ אשר אראך</span> · <i>el-ha-aretz asher areka</i> · to the land that I will SHOW you — the object withheld</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(lekh(avram, el_ha_aretz_asher_areka)))</span><br><span class="gloss">= DECLARE(the-LORD, LET(lekh(avram, to-the-earth-which-areka)))</span><br>LEKH — TRUE IMPERATIVE (Vqv2ms; TIR-027), pushed on gen_16&#x27;s frozen class, quoted: &#x27;DECLARE(Elohim, LET(aseh(noach, tevah)))&#x27; — &#x27;ASEH — imperative (TIR-027), and a corpus first: the divine imperative mood aimed at a NAMED INDIVIDUAL.&#x27; So 12:1 is NOT that first [seed question answered against the claim; flagged]: Noach was commanded to BUILD (6:14) and to ENTER (7:1, bo — settled cycle #2); Abram is the first commanded to LEAVE — and the first whose command WITHHOLDS ITS OBJECT: the ark came with cubit specs (gen_16 is an entire spec unit); the land is el-ha-aretz asher AREKA (&#x27;to the land that I will CAUSE YOU TO SEE&#x27; — hiphil imperfect, the show deferred) [OPEN: the letter never names the destination in this verse; 12:7 will point — ha-aretz ha-ZOT, &#x27;THIS land&#x27; — and still not name]. LEKH-LEKHA (&#x27;go, YOU&#x27; — the doubled dative): exactly TWO Torah tokens, 12:1 and 22:2 — the summons that opens Abram&#x27;s road and the one that opens the binding [career fact, named-only]. This is YHWH&#x27;s first speech to Abram — the man has yet to say anything back [letter fact].
+</td><td><span class="he">לֶךְ־לְךָ … אֶל־הָאָרֶץ אֲשֶׁר אַרְאֶךָּ</span> · <i>lekh-lekha … el-ha-aretz asher areka</i><br><span class="gloss">= lekh-to-you to-the-earth which areka</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lekh_lekha_me_artzekha_u_mi_moladtekha_u_mi_beit_avikha, t0)</span><br><span class="gloss">= HOLDS(lekh-to-you-from-artzekha-and-from-moladtekha-and-from-beit-avikha, t0)</span><br>The threefold FROM-ladder, tightening: your LAND, your MOLEDET (&#x27;birthplace/kindred&#x27;), your FATHER&#x27;S HOUSE — the command&#x27;s content held as spoken fact. FROZEN gen_26&#x27;s moledet encoding LANDS, quoted: &#x27;the land of his moledet (&quot;nativity/birthplace&quot;: the word&#x27;s TORAH DEBUT is inside a death notice; its token 2 is 12:1&#x27;s &quot;from your moledet&quot; — career fact, prose, seam not encoded)&#x27; — this is that token 2: the word born in Haran&#x27;s death notice is now the thing Abram must leave. The ladder&#x27;s third rung is beit avikha (&#x27;your father&#x27;s house&#x27;) — and the frozen wall behind this verse is that father&#x27;s death in Charan [cross-unit; prose only].
+</td><td><span class="he">מֵאַרְצְךָ וּמִמּוֹלַדְתְּךָ וּמִבֵּית אָבִיךָ</span> · <i>me-artzekha u-mi-moladtekha u-mi-beit avikha</i><br><span class="gloss">= from-artzekha and-from-moladtekha and-from-beit avikha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The call: three concentric homes named to be left, and the destination held back — a command shaped like a promise, a promise shaped like a test.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_12_2 · Gen.12.2 · <span class='expr'>THE_PROMISE_LADDER_AND_THE_SECOND_IMPERATIVE</span></h3>
+<p><span class="he">וְאֶעֶשְׂךָ לְגוֹי גָּדוֹל וַאֲבָרֶכְךָ וַאֲגַדְּלָה שְׁמֶךָ וֶהְיֵה בְּרָכָה</span> · <i>ve-eeskha le-goy gadol va-avarekhkha va-agadelah shemekha ve-heyeh berakhah</i> · [EN-AID/JPS] And I will make of thee a great nation, and I will bless thee, and make thy name great; and be thou a blessing.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ואעשך לגוי גדול ואברכך ואגדלה שמך</span> · <i>ve-eeskha le-goy gadol va-avarekhkha va-agadelah shemekha</i> · nation, blessing, great name (etnachta arm ends on &#x27;your name&#x27;)</div><div class="arm"><b>RIGHT</b><br><span class="he">והיה ברכה</span> · <i>ve-heyeh berakhah</i> · and BE a blessing — the noun&#x27;s debut on the verse-end</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(e_eskha_le_goy_gadol, t0) ∧ HOLDS(va_avarekhkha_va_agadlah_shmekha, t0)</span><br><span class="gloss">= HOLDS(e-eskha-to-goy-gadol, t0) ∧ HOLDS(and-avarekhkha-and-agadlah-shmekha, t0)</span><br>Three self-commitments (coded imperfects, first person — held as promise-FACTS, not INVARIANTs: no duration clause; choice flagged): I will MAKE you a great NATION — and FROZEN gen_24&#x27;s Abram-bridge export LANDS, quoted: &#x27;GOY (&quot;nation&quot;) is BORN in the table — Torah tokens 1-6 all in-span (the closings + the grand close), token 7 = 12:2&#x27;s &quot;I will make you a great NATION&quot;&#x27; — this is token 7 [census re-verified]; I will BLESS you; I will make your NAME great — the shem (&#x27;name&#x27;) thread: Babel&#x27;s builders demanded a name for themselves (11:4, na&#x27;aseh-lanu shem — their demand stands open forever in frozen gen_25); here the same gift is PROMISED, unasked [cross-unit echo; prose only]. Onkelos: goy -&gt; am (the people-word — gen_24&#x27;s buffer policy repeats; dual-track).
+</td><td><span class="he">וְאֶעֶשְׂךָ לְגוֹי גָּדוֹל וַאֲבָרֶכְךָ וַאֲגַדְּלָה שְׁמֶךָ</span> · <i>ve-eeskha le-goy gadol va-avarekhkha va-agadelah shemekha</i><br><span class="gloss">= and-eeskha to-goy gadol and-avarekhkha and-agadelah shemekha</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(heyeh(avram, berakhah)))</span><br><span class="gloss">= DECLARE(the-LORD, LET(heyeh(avram, berakhah)))</span><br>VE-HEYEH BERAKHAH (&#x27;and BE a blessing&#x27;) — the utterance&#x27;s SECOND true imperative (Vqv2ms; TIR-027, gen_16&#x27;s class again): not a promise ABOUT Abram but a demand ON him — be the thing itself. BERAKHAH (&#x27;blessing&#x27;, the NOUN) — TORAH DEBUT, verse-final: born as an imperative&#x27;s object; its tokens 2-8 are ALL the stolen-blessing war of Gen 27-28:4 [career, prose]. NO RECEIPT VERSE EXISTS IN-SPAN: this demand stands OPEN at the unit wall [letter-honest; flagged bold choice]. Onkelos UN-COMMISSIONS it — u-tehe mevarakh, &#x27;and you will be BLESSED&#x27; (the commanded giver becomes a recipient; the buffer dissolves exactly the demand the machine holds open; dual-track, flagged).
+</td><td><span class="he">וֶהְיֵה בְּרָכָה</span> · <i>ve-heyeh berakhah</i><br><span class="gloss">= and-heyeh berakhah</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
+</table>
+<div class="meta">Three I-wills and one be: the ladder hands Abram everything Babel grasped at, and then hands him the one thing no one asked him for — a demand with no receipt in sight.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_12_3 · Gen.12.3 · <span class='expr'>THE_ASYMMETRY_AND_THE_FAMILIES</span></h3>
+<p><span class="he">וַאֲבָרֲכָה מְבָרְכֶיךָ וּמְקַלֶּלְךָ אָאֹר וְנִבְרְכוּ בְךָ כֹּל מִשְׁפְּחֹת הָאֲדָמָה</span> · <i>va-avarakhah mevarakhekha u-meqallelkha aor ve-nivrekhu vekha kol mishpechot ha-adamah</i> · [EN-AID/JPS] And I will bless them that bless thee, and him that curseth thee will I curse; and in thee shall all the families of the earth be blessed.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ואברכה מברכיך ומקללך אאר</span> · <i>va-avarakhah mevarakhekha u-meqallelkha aor</i> · blessers blessed, the belittler cursed (etnachta arm ends on &#x27;I-will-curse&#x27;)</div><div class="arm"><b>RIGHT</b><br><span class="he">ונברכו בך כל משפחת האדמה</span> · <i>ve-nivrekhu vekha kol mishpechot ha-adamah</i> · and all families of the GROUND shall be blessed in you</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_avarakhah_mevarakhekha, t0) ∧ HOLDS(u_meqallelkha_aor, t0)</span><br><span class="gloss">= HOLDS(and-avarakhah-mevarakhekha, t0) ∧ HOLDS(and-meqallelkha-aor, t0)</span><br>THE GUARD-CLAUSE ASYMMETRY [letter facts, held]: PLURAL mevarakhekha (&#x27;those who bless you&#x27;) against SINGULAR u-meqallelkha (&#x27;him who belittles you&#x27;) — and the two curse-verbs are DIFFERENT LEMMAS: theirs is qalal (&#x27;treat-lightly&#x27; — token 4; tokens 1-2 are the flood waters ABATING, 8:8/8:11; token 3 is 8:21&#x27;s never-again over the ground; tokens 5-6 are SARAI made light in Hagar&#x27;s eyes, 16:4-5 [career, prose]); GOD&#x27;S answer is arar (&#x27;curse&#x27;) — token 6, extending gen_14&#x27;s frozen census, quoted: &#x27;the curse-root at 5:29 is token 4 (3:14, 3:17, 4:11 before it; 9:25 after — Noach&#x27;s own mouth)&#x27; — the root of the serpent, the ground, Cain, and gen_23&#x27;s bare formula (title quoted: &#x27;arur Kenaan — barukh YHWH Elohei Shem&#x27;) now guards one man; its tokens 7-8 are 27:29, the same double formula re-run for Yaakov [career, prose]. The belittling is met with the ban-word: the asymmetry is the letter&#x27;s, the machine holds both clauses and reads neither. Onkelos LEVELS the pair to one root (lut twice) — the letter&#x27;s two-verb split vanishes in the buffer [dual-track, flagged].
+</td><td><span class="he">וַאֲבָרֲכָה מְבָרְכֶיךָ וּמְקַלֶּלְךָ אָאֹר</span> · <i>va-avarakhah mevarakhekha u-meqallelkha aor</i><br><span class="gloss">= and-avarakhah mevarakhekha and-meqallelkha aor</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_nivrekhu_vekha_kol_mishpechot_ha_adamah, t0)</span><br><span class="gloss">= HOLDS(and-nivrekhu-vekha-all-mishpechot-the-ground, t0)</span><br>VE-NIVREKHU — NIPHAL: &#x27;shall be blessed&#x27; or &#x27;shall bless themselves&#x27; — THE STEM-AMBIGUITY IS HELD OPEN [the corpus&#x27;s own grammar fork; not resolved; Onkelos resolves to passive- causal — ve-yitbarkhun BEDILAKH, &#x27;shall be blessed FOR YOUR SAKE&#x27; — dual-track only]. KOL MISHPECHOT (&#x27;all the FAMILIES of&#x27;) — FROZEN gen_24&#x27;s bridge lands its second half, quoted: &#x27;MISHPACHAH (&quot;family&quot;) tokens 2-6 in-span, token 7 = 12:3&#x27;s &quot;all the FAMILIES of the earth shall be blessed&quot;: the table&#x27;s two refrain-words hand off to the same two Abram-promise verses — the atlas is the promise&#x27;s address book [the Abram-bridge pair]&#x27; — this is token 7 [census re-verified: both halves of the export land one verse apart]. And the families are of HA-ADAMAH (&#x27;the GROUND&#x27;) — not ha-aretz: the cursed ground of 3:17/5:29/8:21 is the blessing&#x27;s address [letter fact, held].
+</td><td><span class="he">וְנִבְרְכוּ בְךָ כֹּל מִשְׁפְּחֹת הָאֲדָמָה</span> · <i>ve-nivrekhu vekha kol mishpechot ha-adamah</i><br><span class="gloss">= and-nivrekhu vekha all mishpechot ground</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The utterance closes wide open: many blessers, one belittler, two curse-words, one grammar fork — and every family of the cursed ground filed inside a single preposition: in you.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_12_4 · Gen.12.4 · <span class='expr'>THE_RECEIPT_IN_THE_LETTERS_OWN_GRAMMAR</span></h3>
+<p><span class="he">וַיֵּלֶךְ אַבְרָם כַּאֲשֶׁר דִּבֶּר אֵלָיו יְהוָה וַיֵּלֶךְ אִתּוֹ לוֹט וְאַבְרָם בֶּן־חָמֵשׁ שָׁנִים וְשִׁבְעִים שָׁנָה בְּצֵאתוֹ מֵחָרָן</span> · <i>va-yelekh avram ka-asher dibber elav YHWH va-yelekh ito lot ve-avram ben-chamesh shanim ve-shivim shanah be-tzeto me-charan</i> · [EN-AID/JPS] So Abram went, as the LORD had spoken unto him; and Lot went with him; and Abram was seventy and five years old when he departed out of Haran.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וילך אברם כאשר דבר אליו יהוה וילך אתו לוט</span> · <i>va-yelekh avram ka-asher dibber elav YHWH va-yelekh ito lot</i> · he went as spoken; Lot went with him (etnachta arm ends on Lot)</div><div class="arm"><b>RIGHT</b><br><span class="he">ואברם בן־חמש שנים ושבעים שנה בצאתו מחרן</span> · <i>ve-avram ben-chamesh shanim ve-shivim shanah be-tzeto me-charan</i> · Abram, seventy-five, going out of Charan</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">go(e1) ∧ Agent(e1, avram) ∧ Agent(e1, lot)</span><br>VA-YELEKH — the demand&#x27;s own verb returns as deed, twice in one verse (Abram; Lot with him — the dead brother&#x27;s son walks the call&#x27;s road uninvited by it [letter fact]). No reply is recorded: Abram&#x27;s first response to God is a departure [letter&#x27;s silence, held].
+</td><td><span class="he">וַיֵּלֶךְ אַבְרָם … וַיֵּלֶךְ אִתּוֹ לוֹט</span> · <i>va-yelekh avram … va-yelekh ito lot</i><br><span class="gloss">= and-yelekh avram and-yelekh with-him lot</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(lekh(avram, el_ha_aretz_asher_areka), t1)</span><br><span class="gloss">= RESULT: HOLDS(lekh(avram, to-the-earth-which-areka), t1)</span><br>THE GO-DEMAND POPPED — SETTLED CYCLE #6 [claimed; numbering flagged for ratification], on gen_17&#x27;s frozen class, quoted: &#x27;RESULT: HOLDS(bo(noach, el_ha_tevah), t1)&#x27; — &#x27;The bo-demand POPPED — SETTLED CYCLE #2: gen_16 settled make-and-take with one formula; the boarding settles come with the coming itself.&#x27; The going settles go with the going itself — and the letter SIGNS the receipt: see the next fact.
+</td><td><span class="he">וַיֵּלֶךְ אַבְרָם כַּאֲשֶׁר דִּבֶּר אֵלָיו יְהוָה</span> · <i>va-yelekh avram ka-asher dibber elav YHWH</i><br><span class="gloss">= and-yelekh avram like-which dibber to-him the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ka_asher_dibber_elav_YHWH, t1) ∧ HOLDS(avram_ben_75_shanah_be_tzeto_me_charan, t1)</span><br><span class="gloss">= HOLDS(like-which-dibber-to-him-the-LORD, t1) ∧ HOLDS(avram-ben-75-year-in-tzeto-from-charan, t1)</span><br>KA-ASHER DIBBER ELAV YHWH (&#x27;as YHWH had spoken to him&#x27;) — the compliance formula, gen_17&#x27;s receipt-grammar class (its 7:5 &#x27;ke-khol asher-tzivahu YHWH&#x27; held the same way): the letter&#x27;s own countersignature on the pop. DIBBER — the speak-verb&#x27;s token 2 [letter fact]. The age-notice: 75 at the going-out (be-tzeto — the exit-verb of 11:31 again); the 205-vs-75 arithmetic against the frozen wall&#x27;s yemei_terach_205_shanah is the chain&#x27;s famous problem, named-only [per gen_26&#x27;s discipline].
+</td><td><span class="he">כַּאֲשֶׁר דִּבֶּר אֵלָיו יְהוָה … בֶּן־חָמֵשׁ שָׁנִים וְשִׁבְעִים שָׁנָה</span> · <i>ka-asher dibber elav YHWH … ben-chamesh shanim ve-shivim shanah</i><br><span class="gloss">= like-which dibber to-him the-LORD ben-chamesh shanim and-shivim year</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">charan are READ without prior install (known geography)</span><br>flag, not fix (the stopping-city of the frozen wall, read again)</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">One verse holds the whole transaction: the command&#x27;s verb, the letter&#x27;s receipt-formula, the unbidden companion, and a number that starts the chain&#x27;s oldest arithmetic fight.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_12_5 · Gen.12.5 · <span class='expr'>THE_ARRIVAL_THE_FROZEN_WALL_WAITED_FOR</span></h3>
+<p><span class="he">וַיִּקַּח אַבְרָם אֶת־שָׂרַי אִשְׁתּוֹ וְאֶת־לוֹט בֶּן־אָחִיו וְאֶת־כָּל־רְכוּשָׁם אֲשֶׁר רָכָשׁוּ וְאֶת־הַנֶּפֶשׁ אֲשֶׁר־עָשׂוּ בְחָרָן וַיֵּצְאוּ לָלֶכֶת אַרְצָה כְּנַעַן וַיָּבֹאוּ אַרְצָה כְּנָעַן</span> · <i>va-yiqach avram et-saray ishto ve-et-lot ben-achiv ve-et-kol-rekhusham asher rakhashu ve-et-ha-nefesh asher-asu ve-charan va-yetzu la-lekhet artzah kenaan va-yavou artzah kenaan</i> · [EN-AID/JPS] And Abram took Sarai his wife, and Lot his brother&#x27;s son, and all their substance that they had gathered, and the souls that they had gotten in Haran; and they went forth to go into the land of Canaan; and into the land of Canaan they came.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויקח אברם את־שרי אשתו ואת־לוט בן־אחיו ואת־כל־רכושם אשר רכשו ואת־הנפש אשר־עשו בחרן</span> · <i>va-yiqach avram et-saray ishto ve-et-lot ben-achiv ve-et-kol-rekhusham asher rakhashu ve-et-ha-nefesh asher-asu ve-charan</i> · the taking-roster: wife, nephew, property, souls (etnachta arm ends on ve-charan)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויצאו ללכת ארצה כנען ויבאו ארצה כנען</span> · <i>va-yetzu la-lekhet artzah kenaan va-yavou artzah kenaan</i> · out to GO to Canaan — and to Canaan they CAME</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">take(e2) ∧ Agent(e2, avram) ∧ Theme(e2, saray) ∧ Theme(e2, lot) ∧ Theme(e2, kol_rekhusham) ∧ Theme(e2, ha_nefesh_asher_asu)</span><br><span class="gloss">= take(e2) ∧ Agent(e2, avram) ∧ Theme(e2, saray) ∧ Theme(e2, lot) ∧ Theme(e2, all-rekhusham) ∧ Theme(e2, the-nefesh-which-asu)</span><br>The take-verb changes hands: 11:31&#x27;s taker was Terach and the roster was sons; Abram now takes — Sarai his WIFE (the barren fact stands on the far side of the frozen wall, untouched [prose]), Lot his BROTHER&#x27;S son (the dead brother named by relation again), the property (rekhush debut beside its own verb — asher RAKHASHU, &#x27;that they had ACQUIRED&#x27;: the cognate figure), and ha-nefesh asher ASU ve-charan (&#x27;the souls that they had MADE in Charan&#x27;) — the make-verb on PERSONS [crux held OPEN; Onkelos votes converts: de-shabidu le-oraita, &#x27;whom they had subjected to the Torah&#x27; — the buffer&#x27;s boldest insert in the span; dual-track, named-only].
+</td><td><span class="he">וַיִּקַּח אַבְרָם אֶת־שָׂרַי אִשְׁתּוֹ וְאֶת־לוֹט בֶּן־אָחִיו …</span> · <i>va-yiqach avram et-saray ishto ve-et-lot ben-achiv …</i><br><span class="gloss">= and-yiqach avram saray his-wife and-lot ben-his-brother</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">go_out(e3) ∧ Agent(e3, avram) ∧ Agent(e3, saray) ∧ Agent(e3, lot)</span><br><span class="gloss">= go-out(e3) ∧ Agent(e3, avram) ∧ Agent(e3, saray) ∧ Agent(e3, lot)</span><br>&#x27;And they went out TO GO toward the land of Canaan&#x27; — the EXACT phrase of the frozen wall (gen_26 held &#x27;HOLDS(la_lekhet_artzah_kenaan, t0)&#x27; as its unfinished destination-fact and filed: &#x27;12:5 repeats this exact phrase and adds &quot;and they CAME&quot; — out of span, named-only&#x27;). The repetition is verbatim; no itam (&#x27;with them&#x27;) wobble this time — the grammar walks clean [near-verbatim + named delta: same purpose-clause, new subject, and this time a sequel].
+</td><td><span class="he">וַיֵּצְאוּ לָלֶכֶת אַרְצָה כְּנַעַן</span> · <i>va-yetzu la-lekhet artzah kenaan</i><br><span class="gloss">= and-yetzu to-lekhet artzah kenaan</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">come(e4) ∧ Agent(e4, avram) ∧ Agent(e4, saray) ∧ Agent(e4, lot)</span><br>VA-YAVOU ARTZAH KENAAN — &#x27;and they CAME to the land of Canaan&#x27;: the arrival 11:31 never wrote. Where the frozen wall&#x27;s verse came AD (&#x27;as far as&#x27;) Charan and settled, this one repeats the destination as the arrival-point, no ad, no settling verb — the journey that stalled for a generation completes in four words [THE CROSS-UNIT ARC IS PROSE + [OPEN] AT THE FROZEN WALL; this machine records only its own come-event].
+</td><td><span class="he">וַיָּבֹאוּ אַרְצָה כְּנָעַן</span> · <i>va-yavou artzah kenaan</i><br><span class="gloss">= and-yavou artzah kenaan</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(kol_rekhusham_asher_rakhashu, t1) ∧ HOLDS(ve_et_ha_nefesh_asher_asu_ve_charan, t1)</span><br><span class="gloss">= HOLDS(all-rekhusham-which-rakhashu, t1) ∧ HOLDS(and-the-nefesh-which-asu-and-charan, t1)</span><br>Standing facts of the caravan: the acquired property and the made souls — the Charan years compressed to two relative clauses [the letter&#x27;s only report of them].
+</td><td><span class="he">וְאֶת־כָּל־רְכוּשָׁם אֲשֶׁר רָכָשׁוּ וְאֶת־הַנֶּפֶשׁ אֲשֶׁר־עָשׂוּ בְחָרָן</span> · <i>ve-et-kol-rekhusham asher rakhashu ve-et-ha-nefesh asher-asu ve-charan</i><br><span class="gloss">= and-all-rekhusham which rakhashu and-the-nefesh which-asu and-charan</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">eretz_kenaan are READ without prior install (known geography)</span><br><span class="gloss">= earth-kenaan are READ without prior install (known geography)</span><br>flag, not fix (the destination — read, entered, never installed)</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The verse the stalled journey waited for: same phrase, same road, and this time the coming-verb lands — with a caravan of souls the letter says were made and never says how.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_12_6 · Gen.12.6 · <span class='expr'>THE_PASS_AND_THE_THEN</span></h3>
+<p><span class="he">וַיַּעֲבֹר אַבְרָם בָּאָרֶץ עַד מְקוֹם שְׁכֶם עַד אֵלוֹן מוֹרֶה וְהַכְּנַעֲנִי אָז בָּאָרֶץ</span> · <i>va-yaavor avram ba-aretz ad meqom shekhem ad elon moreh ve-ha-kenaani az ba-aretz</i> · [EN-AID/JPS] And Abram passed through the land unto the place of Shechem, unto the terebinth of Moreh. And the Canaanite was then in the land.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויעבר אברם בארץ עד מקום שכם עד אלון מורה</span> · <i>va-yaavor avram ba-aretz ad meqom shekhem ad elon moreh</i> · the pass: to the place of Shechem, to the terebinth of Moreh (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">והכנעני אז בארץ</span> · <i>ve-ha-kenaani az ba-aretz</i> · and the Canaanite — THEN in the land</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">pass(e5) ∧ Agent(e5, avram) ∧ Theme(e5, ad_meqom_shekhem_ad_elon_moreh)</span><br><span class="gloss">= pass(e5) ∧ Agent(e5, avram) ∧ Theme(e5, until-meqom-shekhem-until-elon-moreh)</span><br>VA-YAAVOR (&#x27;and he PASSED THROUGH&#x27;) — avar token 2 [the crossing-verb that will name the ivri, &#x27;Hebrew/crosser&#x27; — named-only]. The measure-word ad (&#x27;as far as&#x27;) returns twice — the word that measured the frozen wall&#x27;s shortfall (ad Charan) now measures progress INTO the land: as far as the PLACE of Shechem (maqom token 2; Shechem token 1 of 18 — the city of the later violation, debuting as a waypoint [named-only]), as far as elon Moreh (&#x27;the terebinth/oak of Moreh&#x27; — elon debut; Moreh has 2 Torah tokens, both landmark-genitives; Onkelos de-trees it to meishar, &#x27;the plain&#x27; — the cult-tree buffered; dual-track).
+</td><td><span class="he">וַיַּעֲבֹר אַבְרָם בָּאָרֶץ עַד מְקוֹם שְׁכֶם עַד אֵלוֹן מוֹרֶה</span> · <i>va-yaavor avram ba-aretz ad meqom shekhem ad elon moreh</i><br><span class="gloss">= and-yaavor avram earth until meqom shekhem until elon moreh</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_ha_kenaani_az_ba_aretz, t0)</span><br><span class="gloss">= HOLDS(and-the-kenaani-az-in-the-earth, t0)</span><br>&#x27;And the Canaanite was THEN in the land&#x27; — AZ (&#x27;then&#x27;) token 2: token 1 was 4:26&#x27;s az huchal (&#x27;THEN it was begun&#x27; — beside the call-formula this unit re-runs at 12:8), token 3 is 13:7&#x27;s twin Canaanite-notice [careers; letter facts]. The pledge-land is INHABITED at pledge-time — the letter states it and moves on; NO chronology claim is made or modeled [held; the az-wars are the chain&#x27;s, named-only].
+</td><td><span class="he">וְהַכְּנַעֲנִי אָז בָּאָרֶץ</span> · <i>ve-ha-kenaani az ba-aretz</i><br><span class="gloss">= and-the-kenaani az earth</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">shekhem are READ without prior install (known geography)</span><br>flag, not fix (the waypoint city; elon moreh named in prose)</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The first steps inside the promise: two landmarks measured in ad, and one standing fact that plants the whole tension — the land is already someone&#x27;s.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_12_7 · Gen.12.7 · <span class='expr'>THE_APPEARANCE_THE_PLEDGE_THE_FIRST_ALTAR</span></h3>
+<p><span class="he">וַיֵּרָא יְהוָה אֶל־אַבְרָם וַיֹּאמֶר לְזַרְעֲךָ אֶתֵּן אֶת־הָאָרֶץ הַזֹּאת וַיִּבֶן שָׁם מִזְבֵּחַ לַיהוָה הַנִּרְאֶה אֵלָיו</span> · <i>va-yera YHWH el-avram va-yomer le-zarakha etten et-ha-aretz ha-zot va-yiven sham mizbeach la-YHWH ha-nireh elav</i> · [EN-AID/JPS] And the LORD appeared unto Abram, and said: &#x27;Unto thy seed will I give this land&#x27;; and he builded there an altar unto the LORD, who appeared unto him.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וירא יהוה אל־אברם ויאמר לזרעך אתן את־הארץ הזאת</span> · <i>va-yera YHWH el-avram va-yomer le-zarakha etten et-ha-aretz ha-zot</i> · the appearance and the seed-pledge (etnachta arm ends on &#x27;THIS&#x27;)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויבן שם מזבח ליהוה הנראה אליו</span> · <i>va-yiven sham mizbeach la-YHWH ha-nireh elav</i> · an altar to YHWH who-appeared — the theophany in the dedication</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">appear(e6) ∧ Agent(e6, YHWH) ∧ Goal(e6, avram)</span><br><span class="gloss">= appear(e6) ∧ Agent(e6, the-LORD) ∧ Goal(e6, avram)</span><br>VA-YERA YHWH — the see-root in NIFAL (&#x27;was SEEN/appeared&#x27;): THE CORPUS&#x27;S FIRST DIVINE APPEARANCE [census exact: the nifal&#x27;s prior subjects are the dry land (1:9), the mountaintops (8:5), and the bow (9:14) — things that appear when water withdraws; the fourth appearer is YHWH]. And the root pays 12:1&#x27;s deferral: AREKA (&#x27;I will cause you to SEE&#x27;, hiphil) is answered by the same verb turned nifal — the shower becomes the seen [internal arc, same-root, prose]. Onkelos: ve-itgeli (&#x27;was REVEALED&#x27;) — the same reveal-verb frozen gen_25 recorded for the Babel descent; dual-track.
+</td><td><span class="he">וַיֵּרָא יְהוָה אֶל־אַבְרָם</span> · <i>va-yera YHWH el-avram</i><br><span class="gloss">= and-yera the-LORD to-avram</span></td><td class='cite'>TIR-032</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">say(e7) ∧ Agent(e7, YHWH) ∧ Goal(e7, avram)</span><br><span class="gloss">= say(e7) ∧ Agent(e7, the-LORD) ∧ Goal(e7, avram)</span><br>The second speech — two words of content, and the deferred object of 12:1 is finally POINTED AT: ha-aretz ha-ZOT (&#x27;THIS land&#x27;) — deixis, still no name [the letter shows; it does not label; OPEN stands].
+</td><td><span class="he">וַיֹּאמֶר</span> · <i>va-yomer</i><br><span class="gloss">= and-yomer</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(le_zarakha_etten_et_ha_aretz_ha_zot, t0)</span><br><span class="gloss">= HOLDS(to-zarakha-etten-the-earth-the-this, t0)</span><br>THE SEED-PLEDGE — held as promise-FACT with the mood delta NAMED against frozen gen_21, quoted: &#x27;HOLDS(ke_yereq_esev_natati_la_khem_et_kol, t1)&#x27; — &#x27;NATATI (&quot;I have GIVEN&quot; — performative perfect, held as fact).&#x27; Here the verb is ETTEN — IMPERFECT: &#x27;I WILL give&#x27; — a promise, not a completed grant: the food-law was handed over performed; the land is handed forward [the mood difference is the finding; letter fact]. And the recipient is not Abram: LE-ZARAKHA (&#x27;to your SEED&#x27;) — zera token 13, the word of 3:15&#x27;s enmity and 9:9&#x27;s covenant now aimed at a man whose wife&#x27;s barrenness is the frozen wall&#x27;s loudest open fact [cross-unit; prose only; nothing pops].
+</td><td><span class="he">לְזַרְעֲךָ אֶתֵּן אֶת־הָאָרֶץ הַזֹּאת</span> · <i>le-zarakha etten et-ha-aretz ha-zot</i><br><span class="gloss">= to-zarakha etten the-earth the-this</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">build(e8) ∧ Agent(e8, avram) ∧ Theme(e8, mizbeach_shekhem)</span><br><span class="gloss">= build(e8) ∧ Agent(e8, avram) ∧ Theme(e8, altar-shekhem)</span><br>gen_20&#x27;s build class, quoted: &#x27;build(e3) ∧ Agent(e3, noach) ∧ Theme(e3, mizbeach)&#x27; — &#x27;MIZBEACH (&quot;altar&quot;) — tokens 1-2 of 198, both in this verse (career: Abram&#x27;s four, the binding&#x27;s, the Tabernacle&#x27;s two).&#x27; This is token 3 [seed&#x27;s &#x27;tokens 2-3&#x27; corrected by census: 12:7 = 3, 12:8 = 4]. Unbidden, like Noach&#x27;s — no command precedes it — and GROUNDED IN THE THEOPHANY: la-YHWH ha-nireh elav (&#x27;to YHWH who APPEARED to him&#x27;) — the dedication carries the nifal participle: the altar is a receipt for a seeing [letter fact]. Onkelos: kodam YHWH (&#x27;BEFORE the LORD&#x27;) — gen_20&#x27;s exact dedication-distancing, quoted: &#x27;built BEFORE the LORD — the dedication distanced; dual-track&#x27; — the buffer repeats itself for Abram.
+</td><td><span class="he">וַיִּבֶן שָׁם מִזְבֵּחַ לַיהוָה הַנִּרְאֶה אֵלָיו</span> · <i>va-yiven sham mizbeach la-YHWH ha-nireh elav</i><br><span class="gloss">= and-yiven there altar to-the-LORD the-nireh to-him</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>REGISTRY_INSTALL</td><td><span class="expr">WORLD += {mizbeach_shekhem}</span><br><span class="gloss">= WORLD += {altar-shekhem}</span><br>gen_20&#x27;s install device, quoted: &#x27;THE FIRST INSTALL SINCE GEN_16: a completed build with a persistent object (the tevah/ir precedent — city, ark, altar: the corpus&#x27;s three built things, one per builder-class).&#x27; The FOURTH built thing: Abram&#x27;s first altar. Named mizbeach_shekhem — two altars in one unit need two tokens; gen_20&#x27;s bare mizbeach stays Noach&#x27;s [sibling-naming, flagged].
+</td><td><span class="he">מִזְבֵּחַ</span> · <i>mizbeach</i><br><span class="gloss">= altar</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The land gets pointed at, the seed gets the pledge, and the first thing Abram builds in the promise is a place to answer the seeing.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_12_8 · Gen.12.8 · <span class='expr'>THE_TENT_THE_SECOND_ALTAR_THE_NAME_CALLED</span></h3>
+<p><span class="he">וַיַּעְתֵּק מִשָּׁם הָהָרָה מִקֶּדֶם לְבֵית־אֵל וַיֵּט אָהֳלֹה בֵּית־אֵל מִיָּם וְהָעַי מִקֶּדֶם וַיִּבֶן־שָׁם מִזְבֵּחַ לַיהוָה וַיִּקְרָא בְּשֵׁם יְהוָה</span> · <i>va-yateq mi-sham ha-harah mi-qedem le-veit-el va-yet aholoh beit-el mi-yam ve-ha-ai mi-qedem va-yiven-sham mizbeach la-YHWH va-yiqra be-shem YHWH</i> · [EN-AID/JPS] And he removed from thence unto the mountain on the east of Beth-el, and pitched his tent, having Beth-el on the west, and Ai on the east; and he builded there an altar unto the LORD, and called upon the name of the LORD.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויעתק משם ההרה מקדם לבית־אל ויט אהלה</span> · <i>va-yateq mi-sham ha-harah mi-qedem le-veit-el va-yet aholoh</i> · the move to the hill east of Beit-El; the tent pitched (etnachta arm ends on &#x27;his tent&#x27;)</div><div class="arm"><b>RIGHT</b><br><span class="he">בית־אל מים והעי מקדם ויבן־שם מזבח ליהוה ויקרא בשם יהוה</span> · <i>beit-el mi-yam ve-ha-ai mi-qedem va-yiven-sham mizbeach la-YHWH va-yiqra be-shem YHWH</i> · Beit-El west, the Ai east; the second altar; the Name called — verse ends on YHWH</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">move_on(e9) ∧ Agent(e9, avram) ∧ Goal(e9, ha_har_mi_qedem_le_veit_el)</span><br><span class="gloss">= move-on(e9) ∧ Agent(e9, avram) ∧ Goal(e9, the-har-from-qedem-to-veit-to)</span><br>VA-YATEQ (&#x27;and he MOVED ON&#x27;) — ataq&#x27;s Torah debut (2 tokens; the other is 26:22, Yitzchak&#x27;s wells [named-only]): the unsettled verb — Abram does not settle (yashav) anywhere in this unit; he moves [letter fact against the frozen wall&#x27;s va-yeshvu sham; prose]. GLOSS_FIX applied here: the Beit-El compound&#x27;s DB rows gloss le-vet as &#x27;to-?&#x27; and bet as &#x27;?&#x27; — the LITERAL question-mark gloss (documented pitfall); rendered beit (&#x27;house of&#x27;) + El throughout this unit.
+</td><td><span class="he">וַיַּעְתֵּק מִשָּׁם הָהָרָה מִקֶּדֶם לְבֵית־אֵל</span> · <i>va-yateq mi-sham ha-harah mi-qedem le-veit-el</i><br><span class="gloss">= and-yateq from-there the-harah from-qedem to-veit-to</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">pitch(e10) ∧ Agent(e10, avram) ∧ Theme(e10, ohel)</span><br>VA-YET AHOLOH (&#x27;and he PITCHED his tent&#x27;) — natah&#x27;s Torah debut on a tent, placed by compass: Beit-El seaward (west), the Ai eastward. THE TENT IS NOT INSTALLED [bold choice, flagged]: the install class is banah (&#x27;build&#x27;) completions — city, ark, altar; a stretched tent is a dwelling posture, not a built persistent — the letter&#x27;s own verbs split (va-yet vs va-yiven in the same verse) and the machine follows the split. Onkelos: u-feras mashkeneih (&#x27;spread his DWELLING&#x27; — the mashkan-word; dual-track, named-only).
+</td><td><span class="he">וַיֵּט אָהֳלֹה בֵּית־אֵל מִיָּם וְהָעַי מִקֶּדֶם</span> · <i>va-yet aholoh beit-el mi-yam ve-ha-ai mi-qedem</i><br><span class="gloss">= and-yet aholoh beit-to from-yam and-the-ai from-qedem</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">build(e11) ∧ Agent(e11, avram) ∧ Theme(e11, mizbeach_beit_el)</span><br><span class="gloss">= build(e11) ∧ Agent(e11, avram) ∧ Theme(e11, altar-beit-to)</span><br>The second build — mizbeach (&#x27;altar&#x27;) token 4. This one has NO theophany in its ground: no appearance is reported at Beit-El — the first altar answered a seeing; the second precedes a calling [letter fact: the dedication clause here is bare la-YHWH].
+</td><td><span class="he">וַיִּבֶן־שָׁם מִזְבֵּחַ לַיהוָה</span> · <i>va-yiven-sham mizbeach la-YHWH</i><br><span class="gloss">= and-yiven-there altar to-the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>REGISTRY_INSTALL</td><td><span class="expr">WORLD += {mizbeach_beit_el}</span><br><span class="gloss">= WORLD += {altar-beit-to}</span><br>The FIFTH built thing (gen_20&#x27;s device, second application in one unit): the corpus&#x27;s install ledger now reads city, ark, altar, altar, altar — three of five are Noach&#x27;s and Abram&#x27;s answers to God [prose observation].
+</td><td><span class="he">מִזְבֵּחַ</span> · <i>mizbeach</i><br><span class="gloss">= altar</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">call(e12) ∧ Agent(e12, avram) ∧ Theme(e12, be_shem_YHWH)</span><br><span class="gloss">= call(e12) ∧ Agent(e12, avram) ∧ Theme(e12, in-shem-the-LORD)</span><br>VA-YIQRA BE-SHEM YHWH (&#x27;and he CALLED on the NAME of YHWH&#x27;) — the invocation formula&#x27;s TOKEN 2, on frozen gen_13&#x27;s class, quoted: &#x27;HOLDS(huchal_likro_be_shem_YHWH, t1)&#x27; — &#x27;AZ (&quot;then&quot; — the time-adverb&#x27;s own first token) HUCHAL — hophal, AGENTLESS (TIR-032: WHO began is unstated [OPEN]).&#x27; The formula that entered the corpus WITHOUT A SUBJECT gets ITS FIRST NAMED CALLER here [census: 4:26, 12:8, then 26:25; the az-adverb&#x27;s tokens 1-2 flank the same formula&#x27;s tokens 1-2 — letter weave, prose]. NOT a NAME op: nothing is named; calling ON a name is invocation (gen_24&#x27;s report-naming rule untouched; REGISTRY stays empty). Onkelos: ve-tzali bi-shma (&#x27;and he PRAYED in the name&#x27;) — the prayer-reading gen_13 recorded for 4:26&#x27;s dark twin, now in the light; dual-track.
+</td><td><span class="he">וַיִּקְרָא בְּשֵׁם יְהוָה</span> · <i>va-yiqra be-shem YHWH</i><br><span class="gloss">= and-yiqra in-shem the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">beit_el, ha_ai are READ without prior install (known geography)</span><br><span class="gloss">= beit-to, the-ai are READ without prior install (known geography)</span><br>flag, not fix (the compass pair around the tent)</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Between a house-of-God and a ruin-to-be, a man pitches cloth, builds stone, and gives the agentless formula of 4:26 its first name to stand under — the verse ends on YHWH.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_12_9 · Gen.12.9 · <span class='expr'>THE_ROAD_SOUTH_STAYS_OPEN</span></h3>
+<p><span class="he">וַיִּסַּע אַבְרָם הָלוֹךְ וְנָסוֹעַ הַנֶּגְבָּה</span> · <i>va-yisa avram halokh ve-nasoa ha-negbah</i> · [EN-AID/JPS] And Abram journeyed, going on still toward the South.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויסע אברם</span> · <i>va-yisa avram</i> · and Abram journeyed</div><div class="arm"><b>RIGHT</b><br><span class="he">הלוך ונסוע הנגבה</span> · <i>halokh ve-nasoa ha-negbah</i> · going on and journeying, toward the Negev — the unit ends mid-motion</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">journey(e13) ∧ Agent(e13, avram) ∧ Goal(e13, ha_negbah)</span><br><span class="gloss">= journey(e13) ∧ Agent(e13, avram) ∧ Goal(e13, the-negbah)</span><br>VA-YISA — NASA (&#x27;journey&#x27;) TOKEN 2, and FROZEN gen_25&#x27;s export LANDS, quoted verbatim: &#x27;NASA (&quot;journey&quot;) born on the road to Shinar (token 2 = Abram&#x27;s)&#x27; — token 1 was Babel&#x27;s eastward drift (11:2); token 2 is the called man&#x27;s southward road [frozen-unit prediction landing; marked]. HALOKH VE-NASOA — infinitive absolute + infinitive (&#x27;going-on and journeying&#x27;): durative grammar, motion without endpoint — the go-verb&#x27;s token 8 wrapped around the journey-verb [letter fact]. HA-NEGBAH (&#x27;toward the Negev/South&#x27;) — Torah debut of the south-word, with the directional heh: the unit&#x27;s last word is a direction, not a place [the machine ends in motion: no settle-event exists in this unit].
+</td><td><span class="he">וַיִּסַּע אַבְרָם הָלוֹךְ וְנָסוֹעַ הַנֶּגְבָּה</span> · <i>va-yisa avram halokh ve-nasoa ha-negbah</i><br><span class="gloss">= and-yisa avram halokh and-nasoa the-negbah</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">ha_negev are READ without prior install (known geography)</span><br><span class="gloss">= the-negev are READ without prior install (known geography)</span><br>flag, not fix (a direction read as a region)</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Four words and out: the unit that opened with GO closes still going — one demand open, two altars standing, and the road bending south toward the famine the next unit owns.</div>
+</div>
+<h2>State machine</h2>
+<div class="meta">The call (standalone; registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER).</div>
+<table><tr><th>state</th><th>meaning</th></tr>
+<tr><td><b>S_boot</b></td><td>Before 12:1 — all registers empty (standalone unit)</td></tr>
+<tr><td><b>S_called</b></td><td>After 12:1 — the go-demand pushed and OPEN (object withheld [OPEN]); the FROM-ladder fact holds</td></tr>
+<tr><td><b>S_promised</b></td><td>After 12:2 — the be-a-blessing demand pushed and OPEN; the nation/name commitment-facts hold (queue 2 open)</td></tr>
+<tr><td><b>S_guarded</b></td><td>After 12:3 — the asymmetric guard-facts and the families-fact hold; the niphal held OPEN; the utterance closes</td></tr>
+<tr><td><b>S_receipted</b></td><td>After 12:4 — go(e1) fired; the go-demand POPPED (settled cycle #6 claimed) with the letter&#x27;s own formula-fact; queue 1 open; charan flagged</td></tr>
+<tr><td><b>S_arrived</b></td><td>After 12:5 — take/go_out/come fired: the arrival the frozen wall&#x27;s phrase waited for (arc = prose); the souls-crux held OPEN; eretz_kenaan flagged</td></tr>
+<tr><td><b>S_passing</b></td><td>After 12:6 — pass(e5) fired; the Canaanite-then fact holds (no chronology claim); shekhem flagged</td></tr>
+<tr><td><b>S_appeared</b></td><td>After 12:7 — the corpus&#x27;s first divine appearance; the seed-pledge fact (etten imperfect — promise, not grant); build + INSTALL mizbeach_shekhem</td></tr>
+<tr><td><b>S_second_altar</b></td><td>After 12:8 — move_on, tent pitched (NOT installed), build + INSTALL mizbeach_beit_el; the Name called (formula token 2, first named caller); beit_el/ha_ai flagged</td></tr>
+<tr><td><b>S_southbound</b></td><td>After 12:9 — journey(e13) durative; ha_negev flagged; the machine rests mid-road: queue 1 open, WORLD = two altars</td></tr>
+</table><table><tr><th>from</th><th>to</th><th>via</th></tr>
+<tr><td>S_boot</td><td>S_called</td><td>STEP_Gn_12_1</td></tr>
+<tr><td>S_called</td><td>S_promised</td><td>STEP_Gn_12_2</td></tr>
+<tr><td>S_promised</td><td>S_guarded</td><td>STEP_Gn_12_3</td></tr>
+<tr><td>S_guarded</td><td>S_receipted</td><td>STEP_Gn_12_4</td></tr>
+<tr><td>S_receipted</td><td>S_arrived</td><td>STEP_Gn_12_5</td></tr>
+<tr><td>S_arrived</td><td>S_passing</td><td>STEP_Gn_12_6</td></tr>
+<tr><td>S_passing</td><td>S_appeared</td><td>STEP_Gn_12_7</td></tr>
+<tr><td>S_appeared</td><td>S_second_altar</td><td>STEP_Gn_12_8</td></tr>
+<tr><td>S_second_altar</td><td>S_southbound</td><td>STEP_Gn_12_9</td></tr>
+</table>
+<div class="note"><b>AFTER_S_southbound</b> — TIME: t0 + one mark (t1 — the receipt). WORLD: TWO installs (mizbeach_shekhem, mizbeach_beit_el — the corpus&#x27;s built things 4 and 5: city, ark, altar, altar, altar) + 6 presupposed reads flagged (charan, eretz_kenaan, shekhem, beit_el, ha_ai, ha_negev); the TENT deliberately NOT installed (natah &#x27;pitch&#x27; is not the banah &#x27;build&#x27; class — flagged). REGISTRY: ZERO writes (qara be-shem YHWH is invocation, not naming — the agentless formula of 4:26 gets its first named caller and names nothing). EVENTS: 13 narrative (go, take, go_out, come, pass, appear — the corpus&#x27;s FIRST divine appearance, say, build x2, move_on, pitch, call, journey) + 2 declares + 1 result. SPECS: TWO demands pushed by one utterance — the go-demand POPPED at 12:4 in the letter&#x27;s own receipt-grammar (ka-asher dibber elav YHWH — settled cycle #6, claimed, flagged) and heyeh berakhah (&#x27;BE a blessing&#x27;) OPEN AT REST: the queue ends 1 open — no receipt verse exists, and the Aramaic buffer dissolves the command into a passive exactly where the letter leaves it standing [dual-track]. Standing facts (11): the threefold FROM-ladder (gen_26&#x27;s moledet token 2 landing), the five commitment-facts (nation — gen_24&#x27;s goy token 7 landing; name; blessers/belittler with the two-lemma curse-split; families — gen_24&#x27;s mishpachah token 7 landing, niphal held OPEN, addressed to the families of the GROUND), the receipt-formula and age facts, the property and made-souls facts (asah-on-persons OPEN; Onkelos votes converts), the Canaanite-then fact (az token 2; no chronology), and the seed-pledge (ETTEN imperfect against gen_21&#x27;s performative NATATI — promise, not grant; zera token 13 aimed across the frozen wall at a barren tent [prose]). TESTS: EMPTY (the appearance sees no one and judges nothing). LEDGER: EMPTY. FLAGS (6): read_before_install x6. The machine ends in DURATIVE MOTION (halokh ve-nasoa — going on and journeying): one open demand, two standing altars, a pledge aimed at unborn seed, and a road that the next unit will bend into Egypt.</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>The call pushed, the object withheld: after STEP_Gn_12_1</td><td>All registers empty (standalone unit).</td><td>LET(lekh(avram, el_ha_aretz_asher_areka)) pushed and OPEN; Facts lekh-lekha-me-artzekha HOLD.<br><span class="gloss">= LET(lekh(avram, to-the-earth-which-areka)) pushed and OPEN; Facts lekh-to-you-from-artzekha HOLD.</span></td><td><span class="he">לֶךְ־לְךָ מֵאַרְצְךָ</span> · <i>lekh-lekha me-artzekha</i><br><span class="gloss">= lekh-to-you from-artzekha</span></td></tr>
+<tr><td><b>S2</b></td><td>The ladder and the second imperative: after STEP_Gn_12_2</td><td>S1 state.</td><td>LET(heyeh(avram, berakhah)) pushed and OPEN; Facts e-eskha-le-goy-gadol HOLD.<br><span class="gloss">= LET(heyeh(avram, berakhah)) pushed and OPEN; Facts e-eskha-to-goy-gadol HOLD.</span></td><td><span class="he">וֶהְיֵה בְּרָכָה</span> · <i>ve-heyeh berakhah</i><br><span class="gloss">= and-heyeh berakhah</span></td></tr>
+<tr><td><b>S3</b></td><td>The asymmetric guard and the families: after STEP_Gn_12_3</td><td>S2 state. (The niphal stem-ambiguity held OPEN — prose.)</td><td>Facts va-avarakhah-mevarakhekha / u-meqallelkha-aor HOLD; Facts ve-nivrekhu-vekha-kol-mishpechot-ha-adamah HOLD.<br><span class="gloss">= Facts and-avarakhah-mevarakhekha / u-meqallelkha-aor HOLD; Facts and-nivrekhu-vekha-all-mishpechot-the-ground HOLD.</span></td><td><span class="he">וְנִבְרְכוּ בְךָ כֹּל מִשְׁפְּחֹת הָאֲדָמָה</span> · <i>ve-nivrekhu vekha kol mishpechot ha-adamah</i><br><span class="gloss">= and-nivrekhu vekha all mishpechot ground</span></td></tr>
+<tr><td><b>S4</b></td><td>The receipt in the letter&#x27;s grammar: after STEP_Gn_12_4</td><td>S3 state. (go(e1) fired; the go-demand POPPED by RESULT — settled cycle #6 claimed; the selective pop is visible below: the be-demand alone remains.)</td><td>Facts ka-asher-dibber-elav-YHWH HOLD; LET(heyeh(avram, berakhah)) pushed and OPEN; flags charan as read-before-install.<br><span class="gloss">= Facts like-which-dibber-to-him-the-LORD HOLD; LET(heyeh(avram, berakhah)) pushed and OPEN; flags charan as read-before-install.</span></td><td><span class="he">כַּאֲשֶׁר דִּבֶּר אֵלָיו יְהוָה</span> · <i>ka-asher dibber elav YHWH</i><br><span class="gloss">= like-which dibber to-him the-LORD</span></td></tr>
+<tr><td><b>S5</b></td><td>The arrival and the made souls: after STEP_Gn_12_5</td><td>S4 state. (take/go_out/come fired — the arrival; the cross-unit completion of the frozen wall&#x27;s phrase is prose only.)</td><td>Facts ve-et-ha-nefesh-asher-asu-ve-charan HOLD; flags eretz_kenaan as read-before-install.<br><span class="gloss">= Facts and-et-the-nefesh-which-asu-and-charan HOLD; flags earth-kenaan as read-before-install.</span></td><td><span class="he">וַיָּבֹאוּ אַרְצָה כְּנָעַן</span> · <i>va-yavou artzah kenaan</i><br><span class="gloss">= and-yavou artzah kenaan</span></td></tr>
+<tr><td><b>S6</b></td><td>The pass and the then-fact: after STEP_Gn_12_6</td><td>S5 state. (pass(e5) fired; no chronology claim.)</td><td>Facts ve-ha-kenaani-az-ba-aretz HOLD; flags shekhem as read-before-install.<br><span class="gloss">= Facts and-the-kenaani-az-in-the-earth HOLD; flags shekhem as read-before-install.</span></td><td><span class="he">וְהַכְּנַעֲנִי אָז בָּאָרֶץ</span> · <i>ve-ha-kenaani az ba-aretz</i><br><span class="gloss">= and-the-kenaani az earth</span></td></tr>
+<tr><td><b>S7</b></td><td>The appearance, the pledge, the first install: after STEP_Gn_12_7</td><td>S6 state. (appear(e6) — the corpus&#x27;s first divine appearance; say(e7); build(e8) — prose.)</td><td>Facts le-zarakha-etten-et-ha-aretz-ha-zot HOLD; WORLD += mizbeach_shekhem.<br><span class="gloss">= Facts to-zarakha-etten-et-the-earth-the-this HOLD; WORLD += altar-shekhem.</span></td><td><span class="he">לְזַרְעֲךָ אֶתֵּן אֶת־הָאָרֶץ הַזֹּאת</span> · <i>le-zarakha etten et-ha-aretz ha-zot</i><br><span class="gloss">= to-zarakha etten the-earth the-this</span></td></tr>
+<tr><td><b>S8</b></td><td>The second altar and the Name called: after STEP_Gn_12_8</td><td>S7 state. (move_on/pitch/build/call fired; the tent NOT installed — flagged choice; REGISTRY stays empty: invocation is not naming.)</td><td>WORLD += mizbeach_beit_el; flags beit_el/ha_ai as read-before-install.<br><span class="gloss">= WORLD += altar-beit-to; flags beit-to/the-ai as read-before-install.</span></td><td><span class="he">וַיִּקְרָא בְּשֵׁם יְהוָה</span> · <i>va-yiqra be-shem YHWH</i><br><span class="gloss">= and-yiqra in-shem the-LORD</span></td></tr>
+<tr><td><b>S9</b></td><td>The road south, the demand still open: after STEP_Gn_12_9</td><td>S8 state. (journey(e13) durative — the machine rests mid-motion.)</td><td>WORLD = {mizbeach_shekhem, mizbeach_beit_el}; LET(heyeh(avram, berakhah)) pushed and OPEN; flags ha_negev as read-before-install.<br><span class="gloss">= WORLD = {altar-shekhem, altar-beit-to}; LET(heyeh(avram, berakhah)) pushed and OPEN; flags the-negev as read-before-install.</span></td><td><span class="he">הָלוֹךְ וְנָסוֹעַ הַנֶּגְבָּה</span> · <i>halokh ve-nasoa ha-negbah</i><br><span class="gloss">= halokh and-nasoa the-negbah</span></td></tr>
+<tr><td><b>S10_negative</b></td><td>Negative: the LET? contract guard</td><td>A synthetic LET? demand (the machine&#x27;s own contract self-test).</td><td>LET? never auto-upgrades: resolution without citation must REFUSE; with a per-unit citation it may resolve — entries pop demands; nothing but citation moves a mood.</td><td><span class="he">בְּרָכָה</span> · <i>berakhah</i><br><span class="gloss">= berakhah</span></td></tr>
+<tr><td><b>S11_negative</b></td><td>Negative: flags never block</td><td>A synthetic commit with TESTS empty (the machine&#x27;s own contract self-test).</td><td>Cycle close with TESTS empty must be FLAGGED, never blocked.<br><span class="gloss">= Cycle close with TESTS empty must in FLAGGED, never blocked.</span></td><td></td></tr>
+</table>
+<h2>Exports (reusable patterns)</h2><table><tr><th>id</th><th>content</th></tr>
+<tr><td>EXPORT_object_withheld_command</td><td><span class="he">לֶךְ־לְךָ … אֶל־הָאָרֶץ אֲשֶׁר אַרְאֶךָּ</span> · <i>lekh-lekha … el-ha-aretz asher areka</i> · the corpus&#x27;s first OBJECT-WITHHELD command: gen_16&#x27;s imperative class (aseh — &#x27;the divine imperative mood aimed at a NAMED INDIVIDUAL&#x27;, quoted) recurs with the spec DELETED — the ark came with cubits, the land comes as &#x27;that I will CAUSE YOU TO SEE&#x27; (hiphil areka), deferred at 12:1, POINTED AT but never named at 12:7 (ha-aretz ha-ZOT — deixis, no toponym) [OPEN]; the show-root pays itself in-unit: areka (hiphil &#x27;I will show&#x27;) -&gt; va-yera (nifal &#x27;He APPEARED&#x27;) — the corpus&#x27;s FIRST divine appearance (prior nifal subjects: dry land 1:9, mountaintops 8:5, the bow 9:14 — things seen when water withdraws); LEKH-LEKHA&#x27;s only other Torah token is 22:2 — the road opens and the binding opens with the same doubled summons</td></tr>
+<tr><td>EXPORT_promise_ladder_landings</td><td><span class="he">לְגוֹי גָּדוֹל … כֹּל מִשְׁפְּחֹת הָאֲדָמָה</span> · <i>le-goy gadol … kol mishpechot ha-adamah</i> · TWO frozen-unit predictions land ONE VERSE APART: gen_24&#x27;s Abram-bridge export (&#x27;GOY tokens 1-6 all in-span, token 7 = 12:2&#x27;s great NATION; MISHPACHAH tokens 2-6 in-span, token 7 = 12:3&#x27;s FAMILIES&#x27; — quoted) pays out exactly — the table&#x27;s refrain-words become the promise&#x27;s nouns; plus gen_25&#x27;s nasa-export lands at 12:9 (&#x27;token 2 = Abram&#x27;s&#x27; — quoted): THREE frozen predictions in one nine-verse unit — the corpus&#x27;s densest landing since gen_23&#x27;s four; berakhah (&#x27;blessing&#x27;, noun) debuts verse-final in an IMPERATIVE (&#x27;BE a blessing&#x27; — a demand with no receipt, OPEN at rest; Onkelos dissolves it to &#x27;be BLESSED&#x27;); the five bless-root tokens of 12:2-3 against the TWO curse-lemmas (plural qalal-belittlers, singular arar-answer — Onkelos levels the pair)</td></tr>
+<tr><td>EXPORT_receipt_and_arrival</td><td><span class="he">וַיֵּלֶךְ אַבְרָם כַּאֲשֶׁר דִּבֶּר אֵלָיו יְהוָה … וַיָּבֹאוּ אַרְצָה כְּנָעַן</span> · <i>va-yelekh avram ka-asher dibber elav YHWH … va-yavou artzah kenaan</i> · SETTLED CYCLE #6 (claimed): the go-demand pops in its own verb WITH the letter&#x27;s countersignature (ka-asher dibber elav YHWH — gen_17&#x27;s compliance-formula class, its RESULT encoding quoted); then 12:5 repeats the frozen wall&#x27;s exact unfinished phrase (la-lekhet artzah kenaan) and lands the arrival gen_26 filed as &#x27;out of span, named-only&#x27; — the stalled journey completes ONE UNIT LATE, cross-unit arc held as prose at the frozen wall; the caravan carries the made-souls crux (asah on persons [OPEN]; Onkelos: &#x27;subjected to the Torah&#x27; — the convert-vote inside the translation); Abram never settles in-span — va-yateq (&#x27;moved on&#x27;) debuts, no yashav (&#x27;settle&#x27;) token exists in the unit, and the last word is a direction</td></tr>
+<tr><td>EXPORT_altars_and_the_name</td><td><span class="he">וַיִּבֶן שָׁם מִזְבֵּחַ לַיהוָה … וַיִּקְרָא בְּשֵׁם יְהוָה</span> · <i>va-yiven sham mizbeach la-YHWH … va-yiqra be-shem YHWH</i> · the install ledger reaches five (city, ark, altar, altar, altar — gen_20&#x27;s device quoted, twice applied; mizbeach tokens 3-4 of the &#x27;Abram&#x27;s four&#x27; gen_20&#x27;s career-note promised): the first altar is a RECEIPT FOR A SEEING (la-YHWH ha-nireh elav, &#x27;to YHWH who APPEARED to him&#x27; — the theophany inside the dedication), the second precedes a CALLING — qara be-shem YHWH token 2: the formula that entered the corpus AGENTLESS (gen_13&#x27;s 4:26 hophal, quoted: &#x27;WHO began is unstated [OPEN]&#x27;) gets its FIRST NAMED CALLER; the az (&#x27;then&#x27;) adverb&#x27;s tokens 1-2 flank the formula&#x27;s tokens 1-2 (4:26 / 12:6-8) [letter weave]; the seed-pledge&#x27;s mood delta against gen_21 (ETTEN imperfect promise vs NATATI performative perfect — quoted): the land is handed FORWARD, to seed not yet conceivable behind the frozen wall&#x27;s barren fact</td></tr>
+</table>
+<h2>Oral notes (named, tiered, dual-track — never merged)</h2>
+<div class="note"><span class="badge tier-o">observation</span> <b>Bereshit Rabbah 39 (the span; lekh-lekha as trial); Bavli Rosh Hashanah 16b + Pesachim 117b (the 12:2 ladder as liturgy — magen Avraham); Rashi at 12:1, 12:2, 12:5 (souls = converts), 12:6 (az); Ramban&#x27;s maaseh-avot (&#x27;deeds of the fathers&#x27;) program opens here — gen_27 Tier-A queue</b><br><span class="he">לֶךְ־לְךָ</span> · <i>(queue — named only)</i> · Named, not read. The cache middot scan is the MAIN LOOP&#x27;S gate and is not claimed by this draft [flagged]. Predicted classes: the ten-trials roster (ORDEAL-COUNT class, lekh-lekha as #1); the liturgical parse of 12:2&#x27;s three commitments (LITURGY-ANCHOR class); the converts reading of 12:5 (IDENTIFICATION class — and here the TRANSLATION itself votes, see Tier-A); the az-chronology wars at 12:6 (CHRONOLOGY-HARMONY class); the blessing-formula asymmetry (MEASURE class).
+<br><i>Queue entry — no claim made beyond the naming.</i></div>
+<div class="note"><span class="badge tier-v">verified</span> <b>Onkelos Genesis 12:1-9 — read Tier-A at derive time (9 sequential fetches, Data/FETCHLOG.md 2026-08-03)</b><br><span class="he">וּתְהֵא מְבָרָךְ … דְּשַׁעְבִּידוּ לְאוֹרַיְתָא</span> · <i>u-tehe mevarakh … de-shabidu le-oraita</i> · The span&#x27;s translation witness — headline: THE BUFFER UN-COMMISSIONS THE SECOND IMPERATIVE: ve-heyeh berakhah (&#x27;and BE a blessing&#x27;, Vqv2ms) -&gt; u-tehe MEVARAKH (&#x27;and you will be BLESSED&#x27; — passive participle): the commanded giver becomes a recipient, and the one demand this machine leaves OPEN is exactly the one the Aramaic dissolves [find-class; dual-track, flagged]. The curse-pair LEVELED: qalal and arar both -&gt; lut (u-melatetakh eilut) — the letter&#x27;s two-lemma split vanishes; the plural/singular asymmetry survives. The niphal RESOLVED: ve-yitbarkhun BEDILAKH (&#x27;shall be blessed FOR YOUR SAKE&#x27;) — passive voted, causality inserted; the reflexive reading erased [the machine&#x27;s OPEN stands on the letter]. THE CONVERT-VOTE INSIDE THE TRANSLATION: ha-nefesh asher asu -&gt; nafshata DE-SHABIDU LE-ORAITA (&#x27;the souls they had SUBJECTED TO THE TORAH in Charan&#x27;) — the chain&#x27;s converts-reading is in the buffer itself, not only the midrash [dual-track, named-only]. Repeat buffers, consistent with frozen records: va-yera -&gt; ve-itgeli (&#x27;was REVEALED&#x27; — gen_25&#x27;s Babel-descent verb); the altars built KODAM (&#x27;BEFORE&#x27;) the LORD (gen_20&#x27;s distancing, twice); goy -&gt; am (gen_24&#x27;s people-word policy); moledet -&gt; yaladutakh (gen_26&#x27;s birth-word); elon Moreh -&gt; meishar (&#x27;plain&#x27; — the cult-tree de-treed); az -&gt; bekhen; va-yiqra be-shem -&gt; VE-TZALI BI-SHMA (&#x27;and he PRAYED in the name&#x27; — gen_13&#x27;s prayer-reading of 4:26, now in daylight); the tent -&gt; mashkeneih (the mashkan-word); the durative pair kept (azel ve-natel).
+<br><i>Read from Data/sefaria_texts/ (local; FETCHLOG is provenance). Dual-track; not merged.</i></div>
+<h2>Binary trees (ta'amim v3, glue bricks)</h2>
+<h3>Gen.12.1 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">ויאמר יהוה אל־אברם לך־לך מארצך וממולדתך ומבית אביך אל־הארץ אשר אראך</span> · <i>va-yomer YHWH el-avram lekh-le-kha me-artz-kha u-mi-moladt-kha u-mi-bet avi-kha el-ha-aretz asher are-ka</i> · YHWH said to Abram: go from land, kindred, father&#x27;s house — to the land I will show you. [EN-AID]</div>
+<pre>PHRASE (binary 14w) וַ/יֹּ֤אמֶר יְהוָה֙ אֶל אַבְרָ֔ם לֶךְ לְ/ךָ֛ מֵ…
+├── PHRASE (binary 10w) וַ/יֹּ֤אמֶר יְהוָה֙ אֶל אַבְרָ֔ם לֶךְ לְ/ךָ֛ מֵ…
+│   ├── PHRASE (binary 4w) וַ/יֹּ֤אמֶר יְהוָה֙ אֶל אַבְרָ֔ם
+│   │   ├── [0-1] GLUE וַ/יֹּ֤אמֶר יְהוָה֙ (pashta, rank=3)
+│   │   └── [2-3] GLUE אֶל אַבְרָ֔ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 6w) לֶךְ לְ/ךָ֛ מֵ/אַרְצְ/ךָ֥ וּ/מִ/מּֽוֹלַדְתְּ/ךָ…
+│       ├── PHRASE (binary 4w) לֶךְ לְ/ךָ֛ מֵ/אַרְצְ/ךָ֥ וּ/מִ/מּֽוֹלַדְתְּ/ךָ֖
+│       │   ├── [4-5] GLUE לֶךְ לְ/ךָ֛ (tevir, rank=3)
+│       │   └── [6-7] GLUE מֵ/אַרְצְ/ךָ֥ וּ/מִ/מּֽוֹלַדְתְּ/ךָ֖ (tifcha, rank=2)
+│       └── [8-9] GLUE וּ/מִ/בֵּ֣ית אָבִ֑י/ךָ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) אֶל הָ/אָ֖רֶץ אֲשֶׁ֥ר אַרְאֶֽ/ךָּ
+    ├── [10-11] GLUE אֶל הָ/אָ֖רֶץ (tifcha, rank=2)
+    └── [12-13] GLUE אֲשֶׁ֥ר אַרְאֶֽ/ךָּ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.12.2 · parser unique · 8 words</h3>
+<div class="meta"><span class="he">ואעשך לגוי גדול ואברכך ואגדלה שמך והיה ברכה</span> · <i>ve-ees-kha le-goy gadol va-avarekh-kha va-agadla sheme-kha ve-heye berakha</i> · A great nation, blessing, a great name — and BE a blessing. [EN-AID]</div>
+<pre>PHRASE (binary 8w) וְ/אֶֽעֶשְׂ/ךָ֙ לְ/ג֣וֹי גָּד֔וֹל וַ/אֲבָ֣רֶכְ/…
+├── PHRASE (binary 6w) וְ/אֶֽעֶשְׂ/ךָ֙ לְ/ג֣וֹי גָּד֔וֹל וַ/אֲבָ֣רֶכְ/…
+│   ├── PHRASE (binary 3w) וְ/אֶֽעֶשְׂ/ךָ֙ לְ/ג֣וֹי גָּד֔וֹל
+│   │   ├── [0] וְ/אֶֽעֶשְׂ/ךָ֙ (pashta, rank=3)
+│   │   └── [1-2] GLUE לְ/ג֣וֹי גָּד֔וֹל (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) וַ/אֲבָ֣רֶכְ/ךָ֔ וַ/אֲגַדְּלָ֖ה שְׁמֶ֑/ךָ
+│       ├── [3] וַ/אֲבָ֣רֶכְ/ךָ֔ (zaqef qatan, rank=2)
+│       └── PHRASE (binary 2w) וַ/אֲגַדְּלָ֖ה שְׁמֶ֑/ךָ
+│           ├── [4] וַ/אֲגַדְּלָ֖ה (tifcha, rank=2)
+│           └── [5] שְׁמֶ֑/ךָ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 2w) וֶ/הְיֵ֖ה בְּרָכָֽה
+    ├── [6] וֶ/הְיֵ֖ה (tifcha, rank=2)
+    └── [7] בְּרָכָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.12.3 · parser unique · 9 words</h3>
+<div class="meta"><span class="he">ואברכה מברכיך ומקללך אאר ונברכו בך כל משפחת האדמה</span> · <i>va-avarakha mevarkhe-kha u-meqalel-kha aor ve-nivrkhu ve-kha kol mishpchot ha-adama</i> · Blessers blessed, the belittler cursed; all families of the ground blessed in you. [EN-AID]</div>
+<pre>PHRASE (binary 9w) וַ/אֲבָֽרֲכָה֙ מְבָ֣רְכֶ֔י/ךָ וּ/מְקַלֶּלְ/ךָ֖ …
+├── PHRASE (binary 4w) וַ/אֲבָֽרֲכָה֙ מְבָ֣רְכֶ֔י/ךָ וּ/מְקַלֶּלְ/ךָ֖ …
+│   ├── PHRASE (binary 2w) וַ/אֲבָֽרֲכָה֙ מְבָ֣רְכֶ֔י/ךָ
+│   │   ├── [0] וַ/אֲבָֽרֲכָה֙ (pashta, rank=3)
+│   │   └── [1] מְבָ֣רְכֶ֔י/ךָ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 2w) וּ/מְקַלֶּלְ/ךָ֖ אָאֹ֑ר
+│       ├── [2] וּ/מְקַלֶּלְ/ךָ֖ (tifcha, rank=2)
+│       └── [3] אָאֹ֑ר (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) וְ/נִבְרְכ֣וּ בְ/ךָ֔ כֹּ֖ל מִשְׁפְּחֹ֥ת הָ/אֲדָ…
+    ├── [4-5] GLUE וְ/נִבְרְכ֣וּ בְ/ךָ֔ (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) כֹּ֖ל מִשְׁפְּחֹ֥ת הָ/אֲדָמָֽה
+        ├── [6] כֹּ֖ל (tifcha, rank=2)
+        └── [7-8] GLUE מִשְׁפְּחֹ֥ת הָ/אֲדָמָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.12.4 · parser unique · 17 words</h3>
+<div class="meta"><span class="he">וילך אברם כאשר דבר אליו יהוה וילך אתו לוט ואברם בן־חמש שנים ושבעים שנה בצאתו מחרן</span> · <i>va-yelekh avram ka-asher diber elay-v YHWH va-yelekh et-o lot ve-avram ben-chamesh shanim ve-shivim shana be-tzet-o me-charan</i> · Abram went as YHWH had spoken; Lot with him; 75 leaving Charan. [EN-AID]</div>
+<pre>PHRASE (binary 17w) וַ/יֵּ֣לֶךְ אַבְרָ֗ם כַּ/אֲשֶׁ֨ר דִּבֶּ֤ר אֵלָי…
+├── PHRASE (binary 9w) וַ/יֵּ֣לֶךְ אַבְרָ֗ם כַּ/אֲשֶׁ֨ר דִּבֶּ֤ר אֵלָי…
+│   ├── PHRASE (binary 6w) וַ/יֵּ֣לֶךְ אַבְרָ֗ם כַּ/אֲשֶׁ֨ר דִּבֶּ֤ר אֵלָי…
+│   │   ├── [0-1] GLUE וַ/יֵּ֣לֶךְ אַבְרָ֗ם (revia, rank=3)
+│   │   └── PHRASE (binary 4w) כַּ/אֲשֶׁ֨ר דִּבֶּ֤ר אֵלָי/ו֙ יְהוָ֔ה
+│   │       ├── [2-4] GLUE כַּ/אֲשֶׁ֨ר דִּבֶּ֤ר אֵלָי/ו֙ (pashta, rank=3)
+│   │       └── [5] יְהוָ֔ה (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) וַ/יֵּ֥לֶךְ אִתּ֖/וֹ ל֑וֹט
+│       ├── [6-7] GLUE וַ/יֵּ֥לֶךְ אִתּ֖/וֹ (tifcha, rank=2)
+│       └── [8] ל֑וֹט (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) וְ/אַבְרָ֗ם בֶּן חָמֵ֤שׁ שָׁנִים֙ וְ/שִׁבְעִ֣ים…
+    ├── PHRASE (binary 6w) וְ/אַבְרָ֗ם בֶּן חָמֵ֤שׁ שָׁנִים֙ וְ/שִׁבְעִ֣ים…
+    │   ├── [9] וְ/אַבְרָ֗ם (revia, rank=3)
+    │   └── PHRASE (binary 5w) בֶּן חָמֵ֤שׁ שָׁנִים֙ וְ/שִׁבְעִ֣ים שָׁנָ֔ה
+    │       ├── [10-12] GLUE בֶּן חָמֵ֤שׁ שָׁנִים֙ (pashta, rank=3)
+    │       └── [13-14] GLUE וְ/שִׁבְעִ֣ים שָׁנָ֔ה (zaqef qatan, rank=2)
+    └── PHRASE (binary 2w) בְּ/צֵאת֖/וֹ מֵ/חָרָֽן
+        ├── [15] בְּ/צֵאת֖/וֹ (tifcha, rank=2)
+        └── [16] מֵ/חָרָֽן (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.12.5 · parser unique · 26 words</h3>
+<div class="meta"><span class="he">ויקח אברם את־שרי אשתו ואת־לוט בן־אחיו ואת־כל־רכושם אשר רכשו ואת־הנפש אשר־עשו בחרן ויצאו ללכת ארצה כנען ויבאו ארצה כנען</span> · <i>va-yiqach avram et-saray isht-o ve-et-lot ben-achi-v ve-et-kal-rekhusha-m asher rakhashu ve-et-ha-nefesh asher-asu ve-charan va-yetzu la-lekhet artza-ה kenaan va-yavou artza-ה kenaan</i> · He took Sarai, Lot, property, made-souls; out to go to Canaan — and they came. [EN-AID]</div>
+<pre>PHRASE (binary 26w) וַ/יִּקַּ֣ח אַבְרָם֩ אֶת שָׂרַ֨י אִשְׁתּ֜/וֹ וְ…
+├── PHRASE (binary 19w) וַ/יִּקַּ֣ח אַבְרָם֩ אֶת שָׂרַ֨י אִשְׁתּ֜/וֹ וְ…
+│   ├── PHRASE (binary 14w) וַ/יִּקַּ֣ח אַבְרָם֩ אֶת שָׂרַ֨י אִשְׁתּ֜/וֹ וְ…
+│   │   ├── PHRASE (binary 9w) וַ/יִּקַּ֣ח אַבְרָם֩ אֶת שָׂרַ֨י אִשְׁתּ֜/וֹ וְ…
+│   │   │   ├── [0-4] GLUE וַ/יִּקַּ֣ח אַבְרָם֩ אֶת שָׂרַ֨י אִשְׁתּ֜/וֹ (geresh, rank=4)
+│   │   │   └── [5-8] GLUE וְ/אֶת ל֣וֹט בֶּן אָחִ֗י/ו (revia, rank=3)
+│   │   └── PHRASE (binary 5w) וְ/אֶת כָּל רְכוּשָׁ/ם֙ אֲשֶׁ֣ר רָכָ֔שׁוּ
+│   │       ├── [9-11] GLUE וְ/אֶת כָּל רְכוּשָׁ/ם֙ (pashta, rank=3)
+│   │       └── [12-13] GLUE אֲשֶׁ֣ר רָכָ֔שׁוּ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) וְ/אֶת הַ/נֶּ֖פֶשׁ אֲשֶׁר עָשׂ֣וּ בְ/חָרָ֑ן
+│       ├── [14-15] GLUE וְ/אֶת הַ/נֶּ֖פֶשׁ (tifcha, rank=2)
+│       └── [16-18] GLUE אֲשֶׁר עָשׂ֣וּ בְ/חָרָ֑ן (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) וַ/יֵּצְא֗וּ לָ/לֶ֨כֶת֙ אַ֣רְצָ/ה כְּנַ֔עַן וַ/…
+    ├── PHRASE (binary 4w) וַ/יֵּצְא֗וּ לָ/לֶ֨כֶת֙ אַ֣רְצָ/ה כְּנַ֔עַן
+    │   ├── [19] וַ/יֵּצְא֗וּ (revia, rank=3)
+    │   └── PHRASE (binary 3w) לָ/לֶ֨כֶת֙ אַ֣רְצָ/ה כְּנַ֔עַן
+    │       ├── [20] לָ/לֶ֨כֶת֙ (pashta, rank=3)
+    │       └── [21-22] GLUE אַ֣רְצָ/ה כְּנַ֔עַן (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) וַ/יָּבֹ֖אוּ אַ֥רְצָ/ה כְּנָֽעַן
+        ├── [23] וַ/יָּבֹ֖אוּ (tifcha, rank=2)
+        └── [24-25] GLUE אַ֥רְצָ/ה כְּנָֽעַן (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.12.6 · parser unique · 12 words</h3>
+<div class="meta"><span class="he">ויעבר אברם בארץ עד מקום שכם עד אלון מורה והכנעני אז בארץ</span> · <i>va-yaavor avram ba-aretz ad meqom shekhem ad elon more ve-ha-kenaani az ba-aretz</i> · Through the land to Shechem, to Moreh&#x27;s terebinth; the Canaanite then in the land. [EN-AID]</div>
+<pre>PHRASE (binary 12w) וַ/יַּעֲבֹ֤ר אַבְרָם֙ בָּ/אָ֔רֶץ עַ֚ד מְק֣וֹם ש…
+├── PHRASE (binary 9w) וַ/יַּעֲבֹ֤ר אַבְרָם֙ בָּ/אָ֔רֶץ עַ֚ד מְק֣וֹם ש…
+│   ├── PHRASE (binary 3w) וַ/יַּעֲבֹ֤ר אַבְרָם֙ בָּ/אָ֔רֶץ
+│   │   ├── [0-1] GLUE וַ/יַּעֲבֹ֤ר אַבְרָם֙ (pashta, rank=3)
+│   │   └── [2] בָּ/אָ֔רֶץ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 6w) עַ֚ד מְק֣וֹם שְׁכֶ֔ם עַ֖ד אֵל֣וֹן מוֹרֶ֑ה
+│       ├── PHRASE (binary 3w) עַ֚ד מְק֣וֹם שְׁכֶ֔ם
+│       │   ├── [3] עַ֚ד (yetiv, rank=3)
+│       │   └── [4-5] GLUE מְק֣וֹם שְׁכֶ֔ם (zaqef qatan, rank=2)
+│       └── PHRASE (binary 3w) עַ֖ד אֵל֣וֹן מוֹרֶ֑ה
+│           ├── [6] עַ֖ד (tifcha, rank=2)
+│           └── [7-8] GLUE אֵל֣וֹן מוֹרֶ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וְ/הַֽ/כְּנַעֲנִ֖י אָ֥ז בָּ/אָֽרֶץ
+    ├── [9] וְ/הַֽ/כְּנַעֲנִ֖י (tifcha, rank=2)
+    └── [10-11] GLUE אָ֥ז בָּ/אָֽרֶץ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.12.7 · parser unique · 16 words</h3>
+<div class="meta"><span class="he">וירא יהוה אל־אברם ויאמר לזרעך אתן את־הארץ הזאת ויבן שם מזבח ליהוה הנראה אליו</span> · <i>va-yera YHWH el-avram va-yomer le-zara-kha eten et-ha-aretz ha-zot va-yiven sham mizbecha la-YHWH ha-nire elay-v</i> · YHWH appeared: to your seed I will give this land; an altar to the One who appeared. [EN-AID]</div>
+<pre>PHRASE (binary 16w) וַ/יֵּרָ֤א יְהוָה֙ אֶל אַבְרָ֔ם וַ/יֹּ֕אמֶר לְ/…
+├── PHRASE (binary 10w) וַ/יֵּרָ֤א יְהוָה֙ אֶל אַבְרָ֔ם וַ/יֹּ֕אמֶר לְ/…
+│   ├── PHRASE (binary 4w) וַ/יֵּרָ֤א יְהוָה֙ אֶל אַבְרָ֔ם
+│   │   ├── [0-1] GLUE וַ/יֵּרָ֤א יְהוָה֙ (pashta, rank=3)
+│   │   └── [2-3] GLUE אֶל אַבְרָ֔ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 6w) וַ/יֹּ֕אמֶר לְ/זַ֨רְעֲ/ךָ֔ אֶתֵּ֖ן אֶת הָ/אָ֣רֶ…
+│       ├── [4] וַ/יֹּ֕אמֶר (zaqef gadol, rank=2)
+│       └── PHRASE (binary 5w) לְ/זַ֨רְעֲ/ךָ֔ אֶתֵּ֖ן אֶת הָ/אָ֣רֶץ הַ/זֹּ֑את
+│           ├── [5] לְ/זַ֨רְעֲ/ךָ֔ (zaqef qatan, rank=2)
+│           └── PHRASE (binary 4w) אֶתֵּ֖ן אֶת הָ/אָ֣רֶץ הַ/זֹּ֑את
+│               ├── [6] אֶתֵּ֖ן (tifcha, rank=2)
+│               └── [7-9] GLUE אֶת הָ/אָ֣רֶץ הַ/זֹּ֑את (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) וַ/יִּ֤בֶן שָׁם֙ מִזְבֵּ֔חַ לַ/יהוָ֖ה הַ/נִּרְא…
+    ├── PHRASE (binary 3w) וַ/יִּ֤בֶן שָׁם֙ מִזְבֵּ֔חַ
+    │   ├── [10-11] GLUE וַ/יִּ֤בֶן שָׁם֙ (pashta, rank=3)
+    │   └── [12] מִזְבֵּ֔חַ (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) לַ/יהוָ֖ה הַ/נִּרְאֶ֥ה אֵלָֽי/ו
+        ├── [13] לַ/יהוָ֖ה (tifcha, rank=2)
+        └── [14-15] GLUE הַ/נִּרְאֶ֥ה אֵלָֽי/ו (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.12.8 · parser unique · 20 words</h3>
+<div class="meta"><span class="he">ויעתק משם ההרה מקדם לבית־אל ויט אהלה בית־אל מים והעי מקדם ויבן־שם מזבח ליהוה ויקרא בשם יהוה</span> · <i>va-yateq mi-sham ha-hara-ה mi-qedem le-vet-el va-yet aholo-ה bet-el mi-yam ve-ha-ay mi-qedem va-yiven-sham mizbecha la-YHWH va-yiqra be-shem YHWH</i> · To the hill east of Beit-El; tent pitched; second altar; the Name called. [EN-AID]</div>
+<pre>PHRASE (binary 20w) וַ/יַּעְתֵּ֨ק מִ/שָּׁ֜ם הָ/הָ֗רָ/ה מִ/קֶּ֛דֶם ל…
+├── PHRASE (binary 8w) וַ/יַּעְתֵּ֨ק מִ/שָּׁ֜ם הָ/הָ֗רָ/ה מִ/קֶּ֛דֶם ל…
+│   ├── PHRASE (binary 6w) וַ/יַּעְתֵּ֨ק מִ/שָּׁ֜ם הָ/הָ֗רָ/ה מִ/קֶּ֛דֶם ל…
+│   │   ├── PHRASE (binary 3w) וַ/יַּעְתֵּ֨ק מִ/שָּׁ֜ם הָ/הָ֗רָ/ה
+│   │   │   ├── [0-1] GLUE וַ/יַּעְתֵּ֨ק מִ/שָּׁ֜ם (geresh, rank=4)
+│   │   │   └── [2] הָ/הָ֗רָ/ה (revia, rank=3)
+│   │   └── PHRASE (binary 3w) מִ/קֶּ֛דֶם לְ/בֵֽית אֵ֖ל
+│   │       ├── [3] מִ/קֶּ֛דֶם (tevir, rank=3)
+│   │       └── [4-5] GLUE לְ/בֵֽית אֵ֖ל (tifcha, rank=2)
+│   └── [6-7] GLUE וַ/יֵּ֣ט אָהֳלֹ֑/ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 12w) בֵּֽית אֵ֤ל מִ/יָּם֙ וְ/הָ/עַ֣י מִ/קֶּ֔דֶם וַ/י…
+    ├── PHRASE (binary 5w) בֵּֽית אֵ֤ל מִ/יָּם֙ וְ/הָ/עַ֣י מִ/קֶּ֔דֶם
+    │   ├── [8-10] GLUE בֵּֽית אֵ֤ל מִ/יָּם֙ (pashta, rank=3)
+    │   └── [11-12] GLUE וְ/הָ/עַ֣י מִ/קֶּ֔דֶם (zaqef qatan, rank=2)
+    └── PHRASE (binary 7w) וַ/יִּֽבֶן שָׁ֤ם מִזְבֵּ֨חַ֙ לַֽ/יהוָ֔ה וַ/יִּק…
+        ├── PHRASE (binary 4w) וַ/יִּֽבֶן שָׁ֤ם מִזְבֵּ֨חַ֙ לַֽ/יהוָ֔ה
+        │   ├── [13-15] GLUE וַ/יִּֽבֶן שָׁ֤ם מִזְבֵּ֨חַ֙ (pashta, rank=3)
+        │   └── [16] לַֽ/יהוָ֔ה (zaqef qatan, rank=2)
+        └── PHRASE (binary 3w) וַ/יִּקְרָ֖א בְּ/שֵׁ֥ם יְהוָֽה
+            ├── [17] וַ/יִּקְרָ֖א (tifcha, rank=2)
+            └── [18-19] GLUE בְּ/שֵׁ֥ם יְהוָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.12.9 · parser unique · 5 words</h3>
+<div class="meta"><span class="he">ויסע אברם הלוך ונסוע הנגבה</span> · <i>va-yisa avram halokh ve-nasoa ha-negba-ה</i> · Abram journeyed, going on and on, toward the Negev. [EN-AID]</div>
+<pre>PHRASE (binary 5w) וַ/יִּסַּ֣ע אַבְרָ֔ם הָל֥וֹךְ וְ/נָס֖וֹעַ הַ/נּ…
+├── [0-1] GLUE וַ/יִּסַּ֣ע אַבְרָ֔ם (zaqef qatan, rank=2)
+└── PHRASE (binary 3w) הָל֥וֹךְ וְ/נָס֖וֹעַ הַ/נֶּֽגְבָּ/ה
+    ├── [2-3] GLUE הָל֥וֹךְ וְ/נָס֖וֹעַ (tifcha, rank=2)
+    └── [4] הַ/נֶּֽגְבָּ/ה (silluq (verse-end emperor), rank=1)
+</pre>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_27_the_call — The call: go to the land I will show you (12:1-9) [frozen]
+
+final state: WORLD=[&#x27;mizbeach_beit_el&#x27;, &#x27;mizbeach_shekhem&#x27;] (+6 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[&#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;]
+
+=== S1 — The call pushed, the object withheld: after STEP_Gn_12_1
+    לֶךְ־לְךָ מֵאַרְצְךָ (lekh-lekha me-artzekha)
+    PASS  LET(lekh(avram, el_ha_aretz_asher_areka)) pushed and OPEN  (queue=[&#x27;lekh(avram, el_ha_aretz_asher_areka)&#x27;])
+    PASS  Facts lekh-lekha-me-artzekha HOLD.  (1 facts)
+
+=== S2 — The ladder and the second imperative: after STEP_Gn_12_2
+    וֶהְיֵה בְּרָכָה (ve-heyeh berakhah)
+    PASS  LET(heyeh(avram, berakhah)) pushed and OPEN  (queue=[&#x27;lekh(avram, el_ha_aretz_asher_areka)&#x27;, &#x27;heyeh(avram, berakhah)&#x27;])
+    PASS  Facts e-eskha-le-goy-gadol HOLD.  (3 facts)
+
+=== S3 — The asymmetric guard and the families: after STEP_Gn_12_3
+    וְנִבְרְכוּ בְךָ כֹּל מִשְׁפְּחֹת הָאֲדָמָה (ve-nivrekhu vekha kol mishpechot ha-adamah)
+    PASS  Facts va-avarakhah-mevarakhekha / u-meqallelkha-aor HOLD  (6 facts)
+    PASS  Facts ve-nivrekhu-vekha-kol-mishpechot-ha-adamah HOLD.  (6 facts)
+
+=== S4 — The receipt in the letter&#x27;s grammar: after STEP_Gn_12_4
+    כַּאֲשֶׁר דִּבֶּר אֵלָיו יְהוָה (ka-asher dibber elav YHWH)
+    PASS  Facts ka-asher-dibber-elav-YHWH HOLD  (8 facts)
+    PASS  LET(heyeh(avram, berakhah)) pushed and OPEN  (queue=[&#x27;heyeh(avram, berakhah)&#x27;])
+    PASS  flags charan as read-before-install.  (flagged=[&#x27;charan&#x27;])
+
+=== S5 — The arrival and the made souls: after STEP_Gn_12_5
+    וַיָּבֹאוּ אַרְצָה כְּנָעַן (va-yavou artzah kenaan)
+    PASS  Facts ve-et-ha-nefesh-asher-asu-ve-charan HOLD  (10 facts)
+    PASS  flags eretz_kenaan as read-before-install.  (flagged=[&#x27;charan&#x27;, &#x27;eretz_kenaan&#x27;])
+
+=== S6 — The pass and the then-fact: after STEP_Gn_12_6
+    וְהַכְּנַעֲנִי אָז בָּאָרֶץ (ve-ha-kenaani az ba-aretz)
+    PASS  Facts ve-ha-kenaani-az-ba-aretz HOLD  (11 facts)
+    PASS  flags shekhem as read-before-install.  (flagged=[&#x27;charan&#x27;, &#x27;eretz_kenaan&#x27;, &#x27;shekhem&#x27;])
+
+=== S7 — The appearance, the pledge, the first install: after STEP_Gn_12_7
+    לְזַרְעֲךָ אֶתֵּן אֶת־הָאָרֶץ הַזֹּאת (le-zarakha etten et-ha-aretz ha-zot)
+    PASS  Facts le-zarakha-etten-et-ha-aretz-ha-zot HOLD  (12 facts)
+    PASS  WORLD += mizbeach_shekhem.  (entity={&#x27;mode&#x27;: &#x27;created&#x27;, &#x27;by&#x27;: &#x27;narration&#x27;, &#x27;step&#x27;: &#x27;Gen.12.7&#x27;})
+
+=== S8 — The second altar and the Name called: after STEP_Gn_12_8
+    וַיִּקְרָא בְּשֵׁם יְהוָה (va-yiqra be-shem YHWH)
+    PASS  WORLD += mizbeach_beit_el  (entity={&#x27;mode&#x27;: &#x27;created&#x27;, &#x27;by&#x27;: &#x27;narration&#x27;, &#x27;step&#x27;: &#x27;Gen.12.8&#x27;})
+    PASS  flags beit_el/ha_ai as read-before-install.  (flagged=[&#x27;beit_el&#x27;, &#x27;charan&#x27;, &#x27;eretz_kenaan&#x27;, &#x27;ha_ai&#x27;, &#x27;shekhem&#x27;])
+
+=== S9 — The road south, the demand still open: after STEP_Gn_12_9
+    הָלוֹךְ וְנָסוֹעַ הַנֶּגְבָּה (halokh ve-nasoa ha-negbah)
+    PASS  WORLD = {mizbeach_shekhem, mizbeach_beit_el}  (created=[&#x27;mizbeach_beit_el&#x27;, &#x27;mizbeach_shekhem&#x27;])
+    PASS  LET(heyeh(avram, berakhah)) pushed and OPEN  (queue=[&#x27;heyeh(avram, berakhah)&#x27;])
+    PASS  flags ha_negev as read-before-install.  (flagged=[&#x27;beit_el&#x27;, &#x27;charan&#x27;, &#x27;eretz_kenaan&#x27;, &#x27;ha_ai&#x27;, &#x27;ha_negev&#x27;, &#x27;shekhem&#x27;])
+
+=== S10_negative — Negative: the LET? contract guard
+    בְּרָכָה (berakhah)
+    PASS  imperfect-in-command parsed as LET? (question mark kept)  (mood=LET?)
+    PASS  auto-upgrade REFUSED  (TIR-028: LET? never auto-upgrades to LET — a per-unit judgme...)
+    PASS  upgrade WITH citation allowed  (cite=per-unit judgment (owner), TIR-028 resolution)
+
+=== S11_negative — Negative: flags never block
+    PASS  commit proceeded (not blocked)  (LEDGER=[99])
+    PASS  pattern deviation FLAGGED  (flags=[&#x27;commit_without_test&#x27;])
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_27_the_call.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_27_the_call — 12:1-9
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_27_the_call.yaml) is CANONICAL (Pre-Code); this
+# file is a derived, runnable rendering. Do not edit — regenerate. The
+# assertion block at the bottom is baked from the Stage D interpreter&#x27;s
+# actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;The call: go to the land I will show you (12:1-9)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_27_the_call&quot;)
+
+# -------------------------- Gen.12.1 · THE_CALL_WITH_THE_OBJECT_WITHHELD ---
+# וַיֹּאמֶר יְהוָה אֶל־אַבְרָם לֶךְ־לְךָ מֵאַרְצְךָ וּמִמּוֹלַדְתְּךָ
+# וּמִבֵּית אָבִיךָ אֶל־הָאָרֶץ אֲשֶׁר אַרְאֶךָּ
+# &quot;Now the LORD said unto Abram: &#x27;Get thee out of thy country, and from thy
+# kindred, and from thy father&#x27;s house, unto the land that I will show
+# thee.&#x27;&quot;
+m.step(&quot;Gen.12.1&quot;)
+# ‹לֶךְ־לְךָ … אֶל־הָאָרֶץ אֲשֶׁר אַרְאֶךָּ› (“go to-you/your … to the-earth
+# which see-you/your”) — the-LORD speaks a demand — LET: go(Abram, to-the-
+# earth-which-areka)
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;lekh(avram, el_ha_aretz_asher_areka)&quot;)
+# ‹מֵאַרְצְךָ וּמִמּוֹלַדְתְּךָ וּמִבֵּית אָבִיךָ› (“from-earth-you/your
+# and-from-nativity-you/your and-from-house father-you/your”) — fact holds:
+# go-to-you-from-artzekha-and-from-moladtekha-and-from-beit-avikha
+m.fact(&quot;lekh_lekha_me_artzekha_u_mi_moladtekha_u_mi_beit_avikha&quot;)
+
+# -------------------------- Gen.12.2 · THE_PROMISE_LADDER_AND_THE_SECOND_IMPERATIVE -
+# וְאֶעֶשְׂךָ לְגוֹי גָּדוֹל וַאֲבָרֶכְךָ וַאֲגַדְּלָה שְׁמֶךָ וֶהְיֵה
+# בְּרָכָה
+# &quot;And I will make of thee a great nation, and I will bless thee, and make
+# thy name great; and be thou a blessing.&quot;
+m.step(&quot;Gen.12.2&quot;)
+# ‹וְאֶעֶשְׂךָ לְגוֹי גָּדוֹל וַאֲבָרֶכְךָ וַאֲגַדְּלָה שְׁמֶךָ› (“and-make-
+# you/your to-nation great and-bless-you/your and-be-large name-you/your”) —
+# fact holds: e-eskha-to-nation-great; and-avarekhkha-and-agadlah-shmekha
+m.fact(&quot;e_eskha_le_goy_gadol&quot;,
+       &quot;va_avarekhkha_va_agadlah_shmekha&quot;)
+# ‹וֶהְיֵה בְּרָכָה› (“and-be blessing”) — the-LORD speaks a demand — LET:
+# heyeh(Abram, berakhah)
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;heyeh(avram, berakhah)&quot;)
+
+# -------------------------- Gen.12.3 · THE_ASYMMETRY_AND_THE_FAMILIES ------
+# וַאֲבָרֲכָה מְבָרְכֶיךָ וּמְקַלֶּלְךָ אָאֹר וְנִבְרְכוּ בְךָ כֹּל
+# מִשְׁפְּחֹת הָאֲדָמָה
+# &quot;And I will bless them that bless thee, and him that curseth thee will I
+# curse; and in thee shall all the families of the earth be blessed.&#x27;&quot;
+m.step(&quot;Gen.12.3&quot;)
+# ‹וַאֲבָרֲכָה מְבָרְכֶיךָ וּמְקַלֶּלְךָ אָאֹר› (“and-bless bless-you/your
+# and-be-light-you/your execrate”) — fact holds: and-avarakhah-mevarakhekha;
+# and-meqallelkha-execrate
+m.fact(&quot;va_avarakhah_mevarakhekha&quot;,
+       &quot;u_meqallelkha_aor&quot;)
+# ‹וְנִבְרְכוּ בְךָ כֹּל מִשְׁפְּחֹת הָאֲדָמָה› (“and-bless in-you/your all
+# family the-ground”) — fact holds: and-nivrekhu-vekha-all-mishpechot-the-
+# ground
+m.fact(&quot;ve_nivrekhu_vekha_kol_mishpechot_ha_adamah&quot;)
+
+# -------------------------- Gen.12.4 · THE_RECEIPT_IN_THE_LETTERS_OWN_GRAMMAR -
+# וַיֵּלֶךְ אַבְרָם כַּאֲשֶׁר דִּבֶּר אֵלָיו יְהוָה וַיֵּלֶךְ אִתּוֹ לוֹט
+# וְאַבְרָם בֶּן־חָמֵשׁ שָׁנִים וְשִׁבְעִים שָׁנָה בְּצֵאתוֹ מֵחָרָן
+# &quot;So Abram went, as the LORD had spoken unto him; and Lot went with him;
+# and Abram was seventy and five years old when he departed out of Haran.&quot;
+m.step(&quot;Gen.12.4&quot;)
+# ‹וַיֵּלֶךְ אַבְרָם … וַיֵּלֶךְ אִתּוֹ לוֹט› (“and-go Abram … and-go with-
+# him/its Lot”) — event: go — agent Abram
+m.event(&quot;go&quot;, agent=&quot;avram&quot;)
+# ‹וַיֵּלֶךְ אַבְרָם כַּאֲשֶׁר דִּבֶּר אֵלָיו יְהוָה› (“and-go Abram like-
+# as/which speak to-him/its YHWH”) — demand settled (popped from the queue):
+# go(Abram, to-the-earth-which-areka)
+m.result(&quot;lekh(avram, el_ha_aretz_asher_areka)&quot;, tmark=&quot;t1&quot;)
+# ‹כַּאֲשֶׁר דִּבֶּר אֵלָיו יְהוָה … בֶּן־חָמֵשׁ שָׁנִים וְשִׁבְעִים שָׁנָה›
+# (“like-as/which speak to-him/its YHWH … son five years and-seventy years”)
+# — fact holds: like-which-dibber-to-him-the-LORD; Abram-son-75-year-in-
+# tzeto-from-Haran
+m.fact(&quot;ka_asher_dibber_elav_YHWH&quot;,
+       &quot;avram_ben_75_shanah_be_tzeto_me_charan&quot;)
+# reads without prior install (flag, not fix): Haran
+m.presupposed(&quot;charan&quot;)
+
+# -------------------------- Gen.12.5 · THE_ARRIVAL_THE_FROZEN_WALL_WAITED_FOR -
+# וַיִּקַּח אַבְרָם אֶת־שָׂרַי אִשְׁתּוֹ וְאֶת־לוֹט בֶּן־אָחִיו
+# וְאֶת־כָּל־רְכוּשָׁם אֲשֶׁר רָכָשׁוּ וְאֶת־הַנֶּפֶשׁ אֲשֶׁר־עָשׂוּ בְחָרָן
+# וַיֵּצְאוּ לָלֶכֶת אַרְצָה כְּנַעַן וַיָּבֹאוּ אַרְצָה כְּנָעַן
+# &quot;And Abram took Sarai his wife, and Lot his brother&#x27;s son, and all their
+# substance that they had gathered, and the souls that they had gotten in
+# Haran; and they went forth to go into the land of Canaan; and into the
+# land of Canaan they came.&quot;
+m.step(&quot;Gen.12.5&quot;)
+# ‹וַיִּקַּח אַבְרָם אֶת־שָׂרַי אִשְׁתּוֹ וְאֶת־לוֹט בֶּן־אָחִיו …› (“and-
+# take Abram obj-marker Sarai woman-him/its and-obj-marker Lot son brother-
+# him/its”) — event: take — agent Abram; theme Sarai, Lot, all-rekhusham,
+# the-living-being-which-make
+m.event(&quot;take&quot;, agent=&quot;avram&quot;, themes=[&quot;saray&quot;, &quot;lot&quot;, &quot;kol_rekhusham&quot;, &quot;ha_nefesh_asher_asu&quot;])
+# ‹וַיֵּצְאוּ לָלֶכֶת אַרְצָה כְּנַעַן› (“and-bring-forth to-go earth-ward
+# Canaan”) — event: go-out — agent Abram
+m.event(&quot;go_out&quot;, agent=&quot;avram&quot;)
+# ‹וַיָּבֹאוּ אַרְצָה כְּנָעַן› (“and-come/bring earth-ward Canaan”) —
+# event: come — agent Abram
+m.event(&quot;come&quot;, agent=&quot;avram&quot;)
+# ‹וְאֶת־כָּל־רְכוּשָׁם אֲשֶׁר רָכָשׁוּ וְאֶת־הַנֶּפֶשׁ אֲשֶׁר־עָשׂוּ
+# בְחָרָן› (“and-obj-marker all property-them/their which lay-up and-obj-
+# marker the-living-being which make in-Haran”) — fact holds: all-rekhusham-
+# which-lay-up; and-obj-marker-the-living-being-which-make-and-Haran
+m.fact(&quot;kol_rekhusham_asher_rakhashu&quot;,
+       &quot;ve_et_ha_nefesh_asher_asu_ve_charan&quot;)
+# reads without prior install (flag, not fix): earth-Canaan
+m.presupposed(&quot;eretz_kenaan&quot;)
+
+# -------------------------- Gen.12.6 · THE_PASS_AND_THE_THEN ---------------
+# וַיַּעֲבֹר אַבְרָם בָּאָרֶץ עַד מְקוֹם שְׁכֶם עַד אֵלוֹן מוֹרֶה
+# וְהַכְּנַעֲנִי אָז בָּאָרֶץ
+# &quot;And Abram passed through the land unto the place of Shechem, unto the
+# terebinth of Moreh. And the Canaanite was then in the land.&quot;
+m.step(&quot;Gen.12.6&quot;)
+# ‹וַיַּעֲבֹר אַבְרָם בָּאָרֶץ עַד מְקוֹם שְׁכֶם עַד אֵלוֹן מוֹרֶה› (“and-
+# pass-over Abram in-earth until place Shechem until oak Moreh”) — event:
+# pass — agent Abram; theme until-place-Shechem-until-oak-moreh
+m.event(&quot;pass&quot;, agent=&quot;avram&quot;, themes=[&quot;ad_meqom_shekhem_ad_elon_moreh&quot;])
+# ‹וְהַכְּנַעֲנִי אָז בָּאָרֶץ› (“and-the-Kenaanite at-that-time in-earth”)
+# — fact holds: and-the-Kenaanite-at-that-time-in-the-earth
+m.fact(&quot;ve_ha_kenaani_az_ba_aretz&quot;)
+# reads without prior install (flag, not fix): Shechem
+m.presupposed(&quot;shekhem&quot;)
+
+# -------------------------- Gen.12.7 · THE_APPEARANCE_THE_PLEDGE_THE_FIRST_ALTAR -
+# וַיֵּרָא יְהוָה אֶל־אַבְרָם וַיֹּאמֶר לְזַרְעֲךָ אֶתֵּן אֶת־הָאָרֶץ
+# הַזֹּאת וַיִּבֶן שָׁם מִזְבֵּחַ לַיהוָה הַנִּרְאֶה אֵלָיו
+# &quot;And the LORD appeared unto Abram, and said: &#x27;Unto thy seed will I give
+# this land&#x27;; and he builded there an altar unto the LORD, who appeared unto
+# him.&quot;
+m.step(&quot;Gen.12.7&quot;)
+# ‹וַיֵּרָא יְהוָה אֶל־אַבְרָם› (“and-see YHWH to Abram”) — event: appear —
+# agent the-LORD
+m.event(&quot;appear&quot;, agent=&quot;YHWH&quot;)
+# ‹וַיֹּאמֶר› (“and-say”) — event: say — agent the-LORD
+m.event(&quot;say&quot;, agent=&quot;YHWH&quot;)
+# ‹לְזַרְעֲךָ אֶתֵּן אֶת־הָאָרֶץ הַזֹּאת› (“to-seed-you/your set obj-marker
+# the-earth the-this”) — fact holds: to-zarakha-etten-obj-marker-the-earth-
+# the-this
+m.fact(&quot;le_zarakha_etten_et_ha_aretz_ha_zot&quot;)
+# ‹וַיִּבֶן שָׁם מִזְבֵּחַ לַיהוָה הַנִּרְאֶה אֵלָיו› (“and-build there
+# altar to-YHWH the-see to-him/its”) — event: build — agent Abram; theme
+# altar-Shechem
+m.event(&quot;build&quot;, agent=&quot;avram&quot;, themes=[&quot;mizbeach_shekhem&quot;])
+# ‹מִזְבֵּחַ› (“altar”) — the world gains: altar-Shechem
+m.install(&quot;mizbeach_shekhem&quot;)
+
+# -------------------------- Gen.12.8 · THE_TENT_THE_SECOND_ALTAR_THE_NAME_CALLED -
+# וַיַּעְתֵּק מִשָּׁם הָהָרָה מִקֶּדֶם לְבֵית־אֵל וַיֵּט אָהֳלֹה בֵּית־אֵל
+# מִיָּם וְהָעַי מִקֶּדֶם וַיִּבֶן־שָׁם מִזְבֵּחַ לַיהוָה וַיִּקְרָא בְּשֵׁם
+# יְהוָה
+# &quot;And he removed from thence unto the mountain on the east of Beth-el, and
+# pitched his tent, having Beth-el on the west, and Ai on the east; and he
+# builded there an altar unto the LORD, and called upon the name of the
+# LORD.&quot;
+m.step(&quot;Gen.12.8&quot;)
+# ‹וַיַּעְתֵּק מִשָּׁם הָהָרָה מִקֶּדֶם לְבֵית־אֵל› (“and-moved-on from-
+# there the-mountain-ward from-the-east to Beth-el”) — event: move-on —
+# agent Abram
+m.event(&quot;move_on&quot;, agent=&quot;avram&quot;)
+# ‹וַיֵּט אָהֳלֹה בֵּית־אֵל מִיָּם וְהָעַי מִקֶּדֶם› (“and-stretch tent-
+# him/its Beth-el from-seas and-the-Ai from-the-east”) — event: pitch —
+# agent Abram; theme ohel
+m.event(&quot;pitch&quot;, agent=&quot;avram&quot;, themes=[&quot;ohel&quot;])
+# ‹וַיִּבֶן־שָׁם מִזְבֵּחַ לַיהוָה› (“and-build there altar to-YHWH”) —
+# event: build — agent Abram; theme altar-beit-to
+m.event(&quot;build&quot;, agent=&quot;avram&quot;, themes=[&quot;mizbeach_beit_el&quot;])
+# ‹מִזְבֵּחַ› (“altar”) — the world gains: altar-beit-to
+m.install(&quot;mizbeach_beit_el&quot;)
+# ‹וַיִּקְרָא בְּשֵׁם יְהוָה› (“and-call in-name YHWH”) — event: call —
+# agent Abram; theme in-name-the-LORD
+m.event(&quot;call&quot;, agent=&quot;avram&quot;, themes=[&quot;be_shem_YHWH&quot;])
+# reads without prior install (flag, not fix): beit-to, the-ai
+m.presupposed(&quot;beit_el&quot;, &quot;ha_ai&quot;)
+
+# -------------------------- Gen.12.9 · THE_ROAD_SOUTH_STAYS_OPEN -----------
+# וַיִּסַּע אַבְרָם הָלוֹךְ וְנָסוֹעַ הַנֶּגְבָּה
+# &quot;And Abram journeyed, going on still toward the South.&quot;
+m.step(&quot;Gen.12.9&quot;)
+# ‹וַיִּסַּע אַבְרָם הָלוֹךְ וְנָסוֹעַ הַנֶּגְבָּה› (“and-journey Abram
+# walk/go and-journey the-south-ward”) — event: journey — agent Abram
+m.event(&quot;journey&quot;, agent=&quot;avram&quot;)
+# reads without prior install (flag, not fix): the-negev
+m.presupposed(&quot;ha_negev&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == {&#x27;mizbeach_shekhem&#x27;, &#x27;mizbeach_beit_el&#x27;}
+    assert m.presupposed_set() == {&#x27;beit_el&#x27;, &#x27;eretz_kenaan&#x27;, &#x27;charan&#x27;, &#x27;ha_negev&#x27;, &#x27;shekhem&#x27;, &#x27;ha_ai&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;heyeh(avram, berakhah)&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 2
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;read_before_install&#x27;: 6}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;lekh_lekha_me_artzekha_u_mi_moladtekha_u_mi_beit_avikha&#x27;, &#x27;e_eskha_le_goy_gadol&#x27;, &#x27;va_avarekhkha_va_agadlah_shmekha&#x27;, &#x27;va_avarakhah_mevarakhekha&#x27;, &#x27;u_meqallelkha_aor&#x27;, &#x27;ve_nivrekhu_vekha_kol_mishpechot_ha_adamah&#x27;, &#x27;ka_asher_dibber_elav_YHWH&#x27;, &#x27;avram_ben_75_shanah_be_tzeto_me_charan&#x27;, &#x27;kol_rekhusham_asher_rakhashu&#x27;, &#x27;ve_et_ha_nefesh_asher_asu_ve_charan&#x27;, &#x27;ve_ha_kenaani_az_ba_aretz&#x27;, &#x27;le_zarakha_etten_et_ha_aretz_ha_zot&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 16
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

@@ -1,0 +1,729 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>exo_05_bricks_without_straw — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/exo_05_bricks_without_straw?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Bricks without straw (5:1-23) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>exo_05_bricks_without_straw</b> · Exodus 5:1-23 · derive logic_derived_v1 · phase FWD-19</div>
+<div class="meta"><a href="../#Exod/5/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">וְתֹכֶן לְבֵנִים תִּתֵּנוּ</span> · <i>ve-tokhen levenim titenu</i> · &#x27;and the count of bricks you shall give&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DERIVED 2026-08-09 · FORWARD ERA unit #19 (run FWD-4 block 5 — the run&#x27;s last; Exod 1-5 continuous behind it). Span: 5:1-23, whole chapter: 23 verses (SNAPSHOT-verified), every verse with an etnachta (the mid-verse pause). Oral layer IN-PIPELINE: manifest 13/13 VERIFIED, zero FAILED — see oral_audit_note_en. MACHINE PROFILE. THREE DECLAREs, ONE RESULT. The DEMAND OF THE BOOK (shalach et ami, 5:1 — the compound speaker moshe-ve- aharon; the first thus-says-the-LORD at the throne) REFUSED at 5:2 (&#x27;I know not the LORD&#x27;) — the card stays OPEN with its receipt armed at Pharaoh&#x27;s own midnight grant (12:31-32): not the dead-by-refusal class — a divinely re-issued demand whose ledger is the plague-cycle. The STRAW-DECREE (lo tosifun, 5:7-9) pops in the relay-verse (5:10 — commanded, gone out, proclaimed: the apparatus executes). The JUDGMENT-PLEA (yere YHWH alekhem ve-yishpot, 5:21 — the corpus&#x27;s first demand aimed AT Moses) stands OPEN: never granted, never refused — it dissolves into the redemption it doubted. ONE EVENT: the officers beaten (5:14 — the middle tier bleeds). exo_03&#x27;s COURT-SCRIPT lands at 5:3 with the class&#x27;s predicted deviation (bolder opening at 5:1, the script&#x27;s measured lines at 5:3, the pestilence-softening) — NO in-unit pop (one-world law): the settlement link authored at the fold. 5:4&#x27;s dismissal (lekhu le-sivlotekhem) explicitly FENCED (a scene-dismissal, not a tracked demand). REGISTRY 0; TESTS 0; LEDGER 0. Queue at close: TWO OPEN in-unit (the send-demand; the plea). CARE-POINTS: the duel of messenger-formulas (thus-says-the- LORD 5:1 / thus-says-Pharaoh 5:10); the know-ledger&#x27;s dark column (who-knew-not Joseph 1:8 → I-know-not the LORD 5:2); the misdirected cry (the officers cry to PHARAOH 5:15 where 2:23&#x27;s cry went up to God); the king twice quoting the feast-words back (5:8, 5:17 — the demand has lodged); the kaved-triangle (mouth 4:10 / service 5:9 / heart 7:14 armed); the sabbath-root in Pharaoh&#x27;s mouth (5:5); the run ends on the indictment with the answer one verse over the border (6:1 armed). WATCHLIST ARMS: 6:1 (now-you-shall-see — the next run&#x27;s first verse), 7:14 (the heavy heart), 12:31-32 (the send-demand&#x27;s grant in Pharaoh&#x27;s mouth), 15:7 (the stubble at the sea), 16:4 (the day-in-its-day formula on the manna).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-09 (IN-PIPELINE, forward era; manifest logic/oral_audit/manifests/exo_05_bricks_without_straw_claims.json 13/13 VERIFIED, zero FAILED; record logic/oral_audit/AUDIT_exo_05_2026-08-09.md). CROWNS (chain-attested + DB-verified). THE DOUBLE-STROKE&#x27;S FIVE [EX05-01, MS on 5:15] — THE UNIT&#x27;S MARQUEE: the do-word of the officers&#x27; cry carries the Torah&#x27;s RAREST accent (the doubled stroke), and MS&#x27;s ruling (&#x27;it does not pause — it binds and rolls with the word after it&#x27;) lands on the stream&#x27;s own mark: the complete Torah census is FIVE stations, all of them trouble — Isaac&#x27;s bring-it-near at the stolen blessing (Gen 27:25), the beaten officers&#x27; cry (Exod 5:15), the strange fire (Lev 10:1), the spies&#x27; better-for-us (Num 14:3), Nobah&#x27;s villages (Num 32:42). THE BABEL DOUBLE [EX05-02, Kitzur on 5:12/18]: לבנים (&quot;bricks&quot;) — exact Torah-pair: Babel&#x27;s let-us-brick (Gen 11:3) and Pharaoh&#x27;s quota (5:18); AND ויפץ (&quot;and it scattered&quot;) — exact Torah-pair: Babel&#x27;s scattering (Gen 11:8) and the straw-scattering (5:12): the letter binds Egypt&#x27;s brickyard to Babel twice, in two words, both exact. THE CRY FROM THE GROUND [EX05-03, Kitzur on 5:8]: צעקים (&quot;crying&quot;) — exact Torah-pair: Abel&#x27;s blood (Gen 4:10) and the quota-cry; the bodies-in-the-building tradition named. THE THREE ILL-DEALINGS [EX05-04, MS + Kitzur on 5:22]: הרעתה (&quot;You have dealt ill&quot;) — the manuscript Masorah&#x27;s three stations, each spelled differently; Torah-side pair verified exact (5:22, Num 11:11 — both unique); Elijah&#x27;s third named; the ata-tireh punishment-reading and the Moses/Elijah parallels named. THE CORRECTED PRINTER [EX05-05, MS on 5:7]: כתמול (&quot;as yesterday&quot;) FULL — the Masorah-printer&#x27;s error named, Minchat Kohen &#x27;confused in all the places&#x27;; the exact Torah-three verified (Gen 31:2, Exod 5:7, 5:14). THE HIDDEN LIKE DAVID [EX05-06, Kitzur on 5:14]: גם תמול (&quot;both yesterday&quot;) — unique Torah adjacency; Saul&#x27;s-table twin named. THE UNKNOWN YESTERDAY [EX05-07, Kitzur on 5:8]: תמול שלשום — unique Torah adjacency; Ruth&#x27;s twin named (drawn near → the redeemer; oppressed → the striker). THE BRICKS THREE [EX05-08, Kitzur on 5:7]: הלבנים (&quot;the bricks&quot;) — Torah-pair inside the decree itself (5:7, 5:8); Isaiah&#x27;s brick-altars and the Micah-from-under-the-bricks tradition named. THE MISDIRECTED TURNING [EX05-09, Kitzur on 5:9]: ישעו (&quot;let them turn&quot;) — Torah-unique; the chain&#x27;s prayer-law of intent built on Pharaoh&#x27;s sneer. THE DELIVER-NOT [EX05-10, Kitzur on 5:23]: והצל (&quot;and deliver&quot;) — Torah-unique, doubled against its own negation; David&#x27;s promise-kept twin named. THE HEAVY SERVICE [EX05-11, Kitzur on 5:9]: תכבד (&quot;let it be heavy&quot;) — Torah-unique; the day-and-night pair named; the weight-word&#x27;s triangle. THE LETTER-FILE [EX05-12, MS]: the straw-word on its six dots (checked); the gather-word&#x27;s bare half-vowel; the soft unique sin-word of 5:16; the lean set-over word with the Vayigash sign; the why-verse&#x27;s soft and dotted letters. READINGS (named-only) [EX05-13]: the doubled idle-word CHECKED in-verse (5:17); the happened-word&#x27;s year-count (the plagues&#x27; calendar); the give-word four (Pharaoh who gave no straw sank in the sea); the make-word three (in reward of that service — the Tabernacle and the passover).</div>
+<div class="meta">confidence: structure tested; oral layer verified 13/13</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>FORWARD ERA run 4, block 5 (the run&#x27;s last; owner: &quot;do the first 5 blocks of exodus&quot;). Canon continuation: Exod 5:1-23 — the audience, the decree, the beating, the indictment; whole chapter.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Span + source + conventions</td><td>SNAPSHOT prestage: 23 verses, every verse with an etnachta (the mid-verse pause). No ketiv/qere pairs in-span. Volitive census: the send-demand (5:1), the straw-decree (5:7), the judgment-plea (5:21) — three DECLAREs; 5:4&#x27;s dismissal FENCED (scene-order, no card); 5:3&#x27;s let-us-go is the court-script performing (exo_03&#x27;s demand, not a new push); 5:15&#x27;s cry is a grievance-question (no imperative).</td><td>established</td></tr>
+<tr><td><b>C</b></td><td>Machine structure</td><td>Three DECLAREs, one RESULT (the decree pops in the relay-verse 5:10). The send-demand refused at 5:2 stays OPEN (receipt armed at 12:31-32 — a divinely re-issued demand, not the dead-by-refusal class). The judgment-plea (5:21) OPEN — never granted, never refused. EVENT at 5:14 (the officers beaten). The court-script&#x27;s landing at 5:3 takes no in-unit pop (one-world law — link at fold). REGISTRY 0; TESTS 0; LEDGER 0. Queue at close: two open in-unit.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Exod 5 (11 notes) + Kitzur Baal HaTurim on Exod 5 (13 notes). Manifest 13 rows: 13 VERIFIED / 0 FAILED / 0 UNCHECKABLE. The double-stroke&#x27;s complete five-station census; the Babel double (two exact pairs binding the brickyard to the tower); Abel&#x27;s cry-word at the quota; the three-spelling why-dealt-ill file.</td><td>established</td></tr>
+<tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 13/13 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-09 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits. Run FWD-4 closes: Exod 1-5 continuous.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Ex_5_1 · Exod.5.1 · <span class='expr'>SEND_MY_PEOPLE</span></h3>
+<p><span class="he">וְאַחַר בָּאוּ מֹשֶׁה וְאַהֲרֹן וַיֹּאמְרוּ אֶל־פַּרְעֹה כֹּה־אָמַר יְהוָה אֱלֹהֵי יִשְׂרָאֵל שַׁלַּח אֶת־עַמִּי וְיָחֹגּוּ לִי בַּמִּדְבָּר</span> · <i>ve-achar bau moshe ve-aharon va-yomru el-paro ko-amar YHWH elohe yisrael shalach et-ami-y ve-yachogu li-y ba-midbar</i> · And afterward Moses and Aaron came, and said to Pharaoh: Thus says the LORD, the God of Israel: Send My people, that they may feast to Me in the wilderness.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאַחַ֗ר בָּ֚אוּ מֹשֶׁ֣ה וְאַהֲרֹ֔ן וַיֹּאמְר֖וּ אֶל פַּרְעֹ֑ה</span> · <i>ve-achar bau moshe ve-aharon va-yomru el-paro</i> · and afterward Moses and Aaron came, and said to Pharaoh (etnachta on paro) [VERIFIED: SNAPSHOT Exod.5.1 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כֹּֽה אָמַ֤ר יְהוָה֙ אֱלֹהֵ֣י יִשְׂרָאֵ֔ל שַׁלַּח֙ אֶת עַמִּ֔י וְיָחֹ֥גּוּ לִ֖י בַּמִּדְבָּֽר</span> · <i>ko-amar YHWH elohe yisrael shalach et-ami-y ve-yachogu li-y ba-midbar</i> · thus says the LORD, the God of Israel: Send My people, that they may feast to Me in the wilderness (verse-final ba-midbar) [VERIFIED: SNAPSHOT Exod.5.1 idx7-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(moshe_ve_aharon, LET(shalach_et_ami_ve_yachogu_li))</span><br><span class="gloss">= DECLARE(Moses-and-Aaron, LET(shalach-ami-and-yachogu-to-me))</span><br>THE DEMAND. ve-ACHAR bau moshe ve-AHARON — &#x27;and AFTERWARD&#x27; (the readings on the elders who slipped away one by one named — the two stand alone); the COMPOUND speaker (the corpus&#x27;s two-man file: Laban-and-Bethuel, Rachel-and-Leah — now the brothers as one mouth); ko amar YHWH elohe YISRAEL — the Name Pharaoh has never heard, with Israel&#x27;s title; SHALACH et AMI — &#x27;SEND MY PEOPLE&#x27;: the demand of the whole book pushed at the throne (ve-YACHOGU li ba-midbar — the feast-clause: the first festival-word of the Torah on Israel&#x27;s calendar); the machine pushes it OPEN and arms the long receipt: the same send-verb, granted in Pharaoh&#x27;s own mouth at midnight (12:31-32, &#x27;go, serve the LORD as you have SPOKEN&#x27;): every plague between is this card&#x27;s ledger.
+</td><td><span class="he">שַׁלַּח אֶת־עַמִּי וְיָחֹגּוּ לִי בַּמִּדְבָּר</span> · <i>shalach et-ami-y ve-yachogu li-y ba-midbar</i><br><span class="gloss">= shalach ami-y and-yachogu to-me-y in-the-midbar</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The demand of the book, pushed at the throne.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_5_2 · Exod.5.2 · <span class='expr'>WHO_IS_YHWH</span></h3>
+<p><span class="he">וַיֹּאמֶר פַּרְעֹה מִי יְהוָה אֲשֶׁר אֶשְׁמַע בְּקֹלוֹ לְשַׁלַּח אֶת־יִשְׂרָאֵל לֹא יָדַעְתִּי אֶת־יְהוָה וְגַם אֶת־יִשְׂרָאֵל לֹא אֲשַׁלֵּחַ</span> · <i>va-yomer paro mi YHWH asher eshma be-qol-o le-shalach et-yisrael lo yadati et-YHWH ve-gam et-yisrael lo ashalecha</i> · And Pharaoh said: Who is the LORD, that I should hear His voice to send Israel? I know not the LORD, and Israel also I will not send.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֣אמֶר פַּרְעֹ֔ה מִ֤י יְהוָה֙ אֲשֶׁ֣ר אֶשְׁמַ֣ע בְּקֹל֔וֹ לְשַׁלַּ֖ח אֶת יִשְׂרָאֵ֑ל</span> · <i>va-yomer paro mi YHWH asher eshma be-qol-o le-shalach et-yisrael</i> · who is the LORD, that I should hear His voice to send Israel? (etnachta on yisrael) [VERIFIED: SNAPSHOT Exod.5.2 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לֹ֤א יָדַ֨עְתִּי֙ אֶת יְהוָ֔ה וְגַ֥ם אֶת יִשְׂרָאֵ֖ל לֹ֥א אֲשַׁלֵּֽחַ</span> · <i>lo yadati et-YHWH ve-gam et-yisrael lo ashalecha</i> · I know not the LORD, and Israel also I will not send (verse-final ashalecha) [VERIFIED: SNAPSHOT Exod.5.2 idx10-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lo_yadati_et_YHWH, t0)</span><br><span class="gloss">= HOLDS(not-yadati-the-LORD, t0)</span><br>THE REFUSAL. MI YHWH — &#x27;WHO is the LORD&#x27;: the throne answers the Name with a question (the readings&#x27; ledger-of-gods named — he searched his registry and found no entry); LO YADATI et YHWH — &#x27;I KNOW NOT the LORD&#x27;: the book&#x27;s disease in its second generation (the king who knew not Joseph, 1:8 — his heir knows not Joseph&#x27;s God: the know-ledger&#x27;s dark column); ve-gam et yisrael LO ASHALEACH — &#x27;and Israel also I will NOT SEND&#x27;: the send-verb refused in its own letters — the forecast of 4:23 (va-temaen, &#x27;and you refuse&#x27;) lands on schedule: the machine keeps the card OPEN — this refusal is the first payment on a debt the plagues will collect; the demand does NOT die (the dead-by-refusal class holds for refused HUMAN demands whose letter closes them; this one carries a divine re-issue engine — 12:31 armed).
+</td><td><span class="he">לֹא יָדַעְתִּי אֶת־יְהוָה</span> · <i>lo yadati et-YHWH</i><br><span class="gloss">= not yadati the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The first refusal; the not-knowing again.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_5_3 · Exod.5.3 · <span class='expr'>THE_SCRIPT_PERFORMED</span></h3>
+<p><span class="he">וַיֹּאמְרוּ אֱלֹהֵי הָעִבְרִים נִקְרָא עָלֵינוּ נֵלֲכָה נָּא דֶּרֶךְ שְׁלֹשֶׁת יָמִים בַּמִּדְבָּר וְנִזְבְּחָה לַיהוָה אֱלֹהֵינוּ פֶּן־יִפְגָּעֵנוּ בַּדֶּבֶר אוֹ בֶחָרֶב</span> · <i>va-yomru elohe ha-ivrim niqra ale-nu nelakha na derekh sheloshet yamim ba-midbar ve-nizbcha la-YHWH elohe-nu pen-yifgae-nu ba-dever o ve-charev</i> · And they said: The God of the Hebrews has happened upon us; let us go, pray, a journey of three days into the wilderness, and sacrifice to the LORD our God — lest He strike us with the pestilence, or with the sword.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֣אמְר֔וּ אֱלֹהֵ֥י הָעִבְרִ֖ים נִקְרָ֣א עָלֵ֑ינוּ</span> · <i>va-yomru elohe ha-ivrim niqra ale-nu</i> · the God of the Hebrews has happened upon us; let us go three days into the wilderness (etnachta on ale-nu) [VERIFIED: SNAPSHOT Exod.5.3 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">נֵ֣לֲכָה נָּ֡א דֶּרֶךְ֩ שְׁלֹ֨שֶׁת יָמִ֜ים בַּמִּדְבָּ֗ר וְנִזְבְּחָה֙ לַֽיהוָ֣ה אֱלֹהֵ֔ינוּ פֶּ֨ן יִפְגָּעֵ֔נוּ בַּדֶּ֖בֶר א֥וֹ בֶחָֽרֶב</span> · <i>nelakha na derekh sheloshet yamim ba-midbar ve-nizbcha la-YHWH elohe-nu pen-yifgae-nu ba-dever o ve-charev</i> · and sacrifice to the LORD our God — lest He strike us with pestilence or sword (verse-final ve-charev) [VERIFIED: SNAPSHOT Exod.5.3 idx5-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(elohe_ha_ivrim_niqra_alenu, t0)</span><br><span class="gloss">= HOLDS(elohe-the-ivrim-niqra-alenu, t0)</span><br>THE PERFORMANCE [the cross-unit landing; EX05-13]. elohe ha-IVRIM niqra alenu... NELKHA-na derekh SHELOSHET yamim ba-midbar ve- NIZBECHA — the COURT-SCRIPT of 3:18 delivered nearly VERBATIM (the God of the Hebrews; the three days; the sacrifice) — the scripted- speech class performing with its predicted deviation: the delivery opens BOLDER than the script (5:1&#x27;s send-My-people fronted the Name and the feast before falling back to the script&#x27;s measured lines here), and ADDS the pestilence-or-sword clause (the readings: they soften &#x27;lest He strike YOU&#x27; to &#x27;lest He strike US&#x27; — the honor-of- the-throne edit named); the gematria of the happened-word carried named (&#x27;a YEAR&#x27; — the plagues&#x27; calendar) [VERIFIED under EX05-13]: the machine files NO in-unit pop (one-world law) — the settlement link for exo_03&#x27;s court-script is authored at the fold, citing this verse.
+</td><td><span class="he">נֵלֲכָה נָּא דֶּרֶךְ שְׁלֹשֶׁת יָמִים בַּמִּדְבָּר וְנִזְבְּחָה לַיהוָה אֱלֹהֵינוּ</span> · <i>nelakha na derekh sheloshet yamim ba-midbar ve-nizbcha la-YHWH elohe-nu</i><br><span class="gloss">= nelakha na derekh sheloshet seas in-the-midbar and-nizbcha to-the-LORD elohe-nu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">exo_03&#x27;s court-script lands, with the class&#x27;s deviation.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_5_4 · Exod.5.4 · <span class='expr'>TO_YOUR_BURDENS</span></h3>
+<p><span class="he">וַיֹּאמֶר אֲלֵהֶם מֶלֶךְ מִצְרַיִם לָמָּה מֹשֶׁה וְאַהֲרֹן תַּפְרִיעוּ אֶת־הָעָם מִמַּעֲשָׂיו לְכוּ לְסִבְלֹתֵיכֶם</span> · <i>va-yomer el-hem melekh mitzrayim la-ma moshe ve-aharon tafriu et-ha-am mi-maasay-v lekhu le-sivlote-khem</i> · And the king of Egypt said to them: Why, Moses and Aaron, do you disturb the people from its works? Go to your burdens.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר אֲלֵהֶם֙ מֶ֣לֶךְ מִצְרַ֔יִם לָ֚מָּה מֹשֶׁ֣ה וְאַהֲרֹ֔ן תַּפְרִ֥יעוּ אֶת הָעָ֖ם מִמַּֽעֲשָׂ֑יו</span> · <i>va-yomer el-hem melekh mitzrayim la-ma moshe ve-aharon tafriu et-ha-am mi-maasay-v</i> · why, Moses and Aaron, do you disturb the people from its works? (etnachta on mi-maasay-v) [VERIFIED: SNAPSHOT Exod.5.4 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לְכ֖וּ לְסִבְלֹתֵיכֶֽם</span> · <i>lekhu le-sivlote-khem</i> · go to your burdens (verse-final le-sivlote-khem) [VERIFIED: SNAPSHOT Exod.5.4 idx11-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lekhu_le_sivlotekhem, t0)</span><br><span class="gloss">= HOLDS(lekhu-to-sivlotekhem, t0)</span><br>THE DISMISSAL. lama... TAFRIU et ha-am mi-maasav — &#x27;why do you DISTURB the people from its works&#x27; (the disturb-verb — the readings hear the wild-letting of the crowds); LEKHU le-SIVLOTEKHEM — &#x27;GO to your BURDENS&#x27;: the burden-word third time (1:11 the taskmasters&#x27; instrument, 2:11 Moses&#x27; seeing, now the king&#x27;s sneer — the readings: to YOUR burdens, not the Levites&#x27;, named); the machine FENCES the imperative (a scene-dismissal, not a tracked demand — the volitive census&#x27;s explicit fence: no card): the audience ends with the king ordering the deliverers back into the file they came to open.
+</td><td><span class="he">לְכוּ לְסִבְלֹתֵיכֶם</span> · <i>lekhu le-sivlote-khem</i><br><span class="gloss">= lekhu to-sivlote-khem</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The dismissal; the burden-word again.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_5_5 · Exod.5.5 · <span class='expr'>MANY_NOW</span></h3>
+<p><span class="he">וַיֹּאמֶר פַּרְעֹה הֵן־רַבִּים עַתָּה עַם הָאָרֶץ וְהִשְׁבַּתֶּם אֹתָם מִסִּבְלֹתָם</span> · <i>va-yomer paro hen-rabim ata am ha-aretz ve-hishbatem et-m mi-sivlota-m</i> · And Pharaoh said: Behold, the people of the land are now many, and you would make them rest from their burdens.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֣אמֶר פַּרְעֹ֔ה הֵן רַבִּ֥ים עַתָּ֖ה עַ֣ם הָאָ֑רֶץ</span> · <i>va-yomer paro hen-rabim ata am ha-aretz</i> · behold, the people of the land are now many (etnachta on ha-aretz) [VERIFIED: SNAPSHOT Exod.5.5 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהִשְׁבַּתֶּ֥ם אֹתָ֖ם מִסִּבְלֹתָֽם</span> · <i>ve-hishbatem et-m mi-sivlota-m</i> · and you would make them rest from their burdens (verse-final mi-sivlota-m) [VERIFIED: SNAPSHOT Exod.5.5 idx7-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_hishbatem_otam_mi_sivlotam, t0)</span><br><span class="gloss">= HOLDS(and-hishbatem-otam-from-sivlotam, t0)</span><br>THE MANY. hen RABIM ata am ha-aretz — &#x27;the people of the land are now MANY&#x27;: exo_01&#x27;s threat-arithmetic (1:9&#x27;s more-and-mightier) restated as labor-economics; ve-HISHBATEM otam mi-sivlotam — &#x27;you would make them REST from their burdens&#x27;: the rest-verb is the SABBATH-root in Pharaoh&#x27;s mouth (the readings: Moses had obtained the rest-day — the shabbat-file&#x27;s dark pre-echo, named): the machine files the king&#x27;s ledger: rest is theft when men are inventory.
+</td><td><span class="he">וְהִשְׁבַּתֶּם אֹתָם מִסִּבְלֹתָם</span> · <i>ve-hishbatem et-m mi-sivlota-m</i><br><span class="gloss">= and-hishbatem m from-sivlota-m</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The census of fear again; the rest-word.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_5_6 · Exod.5.6 · <span class='expr'>PHARAOH_COMMANDS_THE_TASKMASTERS</span></h3>
+<p><span class="he">וַיְצַו פַּרְעֹה בַּיּוֹם הַהוּא אֶת־הַנֹּגְשִׂים בָּעָם וְאֶת־שֹׁטְרָיו לֵאמֹר</span> · <i>va-yetzav paro ba-yom ha-hu et-ha-nogsim ba-am ve-et-shotray-v le-mor</i> · And Pharaoh commanded, on that day, the taskmasters over the people and its officers, saying:</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְצַ֥ו פַּרְעֹ֖ה בַּיּ֣וֹם הַה֑וּא</span> · <i>va-yetzav paro ba-yom ha-hu</i> · and Pharaoh commanded, on that day (etnachta on ha-hu) [VERIFIED: SNAPSHOT Exod.5.6 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֶת הַנֹּגְשִׂ֣ים בָּעָ֔ם וְאֶת שֹׁטְרָ֖יו לֵאמֹֽר</span> · <i>et-ha-nogsim ba-am ve-et-shotray-v le-mor</i> · the taskmasters over the people and its officers, saying (verse-final le-mor) [VERIFIED: SNAPSHOT Exod.5.6 idx4-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yetzav_paro_ba_yom_ha_hu, t0)</span><br><span class="gloss">= HOLDS(and-yetzav-paro-in-the-day-the-that, t0)</span><br>THE FRAME. va-YETZAV paro BA-YOM HA-HU — &#x27;Pharaoh COMMANDED, ON THAT DAY&#x27;: the command-verb with a timestamp (the readings: the malice same-day, before the petition cools); et ha-NOGSIM ba-am ve-et SHOTRAV — the TWO-TIER apparatus named (Egyptian taskmasters, Hebrew officers — the readings&#x27; org-chart: the officers are of the people, and will bleed for it at 5:14): the machine opens the decree&#x27;s frame — the content is the next verse&#x27;s demand.
+</td><td><span class="he">וַיְצַו פַּרְעֹה בַּיּוֹם הַהוּא</span> · <i>va-yetzav paro ba-yom ha-hu</i><br><span class="gloss">= and-yetzav paro day the-that</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The decree-frame; the same-day malice.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_5_7 · Exod.5.7 · <span class='expr'>NO_MORE_STRAW</span></h3>
+<p><span class="he">לֹא תֹאסִפוּן לָתֵת תֶּבֶן לָעָם לִלְבֹּן הַלְּבֵנִים כִּתְמוֹל שִׁלְשֹׁם הֵם יֵלְכוּ וְקֹשְׁשׁוּ לָהֶם תֶּבֶן</span> · <i>lo tosifu-n la-tet teven la-am li-lebon ha-levenim ki-temol shilshom hem yelkhu ve-qoshshu la-hem teven</i> · You shall not continue to give straw to the people to brick the bricks, as yesterday and the day before; they shall go and gather straw for themselves.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">לֹ֣א תֹאסִפ֞וּן לָתֵ֨ת תֶּ֧בֶן לָעָ֛ם לִלְבֹּ֥ן הַלְּבֵנִ֖ים כִּתְמ֣וֹל שִׁלְשֹׁ֑ם</span> · <i>lo tosifu-n la-tet teven la-am li-lebon ha-levenim ki-temol shilshom</i> · you shall not continue to give straw to the people to brick the bricks (etnachta on shilshom) [VERIFIED: SNAPSHOT Exod.5.7 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">הֵ֚ם יֵֽלְכ֔וּ וְקֹשְׁשׁ֥וּ לָהֶ֖ם תֶּֽבֶן</span> · <i>hem yelkhu ve-qoshshu la-hem teven</i> · as yesterday and the day before; they shall go and gather straw for themselves (verse-final teven) [VERIFIED: SNAPSHOT Exod.5.7 idx9-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(paro, LET(lo_tosifun_latet_teven))</span><br><span class="gloss">= DECLARE(paro, LET(not-tosifun-latet-teven))</span><br>THE STRAW-DECREE [EX05-05; EX05-08; EX05-12]. LO TOSIFUN latet TEVEN la-am li-lebon ha-LEVENIM — &#x27;you shall NOT CONTINUE to give STRAW... to brick THE BRICKS&#x27;: the decree pushed on the apparatus (the definite bricks-word&#x27;s exact Torah-pair lives in this decree&#x27;s two verses, 5:7-8; the Micah-from-under-the-bricks tradition named at the Isaiah third) [VERIFIED: manifest EX05-08]; ki-TEMOL shilshom — the yesterday-word FULL with the Hilleli against the Masorah- printer&#x27;s error (Minchat Kohen &#x27;confused in all the places&#x27; — the chain naming its broken links; the exact Torah-three: Laban&#x27;s changed face and this decree&#x27;s two) [VERIFIED: manifest EX05-05]; the straw-word on its six dots and the gather-word on its simple sheva (the letter-file) [VERIFIED under EX05-12]: the machine records the demand and watches the apparatus execute.
+</td><td><span class="he">לֹא תֹאסִפוּן לָתֵת תֶּבֶן לָעָם לִלְבֹּן הַלְּבֵנִים</span> · <i>lo tosifu-n la-tet teven la-am li-lebon ha-levenim</i><br><span class="gloss">= not tosifu-n to-tet teven to-am to-me-lebon the-levenim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The straw-decree pushed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_5_8 · Exod.5.8 · <span class='expr'>THE_QUOTA_STANDS</span></h3>
+<p><span class="he">וְאֶת־מַתְכֹּנֶת הַלְּבֵנִים אֲשֶׁר הֵם עֹשִׂים תְּמוֹל שִׁלְשֹׁם תָּשִׂימוּ עֲלֵיהֶם לֹא תִגְרְעוּ מִמֶּנּוּ כִּי־נִרְפִּים הֵם עַל־כֵּן הֵם צֹעֲקִים לֵאמֹר נֵלְכָה נִזְבְּחָה לֵאלֹהֵינוּ</span> · <i>ve-et-matkonet ha-levenim asher hem osim temol shilshom tasimu ale-hem lo tigru mime-nu ki-nirpim hem al-ken hem tzoaqim le-mor nelkha nizbcha le-lohe-nu</i> · And the count of the bricks which they made yesterday and the day before you shall set upon them — you shall not diminish from it; for they are idle — therefore they cry, saying: Let us go, sacrifice to our God.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאֶת מַתְכֹּ֨נֶת הַלְּבֵנִ֜ים אֲשֶׁ֣ר הֵם֩ עֹשִׂ֨ים תְּמ֤וֹל שִׁלְשֹׁם֙ תָּשִׂ֣ימוּ עֲלֵיהֶ֔ם לֹ֥א תִגְרְע֖וּ מִמֶּ֑נּוּ</span> · <i>ve-et-matkonet ha-levenim asher hem osim temol shilshom tasimu ale-hem lo tigru mime-nu</i> · the count of bricks they made yesterday and before, you shall set upon them — do not diminish it (etnachta on mime-nu) [VERIFIED: SNAPSHOT Exod.5.8 idx12 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּֽי נִרְפִּ֣ים הֵ֔ם עַל כֵּ֗ן הֵ֤ם צֹֽעֲקִים֙ לֵאמֹ֔ר נֵלְכָ֖ה נִזְבְּחָ֥ה לֵאלֹהֵֽינוּ</span> · <i>ki-nirpim hem al-ken hem tzoaqim le-mor nelkha nizbcha le-lohe-nu</i> · for they are idle — therefore they cry: let us go, sacrifice to our God (verse-final le-lohe-nu) [VERIFIED: SNAPSHOT Exod.5.8 idx13-23]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lo_tigreu_mimenu, t0)</span><br><span class="gloss">= HOLDS(not-tigreu-from-it, t0)</span><br>THE QUOTA [EX05-03; EX05-07]. ve-et MATKONET ha-levenim... TASIMU alehem — the COUNT stands with the straw gone (the decree&#x27;s arithmetic: same output, vanished input); ki-NIRPIM hem — &#x27;for they are IDLE&#x27;: the diagnosis that will double at 5:17; al-ken hem TZOAQIM — &#x27;therefore they CRY&#x27;: the crying-participle&#x27;s exact Torah- pair is ABEL&#x27;S BLOOD crying from the ground (Gen 4:10) — and the tradition completes it in the bricks themselves (&#x27;what you lack of the count — set your BODIES in the building: and this is crying-to- Me-from-the-ground&#x27;) [VERIFIED: manifest EX05-03]; TEMOL SHILSHOM again — the bare pair&#x27;s one Torah adjacency, Ruth&#x27;s known-not twin named (drawn near → the redeemer; oppressed → the striker) [VERIFIED: manifest EX05-07]: the machine files the decree&#x27;s theology: the king hears worship as idleness and grief as noise.
+</td><td><span class="he">לֹא תִגְרְעוּ מִמֶּנּוּ</span> · <i>lo tigru mime-nu</i><br><span class="gloss">= not tigru mime-nu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The quota clause; Abel&#x27;s word.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_5_9 · Exod.5.9 · <span class='expr'>HEAVY_ON_THE_MEN</span></h3>
+<p><span class="he">תִּכְבַּד הָעֲבֹדָה עַל־הָאֲנָשִׁים וְיַעֲשׂוּ־בָהּ וְאַל־יִשְׁעוּ בְּדִבְרֵי־שָׁקֶר</span> · <i>tikhbad ha-avoda al-ha-anashim ve-yaasu-va-ה ve-el-yishu be-divre-shaqer</i> · Let the service be heavy on the men, and let them do it; and let them not turn to false words.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">תִּכְבַּ֧ד הָעֲבֹדָ֛ה עַל הָאֲנָשִׁ֖ים וְיַעֲשׂוּ בָ֑הּ</span> · <i>tikhbad ha-avoda al-ha-anashim ve-yaasu-va-ה</i> · let the service be heavy on the men, and let them do it (etnachta on va-ה) [VERIFIED: SNAPSHOT Exod.5.9 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאַל יִשְׁע֖וּ בְּדִבְרֵי שָֽׁקֶר</span> · <i>ve-el-yishu be-divre-shaqer</i> · and let them not turn to false words (verse-final shaqer) [VERIFIED: SNAPSHOT Exod.5.9 idx6-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(tikhbad_ha_avoda_al_ha_anashim, t0)</span><br><span class="gloss">= HOLDS(tikhbad-the-avoda-upon-the-anashim, t0)</span><br>THE WEIGHT [EX05-09; EX05-11]. TIKHBAD ha-avoda al ha-anashim — &#x27;let the service be HEAVY&#x27;: the be-heavy word&#x27;s one Torah token (the psalmist&#x27;s day-and-night hand its Scripture-twin — &#x27;he made it heavy by day and by night&#x27;) [VERIFIED: manifest EX05-11] — the kaved- triangle building (the heavy mouth 4:10, the heavy service here, the heavy heart 7:14 armed); ve-al YISHU be-divre SHAQER — &#x27;let them not TURN to false words&#x27;: the turn-word Torah-unique, and the chain turns Pharaoh&#x27;s sneer into the prayer-law of intent (&#x27;those whose heart stands behind their mouth — you shall call, and the LORD will answer&#x27;) [VERIFIED: manifest EX05-09]: the machine files the inversion — the king calls the sacrifice-words false; the tradition calibrates truth-in-prayer on his verse.
+</td><td><span class="he">תִּכְבַּד הָעֲבֹדָה עַל־הָאֲנָשִׁים</span> · <i>tikhbad ha-avoda al-ha-anashim</i><br><span class="gloss">= tikhbad the-avoda upon-the-anashim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The heavy word; the turning named.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_5_10 · Exod.5.10 · <span class='expr'>THE_DECREE_RELAYED</span></h3>
+<p><span class="he">וַיֵּצְאוּ נֹגְשֵׂי הָעָם וְשֹׁטְרָיו וַיֹּאמְרוּ אֶל־הָעָם לֵאמֹר כֹּה אָמַר פַּרְעֹה אֵינֶנִּי נֹתֵן לָכֶם תֶּבֶן</span> · <i>va-yetzu nogse ha-am ve-shotray-v va-yomru el-ha-am le-mor ko amar paro ene-ni noten la-khem teven</i> · And the taskmasters of the people went out, and its officers, and said to the people, saying: Thus says Pharaoh: I do not give you straw.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֵּ֨צְא֜וּ נֹגְשֵׂ֤י הָעָם֙ וְשֹׁ֣טְרָ֔יו וַיֹּאמְר֥וּ אֶל הָעָ֖ם לֵאמֹ֑ר</span> · <i>va-yetzu nogse ha-am ve-shotray-v va-yomru el-ha-am le-mor</i> · the taskmasters of the people went out, and its officers, and said to the people (etnachta on le-mor) [VERIFIED: SNAPSHOT Exod.5.10 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כֹּ֚ה אָמַ֣ר פַּרְעֹ֔ה אֵינֶ֛נִּי נֹתֵ֥ן לָכֶ֖ם תֶּֽבֶן</span> · <i>ko amar paro ene-ni noten la-khem teven</i> · thus says Pharaoh: I do not give you straw (verse-final teven) [VERIFIED: SNAPSHOT Exod.5.10 idx8-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(lo_tosifun_latet_teven, t1)</span><br><span class="gloss">= RESULT: HOLDS(not-tosifun-latet-teven, t1)</span><br>THE RELAY [EX05-13]. va-YETZU nogse ha-am ve-shotrav va-yomru el ha- am — the apparatus EXECUTES: the decree of 5:6-9 performed by its addressees (the pop lands in the relay-verse — commanded, gone out, proclaimed); KO AMAR PARO — &#x27;THUS SAYS PHARAOH&#x27;: the royal messenger-formula aping 5:1&#x27;s thus-says-the-LORD (the machine files the duel of formulas the plagues will settle: two thus-says, one land); ENENI NOTEN lakhem TEVEN — &#x27;I do NOT GIVE you straw&#x27;: the give-word file (the tradition&#x27;s four: &#x27;Pharaoh who GAVE no straw sank in the sea and went down among the slain; but he who GIVES of his bread — his waters are faithful&#x27;) [VERIFIED under EX05-13].
+</td><td><span class="he">כֹּה אָמַר פַּרְעֹה אֵינֶנִּי נֹתֵן לָכֶם תֶּבֶן</span> · <i>ko amar paro ene-ni noten la-khem teven</i><br><span class="gloss">= ko amar paro ene-ni noten to-khem teven</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The decree performed; the counter-proclamation.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_5_11 · Exod.5.11 · <span class='expr'>GO_GET_STRAW</span></h3>
+<p><span class="he">אַתֶּם לְכוּ קְחוּ לָכֶם תֶּבֶן מֵאֲשֶׁר תִּמְצָאוּ כִּי אֵין נִגְרָע מֵעֲבֹדַתְכֶם דָּבָר</span> · <i>atem lekhu qechu la-khem teven me-asher timtzau ki en nigra me-avodat-khem davar</i> · You — go, take straw for yourselves from wherever you find it; for nothing is diminished from your service.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אַתֶּ֗ם לְכ֨וּ קְח֤וּ לָכֶם֙ תֶּ֔בֶן מֵאֲשֶׁ֖ר תִּמְצָ֑אוּ</span> · <i>atem lekhu qechu la-khem teven me-asher timtzau</i> · you — go, take straw for yourselves from wherever you find it (etnachta on timtzau) [VERIFIED: SNAPSHOT Exod.5.11 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּ֣י אֵ֥ין נִגְרָ֛ע מֵעֲבֹדַתְכֶ֖ם דָּבָֽר</span> · <i>ki en nigra me-avodat-khem davar</i> · for nothing is diminished from your service (verse-final davar) [VERIFIED: SNAPSHOT Exod.5.11 idx7-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ki_en_nigra_me_avodatkhem_davar, t0)</span><br><span class="gloss">= HOLDS(when-en-nigra-from-avodatkhem-davar, t0)</span><br>THE COLD CLAUSE. atem LEKHU QECHU lakhem teven me-asher TIMTZAU — &#x27;YOU — go, take straw from wherever you FIND it&#x27;: the find-verb hands the quota&#x27;s input to chance; ki EN NIGRA me-avodatkhem DAVAR — &#x27;NOTHING is diminished from your service&#x27;: the diminish-verb (5:8&#x27;s decree-word) in the mouth of the relay: the machine notes the decree&#x27;s design — impossible input, unchanged output, and the failure pre-labeled as the workers&#x27; idleness: the corpus&#x27;s first documented production-trap.
+</td><td><span class="he">כִּי אֵין נִגְרָע מֵעֲבֹדַתְכֶם דָּבָר</span> · <i>ki en nigra me-avodat-khem davar</i><br><span class="gloss">= when en nigra from-avodat-khem davar</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The relay&#x27;s cold clause.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_5_12 · Exod.5.12 · <span class='expr'>THE_SCATTERING</span></h3>
+<p><span class="he">וַיָּפֶץ הָעָם בְּכָל־אֶרֶץ מִצְרָיִם לְקֹשֵׁשׁ קַשׁ לַתֶּבֶן</span> · <i>va-yafetz ha-am be-khal-eretz mitzrayim le-qoshesh qash la-teven</i> · And the people scattered in all the land of Egypt, to gather stubble for the straw.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּ֥פֶץ הָעָ֖ם בְּכָל אֶ֣רֶץ מִצְרָ֑יִם</span> · <i>va-yafetz ha-am be-khal-eretz mitzrayim</i> · and the people scattered in all the land of Egypt (etnachta on mitzrayim) [VERIFIED: SNAPSHOT Exod.5.12 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לְקֹשֵׁ֥שׁ קַ֖שׁ לַתֶּֽבֶן</span> · <i>le-qoshesh qash la-teven</i> · to gather stubble for the straw (verse-final la-teven) [VERIFIED: SNAPSHOT Exod.5.12 idx5-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yafetz_ha_am_be_khol_eretz_mitzrayim, t0)</span><br><span class="gloss">= HOLDS(and-yafetz-the-am-in-all-earth-mitzrayim, t0)</span><br>THE SCATTER [EX05-02 MARQUEE]. va-YAFETZ ha-am be-khol eretz mitzrayim — &#x27;and the people SCATTERED in all the land of Egypt&#x27;: the scatter-word&#x27;s exact Torah-pair is BABEL&#x27;S — &#x27;and the LORD scattered them&#x27; from the brick-tower (Gen 11:8) — and with the bricks-pair (levenim: Babel&#x27;s let-us-brick / Pharaoh&#x27;s quota, 5:18) the letter binds Egypt&#x27;s brickyard to Babel TWICE, in two words, both exact pairs [VERIFIED: manifest EX05-02]; le-qoshesh QASH la-teven — to gather STUBBLE for straw (the stubble-word armed: Egypt&#x27;s army will be stubble at the sea-song, 15:7): the machine files the double: the empire of bricks inherits the tower&#x27;s vocabulary, and its chaff-word is already booked for the drowning.
+</td><td><span class="he">וַיָּפֶץ הָעָם בְּכָל־אֶרֶץ מִצְרָיִם</span> · <i>va-yafetz ha-am be-khal-eretz mitzrayim</i><br><span class="gloss">= and-yafetz the-am in-khal-earth mitzrayim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Babel&#x27;s scatter-word.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_5_13 · Exod.5.13 · <span class='expr'>THE_PRESSING</span></h3>
+<p><span class="he">וְהַנֹּגְשִׂים אָצִים לֵאמֹר כַּלּוּ מַעֲשֵׂיכֶם דְּבַר־יוֹם בְּיוֹמוֹ כַּאֲשֶׁר בִּהְיוֹת הַתֶּבֶן</span> · <i>ve-ha-nogsim atzim le-mor kalu maase-khem devar-yom be-yom-o ka-asher bi-heot ha-teven</i> · And the taskmasters were pressing, saying: Complete your works, the matter of a day in its day, as when the straw was.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהַנֹּגְשִׂ֖ים אָצִ֣ים לֵאמֹ֑ר</span> · <i>ve-ha-nogsim atzim le-mor</i> · and the taskmasters were pressing (etnachta on le-mor) [VERIFIED: SNAPSHOT Exod.5.13 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כַּלּ֤וּ מַעֲשֵׂיכֶם֙ דְּבַר י֣וֹם בְּיוֹמ֔וֹ כַּאֲשֶׁ֖ר בִּהְי֥וֹת הַתֶּֽבֶן</span> · <i>kalu maase-khem devar-yom be-yom-o ka-asher bi-heot ha-teven</i> · complete your works, the day&#x27;s matter in its day, as when the straw was (verse-final ha-teven) [VERIFIED: SNAPSHOT Exod.5.13 idx3-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(devar_yom_be_yomo, t0)</span><br><span class="gloss">= HOLDS(devar-day-in-yomo, t0)</span><br>THE CLOCK. ve-ha-nogsim ATZIM — the taskmasters PRESSING (the press- participle — the readings&#x27; relentlessness); KALU maasekhem DEVAR-YOM be-YOMO — &#x27;COMPLETE your works, the day&#x27;s matter IN ITS DAY&#x27;: the day-in-its-day formula (the manna&#x27;s own future ration-grammar, 16:4 armed — the machine notes the corpus re-using the oppression&#x27;s clock for the bread of heaven): the decree runs on creation&#x27;s calendar with creation&#x27;s mercy stripped out.
+</td><td><span class="he">דְּבַר־יוֹם בְּיוֹמוֹ</span> · <i>devar-yom be-yom-o</i><br><span class="gloss">= devar-day in-day-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The daily clock.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_5_14 · Exod.5.14 · <span class='expr'>THE_OFFICERS_BEATEN</span></h3>
+<p><span class="he">וַיֻּכּוּ שֹׁטְרֵי בְּנֵי יִשְׂרָאֵל אֲשֶׁר־שָׂמוּ עֲלֵהֶם נֹגְשֵׂי פַרְעֹה לֵאמֹר מַדּוּעַ לֹא כִלִּיתֶם חָקְכֶם לִלְבֹּן כִּתְמוֹל שִׁלְשֹׁם גַּם־תְּמוֹל גַּם־הַיּוֹם</span> · <i>va-yuku shotre bene yisrael asher-samu ale-hem nogse faro le-mor madua lo khilitem chaq-khem li-lebon ki-temol shilshom gam-temol gam-ha-yom</i> · And the officers of the sons of Israel were beaten, whom Pharaoh&#x27;s taskmasters had set over them, saying: Why have you not completed your portion to brick, as yesterday and the day before — both yesterday and today?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֻּכּ֗וּ שֹֽׁטְרֵי֙ בְּנֵ֣י יִשְׂרָאֵ֔ל אֲשֶׁר שָׂ֣מוּ עֲלֵהֶ֔ם נֹגְשֵׂ֥י פַרְעֹ֖ה לֵאמֹ֑ר</span> · <i>va-yuku shotre bene yisrael asher-samu ale-hem nogse faro le-mor</i> · the officers of the sons of Israel were beaten, whom Pharaoh&#x27;s taskmasters had set over them (etnachta on le-mor) [VERIFIED: SNAPSHOT Exod.5.14 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">מַדּ֡וּעַ לֹא֩ כִלִּיתֶ֨ם חָקְכֶ֤ם לִלְבֹּן֙ כִּתְמ֣וֹל שִׁלְשֹׁ֔ם גַּם תְּמ֖וֹל גַּם הַיּֽוֹם</span> · <i>madua lo khilitem chaq-khem li-lebon ki-temol shilshom gam-temol gam-ha-yom</i> · why have you not completed your portion, as before — both yesterday and today? (verse-final ha-yom) [VERIFIED: SNAPSHOT Exod.5.14 idx10-20]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">huku(e1); Agent(e1, nogse_faro)</span><br><span class="gloss">= huku(e1); Agent(e1, nogse-faro)</span><br>THE BEATING [EX05-06; EX05-12]. va-YUKU shotre bene yisrael — &#x27;and the officers of the sons of Israel WERE BEATEN&#x27;: the machine&#x27;s EVENT — the strike-verb (2:11&#x27;s blow, 2:13&#x27;s raised hand) now institutional: the Hebrew tier absorbs the quota&#x27;s failure (the readings on the officers&#x27; later reward named — the beaten backs and the seventy seats); asher SAMU alehem — the set-over word LEAN with the Masorah and the Ramah, the sign filed at Vayigash [VERIFIED under EX05-12]; GAM TEMOL gam ha-YOM — &#x27;both yesterday and today&#x27;: the both-yesterday phrase&#x27;s one Torah station, its Scripture-twin at Saul&#x27;s table — &#x27;when they could not complete the quota they HID, as David hid&#x27; [VERIFIED: manifest EX05-06]: the machine files the decree&#x27;s yield: bruises on the men who stood between.
+</td><td><span class="he">וַיֻּכּוּ שֹׁטְרֵי בְּנֵי יִשְׂרָאֵל</span> · <i>va-yuku shotre bene yisrael</i><br><span class="gloss">= and-yuku shotre bene yisrael</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The event: the middle tier bleeds.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_5_15 · Exod.5.15 · <span class='expr'>THE_CRY_TO_PHARAOH</span></h3>
+<p><span class="he">וַיָּבֹאוּ שֹׁטְרֵי בְּנֵי יִשְׂרָאֵל וַיִּצְעֲקוּ אֶל־פַּרְעֹה לֵאמֹר לָמָּה תַעֲשֶׂה כֹה לַעֲבָדֶיךָ</span> · <i>va-yavou shotre bene yisrael va-yitzaqu el-paro le-mor la-ma taase kho la-avade-kha</i> · And the officers of the sons of Israel came and cried to Pharaoh, saying: Why do you deal thus with your servants?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּבֹ֗אוּ שֹֽׁטְרֵי֙ בְּנֵ֣י יִשְׂרָאֵ֔ל וַיִּצְעֲק֥וּ אֶל פַּרְעֹ֖ה לֵאמֹ֑ר</span> · <i>va-yavou shotre bene yisrael va-yitzaqu el-paro le-mor</i> · the officers of the sons of Israel came and cried to Pharaoh (etnachta on le-mor) [VERIFIED: SNAPSHOT Exod.5.15 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לָ֧מָּה תַעֲשֶׂ֦ה כֹ֖ה לַעֲבָדֶֽיךָ</span> · <i>la-ma taase kho la-avade-kha</i> · why do you deal thus with your servants? (verse-final la-avade-kha) [VERIFIED: SNAPSHOT Exod.5.15 idx8-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yitzaqu_el_paro, t0)</span><br><span class="gloss">= HOLDS(and-yitzaqu-to-paro, t0)</span><br>THE MISDIRECTED CRY [EX05-01 MARQUEE]. va-yavou shotre bene yisrael va-YITZAQU el PARO — &#x27;and they CRIED to PHARAOH&#x27;: the cry-verb of 2:23 — which went up to GOD and turned the book&#x27;s engine — here aimed at the throne that caused the pain (the machine files the address-error the readings weigh: the cry that ascends redeems; the cry to the oppressor gets 5:17); lama TAASE kho la-avadekha — and the do-word carries the DOUBLE-STROKE, the Torah&#x27;s rarest accent: MS&#x27;s ruling (&#x27;it does not pause — it binds and ROLLS with the word after it&#x27;) landing on the stream&#x27;s own mark, one of the mark&#x27;s FIVE stations in the whole Torah (Isaac&#x27;s bring-near, the officers&#x27; cry, the strange fire, the spies&#x27; better-for-us, Nobah&#x27;s villages — the complete census) [VERIFIED: manifest EX05-01]: five verses of trouble share one stroke, and this is its station.
+</td><td><span class="he">וַיִּצְעֲקוּ אֶל־פַּרְעֹה לֵאמֹר</span> · <i>va-yitzaqu el-paro le-mor</i><br><span class="gloss">= and-yitzaqu to-paro to-mor</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The misdirected cry; the double-stroke.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_5_16 · Exod.5.16 · <span class='expr'>YOUR_OWN_PEOPLE_SIN</span></h3>
+<p><span class="he">תֶּבֶן אֵין נִתָּן לַעֲבָדֶיךָ וּלְבֵנִים אֹמְרִים לָנוּ עֲשׂוּ וְהִנֵּה עֲבָדֶיךָ מֻכִּים וְחָטָאת עַמֶּךָ</span> · <i>teven en nitan la-avade-kha u-levenim omrim la-nu asu ve-hine avade-kha mukim ve-chatat ame-kha</i> · Straw is not given to your servants, and bricks — they say to us: Make! And behold, your servants are beaten; and the sin is your people&#x27;s.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">תֶּ֗בֶן אֵ֤ין נִתָּן֙ לַעֲבָדֶ֔יךָ וּלְבֵנִ֛ים אֹמְרִ֥ים לָ֖נוּ עֲשׂ֑וּ</span> · <i>teven en nitan la-avade-kha u-levenim omrim la-nu asu</i> · straw is not given to your servants, and bricks — they say to us: Make! (etnachta on asu) [VERIFIED: SNAPSHOT Exod.5.16 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהִנֵּ֧ה עֲבָדֶ֛יךָ מֻכִּ֖ים וְחָטָ֥את עַמֶּֽךָ</span> · <i>ve-hine avade-kha mukim ve-chatat ame-kha</i> · and behold, your servants are beaten; and the sin is your people&#x27;s (verse-final ame-kha) [VERIFIED: SNAPSHOT Exod.5.16 idx8-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_hine_avadekha_mukim, t0)</span><br><span class="gloss">= HOLDS(and-hine-avadekha-mukim, t0)</span><br>THE GRIEVANCE [EX05-12]. TEVEN en nitan la-avadekha u-LEVENIM omrim lanu ASU — the trap stated in court (no input, same output, the bare imperative &#x27;MAKE!&#x27;); ve-hine avadekha MUKIM — &#x27;your servants are BEATEN&#x27;: the passive shown to its author; ve-CHATAT amekha — &#x27;and the SIN is your people&#x27;s&#x27;: the officers&#x27; last clause ambiguous by design (the readings&#x27; hearings named — the fault lies with your people; or: the sin will be counted against your nation) — and the Masorah marks the word &#x27;unique, and SOFT&#x27; (the undotted letter checked in-stream) [VERIFIED under EX05-12]: the machine files the accusation the king will answer with a slur.
+</td><td><span class="he">וְהִנֵּה עֲבָדֶיךָ מֻכִּים</span> · <i>ve-hine avade-kha mukim</i><br><span class="gloss">= and-hine avade-kha mukim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The grievance; the soft last clause.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_5_17 · Exod.5.17 · <span class='expr'>IDLE_IDLE</span></h3>
+<p><span class="he">וַיֹּאמֶר נִרְפִּים אַתֶּם נִרְפִּים עַל־כֵּן אַתֶּם אֹמְרִים נֵלְכָה נִזְבְּחָה לַיהוָה</span> · <i>va-yomer nirpim atem nirpim al-ken atem omrim nelkha nizbcha la-YHWH</i> · And he said: Idle — you are idle! Therefore you say: Let us go, sacrifice to the LORD.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֛אמֶר נִרְפִּ֥ים אַתֶּ֖ם נִרְפִּ֑ים</span> · <i>va-yomer nirpim atem nirpim</i> · and he said: Idle — you are idle! (etnachta on nirpim) [VERIFIED: SNAPSHOT Exod.5.17 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">עַל כֵּן֙ אַתֶּ֣ם אֹֽמְרִ֔ים נֵלְכָ֖ה נִזְבְּחָ֥ה לַֽיהוָֽה</span> · <i>al-ken atem omrim nelkha nizbcha la-YHWH</i> · therefore you say: let us go, sacrifice to the LORD (verse-final la-YHWH) [VERIFIED: SNAPSHOT Exod.5.17 idx4-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(nirpim_atem_nirpim, t0)</span><br><span class="gloss">= HOLDS(nirpim-atem-nirpim, t0)</span><br>THE SLUR [EX05-13]. NIRPIM atem NIRPIM — &#x27;IDLE — you are IDLE&#x27;: the idle-word doubled in the king&#x27;s one verse (checked in-verse: exactly two — the readings on the doubling named: idle from the work; idle in your words) [VERIFIED: manifest EX05-13]; al-ken atem omrim NELKHA NIZBECHA la-YHWH — &#x27;THEREFORE you say: let us go, sacrifice&#x27;: the king quotes the court-script&#x27;s own feast-words BACK (the second time in the chapter, 5:8 and here — the machine files the tell: the demand of 5:1 has lodged; the throne can recite it): worship diagnosed as sloth — the decree&#x27;s theology said aloud.
+</td><td><span class="he">נִרְפִּים אַתֶּם נִרְפִּים</span> · <i>nirpim atem nirpim</i><br><span class="gloss">= nirpim atem nirpim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The doubled slur; the feast-words quoted back.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_5_18 · Exod.5.18 · <span class='expr'>GO_SERVE_NO_STRAW</span></h3>
+<p><span class="he">וְעַתָּה לְכוּ עִבְדוּ וְתֶבֶן לֹא־יִנָּתֵן לָכֶם וְתֹכֶן לְבֵנִים תִּתֵּנּוּ</span> · <i>ve-ata lekhu ivdu ve-teven lo-yinaten la-khem ve-tokhen levenim titenu</i> · And now — go, serve; and straw shall not be given you, and the count of bricks you shall give.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְעַתָּה֙ לְכ֣וּ עִבְד֔וּ וְתֶ֖בֶן לֹא יִנָּתֵ֣ן לָכֶ֑ם</span> · <i>ve-ata lekhu ivdu ve-teven lo-yinaten la-khem</i> · and now — go, serve (etnachta on la-khem) [VERIFIED: SNAPSHOT Exod.5.18 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְתֹ֥כֶן לְבֵנִ֖ים תִּתֵּֽנּוּ</span> · <i>ve-tokhen levenim titenu</i> · and straw shall not be given you, and the count of bricks you shall give (verse-final titenu) [VERIFIED: SNAPSHOT Exod.5.18 idx7-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_tokhen_levenim_titenu, t0)</span><br><span class="gloss">= HOLDS(and-tokhen-levenim-titenu, t0)</span><br>THE DENIAL [EX05-02 MARQUEE]. ve-ata LEKHU IVDU — &#x27;go, SERVE&#x27; (the serve-verb again — the king&#x27;s answer to sacrifice-to-the-LORD is serve-ME: the book&#x27;s two masters in one verb); ve-TEVEN lo yinaten lakhem ve-TOKHEN LEVENIM titenu — &#x27;and the COUNT of BRICKS you shall give&#x27;: the bare bricks-word&#x27;s exact Torah-pair — BABEL&#x27;S &#x27;come, let us brick bricks&#x27; (Gen 11:3) and this denial (the tradition: &#x27;whatever they built by day fell by night&#x27;; the tower&#x27;s three thirds named) [VERIFIED: manifest EX05-02]: the appeal returns empty-handed with the quota re-armed: the machine files the verse as the decree&#x27;s second signature.
+</td><td><span class="he">וְתֹכֶן לְבֵנִים תִּתֵּנּוּ</span> · <i>ve-tokhen levenim titenu</i><br><span class="gloss">= and-tokhen levenim titenu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The appeal denied; the Babel brick-word.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_5_19 · Exod.5.19 · <span class='expr'>THEY_SAW_THEMSELVES_IN_EVIL</span></h3>
+<p><span class="he">וַיִּרְאוּ שֹׁטְרֵי בְנֵי־יִשְׂרָאֵל אֹתָם בְּרָע לֵאמֹר לֹא־תִגְרְעוּ מִלִּבְנֵיכֶם דְּבַר־יוֹם בְּיוֹמוֹ</span> · <i>va-yiru shotre vene-yisrael et-m be-ra le-mor lo-tigru mi-livne-khem devar-yom be-yom-o</i> · And the officers of the sons of Israel saw themselves in evil, saying: You shall not diminish from your bricks, the day&#x27;s matter in its day.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּרְא֞וּ שֹֽׁטְרֵ֧י בְנֵֽי יִשְׂרָאֵ֛ל אֹתָ֖ם בְּרָ֣ע לֵאמֹ֑ר</span> · <i>va-yiru shotre vene-yisrael et-m be-ra le-mor</i> · the officers of the sons of Israel saw themselves in evil (etnachta on le-mor) [VERIFIED: SNAPSHOT Exod.5.19 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לֹא תִגְרְע֥וּ מִלִּבְנֵיכֶ֖ם דְּבַר י֥וֹם בְּיוֹמֽוֹ</span> · <i>lo-tigru mi-livne-khem devar-yom be-yom-o</i> · you shall not diminish from your bricks, the day&#x27;s matter in its day (verse-final be-yom-o) [VERIFIED: SNAPSHOT Exod.5.19 idx7-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yiru_otam_be_ra, t0)</span><br><span class="gloss">= HOLDS(and-yiru-otam-in-evil, t0)</span><br>THE SEEING. va-YIRU shotre vene-yisrael OTAM be-RA — &#x27;the officers SAW THEMSELVES in EVIL&#x27;: the see-verb turned reflexive (the chapter&#x27;s education: Moses saw the burdens 2:11, God saw the sons 2:25, the officers see the trap); lo-TIGREU mi-livnekhem DEVAR-YOM be-yomo — the quota-formula recited a third time (the letter drums the impossible clause): the machine files the state of the queue as the corridor-scene arrives: one demand refused at the throne, one decree executed on the backs.
+</td><td><span class="he">וַיִּרְאוּ שֹׁטְרֵי בְנֵי־יִשְׂרָאֵל אֹתָם בְּרָע</span> · <i>va-yiru shotre vene-yisrael et-m be-ra</i><br><span class="gloss">= and-yiru shotre vene-yisrael m evil</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The seeing of the trap.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_5_20 · Exod.5.20 · <span class='expr'>THE_CORRIDOR_MEETING</span></h3>
+<p><span class="he">וַיִּפְגְּעוּ אֶת־מֹשֶׁה וְאֶת־אַהֲרֹן נִצָּבִים לִקְרָאתָם בְּצֵאתָם מֵאֵת פַּרְעֹה</span> · <i>va-yifgu et-moshe ve-et-aharon nitzavim li-qerata-m be-tzeta-m me-et paro</i> · And they met Moses and Aaron, stationed to meet them, as they came out from Pharaoh.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַֽיִּפְגְּעוּ֙ אֶת מֹשֶׁ֣ה וְאֶֽת אַהֲרֹ֔ן נִצָּבִ֖ים לִקְרָאתָ֑ם</span> · <i>va-yifgu et-moshe ve-et-aharon nitzavim li-qerata-m</i> · and they met Moses and Aaron (etnachta on li-qerata-m) [VERIFIED: SNAPSHOT Exod.5.20 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">בְּצֵאתָ֖ם מֵאֵ֥ת פַּרְעֹֽה</span> · <i>be-tzeta-m me-et paro</i> · stationed to meet them, as they came out from Pharaoh (verse-final paro) [VERIFIED: SNAPSHOT Exod.5.20 idx7-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(nitzavim_liqratam, t0)</span><br><span class="gloss">= HOLDS(nitzavim-liqratam, t0)</span><br>THE COLLISION. va-YIFGEU et moshe ve-et aharon — &#x27;and they MET Moses and Aaron&#x27; (the paga-root — Jacob&#x27;s Bethel encounter-verb, gen_48&#x27;s place-meeting: the corpus&#x27;s loaded meet-word, not 4:24&#x27;s pagash); NITZAVIM liqratam — &#x27;STATIONED to meet them&#x27;: the stand-firm verb (Miriam&#x27;s station at the ark, 2:4 — the same verb now the brothers waiting to hear the verdict); be-tzetam me-et paro — in the doorway of the refusal: the machine sets the scene for the run&#x27;s last demand.
+</td><td><span class="he">נִצָּבִים לִקְרָאתָם</span> · <i>nitzavim li-qerata-m</i><br><span class="gloss">= nitzavim to-me-qerata-m</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The stationed brothers; the collision.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_5_21 · Exod.5.21 · <span class='expr'>MAY_HE_SEE_AND_JUDGE</span></h3>
+<p><span class="he">וַיֹּאמְרוּ אֲלֵהֶם יֵרֶא יְהוָה עֲלֵיכֶם וְיִשְׁפֹּט אֲשֶׁר הִבְאַשְׁתֶּם אֶת־רֵיחֵנוּ בְּעֵינֵי פַרְעֹה וּבְעֵינֵי עֲבָדָיו לָתֶת־חֶרֶב בְּיָדָם לְהָרְגֵנוּ</span> · <i>va-yomru el-hem yere YHWH ale-khem ve-yishpot asher hivashtem et-reche-nu be-ene faro u-ve-ene avaday-v la-tet-cherev be-yada-m le-harge-nu</i> · And they said to them: May the LORD see upon you, and judge — for you have made our savor stink in the eyes of Pharaoh, and in the eyes of his servants, to put a sword in their hand to kill us.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּאמְר֣וּ אֲלֵהֶ֔ם יֵ֧רֶא יְהוָ֛ה עֲלֵיכֶ֖ם וְיִשְׁפֹּ֑ט</span> · <i>va-yomru el-hem yere YHWH ale-khem ve-yishpot</i> · may the LORD see upon you, and judge (etnachta on ve-yishpot) [VERIFIED: SNAPSHOT Exod.5.21 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֲשֶׁ֧ר הִבְאַשְׁתֶּ֣ם אֶת רֵיחֵ֗נוּ בְּעֵינֵ֤י פַרְעֹה֙ וּבְעֵינֵ֣י עֲבָדָ֔יו לָֽתֶת חֶ֥רֶב בְּיָדָ֖ם לְהָרְגֵֽנוּ</span> · <i>asher hivashtem et-reche-nu be-ene faro u-ve-ene avaday-v la-tet-cherev be-yada-m le-harge-nu</i> · you have made our savor stink in Pharaoh&#x27;s eyes and his servants&#x27; eyes, to put a sword in their hand to kill us (verse-final le-harge-nu) [VERIFIED: SNAPSHOT Exod.5.21 idx6-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(shotre_bene_yisrael, LET(yere_YHWH_alekhem_ve_yishpot))</span><br><span class="gloss">= DECLARE(shotre-bene-yisrael, LET(yere-the-LORD-alekhem-and-yishpot))</span><br>THE PLEA [the run&#x27;s last push]. YERE YHWH alekhem ve-YISHPOT — &#x27;may the LORD SEE upon you, and JUDGE&#x27;: the officers push a judgment-plea AGAINST the deliverers (the jussive is real — the machine records it: the corpus&#x27;s first demand aimed at Moses); asher HIVASHTEM et RECHENU — &#x27;you have made our SAVOR STINK&#x27; (the stink-verb — Jacob&#x27;s fear at Shechem, gen_57&#x27;s file: the corpus&#x27;s reputation-word); la- tet CHEREV be-yadam le-horgenu — &#x27;a SWORD in their hand to kill us&#x27;: the officers hear the pestilence-or-sword clause (5:3) landing on themselves; the machine files the card OPEN — the letter never grants it (no judgment falls on Moses) and never refuses it (the readings&#x27; hearings of Moses&#x27; own punishment named at the why-verse): the plea dissolves into the redemption it doubted — open, like every wound this chapter files.
+</td><td><span class="he">יֵרֶא יְהוָה עֲלֵיכֶם וְיִשְׁפֹּט</span> · <i>yere YHWH ale-khem ve-yishpot</i><br><span class="gloss">= yere the-LORD ale-khem and-yishpot</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The judgment-plea pushed at the deliverers.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_5_22 · Exod.5.22 · <span class='expr'>WHY_HAVE_YOU_DEALT_ILL</span></h3>
+<p><span class="he">וַיָּשָׁב מֹשֶׁה אֶל־יְהוָה וַיֹּאמַר אֲדֹנָי לָמָה הֲרֵעֹתָה לָעָם הַזֶּה לָמָּה זֶּה שְׁלַחְתָּנִי</span> · <i>va-yashav moshe el-YHWH va-yomar adona-y la-ma hareota la-am ha-ze la-ma ze shelachta-ni</i> · And Moses returned to the LORD, and said: My Lord, why have You dealt ill with this people? Why is this that You have sent me?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּ֧שָׁב מֹשֶׁ֛ה אֶל יְהוָ֖ה וַיֹּאמַ֑ר</span> · <i>va-yashav moshe el-YHWH va-yomar</i> · and Moses returned to the LORD (etnachta on va-yomar) [VERIFIED: SNAPSHOT Exod.5.22 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֲדֹנָ֗י לָמָ֤ה הֲרֵעֹ֨תָה֙ לָעָ֣ם הַזֶּ֔ה לָ֥מָּה זֶּ֖ה שְׁלַחְתָּֽנִי</span> · <i>adona-y la-ma hareota la-am ha-ze la-ma ze shelachta-ni</i> · why have You dealt ill with this people? why is this that You have sent me? (verse-final shelachta-ni) [VERIFIED: SNAPSHOT Exod.5.22 idx5-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lama_hareota_la_am_ha_ze, t0)</span><br><span class="gloss">= HOLDS(lama-hareota-to-am-the-ze, t0)</span><br>THE RETURN [EX05-04 MARQUEE]. va-YASHAV moshe el YHWH — &#x27;Moses RETURNED to the LORD&#x27;: the return-verb&#x27;s right address (the officers cried to Pharaoh, 5:15; Moses carries the same grievance UP — the machine matches the two cries and files the difference); lama HAREOTA la-am ha-ze — &#x27;why have You DEALT ILL with this people&#x27;: the manuscript Masorah&#x27;s THREE why-dealt-ill stations, each spelled differently — this one with its full final he, Moses&#x27; second at the camp bare (Num 11:11), Elijah&#x27;s at the widow&#x27;s son full-vav — the Torah-side pair verified exact, the Ramah&#x27;s letter-arithmetic and the Kitzur&#x27;s Moses/Elijah parallels named (with the ata-tireh punishment-reading: &#x27;NOW you shall see&#x27; — not the kings of Canaan) [VERIFIED: manifest EX05-04]; lama ze SHELACHTANI — &#x27;why have You SENT me&#x27;: the send-verb turned back on the Sender: the machine files the boldest question in the corpus so far, asked from inside an unpaid queue.
+</td><td><span class="he">אֲדֹנָי לָמָה הֲרֵעֹתָה לָעָם הַזֶּה</span> · <i>adona-y la-ma hareota la-am ha-ze</i><br><span class="gloss">= adona-y to-ma hareota to-am the-ze</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The return; the three-spelling word.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_5_23 · Exod.5.23 · <span class='expr'>YOU_HAVE_NOT_DELIVERED</span></h3>
+<p><span class="he">וּמֵאָז בָּאתִי אֶל־פַּרְעֹה לְדַבֵּר בִּשְׁמֶךָ הֵרַע לָעָם הַזֶּה וְהַצֵּל לֹא־הִצַּלְתָּ אֶת־עַמֶּךָ</span> · <i>u-me-az bati el-paro le-daber bi-sheme-kha hera la-am ha-ze ve-hatzel lo-hitzalta et-ame-kha</i> · And since I came to Pharaoh to speak in Your name, he has dealt ill with this people; and deliver — You have not delivered Your people.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּמֵאָ֞ז בָּ֤אתִי אֶל פַּרְעֹה֙ לְדַבֵּ֣ר בִּשְׁמֶ֔ךָ הֵרַ֖ע לָעָ֣ם הַזֶּ֑ה</span> · <i>u-me-az bati el-paro le-daber bi-sheme-kha hera la-am ha-ze</i> · since I came to Pharaoh to speak in Your name, he has dealt ill with this people (etnachta on ha-ze) [VERIFIED: SNAPSHOT Exod.5.23 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהַצֵּ֥ל לֹא הִצַּ֖לְתָּ אֶת עַמֶּֽךָ</span> · <i>ve-hatzel lo-hitzalta et-ame-kha</i> · and deliver — You have not delivered Your people (verse-final ame-kha) [VERIFIED: SNAPSHOT Exod.5.23 idx9-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_hatzel_lo_hitzalta_et_amekha, t0)</span><br><span class="gloss">= HOLDS(and-hatzel-not-hitzalta-amekha, t0)</span><br>THE INDICTMENT [EX05-10]. u-me-az BATI el paro le-daber bi-SHEMEKHA — &#x27;since I came to Pharaoh to speak IN YOUR NAME&#x27; (the Name that drew mi-YHWH, 5:2 — the messenger bills the credential); HERA la-am ha-ze — &#x27;he has dealt ill&#x27;: Pharaoh&#x27;s dealing-ill set beside God&#x27;s (5:22&#x27;s verb — the letter lets the two subjects share the accusation); ve-HATZEL lo HITZALTA et amekha — &#x27;and DELIVER — You have NOT DELIVERED Your people&#x27;: the deliver-infinitive&#x27;s one Torah token doubled against its own negation (David&#x27;s surely-deliver its Scripture-twin — there a promise kept; the two-shepherds file) [VERIFIED: manifest EX05-10]: the run ends on an accusation with the answer one verse over the border (6:1, &#x27;NOW you shall see what I will do to Pharaoh&#x27; — armed): the machine closes with the queue loaded — the send-demand refused once, the judgment-plea hanging, the covenant-engine mid-stroke: the darkest clean compaction point in the corpus.
+</td><td><span class="he">וְהַצֵּל לֹא־הִצַּלְתָּ אֶת־עַמֶּךָ</span> · <i>ve-hatzel lo-hitzalta et-ame-kha</i><br><span class="gloss">= and-hatzel not-hitzalta ame-kha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The run closes on the indictment.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Ex_5_1 — send My people</td><td>And afterward Moses and Aaron came, and said to Pharaoh: Thus says the LORD, the God of Israel: Send My people, that they may feast to Me in the wilderness.</td><td>LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalach-ami-and-yachogu-to-me) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְאַחַ֗ר בָּ֚אוּ מֹשֶׁ֣ה וְאַהֲרֹ֔ן</span> · <i>ve-achar bau moshe ve-aharon</i><br><span class="gloss">= and-achar bau Moses Aaron</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Ex_5_2 — who is the LORD</td><td>And Pharaoh said: Who is the LORD, that I should hear His voice to send Israel? I know not the LORD, and Israel also I will not send.</td><td>LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalach-ami-and-yachogu-to-me) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֣אמֶר פַּרְעֹ֔ה מִ֤י יְהוָה֙</span> · <i>va-yomer paro mi YHWH</i><br><span class="gloss">= and-yomer paro from the-LORD</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Ex_5_3 — the script performed</td><td>And they said: The God of the Hebrews has happened upon us; let us go, pray, a journey of three days into the wilderness, and sacrifice to the LORD our God — lest He strike us with the pestilence, or with the sword.</td><td>LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalach-ami-and-yachogu-to-me) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֣אמְר֔וּ אֱלֹהֵ֥י הָעִבְרִ֖ים נִקְרָ֣א</span> · <i>va-yomru elohe ha-ivrim niqra</i><br><span class="gloss">= and-yomru elohe the-ivrim niqra</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Ex_5_4 — to your burdens</td><td>And the king of Egypt said to them: Why, Moses and Aaron, do you disturb the people from its works? Go to your burdens.</td><td>LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalach-ami-and-yachogu-to-me) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֤אמֶר אֲלֵהֶם֙ מֶ֣לֶךְ מִצְרַ֔יִם</span> · <i>va-yomer el-hem melekh mitzrayim</i><br><span class="gloss">= and-yomer to-hem melekh mitzrayim</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Ex_5_5 — many now</td><td>And Pharaoh said: Behold, the people of the land are now many, and you would make them rest from their burdens.</td><td>LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalach-ami-and-yachogu-to-me) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֣אמֶר פַּרְעֹ֔ה הֵן רַבִּ֥ים</span> · <i>va-yomer paro hen-rabim</i><br><span class="gloss">= and-yomer paro hen-rabim</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Ex_5_6 — Pharaoh commands the taskmasters</td><td>And Pharaoh commanded, on that day, the taskmasters over the people and its officers, saying:</td><td>LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalach-ami-and-yachogu-to-me) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְצַ֥ו פַּרְעֹ֖ה בַּיּ֣וֹם הַה֑וּא</span> · <i>va-yetzav paro ba-yom ha-hu</i><br><span class="gloss">= and-yetzav paro day the-that</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Ex_5_7 — no more straw</td><td>You shall not continue to give straw to the people to brick the bricks, as yesterday and the day before; they shall go and gather straw for themselves.</td><td>LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN; LET(lo_tosifun_latet_teven) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalach-ami-and-yachogu-to-me) pushed and OPEN; LET(not-tosifun-latet-teven) pushed and OPEN; no test, no name.</span></td><td><span class="he">לֹ֣א תֹאסִפ֞וּן לָתֵ֨ת תֶּ֧בֶן</span> · <i>lo tosifu-n la-tet teven</i><br><span class="gloss">= not tosifu-n to-tet teven</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Ex_5_8 — the quota stands</td><td>And the count of the bricks which they made yesterday and the day before you shall set upon them — you shall not diminish from it; for they are idle — therefore they cry, saying: Let us go, sacrifice to our God.</td><td>LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN; LET(lo_tosifun_latet_teven) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalach-ami-and-yachogu-to-me) pushed and OPEN; LET(not-tosifun-latet-teven) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְאֶת מַתְכֹּ֨נֶת הַלְּבֵנִ֜ים אֲשֶׁ֣ר</span> · <i>ve-et-matkonet ha-levenim asher</i><br><span class="gloss">= and-matkonet the-levenim which</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Ex_5_9 — heavy on the men</td><td>Let the service be heavy on the men, and let them do it; and let them not turn to false words.</td><td>LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN; LET(lo_tosifun_latet_teven) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalach-ami-and-yachogu-to-me) pushed and OPEN; LET(not-tosifun-latet-teven) pushed and OPEN; no test, no name.</span></td><td><span class="he">תִּכְבַּ֧ד הָעֲבֹדָ֛ה עַל הָאֲנָשִׁ֖ים</span> · <i>tikhbad ha-avoda al-ha-anashim</i><br><span class="gloss">= tikhbad the-avoda upon-the-anashim</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Ex_5_10 — the decree relayed</td><td>And the taskmasters of the people went out, and its officers, and said to the people, saying: Thus says Pharaoh: I do not give you straw.</td><td>LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalach-ami-and-yachogu-to-me) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֵּ֨צְא֜וּ נֹגְשֵׂ֤י הָעָם֙ וְשֹׁ֣טְרָ֔יו</span> · <i>va-yetzu nogse ha-am ve-shotray-v</i><br><span class="gloss">= and-yetzu nogse the-am and-shotray-v</span></td></tr>
+<tr><td><b>S11</b></td><td>after STEP_Ex_5_11 — go get straw</td><td>You — go, take straw for yourselves from wherever you find it; for nothing is diminished from your service.</td><td>LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalach-ami-and-yachogu-to-me) pushed and OPEN; no test, no name.</span></td><td><span class="he">אַתֶּ֗ם לְכ֨וּ קְח֤וּ לָכֶם֙</span> · <i>atem lekhu qechu la-khem</i><br><span class="gloss">= atem lekhu qechu to-khem</span></td></tr>
+<tr><td><b>S12</b></td><td>after STEP_Ex_5_12 — the scattering</td><td>And the people scattered in all the land of Egypt, to gather stubble for the straw.</td><td>LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalach-ami-and-yachogu-to-me) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיָּ֥פֶץ הָעָ֖ם בְּכָל אֶ֣רֶץ</span> · <i>va-yafetz ha-am be-khal-eretz</i><br><span class="gloss">= and-yafetz the-am in-khal-earth</span></td></tr>
+<tr><td><b>S13</b></td><td>after STEP_Ex_5_13 — the pressing</td><td>And the taskmasters were pressing, saying: Complete your works, the matter of a day in its day, as when the straw was.</td><td>LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalach-ami-and-yachogu-to-me) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהַנֹּגְשִׂ֖ים אָצִ֣ים לֵאמֹ֑ר כַּלּ֤וּ</span> · <i>ve-ha-nogsim atzim le-mor kalu</i><br><span class="gloss">= and-the-nogsim atzim to-mor kalu</span></td></tr>
+<tr><td><b>S14</b></td><td>after STEP_Ex_5_14 — the officers beaten</td><td>And the officers of the sons of Israel were beaten, whom Pharaoh&#x27;s taskmasters had set over them, saying: Why have you not completed your portion to brick, as yesterday and the day before — both yesterday and today?</td><td>LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalach-ami-and-yachogu-to-me) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֻּכּ֗וּ שֹֽׁטְרֵי֙ בְּנֵ֣י יִשְׂרָאֵ֔ל</span> · <i>va-yuku shotre bene yisrael</i><br><span class="gloss">= and-yuku shotre bene yisrael</span></td></tr>
+<tr><td><b>S15</b></td><td>after STEP_Ex_5_15 — the cry to Pharaoh</td><td>And the officers of the sons of Israel came and cried to Pharaoh, saying: Why do you deal thus with your servants?</td><td>LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalach-ami-and-yachogu-to-me) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיָּבֹ֗אוּ שֹֽׁטְרֵי֙ בְּנֵ֣י יִשְׂרָאֵ֔ל</span> · <i>va-yavou shotre bene yisrael</i><br><span class="gloss">= and-yavou shotre bene yisrael</span></td></tr>
+<tr><td><b>S16</b></td><td>after STEP_Ex_5_16 — your own people sin</td><td>Straw is not given to your servants, and bricks — they say to us: Make! And behold, your servants are beaten; and the sin is your people&#x27;s.</td><td>LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalach-ami-and-yachogu-to-me) pushed and OPEN; no test, no name.</span></td><td><span class="he">תֶּ֗בֶן אֵ֤ין נִתָּן֙ לַעֲבָדֶ֔יךָ</span> · <i>teven en nitan la-avade-kha</i><br><span class="gloss">= teven en nitan to-avade-kha</span></td></tr>
+<tr><td><b>S17</b></td><td>after STEP_Ex_5_17 — idle — idle</td><td>And he said: Idle — you are idle! Therefore you say: Let us go, sacrifice to the LORD.</td><td>LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalach-ami-and-yachogu-to-me) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֛אמֶר נִרְפִּ֥ים אַתֶּ֖ם נִרְפִּ֑ים</span> · <i>va-yomer nirpim atem nirpim</i><br><span class="gloss">= and-yomer nirpim atem nirpim</span></td></tr>
+<tr><td><b>S18</b></td><td>after STEP_Ex_5_18 — go serve; no straw</td><td>And now — go, serve; and straw shall not be given you, and the count of bricks you shall give.</td><td>LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalach-ami-and-yachogu-to-me) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְעַתָּה֙ לְכ֣וּ עִבְד֔וּ וְתֶ֖בֶן</span> · <i>ve-ata lekhu ivdu ve-teven</i><br><span class="gloss">= and-ata lekhu ivdu and-teven</span></td></tr>
+<tr><td><b>S19</b></td><td>after STEP_Ex_5_19 — they saw themselves in evil</td><td>And the officers of the sons of Israel saw themselves in evil, saying: You shall not diminish from your bricks, the day&#x27;s matter in its day.</td><td>LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalach-ami-and-yachogu-to-me) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּרְא֞וּ שֹֽׁטְרֵ֧י בְנֵֽי יִשְׂרָאֵ֛ל</span> · <i>va-yiru shotre vene-yisrael</i><br><span class="gloss">= and-yiru shotre vene-yisrael</span></td></tr>
+<tr><td><b>S20</b></td><td>after STEP_Ex_5_20 — the corridor meeting</td><td>And they met Moses and Aaron, stationed to meet them, as they came out from Pharaoh.</td><td>LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalach-ami-and-yachogu-to-me) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַֽיִּפְגְּעוּ֙ אֶת מֹשֶׁ֣ה וְאֶֽת</span> · <i>va-yifgu et-moshe ve-et-</i><br><span class="gloss">= and-yifgu Moses and</span></td></tr>
+<tr><td><b>S21</b></td><td>after STEP_Ex_5_21 — may He see and judge</td><td>And they said to them: May the LORD see upon you, and judge — for you have made our savor stink in the eyes of Pharaoh, and in the eyes of his servants, to put a sword in their hand to kill us.</td><td>LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN; LET(yere_YHWH_alekhem_ve_yishpot) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalach-ami-and-yachogu-to-me) pushed and OPEN; LET(yere-the-LORD-alekhem-and-yishpot) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּאמְר֣וּ אֲלֵהֶ֔ם יֵ֧רֶא יְהוָ֛ה</span> · <i>va-yomru el-hem yere YHWH</i><br><span class="gloss">= and-yomru to-hem yere the-LORD</span></td></tr>
+<tr><td><b>S22</b></td><td>after STEP_Ex_5_22 — why have You dealt ill</td><td>And Moses returned to the LORD, and said: My Lord, why have You dealt ill with this people? Why is this that You have sent me?</td><td>LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN; LET(yere_YHWH_alekhem_ve_yishpot) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalach-ami-and-yachogu-to-me) pushed and OPEN; LET(yere-the-LORD-alekhem-and-yishpot) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיָּ֧שָׁב מֹשֶׁ֛ה אֶל יְהוָ֖ה</span> · <i>va-yashav moshe el-YHWH</i><br><span class="gloss">= and-yashav Moses to-the-LORD</span></td></tr>
+<tr><td><b>S23</b></td><td>after STEP_Ex_5_23 — You have not delivered</td><td>And since I came to Pharaoh to speak in Your name, he has dealt ill with this people; and deliver — You have not delivered Your people.</td><td>LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN; LET(yere_YHWH_alekhem_ve_yishpot) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalach-ami-and-yachogu-to-me) pushed and OPEN; LET(yere-the-LORD-alekhem-and-yishpot) pushed and OPEN; no test, no name.</span></td><td><span class="he">וּמֵאָ֞ז בָּ֤אתִי אֶל פַּרְעֹה֙</span> · <i>u-me-az bati el-paro</i><br><span class="gloss">= and-from-az bati to-paro</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: exo_05_bricks_without_straw — Bricks without straw (5:1-23) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — after STEP_Ex_5_1 — send My people
+    וְאַחַ֗ר בָּ֚אוּ מֹשֶׁ֣ה וְאַהֲרֹ֔ן (ve-achar bau moshe ve-aharon)
+    PASS  LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Ex_5_2 — who is the LORD
+    וַיֹּ֣אמֶר פַּרְעֹ֔ה מִ֤י יְהוָה֙ (va-yomer paro mi YHWH)
+    PASS  LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Ex_5_3 — the script performed
+    וַיֹּ֣אמְר֔וּ אֱלֹהֵ֥י הָעִבְרִ֖ים נִקְרָ֣א (va-yomru elohe ha-ivrim niqra)
+    PASS  LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Ex_5_4 — to your burdens
+    וַיֹּ֤אמֶר אֲלֵהֶם֙ מֶ֣לֶךְ מִצְרַ֔יִם (va-yomer el-hem melekh mitzrayim)
+    PASS  LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Ex_5_5 — many now
+    וַיֹּ֣אמֶר פַּרְעֹ֔ה הֵן רַבִּ֥ים (va-yomer paro hen-rabim)
+    PASS  LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Ex_5_6 — Pharaoh commands the taskmasters
+    וַיְצַ֥ו פַּרְעֹ֖ה בַּיּ֣וֹם הַה֑וּא (va-yetzav paro ba-yom ha-hu)
+    PASS  LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — after STEP_Ex_5_7 — no more straw
+    לֹ֣א תֹאסִפ֞וּן לָתֵ֨ת תֶּ֧בֶן (lo tosifu-n la-tet teven)
+    PASS  LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;, &#x27;lo_tosifun_latet_teven&#x27;])
+    PASS  LET(lo_tosifun_latet_teven) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;, &#x27;lo_tosifun_latet_teven&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S8 — after STEP_Ex_5_8 — the quota stands
+    וְאֶת מַתְכֹּ֨נֶת הַלְּבֵנִ֜ים אֲשֶׁ֣ר (ve-et-matkonet ha-levenim asher)
+    PASS  LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;, &#x27;lo_tosifun_latet_teven&#x27;])
+    PASS  LET(lo_tosifun_latet_teven) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;, &#x27;lo_tosifun_latet_teven&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S9 — after STEP_Ex_5_9 — heavy on the men
+    תִּכְבַּ֧ד הָעֲבֹדָ֛ה עַל הָאֲנָשִׁ֖ים (tikhbad ha-avoda al-ha-anashim)
+    PASS  LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;, &#x27;lo_tosifun_latet_teven&#x27;])
+    PASS  LET(lo_tosifun_latet_teven) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;, &#x27;lo_tosifun_latet_teven&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S10 — after STEP_Ex_5_10 — the decree relayed
+    וַיֵּ֨צְא֜וּ נֹגְשֵׂ֤י הָעָם֙ וְשֹׁ֣טְרָ֔יו (va-yetzu nogse ha-am ve-shotray-v)
+    PASS  LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S11 — after STEP_Ex_5_11 — go get straw
+    אַתֶּ֗ם לְכ֨וּ קְח֤וּ לָכֶם֙ (atem lekhu qechu la-khem)
+    PASS  LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S12 — after STEP_Ex_5_12 — the scattering
+    וַיָּ֥פֶץ הָעָ֖ם בְּכָל אֶ֣רֶץ (va-yafetz ha-am be-khal-eretz)
+    PASS  LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S13 — after STEP_Ex_5_13 — the pressing
+    וְהַנֹּגְשִׂ֖ים אָצִ֣ים לֵאמֹ֑ר כַּלּ֤וּ (ve-ha-nogsim atzim le-mor kalu)
+    PASS  LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S14 — after STEP_Ex_5_14 — the officers beaten
+    וַיֻּכּ֗וּ שֹֽׁטְרֵי֙ בְּנֵ֣י יִשְׂרָאֵ֔ל (va-yuku shotre bene yisrael)
+    PASS  LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S15 — after STEP_Ex_5_15 — the cry to Pharaoh
+    וַיָּבֹ֗אוּ שֹֽׁטְרֵי֙ בְּנֵ֣י יִשְׂרָאֵ֔ל (va-yavou shotre bene yisrael)
+    PASS  LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S16 — after STEP_Ex_5_16 — your own people sin
+    תֶּ֗בֶן אֵ֤ין נִתָּן֙ לַעֲבָדֶ֔יךָ (teven en nitan la-avade-kha)
+    PASS  LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S17 — after STEP_Ex_5_17 — idle — idle
+    וַיֹּ֛אמֶר נִרְפִּ֥ים אַתֶּ֖ם נִרְפִּ֑ים (va-yomer nirpim atem nirpim)
+    PASS  LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S18 — after STEP_Ex_5_18 — go serve; no straw
+    וְעַתָּה֙ לְכ֣וּ עִבְד֔וּ וְתֶ֖בֶן (ve-ata lekhu ivdu ve-teven)
+    PASS  LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S19 — after STEP_Ex_5_19 — they saw themselves in evil
+    וַיִּרְא֞וּ שֹֽׁטְרֵ֧י בְנֵֽי יִשְׂרָאֵ֛ל (va-yiru shotre vene-yisrael)
+    PASS  LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S20 — after STEP_Ex_5_20 — the corridor meeting
+    וַֽיִּפְגְּעוּ֙ אֶת מֹשֶׁ֣ה וְאֶֽת (va-yifgu et-moshe ve-et-)
+    PASS  LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S21 — after STEP_Ex_5_21 — may He see and judge
+    וַיֹּאמְר֣וּ אֲלֵהֶ֔ם יֵ֧רֶא יְהוָ֛ה (va-yomru el-hem yere YHWH)
+    PASS  LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;, &#x27;yere_YHWH_alekhem_ve_yishpot&#x27;])
+    PASS  LET(yere_YHWH_alekhem_ve_yishpot) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;, &#x27;yere_YHWH_alekhem_ve_yishpot&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S22 — after STEP_Ex_5_22 — why have You dealt ill
+    וַיָּ֧שָׁב מֹשֶׁ֛ה אֶל יְהוָ֖ה (va-yashav moshe el-YHWH)
+    PASS  LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;, &#x27;yere_YHWH_alekhem_ve_yishpot&#x27;])
+    PASS  LET(yere_YHWH_alekhem_ve_yishpot) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;, &#x27;yere_YHWH_alekhem_ve_yishpot&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S23 — after STEP_Ex_5_23 — You have not delivered
+    וּמֵאָ֞ז בָּ֤אתִי אֶל פַּרְעֹה֙ (u-me-az bati el-paro)
+    PASS  LET(shalach_et_ami_ve_yachogu_li) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;, &#x27;yere_YHWH_alekhem_ve_yishpot&#x27;])
+    PASS  LET(yere_YHWH_alekhem_ve_yishpot) pushed and OPEN  (queue=[&#x27;shalach_et_ami_ve_yachogu_li&#x27;, &#x27;yere_YHWH_alekhem_ve_yishpot&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/exo_05_bricks_without_straw.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# exo_05_bricks_without_straw — 5:1-23
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/exo_05_bricks_without_straw.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Bricks without straw (5:1-23)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;exo_05_bricks_without_straw&quot;)
+
+# -------------------------- Exod.5.1 · SEND_MY_PEOPLE ----------------------
+# וְאַחַר בָּאוּ מֹשֶׁה וְאַהֲרֹן וַיֹּאמְרוּ אֶל־פַּרְעֹה כֹּה־אָמַר יְהוָה
+# אֱלֹהֵי יִשְׂרָאֵל שַׁלַּח אֶת־עַמִּי וְיָחֹגּוּ לִי בַּמִּדְבָּר
+# &quot;[EN-AID] And afterward Moses and Aaron came, and said to Pharaoh: Thus
+# says the LORD, the God of Israel: Send My people, that they may feast to
+# Me in the wilderness.&quot;
+m.step(&quot;Exod.5.1&quot;)
+# ‹שַׁלַּח אֶת־עַמִּי וְיָחֹגּוּ לִי בַּמִּדְבָּר› (“send obj-marker people-
+# me/my and-move-in-acircle to-me/my in-pasture”) — Moses-and-Aaron speaks a
+# demand — LET: send-obj-marker-ami-and-move-in-acircle-to-me
+m.declare(&quot;moshe_ve_aharon&quot;, &quot;LET&quot;,
+          &quot;shalach_et_ami_ve_yachogu_li&quot;)
+
+# -------------------------- Exod.5.2 · WHO_IS_YHWH -------------------------
+# וַיֹּאמֶר פַּרְעֹה מִי יְהוָה אֲשֶׁר אֶשְׁמַע בְּקֹלוֹ לְשַׁלַּח
+# אֶת־יִשְׂרָאֵל לֹא יָדַעְתִּי אֶת־יְהוָה וְגַם אֶת־יִשְׂרָאֵל לֹא
+# אֲשַׁלֵּחַ
+# &quot;[EN-AID] And Pharaoh said: Who is the LORD, that I should hear His voice
+# to send Israel? I know not the LORD, and Israel also I will not send.&quot;
+m.step(&quot;Exod.5.2&quot;)
+# ‹לֹא יָדַעְתִּי אֶת־יְהוָה› (“not know obj-marker YHWH”) — fact holds:
+# not-know-obj-marker-the-LORD
+m.fact(&quot;lo_yadati_et_YHWH&quot;)
+
+# -------------------------- Exod.5.3 · THE_SCRIPT_PERFORMED ----------------
+# וַיֹּאמְרוּ אֱלֹהֵי הָעִבְרִים נִקְרָא עָלֵינוּ נֵלֲכָה נָּא דֶּרֶךְ
+# שְׁלֹשֶׁת יָמִים בַּמִּדְבָּר וְנִזְבְּחָה לַיהוָה אֱלֹהֵינוּ
+# פֶּן־יִפְגָּעֵנוּ בַּדֶּבֶר אוֹ בֶחָרֶב
+# &quot;[EN-AID] And they said: The God of the Hebrews has happened upon us; let
+# us go, pray, a journey of three days into the wilderness, and sacrifice to
+# the LORD our God — lest He strike us with the pestilence, or with the
+# sword.&quot;
+m.step(&quot;Exod.5.3&quot;)
+# ‹נֵלֲכָה נָּא דֶּרֶךְ שְׁלֹשֶׁת יָמִים בַּמִּדְבָּר וְנִזְבְּחָה לַיהוָה
+# אֱלֹהֵינוּ› (“go please way/road three day in-pasture and-slaughter-an-
+# animal to-YHWH God-us/our”) — fact holds: God-the-Hebrew-encounter-alenu
+m.fact(&quot;elohe_ha_ivrim_niqra_alenu&quot;)
+
+# -------------------------- Exod.5.4 · TO_YOUR_BURDENS ---------------------
+# וַיֹּאמֶר אֲלֵהֶם מֶלֶךְ מִצְרַיִם לָמָּה מֹשֶׁה וְאַהֲרֹן תַּפְרִיעוּ
+# אֶת־הָעָם מִמַּעֲשָׂיו לְכוּ לְסִבְלֹתֵיכֶם
+# &quot;[EN-AID] And the king of Egypt said to them: Why, Moses and Aaron, do you
+# disturb the people from its works? Go to your burdens.&quot;
+m.step(&quot;Exod.5.4&quot;)
+# ‹לְכוּ לְסִבְלֹתֵיכֶם› (“go to-porterage-you/your(pl)”) — fact holds: go-
+# to-sivlotekhem
+m.fact(&quot;lekhu_le_sivlotekhem&quot;)
+
+# -------------------------- Exod.5.5 · MANY_NOW ----------------------------
+# וַיֹּאמֶר פַּרְעֹה הֵן־רַבִּים עַתָּה עַם הָאָרֶץ וְהִשְׁבַּתֶּם אֹתָם
+# מִסִּבְלֹתָם
+# &quot;[EN-AID] And Pharaoh said: Behold, the people of the land are now many,
+# and you would make them rest from their burdens.&quot;
+m.step(&quot;Exod.5.5&quot;)
+# ‹וְהִשְׁבַּתֶּם אֹתָם מִסִּבְלֹתָם› (“and-cease obj-marker-them/their
+# from-porterage-them/their”) — fact holds: and-cease-otam-who?-sivlotam
+m.fact(&quot;ve_hishbatem_otam_mi_sivlotam&quot;)
+
+# -------------------------- Exod.5.6 · PHARAOH_COMMANDS_THE_TASKMASTERS ----
+# וַיְצַו פַּרְעֹה בַּיּוֹם הַהוּא אֶת־הַנֹּגְשִׂים בָּעָם וְאֶת־שֹׁטְרָיו
+# לֵאמֹר
+# &quot;[EN-AID] And Pharaoh commanded, on that day, the taskmasters over the
+# people and its officers, saying:&quot;
+m.step(&quot;Exod.5.6&quot;)
+# ‹וַיְצַו פַּרְעֹה בַּיּוֹם הַהוּא› (“and-command Pharaoh in-day that”) —
+# fact holds: and-command-Pharaoh-in-the-day-the-that
+m.fact(&quot;va_yetzav_paro_ba_yom_ha_hu&quot;)
+
+# -------------------------- Exod.5.7 · NO_MORE_STRAW -----------------------
+# לֹא תֹאסִפוּן לָתֵת תֶּבֶן לָעָם לִלְבֹּן הַלְּבֵנִים כִּתְמוֹל שִׁלְשֹׁם
+# הֵם יֵלְכוּ וְקֹשְׁשׁוּ לָהֶם תֶּבֶן
+# &quot;[EN-AID] You shall not continue to give straw to the people to brick the
+# bricks, as yesterday and the day before; they shall go and gather straw
+# for themselves.&quot;
+m.step(&quot;Exod.5.7&quot;)
+# ‹לֹא תֹאסִפוּן לָתֵת תֶּבֶן לָעָם לִלְבֹּן הַלְּבֵנִים› (“not add-ward to-
+# set material to-people to-be-white the-brick”) — Pharaoh speaks a demand —
+# LET: not-tosifun-latet-material
+m.declare(&quot;paro&quot;, &quot;LET&quot;,
+          &quot;lo_tosifun_latet_teven&quot;)
+
+# -------------------------- Exod.5.8 · THE_QUOTA_STANDS --------------------
+# וְאֶת־מַתְכֹּנֶת הַלְּבֵנִים אֲשֶׁר הֵם עֹשִׂים תְּמוֹל שִׁלְשֹׁם
+# תָּשִׂימוּ עֲלֵיהֶם לֹא תִגְרְעוּ מִמֶּנּוּ כִּי־נִרְפִּים הֵם עַל־כֵּן
+# הֵם צֹעֲקִים לֵאמֹר נֵלְכָה נִזְבְּחָה לֵאלֹהֵינוּ
+# &quot;[EN-AID] And the count of the bricks which they made yesterday and the
+# day before you shall set upon them — you shall not diminish from it; for
+# they are idle — therefore they cry, saying: Let us go, sacrifice to our
+# God.&quot;
+m.step(&quot;Exod.5.8&quot;)
+# ‹לֹא תִגְרְעוּ מִמֶּנּוּ› (“not scrape-off from-us/our”) — fact holds:
+# not-tigreu-from-it
+m.fact(&quot;lo_tigreu_mimenu&quot;)
+
+# -------------------------- Exod.5.9 · HEAVY_ON_THE_MEN --------------------
+# תִּכְבַּד הָעֲבֹדָה עַל־הָאֲנָשִׁים וְיַעֲשׂוּ־בָהּ וְאַל־יִשְׁעוּ
+# בְּדִבְרֵי־שָׁקֶר
+# &quot;[EN-AID] Let the service be heavy on the men, and let them do it; and let
+# them not turn to false words.&quot;
+m.step(&quot;Exod.5.9&quot;)
+# ‹תִּכְבַּד הָעֲבֹדָה עַל־הָאֲנָשִׁים› (“be-heavy the-service/work over
+# the-man”) — fact holds: be-heavy-the-service/work-over-the-man
+m.fact(&quot;tikhbad_ha_avoda_al_ha_anashim&quot;)
+
+# -------------------------- Exod.5.10 · THE_DECREE_RELAYED -----------------
+# וַיֵּצְאוּ נֹגְשֵׂי הָעָם וְשֹׁטְרָיו וַיֹּאמְרוּ אֶל־הָעָם לֵאמֹר כֹּה
+# אָמַר פַּרְעֹה אֵינֶנִּי נֹתֵן לָכֶם תֶּבֶן
+# &quot;[EN-AID] And the taskmasters of the people went out, and its officers,
+# and said to the people, saying: Thus says Pharaoh: I do not give you
+# straw.&quot;
+m.step(&quot;Exod.5.10&quot;)
+# ‹כֹּה אָמַר פַּרְעֹה אֵינֶנִּי נֹתֵן לָכֶם תֶּבֶן› (“like-this say Pharaoh
+# there-is-not-me/my set to-you/your(pl) material”) — demand settled (popped
+# from the queue): not-tosifun-latet-material
+m.result(&quot;lo_tosifun_latet_teven&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Exod.5.11 · GO_GET_STRAW -----------------------
+# אַתֶּם לְכוּ קְחוּ לָכֶם תֶּבֶן מֵאֲשֶׁר תִּמְצָאוּ כִּי אֵין נִגְרָע
+# מֵעֲבֹדַתְכֶם דָּבָר
+# &quot;[EN-AID] You — go, take straw for yourselves from wherever you find it;
+# for nothing is diminished from your service.&quot;
+m.step(&quot;Exod.5.11&quot;)
+# ‹כִּי אֵין נִגְרָע מֵעֲבֹדַתְכֶם דָּבָר› (“that there-is-not scrape-off
+# from-service/work-you/your(pl) word/thing”) — fact holds: that-there-is-
+# not-scrape-off-from-avodatkhem-word/thing
+m.fact(&quot;ki_en_nigra_me_avodatkhem_davar&quot;)
+
+# -------------------------- Exod.5.12 · THE_SCATTERING ---------------------
+# וַיָּפֶץ הָעָם בְּכָל־אֶרֶץ מִצְרָיִם לְקֹשֵׁשׁ קַשׁ לַתֶּבֶן
+# &quot;[EN-AID] And the people scattered in all the land of Egypt, to gather
+# stubble for the straw.&quot;
+m.step(&quot;Exod.5.12&quot;)
+# ‹וַיָּפֶץ הָעָם בְּכָל־אֶרֶץ מִצְרָיִם› (“and-dash-in-pieces the-people
+# in-all earth Egypt”) — fact holds: and-dash-in-pieces-the-people-in-all-
+# earth-Egypt
+m.fact(&quot;va_yafetz_ha_am_be_khol_eretz_mitzrayim&quot;)
+
+# -------------------------- Exod.5.13 · THE_PRESSING -----------------------
+# וְהַנֹּגְשִׂים אָצִים לֵאמֹר כַּלּוּ מַעֲשֵׂיכֶם דְּבַר־יוֹם בְּיוֹמוֹ
+# כַּאֲשֶׁר בִּהְיוֹת הַתֶּבֶן
+# &quot;[EN-AID] And the taskmasters were pressing, saying: Complete your works,
+# the matter of a day in its day, as when the straw was.&quot;
+m.step(&quot;Exod.5.13&quot;)
+# ‹דְּבַר־יוֹם בְּיוֹמוֹ› (“word/thing day in-day-him/its”) — fact holds:
+# word/thing-day-in-yomo
+m.fact(&quot;devar_yom_be_yomo&quot;)
+
+# -------------------------- Exod.5.14 · THE_OFFICERS_BEATEN ----------------
+# וַיֻּכּוּ שֹׁטְרֵי בְּנֵי יִשְׂרָאֵל אֲשֶׁר־שָׂמוּ עֲלֵהֶם נֹגְשֵׂי
+# פַרְעֹה לֵאמֹר מַדּוּעַ לֹא כִלִּיתֶם חָקְכֶם לִלְבֹּן כִּתְמוֹל שִׁלְשֹׁם
+# גַּם־תְּמוֹל גַּם־הַיּוֹם
+# &quot;[EN-AID] And the officers of the sons of Israel were beaten, whom
+# Pharaoh&#x27;s taskmasters had set over them, saying: Why have you not
+# completed your portion to brick, as yesterday and the day before — both
+# yesterday and today?&quot;
+m.step(&quot;Exod.5.14&quot;)
+# ‹וַיֻּכּוּ שֹׁטְרֵי בְּנֵי יִשְׂרָאֵל› (“and-strike scribe son Israel”) —
+# event: huku — agent drive-Pharaoh
+m.event(&quot;huku&quot;, agent=&quot;nogse_faro&quot;)
+
+# -------------------------- Exod.5.15 · THE_CRY_TO_PHARAOH -----------------
+# וַיָּבֹאוּ שֹׁטְרֵי בְּנֵי יִשְׂרָאֵל וַיִּצְעֲקוּ אֶל־פַּרְעֹה לֵאמֹר
+# לָמָּה תַעֲשֶׂה כֹה לַעֲבָדֶיךָ
+# &quot;[EN-AID] And the officers of the sons of Israel came and cried to
+# Pharaoh, saying: Why do you deal thus with your servants?&quot;
+m.step(&quot;Exod.5.15&quot;)
+# ‹וַיִּצְעֲקוּ אֶל־פַּרְעֹה לֵאמֹר› (“and-shriek to Pharaoh to-say”) — fact
+# holds: and-shriek-to-Pharaoh
+m.fact(&quot;va_yitzaqu_el_paro&quot;)
+
+# -------------------------- Exod.5.16 · YOUR_OWN_PEOPLE_SIN ----------------
+# תֶּבֶן אֵין נִתָּן לַעֲבָדֶיךָ וּלְבֵנִים אֹמְרִים לָנוּ עֲשׂוּ וְהִנֵּה
+# עֲבָדֶיךָ מֻכִּים וְחָטָאת עַמֶּךָ
+# &quot;[EN-AID] Straw is not given to your servants, and bricks — they say to
+# us: Make! And behold, your servants are beaten; and the sin is your
+# people&#x27;s.&quot;
+m.step(&quot;Exod.5.16&quot;)
+# ‹וְהִנֵּה עֲבָדֶיךָ מֻכִּים› (“and-behold servant-you/your strike”) — fact
+# holds: and-behold-avadekha-strike
+m.fact(&quot;ve_hine_avadekha_mukim&quot;)
+
+# -------------------------- Exod.5.17 · IDLE_IDLE --------------------------
+# וַיֹּאמֶר נִרְפִּים אַתֶּם נִרְפִּים עַל־כֵּן אַתֶּם אֹמְרִים נֵלְכָה
+# נִזְבְּחָה לַיהוָה
+# &quot;[EN-AID] And he said: Idle — you are idle! Therefore you say: Let us go,
+# sacrifice to the LORD.&quot;
+m.step(&quot;Exod.5.17&quot;)
+# ‹נִרְפִּים אַתֶּם נִרְפִּים› (“slacken you slacken”) — fact holds:
+# slacken-you-slacken
+m.fact(&quot;nirpim_atem_nirpim&quot;)
+
+# -------------------------- Exod.5.18 · GO_SERVE_NO_STRAW ------------------
+# וְעַתָּה לְכוּ עִבְדוּ וְתֶבֶן לֹא־יִנָּתֵן לָכֶם וְתֹכֶן לְבֵנִים
+# תִּתֵּנּוּ
+# &quot;[EN-AID] And now — go, serve; and straw shall not be given you, and the
+# count of bricks you shall give.&quot;
+m.step(&quot;Exod.5.18&quot;)
+# ‹וְתֹכֶן לְבֵנִים תִּתֵּנּוּ› (“and-fixed-quantity brick set”) — fact
+# holds: and-fixed-quantity-brick-set
+m.fact(&quot;ve_tokhen_levenim_titenu&quot;)
+
+# -------------------------- Exod.5.19 · THEY_SAW_THEMSELVES_IN_EVIL --------
+# וַיִּרְאוּ שֹׁטְרֵי בְנֵי־יִשְׂרָאֵל אֹתָם בְּרָע לֵאמֹר לֹא־תִגְרְעוּ
+# מִלִּבְנֵיכֶם דְּבַר־יוֹם בְּיוֹמוֹ
+# &quot;[EN-AID] And the officers of the sons of Israel saw themselves in evil,
+# saying: You shall not diminish from your bricks, the day&#x27;s matter in its
+# day.&quot;
+m.step(&quot;Exod.5.19&quot;)
+# ‹וַיִּרְאוּ שֹׁטְרֵי בְנֵי־יִשְׂרָאֵל אֹתָם בְּרָע› (“and-see scribe son
+# Israel obj-marker-them/their in-bad”) — fact holds: and-see-otam-in-bad
+m.fact(&quot;va_yiru_otam_be_ra&quot;)
+
+# -------------------------- Exod.5.20 · THE_CORRIDOR_MEETING ---------------
+# וַיִּפְגְּעוּ אֶת־מֹשֶׁה וְאֶת־אַהֲרֹן נִצָּבִים לִקְרָאתָם בְּצֵאתָם
+# מֵאֵת פַּרְעֹה
+# &quot;[EN-AID] And they met Moses and Aaron, stationed to meet them, as they
+# came out from Pharaoh.&quot;
+m.step(&quot;Exod.5.20&quot;)
+# ‹נִצָּבִים לִקְרָאתָם› (“stand to-encountering-them/their”) — fact holds:
+# stand-liqratam
+m.fact(&quot;nitzavim_liqratam&quot;)
+
+# -------------------------- Exod.5.21 · MAY_HE_SEE_AND_JUDGE ---------------
+# וַיֹּאמְרוּ אֲלֵהֶם יֵרֶא יְהוָה עֲלֵיכֶם וְיִשְׁפֹּט אֲשֶׁר הִבְאַשְׁתֶּם
+# אֶת־רֵיחֵנוּ בְּעֵינֵי פַרְעֹה וּבְעֵינֵי עֲבָדָיו לָתֶת־חֶרֶב בְּיָדָם
+# לְהָרְגֵנוּ
+# &quot;[EN-AID] And they said to them: May the LORD see upon you, and judge —
+# for you have made our savor stink in the eyes of Pharaoh, and in the eyes
+# of his servants, to put a sword in their hand to kill us.&quot;
+m.step(&quot;Exod.5.21&quot;)
+# ‹יֵרֶא יְהוָה עֲלֵיכֶם וְיִשְׁפֹּט› (“see YHWH over-you/your(pl) and-
+# judge”) — scribe-son-Israel speaks a demand — LET: see-the-LORD-alekhem-
+# and-judge
+m.declare(&quot;shotre_bene_yisrael&quot;, &quot;LET&quot;,
+          &quot;yere_YHWH_alekhem_ve_yishpot&quot;)
+
+# -------------------------- Exod.5.22 · WHY_HAVE_YOU_DEALT_ILL -------------
+# וַיָּשָׁב מֹשֶׁה אֶל־יְהוָה וַיֹּאמַר אֲדֹנָי לָמָה הֲרֵעֹתָה לָעָם הַזֶּה
+# לָמָּה זֶּה שְׁלַחְתָּנִי
+# &quot;[EN-AID] And Moses returned to the LORD, and said: My Lord, why have You
+# dealt ill with this people? Why is this that You have sent me?&quot;
+m.step(&quot;Exod.5.22&quot;)
+# ‹אֲדֹנָי לָמָה הֲרֵעֹתָה לָעָם הַזֶּה› (“Lord-me/my to-what spoil to-
+# people the-this”) — fact holds: lama-spoil-to-people-the-this
+m.fact(&quot;lama_hareota_la_am_ha_ze&quot;)
+
+# -------------------------- Exod.5.23 · YOU_HAVE_NOT_DELIVERED -------------
+# וּמֵאָז בָּאתִי אֶל־פַּרְעֹה לְדַבֵּר בִּשְׁמֶךָ הֵרַע לָעָם הַזֶּה
+# וְהַצֵּל לֹא־הִצַּלְתָּ אֶת־עַמֶּךָ
+# &quot;[EN-AID] And since I came to Pharaoh to speak in Your name, he has dealt
+# ill with this people; and deliver — You have not delivered Your people.&quot;
+m.step(&quot;Exod.5.23&quot;)
+# ‹וְהַצֵּל לֹא־הִצַּלְתָּ אֶת־עַמֶּךָ› (“and-snatch-away not snatch-away
+# obj-marker people-you/your”) — fact holds: and-snatch-away-not-snatch-
+# away-obj-marker-amekha
+m.fact(&quot;ve_hatzel_lo_hitzalta_et_amekha&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;shalach_et_ami_ve_yachogu_li&#x27;, &#x27;yere_YHWH_alekhem_ve_yishpot&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 3
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;lo_yadati_et_YHWH&#x27;, &#x27;elohe_ha_ivrim_niqra_alenu&#x27;, &#x27;lekhu_le_sivlotekhem&#x27;, &#x27;ve_hishbatem_otam_mi_sivlotam&#x27;, &#x27;va_yetzav_paro_ba_yom_ha_hu&#x27;, &#x27;lo_tigreu_mimenu&#x27;, &#x27;tikhbad_ha_avoda_al_ha_anashim&#x27;, &#x27;ki_en_nigra_me_avodatkhem_davar&#x27;, &#x27;va_yafetz_ha_am_be_khol_eretz_mitzrayim&#x27;, &#x27;devar_yom_be_yomo&#x27;, &#x27;va_yitzaqu_el_paro&#x27;, &#x27;ve_hine_avadekha_mukim&#x27;, &#x27;nirpim_atem_nirpim&#x27;, &#x27;ve_tokhen_levenim_titenu&#x27;, &#x27;va_yiru_otam_be_ra&#x27;, &#x27;nitzavim_liqratam&#x27;, &#x27;lama_hareota_la_am_ha_ze&#x27;, &#x27;ve_hatzel_lo_hitzalta_et_amekha&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 5
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

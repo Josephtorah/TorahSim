@@ -70,7 +70,14 @@ One declared exception: the scan notes and narrative-unit manifests in
 the scans, and they predate this gate. Their marquee items are glossed but
 their compressed digest style leaves some quoted source lemmas
 untranslated; the lint reports these honestly rather than the records
-being retouched. See `scans/README.md`.
+being retouched. See `scans/README.md`. The derivation review pages in
+`scroll/units/` are the same class — generated renderings of the
+derivation records, carried across from the workshop with their
+verification citations structurally intact, under one documented
+redaction: the workshop's own name and its private filenames were
+neutralized at copy time (a snapshot database and two working notes,
+cited by neutral description in eight pages). They ride under the same
+rule: reported, never gated, never retouched further.
 
 ## 9. Scope honesty
 

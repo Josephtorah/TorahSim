@@ -1,0 +1,727 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_63_two_dreams_prison — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_63_two_dreams_prison?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Two dreams in prison: the forgotten petition (40:1-23) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_63_two_dreams_prison</b> · Genesis 40:1-23 · derive logic_derived_v1 · phase FWD-4</div>
+<div class="meta"><a href="../#Gen/40/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">וְלֹא־זָכַר שַׂר־הַמַּשְׁקִים אֶת־יוֹסֵף וַיִּשְׁכָּחֵהוּ</span> · <i>ve-lo-zakhar sar-ha-mashqim et-yosef va-yishkachehu</i> · &#x27;and the chief cupbearer did not remember Joseph — and he forgot him&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DERIVED 2026-08-08 · FORWARD ERA unit #4 (run FWD-1 block 4; freeze review waived — mechanical gates only). Span: 40:1-23, whole chapter: 23 verses · 312 tokens (SNAPSHOT-verified, prestage). Conventions unchanged; 22 of 23 verses carry an etnachta — the ONE without is 40:23, the forgetting-verse (tifcha fallback): the span&#x27;s only unbroken verse is its cruelest. Oral layer IN-PIPELINE: manifest 12/12 VERIFIED, zero FAILED — see oral_audit_note_en. MACHINE PROFILE. Volitive census 1 (sapru — the span&#x27;s one imperative), modeled as TWO DECLAREs: the tell-demand (40:8, satisfied at once, 40:9) and Joseph&#x27;s REMEMBER-DEMAND (40:14 — remember me, mention me, bring me out: weqatal petition modeled as demand), which stays OPEN past the span&#x27;s end. THE MACHINE HEADLINE: 40:23 narrates the open demand&#x27;s non-satisfaction in so many words — &#x27;did not remember... and forgot him,&#x27; the failure doubled — the corpus&#x27;s first verse that states an open demand&#x27;s neglect as stream-fact [watch: 41:9&#x27;s &#x27;I remember my offenses today,&#x27; where the demand discharges two years late]. The dream pair runs on ONE GRAMMAR: ze pitrono verbatim at 40:12 and 40:18, be-od sheloshet yamim yisa faro et roshkha in both verdicts — the baker&#x27;s differing by two words (me-alekha); the letter then VERIFIES the interpreter in its own clause (40:22 ka-asher patar lahem yosef). The span&#x27;s one tov-token (40:16 ki tov patar) is a BYSTANDER&#x27;S judgment, not an oracle verdict — the TEST register stays silent by TIR discipline; letter-note. REGISTRY 0. LEDGER 0. CARE-POINTS: Joseph&#x27;s counter-telling (40:15) runs all passives and no names — gunov gunavti, the doubled theft with no thief; samu oti BA-BOR re-uses 37:24&#x27;s pit-word for the prison: the victim&#x27;s history told without accusing a brother. The chapter re-walks ch. 39 one level down (appointed/served, favor, all-in-his-hand). Pharaoh thrice in the cup-verse (40:11). The give-away detail (the birds eating undisturbed, 40:17) that the dreamer cannot read. WATCHLIST ARMS: 41:9-13 (the cupbearer&#x27;s late remembering — the demand&#x27;s discharge; his retelling&#x27;s variances); 41:10 (the lean bakers-word closing G63-01&#x27;s four); Deut 28:68 (the segol-twin of va-hashivkha — the return-to-Egypt curse, the hooks-of-the-pillars sign); Exod 20&#x27;s stolen-word family (gunov&#x27;s career); Amos 4:1 and the Daniel food-verse (named partners of the once-words).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (IN-PIPELINE, forward era; manifest logic/oral_audit/manifests/gen_63_two_dreams_prison_claims.json 12/12 VERIFIED, zero FAILED; record logic/oral_audit/AUDIT_gen_63_2026-08-08.md). CROWNS (chain-attested + DB-verified). THE DOUBLY-FULL BAKERS [G63-01, the Ramah via Minchat Shai on 40:2]: האופים (&quot;the bakers&quot;) full with vav AND yod once in the Torah, at the pair&#x27;s introduction; the four lean stations follow (40:16, 40:20, 40:22, 41:10, asserted). THE BRANCHES AGAINST BOTH CODICES [G63-02/03, MS on 40:10; the Hilleli; the Yerushalmi codex; the Ramah; Masoret HaMasoret]: שריגם (&quot;three branches&quot;) — the Hilleli doubly full, the Yerushalmi doubly lean, and ALL the books (&quot;like neither of them&quot; — MS) full-first-lean-second; SNAPSHOT with the books. And at the interpretation the word FLIPS ITS YOD: השרגים (40:12) lean-first-full-second — the Ramah rules both stations, the stream writes both, each once. THE STILL-WORD RULE EXACT [G63-04, the Ramah via MS on 40:19]: every עוד (&quot;od, still/yet&quot;) in the Torah FULL except TWO lean — and the lemma-filtered census lands exactly on his two signs (8:22 &quot;all the days of the earth,&quot; 19:12 &quot;whom ELSE have you here&quot;); the span&#x27;s own בעוד (&quot;in yet [three days]&quot;) pair full. THE GRAMMARIAN CORRECTED [G63-05, MS on 40:20; Radak&#x27;s retraction]: הלדת (&quot;Pharaoh&#x27;s birthday&quot;) — the Michlol ruled it full like Ezekiel&#x27;s; the Masorah, every book, the Hilleli, and the Ramah write it LEAN, and Radak retracted in the Shorashim; SNAPSHOT lean, once in the Torah. THE SOUNDED ALEPH [G63-06/07, the Masorah&#x27;s seven via MS on 40:1; Kitzur]: לאדניהם (&quot;against their lord&quot;) — of all prefixed lordship-words, one of the SEVEN that SOUND the aleph: the compound half-vowel under it in-stream; the token once in the Torah, its pair the drinking ladies of Amos (named) — there over drink, here over drink: the fly in the cup. THE DOWNCAST ONCE-WORD [G63-08, Kitzur on 40:6]: זעפים (&quot;downcast&quot;) once in the Torah; Daniel&#x27;s food-worry named — both over eating. THE NARRATED FORGETTING [G63-09, Kitzur on 40:23]: ולא זכר (&quot;and he did not remember&quot;) — the adjacency once in the Torah, chained by the Kitzur to Joash&#x27;s ingratitude and the unremembered footstool: the butler, the king, the Temple. THE WHEEL AGAIN [G63-10, MS on 40:16]: ki of &quot;interpreted WELL&quot; — the Sephardic books rule GALGAL, not maqqef (the joining stroke); the unjoined half verified, SNAPSHOT writing the munach (the upright conjunctive stroke): galgal-class station 7. THE JOIN-OR-STROKE SET [G63-11, MS ×4]: mashqe unjoined, melekh joined (checked); the bet of &quot;his master&#x27;s house&quot; and the sar of the hanged baker each merkha-stroked, ve-hine joined (asserted). THE POINTING FILE [G63-12, MS ×5]: u-va-gefen&#x27;s gimel dagesheed (checked); the budding-word&#x27;s kaf and the custody-word&#x27;s bet soft (asserted); shemo end-stressed — &quot;the Masorah: none other so&quot; (named); the restore-you word&#x27;s patach against its segol-twin in the curses (Deut 28:68), the hooks-of-the-pillars sign (named); the books that err adding et at 40:21 corrected (named). READINGS (named-only): the fly and the pebble (the sages&#x27; cause for the two offenses); the tell-word&#x27;s glory-triple (Psalms and Chronicles); the Kitzur&#x27;s fathers-of-the-world count on the lean branches; the four cups of redemption read from the cup&#x27;s four mentions (the homily tradition, named).</div>
+<div class="meta">confidence: structure tested; oral layer verified 12/12</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>FORWARD ERA run 1, block 4. Canon continuation: Gen 40:1-23 — the cupbearer&#x27;s and baker&#x27;s dreams, the whole chapter.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Span + source + conventions</td><td>SNAPSHOT prestage: 23 verses, 312 tokens; 22 etnachta verses, one fallback (40:23, tifcha) — the forgetting-verse is the span&#x27;s only unbroken one. No ketiv/qere pairs. Volitive census: 1.</td><td>established</td></tr>
+<tr><td><b>C</b></td><td>Machine structure</td><td>Two DECLAREs (the tell-demand, satisfied next verse; the remember-demand, open at end with its non-satisfaction narrated at 40:23), one RESULT, one EVENT (the paired dreams). The one tov-token ruled a bystander&#x27;s judgment — TEST register silent by TIR discipline. REGISTRY 0, LEDGER 0. Existing handler vocabulary only.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Gen 40 (20 notes) + Kitzur Baal HaTurim on Gen 40 (6 notes). Manifest 12 rows: 12 VERIFIED / 0 FAILED / 0 UNCHECKABLE. The od-rule verified with the verifier&#x27;s lemma-filter (first use of the multi-key where for a homograph-split census).</td><td>established</td></tr>
+<tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 12/12 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean both files. Review waived per the revised standing law.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-08 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_40_1 · Gen.40.1 · <span class='expr'>THE_TWO_OFFENDERS</span></h3>
+<p><span class="he">וַיְהִי אַחַר הַדְּבָרִים הָאֵלֶּה חָטְאוּ מַשְׁקֵה מֶלֶךְ־מִצְרַיִם וְהָאֹפֶה לַאֲדֹנֵיהֶם לְמֶלֶךְ מִצְרָיִם</span> · <i>va-yehi achar ha-devarim ha-ele chatu mashqe melekh-mitzrayim ve-ha-ofe la-adone-hem le-melekh mitzrayim</i> · And it came to pass after these things, the cupbearer of the king of Egypt and the baker offended their lord, the king of Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֗י אַחַר֙ הַדְּבָרִ֣ים הָאֵ֔לֶּה חָֽטְא֛וּ מַשְׁקֵ֥ה מֶֽלֶךְ מִצְרַ֖יִם וְהָאֹפֶ֑ה</span> · <i>va-yehi achar ha-devarim ha-ele chatu mashqe melekh-mitzrayim ve-ha-ofe</i> · the cupbearer of the king of Egypt and the baker offended (etnachta on ve-ha-ofe) [VERIFIED: SNAPSHOT Gen.40.1 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לַאֲדֹנֵיהֶ֖ם לְמֶ֥לֶךְ מִצְרָֽיִם</span> · <i>la-adone-hem le-melekh mitzrayim</i> · their lord, the king of Egypt (verse-final mitzrayim) [VERIFIED: SNAPSHOT Gen.40.1 idx9-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(chatu_mashqe_ve_ofe_la_adonehem, t0)</span><br><span class="gloss">= HOLDS(chatu-mashqe-and-ofe-to-adonehem, t0)</span><br>THE UNSTATED OFFENSE [G63-06/07]. chatu mashqe... LA-ADONEHEM — the lordship-word behind its prefix SOUNDS its aleph, one of the Masorah&#x27;s SEVEN [VERIFIED: manifest G63-06, the compound half-vowel in-stream]; the token stands once in the Torah, its pair &#x27;who say to their lords: bring, and let us drink&#x27; (Amos, named) — there over drink, here over drink: the fly in the cup [G63-07]. mashqe unjoined and melekh joined, per MS [G63-11].
+</td><td><span class="he">חָטְאוּ מַשְׁקֵה מֶלֶךְ־מִצְרַיִם וְהָאֹפֶה לַאֲדֹנֵיהֶם</span> · <i>chatu mashqe melekh-mitzrayim ve-ha-ofe la-adone-hem</i><br><span class="gloss">= chatu mashqe melekh-mitzrayim and-the-ofe to-adone-hem</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The offense unstated; the sounded aleph.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_40_2 · Gen.40.2 · <span class='expr'>THE_WRATH</span></h3>
+<p><span class="he">וַיִּקְצֹף פַּרְעֹה עַל שְׁנֵי סָרִיסָיו עַל שַׂר הַמַּשְׁקִים וְעַל שַׂר הָאוֹפִים</span> · <i>va-yiqtzof paro al shene sarisay-v al sar ha-mashqim ve-al sar ha-ofim</i> · And Pharaoh was wroth against his two officers, against the chief of the cupbearers and against the chief of the bakers.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּקְצֹ֣ף פַּרְעֹ֔ה עַ֖ל שְׁנֵ֣י סָרִיסָ֑יו</span> · <i>va-yiqtzof paro al shene sarisay-v</i> · and Pharaoh was wroth against his two officers (etnachta on sarisay-v) [VERIFIED: SNAPSHOT Gen.40.2 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">עַ֚ל שַׂ֣ר הַמַּשְׁקִ֔ים וְעַ֖ל שַׂ֥ר הָאוֹפִֽים</span> · <i>al sar ha-mashqim ve-al sar ha-ofim</i> · against the chief of the cupbearers and the chief of the bakers (verse-final ha-ofim) [VERIFIED: SNAPSHOT Gen.40.2 idx5-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(qatzaf_paro_al_shene_sarisav, t0)</span><br><span class="gloss">= HOLDS(qatzaf-paro-upon-shene-sarisav, t0)</span><br>THE DOUBLY-FULL BAKERS [G63-01]. ve-al sar HA-OFIM — the bakers-word full with vav AND yod, ONCE in the Torah, at the pair&#x27;s introduction; its four lean stations follow through the span and into 41:10 [VERIFIED: manifest G63-01].
+</td><td><span class="he">וְעַל שַׂר הָאוֹפִים</span> · <i>ve-al sar ha-ofim</i><br><span class="gloss">= and-upon sar the-ofim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The doubly-full bakers-word.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_40_3 · Gen.40.3 · <span class='expr'>INTO_JOSEPHS_PRISON</span></h3>
+<p><span class="he">וַיִּתֵּן אֹתָם בְּמִשְׁמַר בֵּית שַׂר הַטַבָּחִים אֶל־בֵּית הַסֹּהַר מְקוֹם אֲשֶׁר יוֹסֵף אָסוּר שָׁם</span> · <i>va-yiten et-m be-mishmar bet sar ha-tabachim el-bet ha-sohar meqom asher yosef asur sham</i> · And he gave them into custody, the house of the chief of the slaughterers, to the prison-house, the place where Joseph was bound.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּתֵּ֨ן אֹתָ֜ם בְּמִשְׁמַ֗ר בֵּ֛ית שַׂ֥ר הַטַבָּחִ֖ים אֶל בֵּ֣ית הַסֹּ֑הַר</span> · <i>va-yiten et-m be-mishmar bet sar ha-tabachim el-bet ha-sohar</i> · he gave them into custody in the house of the chief of the slaughterers (etnachta on ha-sohar) [VERIFIED: SNAPSHOT Gen.40.3 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">מְק֕וֹם אֲשֶׁ֥ר יוֹסֵ֖ף אָס֥וּר שָֽׁם</span> · <i>meqom asher yosef asur sham</i> · to the prison-house, the place where Joseph was bound (verse-final sham) [VERIFIED: SNAPSHOT Gen.40.3 idx9-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(be_mishmar_meqom_asher_yosef_asur_sham, t0)</span><br><span class="gloss">= HOLDS(in-mishmar-meqom-which-yosef-asur-there, t0)</span><br>THE CONVERGENCE. meqom asher YOSEF asur sham — the offenders land in Joseph&#x27;s address; the bound-word&#x27;s grammar continues 39:20&#x27;s pair [G62-06 armed there, landing at 40:5].
+</td><td><span class="he">מְקוֹם אֲשֶׁר יוֹסֵף אָסוּר שָׁם</span> · <i>meqom asher yosef asur sham</i><br><span class="gloss">= meqom which yosef asur there</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The plot&#x27;s addresses converge.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_40_4 · Gen.40.4 · <span class='expr'>APPOINTED_TO_SERVE</span></h3>
+<p><span class="he">וַיִּפְקֹד שַׂר הַטַּבָּחִים אֶת־יוֹסֵף אִתָּם וַיְשָׁרֶת אֹתָם וַיִּהְיוּ יָמִים בְּמִשְׁמָר</span> · <i>va-yifqod sar ha-tabachim et-yosef et-m va-yesharet et-m va-yihyu yamim be-mishmar</i> · And the chief of the slaughterers appointed Joseph with them, and he served them; and they were days in custody.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַ֠יִּפְקֹד שַׂ֣ר הַטַּבָּחִ֧ים אֶת יוֹסֵ֛ף אִתָּ֖ם וַיְשָׁ֣רֶת אֹתָ֑ם</span> · <i>va-yifqod sar ha-tabachim et-yosef et-m va-yesharet et-m</i> · the chief of the slaughterers appointed Joseph with them, and he served them (etnachta on et-m) [VERIFIED: SNAPSHOT Gen.40.4 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּהְי֥וּ יָמִ֖ים בְּמִשְׁמָֽר</span> · <i>va-yihyu yamim be-mishmar</i> · and they were days in custody (verse-final be-mishmar) [VERIFIED: SNAPSHOT Gen.40.4 idx8-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yesharet_otam(yosef), t0)</span><br><span class="gloss">= HOLDS(and-yesharet-otam(yosef), t0)</span><br>THE SERVICE REPEATS. va-yifqod... va-yesharet otam — the appoint- verb and the serve-verb of Potiphar&#x27;s house (39:4) recur inside the prison: the chapter&#x27;s architecture is 39&#x27;s, one level down.
+</td><td><span class="he">וַיִּפְקֹד שַׂר הַטַּבָּחִים אֶת־יוֹסֵף אִתָּם וַיְשָׁרֶת אֹתָם</span> · <i>va-yifqod sar ha-tabachim et-yosef et-m va-yesharet et-m</i><br><span class="gloss">= and-yifqod sar the-tabachim yosef m and-yesharet m</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The server of 39:4 serves again, one level down.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_40_5 · Gen.40.5 · <span class='expr'>TWO_DREAMS_ONE_NIGHT</span></h3>
+<p><span class="he">וַיַּחַלְמוּ חֲלוֹם שְׁנֵיהֶם אִישׁ חֲלֹמוֹ בְּלַיְלָה אֶחָד אִישׁ כְּפִתְרוֹן חֲלֹמוֹ הַמַּשְׁקֶה וְהָאֹפֶה אֲשֶׁר לְמֶלֶךְ מִצְרַיִם אֲשֶׁר אֲסוּרִים בְּבֵית הַסֹּהַר</span> · <i>va-yachalmu chalom shene-hem ish chalom-o be-layla echad ish ke-fitron chalom-o ha-mashqe ve-ha-ofe asher le-melekh mitzrayim asher asurim be-vet ha-sohar</i> · And they dreamed a dream, the two of them, each his dream in one night, each according to the interpretation of his dream — the cupbearer and the baker of the king of Egypt, who were bound in the prison-house.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּֽחַלְמוּ֩ חֲל֨וֹם שְׁנֵיהֶ֜ם אִ֤ישׁ חֲלֹמוֹ֙ בְּלַ֣יְלָה אֶחָ֔ד אִ֖ישׁ כְּפִתְר֣וֹן חֲלֹמ֑וֹ</span> · <i>va-yachalmu chalom shene-hem ish chalom-o be-layla echad ish ke-fitron chalom-o</i> · they dreamed a dream, the two of them, each his dream in one night, each per its interpretation (etnachta on chalom-o) [VERIFIED: SNAPSHOT Gen.40.5 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">הַמַּשְׁקֶ֣ה וְהָאֹפֶ֗ה אֲשֶׁר֙ לְמֶ֣לֶךְ מִצְרַ֔יִם אֲשֶׁ֥ר אֲסוּרִ֖ים בְּבֵ֥ית הַסֹּֽהַר</span> · <i>ha-mashqe ve-ha-ofe asher le-melekh mitzrayim asher asurim be-vet ha-sohar</i> · the cupbearer and the baker of the king of Egypt, bound in the prison-house (verse-final ha-sohar) [VERIFIED: SNAPSHOT Gen.40.5 idx10-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">chalam(e1); Agent(e1, shene_ha_sarisim); Theme(e1, chalomot)</span><br><span class="gloss">= chalam(e1); Agent(e1, shene-the-sarisim); Theme(e1, chalomot)</span><br>THE PAIRED DREAMS. ish chalomo be-layla echad ish KE-FITRON chalomo — the letter grades the dreams by their interpretations before any interpreter speaks.
+</td><td><span class="he">וַיַּחַלְמוּ חֲלוֹם שְׁנֵיהֶם אִישׁ חֲלֹמוֹ בְּלַיְלָה אֶחָד</span> · <i>va-yachalmu chalom shene-hem ish chalom-o be-layla echad</i><br><span class="gloss">= and-yachalmu chalom shene-hem man chalom-o night echad</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(asurim_be_vet_ha_sohar, t0)</span><br><span class="gloss">= HOLDS(asurim-in-vet-the-sohar, t0)</span><br>THE BOUND PAIR CLOSES [G62-06]. asher ASURIM be-vet ha-sohar — the bound-word&#x27;s second and last Torah station (with 39:20): both are Joseph&#x27;s prison; the third is the Psalm&#x27;s release, named.
+</td><td><span class="he">אֲשֶׁר אֲסוּרִים בְּבֵית הַסֹּהַר</span> · <i>asher asurim be-vet ha-sohar</i><br><span class="gloss">= which asurim in-vet the-sohar</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The paired dream-event; the bound pair&#x27;s second station.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_40_6 · Gen.40.6 · <span class='expr'>THE_DOWNCAST_FACES</span></h3>
+<p><span class="he">וַיָּבֹא אֲלֵיהֶם יוֹסֵף בַּבֹּקֶר וַיַּרְא אֹתָם וְהִנָּם זֹעֲפִים</span> · <i>va-yavo ale-hem yosef ba-boqer va-yar et-m ve-hina-m zoafim</i> · And Joseph came to them in the morning, and saw them — and behold, they were downcast.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּבֹ֧א אֲלֵיהֶ֛ם יוֹסֵ֖ף בַּבֹּ֑קֶר</span> · <i>va-yavo ale-hem yosef ba-boqer</i> · Joseph came to them in the morning (etnachta on ba-boqer) [VERIFIED: SNAPSHOT Gen.40.6 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּ֣רְא אֹתָ֔ם וְהִנָּ֖ם זֹעֲפִֽים</span> · <i>va-yar et-m ve-hina-m zoafim</i> · and saw them — and behold, downcast (verse-final zoafim) [VERIFIED: SNAPSHOT Gen.40.6 idx4-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yar_otam_ve_hinam_zoafim(yosef), t0)</span><br><span class="gloss">= HOLDS(and-yar-otam-and-hinam-zoafim(yosef), t0)</span><br>THE NOTICING [G63-08]. ve-hinam ZOAFIM — the downcast-word once in the Torah, its partner Daniel&#x27;s food-worry (named): there over eating, here over eating. The turn of the whole cycle begins in a servant noticing two faces.
+</td><td><span class="he">וַיַּרְא אֹתָם וְהִנָּם זֹעֲפִים</span> · <i>va-yar et-m ve-hina-m zoafim</i><br><span class="gloss">= and-yar m and-hina-m zoafim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The seeing that opens everything.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_40_7 · Gen.40.7 · <span class='expr'>THE_QUESTION</span></h3>
+<p><span class="he">וַיִּשְׁאַל אֶת־סְרִיסֵי פַרְעֹה אֲשֶׁר אִתּוֹ בְמִשְׁמַר בֵּית אֲדֹנָיו לֵאמֹר מַדּוּעַ פְּנֵיכֶם רָעִים הַיּוֹם</span> · <i>va-yishal et-serise faro asher et-o ve-mishmar bet adonay-v le-mor madua pene-khem raim ha-yom</i> · And he asked Pharaoh&#x27;s officers who were with him in custody of his master&#x27;s house, saying: Why are your faces bad today?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּשְׁאַ֞ל אֶת סְרִיסֵ֣י פַרְעֹ֗ה אֲשֶׁ֨ר אִתּ֧וֹ בְמִשְׁמַ֛ר בֵּ֥ית אֲדֹנָ֖יו לֵאמֹ֑ר</span> · <i>va-yishal et-serise faro asher et-o ve-mishmar bet adonay-v le-mor</i> · he asked Pharaoh&#x27;s officers with him in custody (etnachta on le-mor) [VERIFIED: SNAPSHOT Gen.40.7 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">מַדּ֛וּעַ פְּנֵיכֶ֥ם רָעִ֖ים הַיּֽוֹם</span> · <i>madua pene-khem raim ha-yom</i> · why are your faces bad today (verse-final ha-yom) [VERIFIED: SNAPSHOT Gen.40.7 idx10-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(madua_penekhem_raim_ha_yom(yosef), t0)</span><br><span class="gloss">= HOLDS(madua-penekhem-raim-the-day(yosef), t0)</span><br>THE QUESTION. madua penekhem raim ha-yom — bet of &#x27;his master&#x27;s house&#x27; carrying the merkha-stroke, not maqqef, per MS [G63-11, asserted].
+</td><td><span class="he">לֵאמֹר מַדּוּעַ פְּנֵיכֶם רָעִים הַיּוֹם</span> · <i>le-mor madua pene-khem raim ha-yom</i><br><span class="gloss">= to-mor madua pene-khem raim day</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The question that no one owed them.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_40_8 · Gen.40.8 · <span class='expr'>THE_TELL_DEMAND</span></h3>
+<p><span class="he">וַיֹּאמְרוּ אֵלָיו חֲלוֹם חָלַמְנוּ וּפֹתֵר אֵין אֹתוֹ וַיֹּאמֶר אֲלֵהֶם יוֹסֵף הֲלוֹא לֵאלֹהִים פִּתְרֹנִים סַפְּרוּ־נָא לִי</span> · <i>va-yomru elay-v chalom chalamnu u-foter en et-o va-yomer el-hem yosef ha-lo le-Elohim pitronim sapru-na li-y</i> · And they said to him: We have dreamed a dream, and there is no interpreter of it. And Joseph said to them: Are not interpretations God&#x27;s? Tell it, please, to me.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּאמְר֣וּ אֵלָ֔יו חֲל֣וֹם חָלַ֔מְנוּ וּפֹתֵ֖ר אֵ֣ין אֹת֑וֹ</span> · <i>va-yomru elay-v chalom chalamnu u-foter en et-o</i> · we dreamed a dream, and there is no interpreter (etnachta on et-o) [VERIFIED: SNAPSHOT Gen.40.8 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּ֨אמֶר אֲלֵהֶ֜ם יוֹסֵ֗ף הֲל֤וֹא לֵֽאלֹהִים֙ פִּתְרֹנִ֔ים סַפְּרוּ נָ֖א לִֽי</span> · <i>va-yomer el-hem yosef ha-lo le-Elohim pitronim sapru-na li-y</i> · are not interpretations God&#x27;s? tell it, please, to me (verse-final li-y) [VERIFIED: SNAPSHOT Gen.40.8 idx7-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yosef, LET(sapru_na_li))</span><br><span class="gloss">= DECLARE(yosef, LET(sapru-na-to-me))</span><br>THE TELL-DEMAND. ha-lo le-ELOHIM pitronim — sapru-na li: interpretations assigned to God, the telling requested for himself; the span&#x27;s only spoken imperative. The tell-word&#x27;s Masorah triple (told here, &#x27;TELL among the nations his glory&#x27; twice, named) rides the Kitzur: for this telling his glory was told before Pharaoh.
+</td><td><span class="he">הֲלוֹא לֵאלֹהִים פִּתְרֹנִים סַפְּרוּ־נָא לִי</span> · <i>ha-lo le-Elohim pitronim sapru-na li-y</i><br><span class="gloss">= the-not to-God pitronim sapru-na to-me-y</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The span&#x27;s one imperative.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_40_9 · Gen.40.9 · <span class='expr'>THE_VINE_TOLD</span></h3>
+<p><span class="he">וַיְסַפֵּר שַׂר־הַמַּשְׁקִים אֶת־חֲלֹמוֹ לְיוֹסֵף וַיֹּאמֶר לוֹ בַּחֲלוֹמִי וְהִנֵּה־גֶפֶן לְפָנָי</span> · <i>va-yesaper sar-ha-mashqim et-chalom-o le-yosef va-yomer l-o ba-chalomi-y ve-hine-gefen le-fana-y</i> · And the chief of the cupbearers told his dream to Joseph, and said to him: In my dream — behold, a vine before me.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְסַפֵּ֧ר שַֽׂר הַמַּשְׁקִ֛ים אֶת חֲלֹמ֖וֹ לְיוֹסֵ֑ף</span> · <i>va-yesaper sar-ha-mashqim et-chalom-o le-yosef</i> · the chief of the cupbearers told his dream to Joseph (etnachta on le-yosef) [VERIFIED: SNAPSHOT Gen.40.9 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּ֣אמֶר ל֔וֹ בַּחֲלוֹמִ֕י וְהִנֵּה גֶ֖פֶן לְפָנָֽי</span> · <i>va-yomer l-o ba-chalomi-y ve-hine-gefen le-fana-y</i> · in my dream — behold, a vine before me (verse-final le-fana-y) [VERIFIED: SNAPSHOT Gen.40.9 idx6-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(sapru_na_li, t1)</span><br><span class="gloss">= RESULT: HOLDS(sapru-na-to-me, t1)</span><br>TOLD. va-yesaper sar ha-mashqim — the tell-demand discharges in the next verse; ve-hine joined by maqqef per MS [G63-11, asserted].
+</td><td><span class="he">וַיְסַפֵּר שַׂר־הַמַּשְׁקִים אֶת־חֲלֹמוֹ לְיוֹסֵף</span> · <i>va-yesaper sar-ha-mashqim et-chalom-o le-yosef</i><br><span class="gloss">= and-yesaper sar-the-mashqim chalom-o to-yosef</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The demand satisfied at once.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_40_10 · Gen.40.10 · <span class='expr'>THE_THREE_BRANCHES</span></h3>
+<p><span class="he">וּבַגֶּפֶן שְׁלֹשָׁה שָׂרִיגִם וְהִיא כְפֹרַחַת עָלְתָה נִצָּהּ הִבְשִׁילוּ אַשְׁכְּלֹתֶיהָ עֲנָבִים</span> · <i>u-va-gefen shelosha sarigim ve-hi khe-forachat alta nitza-ה hivshilu ashklote-ha anavim</i> · And on the vine three branches; and it was as though budding — its blossom shot up, its clusters ripened into grapes.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבַגֶּ֖פֶן שְׁלֹשָׁ֣ה שָׂרִיגִ֑ם</span> · <i>u-va-gefen shelosha sarigim</i> · and on the vine three branches (etnachta on sarigim) [VERIFIED: SNAPSHOT Gen.40.10 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהִ֤יא כְפֹרַ֨חַת֙ עָלְתָ֣ה נִצָּ֔הּ הִבְשִׁ֥ילוּ אַשְׁכְּלֹתֶ֖יהָ עֲנָבִֽים</span> · <i>ve-hi khe-forachat alta nitza-ה hivshilu ashklote-ha anavim</i> · as though budding, its blossom shot up, its clusters ripened (verse-final anavim) [VERIFIED: SNAPSHOT Gen.40.10 idx3-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shelosha_sarigim_porachat_hivshilu_anavim, t0)</span><br><span class="gloss">= HOLDS(shelosha-sarigim-porachat-hivshilu-anavim, t0)</span><br>THE BRANCHES AGAINST BOTH CODICES [G63-02/03]. u-va-gefen shelosha SARIGIM — the Hilleli wrote it doubly full, the Yerushalmi codex doubly lean, and ALL the books (MS: &#x27;like neither of them&#x27;) full- first-lean-second — SNAPSHOT with the books [VERIFIED: manifest G63-02]; and at the interpretation (40:12) the word FLIPS to lean- first-full-second, both stations once each [G63-03]. u-va-gefen&#x27;s gimel dagesheed, khe-forachat&#x27;s kaf soft [G63-12].
+</td><td><span class="he">וּבַגֶּפֶן שְׁלֹשָׁה שָׂרִיגִם</span> · <i>u-va-gefen shelosha sarigim</i><br><span class="gloss">= and-and-gefen shelosha sarigim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The flipping-yod word.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_40_11 · Gen.40.11 · <span class='expr'>THE_CUP_IN_MY_HAND</span></h3>
+<p><span class="he">וְכוֹס פַּרְעֹה בְּיָדִי וָאֶקַּח אֶת־הָעֲנָבִים וָאֶשְׂחַט אֹתָם אֶל־כּוֹס פַּרְעֹה וָאֶתֵּן אֶת־הַכּוֹס עַל־כַּף פַּרְעֹה</span> · <i>ve-khos paro be-yadi-y va-eqach et-ha-anavim va-eschat et-m el-kos paro va-eten et-ha-kos al-kaf paro</i> · And Pharaoh&#x27;s cup was in my hand; and I took the grapes and pressed them into Pharaoh&#x27;s cup, and I gave the cup onto Pharaoh&#x27;s palm.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְכ֥וֹס פַּרְעֹ֖ה בְּיָדִ֑י</span> · <i>ve-khos paro be-yadi-y</i> · and Pharaoh&#x27;s cup was in my hand (etnachta on be-yadi-y) [VERIFIED: SNAPSHOT Gen.40.11 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וָאֶקַּ֣ח אֶת הָֽעֲנָבִ֗ים וָֽאֶשְׂחַ֤ט אֹתָם֙ אֶל כּ֣וֹס פַּרְעֹ֔ה וָאֶתֵּ֥ן אֶת הַכּ֖וֹס עַל כַּ֥ף פַּרְעֹֽה</span> · <i>va-eqach et-ha-anavim va-eschat et-m el-kos paro va-eten et-ha-kos al-kaf paro</i> · I took the grapes, pressed them into the cup, and gave it onto Pharaoh&#x27;s palm (verse-final paro) [VERIFIED: SNAPSHOT Gen.40.11 idx3-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(kos_paro_be_yadi_va_eschat_va_eten, t0)</span><br><span class="gloss">= HOLDS(kos-paro-in-yadi-and-eschat-and-eten, t0)</span><br>THE CUP&#x27;S TRIPLE. ve-khos paro be-yadi — Pharaoh named three times in the one dream-verse (cup, cup, palm): the dreamer&#x27;s office told in its instrument; the hand-word continues its arc from ch. 39.
+</td><td><span class="he">וְכוֹס פַּרְעֹה בְּיָדִי</span> · <i>ve-khos paro be-yadi-y</i><br><span class="gloss">= and-khos paro in-yadi-y</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The dream&#x27;s threefold Pharaoh.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_40_12 · Gen.40.12 · <span class='expr'>THIS_IS_ITS_INTERPRETATION_1</span></h3>
+<p><span class="he">וַיֹּאמֶר לוֹ יוֹסֵף זֶה פִּתְרֹנוֹ שְׁלֹשֶׁת הַשָּׂרִגִים שְׁלֹשֶׁת יָמִים הֵם</span> · <i>va-yomer l-o yosef ze pitron-o sheloshet ha-sarigim sheloshet yamim hem</i> · And Joseph said to him: This is its interpretation — the three branches, three days are they.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר לוֹ֙ יוֹסֵ֔ף זֶ֖ה פִּתְרֹנ֑וֹ</span> · <i>va-yomer l-o yosef ze pitron-o</i> · and Joseph said to him: this is its interpretation (etnachta on pitron-o) [VERIFIED: SNAPSHOT Gen.40.12 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">שְׁלֹ֨שֶׁת֙ הַשָּׂ֣רִגִ֔ים שְׁלֹ֥שֶׁת יָמִ֖ים הֵֽם</span> · <i>sheloshet ha-sarigim sheloshet yamim hem</i> · the three branches — three days are they (verse-final hem) [VERIFIED: SNAPSHOT Gen.40.12 idx5-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ze_pitrono_sheloshet_yamim(yosef), t0)</span><br><span class="gloss">= HOLDS(ze-pitrono-sheloshet-seas(yosef), t0)</span><br>THE FORMULA. ze pitrono — the this-is-its-interpretation formula debuts, to be repeated verbatim at 40:18: two dreams, one grammar, opposite verdicts. ha-sarigim here written with its yod flipped [G63-03].
+</td><td><span class="he">זֶה פִּתְרֹנוֹ</span> · <i>ze pitron-o</i><br><span class="gloss">= ze pitron-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The interpretation formula&#x27;s first use.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_40_13 · Gen.40.13 · <span class='expr'>THE_HEAD_LIFTED_UP</span></h3>
+<p><span class="he">בְּעוֹד שְׁלֹשֶׁת יָמִים יִשָּׂא פַרְעֹה אֶת־רֹאשֶׁךָ וַהֲשִׁיבְךָ עַל־כַּנֶּךָ וְנָתַתָּ כוֹס־פַּרְעֹה בְּיָדוֹ כַּמִּשְׁפָּט הָרִאשׁוֹן אֲשֶׁר הָיִיתָ מַשְׁקֵהוּ</span> · <i>be-od sheloshet yamim yisa faro et-roshe-kha va-hashiv-kha al-kane-kha ve-natata khos-paro be-yad-o ka-mishpat ha-rishon asher hayita mashqe-hu</i> · In yet three days Pharaoh will lift your head and restore you to your post, and you will give Pharaoh&#x27;s cup into his hand, as the former custom when you were his cupbearer.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">בְּע֣וֹד שְׁלֹ֣שֶׁת יָמִ֗ים יִשָּׂ֤א פַרְעֹה֙ אֶת רֹאשֶׁ֔ךָ וַהֲשִֽׁיבְךָ֖ עַל כַּנֶּ֑ךָ</span> · <i>be-od sheloshet yamim yisa faro et-roshe-kha va-hashiv-kha al-kane-kha</i> · in three days Pharaoh will lift your head and restore you to your post (etnachta on kane-kha) [VERIFIED: SNAPSHOT Gen.40.13 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְנָתַתָּ֤ כוֹס פַּרְעֹה֙ בְּיָד֔וֹ כַּמִּשְׁפָּט֙ הָֽרִאשׁ֔וֹן אֲשֶׁ֥ר הָיִ֖יתָ מַשְׁקֵֽהוּ</span> · <i>ve-natata khos-paro be-yad-o ka-mishpat ha-rishon asher hayita mashqe-hu</i> · and you will give Pharaoh&#x27;s cup into his hand as before (verse-final mashqe-hu) [VERIFIED: SNAPSHOT Gen.40.13 idx10-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(yisa_paro_et_roshekha_va_hashivkha_al_kanekha, t0)</span><br><span class="gloss">= HOLDS(yisa-paro-roshekha-and-hashivkha-upon-kanekha, t0)</span><br>THE STILL-WORD FULL [G63-04]. BE-OD sheloshet yamim — the od-word full with vav as the Ramah&#x27;s rule requires (its only two lean stations stand at his two signs, 8:22 and 19:12, census exact) [VERIFIED: manifest G63-04]. va-hashivkha with patach against its segol-twin in the curses (Deut 28:68) — the Masorah&#x27;s hooks-of-the- pillars sign, named [G63-12].
+</td><td><span class="he">בְּעוֹד שְׁלֹשֶׁת יָמִים</span> · <i>be-od sheloshet yamim</i><br><span class="gloss">= in-od sheloshet seas</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The good verdict; the full still-word.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_40_14 · Gen.40.14 · <span class='expr'>THE_REMEMBER_DEMAND</span></h3>
+<p><span class="he">כִּי אִם־זְכַרְתַּנִי אִתְּךָ כַּאֲשֶׁר יִיטַב לָךְ וְעָשִׂיתָ־נָּא עִמָּדִי חָסֶד וְהִזְכַּרְתַּנִי אֶל־פַּרְעֹה וְהוֹצֵאתַנִי מִן־הַבַּיִת הַזֶּה</span> · <i>ki im-zekharta-ni et-kha ka-asher yitav la-khe ve-asita-na imadi-y chased ve-hizkarta-ni el-paro ve-hotzeta-ni min-ha-bayit ha-ze</i> · But if you remember me with you when it is well with you — do, please, kindness with me: mention me to Pharaoh, and bring me out of this house.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">כִּ֧י אִם זְכַרְתַּ֣נִי אִתְּךָ֗ כַּאֲשֶׁר֙ יִ֣יטַב לָ֔ךְ וְעָשִֽׂיתָ נָּ֥א עִמָּדִ֖י חָ֑סֶד</span> · <i>ki im-zekharta-ni et-kha ka-asher yitav la-khe ve-asita-na imadi-y chased</i> · if you remember me with you when it is well with you — do me kindness (etnachta on chased) [VERIFIED: SNAPSHOT Gen.40.14 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהִזְכַּרְתַּ֨נִי֙ אֶל פַּרְעֹ֔ה וְהוֹצֵאתַ֖נִי מִן הַבַּ֥יִת הַזֶּֽה</span> · <i>ve-hizkarta-ni el-paro ve-hotzeta-ni min-ha-bayit ha-ze</i> · mention me to Pharaoh, and bring me out of this house (verse-final ha-ze) [VERIFIED: SNAPSHOT Gen.40.14 idx11-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yosef, LET(zekhartani_ve_hizkartani_el_paro))</span><br><span class="gloss">= DECLARE(yosef, LET(zekhartani-and-hizkartani-to-paro))</span><br>THE REMEMBER-DEMAND. ki im-zekhartani itkha... ve-hizkartani el paro ve-hotzetani — remember, mention, bring out: Joseph&#x27;s one petition in the cycle, pushed on the man whose head is about to be lifted. It stays OPEN past the span&#x27;s end — and the closing verse narrates its non-satisfaction in so many words (40:23): the machine&#x27;s only demand whose forgetting is itself a fact in the stream [watch: 41:9, &#x27;I remember my offenses today&#x27;].
+</td><td><span class="he">זְכַרְתַּנִי אִתְּךָ כַּאֲשֶׁר יִיטַב לָךְ וְעָשִׂיתָ־נָּא עִמָּדִי חָסֶד וְהִזְכַּרְתַּנִי אֶל־פַּרְעֹה</span> · <i>zekharta-ni et-kha ka-asher yitav la-khe ve-asita-na imadi-y chased ve-hizkarta-ni el-paro</i><br><span class="gloss">= zekharta-ni kha like-which yitav to-khe and-asita-na with-me-y chased and-hizkarta-ni to-paro</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Joseph&#x27;s own demand: pushed here, forgotten at the span&#x27;s end.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_40_15 · Gen.40.15 · <span class='expr'>STOLEN_I_WAS_STOLEN</span></h3>
+<p><span class="he">כִּי־גֻנֹּב גֻּנַּבְתִּי מֵאֶרֶץ הָעִבְרִים וְגַם־פֹּה לֹא־עָשִׂיתִי מְאוּמָה כִּי־שָׂמוּ אֹתִי בַּבּוֹר</span> · <i>ki-gunov gunavti me-eretz ha-ivrim ve-gam-po lo-asiti meuma ki-samu et-y ba-bor</i> · For stolen, I was stolen from the land of the Hebrews; and here also I have done nothing, that they should put me in the pit.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">כִּֽי גֻנֹּ֣ב גֻּנַּ֔בְתִּי מֵאֶ֖רֶץ הָעִבְרִ֑ים</span> · <i>ki-gunov gunavti me-eretz ha-ivrim</i> · for stolen, I was stolen from the land of the Hebrews (etnachta on ha-ivrim) [VERIFIED: SNAPSHOT Gen.40.15 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְגַם פֹּה֙ לֹא עָשִׂ֣יתִֽי מְא֔וּמָה כִּֽי שָׂמ֥וּ אֹתִ֖י בַּבּֽוֹר</span> · <i>ve-gam-po lo-asiti meuma ki-samu et-y ba-bor</i> · and here also I have done nothing, that they should put me in the pit (verse-final ba-bor) [VERIFIED: SNAPSHOT Gen.40.15 idx5-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(gunov_gunavti_lo_asiti_meuma(yosef), t0)</span><br><span class="gloss">= HOLDS(gunov-gunavti-not-asiti-meuma(yosef), t0)</span><br>THE NAMELESS ACCOUNT. gunov GUNAVTI — the doubled passive: stolen, twice said, no thief named; samu oti BA-BOR — the pit-word returns for the prison (37:24&#x27;s word re-used by its victim): Joseph&#x27;s whole history told without accusing a brother. shemo&#x27;s end-stress (&#x27;the Masorah: none other so&#x27;) files at 40:15, named [G63-12].
+</td><td><span class="he">כִּי־גֻנֹּב גֻּנַּבְתִּי מֵאֶרֶץ הָעִבְרִים</span> · <i>ki-gunov gunavti me-eretz ha-ivrim</i><br><span class="gloss">= when-gunov gunavti earth the-ivrim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Joseph&#x27;s counter-telling: all passives, no names.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_40_16 · Gen.40.16 · <span class='expr'>THE_BAKER_ENCOURAGED</span></h3>
+<p><span class="he">וַיַּרְא שַׂר־הָאֹפִים כִּי טוֹב פָּתָר וַיֹּאמֶר אֶל־יוֹסֵף אַף־אֲנִי בַּחֲלוֹמִי וְהִנֵּה שְׁלֹשָׁה סַלֵּי חֹרִי עַל־רֹאשִׁי</span> · <i>va-yar sar-ha-ofim ki tov patar va-yomer el-yosef af-ani ba-chalomi-y ve-hine shelosha sale chori al-roshi-y</i> · And the chief of the bakers saw that he had interpreted well, and said to Joseph: I also, in my dream — behold, three baskets of white bread on my head.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּ֥רְא שַׂר הָאֹפִ֖ים כִּ֣י ט֣וֹב פָּתָ֑ר</span> · <i>va-yar sar-ha-ofim ki tov patar</i> · the chief of the bakers saw that he interpreted well (etnachta on patar) [VERIFIED: SNAPSHOT Gen.40.16 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּ֨אמֶר֙ אֶל יוֹסֵ֔ף אַף אֲנִי֙ בַּחֲלוֹמִ֔י וְהִנֵּ֗ה שְׁלֹשָׁ֛ה סַלֵּ֥י חֹרִ֖י עַל רֹאשִֽׁי</span> · <i>va-yomer el-yosef af-ani ba-chalomi-y ve-hine shelosha sale chori al-roshi-y</i> · I also, in my dream — three baskets of white bread on my head (verse-final roshi-y) [VERIFIED: SNAPSHOT Gen.40.16 idx6-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ki_tov_patar_af_ani_ba_chalomi(sar_ha_ofim), t0)</span><br><span class="gloss">= HOLDS(when-good-patar-af-ani-in-the-chalomi(sar-the-ofim), t0)</span><br>THE BYSTANDER&#x27;S TOV [G63-10]. va-yar sar ha-ofim KI TOV patar — the span&#x27;s one tov-token is a bystander&#x27;s judgment, not an oracle&#x27;s verdict: the corpus&#x27;s TEST register stays silent (letter-note — the first ki-tov in the corpus spoken by an onlooker). And MS&#x27;s books rule ki &#x27;with GALGAL, not maqqef&#x27;: the unjoined half verified, SNAPSHOT writing the munach where the Sephardic books write the wheel — galgal-class station 7 [VERIFIED: manifest G63-10].
+</td><td><span class="he">וַיַּרְא שַׂר־הָאֹפִים כִּי טוֹב פָּתָר</span> · <i>va-yar sar-ha-ofim ki tov patar</i><br><span class="gloss">= and-yar sar-the-ofim when good patar</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The bystander&#x27;s tov; the galgal station.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_40_17 · Gen.40.17 · <span class='expr'>THE_BIRDS_EAT</span></h3>
+<p><span class="he">וּבַסַּל הָעֶלְיוֹן מִכֹּל מַאֲכַל פַּרְעֹה מַעֲשֵׂה אֹפֶה וְהָעוֹף אֹכֵל אֹתָם מִן־הַסַּל מֵעַל רֹאשִׁי</span> · <i>u-va-sal ha-elyon mi-kol maakhal paro maase ofe ve-ha-of okhel et-m min-ha-sal me-al roshi-y</i> · And in the top basket, of all Pharaoh&#x27;s food, baker&#x27;s work; and the bird was eating them from the basket, from upon my head.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבַסַּ֣ל הָֽעֶלְי֔וֹן מִכֹּ֛ל מַאֲכַ֥ל פַּרְעֹ֖ה מַעֲשֵׂ֣ה אֹפֶ֑ה</span> · <i>u-va-sal ha-elyon mi-kol maakhal paro maase ofe</i> · in the top basket, of all Pharaoh&#x27;s food, baker&#x27;s work (etnachta on ofe) [VERIFIED: SNAPSHOT Gen.40.17 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהָע֗וֹף אֹכֵ֥ל אֹתָ֛ם מִן הַסַּ֖ל מֵעַ֥ל רֹאשִֽׁי</span> · <i>ve-ha-of okhel et-m min-ha-sal me-al roshi-y</i> · and the bird eating them from the basket on my head (verse-final roshi-y) [VERIFIED: SNAPSHOT Gen.40.17 idx7-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_ha_of_okhel_otam_me_al_roshi, t0)</span><br><span class="gloss">= HOLDS(and-the-fowl-okhel-otam-from-upon-roshi, t0)</span><br>THE GIVE-AWAY. ve-ha-OF okhel otam — the fowl-word of gen_05&#x27;s all- full rule feeding from a doomed man&#x27;s head: the dream betrays its verdict in one clause the dreamer does not read.
+</td><td><span class="he">וְהָעוֹף אֹכֵל אֹתָם מִן־הַסַּל מֵעַל רֹאשִׁי</span> · <i>ve-ha-of okhel et-m min-ha-sal me-al roshi-y</i><br><span class="gloss">= fowl okhel m from-the-sal from-upon roshi-y</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The dream&#x27;s give-away detail.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_40_18 · Gen.40.18 · <span class='expr'>THIS_IS_ITS_INTERPRETATION_2</span></h3>
+<p><span class="he">וַיַּעַן יוֹסֵף וַיֹּאמֶר זֶה פִּתְרֹנוֹ שְׁלֹשֶׁת הַסַּלִּים שְׁלֹשֶׁת יָמִים הֵם</span> · <i>va-yaan yosef va-yomer ze pitron-o sheloshet ha-salim sheloshet yamim hem</i> · And Joseph answered and said: This is its interpretation — the three baskets, three days are they.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּ֤עַן יוֹסֵף֙ וַיֹּ֔אמֶר זֶ֖ה פִּתְרֹנ֑וֹ</span> · <i>va-yaan yosef va-yomer ze pitron-o</i> · and Joseph answered and said: this is its interpretation (etnachta on pitron-o) [VERIFIED: SNAPSHOT Gen.40.18 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">שְׁלֹ֨שֶׁת֙ הַסַּלִּ֔ים שְׁלֹ֥שֶׁת יָמִ֖ים הֵֽם</span> · <i>sheloshet ha-salim sheloshet yamim hem</i> · the three baskets — three days are they (verse-final hem) [VERIFIED: SNAPSHOT Gen.40.18 idx5-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ze_pitrono_sheloshet_ha_salim(yosef), t0)</span><br><span class="gloss">= HOLDS(ze-pitrono-sheloshet-the-salim(yosef), t0)</span><br>ONE GRAMMAR, TWO VERDICTS. ze pitrono — word for word the cupbearer&#x27;s formula (40:12): the letter gives both men the same opening and lets the next verse divide them.
+</td><td><span class="he">זֶה פִּתְרֹנוֹ</span> · <i>ze pitron-o</i><br><span class="gloss">= ze pitron-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The formula verbatim; the verdict about to flip.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_40_19 · Gen.40.19 · <span class='expr'>THE_HEAD_LIFTED_OFF</span></h3>
+<p><span class="he">בְּעוֹד שְׁלֹשֶׁת יָמִים יִשָּׂא פַרְעֹה אֶת־רֹאשְׁךָ מֵעָלֶיךָ וְתָלָה אוֹתְךָ עַל־עֵץ וְאָכַל הָעוֹף אֶת־בְּשָׂרְךָ מֵעָלֶיךָ</span> · <i>be-od sheloshet yamim yisa faro et-rosh-kha me-ale-kha ve-tala ot-kha al-etz ve-akhal ha-of et-besar-kha me-ale-kha</i> · In yet three days Pharaoh will lift your head from off you, and hang you on a tree; and the bird will eat your flesh from off you.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">בְּע֣וֹד שְׁלֹ֣שֶׁת יָמִ֗ים יִשָּׂ֨א פַרְעֹ֤ה אֶת רֹֽאשְׁךָ֙ מֵֽעָלֶ֔יךָ וְתָלָ֥ה אוֹתְךָ֖ עַל עֵ֑ץ</span> · <i>be-od sheloshet yamim yisa faro et-rosh-kha me-ale-kha ve-tala ot-kha al-etz</i> · in three days Pharaoh will lift your head from off you and hang you on a tree (etnachta on etz) [VERIFIED: SNAPSHOT Gen.40.19 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאָכַ֥ל הָע֛וֹף אֶת בְּשָׂרְךָ֖ מֵעָלֶֽיךָ</span> · <i>ve-akhal ha-of et-besar-kha me-ale-kha</i> · and the bird will eat your flesh from off you (verse-final me-ale-kha) [VERIFIED: SNAPSHOT Gen.40.19 idx12-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(yisa_et_roshkha_me_alekha_ve_tala(pitron), t0)</span><br><span class="gloss">= HOLDS(yisa-roshkha-from-alekha-and-tala(pitron), t0)</span><br>THE IDIOM SPLITS. yisa faro et roshkha ME-ALEKHA — the head-lifting of 40:13 plus two words (from-off-you): the letter executes the baker inside the cupbearer&#x27;s own phrase. be-od full again [G63-04].
+</td><td><span class="he">יִשָּׂא פַרְעֹה אֶת־רֹאשְׁךָ מֵעָלֶיךָ</span> · <i>yisa faro et-rosh-kha me-ale-kha</i><br><span class="gloss">= yisa faro rosh-kha from-ale-kha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The same idiom, one word added.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_40_20 · Gen.40.20 · <span class='expr'>THE_BIRTHDAY_FEAST</span></h3>
+<p><span class="he">וַיְהִי בַּיּוֹם הַשְּׁלִישִׁי יוֹם הֻלֶּדֶת אֶת־פַּרְעֹה וַיַּעַשׂ מִשְׁתֶּה לְכָל־עֲבָדָיו וַיִּשָּׂא אֶת־רֹאשׁ שַׂר הַמַּשְׁקִים וְאֶת־רֹאשׁ שַׂר הָאֹפִים בְּתוֹךְ עֲבָדָיו</span> · <i>va-yehi ba-yom ha-shelishi yom huledet et-paro va-yaas mishte le-khal-avaday-v va-yisa et-rosh sar ha-mashqim ve-et-rosh sar ha-ofim be-tokh avaday-v</i> · And it was on the third day, Pharaoh&#x27;s birthday, and he made a feast for all his servants; and he lifted the head of the chief of the cupbearers and the head of the chief of the bakers among his servants.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֣י בַּיּ֣וֹם הַשְּׁלִישִׁ֗י י֚וֹם הֻלֶּ֣דֶת אֶת פַּרְעֹ֔ה וַיַּ֥עַשׂ מִשְׁתֶּ֖ה לְכָל עֲבָדָ֑יו</span> · <i>va-yehi ba-yom ha-shelishi yom huledet et-paro va-yaas mishte le-khal-avaday-v</i> · on the third day, Pharaoh&#x27;s birthday, he made a feast (etnachta on avaday-v) [VERIFIED: SNAPSHOT Gen.40.20 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּשָּׂ֞א אֶת רֹ֣אשׁ שַׂ֣ר הַמַּשְׁקִ֗ים וְאֶת רֹ֛אשׁ שַׂ֥ר הָאֹפִ֖ים בְּת֥וֹךְ עֲבָדָֽיו</span> · <i>va-yisa et-rosh sar ha-mashqim ve-et-rosh sar ha-ofim be-tokh avaday-v</i> · and lifted the head of the chief cupbearer and the chief baker among his servants (verse-final avaday-v) [VERIFIED: SNAPSHOT Gen.40.20 idx11-21]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(yom_huledet_et_paro_va_yisa_et_rosh, t0)</span><br><span class="gloss">= HOLDS(day-huledet-paro-and-yisa-rosh, t0)</span><br>THE GRAMMARIAN CORRECTED [G63-05]. yom HULEDET et paro — Radak&#x27;s Michlol ruled the birth-word full like Ezekiel&#x27;s; the Masorah, every book, the Hilleli, and the Ramah write it LEAN — and Radak retracted in his Shorashim. SNAPSHOT lean, once in the Torah [VERIFIED: manifest G63-05]. Both heads lifted in one clause; the next two verses divide the liftings.
+</td><td><span class="he">וַיְהִי בַּיּוֹם הַשְּׁלִישִׁי יוֹם הֻלֶּדֶת אֶת־פַּרְעֹה</span> · <i>va-yehi ba-yom ha-shelishi yom huledet et-paro</i><br><span class="gloss">= and-yehi day the-shelishi day huledet paro</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The lean birth-word; both heads lifted in one clause.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_40_21 · Gen.40.21 · <span class='expr'>THE_CUPBEARER_RESTORED</span></h3>
+<p><span class="he">וַיָּשֶׁב אֶת־שַׂר הַמַּשְׁקִים עַל־מַשְׁקֵהוּ וַיִּתֵּן הַכּוֹס עַל־כַּף פַּרְעֹה</span> · <i>va-yashev et-sar ha-mashqim al-mashqe-hu va-yiten ha-kos al-kaf paro</i> · And he restored the chief of the cupbearers to his cupbearing; and he gave the cup onto Pharaoh&#x27;s palm.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּ֛שֶׁב אֶת שַׂ֥ר הַמַּשְׁקִ֖ים עַל מַשְׁקֵ֑הוּ</span> · <i>va-yashev et-sar ha-mashqim al-mashqe-hu</i> · he restored the chief of the cupbearers to his cupbearing (etnachta on mashqe-hu) [VERIFIED: SNAPSHOT Gen.40.21 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּתֵּ֥ן הַכּ֖וֹס עַל כַּ֥ף פַּרְעֹֽה</span> · <i>va-yiten ha-kos al-kaf paro</i> · and he gave the cup onto Pharaoh&#x27;s palm (verse-final paro) [VERIFIED: SNAPSHOT Gen.40.21 idx6-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yashev_et_sar_ha_mashqim_al_mashqehu, t0)</span><br><span class="gloss">= HOLDS(and-yashev-sar-the-mashqim-upon-mashqehu, t0)</span><br>RESTORED AS SAID. va-yashev... va-yiten ha-kos al kaf paro — 40:13&#x27;s words re-walked; the books that err writing &#x27;et ha-kos&#x27; here corrected by MS, named [G63-12].
+</td><td><span class="he">וַיָּשֶׁב אֶת־שַׂר הַמַּשְׁקִים עַל־מַשְׁקֵהוּ</span> · <i>va-yashev et-sar ha-mashqim al-mashqe-hu</i><br><span class="gloss">= and-yashev sar the-mashqim upon-mashqe-that</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Interpretation one lands.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_40_22 · Gen.40.22 · <span class='expr'>THE_BAKER_HANGED</span></h3>
+<p><span class="he">וְאֵת שַׂר הָאֹפִים תָּלָה כַּאֲשֶׁר פָּתַר לָהֶם יוֹסֵף</span> · <i>ve-et sar ha-ofim tala ka-asher patar la-hem yosef</i> · And the chief of the bakers he hanged — as Joseph had interpreted to them.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאֵ֛ת שַׂ֥ר הָאֹפִ֖ים תָּלָ֑ה</span> · <i>ve-et sar ha-ofim tala</i> · and the chief of the bakers he hanged (etnachta on tala) [VERIFIED: SNAPSHOT Gen.40.22 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כַּאֲשֶׁ֥ר פָּתַ֛ר לָהֶ֖ם יוֹסֵֽף</span> · <i>ka-asher patar la-hem yosef</i> · as Joseph had interpreted to them (verse-final yosef) [VERIFIED: SNAPSHOT Gen.40.22 idx4-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(tala_ka_asher_patar_lahem_yosef, t0)</span><br><span class="gloss">= HOLDS(tala-like-which-patar-to-them-yosef, t0)</span><br>THE LETTER VERIFIES. KA-ASHER PATAR LAHEM YOSEF — the narrative&#x27;s own as-he-interpreted clause: the span tests Joseph&#x27;s word against events and records the match in four words. sar with the merkha- stroke, not maqqef [G63-11, asserted].
+</td><td><span class="he">כַּאֲשֶׁר פָּתַר לָהֶם יוֹסֵף</span> · <i>ka-asher patar la-hem yosef</i><br><span class="gloss">= like-which patar to-hem yosef</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The letter&#x27;s own verification clause.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_40_23 · Gen.40.23 · <span class='expr'>THE_FORGETTING</span></h3>
+<p><span class="he">וְלֹא־זָכַר שַׂר־הַמַּשְׁקִים אֶת־יוֹסֵף וַיִּשְׁכָּחֵהוּ</span> · <i>ve-lo-zakhar sar-ha-mashqim et-yosef va-yishkache-hu</i> · And the chief of the cupbearers did not remember Joseph — and he forgot him.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְלֹֽא זָכַ֧ר שַֽׂר הַמַּשְׁקִ֛ים אֶת יוֹסֵ֖ף</span> · <i>ve-lo-zakhar sar-ha-mashqim et-yosef</i> · and the chief of the cupbearers did not remember Joseph (NO etnachta in verse: split at tifcha on yosef) [VERIFIED: SNAPSHOT Gen.40.23 idx5 tifcha; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּשְׁכָּחֵֽהוּ</span> · <i>va-yishkache-hu</i> · and he forgot him (verse-final va-yishkache-hu) [VERIFIED: SNAPSHOT Gen.40.23 idx6-6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_lo_zakhar_va_yishkachehu(sar_ha_mashqim), t0)</span><br><span class="gloss">= HOLDS(and-not-male-and-yishkachehu(sar-the-mashqim), t0)</span><br>THE NARRATED FORGETTING [G63-09]. ve-LO ZAKHAR sar ha-mashqim et yosef va-yishkachehu — the not-remembered adjacency stands once in the Torah, and the Kitzur chains it: the butler forgot Joseph, Joash forgot Jehoiada, &#x27;He remembered not His footstool&#x27; [VERIFIED: manifest G63-09]. The machine closes with the remember-demand OPEN and the letter itself stating the failure — doubled (did not remember, and forgot): the only verse in the corpus so far that narrates an open demand&#x27;s non-satisfaction in so many words. The verse also has no etnachta — the span&#x27;s single fallback split: the forgetting runs unbroken.
+</td><td><span class="he">וְלֹא־זָכַר שַׂר־הַמַּשְׁקִים אֶת־יוֹסֵף וַיִּשְׁכָּחֵהוּ</span> · <i>ve-lo-zakhar sar-ha-mashqim et-yosef va-yishkache-hu</i><br><span class="gloss">= and-not-male sar-the-mashqim yosef and-yishkache-that</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The open demand&#x27;s non-satisfaction narrated.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Gn_40_1 — the two offenders</td><td>And it came to pass after these things, the cupbearer of the king of Egypt and the baker offended their lord, the king of Egypt.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיְהִ֗י אַחַר֙ הַדְּבָרִ֣ים הָאֵ֔לֶּה</span> · <i>va-yehi achar ha-devarim ha-ele</i><br><span class="gloss">= and-yehi achar the-devarim the-ele</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Gn_40_2 — the wrath</td><td>And Pharaoh was wroth against his two officers, against the chief of the cupbearers and against the chief of the bakers.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיִּקְצֹ֣ף פַּרְעֹ֔ה עַ֖ל שְׁנֵ֣י</span> · <i>va-yiqtzof paro al shene</i><br><span class="gloss">= and-yiqtzof paro upon shene</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Gn_40_3 — into Joseph&#x27;s prison</td><td>And he gave them into custody, the house of the chief of the slaughterers, to the prison-house, the place where Joseph was bound.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיִּתֵּ֨ן אֹתָ֜ם בְּמִשְׁמַ֗ר בֵּ֛ית</span> · <i>va-yiten et-m be-mishmar bet</i><br><span class="gloss">= and-yiten m in-mishmar bet</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Gn_40_4 — appointed to serve</td><td>And the chief of the slaughterers appointed Joseph with them, and he served them; and they were days in custody.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַ֠יִּפְקֹד שַׂ֣ר הַטַּבָּחִ֧ים אֶת</span> · <i>va-yifqod sar ha-tabachim et-</i><br><span class="gloss">= and-yifqod sar the-tabachim et-</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Gn_40_5 — two dreams, one night</td><td>And they dreamed a dream, the two of them, each his dream in one night, each according to the interpretation of his dream — the cupbearer and the baker of the king of Egypt, who were bound in the prison-house.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיַּֽחַלְמוּ֩ חֲל֨וֹם שְׁנֵיהֶ֜ם אִ֤ישׁ</span> · <i>va-yachalmu chalom shene-hem ish</i><br><span class="gloss">= and-yachalmu chalom shene-hem man</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Gn_40_6 — the downcast faces</td><td>And Joseph came to them in the morning, and saw them — and behold, they were downcast.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיָּבֹ֧א אֲלֵיהֶ֛ם יוֹסֵ֖ף בַּבֹּ֑קֶר</span> · <i>va-yavo ale-hem yosef ba-boqer</i><br><span class="gloss">= and-yavo ale-hem yosef morning</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Gn_40_7 — the question</td><td>And he asked Pharaoh&#x27;s officers who were with him in custody of his master&#x27;s house, saying: Why are your faces bad today?</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיִּשְׁאַ֞ל אֶת סְרִיסֵ֣י פַרְעֹ֗ה</span> · <i>va-yishal et-serise faro</i><br><span class="gloss">= and-yishal serise faro</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Gn_40_8 — the tell-demand</td><td>And they said to him: We have dreamed a dream, and there is no interpreter of it. And Joseph said to them: Are not interpretations God&#x27;s? Tell it, please, to me.</td><td>LET(sapru_na_li) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(sapru-na-to-me) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּאמְר֣וּ אֵלָ֔יו חֲל֣וֹם חָלַ֔מְנוּ</span> · <i>va-yomru elay-v chalom chalamnu</i><br><span class="gloss">= and-yomru elay-v chalom chalamnu</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Gn_40_9 — the vine told</td><td>And the chief of the cupbearers told his dream to Joseph, and said to him: In my dream — behold, a vine before me.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיְסַפֵּ֧ר שַֽׂר הַמַּשְׁקִ֛ים אֶת</span> · <i>va-yesaper sar-ha-mashqim et-</i><br><span class="gloss">= and-yesaper sar-the-mashqim et-</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Gn_40_10 — the three branches</td><td>And on the vine three branches; and it was as though budding — its blossom shot up, its clusters ripened into grapes.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וּבַגֶּ֖פֶן שְׁלֹשָׁ֣ה שָׂרִיגִ֑ם וְהִ֤יא</span> · <i>u-va-gefen shelosha sarigim ve-hi</i><br><span class="gloss">= and-and-gefen shelosha sarigim and-hi</span></td></tr>
+<tr><td><b>S11</b></td><td>after STEP_Gn_40_11 — the cup in my hand</td><td>And Pharaoh&#x27;s cup was in my hand; and I took the grapes and pressed them into Pharaoh&#x27;s cup, and I gave the cup onto Pharaoh&#x27;s palm.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וְכ֥וֹס פַּרְעֹ֖ה בְּיָדִ֑י וָאֶקַּ֣ח</span> · <i>ve-khos paro be-yadi-y va-eqach</i><br><span class="gloss">= and-khos paro in-yadi-y and-eqach</span></td></tr>
+<tr><td><b>S12</b></td><td>after STEP_Gn_40_12 — this is its interpretation (1)</td><td>And Joseph said to him: This is its interpretation — the three branches, three days are they.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיֹּ֤אמֶר לוֹ֙ יוֹסֵ֔ף זֶ֖ה</span> · <i>va-yomer l-o yosef ze</i><br><span class="gloss">= and-yomer l-o yosef ze</span></td></tr>
+<tr><td><b>S13</b></td><td>after STEP_Gn_40_13 — the head lifted up</td><td>In yet three days Pharaoh will lift your head and restore you to your post, and you will give Pharaoh&#x27;s cup into his hand, as the former custom when you were his cupbearer.</td><td>SPECS empty; no test, no name.</td><td><span class="he">בְּע֣וֹד שְׁלֹ֣שֶׁת יָמִ֗ים יִשָּׂ֤א</span> · <i>be-od sheloshet yamim yisa</i><br><span class="gloss">= in-od sheloshet seas yisa</span></td></tr>
+<tr><td><b>S14</b></td><td>after STEP_Gn_40_14 — the remember-demand</td><td>But if you remember me with you when it is well with you — do, please, kindness with me: mention me to Pharaoh, and bring me out of this house.</td><td>LET(zekhartani_ve_hizkartani_el_paro) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(zekhartani-and-hizkartani-to-paro) pushed and OPEN; no test, no name.</span></td><td><span class="he">כִּ֧י אִם זְכַרְתַּ֣נִי אִתְּךָ֗</span> · <i>ki im-zekharta-ni et-kha</i><br><span class="gloss">= when if-zekharta-ni kha</span></td></tr>
+<tr><td><b>S15</b></td><td>after STEP_Gn_40_15 — stolen, I was stolen</td><td>For stolen, I was stolen from the land of the Hebrews; and here also I have done nothing, that they should put me in the pit.</td><td>LET(zekhartani_ve_hizkartani_el_paro) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(zekhartani-and-hizkartani-to-paro) pushed and OPEN; no test, no name.</span></td><td><span class="he">כִּֽי גֻנֹּ֣ב גֻּנַּ֔בְתִּי מֵאֶ֖רֶץ</span> · <i>ki-gunov gunavti me-eretz</i><br><span class="gloss">= when-gunov gunavti earth</span></td></tr>
+<tr><td><b>S16</b></td><td>after STEP_Gn_40_16 — the baker encouraged</td><td>And the chief of the bakers saw that he had interpreted well, and said to Joseph: I also, in my dream — behold, three baskets of white bread on my head.</td><td>LET(zekhartani_ve_hizkartani_el_paro) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(zekhartani-and-hizkartani-to-paro) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיַּ֥רְא שַׂר הָאֹפִ֖ים כִּ֣י</span> · <i>va-yar sar-ha-ofim ki</i><br><span class="gloss">= and-yar sar-the-ofim when</span></td></tr>
+<tr><td><b>S17</b></td><td>after STEP_Gn_40_17 — the birds eat</td><td>And in the top basket, of all Pharaoh&#x27;s food, baker&#x27;s work; and the bird was eating them from the basket, from upon my head.</td><td>LET(zekhartani_ve_hizkartani_el_paro) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(zekhartani-and-hizkartani-to-paro) pushed and OPEN; no test, no name.</span></td><td><span class="he">וּבַסַּ֣ל הָֽעֶלְי֔וֹן מִכֹּ֛ל מַאֲכַ֥ל</span> · <i>u-va-sal ha-elyon mi-kol maakhal</i><br><span class="gloss">= and-and-sal the-elyon all maakhal</span></td></tr>
+<tr><td><b>S18</b></td><td>after STEP_Gn_40_18 — this is its interpretation (2)</td><td>And Joseph answered and said: This is its interpretation — the three baskets, three days are they.</td><td>LET(zekhartani_ve_hizkartani_el_paro) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(zekhartani-and-hizkartani-to-paro) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיַּ֤עַן יוֹסֵף֙ וַיֹּ֔אמֶר זֶ֖ה</span> · <i>va-yaan yosef va-yomer ze</i><br><span class="gloss">= and-yaan yosef and-yomer ze</span></td></tr>
+<tr><td><b>S19</b></td><td>after STEP_Gn_40_19 — the head lifted off</td><td>In yet three days Pharaoh will lift your head from off you, and hang you on a tree; and the bird will eat your flesh from off you.</td><td>LET(zekhartani_ve_hizkartani_el_paro) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(zekhartani-and-hizkartani-to-paro) pushed and OPEN; no test, no name.</span></td><td><span class="he">בְּע֣וֹד שְׁלֹ֣שֶׁת יָמִ֗ים יִשָּׂ֨א</span> · <i>be-od sheloshet yamim yisa</i><br><span class="gloss">= in-od sheloshet seas yisa</span></td></tr>
+<tr><td><b>S20</b></td><td>after STEP_Gn_40_20 — the birthday feast</td><td>And it was on the third day, Pharaoh&#x27;s birthday, and he made a feast for all his servants; and he lifted the head of the chief of the cupbearers and the head of the chief of the bakers among his servants.</td><td>LET(zekhartani_ve_hizkartani_el_paro) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(zekhartani-and-hizkartani-to-paro) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְהִ֣י בַּיּ֣וֹם הַשְּׁלִישִׁ֗י י֚וֹם</span> · <i>va-yehi ba-yom ha-shelishi yom</i><br><span class="gloss">= and-yehi day the-shelishi day</span></td></tr>
+<tr><td><b>S21</b></td><td>after STEP_Gn_40_21 — the cupbearer restored</td><td>And he restored the chief of the cupbearers to his cupbearing; and he gave the cup onto Pharaoh&#x27;s palm.</td><td>LET(zekhartani_ve_hizkartani_el_paro) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(zekhartani-and-hizkartani-to-paro) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיָּ֛שֶׁב אֶת שַׂ֥ר הַמַּשְׁקִ֖ים</span> · <i>va-yashev et-sar ha-mashqim</i><br><span class="gloss">= and-yashev sar the-mashqim</span></td></tr>
+<tr><td><b>S22</b></td><td>after STEP_Gn_40_22 — the baker hanged</td><td>And the chief of the bakers he hanged — as Joseph had interpreted to them.</td><td>LET(zekhartani_ve_hizkartani_el_paro) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(zekhartani-and-hizkartani-to-paro) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְאֵ֛ת שַׂ֥ר הָאֹפִ֖ים תָּלָ֑ה</span> · <i>ve-et sar ha-ofim tala</i><br><span class="gloss">= and sar the-ofim tala</span></td></tr>
+<tr><td><b>S23</b></td><td>after STEP_Gn_40_23 — the forgetting</td><td>And the chief of the cupbearers did not remember Joseph — and he forgot him.</td><td>LET(zekhartani_ve_hizkartani_el_paro) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(zekhartani-and-hizkartani-to-paro) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְלֹֽא זָכַ֧ר שַֽׂר הַמַּשְׁקִ֛ים</span> · <i>ve-lo-zakhar sar-ha-mashqim</i><br><span class="gloss">= and-not-male sar-the-mashqim</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_63_two_dreams_prison — Two dreams in prison: the forgotten petition (40:1-23) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — after STEP_Gn_40_1 — the two offenders
+    וַיְהִ֗י אַחַר֙ הַדְּבָרִ֣ים הָאֵ֔לֶּה (va-yehi achar ha-devarim ha-ele)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Gn_40_2 — the wrath
+    וַיִּקְצֹ֣ף פַּרְעֹ֔ה עַ֖ל שְׁנֵ֣י (va-yiqtzof paro al shene)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Gn_40_3 — into Joseph&#x27;s prison
+    וַיִּתֵּ֨ן אֹתָ֜ם בְּמִשְׁמַ֗ר בֵּ֛ית (va-yiten et-m be-mishmar bet)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Gn_40_4 — appointed to serve
+    וַ֠יִּפְקֹד שַׂ֣ר הַטַּבָּחִ֧ים אֶת (va-yifqod sar ha-tabachim et-)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Gn_40_5 — two dreams, one night
+    וַיַּֽחַלְמוּ֩ חֲל֨וֹם שְׁנֵיהֶ֜ם אִ֤ישׁ (va-yachalmu chalom shene-hem ish)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Gn_40_6 — the downcast faces
+    וַיָּבֹ֧א אֲלֵיהֶ֛ם יוֹסֵ֖ף בַּבֹּ֑קֶר (va-yavo ale-hem yosef ba-boqer)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — after STEP_Gn_40_7 — the question
+    וַיִּשְׁאַ֞ל אֶת סְרִיסֵ֣י פַרְעֹ֗ה (va-yishal et-serise faro)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S8 — after STEP_Gn_40_8 — the tell-demand
+    וַיֹּאמְר֣וּ אֵלָ֔יו חֲל֣וֹם חָלַ֔מְנוּ (va-yomru elay-v chalom chalamnu)
+    PASS  LET(sapru_na_li) pushed and OPEN  (queue=[&#x27;sapru_na_li&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S9 — after STEP_Gn_40_9 — the vine told
+    וַיְסַפֵּ֧ר שַֽׂר הַמַּשְׁקִ֛ים אֶת (va-yesaper sar-ha-mashqim et-)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S10 — after STEP_Gn_40_10 — the three branches
+    וּבַגֶּ֖פֶן שְׁלֹשָׁ֣ה שָׂרִיגִ֑ם וְהִ֤יא (u-va-gefen shelosha sarigim ve-hi)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S11 — after STEP_Gn_40_11 — the cup in my hand
+    וְכ֥וֹס פַּרְעֹ֖ה בְּיָדִ֑י וָאֶקַּ֣ח (ve-khos paro be-yadi-y va-eqach)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S12 — after STEP_Gn_40_12 — this is its interpretation (1)
+    וַיֹּ֤אמֶר לוֹ֙ יוֹסֵ֔ף זֶ֖ה (va-yomer l-o yosef ze)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S13 — after STEP_Gn_40_13 — the head lifted up
+    בְּע֣וֹד שְׁלֹ֣שֶׁת יָמִ֗ים יִשָּׂ֤א (be-od sheloshet yamim yisa)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S14 — after STEP_Gn_40_14 — the remember-demand
+    כִּ֧י אִם זְכַרְתַּ֣נִי אִתְּךָ֗ (ki im-zekharta-ni et-kha)
+    PASS  LET(zekhartani_ve_hizkartani_el_paro) pushed and OPEN  (queue=[&#x27;zekhartani_ve_hizkartani_el_paro&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S15 — after STEP_Gn_40_15 — stolen, I was stolen
+    כִּֽי גֻנֹּ֣ב גֻּנַּ֔בְתִּי מֵאֶ֖רֶץ (ki-gunov gunavti me-eretz)
+    PASS  LET(zekhartani_ve_hizkartani_el_paro) pushed and OPEN  (queue=[&#x27;zekhartani_ve_hizkartani_el_paro&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S16 — after STEP_Gn_40_16 — the baker encouraged
+    וַיַּ֥רְא שַׂר הָאֹפִ֖ים כִּ֣י (va-yar sar-ha-ofim ki)
+    PASS  LET(zekhartani_ve_hizkartani_el_paro) pushed and OPEN  (queue=[&#x27;zekhartani_ve_hizkartani_el_paro&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S17 — after STEP_Gn_40_17 — the birds eat
+    וּבַסַּ֣ל הָֽעֶלְי֔וֹן מִכֹּ֛ל מַאֲכַ֥ל (u-va-sal ha-elyon mi-kol maakhal)
+    PASS  LET(zekhartani_ve_hizkartani_el_paro) pushed and OPEN  (queue=[&#x27;zekhartani_ve_hizkartani_el_paro&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S18 — after STEP_Gn_40_18 — this is its interpretation (2)
+    וַיַּ֤עַן יוֹסֵף֙ וַיֹּ֔אמֶר זֶ֖ה (va-yaan yosef va-yomer ze)
+    PASS  LET(zekhartani_ve_hizkartani_el_paro) pushed and OPEN  (queue=[&#x27;zekhartani_ve_hizkartani_el_paro&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S19 — after STEP_Gn_40_19 — the head lifted off
+    בְּע֣וֹד שְׁלֹ֣שֶׁת יָמִ֗ים יִשָּׂ֨א (be-od sheloshet yamim yisa)
+    PASS  LET(zekhartani_ve_hizkartani_el_paro) pushed and OPEN  (queue=[&#x27;zekhartani_ve_hizkartani_el_paro&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S20 — after STEP_Gn_40_20 — the birthday feast
+    וַיְהִ֣י בַּיּ֣וֹם הַשְּׁלִישִׁ֗י י֚וֹם (va-yehi ba-yom ha-shelishi yom)
+    PASS  LET(zekhartani_ve_hizkartani_el_paro) pushed and OPEN  (queue=[&#x27;zekhartani_ve_hizkartani_el_paro&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S21 — after STEP_Gn_40_21 — the cupbearer restored
+    וַיָּ֛שֶׁב אֶת שַׂ֥ר הַמַּשְׁקִ֖ים (va-yashev et-sar ha-mashqim)
+    PASS  LET(zekhartani_ve_hizkartani_el_paro) pushed and OPEN  (queue=[&#x27;zekhartani_ve_hizkartani_el_paro&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S22 — after STEP_Gn_40_22 — the baker hanged
+    וְאֵ֛ת שַׂ֥ר הָאֹפִ֖ים תָּלָ֑ה (ve-et sar ha-ofim tala)
+    PASS  LET(zekhartani_ve_hizkartani_el_paro) pushed and OPEN  (queue=[&#x27;zekhartani_ve_hizkartani_el_paro&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S23 — after STEP_Gn_40_23 — the forgetting
+    וְלֹֽא זָכַ֧ר שַֽׂר הַמַּשְׁקִ֛ים (ve-lo-zakhar sar-ha-mashqim)
+    PASS  LET(zekhartani_ve_hizkartani_el_paro) pushed and OPEN  (queue=[&#x27;zekhartani_ve_hizkartani_el_paro&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_63_two_dreams_prison.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_63_two_dreams_prison — 40:1-23
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_63_two_dreams_prison.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Two dreams in prison: the forgotten petition (40:1-23)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_63_two_dreams_prison&quot;)
+
+# -------------------------- Gen.40.1 · THE_TWO_OFFENDERS -------------------
+# וַיְהִי אַחַר הַדְּבָרִים הָאֵלֶּה חָטְאוּ מַשְׁקֵה מֶלֶךְ־מִצְרַיִם
+# וְהָאֹפֶה לַאֲדֹנֵיהֶם לְמֶלֶךְ מִצְרָיִם
+# &quot;[EN-AID] And it came to pass after these things, the cupbearer of the
+# king of Egypt and the baker offended their lord, the king of Egypt.&quot;
+m.step(&quot;Gen.40.1&quot;)
+# ‹חָטְאוּ מַשְׁקֵה מֶלֶךְ־מִצְרַיִם וְהָאֹפֶה לַאֲדֹנֵיהֶם› (“sin causing-
+# to-drink king Egypt and-the-cook to-lord-them/their”) — fact holds: sin-
+# causing-to-drink-and-cook-to-adonehem
+m.fact(&quot;chatu_mashqe_ve_ofe_la_adonehem&quot;)
+
+# -------------------------- Gen.40.2 · THE_WRATH ---------------------------
+# וַיִּקְצֹף פַּרְעֹה עַל שְׁנֵי סָרִיסָיו עַל שַׂר הַמַּשְׁקִים וְעַל שַׂר
+# הָאוֹפִים
+# &quot;[EN-AID] And Pharaoh was wroth against his two officers, against the
+# chief of the cupbearers and against the chief of the bakers.&quot;
+m.step(&quot;Gen.40.2&quot;)
+# ‹וְעַל שַׂר הָאוֹפִים› (“and-over officer the-cook”) — fact holds: qatzaf-
+# Pharaoh-over-two-sarisav
+m.fact(&quot;qatzaf_paro_al_shene_sarisav&quot;)
+
+# -------------------------- Gen.40.3 · INTO_JOSEPHS_PRISON -----------------
+# וַיִּתֵּן אֹתָם בְּמִשְׁמַר בֵּית שַׂר הַטַבָּחִים אֶל־בֵּית הַסֹּהַר
+# מְקוֹם אֲשֶׁר יוֹסֵף אָסוּר שָׁם
+# &quot;[EN-AID] And he gave them into custody, the house of the chief of the
+# slaughterers, to the prison-house, the place where Joseph was bound.&quot;
+m.step(&quot;Gen.40.3&quot;)
+# ‹מְקוֹם אֲשֶׁר יוֹסֵף אָסוּר שָׁם› (“place which Joseph yoke there”) —
+# fact holds: in-guard-place-which-Joseph-yoke-there
+m.fact(&quot;be_mishmar_meqom_asher_yosef_asur_sham&quot;)
+
+# -------------------------- Gen.40.4 · APPOINTED_TO_SERVE ------------------
+# וַיִּפְקֹד שַׂר הַטַּבָּחִים אֶת־יוֹסֵף אִתָּם וַיְשָׁרֶת אֹתָם וַיִּהְיוּ
+# יָמִים בְּמִשְׁמָר
+# &quot;[EN-AID] And the chief of the slaughterers appointed Joseph with them,
+# and he served them; and they were days in custody.&quot;
+m.step(&quot;Gen.40.4&quot;)
+# ‹וַיִּפְקֹד שַׂר הַטַּבָּחִים אֶת־יוֹסֵף אִתָּם וַיְשָׁרֶת אֹתָם› (“and-
+# count/visit officer the-butcher obj-marker Joseph with-them/their and-
+# attend-as-a-menial obj-marker-them/their”) — fact holds: and-attend-as-a-
+# menial-otam(Joseph)
+m.fact(&quot;va_yesharet_otam(yosef)&quot;)
+
+# -------------------------- Gen.40.5 · TWO_DREAMS_ONE_NIGHT ----------------
+# וַיַּחַלְמוּ חֲלוֹם שְׁנֵיהֶם אִישׁ חֲלֹמוֹ בְּלַיְלָה אֶחָד אִישׁ
+# כְּפִתְרוֹן חֲלֹמוֹ הַמַּשְׁקֶה וְהָאֹפֶה אֲשֶׁר לְמֶלֶךְ מִצְרַיִם אֲשֶׁר
+# אֲסוּרִים בְּבֵית הַסֹּהַר
+# &quot;[EN-AID] And they dreamed a dream, the two of them, each his dream in one
+# night, each according to the interpretation of his dream — the cupbearer
+# and the baker of the king of Egypt, who were bound in the prison-house.&quot;
+m.step(&quot;Gen.40.5&quot;)
+# ‹וַיַּחַלְמוּ חֲלוֹם שְׁנֵיהֶם אִישׁ חֲלֹמוֹ בְּלַיְלָה אֶחָד› (“and-bind-
+# firmly dream two-them/their man dream-him/its in-night one”) — event:
+# chalam — agent two-the-sarisim; theme chalomot
+m.event(&quot;chalam&quot;, agent=&quot;shene_ha_sarisim&quot;, themes=[&quot;chalomot&quot;])
+# ‹אֲשֶׁר אֲסוּרִים בְּבֵית הַסֹּהַר› (“which yoke in-house the-dungeon”) —
+# fact holds: yoke-in-house-the-dungeon
+m.fact(&quot;asurim_be_vet_ha_sohar&quot;)
+
+# -------------------------- Gen.40.6 · THE_DOWNCAST_FACES ------------------
+# וַיָּבֹא אֲלֵיהֶם יוֹסֵף בַּבֹּקֶר וַיַּרְא אֹתָם וְהִנָּם זֹעֲפִים
+# &quot;[EN-AID] And Joseph came to them in the morning, and saw them — and
+# behold, they were downcast.&quot;
+m.step(&quot;Gen.40.6&quot;)
+# ‹וַיַּרְא אֹתָם וְהִנָּם זֹעֲפִים› (“and-see obj-marker-them/their and-
+# lo!-them/their boil-up”) — fact holds: and-see-otam-and-hinam-boil-
+# up(Joseph)
+m.fact(&quot;va_yar_otam_ve_hinam_zoafim(yosef)&quot;)
+
+# -------------------------- Gen.40.7 · THE_QUESTION ------------------------
+# וַיִּשְׁאַל אֶת־סְרִיסֵי פַרְעֹה אֲשֶׁר אִתּוֹ בְמִשְׁמַר בֵּית אֲדֹנָיו
+# לֵאמֹר מַדּוּעַ פְּנֵיכֶם רָעִים הַיּוֹם
+# &quot;[EN-AID] And he asked Pharaoh&#x27;s officers who were with him in custody of
+# his master&#x27;s house, saying: Why are your faces bad today?&quot;
+m.step(&quot;Gen.40.7&quot;)
+# ‹לֵאמֹר מַדּוּעַ פְּנֵיכֶם רָעִים הַיּוֹם› (“to-say what-known? face-
+# you/your(pl) bad the-day”) — fact holds: what-known?-penekhem-bad-the-
+# day(Joseph)
+m.fact(&quot;madua_penekhem_raim_ha_yom(yosef)&quot;)
+
+# -------------------------- Gen.40.8 · THE_TELL_DEMAND ---------------------
+# וַיֹּאמְרוּ אֵלָיו חֲלוֹם חָלַמְנוּ וּפֹתֵר אֵין אֹתוֹ וַיֹּאמֶר אֲלֵהֶם
+# יוֹסֵף הֲלוֹא לֵאלֹהִים פִּתְרֹנִים סַפְּרוּ־נָא לִי
+# &quot;[EN-AID] And they said to him: We have dreamed a dream, and there is no
+# interpreter of it. And Joseph said to them: Are not interpretations God&#x27;s?
+# Tell it, please, to me.&quot;
+m.step(&quot;Gen.40.8&quot;)
+# ‹הֲלוֹא לֵאלֹהִים פִּתְרֹנִים סַפְּרוּ־נָא לִי› (“is-it-not to-God
+# interpretation count please to-me/my”) — Joseph speaks a demand — LET:
+# count-please-to-me
+m.declare(&quot;yosef&quot;, &quot;LET&quot;,
+          &quot;sapru_na_li&quot;)
+
+# -------------------------- Gen.40.9 · THE_VINE_TOLD -----------------------
+# וַיְסַפֵּר שַׂר־הַמַּשְׁקִים אֶת־חֲלֹמוֹ לְיוֹסֵף וַיֹּאמֶר לוֹ
+# בַּחֲלוֹמִי וְהִנֵּה־גֶפֶן לְפָנָי
+# &quot;[EN-AID] And the chief of the cupbearers told his dream to Joseph, and
+# said to him: In my dream — behold, a vine before me.&quot;
+m.step(&quot;Gen.40.9&quot;)
+# ‹וַיְסַפֵּר שַׂר־הַמַּשְׁקִים אֶת־חֲלֹמוֹ לְיוֹסֵף› (“and-count officer
+# the-causing-to-drink obj-marker dream-him/its to-Joseph”) — demand settled
+# (popped from the queue): count-please-to-me
+m.result(&quot;sapru_na_li&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Gen.40.10 · THE_THREE_BRANCHES -----------------
+# וּבַגֶּפֶן שְׁלֹשָׁה שָׂרִיגִם וְהִיא כְפֹרַחַת עָלְתָה נִצָּהּ
+# הִבְשִׁילוּ אַשְׁכְּלֹתֶיהָ עֲנָבִים
+# &quot;[EN-AID] And on the vine three branches; and it was as though budding —
+# its blossom shot up, its clusters ripened into grapes.&quot;
+m.step(&quot;Gen.40.10&quot;)
+# ‹וּבַגֶּפֶן שְׁלֹשָׁה שָׂרִיגִם› (“and-in-vine three tendril”) — fact
+# holds: three-tendril-porachat-boil-up-grape
+m.fact(&quot;shelosha_sarigim_porachat_hivshilu_anavim&quot;)
+
+# -------------------------- Gen.40.11 · THE_CUP_IN_MY_HAND -----------------
+# וְכוֹס פַּרְעֹה בְּיָדִי וָאֶקַּח אֶת־הָעֲנָבִים וָאֶשְׂחַט אֹתָם
+# אֶל־כּוֹס פַּרְעֹה וָאֶתֵּן אֶת־הַכּוֹס עַל־כַּף פַּרְעֹה
+# &quot;[EN-AID] And Pharaoh&#x27;s cup was in my hand; and I took the grapes and
+# pressed them into Pharaoh&#x27;s cup, and I gave the cup onto Pharaoh&#x27;s palm.&quot;
+m.step(&quot;Gen.40.11&quot;)
+# ‹וְכוֹס פַּרְעֹה בְּיָדִי› (“and-cup Pharaoh in-hand-me/my”) — fact holds:
+# cup-Pharaoh-in-yadi-and-tread-out-and-set
+m.fact(&quot;kos_paro_be_yadi_va_eschat_va_eten&quot;)
+
+# -------------------------- Gen.40.12 · THIS_IS_ITS_INTERPRETATION_1 -------
+# וַיֹּאמֶר לוֹ יוֹסֵף זֶה פִּתְרֹנוֹ שְׁלֹשֶׁת הַשָּׂרִגִים שְׁלֹשֶׁת
+# יָמִים הֵם
+# &quot;[EN-AID] And Joseph said to him: This is its interpretation — the three
+# branches, three days are they.&quot;
+m.step(&quot;Gen.40.12&quot;)
+# ‹זֶה פִּתְרֹנוֹ› (“this interpretation-him/its”) — fact holds: this-
+# pitrono-three-day(Joseph)
+m.fact(&quot;ze_pitrono_sheloshet_yamim(yosef)&quot;)
+
+# -------------------------- Gen.40.13 · THE_HEAD_LIFTED_UP -----------------
+# בְּעוֹד שְׁלֹשֶׁת יָמִים יִשָּׂא פַרְעֹה אֶת־רֹאשֶׁךָ וַהֲשִׁיבְךָ
+# עַל־כַּנֶּךָ וְנָתַתָּ כוֹס־פַּרְעֹה בְּיָדוֹ כַּמִּשְׁפָּט הָרִאשׁוֹן
+# אֲשֶׁר הָיִיתָ מַשְׁקֵהוּ
+# &quot;[EN-AID] In yet three days Pharaoh will lift your head and restore you to
+# your post, and you will give Pharaoh&#x27;s cup into his hand, as the former
+# custom when you were his cupbearer.&quot;
+m.step(&quot;Gen.40.13&quot;)
+# ‹בְּעוֹד שְׁלֹשֶׁת יָמִים› (“in-still/again three day”) — fact holds:
+# lift/carry-Pharaoh-obj-marker-roshekha-and-hashivkha-over-kanekha
+m.fact(&quot;yisa_paro_et_roshekha_va_hashivkha_al_kanekha&quot;)
+
+# -------------------------- Gen.40.14 · THE_REMEMBER_DEMAND ----------------
+# כִּי אִם־זְכַרְתַּנִי אִתְּךָ כַּאֲשֶׁר יִיטַב לָךְ וְעָשִׂיתָ־נָּא
+# עִמָּדִי חָסֶד וְהִזְכַּרְתַּנִי אֶל־פַּרְעֹה וְהוֹצֵאתַנִי מִן־הַבַּיִת
+# הַזֶּה
+# &quot;[EN-AID] But if you remember me with you when it is well with you — do,
+# please, kindness with me: mention me to Pharaoh, and bring me out of this
+# house.&quot;
+m.step(&quot;Gen.40.14&quot;)
+# ‹זְכַרְתַּנִי אִתְּךָ כַּאֲשֶׁר יִיטַב לָךְ וְעָשִׂיתָ־נָּא עִמָּדִי חָסֶד
+# וְהִזְכַּרְתַּנִי אֶל־פַּרְעֹה› (“mark-me/my with-you/your like-as/which
+# do-well to-you/your and-make please along-with-me/my kindness and-mark-
+# me/my to Pharaoh”) — Joseph speaks a demand — LET: zekhartani-and-
+# hizkartani-to-Pharaoh
+m.declare(&quot;yosef&quot;, &quot;LET&quot;,
+          &quot;zekhartani_ve_hizkartani_el_paro&quot;)
+
+# -------------------------- Gen.40.15 · STOLEN_I_WAS_STOLEN ----------------
+# כִּי־גֻנֹּב גֻּנַּבְתִּי מֵאֶרֶץ הָעִבְרִים וְגַם־פֹּה לֹא־עָשִׂיתִי
+# מְאוּמָה כִּי־שָׂמוּ אֹתִי בַּבּוֹר
+# &quot;[EN-AID] For stolen, I was stolen from the land of the Hebrews; and here
+# also I have done nothing, that they should put me in the pit.&quot;
+m.step(&quot;Gen.40.15&quot;)
+# ‹כִּי־גֻנֹּב גֻּנַּבְתִּי מֵאֶרֶץ הָעִבְרִים› (“that steal steal from-
+# earth the-Hebrew”) — fact holds: steal-steal-is-it-not-make-speck(Joseph)
+m.fact(&quot;gunov_gunavti_lo_asiti_meuma(yosef)&quot;)
+
+# -------------------------- Gen.40.16 · THE_BAKER_ENCOURAGED ---------------
+# וַיַּרְא שַׂר־הָאֹפִים כִּי טוֹב פָּתָר וַיֹּאמֶר אֶל־יוֹסֵף אַף־אֲנִי
+# בַּחֲלוֹמִי וְהִנֵּה שְׁלֹשָׁה סַלֵּי חֹרִי עַל־רֹאשִׁי
+# &quot;[EN-AID] And the chief of the bakers saw that he had interpreted well,
+# and said to Joseph: I also, in my dream — behold, three baskets of white
+# bread on my head.&quot;
+m.step(&quot;Gen.40.16&quot;)
+# ‹וַיַּרְא שַׂר־הָאֹפִים כִּי טוֹב פָּתָר› (“and-see officer the-cook that
+# good open-up”) — fact holds: very-widely-used-as-a-relati-good-open-up-
+# meaning-accession-ani-in-the-chalomi(officer-the-cook)
+m.fact(&quot;ki_tov_patar_af_ani_ba_chalomi(sar_ha_ofim)&quot;)
+
+# -------------------------- Gen.40.17 · THE_BIRDS_EAT ----------------------
+# וּבַסַּל הָעֶלְיוֹן מִכֹּל מַאֲכַל פַּרְעֹה מַעֲשֵׂה אֹפֶה וְהָעוֹף אֹכֵל
+# אֹתָם מִן־הַסַּל מֵעַל רֹאשִׁי
+# &quot;[EN-AID] And in the top basket, of all Pharaoh&#x27;s food, baker&#x27;s work; and
+# the bird was eating them from the basket, from upon my head.&quot;
+m.step(&quot;Gen.40.17&quot;)
+# ‹וְהָעוֹף אֹכֵל אֹתָם מִן־הַסַּל מֵעַל רֹאשִׁי› (“and-the-flying-creature
+# eat obj-marker-them/their from the-willow-twig from-over head-me/my”) —
+# fact holds: and-the-flying-creature-eat-otam-from-over-roshi
+m.fact(&quot;ve_ha_of_okhel_otam_me_al_roshi&quot;)
+
+# -------------------------- Gen.40.18 · THIS_IS_ITS_INTERPRETATION_2 -------
+# וַיַּעַן יוֹסֵף וַיֹּאמֶר זֶה פִּתְרֹנוֹ שְׁלֹשֶׁת הַסַּלִּים שְׁלֹשֶׁת
+# יָמִים הֵם
+# &quot;[EN-AID] And Joseph answered and said: This is its interpretation — the
+# three baskets, three days are they.&quot;
+m.step(&quot;Gen.40.18&quot;)
+# ‹זֶה פִּתְרֹנוֹ› (“this interpretation-him/its”) — fact holds: this-
+# pitrono-three-the-willow-twig(Joseph)
+m.fact(&quot;ze_pitrono_sheloshet_ha_salim(yosef)&quot;)
+
+# -------------------------- Gen.40.19 · THE_HEAD_LIFTED_OFF ----------------
+# בְּעוֹד שְׁלֹשֶׁת יָמִים יִשָּׂא פַרְעֹה אֶת־רֹאשְׁךָ מֵעָלֶיךָ וְתָלָה
+# אוֹתְךָ עַל־עֵץ וְאָכַל הָעוֹף אֶת־בְּשָׂרְךָ מֵעָלֶיךָ
+# &quot;[EN-AID] In yet three days Pharaoh will lift your head from off you, and
+# hang you on a tree; and the bird will eat your flesh from off you.&quot;
+m.step(&quot;Gen.40.19&quot;)
+# ‹יִשָּׂא פַרְעֹה אֶת־רֹאשְׁךָ מֵעָלֶיךָ› (“lift/carry Pharaoh obj-marker
+# head-you/your from-over-you/your”) — fact holds: lift/carry-obj-marker-
+# roshkha-from-alekha-and-suspend(pitron)
+m.fact(&quot;yisa_et_roshkha_me_alekha_ve_tala(pitron)&quot;)
+
+# -------------------------- Gen.40.20 · THE_BIRTHDAY_FEAST -----------------
+# וַיְהִי בַּיּוֹם הַשְּׁלִישִׁי יוֹם הֻלֶּדֶת אֶת־פַּרְעֹה וַיַּעַשׂ
+# מִשְׁתֶּה לְכָל־עֲבָדָיו וַיִּשָּׂא אֶת־רֹאשׁ שַׂר הַמַּשְׁקִים
+# וְאֶת־רֹאשׁ שַׂר הָאֹפִים בְּתוֹךְ עֲבָדָיו
+# &quot;[EN-AID] And it was on the third day, Pharaoh&#x27;s birthday, and he made a
+# feast for all his servants; and he lifted the head of the chief of the
+# cupbearers and the head of the chief of the bakers among his servants.&quot;
+m.step(&quot;Gen.40.20&quot;)
+# ‹וַיְהִי בַּיּוֹם הַשְּׁלִישִׁי יוֹם הֻלֶּדֶת אֶת־פַּרְעֹה› (“and-be in-
+# day the-third day bear-young obj-marker Pharaoh”) — fact holds: day-bear-
+# young-obj-marker-Pharaoh-and-lift/carry-obj-marker-head
+m.fact(&quot;yom_huledet_et_paro_va_yisa_et_rosh&quot;)
+
+# -------------------------- Gen.40.21 · THE_CUPBEARER_RESTORED -------------
+# וַיָּשֶׁב אֶת־שַׂר הַמַּשְׁקִים עַל־מַשְׁקֵהוּ וַיִּתֵּן הַכּוֹס עַל־כַּף
+# פַּרְעֹה
+# &quot;[EN-AID] And he restored the chief of the cupbearers to his cupbearing;
+# and he gave the cup onto Pharaoh&#x27;s palm.&quot;
+m.step(&quot;Gen.40.21&quot;)
+# ‹וַיָּשֶׁב אֶת־שַׂר הַמַּשְׁקִים עַל־מַשְׁקֵהוּ› (“and-return obj-marker
+# officer the-causing-to-drink over causing-to-drink-him/its”) — fact holds:
+# and-return-obj-marker-officer-the-causing-to-drink-over-mashqehu
+m.fact(&quot;va_yashev_et_sar_ha_mashqim_al_mashqehu&quot;)
+
+# -------------------------- Gen.40.22 · THE_BAKER_HANGED -------------------
+# וְאֵת שַׂר הָאֹפִים תָּלָה כַּאֲשֶׁר פָּתַר לָהֶם יוֹסֵף
+# &quot;[EN-AID] And the chief of the bakers he hanged — as Joseph had
+# interpreted to them.&quot;
+m.step(&quot;Gen.40.22&quot;)
+# ‹כַּאֲשֶׁר פָּתַר לָהֶם יוֹסֵף› (“like-as/which open-up to-them/their
+# Joseph”) — fact holds: suspend-like-which-open-up-to-them-Joseph
+m.fact(&quot;tala_ka_asher_patar_lahem_yosef&quot;)
+
+# -------------------------- Gen.40.23 · THE_FORGETTING ---------------------
+# וְלֹא־זָכַר שַׂר־הַמַּשְׁקִים אֶת־יוֹסֵף וַיִּשְׁכָּחֵהוּ
+# &quot;[EN-AID] And the chief of the cupbearers did not remember Joseph — and he
+# forgot him.&quot;
+m.step(&quot;Gen.40.23&quot;)
+# ‹וְלֹא־זָכַר שַׂר־הַמַּשְׁקִים אֶת־יוֹסֵף וַיִּשְׁכָּחֵהוּ› (“and-not mark
+# officer the-causing-to-drink obj-marker Joseph and-forget-him/its”) — fact
+# holds: and-is-it-not-mark-and-yishkachehu(officer-the-causing-to-drink)
+m.fact(&quot;ve_lo_zakhar_va_yishkachehu(sar_ha_mashqim)&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;zekhartani_ve_hizkartani_el_paro&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 2
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;chatu_mashqe_ve_ofe_la_adonehem&#x27;, &#x27;qatzaf_paro_al_shene_sarisav&#x27;, &#x27;be_mishmar_meqom_asher_yosef_asur_sham&#x27;, &#x27;va_yesharet_otam(yosef)&#x27;, &#x27;asurim_be_vet_ha_sohar&#x27;, &#x27;va_yar_otam_ve_hinam_zoafim(yosef)&#x27;, &#x27;madua_penekhem_raim_ha_yom(yosef)&#x27;, &#x27;shelosha_sarigim_porachat_hivshilu_anavim&#x27;, &#x27;kos_paro_be_yadi_va_eschat_va_eten&#x27;, &#x27;ze_pitrono_sheloshet_yamim(yosef)&#x27;, &#x27;yisa_paro_et_roshekha_va_hashivkha_al_kanekha&#x27;, &#x27;gunov_gunavti_lo_asiti_meuma(yosef)&#x27;, &#x27;ki_tov_patar_af_ani_ba_chalomi(sar_ha_ofim)&#x27;, &#x27;ve_ha_of_okhel_otam_me_al_roshi&#x27;, &#x27;ze_pitrono_sheloshet_ha_salim(yosef)&#x27;, &#x27;yisa_et_roshkha_me_alekha_ve_tala(pitron)&#x27;, &#x27;yom_huledet_et_paro_va_yisa_et_rosh&#x27;, &#x27;va_yashev_et_sar_ha_mashqim_al_mashqehu&#x27;, &#x27;tala_ka_asher_patar_lahem_yosef&#x27;, &#x27;ve_lo_zakhar_va_yishkachehu(sar_ha_mashqim)&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 4
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

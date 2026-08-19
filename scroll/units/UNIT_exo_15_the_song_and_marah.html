@@ -1,0 +1,852 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>exo_15_the_song_and_marah — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/exo_15_the_song_and_marah?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The Song and Marah (15:1-27) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>exo_15_the_song_and_marah</b> · Exodus 15:1-27 · derive logic_derived_v1 · phase FWD-29</div>
+<div class="meta"><a href="../#Exod/15/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">אָשִׁ֤ירָה לַֽיהוָה֙</span> · <i>ashira la-YHWH</i> · &#x27;I will sing to the LORD&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DERIVED 2026-08-09 · FORWARD ERA unit #29 (run FWD-6 block 5; Exod 1-15 continuous behind it). Span: 15:1-27, whole chapter: 27 verses (SNAPSHOT-verified; 15:12, 15:18, 15:24 without etnachta). Oral layer IN-PIPELINE: manifest 13/13 VERIFIED, zero FAILED — see oral_audit_note_en. BLOCK HISTORY: the first derivation session died 2026-08-09 18:27, nine seconds after the manifest verified — the unit was rebuilt from that verified inheritance on owner order the same evening. MACHINE PROFILE. THREE DECLAREs, ONE RESULT, TWO EVENTS, ONE NAME. The SONG EVENT stamps 15:1 (shirat ha-yam — the corpus&#x27;s first song; the refrain&#x27;s seven tokens minted, and returned VERBATIM at 15:21, asserted). The Song&#x27;s body (15:2-18) encodes as sung PRECONDITION_STATE facts: the salvation-arc receipted in first person (14:13 → 14:30 → 15:2); the war-doctrine resolved to a title (14:14 → 14:25 → 15:3); 14:21&#x27;s east wind re-sung as the nostrils&#x27; blast (15:8); the enemy&#x27;s FIVE dead vows quoted unconjoined (15:9 — the quoted-mood class, agent drowned: no push); the swallow-ledger extended (7:12&#x27;s staff → 15:12&#x27;s earth, Num 16:32 armed); the panic-quartet forecast (15:14-16, Joshua&#x27;s receipts armed outside the Torah); the sanctuary-forecast OPEN (15:17, 25:8 armed); the reign-line (15:18). The prose warrant-verse 15:19 re-inscribes 14:29 as testimony. MIRIAM SIGNED at 15:20 (the 2:4 sister named + titled prophetess; registry append at fold). Miriam&#x27;s imperative pushes at 15:21 — OPEN at close (unnarrated-compliance class). The murmur-verb&#x27;s exact form debuts at 15:24 (its Torah-three asserted: Marah, the spies, after Korah); ma-nishte pushed 15:24, POPPED 15:25 by the SWEETENING EVENT (the corpus&#x27;s first repair-miracle; the could-not-drink clause of 7:21 returned at 15:23, asserted — one river ruined, one pool healed). Marah NAMED (REGISTRY 1). The first statute-station files at 15:25 (choq u-mishpat, law before Sinai) with the VERDICT-LESS TEST (nisahu — TESTS 0; 16:4 armed). The LISTEN-COVENANT pushes at 15:26 — perpetual-conditional, OPEN (19:5 armed; the healer-title extends the I-am-the-LORD formula). Elim closes the water-arc (15:27). Queue at close: TWO OPEN in-unit (Miriam&#x27;s shiru — unnarrated class; the listen-covenant — perpetual class) plus the standing opens behind. REGISTRY 1; TESTS 0. CARE-POINTS: the Song&#x27;s archaic register (the -mo object suffixes clustering, the paragogic nun, the three no-etnachta verses); the quoted dead volitives (15:9 push nothing); the vow-cohortatives (15:2, self-directed praise, not demands); Miriam&#x27;s masculine la-hem (15:21); the then-word pair (15:1 song / 15:15 dread, asserted); the there-word triple (15:25 ×2 + 15:27, asserted); the verse-numbering note: the murmur-form census (15:24, Num 14:2, Num 17:6) is exact-form only — the lodge-verb homographs share the skeleton in other forms and are excluded by form. WATCHLIST ARMS: 16:2 (murmur + Aaron), 16:4 (the test named), 17:1-7 (the thirst repeated; the cry), 19:5 (if-you-listen scaled), 24:4 (twelve pillars), 25:8 (the sanctuary-forecast&#x27;s receipt), Num 16:32 (the earth-swallow), Num 20 (the water-striking), Num 21:17 (the Well — the second then-sang, VERIFIED pair), Num 12:13 (Miriam&#x27;s five-word prayer, standing). Outside-Torah names (named-only): Josh 2:9-11 + 24:25, Ezra, Jeremiah&#x27;s rebelled-twin, Solomon&#x27;s dedication, Ps 146:10.</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-09 (IN-PIPELINE, forward era; manifest logic/oral_audit/manifests/exo_15_the_song_and_marah_claims.json 13/13 VERIFIED, zero FAILED; record logic/oral_audit/AUDIT_exo_15_2026-08-09.md). CROWNS (chain-attested + DB-verified). THE GUARD-DAGESHIM [EX15-01, MS on 15:1/11/13/16 — the Masorah&#x27;s Daniel-5 guard-list; Lekach Tov; the Rokeach; Ben Asher] — THE UNIT&#x27;S MARQUEE: the Song&#x27;s consonants harden exactly where praise could slip — מי כמכה (&quot;who is like You&quot;) first SOFT then HARD &#x27;so as not to stammer מיכה (MICAH) beside the Name&#x27; (the idol barred from the Song by one dot); גאלת (&quot;You redeemed&quot;) gimel HARD lest it sound as מגאל (&quot;defiled&quot;) and one blaspheme; כאבן (&quot;like a stone&quot;) kaf HARD lest A STONE silence You; גאה גאה (&quot;highly exalted&quot;) soft-then-hard in the twin-pairs file; Lekach Tov: &#x27;at first a WEAK LIP, at the end WITH A FULL MOUTH.&#x27; THE TWO LEAN LIKE-YOU&#x27;S [EX15-02, MS + Kitzur on 15:11]: the Ramah — every כמוך (&quot;like You&quot;) in the Torah full-vav without final he EXCEPT TWO, lean WITH the he, BOTH IN THIS VERSE (census exact); באלם (&quot;among the mighty&quot;) lean-of-lean Torah-unique, read by Gittin and the Mekhilta as &#x27;among THE MUTE&#x27; — the darkest praise in the brightest line; Isaiah&#x27;s oak-idols the full twin. THE TEN SONGS [EX15-03, Kitzur on 15:1]: אז ישיר (&quot;then sang&quot;) exactly twice in the Torah — the Sea and the Well (Num 21:17, where Moses goes unnamed, &#x27;FOR HE WAS STRUCK THROUGH WATER&#x27;); the yod counts the TEN SONGS, the last unsung; and מאז (&quot;since then,&quot; 5:23) — &#x27;with the word I complained, with that word I BEGIN THE PRAISE.&#x27; THE PEOPLE FORMED TWICE [EX15-04, Kitzur on 15:13]: עם זו (&quot;the people this-one&quot;) twice in the Torah, both in this Song (redeemed / acquired), Isaiah&#x27;s &#x27;formed&#x27; the third — redemption as second creation; נחית (&quot;You guided&quot;) Torah-unique with the shepherd-cloud (each led by his stride, shaded at noon). THE DWELLING-CIPHER [EX15-05, Kitzur on 15:17]: לשבתך (&quot;for Your dwelling&quot;) Torah-unique with Solomon&#x27;s dedication-twins — &#x27;the Temple below aligned opposite the Temple above&#x27;; לשבתך = ירושלים + ציון (752 = 752, asserted); the extra yod of ידיך (&quot;Your hands&quot;) = ten miracles + ten sanctities. THE ANAGRAM-PHARMACY [EX15-06, Kitzur on 15:26]: מחלה (&quot;disease&quot;) = הלחם (&quot;the bread&quot;) = המלח (&quot;the salt&quot;), letter for letter (asserted); מחלה = 83 — &#x27;eighty-three illnesses hang on the gall; morning bread with salt and water annuls them — therefore SPRINGS are juxtaposed&#x27; (15:27); the healer&#x27;s pe SOFT, Mishpatim&#x27;s human healers both DAGESHED — Heaven heals gently, man hard (checked). THE REIGN AND THE CUTOFF [EX15-07, Kitzur + MS on 15:18]: the Kitzur rules a paseq after ימלך (&quot;shall reign&quot;) — the empires&#x27; terminus — and THE STREAM WRITES NONE (checked): chain-vs-stream divergence, dual-tracked; Moses Name-first, David kingship-first (Ps 146:10); לעלם (&quot;forever&quot;) lean. THE ONCE-VOCALIZATION [EX15-08, MS on 15:5]: יכסימו (&quot;cover them&quot;) Torah-unique — Rashi: &#x27;NOTHING LIKE IT in Scripture in its pointing&#x27;; במצלת (&quot;in the depths&quot;) on its ruled skeleton, Hilleli and Yerushalmi variants dual-tracked; the three depths in darkness (14:20 wired). THE NOSTRIL-PAIR [EX15-09, MS + Kitzur on 15:8]: אפיך (&quot;Your nostrils&quot;) exactly twice in the Torah — MS&#x27;s own pair-note to Gen 3:19&#x27;s sweat: curse-labor and rescue-blast on one noun; the four winds; בלב ים (&quot;in the heart of the sea&quot;) unique — the paved road and the drunkard. THE FIVE SENDINGS [EX15-10, Kitzur on 15:7]: תשלח (&quot;You send forth&quot;) exactly FIVE in the Torah (the Akeda&#x27;s stayed hand, send-by-whom, the burning, show-me, the mother-bird) — the fathers sent, the children brought in; קמיך (&quot;Your risers&quot;) unique with the Psalm&#x27;s therefore-You-break. THE THREE REFOUNDINGS [EX15-11, Kitzur on 15:25/22-23]: חק ומשפט (&quot;statute and ordinance&quot;) Torah-unique at Marah — Joshua at Shechem, Ezra&#x27;s teaching: three refoundings on one phrase; שם (&quot;there&quot;) = פרה אדומה (&quot;red heifer&quot;) with the inclusive one — the paradox-statute founded at the first statute-station; מרתה (&quot;to Marah&quot;) unique with its twin in Jeremiah (&quot;she has rebelled&quot;); the jewel-derash on the forced march; Job in Pharaoh&#x27;s counsel. THE BUTCHERED CHOICE [EX15-12, Kitzur on 15:4/2/6]: ומבחר (&quot;and the choice of&quot;) Torah-unique — &#x27;they went down to be BUTCHERED on the rocks of the sea&#x27;; the chariot-word&#x27;s idol-file (Josiah&#x27;s sun-chariots, Shebna); עזי (&quot;my strength&quot;) unique with the sweet-floor drawn in joy; בכח (&quot;in power&quot;) an all-Torah pair — the Song&#x27;s arm re-invoked at the calf (32:11). THE LETTER-FILE [EX15-13, MS]: the Song&#x27;s layout LAW CLOSED at 15:20 — &#x27;in a Torah scroll ONE COLUMN, five lines before and five after&#x27; (14:25&#x27;s brick-grid arm executed); באלם bet dageshed with NO paseq &#x27;against the printer&#x27;s emendation&#x27; (authority ten); עזי (&quot;my strength&quot;) with its first vowel ruled short (the ayin in קמץ חטוף, &quot;clipped qamatz&quot;) for the zayin&#x27;s dagesh that MARKS THE DROPPED ROOT-LETTER (loss spelled inside strength; בעזך 15:13 same rule); the sheva-alone rulings (נאדר, צללו, וארממנהו); כעופרת (&quot;like lead&quot;) full against the spoils&#x27;-furnace lean (Num 31:22, checked); צללו (&quot;they sank&quot;) unique — sinking, quivering lips, darkened gates; זרועך (&quot;Your arm&quot;) full vs the Yerushalmi&#x27;s lean, dual-tracked; גאונך (&quot;Your exaltation&quot;) full, the old tikkun&#x27;s variant named; מקדש (&quot;sanctuary&quot;) qof dageshed LE-TIFERET (&quot;for splendor&quot;); חקיו (&quot;His statutes&quot;) qof hard with Ben Asher cited twice in one verse (15:26); ותצאן כל (&quot;and all went out&quot;) kaf soft; ישיר (&quot;he sings&quot;) bound by maqqef; נערמו (&quot;were heaped&quot;) full-yod with MS&#x27;s own preference for the binder-stroke confessed (&quot;bound — and it is correct in my eyes&quot;).</div>
+<div class="meta">confidence: structure tested; oral layer verified 13/13</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>FORWARD ERA run 6, block 5 (owner: &quot;process the next 5 blocks of exodus&quot;). Canon continuation: Exod 15:1-27 — the Song, Miriam, Marah, Elim; whole chapter. REDO: the first session crashed 2026-08-09 18:27 with the manifest verified and no unit built; rebuilt the same evening on owner order (&quot;redo exodus 15&quot;), wall-clock timed per the owner&#x27;s request.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Span + source + conventions</td><td>SNAPSHOT prestage: 27 verses; 15:12, 15:18, 15:24 without etnachta. No ketiv/qere pairs in-span. Volitive census: the Song&#x27;s cohortatives are self-directed praise-vows (15:1 ashira; 15:2 anvehu, aromemenhu — quoted-mood, no push); the enemy&#x27;s five vows (15:9) are quoted dead — no push; the real pushes are Miriam&#x27;s imperative (15:21), the people&#x27;s plea (15:24), and the listen-covenant (15:26).</td><td>established</td></tr>
+<tr><td><b>C</b></td><td>Machine structure</td><td>Three DECLAREs, one RESULT (15:25 pops ma-nishte), two EVENTS (the Song 15:1; the sweetening 15:25 — the corpus&#x27;s first repair-miracle), one NAME (Mara, 15:23 — REGISTRY 1). The verdict-less test filed as fact (TESTS 0). The refrain&#x27;s verbatim return, the murmur-form&#x27;s Torah-three, the could-not-drink echo of 7:21, the then-pair, and the there-triple asserted at the build as machine evidence. Queue at close: TWO open in-unit (the antiphon-command, unnarrated class; the listen-covenant, perpetual class).</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Exod 15 (28 notes) + Kitzur Baal HaTurim on Exod 15 (28 notes). Manifest 13 rows: 13 VERIFIED / 0 FAILED / 0 UNCHECKABLE (re-verified at the redo before the build). The guard-dageshim; the two lean like-You&#x27;s; the ten songs; the people formed twice; the dwelling-cipher; the anagram-pharmacy; the reign-cutoff divergence; the once-vocalization; the nostril-pair; the five sendings; the three refoundings; the butchered choice; the letter-file with the Song-layout law closed.</td><td>established</td></tr>
+<tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 13/13 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-09 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits. Exod 1-15 continuous.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Ex_15_1 · Exod.15.1 · <span class='expr'>THEN_SANG_MOSES</span></h3>
+<p><span class="he">אָז יָשִׁיר־מֹשֶׁה וּבְנֵי יִשְׂרָאֵל אֶת־הַשִּׁירָה הַזֹּאת לַיהוָה וַיֹּאמְרוּ לֵאמֹר אָשִׁירָה לַיהוָה כִּי־גָאֹה גָּאָה סוּס וְרֹכְבוֹ רָמָה בַיָּם</span> · <i>az yashir-moshe u-vene yisrael et-ha-shira ha-zot la-YHWH va-yomru le-mor ashira la-YHWH ki-gao gaa sus ve-rokhv-o rama va-yam</i> · Then sang Moses and the sons of Israel this song to the LORD, and they spoke, saying: I will sing to the LORD, for He is highly exalted; the horse and its rider He has thrown into the sea.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אָ֣ז יָשִֽׁיר מֹשֶׁה֩ וּבְנֵ֨י יִשְׂרָאֵ֜ל אֶת הַשִּׁירָ֤ה הַזֹּאת֙ לַֽיהוָ֔ה וַיֹּאמְר֖וּ לֵאמֹ֑ר</span> · <i>az yashir-moshe u-vene yisrael et-ha-shira ha-zot la-YHWH va-yomru le-mor</i> · then sang Moses and the sons of Israel this song to the LORD, and they spoke, saying (etnachta on le-mor) [VERIFIED: SNAPSHOT Exod.15.1 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אָשִׁ֤ירָה לַֽיהוָה֙ כִּֽי גָאֹ֣ה גָּאָ֔ה ס֥וּס וְרֹכְב֖וֹ רָמָ֥ה בַיָּֽם</span> · <i>ashira la-YHWH ki-gao gaa sus ve-rokhv-o rama va-yam</i> · I will sing to the LORD, for He is highly exalted: the horse and its rider He has thrown into the sea (verse-final va-yam) [VERIFIED: SNAPSHOT Exod.15.1 idx11-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">shirat_ha_yam(e1); Agent(e1, moshe); Theme(e1, bene-yisrael)</span><br><span class="gloss">= shirat-the-yam(e1); Agent(e1, Moses); Theme(e1, bene-yisrael)</span><br>THE SONG [EX15-03 CROWN]. AZ YASHIR moshe u-vene yisrael — &#x27;THEN SANG Moses and the sons of Israel&#x27;: THE EVENT — the corpus&#x27;s first song, and the then-sang frame stands exactly TWICE in the Torah (VERIFIED): the Sea here and THE WELL (Num 21:17 — where Moses&#x27; name is withheld, the Kitzur: &#x27;he too sang — but it does not name him, FOR HE WAS STRUCK THROUGH WATER&#x27;: the water-singer barred by water, Num 20 armed); the yod of yashir counted as TEN SONGS (the Sea, the Well, the witness-song, Joshua, Deborah, Hannah, David, Solomon, Hezekiah, and THE SONG TO COME — the chain&#x27;s canon of history, the last unsung); and the Kitzur&#x27;s redeemed grudge: &#x27;with the word I COMPLAINED — u-ME-AZ bati el-paro (5:23: SINCE THEN it has gone worse) — with that word I WILL BEGIN THE PRAISE&#x27; (asserted: exo_05&#x27;s bitterest adverb returned as the Song&#x27;s first word); yashir bound by maqqef (MS, EX15-13); the machine stamps the singing and notes the tense the readings live on: the future-form sang in the past, named- only.
+</td><td><span class="he">אָז יָשִׁיר־מֹשֶׁה וּבְנֵי יִשְׂרָאֵל אֶת־הַשִּׁירָה הַזֹּאת לַיהוָה וַיֹּאמְרוּ לֵאמֹר</span> · <i>az yashir-moshe u-vene yisrael et-ha-shira ha-zot la-YHWH va-yomru le-mor</i><br><span class="gloss">= az yashir-Moses and-vene yisrael the-shira the-this to-the-LORD and-yomru to-mor</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ki_gao_gaa_sus_ve_rokhvo, t0)</span><br><span class="gloss">= HOLDS(when-gao-gaa-sus-and-rokhvo, t0)</span><br>THE REFRAIN. ashira la-YHWH ki GAO GAA — &#x27;I will sing to the LORD, for He is HIGHLY EXALTED&#x27; (the cohortative: the Song opens on a first-person vow); the doubled exaltation-verb SOFT then HARD (EX15-01: both checked — the Masorah&#x27;s twin-pairs file); sus ve- rokhvo rama va-yam — &#x27;the horse and its rider He has THROWN into the sea&#x27;: the refrain-line minted whole — SEVEN tokens that will return VERBATIM in Miriam&#x27;s mouth (asserted at the build: 15:1 and 15:21 token-identical): the machine arms the antiphon.
+</td><td><span class="he">אָשִׁירָה לַיהוָה כִּי־גָאֹה גָּאָה סוּס וְרֹכְבוֹ רָמָה בַיָּם</span> · <i>ashira la-YHWH ki-gao gaa sus ve-rokhv-o rama va-yam</i><br><span class="gloss">= ashira to-the-LORD when-gao gaa sus and-rokhv-o rama and-yam</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The Song event; the refrain minted.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_15_2 · Exod.15.2 · <span class='expr'>MY_STRENGTH_AND_SONG</span></h3>
+<p><span class="he">עָזִּי וְזִמְרָת יָהּ וַיְהִי־לִי לִישׁוּעָה זֶה אֵלִי וְאַנְוֵהוּ אֱלֹהֵי אָבִי וַאֲרֹמְמֶנְהוּ</span> · <i>azi-y ve-zimrat ya va-yehi-li-y li-yshua ze el-y ve-anve-hu elohe avi-y va-aromme-nehu</i> · My strength and song is the LORD, and He has become my salvation; this is my God, and I will glorify Him — my father&#x27;s God, and I will exalt Him.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">עָזִּ֤י וְזִמְרָת֙ יָ֔הּ וַֽיְהִי לִ֖י לִֽישׁוּעָ֑ה</span> · <i>azi-y ve-zimrat ya va-yehi-li-y li-yshua</i> · my strength and song is the LORD, and He has become my salvation (etnachta on li-yshua) [VERIFIED: SNAPSHOT Exod.15.2 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">זֶ֤ה אֵלִי֙ וְאַנְוֵ֔הוּ אֱלֹהֵ֥י אָבִ֖י וַאֲרֹמְמֶֽנְהוּ</span> · <i>ze el-y ve-anve-hu elohe avi-y va-aromme-nehu</i> · this is my God, and I will glorify Him; my father&#x27;s God, and I will exalt Him (verse-final va-aromme-nehu) [VERIFIED: SNAPSHOT Exod.15.2 idx6-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(uzi_ve_zimrat_yah, t0)</span><br><span class="gloss">= HOLDS(uzi-and-zimrat-yah, t0)</span><br>THE STRENGTH [EX15-12; EX15-13]. UZI ve-zimrat YAH — &#x27;my STRENGTH and song is the LORD&#x27;: the strength-word Torah-unique (VERIFIED) — the Kitzur&#x27;s three named (the Hallel&#x27;s and Isaiah&#x27;s wells-of- salvation twin) with the sweet-floor: &#x27;SWEET water flowed from the sea-bed and they DREW IT IN JOY&#x27;; and the word&#x27;s own grammar carries a loss (MS, EX15-13): the ayin in QAMATZ-CHATUF &#x27;because of the zayin&#x27;s dagesh, WHICH MARKS THE DROPPED ROOT-LETTER&#x27; — the strength- word spelled minus a letter of its own root (15:13&#x27;s nehalta ve- ozkha the same rule, bet raphe; va-aromemenhu&#x27;s first mem on sheva alone); va-yehi-LI li-YSHUA — &#x27;He has become MY SALVATION&#x27;: 14:13&#x27;s stand-and-see oracle receipted in the first person (the yeshua armed at the panic, delivered at 14:30, SUNG at 15:2 — the machine closes the salvation-arc in the singer&#x27;s own mouth); and the readings&#x27; counter named-only: my-strength against the prince of Egypt the Kitzur named at the drawing-near (14:10&#x27;s arm paid).
+</td><td><span class="he">עָזִּי וְזִמְרָת יָהּ וַיְהִי־לִי לִישׁוּעָה</span> · <i>azi-y ve-zimrat ya va-yehi-li-y li-yshua</i><br><span class="gloss">= azi-y and-zimrat ya and-yehi-to-me-y to-me-yshua</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ze_eli_ve_anvehu, t0)</span><br><span class="gloss">= HOLDS(ze-eli-and-anvehu, t0)</span><br>THE VOW-PAIR. ZE eli ve-ANVEHU — &#x27;THIS is my God, and I will GLORIFY Him&#x27; (the pointing-word: the readings on the finger at the sea — the maidservant seeing what prophets sought — named-only); elohe AVI va- aromemenhu — &#x27;my FATHER&#x27;S God, and I will EXALT Him&#x27;: the machine files the Song&#x27;s self-volitives (anvehu, aromemenhu — cohortative vows of praise, not demands on any agent: the quoted-mood class) and the two-generation credential: the God claimed by sight and by inheritance in one breath (3:6&#x27;s fathers-formula sung).
+</td><td><span class="he">זֶה אֵלִי וְאַנְוֵהוּ אֱלֹהֵי אָבִי וַאֲרֹמְמֶנְהוּ</span> · <i>ze el-y ve-anve-hu elohe avi-y va-aromme-nehu</i><br><span class="gloss">= ze to-y and-anve-that elohe avi-y and-aromme-nehu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The salvation receipted; the vow-pair.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_15_3 · Exod.15.3 · <span class='expr'>A_MAN_OF_WAR</span></h3>
+<p><span class="he">יְהוָה אִישׁ מִלְחָמָה יְהוָה שְׁמוֹ</span> · <i>YHWH ish milchama YHWH shem-o</i> · The LORD is a man of war; the LORD is His name.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">יְהוָ֖ה אִ֣ישׁ מִלְחָמָ֑ה</span> · <i>YHWH ish milchama</i> · the LORD is a man of war (etnachta on milchama) [VERIFIED: SNAPSHOT Exod.15.3 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">יְהוָ֖ה שְׁמֽוֹ</span> · <i>YHWH shem-o</i> · the LORD is His name (verse-final shem-o) [VERIFIED: SNAPSHOT Exod.15.3 idx3-4]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(YHWH_ish_milchama, t0)</span><br><span class="gloss">= HOLDS(the-LORD-man-milchama, t0)</span><br>THE WAR-MAN. YHWH ISH MILCHAMA — &#x27;the LORD is a MAN OF WAR&#x27;: 14:14&#x27;s doctrine (&#x27;the LORD will FIGHT for you&#x27;) and 14:25&#x27;s enemy- confession (&#x27;the LORD FIGHTS for them&#x27;) resolved into a title — the machine notes the fight-verb&#x27;s arc: promised to the trembling, confessed by the drowning, sung by the saved; YHWH SHEMO — &#x27;the LORD is His NAME&#x27;: the Name held level with the war-title (the readings: He fights with the Name of mercy — a man of war whose name stays the merciful Name; named-only): the Song&#x27;s shortest theology.
+</td><td><span class="he">יְהוָה אִישׁ מִלְחָמָה יְהוָה שְׁמוֹ</span> · <i>YHWH ish milchama YHWH shem-o</i><br><span class="gloss">= the-LORD man milchama the-LORD shem-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The doctrine sung.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_15_4 · Exod.15.4 · <span class='expr'>CAST_INTO_THE_SEA</span></h3>
+<p><span class="he">מַרְכְּבֹת פַּרְעֹה וְחֵילוֹ יָרָה בַיָּם וּמִבְחַר שָׁלִשָׁיו טֻבְּעוּ בְיַם־סוּף</span> · <i>markvot paro ve-chel-o yara va-yam u-mivchar shalishay-v tubu ve-yam-suf</i> · Pharaoh&#x27;s chariots and his host He has cast into the sea; and the choice of his officers are sunk in the Reed Sea.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">מַרְכְּבֹ֥ת פַּרְעֹ֛ה וְחֵיל֖וֹ יָרָ֣ה בַיָּ֑ם</span> · <i>markvot paro ve-chel-o yara va-yam</i> · Pharaoh&#x27;s chariots and his host He has cast into the sea (etnachta on va-yam) [VERIFIED: SNAPSHOT Exod.15.4 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּמִבְחַ֥ר שָֽׁלִשָׁ֖יו טֻבְּע֥וּ בְיַם סֽוּף</span> · <i>u-mivchar shalishay-v tubu ve-yam-suf</i> · and the choice of his officers are sunk in the Reed Sea (verse-final suf) [VERIFIED: SNAPSHOT Exod.15.4 idx5-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(u_mivchar_shalishav_tubu, t0)</span><br><span class="gloss">= HOLDS(and-mivchar-shalishav-tubu, t0)</span><br>THE CASTING [EX15-12 CROWN]. markevot paro ve-chelo YARA va-yam — &#x27;Pharaoh&#x27;s chariots and his host He CAST into the sea&#x27; (the chariot- word&#x27;s idol-file named: Josiah burning the SUN-CHARIOTS, 2 Kgs 23:11 — &#x27;Pharaoh&#x27;s host had their idols PAINTED ON THEIR GARMENTS&#x27;; Shebna&#x27;s glory-chariots beside it); U-MIVCHAR shalishav — &#x27;and THE CHOICE of his officers&#x27;: the choice-word Torah-UNIQUE here (VERIFIED), its Masorah-twin &#x27;the choice of his young men went down to SLAUGHTER&#x27; — the Kitzur: &#x27;after they drowned, they went down to be BUTCHERED on the rocks of the sea&#x27; (the sea given teeth — 14:27&#x27;s shaking read to its end); TUBU ve-yam-SUF — &#x27;SUNK in the REED SEA&#x27;: the sea named by name inside the Song (10:19&#x27;s first naming, 13:18&#x27;s road, 15:4&#x27;s grave — the machine files the Reed Sea&#x27;s three offices in the corpus so far).
+</td><td><span class="he">וּמִבְחַר שָׁלִשָׁיו טֻבְּעוּ בְיַם־סוּף</span> · <i>u-mivchar shalishay-v tubu ve-yam-suf</i><br><span class="gloss">= and-mivchar shalishay-v tubu and-yam-suf</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The choice-men; the sea given teeth.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_15_5 · Exod.15.5 · <span class='expr'>THE_DEEPS_COVER_THEM</span></h3>
+<p><span class="he">תְּהֹמֹת יְכַסְיֻמוּ יָרְדוּ בִמְצוֹלֹת כְּמוֹ־אָבֶן</span> · <i>tehomot yekhasyu-mu yardu vi-metzolot kemo-aven</i> · The deeps cover them — they went down into the depths like a stone.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">תְּהֹמֹ֖ת יְכַסְיֻ֑מוּ</span> · <i>tehomot yekhasyu-mu</i> · the deeps cover them (etnachta on yekhasyu-mu) [VERIFIED: SNAPSHOT Exod.15.5 idx1 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">יָרְד֥וּ בִמְצוֹלֹ֖ת כְּמוֹ אָֽבֶן</span> · <i>yardu vi-metzolot kemo-aven</i> · they went down into the depths like a stone (verse-final aven) [VERIFIED: SNAPSHOT Exod.15.5 idx2-5]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(tehomot_yekhasyumu, t0)</span><br><span class="gloss">= HOLDS(tehomot-yekhasyumu, t0)</span><br>THE COVER&#x27;S CODA [EX15-08 CROWN]. tehomot YEKHASYUMU — &#x27;the deeps COVER THEM&#x27;: the cover-word Torah-UNIQUE (VERIFIED) in a ONCE-IN- SCRIPTURE vocalization — MS quoting Rashi: &#x27;there is NOTHING LIKE IT in Scripture in its pointing&#x27; (the machine notes the coda: the cover-verb chain that closed at 14:28 — frog, locust, sea — is re- sung in a form the language uses exactly once: the final cover wears a pointing with no twin); BI-MTZOLOT — &#x27;in the DEPTHS&#x27; on its ruled skeleton (checked unique; the Hilleli&#x27;s and Yerushalmi&#x27;s variants dual-tracked, the Masorah and the Ramah with the stream) — the Kitzur&#x27;s three depths: &#x27;they were IN DARKNESS in the depths, as it is written: the cloud and the darkness&#x27; (14:20&#x27;s severed night wired into the Song); yardu... KEMO AVEN — &#x27;like a STONE&#x27;: the Song&#x27;s stone-file opens (armed to 15:16&#x27;s stone-still peoples).
+</td><td><span class="he">תְּהֹמֹת יְכַסְיֻמוּ</span> · <i>tehomot yekhasyu-mu</i><br><span class="gloss">= tehomot yekhasyu-mu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The once-vocalization; the first stone.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_15_6 · Exod.15.6 · <span class='expr'>YOUR_RIGHT_HAND_DOUBLED</span></h3>
+<p><span class="he">יְמִינְךָ יְהוָה נֶאְדָּרִי בַּכֹּחַ יְמִינְךָ יְהוָה תִּרְעַץ אוֹיֵב</span> · <i>yemin-kha YHWH nedari ba-kocha yemin-kha YHWH tiratz oyev</i> · Your right hand, O LORD, majestic in power — Your right hand, O LORD, shatters the enemy.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">יְמִֽינְךָ֣ יְהוָ֔ה נֶאְדָּרִ֖י בַּכֹּ֑חַ</span> · <i>yemin-kha YHWH nedari ba-kocha</i> · Your right hand, O LORD, majestic in power (etnachta on ba-kocha) [VERIFIED: SNAPSHOT Exod.15.6 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">יְמִֽינְךָ֥ יְהוָ֖ה תִּרְעַ֥ץ אוֹיֵֽב</span> · <i>yemin-kha YHWH tiratz oyev</i> · Your right hand, O LORD, shatters the enemy (verse-final oyev) [VERIFIED: SNAPSHOT Exod.15.6 idx4-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(yeminkha_YHWH_nedari_va_koach, t0)</span><br><span class="gloss">= HOLDS(yeminkha-the-LORD-nedari-and-koach, t0)</span><br>THE RIGHT HAND [EX15-12]. YEMINKHA YHWH... YEMINKHA YHWH — the Song&#x27;s first anaphora: the right hand named twice in one verse (the readings: when Israel does His will, the left too becomes right — named-only); nedari BA-KOACH — &#x27;majestic IN POWER&#x27;: the power-word an all-Torah pair (VERIFIED at the build): the arm that saved here — and Moses&#x27; intercession at the calf (&#x27;whom You brought out of Egypt WITH GREAT POWER,&#x27; 32:11): the machine arms the wire — the Song&#x27;s word for the saving arm will be the plea&#x27;s word when the saved sin (the Kitzur&#x27;s Scripture-fellows named: the herald&#x27;s lifted voice, the last redemption likened to the first); tiratz OYEV — &#x27;SHATTERS the enemy&#x27;: the enemy-word singular (15:9&#x27;s speaker pre-named).
+</td><td><span class="he">יְמִינְךָ יְהוָה נֶאְדָּרִי בַּכֹּחַ</span> · <i>yemin-kha YHWH nedari ba-kocha</i><br><span class="gloss">= yemin-kha the-LORD nedari in-the-kocha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The anaphora; the power-pair.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_15_7 · Exod.15.7 · <span class='expr'>LIKE_STUBBLE</span></h3>
+<p><span class="he">וּבְרֹב גְּאוֹנְךָ תַּהֲרֹס קָמֶיךָ תְּשַׁלַּח חֲרֹנְךָ יֹאכְלֵמוֹ כַּקַּשׁ</span> · <i>u-ve-rov geon-kha taharos qame-kha teshalach charon-kha yokhle-mo ka-qash</i> · And in the greatness of Your exaltation You overthrow those who rise against You; You send forth Your burning — it consumes them like stubble.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבְרֹ֥ב גְּאוֹנְךָ֖ תַּהֲרֹ֣ס קָמֶ֑יךָ</span> · <i>u-ve-rov geon-kha taharos qame-kha</i> · and in the greatness of Your exaltation You overthrow those who rise against You (etnachta on qame-kha) [VERIFIED: SNAPSHOT Exod.15.7 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">תְּשַׁלַּח֙ חֲרֹ֣נְךָ֔ יֹאכְלֵ֖מוֹ כַּקַּֽשׁ</span> · <i>teshalach charon-kha yokhle-mo ka-qash</i> · You send forth Your burning; it consumes them like stubble (verse-final ka-qash) [VERIFIED: SNAPSHOT Exod.15.7 idx4-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(teshalach_charonkha, t0)</span><br><span class="gloss">= HOLDS(teshalach-charonkha, t0)</span><br>THE SENDING [EX15-10 CROWN]. TESHALACH charonkha yokhlemo ka-QASH — &#x27;You SEND FORTH Your burning — it consumes them like STUBBLE&#x27;: the send-forth form&#x27;s Torah-census exactly FIVE (VERIFIED): the AKEDA&#x27;S stayed hand (Gen 22:12), Moses&#x27; deflection (4:13), the burning here, the show-me plea (33:12), and THE MOTHER-BIRD (Deut 22:7) — and the Kitzur&#x27;s grand reading rides the last: &#x27;He SENT THE FATHERS from before His face and they died in the wilderness, and TOOK THE CHILDREN and brought them into the Land — and even so they have a share in the world to come: You send forth Your breath, they are created&#x27; (the five-station career from the withheld knife to the released bird); QAMEKHA — &#x27;Your RISERS&#x27; Torah-unique (VERIFIED at the build), its Psalm-twin: &#x27;the DIN of Your risers ascends continually — therefore You BREAK Your risers&#x27;; u-ve-rov GEONKHA — &#x27;in the greatness of Your EXALTATION&#x27; full-vav (MS, EX15-13: the old tikkun&#x27;s lean variant named, the Ramah ruling full): the wrath-verse filed with its census exact.
+</td><td><span class="he">תְּשַׁלַּח חֲרֹנְךָ יֹאכְלֵמוֹ כַּקַּשׁ</span> · <i>teshalach charon-kha yokhle-mo ka-qash</i><br><span class="gloss">= teshalach charon-kha yokhle-mo like-qash</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The five sendings.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_15_8 · Exod.15.8 · <span class='expr'>THE_WIND_OF_YOUR_NOSTRILS</span></h3>
+<p><span class="he">וּבְרוּחַ אַפֶּיךָ נֶעֶרְמוּ מַיִם נִצְּבוּ כְמוֹ־נֵד נֹזְלִים קָפְאוּ תְהֹמֹת בְּלֶב־יָם</span> · <i>u-ve-rucha ape-kha neermu mayim nitzvu khemo-ned nozlim qafu tehomot be-lev-yam</i> · And by the wind of Your nostrils the waters were heaped up — the streams stood like a mound; the deeps congealed in the heart of the sea.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבְר֤וּחַ אַפֶּ֨יךָ֙ נֶ֣עֶרְמוּ מַ֔יִם נִצְּב֥וּ כְמוֹ נֵ֖ד נֹזְלִ֑ים</span> · <i>u-ve-rucha ape-kha neermu mayim nitzvu khemo-ned nozlim</i> · and by the wind of Your nostrils the waters were heaped up; the streams stood like a mound (etnachta on nozlim) [VERIFIED: SNAPSHOT Exod.15.8 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">קָֽפְא֥וּ תְהֹמֹ֖ת בְּלֶב יָֽם</span> · <i>qafu tehomot be-lev-yam</i> · the deeps congealed in the heart of the sea (verse-final yam) [VERIFIED: SNAPSHOT Exod.15.8 idx8-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(u_ve_ruach_apekha_neermu_mayim, t0)</span><br><span class="gloss">= HOLDS(and-and-spirit-wind-your-nostrils-neermu-waters, t0)</span><br>THE BLAST [EX15-09 CROWN]. u-ve-RUACH APEKHA neermu mayim — &#x27;by the WIND OF YOUR NOSTRILS the waters were heaped&#x27;: the nostrils-word stands exactly TWICE in the Torah (VERIFIED) — and MS marks the pair himself: &#x27;see what I noted at Genesis on BY THE SWEAT OF YOUR FACE — its fellow&#x27; (Gen 3:19): Adam&#x27;s sweat and the Name&#x27;s blast, the curse of labor and the weapon of rescue on one rare noun (both full-yod, the Masorah&#x27;s two; NEERMU likewise full-yod with MS&#x27;s own maqqef- preference confessed: &#x27;in some books bound — and it is CORRECT IN MY EYES&#x27;); the Kitzur&#x27;s four winds (&#x27;with the wind of His lips He slays; with the wind of His mouth He made all their host — with wind He burns, with wind He creates&#x27;); the machine notes the re- description: 14:21&#x27;s STRONG EAST WIND — the meteorology of the narrative — is sung as the breath of His anger: the instrument- clause of the split promoted to anatomy; nitzvu khemo NED nozlim — &#x27;the streams STOOD like a MOUND&#x27; (the mound-word: Jordan&#x27;s heap named, outside the Torah, named-only); qafu tehomot BE-LEV YAM — &#x27;the deeps CONGEALED in the HEART of the sea&#x27;: the heart-of-the-sea phrase Torah-unique in the Song (VERIFIED at the build) — the Kitzur&#x27;s two hearts: &#x27;Israel walked a PAVED ROAD like a ship&#x27;s wake; Egypt tossed like the drunkard LYING in the heart of the sea.&#x27;
+</td><td><span class="he">וּבְרוּחַ אַפֶּיךָ נֶעֶרְמוּ מַיִם נִצְּבוּ כְמוֹ־נֵד נֹזְלִים</span> · <i>u-ve-rucha ape-kha neermu mayim nitzvu khemo-ned nozlim</i><br><span class="gloss">= and-and-rucha ape-kha neermu waters nitzvu khemo-ned nozlim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The nostril-pair; the two hearts of the sea.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_15_9 · Exod.15.9 · <span class='expr'>THE_ENEMY_SAID</span></h3>
+<p><span class="he">אָמַר אוֹיֵב אֶרְדֹּף אַשִּׂיג אֲחַלֵּק שָׁלָל תִּמְלָאֵמוֹ נַפְשִׁי אָרִיק חַרְבִּי תּוֹרִישֵׁמוֹ יָדִי</span> · <i>amar oyev erdof asig achaleq shalal timlae-mo nafshi-y ariq charbi-y torishe-mo yadi-y</i> · The enemy said: I will pursue, I will overtake, I will divide spoil; my desire shall be filled of them — I will draw my sword, my hand shall dispossess them.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אָמַ֥ר אוֹיֵ֛ב אֶרְדֹּ֥ף אַשִּׂ֖יג אֲחַלֵּ֣ק שָׁלָ֑ל</span> · <i>amar oyev erdof asig achaleq shalal</i> · the enemy said: I will pursue, I will overtake, I will divide spoil (etnachta on shalal) [VERIFIED: SNAPSHOT Exod.15.9 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">תִּמְלָאֵ֣מוֹ נַפְשִׁ֔י אָרִ֣יק חַרְבִּ֔י תּוֹרִישֵׁ֖מוֹ יָדִֽי</span> · <i>timlae-mo nafshi-y ariq charbi-y torishe-mo yadi-y</i> · my desire shall be filled of them; I will draw my sword, my hand shall dispossess them (verse-final yadi-y) [VERIFIED: SNAPSHOT Exod.15.9 idx6-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(amar_oyev_erdof_asig, t0)</span><br><span class="gloss">= HOLDS(amar-oyev-erdof-asig, t0)</span><br>THE QUOTED DEAD. AMAR OYEV — &#x27;the ENEMY SAID&#x27;: the Song hands the drowned their own microphone — ERDOF ASIG ACHALEQ shalal — &#x27;I will PURSUE, I will OVERTAKE, I will DIVIDE spoil&#x27;: five first-person vows in a row WITHOUT A SINGLE VAV (the corpus&#x27;s densest volitive cluster, unconjoined — the panting rhythm the trope preserves); timlaemo NAFSHI... ariq CHARBI torishemo YADI — my desire, my sword, MY HAND (the possessives stacked — the readings: the hand that boasted against the great hand of 14:31, named-only): the machine files the class — QUOTED-MOOD, agent dead: these volitives push nothing (the sea already refused them at 14:27-28); the Song quotes the plan pluperfectly, between the blast that heaped the water (15:8) and the blast that sank it (15:10): the boast is the filling of the sandwich its two winds close.
+</td><td><span class="he">אָמַר אוֹיֵב אֶרְדֹּף אַשִּׂיג אֲחַלֵּק שָׁלָל</span> · <i>amar oyev erdof asig achaleq shalal</i><br><span class="gloss">= amar oyev erdof asig achaleq shalal</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The dead vows quoted.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_15_10 · Exod.15.10 · <span class='expr'>SANK_LIKE_LEAD</span></h3>
+<p><span class="he">נָשַׁפְתָּ בְרוּחֲךָ כִּסָּמוֹ יָם צָלֲלוּ כַּעוֹפֶרֶת בְּמַיִם אַדִּירִים</span> · <i>nashafta ve-rucha-kha kisa-mo yam tzalalu ka-oferet be-mayim adirim</i> · You blew with Your wind — the sea covered them; they sank like lead in the mighty waters.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">נָשַׁ֥פְתָּ בְרוּחֲךָ֖ כִּסָּ֣מוֹ יָ֑ם</span> · <i>nashafta ve-rucha-kha kisa-mo yam</i> · You blew with Your wind; the sea covered them (etnachta on yam) [VERIFIED: SNAPSHOT Exod.15.10 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">צָֽלֲלוּ֙ כַּֽעוֹפֶ֔רֶת בְּמַ֖יִם אַדִּירִֽים</span> · <i>tzalalu ka-oferet be-mayim adirim</i> · they sank like lead in the mighty waters (verse-final adirim) [VERIFIED: SNAPSHOT Exod.15.10 idx4-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(tzalalu_ka_oferet, t0)</span><br><span class="gloss">= HOLDS(tzalalu-like-oferet, t0)</span><br>THE SINKING [EX15-13]. nashafta ve-ruchakha — &#x27;You BLEW with Your wind&#x27; (one breath answers five vows — the machine prices the exchange: 15:9&#x27;s whole arsenal against one exhalation); TZALALU ka- OFERET — &#x27;they SANK like LEAD&#x27;: the sink-word Torah-unique (VERIFIED at the build) — the Kitzur&#x27;s three: the lead that SANK, the lips that QUIVERED at the sound, the gates of Jerusalem that DARKENED (&#x27;sounds and sword&#x27; — one skeleton for sinking, quivering, and dusk); ka-oferet FULL-vav (asserted in-verse: &#x27;in all precise copies FULL — and ONE lean: the spoils&#x27;-fire lead of Num 31:22, checked: the Song&#x27;s lead full, the furnace&#x27;s lean&#x27;); the lamed on sheva alone (MS); be-mayim ADIRIM — &#x27;in the MIGHTY waters&#x27;: the mighty-word held for 15:11&#x27;s mighty ones (the machine notes the hinge: the waters called mighty in the verse before might itself is asked who owns it).
+</td><td><span class="he">צָלֲלוּ כַּעוֹפֶרֶת בְּמַיִם אַדִּירִים</span> · <i>tzalalu ka-oferet be-mayim adirim</i><br><span class="gloss">= tzalalu like-oferet waters adirim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The lead-word&#x27;s three; the full lead.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_15_11 · Exod.15.11 · <span class='expr'>WHO_IS_LIKE_YOU</span></h3>
+<p><span class="he">מִי־כָמֹכָה בָּאֵלִם יְהוָה מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא</span> · <i>mi-khamo-kha ba-elim YHWH mi kamo-kha nedar ba-qodesh nora tehilot ose fele</i> · Who is like You among the mighty, O LORD? Who is like You, majestic in holiness — feared in praises, doing wonder?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">מִֽי כָמֹ֤כָה בָּֽאֵלִם֙ יְהוָ֔ה מִ֥י כָּמֹ֖כָה נֶאְדָּ֣ר בַּקֹּ֑דֶשׁ</span> · <i>mi-khamo-kha ba-elim YHWH mi kamo-kha nedar ba-qodesh</i> · who is like You among the mighty, O LORD? who is like You, majestic in holiness (etnachta on ba-qodesh) [VERIFIED: SNAPSHOT Exod.15.11 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">נוֹרָ֥א תְהִלֹּ֖ת עֹ֥שֵׂה פֶֽלֶא</span> · <i>nora tehilot ose fele</i> · feared in praises, doing wonder (verse-final fele) [VERIFIED: SNAPSHOT Exod.15.11 idx8-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(mi_khamokha_ba_elim, t0)</span><br><span class="gloss">= HOLDS(from-khamokha-in-the-elim, t0)</span><br>THE INCOMPARABLE [EX15-01 + EX15-02 CROWNS — THE MARQUEE]. mi KHAMOKHA ba-elim YHWH mi KAMOKHA nedar ba-qodesh — &#x27;WHO IS LIKE YOU among the mighty... WHO IS LIKE YOU, majestic in holiness&#x27;: the Song&#x27;s GUARD-DAGESHIM — the first like-You SOFT and the second HARD (both VERIFIED in-stream; the dagesh-after-open-vowel guard-list of Daniel 5) — and the tradition names the reason: &#x27;SO AS NOT TO STAMMER MICAH BESIDE THE NAME&#x27; (the soft kaf would slur toward the idol-name — the idol the chain marched through the sea at 14:22/29 is barred from the Song by ONE DOT); Lekach Tov&#x27;s other face: &#x27;at first they praised with a WEAK LIP, at the end from the walls of their hearts WITH A FULL MOUTH&#x27;; and the Ramah&#x27;s census EXACT (VERIFIED): every like-You in the Torah is written full-vav without the final he EXCEPT TWO — lean-vav WITH the he — &#x27;AND BOTH ARE IN ONE VERSE&#x27;: this one; BA-ELIM lean-of-lean (VERIFIED Torah-unique) read aloud by the rabbis: &#x27;who is like You AMONG THE MUTE&#x27; (the God who keeps silence while His house burns — the tradition&#x27;s darkest praise folded into the Song&#x27;s brightest line; 14:14&#x27;s be-silent doctrine given its terrible depth), with Isaiah&#x27;s inflamed oak-idols as the Masorah&#x27;s full twin (the Kitzur: shade without fruit against &#x27;His shade is lovely and His fruit sweet&#x27;); the bet of ba-elim DAGESHED with NO PASEQ before it, &#x27;AGAINST THE PRINTER&#x27;S EMENDATION&#x27; (MS, EX15-13 — the press corrected a tenth time: printed-authority file); the guard-class runs the Song (EX15-01): gaalta&#x27;s gimel HARD (&#x27;were it soft it would sound DEFILED — and one would blaspheme,&#x27; the Rokeach), ka-aven&#x27;s kaf HARD (&#x27;lest it say A STONE would silence You&#x27;), gao/gaa soft-then-hard: a liturgy whose consonants harden exactly where praise could slip into idol, defilement, or silence.
+</td><td><span class="he">מִי־כָמֹכָה בָּאֵלִם יְהוָה מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ</span> · <i>mi-khamo-kha ba-elim YHWH mi kamo-kha nedar ba-qodesh</i><br><span class="gloss">= from-khamo-kha in-the-elim the-LORD from kamo-kha nedar in-the-qodesh</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(nora_tehilot_ose_fele, t0)</span><br><span class="gloss">= HOLDS(nora-tehilot-ose-fele, t0)</span><br>THE WONDER-CLAUSE. NORA tehilot — &#x27;FEARED in praises&#x27; (the readings: praise that knows its limit — the silence-praise of the mute-reading one clause back, named-only); nedar&#x27;s alef on sheva alone (MS, EX15-13); OSE FELE — &#x27;doing WONDER&#x27;: the wonder-word singular (the machine notes the count&#x27;s restraint: one wonder-word for the whole sea — the Song&#x27;s arithmetic opposite to 15:9&#x27;s five boasts).
+</td><td><span class="he">נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא</span> · <i>nora tehilot ose fele</i><br><span class="gloss">= nora tehilot ose fele</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The guard-dageshim; the two lean like-You&#x27;s.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_15_12 · Exod.15.12 · <span class='expr'>THE_EARTH_SWALLOWED</span></h3>
+<p><span class="he">נָטִיתָ יְמִינְךָ תִּבְלָעֵמוֹ אָרֶץ</span> · <i>natita yemin-kha tivlae-mo aretz</i> · You stretched out Your right hand — the earth swallowed them.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">נָטִ֨יתָ֙ יְמִ֣ינְךָ֔</span> · <i>natita yemin-kha</i> · You stretched out Your right hand (NO etnachta in verse: split at zaqef qatan on yemin-kha) [VERIFIED: SNAPSHOT Exod.15.12 idx1 zaqef qatan; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">תִּבְלָעֵ֖מוֹ אָֽרֶץ</span> · <i>tivlae-mo aretz</i> · the earth swallowed them (verse-final aretz) [VERIFIED: SNAPSHOT Exod.15.12 idx2-3]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(tivlaemo_aretz, t0)</span><br><span class="gloss">= HOLDS(tivlaemo-earth, t0)</span><br>THE SWALLOW. natita YEMINKHA — &#x27;You stretched out Your RIGHT HAND&#x27; (the stretch-verb of 14:16/21/26-27 sung to the hand that owned it at 15:6); TIVLAEMO ARETZ — &#x27;the EARTH SWALLOWED THEM&#x27;: the swallow- verb&#x27;s return (asserted at the build: 7:12&#x27;s staff that SWALLOWED the staffs — the corpus&#x27;s swallow-ledger: the wonder that opened the duel closes the burial; the readings: the sea cast them to the land&#x27;s mouth, burial as the drowned army&#x27;s one kindness — named- only; the earth&#x27;s next great swallow armed: Num 16:32&#x27;s mouth of the ground): the machine marks the PIVOT — four words with no etnachta, the Song&#x27;s shortest verse, and on its far side the theme turns from drowning to shepherding (15:1-12 the enemy, 15:13-18 the people).
+</td><td><span class="he">נָטִיתָ יְמִינְךָ תִּבְלָעֵמוֹ אָרֶץ</span> · <i>natita yemin-kha tivlae-mo aretz</i><br><span class="gloss">= natita yemin-kha tivlae-mo earth</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The swallow-ledger; the pivot.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_15_13 · Exod.15.13 · <span class='expr'>YOU_GUIDED_IN_KINDNESS</span></h3>
+<p><span class="he">נָחִיתָ בְחַסְדְּךָ עַם־זוּ גָּאָלְתָּ נֵהַלְתָּ בְעָזְּךָ אֶל־נְוֵה קָדְשֶׁךָ</span> · <i>nachita ve-chasd-kha am-zu gaalta nehalta ve-az-kha el-neve qadshe-kha</i> · You guided in Your kindness the people You redeemed; You led them in Your strength to Your holy habitation.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">נָחִ֥יתָ בְחַסְדְּךָ֖ עַם ז֣וּ גָּאָ֑לְתָּ</span> · <i>nachita ve-chasd-kha am-zu gaalta</i> · You guided in Your kindness the people You redeemed (etnachta on gaalta) [VERIFIED: SNAPSHOT Exod.15.13 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">נֵהַ֥לְתָּ בְעָזְּךָ֖ אֶל נְוֵ֥ה קָדְשֶֽׁךָ</span> · <i>nehalta ve-az-kha el-neve qadshe-kha</i> · You led them in Your strength to Your holy habitation (verse-final qadshe-kha) [VERIFIED: SNAPSHOT Exod.15.13 idx5-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(am_zu_gaalta, t0)</span><br><span class="gloss">= HOLDS(am-zu-gaalta, t0)</span><br>THE SHEPHERD [EX15-04 CROWN]. NACHITA ve-chasdkha — &#x27;You GUIDED in Your kindness&#x27;: the guided-word Torah-unique (VERIFIED), its Psalm- twin &#x27;You guided Your people LIKE THE FLOCK&#x27; — the Kitzur&#x27;s shepherd-cloud: &#x27;as the shepherd paces each sheep by its stride, the cloud led each by his walking — the great by his greatness, the small by his smallness — and shaded them at noon&#x27; (13:21&#x27;s pillar given a shepherd&#x27;s gait — the tenderest logistics in the chain); am- ZU gaalta — &#x27;the people THIS-ONE You redeemed&#x27;: the people-this frame stands exactly TWICE in the Torah, BOTH IN THIS SONG (VERIFIED: the redeemed here, the acquired at 15:16), the Masorah&#x27;s third outside: &#x27;the people I FORMED for Myself&#x27; (Isa 43:21) — the Kitzur: &#x27;when You acquired them in redeeming them, it is AS IF YOU FORMED THEM THEN A NEW CREATURE&#x27; (redemption as second creation — the Song&#x27;s own theology in three verbs: redeemed, acquired, formed); the gimel of gaalta HARD (EX15-01&#x27;s guard-list: the blasphemy barred); nehalta ve-OZKHA — &#x27;You LED them in Your strength&#x27; (bet raphe, the qamatz-chatuf rule again, MS): el-NEVE qodshekha — &#x27;to Your holy HABITATION&#x27;: the homing-word (the machine opens the Song&#x27;s destination-arc: habitation 15:13, mountain and sanctuary 15:17, reign 15:18).
+</td><td><span class="he">נָחִיתָ בְחַסְדְּךָ עַם־זוּ גָּאָלְתָּ</span> · <i>nachita ve-chasd-kha am-zu gaalta</i><br><span class="gloss">= nachita and-chasd-kha am-zu gaalta</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The shepherd-cloud; the people-this.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_15_14 · Exod.15.14 · <span class='expr'>THE_PEOPLES_HEARD</span></h3>
+<p><span class="he">שָׁמְעוּ עַמִּים יִרְגָּזוּן חִיל אָחַז יֹשְׁבֵי פְּלָשֶׁת</span> · <i>shamu amim yirgazu-n chil achaz yoshve pelashet</i> · The peoples heard — they tremble; pang seized the dwellers of Philistia.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">שָֽׁמְע֥וּ עַמִּ֖ים יִרְגָּז֑וּן</span> · <i>shamu amim yirgazu-n</i> · the peoples have heard — they tremble (etnachta on yirgazu-n) [VERIFIED: SNAPSHOT Exod.15.14 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">חִ֣יל אָחַ֔ז יֹשְׁבֵ֖י פְּלָֽשֶׁת</span> · <i>chil achaz yoshve pelashet</i> · pang has seized the dwellers of Philistia (verse-final pelashet) [VERIFIED: SNAPSHOT Exod.15.14 idx3-6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shamu_amim_yirgazun, t0)</span><br><span class="gloss">= HOLDS(shamu-amim-yirgazun, t0)</span><br>THE HEARING. SHAMU amim YIRGAZUN — &#x27;the peoples HEARD — they TREMBLE&#x27; (the archaic long-form: the trembling lengthened by its final nun — the Song&#x27;s register); chil ACHAZ yoshve PELASHET — &#x27;pang SEIZED the dwellers of PHILISTIA&#x27; (the seize-word&#x27;s Masorah-pair named-only: Adonijah gripping the altar-horns — &#x27;trembling seized him till he gripped the horns&#x27;; and the other tongue&#x27;s not-grasped); the machine opens the PANIC-QUARTET (Philistia, Edom, Moab, Canaan — 15:14-16) and files its genre: the Song&#x27;s only FORECAST section — sung terror running ahead of the marchers (Rahab&#x27;s confession named, outside the Torah: &#x27;we HEARD... and hearts MELTED&#x27; — the receipt the quartet arms).
+</td><td><span class="he">שָׁמְעוּ עַמִּים יִרְגָּזוּן</span> · <i>shamu amim yirgazu-n</i><br><span class="gloss">= shamu amim yirgazu-n</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The panic-quartet opens.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_15_15 · Exod.15.15 · <span class='expr'>THE_CHIEFS_DISMAYED</span></h3>
+<p><span class="he">אָז נִבְהֲלוּ אַלּוּפֵי אֱדוֹם אֵילֵי מוֹאָב יֹאחֲזֵמוֹ רָעַד נָמֹגוּ כֹּל יֹשְׁבֵי כְנָעַן</span> · <i>az nivhalu alufe edom ele moav yochaze-mo raad namogu kol yoshve khenaan</i> · Then were the chiefs of Edom dismayed; the rams of Moab — trembling seizes them; all the dwellers of Canaan are melted away.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אָ֤ז נִבְהֲלוּ֙ אַלּוּפֵ֣י אֱד֔וֹם אֵילֵ֣י מוֹאָ֔ב יֹֽאחֲזֵ֖מוֹ רָ֑עַד</span> · <i>az nivhalu alufe edom ele moav yochaze-mo raad</i> · then were the chiefs of Edom dismayed; the rams of Moab — trembling seizes them (etnachta on raad) [VERIFIED: SNAPSHOT Exod.15.15 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">נָמֹ֕גוּ כֹּ֖ל יֹשְׁבֵ֥י כְנָֽעַן</span> · <i>namogu kol yoshve khenaan</i> · all the dwellers of Canaan are melted away (verse-final khenaan) [VERIFIED: SNAPSHOT Exod.15.15 idx8-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(namogu_kol_yoshve_khenaan, t0)</span><br><span class="gloss">= HOLDS(namogu-all-yoshve-khenaan, t0)</span><br>THE QUARTET&#x27;S BODY. AZ nivhalu ALUFE edom — &#x27;THEN were the CHIEFS of Edom dismayed&#x27;: the then-word&#x27;s second station in the chapter (asserted: 15:1&#x27;s then of song, 15:15&#x27;s then of dread — one adverb for the singing and the shuddering); the chief-word is Esau&#x27;s own registry-title (Gen 36&#x27;s roll of chiefs — the machine notes the corpus-echo: the family that kept its chiefs on parchment now keeps them trembling); ELE moav — &#x27;the RAMS of Moab&#x27; (the flock-nobility, the readings named-only); yochazemo RAAD — trembling seizes them (the -mo suffix again: the Song&#x27;s archaic object-endings clustering); NAMOGU kol yoshve KHENAAN — &#x27;all the dwellers of Canaan are MELTED&#x27;: the melt-verb (its great receipt named, outside the Torah: Jericho&#x27;s &#x27;the dwellers are melted&#x27; in Rahab&#x27;s mouth and at the crossing) — the machine holds the quartet OPEN toward Joshua: sung geography the conquest will walk.
+</td><td><span class="he">נָמֹגוּ כֹּל יֹשְׁבֵי כְנָעַן</span> · <i>namogu kol yoshve khenaan</i><br><span class="gloss">= namogu all yoshve khenaan</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The second then; the melt-verb.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_15_16 · Exod.15.16 · <span class='expr'>STILL_AS_A_STONE</span></h3>
+<p><span class="he">תִּפֹּל עֲלֵיהֶם אֵימָתָה וָפַחַד בִּגְדֹל זְרוֹעֲךָ יִדְּמוּ כָּאָבֶן עַד־יַעֲבֹר עַמְּךָ יְהוָה עַד־יַעֲבֹר עַם־זוּ קָנִיתָ</span> · <i>tipol ale-hem emata-ה va-fachad bi-gedol zeroa-kha yidmu ka-aven ad-yaavor am-kha YHWH ad-yaavor am-zu qanita</i> · Terror and dread fall upon them; by the greatness of Your arm they are still as a stone — till Your people cross over, O LORD, till the people You acquired cross over.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">תִּפֹּ֨ל עֲלֵיהֶ֤ם אֵימָ֨תָה֙ וָפַ֔חַד בִּגְדֹ֥ל זְרוֹעֲךָ֖ יִדְּמ֣וּ כָּאָ֑בֶן</span> · <i>tipol ale-hem emata-ה va-fachad bi-gedol zeroa-kha yidmu ka-aven</i> · terror and dread fall upon them; by the greatness of Your arm they are still as a stone (etnachta on ka-aven) [VERIFIED: SNAPSHOT Exod.15.16 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">עַד יַעֲבֹ֤ר עַמְּךָ֙ יְהוָ֔ה עַֽד יַעֲבֹ֖ר עַם ז֥וּ קָנִֽיתָ</span> · <i>ad-yaavor am-kha YHWH ad-yaavor am-zu qanita</i> · till Your people cross over, O LORD, till this people You acquired cross over (verse-final qanita) [VERIFIED: SNAPSHOT Exod.15.16 idx8-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ad_yaavor_am_zu_qanita, t0)</span><br><span class="gloss">= HOLDS(until-yaavor-am-zu-qanita, t0)</span><br>THE CROSSING-CLAUSE [EX15-04; EX15-01]. tipol alehem EMATA va-fachad — &#x27;TERROR and dread fall upon them&#x27; (the terror-word wearing the archaic he-ending; alehem with NO paseq, MS, EX15-13); bi-gedol ZEROAKHA — &#x27;by the greatness of Your ARM&#x27; — the arm-word FULL against the Yerushalmi&#x27;s lean (VERIFIED: the Hilleli WITH the stream — dual-tracked per the divergence law); yidmu KA-AVEN — &#x27;STILL AS A STONE&#x27;: the kaf HARD (EX15-01&#x27;s guard-list: &#x27;lest it seem to say A STONE would silence You&#x27; — the same dot-law that barred the idol at 15:11 bars the stone from silencing praise), and the stone-file closes its frame (15:5&#x27;s enemy sank like a stone; 15:16&#x27;s peoples stand like one — what the sea did to Egypt in water, the report does to Canaan on land); AD-YAAVOR amkha YHWH ad-yaavor AM-ZU QANITA — &#x27;TILL Your people CROSS OVER... till the people You ACQUIRED cross over&#x27;: the crossing-verb doubled (the readings: two crossings — the sea behind, the Jordan ahead — named-only) and the people-this frame&#x27;s second Song-station (VERIFIED, EX15-04): the acquired-word joins the redeemed-word of 15:13 — the machine arms the far bank the quartet already fears.
+</td><td><span class="he">עַד־יַעֲבֹר עַמְּךָ יְהוָה עַד־יַעֲבֹר עַם־זוּ קָנִיתָ</span> · <i>ad-yaavor am-kha YHWH ad-yaavor am-zu qanita</i><br><span class="gloss">= until-yaavor am-kha the-LORD until-yaavor am-zu qanita</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The stone-still; the double crossing.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_15_17 · Exod.15.17 · <span class='expr'>PLANT_THEM_ON_YOUR_MOUNTAIN</span></h3>
+<p><span class="he">תְּבִאֵמוֹ וְתִטָּעֵמוֹ בְּהַר נַחֲלָתְךָ מָכוֹן לְשִׁבְתְּךָ פָּעַלְתָּ יְהוָה מִקְּדָשׁ אֲדֹנָי כּוֹנְנוּ יָדֶיךָ</span> · <i>tevie-mo ve-titae-mo be-har nachalat-kha makhon le-shivt-kha paalta YHWH miqdash adona-y konnu yade-kha</i> · You will bring them in and plant them on the mountain of Your inheritance — the place for Your dwelling which You made, O LORD; the sanctuary, O Lord, which Your hands established.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">תְּבִאֵ֗מוֹ וְתִטָּעֵ֨מוֹ֙ בְּהַ֣ר נַחֲלָֽתְךָ֔ מָכ֧וֹן לְשִׁבְתְּךָ֛ פָּעַ֖לְתָּ יְהוָ֑ה</span> · <i>tevie-mo ve-titae-mo be-har nachalat-kha makhon le-shivt-kha paalta YHWH</i> · You will bring them in and plant them on the mountain of Your inheritance — the place for Your dwelling which You made, O LORD (etnachta on YHWH) [VERIFIED: SNAPSHOT Exod.15.17 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">מִקְּדָ֕שׁ אֲדֹנָ֖י כּוֹנְנ֥וּ יָדֶֽיךָ</span> · <i>miqdash adona-y konnu yade-kha</i> · the sanctuary, O Lord, which Your hands established (verse-final yade-kha) [VERIFIED: SNAPSHOT Exod.15.17 idx8-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(makhon_le_shivtekha_paalta, t0)</span><br><span class="gloss">= HOLDS(makhon-to-shivtekha-paalta, t0)</span><br>THE HOUSE BEFORE THE TENT [EX15-05 CROWN]. TEVIEMO ve-titaemo be-HAR nachalatkha — &#x27;You will BRING them and PLANT them on the MOUNTAIN of Your inheritance&#x27; (the planting-verb for a people — the readings&#x27; vineyard named-only): the Song&#x27;s terminal FORECAST; makhon LE- SHIVTEKHA paalta YHWH — &#x27;the place FOR YOUR DWELLING which You made&#x27;: the dwelling-word Torah-UNIQUE (VERIFIED), its Masorah-twins SOLOMON&#x27;S DEDICATION (&#x27;I have surely built You a house of habitation, a place for Your dwelling forever,&#x27; 1 Kgs 8:13, with the Chronicles repeat) — the Kitzur: &#x27;THE TEMPLE BELOW IS ALIGNED OPPOSITE THE TEMPLE ABOVE&#x27; (the placed-word read as aimed-word); and the cipher lands EXACT (asserted at the build): the dwelling-word&#x27;s letters count JERUSALEM plus ZION (752 = 752 — one word carrying both its addresses); MIQDASH adonai konnu YADEKHA — &#x27;the SANCTUARY... Your HANDS established&#x27;: the qof dageshed LE-TIFERET (&#x27;for splendor&#x27; — the ornamental dagesh named as such, MS, EX15-13), the extra yod of the hands-word counted (&#x27;for the TEN miracles in the Temple and the TEN sanctities of the Land&#x27;): the machine files the forecast OPEN — the Song names the house sixty-five chapters before the book builds a tent (25:8&#x27;s build-Me armed).
+</td><td><span class="he">מָכוֹן לְשִׁבְתְּךָ פָּעַלְתָּ יְהוָה</span> · <i>makhon le-shivt-kha paalta YHWH</i><br><span class="gloss">= makhon to-shivt-kha paalta the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The sanctuary-forecast.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_15_18 · Exod.15.18 · <span class='expr'>THE_REIGN_FOREVER</span></h3>
+<p><span class="he">יְהוָה יִמְלֹךְ לְעֹלָם וָעֶד</span> · <i>YHWH yimlokh le-olam va-ed</i> · The LORD shall reign forever and ever.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">יְהוָ֥ה יִמְלֹ֖ךְ</span> · <i>YHWH yimlokh</i> · the LORD shall reign (NO etnachta in verse: split at tifcha on yimlokh) [VERIFIED: SNAPSHOT Exod.15.18 idx1 tifcha; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">לְעֹלָ֥ם וָעֶֽד</span> · <i>le-olam va-ed</i> · forever and ever (verse-final va-ed) [VERIFIED: SNAPSHOT Exod.15.18 idx2-3]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(YHWH_yimlokh_le_olam_va_ed, t0)</span><br><span class="gloss">= HOLDS(the-LORD-yimlokh-to-olam-and-mist, t0)</span><br>THE REIGN [EX15-07 CROWN]. YHWH YIMLOKH le-olam va-ed — &#x27;the LORD shall REIGN forever and ever&#x27;: the Song&#x27;s four-word seal (the reign- verb once in the verse, VERIFIED) — and the line carries a CHAIN-VS- STREAM DIVERGENCE, dual-tracked per the law: the Kitzur rules a PASEQ after the reigning (&#x27;when the time comes that they say THE- LORD-REIGNED, THE-LORD-REIGNS, THE-LORD-SHALL-REIGN — then the kingdom of the nations SHALL BE CUT OFF&#x27;: the divider-stroke as the empires&#x27; terminus) — and THE STREAM WRITES NO PASEQ (VERIFIED: the four words run unbroken — the Kitzur&#x27;s cutoff named, the stream&#x27;s unbroken reign standing); the frame&#x27;s grammar-note carried: &#x27;MOSES put the Name BEFORE the kingship; DAVID put the kingship before the Name (Ps 146:10) — for David&#x27;s line had just said the way of the wicked He makes crooked, and he would not set the Name beside the evil&#x27;; the forever-word LEAN with MS&#x27;s vowel-note on the vav (per Rashi and Ibn Ezra, as in an old print): the machine closes the Song&#x27;s poetry on the corpus&#x27;s first kingship-line for the Name — sung, not yet legislated.
+</td><td><span class="he">יְהוָה יִמְלֹךְ לְעֹלָם וָעֶד</span> · <i>YHWH yimlokh le-olam va-ed</i><br><span class="gloss">= the-LORD yimlokh to-olam mist</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The reign-line; the cutoff dispute.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_15_19 · Exod.15.19 · <span class='expr'>THE_PROSE_SEAL</span></h3>
+<p><span class="he">כִּי בָא סוּס פַּרְעֹה בְּרִכְבּוֹ וּבְפָרָשָׁיו בַּיָּם וַיָּשֶׁב יְהוָה עֲלֵהֶם אֶת־מֵי הַיָּם וּבְנֵי יִשְׂרָאֵל הָלְכוּ בַיַּבָּשָׁה בְּתוֹךְ הַיָּם</span> · <i>ki va sus paro be-rikhb-o u-ve-farashay-v ba-yam va-yashev YHWH ale-hem et-me ha-yam u-vene yisrael halkhu va-yabasha be-tokh ha-yam</i> · For the horse of Pharaoh came, with his chariots and with his horsemen, into the sea, and the LORD returned upon them the waters of the sea; and the sons of Israel walked on the dry ground in the midst of the sea.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">כִּ֣י בָא֩ ס֨וּס פַּרְעֹ֜ה בְּרִכְבּ֤וֹ וּבְפָרָשָׁיו֙ בַּיָּ֔ם וַיָּ֧שֶׁב יְהוָ֛ה עֲלֵהֶ֖ם אֶת מֵ֣י הַיָּ֑ם</span> · <i>ki va sus paro be-rikhb-o u-ve-farashay-v ba-yam va-yashev YHWH ale-hem et-me ha-yam</i> · for the horse of Pharaoh came, with his chariots and with his horsemen, into the sea, and the LORD returned upon them the waters of the sea (etnachta on ha-yam) [VERIFIED: SNAPSHOT Exod.15.19 idx12 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּבְנֵ֧י יִשְׂרָאֵ֛ל הָלְכ֥וּ בַיַּבָּשָׁ֖ה בְּת֥וֹךְ הַיָּֽם</span> · <i>u-vene yisrael halkhu va-yabasha be-tokh ha-yam</i> · and the sons of Israel walked on the dry ground in the midst of the sea (verse-final ha-yam) [VERIFIED: SNAPSHOT Exod.15.19 idx13-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ki_va_sus_paro_ba_yam, t0)</span><br><span class="gloss">= HOLDS(when-and-sus-paro-in-the-yam, t0)</span><br>THE WARRANT. KI va SUS paro — &#x27;FOR the horse of Pharaoh CAME&#x27;: the Song&#x27;s own citation apparatus — a prose verse inside the Song&#x27;s scroll-block stating the evidence for the poetry (the horse came 14:23, the waters returned 14:28, Israel walked dry 14:29 — the machine reads 15:19 as the unit&#x27;s for-clause: the claims of eighteen verses receipted against the narrative in one); sus singular again (the nation&#x27;s mount one horse, as its man was one man at 14:25); u-vene yisrael halkhu VA-YABASHA be-tokh ha-yam — the dry-ground clause of 14:29 re-inscribed VERBATIM as testimony: the machine notes the Song&#x27;s honesty-of-genre — where poetry ends, the record signs.
+</td><td><span class="he">כִּי בָא סוּס פַּרְעֹה בְּרִכְבּוֹ וּבְפָרָשָׁיו בַּיָּם</span> · <i>ki va sus paro be-rikhb-o u-ve-farashay-v ba-yam</i><br><span class="gloss">= when and sus paro in-rikhb-o and-and-farashay-v in-the-yam</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The warrant-verse.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_15_20 · Exod.15.20 · <span class='expr'>MIRIAM_TAKES_THE_TIMBREL</span></h3>
+<p><span class="he">וַתִּקַּח מִרְיָם הַנְּבִיאָה אֲחוֹת אַהֲרֹן אֶת־הַתֹּף בְּיָדָהּ וַתֵּצֶאןָ כָל־הַנָּשִׁים אַחֲרֶיהָ בְּתֻפִּים וּבִמְחֹלֹת</span> · <i>va-tiqach miryam ha-nevia achot aharon et-ha-tof be-yada-ה va-tetzena khal-ha-nashim achare-ha be-tupim u-vi-mecholot</i> · And Miriam the prophetess, the sister of Aaron, took the timbrel in her hand; and all the women went out after her, with timbrels and with dances.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתִּקַּח֩ מִרְיָ֨ם הַנְּבִיאָ֜ה אֲח֧וֹת אַהֲרֹ֛ן אֶת הַתֹּ֖ף בְּיָדָ֑הּ</span> · <i>va-tiqach miryam ha-nevia achot aharon et-ha-tof be-yada-ה</i> · and Miriam the prophetess, the sister of Aaron, took the timbrel in her hand (etnachta on be-yada-ה) [VERIFIED: SNAPSHOT Exod.15.20 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתֵּצֶ֤אןָ כָֽל הַנָּשִׁים֙ אַחֲרֶ֔יהָ בְּתֻפִּ֖ים וּבִמְחֹלֹֽת</span> · <i>va-tetzena khal-ha-nashim achare-ha be-tupim u-vi-mecholot</i> · and all the women went out after her, with timbrels and with dances (verse-final u-vi-mecholot) [VERIFIED: SNAPSHOT Exod.15.20 idx8-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_tiqach_miryam_et_ha_tof, t0)</span><br><span class="gloss">= HOLDS(and-tiqach-miryam-the-tof, t0)</span><br>THE SISTER SIGNED [EX15-13]. va-tiqach MIRYAM ha-NEVIA achot AHARON — &#x27;and MIRIAM THE PROPHETESS, the SISTER OF AARON, took the timbrel&#x27;: the watching sister of 2:4 NAMED AT LAST — exo_02&#x27;s withheld-name restraint pays its third installment (the parents signed at 6:20, the sister at 15:20), and she arrives already titled: THE PROPHETESS (the corpus&#x27;s first woman so titled; the readings on the prophecy before Moses&#x27; birth, and on sister-of-AARON — the title from the days when she had one brother — named-only); et-HA-TOF — &#x27;THE timbrel&#x27; (the article&#x27;s readings: the instruments prepared in Egypt by the women who trusted the exodus enough to pack for singing — named-only); ve-tetzena KHOL ha-nashim — &#x27;ALL the women went out&#x27; (the kaf SOFT, MS, EX15-13) be-tupim u-vi-MECHOLOT — with timbrels and DANCES; and HERE MS CLOSES THE SONG-LAYOUT LAW (EX15-13): &#x27;THIS is the Song per the author&#x27;s view — printed in two columns only for the page&#x27;s narrowness; IN A TORAH SCROLL IT MUST BE ONE COLUMN, with FIVE LINES before it and FIVE after&#x27; (14:25&#x27;s brick-grid arm executed and sealed): the machine files the registry- note for the fold (the entity-registry gains the sister) and the scroll its own architecture.
+</td><td><span class="he">וַתִּקַּח מִרְיָם הַנְּבִיאָה אֲחוֹת אַהֲרֹן אֶת־הַתֹּף בְּיָדָהּ</span> · <i>va-tiqach miryam ha-nevia achot aharon et-ha-tof be-yada-ה</i><br><span class="gloss">= and-tiqach miryam the-nevia achot Aaron the-tof in-yada-ה</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The sister signed; the layout-law sealed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_15_21 · Exod.15.21 · <span class='expr'>SING_TO_THE_LORD</span></h3>
+<p><span class="he">וַתַּעַן לָהֶם מִרְיָם שִׁירוּ לַיהוָה כִּי־גָאֹה גָּאָה סוּס וְרֹכְבוֹ רָמָה בַיָּם</span> · <i>va-taan la-hem miryam shiru la-YHWH ki-gao gaa sus ve-rokhv-o rama va-yam</i> · And Miriam answered them: Sing to the LORD, for He is highly exalted; the horse and its rider He has thrown into the sea.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתַּ֥עַן לָהֶ֖ם מִרְיָ֑ם</span> · <i>va-taan la-hem miryam</i> · and Miriam answered them (etnachta on miryam) [VERIFIED: SNAPSHOT Exod.15.21 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">שִׁ֤ירוּ לַֽיהוָה֙ כִּֽי גָאֹ֣ה גָּאָ֔ה ס֥וּס וְרֹכְב֖וֹ רָמָ֥ה בַיָּֽם</span> · <i>shiru la-YHWH ki-gao gaa sus ve-rokhv-o rama va-yam</i> · sing to the LORD, for He is highly exalted: the horse and its rider He has thrown into the sea (verse-final va-yam) [VERIFIED: SNAPSHOT Exod.15.21 idx3-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(miryam, LET(shiru_la_YHWH))</span><br><span class="gloss">= DECLARE(miryam, LET(shiru-to-the-LORD))</span><br>THE ANTIPHON. va-TAAN lahem miryam — &#x27;and Miriam ANSWERED THEM&#x27; (the answer-verb: the Song made responsive; la-HEM in the masculine — the readings on whom she answered, named-only; her gaa in the guard- list&#x27;s dagesh-file too, MS); SHIRU la-YHWH — &#x27;SING to the LORD&#x27;: the Song&#x27;s ONLY IMPERATIVE — the machine files the push (DECLARE: the command to sing) and the arc it closes: the Song opened on a first- person vow (ashira, &#x27;I WILL SING&#x27;), it ends on a command (shiru, &#x27;SING!&#x27;) — praise scaled from volunteer to summons; and the refrain returns VERBATIM (asserted at the build: 15:21&#x27;s seven closing tokens = 15:1&#x27;s, letter for letter): the machine notes the card&#x27;s state — the women&#x27;s own singing beyond the refrain is UNNARRATED (the unnarrated-compliance class: the demand stands OPEN, the answered-verb the only receipt the text writes).
+</td><td><span class="he">שִׁירוּ לַיהוָה כִּי־גָאֹה גָּאָה סוּס וְרֹכְבוֹ רָמָה בַיָּם</span> · <i>shiru la-YHWH ki-gao gaa sus ve-rokhv-o rama va-yam</i><br><span class="gloss">= shiru to-the-LORD when-gao gaa sus and-rokhv-o rama and-yam</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The antiphon; the imperative pushed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_15_22 · Exod.15.22 · <span class='expr'>THREE_DAYS_NO_WATER</span></h3>
+<p><span class="he">וַיַּסַּע מֹשֶׁה אֶת־יִשְׂרָאֵל מִיַּם־סוּף וַיֵּצְאוּ אֶל־מִדְבַּר־שׁוּר וַיֵּלְכוּ שְׁלֹשֶׁת־יָמִים בַּמִּדְבָּר וְלֹא־מָצְאוּ מָיִם</span> · <i>va-yasa moshe et-yisrael mi-yam-suf va-yetzu el-midbar-shur va-yelkhu sheloshet-yamim ba-midbar ve-lo-matzu mayim</i> · And Moses made Israel journey from the Reed Sea, and they went out to the wilderness of Shur; and they went three days in the wilderness, and found no water.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּסַּ֨ע מֹשֶׁ֤ה אֶת יִשְׂרָאֵל֙ מִיַּם ס֔וּף וַיֵּצְא֖וּ אֶל מִדְבַּר שׁ֑וּר</span> · <i>va-yasa moshe et-yisrael mi-yam-suf va-yetzu el-midbar-shur</i> · and Moses made Israel journey from the Reed Sea, and they went out to the wilderness of Shur (etnachta on shur) [VERIFIED: SNAPSHOT Exod.15.22 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֵּלְכ֧וּ שְׁלֹֽשֶׁת יָמִ֛ים בַּמִּדְבָּ֖ר וְלֹא מָ֥צְאוּ מָֽיִם</span> · <i>va-yelkhu sheloshet-yamim ba-midbar ve-lo-matzu mayim</i> · and they went three days in the wilderness, and found no water (verse-final mayim) [VERIFIED: SNAPSHOT Exod.15.22 idx10-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(sheloshet_yamim_ve_lo_matzu_mayim, t0)</span><br><span class="gloss">= HOLDS(sheloshet-seas-and-not-matzu-waters, t0)</span><br>THE MARCH [EX15-11]. va-YASA moshe et-yisrael mi-yam-suf — &#x27;and Moses MADE ISRAEL JOURNEY from the Reed Sea&#x27;: the causative journey- verb — the Kitzur&#x27;s jewel-derash named: &#x27;he made them journey AGAINST THEIR WILL, for they were gathering the precious stones the sea-floor gave up&#x27; (the shepherd moving a flock from a rich pasture), with JOB the counselor&#x27;s measure beside it (&#x27;my hope UPROOTED like a tree — for Job was in Pharaoh&#x27;s counsel at the hard labor&#x27;); el-midbar-SHUR — toward the wilderness of SHUR (the corpus recalls the road: Hagar&#x27;s well-road at Gen 16:7 — the desert that once opened a spring for a runaway now meets the redeemed); va- yelkhu SHELOSHET YAMIM ba-midbar VE-LO-MATZU MAYIM — &#x27;THREE DAYS... and found NO WATER&#x27;: the thirst-file OPENS (the wilderness-cycle&#x27;s first shortage — the machine notes the ledger&#x27;s turn: five verses after twelve verses of water as weapon and wall, the absence of water becomes the test).
+</td><td><span class="he">וַיֵּלְכוּ שְׁלֹשֶׁת־יָמִים בַּמִּדְבָּר וְלֹא־מָצְאוּ מָיִם</span> · <i>va-yelkhu sheloshet-yamim ba-midbar ve-lo-matzu mayim</i><br><span class="gloss">= and-yelkhu sheloshet-seas in-the-midbar and-not-matzu waters</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The forced march; the thirst opens.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_15_23 · Exod.15.23 · <span class='expr'>MARAH_NAMED</span></h3>
+<p><span class="he">וַיָּבֹאוּ מָרָתָה וְלֹא יָכְלוּ לִשְׁתֹּת מַיִם מִמָּרָה כִּי מָרִים הֵם עַל־כֵּן קָרָא־שְׁמָהּ מָרָה</span> · <i>va-yavou marata-ה ve-lo yakhlu li-shetot mayim mi-mara ki marim hem al-ken qara-shema-ה mara</i> · And they came to Marah, and could not drink the waters of Marah, for they were bitter; therefore its name was called Marah.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּבֹ֣אוּ מָרָ֔תָה וְלֹ֣א יָֽכְל֗וּ לִשְׁתֹּ֥ת מַ֨יִם֙ מִמָּרָ֔ה כִּ֥י מָרִ֖ים הֵ֑ם</span> · <i>va-yavou marata-ה ve-lo yakhlu li-shetot mayim mi-mara ki marim hem</i> · and they came to Marah, and could not drink the waters of Marah, for they were bitter (etnachta on hem) [VERIFIED: SNAPSHOT Exod.15.23 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">עַל כֵּ֥ן קָרָֽא שְׁמָ֖הּ מָרָֽה</span> · <i>al-ken qara-shema-ה mara</i> · therefore its name was called Marah (verse-final mara) [VERIFIED: SNAPSHOT Exod.15.23 idx10-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>NAME</td><td><span class="expr">name(maqom) := Mara</span><br>THE NAMING [EX15-11]. va-yavou MARATA — &#x27;and they came TO MARAH&#x27;: the to-Marah form Torah-unique (VERIFIED), its Masorah-twin Jeremiah&#x27;s &#x27;she has REBELLED against Me&#x27; — the Kitzur: &#x27;as there they rebelled, so here&#x27; (the station&#x27;s name and the station&#x27;s sin one skeleton); ve-lo yakhlu LISHTOT mayim mi-mara ki MARIM hem — &#x27;they COULD NOT DRINK the waters... for they were BITTER&#x27;: the could-not-drink frame returns (asserted at the build: 7:21&#x27;s Egypt that could not drink the blood-river, 15:23&#x27;s Israel that cannot drink Marah — the first thirst after the sea quotes the first plague&#x27;s clause, the drink-word full there and LEAN here: the lean- drink file re-lands); al-ken QARA SHEMA MARA — &#x27;therefore its NAME was called MARAH&#x27;: the naming-verb spent on a taste — the machine writes the register (the corpus&#x27;s first station named for its complaint) and notes the mirror the readings press: the bitter waters, the bitter drinkers, one adjective, named-only.
+</td><td><span class="he">עַל־כֵּן קָרָא־שְׁמָהּ מָרָה</span> · <i>al-ken qara-shema-ה mara</i><br><span class="gloss">= upon-ken qara-hear-ה mara</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The bitter station; the name written.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_15_24 · Exod.15.24 · <span class='expr'>WHAT_SHALL_WE_DRINK</span></h3>
+<p><span class="he">וַיִּלֹּנוּ הָעָם עַל־מֹשֶׁה לֵּאמֹר מַה־נִּשְׁתֶּה</span> · <i>va-yilonu ha-am al-moshe le-mor ma-nishte</i> · And the people murmured against Moses, saying: What shall we drink?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּלֹּ֧נוּ הָעָ֛ם עַל מֹשֶׁ֥ה לֵּאמֹ֖ר</span> · <i>va-yilonu ha-am al-moshe le-mor</i> · and the people murmured against Moses, saying (NO etnachta in verse: split at tifcha on le-mor) [VERIFIED: SNAPSHOT Exod.15.24 idx4 tifcha; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">מַה נִּשְׁתֶּֽה</span> · <i>ma-nishte</i> · what shall we drink? (verse-final nishte) [VERIFIED: SNAPSHOT Exod.15.24 idx5-6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(ha_am, LET(ma_nishte))</span><br><span class="gloss">= DECLARE(the-am, LET(ma-nishte))</span><br>THE MURMUR. va-YILONU ha-am al-moshe — &#x27;and the people MURMURED against Moses&#x27;: the murmuring-VERB arrives — and its exact form stands exactly THREE times in the Torah (asserted at the build): MARAH, the SPIES (Num 14:2), and the morrow of KORAH (Num 17:6) — water, land, and the dead: the wilderness-file&#x27;s three great openings on one skeleton, the first here (14:11&#x27;s complaint-class gains its signature verb; 16:2&#x27;s murmur WITH AARON armed — here the target is Moses alone); MA-NISHTE — &#x27;WHAT SHALL WE DRINK?&#x27;: the machine pushes the demand (the plea&#x27;s whole content two words — against 15:9&#x27;s five-verb boast, the corpus&#x27;s arithmetic of need vs. greed) and notes the timing the readings press: three days from the Song to the murmur, named-only.
+</td><td><span class="he">וַיִּלֹּנוּ הָעָם עַל־מֹשֶׁה לֵּאמֹר מַה־נִּשְׁתֶּה</span> · <i>va-yilonu ha-am al-moshe le-mor ma-nishte</i><br><span class="gloss">= and-yilonu the-am upon-Moses to-mor ma-nishte</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The murmur-verb&#x27;s first station.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_15_25 · Exod.15.25 · <span class='expr'>THE_TREE_AND_THE_STATUTE</span></h3>
+<p><span class="he">וַיִּצְעַק אֶל־יְהוָה וַיּוֹרֵהוּ יְהוָה עֵץ וַיַּשְׁלֵךְ אֶל־הַמַּיִם וַיִּמְתְּקוּ הַמָּיִם שָׁם שָׂם לוֹ חֹק וּמִשְׁפָּט וְשָׁם נִסָּהוּ</span> · <i>va-yitzaq el-YHWH va-yore-hu YHWH etz va-yashlekh el-ha-mayim va-yimtqu ha-mayim sham sam l-o choq u-mishpat ve-sham nisa-hu</i> · And he cried out to the LORD, and the LORD showed him a tree; and he cast it into the waters, and the waters were sweetened. There He set for him a statute and an ordinance, and there He tested him.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּצְעַ֣ק אֶל יְהוָ֗ה וַיּוֹרֵ֤הוּ יְהוָה֙ עֵ֔ץ וַיַּשְׁלֵךְ֙ אֶל הַמַּ֔יִם וַֽיִּמְתְּק֖וּ הַמָּ֑יִם</span> · <i>va-yitzaq el-YHWH va-yore-hu YHWH etz va-yashlekh el-ha-mayim va-yimtqu ha-mayim</i> · and he cried out to the LORD, and the LORD showed him a tree; and he cast it into the waters, and the waters were sweetened (etnachta on ha-mayim) [VERIFIED: SNAPSHOT Exod.15.25 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">שָׁ֣ם שָׂ֥ם ל֛וֹ חֹ֥ק וּמִשְׁפָּ֖ט וְשָׁ֥ם נִסָּֽהוּ</span> · <i>sham sam l-o choq u-mishpat ve-sham nisa-hu</i> · there He set for him a statute and an ordinance, and there He tested him (verse-final nisa-hu) [VERIFIED: SNAPSHOT Exod.15.25 idx11-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">hamtaqat_ha_mayim(e2); Agent(e2, moshe); Theme(e2, ha-mayim)</span><br><span class="gloss">= hamtaqat-the-waters(e2); Agent(e2, Moses); Theme(e2, the-waters)</span><br>THE SWEETENING. va-YITZAQ el-YHWH — &#x27;and he CRIED OUT to the LORD&#x27;: the cry-ledger&#x27;s third station (the people&#x27;s at the sea 14:10, Moses&#x27; at Marah — and 14:15&#x27;s why-cry-to-Me not contradicted: there the hour demanded motion, here there is no command in hand and the cry IS the liturgy; 17:4&#x27;s next cry armed); va-YOREHU YHWH ETZ — &#x27;and the LORD SHOWED him a TREE&#x27; (the show-verb from the teach-root — the readings hear the Torah-word inside it, named-only; the Kitzur&#x27;s bitter tree at the manifest: &#x27;as the bitter sweetens the bitter&#x27; — EX15-11&#x27;s paradox-class); va-yashlekh el-ha-mayim — he CAST it in: THE EVENT — the corpus&#x27;s first REPAIR-miracle: every wonder since 7:20 broke something whole (water to blood, light to dark, life to death); this one turns bad to good — the machine files the inversion of the first plague and lets the verse-pair speak (asserted at the build: the same could-not-drink clause at 7:21 and 15:23, one river ruined, one pool healed).
+</td><td><span class="he">וַיִּצְעַק אֶל־יְהוָה וַיּוֹרֵהוּ יְהוָה עֵץ וַיַּשְׁלֵךְ אֶל־הַמַּיִם וַיִּמְתְּקוּ</span> · <i>va-yitzaq el-YHWH va-yore-hu YHWH etz va-yashlekh el-ha-mayim va-yimtqu</i><br><span class="gloss">= and-yitzaq to-the-LORD and-yore-that the-LORD tree and-yashlekh to-the-waters and-yimtqu</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(ma_nishte, t1)</span><br><span class="gloss">= RESULT: HOLDS(ma-nishte, t1)</span><br>THE ANSWER. va-YIMTEQU ha-mayim — &#x27;and the waters were SWEETENED&#x27; (asserted): ma-nishte PAID in its own element — pushed at 15:24, popped at 15:25: the murmur-file&#x27;s first entry closes in one verse (the machine notes the cycle-time: the corpus&#x27;s fastest demand — and the pattern armed: the manna and the rock will run the same loop longer).
+</td><td><span class="he">וַיִּמְתְּקוּ הַמָּיִם</span> · <i>va-yimtqu ha-mayim</i><br><span class="gloss">= and-yimtqu waters</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(sham_sam_lo_choq_u_mishpat, t0)</span><br><span class="gloss">= HOLDS(there-sam-not-choq-and-mishpat, t0)</span><br>THE FIRST STATUTE-STATION [EX15-11 CROWN]. SHAM SAM lo CHOQ U-MISHPAT — &#x27;THERE He SET for him a STATUTE AND AN ORDINANCE&#x27;: the statute-and-ordinance adjacency Torah-UNIQUE at Marah (VERIFIED), the Masorah&#x27;s fellows named: JOSHUA AT SHECHEM (&#x27;and he set for them a statute and an ordinance,&#x27; Josh 24:25) and EZRA (&#x27;to teach in Israel statute and ordinance&#x27;) — the Kitzur: &#x27;as at Marah, so at Shechem AS IF TORAH WERE GIVEN THAT DAY; and in Ezra the script was renewed&#x27; (THREE REFOUNDINGS on one phrase — law given at a spring, a stone, and a return); and the cipher asserted: SHAM counts PARA ADUMA with the inclusive one — &#x27;as the bitter wood SWEETENS the bitter, the RED HEIFER purifies the defiled and defiles the pure&#x27; (the statute-class of paradox founded at the first statute-station); the machine files LAW BEFORE SINAI: the corpus&#x27;s first named statute-giving since the Passover code (12:49&#x27;s one-law), content unspecified in the written layer (the readings name Sabbath and honor and judgments — named-only, unclaimed).
+</td><td><span class="he">שָׁם שָׂם לוֹ חֹק וּמִשְׁפָּט</span> · <i>sham sam l-o choq u-mishpat</i><br><span class="gloss">= there sam l-o choq and-mishpat</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_sham_nisahu, t0)</span><br><span class="gloss">= HOLDS(and-there-nisahu, t0)</span><br>THE TEST. ve-SHAM NISAHU — &#x27;and THERE He TESTED him&#x27;: the test-verb returns (Gen 22:1&#x27;s word — the Akeda&#x27;s verb aimed now at a nation; no verdict narrated: the machine files the VERDICT-LESS TEST as a standing fact, TESTS ledger untouched — 16:4&#x27;s &#x27;that I may TEST them&#x27; armed as the verb&#x27;s next station); and the there-word TRIPLED (asserted at the build: THERE He set, THERE He tested, and THERE they camped at 15:27 — the itinerary teaching its grammar: every address in the wilderness is a syllabus).
+</td><td><span class="he">וְשָׁם נִסָּהוּ</span> · <i>ve-sham nisa-hu</i><br><span class="gloss">= and-there nisa-that</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The repair-miracle; the first statute-station.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_15_26 · Exod.15.26 · <span class='expr'>I_AM_YOUR_HEALER</span></h3>
+<p><span class="he">וַיֹּאמֶר אִם־שָׁמוֹעַ תִּשְׁמַע לְקוֹל יְהוָה אֱלֹהֶיךָ וְהַיָּשָׁר בְּעֵינָיו תַּעֲשֶׂה וְהַאֲזַנְתָּ לְמִצְוֺתָיו וְשָׁמַרְתָּ כָּל־חֻקָּיו כָּל־הַמַּחֲלָה אֲשֶׁר־שַׂמְתִּי בְמִצְרַיִם לֹא־אָשִׂים עָלֶיךָ כִּי אֲנִי יְהוָה רֹפְאֶךָ</span> · <i>va-yomer im-shamoa tishma le-qol YHWH elohe-kha ve-ha-yashar be-enay-v taase ve-haazanta le-mitzvotay-v ve-shamarta kal-chuqay-v kal-ha-machala asher-samti ve-mitzrayim lo-asim ale-kha ki ani YHWH rofe-kha</i> · And He said: If you diligently listen to the voice of the LORD your God, and do what is right in His eyes, and give ear to His commandments, and keep all His statutes — all the disease which I set upon Egypt I will not set upon you; for I am the LORD your healer.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּאמֶר֩ אִם שָׁמ֨וֹעַ תִּשְׁמַ֜ע לְק֣וֹל יְהוָ֣ה אֱלֹהֶ֗יךָ וְהַיָּשָׁ֤ר בְּעֵינָיו֙ תַּעֲשֶׂ֔ה וְהַֽאֲזַנְתָּ֙ לְמִצְוֺתָ֔יו וְשָׁמַרְתָּ֖ כָּל חֻקָּ֑יו</span> · <i>va-yomer im-shamoa tishma le-qol YHWH elohe-kha ve-ha-yashar be-enay-v taase ve-haazanta le-mitzvotay-v ve-shamarta kal-chuqay-v</i> · and He said: if you diligently listen to the voice of the LORD your God, and do what is right in His eyes, and give ear to His commandments, and keep all His statutes (etnachta on chuqay-v) [VERIFIED: SNAPSHOT Exod.15.26 idx14 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כָּֽל הַמַּֽחֲלָ֞ה אֲשֶׁר שַׂ֤מְתִּי בְמִצְרַ֨יִם֙ לֹא אָשִׂ֣ים עָלֶ֔יךָ כִּ֛י אֲנִ֥י יְהוָ֖ה רֹפְאֶֽךָ</span> · <i>kal-ha-machala asher-samti ve-mitzrayim lo-asim ale-kha ki ani YHWH rofe-kha</i> · all the disease which I set upon Egypt I will not set upon you, for I am the LORD your healer (verse-final rofe-kha) [VERIFIED: SNAPSHOT Exod.15.26 idx15-26]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(im_shamoa_tishma))</span><br><span class="gloss">= DECLARE(the-LORD, LET(if-shamoa-tishma))</span><br>THE LISTEN-COVENANT. im SHAMOA TISHMA le-qol YHWH elohekha — &#x27;IF you DILIGENTLY LISTEN to the voice of the LORD your God&#x27;: the corpus&#x27;s first CONDITIONAL law to the nation — the if-word opens covenant- grammar (19:5&#x27;s if-you-listen at Sinai armed: Marah drafts the form the mountain will scale), and the doubled hearing (the infinitive absolute before its verb — the listening listened, the corpus&#x27;s emphatic pattern) heads a FOUR-RUNG LADDER: listen / do the right in His eyes / give ear to His commandments / keep ALL HIS STATUTES (chuqav — the statute-word of 15:25 already plural: one verse after the first statute-station, a statute-CODE is presupposed; the qof dageshed, MS, EX15-13): the machine pushes the card and files its class — PERPETUAL-CONDITIONAL, no pop possible in-span (the demand is a standing covenant: it joins the perpetual statutes in the open queue).
+</td><td><span class="he">וַיֹּאמֶר אִם־שָׁמוֹעַ תִּשְׁמַע לְקוֹל יְהוָה אֱלֹהֶיךָ וְהַיָּשָׁר בְּעֵינָיו תַּעֲשֶׂה וְהַאֲזַנְתָּ לְמִצְוֺתָיו וְשָׁמַרְתָּ כָּל־חֻקָּיו</span> · <i>va-yomer im-shamoa tishma le-qol YHWH elohe-kha ve-ha-yashar be-enay-v taase ve-haazanta le-mitzvotay-v ve-shamarta kal-chuqay-v</i><br><span class="gloss">= and-yomer if-shamoa tishma voice the-LORD elohe-kha and-the-yashar in-enay-v taase and-haazanta to-mitzvotay-v and-shamarta kal-chuqay-v</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ani_YHWH_rofekha, t0)</span><br><span class="gloss">= HOLDS(ani-the-LORD-rofekha, t0)</span><br>THE HEALER [EX15-06 CROWN]. kol-HA-MACHALA asher samti ve-mitzrayim lo-asim alekha — &#x27;all the DISEASE which I set upon Egypt I will not set upon you&#x27;: the plague-cycle re-classed in one word as DISEASE (the corpus&#x27;s own retrospect: what Egypt received is what obedience is spared) — and the Kitzur&#x27;s anagram-pharmacy asserted: the disease-word&#x27;s letters are THE BREAD and THE SALT (letter for letter, finals normalized), its number its own etiology (&#x27;EIGHTY- THREE kinds of illness hang on the gall — and morning bread with salt and a jug of water ANNULS THEM ALL — therefore SPRINGS OF WATER are juxtaposed&#x27;: 15:27 next verse — the remedy spelled inside the malady, the menu inside the diagnosis); kol-ha-machala&#x27;s lengthener- and-binder ruled, the he WITHOUT a lengthener &#x27;so for BEN ASHER&#x27; (the codex-master cited twice in one verse, MS, EX15-13); ki ANI YHWH ROFEKHA — &#x27;for I AM THE LORD YOUR HEALER&#x27;: the I-am-the-LORD formula (6:2&#x27;s spine-word) gains its first TITLE — and the title&#x27;s own letter rules the theology (VERIFIED): the pe of the healer SOFT (&#x27;healing by the hand of Heaven comes GENTLY&#x27;), while the human healers of Mishpatim (21:19) carry BOTH pes DAGESHED (&#x27;healing by man&#x27;s hand comes HARD&#x27;): the soft Physician and the hard physicians, one letter&#x27;s pressure apart — the machine closes the covenant-verse on the know-ledger&#x27;s new inflection: the Name that Egypt learned by plague, Israel is to know by its absence.
+</td><td><span class="he">כָּל־הַמַּחֲלָה אֲשֶׁר־שַׂמְתִּי בְמִצְרַיִם לֹא־אָשִׂים עָלֶיךָ כִּי אֲנִי יְהוָה רֹפְאֶךָ</span> · <i>kal-ha-machala asher-samti ve-mitzrayim lo-asim ale-kha ki ani YHWH rofe-kha</i><br><span class="gloss">= kal-the-machala which-samti and-mitzrayim not-asim ale-kha when ani the-LORD rofe-kha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The listen-covenant; the healer&#x27;s soft letter.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_15_27 · Exod.15.27 · <span class='expr'>TWELVE_SPRINGS_SEVENTY_PALMS</span></h3>
+<p><span class="he">וַיָּבֹאוּ אֵילִמָה וְשָׁם שְׁתֵּים עֶשְׂרֵה עֵינֹת מַיִם וְשִׁבְעִים תְּמָרִים וַיַּחֲנוּ־שָׁם עַל־הַמָּיִם</span> · <i>va-yavou elima-ה ve-sham shetem esre enot mayim ve-shivim temarim va-yachanu-sham al-ha-mayim</i> · And they came to Elim, and there — twelve springs of water and seventy palm trees; and they camped there by the waters.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּבֹ֣אוּ אֵילִ֔מָה וְשָׁ֗ם שְׁתֵּ֥ים עֶשְׂרֵ֛ה עֵינֹ֥ת מַ֖יִם וְשִׁבְעִ֣ים תְּמָרִ֑ים</span> · <i>va-yavou elima-ה ve-sham shetem esre enot mayim ve-shivim temarim</i> · and they came to Elim, and there — twelve springs of water and seventy palm trees (etnachta on temarim) [VERIFIED: SNAPSHOT Exod.15.27 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּחֲנוּ שָׁ֖ם עַל הַמָּֽיִם</span> · <i>va-yachanu-sham al-ha-mayim</i> · and they camped there by the waters (verse-final ha-mayim) [VERIFIED: SNAPSHOT Exod.15.27 idx9-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shtem_esre_enot_ve_shivim_temarim, t0)</span><br><span class="gloss">= HOLDS(shtem-esre-enot-and-shivim-temarim, t0)</span><br>THE OASIS. va-yavou ELIMA — &#x27;and they came to ELIM&#x27;: the juxtaposition the tradition itself demanded (EX15-06: &#x27;therefore SPRINGS OF WATER are juxtaposed&#x27; — the healer&#x27;s verse answered by a watering-place in the very next breath); ve-sham SHTEM-ESRE enot mayim ve-SHIVIM temarim — &#x27;TWELVE springs of water and SEVENTY palm trees&#x27; (asserted): the wilderness counted in the nation&#x27;s own numbers (the readings: a spring for each tribe, a palm for each elder — named-only; the corpus&#x27;s own registers: the twelve of the name-roll 1:1-4, the seventy of the descent 1:5/Gen 46:27 — the oasis shaped like the census); va-yachanu SHAM al-ha-mayim — &#x27;and they camped THERE BY THE WATERS&#x27;: the unit&#x27;s last word is THE WATERS — the machine closes the water-arc it has run since 14:21 (sea as wall, sea as grave, no water, bitter water, sweetened water, twelve springs): the chapter that opened with water defeated ends encamped beside water given — and the block seals with the there-word&#x27;s third station (the syllabus-grammar of 15:25 resting).
+</td><td><span class="he">וְשָׁם שְׁתֵּים עֶשְׂרֵה עֵינֹת מַיִם וְשִׁבְעִים תְּמָרִים</span> · <i>ve-sham shetem esre enot mayim ve-shivim temarim</i><br><span class="gloss">= and-there shetem esre enot waters and-shivim temarim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The counted oasis; the water-arc closes.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Ex_15_1 — then sang Moses</td><td>Then sang Moses and the sons of Israel this song to the LORD, and they spoke, saying: I will sing to the LORD, for He is highly exalted; the horse and its rider He has thrown into the sea.</td><td>no test, no name.</td><td><span class="he">אָ֣ז יָשִֽׁיר מֹשֶׁה֩ וּבְנֵ֨י</span> · <i>az yashir-moshe u-vene</i><br><span class="gloss">= az yashir-Moses and-vene</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Ex_15_2 — my strength and song</td><td>My strength and song is the LORD, and He has become my salvation; this is my God, and I will glorify Him — my father&#x27;s God, and I will exalt Him.</td><td>no test, no name.</td><td><span class="he">עָזִּ֤י וְזִמְרָת֙ יָ֔הּ וַֽיְהִי</span> · <i>azi-y ve-zimrat ya va-yehi-</i><br><span class="gloss">= azi-y and-zimrat ya and-yehi</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Ex_15_3 — a man of war</td><td>The LORD is a man of war; the LORD is His name.</td><td>no test, no name.</td><td><span class="he">יְהוָ֖ה אִ֣ישׁ מִלְחָמָ֑ה יְהוָ֖ה</span> · <i>YHWH ish milchama YHWH</i><br><span class="gloss">= the-LORD man milchama the-LORD</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Ex_15_4 — cast into the sea</td><td>Pharaoh&#x27;s chariots and his host He has cast into the sea; and the choice of his officers are sunk in the Reed Sea.</td><td>no test, no name.</td><td><span class="he">מַרְכְּבֹ֥ת פַּרְעֹ֛ה וְחֵיל֖וֹ יָרָ֣ה</span> · <i>markvot paro ve-chel-o yara</i><br><span class="gloss">= markvot paro and-chel-o yara</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Ex_15_5 — the deeps cover them</td><td>The deeps cover them — they went down into the depths like a stone.</td><td>no test, no name.</td><td><span class="he">תְּהֹמֹ֖ת יְכַסְיֻ֑מוּ יָרְד֥וּ בִמְצוֹלֹ֖ת</span> · <i>tehomot yekhasyu-mu yardu vi-metzolot</i><br><span class="gloss">= tehomot yekhasyu-mu yardu vi-metzolot</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Ex_15_6 — Your right hand doubled</td><td>Your right hand, O LORD, majestic in power — Your right hand, O LORD, shatters the enemy.</td><td>no test, no name.</td><td><span class="he">יְמִֽינְךָ֣ יְהוָ֔ה נֶאְדָּרִ֖י בַּכֹּ֑חַ</span> · <i>yemin-kha YHWH nedari ba-kocha</i><br><span class="gloss">= yemin-kha the-LORD nedari in-the-kocha</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Ex_15_7 — like stubble</td><td>And in the greatness of Your exaltation You overthrow those who rise against You; You send forth Your burning — it consumes them like stubble.</td><td>no test, no name.</td><td><span class="he">וּבְרֹ֥ב גְּאוֹנְךָ֖ תַּהֲרֹ֣ס קָמֶ֑יךָ</span> · <i>u-ve-rov geon-kha taharos qame-kha</i><br><span class="gloss">= and-and-rov geon-kha taharos qame-kha</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Ex_15_8 — the wind of Your nostrils</td><td>And by the wind of Your nostrils the waters were heaped up — the streams stood like a mound; the deeps congealed in the heart of the sea.</td><td>no test, no name.</td><td><span class="he">וּבְר֤וּחַ אַפֶּ֨יךָ֙ נֶ֣עֶרְמוּ מַ֔יִם</span> · <i>u-ve-rucha ape-kha neermu mayim</i><br><span class="gloss">= and-and-rucha ape-kha neermu waters</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Ex_15_9 — the enemy said</td><td>The enemy said: I will pursue, I will overtake, I will divide spoil; my desire shall be filled of them — I will draw my sword, my hand shall dispossess them.</td><td>no test, no name.</td><td><span class="he">אָמַ֥ר אוֹיֵ֛ב אֶרְדֹּ֥ף אַשִּׂ֖יג</span> · <i>amar oyev erdof asig</i><br><span class="gloss">= amar oyev erdof asig</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Ex_15_10 — sank like lead</td><td>You blew with Your wind — the sea covered them; they sank like lead in the mighty waters.</td><td>no test, no name.</td><td><span class="he">נָשַׁ֥פְתָּ בְרוּחֲךָ֖ כִּסָּ֣מוֹ יָ֑ם</span> · <i>nashafta ve-rucha-kha kisa-mo yam</i><br><span class="gloss">= nashafta and-rucha-kha kisa-mo yam</span></td></tr>
+<tr><td><b>S11</b></td><td>after STEP_Ex_15_11 — who is like You</td><td>Who is like You among the mighty, O LORD? Who is like You, majestic in holiness — feared in praises, doing wonder?</td><td>no test, no name.</td><td><span class="he">מִֽי כָמֹ֤כָה בָּֽאֵלִם֙ יְהוָ֔ה</span> · <i>mi-khamo-kha ba-elim YHWH</i><br><span class="gloss">= from-khamo-kha in-the-elim the-LORD</span></td></tr>
+<tr><td><b>S12</b></td><td>after STEP_Ex_15_12 — the earth swallowed</td><td>You stretched out Your right hand — the earth swallowed them.</td><td>no test, no name.</td><td><span class="he">נָטִ֨יתָ֙ יְמִ֣ינְךָ֔ תִּבְלָעֵ֖מוֹ אָֽרֶץ</span> · <i>natita yemin-kha tivlae-mo aretz</i><br><span class="gloss">= natita yemin-kha tivlae-mo earth</span></td></tr>
+<tr><td><b>S13</b></td><td>after STEP_Ex_15_13 — You guided in kindness</td><td>You guided in Your kindness the people You redeemed; You led them in Your strength to Your holy habitation.</td><td>no test, no name.</td><td><span class="he">נָחִ֥יתָ בְחַסְדְּךָ֖ עַם ז֣וּ</span> · <i>nachita ve-chasd-kha am-zu</i><br><span class="gloss">= nachita and-chasd-kha am-zu</span></td></tr>
+<tr><td><b>S14</b></td><td>after STEP_Ex_15_14 — the peoples heard</td><td>The peoples heard — they tremble; pang seized the dwellers of Philistia.</td><td>no test, no name.</td><td><span class="he">שָֽׁמְע֥וּ עַמִּ֖ים יִרְגָּז֑וּן חִ֣יל</span> · <i>shamu amim yirgazu-n chil</i><br><span class="gloss">= shamu amim yirgazu-n chil</span></td></tr>
+<tr><td><b>S15</b></td><td>after STEP_Ex_15_15 — the chiefs dismayed</td><td>Then were the chiefs of Edom dismayed; the rams of Moab — trembling seizes them; all the dwellers of Canaan are melted away.</td><td>no test, no name.</td><td><span class="he">אָ֤ז נִבְהֲלוּ֙ אַלּוּפֵ֣י אֱד֔וֹם</span> · <i>az nivhalu alufe edom</i><br><span class="gloss">= az nivhalu alufe edom</span></td></tr>
+<tr><td><b>S16</b></td><td>after STEP_Ex_15_16 — still as a stone</td><td>Terror and dread fall upon them; by the greatness of Your arm they are still as a stone — till Your people cross over, O LORD, till the people You acquired cross over.</td><td>no test, no name.</td><td><span class="he">תִּפֹּ֨ל עֲלֵיהֶ֤ם אֵימָ֨תָה֙ וָפַ֔חַד</span> · <i>tipol ale-hem emata-ה va-fachad</i><br><span class="gloss">= tipol ale-hem emata-ה and-fachad</span></td></tr>
+<tr><td><b>S17</b></td><td>after STEP_Ex_15_17 — plant them on Your mountain</td><td>You will bring them in and plant them on the mountain of Your inheritance — the place for Your dwelling which You made, O LORD; the sanctuary, O Lord, which Your hands established.</td><td>no test, no name.</td><td><span class="he">תְּבִאֵ֗מוֹ וְתִטָּעֵ֨מוֹ֙ בְּהַ֣ר נַחֲלָֽתְךָ֔</span> · <i>tevie-mo ve-titae-mo be-har nachalat-kha</i><br><span class="gloss">= tevie-mo and-titae-mo in-har nachalat-kha</span></td></tr>
+<tr><td><b>S18</b></td><td>after STEP_Ex_15_18 — the reign forever</td><td>The LORD shall reign forever and ever.</td><td>no test, no name.</td><td><span class="he">יְהוָ֥ה יִמְלֹ֖ךְ לְעֹלָ֥ם וָעֶֽד</span> · <i>YHWH yimlokh le-olam va-ed</i><br><span class="gloss">= the-LORD yimlokh to-olam mist</span></td></tr>
+<tr><td><b>S19</b></td><td>after STEP_Ex_15_19 — the prose seal</td><td>For the horse of Pharaoh came, with his chariots and with his horsemen, into the sea, and the LORD returned upon them the waters of the sea; and the sons of Israel walked on the dry ground in the midst of the sea.</td><td>no test, no name.</td><td><span class="he">כִּ֣י בָא֩ ס֨וּס פַּרְעֹ֜ה</span> · <i>ki va sus paro</i><br><span class="gloss">= when and sus paro</span></td></tr>
+<tr><td><b>S20</b></td><td>after STEP_Ex_15_20 — Miriam takes the timbrel</td><td>And Miriam the prophetess, the sister of Aaron, took the timbrel in her hand; and all the women went out after her, with timbrels and with dances.</td><td>no test, no name.</td><td><span class="he">וַתִּקַּח֩ מִרְיָ֨ם הַנְּבִיאָ֜ה אֲח֧וֹת</span> · <i>va-tiqach miryam ha-nevia achot</i><br><span class="gloss">= and-tiqach miryam the-nevia achot</span></td></tr>
+<tr><td><b>S21</b></td><td>after STEP_Ex_15_21 — sing to the LORD</td><td>And Miriam answered them: Sing to the LORD, for He is highly exalted; the horse and its rider He has thrown into the sea.</td><td>LET(shiru_la_YHWH) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shiru-to-the-LORD) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַתַּ֥עַן לָהֶ֖ם מִרְיָ֑ם שִׁ֤ירוּ</span> · <i>va-taan la-hem miryam shiru</i><br><span class="gloss">= and-taan to-hem miryam shiru</span></td></tr>
+<tr><td><b>S22</b></td><td>after STEP_Ex_15_22 — three days, no water</td><td>And Moses made Israel journey from the Reed Sea, and they went out to the wilderness of Shur; and they went three days in the wilderness, and found no water.</td><td>LET(shiru_la_YHWH) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shiru-to-the-LORD) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיַּסַּ֨ע מֹשֶׁ֤ה אֶת יִשְׂרָאֵל֙</span> · <i>va-yasa moshe et-yisrael</i><br><span class="gloss">= and-yasa Moses yisrael</span></td></tr>
+<tr><td><b>S23</b></td><td>after STEP_Ex_15_23 — Marah named</td><td>And they came to Marah, and could not drink the waters of Marah, for they were bitter; therefore its name was called Marah.</td><td>LET(shiru_la_YHWH) pushed and OPEN; REGISTRY: maqom-&gt;Mara (1 write)<br><span class="gloss">= LET(shiru-to-the-LORD) pushed and OPEN; REGISTRY: maqom-&gt;Mara (1 write)</span></td><td><span class="he">וַיָּבֹ֣אוּ מָרָ֔תָה וְלֹ֣א יָֽכְל֗וּ</span> · <i>va-yavou marata-ה ve-lo yakhlu</i><br><span class="gloss">= and-yavou marata-ה and-not yakhlu</span></td></tr>
+<tr><td><b>S24</b></td><td>after STEP_Ex_15_24 — what shall we drink</td><td>And the people murmured against Moses, saying: What shall we drink?</td><td>LET(shiru_la_YHWH) pushed and OPEN; LET(ma_nishte) pushed and OPEN; REGISTRY: maqom-&gt;Mara (1 write)<br><span class="gloss">= LET(shiru-to-the-LORD) pushed and OPEN; LET(ma-nishte) pushed and OPEN; REGISTRY: maqom-&gt;Mara (1 write)</span></td><td><span class="he">וַיִּלֹּ֧נוּ הָעָ֛ם עַל מֹשֶׁ֥ה</span> · <i>va-yilonu ha-am al-moshe</i><br><span class="gloss">= and-yilonu the-am upon-Moses</span></td></tr>
+<tr><td><b>S25</b></td><td>after STEP_Ex_15_25 — the tree and the statute</td><td>And he cried out to the LORD, and the LORD showed him a tree; and he cast it into the waters, and the waters were sweetened. There He set for him a statute and an ordinance, and there He tested him.</td><td>LET(shiru_la_YHWH) pushed and OPEN; REGISTRY: maqom-&gt;Mara (1 write)<br><span class="gloss">= LET(shiru-to-the-LORD) pushed and OPEN; REGISTRY: maqom-&gt;Mara (1 write)</span></td><td><span class="he">וַיִּצְעַ֣ק אֶל יְהוָ֗ה וַיּוֹרֵ֤הוּ</span> · <i>va-yitzaq el-YHWH va-yore-hu</i><br><span class="gloss">= and-yitzaq to-the-LORD and-yore-that</span></td></tr>
+<tr><td><b>S26</b></td><td>after STEP_Ex_15_26 — I am your Healer</td><td>And He said: If you diligently listen to the voice of the LORD your God, and do what is right in His eyes, and give ear to His commandments, and keep all His statutes — all the disease which I set upon Egypt I will not set upon you; for I am the LORD your healer.</td><td>LET(shiru_la_YHWH) pushed and OPEN; LET(im_shamoa_tishma) pushed and OPEN; REGISTRY: maqom-&gt;Mara (1 write)<br><span class="gloss">= LET(shiru-to-the-LORD) pushed and OPEN; LET(if-shamoa-tishma) pushed and OPEN; REGISTRY: maqom-&gt;Mara (1 write)</span></td><td><span class="he">וַיֹּאמֶר֩ אִם שָׁמ֨וֹעַ תִּשְׁמַ֜ע</span> · <i>va-yomer im-shamoa tishma</i><br><span class="gloss">= and-yomer if-shamoa tishma</span></td></tr>
+<tr><td><b>S27</b></td><td>after STEP_Ex_15_27 — twelve springs, seventy palms</td><td>And they came to Elim, and there — twelve springs of water and seventy palm trees; and they camped there by the waters.</td><td>LET(shiru_la_YHWH) pushed and OPEN; LET(im_shamoa_tishma) pushed and OPEN; REGISTRY: maqom-&gt;Mara (1 write)<br><span class="gloss">= LET(shiru-to-the-LORD) pushed and OPEN; LET(if-shamoa-tishma) pushed and OPEN; REGISTRY: maqom-&gt;Mara (1 write)</span></td><td><span class="he">וַיָּבֹ֣אוּ אֵילִ֔מָה וְשָׁ֗ם שְׁתֵּ֥ים</span> · <i>va-yavou elima-ה ve-sham shetem</i><br><span class="gloss">= and-yavou elima-ה and-there shetem</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: exo_15_the_song_and_marah — The Song and Marah (15:1-27) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={&#x27;maqom&#x27;: &#x27;Mara&#x27;} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[&#x27;named_before_any_presence&#x27;]
+
+=== S1 — after STEP_Ex_15_1 — then sang Moses
+    אָ֣ז יָשִֽׁיר מֹשֶׁה֩ וּבְנֵ֨י (az yashir-moshe u-vene)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Ex_15_2 — my strength and song
+    עָזִּ֤י וְזִמְרָת֙ יָ֔הּ וַֽיְהִי (azi-y ve-zimrat ya va-yehi-)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Ex_15_3 — a man of war
+    יְהוָ֖ה אִ֣ישׁ מִלְחָמָ֑ה יְהוָ֖ה (YHWH ish milchama YHWH)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Ex_15_4 — cast into the sea
+    מַרְכְּבֹ֥ת פַּרְעֹ֛ה וְחֵיל֖וֹ יָרָ֣ה (markvot paro ve-chel-o yara)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Ex_15_5 — the deeps cover them
+    תְּהֹמֹ֖ת יְכַסְיֻ֑מוּ יָרְד֥וּ בִמְצוֹלֹ֖ת (tehomot yekhasyu-mu yardu vi-metzolot)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Ex_15_6 — Your right hand doubled
+    יְמִֽינְךָ֣ יְהוָ֔ה נֶאְדָּרִ֖י בַּכֹּ֑חַ (yemin-kha YHWH nedari ba-kocha)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — after STEP_Ex_15_7 — like stubble
+    וּבְרֹ֥ב גְּאוֹנְךָ֖ תַּהֲרֹ֣ס קָמֶ֑יךָ (u-ve-rov geon-kha taharos qame-kha)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S8 — after STEP_Ex_15_8 — the wind of Your nostrils
+    וּבְר֤וּחַ אַפֶּ֨יךָ֙ נֶ֣עֶרְמוּ מַ֔יִם (u-ve-rucha ape-kha neermu mayim)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S9 — after STEP_Ex_15_9 — the enemy said
+    אָמַ֥ר אוֹיֵ֛ב אֶרְדֹּ֥ף אַשִּׂ֖יג (amar oyev erdof asig)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S10 — after STEP_Ex_15_10 — sank like lead
+    נָשַׁ֥פְתָּ בְרוּחֲךָ֖ כִּסָּ֣מוֹ יָ֑ם (nashafta ve-rucha-kha kisa-mo yam)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S11 — after STEP_Ex_15_11 — who is like You
+    מִֽי כָמֹ֤כָה בָּֽאֵלִם֙ יְהוָ֔ה (mi-khamo-kha ba-elim YHWH)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S12 — after STEP_Ex_15_12 — the earth swallowed
+    נָטִ֨יתָ֙ יְמִ֣ינְךָ֔ תִּבְלָעֵ֖מוֹ אָֽרֶץ (natita yemin-kha tivlae-mo aretz)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S13 — after STEP_Ex_15_13 — You guided in kindness
+    נָחִ֥יתָ בְחַסְדְּךָ֖ עַם ז֣וּ (nachita ve-chasd-kha am-zu)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S14 — after STEP_Ex_15_14 — the peoples heard
+    שָֽׁמְע֥וּ עַמִּ֖ים יִרְגָּז֑וּן חִ֣יל (shamu amim yirgazu-n chil)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S15 — after STEP_Ex_15_15 — the chiefs dismayed
+    אָ֤ז נִבְהֲלוּ֙ אַלּוּפֵ֣י אֱד֔וֹם (az nivhalu alufe edom)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S16 — after STEP_Ex_15_16 — still as a stone
+    תִּפֹּ֨ל עֲלֵיהֶ֤ם אֵימָ֨תָה֙ וָפַ֔חַד (tipol ale-hem emata-ה va-fachad)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S17 — after STEP_Ex_15_17 — plant them on Your mountain
+    תְּבִאֵ֗מוֹ וְתִטָּעֵ֨מוֹ֙ בְּהַ֣ר נַחֲלָֽתְךָ֔ (tevie-mo ve-titae-mo be-har nachalat-kha)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S18 — after STEP_Ex_15_18 — the reign forever
+    יְהוָ֥ה יִמְלֹ֖ךְ לְעֹלָ֥ם וָעֶֽד (YHWH yimlokh le-olam va-ed)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S19 — after STEP_Ex_15_19 — the prose seal
+    כִּ֣י בָא֩ ס֨וּס פַּרְעֹ֜ה (ki va sus paro)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S20 — after STEP_Ex_15_20 — Miriam takes the timbrel
+    וַתִּקַּח֩ מִרְיָ֨ם הַנְּבִיאָ֜ה אֲח֧וֹת (va-tiqach miryam ha-nevia achot)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S21 — after STEP_Ex_15_21 — sing to the LORD
+    וַתַּ֥עַן לָהֶ֖ם מִרְיָ֑ם שִׁ֤ירוּ (va-taan la-hem miryam shiru)
+    PASS  LET(shiru_la_YHWH) pushed and OPEN  (queue=[&#x27;shiru_la_YHWH&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S22 — after STEP_Ex_15_22 — three days, no water
+    וַיַּסַּ֨ע מֹשֶׁ֤ה אֶת יִשְׂרָאֵל֙ (va-yasa moshe et-yisrael)
+    PASS  LET(shiru_la_YHWH) pushed and OPEN  (queue=[&#x27;shiru_la_YHWH&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S23 — after STEP_Ex_15_23 — Marah named
+    וַיָּבֹ֣אוּ מָרָ֔תָה וְלֹ֣א יָֽכְל֗וּ (va-yavou marata-ה ve-lo yakhlu)
+    PASS  LET(shiru_la_YHWH) pushed and OPEN  (queue=[&#x27;shiru_la_YHWH&#x27;])
+    PASS  REGISTRY: maqom-&gt;Mara (1 write)  (names={&#x27;maqom&#x27;: &#x27;Mara&#x27;} writes=1)
+
+=== S24 — after STEP_Ex_15_24 — what shall we drink
+    וַיִּלֹּ֧נוּ הָעָ֛ם עַל מֹשֶׁ֥ה (va-yilonu ha-am al-moshe)
+    PASS  LET(shiru_la_YHWH) pushed and OPEN  (queue=[&#x27;shiru_la_YHWH&#x27;, &#x27;ma_nishte&#x27;])
+    PASS  LET(ma_nishte) pushed and OPEN  (queue=[&#x27;shiru_la_YHWH&#x27;, &#x27;ma_nishte&#x27;])
+    PASS  REGISTRY: maqom-&gt;Mara (1 write)  (names={&#x27;maqom&#x27;: &#x27;Mara&#x27;} writes=1)
+
+=== S25 — after STEP_Ex_15_25 — the tree and the statute
+    וַיִּצְעַ֣ק אֶל יְהוָ֗ה וַיּוֹרֵ֤הוּ (va-yitzaq el-YHWH va-yore-hu)
+    PASS  LET(shiru_la_YHWH) pushed and OPEN  (queue=[&#x27;shiru_la_YHWH&#x27;])
+    PASS  REGISTRY: maqom-&gt;Mara (1 write)  (names={&#x27;maqom&#x27;: &#x27;Mara&#x27;} writes=1)
+
+=== S26 — after STEP_Ex_15_26 — I am your Healer
+    וַיֹּאמֶר֩ אִם שָׁמ֨וֹעַ תִּשְׁמַ֜ע (va-yomer im-shamoa tishma)
+    PASS  LET(shiru_la_YHWH) pushed and OPEN  (queue=[&#x27;shiru_la_YHWH&#x27;, &#x27;im_shamoa_tishma&#x27;])
+    PASS  LET(im_shamoa_tishma) pushed and OPEN  (queue=[&#x27;shiru_la_YHWH&#x27;, &#x27;im_shamoa_tishma&#x27;])
+    PASS  REGISTRY: maqom-&gt;Mara (1 write)  (names={&#x27;maqom&#x27;: &#x27;Mara&#x27;} writes=1)
+
+=== S27 — after STEP_Ex_15_27 — twelve springs, seventy palms
+    וַיָּבֹ֣אוּ אֵילִ֔מָה וְשָׁ֗ם שְׁתֵּ֥ים (va-yavou elima-ה ve-sham shetem)
+    PASS  LET(shiru_la_YHWH) pushed and OPEN  (queue=[&#x27;shiru_la_YHWH&#x27;, &#x27;im_shamoa_tishma&#x27;])
+    PASS  LET(im_shamoa_tishma) pushed and OPEN  (queue=[&#x27;shiru_la_YHWH&#x27;, &#x27;im_shamoa_tishma&#x27;])
+    PASS  REGISTRY: maqom-&gt;Mara (1 write)  (names={&#x27;maqom&#x27;: &#x27;Mara&#x27;} writes=1)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/exo_15_the_song_and_marah.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# exo_15_the_song_and_marah — 15:1-27
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/exo_15_the_song_and_marah.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;The Song and Marah (15:1-27)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;exo_15_the_song_and_marah&quot;)
+
+# -------------------------- Exod.15.1 · THEN_SANG_MOSES --------------------
+# אָז יָשִׁיר־מֹשֶׁה וּבְנֵי יִשְׂרָאֵל אֶת־הַשִּׁירָה הַזֹּאת לַיהוָה
+# וַיֹּאמְרוּ לֵאמֹר אָשִׁירָה לַיהוָה כִּי־גָאֹה גָּאָה סוּס וְרֹכְבוֹ
+# רָמָה בַיָּם
+# &quot;[EN-AID] Then sang Moses and the sons of Israel this song to the LORD,
+# and they spoke, saying: I will sing to the LORD, for He is highly exalted;
+# the horse and its rider He has thrown into the sea.&quot;
+m.step(&quot;Exod.15.1&quot;)
+# ‹אָז יָשִׁיר־מֹשֶׁה וּבְנֵי יִשְׂרָאֵל אֶת־הַשִּׁירָה הַזֹּאת לַיהוָה
+# וַיֹּאמְרוּ לֵאמֹר› (“at-that-time sing Moses and-son Israel obj-marker
+# the-song the-this to-YHWH and-say to-say”) — event: shirat-the-seas —
+# agent Moses; theme bene-yisrael
+m.event(&quot;shirat_ha_yam&quot;, agent=&quot;moshe&quot;, themes=[&quot;bene-yisrael&quot;])
+# ‹אָשִׁירָה לַיהוָה כִּי־גָאֹה גָּאָה סוּס וְרֹכְבוֹ רָמָה בַיָּם› (“sing
+# to-YHWH that mount-up mount-up horse and-ride-him/its hurl in-seas”) —
+# fact holds: that-mount-up-mount-up-horse-and-rokhvo
+m.fact(&quot;ki_gao_gaa_sus_ve_rokhvo&quot;)
+
+# -------------------------- Exod.15.2 · MY_STRENGTH_AND_SONG ---------------
+# עָזִּי וְזִמְרָת יָהּ וַיְהִי־לִי לִישׁוּעָה זֶה אֵלִי וְאַנְוֵהוּ אֱלֹהֵי
+# אָבִי וַאֲרֹמְמֶנְהוּ
+# &quot;[EN-AID] My strength and song is the LORD, and He has become my
+# salvation; this is my God, and I will glorify Him — my father&#x27;s God, and I
+# will exalt Him.&quot;
+m.step(&quot;Exod.15.2&quot;)
+# ‹עָזִּי וְזִמְרָת יָהּ וַיְהִי־לִי לִישׁוּעָה› (“strength-in-various-
+# applicat-me/my and-instrumental-music Jah and-be to-me/my to-something-
+# saved”) — fact holds: uzi-and-instrumental-music-yah
+m.fact(&quot;uzi_ve_zimrat_yah&quot;)
+# ‹זֶה אֵלִי וְאַנְוֵהוּ אֱלֹהֵי אָבִי וַאֲרֹמְמֶנְהוּ› (“this strength-
+# me/my and-rest-him/its God father-me/my and-rise-high-him/its”) — fact
+# holds: this-eli-and-anvehu
+m.fact(&quot;ze_eli_ve_anvehu&quot;)
+
+# -------------------------- Exod.15.3 · A_MAN_OF_WAR -----------------------
+# יְהוָה אִישׁ מִלְחָמָה יְהוָה שְׁמוֹ
+# &quot;[EN-AID] The LORD is a man of war; the LORD is His name.&quot;
+m.step(&quot;Exod.15.3&quot;)
+# ‹יְהוָה אִישׁ מִלְחָמָה יְהוָה שְׁמוֹ› (“YHWH man battle YHWH name-
+# him/its”) — fact holds: the-LORD-man-battle
+m.fact(&quot;YHWH_ish_milchama&quot;)
+
+# -------------------------- Exod.15.4 · CAST_INTO_THE_SEA ------------------
+# מַרְכְּבֹת פַּרְעֹה וְחֵילוֹ יָרָה בַיָּם וּמִבְחַר שָׁלִשָׁיו טֻבְּעוּ
+# בְיַם־סוּף
+# &quot;[EN-AID] Pharaoh&#x27;s chariots and his host He has cast into the sea; and
+# the choice of his officers are sunk in the Reed Sea.&quot;
+m.step(&quot;Exod.15.4&quot;)
+# ‹וּמִבְחַר שָׁלִשָׁיו טֻבְּעוּ בְיַם־סוּף› (“and-select triple-him/its
+# sink in-seas reed”) — fact holds: and-select-shalishav-sink
+m.fact(&quot;u_mivchar_shalishav_tubu&quot;)
+
+# -------------------------- Exod.15.5 · THE_DEEPS_COVER_THEM ---------------
+# תְּהֹמֹת יְכַסְיֻמוּ יָרְדוּ בִמְצוֹלֹת כְּמוֹ־אָבֶן
+# &quot;[EN-AID] The deeps cover them — they went down into the depths like a
+# stone.&quot;
+m.step(&quot;Exod.15.5&quot;)
+# ‹תְּהֹמֹת יְכַסְיֻמוּ› (“deep plump-them/their”) — fact holds: deep-
+# yekhasyumu
+m.fact(&quot;tehomot_yekhasyumu&quot;)
+
+# -------------------------- Exod.15.6 · YOUR_RIGHT_HAND_DOUBLED ------------
+# יְמִינְךָ יְהוָה נֶאְדָּרִי בַּכֹּחַ יְמִינְךָ יְהוָה תִּרְעַץ אוֹיֵב
+# &quot;[EN-AID] Your right hand, O LORD, majestic in power — Your right hand, O
+# LORD, shatters the enemy.&quot;
+m.step(&quot;Exod.15.6&quot;)
+# ‹יְמִינְךָ יְהוָה נֶאְדָּרִי בַּכֹּחַ› (“right-hand-you/your YHWH expand
+# in-vigor”) — fact holds: yeminkha-the-LORD-expand-come/bring-koach
+m.fact(&quot;yeminkha_YHWH_nedari_va_koach&quot;)
+
+# -------------------------- Exod.15.7 · LIKE_STUBBLE -----------------------
+# וּבְרֹב גְּאוֹנְךָ תַּהֲרֹס קָמֶיךָ תְּשַׁלַּח חֲרֹנְךָ יֹאכְלֵמוֹ
+# כַּקַּשׁ
+# &quot;[EN-AID] And in the greatness of Your exaltation You overthrow those who
+# rise against You; You send forth Your burning — it consumes them like
+# stubble.&quot;
+m.step(&quot;Exod.15.7&quot;)
+# ‹תְּשַׁלַּח חֲרֹנְךָ יֹאכְלֵמוֹ כַּקַּשׁ› (“send burning-of-anger-you/your
+# eat-them/their like-straw”) — fact holds: send-charonkha
+m.fact(&quot;teshalach_charonkha&quot;)
+
+# -------------------------- Exod.15.8 · THE_WIND_OF_YOUR_NOSTRILS ----------
+# וּבְרוּחַ אַפֶּיךָ נֶעֶרְמוּ מַיִם נִצְּבוּ כְמוֹ־נֵד נֹזְלִים קָפְאוּ
+# תְהֹמֹת בְּלֶב־יָם
+# &quot;[EN-AID] And by the wind of Your nostrils the waters were heaped up — the
+# streams stood like a mound; the deeps congealed in the heart of the sea.&quot;
+m.step(&quot;Exod.15.8&quot;)
+# ‹וּבְרוּחַ אַפֶּיךָ נֶעֶרְמוּ מַיִם נִצְּבוּ כְמוֹ־נֵד נֹזְלִים› (“and-in-
+# spirit nose-you/your pile-up waters stand form-of-the-prefix-&#x27;k-&#x27; mound
+# drip”) — fact holds: and-and-spirit-wind-your-nostrils-pile-up-waters
+m.fact(&quot;u_ve_ruach_apekha_neermu_mayim&quot;)
+
+# -------------------------- Exod.15.9 · THE_ENEMY_SAID ---------------------
+# אָמַר אוֹיֵב אֶרְדֹּף אַשִּׂיג אֲחַלֵּק שָׁלָל תִּמְלָאֵמוֹ נַפְשִׁי
+# אָרִיק חַרְבִּי תּוֹרִישֵׁמוֹ יָדִי
+# &quot;[EN-AID] The enemy said: I will pursue, I will overtake, I will divide
+# spoil; my desire shall be filled of them — I will draw my sword, my hand
+# shall dispossess them.&quot;
+m.step(&quot;Exod.15.9&quot;)
+# ‹אָמַר אוֹיֵב אֶרְדֹּף אַשִּׂיג אֲחַלֵּק שָׁלָל› (“say hating run-after-
+# gone-by) reach be-smooth booty”) — fact holds: say-hating-run-after-gone-
+# by)-reach
+m.fact(&quot;amar_oyev_erdof_asig&quot;)
+
+# -------------------------- Exod.15.10 · SANK_LIKE_LEAD --------------------
+# נָשַׁפְתָּ בְרוּחֲךָ כִּסָּמוֹ יָם צָלֲלוּ כַּעוֹפֶרֶת בְּמַיִם אַדִּירִים
+# &quot;[EN-AID] You blew with Your wind — the sea covered them; they sank like
+# lead in the mighty waters.&quot;
+m.step(&quot;Exod.15.10&quot;)
+# ‹צָלֲלוּ כַּעוֹפֶרֶת בְּמַיִם אַדִּירִים› (“tumble-down like-lead in-
+# waters wide”) — fact holds: tumble-down-like-oferet
+m.fact(&quot;tzalalu_ka_oferet&quot;)
+
+# -------------------------- Exod.15.11 · WHO_IS_LIKE_YOU -------------------
+# מִי־כָמֹכָה בָּאֵלִם יְהוָה מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ נוֹרָא
+# תְהִלֹּת עֹשֵׂה פֶלֶא
+# &quot;[EN-AID] Who is like You among the mighty, O LORD? Who is like You,
+# majestic in holiness — feared in praises, doing wonder?&quot;
+m.step(&quot;Exod.15.11&quot;)
+# ‹מִי־כָמֹכָה בָּאֵלִם יְהוָה מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ› (“who?
+# form-of-the-prefix-&#x27;k-&#x27;-you/your in-strength YHWH who? form-of-the-
+# prefix-&#x27;k-&#x27;-you/your expand in-holiness”) — fact holds: who?-khamokha-in-
+# the-elim
+m.fact(&quot;mi_khamokha_ba_elim&quot;)
+# ‹נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא› (“fear laudation make miracle”) — fact
+# holds: fear-laudation-make-miracle
+m.fact(&quot;nora_tehilot_ose_fele&quot;)
+
+# -------------------------- Exod.15.12 · THE_EARTH_SWALLOWED ---------------
+# נָטִיתָ יְמִינְךָ תִּבְלָעֵמוֹ אָרֶץ
+# &quot;[EN-AID] You stretched out Your right hand — the earth swallowed them.&quot;
+m.step(&quot;Exod.15.12&quot;)
+# ‹נָטִיתָ יְמִינְךָ תִּבְלָעֵמוֹ אָרֶץ› (“stretch right-hand-you/your
+# swallow-them/their earth”) — fact holds: tivlaemo-earth
+m.fact(&quot;tivlaemo_aretz&quot;)
+
+# -------------------------- Exod.15.13 · YOU_GUIDED_IN_KINDNESS ------------
+# נָחִיתָ בְחַסְדְּךָ עַם־זוּ גָּאָלְתָּ נֵהַלְתָּ בְעָזְּךָ אֶל־נְוֵה
+# קָדְשֶׁךָ
+# &quot;[EN-AID] You guided in Your kindness the people You redeemed; You led
+# them in Your strength to Your holy habitation.&quot;
+m.step(&quot;Exod.15.13&quot;)
+# ‹נָחִיתָ בְחַסְדְּךָ עַם־זוּ גָּאָלְתָּ› (“guide in-kindness-you/your
+# people this be-the-next-of-kin”) — fact holds: people-this-be-the-next-of-
+# kin
+m.fact(&quot;am_zu_gaalta&quot;)
+
+# -------------------------- Exod.15.14 · THE_PEOPLES_HEARD -----------------
+# שָׁמְעוּ עַמִּים יִרְגָּזוּן חִיל אָחַז יֹשְׁבֵי פְּלָשֶׁת
+# &quot;[EN-AID] The peoples heard — they tremble; pang seized the dwellers of
+# Philistia.&quot;
+m.step(&quot;Exod.15.14&quot;)
+# ‹שָׁמְעוּ עַמִּים יִרְגָּזוּן› (“hear people quiver-ward”) — fact holds:
+# hear-people-yirgazun
+m.fact(&quot;shamu_amim_yirgazun&quot;)
+
+# -------------------------- Exod.15.15 · THE_CHIEFS_DISMAYED ---------------
+# אָז נִבְהֲלוּ אַלּוּפֵי אֱדוֹם אֵילֵי מוֹאָב יֹאחֲזֵמוֹ רָעַד נָמֹגוּ כֹּל
+# יֹשְׁבֵי כְנָעַן
+# &quot;[EN-AID] Then were the chiefs of Edom dismayed; the rams of Moab —
+# trembling seizes them; all the dwellers of Canaan are melted away.&quot;
+m.step(&quot;Exod.15.15&quot;)
+# ‹נָמֹגוּ כֹּל יֹשְׁבֵי כְנָעַן› (“melt all dwell/sit Canaan”) — fact
+# holds: melt-all-dwell/sit-Canaan
+m.fact(&quot;namogu_kol_yoshve_khenaan&quot;)
+
+# -------------------------- Exod.15.16 · STILL_AS_A_STONE ------------------
+# תִּפֹּל עֲלֵיהֶם אֵימָתָה וָפַחַד בִּגְדֹל זְרוֹעֲךָ יִדְּמוּ כָּאָבֶן
+# עַד־יַעֲבֹר עַמְּךָ יְהוָה עַד־יַעֲבֹר עַם־זוּ קָנִיתָ
+# &quot;[EN-AID] Terror and dread fall upon them; by the greatness of Your arm
+# they are still as a stone — till Your people cross over, O LORD, till the
+# people You acquired cross over.&quot;
+m.step(&quot;Exod.15.16&quot;)
+# ‹עַד־יַעֲבֹר עַמְּךָ יְהוָה עַד־יַעֲבֹר עַם־זוּ קָנִיתָ› (“until pass-over
+# people-you/your YHWH until pass-over people this possessor”) — fact holds:
+# until-pass-over-people-this-possessor
+m.fact(&quot;ad_yaavor_am_zu_qanita&quot;)
+
+# -------------------------- Exod.15.17 · PLANT_THEM_ON_YOUR_MOUNTAIN -------
+# תְּבִאֵמוֹ וְתִטָּעֵמוֹ בְּהַר נַחֲלָתְךָ מָכוֹן לְשִׁבְתְּךָ פָּעַלְתָּ
+# יְהוָה מִקְּדָשׁ אֲדֹנָי כּוֹנְנוּ יָדֶיךָ
+# &quot;[EN-AID] You will bring them in and plant them on the mountain of Your
+# inheritance — the place for Your dwelling which You made, O LORD; the
+# sanctuary, O Lord, which Your hands established.&quot;
+m.step(&quot;Exod.15.17&quot;)
+# ‹מָכוֹן לְשִׁבְתְּךָ פָּעַלְתָּ יְהוָה› (“fixture to-dwell/sit-you/your do
+# YHWH”) — fact holds: fixture-to-shivtekha-do
+m.fact(&quot;makhon_le_shivtekha_paalta&quot;)
+
+# -------------------------- Exod.15.18 · THE_REIGN_FOREVER -----------------
+# יְהוָה יִמְלֹךְ לְעֹלָם וָעֶד
+# &quot;[EN-AID] The LORD shall reign forever and ever.&quot;
+m.step(&quot;Exod.15.18&quot;)
+# ‹יְהוָה יִמְלֹךְ לְעֹלָם וָעֶד› (“YHWH reign to-forever and-terminus”) —
+# fact holds: the-LORD-reign-to-forever-come/bring-terminus
+m.fact(&quot;YHWH_yimlokh_le_olam_va_ed&quot;)
+
+# -------------------------- Exod.15.19 · THE_PROSE_SEAL --------------------
+# כִּי בָא סוּס פַּרְעֹה בְּרִכְבּוֹ וּבְפָרָשָׁיו בַּיָּם וַיָּשֶׁב יְהוָה
+# עֲלֵהֶם אֶת־מֵי הַיָּם וּבְנֵי יִשְׂרָאֵל הָלְכוּ בַיַּבָּשָׁה בְּתוֹךְ
+# הַיָּם
+# &quot;[EN-AID] For the horse of Pharaoh came, with his chariots and with his
+# horsemen, into the sea, and the LORD returned upon them the waters of the
+# sea; and the sons of Israel walked on the dry ground in the midst of the
+# sea.&quot;
+m.step(&quot;Exod.15.19&quot;)
+# ‹כִּי בָא סוּס פַּרְעֹה בְּרִכְבּוֹ וּבְפָרָשָׁיו בַּיָּם› (“that
+# come/bring horse Pharaoh in-vehicle-him/its and-in-steed-him/its in-seas”)
+# — fact holds: that-come/bring-horse-Pharaoh-in-the-seas
+m.fact(&quot;ki_va_sus_paro_ba_yam&quot;)
+
+# -------------------------- Exod.15.20 · MIRIAM_TAKES_THE_TIMBREL ----------
+# וַתִּקַּח מִרְיָם הַנְּבִיאָה אֲחוֹת אַהֲרֹן אֶת־הַתֹּף בְּיָדָהּ
+# וַתֵּצֶאןָ כָל־הַנָּשִׁים אַחֲרֶיהָ בְּתֻפִּים וּבִמְחֹלֹת
+# &quot;[EN-AID] And Miriam the prophetess, the sister of Aaron, took the timbrel
+# in her hand; and all the women went out after her, with timbrels and with
+# dances.&quot;
+m.step(&quot;Exod.15.20&quot;)
+# ‹וַתִּקַּח מִרְיָם הַנְּבִיאָה אֲחוֹת אַהֲרֹן אֶת־הַתֹּף בְּיָדָהּ› (“and-
+# take Miriam the-prophetess sister Aaron obj-marker the-tambourine in-hand-
+# her/its”) — fact holds: come/bring-take-Miriam-obj-marker-the-tambourine
+m.fact(&quot;va_tiqach_miryam_et_ha_tof&quot;)
+
+# -------------------------- Exod.15.21 · SING_TO_THE_LORD ------------------
+# וַתַּעַן לָהֶם מִרְיָם שִׁירוּ לַיהוָה כִּי־גָאֹה גָּאָה סוּס וְרֹכְבוֹ
+# רָמָה בַיָּם
+# &quot;[EN-AID] And Miriam answered them: Sing to the LORD, for He is highly
+# exalted; the horse and its rider He has thrown into the sea.&quot;
+m.step(&quot;Exod.15.21&quot;)
+# ‹שִׁירוּ לַיהוָה כִּי־גָאֹה גָּאָה סוּס וְרֹכְבוֹ רָמָה בַיָּם› (“sing to-
+# YHWH that mount-up mount-up horse and-ride-him/its hurl in-seas”) — Miriam
+# speaks a demand — LET: sing-to-the-LORD
+m.declare(&quot;miryam&quot;, &quot;LET&quot;,
+          &quot;shiru_la_YHWH&quot;)
+
+# -------------------------- Exod.15.22 · THREE_DAYS_NO_WATER ---------------
+# וַיַּסַּע מֹשֶׁה אֶת־יִשְׂרָאֵל מִיַּם־סוּף וַיֵּצְאוּ אֶל־מִדְבַּר־שׁוּר
+# וַיֵּלְכוּ שְׁלֹשֶׁת־יָמִים בַּמִּדְבָּר וְלֹא־מָצְאוּ מָיִם
+# &quot;[EN-AID] And Moses made Israel journey from the Reed Sea, and they went
+# out to the wilderness of Shur; and they went three days in the wilderness,
+# and found no water.&quot;
+m.step(&quot;Exod.15.22&quot;)
+# ‹וַיֵּלְכוּ שְׁלֹשֶׁת־יָמִים בַּמִּדְבָּר וְלֹא־מָצְאוּ מָיִם› (“and-go
+# three day in-pasture and-not find waters”) — fact holds: three-day-and-
+# not-find-waters
+m.fact(&quot;sheloshet_yamim_ve_lo_matzu_mayim&quot;)
+
+# -------------------------- Exod.15.23 · MARAH_NAMED -----------------------
+# וַיָּבֹאוּ מָרָתָה וְלֹא יָכְלוּ לִשְׁתֹּת מַיִם מִמָּרָה כִּי מָרִים הֵם
+# עַל־כֵּן קָרָא־שְׁמָהּ מָרָה
+# &quot;[EN-AID] And they came to Marah, and could not drink the waters of Marah,
+# for they were bitter; therefore its name was called Marah.&quot;
+m.step(&quot;Exod.15.23&quot;)
+# ‹עַל־כֵּן קָרָא־שְׁמָהּ מָרָה› (“over so call name-her/its Marah”) —
+# named: maqom := Mara
+m.name(&quot;maqom&quot;, &quot;Mara&quot;)
+
+# -------------------------- Exod.15.24 · WHAT_SHALL_WE_DRINK ---------------
+# וַיִּלֹּנוּ הָעָם עַל־מֹשֶׁה לֵּאמֹר מַה־נִּשְׁתֶּה
+# &quot;[EN-AID] And the people murmured against Moses, saying: What shall we
+# drink?&quot;
+m.step(&quot;Exod.15.24&quot;)
+# ‹וַיִּלֹּנוּ הָעָם עַל־מֹשֶׁה לֵּאמֹר מַה־נִּשְׁתֶּה› (“and-stop the-
+# people over Moses to-say what drink”) — the-people speaks a demand — LET:
+# what-drink
+m.declare(&quot;ha_am&quot;, &quot;LET&quot;,
+          &quot;ma_nishte&quot;)
+
+# -------------------------- Exod.15.25 · THE_TREE_AND_THE_STATUTE ----------
+# וַיִּצְעַק אֶל־יְהוָה וַיּוֹרֵהוּ יְהוָה עֵץ וַיַּשְׁלֵךְ אֶל־הַמַּיִם
+# וַיִּמְתְּקוּ הַמָּיִם שָׁם שָׂם לוֹ חֹק וּמִשְׁפָּט וְשָׁם נִסָּהוּ
+# &quot;[EN-AID] And he cried out to the LORD, and the LORD showed him a tree;
+# and he cast it into the waters, and the waters were sweetened. There He
+# set for him a statute and an ordinance, and there He tested him.&quot;
+m.step(&quot;Exod.15.25&quot;)
+# ‹וַיִּצְעַק אֶל־יְהוָה וַיּוֹרֵהוּ יְהוָה עֵץ וַיַּשְׁלֵךְ אֶל־הַמַּיִם
+# וַיִּמְתְּקוּ› (“and-shriek to YHWH and-flow-as-water-him/its YHWH tree
+# and-throw-out to the-waters and-suck”) — event: hamtaqat-the-waters —
+# agent Moses; theme ha-mayim
+m.event(&quot;hamtaqat_ha_mayim&quot;, agent=&quot;moshe&quot;, themes=[&quot;ha-mayim&quot;])
+# ‹וַיִּמְתְּקוּ הַמָּיִם› (“and-suck the-waters”) — demand settled (popped
+# from the queue): what-drink
+m.result(&quot;ma_nishte&quot;, tmark=&quot;t1&quot;)
+# ‹שָׁם שָׂם לוֹ חֹק וּמִשְׁפָּט› (“there put/set to-him/its enactment and-
+# judgment”) — fact holds: there-put/set-not-enactment-and-judgment
+m.fact(&quot;sham_sam_lo_choq_u_mishpat&quot;)
+# ‹וְשָׁם נִסָּהוּ› (“and-there test-him/its”) — fact holds: and-there-
+# nisahu
+m.fact(&quot;ve_sham_nisahu&quot;)
+
+# -------------------------- Exod.15.26 · I_AM_YOUR_HEALER ------------------
+# וַיֹּאמֶר אִם־שָׁמוֹעַ תִּשְׁמַע לְקוֹל יְהוָה אֱלֹהֶיךָ וְהַיָּשָׁר
+# בְּעֵינָיו תַּעֲשֶׂה וְהַאֲזַנְתָּ לְמִצְוֺתָיו וְשָׁמַרְתָּ כָּל־חֻקָּיו
+# כָּל־הַמַּחֲלָה אֲשֶׁר־שַׂמְתִּי בְמִצְרַיִם לֹא־אָשִׂים עָלֶיךָ כִּי
+# אֲנִי יְהוָה רֹפְאֶךָ
+# &quot;[EN-AID] And He said: If you diligently listen to the voice of the LORD
+# your God, and do what is right in His eyes, and give ear to His
+# commandments, and keep all His statutes — all the disease which I set upon
+# Egypt I will not set upon you; for I am the LORD your healer.&quot;
+m.step(&quot;Exod.15.26&quot;)
+# ‹וַיֹּאמֶר אִם־שָׁמוֹעַ תִּשְׁמַע לְקוֹל יְהוָה אֱלֹהֶיךָ וְהַיָּשָׁר
+# בְּעֵינָיו תַּעֲשֶׂה וְהַאֲזַנְתָּ לְמִצְוֺתָיו וְשָׁמַרְתָּ כָּל־חֻקָּיו›
+# (“and-say if hear hear to-voice/sound YHWH God-you/your and-the-straight
+# in-eye-him/its make and-broaden-out-the-ear to-commandment-him/its and-
+# keep/guard all enactment-him/its”) — the-LORD speaks a demand — LET: if-
+# hear-hear
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;im_shamoa_tishma&quot;)
+# ‹כָּל־הַמַּחֲלָה אֲשֶׁר־שַׂמְתִּי בְמִצְרַיִם לֹא־אָשִׂים עָלֶיךָ כִּי
+# אֲנִי יְהוָה רֹפְאֶךָ› (“all the-sickness which put/set in-Egypt not
+# put/set over-you/your that YHWH mend-you/your”) — fact holds: ani-the-
+# LORD-rofekha
+m.fact(&quot;ani_YHWH_rofekha&quot;)
+
+# -------------------------- Exod.15.27 · TWELVE_SPRINGS_SEVENTY_PALMS ------
+# וַיָּבֹאוּ אֵילִמָה וְשָׁם שְׁתֵּים עֶשְׂרֵה עֵינֹת מַיִם וְשִׁבְעִים
+# תְּמָרִים וַיַּחֲנוּ־שָׁם עַל־הַמָּיִם
+# &quot;[EN-AID] And they came to Elim, and there — twelve springs of water and
+# seventy palm trees; and they camped there by the waters.&quot;
+m.step(&quot;Exod.15.27&quot;)
+# ‹וְשָׁם שְׁתֵּים עֶשְׂרֵה עֵינֹת מַיִם וְשִׁבְעִים תְּמָרִים› (“and-there
+# two -teen eye waters and-seventy palm-tree”) — fact holds: shtem--teen-
+# eye-and-seventy-palm-tree
+m.fact(&quot;shtem_esre_enot_ve_shivim_temarim&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {&#x27;maqom&#x27;: &#x27;Mara&#x27;}
+    assert m.REGISTRY[&quot;writes&quot;] == 1
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;shiru_la_YHWH&#x27;, &#x27;im_shamoa_tishma&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 3
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;named_before_any_presence&#x27;: 1}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;ki_gao_gaa_sus_ve_rokhvo&#x27;, &#x27;uzi_ve_zimrat_yah&#x27;, &#x27;ze_eli_ve_anvehu&#x27;, &#x27;YHWH_ish_milchama&#x27;, &#x27;u_mivchar_shalishav_tubu&#x27;, &#x27;tehomot_yekhasyumu&#x27;, &#x27;yeminkha_YHWH_nedari_va_koach&#x27;, &#x27;teshalach_charonkha&#x27;, &#x27;u_ve_ruach_apekha_neermu_mayim&#x27;, &#x27;amar_oyev_erdof_asig&#x27;, &#x27;tzalalu_ka_oferet&#x27;, &#x27;mi_khamokha_ba_elim&#x27;, &#x27;nora_tehilot_ose_fele&#x27;, &#x27;tivlaemo_aretz&#x27;, &#x27;am_zu_gaalta&#x27;, &#x27;shamu_amim_yirgazun&#x27;, &#x27;namogu_kol_yoshve_khenaan&#x27;, &#x27;ad_yaavor_am_zu_qanita&#x27;, &#x27;makhon_le_shivtekha_paalta&#x27;, &#x27;YHWH_yimlokh_le_olam_va_ed&#x27;, &#x27;ki_va_sus_paro_ba_yam&#x27;, &#x27;va_tiqach_miryam_et_ha_tof&#x27;, &#x27;sheloshet_yamim_ve_lo_matzu_mayim&#x27;, &#x27;sham_sam_lo_choq_u_mishpat&#x27;, &#x27;ve_sham_nisahu&#x27;, &#x27;ani_YHWH_rofekha&#x27;, &#x27;shtem_esre_enot_ve_shivim_temarim&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 7
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

@@ -1,0 +1,682 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_28_egypt_descent — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_28_egypt_descent?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The descent to Egypt: the famine, the sister-word, the plagued house (12:10-20) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_28_egypt_descent</b> · Genesis 12:10-20 · derive logic_derived_v1 · phase C-28</div>
+<div class="meta"><a href="../#Gen/12/10">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">וַיְהִי רָעָב בָּאָרֶץ</span> · <i>va-yehi raav ba-aretz</i> · &#x27;and there was a famine in the land&#x27;</p>
+<div class="note">REVIEW PASSED and FROZEN 2026-08-03 by the main loop: every census re-run independently against the raw snapshot and confirmed EXACT — the narrative say-roster Gen 11:26-12:20 is precisely 12:1 YHWH / 12:7 YHWH / 12:11 ABRAM / 12:18 Pharaoh (his FIRST recorded speech verified); raav (&#x27;famine&#x27;) tokens 1-2 both 12:10, 3-4 = 26:1; kaved (&#x27;heavy&#x27;) tokens 1-5 all famine-verses (the staging&#x27;s 13:2 correction confirmed — 13:2 is sibling-lemma 3513); yarad (&#x27;descend&#x27;) tokens 1-3 = 11:5/11:7/12:10 with 4-5 = 15:11/18:21 exactly as frozen gen_25&#x27;s career line runs; nega (&#x27;plague/ affliction&#x27;) noun 67 Torah tokens PARTITIONED IN REVIEW: 61 Leviticus + 4 Deuteronomy priestly-jurisdiction clauses = the 65 law-tokens, and the ONLY two non-law tokens are the two EGYPT plagues (Gen 12:17, Exod 11:1 — both over a taken member of the house: the draft&#x27;s 65/67 ratified with the partition explicit); naga verb tokens 1-5 = 3:3 garden fence / 12:17 / then the three wife-danger spans; na (&#x27;please&#x27;) debut x2 in-span (token 3 = 13:8); harag (&#x27;kill&#x27;) 1-5 all Cain-cycle, 6 = 12:12, 7 = 20:4; yatav tokens 1-2 = 4:7 (seed corrected), 3-4 = the in-span request/ delivery echo; baavur 1-2 = 3:17/8:21, 3-4 in-span; hallel-root exactly ONE Torah token (12:15) — hapax verified, GLOSS_FIX ratified; tzavah (&#x27;command&#x27;) tokens 1-7 ALL divine, TOKEN 8 = PHARAOH; shalach (&#x27;send&#x27;) LEMMA ordinals verified (token 2 = 3:23 the garden expulsion, tokens 3-7 the ark scenes incl. 8:9&#x27;s qal hand, token 8 = 12:20) — reviewer precision note: ordinals are lemma-wide; the STEM-IDENTITY claim (3:23 and 12:20 both PIEL — piel tokens 1 and 6) verified independently; achot (&#x27;sister&#x27;) 1-4 = 4:22/12:13/12:19/20:2; gamal, sar, gur, baqar, shifchah, aton debuts confirmed; eved token 5 = 12:16 of total 180 (matching frozen gen_23&#x27;s &#x27;180 Torah tokens&#x27; exactly); davar 1-2 = 11:1/ 12:17; nagad 1-3 = 3:11/9:22/12:18; va-tuqach = qal-passive wayyiqtol VQw3fs vs 2:23&#x27;s perfect (first NARRATIVE passive take — precision ratified); Pharaoh tokens 1-6 all in-span of 216; span word_total 141; ishah x10 in span. ALL FLAGGED CHOICES RATIFIED — above all the LETTER-OVER-EXPECTATION reversal: the staged &#x27;queue-empty&#x27; prediction overturned by the text&#x27;s three unreceipted human imperatives (gen_13&#x27;s Lemekh class, quote verified) — THREE demands open at rest, all human, zero RESULT ops: the letter&#x27;s arithmetic, not the machine&#x27;s. All frozen-unit quotes verified verbatim (gen_13, gen_23 x2, gen_25, gen_27, lev_13&#x27;s &#x27;nega (Gen 12:17)&#x27; import line). Onkelos (Aramaic translation) read Tier-A at derive time (11 sequential fetches, Data/FETCHLOG.md) — headline find-class: the buffer gives Sarai the words the letter withholds (&#x27;preserved BY YOUR WORDS&#x27;); lead-for-take holds through passive/confession/imperative; Pharaoh&#x27;s va-lekh = IZEL, the exact Aramaic of 12:1&#x27;s call. TWENTY-FOURTH PROSPECTIVE MIDDOT RUN (logic/middot_scan/WATCHLIST_gen28_prospective_2026-08-03.md): cache holds ZERO sources for Gen 12:10-20 — TWENTY-SECOND tripwire in a row. INTERPRETER: ZERO extensions — nineteenth extension-free derivation in a row. Derived by the THIRD-GENERATION agent — its third and FINAL unit (retiring at ~650k with three first-run greens, zero corrections, zero invented claims; eleventh agent-derived unit overall; gen-4 spawns next with the distilled handoff incl. gen-3&#x27;s own succession notes). THE DRAFT&#x27;S FLAGGED CHOICES (all ratified): (1) the staging expectation &#x27;queue-empty machine&#x27; is OVERTURNED BY THE LETTER [seed order 12 followed]: THREE human imperatives push LET demands — Abram&#x27;s imri-na (&#x27;say, please&#x27;, 12:13, feminine imperative to Sarai) and Pharaoh&#x27;s qach (&#x27;take&#x27;) + va-lekh (&#x27;and go&#x27;, 12:19) — and NONE receipts in-span: no reply from Sarai is narrated anywhere (12:19 attributes the sister-words to ABRAM — amarta, masculine &#x27;YOU said&#x27;), and the expulsion verse&#x27;s verbs (tzavah &#x27;command&#x27;, shalach &#x27;send&#x27;) are not the demands&#x27; verbs — the ascent that would answer va-lekh is 13:1, across the seam. Queue ends 3 OPEN, ALL HUMAN (gen_13&#x27;s Lemekh class, quoted — &#x27;the queue is bookkeeping, not endorsement&#x27;). (2) 12:15&#x27;s va-tuqach is encoded as the corpus&#x27;s FIRST NARRATIVE PASSIVE TAKE-EVENT (qal-passive wayyiqtol, VQw3fs; TIR-032 — agentless: the letter does not say who took her): the first passive take-FORMS were speech-perfects (2:23 luqocha — the WOMAN &#x27;taken from man&#x27;; 3:19/3:23 dust and ground) — precision kept, no overclaim. (3) YHWH-acts-never-speaks VERIFIED: the span&#x27;s narrative say-tokens are 12:11 (Abram — his FIRST recorded speech in the corpus, census-verified against every prior say-token) and 12:18 (Pharaoh); 12:17&#x27;s plague is the only divine deed and carries no speech. (4) The mah-asita (&#x27;what have you done&#x27;) question-class held as PROSE (census: 3:13 God to the woman, 4:10 God to Cain, 12:18 PHARAOH to Abram — the form&#x27;s first human speaker; tokens 4-5 are the other wife-sister kings, 20:9/26:10) — the letter does no more, so the machine does no more. (5) Staging&#x27;s kaved-career claim corrected by census: token 2 is 41:31 (Yosef&#x27;s famine), NOT 13:2 — the heavy-word&#x27;s first five tokens are all famine (12:10, 41:31, 43:1, 47:4, 47:13). (6) yatav (&#x27;do well&#x27;) is NOT a debut (tokens 1-2 = 4:7, Cain&#x27;s warning) — but its tokens 3-4 are an IN-SPAN echo-pair: yitav-li requested (12:13), hetiv delivered (12:16) — the benefit-clause receipted by its own verb; held as letter fact in prose (the SPECS queue carries only the demands, not the benefit-wish). GLOSS_FIX applied: hallel &#x27;be-clear&#x27; -&gt; &#x27;praise&#x27; (the root&#x27;s only Torah token); negaim &#x27;blow&#x27; kept as &#x27;plagues/afflictions&#x27;.</div>
+<div class="note">Logic-derived v1: v3 taamim (cantillation accents) trees from DB tree_json -&gt; leaf role frames from OSHB morph -&gt; operator lines citing TIR rules -&gt; machine-state scenarios. Machine tokens apostrophe-free and underscore-joined (imri(saray, achoti_hi), qach(avram, et_ishto), al_devar_saray_eshet_avram). Per-verse steps (eleven).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (retro, PROCESS.md oral-first era; manifest logic/oral_audit/manifests/gen_28_egypt_descent_claims.json — 7 VERIFIED, 0 FAILED, 0 UNCHECKABLE; record logic/oral_audit/AUDIT_gen_28_2026-08-08.md). CROWNS (chain-attested + DB-verified): (1) THE BOOK-SPLITTING SPELLING RULE (G28-01/02/03, Minchat Shai on 12:16 quoting the Masorah [received tradition]): &quot;from the book&#x27;s beginning until ויפרץ האיש (&#x27;the man BURST FORTH,&#x27; 30:43) the maidservant-plural is written defective; from there to the Torah&#x27;s end, always plene.&quot; SNAPSHOT whole-Torah: exactly three defective — ושפחת (&quot;and maidservants&quot;) at 12:16, 20:14, 24:35, the Masorah&#x27;s own mnemonic — then the FIRST plene token is the boundary verse itself (ושפחות, 30:43), and the only remaining tokens (השפחות, &quot;the maidservants,&quot; 33:1/2/6) are plene. The maidservant-word fills out exactly when the blessing bursts. Arbitration: the Hilleli copy reads plene at 12:16; SNAPSHOT sides with the Yerushalmi codex and the Masorah. (2) ויהללו (&quot;and they PRAISED her,&quot; 12:15) — the first lamed LIGHT (no doubling dot), &quot;to ease the tongue, like ואתפללה [&#x27;and I prayed,&#x27; Daniel 9:4]&quot; (G28-04, Minchat Shai): the praise-hapax the machine holds gets its FORM attested — a lightened one (Daniel pair = edge). (3) יחיו (&quot;they will KEEP ALIVE,&quot; 12:12) — exactly ONE Torah token (G28-05, Kitzur): the fear-verse&#x27;s life-verb is unique; Masorah-paired with Hosea 14:8&#x27;s &quot;they shall revive as the grain&quot; (edge). (4) אחתי את (&quot;you are my SISTER,&quot; 12:13) — the two-word pair exactly ONCE in the Torah (G28-06, Kitzur): paired with Proverbs 7:4 &quot;SAY to wisdom: you are my sister&quot; — a say-command aimed at the sister-word, the exact grammar of Abram&#x27;s own אמרי (&quot;say!&quot;); both &quot;great in wisdom&quot; (edge). (5) קח ולך (&quot;TAKE and GO,&quot; 12:19) — exactly TWICE in the Torah: Pharaoh releasing Sarai, Laban&#x27;s house releasing Rivkah (24:51) — both wife-transfer releases (G28-07, Kitzur&#x27;s hand-to-hand list; Kings/Jeremiah legs = edges). INHERITANCE EDGES (export_links, Torah side verified): 12:17 → Ps 105:14 ∥ I Chr 16:21 — &quot;He rebuked KINGS for their sake&quot;: the wordless plague becomes the liturgy&#x27;s precedent-case, in both copies of the psalm; 12:16 ↔ 30:43 — the link index itself pairs the spelling rule&#x27;s two poles. READINGS (named-only): the keep-alive gift inference (Kitzur 12:12); the hand-to-hand gift inference (Kitzur 12:19); Ramban&#x27;s &quot;great sin&quot; dissent and the ten-trials roster stand as named in step G. Machine layer untouched.</div>
+<div class="meta">confidence: structure tested; operator readings tested-per-TIR; intent hypothesis</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>Gen 12:10-20 as ONE UNIT (owner ruling on staged recommendation): descent for famine (12:10), the fear-scheme speech (12:11-13), the seeing/praising/taking (12:14-15), the payment (12:16), the plague (12:17), the interrogation and counter-command (12:18-19), the escorted expulsion (12:20). 13:1&#x27;s va-yaal (&#x27;went up&#x27;) inverts 12:10&#x27;s va-yered (&#x27;went down&#x27;) — the inclusio is the frame; the ascent belongs to the next block. 11 verses, 141 tokens.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Hebrew source + trees</td><td>All 11 verses from DB tree_json (rule set v3, unique, pure binary; ascii rendered 2026-08-03). Tree facts (accent positions DB-verified): 12:10 rests (etnachta, major mid-verse rest) and ends on the SAME word — ba-aretz (&#x27;in the land&#x27;) twice: the famine-verse is bracketed by the land it empties; 12:12 ends on yechayu (&#x27;they will keep alive&#x27;) — the fear-verse&#x27;s last word is the life-verb aimed at her; 12:13 ends on bi-gelalekh (&#x27;because of you&#x27;); 12:15 rests AND ends on paro (&#x27;Pharaoh&#x27;) — the taking-verse is bracketed by the king; 12:16 ends on u-gemalim (&#x27;and camels&#x27;) — the payment-verse ends deep in the gift-list; 12:17 ends on avram — the plague-verse&#x27;s last word names whose wife she is (eshet AVRAM); 12:19 ENDS ON VA-LEKH (&#x27;and GO!&#x27;) — the king&#x27;s go-imperative sits verse-final where gen_26&#x27;s ledger seated heirs and gen_14&#x27;s seated deaths; 12:20 ends on lo (&#x27;all that was HIS&#x27;).</td><td>tested</td></tr>
+<tr><td><b>C</b></td><td>Segment structure</td><td>Verb morphology (#IMPOSED OSHB, DB-verified 2026-08-03) and censuses run BEFORE drafting: ABRAM&#x27;S FIRST SPEECH VERIFIED — the narrative say-roster from Abram&#x27;s debut (11:26) to here: 12:1 YHWH, 12:7 YHWH, 12:11 ABRAM (el-Saray ishto), 12:18 Pharaoh — no earlier Abram-speech exists; frozen gen_27&#x27;s &#x27;Abram&#x27;s first response to God is a departure&#x27; stands, and his first WORDS are hinneh na yadati (&#x27;behold, please/now, I know&#x27;) — fear and his wife&#x27;s beauty. IMRI (12:13) — feminine singular IMPERATIVE (Vqv2fs): a husband commands his wife&#x27;s speech; NA (&#x27;please&#x27;) — the plea-particle&#x27;s Torah DEBUT x2 (12:11, 12:13), born inside the scheme. VA-TUQACH (12:15) — QAL PASSIVE wayyiqtol (VQw3fs, TIR-032): the take-verb&#x27;s first NARRATIVE passive (the form-class precision: 2:23&#x27;s luqocha — the woman &#x27;TAKEN from man&#x27; — and 3:19/3:23 are speech-perfects); the letter does not name the taker. VA-YENAGA (12:17) — PIEL (&#x27;and He PLAGUED&#x27;) with the cognate object negaim gedolim (&#x27;great plagues&#x27;): NEGA&#x27;s TORAH DEBUT — 65 of the noun&#x27;s 67 Torah tokens are the affliction-word of the frozen lev_13 law (which cites &#x27;nega (Gen 12:17)&#x27; as its own import); the verb&#x27;s token 1 is 3:3 — the garden fence (&#x27;neither shall you TOUCH it&#x27;); tokens 3-5 are the other wife-danger spans (20:6, 26:11, 26:29) [careers, prose]. Debut/career table: raav (&#x27;famine&#x27;) tokens 1-2 both in 12:10 (tokens 3-4 = 26:1, the verse that cites THIS famine as &#x27;the first&#x27;; the rest crowd Yosef&#x27;s); kaved (&#x27;heavy&#x27;) token 1 (tokens 2-5 ALL famine verses — 41:31, 43:1, 47:4, 47:13 [staging&#x27;s 13:2 claim corrected]); gur (&#x27;sojourn&#x27;) token 1 — the ger-root born at the first descent; yarad token 3 (frozen gen_25 quoted at the step); Pharaoh tokens 1-6 (of 216) all in-span; sar (&#x27;officer&#x27;) token 1 — sarei Faro one consonant-set from SARAY [sound-observation only, no claim]; hallel (&#x27;praise&#x27;) — the root&#x27;s ONLY Torah token (piel, 12:15; GLOSS_FIX from DB &#x27;be-clear&#x27;); harag (&#x27;kill&#x27;) token 6 = 12:12 (tokens 1-5 are ALL the Cain cycle; token 7 = 20:4, the next endangered-wife span); chayah piel yechayu (&#x27;keep alive&#x27;) + qal ve-chaytah (&#x27;shall live&#x27;) — the ledgers&#x27; life-verb (tokens 37-38) re-voiced as plea; yatav (&#x27;do well&#x27;) tokens 3-4 IN-SPAN ECHO (yitav-li requested 12:13, hetiv delivered 12:16; tokens 1-2 = 4:7 to Cain — not a debut, seed corrected); baavur (&#x27;for the sake of&#x27;) tokens 3-4 in-span (tokens 1-2: 3:17&#x27;s cursed-ground-for-your-sake, 8:21&#x27;s never-again — the sake-word&#x27;s career flips from curse to payment); achoti (&#x27;my sister&#x27;) tokens 2-3 (token 1 = 4:22 Naamah; token 4 = 20:2 — the next sister-claim); gamal (&#x27;camel&#x27;) TORAH DEBUT (tokens 2-4 = Rivkah&#x27;s camels, Gen 24); eved token 5 in the gift-list (gen_23 quoted at the step); mah-asita (&#x27;what have you done&#x27;) roster: 3:13, 4:10, 12:18, 20:9, 26:10 — God twice, then three kings; tzavah (&#x27;command&#x27;) tokens 1-7 ALL DIVINE (2:16 the first command; 3:11/3:17 the trial; 6:22/7:5/7:9/7:16 the ark compliances) — TOKEN 8 = 12:20: the command-verb&#x27;s FIRST HUMAN SUBJECT IS PHARAOH; shalach piel token 8 = 12:20 (token 2 = 3:23, THE GARDEN EXPULSION — same verb, same stem; tokens 3-7 are the ark&#x27;s raven and dove) [careers, prose]; devar (&#x27;word/matter&#x27;) token 2 = 12:17&#x27;s al-devar Saray (token 1 = 11:1, gen_25&#x27;s &#x27;one words&#x27;); isha (&#x27;woman/wife&#x27;) x10 in 11 verses — the wife-word saturates the wife-denial.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Predicates &amp; outcomes</td><td>The machine&#x27;s shape is the INVERSE of gen_27: there God spoke twice, commanded twice, and the human never replied in words; here the humans command three times and God never speaks at all. The queue tells the story: Abram pushes a demand on his wife (imri-na — gen_13&#x27;s Lemekh class: a man commanding his wife, no compliance ever narrated, open forever); Pharaoh pushes two back on Abram (qach, va-lekh — the go-verb of 12:1 handed back by Egypt, verse-final); NOTHING pops — the letter writes no receipt verse for any of the three, and 12:19&#x27;s amarta (&#x27;YOU said — masculine&#x27;) re-routes the sister-words to the man who demanded them [letter fact; the OPEN candidacy of Sarai&#x27;s silence held]. Around the queue: the famine-facts, the fear-forecast (kill ME, keep YOU alive), the doubled silence (Sarai answers no one; Abram answers none of Pharaoh&#x27;s three questions), the passive taking, the payment list, the wordless plague, the escorted expulsion. TESTS empty (the plague is a deed, not a verdict-speech); WORLD installs zero; REGISTRY zero.</td><td>tested</td></tr>
+<tr><td><b>E</b></td><td>Logic format choice</td><td>Operator lines; per-verse steps (eleven). DECLARE x3 — ALL HUMAN (gen_13&#x27;s class, quoted: &#x27;the queue is bookkeeping, not endorsement&#x27;): imri(saray, achoti_hi) at 12:13 (TIR-027 feminine imperative + the debut na), qach(avram, et_ishto) and lekh(avram) at 12:19 (the king&#x27;s pair — one verse, two demands, the second the call&#x27;s own verb). ZERO RESULT ops — no demand receipts in-span [bold; the letter&#x27;s arithmetic]. EVENTs (11): go_down (12:10), say (12:11 — the first Abram speech), see x2 (12:14 the Egyptians; 12:15 the officers), praise (12:15 — the hallel hapax), take-PASSIVE (12:15, Theme only, TIR-032 — the letter hides the taker), do_good (12:16), plague (12:17 — the span&#x27;s ONLY divine act), say (12:18 Pharaoh), command (12:20 — tzavah&#x27;s first human subject), send_away (12:20 — the garden-expulsion stem). Standing facts (8): the heavy-famine, the beauty-address, the fear-forecast, the benefit-clause, the very-fair report, the seven-term gift-list, the al-devar-Saray cause, the amarta-attribution. NOTE_PRESUPPOSED x1 (mitzrayim). NAME x0, REGISTRY x0, TESTS x0, LEDGER x0, INSTALLS x0. Queue at rest: THREE OPEN, all human — the corpus&#x27;s largest all-human debt. Interpreter extensions: NONE.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Bilingual logic objects</td><td>Every operator line carries he + he_translit + en. Machine tokens apostrophe-free: imri(saray, achoti_hi), qach(avram, et_ishto), lekh(avram), ve_hargu_oti_ve_otakh_yechayu, al_devar_saray_eshet_avram, va_yehi_lo_tzon_u_vaqar.</td><td>established</td></tr>
+<tr><td><b>G</b></td><td>Oral (named only) + Tier-A translation check</td><td>Named but NOT read (queue only — the cache middot scan is the main loop&#x27;s gate): Bereshit Rabbah 40-41 (the span; BR 41:2 — already cited by frozen lev_13 — reads 12:17&#x27;s nega as tzara&#x27;at); Bavli Bava Batra 16a-b class parallels; Rashi at 12:11 (the now-I-know crux), 12:13 (the brother-gifts), 12:17 (the plague identified); Ramban at 12:10 (THE FAMOUS DISSENT: Abram&#x27;s descent and the sister-scheme called &#x27;a great sin&#x27; — chet gadol — and the descent-pattern read as the Egypt-exile&#x27;s cause: the maaseh-avot [&#x27;deeds of the fathers&#x27;] counter-file); the ten-trials roster (this span as trial #2 in some counts). Tier-A Onkelos (11 fetches, Data/FETCHLOG.md 2026-08-03): findings in ORAL_onkelos_tier_a — headline: the buffer GIVES SARAI THE SPEECH-ROLE THE LETTER WITHHOLDS (&#x27;that my soul may be preserved BY YOUR WORDS&#x27; — be-fitgamaykhi, an added instrument); person-taking becomes LEADING even in the passive (ve-idabbarat, &#x27;she was led&#x27;); the expulsion becomes an ESCORT (ve-alviu, &#x27;they accompanied him&#x27;); and Pharaoh&#x27;s va-lekh is IZEL — the exact Aramaic imperative of 12:1&#x27;s call.</td><td>tested</td></tr>
+<tr><td><b>H</b></td><td>Scenarios</td><td>S1 the descent: famine-facts hold, mitzrayim flagged. S2 the first speech: the beauty-address holds. S3 the request: the imri-demand pushed and OPEN, the benefit-clause holds. S4 the seeing: the very-fair fact holds. S5 the payment: the gift-list holds. S6 the plague: the cause-fact holds. S7 the counter-commands: both king-demands pushed and OPEN, the attribution-fact holds. S8 the expulsion: all three demands STILL open, registry/tests empty, LEDGER empty. S9_negative LET? guard; S10_negative flag-never-block.</td><td>tested</td></tr>
+<tr><td><b>I</b></td><td>English leakage review</td><td>Operators derive from morph codes (the feminine imperative, the qal-passive wayyiqtol, the piel plague-verb, TIR-014/027/ 032) and censuses run BEFORE drafting (the say-roster; the raav/kaved/gur/na/gamal/sar/nega debuts; the harag, achoti, baavur, yatav, tzavah, shalach-piel, mah-asita rosters; the hallel hapax). NOT supplied: whether the scheme was ever spoken by Sarai (the letter is silent; the buffer inserts her words — dual-track), who took her (the passive hides it), what the plagues were, whether Abram answered the king (no answer is recorded), the 20:12 harmonization (named-only), Ramban&#x27;s verdict (named-only), or any receipt for the three open demands — every one [OPEN], prose, or flagged.</td><td>established</td></tr>
+<tr><td><b>J</b></td><td>Pre-flight + draft ship</td><td>Pre-flight 2026-08-03 against the UNMODIFIED repo interpreter — zero injected prototypes (scratchpad preflight_gen28.py; draft guard bypassed for preview only). Ships as STATUS: DRAFT by the gen-3 block agent (mechanics only, final derivation of this agent&#x27;s tenure); the main loop verifies quotes, re-runs censuses, rules on the flagged choices, and freezes through the standard gate chain.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_12_10 · Gen.12.10 · <span class='expr'>THE_DESCENT_FOR_FAMINE</span></h3>
+<p><span class="he">וַיְהִי רָעָב בָּאָרֶץ וַיֵּרֶד אַבְרָם מִצְרַיְמָה לָגוּר שָׁם כִּי־כָבֵד הָרָעָב בָּאָרֶץ</span> · <i>va-yehi raav ba-aretz va-yered avram mitzraymah la-gur sham ki-khaved ha-raav ba-aretz</i> · [EN-AID/JPS] And there was a famine in the land; and Abram went down into Egypt to sojourn there; for the famine was sore in the land.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויהי רעב בארץ</span> · <i>va-yehi raav ba-aretz</i> · a famine in the land (etnachta arm ends on ba-aretz)</div><div class="arm"><b>RIGHT</b><br><span class="he">וירד אברם מצרימה לגור שם כי־כבד הרעב בארץ</span> · <i>va-yered avram mitzraymah la-gur sham ki-khaved ha-raav ba-aretz</i> · the descent to sojourn — the verse ends on ba-aretz again: bracketed by the land</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">go_down(e1) ∧ Agent(e1, avram) ∧ Goal(e1, mitzrayim)</span><br><span class="gloss">= go-down(e1) ∧ Agent(e1, avram) ∧ Goal(e1, mitzrayim)</span><br>VA-YERED — and FROZEN gen_25&#x27;s career line LANDS, quoted verbatim: &#x27;YARAD (&quot;descend&quot;) — the descend-verb&#x27;s TORAH DEBUT is God&#x27;s descent (11:5); token 2 the divine cohortative; token 3 = 12:10 (Abram down to Egypt); token 5 = 18:21&#x27;s eradah-na (&quot;let Me go down&quot;) at SODOM.&#x27; This is token 3 [frozen-unit prediction landing, marked]: the verb&#x27;s first human subject inherits it from two divine descents. LA-GUR (&#x27;to SOJOURN&#x27;) — the ger-root&#x27;s Torah debut: the stranger- word is born on Abram&#x27;s way down [career, prose]. The promised land&#x27;s first act toward its promisee is a famine [letter fact; Ramban&#x27;s verdict-file is the chain&#x27;s, named-only].
+</td><td><span class="he">וַיֵּרֶד אַבְרָם מִצְרַיְמָה לָגוּר שָׁם</span> · <i>va-yered avram mitzraymah la-gur sham</i><br><span class="gloss">= and-yered avram mitzraymah to-gur there</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ki_khaved_ha_raav_ba_aretz, t0)</span><br><span class="gloss">= HOLDS(when-khaved-the-raav-in-the-earth, t0)</span><br>RAAV (&#x27;famine&#x27;) — TORAH DEBUT, twice in this verse; tokens 3-4 are 26:1, the verse that will cite THIS famine as &#x27;the FIRST famine&#x27;; the word&#x27;s bulk crowds Yosef&#x27;s Egypt [career, prose]. KAVED (&#x27;heavy&#x27;) — Torah debut on the famine; its first five tokens are ALL famine-verses (12:10, 41:31, 43:1, 47:4, 47:13): the heavy-word enters the corpus hungry [census; staging&#x27;s 13:2 claim corrected — flagged].
+</td><td><span class="he">כִּי־כָבֵד הָרָעָב בָּאָרֶץ</span> · <i>ki-khaved ha-raav ba-aretz</i><br><span class="gloss">= when-khaved the-raav earth</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">mitzrayim are READ without prior install (known geography)</span><br>flag, not fix (Egypt — the table&#x27;s name, 10:6, read here as a place)</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">One verse bracketed by ba-aretz (&#x27;in the land&#x27;) at both rest and end: the land of the pledge empties, and the pledge&#x27;s man goes down the road two divine descents opened.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_12_11 · Gen.12.11 · <span class='expr'>THE_FIRST_SPEECH_IS_FEAR_AND_BEAUTY</span></h3>
+<p><span class="he">וַיְהִי כַּאֲשֶׁר הִקְרִיב לָבוֹא מִצְרָיְמָה וַיֹּאמֶר אֶל־שָׂרַי אִשְׁתּוֹ הִנֵּה־נָא יָדַעְתִּי כִּי אִשָּׁה יְפַת־מַרְאֶה אָתְּ</span> · <i>va-yehi ka-asher hiqriv la-vo mitzraymah va-yomer el-saray ishto hinneh-na yadati ki ishah yefat-mareh at</i> · [EN-AID/JPS] And it came to pass, when he was come near to enter into Egypt, that he said unto Sarai his wife: &#x27;Behold now, I know that thou art a fair woman to look upon.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויהי כאשר הקריב לבוא מצרימה</span> · <i>va-yehi ka-asher hiqriv la-vo mitzraymah</i> · drawing near to enter Egypt (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויאמר אל־שרי אשתו הנה־נא ידעתי כי אשה יפת־מראה את</span> · <i>va-yomer el-saray ishto hinneh-na yadati ki ishah yefat-mareh at</i> · the first speech: behold-please, I know you are beautiful</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">say(e2) ∧ Agent(e2, avram) ∧ Goal(e2, saray)</span><br>ABRAM&#x27;S FIRST RECORDED SPEECH IN THE CORPUS [census-verified: the narrative say-roster from his debut (11:26) holds 12:1 YHWH, 12:7 YHWH, then THIS]. Frozen gen_27 held the silence (&#x27;Abram&#x27;s first response to God is a departure&#x27; — quoted); the silence breaks HERE — not to God (he has still never answered God in words) but to his wife, at the border, about fear. HIQRIV (&#x27;drew near&#x27;) — the bring-near verb&#x27;s Torah debut: the offering-verb of all Leviticus (198 tokens) enters the corpus as an approach to Egypt [career, prose].
+</td><td><span class="he">וַיֹּאמֶר אֶל־שָׂרַי אִשְׁתּוֹ</span> · <i>va-yomer el-saray ishto</i><br><span class="gloss">= and-yomer to-saray his-wife</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hinneh_na_yadati_ki_ishah_yefat_mareh_at, t0)</span><br><span class="gloss">= HOLDS(behold-na-yadati-when-woman-yefat-appearance-at, t0)</span><br>The address held as spoken fact: &#x27;behold, NA (the plea-particle&#x27;s TORAH DEBUT — politeness is born inside a scheme), I know that you are a woman beautiful of appearance&#x27; — yafeh (&#x27;beautiful&#x27;) Torah debut; the corpus&#x27;s first recorded compliment is a risk-assessment [letter fact]. Onkelos: na -&gt; khe-an (&#x27;now&#x27;) — the plea temporalized, both times [dual-track].
+</td><td><span class="he">הִנֵּה־נָא יָדַעְתִּי כִּי אִשָּׁה יְפַת־מַרְאֶה אָתְּ</span> · <i>hinneh-na yadati ki ishah yefat-mareh at</i><br><span class="gloss">= behold-na yadati when woman yefat-appearance at</span></td><td class='cite'>TIR-032</td><td>tested</td></tr>
+</table>
+<div class="meta">The first words of the man of the call: not an answer to God — an appraisal of his wife&#x27;s face at a border, opened with the corpus&#x27;s first please.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_12_12 · Gen.12.12 · <span class='expr'>THE_FEAR_FORECAST</span></h3>
+<p><span class="he">וְהָיָה כִּי־יִרְאוּ אֹתָךְ הַמִּצְרִים וְאָמְרוּ אִשְׁתּוֹ זֹאת וְהָרְגוּ אֹתִי וְאֹתָךְ יְחַיּוּ</span> · <i>ve-hayah ki-yiru otakh ha-mitzrim ve-amru ishto zot ve-hargu oti ve-otakh yechayu</i> · [EN-AID/JPS] And it will come to pass, when the Egyptians shall see thee, that they will say: This is his wife; and they will kill me, but thee they will keep alive.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">והיה כי־יראו אתך המצרים ואמרו אשתו זאת</span> · <i>ve-hayah ki-yiru otakh ha-mitzrim ve-amru ishto zot</i> · when the Egyptians see you and say: his wife is this (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">והרגו אתי ואתך יחיו</span> · <i>ve-hargu oti ve-otakh yechayu</i> · me they will kill — you they will keep alive</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_hargu_oti_ve_otakh_yechayu, t0)</span><br><span class="gloss">= HOLDS(and-hargu-me-and-otakh-yechayu, t0)</span><br>The forecast held as spoken fact (coded perfects-with-vav — projected future, no event fires): HARAG (&#x27;kill&#x27;) token 6 — tokens 1-5 are ALL the Cain cycle (4:8-25): the kill-verb&#x27;s first post-Cain token is Abram&#x27;s fear of strangers; token 7 is 20:4, the next endangered-wife span [career, prose]. YECHAYU — PIEL &#x27;they will KEEP ALIVE&#x27;: the ledgers&#x27; life-verb (gen_14/gen_26&#x27;s va-yechi, sixteen times in the deathless ledger) re-voiced as the fate Abram assigns his wife — death for him, kept-alive-ness for her: the asymmetry is his own forecast [letter fact; the Egyptians never say the line — it exists only in Abram&#x27;s mouth].
+</td><td><span class="he">וְהָרְגוּ אֹתִי וְאֹתָךְ יְחַיּוּ</span> · <i>ve-hargu oti ve-otakh yechayu</i><br><span class="gloss">= and-hargu me and-otakh yechayu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">A hypothetical built entirely of other people&#x27;s sentences: the Egyptians&#x27; seeing, their verdict, their two verbs — all forecast by the one man who has spoken so far.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_12_13 · Gen.12.13 · <span class='expr'>THE_REQUEST_WITH_NO_REPLY</span></h3>
+<p><span class="he">אִמְרִי־נָא אֲחֹתִי אָתְּ לְמַעַן יִיטַב־לִי בַעֲבוּרֵךְ וְחָיְתָה נַפְשִׁי בִּגְלָלֵךְ</span> · <i>imri-na achoti at lemaan yitav-li vaavurekh ve-chaytah nafshi biglalekh</i> · [EN-AID/JPS] Say, I pray thee, thou art my sister; that it may be well with me for thy sake, and that my soul may live because of thee.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אמרי־נא אחתי את</span> · <i>imri-na achoti at</i> · say, please: my sister you are (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">למען ייטב־לי בעבורך וחיתה נפשי בגללך</span> · <i>lemaan yitav-li vaavurekh ve-chaytah nafshi biglalekh</i> · that it be well with me for your sake — the verse ends on &#x27;because of you&#x27;</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(avram, LET(imri(saray, achoti_hi)))</span><br><span class="gloss">= DECLARE(avram, LET(imri(saray, achoti-hi)))</span><br>IMRI — feminine singular IMPERATIVE (Vqv2fs; TIR-027) + NA (&#x27;please&#x27;): a husband commands his wife&#x27;s words, softly. The demand class is frozen gen_13&#x27;s, quoted: &#x27;DECLARE(lemekh, LET(shema(neshei_lemekh, qol_lemekh)))&#x27; — &#x27;a man commanding his wives... The machine pushes LET(shema(...)) — the FIRST HUMAN ENTRY IN THE DEMAND QUEUE (the issuer field carries lemekh; the queue is bookkeeping, not endorsement) — and NO compliance is ever narrated: the wives&#x27; answer does not exist.&#x27; SO HERE: the demanded words are achoti at (&#x27;you are my sister&#x27;); NO REPLY FROM SARAI IS NARRATED ANYWHERE IN THE SPAN — or the corpus [OPEN]; when the words surface at 12:19 the letter attributes them to ABRAM (amarta, masculine). The demand stands OPEN at the wall [the 20:12 half-sister harmonization is the chain&#x27;s, named-only].
+</td><td><span class="he">אִמְרִי־נָא אֲחֹתִי אָתְּ</span> · <i>imri-na achoti at</i><br><span class="gloss">= imri-na achoti at</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lemaan_yitav_li_vaavurekh_ve_chaytah_nafshi, t0)</span><br><span class="gloss">= HOLDS(lemaan-yitav-to-me-vaavurekh-and-chaytah-nafshi, t0)</span><br>The benefit-clause held as spoken fact — three purpose-words stacked (LEMAAN &#x27;so that&#x27; Torah debut; VAAVUREKH &#x27;for your sake&#x27; — baavur token 3, after 3:17&#x27;s cursed-ground- FOR-YOUR-SAKE and 8:21&#x27;s never-again: the sake-word flips from curse to profit; BIGLALEKH &#x27;because of you&#x27; — Torah debut, verse-final). YITAV-LI (&#x27;that it be WELL with me&#x27;) — yatav tokens 1-2 were 4:7, to Cain [not a debut; seed corrected]; watch 12:16: the wish is receipted by its own verb. VE-CHAYTAH NAFSHI (&#x27;and my soul shall LIVE&#x27;) — the ledger-verb in a plea. Onkelos ADDS the instrument: &#x27;that my soul be preserved BY YOUR WORDS&#x27; (be-fitgamaykhi) — the buffer gives Sarai the saving speech the letter never records her speaking [find-class; dual-track, flagged].
+</td><td><span class="he">לְמַעַן יִיטַב־לִי בַעֲבוּרֵךְ וְחָיְתָה נַפְשִׁי בִּגְלָלֵךְ</span> · <i>lemaan yitav-li vaavurekh ve-chaytah nafshi biglalekh</i><br><span class="gloss">= lemaan yitav-to-me vaavurekh and-chaytah nafshi biglalekh</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The request: one feminine imperative, one please, three for-your-sakes — and a silence where her answer would be that nothing in the written corpus ever fills.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_12_14 · Gen.12.14 · <span class='expr'>THE_SEEING</span></h3>
+<p><span class="he">וַיְהִי כְּבוֹא אַבְרָם מִצְרָיְמָה וַיִּרְאוּ הַמִּצְרִים אֶת־הָאִשָּׁה כִּי־יָפָה הִוא מְאֹד</span> · <i>va-yehi ke-vo avram mitzraymah va-yiru ha-mitzrim et-ha-ishah ki-yafah hi meod</i> · [EN-AID/JPS] And it came to pass, that, when Abram was come into Egypt, the Egyptians beheld the woman that she was very fair.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויהי כבוא אברם מצרימה</span> · <i>va-yehi ke-vo avram mitzraymah</i> · at Abram&#x27;s entering Egypt (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויראו המצרים את־האשה כי־יפה הוא מאד</span> · <i>va-yiru ha-mitzrim et-ha-ishah ki-yafah hi meod</i> · the Egyptians saw THE WOMAN — very beautiful</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">see(e3) ∧ Agent(e3, ha_mitzrim) ∧ Theme(e3, ha_ishah)</span><br><span class="gloss">= see(e3) ∧ Agent(e3, the-mitzrim) ∧ Theme(e3, the-woman)</span><br>The forecast&#x27;s first clause fires (&#x27;when the Egyptians SEE you&#x27; -&gt; &#x27;the Egyptians SAW&#x27;) — but the letter drops the verdict-speech Abram scripted for them: no Egyptian says &#x27;this is his wife&#x27;; they see, and the narration itself calls her HA-ISHAH (&#x27;the WOMAN&#x27;) — not &#x27;his wife&#x27; — for the first time [letter fact: from here to 12:15 the text names her the-woman; Sarai&#x27;s name returns only in God&#x27;s clause at 12:17].
+</td><td><span class="he">וַיִּרְאוּ הַמִּצְרִים אֶת־הָאִשָּׁה</span> · <i>va-yiru ha-mitzrim et-ha-ishah</i><br><span class="gloss">= and-yiru the-mitzrim the-woman</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ki_yafah_hi_meod, t0)</span><br><span class="gloss">= HOLDS(when-yafah-hi-very, t0)</span><br>The narrator ratifies the appraisal and raises it: yafah MEOD (&#x27;VERY beautiful&#x27;) — the husband said &#x27;beautiful of appearance&#x27;; the text says more [letter fact, held].
+</td><td><span class="he">כִּי־יָפָה הִוא מְאֹד</span> · <i>ki-yafah hi meod</i><br><span class="gloss">= when-yafah hi very</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The scheme&#x27;s first scene plays without its script: seeing, yes; the feared sentence, never — and the wife becomes &#x27;the woman.&#x27;</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_12_15 · Gen.12.15 · <span class='expr'>THE_PRAISE_AND_THE_PASSIVE_TAKING</span></h3>
+<p><span class="he">וַיִּרְאוּ אֹתָהּ שָׂרֵי פַרְעֹה וַיְהַלְלוּ אֹתָהּ אֶל־פַּרְעֹה וַתֻּקַּח הָאִשָּׁה בֵּית פַּרְעֹה</span> · <i>va-yiru otah sarei faro va-yehalelu otah el-paro va-tuqach ha-ishah beit paro</i> · [EN-AID/JPS] And the princes of Pharaoh saw her, and praised her to Pharaoh; and the woman was taken into Pharaoh&#x27;s house.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויראו אתה שרי פרעה ויהללו אתה אל־פרעה</span> · <i>va-yiru otah sarei faro va-yehalelu otah el-paro</i> · the officers saw and praised her to Pharaoh (etnachta arm ends on paro)</div><div class="arm"><b>RIGHT</b><br><span class="he">ותקח האשה בית פרעה</span> · <i>va-tuqach ha-ishah beit paro</i> · and the woman WAS TAKEN to Pharaoh&#x27;s house — the verse ends on paro again</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">see(e4) ∧ Agent(e4, sarei_faro) ∧ Theme(e4, ha_ishah)</span><br><span class="gloss">= see(e4) ∧ Agent(e4, sarei-faro) ∧ Theme(e4, the-woman)</span><br>The second seeing, ranked: SAR (&#x27;officer/prince&#x27;) Torah debut — sarei FARO, and PHARAOH himself debuts here (tokens 1-6 of 216, all in-span): Egypt&#x27;s whole court vocabulary is born around one woman&#x27;s face. [Sound- observation only, flagged as observation not claim: sarei (&#x27;officers of&#x27;) and SARAY share their consonants — the letter puts her name&#x27;s letters on her assessors.]
+</td><td><span class="he">וַיִּרְאוּ אֹתָהּ שָׂרֵי פַרְעֹה</span> · <i>va-yiru otah sarei faro</i><br><span class="gloss">= and-yiru her sarei faro</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">praise(e5) ∧ Agent(e5, sarei_faro) ∧ Goal(e5, paro)</span><br><span class="gloss">= praise(e5) ∧ Agent(e5, sarei-faro) ∧ Goal(e5, paro)</span><br>VA-YEHALELU — piel: THE HALLEL-ROOT&#x27;S ONLY TORAH TOKEN [hapax verified]: the praise-verb of the Psalms enters and exits the Torah in one verse, praising a captive woman to a king [GLOSS_FIX applied: DB gloss &#x27;be-clear&#x27; -&gt; &#x27;praise&#x27;].
+</td><td><span class="he">וַיְהַלְלוּ אֹתָהּ אֶל־פַּרְעֹה</span> · <i>va-yehalelu otah el-paro</i><br><span class="gloss">= and-yehalelu her to-paro</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">take(e6) ∧ Theme(e6, ha_ishah) ∧ Goal(e6, beit_paro)</span><br><span class="gloss">= take(e6) ∧ Theme(e6, the-woman) ∧ Goal(e6, beit-paro)</span><br>VA-TUQACH (&#x27;and she WAS TAKEN&#x27;) — QAL PASSIVE wayyiqtol (VQw3fs; TIR-032): the take-verb&#x27;s FIRST NARRATIVE PASSIVE — NO AGENT is written; the letter hides every hand [the first passive take-FORMS were speech-perfects: 2:23&#x27;s luqocha, the woman &#x27;TAKEN from man&#x27; — the rib-poem&#x27;s word returns as abduction-grammar; precision kept, prose]. The take-chain of three units: Terach took (11:31), Abram took (11:29, 12:5), now the woman IS taken — the verb the family lived by turns on its quietest member [prose arc]. Onkelos: ve-idabbarat (&#x27;she was LED&#x27;) — the person-taking buffer (gen_26&#x27;s find at 11:31) holds even in the passive [dual-track].
+</td><td><span class="he">וַתֻּקַּח הָאִשָּׁה בֵּית פַּרְעֹה</span> · <i>va-tuqach ha-ishah beit paro</i><br><span class="gloss">= and-tuqach woman beit paro</span></td><td class='cite'>TIR-032</td><td>tested</td></tr>
+</table>
+<div class="meta">Seen, praised, taken — three verbs, none of them hers, the last one missing its subject: the verse is bracketed by Pharaoh at rest and end, and she is &#x27;the woman&#x27; all the way through.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_12_16 · Gen.12.16 · <span class='expr'>THE_PAYMENT_FOR_HER_SAKE</span></h3>
+<p><span class="he">וּלְאַבְרָם הֵיטִיב בַּעֲבוּרָהּ וַיְהִי־לוֹ צֹאן־וּבָקָר וַחֲמֹרִים וַעֲבָדִים וּשְׁפָחֹת וַאֲתֹנֹת וּגְמַלִּים</span> · <i>u-le-avram hetiv baavurah va-yehi-lo tzon-u-vaqar va-chamorim va-avadim u-shfachot va-atonot u-gemalim</i> · [EN-AID/JPS] And he dealt well with Abram for her sake; and he had sheep, and oxen, and he-asses, and men-servants, and maid-servants, and she-asses, and camels.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ולאברם היטיב בעבורה</span> · <i>u-le-avram hetiv baavurah</i> · and to Abram he did well FOR HER SAKE (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויהי־לו צאן־ובקר וחמרים ועבדים ושפחת ואתנת וגמלים</span> · <i>va-yehi-lo tzon-u-vaqar va-chamorim va-avadim u-shfachot va-atonot u-gemalim</i> · the seven-term list — the verse ends on camels</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">do_good(e7) ∧ Agent(e7, paro) ∧ Goal(e7, avram)</span><br><span class="gloss">= do-good(e7) ∧ Agent(e7, paro) ∧ Goal(e7, avram)</span><br>HETIV (&#x27;he did WELL&#x27;) — the IN-SPAN ECHO [letter fact]: 12:13 requested lemaan YITAV-li vaavurekh (&#x27;that it be WELL with me for your sake&#x27;); 12:16 delivers u-le-avram HETIV baavurah (&#x27;to Abram he did WELL for HER sake&#x27;) — the wish&#x27;s own verb and the sake-word both return, with the pronoun shifted from &#x27;your&#x27; to &#x27;HER&#x27;: the scheme pays exactly as designed, and the letter prices it [the echo is held as prose; the SPECS queue carries demands, not wishes — flagged format choice].
+</td><td><span class="he">וּלְאַבְרָם הֵיטִיב בַּעֲבוּרָהּ</span> · <i>u-le-avram hetiv baavurah</i><br><span class="gloss">= and-to-avram hetiv baavurah</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yehi_lo_tzon_u_vaqar_va_chamorim_va_avadim_u_shfachot_va_atonot_u_gemalim, t1)</span><br><span class="gloss">= HOLDS(and-yehi-not-tzon-and-vaqar-and-chamorim-and-avadim-and-shfachot-and-atonot-and-gemalim, t1)</span><br>The list, enumerated exactly [seed order]: flock, herd (baqar Torah debut), he-donkeys, SLAVES (eved token 5 — frozen gen_23 quoted: &#x27;EVED (&quot;slave/servant&quot;) — Torah debut x4 INSIDE THE CURSE... the word that will carry Egypt (180 Torah tokens) is born in the Torah&#x27;s first human curse-speech&#x27; — the curse-born word&#x27;s next token is EGYPT&#x27;S PAYMENT [career landing, prose]), maidservants (shifchah Torah debut — the title Hagar will carry [named-only]), she-donkeys (aton debut), CAMELS (gamal TORAH DEBUT — tokens 2-4 are Rivkah&#x27;s, Gen 24). Seven terms, priced in livestock and persons; the letter passes no comment and neither does the machine.
+</td><td><span class="he">וַיְהִי־לוֹ צֹאן־וּבָקָר וַחֲמֹרִים וַעֲבָדִים וּשְׁפָחֹת וַאֲתֹנֹת וּגְמַלִּים</span> · <i>va-yehi-lo tzon-u-vaqar va-chamorim va-avadim u-shfachot va-atonot u-gemalim</i><br><span class="gloss">= and-yehi-not tzon-and-vaqar and-chamorim and-avadim and-shfachot and-atonot and-gemalim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The wish of 12:13 comes back verb-for-verb with the pronoun turned: it is well with him, for HER sake — and the payment list runs from sheep to camels through human beings.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_12_17 · Gen.12.17 · <span class='expr'>THE_PLAGUE_WITHOUT_A_WORD</span></h3>
+<p><span class="he">וַיְנַגַּע יְהוָה אֶת־פַּרְעֹה נְגָעִים גְּדֹלִים וְאֶת־בֵּיתוֹ עַל־דְּבַר שָׂרַי אֵשֶׁת אַבְרָם</span> · <i>va-yenaga YHWH et-paro negaim gedolim ve-et-beito al-devar saray eshet avram</i> · [EN-AID/JPS] And the LORD plagued Pharaoh and his house with great plagues because of Sarai Abram&#x27;s wife.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וינגע יהוה את־פרעה נגעים גדלים ואת־ביתו</span> · <i>va-yenaga YHWH et-paro negaim gedolim ve-et-beito</i> · YHWH plagued Pharaoh and his house (etnachta arm ends on beito)</div><div class="arm"><b>RIGHT</b><br><span class="he">על־דבר שרי אשת אברם</span> · <i>al-devar saray eshet avram</i> · because of Sarai, wife of ABRAM — the verse ends on his name</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">plague(e8) ∧ Agent(e8, YHWH) ∧ Theme(e8, paro_u_veito)</span><br><span class="gloss">= plague(e8) ∧ Agent(e8, the-LORD) ∧ Theme(e8, paro-and-veito)</span><br>VA-YENAGA — PIEL (&#x27;and He PLAGUED&#x27;), with its own noun as cognate object: NEGAIM GEDOLIM (&#x27;great plagues&#x27;) — NEGA&#x27;S TORAH DEBUT, and the bridge to the frozen law is explicit in the law itself: frozen lev_13&#x27;s meta cites &#x27;nega (Gen 12:17)... referenced — flagged read-before-install&#x27; and its oral queue names &#x27;Bereshit Rabbah 41:2 (the Gen 12:17 nega debut as tzara&#x27;at)&#x27; [quoted; 65 of the noun&#x27;s 67 Torah tokens are lev_13&#x27;s affliction-word: the law&#x27;s word is born on a king&#x27;s house, over a taken wife — cross-unit career arc, prose, nothing pops]. The VERB&#x27;S token 1 is 3:3 — the garden fence (&#x27;neither shall you TOUCH it&#x27;); tokens 3-5 are the wife-danger spans (20:6 &#x27;I did not let you TOUCH her&#x27;, 26:11, 26:29) [career, prose]. THIS IS THE SPAN&#x27;S ONLY DIVINE ACT, AND IT IS WORDLESS [verified: no divine speech verse exists in 12:10-20 — YHWH&#x27;s two speeches (12:1, 12:7) are both behind the frozen wall]. Onkelos: &#x27;He BROUGHT plagues upon&#x27; (ve-aiti... makhtashin) — the touch dodged, the noun rendered with the same Aramaic word the law&#x27;s buffer uses [dual-track].
+</td><td><span class="he">וַיְנַגַּע יְהוָה אֶת־פַּרְעֹה נְגָעִים גְּדֹלִים וְאֶת־בֵּיתוֹ</span> · <i>va-yenaga YHWH et-paro negaim gedolim ve-et-beito</i><br><span class="gloss">= and-yenaga the-LORD paro negaim gedolim and-beito</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(al_devar_saray_eshet_avram, t0)</span><br><span class="gloss">= HOLDS(upon-devar-saray-wife-of-avram, t0)</span><br>The cause-clause: &#x27;because of the MATTER of Sarai, WIFE OF ABRAM&#x27; — davar token 2 (token 1 = 11:1, gen_25&#x27;s &#x27;one words&#x27;); the narration restores in one construct chain everything the scheme deleted: her NAME (the first &#x27;Sarai&#x27; since 12:11 — 12:14-15 called her &#x27;the woman&#x27;) and her TITLE (eshet avram, verse-final on his name). God&#x27;s only deed in the span is indexed to the fact the sister-word denied [letter fact].
+</td><td><span class="he">עַל־דְּבַר שָׂרַי אֵשֶׁת אַבְרָם</span> · <i>al-devar saray eshet avram</i><br><span class="gloss">= upon-devar saray wife-of avram</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">No speech, no verdict, no visit: one piel verb with its own noun doubled, aimed at a house — and a cause-clause that quietly re-marries the sundered pair.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_12_18 · Gen.12.18 · <span class='expr'>THE_KINGS_QUESTIONS_IN_THE_GARDENS_FORM</span></h3>
+<p><span class="he">וַיִּקְרָא פַרְעֹה לְאַבְרָם וַיֹּאמֶר מַה־זֹּאת עָשִׂיתָ לִּי לָמָּה לֹא־הִגַּדְתָּ לִּי כִּי אִשְׁתְּךָ הִוא</span> · <i>va-yiqra faro le-avram va-yomer mah-zot asita li lamah lo-higadta li ki ishtekha hi</i> · [EN-AID/JPS] And Pharaoh called Abram, and said: &#x27;What is this that thou hast done unto me? why didst thou not tell me that she was thy wife?&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויקרא פרעה לאברם ויאמר מה־זאת עשית לי</span> · <i>va-yiqra faro le-avram va-yomer mah-zot asita li</i> · Pharaoh called Abram: what is this you have done to me? (etnachta arm ends on li)</div><div class="arm"><b>RIGHT</b><br><span class="he">למה לא־הגדת לי כי אשתך הוא</span> · <i>lamah lo-higadta li ki ishtekha hi</i> · why did you not tell me she is your wife?</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">say(e9) ∧ Agent(e9, paro) ∧ Goal(e9, avram)</span><br>The king summons and asks THE GARDEN&#x27;S QUESTION: MAH-ZOT ASITA (&#x27;what is this you have done?&#x27;) — the roster [census]: 3:13 God to the woman (mah-zot asit), 4:10 God to Cain (meh asita), 12:18 PHARAOH to Abram — the divine interrogation-form&#x27;s FIRST HUMAN SPEAKER is a pagan king, and its next two tokens are the other endangered-wife kings (20:9 Avimelech, 26:10 Avimelech) [letter fact held as PROSE per seed order — the letter does no more, the machine does no more]. LO-HIGADTA (&#x27;you did not TELL&#x27;) — nagad token 3; frozen gen_23 noted tokens 1-2 are both nakedness-reports (3:11, 9:22): the tell-verb&#x27;s early career is disclosures of what should not need telling [career, prose]. NO ANSWER FROM ABRAM IS RECORDED — to this or any of the three questions [the span&#x27;s second silence; OPEN candidate held].
+</td><td><span class="he">וַיִּקְרָא פַרְעֹה לְאַבְרָם וַיֹּאמֶר מַה־זֹּאת עָשִׂיתָ לִּי</span> · <i>va-yiqra faro le-avram va-yomer mah-zot asita li</i><br><span class="gloss">= and-yiqra faro to-avram and-yomer mah-this asita to-me</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The moral voice of the span belongs to Egypt: the king asks what God asked in the garden, and the man of the call — who scripted everyone&#x27;s lines — has none of his own.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_12_19 · Gen.12.19 · <span class='expr'>THE_CONFESSION_AND_THE_COUNTER_COMMANDS</span></h3>
+<p><span class="he">לָמָה אָמַרְתָּ אֲחֹתִי הִוא וָאֶקַּח אֹתָהּ לִי לְאִשָּׁה וְעַתָּה הִנֵּה אִשְׁתְּךָ קַח וָלֵךְ</span> · <i>lamah amarta achoti hi va-eqach otah li le-ishah ve-atah hinneh ishtekha qach va-lekh</i> · [EN-AID/JPS] Why saidst thou: She is my sister? so that I took her to be my wife; now therefore behold thy wife, take her, and go thy way.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">למה אמרת אחתי הוא ואקח אתה לי לאשה</span> · <i>lamah amarta achoti hi va-eqach otah li le-ishah</i> · why did YOU say &#x27;my sister&#x27; — so I took her (etnachta arm ends on le-ishah)</div><div class="arm"><b>RIGHT</b><br><span class="he">ועתה הנה אשתך קח ולך</span> · <i>ve-atah hinneh ishtekha qach va-lekh</i> · now — behold your wife: TAKE and GO (the verse ends on the go-imperative)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(amarta_achoti_hi, t0) ∧ HOLDS(va_eqach_otah_li_le_ishah, t0)</span><br><span class="gloss">= HOLDS(amarta-achoti-hi, t0) ∧ HOLDS(and-eqach-her-to-me-to-woman, t0)</span><br>Two facts from the king&#x27;s mouth, held as spoken content: (1) AMARTA (&#x27;YOU said — masculine singular&#x27;) achoti hi — the sister-words Abram demanded FROM SARAI at 12:13 return attributed TO ABRAM: the letter never lets her say them — the demand&#x27;s content executed, the demand itself never receipted [the queue&#x27;s honesty; OPEN stands]; (2) VA-EQACH (&#x27;and I TOOK her for my wife&#x27;) — the king CONFESSES the taking 12:15&#x27;s passive concealed: the hidden agent steps forward in his own first person [letter fact; the take-verb&#x27;s tokens 21-23 are this span&#x27;s passive/ confession/imperative triad]. Onkelos: u-devarit (&#x27;I LED her&#x27;) — the person-taking buffer even in confession [dual-track].
+</td><td><span class="he">אָמַרְתָּ אֲחֹתִי הִוא וָאֶקַּח אֹתָהּ לִי לְאִשָּׁה</span> · <i>amarta achoti hi va-eqach otah li le-ishah</i><br><span class="gloss">= amarta achoti hi and-eqach her to-me woman</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(paro, LET(qach(avram, et_ishto)))</span><br><span class="gloss">= DECLARE(paro, LET(qach(avram, his-wife)))</span><br>QACH (&#x27;TAKE!&#x27;) — masculine imperative (TIR-027; gen_13&#x27;s human-demand class again): the king returns the wife with the very verb everyone has used on her, now aimed at her husband as a command. Pushed; NO receipt verse exists in-span [the taking-back is never narrated; flagged].
+</td><td><span class="he">הִנֵּה אִשְׁתְּךָ קַח</span> · <i>hinneh ishtekha qach</i><br><span class="gloss">= behold ishtekha qach</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(paro, LET(lekh(avram)))</span><br>VA-LEKH (&#x27;and GO!&#x27;) — VERSE-FINAL [tree fact]: the go-verb that opened the block at 12:1 (lekh-lekha, YHWH&#x27;s summons) returns as a pagan king&#x27;s expulsion-word, seated on the silluq (verse-end) [letter fact, prose arc across the frozen wall]. Pushed; the going that would answer it is 13:1&#x27;s ascent — OUT OF SPAN, seam not encoded: the demand stands OPEN at the wall [flagged bold: the queue ends three open, all human — the machine follows the letter, not the staging expectation].
+</td><td><span class="he">וָלֵךְ</span> · <i>va-lekh</i><br><span class="gloss">= and-lekh</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
+</table>
+<div class="meta">The king&#x27;s sentence runs confession into command: I took — now you take, and go. The call&#x27;s verb comes back to Abram from a throne, and the letter leaves all three human demands hanging.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_12_20 · Gen.12.20 · <span class='expr'>THE_ESCORTED_EXPULSION</span></h3>
+<p><span class="he">וַיְצַו עָלָיו פַּרְעֹה אֲנָשִׁים וַיְשַׁלְּחוּ אֹתוֹ וְאֶת־אִשְׁתּוֹ וְאֶת־כָּל־אֲשֶׁר־לוֹ</span> · <i>va-yetzav alav paro anashim va-yeshalchu oto ve-et-ishto ve-et-kol-asher-lo</i> · [EN-AID/JPS] And Pharaoh gave men charge concerning him; and they brought him on the way, and his wife, and all that he had.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויצו עליו פרעה אנשים</span> · <i>va-yetzav alav paro anashim</i> · Pharaoh commanded men concerning him (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וישלחו אתו ואת־אשתו ואת־כל־אשר־לו</span> · <i>va-yeshalchu oto ve-et-ishto ve-et-kol-asher-lo</i> · and they sent him off — him, his wife, and all that was his</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">command(e10) ∧ Agent(e10, paro) ∧ Theme(e10, anashim)</span><br>VA-YETZAV — TZAVAH (&#x27;command&#x27;) TOKEN 8, and tokens 1-7 are ALL DIVINE [census]: 2:16 (the first command, the garden), 3:11/3:17 (the trial&#x27;s citations), 6:22/7:5/7:9/7:16 (the ark compliances) — THE COMMAND-VERB&#x27;S FIRST HUMAN SUBJECT IS PHARAOH: the verb of the garden&#x27;s law enters human government in Egypt, ordering an escort [letter fact, held].
+</td><td><span class="he">וַיְצַו עָלָיו פַּרְעֹה אֲנָשִׁים</span> · <i>va-yetzav alav paro anashim</i><br><span class="gloss">= and-yetzav alav paro anashim</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">send_away(e11) ∧ Agent(e11, anashim) ∧ Theme(e11, avram_ve_ishto_ve_khol_asher_lo)</span><br><span class="gloss">= send-away(e11) ∧ Agent(e11, anashim) ∧ Theme(e11, avram-and-his-wife-and-all-which-not)</span><br>VA-YESHALCHU — SHALACH in PIEL, the GARDEN-EXPULSION STEM [census]: piel token 2 was 3:23 (va-yeshalchehu — &#x27;He SENT HIM OUT of the garden&#x27;), tokens 3-7 the ark&#x27;s raven and dove, token 8 HERE: the send-away verb&#x27;s human-scale career rhymes the expulsions — a man sent from a garden eastward, a man sent from Egypt upward, each with his wife, each after a taking [prose arc; the ascent itself is 13:1, out of span]. The demands of 12:19 are NOT popped by this verse: the verbs differ (tzavah/shalach, not qach/lekh) and the agents are Pharaoh&#x27;s men, not Abram [letter-honest; queue ends 3 open]. Onkelos: ve-ALVIU (&#x27;they ESCORTED him&#x27;) — the expulsion softened to accompaniment [dual-track]. &#x27;And ALL THAT WAS HIS&#x27; — the verse-final lo (&#x27;his&#x27;): the gift-list leaves Egypt with him; the letter counts it out the door and says nothing [held].
+</td><td><span class="he">וַיְשַׁלְּחוּ אֹתוֹ וְאֶת־אִשְׁתּוֹ וְאֶת־כָּל־אֲשֶׁר־לוֹ</span> · <i>va-yeshalchu oto ve-et-ishto ve-et-kol-asher-lo</i><br><span class="gloss">= and-yeshalchu it and-his-wife and-all-which-not</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+</table>
+<div class="meta">The unit ends with the command-verb in a king&#x27;s mouth and the garden&#x27;s send-verb at the border: escorted out with wife and wealth, three demands hanging, not one word of Abram&#x27;s — or Sarai&#x27;s, or God&#x27;s — left in the air.</div>
+</div>
+<h2>State machine</h2>
+<div class="meta">The descent (standalone; registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER).</div>
+<table><tr><th>state</th><th>meaning</th></tr>
+<tr><td><b>S_boot</b></td><td>Before 12:10 — all registers empty (standalone unit)</td></tr>
+<tr><td><b>S_descended</b></td><td>After 12:10 — go_down fired (yarad token 3 — gen_25&#x27;s frozen line lands); famine-facts hold; mitzrayim flagged</td></tr>
+<tr><td><b>S_first_speech</b></td><td>After 12:11 — Abram&#x27;s FIRST recorded speech (census-verified); the beauty-address holds</td></tr>
+<tr><td><b>S_forecast</b></td><td>After 12:12 — the kill-me/keep-you-alive forecast holds (no event fires; his words only)</td></tr>
+<tr><td><b>S_requested</b></td><td>After 12:13 — LET(imri(saray, achoti_hi)) pushed (gen_13&#x27;s human class) and OPEN; the benefit-clause holds; no reply exists</td></tr>
+<tr><td><b>S_seen</b></td><td>After 12:14 — the Egyptians&#x27; seeing fires WITHOUT the scripted verdict; &#x27;the woman&#x27; replaces her name; the very-fair fact holds</td></tr>
+<tr><td><b>S_taken</b></td><td>After 12:15 — seen, praised (the hallel hapax), TAKEN (first narrative passive take, agentless); Pharaoh brackets the verse</td></tr>
+<tr><td><b>S_paid</b></td><td>After 12:16 — do_good fires the 12:13 wish&#x27;s own verb (in-span echo, prose); the seven-term gift-list holds</td></tr>
+<tr><td><b>S_plagued</b></td><td>After 12:17 — the span&#x27;s ONLY divine act, wordless; nega debuts (lev_13&#x27;s word); the cause-clause restores name and title</td></tr>
+<tr><td><b>S_interrogated</b></td><td>After 12:18 — the garden&#x27;s question-form in a king&#x27;s mouth; no answer from Abram recorded</td></tr>
+<tr><td><b>S_countermanded</b></td><td>After 12:19 — the confession-facts hold (amarta re-routes the sister-words to Abram); LET(qach) + LET(lekh) pushed and OPEN — the call&#x27;s verb handed back, verse-final</td></tr>
+<tr><td><b>S_expelled</b></td><td>After 12:20 — tzavah&#x27;s first human subject; the garden-expulsion stem sends the family out; QUEUE ENDS 3 OPEN, ALL HUMAN; every other register empty</td></tr>
+</table><table><tr><th>from</th><th>to</th><th>via</th></tr>
+<tr><td>S_boot</td><td>S_descended</td><td>STEP_Gn_12_10</td></tr>
+<tr><td>S_descended</td><td>S_first_speech</td><td>STEP_Gn_12_11</td></tr>
+<tr><td>S_first_speech</td><td>S_forecast</td><td>STEP_Gn_12_12</td></tr>
+<tr><td>S_forecast</td><td>S_requested</td><td>STEP_Gn_12_13</td></tr>
+<tr><td>S_requested</td><td>S_seen</td><td>STEP_Gn_12_14</td></tr>
+<tr><td>S_seen</td><td>S_taken</td><td>STEP_Gn_12_15</td></tr>
+<tr><td>S_taken</td><td>S_paid</td><td>STEP_Gn_12_16</td></tr>
+<tr><td>S_paid</td><td>S_plagued</td><td>STEP_Gn_12_17</td></tr>
+<tr><td>S_plagued</td><td>S_interrogated</td><td>STEP_Gn_12_18</td></tr>
+<tr><td>S_interrogated</td><td>S_countermanded</td><td>STEP_Gn_12_19</td></tr>
+<tr><td>S_countermanded</td><td>S_expelled</td><td>STEP_Gn_12_20</td></tr>
+</table>
+<div class="note"><b>AFTER_S_expelled</b> — TIME: t0 + one mark (t1 — the gift-list&#x27;s standing). WORLD: ZERO installs (no build in Egypt; nothing persists) + 1 presupposed read flagged (mitzrayim). REGISTRY: ZERO writes. EVENTS: 11 narrative (go_down — gen_25&#x27;s frozen yarad line landing; say x2 — Abram&#x27;s FIRST speech and Pharaoh&#x27;s; see x2; praise — the hallel-root&#x27;s only Torah token; take-PASSIVE — agentless, the letter hides the taker; do_good — the 12:13 wish receipted by its own verb, prose; plague — the span&#x27;s ONLY divine act, wordless; command — tzavah&#x27;s first human subject; send_away — the garden-expulsion stem) + 3 declares. SPECS: THREE demands pushed, ZERO popped — the corpus&#x27;s largest all-human open debt: LET(imri(saray, achoti_hi)) — no reply from Sarai exists anywhere (12:19&#x27;s amarta, masculine, re-routes the sister-words to Abram) [OPEN]; LET(qach(avram, et_ishto)) and LET(lekh(avram)) — the king&#x27;s pair, the second the call&#x27;s own verb verse-final; the expulsion verse&#x27;s verbs are tzavah/shalach, not qach/lekh, and the ascent is 13:1, across the seam [OPEN x2]. Standing facts (8): the heavy famine (raav debut; kaved&#x27;s all-famine early career), the beauty-address (na debut — the corpus&#x27;s first please, inside a scheme), the kill-me/keep-you-alive forecast (harag token 6 — first post-Cain), the three-sake benefit-clause, the narrator&#x27;s very-fair, the seven-term payment (eved token 5 — gen_23&#x27;s curse-born word as Egyptian currency; gamal debut), the al-devar-Saray cause (name and title restored where the scheme erased them), the amarta attribution + the king&#x27;s own-mouth taking. TESTS: EMPTY (the plague judges no one in words). LEDGER: EMPTY. FLAGS (1): read_before_install x1. THE SPEECH-MAP IS THE STATE: God acts once and never speaks; Sarai is spoken about, commanded, praised, taken, restored — and never speaks; Abram speaks once (his corpus-first) and never answers the king&#x27;s three questions; the only moral interrogation is pagan. The machine ends expelled, enriched, and owing three human debts the letter never collects.</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>The descent for famine: after STEP_Gn_12_10</td><td>All registers empty (standalone unit). (go_down(e1) fired — gen_25&#x27;s frozen yarad line lands; prose.)</td><td>Facts ki-khaved-ha-raav HOLD; flags mitzrayim as read-before-install; SPECS empty.<br><span class="gloss">= Facts when-khaved-the-raav HOLD; flags mitzrayim as read-before-install; SPECS empty.</span></td><td><span class="he">וַיֵּרֶד אַבְרָם מִצְרַיְמָה</span> · <i>va-yered avram mitzraymah</i><br><span class="gloss">= and-yered avram mitzraymah</span></td></tr>
+<tr><td><b>S2</b></td><td>The first speech: after STEP_Gn_12_11</td><td>S1 state. (say(e2) — Abram&#x27;s first recorded speech, census-verified; prose.)</td><td>Facts hinneh-na-yadati HOLD; SPECS empty.<br><span class="gloss">= Facts behold-na-yadati HOLD; SPECS empty.</span></td><td><span class="he">הִנֵּה־נָא יָדַעְתִּי</span> · <i>hinneh-na yadati</i><br><span class="gloss">= behold-na yadati</span></td></tr>
+<tr><td><b>S3</b></td><td>The request pushed, no reply exists: after STEP_Gn_12_13</td><td>S2 state plus the forecast (12:12 — Facts only, no event).</td><td>LET(imri(saray, achoti_hi)) pushed and OPEN; Facts lemaan-yitav-li HOLD; Facts ve-hargu-oti-ve-otakh-yechayu HOLD.<br><span class="gloss">= LET(imri(saray, achoti-hi)) pushed and OPEN; Facts lemaan-yitav-to-me HOLD; Facts and-hargu-me-and-otakh-yechayu HOLD.</span></td><td><span class="he">אִמְרִי־נָא אֲחֹתִי אָתְּ</span> · <i>imri-na achoti at</i><br><span class="gloss">= imri-na achoti at</span></td></tr>
+<tr><td><b>S4</b></td><td>The seeing without the script: after STEP_Gn_12_14</td><td>S3 state. (see(e3) fired; the scripted verdict-speech never occurs; prose.)</td><td>Facts ki-yafah-hi-meod HOLD; LET(imri(saray, achoti_hi)) pushed and OPEN.<br><span class="gloss">= Facts when-yafah-hi-very HOLD; LET(imri(saray, achoti-hi)) pushed and OPEN.</span></td><td><span class="he">כִּי־יָפָה הִוא מְאֹד</span> · <i>ki-yafah hi meod</i><br><span class="gloss">= when-yafah hi very</span></td></tr>
+<tr><td><b>S5</b></td><td>The payment for her sake: after STEP_Gn_12_16</td><td>S4 state plus 12:15 (seen, praised — the hallel hapax, TAKEN passive-agentless; prose). (do_good(e7) — the 12:13 wish receipted by its own verb; prose echo.)</td><td>Facts va-yehi-lo-tzon HOLD; no test, no name.<br><span class="gloss">= Facts and-yehi-not-tzon HOLD; no test, no name.</span></td><td><span class="he">וּלְאַבְרָם הֵיטִיב בַּעֲבוּרָהּ</span> · <i>u-le-avram hetiv baavurah</i><br><span class="gloss">= and-to-avram hetiv baavurah</span></td></tr>
+<tr><td><b>S6</b></td><td>The wordless plague: after STEP_Gn_12_17</td><td>S5 state. (plague(e8) — the span&#x27;s only divine act; no divine speech exists in-span; prose.)</td><td>Facts al-devar-saray HOLD; no test, no name.<br><span class="gloss">= Facts upon-devar-saray HOLD; no test, no name.</span></td><td><span class="he">עַל־דְּבַר שָׂרַי אֵשֶׁת אַבְרָם</span> · <i>al-devar saray eshet avram</i><br><span class="gloss">= upon-devar saray wife-of avram</span></td></tr>
+<tr><td><b>S7</b></td><td>The king&#x27;s demands pushed: after STEP_Gn_12_19</td><td>S6 state plus 12:18 (the garden&#x27;s question-form in a king&#x27;s mouth; no answer recorded; prose).</td><td>LET(qach(avram, et_ishto)) pushed and OPEN; LET(lekh(avram)) pushed and OPEN; Facts amarta-achoti-hi HOLD.<br><span class="gloss">= LET(qach(avram, his-wife)) pushed and OPEN; LET(lekh(avram)) pushed and OPEN; Facts amarta-achoti-hi HOLD.</span></td><td><span class="he">קַח וָלֵךְ</span> · <i>qach va-lekh</i><br><span class="gloss">= qach and-lekh</span></td></tr>
+<tr><td><b>S8</b></td><td>Expelled with three debts open: after STEP_Gn_12_20</td><td>S7 state. (command(e10) — tzavah&#x27;s first human subject; send_away(e11) — the garden-expulsion stem; neither pops anything: the verbs differ and the ascent is out of span.)</td><td>LET(imri(saray, achoti_hi)) pushed and OPEN; LET(qach(avram, et_ishto)) pushed and OPEN; LET(lekh(avram)) pushed and OPEN; no test, no name; LEDGER stays EMPTY (open transaction).<br><span class="gloss">= LET(imri(saray, achoti-hi)) pushed and OPEN; LET(qach(avram, his-wife)) pushed and OPEN; LET(lekh(avram)) pushed and OPEN; no test, no name; LEDGER stays EMPTY (open transaction).</span></td><td><span class="he">וַיְשַׁלְּחוּ אֹתוֹ וְאֶת־אִשְׁתּוֹ</span> · <i>va-yeshalchu oto ve-et-ishto</i><br><span class="gloss">= and-yeshalchu it and-his-wife</span></td></tr>
+<tr><td><b>S9_negative</b></td><td>Negative: the LET? contract guard</td><td>A synthetic LET? demand (the machine&#x27;s own contract self-test).</td><td>LET? never auto-upgrades: resolution without citation must REFUSE; with a per-unit citation it may resolve — entries pop demands; nothing but citation moves a mood.</td><td><span class="he">אֲחֹתִי</span> · <i>achoti</i><br><span class="gloss">= achoti</span></td></tr>
+<tr><td><b>S10_negative</b></td><td>Negative: flags never block</td><td>A synthetic commit with TESTS empty (the machine&#x27;s own contract self-test).</td><td>Cycle close with TESTS empty must be FLAGGED, never blocked.<br><span class="gloss">= Cycle close with TESTS empty must in FLAGGED, never blocked.</span></td><td></td></tr>
+</table>
+<h2>Exports (reusable patterns)</h2><table><tr><th>id</th><th>content</th></tr>
+<tr><td>EXPORT_first_speech_and_the_silences</td><td><span class="he">הִנֵּה־נָא יָדַעְתִּי … אִמְרִי־נָא אֲחֹתִי אָתְּ</span> · <i>hinneh-na yadati … imri-na achoti at</i> · ABRAM&#x27;S FIRST RECORDED SPEECH (census-verified against the full say-roster since 11:26): the man who never answers God in words opens his corpus-voice at a border, on fear and his wife&#x27;s beauty — NA (&#x27;please&#x27;) debuts x2 inside the scheme; the demanded words (achoti at, &#x27;you are my sister&#x27;) ride gen_13&#x27;s human-demand class (&#x27;the queue is bookkeeping, not endorsement&#x27; — quoted) and NO REPLY FROM SARAI EXISTS anywhere in the corpus — 12:19&#x27;s amarta (masculine &#x27;YOU said&#x27;) re-routes the sister-words to the demander [OPEN]; the double silence completes at 12:18-19: Abram never answers the king&#x27;s three questions; Onkelos INSERTS her instrument (&#x27;preserved BY YOUR WORDS&#x27; — be-fitgamaykhi): the buffer supplies the reply the letter withholds [find-class, dual-track]</td></tr>
+<tr><td>EXPORT_three_human_demands_open</td><td><span class="he">אִמְרִי־נָא … קַח וָלֵךְ</span> · <i>imri-na … qach va-lekh</i> · the queue&#x27;s inversion of gen_27: there God commanded twice and one demand still stands; here THREE demands push and ALL are human (a husband&#x27;s imri, a king&#x27;s qach + va-lekh) and ALL stand open — zero RESULT ops in the unit [the letter writes no receipt: the sister-words execute without her voice; the taking-back and the going are never narrated in-span — the ascent is 13:1, across the seam]; VA-LEKH is VERSE-FINAL [tree fact]: the go-verb of 12:1&#x27;s summons returns as a pagan expulsion-word on the silluq throne; and in Aramaic the echo is EXACT — Onkelos renders Pharaoh&#x27;s va-lekh as IZEL, the same imperative it gave YHWH&#x27;s lekh-lekha [dual-track]; tzavah (&#x27;command&#x27;) tokens 1-7 all divine, TOKEN 8 = PHARAOH — the command-verb&#x27;s first human subject is a king ordering an escort</td></tr>
+<tr><td>EXPORT_passive_take_and_the_plague</td><td><span class="he">וַתֻּקַּח הָאִשָּׁה … וַיְנַגַּע יְהוָה</span> · <i>va-tuqach ha-ishah … va-yenaga YHWH</i> · the take-verb&#x27;s triad on one woman: PASSIVE (va-tuqach — first NARRATIVE passive take, qal-passive wayyiqtol, NO agent written; the form-class&#x27;s speech-perfect ancestor is 2:23&#x27;s luqocha, the woman &#x27;TAKEN from man&#x27;), CONFESSION (va-eqach — the hidden agent steps forward in first person), IMPERATIVE (qach — the verb handed back as command); around it the letter strips and restores her: &#x27;the woman&#x27; through 12:14-15, name AND title (saray eshet avram) returned inside God&#x27;s cause-clause at 12:17 — the span&#x27;s ONLY divine act, WORDLESS (no divine speech verse exists; the moral speech is Pharaoh&#x27;s mah-zot asita — the garden&#x27;s question-form [3:13, 4:10] in its first human mouth, and its next tokens are the other wife-sister kings 20:9/26:10); NEGA debuts as the plague on Pharaoh&#x27;s house — frozen lev_13&#x27;s own import (&#x27;nega (Gen 12:17)&#x27; — quoted): the affliction-law&#x27;s word is born in an abduction case</td></tr>
+<tr><td>EXPORT_egypt_pattern_field</td><td><span class="he">וַיֵּרֶד … וַיְשַׁלְּחוּ … וַיַּעַל</span> · <i>va-yered … va-yeshalchu … (13:1) va-yaal</i> · the descent-field: yarad token 3 (gen_25&#x27;s frozen career line quoted and LANDED — two divine descents, then Abram&#x27;s); raav (&#x27;famine&#x27;) born here, cited as &#x27;the FIRST&#x27; by 26:1, crowding Yosef&#x27;s Egypt after; kaved (&#x27;heavy&#x27;) born on the famine, its first five tokens all famines; gur (&#x27;sojourn&#x27;) born on the way down; the payment enriches through the eved-word gen_23 filed as curse-born (&#x27;the word that will carry Egypt... born in the Torah&#x27;s first human curse-speech&#x27; — quoted, token 5 = Egyptian payment); shalach-piel token 8 sends the family out on the GARDEN-EXPULSION stem (3:23 — same verb, same stem: expelled from a garden after a taking, expelled from Egypt after a taking); the va-yered/va-yaal (12:10/13:1) inclusio frames the unit, ascent out of span; the whole descend-plague-despoil-expel sequence is the chain&#x27;s Egypt-pattern file (maaseh-avot [&#x27;deeds of the fathers&#x27;]) — NAMED-ONLY, prose: the machine records eleven events and no typology</td></tr>
+</table>
+<h2>Oral notes (named, tiered, dual-track — never merged)</h2>
+<div class="note"><span class="badge tier-o">observation</span> <b>Bereshit Rabbah 40-41 (the span; 41:2 = the nega-as-tzaraat reading frozen lev_13 already queues); Rashi at 12:11, 12:13, 12:17; Ramban at 12:10 (the chet gadol [&#x27;great sin&#x27;] dissent and the exile-pattern reading); the ten-trials rosters — gen_28 Tier-A queue</b><br><span class="he">וַיְנַגַּע יְהוָה</span> · <i>(queue — named only)</i> · Named, not read. The cache middot scan is the MAIN LOOP&#x27;S gate and is not claimed by this draft [flagged]. Predicted classes: the descent-verdict dispute (Ramban&#x27;s chet gadol vs the trial-roster reading — a JUDGMENT-OF-PATRIARCH class); the nega-as-tzaraat identification (lev_13&#x27;s queue already holds BR 41:2 — a DISEASE-IDENTIFICATION class); the Egypt-pattern typology (maaseh-avot class — descent/plague/despoil/exodus); the Sarai-silence and Yiska threads (VOICE-SUPPLY class — and here the buffer itself supplies, see Tier-A).
+<br><i>Queue entry — no claim made beyond the naming.</i></div>
+<div class="note"><span class="badge tier-v">verified</span> <b>Onkelos Genesis 12:10-20 — read Tier-A at derive time (11 sequential fetches, Data/FETCHLOG.md 2026-08-03)</b><br><span class="he">וְתִתְקַיֵּם נַפְשִׁי בְּפִתְגָּמָיְכִי</span> · <i>ve-titqayam nafshi be-fitgamaykhi</i> · The span&#x27;s translation witness — headline: THE BUFFER GIVES SARAI THE WORDS THE LETTER WITHHOLDS: 12:13 gains an instrument — &#x27;that my soul may be PRESERVED BY YOUR WORDS&#x27; (be-fitgamaykhi): in the Hebrew her speech is demanded and never delivered; in the Aramaic her words are already the saving cause [find-class; dual-track, flagged]. The person-taking buffer holds through ALL THREE take-forms: va-tuqach -&gt; ve-idabbarat (&#x27;she was LED&#x27;), va-eqach -&gt; u-devarit (&#x27;I LED her&#x27;), qach -&gt; devar (&#x27;LEAD [her]&#x27;) — the lead-for-take policy gen_26 found at 11:31, now passive, confessional, and imperative. VA-LEKH -&gt; IZEL: Pharaoh&#x27;s go-word is the same Aramaic imperative Onkelos gave 12:1&#x27;s lekh-lekha (izel lakh) — the letter&#x27;s frozen-wall echo survives translation exactly. The expulsion SOFTENED: va-yeshalchu -&gt; ve-ALVIU (&#x27;they ESCORTED/accompanied him&#x27;) — the garden-stem&#x27;s rhyme is buffered away into an honor guard. The plague DE-TACTILIZED: va-yenaga -&gt; ve-aiti (&#x27;He BROUGHT plagues upon&#x27;), negaim -&gt; makhtashin — the same Aramaic noun the law&#x27;s buffer uses for nega [cross-buffer consistency]. NA (&#x27;please&#x27;) -&gt; khe-an (&#x27;now&#x27;) both times — the corpus&#x27;s first please vanishes in translation. raav -&gt; kafna; kaved -&gt; takif (&#x27;severe&#x27;); la-gur -&gt; le-itotava (&#x27;to dwell&#x27;).
+<br><i>Read from Data/sefaria_texts/ (local; FETCHLOG is provenance). Dual-track; not merged.</i></div>
+<h2>Binary trees (ta'amim v3, glue bricks)</h2>
+<h3>Gen.12.10 · parser unique · 12 words</h3>
+<div class="meta"><span class="he">ויהי רעב בארץ וירד אברם מצרימה לגור שם כי־כבד הרעב בארץ</span> · <i>va-yehi raav ba-aretz va-yered avram mitzrayma-ה la-gur sham ki-khaved ha-raav ba-aretz</i> · Famine in the land; Abram went down to Egypt to sojourn — the famine was heavy. [EN-AID]</div>
+<pre>PHRASE (binary 12w) וַ/יְהִ֥י רָעָ֖ב בָּ/אָ֑רֶץ וַ/יֵּ֨רֶד אַבְרָ֤ם…
+├── PHRASE (binary 3w) וַ/יְהִ֥י רָעָ֖ב בָּ/אָ֑רֶץ
+│   ├── [0-1] GLUE וַ/יְהִ֥י רָעָ֖ב (tifcha, rank=2)
+│   └── [2] בָּ/אָ֑רֶץ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 9w) וַ/יֵּ֨רֶד אַבְרָ֤ם מִצְרַ֨יְמָ/ה֙ לָ/ג֣וּר שָׁ…
+    ├── PHRASE (binary 5w) וַ/יֵּ֨רֶד אַבְרָ֤ם מִצְרַ֨יְמָ/ה֙ לָ/ג֣וּר שָׁ…
+    │   ├── [3-5] GLUE וַ/יֵּ֨רֶד אַבְרָ֤ם מִצְרַ֨יְמָ/ה֙ (pashta, rank=3)
+    │   └── [6-7] GLUE לָ/ג֣וּר שָׁ֔ם (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) כִּֽי כָבֵ֥ד הָ/רָעָ֖ב בָּ/אָֽרֶץ
+        ├── [8-10] GLUE כִּֽי כָבֵ֥ד הָ/רָעָ֖ב (tifcha, rank=2)
+        └── [11] בָּ/אָֽרֶץ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.12.11 · parser unique · 17 words</h3>
+<div class="meta"><span class="he">ויהי כאשר הקריב לבוא מצרימה ויאמר אל־שרי אשתו הנה־נא ידעתי כי אשה יפת־מראה את</span> · <i>va-yehi ka-asher hiqriv la-vo mitzrayma-ה va-yomer el-saray isht-o hine-na yadati ki isha yefat-mare et</i> · Nearing Egypt he said to Sarai: behold, I know you are beautiful. [EN-AID]</div>
+<pre>PHRASE (binary 17w) וַ/יְהִ֕י כַּ/אֲשֶׁ֥ר הִקְרִ֖יב לָ/ב֣וֹא מִצְרָ…
+├── PHRASE (binary 5w) וַ/יְהִ֕י כַּ/אֲשֶׁ֥ר הִקְרִ֖יב לָ/ב֣וֹא מִצְרָ…
+│   ├── [0] וַ/יְהִ֕י (zaqef gadol, rank=2)
+│   └── PHRASE (binary 4w) כַּ/אֲשֶׁ֥ר הִקְרִ֖יב לָ/ב֣וֹא מִצְרָ֑יְמָ/ה
+│       ├── [1-2] GLUE כַּ/אֲשֶׁ֥ר הִקְרִ֖יב (tifcha, rank=2)
+│       └── [3-4] GLUE לָ/ב֣וֹא מִצְרָ֑יְמָ/ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 12w) וַ/יֹּ֨אמֶר֙ אֶל שָׂרַ֣י אִשְׁתּ֔/וֹ הִנֵּה נָ֣…
+    ├── PHRASE (binary 4w) וַ/יֹּ֨אמֶר֙ אֶל שָׂרַ֣י אִשְׁתּ֔/וֹ
+    │   ├── [5] וַ/יֹּ֨אמֶר֙ (pashta, rank=3)
+    │   └── [6-8] GLUE אֶל שָׂרַ֣י אִשְׁתּ֔/וֹ (zaqef qatan, rank=2)
+    └── PHRASE (binary 8w) הִנֵּה נָ֣א יָדַ֔עְתִּי כִּ֛י אִשָּׁ֥ה יְפַת מַ…
+        ├── [9-11] GLUE הִנֵּה נָ֣א יָדַ֔עְתִּי (zaqef qatan, rank=2)
+        └── PHRASE (binary 5w) כִּ֛י אִשָּׁ֥ה יְפַת מַרְאֶ֖ה אָֽתְּ
+            ├── PHRASE (binary 4w) כִּ֛י אִשָּׁ֥ה יְפַת מַרְאֶ֖ה
+            │   ├── [12] כִּ֛י (tevir, rank=3)
+            │   └── [13-15] GLUE אִשָּׁ֥ה יְפַת מַרְאֶ֖ה (tifcha, rank=2)
+            └── [16] אָֽתְּ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.12.12 · parser unique · 12 words</h3>
+<div class="meta"><span class="he">והיה כי־יראו אתך המצרים ואמרו אשתו זאת והרגו אתי ואתך יחיו</span> · <i>ve-haya ki-yiru et-khe ha-mitzrim ve-amru isht-o zot ve-hargu et-y ve-et-khe yechayu</i> · The Egyptians will see, will say &#x27;his wife&#x27; — kill me, keep you alive. [EN-AID]</div>
+<pre>PHRASE (binary 12w) וְ/הָיָ֗ה כִּֽי יִרְא֤וּ אֹתָ/ךְ֙ הַ/מִּצְרִ֔ים…
+├── PHRASE (binary 8w) וְ/הָיָ֗ה כִּֽי יִרְא֤וּ אֹתָ/ךְ֙ הַ/מִּצְרִ֔ים…
+│   ├── PHRASE (binary 5w) וְ/הָיָ֗ה כִּֽי יִרְא֤וּ אֹתָ/ךְ֙ הַ/מִּצְרִ֔ים
+│   │   ├── [0] וְ/הָיָ֗ה (revia, rank=3)
+│   │   └── PHRASE (binary 4w) כִּֽי יִרְא֤וּ אֹתָ/ךְ֙ הַ/מִּצְרִ֔ים
+│   │       ├── [1-3] GLUE כִּֽי יִרְא֤וּ אֹתָ/ךְ֙ (pashta, rank=3)
+│   │       └── [4] הַ/מִּצְרִ֔ים (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) וְ/אָמְר֖וּ אִשְׁתּ֣/וֹ זֹ֑את
+│       ├── [5] וְ/אָמְר֖וּ (tifcha, rank=2)
+│       └── [6-7] GLUE אִשְׁתּ֣/וֹ זֹ֑את (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וְ/הָרְג֥וּ אֹתִ֖/י וְ/אֹתָ֥/ךְ יְחַיּֽוּ
+    ├── [8-9] GLUE וְ/הָרְג֥וּ אֹתִ֖/י (tifcha, rank=2)
+    └── [10-11] GLUE וְ/אֹתָ֥/ךְ יְחַיּֽוּ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.12.13 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">אמרי־נא אחתי את למען ייטב־לי בעבורך וחיתה נפשי בגללך</span> · <i>imri-na achoti-y et lemaan yitav-li-y va-avure-khe ve-chayta nafshi-y bi-gelale-khe</i> · Say you are my sister, that it be well with me for your sake. [EN-AID]</div>
+<pre>PHRASE (binary 11w) אִמְרִי נָ֖א אֲחֹ֣תִ/י אָ֑תְּ לְמַ֨עַן֙ יִֽיטַב…
+├── PHRASE (binary 4w) אִמְרִי נָ֖א אֲחֹ֣תִ/י אָ֑תְּ
+│   ├── [0-1] GLUE אִמְרִי נָ֖א (tifcha, rank=2)
+│   └── [2-3] GLUE אֲחֹ֣תִ/י אָ֑תְּ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) לְמַ֨עַן֙ יִֽיטַב לִ֣/י בַ/עֲבוּרֵ֔/ךְ וְ/חָיְת…
+    ├── PHRASE (binary 4w) לְמַ֨עַן֙ יִֽיטַב לִ֣/י בַ/עֲבוּרֵ֔/ךְ
+    │   ├── [4] לְמַ֨עַן֙ (pashta, rank=3)
+    │   └── [5-7] GLUE יִֽיטַב לִ֣/י בַ/עֲבוּרֵ֔/ךְ (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) וְ/חָיְתָ֥ה נַפְשִׁ֖/י בִּ/גְלָלֵֽ/ךְ
+        ├── [8-9] GLUE וְ/חָיְתָ֥ה נַפְשִׁ֖/י (tifcha, rank=2)
+        └── [10] בִּ/גְלָלֵֽ/ךְ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.12.14 · parser unique · 12 words</h3>
+<div class="meta"><span class="he">ויהי כבוא אברם מצרימה ויראו המצרים את־האשה כי־יפה הוא מאד</span> · <i>va-yehi ke-vo avram mitzrayma-ה va-yiru ha-mitzrim et-ha-isha ki-yafa hiv meod</i> · Abram entered; the Egyptians saw the woman — very beautiful. [EN-AID]</div>
+<pre>PHRASE (binary 12w) וַ/יְהִ֕י כְּ/ב֥וֹא אַבְרָ֖ם מִצְרָ֑יְמָ/ה וַ/י…
+├── PHRASE (binary 4w) וַ/יְהִ֕י כְּ/ב֥וֹא אַבְרָ֖ם מִצְרָ֑יְמָ/ה
+│   ├── [0] וַ/יְהִ֕י (zaqef gadol, rank=2)
+│   └── PHRASE (binary 3w) כְּ/ב֥וֹא אַבְרָ֖ם מִצְרָ֑יְמָ/ה
+│       ├── [1-2] GLUE כְּ/ב֥וֹא אַבְרָ֖ם (tifcha, rank=2)
+│       └── [3] מִצְרָ֑יְמָ/ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) וַ/יִּרְא֤וּ הַ/מִּצְרִים֙ אֶת הָ֣/אִשָּׁ֔ה כִּ…
+    ├── PHRASE (binary 4w) וַ/יִּרְא֤וּ הַ/מִּצְרִים֙ אֶת הָ֣/אִשָּׁ֔ה
+    │   ├── [4-5] GLUE וַ/יִּרְא֤וּ הַ/מִּצְרִים֙ (pashta, rank=3)
+    │   └── [6-7] GLUE אֶת הָ֣/אִשָּׁ֔ה (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) כִּֽי יָפָ֥ה הִ֖וא מְאֹֽד
+        ├── [8-10] GLUE כִּֽי יָפָ֥ה הִ֖וא (tifcha, rank=2)
+        └── [11] מְאֹֽד (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.12.15 · parser unique · 12 words</h3>
+<div class="meta"><span class="he">ויראו אתה שרי פרעה ויהללו אתה אל־פרעה ותקח האשה בית פרעה</span> · <i>va-yiru et-ה sare faro va-yehallu et-ה el-paro va-tuqach ha-isha bet paro</i> · Pharaoh&#x27;s officers saw, praised her; the woman was taken to Pharaoh&#x27;s house. [EN-AID]</div>
+<pre>PHRASE (binary 12w) וַ/יִּרְא֤וּ אֹתָ/הּ֙ שָׂרֵ֣י פַרְעֹ֔ה וַ/יְהַֽ…
+├── PHRASE (binary 8w) וַ/יִּרְא֤וּ אֹתָ/הּ֙ שָׂרֵ֣י פַרְעֹ֔ה וַ/יְהַֽ…
+│   ├── PHRASE (binary 4w) וַ/יִּרְא֤וּ אֹתָ/הּ֙ שָׂרֵ֣י פַרְעֹ֔ה
+│   │   ├── [0-1] GLUE וַ/יִּרְא֤וּ אֹתָ/הּ֙ (pashta, rank=3)
+│   │   └── [2-3] GLUE שָׂרֵ֣י פַרְעֹ֔ה (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) וַ/יְהַֽלְל֥וּ אֹתָ֖/הּ אֶל פַּרְעֹ֑ה
+│       ├── [4-5] GLUE וַ/יְהַֽלְל֥וּ אֹתָ֖/הּ (tifcha, rank=2)
+│       └── [6-7] GLUE אֶל פַּרְעֹ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וַ/תֻּקַּ֥ח הָ/אִשָּׁ֖ה בֵּ֥ית פַּרְעֹֽה
+    ├── [8-9] GLUE וַ/תֻּקַּ֥ח הָ/אִשָּׁ֖ה (tifcha, rank=2)
+    └── [10-11] GLUE בֵּ֥ית פַּרְעֹֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.12.16 · parser unique · 12 words</h3>
+<div class="meta"><span class="he">ולאברם היטיב בעבורה ויהי־לו צאן־ובקר וחמרים ועבדים ושפחת ואתנת וגמלים</span> · <i>u-le-avram hetiv ba-avura-ה va-yehi-l-o tzon-u-vaqar va-chamorim va-avadim u-shefachot va-atonot u-gemalim</i> · He did well to Abram for her sake: flocks, herds, donkeys, slaves, camels. [EN-AID]</div>
+<pre>PHRASE (binary 12w) וּ/לְ/אַבְרָ֥ם הֵיטִ֖יב בַּ/עֲבוּרָ֑/הּ וַֽ/יְה…
+├── PHRASE (binary 3w) וּ/לְ/אַבְרָ֥ם הֵיטִ֖יב בַּ/עֲבוּרָ֑/הּ
+│   ├── [0-1] GLUE וּ/לְ/אַבְרָ֥ם הֵיטִ֖יב (tifcha, rank=2)
+│   └── [2] בַּ/עֲבוּרָ֑/הּ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 9w) וַֽ/יְהִי ל֤/וֹ צֹאן וּ/בָקָר֙ וַ/חֲמֹרִ֔ים וַ/…
+    ├── PHRASE (binary 5w) וַֽ/יְהִי ל֤/וֹ צֹאן וּ/בָקָר֙ וַ/חֲמֹרִ֔ים
+    │   ├── [3-6] GLUE וַֽ/יְהִי ל֤/וֹ צֹאן וּ/בָקָר֙ (pashta, rank=3)
+    │   └── [7] וַ/חֲמֹרִ֔ים (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) וַ/עֲבָדִים֙ וּ/שְׁפָחֹ֔ת וַ/אֲתֹנֹ֖ת וּ/גְמַלּ…
+        ├── PHRASE (binary 2w) וַ/עֲבָדִים֙ וּ/שְׁפָחֹ֔ת
+        │   ├── [8] וַ/עֲבָדִים֙ (pashta, rank=3)
+        │   └── [9] וּ/שְׁפָחֹ֔ת (zaqef qatan, rank=2)
+        └── PHRASE (binary 2w) וַ/אֲתֹנֹ֖ת וּ/גְמַלִּֽים
+            ├── [10] וַ/אֲתֹנֹ֖ת (tifcha, rank=2)
+            └── [11] וּ/גְמַלִּֽים (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.12.17 · parser unique · 13 words</h3>
+<div class="meta"><span class="he">וינגע יהוה את־פרעה נגעים גדלים ואת־ביתו על־דבר שרי אשת אברם</span> · <i>va-yenaga YHWH et-paro negaim gedolim ve-et-bet-o al-devar saray eshet avram</i> · YHWH plagued Pharaoh and his house — because of Sarai, Abram&#x27;s wife. [EN-AID]</div>
+<pre>PHRASE (binary 13w) וַ/יְנַגַּ֨ע יְהוָ֧ה אֶת פַּרְעֹ֛ה נְגָעִ֥ים גּ…
+├── PHRASE (binary 8w) וַ/יְנַגַּ֨ע יְהוָ֧ה אֶת פַּרְעֹ֛ה נְגָעִ֥ים גּ…
+│   ├── PHRASE (binary 6w) וַ/יְנַגַּ֨ע יְהוָ֧ה אֶת פַּרְעֹ֛ה נְגָעִ֥ים גּ…
+│   │   ├── [0-3] GLUE וַ/יְנַגַּ֨ע יְהוָ֧ה אֶת פַּרְעֹ֛ה (tevir, rank=3)
+│   │   └── [4-5] GLUE נְגָעִ֥ים גְּדֹלִ֖ים (tifcha, rank=2)
+│   └── [6-7] GLUE וְ/אֶת בֵּית֑/וֹ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) עַל דְּבַ֥ר שָׂרַ֖י אֵ֥שֶׁת אַבְרָֽם
+    ├── [8-10] GLUE עַל דְּבַ֥ר שָׂרַ֖י (tifcha, rank=2)
+    └── [11-12] GLUE אֵ֥שֶׁת אַבְרָֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.12.18 · parser unique · 15 words</h3>
+<div class="meta"><span class="he">ויקרא פרעה לאברם ויאמר מה־זאת עשית לי למה לא־הגדת לי כי אשתך הוא</span> · <i>va-yiqra faro le-avram va-yomer ma-zot asita li-y la-ma lo-higadta li-y ki isht-kha hiv</i> · Pharaoh called Abram: what is this you have done? why not tell me? [EN-AID]</div>
+<pre>PHRASE (binary 15w) וַ/יִּקְרָ֤א פַרְעֹה֙ לְ/אַבְרָ֔ם וַ/יֹּ֕אמֶר מ…
+├── PHRASE (binary 8w) וַ/יִּקְרָ֤א פַרְעֹה֙ לְ/אַבְרָ֔ם וַ/יֹּ֕אמֶר מ…
+│   ├── PHRASE (binary 3w) וַ/יִּקְרָ֤א פַרְעֹה֙ לְ/אַבְרָ֔ם
+│   │   ├── [0-1] GLUE וַ/יִּקְרָ֤א פַרְעֹה֙ (pashta, rank=3)
+│   │   └── [2] לְ/אַבְרָ֔ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) וַ/יֹּ֕אמֶר מַה זֹּ֖את עָשִׂ֣יתָ לִּ֑/י
+│       ├── [3] וַ/יֹּ֕אמֶר (zaqef gadol, rank=2)
+│       └── PHRASE (binary 4w) מַה זֹּ֖את עָשִׂ֣יתָ לִּ֑/י
+│           ├── [4-5] GLUE מַה זֹּ֖את (tifcha, rank=2)
+│           └── [6-7] GLUE עָשִׂ֣יתָ לִּ֑/י (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) לָ֚/מָּה לֹא הִגַּ֣דְתָּ לִּ֔/י כִּ֥י אִשְׁתְּ/…
+    ├── PHRASE (binary 4w) לָ֚/מָּה לֹא הִגַּ֣דְתָּ לִּ֔/י
+    │   ├── [8] לָ֚/מָּה (yetiv, rank=3)
+    │   └── [9-11] GLUE לֹא הִגַּ֣דְתָּ לִּ֔/י (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) כִּ֥י אִשְׁתְּ/ךָ֖ הִֽוא
+        ├── [12-13] GLUE כִּ֥י אִשְׁתְּ/ךָ֖ (tifcha, rank=2)
+        └── [14] הִֽוא (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.12.19 · parser unique · 13 words</h3>
+<div class="meta"><span class="he">למה אמרת אחתי הוא ואקח אתה לי לאשה ועתה הנה אשתך קח ולך</span> · <i>la-ma amarta achoti-y hiv va-eqach et-ה li-y le-isha ve-ata hine isht-kha qach va-lekh</i> · Why say &#x27;my sister&#x27;? I took her! Now — your wife: take and go. [EN-AID]</div>
+<pre>PHRASE (binary 13w) לָ/מָ֤ה אָמַ֨רְתָּ֙ אֲחֹ֣תִ/י הִ֔וא וָ/אֶקַּ֥ח …
+├── PHRASE (binary 8w) לָ/מָ֤ה אָמַ֨רְתָּ֙ אֲחֹ֣תִ/י הִ֔וא וָ/אֶקַּ֥ח …
+│   ├── PHRASE (binary 4w) לָ/מָ֤ה אָמַ֨רְתָּ֙ אֲחֹ֣תִ/י הִ֔וא
+│   │   ├── [0-1] GLUE לָ/מָ֤ה אָמַ֨רְתָּ֙ (pashta, rank=3)
+│   │   └── [2-3] GLUE אֲחֹ֣תִ/י הִ֔וא (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) וָ/אֶקַּ֥ח אֹתָ֛/הּ לִ֖/י לְ/אִשָּׁ֑ה
+│       ├── PHRASE (binary 3w) וָ/אֶקַּ֥ח אֹתָ֛/הּ לִ֖/י
+│       │   ├── [4-5] GLUE וָ/אֶקַּ֥ח אֹתָ֛/הּ (tevir, rank=3)
+│       │   └── [6] לִ֖/י (tifcha, rank=2)
+│       └── [7] לְ/אִשָּׁ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) וְ/עַתָּ֕ה הִנֵּ֥ה אִשְׁתְּ/ךָ֖ קַ֥ח וָ/לֵֽךְ
+    ├── [8] וְ/עַתָּ֕ה (zaqef gadol, rank=2)
+    └── PHRASE (binary 4w) הִנֵּ֥ה אִשְׁתְּ/ךָ֖ קַ֥ח וָ/לֵֽךְ
+        ├── [9-10] GLUE הִנֵּ֥ה אִשְׁתְּ/ךָ֖ (tifcha, rank=2)
+        └── [11-12] GLUE קַ֥ח וָ/לֵֽךְ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.12.20 · parser unique · 12 words</h3>
+<div class="meta"><span class="he">ויצו עליו פרעה אנשים וישלחו אתו ואת־אשתו ואת־כל־אשר־לו</span> · <i>va-yetzav alay-v paro anashim va-yeshalchu et-o ve-et-isht-o ve-et-kal-asher-l-o</i> · Pharaoh commanded men; they sent him off with his wife and all his. [EN-AID]</div>
+<pre>PHRASE (binary 12w) וַ/יְצַ֥ו עָלָ֛י/ו פַּרְעֹ֖ה אֲנָשִׁ֑ים וַֽ/יְש…
+├── PHRASE (binary 4w) וַ/יְצַ֥ו עָלָ֛י/ו פַּרְעֹ֖ה אֲנָשִׁ֑ים
+│   ├── PHRASE (binary 3w) וַ/יְצַ֥ו עָלָ֛י/ו פַּרְעֹ֖ה
+│   │   ├── [0-1] GLUE וַ/יְצַ֥ו עָלָ֛י/ו (tevir, rank=3)
+│   │   └── [2] פַּרְעֹ֖ה (tifcha, rank=2)
+│   └── [3] אֲנָשִׁ֑ים (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) וַֽ/יְשַׁלְּח֥וּ אֹת֛/וֹ וְ/אֶת אִשְׁתּ֖/וֹ וְ/…
+    ├── PHRASE (binary 4w) וַֽ/יְשַׁלְּח֥וּ אֹת֛/וֹ וְ/אֶת אִשְׁתּ֖/וֹ
+    │   ├── [4-5] GLUE וַֽ/יְשַׁלְּח֥וּ אֹת֛/וֹ (tevir, rank=3)
+    │   └── [6-7] GLUE וְ/אֶת אִשְׁתּ֖/וֹ (tifcha, rank=2)
+    └── [8-11] GLUE וְ/אֶת כָּל אֲשֶׁר לֽ/וֹ (silluq (verse-end emperor), rank=1)
+</pre>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_28_egypt_descent — The descent to Egypt: the famine, the sister-word, the plagued house (12:10-20) [frozen]
+
+final state: WORLD=[] (+1 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[&#x27;read_before_install&#x27;]
+
+=== S1 — The descent for famine: after STEP_Gn_12_10
+    וַיֵּרֶד אַבְרָם מִצְרַיְמָה (va-yered avram mitzraymah)
+    PASS  Facts ki-khaved-ha-raav HOLD  (1 facts)
+    PASS  flags mitzrayim as read-before-install  (flagged=[&#x27;mitzrayim&#x27;])
+    PASS  SPECS empty.  (queue=0)
+
+=== S2 — The first speech: after STEP_Gn_12_11
+    הִנֵּה־נָא יָדַעְתִּי (hinneh-na yadati)
+    PASS  Facts hinneh-na-yadati HOLD  (2 facts)
+    PASS  SPECS empty.  (queue=0)
+
+=== S3 — The request pushed, no reply exists: after STEP_Gn_12_13
+    אִמְרִי־נָא אֲחֹתִי אָתְּ (imri-na achoti at)
+    PASS  LET(imri(saray, achoti_hi)) pushed and OPEN  (queue=[&#x27;imri(saray, achoti_hi)&#x27;])
+    PASS  Facts lemaan-yitav-li HOLD  (4 facts)
+    PASS  Facts ve-hargu-oti-ve-otakh-yechayu HOLD.  (4 facts)
+
+=== S4 — The seeing without the script: after STEP_Gn_12_14
+    כִּי־יָפָה הִוא מְאֹד (ki-yafah hi meod)
+    PASS  Facts ki-yafah-hi-meod HOLD  (5 facts)
+    PASS  LET(imri(saray, achoti_hi)) pushed and OPEN.  (queue=[&#x27;imri(saray, achoti_hi)&#x27;])
+
+=== S5 — The payment for her sake: after STEP_Gn_12_16
+    וּלְאַבְרָם הֵיטִיב בַּעֲבוּרָהּ (u-le-avram hetiv baavurah)
+    PASS  Facts va-yehi-lo-tzon HOLD  (6 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — The wordless plague: after STEP_Gn_12_17
+    עַל־דְּבַר שָׂרַי אֵשֶׁת אַבְרָם (al-devar saray eshet avram)
+    PASS  Facts al-devar-saray HOLD  (7 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — The king&#x27;s demands pushed: after STEP_Gn_12_19
+    קַח וָלֵךְ (qach va-lekh)
+    PASS  LET(qach(avram, et_ishto)) pushed and OPEN  (queue=[&#x27;imri(saray, achoti_hi)&#x27;, &#x27;qach(avram, et_ishto)&#x27;, &#x27;lekh(avram)&#x27;])
+    PASS  LET(lekh(avram)) pushed and OPEN  (queue=[&#x27;imri(saray, achoti_hi)&#x27;, &#x27;qach(avram, et_ishto)&#x27;, &#x27;lekh(avram)&#x27;])
+    PASS  Facts amarta-achoti-hi HOLD.  (9 facts)
+
+=== S8 — Expelled with three debts open: after STEP_Gn_12_20
+    וַיְשַׁלְּחוּ אֹתוֹ וְאֶת־אִשְׁתּוֹ (va-yeshalchu oto ve-et-ishto)
+    PASS  LET(imri(saray, achoti_hi)) pushed and OPEN  (queue=[&#x27;imri(saray, achoti_hi)&#x27;, &#x27;qach(avram, et_ishto)&#x27;, &#x27;lekh(avram)&#x27;])
+    PASS  LET(qach(avram, et_ishto)) pushed and OPEN  (queue=[&#x27;imri(saray, achoti_hi)&#x27;, &#x27;qach(avram, et_ishto)&#x27;, &#x27;lekh(avram)&#x27;])
+    PASS  LET(lekh(avram)) pushed and OPEN  (queue=[&#x27;imri(saray, achoti_hi)&#x27;, &#x27;qach(avram, et_ishto)&#x27;, &#x27;lekh(avram)&#x27;])
+    PASS  no test, no name  (tests=0 names=0)
+    PASS  LEDGER stays EMPTY (open transaction).  (ledger_days=[])
+
+=== S9_negative — Negative: the LET? contract guard
+    אֲחֹתִי (achoti)
+    PASS  imperfect-in-command parsed as LET? (question mark kept)  (mood=LET?)
+    PASS  auto-upgrade REFUSED  (TIR-028: LET? never auto-upgrades to LET — a per-unit judgme...)
+    PASS  upgrade WITH citation allowed  (cite=per-unit judgment (owner), TIR-028 resolution)
+
+=== S10_negative — Negative: flags never block
+    PASS  commit proceeded (not blocked)  (LEDGER=[99])
+    PASS  pattern deviation FLAGGED  (flags=[&#x27;commit_without_test&#x27;])
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_28_egypt_descent.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_28_egypt_descent — 12:10-20
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_28_egypt_descent.yaml) is CANONICAL (Pre-Code);
+# this file is a derived, runnable rendering. Do not edit — regenerate. The
+# assertion block at the bottom is baked from the Stage D interpreter&#x27;s
+# actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;The descent to Egypt: the famine, the sister-word, the plagued house (12:10-20)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_28_egypt_descent&quot;)
+
+# -------------------------- Gen.12.10 · THE_DESCENT_FOR_FAMINE -------------
+# וַיְהִי רָעָב בָּאָרֶץ וַיֵּרֶד אַבְרָם מִצְרַיְמָה לָגוּר שָׁם כִּי־כָבֵד
+# הָרָעָב בָּאָרֶץ
+# &quot;And there was a famine in the land; and Abram went down into Egypt to
+# sojourn there; for the famine was sore in the land.&quot;
+m.step(&quot;Gen.12.10&quot;)
+# ‹וַיֵּרֶד אַבְרָם מִצְרַיְמָה לָגוּר שָׁם› (“and-go-down Abram Egypt-ward
+# to-turn-aside-from-the-road there”) — event: go-down — agent Abram
+m.event(&quot;go_down&quot;, agent=&quot;avram&quot;)
+# ‹כִּי־כָבֵד הָרָעָב בָּאָרֶץ› (“that heavy the-hunger in-earth”) — fact
+# holds: that-heavy-the-hunger-in-the-earth
+m.fact(&quot;ki_khaved_ha_raav_ba_aretz&quot;)
+# reads without prior install (flag, not fix): mitzrayim
+m.presupposed(&quot;mitzrayim&quot;)
+
+# -------------------------- Gen.12.11 · THE_FIRST_SPEECH_IS_FEAR_AND_BEAUTY -
+# וַיְהִי כַּאֲשֶׁר הִקְרִיב לָבוֹא מִצְרָיְמָה וַיֹּאמֶר אֶל־שָׂרַי
+# אִשְׁתּוֹ הִנֵּה־נָא יָדַעְתִּי כִּי אִשָּׁה יְפַת־מַרְאֶה אָתְּ
+# &quot;And it came to pass, when he was come near to enter into Egypt, that he
+# said unto Sarai his wife: &#x27;Behold now, I know that thou art a fair woman
+# to look upon.&#x27;&quot;
+m.step(&quot;Gen.12.11&quot;)
+# ‹וַיֹּאמֶר אֶל־שָׂרַי אִשְׁתּוֹ› (“and-say to Sarai woman-him/its”) —
+# event: say — agent Abram
+m.event(&quot;say&quot;, agent=&quot;avram&quot;)
+# ‹הִנֵּה־נָא יָדַעְתִּי כִּי אִשָּׁה יְפַת־מַרְאֶה אָתְּ› (“behold please
+# know that woman beautiful appearance thou-and-thee”) — fact holds: behold-
+# please-know-that-woman-beautiful-appearance-at
+m.fact(&quot;hinneh_na_yadati_ki_ishah_yefat_mareh_at&quot;)
+
+# -------------------------- Gen.12.12 · THE_FEAR_FORECAST ------------------
+# וְהָיָה כִּי־יִרְאוּ אֹתָךְ הַמִּצְרִים וְאָמְרוּ אִשְׁתּוֹ זֹאת וְהָרְגוּ
+# אֹתִי וְאֹתָךְ יְחַיּוּ
+# &quot;And it will come to pass, when the Egyptians shall see thee, that they
+# will say: This is his wife; and they will kill me, but thee they will keep
+# alive.&quot;
+m.step(&quot;Gen.12.12&quot;)
+# ‹וְהָרְגוּ אֹתִי וְאֹתָךְ יְחַיּוּ› (“and-smite-with-deadly-intent obj-
+# marker-me/my and-obj-marker-you/your live”) — fact holds: and-smite-with-
+# deadly-intent-me-and-otakh-live
+m.fact(&quot;ve_hargu_oti_ve_otakh_yechayu&quot;)
+
+# -------------------------- Gen.12.13 · THE_REQUEST_WITH_NO_REPLY ----------
+# אִמְרִי־נָא אֲחֹתִי אָתְּ לְמַעַן יִיטַב־לִי בַעֲבוּרֵךְ וְחָיְתָה
+# נַפְשִׁי בִּגְלָלֵךְ
+# &quot;Say, I pray thee, thou art my sister; that it may be well with me for thy
+# sake, and that my soul may live because of thee.&#x27;&quot;
+m.step(&quot;Gen.12.13&quot;)
+# ‹אִמְרִי־נָא אֲחֹתִי אָתְּ› (“say please sister-me/my thou-and-thee”) —
+# Abram speaks a demand — LET: say(Sarai, achoti-hi)
+m.declare(&quot;avram&quot;, &quot;LET&quot;,
+          &quot;imri(saray, achoti_hi)&quot;)
+# ‹לְמַעַן יִיטַב־לִי בַעֲבוּרֵךְ וְחָיְתָה נַפְשִׁי בִּגְלָלֵךְ› (“so-that
+# do-well to-me/my in-crossed-you/your and-live living-being-me/my in-
+# circumstance-you/your”) — fact holds: so-that-do-well-to-me-vaavurekh-and-
+# chaytah-nafshi
+m.fact(&quot;lemaan_yitav_li_vaavurekh_ve_chaytah_nafshi&quot;)
+
+# -------------------------- Gen.12.14 · THE_SEEING -------------------------
+# וַיְהִי כְּבוֹא אַבְרָם מִצְרָיְמָה וַיִּרְאוּ הַמִּצְרִים אֶת־הָאִשָּׁה
+# כִּי־יָפָה הִוא מְאֹד
+# &quot;And it came to pass, that, when Abram was come into Egypt, the Egyptians
+# beheld the woman that she was very fair.&quot;
+m.step(&quot;Gen.12.14&quot;)
+# ‹וַיִּרְאוּ הַמִּצְרִים אֶת־הָאִשָּׁה› (“and-see the-Egyptian obj-marker
+# the-woman”) — event: see — agent the-Egyptian; theme the-woman
+m.event(&quot;see&quot;, agent=&quot;ha_mitzrim&quot;, themes=[&quot;ha_ishah&quot;])
+# ‹כִּי־יָפָה הִוא מְאֹד› (“that beautiful he/it very”) — fact holds: that-
+# yafah-hi-very
+m.fact(&quot;ki_yafah_hi_meod&quot;)
+
+# -------------------------- Gen.12.15 · THE_PRAISE_AND_THE_PASSIVE_TAKING --
+# וַיִּרְאוּ אֹתָהּ שָׂרֵי פַרְעֹה וַיְהַלְלוּ אֹתָהּ אֶל־פַּרְעֹה וַתֻּקַּח
+# הָאִשָּׁה בֵּית פַּרְעֹה
+# &quot;And the princes of Pharaoh saw her, and praised her to Pharaoh; and the
+# woman was taken into Pharaoh&#x27;s house.&quot;
+m.step(&quot;Gen.12.15&quot;)
+# ‹וַיִּרְאוּ אֹתָהּ שָׂרֵי פַרְעֹה› (“and-see obj-marker-her/its officer
+# Pharaoh”) — event: see — agent sarei-Pharaoh; theme the-woman
+m.event(&quot;see&quot;, agent=&quot;sarei_faro&quot;, themes=[&quot;ha_ishah&quot;])
+# ‹וַיְהַלְלוּ אֹתָהּ אֶל־פַּרְעֹה› (“and-be-clear obj-marker-her/its to
+# Pharaoh”) — event: praise — agent sarei-Pharaoh
+m.event(&quot;praise&quot;, agent=&quot;sarei_faro&quot;)
+# ‹וַתֻּקַּח הָאִשָּׁה בֵּית פַּרְעֹה› (“and-take the-woman house Pharaoh”)
+# — event: take — theme the-woman
+m.event(&quot;take&quot;, themes=[&quot;ha_ishah&quot;])
+
+# -------------------------- Gen.12.16 · THE_PAYMENT_FOR_HER_SAKE -----------
+# וּלְאַבְרָם הֵיטִיב בַּעֲבוּרָהּ וַיְהִי־לוֹ צֹאן־וּבָקָר וַחֲמֹרִים
+# וַעֲבָדִים וּשְׁפָחֹת וַאֲתֹנֹת וּגְמַלִּים
+# &quot;And he dealt well with Abram for her sake; and he had sheep, and oxen,
+# and he-asses, and men-servants, and maid-servants, and she-asses, and
+# camels.&quot;
+m.step(&quot;Gen.12.16&quot;)
+# ‹וּלְאַבְרָם הֵיטִיב בַּעֲבוּרָהּ› (“and-to-Abram do-well in-crossed-
+# her/its”) — event: do-good — agent Pharaoh
+m.event(&quot;do_good&quot;, agent=&quot;paro&quot;)
+# ‹וַיְהִי־לוֹ צֹאן־וּבָקָר וַחֲמֹרִים וַעֲבָדִים וּשְׁפָחֹת וַאֲתֹנֹת
+# וּגְמַלִּים› (“and-be to-him/its flock and-herd and-male-ass and-servant
+# and-female-slave and-female-donkey and-camel”) — fact holds: and-be-not-
+# flock-and-herd-and-male-ass-and-servant-and-shfachot-and-female-donkey-
+# and-camel
+m.fact(&quot;va_yehi_lo_tzon_u_vaqar_va_chamorim_va_avadim_u_shfachot_va_atonot_u_gemalim&quot;)
+
+# -------------------------- Gen.12.17 · THE_PLAGUE_WITHOUT_A_WORD ----------
+# וַיְנַגַּע יְהוָה אֶת־פַּרְעֹה נְגָעִים גְּדֹלִים וְאֶת־בֵּיתוֹ עַל־דְּבַר
+# שָׂרַי אֵשֶׁת אַבְרָם
+# &quot;And the LORD plagued Pharaoh and his house with great plagues because of
+# Sarai Abram&#x27;s wife.&quot;
+m.step(&quot;Gen.12.17&quot;)
+# ‹וַיְנַגַּע יְהוָה אֶת־פַּרְעֹה נְגָעִים גְּדֹלִים וְאֶת־בֵּיתוֹ› (“and-
+# touch YHWH obj-marker Pharaoh blow great and-obj-marker house-him/its”) —
+# event: plague — agent the-LORD; theme Pharaoh-and-veito
+m.event(&quot;plague&quot;, agent=&quot;YHWH&quot;, themes=[&quot;paro_u_veito&quot;])
+# ‹עַל־דְּבַר שָׂרַי אֵשֶׁת אַבְרָם› (“over word/thing Sarai woman Abram”) —
+# fact holds: over-word/thing-Sarai-woman-Abram
+m.fact(&quot;al_devar_saray_eshet_avram&quot;)
+
+# -------------------------- Gen.12.18 · THE_KINGS_QUESTIONS_IN_THE_GARDENS_FORM -
+# וַיִּקְרָא פַרְעֹה לְאַבְרָם וַיֹּאמֶר מַה־זֹּאת עָשִׂיתָ לִּי לָמָּה
+# לֹא־הִגַּדְתָּ לִּי כִּי אִשְׁתְּךָ הִוא
+# &quot;And Pharaoh called Abram, and said: &#x27;What is this that thou hast done
+# unto me? why didst thou not tell me that she was thy wife?&#x27;&quot;
+m.step(&quot;Gen.12.18&quot;)
+# ‹וַיִּקְרָא פַרְעֹה לְאַבְרָם וַיֹּאמֶר מַה־זֹּאת עָשִׂיתָ לִּי› (“and-
+# call Pharaoh to-Abram and-say what this make to-me/my”) — event: say —
+# agent Pharaoh
+m.event(&quot;say&quot;, agent=&quot;paro&quot;)
+
+# -------------------------- Gen.12.19 · THE_CONFESSION_AND_THE_COUNTER_COMMANDS -
+# לָמָה אָמַרְתָּ אֲחֹתִי הִוא וָאֶקַּח אֹתָהּ לִי לְאִשָּׁה וְעַתָּה הִנֵּה
+# אִשְׁתְּךָ קַח וָלֵךְ
+# &quot;Why saidst thou: She is my sister? so that I took her to be my wife; now
+# therefore behold thy wife, take her, and go thy way.&#x27;&quot;
+m.step(&quot;Gen.12.19&quot;)
+# ‹אָמַרְתָּ אֲחֹתִי הִוא וָאֶקַּח אֹתָהּ לִי לְאִשָּׁה› (“say sister-me/my
+# he/it and-take obj-marker-her/its to-me/my to-woman”) — fact holds: say-
+# achoti-hi; and-take-her-to-me-to-woman
+m.fact(&quot;amarta_achoti_hi&quot;,
+       &quot;va_eqach_otah_li_le_ishah&quot;)
+# ‹הִנֵּה אִשְׁתְּךָ קַח› (“behold woman-you/your take”) — Pharaoh speaks a
+# demand — LET: take(Abram, thou-and-thee-his-wife)
+m.declare(&quot;paro&quot;, &quot;LET&quot;,
+          &quot;qach(avram, et_ishto)&quot;)
+# ‹וָלֵךְ› (“and-go”) — Pharaoh speaks a demand — LET: go(Abram)
+m.declare(&quot;paro&quot;, &quot;LET&quot;,
+          &quot;lekh(avram)&quot;)
+
+# -------------------------- Gen.12.20 · THE_ESCORTED_EXPULSION -------------
+# וַיְצַו עָלָיו פַּרְעֹה אֲנָשִׁים וַיְשַׁלְּחוּ אֹתוֹ וְאֶת־אִשְׁתּוֹ
+# וְאֶת־כָּל־אֲשֶׁר־לוֹ
+# &quot;And Pharaoh gave men charge concerning him; and they brought him on the
+# way, and his wife, and all that he had.&quot;
+m.step(&quot;Gen.12.20&quot;)
+# ‹וַיְצַו עָלָיו פַּרְעֹה אֲנָשִׁים› (“and-command over-him/its Pharaoh
+# man”) — event: command — agent Pharaoh; theme man
+m.event(&quot;command&quot;, agent=&quot;paro&quot;, themes=[&quot;anashim&quot;])
+# ‹וַיְשַׁלְּחוּ אֹתוֹ וְאֶת־אִשְׁתּוֹ וְאֶת־כָּל־אֲשֶׁר־לוֹ› (“and-send
+# obj-marker-him/its and-obj-marker woman-him/its and-obj-marker all which
+# to-him/its”) — event: send-away — agent man; theme Abram-and-his-wife-and-
+# all-which-not
+m.event(&quot;send_away&quot;, agent=&quot;anashim&quot;, themes=[&quot;avram_ve_ishto_ve_khol_asher_lo&quot;])
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == {&#x27;mitzrayim&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;imri(saray, achoti_hi)&#x27;, &#x27;qach(avram, et_ishto)&#x27;, &#x27;lekh(avram)&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 3
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;read_before_install&#x27;: 1}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;ki_khaved_ha_raav_ba_aretz&#x27;, &#x27;hinneh_na_yadati_ki_ishah_yefat_mareh_at&#x27;, &#x27;ve_hargu_oti_ve_otakh_yechayu&#x27;, &#x27;lemaan_yitav_li_vaavurekh_ve_chaytah_nafshi&#x27;, &#x27;ki_yafah_hi_meod&#x27;, &#x27;va_yehi_lo_tzon_u_vaqar_va_chamorim_va_avadim_u_shfachot_va_atonot_u_gemalim&#x27;, &#x27;al_devar_saray_eshet_avram&#x27;, &#x27;amarta_achoti_hi&#x27;, &#x27;va_eqach_otah_li_le_ishah&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 14
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

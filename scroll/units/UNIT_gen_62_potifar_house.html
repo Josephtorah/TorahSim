@@ -1,0 +1,731 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_62_potifar_house — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_62_potifar_house?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Potiphar&#x27;s house: the refusal on the chain (39:1-23) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_62_potifar_house</b> · Genesis 39:1-23 · derive logic_derived_v1 · phase FWD-3</div>
+<div class="meta"><a href="../#Gen/39/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">וַיְמָאֵן וַיֹּאמֶר אֶל־אֵשֶׁת אֲדֹנָיו</span> · <i>va-yemaen va-yomer el-eshet adonav</i> · &#x27;and he refused, and said to his master&#x27;s wife&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DERIVED 2026-08-08 · FORWARD ERA unit #3 (run FWD-1 block 3; freeze review waived — mechanical gates only). Span: 39:1-23, whole chapter: 23 verses · 348 tokens (SNAPSHOT-verified, prestage). Conventions unchanged; every verse carries an etnachta. KETIV/QERE token-pair in span: asure/asire at 39:20 (written vav, read yod — the Great Masorah&#x27;s alphabet-list member 1). Oral layer IN-PIPELINE: manifest 11 VERIFIED / 0 FAILED / 1 UNCHECKABLE — see oral_audit_note_en. MACHINE PROFILE. The quietest demand-board of the three forward units and the sharpest: volitive census 3 (shikhva ×2, reu ×1), modeled as TWO DECLAREs — the same two-word demand (shikhva imi) pushed at 39:7 and again at 39:12 with a hand on the garment — and ZERO RESULTs: the span ends with BOTH pushes still open on the queue. The refusal is carried entirely by state-facts: va-yemaen under the chain-accent (39:8), the daily not-listening (39:10), the flight (39:12). THE MACHINE&#x27;S READING: integrity is recorded here as an UNRESOLVED state — the demand is never satisfied and never formally revoked; it is outlasted. (The wife&#x27;s reu at 39:14 is rhetorical summons inside her speech — unmodeled, letter-note.) REGISTRY 0 (no naming). TESTS 0 (zero tov). LEDGER 0. CARE-POINTS: the HAND-ARC — be-yado prosperity (39:3-6) -&gt; be-yadah the seized garment (39:12-18) -&gt; be-yad yosef the prisoners (39:22): one noun carries trust, lie, and custody. THE THIRD GARMENT-CODE — coat (gen_60), veil (gen_61), cloak (here): three units, three cloths doing the testimony; bigdo six tokens in-span, always as evidence. THE TWO TELLINGS&#x27; SHIFTS (39:14 vs 39:17): ish ivri -&gt; ha-EVED ha-ivri (the man demoted), le-tzacheq BANU -&gt; BI (the victim narrowed), hevi LANU kept (the husband indicted twice) — the letter&#x27;s own record of a rehearsed lie; filed as letter-note. THE MOCK-VERB le-tzacheq joins the dark track of 19:14 and 21:9. melakhto (39:11) is the his-work noun&#x27;s LAST Torah token — the census gen_07 opened (heavens/earth/sea ×3 + Joseph 39:11) closes inside this span&#x27;s empty-house verse. The anger&#x27;s unnamed target (39:19) and the un-narrated cry (39:14-15, claimed only in her speech) — readings filed named. WATCHLIST ARMS: 40:5 (the asurim pair&#x27;s second station, next unit); 40:15 (Joseph&#x27;s own account: gunavti — the passive counter-telling); 44:21 (horiduhu repaid, armed by G62-09); Exod 33:5 (the ornaments taken down, armed by G62-08); Ps 146:7 (the release of the bound, named, outside); 49:23-24 (the bow that stayed firm — the blessing&#x27;s reading of this chapter, named).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (IN-PIPELINE, forward era; manifest logic/oral_audit/manifests/gen_62_potifar_house_claims.json 11 VERIFIED / 0 FAILED / 1 UNCHECKABLE; record logic/oral_audit/AUDIT_gen_62_2026-08-08.md). CROWNS (chain-attested + DB-verified). POTIPHAR IS ONE WORD [G62-01, the Ramah via Minchat Shai on 39:1]: פוטיפר written as ONE word, full yod and full vav — proven from the Masorah&#x27;s own list of two-words-read-one (Poti-fera, Malki-tzedek, Baal-chanan, Tzafnat-paneach) which omits him; both Torah stations single-token (39:1 checked, 37:36 asserted). THE PRISONERS WRITTEN AND READ [G62-02, the Great Masorah via MS + Kitzur on 39:20]: אסורי (&quot;the king&#x27;s prisoners&quot;) written with VAV and read with YOD — the FIRST word of the Great Masorah&#x27;s alphabet of vav-written yod-read words; SNAPSHOT carries the written and read forms as a token-pair in-stream; the Kitzur counts the sentence inside it — ten years for the slander of ten brothers, two more for the two remember-me&#x27;s. THE CORRECTED WORD [G62-03, MS on 39:22; the Ramah; the Meiri; the Hilleli — against the printer]: האסירם (&quot;all the prisoners&quot;) — wrongly dragged into the written/read list by the printer (Minchat Kohen following); restored by MS with the Ramah, the Meiri, and the Hilleli&#x27;s note as yod-after-samekh, lean second yod, no pair, marked UNIQUE — and SNAPSHOT writes exactly that, once in the Torah. THE REFUSAL ON THE CHAIN [G62-04, Rabbeinu Bachya via MS on 39:8]: וימאן (&quot;and he REFUSED&quot;) carries the shalshelet (the chain-accent) — one of the whole Torah&#x27;s FOUR chain-stations (gen_35&#x27;s census) — and Bachya states the principle on this very word: from the Torah&#x27;s accents we understand what is not written, as from a man&#x27;s gestures we know his heart. HIS TONGUE IN THE FINALS [G62-05, Kitzur on 39:4]: &quot;and all he had he gave into his hand&quot; — the five words&#x27; final letters spell לשונו (&quot;his TONGUE&quot;): Gabriel taught him seventy tongues, and so he prospered; ordered finals in-stream. THE BOUND PAIR [G62-06, Kitzur on 39:20]: אסורים (&quot;bound&quot;) — exactly two Torah stations, both Joseph&#x27;s prison (39:20, 40:5); the third is &quot;the LORD releases the bound&quot; (Psalms, named): she said &#x27;I will bind you&#x27;; he answered with the release. THE RAISED HAND AND THE RAISED VOICE [G62-07, Kitzur on 39:15]: הרימתי (&quot;I raised&quot;) exactly twice in the Torah — Abram&#x27;s oath-hand (14:22) and the wife&#x27;s false cry: one word, an oath and a lie. THE TWO DESCENTS [G62-08/09, Kitzur on 39:1]: הורד (&quot;was brought down&quot;) — Joseph here and the ornaments of Exod 33:5 (the Kitzur&#x27;s own pair is with Sheol, named, outside); הורדהו (&quot;bring him down&quot;) exactly twice — the Ishmaelites&#x27; descent and &#x27;bring him down to me&#x27; (44:21): Judah&#x27;s measure-for-measure, census exact. THE POINTING SET [G62-10, MS ×3]: ka-harimi&#x27;s he with sheva-and-patach (the compound half-vowel) CHECKED under the guttural; the chet of לצחק (&quot;to mock&quot;) in segol and the zayin of הזה (&quot;this&quot;) dagesheed, asserted. DISCREPANCY [G62-11, MS on 39:23]: roe et-kal — MS rules the et maqqefed WITHOUT a stress-stroke; SNAPSHOT joins the maqqef but writes the meteg his books omit: the stream against MS&#x27;s camp, filed. INSTRUMENT GAP [G62-12, MS on 39:7]: the paragraph question at &quot;after these things&quot; — Sephardic books no break, Rambam and the Hilleli open, the Meiri an undecided gap; paragraph layer uninstrumented, camps recorded. READINGS (named-only): the accent-variance file at 39:14/18 (merkha-on-the-he; the books&#x27; shuffles); the kaf-dagesh puzzle at 39:15 (MS: &quot;I know not why&quot;); the margin&#x27;s chilluf at 39:19; the two-telling shifts as a rehearsed lie; the anger&#x27;s unnamed target; the Kitzur&#x27;s letter-sums (the bread = his wife; to-be-with-her = into Gehenna); Joseph&#x27;s beauty as his mother&#x27;s phrase (29:17).</div>
+<div class="meta">confidence: structure tested; oral layer verified 11/0/1</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>FORWARD ERA run 1, block 3. Canon continuation: Gen 39:1-23 — Potiphar&#x27;s house and the prison, the whole chapter.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Span + source + conventions</td><td>SNAPSHOT prestage: 23 verses, 348 tokens; every verse carries an etnachta. One ketiv/qere token-pair (39:20 asure/asire). Volitive census: 3 (two shikhva imperatives, one reu).</td><td>established</td></tr>
+<tr><td><b>C</b></td><td>Machine structure</td><td>Two DECLAREs (the same demand pushed twice), ZERO RESULTs — the span ends with both pushes open: the machine records integrity as an unresolved state. One EVENT (the garment left). REGISTRY 0, TESTS 0, LEDGER 0. Existing handler vocabulary only.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Gen 39 (17 notes) + Kitzur Baal HaTurim on Gen 39 (11 notes). Manifest 12 rows: 11 VERIFIED / 0 FAILED / 1 UNCHECKABLE (the paragraph camps); one pointing DISCREPANCY (39:23 et-meteg) recorded; one claim dropped at probe (MS&#x27;s okhel-full note — scope of &#x27;its language&#x27; unresolvable against the 14-token census; not framed rather than misframed).</td><td>established</td></tr>
+<tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 11/0/1 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean both files. Review waived per the revised standing law.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-08 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_39_1 · Gen.39.1 · <span class='expr'>BOUGHT_BY_POTIPHAR</span></h3>
+<p><span class="he">וְיוֹסֵף הוּרַד מִצְרָיְמָה וַיִּקְנֵהוּ פּוֹטִיפַר סְרִיס פַּרְעֹה שַׂר הַטַּבָּחִים אִישׁ מִצְרִי מִיַּד הַיִּשְׁמְעֵאלִים אֲשֶׁר הוֹרִדֻהוּ שָׁמָּה</span> · <i>ve-yosef hurad mitzrayma-ה va-yiqne-hu potifar seris paro sar ha-tabachim ish mitzri mi-yad ha-yishmelim asher horidu-hu shama-ה</i> · And Joseph was brought down to Egypt; and Potiphar, Pharaoh&#x27;s officer, the chief of the slaughterers, an Egyptian man, bought him from the hand of the Ishmaelites who had brought him down there.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְיוֹסֵ֖ף הוּרַ֣ד מִצְרָ֑יְמָה</span> · <i>ve-yosef hurad mitzrayma-ה</i> · and Joseph was brought down to Egypt (etnachta on mitzrayma-ה) [VERIFIED: SNAPSHOT Gen.39.1 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּקְנֵ֡הוּ פּוֹטִיפַר֩ סְרִ֨יס פַּרְעֹ֜ה שַׂ֤ר הַטַּבָּחִים֙ אִ֣ישׁ מִצְרִ֔י מִיַּד֙ הַיִּשְׁמְעֵאלִ֔ים אֲשֶׁ֥ר הוֹרִדֻ֖הוּ שָֽׁמָּה</span> · <i>va-yiqne-hu potifar seris paro sar ha-tabachim ish mitzri mi-yad ha-yishmelim asher horidu-hu shama-ה</i> · and Potiphar bought him from the Ishmaelites who brought him down (verse-final shama-ה) [VERIFIED: SNAPSHOT Gen.39.1 idx3-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hurad_mitzrayma_va_yiqnehu_potifar(yosef), t0)</span><br><span class="gloss">= HOLDS(hurad-mitzrayma-and-yiqnehu-potifar(yosef), t0)</span><br>THE DESCENT SEALED [G62-01/08/09]. ve-yosef HURAD mitzrayma — the was-brought-down skeleton stands twice in the Torah: Joseph here, and &#x27;take DOWN your ornaments&#x27; (Exod 33:5) [VERIFIED: manifest G62-08]; and horiduhu (&#x27;they brought him down&#x27;) pairs exactly with 44:21&#x27;s &#x27;bring him down to me&#x27; — the Kitzur&#x27;s measure-for-measure [VERIFIED: G62-09]. The buyer: POTIPHAR — one written word, full yod and full vav, by the Ramah&#x27;s proof from the Masorah&#x27;s two-word list that omits it [VERIFIED: G62-01].
+</td><td><span class="he">וְיוֹסֵף הוּרַד מִצְרָיְמָה וַיִּקְנֵהוּ פּוֹטִיפַר</span> · <i>ve-yosef hurad mitzrayma-ה va-yiqne-hu potifar</i><br><span class="gloss">= and-yosef hurad mitzrayma-ה and-yiqne-that potifar</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The double descent-verb opens; the buyer of 37:36 takes delivery.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_39_2 · Gen.39.2 · <span class='expr'>THE_LORD_WITH_HIM</span></h3>
+<p><span class="he">וַיְהִי יְהוָה אֶת־יוֹסֵף וַיְהִי אִישׁ מַצְלִיחַ וַיְהִי בְּבֵית אֲדֹנָיו הַמִּצְרִי</span> · <i>va-yehi YHWH et-yosef va-yehi ish matzlicha va-yehi be-vet adonay-v ha-mitzri</i> · And the LORD was with Joseph, and he was a prospering man; and he was in the house of his master the Egyptian.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֤י יְהוָה֙ אֶת יוֹסֵ֔ף וַיְהִ֖י אִ֣ישׁ מַצְלִ֑יחַ</span> · <i>va-yehi YHWH et-yosef va-yehi ish matzlicha</i> · and the LORD was with Joseph, and he was a prospering man (etnachta on matzlicha) [VERIFIED: SNAPSHOT Gen.39.2 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיְהִ֕י בְּבֵ֥ית אֲדֹנָ֖יו הַמִּצְרִֽי</span> · <i>va-yehi be-vet adonay-v ha-mitzri</i> · and he was in the house of his master the Egyptian (verse-final ha-mitzri) [VERIFIED: SNAPSHOT Gen.39.2 idx7-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(YHWH_et_yosef_ish_matzliach, t0)</span><br><span class="gloss">= HOLDS(the-LORD-yosef-man-matzliach, t0)</span><br>THE REFRAIN. va-yehi YHWH et yosef va-yehi ish matzliach — the prosper-word opens and closes the chapter (39:2, 3, 23): the machine&#x27;s only stable fact across the fall.
+</td><td><span class="he">וַיְהִי יְהוָה אֶת־יוֹסֵף וַיְהִי אִישׁ מַצְלִיחַ</span> · <i>va-yehi YHWH et-yosef va-yehi ish matzlicha</i><br><span class="gloss">= and-yehi the-LORD yosef and-yehi man matzlicha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The refrain-word of the chapter enters: matzliach.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_39_3 · Gen.39.3 · <span class='expr'>THE_MASTER_SEES</span></h3>
+<p><span class="he">וַיַּרְא אֲדֹנָיו כִּי יְהוָה אִתּוֹ וְכֹל אֲשֶׁר־הוּא עֹשֶׂה יְהוָה מַצְלִיחַ בְּיָדוֹ</span> · <i>va-yar adonay-v ki YHWH et-o ve-khol asher-hu ose YHWH matzlicha be-yad-o</i> · And his master saw that the LORD was with him, and all that he did the LORD made prosper in his hand.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּ֣רְא אֲדֹנָ֔יו כִּ֥י יְהוָ֖ה אִתּ֑וֹ</span> · <i>va-yar adonay-v ki YHWH et-o</i> · and his master saw that the LORD was with him (etnachta on et-o) [VERIFIED: SNAPSHOT Gen.39.3 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְכֹל֙ אֲשֶׁר ה֣וּא עֹשֶׂ֔ה יְהוָ֖ה מַצְלִ֥יחַ בְּיָדֽוֹ</span> · <i>ve-khol asher-hu ose YHWH matzlicha be-yad-o</i> · and all he did the LORD made prosper in his hand (verse-final be-yad-o) [VERIFIED: SNAPSHOT Gen.39.3 idx5-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(raa_adonav_ki_YHWH_ito, t0)</span><br><span class="gloss">= HOLDS(raa-adonav-when-the-LORD-with-him, t0)</span><br>THE MASTER&#x27;S READING. va-yar adonav ki YHWH ito — the master sees the Name by its works: be-yado, in JOSEPH&#x27;S hand — the hand-word the chapter will pass from prosperity (39:3) to seized garment (39:12) to the warden&#x27;s trust (39:22).
+</td><td><span class="he">וַיַּרְא אֲדֹנָיו כִּי יְהוָה אִתּוֹ</span> · <i>va-yar adonay-v ki YHWH et-o</i><br><span class="gloss">= and-yar adonay-v when the-LORD o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The Egyptian reads the theology off the results.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_39_4 · Gen.39.4 · <span class='expr'>APPOINTED_OVER_THE_HOUSE</span></h3>
+<p><span class="he">וַיִּמְצָא יוֹסֵף חֵן בְּעֵינָיו וַיְשָׁרֶת אֹתוֹ וַיַּפְקִדֵהוּ עַל־בֵּיתוֹ וְכָל־יֶשׁ־לוֹ נָתַן בְּיָדוֹ</span> · <i>va-yimtza yosef chen be-enay-v va-yesharet et-o va-yafqide-hu al-bet-o ve-khal-yesh-l-o natan be-yad-o</i> · And Joseph found favor in his eyes, and he served him; and he appointed him over his house, and all he had he gave into his hand.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּמְצָ֨א יוֹסֵ֥ף חֵ֛ן בְּעֵינָ֖יו וַיְשָׁ֣רֶת אֹת֑וֹ</span> · <i>va-yimtza yosef chen be-enay-v va-yesharet et-o</i> · Joseph found favor in his eyes and served him (etnachta on et-o) [VERIFIED: SNAPSHOT Gen.39.4 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּפְקִדֵ֨הוּ֙ עַל בֵּית֔וֹ וְכָל יֶשׁ ל֖וֹ נָתַ֥ן בְּיָדֽוֹ</span> · <i>va-yafqide-hu al-bet-o ve-khal-yesh-l-o natan be-yad-o</i> · he appointed him over his house, and all he had he gave into his hand (verse-final be-yad-o) [VERIFIED: SNAPSHOT Gen.39.4 idx6-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hifqid_al_beto_ve_khol_natan_be_yado, t0)</span><br><span class="gloss">= HOLDS(hifqid-upon-beto-and-all-natan-in-his-hand, t0)</span><br>HIS TONGUE IN THE FINALS [G62-05]. ve-khal yesh lo natan be-yado — the five words&#x27; closing letters spell leshono (&#x27;his TONGUE&#x27;) [VERIFIED: manifest G62-05]: the Kitzur — Gabriel taught him seventy tongues, and so he prospered; the acrostic sits exactly on the handover clause.
+</td><td><span class="he">וַיַּפְקִדֵהוּ עַל־בֵּיתוֹ וְכָל־יֶשׁ־לוֹ נָתַן בְּיָדוֹ</span> · <i>va-yafqide-hu al-bet-o ve-khal-yesh-l-o natan be-yad-o</i><br><span class="gloss">= and-yafqide-that upon-bet-o and-khal-yesh-l-o natan in-yad-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The trust-verse carries the tongue-acrostic.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_39_5 · Gen.39.5 · <span class='expr'>THE_BLESSING_FOR_HIS_SAKE</span></h3>
+<p><span class="he">וַיְהִי מֵאָז הִפְקִיד אֹתוֹ בְּבֵיתוֹ וְעַל כָּל־אֲשֶׁר יֶשׁ־לוֹ וַיְבָרֶךְ יְהוָה אֶת־בֵּית הַמִּצְרִי בִּגְלַל יוֹסֵף וַיְהִי בִּרְכַּת יְהוָה בְּכָל־אֲשֶׁר יֶשׁ־לוֹ בַּבַּיִת וּבַשָּׂדֶה</span> · <i>va-yehi me-az hifqid et-o be-vet-o ve-al kal-asher yesh-l-o va-yevarekh YHWH et-bet ha-mitzri bi-gelal yosef va-yehi birkat YHWH be-khal-asher yesh-l-o ba-bayit u-va-sade</i> · And it was, from the time he appointed him in his house and over all that he had, the LORD blessed the Egyptian&#x27;s house for Joseph&#x27;s sake; and the LORD&#x27;s blessing was on all he had, in the house and in the field.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֡י מֵאָז֩ הִפְקִ֨יד אֹת֜וֹ בְּבֵית֗וֹ וְעַל֙ כָּל אֲשֶׁ֣ר יֶשׁ ל֔וֹ וַיְבָ֧רֶךְ יְהוָ֛ה אֶת בֵּ֥ית הַמִּצְרִ֖י בִּגְלַ֣ל יוֹסֵ֑ף</span> · <i>va-yehi me-az hifqid et-o be-vet-o ve-al kal-asher yesh-l-o va-yevarekh YHWH et-bet ha-mitzri bi-gelal yosef</i> · from the time he appointed him, the LORD blessed the Egyptian&#x27;s house for Joseph&#x27;s sake (etnachta on yosef) [VERIFIED: SNAPSHOT Gen.39.5 idx16 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיְהִ֞י בִּרְכַּ֤ת יְהוָה֙ בְּכָל אֲשֶׁ֣ר יֶשׁ ל֔וֹ בַּבַּ֖יִת וּבַשָּׂדֶֽה</span> · <i>va-yehi birkat YHWH be-khal-asher yesh-l-o ba-bayit u-va-sade</i> · and the blessing was on all he had, in house and field (verse-final u-va-sade) [VERIFIED: SNAPSHOT Gen.39.5 idx17-25]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(berakh_YHWH_bet_ha_mitzri_biglal_yosef, t0)</span><br><span class="gloss">= HOLDS(berakh-the-LORD-bet-the-mitzri-biglal-yosef, t0)</span><br>THE SPILLOVER. va-yevarekh YHWH et bet ha-mitzri BI-GELAL yosef — the for-the-sake-of blessing: Laban&#x27;s discovery (30:27) repeated in Egypt; the bless-thread runs through the foreign houses that hold this family.
+</td><td><span class="he">וַיְבָרֶךְ יְהוָה אֶת־בֵּית הַמִּצְרִי בִּגְלַל יוֹסֵף</span> · <i>va-yevarekh YHWH et-bet ha-mitzri bi-gelal yosef</i><br><span class="gloss">= and-yevarekh the-LORD bet the-mitzri bi-gelal yosef</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The blessing spills over the master.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_39_6 · Gen.39.6 · <span class='expr'>THE_BEAUTY_NOTE</span></h3>
+<p><span class="he">וַיַּעֲזֹב כָּל־אֲשֶׁר־לוֹ בְּיַד־יוֹסֵף וְלֹא־יָדַע אִתּוֹ מְאוּמָה כִּי אִם־הַלֶּחֶם אֲשֶׁר־הוּא אוֹכֵל וַיְהִי יוֹסֵף יְפֵה־תֹאַר וִיפֵה מַרְאֶה</span> · <i>va-yaazov kal-asher-l-o be-yad-yosef ve-lo-yada et-o meuma ki im-ha-lechem asher-hu okhel va-yehi yosef yefe-toar vi-yfe mare</i> · And he left all that he had in Joseph&#x27;s hand, and knew nothing with him except the bread that he ate; and Joseph was beautiful of form and beautiful of appearance.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּעֲזֹ֣ב כָּל אֲשֶׁר לוֹ֮ בְּיַד יוֹסֵף֒ וְלֹא יָדַ֤ע אִתּוֹ֙ מְא֔וּמָה כִּ֥י אִם הַלֶּ֖חֶם אֲשֶׁר ה֣וּא אוֹכֵ֑ל</span> · <i>va-yaazov kal-asher-l-o be-yad-yosef ve-lo-yada et-o meuma ki im-ha-lechem asher-hu okhel</i> · he left all in Joseph&#x27;s hand and knew nothing except his bread (etnachta on okhel) [VERIFIED: SNAPSHOT Gen.39.6 idx15 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיְהִ֣י יוֹסֵ֔ף יְפֵה תֹ֖אַר וִיפֵ֥ה מַרְאֶֽה</span> · <i>va-yehi yosef yefe-toar vi-yfe mare</i> · and Joseph was beautiful of form and appearance (verse-final mare) [VERIFIED: SNAPSHOT Gen.39.6 idx16-21]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(yefe_toar_vi_yfe_mare(yosef), t0)</span><br><span class="gloss">= HOLDS(yefe-toar-vi-yfe-mare(yosef), t0)</span><br>THE HINGE. va-yehi yosef yefe toar vi-yfe mare — his mother&#x27;s exact double epithet (29:17, Rachel) handed to the son at the verse-seam before the trial; yefe joined by maqqef without a stress-stroke in the precise books (MS, named). The bread-clause (the Kitzur&#x27;s letter-sum reading: &#x27;the bread he ate&#x27; = his wife) files named.
+</td><td><span class="he">וַיְהִי יוֹסֵף יְפֵה־תֹאַר וִיפֵה מַרְאֶה</span> · <i>va-yehi yosef yefe-toar vi-yfe mare</i><br><span class="gloss">= and-yehi yosef yefe-toar vi-yfe mare</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The narrator&#x27;s hinge: total trust, then the beauty-note.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_39_7 · Gen.39.7 · <span class='expr'>THE_DEMAND_PUSHED</span></h3>
+<p><span class="he">וַיְהִי אַחַר הַדְּבָרִים הָאֵלֶּה וַתִּשָּׂא אֵשֶׁת־אֲדֹנָיו אֶת־עֵינֶיהָ אֶל־יוֹסֵף וַתֹּאמֶר שִׁכְבָה עִמִּי</span> · <i>va-yehi achar ha-devarim ha-ele va-tisa eshet-adonay-v et-ene-ha el-yosef va-tomer shikhva-ה imi-y</i> · And it was after these things, and his master&#x27;s wife lifted her eyes to Joseph, and said: Lie with me.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֗י אַחַר֙ הַדְּבָרִ֣ים הָאֵ֔לֶּה וַתִּשָּׂ֧א אֵֽשֶׁת אֲדֹנָ֛יו אֶת עֵינֶ֖יהָ אֶל יוֹסֵ֑ף</span> · <i>va-yehi achar ha-devarim ha-ele va-tisa eshet-adonay-v et-ene-ha el-yosef</i> · his master&#x27;s wife lifted her eyes to Joseph (etnachta on yosef) [VERIFIED: SNAPSHOT Gen.39.7 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתֹּ֖אמֶר שִׁכְבָ֥ה עִמִּֽי</span> · <i>va-tomer shikhva-ה imi-y</i> · and she said: lie with me (verse-final imi-y) [VERIFIED: SNAPSHOT Gen.39.7 idx11-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(eshet_adonav, LET(shikhva_imi))</span><br><span class="gloss">= DECLARE(wife-of-adonav, LET(shikhva-imi))</span><br>THE TWO-WORD DEMAND. shikhva imi — pushed, and NEVER discharged: the span ends with it still open on the queue under a standing refusal — the machine&#x27;s record of a demand held at bay rather than resolved. The paragraph question rides the verse-head: Sephardic precise books write NO break here; Rambam and the Hilleli make it open; the Meiri leaves an undecided gap [VERIFIED: manifest G62-12, camps filed].
+</td><td><span class="he">וַתֹּאמֶר שִׁכְבָה עִמִּי</span> · <i>va-tomer shikhva-ה imi-y</i><br><span class="gloss">= and-tomer shikhva-ה imi-y</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The two-word demand; the paragraph-camps note.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_39_8 · Gen.39.8 · <span class='expr'>THE_CHAIN_REFUSAL</span></h3>
+<p><span class="he">וַיְמָאֵן וַיֹּאמֶר אֶל־אֵשֶׁת אֲדֹנָיו הֵן אֲדֹנִי לֹא־יָדַע אִתִּי מַה־בַּבָּיִת וְכֹל אֲשֶׁר־יֶשׁ־לוֹ נָתַן בְּיָדִי</span> · <i>va-yemaen va-yomer el-eshet adonay-v hen adoni-y lo-yada et-y ma-ba-bayit ve-khol asher-yesh-l-o natan be-yadi-y</i> · And he refused, and said to his master&#x27;s wife: Behold, my master knows not what is with me in the house, and all that he has he gave into my hand.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְמָאֵ֓ן וַיֹּ֨אמֶר֙ אֶל אֵ֣שֶׁת אֲדֹנָ֔יו הֵ֣ן אֲדֹנִ֔י לֹא יָדַ֥ע אִתִּ֖י מַה בַּבָּ֑יִת</span> · <i>va-yemaen va-yomer el-eshet adonay-v hen adoni-y lo-yada et-y ma-ba-bayit</i> · and he refused — behold, my master knows not what is in the house (etnachta on ba-bayit) [VERIFIED: SNAPSHOT Gen.39.8 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְכֹ֥ל אֲשֶׁר יֶשׁ ל֖וֹ נָתַ֥ן בְּיָדִֽי</span> · <i>ve-khol asher-yesh-l-o natan be-yadi-y</i> · and all that he has he gave into my hand (verse-final be-yadi-y) [VERIFIED: SNAPSHOT Gen.39.8 idx12-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yemaen_hen_adoni(yosef), t0)</span><br><span class="gloss">= HOLDS(and-yemaen-hen-adoni(yosef), t0)</span><br>THE REFUSAL DRAWN OUT [G62-04]. va-yemaEN — the chain-accent (shalshelet) hangs on the refusal-verb, one of the whole Torah&#x27;s FOUR chain-stations [VERIFIED: manifest G62-04]: Bachya&#x27;s principle is stated on this word — from the accents we understand what is not written, as from a man&#x27;s gestures we know his heart: the mark stretches the refusal to its utmost (the tradition hears the struggle inside it, named).
+</td><td><span class="he">וַיְמָאֵן וַיֹּאמֶר</span> · <i>va-yemaen va-yomer</i><br><span class="gloss">= and-yemaen and-yomer</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The shalshelet verse.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_39_9 · Gen.39.9 · <span class='expr'>THE_GREAT_EVIL_NAMED</span></h3>
+<p><span class="he">אֵינֶנּוּ גָדוֹל בַּבַּיִת הַזֶּה מִמֶּנִּי וְלֹא־חָשַׂךְ מִמֶּנִּי מְאוּמָה כִּי אִם־אוֹתָךְ בַּאֲשֶׁר אַתְּ־אִשְׁתּוֹ וְאֵיךְ אֶעֱשֶׂה הָרָעָה הַגְּדֹלָה הַזֹּאת וְחָטָאתִי לֵאלֹהִים</span> · <i>ene-nu gadol ba-bayit ha-ze mime-ni ve-lo-chasakh mime-ni meuma ki im-ota-khe ba-asher et-isht-o ve-ekh eese ha-raa ha-gedola ha-zot ve-chatati le-Elohim</i> · There is none greater in this house than I, and he has withheld nothing from me except you, in that you are his wife; and how shall I do this great evil, and sin against God?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אֵינֶ֨נּוּ גָד֜וֹל בַּבַּ֣יִת הַזֶּה֮ מִמֶּנִּי֒ וְלֹֽא חָשַׂ֤ךְ מִמֶּ֨נִּי֙ מְא֔וּמָה כִּ֥י אִם אוֹתָ֖ךְ בַּאֲשֶׁ֣ר אַתְּ אִשְׁתּ֑וֹ</span> · <i>ene-nu gadol ba-bayit ha-ze mime-ni ve-lo-chasakh mime-ni meuma ki im-ota-khe ba-asher et-isht-o</i> · none is greater in this house than I; he withheld nothing but you, his wife (etnachta on isht-o) [VERIFIED: SNAPSHOT Gen.39.9 idx14 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאֵ֨יךְ אֶֽעֱשֶׂ֜ה הָרָעָ֤ה הַגְּדֹלָה֙ הַזֹּ֔את וְחָטָ֖אתִי לֵֽאלֹהִֽים</span> · <i>ve-ekh eese ha-raa ha-gedola ha-zot ve-chatati le-Elohim</i> · how shall I do this great evil and sin against God (verse-final le-Elohim) [VERIFIED: SNAPSHOT Gen.39.9 idx15-21]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ekh_eese_ha_raa_ha_gedola_ve_chatati_le_Elohim, t0)</span><br><span class="gloss">= HOLDS(ekh-eese-the-raa-the-gedola-and-chatati-to-God, t0)</span><br>THE THREE FENCES. ve-ekh eese ha-raa ha-gedola ha-zot ve-chatati le- ELOHIM — the master&#x27;s trust, the wife&#x27;s status, and God: the refusal climbs to the Name. ha-ze with the zayin dagesheed per MS [G62-10, asserted].
+</td><td><span class="he">וְאֵיךְ אֶעֱשֶׂה הָרָעָה הַגְּדֹלָה הַזֹּאת וְחָטָאתִי לֵאלֹהִים</span> · <i>ve-ekh eese ha-raa ha-gedola ha-zot ve-chatati le-Elohim</i><br><span class="gloss">= and-ekh eese the-raa the-gedola the-this and-chatati to-God</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The refusal&#x27;s reasoning: trust, marriage, God.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_39_10 · Gen.39.10 · <span class='expr'>DAY_BY_DAY</span></h3>
+<p><span class="he">וַיְהִי כְּדַבְּרָהּ אֶל־יוֹסֵף יוֹם יוֹם וְלֹא־שָׁמַע אֵלֶיהָ לִשְׁכַּב אֶצְלָהּ לִהְיוֹת עִמָּהּ</span> · <i>va-yehi ke-dabra-ה el-yosef yom yom ve-lo-shama ele-ha li-shekav etzla-ה li-heot ima-ה</i> · And it was, as she spoke to Joseph day by day, he did not listen to her, to lie beside her, to be with her.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֕י כְּדַבְּרָ֥הּ אֶל יוֹסֵ֖ף י֣וֹם י֑וֹם</span> · <i>va-yehi ke-dabra-ה el-yosef yom yom</i> · as she spoke to Joseph day by day (etnachta on yom) [VERIFIED: SNAPSHOT Gen.39.10 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְלֹא שָׁמַ֥ע אֵלֶ֛יהָ לִשְׁכַּ֥ב אֶצְלָ֖הּ לִהְי֥וֹת עִמָּֽהּ</span> · <i>ve-lo-shama ele-ha li-shekav etzla-ה li-heot ima-ה</i> · he did not listen to her, to lie beside her, to be with her (verse-final ima-ה) [VERIFIED: SNAPSHOT Gen.39.10 idx6-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_lo_shama_eleha_yom_yom(yosef), t0)</span><br><span class="gloss">= HOLDS(and-not-shama-eleha-day-day(yosef), t0)</span><br>THE STANDING REFUSAL. ke-dabrah el yosef YOM YOM ve-lo shama eleha — the open demand renewed daily and daily refused: the machine holds the queue steady while the letter counts the days. The Kitzur&#x27;s letter-sum on &#x27;to be with her&#x27; (= into Gehenna) files named.
+</td><td><span class="he">וַיְהִי כְּדַבְּרָהּ אֶל־יוֹסֵף יוֹם יוֹם</span> · <i>va-yehi ke-dabra-ה el-yosef yom yom</i><br><span class="gloss">= and-yehi like-dabra-ה to-yosef day day</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The standing refusal against the open demand.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_39_11 · Gen.39.11 · <span class='expr'>THE_EMPTY_HOUSE</span></h3>
+<p><span class="he">וַיְהִי כְּהַיּוֹם הַזֶּה וַיָּבֹא הַבַּיְתָה לַעֲשׂוֹת מְלַאכְתּוֹ וְאֵין אִישׁ מֵאַנְשֵׁי הַבַּיִת שָׁם בַּבָּיִת</span> · <i>va-yehi ke-ha-yom ha-ze va-yavo ha-bayta-ה la-asot melakht-o ve-en ish me-anshe ha-bayit sham ba-bayit</i> · And it was, on this day, that he came into the house to do his work; and no man of the men of the house was there in the house.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִי֙ כְּהַיּ֣וֹם הַזֶּ֔ה וַיָּבֹ֥א הַבַּ֖יְתָה לַעֲשׂ֣וֹת מְלַאכְתּ֑וֹ</span> · <i>va-yehi ke-ha-yom ha-ze va-yavo ha-bayta-ה la-asot melakht-o</i> · on this day he came in to do his work (etnachta on melakht-o) [VERIFIED: SNAPSHOT Gen.39.11 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאֵ֨ין אִ֜ישׁ מֵאַנְשֵׁ֥י הַבַּ֛יִת שָׁ֖ם בַּבָּֽיִת</span> · <i>ve-en ish me-anshe ha-bayit sham ba-bayit</i> · and no man of the house was there in the house (verse-final ba-bayit) [VERIFIED: SNAPSHOT Gen.39.11 idx7-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_en_ish_ba_bayit, t0)</span><br><span class="gloss">= HOLDS(and-en-man-in-the-bayit, t0)</span><br>THE CLEARED STAGE. ve-en ish me-anshe ha-bayit sham ba-bayit — the house-word tolls three times in the verse; melakhto (&#x27;his work&#x27;) — the same word the Sabbath rested (2:2-3) and Joseph&#x27;s only other Torah-station carried (39:11 is מלאכתו tok4 of 4, gen_07&#x27;s census closing HERE): the last his-work in the Torah is the errand into the empty house.
+</td><td><span class="he">וְאֵין אִישׁ מֵאַנְשֵׁי הַבַּיִת שָׁם בַּבָּיִת</span> · <i>ve-en ish me-anshe ha-bayit sham ba-bayit</i><br><span class="gloss">= and-en man from-anshe the-bayit there in-the-bayit</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The stage cleared.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_39_12 · Gen.39.12 · <span class='expr'>THE_GARMENT_SEIZED</span></h3>
+<p><span class="he">וַתִּתְפְּשֵׂהוּ בְּבִגְדוֹ לֵאמֹר שִׁכְבָה עִמִּי וַיַּעֲזֹב בִּגְדוֹ בְּיָדָהּ וַיָּנָס וַיֵּצֵא הַחוּצָה</span> · <i>va-titpse-hu be-vigd-o le-mor shikhva-ה imi-y va-yaazov bigd-o be-yada-ה va-yanas va-yetze ha-chutza-ה</i> · And she seized him by his garment, saying: Lie with me. And he left his garment in her hand, and fled and went outside.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתִּתְפְּשֵׂ֧הוּ בְּבִגְד֛וֹ לֵאמֹ֖ר שִׁכְבָ֣ה עִמִּ֑י</span> · <i>va-titpse-hu be-vigd-o le-mor shikhva-ה imi-y</i> · she seized him by his garment: lie with me (etnachta on imi-y) [VERIFIED: SNAPSHOT Gen.39.12 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּעֲזֹ֤ב בִּגְדוֹ֙ בְּיָדָ֔הּ וַיָּ֖נָס וַיֵּצֵ֥א הַחֽוּצָה</span> · <i>va-yaazov bigd-o be-yada-ה va-yanas va-yetze ha-chutza-ה</i> · and he left his garment in her hand and fled outside (verse-final ha-chutza-ה) [VERIFIED: SNAPSHOT Gen.39.12 idx5-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(eshet_adonav, LET(shikhva_imi))</span><br><span class="gloss">= DECLARE(wife-of-adonav, LET(shikhva-imi))</span><br>THE DEMAND SEIZES. va-titpesehu BE-VIGDO lemor shikhva imi — the two-word demand pushed a second time, now with a hand on the cloth; both pushes stay open: the queue carries the doubled refusal to the span&#x27;s end.
+</td><td><span class="he">וַתִּתְפְּשֵׂהוּ בְּבִגְדוֹ לֵאמֹר שִׁכְבָה עִמִּי</span> · <i>va-titpse-hu be-vigd-o le-mor shikhva-ה imi-y</i><br><span class="gloss">= and-titpse-that in-vigd-o to-mor shikhva-ה imi-y</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">azav(e1); Agent(e1, yosef); Theme(e1, beged)</span><br><span class="gloss">= leave(e1); Agent(e1, yosef); Theme(e1, beged)</span><br>THE THIRD GARMENT-CODE. va-yaazov bigdo be-yadah va-yanas — the coat stripped (37:23), the veil swapped (38:14), now the cloak abandoned: three units, three garments doing the narrative&#x27;s lying and truth- telling; bigdo runs six times through this chapter, always as evidence.
+</td><td><span class="he">וַיַּעֲזֹב בִּגְדוֹ בְּיָדָהּ וַיָּנָס וַיֵּצֵא הַחוּצָה</span> · <i>va-yaazov bigd-o be-yada-ה va-yanas va-yetze ha-chutza-ה</i><br><span class="gloss">= and-yaazov bigd-o in-yada-ה and-yanas and-yetze the-chutza-ה</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The second push; the garment changes hands.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_39_13 · Gen.39.13 · <span class='expr'>THE_EVIDENCE_READ</span></h3>
+<p><span class="he">וַיְהִי כִּרְאוֹתָהּ כִּי־עָזַב בִּגְדוֹ בְּיָדָהּ וַיָּנָס הַחוּצָה</span> · <i>va-yehi ki-reota-ה ki-azav bigd-o be-yada-ה va-yanas ha-chutza-ה</i> · And it was, when she saw that he had left his garment in her hand, and fled outside,</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִי֙ כִּרְאוֹתָ֔הּ כִּֽי עָזַ֥ב בִּגְד֖וֹ בְּיָדָ֑הּ</span> · <i>va-yehi ki-reota-ה ki-azav bigd-o be-yada-ה</i> · when she saw that he left his garment in her hand (etnachta on be-yada-ה) [VERIFIED: SNAPSHOT Gen.39.13 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיָּ֖נָס הַחֽוּצָה</span> · <i>va-yanas ha-chutza-ה</i> · and fled outside (verse-final ha-chutza-ה) [VERIFIED: SNAPSHOT Gen.39.13 idx6-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(raata_ki_azav_bigdo_be_yadah, t0)</span><br><span class="gloss">= HOLDS(raata-when-leave-bigdo-in-yadah, t0)</span><br>THE EVIDENCE INVERTED. ki-reotah ki azav bigdo be-yadah — she reads the abandoned cloth as her script: the chapter&#x27;s hand-word now holds the lie.
+</td><td><span class="he">וַיְהִי כִּרְאוֹתָהּ כִּי־עָזַב בִּגְדוֹ בְּיָדָהּ</span> · <i>va-yehi ki-reota-ה ki-azav bigd-o be-yada-ה</i><br><span class="gloss">= and-yehi when-reota-ה when-leave bigd-o in-yada-ה</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The garment becomes her text.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_39_14 · Gen.39.14 · <span class='expr'>THE_HOUSEHOLD_SPEECH</span></h3>
+<p><span class="he">וַתִּקְרָא לְאַנְשֵׁי בֵיתָהּ וַתֹּאמֶר לָהֶם לֵאמֹר רְאוּ הֵבִיא לָנוּ אִישׁ עִבְרִי לְצַחֶק בָּנוּ בָּא אֵלַי לִשְׁכַּב עִמִּי וָאֶקְרָא בְּקוֹל גָּדוֹל</span> · <i>va-tiqra le-anshe veta-ה va-tomer la-hem le-mor reu hevi la-nu ish ivri le-tzacheq ba-nu ba el-y li-shekav imi-y va-eqra be-qol gadol</i> · that she called to the men of her house and said to them, saying: See — he brought us a Hebrew man to mock us; he came to me to lie with me, and I called with a great voice.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתִּקְרָ֞א לְאַנְשֵׁ֣י בֵיתָ֗הּ וַתֹּ֤אמֶר לָהֶם֙ לֵאמֹ֔ר רְא֗וּ הֵ֥בִיא לָ֛נוּ אִ֥ישׁ עִבְרִ֖י לְצַ֣חֶק בָּ֑נוּ</span> · <i>va-tiqra le-anshe veta-ה va-tomer la-hem le-mor reu hevi la-nu ish ivri le-tzacheq ba-nu</i> · she called the men of her house: see, he brought us a Hebrew man to mock us (etnachta on ba-nu) [VERIFIED: SNAPSHOT Gen.39.14 idx12 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">בָּ֤א אֵלַי֙ לִשְׁכַּ֣ב עִמִּ֔י וָאֶקְרָ֖א בְּק֥וֹל גָּדֽוֹל</span> · <i>ba el-y li-shekav imi-y va-eqra be-qol gadol</i> · he came to me to lie with me, and I called with a great voice (verse-final gadol) [VERIFIED: SNAPSHOT Gen.39.14 idx13-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(qara_le_anshe_veta_hevi_lanu_ish_ivri, t0)</span><br><span class="gloss">= HOLDS(qara-to-anshe-veta-hevi-lanu-man-ivri, t0)</span><br>THE FIRST TELLING. reu hevi LANU ish ivri le-tzacheq BANU — she indicts her own husband (&#x27;he brought us&#x27;) and borrows the mock-verb of Lot&#x27;s sons-in-law and Ishmael (19:14, 21:9): the laughter-word&#x27;s dark track. Her cry is claimed, not narrated: the letter records only her report of it.
+</td><td><span class="he">רְאוּ הֵבִיא לָנוּ אִישׁ עִבְרִי לְצַחֶק בָּנוּ</span> · <i>reu hevi la-nu ish ivri le-tzacheq ba-nu</i><br><span class="gloss">= reu hevi to-nu man ivri to-tzacheq in-the-nu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The first telling: the master blamed, the cry claimed.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_39_15 · Gen.39.15 · <span class='expr'>THE_RAISED_VOICE</span></h3>
+<p><span class="he">וַיְהִי כְשָׁמְעוֹ כִּי־הֲרִימֹתִי קוֹלִי וָאֶקְרָא וַיַּעֲזֹב בִּגְדוֹ אֶצְלִי וַיָּנָס וַיֵּצֵא הַחוּצָה</span> · <i>va-yehi khe-sham-o ki-harimoti qoli-y va-eqra va-yaazov bigd-o etzli-y va-yanas va-yetze ha-chutza-ה</i> · And it was, when he heard that I raised my voice and called,</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֣י כְשָׁמְע֔וֹ כִּֽי הֲרִימֹ֥תִי קוֹלִ֖י וָאֶקְרָ֑א</span> · <i>va-yehi khe-sham-o ki-harimoti qoli-y va-eqra</i> · when he heard that I raised my voice (etnachta on va-eqra) [VERIFIED: SNAPSHOT Gen.39.15 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּעֲזֹ֤ב בִּגְדוֹ֙ אֶצְלִ֔י וַיָּ֖נָס וַיֵּצֵ֥א הַחֽוּצָה</span> · <i>va-yaazov bigd-o etzli-y va-yanas va-yetze ha-chutza-ה</i> · and called (verse-final ha-chutza-ה) [VERIFIED: SNAPSHOT Gen.39.15 idx6-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(harimoti_qoli_va_eqra(eshet_adonav), t0)</span><br><span class="gloss">= HOLDS(harimoti-qoli-and-eqra(wife-of-adonav), t0)</span><br>THE RAISED HAND AND THE RAISED VOICE [G62-07]. HARIMOTI qoli — the I-raised word stands exactly twice in the Torah: Abram&#x27;s hand lifted in the oath that refused Sodom&#x27;s spoil (14:22), and this voice lifted in the false cry [VERIFIED: manifest G62-07]: the same word carries an oath and a lie.
+</td><td><span class="he">כִּי־הֲרִימֹתִי קוֹלִי וָאֶקְרָא</span> · <i>ki-harimoti qoli-y va-eqra</i><br><span class="gloss">= when-harimoti qoli-y and-eqra</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The oath-word raised as a lie.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_39_16 · Gen.39.16 · <span class='expr'>THE_GARMENT_WAITS</span></h3>
+<p><span class="he">וַתַּנַּח בִּגְדוֹ אֶצְלָהּ עַד־בּוֹא אֲדֹנָיו אֶל־בֵּיתוֹ</span> · <i>va-tanach bigd-o etzla-ה ad-bo adonay-v el-bet-o</i> · And she laid his garment beside her until his master came to his house.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתַּנַּ֥ח בִּגְד֖וֹ אֶצְלָ֑הּ</span> · <i>va-tanach bigd-o etzla-ה</i> · and she laid his garment beside her (etnachta on etzla-ה) [VERIFIED: SNAPSHOT Gen.39.16 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">עַד בּ֥וֹא אֲדֹנָ֖יו אֶל בֵּיתֽוֹ</span> · <i>ad-bo adonay-v el-bet-o</i> · until his master came to his house (verse-final bet-o) [VERIFIED: SNAPSHOT Gen.39.16 idx3-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_tanach_bigdo_etzlah_ad_bo_adonav, t0)</span><br><span class="gloss">= HOLDS(and-tanach-bigdo-etzlah-until-in-it-adonav, t0)</span><br>THE STAGED CLOTH. va-tanach bigdo ETZLAH — the garment rests beside her as the coat rested before Jacob: the third unit running whose central witness is cloth.
+</td><td><span class="he">וַתַּנַּח בִּגְדוֹ אֶצְלָהּ</span> · <i>va-tanach bigd-o etzla-ה</i><br><span class="gloss">= and-tanach bigd-o etzla-ה</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The evidence staged.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_39_17 · Gen.39.17 · <span class='expr'>THE_SECOND_TELLING</span></h3>
+<p><span class="he">וַתְּדַבֵּר אֵלָיו כַּדְּבָרִים הָאֵלֶּה לֵאמֹר בָּא־אֵלַי הָעֶבֶד הָעִבְרִי אֲשֶׁר־הֵבֵאתָ לָּנוּ לְצַחֶק בִּי</span> · <i>va-tedaber elay-v ka-devarim ha-ele le-mor ba-el-y ha-eved ha-ivri asher-heveta la-nu le-tzacheq bi-y</i> · And she spoke to him according to these words, saying: The Hebrew slave whom you brought us came to me, to mock me.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתְּדַבֵּ֣ר אֵלָ֔יו כַּדְּבָרִ֥ים הָאֵ֖לֶּה לֵאמֹ֑ר</span> · <i>va-tedaber elay-v ka-devarim ha-ele le-mor</i> · she spoke to him according to these words (etnachta on le-mor) [VERIFIED: SNAPSHOT Gen.39.17 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">בָּֽא אֵלַ֞י הָעֶ֧בֶד הָֽעִבְרִ֛י אֲשֶׁר הֵבֵ֥אתָ לָּ֖נוּ לְצַ֥חֶק בִּֽי</span> · <i>ba-el-y ha-eved ha-ivri asher-heveta la-nu le-tzacheq bi-y</i> · the Hebrew slave you brought us came to me, to mock me (verse-final bi-y) [VERIFIED: SNAPSHOT Gen.39.17 idx5-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ba_elay_ha_eved_ha_ivri_le_tzacheq_bi, t0)</span><br><span class="gloss">= HOLDS(in-the-elay-the-eved-the-ivri-to-tzacheq-bi, t0)</span><br>THE RETELLING&#x27;S SHIFTS. ha-EVED ha-ivri (&#x27;the Hebrew SLAVE&#x27; — the man is demoted between tellings) asher heveta LANU (&#x27;whom YOU brought&#x27;) — the husband still indicted; le-tzacheq BI now, not BANU: the mock-victim narrows from household to wife. The chet in segol per MS [G62-10, asserted]. The two-telling variance is the letter&#x27;s own record of a rehearsed lie.
+</td><td><span class="he">בָּא־אֵלַי הָעֶבֶד הָעִבְרִי אֲשֶׁר־הֵבֵאתָ לָּנוּ לְצַחֶק</span> · <i>ba-el-y ha-eved ha-ivri asher-heveta la-nu le-tzacheq</i><br><span class="gloss">= in-the-to-y the-eved the-ivri which-heveta to-nu to-tzacheq</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The retelling shifts its terms.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_39_18 · Gen.39.18 · <span class='expr'>THE_QUOTED_CRY</span></h3>
+<p><span class="he">וַיְהִי כַּהֲרִימִי קוֹלִי וָאֶקְרָא וַיַּעֲזֹב בִּגְדוֹ אֶצְלִי וַיָּנָס הַחוּצָה</span> · <i>va-yehi ka-harimi-y qoli-y va-eqra va-yaazov bigd-o etzli-y va-yanas ha-chutza-ה</i> · And it was, as I raised my voice and called, that he left his garment beside me and fled outside.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֕י כַּהֲרִימִ֥י קוֹלִ֖י וָאֶקְרָ֑א</span> · <i>va-yehi ka-harimi-y qoli-y va-eqra</i> · as I raised my voice and called (etnachta on va-eqra) [VERIFIED: SNAPSHOT Gen.39.18 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּעֲזֹ֥ב בִּגְד֛וֹ אֶצְלִ֖י וַיָּ֥נָס הַחֽוּצָה</span> · <i>va-yaazov bigd-o etzli-y va-yanas ha-chutza-ה</i> · he left his garment beside me and fled outside (verse-final ha-chutza-ה) [VERIFIED: SNAPSHOT Gen.39.18 idx4-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ka_harimi_qoli_va_yaazov_bigdo_etzli, t0)</span><br><span class="gloss">= HOLDS(like-harimi-qoli-and-yaazov-bigdo-etzli, t0)</span><br>THE COMPOUND MARK [G62-10]. KA-HARIMI qoli — the he under the kaf carries sheva-and-patach (the compound half-vowel), checked in- stream [VERIFIED: manifest G62-10]; MS&#x27;s accent-file on the verse (the books&#x27; merkha/tevir/tifcha shuffles on va-yaazov-bigdo-etzli) recorded named. etzli — &#x27;beside ME&#x27;: the garment&#x27;s location testifies for her.
+</td><td><span class="he">וַיְהִי כַּהֲרִימִי קוֹלִי וָאֶקְרָא</span> · <i>va-yehi ka-harimi-y qoli-y va-eqra</i><br><span class="gloss">= and-yehi like-harimi-y qoli-y and-eqra</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The pointing crown under the guttural.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_39_19 · Gen.39.19 · <span class='expr'>THE_ANGER</span></h3>
+<p><span class="he">וַיְהִי כִשְׁמֹעַ אֲדֹנָיו אֶת־דִּבְרֵי אִשְׁתּוֹ אֲשֶׁר דִּבְּרָה אֵלָיו לֵאמֹר כַּדְּבָרִים הָאֵלֶּה עָשָׂהּ לִי עַבְדֶּךָ וַיִּחַר אַפּוֹ</span> · <i>va-yehi khi-shemoa adonay-v et-divre isht-o asher dibra elay-v le-mor ka-devarim ha-ele asa li-y avde-kha va-yichar ap-o</i> · And it was, when his master heard the words of his wife which she spoke to him, saying: According to these words your slave did to me — his anger burned.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִי֩ כִשְׁמֹ֨עַ אֲדֹנָ֜יו אֶת דִּבְרֵ֣י אִשְׁתּ֗וֹ אֲשֶׁ֨ר דִּבְּרָ֤ה אֵלָיו֙ לֵאמֹ֔ר כַּדְּבָרִ֣ים הָאֵ֔לֶּה עָ֥שָׂהּ לִ֖י עַבְדֶּ֑ךָ</span> · <i>va-yehi khi-shemoa adonay-v et-divre isht-o asher dibra elay-v le-mor ka-devarim ha-ele asa li-y avde-kha</i> · when his master heard his wife&#x27;s words — thus your slave did to me (etnachta on avde-kha) [VERIFIED: SNAPSHOT Gen.39.19 idx14 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּ֖חַר אַפּֽוֹ</span> · <i>va-yichar ap-o</i> · his anger burned (verse-final ap-o) [VERIFIED: SNAPSHOT Gen.39.19 idx15-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yichar_apo(adonav), t0)</span><br><span class="gloss">= HOLDS(and-yichar-apo(adonav), t0)</span><br>THE ANGER ON HEARSAY. va-yichar apo — the letter never says at whom; the reading tradition splits the anger (at Joseph with his wife&#x27;s words / at the situation, knowing her — named): the machine records only the burning.
+</td><td><span class="he">עַבְדֶּךָ וַיִּחַר</span> · <i>avde-kha va-yichar</i><br><span class="gloss">= avde-kha and-yichar</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The verdict on hearsay.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_39_20 · Gen.39.20 · <span class='expr'>INTO_THE_ROUND_HOUSE</span></h3>
+<p><span class="he">וַיִּקַּח אֲדֹנֵי יוֹסֵף אֹתוֹ וַיִּתְּנֵהוּ אֶל־בֵּית הַסֹּהַר מְקוֹם אֲשֶׁר־אסורי אֲסִירֵי הַמֶּלֶךְ אֲסוּרִים וַיְהִי־שָׁם בְּבֵית הַסֹּהַר</span> · <i>va-yiqach adone yosef et-o va-yitne-hu el-bet ha-sohar meqom asher-svry asire ha-melekh asurim va-yehi-sham be-vet ha-sohar</i> · And Joseph&#x27;s master took him and gave him to the prison-house, the place where the king&#x27;s prisoners were bound; and he was there in the prison-house.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּקַּח֩ אֲדֹנֵ֨י יוֹסֵ֜ף אֹת֗וֹ וַֽיִּתְּנֵ֨הוּ֙ אֶל בֵּ֣ית הַסֹּ֔הַר מְק֕וֹם אֲשֶׁר אסורי אֲסִירֵ֥י הַמֶּ֖לֶךְ אֲסוּרִ֑ים</span> · <i>va-yiqach adone yosef et-o va-yitne-hu el-bet ha-sohar meqom asher-svry asire ha-melekh asurim</i> · his master took him and gave him to the prison-house, where the king&#x27;s prisoners were bound (etnachta on asurim) [VERIFIED: SNAPSHOT Gen.39.20 idx13 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַֽיְהִי שָׁ֖ם בְּבֵ֥ית הַסֹּֽהַר</span> · <i>va-yehi-sham be-vet ha-sohar</i> · and he was there in the prison-house (verse-final ha-sohar) [VERIFIED: SNAPSHOT Gen.39.20 idx14-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(netano_el_bet_ha_sohar(adone_yosef), t0)</span><br><span class="gloss">= HOLDS(netano-to-bet-the-sohar(adone-yosef), t0)</span><br>THE PRISONERS&#x27; TWO SPELLINGS [G62-02/06]. meqom asher ASURE ha- melekh asurim — written with vav, read with yod: the FIRST of the Great Masorah&#x27;s alphabet of vav-written yod-read words, carried in SNAPSHOT as the two-token pair [VERIFIED: manifest G62-02]; the Kitzur counts the sentence in it — ten years for the slander of ten brothers, two for the two remember-me&#x27;s. And asurim (&#x27;bound&#x27;) has exactly two Torah stations, both Joseph&#x27;s prison (39:20, 40:5), the third being &#x27;the LORD releases the bound&#x27; (Psalms, named) [VERIFIED: G62-06].
+</td><td><span class="he">מְקוֹם אֲשֶׁר־אסורי אֲסִירֵי הַמֶּלֶךְ אֲסוּרִים</span> · <i>meqom asher-svry asire ha-melekh asurim</i><br><span class="gloss">= meqom which-svry asire the-melekh asurim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The written-vav read-yod station.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_39_21 · Gen.39.21 · <span class='expr'>CHESED_IN_THE_PIT</span></h3>
+<p><span class="he">וַיְהִי יְהוָה אֶת־יוֹסֵף וַיֵּט אֵלָיו חָסֶד וַיִּתֵּן חִנּוֹ בְּעֵינֵי שַׂר בֵּית־הַסֹּהַר</span> · <i>va-yehi YHWH et-yosef va-yet elay-v chased va-yiten chin-o be-ene sar bet-ha-sohar</i> · And the LORD was with Joseph, and extended kindness to him, and gave his favor in the eyes of the chief of the prison-house.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֤י יְהוָה֙ אֶת יוֹסֵ֔ף וַיֵּ֥ט אֵלָ֖יו חָ֑סֶד</span> · <i>va-yehi YHWH et-yosef va-yet elay-v chased</i> · and the LORD was with Joseph and extended kindness to him (etnachta on chased) [VERIFIED: SNAPSHOT Gen.39.21 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּתֵּ֣ן חִנּ֔וֹ בְּעֵינֵ֖י שַׂ֥ר בֵּית הַסֹּֽהַר</span> · <i>va-yiten chin-o be-ene sar bet-ha-sohar</i> · and gave his favor in the eyes of the prison chief (verse-final ha-sohar) [VERIFIED: SNAPSHOT Gen.39.21 idx7-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yet_elav_chased_ve_chino_be_ene_sar_bet_ha_sohar, t0)</span><br><span class="gloss">= HOLDS(and-yet-to-him-chased-and-chino-in-ene-sar-bet-the-sohar, t0)</span><br>THE REFRAIN INSIDE. va-yehi YHWH et yosef va-yet elav CHASED — the with-him formula crosses the prison wall intact; favor found again (chen, as at 39:4): the chapter&#x27;s architecture repeats itself one level down.
+</td><td><span class="he">וַיְהִי יְהוָה אֶת־יוֹסֵף וַיֵּט אֵלָיו חָסֶד</span> · <i>va-yehi YHWH et-yosef va-yet elay-v chased</i><br><span class="gloss">= and-yehi the-LORD yosef and-yet elay-v chased</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The refrain returns inside the walls.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_39_22 · Gen.39.22 · <span class='expr'>ALL_IN_HIS_HAND_AGAIN</span></h3>
+<p><span class="he">וַיִּתֵּן שַׂר בֵּית־הַסֹּהַר בְּיַד־יוֹסֵף אֵת כָּל־הָאֲסִירִם אֲשֶׁר בְּבֵית הַסֹּהַר וְאֵת כָּל־אֲשֶׁר עֹשִׂים שָׁם הוּא הָיָה עֹשֶׂה</span> · <i>va-yiten sar bet-ha-sohar be-yad-yosef et kal-ha-asirim asher be-vet ha-sohar ve-et kal-asher osim sham hu haya ose</i> · And the chief of the prison-house gave into Joseph&#x27;s hand all the prisoners in the prison-house; and all that they did there, he was the doer.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּתֵּ֞ן שַׂ֤ר בֵּית הַסֹּ֨הַר֙ בְּיַד יוֹסֵ֔ף אֵ֚ת כָּל הָ֣אֲסִירִ֔ם אֲשֶׁ֖ר בְּבֵ֣ית הַסֹּ֑הַר</span> · <i>va-yiten sar bet-ha-sohar be-yad-yosef et kal-ha-asirim asher be-vet ha-sohar</i> · the prison chief gave all the prisoners into Joseph&#x27;s hand (etnachta on ha-sohar) [VERIFIED: SNAPSHOT Gen.39.22 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאֵ֨ת כָּל אֲשֶׁ֤ר עֹשִׂים֙ שָׁ֔ם ה֖וּא הָיָ֥ה עֹשֶֽׂה</span> · <i>ve-et kal-asher osim sham hu haya ose</i> · and all that they did there, he was the doer (verse-final ose) [VERIFIED: SNAPSHOT Gen.39.22 idx12-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(natan_be_yad_yosef_et_kal_ha_asirim, t0)</span><br><span class="gloss">= HOLDS(natan-in-yad-yosef-kal-the-asirim, t0)</span><br>THE CORRECTED WORD [G62-03]. et kal HA-ASIRIM — the printer muddled this token into the written/read list and Minchat Kohen followed; MS restores it with the Ramah, the Meiri, and the Hilleli&#x27;s own note: yod after the samekh, lean second yod, no pair, marked unique — and SNAPSHOT writes exactly that [VERIFIED: manifest G62-03]. be-yad yosef — the hand-word completes its arc: prosperity, seized cloth, and now custody.
+</td><td><span class="he">אֵת כָּל־הָאֲסִירִם אֲשֶׁר בְּבֵית הַסֹּהַר</span> · <i>et kal-ha-asirim asher be-vet ha-sohar</i><br><span class="gloss">= et kal-the-asirim which in-vet the-sohar</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The corrected spelling station.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_39_23 · Gen.39.23 · <span class='expr'>THE_UNSEEN_OVERSEER</span></h3>
+<p><span class="he">אֵין שַׂר בֵּית־הַסֹּהַר רֹאֶה אֶת־כָּל־מְאוּמָה בְּיָדוֹ בַּאֲשֶׁר יְהוָה אִתּוֹ וַאֲשֶׁר־הוּא עֹשֶׂה יְהוָה מַצְלִיחַ</span> · <i>en sar bet-ha-sohar roe et-kal-meuma be-yad-o ba-asher YHWH et-o va-asher-hu ose YHWH matzlicha</i> · The chief of the prison-house saw not any thing in his hand, in that the LORD was with him; and what he did, the LORD made prosper.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אֵ֣ין שַׂ֣ר בֵּית הַסֹּ֗הַר רֹאֶ֤ה אֶֽת כָּל מְא֨וּמָה֙ בְּיָד֔וֹ בַּאֲשֶׁ֥ר יְהוָ֖ה אִתּ֑וֹ</span> · <i>en sar bet-ha-sohar roe et-kal-meuma be-yad-o ba-asher YHWH et-o</i> · the prison chief saw not any thing in his hand, for the LORD was with him (etnachta on et-o) [VERIFIED: SNAPSHOT Gen.39.23 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַֽאֲשֶׁר ה֥וּא עֹשֶׂ֖ה יְהוָ֥ה מַצְלִֽיחַ</span> · <i>va-asher-hu ose YHWH matzlicha</i> · and what he did, the LORD made prosper (verse-final matzlicha) [VERIFIED: SNAPSHOT Gen.39.23 idx12-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(YHWH_ito_va_asher_hu_ose_YHWH_matzliach, t0)</span><br><span class="gloss">= HOLDS(the-LORD-with-him-and-which-that-ose-the-LORD-matzliach, t0)</span><br>THE DROPPED HAND [G62-11]. va-asher hu ose YHWH MATZLIACH — the Kitzur: the closing refrain omits &#x27;in his hand&#x27; (against 39:3), for in prison he had no business in his hand. roe et-kal: MS rules the et maqqefed without a stress-stroke — SNAPSHOT joins the maqqef but WRITES the meteg his books omit: pointing DISCREPANCY, filed [VERIFIED: G62-11]. The span ends with the doubled lie-demand still open on the queue and the refusal never revoked: the machine&#x27;s cleanest record of integrity as an unresolved state.
+</td><td><span class="he">בַּאֲשֶׁר יְהוָה אִתּוֹ וַאֲשֶׁר־הוּא עֹשֶׂה יְהוָה מַצְלִיחַ</span> · <i>ba-asher YHWH et-o va-asher-hu ose YHWH matzlicha</i><br><span class="gloss">= in-the-which the-LORD o and-which-that ose the-LORD matzlicha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The refrain closes; the final prosper drops &#x27;in his hand&#x27;.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Gn_39_1 — bought by Potiphar</td><td>And Joseph was brought down to Egypt; and Potiphar, Pharaoh&#x27;s officer, the chief of the slaughterers, an Egyptian man, bought him from the hand of the Ishmaelites who had brought him down there.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וְיוֹסֵ֖ף הוּרַ֣ד מִצְרָ֑יְמָה וַיִּקְנֵ֡הוּ</span> · <i>ve-yosef hurad mitzrayma-ה va-yiqne-hu</i><br><span class="gloss">= and-yosef hurad mitzrayma-ה and-yiqne-that</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Gn_39_2 — the LORD with him</td><td>And the LORD was with Joseph, and he was a prospering man; and he was in the house of his master the Egyptian.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיְהִ֤י יְהוָה֙ אֶת יוֹסֵ֔ף</span> · <i>va-yehi YHWH et-yosef</i><br><span class="gloss">= and-yehi the-LORD yosef</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Gn_39_3 — the master sees</td><td>And his master saw that the LORD was with him, and all that he did the LORD made prosper in his hand.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיַּ֣רְא אֲדֹנָ֔יו כִּ֥י יְהוָ֖ה</span> · <i>va-yar adonay-v ki YHWH</i><br><span class="gloss">= and-yar adonay-v when the-LORD</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Gn_39_4 — appointed over the house</td><td>And Joseph found favor in his eyes, and he served him; and he appointed him over his house, and all he had he gave into his hand.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיִּמְצָ֨א יוֹסֵ֥ף חֵ֛ן בְּעֵינָ֖יו</span> · <i>va-yimtza yosef chen be-enay-v</i><br><span class="gloss">= and-yimtza yosef chen in-enay-v</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Gn_39_5 — the blessing for his sake</td><td>And it was, from the time he appointed him in his house and over all that he had, the LORD blessed the Egyptian&#x27;s house for Joseph&#x27;s sake; and the LORD&#x27;s blessing was on all he had, in the house and in the field.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיְהִ֡י מֵאָז֩ הִפְקִ֨יד אֹת֜וֹ</span> · <i>va-yehi me-az hifqid et-o</i><br><span class="gloss">= and-yehi from-az hifqid o</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Gn_39_6 — the beauty note</td><td>And he left all that he had in Joseph&#x27;s hand, and knew nothing with him except the bread that he ate; and Joseph was beautiful of form and beautiful of appearance.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיַּעֲזֹ֣ב כָּל אֲשֶׁר לוֹ֮</span> · <i>va-yaazov kal-asher-l-o</i><br><span class="gloss">= and-yaazov kal-which-l-o</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Gn_39_7 — the demand pushed</td><td>And it was after these things, and his master&#x27;s wife lifted her eyes to Joseph, and said: Lie with me.</td><td>LET(shikhva_imi) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shikhva-imi) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְהִ֗י אַחַר֙ הַדְּבָרִ֣ים הָאֵ֔לֶּה</span> · <i>va-yehi achar ha-devarim ha-ele</i><br><span class="gloss">= and-yehi achar the-devarim the-ele</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Gn_39_8 — the chain refusal</td><td>And he refused, and said to his master&#x27;s wife: Behold, my master knows not what is with me in the house, and all that he has he gave into my hand.</td><td>LET(shikhva_imi) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shikhva-imi) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְמָאֵ֓ן וַיֹּ֨אמֶר֙ אֶל אֵ֣שֶׁת</span> · <i>va-yemaen va-yomer el-eshet</i><br><span class="gloss">= and-yemaen and-yomer to-wife-of</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Gn_39_9 — the great evil named</td><td>There is none greater in this house than I, and he has withheld nothing from me except you, in that you are his wife; and how shall I do this great evil, and sin against God?</td><td>LET(shikhva_imi) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shikhva-imi) pushed and OPEN; no test, no name.</span></td><td><span class="he">אֵינֶ֨נּוּ גָד֜וֹל בַּבַּ֣יִת הַזֶּה֮</span> · <i>ene-nu gadol ba-bayit ha-ze</i><br><span class="gloss">= ene-nu gadol in-the-bayit the-ze</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Gn_39_10 — day by day</td><td>And it was, as she spoke to Joseph day by day, he did not listen to her, to lie beside her, to be with her.</td><td>LET(shikhva_imi) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shikhva-imi) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְהִ֕י כְּדַבְּרָ֥הּ אֶל יוֹסֵ֖ף</span> · <i>va-yehi ke-dabra-ה el-yosef</i><br><span class="gloss">= and-yehi like-dabra-ה to-yosef</span></td></tr>
+<tr><td><b>S11</b></td><td>after STEP_Gn_39_11 — the empty house</td><td>And it was, on this day, that he came into the house to do his work; and no man of the men of the house was there in the house.</td><td>LET(shikhva_imi) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shikhva-imi) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְהִי֙ כְּהַיּ֣וֹם הַזֶּ֔ה וַיָּבֹ֥א</span> · <i>va-yehi ke-ha-yom ha-ze va-yavo</i><br><span class="gloss">= and-yehi day the-ze and-yavo</span></td></tr>
+<tr><td><b>S12</b></td><td>after STEP_Gn_39_12 — the garment seized</td><td>And she seized him by his garment, saying: Lie with me. And he left his garment in her hand, and fled and went outside.</td><td>LET(shikhva_imi) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shikhva-imi) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַתִּתְפְּשֵׂ֧הוּ בְּבִגְד֛וֹ לֵאמֹ֖ר שִׁכְבָ֣ה</span> · <i>va-titpse-hu be-vigd-o le-mor shikhva-ה</i><br><span class="gloss">= and-titpse-that in-vigd-o to-mor shikhva-ה</span></td></tr>
+<tr><td><b>S13</b></td><td>after STEP_Gn_39_13 — the evidence read</td><td>And it was, when she saw that he had left his garment in her hand, and fled outside,</td><td>LET(shikhva_imi) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shikhva-imi) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְהִי֙ כִּרְאוֹתָ֔הּ כִּֽי עָזַ֥ב</span> · <i>va-yehi ki-reota-ה ki-azav</i><br><span class="gloss">= and-yehi when-reota-ה when-leave</span></td></tr>
+<tr><td><b>S14</b></td><td>after STEP_Gn_39_14 — the household speech</td><td>that she called to the men of her house and said to them, saying: See — he brought us a Hebrew man to mock us; he came to me to lie with me, and I called with a great voice.</td><td>LET(shikhva_imi) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shikhva-imi) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַתִּקְרָ֞א לְאַנְשֵׁ֣י בֵיתָ֗הּ וַתֹּ֤אמֶר</span> · <i>va-tiqra le-anshe veta-ה va-tomer</i><br><span class="gloss">= and-tiqra to-anshe veta-ה and-tomer</span></td></tr>
+<tr><td><b>S15</b></td><td>after STEP_Gn_39_15 — the raised voice</td><td>And it was, when he heard that I raised my voice and called,</td><td>LET(shikhva_imi) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shikhva-imi) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְהִ֣י כְשָׁמְע֔וֹ כִּֽי הֲרִימֹ֥תִי</span> · <i>va-yehi khe-sham-o ki-harimoti</i><br><span class="gloss">= and-yehi khe-there-o when-harimoti</span></td></tr>
+<tr><td><b>S16</b></td><td>after STEP_Gn_39_16 — the garment waits</td><td>And she laid his garment beside her until his master came to his house.</td><td>LET(shikhva_imi) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shikhva-imi) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַתַּנַּ֥ח בִּגְד֖וֹ אֶצְלָ֑הּ עַד</span> · <i>va-tanach bigd-o etzla-ה ad-</i><br><span class="gloss">= and-tanach bigd-o etzla-ה until</span></td></tr>
+<tr><td><b>S17</b></td><td>after STEP_Gn_39_17 — the second telling</td><td>And she spoke to him according to these words, saying: The Hebrew slave whom you brought us came to me, to mock me.</td><td>LET(shikhva_imi) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shikhva-imi) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַתְּדַבֵּ֣ר אֵלָ֔יו כַּדְּבָרִ֥ים הָאֵ֖לֶּה</span> · <i>va-tedaber elay-v ka-devarim ha-ele</i><br><span class="gloss">= and-tedaber elay-v like-devarim the-ele</span></td></tr>
+<tr><td><b>S18</b></td><td>after STEP_Gn_39_18 — the quoted cry</td><td>And it was, as I raised my voice and called, that he left his garment beside me and fled outside.</td><td>LET(shikhva_imi) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shikhva-imi) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְהִ֕י כַּהֲרִימִ֥י קוֹלִ֖י וָאֶקְרָ֑א</span> · <i>va-yehi ka-harimi-y qoli-y va-eqra</i><br><span class="gloss">= and-yehi like-harimi-y qoli-y and-eqra</span></td></tr>
+<tr><td><b>S19</b></td><td>after STEP_Gn_39_19 — the anger</td><td>And it was, when his master heard the words of his wife which she spoke to him, saying: According to these words your slave did to me — his anger burned.</td><td>LET(shikhva_imi) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shikhva-imi) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְהִי֩ כִשְׁמֹ֨עַ אֲדֹנָ֜יו אֶת</span> · <i>va-yehi khi-shemoa adonay-v et-</i><br><span class="gloss">= and-yehi khi-shemoa adonay-v et-</span></td></tr>
+<tr><td><b>S20</b></td><td>after STEP_Gn_39_20 — into the round house</td><td>And Joseph&#x27;s master took him and gave him to the prison-house, the place where the king&#x27;s prisoners were bound; and he was there in the prison-house.</td><td>LET(shikhva_imi) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shikhva-imi) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּקַּח֩ אֲדֹנֵ֨י יוֹסֵ֜ף אֹת֗וֹ</span> · <i>va-yiqach adone yosef et-o</i><br><span class="gloss">= and-yiqach adone yosef o</span></td></tr>
+<tr><td><b>S21</b></td><td>after STEP_Gn_39_21 — kindness in the pit</td><td>And the LORD was with Joseph, and extended kindness to him, and gave his favor in the eyes of the chief of the prison-house.</td><td>LET(shikhva_imi) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shikhva-imi) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְהִ֤י יְהוָה֙ אֶת יוֹסֵ֔ף</span> · <i>va-yehi YHWH et-yosef</i><br><span class="gloss">= and-yehi the-LORD yosef</span></td></tr>
+<tr><td><b>S22</b></td><td>after STEP_Gn_39_22 — all in his hand again</td><td>And the chief of the prison-house gave into Joseph&#x27;s hand all the prisoners in the prison-house; and all that they did there, he was the doer.</td><td>LET(shikhva_imi) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shikhva-imi) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּתֵּ֞ן שַׂ֤ר בֵּית הַסֹּ֨הַר֙</span> · <i>va-yiten sar bet-ha-sohar</i><br><span class="gloss">= and-yiten sar bet-the-sohar</span></td></tr>
+<tr><td><b>S23</b></td><td>after STEP_Gn_39_23 — the unseen overseer</td><td>The chief of the prison-house saw not any thing in his hand, in that the LORD was with him; and what he did, the LORD made prosper.</td><td>LET(shikhva_imi) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shikhva-imi) pushed and OPEN; no test, no name.</span></td><td><span class="he">אֵ֣ין שַׂ֣ר בֵּית הַסֹּ֗הַר</span> · <i>en sar bet-ha-sohar</i><br><span class="gloss">= en sar bet-the-sohar</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_62_potifar_house — Potiphar&#x27;s house: the refusal on the chain (39:1-23) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — after STEP_Gn_39_1 — bought by Potiphar
+    וְיוֹסֵ֖ף הוּרַ֣ד מִצְרָ֑יְמָה וַיִּקְנֵ֡הוּ (ve-yosef hurad mitzrayma-ה va-yiqne-hu)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Gn_39_2 — the LORD with him
+    וַיְהִ֤י יְהוָה֙ אֶת יוֹסֵ֔ף (va-yehi YHWH et-yosef)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Gn_39_3 — the master sees
+    וַיַּ֣רְא אֲדֹנָ֔יו כִּ֥י יְהוָ֖ה (va-yar adonay-v ki YHWH)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Gn_39_4 — appointed over the house
+    וַיִּמְצָ֨א יוֹסֵ֥ף חֵ֛ן בְּעֵינָ֖יו (va-yimtza yosef chen be-enay-v)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Gn_39_5 — the blessing for his sake
+    וַיְהִ֡י מֵאָז֩ הִפְקִ֨יד אֹת֜וֹ (va-yehi me-az hifqid et-o)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Gn_39_6 — the beauty note
+    וַיַּעֲזֹ֣ב כָּל אֲשֶׁר לוֹ֮ (va-yaazov kal-asher-l-o)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — after STEP_Gn_39_7 — the demand pushed
+    וַיְהִ֗י אַחַר֙ הַדְּבָרִ֣ים הָאֵ֔לֶּה (va-yehi achar ha-devarim ha-ele)
+    PASS  LET(shikhva_imi) pushed and OPEN  (queue=[&#x27;shikhva_imi&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S8 — after STEP_Gn_39_8 — the chain refusal
+    וַיְמָאֵ֓ן וַיֹּ֨אמֶר֙ אֶל אֵ֣שֶׁת (va-yemaen va-yomer el-eshet)
+    PASS  LET(shikhva_imi) pushed and OPEN  (queue=[&#x27;shikhva_imi&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S9 — after STEP_Gn_39_9 — the great evil named
+    אֵינֶ֨נּוּ גָד֜וֹל בַּבַּ֣יִת הַזֶּה֮ (ene-nu gadol ba-bayit ha-ze)
+    PASS  LET(shikhva_imi) pushed and OPEN  (queue=[&#x27;shikhva_imi&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S10 — after STEP_Gn_39_10 — day by day
+    וַיְהִ֕י כְּדַבְּרָ֥הּ אֶל יוֹסֵ֖ף (va-yehi ke-dabra-ה el-yosef)
+    PASS  LET(shikhva_imi) pushed and OPEN  (queue=[&#x27;shikhva_imi&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S11 — after STEP_Gn_39_11 — the empty house
+    וַיְהִי֙ כְּהַיּ֣וֹם הַזֶּ֔ה וַיָּבֹ֥א (va-yehi ke-ha-yom ha-ze va-yavo)
+    PASS  LET(shikhva_imi) pushed and OPEN  (queue=[&#x27;shikhva_imi&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S12 — after STEP_Gn_39_12 — the garment seized
+    וַתִּתְפְּשֵׂ֧הוּ בְּבִגְד֛וֹ לֵאמֹ֖ר שִׁכְבָ֣ה (va-titpse-hu be-vigd-o le-mor shikhva-ה)
+    PASS  LET(shikhva_imi) pushed and OPEN  (queue=[&#x27;shikhva_imi&#x27;, &#x27;shikhva_imi&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S13 — after STEP_Gn_39_13 — the evidence read
+    וַיְהִי֙ כִּרְאוֹתָ֔הּ כִּֽי עָזַ֥ב (va-yehi ki-reota-ה ki-azav)
+    PASS  LET(shikhva_imi) pushed and OPEN  (queue=[&#x27;shikhva_imi&#x27;, &#x27;shikhva_imi&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S14 — after STEP_Gn_39_14 — the household speech
+    וַתִּקְרָ֞א לְאַנְשֵׁ֣י בֵיתָ֗הּ וַתֹּ֤אמֶר (va-tiqra le-anshe veta-ה va-tomer)
+    PASS  LET(shikhva_imi) pushed and OPEN  (queue=[&#x27;shikhva_imi&#x27;, &#x27;shikhva_imi&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S15 — after STEP_Gn_39_15 — the raised voice
+    וַיְהִ֣י כְשָׁמְע֔וֹ כִּֽי הֲרִימֹ֥תִי (va-yehi khe-sham-o ki-harimoti)
+    PASS  LET(shikhva_imi) pushed and OPEN  (queue=[&#x27;shikhva_imi&#x27;, &#x27;shikhva_imi&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S16 — after STEP_Gn_39_16 — the garment waits
+    וַתַּנַּ֥ח בִּגְד֖וֹ אֶצְלָ֑הּ עַד (va-tanach bigd-o etzla-ה ad-)
+    PASS  LET(shikhva_imi) pushed and OPEN  (queue=[&#x27;shikhva_imi&#x27;, &#x27;shikhva_imi&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S17 — after STEP_Gn_39_17 — the second telling
+    וַתְּדַבֵּ֣ר אֵלָ֔יו כַּדְּבָרִ֥ים הָאֵ֖לֶּה (va-tedaber elay-v ka-devarim ha-ele)
+    PASS  LET(shikhva_imi) pushed and OPEN  (queue=[&#x27;shikhva_imi&#x27;, &#x27;shikhva_imi&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S18 — after STEP_Gn_39_18 — the quoted cry
+    וַיְהִ֕י כַּהֲרִימִ֥י קוֹלִ֖י וָאֶקְרָ֑א (va-yehi ka-harimi-y qoli-y va-eqra)
+    PASS  LET(shikhva_imi) pushed and OPEN  (queue=[&#x27;shikhva_imi&#x27;, &#x27;shikhva_imi&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S19 — after STEP_Gn_39_19 — the anger
+    וַיְהִי֩ כִשְׁמֹ֨עַ אֲדֹנָ֜יו אֶת (va-yehi khi-shemoa adonay-v et-)
+    PASS  LET(shikhva_imi) pushed and OPEN  (queue=[&#x27;shikhva_imi&#x27;, &#x27;shikhva_imi&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S20 — after STEP_Gn_39_20 — into the round house
+    וַיִּקַּח֩ אֲדֹנֵ֨י יוֹסֵ֜ף אֹת֗וֹ (va-yiqach adone yosef et-o)
+    PASS  LET(shikhva_imi) pushed and OPEN  (queue=[&#x27;shikhva_imi&#x27;, &#x27;shikhva_imi&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S21 — after STEP_Gn_39_21 — kindness in the pit
+    וַיְהִ֤י יְהוָה֙ אֶת יוֹסֵ֔ף (va-yehi YHWH et-yosef)
+    PASS  LET(shikhva_imi) pushed and OPEN  (queue=[&#x27;shikhva_imi&#x27;, &#x27;shikhva_imi&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S22 — after STEP_Gn_39_22 — all in his hand again
+    וַיִּתֵּ֞ן שַׂ֤ר בֵּית הַסֹּ֨הַר֙ (va-yiten sar bet-ha-sohar)
+    PASS  LET(shikhva_imi) pushed and OPEN  (queue=[&#x27;shikhva_imi&#x27;, &#x27;shikhva_imi&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S23 — after STEP_Gn_39_23 — the unseen overseer
+    אֵ֣ין שַׂ֣ר בֵּית הַסֹּ֗הַר (en sar bet-ha-sohar)
+    PASS  LET(shikhva_imi) pushed and OPEN  (queue=[&#x27;shikhva_imi&#x27;, &#x27;shikhva_imi&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_62_potifar_house.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_62_potifar_house — 39:1-23
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_62_potifar_house.yaml) is CANONICAL (Pre-Code);
+# this file is a derived, runnable rendering. Do not edit — regenerate. The
+# assertion block at the bottom is baked from the Stage D interpreter&#x27;s
+# actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Potiphar&#x27;s house: the refusal on the chain (39:1-23)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_62_potifar_house&quot;)
+
+# -------------------------- Gen.39.1 · BOUGHT_BY_POTIPHAR ------------------
+# וְיוֹסֵף הוּרַד מִצְרָיְמָה וַיִּקְנֵהוּ פּוֹטִיפַר סְרִיס פַּרְעֹה שַׂר
+# הַטַּבָּחִים אִישׁ מִצְרִי מִיַּד הַיִּשְׁמְעֵאלִים אֲשֶׁר הוֹרִדֻהוּ
+# שָׁמָּה
+# &quot;[EN-AID] And Joseph was brought down to Egypt; and Potiphar, Pharaoh&#x27;s
+# officer, the chief of the slaughterers, an Egyptian man, bought him from
+# the hand of the Ishmaelites who had brought him down there.&quot;
+m.step(&quot;Gen.39.1&quot;)
+# ‹וְיוֹסֵף הוּרַד מִצְרָיְמָה וַיִּקְנֵהוּ פּוֹטִיפַר› (“and-Joseph go-down
+# Egypt-ward and-erect-him/its Potiphar”) — fact holds: go-down-mitzrayma-
+# and-yiqnehu-Potiphar(Joseph)
+m.fact(&quot;hurad_mitzrayma_va_yiqnehu_potifar(yosef)&quot;)
+
+# -------------------------- Gen.39.2 · THE_LORD_WITH_HIM -------------------
+# וַיְהִי יְהוָה אֶת־יוֹסֵף וַיְהִי אִישׁ מַצְלִיחַ וַיְהִי בְּבֵית אֲדֹנָיו
+# הַמִּצְרִי
+# &quot;[EN-AID] And the LORD was with Joseph, and he was a prospering man; and
+# he was in the house of his master the Egyptian.&quot;
+m.step(&quot;Gen.39.2&quot;)
+# ‹וַיְהִי יְהוָה אֶת־יוֹסֵף וַיְהִי אִישׁ מַצְלִיחַ› (“and-be YHWH with
+# Joseph and-be man push-forward”) — fact holds: the-LORD-with-Joseph-man-
+# matzliach
+m.fact(&quot;YHWH_et_yosef_ish_matzliach&quot;)
+
+# -------------------------- Gen.39.3 · THE_MASTER_SEES ---------------------
+# וַיַּרְא אֲדֹנָיו כִּי יְהוָה אִתּוֹ וְכֹל אֲשֶׁר־הוּא עֹשֶׂה יְהוָה
+# מַצְלִיחַ בְּיָדוֹ
+# &quot;[EN-AID] And his master saw that the LORD was with him, and all that he
+# did the LORD made prosper in his hand.&quot;
+m.step(&quot;Gen.39.3&quot;)
+# ‹וַיַּרְא אֲדֹנָיו כִּי יְהוָה אִתּוֹ› (“and-see lord-him/its that YHWH
+# with-him/its”) — fact holds: bad-adonav-that-the-LORD-with-him
+m.fact(&quot;raa_adonav_ki_YHWH_ito&quot;)
+
+# -------------------------- Gen.39.4 · APPOINTED_OVER_THE_HOUSE ------------
+# וַיִּמְצָא יוֹסֵף חֵן בְּעֵינָיו וַיְשָׁרֶת אֹתוֹ וַיַּפְקִדֵהוּ
+# עַל־בֵּיתוֹ וְכָל־יֶשׁ־לוֹ נָתַן בְּיָדוֹ
+# &quot;[EN-AID] And Joseph found favor in his eyes, and he served him; and he
+# appointed him over his house, and all he had he gave into his hand.&quot;
+m.step(&quot;Gen.39.4&quot;)
+# ‹וַיַּפְקִדֵהוּ עַל־בֵּיתוֹ וְכָל־יֶשׁ־לוֹ נָתַן בְּיָדוֹ› (“and-
+# count/visit-him/its over house-him/its and-all there-is to-him/its set in-
+# hand-him/its”) — fact holds: count/visit-over-beto-and-all-set-in-his-hand
+m.fact(&quot;hifqid_al_beto_ve_khol_natan_be_yado&quot;)
+
+# -------------------------- Gen.39.5 · THE_BLESSING_FOR_HIS_SAKE -----------
+# וַיְהִי מֵאָז הִפְקִיד אֹתוֹ בְּבֵיתוֹ וְעַל כָּל־אֲשֶׁר יֶשׁ־לוֹ
+# וַיְבָרֶךְ יְהוָה אֶת־בֵּית הַמִּצְרִי בִּגְלַל יוֹסֵף וַיְהִי בִּרְכַּת
+# יְהוָה בְּכָל־אֲשֶׁר יֶשׁ־לוֹ בַּבַּיִת וּבַשָּׂדֶה
+# &quot;[EN-AID] And it was, from the time he appointed him in his house and over
+# all that he had, the LORD blessed the Egyptian&#x27;s house for Joseph&#x27;s sake;
+# and the LORD&#x27;s blessing was on all he had, in the house and in the field.&quot;
+m.step(&quot;Gen.39.5&quot;)
+# ‹וַיְבָרֶךְ יְהוָה אֶת־בֵּית הַמִּצְרִי בִּגְלַל יוֹסֵף› (“and-bless YHWH
+# obj-marker house the-Egyptian in-circumstance Joseph”) — fact holds:
+# berakh-the-LORD-house-the-Egyptian-biglal-Joseph
+m.fact(&quot;berakh_YHWH_bet_ha_mitzri_biglal_yosef&quot;)
+
+# -------------------------- Gen.39.6 · THE_BEAUTY_NOTE ---------------------
+# וַיַּעֲזֹב כָּל־אֲשֶׁר־לוֹ בְּיַד־יוֹסֵף וְלֹא־יָדַע אִתּוֹ מְאוּמָה כִּי
+# אִם־הַלֶּחֶם אֲשֶׁר־הוּא אוֹכֵל וַיְהִי יוֹסֵף יְפֵה־תֹאַר וִיפֵה מַרְאֶה
+# &quot;[EN-AID] And he left all that he had in Joseph&#x27;s hand, and knew nothing
+# with him except the bread that he ate; and Joseph was beautiful of form
+# and beautiful of appearance.&quot;
+m.step(&quot;Gen.39.6&quot;)
+# ‹וַיְהִי יוֹסֵף יְפֵה־תֹאַר וִיפֵה מַרְאֶה› (“and-be Joseph beautiful
+# outline and-beautiful appearance”) — fact holds: beautiful-outline-vi-yfe-
+# appearance(Joseph)
+m.fact(&quot;yefe_toar_vi_yfe_mare(yosef)&quot;)
+
+# -------------------------- Gen.39.7 · THE_DEMAND_PUSHED -------------------
+# וַיְהִי אַחַר הַדְּבָרִים הָאֵלֶּה וַתִּשָּׂא אֵשֶׁת־אֲדֹנָיו אֶת־עֵינֶיהָ
+# אֶל־יוֹסֵף וַתֹּאמֶר שִׁכְבָה עִמִּי
+# &quot;[EN-AID] And it was after these things, and his master&#x27;s wife lifted her
+# eyes to Joseph, and said: Lie with me.&quot;
+m.step(&quot;Gen.39.7&quot;)
+# ‹וַתֹּאמֶר שִׁכְבָה עִמִּי› (“and-say lie-down-ward with-me/my”) — woman-
+# adonav speaks a demand — LET: shikhva-imi
+m.declare(&quot;eshet_adonav&quot;, &quot;LET&quot;,
+          &quot;shikhva_imi&quot;)
+
+# -------------------------- Gen.39.8 · THE_CHAIN_REFUSAL -------------------
+# וַיְמָאֵן וַיֹּאמֶר אֶל־אֵשֶׁת אֲדֹנָיו הֵן אֲדֹנִי לֹא־יָדַע אִתִּי
+# מַה־בַּבָּיִת וְכֹל אֲשֶׁר־יֶשׁ־לוֹ נָתַן בְּיָדִי
+# &quot;[EN-AID] And he refused, and said to his master&#x27;s wife: Behold, my master
+# knows not what is with me in the house, and all that he has he gave into
+# my hand.&quot;
+m.step(&quot;Gen.39.8&quot;)
+# ‹וַיְמָאֵן וַיֹּאמֶר› (“and-refuse and-say”) — fact holds: and-refuse-
+# lo!-adoni(Joseph)
+m.fact(&quot;va_yemaen_hen_adoni(yosef)&quot;)
+
+# -------------------------- Gen.39.9 · THE_GREAT_EVIL_NAMED ----------------
+# אֵינֶנּוּ גָדוֹל בַּבַּיִת הַזֶּה מִמֶּנִּי וְלֹא־חָשַׂךְ מִמֶּנִּי
+# מְאוּמָה כִּי אִם־אוֹתָךְ בַּאֲשֶׁר אַתְּ־אִשְׁתּוֹ וְאֵיךְ אֶעֱשֶׂה
+# הָרָעָה הַגְּדֹלָה הַזֹּאת וְחָטָאתִי לֵאלֹהִים
+# &quot;[EN-AID] There is none greater in this house than I, and he has withheld
+# nothing from me except you, in that you are his wife; and how shall I do
+# this great evil, and sin against God?&quot;
+m.step(&quot;Gen.39.9&quot;)
+# ‹וְאֵיךְ אֶעֱשֶׂה הָרָעָה הַגְּדֹלָה הַזֹּאת וְחָטָאתִי לֵאלֹהִים› (“and-
+# how? make the-bad the-great the-this and-sin to-God”) — fact holds:
+# how?-make-the-bad-the-great-and-sin-to-God
+m.fact(&quot;ekh_eese_ha_raa_ha_gedola_ve_chatati_le_Elohim&quot;)
+
+# -------------------------- Gen.39.10 · DAY_BY_DAY -------------------------
+# וַיְהִי כְּדַבְּרָהּ אֶל־יוֹסֵף יוֹם יוֹם וְלֹא־שָׁמַע אֵלֶיהָ לִשְׁכַּב
+# אֶצְלָהּ לִהְיוֹת עִמָּהּ
+# &quot;[EN-AID] And it was, as she spoke to Joseph day by day, he did not listen
+# to her, to lie beside her, to be with her.&quot;
+m.step(&quot;Gen.39.10&quot;)
+# ‹וַיְהִי כְּדַבְּרָהּ אֶל־יוֹסֵף יוֹם יוֹם› (“and-be like-speak-her/its to
+# Joseph day day”) — fact holds: and-not-hear-eleha-day-day(Joseph)
+m.fact(&quot;ve_lo_shama_eleha_yom_yom(yosef)&quot;)
+
+# -------------------------- Gen.39.11 · THE_EMPTY_HOUSE --------------------
+# וַיְהִי כְּהַיּוֹם הַזֶּה וַיָּבֹא הַבַּיְתָה לַעֲשׂוֹת מְלַאכְתּוֹ וְאֵין
+# אִישׁ מֵאַנְשֵׁי הַבַּיִת שָׁם בַּבָּיִת
+# &quot;[EN-AID] And it was, on this day, that he came into the house to do his
+# work; and no man of the men of the house was there in the house.&quot;
+m.step(&quot;Gen.39.11&quot;)
+# ‹וְאֵין אִישׁ מֵאַנְשֵׁי הַבַּיִת שָׁם בַּבָּיִת› (“and-there-is-not man
+# from-man the-house there in-house”) — fact holds: and-there-is-not-man-
+# come/bring-house
+m.fact(&quot;ve_en_ish_ba_bayit&quot;)
+
+# -------------------------- Gen.39.12 · THE_GARMENT_SEIZED -----------------
+# וַתִּתְפְּשֵׂהוּ בְּבִגְדוֹ לֵאמֹר שִׁכְבָה עִמִּי וַיַּעֲזֹב בִּגְדוֹ
+# בְּיָדָהּ וַיָּנָס וַיֵּצֵא הַחוּצָה
+# &quot;[EN-AID] And she seized him by his garment, saying: Lie with me. And he
+# left his garment in her hand, and fled and went outside.&quot;
+m.step(&quot;Gen.39.12&quot;)
+# ‹וַתִּתְפְּשֵׂהוּ בְּבִגְדוֹ לֵאמֹר שִׁכְבָה עִמִּי› (“and-manipulate-
+# him/its in-garment-him/its to-say lie-down-ward with-me/my”) — woman-
+# adonav speaks a demand — LET: shikhva-imi
+m.declare(&quot;eshet_adonav&quot;, &quot;LET&quot;,
+          &quot;shikhva_imi&quot;)
+# ‹וַיַּעֲזֹב בִּגְדוֹ בְּיָדָהּ וַיָּנָס וַיֵּצֵא הַחוּצָה› (“and-loosen
+# garment-him/its in-hand-her/its and-flit and-bring-forth the-outside-
+# ward”) — event: loosen — agent Joseph; theme beged
+m.event(&quot;azav&quot;, agent=&quot;yosef&quot;, themes=[&quot;beged&quot;])
+
+# -------------------------- Gen.39.13 · THE_EVIDENCE_READ ------------------
+# וַיְהִי כִּרְאוֹתָהּ כִּי־עָזַב בִּגְדוֹ בְּיָדָהּ וַיָּנָס הַחוּצָה
+# &quot;[EN-AID] And it was, when she saw that he had left his garment in her
+# hand, and fled outside,&quot;
+m.step(&quot;Gen.39.13&quot;)
+# ‹וַיְהִי כִּרְאוֹתָהּ כִּי־עָזַב בִּגְדוֹ בְּיָדָהּ› (“and-be like-see-
+# her/its that loosen garment-him/its in-hand-her/its”) — fact holds: raata-
+# that-loosen-bigdo-in-yadah
+m.fact(&quot;raata_ki_azav_bigdo_be_yadah&quot;)
+
+# -------------------------- Gen.39.14 · THE_HOUSEHOLD_SPEECH ---------------
+# וַתִּקְרָא לְאַנְשֵׁי בֵיתָהּ וַתֹּאמֶר לָהֶם לֵאמֹר רְאוּ הֵבִיא לָנוּ
+# אִישׁ עִבְרִי לְצַחֶק בָּנוּ בָּא אֵלַי לִשְׁכַּב עִמִּי וָאֶקְרָא בְּקוֹל
+# גָּדוֹל
+# &quot;[EN-AID] that she called to the men of her house and said to them,
+# saying: See — he brought us a Hebrew man to mock us; he came to me to lie
+# with me, and I called with a great voice.&quot;
+m.step(&quot;Gen.39.14&quot;)
+# ‹רְאוּ הֵבִיא לָנוּ אִישׁ עִבְרִי לְצַחֶק בָּנוּ› (“see come/bring to-
+# us/our man Hebrew to-laugh-outright in-us/our”) — fact holds: qara-to-man-
+# veta-come/bring-lanu-man-Hebrew
+m.fact(&quot;qara_le_anshe_veta_hevi_lanu_ish_ivri&quot;)
+
+# -------------------------- Gen.39.15 · THE_RAISED_VOICE -------------------
+# וַיְהִי כְשָׁמְעוֹ כִּי־הֲרִימֹתִי קוֹלִי וָאֶקְרָא וַיַּעֲזֹב בִּגְדוֹ
+# אֶצְלִי וַיָּנָס וַיֵּצֵא הַחוּצָה
+# &quot;[EN-AID] And it was, when he heard that I raised my voice and called,&quot;
+m.step(&quot;Gen.39.15&quot;)
+# ‹כִּי־הֲרִימֹתִי קוֹלִי וָאֶקְרָא› (“that rise-high voice/sound-me/my and-
+# call”) — fact holds: rise-high-qoli-and-call(woman-adonav)
+m.fact(&quot;harimoti_qoli_va_eqra(eshet_adonav)&quot;)
+
+# -------------------------- Gen.39.16 · THE_GARMENT_WAITS ------------------
+# וַתַּנַּח בִּגְדוֹ אֶצְלָהּ עַד־בּוֹא אֲדֹנָיו אֶל־בֵּיתוֹ
+# &quot;[EN-AID] And she laid his garment beside her until his master came to his
+# house.&quot;
+m.step(&quot;Gen.39.16&quot;)
+# ‹וַתַּנַּח בִּגְדוֹ אֶצְלָהּ› (“and-deposit garment-him/its side-her/its”)
+# — fact holds: and-deposit-bigdo-etzlah-until-come/bring-adonav
+m.fact(&quot;va_tanach_bigdo_etzlah_ad_bo_adonav&quot;)
+
+# -------------------------- Gen.39.17 · THE_SECOND_TELLING -----------------
+# וַתְּדַבֵּר אֵלָיו כַּדְּבָרִים הָאֵלֶּה לֵאמֹר בָּא־אֵלַי הָעֶבֶד
+# הָעִבְרִי אֲשֶׁר־הֵבֵאתָ לָּנוּ לְצַחֶק בִּי
+# &quot;[EN-AID] And she spoke to him according to these words, saying: The
+# Hebrew slave whom you brought us came to me, to mock me.&quot;
+m.step(&quot;Gen.39.17&quot;)
+# ‹בָּא־אֵלַי הָעֶבֶד הָעִבְרִי אֲשֶׁר־הֵבֵאתָ לָּנוּ לְצַחֶק› (“come/bring
+# to-me/my the-servant the-Hebrew which come/bring to-us/our to-laugh-
+# outright”) — fact holds: come/bring-elay-the-servant-the-Hebrew-to-laugh-
+# outright-bi
+m.fact(&quot;ba_elay_ha_eved_ha_ivri_le_tzacheq_bi&quot;)
+
+# -------------------------- Gen.39.18 · THE_QUOTED_CRY ---------------------
+# וַיְהִי כַּהֲרִימִי קוֹלִי וָאֶקְרָא וַיַּעֲזֹב בִּגְדוֹ אֶצְלִי וַיָּנָס
+# הַחוּצָה
+# &quot;[EN-AID] And it was, as I raised my voice and called, that he left his
+# garment beside me and fled outside.&quot;
+m.step(&quot;Gen.39.18&quot;)
+# ‹וַיְהִי כַּהֲרִימִי קוֹלִי וָאֶקְרָא› (“and-be like-rise-high-me/my
+# voice/sound-me/my and-call”) — fact holds: like-harimi-qoli-and-loosen-
+# bigdo-etzli
+m.fact(&quot;ka_harimi_qoli_va_yaazov_bigdo_etzli&quot;)
+
+# -------------------------- Gen.39.19 · THE_ANGER --------------------------
+# וַיְהִי כִשְׁמֹעַ אֲדֹנָיו אֶת־דִּבְרֵי אִשְׁתּוֹ אֲשֶׁר דִּבְּרָה אֵלָיו
+# לֵאמֹר כַּדְּבָרִים הָאֵלֶּה עָשָׂהּ לִי עַבְדֶּךָ וַיִּחַר אַפּוֹ
+# &quot;[EN-AID] And it was, when his master heard the words of his wife which
+# she spoke to him, saying: According to these words your slave did to me —
+# his anger burned.&quot;
+m.step(&quot;Gen.39.19&quot;)
+# ‹עַבְדֶּךָ וַיִּחַר› (“servant-you/your and-glow”) — fact holds: and-glow-
+# apo(adonav)
+m.fact(&quot;va_yichar_apo(adonav)&quot;)
+
+# -------------------------- Gen.39.20 · INTO_THE_ROUND_HOUSE ---------------
+# וַיִּקַּח אֲדֹנֵי יוֹסֵף אֹתוֹ וַיִּתְּנֵהוּ אֶל־בֵּית הַסֹּהַר מְקוֹם
+# אֲשֶׁר־אסורי אֲסִירֵי הַמֶּלֶךְ אֲסוּרִים וַיְהִי־שָׁם בְּבֵית הַסֹּהַר
+# &quot;[EN-AID] And Joseph&#x27;s master took him and gave him to the prison-house,
+# the place where the king&#x27;s prisoners were bound; and he was there in the
+# prison-house.&quot;
+m.step(&quot;Gen.39.20&quot;)
+# ‹מְקוֹם אֲשֶׁר־אסורי אֲסִירֵי הַמֶּלֶךְ אֲסוּרִים› (“place which yoke
+# bound the-king yoke”) — fact holds: netano-to-house-the-dungeon(lord-
+# Joseph)
+m.fact(&quot;netano_el_bet_ha_sohar(adone_yosef)&quot;)
+
+# -------------------------- Gen.39.21 · CHESED_IN_THE_PIT ------------------
+# וַיְהִי יְהוָה אֶת־יוֹסֵף וַיֵּט אֵלָיו חָסֶד וַיִּתֵּן חִנּוֹ בְּעֵינֵי
+# שַׂר בֵּית־הַסֹּהַר
+# &quot;[EN-AID] And the LORD was with Joseph, and extended kindness to him, and
+# gave his favor in the eyes of the chief of the prison-house.&quot;
+m.step(&quot;Gen.39.21&quot;)
+# ‹וַיְהִי יְהוָה אֶת־יוֹסֵף וַיֵּט אֵלָיו חָסֶד› (“and-be YHWH with Joseph
+# and-stretch to-him/its kindness”) — fact holds: and-stretch-to-him-
+# kindness-and-chino-in-eye-officer-house-the-dungeon
+m.fact(&quot;va_yet_elav_chased_ve_chino_be_ene_sar_bet_ha_sohar&quot;)
+
+# -------------------------- Gen.39.22 · ALL_IN_HIS_HAND_AGAIN --------------
+# וַיִּתֵּן שַׂר בֵּית־הַסֹּהַר בְּיַד־יוֹסֵף אֵת כָּל־הָאֲסִירִם אֲשֶׁר
+# בְּבֵית הַסֹּהַר וְאֵת כָּל־אֲשֶׁר עֹשִׂים שָׁם הוּא הָיָה עֹשֶׂה
+# &quot;[EN-AID] And the chief of the prison-house gave into Joseph&#x27;s hand all
+# the prisoners in the prison-house; and all that they did there, he was the
+# doer.&quot;
+m.step(&quot;Gen.39.22&quot;)
+# ‹אֵת כָּל־הָאֲסִירִם אֲשֶׁר בְּבֵית הַסֹּהַר› (“obj-marker all the-bound
+# which in-house the-dungeon”) — fact holds: set-in-hand-Joseph-with-all-
+# the-bound
+m.fact(&quot;natan_be_yad_yosef_et_kal_ha_asirim&quot;)
+
+# -------------------------- Gen.39.23 · THE_UNSEEN_OVERSEER ----------------
+# אֵין שַׂר בֵּית־הַסֹּהַר רֹאֶה אֶת־כָּל־מְאוּמָה בְּיָדוֹ בַּאֲשֶׁר יְהוָה
+# אִתּוֹ וַאֲשֶׁר־הוּא עֹשֶׂה יְהוָה מַצְלִיחַ
+# &quot;[EN-AID] The chief of the prison-house saw not any thing in his hand, in
+# that the LORD was with him; and what he did, the LORD made prosper.&quot;
+m.step(&quot;Gen.39.23&quot;)
+# ‹בַּאֲשֶׁר יְהוָה אִתּוֹ וַאֲשֶׁר־הוּא עֹשֶׂה יְהוָה מַצְלִיחַ› (“in-who
+# YHWH with-him/its and-which he/it make YHWH push-forward”) — fact holds:
+# the-LORD-with-him-and-which-he/it-make-the-LORD-matzliach
+m.fact(&quot;YHWH_ito_va_asher_hu_ose_YHWH_matzliach&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;shikhva_imi&#x27;, &#x27;shikhva_imi&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 2
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;hurad_mitzrayma_va_yiqnehu_potifar(yosef)&#x27;, &#x27;YHWH_et_yosef_ish_matzliach&#x27;, &#x27;raa_adonav_ki_YHWH_ito&#x27;, &#x27;hifqid_al_beto_ve_khol_natan_be_yado&#x27;, &#x27;berakh_YHWH_bet_ha_mitzri_biglal_yosef&#x27;, &#x27;yefe_toar_vi_yfe_mare(yosef)&#x27;, &#x27;va_yemaen_hen_adoni(yosef)&#x27;, &#x27;ekh_eese_ha_raa_ha_gedola_ve_chatati_le_Elohim&#x27;, &#x27;ve_lo_shama_eleha_yom_yom(yosef)&#x27;, &#x27;ve_en_ish_ba_bayit&#x27;, &#x27;raata_ki_azav_bigdo_be_yadah&#x27;, &#x27;qara_le_anshe_veta_hevi_lanu_ish_ivri&#x27;, &#x27;harimoti_qoli_va_eqra(eshet_adonav)&#x27;, &#x27;va_tanach_bigdo_etzlah_ad_bo_adonav&#x27;, &#x27;ba_elay_ha_eved_ha_ivri_le_tzacheq_bi&#x27;, &#x27;ka_harimi_qoli_va_yaazov_bigdo_etzli&#x27;, &#x27;va_yichar_apo(adonav)&#x27;, &#x27;netano_el_bet_ha_sohar(adone_yosef)&#x27;, &#x27;va_yet_elav_chased_ve_chino_be_ene_sar_bet_ha_sohar&#x27;, &#x27;natan_be_yad_yosef_et_kal_ha_asirim&#x27;, &#x27;YHWH_ito_va_asher_hu_ose_YHWH_matzliach&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 3
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

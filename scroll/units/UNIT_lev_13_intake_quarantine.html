@@ -1,0 +1,685 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>lev_13_intake_quarantine — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/lev_13_intake_quarantine?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The skin-mark intake: case, handlers, quarantine loop (Lev 13:1-8) — first law unit <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>lev_13_intake_quarantine</b> · Leviticus 13:1-8 · derive logic_derived_v1 · phase C-8 / law-1</div>
+<div class="meta"><a href="../#Lev/13/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">תּוֹרַת נֶגַע הָעוֹר — הַקְּלִיטָה וְהַהֶסְגֵּר</span> · <i>torat nega ha-or — ha-klitah ve-ha-hesger</i> · the law of the skin mark — the intake and the quarantine</p>
+<div class="note">Derived 2026-07-31 at owner&#x27;s order (&quot;yes now derive it&quot;) under the calibrated coverage protocol (charter section 4.1): the span&#x27;s Onkelos was read Tier-A at derive time (8 sequential per-verse fetches, logged in Data/FETCHLOG.md) and the prospective middot-detector run preceded drafting (logic/middot_scan/WATCHLIST_lev13_intake_prospective_ 2026-07-31.md) — star corpus-side join: se&#x27;et (&quot;swelling&quot;), the intake&#x27;s lead mark-name, grade A with its debut at Gen 4:7 (Cain&#x27;s im-branch). UNIT BOUNDARY: the letter&#x27;s own case-opener syntax — 13:9 opens a fresh ki (&quot;when&quot;) case (nega tzara&#x27;at KI tihyeh be-adam) — so the derivation unit ends at 13:8; the old-era four-block segmentation&#x27;s &quot;skin_initial&quot; becomes two derivation units. FIRST LAW UNIT: interpreter vocabulary extension required at freeze — the CASE and HANDLER operators (the law genre&#x27;s installers; ASSIGN/BLESS/CMD-US precedent) — pre-flight ran all scenarios green with the prototypes injected. FROZEN 2026-08-01 on owner order (&quot;freeze lev 13&quot;): h_case + h_handler landed in the interpreter and the unit was re-verified green through the real machine, alongside all seven creation units.</div>
+<div class="note">Logic-derived v1: v3 ta&#x27;amim trees (glue bricks, pure binary) -&gt; leaf role frames from OSHB morph -&gt; operator lines citing TIR rules -&gt; machine-state scenarios. LAW-GENRE NOTE: this unit&#x27;s operators INSTALL standing code — they do not execute it. Handlers are recorded as standing WORLD facts (the day-5 BLESS mandate precedent: standing directives with horizons beyond the unit are facts, never SPECS). Nothing in this unit demands, builds, tests, names, or commits: the genre signature is the machine&#x27;s near-total silence outside the handler register — asserted in the scenarios, not narrated.</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (retro, oral-first era; record: logic/oral_audit/AUDIT_lev_13_2026-08-08.md; manifest 2 VERIFIED / 0 FAILED / 2 UNCHECKABLE — thin oral layer, proportionate audit). CROWNS (chain-attested + DB-verified). THE LEFT-DOTTED HAIR [L13-01, Minchat Shai on 13:3]: ושער (&quot;and the hair&quot;) of the intake exam — &quot;with SIN&quot; (the left-dotted letter), the sin dot in-stream. ONE PAIR OF THE ELEVEN [L13-02, MS on 13:4; the Masorah&#x27;s eleven-pairs list]: ושערה (&quot;and its hair&quot;) at 13:4 is written WITHOUT mapik (the sounding dot in the final he) — the hair that did NOT turn white in the shut-up case — while its fellow at 13:20 carries the dot: &quot;of the ELEVEN PAIRS, one with mapik and one without.&quot; Both halves in-stream: the dotted he at 13:20 checked, the bare he at 13:4 asserted at build. GAPS [L13-03/04]: MS&#x27;s two negatives at 13:3 — no paseq (the dividing stroke) after &quot;the priest,&quot; no meteg (the small stress-stroke) in the bet of בעור (&quot;in the skin&quot;) — asserted at build, SNAPSHOT matching MS on both (a not-contains check type would green them); and the OPEN paragraph break at אדם כי יהיה (&quot;a man, when he has,&quot; 13:1) — paragraph layer uninstrumented, filed to the paragraph gap class. READINGS (named-only): Kitzur on 13:5 — והנה (&quot;and BEHOLD&quot;) falls only on what was not known before: the nega shut up seven days emerges to a fresh look, &quot;like &#x27;and behold, it was Leah&#x27;&quot; (Gen 29:25).</div>
+<div class="meta">confidence: structure tested; operator readings tested-per-TIR; intent hypothesis</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>First law unit, chosen as pilot (owner discussion 2026-07-31): Lev 13:1-8, the skin-mark intake — the most code-shaped procedure in the Torah (case dispatch, predicate conditionals, a bounded two-iteration quarantine loop with fixed re-inspection dates, declarative status writes, and a trigger that stays armed after release). The unit boundary is the text&#x27;s own: 13:2 opens the case with ki (&quot;when&quot;); 13:9 opens the NEXT case with its own ki — one ki-case per unit, the law-genre analogue of one day-commit per unit. Chapter-wide particle census (DB): ki (&quot;when&quot;) x13, im (&quot;if&quot;) x15 — the branch tokens are the letter&#x27;s, not the machine&#x27;s.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Hebrew source + trees</td><td>All 8 verses via taamim_tree_parse.py rule set v3: status unique, pure_binary true. tree_ascii regenerated 2026-07-31 from DB tree_json. STRUCTURAL FINDING: in all seven law verses (2-8), the etnachta (major mid-verse rest) falls exactly at the CONDITION | ACTION boundary — the cantillation brackets IF | THEN: 13:2 [case conditions | routing], 13:3 [predicates + classification | verdict act], 13:4 [three negated predicates | confine], 13:5 [day-7 check | second confine], 13:6 [second check | release chain], 13:7 [spread condition | re-presentation], 13:8 [confirmation | verdict]. The 13:1 frame verse (no etnachta) is the only verse without the bracket — and the only verse with a narrative verb. Accent-level echo: 13:5 and 13:6 carry the rare zinor + segol pair on their seventh-day inspection frames — the same rare pair Gen 1:28&#x27;s blessing frame carries (observation tier).</td><td>tested</td></tr>
+<tr><td><b>C</b></td><td>Segment structure</td><td>Verb morphology (#IMPOSED OSHB, DB-verified 2026-07-31): the span holds exactly ONE narrative-spine verb — va-yedabber (Vpw3ms, piel wayyiqtol &#x27;and-then-he-spoke&#x27;, 13:1, the frame). Everything after it is law grammar: yihyeh Vqi3ms (imperfect inside the ki-frame — the CASE CONDITION, not a demand: same form, different genre, the ki re-types it); then WEQATAL (&#x27;and-he-shall-do&#x27;, TIR-029) on every action verb, stem by stem: ve-hayah Vqq (the threshold), ve-huva VHq (HOPHAL weqatal — passive routing: &#x27;he SHALL BE BROUGHT&#x27;), ve-ra&#x27;ah/ ve-ra&#x27;ahu Vqq x6 (the inspection calls), ve-hisgir/ve-hisgiro Vhq x2 (HIPHIL — the confine calls), ve-timme/ve-timme&#x27;o Vpq x2 and ve-tiharo Vpq (PIEL DECLARATIVES — &#x27;declare impure/pure&#x27;: status writes, not transformations), ve-khibbes Vpq (the released party&#x27;s own duty), ve-taher Vqq (QAL stative — &#x27;and he IS pure&#x27;: the declare/become minimal pair with piel ve-tiharo INSIDE ONE VERSE, 13:6), ve-nir&#x27;ah VNq (NIPHAL weqatal — passive re-presentation). Condition predicates ride PERFECTS inside the if-clauses (hafakh &#x27;has turned&#x27;, amad &#x27;has stood&#x27;, fasah &#x27;has spread&#x27;, kehah Vpp &#x27;has dimmed&#x27;) with the negators lo/ein. 13:7&#x27;s condition carries the INFINITIVE-ABSOLUTE DOUBLING pasoh tifseh (Vqa + Vqi3fs — &#x27;spread it SPREADS&#x27;) — the mot-tamut construction (Gen 2:17) on the escalation verb. Orthography flag: 13:4 and 13:8 write the feminine pronoun as הוא (ktiv hu) coded Pp3fs (qere hi) — the Torah-wide ktiv/qere on this pronoun, letter-visible in our own data, recorded [OPEN]. Form shift: the 13:2 mark-name sapachat returns at 13:6-8 as MISPACHAT (mem-prefixed; 3 occurrences, Torah-wide unique to this chapter) — recorded [OPEN]; Onkelos levels both to one word.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Predicates &amp; outcomes</td><td>13:1 FRAME: the only event — YHWH speaks to Moshe AND AHARON (dual addressee: the inspector is on the distribution list of the inspection law; first YHWH-name in a derived unit — the gen units ran on Elohim). 13:2 CASE: adam KI yihyeh — the intake filter: three mark-classes (se&#x27;et/sapachat/baheret, or-connected) in the skin of the flesh, threshold ve-hayah le-nega tzara&#x27;at, then PASSIVE routing (ve-huva — the case moves; no one is commanded to move it) to a NAMED inspector class (Aaron the priest or one of his sons). 13:3 HANDLER 1 (verdict-impure): IF hair in the mark has turned white AND its look is deeper than the skin THEN it IS nega tzara&#x27;at — the priest sees him and DECLARES him impure (piel declarative; the doubled seeing ve-ra&#x27;ah...ve-ra&#x27;ahu recorded [OPEN]). 13:4 HANDLER 2 (confine): IF bright-spot white AND look NOT deeper AND hair NOT turned THEN confine SEVEN DAYS — and the letter confines ET-HA-NEGA (&#x27;THE MARK&#x27;), where 13:5 confines ve-hisgirO (&#x27;HIM&#x27;): mark-object vs person-object across the two confinements, [OPEN]. 13:5 HANDLER 3 (first recheck): ON THE SEVENTH DAY (day 7&#x27;s definite label as the loop&#x27;s re-entry date), ve-hineh — IF the mark has STOOD in its appearance (amad be-einav — idiom [OPEN]; Onkelos resolves: &#x27;stood AS IT WAS&#x27;) AND not spread THEN confine seven days SHENIT (&#x27;a second time&#x27; — the loop&#x27;s bounded second and final iteration). 13:6 HANDLER 4 (release): second seventh-day check — IF dimmed AND not spread THEN the priest DECLARES HIM PURE; classification mispachat hi (&#x27;it is a scab&#x27;); the released party washes his garments (subject shifts priest-&gt;patient mid-chain); ve-taher — &#x27;and he IS pure&#x27; (stative). 13:7 HANDLER 5 (armed trigger): IF spread it SPREADS after his having been seen for his purification THEN he SHALL BE SEEN a second time — the release is conditional forever; the case can reopen. 13:8 HANDLER 6 (reopen verdict): the priest sees, ve-hineh it has spread — DECLARE impure: tzara&#x27;at hi. Then the span ends mid-parashah: no receipt, no test, no commit — six handlers standing, nothing executed. THE LAW INSTALLS; ONLY CASES EXECUTE.</td><td>tested</td></tr>
+<tr><td><b>E</b></td><td>Logic format choice</td><td>NEW OPERATOR FAMILY for the law genre (interpreter extension at freeze; ASSIGN/BLESS/CMD-US precedent): CASE (the ki-opener: intake filter + routing, recorded as a standing WORLD fact) and HANDLER (the weqatal chain: IF(predicates) THEN(actions), recorded as a standing WORLD fact). Handlers are INSTALLED, never executed — the day-5 BLESS-mandate rule extended to its natural genre: standing directives are facts, not SPECS; there is no receipt because nothing was demanded of the narrative present. The unit therefore leaves SPECS/TESTS/REGISTRY/LEDGER untouched — asserted as machine state in the scenarios (the gen_07 LEDGER-stays-EMPTY check reused: the law, like the seventh day, is an open transaction — standing, re-entered per case, never closed by the text).</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Bilingual logic objects</td><td>Every operator line carries he + he_translit + en; machine tokens apostrophe-free (seet_o_sapachat_o_baheret, mareh_amok). Predicate tokens inside IF()/THEN() are underscore-joined transliterations of the verse&#x27;s own words, so scenario fact-tokens remain checkable.</td><td>established</td></tr>
+<tr><td><b>G</b></td><td>Oral (named only) + Tier-A translation check</td><td>Chain-primary honesty: Sifra Tazria (Nega&#x27;im) and Mishnah Negaim — the chapter&#x27;s owners, and the home texts of the 13 middot — are NOT in the local cache; nothing is claimed from them. Named for the Tier-A triage queue: Sifra Tazria Nega&#x27;im parashah 1ff; Mishnah Negaim 1:1 (the four shades), 3:1 (who inspects); Bavli Shevuot 6a-b (the shades sugya — bears on Onkelos&#x27;s amka); Bavli Arakhin 15b-16b (tzara&#x27;at and speech-sin); Bereshit Rabbah 41:2 (the Gen 12:17 nega debut as tzara&#x27;at). Tier-A Onkelos read at derive time (FETCHLOG 2026-07-31), five findings — the star: tzara&#x27;at rendered SEGIRU/SEGIRUTA (&#x27;the SHUTTING-disease&#x27;) — the condition named by its own quarantine procedure, on the sagar root whose corpus debut is Gen 2:21&#x27;s flesh-closure (and 7:16&#x27;s ark-closure): translation- level fusion of disease and confinement. Also: amad be-einav resolved to kam kad havah (&#x27;stood AS IT WAS&#x27; — appearance reading); sapachat/mispachat leveled to adita (&#x27;the added one&#x27;); se&#x27;et (raised) rendered amka (&#x27;deep-spot&#x27;) — dossier queued; the piel declaratives retained (visa&#x27;ev/vidakkei — declare, not transform).</td><td>tested</td></tr>
+<tr><td><b>H</b></td><td>Scenarios</td><td>S1 the frame (nothing but an event and two presupposition flags); S2 the case fact standing; S3-S8 one handler fact per verse, accumulating; S8 also asserts the GENRE SIGNATURE as machine state: SPECS empty, no test, no name, LEDGER stays EMPTY (open transaction). S9_negative re-asserts flag-never-block. No demand exists in the unit, so no mood-contract scenario applies — shared with gen_07, for the same textual reason inverted: day 7 had nothing left to demand; the law demands nothing because it installs for cases that have not yet occurred.</td><td>tested</td></tr>
+<tr><td><b>I</b></td><td>English leakage review</td><td>Operators derive from morph codes (the single Vpw frame verb; Vqi inside ki -&gt; case condition; Vqq/Vpq/Vhq/VHq/VNq weqatal -&gt; THEN per TIR-029, stems preserved in the readings — hophal passive routing, hiphil confine, piel declaratives, qal stative, niphal re-presentation; Vqa+Vqi doubling at 13:7; perfects as condition predicates), particles (ki/im case/branch tokens — 13/15 chapter census; lo/ein negators; o &#x27;or&#x27; disjunction in the intake list), and the etnachta condition|action bracket verified on all seven law verses. The ktiv-hu/qere-hi and sapachat/mispachat flags rest on our own letter data.</td><td>established</td></tr>
+<tr><td><b>J</b></td><td>Pre-flight + freeze gate</td><td>Pre-flight 2026-07-31: prototype CASE + HANDLER handlers injected in the scratchpad harness (repo file untouched); all scenarios green. FROZEN 2026-08-01 on owner order (&quot;freeze lev 13&quot;): h_case + h_handler added to run_unit.py and dispatched; unit re-verified green through the real interpreter. Narrative (ASK FIRST) and triage remain on owner order — the triage doubles as the middot detector&#x27;s legal-device tripwire test (Sifra/Negaim enter the cache). Changes require a new derive pass, not silent edits.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Lv_13_1 · Lev.13.1 · <span class='expr'>FRAME_SPEECH</span></h3>
+<p><span class="he">וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה וְאֶל־אַהֲרֹן לֵאמֹר</span> · <i>va-yedabber YHWH el-Moshe ve-el-Aharon le-mor</i> · [EN-AID/JPS] And the LORD spoke unto Moses and unto Aaron, saying:</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וידבר יהוה</span> · <i>va-yedabber YHWH</i> · the frame&#x27;s speech event</div><div class="arm"><b>RIGHT</b><br><span class="he">אל משה ואל אהרן לאמר</span> · <i>el-Moshe ve-el-Aharon le-mor</i> · the dual distribution list + the quote opener</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">speak(e1) ∧ Agent(e1, YHWH)</span><br><span class="gloss">= speak(e1) ∧ Agent(e1, the-LORD)</span><br>The unit&#x27;s ONLY narrative-spine verb (Vpw3ms, wayyiqtol — &#x27;and-then-he-spoke&#x27;): the frame that hands down everything after it. First YHWH-name in a derived unit (the seven gen units ran entirely on Elohim). Dual addressee: el-Moshe VE-EL AHARON — the law whose executor is the priest is ADDRESSED to the priest; the inspector is on the distribution list of the inspection procedure.
+</td><td><span class="he">וַיְדַבֵּר יְהוָה</span> · <i>va-yedabber YHWH</i><br><span class="gloss">= spoke the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">moshe, aharon are READ without prior install (standalone machine; the persons of the Exodus narrative — cross-unit chaining is Stage E)</span><br><span class="gloss">= Moses, Aaron are READ without prior install (standalone machine; the persons fowl the Exodus narrative — cross-unit chaining is Stage E)</span><br>flag, not fix — the frame&#x27;s addressees are imports</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">One verse of narrative, then the machine goes silent: no wayyiqtol (&#x27;and-then-he-did&#x27; form) occurs again in the span. The learning pass measured this genre signature corpus-wide (Lev 1: 2 narrative verbs vs 27 weqatal); this unit holds it at 1 vs 13.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_13_2 · Lev.13.2 · <span class='expr'>CASE_INTAKE</span></h3>
+<p><span class="he">אָדָם כִּי־יִהְיֶה בְעוֹר־בְּשָׂרוֹ שְׂאֵת אוֹ־סַפַּחַת אוֹ בַהֶרֶת וְהָיָה בְעוֹר־בְּשָׂרוֹ לְנֶגַע צָרָעַת וְהוּבָא אֶל־אַהֲרֹן הַכֹּהֵן אוֹ אֶל־אַחַד מִבָּנָיו הַכֹּהֲנִים</span> · <i>adam ki-yihyeh ve-or-besaro se&#x27;et o-sapachat o vaheret ve-hayah ve-or-besaro le-nega tzara&#x27;at ve-huva el-Aharon ha-kohen o el-achad mi-banav ha-kohanim</i> · [EN-AID/JPS] When a man shall have in the skin of his flesh a rising, or a scab, or a bright spot, and it become in the skin of his flesh the plague of leprosy, then he shall be brought unto Aaron the priest, or unto one of his sons the priests.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אדם כי יהיה בעור בשרו שאת או ספחת או בהרת והיה בעור בשרו לנגע צרעת</span> · <i>adam ki-yihyeh be-or besaro se&#x27;et o sapachat o baheret ve-hayah be-or besaro le-nega tzara&#x27;at</i> · the case conditions: subject, ki-trigger, three mark-classes, threshold (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">והובא אל אהרן הכהן או אל אחד מבניו הכהנים</span> · <i>ve-huva el-Aharon ha-kohen o el-achad mi-banav ha-kohanim</i> · the routing: passive, to the named inspector class</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>CASE</td><td><span class="expr">CASE(adam, mark_in_or_basar(seet_o_sapachat_o_baheret) -&gt; nega_tzaraat) ROUTE(hova_el_ha_kohen)</span><br><span class="gloss">= CASE(human, mark-in-skin-of-flesh(swelling-or-scab-or-bright-spot) -&gt; the-disease-mark) ROUTE(hova-to-the-priest)</span><br>THE CORPUS&#x27;S FIRST DERIVED CASE OPERATOR. adam KI-yihyeh — the ki (&#x27;when&#x27;) re-types the imperfect: in narrative, yihyeh in command position was a demand (TIR-028&#x27;s LET?); inside a ki-frame it is a CASE CONDITION — a trigger awaiting instances, not a receipt. The intake filter: THREE mark-classes joined by o (&#x27;or&#x27;) — se&#x27;et (&#x27;swelling&#x27; — detector grade A: its only earlier life is Gen 4:7, Cain&#x27;s im-branch), sapachat (&#x27;scab&#x27;), baheret (&#x27;bright spot&#x27;) — in the SKIN of his FLESH (be-or besaro: Gen 3:21&#x27;s or on Gen 2:21&#x27;s basar). Threshold: ve-hayah (weqatal) le-nega tzara&#x27;at — &#x27;and it BECOMES a tzara&#x27;at mark&#x27; (nega: Gen 12:17&#x27;s debut noun; tzara&#x27;at: Onkelos renders SEGIRU, &#x27;the shutting-disease&#x27;). Routing: ve-huva — HOPHAL weqatal, PASSIVE: &#x27;he shall BE BROUGHT&#x27; — the case moves; no agent is commanded to move it. Inspector class NAMED: Aaron the priest or ONE OF his sons — the office (Exod 28) with a disjunction: any single priest suffices, [OPEN] (Sifra/Negaim 3:1 queued: who may inspect).
+</td><td><span class="he">אָדָם כִּי־יִהְיֶה … וְהוּבָא אֶל־אַהֲרֹן הַכֹּהֵן</span> · <i>adam ki-yihyeh … ve-huva el-Aharon ha-kohen</i><br><span class="gloss">= human when-there-is he-shall-be-brought to-Aaron priest</span></td><td class='cite'>TIR-029</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">adam, or_basar, ha_kohen are READ without prior install (standalone machine; gen_06 species / Gen 3:21 skin on Gen 2:21 flesh / Exod 28 office — the import chain is mapped in gen_boot)</span><br><span class="gloss">= human, skin-of-flesh, the-priest are READ without prior install (standalone machine; gen-06 species / Gen 3:21 skin on Gen 2:21 flesh / Exod 28 office — the import chain is mapped in gen-boot)</span><br>flag, not fix — the case&#x27;s subject, substrate, and officer are all imports</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The etnachta brackets [conditions | routing] — the first of seven consecutive verses whose accent split is the IF|THEN boundary. The opening five words carry four imports and zero local installs: the law legislates entirely over inherited symbols.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_13_3 · Lev.13.3 · <span class='expr'>HANDLER_VERDICT_TAMEI</span></h3>
+<p><span class="he">וְרָאָה הַכֹּהֵן אֶת־הַנֶּגַע בְּעוֹר־הַבָּשָׂר וְשֵׂעָר בַּנֶּגַע הָפַךְ לָבָן וּמַרְאֵה הַנֶּגַע עָמֹק מֵעוֹר בְּשָׂרוֹ נֶגַע צָרַעַת הוּא וְרָאָהוּ הַכֹּהֵן וְטִמֵּא אֹתוֹ</span> · <i>ve-ra&#x27;ah ha-kohen et-ha-nega be-or ha-basar ve-se&#x27;ar ba-nega hafakh lavan u-mar&#x27;eh ha-nega amok me-or besaro nega tzara&#x27;at hu ve-ra&#x27;ahu ha-kohen ve-timme oto</i> · [EN-AID/JPS] And the priest shall look upon the plague in the skin of the flesh; and if the hair in the plague be turned white, and the appearance of the plague be deeper than the skin of his flesh, it is the plague of leprosy; and the priest shall look on him, and pronounce him unclean.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וראה הכהן את הנגע בעור הבשר ושער בנגע הפך לבן ומראה הנגע עמק מעור בשרו נגע צרעת הוא</span> · <i>ve-ra&#x27;ah ha-kohen … hafakh lavan … amok me-or besaro — nega tzara&#x27;at hu</i> · inspection call + two predicates + classification (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וראהו הכהן וטמא אתו</span> · <i>ve-ra&#x27;ahu ha-kohen ve-timme oto</i> · the verdict act: see him — declare him impure</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>HANDLER</td><td><span class="expr">HANDLER IF(sear_hafakh_lavan ∧ mareh_amok_me_or) THEN(classify(nega_tzaraat_hu) ∧ timme(status_tamei))</span><br><span class="gloss">= HANDLER IF(hair-has-turned-white ∧ appearance-deeper-from-skin-of) THEN(classify(into-a-mark-of-the-disease-it-is) ∧ he-shall-declare-impure(status-impure))</span><br>THE CORPUS&#x27;S FIRST DERIVED HANDLER. The inspection call is weqatal (ve-ra&#x27;ah, &#x27;he SHALL see&#x27; — TIR-029 THEN, standing obligation): Gen 1:31&#x27;s instrument (ra&#x27;ah + verdict) as delegated procedure. Predicates ride PERFECTS inside the condition: hafakh lavan (&#x27;HAS TURNED white&#x27;), mareh amok (&#x27;appearance DEEPER than the skin&#x27; — Onkelos renders se&#x27;et itself as amka, &#x27;deep-spot&#x27;: the shades dossier, Shevuot 6a-b, queued). Classification clause: nega tzara&#x27;at HU (&#x27;it IS…&#x27;) — the law names the state before writing it. Verdict: ve-ra&#x27;ahu … ve-timme oto — the seeing DOUBLED (ve-ra&#x27;ah opens, ve-ra&#x27;ahu closes — [OPEN]: the chain&#x27;s re&#x27;iyah discussions queued), then the PIEL DECLARATIVE: timme = &#x27;DECLARE impure&#x27; (not &#x27;make&#x27;) — day 7&#x27;s status-write device (kadosh by declaration) in its law-side form, negative polarity. Onkelos keeps it declarative (visa&#x27;ev yateh).
+</td><td><span class="he">וְשֵׂעָר … הָפַךְ לָבָן וּמַרְאֵה … עָמֹק … וְטִמֵּא אֹתוֹ</span> · <i>ve-se&#x27;ar … hafakh lavan u-mar&#x27;eh … amok … ve-timme oto</i><br><span class="gloss">= hair has-turned white appearance-of deeper he-shall-declare-impure him</span></td><td class='cite'>TIR-029</td><td>tested</td></tr>
+</table>
+<div class="meta">Handler 1 standing: the immediate-verdict branch. Note what is NOT here: no penalty, no sacrifice, no exile clause — this unit only classifies and routes; consequences live in later spans (13:45-46). The machine installs exactly what the span says and nothing ahead of it.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_13_4 · Lev.13.4 · <span class='expr'>HANDLER_CONFINE_FIRST</span></h3>
+<p><span class="he">וְאִם־בַּהֶרֶת לְבָנָה הִוא בְּעוֹר בְּשָׂרוֹ וְעָמֹק אֵין־מַרְאֶהָ מִן־הָעוֹר וּשְׂעָרָה לֹא־הָפַךְ לָבָן וְהִסְגִּיר הַכֹּהֵן אֶת־הַנֶּגַע שִׁבְעַת יָמִים</span> · <i>ve-im-baheret levanah hi ve-or besaro ve-amok ein-mar&#x27;eha min-ha-or u-se&#x27;arah lo-hafakh lavan ve-hisgir ha-kohen et-ha-nega shivat yamim</i> · [EN-AID/JPS] And if the bright spot be white in the skin of his flesh, and the appearance thereof be not deeper than the skin, and the hair thereof be not turned white, then the priest shall shut up him that hath the plague seven days.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ואם בהרת לבנה הוא בעור בשרו ועמק אין מראה מן העור ושערה לא הפך לבן</span> · <i>ve-im baheret levanah hi … ve-amok EIN mar&#x27;eha … u-se&#x27;arah LO hafakh lavan</i> · the im-branch: one positive + two NEGATED predicates (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">והסגיר הכהן את הנגע שבעת ימים</span> · <i>ve-hisgir ha-kohen et-ha-nega shivat yamim</i> · the confine call: seven days</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>HANDLER</td><td><span class="expr">HANDLER IF(baheret_levanah ∧ ein_amok_mareha ∧ lo_hafakh_lavan) THEN(hisgir(et_ha_nega, shivat_yamim))</span><br><span class="gloss">= HANDLER IF(bright-spot-white ∧ is-not-deeper-its-appearance ∧ not-has-turned-white) THEN(he-shall-confine(obj-marker-the-into-a-mark-of, seven-of-days))</span><br>The im (&#x27;if&#x27;) branch — the chapter&#x27;s sub-case particle (im x15 chapter-wide vs ki x13; the letter&#x27;s own if/elif distinction). Predicates NEGATED with the corpus&#x27;s two negators in one condition (ein for the nominal clause, lo for the verbal — &#x27;its look is NOT deeper&#x27;, &#x27;hair has NOT turned&#x27;): uncertainty defined as the complement of handler 1&#x27;s condition. THEN: ve-hisgir (HIPHIL weqatal) — CONFINE, SEVEN DAYS: the quarantine call, on the sagar root born at Gen 2:21 (flesh-closure) and 7:16 (ark-closure) — and Onkelos names the whole disease by this very operation (segiru). Timer: shivat yamim — the creation week as the law&#x27;s wait-state. Letter oddity, [OPEN]: this confinement takes ET-HA-NEGA (&#x27;THE MARK&#x27;) as its object; 13:5&#x27;s second confinement takes ve-hisgirO (&#x27;HIM&#x27;) — mark-object vs person-object across the loop&#x27;s two iterations (Sifra queued).
+</td><td><span class="he">וְאִם … אֵין … לֹא … וְהִסְגִּיר … שִׁבְעַת יָמִים</span> · <i>ve-im … ein … lo … ve-hisgir … shivat yamim</i><br><span class="gloss">= if is-not not he-shall-confine seven-of days</span></td><td class='cite'>TIR-029</td><td>tested</td></tr>
+</table>
+<div class="meta">Handler 2 standing: the uncertainty branch — the law&#x27;s answer to a case its predicates cannot yet decide is TIME: hold state, wait one week, look again. The machine records its first scheduled re-inspection.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_13_5 · Lev.13.5 · <span class='expr'>HANDLER_RECHECK_CONFINE_SECOND</span></h3>
+<p><span class="he">וְרָאָהוּ הַכֹּהֵן בַּיּוֹם הַשְּׁבִיעִי וְהִנֵּה הַנֶּגַע עָמַד בְּעֵינָיו לֹא־פָשָׂה הַנֶּגַע בָּעוֹר וְהִסְגִּירוֹ הַכֹּהֵן שִׁבְעַת יָמִים שֵׁנִית</span> · <i>ve-ra&#x27;ahu ha-kohen ba-yom ha-shevi&#x27;i ve-hineh ha-nega amad be-einav lo-fasah ha-nega ba-or ve-hisgiro ha-kohen shivat yamim shenit</i> · [EN-AID/JPS] And the priest shall look on him the seventh day; and, behold, if the plague stay in its appearance, and the plague be not spread in the skin, then the priest shall shut him up seven days more.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וראהו הכהן ביום השביעי והנה הנגע עמד בעיניו לא פשה הנגע בעור</span> · <i>ve-ra&#x27;ahu ha-kohen ba-yom ha-shevi&#x27;i ve-hineh … amad be-einav lo-fasah …</i> · the day-7 recheck: date, deictic, two predicates (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">והסגירו הכהן שבעת ימים שנית</span> · <i>ve-hisgiro ha-kohen shivat yamim shenit</i> · second confine: the loop&#x27;s bounded second iteration</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>HANDLER</td><td><span class="expr">HANDLER IF(ba_yom_ha_shevii ∧ amad_be_einav ∧ lo_fasah) THEN(hisgiro(shivat_yamim_shenit))</span><br><span class="gloss">= HANDLER IF(in-the-day-the-seventh ∧ has-stood-in-its-appearance ∧ not-has-spread) THEN(he-shall-confine-him(seven-of-days-a-second-time))</span><br>The re-inspection lands BA-YOM HA-SHEVI&#x27;I (&#x27;on THE SEVENTH day&#x27;) — day 7&#x27;s definite label (gen_07&#x27;s operand) as the quarantine loop&#x27;s re-entry date, under the rare zinor+segol accent frame (the Gen 1:28 blessing-frame pair — observation). ve-HINEH (&#x27;and BEHOLD&#x27;) — Gen 1:31&#x27;s inspection deictic, now marking a diagnostic result. Predicates: amad be-einav (&#x27;stood in its eyes/appearance&#x27; — idiom [OPEN]: whose eyes? Onkelos resolves to the appearance: kam kad havah, &#x27;stood AS IT WAS&#x27;); lo-fasah (&#x27;has not spread&#x27; — pasah, the chapter-owned escalation verb). THEN: confine SHENIT (&#x27;a SECOND time&#x27;) — the loop is BOUNDED: the letter authorizes exactly two iterations; no third confinement exists in the chapter. Object shift: ve-hisgirO — &#x27;him&#x27;, the person (contrast 13:4&#x27;s mark-object), [OPEN].
+</td><td><span class="he">בַּיּוֹם הַשְּׁבִיעִי וְהִנֵּה … עָמַד … לֹא־פָשָׂה … שֵׁנִית</span> · <i>ba-yom ha-shevi&#x27;i ve-hineh … amad … lo-fasah … shenit</i><br><span class="gloss">= day seventh behold has-stood not-has-spread a-second-time</span></td><td class='cite'>TIR-029</td><td>tested</td></tr>
+</table>
+<div class="meta">Handler 3 standing: the loop&#x27;s second entry. The machine notes the law&#x27;s clock discipline: fixed re-entry date, bounded iteration count, explicit iteration label (shenit).</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_13_6 · Lev.13.6 · <span class='expr'>HANDLER_RELEASE</span></h3>
+<p><span class="he">וְרָאָה הַכֹּהֵן אֹתוֹ בַּיּוֹם הַשְּׁבִיעִי שֵׁנִית וְהִנֵּה כֵּהָה הַנֶּגַע וְלֹא־פָשָׂה הַנֶּגַע בָּעוֹר וְטִהֲרוֹ הַכֹּהֵן מִסְפַּחַת הִיא וְכִבֶּס בְּגָדָיו וְטָהֵר</span> · <i>ve-ra&#x27;ah ha-kohen oto ba-yom ha-shevi&#x27;i shenit ve-hineh kehah ha-nega ve-lo-fasah ha-nega ba-or ve-tiharo ha-kohen mispachat hi ve-khibbes begadav ve-taher</i> · [EN-AID/JPS] And the priest shall look on him again the seventh day; and, behold, if the plague be dim, and the plague be not spread in the skin, then the priest shall pronounce him clean: it is a scab; and he shall wash his clothes, and be clean.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וראה הכהן אתו ביום השביעי שנית והנה כהה הנגע ולא פשה הנגע בעור</span> · <i>ve-ra&#x27;ah ha-kohen oto ba-yom ha-shevi&#x27;i shenit ve-hineh kehah … ve-lo-fasah …</i> · the second day-7 recheck: faded + not spread (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וטהרו הכהן מספחת היא וכבס בגדיו וטהר</span> · <i>ve-tiharo ha-kohen mispachat hi ve-khibbes begadav ve-taher</i> · the release chain: declare pure — classify — wash — BE pure</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>HANDLER</td><td><span class="expr">HANDLER IF(ba_yom_ha_shevii_shenit ∧ kehah ∧ lo_fasah) THEN(tiharo(status_tahor) ∧ classify(mispachat_hi) ∧ kibbes_begadav ∧ taher)</span><br><span class="gloss">= HANDLER IF(in-the-day-the-seventh-a-second-time ∧ has-dimmed ∧ not-has-spread) THEN(he-shall-declare-him-pure(status-pure) ∧ classify(scab-it-is) ∧ wash-his-garments ∧ he-is-pure)</span><br>The release branch. Predicates: kehah (&#x27;has DIMMED&#x27;, piel perfect) + not spread. THEN, a four-link chain: (1) ve-tiharO — PIEL DECLARATIVE, &#x27;the priest shall DECLARE him pure&#x27; — the positive status write (Gen 7:2&#x27;s axis, written by an officer); (2) classification: MISPACHAT hi (&#x27;it is a scab&#x27;) — the 13:2 mark-name sapachat returning MEM-PREFIXED, a form unique in the Torah to 13:6-8, [OPEN] (Onkelos levels both to adita, &#x27;the added one&#x27;); (3) ve-khibbes begadav (&#x27;and HE shall wash his garments&#x27;) — the weqatal chain&#x27;s subject SHIFTS priest-&gt;patient mid-handler: the released party executes his own closing duty (garments: Gen 3:21&#x27;s install, the second skin); (4) ve-TAHER — QAL STATIVE, &#x27;and he IS pure&#x27;: the DECLARE/BECOME minimal pair (piel tiharo vs qal taher) inside one verse — the law distinguishing the officer&#x27;s write from the state&#x27;s holding, letter-visible.
+</td><td><span class="he">כֵּהָה … וְטִהֲרוֹ … מִסְפַּחַת הִיא וְכִבֶּס בְּגָדָיו וְטָהֵר</span> · <i>kehah … ve-tiharo … mispachat hi ve-khibbes begadav ve-taher</i><br><span class="gloss">= has-dimmed he-shall-declare-him-pure scab it-is he-shall-wash his-garments he-is-pure</span></td><td class='cite'>TIR-029</td><td>tested</td></tr>
+</table>
+<div class="meta">Handler 4 standing: the loop&#x27;s clean exit. The machine notes that even the exit writes TWO different things: a declaration (by the priest) and a state (of the person) — the register distinction the interpreter has carried since day 7&#x27;s kadosh.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_13_7 · Lev.13.7 · <span class='expr'>HANDLER_REOPEN_TRIGGER</span></h3>
+<p><span class="he">וְאִם־פָּשֹׂה תִפְשֶׂה הַמִּסְפַּחַת בָּעוֹר אַחֲרֵי הֵרָאֹתוֹ אֶל־הַכֹּהֵן לְטָהֳרָתוֹ וְנִרְאָה שֵׁנִית אֶל־הַכֹּהֵן</span> · <i>ve-im-pasoh tifseh ha-mispachat ba-or acharei hera&#x27;oto el-ha-kohen le-tohorato ve-nir&#x27;ah shenit el-ha-kohen</i> · [EN-AID/JPS] But if the scab spread abroad in the skin, after that he hath shown himself to the priest for his cleansing, he shall show himself to the priest again.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ואם פשה תפשה המספחת בעור אחרי הראתו אל הכהן לטהרתו</span> · <i>ve-im pasoh tifseh ha-mispachat ba-or acharei hera&#x27;oto el-ha-kohen le-tohorato</i> · the armed condition: doubled spread-verb + the after-release clause (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ונראה שנית אל הכהן</span> · <i>ve-nir&#x27;ah shenit el-ha-kohen</i> · the re-presentation call: passive, second time</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>HANDLER</td><td><span class="expr">HANDLER IF(pasoh_tifseh(acharei_heraoto_le_tohorato)) THEN(nirah_shenit_el_ha_kohen)</span><br><span class="gloss">= HANDLER IF(spread-it-spreads(after-its-appearing-to-his-purification)) THEN(seen-a-second-time-to-the-priest)</span><br>The armed post-release trigger. Condition verb DOUBLED by the infinitive absolute: pasoh tifseh (&#x27;spread it SPREADS&#x27;, Vqa + Vqi3fs) — the mot-tamut construction (Gen 2:17&#x27;s penalty doubling) on the escalation verb: the law&#x27;s emphatic form marks the branch that overturns a verdict. Temporal scope: ACHAREI hera&#x27;oto le-tohorato (&#x27;AFTER his having been seen for his purification&#x27; — niphal infinitive): the trigger&#x27;s window opens exactly where the release closed — purity is standing state, and standing state stays monitored. THEN: ve-NIR&#x27;AH (NIPHAL weqatal, passive) shenit — &#x27;he shall BE SEEN a second time&#x27;: re-presentation, passive like the 13:2 intake routing — the case re-enters the system the same way it entered.
+</td><td><span class="he">פָּשֹׂה תִפְשֶׂה … אַחֲרֵי הֵרָאֹתוֹ … וְנִרְאָה שֵׁנִית</span> · <i>pasoh tifseh … acharei hera&#x27;oto … ve-nir&#x27;ah shenit</i><br><span class="gloss">= spread it-spreads after his-being-seen he-shall-be-seen a-second-time</span></td><td class='cite'>TIR-029, TIR-030</td><td>tested</td></tr>
+</table>
+<div class="meta">Handler 5 standing: the release of 13:6 is conditional FOREVER — the machine records that tahor (&#x27;pure&#x27;) status carries an armed exception handler, not a terminal state. The two passives (huva, nir&#x27;ah) bracket the procedure: cases arrive and re-arrive without a commanded agent.</div>
+</div>
+<div class="step">
+<h3>STEP_Lv_13_8 · Lev.13.8 · <span class='expr'>HANDLER_REOPEN_VERDICT</span></h3>
+<p><span class="he">וְרָאָה הַכֹּהֵן וְהִנֵּה פָּשְׂתָה הַמִּסְפַּחַת בָּעוֹר וְטִמְּאוֹ הַכֹּהֵן צָרַעַת הִוא</span> · <i>ve-ra&#x27;ah ha-kohen ve-hineh pastah ha-mispachat ba-or ve-timme&#x27;o ha-kohen tzara&#x27;at hi</i> · [EN-AID/JPS] And the priest shall look, and, behold, the scab is spread in the skin; then the priest shall pronounce him unclean: it is leprosy.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וראה הכהן והנה פשתה המספחת בעור</span> · <i>ve-ra&#x27;ah ha-kohen ve-hineh pastah ha-mispachat ba-or</i> · the reopened inspection: behold, spread (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וטמאו הכהן צרעת הוא</span> · <i>ve-timme&#x27;o ha-kohen tzara&#x27;at hi</i> · the reopened verdict: declare impure — it is tzara&#x27;at</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>HANDLER</td><td><span class="expr">HANDLER IF(hineh_pastah_ha_mispachat) THEN(timmeo(status_tamei) ∧ classify(tzaraat_hi))</span><br><span class="gloss">= HANDLER IF(behold-has-spread-the-scab) THEN(pronounce-impure(status-impure) ∧ classify(the-disease-it-is))</span><br>The reopened case&#x27;s verdict: spread confirmed (ve-hineh — the deictic again), DECLARE impure — and the classification upgrades: 13:6 said mispachat hi (&#x27;a scab&#x27;); 13:8 says TZARA&#x27;AT hi (&#x27;it is tzara&#x27;at&#x27;) — same object, new class, overturning the release. Orthography flag, our own letter data: the feminine pronoun here (and at 13:4) is WRITTEN הוא (ktiv hu) and CODED feminine (Pp3fs, qere hi) — the Torah-wide ktiv/qere pair surfacing inside the verdict formulas, recorded [OPEN]. Gender note: 13:3&#x27;s classification ran masculine (nega tzara&#x27;at HU, agreeing with nega); 13:8&#x27;s runs feminine (tzara&#x27;at HI, agreeing with tzara&#x27;at) — the formula agrees with whichever noun heads it, letter-visible.
+</td><td><span class="he">וְהִנֵּה פָּשְׂתָה … וְטִמְּאוֹ … צָרַעַת הִוא</span> · <i>ve-hineh pastah … ve-timme&#x27;o … tzara&#x27;at hi</i><br><span class="gloss">= behold has-spread he-shall-declare-him-impure tzara&#x27;at it-is</span></td><td class='cite'>TIR-029</td><td>tested</td></tr>
+</table>
+<div class="meta">Handler 6 standing — and the span ends MID-PARASHAH: 13:9 opens the next ki-case. No receipt (nothing was demanded), no test (no tov — the law&#x27;s verdicts are tamei/tahor, another axis), no commit (no evening-morning; the law does not close days). Six handlers stand armed over zero executed cases: INSTALLED CODE, exactly as the learning pass predicted law would parse.</div>
+</div>
+<h2>State machine</h2>
+<div class="meta">Law-unit installer (standalone; registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER). States are INSTALL states — the case-flow the handlers define (intake -&gt; verdict/confine -&gt; recheck -&gt; release/reopen) executes only when cases occur, which this span never narrates.</div>
+<table><tr><th>state</th><th>meaning</th></tr>
+<tr><td><b>S_boot</b></td><td>Before 13:1 — all registers empty (standalone unit)</td></tr>
+<tr><td><b>S_framed</b></td><td>After 13:1 — one speech event (YHWH -&gt; Moshe + Aharon); moshe/aharon flagged; nothing else</td></tr>
+<tr><td><b>S_case_installed</b></td><td>After 13:2 — the intake case standing as a WORLD fact (3-class filter -&gt; passive routing to the priest); adam/or_basar/ha_kohen flagged</td></tr>
+<tr><td><b>S_handlers_1_2</b></td><td>After 13:3-4 — verdict-impure handler + first-confine handler standing (facts x3)</td></tr>
+<tr><td><b>S_handlers_3_4</b></td><td>After 13:5-6 — recheck/second-confine + release handlers standing (facts x5)</td></tr>
+<tr><td><b>S_installed_armed</b></td><td>After 13:7-8 — reopen trigger + reopen verdict standing (facts x7); SPECS/TESTS/REGISTRY/LEDGER all untouched: installed code, armed, unexecuted</td></tr>
+</table><table><tr><th>from</th><th>to</th><th>via</th></tr>
+<tr><td>S_boot</td><td>S_framed</td><td>STEP_Lv_13_1</td></tr>
+<tr><td>S_framed</td><td>S_case_installed</td><td>STEP_Lv_13_2</td></tr>
+<tr><td>S_case_installed</td><td>S_handlers_1_2</td><td>STEP_Lv_13_4</td></tr>
+<tr><td>S_handlers_1_2</td><td>S_handlers_3_4</td><td>STEP_Lv_13_6</td></tr>
+<tr><td>S_handlers_3_4</td><td>S_installed_armed</td><td>STEP_Lv_13_8</td></tr>
+</table>
+<div class="note"><b>AFTER_S_installed_armed</b> — WORLD: NOTHING created; five presupposed imports flagged (moshe, aharon, adam, or_basar, ha_kohen) + SEVEN standing law facts — one case (intake filter -&gt; routing) and six handlers (verdict-impure; confine-7; recheck-confine-7-shenit; release with declare/become pair; reopen trigger; reopen verdict). REGISTRY: untouched — the tamei/tahor writes inside the handlers are PARAMETERIZED (they execute per case, and no case occurs in the span). SPECS: log EMPTY — the ki-condition is a trigger, not a demand; nothing is owed to the narrative present. TESTS: empty — the tov instrument belongs to the other genre; this unit&#x27;s verdict axis is tamei/tahor. LEDGER: EMPTY — the law closes no days. FLAGS: read_before_install x5 — none blocking. The genre signature in one line: a unit whose ONLY writes are standing handler facts — the measured definition of installed code.</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>The frame, then silence: after STEP_Lv_13_1</td><td>All registers empty (standalone unit).</td><td>SPECS empty; no test, no name; machine flags moshe/aharon as read-before-install (presupposed).<br><span class="gloss">= SPECS empty; no test, no name; machine flags Moses/Aaron as read-before-install (presupposed).</span></td><td><span class="he">וַיְדַבֵּר יְהוָה</span> · <i>va-yedabber YHWH</i><br><span class="gloss">= spoke the-LORD</span></td></tr>
+<tr><td><b>S2</b></td><td>The case installed as standing fact: after STEP_Lv_13_2</td><td>S1 state.</td><td>Facts case-kohen HOLD; SPECS empty; machine flags adam/or_basar/ha_kohen as read-before-install (presupposed).<br><span class="gloss">= Facts case-priest HOLD; SPECS empty; machine flags human/skin-of-flesh/the-priest as read-before-install (presupposed).</span></td><td><span class="he">אָדָם כִּי־יִהְיֶה</span> · <i>adam ki-yihyeh</i><br><span class="gloss">= human when-there-is</span></td></tr>
+<tr><td><b>S3</b></td><td>Handler 1 standing — verdict-impure: after STEP_Lv_13_3</td><td>S2 state.</td><td>Facts handler-timme HOLD; SPECS empty.<br><span class="gloss">= Facts handler-he-shall-declare-impure HOLD; SPECS empty.</span></td><td><span class="he">וְטִמֵּא אֹתוֹ</span> · <i>ve-timme oto</i><br><span class="gloss">= he-shall-declare-impure him</span></td></tr>
+<tr><td><b>S4</b></td><td>Handler 2 standing — first confinement: after STEP_Lv_13_4</td><td>S3 state.</td><td>Facts handler-hisgir HOLD; SPECS empty.<br><span class="gloss">= Facts handler-he-shall-confine HOLD; SPECS empty.</span></td><td><span class="he">וְהִסְגִּיר … שִׁבְעַת יָמִים</span> · <i>ve-hisgir … shivat yamim</i><br><span class="gloss">= he-shall-confine seven-of days</span></td></tr>
+<tr><td><b>S5</b></td><td>Handler 3 standing — day-7 recheck, second confinement: after STEP_Lv_13_5</td><td>S4 state.</td><td>Facts handler-shenit HOLD; SPECS empty.<br><span class="gloss">= Facts handler-a-second-time HOLD; SPECS empty.</span></td><td><span class="he">בַּיּוֹם הַשְּׁבִיעִי … שֵׁנִית</span> · <i>ba-yom ha-shevi&#x27;i … shenit</i><br><span class="gloss">= day seventh a-second-time</span></td></tr>
+<tr><td><b>S6</b></td><td>Handler 4 standing — the release chain: after STEP_Lv_13_6</td><td>S5 state.</td><td>Facts handler-tiharo HOLD; SPECS empty.<br><span class="gloss">= Facts handler-he-shall-declare-him-pure HOLD; SPECS empty.</span></td><td><span class="he">וְטִהֲרוֹ … וְטָהֵר</span> · <i>ve-tiharo … ve-taher</i><br><span class="gloss">= he-shall-declare-him-pure he-is-pure</span></td></tr>
+<tr><td><b>S7</b></td><td>Handler 5 standing — the armed reopen trigger: after STEP_Lv_13_7</td><td>S6 state.</td><td>Facts handler-nirah HOLD; SPECS empty.<br><span class="gloss">= Facts handler-seen HOLD; SPECS empty.</span></td><td><span class="he">וְנִרְאָה שֵׁנִית</span> · <i>ve-nir&#x27;ah shenit</i><br><span class="gloss">= he-shall-be-seen a-second-time</span></td></tr>
+<tr><td><b>S8</b></td><td>Handler 6 standing — and the genre signature as machine state: after STEP_Lv_13_8</td><td>S7 state.</td><td>Facts handler-pastah HOLD; SPECS empty; no test, no name; LEDGER stays EMPTY (open transaction).<br><span class="gloss">= Facts handler-has-spread HOLD; SPECS empty; no test, no name; LEDGER stays EMPTY (open transaction).</span></td><td><span class="he">צָרַעַת הִוא</span> · <i>tzara&#x27;at hi</i><br><span class="gloss">= tzara&#x27;at it-is</span></td></tr>
+<tr><td><b>S9_negative</b></td><td>Negative: flags never block the ledger</td><td>A synthetic commit with TESTS empty (the machine&#x27;s own contract self-test).</td><td>Cycle close with TESTS empty must be FLAGGED, never blocked — the standing rule; this unit&#x27;s deeper fact is that no commit is attempted at all: the law&#x27;s seven standing facts ride a machine whose ledger, spec queue, test list, and registry all end exactly as they began.<br><span class="gloss">= Cycle close with TESTS empty must in FLAGGED, never blocked — the standing rule; this unit&#x27;s deeper fact is that no commit is attempted at all: the law&#x27;s seven standing facts ride a machine whose ledger, spec queue, test list, and registry all end exactly as they began.</span></td><td></td></tr>
+</table>
+<h2>Exports (reusable patterns)</h2><table><tr><th>id</th><th>content</th></tr>
+<tr><td>EXPORT_law_operator_family</td><td><span class="he">כִּי … וְאִם … וְ־weqatal</span> · <i>ki … ve-im … ve-[weqatal]</i> · the CASE/HANDLER operator family: ki (&#x27;when&#x27;) opens the case, im (&#x27;if&#x27;) opens branches, weqatal (&#x27;and-he-shall-do&#x27;, TIR-029) carries every action — the law genre&#x27;s installer vocabulary, first derived here; every ki-paragraph of Lev 13-14 (and beyond) should parse with it</td></tr>
+<tr><td>EXPORT_condition_action_bracket</td><td><span class="he">אתנחתא = תנאי | פעולה</span> · <i>etnachta = [condition | action]</i> · in all seven law verses the etnachta (major mid-verse rest) is the IF|THEN boundary — the cantillation parses the conditional; check against 13:9ff and every law span following</td></tr>
+<tr><td>EXPORT_quarantine_loop</td><td><span class="he">וְהִסְגִּיר … שִׁבְעַת יָמִים … בַּיּוֹם הַשְּׁבִיעִי … שֵׁנִית</span> · <i>ve-hisgir … shivat yamim … ba-yom ha-shevi&#x27;i … shenit</i> · the bounded diagnostic loop: confine seven days, re-inspect on THE seventh, at most one repeat (shenit) — the creation week as the law&#x27;s wait-state and re-entry date; recurs at 13:21,26,31-33,50,54 and in the house procedure (14:38)</td></tr>
+<tr><td>EXPORT_declare_become_pair</td><td><span class="he">וְטִהֲרוֹ … וְטָהֵר</span> · <i>ve-tiharo … ve-taher</i> · the declare/become minimal pair (piel declarative vs qal stative) in one verse — the officer&#x27;s status WRITE distinguished from the state&#x27;s HOLDING: the register distinction day 7&#x27;s kadosh installed, now grammar-visible</td></tr>
+<tr><td>EXPORT_armed_release</td><td><span class="he">אַחֲרֵי הֵרָאֹתוֹ … וְנִרְאָה שֵׁנִית</span> · <i>acharei hera&#x27;oto … ve-nir&#x27;ah shenit</i> · purity as monitored standing state: the release carries a forever-armed reopen trigger with the infinitive-absolute doubling (pasoh tifseh — Gen 2:17&#x27;s construction) on its condition verb</td></tr>
+<tr><td>EXPORT_segiru_fusion</td><td><span class="he">צָרַעַת ← סְגִירוּ</span> · <i>tzara&#x27;at -&gt; segiru</i> · Onkelos names the disease by its procedure (&#x27;the shutting-disease&#x27;) on the sagar root born at Gen 2:21 (flesh-closure) and 7:16 (ark-closure) — translation-level fusion of condition and quarantine; the machine&#x27;s hisgir trail and the translation&#x27;s noun are one root</td></tr>
+<tr><td>EXPORT_seet_cain_join</td><td><span class="he">שְׂאֵת (בראשית ד:ז ← ויקרא יג:ב)</span> · <i>se&#x27;et (Gen 4:7 -&gt; Lev 13:2)</i> · detector grade-A join: the intake&#x27;s lead mark-name debuts in Cain&#x27;s conditional (im teitiv SE&#x27;ET — &#x27;IF you do well, uplift&#x27;) — observation tier FOREVER unless the chain is found joining them (tzara&#x27;at-and-sin dossiers queued: Arakhin 15b-16b)</td></tr>
+</table>
+<h2>Oral notes (named, tiered, dual-track — never merged)</h2>
+<div class="note"><span class="badge tier-v">verified</span> <b>Targum Onkelos, Leviticus 13:2,3,8 — Tier-A translation read at derive time (FETCHLOG 2026-07-31)</b><br><span class="he">לְמַכְתַּשׁ סְגִירוּ … מַכְתַּשׁ סְגִירוּתָא</span> · <i>le-makhtash SEGIRU … makhtash SEGIRUTA</i> · The translation renders tzara&#x27;at as SEGIRU/SEGIRUTA — &#x27;the SHUTTING/confinement-disease&#x27;: the condition named by its own quarantine procedure, on the root of ve-hisgir (and of Gen 2:21&#x27;s flesh-closure and 7:16&#x27;s ark-closure). The received Aramaic fuses what the machine tracks as two symbols (the disease noun; the confine verb) into one root — the strongest translation-level witness yet that the procedure IS the concept.
+<br><i>Verified from Data/sefaria_texts/ (local, fetched at derive time). Dual-track; not merged.</i></div>
+<div class="note"><span class="badge tier-v">verified</span> <b>Targum Onkelos, Leviticus 13:5 — Tier-A</b><br><span class="he">קָם כַּד הֲוָה</span> · <i>kam kad havah</i> · The [OPEN] idiom amad be-einav (&#x27;stood in its/his eyes&#x27;) resolved by the translation to &#x27;stood AS IT WAS&#x27; — the appearance reading, against the priest&#x27;s-eyes reading. First resolution witness; the chain-primary discussion queued with Sifra/Negaim.
+<br><i>Verified local. Dual-track; the machine&#x27;s [OPEN] flag stands. Not merged.</i></div>
+<div class="note"><span class="badge tier-o">observation</span> <b>Sifra Tazria (Parashat Nega&#x27;im) 1ff; Mishnah Negaim 1:1, 3:1; Bavli Shevuot 6a-b; Bavli Arakhin 15b-16b; Bereshit Rabbah 41:2 — the chapter&#x27;s chain-primaries, NOT in the local cache; day&#x27;s Tier-A triage queue</b><br><span class="he">נְגָעִים</span> · <i>Nega&#x27;im</i> · Named, not yet read (observation tier): the Sifra parashah (the 13 middot&#x27;s own home text) and tractate Negaim own this chapter; Shevuot 6a-b (the four shades) bears on Onkelos&#x27;s amka (&#x27;deep-spot&#x27;) for the raised se&#x27;et; Arakhin 15b-16b carries the tzara&#x27;at-and- speech-sin frame that would bear on the se&#x27;et/Cain join; BR 41:2 reads Gen 12:17&#x27;s nega debut as tzara&#x27;at. THE TRIPWIRE TEST: when these enter the cache, the detector&#x27;s absent legal devices (ein li ela &#x27;I have only&#x27;; ribah/miet ha-katuv &#x27;Scripture included/ excluded&#x27;; dibber ha-katuv ba-hoveh &#x27;the usual case&#x27;) are predicted to fire for the first time.
+<br><i>Queue entry — no claim made beyond the naming.</i></div>
+<h2>Binary trees (ta'amim v3, glue bricks)</h2>
+<h3>Lev.13.1 · parser unique · 7 words</h3>
+<div class="meta"><span class="he">וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה וְאֶל־אַהֲרֹן לֵאמֹר</span> · <i>va-yedabber YHWH el-Moshe ve-el-Aharon le-mor</i> · The LORD spoke to Moses and to Aaron, saying. [EN-AID]</div>
+<pre>PHRASE (binary 7w) וַ/יְדַבֵּ֣ר יְהוָ֔ה אֶל מֹשֶׁ֥ה וְ/אֶֽל אַהֲרֹ…
+├── [0-1] GLUE וַ/יְדַבֵּ֣ר יְהוָ֔ה (zaqef qatan, rank=2)
+└── PHRASE (binary 5w) אֶל מֹשֶׁ֥ה וְ/אֶֽל אַהֲרֹ֖ן לֵ/אמֹֽר
+    ├── [2-5] GLUE אֶל מֹשֶׁ֥ה וְ/אֶֽל אַהֲרֹ֖ן (tifcha, rank=2)
+    └── [6] לֵ/אמֹֽר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.13.2 · parser unique · 24 words</h3>
+<div class="meta"><span class="he">אָדָם כִּי־יִהְיֶה בְעוֹר־בְּשָׂרוֹ שְׂאֵת אוֹ־סַפַּחַת אוֹ בַהֶרֶת וְהָיָה בְעוֹר־בְּשָׂרוֹ לְנֶגַע צָרָעַת וְהוּבָא אֶל־אַהֲרֹן הַכֹּהֵן אוֹ אֶל־אַחַד מִבָּנָיו הַכֹּהֲנִים</span> · <i>adam ki-yihyeh ve-or-besaro se&#x27;et o-sapachat o vaheret ve-hayah ve-or-besaro le-nega tzara&#x27;at ve-huva el-Aharon ha-kohen o el-achad mi-banav ha-kohanim</i> · When a mark appears in the skin of the flesh — he is brought to the priest. [EN-AID]</div>
+<pre>PHRASE (binary 24w) אָדָ֗ם כִּֽי יִהְיֶ֤ה בְ/עוֹר בְּשָׂר/וֹ֙ שְׂאֵ…
+├── PHRASE (binary 15w) אָדָ֗ם כִּֽי יִהְיֶ֤ה בְ/עוֹר בְּשָׂר/וֹ֙ שְׂאֵ…
+│   ├── PHRASE (binary 10w) אָדָ֗ם כִּֽי יִהְיֶ֤ה בְ/עוֹר בְּשָׂר/וֹ֙ שְׂאֵ…
+│   │   ├── [0] אָדָ֗ם (revia, rank=3)
+│   │   └── PHRASE (binary 9w) כִּֽי יִהְיֶ֤ה בְ/עוֹר בְּשָׂר/וֹ֙ שְׂאֵ֤ת אֽוֹ…
+│   │       ├── [1-4] GLUE כִּֽי יִהְיֶ֤ה בְ/עוֹר בְּשָׂר/וֹ֙ (pashta, rank=3)
+│   │       └── PHRASE (binary 5w) שְׂאֵ֤ת אֽוֹ סַפַּ֨חַת֙ א֣וֹ בַהֶ֔רֶת
+│   │           ├── [5-7] GLUE שְׂאֵ֤ת אֽוֹ סַפַּ֨חַת֙ (pashta, rank=3)
+│   │           └── [8-9] GLUE א֣וֹ בַהֶ֔רֶת (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) וְ/הָיָ֥ה בְ/עוֹר בְּשָׂר֖/וֹ לְ/נֶ֣גַע צָרָ֑עַת
+│       ├── [10-12] GLUE וְ/הָיָ֥ה בְ/עוֹר בְּשָׂר֖/וֹ (tifcha, rank=2)
+│       └── [13-14] GLUE לְ/נֶ֣גַע צָרָ֑עַת (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 9w) וְ/הוּבָא֙ אֶל אַהֲרֹ֣ן הַ/כֹּהֵ֔ן א֛וֹ אֶל אַח…
+    ├── PHRASE (binary 4w) וְ/הוּבָא֙ אֶל אַהֲרֹ֣ן הַ/כֹּהֵ֔ן
+    │   ├── [15] וְ/הוּבָא֙ (pashta, rank=3)
+    │   └── [16-18] GLUE אֶל אַהֲרֹ֣ן הַ/כֹּהֵ֔ן (zaqef qatan, rank=2)
+    └── PHRASE (binary 5w) א֛וֹ אֶל אַחַ֥ד מִ/בָּנָ֖י/ו הַ/כֹּהֲנִֽים
+        ├── PHRASE (binary 4w) א֛וֹ אֶל אַחַ֥ד מִ/בָּנָ֖י/ו
+        │   ├── [19] א֛וֹ (tevir, rank=3)
+        │   └── [20-22] GLUE אֶל אַחַ֥ד מִ/בָּנָ֖י/ו (tifcha, rank=2)
+        └── [23] הַ/כֹּהֲנִֽים (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.13.3 · parser unique · 22 words</h3>
+<div class="meta"><span class="he">וְרָאָה הַכֹּהֵן אֶת־הַנֶּגַע בְּעוֹר־הַבָּשָׂר וְשֵׂעָר בַּנֶּגַע הָפַךְ לָבָן וּמַרְאֵה הַנֶּגַע עָמֹק מֵעוֹר בְּשָׂרוֹ נֶגַע צָרַעַת הוּא וְרָאָהוּ הַכֹּהֵן וְטִמֵּא אֹתוֹ</span> · <i>ve-ra&#x27;ah ha-kohen et-ha-nega be-or ha-basar ve-se&#x27;ar ba-nega hafakh lavan u-mar&#x27;eh ha-nega amok me-or besaro nega tzara&#x27;at hu ve-ra&#x27;ahu ha-kohen ve-timme oto</i> · White hair and deeper than skin: it is tzara&#x27;at — declare him impure. [EN-AID]</div>
+<pre>PHRASE (binary 22w) וְ/רָאָ֣ה הַ/כֹּהֵ֣ן אֶת הַ/נֶּ֣גַע בְּ/עֽוֹר ה…
+├── PHRASE (binary 18w) וְ/רָאָ֣ה הַ/כֹּהֵ֣ן אֶת הַ/נֶּ֣גַע בְּ/עֽוֹר ה…
+│   ├── PHRASE (binary 15w) וְ/רָאָ֣ה הַ/כֹּהֵ֣ן אֶת הַ/נֶּ֣גַע בְּ/עֽוֹר ה…
+│   │   ├── PHRASE (binary 10w) וְ/רָאָ֣ה הַ/כֹּהֵ֣ן אֶת הַ/נֶּ֣גַע בְּ/עֽוֹר ה…
+│   │   │   ├── [0-5] GLUE וְ/רָאָ֣ה הַ/כֹּהֵ֣ן אֶת הַ/נֶּ֣גַע בְּ/עֽוֹר הַ֠/בָּשָׂר (telisha gedola, rank=4)
+│   │   │   └── PHRASE (binary 4w) וְ/שֵׂעָ֨ר בַּ/נֶּ֜גַע הָפַ֣ךְ לָבָ֗ן
+│   │   │       ├── [6-7] GLUE וְ/שֵׂעָ֨ר בַּ/נֶּ֜גַע (geresh, rank=4)
+│   │   │       └── [8-9] GLUE הָפַ֣ךְ לָבָ֗ן (revia, rank=3)
+│   │   └── PHRASE (binary 5w) וּ/מַרְאֵ֤ה הַ/נֶּ֨גַע֙ עָמֹק֙ מֵ/ע֣וֹר בְּשָׂר…
+│   │       ├── [10-11] GLUE וּ/מַרְאֵ֤ה הַ/נֶּ֨גַע֙ (pashta, rank=3)
+│   │       └── PHRASE (binary 3w) עָמֹק֙ מֵ/ע֣וֹר בְּשָׂר֔/וֹ
+│   │           ├── [12] עָמֹק֙ (pashta, rank=3)
+│   │           └── [13-14] GLUE מֵ/ע֣וֹר בְּשָׂר֔/וֹ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) נֶ֥גַע צָרַ֖עַת ה֑וּא
+│       ├── [15-16] GLUE נֶ֥גַע צָרַ֖עַת (tifcha, rank=2)
+│       └── [17] ה֑וּא (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וְ/רָאָ֥/הוּ הַ/כֹּהֵ֖ן וְ/טִמֵּ֥א אֹתֽ/וֹ
+    ├── [18-19] GLUE וְ/רָאָ֥/הוּ הַ/כֹּהֵ֖ן (tifcha, rank=2)
+    └── [20-21] GLUE וְ/טִמֵּ֥א אֹתֽ/וֹ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.13.4 · parser unique · 21 words</h3>
+<div class="meta"><span class="he">וְאִם־בַּהֶרֶת לְבָנָה הִוא בְּעוֹר בְּשָׂרוֹ וְעָמֹק אֵין־מַרְאֶהָ מִן־הָעוֹר וּשְׂעָרָה לֹא־הָפַךְ לָבָן וְהִסְגִּיר הַכֹּהֵן אֶת־הַנֶּגַע שִׁבְעַת יָמִים</span> · <i>ve-im-baheret levanah hi ve-or besaro ve-amok ein-mar&#x27;eha min-ha-or u-se&#x27;arah lo-hafakh lavan ve-hisgir ha-kohen et-ha-nega shivat yamim</i> · If white but not deeper and hair unturned: confine seven days. [EN-AID]</div>
+<pre>PHRASE (binary 21w) וְ/אִם בַּהֶרֶת֩ לְבָנָ֨ה הִ֜וא בְּ/ע֣וֹר בְּשׂ…
+├── PHRASE (binary 15w) וְ/אִם בַּהֶרֶת֩ לְבָנָ֨ה הִ֜וא בְּ/ע֣וֹר בְּשׂ…
+│   ├── PHRASE (binary 11w) וְ/אִם בַּהֶרֶת֩ לְבָנָ֨ה הִ֜וא בְּ/ע֣וֹר בְּשׂ…
+│   │   ├── PHRASE (binary 6w) וְ/אִם בַּהֶרֶת֩ לְבָנָ֨ה הִ֜וא בְּ/ע֣וֹר בְּשׂ…
+│   │   │   ├── [0-3] GLUE וְ/אִם בַּהֶרֶת֩ לְבָנָ֨ה הִ֜וא (geresh, rank=4)
+│   │   │   └── [4-5] GLUE בְּ/ע֣וֹר בְּשָׂר֗/וֹ (revia, rank=3)
+│   │   └── PHRASE (binary 5w) וְ/עָמֹק֙ אֵין מַרְאֶ֣/הָ מִן הָ/ע֔וֹר
+│   │       ├── [6] וְ/עָמֹק֙ (pashta, rank=3)
+│   │       └── [7-10] GLUE אֵין מַרְאֶ֣/הָ מִן הָ/ע֔וֹר (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) וּ/שְׂעָרָ֖/ה לֹא הָפַ֣ךְ לָבָ֑ן
+│       ├── [11] וּ/שְׂעָרָ֖/ה (tifcha, rank=2)
+│       └── [12-14] GLUE לֹא הָפַ֣ךְ לָבָ֑ן (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) וְ/הִסְגִּ֧יר הַ/כֹּהֵ֛ן אֶת הַ/נֶּ֖גַע שִׁבְעַ…
+    ├── PHRASE (binary 4w) וְ/הִסְגִּ֧יר הַ/כֹּהֵ֛ן אֶת הַ/נֶּ֖גַע
+    │   ├── [15-16] GLUE וְ/הִסְגִּ֧יר הַ/כֹּהֵ֛ן (tevir, rank=3)
+    │   └── [17-18] GLUE אֶת הַ/נֶּ֖גַע (tifcha, rank=2)
+    └── [19-20] GLUE שִׁבְעַ֥ת יָמִֽים (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.13.5 · parser unique · 17 words</h3>
+<div class="meta"><span class="he">וְרָאָהוּ הַכֹּהֵן בַּיּוֹם הַשְּׁבִיעִי וְהִנֵּה הַנֶּגַע עָמַד בְּעֵינָיו לֹא־פָשָׂה הַנֶּגַע בָּעוֹר וְהִסְגִּירוֹ הַכֹּהֵן שִׁבְעַת יָמִים שֵׁנִית</span> · <i>ve-ra&#x27;ahu ha-kohen ba-yom ha-shevi&#x27;i ve-hineh ha-nega amad be-einav lo-fasah ha-nega ba-or ve-hisgiro ha-kohen shivat yamim shenit</i> · Day seven: stood, not spread — confine a second seven. [EN-AID]</div>
+<pre>PHRASE (binary 17w) וְ/רָאָ֣/הוּ הַ/כֹּהֵן֮ בַּ/יּ֣וֹם הַ/שְּׁבִיעִ…
+├── PHRASE (binary 12w) וְ/רָאָ֣/הוּ הַ/כֹּהֵן֮ בַּ/יּ֣וֹם הַ/שְּׁבִיעִ…
+│   ├── PHRASE (binary 4w) וְ/רָאָ֣/הוּ הַ/כֹּהֵן֮ בַּ/יּ֣וֹם הַ/שְּׁבִיעִ…
+│   │   ├── [0-1] GLUE וְ/רָאָ֣/הוּ הַ/כֹּהֵן֮ (zinor (poetic cousin; rare in prose), rank=3)
+│   │   └── [2-3] GLUE בַּ/יּ֣וֹם הַ/שְּׁבִיעִי֒ (segol, rank=2)
+│   └── PHRASE (binary 8w) וְ/הִנֵּ֤ה הַ/נֶּ֨גַע֙ עָמַ֣ד בְּ/עֵינָ֔י/ו לֹֽ…
+│       ├── PHRASE (binary 4w) וְ/הִנֵּ֤ה הַ/נֶּ֨גַע֙ עָמַ֣ד בְּ/עֵינָ֔י/ו
+│       │   ├── [4-5] GLUE וְ/הִנֵּ֤ה הַ/נֶּ֨גַע֙ (pashta, rank=3)
+│       │   └── [6-7] GLUE עָמַ֣ד בְּ/עֵינָ֔י/ו (zaqef qatan, rank=2)
+│       └── PHRASE (binary 4w) לֹֽא פָשָׂ֥ה הַ/נֶּ֖גַע בָּ/ע֑וֹר
+│           ├── [8-10] GLUE לֹֽא פָשָׂ֥ה הַ/נֶּ֖גַע (tifcha, rank=2)
+│           └── [11] בָּ/ע֑וֹר (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) וְ/הִסְגִּיר֧/וֹ הַ/כֹּהֵ֛ן שִׁבְעַ֥ת יָמִ֖ים ש…
+    ├── PHRASE (binary 4w) וְ/הִסְגִּיר֧/וֹ הַ/כֹּהֵ֛ן שִׁבְעַ֥ת יָמִ֖ים
+    │   ├── [12-13] GLUE וְ/הִסְגִּיר֧/וֹ הַ/כֹּהֵ֛ן (tevir, rank=3)
+    │   └── [14-15] GLUE שִׁבְעַ֥ת יָמִ֖ים (tifcha, rank=2)
+    └── [16] שֵׁנִֽית (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.13.6 · parser unique · 20 words</h3>
+<div class="meta"><span class="he">וְרָאָה הַכֹּהֵן אֹתוֹ בַּיּוֹם הַשְּׁבִיעִי שֵׁנִית וְהִנֵּה כֵּהָה הַנֶּגַע וְלֹא־פָשָׂה הַנֶּגַע בָּעוֹר וְטִהֲרוֹ הַכֹּהֵן מִסְפַּחַת הִיא וְכִבֶּס בְּגָדָיו וְטָהֵר</span> · <i>ve-ra&#x27;ah ha-kohen oto ba-yom ha-shevi&#x27;i shenit ve-hineh kehah ha-nega ve-lo-fasah ha-nega ba-or ve-tiharo ha-kohen mispachat hi ve-khibbes begadav ve-taher</i> · Second day seven: faded — declare pure, wash, and he is pure. [EN-AID]</div>
+<pre>PHRASE (binary 20w) וְ/רָאָה֩ הַ/כֹּהֵ֨ן אֹת֜/וֹ בַּ/יּ֣וֹם הַ/שְּׁ…
+├── PHRASE (binary 13w) וְ/רָאָה֩ הַ/כֹּהֵ֨ן אֹת֜/וֹ בַּ/יּ֣וֹם הַ/שְּׁ…
+│   ├── PHRASE (binary 6w) וְ/רָאָה֩ הַ/כֹּהֵ֨ן אֹת֜/וֹ בַּ/יּ֣וֹם הַ/שְּׁ…
+│   │   ├── PHRASE (binary 5w) וְ/רָאָה֩ הַ/כֹּהֵ֨ן אֹת֜/וֹ בַּ/יּ֣וֹם הַ/שְּׁ…
+│   │   │   ├── [0-2] GLUE וְ/רָאָה֩ הַ/כֹּהֵ֨ן אֹת֜/וֹ (geresh, rank=4)
+│   │   │   └── [3-4] GLUE בַּ/יּ֣וֹם הַ/שְּׁבִיעִי֮ (zinor (poetic cousin; rare in prose), rank=3)
+│   │   └── [5] שֵׁנִית֒ (segol, rank=2)
+│   └── PHRASE (binary 7w) וְ/הִנֵּה֙ כֵּהָ֣ה הַ/נֶּ֔גַע וְ/לֹא פָשָׂ֥ה הַ…
+│       ├── PHRASE (binary 3w) וְ/הִנֵּה֙ כֵּהָ֣ה הַ/נֶּ֔גַע
+│       │   ├── [6] וְ/הִנֵּה֙ (pashta, rank=3)
+│       │   └── [7-8] GLUE כֵּהָ֣ה הַ/נֶּ֔גַע (zaqef qatan, rank=2)
+│       └── PHRASE (binary 4w) וְ/לֹא פָשָׂ֥ה הַ/נֶּ֖גַע בָּ/ע֑וֹר
+│           ├── [9-11] GLUE וְ/לֹא פָשָׂ֥ה הַ/נֶּ֖גַע (tifcha, rank=2)
+│           └── [12] בָּ/ע֑וֹר (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) וְ/טִהֲר֤/וֹ הַ/כֹּהֵן֙ מִסְפַּ֣חַת הִ֔יא וְ/כִ…
+    ├── PHRASE (binary 4w) וְ/טִהֲר֤/וֹ הַ/כֹּהֵן֙ מִסְפַּ֣חַת הִ֔יא
+    │   ├── [13-14] GLUE וְ/טִהֲר֤/וֹ הַ/כֹּהֵן֙ (pashta, rank=3)
+    │   └── [15-16] GLUE מִסְפַּ֣חַת הִ֔יא (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) וְ/כִבֶּ֥ס בְּגָדָ֖י/ו וְ/טָהֵֽר
+        ├── [17-18] GLUE וְ/כִבֶּ֥ס בְּגָדָ֖י/ו (tifcha, rank=2)
+        └── [19] וְ/טָהֵֽר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.13.7 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">וְאִם־פָּשֹׂה תִפְשֶׂה הַמִּסְפַּחַת בָּעוֹר אַחֲרֵי הֵרָאֹתוֹ אֶל־הַכֹּהֵן לְטָהֳרָתוֹ וְנִרְאָה שֵׁנִית אֶל־הַכֹּהֵן</span> · <i>ve-im-pasoh tifseh ha-mispachat ba-or acharei hera&#x27;oto el-ha-kohen le-tohorato ve-nir&#x27;ah shenit el-ha-kohen</i> · If it spreads after the purification: be seen again. [EN-AID]</div>
+<pre>PHRASE (binary 14w) וְ/אִם פָּשֹׂ֨ה תִפְשֶׂ֤ה הַ/מִּסְפַּ֨חַת֙ בָּ/…
+├── PHRASE (binary 10w) וְ/אִם פָּשֹׂ֨ה תִפְשֶׂ֤ה הַ/מִּסְפַּ֨חַת֙ בָּ/…
+│   ├── PHRASE (binary 5w) וְ/אִם פָּשֹׂ֨ה תִפְשֶׂ֤ה הַ/מִּסְפַּ֨חַת֙ בָּ/…
+│   │   ├── [0-3] GLUE וְ/אִם פָּשֹׂ֨ה תִפְשֶׂ֤ה הַ/מִּסְפַּ֨חַת֙ (pashta, rank=3)
+│   │   └── [4] בָּ/ע֔וֹר (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) אַחֲרֵ֧י הֵרָאֹת֛/וֹ אֶל הַ/כֹּהֵ֖ן לְ/טָהֳרָת֑…
+│       ├── PHRASE (binary 4w) אַחֲרֵ֧י הֵרָאֹת֛/וֹ אֶל הַ/כֹּהֵ֖ן
+│       │   ├── [5-6] GLUE אַחֲרֵ֧י הֵרָאֹת֛/וֹ (tevir, rank=3)
+│       │   └── [7-8] GLUE אֶל הַ/כֹּהֵ֖ן (tifcha, rank=2)
+│       └── [9] לְ/טָהֳרָת֑/וֹ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וְ/נִרְאָ֥ה שֵׁנִ֖ית אֶל הַ/כֹּהֵֽן
+    ├── [10-11] GLUE וְ/נִרְאָ֥ה שֵׁנִ֖ית (tifcha, rank=2)
+    └── [12-13] GLUE אֶל הַ/כֹּהֵֽן (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Lev.13.8 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">וְרָאָה הַכֹּהֵן וְהִנֵּה פָּשְׂתָה הַמִּסְפַּחַת בָּעוֹר וְטִמְּאוֹ הַכֹּהֵן צָרַעַת הִוא</span> · <i>ve-ra&#x27;ah ha-kohen ve-hineh pastah ha-mispachat ba-or ve-timme&#x27;o ha-kohen tzara&#x27;at hi</i> · Behold, spread: declare impure — it is tzara&#x27;at. [EN-AID]</div>
+<pre>PHRASE (binary 10w) וְ/רָאָה֙ הַ/כֹּהֵ֔ן וְ/הִנֵּ֛ה פָּשְׂתָ֥ה הַ/מ…
+├── PHRASE (binary 6w) וְ/רָאָה֙ הַ/כֹּהֵ֔ן וְ/הִנֵּ֛ה פָּשְׂתָ֥ה הַ/מ…
+│   ├── PHRASE (binary 2w) וְ/רָאָה֙ הַ/כֹּהֵ֔ן
+│   │   ├── [0] וְ/רָאָה֙ (pashta, rank=3)
+│   │   └── [1] הַ/כֹּהֵ֔ן (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) וְ/הִנֵּ֛ה פָּשְׂתָ֥ה הַ/מִּסְפַּ֖חַת בָּ/ע֑וֹר
+│       ├── PHRASE (binary 3w) וְ/הִנֵּ֛ה פָּשְׂתָ֥ה הַ/מִּסְפַּ֖חַת
+│       │   ├── [2] וְ/הִנֵּ֛ה (tevir, rank=3)
+│       │   └── [3-4] GLUE פָּשְׂתָ֥ה הַ/מִּסְפַּ֖חַת (tifcha, rank=2)
+│       └── [5] בָּ/ע֑וֹר (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וְ/טִמְּא֥/וֹ הַ/כֹּהֵ֖ן צָרַ֥עַת הִֽוא
+    ├── [6-7] GLUE וְ/טִמְּא֥/וֹ הַ/כֹּהֵ֖ן (tifcha, rank=2)
+    └── [8-9] GLUE צָרַ֥עַת הִֽוא (silluq (verse-end emperor), rank=1)
+</pre>
+<h2>Word coverage — 135/135 words with named roles</h2>
+<table><tr><th>ref</th><th>#</th><th>Hebrew</th><th>translit</th><th>English</th><th>role</th><th>kind</th><th>rule</th></tr>
+<tr><td>Lev.13.1</td><td>0</td><td class='he-cell'>וידבר</td><td>va-yedabber</td><td>and-spoke</td><td>frame_speech_verb_only_wayyiqtol</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.1</td><td>1</td><td class='he-cell'>יהוה</td><td>YHWH</td><td>the-LORD</td><td>agent_divine_name_first_in_derived_unit</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.1</td><td>2</td><td class='he-cell'>אל</td><td>el</td><td>to</td><td>addressee_prep</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Lev.13.1</td><td>3</td><td class='he-cell'>משה</td><td>Moshe</td><td>Moses</td><td>addressee_presupposed</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.1</td><td>4</td><td class='he-cell'>ואל</td><td>ve-el</td><td>and-to</td><td>addressee_prep</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Lev.13.1</td><td>5</td><td class='he-cell'>אהרן</td><td>Aharon</td><td>Aaron</td><td>addressee_inspector_presupposed</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.1</td><td>6</td><td class='he-cell'>לאמר</td><td>le-mor</td><td>saying</td><td>quote_opener_infinitive</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.2</td><td>0</td><td class='he-cell'>אדם</td><td>adam</td><td>human</td><td>case_subject_parameter</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.2</td><td>1</td><td class='he-cell'>כי</td><td>ki</td><td>when</td><td>case_opener_particle</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.2</td><td>2</td><td class='he-cell'>יהיה</td><td>yihyeh</td><td>there-is</td><td>case_condition_imperfect</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.2</td><td>3</td><td class='he-cell'>בעור</td><td>be-or</td><td>in-skin-of</td><td>substrate_skin</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.2</td><td>4</td><td class='he-cell'>בשרו</td><td>besaro</td><td>his-flesh</td><td>substrate_flesh</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.2</td><td>5</td><td class='he-cell'>שאת</td><td>se&#x27;et</td><td>swelling</td><td>mark_class_1_cain_join</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.2</td><td>6</td><td class='he-cell'>או</td><td>o</td><td>or</td><td>disjunction</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Lev.13.2</td><td>7</td><td class='he-cell'>ספחת</td><td>sapachat</td><td>scab</td><td>mark_class_2</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.2</td><td>8</td><td class='he-cell'>או</td><td>o</td><td>or</td><td>disjunction</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Lev.13.2</td><td>9</td><td class='he-cell'>בהרת</td><td>baheret</td><td>bright-spot</td><td>mark_class_3</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.2</td><td>10</td><td class='he-cell'>והיה</td><td>ve-hayah</td><td>and-it-becomes</td><td>threshold_weqatal</td><td>logic_bearing</td><td class='cite'>TIR-029</td></tr>
+<tr><td>Lev.13.2</td><td>11</td><td class='he-cell'>בעור</td><td>be-or</td><td>in-skin-of</td><td>substrate_skin</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.2</td><td>12</td><td class='he-cell'>בשרו</td><td>besaro</td><td>his-flesh</td><td>substrate_flesh</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.2</td><td>13</td><td class='he-cell'>לנגע</td><td>le-nega</td><td>into-a-mark-of</td><td>threshold_class</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.2</td><td>14</td><td class='he-cell'>צרעת</td><td>tzara&#x27;at</td><td>tzara&#x27;at</td><td>condition_name_segiru</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.2</td><td>15</td><td class='he-cell'>והובא</td><td>ve-huva</td><td>and-he-shall-be-brought</td><td>routing_hophal_weqatal_passive</td><td>logic_bearing</td><td class='cite'>TIR-029</td></tr>
+<tr><td>Lev.13.2</td><td>16</td><td class='he-cell'>אל</td><td>el</td><td>to</td><td>routing_prep</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Lev.13.2</td><td>17</td><td class='he-cell'>אהרן</td><td>Aharon</td><td>Aaron</td><td>inspector_named</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.2</td><td>18</td><td class='he-cell'>הכהן</td><td>ha-kohen</td><td>the-priest</td><td>inspector_office_presupposed</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.2</td><td>19</td><td class='he-cell'>או</td><td>o</td><td>or</td><td>disjunction</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Lev.13.2</td><td>20</td><td class='he-cell'>אל</td><td>el</td><td>to</td><td>routing_prep</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Lev.13.2</td><td>21</td><td class='he-cell'>אחד</td><td>achad</td><td>one</td><td>inspector_any_single</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.2</td><td>22</td><td class='he-cell'>מבניו</td><td>mi-banav</td><td>of-his-sons</td><td>inspector_class</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.2</td><td>23</td><td class='he-cell'>הכהנים</td><td>ha-kohanim</td><td>the-priests</td><td>inspector_class</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.3</td><td>0</td><td class='he-cell'>וראה</td><td>ve-ra&#x27;ah</td><td>and-he-shall-see</td><td>inspection_call_weqatal</td><td>logic_bearing</td><td class='cite'>TIR-029</td></tr>
+<tr><td>Lev.13.3</td><td>1</td><td class='he-cell'>הכהן</td><td>ha-kohen</td><td>the-priest</td><td>inspector</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.3</td><td>2</td><td class='he-cell'>את</td><td>et</td><td>obj-marker</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Lev.13.3</td><td>3</td><td class='he-cell'>הנגע</td><td>ha-nega</td><td>the-mark</td><td>exam_object</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.3</td><td>4</td><td class='he-cell'>בעור</td><td>be-or</td><td>in-skin-of</td><td>substrate_skin</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.3</td><td>5</td><td class='he-cell'>הבשר</td><td>ha-basar</td><td>the-flesh</td><td>substrate_flesh</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.3</td><td>6</td><td class='he-cell'>ושער</td><td>ve-se&#x27;ar</td><td>and-hair</td><td>predicate_1_subject</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.3</td><td>7</td><td class='he-cell'>בנגע</td><td>ba-nega</td><td>in-the-mark</td><td>predicate_1_locus</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.3</td><td>8</td><td class='he-cell'>הפך</td><td>hafakh</td><td>has-turned</td><td>predicate_1_perfect</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.3</td><td>9</td><td class='he-cell'>לבן</td><td>lavan</td><td>white</td><td>predicate_1_value</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.3</td><td>10</td><td class='he-cell'>ומראה</td><td>u-mar&#x27;eh</td><td>and-appearance-of</td><td>predicate_2_subject</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.3</td><td>11</td><td class='he-cell'>הנגע</td><td>ha-nega</td><td>the-mark</td><td>predicate_2_of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.3</td><td>12</td><td class='he-cell'>עמק</td><td>amok</td><td>deeper</td><td>predicate_2_value</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.3</td><td>13</td><td class='he-cell'>מעור</td><td>me-or</td><td>than-skin-of</td><td>predicate_2_comparand</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.3</td><td>14</td><td class='he-cell'>בשרו</td><td>besaro</td><td>his-flesh</td><td>predicate_2_comparand</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.3</td><td>15</td><td class='he-cell'>נגע</td><td>nega</td><td>mark-of</td><td>classification_head</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.3</td><td>16</td><td class='he-cell'>צרעת</td><td>tzara&#x27;at</td><td>tzara&#x27;at</td><td>classification_class</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.3</td><td>17</td><td class='he-cell'>הוא</td><td>hu</td><td>it-is</td><td>classification_copula_masc</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.3</td><td>18</td><td class='he-cell'>וראהו</td><td>ve-ra&#x27;ahu</td><td>and-he-shall-see-him</td><td>inspection_doubled_open</td><td>logic_bearing</td><td class='cite'>TIR-029</td></tr>
+<tr><td>Lev.13.3</td><td>19</td><td class='he-cell'>הכהן</td><td>ha-kohen</td><td>the-priest</td><td>inspector</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.3</td><td>20</td><td class='he-cell'>וטמא</td><td>ve-timme</td><td>and-he-shall-declare-impure</td><td>status_write_piel_declarative_negative</td><td>logic_bearing</td><td class='cite'>TIR-029</td></tr>
+<tr><td>Lev.13.3</td><td>21</td><td class='he-cell'>אתו</td><td>oto</td><td>him</td><td>status_write_patient</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Lev.13.4</td><td>0</td><td class='he-cell'>ואם</td><td>ve-im</td><td>and-if</td><td>branch_particle_elif</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.4</td><td>1</td><td class='he-cell'>בהרת</td><td>baheret</td><td>bright-spot</td><td>branch_subject</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.4</td><td>2</td><td class='he-cell'>לבנה</td><td>levanah</td><td>white</td><td>predicate_positive</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.4</td><td>3</td><td class='he-cell'>הוא</td><td>hi</td><td>it-is</td><td>copula_ktiv_hu_qere_hi_open</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.4</td><td>4</td><td class='he-cell'>בעור</td><td>be-or</td><td>in-skin-of</td><td>substrate_skin</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.4</td><td>5</td><td class='he-cell'>בשרו</td><td>besaro</td><td>his-flesh</td><td>substrate_flesh</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.4</td><td>6</td><td class='he-cell'>ועמק</td><td>ve-amok</td><td>and-deeper</td><td>predicate_negated_subject</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.4</td><td>7</td><td class='he-cell'>אין</td><td>ein</td><td>is-not</td><td>negator_nominal</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.4</td><td>8</td><td class='he-cell'>מראה</td><td>mar&#x27;eha</td><td>its-appearance</td><td>predicate_negated_of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.4</td><td>9</td><td class='he-cell'>מן</td><td>min</td><td>than</td><td>comparand_prep</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Lev.13.4</td><td>10</td><td class='he-cell'>העור</td><td>ha-or</td><td>the-skin</td><td>comparand</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.4</td><td>11</td><td class='he-cell'>ושערה</td><td>u-se&#x27;arah</td><td>and-its-hair</td><td>predicate_negated_2_subject</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.4</td><td>12</td><td class='he-cell'>לא</td><td>lo</td><td>not</td><td>negator_verbal</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.4</td><td>13</td><td class='he-cell'>הפך</td><td>hafakh</td><td>has-turned</td><td>predicate_negated_2_perfect</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.4</td><td>14</td><td class='he-cell'>לבן</td><td>lavan</td><td>white</td><td>predicate_negated_2_value</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.4</td><td>15</td><td class='he-cell'>והסגיר</td><td>ve-hisgir</td><td>and-he-shall-confine</td><td>quarantine_call_hiphil_weqatal</td><td>logic_bearing</td><td class='cite'>TIR-029</td></tr>
+<tr><td>Lev.13.4</td><td>16</td><td class='he-cell'>הכהן</td><td>ha-kohen</td><td>the-priest</td><td>inspector</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.4</td><td>17</td><td class='he-cell'>את</td><td>et</td><td>obj-marker</td><td>obj_marker_mark_not_person_open</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Lev.13.4</td><td>18</td><td class='he-cell'>הנגע</td><td>ha-nega</td><td>the-mark</td><td>confined_object_mark</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.4</td><td>19</td><td class='he-cell'>שבעת</td><td>shivat</td><td>seven-of</td><td>timer_week</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.4</td><td>20</td><td class='he-cell'>ימים</td><td>yamim</td><td>days</td><td>timer_week</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.5</td><td>0</td><td class='he-cell'>וראהו</td><td>ve-ra&#x27;ahu</td><td>and-he-shall-see-him</td><td>recheck_call_weqatal</td><td>logic_bearing</td><td class='cite'>TIR-029</td></tr>
+<tr><td>Lev.13.5</td><td>1</td><td class='he-cell'>הכהן</td><td>ha-kohen</td><td>the-priest</td><td>inspector</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.5</td><td>2</td><td class='he-cell'>ביום</td><td>ba-yom</td><td>on-the-day</td><td>loop_reentry_date</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.5</td><td>3</td><td class='he-cell'>השביעי</td><td>ha-shevi&#x27;i</td><td>the-seventh</td><td>loop_reentry_date_definite</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.5</td><td>4</td><td class='he-cell'>והנה</td><td>ve-hineh</td><td>and-behold</td><td>inspection_deictic</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.5</td><td>5</td><td class='he-cell'>הנגע</td><td>ha-nega</td><td>the-mark</td><td>predicate_subject</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.5</td><td>6</td><td class='he-cell'>עמד</td><td>amad</td><td>has-stood</td><td>predicate_stasis_perfect</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.5</td><td>7</td><td class='he-cell'>בעיניו</td><td>be-einav</td><td>in-its-appearance</td><td>stasis_idiom_open</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.5</td><td>8</td><td class='he-cell'>לא</td><td>lo</td><td>not</td><td>negator_verbal</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.5</td><td>9</td><td class='he-cell'>פשה</td><td>fasah</td><td>has-spread</td><td>predicate_spread_perfect</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.5</td><td>10</td><td class='he-cell'>הנגע</td><td>ha-nega</td><td>the-mark</td><td>predicate_subject</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.5</td><td>11</td><td class='he-cell'>בעור</td><td>ba-or</td><td>in-the-skin</td><td>spread_domain</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.5</td><td>12</td><td class='he-cell'>והסגירו</td><td>ve-hisgiro</td><td>and-he-shall-confine-him</td><td>quarantine_call_2_person_object_open</td><td>logic_bearing</td><td class='cite'>TIR-029</td></tr>
+<tr><td>Lev.13.5</td><td>13</td><td class='he-cell'>הכהן</td><td>ha-kohen</td><td>the-priest</td><td>inspector</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.5</td><td>14</td><td class='he-cell'>שבעת</td><td>shivat</td><td>seven-of</td><td>timer_week</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.5</td><td>15</td><td class='he-cell'>ימים</td><td>yamim</td><td>days</td><td>timer_week</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.5</td><td>16</td><td class='he-cell'>שנית</td><td>shenit</td><td>a-second-time</td><td>loop_iteration_label_bound</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.6</td><td>0</td><td class='he-cell'>וראה</td><td>ve-ra&#x27;ah</td><td>and-he-shall-see</td><td>recheck_call_weqatal</td><td>logic_bearing</td><td class='cite'>TIR-029</td></tr>
+<tr><td>Lev.13.6</td><td>1</td><td class='he-cell'>הכהן</td><td>ha-kohen</td><td>the-priest</td><td>inspector</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.6</td><td>2</td><td class='he-cell'>אתו</td><td>oto</td><td>him</td><td>exam_patient</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Lev.13.6</td><td>3</td><td class='he-cell'>ביום</td><td>ba-yom</td><td>on-the-day</td><td>loop_reentry_date</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.6</td><td>4</td><td class='he-cell'>השביעי</td><td>ha-shevi&#x27;i</td><td>the-seventh</td><td>loop_reentry_date_definite</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.6</td><td>5</td><td class='he-cell'>שנית</td><td>shenit</td><td>a-second-time</td><td>loop_iteration_label</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.6</td><td>6</td><td class='he-cell'>והנה</td><td>ve-hineh</td><td>and-behold</td><td>inspection_deictic</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.6</td><td>7</td><td class='he-cell'>כהה</td><td>kehah</td><td>has-dimmed</td><td>predicate_fade_perfect</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.6</td><td>8</td><td class='he-cell'>הנגע</td><td>ha-nega</td><td>the-mark</td><td>predicate_subject</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.6</td><td>9</td><td class='he-cell'>ולא</td><td>ve-lo</td><td>and-not</td><td>negator_verbal</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.6</td><td>10</td><td class='he-cell'>פשה</td><td>fasah</td><td>has-spread</td><td>predicate_spread_perfect</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.6</td><td>11</td><td class='he-cell'>הנגע</td><td>ha-nega</td><td>the-mark</td><td>predicate_subject</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.6</td><td>12</td><td class='he-cell'>בעור</td><td>ba-or</td><td>in-the-skin</td><td>spread_domain</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.6</td><td>13</td><td class='he-cell'>וטהרו</td><td>ve-tiharo</td><td>and-he-shall-declare-him-pure</td><td>status_write_piel_declarative_positive</td><td>logic_bearing</td><td class='cite'>TIR-029</td></tr>
+<tr><td>Lev.13.6</td><td>14</td><td class='he-cell'>הכהן</td><td>ha-kohen</td><td>the-priest</td><td>inspector</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.6</td><td>15</td><td class='he-cell'>מספחת</td><td>mispachat</td><td>scab</td><td>classification_mem_form_open</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.6</td><td>16</td><td class='he-cell'>היא</td><td>hi</td><td>it-is</td><td>classification_copula_fem</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.6</td><td>17</td><td class='he-cell'>וכבס</td><td>ve-khibbes</td><td>and-he-shall-wash</td><td>patient_duty_subject_shift</td><td>logic_bearing</td><td class='cite'>TIR-029</td></tr>
+<tr><td>Lev.13.6</td><td>18</td><td class='he-cell'>בגדיו</td><td>begadav</td><td>his-garments</td><td>garment_second_skin</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.6</td><td>19</td><td class='he-cell'>וטהר</td><td>ve-taher</td><td>and-he-is-pure</td><td>state_stative_qal_become</td><td>logic_bearing</td><td class='cite'>TIR-029</td></tr>
+<tr><td>Lev.13.7</td><td>0</td><td class='he-cell'>ואם</td><td>ve-im</td><td>and-if</td><td>branch_particle_elif</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.7</td><td>1</td><td class='he-cell'>פשה</td><td>pasoh</td><td>spread</td><td>infinitive_absolute_doubling</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.7</td><td>2</td><td class='he-cell'>תפשה</td><td>tifseh</td><td>it-spreads</td><td>condition_imperfect_doubled</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.7</td><td>3</td><td class='he-cell'>המספחת</td><td>ha-mispachat</td><td>the-scab</td><td>condition_subject</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.7</td><td>4</td><td class='he-cell'>בעור</td><td>ba-or</td><td>in-the-skin</td><td>spread_domain</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.7</td><td>5</td><td class='he-cell'>אחרי</td><td>acharei</td><td>after</td><td>temporal_scope_opener</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Lev.13.7</td><td>6</td><td class='he-cell'>הראתו</td><td>hera&#x27;oto</td><td>his-being-seen</td><td>niphal_infinitive_release_ref</td><td>logic_bearing</td><td class='cite'>TIR-030</td></tr>
+<tr><td>Lev.13.7</td><td>7</td><td class='he-cell'>אל</td><td>el</td><td>to</td><td>routing_prep</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Lev.13.7</td><td>8</td><td class='he-cell'>הכהן</td><td>ha-kohen</td><td>the-priest</td><td>inspector</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.7</td><td>9</td><td class='he-cell'>לטהרתו</td><td>le-tohorato</td><td>for-his-purification</td><td>release_reference_purpose</td><td>logic_bearing</td><td class='cite'>TIR-030</td></tr>
+<tr><td>Lev.13.7</td><td>10</td><td class='he-cell'>ונראה</td><td>ve-nir&#x27;ah</td><td>and-he-shall-be-seen</td><td>reopen_call_niphal_weqatal_passive</td><td>logic_bearing</td><td class='cite'>TIR-029</td></tr>
+<tr><td>Lev.13.7</td><td>11</td><td class='he-cell'>שנית</td><td>shenit</td><td>a-second-time</td><td>reopen_iteration_label</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.7</td><td>12</td><td class='he-cell'>אל</td><td>el</td><td>to</td><td>routing_prep</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Lev.13.7</td><td>13</td><td class='he-cell'>הכהן</td><td>ha-kohen</td><td>the-priest</td><td>inspector</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.8</td><td>0</td><td class='he-cell'>וראה</td><td>ve-ra&#x27;ah</td><td>and-he-shall-see</td><td>reopen_inspection_weqatal</td><td>logic_bearing</td><td class='cite'>TIR-029</td></tr>
+<tr><td>Lev.13.8</td><td>1</td><td class='he-cell'>הכהן</td><td>ha-kohen</td><td>the-priest</td><td>inspector</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.8</td><td>2</td><td class='he-cell'>והנה</td><td>ve-hineh</td><td>and-behold</td><td>inspection_deictic</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.8</td><td>3</td><td class='he-cell'>פשתה</td><td>pastah</td><td>has-spread</td><td>predicate_spread_confirmed</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.8</td><td>4</td><td class='he-cell'>המספחת</td><td>ha-mispachat</td><td>the-scab</td><td>predicate_subject</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.8</td><td>5</td><td class='he-cell'>בעור</td><td>ba-or</td><td>in-the-skin</td><td>spread_domain</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.8</td><td>6</td><td class='he-cell'>וטמאו</td><td>ve-timme&#x27;o</td><td>and-he-shall-declare-him-impure</td><td>status_write_piel_declarative_negative</td><td>logic_bearing</td><td class='cite'>TIR-029</td></tr>
+<tr><td>Lev.13.8</td><td>7</td><td class='he-cell'>הכהן</td><td>ha-kohen</td><td>the-priest</td><td>inspector</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.8</td><td>8</td><td class='he-cell'>צרעת</td><td>tzara&#x27;at</td><td>tzara&#x27;at</td><td>classification_upgraded</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Lev.13.8</td><td>9</td><td class='he-cell'>הוא</td><td>hi</td><td>it-is</td><td>classification_copula_ktiv_hu_qere_hi_open</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: lev_13_intake_quarantine — The skin-mark intake: case, handlers, quarantine loop (Lev 13:1-8) — first law unit [frozen]
+
+final state: WORLD=[] (+5 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[&#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;]
+
+=== S1 — The frame, then silence: after STEP_Lv_13_1
+    וַיְדַבֵּר יְהוָה (va-yedabber YHWH)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name  (tests=0 names=0)
+    PASS  machine flags moshe/aharon as read-before-install (presupposed).  (flagged=[&#x27;aharon&#x27;, &#x27;moshe&#x27;])
+
+=== S2 — The case installed as standing fact: after STEP_Lv_13_2
+    אָדָם כִּי־יִהְיֶה (adam ki-yihyeh)
+    PASS  Facts case-kohen HOLD  (1 facts)
+    PASS  SPECS empty  (queue=0)
+    PASS  machine flags adam/or_basar/ha_kohen as read-before-install (presupposed).  (flagged=[&#x27;adam&#x27;, &#x27;aharon&#x27;, &#x27;ha_kohen&#x27;, &#x27;moshe&#x27;, &#x27;or_basar&#x27;])
+
+=== S3 — Handler 1 standing — verdict-impure: after STEP_Lv_13_3
+    וְטִמֵּא אֹתוֹ (ve-timme oto)
+    PASS  Facts handler-timme HOLD  (2 facts)
+    PASS  SPECS empty.  (queue=0)
+
+=== S4 — Handler 2 standing — first confinement: after STEP_Lv_13_4
+    וְהִסְגִּיר … שִׁבְעַת יָמִים (ve-hisgir … shivat yamim)
+    PASS  Facts handler-hisgir HOLD  (3 facts)
+    PASS  SPECS empty.  (queue=0)
+
+=== S5 — Handler 3 standing — day-7 recheck, second confinement: after STEP_Lv_13_5
+    בַּיּוֹם הַשְּׁבִיעִי … שֵׁנִית (ba-yom ha-shevi&#x27;i … shenit)
+    PASS  Facts handler-shenit HOLD  (4 facts)
+    PASS  SPECS empty.  (queue=0)
+
+=== S6 — Handler 4 standing — the release chain: after STEP_Lv_13_6
+    וְטִהֲרוֹ … וְטָהֵר (ve-tiharo … ve-taher)
+    PASS  Facts handler-tiharo HOLD  (5 facts)
+    PASS  SPECS empty.  (queue=0)
+
+=== S7 — Handler 5 standing — the armed reopen trigger: after STEP_Lv_13_7
+    וְנִרְאָה שֵׁנִית (ve-nir&#x27;ah shenit)
+    PASS  Facts handler-nirah HOLD  (6 facts)
+    PASS  SPECS empty.  (queue=0)
+
+=== S8 — Handler 6 standing — and the genre signature as machine state: after STEP_Lv_13_8
+    צָרַעַת הִוא (tzara&#x27;at hi)
+    PASS  Facts handler-pastah HOLD  (7 facts)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name  (tests=0 names=0)
+    PASS  LEDGER stays EMPTY (open transaction).  (ledger_days=[])
+
+=== S9_negative — Negative: flags never block the ledger
+    PASS  commit proceeded (not blocked)  (LEDGER=[99])
+    PASS  pattern deviation FLAGGED  (flags=[&#x27;commit_without_test&#x27;])
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/lev_13_intake_quarantine.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# lev_13_intake_quarantine — 13:1-8
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/lev_13_intake_quarantine.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;The skin-mark intake: case, handlers, quarantine loop (Lev 13:1-8) — first law unit&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;lev_13_intake_quarantine&quot;)
+
+# -------------------------- Lev.13.1 · FRAME_SPEECH ------------------------
+# וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה וְאֶל־אַהֲרֹן לֵאמֹר
+# &quot;And the LORD spoke unto Moses and unto Aaron, saying:&quot;
+m.step(&quot;Lev.13.1&quot;)
+# ‹וַיְדַבֵּר יְהוָה› (“and-spoke the-LORD”) — event: speak — agent the-LORD
+m.event(&quot;speak&quot;, agent=&quot;YHWH&quot;)
+# reads without prior install (flag, not fix): Moses, Aaron
+m.presupposed(&quot;moshe&quot;, &quot;aharon&quot;)
+
+# -------------------------- Lev.13.2 · CASE_INTAKE -------------------------
+# אָדָם כִּי־יִהְיֶה בְעוֹר־בְּשָׂרוֹ שְׂאֵת אוֹ־סַפַּחַת אוֹ בַהֶרֶת
+# וְהָיָה בְעוֹר־בְּשָׂרוֹ לְנֶגַע צָרָעַת וְהוּבָא אֶל־אַהֲרֹן הַכֹּהֵן אוֹ
+# אֶל־אַחַד מִבָּנָיו הַכֹּהֲנִים
+# &quot;When a man shall have in the skin of his flesh a rising, or a scab, or a
+# bright spot, and it become in the skin of his flesh the plague of leprosy,
+# then he shall be brought unto Aaron the priest, or unto one of his sons
+# the priests.&quot;
+m.step(&quot;Lev.13.2&quot;)
+# ‹אָדָם כִּי־יִהְיֶה … וְהוּבָא אֶל־אַהֲרֹן הַכֹּהֵן› (“human when there-is
+# … and-he-shall-be-brought to Aaron the-priest”) — case human, mark-in-
+# skin-of-flesh(Most-High-or-scab-or-bright-spot) -&gt; the-disease-mark routes
+# to hova-to-the-priest
+m.case(&quot;adam, mark_in_or_basar(seet_o_sapachat_o_baheret) -&gt; nega_tzaraat&quot;, &quot;hova_el_ha_kohen&quot;)
+# reads without prior install (flag, not fix): human, skin-of-flesh, the-
+# priest
+m.presupposed(&quot;adam&quot;, &quot;or_basar&quot;, &quot;ha_kohen&quot;)
+
+# -------------------------- Lev.13.3 · HANDLER_VERDICT_TAMEI ---------------
+# וְרָאָה הַכֹּהֵן אֶת־הַנֶּגַע בְּעוֹר־הַבָּשָׂר וְשֵׂעָר בַּנֶּגַע הָפַךְ
+# לָבָן וּמַרְאֵה הַנֶּגַע עָמֹק מֵעוֹר בְּשָׂרוֹ נֶגַע צָרַעַת הוּא
+# וְרָאָהוּ הַכֹּהֵן וְטִמֵּא אֹתוֹ
+# &quot;And the priest shall look upon the plague in the skin of the flesh; and
+# if the hair in the plague be turned white, and the appearance of the
+# plague be deeper than the skin of his flesh, it is the plague of leprosy;
+# and the priest shall look on him, and pronounce him unclean.&quot;
+m.step(&quot;Lev.13.3&quot;)
+# ‹וְשֵׂעָר … הָפַךְ לָבָן וּמַרְאֵה … עָמֹק … וְטִמֵּא אֹתוֹ› (“and-hair …
+# has-turned white and-appearance-of … deeper … and-he-shall-declare-impure
+# him”) — standing handler — if hair-has-turned-white ∧ appearance-deeper-
+# from-skin-of then classify(into-a-mark-of-leprosy-it-is) ∧ he-shall-
+# declare-impure(status-impure)
+m.handler(&quot;sear_hafakh_lavan ∧ mareh_amok_me_or&quot;,
+          &quot;classify(nega_tzaraat_hu) ∧ timme(status_tamei)&quot;)
+
+# -------------------------- Lev.13.4 · HANDLER_CONFINE_FIRST ---------------
+# וְאִם־בַּהֶרֶת לְבָנָה הִוא בְּעוֹר בְּשָׂרוֹ וְעָמֹק אֵין־מַרְאֶהָ
+# מִן־הָעוֹר וּשְׂעָרָה לֹא־הָפַךְ לָבָן וְהִסְגִּיר הַכֹּהֵן אֶת־הַנֶּגַע
+# שִׁבְעַת יָמִים
+# &quot;And if the bright spot be white in the skin of his flesh, and the
+# appearance thereof be not deeper than the skin, and the hair thereof be
+# not turned white, then the priest shall shut up him that hath the plague
+# seven days.&quot;
+m.step(&quot;Lev.13.4&quot;)
+# ‹וְאִם … אֵין … לֹא … וְהִסְגִּיר … שִׁבְעַת יָמִים› (“and-if … is-not …
+# not … and-he-shall-confine … seven-of days”) — standing handler — if
+# bright-spot-white ∧ is-not-deeper-its-appearance ∧ not-has-turned-white
+# then he-shall-confine(obj-marker-the-into-a-mark-of, seven-of-days)
+m.handler(&quot;baheret_levanah ∧ ein_amok_mareha ∧ lo_hafakh_lavan&quot;,
+          &quot;hisgir(et_ha_nega, shivat_yamim)&quot;)
+
+# -------------------------- Lev.13.5 · HANDLER_RECHECK_CONFINE_SECOND ------
+# וְרָאָהוּ הַכֹּהֵן בַּיּוֹם הַשְּׁבִיעִי וְהִנֵּה הַנֶּגַע עָמַד
+# בְּעֵינָיו לֹא־פָשָׂה הַנֶּגַע בָּעוֹר וְהִסְגִּירוֹ הַכֹּהֵן שִׁבְעַת
+# יָמִים שֵׁנִית
+# &quot;And the priest shall look on him the seventh day; and, behold, if the
+# plague stay in its appearance, and the plague be not spread in the skin,
+# then the priest shall shut him up seven days more.&quot;
+m.step(&quot;Lev.13.5&quot;)
+# ‹בַּיּוֹם הַשְּׁבִיעִי וְהִנֵּה … עָמַד … לֹא־פָשָׂה … שֵׁנִית› (“on-the-
+# day the-seventh and-behold … has-stood … not has-spread … a-second-time”)
+# — standing handler — if in-the-day-the-seventh ∧ has-stood-in-its-
+# appearance ∧ not-has-spread then he-shall-confine-him(seven-of-days-a-
+# second-time)
+m.handler(&quot;ba_yom_ha_shevii ∧ amad_be_einav ∧ lo_fasah&quot;,
+          &quot;hisgiro(shivat_yamim_shenit)&quot;)
+
+# -------------------------- Lev.13.6 · HANDLER_RELEASE ---------------------
+# וְרָאָה הַכֹּהֵן אֹתוֹ בַּיּוֹם הַשְּׁבִיעִי שֵׁנִית וְהִנֵּה כֵּהָה
+# הַנֶּגַע וְלֹא־פָשָׂה הַנֶּגַע בָּעוֹר וְטִהֲרוֹ הַכֹּהֵן מִסְפַּחַת הִיא
+# וְכִבֶּס בְּגָדָיו וְטָהֵר
+# &quot;And the priest shall look on him again the seventh day; and, behold, if
+# the plague be dim, and the plague be not spread in the skin, then the
+# priest shall pronounce him clean: it is a scab; and he shall wash his
+# clothes, and be clean.&quot;
+m.step(&quot;Lev.13.6&quot;)
+# ‹כֵּהָה … וְטִהֲרוֹ … מִסְפַּחַת הִיא וְכִבֶּס בְּגָדָיו וְטָהֵר› (“has-
+# dimmed … and-he-shall-declare-him-pure … scab it-is and-he-shall-wash his-
+# garments and-he-is-pure”) — standing handler — if in-the-day-the-seventh-
+# a-second-time ∧ has-dimmed ∧ not-has-spread then he-shall-declare-him-
+# pure(status-pure) ∧ classify(scab-it-is) ∧ wash-his-garments ∧ he-is-pure
+m.handler(&quot;ba_yom_ha_shevii_shenit ∧ kehah ∧ lo_fasah&quot;,
+          &quot;tiharo(status_tahor) ∧ classify(mispachat_hi) ∧ kibbes_begadav ∧ taher&quot;)
+
+# -------------------------- Lev.13.7 · HANDLER_REOPEN_TRIGGER --------------
+# וְאִם־פָּשֹׂה תִפְשֶׂה הַמִּסְפַּחַת בָּעוֹר אַחֲרֵי הֵרָאֹתוֹ
+# אֶל־הַכֹּהֵן לְטָהֳרָתוֹ וְנִרְאָה שֵׁנִית אֶל־הַכֹּהֵן
+# &quot;But if the scab spread abroad in the skin, after that he hath shown
+# himself to the priest for his cleansing, he shall show himself to the
+# priest again.&quot;
+m.step(&quot;Lev.13.7&quot;)
+# ‹פָּשֹׂה תִפְשֶׂה … אַחֲרֵי הֵרָאֹתוֹ … וְנִרְאָה שֵׁנִית› (“spread it-
+# spreads … after his-being-seen … and-he-shall-be-seen a-second-time”) —
+# standing handler — if spread-it-spreads(after-its-appearing-to-his-
+# purification) then seen-a-second-time-to-the-priest
+m.handler(&quot;pasoh_tifseh(acharei_heraoto_le_tohorato)&quot;,
+          &quot;nirah_shenit_el_ha_kohen&quot;)
+
+# -------------------------- Lev.13.8 · HANDLER_REOPEN_VERDICT --------------
+# וְרָאָה הַכֹּהֵן וְהִנֵּה פָּשְׂתָה הַמִּסְפַּחַת בָּעוֹר וְטִמְּאוֹ
+# הַכֹּהֵן צָרַעַת הִוא
+# &quot;And the priest shall look, and, behold, the scab is spread in the skin;
+# then the priest shall pronounce him unclean: it is leprosy.&quot;
+m.step(&quot;Lev.13.8&quot;)
+# ‹וְהִנֵּה פָּשְׂתָה … וְטִמְּאוֹ … צָרַעַת הִוא› (“and-behold has-spread …
+# and-he-shall-declare-him-impure … tzara&#x27;at it-is”) — standing handler — if
+# behold-has-spread-the-scab then pronounce-impure(status-impure) ∧
+# classify(leprosy-it-is)
+m.handler(&quot;hineh_pastah_ha_mispachat&quot;,
+          &quot;timmeo(status_tamei) ∧ classify(tzaraat_hi)&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == {&#x27;moshe&#x27;, &#x27;adam&#x27;, &#x27;or_basar&#x27;, &#x27;ha_kohen&#x27;, &#x27;aharon&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS[&quot;log&quot;]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;read_before_install&#x27;: 5}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;case: adam, mark_in_or_basar(seet_o_sapachat_o_baheret) -&gt; nega_tzaraat -&gt; hova_el_ha_kohen&#x27;, &#x27;handler: IF(sear_hafakh_lavan ∧ mareh_amok_me_or) THEN(classify(nega_tzaraat_hu) ∧ timme(status_tamei))&#x27;, &#x27;handler: IF(baheret_levanah ∧ ein_amok_mareha ∧ lo_hafakh_lavan) THEN(hisgir(et_ha_nega, shivat_yamim))&#x27;, &#x27;handler: IF(ba_yom_ha_shevii ∧ amad_be_einav ∧ lo_fasah) THEN(hisgiro(shivat_yamim_shenit))&#x27;, &#x27;handler: IF(ba_yom_ha_shevii_shenit ∧ kehah ∧ lo_fasah) THEN(tiharo(status_tahor) ∧ classify(mispachat_hi) ∧ kibbes_begadav ∧ taher)&#x27;, &#x27;handler: IF(pasoh_tifseh(acharei_heraoto_le_tohorato)) THEN(nirah_shenit_el_ha_kohen)&#x27;, &#x27;handler: IF(hineh_pastah_ha_mispachat) THEN(timmeo(status_tamei) ∧ classify(tzaraat_hi))&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 8
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre>
+<div class="note">FROZEN 2026-08-01 (owner approved, &quot;freeze lev 13&quot;; interpreter gained the CASE/HANDLER law-genre operators at freeze): eighth logic-derived unit and the FIRST LAW UNIT — the pilot the owner chose after the seven days closed. Central findings: the genre parses exactly as the learning pass predicted — one narrative frame verb, then installed code: a ki-case with a three-class intake filter and passive routing, six weqatal handlers (verdict, confine, recheck-confine, release, armed reopen trigger, reopen verdict), predicates as perfects under lo/ein negation, the infinitive-absolute doubling on the overturn branch, and the declare/become minimal pair (piel/qal) inside the release verse. The etnachta brackets condition|action in all seven law verses. The quarantine loop runs on the frozen week&#x27;s clock (shivat yamim; re-entry BA-YOM HA-SHEVI&#x27;I) with a bounded second iteration (shenit). Onkelos fuses disease and procedure (tzara&#x27;at -&gt; segiru, &#x27;the shutting-disease&#x27;). The machine ends with SEVEN standing law facts and every other register untouched: no demand, no test, no name, no ledger row — installed code, armed, unexecuted. Narrative (ASK FIRST) and triage await owner order; the triage is the middot detector&#x27;s legal-device tripwire test. Not binding religious law.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

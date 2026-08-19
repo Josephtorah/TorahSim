@@ -1,0 +1,998 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_32_hagar_angel — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_32_hagar_angel?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Hagar: the maid given, the flight, the angel, the names (16:1-16) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_32_hagar_angel</b> · Genesis 16:1-16 · derive logic_derived_v1 · phase C-32</div>
+<div class="meta"><a href="../#Gen/16/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">אַתָּה אֵל רֳאִי</span> · <i>atah El Roi</i> · &#x27;You are a God of seeing&#x27;</p>
+<div class="note">Logic-derived v1: v3 taamim (cantillation accents) trees from DB tree_json -&gt; leaf role frames from OSHB morph -&gt; operator lines citing TIR rules -&gt; machine-state scenarios. Machine tokens apostrophe-free and underscore-joined (bo(avram, el_shifchati), yishpot(YHWH, beini_u_veinekha), asi(saray, la_hagar_ha_tov_be_ einayikh), shuvi_ve_hitani(hagar, el_gevirtekh_tachat_yadeha), name(YHWH) := El_Roi). Per-verse steps x16 (the staged span order, ratified by the derive-order).</div>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DRAFT by the gen-5 block agent (second unit of its tenure; fifteenth agent-derived unit overall), 2026-08-05. Censuses run against the raw snapshot BEFORE drafting; all frozen-unit quotes opened at their line ranges this session — including FROZEN gen_31_covenant_pieces (freeze #14), whose three staged landings (anah, safar, shuv) land here and are quoted from the frozen file. Span per the owner&#x27;s derive-order ratifying the staged recommendation: ONE UNIT, Gen 16:1-16, seam at 17:1 (the thirteen-year jump and the El Shaddai genre-break), per-verse steps x16. 223 tokens / 16 verses, census-exact. Machine shape: DECLARE x4 (Sarai x2, Abram x1, the angel x1 — three issuers), RESULT x1 (bo -&gt; va-yavo, settled cycle #9 claimed, and this time the pop is MACHINE-ASSERTED: SPECS empty at 16:4), NAME x2 (REGISTRY 2 writes — machine-asserted at both 16:13 and unit end), PATTERN x1 (the al-ken formula&#x27;s fourth token), 18 standing fact-lines, NOTE_PRESUPPOSED x2 ops / 3 names, ZERO tests/installs/ledger-rows/invariants; queue at rest 3 OPEN, 1 settled. INTERPRETER: ZERO extensions sought. THE DRAFT&#x27;S FLAGGED CHOICES (ratify-or-reverse, per flag): (1) THE NAME-ON-YHWH WEIGH [the unit&#x27;s boldest; staged both ways, owner triages]: 16:13&#x27;s VA-TIQRA SHEM-YHWH ha-dover eleha atah EL ROI (&#x27;and she CALLED THE NAME OF YHWH who spoke to her: You are a God of seeing&#x27;) — the corpus&#x27;s ONLY human-names-YHWH event, and the speaker is an Egyptian slave-woman. ENCODED: NAME op — name(YHWH) := El_Roi — because the letter uses the FULL narrative naming formula, and frozen gen_25&#x27;s rule is explicit in both directions, quoted: &#x27;NO NAME op — KARA is a bare perfect with an indefinite subject (&quot;one called&quot;) — no va-yiqra (&quot;and-he-called&quot;) narrative formula: gen_24&#x27;s report-naming rule holds; the REGISTRY takes nothing&#x27; — HERE the va-tiqra formula IS present, with an explicit agent, so the NAME class (gen_12&#x27;s &#x27;name(kayin) := Kayin&#x27;, gen_13&#x27;s &#x27;name(shet) := Shet&#x27;, both quoted) fires. The REGISTRY takes YHWH-&gt;El_Roi; the named_before_any_presence flag fires as EXPECTED DATA (YHWH is never an installed entity; flags never block). ALTERNATIVE STAGED: hold as spoken fact only, no write (the ground: every prior NAME target was a creature, a person, or a built thing — a reverence-based exception would be NEW LAW, which only the owner can make). The machine asserts the write both ways at review&#x27;s disposal: the scenario line is one edit. EL TOKEN 5 — frozen gen_30&#x27;s El-ladder line LANDS, quoted: &#x27;el (the divine name 410) tokens 1-4 ALL in-span as El Elyon (&quot;God Most High&quot;), token 5 = 16:13 (the El-ladder confirmed)&#x27;. ROI (7210) is a TORAH HAPAX, and the roi-skeleton sits on THREE CONSECUTIVE THRONES (16:13 etnachta EL ROI; 16:13 silluq acharei ROI; 16:14 etnachta beer-lachai-ROI) [tree fact]. Onkelos DISSOLVES the naming — ve-TZALLIAT bi-shma da-YHWH (&#x27;she PRAYED in the name of YHWH&#x27;) — see the headline: the buffer un-names exactly what the machine registers [dual-track tension at its sharpest, flagged]. (2) THE DEMAND-ON-GOD WEIGH [second-boldest; staged both ways]: 16:5&#x27;s YISHPOT YHWH beini u-veinekha (&#x27;let YHWH JUDGE between me and you&#x27;) — shafat&#x27;s TORAH DEBUT, and the DB codes it a TRUE JUSSIVE (HVqj3ms). ENCODED: DECLARE(saray, LET(yishpot(YHWH, beini_u_veinekha))) — the jussive-LET class controls (frozen gen_30&#x27;s device, quoted: &#x27;HEM YIQCHU CHELQAM... YIQCHU is JUSSIVE (HVqj3mp, DB-verified), and the controlling class is frozen gen_23&#x27;s... All four pushed and letter-faithfully OPEN&#x27;) — the letter&#x27;s mood decides, and the mood is jussive. THE BOLDNESS: the demanded agent is YHWH — the corpus&#x27;s first human-issued demand on God (every prior human demand aimed at humans: Lemekh&#x27;s wives, Lot, the king&#x27;s pair, the allies). OPEN letter-faithfully: no judging is narrated. ALTERNATIVE STAGED: hold as invocation-fact (the ground: a demand on God has no possible human receipt-path; but gen_20/21&#x27;s INVARIANT law governs perpetual commitments, not third-party jussives — the class evidence stays with the push). Also in this verse: CHAMAS token 3 — chamasi alekha (&#x27;my WRONG be upon you&#x27;): tokens 1-2 are the FLOOD-CAUSE, quoted from frozen gen_16 (&#x27;va-timale ha-aretz chamas&#x27; — 6:11; &#x27;ki-malah ha-aretz chamas mi-pneihem&#x27; — 6:13): the word that drowned the world returns as a household grievance [census, prose]; and NATATI (&#x27;I HAVE GIVEN&#x27;, natan token 22) — SARAI SPEAKS THE RECEIPT-GRAMMAR: the performative perfect of frozen gen_21&#x27;s 9:3 class and frozen gen_31&#x27;s 15:18 receipt, one chapter old, now in a human grievance — the give-perfect&#x27;s first female speaker [census, prose]. (3) SETTLED CYCLE #9 CLAIMED — AND MACHINE-ASSERTED: 16:2&#x27;s BO (&#x27;come in&#x27; — true imperative HVqv2ms + na) pushes DECLARE(saray, LET(bo(avram, el_shifchati))), and 16:4&#x27;s VA-YAVO pops it by RESULT — the demand&#x27;s own verb (frozen gen_17&#x27;s class, quoted: &#x27;the bo-demand — SETTLED CYCLE #2 (the demand&#x27;s own verb&#x27;; frozen gen_31&#x27;s numbering pattern: &#x27;#8 CLAIMED [flag 2; numbering for main-loop verification, gen_27&#x27;s pattern]&#x27;). The SAME VERB bo that settled cycle #2 (God commanding Noach into the ark) now settles a wife&#x27;s demand on her husband; and because it is the only demand yet pushed, the pop is asserted MECHANICALLY: SPECS empty at 16:4 (no prose-only settle this time). SARAI IS THE CORPUS&#x27;S FIRST FEMALE DEMAND-ISSUER [census-backed: the prior issuers are God, Lemekh, the king of Sodom, Abram, the angel-class pending — every prior DECLARE speaker in the frozen corpus is male; Lemekh&#x27;s wives were addressees, never issuers]. (4) THE DO-GOOD/AFFLICT VERB-SWAP [flag; encode open]: 16:6&#x27;s ASI (&#x27;DO to her the good in your eyes&#x27; — true imperative HVqv2fs) pushes DECLARE(avram, LET(asi(saray, la_hagar_ha_ tov_be_einayikh))); Sarai&#x27;s next deed is VA-TEANEHA (&#x27;and she AFFLICTED her&#x27;) — the execution arrives in a DIFFERENT VERB: asah commanded, anah done. NO RESULT FIRES — RESULT pops only the demand&#x27;s own string (the frozen contract), and the letter&#x27;s verb-swap IS the finding: the permission stands OPEN over an affliction the letter narrates instead [the machine does not equate what the letter distinguishes]. ANAH token 2 — FROZEN gen_31&#x27;s staged landing, quoted verbatim: &#x27;ANAH (&quot;afflict&quot;) token 1 — tokens 2-3 are 16:6 (SARAI afflicts Hagar) and 16:9 (the angel&#x27;s submit-command): the afflict-verb crosses the seam into the next chapter&#x27;s house&#x27; — LANDED, both tokens. The decree&#x27;s verb (15:13 ve-inu, on Abram&#x27;s seed in Egypt) fires first in Abram&#x27;s house, on an Egyptian [cross-unit prose + [OPEN], nothing pops; the moralization is the chain&#x27;s — Ramban&#x27;s verdict named-only]. HA-TOV — the span&#x27;s only tov-token, idiomatic inside the permission, not an evaluation (frozen gen_31&#x27;s flag-12b class continues); TESTS stay empty. (5) THE COMPOUND RETURN-AND-SUBMIT DEMAND: 16:9&#x27;s SHUVI (&#x27;return!&#x27;, HVqv2fs) + VE-HITANI (&#x27;and submit&#x27;, HVtv2fs — hitpael imperative) ride ONE demand — DECLARE(malakh_YHWH, LET(shuvi_ve_hitani(hagar, el_gevirtekh_tachat_yadeha))) — on the compound device (frozen gen_31&#x27;s line quoted: &#x27;DECLARE(YHWH, LET(habet_u_sefor(avram, ha_shamaymah_ve_ha_ kokhavim)))&#x27; riding gen_29&#x27;s sa_u_ree). OPEN letter-faithfully: no return is narrated in-span — 16:15 has her bearing at Abram&#x27;s house, an implication the letter never verbs [held]. SHUV token 13 — FROZEN gen_31&#x27;s staged landing, quoted: &#x27;token 13 is 16:9&#x27;s SHUVI — the angel to Hagar, across the seam&#x27; — LANDED. The angel&#x27;s imperative pair sends the afflicted back INTO the affliction-verb (hitani — anah token 3, now hitpael, commanded on the victim) [letter fact, held raw]. (6) THE ANGEL CLASS OPENS: MALAKH (&#x27;messenger/angel&#x27;, 4397) — TORAH DEBUT x4, tokens 1-4 all in-span (tokens 5-6 are 19:1/19:15, Sodom&#x27;s pair): the messenger-class is born speaking to a runaway Egyptian slave, with THREE consecutive va-yomer re-launches (16:9, 16:10, 16:11 — three speeches, no reply between). THE ANGEL SPEAKS THE DIVINE FIRST PERSON at 16:10 (ARBEH, &#x27;I will multiply&#x27;) — held as letter fact, no identity resolution (the letter&#x27;s own slide from messenger to first person; the chain&#x27;s files named-only). The naming-formula at 16:13 calls the speaker YHWH outright (shem-YHWH ha-dover eleha) — the letter&#x27;s own equation, held as the letter&#x27;s [prose]. (7) THE FEMALE VOICE RETURNS [census-exact]: the va-tomer (feminine narrative say-token) roster of Gen 1-16 is 3:2, 3:13, 4:1 — then NOTHING for twelve chapters — then 16:2, 16:5, 16:8: Sarai twice, then HAGAR: the corpus&#x27;s female speech lives in Eden, dies at the first birth-cry, and returns in a surrogacy crisis; its third holder here is an Egyptian slave. Sarai&#x27;s 16:2 is the first female speech since Chavah&#x27;s qaniti (4:1, frozen gen_12&#x27;s step). (8) THE LISTENED-IDIOM CENSUS: VA-YISHMA AVRAM LE-QOL SARAY (&#x27;Abram LISTENED TO THE VOICE OF Sarai&#x27;) — the only prior le-qol listening in the corpus is 3:17, quoted from frozen gen_11: &#x27;The indictment names two counts: LISTENING (shamata le-qol ishtekha — the qol thread...)&#x27; — the indictment-idiom re-run without comment, and the verse ENDS on le-qol saray (the silluq throne) [census + tree fact; QOL token 6 — after the garden&#x27;s three, the blood&#x27;s cry (4:10), Lemekh&#x27;s demand (4:23); the idiom&#x27;s next tokens are 21:12&#x27;s shema be-qolah — God COMMANDING the listening — and 22:18&#x27;s reward, named-only]. SHAMA tokens 7-8 both in-span: Abram hears the wife (16:2), YHWH hears the maid (16:11) — and the child&#x27;s name is the verb&#x27;s own monument: YISHMA-EL, &#x27;God hears&#x27; [census, prose]. (9) THE BUILD-PLEA: ULAY IBANEH MIMENAH (&#x27;perhaps I shall be BUILT from her&#x27;) — ulay (&#x27;perhaps&#x27;) TORAH DEBUT + banah token 9, the build-verb&#x27;s FIRST NIPHAL and FIRST FIRST-PERSON: after the rib built into a woman (2:22, frozen gen_09&#x27;s va-yiven line quoted) and Babel&#x27;s nivneh (&#x27;let us build&#x27;), a woman asks to be built from her maid [census, prose; the ben/banah (&#x27;son&#x27;/&#x27;build&#x27;) skeleton-chime held as sound-observation only, gen_30&#x27;s class]. ATZARANI (&#x27;He has RESTRAINED me&#x27;) — atzar TORAH DEBUT; its only other Gen tokens are 20:18 x2, Avimelech&#x27;s closed wombs: the restraint-verb&#x27;s whole Genesis career is wombs [census]. Sarai ATTRIBUTES the closure to YHWH — the letter&#x27;s own record said only &#x27;barren&#x27; (11:30, frozen gen_26&#x27;s akarah line quoted): her theology is held as HER speech, not the narrator&#x27;s [letter fact]. (10) THE FIND, THE SPRING, AND THE LEMMA SPLIT: VA-YIMTZAAH (&#x27;and he FOUND her&#x27;) — matza token 7: the find-verb&#x27;s career (the failed helper-search 2:20 [frozen gen_09&#x27;s line], Cain&#x27;s feared finders 4:14-15, Noach&#x27;s favor 6:8, the dove&#x27;s no-rest 8:9, Babel&#x27;s plain 11:2) reaches its first divine-side finding OF A PERSON [census, prose]. And the DB SPLITS THE EYE-LEMMA: 16:4-6&#x27;s contempt runs through be-eineha/be-einayikh (5869 a, &#x27;eye&#x27;) while 16:7&#x27;s rescue sits al-ein ha-mayim (5869 b, &#x27;spring&#x27;) — same skeleton, split lemma: the chapter&#x27;s contempt and its rescue share one written word the lexicon divides [lemma-split find-class, handoff §3; held as observation]. DEREKH token 3 (be-derekh Shur) — tokens 1-2 are 3:24 (the guarded WAY to the tree of life) and 6:12 (all flesh corrupting its WAY) [census, prose]. THE WHERE-LADDER: EI token 3 (ei-mizeh vat, 16:8) after 3:9&#x27;s ayeka (to Adam) and 4:9&#x27;s ei (to Cain) — the divine-side where-question&#x27;s third firing, now to a slave; and ANAH (&#x27;whither&#x27;) debuts in the same breath [census]. The eye-word count: three contempt -eyes, then the water-eye [in-span field, prose]. (11) THE ANNUNCIATION AS DECREE-FACT: 16:11&#x27;s VE-QARAT (&#x27;and you shall call his name Yishmael&#x27;) is WEQATAL (HVqq2fs — TIR-029&#x27;s future-chain, frozen gen_31&#x27;s va-avadum class): a decree-FACT, NOT a demand and NOT a NAME op — the corpus&#x27;s first PRE-BIRTH NAME-DECREE (the class&#x27;s next token: 17:19, God naming Yitzchak; named-only). At 16:15 the FATHER performs the name the angel decreed to the MOTHER (va-yiqra AVRAM... yishmael — NAME name(yishmael) := Yishmael, gen_12/13&#x27;s class; frozen gen_13&#x27;s alternation line quoted: &#x27;the naming alternates: mother, mother, father-for-a-city, mother, and 4:26&#x27;s father&#x27;) — the decree&#x27;s executor differs from its addressee; NOTHING pops (a weqatal decree-fact was never a demand) — the arc is prose [letter fact]. HARBAH ARBEH (16:10) — the doubled multiply-formula&#x27;s census: its only prior firing is 3:16 (harba + arbe, tokens 4-5 — CHAVAH&#x27;s multiplied PAIN) and its next is 22:17 (tokens 18-19 — Abraham&#x27;s oath-blessing): pain, seed, oath — the doubling fires on two women before the patriarch [census-exact, prose]. LO YISAFER ME-ROV — SAFAR token 3, FROZEN gen_31&#x27;s staged landing quoted verbatim: &#x27;token 3 is 16:10&#x27;s lo yisafer, &quot;shall NOT be counted&quot; — count!, to-count, uncountable&#x27; — LANDED. ONI token 1 (&#x27;your AFFLICTION&#x27;) — token 2 is 29:32, LEAH&#x27;s be-onyi: the heard-affliction naming-grammar recurs at Reuben; the Exodus shape (3:7&#x27;s &#x27;I have seen the affliction of My people&#x27;) is named-only [census, prose]. (12) THE AL-KEN PATTERN&#x27;S FOURTH TOKEN [census-exact]: 16:14&#x27;s AL-KEN QARA la-beer (&#x27;THEREFORE one called the well...&#x27;) — the al-ken adjacency census of Gen 1-17 is EXACTLY 2:24, 10:9, 11:9, 16:14: the formula&#x27;s fourth firing and second NAME-etiology, encoded PATTERN(al_ken_ qara_la_beer_beer_lachai_roi) per frozen gen_25&#x27;s device (quoted in flag 1): bare perfect, indefinite subject, no va-yiqra formula, NO NAME op, REGISTRY takes nothing. The well-name&#x27;s career: tokens 2-3 of the compound are 24:62/25:11 — YITZCHAK settles at Hagar&#x27;s well [named-only, career prose]. GLOSS_FIX: the 883+ compound rows are glossed &#x27;?&#x27; — &#x27;well of the Living One who sees me&#x27;. (13) SEED/STAGING CORRECTIONS (self-corrections against my own gen_32 pre-stage, with the data): (a) the staged say-roster (&#x27;9 tokens&#x27;) is refined: the narrative say-EVENTS are eight (16:13&#x27;s amra is the naming&#x27;s ki-ground, inside the reason clause — counted as speech content, not a ninth event); (b) the staged item 11 &#x27;first woman-speech since Chavah&#x27;s naming-cries&#x27; is sharpened census-exact: since 4:1&#x27;s qaniti (the va-tomer roster: 3:2, 3:13, 4:1, then 16:2 — 4:25&#x27;s Seth-naming rides va-tiqra, not va-tomer); (c) the staged &#x27;natan tokens 21-22 / laqach token 31&#x27; landings are CENSUS findings predicted only in the gen_31 prospective WATCH-LIST, which is not frozen precedent — stated here as fresh census fact with the watch-list named as predictor only. (14) GLOSS_FIX candidates verified against the gloss column: ulay &#x27;if-not&#x27; -&gt; &#x27;perhaps&#x27; (194); atzar &#x27;inclose&#x27; -&gt; &#x27;restrain&#x27; (6113); oni &#x27;depression&#x27; -&gt; &#x27;affliction&#x27; (6040); the 883+ &#x27;?&#x27; compound (flag 12); ibaneh under &#x27;build&#x27; fine (note the niphal sense &#x27;be built up with child&#x27;); pere &#x27;onager&#x27; kept with note; midbar &#x27;pasture&#x27; -&gt; &#x27;wilderness&#x27; (4057 — gen_30&#x27;s fix recurs, b-lemma). (15) NAME CHOICE flagged: gen_32_hagar_angel — the two debut-fields that own the chapter (Hagar&#x27;s seven tokens, the angel&#x27;s four). ONKELOS (Aramaic translation) read Tier-A at derive time (16 sequential fetches, 0.5s spacing, Data/FETCHLOG.md 2026-08-05; cache MISS for the whole span as staged) — HEADLINE: THE PRAYER DOUBLE THAT UN-NAMES GOD. At 16:11 &#x27;YHWH has HEARD YOUR AFFLICTION&#x27; becomes arei QABIL YHWH TZELOTIKH (&#x27;YHWH has RECEIVED YOUR PRAYER&#x27; — the affliction replaced by prayer), and at 16:13 &#x27;she CALLED THE NAME of YHWH&#x27; becomes VE-TZALLIAT BI-SHMA da-YHWH (&#x27;she PRAYED in the name of YHWH&#x27; — the naming dissolved into prayer): the tzali-family fires TWICE in one chapter and erases the corpus&#x27;s only human-naming-of-God exactly where the machine registers it; the well loses the Name too (16:14 -&gt; &#x27;the well at which the ENDURING ANGEL APPEARED&#x27;). Full findings and repeat-buffer list in ORAL_onkelos_tier_a. PROSPECTIVE MIDDOT RUN queued as WATCHLIST_gen32_prospective (scratchpad; the cache middot scan is the MAIN LOOP&#x27;S gate, not claimed here).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (retro, PROCESS.md oral-first era; manifest logic/oral_audit/manifests/gen_32_hagar_angel_claims.json — 15 VERIFIED, 0 FAILED, 0 UNCHECKABLE; record logic/oral_audit/AUDIT_gen_32_2026-08-08.md). CROWNS (chain-attested + DB-verified): (1) THE DOTTED YOD — A LAYER PROVEN INSTRUMENTED (G32-01, Masekhet Soferim 6 via Minchat Shai): one of the Torah&#x27;s TEN DOTTED PLACES — the scribal dot over the last yod of וביניך (&quot;and between YOU,&quot; 16:5, Sarai&#x27;s judge-plea). SNAPSHOT CARRIES THE DOT as a codepoint in the stream: the dotted-letters layer is READABLE — the first presumed-invisible layer to cross to the instrumented side, and it sits on this machine&#x27;s boldest verse (the corpus&#x27;s first human demand ON GOD). (2) The seeing-hapax pointed apart (G32-03/04, Minchat Shai): אל ראי (&quot;a God of SEEING&quot; — the El-ladder token, the registry write) with hataf qamatz (the compound o-vowel) on the resh, Masorah-marked UNIQUE; אחרי ראי (&quot;after the One who sees me&quot;) with hiriq (the i-vowel) on the aleph — SNAPSHOT exact on both. (3) וקראת (&quot;and you shall call...&quot;) — the Torah&#x27;s consonantal four (16:11 Ishmael, 17:19 Isaac, Deut 20:10 peace, Deut 31:29 the befalling evil); the Masorah&#x27;s four-list takes the short-pointed pair (16:11, 31:29) plus Isaiah&#x27;s Immanuel and salvation-walls (edges): &quot;by Ishmael&#x27;s calling came evil; by Immanuel&#x27;s, salvation&quot; (G32-05, Kitzur). (4) חמסי (&quot;my WRONG&quot;) — one Torah token (16:5): the flood-word-turned-grievance (the machine&#x27;s chamas census) in first person exactly once; paired with Zion&#x27;s cry over Babylon (Jer 51:35; edge): Sarah likened to Zion (G32-08, Kitzur). (5) הרתה (&quot;she had conceived&quot;) twice in the Torah, both in-span (16:4/16:5) — the doubling carries the miscarry-and-reconceive reading, named (G32-09). (6) The Ramah&#x27;s spellings land: עניך (&quot;your affliction&quot;) ONE yod at the hearing-verse — the decree-chain&#x27;s word written lean; בחיקך (&quot;in your bosom&quot;) yod-after-chet only, in the natati grievance-verse (G32-06/07). (7) Three singletons with legs (G32-10/11/12): ולה (&quot;and SHE had,&quot; 16:1) once — the Masorah&#x27;s four run to the two-edged dagger, Eli&#x27;s peace-word, Daniel&#x27;s four-winged beast (edges); ושרי אשת once — Deborah&#x27;s princes pair (Judg 5:15, &quot;important as the mothers&quot;; edge); ברחת (&quot;I am fleeing&quot;) once — Jeremiah&#x27;s city fleeing the bow-shooter (4:29; the Kitzur: the bow-shooter is Ishmael himself; edge). (8) עין המים (&quot;the spring of water&quot;) — three Torah stands (16:7 the angel finds her; 24:13/24:43 the servant&#x27;s stand and retell); the prayer-at-water reading rides (G32-13). (9) Accent rulings: אשת־אברם (&quot;wife of Abram&quot;) joined by maqqef (the joining hyphen) at 16:3, no separator bar; Hagar&#x27;s answering ותאמר under zaqef gadol (the great upright accent) — SNAPSHOT with the precise books (G32-14/15). DISCREPANCY (filed, not merged): the Masorah rules every &quot;between-you&quot; defective except 16:5&#x27;s dotted one — SNAPSHOT: 16:5 plene as ruled AND 13:8&#x27;s peace-plea plene besides (nine others defective): one more than the count, kin to gen_30&#x27;s eleven-that-are-eighteen; the dot sits only on 16:5 (13:8 probed dotless) (G32-02). READINGS (named-only): the Hagar-Keturah return-arc; the evil-eye reading on the doubled conception; the ten-childless-years rule hung on לשבת (&quot;to dwell&quot;); the soft-letter file: ידו בכל (&quot;his hand on all&quot;) with soft bet; ואנה תלכי (&quot;where are you going&quot;) with soft tav; פרא (&quot;wild donkey&quot;) with dagesh (the doubling dot) in the pe; ואברם (&quot;and Abram&quot;) without qadma (the forward accent-stroke); וימצאה (&quot;and he found her&quot;) under the twin-stroke accent. Machine layer untouched.</div>
+<div class="meta">confidence: structure tested; operator readings tested-per-TIR; intent hypothesis</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>Gen 16:1-16 as ONE UNIT (the owner&#x27;s derive-order ratifying the staged recommendation), per-verse steps x16: the barren-wife notice (16:1), Sarai&#x27;s initiative and Abram&#x27;s listening (16:2), the take-and-give (16:3), the compliance and the contempt (16:4), the grievance and the demand-on-God (16:5), the permission and the affliction-flight (16:6), the angel finds her (16:7), the where-questions (16:8), the return-command (16:9), the multiply-promise (16:10), the annunciation (16:11), the wild-ass oracle (16:12), she names YHWH (16:13), the well named (16:14), the birth and the father&#x27;s naming (16:15), the age-frame (16:16). The chapter is one household arc in two scenes bound by the maid-word (shifchah x6 in-span) and the afflict-root; 17:1 breaks on a thirteen-year jump and the El Shaddai covenant genre. 16 verses, 223 tokens.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Hebrew source + trees</td><td>All 16 verses from DB tree_json (rule set v3, unique, pure binary; ascii rendered 2026-08-05). Tree facts (accent positions DB-verified): 16:1 rests on LO (&#x27;bore no children TO HIM&#x27;) and ends on u-shemah HAGAR (her name verse-final); 16:2 rests on MIMENAH (&#x27;built FROM HER&#x27;) and ENDS ON LE-QOL SARAY — the listened-idiom on the silluq throne; 16:3 rests on be-eretz kenaan and ends on LO LE-ISHAH (&#x27;to him as WIFE&#x27; — the promotion verse-final); 16:4 rests on VA-TAHAR ALONE (a one-word etnachta arm — the conception is the rest) and ends on be-eineha (&#x27;in her eyes&#x27;); 16:5 RESTS on be-eineha — the contempt-phrase moves from 16:4&#x27;s silluq to 16:5&#x27;s etnachta, throne to throne — and ends on beini u-veinekha (&#x27;between me and you&#x27;; the written source carries one of the Torah&#x27;s dotted-letter marks (puncta) on u-veinekha — noted, no claim, the chain&#x27;s files are the chain&#x27;s); 16:6 rests on ha-tov be-einayikh (the permission at the rest) and ends on MI-PANEHA (&#x27;from her face&#x27; — the flight verse-final); 16:7 rests on ba-midbar and ends on be-derekh SHUR; 16:8 rests on ve-anah telekhi (the whither-question at the rest) and ENDS ON BORACHAT (&#x27;FLEEING&#x27; — the participle on the throne); 16:9 rests on el-gevirtekh and ends on tachat yadeha (&#x27;under her hands&#x27;); 16:10 rests on et-zarekh and ends on ME-ROV (&#x27;for multitude&#x27;); 16:11 rests on ve-yoladt BEN and ENDS ON EL-ONYEKH (&#x27;your AFFLICTION&#x27; — the verse ends on the word the Name heard); 16:12 rests on BO (&#x27;all hands against HIM&#x27;) and ends on the single word YISHKON (&#x27;he shall dwell&#x27;); 16:13 RESTS ON EL ROI (the new name on the etnachta) and ends on acharei ROI — with 16:14 resting on beer-lachai-ROI: the roi-skeleton on THREE consecutive thrones; 16:14 ends on u-vein BARED; 16:15 rests on BEN alone and ENDS ON YISHMAEL (the name verse-final); 16:16 ends on LE-AVRAM.</td><td>tested</td></tr>
+<tr><td><b>C</b></td><td>Segment structure</td><td>Verb morphology (#IMPOSED OSHB, DB-verified 2026-08-05) and censuses run BEFORE drafting. THE DEMAND FIELD (the span&#x27;s complete coded-mood census): 16:2 BO — imperative HVqv2ms with na (Sarai to Abram); 16:5 YISHPOT — jussive HVqj3ms (Sarai on YHWH — flag 2); 16:6 ASI — imperative HVqv2fs (Abram to Sarai); 16:9 SHUVI HVqv2fs + VE-HITANI HVtv2fs (the angel&#x27;s pair — one compound demand); 16:10 HARBAH — inf-abs (the doubling, not a mood); NOTHING else: four volitive utterances, three issuers, one of them a woman (the corpus&#x27;s first female issuer — flag 3), one aimed at God (flag 2). THE WEQATAL: 16:11&#x27;s ve-qarat (HVqq2fs, TIR-029) — decree-chain, not command [flag 11]. THE NAME FIELD: qara tokens 23-26 ALL in-span — the angel&#x27;s decree (16:11, weqatal-fact), Hagar&#x27;s naming of YHWH (16:13, va-tiqra formula -&gt; NAME, flag 1), the therefore-naming of the well (16:14, bare perfect -&gt; PATTERN, flag 12), the father&#x27;s naming of the son (16:15, va-yiqra -&gt; NAME): four naming acts, four different grammars, and the machine gives each its own class [census]. CAREERS AND DEBUTS: hagar x7 (the name frames the chapter: absent from the angel-scene&#x27;s address, which says shifchat saray; named three times at the birth); GEVIRAH (&#x27;mistress&#x27;) debut x3 — ALL its Torah tokens are in this chapter [census]; shifchah tokens 2-7 (token 1 = 12:16, frozen gen_28&#x27;s gift-list, quoted: &#x27;maidservants (shifchah Torah debut — the title Hagar will carry [named-only])&#x27; — the frozen prediction LANDS: the title is hers six times here); BARACH (&#x27;flee&#x27;) debut x2 (16:6, 16:8 — born on Hagar; tokens 3-5 are Yaakov&#x27;s flights); MALAKH x4 (flag 6); PERE hapax + the oracle (25:18&#x27;s al-penei completion named-only); ULAY + ATZAR + CHEQ (&#x27;bosom&#x27;) + HALOM (&#x27;hither&#x27;) + ROI debuts; HARAH-adjective debut (16:11; its other tokens: Tamar 38:24-25, the struck mother Exod 21:22); EI token 3 / ANAH-whither debut (flag 10); ONI token 1 (flag 11); QALAL tokens 5-6 (va-teqal/va-eqal — token 4 is 12:3&#x27;s u-meqalelkha, frozen gen_27&#x27;s guard-verse: the guard-clause&#x27;s verb fires FIRST between the patriarch&#x27;s two women, va-teqal at 16:4 and Sarai&#x27;s own va-eqal at 16:5 [census, prose]); CHAMAS token 3 (flag 2); NATAN tokens 21-22 + LAQACH token 31 in-span — the give/take arc crosses the seam into Sarai&#x27;s hands (va-tiqach... va-titen 16:3, natati 16:5): the covenant-grant&#x27;s natati (frozen gen_31&#x27;s 15:18, quoted at the step) is followed by give-tokens 21 and 22 BOTH in Sarai&#x27;s transaction — predicted in the gen_31 prospective watch-list ONLY (not frozen precedent; stated as fresh census fact) [census]; MATZA token 7 (flag 10); DEREKH token 3; SHAMA tokens 7-8 (flag 8); QOL token 6 (flag 8); BANAH token 9 (flag 9); the eye/spring lemma split 5869 a/b (flag 10); MITZRIT tokens 3-4 (the letter tags Hagar Egyptian twice — with frozen gen_31&#x27;s 15:13 decree standing one chapter back, the inversion is the letter&#x27;s own: an Egyptian afflicted in Hebrew hands before Hebrews in Egyptian ones [cross-unit prose + [OPEN], nothing pops]). SAY-ROSTER (census-exact): eight narrative say-events — Sarai 16:2, Sarai 16:5, Abram 16:6 (his only line; his first words to his wife since frozen gen_28&#x27;s 12:11-13 fear-speech), the angel 16:8, HAGAR 16:8 (the roster admits a slave), the angel 16:9, 16:10, 16:11 (the triple re-launch); + 16:13&#x27;s amra as the naming&#x27;s ki-ground. The chapter&#x27;s second half has no patriarch line [letter fact]. The VA-TOMER female roster: tokens 4-6 of Gen 1-16 all in-span (flag 7). NO ktiv/qere pairs [census]. 223 tokens / 16 verses [census-exact].</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Predicates &amp; outcomes</td><td>The machine&#x27;s queue is the household&#x27;s ledger: FOUR demands from THREE issuers — the wife&#x27;s bo (settled in its own verb one verse later — cycle #9, machine-asserted by SPECS empty), the wife&#x27;s yishpot on GOD (open — no judging narrated; flag 2), the husband&#x27;s do-good permission (open forever over an afflict-deed — the verb-swap, flag 4), and the angel&#x27;s return-and-submit (open — no return narrated; flag 5). Around the queue: the REGISTRY takes its first writes since gen_13&#x27;s era — TWO namings (a slave names GOD; a father names a son), with the pre-birth name-decree and the well-etiology each held in their own class (weqatal-fact; PATTERN); 18 standing fact-lines carry the barrenness notice, the restrained-womb theology (hers), the build-plea, the ten-years and the wife-promotion, the contempt, the grievance (the flood-word; the female natati), the where-questions and the runaway&#x27;s answer, the multiply-promise and the uncountable seed, the annunciation triple, the wild-ass oracle pair, the naming-reason, the well&#x27;s location, and the age-frame. TESTS: EMPTY (ha-tov is idiomatic; tov/shaah/tzaddik/nichoach zero as instruments — census). LEDGER empty; INSTALLS zero (a well is NAMED, not built — gen_25&#x27;s unfinished-tower discipline: nothing enters WORLD); INVARIANT zero.</td><td>tested</td></tr>
+<tr><td><b>E</b></td><td>Logic format choice</td><td>Operator lines; per-verse steps x16. DECLARE x4: LET(bo( avram, el_shifchati)) [16:2, Sarai — TIR-027; settled at 16:4 by RESULT — cycle #9]; LET(yishpot(YHWH, beini_u_veinekha)) [16:5, Sarai on God — jussive class, TIR-026; flag 2]; LET(asi(saray, la_hagar_ha_tov_be_ einayikh)) [16:6, Abram — TIR-027; the verb-swap leaves it OPEN, flag 4]; LET(shuvi_ve_hitani(hagar, el_gevirtekh_tachat_yadeha)) [16:9, the angel — compound device, TIR-027; flag 5]. RESULT x1 [16:4]. NAME x2: name(YHWH) := El_Roi [16:13 — flag 1, the boldest] and name(yishmael) := Yishmael [16:15 — gen_12/13&#x27;s class]. PATTERN x1 [16:14 — gen_25&#x27;s device]. EVENTs (17): say x8, hear (16:2 — the le-qol idiom), take + give (16:3), come (16:4 — the pop&#x27;s deed), conceive (16:4), afflict + flee (16:6), find (16:7 — the angel), bear (16:15). Standing facts: 18 HOLDS lines + 1 PATTERN-fact. NOTE_PRESUPPOSED x2 ops / 3 names (shur; qadesh + bered). TESTS x0, LEDGER x0, REGISTRY_INSTALL x0, INVARIANT x0. Queue at rest: 3 OPEN, 1 settled. REGISTRY at rest: 2 writes (machine-asserted). Interpreter extensions: NONE.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Bilingual logic objects</td><td>Every operator line carries he + he_translit + en. Machine tokens apostrophe-free: bo(avram, el_shifchati), yishpot(YHWH, beini_u_veinekha), asi(saray, la_hagar_ha_tov_be_einayikh), shuvi_ve_hitani(hagar, el_gevirtekh_tachat_yadeha), name(YHWH) := El_Roi, name(yishmael) := Yishmael, chamasi_alekha, ki_shama_YHWH_el_onyekh, al_ken_qara_la_beer_beer_lachai_roi.</td><td>established</td></tr>
+<tr><td><b>G</b></td><td>Oral (named only) + Tier-A translation check</td><td>Named but NOT read (queue only — the cache middot scan is the main loop&#x27;s gate): Bereshit Rabbah 45 (the span; the Sarai-verdict file; the five-angels count at the speeches; the Hagar-as-Pharaoh&#x27;s-daughter class — the 12:16 gift-list identification); Rashi at 16:1 (the gift-class), 16:2 (the built-through-her class), 16:5 (chamasi&#x27;s readings), 16:9-11 (the angel-per-speech count), 16:13 (the seeing-classes), 16:14 (the well); Ramban at 16:6 (the famous verdict on Sarai&#x27;s affliction — &#x27;our mother sinned in this affliction&#x27;) and 16:12; Bavli Berakhot (the annunciation-formula field); Pirqei de-R. Eliezer&#x27;s Hagar files. Tier-A Onkelos (16 fetches, Data/FETCHLOG.md 2026-08-05): findings in ORAL_onkelos_tier_a — headline: the PRAYER DOUBLE (affliction -&gt; prayer at 16:11; the naming -&gt; prayer at 16:13); the pere-oracle&#x27;s economic softening; the repeat-buffer list (accepted-the-word at 16:2 = the 3:17 buffer exactly; lead-for-take on Sarai&#x27;s taking; Qadesh -&gt; Reqam; seed -&gt; sons extended to Hagar).</td><td>tested</td></tr>
+<tr><td><b>H</b></td><td>Scenarios</td><td>S1 the notice: facts hold, no test, no name. S2 the initiative: LET(bo) pushed and OPEN, the restraint and build-plea facts hold. S3 the compliance: SPECS EMPTY — the pop machine-asserted (cycle #9); the contempt-fact holds. S4 the grievance: LET(yishpot) pushed and OPEN (flag 2), the chamas and female-natati facts hold. S5 the permission: LET(asi) pushed and OPEN (the verb-swap — afflict fires, nothing pops). S6 the finding and the questions: facts hold, shur flagged, no test, no name. S7 the return-command: the compound LET pushed and OPEN. S8 the promise and annunciation: five decree-facts hold. S9 the oracle: facts hold. S10 the naming of YHWH: REGISTRY: YHWH-&gt;El_Roi (1 write) — machine-asserted (flag 1); the reason-fact holds. S11 the well: the PATTERN-fact holds, qadesh/bered flagged. S12 the close: REGISTRY: YHWH-&gt;El_Roi, yishmael-&gt;Yishmael (2 writes); three demands OPEN; the age-frame holds; LEDGER stays EMPTY. S13_negative LET? guard; S14_negative flag-never-block.</td><td>tested</td></tr>
+<tr><td><b>I</b></td><td>English leakage review</td><td>Operators derive from morph codes (the four volitives and their moods; the weqatal decree; the two va-yiqra naming formulas vs the bare-perfect etiology; the qal/piel/ hitpael afflict-forms; TIR-014/026/027/029) and censuses run BEFORE drafting (the female say-roster; the al-ken adjacency census; the le-qol idiom census; the harbah-arbeh doubling census; the where-ladder; shama 7-8; matza 7; qalal 5-6; chamas 3; natan 21-22; laqach 31; banah 9; the eye/spring lemma split; the instrument-absence check; the no-ktiv/qere check; 223/16 totals). NOT supplied: whether Sarai&#x27;s affliction was sin (Ramban&#x27;s verdict named-only); the angel&#x27;s identity behind the divine first person (the letter&#x27;s slide held as the letter&#x27;s); Hagar&#x27;s identification with 12:16&#x27;s gift-list (the chain&#x27;s); the pere-oracle&#x27;s meaning (held raw; the buffer&#x27;s softening dual-track); the 16:13 reason-clause&#x27;s famously difficult syntax (held as spoken fact in the letter&#x27;s own words); whether a NAME on YHWH needs new reverence-law (the owner&#x27;s call — flag 1 staged both ways).</td><td>established</td></tr>
+<tr><td><b>J</b></td><td>Pre-flight + draft ship</td><td>Pre-flight 2026-08-05 against the UNMODIFIED repo interpreter — zero injected prototypes (scratchpad preflight_gen32.py; draft guard bypassed for preview only). Ships as STATUS: DRAFT by the gen-5 block agent (mechanics only, second unit of its tenure); the main loop verifies quotes, re-runs censuses, rules on flags 1-15 (flags 1 and 2 are the staged-both-ways owner triages), and freezes through the standard gate chain.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_16_1 · Gen.16.1 · <span class='expr'>THE_BARREN_WIFE_AND_THE_MAID</span></h3>
+<p><span class="he">וְשָׂרַי אֵשֶׁת אַבְרָם לֹא יָלְדָה לוֹ וְלָהּ שִׁפְחָה מִצְרִית וּשְׁמָהּ הָגָר</span> · <i>ve-saray eshet avram lo yaldah lo ve-lah shifchah mitzrit u-shemah hagar</i> · [EN-AID/JPS] Now Sarai Abram&#x27;s wife bore him no children; and she had a handmaid, an Egyptian, whose name was Hagar.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ושרי אשת אברם לא ילדה לו</span> · <i>ve-saray eshet avram lo yaldah lo</i> · Sarai bore no children TO HIM (the etnachta throne is lo — &#x27;to him&#x27;)</div><div class="arm"><b>RIGHT</b><br><span class="he">ולה שפחה מצרית ושמה הגר</span> · <i>ve-lah shifchah mitzrit u-shemah hagar</i> · and she had an Egyptian maid — the verse ends on her name: Hagar</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(saray_lo_yaldah_lo, t0) ∧ HOLDS(ve_lah_shifchah_mitzrit_u_shemah_hagar, t0)</span><br><span class="gloss">= HOLDS(saray-not-yaldah-not, t0) ∧ HOLDS(and-lah-shifchah-mitzrit-and-shemah-hagar, t0)</span><br>THE BARRENNESS FILE REOPENS: frozen gen_26 recorded the debut, quoted: &#x27;akarah (&quot;barren&quot;) Torah token 1 at 11:30&#x27; with its doubled notice (&#x27;saray_akarah + ein_lah_valad ... the letter doubles&#x27;) — five chapters and a covenant later the letter re-states it in verb form: LO YALDAH LO (&#x27;she bore no children TO HIM&#x27; — and the tree seats the rest on LO, &#x27;to him&#x27;: the childlessness is measured at the husband) [tree fact, cross-unit prose]. SHIFCHAH (&#x27;maidservant&#x27;) tokens 2-7 all in-span — and FROZEN gen_28&#x27;s gift-list prediction LANDS, quoted: &#x27;maidservants (shifchah Torah debut — the title Hagar will carry [named-only])&#x27; — the title is hers six times in this chapter; the chain&#x27;s identification of Hagar with 12:16&#x27;s gift is the chain&#x27;s [named-only]. MITZRIT (&#x27;Egyptian woman&#x27;) token 3 — the letter tags her origin before her name [letter order]; HAGAR debut (x7 in-span). Her name arrives by narration (u-shemah — the report-form, no naming act; gen_24&#x27;s report-naming rule) [decision recorded].
+</td><td><span class="he">לֹא יָלְדָה לוֹ וְלָהּ שִׁפְחָה מִצְרִית וּשְׁמָהּ הָגָר</span> · <i>lo yaldah lo ve-lah shifchah mitzrit u-shemah hagar</i><br><span class="gloss">= not yaldah not and-lah shifchah mitzrit and-shemah hagar</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">One verse, two households in it: a wife measured by what she has not borne, and a maid measured by where she was born — the letter files the origin first and the name last, on the throne.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_16_2 · Gen.16.2 · <span class='expr'>THE_INITIATIVE_AND_THE_LISTENING</span></h3>
+<p><span class="he">וַתֹּאמֶר שָׂרַי אֶל־אַבְרָם הִנֵּה־נָא עֲצָרַנִי יְהוָה מִלֶּדֶת בֹּא־נָא אֶל־שִׁפְחָתִי אוּלַי אִבָּנֶה מִמֶּנָּה וַיִּשְׁמַע אַבְרָם לְקוֹל שָׂרָי</span> · <i>va-tomer saray el-avram hineh-na atzarani YHWH mi-ledet bo-na el-shifchati ulay ibaneh mimenah va-yishma avram le-qol saray</i> · [EN-AID/JPS] And Sarai said unto Abram: &#x27;Behold now, the LORD hath restrained me from bearing; go in, I pray thee, unto my handmaid; it may be that I shall be builded up through her.&#x27; And Abram hearkened to the voice of Sarai.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ותאמר שרי אל־אברם הנה־נא עצרני יהוה מלדת בא־נא אל־שפחתי אולי אבנה ממנה</span> · <i>va-tomer saray el-avram hineh-na atzarani YHWH mi-ledet bo-na el-shifchati ulay ibaneh mimenah</i> · the restraint, the command, the hope: perhaps I shall be built FROM HER (etnachta on mimenah)</div><div class="arm"><b>RIGHT</b><br><span class="he">וישמע אברם לקול שרי</span> · <i>va-yishma avram le-qol saray</i> · and Abram listened to the voice of Sarai — the idiom ends the verse</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">say(e1) ∧ Agent(e1, saray) ∧ Goal(e1, avram)</span><br>THE FEMALE VOICE RETURNS [flag 7, census-exact]: the va-tomer (feminine narrative say) roster of Gen 1-16 is 3:2, 3:13, 4:1 — then silence for twelve chapters — then this verse: Sarai&#x27;s first recorded words are the corpus&#x27;s first female speech since Chavah&#x27;s qaniti (4:1, frozen gen_12&#x27;s step). She opens with HER theology: ATZARANI YHWH (&#x27;YHWH has RESTRAINED me&#x27; — atzar&#x27;s TORAH DEBUT; its only other Genesis tokens are 20:18 x2, Avimelech&#x27;s closed wombs): the letter&#x27;s own record said only &#x27;barren&#x27; (11:30) — the attribution to YHWH is hers, held as her speech [letter fact; census].
+</td><td><span class="he">וַתֹּאמֶר שָׂרַי אֶל־אַבְרָם</span> · <i>va-tomer saray el-avram</i><br><span class="gloss">= and-tomer saray to-avram</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(saray, LET(bo(avram, el_shifchati)))</span><br><span class="gloss">= DECLARE(saray, LET(in-it(avram, to-shifchati)))</span><br>BO (&#x27;come in&#x27; — true imperative HVqv2ms with na; TIR-027, the human-demand class): SARAI IS THE CORPUS&#x27;S FIRST FEMALE DEMAND-ISSUER [flag 3, census-backed — every prior DECLARE speaker in the frozen corpus is male; frozen gen_13&#x27;s Lemekh device, quoted: &#x27;DECLARE(lemekh, LET(shema(neshei_lemekh, qol_lemekh)))&#x27;, made wives the ADDRESSEES — here a wife issues]. Pushed; watch 16:4 — the demand&#x27;s own verb answers one verse later [flag 3]. ULAY IBANEH MIMENAH (&#x27;perhaps I shall be BUILT from her&#x27;) held below [flag 9].
+</td><td><span class="he">בֹּא־נָא אֶל־שִׁפְחָתִי</span> · <i>bo-na el-shifchati</i><br><span class="gloss">= in-it-na to-shifchati</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(atzarani_YHWH_mi_ledet, t0) ∧ HOLDS(ulay_ibaneh_mimenah, t0)</span><br><span class="gloss">= HOLDS(atzarani-the-LORD-from-ledet, t0) ∧ HOLDS(ulay-ibaneh-mimenah, t0)</span><br>THE BUILD-PLEA [flag 9]: ULAY (&#x27;perhaps&#x27;) — TORAH DEBUT, born carrying a childless hope; IBANEH — banah token 9, the build-verb&#x27;s FIRST NIPHAL and FIRST FIRST PERSON: frozen gen_09&#x27;s line is the root&#x27;s birth, quoted: &#x27;VA-YIVEN (&quot;and He BUILT&quot;) — banah&#x27;s first token&#x27; (the rib built into a woman) — after God&#x27;s building of a wife and Babel&#x27;s let-us-build, a wife asks to BE BUILT from her maid; the ben/banah (&#x27;son&#x27;/&#x27;build&#x27;) skeleton-chime is held as sound-observation only [census, prose; gen_30&#x27;s class]. The plea rests ON MIMENAH (&#x27;from HER&#x27;) — the etnachta seats the hope on the maid [tree fact].
+</td><td><span class="he">עֲצָרַנִי יְהוָה מִלֶּדֶת … אוּלַי אִבָּנֶה מִמֶּנָּה</span> · <i>atzarani YHWH mi-ledet … ulay ibaneh mimenah</i><br><span class="gloss">= atzarani the-LORD from-ledet ulay ibaneh mimenah</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">hear(e2) ∧ Agent(e2, avram) ∧ Theme(e2, qol_saray)</span><br><span class="gloss">= hear(e2) ∧ Agent(e2, avram) ∧ Theme(e2, voice-saray)</span><br>THE LISTENED-IDIOM RE-RUNS [flag 8, census-exact]: SHAMA + LE-QOL — the corpus&#x27;s only prior le-qol listening is 3:17, quoted from frozen gen_11: &#x27;The indictment names two counts: LISTENING (shamata le-qol ishtekha — the qol thread...)&#x27; — Adam listened to the voice of his wife and was indicted; Abram listens to the voice of Sarai and the letter passes NO comment — the idiom re-run, the verdict withheld [the letter&#x27;s silence, held; the comparison is the chain&#x27;s]. QOL token 6 (after the garden&#x27;s three, the blood&#x27;s cry 4:10, Lemekh&#x27;s demand 4:23); SHAMA token 7 — its token 8 is 16:11: Abram hears the wife, YHWH hears the maid [census]. THE VERSE ENDS ON LE-QOL SARAY — the idiom on the silluq throne [tree fact]. Onkelos: VE-QABIL avram LE-MEIMAR saray (&#x27;Abram ACCEPTED the WORD of Sarai&#x27;) — the SAME accept-the- word buffer frozen gen_11 recorded at 3:17 [repeat-buffer, dual-track].
+</td><td><span class="he">וַיִּשְׁמַע אַבְרָם לְקוֹל שָׂרָי</span> · <i>va-yishma avram le-qol saray</i><br><span class="gloss">= and-yishma avram voice saray</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+</table>
+<div class="meta">The first woman to speak in twelve chapters speaks a theology, a command, and a hope — and the man who once listened to kings and angels listens to her in the exact idiom that opened Eden&#x27;s indictment, with no verdict attached.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_16_3 · Gen.16.3 · <span class='expr'>THE_TAKE_AND_THE_GIVE</span></h3>
+<p><span class="he">וַתִּקַּח שָׂרַי אֵשֶׁת־אַבְרָם אֶת־הָגָר הַמִּצְרִית שִׁפְחָתָהּ מִקֵּץ עֶשֶׂר שָׁנִים לְשֶׁבֶת אַבְרָם בְּאֶרֶץ כְּנָעַן וַתִּתֵּן אֹתָהּ לְאַבְרָם אִישָׁהּ לוֹ לְאִשָּׁה</span> · <i>va-tiqach saray eshet-avram et-hagar ha-mitzrit shifchatah mi-qetz eser shanim le-shevet avram be-eretz kenaan va-titen otah le-avram ishah lo le-ishah</i> · [EN-AID/JPS] And Sarai Abram&#x27;s wife took Hagar the Egyptian, her handmaid, after Abram had dwelt ten years in the land of Canaan, and gave her to Abram her husband to be his wife.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ותקח שרי אשת־אברם את־הגר המצרית שפחתה מקץ עשר שנים לשבת אברם בארץ כנען</span> · <i>va-tiqach saray eshet-avram et-hagar ha-mitzrit shifchatah mi-qetz eser shanim le-shevet avram be-eretz kenaan</i> · Sarai TOOK Hagar, at the end of ten years in Canaan (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ותתן אתה לאברם אישה לו לאשה</span> · <i>va-titen otah le-avram ishah lo le-ishah</i> · and GAVE her to Abram her husband — as a WIFE: the verse ends on le-ishah</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">take(e3) ∧ Agent(e3, saray) ∧ Theme(e3, hagar)</span><br>LAQACH TOKEN 31 — the take-verb&#x27;s first FEMALE agent: the arc frozen gen_31 closed on God&#x27;s command and Abram&#x27;s compliance (tokens 29-30) hands the verb to Sarai, on a PERSON [census; this landing was predicted in the gen_31 prospective WATCH-LIST only — not frozen precedent — and is stated here as fresh census fact]. The ten-years timestamp held below. Onkelos: U-DEVARAT (&#x27;she LED her&#x27;) — the lead-for-take buffer on a person-object, the same policy frozen gen_30 recorded for 11:31&#x27;s Terach and the king&#x27;s qach [repeat-buffer, dual-track].
+</td><td><span class="he">וַתִּקַּח שָׂרַי … אֶת־הָגָר</span> · <i>va-tiqach saray … et-hagar</i><br><span class="gloss">= and-tiqach saray hagar</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">give(e4) ∧ Agent(e4, saray) ∧ Theme(e4, hagar) ∧ Goal(e4, avram)</span><br>NATAN TOKEN 21 — the give-verb&#x27;s very next token after frozen gen_31&#x27;s covenant receipt (15:18&#x27;s natati, token 20 — the frozen step quoted: &#x27;the give-verb goes perfect (natan token 20...)&#x27;): the grant&#x27;s verb passes from God&#x27;s mouth to Sarai&#x27;s hands in one token — and token 22 is her own natati two verses down [census; watch-list-predicted only, stated as census fact]. The object is a person; the dative is her HUSBAND (ishah) and the goal-phrase LE-ISHAH (&#x27;as a WIFE&#x27;) — the ish/ishah pair-words of Eden on a surrogate transaction, and the verse ENDS on the promotion [tree fact, letter fact].
+</td><td><span class="he">וַתִּתֵּן אֹתָהּ לְאַבְרָם אִישָׁהּ לוֹ לְאִשָּׁה</span> · <i>va-titen otah le-avram ishah lo le-ishah</i><br><span class="gloss">= and-titen her to-avram woman not woman</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(mi_qetz_eser_shanim_le_shevet_avram_be_eretz_kenaan, t0)</span><br><span class="gloss">= HOLDS(from-qetz-eser-shanim-to-shevet-avram-in-earth-kenaan, t0)</span><br>The clock held as fact: TEN YEARS in the land — the letter dates the initiative to the promise&#x27;s delay [letter fact; the chain&#x27;s ten-year rule is the chain&#x27;s, named-only]. QETZ (&#x27;end&#x27;) token 4 — token 1 was 6:13&#x27;s &#x27;the END of all flesh&#x27; [census, prose].
+</td><td><span class="he">מִקֵּץ עֶשֶׂר שָׁנִים לְשֶׁבֶת אַבְרָם בְּאֶרֶץ כְּנָעַן</span> · <i>mi-qetz eser shanim le-shevet avram be-eretz kenaan</i><br><span class="gloss">= from-qetz eser shanim to-shevet avram earth kenaan</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Take and give, the war chapter&#x27;s two abused verbs, come home to the household: a wife takes her maid and gives her husband a wife — the letter prices nothing, dates it to ten silent years, and ends the verse on the word that changes Hagar&#x27;s title.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_16_4 · Gen.16.4 · <span class='expr'>THE_COMPLIANCE_AND_THE_CONTEMPT</span></h3>
+<p><span class="he">וַיָּבֹא אֶל־הָגָר וַתַּהַר וַתֵּרֶא כִּי הָרָתָה וַתֵּקַל גְּבִרְתָּהּ בְּעֵינֶיהָ</span> · <i>va-yavo el-hagar va-tahar va-tere ki haratah va-teqal gevirtah be-eineha</i> · [EN-AID/JPS] And he went in unto Hagar, and she conceived; and when she saw that she had conceived, her mistress was despised in her eyes.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויבא אל־הגר ותהר</span> · <i>va-yavo el-hagar va-tahar</i> · he came in, and she CONCEIVED (va-tahar alone on the etnachta)</div><div class="arm"><b>RIGHT</b><br><span class="he">ותרא כי הרתה ותקל גברתה בעיניה</span> · <i>va-tere ki haratah va-teqal gevirtah be-eineha</i> · she saw she had conceived — and her mistress was LIGHT in her eyes (verse-final)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">come(e5) ∧ Agent(e5, avram) ∧ Goal(e5, hagar)</span><br>VA-YAVO — the demand&#x27;s own verb, one verse after the demand [flag 3].
+</td><td><span class="he">וַיָּבֹא אֶל־הָגָר</span> · <i>va-yavo el-hagar</i><br><span class="gloss">= and-yavo to-hagar</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(bo(avram, el_shifchati), t1)</span><br><span class="gloss">= RESULT: HOLDS(in-it(avram, to-shifchati), t1)</span><br>THE POP — SETTLED CYCLE #9 CLAIMED [flag 3; numbering for main-loop verification, frozen gen_31&#x27;s pattern quoted: &#x27;#8 CLAIMED [flag 2; numbering for main-loop verification, gen_27&#x27;s pattern]&#x27;]: the bo-demand is receipted by the bo-deed — frozen gen_17&#x27;s class, quoted: &#x27;the bo-demand — SETTLED CYCLE #2 (the demand&#x27;s own verb&#x27; — THE SAME VERB: bo settled cycle #2 when God commanded Noach into the ark; it settles #9 for a wife commanding her husband. And because it is the only demand yet pushed, the pop is asserted MECHANICALLY at this step&#x27;s scenario: SPECS EMPTY — the corpus&#x27;s first machine-asserted settle since the creation week&#x27;s receipts [decision recorded]. The corpus&#x27;s first WOMAN-ISSUED demand is also its first woman-issued SETTLED demand [flag 3].
+</td><td><span class="he">וַיָּבֹא אֶל־הָגָר</span> · <i>va-yavo el-hagar</i><br><span class="gloss">= and-yavo to-hagar</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">conceive(e6) ∧ Agent(e6, hagar)</span><br>VA-TAHAR — harah token 3 (tokens 1-2: Chavah 4:1, Cain&#x27;s wife 4:17 — the mothers&#x27; verb reaches a maid), and the tree seats the conception ALONE on the etnachta: one word, then rest [tree fact, census].
+</td><td><span class="he">וַתַּהַר</span> · <i>va-tahar</i><br><span class="gloss">= and-tahar</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_teqal_gevirtah_be_eineha, t0)</span><br><span class="gloss">= HOLDS(and-teqal-gevirtah-in-eineha, t0)</span><br>THE GUARD-VERB FIRES IN THE HOUSE: VA-TEQAL (&#x27;her mistress was LIGHT in her eyes&#x27;) — QALAL token 5, and token 4 is 12:3&#x27;s u-meqalelkha (frozen gen_27&#x27;s guard-verse: &#x27;u-meqalel-kha aor&#x27;, &#x27;him who makes light of you I will CURSE&#x27;): the guard-clause&#x27;s verb fires first not on a foreign king but between the patriarch&#x27;s two women — and the letter attaches no curse [census, prose; the application is the chain&#x27;s, named-only]. GEVIRAH (&#x27;mistress&#x27;) — TORAH DEBUT; ALL THREE of its Torah tokens are in this chapter: the mistress-word exists only in this crisis [census]. The verse ends on be-eineha (&#x27;in her eyes&#x27;) — watch 16:5&#x27;s thrones [tree fact].
+</td><td><span class="he">וַתֵּקַל גְּבִרְתָּהּ בְּעֵינֶיהָ</span> · <i>va-teqal gevirtah be-eineha</i><br><span class="gloss">= and-teqal gevirtah in-eineha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The demand settles in its own verb and the machine&#x27;s queue empties — then the letter spends the rest of the verse on what no one commanded: a conception seen, a mistress grown light, and a chapter&#x27;s worth of eyes beginning to narrow.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_16_5 · Gen.16.5 · <span class='expr'>THE_GRIEVANCE_AND_THE_DEMAND_ON_GOD</span></h3>
+<p><span class="he">וַתֹּאמֶר שָׂרַי אֶל־אַבְרָם חֲמָסִי עָלֶיךָ אָנֹכִי נָתַתִּי שִׁפְחָתִי בְּחֵיקֶךָ וַתֵּרֶא כִּי הָרָתָה וָאֵקַל בְּעֵינֶיהָ יִשְׁפֹּט יְהוָה בֵּינִי וּבֵינֶיךָ</span> · <i>va-tomer saray el-avram chamasi alekha anokhi natati shifchati be-cheqekha va-tere ki haratah va-eqal be-eineha yishpot YHWH beini u-veinekha</i> · [EN-AID/JPS] And Sarai said unto Abram: &#x27;My wrong be upon thee: I gave my handmaid into thy bosom; and when she saw that she had conceived, I was despised in her eyes: the LORD judge between me and thee.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ותאמר שרי אל־אברם חמסי עליך אנכי נתתי שפחתי בחיקך ותרא כי הרתה ואקל בעיניה</span> · <i>va-tomer saray el-avram chamasi alekha anokhi natati shifchati be-cheqekha va-tere ki haratah va-eqal be-eineha</i> · my wrong on you: I GAVE my maid to your bosom, and I am light in her eyes (etnachta on be-eineha)</div><div class="arm"><b>RIGHT</b><br><span class="he">ישפט יהוה ביני וביניך</span> · <i>yishpot YHWH beini u-veinekha</i> · let YHWH JUDGE between me and you — the demand ends the verse</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">say(e7) ∧ Agent(e7, saray) ∧ Goal(e7, avram)</span><br>Sarai&#x27;s second speech — the va-tomer roster&#x27;s fifth token [flag 7]. The contempt-phrase moves throne to throne: 16:4 ENDED on be-eineha; this verse RESTS on it — the letter re-seats the grievance&#x27;s ground [tree fact].
+</td><td><span class="he">וַתֹּאמֶר שָׂרַי אֶל־אַבְרָם</span> · <i>va-tomer saray el-avram</i><br><span class="gloss">= and-tomer saray to-avram</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(chamasi_alekha, t0) ∧ HOLDS(anokhi_natati_shifchati_be_cheqekha, t0)</span><br><span class="gloss">= HOLDS(chamasi-alekha, t0) ∧ HOLDS(anokhi-natati-shifchati-in-cheqekha, t0)</span><br>THE FLOOD-WORD IN A HOUSEHOLD [census]: CHAMASI (&#x27;my WRONG/violence&#x27;) — chamas token 3; tokens 1-2 are THE FLOOD-CAUSE, quoted from frozen gen_16: &#x27;va-timale ha-aretz chamas&#x27; (6:11, held as HOLDS(va_timale_ha_aretz_chamas, t1)) and &#x27;ki-malah ha-aretz chamas mi-pneihem&#x27; (6:13) — the word that filled the earth and ended it returns suffixed to one woman&#x27;s grievance; token 4 is 49:5, Shimon and Levi&#x27;s swords [census, prose]. AND SARAI SPEAKS THE RECEIPT-GRAMMAR: ANOKHI NATATI (&#x27;I HAVE GIVEN&#x27; — natan token 22): the performative perfect of frozen gen_21&#x27;s class (&#x27;NATATI — performative perfect, held as fact&#x27;) and of frozen gen_31&#x27;s covenant receipt one chapter back — its first female speaker, its first grievance: I gave, and look what the gift did [census, prose]. CHEQ (&#x27;bosom&#x27;) — TORAH DEBUT. ANOKHI token 7 — Sarai&#x27;s I joins the ladder (the shield-I of 15:1, the decree-I of 15:14; census).
+</td><td><span class="he">חֲמָסִי עָלֶיךָ אָנֹכִי נָתַתִּי שִׁפְחָתִי בְּחֵיקֶךָ</span> · <i>chamasi alekha anokhi natati shifchati be-cheqekha</i><br><span class="gloss">= chamasi alekha anokhi natati shifchati in-cheqekha</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(saray, LET(yishpot(YHWH, beini_u_veinekha)))</span><br><span class="gloss">= DECLARE(saray, LET(yishpot(the-LORD, beini-and-veinekha)))</span><br>THE DEMAND ON GOD [flag 2 — the unit&#x27;s second-boldest, staged both ways; owner triages]: YISHPOT (&#x27;let-Him- JUDGE&#x27;) — SHAFAT&#x27;s TORAH DEBUT, and the DB codes a TRUE JUSSIVE (HVqj3ms): the jussive-LET class controls, frozen gen_30&#x27;s device quoted (&#x27;YIQCHU is JUSSIVE (HVqj3mp, DB-verified), and the controlling class is frozen gen_23&#x27;s... All four pushed and letter-faithfully OPEN&#x27;) — pushed, with YHWH as the demanded agent: the corpus&#x27;s FIRST HUMAN DEMAND ON GOD, aimed by a woman, from inside a marriage. OPEN letter-faithfully: no judging between them is ever narrated [the alternative — invocation-fact — staged in the note; the letter&#x27;s mood decides and the mood is jussive]. The judge-verb&#x27;s career: token 2 is 18:25 — ha-SHOFET kol-ha-aretz (&#x27;shall the JUDGE of all the earth...&#x27; — Abraham adopts the office Sarai invoked); token 3-4 are 19:9, Sodom&#x27;s mob spitting the verb back at Lot [census, prose]. The demand ends the verse [tree fact]; the written source dots u-veinekha (one of the Torah&#x27;s puncta marks — noted, no claim). Onkelos: chamasi -&gt; DIN LI ALAKH (&#x27;I have a CASE against you&#x27;) and yishpot -&gt; yedin — the buffer harmonizes grievance and demand into one din-vocabulary [dual-track].
+</td><td><span class="he">יִשְׁפֹּט יְהוָה בֵּינִי וּבֵינֶיךָ</span> · <i>yishpot YHWH beini u-veinekha</i><br><span class="gloss">= yishpot the-LORD beini and-veinekha</span></td><td class='cite'>TIR-026</td><td>tested</td></tr>
+</table>
+<div class="meta">The grievance escalates past its addressee: a flood-word for a household wrong, a covenant-perfect for a gift gone sour — and then over the husband&#x27;s head to the only court left, in a mood the machine must file as the corpus&#x27;s first human demand on God.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_16_6 · Gen.16.6 · <span class='expr'>THE_PERMISSION_THE_AFFLICTION_THE_FLIGHT</span></h3>
+<p><span class="he">וַיֹּאמֶר אַבְרָם אֶל־שָׂרַי הִנֵּה שִׁפְחָתֵךְ בְּיָדֵךְ עֲשִׂי־לָהּ הַטּוֹב בְּעֵינָיִךְ וַתְּעַנֶּהָ שָׂרַי וַתִּבְרַח מִפָּנֶיהָ</span> · <i>va-yomer avram el-saray hineh shifchatekh be-yadekh asi-lah ha-tov be-einayikh va-teaneha saray va-tivrach mi-paneha</i> · [EN-AID/JPS] But Abram said unto Sarai: &#x27;Behold, thy maid is in thy hand; do to her that which is good in thine eyes.&#x27; And Sarai dealt harshly with her, and she fled from her face.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר אברם אל־שרי הנה שפחתך בידך עשי־לה הטוב בעיניך</span> · <i>va-yomer avram el-saray hineh shifchatekh be-yadekh asi-lah ha-tov be-einayikh</i> · your maid is in your hand — do the GOOD in your eyes (etnachta on be-einayikh)</div><div class="arm"><b>RIGHT</b><br><span class="he">ותענה שרי ותברח מפניה</span> · <i>va-teaneha saray va-tivrach mi-paneha</i> · and Sarai AFFLICTED her, and she FLED from her face (verse-final)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">say(e8) ∧ Agent(e8, avram) ∧ Goal(e8, saray)</span><br>Abram&#x27;s ONLY line in the chapter — his first recorded words to his wife since the fear-speech of 12:11-13 (frozen gen_28&#x27;s span): there he scripted her; here he hands her the script [say-roster, cross-unit prose]. HINEH SHIFCHATEKH BE-YADEKH (&#x27;behold, your maid is in your HAND&#x27;) — the hand-word opens its in-span run: your hand (16:6), her hands (16:9), his hand against all (16:12) [census, prose].
+</td><td><span class="he">וַיֹּאמֶר אַבְרָם אֶל־שָׂרַי</span> · <i>va-yomer avram el-saray</i><br><span class="gloss">= and-yomer avram to-saray</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(avram, LET(asi(saray, la_hagar_ha_tov_be_einayikh)))</span><br><span class="gloss">= DECLARE(avram, LET(asi(saray, to-hagar-the-good-in-einayikh)))</span><br>ASI (&#x27;DO!&#x27;) — true imperative HVqv2fs [TIR-027]: the permission pushed as demand — do to her THE GOOD in your eyes. HA-TOV is the span&#x27;s only tov-token, idiomatic inside the permission, NOT an instrument (frozen gen_31&#x27;s flag-12b class: attributive/idiomatic tov fires no TEST) [census]. Pushed; watch what the letter does next [flag 4].
+</td><td><span class="he">עֲשִׂי־לָהּ הַטּוֹב בְּעֵינָיִךְ</span> · <i>asi-lah ha-tov be-einayikh</i><br><span class="gloss">= asi-lah good in-einayikh</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">afflict(e9) ∧ Agent(e9, saray) ∧ Theme(e9, hagar)</span><br>THE VERB-SWAP [flag 4 — the demand stands OPEN]: the permission said ASAH (&#x27;do the good&#x27;); the deed is ANAH (&#x27;and she AFFLICTED her&#x27;) — NO RESULT fires: RESULT pops only the demand&#x27;s own string, and the letter&#x27;s swap of good-verb for afflict-verb IS the finding — the machine does not equate what the letter distinguishes [decision recorded]. ANAH TOKEN 2 — FROZEN gen_31&#x27;s staged landing, quoted verbatim: &#x27;ANAH (&quot;afflict&quot;) token 1 — tokens 2-3 are 16:6 (SARAI afflicts Hagar) and 16:9 (the angel&#x27;s submit-command): the afflict-verb crosses the seam into the next chapter&#x27;s house&#x27; — LANDED: the decree&#x27;s verb (15:13, on Abram&#x27;s seed under Egypt) fires first in Abram&#x27;s tent, on an Egyptian [cross-unit prose + [OPEN], nothing pops; Ramban&#x27;s verdict on Sarai is the chain&#x27;s, named-only].
+</td><td><span class="he">וַתְּעַנֶּהָ שָׂרַי</span> · <i>va-teaneha saray</i><br><span class="gloss">= and-teaneha saray</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">flee(e10) ∧ Agent(e10, hagar)</span><br>BARACH (&#x27;flee&#x27;) — TORAH DEBUT, born on Hagar (tokens 3-5 are Yaakov&#x27;s flights: the flee-verb&#x27;s early career is the household&#x27;s underdogs) [census, prose]. MI-PANEHA (&#x27;from her FACE&#x27;) — verse-final: the face-word opens its own run (her face 16:6, my mistress&#x27;s face 16:8, the face of all his brothers 16:12) [tree fact; census, prose].
+</td><td><span class="he">וַתִּבְרַח מִפָּנֶיהָ</span> · <i>va-tivrach mi-paneha</i><br><span class="gloss">= and-tivrach from-paneha</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+</table>
+<div class="meta">A permission built of good and eyes is executed as affliction in one verb&#x27;s swap — the machine keeps the demand open forever, the letter keeps its silence, and the maid keeps the road: the chapter&#x27;s first flight is from a face.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_16_7 · Gen.16.7 · <span class='expr'>THE_ANGEL_FINDS_HER</span></h3>
+<p><span class="he">וַיִּמְצָאָהּ מַלְאַךְ יְהוָה עַל־עֵין הַמַּיִם בַּמִּדְבָּר עַל־הָעַיִן בְּדֶרֶךְ שׁוּר</span> · <i>va-yimtzaah malakh YHWH al-ein ha-mayim ba-midbar al-ha-ayin be-derekh shur</i> · [EN-AID/JPS] And the angel of the LORD found her by a fountain of water in the wilderness, by the fountain in the way to Shur.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וימצאה מלאך יהוה על־עין המים במדבר</span> · <i>va-yimtzaah malakh YHWH al-ein ha-mayim ba-midbar</i> · the angel of YHWH found her at the water-spring in the wilderness (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">על־העין בדרך שור</span> · <i>al-ha-ayin be-derekh shur</i> · at the spring on the road to Shur</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">find(e11) ∧ Agent(e11, malakh_YHWH) ∧ Theme(e11, hagar)</span><br><span class="gloss">= find(e11) ∧ Agent(e11, malakh-the-LORD) ∧ Theme(e11, hagar)</span><br>THE ANGEL&#x27;S TORAH DEBUT [flag 6]: MALAKH YHWH (&#x27;the messenger/angel of YHWH&#x27;, 4397 token 1; tokens 1-4 all in-span, tokens 5-6 are 19:1/19:15 — Sodom&#x27;s pair): the messenger-class is born FINDING a runaway Egyptian slave. VA-YIMTZAAH — MATZA token 7: the find-verb&#x27;s career (the failed helper-search of 2:20 — frozen gen_09&#x27;s line quoted: &#x27;lo matza (&quot;did not find&quot; — matza&#x27;s first token, debuting in a FAILED search)&#x27;; Cain&#x27;s feared finders 4:14-15; Noach&#x27;s favor 6:8; the dove&#x27;s no-rest 8:9; Babel&#x27;s plain 11:2) arrives at its first divine-side finding OF A PERSON — the search that failed for Adam succeeds on Hagar [census, prose]. THE LEMMA SPLIT [flag 10]: the contempt of 16:4-6 ran through be-eineha (5869 a, &#x27;eye&#x27;); the rescue sits al-EIN ha-mayim (5869 b, &#x27;spring&#x27;) — same skeleton, split lemma: contempt and rescue share one written word the lexicon divides [lemma-split class, held as observation]. DEREKH token 3 (be-derekh Shur) — tokens 1-2: the guarded WAY to the tree of life (3:24), all flesh corrupting its WAY (6:12): the way-word&#x27;s third token is a slave&#x27;s road to Egypt [census, prose].
+</td><td><span class="he">וַיִּמְצָאָהּ מַלְאַךְ יְהוָה</span> · <i>va-yimtzaah malakh YHWH</i><br><span class="gloss">= and-yimtzaah malakh the-LORD</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">shur are READ without prior install (known geography)</span><br>flag, not fix (the Egypt road; shur tokens 2-4 are 20:1, 25:18, Exod 15:22 — Abraham&#x27;s sojourn, Yishmael&#x27;s range, the sea&#x27;s far shore; Onkelos maps it Chagra — identification class, dual-track)</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The corpus&#x27;s first angel does not descend in fire or stand in a doorway: it finds — the verb of failed searches and dove&#x27;s feet — and what it finds is the one person in the story running away, at a spring the grammar splits from the eyes that caused the flight.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_16_8 · Gen.16.8 · <span class='expr'>THE_WHERE_QUESTIONS_AND_THE_RUNAWAY_ANSWER</span></h3>
+<p><span class="he">וַיֹּאמַר הָגָר שִׁפְחַת שָׂרַי אֵי־מִזֶּה בָאת וְאָנָה תֵלֵכִי וַתֹּאמֶר מִפְּנֵי שָׂרַי גְּבִרְתִּי אָנֹכִי בֹּרַחַת</span> · <i>va-yomar hagar shifchat saray ei-mizeh vat ve-anah telekhi va-tomer mi-pnei saray gevirti anokhi borachat</i> · [EN-AID/JPS] And he said: &#x27;Hagar, Sarai&#x27;s handmaid, whence camest thou? and whither goest thou?&#x27; And she said: &#x27;I flee from the face of my mistress Sarai.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר הגר שפחת שרי אי־מזה באת ואנה תלכי</span> · <i>va-yomar hagar shifchat saray ei-mizeh vat ve-anah telekhi</i> · Hagar, Sarai&#x27;s maid — whence have you come, and WHERE are you going (etnachta on telekhi)</div><div class="arm"><b>RIGHT</b><br><span class="he">ותאמר מפני שרי גברתי אנכי ברחת</span> · <i>va-tomer mi-pnei saray gevirti anokhi borachat</i> · from the face of Sarai my mistress I am FLEEING — the participle ends the verse</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">say(e12) ∧ Agent(e12, malakh_YHWH) ∧ Goal(e12, hagar)</span><br><span class="gloss">= say(e12) ∧ Agent(e12, malakh-the-LORD) ∧ Goal(e12, hagar)</span><br>THE WHERE-LADDER [flag 10, census]: EI token 3 — the divine-side where-question&#x27;s three firings: ayeka (&#x27;where are YOU&#x27;, 3:9, Adam hiding), ei hevel (&#x27;where is your brother&#x27;, 4:9, Cain), ei-mizeh (&#x27;from where&#x27;, 16:8, a runaway slave); and ANAH (&#x27;whither&#x27;) debuts in the same breath — the corpus&#x27;s first whither-question is asked of a woman with no destination [census, prose]. The angel addresses her by name AND BY BOND: hagar shifchat saray — the promotion of 16:3 (le-ishah) is absent from the angel&#x27;s address [letter fact, held].
+</td><td><span class="he">וַיֹּאמַר הָגָר שִׁפְחַת שָׂרַי אֵי־מִזֶּה בָאת וְאָנָה תֵלֵכִי</span> · <i>va-yomar hagar shifchat saray ei-mizeh vat ve-anah telekhi</i><br><span class="gloss">= and-yomar hagar shifchat saray ei-mizeh vat and-anah telekhi</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ei_mizeh_vat_ve_anah_telekhi, t0)</span><br><span class="gloss">= HOLDS(ei-mizeh-vat-and-anah-telekhi, t0)</span><br>The question-pair held as spoken fact (interrogatives push nothing — frozen gen_31&#x27;s flag-5 class): whence and whither, rest seated on the whither [tree fact].
+</td><td><span class="he">אֵי־מִזֶּה בָאת וְאָנָה תֵלֵכִי</span> · <i>ei-mizeh vat ve-anah telekhi</i><br><span class="gloss">= ei-mizeh vat and-anah telekhi</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">say(e13) ∧ Agent(e13, hagar) ∧ Goal(e13, malakh_YHWH)</span><br><span class="gloss">= say(e13) ∧ Agent(e13, hagar) ∧ Goal(e13, malakh-the-LORD)</span><br>HAGAR SPEAKS — the va-tomer roster&#x27;s sixth token [flag 7]: the corpus&#x27;s female voice, returned two verses in Sarai, now belongs to an Egyptian slave — the say-roster&#x27;s first non-family, first foreign, first enslaved woman [census, letter fact].
+</td><td><span class="he">וַתֹּאמֶר</span> · <i>va-tomer</i><br><span class="gloss">= and-tomer</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(mi_pnei_saray_gevirti_anokhi_borachat, t0)</span><br><span class="gloss">= HOLDS(from-face-of-saray-gevirti-anokhi-borachat, t0)</span><br>Her whole testimony is seven words: a face, a title, an I, a participle — ANOKHI BORACHAT (&#x27;I am FLEEING&#x27;), the flight still in progress in the verb&#x27;s aspect, seated verse-final [morph, tree fact]. She answers the whence and leaves the whither silent — the letter&#x27;s own gap, held [letter fact]. ANOKHI token 8: the I-word&#x27;s ladder (the shield-I, the decree-I, Sarai&#x27;s giving-I) reaches a slave&#x27;s fleeing-I [census, prose].
+</td><td><span class="he">מִפְּנֵי שָׂרַי גְּבִרְתִּי אָנֹכִי בֹּרַחַת</span> · <i>mi-pnei saray gevirti anokhi borachat</i><br><span class="gloss">= face-of saray gevirti anokhi borachat</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The angel asks the garden&#x27;s question and the murder&#x27;s question in one breath, and gets the corpus&#x27;s barest confession: from a face, fleeing — with the second question, the whither, left hanging exactly where the next verse will put a command.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_16_9 · Gen.16.9 · <span class='expr'>THE_RETURN_AND_SUBMIT_COMMAND</span></h3>
+<p><span class="he">וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה שׁוּבִי אֶל־גְּבִרְתֵּךְ וְהִתְעַנִּי תַּחַת יָדֶיהָ</span> · <i>va-yomer lah malakh YHWH shuvi el-gevirtekh ve-hitani tachat yadeha</i> · [EN-AID/JPS] And the angel of the LORD said unto her: &#x27;Return to thy mistress, and submit thyself under her hands.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר לה מלאך יהוה שובי אל־גברתך</span> · <i>va-yomer lah malakh YHWH shuvi el-gevirtekh</i> · return to your MISTRESS (etnachta on gevirtekh)</div><div class="arm"><b>RIGHT</b><br><span class="he">והתעני תחת ידיה</span> · <i>ve-hitani tachat yadeha</i> · and submit under her hands</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">say(e14) ∧ Agent(e14, malakh_YHWH) ∧ Goal(e14, hagar)</span><br><span class="gloss">= say(e14) ∧ Agent(e14, malakh-the-LORD) ∧ Goal(e14, hagar)</span><br>The first of THREE consecutive angel-speeches (16:9, 16:10, 16:11 — va-yomer x3 with no reply between: the triple re-launch, after gen_31&#x27;s mirrored doubles) [say-roster census; the chain&#x27;s one-angel-per-speech count is the chain&#x27;s, named-only].
+</td><td><span class="he">וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה</span> · <i>va-yomer lah malakh YHWH</i><br><span class="gloss">= and-yomer lah malakh the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(malakh_YHWH, LET(shuvi_ve_hitani(hagar, el_gevirtekh_tachat_yadeha)))</span><br><span class="gloss">= DECLARE(malakh-the-LORD, LET(shuvi-and-hitani(hagar, to-gevirtekh-tachat-yadeha)))</span><br>THE COMPOUND RETURN-AND-SUBMIT [flag 5]: SHUVI (imperative HVqv2fs) + VE-HITANI (hitpael imperative HVtv2fs) ride ONE demand on the compound device — frozen gen_31&#x27;s line quoted: &#x27;DECLARE(YHWH, LET(habet_u_sefor(avram, ha_shamaymah_ve_ha_ kokhavim)))&#x27; (itself riding gen_29&#x27;s sa_u_ree) [TIR-027]. Pushed; OPEN letter-faithfully: no return is narrated in-span — 16:15 has her bearing at Abram&#x27;s house, an implication the letter never verbs [held]. SHUV TOKEN 13 — FROZEN gen_31&#x27;s staged landing, quoted: &#x27;token 13 is 16:9&#x27;s SHUVI — the angel to Hagar, across the seam&#x27; — LANDED: the return-verb&#x27;s first imperative is aimed at a runaway. VE-HITANI — ANAH TOKEN 3 (the gen_31 landing&#x27;s second half, same frozen line): the afflict-root&#x27;s third form in three chapters — decreed (15:13, pual-class future), done (16:6, piel), now COMMANDED ON THE VICTIM (hitpael, &#x27;submit to affliction&#x27;) — the angel&#x27;s first recorded command in the corpus sends the afflicted back under the afflicting hands [held raw; the theology is the chain&#x27;s]. Onkelos: ve-ISHTABEDI (&#x27;be ENSLAVED/subjugate yourself&#x27;) — the buffer hardens submission to servitude-language [dual-track].
+</td><td><span class="he">שׁוּבִי אֶל־גְּבִרְתֵּךְ וְהִתְעַנִּי תַּחַת יָדֶיהָ</span> · <i>shuvi el-gevirtekh ve-hitani tachat yadeha</i><br><span class="gloss">= shuvi to-gevirtekh and-hitani tachat yadeha</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
+</table>
+<div class="meta">The corpus&#x27;s first angelic command is the hardest sentence in the chapter: go back, and bend — the return-verb&#x27;s first imperative and the afflict-root&#x27;s third form, spoken to the only person here who did nothing.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_16_10 · Gen.16.10 · <span class='expr'>THE_UNCOUNTABLE_SEED</span></h3>
+<p><span class="he">וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה הַרְבָּה אַרְבֶּה אֶת־זַרְעֵךְ וְלֹא יִסָּפֵר מֵרֹב</span> · <i>va-yomer lah malakh YHWH harbah arbeh et-zarekh ve-lo yisafer me-rov</i> · [EN-AID/JPS] And the angel of the LORD said unto her: &#x27;I will greatly multiply thy seed, that it shall not be numbered for multitude.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר לה מלאך יהוה הרבה ארבה את־זרעך</span> · <i>va-yomer lah malakh YHWH harbah arbeh et-zarekh</i> · multiplying I will multiply your SEED (etnachta on zarekh)</div><div class="arm"><b>RIGHT</b><br><span class="he">ולא יספר מרב</span> · <i>ve-lo yisafer me-rov</i> · and it shall not be counted for multitude — me-rov verse-final</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">say(e15) ∧ Agent(e15, malakh_YHWH) ∧ Goal(e15, hagar)</span><br><span class="gloss">= say(e15) ∧ Agent(e15, malakh-the-LORD) ∧ Goal(e15, hagar)</span><br>The second re-launch — and THE MESSENGER SPEAKS THE DIVINE FIRST PERSON: ARBEH, &#x27;I will multiply&#x27; [flag 6 — the letter&#x27;s own slide from messenger to I, held as letter fact; no identity resolution; the chain&#x27;s files named-only].
+</td><td><span class="he">וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה</span> · <i>va-yomer lah malakh YHWH</i><br><span class="gloss">= and-yomer lah malakh the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(harbah_arbeh_et_zarekh, t0) ∧ HOLDS(ve_lo_yisafer_me_rov, t0)</span><br><span class="gloss">= HOLDS(greatly-I-will-multiply-zarekh, t0) ∧ HOLDS(and-not-yisafer-from-rov, t0)</span><br>THE DOUBLED MULTIPLY-FORMULA&#x27;S SECOND FIRING [census-exact]: HARBAH ARBEH (infinitive absolute + 1cs imperfect) — its only prior firing is 3:16 (rabah tokens 4-5: harbah arbeh itzvonekh ve-heronekh, CHAVAH&#x27;s multiplied PAIN), its next is 22:17 (tokens 18-19, Abraham&#x27;s oath-blessing): the doubling fires on two women before the patriarch — pain, seed, oath [census, prose]. Promise-FACT to a slave: the seed-word (zarekh — the covenant&#x27;s word of frozen gen_31, now with a 2fs suffix) receives the promise-grammar OUTSIDE the covenant line [letter fact, held]. LO YISAFER — SAFAR TOKEN 3, and FROZEN gen_31&#x27;s staged landing lands, quoted verbatim: &#x27;token 3 is 16:10&#x27;s lo yisafer, &quot;shall NOT be counted&quot; — count!, to-count, uncountable&#x27; — the count-verb born in the star-command completes its first triad in Hagar&#x27;s promise: the uncountability promised to Abram&#x27;s seed by stars is granted to the maid&#x27;s seed without them [landed; census, prose].
+</td><td><span class="he">הַרְבָּה אַרְבֶּה אֶת־זַרְעֵךְ וְלֹא יִסָּפֵר מֵרֹב</span> · <i>harbah arbeh et-zarekh ve-lo yisafer me-rov</i><br><span class="gloss">= greatly I-will-multiply zarekh and-not yisafer from-rov</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The promise-grammar leaves the covenant line for a verse: the same doubled verb that multiplied Eve&#x27;s pain multiplies a slave&#x27;s seed, and the star-chapter&#x27;s count-verb returns to say: this line, too, past counting.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_16_11 · Gen.16.11 · <span class='expr'>THE_ANNUNCIATION</span></h3>
+<p><span class="he">וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה הִנָּךְ הָרָה וְיֹלַדְתְּ בֵּן וְקָרָאת שְׁמוֹ יִשְׁמָעֵאל כִּי־שָׁמַע יְהוָה אֶל־עָנְיֵךְ</span> · <i>va-yomer lah malakh YHWH hinakh harah ve-yoladt ben ve-qarat shemo yishmael ki-shama YHWH el-onyekh</i> · [EN-AID/JPS] And the angel of the LORD said unto her: &#x27;Behold, thou art with child, and shalt bear a son; and thou shalt call his name Ishmael, because the LORD hath heard thy affliction.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר לה מלאך יהוה הנך הרה וילדת בן</span> · <i>va-yomer lah malakh YHWH hinakh harah ve-yoladt ben</i> · behold, you are pregnant and bearing a SON (etnachta on ben)</div><div class="arm"><b>RIGHT</b><br><span class="he">וקראת שמו ישמעאל כי־שמע יהוה אל־עניך</span> · <i>ve-qarat shemo yishmael ki-shama YHWH el-onyekh</i> · you shall call him Yishmael, for YHWH has heard your AFFLICTION (verse-final onyekh)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">say(e16) ∧ Agent(e16, malakh_YHWH) ∧ Goal(e16, hagar)</span><br><span class="gloss">= say(e16) ∧ Agent(e16, malakh-the-LORD) ∧ Goal(e16, hagar)</span><br>The third re-launch — THE CORPUS&#x27;S FIRST ANNUNCIATION: the pregnant-you formula (hinakh harah — the harah ADJECTIVE&#x27;s Torah debut; its other tokens: Tamar at 38:24-25, the struck mother of Exod 21:22) [census; the annunciation-class&#x27;s later members named-only].
+</td><td><span class="he">וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה</span> · <i>va-yomer lah malakh YHWH</i><br><span class="gloss">= and-yomer lah malakh the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hinakh_harah_ve_yoladt_ben, t0) ∧ HOLDS(ve_qarat_shemo_yishmael, t0) ∧ HOLDS(ki_shama_YHWH_el_onyekh, t0)</span><br><span class="gloss">= HOLDS(hinakh-harah-and-yoladt-ben, t0) ∧ HOLDS(and-qarat-shemo-yishmael, t0) ∧ HOLDS(when-shama-the-LORD-to-onyekh, t0)</span><br>THE PRE-BIRTH NAME-DECREE AS FACT [flag 11]: VE-QARAT (&#x27;and you shall CALL his name&#x27;) is WEQATAL (HVqq2fs — TIR-029&#x27;s future-chain; frozen gen_31&#x27;s va-avadum class): a decree-FACT, not a demand and not a NAME op — the corpus&#x27;s first pre-birth naming, decreed to the MOTHER (its executor at 16:15 will be the father — the arc is prose; the class&#x27;s next token is 17:19, God naming Yitzchak, named-only). THE NAME IS THE VERB&#x27;S MONUMENT: YISHMAEL (&#x27;God hears&#x27;) — KI SHAMA YHWH EL-ONYEKH (&#x27;for YHWH has HEARD your affliction&#x27;): shama token 8, closing the in-span pair with 16:2&#x27;s token 7 — Abram heard the wife&#x27;s voice, YHWH heard the maid&#x27;s affliction [flag 8, census]. ONI (&#x27;affliction&#x27;) token 1 — the afflict-root nominalized; token 2 is 29:32, LEAH&#x27;s be-onyi (the same heard-my-affliction naming-grammar at Reuben); the Exodus shape (&#x27;I have seen the affliction of My people&#x27;, 3:7) is the formula&#x27;s horizon [census, prose, named-only]. The verse ENDS on onyekh — the affliction verse-final, as 16:6 left it and 16:9 re-commanded it [tree fact]. Onkelos: arei QABIL YHWH TZELOTIKH (&#x27;YHWH has RECEIVED your PRAYER&#x27;) — the affliction replaced by prayer: the headline&#x27;s first half [dual-track, flagged].
+</td><td><span class="he">הִנָּךְ הָרָה וְיֹלַדְתְּ בֵּן וְקָרָאת שְׁמוֹ יִשְׁמָעֵאל כִּי־שָׁמַע יְהוָה אֶל־עָנְיֵךְ</span> · <i>hinakh harah ve-yoladt ben ve-qarat shemo yishmael ki-shama YHWH el-onyekh</i><br><span class="gloss">= hinakh harah and-yoladt ben and-qarat shemo yishmael when-shama the-LORD to-onyekh</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The annunciation names the child after what no one else in the chapter did: listening. She was given, taken, afflicted, questioned, and sent back — and the name says only this: God hears, and what He heard the verse ends on.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_16_12 · Gen.16.12 · <span class='expr'>THE_WILD_ASS_ORACLE</span></h3>
+<p><span class="he">וְהוּא יִהְיֶה פֶּרֶא אָדָם יָדוֹ בַכֹּל וְיַד כֹּל בּוֹ וְעַל־פְּנֵי כָל־אֶחָיו יִשְׁכֹּן</span> · <i>ve-hu yihyeh pere adam yado va-khol ve-yad kol bo ve-al-pnei khol-echav yishkon</i> · [EN-AID/JPS] And he shall be a wild ass of a man: his hand shall be against every man, and every man&#x27;s hand against him; and he shall dwell in the face of all his brethren.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">והוא יהיה פרא אדם ידו בכל ויד כל בו</span> · <i>ve-hu yihyeh pere adam yado va-khol ve-yad kol bo</i> · a wild-ass of a man: his hand in all, all hands in HIM (etnachta on bo)</div><div class="arm"><b>RIGHT</b><br><span class="he">ועל־פני כל־אחיו ישכן</span> · <i>ve-al-pnei khol-echav yishkon</i> · and before the face of all his brothers he shall DWELL (one word verse-final)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(pere_adam_yado_va_khol_ve_yad_kol_bo, t0) ∧ HOLDS(al_pnei_khol_echav_yishkon, t0)</span><br><span class="gloss">= HOLDS(pere-human-his-hand-and-all-and-yad-all-in-it, t0) ∧ HOLDS(upon-face-of-all-echav-yishkon, t0)</span><br>THE ORACLE HELD RAW: PERE (&#x27;wild ass&#x27;) — TORAH HAPAX, in construct with adam (&#x27;a wild-ass OF a man&#x27;) — the only human in the corpus the letter describes by an animal [census, letter fact]. The hand-pair (yado va-khol / yad kol bo) completes the chapter&#x27;s hand-run: your hand (16:6), her hands (16:9), his hand and all hands (16:12) — possession, submission, war [in-span field, prose]. AL-PNEI KHOL-ECHAV YISHKON (&#x27;before the face of all his brothers he shall DWELL&#x27;) — the face-run&#x27;s third station (her face, my mistress&#x27;s face, all his brothers&#x27; faces); the death-notice at 25:18 re-sounds this clause [named-only, career watch]. YISHKON — one word on the silluq [tree fact]; shakhan token 4 (token 1 = 3:24: the cherubim STATIONED at Eden&#x27;s way — the dwell-verb&#x27;s career began at a guarded road; this boy&#x27;s road was 16:7&#x27;s) [census, prose]. Onkelos re-builds the oracle: MAROD BE-ENASHA (&#x27;a REBEL among men&#x27;), his hand-clauses turned NEED (&#x27;he will need all; all will need him&#x27;) — the wild-ass domesticated to commerce [dual-track, flagged].
+</td><td><span class="he">פֶּרֶא אָדָם יָדוֹ בַכֹּל וְיַד כֹּל בּוֹ וְעַל־פְּנֵי כָל־אֶחָיו יִשְׁכֹּן</span> · <i>pere adam yado va-khol ve-yad kol bo ve-al-pnei khol-echav yishkon</i><br><span class="gloss">= pere human his-hand all and-yad all in-it and-upon-face-of all-echav yishkon</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The promise comes with a portrait no mother asked for: an animal-word used once in the whole Torah, a fists-out geometry, and one soft verb at the end — he shall dwell — facing all his brothers, which is either against them or among them, and the letter does not say.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_16_13 · Gen.16.13 · <span class='expr'>SHE_NAMES_YHWH</span></h3>
+<p><span class="he">וַתִּקְרָא שֵׁם־יְהוָה הַדֹּבֵר אֵלֶיהָ אַתָּה אֵל רֳאִי כִּי אָמְרָה הֲגַם הֲלֹם רָאִיתִי אַחֲרֵי רֹאִי</span> · <i>va-tiqra shem-YHWH ha-dover eleha atah el roi ki amrah hagam halom raiti acharei roi</i> · [EN-AID/JPS] And she called the name of the LORD that spoke unto her, Thou art a God of seeing; for she said: &#x27;Have I even here seen Him that seeth Me?&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ותקרא שם־יהוה הדבר אליה אתה אל ראי</span> · <i>va-tiqra shem-YHWH ha-dover eleha atah el roi</i> · she called the name of YHWH who spoke to her: You are EL ROI (the name on the etnachta)</div><div class="arm"><b>RIGHT</b><br><span class="he">כי אמרה הגם הלם ראיתי אחרי ראי</span> · <i>ki amrah hagam halom raiti acharei roi</i> · for she said: have I even HERE seen, after the One seeing me — roi verse-final</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>NAME</td><td><span class="expr">name(YHWH) := El_Roi</span><br><span class="gloss">= name(the-LORD) := El-Roi</span><br>THE CORPUS&#x27;S ONLY HUMAN-NAMES-YHWH EVENT [flag 1 — the unit&#x27;s boldest; staged both ways, owner triages]: the letter uses the FULL narrative naming formula (VA-TIQRA SHEM- with an explicit agent), and frozen gen_25&#x27;s rule cuts both ways, quoted: &#x27;NO NAME op — KARA is a bare perfect with an indefinite subject (&quot;one called&quot;) — no va-yiqra (&quot;and-he-called&quot;) narrative formula... the REGISTRY takes nothing&#x27; — HERE the formula IS present, so the NAME class fires (frozen gen_12&#x27;s &#x27;name(kayin) := Kayin&#x27; and gen_13&#x27;s &#x27;name(shet) := Shet&#x27; quoted): the REGISTRY takes YHWH-&gt;El_Roi, written by an Egyptian slave-woman — the named_before_any_presence flag fires as EXPECTED DATA (YHWH is never an installed entity; flags never block). The letter equates the speaker with YHWH itself (shem-YHWH HA-DOVER ELEHA, &#x27;the name of YHWH — the One SPEAKING to her&#x27;) after four angel-frames: the slide is the letter&#x27;s, held [flag 6]. EL TOKEN 5 — FROZEN gen_30&#x27;s El-ladder line LANDS, quoted: &#x27;el (the divine name 410) tokens 1-4 ALL in-span as El Elyon (&quot;God Most High&quot;), token 5 = 16:13 (the El-ladder confirmed)&#x27;: after a priest-king&#x27;s El Elyon, the ladder&#x27;s second rung is a slave&#x27;s EL ROI (&#x27;God of my SEEING&#x27;) — ROI a TORAH HAPAX [landed; census]. Onkelos performs the headline&#x27;s second half: VE-TZALLIAT BI-SHMA da-YHWH (&#x27;she PRAYED in the name of YHWH&#x27;) — the buffer DISSOLVES the naming into prayer and universalizes the epithet (elaha de-chazei KHOLA, &#x27;the God who sees ALL&#x27;): the tzali-family erases exactly the act the machine registers [dual-track tension, flagged].
+</td><td><span class="he">וַתִּקְרָא שֵׁם־יְהוָה הַדֹּבֵר אֵלֶיהָ אַתָּה אֵל רֳאִי</span> · <i>va-tiqra shem-YHWH ha-dover eleha atah el roi</i><br><span class="gloss">= and-tiqra shem-the-LORD the-dover eleha you to roi</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hagam_halom_raiti_acharei_roi, t0)</span><br><span class="gloss">= HOLDS(hagam-halom-raiti-acharei-roi, t0)</span><br>The naming&#x27;s ground, held in the letter&#x27;s own hard words (the syntax is famously difficult — held as spoken fact, unresolved): HAGAM HALOM RAITI ACHAREI ROI (&#x27;have I even HERE seen, after the One seeing me&#x27;) — HALOM (&#x27;here&#x27;) debut; RAAH doubled (raiti / roi — she SEES the One who SEES her) after the chapter&#x27;s seeing ran only through contempt-eyes (16:4-5) [census, prose]. THE ROI-SKELETON ON THREE CONSECUTIVE THRONES: 16:13&#x27;s etnachta (EL ROI), 16:13&#x27;s silluq (acharei ROI), 16:14&#x27;s etnachta (beer-lachai-ROI) [tree fact]. KI AMRAH (&#x27;for she SAID&#x27;) — the naming-reason form of the mothers&#x27; etymologies (4:25&#x27;s class), here grounding a name for God [letter fact].
+</td><td><span class="he">כִּי אָמְרָה הֲגַם הֲלֹם רָאִיתִי אַחֲרֵי רֹאִי</span> · <i>ki amrah hagam halom raiti acharei roi</i><br><span class="gloss">= when amrah hagam halom raiti acharei roi</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The woman no one in the story addresses by her own name gives God one: the naming verb the corpus reserves for mothers and builders runs uphill for the only time — and the reason is grammar&#x27;s plainest astonishment: I was seen.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_16_14 · Gen.16.14 · <span class='expr'>THE_WELL_OF_THE_LIVING_ONE_WHO_SEES</span></h3>
+<p><span class="he">עַל־כֵּן קָרָא לַבְּאֵר בְּאֵר לַחַי רֹאִי הִנֵּה בֵין־קָדֵשׁ וּבֵין בָּרֶד</span> · <i>al-ken qara la-beer beer lachai roi hineh vein-qadesh u-vein bared</i> · [EN-AID/JPS] Wherefore the well was called &#x27;Beer-lahai-roi; behold, it is between Kadesh and Bered.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">על־כן קרא לבאר באר לחי ראי</span> · <i>al-ken qara la-beer beer lachai roi</i> · therefore one called the well: Well of the Living One who sees me (etnachta on roi)</div><div class="arm"><b>RIGHT</b><br><span class="he">הנה בין־קדש ובין ברד</span> · <i>hineh vein-qadesh u-vein bared</i> · behold, between Kadesh and Bered</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PATTERN</td><td><span class="expr">PATTERN(al_ken_qara_la_beer_beer_lachai_roi)</span><br><span class="gloss">= PATTERN(upon-ken-qara-to-beer-beer-lachai-roi)</span><br>THE AL-KEN (&#x27;therefore&#x27;) FORMULA&#x27;S FOURTH TOKEN [census-exact: the adjacency census of Gen 1-17 is 2:24, 10:9, 11:9, 16:14] and its SECOND name-etiology — frozen gen_25&#x27;s device controls, quoted [flag 12]: &#x27;NO NAME op — KARA is a bare perfect with an indefinite subject (&quot;one called&quot;) — no va-yiqra narrative formula: gen_24&#x27;s report-naming rule holds; the REGISTRY takes nothing&#x27; — a standing PATTERN fact, the narrator&#x27;s etiology: the well carries Hagar&#x27;s verb (roi — the third throne) in a name the text says &#x27;one called&#x27; [decision recorded]. The well-word&#x27;s career: the compound&#x27;s tokens 2-3 are 24:62 and 25:11 — YITZCHAK comes from and settles at Hagar&#x27;s well [named-only, career prose]. GLOSS_FIX: the compound rows (883+) are DB-glossed &#x27;?&#x27; — &#x27;well of the Living One who sees me&#x27;. Onkelos removes the Name from the well too: &#x27;the well at which the ENDURING ANGEL APPEARED&#x27; [dual-track, the headline&#x27;s coda].
+</td><td><span class="he">עַל־כֵּן קָרָא לַבְּאֵר בְּאֵר לַחַי רֹאִי</span> · <i>al-ken qara la-beer beer lachai roi</i><br><span class="gloss">= upon-ken qara to-beer beer lachai roi</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hineh_vein_qadesh_u_vein_bared, t0)</span><br><span class="gloss">= HOLDS(hineh-vein-qadesh-and-vein-bared, t0)</span><br>The location held as fact — the narrator points at a map (hineh, &#x27;behold&#x27;: the deixis of a living landmark) [letter fact].
+</td><td><span class="he">הִנֵּה בֵין־קָדֵשׁ וּבֵין בָּרֶד</span> · <i>hineh vein-qadesh u-vein bared</i><br><span class="gloss">= hineh vein-qadesh and-vein bared</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">qadesh, bered are READ without prior install (known geography)</span><br>flag, not fix (Qadesh token 2 after 14:7&#x27;s En-mishpat gloss, frozen gen_30&#x27;s span; Bered a Torah hapax; Onkelos: Reqam — the same identification frozen gen_30 recorded at 14:7 — and Chagra [repeat-buffer, dual-track])</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The narrator countersigns the slave&#x27;s theology with a landmark: her participle becomes a place-name by the therefore-formula, and the letter adds the one thing names need that speeches lack — coordinates.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_16_15 · Gen.16.15 · <span class='expr'>THE_BIRTH_AND_THE_FATHERS_NAMING</span></h3>
+<p><span class="he">וַתֵּלֶד הָגָר לְאַבְרָם בֵּן וַיִּקְרָא אַבְרָם שֶׁם־בְּנוֹ אֲשֶׁר־יָלְדָה הָגָר יִשְׁמָעֵאל</span> · <i>va-teled hagar le-avram ben va-yiqra avram shem-beno asher-yaldah hagar yishmael</i> · [EN-AID/JPS] And Hagar bore Abram a son; and Abram called the name of his son, whom Hagar bore, Ishmael.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ותלד הגר לאברם בן</span> · <i>va-teled hagar le-avram ben</i> · Hagar bore Abram a SON (the etnachta throne is ben)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויקרא אברם שם־בנו אשר־ילדה הגר ישמעאל</span> · <i>va-yiqra avram shem-beno asher-yaldah hagar yishmael</i> · and Abram named his son, whom Hagar bore: YISHMAEL (the name verse-final)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">bear(e17) ∧ Agent(e17, hagar) ∧ Theme(e17, yishmael)</span><br>The birth as EVENT (frozen gen_12&#x27;s device: &#x27;bear(e2) ∧ Agent(e2, chavah) ∧ Theme(e2, kayin)&#x27;): the verse&#x27;s first arm is four words ending on BEN at the rest [tree fact]. The 16:1 negation answers: LO YALDAH LO (&#x27;she bore him none&#x27;) -&gt; VA-TELED LE-AVRAM (&#x27;she bore to Abram&#x27;) — the bear-verb flips polarity across the chapter with the SAME dative [letter frame, prose].
+</td><td><span class="he">וַתֵּלֶד הָגָר לְאַבְרָם בֵּן</span> · <i>va-teled hagar le-avram ben</i><br><span class="gloss">= and-teled hagar to-avram ben</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>NAME</td><td><span class="expr">name(yishmael) := Yishmael</span><br>THE FATHER PERFORMS THE MOTHER&#x27;S DECREE [flag 11]: va-yiqra AVRAM — the full naming formula, NAME per gen_12/13&#x27;s class; frozen gen_13&#x27;s alternation line continues, quoted: &#x27;the naming alternates: mother, mother, father-for-a-city, mother, and 4:26&#x27;s father&#x27; — Abram&#x27;s FIRST naming act names the boy the angel decreed to HAGAR (&#x27;YOU shall call&#x27;, 16:11): the decree&#x27;s executor differs from its addressee, and NOTHING pops (a weqatal decree-fact was never a demand) — how Abram knew the name, the letter does not say [the gap held; the chain&#x27;s harmonizations named-only]. The letter names HAGAR twice in this verse and once more in the next — three times at the birth, after the angel-scene called her only shifchat saray [letter fact]. The verse ENDS on YISHMAEL [tree fact].
+</td><td><span class="he">וַיִּקְרָא אַבְרָם שֶׁם־בְּנוֹ … יִשְׁמָעֵאל</span> · <i>va-yiqra avram shem-beno … yishmael</i><br><span class="gloss">= and-yiqra avram shem-beno yishmael</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The chapter&#x27;s two namings close one verse apart: the slave named God, and now the patriarch names her son — with the name she was given in the desert, though no verse says she told him: the letter leaves the name&#x27;s road home unmarked.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_16_16 · Gen.16.16 · <span class='expr'>THE_AGE_FRAME</span></h3>
+<p><span class="he">וְאַבְרָם בֶּן־שְׁמֹנִים שָׁנָה וְשֵׁשׁ שָׁנִים בְּלֶדֶת־הָגָר אֶת־יִשְׁמָעֵאל לְאַבְרָם</span> · <i>ve-avram ben-shemonim shanah ve-shesh shanim be-ledet-hagar et-yishmael le-avram</i> · [EN-AID/JPS] And Abram was fourscore and six years old, when Hagar bore Ishmael to Abram.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ואברם בן־שמנים שנה ושש שנים</span> · <i>ve-avram ben-shemonim shanah ve-shesh shanim</i> · Abram eighty-six years old (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">בלדת־הגר את־ישמעאל לאברם</span> · <i>be-ledet-hagar et-yishmael le-avram</i> · when Hagar bore Yishmael to Abram — the verse ends on le-avram</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(avram_ben_shemonim_shanah_ve_shesh_shanim, t0)</span><br><span class="gloss">= HOLDS(avram-ben-shemonim-year-and-shesh-shanim, t0)</span><br>The frame: eighty-six — the ledger-style age-notice (gen_14&#x27;s class) closes the chapter; the next verse the corpus speaks, Abram is ninety-nine (17:1): the seam carries THIRTEEN SILENT YEARS [letter frame; the seam-fact for the next unit, prose]. The verse names the triangle one last time — Hagar, Yishmael, le-AVRAM — and ends on the father [tree fact].
+</td><td><span class="he">וְאַבְרָם בֶּן־שְׁמֹנִים שָׁנָה וְשֵׁשׁ שָׁנִים</span> · <i>ve-avram ben-shemonim shanah ve-shesh shanim</i><br><span class="gloss">= and-avram ben-shemonim year and-shesh shanim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The chapter closes like a registry line: a father&#x27;s age, a mother&#x27;s name, a son&#x27;s name — and then the book falls silent for thirteen years, longer than the boy has been alive when it speaks again.</div>
+</div>
+<h2>State machine</h2>
+<div class="meta">Hagar and the angel (standalone; registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER).</div>
+<table><tr><th>state</th><th>meaning</th></tr>
+<tr><td><b>S_boot</b></td><td>Before 16:1 — all registers empty (standalone unit)</td></tr>
+<tr><td><b>S_noticed</b></td><td>After 16:1 — the barrenness and the maid held as fact (gen_28&#x27;s shifchah prediction lands); no demand yet</td></tr>
+<tr><td><b>S_commanded_in</b></td><td>After 16:2 — the female voice returns; LET(bo) pushed (the corpus&#x27;s first woman-issued demand); the listened-idiom re-runs</td></tr>
+<tr><td><b>S_transacted</b></td><td>After 16:3 — take and give fire in Sarai&#x27;s hands (laqach 31, natan 21); the ten-years clock and the wife-promotion hold</td></tr>
+<tr><td><b>S_settled_in</b></td><td>After 16:4 — VA-YAVO pops the bo-demand (cycle #9 claimed; SPECS EMPTY — machine-asserted); the conception; the contempt-fact (qalal token 5 after the 12:3 guard)</td></tr>
+<tr><td><b>S_grieved</b></td><td>After 16:5 — the flood-word grievance and the female natati hold; LET(yishpot) pushed ON GOD (flag 2) and OPEN</td></tr>
+<tr><td><b>S_permitted_afflicted</b></td><td>After 16:6 — LET(asi) pushed and OPEN over an afflict-deed (the verb-swap, flag 4; anah token 2 lands gen_31&#x27;s line); Hagar flees</td></tr>
+<tr><td><b>S_found</b></td><td>After 16:7 — the ANGEL debuts and FINDS her (matza token 7); the eye/spring lemma split; shur flagged</td></tr>
+<tr><td><b>S_questioned</b></td><td>After 16:8 — the where-ladder&#x27;s third firing; Hagar speaks (the roster admits a slave); her testimony holds</td></tr>
+<tr><td><b>S_sent_back</b></td><td>After 16:9 — LET(shuvi_ve_hitani) pushed and OPEN (the compound device; shuv 13 and anah 3 land gen_31&#x27;s lines)</td></tr>
+<tr><td><b>S_promised</b></td><td>After 16:10 — the doubled multiply-formula&#x27;s second firing (3:16&#x27;s grammar on the maid&#x27;s seed); safar token 3 lands (uncountable)</td></tr>
+<tr><td><b>S_annunciated</b></td><td>After 16:11 — the annunciation triple holds (weqatal decree-fact, not demand); Yishmael decreed; shama tokens 7-8 pair closed</td></tr>
+<tr><td><b>S_oracled</b></td><td>After 16:12 — the wild-ass oracle held raw; the hand-run and face-run complete</td></tr>
+<tr><td><b>S_God_named</b></td><td>After 16:13 — NAME: the REGISTRY takes YHWH-&gt;El_Roi from a slave&#x27;s mouth (flag 1; el token 5 lands gen_30&#x27;s ladder); the roi-thrones begin</td></tr>
+<tr><td><b>S_well_named</b></td><td>After 16:14 — PATTERN: the al-ken formula&#x27;s fourth token names the well (no NAME op — gen_25&#x27;s rule); qadesh/bered flagged</td></tr>
+<tr><td><b>S_born_named</b></td><td>After 16:15 — the birth EVENT and the father&#x27;s NAME (yishmael-&gt;Yishmael): the decree&#x27;s executor differs from its addressee; REGISTRY at 2 writes</td></tr>
+<tr><td><b>S_framed</b></td><td>After 16:16 — the age-frame holds; QUEUE ENDS 3 OPEN (yishpot-on-God, the do-good permission, the return-command) + 1 SETTLED; TESTS and LEDGER empty</td></tr>
+</table><table><tr><th>from</th><th>to</th><th>via</th></tr>
+<tr><td>S_boot</td><td>S_noticed</td><td>STEP_Gn_16_1</td></tr>
+<tr><td>S_noticed</td><td>S_commanded_in</td><td>STEP_Gn_16_2</td></tr>
+<tr><td>S_commanded_in</td><td>S_transacted</td><td>STEP_Gn_16_3</td></tr>
+<tr><td>S_transacted</td><td>S_settled_in</td><td>STEP_Gn_16_4</td></tr>
+<tr><td>S_settled_in</td><td>S_grieved</td><td>STEP_Gn_16_5</td></tr>
+<tr><td>S_grieved</td><td>S_permitted_afflicted</td><td>STEP_Gn_16_6</td></tr>
+<tr><td>S_permitted_afflicted</td><td>S_found</td><td>STEP_Gn_16_7</td></tr>
+<tr><td>S_found</td><td>S_questioned</td><td>STEP_Gn_16_8</td></tr>
+<tr><td>S_questioned</td><td>S_sent_back</td><td>STEP_Gn_16_9</td></tr>
+<tr><td>S_sent_back</td><td>S_promised</td><td>STEP_Gn_16_10</td></tr>
+<tr><td>S_promised</td><td>S_annunciated</td><td>STEP_Gn_16_11</td></tr>
+<tr><td>S_annunciated</td><td>S_oracled</td><td>STEP_Gn_16_12</td></tr>
+<tr><td>S_oracled</td><td>S_God_named</td><td>STEP_Gn_16_13</td></tr>
+<tr><td>S_God_named</td><td>S_well_named</td><td>STEP_Gn_16_14</td></tr>
+<tr><td>S_well_named</td><td>S_born_named</td><td>STEP_Gn_16_15</td></tr>
+<tr><td>S_born_named</td><td>S_framed</td><td>STEP_Gn_16_16</td></tr>
+</table>
+<div class="note"><b>AFTER_S_framed</b> — TIME: t0 + one mark (t1 — the RESULT at 16:4). WORLD: ZERO installs (a well is NAMED, never built — gen_25&#x27;s discipline) + 3 presupposed reads flagged (shur, qadesh, bered). REGISTRY: TWO WRITES — the unit&#x27;s signature: YHWH-&gt;El_Roi (a slave-woman naming God — flag 1, the boldest; the named_before_any_presence flag stands as expected data) and yishmael-&gt;Yishmael (the father performing the angel&#x27;s decree) — machine-asserted at both stations. EVENTS: 17 narrative + 4 declares + 2 namings + 1 pattern. SPECS: FOUR pushed, ONE popped, THREE OPEN — the queue&#x27;s story: the wife&#x27;s bo settled in its own verb (cycle #9 claimed; the first woman-issued demand and the first machine-asserted settle since the creation-week receipts); the wife&#x27;s yishpot-on-GOD open (the corpus&#x27;s first human demand on God — no judging narrated; flag 2); the husband&#x27;s do-good permission open forever over an afflict-deed (the verb-swap — the machine does not equate what the letter distinguishes; flag 4); the angel&#x27;s return-and-submit open (no return narrated; flag 5). Standing facts (18 + the PATTERN): the barrenness and the maid (gen_28&#x27;s prediction landed), the restrained-womb theology (hers), the build-plea, the ten years and the wife-promotion, the contempt (the 12:3 guard-verb&#x27;s first firing, in the house), the flood-word grievance and the female natati, the where-questions and the runaway&#x27;s testimony, the doubled multiply-promise and the uncountable seed (gen_31&#x27;s safar landing), the annunciation triple (the pre-birth name-decree as weqatal-fact), the wild-ass oracle pair, the naming-ground (hagam halom), the well-etiology (the al-ken formula&#x27;s fourth token) and its coordinates, the age-frame. TESTS: EMPTY (ha-tov idiomatic — no instrument fires). LEDGER: EMPTY. FLAGS: read_before_install x3 + named_before_any_presence x2 (YHWH; yishmael — both expected data: neither entity installed; flags never block). THE SHAPE IS THE STATE: a household passes give and take through three hands, a demand settles in a bed and three demands hang over a desert road — and the only registry the chapter keeps is two names: what a slave called God, and what a father called her son.</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>The barren wife and the maid: after STEP_Gn_16_1</td><td>All registers empty (standalone unit). (The barrenness file reopens in verb form; gen_28&#x27;s shifchah prediction lands.)</td><td>Facts lo-yaldah HOLD; Facts shemah-hagar HOLD; no test, no name.<br><span class="gloss">= Facts not-yaldah HOLD; Facts shemah-hagar HOLD; no test, no name.</span></td><td><span class="he">וְשָׂרַי אֵשֶׁת אַבְרָם לֹא יָלְדָה לוֹ</span> · <i>ve-saray eshet avram lo yaldah lo</i><br><span class="gloss">= and-saray wife-of avram not yaldah not</span></td></tr>
+<tr><td><b>S2</b></td><td>The first woman-issued demand: after STEP_Gn_16_2</td><td>S1 state. (The female voice returns — va-tomer token 4 of Gen 1-16; the listened-idiom re-runs; flag 3.)</td><td>LET(bo(avram, el_shifchati)) pushed and OPEN; Facts atzarani HOLD; Facts ibaneh HOLD.<br><span class="gloss">= LET(in-it(avram, to-shifchati)) pushed and OPEN; Facts atzarani HOLD; Facts ibaneh HOLD.</span></td><td><span class="he">בֹּא־נָא אֶל־שִׁפְחָתִי אוּלַי אִבָּנֶה מִמֶּנָּה</span> · <i>bo-na el-shifchati ulay ibaneh mimenah</i><br><span class="gloss">= in-it-na to-shifchati ulay ibaneh mimenah</span></td></tr>
+<tr><td><b>S3</b></td><td>The demand settles in its own verb: after STEP_Gn_16_4</td><td>S2 state plus 16:3 (the take-and-give). (VA-YAVO pops the bo-demand — RESULT, cycle #9 claimed, flag 3 — and the queue holds nothing else: the settle is machine-asserted below.)</td><td>SPECS empty; Facts va-teqal HOLD.<br><span class="gloss">= SPECS empty; Facts and-teqal HOLD.</span></td><td><span class="he">וַיָּבֹא אֶל־הָגָר וַתַּהַר</span> · <i>va-yavo el-hagar va-tahar</i><br><span class="gloss">= and-yavo to-hagar and-tahar</span></td></tr>
+<tr><td><b>S4</b></td><td>The grievance and the demand on God: after STEP_Gn_16_5</td><td>S3 state. (The flood-word and the female natati held; the jussive pushed with YHWH as demanded agent — flag 2.)</td><td>LET(yishpot(YHWH, beini_u_veinekha)) pushed and OPEN; Facts chamasi HOLD; Facts natati-shifchati HOLD.<br><span class="gloss">= LET(yishpot(the-LORD, beini-and-veinekha)) pushed and OPEN; Facts chamasi HOLD; Facts natati-shifchati HOLD.</span></td><td><span class="he">יִשְׁפֹּט יְהוָה בֵּינִי וּבֵינֶיךָ</span> · <i>yishpot YHWH beini u-veinekha</i><br><span class="gloss">= yishpot the-LORD beini and-veinekha</span></td></tr>
+<tr><td><b>S5</b></td><td>The permission stands open over the affliction: after STEP_Gn_16_6</td><td>S4 state. (LET(asi) pushed; the deed arrives in a DIFFERENT verb — va-teaneha — so nothing pops: the verb-swap, flag 4; anah token 2 lands gen_31&#x27;s line; Hagar flees.)</td><td>LET(yishpot(YHWH, beini_u_veinekha)) pushed and OPEN; LET(asi(saray, la_hagar_ha_tov_be_einayikh)) pushed and OPEN.<br><span class="gloss">= LET(yishpot(the-LORD, beini-and-veinekha)) pushed and OPEN; LET(asi(saray, to-hagar-the-good-in-einayikh)) pushed and OPEN.</span></td><td><span class="he">עֲשִׂי־לָהּ הַטּוֹב בְּעֵינָיִךְ וַתְּעַנֶּהָ שָׂרַי</span> · <i>asi-lah ha-tov be-einayikh va-teaneha saray</i><br><span class="gloss">= asi-lah good in-einayikh and-teaneha saray</span></td></tr>
+<tr><td><b>S6</b></td><td>Found and questioned at the spring: after STEP_Gn_16_8</td><td>S5 state plus 16:7 (the angel&#x27;s debut finds her — matza token 7; the eye/spring lemma split). (The where-ladder&#x27;s third firing; Hagar speaks.)</td><td>Facts ei-mizeh HOLD; Facts borachat HOLD; flags shur as read-before-install; no test, no name.</td><td><span class="he">אֵי־מִזֶּה בָאת וְאָנָה תֵלֵכִי … אָנֹכִי בֹּרַחַת</span> · <i>ei-mizeh vat ve-anah telekhi … anokhi borachat</i><br><span class="gloss">= ei-mizeh vat and-anah telekhi anokhi borachat</span></td></tr>
+<tr><td><b>S7</b></td><td>The return-and-submit pushed: after STEP_Gn_16_9</td><td>S6 state. (The compound device — gen_31&#x27;s habet_u_sefor class; shuv token 13 and anah token 3 land gen_31&#x27;s lines; flag 5.)</td><td>LET(shuvi_ve_hitani(hagar, el_gevirtekh_tachat_yadeha)) pushed and OPEN.<br><span class="gloss">= LET(shuvi-and-hitani(hagar, to-gevirtekh-tachat-yadeha)) pushed and OPEN.</span></td><td><span class="he">שׁוּבִי אֶל־גְּבִרְתֵּךְ וְהִתְעַנִּי תַּחַת יָדֶיהָ</span> · <i>shuvi el-gevirtekh ve-hitani tachat yadeha</i><br><span class="gloss">= shuvi to-gevirtekh and-hitani tachat yadeha</span></td></tr>
+<tr><td><b>S8</b></td><td>The promise and the annunciation: after STEP_Gn_16_11</td><td>S7 state plus 16:10. (The doubled multiply-formula&#x27;s second firing; safar token 3 lands; the weqatal name-decree is FACT, not demand — flag 11.)</td><td>Facts harbah-arbeh HOLD; Facts yisafer HOLD; Facts hinakh-harah HOLD; Facts qarat-yishmael HOLD; Facts shama-onyekh HOLD.<br><span class="gloss">= Facts greatly-I-will-multiply HOLD; Facts yisafer HOLD; Facts hinakh-harah HOLD; Facts qarat-yishmael HOLD; Facts shama-onyekh HOLD.</span></td><td><span class="he">הִנָּךְ הָרָה וְיֹלַדְתְּ בֵּן וְקָרָאת שְׁמוֹ יִשְׁמָעֵאל</span> · <i>hinakh harah ve-yoladt ben ve-qarat shemo yishmael</i><br><span class="gloss">= hinakh harah and-yoladt ben and-qarat shemo yishmael</span></td></tr>
+<tr><td><b>S9</b></td><td>The wild-ass oracle: after STEP_Gn_16_12</td><td>S8 state. (The oracle held raw; the hand-run and face-run complete; the buffer&#x27;s softening dual-track.)</td><td>Facts pere-adam HOLD; Facts yishkon HOLD.<br><span class="gloss">= Facts pere-human HOLD; Facts yishkon HOLD.</span></td><td><span class="he">פֶּרֶא אָדָם יָדוֹ בַכֹּל וְיַד כֹּל בּוֹ</span> · <i>pere adam yado va-khol ve-yad kol bo</i><br><span class="gloss">= pere human his-hand all and-yad all in-it</span></td></tr>
+<tr><td><b>S10</b></td><td>The registry takes a name for God: after STEP_Gn_16_13</td><td>S9 state. (The full va-tiqra formula fires the NAME class — flag 1, the boldest, staged both ways; el token 5 lands gen_30&#x27;s ladder; Onkelos dissolves the naming into prayer.)</td><td>REGISTRY: YHWH-&gt;El_Roi (1 write); Facts halom-raiti HOLD.<br><span class="gloss">= REGISTRY: the-LORD-&gt;El-Roi (1 write); Facts halom-raiti HOLD.</span></td><td><span class="he">אַתָּה אֵל רֳאִי</span> · <i>atah el roi</i><br><span class="gloss">= you to roi</span></td></tr>
+<tr><td><b>S11</b></td><td>The well named by the therefore-formula: after STEP_Gn_16_14</td><td>S10 state. (PATTERN — the al-ken formula&#x27;s fourth token, census-exact; NO name-op per gen_25&#x27;s bare-perfect rule; flag 12.)</td><td>Facts beer-lachai HOLD; Facts qadesh-bared HOLD; flags qadesh/bered as read-before-install.</td><td><span class="he">עַל־כֵּן קָרָא לַבְּאֵר בְּאֵר לַחַי רֹאִי</span> · <i>al-ken qara la-beer beer lachai roi</i><br><span class="gloss">= upon-ken qara to-beer beer lachai roi</span></td></tr>
+<tr><td><b>S12</b></td><td>Birth, name, frame — the registry pair closes: after STEP_Gn_16_16</td><td>S11 state plus 16:15 (the birth EVENT; the father performs the mother&#x27;s decree — name(yishmael) := Yishmael; nothing pops, the weqatal was never a demand).</td><td>REGISTRY: YHWH-&gt;El_Roi, yishmael-&gt;Yishmael (2 writes); LET(yishpot(YHWH, beini_u_veinekha)) pushed and OPEN; LET(asi(saray, la_hagar_ha_tov_be_einayikh)) pushed and OPEN; LET(shuvi_ve_hitani(hagar, el_gevirtekh_tachat_yadeha)) pushed and OPEN; Facts ben-shemonim HOLD; LEDGER stays EMPTY (open transaction).<br><span class="gloss">= REGISTRY: the-LORD-&gt;El-Roi, yishmael-&gt;Yishmael (2 writes); LET(yishpot(the-LORD, beini-and-veinekha)) pushed and OPEN; LET(asi(saray, to-hagar-the-good-in-einayikh)) pushed and OPEN; LET(shuvi-and-hitani(hagar, to-gevirtekh-tachat-yadeha)) pushed and OPEN; Facts ben-shemonim HOLD; LEDGER stays EMPTY (open transaction).</span></td><td><span class="he">וַיִּקְרָא אַבְרָם שֶׁם־בְּנוֹ … יִשְׁמָעֵאל</span> · <i>va-yiqra avram shem-beno … yishmael</i><br><span class="gloss">= and-yiqra avram shem-beno yishmael</span></td></tr>
+<tr><td><b>S13_negative</b></td><td>Negative: the LET? contract guard</td><td>A synthetic LET? demand (the machine&#x27;s own contract self-test).</td><td>LET? never auto-upgrades: resolution without citation must REFUSE; with a per-unit citation it may resolve — entries pop demands; nothing but citation moves a mood.</td><td><span class="he">בֹּא־נָא</span> · <i>bo-na</i><br><span class="gloss">= in-it-na</span></td></tr>
+<tr><td><b>S14_negative</b></td><td>Negative: flags never block</td><td>A synthetic commit with TESTS empty (the machine&#x27;s own contract self-test).</td><td>Cycle close with TESTS empty must be FLAGGED, never blocked.<br><span class="gloss">= Cycle close with TESTS empty must in FLAGGED, never blocked.</span></td><td></td></tr>
+</table>
+<h2>Exports (reusable patterns)</h2><table><tr><th>id</th><th>content</th></tr>
+<tr><td>EXPORT_the_name_on_YHWH_and_the_registry_pair</td><td><span class="he">וַתִּקְרָא שֵׁם־יְהוָה הַדֹּבֵר אֵלֶיהָ אַתָּה אֵל רֳאִי … וַיִּקְרָא אַבְרָם שֶׁם־בְּנוֹ … יִשְׁמָעֵאל</span> · <i>va-tiqra shem-YHWH ha-dover eleha atah el roi … va-yiqra avram shem-beno … yishmael</i> · THE NAME-ON-YHWH WEIGH [flag 1, boldest — staged both ways, owner triages]: 16:13 carries the FULL va-tiqra naming formula with an explicit agent, so the NAME class fires (gen_25&#x27;s formula-rule quoted both ways; gen_12/13&#x27;s name(kayin)/name(shet) class) — the REGISTRY takes YHWH-&gt;El_Roi from an Egyptian slave-woman, the corpus&#x27;s ONLY human-names-God event (named_before_any_presence stands as expected data; the alternative — spoken-fact only, a reverence-exception — would be NEW LAW and is staged for the owner); EL token 5 lands frozen gen_30&#x27;s El-ladder line verbatim (El Elyon&#x27;s four, then a slave&#x27;s El Roi); the roi-skeleton sits on three consecutive thrones (16:13 x2, 16:14); the al-ken well-naming takes PATTERN with NO name-op (the formula&#x27;s fourth token census-exact: 2:24, 10:9, 11:9, 16:14 — gen_25&#x27;s bare-perfect rule quoted); the pre-birth decree (16:11&#x27;s weqatal ve-qarat) is FACT not demand; and the father performs the mother&#x27;s decree at 16:15 (name(yishmael) := Yishmael — gen_13&#x27;s alternation line continues): four naming acts, four grammars, four different machine classes — and Onkelos DISSOLVES the boldest one (ve-tzalliat, &#x27;she PRAYED&#x27; — the buffer un-names exactly what the machine registers) [dual-track tension, flagged]</td></tr>
+<tr><td>EXPORT_the_household_queue_and_cycle_9</td><td><span class="he">בֹּא־נָא אֶל־שִׁפְחָתִי … וַיָּבֹא אֶל־הָגָר … יִשְׁפֹּט יְהוָה בֵּינִי וּבֵינֶיךָ … עֲשִׂי־לָהּ הַטּוֹב בְּעֵינָיִךְ … שׁוּבִי … וְהִתְעַנִּי</span> · <i>bo-na el-shifchati … va-yavo el-hagar … yishpot YHWH beini u-veinekha … asi-lah ha-tov be-einayikh … shuvi … ve-hitani</i> · THE HOUSEHOLD QUEUE — four demands, three issuers, three verdicts of openness: SARAI IS THE CORPUS&#x27;S FIRST FEMALE DEMAND-ISSUER (bo — TIR-027; gen_13&#x27;s Lemekh device made wives addressees, never issuers) and her demand SETTLES IN ITS OWN VERB one verse later (va-yavo — cycle #9 claimed on gen_17&#x27;s class, the SAME verb bo that settled #2 for Noach&#x27;s ark; and the pop is MACHINE-ASSERTED: SPECS empty at 16:4, the first mechanically-proven settle since the creation-week receipts); her SECOND demand aims AT GOD (yishpot — shafat&#x27;s debut, true jussive HVqj3ms, the jussive-LET class per gen_30&#x27;s yiqchu device: the corpus&#x27;s first human demand on God, OPEN — no judging narrated; flag 2); Abram&#x27;s do-good permission (asi — his only line) stands OPEN FOREVER over an afflict-deed — the VERB-SWAP: asah commanded, anah done, and RESULT pops only the demand&#x27;s own string (the machine does not equate what the letter distinguishes; flag 4); the angel&#x27;s compound shuvi_ve_hitani (gen_31&#x27;s compound device) stands OPEN — no return narrated (flag 5); around the queue: chamas token 3 (the flood-cause word as household grievance — gen_16&#x27;s lines quoted), the female natati (the receipt-grammar&#x27;s first woman speaker, one chapter after gen_31&#x27;s covenant natati), and the 12:3 guard-verb qalal firing first between the patriarch&#x27;s two women (gen_27&#x27;s verse)</td></tr>
+<tr><td>EXPORT_the_angel_field_and_the_landings</td><td><span class="he">וַיִּמְצָאָהּ מַלְאַךְ יְהוָה עַל־עֵין הַמַּיִם … כִּי־שָׁמַע יְהוָה אֶל־עָנְיֵךְ</span> · <i>va-yimtzaah malakh YHWH al-ein ha-mayim … ki-shama YHWH el-onyekh</i> · THE ANGEL CLASS OPENS ON A SLAVE: malakh YHWH debut x4 (tokens 5-6 are Sodom&#x27;s pair) — born FINDING (matza token 7: the verb of the failed helper-search, Cain&#x27;s dreaded finders, Noach&#x27;s favor, and the dove reaches its first divine finding of a person) a runaway at a spring the lexicon splits from the contempt-eyes (5869 a/b — the lemma-split class); the where-ladder&#x27;s third firing (ayeka to Adam, ei to Cain, ei-mizeh to Hagar) with the whither-word&#x27;s debut; THREE consecutive angel re-launches carrying a promise in the DIVINE FIRST PERSON (the letter&#x27;s slide, held), the doubled multiply-formula&#x27;s second firing (3:16 Chavah&#x27;s pain -&gt; 16:10 Hagar&#x27;s seed -&gt; 22:17 Abraham&#x27;s oath — census-exact), and the corpus&#x27;s first ANNUNCIATION (hinakh harah; the pre-birth name-decree; the name as the hear-verb&#x27;s monument: shama tokens 7-8 in-span — Abram heard the wife, YHWH heard the maid, and the child is YISHMA-EL); FROZEN gen_31&#x27;s three staged landings all land quoted (anah tokens 2-3 at 16:6/16:9; safar token 3 at 16:10; shuv token 13 at 16:9) — the afflict-decree of 15:13 fires FIRST in Abram&#x27;s house, on an Egyptian, one chapter after it was spoken [cross-unit prose + [OPEN], nothing pops; Ramban&#x27;s verdict named-only]</td></tr>
+<tr><td>EXPORT_the_return_of_the_female_voice</td><td><span class="he">וַתֹּאמֶר שָׂרַי … וַתֹּאמֶר … אָנֹכִי בֹּרַחַת</span> · <i>va-tomer saray … va-tomer … anokhi borachat</i> · THE FEMALE VOICE RETURNS [census-exact]: the va-tomer roster of Gen 1-16 is 3:2, 3:13, 4:1 — twelve silent chapters — then 16:2, 16:5, 16:8: Sarai&#x27;s initiative (with HER theology: atzarani YHWH — the letter said only &#x27;barren&#x27;, 11:30, gen_26&#x27;s line), Sarai&#x27;s grievance, and HAGAR — the say-roster&#x27;s first foreign, first enslaved woman, whose whole testimony is a face, a title, an I, and a participle (anokhi borachat, &#x27;I am fleeing&#x27; — verse-final); the listened-idiom census seals the frame: the corpus&#x27;s only two le-qol listenings are 3:17&#x27;s indictment (gen_11&#x27;s line quoted; Onkelos: the same accepted-the-word buffer at both — repeat confirmed) and 16:2&#x27;s compliance, verdict withheld; the build-plea (ulay ibaneh — banah&#x27;s first niphal and first 1cs after the rib and Babel) and the barrenness-to-birth polarity flip (lo yaldah lo -&gt; va-teled le-avram) bracket the chapter; GEVIRAH (&#x27;mistress&#x27;) debuts x3 — all its Torah tokens in this crisis; the age-frame (86) hands the seam thirteen silent years</td></tr>
+</table>
+<h2>Oral notes (named, tiered, dual-track — never merged)</h2>
+<div class="note"><span class="badge tier-o">observation</span> <b>Bereshit Rabbah 45 (the span; the Sarai-verdict file; the angels-per-speech count; the Hagar-as-gift class); Rashi at 16:1, 16:2, 16:5, 16:9-11, 16:13, 16:14; Ramban at 16:6 (the affliction-verdict: &#x27;our mother sinned&#x27;) and 16:12; Pirqei de-R. Eliezer&#x27;s Hagar chapters; the Beer-lachai-roi/Yitzchak dwelling notices (24:62, 25:11) — gen_32 Tier-A queue</b><br><span class="he">וַיִּמְצָאָהּ מַלְאַךְ יְהוָה</span> · <i>(queue — named only)</i> · Named, not read. The cache middot scan is the MAIN LOOP&#x27;S gate and is not claimed by this draft [flagged]. Predicted classes: the SARAI-VERDICT class (Ramban&#x27;s censure of the affliction — the machine&#x27;s raw anah-events are its dossier); the ANGELS-COUNT class (one angel per speech — the triple re-launch read as three visitors); the GIFT-IDENTIFICATION class (Hagar as Pharaoh&#x27;s daughter/12:16&#x27;s gift — gen_28&#x27;s named-only line the anchor); the PRAYER class (the buffer already performs it twice — see Tier-A); the WELL-CONTINUITY class (Yitzchak at Beer-lachai-roi); the PERE-ORACLE class (rebel/robber/economic readings); the TEN-YEARS class (the barrenness-term rule).
+<br><i>Queue entry — no claim made beyond the naming.</i></div>
+<div class="note"><span class="badge tier-v">verified</span> <b>Onkelos Genesis 16:1-16 — read Tier-A at derive time (16 sequential fetches, 0.5s spacing, Data/FETCHLOG.md 2026-08-05; cache MISS for the full span as staged)</b><br><span class="he">וְצַלִּיאַת בִּשְׁמָא דַיְיָ … קַבִּיל יְיָ צְלוֹתִיךְ</span> · <i>ve-tzalliat bi-shma da-YHWH … qabil YHWH tzelotikh</i> · The span&#x27;s translation witness — HEADLINE: THE PRAYER DOUBLE THAT UN-NAMES GOD. At 16:11 ki-shama YHWH el-onyekh (&#x27;for YHWH has HEARD your AFFLICTION&#x27;) becomes arei QABIL YHWH TZELOTIKH (&#x27;YHWH has RECEIVED your PRAYER&#x27; — the affliction itself replaced by prayer), and at 16:13 va-tiqra shem-YHWH (&#x27;she CALLED THE NAME of YHWH&#x27;) becomes VE-TZALLIAT BI-SHMA da-YHWH (&#x27;she PRAYED in the name of YHWH&#x27;) — the tzali-family (frozen record: gen_27&#x27;s call-as-prayer, gen_29&#x27;s ve-tzali, gen_30&#x27;s oath-in-prayer) fires TWICE in one chapter and DISSOLVES the corpus&#x27;s only human-naming-of- God exactly where the machine registers it; her epithet is universalized (elaha de-chazei KHOLA, &#x27;the God who sees ALL&#x27;) and her hard reason-clause rebuilt as revelation (&#x27;have I even here begun to see, AFTER HE WAS REVEALED to me&#x27;); the well too loses the Name — 16:14 -&gt; &#x27;the well at which the ENDURING ANGEL APPEARED&#x27; [find-class: systematic un-naming, flagged]. SECOND: the PERE-ORACLE SOFTENED — pere adam -&gt; MAROD BE-ENASHA (&#x27;a REBEL among men&#x27;) and the hand-clauses turned economy (&#x27;he will be NEEDY of all, and the hands of men will be NEEDY of him&#x27;) — the wild-ass domesticated to mutual commerce [dual-track]. REPEAT BUFFERS CONSISTENT WITH FROZEN RECORDS: 16:2&#x27;s va-yishma le-qol -&gt; VE-QABIL le-MEIMAR (&#x27;accepted the WORD&#x27;) — the EXACT buffer frozen gen_11 recorded at 3:17: the two wife-listenings get one rendering; 16:3&#x27;s va-tiqach -&gt; U-DEVARAT (&#x27;she LED&#x27;) — the lead-for-take policy (gen_26&#x27;s 11:31, gen_28&#x27;s triad, gen_30&#x27;s dvar) now on Sarai; Qadesh -&gt; REQAM (gen_30&#x27;s 14:7 identification verbatim) with Shur AND Bered both mapped to CHAGRA (identification class; the Hagar-echo in the toponym is the buffer&#x27;s); zarekh -&gt; BENAYKHI (&#x27;your SONS&#x27; — the seed-to-sons policy, gen_29/gen_31, extended to the maid&#x27;s line); the doubling KEPT (harbah arbeh -&gt; asgaa asgei — the buffer preserves the inf-abs pair); ve-hitani -&gt; ve-ISHTABEDI (&#x27;be enslaved&#x27; — submission hardened to servitude); chamasi -&gt; DIN LI ALAKH (&#x27;I have a CASE against you&#x27;) with yishpot -&gt; yedin — grievance and demand harmonized into din-vocabulary; ariri-class concretions continue (ben-mesheq precedent): shifchah -&gt; amta throughout.
+<br><i>Read from Data/sefaria_texts/ (local; FETCHLOG is provenance). Dual-track; not merged.</i></div>
+<h2>Binary trees (ta'amim v3, glue bricks)</h2>
+<h3>Gen.16.1 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">ושרי אשת אברם לא ילדה לו ולה שפחה מצרית ושמה הגר</span> · <i>ve-saray eshet avram lo yalda l-o ve-la-ה shifcha mitzrit u-shema-ה hagar</i> · Sarai bore him no children; an Egyptian maid, her name Hagar. [EN-AID]</div>
+<pre>PHRASE (binary 11w) וְ/שָׂרַי֙ אֵ֣שֶׁת אַבְרָ֔ם לֹ֥א יָלְדָ֖ה ל֑/וֹ…
+├── PHRASE (binary 6w) וְ/שָׂרַי֙ אֵ֣שֶׁת אַבְרָ֔ם לֹ֥א יָלְדָ֖ה ל֑/וֹ
+│   ├── PHRASE (binary 3w) וְ/שָׂרַי֙ אֵ֣שֶׁת אַבְרָ֔ם
+│   │   ├── [0] וְ/שָׂרַי֙ (pashta, rank=3)
+│   │   └── [1-2] GLUE אֵ֣שֶׁת אַבְרָ֔ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) לֹ֥א יָלְדָ֖ה ל֑/וֹ
+│       ├── [3-4] GLUE לֹ֥א יָלְדָ֖ה (tifcha, rank=2)
+│       └── [5] ל֑/וֹ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) וְ/לָ֛/הּ שִׁפְחָ֥ה מִצְרִ֖ית וּ/שְׁמָ֥/הּ הָגָ…
+    ├── PHRASE (binary 3w) וְ/לָ֛/הּ שִׁפְחָ֥ה מִצְרִ֖ית
+    │   ├── [6] וְ/לָ֛/הּ (tevir, rank=3)
+    │   └── [7-8] GLUE שִׁפְחָ֥ה מִצְרִ֖ית (tifcha, rank=2)
+    └── [9-10] GLUE וּ/שְׁמָ֥/הּ הָגָֽר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.16.2 · parser unique · 20 words</h3>
+<div class="meta"><span class="he">ותאמר שרי אל־אברם הנה־נא עצרני יהוה מלדת בא־נא אל־שפחתי אולי אבנה ממנה וישמע אברם לקול שרי</span> · <i>va-tomer saray el-avram hine-na atzara-ni YHWH mi-ledet bo-na el-shifchati-y ulay ibane mime-na va-yishma avram le-qol saray</i> · YHWH restrained me: go in to my maid; perhaps I am built from her. Abram listened. [EN-AID]</div>
+<pre>PHRASE (binary 20w) וַ/תֹּ֨אמֶר שָׂרַ֜י אֶל אַבְרָ֗ם הִנֵּה נָ֞א עֲ…
+├── PHRASE (binary 16w) וַ/תֹּ֨אמֶר שָׂרַ֜י אֶל אַבְרָ֗ם הִנֵּה נָ֞א עֲ…
+│   ├── PHRASE (binary 9w) וַ/תֹּ֨אמֶר שָׂרַ֜י אֶל אַבְרָ֗ם הִנֵּה נָ֞א עֲ…
+│   │   ├── PHRASE (binary 4w) וַ/תֹּ֨אמֶר שָׂרַ֜י אֶל אַבְרָ֗ם
+│   │   │   ├── [0-1] GLUE וַ/תֹּ֨אמֶר שָׂרַ֜י (geresh, rank=4)
+│   │   │   └── [2-3] GLUE אֶל אַבְרָ֗ם (revia, rank=3)
+│   │   └── PHRASE (binary 5w) הִנֵּה נָ֞א עֲצָרַ֤/נִי יְהוָה֙ מִ/לֶּ֔דֶת
+│   │       ├── PHRASE (binary 4w) הִנֵּה נָ֞א עֲצָרַ֤/נִי יְהוָה֙
+│   │       │   ├── [4-5] GLUE הִנֵּה נָ֞א (gershayim, rank=4)
+│   │       │   └── [6-7] GLUE עֲצָרַ֤/נִי יְהוָה֙ (pashta, rank=3)
+│   │       └── [8] מִ/לֶּ֔דֶת (zaqef qatan, rank=2)
+│   └── PHRASE (binary 7w) בֹּא נָא֙ אֶל שִׁפְחָתִ֔/י אוּלַ֥י אִבָּנֶ֖ה מִ…
+│       ├── PHRASE (binary 4w) בֹּא נָא֙ אֶל שִׁפְחָתִ֔/י
+│       │   ├── [9-10] GLUE בֹּא נָא֙ (pashta, rank=3)
+│       │   └── [11-12] GLUE אֶל שִׁפְחָתִ֔/י (zaqef qatan, rank=2)
+│       └── PHRASE (binary 3w) אוּלַ֥י אִבָּנֶ֖ה מִמֶּ֑/נָּה
+│           ├── [13-14] GLUE אוּלַ֥י אִבָּנֶ֖ה (tifcha, rank=2)
+│           └── [15] מִמֶּ֑/נָּה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וַ/יִּשְׁמַ֥ע אַבְרָ֖ם לְ/ק֥וֹל שָׂרָֽי
+    ├── [16-17] GLUE וַ/יִּשְׁמַ֥ע אַבְרָ֖ם (tifcha, rank=2)
+    └── [18-19] GLUE לְ/ק֥וֹל שָׂרָֽי (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.16.3 · parser unique · 21 words</h3>
+<div class="meta"><span class="he">ותקח שרי אשת־אברם את־הגר המצרית שפחתה מקץ עשר שנים לשבת אברם בארץ כנען ותתן אתה לאברם אישה לו לאשה</span> · <i>va-tiqach saray eshet-avram et-hagar ha-mitzrit shifchata-ה mi-qetz eser shanim le-shevet avram be-eretz kenaan va-titen et-ה le-avram isha-ה l-o le-isha</i> · Sarai took Hagar after ten years and gave her to Abram as a wife. [EN-AID]</div>
+<pre>PHRASE (binary 21w) וַ/תִּקַּ֞ח שָׂרַ֣י אֵֽשֶׁת אַבְרָ֗ם אֶת הָגָ֤ר…
+├── PHRASE (binary 15w) וַ/תִּקַּ֞ח שָׂרַ֣י אֵֽשֶׁת אַבְרָ֗ם אֶת הָגָ֤ר…
+│   ├── PHRASE (binary 8w) וַ/תִּקַּ֞ח שָׂרַ֣י אֵֽשֶׁת אַבְרָ֗ם אֶת הָגָ֤ר…
+│   │   ├── PHRASE (binary 4w) וַ/תִּקַּ֞ח שָׂרַ֣י אֵֽשֶׁת אַבְרָ֗ם
+│   │   │   ├── [0] וַ/תִּקַּ֞ח (gershayim, rank=4)
+│   │   │   └── [1-3] GLUE שָׂרַ֣י אֵֽשֶׁת אַבְרָ֗ם (revia, rank=3)
+│   │   └── PHRASE (binary 4w) אֶת הָגָ֤ר הַ/מִּצְרִית֙ שִׁפְחָתָ֔/הּ
+│   │       ├── [4-6] GLUE אֶת הָגָ֤ר הַ/מִּצְרִית֙ (pashta, rank=3)
+│   │       └── [7] שִׁפְחָתָ֔/הּ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 7w) מִ/קֵּץ֙ עֶ֣שֶׂר שָׁנִ֔ים לְ/שֶׁ֥בֶת אַבְרָ֖ם ב…
+│       ├── PHRASE (binary 3w) מִ/קֵּץ֙ עֶ֣שֶׂר שָׁנִ֔ים
+│       │   ├── [8] מִ/קֵּץ֙ (pashta, rank=3)
+│       │   └── [9-10] GLUE עֶ֣שֶׂר שָׁנִ֔ים (zaqef qatan, rank=2)
+│       └── PHRASE (binary 4w) לְ/שֶׁ֥בֶת אַבְרָ֖ם בְּ/אֶ֣רֶץ כְּנָ֑עַן
+│           ├── [11-12] GLUE לְ/שֶׁ֥בֶת אַבְרָ֖ם (tifcha, rank=2)
+│           └── [13-14] GLUE בְּ/אֶ֣רֶץ כְּנָ֑עַן (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) וַ/תִּתֵּ֥ן אֹתָ֛/הּ לְ/אַבְרָ֥ם אִישָׁ֖/הּ ל֥/…
+    ├── PHRASE (binary 4w) וַ/תִּתֵּ֥ן אֹתָ֛/הּ לְ/אַבְרָ֥ם אִישָׁ֖/הּ
+    │   ├── [15-16] GLUE וַ/תִּתֵּ֥ן אֹתָ֛/הּ (tevir, rank=3)
+    │   └── [17-18] GLUE לְ/אַבְרָ֥ם אִישָׁ֖/הּ (tifcha, rank=2)
+    └── [19-20] GLUE ל֥/וֹ לְ/אִשָּֽׁה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.16.4 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">ויבא אל־הגר ותהר ותרא כי הרתה ותקל גברתה בעיניה</span> · <i>va-yavo el-hagar va-tahar va-tere ki harata va-teqal gevirta-ה be-ene-ha</i> · He went in; she conceived; her mistress grew light in her eyes. [EN-AID]</div>
+<pre>PHRASE (binary 10w) וַ/יָּבֹ֥א אֶל הָגָ֖ר וַ/תַּ֑הַר וַ/תֵּ֨רֶא֙ כּ…
+├── PHRASE (binary 4w) וַ/יָּבֹ֥א אֶל הָגָ֖ר וַ/תַּ֑הַר
+│   ├── [0-2] GLUE וַ/יָּבֹ֥א אֶל הָגָ֖ר (tifcha, rank=2)
+│   └── [3] וַ/תַּ֑הַר (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) וַ/תֵּ֨רֶא֙ כִּ֣י הָרָ֔תָה וַ/תֵּקַ֥ל גְּבִרְתּ…
+    ├── PHRASE (binary 3w) וַ/תֵּ֨רֶא֙ כִּ֣י הָרָ֔תָה
+    │   ├── [4] וַ/תֵּ֨רֶא֙ (pashta, rank=3)
+    │   └── [5-6] GLUE כִּ֣י הָרָ֔תָה (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) וַ/תֵּקַ֥ל גְּבִרְתָּ֖/הּ בְּ/עֵינֶֽי/הָ
+        ├── [7-8] GLUE וַ/תֵּקַ֥ל גְּבִרְתָּ֖/הּ (tifcha, rank=2)
+        └── [9] בְּ/עֵינֶֽי/הָ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.16.5 · parser unique · 19 words</h3>
+<div class="meta"><span class="he">ותאמר שרי אל־אברם חמסי עליך אנכי נתתי שפחתי בחיקך ותרא כי הרתה ואקל בעיניה ישפט יהוה ביני וביניך</span> · <i>va-tomer saray el-avram chamasi-y ale-kha anokhi natati shifchati-y be-cheqe-kha va-tere ki harata va-eqal be-ene-ha yishpot YHWH beni-y u-vene-kha</i> · My wrong on you — I gave my maid; let YHWH judge between me and you. [EN-AID]</div>
+<pre>PHRASE (binary 19w) וַ/תֹּ֨אמֶר שָׂרַ֣י אֶל אַבְרָם֮ חֲמָסִ֣/י עָלֶ…
+├── PHRASE (binary 15w) וַ/תֹּ֨אמֶר שָׂרַ֣י אֶל אַבְרָם֮ חֲמָסִ֣/י עָלֶ…
+│   ├── PHRASE (binary 6w) וַ/תֹּ֨אמֶר שָׂרַ֣י אֶל אַבְרָם֮ חֲמָסִ֣/י עָלֶ…
+│   │   ├── [0-3] GLUE וַ/תֹּ֨אמֶר שָׂרַ֣י אֶל אַבְרָם֮ (zinor (poetic cousin; rare in prose), rank=3)
+│   │   └── [4-5] GLUE חֲמָסִ֣/י עָלֶי/ךָ֒ (segol, rank=2)
+│   └── PHRASE (binary 9w) אָנֹכִ֗י נָתַ֤תִּי שִׁפְחָתִ/י֙ בְּ/חֵיקֶ֔/ךָ ו…
+│       ├── PHRASE (binary 4w) אָנֹכִ֗י נָתַ֤תִּי שִׁפְחָתִ/י֙ בְּ/חֵיקֶ֔/ךָ
+│       │   ├── [6] אָנֹכִ֗י (revia, rank=3)
+│       │   └── PHRASE (binary 3w) נָתַ֤תִּי שִׁפְחָתִ/י֙ בְּ/חֵיקֶ֔/ךָ
+│       │       ├── [7-8] GLUE נָתַ֤תִּי שִׁפְחָתִ/י֙ (pashta, rank=3)
+│       │       └── [9] בְּ/חֵיקֶ֔/ךָ (zaqef qatan, rank=2)
+│       └── PHRASE (binary 5w) וַ/תֵּ֨רֶא֙ כִּ֣י הָרָ֔תָה וָ/אֵקַ֖ל בְּ/עֵינֶ֑…
+│           ├── PHRASE (binary 3w) וַ/תֵּ֨רֶא֙ כִּ֣י הָרָ֔תָה
+│           │   ├── [10] וַ/תֵּ֨רֶא֙ (pashta, rank=3)
+│           │   └── [11-12] GLUE כִּ֣י הָרָ֔תָה (zaqef qatan, rank=2)
+│           └── PHRASE (binary 2w) וָ/אֵקַ֖ל בְּ/עֵינֶ֑י/הָ
+│               ├── [13] וָ/אֵקַ֖ל (tifcha, rank=2)
+│               └── [14] בְּ/עֵינֶ֑י/הָ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) יִשְׁפֹּ֥ט יְהוָ֖ה בֵּינִ֥/י וּ/בֵינֶֽיׄ/ךָ
+    ├── [15-16] GLUE יִשְׁפֹּ֥ט יְהוָ֖ה (tifcha, rank=2)
+    └── [17-18] GLUE בֵּינִ֥/י וּ/בֵינֶֽיׄ/ךָ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.16.6 · parser unique · 15 words</h3>
+<div class="meta"><span class="he">ויאמר אברם אל־שרי הנה שפחתך בידך עשי־לה הטוב בעיניך ותענה שרי ותברח מפניה</span> · <i>va-yomer avram el-saray hine shifchate-khe be-yade-khe asi-la-ה ha-tov be-enayi-khe va-teane-ha saray va-tivrach mi-pane-ha</i> · Your maid is in your hand: do the good in your eyes. Sarai afflicted her; she fled. [EN-AID]</div>
+<pre>PHRASE (binary 15w) וַ/יֹּ֨אמֶר אַבְרָ֜ם אֶל שָׂרַ֗י הִנֵּ֤ה שִׁפְח…
+├── PHRASE (binary 11w) וַ/יֹּ֨אמֶר אַבְרָ֜ם אֶל שָׂרַ֗י הִנֵּ֤ה שִׁפְח…
+│   ├── PHRASE (binary 7w) וַ/יֹּ֨אמֶר אַבְרָ֜ם אֶל שָׂרַ֗י הִנֵּ֤ה שִׁפְח…
+│   │   ├── PHRASE (binary 4w) וַ/יֹּ֨אמֶר אַבְרָ֜ם אֶל שָׂרַ֗י
+│   │   │   ├── [0-1] GLUE וַ/יֹּ֨אמֶר אַבְרָ֜ם (geresh, rank=4)
+│   │   │   └── [2-3] GLUE אֶל שָׂרַ֗י (revia, rank=3)
+│   │   └── PHRASE (binary 3w) הִנֵּ֤ה שִׁפְחָתֵ/ךְ֙ בְּ/יָדֵ֔/ךְ
+│   │       ├── [4-5] GLUE הִנֵּ֤ה שִׁפְחָתֵ/ךְ֙ (pashta, rank=3)
+│   │       └── [6] בְּ/יָדֵ֔/ךְ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) עֲשִׂי לָ֖/הּ הַ/טּ֣וֹב בְּ/עֵינָ֑יִ/ךְ
+│       ├── [7-8] GLUE עֲשִׂי לָ֖/הּ (tifcha, rank=2)
+│       └── [9-10] GLUE הַ/טּ֣וֹב בְּ/עֵינָ֑יִ/ךְ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וַ/תְּעַנֶּ֣/הָ שָׂרַ֔י וַ/תִּבְרַ֖ח מִ/פָּנֶֽי…
+    ├── [11-12] GLUE וַ/תְּעַנֶּ֣/הָ שָׂרַ֔י (zaqef qatan, rank=2)
+    └── PHRASE (binary 2w) וַ/תִּבְרַ֖ח מִ/פָּנֶֽי/הָ
+        ├── [13] וַ/תִּבְרַ֖ח (tifcha, rank=2)
+        └── [14] מִ/פָּנֶֽי/הָ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.16.7 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">וימצאה מלאך יהוה על־עין המים במדבר על־העין בדרך שור</span> · <i>va-yimtzaa-ה malakh YHWH al-en ha-mayim ba-midbar al-ha-ayin be-derekh shur</i> · The angel of YHWH found her by the spring on the road to Shur. [EN-AID]</div>
+<pre>PHRASE (binary 11w) וַֽ/יִּמְצָאָ֞/הּ מַלְאַ֧ךְ יְהוָ֛ה עַל עֵ֥ין ה…
+├── PHRASE (binary 7w) וַֽ/יִּמְצָאָ֞/הּ מַלְאַ֧ךְ יְהוָ֛ה עַל עֵ֥ין ה…
+│   ├── PHRASE (binary 6w) וַֽ/יִּמְצָאָ֞/הּ מַלְאַ֧ךְ יְהוָ֛ה עַל עֵ֥ין ה…
+│   │   ├── PHRASE (binary 3w) וַֽ/יִּמְצָאָ֞/הּ מַלְאַ֧ךְ יְהוָ֛ה
+│   │   │   ├── [0] וַֽ/יִּמְצָאָ֞/הּ (gershayim, rank=4)
+│   │   │   └── [1-2] GLUE מַלְאַ֧ךְ יְהוָ֛ה (tevir, rank=3)
+│   │   └── [3-5] GLUE עַל עֵ֥ין הַ/מַּ֖יִם (tifcha, rank=2)
+│   └── [6] בַּ/מִּדְבָּ֑ר (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) עַל הָ/עַ֖יִן בְּ/דֶ֥רֶךְ שֽׁוּר
+    ├── [7-8] GLUE עַל הָ/עַ֖יִן (tifcha, rank=2)
+    └── [9-10] GLUE בְּ/דֶ֥רֶךְ שֽׁוּר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.16.8 · parser unique · 15 words</h3>
+<div class="meta"><span class="he">ויאמר הגר שפחת שרי אי־מזה באת ואנה תלכי ותאמר מפני שרי גברתי אנכי ברחת</span> · <i>va-yomar hagar shifchat saray e-mi-ze vat ve-ana telekhi va-tomer mi-pene saray gevirti-y anokhi borachat</i> · Hagar, whence and whither? From the face of my mistress I am fleeing. [EN-AID]</div>
+<pre>PHRASE (binary 15w) וַ/יֹּאמַ֗ר הָגָ֞ר שִׁפְחַ֥ת שָׂרַ֛י אֵֽי מִ/זּ…
+├── PHRASE (binary 9w) וַ/יֹּאמַ֗ר הָגָ֞ר שִׁפְחַ֥ת שָׂרַ֛י אֵֽי מִ/זּ…
+│   ├── PHRASE (binary 7w) וַ/יֹּאמַ֗ר הָגָ֞ר שִׁפְחַ֥ת שָׂרַ֛י אֵֽי מִ/זּ…
+│   │   ├── [0] וַ/יֹּאמַ֗ר (revia, rank=3)
+│   │   └── PHRASE (binary 6w) הָגָ֞ר שִׁפְחַ֥ת שָׂרַ֛י אֵֽי מִ/זֶּ֥ה בָ֖את
+│   │       ├── PHRASE (binary 3w) הָגָ֞ר שִׁפְחַ֥ת שָׂרַ֛י
+│   │       │   ├── [1] הָגָ֞ר (gershayim, rank=4)
+│   │       │   └── [2-3] GLUE שִׁפְחַ֥ת שָׂרַ֛י (tevir, rank=3)
+│   │       └── [4-6] GLUE אֵֽי מִ/זֶּ֥ה בָ֖את (tifcha, rank=2)
+│   └── [7-8] GLUE וְ/אָ֣נָה תֵלֵ֑כִי (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) וַ/תֹּ֕אמֶר מִ/פְּנֵי֙ שָׂרַ֣י גְּבִרְתִּ֔/י אָ…
+    ├── [9] וַ/תֹּ֕אמֶר (zaqef gadol, rank=2)
+    └── PHRASE (binary 5w) מִ/פְּנֵי֙ שָׂרַ֣י גְּבִרְתִּ֔/י אָנֹכִ֖י בֹּרַ…
+        ├── PHRASE (binary 3w) מִ/פְּנֵי֙ שָׂרַ֣י גְּבִרְתִּ֔/י
+        │   ├── [10] מִ/פְּנֵי֙ (pashta, rank=3)
+        │   └── [11-12] GLUE שָׂרַ֣י גְּבִרְתִּ֔/י (zaqef qatan, rank=2)
+        └── PHRASE (binary 2w) אָנֹכִ֖י בֹּרַֽחַת
+            ├── [13] אָנֹכִ֖י (tifcha, rank=2)
+            └── [14] בֹּרַֽחַת (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.16.9 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">ויאמר לה מלאך יהוה שובי אל־גברתך והתעני תחת ידיה</span> · <i>va-yomer la-ה malakh YHWH shuvi el-gevirte-khe ve-hitani tachat yade-ha</i> · Return to your mistress and submit under her hands. [EN-AID]</div>
+<pre>PHRASE (binary 10w) וַ/יֹּ֤אמֶר לָ/הּ֙ מַלְאַ֣ךְ יְהוָ֔ה שׁ֖וּבִי א…
+├── PHRASE (binary 7w) וַ/יֹּ֤אמֶר לָ/הּ֙ מַלְאַ֣ךְ יְהוָ֔ה שׁ֖וּבִי א…
+│   ├── PHRASE (binary 4w) וַ/יֹּ֤אמֶר לָ/הּ֙ מַלְאַ֣ךְ יְהוָ֔ה
+│   │   ├── [0-1] GLUE וַ/יֹּ֤אמֶר לָ/הּ֙ (pashta, rank=3)
+│   │   └── [2-3] GLUE מַלְאַ֣ךְ יְהוָ֔ה (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) שׁ֖וּבִי אֶל גְּבִרְתֵּ֑/ךְ
+│       ├── [4] שׁ֖וּבִי (tifcha, rank=2)
+│       └── [5-6] GLUE אֶל גְּבִרְתֵּ֑/ךְ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וְ/הִתְעַנִּ֖י תַּ֥חַת יָדֶֽי/הָ
+    ├── [7] וְ/הִתְעַנִּ֖י (tifcha, rank=2)
+    └── [8-9] GLUE תַּ֥חַת יָדֶֽי/הָ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.16.10 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">ויאמר לה מלאך יהוה הרבה ארבה את־זרעך ולא יספר מרב</span> · <i>va-yomer la-ה malakh YHWH harba arbe et-zare-khe ve-lo yisafer me-rov</i> · Multiplying I will multiply your seed — uncountable for multitude. [EN-AID]</div>
+<pre>PHRASE (binary 11w) וַ/יֹּ֤אמֶר לָ/הּ֙ מַלְאַ֣ךְ יְהוָ֔ה הַרְבָּ֥ה …
+├── PHRASE (binary 8w) וַ/יֹּ֤אמֶר לָ/הּ֙ מַלְאַ֣ךְ יְהוָ֔ה הַרְבָּ֥ה …
+│   ├── PHRASE (binary 4w) וַ/יֹּ֤אמֶר לָ/הּ֙ מַלְאַ֣ךְ יְהוָ֔ה
+│   │   ├── [0-1] GLUE וַ/יֹּ֤אמֶר לָ/הּ֙ (pashta, rank=3)
+│   │   └── [2-3] GLUE מַלְאַ֣ךְ יְהוָ֔ה (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) הַרְבָּ֥ה אַרְבֶּ֖ה אֶת זַרְעֵ֑/ךְ
+│       ├── [4-5] GLUE הַרְבָּ֥ה אַרְבֶּ֖ה (tifcha, rank=2)
+│       └── [6-7] GLUE אֶת זַרְעֵ֑/ךְ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וְ/לֹ֥א יִסָּפֵ֖ר מֵ/רֹֽב
+    ├── [8-9] GLUE וְ/לֹ֥א יִסָּפֵ֖ר (tifcha, rank=2)
+    └── [10] מֵ/רֹֽב (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.16.11 · parser unique · 16 words</h3>
+<div class="meta"><span class="he">ויאמר לה מלאך יהוה הנך הרה וילדת בן וקראת שמו ישמעאל כי־שמע יהוה אל־עניך</span> · <i>va-yomer la-ה malakh YHWH hina-khe hara ve-yoladt ben ve-qarat shem-o yishmael ki-shama YHWH el-anye-khe</i> · You are pregnant, bearing a son: call him Yishmael, for YHWH heard your affliction. [EN-AID]</div>
+<pre>PHRASE (binary 16w) וַ/יֹּ֤אמֶר לָ/הּ֙ מַלְאַ֣ךְ יְהוָ֔ה הִנָּ֥/ךְ …
+├── PHRASE (binary 8w) וַ/יֹּ֤אמֶר לָ/הּ֙ מַלְאַ֣ךְ יְהוָ֔ה הִנָּ֥/ךְ …
+│   ├── PHRASE (binary 4w) וַ/יֹּ֤אמֶר לָ/הּ֙ מַלְאַ֣ךְ יְהוָ֔ה
+│   │   ├── [0-1] GLUE וַ/יֹּ֤אמֶר לָ/הּ֙ (pashta, rank=3)
+│   │   └── [2-3] GLUE מַלְאַ֣ךְ יְהוָ֔ה (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) הִנָּ֥/ךְ הָרָ֖ה וְ/יֹלַ֣דְתְּ בֵּ֑ן
+│       ├── [4-5] GLUE הִנָּ֥/ךְ הָרָ֖ה (tifcha, rank=2)
+│       └── [6-7] GLUE וְ/יֹלַ֣דְתְּ בֵּ֑ן (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) וְ/קָרָ֤את שְׁמ/וֹ֙ יִשְׁמָעֵ֔אל כִּֽי שָׁמַ֥ע …
+    ├── PHRASE (binary 3w) וְ/קָרָ֤את שְׁמ/וֹ֙ יִשְׁמָעֵ֔אל
+    │   ├── [8-9] GLUE וְ/קָרָ֤את שְׁמ/וֹ֙ (pashta, rank=3)
+    │   └── [10] יִשְׁמָעֵ֔אל (zaqef qatan, rank=2)
+    └── PHRASE (binary 5w) כִּֽי שָׁמַ֥ע יְהוָ֖ה אֶל עָנְיֵֽ/ךְ
+        ├── [11-13] GLUE כִּֽי שָׁמַ֥ע יְהוָ֖ה (tifcha, rank=2)
+        └── [14-15] GLUE אֶל עָנְיֵֽ/ךְ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.16.12 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">והוא יהיה פרא אדם ידו בכל ויד כל בו ועל־פני כל־אחיו ישכן</span> · <i>ve-hu yihye pere adam yad-o va-kol ve-yad kol b-o ve-al-pene khal-echay-v yishkon</i> · A wild-ass of a man: his hand against all, all against him; facing all his brothers. [EN-AID]</div>
+<pre>PHRASE (binary 14w) וְ/ה֤וּא יִהְיֶה֙ פֶּ֣רֶא אָדָ֔ם יָד֣/וֹ בַ/כֹּ…
+├── PHRASE (binary 9w) וְ/ה֤וּא יִהְיֶה֙ פֶּ֣רֶא אָדָ֔ם יָד֣/וֹ בַ/כֹּ…
+│   ├── PHRASE (binary 4w) וְ/ה֤וּא יִהְיֶה֙ פֶּ֣רֶא אָדָ֔ם
+│   │   ├── [0-1] GLUE וְ/ה֤וּא יִהְיֶה֙ (pashta, rank=3)
+│   │   └── [2-3] GLUE פֶּ֣רֶא אָדָ֔ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) יָד֣/וֹ בַ/כֹּ֔ל וְ/יַ֥ד כֹּ֖ל בּ֑/וֹ
+│       ├── [4-5] GLUE יָד֣/וֹ בַ/כֹּ֔ל (zaqef qatan, rank=2)
+│       └── PHRASE (binary 3w) וְ/יַ֥ד כֹּ֖ל בּ֑/וֹ
+│           ├── [6-7] GLUE וְ/יַ֥ד כֹּ֖ל (tifcha, rank=2)
+│           └── [8] בּ֑/וֹ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) וְ/עַל פְּנֵ֥י כָל אֶחָ֖י/ו יִשְׁכֹּֽן
+    ├── [9-12] GLUE וְ/עַל פְּנֵ֥י כָל אֶחָ֖י/ו (tifcha, rank=2)
+    └── [13] יִשְׁכֹּֽן (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.16.13 · parser unique · 15 words</h3>
+<div class="meta"><span class="he">ותקרא שם־יהוה הדבר אליה אתה אל ראי כי אמרה הגם הלם ראיתי אחרי ראי</span> · <i>va-tiqra shem-YHWH ha-dover ele-ha ata el roi ki amra ha-gam halom raiti achare roi-y</i> · She called the name of YHWH who spoke to her: You are El Roi. [EN-AID]</div>
+<pre>PHRASE (binary 15w) וַ/תִּקְרָ֤א שֵׁם יְהוָה֙ הַ/דֹּבֵ֣ר אֵלֶ֔י/הָ …
+├── PHRASE (binary 8w) וַ/תִּקְרָ֤א שֵׁם יְהוָה֙ הַ/דֹּבֵ֣ר אֵלֶ֔י/הָ …
+│   ├── PHRASE (binary 5w) וַ/תִּקְרָ֤א שֵׁם יְהוָה֙ הַ/דֹּבֵ֣ר אֵלֶ֔י/הָ
+│   │   ├── [0-2] GLUE וַ/תִּקְרָ֤א שֵׁם יְהוָה֙ (pashta, rank=3)
+│   │   └── [3-4] GLUE הַ/דֹּבֵ֣ר אֵלֶ֔י/הָ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) אַתָּ֖ה אֵ֣ל רֳאִ֑י
+│       ├── [5] אַתָּ֖ה (tifcha, rank=2)
+│       └── [6-7] GLUE אֵ֣ל רֳאִ֑י (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) כִּ֣י אָֽמְרָ֗ה הֲ/גַ֥ם הֲלֹ֛ם רָאִ֖יתִי אַחֲרֵ…
+    ├── PHRASE (binary 5w) כִּ֣י אָֽמְרָ֗ה הֲ/גַ֥ם הֲלֹ֛ם רָאִ֖יתִי
+    │   ├── [8-9] GLUE כִּ֣י אָֽמְרָ֗ה (revia, rank=3)
+    │   └── PHRASE (binary 3w) הֲ/גַ֥ם הֲלֹ֛ם רָאִ֖יתִי
+    │       ├── [10-11] GLUE הֲ/גַ֥ם הֲלֹ֛ם (tevir, rank=3)
+    │       └── [12] רָאִ֖יתִי (tifcha, rank=2)
+    └── [13-14] GLUE אַחֲרֵ֥י רֹאִֽ/י (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.16.14 · parser unique · 12 words</h3>
+<div class="meta"><span class="he">על־כן קרא לבאר באר לחי ראי הנה בין־קדש ובין ברד</span> · <i>al-ken qara la-beer beer lachay roi hine ven-qadesh u-ven bared</i> · Therefore the well was called Beer-lachai-roi — between Kadesh and Bered. [EN-AID]</div>
+<pre>PHRASE (binary 12w) עַל כֵּן֙ קָרָ֣א לַ/בְּאֵ֔ר בְּאֵ֥ר לַחַ֖י רֹאִ…
+├── PHRASE (binary 7w) עַל כֵּן֙ קָרָ֣א לַ/בְּאֵ֔ר בְּאֵ֥ר לַחַ֖י רֹאִ…
+│   ├── PHRASE (binary 4w) עַל כֵּן֙ קָרָ֣א לַ/בְּאֵ֔ר
+│   │   ├── [0-1] GLUE עַל כֵּן֙ (pashta, rank=3)
+│   │   └── [2-3] GLUE קָרָ֣א לַ/בְּאֵ֔ר (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) בְּאֵ֥ר לַחַ֖י רֹאִ֑י
+│       ├── [4-5] GLUE בְּאֵ֥ר לַחַ֖י (tifcha, rank=2)
+│       └── [6] רֹאִ֑י (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) הִנֵּ֥ה בֵין קָדֵ֖שׁ וּ/בֵ֥ין בָּֽרֶד
+    ├── [7-9] GLUE הִנֵּ֥ה בֵין קָדֵ֖שׁ (tifcha, rank=2)
+    └── [10-11] GLUE וּ/בֵ֥ין בָּֽרֶד (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.16.15 · parser unique · 12 words</h3>
+<div class="meta"><span class="he">ותלד הגר לאברם בן ויקרא אברם שם־בנו אשר־ילדה הגר ישמעאל</span> · <i>va-teled hagar le-avram ben va-yiqra avram shem-ben-o asher-yalda hagar yishmael</i> · Hagar bore Abram a son; Abram named him Yishmael. [EN-AID]</div>
+<pre>PHRASE (binary 12w) וַ/תֵּ֧לֶד הָגָ֛ר לְ/אַבְרָ֖ם בֵּ֑ן וַ/יִּקְרָ֨…
+├── PHRASE (binary 4w) וַ/תֵּ֧לֶד הָגָ֛ר לְ/אַבְרָ֖ם בֵּ֑ן
+│   ├── PHRASE (binary 3w) וַ/תֵּ֧לֶד הָגָ֛ר לְ/אַבְרָ֖ם
+│   │   ├── [0-1] GLUE וַ/תֵּ֧לֶד הָגָ֛ר (tevir, rank=3)
+│   │   └── [2] לְ/אַבְרָ֖ם (tifcha, rank=2)
+│   └── [3] בֵּ֑ן (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) וַ/יִּקְרָ֨א אַבְרָ֧ם שֶׁם בְּנ֛/וֹ אֲשֶׁר יָלְ…
+    ├── PHRASE (binary 7w) וַ/יִּקְרָ֨א אַבְרָ֧ם שֶׁם בְּנ֛/וֹ אֲשֶׁר יָלְ…
+    │   ├── [4-7] GLUE וַ/יִּקְרָ֨א אַבְרָ֧ם שֶׁם בְּנ֛/וֹ (tevir, rank=3)
+    │   └── [8-10] GLUE אֲשֶׁר יָלְדָ֥ה הָגָ֖ר (tifcha, rank=2)
+    └── [11] יִשְׁמָעֵֽאל (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.16.16 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">ואברם בן־שמנים שנה ושש שנים בלדת־הגר את־ישמעאל לאברם</span> · <i>ve-avram ben-shemonim shana ve-shesh shanim be-ledet-hagar et-yishmael le-avram</i> · Abram was eighty-six when Hagar bore Yishmael. [EN-AID]</div>
+<pre>PHRASE (binary 11w) וְ/אַבְרָ֕ם בֶּן שְׁמֹנִ֥ים שָׁנָ֖ה וְ/שֵׁ֣שׁ ש…
+├── PHRASE (binary 6w) וְ/אַבְרָ֕ם בֶּן שְׁמֹנִ֥ים שָׁנָ֖ה וְ/שֵׁ֣שׁ ש…
+│   ├── [0] וְ/אַבְרָ֕ם (zaqef gadol, rank=2)
+│   └── PHRASE (binary 5w) בֶּן שְׁמֹנִ֥ים שָׁנָ֖ה וְ/שֵׁ֣שׁ שָׁנִ֑ים
+│       ├── [1-3] GLUE בֶּן שְׁמֹנִ֥ים שָׁנָ֖ה (tifcha, rank=2)
+│       └── [4-5] GLUE וְ/שֵׁ֣שׁ שָׁנִ֑ים (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) בְּ/לֶֽדֶת הָגָ֥ר אֶת יִשְׁמָעֵ֖אל לְ/אַבְרָֽם
+    ├── [6-9] GLUE בְּ/לֶֽדֶת הָגָ֥ר אֶת יִשְׁמָעֵ֖אל (tifcha, rank=2)
+    └── [10] לְ/אַבְרָֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_32_hagar_angel — Hagar: the maid given, the flight, the angel, the names (16:1-16) [frozen]
+
+final state: WORLD=[] (+3 presupposed) | REGISTRY={&#x27;YHWH&#x27;: &#x27;El_Roi&#x27;, &#x27;yishmael&#x27;: &#x27;Yishmael&#x27;} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[&#x27;read_before_install&#x27;, &#x27;named_before_any_presence&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;named_before_any_presence&#x27;]
+
+=== S1 — The barren wife and the maid: after STEP_Gn_16_1
+    וְשָׂרַי אֵשֶׁת אַבְרָם לֹא יָלְדָה לוֹ (ve-saray eshet avram lo yaldah lo)
+    PASS  Facts lo-yaldah HOLD  (2 facts)
+    PASS  Facts shemah-hagar HOLD  (2 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — The first woman-issued demand: after STEP_Gn_16_2
+    בֹּא־נָא אֶל־שִׁפְחָתִי אוּלַי אִבָּנֶה מִמֶּנָּה (bo-na el-shifchati ulay ibaneh mimenah)
+    PASS  LET(bo(avram, el_shifchati)) pushed and OPEN  (queue=[&#x27;bo(avram, el_shifchati)&#x27;])
+    PASS  Facts atzarani HOLD  (4 facts)
+    PASS  Facts ibaneh HOLD.  (4 facts)
+
+=== S3 — The demand settles in its own verb: after STEP_Gn_16_4
+    וַיָּבֹא אֶל־הָגָר וַתַּהַר (va-yavo el-hagar va-tahar)
+    PASS  SPECS empty  (queue=0)
+    PASS  Facts va-teqal HOLD.  (6 facts)
+
+=== S4 — The grievance and the demand on God: after STEP_Gn_16_5
+    יִשְׁפֹּט יְהוָה בֵּינִי וּבֵינֶיךָ (yishpot YHWH beini u-veinekha)
+    PASS  LET(yishpot(YHWH, beini_u_veinekha)) pushed and OPEN  (queue=[&#x27;yishpot(YHWH, beini_u_veinekha)&#x27;])
+    PASS  Facts chamasi HOLD  (8 facts)
+    PASS  Facts natati-shifchati HOLD.  (8 facts)
+
+=== S5 — The permission stands open over the affliction: after STEP_Gn_16_6
+    עֲשִׂי־לָהּ הַטּוֹב בְּעֵינָיִךְ וַתְּעַנֶּהָ שָׂרַי (asi-lah ha-tov be-einayikh va-teaneha saray)
+    PASS  LET(yishpot(YHWH, beini_u_veinekha)) pushed and OPEN  (queue=[&#x27;yishpot(YHWH, beini_u_veinekha)&#x27;, &#x27;asi(saray, la_hagar_ha_tov_be_einayikh)&#x27;])
+    PASS  LET(asi(saray, la_hagar_ha_tov_be_einayikh)) pushed and OPEN.  (queue=[&#x27;yishpot(YHWH, beini_u_veinekha)&#x27;, &#x27;asi(saray, la_hagar_ha_tov_be_einayikh)&#x27;])
+
+=== S6 — Found and questioned at the spring: after STEP_Gn_16_8
+    אֵי־מִזֶּה בָאת וְאָנָה תֵלֵכִי … אָנֹכִי בֹּרַחַת (ei-mizeh vat ve-anah telekhi … anokhi borachat)
+    PASS  Facts ei-mizeh HOLD  (10 facts)
+    PASS  Facts borachat HOLD  (10 facts)
+    PASS  flags shur as read-before-install  (flagged=[&#x27;shur&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — The return-and-submit pushed: after STEP_Gn_16_9
+    שׁוּבִי אֶל־גְּבִרְתֵּךְ וְהִתְעַנִּי תַּחַת יָדֶיהָ (shuvi el-gevirtekh ve-hitani tachat yadeha)
+    PASS  LET(shuvi_ve_hitani(hagar, el_gevirtekh_tachat_yadeha)) pushed and OPEN.  (queue=[&#x27;yishpot(YHWH, beini_u_veinekha)&#x27;, &#x27;asi(saray, la_hagar_ha_tov_be_einayikh)&#x27;, &#x27;shuvi_ve_hitani(hagar, el_gevirtekh_tachat_yadeha)&#x27;])
+
+=== S8 — The promise and the annunciation: after STEP_Gn_16_11
+    הִנָּךְ הָרָה וְיֹלַדְתְּ בֵּן וְקָרָאת שְׁמוֹ יִשְׁמָעֵאל (hinakh harah ve-yoladt ben ve-qarat shemo yishmael)
+    PASS  Facts harbah-arbeh HOLD  (15 facts)
+    PASS  Facts yisafer HOLD  (15 facts)
+    PASS  Facts hinakh-harah HOLD  (15 facts)
+    PASS  Facts qarat-yishmael HOLD  (15 facts)
+    PASS  Facts shama-onyekh HOLD.  (15 facts)
+
+=== S9 — The wild-ass oracle: after STEP_Gn_16_12
+    פֶּרֶא אָדָם יָדוֹ בַכֹּל וְיַד כֹּל בּוֹ (pere adam yado va-khol ve-yad kol bo)
+    PASS  Facts pere-adam HOLD  (17 facts)
+    PASS  Facts yishkon HOLD.  (17 facts)
+
+=== S10 — The registry takes a name for God: after STEP_Gn_16_13
+    אַתָּה אֵל רֳאִי (atah el roi)
+    PASS  REGISTRY: YHWH-&gt;El_Roi (1 write)  (names={&#x27;YHWH&#x27;: &#x27;El_Roi&#x27;} writes=1)
+    PASS  Facts halom-raiti HOLD.  (18 facts)
+
+=== S11 — The well named by the therefore-formula: after STEP_Gn_16_14
+    עַל־כֵּן קָרָא לַבְּאֵר בְּאֵר לַחַי רֹאִי (al-ken qara la-beer beer lachai roi)
+    PASS  Facts beer-lachai HOLD  (20 facts)
+    PASS  Facts qadesh-bared HOLD  (20 facts)
+    PASS  flags qadesh/bered as read-before-install.  (flagged=[&#x27;bered&#x27;, &#x27;qadesh&#x27;, &#x27;shur&#x27;])
+
+=== S12 — Birth, name, frame — the registry pair closes: after STEP_Gn_16_16
+    וַיִּקְרָא אַבְרָם שֶׁם־בְּנוֹ … יִשְׁמָעֵאל (va-yiqra avram shem-beno … yishmael)
+    PASS  REGISTRY: YHWH-&gt;El_Roi, yishmael-&gt;Yishmael (2 writes)  (names={&#x27;YHWH&#x27;: &#x27;El_Roi&#x27;, &#x27;yishmael&#x27;: &#x27;Yishmael&#x27;} writes=2)
+    PASS  LET(yishpot(YHWH, beini_u_veinekha)) pushed and OPEN  (queue=[&#x27;yishpot(YHWH, beini_u_veinekha)&#x27;, &#x27;asi(saray, la_hagar_ha_tov_be_einayikh)&#x27;, &#x27;shuvi_ve_hitani(hagar, el_gevirtekh_tachat_yadeha)&#x27;])
+    PASS  LET(asi(saray, la_hagar_ha_tov_be_einayikh)) pushed and OPEN  (queue=[&#x27;yishpot(YHWH, beini_u_veinekha)&#x27;, &#x27;asi(saray, la_hagar_ha_tov_be_einayikh)&#x27;, &#x27;shuvi_ve_hitani(hagar, el_gevirtekh_tachat_yadeha)&#x27;])
+    PASS  LET(shuvi_ve_hitani(hagar, el_gevirtekh_tachat_yadeha)) pushed and OPEN  (queue=[&#x27;yishpot(YHWH, beini_u_veinekha)&#x27;, &#x27;asi(saray, la_hagar_ha_tov_be_einayikh)&#x27;, &#x27;shuvi_ve_hitani(hagar, el_gevirtekh_tachat_yadeha)&#x27;])
+    PASS  Facts ben-shemonim HOLD  (21 facts)
+    PASS  LEDGER stays EMPTY (open transaction).  (ledger_days=[])
+
+=== S13_negative — Negative: the LET? contract guard
+    בֹּא־נָא (bo-na)
+    PASS  imperfect-in-command parsed as LET? (question mark kept)  (mood=LET?)
+    PASS  auto-upgrade REFUSED  (TIR-028: LET? never auto-upgrades to LET — a per-unit judgme...)
+    PASS  upgrade WITH citation allowed  (cite=per-unit judgment (owner), TIR-028 resolution)
+
+=== S14_negative — Negative: flags never block
+    PASS  commit proceeded (not blocked)  (LEDGER=[99])
+    PASS  pattern deviation FLAGGED  (flags=[&#x27;commit_without_test&#x27;])
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_32_hagar_angel.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_32_hagar_angel — 16:1-16
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_32_hagar_angel.yaml) is CANONICAL (Pre-Code);
+# this file is a derived, runnable rendering. Do not edit — regenerate. The
+# assertion block at the bottom is baked from the Stage D interpreter&#x27;s
+# actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Hagar: the maid given, the flight, the angel, the names (16:1-16)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_32_hagar_angel&quot;)
+
+# -------------------------- Gen.16.1 · THE_BARREN_WIFE_AND_THE_MAID --------
+# וְשָׂרַי אֵשֶׁת אַבְרָם לֹא יָלְדָה לוֹ וְלָהּ שִׁפְחָה מִצְרִית וּשְׁמָהּ
+# הָגָר
+# &quot;Now Sarai Abram&#x27;s wife bore him no children; and she had a handmaid, an
+# Egyptian, whose name was Hagar.&quot;
+m.step(&quot;Gen.16.1&quot;)
+# ‹לֹא יָלְדָה לוֹ וְלָהּ שִׁפְחָה מִצְרִית וּשְׁמָהּ הָגָר› (“not bear-
+# young to-him/its and-to-her/its female-slave Egyptian and-name-her/its
+# Hagar”) — fact holds: Sarai-not-yaldah-not; and-lah-shifchah-Egyptian-and-
+# shemah-Hagar
+m.fact(&quot;saray_lo_yaldah_lo&quot;,
+       &quot;ve_lah_shifchah_mitzrit_u_shemah_hagar&quot;)
+
+# -------------------------- Gen.16.2 · THE_INITIATIVE_AND_THE_LISTENING ----
+# וַתֹּאמֶר שָׂרַי אֶל־אַבְרָם הִנֵּה־נָא עֲצָרַנִי יְהוָה מִלֶּדֶת בֹּא־נָא
+# אֶל־שִׁפְחָתִי אוּלַי אִבָּנֶה מִמֶּנָּה וַיִּשְׁמַע אַבְרָם לְקוֹל שָׂרָי
+# &quot;And Sarai said unto Abram: &#x27;Behold now, the LORD hath restrained me from
+# bearing; go in, I pray thee, unto my handmaid; it may be that I shall be
+# builded up through her.&#x27; And Abram hearkened to the voice of Sarai.&quot;
+m.step(&quot;Gen.16.2&quot;)
+# ‹וַתֹּאמֶר שָׂרַי אֶל־אַבְרָם› (“and-say Sarai to Abram”) — event: say —
+# agent Sarai
+m.event(&quot;say&quot;, agent=&quot;saray&quot;)
+# ‹בֹּא־נָא אֶל־שִׁפְחָתִי› (“come/bring please to female-slave-me/my”) —
+# Sarai speaks a demand — LET: come/bring(Abram, to-shifchati)
+m.declare(&quot;saray&quot;, &quot;LET&quot;,
+          &quot;bo(avram, el_shifchati)&quot;)
+# ‹עֲצָרַנִי יְהוָה מִלֶּדֶת … אוּלַי אִבָּנֶה מִמֶּנָּה› (“close-me/my YHWH
+# from-bear-young … if-not build from-her/its”) — fact holds: atzarani-the-
+# LORD-from-bear-young; if-not-ibaneh-mimenah
+m.fact(&quot;atzarani_YHWH_mi_ledet&quot;,
+       &quot;ulay_ibaneh_mimenah&quot;)
+# ‹וַיִּשְׁמַע אַבְרָם לְקוֹל שָׂרָי› (“and-hear Abram to-voice/sound
+# Sarai”) — event: hear — agent Abram; theme voice/sound-Sarai
+m.event(&quot;hear&quot;, agent=&quot;avram&quot;, themes=[&quot;qol_saray&quot;])
+
+# -------------------------- Gen.16.3 · THE_TAKE_AND_THE_GIVE ---------------
+# וַתִּקַּח שָׂרַי אֵשֶׁת־אַבְרָם אֶת־הָגָר הַמִּצְרִית שִׁפְחָתָהּ מִקֵּץ
+# עֶשֶׂר שָׁנִים לְשֶׁבֶת אַבְרָם בְּאֶרֶץ כְּנָעַן וַתִּתֵּן אֹתָהּ
+# לְאַבְרָם אִישָׁהּ לוֹ לְאִשָּׁה
+# &quot;And Sarai Abram&#x27;s wife took Hagar the Egyptian, her handmaid, after Abram
+# had dwelt ten years in the land of Canaan, and gave her to Abram her
+# husband to be his wife.&quot;
+m.step(&quot;Gen.16.3&quot;)
+# ‹וַתִּקַּח שָׂרַי … אֶת־הָגָר› (“and-take Sarai … obj-marker Hagar”) —
+# event: take — agent Sarai; theme Hagar
+m.event(&quot;take&quot;, agent=&quot;saray&quot;, themes=[&quot;hagar&quot;])
+# ‹וַתִּתֵּן אֹתָהּ לְאַבְרָם אִישָׁהּ לוֹ לְאִשָּׁה› (“and-set obj-marker-
+# her/its to-Abram man-her/its to-him/its to-woman”) — event: give — agent
+# Sarai; theme Hagar
+m.event(&quot;give&quot;, agent=&quot;saray&quot;, themes=[&quot;hagar&quot;])
+# ‹מִקֵּץ עֶשֶׂר שָׁנִים לְשֶׁבֶת אַבְרָם בְּאֶרֶץ כְּנָעַן› (“from-end ten
+# years to-dwell/sit Abram in-earth Canaan”) — fact holds: from-end-ten-
+# years-to-dwell/sit-Abram-in-earth-Canaan
+m.fact(&quot;mi_qetz_eser_shanim_le_shevet_avram_be_eretz_kenaan&quot;)
+
+# -------------------------- Gen.16.4 · THE_COMPLIANCE_AND_THE_CONTEMPT -----
+# וַיָּבֹא אֶל־הָגָר וַתַּהַר וַתֵּרֶא כִּי הָרָתָה וַתֵּקַל גְּבִרְתָּהּ
+# בְּעֵינֶיהָ
+# &quot;And he went in unto Hagar, and she conceived; and when she saw that she
+# had conceived, her mistress was despised in her eyes.&quot;
+m.step(&quot;Gen.16.4&quot;)
+# ‹וַיָּבֹא אֶל־הָגָר› (“and-come/bring to Hagar”) — event: come — agent
+# Abram
+m.event(&quot;come&quot;, agent=&quot;avram&quot;)
+# ‹וַיָּבֹא אֶל־הָגָר› (“and-come/bring to Hagar”) — demand settled (popped
+# from the queue): come/bring(Abram, to-shifchati)
+m.result(&quot;bo(avram, el_shifchati)&quot;, tmark=&quot;t1&quot;)
+# ‹וַתַּהַר› (“and-be-pregnant”) — event: conceive — agent Hagar
+m.event(&quot;conceive&quot;, agent=&quot;hagar&quot;)
+# ‹וַתֵּקַל גְּבִרְתָּהּ בְּעֵינֶיהָ› (“and-be-light mistress-her/its in-
+# eye-her/its”) — fact holds: and-be-light-gevirtah-in-eineha
+m.fact(&quot;va_teqal_gevirtah_be_eineha&quot;)
+
+# -------------------------- Gen.16.5 · THE_GRIEVANCE_AND_THE_DEMAND_ON_GOD -
+# וַתֹּאמֶר שָׂרַי אֶל־אַבְרָם חֲמָסִי עָלֶיךָ אָנֹכִי נָתַתִּי שִׁפְחָתִי
+# בְּחֵיקֶךָ וַתֵּרֶא כִּי הָרָתָה וָאֵקַל בְּעֵינֶיהָ יִשְׁפֹּט יְהוָה
+# בֵּינִי וּבֵינֶיךָ
+# &quot;And Sarai said unto Abram: &#x27;My wrong be upon thee: I gave my handmaid
+# into thy bosom; and when she saw that she had conceived, I was despised in
+# her eyes: the LORD judge between me and thee.&#x27;&quot;
+m.step(&quot;Gen.16.5&quot;)
+# ‹וַתֹּאמֶר שָׂרַי אֶל־אַבְרָם› (“and-say Sarai to Abram”) — event: say —
+# agent Sarai
+m.event(&quot;say&quot;, agent=&quot;saray&quot;)
+# ‹חֲמָסִי עָלֶיךָ אָנֹכִי נָתַתִּי שִׁפְחָתִי בְּחֵיקֶךָ› (“violence-me/my
+# over-you/your set female-slave-me/my in-bosom-you/your”) — fact holds:
+# chamasi-alekha; anokhi-set-shifchati-in-cheqekha
+m.fact(&quot;chamasi_alekha&quot;,
+       &quot;anokhi_natati_shifchati_be_cheqekha&quot;)
+# ‹יִשְׁפֹּט יְהוָה בֵּינִי וּבֵינֶיךָ› (“judge YHWH between-me/my and-
+# between-you/your”) — Sarai speaks a demand — LET: judge(the-LORD, beini-
+# and-veinekha)
+m.declare(&quot;saray&quot;, &quot;LET&quot;,
+          &quot;yishpot(YHWH, beini_u_veinekha)&quot;)
+
+# -------------------------- Gen.16.6 · THE_PERMISSION_THE_AFFLICTION_THE_FLIGHT -
+# וַיֹּאמֶר אַבְרָם אֶל־שָׂרַי הִנֵּה שִׁפְחָתֵךְ בְּיָדֵךְ עֲשִׂי־לָהּ
+# הַטּוֹב בְּעֵינָיִךְ וַתְּעַנֶּהָ שָׂרַי וַתִּבְרַח מִפָּנֶיהָ
+# &quot;But Abram said unto Sarai: &#x27;Behold, thy maid is in thy hand; do to her
+# that which is good in thine eyes.&#x27; And Sarai dealt harshly with her, and
+# she fled from her face.&quot;
+m.step(&quot;Gen.16.6&quot;)
+# ‹וַיֹּאמֶר אַבְרָם אֶל־שָׂרַי› (“and-say Abram to Sarai”) — event: say —
+# agent Abram
+m.event(&quot;say&quot;, agent=&quot;avram&quot;)
+# ‹עֲשִׂי־לָהּ הַטּוֹב בְּעֵינָיִךְ› (“make to-her/its the-good in-eye-
+# you/your”) — Abram speaks a demand — LET: make(Sarai, to-Hagar-the-good-
+# in-einayikh)
+m.declare(&quot;avram&quot;, &quot;LET&quot;,
+          &quot;asi(saray, la_hagar_ha_tov_be_einayikh)&quot;)
+# ‹וַתְּעַנֶּהָ שָׂרַי› (“and-afflict-literally-her/its Sarai”) — event:
+# afflict — agent Sarai; theme Hagar
+m.event(&quot;afflict&quot;, agent=&quot;saray&quot;, themes=[&quot;hagar&quot;])
+# ‹וַתִּבְרַח מִפָּנֶיהָ› (“and-bolt from-face-her/its”) — event: flee —
+# agent Hagar
+m.event(&quot;flee&quot;, agent=&quot;hagar&quot;)
+
+# -------------------------- Gen.16.7 · THE_ANGEL_FINDS_HER -----------------
+# וַיִּמְצָאָהּ מַלְאַךְ יְהוָה עַל־עֵין הַמַּיִם בַּמִּדְבָּר עַל־הָעַיִן
+# בְּדֶרֶךְ שׁוּר
+# &quot;And the angel of the LORD found her by a fountain of water in the
+# wilderness, by the fountain in the way to Shur.&quot;
+m.step(&quot;Gen.16.7&quot;)
+# ‹וַיִּמְצָאָהּ מַלְאַךְ יְהוָה› (“and-find-her/its messenger YHWH”) —
+# event: find — agent messenger-the-LORD; theme Hagar
+m.event(&quot;find&quot;, agent=&quot;malakh_YHWH&quot;, themes=[&quot;hagar&quot;])
+# reads without prior install (flag, not fix): Shur
+m.presupposed(&quot;shur&quot;)
+
+# -------------------------- Gen.16.8 · THE_WHERE_QUESTIONS_AND_THE_RUNAWAY_ANSWER -
+# וַיֹּאמַר הָגָר שִׁפְחַת שָׂרַי אֵי־מִזֶּה בָאת וְאָנָה תֵלֵכִי וַתֹּאמֶר
+# מִפְּנֵי שָׂרַי גְּבִרְתִּי אָנֹכִי בֹּרַחַת
+# &quot;And he said: &#x27;Hagar, Sarai&#x27;s handmaid, whence camest thou? and whither
+# goest thou?&#x27; And she said: &#x27;I flee from the face of my mistress Sarai.&#x27;&quot;
+m.step(&quot;Gen.16.8&quot;)
+# ‹וַיֹּאמַר הָגָר שִׁפְחַת שָׂרַי אֵי־מִזֶּה בָאת וְאָנָה תֵלֵכִי› (“and-
+# say Hagar female-slave Sarai how? from-this come/bring and-where? go”) —
+# event: say — agent messenger-the-LORD
+m.event(&quot;say&quot;, agent=&quot;malakh_YHWH&quot;)
+# ‹אֵי־מִזֶּה בָאת וְאָנָה תֵלֵכִי› (“how? from-this come/bring and-where?
+# go”) — fact holds: ei-mizeh-come/bring-and-anah-go
+m.fact(&quot;ei_mizeh_vat_ve_anah_telekhi&quot;)
+# ‹וַתֹּאמֶר› (“and-say”) — event: say — agent Hagar
+m.event(&quot;say&quot;, agent=&quot;hagar&quot;)
+# ‹מִפְּנֵי שָׂרַי גְּבִרְתִּי אָנֹכִי בֹּרַחַת› (“from-face Sarai mistress-
+# me/my bolt”) — fact holds: from-face-of-Sarai-gevirti-anokhi-bolt
+m.fact(&quot;mi_pnei_saray_gevirti_anokhi_borachat&quot;)
+
+# -------------------------- Gen.16.9 · THE_RETURN_AND_SUBMIT_COMMAND -------
+# וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה שׁוּבִי אֶל־גְּבִרְתֵּךְ וְהִתְעַנִּי
+# תַּחַת יָדֶיהָ
+# &quot;And the angel of the LORD said unto her: &#x27;Return to thy mistress, and
+# submit thyself under her hands.&#x27;&quot;
+m.step(&quot;Gen.16.9&quot;)
+# ‹וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה› (“and-say to-her/its messenger YHWH”) —
+# event: say — agent messenger-the-LORD
+m.event(&quot;say&quot;, agent=&quot;malakh_YHWH&quot;)
+# ‹שׁוּבִי אֶל־גְּבִרְתֵּךְ וְהִתְעַנִּי תַּחַת יָדֶיהָ› (“return to
+# mistress-you/your and-afflict-literally under hand-her/its”) — messenger-
+# the-LORD speaks a demand — LET: return-and-afflict-literally(Hagar, to-
+# gevirtekh-under-yadeha)
+m.declare(&quot;malakh_YHWH&quot;, &quot;LET&quot;,
+          &quot;shuvi_ve_hitani(hagar, el_gevirtekh_tachat_yadeha)&quot;)
+
+# -------------------------- Gen.16.10 · THE_UNCOUNTABLE_SEED ---------------
+# וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה הַרְבָּה אַרְבֶּה אֶת־זַרְעֵךְ וְלֹא
+# יִסָּפֵר מֵרֹב
+# &quot;And the angel of the LORD said unto her: &#x27;I will greatly multiply thy
+# seed, that it shall not be numbered for multitude.&#x27;&quot;
+m.step(&quot;Gen.16.10&quot;)
+# ‹וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה› (“and-say to-her/its messenger YHWH”) —
+# event: say — agent messenger-the-LORD
+m.event(&quot;say&quot;, agent=&quot;malakh_YHWH&quot;)
+# ‹הַרְבָּה אַרְבֶּה אֶת־זַרְעֵךְ וְלֹא יִסָּפֵר מֵרֹב› (“multiply multiply
+# obj-marker seed-you/your and-not count from-abundance”) — fact holds:
+# greatly-I-will-multiply-obj-marker-zarekh; and-not-count-from-abundance
+m.fact(&quot;harbah_arbeh_et_zarekh&quot;,
+       &quot;ve_lo_yisafer_me_rov&quot;)
+
+# -------------------------- Gen.16.11 · THE_ANNUNCIATION -------------------
+# וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה הִנָּךְ הָרָה וְיֹלַדְתְּ בֵּן וְקָרָאת
+# שְׁמוֹ יִשְׁמָעֵאל כִּי־שָׁמַע יְהוָה אֶל־עָנְיֵךְ
+# &quot;And the angel of the LORD said unto her: &#x27;Behold, thou art with child,
+# and shalt bear a son; and thou shalt call his name Ishmael, because the
+# LORD hath heard thy affliction.&#x27;&quot;
+m.step(&quot;Gen.16.11&quot;)
+# ‹וַיֹּאמֶר לָהּ מַלְאַךְ יְהוָה› (“and-say to-her/its messenger YHWH”) —
+# event: say — agent messenger-the-LORD
+m.event(&quot;say&quot;, agent=&quot;malakh_YHWH&quot;)
+# ‹הִנָּךְ הָרָה וְיֹלַדְתְּ בֵּן וְקָרָאת שְׁמוֹ יִשְׁמָעֵאל כִּי־שָׁמַע
+# יְהוָה אֶל־עָנְיֵךְ› (“behold-you/your pregnant and-bear-young son and-
+# call name-him/its Ishmael that hear YHWH to affliction-you/your”) — fact
+# holds: hinakh-harah-and-bear-young-son; and-call-shemo-Ishmael; that-hear-
+# the-LORD-to-onyekh
+m.fact(&quot;hinakh_harah_ve_yoladt_ben&quot;,
+       &quot;ve_qarat_shemo_yishmael&quot;,
+       &quot;ki_shama_YHWH_el_onyekh&quot;)
+
+# -------------------------- Gen.16.12 · THE_WILD_ASS_ORACLE ----------------
+# וְהוּא יִהְיֶה פֶּרֶא אָדָם יָדוֹ בַכֹּל וְיַד כֹּל בּוֹ וְעַל־פְּנֵי
+# כָל־אֶחָיו יִשְׁכֹּן
+# &quot;And he shall be a wild ass of a man: his hand shall be against every man,
+# and every man&#x27;s hand against him; and he shall dwell in the face of all
+# his brethren.&#x27;&quot;
+m.step(&quot;Gen.16.12&quot;)
+# ‹פֶּרֶא אָדָם יָדוֹ בַכֹּל וְיַד כֹּל בּוֹ וְעַל־פְּנֵי כָל־אֶחָיו
+# יִשְׁכֹּן› (“onager human hand-him/its in-all and-hand all in-him/its and-
+# over face all brother-him/its reside”) — fact holds: onager-human-his-
+# hand-and-all-and-hand-all-come/bring; over-face-of-all-echav-reside
+m.fact(&quot;pere_adam_yado_va_khol_ve_yad_kol_bo&quot;,
+       &quot;al_pnei_khol_echav_yishkon&quot;)
+
+# -------------------------- Gen.16.13 · SHE_NAMES_YHWH ---------------------
+# וַתִּקְרָא שֵׁם־יְהוָה הַדֹּבֵר אֵלֶיהָ אַתָּה אֵל רֳאִי כִּי אָמְרָה
+# הֲגַם הֲלֹם רָאִיתִי אַחֲרֵי רֹאִי
+# &quot;And she called the name of the LORD that spoke unto her, Thou art a God
+# of seeing; for she said: &#x27;Have I even here seen Him that seeth Me?&#x27;&quot;
+m.step(&quot;Gen.16.13&quot;)
+# ‹וַתִּקְרָא שֵׁם־יְהוָה הַדֹּבֵר אֵלֶיהָ אַתָּה אֵל רֳאִי› (“and-call name
+# YHWH the-speak to-her/its you strength sight”) — named: the-LORD := El-Roi
+m.name(&quot;YHWH&quot;, &quot;El_Roi&quot;)
+# ‹כִּי אָמְרָה הֲגַם הֲלֹם רָאִיתִי אַחֲרֵי רֹאִי› (“that say the-also
+# hither see after see-me/my”) — fact holds: hagam-hither-see-acharei-sight
+m.fact(&quot;hagam_halom_raiti_acharei_roi&quot;)
+
+# -------------------------- Gen.16.14 · THE_WELL_OF_THE_LIVING_ONE_WHO_SEES -
+# עַל־כֵּן קָרָא לַבְּאֵר בְּאֵר לַחַי רֹאִי הִנֵּה בֵין־קָדֵשׁ וּבֵין
+# בָּרֶד
+# &quot;Wherefore the well was called &#x27;Beer-lahai-roi; behold, it is between
+# Kadesh and Bered.&quot;
+m.step(&quot;Gen.16.14&quot;)
+# ‹עַל־כֵּן קָרָא לַבְּאֵר בְּאֵר לַחַי רֹאִי› (“over so call to-pit Beer-
+# lahai-roi”) — pattern recorded: over-so-call-to-pit-pit-lachai-sight
+m.pattern(&quot;al_ken_qara_la_beer_beer_lachai_roi&quot;)
+# ‹הִנֵּה בֵין־קָדֵשׁ וּבֵין בָּרֶד› (“behold between Kadesh and-between
+# Bered”) — fact holds: hineh-vein-Kadesh-and-vein-Bered
+m.fact(&quot;hineh_vein_qadesh_u_vein_bared&quot;)
+# reads without prior install (flag, not fix): Kadesh, bered
+m.presupposed(&quot;qadesh&quot;, &quot;bered&quot;)
+
+# -------------------------- Gen.16.15 · THE_BIRTH_AND_THE_FATHERS_NAMING ---
+# וַתֵּלֶד הָגָר לְאַבְרָם בֵּן וַיִּקְרָא אַבְרָם שֶׁם־בְּנוֹ
+# אֲשֶׁר־יָלְדָה הָגָר יִשְׁמָעֵאל
+# &quot;And Hagar bore Abram a son; and Abram called the name of his son, whom
+# Hagar bore, Ishmael.&quot;
+m.step(&quot;Gen.16.15&quot;)
+# ‹וַתֵּלֶד הָגָר לְאַבְרָם בֵּן› (“and-bear-young Hagar to-Abram son”) —
+# event: bear — agent Hagar; theme Ishmael
+m.event(&quot;bear&quot;, agent=&quot;hagar&quot;, themes=[&quot;yishmael&quot;])
+# ‹וַיִּקְרָא אַבְרָם שֶׁם־בְּנוֹ … יִשְׁמָעֵאל› (“and-call Abram name son-
+# him/its … Ishmael”) — named: Ishmael := Yishmael
+m.name(&quot;yishmael&quot;, &quot;Yishmael&quot;)
+
+# -------------------------- Gen.16.16 · THE_AGE_FRAME ----------------------
+# וְאַבְרָם בֶּן־שְׁמֹנִים שָׁנָה וְשֵׁשׁ שָׁנִים בְּלֶדֶת־הָגָר
+# אֶת־יִשְׁמָעֵאל לְאַבְרָם
+# &quot;And Abram was fourscore and six years old, when Hagar bore Ishmael to
+# Abram.&quot;
+m.step(&quot;Gen.16.16&quot;)
+# ‹וְאַבְרָם בֶּן־שְׁמֹנִים שָׁנָה וְשֵׁשׁ שָׁנִים› (“and-Abram son eighty
+# years and-six years”) — fact holds: Abram-son-eighty-year-and-six-years
+m.fact(&quot;avram_ben_shemonim_shanah_ve_shesh_shanim&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == {&#x27;bered&#x27;, &#x27;shur&#x27;, &#x27;qadesh&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {&#x27;YHWH&#x27;: &#x27;El_Roi&#x27;, &#x27;yishmael&#x27;: &#x27;Yishmael&#x27;}
+    assert m.REGISTRY[&quot;writes&quot;] == 2
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;yishpot(YHWH, beini_u_veinekha)&#x27;, &#x27;asi(saray, la_hagar_ha_tov_be_einayikh)&#x27;, &#x27;shuvi_ve_hitani(hagar, el_gevirtekh_tachat_yadeha)&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 4
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;read_before_install&#x27;: 3, &#x27;named_before_any_presence&#x27;: 2}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;saray_lo_yaldah_lo&#x27;, &#x27;ve_lah_shifchah_mitzrit_u_shemah_hagar&#x27;, &#x27;atzarani_YHWH_mi_ledet&#x27;, &#x27;ulay_ibaneh_mimenah&#x27;, &#x27;mi_qetz_eser_shanim_le_shevet_avram_be_eretz_kenaan&#x27;, &#x27;va_teqal_gevirtah_be_eineha&#x27;, &#x27;chamasi_alekha&#x27;, &#x27;anokhi_natati_shifchati_be_cheqekha&#x27;, &#x27;ei_mizeh_vat_ve_anah_telekhi&#x27;, &#x27;mi_pnei_saray_gevirti_anokhi_borachat&#x27;, &#x27;harbah_arbeh_et_zarekh&#x27;, &#x27;ve_lo_yisafer_me_rov&#x27;, &#x27;hinakh_harah_ve_yoladt_ben&#x27;, &#x27;ve_qarat_shemo_yishmael&#x27;, &#x27;ki_shama_YHWH_el_onyekh&#x27;, &#x27;pere_adam_yado_va_khol_ve_yad_kol_bo&#x27;, &#x27;al_pnei_khol_echav_yishkon&#x27;, &#x27;hagam_halom_raiti_acharei_roi&#x27;, &#x27;pattern: al_ken_qara_la_beer_beer_lachai_roi&#x27;, &#x27;hineh_vein_qadesh_u_vein_bared&#x27;, &#x27;avram_ben_shemonim_shanah_ve_shesh_shanim&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 25
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

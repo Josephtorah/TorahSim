@@ -1,0 +1,1027 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>exo_04_signs_and_firstborn — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/exo_04_signs_and_firstborn?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The signs and the firstborn (4:1-31) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>exo_04_signs_and_firstborn</b> · Exodus 4:1-31 · derive logic_derived_v1 · phase FWD-18</div>
+<div class="meta"><a href="../#Exod/4/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">בְּנִי בְכֹרִי יִשְׂרָאֵל</span> · <i>beni vekhori yisrael</i> · &#x27;My son, My firstborn — Israel&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DERIVED 2026-08-09 · FORWARD ERA unit #18 (run FWD-4 block 4). Span: 4:1-31, whole chapter: 31 verses (SNAPSHOT-verified), every verse with an etnachta (the mid-verse pause); one written-one-read-two station carried in the stream&#x27;s two-token convention (4:2). Oral layer IN-PIPELINE: manifest 13/13 VERIFIED, zero FAILED — see oral_audit_note_en. MACHINE PROFILE. TWELVE DECLAREs, NINE RESULTs — the run&#x27;s machine-richest unit. SIX SAME-VERSE discharges: the FOUR SIGN-DRILLS (4:3 throw, 4:4 seize, 4:6 bosom, 4:7 restore — push, perform, close, inside one verse, four times running: the queue taught as a catechism) plus the leave-request granted (4:18, gen_70&#x27;s class) and Aaron&#x27;s meet-and-kiss (4:27). THREE cross-verse pops: the staff taken (4:17→20, the object promoted to &#x27;the staff of GOD&#x27; between push and pop), the return performed (4:19→20), the relay-words told (4:15→28). THREE OPEN at close: the SEND-BY-ANOTHER plea (4:13 — the transcended class, gen_67&#x27;s substitution precedent: answered in the world by Aaron&#x27;s office, never granted or refused on the queue); the WONDERS-CHARGE (4:21 — performance = the plague-cycle, armed at 7:10); the SON-SCRIPT (4:22-23 — armed at the midnight-announcement 11:4-5 and the stroke 12:29). ONE EVENT: Zipporah&#x27;s flint (4:25 — the covenant of the flesh executed unbidden; the seeking of 4:24 discharged by a deed the letter never commanded: the queue&#x27;s strangest transaction, held as standing-fact mechanics, no card). exo_02&#x27;s seek-to-kill (2:15) RECEIPTED at 4:19 in its own verb. exo_03&#x27;s elders-script begins performing at 4:29-31 — NO in-unit pop (one-world law): the settlement link authored at the world- fold, citing the gathering, the speaking, and the believing whole. REGISTRY 0; TESTS 0; LEDGER 0. CARE-POINTS: the commission reissued at 4:12 and 4:19 pushes NO new demand (a reissue is not a new debt); the conditional third sign (4:9) installs nothing (the fence) and is never narrated for the people — the letter leaves the water-sign to the plague (7:20); the HARDENING file opens at 4:21 (the freewill-court convened, NOT ruled); the believed-verse (4:31) refutes 4:1 in the letter&#x27;s rarest coin. WATCHLIST ARMS: 7:1 (the offices restated), 7:10 (the staff-wonder before Pharaoh), 7:20 (the blood), 11:4-5 + 12:29 (the son-script&#x27;s edge), 12:7 (the two bloods), 18:2-4 (Zipporah and the sons re-enter), 28:29 (the rejoicing heart wears the breastplate).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-09 (IN-PIPELINE, forward era; manifest logic/oral_audit/manifests/exo_04_signs_and_firstborn_claims.json 13/13 VERIFIED, zero FAILED; record logic/oral_audit/AUDIT_exo_04_2026-08-09.md). CROWNS (chain-attested + DB-verified). THE NAME IN THE INITIALS [EX04-01, Kitzur on 4:14] — THE UNIT&#x27;S MARQUEE: the initial letters of ידבר הוא וגם הנה (&quot;he will surely speak — he; and also, behold&quot;) spell the FOUR-LETTER NAME — checked mechanically: &#x27;He handed the Name and its epithets to Aaron too&#x27; — the run&#x27;s twin crowns close: the Name in the FINALS at the question (3:13), in the INITIALS at the brother&#x27;s appointment. THE WRITTEN-ONE-READ-TWO [EX04-02, MS on 4:2; the Ramah]: מזה (&quot;what-is-this&quot;) — one of the Masorah&#x27;s fifteen, carried in the stream&#x27;s two-token convention, both layers verified; the from-this-you&#x27;ll-be- struck homily named. THE THROW-WORD SPLIT [EX04-03, MS on 4:3]: השליכהו (&quot;throw it&quot;) FULL — the printer corrected; and the verse&#x27;s second throw-word a genuine STREAM-SPLIT: the Ramah&#x27;s eight-lean list against the stream&#x27;s full letter — carried named, never merged (dual-track law). THE IN-UNIT ENCOUNTER PAIR [EX04-04, Kitzur on 4:24]: ויפגשהו (&quot;and he met him&quot;) — exactly twice in Scripture, BOTH in this chapter: met to be killed (4:24), met to be kissed (4:27); by-Aaron&#x27;s-merit named. THE TWO TEACHINGS [EX04-05, MS + Kitzur on 4:12/15]: והוריתיך and והוריתי (&quot;I will teach&quot;) — both Torah-unique; the printed margin overruled; the five crowns and the Samuel-pair named. THE BELIEVED PEOPLE [EX04-06, Kitzur on 4:31]: ויאמן (&quot;and they believed&quot;) — Torah-unique; the two-shepherds pair (Moses and David) named; the single visit-verb closing the password-file in the people&#x27;s hearing. THE FUTURE DUMB-MAKING [EX04-07, Kitzur on 4:11]: ישום (&quot;who makes&quot;) — Torah-unique future form; the day-of-judgment reading. THE LEAN RETURN [EX04-08, MS vs Kitzur on 4:19]: שב (&quot;return&quot;) — MS&#x27;s unique-lean against the Kitzur&#x27;s two-count with the seven-journeys tradition: the count-dispute carried named; the homograph census printed. THE ACCENT-AND-DOT FILE [EX04-09, MS]: the dotted lamed of the mouth-office (4:16); the plea-word&#x27;s two strokes (4:13); the fore-stress; the wheel-mark station at 4:21; the no-pause-line at 4:30; the full latter-sign (4:8). THE BOSOM THREE [EX04-10, Kitzur on 4:6]: בחיקך (&quot;your bosom&quot;) — Torah-three exact (Sarai&#x27;s wrong, the sign, the nurse&#x27;s bosom); David&#x27;s struck-bosom named. THE BRING-WORD CHAIN [EX04-11, Kitzur on 4:6]: הבא (&quot;bring&quot;) — Joseph&#x27;s descent, Moses&#x27; ascent, the city-gathering: the chain&#x27;s three stations named, the station checked. THE STAFF AND THE ELDERS [EX04-12, Kitzur on 4:17/18]: the staff&#x27;s crowns (the NINTH righteous holder — the relay from Adam); Jethro&#x27;s pair with the exile-elders (the Sanhedrin from Midian&#x27;s priest). THE FIRSTBORN PAIR [EX04-13, Kitzur on 4:22]: בכרי (&quot;my firstborn&quot;) — the stream&#x27;s exact Torah-pair: Reuben DEMOTED (Gen 49:3), Israel ELECTED — plus the named-only remainder (the purpose-clause, the conditional sign, the hardening file, the blood-bridegroom split, the go-in-peace).</div>
+<div class="meta">confidence: structure tested; oral layer verified 13/13</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>FORWARD ERA run 4, block 4. Canon continuation: Exod 4:1-31 — the signs, the demurrals, the road, the believing; whole chapter.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Span + source + conventions</td><td>SNAPSHOT prestage: 31 verses, every verse with an etnachta (the mid-verse pause). One written-one-read-two station (4:2, carried as unpointed-written + pointed-read tokens). Volitive census: the four drill-imperatives (4:3, 4:4, 4:6, 4:7), the send-by-another plea (4:13), the relay (4:15), the staff (4:17), the leave-request (4:18), the return (4:19), the wonders-charge (4:21), the son-script (4:22) — twelve DECLAREs; 4:12&#x27;s go is a reissue (no new demand); 4:9&#x27;s third sign is conditional (fence).</td><td>established</td></tr>
+<tr><td><b>C</b></td><td>Machine structure</td><td>Twelve DECLAREs, nine RESULTs: six same-verse discharges (the four-drill catechism + the leave-grant + the meet-and-kiss); three cross-verse pops (staff 4:17-20, return 4:19-20, relay 4:15-28). Three open at close: the transcended send-plea, the wonders-charge, the son-script. EVENT at 4:25 (the flint). The inn-seeking held as standing fact, discharged by an uncommanded deed (care-point). No in-unit pop for exo_03&#x27;s elders-script at 4:29-31 (one-world law — link at fold). REGISTRY 0; TESTS 0; LEDGER 0.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Exod 4 (10 notes) + Kitzur Baal HaTurim on Exod 4 (13 notes). Manifest 13 rows: 13 VERIFIED / 0 FAILED / 0 UNCHECKABLE. The Name in the initials (mechanical, the finals&#x27; twin); a genuine stream-vs-chain spelling split carried named (the second throw-word); the firstborn-pair reframed on the stream&#x27;s own census (Reuben demoted / Israel elected).</td><td>established</td></tr>
+<tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 13/13 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-09 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Ex_4_1 · Exod.4.1 · <span class='expr'>THEY_WILL_NOT_BELIEVE</span></h3>
+<p><span class="he">וַיַּעַן מֹשֶׁה וַיֹּאמֶר וְהֵן לֹא־יַאֲמִינוּ לִי וְלֹא יִשְׁמְעוּ בְּקֹלִי כִּי יֹאמְרוּ לֹא־נִרְאָה אֵלֶיךָ יְהוָה</span> · <i>va-yaan moshe va-yomer ve-hen lo-yaaminu li-y ve-lo yishmu be-qoli-y ki yomru lo-nira ele-kha YHWH</i> · And Moses answered and said: But behold, they will not believe me, and will not hear my voice; for they will say: The LORD has not appeared to you.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּ֤עַן מֹשֶׁה֙ וַיֹּ֔אמֶר וְהֵן֙ לֹֽא יַאֲמִ֣ינוּ לִ֔י וְלֹ֥א יִשְׁמְע֖וּ בְּקֹלִ֑י</span> · <i>va-yaan moshe va-yomer ve-hen lo-yaaminu li-y ve-lo yishmu be-qoli-y</i> · but behold, they will not believe me, and will not hear my voice (etnachta on be-qoli-y) [VERIFIED: SNAPSHOT Exod.4.1 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּ֣י יֹֽאמְר֔וּ לֹֽא נִרְאָ֥ה אֵלֶ֖יךָ יְהוָֽה</span> · <i>ki yomru lo-nira ele-kha YHWH</i> · for they will say: the LORD has not appeared to you (verse-final YHWH) [VERIFIED: SNAPSHOT Exod.4.1 idx10-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_hen_lo_yaaminu_li, t0)</span><br><span class="gloss">= HOLDS(and-hen-not-yaaminu-to-me, t0)</span><br>THE OBJECTION. ve-HEN lo YAAMINU li — &#x27;they will NOT BELIEVE me&#x27;: the third demurral contradicts the promise of 3:18 (&#x27;they WILL hear your voice&#x27;) — the machine files the tension the readings weigh (the readings&#x27; verdict on the slander of the believers named); lo nira elekha YHWH — the denial Moses scripts into their mouths: the chapter will spend four signs and thirty verses refuting this verse, and its refutation-word (va-YAAMEN, 4:31) is already the rarest in the file.
+</td><td><span class="he">וְהֵן לֹא־יַאֲמִינוּ לִי וְלֹא יִשְׁמְעוּ בְּקֹלִי</span> · <i>ve-hen lo-yaaminu li-y ve-lo yishmu be-qoli-y</i><br><span class="gloss">= and-hen not-yaaminu to-me-y and-not yishmu in-qoli-y</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The objection the chapter is built to refute.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_2 · Exod.4.2 · <span class='expr'>WHAT_IS_THIS_IN_YOUR_HAND</span></h3>
+<p><span class="he">וַיֹּאמֶר אֵלָיו יְהוָה מזה מַה־זֶּה בְיָדֶךָ וַיֹּאמֶר מַטֶּה</span> · <i>va-yomer elay-v YHWH m-z ma-ze ve-yade-kha va-yomer mate</i> · And the LORD said to him: What is this in your hand? And he said: A staff.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֧אמֶר אֵלָ֛יו יְהוָ֖ה מזה מַה זֶּ֣ה בְיָדֶ֑ךָ</span> · <i>va-yomer elay-v YHWH m-z ma-ze ve-yade-kha</i> · the LORD said to him: What is this in your hand? (etnachta on ve-yade-kha) [VERIFIED: SNAPSHOT Exod.4.2 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּ֖אמֶר מַטֶּֽה</span> · <i>va-yomer mate</i> · and he said: A staff (verse-final mate) [VERIFIED: SNAPSHOT Exod.4.2 idx7-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ma_ze_ve_yadekha_mate, t0)</span><br><span class="gloss">= HOLDS(ma-ze-and-yadekha-mate, t0)</span><br>THE QUESTION [EX04-02]. MA-ZE ve-yadekha — &#x27;WHAT IS THIS in your hand?&#x27;: written as ONE WORD (מזה — &#x27;what-is-this&#x27; fused), read as two — one of the Masorah&#x27;s FIFTEEN written-one-read-two, the Ramah&#x27;s ruling, carried in the stream&#x27;s own two-token convention (the unpointed written-form beside the pointed reading — both layers verified) [VERIFIED: manifest EX04-02]; Shemot Rabbah reads the seam: MI-ZE — &#x27;from THIS in your hand you are due the lash&#x27; (the doubter&#x27;s own staff); va-yomer MATE — &#x27;a staff&#x27;: one word back: the machine files the exchange that arms the drill.
+</td><td><span class="he">מזה מַה־זֶּה בְיָדֶךָ</span> · <i>m-z ma-ze ve-yade-kha</i><br><span class="gloss">= m-z ma-ze and-yade-kha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The one-word written, two-word read.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_3 · Exod.4.3 · <span class='expr'>THROW_IT_AND_HE_THREW</span></h3>
+<p><span class="he">וַיֹּאמֶר הַשְׁלִיכֵהוּ אַרְצָה וַיַּשְׁלִיכֵהוּ אַרְצָה וַיְהִי לְנָחָשׁ וַיָּנָס מֹשֶׁה מִפָּנָיו</span> · <i>va-yomer hashlikhe-hu artza-ה va-yashlikhe-hu artza-ה va-yehi le-nachash va-yanas moshe mi-panay-v</i> · And He said: Throw it to the ground. And he threw it to the ground, and it became a serpent; and Moses fled from before it.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר֙ הַשְׁלִיכֵ֣הוּ אַ֔רְצָה וַיַּשְׁלִיכֵ֥הוּ אַ֖רְצָה וַיְהִ֣י לְנָחָ֑שׁ</span> · <i>va-yomer hashlikhe-hu artza-ה va-yashlikhe-hu artza-ה va-yehi le-nachash</i> · throw it to the ground — and he threw it to the ground (etnachta on le-nachash) [VERIFIED: SNAPSHOT Exod.4.3 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיָּ֥נָס מֹשֶׁ֖ה מִפָּנָֽיו</span> · <i>va-yanas moshe mi-panay-v</i> · and it became a serpent; and Moses fled from before it (verse-final mi-panay-v) [VERIFIED: SNAPSHOT Exod.4.3 idx7-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(hashlikhehu_artzah))</span><br><span class="gloss">= DECLARE(the-LORD, LET(hashlikhehu-artzah))</span><br>DRILL ONE — THE PUSH [EX04-03]. HASHLIKHEHU artza — &#x27;THROW IT to the ground&#x27;: the command-token FULL yod (the printer&#x27;s lean corrected by MS with the Masorah, Minchat Kohen, and the Ramah; census-unique, checked) [VERIFIED: manifest EX04-03]: the first of the four sign- drills — the machine will watch obedience execute inside the verse.
+</td><td><span class="he">הַשְׁלִיכֵהוּ אַרְצָה</span> · <i>hashlikhe-hu artza-ה</i><br><span class="gloss">= hashlikhe-that artza-ה</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(hashlikhehu_artzah, t1)</span><br><span class="gloss">= RESULT: HOLDS(hashlikhehu-artzah, t1)</span><br>DRILL ONE — THE SAME-VERSE PERFORMANCE. va-YASHLIKHEHU artza va-yehi le-NACHASH — thrown, and it becomes a SERPENT (the serpent-word&#x27;s career: the garden&#x27;s speaker, gen_10; Laban&#x27;s divining, gen_52&#x27;s file — the corpus&#x27;s oldest adversary-noun now a staff on the ground); and the second throw-word carries the run&#x27;s named STREAM- SPLIT (the Ramah&#x27;s eight-lean list reads it lean; the stream writes it full — dual-track, never merged) [VERIFIED under EX04-03]; va- YANAS moshe mi-panav — Moses FLEES from it: the machine notes the honesty — the first performance includes the performer&#x27;s fear.
+</td><td><span class="he">וַיַּשְׁלִיכֵהוּ אַרְצָה וַיְהִי לְנָחָשׁ</span> · <i>va-yashlikhe-hu artza-ה va-yehi le-nachash</i><br><span class="gloss">= and-yashlikhe-that artza-ה and-yehi to-nachash</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Drill one: pushed and performed in one verse.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_4 · Exod.4.4 · <span class='expr'>SEIZE_THE_TAIL</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה שְׁלַח יָדְךָ וֶאֱחֹז בִּזְנָבוֹ וַיִּשְׁלַח יָדוֹ וַיַּחֲזֶק בּוֹ וַיְהִי לְמַטֶּה בְּכַפּוֹ</span> · <i>va-yomer YHWH el-moshe shelach yad-kha ve-echoz bi-zenav-o va-yishlach yad-o va-yachazeq b-o va-yehi le-mate be-khap-o</i> · And the LORD said to Moses: Send your hand, and seize it by the tail. And he sent his hand, and held it fast, and it became a staff in his palm.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה שְׁלַח֙ יָֽדְךָ֔ וֶאֱחֹ֖ז בִּזְנָב֑וֹ</span> · <i>va-yomer YHWH el-moshe shelach yad-kha ve-echoz bi-zenav-o</i> · send your hand, and seize it by the tail (etnachta on bi-zenav-o) [VERIFIED: SNAPSHOT Exod.4.4 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּשְׁלַ֤ח יָדוֹ֙ וַיַּ֣חֲזֶק בּ֔וֹ וַיְהִ֥י לְמַטֶּ֖ה בְּכַפּֽוֹ</span> · <i>va-yishlach yad-o va-yachazeq b-o va-yehi le-mate be-khap-o</i> · and he sent his hand and held it fast, and it became a staff in his palm (verse-final be-khap-o) [VERIFIED: SNAPSHOT Exod.4.4 idx8-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(shelach_yadekha_ve_echoz_bi_zenavo))</span><br><span class="gloss">= DECLARE(the-LORD, LET(shelach-yadekha-and-echoz-bi-zenavo))</span><br>DRILL TWO — THE PUSH. SHELACH yadekha ve-ECHOZ bi-zenavo — &#x27;SEND your hand and SEIZE it by the TAIL&#x27;: the send-verb (the chapter&#x27;s keyword — sent hands, sent words, the send-by-another plea coming) aimed at the thing Moses just fled: the machine pushes the counter- fear demand.
+</td><td><span class="he">שְׁלַח יָדְךָ וֶאֱחֹז בִּזְנָבוֹ</span> · <i>shelach yad-kha ve-echoz bi-zenav-o</i><br><span class="gloss">= shelach yad-kha and-echoz bi-zenav-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(shelach_yadekha_ve_echoz_bi_zenavo, t2)</span><br><span class="gloss">= RESULT: HOLDS(shelach-yadekha-and-echoz-bi-zenavo, t2)</span><br>DRILL TWO — THE SAME-VERSE PERFORMANCE. va-yishlach yado va-YACHAZEQ bo — sent, and HELD FAST (the seize-verb chazaq — the word that will harden Pharaoh&#x27;s heart, 4:21: the machine files the double career opening — the hand that grips the serpent, the heart that grips itself); va-yehi le-MATE be-khapo — staff again, in the PALM: two drills, two instant pops — the queue teaching the hand.
+</td><td><span class="he">וַיִּשְׁלַח יָדוֹ וַיַּחֲזֶק בּוֹ</span> · <i>va-yishlach yad-o va-yachazeq b-o</i><br><span class="gloss">= and-yishlach yad-o and-yachazeq b-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Drill two: the fled-from thing grasped.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_5 · Exod.4.5 · <span class='expr'>THAT_THEY_MAY_BELIEVE</span></h3>
+<p><span class="he">לְמַעַן יַאֲמִינוּ כִּי־נִרְאָה אֵלֶיךָ יְהוָה אֱלֹהֵי אֲבֹתָם אֱלֹהֵי אַבְרָהָם אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב</span> · <i>lemaan yaaminu ki-nira ele-kha YHWH elohe avota-m elohe avraham elohe yitzchaq ve-lohe yaaqov</i> · That they may believe that the LORD, the God of their fathers — the God of Abraham, the God of Isaac, and the God of Jacob — has appeared to you.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">לְמַ֣עַן יַאֲמִ֔ינוּ כִּֽי נִרְאָ֥ה אֵלֶ֛יךָ יְהוָ֖ה אֱלֹהֵ֣י אֲבֹתָ֑ם</span> · <i>lemaan yaaminu ki-nira ele-kha YHWH elohe avota-m</i> · that they may believe that the LORD, the God of their fathers (etnachta on avota-m) [VERIFIED: SNAPSHOT Exod.4.5 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֱלֹהֵ֧י אַבְרָהָ֛ם אֱלֹהֵ֥י יִצְחָ֖ק וֵאלֹהֵ֥י יַעֲקֹֽב</span> · <i>elohe avraham elohe yitzchaq ve-lohe yaaqov</i> · the God of Abraham, of Isaac, and of Jacob — has appeared to you (verse-final yaaqov) [VERIFIED: SNAPSHOT Exod.4.5 idx8-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lemaan_yaaminu, t0)</span><br><span class="gloss">= HOLDS(lemaan-yaaminu, t0)</span><br>THE PURPOSE [EX04-13]. LEMAAN YAAMINU — &#x27;THAT THEY MAY BELIEVE&#x27;: the sign&#x27;s charter — the believe-verb from 4:1&#x27;s objection, negated there, purposed here (the machine matches the clause to its target); ki NIRA elekha — the appeared-word Moses scripted as denied (&#x27;the LORD has NOT appeared,&#x27; 4:1) affirmed with the three-fathers formula: the machine files the drill&#x27;s law: every sign in this chapter is addressed to a sentence Moses spoke.
+</td><td><span class="he">לְמַעַן יַאֲמִינוּ</span> · <i>lemaan yaaminu</i><br><span class="gloss">= lemaan yaaminu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The purpose-clause: the drill aimed at the objection.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_6 · Exod.4.6 · <span class='expr'>THE_HAND_IN_THE_BOSOM</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה לוֹ עוֹד הָבֵא־נָא יָדְךָ בְּחֵיקֶךָ וַיָּבֵא יָדוֹ בְּחֵיקוֹ וַיּוֹצִאָהּ וְהִנֵּה יָדוֹ מְצֹרַעַת כַּשָּׁלֶג</span> · <i>va-yomer YHWH l-o od have-na yad-kha be-cheqe-kha va-yave yad-o be-cheq-o va-yotzia-ה ve-hine yad-o metzoraat ka-shaleg</i> · And the LORD said to him further: Bring, pray, your hand into your bosom. And he brought his hand into his bosom; and he took it out, and behold, his hand was leprous, as snow.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּאמֶר֩ יְהוָ֨ה ל֜וֹ ע֗וֹד הָֽבֵא נָ֤א יָֽדְךָ֙ בְּחֵיקֶ֔ךָ וַיָּבֵ֥א יָד֖וֹ בְּחֵיק֑וֹ</span> · <i>va-yomer YHWH l-o od have-na yad-kha be-cheqe-kha va-yave yad-o be-cheq-o</i> · bring, pray, your hand into your bosom — and he brought his hand into his bosom (etnachta on be-cheq-o) [VERIFIED: SNAPSHOT Exod.4.6 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיּ֣וֹצִאָ֔הּ וְהִנֵּ֥ה יָד֖וֹ מְצֹרַ֥עַת כַּשָּֽׁלֶג</span> · <i>va-yotzia-ה ve-hine yad-o metzoraat ka-shaleg</i> · he took it out, and behold, his hand was leprous, as snow (verse-final ka-shaleg) [VERIFIED: SNAPSHOT Exod.4.6 idx11-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(have_na_yadekha_be_cheqekha))</span><br><span class="gloss">= DECLARE(the-LORD, LET(have-na-yadekha-in-cheqekha))</span><br>DRILL THREE — THE PUSH [EX04-10; EX04-11]. HAVE-na yadekha be- CHEQEKHA — &#x27;BRING, pray, your hand into your BOSOM&#x27;: the bring-word of the Kitzur&#x27;s three-station chain (by Joseph&#x27;s bring-word they came down, by Moses&#x27; they go up, by the city-bring they gather — the descent-and-ascent between three imperatives) [VERIFIED under EX04-11]; the your-bosom word&#x27;s Torah-three (Sarai&#x27;s wrong, the sign here, the nurse&#x27;s bosom of Numbers) with David&#x27;s struck-bosom pair named [VERIFIED: manifest EX04-10].
+</td><td><span class="he">הָבֵא־נָא יָדְךָ בְּחֵיקֶךָ</span> · <i>have-na yad-kha be-cheqe-kha</i><br><span class="gloss">= have-na yad-kha in-cheqe-kha</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(have_na_yadekha_be_cheqekha, t3)</span><br><span class="gloss">= RESULT: HOLDS(have-na-yadekha-in-cheqekha, t3)</span><br>DRILL THREE — THE SAME-VERSE PERFORMANCE. va-yave yado be-cheqo... ve-hine yado METZORAAT ka-SHALEG — brought, and the hand comes out LEPROUS AS SNOW: the skin-sign (the readings: the slander of 4:1 answered in the slanderer&#x27;s own skin — the leprosy-and-speech file the corpus will codify at the laws, lev_13&#x27;s intake armed); the third instant pop: the machine notes the drill&#x27;s escalation — first the tool, now the flesh.
+</td><td><span class="he">וַיָּבֵא יָדוֹ בְּחֵיקוֹ</span> · <i>va-yave yad-o be-cheq-o</i><br><span class="gloss">= and-yave yad-o in-cheq-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Drill three: the white hand.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_7 · Exod.4.7 · <span class='expr'>THE_HAND_RESTORED</span></h3>
+<p><span class="he">וַיֹּאמֶר הָשֵׁב יָדְךָ אֶל־חֵיקֶךָ וַיָּשֶׁב יָדוֹ אֶל־חֵיקוֹ וַיּוֹצִאָהּ מֵחֵיקוֹ וְהִנֵּה־שָׁבָה כִּבְשָׂרוֹ</span> · <i>va-yomer hashev yad-kha el-cheqe-kha va-yashev yad-o el-cheq-o va-yotzia-ה me-cheq-o ve-hine-shava ki-vesar-o</i> · And He said: Return your hand to your bosom. And he returned his hand to his bosom; and he took it out from his bosom, and behold, it returned as his flesh.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֗אמֶר הָשֵׁ֤ב יָֽדְךָ֙ אֶל חֵיקֶ֔ךָ וַיָּ֥שֶׁב יָד֖וֹ אֶל חֵיק֑וֹ</span> · <i>va-yomer hashev yad-kha el-cheqe-kha va-yashev yad-o el-cheq-o</i> · return your hand to your bosom — and he returned his hand to his bosom (etnachta on cheq-o) [VERIFIED: SNAPSHOT Exod.4.7 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיּֽוֹצִאָהּ֙ מֵֽחֵיק֔וֹ וְהִנֵּה שָׁ֖בָה כִּבְשָׂרֽוֹ</span> · <i>va-yotzia-ה me-cheq-o ve-hine-shava ki-vesar-o</i> · he took it out, and behold, it returned as his flesh (verse-final ki-vesar-o) [VERIFIED: SNAPSHOT Exod.4.7 idx9-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(hashev_yadekha_el_cheqekha))</span><br><span class="gloss">= DECLARE(the-LORD, LET(hashev-yadekha-to-cheqekha))</span><br>DRILL FOUR — THE PUSH. HASHEV yadekha el-cheqekha — &#x27;RETURN your hand&#x27;: the restore-command — the machine notes the pedagogy: the sign runs BOTH directions on command (struck by word, healed by word — the plagues&#x27; own grammar rehearsed on the messenger&#x27;s body).
+</td><td><span class="he">הָשֵׁב יָדְךָ אֶל־חֵיקֶךָ</span> · <i>hashev yad-kha el-cheqe-kha</i><br><span class="gloss">= hashev yad-kha to-cheqe-kha</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(hashev_yadekha_el_cheqekha, t4)</span><br><span class="gloss">= RESULT: HOLDS(hashev-yadekha-to-cheqekha, t4)</span><br>DRILL FOUR — THE SAME-VERSE PERFORMANCE. va-yashev yado el-cheqo... ve-hine SHAVA ki-vesaro — returned, &#x27;and behold, it RETURNED as his flesh&#x27;: the fourth same-verse discharge — FOUR drills, four instant pops: the forward era&#x27;s densest obedience-sequence (the corpus&#x27;s queue-mechanics taught as a catechism: push, perform, close, inside one verse, four times running).
+</td><td><span class="he">וַיָּשֶׁב יָדוֹ אֶל־חֵיקוֹ</span> · <i>va-yashev yad-o el-cheq-o</i><br><span class="gloss">= and-yashev yad-o to-cheq-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Drill four: the healing obeys too.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_8 · Exod.4.8 · <span class='expr'>THE_VOICE_OF_THE_LATTER_SIGN</span></h3>
+<p><span class="he">וְהָיָה אִם־לֹא יַאֲמִינוּ לָךְ וְלֹא יִשְׁמְעוּ לְקֹל הָאֹת הָרִאשׁוֹן וְהֶאֱמִינוּ לְקֹל הָאֹת הָאַחֲרוֹן</span> · <i>ve-haya im-lo yaaminu la-khe ve-lo yishmu le-qol ha-et ha-rishon ve-heeminu le-qol ha-et ha-acharon</i> · And it shall be, if they will not believe you, and will not hear the voice of the first sign, that they will believe the voice of the latter sign.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהָיָה֙ אִם לֹ֣א יַאֲמִ֣ינוּ לָ֔ךְ וְלֹ֣א יִשְׁמְע֔וּ לְקֹ֖ל הָאֹ֣ת הָרִאשׁ֑וֹן</span> · <i>ve-haya im-lo yaaminu la-khe ve-lo yishmu le-qol ha-et ha-rishon</i> · if they will not believe you, and will not hear the voice of the first sign (etnachta on ha-rishon) [VERIFIED: SNAPSHOT Exod.4.8 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהֶֽאֱמִ֔ינוּ לְקֹ֖ל הָאֹ֥ת הָאַחֲרֽוֹן</span> · <i>ve-heeminu le-qol ha-et ha-acharon</i> · they will believe the voice of the latter sign (verse-final ha-acharon) [VERIFIED: SNAPSHOT Exod.4.8 idx10-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_heeminu_le_qol_ha_ot_ha_acharon, t0)</span><br><span class="gloss">= HOLDS(and-heeminu-to-voice-the-ot-the-acharon, t0)</span><br>THE TWO VOICES [EX04-09]. le-QOL ha-ot ha-rishon... le-QOL ha-ot ha- ACHARON — the signs have VOICES (the readings: a sign SAYS something — the machine notes the letter granting speech to wonders); ha- acharon FULL vav with the precise manuscripts and the old print (asserted) [VERIFIED under EX04-09]: the conditional ladder built — first sign, latter sign, and the verse after holds the third rung.
+</td><td><span class="he">וְהֶאֱמִינוּ לְקֹל הָאֹת הָאַחֲרוֹן</span> · <i>ve-heeminu le-qol ha-et ha-acharon</i><br><span class="gloss">= and-heeminu voice the the-acharon</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The signs given voices.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_9 · Exod.4.9 · <span class='expr'>THE_NILE_ON_THE_DRY_LAND</span></h3>
+<p><span class="he">וְהָיָה אִם־לֹא יַאֲמִינוּ גַּם לִשְׁנֵי הָאֹתוֹת הָאֵלֶּה וְלֹא יִשְׁמְעוּן לְקֹלֶךָ וְלָקַחְתָּ מִמֵּימֵי הַיְאֹר וְשָׁפַכְתָּ הַיַּבָּשָׁה וְהָיוּ הַמַּיִם אֲשֶׁר תִּקַּח מִן־הַיְאֹר וְהָיוּ לְדָם בַּיַּבָּשֶׁת</span> · <i>ve-haya im-lo yaaminu gam li-shene ha-otot ha-ele ve-lo yishmu-n le-qole-kha ve-laqachta mi-meme ha-yeor ve-shafakhta ha-yabasha ve-hayu ha-mayim asher tiqach min-ha-yeor ve-hayu le-dam ba-yabashet</i> · And it shall be, if they will not believe even these two signs, and will not hear your voice, that you shall take of the water of the Nile, and pour it on the dry land; and the water which you take from the Nile shall become blood on the dry land.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהָיָ֡ה אִם לֹ֣א יַאֲמִ֡ינוּ גַּם֩ לִשְׁנֵ֨י הָאֹת֜וֹת הָאֵ֗לֶּה וְלֹ֤א יִשְׁמְעוּן֙ לְקֹלֶ֔ךָ וְלָקַחְתָּ֙ מִמֵּימֵ֣י הַיְאֹ֔ר וְשָׁפַכְתָּ֖ הַיַּבָּשָׁ֑ה</span> · <i>ve-haya im-lo yaaminu gam li-shene ha-otot ha-ele ve-lo yishmu-n le-qole-kha ve-laqachta mi-meme ha-yeor ve-shafakhta ha-yabasha</i> · if they will not believe even these two signs, you shall take of the Nile&#x27;s water (etnachta on ha-yabasha) [VERIFIED: SNAPSHOT Exod.4.9 idx15 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהָי֤וּ הַמַּ֨יִם֙ אֲשֶׁ֣ר תִּקַּ֣ח מִן הַיְאֹ֔ר וְהָי֥וּ לְדָ֖ם בַּיַּבָּֽשֶׁת</span> · <i>ve-hayu ha-mayim asher tiqach min-ha-yeor ve-hayu le-dam ba-yabashet</i> · and pour it on the dry land; and it shall become blood on the dry land (verse-final ba-yabashet) [VERIFIED: SNAPSHOT Exod.4.9 idx16-24]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_hayu_le_dam_ba_yabashet, t0)</span><br><span class="gloss">= HOLDS(and-hayu-to-blood-in-the-yabashet, t0)</span><br>THE THIRD SIGN [EX04-13]. ve-laqachta mi-meme ha-YEOR... ve-hayu le- DAM — Nile-water poured on the dry land becomes BLOOD: a CONDITIONAL instruction (the if-ladder&#x27;s third rung) — the machine&#x27;s fence holds: a contingent script installs no demand (the letter never narrates this sign performed for the people — the readings note the plague of blood, 7:20, as its enlargement) [VERIFIED under EX04-13]; the machine files the geography: the murder-river of exo_01 (the Nile of the decree) is the sign&#x27;s raw material — the state&#x27;s weapon indicts itself.
+</td><td><span class="he">וְלָקַחְתָּ מִמֵּימֵי הַיְאֹר וְשָׁפַכְתָּ הַיַּבָּשָׁה</span> · <i>ve-laqachta mi-meme ha-yeor ve-shafakhta ha-yabasha</i><br><span class="gloss">= and-laqachta from-meme the-yeor and-shafakhta dry-land</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The conditional third sign; the fence holds.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_10 · Exod.4.10 · <span class='expr'>HEAVY_OF_MOUTH</span></h3>
+<p><span class="he">וַיֹּאמֶר מֹשֶׁה אֶל־יְהוָה בִּי אֲדֹנָי לֹא אִישׁ דְּבָרִים אָנֹכִי גַּם מִתְּמוֹל גַּם מִשִּׁלְשֹׁם גַּם מֵאָז דַּבֶּרְךָ אֶל־עַבְדֶּךָ כִּי כְבַד־פֶּה וּכְבַד לָשׁוֹן אָנֹכִי</span> · <i>va-yomer moshe el-YHWH bi adona-y lo ish devarim anokhi gam mi-temol gam mi-shilshom gam me-az daber-kha el-avde-kha ki khevad-pe u-khevad lashon anokhi</i> · And Moses said to the LORD: Please, my Lord, I am not a man of words — also from yesterday, also from the day before, also since You have spoken to Your servant; for heavy of mouth and heavy of tongue am I.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר מֹשֶׁ֣ה אֶל יְהוָה֮ בִּ֣י אֲדֹנָי֒ לֹא֩ אִ֨ישׁ דְּבָרִ֜ים אָנֹ֗כִי גַּ֤ם מִתְּמוֹל֙ גַּ֣ם מִשִּׁלְשֹׁ֔ם גַּ֛ם מֵאָ֥ז דַּבֶּרְךָ אֶל עַבְדֶּ֑ךָ</span> · <i>va-yomer moshe el-YHWH bi adona-y lo ish devarim anokhi gam mi-temol gam mi-shilshom gam me-az daber-kha el-avde-kha</i> · please, my Lord, I am not a man of words — also from yesterday, also before (etnachta on avde-kha) [VERIFIED: SNAPSHOT Exod.4.10 idx18 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּ֧י כְבַד פֶּ֛ה וּכְבַ֥ד לָשׁ֖וֹן אָנֹֽכִי</span> · <i>ki khevad-pe u-khevad lashon anokhi</i> · for heavy of mouth and heavy of tongue am I (verse-final anokhi) [VERIFIED: SNAPSHOT Exod.4.10 idx19-24]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(khevad_pe_u_khevad_lashon, t0)</span><br><span class="gloss">= HOLDS(khevad-pe-and-khevad-lashon, t0)</span><br>THE HEAVY MOUTH. lo ish DEVARIM anokhi — &#x27;not a man of WORDS am I&#x27; (the man who will speak the book of Devarim — the readings&#x27; irony named); gam mi-temol gam mi-shilshom gam me-az daberkha — the three- fold also (the readings&#x27; seven-days-at-the-bush arithmetic named); ki KHEVAD-pe u-khevad LASHON anokhi — &#x27;HEAVY of mouth and HEAVY of tongue&#x27;: the kaved-word again (the heavy famine, the heavy camp — gen_73&#x27;s file; and Pharaoh&#x27;s heavy HEART coming, 7:14: the machine files the weight-word&#x27;s triangle — mouth, camp, heart).
+</td><td><span class="he">כִּי כְבַד־פֶּה וּכְבַד לָשׁוֹן אָנֹכִי</span> · <i>ki khevad-pe u-khevad lashon anokhi</i><br><span class="gloss">= when khevad-pe and-khevad lashon anokhi</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The fourth demurral: the mouth.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_11 · Exod.4.11 · <span class='expr'>WHO_SET_A_MOUTH</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֵלָיו מִי שָׂם פֶּה לָאָדָם אוֹ מִי־יָשׂוּם אִלֵּם אוֹ חֵרֵשׁ אוֹ פִקֵּחַ אוֹ עִוֵּר הֲלֹא אָנֹכִי יְהוָה</span> · <i>va-yomer YHWH elay-v mi sam pe la-adam o mi-yasum ilem o cheresh o fiqecha o iver ha-lo anokhi YHWH</i> · And the LORD said to him: Who set a mouth for man, or who makes dumb, or deaf, or seeing, or blind? Is it not I, the LORD?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר יְהוָ֜ה אֵלָ֗יו מִ֣י שָׂ֣ם פֶּה֮ לָֽאָדָם֒ א֚וֹ מִֽי יָשׂ֣וּם אִלֵּ֔ם א֣וֹ חֵרֵ֔שׁ א֥וֹ פִקֵּ֖חַ א֣וֹ עִוֵּ֑ר</span> · <i>va-yomer YHWH elay-v mi sam pe la-adam o mi-yasum ilem o cheresh o fiqecha o iver</i> · who set a mouth for man, or who makes dumb, or deaf, or seeing, or blind? (etnachta on iver) [VERIFIED: SNAPSHOT Exod.4.11 idx16 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">הֲלֹ֥א אָנֹכִ֖י יְהוָֽה</span> · <i>ha-lo anokhi YHWH</i> · is it not I, the LORD? (verse-final YHWH) [VERIFIED: SNAPSHOT Exod.4.11 idx17-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ha_lo_anokhi_YHWH, t0)</span><br><span class="gloss">= HOLDS(the-not-anokhi-the-LORD, t0)</span><br>THE MAKER&#x27;S CLAIM [EX04-07]. mi SAM pe la-adam — &#x27;who SET a mouth for man&#x27;; o mi YASUM ilem — &#x27;or who MAKES dumb&#x27;: the make-word in the FUTURE form, its one Torah token — and the Kitzur reads the tense forward: &#x27;the lying lips will be MADE DUMB at the day of judgment, and they will find no answer&#x27; [VERIFIED: manifest EX04-07]; the four offices (dumb, deaf, seeing, blind — the readings: the courtiers silenced, deafened, blinded around the fleeing Moses, named); ha-lo ANOKHI YHWH — &#x27;is it not I&#x27;: the machine files the answer to every demurral in the file: the instrument&#x27;s Maker is the mission&#x27;s Sender.
+</td><td><span class="he">הֲלֹא אָנֹכִי יְהוָה</span> · <i>ha-lo anokhi YHWH</i><br><span class="gloss">= the-not anokhi the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The Maker claims the faculties.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_12 · Exod.4.12 · <span class='expr'>GO_AND_I_AM_WITH_YOUR_MOUTH</span></h3>
+<p><span class="he">וְעַתָּה לֵךְ וְאָנֹכִי אֶהְיֶה עִם־פִּיךָ וְהוֹרֵיתִיךָ אֲשֶׁר תְּדַבֵּר</span> · <i>ve-ata lekh ve-anokhi ehye im-pi-kha ve-horeti-kha asher tedaber</i> · And now, go — and I will be with your mouth, and will teach you what you shall speak.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְעַתָּ֖ה לֵ֑ךְ</span> · <i>ve-ata lekh</i> · and now, go (etnachta on lekh) [VERIFIED: SNAPSHOT Exod.4.12 idx1 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאָנֹכִי֙ אֶֽהְיֶ֣ה עִם פִּ֔יךָ וְהוֹרֵיתִ֖יךָ אֲשֶׁ֥ר תְּדַבֵּֽר</span> · <i>ve-anokhi ehye im-pi-kha ve-horeti-kha asher tedaber</i> · and I will be with your mouth, and will teach you what you shall speak (verse-final tedaber) [VERIFIED: SNAPSHOT Exod.4.12 idx2-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_anokhi_ehye_im_pikha, t0)</span><br><span class="gloss">= HOLDS(and-anokhi-ehye-if-pikha, t0)</span><br>THE REAFFIRMATION [EX04-05]. ve-ata LEKH — &#x27;and now, GO&#x27;: the go- word again — the machine pushes NO new demand: the commission of 3:10 still holds its card (a reissue is not a new debt — the one- world queue-law); ve-anokhi EHYE im-PIKHA — &#x27;I will BE with your MOUTH&#x27;: the ehye-word (the Name of 3:14) lodged at the mouth the demurral called heavy; ve-HORETIKHA — &#x27;and I will TEACH you&#x27;: the two-yod teach-word, Torah-unique, the printed margin&#x27;s short- spelling report overruled by MS with the Hilleli and the Ramah; its five crowns named (the five fifths) [VERIFIED: manifest EX04-05]: the answer to the heavy mouth is a resident teacher.
+</td><td><span class="he">וְאָנֹכִי אֶהְיֶה עִם־פִּיךָ</span> · <i>ve-anokhi ehye im-pi-kha</i><br><span class="gloss">= and-anokhi ehye if-pi-kha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The commission reaffirmed; the teach-word.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_13 · Exod.4.13 · <span class='expr'>SEND_BY_WHOSE_HAND</span></h3>
+<p><span class="he">וַיֹּאמֶר בִּי אֲדֹנָי שְׁלַח־נָא בְּיַד־תִּשְׁלָח</span> · <i>va-yomer bi adona-y shelach-na be-yad-tishlach</i> · And he said: Please, my Lord — send, pray, by the hand You will send.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֖אמֶר בִּ֣י אֲדֹנָ֑י</span> · <i>va-yomer bi adona-y</i> · please, my Lord (etnachta on adona-y) [VERIFIED: SNAPSHOT Exod.4.13 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">שְֽׁלַֽח נָ֖א בְּיַד תִּשְׁלָֽח</span> · <i>shelach-na be-yad-tishlach</i> · send, pray, by the hand You will send (verse-final tishlach) [VERIFIED: SNAPSHOT Exod.4.13 idx3-6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(moshe, LET(shelach_na_be_yad_tishlach))</span><br><span class="gloss">= DECLARE(Moses, LET(shelach-na-in-yad-tishlach))</span><br>THE PLEA [EX04-09]. bi adonai SHELACH-NA be-yad TISHLACH — &#x27;SEND, pray, by the hand You WILL SEND&#x27;: the fifth demurral is a real petition — the machine pushes it (MS&#x27;s pointing on the plea-words asserted [EX04-09]); the readings&#x27; hearings named, never merged (by Aaron&#x27;s hand, the accustomed messenger; by the Messiah&#x27;s hand, the last; by anyone&#x27;s but mine); the next verses answer with ANGER and an OFFICE — Aaron becomes the mouth — but the letter never grants and never refuses THIS demand in its own words: the machine leaves the card OPEN (the transcended class — gen_67&#x27;s substitution-offer precedent: answered in the world, unanswered on the queue; the halom-kingship file of exo_03 named beside it).
+</td><td><span class="he">שְׁלַח־נָא בְּיַד־תִּשְׁלָח</span> · <i>shelach-na be-yad-tishlach</i><br><span class="gloss">= shelach-na in-yad-tishlach</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The fifth demurral: a demand left standing.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_14 · Exod.4.14 · <span class='expr'>AARON_IS_COMING</span></h3>
+<p><span class="he">וַיִּחַר־אַף יְהוָה בְּמֹשֶׁה וַיֹּאמֶר הֲלֹא אַהֲרֹן אָחִיךָ הַלֵּוִי יָדַעְתִּי כִּי־דַבֵּר יְדַבֵּר הוּא וְגַם הִנֵּה־הוּא יֹצֵא לִקְרָאתֶךָ וְרָאֲךָ וְשָׂמַח בְּלִבּוֹ</span> · <i>va-yichar-af YHWH be-moshe va-yomer ha-lo aharon achi-kha ha-levi yadati ki-daber yedaber hu ve-gam hine-hu yotze li-qerate-kha ve-raa-kha ve-samach be-lib-o</i> · And the anger of the LORD burned against Moses, and He said: Is there not Aaron your brother, the Levite? I know that he will surely speak — he; and also, behold, he is coming out to meet you, and he will see you and rejoice in his heart.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּֽחַר אַ֨ף יְהוָ֜ה בְּמֹשֶׁ֗ה וַיֹּ֨אמֶר֙ הֲלֹ֨א אַהֲרֹ֤ן אָחִ֨יךָ֙ הַלֵּוִ֔י יָדַ֕עְתִּי כִּֽי דַבֵּ֥ר יְדַבֵּ֖ר ה֑וּא</span> · <i>va-yichar-af YHWH be-moshe va-yomer ha-lo aharon achi-kha ha-levi yadati ki-daber yedaber hu</i> · the anger of the LORD burned against Moses: is there not Aaron your brother, the Levite? (etnachta on hu) [VERIFIED: SNAPSHOT Exod.4.14 idx13 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְגַ֤ם הִנֵּה הוּא֙ יֹצֵ֣א לִקְרָאתֶ֔ךָ וְרָאֲךָ֖ וְשָׂמַ֥ח בְּלִבּֽוֹ</span> · <i>ve-gam hine-hu yotze li-qerate-kha ve-raa-kha ve-samach be-lib-o</i> · he will surely speak; and behold, he comes to meet you, and will see you and rejoice in his heart (verse-final be-lib-o) [VERIFIED: SNAPSHOT Exod.4.14 idx14-21]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_raakha_ve_samach_be_libo, t0)</span><br><span class="gloss">= HOLDS(and-raakha-and-samach-in-His-heart, t0)</span><br>THE BROTHER [EX04-01 MARQUEE]. va-yichar AF YHWH be-moshe — the anger burns (the readings&#x27; inventories of what the anger cost named, never merged); ha-lo AHARON achikha ha-LEVI — Aaron enters the book by name; ki daber YEDABER HU VE-GAM HINE — and the INITIAL LETTERS of the four words spell the FOUR-LETTER NAME (checked mechanically): &#x27;He handed the Name and all its epithets to Aaron too&#x27; — the run&#x27;s twin crowns close: the Name in the FINALS at the question (3:13), the Name in the INITIALS at the brother&#x27;s appointment [VERIFIED: manifest EX04-01]; ve-raakha ve-SAMACH be-libo — &#x27;he will see you and REJOICE in his heart&#x27;: the corpus&#x27;s counter-file to every brother-meeting before it (the readings: the heart that rejoiced wears the breastplate — armed at 28:29): a brother glad at a brother&#x27;s greatness, first time in the book&#x27;s ledger.
+</td><td><span class="he">כִּי־דַבֵּר יְדַבֵּר הוּא וְגַם הִנֵּה־</span> · <i>ki-daber yedaber hu ve-gam hine-</i><br><span class="gloss">= when-daber yedaber that and-also hine</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The anger; the Name in the initials.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_15 · Exod.4.15 · <span class='expr'>WORDS_IN_HIS_MOUTH</span></h3>
+<p><span class="he">וְדִבַּרְתָּ אֵלָיו וְשַׂמְתָּ אֶת־הַדְּבָרִים בְּפִיו וְאָנֹכִי אֶהְיֶה עִם־פִּיךָ וְעִם־פִּיהוּ וְהוֹרֵיתִי אֶתְכֶם אֵת אֲשֶׁר תַּעֲשׂוּן</span> · <i>ve-dibarta elay-v ve-samta et-ha-devarim be-fi-v ve-anokhi ehye im-pi-kha ve-im-pi-hu ve-horeti et-khem et asher taasu-n</i> · And you shall speak to him, and put the words in his mouth; and I will be with your mouth and with his mouth, and will teach you both what you shall do.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְדִבַּרְתָּ֣ אֵלָ֔יו וְשַׂמְתָּ֥ אֶת הַדְּבָרִ֖ים בְּפִ֑יו</span> · <i>ve-dibarta elay-v ve-samta et-ha-devarim be-fi-v</i> · you shall speak to him, and put the words in his mouth (etnachta on be-fi-v) [VERIFIED: SNAPSHOT Exod.4.15 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאָנֹכִ֗י אֶֽהְיֶ֤ה עִם פִּ֨יךָ֙ וְעִם פִּ֔יהוּ וְהוֹרֵיתִ֣י אֶתְכֶ֔ם אֵ֖ת אֲשֶׁ֥ר תַּעֲשֽׂוּן</span> · <i>ve-anokhi ehye im-pi-kha ve-im-pi-hu ve-horeti et-khem et asher taasu-n</i> · I will be with your mouth and with his mouth, and will teach you both what you shall do (verse-final taasu-n) [VERIFIED: SNAPSHOT Exod.4.15 idx6-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(ve_samta_et_ha_devarim_be_fiv))</span><br><span class="gloss">= DECLARE(the-LORD, LET(and-samta-the-devarim-in-fiv))</span><br>THE RELAY [EX04-05]. ve-dibarta elav ve-SAMTA et ha-DEVARIM be-fiv — &#x27;PUT the words in his MOUTH&#x27;: the relay-demand pushed (Moses to Aaron, the word-chain built — its performance armed at 4:28&#x27;s telling); ve-anokhi ehye im-PIKHA ve-im-PIHU — &#x27;with YOUR mouth and with HIS mouth&#x27;: the ehye-presence doubled over both mouths; ve- HORETI etkhem — the teach-word&#x27;s second Torah-unique token (the Samuel-pair named: &#x27;He taught them the way, and they did not err&#x27;) [VERIFIED under EX04-05]: the machine records the demand and waits eleven verses for its pop.
+</td><td><span class="he">וְשַׂמְתָּ אֶת־הַדְּבָרִים בְּפִיו</span> · <i>ve-samta et-ha-devarim be-fi-v</i><br><span class="gloss">= and-samta the-devarim in-fi-v</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The relay-demand pushed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_16 · Exod.4.16 · <span class='expr'>MOUTH_AND_GOD</span></h3>
+<p><span class="he">וְדִבֶּר־הוּא לְךָ אֶל־הָעָם וְהָיָה הוּא יִהְיֶה־לְּךָ לְפֶה וְאַתָּה תִּהְיֶה־לּוֹ לֵאלֹהִים</span> · <i>ve-diber-hu le-kha el-ha-am ve-haya hu yihye-le-kha le-fe ve-ata tihye-l-o le-Elohim</i> · And he shall speak for you to the people; and it shall be — he shall be for you a mouth, and you shall be for him as God.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְדִבֶּר ה֥וּא לְךָ֖ אֶל הָעָ֑ם</span> · <i>ve-diber-hu le-kha el-ha-am</i> · he shall speak for you to the people (etnachta on ha-am) [VERIFIED: SNAPSHOT Exod.4.16 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהָ֤יָה הוּא֙ יִֽהְיֶה לְּךָ֣ לְפֶ֔ה וְאַתָּ֖ה תִּֽהְיֶה לּ֥וֹ לֵֽאלֹהִֽים</span> · <i>ve-haya hu yihye-le-kha le-fe ve-ata tihye-l-o le-Elohim</i> · he shall be for you a mouth, and you shall be for him as God (verse-final le-Elohim) [VERIFIED: SNAPSHOT Exod.4.16 idx5-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hu_yihye_lekha_le_fe, t0)</span><br><span class="gloss">= HOLDS(that-yihye-to-you-to-fe, t0)</span><br>THE OFFICES [EX04-09]. ve-diber HU lekha el ha-am — HE speaks, for YOU, to the people: the relay&#x27;s org-chart; ve-haya hu yihye-LEKHA le-FE — &#x27;he shall be for you a MOUTH&#x27; (the lamed of the for-you DAGESHED — MS&#x27;s dot checked in-stream; the fore-stress on the ve- haya named) [VERIFIED: manifest EX04-09]; ve-ata tihye-lo le-ELOHIM — &#x27;and you shall be for him as GOD&#x27;: the boldest office-word in the corpus handed to a man (the readings&#x27; as-master-and-teacher hearings named): the machine files the pair the plagues will run on — armed at 7:1&#x27;s restatement (&#x27;see, I have made you God to Pharaoh, and Aaron your brother your prophet&#x27;).
+</td><td><span class="he">וְהָיָה הוּא יִהְיֶה־לְּךָ לְפֶה</span> · <i>ve-haya hu yihye-le-kha le-fe</i><br><span class="gloss">= and-haya that yihye-to-kha to-fe</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The offices fixed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_17 · Exod.4.17 · <span class='expr'>TAKE_THIS_STAFF</span></h3>
+<p><span class="he">וְאֶת־הַמַּטֶּה הַזֶּה תִּקַּח בְּיָדֶךָ אֲשֶׁר תַּעֲשֶׂה־בּוֹ אֶת־הָאֹתֹת</span> · <i>ve-et-ha-mate ha-ze tiqach be-yade-kha asher taase-b-o et-ha-otot</i> · And this staff you shall take in your hand, with which you shall do the signs.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאֶת הַמַּטֶּ֥ה הַזֶּ֖ה תִּקַּ֣ח בְּיָדֶ֑ךָ</span> · <i>ve-et-ha-mate ha-ze tiqach be-yade-kha</i> · and this staff you shall take in your hand (etnachta on be-yade-kha) [VERIFIED: SNAPSHOT Exod.4.17 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֲשֶׁ֥ר תַּעֲשֶׂה בּ֖וֹ אֶת הָאֹתֹֽת</span> · <i>asher taase-b-o et-ha-otot</i> · with which you shall do the signs (verse-final ha-otot) [VERIFIED: SNAPSHOT Exod.4.17 idx5-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(ve_et_ha_mate_tiqach_be_yadekha))</span><br><span class="gloss">= DECLARE(the-LORD, LET(and-the-mate-tiqach-in-yadekha))</span><br>THE STAFF-DEMAND [EX04-12]. ve-et ha-MATE ha-ze TIQACH be-yadekha — &#x27;THIS STAFF you shall TAKE in your hand&#x27;: the take-demand pushed (its pop three verses off, 4:20); the Kitzur&#x27;s crown-file named — the NINTH righteous to hold the staff (the relay Adam, Enoch, Noah, Shem, Abraham, Isaac, Jacob, Joseph, Moses: the corpus&#x27;s oldest baton; crowns beyond the stream&#x27;s layer) [VERIFIED under EX04-12]; asher taase-bo et ha-OTOT — &#x27;with which you shall DO the SIGNS&#x27;: the staff chartered as the sign-instrument (the wonders-demand of 4:21 will ride on it).
+</td><td><span class="he">וְאֶת־הַמַּטֶּה הַזֶּה תִּקַּח בְּיָדֶךָ</span> · <i>ve-et-ha-mate ha-ze tiqach be-yade-kha</i><br><span class="gloss">= and-the-mate the-ze tiqach in-yade-kha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The staff-demand pushed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_18 · Exod.4.18 · <span class='expr'>LET_ME_GO_AND_GO_IN_PEACE</span></h3>
+<p><span class="he">וַיֵּלֶךְ מֹשֶׁה וַיָּשָׁב אֶל־יֶתֶר חֹתְנוֹ וַיֹּאמֶר לוֹ אֵלֲכָה נָּא וְאָשׁוּבָה אֶל־אַחַי אֲשֶׁר־בְּמִצְרַיִם וְאֶרְאֶה הַעוֹדָם חַיִּים וַיֹּאמֶר יִתְרוֹ לְמֹשֶׁה לֵךְ לְשָׁלוֹם</span> · <i>va-yelekh moshe va-yashav el-yeter chotn-o va-yomer l-o elakha na ve-ashuva el-acha-y asher-be-mitzrayim ve-ere ha-oda-m chayim va-yomer yitro le-moshe lekh le-shalom</i> · And Moses went and returned to Jether his father-in-law, and said to him: Let me go, pray, and return to my brothers who are in Egypt, and see whether they still live. And Jethro said to Moses: Go in peace.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֵּ֨לֶךְ מֹשֶׁ֜ה וַיָּ֣שָׁב אֶל יֶ֣תֶר חֹֽתְנ֗וֹ וַיֹּ֤אמֶר לוֹ֙ אֵ֣לֲכָה נָּ֗א וְאָשׁ֨וּבָה֙ אֶל אַחַ֣י אֲשֶׁר בְּמִצְרַ֔יִם וְאֶרְאֶ֖ה הַעוֹדָ֣ם חַיִּ֑ים</span> · <i>va-yelekh moshe va-yashav el-yeter chotn-o va-yomer l-o elakha na ve-ashuva el-acha-y asher-be-mitzrayim ve-ere ha-oda-m chayim</i> · let me go, pray, and return to my brothers in Egypt, and see whether they still live (etnachta on chayim) [VERIFIED: SNAPSHOT Exod.4.18 idx17 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּ֧אמֶר יִתְר֛וֹ לְמֹשֶׁ֖ה לֵ֥ךְ לְשָׁלֽוֹם</span> · <i>va-yomer yitro le-moshe lekh le-shalom</i> · and Jethro said to Moses: Go in peace (verse-final le-shalom) [VERIFIED: SNAPSHOT Exod.4.18 idx18-22]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(moshe, LET(elkha_na_ve_ashuva_el_achai))</span><br><span class="gloss">= DECLARE(Moses, LET(elkha-na-and-ashuva-to-achai))</span><br>THE LEAVE-REQUEST [EX04-12]. va-yashav el YETER chotno — to JETHER (the shortened name — the Kitzur&#x27;s pair with the exile-elders: &#x27;his sons&#x27; sons sat in the Chamber of Hewn Stone,&#x27; the Sanhedrin from Midian&#x27;s priest; the station checked) [VERIFIED under EX04-12]; ELKHA-na ve-ASHUVA el-ACHAI — &#x27;LET ME GO, pray, and RETURN to my BROTHERS&#x27;: the son-in-law petitions the household he joined (the readings on the oath of 2:21 named — the leave-request as its honorable discharge); ha-odam CHAYIM — &#x27;do they still LIVE&#x27;: the brothers-word doing double duty (the readings: Aaron and Miriam; all Israel).
+</td><td><span class="he">אֵלֲכָה נָּא וְאָשׁוּבָה אֶל־אַחַי</span> · <i>elakha na ve-ashuva el-acha-y</i><br><span class="gloss">= elakha na and-ashuva to-acha-y</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(elkha_na_ve_ashuva_el_achai, t5)</span><br><span class="gloss">= RESULT: HOLDS(elkha-na-and-ashuva-to-achai, t5)</span><br>THE SAME-VERSE GRANT. va-yomer yitro le-moshe LEKH LE-SHALOM — &#x27;GO IN PEACE&#x27;: the fifth same-verse discharge of the unit — asked and granted before the verse closes (gen_70&#x27;s leave-request class); the readings on the two-word blessing named (le-shalom, toward peace — the errand blessed whole): the machine notes the queue&#x27;s shape: the human courtesies pop instantly; the divine commissions stay open for books.
+</td><td><span class="he">לֵךְ לְשָׁלוֹם</span> · <i>lekh le-shalom</i><br><span class="gloss">= lekh to-shalom</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The leave asked and granted in one verse.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_19 · Exod.4.19 · <span class='expr'>THE_SEEKERS_ARE_DEAD</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה בְּמִדְיָן לֵךְ שֻׁב מִצְרָיִם כִּי־מֵתוּ כָּל־הָאֲנָשִׁים הַמְבַקְשִׁים אֶת־נַפְשֶׁךָ</span> · <i>va-yomer YHWH el-moshe be-midyan lekh shuv mitzrayim ki-metu kal-ha-anashim ha-mevaqshim et-nafshe-kha</i> · And the LORD said to Moses in Midian: Go, return to Egypt; for all the men who sought your life have died.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר יְהוָ֤ה אֶל מֹשֶׁה֙ בְּמִדְיָ֔ן לֵ֖ךְ שֻׁ֣ב מִצְרָ֑יִם</span> · <i>va-yomer YHWH el-moshe be-midyan lekh shuv mitzrayim</i> · go, return to Egypt (etnachta on mitzrayim) [VERIFIED: SNAPSHOT Exod.4.19 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּי מֵ֨תוּ֙ כָּל הָ֣אֲנָשִׁ֔ים הַֽמְבַקְשִׁ֖ים אֶת נַפְשֶֽׁךָ</span> · <i>ki-metu kal-ha-anashim ha-mevaqshim et-nafshe-kha</i> · for all the men who sought your life have died (verse-final nafshe-kha) [VERIFIED: SNAPSHOT Exod.4.19 idx8-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(lekh_shuv_mitzrayim))</span><br><span class="gloss">= DECLARE(the-LORD, LET(lekh-shuv-mitzrayim))</span><br>THE RETURN-DEMAND [EX04-08]. lekh SHUV mitzrayim — &#x27;go, RETURN to Egypt&#x27;: the return-imperative written LEAN — MS&#x27;s unique-lean against the Kitzur&#x27;s two-count with its seven-journeys midrash (the count-dispute carried named, never merged; the skeleton&#x27;s homograph- census printed in the manifest) [VERIFIED: manifest EX04-08]; ki METU kol ha-anashim ha-MEVAQSHIM et nafshekha — &#x27;all the men who SOUGHT your life have DIED&#x27;: exo_02&#x27;s standing fact (the seek-to- kill of 2:15) RECEIPTED in its own verb — the machine matches the seek-word across the units and retires the threat (the readings&#x27; who-they-were named, never merged): the road home is cleared by the letter before the family mounts.
+</td><td><span class="he">לֵךְ שֻׁב מִצְרָיִם</span> · <i>lekh shuv mitzrayim</i><br><span class="gloss">= lekh shuv mitzrayim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The return-demand; the old threat retired.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_20 · Exod.4.20 · <span class='expr'>THE_DONKEY_AND_THE_STAFF</span></h3>
+<p><span class="he">וַיִּקַּח מֹשֶׁה אֶת־אִשְׁתּוֹ וְאֶת־בָּנָיו וַיַּרְכִּבֵם עַל־הַחֲמֹר וַיָּשָׁב אַרְצָה מִצְרָיִם וַיִּקַּח מֹשֶׁה אֶת־מַטֵּה הָאֱלֹהִים בְּיָדוֹ</span> · <i>va-yiqach moshe et-isht-o ve-et-banay-v va-yarkive-m al-ha-chamor va-yashav artza-ה mitzrayim va-yiqach moshe et-mate ha-Elohim be-yad-o</i> · And Moses took his wife and his sons, and mounted them on the donkey, and returned to the land of Egypt; and Moses took the staff of God in his hand.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּקַּ֨ח מֹשֶׁ֜ה אֶת אִשְׁתּ֣וֹ וְאֶת בָּנָ֗יו וַיַּרְכִּבֵם֙ עַֽל הַחֲמֹ֔ר וַיָּ֖שָׁב אַ֣רְצָה מִצְרָ֑יִם</span> · <i>va-yiqach moshe et-isht-o ve-et-banay-v va-yarkive-m al-ha-chamor va-yashav artza-ה mitzrayim</i> · Moses took his wife and his sons, and mounted them on the donkey, and returned to Egypt (etnachta on mitzrayim) [VERIFIED: SNAPSHOT Exod.4.20 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּקַּ֥ח מֹשֶׁ֛ה אֶת מַטֵּ֥ה הָאֱלֹהִ֖ים בְּיָדֽוֹ</span> · <i>va-yiqach moshe et-mate ha-Elohim be-yad-o</i> · and Moses took the staff of God in his hand (verse-final be-yad-o) [VERIFIED: SNAPSHOT Exod.4.20 idx12-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(lekh_shuv_mitzrayim, t6)</span><br><span class="gloss">= RESULT: HOLDS(lekh-shuv-mitzrayim, t6)</span><br>THE RETURN PERFORMED. va-YASHAV artza mitzrayim — &#x27;and he RETURNED to the land of Egypt&#x27;: 4:19&#x27;s demand pops in the deed (the readings&#x27; donkey named — THE donkey: the saddled beast of the Binding and the King&#x27;s poor-man mount, the chain&#x27;s one relay-animal — named, beyond the stream&#x27;s proof); the family mounted (Gershom of exo_02&#x27;s registry; the second son the roster of 18:4 will name — registry restraint holds).
+</td><td><span class="he">וַיָּשָׁב אַרְצָה מִצְרָיִם</span> · <i>va-yashav artza-ה mitzrayim</i><br><span class="gloss">= and-yashav artza-ה mitzrayim</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(ve_et_ha_mate_tiqach_be_yadekha, t7)</span><br><span class="gloss">= RESULT: HOLDS(and-the-mate-tiqach-in-yadekha, t7)</span><br>THE STAFF TAKEN. va-yiqach moshe et MATE ha-ELOHIM be-yado — &#x27;the STAFF OF GOD&#x27;: 4:17&#x27;s take-demand pops — and the letter has promoted the object between push and pop (the staff of 4:2&#x27;s your-hand is now GOD&#x27;S staff): the machine files the upgrade as the pop&#x27;s own receipt — obedience renames the instrument.
+</td><td><span class="he">וַיִּקַּח מֹשֶׁה אֶת־מַטֵּה הָאֱלֹהִים בְּיָדוֹ</span> · <i>va-yiqach moshe et-mate ha-Elohim be-yad-o</i><br><span class="gloss">= and-yiqach Moses mate the-God in-yad-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Two demands pop in one verse.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_21 · Exod.4.21 · <span class='expr'>THE_WONDERS_AND_THE_HARDENING</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה בְּלֶכְתְּךָ לָשׁוּב מִצְרַיְמָה רְאֵה כָּל־הַמֹּפְתִים אֲשֶׁר־שַׂמְתִּי בְיָדֶךָ וַעֲשִׂיתָם לִפְנֵי פַרְעֹה וַאֲנִי אֲחַזֵּק אֶת־לִבּוֹ וְלֹא יְשַׁלַּח אֶת־הָעָם</span> · <i>va-yomer YHWH el-moshe be-lekht-kha la-shuv mitzrayma-ה ree kal-ha-moftim asher-samti ve-yade-kha va-asita-m li-fene faro va-ani achazeq et-lib-o ve-lo yeshalach et-ha-am</i> · And the LORD said to Moses: When you go to return to Egypt, see all the wonders which I have put in your hand, and do them before Pharaoh; and I will strengthen his heart, and he will not send the people out.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֣אמֶר יְהוָה֮ אֶל מֹשֶׁה֒ בְּלֶכְתְּךָ֙ לָשׁ֣וּב מִצְרַ֔יְמָה רְאֵ֗ה כָּל הַמֹּֽפְתִים֙ אֲשֶׁר שַׂ֣מְתִּי בְיָדֶ֔ךָ וַעֲשִׂיתָ֖ם לִפְנֵ֣י פַרְעֹ֑ה</span> · <i>va-yomer YHWH el-moshe be-lekht-kha la-shuv mitzrayma-ה ree kal-ha-moftim asher-samti ve-yade-kha va-asita-m li-fene faro</i> · see all the wonders I have put in your hand, and do them before Pharaoh (etnachta on faro) [VERIFIED: SNAPSHOT Exod.4.21 idx15 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַאֲנִי֙ אֲחַזֵּ֣ק אֶת לִבּ֔וֹ וְלֹ֥א יְשַׁלַּ֖ח אֶת הָעָֽם</span> · <i>va-ani achazeq et-lib-o ve-lo yeshalach et-ha-am</i> · and I will strengthen his heart, and he will not send the people out (verse-final ha-am) [VERIFIED: SNAPSHOT Exod.4.21 idx16-23]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(reeh_ha_moftim_va_asitam_lifne_faro))</span><br><span class="gloss">= DECLARE(the-LORD, LET(reeh-the-moftim-and-asitam-lifne-faro))</span><br>THE WONDERS-CHARGE [EX04-09; EX04-13]. ree khol ha-MOFTIM asher samti ve-yadekha VA-ASITAM lifne FARO — &#x27;see all the WONDERS... and DO them before Pharaoh&#x27;: the charge pushed OPEN — its performance is the plague-cycle itself (the first staff-wonder before Pharaoh armed at 7:10); lifne faro on MS&#x27;s wheel-mark against the stream&#x27;s joining-stroke (the class&#x27;s next station, named) [VERIFIED under EX04-09]; va-ANI ACHAZEQ et libo — &#x27;and I will STRENGTHEN his heart&#x27;: the HARDENING FILE opens (the seize-verb of drill two turned inward; the readings&#x27; freewill-court — the five-then-five arithmetic, the door-closed-to-repentance rulings — convened and NOT ruled: carried open, never merged) [VERIFIED under EX04-13]; ve-lo yeshalach et ha-am — the send-verb negated in forecast: the machine files the book&#x27;s tension-spring.
+</td><td><span class="he">רְאֵה כָּל־הַמֹּפְתִים אֲשֶׁר־שַׂמְתִּי בְיָדֶךָ וַעֲשִׂיתָם לִפְנֵי פַרְעֹה</span> · <i>ree kal-ha-moftim asher-samti ve-yade-kha va-asita-m li-fene faro</i><br><span class="gloss">= ree kal-the-moftim which-samti and-yade-kha and-asita-m to-me-fene faro</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The wonders-charge pushed; the hardening file opens.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_22 · Exod.4.22 · <span class='expr'>MY_SON_MY_FIRSTBORN</span></h3>
+<p><span class="he">וְאָמַרְתָּ אֶל־פַּרְעֹה כֹּה אָמַר יְהוָה בְּנִי בְכֹרִי יִשְׂרָאֵל</span> · <i>ve-amarta el-paro ko amar YHWH beni-y vekhori-y yisrael</i> · And you shall say to Pharaoh: Thus says the LORD: My son, My firstborn — Israel.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאָמַרְתָּ֖ אֶל פַּרְעֹ֑ה</span> · <i>ve-amarta el-paro</i> · and you shall say to Pharaoh (etnachta on paro) [VERIFIED: SNAPSHOT Exod.4.22 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כֹּ֚ה אָמַ֣ר יְהוָ֔ה בְּנִ֥י בְכֹרִ֖י יִשְׂרָאֵֽל</span> · <i>ko amar YHWH beni-y vekhori-y yisrael</i> · thus says the LORD: My son, My firstborn — Israel (verse-final yisrael) [VERIFIED: SNAPSHOT Exod.4.22 idx3-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(ve_amarta_el_paro_beni_vekhori))</span><br><span class="gloss">= DECLARE(the-LORD, LET(and-amarta-to-paro-beni-vekhori))</span><br>THE SON-SCRIPT [EX04-13]. ve-AMARTA el paro: ko amar YHWH BENI VEKHORI yisrael — &#x27;MY SON, MY FIRSTBORN — Israel&#x27;: the say-demand pushed (the scripted-speech class, third of the run) — and the my- firstborn word&#x27;s exact Torah-PAIR carries the theology: JACOB&#x27;S to Reuben (the firstborn DEMOTED, &#x27;you shall not excel,&#x27; Gen 49:3 — gen_72&#x27;s testament) and GOD&#x27;S to Israel here (the nation ELECTED) [VERIFIED: manifest EX04-13]: the letter spends its only other my- firstborn on a demotion, then gives the title to the people: the machine files the script OPEN — its receipt-horizon the midnight- announcement (11:4-5) and the stroke (12:29).
+</td><td><span class="he">כֹּה אָמַר יְהוָה בְּנִי בְכֹרִי יִשְׂרָאֵל</span> · <i>ko amar YHWH beni-y vekhori-y yisrael</i><br><span class="gloss">= ko amar the-LORD beni-y vekhori-y yisrael</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The son-script pushed; the firstborn pair.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_23 · Exod.4.23 · <span class='expr'>I_KILL_YOUR_FIRSTBORN</span></h3>
+<p><span class="he">וָאֹמַר אֵלֶיךָ שַׁלַּח אֶת־בְּנִי וְיַעַבְדֵנִי וַתְּמָאֵן לְשַׁלְּחוֹ הִנֵּה אָנֹכִי הֹרֵג אֶת־בִּנְךָ בְּכֹרֶךָ</span> · <i>va-omar ele-kha shalach et-beni-y ve-yaavde-ni va-temaen le-shalch-o hine anokhi horeg et-bin-kha bekhore-kha</i> · And I say to you: Send My son, that he may serve Me; and you refuse to send him — behold, I kill your son, your firstborn.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וָאֹמַ֣ר אֵלֶ֗יךָ שַׁלַּ֤ח אֶת בְּנִי֙ וְיַֽעַבְדֵ֔נִי וַתְּמָאֵ֖ן לְשַׁלְּח֑וֹ</span> · <i>va-omar ele-kha shalach et-beni-y ve-yaavde-ni va-temaen le-shalch-o</i> · send My son, that he may serve Me; and you refuse to send him (etnachta on le-shalch-o) [VERIFIED: SNAPSHOT Exod.4.23 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">הִנֵּה֙ אָנֹכִ֣י הֹרֵ֔ג אֶת בִּנְךָ֖ בְּכֹרֶֽךָ</span> · <i>hine anokhi horeg et-bin-kha bekhore-kha</i> · behold, I kill your son, your firstborn (verse-final bekhore-kha) [VERIFIED: SNAPSHOT Exod.4.23 idx8-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hine_anokhi_horeg_et_binkha_bekhorekha, t0)</span><br><span class="gloss">= HOLDS(hine-anokhi-slayer-binkha-bekhorekha, t0)</span><br>THE SCRIPT&#x27;S EDGE. SHALACH et beni ve-YAAVDENI — &#x27;SEND My son that he may SERVE Me&#x27;: the send-and-serve pair (the serve-verb of the bondage, 1:13, re-aimed at its Owner: the book&#x27;s thesis in four words); va-TEMAEN le-shalcho — &#x27;and you REFUSE&#x27;: the refuse-verb (gen_71&#x27;s dead-by-refusal class-word — the machine notes the letter pre-filing Pharaoh&#x27;s refusals); hine anokhi HOREG et BINKHA BEKHOREKHA — &#x27;I kill YOUR son, YOUR firstborn&#x27;: the measure-for- measure stated in the script&#x27;s own grammar (My firstborn / your firstborn): the machine files the forecast the tenth plague will execute (12:29, armed) — the Nile-decree&#x27;s arithmetic returning to the decree-house.
+</td><td><span class="he">הִנֵּה אָנֹכִי הֹרֵג אֶת־בִּנְךָ בְּכֹרֶךָ</span> · <i>hine anokhi horeg et-bin-kha bekhore-kha</i><br><span class="gloss">= hine anokhi slayer bin-kha bekhore-kha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The script&#x27;s edge.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_24 · Exod.4.24 · <span class='expr'>THE_ENCOUNTER_AT_THE_INN</span></h3>
+<p><span class="he">וַיְהִי בַדֶּרֶךְ בַּמָּלוֹן וַיִּפְגְּשֵׁהוּ יְהוָה וַיְבַקֵּשׁ הֲמִיתוֹ</span> · <i>va-yehi va-derekh ba-malon va-yifgshe-hu YHWH va-yevaqesh hamit-o</i> · And it was on the way, at the lodging-place; and the LORD met him, and sought to kill him.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֥י בַדֶּ֖רֶךְ בַּמָּל֑וֹן</span> · <i>va-yehi va-derekh ba-malon</i> · on the way, at the lodging-place (etnachta on ba-malon) [VERIFIED: SNAPSHOT Exod.4.24 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּפְגְּשֵׁ֣הוּ יְהוָ֔ה וַיְבַקֵּ֖שׁ הֲמִיתֽוֹ</span> · <i>va-yifgshe-hu YHWH va-yevaqesh hamit-o</i> · and the LORD met him, and sought to kill him (verse-final hamit-o) [VERIFIED: SNAPSHOT Exod.4.24 idx3-6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yevaqesh_hamito, t0)</span><br><span class="gloss">= HOLDS(and-yevaqesh-hamito, t0)</span><br>THE ATTACK [EX04-04]. va-YIFGESHEHU YHWH va-yevaqesh HAMITO — &#x27;and the LORD MET him, and sought to KILL him&#x27;: the met-word&#x27;s exact Scripture-pair lives INSIDE this chapter — the attack here, Aaron&#x27;s kiss at 4:27 (the Kitzur: &#x27;when Moses was lax about the circumcision, Wrath and Fury came to swallow him... by Aaron&#x27;s merit he was saved&#x27;) [VERIFIED: manifest EX04-04]; the machine holds the seeking as standing fact (the class of 2:15 — no imperative, no card) and files the terror the readings weigh: the sender attacks the sent (the readings&#x27; whose-lapse and which-son hearings named, never merged): three verses of night between the commission and the road.
+</td><td><span class="he">וַיִּפְגְּשֵׁהוּ יְהוָה וַיְבַקֵּשׁ הֲמִיתוֹ</span> · <i>va-yifgshe-hu YHWH va-yevaqesh hamit-o</i><br><span class="gloss">= and-yifgshe-that the-LORD and-yevaqesh hamit-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The second seeking; the pair&#x27;s dark half.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_25 · Exod.4.25 · <span class='expr'>THE_FLINT</span></h3>
+<p><span class="he">וַתִּקַּח צִפֹּרָה צֹר וַתִּכְרֹת אֶת־עָרְלַת בְּנָהּ וַתַּגַּע לְרַגְלָיו וַתֹּאמֶר כִּי חֲתַן־דָּמִים אַתָּה לִי</span> · <i>va-tiqach tzipora tzor va-tikhrot et-arlat bena-ה va-taga le-raglay-v va-tomer ki chatan-damim ata li-y</i> · And Zipporah took a flint, and cut off the foreskin of her son, and made it touch his feet; and she said: For a bridegroom of blood are you to me.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתִּקַּ֨ח צִפֹּרָ֜ה צֹ֗ר וַתִּכְרֹת֙ אֶת עָרְלַ֣ת בְּנָ֔הּ וַתַּגַּ֖ע לְרַגְלָ֑יו</span> · <i>va-tiqach tzipora tzor va-tikhrot et-arlat bena-ה va-taga le-raglay-v</i> · Zipporah took a flint, and cut off the foreskin of her son, and touched his feet (etnachta on le-raglay-v) [VERIFIED: SNAPSHOT Exod.4.25 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתֹּ֕אמֶר כִּ֧י חֲתַן דָּמִ֛ים אַתָּ֖ה לִֽי</span> · <i>va-tomer ki chatan-damim ata li-y</i> · and she said: for a bridegroom of blood are you to me (verse-final li-y) [VERIFIED: SNAPSHOT Exod.4.25 idx9-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">karta(e1); Agent(e1, tzipora)</span><br>THE DEED [exo_02&#x27;s file]. va-tiqach TZIPORA TZOR — ZIPPORAH takes a FLINT: the bird-name at its second lean station (exo_02&#x27;s three-lean file — the giving 2:21, the taking HERE, the wife-clause 18:2: the census verified there); va-TIKHROT et ARLAT benah — &#x27;and CUT OFF the foreskin of her son&#x27;: the machine&#x27;s EVENT — the covenant of the flesh (gen_33&#x27;s law) executed by a Midianite woman with a stone, at night, unbidden: the corpus&#x27;s fastest halakhic actor (the readings on which son and why lapsed named); va-taga le-RAGLAV... CHATAN DAMIM ata li — &#x27;a BRIDEGROOM OF BLOOD are you to me&#x27;: the blood-word plural (the two bloods the readings count — circumcision and passover, armed at 12:7&#x27;s doorposts): the deed that stops the seeking.
+</td><td><span class="he">וַתִּקַּח צִפֹּרָה צֹר וַתִּכְרֹת אֶת־עָרְלַת בְּנָהּ</span> · <i>va-tiqach tzipora tzor va-tikhrot et-arlat bena-ה</i><br><span class="gloss">= and-tiqach tzipora tzor and-tikhrot arlat bena-ה</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The circumcision event; the second lean bird-name.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_26 · Exod.4.26 · <span class='expr'>HE_RELEASED</span></h3>
+<p><span class="he">וַיִּרֶף מִמֶּנּוּ אָז אָמְרָה חֲתַן דָּמִים לַמּוּלֹת</span> · <i>va-yiref mime-nu az amra chatan damim la-mulot</i> · And He released him. Then she said: A bridegroom of blood — for the circumcisions.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּ֖רֶף מִמֶּ֑נּוּ</span> · <i>va-yiref mime-nu</i> · and He released him (etnachta on mime-nu) [VERIFIED: SNAPSHOT Exod.4.26 idx1 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אָ֚ז אָֽמְרָ֔ה חֲתַ֥ן דָּמִ֖ים לַמּוּלֹֽת</span> · <i>az amra chatan damim la-mulot</i> · then she said: a bridegroom of blood — for the circumcisions (verse-final la-mulot) [VERIFIED: SNAPSHOT Exod.4.26 idx2-6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yiref_mimenu, t0)</span><br><span class="gloss">= HOLDS(and-yiref-from-it, t0)</span><br>THE RELEASE [EX04-13]. va-YIREF mimenu — &#x27;and He RELEASED him&#x27;: the seeking of 4:24 ends at the blood (the machine files the mechanics: no demand was uttered at the inn — a standing menace, discharged by a deed the letter never commanded: the queue&#x27;s strangest transaction); AZ amra CHATAN DAMIM la-MULOT — the second saying, now with the circumcision-word plural (&#x27;for the circumcisions&#x27; — the referent-split of the two sayings named, never merged) [VERIFIED under EX04-13]: the machine notes the survivor of the night is the MISSION — the road resumes.
+</td><td><span class="he">וַיִּרֶף מִמֶּנּוּ</span> · <i>va-yiref mime-nu</i><br><span class="gloss">= and-yiref mime-nu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The release; the second saying.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_27 · Exod.4.27 · <span class='expr'>GO_MEET_MOSES</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֶל־אַהֲרֹן לֵךְ לִקְרַאת מֹשֶׁה הַמִּדְבָּרָה וַיֵּלֶךְ וַיִּפְגְּשֵׁהוּ בְּהַר הָאֱלֹהִים וַיִּשַּׁק־לוֹ</span> · <i>va-yomer YHWH el-aharon lekh li-qerat moshe ha-midbara-ה va-yelekh va-yifgshe-hu be-har ha-Elohim va-yishaq-l-o</i> · And the LORD said to Aaron: Go to meet Moses, to the wilderness. And he went, and met him at the mountain of God, and kissed him.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר יְהוָה֙ אֶֽל אַהֲרֹ֔ן לֵ֛ךְ לִקְרַ֥את מֹשֶׁ֖ה הַמִּדְבָּ֑רָה</span> · <i>va-yomer YHWH el-aharon lekh li-qerat moshe ha-midbara-ה</i> · go to meet Moses, to the wilderness (etnachta on ha-midbara-ה) [VERIFIED: SNAPSHOT Exod.4.27 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֵּ֗לֶךְ וַֽיִּפְגְּשֵׁ֛הוּ בְּהַ֥ר הָאֱלֹהִ֖ים וַיִּשַּׁק לֽוֹ</span> · <i>va-yelekh va-yifgshe-hu be-har ha-Elohim va-yishaq-l-o</i> · and he went, and met him at the mountain of God, and kissed him (verse-final l-o) [VERIFIED: SNAPSHOT Exod.4.27 idx8-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(lekh_liqrat_moshe_ha_midbara))</span><br><span class="gloss">= DECLARE(the-LORD, LET(lekh-liqrat-Moses-the-midbara))</span><br>THE MEET-DEMAND [EX04-04]. va-yomer YHWH el-AHARON — the first recorded word of God TO Aaron in the book: LEKH liqrat moshe ha- MIDBARA — &#x27;GO to meet Moses, to the wilderness&#x27;: the demand pushed (the Kitzur&#x27;s lean-yatza file named — the going already under way when the word came).
+</td><td><span class="he">לֵךְ לִקְרַאת מֹשֶׁה הַמִּדְבָּרָה</span> · <i>lekh li-qerat moshe ha-midbara-ה</i><br><span class="gloss">= lekh to-me-qerat Moses the-midbara-ה</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(lekh_liqrat_moshe_ha_midbara, t8)</span><br><span class="gloss">= RESULT: HOLDS(lekh-liqrat-Moses-the-midbara, t8)</span><br>THE SAME-VERSE KISS. va-yelekh va-YIFGESHEHU be-har ha-elohim va- YISHAQ-lo — went, MET him at the mountain of God, and KISSED him: the sixth same-verse discharge — and the met-word&#x27;s pair completes INSIDE the unit: met to be killed (4:24), met to be KISSED (here) — the Kitzur&#x27;s by-Aaron&#x27;s-merit binding the two stations [VERIFIED: manifest EX04-04]: the machine files the meeting-place: the mountain of God (3:1&#x27;s geography closing its loop — the brothers embrace where the nation will stand).
+</td><td><span class="he">וַיֵּלֶךְ וַיִּפְגְּשֵׁהוּ בְּהַר הָאֱלֹהִים וַיִּשַּׁק־לוֹ</span> · <i>va-yelekh va-yifgshe-hu be-har ha-Elohim va-yishaq-l-o</i><br><span class="gloss">= and-yelekh and-yifgshe-that in-har the-God and-yishaq-l-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The meet-demand; performed in the same verse.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_28 · Exod.4.28 · <span class='expr'>HE_TOLD_HIM_ALL_THE_WORDS</span></h3>
+<p><span class="he">וַיַּגֵּד מֹשֶׁה לְאַהֲרֹן אֵת כָּל־דִּבְרֵי יְהוָה אֲשֶׁר שְׁלָחוֹ וְאֵת כָּל־הָאֹתֹת אֲשֶׁר צִוָּהוּ</span> · <i>va-yaged moshe le-aharon et kal-divre YHWH asher shelach-o ve-et kal-ha-otot asher tziva-hu</i> · And Moses told Aaron all the words of the LORD who had sent him, and all the signs which He had commanded him.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּגֵּ֤ד מֹשֶׁה֙ לְאַֽהֲרֹ֔ן אֵ֛ת כָּל דִּבְרֵ֥י יְהוָ֖ה אֲשֶׁ֣ר שְׁלָח֑וֹ</span> · <i>va-yaged moshe le-aharon et kal-divre YHWH asher shelach-o</i> · Moses told Aaron all the words of the LORD who had sent him (etnachta on shelach-o) [VERIFIED: SNAPSHOT Exod.4.28 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאֵ֥ת כָּל הָאֹתֹ֖ת אֲשֶׁ֥ר צִוָּֽהוּ</span> · <i>ve-et kal-ha-otot asher tziva-hu</i> · and all the signs which He had commanded him (verse-final tziva-hu) [VERIFIED: SNAPSHOT Exod.4.28 idx9-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(ve_samta_et_ha_devarim_be_fiv, t9)</span><br><span class="gloss">= RESULT: HOLDS(and-samta-the-devarim-in-fiv, t9)</span><br>THE RELAY PERFORMED. va-YAGED moshe le-AHARON et KOL divre YHWH asher shelacho — &#x27;Moses TOLD Aaron ALL the words&#x27;: 4:15&#x27;s words-in- his-mouth demand pops in the telling (the all-word doubled — all the words, all the signs: the letter certifies a complete handoff); asher TZIVAHU — &#x27;which He had COMMANDED him&#x27;: the machine notes the receipt-grammar (the command-verb closing the loop) and the org- chart going live: the mouth is loaded.
+</td><td><span class="he">וַיַּגֵּד מֹשֶׁה לְאַהֲרֹן אֵת כָּל־דִּבְרֵי יְהוָה אֲשֶׁר שְׁלָחוֹ</span> · <i>va-yaged moshe le-aharon et kal-divre YHWH asher shelach-o</i><br><span class="gloss">= and-yaged Moses Aaron et kal-divre the-LORD which shelach-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The relay-demand pops.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_29 · Exod.4.29 · <span class='expr'>THE_ELDERS_GATHERED</span></h3>
+<p><span class="he">וַיֵּלֶךְ מֹשֶׁה וְאַהֲרֹן וַיַּאַסְפוּ אֶת־כָּל־זִקְנֵי בְּנֵי יִשְׂרָאֵל</span> · <i>va-yelekh moshe ve-aharon va-yaasfu et-kal-ziqne bene yisrael</i> · And Moses and Aaron went, and gathered all the elders of the sons of Israel.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֵּ֥לֶךְ מֹשֶׁ֖ה וְאַהֲרֹ֑ן</span> · <i>va-yelekh moshe ve-aharon</i> · Moses and Aaron went (etnachta on ve-aharon) [VERIFIED: SNAPSHOT Exod.4.29 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּ֣אַסְפ֔וּ אֶת כָּל זִקְנֵ֖י בְּנֵ֥י יִשְׂרָאֵֽל</span> · <i>va-yaasfu et-kal-ziqne bene yisrael</i> · and gathered all the elders of the sons of Israel (verse-final yisrael) [VERIFIED: SNAPSHOT Exod.4.29 idx3-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yaasfu_et_kol_ziqne_bene_yisrael, t0)</span><br><span class="gloss">= HOLDS(and-yaasfu-all-ziqne-bene-yisrael, t0)</span><br>THE GATHERING [the cross-unit performance]. va-yelekh moshe ve- AHARON va-YAASFU et kol ZIQNE bene yisrael — &#x27;they GATHERED all the ELDERS&#x27;: exo_03&#x27;s elders-script (lekh ve-asafta, 3:16) begins performing — gathered exactly as scripted, with Aaron added to the instrument (the relay of 4:15-16 already operating): the machine files NO in-unit pop (the one-world law: another unit&#x27;s demand settles only by authored corpus link — the link authored at this run&#x27;s world-fold, citing 4:29-31 whole): the elders of the transmission-protocol (the Name handed &#x27;only to the elders of the generation,&#x27; EX03-01&#x27;s file) assemble to receive the password.
+</td><td><span class="he">וַיַּאַסְפוּ אֶת־כָּל־זִקְנֵי בְּנֵי יִשְׂרָאֵל</span> · <i>va-yaasfu et-kal-ziqne bene yisrael</i><br><span class="gloss">= and-yaasfu kal-ziqne bene yisrael</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">exo_03&#x27;s elders-script performing; the cross-unit hook.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_30 · Exod.4.30 · <span class='expr'>AARON_SPOKE_AND_DID_THE_SIGNS</span></h3>
+<p><span class="he">וַיְדַבֵּר אַהֲרֹן אֵת כָּל־הַדְּבָרִים אֲשֶׁר־דִּבֶּר יְהוָה אֶל־מֹשֶׁה וַיַּעַשׂ הָאֹתֹת לְעֵינֵי הָעָם</span> · <i>va-yedaber aharon et kal-ha-devarim asher-diber YHWH el-moshe va-yaas ha-otot le-ene ha-am</i> · And Aaron spoke all the words which the LORD had spoken to Moses; and he did the signs before the eyes of the people.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְדַבֵּ֣ר אַהֲרֹ֔ן אֵ֚ת כָּל הַדְּבָרִ֔ים אֲשֶׁר דִּבֶּ֥ר יְהוָ֖ה אֶל מֹשֶׁ֑ה</span> · <i>va-yedaber aharon et kal-ha-devarim asher-diber YHWH el-moshe</i> · Aaron spoke all the words which the LORD had spoken to Moses (etnachta on moshe) [VERIFIED: SNAPSHOT Exod.4.30 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּ֥עַשׂ הָאֹתֹ֖ת לְעֵינֵ֥י הָעָֽם</span> · <i>va-yaas ha-otot le-ene ha-am</i> · and he did the signs before the eyes of the people (verse-final ha-am) [VERIFIED: SNAPSHOT Exod.4.30 idx10-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yaas_ha_otot_le_ene_ha_am, t0)</span><br><span class="gloss">= HOLDS(and-yaas-the-signs-to-ene-the-am, t0)</span><br>THE DELIVERY [EX04-09]. va-yedaber AHARON et kol ha-devarim — AARON speaks all the words (the mouth-office of 4:16 in its first execution; MS&#x27;s no-pause-line note at the aharon-et joint carried named [EX04-09]); va-YAAS ha-OTOT le-ENE ha-am — &#x27;and he DID the SIGNS before the EYES of the people&#x27;: the drill of 4:3-7 performed for its audience (the readings on who did them named): the machine notes the purpose-clause of 4:5 meeting its test — the next verse is the verdict.
+</td><td><span class="he">וַיַּעַשׂ הָאֹתֹת לְעֵינֵי הָעָם</span> · <i>va-yaas ha-otot le-ene ha-am</i><br><span class="gloss">= and-yaas signs to-ene the-am</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The relay executes; the signs shown.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_4_31 · Exod.4.31 · <span class='expr'>AND_THE_PEOPLE_BELIEVED</span></h3>
+<p><span class="he">וַיַּאֲמֵן הָעָם וַיִּשְׁמְעוּ כִּי־פָקַד יְהוָה אֶת־בְּנֵי יִשְׂרָאֵל וְכִי רָאָה אֶת־עָנְיָם וַיִּקְּדוּ וַיִּשְׁתַּחֲוּוּ</span> · <i>va-yaamen ha-am va-yishmu ki-faqad YHWH et-bene yisrael ve-ki raa et-anya-m va-yiqdu va-yishtachauu</i> · And the people believed; and they heard that the LORD had visited the sons of Israel, and that He had seen their affliction; and they bowed and prostrated themselves.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַֽיַּאֲמֵ֖ן הָעָ֑ם</span> · <i>va-yaamen ha-am</i> · and the people believed (etnachta on ha-am) [VERIFIED: SNAPSHOT Exod.4.31 idx1 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַֽיִּשְׁמְע֡וּ כִּֽי פָקַ֨ד יְהוָ֜ה אֶת בְּנֵ֣י יִשְׂרָאֵ֗ל וְכִ֤י רָאָה֙ אֶת עָנְיָ֔ם וַֽיִּקְּד֖וּ וַיִּֽשְׁתַּחֲוּֽוּ</span> · <i>va-yishmu ki-faqad YHWH et-bene yisrael ve-ki raa et-anya-m va-yiqdu va-yishtachauu</i> · they heard that the LORD had visited the sons of Israel, and had seen their affliction; and they bowed (verse-final va-yishtachauu) [VERIFIED: SNAPSHOT Exod.4.31 idx2-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yaamen_ha_am, t0)</span><br><span class="gloss">= HOLDS(and-yaamen-the-am, t0)</span><br>THE VERDICT [EX04-06]. va-YAAMEN ha-am — &#x27;and the people BELIEVED&#x27;: the believed-word&#x27;s ONE Torah token — 4:1&#x27;s objection (&#x27;they will not believe&#x27;) refuted in the letter&#x27;s rarest coin (the Kitzur&#x27;s two- shepherds pair named: Moses and David, faithful, therefore believed) [VERIFIED: manifest EX04-06]; va-yishmeu ki FAQAD YHWH et bene yisrael — &#x27;they HEARD that the LORD had VISITED&#x27;: the visit-verb sounding over the people exactly as the elders-script carried it (3:16&#x27;s password, the four-station file — the believing IS the password&#x27;s receipt-in-hearing); ve-khi RAA et onyam — the seen- affliction (3:7&#x27;s case-record now community knowledge); va-yiqdu va- yishtachavu — they BOWED: the machine closes the unit on the corpus&#x27;s posture-verb of accepted news (the readings: they believed BEFORE the signs&#x27; report reached the body): the mission has a people.
+</td><td><span class="he">וַיַּאֲמֵן הָעָם</span> · <i>va-yaamen ha-am</i><br><span class="gloss">= and-yaamen the-am</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The objection refuted; the password lands.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Ex_4_1 — they will not believe</td><td>And Moses answered and said: But behold, they will not believe me, and will not hear my voice; for they will say: The LORD has not appeared to you.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיַּ֤עַן מֹשֶׁה֙ וַיֹּ֔אמֶר וְהֵן֙</span> · <i>va-yaan moshe va-yomer ve-hen</i><br><span class="gloss">= and-yaan Moses and-yomer and-hen</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Ex_4_2 — what is this in your hand</td><td>And the LORD said to him: What is this in your hand? And he said: A staff.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיֹּ֧אמֶר אֵלָ֛יו יְהוָ֖ה מזה</span> · <i>va-yomer elay-v YHWH m-z</i><br><span class="gloss">= and-yomer elay-v the-LORD m-z</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Ex_4_3 — throw it — and he threw</td><td>And He said: Throw it to the ground. And he threw it to the ground, and it became a serpent; and Moses fled from before it.</td><td>LET(hashlikhehu_artzah) pushed then satisfied in the SAME verse; no test, no name.<br><span class="gloss">= LET(hashlikhehu-artzah) pushed then satisfied in the SAME verse; no test, no name.</span></td><td><span class="he">וַיֹּ֨אמֶר֙ הַשְׁלִיכֵ֣הוּ אַ֔רְצָה וַיַּשְׁלִיכֵ֥הוּ</span> · <i>va-yomer hashlikhe-hu artza-ה va-yashlikhe-hu</i><br><span class="gloss">= and-yomer hashlikhe-that artza-ה and-yashlikhe-that</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Ex_4_4 — seize the tail</td><td>And the LORD said to Moses: Send your hand, and seize it by the tail. And he sent his hand, and held it fast, and it became a staff in his palm.</td><td>LET(shelach_yadekha_ve_echoz_bi_zenavo) pushed then satisfied in the SAME verse; no test, no name.<br><span class="gloss">= LET(shelach-yadekha-and-echoz-bi-zenavo) pushed then satisfied in the SAME verse; no test, no name.</span></td><td><span class="he">וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה</span> · <i>va-yomer YHWH el-moshe</i><br><span class="gloss">= and-yomer the-LORD to-Moses</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Ex_4_5 — that they may believe</td><td>That they may believe that the LORD, the God of their fathers — the God of Abraham, the God of Isaac, and the God of Jacob — has appeared to you.</td><td>SPECS empty; no test, no name.</td><td><span class="he">לְמַ֣עַן יַאֲמִ֔ינוּ כִּֽי נִרְאָ֥ה</span> · <i>lemaan yaaminu ki-nira</i><br><span class="gloss">= lemaan yaaminu when-nira</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Ex_4_6 — the hand in the bosom</td><td>And the LORD said to him further: Bring, pray, your hand into your bosom. And he brought his hand into his bosom; and he took it out, and behold, his hand was leprous, as snow.</td><td>LET(have_na_yadekha_be_cheqekha) pushed then satisfied in the SAME verse; no test, no name.<br><span class="gloss">= LET(have-na-yadekha-in-cheqekha) pushed then satisfied in the SAME verse; no test, no name.</span></td><td><span class="he">וַיֹּאמֶר֩ יְהוָ֨ה ל֜וֹ ע֗וֹד</span> · <i>va-yomer YHWH l-o od</i><br><span class="gloss">= and-yomer the-LORD l-o od</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Ex_4_7 — the hand restored</td><td>And He said: Return your hand to your bosom. And he returned his hand to his bosom; and he took it out from his bosom, and behold, it returned as his flesh.</td><td>LET(hashev_yadekha_el_cheqekha) pushed then satisfied in the SAME verse; no test, no name.<br><span class="gloss">= LET(hashev-yadekha-to-cheqekha) pushed then satisfied in the SAME verse; no test, no name.</span></td><td><span class="he">וַיֹּ֗אמֶר הָשֵׁ֤ב יָֽדְךָ֙ אֶל</span> · <i>va-yomer hashev yad-kha el-</i><br><span class="gloss">= and-yomer hashev yad-kha to</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Ex_4_8 — the voice of the latter sign</td><td>And it shall be, if they will not believe you, and will not hear the voice of the first sign, that they will believe the voice of the latter sign.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וְהָיָה֙ אִם לֹ֣א יַאֲמִ֣ינוּ</span> · <i>ve-haya im-lo yaaminu</i><br><span class="gloss">= and-haya if-not yaaminu</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Ex_4_9 — the Nile on the dry land</td><td>And it shall be, if they will not believe even these two signs, and will not hear your voice, that you shall take of the water of the Nile, and pour it on the dry land; and the water which you take from the Nile shall become blood on the dry land.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וְהָיָ֡ה אִם לֹ֣א יַאֲמִ֡ינוּ</span> · <i>ve-haya im-lo yaaminu</i><br><span class="gloss">= and-haya if-not yaaminu</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Ex_4_10 — heavy of mouth</td><td>And Moses said to the LORD: Please, my Lord, I am not a man of words — also from yesterday, also from the day before, also since You have spoken to Your servant; for heavy of mouth and heavy of tongue am I.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיֹּ֨אמֶר מֹשֶׁ֣ה אֶל יְהוָה֮</span> · <i>va-yomer moshe el-YHWH</i><br><span class="gloss">= and-yomer Moses to-the-LORD</span></td></tr>
+<tr><td><b>S11</b></td><td>after STEP_Ex_4_11 — who set a mouth</td><td>And the LORD said to him: Who set a mouth for man, or who makes dumb, or deaf, or seeing, or blind? Is it not I, the LORD?</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיֹּ֨אמֶר יְהוָ֜ה אֵלָ֗יו מִ֣י</span> · <i>va-yomer YHWH elay-v mi</i><br><span class="gloss">= and-yomer the-LORD elay-v from</span></td></tr>
+<tr><td><b>S12</b></td><td>after STEP_Ex_4_12 — go — I am with your mouth</td><td>And now, go — and I will be with your mouth, and will teach you what you shall speak.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וְעַתָּ֖ה לֵ֑ךְ וְאָנֹכִי֙ אֶֽהְיֶ֣ה</span> · <i>ve-ata lekh ve-anokhi ehye</i><br><span class="gloss">= and-ata lekh and-anokhi ehye</span></td></tr>
+<tr><td><b>S13</b></td><td>after STEP_Ex_4_13 — send by whose hand</td><td>And he said: Please, my Lord — send, pray, by the hand You will send.</td><td>LET(shelach_na_be_yad_tishlach) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shelach-na-in-yad-tishlach) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֖אמֶר בִּ֣י אֲדֹנָ֑י שְֽׁלַֽח</span> · <i>va-yomer bi adona-y shelach-</i><br><span class="gloss">= and-yomer bi adona-y shelach</span></td></tr>
+<tr><td><b>S14</b></td><td>after STEP_Ex_4_14 — Aaron is coming</td><td>And the anger of the LORD burned against Moses, and He said: Is there not Aaron your brother, the Levite? I know that he will surely speak — he; and also, behold, he is coming out to meet you, and he will see you and rejoice in his heart.</td><td>LET(shelach_na_be_yad_tishlach) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shelach-na-in-yad-tishlach) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּֽחַר אַ֨ף יְהוָ֜ה בְּמֹשֶׁ֗ה</span> · <i>va-yichar-af YHWH be-moshe</i><br><span class="gloss">= and-yichar-af the-LORD Moses</span></td></tr>
+<tr><td><b>S15</b></td><td>after STEP_Ex_4_15 — words in his mouth</td><td>And you shall speak to him, and put the words in his mouth; and I will be with your mouth and with his mouth, and will teach you both what you shall do.</td><td>LET(shelach_na_be_yad_tishlach) pushed and OPEN; LET(ve_samta_et_ha_devarim_be_fiv) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shelach-na-in-yad-tishlach) pushed and OPEN; LET(and-samta-the-devarim-in-fiv) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְדִבַּרְתָּ֣ אֵלָ֔יו וְשַׂמְתָּ֥ אֶת</span> · <i>ve-dibarta elay-v ve-samta et-</i><br><span class="gloss">= and-dibarta elay-v and-samta et-</span></td></tr>
+<tr><td><b>S16</b></td><td>after STEP_Ex_4_16 — mouth and God</td><td>And he shall speak for you to the people; and it shall be — he shall be for you a mouth, and you shall be for him as God.</td><td>LET(shelach_na_be_yad_tishlach) pushed and OPEN; LET(ve_samta_et_ha_devarim_be_fiv) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shelach-na-in-yad-tishlach) pushed and OPEN; LET(and-samta-the-devarim-in-fiv) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְדִבֶּר ה֥וּא לְךָ֖ אֶל</span> · <i>ve-diber-hu le-kha el-</i><br><span class="gloss">= and-diber-that to-kha to</span></td></tr>
+<tr><td><b>S17</b></td><td>after STEP_Ex_4_17 — take this staff</td><td>And this staff you shall take in your hand, with which you shall do the signs.</td><td>LET(shelach_na_be_yad_tishlach) pushed and OPEN; LET(ve_samta_et_ha_devarim_be_fiv) pushed and OPEN; LET(ve_et_ha_mate_tiqach_be_yadekha) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shelach-na-in-yad-tishlach) pushed and OPEN; LET(and-samta-the-devarim-in-fiv) pushed and OPEN; LET(and-the-mate-tiqach-in-yadekha) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְאֶת הַמַּטֶּ֥ה הַזֶּ֖ה תִּקַּ֣ח</span> · <i>ve-et-ha-mate ha-ze tiqach</i><br><span class="gloss">= and-the-mate the-ze tiqach</span></td></tr>
+<tr><td><b>S18</b></td><td>after STEP_Ex_4_18 — let me go — go in peace</td><td>And Moses went and returned to Jether his father-in-law, and said to him: Let me go, pray, and return to my brothers who are in Egypt, and see whether they still live. And Jethro said to Moses: Go in peace.</td><td>LET(shelach_na_be_yad_tishlach) pushed and OPEN; LET(ve_samta_et_ha_devarim_be_fiv) pushed and OPEN; LET(ve_et_ha_mate_tiqach_be_yadekha) pushed and OPEN; LET(elkha_na_ve_ashuva_el_achai) pushed then satisfied in the SAME verse; no test, no name.<br><span class="gloss">= LET(shelach-na-in-yad-tishlach) pushed and OPEN; LET(and-samta-the-devarim-in-fiv) pushed and OPEN; LET(and-the-mate-tiqach-in-yadekha) pushed and OPEN; LET(elkha-na-and-ashuva-to-achai) pushed then satisfied in the SAME verse; no test, no name.</span></td><td><span class="he">וַיֵּ֨לֶךְ מֹשֶׁ֜ה וַיָּ֣שָׁב אֶל</span> · <i>va-yelekh moshe va-yashav el-</i><br><span class="gloss">= and-yelekh Moses and-yashav to</span></td></tr>
+<tr><td><b>S19</b></td><td>after STEP_Ex_4_19 — the seekers are dead</td><td>And the LORD said to Moses in Midian: Go, return to Egypt; for all the men who sought your life have died.</td><td>LET(shelach_na_be_yad_tishlach) pushed and OPEN; LET(ve_samta_et_ha_devarim_be_fiv) pushed and OPEN; LET(ve_et_ha_mate_tiqach_be_yadekha) pushed and OPEN; LET(lekh_shuv_mitzrayim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shelach-na-in-yad-tishlach) pushed and OPEN; LET(and-samta-the-devarim-in-fiv) pushed and OPEN; LET(and-the-mate-tiqach-in-yadekha) pushed and OPEN; LET(lekh-shuv-mitzrayim) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֨אמֶר יְהוָ֤ה אֶל מֹשֶׁה֙</span> · <i>va-yomer YHWH el-moshe</i><br><span class="gloss">= and-yomer the-LORD to-Moses</span></td></tr>
+<tr><td><b>S20</b></td><td>after STEP_Ex_4_20 — the donkey and the staff</td><td>And Moses took his wife and his sons, and mounted them on the donkey, and returned to the land of Egypt; and Moses took the staff of God in his hand.</td><td>LET(shelach_na_be_yad_tishlach) pushed and OPEN; LET(ve_samta_et_ha_devarim_be_fiv) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shelach-na-in-yad-tishlach) pushed and OPEN; LET(and-samta-the-devarim-in-fiv) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּקַּ֨ח מֹשֶׁ֜ה אֶת אִשְׁתּ֣וֹ</span> · <i>va-yiqach moshe et-isht-o</i><br><span class="gloss">= and-yiqach Moses isht-o</span></td></tr>
+<tr><td><b>S21</b></td><td>after STEP_Ex_4_21 — the wonders and the hardening</td><td>And the LORD said to Moses: When you go to return to Egypt, see all the wonders which I have put in your hand, and do them before Pharaoh; and I will strengthen his heart, and he will not send the people out.</td><td>LET(shelach_na_be_yad_tishlach) pushed and OPEN; LET(ve_samta_et_ha_devarim_be_fiv) pushed and OPEN; LET(reeh_ha_moftim_va_asitam_lifne_faro) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shelach-na-in-yad-tishlach) pushed and OPEN; LET(and-samta-the-devarim-in-fiv) pushed and OPEN; LET(reeh-the-moftim-and-asitam-lifne-faro) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֣אמֶר יְהוָה֮ אֶל מֹשֶׁה֒</span> · <i>va-yomer YHWH el-moshe</i><br><span class="gloss">= and-yomer the-LORD to-Moses</span></td></tr>
+<tr><td><b>S22</b></td><td>after STEP_Ex_4_22 — My son, My firstborn</td><td>And you shall say to Pharaoh: Thus says the LORD: My son, My firstborn — Israel.</td><td>LET(shelach_na_be_yad_tishlach) pushed and OPEN; LET(ve_samta_et_ha_devarim_be_fiv) pushed and OPEN; LET(reeh_ha_moftim_va_asitam_lifne_faro) pushed and OPEN; LET(ve_amarta_el_paro_beni_vekhori) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shelach-na-in-yad-tishlach) pushed and OPEN; LET(and-samta-the-devarim-in-fiv) pushed and OPEN; LET(reeh-the-moftim-and-asitam-lifne-faro) pushed and OPEN; LET(and-amarta-to-paro-beni-vekhori) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְאָמַרְתָּ֖ אֶל פַּרְעֹ֑ה כֹּ֚ה</span> · <i>ve-amarta el-paro ko</i><br><span class="gloss">= and-amarta to-paro ko</span></td></tr>
+<tr><td><b>S23</b></td><td>after STEP_Ex_4_23 — I kill your firstborn</td><td>And I say to you: Send My son, that he may serve Me; and you refuse to send him — behold, I kill your son, your firstborn.</td><td>LET(shelach_na_be_yad_tishlach) pushed and OPEN; LET(ve_samta_et_ha_devarim_be_fiv) pushed and OPEN; LET(reeh_ha_moftim_va_asitam_lifne_faro) pushed and OPEN; LET(ve_amarta_el_paro_beni_vekhori) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shelach-na-in-yad-tishlach) pushed and OPEN; LET(and-samta-the-devarim-in-fiv) pushed and OPEN; LET(reeh-the-moftim-and-asitam-lifne-faro) pushed and OPEN; LET(and-amarta-to-paro-beni-vekhori) pushed and OPEN; no test, no name.</span></td><td><span class="he">וָאֹמַ֣ר אֵלֶ֗יךָ שַׁלַּ֤ח אֶת</span> · <i>va-omar ele-kha shalach et-</i><br><span class="gloss">= and-omar ele-kha shalach et-</span></td></tr>
+<tr><td><b>S24</b></td><td>after STEP_Ex_4_24 — the encounter at the inn</td><td>And it was on the way, at the lodging-place; and the LORD met him, and sought to kill him.</td><td>LET(shelach_na_be_yad_tishlach) pushed and OPEN; LET(ve_samta_et_ha_devarim_be_fiv) pushed and OPEN; LET(reeh_ha_moftim_va_asitam_lifne_faro) pushed and OPEN; LET(ve_amarta_el_paro_beni_vekhori) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shelach-na-in-yad-tishlach) pushed and OPEN; LET(and-samta-the-devarim-in-fiv) pushed and OPEN; LET(reeh-the-moftim-and-asitam-lifne-faro) pushed and OPEN; LET(and-amarta-to-paro-beni-vekhori) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְהִ֥י בַדֶּ֖רֶךְ בַּמָּל֑וֹן וַיִּפְגְּשֵׁ֣הוּ</span> · <i>va-yehi va-derekh ba-malon va-yifgshe-hu</i><br><span class="gloss">= and-yehi and-derekh in-the-malon and-yifgshe-that</span></td></tr>
+<tr><td><b>S25</b></td><td>after STEP_Ex_4_25 — the flint</td><td>And Zipporah took a flint, and cut off the foreskin of her son, and made it touch his feet; and she said: For a bridegroom of blood are you to me.</td><td>LET(shelach_na_be_yad_tishlach) pushed and OPEN; LET(ve_samta_et_ha_devarim_be_fiv) pushed and OPEN; LET(reeh_ha_moftim_va_asitam_lifne_faro) pushed and OPEN; LET(ve_amarta_el_paro_beni_vekhori) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shelach-na-in-yad-tishlach) pushed and OPEN; LET(and-samta-the-devarim-in-fiv) pushed and OPEN; LET(reeh-the-moftim-and-asitam-lifne-faro) pushed and OPEN; LET(and-amarta-to-paro-beni-vekhori) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַתִּקַּ֨ח צִפֹּרָ֜ה צֹ֗ר וַתִּכְרֹת֙</span> · <i>va-tiqach tzipora tzor va-tikhrot</i><br><span class="gloss">= and-tiqach tzipora tzor and-tikhrot</span></td></tr>
+<tr><td><b>S26</b></td><td>after STEP_Ex_4_26 — He released</td><td>And He released him. Then she said: A bridegroom of blood — for the circumcisions.</td><td>LET(shelach_na_be_yad_tishlach) pushed and OPEN; LET(ve_samta_et_ha_devarim_be_fiv) pushed and OPEN; LET(reeh_ha_moftim_va_asitam_lifne_faro) pushed and OPEN; LET(ve_amarta_el_paro_beni_vekhori) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shelach-na-in-yad-tishlach) pushed and OPEN; LET(and-samta-the-devarim-in-fiv) pushed and OPEN; LET(reeh-the-moftim-and-asitam-lifne-faro) pushed and OPEN; LET(and-amarta-to-paro-beni-vekhori) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּ֖רֶף מִמֶּ֑נּוּ אָ֚ז אָֽמְרָ֔ה</span> · <i>va-yiref mime-nu az amra</i><br><span class="gloss">= and-yiref mime-nu az amra</span></td></tr>
+<tr><td><b>S27</b></td><td>after STEP_Ex_4_27 — go meet Moses</td><td>And the LORD said to Aaron: Go to meet Moses, to the wilderness. And he went, and met him at the mountain of God, and kissed him.</td><td>LET(shelach_na_be_yad_tishlach) pushed and OPEN; LET(ve_samta_et_ha_devarim_be_fiv) pushed and OPEN; LET(reeh_ha_moftim_va_asitam_lifne_faro) pushed and OPEN; LET(ve_amarta_el_paro_beni_vekhori) pushed and OPEN; LET(lekh_liqrat_moshe_ha_midbara) pushed then satisfied in the SAME verse; no test, no name.<br><span class="gloss">= LET(shelach-na-in-yad-tishlach) pushed and OPEN; LET(and-samta-the-devarim-in-fiv) pushed and OPEN; LET(reeh-the-moftim-and-asitam-lifne-faro) pushed and OPEN; LET(and-amarta-to-paro-beni-vekhori) pushed and OPEN; LET(lekh-liqrat-Moses-the-midbara) pushed then satisfied in the SAME verse; no test, no name.</span></td><td><span class="he">וַיֹּ֤אמֶר יְהוָה֙ אֶֽל אַהֲרֹ֔ן</span> · <i>va-yomer YHWH el-aharon</i><br><span class="gloss">= and-yomer the-LORD to-Aaron</span></td></tr>
+<tr><td><b>S28</b></td><td>after STEP_Ex_4_28 — he told him all the words</td><td>And Moses told Aaron all the words of the LORD who had sent him, and all the signs which He had commanded him.</td><td>LET(shelach_na_be_yad_tishlach) pushed and OPEN; LET(reeh_ha_moftim_va_asitam_lifne_faro) pushed and OPEN; LET(ve_amarta_el_paro_beni_vekhori) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shelach-na-in-yad-tishlach) pushed and OPEN; LET(reeh-the-moftim-and-asitam-lifne-faro) pushed and OPEN; LET(and-amarta-to-paro-beni-vekhori) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיַּגֵּ֤ד מֹשֶׁה֙ לְאַֽהֲרֹ֔ן אֵ֛ת</span> · <i>va-yaged moshe le-aharon et</i><br><span class="gloss">= and-yaged Moses Aaron et</span></td></tr>
+<tr><td><b>S29</b></td><td>after STEP_Ex_4_29 — the elders gathered</td><td>And Moses and Aaron went, and gathered all the elders of the sons of Israel.</td><td>LET(shelach_na_be_yad_tishlach) pushed and OPEN; LET(reeh_ha_moftim_va_asitam_lifne_faro) pushed and OPEN; LET(ve_amarta_el_paro_beni_vekhori) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shelach-na-in-yad-tishlach) pushed and OPEN; LET(reeh-the-moftim-and-asitam-lifne-faro) pushed and OPEN; LET(and-amarta-to-paro-beni-vekhori) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֵּ֥לֶךְ מֹשֶׁ֖ה וְאַהֲרֹ֑ן וַיַּ֣אַסְפ֔וּ</span> · <i>va-yelekh moshe ve-aharon va-yaasfu</i><br><span class="gloss">= and-yelekh Moses Aaron and-yaasfu</span></td></tr>
+<tr><td><b>S30</b></td><td>after STEP_Ex_4_30 — Aaron spoke and did the signs</td><td>And Aaron spoke all the words which the LORD had spoken to Moses; and he did the signs before the eyes of the people.</td><td>LET(shelach_na_be_yad_tishlach) pushed and OPEN; LET(reeh_ha_moftim_va_asitam_lifne_faro) pushed and OPEN; LET(ve_amarta_el_paro_beni_vekhori) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shelach-na-in-yad-tishlach) pushed and OPEN; LET(reeh-the-moftim-and-asitam-lifne-faro) pushed and OPEN; LET(and-amarta-to-paro-beni-vekhori) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְדַבֵּ֣ר אַהֲרֹ֔ן אֵ֚ת כָּל</span> · <i>va-yedaber aharon et kal-</i><br><span class="gloss">= and-yedaber Aaron et kal</span></td></tr>
+<tr><td><b>S31</b></td><td>after STEP_Ex_4_31 — and the people believed</td><td>And the people believed; and they heard that the LORD had visited the sons of Israel, and that He had seen their affliction; and they bowed and prostrated themselves.</td><td>LET(shelach_na_be_yad_tishlach) pushed and OPEN; LET(reeh_ha_moftim_va_asitam_lifne_faro) pushed and OPEN; LET(ve_amarta_el_paro_beni_vekhori) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shelach-na-in-yad-tishlach) pushed and OPEN; LET(reeh-the-moftim-and-asitam-lifne-faro) pushed and OPEN; LET(and-amarta-to-paro-beni-vekhori) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַֽיַּאֲמֵ֖ן הָעָ֑ם וַֽיִּשְׁמְע֡וּ כִּֽי</span> · <i>va-yaamen ha-am va-yishmu ki-</i><br><span class="gloss">= and-yaamen the-am and-yishmu when</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: exo_04_signs_and_firstborn — The signs and the firstborn (4:1-31) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — after STEP_Ex_4_1 — they will not believe
+    וַיַּ֤עַן מֹשֶׁה֙ וַיֹּ֔אמֶר וְהֵן֙ (va-yaan moshe va-yomer ve-hen)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Ex_4_2 — what is this in your hand
+    וַיֹּ֧אמֶר אֵלָ֛יו יְהוָ֖ה מזה (va-yomer elay-v YHWH m-z)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Ex_4_3 — throw it — and he threw
+    וַיֹּ֨אמֶר֙ הַשְׁלִיכֵ֣הוּ אַ֔רְצָה וַיַּשְׁלִיכֵ֥הוּ (va-yomer hashlikhe-hu artza-ה va-yashlikhe-hu)
+    PASS  LET(hashlikhehu_artzah) pushed then satisfied in the SAME verse  (pushed=Exod.4.3 satisfied=Exod.4.3)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Ex_4_4 — seize the tail
+    וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה (va-yomer YHWH el-moshe)
+    PASS  LET(shelach_yadekha_ve_echoz_bi_zenavo) pushed then satisfied in the SAME verse  (pushed=Exod.4.4 satisfied=Exod.4.4)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Ex_4_5 — that they may believe
+    לְמַ֣עַן יַאֲמִ֔ינוּ כִּֽי נִרְאָ֥ה (lemaan yaaminu ki-nira)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Ex_4_6 — the hand in the bosom
+    וַיֹּאמֶר֩ יְהוָ֨ה ל֜וֹ ע֗וֹד (va-yomer YHWH l-o od)
+    PASS  LET(have_na_yadekha_be_cheqekha) pushed then satisfied in the SAME verse  (pushed=Exod.4.6 satisfied=Exod.4.6)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — after STEP_Ex_4_7 — the hand restored
+    וַיֹּ֗אמֶר הָשֵׁ֤ב יָֽדְךָ֙ אֶל (va-yomer hashev yad-kha el-)
+    PASS  LET(hashev_yadekha_el_cheqekha) pushed then satisfied in the SAME verse  (pushed=Exod.4.7 satisfied=Exod.4.7)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S8 — after STEP_Ex_4_8 — the voice of the latter sign
+    וְהָיָה֙ אִם לֹ֣א יַאֲמִ֣ינוּ (ve-haya im-lo yaaminu)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S9 — after STEP_Ex_4_9 — the Nile on the dry land
+    וְהָיָ֡ה אִם לֹ֣א יַאֲמִ֡ינוּ (ve-haya im-lo yaaminu)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S10 — after STEP_Ex_4_10 — heavy of mouth
+    וַיֹּ֨אמֶר מֹשֶׁ֣ה אֶל יְהוָה֮ (va-yomer moshe el-YHWH)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S11 — after STEP_Ex_4_11 — who set a mouth
+    וַיֹּ֨אמֶר יְהוָ֜ה אֵלָ֗יו מִ֣י (va-yomer YHWH elay-v mi)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S12 — after STEP_Ex_4_12 — go — I am with your mouth
+    וְעַתָּ֖ה לֵ֑ךְ וְאָנֹכִי֙ אֶֽהְיֶ֣ה (ve-ata lekh ve-anokhi ehye)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S13 — after STEP_Ex_4_13 — send by whose hand
+    וַיֹּ֖אמֶר בִּ֣י אֲדֹנָ֑י שְֽׁלַֽח (va-yomer bi adona-y shelach-)
+    PASS  LET(shelach_na_be_yad_tishlach) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S14 — after STEP_Ex_4_14 — Aaron is coming
+    וַיִּֽחַר אַ֨ף יְהוָ֜ה בְּמֹשֶׁ֗ה (va-yichar-af YHWH be-moshe)
+    PASS  LET(shelach_na_be_yad_tishlach) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S15 — after STEP_Ex_4_15 — words in his mouth
+    וְדִבַּרְתָּ֣ אֵלָ֔יו וְשַׂמְתָּ֥ אֶת (ve-dibarta elay-v ve-samta et-)
+    PASS  LET(shelach_na_be_yad_tishlach) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;])
+    PASS  LET(ve_samta_et_ha_devarim_be_fiv) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S16 — after STEP_Ex_4_16 — mouth and God
+    וְדִבֶּר ה֥וּא לְךָ֖ אֶל (ve-diber-hu le-kha el-)
+    PASS  LET(shelach_na_be_yad_tishlach) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;])
+    PASS  LET(ve_samta_et_ha_devarim_be_fiv) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S17 — after STEP_Ex_4_17 — take this staff
+    וְאֶת הַמַּטֶּ֥ה הַזֶּ֖ה תִּקַּ֣ח (ve-et-ha-mate ha-ze tiqach)
+    PASS  LET(shelach_na_be_yad_tishlach) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;ve_et_ha_mate_tiqach_be_yadekha&#x27;])
+    PASS  LET(ve_samta_et_ha_devarim_be_fiv) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;ve_et_ha_mate_tiqach_be_yadekha&#x27;])
+    PASS  LET(ve_et_ha_mate_tiqach_be_yadekha) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;ve_et_ha_mate_tiqach_be_yadekha&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S18 — after STEP_Ex_4_18 — let me go — go in peace
+    וַיֵּ֨לֶךְ מֹשֶׁ֜ה וַיָּ֣שָׁב אֶל (va-yelekh moshe va-yashav el-)
+    PASS  LET(shelach_na_be_yad_tishlach) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;ve_et_ha_mate_tiqach_be_yadekha&#x27;])
+    PASS  LET(ve_samta_et_ha_devarim_be_fiv) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;ve_et_ha_mate_tiqach_be_yadekha&#x27;])
+    PASS  LET(ve_et_ha_mate_tiqach_be_yadekha) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;ve_et_ha_mate_tiqach_be_yadekha&#x27;])
+    PASS  LET(elkha_na_ve_ashuva_el_achai) pushed then satisfied in the SAME verse  (pushed=Exod.4.18 satisfied=Exod.4.18)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S19 — after STEP_Ex_4_19 — the seekers are dead
+    וַיֹּ֨אמֶר יְהוָ֤ה אֶל מֹשֶׁה֙ (va-yomer YHWH el-moshe)
+    PASS  LET(shelach_na_be_yad_tishlach) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;ve_et_ha_mate_tiqach_be_yadekha&#x27;, &#x27;lekh_shuv_mitzrayim&#x27;])
+    PASS  LET(ve_samta_et_ha_devarim_be_fiv) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;ve_et_ha_mate_tiqach_be_yadekha&#x27;, &#x27;lekh_shuv_mitzrayim&#x27;])
+    PASS  LET(ve_et_ha_mate_tiqach_be_yadekha) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;ve_et_ha_mate_tiqach_be_yadekha&#x27;, &#x27;lekh_shuv_mitzrayim&#x27;])
+    PASS  LET(lekh_shuv_mitzrayim) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;ve_et_ha_mate_tiqach_be_yadekha&#x27;, &#x27;lekh_shuv_mitzrayim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S20 — after STEP_Ex_4_20 — the donkey and the staff
+    וַיִּקַּ֨ח מֹשֶׁ֜ה אֶת אִשְׁתּ֣וֹ (va-yiqach moshe et-isht-o)
+    PASS  LET(shelach_na_be_yad_tishlach) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;])
+    PASS  LET(ve_samta_et_ha_devarim_be_fiv) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S21 — after STEP_Ex_4_21 — the wonders and the hardening
+    וַיֹּ֣אמֶר יְהוָה֮ אֶל מֹשֶׁה֒ (va-yomer YHWH el-moshe)
+    PASS  LET(shelach_na_be_yad_tishlach) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;])
+    PASS  LET(ve_samta_et_ha_devarim_be_fiv) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;])
+    PASS  LET(reeh_ha_moftim_va_asitam_lifne_faro) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S22 — after STEP_Ex_4_22 — My son, My firstborn
+    וְאָמַרְתָּ֖ אֶל פַּרְעֹ֑ה כֹּ֚ה (ve-amarta el-paro ko)
+    PASS  LET(shelach_na_be_yad_tishlach) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(ve_samta_et_ha_devarim_be_fiv) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(reeh_ha_moftim_va_asitam_lifne_faro) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(ve_amarta_el_paro_beni_vekhori) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S23 — after STEP_Ex_4_23 — I kill your firstborn
+    וָאֹמַ֣ר אֵלֶ֗יךָ שַׁלַּ֤ח אֶת (va-omar ele-kha shalach et-)
+    PASS  LET(shelach_na_be_yad_tishlach) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(ve_samta_et_ha_devarim_be_fiv) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(reeh_ha_moftim_va_asitam_lifne_faro) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(ve_amarta_el_paro_beni_vekhori) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S24 — after STEP_Ex_4_24 — the encounter at the inn
+    וַיְהִ֥י בַדֶּ֖רֶךְ בַּמָּל֑וֹן וַיִּפְגְּשֵׁ֣הוּ (va-yehi va-derekh ba-malon va-yifgshe-hu)
+    PASS  LET(shelach_na_be_yad_tishlach) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(ve_samta_et_ha_devarim_be_fiv) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(reeh_ha_moftim_va_asitam_lifne_faro) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(ve_amarta_el_paro_beni_vekhori) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S25 — after STEP_Ex_4_25 — the flint
+    וַתִּקַּ֨ח צִפֹּרָ֜ה צֹ֗ר וַתִּכְרֹת֙ (va-tiqach tzipora tzor va-tikhrot)
+    PASS  LET(shelach_na_be_yad_tishlach) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(ve_samta_et_ha_devarim_be_fiv) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(reeh_ha_moftim_va_asitam_lifne_faro) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(ve_amarta_el_paro_beni_vekhori) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S26 — after STEP_Ex_4_26 — He released
+    וַיִּ֖רֶף מִמֶּ֑נּוּ אָ֚ז אָֽמְרָ֔ה (va-yiref mime-nu az amra)
+    PASS  LET(shelach_na_be_yad_tishlach) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(ve_samta_et_ha_devarim_be_fiv) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(reeh_ha_moftim_va_asitam_lifne_faro) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(ve_amarta_el_paro_beni_vekhori) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S27 — after STEP_Ex_4_27 — go meet Moses
+    וַיֹּ֤אמֶר יְהוָה֙ אֶֽל אַהֲרֹ֔ן (va-yomer YHWH el-aharon)
+    PASS  LET(shelach_na_be_yad_tishlach) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(ve_samta_et_ha_devarim_be_fiv) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(reeh_ha_moftim_va_asitam_lifne_faro) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(ve_amarta_el_paro_beni_vekhori) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;ve_samta_et_ha_devarim_be_fiv&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(lekh_liqrat_moshe_ha_midbara) pushed then satisfied in the SAME verse  (pushed=Exod.4.27 satisfied=Exod.4.27)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S28 — after STEP_Ex_4_28 — he told him all the words
+    וַיַּגֵּ֤ד מֹשֶׁה֙ לְאַֽהֲרֹ֔ן אֵ֛ת (va-yaged moshe le-aharon et)
+    PASS  LET(shelach_na_be_yad_tishlach) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(reeh_ha_moftim_va_asitam_lifne_faro) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(ve_amarta_el_paro_beni_vekhori) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S29 — after STEP_Ex_4_29 — the elders gathered
+    וַיֵּ֥לֶךְ מֹשֶׁ֖ה וְאַהֲרֹ֑ן וַיַּ֣אַסְפ֔וּ (va-yelekh moshe ve-aharon va-yaasfu)
+    PASS  LET(shelach_na_be_yad_tishlach) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(reeh_ha_moftim_va_asitam_lifne_faro) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(ve_amarta_el_paro_beni_vekhori) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S30 — after STEP_Ex_4_30 — Aaron spoke and did the signs
+    וַיְדַבֵּ֣ר אַהֲרֹ֔ן אֵ֚ת כָּל (va-yedaber aharon et kal-)
+    PASS  LET(shelach_na_be_yad_tishlach) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(reeh_ha_moftim_va_asitam_lifne_faro) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(ve_amarta_el_paro_beni_vekhori) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S31 — after STEP_Ex_4_31 — and the people believed
+    וַֽיַּאֲמֵ֖ן הָעָ֑ם וַֽיִּשְׁמְע֡וּ כִּֽי (va-yaamen ha-am va-yishmu ki-)
+    PASS  LET(shelach_na_be_yad_tishlach) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(reeh_ha_moftim_va_asitam_lifne_faro) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  LET(ve_amarta_el_paro_beni_vekhori) pushed and OPEN  (queue=[&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/exo_04_signs_and_firstborn.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# exo_04_signs_and_firstborn — 4:1-31
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/exo_04_signs_and_firstborn.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;The signs and the firstborn (4:1-31)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;exo_04_signs_and_firstborn&quot;)
+
+# -------------------------- Exod.4.1 · THEY_WILL_NOT_BELIEVE ---------------
+# וַיַּעַן מֹשֶׁה וַיֹּאמֶר וְהֵן לֹא־יַאֲמִינוּ לִי וְלֹא יִשְׁמְעוּ
+# בְּקֹלִי כִּי יֹאמְרוּ לֹא־נִרְאָה אֵלֶיךָ יְהוָה
+# &quot;[EN-AID] And Moses answered and said: But behold, they will not believe
+# me, and will not hear my voice; for they will say: The LORD has not
+# appeared to you.&quot;
+m.step(&quot;Exod.4.1&quot;)
+# ‹וְהֵן לֹא־יַאֲמִינוּ לִי וְלֹא יִשְׁמְעוּ בְּקֹלִי› (“and-lo! not build-
+# up to-me/my and-not hear in-voice/sound-me/my”) — fact holds: and-lo!-not-
+# build-up-to-me
+m.fact(&quot;ve_hen_lo_yaaminu_li&quot;)
+
+# -------------------------- Exod.4.2 · WHAT_IS_THIS_IN_YOUR_HAND -----------
+# וַיֹּאמֶר אֵלָיו יְהוָה מזה מַה־זֶּה בְיָדֶךָ וַיֹּאמֶר מַטֶּה
+# &quot;[EN-AID] And the LORD said to him: What is this in your hand? And he
+# said: A staff.&quot;
+m.step(&quot;Exod.4.2&quot;)
+# ‹מזה מַה־זֶּה בְיָדֶךָ› (“from-this what this in-hand-you/your”) — fact
+# holds: what-this-and-yadekha-staff/tribe
+m.fact(&quot;ma_ze_ve_yadekha_mate&quot;)
+
+# -------------------------- Exod.4.3 · THROW_IT_AND_HE_THREW ---------------
+# וַיֹּאמֶר הַשְׁלִיכֵהוּ אַרְצָה וַיַּשְׁלִיכֵהוּ אַרְצָה וַיְהִי לְנָחָשׁ
+# וַיָּנָס מֹשֶׁה מִפָּנָיו
+# &quot;[EN-AID] And He said: Throw it to the ground. And he threw it to the
+# ground, and it became a serpent; and Moses fled from before it.&quot;
+m.step(&quot;Exod.4.3&quot;)
+# ‹הַשְׁלִיכֵהוּ אַרְצָה› (“throw-out-him/its earth-ward”) — the-LORD speaks
+# a demand — LET: hashlikhehu-artzah
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;hashlikhehu_artzah&quot;)
+# ‹וַיַּשְׁלִיכֵהוּ אַרְצָה וַיְהִי לְנָחָשׁ› (“and-throw-out-him/its earth-
+# ward and-be to-snake”) — demand settled (popped from the queue):
+# hashlikhehu-artzah
+m.result(&quot;hashlikhehu_artzah&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Exod.4.4 · SEIZE_THE_TAIL ----------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה שְׁלַח יָדְךָ וֶאֱחֹז בִּזְנָבוֹ וַיִּשְׁלַח
+# יָדוֹ וַיַּחֲזֶק בּוֹ וַיְהִי לְמַטֶּה בְּכַפּוֹ
+# &quot;[EN-AID] And the LORD said to Moses: Send your hand, and seize it by the
+# tail. And he sent his hand, and held it fast, and it became a staff in his
+# palm.&quot;
+m.step(&quot;Exod.4.4&quot;)
+# ‹שְׁלַח יָדְךָ וֶאֱחֹז בִּזְנָבוֹ› (“send hand-you/your and-seize in-tail-
+# him/its”) — the-LORD speaks a demand — LET: send-yadekha-and-seize-oh-
+# that!-zenavo
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;shelach_yadekha_ve_echoz_bi_zenavo&quot;)
+# ‹וַיִּשְׁלַח יָדוֹ וַיַּחֲזֶק בּוֹ› (“and-send hand-him/its and-fasten-
+# upon in-him/its”) — demand settled (popped from the queue): send-yadekha-
+# and-seize-oh-that!-zenavo
+m.result(&quot;shelach_yadekha_ve_echoz_bi_zenavo&quot;, tmark=&quot;t2&quot;)
+
+# -------------------------- Exod.4.5 · THAT_THEY_MAY_BELIEVE ---------------
+# לְמַעַן יַאֲמִינוּ כִּי־נִרְאָה אֵלֶיךָ יְהוָה אֱלֹהֵי אֲבֹתָם אֱלֹהֵי
+# אַבְרָהָם אֱלֹהֵי יִצְחָק וֵאלֹהֵי יַעֲקֹב
+# &quot;[EN-AID] That they may believe that the LORD, the God of their fathers —
+# the God of Abraham, the God of Isaac, and the God of Jacob — has appeared
+# to you.&quot;
+m.step(&quot;Exod.4.5&quot;)
+# ‹לְמַעַן יַאֲמִינוּ› (“so-that build-up”) — fact holds: so-that-build-up
+m.fact(&quot;lemaan_yaaminu&quot;)
+
+# -------------------------- Exod.4.6 · THE_HAND_IN_THE_BOSOM ---------------
+# וַיֹּאמֶר יְהוָה לוֹ עוֹד הָבֵא־נָא יָדְךָ בְּחֵיקֶךָ וַיָּבֵא יָדוֹ
+# בְּחֵיקוֹ וַיּוֹצִאָהּ וְהִנֵּה יָדוֹ מְצֹרַעַת כַּשָּׁלֶג
+# &quot;[EN-AID] And the LORD said to him further: Bring, pray, your hand into
+# your bosom. And he brought his hand into his bosom; and he took it out,
+# and behold, his hand was leprous, as snow.&quot;
+m.step(&quot;Exod.4.6&quot;)
+# ‹הָבֵא־נָא יָדְךָ בְּחֵיקֶךָ› (“come/bring please hand-you/your in-bosom-
+# you/your”) — the-LORD speaks a demand — LET: come/bring-please-yadekha-in-
+# cheqekha
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;have_na_yadekha_be_cheqekha&quot;)
+# ‹וַיָּבֵא יָדוֹ בְּחֵיקוֹ› (“and-come/bring hand-him/its in-bosom-
+# him/its”) — demand settled (popped from the queue): come/bring-please-
+# yadekha-in-cheqekha
+m.result(&quot;have_na_yadekha_be_cheqekha&quot;, tmark=&quot;t3&quot;)
+
+# -------------------------- Exod.4.7 · THE_HAND_RESTORED -------------------
+# וַיֹּאמֶר הָשֵׁב יָדְךָ אֶל־חֵיקֶךָ וַיָּשֶׁב יָדוֹ אֶל־חֵיקוֹ
+# וַיּוֹצִאָהּ מֵחֵיקוֹ וְהִנֵּה־שָׁבָה כִּבְשָׂרוֹ
+# &quot;[EN-AID] And He said: Return your hand to your bosom. And he returned his
+# hand to his bosom; and he took it out from his bosom, and behold, it
+# returned as his flesh.&quot;
+m.step(&quot;Exod.4.7&quot;)
+# ‹הָשֵׁב יָדְךָ אֶל־חֵיקֶךָ› (“return hand-you/your to bosom-you/your”) —
+# the-LORD speaks a demand — LET: return-yadekha-to-cheqekha
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;hashev_yadekha_el_cheqekha&quot;)
+# ‹וַיָּשֶׁב יָדוֹ אֶל־חֵיקוֹ› (“and-return hand-him/its to bosom-him/its”)
+# — demand settled (popped from the queue): return-yadekha-to-cheqekha
+m.result(&quot;hashev_yadekha_el_cheqekha&quot;, tmark=&quot;t4&quot;)
+
+# -------------------------- Exod.4.8 · THE_VOICE_OF_THE_LATTER_SIGN --------
+# וְהָיָה אִם־לֹא יַאֲמִינוּ לָךְ וְלֹא יִשְׁמְעוּ לְקֹל הָאֹת הָרִאשׁוֹן
+# וְהֶאֱמִינוּ לְקֹל הָאֹת הָאַחֲרוֹן
+# &quot;[EN-AID] And it shall be, if they will not believe you, and will not hear
+# the voice of the first sign, that they will believe the voice of the
+# latter sign.&quot;
+m.step(&quot;Exod.4.8&quot;)
+# ‹וְהֶאֱמִינוּ לְקֹל הָאֹת הָאַחֲרוֹן› (“and-build-up to-voice/sound the-
+# signs the-hinder”) — fact holds: and-build-up-to-voice/sound-the-ot-the-
+# hinder
+m.fact(&quot;ve_heeminu_le_qol_ha_ot_ha_acharon&quot;)
+
+# -------------------------- Exod.4.9 · THE_NILE_ON_THE_DRY_LAND ------------
+# וְהָיָה אִם־לֹא יַאֲמִינוּ גַּם לִשְׁנֵי הָאֹתוֹת הָאֵלֶּה וְלֹא
+# יִשְׁמְעוּן לְקֹלֶךָ וְלָקַחְתָּ מִמֵּימֵי הַיְאֹר וְשָׁפַכְתָּ
+# הַיַּבָּשָׁה וְהָיוּ הַמַּיִם אֲשֶׁר תִּקַּח מִן־הַיְאֹר וְהָיוּ לְדָם
+# בַּיַּבָּשֶׁת
+# &quot;[EN-AID] And it shall be, if they will not believe even these two signs,
+# and will not hear your voice, that you shall take of the water of the
+# Nile, and pour it on the dry land; and the water which you take from the
+# Nile shall become blood on the dry land.&quot;
+m.step(&quot;Exod.4.9&quot;)
+# ‹וְלָקַחְתָּ מִמֵּימֵי הַיְאֹר וְשָׁפַכְתָּ הַיַּבָּשָׁה› (“and-take from-
+# waters the-Nile and-spill-forth the-dry-land”) — fact holds: and-be-to-
+# blood-in-the-yabashet
+m.fact(&quot;ve_hayu_le_dam_ba_yabashet&quot;)
+
+# -------------------------- Exod.4.10 · HEAVY_OF_MOUTH ---------------------
+# וַיֹּאמֶר מֹשֶׁה אֶל־יְהוָה בִּי אֲדֹנָי לֹא אִישׁ דְּבָרִים אָנֹכִי גַּם
+# מִתְּמוֹל גַּם מִשִּׁלְשֹׁם גַּם מֵאָז דַּבֶּרְךָ אֶל־עַבְדֶּךָ כִּי
+# כְבַד־פֶּה וּכְבַד לָשׁוֹן אָנֹכִי
+# &quot;[EN-AID] And Moses said to the LORD: Please, my Lord, I am not a man of
+# words — also from yesterday, also from the day before, also since You have
+# spoken to Your servant; for heavy of mouth and heavy of tongue am I.&quot;
+m.step(&quot;Exod.4.10&quot;)
+# ‹כִּי כְבַד־פֶּה וּכְבַד לָשׁוֹן אָנֹכִי› (“that heavy mouth and-heavy
+# tongue”) — fact holds: heavy-mouth-and-heavy-tongue
+m.fact(&quot;khevad_pe_u_khevad_lashon&quot;)
+
+# -------------------------- Exod.4.11 · WHO_SET_A_MOUTH --------------------
+# וַיֹּאמֶר יְהוָה אֵלָיו מִי שָׂם פֶּה לָאָדָם אוֹ מִי־יָשׂוּם אִלֵּם אוֹ
+# חֵרֵשׁ אוֹ פִקֵּחַ אוֹ עִוֵּר הֲלֹא אָנֹכִי יְהוָה
+# &quot;[EN-AID] And the LORD said to him: Who set a mouth for man, or who makes
+# dumb, or deaf, or seeing, or blind? Is it not I, the LORD?&quot;
+m.step(&quot;Exod.4.11&quot;)
+# ‹הֲלֹא אָנֹכִי יְהוָה› (“is-it-not YHWH”) — fact holds: the-not-I-the-LORD
+m.fact(&quot;ha_lo_anokhi_YHWH&quot;)
+
+# -------------------------- Exod.4.12 · GO_AND_I_AM_WITH_YOUR_MOUTH --------
+# וְעַתָּה לֵךְ וְאָנֹכִי אֶהְיֶה עִם־פִּיךָ וְהוֹרֵיתִיךָ אֲשֶׁר תְּדַבֵּר
+# &quot;[EN-AID] And now, go — and I will be with your mouth, and will teach you
+# what you shall speak.&quot;
+m.step(&quot;Exod.4.12&quot;)
+# ‹וְאָנֹכִי אֶהְיֶה עִם־פִּיךָ› (“and-I be with mouth-you/your”) — fact
+# holds: and-I-be-if-pikha
+m.fact(&quot;ve_anokhi_ehye_im_pikha&quot;)
+
+# -------------------------- Exod.4.13 · SEND_BY_WHOSE_HAND -----------------
+# וַיֹּאמֶר בִּי אֲדֹנָי שְׁלַח־נָא בְּיַד־תִּשְׁלָח
+# &quot;[EN-AID] And he said: Please, my Lord — send, pray, by the hand You will
+# send.&quot;
+m.step(&quot;Exod.4.13&quot;)
+# ‹שְׁלַח־נָא בְּיַד־תִּשְׁלָח› (“send please in-hand send”) — Moses speaks
+# a demand — LET: send-please-in-hand-send
+m.declare(&quot;moshe&quot;, &quot;LET&quot;,
+          &quot;shelach_na_be_yad_tishlach&quot;)
+
+# -------------------------- Exod.4.14 · AARON_IS_COMING --------------------
+# וַיִּחַר־אַף יְהוָה בְּמֹשֶׁה וַיֹּאמֶר הֲלֹא אַהֲרֹן אָחִיךָ הַלֵּוִי
+# יָדַעְתִּי כִּי־דַבֵּר יְדַבֵּר הוּא וְגַם הִנֵּה־הוּא יֹצֵא לִקְרָאתֶךָ
+# וְרָאֲךָ וְשָׂמַח בְּלִבּוֹ
+# &quot;[EN-AID] And the anger of the LORD burned against Moses, and He said: Is
+# there not Aaron your brother, the Levite? I know that he will surely speak
+# — he; and also, behold, he is coming out to meet you, and he will see you
+# and rejoice in his heart.&quot;
+m.step(&quot;Exod.4.14&quot;)
+# ‹כִּי־דַבֵּר יְדַבֵּר הוּא וְגַם הִנֵּה־› (“that speak speak he/it and-
+# also behold”) — fact holds: and-raakha-and-brighten-up-in-His-heart
+m.fact(&quot;ve_raakha_ve_samach_be_libo&quot;)
+
+# -------------------------- Exod.4.15 · WORDS_IN_HIS_MOUTH -----------------
+# וְדִבַּרְתָּ אֵלָיו וְשַׂמְתָּ אֶת־הַדְּבָרִים בְּפִיו וְאָנֹכִי אֶהְיֶה
+# עִם־פִּיךָ וְעִם־פִּיהוּ וְהוֹרֵיתִי אֶתְכֶם אֵת אֲשֶׁר תַּעֲשׂוּן
+# &quot;[EN-AID] And you shall speak to him, and put the words in his mouth; and
+# I will be with your mouth and with his mouth, and will teach you both what
+# you shall do.&quot;
+m.step(&quot;Exod.4.15&quot;)
+# ‹וְשַׂמְתָּ אֶת־הַדְּבָרִים בְּפִיו› (“and-put/set obj-marker the-
+# word/thing in-mouth-him/its”) — the-LORD speaks a demand — LET: and-
+# put/set-signs-the-word/thing-in-fiv
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;ve_samta_et_ha_devarim_be_fiv&quot;)
+
+# -------------------------- Exod.4.16 · MOUTH_AND_GOD ----------------------
+# וְדִבֶּר־הוּא לְךָ אֶל־הָעָם וְהָיָה הוּא יִהְיֶה־לְּךָ לְפֶה וְאַתָּה
+# תִּהְיֶה־לּוֹ לֵאלֹהִים
+# &quot;[EN-AID] And he shall speak for you to the people; and it shall be — he
+# shall be for you a mouth, and you shall be for him as God.&quot;
+m.step(&quot;Exod.4.16&quot;)
+# ‹וְהָיָה הוּא יִהְיֶה־לְּךָ לְפֶה› (“and-be he/it be to-you/your to-
+# mouth”) — fact holds: he/it-be-to-you-to-mouth
+m.fact(&quot;hu_yihye_lekha_le_fe&quot;)
+
+# -------------------------- Exod.4.17 · TAKE_THIS_STAFF --------------------
+# וְאֶת־הַמַּטֶּה הַזֶּה תִּקַּח בְּיָדֶךָ אֲשֶׁר תַּעֲשֶׂה־בּוֹ אֶת־הָאֹתֹת
+# &quot;[EN-AID] And this staff you shall take in your hand, with which you shall
+# do the signs.&quot;
+m.step(&quot;Exod.4.17&quot;)
+# ‹וְאֶת־הַמַּטֶּה הַזֶּה תִּקַּח בְּיָדֶךָ› (“and-obj-marker the-
+# staff/tribe the-this take in-hand-you/your”) — the-LORD speaks a demand —
+# LET: and-signs-the-staff/tribe-take-in-yadekha
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;ve_et_ha_mate_tiqach_be_yadekha&quot;)
+
+# -------------------------- Exod.4.18 · LET_ME_GO_AND_GO_IN_PEACE ----------
+# וַיֵּלֶךְ מֹשֶׁה וַיָּשָׁב אֶל־יֶתֶר חֹתְנוֹ וַיֹּאמֶר לוֹ אֵלֲכָה נָּא
+# וְאָשׁוּבָה אֶל־אַחַי אֲשֶׁר־בְּמִצְרַיִם וְאֶרְאֶה הַעוֹדָם חַיִּים
+# וַיֹּאמֶר יִתְרוֹ לְמֹשֶׁה לֵךְ לְשָׁלוֹם
+# &quot;[EN-AID] And Moses went and returned to Jether his father-in-law, and
+# said to him: Let me go, pray, and return to my brothers who are in Egypt,
+# and see whether they still live. And Jethro said to Moses: Go in peace.&quot;
+m.step(&quot;Exod.4.18&quot;)
+# ‹אֵלֲכָה נָּא וְאָשׁוּבָה אֶל־אַחַי› (“go please and-return to brother-
+# me/my”) — Moses speaks a demand — LET: elkha-please-and-return-to-achai
+m.declare(&quot;moshe&quot;, &quot;LET&quot;,
+          &quot;elkha_na_ve_ashuva_el_achai&quot;)
+# ‹לֵךְ לְשָׁלוֹם› (“go to-safe”) — demand settled (popped from the queue):
+# elkha-please-and-return-to-achai
+m.result(&quot;elkha_na_ve_ashuva_el_achai&quot;, tmark=&quot;t5&quot;)
+
+# -------------------------- Exod.4.19 · THE_SEEKERS_ARE_DEAD ---------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה בְּמִדְיָן לֵךְ שֻׁב מִצְרָיִם כִּי־מֵתוּ
+# כָּל־הָאֲנָשִׁים הַמְבַקְשִׁים אֶת־נַפְשֶׁךָ
+# &quot;[EN-AID] And the LORD said to Moses in Midian: Go, return to Egypt; for
+# all the men who sought your life have died.&quot;
+m.step(&quot;Exod.4.19&quot;)
+# ‹לֵךְ שֻׁב מִצְרָיִם› (“go return Egypt”) — the-LORD speaks a demand —
+# LET: go-return-Egypt
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;lekh_shuv_mitzrayim&quot;)
+
+# -------------------------- Exod.4.20 · THE_DONKEY_AND_THE_STAFF -----------
+# וַיִּקַּח מֹשֶׁה אֶת־אִשְׁתּוֹ וְאֶת־בָּנָיו וַיַּרְכִּבֵם עַל־הַחֲמֹר
+# וַיָּשָׁב אַרְצָה מִצְרָיִם וַיִּקַּח מֹשֶׁה אֶת־מַטֵּה הָאֱלֹהִים
+# בְּיָדוֹ
+# &quot;[EN-AID] And Moses took his wife and his sons, and mounted them on the
+# donkey, and returned to the land of Egypt; and Moses took the staff of God
+# in his hand.&quot;
+m.step(&quot;Exod.4.20&quot;)
+# ‹וַיָּשָׁב אַרְצָה מִצְרָיִם› (“and-return earth-ward Egypt”) — demand
+# settled (popped from the queue): go-return-Egypt
+m.result(&quot;lekh_shuv_mitzrayim&quot;, tmark=&quot;t6&quot;)
+# ‹וַיִּקַּח מֹשֶׁה אֶת־מַטֵּה הָאֱלֹהִים בְּיָדוֹ› (“and-take Moses obj-
+# marker staff/tribe the-God in-hand-him/its”) — demand settled (popped from
+# the queue): and-signs-the-staff/tribe-take-in-yadekha
+m.result(&quot;ve_et_ha_mate_tiqach_be_yadekha&quot;, tmark=&quot;t7&quot;)
+
+# -------------------------- Exod.4.21 · THE_WONDERS_AND_THE_HARDENING ------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה בְּלֶכְתְּךָ לָשׁוּב מִצְרַיְמָה רְאֵה
+# כָּל־הַמֹּפְתִים אֲשֶׁר־שַׂמְתִּי בְיָדֶךָ וַעֲשִׂיתָם לִפְנֵי פַרְעֹה
+# וַאֲנִי אֲחַזֵּק אֶת־לִבּוֹ וְלֹא יְשַׁלַּח אֶת־הָעָם
+# &quot;[EN-AID] And the LORD said to Moses: When you go to return to Egypt, see
+# all the wonders which I have put in your hand, and do them before Pharaoh;
+# and I will strengthen his heart, and he will not send the people out.&quot;
+m.step(&quot;Exod.4.21&quot;)
+# ‹רְאֵה כָּל־הַמֹּפְתִים אֲשֶׁר־שַׂמְתִּי בְיָדֶךָ וַעֲשִׂיתָם לִפְנֵי
+# פַרְעֹה› (“see all the-miracle which put/set in-hand-you/your and-make-
+# them/their to-face Pharaoh”) — the-LORD speaks a demand — LET: reeh-the-
+# miracle-and-asitam-lifne-Pharaoh
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;reeh_ha_moftim_va_asitam_lifne_faro&quot;)
+
+# -------------------------- Exod.4.22 · MY_SON_MY_FIRSTBORN ----------------
+# וְאָמַרְתָּ אֶל־פַּרְעֹה כֹּה אָמַר יְהוָה בְּנִי בְכֹרִי יִשְׂרָאֵל
+# &quot;[EN-AID] And you shall say to Pharaoh: Thus says the LORD: My son, My
+# firstborn — Israel.&quot;
+m.step(&quot;Exod.4.22&quot;)
+# ‹כֹּה אָמַר יְהוָה בְּנִי בְכֹרִי יִשְׂרָאֵל› (“like-this say YHWH son-
+# me/my firstborn-me/my Israel”) — the-LORD speaks a demand — LET: and-say-
+# to-Pharaoh-beni-vekhori
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;ve_amarta_el_paro_beni_vekhori&quot;)
+
+# -------------------------- Exod.4.23 · I_KILL_YOUR_FIRSTBORN --------------
+# וָאֹמַר אֵלֶיךָ שַׁלַּח אֶת־בְּנִי וְיַעַבְדֵנִי וַתְּמָאֵן לְשַׁלְּחוֹ
+# הִנֵּה אָנֹכִי הֹרֵג אֶת־בִּנְךָ בְּכֹרֶךָ
+# &quot;[EN-AID] And I say to you: Send My son, that he may serve Me; and you
+# refuse to send him — behold, I kill your son, your firstborn.&quot;
+m.step(&quot;Exod.4.23&quot;)
+# ‹הִנֵּה אָנֹכִי הֹרֵג אֶת־בִּנְךָ בְּכֹרֶךָ› (“behold smite-with-deadly-
+# intent obj-marker son-you/your firstborn-you/your”) — fact holds: behold-
+# I-smite-with-deadly-intent-signs-binkha-bekhorekha
+m.fact(&quot;hine_anokhi_horeg_et_binkha_bekhorekha&quot;)
+
+# -------------------------- Exod.4.24 · THE_ENCOUNTER_AT_THE_INN -----------
+# וַיְהִי בַדֶּרֶךְ בַּמָּלוֹן וַיִּפְגְּשֵׁהוּ יְהוָה וַיְבַקֵּשׁ הֲמִיתוֹ
+# &quot;[EN-AID] And it was on the way, at the lodging-place; and the LORD met
+# him, and sought to kill him.&quot;
+m.step(&quot;Exod.4.24&quot;)
+# ‹וַיִּפְגְּשֵׁהוּ יְהוָה וַיְבַקֵּשׁ הֲמִיתוֹ› (“and-come-in-contact-with-
+# him/its YHWH and-search-out die-him/its”) — fact holds: and-search-out-
+# hamito
+m.fact(&quot;va_yevaqesh_hamito&quot;)
+
+# -------------------------- Exod.4.25 · THE_FLINT --------------------------
+# וַתִּקַּח צִפֹּרָה צֹר וַתִּכְרֹת אֶת־עָרְלַת בְּנָהּ וַתַּגַּע לְרַגְלָיו
+# וַתֹּאמֶר כִּי חֲתַן־דָּמִים אַתָּה לִי
+# &quot;[EN-AID] And Zipporah took a flint, and cut off the foreskin of her son,
+# and made it touch his feet; and she said: For a bridegroom of blood are
+# you to me.&quot;
+m.step(&quot;Exod.4.25&quot;)
+# ‹וַתִּקַּח צִפֹּרָה צֹר וַתִּכְרֹת אֶת־עָרְלַת בְּנָהּ› (“and-take
+# Zipporah stone and-cut obj-marker foreskin son-her/its”) — event: karta —
+# agent Zipporah
+m.event(&quot;karta&quot;, agent=&quot;tzipora&quot;)
+
+# -------------------------- Exod.4.26 · HE_RELEASED ------------------------
+# וַיִּרֶף מִמֶּנּוּ אָז אָמְרָה חֲתַן דָּמִים לַמּוּלֹת
+# &quot;[EN-AID] And He released him. Then she said: A bridegroom of blood — for
+# the circumcisions.&quot;
+m.step(&quot;Exod.4.26&quot;)
+# ‹וַיִּרֶף מִמֶּנּוּ› (“and-slacken from-us/our”) — fact holds: and-
+# slacken-from-it
+m.fact(&quot;va_yiref_mimenu&quot;)
+
+# -------------------------- Exod.4.27 · GO_MEET_MOSES ----------------------
+# וַיֹּאמֶר יְהוָה אֶל־אַהֲרֹן לֵךְ לִקְרַאת מֹשֶׁה הַמִּדְבָּרָה וַיֵּלֶךְ
+# וַיִּפְגְּשֵׁהוּ בְּהַר הָאֱלֹהִים וַיִּשַּׁק־לוֹ
+# &quot;[EN-AID] And the LORD said to Aaron: Go to meet Moses, to the wilderness.
+# And he went, and met him at the mountain of God, and kissed him.&quot;
+m.step(&quot;Exod.4.27&quot;)
+# ‹לֵךְ לִקְרַאת מֹשֶׁה הַמִּדְבָּרָה› (“go to-encountering Moses the-
+# pasture-ward”) — the-LORD speaks a demand — LET: go-liqrat-Moses-the-
+# midbara
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;lekh_liqrat_moshe_ha_midbara&quot;)
+# ‹וַיֵּלֶךְ וַיִּפְגְּשֵׁהוּ בְּהַר הָאֱלֹהִים וַיִּשַּׁק־לוֹ› (“and-go
+# and-come-in-contact-with-him/its in-mountain the-God and-kiss to-him/its”)
+# — demand settled (popped from the queue): go-liqrat-Moses-the-midbara
+m.result(&quot;lekh_liqrat_moshe_ha_midbara&quot;, tmark=&quot;t8&quot;)
+
+# -------------------------- Exod.4.28 · HE_TOLD_HIM_ALL_THE_WORDS ----------
+# וַיַּגֵּד מֹשֶׁה לְאַהֲרֹן אֵת כָּל־דִּבְרֵי יְהוָה אֲשֶׁר שְׁלָחוֹ וְאֵת
+# כָּל־הָאֹתֹת אֲשֶׁר צִוָּהוּ
+# &quot;[EN-AID] And Moses told Aaron all the words of the LORD who had sent him,
+# and all the signs which He had commanded him.&quot;
+m.step(&quot;Exod.4.28&quot;)
+# ‹וַיַּגֵּד מֹשֶׁה לְאַהֲרֹן אֵת כָּל־דִּבְרֵי יְהוָה אֲשֶׁר שְׁלָחוֹ›
+# (“and-tell Moses to-Aaron obj-marker all word/thing YHWH which send-
+# him/its”) — demand settled (popped from the queue): and-put/set-signs-the-
+# word/thing-in-fiv
+m.result(&quot;ve_samta_et_ha_devarim_be_fiv&quot;, tmark=&quot;t9&quot;)
+
+# -------------------------- Exod.4.29 · THE_ELDERS_GATHERED ----------------
+# וַיֵּלֶךְ מֹשֶׁה וְאַהֲרֹן וַיַּאַסְפוּ אֶת־כָּל־זִקְנֵי בְּנֵי יִשְׂרָאֵל
+# &quot;[EN-AID] And Moses and Aaron went, and gathered all the elders of the
+# sons of Israel.&quot;
+m.step(&quot;Exod.4.29&quot;)
+# ‹וַיַּאַסְפוּ אֶת־כָּל־זִקְנֵי בְּנֵי יִשְׂרָאֵל› (“and-gather-for-any-
+# purpose obj-marker all old son Israel”) — fact holds: and-gather-for-any-
+# purpose-signs-all-old-son-Israel
+m.fact(&quot;va_yaasfu_et_kol_ziqne_bene_yisrael&quot;)
+
+# -------------------------- Exod.4.30 · AARON_SPOKE_AND_DID_THE_SIGNS ------
+# וַיְדַבֵּר אַהֲרֹן אֵת כָּל־הַדְּבָרִים אֲשֶׁר־דִּבֶּר יְהוָה אֶל־מֹשֶׁה
+# וַיַּעַשׂ הָאֹתֹת לְעֵינֵי הָעָם
+# &quot;[EN-AID] And Aaron spoke all the words which the LORD had spoken to
+# Moses; and he did the signs before the eyes of the people.&quot;
+m.step(&quot;Exod.4.30&quot;)
+# ‹וַיַּעַשׂ הָאֹתֹת לְעֵינֵי הָעָם› (“and-make the-signs to-eye the-
+# people”) — fact holds: and-make-the-signs-to-eye-the-people
+m.fact(&quot;va_yaas_ha_otot_le_ene_ha_am&quot;)
+
+# -------------------------- Exod.4.31 · AND_THE_PEOPLE_BELIEVED ------------
+# וַיַּאֲמֵן הָעָם וַיִּשְׁמְעוּ כִּי־פָקַד יְהוָה אֶת־בְּנֵי יִשְׂרָאֵל
+# וְכִי רָאָה אֶת־עָנְיָם וַיִּקְּדוּ וַיִּשְׁתַּחֲוּוּ
+# &quot;[EN-AID] And the people believed; and they heard that the LORD had
+# visited the sons of Israel, and that He had seen their affliction; and
+# they bowed and prostrated themselves.&quot;
+m.step(&quot;Exod.4.31&quot;)
+# ‹וַיַּאֲמֵן הָעָם› (“and-build-up the-people”) — fact holds: and-build-up-
+# the-people
+m.fact(&quot;va_yaamen_ha_am&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;shelach_na_be_yad_tishlach&#x27;, &#x27;reeh_ha_moftim_va_asitam_lifne_faro&#x27;, &#x27;ve_amarta_el_paro_beni_vekhori&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 12
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;ve_hen_lo_yaaminu_li&#x27;, &#x27;ma_ze_ve_yadekha_mate&#x27;, &#x27;lemaan_yaaminu&#x27;, &#x27;ve_heeminu_le_qol_ha_ot_ha_acharon&#x27;, &#x27;ve_hayu_le_dam_ba_yabashet&#x27;, &#x27;khevad_pe_u_khevad_lashon&#x27;, &#x27;ha_lo_anokhi_YHWH&#x27;, &#x27;ve_anokhi_ehye_im_pikha&#x27;, &#x27;ve_raakha_ve_samach_be_libo&#x27;, &#x27;hu_yihye_lekha_le_fe&#x27;, &#x27;hine_anokhi_horeg_et_binkha_bekhorekha&#x27;, &#x27;va_yevaqesh_hamito&#x27;, &#x27;va_yiref_mimenu&#x27;, &#x27;va_yaasfu_et_kol_ziqne_bene_yisrael&#x27;, &#x27;va_yaas_ha_otot_le_ene_ha_am&#x27;, &#x27;va_yaamen_ha_am&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 22
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

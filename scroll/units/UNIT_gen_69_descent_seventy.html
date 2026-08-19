@@ -1,0 +1,983 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_69_descent_seventy — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_69_descent_seventy?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The descent and the seventy (46:1-34) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_69_descent_seventy</b> · Genesis 46:1-34 · derive logic_derived_v1 · phase FWD-10</div>
+<div class="meta"><a href="../#Gen/46/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">אָנֹכִי אֵרֵד עִמְּךָ מִצְרַיְמָה</span> · <i>anokhi ered imkha mitzrayma</i> · &#x27;I will go down with you to Egypt&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DERIVED 2026-08-09 · FORWARD ERA unit #10 (run FWD-2 block 5, the run&#x27;s last; freeze review waived — mechanical gates only). Span: 46:1-34, whole chapter: 34 verses (SNAPSHOT-verified). Oral layer IN-PIPELINE: manifest 13/13 VERIFIED, zero FAILED — see oral_audit_note_en. MACHINE PROFILE. TWO DECLAREs, ZERO RESULTs — the span&#x27;s queue is all standing: the DIVINE FEAR-NOT (al tira me-rda mitzrayma, 46:3 — the class&#x27;s highest speaker: God permits what Isaac was forbidden, 26:2) stands open as the fear-not class does (its answer is the descent itself); and the SCRIPTED ANSWER (va-amartem anshe miqne, 46:34) stands open with its performance two scenes ahead (47:3, ARMED for the next run). One SECTION: the seventy-ledger (46:8, ve-ele shemot — the header the second book will reopen verbatim-shaped, Exod 1:1 armed) with its four mother-registers (33 + 16 + 14 + 7) and two totals (66 of the loins; 70 of the house). EVENTS 2 marked: the DOUBLED CALL (46:2 — Jacob-Jacob answered hineni) and the reunion (46:29 — the hard chariot-binding + the neck-pair + weeping station five, the only measured one). REGISTRY 0 writes (the ledger LISTS, it does not install: the names are census-facts, not world-entities — the machine&#x27;s deliberate restraint, letter-noted). TESTS 0; LEDGER 0. CROSS-UNIT: gen_68&#x27;s royal summons (u-vou elai, 45:18) meets its arrival-verse at 46:6 — carried as a corpus settlement link. CARE-POINTS: the LEDGER&#x27;S ARITHMETIC — thirty-three counted where thirty-two are named (46:15): the readings&#x27; answers (Yocheved at the walls; Jacob heading his own count) are named, never merged — the tension filed as the ledger&#x27;s own open question; the dead counted and replaced (46:12); the plural of one (46:23); the one noted mother (46:10) and the one sister (46:17). The armed files CLOSING in-span: the three bindings (G65-05 — Simeon&#x27;s soft, the chariot&#x27;s hard, Pharaoh&#x27;s ahead), the four necks (G68-02), the before-I-die resolve (45:28 -&gt; 46:30), the still-alive clause in the second person (46:30). Isaac&#x27;s go-down ban (26:2) against Jacob&#x27;s go-down permit (46:3) — the border theology at Beersheba. WATCHLIST ARMS: 47:3 (the scripted answer performed), 47:6 (Goshen ratified), Exod 1:1 (the names-header reopened), Exod 1:5 + Deut 10:22 (the seventy retold), Exod 3:4 (Moses-Moses, the third doubled call), Exod 14:6 (Pharaoh&#x27;s binding, the file&#x27;s last station), Exod 38:8 (the mirrors-partner of the lean visions-word).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-09 (IN-PIPELINE, forward era; manifest logic/oral_audit/manifests/gen_69_descent_seventy_claims.json 13/13 VERIFIED, zero FAILED; record logic/oral_audit/AUDIT_gen_69_2026-08-09.md). CROWNS (chain-attested + DB-verified). THE TWENTY-SEVEN DESCENTS [G69-01, MS on 46:3; the Ramah] — THE UNIT&#x27;S MARQUEE: מצרימה (&quot;to Egypt&quot;, with the directional he) — MS warns off a scribes&#x27;-correction variant without the he by the Masorah&#x27;s own census, and the Ramah fixes the Torah&#x27;s count at TWENTY-SEVEN with-the-he tokens: the count verifies EXACT corpus-wide in-stream — the whole Torah&#x27;s Egypt-ward traffic counted and locked. THE THREE DOUBLED NAMES [G69-02, MS on 46:2]: יעקב יעקב (&quot;Jacob, Jacob&quot;) — MS&#x27;s file: three doubled names in Scripture with the divider stroke (paseq) between — Abraham- Abraham at the knife (22:11), Jacob-Jacob at the border, Moses-Moses at the bush (Exod 3:4, armed) — and SNAPSHOT writes the CONNECTOR (munach) at this station: the mark-split carried named, the stream&#x27;s stroke checked in-stream. THE DISPUTED DOT [G69-03, Or Torah via MS on 46:13; Radak]: ופוה (&quot;and Puvah&quot;) — Or Torah found the vav SOFT in the Hilleli and the weighty books (one margin recording the dispute); Radak&#x27;s scribal manual rules the DAGESH — and SNAPSHOT writes the dagesh: the stream with Radak AGAINST the Hilleli&#x27;s camp — a genuine pointing controversy carried whole, the stream&#x27;s side checked. THE HEAD-NAME [G69-04, Kitzur on 46:21]: וראש (&quot;and Rosh&quot;) — the skeleton TWICE in the Torah: Benjamin&#x27;s son and the Song&#x27;s venom-of-serpents (Deut 32:33, the poison homograph); the Kitzur&#x27;s pair is Lamentations&#x27; wormwood verse (Lam 3:19, named): all ten sons as Joseph-memorials, this one for the bitterness (census checked). THE PLURAL OF ONE [G69-05, MS on 46:23; the Masorah&#x27;s four sevirin; the Talmud via the Kitzur]: ובני דן חשים (&quot;and the SONS of Dan: Hushim&quot;) — one name under a plural header: one of the Masorah&#x27;s four presumed-singular cases — readers presume the son; the letter writes the plural (the reed-thicket homily named: one root, many stems); u-vene under the maqqef with no stroke of its own (checked). THE TWO COMINGS [G69-06, MS on 46:26-27]: הבאה (&quot;coming/come&quot;) — adjacent verses, the SAME word, OPPOSITE stress: end-stressed at the sixty-six (the caravan still moving), fore-stressed at the seventy (the house counted as arrived) — each one of the Masorah&#x27;s three of its kind, and MS&#x27;s own mnemonic seals the pair: &quot;the upper one above, the lower one below&quot; (both strokes checked in-stream). THE LEAN POINTER [G69-07, MS + the readings on 46:28]: להורת (&quot;to point the way&quot;) LEAN, its one Torah token — the readings split the leanness (to clear a path / to found a house of teaching, named): Judah goes first either way. THE HARD BINDING [G69-08 = G65-05 CLOSED, MS on 46:29; Mikhlol]: ויאסר (&quot;and he bound&quot;) with the alef in BARE SHEVA — the Masorah&#x27;s hard binding, landing exactly as armed at Simeon&#x27;s soft one (42:24, chataf segol): brother bound softly, chariot bound hard (Pharaoh&#x27;s chase-binding, Exod 14:6, remains armed); the sheva checked in-stream. THE FULL HERDS [G69-09, Or Torah via MS on 46:6]: מקניהם (&quot;their livestock&quot;) FULL — a tangle in the printed Masorah untangled by Or Torah with the Hilleli, the Ramah, the Meiri, and Shemen Sason: checked in-stream. THE LEAN KOHATH [G69-10, MS on 46:11]: קהת (&quot;Kohath&quot;) LEAN in every book against a printer&#x27;s emendation — MS&#x27;s arithmetic from the Masorah&#x27;s own two-station Numbers note: were the printer right, they would be three; the priest-line&#x27;s grandfather crosses lean (checked). THE LEDGER&#x27;S OPEN QUESTION [G69-11, the readings on 46:15]: thirty-three counted, thirty-two named — Yocheved at the walls / Jacob heading his own count: named, never merged; the subtotal&#x27;s own words checked in-stream. THE POINTING FILE [G69-12, MS ×6]: gam avotenu (&quot;also our fathers&quot;, 46:34) with the gimel DAGESHED (checked); be-marot (&quot;in the visions&quot;, 46:2) lean with the Zohar (the Tabernacle mirrors-partner named), me-rda (46:3) resh in bare sheva, gam (46:4) soft, gera (46:21) gimel dageshed, binyamin lean at his register-head (46:21, the census law) — asserted. READINGS (named-only): the seven crown-strokes on the shin of לישראל (&quot;to Israel&quot;, 46:2 — the seven troubles survived, the Kitzur&#x27;s tagin note: scribal crowns, not stream-marks); the five generations in the final he of gam alo (46:4); the hand on the eyes (46:4); why the one mother is noted (46:10); Serah&#x27;s long life (46:17); the Joseph-memorial names (46:21); the reed-thicket (46:23).</div>
+<div class="meta">confidence: structure tested; oral layer verified 13/13</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>FORWARD ERA run 2, block 5 (the run&#x27;s last). Canon continuation: Gen 46:1-34 — the descent and the seventy, whole chapter.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Span + source + conventions</td><td>SNAPSHOT prestage: 34 verses; no ketiv/qere pairs surfaced by the claim probes. Volitive census: the divine al-tira (46:3) and the scripted va-amartem (46:34) — two DECLAREs; the night-vision promises (46:3-4) modeled as facts (covenant speech, not receipted demands).</td><td>established</td></tr>
+<tr><td><b>C</b></td><td>Machine structure</td><td>Two DECLAREs, zero RESULTs — both open and both by design (the fear-not class; the scripted answer awaiting 47:3). One SECTION (the seventy-ledger, four mother-registers, two totals). The ledger LISTS, it does not install — REGISTRY 0 by deliberate restraint. EVENTS 2 (the doubled call; the reunion). gen_68&#x27;s summons discharged at 46:6 via corpus settlement link.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Gen 46 (14 notes) + Kitzur Baal HaTurim on Gen 46 (5 notes). Manifest 13 rows: 13 VERIFIED / 0 FAILED / 0 UNCHECKABLE. Two mark-splits carried whole: the paseq-vs-munach at the doubled call (G69-02) and the soft-vs-dagesh vav of Puvah (G69-03, the stream with Radak against the Hilleli&#x27;s camp).</td><td>established</td></tr>
+<tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 13/13 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-09 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_46_1 · Gen.46.1 · <span class='expr'>TO_BEERSHEBA_WITH_SACRIFICES</span></h3>
+<p><span class="he">וַיִּסַּע יִשְׂרָאֵל וְכָל־אֲשֶׁר־לוֹ וַיָּבֹא בְּאֵרָה שָּׁבַע וַיִּזְבַּח זְבָחִים לֵאלֹהֵי אָבִיו יִצְחָק</span> · <i>va-yisa yisrael ve-khal-asher-l-o va-yavo beera-ה shava va-yizbach zevachim le-lohe avi-v yitzchaq</i> · And Israel journeyed, and all that was his, and came to Beersheba; and he offered sacrifices to the God of his father Isaac.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּסַּ֤ע יִשְׂרָאֵל֙ וְכָל אֲשֶׁר ל֔וֹ וַיָּבֹ֖א בְּאֵ֣רָה שָּׁ֑בַע</span> · <i>va-yisa yisrael ve-khal-asher-l-o va-yavo beera-ה shava</i> · Israel journeyed with all that was his to Beersheba (etnachta on shava) [VERIFIED: SNAPSHOT Gen.46.1 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּזְבַּ֣ח זְבָחִ֔ים לֵאלֹהֵ֖י אָבִ֥יו יִצְחָֽק</span> · <i>va-yizbach zevachim le-lohe avi-v yitzchaq</i> · and offered sacrifices to the God of his father Isaac (verse-final yitzchaq) [VERIFIED: SNAPSHOT Gen.46.1 idx8-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yizbach_zevachim_l_elohe_aviv, t0)</span><br><span class="gloss">= HOLDS(and-yizbach-zevachim-l-elohe-aviv, t0)</span><br>THE BORDER SACRIFICES. va-yizbach ZEVACHIM l-elohe aviv YITZCHAQ — at Beersheba, the last well of the land, the father who was told &#x27;do not go down&#x27; there (26:2, Isaac&#x27;s own ban) is invoked by his son at the point of going down: the machine files the tension the night- vision answers.
+</td><td><span class="he">שָּׁבַע וַיִּזְבַּח זְבָחִים לֵאלֹהֵי אָבִיו</span> · <i>shava va-yizbach zevachim le-lohe avi-v</i><br><span class="gloss">= shava and-yizbach zevachim to-lohe avi-v</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The resolve moves; the border altar.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_2 · Gen.46.2 · <span class='expr'>JACOB_JACOB_HERE_I_AM</span></h3>
+<p><span class="he">וַיֹּאמֶר אֱלֹהִים לְיִשְׂרָאֵל בְּמַרְאֹת הַלַּיְלָה וַיֹּאמֶר יַעֲקֹב יַעֲקֹב וַיֹּאמֶר הִנֵּנִי</span> · <i>va-yomer Elohim le-yisrael be-marot ha-layla va-yomer yaaqov yaaqov va-yomer hine-ni</i> · And God said to Israel in the visions of the night, and He said: Jacob, Jacob! And he said: Here I am.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר אֱלֹהִ֤ים לְיִשְׂרָאֵל֙ בְּמַרְאֹ֣ת הַלַּ֔יְלָה וַיֹּ֖אמֶר יַעֲקֹ֣ב יַעֲקֹ֑ב</span> · <i>va-yomer Elohim le-yisrael be-marot ha-layla va-yomer yaaqov yaaqov</i> · God said to Israel in the visions of the night (etnachta on yaaqov) [VERIFIED: SNAPSHOT Gen.46.2 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּ֖אמֶר הִנֵּֽנִי</span> · <i>va-yomer hine-ni</i> · Jacob, Jacob! — here I am (verse-final hine-ni) [VERIFIED: SNAPSHOT Gen.46.2 idx8-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">qara(e1); Agent(e1, Elohim); Theme(e1, yaaqov)</span><br><span class="gloss">= qara(e1); Agent(e1, God); Theme(e1, yaaqov)</span><br>THE DOUBLED CALL [G69-02]. YAAQOV YAAQOV... HINENI — the doubled- name call: MS&#x27;s file counts THREE doubled names in Scripture with the divider stroke (paseq) between them — Abraham-Abraham at the knife (22:11, in-corpus), Jacob-Jacob here, Moses-Moses at the bush (Exod 3:4, armed) — and SNAPSHOT writes the CONNECTOR (munach) at this station, not the divider: the mark-split filed named, the stream&#x27;s own stroke checked [VERIFIED: manifest G69-02]. be-MAROT ha-laila — the visions-word LEAN with the Zohar&#x27;s reading (its mirrors-partner at the Tabernacle, Exod 38:8, named; asserted [G69-12]); hineni — the singular here-I-am (the plural&#x27;s three- station file is G67-02&#x27;s).
+</td><td><span class="he">וַיֹּאמֶר יַעֲקֹב יַעֲקֹב וַיֹּאמֶר הִנֵּנִי</span> · <i>va-yomer yaaqov yaaqov va-yomer hine-ni</i><br><span class="gloss">= and-yomer yaaqov yaaqov and-yomer hine-ni</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The doubled call; the third of three.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_3 · Gen.46.3 · <span class='expr'>FEAR_NOT_TO_GO_DOWN</span></h3>
+<p><span class="he">וַיֹּאמֶר אָנֹכִי הָאֵל אֱלֹהֵי אָבִיךָ אַל־תִּירָא מֵרְדָה מִצְרַיְמָה כִּי־לְגוֹי גָּדוֹל אֲשִׂימְךָ שָׁם</span> · <i>va-yomer anokhi ha-el elohe avi-kha el-tira me-reda mitzrayma-ה ki-le-goy gadol asim-kha sham</i> · And He said: I am the God, the God of your father; fear not to go down to Egypt, for I will make you a great nation there.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֕אמֶר אָנֹכִ֥י הָאֵ֖ל אֱלֹהֵ֣י אָבִ֑יךָ</span> · <i>va-yomer anokhi ha-el elohe avi-kha</i> · I am the God, the God of your father (etnachta on avi-kha) [VERIFIED: SNAPSHOT Gen.46.3 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אַל תִּירָא֙ מֵרְדָ֣ה מִצְרַ֔יְמָה כִּֽי לְג֥וֹי גָּד֖וֹל אֲשִֽׂימְךָ֥ שָֽׁם</span> · <i>el-tira me-reda mitzrayma-ה ki-le-goy gadol asim-kha sham</i> · fear not to go down to Egypt: a great nation I will make you there (verse-final sham) [VERIFIED: SNAPSHOT Gen.46.3 idx5-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(Elohim, LET-NOT(al_tira_me_reda_mitzrayma))</span><br><span class="gloss">= DECLARE(God, LET-NOT(upon-tira-from-reda-mitzrayma))</span><br>THE DIVINE FEAR-NOT [G69-01]. AL TIRA me-RDA MITZRAYMA — the fear- not class&#x27;s highest speaker: God permits what Isaac was forbidden (26:2), and the going-down word wears the directional he — MITZRAYMA, whose Torah census the Ramah fixes at twenty-seven with- the-he tokens, EXACT in-stream [VERIFIED: manifest G69-01]; MS warns off the &#x27;whisperer&#x27; (a scribes&#x27;-correction variant without the he) by the Masorah&#x27;s own count. me-rda with the resh in bare sheva (asserted [G69-12]). The demand stands OPEN as the fear-not class does — its answer is the whole descent.
+</td><td><span class="he">תִּירָא מֵרְדָה מִצְרַיְמָה כִּי־</span> · <i>tira me-reda mitzrayma-ה ki-</i><br><span class="gloss">= tira from-reda mitzrayma-ה when</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The divine fear-not; the 27-station form held.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_4 · Gen.46.4 · <span class='expr'>I_WILL_GO_DOWN_WITH_YOU</span></h3>
+<p><span class="he">אָנֹכִי אֵרֵד עִמְּךָ מִצְרַיְמָה וְאָנֹכִי אַעַלְךָ גַם־עָלֹה וְיוֹסֵף יָשִׁית יָדוֹ עַל־עֵינֶיךָ</span> · <i>anokhi ered im-kha mitzrayma-ה ve-anokhi aal-kha gam-alo ve-yosef yashit yad-o al-ene-kha</i> · I will go down with you to Egypt, and I will also surely bring you up; and Joseph shall set his hand upon your eyes.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אָנֹכִ֗י אֵרֵ֤ד עִמְּךָ֙ מִצְרַ֔יְמָה וְאָנֹכִ֖י אַֽעַלְךָ֣ גַם עָלֹ֑ה</span> · <i>anokhi ered im-kha mitzrayma-ה ve-anokhi aal-kha gam-alo</i> · I will go down with you to Egypt, and I will surely bring you up (etnachta on alo) [VERIFIED: SNAPSHOT Gen.46.4 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְיוֹסֵ֕ף יָשִׁ֥ית יָד֖וֹ עַל עֵינֶֽיךָ</span> · <i>ve-yosef yashit yad-o al-ene-kha</i> · and Joseph shall set his hand upon your eyes (verse-final ene-kha) [VERIFIED: SNAPSHOT Gen.46.4 idx8-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(anokhi_ered_imkha_ve_anokhi_aalkha, t0)</span><br><span class="gloss">= HOLDS(anokhi-ered-imkha-and-anokhi-aalkha, t0)</span><br>THE ROUND-TRIP. anokhi ERED imkha... ve-anokhi AALKHA gam ALO — the go-down and the bring-up in one breath: the exile signed with its return clause; the doubled rise-verb&#x27;s final he read by the Kitzur as the five generations down-and-up (Jacob, Levi, Kohath, Amram, Moses — named); ve-YOSEF yashit yado al enekha — the son&#x27;s hand on the father&#x27;s eyes: the deathbed promise (the readings on the closing of eyes, named); gam soft (asserted [G69-12]).
+</td><td><span class="he">אָנֹכִי אֵרֵד עִמְּךָ מִצְרַיְמָה</span> · <i>anokhi ered im-kha mitzrayma-ה</i><br><span class="gloss">= anokhi ered if-kha mitzrayma-ה</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The descent covenanted round-trip.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_5 · Gen.46.5 · <span class='expr'>THE_WAGONS_CARRY</span></h3>
+<p><span class="he">וַיָּקָם יַעֲקֹב מִבְּאֵר שָׁבַע וַיִּשְׂאוּ בְנֵי־יִשְׂרָאֵל אֶת־יַעֲקֹב אֲבִיהֶם וְאֶת־טַפָּם וְאֶת־נְשֵׁיהֶם בָּעֲגָלוֹת אֲשֶׁר־שָׁלַח פַּרְעֹה לָשֵׂאת אֹתוֹ</span> · <i>va-yaqam yaaqov mi-beer shava va-yisu vene-yisrael et-yaaqov avi-hem ve-et-tapa-m ve-et-neshe-hem ba-agalot asher-shalach paro la-set et-o</i> · And Jacob arose from Beersheba; and the sons of Israel carried Jacob their father, and their little ones, and their wives, in the wagons which Pharaoh had sent to carry him.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּ֥קָם יַעֲקֹ֖ב מִבְּאֵ֣ר שָׁ֑בַע</span> · <i>va-yaqam yaaqov mi-beer shava</i> · Jacob arose from Beersheba (etnachta on shava) [VERIFIED: SNAPSHOT Gen.46.5 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּשְׂא֨וּ בְנֵֽי יִשְׂרָאֵ֜ל אֶת יַעֲקֹ֣ב אֲבִיהֶ֗ם וְאֶת טַפָּם֙ וְאֶת נְשֵׁיהֶ֔ם בָּעֲגָל֕וֹת אֲשֶׁר שָׁלַ֥ח פַּרְעֹ֖ה לָשֵׂ֥את אֹתֽוֹ</span> · <i>va-yisu vene-yisrael et-yaaqov avi-hem ve-et-tapa-m ve-et-neshe-hem ba-agalot asher-shalach paro la-set et-o</i> · the sons carried their father in the wagons Pharaoh sent (verse-final et-o) [VERIFIED: SNAPSHOT Gen.46.5 idx4-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yisu_et_yaaqov_ba_agalot, t0)</span><br><span class="gloss">= HOLDS(and-yisu-yaaqov-in-the-agalot, t0)</span><br>THE CARRYING. va-yisu vene yisrael et YAAQOV avihem — the sons carry the father (the carry-verb of the burdens); ba-AGALOT asher shalach paro — the wagons of the proof (45:27) now the wagons of the deed: the span&#x27;s machinery rolls on the king&#x27;s axles.
+</td><td><span class="he">בְנֵי־יִשְׂרָאֵל אֶת־יַעֲקֹב אֲבִיהֶם</span> · <i>vene-yisrael et-yaaqov avi-hem</i><br><span class="gloss">= vene-yisrael yaaqov avi-hem</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The wagons do their work.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_6 · Gen.46.6 · <span class='expr'>THEY_CAME_TO_EGYPT</span></h3>
+<p><span class="he">וַיִּקְחוּ אֶת־מִקְנֵיהֶם וְאֶת־רְכוּשָׁם אֲשֶׁר רָכְשׁוּ בְּאֶרֶץ כְּנַעַן וַיָּבֹאוּ מִצְרָיְמָה יַעֲקֹב וְכָל־זַרְעוֹ אִתּוֹ</span> · <i>va-yiqchu et-miqne-hem ve-et-rekhusha-m asher rakhshu be-eretz kenaan va-yavou mitzrayma-ה yaaqov ve-khal-zar-o et-o</i> · And they took their livestock and their goods which they had gotten in the land of Canaan, and came to Egypt — Jacob, and all his seed with him.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּקְח֣וּ אֶת מִקְנֵיהֶ֗ם וְאֶת רְכוּשָׁם֙ אֲשֶׁ֤ר רָֽכְשׁוּ֙ בְּאֶ֣רֶץ כְּנַ֔עַן וַיָּבֹ֖אוּ מִצְרָ֑יְמָה</span> · <i>va-yiqchu et-miqne-hem ve-et-rekhusha-m asher rakhshu be-eretz kenaan va-yavou mitzrayma-ה</i> · they took their livestock and their goods from Canaan (etnachta on mitzrayma-ה) [VERIFIED: SNAPSHOT Gen.46.6 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">יַעֲקֹ֖ב וְכָל זַרְע֥וֹ אִתּֽוֹ</span> · <i>yaaqov ve-khal-zar-o et-o</i> · and came to Egypt: Jacob and all his seed with him (verse-final et-o) [VERIFIED: SNAPSHOT Gen.46.6 idx11-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yavou_mitzrayma_yaaqov_ve_khol_zaro, t0)</span><br><span class="gloss">= HOLDS(and-yavou-mitzrayma-yaaqov-and-all-zaro, t0)</span><br>THE ARRIVAL. va-YAVOU MITZRAYMA — the come-demand of the king (45:18, gen_68&#x27;s open summons) meets its arrival-verse: the corpus settlement link carries the discharge (the one-world law — no in- unit RESULT for another unit&#x27;s queue). MIQNEHEM written FULL — the printed Masorah&#x27;s tangle untangled by Or Torah with the Hilleli, the Ramah, the Meiri, and Shemen Sason (asserted [G69-12]): the herds of Canaan cross whole.
+</td><td><span class="he">מִצְרָיְמָה יַעֲקֹב וְכָל־זַרְעוֹ אִתּוֹ</span> · <i>mitzrayma-ה yaaqov ve-khal-zar-o et-o</i><br><span class="gloss">= mitzrayma-ה yaaqov and-khal-zar-o o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The arrival: the royal summons meets its verse.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_7 · Gen.46.7 · <span class='expr'>SONS_AND_DAUGHTERS_ALL_HIS_SEED</span></h3>
+<p><span class="he">בָּנָיו וּבְנֵי בָנָיו אִתּוֹ בְּנֹתָיו וּבְנוֹת בָּנָיו וְכָל־זַרְעוֹ הֵבִיא אִתּוֹ מִצְרָיְמָה</span> · <i>banay-v u-vene vanay-v et-o benotay-v u-venot banay-v ve-khal-zar-o hevi et-o mitzrayma-ה</i> · His sons, and his sons&#x27; sons with him, his daughters, and his sons&#x27; daughters, and all his seed he brought with him to Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">בָּנָ֞יו וּבְנֵ֤י בָנָיו֙ אִתּ֔וֹ בְּנֹתָ֛יו וּבְנ֥וֹת בָּנָ֖יו וְכָל זַרְע֑וֹ</span> · <i>banay-v u-vene vanay-v et-o benotay-v u-venot banay-v ve-khal-zar-o</i> · his sons and his sons&#x27; sons with him (etnachta on zar-o) [VERIFIED: SNAPSHOT Gen.46.7 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">הֵבִ֥יא אִתּ֖וֹ מִצְרָֽיְמָה</span> · <i>hevi et-o mitzrayma-ה</i> · his daughters and sons&#x27; daughters — all his seed to Egypt (verse-final mitzrayma-ה) [VERIFIED: SNAPSHOT Gen.46.7 idx9-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(kol_zaro_hevi_ito_mitzrayma, t0)</span><br><span class="gloss">= HOLDS(all-zaro-hevi-with-him-mitzrayma, t0)</span><br>ALL HIS SEED. kol zaro HEVI ito — the completeness formula before the ledger: nothing of the house remains behind; the machine reads 46:7 as the census&#x27;s warrant.
+</td><td><span class="he">אִתּוֹ מִצְרָיְמָה</span> · <i>et-o mitzrayma-ה</i><br><span class="gloss">= o mitzrayma-ה</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The completeness formula.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_8 · Gen.46.8 · <span class='expr'>THE_LEDGER_OPENS</span></h3>
+<p><span class="he">וְאֵלֶּה שְׁמוֹת בְּנֵי־יִשְׂרָאֵל הַבָּאִים מִצְרַיְמָה יַעֲקֹב וּבָנָיו בְּכֹר יַעֲקֹב רְאוּבֵן</span> · <i>ve-ele shemot bene-yisrael ha-baim mitzrayma-ה yaaqov u-vanay-v bekhor yaaqov reuven</i> · And these are the names of the sons of Israel who came to Egypt — Jacob and his sons: Jacob&#x27;s firstborn, Reuben.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאֵ֨לֶּה שְׁמ֧וֹת בְּנֵֽי יִשְׂרָאֵ֛ל הַבָּאִ֥ים מִצְרַ֖יְמָה יַעֲקֹ֣ב וּבָנָ֑יו</span> · <i>ve-ele shemot bene-yisrael ha-baim mitzrayma-ה yaaqov u-vanay-v</i> · these are the names of the sons of Israel who came to Egypt (etnachta on u-vanay-v) [VERIFIED: SNAPSHOT Gen.46.8 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">בְּכֹ֥ר יַעֲקֹ֖ב רְאוּבֵֽן</span> · <i>bekhor yaaqov reuven</i> · Jacob and his sons: Jacob&#x27;s firstborn, Reuben (verse-final reuven) [VERIFIED: SNAPSHOT Gen.46.8 idx8-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>SECTION</td><td><span class="expr">SECTION(shemot_bene_yisrael, bene_leah, bene_zilpa, bene_rachel, bene_vilha)</span><br><span class="gloss">= SECTION(names-bene-yisrael, bene-leah, bene-zilpa, bene-rachel, bene-vilha)</span><br>THE LEDGER OPENS. ve-ELE SHEMOT bene yisrael ha-baim MITZRAYMA — the names-header that will open the second book verbatim-shaped (Exod 1:1, armed): the machine installs the section with its four mother- registers; BEKHOR yaaqov REUVEN — the firstborn heads the count his deeds could not forfeit in the ledger&#x27;s grammar (letter-note).
+</td><td><span class="he">וְאֵלֶּה שְׁמוֹת בְּנֵי־יִשְׂרָאֵל הַבָּאִים מִצְרַיְמָה יַעֲקֹב</span> · <i>ve-ele shemot bene-yisrael ha-baim mitzrayma-ה yaaqov</i><br><span class="gloss">= and-ele names bene-yisrael the-baim mitzrayma-ה yaaqov</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The seventy-ledger&#x27;s section header.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_9 · Gen.46.9 · <span class='expr'>REUBENS_SONS</span></h3>
+<p><span class="he">וּבְנֵי רְאוּבֵן חֲנוֹךְ וּפַלּוּא וְחֶצְרוֹן וְכַרְמִי</span> · <i>u-vene reuven chanokh u-falu ve-chetzron ve-kharmi</i> · And the sons of Reuben: Hanoch, and Pallu, and Hezron, and Carmi.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבְנֵ֖י רְאוּבֵ֑ן</span> · <i>u-vene reuven</i> · and the sons of Reuben (etnachta on reuven) [VERIFIED: SNAPSHOT Gen.46.9 idx1 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">חֲנ֥וֹךְ וּפַלּ֖וּא וְחֶצְר֥וֹן וְכַרְמִֽי</span> · <i>chanokh u-falu ve-chetzron ve-kharmi</i> · Hanoch, Pallu, Hezron, Carmi (verse-final ve-kharmi) [VERIFIED: SNAPSHOT Gen.46.9 idx2-5]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(bene_reuven_arbaa, t0)</span><br><span class="gloss">= HOLDS(bene-reuven-arbaa, t0)</span><br>REUBEN&#x27;S FOUR. chanokh u-falu ve-chetzron ve-kharmi — four names; the Enoch-name (chanokh) recurs from the two earlier lines (Cain&#x27;s city-son, 4:17; the walker, 5:22): the ledger&#x27;s names carry old freight (letter-note).
+</td><td><span class="he">וּבְנֵי רְאוּבֵן</span> · <i>u-vene reuven</i><br><span class="gloss">= and-vene reuven</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Leah&#x27;s register begins.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_10 · Gen.46.10 · <span class='expr'>SIMEONS_SONS</span></h3>
+<p><span class="he">וּבְנֵי שִׁמְעוֹן יְמוּאֵל וְיָמִין וְאֹהַד וְיָכִין וְצֹחַר וְשָׁאוּל בֶּן־הַכְּנַעֲנִית</span> · <i>u-vene shimon yemuel ve-yamin ve-ohad ve-yakhin ve-tzochar ve-shaul ben-ha-kenaanit</i> · And the sons of Simeon: Jemuel, and Jamin, and Ohad, and Jachin, and Zohar, and Shaul the son of the Canaanite woman.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבְנֵ֣י שִׁמְע֗וֹן יְמוּאֵ֧ל וְיָמִ֛ין וְאֹ֖הַד וְיָכִ֣ין וְצֹ֑חַר</span> · <i>u-vene shimon yemuel ve-yamin ve-ohad ve-yakhin ve-tzochar</i> · and the sons of Simeon (etnachta on ve-tzochar) [VERIFIED: SNAPSHOT Gen.46.10 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְשָׁא֖וּל בֶּן הַֽכְּנַעֲנִֽית</span> · <i>ve-shaul ben-ha-kenaanit</i> · Jemuel, Jamin, Ohad, Jachin, Zohar, and Shaul son of the Canaanite (verse-final ha-kenaanit) [VERIFIED: SNAPSHOT Gen.46.10 idx7-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(bene_shimon_shisha, t0)</span><br><span class="gloss">= HOLDS(bene-shimon-shisha, t0)</span><br>SIMEON&#x27;S SIX. ve-SHAUL ben ha-KENAANIT — the one mother noted in the whole ledger: the readings ask why hers (named); the Shaul-name wears the full skeleton of G66-06&#x27;s asking/king/grave file (letter- note).
+</td><td><span class="he">וּבְנֵי שִׁמְעוֹן</span> · <i>u-vene shimon</i><br><span class="gloss">= and-vene shimon</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The bound brother&#x27;s six.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_11 · Gen.46.11 · <span class='expr'>LEVIS_SONS</span></h3>
+<p><span class="he">וּבְנֵי לֵוִי גֵּרְשׁוֹן קְהָת וּמְרָרִי</span> · <i>u-vene levi gershon qehat u-merari</i> · And the sons of Levi: Gershon, Kohath, and Merari.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבְנֵ֖י לֵוִ֑י</span> · <i>u-vene levi</i> · and the sons of Levi (etnachta on levi) [VERIFIED: SNAPSHOT Gen.46.11 idx1 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">גֵּרְשׁ֕וֹן קְהָ֖ת וּמְרָרִֽי</span> · <i>gershon qehat u-merari</i> · Gershon, Kohath, and Merari (verse-final u-merari) [VERIFIED: SNAPSHOT Gen.46.11 idx2-4]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(bene_levi_shelosha, t0)</span><br><span class="gloss">= HOLDS(bene-levi-shelosha, t0)</span><br>LEVI&#x27;S THREE [G69-12]. gershon QEHAT u-merari — Kohath LEAN (no vav) in every book against a printer&#x27;s emendation (the Masorah&#x27;s own two- station note for the Numbers pairs proves the point, MS&#x27;s arithmetic: were the printer right, they would be three); the priest-line&#x27;s grandfather crosses lean (asserted).
+</td><td><span class="he">וּבְנֵי לֵוִי</span> · <i>u-vene levi</i><br><span class="gloss">= and-vene levi</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The lean Kohath.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_12 · Gen.46.12 · <span class='expr'>JUDAHS_SONS_TWO_DEAD</span></h3>
+<p><span class="he">וּבְנֵי יְהוּדָה עֵר וְאוֹנָן וְשֵׁלָה וָפֶרֶץ וָזָרַח וַיָּמָת עֵר וְאוֹנָן בְּאֶרֶץ כְּנַעַן וַיִּהְיוּ בְנֵי־פֶרֶץ חֶצְרוֹן וְחָמוּל</span> · <i>u-vene yehuda er ve-onan ve-shela va-feretz va-zarach va-yamat er ve-onan be-eretz kenaan va-yihyu vene-feretz chetzron ve-chamul</i> · And the sons of Judah: Er, and Onan, and Shelah, and Perez, and Zerah — and Er and Onan died in the land of Canaan; and the sons of Perez were Hezron and Hamul.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבְנֵ֣י יְהוּדָ֗ה עֵ֧ר וְאוֹנָ֛ן וְשֵׁלָ֖ה וָפֶ֣רֶץ וָזָ֑רַח</span> · <i>u-vene yehuda er ve-onan ve-shela va-feretz va-zarach</i> · the sons of Judah: Er, Onan, Shelah, Perez, Zerah (etnachta on va-zarach) [VERIFIED: SNAPSHOT Gen.46.12 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיָּ֨מָת עֵ֤ר וְאוֹנָן֙ בְּאֶ֣רֶץ כְּנַ֔עַן וַיִּהְי֥וּ בְנֵי פֶ֖רֶץ חֶצְר֥וֹן וְחָמֽוּל</span> · <i>va-yamat er ve-onan be-eretz kenaan va-yihyu vene-feretz chetzron ve-chamul</i> · Er and Onan died in Canaan; the sons of Perez: Hezron and Hamul (verse-final ve-chamul) [VERIFIED: SNAPSHOT Gen.46.12 idx7-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yamat_er_ve_onan_be_eretz_kenaan, t0)</span><br><span class="gloss">= HOLDS(and-yamat-er-and-onan-in-earth-kenaan, t0)</span><br>THE DEAD COUNTED. va-YAMAT er ve-onan — the ledger alone among the registers pauses for deaths (gen_61&#x27;s two struck sons): the count replaces them with Perez&#x27;s two — the machine notes the arithmetic of the substitution (five minus two plus two).
+</td><td><span class="he">עֵר וְאוֹנָן בְּאֶרֶץ כְּנַעַן וַיִּהְיוּ בְנֵי־</span> · <i>er ve-onan be-eretz kenaan va-yihyu vene-</i><br><span class="gloss">= er and-onan earth kenaan and-yihyu vene</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The ledger records its dead.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_13 · Gen.46.13 · <span class='expr'>ISSACHARS_SONS</span></h3>
+<p><span class="he">וּבְנֵי יִשָׂשכָר תּוֹלָע וּפֻוָּה וְיוֹב וְשִׁמְרוֹן</span> · <i>u-vene yisashkhar tola u-fuva ve-yov ve-shimron</i> · And the sons of Issachar: Tola, and Puvah, and Iob, and Shimron.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבְנֵ֖י יִשָׂשכָ֑ר</span> · <i>u-vene yisashkhar</i> · and the sons of Issachar (etnachta on yisashkhar) [VERIFIED: SNAPSHOT Gen.46.13 idx1 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">תּוֹלָ֥ע וּפֻוָּ֖ה וְי֥וֹב וְשִׁמְרֽוֹן</span> · <i>tola u-fuva ve-yov ve-shimron</i> · Tola, Puvah, Iob, and Shimron (verse-final ve-shimron) [VERIFIED: SNAPSHOT Gen.46.13 idx2-5]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(bene_yisaschar_arbaa, t0)</span><br><span class="gloss">= HOLDS(bene-yisaschar-arbaa, t0)</span><br>ISSACHAR&#x27;S FOUR [G69-03]. tola U-FUVA — the vav of Puvah&#x27;s name: Or Torah found it SOFT in the Hilleli and the weighty books (a margin note recording the dispute); Radak&#x27;s own scribal manual rules the DAGESH — and SNAPSHOT writes the DAGESH: the stream with Radak against the Hilleli&#x27;s camp — a pointing split carried whole, the stream&#x27;s side checked in-stream [VERIFIED: manifest G69-03, the split named].
+</td><td><span class="he">וּבְנֵי יִשָׂשכָר</span> · <i>u-vene yisashkhar</i><br><span class="gloss">= and-vene yisashkhar</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The disputed dot in Puvah.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_14 · Gen.46.14 · <span class='expr'>ZEBULUNS_SONS</span></h3>
+<p><span class="he">וּבְנֵי זְבוּלֻן סֶרֶד וְאֵלוֹן וְיַחְלְאֵל</span> · <i>u-vene zevulun sered ve-elon ve-yachlel</i> · And the sons of Zebulun: Sered, and Elon, and Jahleel.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבְנֵ֖י זְבוּלֻ֑ן</span> · <i>u-vene zevulun</i> · and the sons of Zebulun (etnachta on zevulun) [VERIFIED: SNAPSHOT Gen.46.14 idx1 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">סֶ֥רֶד וְאֵל֖וֹן וְיַחְלְאֵֽל</span> · <i>sered ve-elon ve-yachlel</i> · Sered, Elon, and Jahleel (verse-final ve-yachlel) [VERIFIED: SNAPSHOT Gen.46.14 idx2-4]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(bene_zevulun_shelosha, t0)</span><br><span class="gloss">= HOLDS(bene-zevulun-shelosha, t0)</span><br>ZEBULUN&#x27;S THREE. sered ve-elon ve-yachlel — the sixth son&#x27;s three; the Elon-name repeats the Hittite father-in-law&#x27;s (26:34): the ledger&#x27;s skeleton-collisions keep their file (letter-note).
+</td><td><span class="he">וּבְנֵי זְבוּלֻן</span> · <i>u-vene zevulun</i><br><span class="gloss">= and-vene zevulun</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Leah&#x27;s register closes its names.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_15 · Gen.46.15 · <span class='expr'>LEAHS_THIRTY_THREE</span></h3>
+<p><span class="he">אֵלֶּה בְּנֵי לֵאָה אֲשֶׁר יָלְדָה לְיַעֲקֹב בְּפַדַּן אֲרָם וְאֵת דִּינָה בִתּוֹ כָּל־נֶפֶשׁ בָּנָיו וּבְנוֹתָיו שְׁלֹשִׁים וְשָׁלֹשׁ</span> · <i>ele bene lea asher yalda le-yaaqov be-fadan aram ve-et dina vit-o kal-nefesh banay-v u-venotay-v sheloshim ve-shalosh</i> · These are the sons of Leah, whom she bore to Jacob in Paddan-aram, and Dinah his daughter: every soul of his sons and his daughters — thirty-three.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אֵ֣לֶּה בְּנֵ֣י לֵאָ֗ה אֲשֶׁ֨ר יָֽלְדָ֤ה לְיַעֲקֹב֙ בְּפַדַּ֣ן אֲרָ֔ם וְאֵ֖ת דִּינָ֣ה בִתּ֑וֹ</span> · <i>ele bene lea asher yalda le-yaaqov be-fadan aram ve-et dina vit-o</i> · these are the sons of Leah, and Dinah his daughter (etnachta on vit-o) [VERIFIED: SNAPSHOT Gen.46.15 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כָּל נֶ֧פֶשׁ בָּנָ֛יו וּבְנוֹתָ֖יו שְׁלֹשִׁ֥ים וְשָׁלֹֽשׁ</span> · <i>kal-nefesh banay-v u-venotay-v sheloshim ve-shalosh</i> · every soul of his sons and daughters: thirty-three (verse-final ve-shalosh) [VERIFIED: SNAPSHOT Gen.46.15 idx11-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(kol_nefesh_banav_u_venotav_sheloshim_ve_shalosh, t0)</span><br><span class="gloss">= HOLDS(all-nefesh-banav-and-venotav-sheloshim-and-shalosh, t0)</span><br>THIRTY-THREE. sheloshim ve-SHALOSH — the subtotal counts thirty- three where the names count thirty-two: the reading tradition&#x27;s answers (Yocheved born between the walls; Jacob himself heads his own count) are named, never merged — the machine files the arithmetic tension as the ledger&#x27;s own open question (letter-fact, the readings named).
+</td><td><span class="he">בָּנָיו וּבְנוֹתָיו שְׁלֹשִׁים וְשָׁלֹשׁ</span> · <i>banay-v u-venotay-v sheloshim ve-shalosh</i><br><span class="gloss">= banay-v and-venotay-v sheloshim and-shalosh</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The first subtotal; the famous missing one.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_16 · Gen.46.16 · <span class='expr'>GADS_SONS</span></h3>
+<p><span class="he">וּבְנֵי גָד צִפְיוֹן וְחַגִּי שׁוּנִי וְאֶצְבֹּן עֵרִי וַאֲרוֹדִי וְאַרְאֵלִי</span> · <i>u-vene gad tzifyon ve-chagi shuni ve-etzbon eri va-arodi ve-areli</i> · And the sons of Gad: Ziphion, and Haggi, Shuni, and Ezbon, Eri, and Arodi, and Areli.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבְנֵ֣י גָ֔ד צִפְי֥וֹן וְחַגִּ֖י שׁוּנִ֣י וְאֶצְבֹּ֑ן</span> · <i>u-vene gad tzifyon ve-chagi shuni ve-etzbon</i> · and the sons of Gad (etnachta on ve-etzbon) [VERIFIED: SNAPSHOT Gen.46.16 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">עֵרִ֥י וַֽאֲרוֹדִ֖י וְאַרְאֵלִֽי</span> · <i>eri va-arodi ve-areli</i> · Ziphion, Haggi, Shuni, Ezbon, Eri, Arodi, Areli (verse-final ve-areli) [VERIFIED: SNAPSHOT Gen.46.16 idx6-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(bene_gad_shiva, t0)</span><br><span class="gloss">= HOLDS(bene-gad-shiva, t0)</span><br>GAD&#x27;S SEVEN. shiva — the troop-named son musters seven; the ledger&#x27;s second register opens.
+</td><td><span class="he">וּבְנֵי גָד</span> · <i>u-vene gad</i><br><span class="gloss">= and-vene gad</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Zilpah&#x27;s register begins.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_17 · Gen.46.17 · <span class='expr'>ASHERS_SONS_AND_SERAH</span></h3>
+<p><span class="he">וּבְנֵי אָשֵׁר יִמְנָה וְיִשְׁוָה וְיִשְׁוִי וּבְרִיעָה וְשֶׂרַח אֲחֹתָם וּבְנֵי בְרִיעָה חֶבֶר וּמַלְכִּיאֵל</span> · <i>u-vene asher yimna ve-yishva ve-yishvi u-veria ve-serach achota-m u-vene veria chever u-malkiel</i> · And the sons of Asher: Imnah, and Ishvah, and Ishvi, and Beriah, and Serah their sister; and the sons of Beriah: Heber and Malchiel.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבְנֵ֣י אָשֵׁ֗ר יִמְנָ֧ה וְיִשְׁוָ֛ה וְיִשְׁוִ֥י וּבְרִיעָ֖ה וְשֶׂ֣רַח אֲחֹתָ֑ם</span> · <i>u-vene asher yimna ve-yishva ve-yishvi u-veria ve-serach achota-m</i> · the sons of Asher: Imnah, Ishvah, Ishvi, Beriah (etnachta on achota-m) [VERIFIED: SNAPSHOT Gen.46.17 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּבְנֵ֣י בְרִיעָ֔ה חֶ֖בֶר וּמַלְכִּיאֵֽל</span> · <i>u-vene veria chever u-malkiel</i> · and Serah their sister; the sons of Beriah: Heber and Malchiel (verse-final u-malkiel) [VERIFIED: SNAPSHOT Gen.46.17 idx8-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_serach_achotam, t0)</span><br><span class="gloss">= HOLDS(and-serach-achotam, t0)</span><br>SERAH THEIR SISTER. ve-SERACH achotam — the registers&#x27; one named sister besides Dinah: the readings give her the long life and the secret of the redeemer (named); the ledger grants her four words.
+</td><td><span class="he">אֲחֹתָם וּבְנֵי</span> · <i>achota-m u-vene</i><br><span class="gloss">= achota-m and-vene</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The one sister in the registers.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_18 · Gen.46.18 · <span class='expr'>ZILPAHS_SIXTEEN</span></h3>
+<p><span class="he">אֵלֶּה בְּנֵי זִלְפָּה אֲשֶׁר־נָתַן לָבָן לְלֵאָה בִתּוֹ וַתֵּלֶד אֶת־אֵלֶּה לְיַעֲקֹב שֵׁשׁ עֶשְׂרֵה נָפֶשׁ</span> · <i>ele bene zilpa asher-natan lavan le-lea vit-o va-teled et-ele le-yaaqov shesh esre nafesh</i> · These are the sons of Zilpah, whom Laban gave to Leah his daughter; and she bore these to Jacob — sixteen souls.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אֵ֚לֶּה בְּנֵ֣י זִלְפָּ֔ה אֲשֶׁר נָתַ֥ן לָבָ֖ן לְלֵאָ֣ה בִתּ֑וֹ</span> · <i>ele bene zilpa asher-natan lavan le-lea vit-o</i> · these are the sons of Zilpah, whom Laban gave to Leah (etnachta on vit-o) [VERIFIED: SNAPSHOT Gen.46.18 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתֵּ֤לֶד אֶת אֵ֨לֶּה֙ לְיַעֲקֹ֔ב שֵׁ֥שׁ עֶשְׂרֵ֖ה נָֽפֶשׁ</span> · <i>va-teled et-ele le-yaaqov shesh esre nafesh</i> · and she bore these to Jacob: sixteen souls (verse-final nafesh) [VERIFIED: SNAPSHOT Gen.46.18 idx8-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shesh_esre_nafesh, t0)</span><br><span class="gloss">= HOLDS(shesh-esre-nafesh, t0)</span><br>SIXTEEN. shesh esre NAFESH — the second register closes; the given- maid formula (asher natan lavan) keeps Laban&#x27;s hand visible in the count (letter-note).
+</td><td><span class="he">שֵׁשׁ עֶשְׂרֵה נָפֶשׁ</span> · <i>shesh esre nafesh</i><br><span class="gloss">= shesh esre nafesh</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The second subtotal.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_19 · Gen.46.19 · <span class='expr'>RACHELS_SONS</span></h3>
+<p><span class="he">בְּנֵי רָחֵל אֵשֶׁת יַעֲקֹב יוֹסֵף וּבִנְיָמִן</span> · <i>bene rachel eshet yaaqov yosef u-vinyamin</i> · The sons of Rachel, Jacob&#x27;s wife: Joseph and Benjamin.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">בְּנֵ֤י רָחֵל֙ אֵ֣שֶׁת יַֽעֲקֹ֔ב</span> · <i>bene rachel eshet yaaqov</i> · the sons of Rachel, Jacob&#x27;s wife (NO etnachta in verse: split at zaqef qatan on yaaqov) [VERIFIED: SNAPSHOT Gen.46.19 idx3 zaqef qatan; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">יוֹסֵ֖ף וּבִנְיָמִֽן</span> · <i>yosef u-vinyamin</i> · Joseph and Benjamin (verse-final u-vinyamin) [VERIFIED: SNAPSHOT Gen.46.19 idx4-5]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(bene_rachel_eshet_yaaqov, t0)</span><br><span class="gloss">= HOLDS(bene-rachel-wife-of-yaaqov, t0)</span><br>THE WIFE&#x27;S TWO. bene RACHEL eshet yaaqov — the only register headed &#x27;Jacob&#x27;s WIFE&#x27; (the speech&#x27;s arithmetic at 44:27 — &#x27;my wife bore me two&#x27; — becomes the ledger&#x27;s own heading): Joseph and Benjamin, the count&#x27;s center of gravity.
+</td><td><span class="he">בְּנֵי רָחֵל אֵשֶׁת יַעֲקֹב יוֹסֵף</span> · <i>bene rachel eshet yaaqov yosef</i><br><span class="gloss">= bene rachel wife-of yaaqov yosef</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The wife&#x27;s register: two names.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_20 · Gen.46.20 · <span class='expr'>JOSEPHS_EGYPTIAN_SONS</span></h3>
+<p><span class="he">וַיִּוָּלֵד לְיוֹסֵף בְּאֶרֶץ מִצְרַיִם אֲשֶׁר יָלְדָה־לּוֹ אָסְנַת בַּת־פּוֹטִי פֶרַע כֹּהֵן אֹן אֶת־מְנַשֶּׁה וְאֶת־אֶפְרָיִם</span> · <i>va-yivaled le-yosef be-eretz mitzrayim asher yalda-l-o asnat bat-poti fera kohen on et-menashe ve-et-efrayim</i> · And to Joseph were born in the land of Egypt those whom Asenath daughter of Poti-fera priest of On bore to him: Manasseh and Ephraim.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּוָּלֵ֣ד לְיוֹסֵף֮ בְּאֶ֣רֶץ מִצְרַיִם֒ אֲשֶׁ֤ר יָֽלְדָה לּוֹ֙ אָֽסְנַ֔ת בַּת פּ֥וֹטִי פֶ֖רַע כֹּהֵ֣ן אֹ֑ן</span> · <i>va-yivaled le-yosef be-eretz mitzrayim asher yalda-l-o asnat bat-poti fera kohen on</i> · to Joseph were born in Egypt (etnachta on on) [VERIFIED: SNAPSHOT Gen.46.20 idx12 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֶת מְנַשֶּׁ֖ה וְאֶת אֶפְרָֽיִם</span> · <i>et-menashe ve-et-efrayim</i> · whom Asenath bore to him: Manasseh and Ephraim (verse-final efrayim) [VERIFIED: SNAPSHOT Gen.46.20 idx13-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yivaled_le_yosef_menashe_ve_efrayim, t0)</span><br><span class="gloss">= HOLDS(and-yivaled-to-yosef-menashe-and-efrayim, t0)</span><br>THE EGYPTIAN-BORN. va-YIVALED le-yosef — the two names gen_64&#x27;s registry installed (menashe, efrayim) enter the ledger from the far side: the count reaches across the border it is crossing; the two- word priest-name (poti fera) keeps its two unjoined tokens (G64-09&#x27;s law, letter-note).
+</td><td><span class="he">וַיִּוָּלֵד לְיוֹסֵף בְּאֶרֶץ מִצְרַיִם</span> · <i>va-yivaled le-yosef be-eretz mitzrayim</i><br><span class="gloss">= and-yivaled to-yosef earth mitzrayim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The Egyptian-born counted in.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_21 · Gen.46.21 · <span class='expr'>BENJAMINS_TEN</span></h3>
+<p><span class="he">וּבְנֵי בִנְיָמִן בֶּלַע וָבֶכֶר וְאַשְׁבֵּל גֵּרָא וְנַעֲמָן אֵחִי וָרֹאשׁ מֻפִּים וְחֻפִּים וָאָרְדְּ</span> · <i>u-vene vinyamin bela va-vekher ve-ashbel gera ve-naaman echi va-rosh mupim ve-chupim va-ard</i> · And the sons of Benjamin: Bela, and Becher, and Ashbel, Gera, and Naaman, Ehi, and Rosh, Muppim, and Huppim, and Ard.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבְנֵ֣י בִנְיָמִ֗ן בֶּ֤לַע וָבֶ֨כֶר֙ וְאַשְׁבֵּ֔ל גֵּרָ֥א וְנַעֲמָ֖ן אֵחִ֣י וָרֹ֑אשׁ</span> · <i>u-vene vinyamin bela va-vekher ve-ashbel gera ve-naaman echi va-rosh</i> · and the sons of Benjamin (etnachta on va-rosh) [VERIFIED: SNAPSHOT Gen.46.21 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">מֻפִּ֥ים וְחֻפִּ֖ים וָאָֽרְדְּ</span> · <i>mupim ve-chupim va-ard</i> · Bela, Becher, Ashbel, Gera, Naaman, Ehi, Rosh, Muppim, Huppim, Ard (verse-final va-ard) [VERIFIED: SNAPSHOT Gen.46.21 idx9-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(bene_vinyamin_asara, t0)</span><br><span class="gloss">= HOLDS(bene-vinyamin-asara, t0)</span><br>BENJAMIN&#x27;S TEN [G69-04]. the &#x27;lad&#x27; of the speeches musters TEN sons — the ledger&#x27;s quiet correction of the court&#x27;s grammar; VA-ROSH — the head-name&#x27;s skeleton stands TWICE in the Torah: Benjamin&#x27;s son and the Song&#x27;s &#x27;VENOM of serpents&#x27; (Deut 32:33, the poison- homograph); the Kitzur&#x27;s Scripture-pair is Lamentations&#x27; wormwood- and-poison (Lam 3:19, named) — he reads all ten names as Joseph- memorials, this one for the bitterness [VERIFIED: manifest G69-04]; GERA with the gimel dageshed (asserted [G69-12]); binyamin LEAN at its own register-head (the census law, asserted).
+</td><td><span class="he">וּבְנֵי בִנְיָמִן</span> · <i>u-vene vinyamin</i><br><span class="gloss">= and-vene vinyamin</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The lad&#x27;s ten; the head-name pair.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_22 · Gen.46.22 · <span class='expr'>RACHELS_FOURTEEN</span></h3>
+<p><span class="he">אֵלֶּה בְּנֵי רָחֵל אֲשֶׁר יֻלַּד לְיַעֲקֹב כָּל־נֶפֶשׁ אַרְבָּעָה עָשָׂר</span> · <i>ele bene rachel asher yulad le-yaaqov kal-nefesh arbaa asar</i> · These are the sons of Rachel who were born to Jacob: every soul — fourteen.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אֵ֚לֶּה בְּנֵ֣י רָחֵ֔ל אֲשֶׁ֥ר יֻלַּ֖ד לְיַעֲקֹ֑ב</span> · <i>ele bene rachel asher yulad le-yaaqov</i> · these are the sons of Rachel born to Jacob (etnachta on le-yaaqov) [VERIFIED: SNAPSHOT Gen.46.22 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כָּל נֶ֖פֶשׁ אַרְבָּעָ֥ה עָשָֽׂר</span> · <i>kal-nefesh arbaa asar</i> · every soul: fourteen (verse-final asar) [VERIFIED: SNAPSHOT Gen.46.22 idx6-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(kol_nefesh_arbaa_asar, t0)</span><br><span class="gloss">= HOLDS(all-nefesh-arbaa-asar, t0)</span><br>FOURTEEN. kol nefesh ARBAA ASAR — two sons, twelve grandsons: the smallest register&#x27;s largest yield-per-name; the ledger&#x27;s arithmetic favors the beloved (letter-note).
+</td><td><span class="he">נֶפֶשׁ אַרְבָּעָה עָשָׂר</span> · <i>nefesh arbaa asar</i><br><span class="gloss">= nefesh arbaa asar</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The third subtotal.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_23 · Gen.46.23 · <span class='expr'>DANS_SON_PLURAL_OF_ONE</span></h3>
+<p><span class="he">וּבְנֵי־דָן חֻשִׁים</span> · <i>u-vene-dan chushim</i> · And the sons of Dan: Hushim.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבְנֵי דָ֖ן</span> · <i>u-vene-dan</i> · and the sons of Dan (NO etnachta in verse: split at tifcha on dan) [VERIFIED: SNAPSHOT Gen.46.23 idx1 tifcha; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">חֻשִֽׁים</span> · <i>chushim</i> · Hushim (verse-final chushim) [VERIFIED: SNAPSHOT Gen.46.23 idx2-2]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(u_vene_dan_chushim, t0)</span><br><span class="gloss">= HOLDS(and-vene-dan-chushim, t0)</span><br>THE PLURAL OF ONE [G69-05]. u-VENE dan CHUSHIM — &#x27;the SONS of Dan: Hushim&#x27; — one name under a plural header: one of the Masorah&#x27;s four presumed-singular (sevirin) cases — readers presume &#x27;the son&#x27;; the letter writes the plural and the Masorah locks it (the Talmud&#x27;s reed-thicket homily on the name, named by the Kitzur: one root, many stems) [VERIFIED: manifest G69-05]; u-vene joined by the maqqef with no stroke of its own (checked). The shortest verse in the ledger holds its densest grammar.
+</td><td><span class="he">וּבְנֵי־דָן חֻשִׁים</span> · <i>u-vene-dan chushim</i><br><span class="gloss">= and-vene-dan chushim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The plural of one.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_24 · Gen.46.24 · <span class='expr'>NAPHTALIS_SONS</span></h3>
+<p><span class="he">וּבְנֵי נַפְתָּלִי יַחְצְאֵל וְגוּנִי וְיֵצֶר וְשִׁלֵּם</span> · <i>u-vene naftali yachtzel ve-guni ve-yetzer ve-shilem</i> · And the sons of Naphtali: Jahzeel, and Guni, and Jezer, and Shillem.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבְנֵ֖י נַפְתָּלִ֑י</span> · <i>u-vene naftali</i> · and the sons of Naphtali (etnachta on naftali) [VERIFIED: SNAPSHOT Gen.46.24 idx1 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">יַחְצְאֵ֥ל וְגוּנִ֖י וְיֵ֥צֶר וְשִׁלֵּֽם</span> · <i>yachtzel ve-guni ve-yetzer ve-shilem</i> · Jahzeel, Guni, Jezer, and Shillem (verse-final ve-shilem) [VERIFIED: SNAPSHOT Gen.46.24 idx2-5]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(bene_naftali_arbaa, t0)</span><br><span class="gloss">= HOLDS(bene-naftali-arbaa, t0)</span><br>NAPHTALI&#x27;S FOUR. ve-SHILEM — the name whose skeleton collided with the lean-shalom file (gen_55&#x27;s crown): the ledger seats the collision&#x27;s other member (letter-note).
+</td><td><span class="he">וּבְנֵי נַפְתָּלִי</span> · <i>u-vene naftali</i><br><span class="gloss">= and-vene naftali</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Bilhah&#x27;s register; the Shillem collision.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_25 · Gen.46.25 · <span class='expr'>BILHAHS_SEVEN</span></h3>
+<p><span class="he">אֵלֶּה בְּנֵי בִלְהָה אֲשֶׁר־נָתַן לָבָן לְרָחֵל בִּתּוֹ וַתֵּלֶד אֶת־אֵלֶּה לְיַעֲקֹב כָּל־נֶפֶשׁ שִׁבְעָה</span> · <i>ele bene vilha asher-natan lavan le-rachel bit-o va-teled et-ele le-yaaqov kal-nefesh shiva</i> · These are the sons of Bilhah, whom Laban gave to Rachel his daughter; and she bore these to Jacob: every soul — seven.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אֵ֚לֶּה בְּנֵ֣י בִלְהָ֔ה אֲשֶׁר נָתַ֥ן לָבָ֖ן לְרָחֵ֣ל בִּתּ֑וֹ</span> · <i>ele bene vilha asher-natan lavan le-rachel bit-o</i> · these are the sons of Bilhah, whom Laban gave to Rachel (etnachta on bit-o) [VERIFIED: SNAPSHOT Gen.46.25 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתֵּ֧לֶד אֶת אֵ֛לֶּה לְיַעֲקֹ֖ב כָּל נֶ֥פֶשׁ שִׁבְעָֽה</span> · <i>va-teled et-ele le-yaaqov kal-nefesh shiva</i> · and she bore these to Jacob: every soul — seven (verse-final shiva) [VERIFIED: SNAPSHOT Gen.46.25 idx8-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(kol_nefesh_shiva, t0)</span><br><span class="gloss">= HOLDS(all-nefesh-shiva, t0)</span><br>SEVEN. kol nefesh SHIVA — the fourth register closes: 33 + 16 + 14 + 7 — the mothers&#x27; arithmetic stands ready for the two totals.
+</td><td><span class="he">כָּל־נֶפֶשׁ שִׁבְעָה</span> · <i>kal-nefesh shiva</i><br><span class="gloss">= kal-nefesh shiva</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The fourth subtotal.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_26 · Gen.46.26 · <span class='expr'>SIXTY_SIX_CAME</span></h3>
+<p><span class="he">כָּל־הַנֶּפֶשׁ הַבָּאָה לְיַעֲקֹב מִצְרַיְמָה יֹצְאֵי יְרֵכוֹ מִלְּבַד נְשֵׁי בְנֵי־יַעֲקֹב כָּל־נֶפֶשׁ שִׁשִּׁים וָשֵׁשׁ</span> · <i>kal-ha-nefesh ha-baa le-yaaqov mitzrayma-ה yotze yerekh-o mi-le-vad neshe vene-yaaqov kal-nefesh shishim va-shesh</i> · Every soul coming with Jacob to Egypt, who came out of his loins, besides the wives of Jacob&#x27;s sons: every soul — sixty-six.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">כָּל הַ֠נֶּפֶשׁ הַבָּאָ֨ה לְיַעֲקֹ֤ב מִצְרַ֨יְמָה֙ יֹצְאֵ֣י יְרֵכ֔וֹ מִלְּבַ֖ד נְשֵׁ֣י בְנֵי יַעֲקֹ֑ב</span> · <i>kal-ha-nefesh ha-baa le-yaaqov mitzrayma-ה yotze yerekh-o mi-le-vad neshe vene-yaaqov</i> · every soul coming with Jacob to Egypt, out of his loins (etnachta on yaaqov) [VERIFIED: SNAPSHOT Gen.46.26 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כָּל נֶ֖פֶשׁ שִׁשִּׁ֥ים וָשֵֽׁשׁ</span> · <i>kal-nefesh shishim va-shesh</i> · besides the wives of Jacob&#x27;s sons: sixty-six (verse-final va-shesh) [VERIFIED: SNAPSHOT Gen.46.26 idx11-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(kol_nefesh_shishim_va_shesh, t0)</span><br><span class="gloss">= HOLDS(all-nefesh-shishim-and-shesh, t0)</span><br>SIXTY-SIX [G69-06]. kol ha-nefesh HA-BAA — the coming-word END- STRESSED (one of the Masorah&#x27;s three such): the coming still in motion — the caravan is on the road as the verse counts it; its twin two lines down will wear the OPPOSITE stress [VERIFIED: manifest G69-06]. shishim va-shesh — the sixty-six of the loins, wives excluded by the letter&#x27;s own clause.
+</td><td><span class="he">כָּל־הַנֶּפֶשׁ הַבָּאָה</span> · <i>kal-ha-nefesh ha-baa</i><br><span class="gloss">= kal-the-nefesh the-baa</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The end-stressed coming.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_27 · Gen.46.27 · <span class='expr'>SEVENTY_THE_HOUSE_COME</span></h3>
+<p><span class="he">וּבְנֵי יוֹסֵף אֲשֶׁר־יֻלַּד־לוֹ בְמִצְרַיִם נֶפֶשׁ שְׁנָיִם כָּל־הַנֶּפֶשׁ לְבֵית־יַעֲקֹב הַבָּאָה מִצְרַיְמָה שִׁבְעִים</span> · <i>u-vene yosef asher-yulad-l-o ve-mitzrayim nefesh shenayim kal-ha-nefesh le-vet-yaaqov ha-baa mitzrayma-ה shivim</i> · And the sons of Joseph who were born to him in Egypt: two souls. Every soul of the house of Jacob coming to Egypt — seventy.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבְנֵ֥י יוֹסֵ֛ף אֲשֶׁר יֻלַּד ל֥וֹ בְמִצְרַ֖יִם נֶ֣פֶשׁ שְׁנָ֑יִם</span> · <i>u-vene yosef asher-yulad-l-o ve-mitzrayim nefesh shenayim</i> · the sons of Joseph born to him in Egypt: two souls (etnachta on shenayim) [VERIFIED: SNAPSHOT Gen.46.27 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כָּל הַנֶּ֧פֶשׁ לְבֵֽית יַעֲקֹ֛ב הַבָּ֥אָה מִצְרַ֖יְמָה שִׁבְעִֽים</span> · <i>kal-ha-nefesh le-vet-yaaqov ha-baa mitzrayma-ה shivim</i> · every soul of the house of Jacob come to Egypt: seventy (verse-final shivim) [VERIFIED: SNAPSHOT Gen.46.27 idx8-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(kol_ha_nefesh_shivim, t0)</span><br><span class="gloss">= HOLDS(all-the-nefesh-shivim, t0)</span><br>SEVENTY [G69-06 CLOSED]. kol ha-nefesh... HA-BAA — the same word, FORE-STRESSED (one of the Masorah&#x27;s three such): the coming completed — the house counted as arrived; MS&#x27;s own mnemonic seals the adjacent pair: &#x27;the upper one above, the lower one below&#x27; [VERIFIED under G69-06: both strokes checked in-stream]. SHIVIM — the seventy that the nation&#x27;s memory will carry (Exod 1:5, Deut 10:22, armed): the ledger closes on the number the Torah retells twice.
+</td><td><span class="he">כָּל־הַנֶּפֶשׁ לְבֵית־יַעֲקֹב הַבָּאָה מִצְרַיְמָה שִׁבְעִים</span> · <i>kal-ha-nefesh le-vet-yaaqov ha-baa mitzrayma-ה shivim</i><br><span class="gloss">= kal-the-nefesh to-vet-yaaqov the-baa mitzrayma-ה shivim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The fore-stressed coming; the seventy sealed.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_28 · Gen.46.28 · <span class='expr'>JUDAH_SENT_AHEAD</span></h3>
+<p><span class="he">וְאֶת־יְהוּדָה שָׁלַח לְפָנָיו אֶל־יוֹסֵף לְהוֹרֹת לְפָנָיו גֹּשְׁנָה וַיָּבֹאוּ אַרְצָה גֹּשֶׁן</span> · <i>ve-et-yehuda shalach le-fanay-v el-yosef le-horot le-fanay-v goshna-ה va-yavou artza-ה goshen</i> · And Judah he sent before him to Joseph, to point the way before him to Goshen; and they came to the land of Goshen.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאֶת יְהוּדָ֞ה שָׁלַ֤ח לְפָנָיו֙ אֶל יוֹסֵ֔ף לְהוֹרֹ֥ת לְפָנָ֖יו גֹּ֑שְׁנָה</span> · <i>ve-et-yehuda shalach le-fanay-v el-yosef le-horot le-fanay-v goshna-ה</i> · Judah he sent before him to Joseph (etnachta on goshna-ה) [VERIFIED: SNAPSHOT Gen.46.28 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיָּבֹ֖אוּ אַ֥רְצָה גֹּֽשֶׁן</span> · <i>va-yavou artza-ה goshen</i> · to point the way before him to Goshen (verse-final goshen) [VERIFIED: SNAPSHOT Gen.46.28 idx9-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_et_yehuda_shalach_lefanav, t0)</span><br><span class="gloss">= HOLDS(and-yehuda-shalach-lefanav, t0)</span><br>JUDAH AHEAD [G69-07]. ve-et YEHUDA shalach lefanav... LE-HOROT — the point-the-way word written LEAN, exactly TWICE so in the Torah: Judah&#x27;s errand and the law&#x27;s own &#x27;to TEACH&#x27; (Lev 14:57, the leprosy- code&#x27;s close): the readings split the errand (to clear a path / to found a house of teaching, named) and the letter&#x27;s one twin votes with the teachers [VERIFIED: manifest G69-07]. GOSHNA — the district takes the directional he as the family takes the district.
+</td><td><span class="he">וְאֶת־יְהוּדָה שָׁלַח לְפָנָיו</span> · <i>ve-et-yehuda shalach le-fanay-v</i><br><span class="gloss">= and-yehuda shalach to-fanay-v</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The pointer-word; Judah leads.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_29 · Gen.46.29 · <span class='expr'>THE_HARD_BINDING_AND_THE_LONG_WEEPING</span></h3>
+<p><span class="he">וַיֶּאְסֹר יוֹסֵף מֶרְכַּבְתּוֹ וַיַּעַל לִקְרַאת־יִשְׂרָאֵל אָבִיו גֹּשְׁנָה וַיֵּרָא אֵלָיו וַיִּפֹּל עַל־צַוָּארָיו וַיֵּבְךְּ עַל־צַוָּארָיו עוֹד</span> · <i>va-yesor yosef merkavt-o va-yaal li-qerat-yisrael avi-v goshna-ה va-yera elay-v va-yipol al-tzavaray-v va-yevk al-tzavaray-v od</i> · And Joseph bound his chariot, and went up to meet Israel his father, to Goshen; and he appeared to him, and fell on his neck, and wept on his neck a long while.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֶּאְסֹ֤ר יוֹסֵף֙ מֶרְכַּבְתּ֔וֹ וַיַּ֛עַל לִקְרַֽאת יִשְׂרָאֵ֥ל אָבִ֖יו גֹּ֑שְׁנָה</span> · <i>va-yesor yosef merkavt-o va-yaal li-qerat-yisrael avi-v goshna-ה</i> · Joseph bound his chariot and went up to meet Israel his father (etnachta on goshna-ה) [VERIFIED: SNAPSHOT Gen.46.29 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֵּרָ֣א אֵלָ֗יו וַיִּפֹּל֙ עַל צַוָּארָ֔יו וַיֵּ֥בְךְּ עַל צַוָּארָ֖יו עֽוֹד</span> · <i>va-yera elay-v va-yipol al-tzavaray-v va-yevk al-tzavaray-v od</i> · he appeared to him, and fell on his neck, and wept long (verse-final od) [VERIFIED: SNAPSHOT Gen.46.29 idx8-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">bakha(e2); Agent(e2, yosef)</span><br>THE HARD BINDING [G65-05 CLOSED; G68-02 CLOSED]. va-YESOR yosef merkavto — the bind-verb with the alef in BARE SHEVA: the Masorah&#x27;s hard binding, exactly as armed at Simeon&#x27;s soft one (42:24 chataf- segol against this; Pharaoh&#x27;s chase-binding, Exod 14:6, still ahead) — the file&#x27;s second station lands in-stream [VERIFIED: manifest G69-08]. va-yipol al TZAVARAV... va-yevk al TZAVARAV OD — the neck- word TWICE in one verse (G68-02&#x27;s four-token file closes: the deceiving neck, Benjamin&#x27;s, and this reunion pair); the weep-series&#x27; fifth station, the only one measured (OD — &#x27;a long while&#x27;): the son who bound his own chariot unbinds twenty-two years on his father&#x27;s neck.
+</td><td><span class="he">וַיֶּאְסֹר יוֹסֵף מֶרְכַּבְתּוֹ</span> · <i>va-yesor yosef merkavt-o</i><br><span class="gloss">= and-yesor yosef merkavt-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">G65-05&#x27;s hard binding lands; the neck-pair; weeping station five.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_30 · Gen.46.30 · <span class='expr'>LET_ME_DIE_THIS_TIME</span></h3>
+<p><span class="he">וַיֹּאמֶר יִשְׂרָאֵל אֶל־יוֹסֵף אָמוּתָה הַפָּעַם אַחֲרֵי רְאוֹתִי אֶת־פָּנֶיךָ כִּי עוֹדְךָ חָי</span> · <i>va-yomer yisrael el-yosef amuta ha-paam achare reoti-y et-pane-kha ki od-kha chay</i> · And Israel said to Joseph: Let me die this time, after I have seen your face — that you are yet alive.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֧אמֶר יִשְׂרָאֵ֛ל אֶל יוֹסֵ֖ף אָמ֣וּתָה הַפָּ֑עַם</span> · <i>va-yomer yisrael el-yosef amuta ha-paam</i> · and Israel said to Joseph: let me die this time (etnachta on ha-paam) [VERIFIED: SNAPSHOT Gen.46.30 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אַחֲרֵי֙ רְאוֹתִ֣י אֶת פָּנֶ֔יךָ כִּ֥י עוֹדְךָ֖ חָֽי</span> · <i>achare reoti-y et-pane-kha ki od-kha chay</i> · after I have seen your face, that you are yet alive (verse-final chay) [VERIFIED: SNAPSHOT Gen.46.30 idx6-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(amuta_ha_paam_achare_reoti_et_panekha, t0)</span><br><span class="gloss">= HOLDS(amuta-the-paam-achare-reoti-your-face, t0)</span><br>THE RESOLVE MET. AMUTA ha-paam — &#x27;let me die THIS TIME&#x27;: 45:28&#x27;s before-I-die resolve (elkha ve-erenu be-terem amut) is paid in full sight; ki ODKHA CHAI — the still-alive clause (ha-od avi chai, 45:3; odenu chai, 43:28) lands in the second person: the question of the whole cycle answered to the face it asked about.
+</td><td><span class="he">אָמוּתָה הַפָּעַם אַחֲרֵי רְאוֹתִי אֶת־</span> · <i>amuta ha-paam achare reoti-y et-</i><br><span class="gloss">= amuta the-paam achare reoti-y et-</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The resolve met; the still-alive clause comes home.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_31 · Gen.46.31 · <span class='expr'>I_WILL_TELL_PHARAOH</span></h3>
+<p><span class="he">וַיֹּאמֶר יוֹסֵף אֶל־אֶחָיו וְאֶל־בֵּית אָבִיו אֶעֱלֶה וְאַגִּידָה לְפַרְעֹה וְאֹמְרָה אֵלָיו אַחַי וּבֵית־אָבִי אֲשֶׁר בְּאֶרֶץ־כְּנַעַן בָּאוּ אֵלָי</span> · <i>va-yomer yosef el-echay-v ve-el-bet avi-v eele ve-agida le-faro ve-omra elay-v acha-y u-vet-avi-y asher be-eretz-kenaan bau el-y</i> · And Joseph said to his brothers and to his father&#x27;s house: I will go up and tell Pharaoh, and say to him: My brothers and my father&#x27;s house, who were in the land of Canaan, have come to me.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר יוֹסֵ֤ף אֶל אֶחָיו֙ וְאֶל בֵּ֣ית אָבִ֔יו אֶעֱלֶ֖ה וְאַגִּ֣ידָה לְפַרְעֹ֑ה</span> · <i>va-yomer yosef el-echay-v ve-el-bet avi-v eele ve-agida le-faro</i> · I will go up and tell Pharaoh (etnachta on le-faro) [VERIFIED: SNAPSHOT Gen.46.31 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאֹֽמְרָ֣ה אֵלָ֔יו אַחַ֧י וּבֵית אָבִ֛י אֲשֶׁ֥ר בְּאֶֽרֶץ כְּנַ֖עַן בָּ֥אוּ אֵלָֽי</span> · <i>ve-omra elay-v acha-y u-vet-avi-y asher be-eretz-kenaan bau el-y</i> · my brothers and my father&#x27;s house have come to me (verse-final el-y) [VERIFIED: SNAPSHOT Gen.46.31 idx10-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(eele_ve_agida_le_faro, t0)</span><br><span class="gloss">= HOLDS(eele-and-agida-to-faro, t0)</span><br>THE BRIEFING. EELE ve-AGIDA le-faro — the governor scripts the audience before it happens (as he scripted the trial): the machine notes the pattern — Joseph&#x27;s power is stage-management; the tell- verb full per the G65-06 law (letter-note).
+</td><td><span class="he">וְאַגִּידָה לְפַרְעֹה וְאֹמְרָה אֵלָיו</span> · <i>ve-agida le-faro ve-omra elay-v</i><br><span class="gloss">= and-agida to-faro and-omra elay-v</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The court-briefing opens.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_32 · Gen.46.32 · <span class='expr'>SHEPHERDS_WITH_FLOCKS</span></h3>
+<p><span class="he">וְהָאֲנָשִׁים רֹעֵי צֹאן כִּי־אַנְשֵׁי מִקְנֶה הָיוּ וְצֹאנָם וּבְקָרָם וְכָל־אֲשֶׁר לָהֶם הֵבִיאוּ</span> · <i>ve-ha-anashim roe tzon ki-anshe miqne hayu ve-tzona-m u-veqara-m ve-khal-asher la-hem heviu</i> · And the men are shepherds of flocks — for they have been men of livestock; and their flocks and their herds and all that they have, they have brought.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהָאֲנָשִׁים֙ רֹ֣עֵי צֹ֔אן כִּֽי אַנְשֵׁ֥י מִקְנֶ֖ה הָי֑וּ</span> · <i>ve-ha-anashim roe tzon ki-anshe miqne hayu</i> · the men are shepherds of flocks, men of livestock (etnachta on hayu) [VERIFIED: SNAPSHOT Gen.46.32 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְצֹאנָ֧ם וּבְקָרָ֛ם וְכָל אֲשֶׁ֥ר לָהֶ֖ם הֵבִֽיאוּ</span> · <i>ve-tzona-m u-veqara-m ve-khal-asher la-hem heviu</i> · their flocks and herds and all they have, they have brought (verse-final heviu) [VERIFIED: SNAPSHOT Gen.46.32 idx7-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_ha_anashim_roe_tzon, t0)</span><br><span class="gloss">= HOLDS(and-the-anashim-roe-tzon, t0)</span><br>THE OCCUPATION. roe TZON... anshe MIQNE — the shepherd-word said plainly in the family briefing (the abomination-clause waits two verses): the machine files the two-audience strategy — truth to the house, framing for the throne.
+</td><td><span class="he">וְהָאֲנָשִׁים רֹעֵי צֹאן כִּי־</span> · <i>ve-ha-anashim roe tzon ki-</i><br><span class="gloss">= and-the-anashim roe tzon when</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The occupation stated plainly to the brothers.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_33 · Gen.46.33 · <span class='expr'>WHEN_PHARAOH_CALLS</span></h3>
+<p><span class="he">וְהָיָה כִּי־יִקְרָא לָכֶם פַּרְעֹה וְאָמַר מַה־מַּעֲשֵׂיכֶם</span> · <i>ve-haya ki-yiqra la-khem paro ve-amar ma-maase-khem</i> · And it shall be, when Pharaoh calls you and says: What is your work? —</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהָיָ֕ה כִּֽי יִקְרָ֥א לָכֶ֖ם פַּרְעֹ֑ה</span> · <i>ve-haya ki-yiqra la-khem paro</i> · and it shall be, when Pharaoh calls you (etnachta on paro) [VERIFIED: SNAPSHOT Gen.46.33 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאָמַ֖ר מַה מַּעֲשֵׂיכֶֽם</span> · <i>ve-amar ma-maase-khem</i> · and says: what is your work? (verse-final maase-khem) [VERIFIED: SNAPSHOT Gen.46.33 idx5-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ki_yiqra_lakhem_paro, t0)</span><br><span class="gloss">= HOLDS(when-yiqra-lakhem-paro, t0)</span><br>THE ANTICIPATION. ki YIQRA lakhem paro — the governor predicts the king&#x27;s question verbatim (47:3 will quote it back, armed): the machine notes the script&#x27;s third act written before its performance.
+</td><td><span class="he">וְהָיָה כִּי־יִקְרָא לָכֶם פַּרְעֹה</span> · <i>ve-haya ki-yiqra la-khem paro</i><br><span class="gloss">= and-haya when-yiqra to-khem paro</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The anticipated interrogation.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_46_34 · Gen.46.34 · <span class='expr'>SAY_MEN_OF_LIVESTOCK</span></h3>
+<p><span class="he">וַאֲמַרְתֶּם אַנְשֵׁי מִקְנֶה הָיוּ עֲבָדֶיךָ מִנְּעוּרֵינוּ וְעַד־עַתָּה גַּם־אֲנַחְנוּ גַּם־אֲבֹתֵינוּ בַּעֲבוּר תֵּשְׁבוּ בְּאֶרֶץ גֹּשֶׁן כִּי־תוֹעֲבַת מִצְרַיִם כָּל־רֹעֵה צֹאן</span> · <i>va-amartem anshe miqne hayu avade-kha mi-neure-nu ve-ad-ata gam-anachnu gam-avote-nu ba-avur teshvu be-eretz goshen ki-toavat mitzrayim kal-roe tzon</i> · then you shall say: Your servants have been men of livestock from our youth even until now, both we and our fathers — that you may dwell in the land of Goshen; for every shepherd of flocks is an abomination to Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַאֲמַרְתֶּ֗ם אַנְשֵׁ֨י מִקְנֶ֜ה הָי֤וּ עֲבָדֶ֨יךָ֙ מִנְּעוּרֵ֣ינוּ וְעַד עַ֔תָּה גַּם אֲנַ֖חְנוּ גַּם אֲבֹתֵ֑ינוּ</span> · <i>va-amartem anshe miqne hayu avade-kha mi-neure-nu ve-ad-ata gam-anachnu gam-avote-nu</i> · say: your servants have been men of livestock from our youth (etnachta on avote-nu) [VERIFIED: SNAPSHOT Gen.46.34 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">בַּעֲב֗וּר תֵּשְׁבוּ֙ בְּאֶ֣רֶץ גֹּ֔שֶׁן כִּֽי תוֹעֲבַ֥ת מִצְרַ֖יִם כָּל רֹ֥עֵה צֹֽאן</span> · <i>ba-avur teshvu be-eretz goshen ki-toavat mitzrayim kal-roe tzon</i> · that you may dwell in Goshen — for every shepherd is an abomination to Egypt (verse-final tzon) [VERIFIED: SNAPSHOT Gen.46.34 idx12-21]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yosef, LET(va_amartem_anshe_miqne))</span><br><span class="gloss">= DECLARE(yosef, LET(and-amartem-anshe-miqne))</span><br>THE SCRIPTED ANSWER [G69-12]. VA-AMARTEM anshe MIQNE hayu avadekha — the say-demand pushed on the whole house: the answer scripted two scenes early, OPEN at the span&#x27;s end (47:3&#x27;s performance is the settlement in waiting, ARMED for the next run); baavur TESHVU be- eretz GOSHEN — the goal-clause names the stakes; ki TOAVAT mitzrayim kol roe tzon — the abomination-fact (the meal&#x27;s partition, 43:32, now the settlement&#x27;s lever): Joseph turns Egypt&#x27;s contempt into Goshen&#x27;s fence. gam avotenu with the gimel dageshed (checked [G69-12]).
+</td><td><span class="he">וַאֲמַרְתֶּם אַנְשֵׁי מִקְנֶה הָיוּ</span> · <i>va-amartem anshe miqne hayu</i><br><span class="gloss">= and-amartem anshe miqne hayu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The say-demand: the span&#x27;s forward hook.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Gn_46_1 — to Beersheba with sacrifices</td><td>And Israel journeyed, and all that was his, and came to Beersheba; and he offered sacrifices to the God of his father Isaac.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיִּסַּ֤ע יִשְׂרָאֵל֙ וְכָל אֲשֶׁר</span> · <i>va-yisa yisrael ve-khal-asher-</i><br><span class="gloss">= and-yisa yisrael and-khal-which</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Gn_46_2 — Jacob, Jacob — here I am</td><td>And God said to Israel in the visions of the night, and He said: Jacob, Jacob! And he said: Here I am.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיֹּ֨אמֶר אֱלֹהִ֤ים לְיִשְׂרָאֵל֙ בְּמַרְאֹ֣ת</span> · <i>va-yomer Elohim le-yisrael be-marot</i><br><span class="gloss">= and-yomer God to-yisrael in-marot</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Gn_46_3 — fear not to go down</td><td>And He said: I am the God, the God of your father; fear not to go down to Egypt, for I will make you a great nation there.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֕אמֶר אָנֹכִ֥י הָאֵ֖ל אֱלֹהֵ֣י</span> · <i>va-yomer anokhi ha-el elohe</i><br><span class="gloss">= and-yomer anokhi the-to elohe</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Gn_46_4 — I will go down with you</td><td>I will go down with you to Egypt, and I will also surely bring you up; and Joseph shall set his hand upon your eyes.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">אָנֹכִ֗י אֵרֵ֤ד עִמְּךָ֙ מִצְרַ֔יְמָה</span> · <i>anokhi ered im-kha mitzrayma-ה</i><br><span class="gloss">= anokhi ered if-kha mitzrayma-ה</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Gn_46_5 — the wagons carry</td><td>And Jacob arose from Beersheba; and the sons of Israel carried Jacob their father, and their little ones, and their wives, in the wagons which Pharaoh had sent to carry him.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיָּ֥קָם יַעֲקֹ֖ב מִבְּאֵ֣ר שָׁ֑בַע</span> · <i>va-yaqam yaaqov mi-beer shava</i><br><span class="gloss">= and-yaqam yaaqov from-beer shava</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Gn_46_6 — they came to Egypt</td><td>And they took their livestock and their goods which they had gotten in the land of Canaan, and came to Egypt — Jacob, and all his seed with him.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּקְח֣וּ אֶת מִקְנֵיהֶ֗ם וְאֶת</span> · <i>va-yiqchu et-miqne-hem ve-et-</i><br><span class="gloss">= and-yiqchu miqne-hem and</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Gn_46_7 — sons and daughters, all his seed</td><td>His sons, and his sons&#x27; sons with him, his daughters, and his sons&#x27; daughters, and all his seed he brought with him to Egypt.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">בָּנָ֞יו וּבְנֵ֤י בָנָיו֙ אִתּ֔וֹ</span> · <i>banay-v u-vene vanay-v et-o</i><br><span class="gloss">= banay-v and-vene vanay-v o</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Gn_46_8 — the ledger opens</td><td>And these are the names of the sons of Israel who came to Egypt — Jacob and his sons: Jacob&#x27;s firstborn, Reuben.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְאֵ֨לֶּה שְׁמ֧וֹת בְּנֵֽי יִשְׂרָאֵ֛ל</span> · <i>ve-ele shemot bene-yisrael</i><br><span class="gloss">= and-ele names bene-yisrael</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Gn_46_9 — Reuben&#x27;s sons</td><td>And the sons of Reuben: Hanoch, and Pallu, and Hezron, and Carmi.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">וּבְנֵ֖י רְאוּבֵ֑ן חֲנ֥וֹךְ וּפַלּ֖וּא</span> · <i>u-vene reuven chanokh u-falu</i><br><span class="gloss">= and-vene reuven chanokh and-falu</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Gn_46_10 — Simeon&#x27;s sons</td><td>And the sons of Simeon: Jemuel, and Jamin, and Ohad, and Jachin, and Zohar, and Shaul the son of the Canaanite woman.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">וּבְנֵ֣י שִׁמְע֗וֹן יְמוּאֵ֧ל וְיָמִ֛ין</span> · <i>u-vene shimon yemuel ve-yamin</i><br><span class="gloss">= and-vene shimon yemuel and-yamin</span></td></tr>
+<tr><td><b>S11</b></td><td>after STEP_Gn_46_11 — Levi&#x27;s sons</td><td>And the sons of Levi: Gershon, Kohath, and Merari.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">וּבְנֵ֖י לֵוִ֑י גֵּרְשׁ֕וֹן קְהָ֖ת</span> · <i>u-vene levi gershon qehat</i><br><span class="gloss">= and-vene levi gershon qehat</span></td></tr>
+<tr><td><b>S12</b></td><td>after STEP_Gn_46_12 — Judah&#x27;s sons, two dead</td><td>And the sons of Judah: Er, and Onan, and Shelah, and Perez, and Zerah — and Er and Onan died in the land of Canaan; and the sons of Perez were Hezron and Hamul.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">וּבְנֵ֣י יְהוּדָ֗ה עֵ֧ר וְאוֹנָ֛ן</span> · <i>u-vene yehuda er ve-onan</i><br><span class="gloss">= and-vene yehuda er and-onan</span></td></tr>
+<tr><td><b>S13</b></td><td>after STEP_Gn_46_13 — Issachar&#x27;s sons</td><td>And the sons of Issachar: Tola, and Puvah, and Iob, and Shimron.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">וּבְנֵ֖י יִשָׂשכָ֑ר תּוֹלָ֥ע וּפֻוָּ֖ה</span> · <i>u-vene yisashkhar tola u-fuva</i><br><span class="gloss">= and-vene yisashkhar tola and-fuva</span></td></tr>
+<tr><td><b>S14</b></td><td>after STEP_Gn_46_14 — Zebulun&#x27;s sons</td><td>And the sons of Zebulun: Sered, and Elon, and Jahleel.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">וּבְנֵ֖י זְבוּלֻ֑ן סֶ֥רֶד וְאֵל֖וֹן</span> · <i>u-vene zevulun sered ve-elon</i><br><span class="gloss">= and-vene zevulun sered and-elon</span></td></tr>
+<tr><td><b>S15</b></td><td>after STEP_Gn_46_15 — Leah&#x27;s thirty-three</td><td>These are the sons of Leah, whom she bore to Jacob in Paddan-aram, and Dinah his daughter: every soul of his sons and his daughters — thirty-three.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">אֵ֣לֶּה בְּנֵ֣י לֵאָ֗ה אֲשֶׁ֨ר</span> · <i>ele bene lea asher</i><br><span class="gloss">= ele bene lea which</span></td></tr>
+<tr><td><b>S16</b></td><td>after STEP_Gn_46_16 — Gad&#x27;s sons</td><td>And the sons of Gad: Ziphion, and Haggi, Shuni, and Ezbon, Eri, and Arodi, and Areli.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">וּבְנֵ֣י גָ֔ד צִפְי֥וֹן וְחַגִּ֖י</span> · <i>u-vene gad tzifyon ve-chagi</i><br><span class="gloss">= and-vene gad tzifyon and-chagi</span></td></tr>
+<tr><td><b>S17</b></td><td>after STEP_Gn_46_17 — Asher&#x27;s sons and Serah</td><td>And the sons of Asher: Imnah, and Ishvah, and Ishvi, and Beriah, and Serah their sister; and the sons of Beriah: Heber and Malchiel.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">וּבְנֵ֣י אָשֵׁ֗ר יִמְנָ֧ה וְיִשְׁוָ֛ה</span> · <i>u-vene asher yimna ve-yishva</i><br><span class="gloss">= and-vene which yimna and-yishva</span></td></tr>
+<tr><td><b>S18</b></td><td>after STEP_Gn_46_18 — Zilpah&#x27;s sixteen</td><td>These are the sons of Zilpah, whom Laban gave to Leah his daughter; and she bore these to Jacob — sixteen souls.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">אֵ֚לֶּה בְּנֵ֣י זִלְפָּ֔ה אֲשֶׁר</span> · <i>ele bene zilpa asher-</i><br><span class="gloss">= ele bene zilpa which</span></td></tr>
+<tr><td><b>S19</b></td><td>after STEP_Gn_46_19 — Rachel&#x27;s sons</td><td>The sons of Rachel, Jacob&#x27;s wife: Joseph and Benjamin.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">בְּנֵ֤י רָחֵל֙ אֵ֣שֶׁת יַֽעֲקֹ֔ב</span> · <i>bene rachel eshet yaaqov</i><br><span class="gloss">= bene rachel wife-of yaaqov</span></td></tr>
+<tr><td><b>S20</b></td><td>after STEP_Gn_46_20 — Joseph&#x27;s Egyptian sons</td><td>And to Joseph were born in the land of Egypt those whom Asenath daughter of Poti-fera priest of On bore to him: Manasseh and Ephraim.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּוָּלֵ֣ד לְיוֹסֵף֮ בְּאֶ֣רֶץ מִצְרַיִם֒</span> · <i>va-yivaled le-yosef be-eretz mitzrayim</i><br><span class="gloss">= and-yivaled to-yosef earth mitzrayim</span></td></tr>
+<tr><td><b>S21</b></td><td>after STEP_Gn_46_21 — Benjamin&#x27;s ten</td><td>And the sons of Benjamin: Bela, and Becher, and Ashbel, Gera, and Naaman, Ehi, and Rosh, Muppim, and Huppim, and Ard.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">וּבְנֵ֣י בִנְיָמִ֗ן בֶּ֤לַע וָבֶ֨כֶר֙</span> · <i>u-vene vinyamin bela va-vekher</i><br><span class="gloss">= and-vene vinyamin bela and-vekher</span></td></tr>
+<tr><td><b>S22</b></td><td>after STEP_Gn_46_22 — Rachel&#x27;s fourteen</td><td>These are the sons of Rachel who were born to Jacob: every soul — fourteen.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">אֵ֚לֶּה בְּנֵ֣י רָחֵ֔ל אֲשֶׁ֥ר</span> · <i>ele bene rachel asher</i><br><span class="gloss">= ele bene rachel which</span></td></tr>
+<tr><td><b>S23</b></td><td>after STEP_Gn_46_23 — the plural of one</td><td>And the sons of Dan: Hushim.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">וּבְנֵי דָ֖ן חֻשִֽׁים</span> · <i>u-vene-dan chushim</i><br><span class="gloss">= and-vene-dan chushim</span></td></tr>
+<tr><td><b>S24</b></td><td>after STEP_Gn_46_24 — Naphtali&#x27;s sons</td><td>And the sons of Naphtali: Jahzeel, and Guni, and Jezer, and Shillem.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">וּבְנֵ֖י נַפְתָּלִ֑י יַחְצְאֵ֥ל וְגוּנִ֖י</span> · <i>u-vene naftali yachtzel ve-guni</i><br><span class="gloss">= and-vene naftali yachtzel and-guni</span></td></tr>
+<tr><td><b>S25</b></td><td>after STEP_Gn_46_25 — Bilhah&#x27;s seven</td><td>These are the sons of Bilhah, whom Laban gave to Rachel his daughter; and she bore these to Jacob: every soul — seven.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">אֵ֚לֶּה בְּנֵ֣י בִלְהָ֔ה אֲשֶׁר</span> · <i>ele bene vilha asher-</i><br><span class="gloss">= ele bene vilha which</span></td></tr>
+<tr><td><b>S26</b></td><td>after STEP_Gn_46_26 — sixty-six came</td><td>Every soul coming with Jacob to Egypt, who came out of his loins, besides the wives of Jacob&#x27;s sons: every soul — sixty-six.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">כָּל הַ֠נֶּפֶשׁ הַבָּאָ֨ה לְיַעֲקֹ֤ב</span> · <i>kal-ha-nefesh ha-baa le-yaaqov</i><br><span class="gloss">= kal-the-nefesh the-baa to-yaaqov</span></td></tr>
+<tr><td><b>S27</b></td><td>after STEP_Gn_46_27 — seventy, the house come</td><td>And the sons of Joseph who were born to him in Egypt: two souls. Every soul of the house of Jacob coming to Egypt — seventy.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">וּבְנֵ֥י יוֹסֵ֛ף אֲשֶׁר יֻלַּד</span> · <i>u-vene yosef asher-yulad-</i><br><span class="gloss">= and-vene yosef which-yulad</span></td></tr>
+<tr><td><b>S28</b></td><td>after STEP_Gn_46_28 — Judah sent ahead</td><td>And Judah he sent before him to Joseph, to point the way before him to Goshen; and they came to the land of Goshen.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְאֶת יְהוּדָ֞ה שָׁלַ֤ח לְפָנָיו֙</span> · <i>ve-et-yehuda shalach le-fanay-v</i><br><span class="gloss">= and-yehuda shalach to-fanay-v</span></td></tr>
+<tr><td><b>S29</b></td><td>after STEP_Gn_46_29 — the hard binding and the long weeping</td><td>And Joseph bound his chariot, and went up to meet Israel his father, to Goshen; and he appeared to him, and fell on his neck, and wept on his neck a long while.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֶּאְסֹ֤ר יוֹסֵף֙ מֶרְכַּבְתּ֔וֹ וַיַּ֛עַל</span> · <i>va-yesor yosef merkavt-o va-yaal</i><br><span class="gloss">= and-yesor yosef merkavt-o and-yaal</span></td></tr>
+<tr><td><b>S30</b></td><td>after STEP_Gn_46_30 — let me die this time</td><td>And Israel said to Joseph: Let me die this time, after I have seen your face — that you are yet alive.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֧אמֶר יִשְׂרָאֵ֛ל אֶל יוֹסֵ֖ף</span> · <i>va-yomer yisrael el-yosef</i><br><span class="gloss">= and-yomer yisrael to-yosef</span></td></tr>
+<tr><td><b>S31</b></td><td>after STEP_Gn_46_31 — I will tell Pharaoh</td><td>And Joseph said to his brothers and to his father&#x27;s house: I will go up and tell Pharaoh, and say to him: My brothers and my father&#x27;s house, who were in the land of Canaan, have come to me.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֨אמֶר יוֹסֵ֤ף אֶל אֶחָיו֙</span> · <i>va-yomer yosef el-echay-v</i><br><span class="gloss">= and-yomer yosef to-echay-v</span></td></tr>
+<tr><td><b>S32</b></td><td>after STEP_Gn_46_32 — shepherds with flocks</td><td>And the men are shepherds of flocks — for they have been men of livestock; and their flocks and their herds and all that they have, they have brought.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהָאֲנָשִׁים֙ רֹ֣עֵי צֹ֔אן כִּֽי</span> · <i>ve-ha-anashim roe tzon ki-</i><br><span class="gloss">= and-the-anashim roe tzon when</span></td></tr>
+<tr><td><b>S33</b></td><td>after STEP_Gn_46_33 — when Pharaoh calls</td><td>And it shall be, when Pharaoh calls you and says: What is your work? —</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהָיָ֕ה כִּֽי יִקְרָ֥א לָכֶ֖ם</span> · <i>ve-haya ki-yiqra la-khem</i><br><span class="gloss">= and-haya when-yiqra to-khem</span></td></tr>
+<tr><td><b>S34</b></td><td>after STEP_Gn_46_34 — say: men of livestock</td><td>then you shall say: Your servants have been men of livestock from our youth even until now, both we and our fathers — that you may dwell in the land of Goshen; for every shepherd of flocks is an abomination to Egypt.</td><td>LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN; LET(va_amartem_anshe_miqne) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-tira-from-reda-mitzrayma) pushed and OPEN; LET(and-amartem-anshe-miqne) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַאֲמַרְתֶּ֗ם אַנְשֵׁ֨י מִקְנֶ֜ה הָי֤וּ</span> · <i>va-amartem anshe miqne hayu</i><br><span class="gloss">= and-amartem anshe miqne hayu</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_69_descent_seventy — The descent and the seventy (46:1-34) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — after STEP_Gn_46_1 — to Beersheba with sacrifices
+    וַיִּסַּ֤ע יִשְׂרָאֵל֙ וְכָל אֲשֶׁר (va-yisa yisrael ve-khal-asher-)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Gn_46_2 — Jacob, Jacob — here I am
+    וַיֹּ֨אמֶר אֱלֹהִ֤ים לְיִשְׂרָאֵל֙ בְּמַרְאֹ֣ת (va-yomer Elohim le-yisrael be-marot)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Gn_46_3 — fear not to go down
+    וַיֹּ֕אמֶר אָנֹכִ֥י הָאֵ֖ל אֱלֹהֵ֣י (va-yomer anokhi ha-el elohe)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Gn_46_4 — I will go down with you
+    אָנֹכִ֗י אֵרֵ֤ד עִמְּךָ֙ מִצְרַ֔יְמָה (anokhi ered im-kha mitzrayma-ה)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Gn_46_5 — the wagons carry
+    וַיָּ֥קָם יַעֲקֹ֖ב מִבְּאֵ֣ר שָׁ֑בַע (va-yaqam yaaqov mi-beer shava)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Gn_46_6 — they came to Egypt
+    וַיִּקְח֣וּ אֶת מִקְנֵיהֶ֗ם וְאֶת (va-yiqchu et-miqne-hem ve-et-)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — after STEP_Gn_46_7 — sons and daughters, all his seed
+    בָּנָ֞יו וּבְנֵ֤י בָנָיו֙ אִתּ֔וֹ (banay-v u-vene vanay-v et-o)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S8 — after STEP_Gn_46_8 — the ledger opens
+    וְאֵ֨לֶּה שְׁמ֧וֹת בְּנֵֽי יִשְׂרָאֵ֛ל (ve-ele shemot bene-yisrael)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S9 — after STEP_Gn_46_9 — Reuben&#x27;s sons
+    וּבְנֵ֖י רְאוּבֵ֑ן חֲנ֥וֹךְ וּפַלּ֖וּא (u-vene reuven chanokh u-falu)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S10 — after STEP_Gn_46_10 — Simeon&#x27;s sons
+    וּבְנֵ֣י שִׁמְע֗וֹן יְמוּאֵ֧ל וְיָמִ֛ין (u-vene shimon yemuel ve-yamin)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S11 — after STEP_Gn_46_11 — Levi&#x27;s sons
+    וּבְנֵ֖י לֵוִ֑י גֵּרְשׁ֕וֹן קְהָ֖ת (u-vene levi gershon qehat)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S12 — after STEP_Gn_46_12 — Judah&#x27;s sons, two dead
+    וּבְנֵ֣י יְהוּדָ֗ה עֵ֧ר וְאוֹנָ֛ן (u-vene yehuda er ve-onan)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S13 — after STEP_Gn_46_13 — Issachar&#x27;s sons
+    וּבְנֵ֖י יִשָׂשכָ֑ר תּוֹלָ֥ע וּפֻוָּ֖ה (u-vene yisashkhar tola u-fuva)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S14 — after STEP_Gn_46_14 — Zebulun&#x27;s sons
+    וּבְנֵ֖י זְבוּלֻ֑ן סֶ֥רֶד וְאֵל֖וֹן (u-vene zevulun sered ve-elon)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S15 — after STEP_Gn_46_15 — Leah&#x27;s thirty-three
+    אֵ֣לֶּה בְּנֵ֣י לֵאָ֗ה אֲשֶׁ֨ר (ele bene lea asher)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S16 — after STEP_Gn_46_16 — Gad&#x27;s sons
+    וּבְנֵ֣י גָ֔ד צִפְי֥וֹן וְחַגִּ֖י (u-vene gad tzifyon ve-chagi)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S17 — after STEP_Gn_46_17 — Asher&#x27;s sons and Serah
+    וּבְנֵ֣י אָשֵׁ֗ר יִמְנָ֧ה וְיִשְׁוָ֛ה (u-vene asher yimna ve-yishva)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S18 — after STEP_Gn_46_18 — Zilpah&#x27;s sixteen
+    אֵ֚לֶּה בְּנֵ֣י זִלְפָּ֔ה אֲשֶׁר (ele bene zilpa asher-)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S19 — after STEP_Gn_46_19 — Rachel&#x27;s sons
+    בְּנֵ֤י רָחֵל֙ אֵ֣שֶׁת יַֽעֲקֹ֔ב (bene rachel eshet yaaqov)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S20 — after STEP_Gn_46_20 — Joseph&#x27;s Egyptian sons
+    וַיִּוָּלֵ֣ד לְיוֹסֵף֮ בְּאֶ֣רֶץ מִצְרַיִם֒ (va-yivaled le-yosef be-eretz mitzrayim)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S21 — after STEP_Gn_46_21 — Benjamin&#x27;s ten
+    וּבְנֵ֣י בִנְיָמִ֗ן בֶּ֤לַע וָבֶ֨כֶר֙ (u-vene vinyamin bela va-vekher)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S22 — after STEP_Gn_46_22 — Rachel&#x27;s fourteen
+    אֵ֚לֶּה בְּנֵ֣י רָחֵ֔ל אֲשֶׁ֥ר (ele bene rachel asher)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S23 — after STEP_Gn_46_23 — the plural of one
+    וּבְנֵי דָ֖ן חֻשִֽׁים (u-vene-dan chushim)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S24 — after STEP_Gn_46_24 — Naphtali&#x27;s sons
+    וּבְנֵ֖י נַפְתָּלִ֑י יַחְצְאֵ֥ל וְגוּנִ֖י (u-vene naftali yachtzel ve-guni)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S25 — after STEP_Gn_46_25 — Bilhah&#x27;s seven
+    אֵ֚לֶּה בְּנֵ֣י בִלְהָ֔ה אֲשֶׁר (ele bene vilha asher-)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S26 — after STEP_Gn_46_26 — sixty-six came
+    כָּל הַ֠נֶּפֶשׁ הַבָּאָ֨ה לְיַעֲקֹ֤ב (kal-ha-nefesh ha-baa le-yaaqov)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S27 — after STEP_Gn_46_27 — seventy, the house come
+    וּבְנֵ֥י יוֹסֵ֛ף אֲשֶׁר יֻלַּד (u-vene yosef asher-yulad-)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S28 — after STEP_Gn_46_28 — Judah sent ahead
+    וְאֶת יְהוּדָ֞ה שָׁלַ֤ח לְפָנָיו֙ (ve-et-yehuda shalach le-fanay-v)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S29 — after STEP_Gn_46_29 — the hard binding and the long weeping
+    וַיֶּאְסֹ֤ר יוֹסֵף֙ מֶרְכַּבְתּ֔וֹ וַיַּ֛עַל (va-yesor yosef merkavt-o va-yaal)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S30 — after STEP_Gn_46_30 — let me die this time
+    וַיֹּ֧אמֶר יִשְׂרָאֵ֛ל אֶל יוֹסֵ֖ף (va-yomer yisrael el-yosef)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S31 — after STEP_Gn_46_31 — I will tell Pharaoh
+    וַיֹּ֨אמֶר יוֹסֵ֤ף אֶל אֶחָיו֙ (va-yomer yosef el-echay-v)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S32 — after STEP_Gn_46_32 — shepherds with flocks
+    וְהָאֲנָשִׁים֙ רֹ֣עֵי צֹ֔אן כִּֽי (ve-ha-anashim roe tzon ki-)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S33 — after STEP_Gn_46_33 — when Pharaoh calls
+    וְהָיָ֕ה כִּֽי יִקְרָ֥א לָכֶ֖ם (ve-haya ki-yiqra la-khem)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S34 — after STEP_Gn_46_34 — say: men of livestock
+    וַאֲמַרְתֶּ֗ם אַנְשֵׁ֨י מִקְנֶ֜ה הָי֤וּ (va-amartem anshe miqne hayu)
+    PASS  LET-NOT(al_tira_me_reda_mitzrayma) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;, &#x27;va_amartem_anshe_miqne&#x27;])
+    PASS  LET(va_amartem_anshe_miqne) pushed and OPEN  (queue=[&#x27;al_tira_me_reda_mitzrayma&#x27;, &#x27;va_amartem_anshe_miqne&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_69_descent_seventy.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_69_descent_seventy — 46:1-34
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_69_descent_seventy.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;The descent and the seventy (46:1-34)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_69_descent_seventy&quot;)
+
+# -------------------------- Gen.46.1 · TO_BEERSHEBA_WITH_SACRIFICES --------
+# וַיִּסַּע יִשְׂרָאֵל וְכָל־אֲשֶׁר־לוֹ וַיָּבֹא בְּאֵרָה שָּׁבַע
+# וַיִּזְבַּח זְבָחִים לֵאלֹהֵי אָבִיו יִצְחָק
+# &quot;[EN-AID] And Israel journeyed, and all that was his, and came to
+# Beersheba; and he offered sacrifices to the God of his father Isaac.&quot;
+m.step(&quot;Gen.46.1&quot;)
+# ‹שָּׁבַע וַיִּזְבַּח זְבָחִים לֵאלֹהֵי אָבִיו› (“Beer-shebah and-
+# slaughter-an-animal sacrifice to-God father-him/its”) — fact holds: and-
+# slaughter-an-animal-sacrifice-l-God-aviv
+m.fact(&quot;va_yizbach_zevachim_l_elohe_aviv&quot;)
+
+# -------------------------- Gen.46.2 · JACOB_JACOB_HERE_I_AM ---------------
+# וַיֹּאמֶר אֱלֹהִים לְיִשְׂרָאֵל בְּמַרְאֹת הַלַּיְלָה וַיֹּאמֶר יַעֲקֹב
+# יַעֲקֹב וַיֹּאמֶר הִנֵּנִי
+# &quot;[EN-AID] And God said to Israel in the visions of the night, and He said:
+# Jacob, Jacob! And he said: Here I am.&quot;
+m.step(&quot;Gen.46.2&quot;)
+# ‹וַיֹּאמֶר יַעֲקֹב יַעֲקֹב וַיֹּאמֶר הִנֵּנִי› (“and-say Jacob Jacob and-
+# say behold-me/my”) — event: qara — agent God; theme Jacob
+m.event(&quot;qara&quot;, agent=&quot;Elohim&quot;, themes=[&quot;yaaqov&quot;])
+
+# -------------------------- Gen.46.3 · FEAR_NOT_TO_GO_DOWN -----------------
+# וַיֹּאמֶר אָנֹכִי הָאֵל אֱלֹהֵי אָבִיךָ אַל־תִּירָא מֵרְדָה מִצְרַיְמָה
+# כִּי־לְגוֹי גָּדוֹל אֲשִׂימְךָ שָׁם
+# &quot;[EN-AID] And He said: I am the God, the God of your father; fear not to
+# go down to Egypt, for I will make you a great nation there.&quot;
+m.step(&quot;Gen.46.3&quot;)
+# ‹תִּירָא מֵרְדָה מִצְרַיְמָה כִּי־› (“fear from-go-down Egypt-ward that”)
+# — God speaks a demand — LET-NOT: over-fear-from-go-down-mitzrayma
+m.declare(&quot;Elohim&quot;, &quot;LET-NOT&quot;,
+          &quot;al_tira_me_reda_mitzrayma&quot;)
+
+# -------------------------- Gen.46.4 · I_WILL_GO_DOWN_WITH_YOU -------------
+# אָנֹכִי אֵרֵד עִמְּךָ מִצְרַיְמָה וְאָנֹכִי אַעַלְךָ גַם־עָלֹה וְיוֹסֵף
+# יָשִׁית יָדוֹ עַל־עֵינֶיךָ
+# &quot;[EN-AID] I will go down with you to Egypt, and I will also surely bring
+# you up; and Joseph shall set his hand upon your eyes.&quot;
+m.step(&quot;Gen.46.4&quot;)
+# ‹אָנֹכִי אֵרֵד עִמְּךָ מִצְרַיְמָה› (“go-down with-you/your Egypt-ward”) —
+# fact holds: I-go-down-imkha-and-I-aalkha
+m.fact(&quot;anokhi_ered_imkha_ve_anokhi_aalkha&quot;)
+
+# -------------------------- Gen.46.5 · THE_WAGONS_CARRY --------------------
+# וַיָּקָם יַעֲקֹב מִבְּאֵר שָׁבַע וַיִּשְׂאוּ בְנֵי־יִשְׂרָאֵל אֶת־יַעֲקֹב
+# אֲבִיהֶם וְאֶת־טַפָּם וְאֶת־נְשֵׁיהֶם בָּעֲגָלוֹת אֲשֶׁר־שָׁלַח פַּרְעֹה
+# לָשֵׂאת אֹתוֹ
+# &quot;[EN-AID] And Jacob arose from Beersheba; and the sons of Israel carried
+# Jacob their father, and their little ones, and their wives, in the wagons
+# which Pharaoh had sent to carry him.&quot;
+m.step(&quot;Gen.46.5&quot;)
+# ‹בְנֵי־יִשְׂרָאֵל אֶת־יַעֲקֹב אֲבִיהֶם› (“son Israel obj-marker Jacob
+# father-them/their”) — fact holds: and-lift/carry-obj-marker-Jacob-in-the-
+# agalot
+m.fact(&quot;va_yisu_et_yaaqov_ba_agalot&quot;)
+
+# -------------------------- Gen.46.6 · THEY_CAME_TO_EGYPT ------------------
+# וַיִּקְחוּ אֶת־מִקְנֵיהֶם וְאֶת־רְכוּשָׁם אֲשֶׁר רָכְשׁוּ בְּאֶרֶץ
+# כְּנַעַן וַיָּבֹאוּ מִצְרָיְמָה יַעֲקֹב וְכָל־זַרְעוֹ אִתּוֹ
+# &quot;[EN-AID] And they took their livestock and their goods which they had
+# gotten in the land of Canaan, and came to Egypt — Jacob, and all his seed
+# with him.&quot;
+m.step(&quot;Gen.46.6&quot;)
+# ‹מִצְרָיְמָה יַעֲקֹב וְכָל־זַרְעוֹ אִתּוֹ› (“Egypt-ward Jacob and-all
+# seed-him/its with-him/its”) — fact holds: and-come/bring-mitzrayma-Jacob-
+# and-all-zaro
+m.fact(&quot;va_yavou_mitzrayma_yaaqov_ve_khol_zaro&quot;)
+
+# -------------------------- Gen.46.7 · SONS_AND_DAUGHTERS_ALL_HIS_SEED -----
+# בָּנָיו וּבְנֵי בָנָיו אִתּוֹ בְּנֹתָיו וּבְנוֹת בָּנָיו וְכָל־זַרְעוֹ
+# הֵבִיא אִתּוֹ מִצְרָיְמָה
+# &quot;[EN-AID] His sons, and his sons&#x27; sons with him, his daughters, and his
+# sons&#x27; daughters, and all his seed he brought with him to Egypt.&quot;
+m.step(&quot;Gen.46.7&quot;)
+# ‹אִתּוֹ מִצְרָיְמָה› (“with-him/its Egypt-ward”) — fact holds: all-zaro-
+# come/bring-with-him-mitzrayma
+m.fact(&quot;kol_zaro_hevi_ito_mitzrayma&quot;)
+
+# -------------------------- Gen.46.8 · THE_LEDGER_OPENS --------------------
+# וְאֵלֶּה שְׁמוֹת בְּנֵי־יִשְׂרָאֵל הַבָּאִים מִצְרַיְמָה יַעֲקֹב וּבָנָיו
+# בְּכֹר יַעֲקֹב רְאוּבֵן
+# &quot;[EN-AID] And these are the names of the sons of Israel who came to Egypt
+# — Jacob and his sons: Jacob&#x27;s firstborn, Reuben.&quot;
+m.step(&quot;Gen.46.8&quot;)
+# ‹וְאֵלֶּה שְׁמוֹת בְּנֵי־יִשְׂרָאֵל הַבָּאִים מִצְרַיְמָה יַעֲקֹב› (“and-
+# these name son Israel the-come/bring Egypt-ward Jacob”) — section name-
+# son-Israel: son-leah, son-Zilpah, son-Rachel, son-Bilhah
+m.section(&quot;shemot_bene_yisrael&quot;, &quot;bene_leah&quot;, &quot;bene_zilpa&quot;, &quot;bene_rachel&quot;, &quot;bene_vilha&quot;)
+
+# -------------------------- Gen.46.9 · REUBENS_SONS ------------------------
+# וּבְנֵי רְאוּבֵן חֲנוֹךְ וּפַלּוּא וְחֶצְרוֹן וְכַרְמִי
+# &quot;[EN-AID] And the sons of Reuben: Hanoch, and Pallu, and Hezron, and
+# Carmi.&quot;
+m.step(&quot;Gen.46.9&quot;)
+# ‹וּבְנֵי רְאוּבֵן› (“and-son Reuben”) — fact holds: son-Reuben-four
+m.fact(&quot;bene_reuven_arbaa&quot;)
+
+# -------------------------- Gen.46.10 · SIMEONS_SONS -----------------------
+# וּבְנֵי שִׁמְעוֹן יְמוּאֵל וְיָמִין וְאֹהַד וְיָכִין וְצֹחַר וְשָׁאוּל
+# בֶּן־הַכְּנַעֲנִית
+# &quot;[EN-AID] And the sons of Simeon: Jemuel, and Jamin, and Ohad, and Jachin,
+# and Zohar, and Shaul the son of the Canaanite woman.&quot;
+m.step(&quot;Gen.46.10&quot;)
+# ‹וּבְנֵי שִׁמְעוֹן› (“and-son Simeon”) — fact holds: son-Simeon-shisha
+m.fact(&quot;bene_shimon_shisha&quot;)
+
+# -------------------------- Gen.46.11 · LEVIS_SONS -------------------------
+# וּבְנֵי לֵוִי גֵּרְשׁוֹן קְהָת וּמְרָרִי
+# &quot;[EN-AID] And the sons of Levi: Gershon, Kohath, and Merari.&quot;
+m.step(&quot;Gen.46.11&quot;)
+# ‹וּבְנֵי לֵוִי› (“and-son Levi”) — fact holds: son-Levi-shelosha
+m.fact(&quot;bene_levi_shelosha&quot;)
+
+# -------------------------- Gen.46.12 · JUDAHS_SONS_TWO_DEAD ---------------
+# וּבְנֵי יְהוּדָה עֵר וְאוֹנָן וְשֵׁלָה וָפֶרֶץ וָזָרַח וַיָּמָת עֵר
+# וְאוֹנָן בְּאֶרֶץ כְּנַעַן וַיִּהְיוּ בְנֵי־פֶרֶץ חֶצְרוֹן וְחָמוּל
+# &quot;[EN-AID] And the sons of Judah: Er, and Onan, and Shelah, and Perez, and
+# Zerah — and Er and Onan died in the land of Canaan; and the sons of Perez
+# were Hezron and Hamul.&quot;
+m.step(&quot;Gen.46.12&quot;)
+# ‹עֵר וְאוֹנָן בְּאֶרֶץ כְּנַעַן וַיִּהְיוּ בְנֵי־› (“Er and-Onan in-earth
+# Canaan and-be son”) — fact holds: and-die-Er-and-Onan-in-earth-Canaan
+m.fact(&quot;va_yamat_er_ve_onan_be_eretz_kenaan&quot;)
+
+# -------------------------- Gen.46.13 · ISSACHARS_SONS ---------------------
+# וּבְנֵי יִשָׂשכָר תּוֹלָע וּפֻוָּה וְיוֹב וְשִׁמְרוֹן
+# &quot;[EN-AID] And the sons of Issachar: Tola, and Puvah, and Iob, and
+# Shimron.&quot;
+m.step(&quot;Gen.46.13&quot;)
+# ‹וּבְנֵי יִשָׂשכָר› (“and-son Issachar”) — fact holds: son-yisaschar-four
+m.fact(&quot;bene_yisaschar_arbaa&quot;)
+
+# -------------------------- Gen.46.14 · ZEBULUNS_SONS ----------------------
+# וּבְנֵי זְבוּלֻן סֶרֶד וְאֵלוֹן וְיַחְלְאֵל
+# &quot;[EN-AID] And the sons of Zebulun: Sered, and Elon, and Jahleel.&quot;
+m.step(&quot;Gen.46.14&quot;)
+# ‹וּבְנֵי זְבוּלֻן› (“and-son Zebulun”) — fact holds: son-Zebulun-shelosha
+m.fact(&quot;bene_zevulun_shelosha&quot;)
+
+# -------------------------- Gen.46.15 · LEAHS_THIRTY_THREE -----------------
+# אֵלֶּה בְּנֵי לֵאָה אֲשֶׁר יָלְדָה לְיַעֲקֹב בְּפַדַּן אֲרָם וְאֵת דִּינָה
+# בִתּוֹ כָּל־נֶפֶשׁ בָּנָיו וּבְנוֹתָיו שְׁלֹשִׁים וְשָׁלֹשׁ
+# &quot;[EN-AID] These are the sons of Leah, whom she bore to Jacob in Paddan-
+# aram, and Dinah his daughter: every soul of his sons and his daughters —
+# thirty-three.&quot;
+m.step(&quot;Gen.46.15&quot;)
+# ‹בָּנָיו וּבְנוֹתָיו שְׁלֹשִׁים וְשָׁלֹשׁ› (“son-him/its and-daughter-
+# him/its thirty and-three”) — fact holds: all-living-being-banav-and-
+# venotav-thirty-and-three
+m.fact(&quot;kol_nefesh_banav_u_venotav_sheloshim_ve_shalosh&quot;)
+
+# -------------------------- Gen.46.16 · GADS_SONS --------------------------
+# וּבְנֵי גָד צִפְיוֹן וְחַגִּי שׁוּנִי וְאֶצְבֹּן עֵרִי וַאֲרוֹדִי
+# וְאַרְאֵלִי
+# &quot;[EN-AID] And the sons of Gad: Ziphion, and Haggi, Shuni, and Ezbon, Eri,
+# and Arodi, and Areli.&quot;
+m.step(&quot;Gen.46.16&quot;)
+# ‹וּבְנֵי גָד› (“and-son Gad”) — fact holds: son-Gad-seven
+m.fact(&quot;bene_gad_shiva&quot;)
+
+# -------------------------- Gen.46.17 · ASHERS_SONS_AND_SERAH --------------
+# וּבְנֵי אָשֵׁר יִמְנָה וְיִשְׁוָה וְיִשְׁוִי וּבְרִיעָה וְשֶׂרַח אֲחֹתָם
+# וּבְנֵי בְרִיעָה חֶבֶר וּמַלְכִּיאֵל
+# &quot;[EN-AID] And the sons of Asher: Imnah, and Ishvah, and Ishvi, and Beriah,
+# and Serah their sister; and the sons of Beriah: Heber and Malchiel.&quot;
+m.step(&quot;Gen.46.17&quot;)
+# ‹אֲחֹתָם וּבְנֵי› (“sister-them/their and-son”) — fact holds: and-Sarah-
+# achotam
+m.fact(&quot;ve_serach_achotam&quot;)
+
+# -------------------------- Gen.46.18 · ZILPAHS_SIXTEEN --------------------
+# אֵלֶּה בְּנֵי זִלְפָּה אֲשֶׁר־נָתַן לָבָן לְלֵאָה בִתּוֹ וַתֵּלֶד
+# אֶת־אֵלֶּה לְיַעֲקֹב שֵׁשׁ עֶשְׂרֵה נָפֶשׁ
+# &quot;[EN-AID] These are the sons of Zilpah, whom Laban gave to Leah his
+# daughter; and she bore these to Jacob — sixteen souls.&quot;
+m.step(&quot;Gen.46.18&quot;)
+# ‹שֵׁשׁ עֶשְׂרֵה נָפֶשׁ› (“six -teen living-being”) — fact holds: six--
+# teen-living-being
+m.fact(&quot;shesh_esre_nafesh&quot;)
+
+# -------------------------- Gen.46.19 · RACHELS_SONS -----------------------
+# בְּנֵי רָחֵל אֵשֶׁת יַעֲקֹב יוֹסֵף וּבִנְיָמִן
+# &quot;[EN-AID] The sons of Rachel, Jacob&#x27;s wife: Joseph and Benjamin.&quot;
+m.step(&quot;Gen.46.19&quot;)
+# ‹בְּנֵי רָחֵל אֵשֶׁת יַעֲקֹב יוֹסֵף› (“son Rachel woman Jacob Joseph”) —
+# fact holds: son-Rachel-woman-Jacob
+m.fact(&quot;bene_rachel_eshet_yaaqov&quot;)
+
+# -------------------------- Gen.46.20 · JOSEPHS_EGYPTIAN_SONS --------------
+# וַיִּוָּלֵד לְיוֹסֵף בְּאֶרֶץ מִצְרַיִם אֲשֶׁר יָלְדָה־לּוֹ אָסְנַת
+# בַּת־פּוֹטִי פֶרַע כֹּהֵן אֹן אֶת־מְנַשֶּׁה וְאֶת־אֶפְרָיִם
+# &quot;[EN-AID] And to Joseph were born in the land of Egypt those whom Asenath
+# daughter of Poti-fera priest of On bore to him: Manasseh and Ephraim.&quot;
+m.step(&quot;Gen.46.20&quot;)
+# ‹וַיִּוָּלֵד לְיוֹסֵף בְּאֶרֶץ מִצְרַיִם› (“and-bear-young to-Joseph in-
+# earth Egypt”) — fact holds: and-bear-young-to-Joseph-Manasseh-and-Ephraim
+m.fact(&quot;va_yivaled_le_yosef_menashe_ve_efrayim&quot;)
+
+# -------------------------- Gen.46.21 · BENJAMINS_TEN ----------------------
+# וּבְנֵי בִנְיָמִן בֶּלַע וָבֶכֶר וְאַשְׁבֵּל גֵּרָא וְנַעֲמָן אֵחִי
+# וָרֹאשׁ מֻפִּים וְחֻפִּים וָאָרְדְּ
+# &quot;[EN-AID] And the sons of Benjamin: Bela, and Becher, and Ashbel, Gera,
+# and Naaman, Ehi, and Rosh, Muppim, and Huppim, and Ard.&quot;
+m.step(&quot;Gen.46.21&quot;)
+# ‹וּבְנֵי בִנְיָמִן› (“and-son Benjamin”) — fact holds: son-Benjamin-asara
+m.fact(&quot;bene_vinyamin_asara&quot;)
+
+# -------------------------- Gen.46.22 · RACHELS_FOURTEEN -------------------
+# אֵלֶּה בְּנֵי רָחֵל אֲשֶׁר יֻלַּד לְיַעֲקֹב כָּל־נֶפֶשׁ אַרְבָּעָה עָשָׂר
+# &quot;[EN-AID] These are the sons of Rachel who were born to Jacob: every soul
+# — fourteen.&quot;
+m.step(&quot;Gen.46.22&quot;)
+# ‹נֶפֶשׁ אַרְבָּעָה עָשָׂר› (“living-being four -teen”) — fact holds: all-
+# living-being-four--teen
+m.fact(&quot;kol_nefesh_arbaa_asar&quot;)
+
+# -------------------------- Gen.46.23 · DANS_SON_PLURAL_OF_ONE -------------
+# וּבְנֵי־דָן חֻשִׁים
+# &quot;[EN-AID] And the sons of Dan: Hushim.&quot;
+m.step(&quot;Gen.46.23&quot;)
+# ‹וּבְנֵי־דָן חֻשִׁים› (“and-son Daniel Hushim”) — fact holds: and-son-
+# Daniel-Hushim
+m.fact(&quot;u_vene_dan_chushim&quot;)
+
+# -------------------------- Gen.46.24 · NAPHTALIS_SONS ---------------------
+# וּבְנֵי נַפְתָּלִי יַחְצְאֵל וְגוּנִי וְיֵצֶר וְשִׁלֵּם
+# &quot;[EN-AID] And the sons of Naphtali: Jahzeel, and Guni, and Jezer, and
+# Shillem.&quot;
+m.step(&quot;Gen.46.24&quot;)
+# ‹וּבְנֵי נַפְתָּלִי› (“and-son Naphtali”) — fact holds: son-Naphtali-four
+m.fact(&quot;bene_naftali_arbaa&quot;)
+
+# -------------------------- Gen.46.25 · BILHAHS_SEVEN ----------------------
+# אֵלֶּה בְּנֵי בִלְהָה אֲשֶׁר־נָתַן לָבָן לְרָחֵל בִּתּוֹ וַתֵּלֶד
+# אֶת־אֵלֶּה לְיַעֲקֹב כָּל־נֶפֶשׁ שִׁבְעָה
+# &quot;[EN-AID] These are the sons of Bilhah, whom Laban gave to Rachel his
+# daughter; and she bore these to Jacob: every soul — seven.&quot;
+m.step(&quot;Gen.46.25&quot;)
+# ‹כָּל־נֶפֶשׁ שִׁבְעָה› (“all living-being seven”) — fact holds: all-
+# living-being-seven
+m.fact(&quot;kol_nefesh_shiva&quot;)
+
+# -------------------------- Gen.46.26 · SIXTY_SIX_CAME ---------------------
+# כָּל־הַנֶּפֶשׁ הַבָּאָה לְיַעֲקֹב מִצְרַיְמָה יֹצְאֵי יְרֵכוֹ מִלְּבַד
+# נְשֵׁי בְנֵי־יַעֲקֹב כָּל־נֶפֶשׁ שִׁשִּׁים וָשֵׁשׁ
+# &quot;[EN-AID] Every soul coming with Jacob to Egypt, who came out of his
+# loins, besides the wives of Jacob&#x27;s sons: every soul — sixty-six.&quot;
+m.step(&quot;Gen.46.26&quot;)
+# ‹כָּל־הַנֶּפֶשׁ הַבָּאָה› (“all the-living-being the-come/bring”) — fact
+# holds: all-living-being-sixty-and-six
+m.fact(&quot;kol_nefesh_shishim_va_shesh&quot;)
+
+# -------------------------- Gen.46.27 · SEVENTY_THE_HOUSE_COME -------------
+# וּבְנֵי יוֹסֵף אֲשֶׁר־יֻלַּד־לוֹ בְמִצְרַיִם נֶפֶשׁ שְׁנָיִם
+# כָּל־הַנֶּפֶשׁ לְבֵית־יַעֲקֹב הַבָּאָה מִצְרַיְמָה שִׁבְעִים
+# &quot;[EN-AID] And the sons of Joseph who were born to him in Egypt: two souls.
+# Every soul of the house of Jacob coming to Egypt — seventy.&quot;
+m.step(&quot;Gen.46.27&quot;)
+# ‹כָּל־הַנֶּפֶשׁ לְבֵית־יַעֲקֹב הַבָּאָה מִצְרַיְמָה שִׁבְעִים› (“all the-
+# living-being to-house Jacob the-come/bring Egypt-ward seventy”) — fact
+# holds: all-the-living-being-seventy
+m.fact(&quot;kol_ha_nefesh_shivim&quot;)
+
+# -------------------------- Gen.46.28 · JUDAH_SENT_AHEAD -------------------
+# וְאֶת־יְהוּדָה שָׁלַח לְפָנָיו אֶל־יוֹסֵף לְהוֹרֹת לְפָנָיו גֹּשְׁנָה
+# וַיָּבֹאוּ אַרְצָה גֹּשֶׁן
+# &quot;[EN-AID] And Judah he sent before him to Joseph, to point the way before
+# him to Goshen; and they came to the land of Goshen.&quot;
+m.step(&quot;Gen.46.28&quot;)
+# ‹וְאֶת־יְהוּדָה שָׁלַח לְפָנָיו› (“and-obj-marker Judah send to-face-
+# him/its”) — fact holds: and-obj-marker-Judah-send-lefanav
+m.fact(&quot;ve_et_yehuda_shalach_lefanav&quot;)
+
+# -------------------------- Gen.46.29 · THE_HARD_BINDING_AND_THE_LONG_WEEPING -
+# וַיֶּאְסֹר יוֹסֵף מֶרְכַּבְתּוֹ וַיַּעַל לִקְרַאת־יִשְׂרָאֵל אָבִיו
+# גֹּשְׁנָה וַיֵּרָא אֵלָיו וַיִּפֹּל עַל־צַוָּארָיו וַיֵּבְךְּ
+# עַל־צַוָּארָיו עוֹד
+# &quot;[EN-AID] And Joseph bound his chariot, and went up to meet Israel his
+# father, to Goshen; and he appeared to him, and fell on his neck, and wept
+# on his neck a long while.&quot;
+m.step(&quot;Gen.46.29&quot;)
+# ‹וַיֶּאְסֹר יוֹסֵף מֶרְכַּבְתּוֹ› (“and-yoke Joseph chariot-him/its”) —
+# event: bakha — agent Joseph
+m.event(&quot;bakha&quot;, agent=&quot;yosef&quot;)
+
+# -------------------------- Gen.46.30 · LET_ME_DIE_THIS_TIME ---------------
+# וַיֹּאמֶר יִשְׂרָאֵל אֶל־יוֹסֵף אָמוּתָה הַפָּעַם אַחֲרֵי רְאוֹתִי
+# אֶת־פָּנֶיךָ כִּי עוֹדְךָ חָי
+# &quot;[EN-AID] And Israel said to Joseph: Let me die this time, after I have
+# seen your face — that you are yet alive.&quot;
+m.step(&quot;Gen.46.30&quot;)
+# ‹אָמוּתָה הַפָּעַם אַחֲרֵי רְאוֹתִי אֶת־› (“die the-stroke after see-me/my
+# obj-marker”) — fact holds: die-the-stroke-after-reoti-obj-marker-your-face
+m.fact(&quot;amuta_ha_paam_achare_reoti_et_panekha&quot;)
+
+# -------------------------- Gen.46.31 · I_WILL_TELL_PHARAOH ----------------
+# וַיֹּאמֶר יוֹסֵף אֶל־אֶחָיו וְאֶל־בֵּית אָבִיו אֶעֱלֶה וְאַגִּידָה
+# לְפַרְעֹה וְאֹמְרָה אֵלָיו אַחַי וּבֵית־אָבִי אֲשֶׁר בְּאֶרֶץ־כְּנַעַן
+# בָּאוּ אֵלָי
+# &quot;[EN-AID] And Joseph said to his brothers and to his father&#x27;s house: I
+# will go up and tell Pharaoh, and say to him: My brothers and my father&#x27;s
+# house, who were in the land of Canaan, have come to me.&quot;
+m.step(&quot;Gen.46.31&quot;)
+# ‹וְאַגִּידָה לְפַרְעֹה וְאֹמְרָה אֵלָיו› (“and-tell to-Pharaoh and-say to-
+# him/its”) — fact holds: go-up-and-tell-to-Pharaoh
+m.fact(&quot;eele_ve_agida_le_faro&quot;)
+
+# -------------------------- Gen.46.32 · SHEPHERDS_WITH_FLOCKS --------------
+# וְהָאֲנָשִׁים רֹעֵי צֹאן כִּי־אַנְשֵׁי מִקְנֶה הָיוּ וְצֹאנָם וּבְקָרָם
+# וְכָל־אֲשֶׁר לָהֶם הֵבִיאוּ
+# &quot;[EN-AID] And the men are shepherds of flocks — for they have been men of
+# livestock; and their flocks and their herds and all that they have, they
+# have brought.&quot;
+m.step(&quot;Gen.46.32&quot;)
+# ‹וְהָאֲנָשִׁים רֹעֵי צֹאן כִּי־› (“and-the-man graze flock that”) — fact
+# holds: and-the-man-graze-flock
+m.fact(&quot;ve_ha_anashim_roe_tzon&quot;)
+
+# -------------------------- Gen.46.33 · WHEN_PHARAOH_CALLS -----------------
+# וְהָיָה כִּי־יִקְרָא לָכֶם פַּרְעֹה וְאָמַר מַה־מַּעֲשֵׂיכֶם
+# &quot;[EN-AID] And it shall be, when Pharaoh calls you and says: What is your
+# work? —&quot;
+m.step(&quot;Gen.46.33&quot;)
+# ‹וְהָיָה כִּי־יִקְרָא לָכֶם פַּרְעֹה› (“and-be that call to-you/your(pl)
+# Pharaoh”) — fact holds: that-call-lakhem-Pharaoh
+m.fact(&quot;ki_yiqra_lakhem_paro&quot;)
+
+# -------------------------- Gen.46.34 · SAY_MEN_OF_LIVESTOCK ---------------
+# וַאֲמַרְתֶּם אַנְשֵׁי מִקְנֶה הָיוּ עֲבָדֶיךָ מִנְּעוּרֵינוּ וְעַד־עַתָּה
+# גַּם־אֲנַחְנוּ גַּם־אֲבֹתֵינוּ בַּעֲבוּר תֵּשְׁבוּ בְּאֶרֶץ גֹּשֶׁן
+# כִּי־תוֹעֲבַת מִצְרַיִם כָּל־רֹעֵה צֹאן
+# &quot;[EN-AID] then you shall say: Your servants have been men of livestock
+# from our youth even until now, both we and our fathers — that you may
+# dwell in the land of Goshen; for every shepherd of flocks is an
+# abomination to Egypt.&quot;
+m.step(&quot;Gen.46.34&quot;)
+# ‹וַאֲמַרְתֶּם אַנְשֵׁי מִקְנֶה הָיוּ› (“and-say man something-bought be”)
+# — Joseph speaks a demand — LET: and-say-man-something-bought
+m.declare(&quot;yosef&quot;, &quot;LET&quot;,
+          &quot;va_amartem_anshe_miqne&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;al_tira_me_reda_mitzrayma&#x27;, &#x27;va_amartem_anshe_miqne&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 2
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;va_yizbach_zevachim_l_elohe_aviv&#x27;, &#x27;anokhi_ered_imkha_ve_anokhi_aalkha&#x27;, &#x27;va_yisu_et_yaaqov_ba_agalot&#x27;, &#x27;va_yavou_mitzrayma_yaaqov_ve_khol_zaro&#x27;, &#x27;kol_zaro_hevi_ito_mitzrayma&#x27;, &#x27;bene_reuven_arbaa&#x27;, &#x27;bene_shimon_shisha&#x27;, &#x27;bene_levi_shelosha&#x27;, &#x27;va_yamat_er_ve_onan_be_eretz_kenaan&#x27;, &#x27;bene_yisaschar_arbaa&#x27;, &#x27;bene_zevulun_shelosha&#x27;, &#x27;kol_nefesh_banav_u_venotav_sheloshim_ve_shalosh&#x27;, &#x27;bene_gad_shiva&#x27;, &#x27;ve_serach_achotam&#x27;, &#x27;shesh_esre_nafesh&#x27;, &#x27;bene_rachel_eshet_yaaqov&#x27;, &#x27;va_yivaled_le_yosef_menashe_ve_efrayim&#x27;, &#x27;bene_vinyamin_asara&#x27;, &#x27;kol_nefesh_arbaa_asar&#x27;, &#x27;u_vene_dan_chushim&#x27;, &#x27;bene_naftali_arbaa&#x27;, &#x27;kol_nefesh_shiva&#x27;, &#x27;kol_nefesh_shishim_va_shesh&#x27;, &#x27;kol_ha_nefesh_shivim&#x27;, &#x27;ve_et_yehuda_shalach_lefanav&#x27;, &#x27;amuta_ha_paam_achare_reoti_et_panekha&#x27;, &#x27;eele_ve_agida_le_faro&#x27;, &#x27;ve_ha_anashim_roe_tzon&#x27;, &#x27;ki_yiqra_lakhem_paro&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 5
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

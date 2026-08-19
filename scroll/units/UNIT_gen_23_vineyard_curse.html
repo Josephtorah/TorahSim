@@ -1,0 +1,839 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_23_vineyard_curse — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_23_vineyard_curse?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The vineyard and the curse: cursed be Canaan, blessed be the LORD (9:18-29) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_23_vineyard_curse</b> · Genesis 9:18-29 · derive logic_derived_v1 · phase C-23</div>
+<div class="meta"><a href="../#Gen/9/18">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">אָרוּר כְּנָעַן — בָּרוּךְ יְהֹוָה אֱלֹהֵי שֵׁם</span> · <i>arur Kenaan — barukh YHWH Elohei Shem</i> · &#x27;Cursed be Canaan&#x27; — &#x27;Blessed be the LORD, the God of Shem&#x27;</p>
+<div class="note">REVIEW PASSED and FROZEN 2026-08-03 by the main loop (the GEN-2 agent&#x27;s FIRST unit — succession quality verified: precedent quotes verbatim-checked against gen_08/11/12/14/01/13/05/07; ten censuses independently re-run including all four frozen-prediction landings, the bare-curse formula, the jussive count, and the divine-name split; both flagged bold choices RATIFIED — the bare registry value matches the letter&#x27;s bare formula, and the double-push matches the letter&#x27;s verbatim refrain; glossing airtight; nothing invented). Derived 2026-08-03 by the second-generation derivation agent (freeze-after-review by the main loop — no agent freeze); its first unit, fifth under the PIPELINE + DEBUT-MAP process. Precedents pulled verbatim before drafting: gen_08&#x27;s 2:8 garden-planting (EVENT plant + &#x27;WORLD += {gan}&#x27; — the class the vineyard matches: the install chain garden/city/ark/altar/ vineyard), gen_11&#x27;s curse-ASSIGNs (&#x27;REGISTRY: nachash-&gt;arur_mi_kol_ha_behemah&#x27;; the doom-terms held as HOLDS facts) and gen_12&#x27;s &#x27;REGISTRY: kayin-&gt;arur_min_ha_adamah&#x27;, gen_01&#x27;s &#x27;DECLARE(Elohim, LET(exists(or)))&#x27; (the jussive LET class, TIR-026), gen_13&#x27;s &#x27;DECLARE(lemekh, LET(shema( neshei_lemekh, qol_lemekh)))&#x27; (the standing HUMAN-demand precedent — open forever), gen_05&#x27;s &#x27;BLESS(Elohim, otam) MANDATE {..}&#x27; with the gen_07 mandate relaxation, and gen_14&#x27;s death-row pair (&#x27;HOLDS(kol_yemei_adam_930_shanah, t0)&#x27; + &#x27;die(e3) ∧ Agent(e3, adam)&#x27;). FOUR FROZEN PREDICTIONS LAND in this span (gen_18&#x27;s cover-verb token 3; gen_21&#x27;s bless-verb token 6; gen_14&#x27;s curse-root token 5 &#x27;in Noach&#x27;s own mouth&#x27;; gen_14&#x27;s ledger row &#x27;waits until 9:29&#x27;) — plus gen_11&#x27;s export naming 9:25 as the curse-chain&#x27;s next link. Calibrated coverage (charter 4.1): Onkelos read Tier-A at derive time (12 sequential fetches, Data/FETCHLOG.md — the buffer INSERTS THE SHEKHINAH at 9:27, levels the letter&#x27;s YHWH/Elohim name-split to the double-yod stand-in both times, keeps the nakedness plain but moves the telling to the MARKET, links ground-worker and slave-worker with one work-verb the letter does not share); trees from the DB&#x27;s stored tree_json. NINETEENTH PROSPECTIVE MIDDOT RUN (logic/middot_scan/WATCHLIST_gen23_prospective_2026-08-03.md): cache holds ZERO sources for Gen 9:18-29 — SEVENTEENTH tripwire in a row. INTERPRETER: ZERO extensions — fourteenth extension-free derivation candidate in a row. Main-loop ruling 2026-08-03: 9:21&#x27;s anomalous tent-spelling is ORTHOGRAPHY (single DB row), NOT written/read fork #6 — the fork count stays at five.</div>
+<div class="note">Logic-derived v1: v3 ta&#x27;amim trees (from DB tree_json) -&gt; leaf role frames from OSHB morph -&gt; operator lines citing TIR rules -&gt; machine-state scenarios. Machine tokens apostrophe-free and underscore-joined (eved_avadim_yihyeh_le_echav, kol_yemei_noach_950_shanah).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (retro, oral-first era; manifest logic/oral_audit/manifests/gen_23_vineyard_curse_claims.json — 9 VERIFIED, 0 FAILED, 0 UNCHECKABLE; record logic/oral_audit/AUDIT_gen_23_2026-08-08.md). DISCREPANCY, the headline: G23-01 ויהיו כל ימי נח (&quot;and all the days of Noah WERE,&quot; PLURAL, 9:29) — Minchat Shai&#x27;s longest Genesis note documents two camps: the Jericho chumash and old manuscripts (Enoch and Lamech singular, NOAH PLURAL) against the Hilleli, Sepharad books, Ezra codex, Or Torah, Minchat Kohen, and the Ramah&#x27;s own scroll per the Burgos sages (Noah SINGULAR). SNAPSHOT reads PLURAL — the Jericho camp — and its ledger census agrees end to end: seven plural totals plus Noah, with EXACTLY Enoch and Lamech singular: the two-singular anomaly gen_14&#x27;s derivation held unexplained is the Jericho tradition&#x27;s own sign; both camps recorded, the letter locked. CROWNS (chain-attested, DB-verified): (1) G23-02 the three plantings: ויטע (&quot;and he planted&quot;) — God the garden (2:8), Noah the vineyard (9:20), Abraham the tamarisk (21:33): the word&#x27;s only three tokens — &quot;whence the planting? from the Garden of Eden&quot; (Kitzur Baal HaTurim). (2) G23-03 אהלה (&quot;his tent&quot; written with a final he, 9:21) — one of the Masorah&#x27;s FOUR, all in Genesis (9:21, 12:8, 13:3, 35:21): &quot;the tent of his WIFE&quot; (Bereshit Rabbah 36); Rashi&#x27;s ten-tribes hint rides the same letters. (3) G23-07/08 the waking with two yods: וייקץ (9:24) — &quot;in ALL the books two yods&quot; (against the Mikhlol&#x27;s one), the Ramah: &quot;two written, ONE READ AND ONE NOT READ&quot;; and its qof takes segol (short e-vowel) where Jacob&#x27;s and Pharaoh&#x27;s wakings take patach — Noah&#x27;s waking distinguished at letter and vowel. (4) G23-09 stress read from the accent&#x27;s seat: אלהי שם (&quot;the God of Shem,&quot; 9:26) — the Masorah&#x27;s trio of first-stressed אלהי (with Exod 20:23, Deut 33:27 — all Torah), verified by WHERE the accent glyph sits in SNAPSHOT&#x27;s string: new check idiom, accent position = stress position. (5) G23-04/05/06 pointing confirmations: the qamatz vav of ויפת (&quot;and Japheth,&quot; 9:18, matching 9:23); the dotted gimel of Ham&#x27;s report (ויגד, 9:22); the dotted nun of אחרנית (&quot;backward,&quot; the sons&#x27; walk, 9:23). INHERITANCE EDGES: none surfaced in span. READINGS (named-only, unclaimed): the two-shevas pronunciation war on וישת (&quot;and he drank,&quot; 9:21) — R. Yehudah the grammarian vs Ibn Ezra and Radak, Almoli ruling for Ibn Ezra; letter-arithmetic — היין (&quot;the wine&quot;) = יללה (&quot;wailing&quot;), ויתגל (&quot;and he was uncovered&quot;) respelled = גליות (&quot;exiles&quot;), &quot;who went into exile at the head of exiles, by wine&quot; (Kitzur 9:21); עבד עבדים (&quot;slave of slaves&quot;) — the was-word&#x27;s value thirty, the slave-price hint (Kitzur 9:25); the wife&#x27;s-tent reading (Bereshit Rabbah 36).</div>
+<div class="meta">confidence: structure tested; operator readings tested-per-TIR; intent hypothesis</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>The vineyard and the curse (9:18-29): the sons-and-vineyard narrative that the covenant-speech&#x27;s seal releases — 10:1 opens the nations-table with a toledot (&#x27;generations&#x27;) header, the next unit&#x27;s seam. Inside: the roster out of the ark with the double father-of-Canaan tag (9:18-19), the ground-man&#x27;s vineyard (9:20), the wine and the self-uncovering (9:21), the seeing and the telling (9:22), the backward covering (9:23), the awakening and the knowing (9:24), the first human curse (9:25), the first human blessing and the enlargement-jussives (9:26-27), and the death-ledger&#x27;s delayed refrain (9:28-29). The unit ends with one man dead at nine hundred and fifty, one status written, and four demands standing open forever.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Hebrew source + trees</td><td>All 12 verses from DB tree_json (rule set v3, unique, pure binary; ascii rendered 2026-08-03). Tree facts: 9:18 [the roster to the etnachta (major mid-verse rest) — Shem, Ham, Yefet | and the tag gets its own arm: &#x27;and Ham — HE is the father of Canaan&#x27;]; 9:19 [three, these, the sons of Noach | from these the whole earth SCATTERED]; 9:20 [Noach the ground-man (etnachta) | and he planted a vineyard]; 9:21 [drank and was drunk (etnachta) | and uncovered himself inside his tent]; 9:22 [Ham father of Canaan SAW (etnachta on his father&#x27;s nakedness) | and TOLD his two brothers outside]; 9:23 [the span&#x27;s longest verse, 21 words: took, set, walked backward, covered — to the etnachta on &#x27;their father&#x27;s nakedness&#x27; | faces backward, and their father&#x27;s nakedness they did NOT see — the verse ends on the not- seeing]; 9:24 [awoke from his wine (etnachta) | and KNEW what his small son had done to him]; 9:25 [the curse IS the etnachta arm: &#x27;and he said: cursed be Canaan&#x27; | &#x27;a slave of slaves shall he be to his brothers&#x27;]; 9:26 [blessed be YHWH, God of Shem (etnachta) | and let Canaan be their slave]; 9:27 [may God enlarge Yefet, may he dwell in the tents of Shem (etnachta) | and let Canaan be their slave — the refrain verbatim]; 9:28 [lived after the deluge (etnachta) | three hundred and fifty years]; 9:29 [all the days of Noach, nine hundred and fifty years (etnachta) | VA-YAMOT (&#x27;and he died&#x27;) — the refrain standing ALONE as a one-word verse- final arm].</td><td>tested</td></tr>
+<tr><td><b>C</b></td><td>Segment structure</td><td>Verb morphology (#IMPOSED OSHB, DB-verified 2026-08-03); survey complete via the debut map (40 flagged lemmas in 121 tokens; 13 Torah debuts, 6 rare-class), careers and precedents pulled before drafting. FOUR FROZEN PREDICTIONS LAND: KASAH (&#x27;cover&#x27;) token 3 = 9:23 — frozen gen_18 logged &#x27;its next token covers a father&#x27;s nakedness (9:23)&#x27; after the pual passives buried the mountains (7:19-20); BARAKH (&#x27;bless&#x27;) token 6 = 9:26 — frozen gen_21 logged &#x27;token 6 = 9:26, the first HUMAN blessing-speech&#x27; (tokens 1-5 all divine: 1:22, 1:28, 2:3, 5:2, 9:1); ARUR (&#x27;cursed&#x27;) token 5 = 9:25 — frozen gen_14 logged &#x27;token 4 (3:14, 3:17, 4:11 before it; 9:25 after — Noach&#x27;s own mouth)&#x27;, the chain serpent -&gt; ground -&gt; Cain -&gt; inside Noach&#x27;s NAMING (5:29) -&gt; Canaan, and frozen gen_11&#x27;s export named &#x27;9:25&#x27; as the chain&#x27;s next link outright; and gen_14&#x27;s ledger row — 5:32 opened Noach&#x27;s row with &#x27;no total, NO DEATH VERSE (his total waits until 9:29, across the flood)&#x27; — 9:29 is the EXACT Gen 5 refrain (va-yihyu kol yemei ... va-yamot, &#x27;and all the days of X were ... and he died&#x27;; compare 5:5, 5:27), and the arithmetic closes: 600 at the flood (7:6) + 350 after it (9:28) = 950 [letter fact]. DEBUT CLUSTER AT THE VINEYARD: NATA (&#x27;plant&#x27;) token 2 — the Torah&#x27;s two planters are God (2:8, the garden) and Noach (the vineyard); KEREM (&#x27;vineyard&#x27;) token 1; SHATAH (&#x27;drink&#x27;) token 1 (its next eight tokens are Rebecca&#x27;s WATER, Gen 24); YAYIN (&#x27;wine&#x27;) tokens 1-2 (tokens 4-7 = Lot&#x27;s daughters, 19:32-35 — wine + father + uncovering, the mirror scene; token 3 = Malki-Tzedek&#x27;s bread-and-wine); SHAKHAR (&#x27;be drunk&#x27;) token 1 of THREE in the Torah (9:21; 43:34 the brothers at Joseph&#x27;s table; Deut 32:42 arrows drunk on blood); GALAH (&#x27;uncover&#x27;) token 1 — HITPAEL, &#x27;he uncovered HIMSELF&#x27; (reflexive: the shame is self-made before it is seen), the verb re-converging with ERVAH (&#x27;nakedness&#x27;, tokens 1-3 here) in Leviticus 18&#x27;s legalot ervah (&#x27;to uncover nakedness&#x27;) — the incest laws [named-only]; the later exile sense of the uncover-verb is career color only. EVED (&#x27;slave/servant&#x27;) — Torah debut x4 INSIDE THE CURSE [crown]: eved avadim (&#x27;slave of slaves&#x27;, the superlative construct) 9:25, then 9:26, 9:27 — the word that will carry Egypt (180 Torah tokens) is born in the Torah&#x27;s first human curse-speech. NAGAD (&#x27;tell&#x27;) — BOTH of its first two Torah tokens are nakedness-reports: token 1 = 3:11 (&#x27;who TOLD you that you are naked?&#x27;), token 2 = 9:22 (Ham telling his brothers outside) [letter fact]; the see-verb frames the ethics: VA-YAR (&#x27;and he saw&#x27;, 9:22) against VE-LO RAU (&#x27;they did NOT see&#x27;, 9:23, verse-final). ACHORANNIT (&#x27;backward&#x27;) — the word&#x27;s ENTIRE Torah career (2 of 2 tokens) inside verse 9:23 [rare crown]. SIMLAH (&#x27;garment&#x27;) token 1; SHEKHEM (&#x27;shoulder&#x27;) token 1 (rare, 7 tokens); the set-verb VA-YASIMU (&#x27;and they set&#x27;) is SUM token 4 — token 1 set the man in the garden (2:8), token 2 set the MARK on Cain (4:15). YAQATZ (&#x27;awake&#x27;) token 1 — every later Torah awakening is from a dream of destiny (Jacob at Bethel 28:16; Pharaoh x3, Gen 41); Noach&#x27;s is from his wine. VA-YEDA (&#x27;and he KNEW&#x27;, know-verb token 10 — Eden&#x27;s tree-verb) aimed at an UNSTATED deed; BENO HA-QATAN (&#x27;his small son&#x27;) — QATAN token 2, after 1:16&#x27;s LESSER light [the what-was-done and the why-Canaan-not-Ham are the chain&#x27;s questions: OPEN, named-only]. CHALAL (&#x27;begin&#x27;) token 3 — the begin-verb&#x27;s first five tokens are all thresholds (4:26 calling begun; 6:1 multiplying begun; 9:20; 10:8 Nimrod; 11:6 Babel), and the debut map aggregates the begin-stem with the PROFANE-stem under one Strong number (the 9:20 row is the begin-stem, lemma-share named, no claim). NOACH&#x27;S TITLE SHIFTS: 6:9 ish tzaddik (&#x27;righteous man&#x27;) -&gt; 9:20 ISH HA-ADAMAH (&#x27;man of the GROUND&#x27; — the curse-word&#x27;s own carrier: arurah ha-adamah 3:17, &#x27;the ground which YHWH cursed&#x27; 5:29; adamah token 27). THE BARE CURSE: 3:14 and 4:11 carried completions (cursed FROM the livestock, FROM the ground); 9:25&#x27;s formula is BARE — arur Kenaan, no comparative, no source [letter fact]. NAFTZAH (&#x27;was scattered&#x27;, 9:19) — TORAH HAPAX (1 of 1), anticipating Babel&#x27;s scatter in the SIBLING stem PUTZ (11:4&#x27;s pen-nafutz; 10:32 uses a third verb, nifredu &#x27;were separated&#x27;) — sibling named, no claim. NAME-FACTS: Canaan&#x27;s name-debut puts tokens 1-5 ALL in-span (9:18, 9:22, 9:25, 9:26, 9:27) under the DOUBLE father-of-Canaan tag (9:18, 9:22); Shem tokens 4-7, Ham 4-6 (Ham x3 here, then only the nations table), Yefet 4-6 with the name-pun YAFT (&#x27;may He ENLARGE&#x27;) — the enlarge-stem&#x27;s 3 Torah tokens split from the entice-stem (Exod 22:15, Deut 11:16; siblings named). SHAKHAN (&#x27;dwell&#x27;) token 2 = 9:27&#x27;s ve-yishkon be-aholei Shem (&#x27;may he dwell in the tents of Shem&#x27;) — token 1 = 3:24, God STATIONING the cherubim after Eden&#x27;s exile; tokens 9+ are Sinai&#x27;s glory and the Sanctuary pledge (Exod 24:16; 25:8 ve-shakhanti, &#x27;and I will dwell&#x27;) [the dwell-subject — Yefet or God — is the letter&#x27;s own ambiguity: OPEN, held]. DIVINE NAMES: YHWH x1 in-span (9:26 — the name&#x27;s first token since 8:21, and its first inside a human BLESSING), Elohim x2 (9:26&#x27;s construct &#x27;God of Shem&#x27; bound to YHWH&#x27;s name; 9:27 subject of the enlarge-jussive): the names SPLIT across the blessed brothers [letter fact]. MOODS: 19 wayyiqtol-class and-then forms; TWO va-yomer (&#x27;and he said&#x27;) speech-events (9:25, 9:26); FOUR jussives, all inside 9:26-27 (vi-yhi x2, yaft, ve-yishkon); ZERO imperatives; 9:25&#x27;s yihye (&#x27;shall he be&#x27;) a plain imperfect inside the curse-formula. REPETITION TABLE [letter facts]: Noach x6, Canaan x5, av (&#x27;father&#x27;) x5, eved x4, Shem x4, ervah x3, Ham x3, Yefet x3, achorannit x2, yayin x2, ohel (&#x27;tent&#x27;) x2, raah (&#x27;see&#x27;) x2, shanah (&#x27;year&#x27;) x4. ORTHOGRAPHY (main-loop ruling 2026-08-03): 9:21&#x27;s AHOLOH (&#x27;his tent&#x27; written with an anomalous final letter he) is a SINGLE DB row — held as an orthography letter-fact, NOT written/read fork #6 (count stays five); same spelling recurs 12:8, 13:3. The exit-participle echo: 9:18&#x27;s ha-yotzim min ha-tevah (&#x27;the ones going out of the ark&#x27;) repeats 9:10&#x27;s treaty roster — prose echo across the unit wall. NO date in span (durations and lifespans only).</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Predicates &amp; outcomes</td><td>The span walks the flood&#x27;s survivor from the covenant&#x27;s seal to the ledger&#x27;s grave, and spends every crown on firsts: the first planting since Eden&#x27;s (by the man the curse-word&#x27;s relief named), the first wine, the first drunkenness, the first self-uncovering; a telling that repeats the garden&#x27;s who-told-you grammar and a covering that repeats the flood&#x27;s cover-verb — walked BACKWARD, the seeing refused twice; then the mouth that has never spoken in the corpus opens twice, and the Torah&#x27;s first human curse and first human blessing come out adjacent — the curse landing a generation past its provocation on Canaan [OPEN], the blessing aimed UP at YHWH Himself, the enlargement running on four jussives that no verse ever receipts. The machine mirrors the letter&#x27;s shape: deeds, not speeches, move the world; the two speeches write one status and push four demands that stand open forever; and the unit ends on the Gen 5 refrain, closing — in the letter, though not across the machine&#x27;s walls — the row the death-ledger left hostage.</td><td>tested</td></tr>
+<tr><td><b>E</b></td><td>Logic format choice</td><td>Operator lines; NO ledger-register row (gen_14&#x27;s own discipline for the death-genre). EVENTS: sixteen deed-events (begin, plant, drink, become-drunk, uncover-self, see, tell, take, set, walk-backward, cover, awake, know, speak x2, die) — the letter&#x27;s three be/live forms (va-yihyu 9:18/9:29, va-yechi 9:28) held as FACTS, ledger-row grammar per gen_14 [decision recorded]. THE VINEYARD INSTALLED [decision recorded, precedent quoted]: frozen gen_08 encoded 2:8 as &#x27;plant(e4) ∧ Agent(e4, YHWH_Elohim) ∧ Theme(e4, gan)&#x27; + &#x27;WORLD += {gan}&#x27; — completed plant-verb, persistent object: the vineyard matches the class exactly (the install chain garden/city/ark/altar/vineyard — God&#x27;s planting and man&#x27;s echo). THE CURSE, TWO LAYERS ON PRECEDENT [decisions recorded]: (a) the status as ASSIGN registry write — gen_11&#x27;s &#x27;REGISTRY: nachash-&gt;arur_mi_kol_ha_behemah&#x27; and gen_12&#x27;s &#x27;REGISTRY: kayin-&gt;arur_min_ha_adamah&#x27; quoted; here &#x27;REGISTRY: kenaan-&gt;arur&#x27; — the value BARE because the letter&#x27;s formula is bare [letter fact]; (b) the doom-clause as HOLDS fact — gen_11 held the serpent&#x27;s sentence-terms as &#x27;HOLDS(al_gechonkha_telekh(nachash), t3)&#x27;: sentence-genre imperfects are doom-facts, not demands — so eved_avadim_yihyeh_le_echav(kenaan) HOLDS, no SPECS traffic from the curse [TIR-028&#x27;s flag discipline respected: nothing silently upgraded]; and (c) the speaking itself as EVENT with Agent noach — the delta from gen_11/12 NAMED: the curser there was divine, here HUMAN. THE BLESSING as BLESS [decision recorded]: gen_05&#x27;s operator, mandate clause absent per the gen_07 relaxation — with the direction inverted and named: every prior BLESS speaker was Elohim; here a human blesses YHWH (BLESS(noach, yhwh_elohei_shem)). THE FOUR JUSSIVES as DECLARE + LET demands (TIR-026; gen_01&#x27;s &#x27;DECLARE(Elohim, LET(exists(or)))&#x27; quoted; gen_13&#x27;s &#x27;DECLARE(lemekh, LET(shema(neshei_lemekh, qol_lemekh)))&#x27; the human-demand precedent): yehi(kenaan, eved_lamo) pushed at 9:26 AND again at 9:27 — the refrain is verbatim in the letter, so the push is verbatim in the machine; yaft(elohim, le_yefet); yishkon(be_aholei_shem) — the demand-token carries NO subject because the letter&#x27;s subject is ambiguous (Yefet, or God) [OPEN, held]. All four pushed and letter-faithfully OPEN: no receipt verses exist — the queue ends open x4 (gen_13&#x27;s and gen_21&#x27;s open-queue discipline). THE DEATH-ROW on gen_14&#x27;s class [precedent quoted]: &#x27;HOLDS(kol_yemei_adam_930_shanah, t0)&#x27; + &#x27;die(e3) ∧ Agent(e3, adam)&#x27; — here kol_yemei_noach_950_shanah HOLDS and die(e16) fires; the 5:32-to-9:29 hostage-row closure is CROSS-UNIT: prose + [OPEN] — Stage E ledger arc #7 (joining the wipe / yetzer / qalal / tahor / zakhar / brit arcs). NO TIME_ANCHOR (durations, not dates). NO TEST. NOTE_PRESUPPOSED: noach, tevah, kenaan (the sons enter by the letter&#x27;s own roster-facts at 9:18; Canaan is READ in the father-tag before his curse — flagged, not fixed). Interpreter extensions: NONE.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Bilingual logic objects</td><td>Every operator line carries he + he_translit + en. Machine tokens apostrophe-free: bnei_noach_ha_yotzim_min_ha_tevah, cham_hu_avi_khenaan, u_me_eleh_naftzah_khol_ha_aretz, noach_ish_ha_adamah, kerem, ervat_aviv, ve_ervat_avihem_lo_rau, arur, eved_avadim_yihyeh_le_echav, yehi(kenaan, eved_lamo), yaft(elohim, le_yefet), yishkon(be_aholei_shem), va_yechi_noach_achar_ha_mabul_350_shanah, kol_yemei_noach_950_shanah.</td><td>established</td></tr>
+<tr><td><b>G</b></td><td>Oral (named only) + Tier-A translation check</td><td>Named but NOT read (cache: zero for Gen 9:18-29 — SEVENTEENTH tripwire; gen_23 Tier-A queue): Bavli Sanhedrin 70a (&#x27;Bavli&#x27; = Babylonian Talmud; the vineyard sugya — what was done to Noach, and the woe-of-wine teachings); Bavli Megillah 9b (yaft read onto the Greek translation — &#x27;the beauty of Yefet in the tents of Shem&#x27;); Bereshit Rabbah 36 (the Genesis midrash on the span); Rashi at 9:20 (the begin/profane lemma-share homily), 9:22 (what Ham did — the Rav/Shmuel dispute), 9:23 (the singular take-verb and its reward), 9:25 (why Canaan), 9:26-27 (the Presence in Shem&#x27;s tents). Tier-A Onkelos (12 fetches, FETCHLOG 2026-08-03): THE SHEKHINAH INSERTED AT 9:27 [find-class, predicted and confirmed] — ve-yishkon (&#x27;may he dwell&#x27;) -&gt; ve-yashrei SHEKHINTEIH be-mashkeneih de-Shem (&#x27;He will make His PRESENCE dwell in the dwelling of Shem&#x27;): the buffer resolves the letter&#x27;s ambiguous dwell-subject in God&#x27;s favor and inserts the Presence-noun at the dwell-verb&#x27;s second Torah token (the machine holds the letter&#x27;s ambiguity; dual-track); the tent-word rendered with the DWELLING-root at both 9:21 and 9:27 (mashkena). The YHWH/Elohim name-split LEVELED — both 9:26&#x27;s YHWH and 9:27&#x27;s Elohim become the double-yod stand-in: the sixth running leveling span, here at a letter-fact&#x27;s cost (flagged); the yaft/Yefet name-pun SURVIVES in Aramaic sound (yaftei/le-Yefet). The nakedness kept PLAIN (eryeta cognate x3; the reflexive kept: ve-itgeli) — no euphemism — but ba-chutz (&#x27;outside&#x27;) -&gt; be-shuka (&#x27;in the MARKET&#x27;): the telling made publication; simlah (&#x27;garment&#x27;) -&gt; kesuta (&#x27;the COVERING&#x27; — the garment named by its function). The curse-formula kept (arur -&gt; lit); eved avadim -&gt; eved palach avdin (&#x27;a slave SERVING slaves&#x27;) with the SAME work-verb the buffer used to dissolve 9:20&#x27;s title (ish ha-adamah -&gt; gevar palach be-ara, &#x27;a man WORKING in the earth&#x27;) — a buffer-side ground-worker/slave-worker link the letter does not have (artifact, flagged); the adamah-echo lost in generic ara (&#x27;earth&#x27;). The hapax absorbed (naftzah -&gt; itbaddaru, &#x27;were dispersed&#x27;, plural — the subject re-seated from the earth to its people); the SINGULAR take-verb with two subjects KEPT (u-nesev Shem va-Yefet, then plural ve-shavviu); achorannit x2 -&gt; mechazzerin x2 (the adverb verbalized, the doubling kept); va-yachel -&gt; ve-sharei (&#x27;began&#x27; — the begin-reading, not the profane-homily); the jussive chain survives as Aramaic jussive/future forms; mabul -&gt; tofana, va-yamot -&gt; u-mit — the refrain kept.</td><td>tested</td></tr>
+<tr><td><b>H</b></td><td>Scenarios</td><td>S1 the roster: three read-flags (noach, tevah, kenaan), the father-tag fact holds. S2 the scattered-earth hapax fact holds. S3 the vineyard installed (WORLD += kerem), queue still empty. S4 the covering: the did-not-see fact holds. S5 the curse: registry holds kenaan-&gt;arur (one write), the doom-fact holds, SPECS STILL EMPTY (the curse pushes nothing). S6 the blessing: the first LET pushed and open. S7 the enlargement: both 9:27 demands pushed and open. S8 the row closes: the 950-total fact holds, the refrain-push still open (the queue ends open). S9_negative: LET? contract guard; S10_negative: flag-never-block.</td><td>tested</td></tr>
+<tr><td><b>I</b></td><td>English leakage review</td><td>Operators derive from morph codes (19 wayyiqtol-class forms -&gt; events; the four jussives -&gt; LET per TIR-026; the curse-formula&#x27;s passive participle -&gt; the ASSIGN device; the doom-imperfect -&gt; HOLDS per gen_11&#x27;s sentence-genre class, TIR-028&#x27;s flag respected; zero imperatives verified) and the complete debut-map survey plus precedent pulls run BEFORE drafting (kasah / barakh / arur / eved / galah / ervah / kerem / yayin / shatah / shakhar / chalal / nata / nagad / shakhan / patah / simlah / shekhem / qatan / yaqatz / achorannit / nafatz-putz careers; the name censuses; the divine-name scan; the death-formula compares; the mood and repetition scans). NOT supplied: what the small son did, why the curse lands on Canaan, who dwells in Shem&#x27;s tents, the begin/profane homily, the beauty-of-Yefet teaching, the vineyard sugya&#x27;s judgments, or any cross-wall receipt of the 5:32 ledger row — every one [OPEN] or named-only; the Shekhinah insertion and the name-leveling stay dual-track.</td><td>established</td></tr>
+<tr><td><b>J</b></td><td>Pre-flight (draft; freeze is the main loop&#x27;s)</td><td>Pre-flight 2026-08-03 against the UNMODIFIED repo interpreter — zero injected prototypes; GREEN (12/12 steps, 10/10 scenarios). Delivered status DRAFT — review and freeze stay with the main loop (freeze-after-review; the agent never freezes).</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_9_18 · Gen.9.18 · <span class='expr'>THE_ROSTER_OUT_OF_THE_ARK</span></h3>
+<p><span class="he">וַיִּהְיוּ בְנֵי־נֹחַ הַיֹּצְאִים מִן־הַתֵּבָה שֵׁם וְחָם וָיָפֶת וְחָם הוּא אֲבִי כְנָעַן</span> · <i>va-yihyu vnei-Noach ha-yotzim min-ha-tevah Shem ve-Cham va-Yafet ve-Cham hu avi Khenaan</i> · [EN-AID/JPS] And the sons of Noah, that went forth from the ark, were Shem, and Ham, and Japheth; and Ham is the father of Canaan.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויהיו בני נח היצאים מן התבה שם וחם ויפת</span> · <i>va-yihyu vnei-Noach ha-yotzim min-ha-tevah Shem ve-Cham va-Yafet</i> · the sons of Noach going out of the ark: Shem, Ham, Yefet (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וחם הוא אבי כנען</span> · <i>ve-Cham hu avi Khenaan</i> · and Ham — HE is the father of Canaan (the tag gets its own arm)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(bnei_noach_ha_yotzim_min_ha_tevah_shem_cham_va_yefet, t1) ∧ HOLDS(cham_hu_avi_khenaan, t1)</span><br><span class="gloss">= HOLDS(sons-of-Noach-the-going-out-of-from-the-ark-Shem-Ham-and-Yefet, t1) ∧ HOLDS(Ham-he-father-of-Canaan, t1)</span><br>The roster as facts: the sons who WENT OUT of the ark — the exit-participle repeating 9:10&#x27;s treaty roster (yotzei ha-tevah, &#x27;the goers-out of the ark&#x27;) across the unit wall [prose echo, no receipt] — and the tag the narrator will need at 9:25 laid down in advance: HAM IS THE FATHER OF CANAAN, told twice (here and 9:22 — the double tag) [letter fact; the chain&#x27;s why is named-only]. CANAAN&#x27;s name-debut: the name&#x27;s first five Torah tokens all fall in this span (9:18, 9:22, 9:25, 9:26, 9:27) — introduced as a son&#x27;s son, then cursed three verses running.
+</td><td><span class="he">וַיִּהְיוּ בְנֵי־נֹחַ הַיֹּצְאִים מִן־הַתֵּבָה … וְחָם הוּא אֲבִי כְנָעַן</span> · <i>va-yihyu vnei-Noach ha-yotzim min-ha-tevah … ve-Cham hu avi Khenaan</i><br><span class="gloss">= they-were vnei-Noach going-out-of from-the-ark and-Cham he father-of Khenaan</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">noach, tevah, kenaan are READ without prior install (standalone machine: the father and the ark from the flood units; Canaan read in the tag before his curse)</span><br><span class="gloss">= Noach, ark, Canaan are READ without prior install (standalone machine: the father and the ark from the flood units; Canaan read in the tag before his curse)</span><br>flag, not fix</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">A cast list with one strange credit: before anything happens, the text twice names the grandson who will carry the ending.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_9_19 · Gen.9.19 · <span class='expr'>THREE_AND_THE_SCATTERED_EARTH</span></h3>
+<p><span class="he">שְׁלֹשָׁה אֵלֶּה בְּנֵי־נֹחַ וּמֵאֵלֶּה נָפְצָה כָל־הָאָרֶץ</span> · <i>shelosha eleh bnei-Noach u-me-eleh naftzah khol-ha-aretz</i> · [EN-AID/JPS] These three were the sons of Noah, and of these was the whole earth overspread.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">שלשה אלה בני נח</span> · <i>shelosha eleh bnei-Noach</i> · three, these, the sons of Noach (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ומאלה נפצה כל הארץ</span> · <i>u-me-eleh naftzah khol-ha-aretz</i> · and from these the whole earth SCATTERED</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shelosha_eleh_bnei_noach, t1) ∧ HOLDS(u_me_eleh_naftzah_khol_ha_aretz, t1)</span><br><span class="gloss">= HOLDS(three-these-sons-of-Noach, t1) ∧ HOLDS(and-from-these-naftzah-all-the-earth, t1)</span><br>The narrator&#x27;s summary held as facts — with a TORAH HAPAX inside it: NAFTZAH (&#x27;was scattered/dispersed&#x27;) — the stem&#x27;s ONLY Torah token (1 of 1), anticipating Babel&#x27;s scatter in the SIBLING stem (putz: 11:4&#x27;s pen-nafutz, &#x27;lest we be scattered&#x27;; 11:8-9) — sibling named, lemma-kinship only, no claim; 10:32 will use yet a third verb (nifredu, &#x27;were separated&#x27;). The whole earth from three men: the nations table&#x27;s thesis sentence, one seam early [Onkelos re-seats the subject — &#x27;from these were DISPERSED all the earth&#x27;, plural, the earth&#x27;s people not the earth; dual-track].
+</td><td><span class="he">שְׁלֹשָׁה אֵלֶּה … וּמֵאֵלֶּה נָפְצָה כָל־הָאָרֶץ</span> · <i>shelosha eleh … u-me-eleh naftzah khol-ha-aretz</i><br><span class="gloss">= three these these naftzah all-the-earth</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The verse plants the map&#x27;s caption before the map: all the earth, from these three.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_9_20 · Gen.9.20 · <span class='expr'>THE_GROUND_MAN_PLANTS_A_VINEYARD</span></h3>
+<p><span class="he">וַיָּחֶל נֹחַ אִישׁ הָאֲדָמָה וַיִּטַּע כָּרֶם</span> · <i>va-yachel Noach ish ha-adamah va-yita karem</i> · [EN-AID/JPS] And Noah the husbandman began, and planted a vineyard.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויחל נח איש האדמה</span> · <i>va-yachel Noach ish ha-adamah</i> · and Noach, MAN OF THE GROUND, began (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויטע כרם</span> · <i>va-yita karem</i> · and planted a vineyard</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">begin(e1) ∧ Agent(e1, noach)</span><br><span class="gloss">= begin(e1) ∧ Agent(e1, Noach)</span><br>VA-YACHEL — CHALAL (&#x27;begin&#x27;) token 3: the begin-verb&#x27;s first five tokens are ALL thresholds (4:26 calling begun, 6:1 multiplying begun, here, 10:8 Nimrod&#x27;s might begun, 11:6 Babel&#x27;s &#x27;this they begin to do&#x27;) [letter fact]. The debut map aggregates this begin-stem with the PROFANE-stem under one Strong number — the lemma-share the chain&#x27;s homily rides (named-only; Onkelos reads BEGIN: ve-sharei) [lemma-share, no claim].
+</td><td><span class="he">וַיָּחֶל נֹחַ</span> · <i>va-yachel Noach</i><br><span class="gloss">= he-began Noach</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(noach_ish_ha_adamah, t1)</span><br><span class="gloss">= HOLDS(Noach-man-of-the-ground, t1)</span><br>THE TITLE SHIFTS: 6:9 gave Noach ish tzaddik (&#x27;righteous man&#x27;); the flood behind him, the letter re-titles him ISH HA-ADAMAH (&#x27;man of the GROUND&#x27;) — and the ground is the curse-word&#x27;s own carrier: arurah ha-adamah (&#x27;cursed is the ground&#x27;, 3:17), &#x27;the ground which YHWH cursed&#x27; (5:29 — inside Noach&#x27;s own naming) [letter fact; Onkelos dissolves the title into an occupation, &#x27;a man working in the earth&#x27;, and the adamah-echo is lost — dual-track].
+</td><td><span class="he">אִישׁ הָאֲדָמָה</span> · <i>ish ha-adamah</i><br><span class="gloss">= man-of ground</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">plant(e2) ∧ Agent(e2, noach) ∧ Theme(e2, kerem)</span><br><span class="gloss">= plant(e2) ∧ Agent(e2, Noach) ∧ Theme(e2, kerem)</span><br>NATA (&#x27;plant&#x27;) token 2 — the Torah&#x27;s two planters: God (2:8, va-yita … gan, the garden in Eden) and Noach (the vineyard); token 3 will be Abraham&#x27;s tamarisk [letter fact]. KEREM (&#x27;vineyard&#x27;) — Torah token 1.
+</td><td><span class="he">וַיִּטַּע כָּרֶם</span> · <i>va-yita karem</i><br><span class="gloss">= he-planted vineyard</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>REGISTRY_INSTALL</td><td><span class="expr">WORLD += {kerem}</span><br>THE VINEYARD INSTALLED on the garden&#x27;s own precedent [decision recorded]: frozen gen_08 encoded 2:8 as &#x27;plant(e4) ∧ Agent(e4, YHWH_Elohim) ∧ Theme(e4, gan)&#x27; + &#x27;WORLD += {gan}&#x27; — completed plant-verb, persistent object: the class matched exactly; the install chain runs garden / city / ark / altar / VINEYARD — God&#x27;s planting and man&#x27;s echo.
+</td><td><span class="he">כָּרֶם</span> · <i>karem</i><br><span class="gloss">= vineyard</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The first thing the new world&#x27;s farmer makes is the thing that will undo him: a vineyard, planted with Eden&#x27;s verb.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_9_21 · Gen.9.21 · <span class='expr'>THE_WINE_AND_THE_SELF_UNCOVERING</span></h3>
+<p><span class="he">וַיֵּשְׁתְּ מִן־הַיַּיִן וַיִּשְׁכָּר וַיִּתְגַּל בְּתוֹךְ אָהֳלֹה</span> · <i>va-yesht min-ha-yayin va-yishkar va-yitgal be-tokh aholoh</i> · [EN-AID/JPS] And he drank of the wine, and was drunken; and he was uncovered within his tent.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וישת מן היין וישכר</span> · <i>va-yesht min-ha-yayin va-yishkar</i> · he drank of the wine and was drunk (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויתגל בתוך אהלה</span> · <i>va-yitgal be-tokh aholoh</i> · and uncovered HIMSELF inside his tent</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">drink(e3) ∧ Agent(e3, noach) ∧ Theme(e3, min_ha_yayin)</span><br><span class="gloss">= drink(e3) ∧ Agent(e3, Noach) ∧ Theme(e3, from-the-wine)</span><br>THREE DEBUTS IN ONE VERSE: SHATAH (&#x27;drink&#x27;) — the drink-verb&#x27;s Torah token 1 is Noach&#x27;s wine (its next eight tokens are Rebecca&#x27;s WATER at the well, Gen 24); YAYIN (&#x27;wine&#x27;) tokens 1-2 here — tokens 4-7 are Lot&#x27;s daughters (19:32-35: wine + father + uncovering, the mirror scene; named as career fact only) [letter facts].
+</td><td><span class="he">וַיֵּשְׁתְּ מִן־הַיַּיִן</span> · <i>va-yesht min-ha-yayin</i><br><span class="gloss">= he-drank from-the-wine</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">become_drunk(e4) ∧ Agent(e4, noach)</span><br><span class="gloss">= become-drunk(e4) ∧ Agent(e4, Noach)</span><br>VA-YISHKAR (&#x27;and he became drunk&#x27;) — SHAKHAR (&#x27;be drunk&#x27;) token 1 of THREE in the whole Torah (9:21; 43:34 the brothers drinking free at Joseph&#x27;s table; Deut 32:42 arrows drunk on blood) [rare-class].
+</td><td><span class="he">וַיִּשְׁכָּר</span> · <i>va-yishkar</i><br><span class="gloss">= was-drunk</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">uncover_self(e5) ∧ Agent(e5, noach) ∧ Theme(e5, be_tokh_aholoh)</span><br><span class="gloss">= uncover-self(e5) ∧ Agent(e5, Noach) ∧ Theme(e5, in-inside-aholoh)</span><br>VA-YITGAL — GALAH (&#x27;uncover&#x27;) Torah token 1, HITPAEL (reflexive): &#x27;he uncovered HIMSELF&#x27; — the shame is self-made before it is seen [letter fact]; the verb re-converges with the nakedness-noun in Leviticus 18&#x27;s legalot ervah (&#x27;to uncover nakedness&#x27; — the incest laws) [named-only]; the later exile sense is career color. AHOLOH (&#x27;his tent&#x27;) — written with an anomalous final letter he: ORTHOGRAPHY letter-fact by main-loop ruling (single DB row, NOT written/read fork #6; the fork count stays five; same spelling recurs 12:8, 13:3). OHEL (&#x27;tent&#x27;) token 2 — token 3 is 9:27&#x27;s tents of Shem: the span holds the tent of shame and the tents of blessing [Onkelos renders BOTH with the DWELLING-root, mashkena — dual-track].
+</td><td><span class="he">וַיִּתְגַּל בְּתוֹךְ אָהֳלֹה</span> · <i>va-yitgal be-tokh aholoh</i><br><span class="gloss">= uncovered-himself inside aholoh</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Wine&#x27;s first Torah verse runs the whole arc at speed: drink, drunk, undone — reflexive, inside his own tent.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_9_22 · Gen.9.22 · <span class='expr'>THE_SEEING_AND_THE_TELLING</span></h3>
+<p><span class="he">וַיַּרְא חָם אֲבִי כְנַעַן אֵת עֶרְוַת אָבִיו וַיַּגֵּד לִשְׁנֵי־אֶחָיו בַּחוּץ</span> · <i>va-yar Cham avi Khenaan et ervat aviv va-yaged li-shnei-echav ba-chutz</i> · [EN-AID/JPS] And Ham, the father of Canaan, saw the nakedness of his father, and told his two brethren without.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וירא חם אבי כנען את ערות אביו</span> · <i>va-yar Cham avi Khenaan et ervat aviv</i> · and Ham, father of Canaan, SAW his father&#x27;s nakedness (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויגד לשני אחיו בחוץ</span> · <i>va-yaged li-shnei-echav ba-chutz</i> · and TOLD his two brothers, outside</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">see(e6) ∧ Agent(e6, cham) ∧ Theme(e6, ervat_aviv)</span><br><span class="gloss">= see(e6) ∧ Agent(e6, Ham) ∧ Theme(e6, nakedness-of-aviv)</span><br>ERVAH (&#x27;nakedness&#x27;) — Torah token 1 (tokens 1-3 all in this span; tokens 4-5 the &#x27;nakedness of the LAND&#x27;, Gen 42; tokens 8+ the Leviticus 18 laws). The seer is tagged AGAIN: Ham, FATHER OF CANAAN — the double tag&#x27;s second half, the letter keeping the grandson in frame [letter fact; the chain&#x27;s why is named-only].
+</td><td><span class="he">וַיַּרְא חָם אֲבִי כְנַעַן אֵת עֶרְוַת אָבִיו</span> · <i>va-yar Cham avi Khenaan et ervat aviv</i><br><span class="gloss">= he-saw Cham father-of Khenaan obj-marker·et nakedness-of aviv</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">tell(e7) ∧ Agent(e7, cham) ∧ Theme(e7, li_shnei_echav)</span><br><span class="gloss">= tell(e7) ∧ Agent(e7, Ham) ∧ Theme(e7, to-me-shnei-echav)</span><br>NAGAD (&#x27;tell&#x27;) token 2 — and BOTH of the tell-verb&#x27;s first two Torah tokens are NAKEDNESS-REPORTS: token 1 = 3:11, &#x27;who TOLD you that you are naked?&#x27; (the garden&#x27;s interrogation); token 2 = Ham telling his two brothers — outside [letter fact]. What the garden asked about, this verse performs [Onkelos sharpens the venue: ba-chutz (&#x27;outside&#x27;) -&gt; be-shuka (&#x27;in the MARKET&#x27;) — the report made publication; dual-track].
+</td><td><span class="he">וַיַּגֵּד לִשְׁנֵי־אֶחָיו בַּחוּץ</span> · <i>va-yaged li-shnei-echav ba-chutz</i><br><span class="gloss">= he-told to-me-shnei-echav outside</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The verse&#x27;s two verbs are the span&#x27;s moral hinge: one saw, one told — and the garden&#x27;s oldest question echoes under both.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_9_23 · Gen.9.23 · <span class='expr'>THE_BACKWARD_COVERING</span></h3>
+<p><span class="he">וַיִּקַּח שֵׁם וָיֶפֶת אֶת־הַשִּׂמְלָה וַיָּשִׂימוּ עַל־שְׁכֶם שְׁנֵיהֶם וַיֵּלְכוּ אֲחֹרַנִּית וַיְכַסּוּ אֵת עֶרְוַת אֲבִיהֶם וּפְנֵיהֶם אֲחֹרַנִּית וְעֶרְוַת אֲבִיהֶם לֹא רָאוּ</span> · <i>va-yiqach Shem va-Yefet et-ha-simlah va-yasimu al-shekhem shneihem va-yelkhu achorannit va-yekhasu et ervat avihem u-fneihem achorannit ve-ervat avihem lo rau</i> · [EN-AID/JPS] And Shem and Japheth took a garment, and laid it upon both their shoulders, and went backward, and covered the nakedness of their father; and their faces were backward, and they saw not their father&#x27;s nakedness.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויקח שם ויפת את השמלה וישימו על שכם שניהם וילכו אחרנית ויכסו את ערות אביהם</span> · <i>va-yiqach Shem va-Yefet et-ha-simlah va-yasimu al-shekhem shneihem va-yelkhu achorannit va-yekhasu et ervat avihem</i> · took the garment, set it on both shoulders, walked backward, covered their father&#x27;s nakedness (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ופניהם אחרנית וערות אביהם לא ראו</span> · <i>u-fneihem achorannit ve-ervat avihem lo rau</i> · faces backward — and their father&#x27;s nakedness they did NOT see</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">take(e8) ∧ Agent(e8, shem_va_yefet) ∧ Theme(e8, ha_simlah)</span><br><span class="gloss">= take(e8) ∧ Agent(e8, Shem-and-Yefet) ∧ Theme(e8, the-simlah)</span><br>VA-YIQACH — SINGULAR verb, TWO subjects: &#x27;and-he-took, Shem and Yefet&#x27; [letter fact, held; the chain&#x27;s credit-teaching is named-only; Onkelos KEEPS the singular — u-nesev]. SIMLAH (&#x27;garment&#x27;) — Torah token 1 [Onkelos renders kesuta, &#x27;the COVERING&#x27; — the garment named by its function; dual-track].
+</td><td><span class="he">וַיִּקַּח שֵׁם וָיֶפֶת אֶת־הַשִּׂמְלָה</span> · <i>va-yiqach Shem va-Yefet et-ha-simlah</i><br><span class="gloss">= he-took Shem and-Yefet obj-marker·et-the-simlah</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">set(e9) ∧ Agent(e9, shem_va_yefet) ∧ Theme(e9, al_shekhem_shneihem)</span><br><span class="gloss">= set(e9) ∧ Agent(e9, Shem-and-Yefet) ∧ Theme(e9, over-shoulder-of-both-of-them)</span><br>The set-verb (SUM, token 4): token 1 SET the man in the garden (2:8), token 2 SET the mark on Cain (4:15) — now it sets a garment on two shoulders [letter fact]. SHEKHEM (&#x27;shoulder&#x27;) — Torah token 1 (rare: 7 tokens). The number flips to PLURAL here — one took, two carried [letter fact].
+</td><td><span class="he">וַיָּשִׂימוּ עַל־שְׁכֶם שְׁנֵיהֶם</span> · <i>va-yasimu al-shekhem shneihem</i><br><span class="gloss">= they-set over-shoulder-of both-of-them</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">walk_backward(e10) ∧ Agent(e10, shem_va_yefet)</span><br><span class="gloss">= walk-backward(e10) ∧ Agent(e10, Shem-and-Yefet)</span><br>ACHORANNIT (&#x27;backward&#x27;) — the word&#x27;s ENTIRE Torah career is inside THIS VERSE: 2 tokens of 2, once for the feet, once for the faces [rare crown].
+</td><td><span class="he">וַיֵּלְכוּ אֲחֹרַנִּית</span> · <i>va-yelkhu achorannit</i><br><span class="gloss">= they-walked achorannit</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">cover(e11) ∧ Agent(e11, shem_va_yefet) ∧ Theme(e11, ervat_avihem)</span><br><span class="gloss">= cover(e11) ∧ Agent(e11, Shem-and-Yefet) ∧ Theme(e11, nakedness-of-avihem)</span><br>FROZEN PREDICTION LANDS #1: KASAH (&#x27;cover&#x27;) token 3 — gen_18 logged at the verb&#x27;s flood-debut (7:19-20, the waters covering the mountains, agentless passives): &#x27;its next token covers a father&#x27;s nakedness (9:23)&#x27; — and it does: the flood&#x27;s burial verb turned filial, now with AGENTS and a garment [frozen-unit prediction landing].
+</td><td><span class="he">וַיְכַסּוּ אֵת עֶרְוַת אֲבִיהֶם</span> · <i>va-yekhasu et ervat avihem</i><br><span class="gloss">= they-covered obj-marker·et nakedness-of avihem</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_ervat_avihem_lo_rau, t1)</span><br><span class="gloss">= HOLDS(and-nakedness-of-avihem-not-they-saw, t1)</span><br>The verse ends on the NOT-SEEING, held as fact: faces backward, &#x27;and their father&#x27;s nakedness they did NOT see&#x27; — the span&#x27;s see-verb pair closing against 9:22&#x27;s va-yar (&#x27;and he saw&#x27;): one saw and told; two covered and did not see [letter fact].
+</td><td><span class="he">וּפְנֵיהֶם אֲחֹרַנִּית וְעֶרְוַת אֲבִיהֶם לֹא רָאוּ</span> · <i>u-fneihem achorannit ve-ervat avihem lo rau</i><br><span class="gloss">= and-fneihem achorannit nakedness-of avihem not they-saw</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The longest verse in the span spends twenty-one words on choreography whose whole point is what nobody saw.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_9_24 · Gen.9.24 · <span class='expr'>THE_AWAKENING_AND_THE_KNOWING</span></h3>
+<p><span class="he">וַיִּיקֶץ נֹחַ מִיֵּינוֹ וַיֵּדַע אֵת אֲשֶׁר־עָשָׂה־לוֹ בְּנוֹ הַקָּטָן</span> · <i>va-yiqetz Noach mi-yeno va-yeda et asher-asah-lo beno ha-qatan</i> · [EN-AID/JPS] And Noah awoke from his wine, and knew what his youngest son had done unto him.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וייקץ נח מיינו</span> · <i>va-yiqetz Noach mi-yeno</i> · and Noach awoke from his wine (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וידע את אשר עשה לו בנו הקטן</span> · <i>va-yeda et asher-asah-lo beno ha-qatan</i> · and KNEW what his small son had done to him</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">awake(e12) ∧ Agent(e12, noach)</span><br><span class="gloss">= awake(e12) ∧ Agent(e12, Noach)</span><br>YAQATZ (&#x27;awake&#x27;) — Torah token 1 (rare: 5 tokens), and every LATER Torah awakening is from a dream of destiny (Jacob at Bethel, 28:16; Pharaoh x3, Gen 41); the first is from wine — MI-YENO, &#x27;from his wine&#x27; [letter fact].
+</td><td><span class="he">וַיִּיקֶץ נֹחַ מִיֵּינוֹ</span> · <i>va-yiqetz Noach mi-yeno</i><br><span class="gloss">= he-awoke Noach from-yeno</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">know(e13) ∧ Agent(e13, noach) ∧ Theme(e13, asher_asah_lo_beno_ha_qatan)</span><br><span class="gloss">= know(e13) ∧ Agent(e13, Noach) ∧ Theme(e13, that-which-make-not-beno-the-small)</span><br>VA-YEDA (&#x27;and he KNEW&#x27;) — the know-verb (token 10; Eden&#x27;s tree-verb) aimed at a deed the letter NEVER STATES: what was done, and how he knew, are the chain&#x27;s questions [OPEN, named-only]. BENO HA-QATAN (&#x27;his SMALL son&#x27;) — QATAN token 2: token 1 was 1:16&#x27;s LESSER light; the letter lists Ham second, the epithet says small — the tension is the letter&#x27;s own [OPEN, held].
+</td><td><span class="he">וַיֵּדַע אֵת אֲשֶׁר־עָשָׂה־לוֹ בְּנוֹ הַקָּטָן</span> · <i>va-yeda et asher-asah-lo beno ha-qatan</i><br><span class="gloss">= he-knew obj-marker·et that-which-make-not beno small</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The sentence knows more than it says: a knowing verb, an unstated deed, and an epithet that argues with the birth order.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_9_25 · Gen.9.25 · <span class='expr'>THE_FIRST_HUMAN_CURSE</span></h3>
+<p><span class="he">וַיֹּאמֶר אָרוּר כְּנָעַן עֶבֶד עֲבָדִים יִהְיֶה לְאֶחָיו</span> · <i>va-yomer arur Kenaan eved avadim yihyeh le-echav</i> · [EN-AID/JPS] And he said: &#x27;Cursed be Canaan; a servant of servants shall he be unto his brethren.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר ארור כנען</span> · <i>va-yomer arur Kenaan</i> · and he said: CURSED BE CANAAN (the curse is the etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">עבד עבדים יהיה לאחיו</span> · <i>eved avadim yihyeh le-echav</i> · a slave of slaves shall he be to his brothers</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">speak(e14) ∧ Agent(e14, noach) ∧ Theme(e14, arur_kenaan)</span><br><span class="gloss">= speak(e14) ∧ Agent(e14, Noach) ∧ Theme(e14, cursed-Canaan)</span><br>THE FIRST HUMAN CURSE-SPEECH — the delta from the precedents NAMED: the curse-ASSIGN device&#x27;s earlier speakers were all DIVINE (3:14, 3:17, 4:11); here the curser is a man — and the man is the one whose own NAME was given against the curse (5:29: &#x27;this one will comfort us … from the ground which YHWH cursed&#x27;) [letter fact]. Noach&#x27;s first quoted words in the corpus are this curse [letter fact].
+</td><td><span class="he">וַיֹּאמֶר אָרוּר כְּנָעַן</span> · <i>va-yomer arur Kenaan</i><br><span class="gloss">= he-said cursed Kenaan</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>ASSIGN</td><td><span class="expr">REGISTRY: kenaan-&gt;arur</span><br><span class="gloss">= REGISTRY: Canaan-&gt;cursed</span><br>FROZEN PREDICTIONS LAND #3 and #5: ARUR (&#x27;cursed&#x27;) token 5 — gen_14 logged the career at 5:29 (&#x27;token 4 … 9:25 after — Noach&#x27;s own mouth&#x27;) and gen_11&#x27;s export named the chain forward (&#x27;4:11 Cain; 5:29 Noah named as consolation; 9:25&#x27;). The same ASSIGN device, quoted: gen_11 &#x27;REGISTRY: nachash-&gt;arur_mi_kol_ha_behemah&#x27;, gen_12 &#x27;REGISTRY: kayin-&gt;arur_min_ha_adamah&#x27; — and the value here is BARE because the formula is bare: 3:14 and 4:11 cursed FROM something (mi-kol ha-behemah, min-ha-adamah); 9:25 is arur Kenaan, no comparative, no source — the curse absolute [letter fact]. The target is the tagged GRANDSON, not the doer [OPEN, named-only].
+</td><td><span class="he">אָרוּר כְּנָעַן</span> · <i>arur Kenaan</i><br><span class="gloss">= cursed Kenaan</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(eved_avadim_yihyeh_le_echav(kenaan), t1)</span><br><span class="gloss">= HOLDS(slave-of-slaves-yihyeh-to-echav(Canaan), t1)</span><br>The doom-clause as FACT on gen_11&#x27;s sentence-genre class (quoted: &#x27;HOLDS(al_gechonkha_telekh(nachash), t3)&#x27; — doom-terms are facts, not demands; TIR-028&#x27;s flag discipline respected, nothing upgraded) [decision recorded]. And a crown inside it: EVED (&#x27;slave/servant&#x27;) — Torah tokens 1-4 ALL inside this curse-and-blessing (eved avadim, &#x27;slave of slaves&#x27;, the superlative construct, then 9:26, 9:27): the word that will carry Egypt is BORN in the Torah&#x27;s first human curse [crown; Onkelos glosses &#x27;a slave SERVING slaves&#x27; with the same work-verb it gave the ground-man&#x27;s title — buffer artifact, flagged, dual-track].
+</td><td><span class="he">עֶבֶד עֲבָדִים יִהְיֶה לְאֶחָיו</span> · <i>eved avadim yihyeh le-echav</i><br><span class="gloss">= slave-of slaves yihyeh to-echav</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The comfort-named man&#x27;s first recorded words curse his grandson with a word born divine — and hand the Torah its slavery vocabulary.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_9_26 · Gen.9.26 · <span class='expr'>THE_FIRST_HUMAN_BLESSING</span></h3>
+<p><span class="he">וַיֹּאמֶר בָּרוּךְ יְהֹוָה אֱלֹהֵי שֵׁם וִיהִי כְנַעַן עֶבֶד לָמוֹ</span> · <i>va-yomer barukh YHWH Elohei Shem vi-yhi Khenaan eved lamo</i> · [EN-AID/JPS] And he said: &#x27;Blessed be the LORD, the God of Shem; and let Canaan be their servant.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר ברוך יהוה אלהי שם</span> · <i>va-yomer barukh YHWH Elohei Shem</i> · and he said: BLESSED BE YHWH, the God of Shem (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויהי כנען עבד למו</span> · <i>vi-yhi Khenaan eved lamo</i> · and let Canaan be a slave to them</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">speak(e15) ∧ Agent(e15, noach) ∧ Theme(e15, barukh_yhwh_elohei_shem)</span><br><span class="gloss">= speak(e15) ∧ Agent(e15, Noach) ∧ Theme(e15, blessed-yhwh-elohei-Shem)</span><br>The second speech-act — and FROZEN PREDICTION LANDS #2: BARAKH (&#x27;bless&#x27;) token 6 — gen_21 logged &#x27;token 6 = 9:26, the first HUMAN blessing-speech&#x27; (tokens 1-5 all divine: creatures, humans, the day, them-at-naming, Noach-and-sons). YHWH — the divine name&#x27;s ONLY span token, its FIRST since 8:21, and it returns inside a human BLESSING [letter fact].
+</td><td><span class="he">וַיֹּאמֶר בָּרוּךְ יְהֹוָה אֱלֹהֵי שֵׁם</span> · <i>va-yomer barukh YHWH Elohei Shem</i><br><span class="gloss">= he-said blessed the-LORD Elohei Shem</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>BLESS</td><td><span class="expr">BLESS(noach, yhwh_elohei_shem)</span><br><span class="gloss">= BLESS(Noach, yhwh-elohei-Shem)</span><br>THE BENEDICTION INVERTED [decision recorded, precedent quoted]: gen_05&#x27;s &#x27;BLESS(Elohim, otam) MANDATE {..}&#x27; — every prior BLESS speaker was Elohim; here a HUMAN blesses YHWH (mandate clause absent per the gen_07 relaxation: 2:3 blessed with no quoted mandate). The object is not Shem but SHEM&#x27;S GOD — the brother is blessed through his God&#x27;s name [letter fact; the names SPLIT across the brothers: YHWH for Shem here, Elohim for Yefet at 9:27 — Onkelos levels both to the double-yod stand-in, the letter-fact erased in the buffer; dual-track, flagged].
+</td><td><span class="he">בָּרוּךְ יְהֹוָה אֱלֹהֵי שֵׁם</span> · <i>barukh YHWH Elohei Shem</i><br><span class="gloss">= blessed the-LORD Elohei Shem</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(noach, LET(yehi(kenaan, eved_lamo)))</span><br><span class="gloss">= DECLARE(Noach, LET(yehi(Canaan, slave-of-lamo)))</span><br>The refrain&#x27;s first push: VI-YHI (&#x27;and let him BE&#x27;) — JUSSIVE, the machine&#x27;s LET mood exactly (TIR-026; gen_01&#x27;s &#x27;DECLARE(Elohim, LET(exists(or)))&#x27; — yehi or, &#x27;let there be light&#x27; — quoted): the demand pushed by a HUMAN speaker on gen_13&#x27;s precedent (&#x27;DECLARE(lemekh, LET(shema(neshei_lemekh, qol_lemekh)))&#x27; — the corpus&#x27;s first human demand, open forever). No receipt verse exists; the demand stands OPEN [letter-faithful].
+</td><td><span class="he">וִיהִי כְנַעַן עֶבֶד לָמוֹ</span> · <i>vi-yhi Khenaan eved lamo</i><br><span class="gloss">= let-him-be Khenaan slave-of lamo</span></td><td class='cite'>TIR-026</td><td>tested</td></tr>
+</table>
+<div class="meta">The first human blessing aims upward — a man blesses God by a brother&#x27;s name — while the curse&#x27;s refrain starts its drumbeat underneath.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_9_27 · Gen.9.27 · <span class='expr'>THE_ENLARGEMENT_AND_THE_DWELLING</span></h3>
+<p><span class="he">יַפְתְּ אֱלֹהִים לְיֶפֶת וְיִשְׁכֹּן בְּאָהֳלֵי־שֵׁם וִיהִי כְנַעַן עֶבֶד לָמוֹ</span> · <i>yaft Elohim le-Yefet ve-yishkon be-aholei-Shem vi-yhi Khenaan eved lamo</i> · [EN-AID/JPS] God enlarge Japheth, and he shall dwell in the tents of Shem; and let Canaan be their servant.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">יפת אלהים ליפת וישכן באהלי שם</span> · <i>yaft Elohim le-Yefet ve-yishkon be-aholei-Shem</i> · may God ENLARGE Yefet, and may he dwell in the tents of Shem (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויהי כנען עבד למו</span> · <i>vi-yhi Khenaan eved lamo</i> · and let Canaan be a slave to them — the refrain, verbatim</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(noach, LET(yaft(elohim, le_yefet)))</span><br><span class="gloss">= DECLARE(Noach, LET(may-He-enlarge(God, to-Yefet)))</span><br>The speech runs on (no new saying-verb — one speech, 9:26-27 [letter fact]): YAFT (&#x27;may He ENLARGE&#x27;) — jussive (TIR-026), and the span&#x27;s name-pun: yaft … le-YEFET, the enlarge-verb conjugating the son&#x27;s name (the enlarge-stem&#x27;s 3 Torah tokens split from the entice-stem, Exod 22:15 / Deut 11:16 — siblings named) [letter fact]. ELOHIM is this jussive&#x27;s subject — the name-split&#x27;s second half (YHWH was Shem&#x27;s, 9:26) [letter fact; leveled in Onkelos, the pun kept: yaftei/le-Yefet; dual-track].
+</td><td><span class="he">יַפְתְּ אֱלֹהִים לְיֶפֶת</span> · <i>yaft Elohim le-Yefet</i><br><span class="gloss">= may-He-enlarge God to-Yefet</span></td><td class='cite'>TIR-026</td><td>tested</td></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(noach, LET(yishkon(be_aholei_shem)))</span><br><span class="gloss">= DECLARE(Noach, LET(may-he-dwell(in-aholei-Shem)))</span><br>SHAKHAN (&#x27;dwell&#x27;) token 2 — token 1 was 3:24, God STATIONING the cherubim after Eden&#x27;s exile; tokens 9+ are Sinai&#x27;s glory and the Sanctuary pledge (Exod 24:16; 25:8 ve-shakhanti, &#x27;and I will DWELL among them&#x27;): the dwell-verb runs exile-guard -&gt; Shem&#x27;s tents -&gt; the Tabernacle [letter fact]. THE DEMAND-TOKEN CARRIES NO SUBJECT because the letter&#x27;s subject is ambiguous — Yefet, or God [OPEN, held; Onkelos DECIDES it and INSERTS THE PRESENCE: ve-yashrei SHEKHINTEIH (&#x27;He will make His Shekhinah dwell&#x27;) in the dwelling of Shem — the find-class insertion at the dwell-verb&#x27;s second token; the machine holds the letter&#x27;s ambiguity; dual-track, flagged].
+</td><td><span class="he">וְיִשְׁכֹּן בְּאָהֳלֵי־שֵׁם</span> · <i>ve-yishkon be-aholei-Shem</i><br><span class="gloss">= may-he-dwell in-aholei-Shem</span></td><td class='cite'>TIR-026</td><td>tested</td></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(noach, LET(yehi(kenaan, eved_lamo)))</span><br><span class="gloss">= DECLARE(Noach, LET(yehi(Canaan, slave-of-lamo)))</span><br>The refrain pushed AGAIN, verbatim — the letter repeats the clause word for word (9:26b = 9:27c), so the machine pushes the same demand twice [decision recorded: letter-faithful duplication, queue depth counts it]. EVED token 4 closes the debut cluster. Like its siblings, no receipt verse exists — all four demands stand OPEN at the unit&#x27;s end (gen_13&#x27;s and gen_21&#x27;s open-queue discipline).
+</td><td><span class="he">וִיהִי כְנַעַן עֶבֶד לָמוֹ</span> · <i>vi-yhi Khenaan eved lamo</i><br><span class="gloss">= let-him-be Khenaan slave-of lamo</span></td><td class='cite'>TIR-026</td><td>tested</td></tr>
+</table>
+<div class="meta">One verse, three open demands: enlargement by pun, a dwelling with no named dweller, and the refrain hammered twice — none of them ever receipted.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_9_28 · Gen.9.28 · <span class='expr'>THE_YEARS_AFTER_THE_DELUGE</span></h3>
+<p><span class="he">וַיְחִי־נֹחַ אַחַר הַמַּבּוּל שְׁלֹשׁ מֵאוֹת שָׁנָה וַחֲמִשִּׁים שָׁנָה</span> · <i>va-yechi-Noach achar ha-mabul shelosh meot shanah va-chamishim shanah</i> · [EN-AID/JPS] And Noah lived after the flood three hundred and fifty years.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויחי נח אחר המבול</span> · <i>va-yechi-Noach achar ha-mabul</i> · and Noach lived after the deluge (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">שלש מאות שנה וחמשים שנה</span> · <i>shelosh meot shanah va-chamishim shanah</i> · three hundred years and fifty years</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yechi_noach_achar_ha_mabul_350_shanah, t1)</span><br><span class="gloss">= HOLDS(and-he-lived-Noach-after-the-deluge-350-year, t1)</span><br>The ledger grammar returns: VA-YECHI (&#x27;and he lived&#x27;) — Gen 5&#x27;s row-verb — with the flood as the row&#x27;s epoch mark: &#x27;after the deluge&#x27; (MABUL token 9 — the deluge-word&#x27;s first narrator memory-line after its divine-speech tokens closed at 9:15). Held as FACT per gen_14&#x27;s row class [decision recorded]; duration, not date — NO TIME_ANCHOR in this unit.
+</td><td><span class="he">וַיְחִי־נֹחַ אַחַר הַמַּבּוּל שְׁלֹשׁ מֵאוֹת שָׁנָה וַחֲמִשִּׁים שָׁנָה</span> · <i>va-yechi-Noach achar ha-mabul shelosh meot shanah va-chamishim shanah</i><br><span class="gloss">= and-he-lived-Noach after deluge three hundred year fifty year</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The story hands back to the bookkeeping: the flood becomes a date-line in a lifespan.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_9_29 · Gen.9.29 · <span class='expr'>THE_LEDGER_ROW_CLOSES</span></h3>
+<p><span class="he">וַיִּהְיוּ כָּל־יְמֵי־נֹחַ תְּשַׁע מֵאוֹת שָׁנָה וַחֲמִשִּׁים שָׁנָה וַיָּמֹת</span> · <i>va-yihyu kol-yemei-Noach tesha meot shanah va-chamishim shanah va-yamot</i> · [EN-AID/JPS] And all the days of Noah were nine hundred and fifty years; and he died.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויהיו כל ימי נח תשע מאות שנה וחמשים שנה</span> · <i>va-yihyu kol-yemei-Noach tesha meot shanah va-chamishim shanah</i> · all the days of Noach: nine hundred and fifty years (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וימת</span> · <i>va-yamot</i> · and he died — one word, alone on the verse-final arm</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(kol_yemei_noach_950_shanah, t1)</span><br><span class="gloss">= HOLDS(all-days-of-Noach-950-year, t1)</span><br>FROZEN PREDICTION LANDS #4: gen_14 opened Noach&#x27;s row at 5:32 and logged &#x27;no total, NO DEATH VERSE (his total waits until 9:29, across the flood)&#x27; — this is the waited-for verse, in Gen 5&#x27;s EXACT refrain grammar (compare 5:5: &#x27;va-yihyu kol-yemei adam … va-yamot&#x27;). The arithmetic closes: 600 at the flood (7:6) + 350 after (9:28) = 950 [letter fact]. THE CLOSURE IS CROSS-UNIT: standalone machines do not receipt across walls — the 5:32-to-9:29 arc is prose + [OPEN], Stage E ledger arc #7.
+</td><td><span class="he">וַיִּהְיוּ כָּל־יְמֵי־נֹחַ תְּשַׁע מֵאוֹת שָׁנָה וַחֲמִשִּׁים שָׁנָה</span> · <i>va-yihyu kol-yemei-Noach tesha meot shanah va-chamishim shanah</i><br><span class="gloss">= they-were all-days-of-Noach nine hundred year fifty year</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">die(e16) ∧ Agent(e16, noach)</span><br><span class="gloss">= die(e16) ∧ Agent(e16, Noach)</span><br>VA-YAMOT (&#x27;and he died&#x27;) — gen_14&#x27;s death-event class, quoted: &#x27;die(e3) ∧ Agent(e3, adam)&#x27;. The refrain-word stands ALONE as the verse-final tree arm — one word on its own branch [tree fact]. The flood&#x27;s survivor gets Gen 5&#x27;s plain ending: the number, then the verb.
+</td><td><span class="he">וַיָּמֹת</span> · <i>va-yamot</i><br><span class="gloss">= he-died</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The ledger gets its hostage back: nine hundred and fifty, and the one-word arm the whole book of Adam ends its rows on.</div>
+</div>
+<h2>State machine</h2>
+<div class="meta">The vineyard and the curse (standalone; registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER).</div>
+<table><tr><th>state</th><th>meaning</th></tr>
+<tr><td><b>S_boot</b></td><td>Before 9:18 — all registers empty (standalone unit)</td></tr>
+<tr><td><b>S_roster</b></td><td>After 9:18 — the roster and the father-of-Canaan tag hold; noach/tevah/kenaan flagged as read</td></tr>
+<tr><td><b>S_scattered</b></td><td>After 9:19 — the three-sons fact and the scattered-earth hapax fact hold</td></tr>
+<tr><td><b>S_vineyard</b></td><td>After 9:20 — kerem (&#x27;vineyard&#x27;) INSTALLED on the garden class; the ground-man title fact holds</td></tr>
+<tr><td><b>S_uncovered</b></td><td>After 9:21 — drink/drunk/uncovered-himself fired (three debuts; the reflexive)</td></tr>
+<tr><td><b>S_told</b></td><td>After 9:22 — the seeing and the telling fired (the tell-verb&#x27;s second nakedness-report)</td></tr>
+<tr><td><b>S_covered</b></td><td>After 9:23 — took/set/walked-backward/covered fired (gen_18&#x27;s prediction landed); the not-seeing fact holds</td></tr>
+<tr><td><b>S_knowing</b></td><td>After 9:24 — awoke and knew fired (the unstated deed held OPEN)</td></tr>
+<tr><td><b>S_cursed</b></td><td>After 9:25 — speech one: kenaan-&gt;arur written (the bare formula); the doom-fact holds; SPECS untouched</td></tr>
+<tr><td><b>S_blessed</b></td><td>After 9:26 — speech two: the human-to-YHWH benediction; the refrain&#x27;s first LET pushed and open</td></tr>
+<tr><td><b>S_demands_open</b></td><td>After 9:27 — the enlargement, the dwelling (subject held ambiguous), and the refrain again: four demands open</td></tr>
+<tr><td><b>S_lived</b></td><td>After 9:28 — the lived-after row-fact holds (350 after the deluge)</td></tr>
+<tr><td><b>S_row_closed</b></td><td>After 9:29 — the 950-total fact holds and die fired: Gen 5&#x27;s refrain lands, the queue still open x4</td></tr>
+</table><table><tr><th>from</th><th>to</th><th>via</th></tr>
+<tr><td>S_boot</td><td>S_roster</td><td>STEP_Gn_9_18</td></tr>
+<tr><td>S_roster</td><td>S_scattered</td><td>STEP_Gn_9_19</td></tr>
+<tr><td>S_scattered</td><td>S_vineyard</td><td>STEP_Gn_9_20</td></tr>
+<tr><td>S_vineyard</td><td>S_uncovered</td><td>STEP_Gn_9_21</td></tr>
+<tr><td>S_uncovered</td><td>S_told</td><td>STEP_Gn_9_22</td></tr>
+<tr><td>S_told</td><td>S_covered</td><td>STEP_Gn_9_23</td></tr>
+<tr><td>S_covered</td><td>S_knowing</td><td>STEP_Gn_9_24</td></tr>
+<tr><td>S_knowing</td><td>S_cursed</td><td>STEP_Gn_9_25</td></tr>
+<tr><td>S_cursed</td><td>S_blessed</td><td>STEP_Gn_9_26</td></tr>
+<tr><td>S_blessed</td><td>S_demands_open</td><td>STEP_Gn_9_27</td></tr>
+<tr><td>S_demands_open</td><td>S_lived</td><td>STEP_Gn_9_28</td></tr>
+<tr><td>S_lived</td><td>S_row_closed</td><td>STEP_Gn_9_29</td></tr>
+</table>
+<div class="note"><b>AFTER_S_row_closed</b> — TIME: t0 EMPTY (durations and lifespans, not calendar dates — 350 after the deluge; 950 all his days). WORLD: ONE install (kerem, &#x27;vineyard&#x27; — the plant-verb class per frozen gen_08&#x27;s garden: the chain runs garden/city/ark/altar/vineyard) + 3 presupposed (noach, tevah, kenaan — the sons enter by the letter&#x27;s own roster-facts). Standing facts (9): the roster and the father-of-Canaan tag (told twice in the letter), the three-sons summary with the scattered-earth TORAH HAPAX (naftzah — Babel&#x27;s scatter waits in the sibling stem), the ground-man title (the righteous-man&#x27;s post-flood re-titling), the not-seeing (the covering&#x27;s verse-final point), the doom-clause (eved avadim, &#x27;slave of slaves&#x27; — the slave-word&#x27;s debut, held as fact on gen_11&#x27;s sentence-genre class, no demand), and the two ledger rows (350 after the deluge; 950 all the days — Gen 5&#x27;s exact refrain, the arithmetic closing 600+350=950). INVARIANTS: none. HANDLERS: none. EVENTS: sixteen deed-events — the letter&#x27;s own and-then chain (began, planted, drank, was-drunk, uncovered-himself, saw, told, took, set, walked-backward, covered, awoke, knew, said x2, died) — only two of them speech: the FIRST HUMAN CURSE (9:25) and the FIRST HUMAN BLESSING (9:26). REGISTRY: ONE write — kenaan-&gt;arur (the curse-ASSIGN device&#x27;s fourth status-write, after serpent, ground, Cain — and its first HUMAN speaker; the BARE formula, no comparative). SPECS: FOUR demands OPEN at rest — yehi(kenaan, eved_lamo) pushed TWICE (the letter&#x27;s verbatim refrain), yaft(elohim, le_yefet), and yishkon(be_aholei_shem) with the subject the letter left ambiguous: no receipt verses exist; the queue ends open (gen_13&#x27;s and gen_21&#x27;s discipline). TESTS: EMPTY. LEDGER register: EMPTY (gen_14&#x27;s discipline — rows are facts + events, never register rows). FLAGS (3): read_before_install x3. FOUR FROZEN PREDICTIONS LANDED in this span (gen_18&#x27;s cover-verb, gen_21&#x27;s bless-verb, gen_14&#x27;s curse-root and ledger row) — the 5:32-to-9:29 closure itself stays prose + [OPEN]: Stage E ledger arc #7. The machine ends with a dead man, a written status, and four demands nothing will ever pop.</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>The roster and the double tag: after STEP_Gn_9_18</td><td>All registers empty (standalone unit).</td><td>flags noach/tevah/kenaan as read-before-install; Facts cham-hu-avi-khenaan HOLD.<br><span class="gloss">= flags Noach/ark/Canaan as read-before-install; Facts Ham-he-father-of-Canaan HOLD.</span></td><td><span class="he">וְחָם הוּא אֲבִי כְנָעַן</span> · <i>ve-Cham hu avi Khenaan</i><br><span class="gloss">= and-Cham he father-of Khenaan</span></td></tr>
+<tr><td><b>S2</b></td><td>The scattered-earth hapax holds: after STEP_Gn_9_19</td><td>S1 state.</td><td>Facts naftzah HOLD.</td><td><span class="he">וּמֵאֵלֶּה נָפְצָה כָל־הָאָרֶץ</span> · <i>u-me-eleh naftzah khol-ha-aretz</i><br><span class="gloss">= these naftzah all-the-earth</span></td></tr>
+<tr><td><b>S3</b></td><td>The vineyard installed on the garden class: after STEP_Gn_9_20</td><td>S2 state.</td><td>WORLD += kerem; Facts noach-ish-ha-adamah HOLD; SPECS empty.<br><span class="gloss">= WORLD += kerem; Facts Noach-man-of-the-ground HOLD; SPECS empty.</span></td><td><span class="he">וַיִּטַּע כָּרֶם</span> · <i>va-yita karem</i><br><span class="gloss">= he-planted vineyard</span></td></tr>
+<tr><td><b>S4</b></td><td>The backward covering and the not-seeing: after STEP_Gn_9_23</td><td>S3 state + the wine (9:21) and the telling (9:22).</td><td>Facts ervat-avihem-lo-rau HOLD.<br><span class="gloss">= Facts nakedness-of-avihem-not-they-saw HOLD.</span></td><td><span class="he">וְעֶרְוַת אֲבִיהֶם לֹא רָאוּ</span> · <i>ve-ervat avihem lo rau</i><br><span class="gloss">= nakedness-of avihem not they-saw</span></td></tr>
+<tr><td><b>S5</b></td><td>The bare curse writes the registry, the queue stays untouched: after STEP_Gn_9_25</td><td>S4 state + the awakening (9:24).</td><td>REGISTRY: kenaan-&gt;arur (1 write); Facts eved-avadim HOLD; SPECS empty.<br><span class="gloss">= REGISTRY: Canaan-&gt;cursed (1 write); Facts slave-of-slaves HOLD; SPECS empty.</span></td><td><span class="he">אָרוּר כְּנָעַן</span> · <i>arur Kenaan</i><br><span class="gloss">= cursed Kenaan</span></td></tr>
+<tr><td><b>S6</b></td><td>The first human demand pushed: after STEP_Gn_9_26</td><td>S5 state.</td><td>LET(yehi(kenaan, eved_lamo)) pushed and OPEN.<br><span class="gloss">= LET(yehi(Canaan, slave-of-lamo)) pushed and OPEN.</span></td><td><span class="he">וִיהִי כְנַעַן עֶבֶד לָמוֹ</span> · <i>vi-yhi Khenaan eved lamo</i><br><span class="gloss">= let-him-be Khenaan slave-of lamo</span></td></tr>
+<tr><td><b>S7</b></td><td>The enlargement and the dwelling stand open: after STEP_Gn_9_27</td><td>S6 state.</td><td>LET(yaft(elohim, le_yefet)) pushed and OPEN; LET(yishkon(be_aholei_shem)) pushed and OPEN.<br><span class="gloss">= LET(may-He-enlarge(God, to-Yefet)) pushed and OPEN; LET(may-he-dwell(in-aholei-Shem)) pushed and OPEN.</span></td><td><span class="he">יַפְתְּ אֱלֹהִים לְיֶפֶת וְיִשְׁכֹּן בְּאָהֳלֵי־שֵׁם</span> · <i>yaft Elohim le-Yefet ve-yishkon be-aholei-Shem</i><br><span class="gloss">= may-He-enlarge God to-Yefet may-he-dwell in-aholei-Shem</span></td></tr>
+<tr><td><b>S8</b></td><td>The row closes at nine hundred fifty, the queue ends open: after STEP_Gn_9_29</td><td>S7 state + the lived-after row (9:28).</td><td>Facts kol-yemei-noach-950-shanah HOLD; LET(yehi(kenaan, eved_lamo)) pushed and OPEN.<br><span class="gloss">= Facts all-days-of-Noach-950-year HOLD; LET(yehi(Canaan, slave-of-lamo)) pushed and OPEN.</span></td><td><span class="he">וַיָּמֹת</span> · <i>va-yamot</i><br><span class="gloss">= he-died</span></td></tr>
+<tr><td><b>S9_negative</b></td><td>Negative: the machine&#x27;s ? stays guarded</td><td>A synthetic LET? demand (the machine&#x27;s own contract self-test).</td><td>LET? never auto-upgrades: resolution without citation must REFUSE; with a per-unit citation it may resolve — entries pop demands; nothing but citation moves a mood.</td><td></td></tr>
+<tr><td><b>S10_negative</b></td><td>Negative: flags never block</td><td>A synthetic commit with TESTS empty (the machine&#x27;s own contract self-test).</td><td>Cycle close with TESTS empty must be FLAGGED, never blocked.<br><span class="gloss">= Cycle close with TESTS empty must in FLAGGED, never blocked.</span></td><td></td></tr>
+</table>
+<h2>Exports (reusable patterns)</h2><table><tr><th>id</th><th>content</th></tr>
+<tr><td>EXPORT_four_predictions_land</td><td><span class="he">וַיְכַסּוּ … בָּרוּךְ … אָרוּר … וַיָּמֹת</span> · <i>va-yekhasu … barukh … arur … va-yamot</i> · FOUR frozen-unit predictions land in one span — the corpus&#x27;s richest landing: gen_18&#x27;s cover-verb (&#x27;its next token covers a father&#x27;s nakedness, 9:23&#x27; — after burying the mountains), gen_21&#x27;s bless-verb (&#x27;token 6 = 9:26, the first HUMAN blessing-speech&#x27; — tokens 1-5 all divine), gen_14&#x27;s curse-root (&#x27;9:25 after — Noach&#x27;s own mouth&#x27;; gen_11&#x27;s export named the link outright), and gen_14&#x27;s hostage ledger row (&#x27;his total waits until 9:29, across the flood&#x27; — the exact Gen 5 refrain, 600+350=950); the closure held as prose + [OPEN], Stage E ledger arc #7</td></tr>
+<tr><td>EXPORT_eved_born_in_the_curse</td><td><span class="he">עֶבֶד עֲבָדִים יִהְיֶה לְאֶחָיו</span> · <i>eved avadim yihyeh le-echav</i> · EVED (&#x27;slave/servant&#x27;) — Torah tokens 1-4 ALL inside one curse-and-blessing (eved avadim, &#x27;slave of slaves&#x27;, the superlative construct; then 9:26, 9:27): the word that will carry Egypt (180 Torah tokens) is born in the Torah&#x27;s FIRST HUMAN curse-speech [crown]; the curse-formula BARE (arur Kenaan — no comparative, where 3:14/4:11 cursed FROM something); the target the tagged grandson, not the doer [OPEN]; CANAAN&#x27;s name-debut puts tokens 1-5 all in-span under the double father-of-Canaan tag</td></tr>
+<tr><td>EXPORT_first_human_curse_and_blessing</td><td><span class="he">אָרוּר כְּנָעַן — בָּרוּךְ יְהֹוָה אֱלֹהֵי שֵׁם</span> · <i>arur Kenaan — barukh YHWH Elohei Shem</i> · the Torah&#x27;s first HUMAN curse and first HUMAN blessing are ADJACENT VERSES from one mouth — the man named from the curse-word&#x27;s relief (5:29) curses, then blesses YHWH Himself (the divine name&#x27;s only span token, first since 8:21, returning inside a human blessing); the names SPLIT across the brothers (YHWH for Shem&#x27;s God, Elohim for Yefet&#x27;s enlargement) — Onkelos levels both and the letter-fact vanishes in the buffer; the four jussives (vi-yhi x2, yaft, ve-yishkon) pushed as human LET demands (TIR-026; gen_01&#x27;s yehi class, gen_13&#x27;s human-demand precedent) and left letter-faithfully OPEN</td></tr>
+<tr><td>EXPORT_vineyard_on_the_garden_verb</td><td><span class="he">וַיִּטַּע כָּרֶם … וַיִּתְגַּל</span> · <i>va-yita karem … va-yitgal</i> · the vineyard INSTALLED on the garden&#x27;s own verb (frozen gen_08&#x27;s &#x27;plant(e4)&#x27; + &#x27;WORLD += {gan}&#x27; quoted; the Torah&#x27;s two planters: God, then Noach — the install chain garden/city/ark/altar/vineyard); the debut cluster around it: kerem/shatah/yayin/shakhar (wine&#x27;s first verse runs drink-drunk-undone), GALAH (&#x27;uncover&#x27;) debuting HITPAEL — &#x27;he uncovered HIMSELF&#x27; — and re-converging with ERVAH (&#x27;nakedness&#x27;, tokens 1-3 here) in Leviticus 18&#x27;s incest laws; NAGAD (&#x27;tell&#x27;) — both first tokens nakedness-reports (3:11&#x27;s who-TOLD-you; 9:22); ACHORANNIT (&#x27;backward&#x27;) — the word&#x27;s whole Torah career inside verse 9:23; the ground-man title against 6:9&#x27;s righteous-man [letter facts]</td></tr>
+<tr><td>EXPORT_dwell_verb_and_the_row</td><td><span class="he">וְיִשְׁכֹּן בְּאָהֳלֵי־שֵׁם … וַיָּמֹת</span> · <i>ve-yishkon be-aholei-Shem … va-yamot</i> · SHAKHAN (&#x27;dwell&#x27;) token 2 — from 3:24&#x27;s stationed cherubim to Shem&#x27;s tents to the Sanctuary pledge (Exod 25:8): the demand-token carries NO subject because the letter&#x27;s subject is ambiguous (Yefet, or God) [OPEN, held] — Onkelos resolves it God-ward and INSERTS THE SHEKHINAH (the find-class event; the tent-word given the dwelling-root at both 9:21 and 9:27) — dual-track; the unit ends on Gen 5&#x27;s refrain with VA-YAMOT (&#x27;and he died&#x27;) standing alone as a one-word verse-final tree arm [tree fact]</td></tr>
+</table>
+<h2>Oral notes (named, tiered, dual-track — never merged)</h2>
+<div class="note"><span class="badge tier-o">observation</span> <b>Bavli Sanhedrin 70a (the vineyard sugya — what was done, and the woe-of-wine teachings); Bavli Megillah 9b (yaft read onto the Greek translation); Bereshit Rabbah 36 (the span); Rashi at 9:20 (the begin/profane lemma-share), 9:22 (what Ham did — Rav and Shmuel), 9:23 (the singular take-verb&#x27;s reward), 9:25 (why Canaan), 9:26-27 (the Presence in Shem&#x27;s tents) — gen_23 Tier-A queue</b><br><span class="he">אָרוּר כְּנָעַן</span> · <i>(queue — named only)</i> · Named, not read: the cache holds ZERO sources anchored to Gen 9:18-29 — SEVENTEENTH tripwire span. Detector classes predicted: the what-Ham-did teachings are a GAP-FILLING class (doctrine naming the letter&#x27;s unstated deed); the beauty-of-Yefet teaching is a translation-from-pun class; the Shekhinah-in-Shem&#x27;s-tents is a career-of-the-dwell-verb class; the singular-take-verb reward is a grammar-honors class (credit split by the letter&#x27;s own number).
+<br><i>Queue entry — no claim made beyond the naming.</i></div>
+<div class="note"><span class="badge tier-v">verified</span> <b>Onkelos Genesis 9:18-29 — read Tier-A at derive time (12 sequential fetches, Data/FETCHLOG.md 2026-08-03)</b><br><span class="he">וְיַשְׁרֵי שְׁכִינְתֵּיהּ בְּמַשְׁכְּנֵיהּ דְּשֵׁם</span> · <i>ve-yashrei Shekhinteih be-mashkeneih de-Shem</i> · The span&#x27;s translation witness: THE SHEKHINAH INSERTED AT 9:27 [find-class] — ve-yishkon (&#x27;may he dwell&#x27;) becomes &#x27;He will make His PRESENCE dwell in the dwelling of Shem&#x27;: the buffer resolves the letter&#x27;s ambiguous dwell-subject in God&#x27;s favor and inserts the Presence-noun at the dwell-verb&#x27;s second Torah token (the machine holds the ambiguity); the tent-word carries the dwelling-root at both 9:21 and 9:27 (mashkena). The YHWH/Elohim name-split LEVELED — both become the double-yod stand-in (the sixth running leveling span, here at a letter-fact&#x27;s cost); the yaft/Yefet pun survives in sound (yaftei/le-Yefet). The nakedness kept plain (eryeta x3; the reflexive kept: ve-itgeli) but the telling moved to the MARKET (ba-chutz -&gt; be-shuka); the garment named by its function (simlah -&gt; kesuta, &#x27;the covering&#x27;). The curse-formula kept (arur -&gt; lit); &#x27;a slave SERVING slaves&#x27; shares its work-verb with the buffer&#x27;s own rendering of the ground-man title (gevar palach be-ara) — a link the letter does not have (artifact, flagged); the adamah (&#x27;ground&#x27;) echo lost in generic ara (&#x27;earth&#x27;). The hapax absorbed (naftzah -&gt; itbaddaru, plural, the people not the earth); the singular take-verb with two subjects KEPT; achorannit x2 -&gt; mechazzerin x2; va-yachel read as BEGIN (no profane-homily); the jussive chain survives as jussive/future; mabul -&gt; tofana; va-yamot -&gt; u-mit.
+<br><i>Read from Data/sefaria_texts/ (local, gitignored; FETCHLOG is provenance). Dual-track; not merged.</i></div>
+<h2>Binary trees (ta'amim v3, glue bricks)</h2>
+<h3>Gen.9.18 · parser unique · 13 words</h3>
+<div class="meta"><span class="he">ויהיו בני־נח היצאים מן־התבה שׁם וחם ויפת וחם הוא אבי כנען</span> · <i>va-yihyu vene-nocha ha-yotzim min-ha-teva shem ve-cham va-yafet ve-cham hu avi khenaan</i> · The sons out of the ark — and Ham is the father of Canaan. [EN-AID]</div>
+<pre>PHRASE (binary 13w) וַ/יִּֽהְי֣וּ בְנֵי נֹ֗חַ הַ/יֹּֽצְאִים֙ מִן הַ…
+├── PHRASE (binary 9w) וַ/יִּֽהְי֣וּ בְנֵי נֹ֗חַ הַ/יֹּֽצְאִים֙ מִן הַ…
+│   ├── PHRASE (binary 6w) וַ/יִּֽהְי֣וּ בְנֵי נֹ֗חַ הַ/יֹּֽצְאִים֙ מִן הַ…
+│   │   ├── [0-2] GLUE וַ/יִּֽהְי֣וּ בְנֵי נֹ֗חַ (revia, rank=3)
+│   │   └── PHRASE (binary 3w) הַ/יֹּֽצְאִים֙ מִן הַ/תֵּבָ֔ה
+│   │       ├── [3] הַ/יֹּֽצְאִים֙ (pashta, rank=3)
+│   │       └── [4-5] GLUE מִן הַ/תֵּבָ֔ה (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) שֵׁ֖ם וְ/חָ֣ם וָ/יָ֑פֶת
+│       ├── [6] שֵׁ֖ם (tifcha, rank=2)
+│       └── [7-8] GLUE וְ/חָ֣ם וָ/יָ֑פֶת (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וְ/חָ֕ם ה֖וּא אֲבִ֥י כְנָֽעַן
+    ├── [9] וְ/חָ֕ם (zaqef gadol, rank=2)
+    └── PHRASE (binary 3w) ה֖וּא אֲבִ֥י כְנָֽעַן
+        ├── [10] ה֖וּא (tifcha, rank=2)
+        └── [11-12] GLUE אֲבִ֥י כְנָֽעַן (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.9.19 · parser unique · 8 words</h3>
+<div class="meta"><span class="he">שׁלשׁה אלה בני־נח ומאלה נפצה כל־הארץ</span> · <i>shelosha ele bene-nocha u-me-ele naftza khal-ha-aretz</i> · Three sons — and from these the whole earth scattered. [EN-AID]</div>
+<pre>PHRASE (binary 8w) שְׁלֹשָׁ֥ה אֵ֖לֶּה בְּנֵי נֹ֑חַ וּ/מֵ/אֵ֖לֶּה נ…
+├── PHRASE (binary 4w) שְׁלֹשָׁ֥ה אֵ֖לֶּה בְּנֵי נֹ֑חַ
+│   ├── [0-1] GLUE שְׁלֹשָׁ֥ה אֵ֖לֶּה (tifcha, rank=2)
+│   └── [2-3] GLUE בְּנֵי נֹ֑חַ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וּ/מֵ/אֵ֖לֶּה נָֽפְצָ֥ה כָל הָ/אָֽרֶץ
+    ├── [4] וּ/מֵ/אֵ֖לֶּה (tifcha, rank=2)
+    └── [5-7] GLUE נָֽפְצָ֥ה כָל הָ/אָֽרֶץ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.9.20 · parser unique · 6 words</h3>
+<div class="meta"><span class="he">ויחל נח אישׁ האדמה ויטע כרם</span> · <i>va-yachel nocha ish ha-adama va-yita karem</i> · Noach, man of the ground, began — and planted a vineyard. [EN-AID]</div>
+<pre>PHRASE (binary 6w) וַ/יָּ֥חֶל נֹ֖חַ אִ֣ישׁ הָֽ/אֲדָמָ֑ה וַ/יִּטַּ֖…
+├── PHRASE (binary 4w) וַ/יָּ֥חֶל נֹ֖חַ אִ֣ישׁ הָֽ/אֲדָמָ֑ה
+│   ├── [0-1] GLUE וַ/יָּ֥חֶל נֹ֖חַ (tifcha, rank=2)
+│   └── [2-3] GLUE אִ֣ישׁ הָֽ/אֲדָמָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 2w) וַ/יִּטַּ֖ע כָּֽרֶם
+    ├── [4] וַ/יִּטַּ֖ע (tifcha, rank=2)
+    └── [5] כָּֽרֶם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.9.21 · parser unique · 7 words</h3>
+<div class="meta"><span class="he">וישׁת מן־היין וישׁכר ויתגל בתוך אהלה</span> · <i>va-yesht min-ha-yayin va-yishkar va-yitgal be-tokh aholo-ה</i> · He drank the wine, was drunk, uncovered himself in his tent. [EN-AID]</div>
+<pre>PHRASE (binary 7w) וַ/יֵּ֥שְׁתְּ מִן הַ/יַּ֖יִן וַ/יִּשְׁכָּ֑ר וַ/…
+├── PHRASE (binary 4w) וַ/יֵּ֥שְׁתְּ מִן הַ/יַּ֖יִן וַ/יִּשְׁכָּ֑ר
+│   ├── [0-2] GLUE וַ/יֵּ֥שְׁתְּ מִן הַ/יַּ֖יִן (tifcha, rank=2)
+│   └── [3] וַ/יִּשְׁכָּ֑ר (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וַ/יִּתְגַּ֖ל בְּ/ת֥וֹךְ אָהֳלֹֽ/ה
+    ├── [4] וַ/יִּתְגַּ֖ל (tifcha, rank=2)
+    └── [5-6] GLUE בְּ/ת֥וֹךְ אָהֳלֹֽ/ה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.9.22 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">וירא חם אבי כנען את ערות אביו ויגד לשׁני־אחיו בחוץ</span> · <i>va-yar cham avi khenaan et ervat avi-v va-yaged li-shene-echay-v ba-chutz</i> · Ham saw his father&#x27;s nakedness — and told his brothers outside. [EN-AID]</div>
+<pre>PHRASE (binary 11w) וַ/יַּ֗רְא חָ֚ם אֲבִ֣י כְנַ֔עַן אֵ֖ת עֶרְוַ֣ת א…
+├── PHRASE (binary 7w) וַ/יַּ֗רְא חָ֚ם אֲבִ֣י כְנַ֔עַן אֵ֖ת עֶרְוַ֣ת א…
+│   ├── PHRASE (binary 4w) וַ/יַּ֗רְא חָ֚ם אֲבִ֣י כְנַ֔עַן
+│   │   ├── [0] וַ/יַּ֗רְא (revia, rank=3)
+│   │   └── PHRASE (binary 3w) חָ֚ם אֲבִ֣י כְנַ֔עַן
+│   │       ├── [1] חָ֚ם (yetiv, rank=3)
+│   │       └── [2-3] GLUE אֲבִ֣י כְנַ֔עַן (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) אֵ֖ת עֶרְוַ֣ת אָבִ֑י/ו
+│       ├── [4] אֵ֖ת (tifcha, rank=2)
+│       └── [5-6] GLUE עֶרְוַ֣ת אָבִ֑י/ו (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וַ/יַּגֵּ֥ד לִ/שְׁנֵֽי אֶחָ֖י/ו בַּ/חֽוּץ
+    ├── [7-9] GLUE וַ/יַּגֵּ֥ד לִ/שְׁנֵֽי אֶחָ֖י/ו (tifcha, rank=2)
+    └── [10] בַּ/חֽוּץ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.9.23 · parser unique · 21 words</h3>
+<div class="meta"><span class="he">ויקח שׁם ויפת את־השׂמלה וישׂימו על־שׁכם שׁניהם וילכו אחרנית ויכסו את ערות אביהם ופניהם אחרנית וערות אביהם לא ראו</span> · <i>va-yiqach shem va-yefet et-ha-simla va-yasimu al-shekhem shene-hem va-yelkhu achoranit va-yekhasu et ervat avi-hem u-fene-hem achoranit ve-ervat avi-hem lo rau</i> · Shem and Yefet walked backward and covered what they did not see. [EN-AID]</div>
+<pre>PHRASE (binary 21w) וַ/יִּקַּח֩ שֵׁ֨ם וָ/יֶ֜פֶת אֶת הַ/שִּׂמְלָ֗ה ו…
+├── PHRASE (binary 15w) וַ/יִּקַּח֩ שֵׁ֨ם וָ/יֶ֜פֶת אֶת הַ/שִּׂמְלָ֗ה ו…
+│   ├── PHRASE (binary 9w) וַ/יִּקַּח֩ שֵׁ֨ם וָ/יֶ֜פֶת אֶת הַ/שִּׂמְלָ֗ה ו…
+│   │   ├── PHRASE (binary 5w) וַ/יִּקַּח֩ שֵׁ֨ם וָ/יֶ֜פֶת אֶת הַ/שִּׂמְלָ֗ה
+│   │   │   ├── [0-2] GLUE וַ/יִּקַּח֩ שֵׁ֨ם וָ/יֶ֜פֶת (geresh, rank=4)
+│   │   │   └── [3-4] GLUE אֶת הַ/שִּׂמְלָ֗ה (revia, rank=3)
+│   │   └── PHRASE (binary 4w) וַ/יָּשִׂ֨ימוּ֙ עַל שְׁכֶ֣ם שְׁנֵי/הֶ֔ם
+│   │       ├── [5] וַ/יָּשִׂ֨ימוּ֙ (pashta, rank=3)
+│   │       └── [6-8] GLUE עַל שְׁכֶ֣ם שְׁנֵי/הֶ֔ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 6w) וַ/יֵּֽלְכוּ֙ אֲחֹ֣רַנִּ֔ית וַ/יְכַסּ֕וּ אֵ֖ת ע…
+│       ├── PHRASE (binary 2w) וַ/יֵּֽלְכוּ֙ אֲחֹ֣רַנִּ֔ית
+│       │   ├── [9] וַ/יֵּֽלְכוּ֙ (pashta, rank=3)
+│       │   └── [10] אֲחֹ֣רַנִּ֔ית (zaqef qatan, rank=2)
+│       └── PHRASE (binary 4w) וַ/יְכַסּ֕וּ אֵ֖ת עֶרְוַ֣ת אֲבִי/הֶ֑ם
+│           ├── [11] וַ/יְכַסּ֕וּ (zaqef gadol, rank=2)
+│           └── PHRASE (binary 3w) אֵ֖ת עֶרְוַ֣ת אֲבִי/הֶ֑ם
+│               ├── [12] אֵ֖ת (tifcha, rank=2)
+│               └── [13-14] GLUE עֶרְוַ֣ת אֲבִי/הֶ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) וּ/פְנֵי/הֶם֙ אֲחֹ֣רַנִּ֔ית וְ/עֶרְוַ֥ת אֲבִי/ה…
+    ├── PHRASE (binary 2w) וּ/פְנֵי/הֶם֙ אֲחֹ֣רַנִּ֔ית
+    │   ├── [15] וּ/פְנֵי/הֶם֙ (pashta, rank=3)
+    │   └── [16] אֲחֹ֣רַנִּ֔ית (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) וְ/עֶרְוַ֥ת אֲבִי/הֶ֖ם לֹ֥א רָאֽוּ
+        ├── [17-18] GLUE וְ/עֶרְוַ֥ת אֲבִי/הֶ֖ם (tifcha, rank=2)
+        └── [19-20] GLUE לֹ֥א רָאֽוּ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.9.24 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">וייקץ נח מיינו וידע את אשׁר־עשׂה־לו בנו הקטן</span> · <i>va-yiqetz nocha mi-yen-o va-yeda et asher-asa-l-o ben-o ha-qatan</i> · Noach awoke from his wine and knew what his small son had done. [EN-AID]</div>
+<pre>PHRASE (binary 10w) וַ/יִּ֥יקֶץ נֹ֖חַ מִ/יֵּינ֑/וֹ וַ/יֵּ֕דַע אֵ֛ת …
+├── PHRASE (binary 3w) וַ/יִּ֥יקֶץ נֹ֖חַ מִ/יֵּינ֑/וֹ
+│   ├── [0-1] GLUE וַ/יִּ֥יקֶץ נֹ֖חַ (tifcha, rank=2)
+│   └── [2] מִ/יֵּינ֑/וֹ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) וַ/יֵּ֕דַע אֵ֛ת אֲשֶׁר עָ֥שָׂה ל֖/וֹ בְּנ֥/וֹ ה…
+    ├── [3] וַ/יֵּ֕דַע (zaqef gadol, rank=2)
+    └── PHRASE (binary 6w) אֵ֛ת אֲשֶׁר עָ֥שָׂה ל֖/וֹ בְּנ֥/וֹ הַ/קָּטָֽן
+        ├── PHRASE (binary 4w) אֵ֛ת אֲשֶׁר עָ֥שָׂה ל֖/וֹ
+        │   ├── [4] אֵ֛ת (tevir, rank=3)
+        │   └── [5-7] GLUE אֲשֶׁר עָ֥שָׂה ל֖/וֹ (tifcha, rank=2)
+        └── [8-9] GLUE בְּנ֥/וֹ הַ/קָּטָֽן (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.9.25 · parser unique · 7 words</h3>
+<div class="meta"><span class="he">ויאמר ארור כנען עבד עבדים יהיה לאחיו</span> · <i>va-yomer arur kenaan eved avadim yihye le-echay-v</i> · Cursed be Canaan — a slave of slaves to his brothers. [EN-AID]</div>
+<pre>PHRASE (binary 7w) וַ/יֹּ֖אמֶר אָר֣וּר כְּנָ֑עַן עֶ֥בֶד עֲבָדִ֖ים …
+├── PHRASE (binary 3w) וַ/יֹּ֖אמֶר אָר֣וּר כְּנָ֑עַן
+│   ├── [0] וַ/יֹּ֖אמֶר (tifcha, rank=2)
+│   └── [1-2] GLUE אָר֣וּר כְּנָ֑עַן (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) עֶ֥בֶד עֲבָדִ֖ים יִֽהְיֶ֥ה לְ/אֶחָֽי/ו
+    ├── [3-4] GLUE עֶ֥בֶד עֲבָדִ֖ים (tifcha, rank=2)
+    └── [5-6] GLUE יִֽהְיֶ֥ה לְ/אֶחָֽי/ו (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.9.26 · parser unique · 9 words</h3>
+<div class="meta"><span class="he">ויאמר ברוך יהוה אלהי שׁם ויהי כנען עבד למו</span> · <i>va-yomer barukh YHWH elohe shem vi-yhi khenaan eved la-mo</i> · Blessed be YHWH, the God of Shem — and let Canaan serve them. [EN-AID]</div>
+<pre>PHRASE (binary 9w) וַ/יֹּ֕אמֶר בָּר֥וּךְ יְהֹוָ֖ה אֱלֹ֣הֵי שֵׁ֑ם ו…
+├── PHRASE (binary 5w) וַ/יֹּ֕אמֶר בָּר֥וּךְ יְהֹוָ֖ה אֱלֹ֣הֵי שֵׁ֑ם
+│   ├── [0] וַ/יֹּ֕אמֶר (zaqef gadol, rank=2)
+│   └── PHRASE (binary 4w) בָּר֥וּךְ יְהֹוָ֖ה אֱלֹ֣הֵי שֵׁ֑ם
+│       ├── [1-2] GLUE בָּר֥וּךְ יְהֹוָ֖ה (tifcha, rank=2)
+│       └── [3-4] GLUE אֱלֹ֣הֵי שֵׁ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וִ/יהִ֥י כְנַ֖עַן עֶ֥בֶד לָֽ/מוֹ
+    ├── [5-6] GLUE וִ/יהִ֥י כְנַ֖עַן (tifcha, rank=2)
+    └── [7-8] GLUE עֶ֥בֶד לָֽ/מוֹ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.9.27 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">יפת אלהים ליפת וישׁכן באהלי־שׁם ויהי כנען עבד למו</span> · <i>yaft Elohim le-yefet ve-yishkon be-ahole-shem vi-yhi khenaan eved la-mo</i> · May God enlarge Yefet, may he dwell in the tents of Shem. [EN-AID]</div>
+<pre>PHRASE (binary 10w) יַ֤פְתְּ אֱלֹהִים֙ לְ/יֶ֔פֶת וְ/יִשְׁכֹּ֖ן בְּ/…
+├── PHRASE (binary 6w) יַ֤פְתְּ אֱלֹהִים֙ לְ/יֶ֔פֶת וְ/יִשְׁכֹּ֖ן בְּ/…
+│   ├── PHRASE (binary 3w) יַ֤פְתְּ אֱלֹהִים֙ לְ/יֶ֔פֶת
+│   │   ├── [0-1] GLUE יַ֤פְתְּ אֱלֹהִים֙ (pashta, rank=3)
+│   │   └── [2] לְ/יֶ֔פֶת (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) וְ/יִשְׁכֹּ֖ן בְּ/אָֽהֳלֵי שֵׁ֑ם
+│       ├── [3] וְ/יִשְׁכֹּ֖ן (tifcha, rank=2)
+│       └── [4-5] GLUE בְּ/אָֽהֳלֵי שֵׁ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וִ/יהִ֥י כְנַ֖עַן עֶ֥בֶד לָֽ/מוֹ
+    ├── [6-7] GLUE וִ/יהִ֥י כְנַ֖עַן (tifcha, rank=2)
+    └── [8-9] GLUE עֶ֥בֶד לָֽ/מוֹ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.9.28 · parser unique · 9 words</h3>
+<div class="meta"><span class="he">ויחי־נח אחר המבול שׁלשׁ מאות שׁנה וחמשׁים שׁנה</span> · <i>va-yechi-nocha achar ha-mabul shelosh meot shana va-chamishim shana</i> · Noach lived three hundred and fifty years after the deluge. [EN-AID]</div>
+<pre>PHRASE (binary 9w) וַֽ/יְחִי נֹ֖חַ אַחַ֣ר הַ/מַּבּ֑וּל שְׁלֹ֤שׁ מֵ…
+├── PHRASE (binary 4w) וַֽ/יְחִי נֹ֖חַ אַחַ֣ר הַ/מַּבּ֑וּל
+│   ├── [0-1] GLUE וַֽ/יְחִי נֹ֖חַ (tifcha, rank=2)
+│   └── [2-3] GLUE אַחַ֣ר הַ/מַּבּ֑וּל (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) שְׁלֹ֤שׁ מֵאוֹת֙ שָׁנָ֔ה וַֽ/חֲמִשִּׁ֖ים שָׁנָֽה
+    ├── PHRASE (binary 3w) שְׁלֹ֤שׁ מֵאוֹת֙ שָׁנָ֔ה
+    │   ├── [4-5] GLUE שְׁלֹ֤שׁ מֵאוֹת֙ (pashta, rank=3)
+    │   └── [6] שָׁנָ֔ה (zaqef qatan, rank=2)
+    └── PHRASE (binary 2w) וַֽ/חֲמִשִּׁ֖ים שָׁנָֽה
+        ├── [7] וַֽ/חֲמִשִּׁ֖ים (tifcha, rank=2)
+        └── [8] שָׁנָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.9.29 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">ויהיו כל־ימי־נח תשׁע מאות שׁנה וחמשׁים שׁנה וימת</span> · <i>va-yihyu kal-yeme-nocha tesha meot shana va-chamishim shana va-yamot</i> · All the days of Noach were nine hundred and fifty — and he died. [EN-AID]</div>
+<pre>PHRASE (binary 10w) וַ/יִּֽהְיוּ֙ כָּל יְמֵי נֹ֔חַ תְּשַׁ֤ע מֵאוֹת֙…
+├── PHRASE (binary 9w) וַ/יִּֽהְיוּ֙ כָּל יְמֵי נֹ֔חַ תְּשַׁ֤ע מֵאוֹת֙…
+│   ├── PHRASE (binary 4w) וַ/יִּֽהְיוּ֙ כָּל יְמֵי נֹ֔חַ
+│   │   ├── [0] וַ/יִּֽהְיוּ֙ (pashta, rank=3)
+│   │   └── [1-3] GLUE כָּל יְמֵי נֹ֔חַ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) תְּשַׁ֤ע מֵאוֹת֙ שָׁנָ֔ה וַ/חֲמִשִּׁ֖ים שָׁנָ֑ה
+│       ├── PHRASE (binary 3w) תְּשַׁ֤ע מֵאוֹת֙ שָׁנָ֔ה
+│       │   ├── [4-5] GLUE תְּשַׁ֤ע מֵאוֹת֙ (pashta, rank=3)
+│       │   └── [6] שָׁנָ֔ה (zaqef qatan, rank=2)
+│       └── PHRASE (binary 2w) וַ/חֲמִשִּׁ֖ים שָׁנָ֑ה
+│           ├── [7] וַ/חֲמִשִּׁ֖ים (tifcha, rank=2)
+│           └── [8] שָׁנָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── [9] וַ/יָּמֹֽת (silluq (verse-end emperor), rank=1)
+</pre>
+<h2>Word coverage — 121/121 words with named roles</h2>
+<table><tr><th>ref</th><th>#</th><th>Hebrew</th><th>translit</th><th>English</th><th>role</th><th>kind</th><th>rule</th></tr>
+<tr><td>Gen.9.18</td><td>0</td><td class='he-cell'>ויהיו</td><td>va-yihyu</td><td>and-they-were</td><td>roster_row_verb</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.18</td><td>1</td><td class='he-cell'>בני</td><td>vene</td><td>sons-of</td><td>sons-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.18</td><td>2</td><td class='he-cell'>נח</td><td>nocha</td><td>Noah</td><td>name_nocha</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.18</td><td>3</td><td class='he-cell'>היצאים</td><td>ha-yotzim</td><td>going-out-of</td><td>exit_participle_echo_9_10</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.18</td><td>4</td><td class='he-cell'>מן</td><td>min</td><td>from</td><td>from</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.18</td><td>5</td><td class='he-cell'>התבה</td><td>ha-teva</td><td>the-ark</td><td>the-ark</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.18</td><td>6</td><td class='he-cell'>שם</td><td>shem</td><td>Shem</td><td>name_shem</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.18</td><td>7</td><td class='he-cell'>וחם</td><td>ve-cham</td><td>and-Ham</td><td>name_cham_token_4</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.18</td><td>8</td><td class='he-cell'>ויפת</td><td>va-yafet</td><td>and-Yefet</td><td>name_yefet_token_4</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.18</td><td>9</td><td class='he-cell'>וחם</td><td>ve-cham</td><td>and-Ham</td><td>the_father_of_canaan_tag_first</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.18</td><td>10</td><td class='he-cell'>הוא</td><td>hu</td><td>he</td><td>he</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.18</td><td>11</td><td class='he-cell'>אבי</td><td>avi</td><td>father-of</td><td>father-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.18</td><td>12</td><td class='he-cell'>כנען</td><td>khenaan</td><td>Canaan</td><td>CANAAN_TOKEN_1_name_debut</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.19</td><td>0</td><td class='he-cell'>שלשה</td><td>shelosha</td><td>three</td><td>three</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.19</td><td>1</td><td class='he-cell'>אלה</td><td>ele</td><td>these</td><td>these</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.19</td><td>2</td><td class='he-cell'>בני</td><td>bene</td><td>sons-of</td><td>sons-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.19</td><td>3</td><td class='he-cell'>נח</td><td>nocha</td><td>Noah</td><td>name_nocha</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.19</td><td>4</td><td class='he-cell'>ומאלה</td><td>u-me-ele</td><td>and-from-these</td><td>and-from-these</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.19</td><td>5</td><td class='he-cell'>נפצה</td><td>naftza</td><td>was-scattered</td><td>NAFTZAH_TORAH_HAPAX_babel_sibling_stem</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.19</td><td>6</td><td class='he-cell'>כל</td><td>khal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.19</td><td>7</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.20</td><td>0</td><td class='he-cell'>ויחל</td><td>va-yachel</td><td>and-he-began</td><td>CHALAL_token_3_threshold_verb</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.20</td><td>1</td><td class='he-cell'>נח</td><td>nocha</td><td>Noah</td><td>name_nocha</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.20</td><td>2</td><td class='he-cell'>איש</td><td>ish</td><td>man-of</td><td>title_shift_from_ish_tzaddik</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.20</td><td>3</td><td class='he-cell'>האדמה</td><td>ha-adama</td><td>the-ground</td><td>ha_adamah_curse_carrier</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.20</td><td>4</td><td class='he-cell'>ויטע</td><td>va-yita</td><td>and-he-planted</td><td>NATA_token_2_God_then_Noach</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.20</td><td>5</td><td class='he-cell'>כרם</td><td>karem</td><td>vineyard</td><td>KEREM_TOKEN_1_installed_on_garden_class</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.21</td><td>0</td><td class='he-cell'>וישת</td><td>va-yesht</td><td>and-he-drank</td><td>SHATAH_TOKEN_1_drink_debut</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.21</td><td>1</td><td class='he-cell'>מן</td><td>min</td><td>from</td><td>from</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.21</td><td>2</td><td class='he-cell'>היין</td><td>ha-yayin</td><td>the-wine</td><td>YAYIN_TOKEN_1_lot_mirror_ahead</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.21</td><td>3</td><td class='he-cell'>וישכר</td><td>va-yishkar</td><td>and-was-drunk</td><td>SHAKHAR_TOKEN_1_of_three</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.21</td><td>4</td><td class='he-cell'>ויתגל</td><td>va-yitgal</td><td>and-uncovered-himself</td><td>GALAH_TOKEN_1_hitpael_reflexive</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.21</td><td>5</td><td class='he-cell'>בתוך</td><td>be-tokh</td><td>inside</td><td>inside</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.21</td><td>6</td><td class='he-cell'>אהלה</td><td>aholo-h</td><td>his-tent</td><td>AHOLOH_orthography_letter_fact_not_fork</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.22</td><td>0</td><td class='he-cell'>וירא</td><td>va-yar</td><td>and-he-saw</td><td>the_seeing_against_the_not_seeing</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.22</td><td>1</td><td class='he-cell'>חם</td><td>cham</td><td>Ham</td><td>name_cham_token_6</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.22</td><td>2</td><td class='he-cell'>אבי</td><td>avi</td><td>father-of</td><td>father-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.22</td><td>3</td><td class='he-cell'>כנען</td><td>khenaan</td><td>Canaan</td><td>canaan_token_2_double_tag</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.22</td><td>4</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.9.22</td><td>5</td><td class='he-cell'>ערות</td><td>ervat</td><td>nakedness-of</td><td>ERVAH_TOKEN_1_leviticus_convergence</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.22</td><td>6</td><td class='he-cell'>אביו</td><td>avi-v</td><td>his-father</td><td>his-father</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.22</td><td>7</td><td class='he-cell'>ויגד</td><td>va-yaged</td><td>and-he-told</td><td>NAGAD_token_2_both_tokens_nakedness_reports</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.22</td><td>8</td><td class='he-cell'>לשני</td><td>li-shene</td><td>to-his-two</td><td>to-his-two</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.22</td><td>9</td><td class='he-cell'>אחיו</td><td>echay-v</td><td>his-brothers</td><td>his-brothers</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.22</td><td>10</td><td class='he-cell'>בחוץ</td><td>ba-chutz</td><td>outside</td><td>ba_chutz_onkelos_market_dual_track</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.23</td><td>0</td><td class='he-cell'>ויקח</td><td>va-yiqach</td><td>and-he-took</td><td>SINGULAR_verb_two_subjects</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.23</td><td>1</td><td class='he-cell'>שם</td><td>shem</td><td>Shem</td><td>name_shem</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.23</td><td>2</td><td class='he-cell'>ויפת</td><td>va-yefet</td><td>and-Yefet</td><td>name_yefet_token_5</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.23</td><td>3</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.9.23</td><td>4</td><td class='he-cell'>השמלה</td><td>ha-simla</td><td>the-garment</td><td>SIMLAH_TOKEN_1</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.23</td><td>5</td><td class='he-cell'>וישימו</td><td>va-yasimu</td><td>and-they-set</td><td>SUM_token_4_garden_and_cain_mark_setter</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.23</td><td>6</td><td class='he-cell'>על</td><td>al</td><td>over</td><td>over</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.23</td><td>7</td><td class='he-cell'>שכם</td><td>shekhem</td><td>shoulder-of</td><td>SHEKHEM_TOKEN_1_rare</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.23</td><td>8</td><td class='he-cell'>שניהם</td><td>shene-hem</td><td>both-of-them</td><td>both-of-them</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.23</td><td>9</td><td class='he-cell'>וילכו</td><td>va-yelkhu</td><td>and-they-walked</td><td>and-they-walked</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.23</td><td>10</td><td class='he-cell'>אחרנית</td><td>achoranit</td><td>backward</td><td>ACHORANNIT_token_1_whole_career_here</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.23</td><td>11</td><td class='he-cell'>ויכסו</td><td>va-yekhasu</td><td>and-they-covered</td><td>KASAH_TOKEN_3_gen_18_PREDICTION_LANDS</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.23</td><td>12</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.9.23</td><td>13</td><td class='he-cell'>ערות</td><td>ervat</td><td>nakedness-of</td><td>ervah_token_2</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.23</td><td>14</td><td class='he-cell'>אביהם</td><td>avi-hem</td><td>their-father</td><td>their-father</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.23</td><td>15</td><td class='he-cell'>ופניהם</td><td>u-fene-hem</td><td>and-their-faces</td><td>and-their-faces</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.23</td><td>16</td><td class='he-cell'>אחרנית</td><td>achoranit</td><td>backward</td><td>ACHORANNIT_token_2_whole_career_here</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.23</td><td>17</td><td class='he-cell'>וערות</td><td>ve-ervat</td><td>and-nakedness-of</td><td>ervah_token_3</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.23</td><td>18</td><td class='he-cell'>אביהם</td><td>avi-hem</td><td>their-father</td><td>their-father</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.23</td><td>19</td><td class='he-cell'>לא</td><td>lo</td><td>not</td><td>not</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.23</td><td>20</td><td class='he-cell'>ראו</td><td>rau</td><td>they-saw</td><td>lo_rau_verse_final</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.24</td><td>0</td><td class='he-cell'>וייקץ</td><td>va-yiqetz</td><td>and-he-awoke</td><td>YAQATZ_TOKEN_1_later_wakings_are_dreams</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.24</td><td>1</td><td class='he-cell'>נח</td><td>nocha</td><td>Noah</td><td>name_nocha</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.24</td><td>2</td><td class='he-cell'>מיינו</td><td>mi-yen-o</td><td>from-his-wine</td><td>yayin_token_2</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.24</td><td>3</td><td class='he-cell'>וידע</td><td>va-yeda</td><td>and-he-knew</td><td>know_verb_on_unstated_deed</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.24</td><td>4</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.9.24</td><td>5</td><td class='he-cell'>אשר</td><td>asher</td><td>that-which</td><td>that-which</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.24</td><td>6</td><td class='he-cell'>עשה</td><td>asa</td><td>did</td><td>did</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.24</td><td>7</td><td class='he-cell'>לו</td><td>l-o</td><td>to-him</td><td>to-him</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.24</td><td>8</td><td class='he-cell'>בנו</td><td>ben-o</td><td>his-son</td><td>beno_ha_qatan</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.24</td><td>9</td><td class='he-cell'>הקטן</td><td>ha-qatan</td><td>the-small</td><td>QATAN_token_2_after_lesser_light</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.25</td><td>0</td><td class='he-cell'>ויאמר</td><td>va-yomer</td><td>and-he-said</td><td>noachs_first_quoted_words</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.25</td><td>1</td><td class='he-cell'>ארור</td><td>arur</td><td>cursed</td><td>ARUR_TOKEN_5_first_human_curse_bare_formula</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.25</td><td>2</td><td class='he-cell'>כנען</td><td>kenaan</td><td>Canaan</td><td>canaan_token_3_the_target_not_the_doer</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.25</td><td>3</td><td class='he-cell'>עבד</td><td>eved</td><td>slave-of</td><td>EVED_TOKEN_1_superlative_construct</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.25</td><td>4</td><td class='he-cell'>עבדים</td><td>avadim</td><td>slaves</td><td>eved_token_2_egypt_word_born</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.25</td><td>5</td><td class='he-cell'>יהיה</td><td>yihye</td><td>shall-he-be</td><td>doom_imperfect_held_as_fact</td><td>logic_bearing</td><td class='cite'>TIR-028</td></tr>
+<tr><td>Gen.9.25</td><td>6</td><td class='he-cell'>לאחיו</td><td>le-echay-v</td><td>to-his-brothers</td><td>to-his-brothers</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.26</td><td>0</td><td class='he-cell'>ויאמר</td><td>va-yomer</td><td>and-he-said</td><td>the_second_speech</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.26</td><td>1</td><td class='he-cell'>ברוך</td><td>barukh</td><td>blessed</td><td>BARAKH_TOKEN_6_gen_21_PREDICTION_LANDS</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.26</td><td>2</td><td class='he-cell'>יהוה</td><td>YHWH</td><td>YHWH</td><td>the_name_returns_first_since_8_21</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.26</td><td>3</td><td class='he-cell'>אלהי</td><td>elohe</td><td>God-of</td><td>elohei_shem_the_name_split</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.26</td><td>4</td><td class='he-cell'>שם</td><td>shem</td><td>Shem</td><td>name_shem</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.26</td><td>5</td><td class='he-cell'>ויהי</td><td>vi-yhi</td><td>and-let-him-be</td><td>jussive_LET_refrain_push_one</td><td>logic_bearing</td><td class='cite'>TIR-026</td></tr>
+<tr><td>Gen.9.26</td><td>6</td><td class='he-cell'>כנען</td><td>khenaan</td><td>Canaan</td><td>name_khenaan</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.26</td><td>7</td><td class='he-cell'>עבד</td><td>eved</td><td>slave</td><td>eved_token_3</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.26</td><td>8</td><td class='he-cell'>למו</td><td>la-mo</td><td>to-them</td><td>to-them</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.27</td><td>0</td><td class='he-cell'>יפת</td><td>yaft</td><td>may-He-enlarge</td><td>YAFT_name_pun_jussive</td><td>logic_bearing</td><td class='cite'>TIR-026</td></tr>
+<tr><td>Gen.9.27</td><td>1</td><td class='he-cell'>אלהים</td><td>Elohim</td><td>God</td><td>ELOHIM_the_name_split_second_half</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.27</td><td>2</td><td class='he-cell'>ליפת</td><td>le-yefet</td><td>to-Yefet</td><td>le_yefet_pun_target</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.27</td><td>3</td><td class='he-cell'>וישכן</td><td>ve-yishkon</td><td>and-may-he-dwell</td><td>SHAKHAN_token_2_subject_ambiguous_OPEN</td><td>logic_bearing</td><td class='cite'>TIR-026</td></tr>
+<tr><td>Gen.9.27</td><td>4</td><td class='he-cell'>באהלי</td><td>be-ahole</td><td>in-the-tents-of</td><td>ohel_token_3_onkelos_shekhinah_dual_track</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.27</td><td>5</td><td class='he-cell'>שם</td><td>shem</td><td>Shem</td><td>name_shem</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.27</td><td>6</td><td class='he-cell'>ויהי</td><td>vi-yhi</td><td>and-let-him-be</td><td>jussive_LET_refrain_push_two</td><td>logic_bearing</td><td class='cite'>TIR-026</td></tr>
+<tr><td>Gen.9.27</td><td>7</td><td class='he-cell'>כנען</td><td>khenaan</td><td>Canaan</td><td>name_khenaan</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.27</td><td>8</td><td class='he-cell'>עבד</td><td>eved</td><td>slave</td><td>eved_token_4</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.27</td><td>9</td><td class='he-cell'>למו</td><td>la-mo</td><td>to-them</td><td>to-them</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.28</td><td>0</td><td class='he-cell'>ויחי</td><td>va-yechi</td><td>and-he-lived</td><td>gen_5_row_verb_returns</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.28</td><td>1</td><td class='he-cell'>נח</td><td>nocha</td><td>Noah</td><td>name_nocha</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.28</td><td>2</td><td class='he-cell'>אחר</td><td>achar</td><td>after</td><td>after</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.28</td><td>3</td><td class='he-cell'>המבול</td><td>ha-mabul</td><td>the-deluge</td><td>MABUL_token_9_first_memory_line</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.28</td><td>4</td><td class='he-cell'>שלש</td><td>shelosh</td><td>three</td><td>three</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.28</td><td>5</td><td class='he-cell'>מאות</td><td>meot</td><td>hundred</td><td>hundred</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.28</td><td>6</td><td class='he-cell'>שנה</td><td>shana</td><td>year</td><td>year</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.28</td><td>7</td><td class='he-cell'>וחמשים</td><td>va-chamishim</td><td>and-fifty</td><td>and-fifty</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.28</td><td>8</td><td class='he-cell'>שנה</td><td>shana</td><td>year</td><td>year</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.29</td><td>0</td><td class='he-cell'>ויהיו</td><td>va-yihyu</td><td>and-they-were</td><td>gen_5_refrain_verb</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.29</td><td>1</td><td class='he-cell'>כל</td><td>kal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.29</td><td>2</td><td class='he-cell'>ימי</td><td>yeme</td><td>days-of</td><td>days-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.29</td><td>3</td><td class='he-cell'>נח</td><td>nocha</td><td>Noah</td><td>name_nocha</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.29</td><td>4</td><td class='he-cell'>תשע</td><td>tesha</td><td>nine</td><td>nine</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.29</td><td>5</td><td class='he-cell'>מאות</td><td>meot</td><td>hundred</td><td>hundred</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.29</td><td>6</td><td class='he-cell'>שנה</td><td>shana</td><td>year</td><td>year</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.29</td><td>7</td><td class='he-cell'>וחמשים</td><td>va-chamishim</td><td>and-fifty</td><td>and-fifty</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.29</td><td>8</td><td class='he-cell'>שנה</td><td>shana</td><td>year</td><td>year</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.29</td><td>9</td><td class='he-cell'>וימת</td><td>va-yamot</td><td>and-he-died</td><td>VA_YAMOT_one_word_arm_gen_14_row_closes</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_23_vineyard_curse — The vineyard and the curse: cursed be Canaan, blessed be the LORD (9:18-29) [frozen]
+
+final state: WORLD=[&#x27;kerem&#x27;] (+3 presupposed) | REGISTRY={&#x27;kenaan&#x27;: &#x27;arur&#x27;} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[&#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;]
+
+=== S1 — The roster and the double tag: after STEP_Gn_9_18
+    וְחָם הוּא אֲבִי כְנָעַן (ve-Cham hu avi Khenaan)
+    PASS  flags noach/tevah/kenaan as read-before-install  (flagged=[&#x27;kenaan&#x27;, &#x27;noach&#x27;, &#x27;tevah&#x27;])
+    PASS  Facts cham-hu-avi-khenaan HOLD.  (2 facts)
+
+=== S2 — The scattered-earth hapax holds: after STEP_Gn_9_19
+    וּמֵאֵלֶּה נָפְצָה כָל־הָאָרֶץ (u-me-eleh naftzah khol-ha-aretz)
+    PASS  Facts naftzah HOLD.  (4 facts)
+
+=== S3 — The vineyard installed on the garden class: after STEP_Gn_9_20
+    וַיִּטַּע כָּרֶם (va-yita karem)
+    PASS  WORLD += kerem  (entity={&#x27;mode&#x27;: &#x27;created&#x27;, &#x27;by&#x27;: &#x27;narration&#x27;, &#x27;step&#x27;: &#x27;Gen.9.20&#x27;})
+    PASS  Facts noach-ish-ha-adamah HOLD  (5 facts)
+    PASS  SPECS empty.  (queue=0)
+
+=== S4 — The backward covering and the not-seeing: after STEP_Gn_9_23
+    וְעֶרְוַת אֲבִיהֶם לֹא רָאוּ (ve-ervat avihem lo rau)
+    PASS  Facts ervat-avihem-lo-rau HOLD.  (6 facts)
+
+=== S5 — The bare curse writes the registry, the queue stays untouched: after STEP_Gn_9_25
+    אָרוּר כְּנָעַן (arur Kenaan)
+    PASS  REGISTRY: kenaan-&gt;arur (1 write)  (names={&#x27;kenaan&#x27;: &#x27;arur&#x27;} writes=1)
+    PASS  Facts eved-avadim HOLD  (7 facts)
+    PASS  SPECS empty.  (queue=0)
+
+=== S6 — The first human demand pushed: after STEP_Gn_9_26
+    וִיהִי כְנַעַן עֶבֶד לָמוֹ (vi-yhi Khenaan eved lamo)
+    PASS  LET(yehi(kenaan, eved_lamo)) pushed and OPEN.  (queue=[&#x27;yehi(kenaan, eved_lamo)&#x27;])
+
+=== S7 — The enlargement and the dwelling stand open: after STEP_Gn_9_27
+    יַפְתְּ אֱלֹהִים לְיֶפֶת וְיִשְׁכֹּן בְּאָהֳלֵי־שֵׁם (yaft Elohim le-Yefet ve-yishkon be-aholei-Shem)
+    PASS  LET(yaft(elohim, le_yefet)) pushed and OPEN  (queue=[&#x27;yehi(kenaan, eved_lamo)&#x27;, &#x27;yaft(elohim, le_yefet)&#x27;, &#x27;yishkon(be_aholei_shem)&#x27;, &#x27;yehi(kenaan, eved_lamo)&#x27;])
+    PASS  LET(yishkon(be_aholei_shem)) pushed and OPEN.  (queue=[&#x27;yehi(kenaan, eved_lamo)&#x27;, &#x27;yaft(elohim, le_yefet)&#x27;, &#x27;yishkon(be_aholei_shem)&#x27;, &#x27;yehi(kenaan, eved_lamo)&#x27;])
+
+=== S8 — The row closes at nine hundred fifty, the queue ends open: after STEP_Gn_9_29
+    וַיָּמֹת (va-yamot)
+    PASS  Facts kol-yemei-noach-950-shanah HOLD  (9 facts)
+    PASS  LET(yehi(kenaan, eved_lamo)) pushed and OPEN.  (queue=[&#x27;yehi(kenaan, eved_lamo)&#x27;, &#x27;yaft(elohim, le_yefet)&#x27;, &#x27;yishkon(be_aholei_shem)&#x27;, &#x27;yehi(kenaan, eved_lamo)&#x27;])
+
+=== S9_negative — Negative: the machine&#x27;s ? stays guarded
+    PASS  imperfect-in-command parsed as LET? (question mark kept)  (mood=LET?)
+    PASS  auto-upgrade REFUSED  (TIR-028: LET? never auto-upgrades to LET — a per-unit judgme...)
+    PASS  upgrade WITH citation allowed  (cite=per-unit judgment (owner), TIR-028 resolution)
+
+=== S10_negative — Negative: flags never block
+    PASS  commit proceeded (not blocked)  (LEDGER=[99])
+    PASS  pattern deviation FLAGGED  (flags=[&#x27;commit_without_test&#x27;])
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_23_vineyard_curse.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_23_vineyard_curse — 9:18-29
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_23_vineyard_curse.yaml) is CANONICAL (Pre-Code);
+# this file is a derived, runnable rendering. Do not edit — regenerate. The
+# assertion block at the bottom is baked from the Stage D interpreter&#x27;s
+# actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;The vineyard and the curse: cursed be Canaan, blessed be the LORD (9:18-29)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_23_vineyard_curse&quot;)
+
+# -------------------------- Gen.9.18 · THE_ROSTER_OUT_OF_THE_ARK -----------
+# וַיִּהְיוּ בְנֵי־נֹחַ הַיֹּצְאִים מִן־הַתֵּבָה שֵׁם וְחָם וָיָפֶת וְחָם
+# הוּא אֲבִי כְנָעַן
+# &quot;And the sons of Noah, that went forth from the ark, were Shem, and Ham,
+# and Japheth; and Ham is the father of Canaan.&quot;
+m.step(&quot;Gen.9.18&quot;)
+# ‹וַיִּהְיוּ בְנֵי־נֹחַ הַיֹּצְאִים מִן־הַתֵּבָה … וְחָם הוּא אֲבִי
+# כְנָעַן› (“and-they-were sons-of Noah going-out-of from the-ark … and-Ham
+# he father-of Canaan”) — fact holds: sons-of-Noach-the-going-out-of-from-
+# the-ark-Shem-Ham-and-Yefet; Ham-he-father-of-Canaan
+m.fact(&quot;bnei_noach_ha_yotzim_min_ha_tevah_shem_cham_va_yefet&quot;,
+       &quot;cham_hu_avi_khenaan&quot;)
+# reads without prior install (flag, not fix): Noach, ark, Canaan
+m.presupposed(&quot;noach&quot;, &quot;tevah&quot;, &quot;kenaan&quot;)
+
+# -------------------------- Gen.9.19 · THREE_AND_THE_SCATTERED_EARTH -------
+# שְׁלֹשָׁה אֵלֶּה בְּנֵי־נֹחַ וּמֵאֵלֶּה נָפְצָה כָל־הָאָרֶץ
+# &quot;These three were the sons of Noah, and of these was the whole earth
+# overspread.&quot;
+m.step(&quot;Gen.9.19&quot;)
+# ‹שְׁלֹשָׁה אֵלֶּה … וּמֵאֵלֶּה נָפְצָה כָל־הָאָרֶץ› (“three these … and-
+# from-these was-scattered all the-earth”) — fact holds: three-these-sons-
+# of-Noach; and-from-these-naftzah-all-the-earth
+m.fact(&quot;shelosha_eleh_bnei_noach&quot;,
+       &quot;u_me_eleh_naftzah_khol_ha_aretz&quot;)
+
+# -------------------------- Gen.9.20 · THE_GROUND_MAN_PLANTS_A_VINEYARD ----
+# וַיָּחֶל נֹחַ אִישׁ הָאֲדָמָה וַיִּטַּע כָּרֶם
+# &quot;And Noah the husbandman began, and planted a vineyard.&quot;
+m.step(&quot;Gen.9.20&quot;)
+# ‹וַיָּחֶל נֹחַ› (“and-he-began Noah”) — event: begin — agent Noach
+m.event(&quot;begin&quot;, agent=&quot;noach&quot;)
+# ‹אִישׁ הָאֲדָמָה› (“man-of the-ground”) — fact holds: Noach-man-of-the-
+# ground
+m.fact(&quot;noach_ish_ha_adamah&quot;)
+# ‹וַיִּטַּע כָּרֶם› (“and-he-planted vineyard”) — event: plant — agent
+# Noach; theme kerem
+m.event(&quot;plant&quot;, agent=&quot;noach&quot;, themes=[&quot;kerem&quot;])
+# ‹כָּרֶם› (“vineyard”) — the world gains: kerem
+m.install(&quot;kerem&quot;)
+
+# -------------------------- Gen.9.21 · THE_WINE_AND_THE_SELF_UNCOVERING ----
+# וַיֵּשְׁתְּ מִן־הַיַּיִן וַיִּשְׁכָּר וַיִּתְגַּל בְּתוֹךְ אָהֳלֹה
+# &quot;And he drank of the wine, and was drunken; and he was uncovered within
+# his tent.&quot;
+m.step(&quot;Gen.9.21&quot;)
+# ‹וַיֵּשְׁתְּ מִן־הַיַּיִן› (“and-he-drank from the-wine”) — event: drink —
+# agent Noach; theme from-the-wine
+m.event(&quot;drink&quot;, agent=&quot;noach&quot;, themes=[&quot;min_ha_yayin&quot;])
+# ‹וַיִּשְׁכָּר› (“and-was-drunk”) — event: become-drunk — agent Noach
+m.event(&quot;become_drunk&quot;, agent=&quot;noach&quot;)
+# ‹וַיִּתְגַּל בְּתוֹךְ אָהֳלֹה› (“and-uncovered-himself inside his-tent”) —
+# event: uncover-self — agent Noach; theme in-inside-aholoh
+m.event(&quot;uncover_self&quot;, agent=&quot;noach&quot;, themes=[&quot;be_tokh_aholoh&quot;])
+
+# -------------------------- Gen.9.22 · THE_SEEING_AND_THE_TELLING ----------
+# וַיַּרְא חָם אֲבִי כְנַעַן אֵת עֶרְוַת אָבִיו וַיַּגֵּד לִשְׁנֵי־אֶחָיו
+# בַּחוּץ
+# &quot;And Ham, the father of Canaan, saw the nakedness of his father, and told
+# his two brethren without.&quot;
+m.step(&quot;Gen.9.22&quot;)
+# ‹וַיַּרְא חָם אֲבִי כְנַעַן אֵת עֶרְוַת אָבִיו› (“and-he-saw Ham father-of
+# Canaan obj-marker nakedness-of his-father”) — event: see — agent Ham;
+# theme nakedness-of-aviv
+m.event(&quot;see&quot;, agent=&quot;cham&quot;, themes=[&quot;ervat_aviv&quot;])
+# ‹וַיַּגֵּד לִשְׁנֵי־אֶחָיו בַּחוּץ› (“and-he-told to-his-two his-brothers
+# outside”) — event: tell — agent Ham; theme to-me-shnei-echav
+m.event(&quot;tell&quot;, agent=&quot;cham&quot;, themes=[&quot;li_shnei_echav&quot;])
+
+# -------------------------- Gen.9.23 · THE_BACKWARD_COVERING ---------------
+# וַיִּקַּח שֵׁם וָיֶפֶת אֶת־הַשִּׂמְלָה וַיָּשִׂימוּ עַל־שְׁכֶם שְׁנֵיהֶם
+# וַיֵּלְכוּ אֲחֹרַנִּית וַיְכַסּוּ אֵת עֶרְוַת אֲבִיהֶם וּפְנֵיהֶם
+# אֲחֹרַנִּית וְעֶרְוַת אֲבִיהֶם לֹא רָאוּ
+# &quot;And Shem and Japheth took a garment, and laid it upon both their
+# shoulders, and went backward, and covered the nakedness of their father;
+# and their faces were backward, and they saw not their father&#x27;s nakedness.&quot;
+m.step(&quot;Gen.9.23&quot;)
+# ‹וַיִּקַּח שֵׁם וָיֶפֶת אֶת־הַשִּׂמְלָה› (“and-he-took Shem and-Yefet obj-
+# marker the-garment”) — event: take — agent Shem-and-Yefet; theme the-
+# simlah
+m.event(&quot;take&quot;, agent=&quot;shem_va_yefet&quot;, themes=[&quot;ha_simlah&quot;])
+# ‹וַיָּשִׂימוּ עַל־שְׁכֶם שְׁנֵיהֶם› (“and-they-set over shoulder-of both-
+# of-them”) — event: set — agent Shem-and-Yefet; theme over-shoulder-of-
+# both-of-them
+m.event(&quot;set&quot;, agent=&quot;shem_va_yefet&quot;, themes=[&quot;al_shekhem_shneihem&quot;])
+# ‹וַיֵּלְכוּ אֲחֹרַנִּית› (“and-they-walked backward”) — event: walk-
+# backward — agent Shem-and-Yefet
+m.event(&quot;walk_backward&quot;, agent=&quot;shem_va_yefet&quot;)
+# ‹וַיְכַסּוּ אֵת עֶרְוַת אֲבִיהֶם› (“and-they-covered obj-marker nakedness-
+# of their-father”) — event: cover — agent Shem-and-Yefet; theme nakedness-
+# of-avihem
+m.event(&quot;cover&quot;, agent=&quot;shem_va_yefet&quot;, themes=[&quot;ervat_avihem&quot;])
+# ‹וּפְנֵיהֶם אֲחֹרַנִּית וְעֶרְוַת אֲבִיהֶם לֹא רָאוּ› (“and-their-faces
+# backward and-nakedness-of their-father not they-saw”) — fact holds: and-
+# nakedness-of-avihem-not-they-saw
+m.fact(&quot;ve_ervat_avihem_lo_rau&quot;)
+
+# -------------------------- Gen.9.24 · THE_AWAKENING_AND_THE_KNOWING -------
+# וַיִּיקֶץ נֹחַ מִיֵּינוֹ וַיֵּדַע אֵת אֲשֶׁר־עָשָׂה־לוֹ בְּנוֹ הַקָּטָן
+# &quot;And Noah awoke from his wine, and knew what his youngest son had done
+# unto him.&quot;
+m.step(&quot;Gen.9.24&quot;)
+# ‹וַיִּיקֶץ נֹחַ מִיֵּינוֹ› (“and-he-awoke Noah from-his-wine”) — event:
+# awake — agent Noach
+m.event(&quot;awake&quot;, agent=&quot;noach&quot;)
+# ‹וַיֵּדַע אֵת אֲשֶׁר־עָשָׂה־לוֹ בְּנוֹ הַקָּטָן› (“and-he-knew obj-marker
+# that-which did to-him his-son the-small”) — event: know — agent Noach;
+# theme that-which-make-not-beno-the-small
+m.event(&quot;know&quot;, agent=&quot;noach&quot;, themes=[&quot;asher_asah_lo_beno_ha_qatan&quot;])
+
+# -------------------------- Gen.9.25 · THE_FIRST_HUMAN_CURSE ---------------
+# וַיֹּאמֶר אָרוּר כְּנָעַן עֶבֶד עֲבָדִים יִהְיֶה לְאֶחָיו
+# &quot;And he said: &#x27;Cursed be Canaan; a servant of servants shall he be unto
+# his brethren.&#x27;&quot;
+m.step(&quot;Gen.9.25&quot;)
+# ‹וַיֹּאמֶר אָרוּר כְּנָעַן› (“and-he-said cursed Canaan”) — event: speak —
+# agent Noach; theme cursed-Canaan
+m.event(&quot;speak&quot;, agent=&quot;noach&quot;, themes=[&quot;arur_kenaan&quot;])
+# ‹אָרוּר כְּנָעַן› (“cursed Canaan”) — role assigned: Canaan -&gt; cursed
+m.assign(&quot;kenaan&quot;, &quot;arur&quot;)
+# ‹עֶבֶד עֲבָדִים יִהְיֶה לְאֶחָיו› (“slave-of slaves shall-he-be to-his-
+# brothers”) — fact holds: slave-of-slaves-yihyeh-to-echav(Canaan)
+m.fact(&quot;eved_avadim_yihyeh_le_echav(kenaan)&quot;)
+
+# -------------------------- Gen.9.26 · THE_FIRST_HUMAN_BLESSING ------------
+# וַיֹּאמֶר בָּרוּךְ יְהֹוָה אֱלֹהֵי שֵׁם וִיהִי כְנַעַן עֶבֶד לָמוֹ
+# &quot;And he said: &#x27;Blessed be the LORD, the God of Shem; and let Canaan be
+# their servant.&#x27;&quot;
+m.step(&quot;Gen.9.26&quot;)
+# ‹וַיֹּאמֶר בָּרוּךְ יְהֹוָה אֱלֹהֵי שֵׁם› (“and-he-said blessed YHWH God-
+# of Shem”) — event: speak — agent Noach; theme blessed-yhwh-elohei-Shem
+m.event(&quot;speak&quot;, agent=&quot;noach&quot;, themes=[&quot;barukh_yhwh_elohei_shem&quot;])
+# ‹בָּרוּךְ יְהֹוָה אֱלֹהֵי שֵׁם› (“blessed YHWH God-of Shem”) — blessing:
+# Noach blesses yhwh-elohei-Shem
+m.bless(&quot;noach&quot;, &quot;yhwh_elohei_shem&quot;)
+# ‹וִיהִי כְנַעַן עֶבֶד לָמוֹ› (“and-let-him-be Canaan slave to-them”) —
+# Noach speaks a demand — LET: yehi(Canaan, slave-of-lamo)
+m.declare(&quot;noach&quot;, &quot;LET&quot;,
+          &quot;yehi(kenaan, eved_lamo)&quot;)
+
+# -------------------------- Gen.9.27 · THE_ENLARGEMENT_AND_THE_DWELLING ----
+# יַפְתְּ אֱלֹהִים לְיֶפֶת וְיִשְׁכֹּן בְּאָהֳלֵי־שֵׁם וִיהִי כְנַעַן עֶבֶד
+# לָמוֹ
+# &quot;God enlarge Japheth, and he shall dwell in the tents of Shem; and let
+# Canaan be their servant.&quot;
+m.step(&quot;Gen.9.27&quot;)
+# ‹יַפְתְּ אֱלֹהִים לְיֶפֶת› (“may-He-enlarge God to-Yefet”) — Noach speaks
+# a demand — LET: may-He-enlarge(God, to-Yefet)
+m.declare(&quot;noach&quot;, &quot;LET&quot;,
+          &quot;yaft(elohim, le_yefet)&quot;)
+# ‹וְיִשְׁכֹּן בְּאָהֳלֵי־שֵׁם› (“and-may-he-dwell in-the-tents-of Shem”) —
+# Noach speaks a demand — LET: may-he-dwell(in-aholei-Shem)
+m.declare(&quot;noach&quot;, &quot;LET&quot;,
+          &quot;yishkon(be_aholei_shem)&quot;)
+# ‹וִיהִי כְנַעַן עֶבֶד לָמוֹ› (“and-let-him-be Canaan slave to-them”) —
+# Noach speaks a demand — LET: yehi(Canaan, slave-of-lamo)
+m.declare(&quot;noach&quot;, &quot;LET&quot;,
+          &quot;yehi(kenaan, eved_lamo)&quot;)
+
+# -------------------------- Gen.9.28 · THE_YEARS_AFTER_THE_DELUGE ----------
+# וַיְחִי־נֹחַ אַחַר הַמַּבּוּל שְׁלֹשׁ מֵאוֹת שָׁנָה וַחֲמִשִּׁים שָׁנָה
+# &quot;And Noah lived after the flood three hundred and fifty years.&quot;
+m.step(&quot;Gen.9.28&quot;)
+# ‹וַיְחִי־נֹחַ אַחַר הַמַּבּוּל שְׁלֹשׁ מֵאוֹת שָׁנָה וַחֲמִשִּׁים שָׁנָה›
+# (“and-he-lived Noah after the-deluge three hundred year and-fifty year”) —
+# fact holds: and-he-lived-Noach-after-the-deluge-350-year
+m.fact(&quot;va_yechi_noach_achar_ha_mabul_350_shanah&quot;)
+
+# -------------------------- Gen.9.29 · THE_LEDGER_ROW_CLOSES ---------------
+# וַיִּהְיוּ כָּל־יְמֵי־נֹחַ תְּשַׁע מֵאוֹת שָׁנָה וַחֲמִשִּׁים שָׁנָה
+# וַיָּמֹת
+# &quot;And all the days of Noah were nine hundred and fifty years; and he died.&quot;
+m.step(&quot;Gen.9.29&quot;)
+# ‹וַיִּהְיוּ כָּל־יְמֵי־נֹחַ תְּשַׁע מֵאוֹת שָׁנָה וַחֲמִשִּׁים שָׁנָה›
+# (“and-they-were all days-of Noah nine hundred year and-fifty year”) — fact
+# holds: all-days-of-Noach-950-year
+m.fact(&quot;kol_yemei_noach_950_shanah&quot;)
+# ‹וַיָּמֹת› (“and-he-died”) — event: die — agent Noach
+m.event(&quot;die&quot;, agent=&quot;noach&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == {&#x27;kerem&#x27;}
+    assert m.presupposed_set() == {&#x27;noach&#x27;, &#x27;kenaan&#x27;, &#x27;tevah&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {&#x27;kenaan&#x27;: &#x27;arur&#x27;}
+    assert m.REGISTRY[&quot;writes&quot;] == 1
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;yehi(kenaan, eved_lamo)&#x27;, &#x27;yaft(elohim, le_yefet)&#x27;, &#x27;yishkon(be_aholei_shem)&#x27;, &#x27;yehi(kenaan, eved_lamo)&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 4
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;read_before_install&#x27;: 3}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;bnei_noach_ha_yotzim_min_ha_tevah_shem_cham_va_yefet&#x27;, &#x27;cham_hu_avi_khenaan&#x27;, &#x27;shelosha_eleh_bnei_noach&#x27;, &#x27;u_me_eleh_naftzah_khol_ha_aretz&#x27;, &#x27;noach_ish_ha_adamah&#x27;, &#x27;ve_ervat_avihem_lo_rau&#x27;, &#x27;eved_avadim_yihyeh_le_echav(kenaan)&#x27;, &#x27;va_yechi_noach_achar_ha_mabul_350_shanah&#x27;, &#x27;kol_yemei_noach_950_shanah&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 22
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre>
+<div class="note">FROZEN 2026-08-03 (second-generation derivation agent; freeze-after-review by the main loop — NO agent freeze; fifth unit under the PIPELINE + DEBUT-MAP process, the agent&#x27;s first): twenty-fourth-unit candidate — THE VINEYARD AND THE CURSE; fourteenth extension-free derivation candidate in a row. The inverse of gen_22&#x27;s all-speech ring: sixteen deed-events carry the plot and speech enters only twice — the Torah&#x27;s FIRST HUMAN curse and FIRST HUMAN blessing, adjacent verses, one mouth. Every call precedent-matched with encodings quoted: the vineyard INSTALLED on gen_08&#x27;s garden class (the chain garden/city/ark/altar/vineyard); the curse two-layered on gen_11/gen_12&#x27;s ASSIGN device (kenaan-&gt;arur — the BARE formula, the letter&#x27;s own; the doom-clause a HOLDS fact on gen_11&#x27;s sentence-genre class; the speaking an event with a HUMAN agent — delta named); the blessing as gen_05&#x27;s BLESS inverted (a human blesses YHWH; mandate absent per gen_07); the four jussives as DECLARE + LET (TIR-026; gen_01&#x27;s yehi class, gen_13&#x27;s human-demand precedent) pushed and letter-faithfully OPEN — the queue ends open x4; the death-row on gen_14&#x27;s class (the 950-total fact + the die-event; the 5:32-to-9:29 hostage-row closure held as prose + [OPEN], Stage E ledger arc #7). FOUR frozen predictions land (gen_18&#x27;s cover-verb at 9:23; gen_21&#x27;s bless-verb at 9:26; gen_14&#x27;s curse-root at 9:25; gen_14&#x27;s ledger row at 9:29) plus gen_11&#x27;s named chain-link. EVED (&#x27;slave/servant&#x27;) born x4 inside the curse [crown]; ACHORANNIT (&#x27;backward&#x27;) spends its whole Torah career in one verse [rare crown]; NAFTZAH (&#x27;was scattered&#x27;) a Torah hapax pointing at Babel through a sibling stem. Onkelos INSERTS THE SHEKHINAH at 9:27 (find-class — the ambiguous dwell-subject resolved God-ward), levels the YHWH/Elohim name-split, moves the telling to the market, keeps the nakedness plain — dual-track throughout. Machine state: t0 empty, ONE install (+3 presupposed), ONE registry write, FOUR demands open, zero tests, zero invariants, zero handlers, nine facts, three read-flags — a dead man at nine hundred fifty, and a queue nothing will ever pop.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

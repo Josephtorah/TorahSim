@@ -1,0 +1,969 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_36_gerar_dream_prophet — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_36_gerar_dream_prophet?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Gerar: the dream-court, the prophet&#x27;s prayer, the shut wombs (20:1-18) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_36_gerar_dream_prophet</b> · Genesis 20:1-18 · derive logic_derived_v1 · phase C-36</div>
+<div class="meta"><a href="../#Gen/20/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">הָשֵׁב אֵשֶׁת־הָאִישׁ כִּי־נָבִיא הוּא</span> · <i>hashev eshet-ha-ish ki-navi hu</i> · &#x27;Return the man&#x27;s wife, for he is a prophet&#x27;</p>
+<div class="note">Pre-Code method (Stage C): stage first, write last. All censuses, careers, morphology, trees, pointed lines, JPS lines, and precedent quotes pulled BEFORE any YAML; every frozen quote re-opened this session (grep -n + exact ranges). Flags never auto-resolve.</div>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DRAFT by the gen-6 block agent (third unit of its tenure; mechanics only; never freezes, never commits, never amends). Span per the OWNER ORDER ratifying this agent&#x27;s own pre-stage: ONE UNIT Gen 20:1-18, per-verse x18, seam at 21:1 (u-YHWH paqad et-sarah — the visitation opens the birth chapter; 20:18&#x27;s shut wombs hand directly to it). THE DRAFT&#x27;S FLAGGED CHOICES (ratify-or-reverse, per flag): (1) NAME CHOICE: gen_36_gerar_dream_prophet. Alternatives: gen_36_avimelekh_dream, gen_36_second_sister_claim. (2) SETTLED CYCLE #13 CLAIMED [the unit&#x27;s machine crown; numbering for main-loop verification]: 20:7&#x27;s HASHEV eshet-ha-ish (&#x27;RETURN the man&#x27;s wife&#x27; — divine imperative Vhv2ms, in the dream) is pushed DECLARE(elohim, LET(hashev(eshet_ha_ish))) and POPPED at 20:14&#x27;s VA-YASHEV lo et sarah ishto — the demand&#x27;s own ROOT AND STEM (shuv hiphil) as foreground deed BY THE DEMANDEE: the echo-receipt class&#x27;s textbook shape. THE &#x27;FIRST&#x27; PRECISELY CLAIMED [counterexample hunted per the coordinator&#x27;s order]: divine-demand pops exist in the frozen roster (cycles #1-#6&#x27;s flood-era pops; cycle #8 — frozen gen_31 quoted: &#x27;LET(qechah(avram, eglah_ez_ayil_tor_ve_gozal))&#x27; with &#x27;GOD says take next&#x27; — a divine demand popped by human compliance), so #13 is NOT the first divine pop: it is the FIRST DIVINE PUSH since gen_33&#x27;s covenant pair (17:1&#x27;s walk, 17:9&#x27;s guarded keep — both OPEN) and the FIRST DIVINE-DEMAND POP since cycle #8. The pop is machine-asserted by the frozen-preferred device: after STEP_Gn_20_14 the popped demand was the ONLY entry on the queue — &#x27;SPECS empty&#x27; (gen-5&#x27;s ledger note: prefer that assert exactly here). (3) VE-CHEYEH IS A CONSEQUENCE-IMPERATIVE, HELD AS FACT [weigh 1, staged and owner-expected]: 20:7&#x27;s ve-yitpalel baadkha VE-CHEYEH (&#x27;and he will pray for you — and LIVE&#x27;) — the imperative is interposed-after the intercession future, not one breath with hashev (the compound law&#x27;s one-breath test fails); classical consequence-imperative (&#x27;that you may live&#x27;). Held as the return-command&#x27;s outcome-arm, FACT + this flag; the push-alternative (the mood decides, bare) is named for the owner. (4) THE CONDITIONAL DEATH-SENTENCE IS A FACT, NOT A HANDLER AND NOT A PUSH [weigh 2, staged]: ve-im-einkha meshiv DA KI-MOT TAMUT (&#x27;and if you do not return her — KNOW that dying you shall DIE&#x27;). The da-imperative sits INSIDE the if-branch: a conditional demand whose protasis DIES with the return (cycle #13 voids the trigger) — the machine has no conditional-demand device and none is invented; the whole im-clause is ONE conditional FACT (case-speech on one man, not installed law — lev_13&#x27;s HANDLER class declined; gen_27/gen_33&#x27;s conditional-fact family). The push-alternative (the sa_u_ree attention-imperative class — frozen gen_29&#x27;s compound-chain parent PUSHED a look-command) is NAMED for the owner. THE PAIR-CLASS FIND [census-exact]: MOT TAMUT has exactly TWO Torah tokens — Eden&#x27;s ban (2:17) and this dream (20:7): the death-formula exists at the tree and at Gerar, nowhere else. (5) THE QUOTED DEMAND PUSHES NOTHING [weigh 3, staged]: 20:13&#x27;s imri-li achi hu (&#x27;say of me: he is my brother&#x27; — Vqv2fs imperative inside Abraham&#x27;s RETROSPECTIVE) is testimony, not speech-act: the ORIGINAL demand is frozen gen_28&#x27;s, quoted: &#x27;imri(saray, achoti_hi) at 12:13&#x27; — &#x27;imri-demand pushed and OPEN&#x27; — and it stands open BEHIND THE WALL: nothing re-pushes, nothing crosses; the retelling is held as quoted FACT + this flag. (The letter&#x27;s own arrangement- clause — &#x27;at every place we come&#x27; — makes 20:2&#x27;s claim the frozen demand&#x27;s nth execution: prose.) (6) THE GRANT-IMPERATIVE PUSHES [weigh 4, staged]: 20:15&#x27;s SHEV (&#x27;dwell [where it is good in your eyes]&#x27;) — Avimelech&#x27;s imperative is an OFFER, and offer-imperatives push by frozen law: gen_29&#x27;s 13:9 hipared-na (&#x27;separate, please&#x27; — the parting-OFFER pushed and popped as cycle #7). DECLARE(avimelekh, LET(shev(ba_tov_be_einekha))) — OPEN: no dwelling in the demand&#x27;s verb is narrated in-span (21:34&#x27;s sojourn is another verb, another unit). (7) BA-TOV FIRES NO TEST: 20:15&#x27;s ba-tov be-einekha (&#x27;in the good of your eyes&#x27;) is the attribute-idiom class — frozen gen_35 quoted: &#x27;an attribute-idiom inside reported speech: NO TEST&#x27; (19:8&#x27;s ka-tov, flag-9 there); the instrument field otherwise: tzaddiq x1 as a KING&#x27;S QUESTION (flag 8), shaah x0, nichoach x0 — zero instrument events, machine-checked. (8) TZADDIQ TOKEN 10 LANDS FROZEN gen_34 [the count-argument re-run]: frozen gen_34&#x27;s plea-step carries the line, quoted: &#x27;Token 10 is 20:4 — Avimelech&#x27;s wilt Thou slay even a righteous nation? — the count-argument&#x27;s next token is the same argument&#x27; [LANDED]. And the discipline holds AGAIN: 20:4&#x27;s ha-goy gam-TZADDIQ taharog is INTERROGATIVE-coded (HTi) — a question at God: gen_31&#x27;s flag-5 law (no DECLARE mood for questions), NO TEST, NO demand-on-God — the open owner triage sits one word away and is NOT touched [the fence held a third time]. (9) THE DREAM-COURT DEVICE: God&#x27;s two speeches (20:3, 20:6-7) are BA-CHALOM (&#x27;in the dream&#x27;) — chalom&#x27;s Torah debut x2: the dream-revelation class opens on a GENTILE KING (its next tokens are Jacob and Laban — the class stays fond of outsiders). Encoded as say-events with the dream-frame named (the interior-speech device&#x27;s outward twin: there speech stays inside a person; here God enters a person&#x27;s sleep) [device boundary named; no new operator]. (10) THE FOURFOLD DEBUT CROWN [census-verified]: NAVI (&#x27;prophet&#x27;) token 1/14 — born describing ABRAHAM, spoken BY GOD, TO A FOREIGN KING, with INTERCESSION as its stated function; PALAL (&#x27;pray&#x27;) tokens 1-2 both in-span — PROMISED at 20:7 (ve-yitpalel, law-grammar future: no push, gen_33&#x27;s reframe) and PERFORMED at 20:17 (va-yitpalel, narrative deed): the letter&#x27;s own promise-performance pair, held as prose (nothing was pushed; the echo is the letter&#x27;s); RAPHA (&#x27;heal&#x27;) token 1/14 — born inside the prophet&#x27;s prayer for the foreign court; CHALOM as flag 9. THE DUAL-TRACK CROWN: Onkelos rendered Abraham&#x27;s STANDING as PRAYER at frozen 18:22 and 19:27 (meshamesh bi-tzlo) — two chapters BEFORE the letter&#x27;s first pray-verb; at 20:7/17 the buffer receives the letter&#x27;s palal in ITS OWN root: VI-TZALEI / VE-TZALI — the anticipation vindicated [the fetch-run&#x27;s headline]. (11) THE SIN-VERB&#x27;S GENTILE DEBUT [census]: chata (&#x27;sin&#x27;) tokens 1-2 are BOTH this chapter — God&#x27;s me-chato-LI (&#x27;from sinning against ME&#x27;, 20:6: the wronged party is God, not the husband) and the king&#x27;s chatati (&#x27;what have I sinned&#x27;, 20:9); and CHATAAH GEDOLAH (&#x27;great sin&#x27;) has exactly FOUR Torah tokens: 20:9 and the GOLDEN CALF x3 (Exod 32:21/30/31) — Gerar and the calf share the phrase [census-exact]. (12) THE INNOCENCE LEXICON LIVES ONE EXCHANGE [census-exact]: TOM (&#x27;integrity&#x27;) tokens 1-2 = the claim and the concession (20:5 be-tom-levavi / 20:6 be-tom-levavkha — the only narrative tokens); NIQAYON (&#x27;cleanness&#x27;) a TORAH HAPAX (20:5&#x27;s u-ve-niqyon kapai); the innocence-vocabulary is born and spent in Avimelech&#x27;s defense. (13) THE WITHHOLD-ARC [census]: CHASAKH (&#x27;withhold&#x27;) Torah debut at 20:6 — GOD withholds the king from sin; its four Torah tokens run to the AQEDAH&#x27;s crown (22:12/16&#x27;s lo chasakhta &#x27;you did not withhold your son&#x27;) and Joseph&#x27;s refusal (39:9, beside the same chata-grammar): the verb of divine restraint becomes the verb of human surrender [prose arc]. NAGA (&#x27;touch&#x27;) token 3 — the touch-chain: Eden&#x27;s fence (3:3), the plague on Pharaoh&#x27;s house (12:17 — the FIRST sister-court, frozen gen_28&#x27;s span), &#x27;I did not let you TOUCH her&#x27; (20:6), Avimelech&#x27;s own decree (26:11 — the THIRD episode) [census]. (14) THE SHUT-WOMB CLOSER [census + cross-unit arc]: 20:18&#x27;s ATZOR ATZAR (&#x27;shutting He SHUT&#x27;) — the infinitive-absolute doubling; atzar tokens 2-3, and TOKEN 1 is frozen gen_32&#x27;s, quoted: &#x27;ATZARANI (&#x27;He has RESTRAINED me&#x27;) — atzar TORAH [DEBUT]&#x27; (16:2, Sarai&#x27;s own complaint): the shut-verb&#x27;s first two contexts are Sarah&#x27;s barrenness and the court that took her. RECHEM (&#x27;womb&#x27;) TORAH DEBUT — the womb-word enters the corpus SHUT (its career: Leah opened, Rachel remembered, every womb consecrated at Exod 13). The seam is the letter&#x27;s own hinge: 20:18 closes every womb; 21:1 opens Sarah&#x27;s [nothing crosses; the watch is gen_37&#x27;s]. (15) THE PLURAL VERB ON ELOHIM [named-only]: 20:13&#x27;s hitu oti elohim (&#x27;[the gods?] caused me to wander&#x27;) — the DB codes the verb PLURAL (HVhp3cp): the letter&#x27;s own grammar-crux held flat, no harmonizing; the chain&#x27;s files and the buffer&#x27;s total recomposition (the wandering transferred to the idolatrous PEOPLES, Abraham &#x27;brought near to His fear&#x27;) are named-only [dual-track]. (16) PRESUPPOSED READS: gerar (10:19&#x27;s nations-boundary token), qadesh and shur (frozen spans&#x27; geography) — gen_29&#x27;s class; the recurring cast unflagged. WORLD installs: avimelekh ONLY (the court is his suffix-field; the letter individuates no one else new). REGISTRY: zero writes (no naming formula in-span — the registry sleeps again after gen_35&#x27;s two). SEED-NUMBER NOTE: 282 tokens / 18 verses VERIFIED census-exact; 113 = normalized strongs; 70 = scan entries.</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (retro, PROCESS.md oral-first era; manifest logic/oral_audit/manifests/gen_36_gerar_dream_prophet_claims.json — 12 VERIFIED, 0 FAILED, 0 UNCHECKABLE; record logic/oral_audit/AUDIT_gen_36_2026-08-08.md). CROWNS (chain-attested + DB-verified): (1) THE DREAM FILLS, THEN LEANS (G36-01/02, the Hilleli and precise books via Minchat Shai): God comes בחלום (&quot;in a dream,&quot; 20:3) PLENE — and answers בחלם (20:6) DEFECTIVE: full at the arrival, lean at the answer (Minchat Shai&#x27;s pun stands against the both-defective printers: they &quot;were as dreamers&quot;). (2) והרגוני (&quot;they will kill me for my wife&quot;) — one Torah token (20:11), PLENE; the Masorah&#x27;s defective twin is Jeroboam&#x27;s fear (I Kings 12:27; edge): &quot;Gerar&#x27;s men not as wicked as the idolaters&quot; — the fear-formula&#x27;s fullness grades the feared (G36-03, Kitzur). (3) THE DISPUTED NAME ON A PLURAL VERB (G36-05, Masekhet Soferim): התעו אתי אלהים (&quot;when God/the powers CAUSED ME TO WANDER,&quot; 20:13) — profane by the plural, holy per R. Chananiah, Onkelos, and Bereshit Rabbah&#x27;s three readings; SNAPSHOT: the plural verb letter-exact (DB-morph third-plural) — the grammatical fact both camps argue from; holy/profane layer, station five. (4) ולשרה — exactly TWICE in the Torah, and the pair preaches: &quot;and to Sarah he SAID: a COVERING OF EYES&quot; (20:16) with &quot;and to Sarah — A SON&quot; (18:14); the eye-covering read forward into Isaac&#x27;s dimming eyes (27:1, named) (G36-10, Kitzur). (5) ויתפלל (&quot;and he shall PRAY&quot;) — the prayer-word&#x27;s whole Torah career is FOUR tokens, opening TWICE in this chapter (20:7 the promise, in the prophet-word&#x27;s debut verse; 20:17 the performance) before Moses&#x27; two (Num 11:2, 21:7); the Masorah&#x27;s legs: the idolater who bows-and-prays (Isa 44:17) and the ever-needed prayer (Ps 72:15; edges) (G36-11). (6) Avimelech ONE WRITTEN WORD at all twenty-one Torah tokens (the Ramah, censused whole) (G36-04). (7) The two letter-facts of the withholding verse (G36-06/07): אותך (&quot;YOU&quot;) plene among the Masorah&#x27;s full object-pronouns; מחטו (&quot;from sinning&quot;) WITHOUT its aleph — the mystics&#x27; needle-reading rides the missing letter (named). (8) הלא (&quot;did he not say&quot;) defective AND free of maqqef — both machine-checked, the absence by column (G36-08/09). (9) מה עשית (&quot;what have you done to us&quot;) &quot;without pashta&quot; — the verb under mahpakh (the turning accent): the garden&#x27;s question-form (this machine&#x27;s roster: God twice, then three kings) reaches Gerar pointed as ruled (G36-12). INSTRUMENT GAPS: the holy/profane Name layer&#x27;s stations five and six (20:13&#x27;s dispute; 20:3&#x27;s dream-Name with the Zohar&#x27;s reservation). READINGS (named-only): &quot;if you kill me you kill the RIGHTEOUS too&quot; (Kitzur on 20:4); the needle-reading; the dagesh minutiae: הזה (&quot;this&quot;) dotted twice, גרר (&quot;Gerar&quot;) and הגוי (&quot;the nation&quot;) dotted, גם (&quot;also&quot;) dotted and unjoined, אל (&quot;to&quot;) under the turning accent. Machine layer untouched. RUN 4 CLOSES HERE: gen_27-gen_36 audited and folded — Gen 1:1 through 20:18 now carries a complete oral layer.</div>
+<div class="meta">confidence: structure tested; operator readings tested-per-TIR; intent hypothesis</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Source fetch + verification</td><td>Hebrew: Data/Gen.xml via the DB snapshot; pointed lines regenerated (gen_22&#x27;s convention). English aid: JPS 1917. Span totals VERIFIED: 282 tokens / 18 verses / 113 normalized strongs / 70 scan-flagged — the compact relief after 437 and 563 [flag 16]. Onkelos Genesis 20:1-18 fetched Tier-A, sequential, 0.5s — cache MISS x18 (the shortest run of this tenure), all appended to Data/FETCHLOG.md 2026-08-05.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Census battery</td><td>Two batched scripts (pre-stage + finishing battery). THE FOURFOLD DEBUT verified: navi 1/14 (20:7), palal 1-2/8 (20:7, 20:17), rapha 1/14 (20:17), chalom 1-2/37 (20:3, 20:6). PAIR- AND HAPAX-CLASSES verified census-exact: MOT TAMUT adjacency — exactly TWO Torah tokens (2:17, 20:7); CHATAAH GEDOLAH — exactly FOUR (20:9 + the golden calf x3: Exod 32:21/30/31); NIQAYON a Torah hapax (20:5); TOM (&#x27;integrity&#x27;) tokens 1-2 both this exchange; YIRAT (&#x27;fear-of&#x27;, construct noun) 1/3 (20:11; token 2 is Exod 20:20 — SINAI&#x27;s stated purpose); RECHEM (&#x27;womb&#x27;) 1/11 — born SHUT at 20:18 (career: Leah, Rachel, the Exod 13 consecrations); KESUT (&#x27;covering&#x27;) 1/5 (career: the law&#x27;s garment-covers). Careers: chata-verb tokens 1-2 both in-span (God&#x27;s against-ME, the king&#x27;s what-have-I); chasakh (&#x27;withhold&#x27;) 1/4 (20:6 -&gt; the Aqedah x2 -&gt; Joseph); naga (&#x27;touch&#x27;) token 3 (Eden&#x27;s fence, Pharaoh&#x27;s plague, Gerar&#x27;s restraint; token 4 = 26:11&#x27;s third episode); atzar tokens 2-3 (token 1 = 16:2&#x27;s atzarani, frozen gen_32); harag tokens 6-8 binding the two sister-episodes (12:12, 20:4, 20:11); achot tokens 4-6 in-span (tokens 2-3 = 12:13/19, the frozen first round; token 1 = 4:22&#x27;s Naamah); tzaddiq token 10 (the frozen gen_34 line lands); gerar tokens 2-3 (token 1 = 10:19&#x27;s boundary — the presupposition&#x27;s basis; tokens 4-5 = 26:1/6, the THIRD episode waits at Gerar too); yakhach (&#x27;set right&#x27;) 1/8 at 20:16&#x27;s ve-nokhachat (token 2 = 21:25 — Abraham REPROVES Avimelech next chapter, watch); hitu coded HVhp3cp (the plural verb on elohim — flag 15). Mood census: FIVE volitives only (hashev, ve-cheyeh, da, imri-in-quote, shev) — the lightest demand-field of the era; interrogatives x6; say-tokens 14; instrument: tov x1 (idiom), tzaddiq x1 (question), shaah/nichoach x0.</td><td>established</td></tr>
+<tr><td><b>C</b></td><td>Structure choice</td><td>PER-VERSE x18 per the ratified pre-stage (no grouping; the dream-dialogue reads cleanly verse by verse). Tree anchors from mark_rank=1 for all 18 verses; notable thrones: 20:3&#x27;s arms split the verdict (etnachta on ha-layla; the verse ends on baal &#x27;husband&#x27; — hinkha met... ve-hi beulat BAAL: the sentence rests on the marriage); 20:4&#x27;s etnachta ON taharog (&#x27;will You slay&#x27; — the question&#x27;s kill-verb takes the rest); 20:7&#x27;s etnachta on VE-CHEYEH (&#x27;and live&#x27;) — the life-imperative at the rest, the death-doubling in the silluq arm [tree twin for flag 3-4]; 20:16&#x27;s silluq on ve-nokhachat (&#x27;and she was RIGHTED&#x27;) — the chapter&#x27;s vindication-word closes its longest verse; 20:18&#x27;s frame: etnachta on avimelekh, silluq on avraham — the two houses hold the closer&#x27;s two arms.</td><td>established</td></tr>
+<tr><td><b>D</b></td><td>Say-roster + speech map</td><td>14 say-tokens, four voices: the narrated claim (20:2 — achoti hi, the frozen arrangement&#x27;s nth execution), God&#x27;s two dream-speeches (20:3 the verdict; 20:6-7 the concession, the return-command, the alternative), the king&#x27;s three-question rebuke (20:9-10) and his quote-back defense (20:5), the prophet&#x27;s only speech — the excuse (20:11-13: the fear-of-God guess, the half-truth, the wandering-clause, the quoted demand), the grant (20:15) and the damages-speech to SARAH (20:16 — the only speech addressed to her in the span; she speaks nothing: the contested woman is the chapter&#x27;s silent center [prose]). GOD SPEAKS ONLY IN THE DREAM; the narrator holds the frame [structure].</td><td>established</td></tr>
+<tr><td><b>E</b></td><td>Logic format choice</td><td>Operator lines; NO ledger row. THE DEMAND FIELD [flags 2-6]: TWO pushes only — DECLARE(elohim, LET(hashev(eshet_ha_ish))) [20:7; the first divine push since gen_33] and DECLARE(avimelekh, LET(shev(ba_tov_be_einekha))) [20:15; gen_29&#x27;s offer-imperative class]. ONE pop — RESULT at 20:14: SETTLED CYCLE #13 (root+stem echo, demandee compliance; &#x27;SPECS empty&#x27; machine-asserted at the gate — the frozen-preferred device). The consequence-imperative (ve-cheyeh), the conditional death-sentence (da ki-mot tamut), and the QUOTED imri all hold as facts with flags 3-5. Final queue: ONE open. TESTS x0 [flags 7-8]. NAME x0, ASSIGN x0 — registry silent. WORLD: avimelekh only [flag 16] + 3 presupposed geography reads. LEDGER empty.</td><td>tested</td></tr>
+<tr><td><b>F</b></td><td>Operator derivations + flags</td><td>Every operator quotes its class from frozen YAML opened this session: gen_31 (cycle #8&#x27;s divine qechah — the counterexample that shapes the #13 claim; the flag-5 question law), gen_29 (13:9&#x27;s offer-imperative, cycle #7&#x27;s parent), gen_28 (the imri original, pushed and OPEN — the quoted-demand fence), gen_25 via session (the echo-receipt class), gen_33 (law-grammar futures), gen_34 (the tzaddiq-count line — LANDS; the question-law fence), gen_35 (the attribute-idiom NO-TEST class), gen_32 (atzarani — LANDS at 20:18), gen_12 (instrument discipline). Sixteen flags; the boldest are 2 (cycle #13 and its precisely-cut &#x27;first&#x27;), 3-4 (the consequence- imperative and the conditional sentence held as facts), 6 (the grant-imperative push).</td><td>tested</td></tr>
+<tr><td><b>G</b></td><td>Onkelos dual-track (Tier-A)</td><td>18 verses fetched (all MISS). HEADLINE — THE TZALI VINDICATION: the letter&#x27;s first pray-verb (20:7 ve-yitpalel; 20:17 va-yitpalel) is received by the buffer in ITS OWN root — VI-TZALEI alakh (&#x27;and he will PRAY for you&#x27;), VE-TZALI avraham (&#x27;and Abraham PRAYED&#x27;): the same tzali the buffer wrote OVER the stand-verb at frozen 18:22 and 19:27, two chapters before the Hebrew said pray — the anticipation vindicated in the debut verses [dual-track crown]. Second: THE MEMRA ENTERS THE DREAM — 20:3&#x27;s va-yavo elohim (&#x27;God came&#x27;) -&gt; VA-ATA MEIMAR MIN QODAM YYY (&#x27;a WORD from before YHWH came&#x27;), and 20:6 again: the dream-court is a Memra-court (the Memra-arc&#x27;s next firing after the frozen 15:1/15:6/17:2-11 chain). Third: THE 20:13 RECOMPOSITION — hitu oti elohim (the plural crux) rebuilt wholesale: &#x27;when the PEOPLES went astray after the works of their hands, ME did YHWH bring NEAR to His fear&#x27; — the wandering transferred to idolaters, the prophet not wandered but drawn, the fear-of-God noun threaded back in [the buffer&#x27;s boldest intervention of the tenure; named-only]. Repeat buffers consistent with frozen records: Qadesh -&gt; REQAM and Shur -&gt; CHAGRA (the identification class, exact); lead-for-take on the person (u-DVAR yat sarah x2 — 12:15&#x27;s class); kodam-distancing (sinning BEFORE Me; revealed BEFORE Me for &#x27;I know&#x27;); the zakkai-family carrying both the king&#x27;s innocence (20:4&#x27;s zakkai for goy-tzaddiq; 20:5&#x27;s zakaut for clean hands) — the same root the buffer gave the plea&#x27;s righteous; the shut-verb weld: 20:18&#x27;s atzor-atzar -&gt; MEICHAD ACHAD — the SAME achad the buffer used for Lot&#x27;s door (19:6/10): doors and wombs close in one Aramaic verb [delta find]. Also: kesut einayim -&gt; KESUT DIQAR (&#x27;a covering of HONOR&#x27; — the yeqara-root dignifying the hapax idiom); rapha -&gt; ASI (the heal-family); ve-nokhachat -&gt; ITOKHACHAT (&#x27;vindicated&#x27;); chataah gedolah -&gt; CHOVA RABBA (the din-family&#x27;s debt-word). Deltas recorded, never merged.</td><td>tested</td></tr>
+<tr><td><b>H</b></td><td>TESTS / instrument discipline</td><td>ZERO TESTS [flags 7-8]: tov x1 as the grant&#x27;s idiom (gen_35&#x27;s frozen class), tzaddiq x1 as the king&#x27;s question (gen_31&#x27;s flag-5 law; the 15:6 and demand-on-God triages fenced a third time), shaah/nichoach x0 — machine-checked. The chapter runs a full trial and grades it entirely in speech [prose].</td><td>established</td></tr>
+<tr><td><b>I</b></td><td>Chain + oral queue</td><td>Tier-A queue named (oral_notes): Bereshit Rabbah 52; Rashi at 20:1 (the journey&#x27;s why), 20:7 (navi), 20:13 (hitu&#x27;s plural), 20:16 (kesut einayim); Bavli Makkot 9b (the ben-noach and the near-sin); Bava Qamma 92a (the prayed-for healed first — the chain&#x27;s rule minted FROM 20:17 beside 21:1&#x27;s seam); Berakhot 34b (prayer for others); the ten-trials frame. ALL NAMED ONLY — ein adam dan me-atzmo (&#x27;one may not derive on his own&#x27;).</td><td>established</td></tr>
+<tr><td><b>J</b></td><td>Pre-flight + draft ship</td><td>Pre-flight 2026-08-05 against the UNMODIFIED repo interpreter — zero injected prototypes (scratchpad preflight_gen36.py; draft guard bypassed for preview only). Ships as STATUS: DRAFT by the gen-6 block agent (mechanics only, third unit of its tenure); the main loop verifies quotes, re-runs censuses, rules on flags 1-16, and freezes through the standard gate chain.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_20_1 · Gen.20.1 · <span class='expr'>THE_JOURNEY_TO_GERAR</span></h3>
+<p><span class="he">וַיִּסַּע מִשָּׁם אַבְרָהָם אַרְצָה הַנֶּגֶב וַיֵּשֶׁב בֵּין־קָדֵשׁ וּבֵין שׁוּר וַיָּגָר בִּגְרָר</span> · <i>va-yisa mi-sham avraham artzah ha-negev va-yeshev bein-qadesh u-vein shur va-yagor bi-gerar</i> · [EN-AID/JPS] And Abraham journeyed from thence toward the land of the South, and dwelt between Kadesh and Shur; and he sojourned in Gerar.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויסע משם אברהם ארצה הנגב וישב בין־קדש ובין שור</span> · <i>va-yisa mi-sham avraham artzah ha-negev va-yeshev bein-qadesh u-vein shur</i> · journeyed south, settled between Qadesh and Shur (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויגר בגרר</span> · <i>va-yagor bi-gerar</i> · and SOJOURNED in Gerar (verse-final bi-gerar)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">journey_sojourn(e1) ∧ Agent(e1, avraham) ∧ Goal(e1, gerar)</span><br><span class="gloss">= journey-sojourn(e1) ∧ Agent(e1, avraham) ∧ Goal(e1, gerar)</span><br>MI-SHAM (&#x27;from THERE&#x27;) — the letter&#x27;s unnamed there is the frozen prayer-place of 19:27 [cross-unit prose, nothing crosses]. VA-YAGOR (&#x27;and he SOJOURNED&#x27;) — the gur-verb of the sojourner-covenant (15:13&#x27;s ger-clause; the mob&#x27;s taunt &#x27;he came to SOJOURN&#x27;, frozen gen_35&#x27;s 19:9): the taunted status is now Abraham&#x27;s address [career, prose].
+</td><td><span class="he">וַיִּסַּע מִשָּׁם אַבְרָהָם … וַיָּגָר בִּגְרָר</span> · <i>va-yisa mi-sham avraham … va-yagor bi-gerar</i><br><span class="gloss">= and-yisa from-there avraham and-yagor bi-gerar</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">gerar, qadesh, shur are READ without prior install (known geography)</span><br>gen_29&#x27;s frozen class [flag 16]: GERAR&#x27;s token 1 is 10:19&#x27;s nations-boundary (the letter drew the line before the story); QADESH and SHUR are frozen spans&#x27; geography (the war-annal, Hagar&#x27;s road). Onkelos: Qadesh -&gt; REQAM, Shur -&gt; CHAGRA — the frozen identification-class buffers repeating exactly [dual-track].
+</td><td><span class="he">בֵּין־קָדֵשׁ וּבֵין שׁוּר … בִּגְרָר</span> · <i>bein-qadesh u-vein shur … bi-gerar</i><br><span class="gloss">= between-qadesh and-vein shur bi-gerar</span></td><td class='cite'>TIR-026</td><td>tested</td></tr>
+</table>
+<div class="meta">From the smoke-watch to the Philistine south: the sojourn- verb takes the taunt Sodom threw at Lot and makes it an address. Three known names read; nothing installs.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_20_2 · Gen.20.2 · <span class='expr'>THE_SECOND_CLAIM_AND_THE_TAKING</span></h3>
+<p><span class="he">וַיֹּאמֶר אַבְרָהָם אֶל־שָׂרָה אִשְׁתּוֹ אֲחֹתִי הִוא וַיִּשְׁלַח אֲבִימֶלֶךְ מֶלֶךְ גְּרָר וַיִּקַּח אֶת־שָׂרָה</span> · <i>va-yomer avraham el-sarah ishto achoti hi va-yishlach avimelekh melekh gerar va-yiqach et-sarah</i> · [EN-AID/JPS] And Abraham said of Sarah his wife: &#x27;She is my sister.&#x27; And Abimelech king of Gerar sent, and took Sarah.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר אברהם אל־שרה אשתו אחתי הוא</span> · <i>va-yomer avraham el-sarah ishto achoti hi</i> · Abraham said OF Sarah his wife: she is my SISTER (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וישלח אבימלך מלך גרר ויקח את־שרה</span> · <i>va-yishlach avimelekh melekh gerar va-yiqach et-sarah</i> · Avimelech king of Gerar sent and TOOK Sarah (verse-final et-sarah)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(achoti_hi, t0)</span><br><span class="gloss">= HOLDS(achoti-hi, t0)</span><br>THE SECOND CLAIM: achot (&#x27;sister&#x27;) token 4 — tokens 2-3 are the FROZEN first episode (12:13&#x27;s demand, 12:19&#x27;s confession — gen_28&#x27;s span; token 1 is 4:22&#x27;s Naamah): the sister-word&#x27;s whole narrative career so far is this ruse [census]. The claim executes the frozen standing arrangement RETOLD at 20:13 (&#x27;at every place we come, say of me&#x27;) — the demand behind two walls, its nth execution here [flag 5&#x27;s fence; cross-unit prose].
+</td><td><span class="he">אֲחֹתִי הִוא</span> · <i>achoti hi</i><br><span class="gloss">= achoti hi</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>REGISTRY_INSTALL</td><td><span class="expr">WORLD += {avimelekh}</span><br>Avimelech king of Gerar — the unit&#x27;s only install (the court lives in his suffixes; the letter individuates no one else new) [flag 16].
+</td><td><span class="he">אֲבִימֶלֶךְ מֶלֶךְ גְּרָר</span> · <i>avimelekh melekh gerar</i><br><span class="gloss">= avimelekh melekh gerar</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">take(e2) ∧ Agent(e2, avimelekh) ∧ Theme(e2, sarah)</span><br>THE SECOND TAKING: va-yiqach — active where 12:15 was the rare passive (frozen gen_34&#x27;s census note quoted: &#x27;the take-verb carries that passive stem exactly TWICE in the Torah: 12:15 (va-tuqach — Sarai TAKEN into Pharaoh&#x27;s house...)&#x27;): Pharaoh&#x27;s house received her in the hidden-agent stem; Gerar&#x27;s king takes in his own name [census, prose]. Onkelos: U-DVAR yat sarah (&#x27;and he LED Sarah&#x27;) — the lead-for-take policy on the person, the frozen animacy class again [dual-track].
+</td><td><span class="he">וַיִּשְׁלַח … וַיִּקַּח אֶת־שָׂרָה</span> · <i>va-yishlach … va-yiqach et-sarah</i><br><span class="gloss">= and-yishlach and-yiqach sarah</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+</table>
+<div class="meta">The old ruse re-executes in one clause and a king takes a wife in his own grammatical name. The machine installs him; the demand that scripted the claim stays behind its wall.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_20_3 · Gen.20.3 · <span class='expr'>THE_DREAM_VERDICT</span></h3>
+<p><span class="he">וַיָּבֹא אֱלֹהִים אֶל־אֲבִימֶלֶךְ בַּחֲלוֹם הַלָּיְלָה וַיֹּאמֶר לוֹ הִנְּךָ מֵת עַל־הָאִשָּׁה אֲשֶׁר־לָקַחְתָּ וְהִוא בְּעֻלַת בָּעַל</span> · <i>va-yavo elohim el-avimelekh ba-chalom ha-lailah va-yomer lo hinkha met al-ha-ishah asher-laqachta ve-hi beulat baal</i> · [EN-AID/JPS] But God came to Abimelech in a dream of the night, and said to him: &#x27;Behold, thou shalt die, because of the woman whom thou hast taken; for she is a man&#x27;s wife.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויבא אלהים אל־אבימלך בחלום הלילה</span> · <i>va-yavo elohim el-avimelekh ba-chalom ha-lailah</i> · God CAME to Avimelech in the night&#x27;s DREAM (etnachta on ha-lailah)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויאמר לו הנך מת על־האשה אשר־לקחת והוא בעלת בעל</span> · <i>va-yomer lo hinkha met al-ha-ishah asher-laqachta ve-hi beulat baal</i> · behold — you are DEAD, over the taken woman: a husband&#x27;s wife (verse-final baal)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">dream_say(e3) ∧ Agent(e3, elohim) ∧ Goal(e3, avimelekh)</span><br><span class="gloss">= dream-say(e3) ∧ Agent(e3, God) ∧ Goal(e3, avimelekh)</span><br>CHALOM (&#x27;dream&#x27;) TORAH DEBUT [flag 9]: the dream- revelation class opens — and on a GENTILE KING (its next tokens are Jacob&#x27;s flocks and LABAN&#x27;s warning: the class stays fond of outsiders) [census]. The device is the interior-speech class&#x27;s outward twin: there speech stays inside a person (frozen gen_20/33/ 34&#x27;s ladder); here God enters a person&#x27;s sleep — the say-event carries the dream-frame, no new operator [device boundary]. Onkelos: VA-ATA MEIMAR MIN QODAM YYY (&#x27;a WORD from before YHWH came&#x27;) — THE MEMRA ENTERS THE DREAM: the buffer&#x27;s Word-arc (the frozen 15:1/15:6/17-chain) takes the night shift [dual-track].
+</td><td><span class="he">וַיָּבֹא אֱלֹהִים אֶל־אֲבִימֶלֶךְ בַּחֲלוֹם הַלָּיְלָה</span> · <i>va-yavo elohim el-avimelekh ba-chalom ha-lailah</i><br><span class="gloss">= and-yavo God to-avimelekh in-the-chalom the-lailah</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hinkha_met_al_ha_ishah, t0) ∧ HOLDS(ve_hi_beulat_baal, t0)</span><br><span class="gloss">= HOLDS(hinkha-met-upon-the-woman, t0) ∧ HOLDS(and-hi-beulat-baal, t0)</span><br>THE VERDICT OPENS THE TRIAL: hinkha met (&#x27;behold, you are DEAD&#x27;) — a participial death-sentence on a sleeping man, grounded in one legal fact: BEULAT BAAL (&#x27;a husband&#x27;s wife&#x27; — the beulat-idiom&#x27;s debut; the verse RESTS on baal) [morph + tree fact]. The court convenes before the defense is heard — and the whole trial (verdict, defense, concession, alternative sentence) happens inside the dream [structure, prose].
+</td><td><span class="he">הִנְּךָ מֵת עַל־הָאִשָּׁה אֲשֶׁר־לָקַחְתָּ וְהִוא בְּעֻלַת בָּעַל</span> · <i>hinkha met al-ha-ishah asher-laqachta ve-hi beulat baal</i><br><span class="gloss">= hinkha met upon-the-woman which-laqachta and-hi beulat baal</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The dream-word is born as a courtroom door: God walks into a king&#x27;s sleep with a verdict participle. The machine holds the sentence as spoken fact and waits for the defense.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_20_4 · Gen.20.4 · <span class='expr'>THE_KINGS_COUNT_QUESTION</span></h3>
+<p><span class="he">וַאֲבִימֶלֶךְ לֹא קָרַב אֵלֶיהָ וַיֹּאמַר אֲדֹנָי הֲגוֹי גַּם־צַדִּיק תַּהֲרֹג</span> · <i>va-avimelekh lo qarav eleha va-yomar adonai ha-goy gam-tzaddiq taharog</i> · [EN-AID/JPS] Now Abimelech had not come near her; and he said: &#x27;Lord, wilt Thou slay even a righteous nation?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ואבימלך לא קרב אליה</span> · <i>va-avimelekh lo qarav eleha</i> · and Avimelech had NOT come near her (etnachta arm — the narrator&#x27;s alibi)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויאמר אדני הגוי גם־צדיק תהרג</span> · <i>va-yomar adonai ha-goy gam-tzaddiq taharog</i> · my Lord — will You slay a nation even RIGHTEOUS? (verse-final taharog)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lo_qarav_eleha, t0) ∧ HOLDS(ha_goy_gam_tzaddiq_taharog, t0)</span><br><span class="gloss">= HOLDS(not-qarav-eleha, t0) ∧ HOLDS(the-goy-also-tzaddiq-taharog, t0)</span><br>THE COUNT-ARGUMENT RE-RUN BY A KING [flag 8]: TZADDIQ token 10 — frozen gen_34&#x27;s line LANDS, quoted: &#x27;Token 10 is 20:4 — Avimelech&#x27;s wilt Thou slay even a righteous nation? — the count-argument&#x27;s next token is the same argument&#x27; [LANDED]. And the discipline holds a THIRD time: the sentence is INTERROGATIVE- coded (HTi on ha-goy) — gen_31&#x27;s flag-5 law, quoted: &#x27;no DECLARE mood exists for questions and none is invented&#x27; — NO TEST fires (the instrument-word is a question&#x27;s noun), NO demand-on-God (the open owner triage sits one word away, untouched). ADONAI — Strong 136, token 8: the HOLY my-Lord&#x27;s first token in a FOREIGN mouth (tokens 1-6 Abraham, 7 Lot — the word&#x27;s widening circle: patriarch, nephew, Philistine king) [census; the dispute-file&#x27;s calm token: DB and context agree here]. HARAG token 7 — the kill-verb binds the episodes: feared in Egypt (12:12, frozen gen_28), protested at Gerar, confessed at 20:11 [census]. The narrator&#x27;s alibi-clause (lo qarav &#x27;he had not come NEAR&#x27;) holds the etnachta arm — the approach-vocabulary negated where Sodom&#x27;s was battering [prose].
+</td><td><span class="he">לֹא קָרַב אֵלֶיהָ … הֲגוֹי גַּם־צַדִּיק תַּהֲרֹג</span> · <i>lo qarav eleha … ha-goy gam-tzaddiq taharog</i><br><span class="gloss">= not qarav eleha the-goy also-tzaddiq taharog</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Sodom&#x27;s arithmetic returns with a crown on: will the Judge slay even a righteous nation? The machine holds the question as the law requires and the roster stays shut for the third chapter running.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_20_5 · Gen.20.5 · <span class='expr'>THE_INTEGRITY_DEFENSE</span></h3>
+<p><span class="he">הֲלֹא הוּא אָמַר־לִי אֲחֹתִי הִוא וְהִיא־גַם־הִוא אָמְרָה אָחִי הוּא בְּתָם־לְבָבִי וּבְנִקְיֹן כַּפַּי עָשִׂיתִי זֹאת</span> · <i>ha-lo hu amar-li achoti hi ve-hi-gam-hi amrah achi hu be-tom-levavi u-ve-niqyon kapai asiti zot</i> · [EN-AID/JPS] Said he not himself unto me: She is my sister? and she, even she herself said: He is my brother. In the simplicity of my heart and the innocency of my hands have I done this.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">הלא הוא אמר־לי אחתי הוא והיא־גם־הוא אמרה אחי הוא</span> · <i>ha-lo hu amar-li achoti hi ve-hi-gam-hi amrah achi hu</i> · did HE not say sister — and SHE, she too, said brother (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">בתם־לבבי ובנקין כפי עשיתי זאת</span> · <i>be-tom-levavi u-ve-niqyon kapai asiti zot</i> · in my heart&#x27;s INTEGRITY and my hands&#x27; CLEANNESS I did this (verse-final zot)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hu_amar_li_ve_hi_gam_hi_amrah, t0) ∧ HOLDS(be_tom_levavi_u_ve_niqyon_kapai, t0)</span><br><span class="gloss">= HOLDS(that-amar-to-me-and-hi-also-hi-amrah, t0) ∧ HOLDS(in-tom-levavi-and-and-niqyon-kapai, t0)</span><br>THE INNOCENCE LEXICON IS BORN AND SPENT HERE [flag 12; census-exact]: TOM (&#x27;integrity&#x27;) token 1 — its only narrative tokens are this claim and God&#x27;s echo (20:6); NIQAYON (&#x27;cleanness&#x27;) a TORAH HAPAX — the clean-hands word exists once, in a Philistine&#x27;s mouth, and Sarah&#x27;s own voice is the defense&#x27;s second witness (ve-hi-gam-hi amrah &#x27;and SHE, she too, said&#x27; — her only reported speech of the span, quoted by the defendant) [census, prose]. Onkelos: be-QASHITUT libbi u-ve-ZAKAUT yedai — the innocence rendered in the zakkai-family, the same root the buffer gave the plea&#x27;s righteous [dual-track].
+</td><td><span class="he">הֲלֹא הוּא אָמַר־לִי … בְּתָם־לְבָבִי וּבְנִקְיֹן כַּפַּי</span> · <i>ha-lo hu amar-li … be-tom-levavi u-ve-niqyon kapai</i><br><span class="gloss">= the-not that amar-to-me in-tom-levavi and-and-niqyon kapai</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The defendant&#x27;s whole case is two words the Torah barely uses again: integrity and cleanness. The machine holds the defense and notes that the contested woman&#x27;s only speech in the chapter is the one he quotes.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_20_6 · Gen.20.6 · <span class='expr'>THE_CONCESSION_AND_THE_WITHHOLDING</span></h3>
+<p><span class="he">וַיֹּאמֶר אֵלָיו הָאֱלֹהִים בַּחֲלֹם גַּם אָנֹכִי יָדַעְתִּי כִּי בְתָם־לְבָבְךָ עָשִׂיתָ זֹּאת וָאֶחְשֹׂךְ גַּם־אָנֹכִי אוֹתְךָ מֵחֲטוֹ־לִי עַל־כֵּן לֹא־נְתַתִּיךָ לִנְגֹּעַ אֵלֶיהָ</span> · <i>va-yomer elav ha-elohim ba-chalom gam anokhi yadati ki ve-tom-levavkha asita zot va-echsokh gam-anokhi otkha me-chato-li al-ken lo-netatikha lingoa eleha</i> · [EN-AID/JPS] And God said unto him in the dream: &#x27;Yea, I know that in the simplicity of thy heart thou hast done this, and I also withheld thee from sinning against Me. Therefore suffered I thee not to touch her.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר אליו האלהים בחלם גם אנכי ידעתי כי בתם־לבבך עשית זאת ואחשך גם־אנכי אותך מחטו־לי</span> · <i>va-yomer elav ha-elohim ba-chalom gam anokhi yadati ki ve-tom-levavkha asita zot va-echsokh gam-anokhi otkha me-chato-li</i> · I KNOW your integrity — and I WITHHELD you from sinning AGAINST ME (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">על־כן לא־נתתיך לנגע אליה</span> · <i>al-ken lo-netatikha lingoa eleha</i> · therefore I did not let you TOUCH her (verse-final eleha)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(gam_anokhi_yadati_ve_tom_levavkha, t0) ∧ HOLDS(va_echsokh_otkha_me_chato_li, t0) ∧ HOLDS(lo_netatikha_lingoa, t0)</span><br><span class="gloss">= HOLDS(also-anokhi-yadati-and-tom-levavkha, t0) ∧ HOLDS(and-echsokh-otkha-from-chato-to-me, t0) ∧ HOLDS(not-netatikha-lingoa, t0)</span><br>THE CONCESSION: God grants the integrity-claim in the claimant&#x27;s own idiom (be-tom-levavkha — tom token 2, the word&#x27;s last narrative token) [census]. CHASAKH (&#x27;withhold&#x27;) TORAH DEBUT [flag 13]: GOD withholds the king from sin — the verb&#x27;s four Torah tokens run to the AQEDAH&#x27;s crown (22:12/16&#x27;s &#x27;you did not WITHHOLD your son&#x27;) and Joseph&#x27;s refusal (39:9): divine restraint becomes human surrender [census arc, prose]. CHATA-VERB token 1: me-chato-LI (&#x27;from sinning AGAINST ME&#x27;) — the wronged party is GOD, not the husband: the letter&#x27;s moral geometry in one suffix [census; token 2 is the king&#x27;s chatati at 20:9 — the sin-verb&#x27;s debut pair is this court]. NAGA (&#x27;touch&#x27;) token 3 — the touch-chain: Eden&#x27;s fence (3:3), the plague on Pharaoh&#x27;s house (12:17, the FIRST sister-court, frozen gen_28&#x27;s span), Gerar&#x27;s restraint (&#x27;I did not LET you touch&#x27;) — and token 4 is 26:11: Avimelech&#x27;s own decree in the THIRD episode [census]. Onkelos: AF QODAMAI GELEI (&#x27;before Me also it is REVEALED&#x27;) for yadati — the know-verb kodam-distanced (the frozen 18:19 policy); me-chato-li -&gt; &#x27;sinning BEFORE Me&#x27; [dual-track].
+</td><td><span class="he">יָדַעְתִּי … וָאֶחְשֹׂךְ … מֵחֲטוֹ־לִי … לֹא־נְתַתִּיךָ לִנְגֹּעַ</span> · <i>yadati … va-echsokh … me-chato-li … lo-netatikha lingoa</i><br><span class="gloss">= yadati and-echsokh from-chato-to-me not-netatikha lingoa</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The court concedes the defense and reveals the invisible evidence: a withholding. The verb born here will hang over the Aqedah, and the touch-chain gains its court-token between Eden&#x27;s fence and the next king&#x27;s decree.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_20_7 · Gen.20.7 · <span class='expr'>THE_PROPHET_AND_THE_RETURN_COMMAND</span></h3>
+<p><span class="he">וְעַתָּה הָשֵׁב אֵשֶׁת־הָאִישׁ כִּי־נָבִיא הוּא וְיִתְפַּלֵּל בַּעַדְךָ וֶחְיֵה וְאִם־אֵינְךָ מֵשִׁיב דַּע כִּי־מוֹת תָּמוּת אַתָּה וְכָל־אֲשֶׁר־לָךְ</span> · <i>ve-atah hashev eshet-ha-ish ki-navi hu ve-yitpalel baadkha ve-cheyeh ve-im-einkha meshiv da ki-mot tamut atah ve-khol-asher-lakh</i> · [EN-AID/JPS] Now therefore restore the man&#x27;s wife; for he is a prophet, and he shall pray for thee, and thou shalt live; and if thou restore her not, know thou that thou shalt surely die, thou, and all that are thine.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ועתה השב אשת־האיש כי־נביא הוא ויתפלל בעדך וחיה</span> · <i>ve-atah hashev eshet-ha-ish ki-navi hu ve-yitpalel baadkha ve-cheyeh</i> · RETURN the man&#x27;s wife — a PROPHET: he will PRAY for you — and LIVE (etnachta ON ve-cheyeh)</div><div class="arm"><b>RIGHT</b><br><span class="he">ואם־אינך משיב דע כי־מות תמות אתה וכל־אשר־לך</span> · <i>ve-im-einkha meshiv da ki-mot tamut atah ve-khol-asher-lakh</i> · and if you do not return her — DYING YOU SHALL DIE, you and all yours (verse-final lakh)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(elohim, LET(hashev(eshet_ha_ish)))</span><br><span class="gloss">= DECLARE(God, LET(hashev(wife-of-the-man)))</span><br>THE FIRST DIVINE PUSH SINCE gen_33 [flag 2]: hashev (&#x27;RETURN&#x27;) — imperative Vhv2ms, in the dream: after a chapter where God commanded nothing (frozen gen_34) and a chapter where the divine traffic ran through agents (frozen gen_35), the divine mood returns in two syllables. Pushed; its receipt is seven verses ahead in its own root [the pop at STEP_Gn_20_14 — cycle #13]. NAVI (&#x27;prophet&#x27;) TORAH DEBUT [flag 10]: the prophet-word is born as the REASON for the return — ki-navi hu — and its stated function is INTERCESSION: ve-yitpalel baadkha (&#x27;and he will PRAY for you&#x27;) — PALAL token 1, a law-grammar future (no push, gen_33&#x27;s reframe): the office debuts not as foreteller but as pray-er [census, prose]. Onkelos: VI-TZALEI alakh — the buffer receives the letter&#x27;s first pray-verb in ITS OWN tzali root, the verb it wrote over Abraham&#x27;s standing at frozen 18:22/19:27 two chapters early: the anticipation vindicated [dual-track headline].
+</td><td><span class="he">וְעַתָּה הָשֵׁב אֵשֶׁת־הָאִישׁ</span> · <i>ve-atah hashev eshet-ha-ish</i><br><span class="gloss">= you hashev wife-of-the-man</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_yitpalel_baadkha_ve_cheyeh, t0)</span><br><span class="gloss">= HOLDS(and-yitpalel-baadkha-and-cheyeh, t0)</span><br>VE-CHEYEH (&#x27;and LIVE&#x27;) — A CONSEQUENCE-IMPERATIVE HELD AS FACT [flag 3, the staged weigh]: the imperative rides AFTER the interposed intercession-future — not one breath with hashev (the compound law&#x27;s one-breath test fails); classical result-imperative (&#x27;that you may live&#x27;). The etnachta RESTS on it: the verse&#x27;s two arms are live-or-die [tree fact]. The push-alternative (the bare mood-decides reading) is named for the owner.
+</td><td><span class="he">וְיִתְפַּלֵּל בַּעַדְךָ וֶחְיֵה</span> · <i>ve-yitpalel baadkha ve-cheyeh</i><br><span class="gloss">= and-yitpalel baadkha and-cheyeh</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(im_einkha_meshiv_da_ki_mot_tamut, t0)</span><br><span class="gloss">= HOLDS(if-einkha-meshiv-da-when-dying-you-shall-die, t0)</span><br>THE CONDITIONAL DEATH-SENTENCE AS ONE FACT [flag 4, the staged weigh]: the da-imperative (&#x27;know!&#x27;) sits INSIDE the if-branch — a conditional demand whose protasis DIES at 20:14&#x27;s return: no conditional- demand device exists and none is invented; the whole im-clause is one fact (case-speech on one man — lev_13&#x27;s HANDLER class declined; the sa_u_ree attention-imperative push-alternative named). THE PAIR-CLASS FIND [census-exact]: MOT TAMUT (&#x27;dying you shall DIE&#x27;) has exactly TWO Torah tokens — Eden&#x27;s ban (2:17) and this dream: the death-doubling exists at the tree and at Gerar, nowhere else in the Torah — and both tokens guard another man&#x27;s boundary [census; the letter&#x27;s own echo, prose].
+</td><td><span class="he">וְאִם־אֵינְךָ מֵשִׁיב דַּע כִּי־מוֹת תָּמוּת</span> · <i>ve-im-einkha meshiv da ki-mot tamut</i><br><span class="gloss">= and-if-einkha meshiv da when-dying you-shall-die</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">One verse mints the prophet, the prayer, and the era&#x27;s first divine demand — with Eden&#x27;s death-formula as its only alternative. The machine pushes the return, holds the live-or-die arms as facts, and waits seven verses.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_20_8 · Gen.20.8 · <span class='expr'>THE_COURT_FEARS</span></h3>
+<p><span class="he">וַיַּשְׁכֵּם אֲבִימֶלֶךְ בַּבֹּקֶר וַיִּקְרָא לְכָל־עֲבָדָיו וַיְדַבֵּר אֶת־כָּל־הַדְּבָרִים הָאֵלֶּה בְּאָזְנֵיהֶם וַיִּירְאוּ הָאֲנָשִׁים מְאֹד</span> · <i>va-yashkem avimelekh ba-boqer va-yiqra le-khol-avadav va-yedaber et-kol-ha-devarim ha-eleh be-ozneihem va-yiru ha-anashim meod</i> · [EN-AID/JPS] And Abimelech rose early in the morning, and called all his servants, and told all these things in their ears; and the men were sore afraid.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וישכם אבימלך בבקר ויקרא לכל־עבדיו וידבר את־כל־הדברים האלה באזניהם</span> · <i>va-yashkem avimelekh ba-boqer va-yiqra le-khol-avadav va-yedaber et-kol-ha-devarim ha-eleh be-ozneihem</i> · he rose early, told all these words in his servants&#x27; ears (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וייראו האנשים מאד</span> · <i>va-yiru ha-anashim meod</i> · and the men FEARED greatly (verse-final meod)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">report_fear(e4) ∧ Agent(e4, avimelekh)</span><br><span class="gloss">= report-fear(e4) ∧ Agent(e4, avimelekh)</span><br>VA-YASHKEM ba-boqer (&#x27;rose EARLY in the morning&#x27;) — the dawn-rise formula one chapter after Abraham&#x27;s smoke-watch dawn (frozen gen_35&#x27;s 19:27): two mornings, two men rising to face a verdict [cross-unit echo, prose]. The whole dream read into the court&#x27;s ears — and the FEAR the prophet said the place lacked (20:11&#x27;s guess, three verses ahead) is the first thing the place shows: va-yiru meod [prose; the letter&#x27;s own rebuttal, held flat].
+</td><td><span class="he">וַיַּשְׁכֵּם … וַיְדַבֵּר … וַיִּירְאוּ הָאֲנָשִׁים מְאֹד</span> · <i>va-yashkem … va-yedaber … va-yiru ha-anashim meod</i><br><span class="gloss">= and-yashkem and-yedaber and-yiru the-anashim very</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+</table>
+<div class="meta">The king publishes his own indictment at dawn and Gerar fears greatly — one scene before Abraham explains he assumed it couldn&#x27;t. The letter keeps its own score.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_20_9 · Gen.20.9 · <span class='expr'>THE_GREAT_SIN_REBUKE</span></h3>
+<p><span class="he">וַיִּקְרָא אֲבִימֶלֶךְ לְאַבְרָהָם וַיֹּאמֶר לוֹ מֶה־עָשִׂיתָ לָּנוּ וּמֶה־חָטָאתִי לָךְ כִּי־הֵבֵאתָ עָלַי וְעַל־מַמְלַכְתִּי חֲטָאָה גְדֹלָה מַעֲשִׂים אֲשֶׁר לֹא־יֵעָשׂוּ עָשִׂיתָ עִמָּדִי</span> · <i>va-yiqra avimelekh le-avraham va-yomer lo meh-asita lanu u-meh-chatati lakh ki-heveta alai ve-al-mamlakhti chataah gedolah maasim asher lo-yeasu asita imadi</i> · [EN-AID/JPS] Then Abimelech called Abraham, and said unto him: &#x27;What hast thou done unto us? and wherein have I sinned against thee, that thou hast brought on me and on my kingdom a great sin? thou hast done deeds unto me that ought not to be done.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויקרא אבימלך לאברהם ויאמר לו מה־עשית לנו ומה־חטאתי לך כי־הבאת עלי ועל־ממלכתי חטאה גדלה</span> · <i>va-yiqra avimelekh le-avraham va-yomer lo meh-asita lanu u-meh-chatati lakh ki-heveta alai ve-al-mamlakhti chataah gedolah</i> · what have you DONE to us — a GREAT SIN on me and my kingdom (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">מעשים אשר לא־יעשו עשית עמדי</span> · <i>maasim asher lo-yeasu asita imadi</i> · deeds that are NOT DONE you have done with me (verse-final imadi)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(meh_asita_lanu_u_meh_chatati, t0) ∧ HOLDS(chataah_gedolah_al_mamlakhti, t0)</span><br><span class="gloss">= HOLDS(meh-asita-lanu-and-meh-chatati, t0) ∧ HOLDS(chataah-gedolah-upon-mamlakhti, t0)</span><br>THE REBUKE-QUESTION AGAIN: meh-asita (&#x27;what have you DONE&#x27;) — the recurring arraignment-question of the corpus (the garden, the field, Pharaoh&#x27;s palace — 12:18&#x27;s mah-zot asita in the FIRST sister-court, frozen gen_28&#x27;s span — and now Gerar) [named chain-familiar prose; questions push nothing, flag-5 law]. CHATA-verb token 2: u-meh-CHATATI (&#x27;what have I SINNED against you&#x27;) — the sin-verb&#x27;s debut pair completes: God&#x27;s against-Me (20:6), the king&#x27;s against-you [census; flag 11]. CHATAAH GEDOLAH (&#x27;a GREAT SIN&#x27;) — exactly FOUR Torah tokens: this rebuke and the GOLDEN CALF x3 (Exod 32:21/30/31): Gerar&#x27;s phrase waits for Sinai&#x27;s worst morning [census-exact]. MAASIM ASHER LO-YEASU (&#x27;deeds that are not done&#x27;) — the impersonal-norm clause: the king appeals to a standard no statute has yet stated [prose].
+</td><td><span class="he">מֶה־עָשִׂיתָ לָּנוּ … חֲטָאָה גְדֹלָה … מַעֲשִׂים אֲשֶׁר לֹא־יֵעָשׂוּ</span> · <i>meh-asita lanu … chataah gedolah … maasim asher lo-yeasu</i><br><span class="gloss">= meh-asita lanu chataah gedolah maasim which not-yeasu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The pagan king holds the patriarch to a norm nobody wrote yet, in a phrase the Torah will spend on the calf. The machine holds the arraignment as questions and facts — and the roster stays closed.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_20_10 · Gen.20.10 · <span class='expr'>THE_SECOND_QUESTION</span></h3>
+<p><span class="he">וַיֹּאמֶר אֲבִימֶלֶךְ אֶל־אַבְרָהָם מָה רָאִיתָ כִּי עָשִׂיתָ אֶת־הַדָּבָר הַזֶּה</span> · <i>va-yomer avimelekh el-avraham mah raita ki asita et-ha-davar ha-zeh</i> · [EN-AID/JPS] And Abimelech said unto Abraham: &#x27;What sawest thou, that thou hast done this thing?&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר אבימלך אל־אברהם</span> · <i>va-yomer avimelekh el-avraham</i> · the say-frame takes the first rest (the frame-cut class)</div><div class="arm"><b>RIGHT</b><br><span class="he">מה ראית כי עשית את־הדבר הזה</span> · <i>mah raita ki asita et-ha-davar ha-zeh</i> · what did you SEE, that you did this thing? (verse-final ha-zeh)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(mah_raita_ki_asita, t0)</span><br><span class="gloss">= HOLDS(mah-raita-when-asita, t0)</span><br>MAH RAITA (&#x27;what did you SEE&#x27;) — the king&#x27;s second question turns epistemic: not what you did but what you PERCEIVED — the see-verb interrogated (the verb of every appearance and inspection now asked of a man&#x27;s private risk-assessment) [prose; question class, no push]. The answer it draws (20:11) is a confession of inference, not observation [prose].
+</td><td><span class="he">מָה רָאִיתָ כִּי עָשִׂיתָ</span> · <i>mah raita ki asita</i><br><span class="gloss">= mah raita when asita</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">What did you see? — the corpus&#x27;s first cross-examination of a motive. The machine keeps the question in the fact-column and lets the answer indict itself.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_20_11 · Gen.20.11 · <span class='expr'>THE_FEAR_OF_GOD_GUESS</span></h3>
+<p><span class="he">וַיֹּאמֶר אַבְרָהָם כִּי אָמַרְתִּי רַק אֵין־יִרְאַת אֱלֹהִים בַּמָּקוֹם הַזֶּה וַהֲרָגוּנִי עַל־דְּבַר אִשְׁתִּי</span> · <i>va-yomer avraham ki amarti raq ein-yirat elohim ba-maqom ha-zeh va-haraguni al-devar ishti</i> · [EN-AID/JPS] And Abraham said: &#x27;Because I thought: Surely the fear of God is not in this place; and they will slay me for my wife&#x27;s sake.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר אברהם כי אמרתי רק אין־יראת אלהים במקום הזה</span> · <i>va-yomer avraham ki amarti raq ein-yirat elohim ba-maqom ha-zeh</i> · I said: surely no FEAR OF GOD in this place (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">והרגוני על־דבר אשתי</span> · <i>va-haraguni al-devar ishti</i> · and they will KILL me over my wife (verse-final ishti)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(amarti_ein_yirat_elohim, t0) ∧ HOLDS(va_haraguni_al_devar_ishti, t0)</span><br><span class="gloss">= HOLDS(amarti-ein-yirat-God, t0) ∧ HOLDS(and-haraguni-upon-devar-ishti, t0)</span><br>YIRAT (&#x27;fear-of&#x27;) TORAH DEBUT — the fear-of-God construct is born NEGATED, in a guess, about a place — and the letter has already falsified it (20:8&#x27;s va-yiru meod, the fearing court) [census; the noun&#x27;s three Torah tokens: this doubt, SINAI&#x27;s stated purpose (Exod 20:20 &#x27;that His FEAR be upon you&#x27;), the nations&#x27; dread (Deut 2:25) — born wrong at Gerar, installed right at Sinai; prose]. The amarti-frame (&#x27;I SAID&#x27;) — the inference reported as inner speech: the interior-speech family&#x27;s plain cousin (no heart-frame; testimony of past thought) [device boundary]. HARAG token 8 — the confessed fear completes the kill-verb&#x27;s episode-binding (12:12 feared, 20:4 protested, 20:11 confessed) [census].
+</td><td><span class="he">אֵין־יִרְאַת אֱלֹהִים בַּמָּקוֹם הַזֶּה וַהֲרָגוּנִי</span> · <i>ein-yirat elohim ba-maqom ha-zeh va-haraguni</i><br><span class="gloss">= ein-yirat God in-the-maqom this and-haraguni</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The prophet&#x27;s defense is a wrong guess about fear, spoken to a court the letter showed fearing three verses ago. The machine holds guess and confession side by side and adds nothing.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_20_12 · Gen.20.12 · <span class='expr'>THE_HALF_TRUTH</span></h3>
+<p><span class="he">וְגַם־אָמְנָה אֲחֹתִי בַת־אָבִי הִוא אַךְ לֹא בַת־אִמִּי וַתְּהִי־לִי לְאִשָּׁה</span> · <i>ve-gam-omnah achoti vat-avi hi akh lo vat-imi va-tehi-li le-ishah</i> · [EN-AID/JPS] And moreover she is indeed my sister, the daughter of my father, but not the daughter of my mother; and so she became my wife.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וגם־אמנה אחתי בת־אבי הוא אך לא בת־אמי</span> · <i>ve-gam-omnah achoti vat-avi hi akh lo vat-imi</i> · and truly my sister she is — my father&#x27;s daughter, not my mother&#x27;s (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ותהי־לי לאשה</span> · <i>va-tehi-li le-ishah</i> · and she became my wife (verse-final le-ishah)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(achoti_vat_avi_akh_lo_vat_imi, t0)</span><br><span class="gloss">= HOLDS(achoti-vat-avi-akh-not-vat-imi, t0)</span><br>THE HALF-TRUTH DISCLOSED: achot token 6 — the sister-word&#x27;s sixth token finally carries its genealogical defense (father&#x27;s daughter, not mother&#x27;s), a kinship-claim the letter neither confirms nor maps (11:29&#x27;s roster named no Sarah- parentage — the chain&#x27;s Yiskah file, named-only) [census, prose]. OMNAH (&#x27;truly&#x27;) — the truly-word&#x27;s rare adverb [morph]. The disclosure comes only under arraignment: the arrangement&#x27;s first full statement in the corpus is a defense exhibit [prose; the quoted-demand step completes it next].
+</td><td><span class="he">אֲחֹתִי בַת־אָבִי הִוא אַךְ לֹא בַת־אִמִּי</span> · <i>achoti vat-avi hi akh lo vat-imi</i><br><span class="gloss">= achoti vat-avi hi akh not vat-imi</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Under cross-examination the ruse becomes a genealogy the letter never maps. The machine holds the claim as claimed and leaves the family tree to the chain&#x27;s files.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_20_13 · Gen.20.13 · <span class='expr'>THE_WANDERING_AND_THE_QUOTED_DEMAND</span></h3>
+<p><span class="he">וַיְהִי כַּאֲשֶׁר הִתְעוּ אֹתִי אֱלֹהִים מִבֵּית אָבִי וָאֹמַר לָהּ זֶה חַסְדֵּךְ אֲשֶׁר תַּעֲשִׂי עִמָּדִי אֶל כָּל־הַמָּקוֹם אֲשֶׁר נָבוֹא שָׁמָּה אִמְרִי־לִי אָחִי הוּא</span> · <i>va-yehi ka-asher hitu oti elohim mi-beit avi va-omar lah zeh chasdekh asher taasi imadi el kol-ha-maqom asher navo shamah imri-li achi hu</i> · [EN-AID/JPS] And it came to pass, when God caused me to wander from my father&#x27;s house, that I said unto her: This is thy kindness which thou shalt show unto me; at every place whither we shall come, say of me: He is my brother.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויהי כאשר התעו אתי אלהים מבית אבי ואמר לה זה חסדך אשר תעשי עמדי</span> · <i>va-yehi ka-asher hitu oti elohim mi-beit avi va-omar lah zeh chasdekh asher taasi imadi</i> · when God caused-me-to-wander from my father&#x27;s house — this is your kindness (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">אל כל־המקום אשר נבוא שמה אמרי־לי אחי הוא</span> · <i>el kol-ha-maqom asher navo shamah imri-li achi hu</i> · at EVERY place we come: say of me — he is my brother (verse-final hu)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hitu_oti_elohim_mi_beit_avi, t0) ∧ HOLDS(imri_li_achi_hu, t0)</span><br><span class="gloss">= HOLDS(hitu-me-God-from-beit-avi, t0) ∧ HOLDS(imri-to-me-my-brother-that, t0)</span><br>THE PLURAL VERB ON ELOHIM [flag 15, named-only]: hitu is coded PLURAL (HVhp3cp) — &#x27;the gods CAUSED-ME-TO- WANDER&#x27;? the letter&#x27;s grammar-crux held flat, no harmonizing; the chain&#x27;s files ride the queue. Onkelos RECOMPOSES wholesale: &#x27;when the PEOPLES went astray after the works of their hands, ME did YHWH bring NEAR to His fear from my father&#x27;s house&#x27; — the wandering transferred to idolaters, the prophet not wandered but drawn [dual-track; the buffer&#x27;s boldest intervention of the tenure]. THE QUOTED DEMAND PUSHES NOTHING [flag 5, the staged weigh]: imri-li achi hu (&#x27;say of me: he is my brother&#x27;) — an imperative INSIDE a retrospective: testimony, not speech-act. The ORIGINAL is frozen gen_28&#x27;s, quoted: &#x27;imri(saray, achoti_hi) at 12:13&#x27; — &#x27;imri-demand pushed and OPEN&#x27; — standing open BEHIND TWO WALLS; the letter&#x27;s own arrangement-clause (el kol-ha-maqom &#x27;at EVERY place&#x27;) makes 20:2&#x27;s claim that frozen demand&#x27;s nth execution [cross-unit prose; nothing re-pushes, nothing crosses]. CHESED asked of a wife (zeh chasdekh &#x27;this is your KINDNESS&#x27;) — the kindness-word bent to the ruse&#x27;s service [census, prose].
+</td><td><span class="he">הִתְעוּ אֹתִי אֱלֹהִים … אִמְרִי־לִי אָחִי הוּא</span> · <i>hitu oti elohim … imri-li achi hu</i><br><span class="gloss">= hitu me God imri-to-me my-brother that</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The defense ends by quoting the demand that scripted two abductions — and the machine, honest to its walls, lets the twelve-chapter-old push stay where it froze. The plural verb stands unharmonized above it.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_20_14 · Gen.20.14 · <span class='expr'>THE_RETURN_CYCLE_CLOSES</span></h3>
+<p><span class="he">וַיִּקַּח אֲבִימֶלֶךְ צֹאן וּבָקָר וַעֲבָדִים וּשְׁפָחֹת וַיִּתֵּן לְאַבְרָהָם וַיָּשֶׁב לוֹ אֵת שָׂרָה אִשְׁתּוֹ</span> · <i>va-yiqach avimelekh tzon u-vaqar va-avadim u-shfachot va-yiten le-avraham va-yashev lo et sarah ishto</i> · [EN-AID/JPS] And Abimelech took sheep and oxen, and men-servants and women-servants, and gave them unto Abraham, and restored him Sarah his wife.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויקח אבימלך צאן ובקר ועבדים ושפחת ויתן לאברהם</span> · <i>va-yiqach avimelekh tzon u-vaqar va-avadim u-shfachot va-yiten le-avraham</i> · took flock, herd, servants — and GAVE to Abraham (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וישב לו את שרה אשתו</span> · <i>va-yashev lo et sarah ishto</i> · and RETURNED him Sarah his wife (verse-final ishto)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">HOLDS(hashev(eshet_ha_ish), t1)</span><br><span class="gloss">= HOLDS(hashev(wife-of-the-man), t1)</span><br>SETTLED CYCLE #13 CLAIMED [flag 2; numbering for main-loop verification]: VA-YASHEV (&#x27;and he RETURNED&#x27;) — the demand&#x27;s own ROOT AND STEM (shuv hiphil), foreground narrative deed, performed BY THE DEMANDEE: the echo-receipt class&#x27;s textbook token (the class per frozen gen_25&#x27;s law, quoted this session: the pop fires when &#x27;the demand&#x27;s own root returns as deed&#x27;). THE &#x27;FIRST&#x27; PRECISELY CUT [counterexample hunted]: divine pops exist in the roster — frozen gen_31&#x27;s cycle #8 quoted: &#x27;LET(qechah(avram, eglah_ez_ayil_tor_ve_gozal))&#x27; with &#x27;GOD says take next&#x27; — so #13 is the first divine-demand pop SINCE #8, and the first divine PUSH since gen_33&#x27;s covenant pair. The queue held ONLY this demand: the pop is machine-asserted by SPECS-empty at the gate (the frozen-preferred device). The taking gives back: va-yiqach... va-yiten (&#x27;took... GAVE&#x27;) — the take-verb&#x27;s restitution-turn, flock and servants the damages [prose; the Egypt-parallel&#x27;s gifts came BEFORE the truth (12:16, frozen gen_28&#x27;s span); here AFTER it — the two courts&#x27; order inverted, cross-unit prose].
+</td><td><span class="he">וַיָּשֶׁב לוֹ אֵת שָׂרָה אִשְׁתּוֹ</span> · <i>va-yashev lo et sarah ishto</i><br><span class="gloss">= and-yashev not et sarah his-wife</span></td><td class='cite'>TIR-028</td><td>tested</td></tr>
+</table>
+<div class="meta">Seven verses after the command, the king pays it in its own verb — the era&#x27;s cleanest receipt. The machine&#x27;s queue drops to zero for the first time since Genesis 17 opened.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_20_15 · Gen.20.15 · <span class='expr'>THE_DWELL_GRANT</span></h3>
+<p><span class="he">וַיֹּאמֶר אֲבִימֶלֶךְ הִנֵּה אַרְצִי לְפָנֶיךָ בַּטּוֹב בְּעֵינֶיךָ שֵׁב</span> · <i>va-yomer avimelekh hinneh artzi lefanekha ba-tov be-einekha shev</i> · [EN-AID/JPS] And Abimelech said: &#x27;Behold, my land is before thee: dwell where it pleaseth thee.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר אבימלך הנה ארצי לפניך</span> · <i>va-yomer avimelekh hinneh artzi lefanekha</i> · behold — my land is BEFORE you (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">בטוב בעיניך שב</span> · <i>ba-tov be-einekha shev</i> · in the GOOD of your eyes, DWELL (verse-final shev)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(avimelekh, LET(shev(ba_tov_be_einekha)))</span><br><span class="gloss">= DECLARE(avimelekh, LET(shev(in-the-good-in-einekha)))</span><br>THE GRANT-IMPERATIVE PUSHES [flag 6, the staged weigh]: shev (&#x27;DWELL&#x27;) — an OFFER in the imperative, and offer-imperatives push by frozen law: gen_29&#x27;s 13:9 quoted (&#x27;SETTLED CYCLE #7 ... 13:9&#x27;s hipared na me-alai (separate, please...; niphal imperative, human issuer)&#x27;) — the parting-offer class pushed and even popped there. Pushed here; OPEN — no dwelling in the demand&#x27;s verb is narrated in-span (21:34&#x27;s sojourn is another verb behind the next seam). The verse RESTS on shev: the silluq under the grant [tree fact]. BA-TOV BE-EINEKHA (&#x27;in the GOOD of your eyes&#x27;) — the attribute-idiom class, frozen gen_35 quoted: &#x27;an attribute-idiom inside reported speech: NO TEST&#x27; (19:8&#x27;s ka-tov, its flag 9): the instrument-word rides a courtesy-formula and the roster stays shut [flag 7]. The inversion beside it: Egypt EXPELLED (12:20&#x27;s va-yeshalchu, frozen gen_28&#x27;s span); Gerar INVITES — the two sister- courts end in opposite prepositions [cross-unit prose].
+</td><td><span class="he">בַּטּוֹב בְּעֵינֶיךָ שֵׁב</span> · <i>ba-tov be-einekha shev</i><br><span class="gloss">= good in-einekha shev</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
+</table>
+<div class="meta">Where Pharaoh deported, Avimelech deeds the realm: dwell in the good of your eyes. The machine pushes the offer, files the good-word as courtesy, and the queue holds one again.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_20_16 · Gen.20.16 · <span class='expr'>THE_COVERING_AND_THE_VINDICATION</span></h3>
+<p><span class="he">וּלְשָׂרָה אָמַר הִנֵּה נָתַתִּי אֶלֶף כֶּסֶף לְאָחִיךְ הִנֵּה הוּא־לָךְ כְּסוּת עֵינַיִם לְכֹל אֲשֶׁר אִתָּךְ וְאֵת כֹּל וְנֹכָחַת</span> · <i>u-le-sarah amar hinneh natati elef kesef le-achikh hinneh hu-lakh kesut einayim le-khol asher itakh ve-et kol ve-nokhachat</i> · [EN-AID/JPS] And unto Sarah he said: &#x27;Behold, I have given thy brother a thousand pieces of silver; behold, it is for thee a covering of the eyes to all that are with thee; and before all men thou art righted.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ולשרה אמר הנה נתתי אלף כסף לאחיך הנה הוא־לך כסות עינים לכל אשר אתך</span> · <i>u-le-sarah amar hinneh natati elef kesef le-achikh hinneh hu-lakh kesut einayim le-khol asher itakh</i> · to SARAH he said: a thousand silver — a COVERING OF EYES for all with you (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ואת כל ונכחת</span> · <i>ve-et kol ve-nokhachat</i> · and before all — you are RIGHTED (verse-final ve-nokhachat)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(elef_kesef_kesut_einayim, t0) ∧ HOLDS(ve_nokhachat, t0)</span><br><span class="gloss">= HOLDS(elef-kesef-kesut-einayim, t0) ∧ HOLDS(and-nokhachat, t0)</span><br>THE ONLY SPEECH TO SARAH: the king addresses the silent center of the chapter — with damages (elef kesef &#x27;a thousand silver&#x27;), an idiom (KESUT EINAYIM &#x27;a covering of eyes&#x27; — kesut token 1/5; its career is the law&#x27;s garment-covers: the wife&#x27;s covering, the pledged cloak, the tasseled garment — born here as honor- money&#x27;s metaphor; the idiom&#x27;s meaning is the chain&#x27;s old dispute, named-only), and a verdict: VE-NOKHACHAT (&#x27;and you are RIGHTED/vindicated&#x27;) — YAKHACH (&#x27;set right/reprove&#x27;) TOKEN 1: the vindication-verb debuts ON SARAH, and its token 2 is 21:25 — Abraham REPROVING AVIMELECH over the well, one chapter ahead: the verb born clearing her will next indict him [census; watch]. The verse rests on the vindication [tree fact]. Onkelos: KESUT DIQAR (&#x27;a covering of HONOR&#x27; — the yeqara-root dignifying the idiom); ITOKHACHAT (&#x27;vindicated&#x27;) [dual-track].
+</td><td><span class="he">אֶלֶף כֶּסֶף … כְּסוּת עֵינַיִם … וְנֹכָחַת</span> · <i>elef kesef … kesut einayim … ve-nokhachat</i><br><span class="gloss">= elef kesef kesut einayim and-nokhachat</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The chapter&#x27;s silent woman receives its longest sentence: silver, a veil of honor, and a verb of vindication that will spend its next token reproving the man who paid it.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_20_17 · Gen.20.17 · <span class='expr'>THE_PRAYER_AND_THE_HEALING</span></h3>
+<p><span class="he">וַיִּתְפַּלֵּל אַבְרָהָם אֶל־הָאֱלֹהִים וַיִּרְפָּא אֱלֹהִים אֶת־אֲבִימֶלֶךְ וְאֶת־אִשְׁתּוֹ וְאַמְהֹתָיו וַיֵּלֵדוּ</span> · <i>va-yitpalel avraham el-ha-elohim va-yirpa elohim et-avimelekh ve-et-ishto ve-amhotav va-yeledu</i> · [EN-AID/JPS] And Abraham prayed unto God; and God healed Abimelech, and his wife, and his maid-servants; and they bore children.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויתפלל אברהם אל־האלהים</span> · <i>va-yitpalel avraham el-ha-elohim</i> · and Abraham PRAYED to God (etnachta arm — the debut deed)</div><div class="arm"><b>RIGHT</b><br><span class="he">וירפא אלהים את־אבימלך ואת־אשתו ואמהתיו וילדו</span> · <i>va-yirpa elohim et-avimelekh ve-et-ishto ve-amhotav va-yeledu</i> · and God HEALED the king, his wife, his maids — and they bore (verse-final va-yeledu)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">pray(e5) ∧ Agent(e5, avraham) ∧ Goal(e5, ha_elohim)</span><br><span class="gloss">= pray(e5) ∧ Agent(e5, avraham) ∧ Goal(e5, the-God)</span><br>THE PROMISE PERFORMED [flag 10]: PALAL token 2 — the pray-verb&#x27;s narrative debut pays 20:7&#x27;s ve-yitpalel in its own root (a law-grammar future met by its deed: the letter&#x27;s promise-performance pair, held as prose — nothing was pushed, nothing pops; the echo is the letter&#x27;s own). The prophet&#x27;s first prophetic ACT in the corpus is intercession for the court that took his wife [prose]. Onkelos: VE-TZALI avraham qodam YYY — the tzali-family receives the letter&#x27;s verb [dual-track headline].
+</td><td><span class="he">וַיִּתְפַּלֵּל אַבְרָהָם אֶל־הָאֱלֹהִים</span> · <i>va-yitpalel avraham el-ha-elohim</i><br><span class="gloss">= and-yitpalel avraham to-the-God</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">heal(e6) ∧ Agent(e6, elohim) ∧ Theme(e6, beit_avimelekh)</span><br><span class="gloss">= heal(e6) ∧ Agent(e6, God) ∧ Theme(e6, beit-avimelekh)</span><br>RAPHA (&#x27;heal&#x27;) TORAH DEBUT — the heal-verb is born answering the debut prayer (its career: Joseph&#x27;s physicians, ani YHWH rofekha &#x27;I am YHWH your healer&#x27;, Exod 15:26) [census]. VA-YELEDU (&#x27;and they BORE&#x27;) — the healing is fertility: the shut house reopens [the closer explains what was shut; prose]. Onkelos: ve-ASI (&#x27;healed&#x27;) + VE-ITREVACHU (&#x27;and they were RELIEVED&#x27;) — the buffer adds ease to the bearing [dual-track delta].
+</td><td><span class="he">וַיִּרְפָּא אֱלֹהִים … וַיֵּלֵדוּ</span> · <i>va-yirpa elohim … va-yeledu</i><br><span class="gloss">= and-yirpa God and-yeledu</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+</table>
+<div class="meta">The pray-verb and the heal-verb are born in one verse, cause and effect. The prophet prays for his abductor and the machine files the era&#x27;s gentlest pair of events.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_20_18 · Gen.20.18 · <span class='expr'>THE_SHUT_WOMB_CLOSER</span></h3>
+<p><span class="he">כִּי־עָצֹר עָצַר יְהוָה בְּעַד כָּל־רֶחֶם לְבֵית אֲבִימֶלֶךְ עַל־דְּבַר שָׂרָה אֵשֶׁת אַבְרָהָם</span> · <i>ki-atzor atzar YHWH bead kol-rechem le-veit avimelekh al-devar sarah eshet avraham</i> · [EN-AID/JPS] For the LORD had fast closed up all the wombs of the house of Abimelech, because of Sarah Abraham&#x27;s wife.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">כי־עצר עצר יהוה בעד כל־רחם לבית אבימלך</span> · <i>ki-atzor atzar YHWH bead kol-rechem le-veit avimelekh</i> · for SHUTTING YHWH had SHUT every womb of Avimelech&#x27;s house (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">על־דבר שרה אשת אברהם</span> · <i>al-devar sarah eshet avraham</i> · over the matter of Sarah, Abraham&#x27;s WIFE (verse-final avraham)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(atzor_atzar_YHWH_bead_kol_rechem, t0)</span><br><span class="gloss">= HOLDS(atzor-atzar-the-LORD-bead-all-rechem, t0)</span><br>THE CLOSER EXPLAINS [flag 14]: ATZOR ATZAR (&#x27;shutting He had SHUT&#x27;) — the restrain-verb doubled in the infinitive absolute; atzar tokens 2-3, and TOKEN 1 is frozen gen_32&#x27;s line, quoted: &#x27;ATZARANI (He has RESTRAINED me) — atzar TORAH&#x27; [DEBUT — 16:2, Sarai&#x27;s own complaint]: the shut-verb&#x27;s first two contexts are Sarah&#x27;s barrenness and the court that took her — the word keeps her file [census + cross-unit arc, LANDED]. RECHEM (&#x27;womb&#x27;) TORAH DEBUT — the womb-word enters the corpus SHUT (career: Leah opened, Rachel remembered-and-opened, every womb consecrated at Exod 13) [census]. The frame&#x27;s last words are SARAH ESHET AVRAHAM (&#x27;Sarah, Abraham&#x27;s WIFE&#x27;) — the verse, the chapter, and the ruse end on the noun the claim denied [tree fact: the silluq arm; prose]. THE SEAM IS THE LETTER&#x27;S HINGE: 20:18 shuts every womb of the house; 21:1 opens Sarah&#x27;s (u-YHWH paqad et-sarah) — across the wall, gen_37&#x27;s first landing [watch; nothing crosses]. Onkelos: MEICHAD ACHAD — the SAME Aramaic shut-verb the buffer used for Lot&#x27;s DOOR (19:6/10): doors and wombs close in one word [dual-track weld].
+</td><td><span class="he">כִּי־עָצֹר עָצַר יְהוָה בְּעַד כָּל־רֶחֶם</span> · <i>ki-atzor atzar YHWH bead kol-rechem</i><br><span class="gloss">= when-atzor atzar the-LORD bead all-rechem</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_ZERO_EVENTS</td><td><span class="expr">zero events in Gen.20.18</span><br>A ki-clause state-frame — the narrator&#x27;s explanatory coda: the machine certifies no event fired [the stative-verse device].
+</td><td><span class="he">כִּי־עָצֹר עָצַר יְהוָה</span> · <i>ki-atzor atzar YHWH</i><br><span class="gloss">= when-atzor atzar the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The last verse opens the case-file: every womb had been shut over the matter of Abraham&#x27;s WIFE — the word the whole ruse withheld. One wall away, the same verb-family will open Sarah&#x27;s.</div>
+</div>
+<h2>State machine</h2>
+<div class="meta">Gerar&#x27;s dream-trial (standalone; registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER).</div>
+<table><tr><th>state</th><th>meaning</th></tr>
+<tr><td><b>S_boot</b></td><td>Before 20:1 — all registers empty (standalone unit; the smoke-watch behind the frame)</td></tr>
+<tr><td><b>S_sojourned</b></td><td>After 20:1 — the journey south; three known names read</td></tr>
+<tr><td><b>S_taken</b></td><td>After 20:2 — the second claim; Avimelech installed; Sarah taken in the active voice</td></tr>
+<tr><td><b>S_arraigned</b></td><td>After 20:3-4 — the dream-court opens (chalom debut; the Memra in the buffer); the verdict-participle; the king&#x27;s count-question (tzaddiq token 10 lands; no test, no push)</td></tr>
+<tr><td><b>S_defended</b></td><td>After 20:5-6 — the integrity defense (tom + the niqayon hapax); the concession and the withholding (chasakh debut; the touch-chain)</td></tr>
+<tr><td><b>S_commanded</b></td><td>After 20:7 — the era&#x27;s first divine push: LET(hashev) pushed and OPEN; navi + palal debut; mot-tamut&#x27;s second and last Torah token</td></tr>
+<tr><td><b>S_feared</b></td><td>After 20:8 — the court fears greatly (the letter&#x27;s rebuttal of 20:11&#x27;s guess, pre-placed)</td></tr>
+<tr><td><b>S_rebuked</b></td><td>After 20:9-13 — the great-sin arraignment (the calf&#x27;s phrase); the fear-of-God guess; the half-truth; the quoted demand (pushes nothing — gen_28&#x27;s original behind two walls)</td></tr>
+<tr><td><b>S_returned</b></td><td>After 20:14 — SETTLED CYCLE #13: va-yashev pays hashev in root and stem; SPECS EMPTY (machine-asserted)</td></tr>
+<tr><td><b>S_granted</b></td><td>After 20:15 — the dwell-grant pushed (gen_29&#x27;s offer-class); the queue holds one</td></tr>
+<tr><td><b>S_vindicated</b></td><td>After 20:16 — the covering of eyes; ve-nokhachat — the vindication-verb debuts on Sarah</td></tr>
+<tr><td><b>S_healed</b></td><td>After 20:17 — the pray-verb and the heal-verb born as cause and effect; the promise of 20:7 performed in its own root (prose pair)</td></tr>
+<tr><td><b>S_explained</b></td><td>After 20:18 — the shut-womb coda (atzor atzar; rechem born shut); the seam hands to 21:1&#x27;s visitation</td></tr>
+</table><table><tr><th>from</th><th>to</th><th>via</th></tr>
+<tr><td>S_boot</td><td>S_sojourned</td><td>STEP_Gn_20_1</td></tr>
+<tr><td>S_sojourned</td><td>S_taken</td><td>STEP_Gn_20_2</td></tr>
+<tr><td>S_taken</td><td>S_arraigned</td><td>STEP_Gn_20_3</td></tr>
+<tr><td>S_arraigned</td><td>S_defended</td><td>STEP_Gn_20_5</td></tr>
+<tr><td>S_defended</td><td>S_commanded</td><td>STEP_Gn_20_7</td></tr>
+<tr><td>S_commanded</td><td>S_feared</td><td>STEP_Gn_20_8</td></tr>
+<tr><td>S_feared</td><td>S_rebuked</td><td>STEP_Gn_20_9</td></tr>
+<tr><td>S_rebuked</td><td>S_returned</td><td>STEP_Gn_20_14</td></tr>
+<tr><td>S_returned</td><td>S_granted</td><td>STEP_Gn_20_15</td></tr>
+<tr><td>S_granted</td><td>S_vindicated</td><td>STEP_Gn_20_16</td></tr>
+<tr><td>S_vindicated</td><td>S_healed</td><td>STEP_Gn_20_17</td></tr>
+<tr><td>S_healed</td><td>S_explained</td><td>STEP_Gn_20_18</td></tr>
+</table>
+<div class="note"><b>AFTER_S_explained</b> — TIME: t0 + t1 (cycle #13&#x27;s mark). WORLD: ONE install (avimelekh) + THREE presupposed geography reads (gerar, qadesh, shur — flag 16). REGISTRY: ZERO writes (the registry sleeps after gen_35&#x27;s two). TESTS: ZERO — the trial graded everything in speech (the idiom-tov and the question-tzaddiq both fenced by frozen discipline; flags 7-8). SPECS: TWO pushed / ONE popped (SETTLED CYCLE #13 — hashev paid by va-yashev, root and stem, demandee compliance; the first divine push since gen_33 and the first divine-demand pop since cycle #8) / ONE OPEN (LET(shev(ba_tov_be_einekha)) — the dwell-grant, gen_29&#x27;s offer-class, unpaid in its own verb in-span). After a seven-open chapter and a fourteen-open chapter, the machine&#x27;s cleanest close: the queue touched zero at 20:14 (machine-asserted) for the first time since Genesis 17 opened. LEDGER: EMPTY. EVENTS: the journey, the taking, the dream-speech, the report, the pop, the prayer, the healing. FLAGS: read_before_install x3. The chapter&#x27;s grammar-lesson: a court that convenes in a dream, convicts no one, and closes its one divine demand on time.</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>The claim and the taking: after STEP_Gn_20_2</td><td>All registers empty (standalone unit). (The frozen arrangement&#x27;s nth execution — gen_28&#x27;s imri-original behind two walls; the take-verb active where 12:15 was the rare passive.)</td><td>WORLD += avimelekh; Facts achoti-hi HOLD; flags gerar/qadesh/shur as read-before-install.</td><td><span class="he">אֲחֹתִי הִוא … וַיִּקַּח אֶת־שָׂרָה</span> · <i>achoti hi … va-yiqach et-sarah</i><br><span class="gloss">= achoti hi and-yiqach sarah</span></td></tr>
+<tr><td><b>S2</b></td><td>The dream-court and the defense: after STEP_Gn_20_6</td><td>S1 state plus 20:3-5 (chalom&#x27;s debut; the verdict-participle; the king&#x27;s count-question — tzaddiq token 10 landed, question-law held, the triages fenced; the integrity defense with its hapax). (The concession: the withhold-verb born; the touch-chain&#x27;s court-token.)</td><td>Facts hinkha-met HOLD; Facts tom-levavi HOLD; Facts echsokh-chato HOLD; no test, no name.</td><td><span class="he">וָאֶחְשֹׂךְ גַּם־אָנֹכִי אוֹתְךָ מֵחֲטוֹ־לִי</span> · <i>va-echsokh gam-anokhi otkha me-chato-li</i><br><span class="gloss">= and-echsokh also-anokhi otkha from-chato-to-me</span></td></tr>
+<tr><td><b>S3</b></td><td>The era&#x27;s first divine push: after STEP_Gn_20_7</td><td>S2 state. (navi and palal debut in the command&#x27;s own verse; the consequence-imperative and the conditional death-sentence held as facts — flags 3-4; mot-tamut&#x27;s second and last Torah token.)</td><td>LET(hashev(eshet_ha_ish)) pushed and OPEN; Facts mot-tamut HOLD.<br><span class="gloss">= LET(hashev(wife-of-the-man)) pushed and OPEN; Facts dying-you-shall-die HOLD.</span></td><td><span class="he">וְעַתָּה הָשֵׁב אֵשֶׁת־הָאִישׁ כִּי־נָבִיא הוּא</span> · <i>ve-atah hashev eshet-ha-ish ki-navi hu</i><br><span class="gloss">= you hashev wife-of-the-man when-navi that</span></td></tr>
+<tr><td><b>S4</b></td><td>The arraignment holds nothing new on the queue: after STEP_Gn_20_13</td><td>S3 state plus 20:8-12 (the fearing court; the great-sin phrase — the calf&#x27;s four-token census; the fear-of-God guess born negated; the half-truth). (The QUOTED demand pushes nothing — flag 5: the clause below proves the queue unchanged through five verses of speech.)</td><td>LET(hashev(eshet_ha_ish)) pushed and OPEN; Facts imri-li HOLD; Facts yirat-elohim HOLD; no test, no name.<br><span class="gloss">= LET(hashev(wife-of-the-man)) pushed and OPEN; Facts imri-to-me HOLD; Facts yirat-God HOLD; no test, no name.</span></td><td><span class="he">אִמְרִי־לִי אָחִי הוּא</span> · <i>imri-li achi hu</i><br><span class="gloss">= imri-to-me my-brother that</span></td></tr>
+<tr><td><b>S5</b></td><td>Settled cycle #13 — the queue touches zero: after STEP_Gn_20_14</td><td>S4 state. (va-yashev pays hashev in root and stem, demandee compliance — the echo-receipt class; the first divine-demand pop since cycle #8, counterexample hunted; flag 2. The clause below is the frozen-preferred pop-assert: the popped demand was the only entry.)</td><td>SPECS empty.</td><td><span class="he">וַיָּשֶׁב לוֹ אֵת שָׂרָה אִשְׁתּוֹ</span> · <i>va-yashev lo et sarah ishto</i><br><span class="gloss">= and-yashev not et sarah his-wife</span></td></tr>
+<tr><td><b>S6</b></td><td>The dwell-grant: after STEP_Gn_20_15</td><td>S5 state. (The offer-imperative pushes — gen_29&#x27;s 13:9 class, flag 6; ba-tov rides the attribute-idiom class, no TEST — gen_35&#x27;s flag-9 law, flag 7.)</td><td>LET(shev(ba_tov_be_einekha)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shev(in-the-good-in-einekha)) pushed and OPEN; no test, no name.</span></td><td><span class="he">בַּטּוֹב בְּעֵינֶיךָ שֵׁב</span> · <i>ba-tov be-einekha shev</i><br><span class="gloss">= good in-einekha shev</span></td></tr>
+<tr><td><b>S7</b></td><td>The prayer performed: after STEP_Gn_20_17</td><td>S6 state plus 20:16 (the covering of eyes; ve-nokhachat — the vindication-verb debuting on Sarah). (palal token 2 pays 20:7&#x27;s future in prose — nothing was pushed, nothing pops; rapha debuts answering it; the tzali vindication in the buffer.)</td><td>LET(shev(ba_tov_be_einekha)) pushed and OPEN; Facts nokhachat HOLD; no test, no name.<br><span class="gloss">= LET(shev(in-the-good-in-einekha)) pushed and OPEN; Facts nokhachat HOLD; no test, no name.</span></td><td><span class="he">וַיִּתְפַּלֵּל אַבְרָהָם אֶל־הָאֱלֹהִים וַיִּרְפָּא אֱלֹהִים</span> · <i>va-yitpalel avraham el-ha-elohim va-yirpa elohim</i><br><span class="gloss">= and-yitpalel avraham to-the-God and-yirpa God</span></td></tr>
+<tr><td><b>S8</b></td><td>The shut-womb close: after STEP_Gn_20_18</td><td>S7 state. (atzor atzar — atzar tokens 2-3 landing frozen gen_32&#x27;s atzarani line; rechem born shut; the chapter ends on &#x27;Sarah, Abraham&#x27;s WIFE&#x27;; the seam hands to 21:1&#x27;s visitation — gen_37&#x27;s first landing.)</td><td>LET(shev(ba_tov_be_einekha)) pushed and OPEN; Facts atzor-atzar HOLD; WORLD = {avimelekh}; no test, no name; LEDGER stays EMPTY (open transaction); flags gerar/qadesh/shur as read-before-install.<br><span class="gloss">= LET(shev(in-the-good-in-einekha)) pushed and OPEN; Facts atzor-atzar HOLD; WORLD = {avimelekh}; no test, no name; LEDGER stays EMPTY (open transaction); flags gerar/qadesh/shur as read-before-install.</span></td><td><span class="he">כִּי־עָצֹר עָצַר יְהוָה בְּעַד כָּל־רֶחֶם</span> · <i>ki-atzor atzar YHWH bead kol-rechem</i><br><span class="gloss">= when-atzor atzar the-LORD bead all-rechem</span></td></tr>
+</table>
+<h2>Exports (reusable patterns)</h2><table><tr><th>id</th><th>content</th></tr>
+<tr><td>EXPORT_cycle_13_and_the_precise_first</td><td><span class="he">הָשֵׁב אֵשֶׁת־הָאִישׁ … וַיָּשֶׁב לוֹ אֵת שָׂרָה אִשְׁתּוֹ</span> · <i>hashev eshet-ha-ish … va-yashev lo et sarah ishto</i> · SETTLED CYCLE #13 CLAIMED [flag 2]: 20:7&#x27;s divine imperative (hashev &#x27;return&#x27; — the FIRST DIVINE PUSH since gen_33&#x27;s covenant pair, both of whose demands still stand open) is paid at 20:14 in its own root and stem (va-yashev, hiphil shuv) by the demandee — the echo-receipt class&#x27;s textbook token; the &#x27;first&#x27; cut precisely after the counterexample hunt: divine pops exist (frozen gen_31&#x27;s cycle #8 — &#x27;GOD says take next&#x27; — quoted), so #13 is the first divine-demand pop SINCE #8. The pop rides the frozen-preferred machine-assert: the queue held only this demand, and &#x27;SPECS empty&#x27; fires at the gate. Around it the consequence-imperative (ve-cheyeh &#x27;and live&#x27;) and the conditional death-sentence (da ki-MOT TAMUT — the death-doubling&#x27;s second and LAST Torah token; its only sibling is Eden&#x27;s 2:17) hold as facts with flags 3-4 — case-speech, not installed law</td></tr>
+<tr><td>EXPORT_the_fourfold_debut_and_the_tzali_vindication</td><td><span class="he">כִּי־נָבִיא הוּא וְיִתְפַּלֵּל בַּעַדְךָ … וַיִּתְפַּלֵּל אַבְרָהָם … וַיִּרְפָּא אֱלֹהִים … בַּחֲלוֹם</span> · <i>ki-navi hu ve-yitpalel baadkha … va-yitpalel avraham … va-yirpa elohim … ba-chalom</i> · FOUR TORAH DEBUTS IN ONE COMPACT SPAN [flags 9-10]: navi (&#x27;prophet&#x27; — born naming Abraham an INTERCESSOR, by God, to a foreign king), palal (&#x27;pray&#x27; — promised at 20:7 in law-grammar, PERFORMED at 20:17 in narrative: the letter&#x27;s own promise-performance pair, prose), rapha (&#x27;heal&#x27; — born answering the debut prayer), chalom (&#x27;dream&#x27; — the revelation-class opening on a gentile; the interior-speech device&#x27;s outward twin, no new operator). THE DUAL-TRACK CROWN: Onkelos wrote PRAYER over Abraham&#x27;s standing at frozen 18:22 and 19:27 (meshamesh bi-tzlo) two chapters before the Hebrew had a pray-verb — at 20:7/17 the buffer receives the letter&#x27;s palal in its own root (VI-TZALEI / VE-TZALI): the anticipation vindicated in the debut verses; and the MEMRA takes the dream-shift (va-ata MEIMAR min qodam YYY, 20:3/6)</td></tr>
+<tr><td>EXPORT_the_trial_lexicon</td><td><span class="he">הֲגוֹי גַּם־צַדִּיק תַּהֲרֹג … בְּתָם־לְבָבִי וּבְנִקְיֹן כַּפַּי … חֲטָאָה גְדֹלָה … וְנֹכָחַת</span> · <i>ha-goy gam-tzaddiq taharog … be-tom-levavi u-ve-niqyon kapai … chataah gedolah … ve-nokhachat</i> · THE COURT&#x27;S WORDS ARE BORN AND SPENT AT GERAR [flags 8, 11-12; census-exact]: tzaddiq token 10 as a KING&#x27;S QUESTION (frozen gen_34&#x27;s line landed; the discipline&#x27;s third consecutive chapter — no test, no demand-on-God, the triages fenced); the sin-VERB&#x27;s debut pair both in-span (God&#x27;s against-ME, the king&#x27;s what-have-I); CHATAAH GEDOLAH (&#x27;great sin&#x27;) — four Torah tokens: Gerar and the golden calf x3; TOM (&#x27;integrity&#x27;) spent in one exchange; NIQAYON (&#x27;cleanness&#x27;) a hapax; YIRAT ELOHIM (&#x27;fear of God&#x27;) born NEGATED in a wrong guess (the court had feared at 20:8) and installed right at Sinai (Exod 20:20 — token 2); YAKHACH (&#x27;set right&#x27;) debuting ON SARAH&#x27;s vindication with token 2 waiting at 21:25 to reprove the vindicator; CHASAKH (&#x27;withhold&#x27;) born in God&#x27;s mercy, crowned at the Aqedah; the touch-chain (Eden&#x27;s fence -&gt; Pharaoh&#x27;s plague -&gt; Gerar&#x27;s restraint -&gt; 26:11); and the closer&#x27;s pair: ATZOR ATZAR (atzar tokens 2-3; token 1 = frozen gen_32&#x27;s atzarani — Sarai&#x27;s own word) over RECHEM born SHUT — the seam handing every closed womb to 21:1&#x27;s visitation</td></tr>
+<tr><td>EXPORT_the_second_sister_court</td><td><span class="he">אֲחֹתִי הִוא … אִמְרִי־לִי אָחִי הוּא … וַיָּשֶׁב … שָׂרָה אֵשֶׁת אַבְרָהָם</span> · <i>achoti hi … imri-li achi hu … va-yashev … sarah eshet avraham</i> · THE EPISODE-PAIR HELD ACROSS WALLS [flags 5, 16; nothing crosses]: the sister-word&#x27;s tokens 4-6 complete a career that is all ruse (tokens 2-3 = frozen gen_28&#x27;s 12:13/19); the QUOTED demand (20:13&#x27;s imri-li — testimony inside a retrospective) pushes nothing while gen_28&#x27;s original stands open behind two walls, its &#x27;at every place&#x27; clause making 20:2 an nth execution; the take-verb active where 12:15 was the rare passive (gen_34&#x27;s census note quoted); the gifts AFTER the truth where Egypt&#x27;s came before; expulsion inverted to invitation (shev — the grant-imperative pushed by gen_29&#x27;s offer-class, the unit&#x27;s one open demand); the kill-fear tokens binding the courts (12:12/20:4/20:11); and the chapter&#x27;s last three words giving the ruse its verdict: sarah ESHET AVRAHAM (&#x27;Sarah, Abraham&#x27;s WIFE&#x27;). The third episode is pre-seeded: gerar tokens 4-5 and the touch-decree wait at 26:1-11 [watch]</td></tr>
+</table>
+<h2>Oral notes (named, tiered, dual-track — never merged)</h2>
+<div class="note"><span class="badge tier-o">observation</span> <b>Bereshit Rabbah 52 (the span); Rashi at 20:1, 20:7 (navi), 20:9, 20:13 (the plural verb), 20:16 (kesut einayim); Bavli Bava Qamma 92a (the prayed-for-others rule minted from 20:17 beside 21:1 — mi she-mevaqesh rachamim); Makkot 9b (the ben-noach court); Berakhot 34b; the Yiskah file at 20:12 (Sanhedrin 69b) — gen_36 Tier-A queue</b><br><span class="he">כִּי־נָבִיא הוּא</span> · <i>(queue — named only)</i> · The chain&#x27;s files: the prophet-title&#x27;s scope, the plural verb&#x27;s grammar, the covering-of-eyes dispute, the half-truth&#x27;s genealogy, and the rule that one who prays for another while needing the same thing is answered first — minted exactly at this unit&#x27;s seam. ALL NAMED ONLY — ein adam dan me-atzmo (&#x27;one may not derive on his own&#x27;).
+</div>
+<div class="note"><span class="badge tier-o">observation</span> <b>Targum Onkelos Genesis 20 (Sefaria, fetched 2026-08-05)</b><br><span class="he">וִיצַלֵּי עֲלָךְ … וְצַלִּי אַבְרָהָם</span> · <i>vi-tzalei alakh … ve-tzali avraham</i> · Buffer-record summary for the frozen ledger: THE TZALI VINDICATION (20:7/17 — the letter&#x27;s first pray-verb received in the root the buffer wrote over the frozen standing-places two chapters early); the MEMRA in the dream (20:3/6); the 20:13 RECOMPOSITION (the plural wandering transferred to the astray peoples; the prophet brought near to His fear — the tenure&#x27;s boldest buffer intervention); Reqam/Chagra (the identification class, exact); lead-for-take on Sarah x2; kodam-distancing (know -&gt; revealed-before; against-Me -&gt; before-Me); the zakkai-family on the king&#x27;s innocence; kesut DIQAR (the honor-covering); ASI for the heal-debut; CHOVA RABBA for the great sin; and the shut-verb weld — atzor atzar -&gt; MEICHAD ACHAD, the same Aramaic achad that shut Lot&#x27;s door: doors and wombs close in one word. Deltas recorded, never merged.
+</div>
+<h2>Binary trees (ta'amim v3, glue bricks)</h2>
+<h3>Gen.20.1 · parser unique · 12 words</h3>
+<div class="meta"><span class="he">ויסע משם אברהם ארצה הנגב וישב בין־קדש ובין שור ויגר בגרר</span> · <i>va-yisa mi-sham avraham artza-ה ha-negev va-yeshev ben-qadesh u-ven shur va-yagar bi-gerar</i> · Abraham journeyed south and sojourned in Gerar. [EN-AID]</div>
+<pre>PHRASE (binary 12w) וַ/יִּסַּ֨ע מִ/שָּׁ֤ם אַבְרָהָם֙ אַ֣רְצָ/ה הַ/נ…
+├── PHRASE (binary 10w) וַ/יִּסַּ֨ע מִ/שָּׁ֤ם אַבְרָהָם֙ אַ֣רְצָ/ה הַ/נ…
+│   ├── PHRASE (binary 5w) וַ/יִּסַּ֨ע מִ/שָּׁ֤ם אַבְרָהָם֙ אַ֣רְצָ/ה הַ/נ…
+│   │   ├── [0-2] GLUE וַ/יִּסַּ֨ע מִ/שָּׁ֤ם אַבְרָהָם֙ (pashta, rank=3)
+│   │   └── [3-4] GLUE אַ֣רְצָ/ה הַ/נֶּ֔גֶב (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) וַ/יֵּ֥שֶׁב בֵּין קָדֵ֖שׁ וּ/בֵ֣ין שׁ֑וּר
+│       ├── [5-7] GLUE וַ/יֵּ֥שֶׁב בֵּין קָדֵ֖שׁ (tifcha, rank=2)
+│       └── [8-9] GLUE וּ/בֵ֣ין שׁ֑וּר (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 2w) וַ/יָּ֖גָר בִּ/גְרָֽר
+    ├── [10] וַ/יָּ֖גָר (tifcha, rank=2)
+    └── [11] בִּ/גְרָֽר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.20.2 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">ויאמר אברהם אל־שרה אשתו אחתי הוא וישלח אבימלך מלך גרר ויקח את־שרה</span> · <i>va-yomer avraham el-sara isht-o achoti-y hiv va-yishlach avimelekh melekh gerar va-yiqach et-sara</i> · She is my sister. Avimelech sent and took Sarah. [EN-AID]</div>
+<pre>PHRASE (binary 14w) וַ/יֹּ֧אמֶר אַבְרָהָ֛ם אֶל שָׂרָ֥ה אִשְׁתּ֖/וֹ …
+├── PHRASE (binary 7w) וַ/יֹּ֧אמֶר אַבְרָהָ֛ם אֶל שָׂרָ֥ה אִשְׁתּ֖/וֹ …
+│   ├── PHRASE (binary 5w) וַ/יֹּ֧אמֶר אַבְרָהָ֛ם אֶל שָׂרָ֥ה אִשְׁתּ֖/וֹ
+│   │   ├── [0-1] GLUE וַ/יֹּ֧אמֶר אַבְרָהָ֛ם (tevir, rank=3)
+│   │   └── [2-4] GLUE אֶל שָׂרָ֥ה אִשְׁתּ֖/וֹ (tifcha, rank=2)
+│   └── [5-6] GLUE אֲחֹ֣תִ/י הִ֑וא (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) וַ/יִּשְׁלַ֗ח אֲבִימֶ֨לֶךְ֙ מֶ֣לֶךְ גְּרָ֔ר וַ/…
+    ├── PHRASE (binary 4w) וַ/יִּשְׁלַ֗ח אֲבִימֶ֨לֶךְ֙ מֶ֣לֶךְ גְּרָ֔ר
+    │   ├── [7] וַ/יִּשְׁלַ֗ח (revia, rank=3)
+    │   └── PHRASE (binary 3w) אֲבִימֶ֨לֶךְ֙ מֶ֣לֶךְ גְּרָ֔ר
+    │       ├── [8] אֲבִימֶ֨לֶךְ֙ (pashta, rank=3)
+    │       └── [9-10] GLUE מֶ֣לֶךְ גְּרָ֔ר (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) וַ/יִּקַּ֖ח אֶת שָׂרָֽה
+        ├── [11] וַ/יִּקַּ֖ח (tifcha, rank=2)
+        └── [12-13] GLUE אֶת שָׂרָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.20.3 · parser unique · 17 words</h3>
+<div class="meta"><span class="he">ויבא אלהים אל־אבימלך בחלום הלילה ויאמר לו הנך מת על־האשה אשר־לקחת והוא בעלת בעל</span> · <i>va-yavo Elohim el-avimelekh ba-chalom ha-layla va-yomer l-o hin-kha met al-ha-isha asher-laqachta ve-hiv beulat baal</i> · God came in a night dream: you are dead — she is a wife. [EN-AID]</div>
+<pre>PHRASE (binary 17w) וַ/יָּבֹ֧א אֱלֹהִ֛ים אֶל אֲבִימֶ֖לֶךְ בַּ/חֲל֣ו…
+├── PHRASE (binary 6w) וַ/יָּבֹ֧א אֱלֹהִ֛ים אֶל אֲבִימֶ֖לֶךְ בַּ/חֲל֣ו…
+│   ├── PHRASE (binary 4w) וַ/יָּבֹ֧א אֱלֹהִ֛ים אֶל אֲבִימֶ֖לֶךְ
+│   │   ├── [0-1] GLUE וַ/יָּבֹ֧א אֱלֹהִ֛ים (tevir, rank=3)
+│   │   └── [2-3] GLUE אֶל אֲבִימֶ֖לֶךְ (tifcha, rank=2)
+│   └── [4-5] GLUE בַּ/חֲל֣וֹם הַ/לָּ֑יְלָה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 11w) וַ/יֹּ֣אמֶר ל֗/וֹ הִנְּ/ךָ֥ מֵת֙ עַל הָ/אִשָּׁ֣…
+    ├── PHRASE (binary 8w) וַ/יֹּ֣אמֶר ל֗/וֹ הִנְּ/ךָ֥ מֵת֙ עַל הָ/אִשָּׁ֣…
+    │   ├── [6-7] GLUE וַ/יֹּ֣אמֶר ל֗/וֹ (revia, rank=3)
+    │   └── PHRASE (binary 6w) הִנְּ/ךָ֥ מֵת֙ עַל הָ/אִשָּׁ֣ה אֲשֶׁר לָקַ֔חְתָּ
+    │       ├── [8-9] GLUE הִנְּ/ךָ֥ מֵת֙ (pashta, rank=3)
+    │       └── [10-13] GLUE עַל הָ/אִשָּׁ֣ה אֲשֶׁר לָקַ֔חְתָּ (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) וְ/הִ֖וא בְּעֻ֥לַת בָּֽעַל
+        ├── [14] וְ/הִ֖וא (tifcha, rank=2)
+        └── [15-16] GLUE בְּעֻ֥לַת בָּֽעַל (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.20.4 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">ואבימלך לא קרב אליה ויאמר אדני הגוי גם־צדיק תהרג</span> · <i>va-avimelekh lo qarav ele-ha va-yomar adona-y ha-goy gam-tzadiq taharog</i> · He had not come near: will You slay a righteous nation? [EN-AID]</div>
+<pre>PHRASE (binary 10w) וַ/אֲבִימֶ֕לֶךְ לֹ֥א קָרַ֖ב אֵלֶ֑י/הָ וַ/יֹּאמַ…
+├── PHRASE (binary 4w) וַ/אֲבִימֶ֕לֶךְ לֹ֥א קָרַ֖ב אֵלֶ֑י/הָ
+│   ├── [0] וַ/אֲבִימֶ֕לֶךְ (zaqef gadol, rank=2)
+│   └── PHRASE (binary 3w) לֹ֥א קָרַ֖ב אֵלֶ֑י/הָ
+│       ├── [1-2] GLUE לֹ֥א קָרַ֖ב (tifcha, rank=2)
+│       └── [3] אֵלֶ֑י/הָ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) וַ/יֹּאמַ֕ר אֲדֹנָ֕/י הֲ/ג֥וֹי גַּם צַדִּ֖יק תּ…
+    ├── [4] וַ/יֹּאמַ֕ר (zaqef gadol, rank=2)
+    └── PHRASE (binary 5w) אֲדֹנָ֕/י הֲ/ג֥וֹי גַּם צַדִּ֖יק תַּהֲרֹֽג
+        ├── [5] אֲדֹנָ֕/י (zaqef gadol, rank=2)
+        └── PHRASE (binary 4w) הֲ/ג֥וֹי גַּם צַדִּ֖יק תַּהֲרֹֽג
+            ├── [6-8] GLUE הֲ/ג֥וֹי גַּם צַדִּ֖יק (tifcha, rank=2)
+            └── [9] תַּהֲרֹֽג (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.20.5 · parser unique · 18 words</h3>
+<div class="meta"><span class="he">הלא הוא אמר־לי אחתי הוא והיא־גם־הוא אמרה אחי הוא בתם־לבבי ובנקין כפי עשיתי זאת</span> · <i>ha-lo hu amar-li-y achoti-y hiv ve-hi-gam-hiv amra achi-y hu be-tam-levavi-y u-ve-niqyon kapa-y asiti zot</i> · He said sister; she said brother — integrity and clean hands. [EN-AID]</div>
+<pre>PHRASE (binary 18w) הֲ/לֹ֨א ה֤וּא אָֽמַר לִ/י֙ אֲחֹ֣תִ/י הִ֔וא וְ/ה…
+├── PHRASE (binary 12w) הֲ/לֹ֨א ה֤וּא אָֽמַר לִ/י֙ אֲחֹ֣תִ/י הִ֔וא וְ/ה…
+│   ├── PHRASE (binary 6w) הֲ/לֹ֨א ה֤וּא אָֽמַר לִ/י֙ אֲחֹ֣תִ/י הִ֔וא
+│   │   ├── [0-3] GLUE הֲ/לֹ֨א ה֤וּא אָֽמַר לִ/י֙ (pashta, rank=3)
+│   │   └── [4-5] GLUE אֲחֹ֣תִ/י הִ֔וא (zaqef qatan, rank=2)
+│   └── PHRASE (binary 6w) וְ/הִֽיא גַם הִ֥וא אָֽמְרָ֖ה אָחִ֣/י ה֑וּא
+│       ├── [6-9] GLUE וְ/הִֽיא גַם הִ֥וא אָֽמְרָ֖ה (tifcha, rank=2)
+│       └── [10-11] GLUE אָחִ֣/י ה֑וּא (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) בְּ/תָם לְבָבִ֛/י וּ/בְ/נִקְיֹ֥ן כַּפַּ֖/י עָשׂ…
+    ├── PHRASE (binary 4w) בְּ/תָם לְבָבִ֛/י וּ/בְ/נִקְיֹ֥ן כַּפַּ֖/י
+    │   ├── [12-13] GLUE בְּ/תָם לְבָבִ֛/י (tevir, rank=3)
+    │   └── [14-15] GLUE וּ/בְ/נִקְיֹ֥ן כַּפַּ֖/י (tifcha, rank=2)
+    └── [16-17] GLUE עָשִׂ֥יתִי זֹֽאת (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.20.6 · parser unique · 24 words</h3>
+<div class="meta"><span class="he">ויאמר אליו האלהים בחלם גם אנכי ידעתי כי בתם־לבבך עשית זאת ואחשך גם־אנכי אותך מחטו־לי על־כן לא־נתתיך לנגע אליה</span> · <i>va-yomer elay-v ha-Elohim ba-chalom gam anokhi yadati ki ve-tam-levav-kha asita zot va-echsokh gam-anokhi ot-kha me-chato-li-y al-ken lo-netati-kha li-negoa ele-ha</i> · I know; I withheld you from sinning against Me — no touch. [EN-AID]</div>
+<pre>PHRASE (binary 24w) וַ/יֹּאמֶר֩ אֵלָ֨י/ו הָֽ/אֱלֹהִ֜ים בַּ/חֲלֹ֗ם ג…
+├── PHRASE (binary 18w) וַ/יֹּאמֶר֩ אֵלָ֨י/ו הָֽ/אֱלֹהִ֜ים בַּ/חֲלֹ֗ם ג…
+│   ├── PHRASE (binary 12w) וַ/יֹּאמֶר֩ אֵלָ֨י/ו הָֽ/אֱלֹהִ֜ים בַּ/חֲלֹ֗ם ג…
+│   │   ├── PHRASE (binary 4w) וַ/יֹּאמֶר֩ אֵלָ֨י/ו הָֽ/אֱלֹהִ֜ים בַּ/חֲלֹ֗ם
+│   │   │   ├── [0-2] GLUE וַ/יֹּאמֶר֩ אֵלָ֨י/ו הָֽ/אֱלֹהִ֜ים (geresh, rank=4)
+│   │   │   └── [3] בַּ/חֲלֹ֗ם (revia, rank=3)
+│   │   └── PHRASE (binary 8w) גַּ֣ם אָנֹכִ֤י יָדַ֨עְתִּי֙ כִּ֤י בְ/תָם לְבָבְ…
+│   │       ├── [4-6] GLUE גַּ֣ם אָנֹכִ֤י יָדַ֨עְתִּי֙ (pashta, rank=3)
+│   │       └── PHRASE (binary 5w) כִּ֤י בְ/תָם לְבָבְ/ךָ֙ עָשִׂ֣יתָ זֹּ֔את
+│   │           ├── [7-9] GLUE כִּ֤י בְ/תָם לְבָבְ/ךָ֙ (pashta, rank=3)
+│   │           └── [10-11] GLUE עָשִׂ֣יתָ זֹּ֔את (zaqef qatan, rank=2)
+│   └── PHRASE (binary 6w) וָ/אֶחְשֹׂ֧ךְ גַּם אָנֹכִ֛י אֽוֹתְ/ךָ֖ מֵ/חֲטוֹ…
+│       ├── PHRASE (binary 4w) וָ/אֶחְשֹׂ֧ךְ גַּם אָנֹכִ֛י אֽוֹתְ/ךָ֖
+│       │   ├── [12-14] GLUE וָ/אֶחְשֹׂ֧ךְ גַּם אָנֹכִ֛י (tevir, rank=3)
+│       │   └── [15] אֽוֹתְ/ךָ֖ (tifcha, rank=2)
+│       └── [16-17] GLUE מֵ/חֲטוֹ לִ֑/י (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) עַל כֵּ֥ן לֹא נְתַתִּ֖י/ךָ לִ/נְגֹּ֥עַ אֵלֶֽי/הָ
+    ├── [18-21] GLUE עַל כֵּ֥ן לֹא נְתַתִּ֖י/ךָ (tifcha, rank=2)
+    └── [22-23] GLUE לִ/נְגֹּ֥עַ אֵלֶֽי/הָ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.20.7 · parser unique · 21 words</h3>
+<div class="meta"><span class="he">ועתה השב אשת־האיש כי־נביא הוא ויתפלל בעדך וחיה ואם־אינך משיב דע כי־מות תמות אתה וכל־אשר־לך</span> · <i>ve-ata hashev eshet-ha-ish ki-navi hu ve-yitpalel baad-kha ve-cheye ve-im-en-kha meshiv da ki-mot tamut ata ve-khal-asher-la-khe</i> · Return her: he is a prophet, he will pray — or surely die. [EN-AID]</div>
+<pre>PHRASE (binary 21w) וְ/עַתָּ֗ה הָשֵׁ֤ב אֵֽשֶׁת הָ/אִישׁ֙ כִּֽי נָבִ…
+├── PHRASE (binary 10w) וְ/עַתָּ֗ה הָשֵׁ֤ב אֵֽשֶׁת הָ/אִישׁ֙ כִּֽי נָבִ…
+│   ├── PHRASE (binary 7w) וְ/עַתָּ֗ה הָשֵׁ֤ב אֵֽשֶׁת הָ/אִישׁ֙ כִּֽי נָבִ…
+│   │   ├── [0] וְ/עַתָּ֗ה (revia, rank=3)
+│   │   └── PHRASE (binary 6w) הָשֵׁ֤ב אֵֽשֶׁת הָ/אִישׁ֙ כִּֽי נָבִ֣יא ה֔וּא
+│   │       ├── [1-3] GLUE הָשֵׁ֤ב אֵֽשֶׁת הָ/אִישׁ֙ (pashta, rank=3)
+│   │       └── [4-6] GLUE כִּֽי נָבִ֣יא ה֔וּא (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) וְ/יִתְפַּלֵּ֥ל בַּֽעַדְ/ךָ֖ וֶֽ/חְיֵ֑ה
+│       ├── [7-8] GLUE וְ/יִתְפַּלֵּ֥ל בַּֽעַדְ/ךָ֖ (tifcha, rank=2)
+│       └── [9] וֶֽ/חְיֵ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 11w) וְ/אִם אֵֽינְ/ךָ֣ מֵשִׁ֗יב דַּ֚ע כִּי מ֣וֹת תָּ…
+    ├── PHRASE (binary 7w) וְ/אִם אֵֽינְ/ךָ֣ מֵשִׁ֗יב דַּ֚ע כִּי מ֣וֹת תָּ…
+    │   ├── [10-12] GLUE וְ/אִם אֵֽינְ/ךָ֣ מֵשִׁ֗יב (revia, rank=3)
+    │   └── PHRASE (binary 4w) דַּ֚ע כִּי מ֣וֹת תָּמ֔וּת
+    │       ├── [13] דַּ֚ע (yetiv, rank=3)
+    │       └── [14-16] GLUE כִּי מ֣וֹת תָּמ֔וּת (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) אַתָּ֖ה וְ/כָל אֲשֶׁר לָֽ/ךְ
+        ├── [17] אַתָּ֖ה (tifcha, rank=2)
+        └── [18-20] GLUE וְ/כָל אֲשֶׁר לָֽ/ךְ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.20.8 · parser unique · 15 words</h3>
+<div class="meta"><span class="he">וישכם אבימלך בבקר ויקרא לכל־עבדיו וידבר את־כל־הדברים האלה באזניהם וייראו האנשים מאד</span> · <i>va-yashkem avimelekh ba-boqer va-yiqra le-khal-avaday-v va-yedaber et-kal-ha-devarim ha-ele be-azne-hem va-yiru ha-anashim meod</i> · The king told his servants at dawn; the men feared greatly. [EN-AID]</div>
+<pre>PHRASE (binary 15w) וַ/יַּשְׁכֵּ֨ם אֲבִימֶ֜לֶךְ בַּ/בֹּ֗קֶר וַ/יִּק…
+├── PHRASE (binary 12w) וַ/יַּשְׁכֵּ֨ם אֲבִימֶ֜לֶךְ בַּ/בֹּ֗קֶר וַ/יִּק…
+│   ├── PHRASE (binary 6w) וַ/יַּשְׁכֵּ֨ם אֲבִימֶ֜לֶךְ בַּ/בֹּ֗קֶר וַ/יִּק…
+│   │   ├── PHRASE (binary 3w) וַ/יַּשְׁכֵּ֨ם אֲבִימֶ֜לֶךְ בַּ/בֹּ֗קֶר
+│   │   │   ├── [0-1] GLUE וַ/יַּשְׁכֵּ֨ם אֲבִימֶ֜לֶךְ (geresh, rank=4)
+│   │   │   └── [2] בַּ/בֹּ֗קֶר (revia, rank=3)
+│   │   └── PHRASE (binary 3w) וַ/יִּקְרָא֙ לְ/כָל עֲבָדָ֔י/ו
+│   │       ├── [3] וַ/יִּקְרָא֙ (pashta, rank=3)
+│   │       └── [4-5] GLUE לְ/כָל עֲבָדָ֔י/ו (zaqef qatan, rank=2)
+│   └── PHRASE (binary 6w) וַ/יְדַבֵּ֛ר אֶת כָּל הַ/דְּבָרִ֥ים הָ/אֵ֖לֶּה …
+│       ├── PHRASE (binary 5w) וַ/יְדַבֵּ֛ר אֶת כָּל הַ/דְּבָרִ֥ים הָ/אֵ֖לֶּה
+│       │   ├── [6] וַ/יְדַבֵּ֛ר (tevir, rank=3)
+│       │   └── [7-10] GLUE אֶת כָּל הַ/דְּבָרִ֥ים הָ/אֵ֖לֶּה (tifcha, rank=2)
+│       └── [11] בְּ/אָזְנֵי/הֶ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וַ/יִּֽירְא֥וּ הָ/אֲנָשִׁ֖ים מְאֹֽד
+    ├── [12-13] GLUE וַ/יִּֽירְא֥וּ הָ/אֲנָשִׁ֖ים (tifcha, rank=2)
+    └── [14] מְאֹֽד (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.20.9 · parser unique · 24 words</h3>
+<div class="meta"><span class="he">ויקרא אבימלך לאברהם ויאמר לו מה־עשית לנו ומה־חטאתי לך כי־הבאת עלי ועל־ממלכתי חטאה גדלה מעשים אשר לא־יעשו עשית עמדי</span> · <i>va-yiqra avimelekh le-avraham va-yomer l-o me-asita la-nu u-me-chatati la-khe ki-heveta ala-y ve-al-mamlakhti-y chataa gedola maasim asher lo-yeasu asita imadi-y</i> · What have you done — a great sin on me and my kingdom! [EN-AID]</div>
+<pre>PHRASE (binary 24w) וַ/יִּקְרָ֨א אֲבִימֶ֜לֶךְ לְ/אַבְרָהָ֗ם וַ/יֹּ֨…
+├── PHRASE (binary 18w) וַ/יִּקְרָ֨א אֲבִימֶ֜לֶךְ לְ/אַבְרָהָ֗ם וַ/יֹּ֨…
+│   ├── PHRASE (binary 11w) וַ/יִּקְרָ֨א אֲבִימֶ֜לֶךְ לְ/אַבְרָהָ֗ם וַ/יֹּ֨…
+│   │   ├── PHRASE (binary 3w) וַ/יִּקְרָ֨א אֲבִימֶ֜לֶךְ לְ/אַבְרָהָ֗ם
+│   │   │   ├── [0-1] GLUE וַ/יִּקְרָ֨א אֲבִימֶ֜לֶךְ (geresh, rank=4)
+│   │   │   └── [2] לְ/אַבְרָהָ֗ם (revia, rank=3)
+│   │   └── PHRASE (binary 8w) וַ/יֹּ֨אמֶר ל֜/וֹ מֶֽה עָשִׂ֤יתָ לָּ֨/נוּ֙ וּ/מ…
+│   │       ├── PHRASE (binary 5w) וַ/יֹּ֨אמֶר ל֜/וֹ מֶֽה עָשִׂ֤יתָ לָּ֨/נוּ֙
+│   │       │   ├── [3-4] GLUE וַ/יֹּ֨אמֶר ל֜/וֹ (geresh, rank=4)
+│   │       │   └── [5-7] GLUE מֶֽה עָשִׂ֤יתָ לָּ֨/נוּ֙ (pashta, rank=3)
+│   │       └── [8-10] GLUE וּ/מֶֽה חָטָ֣אתִי לָ֔/ךְ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 7w) כִּֽי הֵבֵ֧אתָ עָלַ֛/י וְ/עַל מַמְלַכְתִּ֖/י חֲ…
+│       ├── PHRASE (binary 5w) כִּֽי הֵבֵ֧אתָ עָלַ֛/י וְ/עַל מַמְלַכְתִּ֖/י
+│       │   ├── [11-13] GLUE כִּֽי הֵבֵ֧אתָ עָלַ֛/י (tevir, rank=3)
+│       │   └── [14-15] GLUE וְ/עַל מַמְלַכְתִּ֖/י (tifcha, rank=2)
+│       └── [16-17] GLUE חֲטָאָ֣ה גְדֹלָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) מַעֲשִׂים֙ אֲשֶׁ֣ר לֹא יֵֽעָשׂ֔וּ עָשִׂ֖יתָ עִמ…
+    ├── PHRASE (binary 4w) מַעֲשִׂים֙ אֲשֶׁ֣ר לֹא יֵֽעָשׂ֔וּ
+    │   ├── [18] מַעֲשִׂים֙ (pashta, rank=3)
+    │   └── [19-21] GLUE אֲשֶׁ֣ר לֹא יֵֽעָשׂ֔וּ (zaqef qatan, rank=2)
+    └── PHRASE (binary 2w) עָשִׂ֖יתָ עִמָּדִֽ/י
+        ├── [22] עָשִׂ֖יתָ (tifcha, rank=2)
+        └── [23] עִמָּדִֽ/י (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.20.10 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">ויאמר אבימלך אל־אברהם מה ראית כי עשית את־הדבר הזה</span> · <i>va-yomer avimelekh el-avraham ma raita ki asita et-ha-davar ha-ze</i> · What did you see, that you did this thing? [EN-AID]</div>
+<pre>PHRASE (binary 11w) וַ/יֹּ֥אמֶר אֲבִימֶ֖לֶךְ אֶל אַבְרָהָ֑ם מָ֣ה רָ…
+├── PHRASE (binary 4w) וַ/יֹּ֥אמֶר אֲבִימֶ֖לֶךְ אֶל אַבְרָהָ֑ם
+│   ├── [0-1] GLUE וַ/יֹּ֥אמֶר אֲבִימֶ֖לֶךְ (tifcha, rank=2)
+│   └── [2-3] GLUE אֶל אַבְרָהָ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) מָ֣ה רָאִ֔יתָ כִּ֥י עָשִׂ֖יתָ אֶת הַ/דָּבָ֥ר הַ…
+    ├── [4-5] GLUE מָ֣ה רָאִ֔יתָ (zaqef qatan, rank=2)
+    └── PHRASE (binary 5w) כִּ֥י עָשִׂ֖יתָ אֶת הַ/דָּבָ֥ר הַ/זֶּֽה
+        ├── [6-7] GLUE כִּ֥י עָשִׂ֖יתָ (tifcha, rank=2)
+        └── [8-10] GLUE אֶת הַ/דָּבָ֥ר הַ/זֶּֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.20.11 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">ויאמר אברהם כי אמרתי רק אין־יראת אלהים במקום הזה והרגוני על־דבר אשתי</span> · <i>va-yomer avraham ki amarti raq en-yirat Elohim ba-maqom ha-ze va-haragu-ni al-devar ishti-y</i> · I thought: no fear of God here — they will kill me. [EN-AID]</div>
+<pre>PHRASE (binary 14w) וַ/יֹּ֨אמֶר֙ אַבְרָהָ֔ם כִּ֣י אָמַ֗רְתִּי רַ֚ק …
+├── PHRASE (binary 10w) וַ/יֹּ֨אמֶר֙ אַבְרָהָ֔ם כִּ֣י אָמַ֗רְתִּי רַ֚ק …
+│   ├── PHRASE (binary 2w) וַ/יֹּ֨אמֶר֙ אַבְרָהָ֔ם
+│   │   ├── [0] וַ/יֹּ֨אמֶר֙ (pashta, rank=3)
+│   │   └── [1] אַבְרָהָ֔ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 8w) כִּ֣י אָמַ֗רְתִּי רַ֚ק אֵין יִרְאַ֣ת אֱלֹהִ֔ים …
+│       ├── PHRASE (binary 6w) כִּ֣י אָמַ֗רְתִּי רַ֚ק אֵין יִרְאַ֣ת אֱלֹהִ֔ים
+│       │   ├── [2-3] GLUE כִּ֣י אָמַ֗רְתִּי (revia, rank=3)
+│       │   └── PHRASE (binary 4w) רַ֚ק אֵין יִרְאַ֣ת אֱלֹהִ֔ים
+│       │       ├── [4] רַ֚ק (yetiv, rank=3)
+│       │       └── [5-7] GLUE אֵין יִרְאַ֣ת אֱלֹהִ֔ים (zaqef qatan, rank=2)
+│       └── PHRASE (binary 2w) בַּ/מָּק֖וֹם הַ/זֶּ֑ה
+│           ├── [8] בַּ/מָּק֖וֹם (tifcha, rank=2)
+│           └── [9] הַ/זֶּ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וַ/הֲרָג֖וּ/נִי עַל דְּבַ֥ר אִשְׁתִּֽ/י
+    ├── [10] וַ/הֲרָג֖וּ/נִי (tifcha, rank=2)
+    └── [11-13] GLUE עַל דְּבַ֥ר אִשְׁתִּֽ/י (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.20.12 · parser unique · 13 words</h3>
+<div class="meta"><span class="he">וגם־אמנה אחתי בת־אבי הוא אך לא בת־אמי ותהי־לי לאשה</span> · <i>ve-gam-amna achoti-y vat-avi-y hiv akh lo vat-imi-y va-tehi-li-y le-isha</i> · And truly my sister — my father&#x27;s daughter, now my wife. [EN-AID]</div>
+<pre>PHRASE (binary 13w) וְ/גַם אָמְנָ֗ה אֲחֹתִ֤/י בַת אָבִ/י֙ הִ֔וא אַ֖…
+├── PHRASE (binary 10w) וְ/גַם אָמְנָ֗ה אֲחֹתִ֤/י בַת אָבִ/י֙ הִ֔וא אַ֖…
+│   ├── PHRASE (binary 6w) וְ/גַם אָמְנָ֗ה אֲחֹתִ֤/י בַת אָבִ/י֙ הִ֔וא
+│   │   ├── [0-1] GLUE וְ/גַם אָמְנָ֗ה (revia, rank=3)
+│   │   └── PHRASE (binary 4w) אֲחֹתִ֤/י בַת אָבִ/י֙ הִ֔וא
+│   │       ├── [2-4] GLUE אֲחֹתִ֤/י בַת אָבִ/י֙ (pashta, rank=3)
+│   │       └── [5] הִ֔וא (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) אַ֖ךְ לֹ֣א בַת אִמִּ֑/י
+│       ├── [6] אַ֖ךְ (tifcha, rank=2)
+│       └── [7-9] GLUE לֹ֣א בַת אִמִּ֑/י (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וַ/תְּהִי לִ֖/י לְ/אִשָּֽׁה
+    ├── [10-11] GLUE וַ/תְּהִי לִ֖/י (tifcha, rank=2)
+    └── [12] לְ/אִשָּֽׁה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.20.13 · parser unique · 24 words</h3>
+<div class="meta"><span class="he">ויהי כאשר התעו אתי אלהים מבית אבי ואמר לה זה חסדך אשר תעשי עמדי אל כל־המקום אשר נבוא שמה אמרי־לי אחי הוא</span> · <i>va-yehi ka-asher hitu et-y Elohim mi-bet avi-y va-omar la-ה ze chasde-khe asher taasi imadi-y el kal-ha-maqom asher navo shama-ה imri-li-y achi-y hu</i> · When God made me wander: say of me — he is my brother. [EN-AID]</div>
+<pre>PHRASE (binary 24w) וַ/יְהִ֞י כַּ/אֲשֶׁ֧ר הִתְע֣וּ אֹתִ֗/י אֱלֹהִים…
+├── PHRASE (binary 14w) וַ/יְהִ֞י כַּ/אֲשֶׁ֧ר הִתְע֣וּ אֹתִ֗/י אֱלֹהִים…
+│   ├── PHRASE (binary 7w) וַ/יְהִ֞י כַּ/אֲשֶׁ֧ר הִתְע֣וּ אֹתִ֗/י אֱלֹהִים…
+│   │   ├── PHRASE (binary 4w) וַ/יְהִ֞י כַּ/אֲשֶׁ֧ר הִתְע֣וּ אֹתִ֗/י
+│   │   │   ├── [0] וַ/יְהִ֞י (gershayim, rank=4)
+│   │   │   └── [1-3] GLUE כַּ/אֲשֶׁ֧ר הִתְע֣וּ אֹתִ֗/י (revia, rank=3)
+│   │   └── PHRASE (binary 3w) אֱלֹהִים֮ מִ/בֵּ֣ית אָבִ/י֒
+│   │       ├── [4] אֱלֹהִים֮ (zinor (poetic cousin; rare in prose), rank=3)
+│   │       └── [5-6] GLUE מִ/בֵּ֣ית אָבִ/י֒ (segol, rank=2)
+│   └── PHRASE (binary 7w) וָ/אֹמַ֣ר לָ֔/הּ זֶ֣ה חַסְדֵּ֔/ךְ אֲשֶׁ֥ר תַּעֲ…
+│       ├── [7-8] GLUE וָ/אֹמַ֣ר לָ֔/הּ (zaqef qatan, rank=2)
+│       └── PHRASE (binary 5w) זֶ֣ה חַסְדֵּ֔/ךְ אֲשֶׁ֥ר תַּעֲשִׂ֖י עִמָּדִ֑/י
+│           ├── [9-10] GLUE זֶ֣ה חַסְדֵּ֔/ךְ (zaqef qatan, rank=2)
+│           └── PHRASE (binary 3w) אֲשֶׁ֥ר תַּעֲשִׂ֖י עִמָּדִ֑/י
+│               ├── [11-12] GLUE אֲשֶׁ֥ר תַּעֲשִׂ֖י (tifcha, rank=2)
+│               └── [13] עִמָּדִ֑/י (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 10w) אֶ֤ל כָּל הַ/מָּקוֹם֙ אֲשֶׁ֣ר נָב֣וֹא שָׁ֔מָּ/ה…
+    ├── PHRASE (binary 6w) אֶ֤ל כָּל הַ/מָּקוֹם֙ אֲשֶׁ֣ר נָב֣וֹא שָׁ֔מָּ/ה
+    │   ├── [14-16] GLUE אֶ֤ל כָּל הַ/מָּקוֹם֙ (pashta, rank=3)
+    │   └── [17-19] GLUE אֲשֶׁ֣ר נָב֣וֹא שָׁ֔מָּ/ה (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) אִמְרִי לִ֖/י אָחִ֥/י הֽוּא
+        ├── [20-21] GLUE אִמְרִי לִ֖/י (tifcha, rank=2)
+        └── [22-23] GLUE אָחִ֥/י הֽוּא (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.20.14 · parser unique · 13 words</h3>
+<div class="meta"><span class="he">ויקח אבימלך צאן ובקר ועבדים ושפחת ויתן לאברהם וישב לו את שרה אשתו</span> · <i>va-yiqach avimelekh tzon u-vaqar va-avadim u-shefachot va-yiten le-avraham va-yashev l-o et sara isht-o</i> · Flocks, herds, servants given — and Sarah returned. [EN-AID]</div>
+<pre>PHRASE (binary 13w) וַ/יִּקַּ֨ח אֲבִימֶ֜לֶךְ צֹ֣אן וּ/בָקָ֗ר וַ/עֲב…
+├── PHRASE (binary 8w) וַ/יִּקַּ֨ח אֲבִימֶ֜לֶךְ צֹ֣אן וּ/בָקָ֗ר וַ/עֲב…
+│   ├── PHRASE (binary 6w) וַ/יִּקַּ֨ח אֲבִימֶ֜לֶךְ צֹ֣אן וּ/בָקָ֗ר וַ/עֲב…
+│   │   ├── PHRASE (binary 4w) וַ/יִּקַּ֨ח אֲבִימֶ֜לֶךְ צֹ֣אן וּ/בָקָ֗ר
+│   │   │   ├── [0-1] GLUE וַ/יִּקַּ֨ח אֲבִימֶ֜לֶךְ (geresh, rank=4)
+│   │   │   └── [2-3] GLUE צֹ֣אן וּ/בָקָ֗ר (revia, rank=3)
+│   │   └── PHRASE (binary 2w) וַ/עֲבָדִים֙ וּ/שְׁפָחֹ֔ת
+│   │       ├── [4] וַ/עֲבָדִים֙ (pashta, rank=3)
+│   │       └── [5] וּ/שְׁפָחֹ֔ת (zaqef qatan, rank=2)
+│   └── PHRASE (binary 2w) וַ/יִּתֵּ֖ן לְ/אַבְרָהָ֑ם
+│       ├── [6] וַ/יִּתֵּ֖ן (tifcha, rank=2)
+│       └── [7] לְ/אַבְרָהָ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) וַ/יָּ֣שֶׁב ל֔/וֹ אֵ֖ת שָׂרָ֥ה אִשְׁתּֽ/וֹ
+    ├── [8-9] GLUE וַ/יָּ֣שֶׁב ל֔/וֹ (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) אֵ֖ת שָׂרָ֥ה אִשְׁתּֽ/וֹ
+        ├── [10] אֵ֖ת (tifcha, rank=2)
+        └── [11-12] GLUE שָׂרָ֥ה אִשְׁתּֽ/וֹ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.20.15 · parser unique · 8 words</h3>
+<div class="meta"><span class="he">ויאמר אבימלך הנה ארצי לפניך בטוב בעיניך שב</span> · <i>va-yomer avimelekh hine artzi-y le-fane-kha ba-tov be-ene-kha shev</i> · My land is before you: dwell where it is good in your eyes. [EN-AID]</div>
+<pre>PHRASE (binary 8w) וַ/יֹּ֣אמֶר אֲבִימֶ֔לֶךְ הִנֵּ֥ה אַרְצִ֖/י לְ/פ…
+├── PHRASE (binary 5w) וַ/יֹּ֣אמֶר אֲבִימֶ֔לֶךְ הִנֵּ֥ה אַרְצִ֖/י לְ/פ…
+│   ├── [0-1] GLUE וַ/יֹּ֣אמֶר אֲבִימֶ֔לֶךְ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) הִנֵּ֥ה אַרְצִ֖/י לְ/פָנֶ֑י/ךָ
+│       ├── [2-3] GLUE הִנֵּ֥ה אַרְצִ֖/י (tifcha, rank=2)
+│       └── [4] לְ/פָנֶ֑י/ךָ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) בַּ/טּ֥וֹב בְּ/עֵינֶ֖י/ךָ שֵֽׁב
+    ├── [5-6] GLUE בַּ/טּ֥וֹב בְּ/עֵינֶ֖י/ךָ (tifcha, rank=2)
+    └── [7] שֵֽׁב (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.20.16 · parser unique · 18 words</h3>
+<div class="meta"><span class="he">ולשרה אמר הנה נתתי אלף כסף לאחיך הנה הוא־לך כסות עינים לכל אשר אתך ואת כל ונכחת</span> · <i>u-le-sara amar hine natati elef kesef le-achi-khe hine hu-la-khe kesut enayim le-khol asher et-khe ve-et kol ve-nokhachat</i> · A thousand silver — a covering of eyes; you are righted. [EN-AID]</div>
+<pre>PHRASE (binary 18w) וּ/לְ/שָׂרָ֣ה אָמַ֗ר הִנֵּ֨ה נָתַ֜תִּי אֶ֤לֶף כ…
+├── PHRASE (binary 15w) וּ/לְ/שָׂרָ֣ה אָמַ֗ר הִנֵּ֨ה נָתַ֜תִּי אֶ֤לֶף כ…
+│   ├── PHRASE (binary 7w) וּ/לְ/שָׂרָ֣ה אָמַ֗ר הִנֵּ֨ה נָתַ֜תִּי אֶ֤לֶף כ…
+│   │   ├── [0-1] GLUE וּ/לְ/שָׂרָ֣ה אָמַ֗ר (revia, rank=3)
+│   │   └── PHRASE (binary 5w) הִנֵּ֨ה נָתַ֜תִּי אֶ֤לֶף כֶּ֨סֶף֙ לְ/אָחִ֔י/ךְ
+│   │       ├── PHRASE (binary 4w) הִנֵּ֨ה נָתַ֜תִּי אֶ֤לֶף כֶּ֨סֶף֙
+│   │       │   ├── [2-3] GLUE הִנֵּ֨ה נָתַ֜תִּי (geresh, rank=4)
+│   │       │   └── [4-5] GLUE אֶ֤לֶף כֶּ֨סֶף֙ (pashta, rank=3)
+│   │       └── [6] לְ/אָחִ֔י/ךְ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 8w) הִנֵּ֤ה הוּא לָ/ךְ֙ כְּס֣וּת עֵינַ֔יִם לְ/כֹ֖ל …
+│       ├── PHRASE (binary 5w) הִנֵּ֤ה הוּא לָ/ךְ֙ כְּס֣וּת עֵינַ֔יִם
+│       │   ├── [7-9] GLUE הִנֵּ֤ה הוּא לָ/ךְ֙ (pashta, rank=3)
+│       │   └── [10-11] GLUE כְּס֣וּת עֵינַ֔יִם (zaqef qatan, rank=2)
+│       └── PHRASE (binary 3w) לְ/כֹ֖ל אֲשֶׁ֣ר אִתָּ֑/ךְ
+│           ├── [12] לְ/כֹ֖ל (tifcha, rank=2)
+│           └── [13-14] GLUE אֲשֶׁ֣ר אִתָּ֑/ךְ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וְ/אֵ֥ת כֹּ֖ל וְ/נֹכָֽחַת
+    ├── [15-16] GLUE וְ/אֵ֥ת כֹּ֖ל (tifcha, rank=2)
+    └── [17] וְ/נֹכָֽחַת (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.20.17 · parser unique · 12 words</h3>
+<div class="meta"><span class="he">ויתפלל אברהם אל־האלהים וירפא אלהים את־אבימלך ואת־אשתו ואמהתיו וילדו</span> · <i>va-yitpalel avraham el-ha-Elohim va-yirpa Elohim et-avimelekh ve-et-isht-o ve-amhotay-v va-yeledu</i> · Abraham prayed; God healed the house — and they bore. [EN-AID]</div>
+<pre>PHRASE (binary 12w) וַ/יִּתְפַּלֵּ֥ל אַבְרָהָ֖ם אֶל הָ/אֱלֹהִ֑ים וַ…
+├── PHRASE (binary 4w) וַ/יִּתְפַּלֵּ֥ל אַבְרָהָ֖ם אֶל הָ/אֱלֹהִ֑ים
+│   ├── [0-1] GLUE וַ/יִּתְפַּלֵּ֥ל אַבְרָהָ֖ם (tifcha, rank=2)
+│   └── [2-3] GLUE אֶל הָ/אֱלֹהִ֑ים (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) וַ/יִּרְפָּ֨א אֱלֹהִ֜ים אֶת אֲבִימֶ֧לֶךְ וְ/אֶת…
+    ├── PHRASE (binary 7w) וַ/יִּרְפָּ֨א אֱלֹהִ֜ים אֶת אֲבִימֶ֧לֶךְ וְ/אֶת…
+    │   ├── PHRASE (binary 6w) וַ/יִּרְפָּ֨א אֱלֹהִ֜ים אֶת אֲבִימֶ֧לֶךְ וְ/אֶת…
+    │   │   ├── [4-5] GLUE וַ/יִּרְפָּ֨א אֱלֹהִ֜ים (geresh, rank=4)
+    │   │   └── [6-9] GLUE אֶת אֲבִימֶ֧לֶךְ וְ/אֶת אִשְׁתּ֛/וֹ (tevir, rank=3)
+    │   └── [10] וְ/אַמְהֹתָ֖י/ו (tifcha, rank=2)
+    └── [11] וַ/יֵּלֵֽדוּ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.20.18 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">כי־עצר עצר יהוה בעד כל־רחם לבית אבימלך על־דבר שרה אשת אברהם</span> · <i>ki-atzor atzar YHWH bead kal-rechem le-vet avimelekh al-devar sara eshet avraham</i> · For YHWH had fast shut every womb, over Sarah, Abraham&#x27;s wife. [EN-AID]</div>
+<pre>PHRASE (binary 14w) כִּֽי עָצֹ֤ר עָצַר֙ יְהוָ֔ה בְּעַ֥ד כָּל רֶ֖חֶם…
+├── PHRASE (binary 9w) כִּֽי עָצֹ֤ר עָצַר֙ יְהוָ֔ה בְּעַ֥ד כָּל רֶ֖חֶם…
+│   ├── PHRASE (binary 4w) כִּֽי עָצֹ֤ר עָצַר֙ יְהוָ֔ה
+│   │   ├── [0-2] GLUE כִּֽי עָצֹ֤ר עָצַר֙ (pashta, rank=3)
+│   │   └── [3] יְהוָ֔ה (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) בְּעַ֥ד כָּל רֶ֖חֶם לְ/בֵ֣ית אֲבִימֶ֑לֶךְ
+│       ├── [4-6] GLUE בְּעַ֥ד כָּל רֶ֖חֶם (tifcha, rank=2)
+│       └── [7-8] GLUE לְ/בֵ֣ית אֲבִימֶ֑לֶךְ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) עַל דְּבַ֥ר שָׂרָ֖ה אֵ֥שֶׁת אַבְרָהָֽם
+    ├── [9-11] GLUE עַל דְּבַ֥ר שָׂרָ֖ה (tifcha, rank=2)
+    └── [12-13] GLUE אֵ֥שֶׁת אַבְרָהָֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_36_gerar_dream_prophet — Gerar: the dream-court, the prophet&#x27;s prayer, the shut wombs (20:1-18) [frozen]
+
+final state: WORLD=[&#x27;avimelekh&#x27;] (+3 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[&#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;]
+
+=== S1 — The claim and the taking: after STEP_Gn_20_2
+    אֲחֹתִי הִוא … וַיִּקַּח אֶת־שָׂרָה (achoti hi … va-yiqach et-sarah)
+    PASS  WORLD += avimelekh  (entity={&#x27;mode&#x27;: &#x27;created&#x27;, &#x27;by&#x27;: &#x27;narration&#x27;, &#x27;step&#x27;: &#x27;Gen.20.2&#x27;})
+    PASS  Facts achoti-hi HOLD  (1 facts)
+    PASS  flags gerar/qadesh/shur as read-before-install.  (flagged=[&#x27;gerar&#x27;, &#x27;qadesh&#x27;, &#x27;shur&#x27;])
+
+=== S2 — The dream-court and the defense: after STEP_Gn_20_6
+    וָאֶחְשֹׂךְ גַּם־אָנֹכִי אוֹתְךָ מֵחֲטוֹ־לִי (va-echsokh gam-anokhi otkha me-chato-li)
+    PASS  Facts hinkha-met HOLD  (10 facts)
+    PASS  Facts tom-levavi HOLD  (10 facts)
+    PASS  Facts echsokh-chato HOLD  (10 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — The era&#x27;s first divine push: after STEP_Gn_20_7
+    וְעַתָּה הָשֵׁב אֵשֶׁת־הָאִישׁ כִּי־נָבִיא הוּא (ve-atah hashev eshet-ha-ish ki-navi hu)
+    PASS  LET(hashev(eshet_ha_ish)) pushed and OPEN  (queue=[&#x27;hashev(eshet_ha_ish)&#x27;])
+    PASS  Facts mot-tamut HOLD.  (12 facts)
+
+=== S4 — The arraignment holds nothing new on the queue: after STEP_Gn_20_13
+    אִמְרִי־לִי אָחִי הוּא (imri-li achi hu)
+    PASS  LET(hashev(eshet_ha_ish)) pushed and OPEN  (queue=[&#x27;hashev(eshet_ha_ish)&#x27;])
+    PASS  Facts imri-li HOLD  (20 facts)
+    PASS  Facts yirat-elohim HOLD  (20 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — Settled cycle #13 — the queue touches zero: after STEP_Gn_20_14
+    וַיָּשֶׁב לוֹ אֵת שָׂרָה אִשְׁתּוֹ (va-yashev lo et sarah ishto)
+    PASS  SPECS empty.  (queue=0)
+
+=== S6 — The dwell-grant: after STEP_Gn_20_15
+    בַּטּוֹב בְּעֵינֶיךָ שֵׁב (ba-tov be-einekha shev)
+    PASS  LET(shev(ba_tov_be_einekha)) pushed and OPEN  (queue=[&#x27;shev(ba_tov_be_einekha)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — The prayer performed: after STEP_Gn_20_17
+    וַיִּתְפַּלֵּל אַבְרָהָם אֶל־הָאֱלֹהִים וַיִּרְפָּא אֱלֹהִים (va-yitpalel avraham el-ha-elohim va-yirpa elohim)
+    PASS  LET(shev(ba_tov_be_einekha)) pushed and OPEN  (queue=[&#x27;shev(ba_tov_be_einekha)&#x27;])
+    PASS  Facts nokhachat HOLD  (22 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S8 — The shut-womb close: after STEP_Gn_20_18
+    כִּי־עָצֹר עָצַר יְהוָה בְּעַד כָּל־רֶחֶם (ki-atzor atzar YHWH bead kol-rechem)
+    PASS  LET(shev(ba_tov_be_einekha)) pushed and OPEN  (queue=[&#x27;shev(ba_tov_be_einekha)&#x27;])
+    PASS  Facts atzor-atzar HOLD  (23 facts)
+    PASS  WORLD = {avimelekh}  (created=[&#x27;avimelekh&#x27;])
+    PASS  no test, no name  (tests=0 names=0)
+    PASS  LEDGER stays EMPTY (open transaction)  (ledger_days=[])
+    PASS  flags gerar/qadesh/shur as read-before-install.  (flagged=[&#x27;gerar&#x27;, &#x27;qadesh&#x27;, &#x27;shur&#x27;])
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_36_gerar_dream_prophet.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_36_gerar_dream_prophet — 20:1-18
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_36_gerar_dream_prophet.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Gerar: the dream-court, the prophet&#x27;s prayer, the shut wombs (20:1-18)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_36_gerar_dream_prophet&quot;)
+
+# -------------------------- Gen.20.1 · THE_JOURNEY_TO_GERAR ----------------
+# וַיִּסַּע מִשָּׁם אַבְרָהָם אַרְצָה הַנֶּגֶב וַיֵּשֶׁב בֵּין־קָדֵשׁ וּבֵין
+# שׁוּר וַיָּגָר בִּגְרָר
+# &quot;And Abraham journeyed from thence toward the land of the South, and dwelt
+# between Kadesh and Shur; and he sojourned in Gerar.&quot;
+m.step(&quot;Gen.20.1&quot;)
+# ‹וַיִּסַּע מִשָּׁם אַבְרָהָם … וַיָּגָר בִּגְרָר› (“and-journey from-there
+# Abraham … and-turn-aside-from-the-road in-Gerar”) — event: journey-sojourn
+# — agent Abraham
+m.event(&quot;journey_sojourn&quot;, agent=&quot;avraham&quot;)
+# ‹בֵּין־קָדֵשׁ וּבֵין שׁוּר … בִּגְרָר› (“between Kadesh and-between Shur …
+# in-Gerar”) — reads without prior install (flag, not fix): Gerar, Kadesh,
+# Shur
+m.presupposed(&quot;gerar&quot;, &quot;qadesh&quot;, &quot;shur&quot;)
+
+# -------------------------- Gen.20.2 · THE_SECOND_CLAIM_AND_THE_TAKING -----
+# וַיֹּאמֶר אַבְרָהָם אֶל־שָׂרָה אִשְׁתּוֹ אֲחֹתִי הִוא וַיִּשְׁלַח
+# אֲבִימֶלֶךְ מֶלֶךְ גְּרָר וַיִּקַּח אֶת־שָׂרָה
+# &quot;And Abraham said of Sarah his wife: &#x27;She is my sister.&#x27; And Abimelech
+# king of Gerar sent, and took Sarah.&quot;
+m.step(&quot;Gen.20.2&quot;)
+# ‹אֲחֹתִי הִוא› (“sister-me/my he/it”) — fact holds: achoti-he/it
+m.fact(&quot;achoti_hi&quot;)
+# ‹אֲבִימֶלֶךְ מֶלֶךְ גְּרָר› (“Abimelech king Gerar”) — the world gains:
+# Abimelech
+m.install(&quot;avimelekh&quot;)
+# ‹וַיִּשְׁלַח … וַיִּקַּח אֶת־שָׂרָה› (“and-send … and-take obj-marker
+# Sarah”) — event: take — agent Abimelech; theme sarah
+m.event(&quot;take&quot;, agent=&quot;avimelekh&quot;, themes=[&quot;sarah&quot;])
+
+# -------------------------- Gen.20.3 · THE_DREAM_VERDICT -------------------
+# וַיָּבֹא אֱלֹהִים אֶל־אֲבִימֶלֶךְ בַּחֲלוֹם הַלָּיְלָה וַיֹּאמֶר לוֹ
+# הִנְּךָ מֵת עַל־הָאִשָּׁה אֲשֶׁר־לָקַחְתָּ וְהִוא בְּעֻלַת בָּעַל
+# &quot;But God came to Abimelech in a dream of the night, and said to him:
+# &#x27;Behold, thou shalt die, because of the woman whom thou hast taken; for
+# she is a man&#x27;s wife.&#x27;&quot;
+m.step(&quot;Gen.20.3&quot;)
+# ‹וַיָּבֹא אֱלֹהִים אֶל־אֲבִימֶלֶךְ בַּחֲלוֹם הַלָּיְלָה› (“and-come/bring
+# God to Abimelech in-dream the-night”) — event: dream-say — agent God
+m.event(&quot;dream_say&quot;, agent=&quot;elohim&quot;)
+# ‹הִנְּךָ מֵת עַל־הָאִשָּׁה אֲשֶׁר־לָקַחְתָּ וְהִוא בְּעֻלַת בָּעַל›
+# (“behold-you/your die over the-woman which take and-he/it be-master
+# master”) — fact holds: hinkha-die-over-the-woman; and-he/it-be-master-
+# master
+m.fact(&quot;hinkha_met_al_ha_ishah&quot;,
+       &quot;ve_hi_beulat_baal&quot;)
+
+# -------------------------- Gen.20.4 · THE_KINGS_COUNT_QUESTION ------------
+# וַאֲבִימֶלֶךְ לֹא קָרַב אֵלֶיהָ וַיֹּאמַר אֲדֹנָי הֲגוֹי גַּם־צַדִּיק
+# תַּהֲרֹג
+# &quot;Now Abimelech had not come near her; and he said: &#x27;Lord, wilt Thou slay
+# even a righteous nation?&quot;
+m.step(&quot;Gen.20.4&quot;)
+# ‹לֹא קָרַב אֵלֶיהָ … הֲגוֹי גַּם־צַדִּיק תַּהֲרֹג› (“not bring-near to-
+# her/its … the-nation also just smite-with-deadly-intent”) — fact holds:
+# not-bring-near-eleha; the-nation-also-tzaddiq-smite-with-deadly-intent
+m.fact(&quot;lo_qarav_eleha&quot;,
+       &quot;ha_goy_gam_tzaddiq_taharog&quot;)
+
+# -------------------------- Gen.20.5 · THE_INTEGRITY_DEFENSE ---------------
+# הֲלֹא הוּא אָמַר־לִי אֲחֹתִי הִוא וְהִיא־גַם־הִוא אָמְרָה אָחִי הוּא
+# בְּתָם־לְבָבִי וּבְנִקְיֹן כַּפַּי עָשִׂיתִי זֹאת
+# &quot;Said he not himself unto me: She is my sister? and she, even she herself
+# said: He is my brother. In the simplicity of my heart and the innocency of
+# my hands have I done this.&#x27;&quot;
+m.step(&quot;Gen.20.5&quot;)
+# ‹הֲלֹא הוּא אָמַר־לִי … בְּתָם־לְבָבִי וּבְנִקְיֹן כַּפַּי› (“is-it-not
+# he/it say to-me/my … in-completeness heart-me/my and-in-clearness palm-of-
+# hand-me/my”) — fact holds: he/it-say-to-me-and-he/it-also-he/it-amrah; in-
+# tom-levavi-and-and-clearness-kapai
+m.fact(&quot;hu_amar_li_ve_hi_gam_hi_amrah&quot;,
+       &quot;be_tom_levavi_u_ve_niqyon_kapai&quot;)
+
+# -------------------------- Gen.20.6 · THE_CONCESSION_AND_THE_WITHHOLDING --
+# וַיֹּאמֶר אֵלָיו הָאֱלֹהִים בַּחֲלֹם גַּם אָנֹכִי יָדַעְתִּי כִּי
+# בְתָם־לְבָבְךָ עָשִׂיתָ זֹּאת וָאֶחְשֹׂךְ גַּם־אָנֹכִי אוֹתְךָ מֵחֲטוֹ־לִי
+# עַל־כֵּן לֹא־נְתַתִּיךָ לִנְגֹּעַ אֵלֶיהָ
+# &quot;And God said unto him in the dream: &#x27;Yea, I know that in the simplicity
+# of thy heart thou hast done this, and I also withheld thee from sinning
+# against Me. Therefore suffered I thee not to touch her.&quot;
+m.step(&quot;Gen.20.6&quot;)
+# ‹יָדַעְתִּי … וָאֶחְשֹׂךְ … מֵחֲטוֹ־לִי … לֹא־נְתַתִּיךָ לִנְגֹּעַ› (“know
+# … and-restrain … from-sin to-me/my … not set-you/your to-touch”) — fact
+# holds: also-anokhi-know-and-tom-levavkha; and-restrain-otkha-what-sin-to-
+# me; not-netatikha-lingoa
+m.fact(&quot;gam_anokhi_yadati_ve_tom_levavkha&quot;,
+       &quot;va_echsokh_otkha_me_chato_li&quot;,
+       &quot;lo_netatikha_lingoa&quot;)
+
+# -------------------------- Gen.20.7 · THE_PROPHET_AND_THE_RETURN_COMMAND --
+# וְעַתָּה הָשֵׁב אֵשֶׁת־הָאִישׁ כִּי־נָבִיא הוּא וְיִתְפַּלֵּל בַּעַדְךָ
+# וֶחְיֵה וְאִם־אֵינְךָ מֵשִׁיב דַּע כִּי־מוֹת תָּמוּת אַתָּה
+# וְכָל־אֲשֶׁר־לָךְ
+# &quot;Now therefore restore the man&#x27;s wife; for he is a prophet, and he shall
+# pray for thee, and thou shalt live; and if thou restore her not, know thou
+# that thou shalt surely die, thou, and all that are thine.&#x27;&quot;
+m.step(&quot;Gen.20.7&quot;)
+# ‹וְעַתָּה הָשֵׁב אֵשֶׁת־הָאִישׁ› (“and-now return woman the-man”) — God
+# speaks a demand — LET: return(woman-the-man)
+m.declare(&quot;elohim&quot;, &quot;LET&quot;,
+          &quot;hashev(eshet_ha_ish)&quot;)
+# ‹וְיִתְפַּלֵּל בַּעַדְךָ וֶחְיֵה› (“and-judge in-up-to-you/your and-live”)
+# — fact holds: and-judge-baadkha-and-cheyeh
+m.fact(&quot;ve_yitpalel_baadkha_ve_cheyeh&quot;)
+# ‹וְאִם־אֵינְךָ מֵשִׁיב דַּע כִּי־מוֹת תָּמוּת› (“and-if there-is-not-
+# you/your return know that die die”) — fact holds: if-einkha-return-know-
+# that-die-die
+m.fact(&quot;im_einkha_meshiv_da_ki_mot_tamut&quot;)
+
+# -------------------------- Gen.20.8 · THE_COURT_FEARS ---------------------
+# וַיַּשְׁכֵּם אֲבִימֶלֶךְ בַּבֹּקֶר וַיִּקְרָא לְכָל־עֲבָדָיו וַיְדַבֵּר
+# אֶת־כָּל־הַדְּבָרִים הָאֵלֶּה בְּאָזְנֵיהֶם וַיִּירְאוּ הָאֲנָשִׁים מְאֹד
+# &quot;And Abimelech rose early in the morning, and called all his servants, and
+# told all these things in their ears; and the men were sore afraid.&quot;
+m.step(&quot;Gen.20.8&quot;)
+# ‹וַיַּשְׁכֵּם … וַיְדַבֵּר … וַיִּירְאוּ הָאֲנָשִׁים מְאֹד› (“and-rise-
+# early … and-speak … and-fear the-man very”) — event: report-fear — agent
+# Abimelech
+m.event(&quot;report_fear&quot;, agent=&quot;avimelekh&quot;)
+
+# -------------------------- Gen.20.9 · THE_GREAT_SIN_REBUKE ----------------
+# וַיִּקְרָא אֲבִימֶלֶךְ לְאַבְרָהָם וַיֹּאמֶר לוֹ מֶה־עָשִׂיתָ לָּנוּ
+# וּמֶה־חָטָאתִי לָךְ כִּי־הֵבֵאתָ עָלַי וְעַל־מַמְלַכְתִּי חֲטָאָה גְדֹלָה
+# מַעֲשִׂים אֲשֶׁר לֹא־יֵעָשׂוּ עָשִׂיתָ עִמָּדִי
+# &quot;Then Abimelech called Abraham, and said unto him: &#x27;What hast thou done
+# unto us? and wherein have I sinned against thee, that thou hast brought on
+# me and on my kingdom a great sin? thou hast done deeds unto me that ought
+# not to be done.&#x27;&quot;
+m.step(&quot;Gen.20.9&quot;)
+# ‹מֶה־עָשִׂיתָ לָּנוּ … חֲטָאָה גְדֹלָה … מַעֲשִׂים אֲשֶׁר לֹא־יֵעָשׂוּ›
+# (“what make to-us/our … offence great … deed/work which not make”) — fact
+# holds: meh-make-lanu-and-meh-sin; chataah-gedolah-over-mamlakhti
+m.fact(&quot;meh_asita_lanu_u_meh_chatati&quot;,
+       &quot;chataah_gedolah_al_mamlakhti&quot;)
+
+# -------------------------- Gen.20.10 · THE_SECOND_QUESTION ----------------
+# וַיֹּאמֶר אֲבִימֶלֶךְ אֶל־אַבְרָהָם מָה רָאִיתָ כִּי עָשִׂיתָ אֶת־הַדָּבָר
+# הַזֶּה
+# &quot;And Abimelech said unto Abraham: &#x27;What sawest thou, that thou hast done
+# this thing?&#x27;&quot;
+m.step(&quot;Gen.20.10&quot;)
+# ‹מָה רָאִיתָ כִּי עָשִׂיתָ› (“what see that make”) — fact holds: mah-see-
+# that-make
+m.fact(&quot;mah_raita_ki_asita&quot;)
+
+# -------------------------- Gen.20.11 · THE_FEAR_OF_GOD_GUESS --------------
+# וַיֹּאמֶר אַבְרָהָם כִּי אָמַרְתִּי רַק אֵין־יִרְאַת אֱלֹהִים בַּמָּקוֹם
+# הַזֶּה וַהֲרָגוּנִי עַל־דְּבַר אִשְׁתִּי
+# &quot;And Abraham said: &#x27;Because I thought: Surely the fear of God is not in
+# this place; and they will slay me for my wife&#x27;s sake.&quot;
+m.step(&quot;Gen.20.11&quot;)
+# ‹אֵין־יִרְאַת אֱלֹהִים בַּמָּקוֹם הַזֶּה וַהֲרָגוּנִי› (“there-is-not fear
+# God in-place the-this and-smite-with-deadly-intent-me/my”) — fact holds:
+# say-ein-fear-God; and-haraguni-over-word/thing-ishti
+m.fact(&quot;amarti_ein_yirat_elohim&quot;,
+       &quot;va_haraguni_al_devar_ishti&quot;)
+
+# -------------------------- Gen.20.12 · THE_HALF_TRUTH ---------------------
+# וְגַם־אָמְנָה אֲחֹתִי בַת־אָבִי הִוא אַךְ לֹא בַת־אִמִּי וַתְּהִי־לִי
+# לְאִשָּׁה
+# &quot;And moreover she is indeed my sister, the daughter of my father, but not
+# the daughter of my mother; and so she became my wife.&quot;
+m.step(&quot;Gen.20.12&quot;)
+# ‹אֲחֹתִי בַת־אָבִי הִוא אַךְ לֹא בַת־אִמִּי› (“sister-me/my daughter
+# father-me/my he/it indeed not daughter mother-me/my”) — fact holds:
+# achoti-daughter-avi-indeed-not-daughter-imi
+m.fact(&quot;achoti_vat_avi_akh_lo_vat_imi&quot;)
+
+# -------------------------- Gen.20.13 · THE_WANDERING_AND_THE_QUOTED_DEMAND -
+# וַיְהִי כַּאֲשֶׁר הִתְעוּ אֹתִי אֱלֹהִים מִבֵּית אָבִי וָאֹמַר לָהּ זֶה
+# חַסְדֵּךְ אֲשֶׁר תַּעֲשִׂי עִמָּדִי אֶל כָּל־הַמָּקוֹם אֲשֶׁר נָבוֹא
+# שָׁמָּה אִמְרִי־לִי אָחִי הוּא
+# &quot;And it came to pass, when God caused me to wander from my father&#x27;s house,
+# that I said unto her: This is thy kindness which thou shalt show unto me;
+# at every place whither we shall come, say of me: He is my brother.&#x27;&quot;
+m.step(&quot;Gen.20.13&quot;)
+# ‹הִתְעוּ אֹתִי אֱלֹהִים … אִמְרִי־לִי אָחִי הוּא› (“vacillate obj-marker-
+# me/my God … say to-me/my brother-me/my he/it”) — fact holds: vacillate-me-
+# God-from-beit-avi; say-to-me-my-brother-he/it
+m.fact(&quot;hitu_oti_elohim_mi_beit_avi&quot;,
+       &quot;imri_li_achi_hu&quot;)
+
+# -------------------------- Gen.20.14 · THE_RETURN_CYCLE_CLOSES ------------
+# וַיִּקַּח אֲבִימֶלֶךְ צֹאן וּבָקָר וַעֲבָדִים וּשְׁפָחֹת וַיִּתֵּן
+# לְאַבְרָהָם וַיָּשֶׁב לוֹ אֵת שָׂרָה אִשְׁתּוֹ
+# &quot;And Abimelech took sheep and oxen, and men-servants and women-servants,
+# and gave them unto Abraham, and restored him Sarah his wife.&quot;
+m.step(&quot;Gen.20.14&quot;)
+# ‹וַיָּשֶׁב לוֹ אֵת שָׂרָה אִשְׁתּוֹ› (“and-return to-him/its obj-marker
+# Sarah woman-him/its”) — demand settled (popped from the queue):
+# return(woman-the-man)
+m.result(&quot;hashev(eshet_ha_ish)&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Gen.20.15 · THE_DWELL_GRANT --------------------
+# וַיֹּאמֶר אֲבִימֶלֶךְ הִנֵּה אַרְצִי לְפָנֶיךָ בַּטּוֹב בְּעֵינֶיךָ שֵׁב
+# &quot;And Abimelech said: &#x27;Behold, my land is before thee: dwell where it
+# pleaseth thee.&#x27;&quot;
+m.step(&quot;Gen.20.15&quot;)
+# ‹בַּטּוֹב בְּעֵינֶיךָ שֵׁב› (“in-good in-eye-you/your dwell/sit”) —
+# Abimelech speaks a demand — LET: dwell/sit(in-the-good-in-einekha)
+m.declare(&quot;avimelekh&quot;, &quot;LET&quot;,
+          &quot;shev(ba_tov_be_einekha)&quot;)
+
+# -------------------------- Gen.20.16 · THE_COVERING_AND_THE_VINDICATION ---
+# וּלְשָׂרָה אָמַר הִנֵּה נָתַתִּי אֶלֶף כֶּסֶף לְאָחִיךְ הִנֵּה הוּא־לָךְ
+# כְּסוּת עֵינַיִם לְכֹל אֲשֶׁר אִתָּךְ וְאֵת כֹּל וְנֹכָחַת
+# &quot;And unto Sarah he said: &#x27;Behold, I have given thy brother a thousand
+# pieces of silver; behold, it is for thee a covering of the eyes to all
+# that are with thee; and before all men thou art righted.&#x27;&quot;
+m.step(&quot;Gen.20.16&quot;)
+# ‹אֶלֶף כֶּסֶף … כְּסוּת עֵינַיִם … וְנֹכָחַת› (“thousand silver … cover
+# eye … and-be-right”) — fact holds: thousand-silver-cover-einayim; and-be-
+# right
+m.fact(&quot;elef_kesef_kesut_einayim&quot;,
+       &quot;ve_nokhachat&quot;)
+
+# -------------------------- Gen.20.17 · THE_PRAYER_AND_THE_HEALING ---------
+# וַיִּתְפַּלֵּל אַבְרָהָם אֶל־הָאֱלֹהִים וַיִּרְפָּא אֱלֹהִים
+# אֶת־אֲבִימֶלֶךְ וְאֶת־אִשְׁתּוֹ וְאַמְהֹתָיו וַיֵּלֵדוּ
+# &quot;And Abraham prayed unto God; and God healed Abimelech, and his wife, and
+# his maid-servants; and they bore children.&quot;
+m.step(&quot;Gen.20.17&quot;)
+# ‹וַיִּתְפַּלֵּל אַבְרָהָם אֶל־הָאֱלֹהִים› (“and-judge Abraham to the-God”)
+# — event: pray — agent Abraham
+m.event(&quot;pray&quot;, agent=&quot;avraham&quot;)
+# ‹וַיִּרְפָּא אֱלֹהִים … וַיֵּלֵדוּ› (“and-mend God … and-bear-young”) —
+# event: heal — agent God; theme beit-Abimelech
+m.event(&quot;heal&quot;, agent=&quot;elohim&quot;, themes=[&quot;beit_avimelekh&quot;])
+
+# -------------------------- Gen.20.18 · THE_SHUT_WOMB_CLOSER ---------------
+# כִּי־עָצֹר עָצַר יְהוָה בְּעַד כָּל־רֶחֶם לְבֵית אֲבִימֶלֶךְ עַל־דְּבַר
+# שָׂרָה אֵשֶׁת אַבְרָהָם
+# &quot;For the LORD had fast closed up all the wombs of the house of Abimelech,
+# because of Sarah Abraham&#x27;s wife.&quot;
+m.step(&quot;Gen.20.18&quot;)
+# ‹כִּי־עָצֹר עָצַר יְהוָה בְּעַד כָּל־רֶחֶם› (“that close close YHWH in-up-
+# to all womb”) — fact holds: close-close-the-LORD-up-to-all-womb
+m.fact(&quot;atzor_atzar_YHWH_bead_kol_rechem&quot;)
+# ‹כִּי־עָצֹר עָצַר יְהוָה› (“that close close YHWH”) — note: zero events in
+# this verse
+m.note_zero_events()
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == {&#x27;avimelekh&#x27;}
+    assert m.presupposed_set() == {&#x27;shur&#x27;, &#x27;gerar&#x27;, &#x27;qadesh&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;shev(ba_tov_be_einekha)&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 2
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;read_before_install&#x27;: 3}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;achoti_hi&#x27;, &#x27;hinkha_met_al_ha_ishah&#x27;, &#x27;ve_hi_beulat_baal&#x27;, &#x27;lo_qarav_eleha&#x27;, &#x27;ha_goy_gam_tzaddiq_taharog&#x27;, &#x27;hu_amar_li_ve_hi_gam_hi_amrah&#x27;, &#x27;be_tom_levavi_u_ve_niqyon_kapai&#x27;, &#x27;gam_anokhi_yadati_ve_tom_levavkha&#x27;, &#x27;va_echsokh_otkha_me_chato_li&#x27;, &#x27;lo_netatikha_lingoa&#x27;, &#x27;ve_yitpalel_baadkha_ve_cheyeh&#x27;, &#x27;im_einkha_meshiv_da_ki_mot_tamut&#x27;, &#x27;meh_asita_lanu_u_meh_chatati&#x27;, &#x27;chataah_gedolah_al_mamlakhti&#x27;, &#x27;mah_raita_ki_asita&#x27;, &#x27;amarti_ein_yirat_elohim&#x27;, &#x27;va_haraguni_al_devar_ishti&#x27;, &#x27;achoti_vat_avi_akh_lo_vat_imi&#x27;, &#x27;hitu_oti_elohim_mi_beit_avi&#x27;, &#x27;imri_li_achi_hu&#x27;, &#x27;elef_kesef_kesut_einayim&#x27;, &#x27;ve_nokhachat&#x27;, &#x27;atzor_atzar_YHWH_bead_kol_rechem&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 9
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

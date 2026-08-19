@@ -1,0 +1,1079 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_66_second_descent — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_66_second_descent?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The second descent: Benjamin before Joseph (43:1-34) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_66_second_descent</b> · Genesis 43:1-34 · derive logic_derived_v1 · phase FWD-7</div>
+<div class="meta"><a href="../#Gen/43/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">אָנֹכִי אֶעֶרְבֶנּוּ</span> · <i>anokhi eervenu</i> · &#x27;I will be surety for him&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DERIVED 2026-08-09 · FORWARD ERA unit #7 (run FWD-2 block 2; freeze review waived — mechanical gates only). Span: 43:1-34, whole chapter: 34 verses (SNAPSHOT-verified). Oral layer IN-PIPELINE: manifest 13/13 VERIFIED, zero FAILED — see oral_audit_note_en. MACHINE PROFILE. SEVEN DECLAREs, FOUR RESULTs, ONE BLESS. The demand-ledger doubles gen_65&#x27;s study in how demands live: the father&#x27;s bare return-and-buy (43:2) is SUPERSEDED by his own caravan-plan (43:11) — dead-by-revision, and this time the reviser is the demander himself; Judah&#x27;s send-the-lad (43:8) and the caravan-plan both discharge at 43:15 as the verse walks the verbs; the house-order (43:16) pops in ONE verse with the as-Joseph-said clause (43:17); the steward&#x27;s fear-not (43:23) stands open as the fear-not class does; the set-bread order (43:31) pops at 43:32 into the three-alones table. The father&#x27;s PRAYER (El Shaddai give you mercy, 43:14) stays OPEN — Simeon walks at 43:23 (the partial recorded in prose) but Benjamin&#x27;s half waits two units. Queue at close: THREE OPEN (the superseded bare demand, the prayer, the fear-not). BLESS 1: Elohim yachnekha beni (43:29) — Joseph blesses Benjamin with the priestly grace-verb before the priesthood exists. REGISTRY 0; TESTS 0; LEDGER 0. EVENTS 2 marked: the ELEVEN BOW (43:26 — Benjamin present, the second dream&#x27;s star-count steps into the ledger beside gen_65&#x27;s sheaves) and weeping station two (43:30, the chamber). CROSS-UNIT: gen_65&#x27;s carrying demand (bring the youngest to ME) is SATISFIED at 43:15/26 — recorded as an authored settlement link in the corpus world, not as an in-unit RESULT (the machine&#x27;s cross-unit law). CARE-POINTS: Judah&#x27;s SURETY (43:9) — the pledge-verb of the kid-and-cord (38:17) now staked on himself, with the blood- handler&#x27;s require-verb (9:5) volunteered against his own hand; the contrast with Reuben&#x27;s refused two-sons pledge (42:37) filed; 44:32 will cash the verse. The retelling COMPRESSION (43:21: two discoveries folded into one lodging-scene). The live-and-not-die clause returned to its coiner (42:2 -&gt; 43:8). The Ishmaelite cargo (37:25) carried back to Egypt as the gift (43:11). The hospitality triple of the fathers (water, feet, fodder) in the son&#x27;s house (43:24). The still-alive phrase rehearsed (43:27) before it detonates (45:3). WATCHLIST ARMS: 44:18 (bi adoni returns at the great speech), 44:25 (the second lean shuvu), 44:29/31 (the gray-hair file&#x27;s remaining tokens, G65-08), 44:32 (the surety cashed), 45:3 (ha-od avi chai), 45:22 (the five garments answering the five hands), 45:26 (the second lean telling, G65-06), Num 6:25 (the priestly grace-verb, G66-10), Esther 5:10 (the restraint-pair, named).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-09 (IN-PIPELINE, forward era; manifest logic/oral_audit/manifests/gen_66_second_descent_claims.json 13/13 VERIFIED, zero FAILED; record logic/oral_audit/AUDIT_gen_66_2026-08-09.md). CROWNS (chain-attested + DB-verified). THE DAGESHED ALEF [G66-01, MS on 43:26; the Masorah] — THE UNIT&#x27;S MARQUEE: ויביאו (&quot;and they brought&quot;) with a DAGESH IN THE ALEF — one of the Masorah&#x27;s FOUR dageshed alefs in Scripture (its Ezra partner, Ezra 8:18, named) — and SNAPSHOT writes the dot inside the guttural in-stream: the rarest mark in the corpus so far, pressed where the gift crosses Joseph&#x27;s threshold. THE CLIPPED BOW [G66-02, MS on 43:28]: ויקדו וישתחו — the span&#x27;s own ketiv/qere lands on the BOW-WORD: written clipped (וישתחו), read whole (וישתחוו) — and SNAPSHOT carries the pair as two tokens, the bare written form beside the pointed read form: the verse&#x27;s word-count wears the doubling (checked). THE RETURN-VERB&#x27;S CHAPTER [G66-03, MS on 43:2; the Ramah]: שבו (&quot;return&quot;) LEAN at the bare demand (43:2; its twin 44:25) — and the SAME chapter writes שובו FULL at the release (43:13): the Ramah&#x27;s three-full file (with the gate-run Exod 32:27 and the tents Deut 5:30) verified in the skeleton census (the noun &#x27;his return&#x27;, Gen 14:17, collides and is framed): lean empty-handed, full with the brother. THE ONE ALEF-LULEI [G66-04, MS on 43:10; the Kitzur]: לולא (&quot;had we not&quot;) — the Torah writes the word with a final yod everywhere (31:42; Deut 32:27) EXCEPT this once with a final ALEF (census exact) — and the Kitzur reads the seam of the same verse: the last letters of כי עתה שבנו זה (&quot;for by now we could have returned&quot;) spell the four-letter Name in order (builder-asserted): the Name goes down with the caravan. THE TWO DESCENTS [G66-05, Kitzur on 43:4; the Masorah]: נרדה (&quot;let us go down / we will go down&quot;) — exactly TWICE in the Torah: Babel&#x27;s divine plural (11:7) and the brothers&#x27; condition (43:4); the Masorah&#x27;s third is Saul&#x27;s night-pursuit (1 Sam 14:36, named): a descent that scatters, a descent that buys bread. THE ASKING, THE KING, AND THE GRAVE [G66-06, MS on 43:7; the Ramah; the Hilleli]: שאול (&quot;asking&quot;) FULL — and the full skeleton&#x27;s four Torah tokens are the doubled asking (43:7), the Edomite king Shaul (36:37-38), and SHEOL itself (Deut 32:22): to ask, a king, and the grave in one spelling; the Samuel pair named. THE ONE KNOWING [G66-07, MS on 43:7; the Hilleli]: הידוע (&quot;could we know&quot;) — its one Torah token, FULL with the Hilleli and the precise books against divided Masorah-notes. THE DOUBLE-YOD FEAR [G66-08, MS on 43:18; Rashi]: וייראו (&quot;and they feared&quot;) with BOTH yods — the Hilleli alone clips one; Rashi&#x27;s own note (&#x27;written with two yods&#x27;) and the Masorah&#x27;s all-Torah-full rule stand with the stream. THE TWO RETURNED-WORDS [G66-09, MS on 43:18]: הכסף השב (&quot;the silver that was returned&quot;) — the clipped participle; erring copies harmonize it to 43:12&#x27;s המושב: the letter keeps the father&#x27;s word and the sons&#x27; word apart one chapter wide (both tokens in-stream). THE FEAST&#x27;S ONCE-WORDS [G66-10, the Kitzur ×4]: ומשנה (&quot;and double&quot;, 43:15), יחנך (&quot;be gracious to you&quot;, 43:29 — checked; the priestly ויחנך (&#x27;and be gracious to you&#x27;), Num 6:25, collision framed), ויתאפק (&quot;and he restrained himself&quot;, 43:31 — the Haman pair, Esther 5:10, named: sorrow first, joy after, each for its own house), והצעיר (&quot;and the youngest&quot;, 43:33 — Isaiah&#x27;s mighty-younger named): four once-forms at one table. THE PORTION FILE [G66-11, MS on 43:34; the Hilleli]: ממשאת (&quot;than the portions of&quot;) LEAN with the Hilleli, the old print, and every precise copy against an erring printer — the Masorah&#x27;s four-token portion-file: this verse&#x27;s two lean, its two other stations full; the vain-burdens pair (Lam 2:14) named. THE POINTING FILE [G66-12, MS + Chizkuni ×6]: gam (43:8) gimel dageshed, פעמים (&quot;times&quot;, 43:10) pe soft, בטנים (&quot;pistachios&quot;, 43:11) bet in clipped qamatz (Chizkuni), הזאת (&quot;this&quot;, 43:15) zayin dageshed (checked), לשבר (&quot;to buy&quot;, 43:20) bet in clipped qamatz (Chizkuni), יחנך (43:29) yod in clipped qamatz with resting chet (Chizkuni) — asserted; named: the accent-forward שאל (43:7, MS&#x27;s excursus on the accent that pulls the stress forward), the debate on the dagesh that crowding forces, at ומשנה כסף (&#x27;and double silver&#x27;, 43:15). THE BAG-WORD [G66-13, MS on 43:18; the Hilleli and Yerushalmi]: באמתחתינו (&quot;in our bags&quot;) — the Hilleli clips the yod, the Yerushalmi and all our books keep it (vav lean throughout, as the printed Masorah&#x27;s own erring note is corrected by MS): checked in-stream. READINGS (named-only): the six kinds against the six sons of the mistresses (43:11); the doubled repayment rider (43:15); the this-world-and-the-next letter-sum (43:9); the cup-tapping seating (43:33); the five garments forward from the five hands (43:34); Saul&#x27;s night-descent (43:4); the grace-cry pair (43:29).</div>
+<div class="meta">confidence: structure tested; oral layer verified 13/13</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>FORWARD ERA run 2, block 2. Canon continuation: Gen 43:1-34 — the second descent, whole chapter.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Span + source + conventions</td><td>SNAPSHOT prestage: 34 verses; ONE ketiv/qere pair (43:28, the bow-word — carried as two tokens in-stream). Volitive census: shuvu-shivru (43:2), shilcha (43:8), zot-asu/qechu/horidu (43:11-13), the El-Shaddai jussive (43:14), the house-order (43:16), al-tirau (43:23), simu (43:31) — seven DECLAREs, one BLESS-jussive (43:29).</td><td>established</td></tr>
+<tr><td><b>C</b></td><td>Machine structure</td><td>Seven DECLAREs, four RESULTs, one BLESS: the father supersedes his own demand (dead-by-revision, second member); two demands walk their verbs at 43:15; one-verse receipts at 43:17 and 43:32; the prayer and the fear-not stay open. Queue closes at three open. Cross-unit satisfaction of gen_65&#x27;s carrying demand recorded via the corpus world&#x27;s settlement links, per the one-world law.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Gen 43 (18 notes) + Kitzur Baal HaTurim on Gen 43 (10 notes). Manifest 13 rows: 13 VERIFIED / 0 FAILED / 0 UNCHECKABLE. The Kitzur&#x27;s al-pi pair (43:7) rides a phrase too common for a clean skeleton census — filed named-only, dropped-not-misframed.</td><td>established</td></tr>
+<tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 13/13 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-09 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_43_1 · Gen.43.1 · <span class='expr'>THE_FAMINE_HEAVY</span></h3>
+<p><span class="he">וְהָרָעָב כָּבֵד בָּאָרֶץ</span> · <i>ve-ha-raav kaved ba-aretz</i> · And the famine was heavy in the land.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהָרָעָ֖ב</span> · <i>ve-ha-raav</i> · and the famine (NO etnachta in verse: split at tifcha on ve-ha-raav) [VERIFIED: SNAPSHOT Gen.43.1 idx0 tifcha; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">כָּבֵ֥ד בָּאָֽרֶץ</span> · <i>kaved ba-aretz</i> · was heavy in the land (verse-final ba-aretz) [VERIFIED: SNAPSHOT Gen.43.1 idx1-2]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_ha_raav_kaved_ba_aretz, t0)</span><br><span class="gloss">= HOLDS(and-the-raav-kaved-in-the-earth, t0)</span><br>THE PRESSURE. ve-ha-raav KAVED ba-aretz — the span&#x27;s shortest verse is its engine: the heaviness (kaved) that will overturn a father&#x27;s refusal; gen_64&#x27;s decree (41:31 &#x27;very heavy&#x27;) verified at Canaan&#x27;s door.
+</td><td><span class="he">וְהָרָעָב כָּבֵד בָּאָרֶץ</span> · <i>ve-ha-raav kaved ba-aretz</i><br><span class="gloss">= and-the-raav kaved earth</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Three words re-open the board.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_2 · Gen.43.2 · <span class='expr'>RETURN_AND_BUY_A_LITTLE</span></h3>
+<p><span class="he">וַיְהִי כַּאֲשֶׁר כִּלּוּ לֶאֱכֹל אֶת־הַשֶּׁבֶר אֲשֶׁר הֵבִיאוּ מִמִּצְרָיִם וַיֹּאמֶר אֲלֵיהֶם אֲבִיהֶם שֻׁבוּ שִׁבְרוּ־לָנוּ מְעַט־אֹכֶל</span> · <i>va-yehi ka-asher kilu le-ekhol et-ha-shever asher heviu mi-mitzrayim va-yomer ale-hem avi-hem shuvu shivru-la-nu meat-okhel</i> · And it was, when they had finished eating the grain which they brought from Egypt, that their father said to them: Return, buy us a little food.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֗י כַּאֲשֶׁ֤ר כִּלּוּ֙ לֶאֱכֹ֣ל אֶת הַשֶּׁ֔בֶר אֲשֶׁ֥ר הֵבִ֖יאוּ מִמִּצְרָ֑יִם</span> · <i>va-yehi ka-asher kilu le-ekhol et-ha-shever asher heviu mi-mitzrayim</i> · when they finished eating the grain from Egypt (etnachta on mi-mitzrayim) [VERIFIED: SNAPSHOT Gen.43.2 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּ֤אמֶר אֲלֵיהֶם֙ אֲבִיהֶ֔ם שֻׁ֖בוּ שִׁבְרוּ לָ֥נוּ מְעַט אֹֽכֶל</span> · <i>va-yomer ale-hem avi-hem shuvu shivru-la-nu meat-okhel</i> · their father said: return, buy us a little food (verse-final okhel) [VERIFIED: SNAPSHOT Gen.43.2 idx9-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yaaqov, LET(shuvu_shivru_lanu_meat_okhel))</span><br><span class="gloss">= DECLARE(yaaqov, LET(shuvu-shivru-lanu-meat-okhel))</span><br>THE BARE DEMAND [G66-03]. SHUVU shivru lanu MEAT okhel — return, buy a LITTLE: the father&#x27;s minimal plan, pushed as if Benjamin were not the price; Judah&#x27;s next speech will show it impossible, and Jacob&#x27;s own zot-asu (43:11) will supersede it — the dead-by-revision class gains its second member, and this time the reviser is the father himself (gen_65&#x27;s was the governor). shuvu written LEAN per the Ramah (here and 44:25, both lean in precise copies; asserted) — the chapter will write the SAME verb FULL at 43:13.
+</td><td><span class="he">שֻׁבוּ שִׁבְרוּ־לָנוּ מְעַט־אֹכֶל</span> · <i>shuvu shivru-la-nu meat-okhel</i><br><span class="gloss">= shuvu shivru-to-nu meat-okhel</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The father&#x27;s bare demand — pushed into an impossibility.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_3 · Gen.43.3 · <span class='expr'>THE_WITNESS_WARNING</span></h3>
+<p><span class="he">וַיֹּאמֶר אֵלָיו יְהוּדָה לֵאמֹר הָעֵד הֵעִד בָּנוּ הָאִישׁ לֵאמֹר לֹא־תִרְאוּ פָנַי בִּלְתִּי אֲחִיכֶם אִתְּכֶם</span> · <i>va-yomer elay-v yehuda le-mor haed heid ba-nu ha-ish le-mor lo-tiru fana-y bilti achi-khem et-khem</i> · And Judah said to him, saying: The man solemnly warned us, saying: You shall not see my face without your brother with you.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֧אמֶר אֵלָ֛יו יְהוּדָ֖ה לֵאמֹ֑ר</span> · <i>va-yomer elay-v yehuda le-mor</i> · the man solemnly warned us (etnachta on le-mor) [VERIFIED: SNAPSHOT Gen.43.3 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">הָעֵ֣ד הֵעִד֩ בָּ֨נוּ הָאִ֤ישׁ לֵאמֹר֙ לֹֽא תִרְא֣וּ פָנַ֔י בִּלְתִּ֖י אֲחִיכֶ֥ם אִתְּכֶֽם</span> · <i>haed heid ba-nu ha-ish le-mor lo-tiru fana-y bilti achi-khem et-khem</i> · you shall not see my face without your brother with you (verse-final et-khem) [VERIFIED: SNAPSHOT Gen.43.3 idx4-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(haed_heid_banu_ha_ish, t0)</span><br><span class="gloss">= HOLDS(haed-heid-banu-the-man, t0)</span><br>THE WARNING CITED. HAED HEID banu ha-ish — the doubled witness-verb (the testimony idiom of the law units) wraps gen_65&#x27;s still-open carrying demand: lo tiru fanai bilti achikhem itkhem — the face- condition quoted verbatim-shaped, twice in this chapter (43:3, 43:5): Judah argues from the queue.
+</td><td><span class="he">הָעֵד הֵעִד בָּנוּ הָאִישׁ</span> · <i>haed heid ba-nu ha-ish</i><br><span class="gloss">= haed heid in-the-nu man</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">gen_65&#x27;s carrying demand quoted as law.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_4 · Gen.43.4 · <span class='expr'>IF_YOU_SEND</span></h3>
+<p><span class="he">אִם־יֶשְׁךָ מְשַׁלֵּחַ אֶת־אָחִינוּ אִתָּנוּ נֵרְדָה וְנִשְׁבְּרָה לְךָ אֹכֶל</span> · <i>im-yesh-kha meshalecha et-achi-nu et-nu nerda ve-nishbra le-kha okhel</i> · If you are sending our brother with us, we will go down and buy you food.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אִם יֶשְׁךָ֛ מְשַׁלֵּ֥חַ אֶת אָחִ֖ינוּ אִתָּ֑נוּ</span> · <i>im-yesh-kha meshalecha et-achi-nu et-nu</i> · if you are sending our brother with us (etnachta on et-nu) [VERIFIED: SNAPSHOT Gen.43.4 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">נֵרְדָ֕ה וְנִשְׁבְּרָ֥ה לְךָ֖ אֹֽכֶל</span> · <i>nerda ve-nishbra le-kha okhel</i> · we will go down and buy you food (verse-final okhel) [VERIFIED: SNAPSHOT Gen.43.4 idx6-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(im_yeshkha_meshaleach_nerda, t0)</span><br><span class="gloss">= HOLDS(if-yeshkha-meshaleach-nerda, t0)</span><br>THE CONDITION [G66-05]. im yeshkha meshaleach... NERDA — &#x27;we will go down&#x27;: the form stands exactly TWICE in the Torah — here and Babel&#x27;s &#x27;let US go down and confuse&#x27; (11:7, the divine plural of gen_25) [VERIFIED: manifest G66-05]; the Masorah&#x27;s third is Saul&#x27;s night- pursuit (1 Sam 14:36, named): the Kitzur reads the three descents into one — a going-down that scatters, a going-down that pursues, a going-down that buys bread.
+</td><td><span class="he">אִם־יֶשְׁךָ מְשַׁלֵּחַ אֶת־אָחִינוּ אִתָּנוּ נֵרְדָה</span> · <i>im-yesh-kha meshalecha et-achi-nu et-nu nerda</i><br><span class="gloss">= if-yesh-kha meshalecha my-brother-nu nu nerda</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The condition; the Babel-descent pair.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_5 · Gen.43.5 · <span class='expr'>IF_YOU_SEND_NOT</span></h3>
+<p><span class="he">וְאִם־אֵינְךָ מְשַׁלֵּחַ לֹא נֵרֵד כִּי־הָאִישׁ אָמַר אֵלֵינוּ לֹא־תִרְאוּ פָנַי בִּלְתִּי אֲחִיכֶם אִתְּכֶם</span> · <i>ve-im-en-kha meshalecha lo nered ki-ha-ish amar ele-nu lo-tiru fana-y bilti achi-khem et-khem</i> · And if you are not sending — we will not go down; for the man said to us: You shall not see my face without your brother with you.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאִם אֵינְךָ֥ מְשַׁלֵּ֖חַ לֹ֣א נֵרֵ֑ד</span> · <i>ve-im-en-kha meshalecha lo nered</i> · if you are not sending, we will not go down (etnachta on nered) [VERIFIED: SNAPSHOT Gen.43.5 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּֽי הָאִ֞ישׁ אָמַ֤ר אֵלֵ֨ינוּ֙ לֹֽא תִרְא֣וּ פָנַ֔י בִּלְתִּ֖י אֲחִיכֶ֥ם אִתְּכֶֽם</span> · <i>ki-ha-ish amar ele-nu lo-tiru fana-y bilti achi-khem et-khem</i> · for the man said: you shall not see my face without your brother (verse-final et-khem) [VERIFIED: SNAPSHOT Gen.43.5 idx5-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_im_enkha_meshaleach_lo_nered, t0)</span><br><span class="gloss">= HOLDS(and-if-enkha-meshaleach-not-nered, t0)</span><br>THE REFUSAL-CONDITION. ve-im enkha meshaleach LO NERED — Judah states the strike: the face-clause repeats word for word (the quoted demand is now the brothers&#x27; shield), and the father&#x27;s bare demand (43:2) stands exposed as unexecutable.
+</td><td><span class="he">וְאִם־אֵינְךָ מְשַׁלֵּחַ לֹא נֵרֵד</span> · <i>ve-im-en-kha meshalecha lo nered</i><br><span class="gloss">= and-if-en-kha meshalecha not nered</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The condition&#x27;s negative half; the face-clause again.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_6 · Gen.43.6 · <span class='expr'>WHY_DID_YOU_TELL</span></h3>
+<p><span class="he">וַיֹּאמֶר יִשְׂרָאֵל לָמָה הֲרֵעֹתֶם לִי לְהַגִּיד לָאִישׁ הַעוֹד לָכֶם אָח</span> · <i>va-yomer yisrael la-ma hareotem li-y le-hagid la-ish ha-od la-khem ach</i> · And Israel said: Why did you deal ill with me, to tell the man you had yet a brother?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר֙ יִשְׂרָאֵ֔ל לָמָ֥ה הֲרֵעֹתֶ֖ם לִ֑י</span> · <i>va-yomer yisrael la-ma hareotem li-y</i> · and Israel said: why did you deal ill with me (etnachta on li-y) [VERIFIED: SNAPSHOT Gen.43.6 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לְהַגִּ֣יד לָאִ֔ישׁ הַע֥וֹד לָכֶ֖ם אָֽח</span> · <i>le-hagid la-ish ha-od la-khem ach</i> · to tell the man you had yet a brother (verse-final ach) [VERIFIED: SNAPSHOT Gen.43.6 idx5-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lama_hareotem_li_lehagid, t0)</span><br><span class="gloss">= HOLDS(lama-hareotem-to-me-lehagid, t0)</span><br>THE REPROACH. lama HAREOTEM li — the do-ill verb in the father&#x27;s mouth; the narrator shifts to ISRAEL for the whole negotiation (43:6, 8, 11 — the covenant name presiding over the release of the covenant&#x27;s youngest).
+</td><td><span class="he">וַיֹּאמֶר יִשְׂרָאֵל לָמָה הֲרֵעֹתֶם לִי</span> · <i>va-yomer yisrael la-ma hareotem li-y</i><br><span class="gloss">= and-yomer yisrael to-ma hareotem to-me-y</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The reproach; the Israel-name takes the scene.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_7 · Gen.43.7 · <span class='expr'>THE_MAN_ASKED_AND_ASKED</span></h3>
+<p><span class="he">וַיֹּאמְרוּ שָׁאוֹל שָׁאַל־הָאִישׁ לָנוּ וּלְמוֹלַדְתֵּנוּ לֵאמֹר הַעוֹד אֲבִיכֶם חַי הֲיֵשׁ לָכֶם אָח וַנַגֶּד־לוֹ עַל־פִּי הַדְּבָרִים הָאֵלֶּה הֲיָדוֹעַ נֵדַע כִּי יֹאמַר הוֹרִידוּ אֶת־אֲחִיכֶם</span> · <i>va-yomru shaol shaal-ha-ish la-nu u-le-moladte-nu le-mor ha-od avi-khem chay ha-yesh la-khem ach va-naged-l-o al-pi ha-devarim ha-ele ha-yadoa neda ki yomar horidu et-achi-khem</i> · And they said: The man asked and asked about us and about our kindred, saying: Is your father yet alive? Have you a brother? And we told him according to these words. Could we know, knowing that he would say: Bring your brother down?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּאמְר֡וּ שָׁא֣וֹל שָֽׁאַל הָ֠אִישׁ לָ֣נוּ וּלְמֽוֹלַדְתֵּ֜נוּ לֵאמֹ֗ר הַע֨וֹד אֲבִיכֶ֥ם חַי֙ הֲיֵ֣שׁ לָכֶ֣ם אָ֔ח וַנַ֨גֶּד ל֔וֹ עַל פִּ֖י הַדְּבָרִ֣ים הָאֵ֑לֶּה</span> · <i>va-yomru shaol shaal-ha-ish la-nu u-le-moladte-nu le-mor ha-od avi-khem chay ha-yesh la-khem ach va-naged-l-o al-pi ha-devarim ha-ele</i> · the man asked and asked about us and our kindred (etnachta on ha-ele) [VERIFIED: SNAPSHOT Gen.43.7 idx18 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">הֲיָד֣וֹעַ נֵדַ֔ע כִּ֣י יֹאמַ֔ר הוֹרִ֖ידוּ אֶת אֲחִיכֶֽם</span> · <i>ha-yadoa neda ki yomar horidu et-achi-khem</i> · could we know he would say: bring your brother down? (verse-final achi-khem) [VERIFIED: SNAPSHOT Gen.43.7 idx19-25]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shaol_shaal_ha_ish_lanu, t0)</span><br><span class="gloss">= HOLDS(shaol-shaal-the-man-lanu, t0)</span><br>THE DOUBLED ASKING [G66-06, G66-07]. SHAOL shaal — the infinitive FULL with its vav (the Hilleli and every precise book; its Samuel pair named) — and the skeleton&#x27;s Torah census is a collision worth the filing: the asking (here), the Edomite king Shaul (36:37-38), and SHEOL the pit (Deut 32:22) — four full tokens: to ask, a king, and the grave [VERIFIED: manifest G66-06]. ha-YADOA neda — &#x27;could we KNOW, knowing&#x27; — the infinitive FULL with the Hilleli and the precise books against divided Masorah-notes, its one Torah token [VERIFIED: manifest G66-07]; shaal accented against the custom (the lengthening-stroke debate, MS&#x27;s own excursus — named).
+</td><td><span class="he">שָׁאוֹל שָׁאַל־הָאִישׁ</span> · <i>shaol shaal-ha-ish</i><br><span class="gloss">= shaol shaal-the-man</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The doubled asking; the full spellings hold.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_8 · Gen.43.8 · <span class='expr'>SEND_THE_LAD_WITH_ME</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוּדָה אֶל־יִשְׂרָאֵל אָבִיו שִׁלְחָה הַנַּעַר אִתִּי וְנָקוּמָה וְנֵלֵכָה וְנִחְיֶה וְלֹא נָמוּת גַּם־אֲנַחְנוּ גַם־אַתָּה גַּם־טַפֵּנוּ</span> · <i>va-yomer yehuda el-yisrael avi-v shilcha-ה ha-naar et-y ve-naquma ve-nelekha ve-nichye ve-lo namut gam-anachnu gam-ata gam-tape-nu</i> · And Judah said to Israel his father: Send the lad with me, and we will arise and go, and we will live and not die — we, and you, and our little ones.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר יְהוּדָ֜ה אֶל יִשְׂרָאֵ֣ל אָבִ֗יו שִׁלְחָ֥ה הַנַּ֛עַר אִתִּ֖י וְנָק֣וּמָה וְנֵלֵ֑כָה</span> · <i>va-yomer yehuda el-yisrael avi-v shilcha-ה ha-naar et-y ve-naquma ve-nelekha</i> · send the lad with me, and we will arise and go (etnachta on ve-nelekha) [VERIFIED: SNAPSHOT Gen.43.8 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְנִֽחְיֶה֙ וְלֹ֣א נָמ֔וּת גַּם אֲנַ֥חְנוּ גַם אַתָּ֖ה גַּם טַפֵּֽנוּ</span> · <i>ve-nichye ve-lo namut gam-anachnu gam-ata gam-tape-nu</i> · and we will live and not die — we, you, and our little ones (verse-final tape-nu) [VERIFIED: SNAPSHOT Gen.43.8 idx10-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yehuda, LET(shilcha_ha_naar_iti))</span><br><span class="gloss">= DECLARE(yehuda, LET(shilcha-the-naar-iti))</span><br>THE SEND-DEMAND. SHILCHA ha-naar iti — Judah&#x27;s imperative pushed at the father: the lad-word for the grown Benjamin (the father&#x27;s eyes kept in the grammar); ve-nichye ve-lo namut — Jacob&#x27;s own live-and- not-die clause (42:2) handed back to him with its census tripled: gam anachnu gam ata gam tapenu — we, you, the little ones (the gimel of gam dageshed per MS, asserted [G66-12]).
+</td><td><span class="he">שִׁלְחָה הַנַּעַר אִתִּי</span> · <i>shilcha-ה ha-naar et-y</i><br><span class="gloss">= shilcha-ה the-naar y</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Judah&#x27;s demand; the live-and-not-die clause returns.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_9 · Gen.43.9 · <span class='expr'>I_AM_THE_SURETY</span></h3>
+<p><span class="he">אָנֹכִי אֶעֶרְבֶנּוּ מִיָּדִי תְּבַקְשֶׁנּוּ אִם־לֹא הֲבִיאֹתִיו אֵלֶיךָ וְהִצַּגְתִּיו לְפָנֶיךָ וְחָטָאתִי לְךָ כָּל־הַיָּמִים</span> · <i>anokhi eerve-nu mi-yadi-y tevaqshe-nu im-lo havioti-v ele-kha ve-hitzagti-v le-fane-kha ve-chatati le-kha kal-ha-yamim</i> · I will be surety for him; from my hand you shall require him: if I do not bring him to you and set him before you, I shall have sinned against you all the days.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אָֽנֹכִי֙ אֶֽעֶרְבֶ֔נּוּ מִיָּדִ֖י תְּבַקְשֶׁ֑נּוּ</span> · <i>anokhi eerve-nu mi-yadi-y tevaqshe-nu</i> · I will be surety for him; from my hand require him (etnachta on tevaqshe-nu) [VERIFIED: SNAPSHOT Gen.43.9 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אִם לֹ֨א הֲבִיאֹתִ֤יו אֵלֶ֨יךָ֙ וְהִצַּגְתִּ֣יו לְפָנֶ֔יךָ וְחָטָ֥אתִֽי לְךָ֖ כָּל הַיָּמִֽים</span> · <i>im-lo havioti-v ele-kha ve-hitzagti-v le-fane-kha ve-chatati le-kha kal-ha-yamim</i> · if I do not bring him back, I have sinned against you all the days (verse-final ha-yamim) [VERIFIED: SNAPSHOT Gen.43.9 idx4-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(anokhi_eervenu_mi_yadi_tevaqshenu, t0)</span><br><span class="gloss">= HOLDS(anokhi-eervenu-from-yadi-tevaqshenu, t0)</span><br>THE SURETY. anokhi EERVENU — the pledge-verb (arav) Judah once used for a kid and a cord (38:17-18, gen_61): now he pledges HIMSELF for the brother; mi-yadi TEVAQSHENU — the require-verb of the blood- handler (9:5, gen_21) volunteered against his own hand. Reuben staked two sons and was refused (42:37); Judah stakes his standing and will be heard — the machine files the contrast, and 44:32 will cash this verse.
+</td><td><span class="he">אָנֹכִי אֶעֶרְבֶנּוּ מִיָּדִי תְּבַקְשֶׁנּוּ</span> · <i>anokhi eerve-nu mi-yadi-y tevaqshe-nu</i><br><span class="gloss">= anokhi eerve-nu from-yadi-y tevaqshe-nu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The surety-pledge: Judah stakes himself.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_10 · Gen.43.10 · <span class='expr'>WE_COULD_HAVE_RETURNED_TWICE</span></h3>
+<p><span class="he">כִּי לוּלֵא הִתְמַהְמָהְנוּ כִּי־עַתָּה שַׁבְנוּ זֶה פַעֲמָיִם</span> · <i>ki lule hitmahmahnu ki-ata shavnu ze faamayim</i> · For had we not lingered, surely by now we could have returned these two times.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">כִּ֖י לוּלֵ֣א הִתְמַהְמָ֑הְנוּ</span> · <i>ki lule hitmahmahnu</i> · for had we not lingered (etnachta on hitmahmahnu) [VERIFIED: SNAPSHOT Gen.43.10 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּֽי עַתָּ֥ה שַׁ֖בְנוּ זֶ֥ה פַעֲמָֽיִם</span> · <i>ki-ata shavnu ze faamayim</i> · by now we could have returned twice (verse-final faamayim) [VERIFIED: SNAPSHOT Gen.43.10 idx3-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ki_lule_hitmahmahnu, t0)</span><br><span class="gloss">= HOLDS(when-lule-hitmahmahnu, t0)</span><br>THE LINGERING [G66-04]. ki LULE hitmahmahnu — the had-not word written with a FINAL ALEF, its only such token in the Torah (the yod-form stands twice: Laban&#x27;s field 31:42, the enemy&#x27;s boast Deut 32:27 — both asserted) [VERIFIED: manifest G66-04]; and the Kitzur reads the seam: the last letters of ki ata SHAVNU ze — the four- letter Name in order (asserted by the builder): the Name accompanies the righteous down (named).
+</td><td><span class="he">כִּי לוּלֵא הִתְמַהְמָהְנוּ</span> · <i>ki lule hitmahmahnu</i><br><span class="gloss">= when lule hitmahmahnu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The one alef-lulei; the Name at the seams.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_11 · Gen.43.11 · <span class='expr'>THE_FATHERS_CARAVAN_PLAN</span></h3>
+<p><span class="he">וַיֹּאמֶר אֲלֵהֶם יִשְׂרָאֵל אֲבִיהֶם אִם־כֵּן אֵפוֹא זֹאת עֲשׂוּ קְחוּ מִזִּמְרַת הָאָרֶץ בִּכְלֵיכֶם וְהוֹרִידוּ לָאִישׁ מִנְחָה מְעַט צֳרִי וּמְעַט דְּבַשׁ נְכֹאת וָלֹט בָּטְנִים וּשְׁקֵדִים</span> · <i>va-yomer el-hem yisrael avi-hem im-ken efo zot asu qechu mi-zimrat ha-aretz bi-khele-khem ve-horidu la-ish mincha meat tzori u-meat devash nekhot va-lot batnim u-sheqedim</i> · And Israel their father said to them: If so, then, this do: take of the land&#x27;s best fruits in your vessels, and carry down to the man a gift — a little balm and a little honey, gum and ladanum, pistachios and almonds.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר אֲלֵהֶ֜ם יִשְׂרָאֵ֣ל אֲבִיהֶ֗ם אִם כֵּ֣ן אֵפוֹא֮ זֹ֣את עֲשׂוּ֒ קְח֞וּ מִזִּמְרַ֤ת הָאָ֨רֶץ֙ בִּכְלֵיכֶ֔ם וְהוֹרִ֥ידוּ לָאִ֖ישׁ מִנְחָ֑ה</span> · <i>va-yomer el-hem yisrael avi-hem im-ken efo zot asu qechu mi-zimrat ha-aretz bi-khele-khem ve-horidu la-ish mincha</i> · if so, then this do: take of the land&#x27;s best (etnachta on mincha) [VERIFIED: SNAPSHOT Gen.43.11 idx15 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">מְעַ֤ט צֳרִי֙ וּמְעַ֣ט דְּבַ֔שׁ נְכֹ֣את וָלֹ֔ט בָּטְנִ֖ים וּשְׁקֵדִֽים</span> · <i>meat tzori u-meat devash nekhot va-lot batnim u-sheqedim</i> · carry down a gift: balm, honey, gum, ladanum, pistachios, almonds (verse-final u-sheqedim) [VERIFIED: SNAPSHOT Gen.43.11 idx16-23]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yisrael, LET(zot_asu_qechu_ve_horidu))</span><br><span class="gloss">= DECLARE(yisrael, LET(this-asu-qechu-and-horidu))</span><br>THE REVISION. im ken efo ZOT ASU — the father adopts the governor&#x27;s own formula (42:18&#x27;s zot asu): the bare demand of 43:2 is superseded by a caravan-plan — gift, double silver, the brother — and the machine leaves 43:2 OPEN forever, dead by its author&#x27;s revision. The six kinds (balm, honey, gum, ladanum, pistachios, almonds) against the six sons of the mistresses per the Kitzur (named); botnim (&#x27;pistachios&#x27;) with the bet in clipped qamatz (Chizkuni, asserted [G66-12]); the balm returning the Ishmaelite caravan&#x27;s cargo (37:25) to Egypt by the sellers&#x27; own hands (letter-note).
+</td><td><span class="he">זֹאת עֲשׂוּ קְחוּ מִזִּמְרַת הָאָרֶץ בִּכְלֵיכֶם וְהוֹרִידוּ</span> · <i>zot asu qechu mi-zimrat ha-aretz bi-khele-khem ve-horidu</i><br><span class="gloss">= this asu qechu from-zimrat earth bi-khele-khem and-horidu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The revision: the father&#x27;s own zot-asu.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_12 · Gen.43.12 · <span class='expr'>DOUBLE_SILVER_AND_THE_RETURNED</span></h3>
+<p><span class="he">וְכֶסֶף מִשְׁנֶה קְחוּ בְיֶדְכֶם וְאֶת־הַכֶּסֶף הַמּוּשָׁב בְּפִי אַמְתְּחֹתֵיכֶם תָּשִׁיבוּ בְיֶדְכֶם אוּלַי מִשְׁגֶּה הוּא</span> · <i>ve-khesef mishne qechu ve-yed-khem ve-et-ha-kesef ha-mushav be-fi amtchote-khem tashivu ve-yed-khem ulay mishge hu</i> · And double silver take in your hand; and the silver that was returned in the mouth of your bags return in your hand — perhaps it was an error.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְכֶ֥סֶף מִשְׁנֶ֖ה קְח֣וּ בְיֶדְכֶ֑ם</span> · <i>ve-khesef mishne qechu ve-yed-khem</i> · double silver take in your hand (etnachta on ve-yed-khem) [VERIFIED: SNAPSHOT Gen.43.12 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאֶת הַכֶּ֜סֶף הַמּוּשָׁ֨ב בְּפִ֤י אַמְתְּחֹֽתֵיכֶם֙ תָּשִׁ֣יבוּ בְיֶדְכֶ֔ם אוּלַ֥י מִשְׁגֶּ֖ה הֽוּא</span> · <i>ve-et-ha-kesef ha-mushav be-fi amtchote-khem tashivu ve-yed-khem ulay mishge hu</i> · the returned silver return — perhaps it was an error (verse-final hu) [VERIFIED: SNAPSHOT Gen.43.12 idx4-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(kesef_mishne_ve_ha_kesef_ha_mushav, t0)</span><br><span class="gloss">= HOLDS(kesef-mishne-and-the-kesef-the-mushav, t0)</span><br>THE DOUBLE. ve-khesef MISHNE — double silver: the Kitzur&#x27;s pair rides the doubled word to the doubled repayment (named); ve-et ha- kesef HA-MUSHAV — &#x27;the RETURNED silver&#x27;: hold the participle — 43:18 will write its clipped twin (ha-shav) and the erring copies will harmonize the two [G66-09, armed]; ulai MISHGE hu — &#x27;perhaps an error&#x27;: the father supplies the innocent reading the sons feared to claim.
+</td><td><span class="he">וְכֶסֶף מִשְׁנֶה קְחוּ בְיֶדְכֶם</span> · <i>ve-khesef mishne qechu ve-yed-khem</i><br><span class="gloss">= and-khesef mishne qechu and-yed-khem</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The restitution clause.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_13 · Gen.43.13 · <span class='expr'>TAKE_YOUR_BROTHER_ARISE_RETURN</span></h3>
+<p><span class="he">וְאֶת־אֲחִיכֶם קָחוּ וְקוּמוּ שׁוּבוּ אֶל־הָאִישׁ</span> · <i>ve-et-achi-khem qachu ve-qumu shuvu el-ha-ish</i> · And your brother take; and arise, return to the man.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאֶת אֲחִיכֶ֖ם קָ֑חוּ</span> · <i>ve-et-achi-khem qachu</i> · and your brother take (etnachta on qachu) [VERIFIED: SNAPSHOT Gen.43.13 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְק֖וּמוּ שׁ֥וּבוּ אֶל הָאִֽישׁ</span> · <i>ve-qumu shuvu el-ha-ish</i> · and arise, return to the man (verse-final ha-ish) [VERIFIED: SNAPSHOT Gen.43.13 idx3-6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_et_achikhem_qachu_ve_qumu_shuvu, t0)</span><br><span class="gloss">= HOLDS(and-achikhem-qachu-and-qumu-shuvu, t0)</span><br>THE RELEASE [G66-03]. ve-et ACHIKHEM qachu — the withheld son released in four words; ve-qumu SHUVU — and the return-verb here is written FULL: the same chapter that wrote shuvu lean at the bare demand (43:2) writes it full at the release — and the full imperative stands three tokens in the Torah&#x27;s skeleton-count (14:17&#x27;s noun &#x27;his return&#x27; collides in the skeleton, framed), the Ramah naming this, the Exodus gate-run (Exod 32:27, prefixed), and the tents-return (Deut 5:30) [VERIFIED: manifest G66-03]: lean toward Egypt empty-handed; full with the brother in hand.
+</td><td><span class="he">וְאֶת־אֲחִיכֶם קָחוּ וְקוּמוּ שׁוּבוּ</span> · <i>ve-et-achi-khem qachu ve-qumu shuvu</i><br><span class="gloss">= and-my-brother-khem qachu and-qumu shuvu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The release; the full return-verb.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_14 · Gen.43.14 · <span class='expr'>EL_SHADDAI_GIVE_YOU_MERCY</span></h3>
+<p><span class="he">וְאֵל שַׁדַּי יִתֵּן לָכֶם רַחֲמִים לִפְנֵי הָאִישׁ וְשִׁלַּח לָכֶם אֶת־אֲחִיכֶם אַחֵר וְאֶת־בִּנְיָמִין וַאֲנִי כַּאֲשֶׁר שָׁכֹלְתִּי שָׁכָלְתִּי</span> · <i>ve-el shaday yiten la-khem rachamim li-fene ha-ish ve-shilach la-khem et-achi-khem acher ve-et-binyamin va-ani ka-asher shakholti shakhalti</i> · And El Shaddai give you mercy before the man, that he may release to you your other brother, and Benjamin. And I — as I am bereaved, I am bereaved.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאֵ֣ל שַׁדַּ֗י יִתֵּ֨ן לָכֶ֤ם רַחֲמִים֙ לִפְנֵ֣י הָאִ֔ישׁ וְשִׁלַּ֥ח לָכֶ֛ם אֶת אֲחִיכֶ֥ם אַחֵ֖ר וְאֶת בִּנְיָמִ֑ין</span> · <i>ve-el shaday yiten la-khem rachamim li-fene ha-ish ve-shilach la-khem et-achi-khem acher ve-et-binyamin</i> · El Shaddai give you mercy before the man (etnachta on binyamin) [VERIFIED: SNAPSHOT Gen.43.14 idx13 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַאֲנִ֕י כַּאֲשֶׁ֥ר שָׁכֹ֖לְתִּי שָׁכָֽלְתִּי</span> · <i>va-ani ka-asher shakholti shakhalti</i> · release your other brother and Benjamin; as I am bereaved, I am bereaved (verse-final shakhalti) [VERIFIED: SNAPSHOT Gen.43.14 idx14-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yisrael, LET(el_shaday_yiten_lakhem_rachamim))</span><br><span class="gloss">= DECLARE(yisrael, LET(to-shaday-yiten-lakhem-rachamim))</span><br>THE PRAYER. ve-EL SHADAY yiten lakhem RACHAMIM — the father pushes a demand on God by the Almighty-name (the name of the covenant- blessings, 17:1, 35:11): mercy before the man, the other brother, and Benjamin. The queue holds it OPEN: Simeon walks out at 43:23 (the partial the prose records), Benjamin&#x27;s release is two units away — a prayer paced slower than its span. BINYAMIN full (the seven-full census&#x27;s third station, 43:14 [G65-02 armed]); ka-asher SHAKHOLTI shakhalti — the bereave-verb of the lament (42:36) doubled into acceptance: the Esther-readers hear its cadence at &#x27;if I perish, I perish&#x27; (named).
+</td><td><span class="he">וְאֵל שַׁדַּי יִתֵּן לָכֶם רַחֲמִים</span> · <i>ve-el shaday yiten la-khem rachamim</i><br><span class="gloss">= and-to shaday yiten to-khem rachamim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The prayer-demand; the bereave-verb handed back.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_15 · Gen.43.15 · <span class='expr'>THE_CARAVAN_DESCENDS</span></h3>
+<p><span class="he">וַיִּקְחוּ הָאֲנָשִׁים אֶת־הַמִּנְחָה הַזֹּאת וּמִשְׁנֶה־כֶּסֶף לָקְחוּ בְיָדָם וְאֶת־בִּנְיָמִן וַיָּקֻמוּ וַיֵּרְדוּ מִצְרַיִם וַיַּעַמְדוּ לִפְנֵי יוֹסֵף</span> · <i>va-yiqchu ha-anashim et-ha-mincha ha-zot u-mishne-kesef laqchu ve-yada-m ve-et-binyamin va-yaqumu va-yerdu mitzrayim va-yaamdu li-fene yosef</i> · And the men took this gift, and double silver they took in their hand, and Benjamin; and they arose and went down to Egypt, and stood before Joseph.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּקְח֤וּ הָֽאֲנָשִׁים֙ אֶת הַמִּנְחָ֣ה הַזֹּ֔את וּמִשְׁנֶה כֶּ֛סֶף לָקְח֥וּ בְיָדָ֖ם וְאֶת בִּנְיָמִ֑ן</span> · <i>va-yiqchu ha-anashim et-ha-mincha ha-zot u-mishne-kesef laqchu ve-yada-m ve-et-binyamin</i> · the men took the gift, double silver, and Benjamin (etnachta on binyamin) [VERIFIED: SNAPSHOT Gen.43.15 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיָּקֻ֨מוּ֙ וַיֵּרְד֣וּ מִצְרַ֔יִם וַיַּֽעַמְד֖וּ לִפְנֵ֥י יוֹסֵֽף</span> · <i>va-yaqumu va-yerdu mitzrayim va-yaamdu li-fene yosef</i> · they arose, went down to Egypt, and stood before Joseph (verse-final yosef) [VERIFIED: SNAPSHOT Gen.43.15 idx11-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(shilcha_ha_naar_iti, t1)</span><br><span class="gloss">= RESULT: HOLDS(shilcha-the-naar-iti, t1)</span><br>THE SENDING DONE. ve-et BINYAMIN — the lad is in the caravan: Judah&#x27;s send-demand discharges (and the spelling turns LEAN the moment the son leaves the father&#x27;s holding — 43:15&#x27;s binyamin against 43:14&#x27;s full, the census&#x27;s own hinge, asserted).
+</td><td><span class="he">וְאֶת־בִּנְיָמִן</span> · <i>ve-et-binyamin</i><br><span class="gloss">= and-binyamin</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(zot_asu_qechu_ve_horidu, t1)</span><br><span class="gloss">= RESULT: HOLDS(this-asu-qechu-and-horidu, t1)</span><br>THE PLAN EXECUTED. va-yiqchu... et ha-mincha ha-ZOT u-mishne kesef laqchu... — the verse walks the father&#x27;s verbs verbatim (take, take, and down): the caravan-plan discharges; va-yaamdu lifne YOSEF — and the standing-before closes gen_65&#x27;s distance in five words. ha-zot with the zayin dageshed per MS (checked [G66-12]); u-MISHNE kesef — the doubled-silver word once so in the Torah (asserted under G66-10&#x27;s file).
+</td><td><span class="he">וַיִּקְחוּ הָאֲנָשִׁים אֶת־הַמִּנְחָה הַזֹּאת וּמִשְׁנֶה־כֶּסֶף לָקְחוּ בְיָדָם</span> · <i>va-yiqchu ha-anashim et-ha-mincha ha-zot u-mishne-kesef laqchu ve-yada-m</i><br><span class="gloss">= and-yiqchu the-anashim the-mincha the-this and-mishne-kesef laqchu and-yada-m</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Two demands discharge as the verse walks the verbs.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_16 · Gen.43.16 · <span class='expr'>SLAUGHTER_AND_PREPARE</span></h3>
+<p><span class="he">וַיַּרְא יוֹסֵף אִתָּם אֶת־בִּנְיָמִין וַיֹּאמֶר לַאֲשֶׁר עַל־בֵּיתוֹ הָבֵא אֶת־הָאֲנָשִׁים הַבָּיְתָה וּטְבֹחַ טֶבַח וְהָכֵן כִּי אִתִּי יֹאכְלוּ הָאֲנָשִׁים בַּצָּהֳרָיִם</span> · <i>va-yar yosef et-m et-binyamin va-yomer la-asher al-bet-o have et-ha-anashim ha-bayta-ה u-tevocha tevach ve-hakhen ki et-y yokhlu ha-anashim ba-tzahorayim</i> · And Joseph saw Benjamin with them, and said to the one over his house: Bring the men home, and slaughter a slaughtering and prepare — for with me the men shall eat at noon.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּ֨רְא יוֹסֵ֣ף אִתָּם֮ אֶת בִּנְיָמִין֒ וַיֹּ֨אמֶר֙ לַֽאֲשֶׁ֣ר עַל בֵּית֔וֹ הָבֵ֥א אֶת הָאֲנָשִׁ֖ים הַבָּ֑יְתָה</span> · <i>va-yar yosef et-m et-binyamin va-yomer la-asher al-bet-o have et-ha-anashim ha-bayta-ה</i> · Joseph saw Benjamin with them (etnachta on ha-bayta-ה) [VERIFIED: SNAPSHOT Gen.43.16 idx12 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּטְבֹ֤חַ טֶ֨בַח֙ וְהָכֵ֔ן כִּ֥י אִתִּ֛י יֹאכְל֥וּ הָאֲנָשִׁ֖ים בַּֽצָּהֳרָֽיִם</span> · <i>u-tevocha tevach ve-hakhen ki et-y yokhlu ha-anashim ba-tzahorayim</i> · bring the men home, slaughter and prepare: they eat with me at noon (verse-final ba-tzahorayim) [VERIFIED: SNAPSHOT Gen.43.16 idx13-20]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yosef, LET(have_et_ha_anashim_ha_baita))</span><br><span class="gloss">= DECLARE(yosef, LET(have-the-anashim-the-baita))</span><br>THE HOUSE-ORDER. HAVE et ha-anashim ha-baita u-tvoach TEVACH ve- hakhen — bring, slaughter, prepare: the governor&#x27;s noon-order pushed on the house-steward; va-yar yosef ITAM et BINYAMIN — the seeing that triggers it is the census&#x27;s fourth full station (43:16, asserted under G65-02).
+</td><td><span class="he">הָבֵא אֶת־הָאֲנָשִׁים הַבָּיְתָה</span> · <i>have et-ha-anashim ha-bayta-ה</i><br><span class="gloss">= have the-anashim the-bayta-ה</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The steward-demand.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_17 · Gen.43.17 · <span class='expr'>AS_JOSEPH_SAID</span></h3>
+<p><span class="he">וַיַּעַשׂ הָאִישׁ כַּאֲשֶׁר אָמַר יוֹסֵף וַיָּבֵא הָאִישׁ אֶת־הָאֲנָשִׁים בֵּיתָה יוֹסֵף</span> · <i>va-yaas ha-ish ka-asher amar yosef va-yave ha-ish et-ha-anashim beta-ה yosef</i> · And the man did as Joseph said; and the man brought the men to Joseph&#x27;s house.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּ֣עַשׂ הָאִ֔ישׁ כַּֽאֲשֶׁ֖ר אָמַ֣ר יוֹסֵ֑ף</span> · <i>va-yaas ha-ish ka-asher amar yosef</i> · and the man did as Joseph said (etnachta on yosef) [VERIFIED: SNAPSHOT Gen.43.17 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיָּבֵ֥א הָאִ֛ישׁ אֶת הָאֲנָשִׁ֖ים בֵּ֥יתָה יוֹסֵֽף</span> · <i>va-yave ha-ish et-ha-anashim beta-ה yosef</i> · and the man brought the men to Joseph&#x27;s house (verse-final yosef) [VERIFIED: SNAPSHOT Gen.43.17 idx5-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(have_et_ha_anashim_ha_baita, t2)</span><br><span class="gloss">= RESULT: HOLDS(have-the-anashim-the-baita, t2)</span><br>THE RECEIPT. va-yaas ha-ish KA-ASHER AMAR yosef — the as-Joseph-said clause (gen_64&#x27;s verification-grammar, 41:54) pops the house-order in one verse: the steward is the span&#x27;s cleanest executor.
+</td><td><span class="he">וַיַּעַשׂ הָאִישׁ כַּאֲשֶׁר אָמַר יוֹסֵף</span> · <i>va-yaas ha-ish ka-asher amar yosef</i><br><span class="gloss">= and-yaas man like-which amar yosef</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The one-verse receipt.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_18 · Gen.43.18 · <span class='expr'>THE_FEAR_AT_THE_DOOR</span></h3>
+<p><span class="he">וַיִּירְאוּ הָאֲנָשִׁים כִּי הוּבְאוּ בֵּית יוֹסֵף וַיֹּאמְרוּ עַל־דְּבַר הַכֶּסֶף הַשָּׁב בְּאַמְתְּחֹתֵינוּ בַּתְּחִלָּה אֲנַחְנוּ מוּבָאִים לְהִתְגֹּלֵל עָלֵינוּ וּלְהִתְנַפֵּל עָלֵינוּ וְלָקַחַת אֹתָנוּ לַעֲבָדִים וְאֶת־חֲמֹרֵינוּ</span> · <i>va-yiru ha-anashim ki huvu bet yosef va-yomru al-devar ha-kesef ha-shav be-amtchote-nu ba-techila anachnu muvaim le-hitgolel ale-nu u-le-hitnapel ale-nu ve-la-qachat et-nu la-avadim ve-et-chamore-nu</i> · And the men feared, for they were brought to Joseph&#x27;s house; and they said: On the matter of the silver returned in our bags at the first are we brought — to roll upon us, and to fall upon us, and to take us for slaves, and our donkeys.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּֽירְא֣וּ הָֽאֲנָשִׁ֗ים כִּ֣י הֽוּבְאוּ֮ בֵּ֣ית יוֹסֵף֒ וַיֹּאמְר֗וּ עַל דְּבַ֤ר הַכֶּ֨סֶף֙ הַשָּׁ֤ב בְּאַמְתְּחֹתֵ֨ינוּ֙ בַּתְּחִלָּ֔ה אֲנַ֖חְנוּ מֽוּבָאִ֑ים</span> · <i>va-yiru ha-anashim ki huvu bet yosef va-yomru al-devar ha-kesef ha-shav be-amtchote-nu ba-techila anachnu muvaim</i> · the men feared, for they were brought to Joseph&#x27;s house (etnachta on muvaim) [VERIFIED: SNAPSHOT Gen.43.18 idx14 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לְהִתְגֹּלֵ֤ל עָלֵ֨ינוּ֙ וּלְהִתְנַפֵּ֣ל עָלֵ֔ינוּ וְלָקַ֧חַת אֹתָ֛נוּ לַעֲבָדִ֖ים וְאֶת חֲמֹרֵֽינוּ</span> · <i>le-hitgolel ale-nu u-le-hitnapel ale-nu ve-la-qachat et-nu la-avadim ve-et-chamore-nu</i> · on the matter of the silver are we brought — to take us for slaves (verse-final chamore-nu) [VERIFIED: SNAPSHOT Gen.43.18 idx15-23]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yiru_ha_anashim_ki_huvu, t0)</span><br><span class="gloss">= HOLDS(and-yiru-the-anashim-when-huvu, t0)</span><br>THE FEAR [G66-08, G66-09, G66-13]. va-YIRU — written with BOTH yods (the Hilleli alone clips one; the Yerushalmi, every book, Rashi&#x27;s own note, and the Masorah&#x27;s all-Torah-full rule stand against it) [VERIFIED: manifest G66-08]. ha-kesef HA-SHAV — the clipped returned-word: copies that write ha-MUSHAV here (harmonizing 43:12) err per MS — the letter keeps the father&#x27;s participle and the sons&#x27; apart [VERIFIED: manifest G66-09]. be-amtachtenu — the bag-word with its yod against the Hilleli&#x27;s clip, vav lean with all the copies [VERIFIED: manifest G66-13]. lehitgolel... lehitnapel — the roll- and-fall pair: the slavery they fear is the slavery they sold (letter-note).
+</td><td><span class="he">וַיִּירְאוּ הָאֲנָשִׁים כִּי הוּבְאוּ</span> · <i>va-yiru ha-anashim ki huvu</i><br><span class="gloss">= and-yiru the-anashim when huvu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The fear-word&#x27;s spelling; the clipped participle.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_19 · Gen.43.19 · <span class='expr'>AT_THE_DOOR_THEY_DRAW_NEAR</span></h3>
+<p><span class="he">וַיִּגְּשׁוּ אֶל־הָאִישׁ אֲשֶׁר עַל־בֵּית יוֹסֵף וַיְדַבְּרוּ אֵלָיו פֶּתַח הַבָּיִת</span> · <i>va-yigshu el-ha-ish asher al-bet yosef va-yedabru elay-v petach ha-bayit</i> · And they drew near to the man who was over Joseph&#x27;s house, and spoke to him at the door of the house.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַֽיִּגְּשׁוּ֙ אֶל הָאִ֔ישׁ אֲשֶׁ֖ר עַל בֵּ֣ית יוֹסֵ֑ף</span> · <i>va-yigshu el-ha-ish asher al-bet yosef</i> · they drew near to the man over Joseph&#x27;s house (etnachta on yosef) [VERIFIED: SNAPSHOT Gen.43.19 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיְדַבְּר֥וּ אֵלָ֖יו פֶּ֥תַח הַבָּֽיִת</span> · <i>va-yedabru elay-v petach ha-bayit</i> · and spoke to him at the door of the house (verse-final ha-bayit) [VERIFIED: SNAPSHOT Gen.43.19 idx7-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yigshu_el_ha_ish_petach_ha_bayit, t0)</span><br><span class="gloss">= HOLDS(and-yigshu-to-the-man-door-opening-the-bayit, t0)</span><br>THE THRESHOLD. va-yigshu — the draw-near verb (Judah will wear it as a crown at 44:18): the confession is made at the DOOR, before the house can swallow them — the machine notes the placement as the speech&#x27;s own caution.
+</td><td><span class="he">וַיִּגְּשׁוּ אֶל־הָאִישׁ</span> · <i>va-yigshu el-ha-ish</i><br><span class="gloss">= and-yigshu to-the-man</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The threshold confession begins.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_20 · Gen.43.20 · <span class='expr'>WE_SURELY_CAME_DOWN</span></h3>
+<p><span class="he">וַיֹּאמְרוּ בִּי אֲדֹנִי יָרֹד יָרַדְנוּ בַּתְּחִלָּה לִשְׁבָּר־אֹכֶל</span> · <i>va-yomru bi adoni-y yarod yaradnu ba-techila li-shebar-okhel</i> · And they said: Please, my lord — we surely came down at the first to buy food.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּאמְר֖וּ בִּ֣י אֲדֹנִ֑י</span> · <i>va-yomru bi adoni-y</i> · please, my lord (etnachta on adoni-y) [VERIFIED: SNAPSHOT Gen.43.20 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">יָרֹ֥ד יָרַ֛דְנוּ בַּתְּחִלָּ֖ה לִשְׁבָּר אֹֽכֶל</span> · <i>yarod yaradnu ba-techila li-shebar-okhel</i> · we surely came down at the first to buy food (verse-final okhel) [VERIFIED: SNAPSHOT Gen.43.20 idx3-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(yarod_yaradnu_ba_techila, t0)</span><br><span class="gloss">= HOLDS(yarod-yaradnu-in-the-techila, t0)</span><br>THE DOUBLED DESCENT. YAROD YARADNU — the infinitive-doubling (as the man&#x27;s asking was doubled, 43:7): the brothers&#x27; speech mirrors the interrogation&#x27;s grammar; bi adoni — the plea-word of supplication (44:18 will open with it).
+</td><td><span class="he">יָרֹד יָרַדְנוּ בַּתְּחִלָּה</span> · <i>yarod yaradnu ba-techila</i><br><span class="gloss">= yarod yaradnu in-the-techila</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The doubled descent-verb.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_21 · Gen.43.21 · <span class='expr'>THE_SILVER_BY_ITS_WEIGHT</span></h3>
+<p><span class="he">וַיְהִי כִּי־בָאנוּ אֶל־הַמָּלוֹן וַנִּפְתְּחָה אֶת־אַמְתְּחֹתֵינוּ וְהִנֵּה כֶסֶף־אִישׁ בְּפִי אַמְתַּחְתּוֹ כַּסְפֵּנוּ בְּמִשְׁקָלוֹ וַנָּשֶׁב אֹתוֹ בְּיָדֵנוּ</span> · <i>va-yehi ki-vanu el-ha-malon va-niftcha-ה et-amtchote-nu ve-hine khesef-ish be-fi amtacht-o kaspe-nu be-mishqal-o va-nashev et-o be-yade-nu</i> · And it was, when we came to the lodging place and opened our bags — behold, each man&#x27;s silver in the mouth of his bag, our silver by its weight; and we have brought it back in our hand.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַֽיְהִ֞י כִּי בָ֣אנוּ אֶל הַמָּל֗וֹן וַֽנִּפְתְּחָה֙ אֶת אַמְתְּחֹתֵ֔ינוּ וְהִנֵּ֤ה כֶֽסֶף אִישׁ֙ בְּפִ֣י אַמְתַּחְתּ֔וֹ כַּסְפֵּ֖נוּ בְּמִשְׁקָל֑וֹ</span> · <i>va-yehi ki-vanu el-ha-malon va-niftcha-ה et-amtchote-nu ve-hine khesef-ish be-fi amtacht-o kaspe-nu be-mishqal-o</i> · at the lodging place, each man&#x27;s silver in his bag&#x27;s mouth (etnachta on be-mishqal-o) [VERIFIED: SNAPSHOT Gen.43.21 idx14 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַנָּ֥שֶׁב אֹת֖וֹ בְּיָדֵֽנוּ</span> · <i>va-nashev et-o be-yade-nu</i> · our silver by its weight — we have brought it back (verse-final be-yade-nu) [VERIFIED: SNAPSHOT Gen.43.21 idx15-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(kaspenu_be_mishkalo_va_nashev_oto, t0)</span><br><span class="gloss">= HOLDS(kaspenu-in-mishkalo-and-nashev-it, t0)</span><br>THE COMPRESSION. kaspenu be-MISHKALO — by its very weight (the honesty-detail added to the telling); and the report folds the two discoveries (one at the lodging, 42:27; nine at the emptying, 42:35) into ONE lodging-scene: the retelling variance-file&#x27;s neatest compression, filed as letter-fact.
+</td><td><span class="he">כַּסְפֵּנוּ בְּמִשְׁקָלוֹ וַנָּשֶׁב אֹתוֹ בְּיָדֵנוּ</span> · <i>kaspe-nu be-mishqal-o va-nashev et-o be-yade-nu</i><br><span class="gloss">= kaspe-nu in-mishqal-o and-nashev o in-yade-nu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The retelling compresses two discoveries into one.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_22 · Gen.43.22 · <span class='expr'>OTHER_SILVER_IN_HAND</span></h3>
+<p><span class="he">וְכֶסֶף אַחֵר הוֹרַדְנוּ בְיָדֵנוּ לִשְׁבָּר־אֹכֶל לֹא יָדַעְנוּ מִי־שָׂם כַּסְפֵּנוּ בְּאַמְתְּחֹתֵינוּ</span> · <i>ve-khesef acher horadnu ve-yade-nu li-shebar-okhel lo yadanu mi-sam kaspe-nu be-amtchote-nu</i> · And other silver we have brought down in our hand to buy food; we do not know who put our silver in our bags.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְכֶ֧סֶף אַחֵ֛ר הוֹרַ֥דְנוּ בְיָדֵ֖נוּ לִשְׁבָּר אֹ֑כֶל</span> · <i>ve-khesef acher horadnu ve-yade-nu li-shebar-okhel</i> · other silver we brought down to buy food (etnachta on okhel) [VERIFIED: SNAPSHOT Gen.43.22 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לֹ֣א יָדַ֔עְנוּ מִי שָׂ֥ם כַּסְפֵּ֖נוּ בְּאַמְתְּחֹתֵֽינוּ</span> · <i>lo yadanu mi-sam kaspe-nu be-amtchote-nu</i> · we do not know who put our silver in our bags (verse-final be-amtchote-nu) [VERIFIED: SNAPSHOT Gen.43.22 idx6-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lo_yadanu_mi_sam_kaspenu, t0)</span><br><span class="gloss">= HOLDS(not-yadanu-from-sam-kaspenu, t0)</span><br>THE NOT-KNOWING. lo yadanu MI SAM — the confession ends at the exact edge of their knowledge: the machine files the who-question as the speech&#x27;s open slot (the steward answers it with God, 43:23).
+</td><td><span class="he">לֹא יָדַעְנוּ מִי־שָׂם כַּסְפֵּנוּ בְּאַמְתְּחֹתֵינוּ</span> · <i>lo yadanu mi-sam kaspe-nu be-amtchote-nu</i><br><span class="gloss">= not yadanu from-sam kaspe-nu in-amtchote-nu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The not-knowing confessed.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_23 · Gen.43.23 · <span class='expr'>YOUR_GOD_GAVE_YOU_TREASURE</span></h3>
+<p><span class="he">וַיֹּאמֶר שָׁלוֹם לָכֶם אַל־תִּירָאוּ אֱלֹהֵיכֶם וֵאלֹהֵי אֲבִיכֶם נָתַן לָכֶם מַטְמוֹן בְּאַמְתְּחֹתֵיכֶם כַּסְפְּכֶם בָּא אֵלָי וַיּוֹצֵא אֲלֵהֶם אֶת־שִׁמְעוֹן</span> · <i>va-yomer shalom la-khem el-tirau elohe-khem ve-lohe avi-khem natan la-khem matmon be-amtchote-khem kasp-khem ba el-y va-yotze el-hem et-shimon</i> · And he said: Peace to you, fear not; your God and the God of your father gave you treasure in your bags — your silver came to me. And he brought Simeon out to them.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּאמֶר֩ שָׁל֨וֹם לָכֶ֜ם אַל תִּירָ֗אוּ אֱלֹ֨הֵיכֶ֜ם וֵֽאלֹהֵ֤י אֲבִיכֶם֙ נָתַ֨ן לָכֶ֤ם מַטְמוֹן֙ בְּאַמְתְּחֹ֣תֵיכֶ֔ם כַּסְפְּכֶ֖ם בָּ֣א אֵלָ֑י</span> · <i>va-yomer shalom la-khem el-tirau elohe-khem ve-lohe avi-khem natan la-khem matmon be-amtchote-khem kasp-khem ba el-y</i> · peace to you, fear not: your God gave you treasure (etnachta on el-y) [VERIFIED: SNAPSHOT Gen.43.23 idx14 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיּוֹצֵ֥א אֲלֵהֶ֖ם אֶת שִׁמְעֽוֹן</span> · <i>va-yotze el-hem et-shimon</i> · your silver came to me — and he brought Simeon out to them (verse-final shimon) [VERIFIED: SNAPSHOT Gen.43.23 idx15-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(ish_al_beit_yosef, LET-NOT(al_tirau))</span><br><span class="gloss">= DECLARE(man-upon-beit-yosef, LET-NOT(upon-tirau))</span><br>FEAR NOT. shalom lakhem AL TIRAU — the steward pushes the calm as a negative demand (the corpus&#x27;s fear-not class, gen_58&#x27;s midwife): no receipt follows — it stands open as such words do. Elohekhem v-elohe avikhem natan lakhem MATMON — the treasure-word (its one Torah token, asserted): Egypt&#x27;s steward hands the brothers the first theology of the plot they will ever hear — and it is the true one told slant. va-yotze alehem et SHIMON — Simeon OUT: gen_65&#x27;s bound brother walks; the father&#x27;s prayer (43:14) receives its partial in the prose, its queue-entry standing for Benjamin&#x27;s half.
+</td><td><span class="he">אַל־תִּירָאוּ</span> · <i>el-tirau</i><br><span class="gloss">= to-tirau</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The steward&#x27;s theology; Simeon released.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_24 · Gen.43.24 · <span class='expr'>WATER_AND_FODDER</span></h3>
+<p><span class="he">וַיָּבֵא הָאִישׁ אֶת־הָאֲנָשִׁים בֵּיתָה יוֹסֵף וַיִּתֶּן־מַיִם וַיִּרְחֲצוּ רַגְלֵיהֶם וַיִּתֵּן מִסְפּוֹא לַחֲמֹרֵיהֶם</span> · <i>va-yave ha-ish et-ha-anashim beta-ה yosef va-yiten-mayim va-yirchatzu ragle-hem va-yiten mispo la-chamore-hem</i> · And the man brought the men into Joseph&#x27;s house; and he gave water, and they washed their feet; and he gave fodder to their donkeys.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּבֵ֥א הָאִ֛ישׁ אֶת הָאֲנָשִׁ֖ים בֵּ֣יתָה יוֹסֵ֑ף</span> · <i>va-yave ha-ish et-ha-anashim beta-ה yosef</i> · the man brought the men into Joseph&#x27;s house (etnachta on yosef) [VERIFIED: SNAPSHOT Gen.43.24 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּתֶּן מַ֨יִם֙ וַיִּרְחֲצ֣וּ רַגְלֵיהֶ֔ם וַיִּתֵּ֥ן מִסְפּ֖וֹא לַחֲמֹֽרֵיהֶֽם</span> · <i>va-yiten-mayim va-yirchatzu ragle-hem va-yiten mispo la-chamore-hem</i> · water for their feet, fodder for their donkeys (verse-final la-chamore-hem) [VERIFIED: SNAPSHOT Gen.43.24 idx6-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yiten_mayim_va_yirchatzu_raglehem, t0)</span><br><span class="gloss">= HOLDS(and-yiten-waters-and-yirchatzu-raglehem, t0)</span><br>THE PROTOCOL. mayim... raglehem... mispo — the Abraham-triple (18:4-5&#x27;s water and feet; 24:32&#x27;s fodder) performed by Egypt&#x27;s steward: the hospitality grammar of the fathers in the house of the son.
+</td><td><span class="he">וַיִּתֶּן־מַיִם וַיִּרְחֲצוּ רַגְלֵיהֶם</span> · <i>va-yiten-mayim va-yirchatzu ragle-hem</i><br><span class="gloss">= and-yiten-waters and-yirchatzu ragle-hem</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The hospitality protocol.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_25 · Gen.43.25 · <span class='expr'>THE_GIFT_MADE_READY</span></h3>
+<p><span class="he">וַיָּכִינוּ אֶת־הַמִּנְחָה עַד־בּוֹא יוֹסֵף בַּצָּהֳרָיִם כִּי שָׁמְעוּ כִּי־שָׁם יֹאכְלוּ לָחֶם</span> · <i>va-yakhinu et-ha-mincha ad-bo yosef ba-tzahorayim ki shamu ki-sham yokhlu lachem</i> · And they made ready the gift against Joseph&#x27;s coming at noon, for they heard that there they should eat bread.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּכִ֨ינוּ֙ אֶת הַמִּנְחָ֔ה עַד בּ֥וֹא יוֹסֵ֖ף בַּֽצָּהֳרָ֑יִם</span> · <i>va-yakhinu et-ha-mincha ad-bo yosef ba-tzahorayim</i> · they made ready the gift against Joseph&#x27;s coming (etnachta on ba-tzahorayim) [VERIFIED: SNAPSHOT Gen.43.25 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּ֣י שָֽׁמְע֔וּ כִּי שָׁ֖ם יֹ֥אכְלוּ לָֽחֶם</span> · <i>ki shamu ki-sham yokhlu lachem</i> · for they heard that there they should eat bread (verse-final lachem) [VERIFIED: SNAPSHOT Gen.43.25 idx7-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yakhinu_et_ha_mincha, t0)</span><br><span class="gloss">= HOLDS(and-yakhinu-the-mincha, t0)</span><br>THE STAGING. va-yakhinu et ha-MINCHA — the gift-word (mincha) that pacified Esau (32:14-21, gen_55) is staged again for a wronged brother: the machine files the pattern-echo; ad BO yosef ba- tzahorayim — the noon appointment kept.
+</td><td><span class="he">וַיָּכִינוּ אֶת־הַמִּנְחָה</span> · <i>va-yakhinu et-ha-mincha</i><br><span class="gloss">= and-yakhinu the-mincha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The gift staged.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_26 · Gen.43.26 · <span class='expr'>THE_ELEVEN_BOW</span></h3>
+<p><span class="he">וַיָּבֹא יוֹסֵף הַבַּיְתָה וַיָּבִיאּוּ לוֹ אֶת־הַמִּנְחָה אֲשֶׁר־בְּיָדָם הַבָּיְתָה וַיִּשְׁתַּחֲווּ־לוֹ אָרְצָה</span> · <i>va-yavo yosef ha-bayta-ה va-yaviu l-o et-ha-mincha asher-be-yada-m ha-bayta-ה va-yishtachavu-l-o artza-ה</i> · And Joseph came home, and they brought him the gift which was in their hand, into the house, and they bowed down to him to the earth.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּבֹ֤א יוֹסֵף֙ הַבַּ֔יְתָה וַיָּבִ֥יאּוּ ל֛וֹ אֶת הַמִּנְחָ֥ה אֲשֶׁר בְּיָדָ֖ם הַבָּ֑יְתָה</span> · <i>va-yavo yosef ha-bayta-ה va-yaviu l-o et-ha-mincha asher-be-yada-m ha-bayta-ה</i> · Joseph came home and they brought him the gift (etnachta on ha-bayta-ה) [VERIFIED: SNAPSHOT Gen.43.26 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּשְׁתַּחֲווּ ל֖וֹ אָֽרְצָה</span> · <i>va-yishtachavu-l-o artza-ה</i> · and they bowed down to him to the earth (verse-final artza-ה) [VERIFIED: SNAPSHOT Gen.43.26 idx10-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">hishtachavu(e1); Agent(e1, ha_achim)</span><br><span class="gloss">= hishtachavu(e1); Agent(e1, the-achim)</span><br>THE ELEVEN BOW [G66-01; gen_60 ARMED]. va-yishtachavu LO ARTZA — with Benjamin present the count is ELEVEN: the second dream&#x27;s eleven stars (37:9) step into the ledger beside the sheaves; and the bringing-verb va-yaviu (43:26) carries the Masorah&#x27;s rarest mark — a DAGESH IN THE ALEF, one of its four dageshed alefs (its Ezra partner named), and SNAPSHOT writes the dot in the guttural in-stream [VERIFIED: manifest G66-01]: the letter presses hard where the gift crosses the threshold.
+</td><td><span class="he">וַיִּשְׁתַּחֲווּ־לוֹ אָרְצָה</span> · <i>va-yishtachavu-l-o artza-ה</i><br><span class="gloss">= and-yishtachavu-l-o artza-ה</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The dageshed alef; the eleven bow.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_27 · Gen.43.27 · <span class='expr'>IS_YOUR_FATHER_WELL</span></h3>
+<p><span class="he">וַיִּשְׁאַל לָהֶם לְשָׁלוֹם וַיֹּאמֶר הֲשָׁלוֹם אֲבִיכֶם הַזָּקֵן אֲשֶׁר אֲמַרְתֶּם הַעוֹדֶנּוּ חָי</span> · <i>va-yishal la-hem le-shalom va-yomer ha-shalom avi-khem ha-zaqen asher amartem ha-ode-nu chay</i> · And he asked them of their welfare, and said: Is your father well — the old man of whom you spoke? Is he yet alive?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּשְׁאַ֤ל לָהֶם֙ לְשָׁל֔וֹם וַיֹּ֗אמֶר הֲשָׁל֛וֹם אֲבִיכֶ֥ם הַזָּקֵ֖ן אֲשֶׁ֣ר אֲמַרְתֶּ֑ם</span> · <i>va-yishal la-hem le-shalom va-yomer ha-shalom avi-khem ha-zaqen asher amartem</i> · he asked them of their welfare (etnachta on amartem) [VERIFIED: SNAPSHOT Gen.43.27 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">הַעוֹדֶ֖נּוּ חָֽי</span> · <i>ha-ode-nu chay</i> · is your father well, the old man? is he yet alive? (verse-final chay) [VERIFIED: SNAPSHOT Gen.43.27 idx9-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ha_shalom_avikhem_ha_zaqen, t0)</span><br><span class="gloss">= HOLDS(the-shalom-avikhem-the-zaqen, t0)</span><br>THE INQUIRY. ha-SHALOM avikhem ha-zaqen — the governor&#x27;s first question is the father: the still-alive phrase (ha-odenu chai) that will detonate at 45:3 (ha-od avi chai) is rehearsed here in the mask&#x27;s voice.
+</td><td><span class="he">וַיֹּאמֶר הֲשָׁלוֹם אֲבִיכֶם הַזָּקֵן</span> · <i>va-yomer ha-shalom avi-khem ha-zaqen</i><br><span class="gloss">= and-yomer the-shalom avi-khem the-zaqen</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The shalom-inquiry.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_28 · Gen.43.28 · <span class='expr'>THE_CLIPPED_BOW</span></h3>
+<p><span class="he">וַיֹּאמְרוּ שָׁלוֹם לְעַבְדְּךָ לְאָבִינוּ עוֹדֶנּוּ חָי וַיִּקְּדוּ וישתחו וַיִּשְׁתַּחֲוּוּ</span> · <i>va-yomru shalom le-avd-kha le-avi-nu ode-nu chay va-yiqdu v-yshtchv va-yishtachauu</i> · And they said: Your servant our father is well; he is yet alive. And they bowed their heads, and prostrated themselves.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּאמְר֗וּ שָׁל֛וֹם לְעַבְדְּךָ֥ לְאָבִ֖ינוּ עוֹדֶ֣נּוּ חָ֑י</span> · <i>va-yomru shalom le-avd-kha le-avi-nu ode-nu chay</i> · your servant our father is well; he is yet alive (etnachta on chay) [VERIFIED: SNAPSHOT Gen.43.28 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַֽיִּקְּד֖וּ וישתחו וַיִּֽשְׁתַּחֲוּֽוּ</span> · <i>va-yiqdu v-yshtchv va-yishtachauu</i> · and they bowed their heads and prostrated themselves (verse-final va-yishtachauu) [VERIFIED: SNAPSHOT Gen.43.28 idx6-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yiqdu_va_yishtachavu, t0)</span><br><span class="gloss">= HOLDS(and-yiqdu-and-yishtachavu, t0)</span><br>THE CLIPPED BOW [G66-02]. va-yiqdu VA-YISHTACHU (written) / va- yishtachavu (read) — the span&#x27;s own ketiv/qere lands on the BOW- WORD: the writing clips the final vav, the reading restores it — and SNAPSHOT carries the pair as two tokens in-stream, the bare written form beside the pointed read form (the verse&#x27;s token-count wears the doubling) [VERIFIED: manifest G66-02]: at the second bowing, the letter itself bows short and the voice completes it.
+</td><td><span class="he">וַיִּקְּדוּ וישתחו וַיִּשְׁתַּחֲוּוּ</span> · <i>va-yiqdu v-yshtchv va-yishtachauu</i><br><span class="gloss">= and-yiqdu v-yshtchv and-yishtachauu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The ketiv/qere at the bow-word itself.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_29 · Gen.43.29 · <span class='expr'>GOD_BE_GRACIOUS_TO_YOU_MY_SON</span></h3>
+<p><span class="he">וַיִּשָּׂא עֵינָיו וַיַּרְא אֶת־בִּנְיָמִין אָחִיו בֶּן־אִמּוֹ וַיֹּאמֶר הֲזֶה אֲחִיכֶם הַקָּטֹן אֲשֶׁר אֲמַרְתֶּם אֵלָי וַיֹּאמַר אֱלֹהִים יָחְנְךָ בְּנִי</span> · <i>va-yisa enay-v va-yar et-binyamin achi-v ben-im-o va-yomer ha-ze achi-khem ha-qaton asher amartem el-y va-yomar Elohim yachn-kha beni-y</i> · And he lifted his eyes and saw Benjamin his brother, his mother&#x27;s son, and said: Is this your youngest brother of whom you spoke to me? And he said: God be gracious to you, my son.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּשָּׂ֣א עֵינָ֗יו וַיַּ֞רְא אֶת בִּנְיָמִ֣ין אָחִיו֮ בֶּן אִמּוֹ֒ וַיֹּ֗אמֶר הֲזֶה֙ אֲחִיכֶ֣ם הַקָּטֹ֔ן אֲשֶׁ֥ר אֲמַרְתֶּ֖ם אֵלָ֑י</span> · <i>va-yisa enay-v va-yar et-binyamin achi-v ben-im-o va-yomer ha-ze achi-khem ha-qaton asher amartem el-y</i> · he saw Benjamin his brother, his mother&#x27;s son (etnachta on el-y) [VERIFIED: SNAPSHOT Gen.43.29 idx14 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּאמַ֕ר אֱלֹהִ֥ים יָחְנְךָ֖ בְּנִֽי</span> · <i>va-yomar Elohim yachn-kha beni-y</i> · is this your youngest brother? God be gracious to you, my son (verse-final beni-y) [VERIFIED: SNAPSHOT Gen.43.29 idx15-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>BLESS</td><td><span class="expr">BLESS(yosef, binyamin)</span><br>THE BLESSING [G66-10]. Elohim YACHNEKHA beni — the grace-verb stands ONCE so in the Torah [VERIFIED: manifest G66-10]; the priestly benediction will conjugate it with a vav (ויחנך, &#x27;and be gracious to you&#x27;, Num 6:25 — collision framed, named), and the Kitzur pairs it with the grace-cry of Isaiah (named): the governor blesses the only full brother with the priests&#x27; verb before the priests exist. ben IMO — &#x27;his mother&#x27;s son&#x27;: Rachel&#x27;s clause; yachnekha pointed with the clipped qamatz and resting chet per Chizkuni (asserted [G66-12]).
+</td><td><span class="he">וַיֹּאמַר אֱלֹהִים יָחְנְךָ בְּנִי</span> · <i>va-yomar Elohim yachn-kha beni-y</i><br><span class="gloss">= and-yomar God yachn-kha beni-y</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The blessing on the mother&#x27;s son.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_30 · Gen.43.30 · <span class='expr'>THE_CHAMBER_WEEPING</span></h3>
+<p><span class="he">וַיְמַהֵר יוֹסֵף כִּי־נִכְמְרוּ רַחֲמָיו אֶל־אָחִיו וַיְבַקֵּשׁ לִבְכּוֹת וַיָּבֹא הַחַדְרָה וַיֵּבְךְּ שָׁמָּה</span> · <i>va-yemaher yosef ki-nikhmru rachamay-v el-achi-v va-yevaqesh li-vekot va-yavo ha-chadra-ה va-yevk shama-ה</i> · And Joseph hurried — for his compassion grew hot toward his brother, and he sought to weep; and he came into the chamber and wept there.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְמַהֵ֣ר יוֹסֵ֗ף כִּֽי נִכְמְר֤וּ רַחֲמָיו֙ אֶל אָחִ֔יו וַיְבַקֵּ֖שׁ לִבְכּ֑וֹת</span> · <i>va-yemaher yosef ki-nikhmru rachamay-v el-achi-v va-yevaqesh li-vekot</i> · his compassion grew hot toward his brother (etnachta on li-vekot) [VERIFIED: SNAPSHOT Gen.43.30 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיָּבֹ֥א הַחַ֖דְרָה וַיֵּ֥בְךְּ שָֽׁמָּה</span> · <i>va-yavo ha-chadra-ה va-yevk shama-ה</i> · he came into the chamber and wept there (verse-final shama-ה) [VERIFIED: SNAPSHOT Gen.43.30 idx9-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">bakha(e2); Agent(e2, yosef)</span><br>THE SECOND WEEPING. ki NIKHMERU rachamav — the compassion-verb that burns (its one narrative kindling); va-yavo ha-CHADRA va-yevk SHAMA — the weep-series&#x27; second station (42:24 turned away; now a chamber contains it): the mask requires architecture.
+</td><td><span class="he">וַיָּבֹא הַחַדְרָה וַיֵּבְךְּ שָׁמָּה</span> · <i>va-yavo ha-chadra-ה va-yevk shama-ה</i><br><span class="gloss">= and-yavo the-chadra-ה and-yevk shama-ה</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Weeping station two.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_31 · Gen.43.31 · <span class='expr'>SET_BREAD</span></h3>
+<p><span class="he">וַיִּרְחַץ פָּנָיו וַיֵּצֵא וַיִּתְאַפַּק וַיֹּאמֶר שִׂימוּ לָחֶם</span> · <i>va-yirchatz panay-v va-yetze va-yitapaq va-yomer simu lachem</i> · And he washed his face and went out, and restrained himself, and said: Set bread.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּרְחַ֥ץ פָּנָ֖יו וַיֵּצֵ֑א</span> · <i>va-yirchatz panay-v va-yetze</i> · he washed his face and went out and restrained himself (etnachta on va-yetze) [VERIFIED: SNAPSHOT Gen.43.31 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּ֨תְאַפַּ֔ק וַיֹּ֖אמֶר שִׂ֥ימוּ לָֽחֶם</span> · <i>va-yitapaq va-yomer simu lachem</i> · and said: set bread (verse-final lachem) [VERIFIED: SNAPSHOT Gen.43.31 idx3-6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yosef, LET(simu_lachem))</span><br><span class="gloss">= DECLARE(yosef, LET(simu-lachem))</span><br>THE RESTRAINT [G66-10]. va-YITAPAQ — the restrain-verb stands ONCE in the Torah [VERIFIED: manifest G66-10, asserted]; its Scripture- pair is Haman restraining himself (Esther 5:10, named — the Kitzur: both restraints open in sorrow and end in joy, each for its own house). simu LACHEM — the governor&#x27;s shortest demand: two words, pushed.
+</td><td><span class="he">שִׂימוּ לָחֶם</span> · <i>simu lachem</i><br><span class="gloss">= simu lachem</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The restraint-word; the two-word order.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_32 · Gen.43.32 · <span class='expr'>BREAD_SET_APART</span></h3>
+<p><span class="he">וַיָּשִׂימוּ לוֹ לְבַדּוֹ וְלָהֶם לְבַדָּם וְלַמִּצְרִים הָאֹכְלִים אִתּוֹ לְבַדָּם כִּי לֹא יוּכְלוּן הַמִּצְרִים לֶאֱכֹל אֶת־הָעִבְרִים לֶחֶם כִּי־תוֹעֵבָה הִוא לְמִצְרָיִם</span> · <i>va-yasimu l-o le-vad-o ve-la-hem le-vada-m ve-la-mitzrim ha-okhlim et-o le-vada-m ki lo yukhlu-n ha-mitzrim le-ekhol et-ha-ivrim lechem ki-toeva hiv le-mitzrayim</i> · And they set for him alone, and for them alone, and for the Egyptians eating with him alone — for the Egyptians may not eat bread with the Hebrews, for it is an abomination to Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּשִׂ֥ימוּ ל֛וֹ לְבַדּ֖וֹ וְלָהֶ֣ם לְבַדָּ֑ם</span> · <i>va-yasimu l-o le-vad-o ve-la-hem le-vada-m</i> · for him alone, for them alone, for the Egyptians alone (etnachta on le-vada-m) [VERIFIED: SNAPSHOT Gen.43.32 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְלַמִּצְרִ֞ים הָאֹכְלִ֤ים אִתּוֹ֙ לְבַדָּ֔ם כִּי֩ לֹ֨א יוּכְל֜וּן הַמִּצְרִ֗ים לֶאֱכֹ֤ל אֶת הָֽעִבְרִים֙ לֶ֔חֶם כִּי תוֹעֵבָ֥ה הִ֖וא לְמִצְרָֽיִם</span> · <i>ve-la-mitzrim ha-okhlim et-o le-vada-m ki lo yukhlu-n ha-mitzrim le-ekhol et-ha-ivrim lechem ki-toeva hiv le-mitzrayim</i> · for Egyptians may not eat with Hebrews — an abomination to Egypt (verse-final le-mitzrayim) [VERIFIED: SNAPSHOT Gen.43.32 idx5-20]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(simu_lachem, t3)</span><br><span class="gloss">= RESULT: HOLDS(simu-lachem, t3)</span><br>THE PARTITIONED TABLE. va-YASIMU lo levado — the set-verb answers in the next breath (the span&#x27;s third one-verse discharge); levado... levadam... levadam — three alones at one meal: the abomination- clause (toeva) files Egypt&#x27;s own purity-law as narrative fact — the Hebrews eat apart in the house of the Hebrew.
+</td><td><span class="he">וַיָּשִׂימוּ לוֹ לְבַדּוֹ</span> · <i>va-yasimu l-o le-vad-o</i><br><span class="gloss">= and-yasimu l-o to-vad-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The order discharges into a partitioned table.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_33 · Gen.43.33 · <span class='expr'>SEATED_BY_BIRTH_ORDER</span></h3>
+<p><span class="he">וַיֵּשְׁבוּ לְפָנָיו הַבְּכֹר כִּבְכֹרָתוֹ וְהַצָּעִיר כִּצְעִרָתוֹ וַיִּתְמְהוּ הָאֲנָשִׁים אִישׁ אֶל־רֵעֵהוּ</span> · <i>va-yeshvu le-fanay-v ha-bekhor ki-vekhorat-o ve-ha-tzair ki-tzeirat-o va-yitmhu ha-anashim ish el-ree-hu</i> · And they sat before him, the firstborn according to his birthright and the youngest according to his youth; and the men wondered, each to his fellow.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֵּשְׁב֣וּ לְפָנָ֔יו הַבְּכֹר֙ כִּבְכֹ֣רָת֔וֹ וְהַצָּעִ֖יר כִּצְעִרָת֑וֹ</span> · <i>va-yeshvu le-fanay-v ha-bekhor ki-vekhorat-o ve-ha-tzair ki-tzeirat-o</i> · the firstborn by his birthright, the youngest by his youth (etnachta on ki-tzeirat-o) [VERIFIED: SNAPSHOT Gen.43.33 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּתְמְה֥וּ הָאֲנָשִׁ֖ים אִ֥ישׁ אֶל רֵעֵֽהוּ</span> · <i>va-yitmhu ha-anashim ish el-ree-hu</i> · and the men wondered, each to his fellow (verse-final ree-hu) [VERIFIED: SNAPSHOT Gen.43.33 idx6-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ha_bekhor_ki_vkhorato_ve_ha_tzair_ki_tzeirato, t0)</span><br><span class="gloss">= HOLDS(the-bekhor-when-vkhorato-and-the-tzair-when-tzeirato, t0)</span><br>THE SEATING [G66-10]. ha-BEKHOR ki-vkhorato ve-ha-TZAIR ki-tzeirato — twelve men seated by a stranger in exact birth order: va-yitmehu — they wondered (the cup-divination prop the readings hang here, named); ve-ha-tzair stands ONCE so in the Torah (asserted; Isaiah&#x27;s mighty-younger named): the younger the verse seats low is the one the table will honor five-fold.
+</td><td><span class="he">הַבְּכֹר כִּבְכֹרָתוֹ וְהַצָּעִיר כִּצְעִרָתוֹ</span> · <i>ha-bekhor ki-vekhorat-o ve-ha-tzair ki-tzeirat-o</i><br><span class="gloss">= the-bekhor when-vekhorat-o and-the-tzair when-tzeirat-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The impossible seating.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_43_34 · Gen.43.34 · <span class='expr'>FIVE_HANDS</span></h3>
+<p><span class="he">וַיִּשָּׂא מַשְׂאֹת מֵאֵת פָּנָיו אֲלֵהֶם וַתֵּרֶב מַשְׂאַת בִּנְיָמִן מִמַּשְׂאֹת כֻּלָּם חָמֵשׁ יָדוֹת וַיִּשְׁתּוּ וַיִּשְׁכְּרוּ עִמּוֹ</span> · <i>va-yisa masot me-et panay-v el-hem va-terev masat binyamin mi-masot kula-m chamesh yadot va-yishtu va-yishkru im-o</i> · And he lifted portions from before his face to them; and Benjamin&#x27;s portion was greater than the portions of them all — five hands. And they drank, and drank freely with him.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּשָּׂ֨א מַשְׂאֹ֜ת מֵאֵ֣ת פָּנָיו֮ אֲלֵהֶם֒ וַתֵּ֜רֶב מַשְׂאַ֧ת בִּנְיָמִ֛ן מִמַּשְׂאֹ֥ת כֻּלָּ֖ם חָמֵ֣שׁ יָד֑וֹת</span> · <i>va-yisa masot me-et panay-v el-hem va-terev masat binyamin mi-masot kula-m chamesh yadot</i> · he lifted portions from before his face to them (etnachta on yadot) [VERIFIED: SNAPSHOT Gen.43.34 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּשְׁתּ֥וּ וַֽיִּשְׁכְּר֖וּ עִמּֽוֹ</span> · <i>va-yishtu va-yishkru im-o</i> · Benjamin&#x27;s portion five hands greater — and they drank with him (verse-final im-o) [VERIFIED: SNAPSHOT Gen.43.34 idx12-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_terev_masat_binyamin_chamesh_yadot, t0)</span><br><span class="gloss">= HOLDS(and-terev-masat-binyamin-chamesh-yadot, t0)</span><br>FIVE HANDS [G66-11]. va-TEREV masat BINYAMIN mi-masot kulam CHAMESH yadot — the mother&#x27;s son lifted five-fold (the readings count the five garments of 45:22 forward, named); MI-MASOT written LEAN with the Hilleli, the old print, and every precise copy against the erring printer — the Masorah&#x27;s four-token portion-file: the two of THIS verse lean, its two other stations full [VERIFIED: manifest G66-11 via the once-form]; the vain-burdens pair (Lam 2:14) named by the Kitzur. va-yishtu VA-YISHKERU imo — and they drank FREELY with him: the first ease since the pit.
+</td><td><span class="he">וַתֵּרֶב מַשְׂאַת בִּנְיָמִן מִמַּשְׂאֹת כֻּלָּם</span> · <i>va-terev masat binyamin mi-masot kula-m</i><br><span class="gloss">= and-terev masat binyamin from-masot kula-m</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The five-fold portion; the lean carrying-word.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Gn_43_1 — the famine heavy</td><td>And the famine was heavy in the land.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וְהָרָעָ֖ב כָּבֵ֥ד בָּאָֽרֶץ</span> · <i>ve-ha-raav kaved ba-aretz</i><br><span class="gloss">= and-the-raav kaved earth</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Gn_43_2 — return and buy a little</td><td>And it was, when they had finished eating the grain which they brought from Egypt, that their father said to them: Return, buy us a little food.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְהִ֗י כַּאֲשֶׁ֤ר כִּלּוּ֙ לֶאֱכֹ֣ל</span> · <i>va-yehi ka-asher kilu le-ekhol</i><br><span class="gloss">= and-yehi like-which kilu to-ekhol</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Gn_43_3 — the witness-warning</td><td>And Judah said to him, saying: The man solemnly warned us, saying: You shall not see my face without your brother with you.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֧אמֶר אֵלָ֛יו יְהוּדָ֖ה לֵאמֹ֑ר</span> · <i>va-yomer elay-v yehuda le-mor</i><br><span class="gloss">= and-yomer elay-v yehuda to-mor</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Gn_43_4 — if you send</td><td>If you are sending our brother with us, we will go down and buy you food.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; no test, no name.</span></td><td><span class="he">אִם יֶשְׁךָ֛ מְשַׁלֵּ֥חַ אֶת</span> · <i>im-yesh-kha meshalecha et-</i><br><span class="gloss">= if-yesh-kha meshalecha et-</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Gn_43_5 — if you send not</td><td>And if you are not sending — we will not go down; for the man said to us: You shall not see my face without your brother with you.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְאִם אֵינְךָ֥ מְשַׁלֵּ֖חַ לֹ֣א</span> · <i>ve-im-en-kha meshalecha lo</i><br><span class="gloss">= and-if-en-kha meshalecha not</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Gn_43_6 — why did you tell</td><td>And Israel said: Why did you deal ill with me, to tell the man you had yet a brother?</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֨אמֶר֙ יִשְׂרָאֵ֔ל לָמָ֥ה הֲרֵעֹתֶ֖ם</span> · <i>va-yomer yisrael la-ma hareotem</i><br><span class="gloss">= and-yomer yisrael to-ma hareotem</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Gn_43_7 — the man asked and asked</td><td>And they said: The man asked and asked about us and about our kindred, saying: Is your father yet alive? Have you a brother? And we told him according to these words. Could we know, knowing that he would say: Bring your brother down?</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּאמְר֡וּ שָׁא֣וֹל שָֽׁאַל הָ֠אִישׁ</span> · <i>va-yomru shaol shaal-ha-ish</i><br><span class="gloss">= and-yomru shaol shaal-the-man</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Gn_43_8 — send the lad with me</td><td>And Judah said to Israel his father: Send the lad with me, and we will arise and go, and we will live and not die — we, and you, and our little ones.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(shilcha_ha_naar_iti) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(shilcha-the-naar-iti) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֨אמֶר יְהוּדָ֜ה אֶל יִשְׂרָאֵ֣ל</span> · <i>va-yomer yehuda el-yisrael</i><br><span class="gloss">= and-yomer yehuda to-yisrael</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Gn_43_9 — I am the surety</td><td>I will be surety for him; from my hand you shall require him: if I do not bring him to you and set him before you, I shall have sinned against you all the days.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(shilcha_ha_naar_iti) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(shilcha-the-naar-iti) pushed and OPEN; no test, no name.</span></td><td><span class="he">אָֽנֹכִי֙ אֶֽעֶרְבֶ֔נּוּ מִיָּדִ֖י תְּבַקְשֶׁ֑נּוּ</span> · <i>anokhi eerve-nu mi-yadi-y tevaqshe-nu</i><br><span class="gloss">= anokhi eerve-nu from-yadi-y tevaqshe-nu</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Gn_43_10 — we could have returned twice</td><td>For had we not lingered, surely by now we could have returned these two times.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(shilcha_ha_naar_iti) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(shilcha-the-naar-iti) pushed and OPEN; no test, no name.</span></td><td><span class="he">כִּ֖י לוּלֵ֣א הִתְמַהְמָ֑הְנוּ כִּֽי</span> · <i>ki lule hitmahmahnu ki-</i><br><span class="gloss">= when lule hitmahmahnu when</span></td></tr>
+<tr><td><b>S11</b></td><td>after STEP_Gn_43_11 — the father&#x27;s caravan plan</td><td>And Israel their father said to them: If so, then, this do: take of the land&#x27;s best fruits in your vessels, and carry down to the man a gift — a little balm and a little honey, gum and ladanum, pistachios and almonds.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(shilcha_ha_naar_iti) pushed and OPEN; LET(zot_asu_qechu_ve_horidu) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(shilcha-the-naar-iti) pushed and OPEN; LET(this-asu-qechu-and-horidu) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֨אמֶר אֲלֵהֶ֜ם יִשְׂרָאֵ֣ל אֲבִיהֶ֗ם</span> · <i>va-yomer el-hem yisrael avi-hem</i><br><span class="gloss">= and-yomer to-hem yisrael avi-hem</span></td></tr>
+<tr><td><b>S12</b></td><td>after STEP_Gn_43_12 — double silver and the returned</td><td>And double silver take in your hand; and the silver that was returned in the mouth of your bags return in your hand — perhaps it was an error.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(shilcha_ha_naar_iti) pushed and OPEN; LET(zot_asu_qechu_ve_horidu) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(shilcha-the-naar-iti) pushed and OPEN; LET(this-asu-qechu-and-horidu) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְכֶ֥סֶף מִשְׁנֶ֖ה קְח֣וּ בְיֶדְכֶ֑ם</span> · <i>ve-khesef mishne qechu ve-yed-khem</i><br><span class="gloss">= and-khesef mishne qechu and-yed-khem</span></td></tr>
+<tr><td><b>S13</b></td><td>after STEP_Gn_43_13 — take your brother, arise, return</td><td>And your brother take; and arise, return to the man.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(shilcha_ha_naar_iti) pushed and OPEN; LET(zot_asu_qechu_ve_horidu) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(shilcha-the-naar-iti) pushed and OPEN; LET(this-asu-qechu-and-horidu) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְאֶת אֲחִיכֶ֖ם קָ֑חוּ וְק֖וּמוּ</span> · <i>ve-et-achi-khem qachu ve-qumu</i><br><span class="gloss">= and-my-brother-khem qachu and-qumu</span></td></tr>
+<tr><td><b>S14</b></td><td>after STEP_Gn_43_14 — El Shaddai give you mercy</td><td>And El Shaddai give you mercy before the man, that he may release to you your other brother, and Benjamin. And I — as I am bereaved, I am bereaved.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(shilcha_ha_naar_iti) pushed and OPEN; LET(zot_asu_qechu_ve_horidu) pushed and OPEN; LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(shilcha-the-naar-iti) pushed and OPEN; LET(this-asu-qechu-and-horidu) pushed and OPEN; LET(to-shaday-yiten-lakhem-rachamim) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְאֵ֣ל שַׁדַּ֗י יִתֵּ֨ן לָכֶ֤ם</span> · <i>ve-el shaday yiten la-khem</i><br><span class="gloss">= and-to shaday yiten to-khem</span></td></tr>
+<tr><td><b>S15</b></td><td>after STEP_Gn_43_15 — the caravan descends</td><td>And the men took this gift, and double silver they took in their hand, and Benjamin; and they arose and went down to Egypt, and stood before Joseph.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(to-shaday-yiten-lakhem-rachamim) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּקְח֤וּ הָֽאֲנָשִׁים֙ אֶת הַמִּנְחָ֣ה</span> · <i>va-yiqchu ha-anashim et-ha-mincha</i><br><span class="gloss">= and-yiqchu the-anashim the-mincha</span></td></tr>
+<tr><td><b>S16</b></td><td>after STEP_Gn_43_16 — slaughter and prepare</td><td>And Joseph saw Benjamin with them, and said to the one over his house: Bring the men home, and slaughter a slaughtering and prepare — for with me the men shall eat at noon.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN; LET(have_et_ha_anashim_ha_baita) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(to-shaday-yiten-lakhem-rachamim) pushed and OPEN; LET(have-the-anashim-the-baita) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיַּ֨רְא יוֹסֵ֣ף אִתָּם֮ אֶת</span> · <i>va-yar yosef et-m et-</i><br><span class="gloss">= and-yar yosef m et-</span></td></tr>
+<tr><td><b>S17</b></td><td>after STEP_Gn_43_17 — as Joseph said</td><td>And the man did as Joseph said; and the man brought the men to Joseph&#x27;s house.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(to-shaday-yiten-lakhem-rachamim) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיַּ֣עַשׂ הָאִ֔ישׁ כַּֽאֲשֶׁ֖ר אָמַ֣ר</span> · <i>va-yaas ha-ish ka-asher amar</i><br><span class="gloss">= and-yaas man like-which amar</span></td></tr>
+<tr><td><b>S18</b></td><td>after STEP_Gn_43_18 — the fear at the door</td><td>And the men feared, for they were brought to Joseph&#x27;s house; and they said: On the matter of the silver returned in our bags at the first are we brought — to roll upon us, and to fall upon us, and to take us for slaves, and our donkeys.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(to-shaday-yiten-lakhem-rachamim) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּֽירְא֣וּ הָֽאֲנָשִׁ֗ים כִּ֣י הֽוּבְאוּ֮</span> · <i>va-yiru ha-anashim ki huvu</i><br><span class="gloss">= and-yiru the-anashim when huvu</span></td></tr>
+<tr><td><b>S19</b></td><td>after STEP_Gn_43_19 — at the door they draw near</td><td>And they drew near to the man who was over Joseph&#x27;s house, and spoke to him at the door of the house.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(to-shaday-yiten-lakhem-rachamim) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַֽיִּגְּשׁוּ֙ אֶל הָאִ֔ישׁ אֲשֶׁ֖ר</span> · <i>va-yigshu el-ha-ish asher</i><br><span class="gloss">= and-yigshu to-the-man which</span></td></tr>
+<tr><td><b>S20</b></td><td>after STEP_Gn_43_20 — we surely came down</td><td>And they said: Please, my lord — we surely came down at the first to buy food.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(to-shaday-yiten-lakhem-rachamim) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּאמְר֖וּ בִּ֣י אֲדֹנִ֑י יָרֹ֥ד</span> · <i>va-yomru bi adoni-y yarod</i><br><span class="gloss">= and-yomru bi adoni-y yarod</span></td></tr>
+<tr><td><b>S21</b></td><td>after STEP_Gn_43_21 — the silver by its weight</td><td>And it was, when we came to the lodging place and opened our bags — behold, each man&#x27;s silver in the mouth of his bag, our silver by its weight; and we have brought it back in our hand.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(to-shaday-yiten-lakhem-rachamim) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַֽיְהִ֞י כִּי בָ֣אנוּ אֶל</span> · <i>va-yehi ki-vanu el-</i><br><span class="gloss">= and-yehi when-vanu to</span></td></tr>
+<tr><td><b>S22</b></td><td>after STEP_Gn_43_22 — other silver in hand</td><td>And other silver we have brought down in our hand to buy food; we do not know who put our silver in our bags.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(to-shaday-yiten-lakhem-rachamim) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְכֶ֧סֶף אַחֵ֛ר הוֹרַ֥דְנוּ בְיָדֵ֖נוּ</span> · <i>ve-khesef acher horadnu ve-yade-nu</i><br><span class="gloss">= and-khesef acher horadnu and-yade-nu</span></td></tr>
+<tr><td><b>S23</b></td><td>after STEP_Gn_43_23 — your God gave you treasure</td><td>And he said: Peace to you, fear not; your God and the God of your father gave you treasure in your bags — your silver came to me. And he brought Simeon out to them.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN; LET-NOT(al_tirau) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(to-shaday-yiten-lakhem-rachamim) pushed and OPEN; LET-NOT(upon-tirau) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּאמֶר֩ שָׁל֨וֹם לָכֶ֜ם אַל</span> · <i>va-yomer shalom la-khem el-</i><br><span class="gloss">= and-yomer shalom to-khem to</span></td></tr>
+<tr><td><b>S24</b></td><td>after STEP_Gn_43_24 — water and fodder</td><td>And the man brought the men into Joseph&#x27;s house; and he gave water, and they washed their feet; and he gave fodder to their donkeys.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN; LET-NOT(al_tirau) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(to-shaday-yiten-lakhem-rachamim) pushed and OPEN; LET-NOT(upon-tirau) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיָּבֵ֥א הָאִ֛ישׁ אֶת הָאֲנָשִׁ֖ים</span> · <i>va-yave ha-ish et-ha-anashim</i><br><span class="gloss">= and-yave man the-anashim</span></td></tr>
+<tr><td><b>S25</b></td><td>after STEP_Gn_43_25 — the gift made ready</td><td>And they made ready the gift against Joseph&#x27;s coming at noon, for they heard that there they should eat bread.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN; LET-NOT(al_tirau) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(to-shaday-yiten-lakhem-rachamim) pushed and OPEN; LET-NOT(upon-tirau) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיָּכִ֨ינוּ֙ אֶת הַמִּנְחָ֔ה עַד</span> · <i>va-yakhinu et-ha-mincha ad-</i><br><span class="gloss">= and-yakhinu the-mincha until</span></td></tr>
+<tr><td><b>S26</b></td><td>after STEP_Gn_43_26 — the eleven bow</td><td>And Joseph came home, and they brought him the gift which was in their hand, into the house, and they bowed down to him to the earth.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN; LET-NOT(al_tirau) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(to-shaday-yiten-lakhem-rachamim) pushed and OPEN; LET-NOT(upon-tirau) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיָּבֹ֤א יוֹסֵף֙ הַבַּ֔יְתָה וַיָּבִ֥יאּוּ</span> · <i>va-yavo yosef ha-bayta-ה va-yaviu</i><br><span class="gloss">= and-yavo yosef the-bayta-ה and-yaviu</span></td></tr>
+<tr><td><b>S27</b></td><td>after STEP_Gn_43_27 — is your father well</td><td>And he asked them of their welfare, and said: Is your father well — the old man of whom you spoke? Is he yet alive?</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN; LET-NOT(al_tirau) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(to-shaday-yiten-lakhem-rachamim) pushed and OPEN; LET-NOT(upon-tirau) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּשְׁאַ֤ל לָהֶם֙ לְשָׁל֔וֹם וַיֹּ֗אמֶר</span> · <i>va-yishal la-hem le-shalom va-yomer</i><br><span class="gloss">= and-yishal to-hem to-shalom and-yomer</span></td></tr>
+<tr><td><b>S28</b></td><td>after STEP_Gn_43_28 — the clipped bow</td><td>And they said: Your servant our father is well; he is yet alive. And they bowed their heads, and prostrated themselves.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN; LET-NOT(al_tirau) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(to-shaday-yiten-lakhem-rachamim) pushed and OPEN; LET-NOT(upon-tirau) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּאמְר֗וּ שָׁל֛וֹם לְעַבְדְּךָ֥ לְאָבִ֖ינוּ</span> · <i>va-yomru shalom le-avd-kha le-avi-nu</i><br><span class="gloss">= and-yomru shalom to-avd-kha to-avi-nu</span></td></tr>
+<tr><td><b>S29</b></td><td>after STEP_Gn_43_29 — God be gracious to you, my son</td><td>And he lifted his eyes and saw Benjamin his brother, his mother&#x27;s son, and said: Is this your youngest brother of whom you spoke to me? And he said: God be gracious to you, my son.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN; LET-NOT(al_tirau) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(to-shaday-yiten-lakhem-rachamim) pushed and OPEN; LET-NOT(upon-tirau) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּשָּׂ֣א עֵינָ֗יו וַיַּ֞רְא אֶת</span> · <i>va-yisa enay-v va-yar et-</i><br><span class="gloss">= and-yisa enay-v and-yar et-</span></td></tr>
+<tr><td><b>S30</b></td><td>after STEP_Gn_43_30 — the chamber weeping</td><td>And Joseph hurried — for his compassion grew hot toward his brother, and he sought to weep; and he came into the chamber and wept there.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN; LET-NOT(al_tirau) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(to-shaday-yiten-lakhem-rachamim) pushed and OPEN; LET-NOT(upon-tirau) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְמַהֵ֣ר יוֹסֵ֗ף כִּֽי נִכְמְר֤וּ</span> · <i>va-yemaher yosef ki-nikhmru</i><br><span class="gloss">= and-yemaher yosef when-nikhmru</span></td></tr>
+<tr><td><b>S31</b></td><td>after STEP_Gn_43_31 — set bread</td><td>And he washed his face and went out, and restrained himself, and said: Set bread.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN; LET-NOT(al_tirau) pushed and OPEN; LET(simu_lachem) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(to-shaday-yiten-lakhem-rachamim) pushed and OPEN; LET-NOT(upon-tirau) pushed and OPEN; LET(simu-lachem) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּרְחַ֥ץ פָּנָ֖יו וַיֵּצֵ֑א וַיִּ֨תְאַפַּ֔ק</span> · <i>va-yirchatz panay-v va-yetze va-yitapaq</i><br><span class="gloss">= and-yirchatz panay-v and-yetze and-yitapaq</span></td></tr>
+<tr><td><b>S32</b></td><td>after STEP_Gn_43_32 — bread set apart</td><td>And they set for him alone, and for them alone, and for the Egyptians eating with him alone — for the Egyptians may not eat bread with the Hebrews, for it is an abomination to Egypt.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN; LET-NOT(al_tirau) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(to-shaday-yiten-lakhem-rachamim) pushed and OPEN; LET-NOT(upon-tirau) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיָּשִׂ֥ימוּ ל֛וֹ לְבַדּ֖וֹ וְלָהֶ֣ם</span> · <i>va-yasimu l-o le-vad-o ve-la-hem</i><br><span class="gloss">= and-yasimu l-o to-vad-o and-to-hem</span></td></tr>
+<tr><td><b>S33</b></td><td>after STEP_Gn_43_33 — seated by birth order</td><td>And they sat before him, the firstborn according to his birthright and the youngest according to his youth; and the men wondered, each to his fellow.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN; LET-NOT(al_tirau) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(to-shaday-yiten-lakhem-rachamim) pushed and OPEN; LET-NOT(upon-tirau) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֵּשְׁב֣וּ לְפָנָ֔יו הַבְּכֹר֙ כִּבְכֹ֣רָת֔וֹ</span> · <i>va-yeshvu le-fanay-v ha-bekhor ki-vekhorat-o</i><br><span class="gloss">= and-yeshvu to-fanay-v the-bekhor when-vekhorat-o</span></td></tr>
+<tr><td><b>S34</b></td><td>after STEP_Gn_43_34 — five hands</td><td>And he lifted portions from before his face to them; and Benjamin&#x27;s portion was greater than the portions of them all — five hands. And they drank, and drank freely with him.</td><td>LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN; LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN; LET-NOT(al_tirau) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shuvu-shivru-lanu-meat-okhel) pushed and OPEN; LET(to-shaday-yiten-lakhem-rachamim) pushed and OPEN; LET-NOT(upon-tirau) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּשָּׂ֨א מַשְׂאֹ֜ת מֵאֵ֣ת פָּנָיו֮</span> · <i>va-yisa masot me-et panay-v</i><br><span class="gloss">= and-yisa masot from panay-v</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_66_second_descent — The second descent: Benjamin before Joseph (43:1-34) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — after STEP_Gn_43_1 — the famine heavy
+    וְהָרָעָ֖ב כָּבֵ֥ד בָּאָֽרֶץ (ve-ha-raav kaved ba-aretz)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Gn_43_2 — return and buy a little
+    וַיְהִ֗י כַּאֲשֶׁ֤ר כִּלּוּ֙ לֶאֱכֹ֣ל (va-yehi ka-asher kilu le-ekhol)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Gn_43_3 — the witness-warning
+    וַיֹּ֧אמֶר אֵלָ֛יו יְהוּדָ֖ה לֵאמֹ֑ר (va-yomer elay-v yehuda le-mor)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Gn_43_4 — if you send
+    אִם יֶשְׁךָ֛ מְשַׁלֵּ֥חַ אֶת (im-yesh-kha meshalecha et-)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Gn_43_5 — if you send not
+    וְאִם אֵינְךָ֥ מְשַׁלֵּ֖חַ לֹ֣א (ve-im-en-kha meshalecha lo)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Gn_43_6 — why did you tell
+    וַיֹּ֨אמֶר֙ יִשְׂרָאֵ֔ל לָמָ֥ה הֲרֵעֹתֶ֖ם (va-yomer yisrael la-ma hareotem)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — after STEP_Gn_43_7 — the man asked and asked
+    וַיֹּאמְר֡וּ שָׁא֣וֹל שָֽׁאַל הָ֠אִישׁ (va-yomru shaol shaal-ha-ish)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S8 — after STEP_Gn_43_8 — send the lad with me
+    וַיֹּ֨אמֶר יְהוּדָ֜ה אֶל יִשְׂרָאֵ֣ל (va-yomer yehuda el-yisrael)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;shilcha_ha_naar_iti&#x27;])
+    PASS  LET(shilcha_ha_naar_iti) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;shilcha_ha_naar_iti&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S9 — after STEP_Gn_43_9 — I am the surety
+    אָֽנֹכִי֙ אֶֽעֶרְבֶ֔נּוּ מִיָּדִ֖י תְּבַקְשֶׁ֑נּוּ (anokhi eerve-nu mi-yadi-y tevaqshe-nu)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;shilcha_ha_naar_iti&#x27;])
+    PASS  LET(shilcha_ha_naar_iti) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;shilcha_ha_naar_iti&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S10 — after STEP_Gn_43_10 — we could have returned twice
+    כִּ֖י לוּלֵ֣א הִתְמַהְמָ֑הְנוּ כִּֽי (ki lule hitmahmahnu ki-)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;shilcha_ha_naar_iti&#x27;])
+    PASS  LET(shilcha_ha_naar_iti) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;shilcha_ha_naar_iti&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S11 — after STEP_Gn_43_11 — the father&#x27;s caravan plan
+    וַיֹּ֨אמֶר אֲלֵהֶ֜ם יִשְׂרָאֵ֣ל אֲבִיהֶ֗ם (va-yomer el-hem yisrael avi-hem)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;shilcha_ha_naar_iti&#x27;, &#x27;zot_asu_qechu_ve_horidu&#x27;])
+    PASS  LET(shilcha_ha_naar_iti) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;shilcha_ha_naar_iti&#x27;, &#x27;zot_asu_qechu_ve_horidu&#x27;])
+    PASS  LET(zot_asu_qechu_ve_horidu) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;shilcha_ha_naar_iti&#x27;, &#x27;zot_asu_qechu_ve_horidu&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S12 — after STEP_Gn_43_12 — double silver and the returned
+    וְכֶ֥סֶף מִשְׁנֶ֖ה קְח֣וּ בְיֶדְכֶ֑ם (ve-khesef mishne qechu ve-yed-khem)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;shilcha_ha_naar_iti&#x27;, &#x27;zot_asu_qechu_ve_horidu&#x27;])
+    PASS  LET(shilcha_ha_naar_iti) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;shilcha_ha_naar_iti&#x27;, &#x27;zot_asu_qechu_ve_horidu&#x27;])
+    PASS  LET(zot_asu_qechu_ve_horidu) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;shilcha_ha_naar_iti&#x27;, &#x27;zot_asu_qechu_ve_horidu&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S13 — after STEP_Gn_43_13 — take your brother, arise, return
+    וְאֶת אֲחִיכֶ֖ם קָ֑חוּ וְק֖וּמוּ (ve-et-achi-khem qachu ve-qumu)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;shilcha_ha_naar_iti&#x27;, &#x27;zot_asu_qechu_ve_horidu&#x27;])
+    PASS  LET(shilcha_ha_naar_iti) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;shilcha_ha_naar_iti&#x27;, &#x27;zot_asu_qechu_ve_horidu&#x27;])
+    PASS  LET(zot_asu_qechu_ve_horidu) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;shilcha_ha_naar_iti&#x27;, &#x27;zot_asu_qechu_ve_horidu&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S14 — after STEP_Gn_43_14 — El Shaddai give you mercy
+    וְאֵ֣ל שַׁדַּ֗י יִתֵּ֨ן לָכֶ֤ם (ve-el shaday yiten la-khem)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;shilcha_ha_naar_iti&#x27;, &#x27;zot_asu_qechu_ve_horidu&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;])
+    PASS  LET(shilcha_ha_naar_iti) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;shilcha_ha_naar_iti&#x27;, &#x27;zot_asu_qechu_ve_horidu&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;])
+    PASS  LET(zot_asu_qechu_ve_horidu) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;shilcha_ha_naar_iti&#x27;, &#x27;zot_asu_qechu_ve_horidu&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;])
+    PASS  LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;shilcha_ha_naar_iti&#x27;, &#x27;zot_asu_qechu_ve_horidu&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S15 — after STEP_Gn_43_15 — the caravan descends
+    וַיִּקְח֤וּ הָֽאֲנָשִׁים֙ אֶת הַמִּנְחָ֣ה (va-yiqchu ha-anashim et-ha-mincha)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;])
+    PASS  LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S16 — after STEP_Gn_43_16 — slaughter and prepare
+    וַיַּ֨רְא יוֹסֵ֣ף אִתָּם֮ אֶת (va-yar yosef et-m et-)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;have_et_ha_anashim_ha_baita&#x27;])
+    PASS  LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;have_et_ha_anashim_ha_baita&#x27;])
+    PASS  LET(have_et_ha_anashim_ha_baita) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;have_et_ha_anashim_ha_baita&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S17 — after STEP_Gn_43_17 — as Joseph said
+    וַיַּ֣עַשׂ הָאִ֔ישׁ כַּֽאֲשֶׁ֖ר אָמַ֣ר (va-yaas ha-ish ka-asher amar)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;])
+    PASS  LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S18 — after STEP_Gn_43_18 — the fear at the door
+    וַיִּֽירְא֣וּ הָֽאֲנָשִׁ֗ים כִּ֣י הֽוּבְאוּ֮ (va-yiru ha-anashim ki huvu)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;])
+    PASS  LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S19 — after STEP_Gn_43_19 — at the door they draw near
+    וַֽיִּגְּשׁוּ֙ אֶל הָאִ֔ישׁ אֲשֶׁ֖ר (va-yigshu el-ha-ish asher)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;])
+    PASS  LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S20 — after STEP_Gn_43_20 — we surely came down
+    וַיֹּאמְר֖וּ בִּ֣י אֲדֹנִ֑י יָרֹ֥ד (va-yomru bi adoni-y yarod)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;])
+    PASS  LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S21 — after STEP_Gn_43_21 — the silver by its weight
+    וַֽיְהִ֞י כִּי בָ֣אנוּ אֶל (va-yehi ki-vanu el-)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;])
+    PASS  LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S22 — after STEP_Gn_43_22 — other silver in hand
+    וְכֶ֧סֶף אַחֵ֛ר הוֹרַ֥דְנוּ בְיָדֵ֖נוּ (ve-khesef acher horadnu ve-yade-nu)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;])
+    PASS  LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S23 — after STEP_Gn_43_23 — your God gave you treasure
+    וַיֹּאמֶר֩ שָׁל֨וֹם לָכֶ֜ם אַל (va-yomer shalom la-khem el-)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  LET-NOT(al_tirau) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S24 — after STEP_Gn_43_24 — water and fodder
+    וַיָּבֵ֥א הָאִ֛ישׁ אֶת הָאֲנָשִׁ֖ים (va-yave ha-ish et-ha-anashim)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  LET-NOT(al_tirau) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S25 — after STEP_Gn_43_25 — the gift made ready
+    וַיָּכִ֨ינוּ֙ אֶת הַמִּנְחָ֔ה עַד (va-yakhinu et-ha-mincha ad-)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  LET-NOT(al_tirau) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S26 — after STEP_Gn_43_26 — the eleven bow
+    וַיָּבֹ֤א יוֹסֵף֙ הַבַּ֔יְתָה וַיָּבִ֥יאּוּ (va-yavo yosef ha-bayta-ה va-yaviu)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  LET-NOT(al_tirau) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S27 — after STEP_Gn_43_27 — is your father well
+    וַיִּשְׁאַ֤ל לָהֶם֙ לְשָׁל֔וֹם וַיֹּ֗אמֶר (va-yishal la-hem le-shalom va-yomer)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  LET-NOT(al_tirau) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S28 — after STEP_Gn_43_28 — the clipped bow
+    וַיֹּאמְר֗וּ שָׁל֛וֹם לְעַבְדְּךָ֥ לְאָבִ֖ינוּ (va-yomru shalom le-avd-kha le-avi-nu)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  LET-NOT(al_tirau) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S29 — after STEP_Gn_43_29 — God be gracious to you, my son
+    וַיִּשָּׂ֣א עֵינָ֗יו וַיַּ֞רְא אֶת (va-yisa enay-v va-yar et-)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  LET-NOT(al_tirau) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S30 — after STEP_Gn_43_30 — the chamber weeping
+    וַיְמַהֵ֣ר יוֹסֵ֗ף כִּֽי נִכְמְר֤וּ (va-yemaher yosef ki-nikhmru)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  LET-NOT(al_tirau) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S31 — after STEP_Gn_43_31 — set bread
+    וַיִּרְחַ֥ץ פָּנָ֖יו וַיֵּצֵ֑א וַיִּ֨תְאַפַּ֔ק (va-yirchatz panay-v va-yetze va-yitapaq)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;, &#x27;simu_lachem&#x27;])
+    PASS  LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;, &#x27;simu_lachem&#x27;])
+    PASS  LET-NOT(al_tirau) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;, &#x27;simu_lachem&#x27;])
+    PASS  LET(simu_lachem) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;, &#x27;simu_lachem&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S32 — after STEP_Gn_43_32 — bread set apart
+    וַיָּשִׂ֥ימוּ ל֛וֹ לְבַדּ֖וֹ וְלָהֶ֣ם (va-yasimu l-o le-vad-o ve-la-hem)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  LET-NOT(al_tirau) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S33 — after STEP_Gn_43_33 — seated by birth order
+    וַיֵּשְׁב֣וּ לְפָנָ֔יו הַבְּכֹר֙ כִּבְכֹ֣רָת֔וֹ (va-yeshvu le-fanay-v ha-bekhor ki-vekhorat-o)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  LET-NOT(al_tirau) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S34 — after STEP_Gn_43_34 — five hands
+    וַיִּשָּׂ֨א מַשְׂאֹ֜ת מֵאֵ֣ת פָּנָיו֮ (va-yisa masot me-et panay-v)
+    PASS  LET(shuvu_shivru_lanu_meat_okhel) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  LET(el_shaday_yiten_lakhem_rachamim) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  LET-NOT(al_tirau) pushed and OPEN  (queue=[&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_66_second_descent.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_66_second_descent — 43:1-34
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_66_second_descent.yaml) is CANONICAL (Pre-Code);
+# this file is a derived, runnable rendering. Do not edit — regenerate. The
+# assertion block at the bottom is baked from the Stage D interpreter&#x27;s
+# actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;The second descent: Benjamin before Joseph (43:1-34)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_66_second_descent&quot;)
+
+# -------------------------- Gen.43.1 · THE_FAMINE_HEAVY --------------------
+# וְהָרָעָב כָּבֵד בָּאָרֶץ
+# &quot;[EN-AID] And the famine was heavy in the land.&quot;
+m.step(&quot;Gen.43.1&quot;)
+# ‹וְהָרָעָב כָּבֵד בָּאָרֶץ› (“and-the-hunger heavy in-earth”) — fact
+# holds: and-the-hunger-heavy-come/bring-earth
+m.fact(&quot;ve_ha_raav_kaved_ba_aretz&quot;)
+
+# -------------------------- Gen.43.2 · RETURN_AND_BUY_A_LITTLE -------------
+# וַיְהִי כַּאֲשֶׁר כִּלּוּ לֶאֱכֹל אֶת־הַשֶּׁבֶר אֲשֶׁר הֵבִיאוּ
+# מִמִּצְרָיִם וַיֹּאמֶר אֲלֵיהֶם אֲבִיהֶם שֻׁבוּ שִׁבְרוּ־לָנוּ מְעַט־אֹכֶל
+# &quot;[EN-AID] And it was, when they had finished eating the grain which they
+# brought from Egypt, that their father said to them: Return, buy us a
+# little food.&quot;
+m.step(&quot;Gen.43.2&quot;)
+# ‹שֻׁבוּ שִׁבְרוּ־לָנוּ מְעַט־אֹכֶל› (“return deal-in-grain to-us/our
+# little food”) — yaaqov speaks a demand — LET: return-deal-in-grain-lanu-
+# little-food
+m.declare(&quot;yaaqov&quot;, &quot;LET&quot;,
+          &quot;shuvu_shivru_lanu_meat_okhel&quot;)
+
+# -------------------------- Gen.43.3 · THE_WITNESS_WARNING -----------------
+# וַיֹּאמֶר אֵלָיו יְהוּדָה לֵאמֹר הָעֵד הֵעִד בָּנוּ הָאִישׁ לֵאמֹר
+# לֹא־תִרְאוּ פָנַי בִּלְתִּי אֲחִיכֶם אִתְּכֶם
+# &quot;[EN-AID] And Judah said to him, saying: The man solemnly warned us,
+# saying: You shall not see my face without your brother with you.&quot;
+m.step(&quot;Gen.43.3&quot;)
+# ‹הָעֵד הֵעִד בָּנוּ הָאִישׁ› (“duplicate duplicate in-us/our the-man”) —
+# fact holds: duplicate-duplicate-banu-the-man
+m.fact(&quot;haed_heid_banu_ha_ish&quot;)
+
+# -------------------------- Gen.43.4 · IF_YOU_SEND -------------------------
+# אִם־יֶשְׁךָ מְשַׁלֵּחַ אֶת־אָחִינוּ אִתָּנוּ נֵרְדָה וְנִשְׁבְּרָה לְךָ
+# אֹכֶל
+# &quot;[EN-AID] If you are sending our brother with us, we will go down and buy
+# you food.&quot;
+m.step(&quot;Gen.43.4&quot;)
+# ‹אִם־יֶשְׁךָ מְשַׁלֵּחַ אֶת־אָחִינוּ אִתָּנוּ נֵרְדָה› (“if there-is-
+# you/your send obj-marker brother-us/our with-us/our go-down”) — fact
+# holds: if-yeshkha-meshaleach-go-down
+m.fact(&quot;im_yeshkha_meshaleach_nerda&quot;)
+
+# -------------------------- Gen.43.5 · IF_YOU_SEND_NOT ---------------------
+# וְאִם־אֵינְךָ מְשַׁלֵּחַ לֹא נֵרֵד כִּי־הָאִישׁ אָמַר אֵלֵינוּ לֹא־תִרְאוּ
+# פָנַי בִּלְתִּי אֲחִיכֶם אִתְּכֶם
+# &quot;[EN-AID] And if you are not sending — we will not go down; for the man
+# said to us: You shall not see my face without your brother with you.&quot;
+m.step(&quot;Gen.43.5&quot;)
+# ‹וְאִם־אֵינְךָ מְשַׁלֵּחַ לֹא נֵרֵד› (“and-if there-is-not-you/your send
+# not go-down”) — fact holds: and-if-enkha-meshaleach-not-go-down
+m.fact(&quot;ve_im_enkha_meshaleach_lo_nered&quot;)
+
+# -------------------------- Gen.43.6 · WHY_DID_YOU_TELL --------------------
+# וַיֹּאמֶר יִשְׂרָאֵל לָמָה הֲרֵעֹתֶם לִי לְהַגִּיד לָאִישׁ הַעוֹד לָכֶם
+# אָח
+# &quot;[EN-AID] And Israel said: Why did you deal ill with me, to tell the man
+# you had yet a brother?&quot;
+m.step(&quot;Gen.43.6&quot;)
+# ‹וַיֹּאמֶר יִשְׂרָאֵל לָמָה הֲרֵעֹתֶם לִי› (“and-say Israel to-what spoil
+# to-me/my”) — fact holds: lama-spoil-to-me-lehagid
+m.fact(&quot;lama_hareotem_li_lehagid&quot;)
+
+# -------------------------- Gen.43.7 · THE_MAN_ASKED_AND_ASKED -------------
+# וַיֹּאמְרוּ שָׁאוֹל שָׁאַל־הָאִישׁ לָנוּ וּלְמוֹלַדְתֵּנוּ לֵאמֹר הַעוֹד
+# אֲבִיכֶם חַי הֲיֵשׁ לָכֶם אָח וַנַגֶּד־לוֹ עַל־פִּי הַדְּבָרִים הָאֵלֶּה
+# הֲיָדוֹעַ נֵדַע כִּי יֹאמַר הוֹרִידוּ אֶת־אֲחִיכֶם
+# &quot;[EN-AID] And they said: The man asked and asked about us and about our
+# kindred, saying: Is your father yet alive? Have you a brother? And we told
+# him according to these words. Could we know, knowing that he would say:
+# Bring your brother down?&quot;
+m.step(&quot;Gen.43.7&quot;)
+# ‹שָׁאוֹל שָׁאַל־הָאִישׁ› (“inquire inquire the-man”) — fact holds:
+# inquire-inquire-the-man-lanu
+m.fact(&quot;shaol_shaal_ha_ish_lanu&quot;)
+
+# -------------------------- Gen.43.8 · SEND_THE_LAD_WITH_ME ----------------
+# וַיֹּאמֶר יְהוּדָה אֶל־יִשְׂרָאֵל אָבִיו שִׁלְחָה הַנַּעַר אִתִּי
+# וְנָקוּמָה וְנֵלֵכָה וְנִחְיֶה וְלֹא נָמוּת גַּם־אֲנַחְנוּ גַם־אַתָּה
+# גַּם־טַפֵּנוּ
+# &quot;[EN-AID] And Judah said to Israel his father: Send the lad with me, and
+# we will arise and go, and we will live and not die — we, and you, and our
+# little ones.&quot;
+m.step(&quot;Gen.43.8&quot;)
+# ‹שִׁלְחָה הַנַּעַר אִתִּי› (“send-ward the-boy with-me/my”) — Judah speaks
+# a demand — LET: shilcha-the-boy-iti
+m.declare(&quot;yehuda&quot;, &quot;LET&quot;,
+          &quot;shilcha_ha_naar_iti&quot;)
+
+# -------------------------- Gen.43.9 · I_AM_THE_SURETY ---------------------
+# אָנֹכִי אֶעֶרְבֶנּוּ מִיָּדִי תְּבַקְשֶׁנּוּ אִם־לֹא הֲבִיאֹתִיו אֵלֶיךָ
+# וְהִצַּגְתִּיו לְפָנֶיךָ וְחָטָאתִי לְךָ כָּל־הַיָּמִים
+# &quot;[EN-AID] I will be surety for him; from my hand you shall require him: if
+# I do not bring him to you and set him before you, I shall have sinned
+# against you all the days.&quot;
+m.step(&quot;Gen.43.9&quot;)
+# ‹אָנֹכִי אֶעֶרְבֶנּוּ מִיָּדִי תְּבַקְשֶׁנּוּ› (“braid-him/its from-hand-
+# me/my search-out-him/its”) — fact holds: anokhi-eervenu-who?-yadi-
+# tevaqshenu
+m.fact(&quot;anokhi_eervenu_mi_yadi_tevaqshenu&quot;)
+
+# -------------------------- Gen.43.10 · WE_COULD_HAVE_RETURNED_TWICE -------
+# כִּי לוּלֵא הִתְמַהְמָהְנוּ כִּי־עַתָּה שַׁבְנוּ זֶה פַעֲמָיִם
+# &quot;[EN-AID] For had we not lingered, surely by now we could have returned
+# these two times.&quot;
+m.step(&quot;Gen.43.10&quot;)
+# ‹כִּי לוּלֵא הִתְמַהְמָהְנוּ› (“that if-not question”) — fact holds: that-
+# if-not-question
+m.fact(&quot;ki_lule_hitmahmahnu&quot;)
+
+# -------------------------- Gen.43.11 · THE_FATHERS_CARAVAN_PLAN -----------
+# וַיֹּאמֶר אֲלֵהֶם יִשְׂרָאֵל אֲבִיהֶם אִם־כֵּן אֵפוֹא זֹאת עֲשׂוּ קְחוּ
+# מִזִּמְרַת הָאָרֶץ בִּכְלֵיכֶם וְהוֹרִידוּ לָאִישׁ מִנְחָה מְעַט צֳרִי
+# וּמְעַט דְּבַשׁ נְכֹאת וָלֹט בָּטְנִים וּשְׁקֵדִים
+# &quot;[EN-AID] And Israel their father said to them: If so, then, this do: take
+# of the land&#x27;s best fruits in your vessels, and carry down to the man a
+# gift — a little balm and a little honey, gum and ladanum, pistachios and
+# almonds.&quot;
+m.step(&quot;Gen.43.11&quot;)
+# ‹זֹאת עֲשׂוּ קְחוּ מִזִּמְרַת הָאָרֶץ בִּכְלֵיכֶם וְהוֹרִידוּ› (“this make
+# take from-pruned-fruit the-earth in-vessel-you/your(pl) and-go-down”) —
+# Israel speaks a demand — LET: this-make-take-and-go-down
+m.declare(&quot;yisrael&quot;, &quot;LET&quot;,
+          &quot;zot_asu_qechu_ve_horidu&quot;)
+
+# -------------------------- Gen.43.12 · DOUBLE_SILVER_AND_THE_RETURNED -----
+# וְכֶסֶף מִשְׁנֶה קְחוּ בְיֶדְכֶם וְאֶת־הַכֶּסֶף הַמּוּשָׁב בְּפִי
+# אַמְתְּחֹתֵיכֶם תָּשִׁיבוּ בְיֶדְכֶם אוּלַי מִשְׁגֶּה הוּא
+# &quot;[EN-AID] And double silver take in your hand; and the silver that was
+# returned in the mouth of your bags return in your hand — perhaps it was an
+# error.&quot;
+m.step(&quot;Gen.43.12&quot;)
+# ‹וְכֶסֶף מִשְׁנֶה קְחוּ בְיֶדְכֶם› (“and-silver repetition take in-hand-
+# you/your(pl)”) — fact holds: silver-repetition-and-the-silver-the-return
+m.fact(&quot;kesef_mishne_ve_ha_kesef_ha_mushav&quot;)
+
+# -------------------------- Gen.43.13 · TAKE_YOUR_BROTHER_ARISE_RETURN -----
+# וְאֶת־אֲחִיכֶם קָחוּ וְקוּמוּ שׁוּבוּ אֶל־הָאִישׁ
+# &quot;[EN-AID] And your brother take; and arise, return to the man.&quot;
+m.step(&quot;Gen.43.13&quot;)
+# ‹וְאֶת־אֲחִיכֶם קָחוּ וְקוּמוּ שׁוּבוּ› (“and-obj-marker brother-
+# you/your(pl) take and-arise return”) — fact holds: and-obj-marker-
+# achikhem-take-and-arise-return
+m.fact(&quot;ve_et_achikhem_qachu_ve_qumu_shuvu&quot;)
+
+# -------------------------- Gen.43.14 · EL_SHADDAI_GIVE_YOU_MERCY ----------
+# וְאֵל שַׁדַּי יִתֵּן לָכֶם רַחֲמִים לִפְנֵי הָאִישׁ וְשִׁלַּח לָכֶם
+# אֶת־אֲחִיכֶם אַחֵר וְאֶת־בִּנְיָמִין וַאֲנִי כַּאֲשֶׁר שָׁכֹלְתִּי
+# שָׁכָלְתִּי
+# &quot;[EN-AID] And El Shaddai give you mercy before the man, that he may
+# release to you your other brother, and Benjamin. And I — as I am bereaved,
+# I am bereaved.&quot;
+m.step(&quot;Gen.43.14&quot;)
+# ‹וְאֵל שַׁדַּי יִתֵּן לָכֶם רַחֲמִים› (“and-strength Almighty set to-
+# you/your(pl) compassion”) — Israel speaks a demand — LET: to-Almighty-set-
+# lakhem-compassion
+m.declare(&quot;yisrael&quot;, &quot;LET&quot;,
+          &quot;el_shaday_yiten_lakhem_rachamim&quot;)
+
+# -------------------------- Gen.43.15 · THE_CARAVAN_DESCENDS ---------------
+# וַיִּקְחוּ הָאֲנָשִׁים אֶת־הַמִּנְחָה הַזֹּאת וּמִשְׁנֶה־כֶּסֶף לָקְחוּ
+# בְיָדָם וְאֶת־בִּנְיָמִן וַיָּקֻמוּ וַיֵּרְדוּ מִצְרַיִם וַיַּעַמְדוּ
+# לִפְנֵי יוֹסֵף
+# &quot;[EN-AID] And the men took this gift, and double silver they took in their
+# hand, and Benjamin; and they arose and went down to Egypt, and stood
+# before Joseph.&quot;
+m.step(&quot;Gen.43.15&quot;)
+# ‹וְאֶת־בִּנְיָמִן› (“and-obj-marker Benjamin”) — demand settled (popped
+# from the queue): shilcha-the-boy-iti
+m.result(&quot;shilcha_ha_naar_iti&quot;, tmark=&quot;t1&quot;)
+# ‹וַיִּקְחוּ הָאֲנָשִׁים אֶת־הַמִּנְחָה הַזֹּאת וּמִשְׁנֶה־כֶּסֶף לָקְחוּ
+# בְיָדָם› (“and-take the-man obj-marker the-grain-offering the-this and-
+# repetition silver take in-hand-them/their”) — demand settled (popped from
+# the queue): this-make-take-and-go-down
+m.result(&quot;zot_asu_qechu_ve_horidu&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Gen.43.16 · SLAUGHTER_AND_PREPARE --------------
+# וַיַּרְא יוֹסֵף אִתָּם אֶת־בִּנְיָמִין וַיֹּאמֶר לַאֲשֶׁר עַל־בֵּיתוֹ
+# הָבֵא אֶת־הָאֲנָשִׁים הַבָּיְתָה וּטְבֹחַ טֶבַח וְהָכֵן כִּי אִתִּי
+# יֹאכְלוּ הָאֲנָשִׁים בַּצָּהֳרָיִם
+# &quot;[EN-AID] And Joseph saw Benjamin with them, and said to the one over his
+# house: Bring the men home, and slaughter a slaughtering and prepare — for
+# with me the men shall eat at noon.&quot;
+m.step(&quot;Gen.43.16&quot;)
+# ‹הָבֵא אֶת־הָאֲנָשִׁים הַבָּיְתָה› (“come/bring obj-marker the-man the-
+# house-ward”) — Joseph speaks a demand — LET: come/bring-obj-marker-the-
+# man-the-baita
+m.declare(&quot;yosef&quot;, &quot;LET&quot;,
+          &quot;have_et_ha_anashim_ha_baita&quot;)
+
+# -------------------------- Gen.43.17 · AS_JOSEPH_SAID ---------------------
+# וַיַּעַשׂ הָאִישׁ כַּאֲשֶׁר אָמַר יוֹסֵף וַיָּבֵא הָאִישׁ אֶת־הָאֲנָשִׁים
+# בֵּיתָה יוֹסֵף
+# &quot;[EN-AID] And the man did as Joseph said; and the man brought the men to
+# Joseph&#x27;s house.&quot;
+m.step(&quot;Gen.43.17&quot;)
+# ‹וַיַּעַשׂ הָאִישׁ כַּאֲשֶׁר אָמַר יוֹסֵף› (“and-make the-man like-
+# as/which say Joseph”) — demand settled (popped from the queue):
+# come/bring-obj-marker-the-man-the-baita
+m.result(&quot;have_et_ha_anashim_ha_baita&quot;, tmark=&quot;t2&quot;)
+
+# -------------------------- Gen.43.18 · THE_FEAR_AT_THE_DOOR ---------------
+# וַיִּירְאוּ הָאֲנָשִׁים כִּי הוּבְאוּ בֵּית יוֹסֵף וַיֹּאמְרוּ עַל־דְּבַר
+# הַכֶּסֶף הַשָּׁב בְּאַמְתְּחֹתֵינוּ בַּתְּחִלָּה אֲנַחְנוּ מוּבָאִים
+# לְהִתְגֹּלֵל עָלֵינוּ וּלְהִתְנַפֵּל עָלֵינוּ וְלָקַחַת אֹתָנוּ לַעֲבָדִים
+# וְאֶת־חֲמֹרֵינוּ
+# &quot;[EN-AID] And the men feared, for they were brought to Joseph&#x27;s house; and
+# they said: On the matter of the silver returned in our bags at the first
+# are we brought — to roll upon us, and to fall upon us, and to take us for
+# slaves, and our donkeys.&quot;
+m.step(&quot;Gen.43.18&quot;)
+# ‹וַיִּירְאוּ הָאֲנָשִׁים כִּי הוּבְאוּ› (“and-fear the-man that
+# come/bring”) — fact holds: and-fear-the-man-that-come/bring
+m.fact(&quot;va_yiru_ha_anashim_ki_huvu&quot;)
+
+# -------------------------- Gen.43.19 · AT_THE_DOOR_THEY_DRAW_NEAR ---------
+# וַיִּגְּשׁוּ אֶל־הָאִישׁ אֲשֶׁר עַל־בֵּית יוֹסֵף וַיְדַבְּרוּ אֵלָיו
+# פֶּתַח הַבָּיִת
+# &quot;[EN-AID] And they drew near to the man who was over Joseph&#x27;s house, and
+# spoke to him at the door of the house.&quot;
+m.step(&quot;Gen.43.19&quot;)
+# ‹וַיִּגְּשׁוּ אֶל־הָאִישׁ› (“and-be to the-man”) — fact holds: and-be-to-
+# the-man-opening-the-house
+m.fact(&quot;va_yigshu_el_ha_ish_petach_ha_bayit&quot;)
+
+# -------------------------- Gen.43.20 · WE_SURELY_CAME_DOWN ----------------
+# וַיֹּאמְרוּ בִּי אֲדֹנִי יָרֹד יָרַדְנוּ בַּתְּחִלָּה לִשְׁבָּר־אֹכֶל
+# &quot;[EN-AID] And they said: Please, my lord — we surely came down at the
+# first to buy food.&quot;
+m.step(&quot;Gen.43.20&quot;)
+# ‹יָרֹד יָרַדְנוּ בַּתְּחִלָּה› (“go-down go-down in-commencement”) — fact
+# holds: go-down-go-down-come/bring-techila
+m.fact(&quot;yarod_yaradnu_ba_techila&quot;)
+
+# -------------------------- Gen.43.21 · THE_SILVER_BY_ITS_WEIGHT -----------
+# וַיְהִי כִּי־בָאנוּ אֶל־הַמָּלוֹן וַנִּפְתְּחָה אֶת־אַמְתְּחֹתֵינוּ
+# וְהִנֵּה כֶסֶף־אִישׁ בְּפִי אַמְתַּחְתּוֹ כַּסְפֵּנוּ בְּמִשְׁקָלוֹ
+# וַנָּשֶׁב אֹתוֹ בְּיָדֵנוּ
+# &quot;[EN-AID] And it was, when we came to the lodging place and opened our
+# bags — behold, each man&#x27;s silver in the mouth of his bag, our silver by
+# its weight; and we have brought it back in our hand.&quot;
+m.step(&quot;Gen.43.21&quot;)
+# ‹כַּסְפֵּנוּ בְּמִשְׁקָלוֹ וַנָּשֶׁב אֹתוֹ בְּיָדֵנוּ› (“silver-us/our in-
+# weight-him/its and-return obj-marker-him/its in-hand-us/our”) — fact
+# holds: kaspenu-in-mishkalo-and-return-it
+m.fact(&quot;kaspenu_be_mishkalo_va_nashev_oto&quot;)
+
+# -------------------------- Gen.43.22 · OTHER_SILVER_IN_HAND ---------------
+# וְכֶסֶף אַחֵר הוֹרַדְנוּ בְיָדֵנוּ לִשְׁבָּר־אֹכֶל לֹא יָדַעְנוּ מִי־שָׂם
+# כַּסְפֵּנוּ בְּאַמְתְּחֹתֵינוּ
+# &quot;[EN-AID] And other silver we have brought down in our hand to buy food;
+# we do not know who put our silver in our bags.&quot;
+m.step(&quot;Gen.43.22&quot;)
+# ‹לֹא יָדַעְנוּ מִי־שָׂם כַּסְפֵּנוּ בְּאַמְתְּחֹתֵינוּ› (“not know who?
+# put/set silver-us/our in-something-expansive-us/our”) — fact holds: not-
+# know-who?-put/set-kaspenu
+m.fact(&quot;lo_yadanu_mi_sam_kaspenu&quot;)
+
+# -------------------------- Gen.43.23 · YOUR_GOD_GAVE_YOU_TREASURE ---------
+# וַיֹּאמֶר שָׁלוֹם לָכֶם אַל־תִּירָאוּ אֱלֹהֵיכֶם וֵאלֹהֵי אֲבִיכֶם נָתַן
+# לָכֶם מַטְמוֹן בְּאַמְתְּחֹתֵיכֶם כַּסְפְּכֶם בָּא אֵלָי וַיּוֹצֵא אֲלֵהֶם
+# אֶת־שִׁמְעוֹן
+# &quot;[EN-AID] And he said: Peace to you, fear not; your God and the God of
+# your father gave you treasure in your bags — your silver came to me. And
+# he brought Simeon out to them.&quot;
+m.step(&quot;Gen.43.23&quot;)
+# ‹אַל־תִּירָאוּ› (“do-not fear”) — man-over-beit-Joseph speaks a demand —
+# LET-NOT: over-fear
+m.declare(&quot;ish_al_beit_yosef&quot;, &quot;LET-NOT&quot;,
+          &quot;al_tirau&quot;)
+
+# -------------------------- Gen.43.24 · WATER_AND_FODDER -------------------
+# וַיָּבֵא הָאִישׁ אֶת־הָאֲנָשִׁים בֵּיתָה יוֹסֵף וַיִּתֶּן־מַיִם
+# וַיִּרְחֲצוּ רַגְלֵיהֶם וַיִּתֵּן מִסְפּוֹא לַחֲמֹרֵיהֶם
+# &quot;[EN-AID] And the man brought the men into Joseph&#x27;s house; and he gave
+# water, and they washed their feet; and he gave fodder to their donkeys.&quot;
+m.step(&quot;Gen.43.24&quot;)
+# ‹וַיִּתֶּן־מַיִם וַיִּרְחֲצוּ רַגְלֵיהֶם› (“and-set waters and-lave foot-
+# them/their”) — fact holds: and-set-waters-and-lave-raglehem
+m.fact(&quot;va_yiten_mayim_va_yirchatzu_raglehem&quot;)
+
+# -------------------------- Gen.43.25 · THE_GIFT_MADE_READY ----------------
+# וַיָּכִינוּ אֶת־הַמִּנְחָה עַד־בּוֹא יוֹסֵף בַּצָּהֳרָיִם כִּי שָׁמְעוּ
+# כִּי־שָׁם יֹאכְלוּ לָחֶם
+# &quot;[EN-AID] And they made ready the gift against Joseph&#x27;s coming at noon,
+# for they heard that there they should eat bread.&quot;
+m.step(&quot;Gen.43.25&quot;)
+# ‹וַיָּכִינוּ אֶת־הַמִּנְחָה› (“and-be-erect obj-marker the-grain-
+# offering”) — fact holds: and-be-erect-obj-marker-the-grain-offering
+m.fact(&quot;va_yakhinu_et_ha_mincha&quot;)
+
+# -------------------------- Gen.43.26 · THE_ELEVEN_BOW ---------------------
+# וַיָּבֹא יוֹסֵף הַבַּיְתָה וַיָּבִיאּוּ לוֹ אֶת־הַמִּנְחָה אֲשֶׁר־בְּיָדָם
+# הַבָּיְתָה וַיִּשְׁתַּחֲווּ־לוֹ אָרְצָה
+# &quot;[EN-AID] And Joseph came home, and they brought him the gift which was in
+# their hand, into the house, and they bowed down to him to the earth.&quot;
+m.step(&quot;Gen.43.26&quot;)
+# ‹וַיִּשְׁתַּחֲווּ־לוֹ אָרְצָה› (“and-afflict to-him/its earth-ward”) —
+# event: hishtachavu — agent the-achim
+m.event(&quot;hishtachavu&quot;, agent=&quot;ha_achim&quot;)
+
+# -------------------------- Gen.43.27 · IS_YOUR_FATHER_WELL ----------------
+# וַיִּשְׁאַל לָהֶם לְשָׁלוֹם וַיֹּאמֶר הֲשָׁלוֹם אֲבִיכֶם הַזָּקֵן אֲשֶׁר
+# אֲמַרְתֶּם הַעוֹדֶנּוּ חָי
+# &quot;[EN-AID] And he asked them of their welfare, and said: Is your father
+# well — the old man of whom you spoke? Is he yet alive?&quot;
+m.step(&quot;Gen.43.27&quot;)
+# ‹וַיֹּאמֶר הֲשָׁלוֹם אֲבִיכֶם הַזָּקֵן› (“and-say the-safe father-
+# you/your(pl) the-old”) — fact holds: the-safe-avikhem-the-old
+m.fact(&quot;ha_shalom_avikhem_ha_zaqen&quot;)
+
+# -------------------------- Gen.43.28 · THE_CLIPPED_BOW --------------------
+# וַיֹּאמְרוּ שָׁלוֹם לְעַבְדְּךָ לְאָבִינוּ עוֹדֶנּוּ חָי וַיִּקְּדוּ
+# וישתחו וַיִּשְׁתַּחֲוּוּ
+# &quot;[EN-AID] And they said: Your servant our father is well; he is yet alive.
+# And they bowed their heads, and prostrated themselves.&quot;
+m.step(&quot;Gen.43.28&quot;)
+# ‹וַיִּקְּדוּ וישתחו וַיִּשְׁתַּחֲוּוּ› (“and-shrivel-up and-afflict and-
+# afflict”) — fact holds: and-shrivel-up-and-afflict
+m.fact(&quot;va_yiqdu_va_yishtachavu&quot;)
+
+# -------------------------- Gen.43.29 · GOD_BE_GRACIOUS_TO_YOU_MY_SON ------
+# וַיִּשָּׂא עֵינָיו וַיַּרְא אֶת־בִּנְיָמִין אָחִיו בֶּן־אִמּוֹ וַיֹּאמֶר
+# הֲזֶה אֲחִיכֶם הַקָּטֹן אֲשֶׁר אֲמַרְתֶּם אֵלָי וַיֹּאמַר אֱלֹהִים
+# יָחְנְךָ בְּנִי
+# &quot;[EN-AID] And he lifted his eyes and saw Benjamin his brother, his
+# mother&#x27;s son, and said: Is this your youngest brother of whom you spoke to
+# me? And he said: God be gracious to you, my son.&quot;
+m.step(&quot;Gen.43.29&quot;)
+# ‹וַיֹּאמַר אֱלֹהִים יָחְנְךָ בְּנִי› (“and-say God bend-you/your son-
+# me/my”) — blessing: Joseph blesses Benjamin
+m.bless(&quot;yosef&quot;, &quot;binyamin&quot;)
+
+# -------------------------- Gen.43.30 · THE_CHAMBER_WEEPING ----------------
+# וַיְמַהֵר יוֹסֵף כִּי־נִכְמְרוּ רַחֲמָיו אֶל־אָחִיו וַיְבַקֵּשׁ לִבְכּוֹת
+# וַיָּבֹא הַחַדְרָה וַיֵּבְךְּ שָׁמָּה
+# &quot;[EN-AID] And Joseph hurried — for his compassion grew hot toward his
+# brother, and he sought to weep; and he came into the chamber and wept
+# there.&quot;
+m.step(&quot;Gen.43.30&quot;)
+# ‹וַיָּבֹא הַחַדְרָה וַיֵּבְךְּ שָׁמָּה› (“and-come/bring the-apartment-
+# ward and-weep there-ward”) — event: bakha — agent Joseph
+m.event(&quot;bakha&quot;, agent=&quot;yosef&quot;)
+
+# -------------------------- Gen.43.31 · SET_BREAD --------------------------
+# וַיִּרְחַץ פָּנָיו וַיֵּצֵא וַיִּתְאַפַּק וַיֹּאמֶר שִׂימוּ לָחֶם
+# &quot;[EN-AID] And he washed his face and went out, and restrained himself, and
+# said: Set bread.&quot;
+m.step(&quot;Gen.43.31&quot;)
+# ‹שִׂימוּ לָחֶם› (“put/set food”) — Joseph speaks a demand — LET: put/set-
+# food
+m.declare(&quot;yosef&quot;, &quot;LET&quot;,
+          &quot;simu_lachem&quot;)
+
+# -------------------------- Gen.43.32 · BREAD_SET_APART --------------------
+# וַיָּשִׂימוּ לוֹ לְבַדּוֹ וְלָהֶם לְבַדָּם וְלַמִּצְרִים הָאֹכְלִים אִתּוֹ
+# לְבַדָּם כִּי לֹא יוּכְלוּן הַמִּצְרִים לֶאֱכֹל אֶת־הָעִבְרִים לֶחֶם
+# כִּי־תוֹעֵבָה הִוא לְמִצְרָיִם
+# &quot;[EN-AID] And they set for him alone, and for them alone, and for the
+# Egyptians eating with him alone — for the Egyptians may not eat bread with
+# the Hebrews, for it is an abomination to Egypt.&quot;
+m.step(&quot;Gen.43.32&quot;)
+# ‹וַיָּשִׂימוּ לוֹ לְבַדּוֹ› (“and-put/set to-him/its to-separation-
+# him/its”) — demand settled (popped from the queue): put/set-food
+m.result(&quot;simu_lachem&quot;, tmark=&quot;t3&quot;)
+
+# -------------------------- Gen.43.33 · SEATED_BY_BIRTH_ORDER --------------
+# וַיֵּשְׁבוּ לְפָנָיו הַבְּכֹר כִּבְכֹרָתוֹ וְהַצָּעִיר כִּצְעִרָתוֹ
+# וַיִּתְמְהוּ הָאֲנָשִׁים אִישׁ אֶל־רֵעֵהוּ
+# &quot;[EN-AID] And they sat before him, the firstborn according to his
+# birthright and the youngest according to his youth; and the men wondered,
+# each to his fellow.&quot;
+m.step(&quot;Gen.43.33&quot;)
+# ‹הַבְּכֹר כִּבְכֹרָתוֹ וְהַצָּעִיר כִּצְעִרָתוֹ› (“the-firstborn like-
+# firstling-of-man-him/its and-the-little like-smallness-him/its”) — fact
+# holds: the-firstborn-that-vkhorato-and-the-little-that-tzeirato
+m.fact(&quot;ha_bekhor_ki_vkhorato_ve_ha_tzair_ki_tzeirato&quot;)
+
+# -------------------------- Gen.43.34 · FIVE_HANDS -------------------------
+# וַיִּשָּׂא מַשְׂאֹת מֵאֵת פָּנָיו אֲלֵהֶם וַתֵּרֶב מַשְׂאַת בִּנְיָמִן
+# מִמַּשְׂאֹת כֻּלָּם חָמֵשׁ יָדוֹת וַיִּשְׁתּוּ וַיִּשְׁכְּרוּ עִמּוֹ
+# &quot;[EN-AID] And he lifted portions from before his face to them; and
+# Benjamin&#x27;s portion was greater than the portions of them all — five hands.
+# And they drank, and drank freely with him.&quot;
+m.step(&quot;Gen.43.34&quot;)
+# ‹וַתֵּרֶב מַשְׂאַת בִּנְיָמִן מִמַּשְׂאֹת כֻּלָּם› (“and-multiply raising
+# Benjamin from-raising all-them/their”) — fact holds: and-multiply-raising-
+# Benjamin-five-hand
+m.fact(&quot;va_terev_masat_binyamin_chamesh_yadot&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;shuvu_shivru_lanu_meat_okhel&#x27;, &#x27;el_shaday_yiten_lakhem_rachamim&#x27;, &#x27;al_tirau&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 7
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;ve_ha_raav_kaved_ba_aretz&#x27;, &#x27;haed_heid_banu_ha_ish&#x27;, &#x27;im_yeshkha_meshaleach_nerda&#x27;, &#x27;ve_im_enkha_meshaleach_lo_nered&#x27;, &#x27;lama_hareotem_li_lehagid&#x27;, &#x27;shaol_shaal_ha_ish_lanu&#x27;, &#x27;anokhi_eervenu_mi_yadi_tevaqshenu&#x27;, &#x27;ki_lule_hitmahmahnu&#x27;, &#x27;kesef_mishne_ve_ha_kesef_ha_mushav&#x27;, &#x27;ve_et_achikhem_qachu_ve_qumu_shuvu&#x27;, &#x27;va_yiru_ha_anashim_ki_huvu&#x27;, &#x27;va_yigshu_el_ha_ish_petach_ha_bayit&#x27;, &#x27;yarod_yaradnu_ba_techila&#x27;, &#x27;kaspenu_be_mishkalo_va_nashev_oto&#x27;, &#x27;lo_yadanu_mi_sam_kaspenu&#x27;, &#x27;va_yiten_mayim_va_yirchatzu_raglehem&#x27;, &#x27;va_yakhinu_et_ha_mincha&#x27;, &#x27;ha_shalom_avikhem_ha_zaqen&#x27;, &#x27;va_yiqdu_va_yishtachavu&#x27;, &#x27;ha_bekhor_ki_vkhorato_ve_ha_tzair_ki_tzeirato&#x27;, &#x27;va_terev_masat_binyamin_chamesh_yadot&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 14
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

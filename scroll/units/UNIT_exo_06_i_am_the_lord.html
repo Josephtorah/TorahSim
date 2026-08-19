@@ -1,0 +1,901 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>exo_06_i_am_the_lord — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/exo_06_i_am_the_lord?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>I am the LORD (6:1-30) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>exo_06_i_am_the_lord</b> · Exodus 6:1-30 · derive logic_derived_v1 · phase FWD-20</div>
+<div class="meta"><a href="../#Exod/6/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">אֲנִ֥י יְהוָֽה</span> · <i>ani YHWH</i> · &#x27;I am the LORD&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DERIVED 2026-08-09 · FORWARD ERA unit #20 (run FWD-5 block 1; Exod 1-6 continuous behind it). Span: 6:1-30, whole chapter: 30 verses (SNAPSHOT-verified), three verses without an etnachta (6:10, 6:17, 6:28 — frame- and record-verses, split at the strongest disjunctive per the standing fallback). Oral layer IN-PIPELINE: manifest 14/14 VERIFIED, zero FAILED — see oral_audit_note_en. MACHINE PROFILE. THREE DECLAREs, ONE RESULT. The SAY-COMMAND (lakhen emor, 6:6 — the four tongues of redemption as content) pops at 6:9 on the exact compliance-adverb (va-yedaber moshe KEN — &#x27;spoke SO&#x27;), with the non-hearing recorded against no card (hearing was never commanded); the GO-SPEAK demand (bo daber el paro, 6:11) stays OPEN — re-pressed and WIDENED by the resumption at 6:29 (&#x27;all that I speak,&#x27; the resumptive- repetition class: one demand, one card) — receipt armed at 7:6 (did-as-commanded, next unit); the JOINT CHARGE (va- yetzavem, 6:13 — Aaron enters the command-frame) stays OPEN at book-scale, receipt armed at 12:51 (al-tzivotam, the going-out&#x27;s own verse). ZERO events. The REGISTRY BRACKET (6:14-25): the corpus reads the genealogy as the credential- file — three despatch-verses (Reuben, Simeon), then Levi&#x27;s three houses with life-totals, three marriages (Amram- Yokheved -&gt; Aaron+Moses at 6:20: exo_02&#x27;s registry restraint PAID — the letter signs the parents it withheld at 2:1; Aaron-Elisheva -&gt; the four priests at 6:23; Elazar-Putiel&#x27;s daughter -&gt; Pinchas at 6:25), closed by the TWIN ATTESTATION verses (6:26-27) whose order-flip (aharon u-moshe / moshe ve-aharon, asserted) certifies the compound entity both ways. No NAME ops (no naming-verbs in-span — the records are identifications, not coinages; the world registry gains amram, yokheved, elisheva, pinchas at the fold on 6:20/23/25 authority). Queue at close: TWO OPEN in-unit (the go-speak demand; the charge). REGISTRY 0; TESTS 0; LEDGER 0. CARE-POINTS: 6:1 answers exo_05&#x27;s closing indictment across the unit-seam (narrative answer, no card existed); the know- ledger&#x27;s two columns (5:2 lo yadati / 6:3 lo nodati / 6:7 vi-ydatem / 7:5 armed); the doubled lips-objection brackets the registry (6:12 = 6:30 verbatim pair, asserted); the hear-remember engine of 2:24 restated in first person at 6:5; the envelope-formula ani YHWH at 6:2/6:6/6:8/6:29; Mishael and Elzaphan (6:22) pre-arm Lev 10:4&#x27;s corpse- carriers — the corpus&#x27;s Leviticus units already hold the strange-fire file. WATCHLIST ARMS: 7:1 (elohim-to-Pharaoh, the plea&#x27;s answer), 7:4-5 (tzivotai; ve-yadu mitzrayim), 7:6 (the did-as-commanded receipt), 12:41 (the 430 of mi-qotzer&#x27;s cipher), 12:51 (the charge&#x27;s receipt).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-09 (IN-PIPELINE, forward era; manifest logic/oral_audit/manifests/exo_06_i_am_the_lord_claims.json 14/14 VERIFIED, zero FAILED; record logic/oral_audit/AUDIT_exo_06_2026-08-09.md). CROWNS (chain-attested + DB-verified). THE DAGESHED LAMED [EX06-01, MS on 6:10 + 6:29 quoting the Michlol and Or Torah] — THE UNIT&#x27;S MARQUEE: the lamed of אל־משה לאמר (&quot;to Moses, saying&quot;) is ALWAYS hard, the lamed of the compound Moses-AND-Aaron frame NEVER — the stream carries the compound half whole (soft all 14 stations) and the Moses- alone half at 77 of 79, both in-span stations hard; Or Torah&#x27;s &quot;whole Torah except one&quot; (Num 32:25) meets a SECOND soft station he did not name (Num 17:27) — both exceptions PLURAL human speakers: the divine frame never once drops the hardening dot, and the discrepancy observation is filed. THE FOUR TONGUES PRICED [EX06-02, Kitzur on 6:6-7]: the four redemption-verbs (against the four kingdoms; the seder&#x27;s four cups, named) are priced by the stream as once-only words — והצלתי (&quot;and I will deliver&quot;), וגאלתי (&quot;and I will redeem&quot;), ולקחתי (&quot;and I will take&quot;) each the Torah&#x27;s ONLY token, and והוצאתי (&quot;and I will bring out&quot;) exactly three, all inside this commissioning (6:6, 7:4, 7:5). THE TWO HERITAGES [EX06-03, Kitzur on 6:8]: מורשה (&quot;heritage&quot;) exactly twice — the LAND here, the TORAH at Deut 33:4; written מורשה (&quot;heritage,&quot; what is transmitted) and not ירושה (&quot;inheritance,&quot; what is possessed) — named. THE TWO THEREFORE-SAYS [EX06-04, Kitzur on 6:6 + the Sifrei]: לכן אמר (&quot;therefore say&quot;) exactly twice — Moses&#x27; redemption-speech and Pinchas&#x27; covenant of peace (Num 25:12) — and Pinchas himself debuts at 6:25: both redeemers entered in one chapter. THE 430 IN THE SHORT BREATH [EX06-05, Kitzur on 6:9]: מקצר (&quot;from shortness&quot;) Torah-unique and LEAN — its letters count 430, the sojourn&#x27;s own total (12:41 armed). THE CHARGE&#x27;S CONCORDANCE [EX06-06, Kitzur on 6:13]: ויצום (&quot;and He commanded them&quot;) exactly twice in the Torah (6:13, 34:32); the Kings-side pair named — the charge read as a charter against idolatry and bloodshed. THE PRISONER&#x27;S NAME [EX06-07, Kitzur on 6:24]: אסיר (&quot;Assir&quot;) Torah-unique; Isaiah&#x27;s from-prison twin and the fortified ledge named. THE BEHOLD-I FILE [EX06-08, Kitzur on 6:30]: הן אני (&quot;behold, I&quot;) the Torah&#x27;s only adjacency — answered in the Masorah&#x27;s own four-row file by Job&#x27;s as-your-mouth verse. THE MUTE FINALS [EX06-09, Kitzur on 6:3]: the finals of וארא אל אברהם (&quot;I appeared to Abraham&quot;) spell אלם (&quot;mute&quot;) — the fathers&#x27; silence sealed into the verse that praises it; the initials&#x27; twenty-one = אהיה (&quot;I will be&quot;) named. THE SOJOURNINGS FILE CLOSED [EX06-10, MS on 6:4]: מגריהם (&quot;their sojournings&quot;) LEAN here — the whole-Torah census 2-full-1-lean exact (Gen 36:7, Gen 47:9 full) — gen_59&#x27;s file closes; the printed small Masorah ruled an ERROR again. THE RECEIVED NAMES [EX06-11, MS on 6:19]: מחלי (&quot;Machli&quot;) and נחשון (&quot;Nachshon&quot;) on the BARE sheva by the received tradition — the half-vowel law&#x27;s guttural boundary confirmed at chet, twice, inside names. THE ONE-WORD FULL NAMES [EX06-12, MS on 6:23-25, the Ramah]: פינחס (&quot;Pinchas&quot;) FULL at all four Torah stations, lean skeleton ZERO (the Samuel-side leans named); אלישבע, עמינדב (six stations, no lean twin), אביהוא, ואביאסף each one word — the priesthood entered written whole. THE ACCENT FILE [EX06-13, MS on 6:7-8]: the mid-verse pause on וליעקב (&quot;and to Jacob&quot;) landing on the stream&#x27;s own mark; כי (&quot;for&quot;) ruled with the גלגל (&quot;wheel&quot;) stroke and NOT with a מקף (&quot;binder&quot;) — the no-binder half VERIFIED in the stream; the wheel-stroke class&#x27;s STATION TEN, every station stored in the stream as מונח (&quot;rested,&quot; the plain servant-stroke). READINGS (named-only) [EX06-14]: the outside-the-city juxtaposition across the 6:1/6:2 seam; לתת (&quot;to give&quot;) = 830 = the two Temples&#x27; years; the ten-tribes count on אשר גרו בה (&quot;wherein they sojourned&quot;); נאקת (&quot;the groaning of&quot;) in atbash = the fathers&#x27; cry ascended.</div>
+<div class="meta">confidence: structure tested; oral layer verified 14/14</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>FORWARD ERA run 5, block 1 (owner: &quot;do 5 more exodus blocks&quot;). Canon continuation: Exod 6:1-30 — the answer, the I-am-the-LORD speech, the registry, the resumption; whole chapter.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Span + source + conventions</td><td>SNAPSHOT prestage: 30 verses; three without an etnachta (6:10, 6:17, 6:28) split at the strongest disjunctive per the standing fallback. No ketiv/qere pairs in-span. Volitive census: the say-command (6:6 emor), the go-speak double imperative (6:11 bo daber), the narrated joint charge (6:13 va-yetzavem), the resumption&#x27;s re-press (6:29 daber = the same card, resumptive repetition, no second push). The genealogy carries no naming-verbs — records, not coinages: no NAME ops.</td><td>established</td></tr>
+<tr><td><b>C</b></td><td>Machine structure</td><td>Three DECLAREs, one RESULT: the say-command pops at 6:9 on the compliance-adverb ken; the go-speak card stays OPEN (re-pressed + widened at 6:29; receipt armed 7:6); the joint charge stays OPEN at book-scale (receipt armed 12:51). Zero events. The registry bracket 6:14-25 read as the credential-file, closed by the twin attestation verses with the order-flip asserted (6:26/6:27). The doubled lips-objection brackets the registry (6:12 = 6:30, asserted). Queue at close: two open in-unit.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Exod 6 (14 notes) + Kitzur Baal HaTurim on Exod 6 (15 notes). Manifest 14 rows: 14 VERIFIED / 0 FAILED / 0 UNCHECKABLE. The dageshed- lamed rule censused whole (93 stations, two-sided) with a discrepancy observation against Or Torah&#x27;s except-one; the four redemption-verbs priced as letter-rarities; the sojournings file closed; galgal-class station ten.</td><td>established</td></tr>
+<tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 14/14 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-09 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits. Run FWD-5 block 1: Exod 1-6 continuous.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Ex_6_1 · Exod.6.1 · <span class='expr'>NOW_YOU_SHALL_SEE</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה עַתָּה תִרְאֶה אֲשֶׁר אֶעֱשֶׂה לְפַרְעֹה כִּי בְיָד חֲזָקָה יְשַׁלְּחֵם וּבְיָד חֲזָקָה יְגָרְשֵׁם מֵאַרְצוֹ</span> · <i>va-yomer YHWH el-moshe ata tire asher eese le-faro ki ve-yad chazaqa yeshalche-m u-ve-yad chazaqa yegarshe-m me-artz-o</i> · And the LORD said to Moses: Now you shall see what I will do to Pharaoh; for by a strong hand he shall send them, and by a strong hand he shall drive them out of his land.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה עַתָּ֣ה תִרְאֶ֔ה אֲשֶׁ֥ר אֶֽעֱשֶׂ֖ה לְפַרְעֹ֑ה</span> · <i>va-yomer YHWH el-moshe ata tire asher eese le-faro</i> · and the LORD said to Moses: now you shall see what I will do to Pharaoh (etnachta on le-faro) [VERIFIED: SNAPSHOT Exod.6.1 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּ֣י בְיָ֤ד חֲזָקָה֙ יְשַׁלְּחֵ֔ם וּבְיָ֣ד חֲזָקָ֔ה יְגָרְשֵׁ֖ם מֵאַרְצֽוֹ</span> · <i>ki ve-yad chazaqa yeshalche-m u-ve-yad chazaqa yegarshe-m me-artz-o</i> · for by a strong hand he shall send them, and by a strong hand he shall drive them out of his land (verse-final me-artz-o) [VERIFIED: SNAPSHOT Exod.6.1 idx9-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ata_tire_asher_eese_le_faro, t0)</span><br><span class="gloss">= HOLDS(ata-tire-which-eese-to-faro, t0)</span><br>THE ANSWER. ata TIRE — &#x27;NOW you shall SEE&#x27;: exo_05 closed on the indictment (5:22-23, &#x27;why have You dealt ill... You have not delivered&#x27;) and the corpus&#x27;s next verse is the reply — the seam the last run armed, landing on schedule (a narrative answer, not a card- pop: the indictment was a question, and no card was open for it); ki ve-YAD CHAZAQA yeshalchem — &#x27;by a STRONG HAND he shall SEND them&#x27;: the send-verb of the book (5:1&#x27;s refused demand) forecast in Pharaoh&#x27;s own future grammar, u-ve-yad chazaqa YEGARSHEM — &#x27;and by a strong hand he shall DRIVE THEM OUT of his land&#x27;: the drive-verb on top of the send-verb (the grant of 12:31-32 and the expulsion of 12:33 both pre-written): the machine files the mechanism-statement on the still-open send-demand — the strong hand is now on the record, and every plague to come is its ledger.
+</td><td><span class="he">עַתָּה תִרְאֶה אֲשֶׁר אֶעֱשֶׂה לְפַרְעֹה</span> · <i>ata tire asher eese le-faro</i><br><span class="gloss">= ata tire which eese to-faro</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The answer to the indictment; the run opens on the reply.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_2 · Exod.6.2 · <span class='expr'>I_AM_YHWH</span></h3>
+<p><span class="he">וַיְדַבֵּר אֱלֹהִים אֶל־מֹשֶׁה וַיֹּאמֶר אֵלָיו אֲנִי יְהוָה</span> · <i>va-yedaber Elohim el-moshe va-yomer elay-v ani YHWH</i> · And God spoke to Moses, and said to him: I am the LORD.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְדַבֵּ֥ר אֱלֹהִ֖ים אֶל מֹשֶׁ֑ה</span> · <i>va-yedaber Elohim el-moshe</i> · and God spoke to Moses (etnachta on moshe) [VERIFIED: SNAPSHOT Exod.6.2 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּ֥אמֶר אֵלָ֖יו אֲנִ֥י יְהוָֽה</span> · <i>va-yomer elay-v ani YHWH</i> · and said to him: I am the LORD (verse-final YHWH) [VERIFIED: SNAPSHOT Exod.6.2 idx4-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ani_YHWH, t0)</span><br><span class="gloss">= HOLDS(ani-the-LORD, t0)</span><br>THE DECLARATION. va-yedaber ELOHIM — the judgment-Name speaks (the readings&#x27; court-register); ani YHWH — &#x27;I am the LORD&#x27;: the envelope- formula that will close the speech at 6:8 and re-open the resumption at 6:29 — the machine files the frame; and the Kitzur reads the SEAM itself [EX06-14]: &#x27;above it is written HE SHALL DRIVE THEM OUT OF HIS LAND, and adjacent: AND GOD SPOKE — teaching that the speech was not within the city but outside it&#x27; (the Speaker keeping Egypt&#x27;s capital at arm&#x27;s length, read off the juxtaposition the machine just crossed).
+</td><td><span class="he">אֲנִי יְהוָה</span> · <i>ani YHWH</i><br><span class="gloss">= ani the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The speech-envelope opens.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_3 · Exod.6.3 · <span class='expr'>NOT_BY_MY_NAME_KNOWN</span></h3>
+<p><span class="he">וָאֵרָא אֶל־אַבְרָהָם אֶל־יִצְחָק וְאֶל־יַעֲקֹב בְּאֵל שַׁדָּי וּשְׁמִי יְהוָה לֹא נוֹדַעְתִּי לָהֶם</span> · <i>va-era el-avraham el-yitzchaq ve-el-yaaqov be-el shaday u-shemi-y YHWH lo nodati la-hem</i> · And I appeared to Abraham, to Isaac, and to Jacob as God Almighty; but by My name the LORD I was not known to them.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וָאֵרָ֗א אֶל אַבְרָהָ֛ם אֶל יִצְחָ֥ק וְאֶֽל יַעֲקֹ֖ב בְּאֵ֣ל שַׁדָּ֑י</span> · <i>va-era el-avraham el-yitzchaq ve-el-yaaqov be-el shaday</i> · and I appeared to Abraham, to Isaac, and to Jacob as God Almighty (etnachta on shaday) [VERIFIED: SNAPSHOT Exod.6.3 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּשְׁמִ֣י יְהוָ֔ה לֹ֥א נוֹדַ֖עְתִּי לָהֶֽם</span> · <i>u-shemi-y YHWH lo nodati la-hem</i> · but by My name the LORD I was not known to them (verse-final la-hem) [VERIFIED: SNAPSHOT Exod.6.3 idx9-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(u_shemi_YHWH_lo_nodati_lahem, t0)</span><br><span class="gloss">= HOLDS(and-shemi-the-LORD-not-nodati-to-them, t0)</span><br>THE FATHERS&#x27; FILE [EX06-09]. va-ERA el AVRAHAM — &#x27;I APPEARED to Abraham, to Isaac, and to Jacob&#x27;: the FINAL LETTERS of the opening three words spell אלם (&#x27;MUTE&#x27;) — the Kitzur: &#x27;they made themselves MUTE and did not question My ways&#x27; (the fathers&#x27; silence under unkept promises, sealed into the verse that praises it — VERIFIED in the stream); the appearing-word&#x27;s ciphers carried named: va-era = 208 = יצחק (&#x27;Isaac&#x27; — &#x27;Isaac caused Israel to go out&#x27;), the vav&#x27;s six = the six appearances written of the fathers (three, two, one), and the fathers&#x27; initials — alef, yod, yod — count twenty-one = אהיה (&#x27;I WILL BE,&#x27; the bush&#x27;s Name in their initials); u-shemi YHWH lo NODATI lahem — &#x27;by My Name I was not KNOWN&#x27;: the know-ledger&#x27;s divine column (5:2&#x27;s &#x27;I know not the LORD&#x27; answered: the not-knowing was mutual, and both files are about to close).
+</td><td><span class="he">וָאֵרָא אֶל־אַבְרָהָם</span> · <i>va-era el-avraham</i><br><span class="gloss">= and-era to-avraham</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The fathers&#x27; file opened; the mute finals.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_4 · Exod.6.4 · <span class='expr'>THE_COVENANT_STOOD</span></h3>
+<p><span class="he">וְגַם הֲקִמֹתִי אֶת־בְּרִיתִי אִתָּם לָתֵת לָהֶם אֶת־אֶרֶץ כְּנָעַן אֵת אֶרֶץ מְגֻרֵיהֶם אֲשֶׁר־גָּרוּ בָהּ</span> · <i>ve-gam haqimoti et-beriti-y et-m la-tet la-hem et-eretz kenaan et eretz megure-hem asher-garu va-ה</i> · And I also established My covenant with them, to give them the land of Canaan, the land of their sojournings, wherein they sojourned.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְגַ֨ם הֲקִמֹ֤תִי אֶת בְּרִיתִי֙ אִתָּ֔ם לָתֵ֥ת לָהֶ֖ם אֶת אֶ֣רֶץ כְּנָ֑עַן</span> · <i>ve-gam haqimoti et-beriti-y et-m la-tet la-hem et-eretz kenaan</i> · and I also established My covenant with them, to give them the land of Canaan (etnachta on kenaan) [VERIFIED: SNAPSHOT Exod.6.4 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֵ֛ת אֶ֥רֶץ מְגֻרֵיהֶ֖ם אֲשֶׁר גָּ֥רוּ בָֽהּ</span> · <i>et eretz megure-hem asher-garu va-ה</i> · the land of their sojournings, wherein they sojourned (verse-final va-ה) [VERIFIED: SNAPSHOT Exod.6.4 idx10-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(haqimoti_et_beriti, t0)</span><br><span class="gloss">= HOLDS(haqimoti-beriti, t0)</span><br>THE COVENANT [EX06-10]. va-gam HAQIMOTI et beriti — &#x27;I ESTABLISHED My covenant&#x27; (Gen 17&#x27;s establish-verb, the corpus&#x27;s covenant-engine cited by its own word); eretz MEGUREHEM — &#x27;the land of their SOJOURNINGS&#x27;: written LEAN, no vav — the tikkun&#x27;s ruling with MS&#x27;s warning that the PRINTED small Masorah &#x27;here and there is an ERROR — do not rely on it&#x27; (the run-file&#x27;s second printed-Masorah correction after the midwives&#x27; false unique): the census VERIFIED whole — full exactly twice (Esau&#x27;s departure Gen 36:7, Jacob&#x27;s days-of-my- sojournings Gen 47:9), lean exactly once, HERE: gen_59&#x27;s two-full- one-lean file closes its lean station inside the covenant-verse; asher GARU vah — the sojourn-verb on its dageshed gimel (MS, asserted); la-TET = 830 = the two Temples&#x27; years, 410 and 420 [EX06-14, named].
+</td><td><span class="he">אֵת אֶרֶץ מְגֻרֵיהֶם אֲשֶׁר־גָּרוּ בָהּ</span> · <i>et eretz megure-hem asher-garu va-ה</i><br><span class="gloss">= et earth megure-hem which-garu and-ה</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The covenant recited; the sojournings-file closes.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_5 · Exod.6.5 · <span class='expr'>THE_GROANING_HEARD</span></h3>
+<p><span class="he">וְגַם אֲנִי שָׁמַעְתִּי אֶת־נַאֲקַת בְּנֵי יִשְׂרָאֵל אֲשֶׁר מִצְרַיִם מַעֲבִדִים אֹתָם וָאֶזְכֹּר אֶת־בְּרִיתִי</span> · <i>ve-gam ani shamati et-naaqat bene yisrael asher mitzrayim maavidim et-m va-ezkor et-beriti-y</i> · And I also heard the groaning of the sons of Israel, whom Egypt holds in bondage; and I remembered My covenant.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְגַ֣ם אֲנִ֣י שָׁמַ֗עְתִּי אֶֽת נַאֲקַת֙ בְּנֵ֣י יִשְׂרָאֵ֔ל אֲשֶׁ֥ר מִצְרַ֖יִם מַעֲבִדִ֣ים אֹתָ֑ם</span> · <i>ve-gam ani shamati et-naaqat bene yisrael asher mitzrayim maavidim et-m</i> · and I also heard the groaning of the sons of Israel, whom Egypt holds in bondage (etnachta on et-m) [VERIFIED: SNAPSHOT Exod.6.5 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וָאֶזְכֹּ֖ר אֶת בְּרִיתִֽי</span> · <i>va-ezkor et-beriti-y</i> · and I remembered My covenant (verse-final beriti-y) [VERIFIED: SNAPSHOT Exod.6.5 idx11-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shamati_va_ezkor, t0)</span><br><span class="gloss">= HOLDS(shamati-and-ezkor, t0)</span><br>THE ENGINE. ve-gam ani SHAMATI et NAAQAT bene yisrael — &#x27;I HEARD the GROANING&#x27;: the two verbs that turned the book at the king&#x27;s death (2:24, &#x27;God HEARD their groaning, and God REMEMBERED His covenant&#x27;) restated in the first person — the machine matches the narrator&#x27;s report to the Speaker&#x27;s own confirmation, verb for verb (va-EZKOR et beriti — &#x27;and I REMEMBERED My covenant&#x27;); and the Kitzur reads the groaning-word&#x27;s cipher [EX06-14, named]: NAAQAT in atbash counts as THE FATHERS — &#x27;the cry of the fathers and their prayer ascended&#x27;: the groan carries the mute fathers of 6:3 inside its own letters.
+</td><td><span class="he">שָׁמַעְתִּי אֶת־נַאֲקַת בְּנֵי יִשְׂרָאֵל</span> · <i>shamati et-naaqat bene yisrael</i><br><span class="gloss">= shamati naaqat bene yisrael</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The engine restated in first person.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_6 · Exod.6.6 · <span class='expr'>THEREFORE_SAY</span></h3>
+<p><span class="he">לָכֵן אֱמֹר לִבְנֵי־יִשְׂרָאֵל אֲנִי יְהוָה וְהוֹצֵאתִי אֶתְכֶם מִתַּחַת סִבְלֹת מִצְרַיִם וְהִצַּלְתִּי אֶתְכֶם מֵעֲבֹדָתָם וְגָאַלְתִּי אֶתְכֶם בִּזְרוֹעַ נְטוּיָה וּבִשְׁפָטִים גְּדֹלִים</span> · <i>la-khen emor li-vene-yisrael ani YHWH ve-hotzeti et-khem mi-tachat sivlot mitzrayim ve-hitzalti et-khem me-avodata-m ve-gaalti et-khem bi-zeroa netuya u-vi-shefatim gedolim</i> · Therefore say to the sons of Israel: I am the LORD; and I will bring you out from under the burdens of Egypt, and I will deliver you from their bondage; and I will redeem you with an outstretched arm, and with great judgments.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">לָכֵ֞ן אֱמֹ֥ר לִבְנֵֽי יִשְׂרָאֵ֘ל אֲנִ֣י יְהוָה֒ וְהוֹצֵאתִ֣י אֶתְכֶ֗ם מִתַּ֨חַת֙ סִבְלֹ֣ת מִצְרַ֔יִם וְהִצַּלְתִּ֥י אֶתְכֶ֖ם מֵעֲבֹדָתָ֑ם</span> · <i>la-khen emor li-vene-yisrael ani YHWH ve-hotzeti et-khem mi-tachat sivlot mitzrayim ve-hitzalti et-khem me-avodata-m</i> · therefore say to the sons of Israel: I am the LORD; I will bring you out from under the burdens of Egypt, and deliver you from their bondage (etnachta on me-avodata-m) [VERIFIED: SNAPSHOT Exod.6.6 idx13 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְגָאַלְתִּ֤י אֶתְכֶם֙ בִּזְר֣וֹעַ נְטוּיָ֔ה וּבִשְׁפָטִ֖ים גְּדֹלִֽים</span> · <i>ve-gaalti et-khem bi-zeroa netuya u-vi-shefatim gedolim</i> · and I will redeem you with an outstretched arm, and with great judgments (verse-final gedolim) [VERIFIED: SNAPSHOT Exod.6.6 idx14-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(emor_li_vene_yisrael_ani_YHWH))</span><br><span class="gloss">= DECLARE(the-LORD, LET(emor-to-me-vene-yisrael-ani-the-LORD))</span><br>THE SAY-COMMAND [EX06-02 MARQUEE; EX06-04]. LAKHEN EMOR li-vene yisrael — &#x27;THEREFORE SAY to the sons of Israel&#x27;: the say-demand pushed on Moses with the redemption-speech as its content — and the therefore-say formula stands exactly TWICE in the Torah (VERIFIED): here, and at Pinchas&#x27; covenant of peace (Num 25:12) — the Sifrei&#x27;s ledger: &#x27;Moses was made the agent to bring Israel out of Egypt; Pinchas will be the agent to bring Israel out of the exile&#x27; — and the second man DEBUTS at 6:25, eight verses down (the two redeemers of the two therefore-says filed in one chapter); then the FOUR TONGUES OF REDEMPTION open [EX06-02]: ve-HOTZETI (&#x27;I will bring out&#x27;), ve-HITZALTI (&#x27;I will deliver&#x27;), ve-GAALTI (&#x27;I will redeem&#x27;) — the Kitzur: four tongues against the four kingdoms, their gematria the FOUR CUPS of the seder (named) — and the stream prices them as letter-rarities: the deliver-verb and the redeem-verb are each the Torah&#x27;s ONLY token of their form (VERIFIED), the bring-out verb&#x27;s whole career is three stations all inside this commissioning (6:6, 7:4, 7:5): the machine pushes the card and the letter spends once- in-a-Torah words to fill it.
+</td><td><span class="he">לָכֵן אֱמֹר לִבְנֵי־יִשְׂרָאֵל אֲנִי יְהוָה</span> · <i>la-khen emor li-vene-yisrael ani YHWH</i><br><span class="gloss">= so emor to-me-vene-yisrael ani the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The say-command pushed; the four tongues begin.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_7 · Exod.6.7 · <span class='expr'>I_WILL_TAKE_YOU</span></h3>
+<p><span class="he">וְלָקַחְתִּי אֶתְכֶם לִי לְעָם וְהָיִיתִי לָכֶם לֵאלֹהִים וִידַעְתֶּם כִּי אֲנִי יְהוָה אֱלֹהֵיכֶם הַמּוֹצִיא אֶתְכֶם מִתַּחַת סִבְלוֹת מִצְרָיִם</span> · <i>ve-laqachti et-khem li-y le-am ve-hayiti la-khem le-Elohim vi-ydatem ki ani YHWH elohe-khem ha-motzi et-khem mi-tachat sivlot mitzrayim</i> · And I will take you to Me for a people, and I will be to you a God; and you shall know that I am the LORD your God, who brings you out from under the burdens of Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְלָקַחְתִּ֨י אֶתְכֶ֥ם לִי֙ לְעָ֔ם וְהָיִ֥יתִי לָכֶ֖ם לֵֽאלֹהִ֑ים</span> · <i>ve-laqachti et-khem li-y le-am ve-hayiti la-khem le-Elohim</i> · and I will take you to Me for a people, and I will be to you a God (etnachta on le-Elohim) [VERIFIED: SNAPSHOT Exod.6.7 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וִֽידַעְתֶּ֗ם כִּ֣י אֲנִ֤י יְהוָה֙ אֱלֹ֣הֵיכֶ֔ם הַמּוֹצִ֣יא אֶתְכֶ֔ם מִתַּ֖חַת סִבְל֥וֹת מִצְרָֽיִם</span> · <i>vi-ydatem ki ani YHWH elohe-khem ha-motzi et-khem mi-tachat sivlot mitzrayim</i> · and you shall know that I am the LORD your God, who brings you out from under the burdens of Egypt (verse-final mitzrayim) [VERIFIED: SNAPSHOT Exod.6.7 idx7-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_laqachti_etkhem_li_le_am, t0)</span><br><span class="gloss">= HOLDS(and-laqachti-etkhem-to-me-to-am, t0)</span><br>THE FOURTH TONGUE [EX06-02; EX06-13]. ve-LAQACHTI etkhem li le-AM — &#x27;I will TAKE you to Me for a PEOPLE&#x27;: the fourth redemption-verb, the Torah&#x27;s ONLY token of its form (VERIFIED) — the Kitzur: written against EDOM, &#x27;as a man who takes by FORCE, for it is the hardest of them all&#x27; (the last exile under the last kingdom, named); vi-YDATEM ki ANI YHWH — &#x27;and you shall KNOW that I am the LORD&#x27;: the know- ledger&#x27;s bright column opened against 5:2&#x27;s &#x27;I know not&#x27; (Israel will know first; Egypt&#x27;s knowing is 7:5&#x27;s clause, armed); and KI ANI carries MS&#x27;s accent-ruling [EX06-13]: &#x27;ki with a GALGAL, not with a maqqef&#x27; — no maqqef in the stream (VERIFIED), the mark stored munach: STATION TEN of the galgal class, its tenth witness on the verse of knowing.
+</td><td><span class="he">וְלָקַחְתִּי אֶתְכֶם לִי לְעָם</span> · <i>ve-laqachti et-khem li-y le-am</i><br><span class="gloss">= and-laqachti khem to-me-y to-am</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The fourth tongue; the know-ledger&#x27;s bright column.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_8 · Exod.6.8 · <span class='expr'>I_WILL_BRING_YOU_IN</span></h3>
+<p><span class="he">וְהֵבֵאתִי אֶתְכֶם אֶל־הָאָרֶץ אֲשֶׁר נָשָׂאתִי אֶת־יָדִי לָתֵת אֹתָהּ לְאַבְרָהָם לְיִצְחָק וּלְיַעֲקֹב וְנָתַתִּי אֹתָהּ לָכֶם מוֹרָשָׁה אֲנִי יְהוָה</span> · <i>ve-heveti et-khem el-ha-aretz asher nasati et-yadi-y la-tet et-ה le-avraham le-yitzchaq u-le-yaaqov ve-natati et-ה la-khem morasha ani YHWH</i> · And I will bring you into the land which I lifted My hand to give to Abraham, to Isaac, and to Jacob; and I will give it to you as a heritage: I am the LORD.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהֵבֵאתִ֤י אֶתְכֶם֙ אֶל הָאָ֔רֶץ אֲשֶׁ֤ר נָשָׂ֨אתִי֙ אֶת יָדִ֔י לָתֵ֣ת אֹתָ֔הּ לְאַבְרָהָ֥ם לְיִצְחָ֖ק וּֽלְיַעֲקֹ֑ב</span> · <i>ve-heveti et-khem el-ha-aretz asher nasati et-yadi-y la-tet et-ה le-avraham le-yitzchaq u-le-yaaqov</i> · and I will bring you into the land which I lifted My hand to give to Abraham, to Isaac, and to Jacob (etnachta on u-le-yaaqov) [VERIFIED: SNAPSHOT Exod.6.8 idx12 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְנָתַתִּ֨י אֹתָ֥הּ לָכֶ֛ם מוֹרָשָׁ֖ה אֲנִ֥י יְהוָֽה</span> · <i>ve-natati et-ה la-khem morasha ani YHWH</i> · and I will give it to you as a heritage: I am the LORD (verse-final YHWH) [VERIFIED: SNAPSHOT Exod.6.8 idx13-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_heveti_etkhem_el_ha_aretz, t0)</span><br><span class="gloss">= HOLDS(and-heveti-etkhem-to-the-earth, t0)</span><br>THE FIFTH PROMISE [EX06-03; EX06-13]. ve-HEVETI etkhem el ha-aretz — &#x27;and I will BRING YOU IN&#x27;: the fifth verb over the four (the seder&#x27;s argued fifth cup, the readings name — carried on the four-cups file under EX06-02); asher NASATI et YADI — &#x27;which I LIFTED MY HAND to give&#x27;: the oath cited by its gesture; u-le-YAAQOV on the ETNACHTA — MS&#x27;s ruling landing on the stream&#x27;s own pause (VERIFIED [EX06-13]): the verse breathes on the third father before the giving; ve-natati ota lakhem MORASHA — &#x27;a HERITAGE&#x27;: the heritage-word&#x27;s exact Torah- pair (VERIFIED [EX06-03]) — the LAND here, the TORAH at Deut 33:4 (&#x27;the heritage of the congregation of Jacob&#x27;): the Kitzur: by the Torah&#x27;s merit the land is inherited — and the word&#x27;s shadow named: morasha not yerusha, &#x27;they TRANSMIT and do not inherit — that generation would not enter&#x27;: the fifth promise reads past its first hearers even as it is spoken; ANI YHWH seals the envelope opened at 6:2.
+</td><td><span class="he">וְנָתַתִּי אֹתָהּ לָכֶם מוֹרָשָׁה אֲנִי יְהוָה</span> · <i>ve-natati et-ה la-khem morasha ani YHWH</i><br><span class="gloss">= and-natati ה to-khem morasha ani the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The fifth promise; the heritage-pair; the envelope closes.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_9 · Exod.6.9 · <span class='expr'>MOSES_SPOKE_SO</span></h3>
+<p><span class="he">וַיְדַבֵּר מֹשֶׁה כֵּן אֶל־בְּנֵי יִשְׂרָאֵל וְלֹא שָׁמְעוּ אֶל־מֹשֶׁה מִקֹּצֶר רוּחַ וּמֵעֲבֹדָה קָשָׁה</span> · <i>va-yedaber moshe ken el-bene yisrael ve-lo shamu el-moshe mi-qotzer rucha u-me-avoda qasha</i> · And Moses spoke so to the sons of Israel; but they did not hear Moses, from shortness of breath and from hard bondage.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְדַבֵּ֥ר מֹשֶׁ֛ה כֵּ֖ן אֶל בְּנֵ֣י יִשְׂרָאֵ֑ל</span> · <i>va-yedaber moshe ken el-bene yisrael</i> · and Moses spoke so to the sons of Israel (etnachta on yisrael) [VERIFIED: SNAPSHOT Exod.6.9 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְלֹ֤א שָֽׁמְעוּ֙ אֶל מֹשֶׁ֔ה מִקֹּ֣צֶר ר֔וּחַ וּמֵעֲבֹדָ֖ה קָשָֽׁה</span> · <i>ve-lo shamu el-moshe mi-qotzer rucha u-me-avoda qasha</i> · but they did not hear Moses, from shortness of breath and from hard bondage (verse-final qasha) [VERIFIED: SNAPSHOT Exod.6.9 idx6-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(emor_li_vene_yisrael_ani_YHWH, t1)</span><br><span class="gloss">= RESULT: HOLDS(emor-to-me-vene-yisrael-ani-the-LORD, t1)</span><br>THE DELIVERY AND THE DEAF EAR [EX06-05]. va-yedaber moshe KEN el bene yisrael — &#x27;and Moses spoke SO&#x27;: the exact compliance-adverb (ken — &#x27;so, just as commanded&#x27;) pops the say-command in its own next verse (delivery is what was demanded; delivery is what is narrated); ve-lo SHAMU el moshe — &#x27;but they did not HEAR&#x27;: the outcome recorded against NO card (hearing was never commanded — the machine keeps the failure where the letter keeps it, on the hearers); mi-QOTZER RUACH — &#x27;from SHORTNESS OF BREATH&#x27;: written DEFECTIVE, the Torah&#x27;s only token of the form (VERIFIED), and the Kitzur reads the missing vav&#x27;s arithmetic — the lean word counts 430: &#x27;at the end of 430 years they went out&#x27; (12:41&#x27;s own number stamped inside the word for why the promise could not be heard): the people too winded to hear the four verbs carry the verbs&#x27; due-date in the shortened word itself.
+</td><td><span class="he">וַיְדַבֵּר מֹשֶׁה כֵּן אֶל־בְּנֵי יִשְׂרָאֵל</span> · <i>va-yedaber moshe ken el-bene yisrael</i><br><span class="gloss">= and-yedaber Moses ken to-bene yisrael</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The say-command popped; the deaf ear priced in years.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_10 · Exod.6.10 · <span class='expr'>THE_GO_SPEAK_FRAME</span></h3>
+<p><span class="he">וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר</span> · <i>va-yedaber YHWH el-moshe le-mor</i> · And the LORD spoke to Moses, saying:</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְדַבֵּ֥ר יְהוָ֖ה</span> · <i>va-yedaber YHWH</i> · and the LORD spoke (NO etnachta in verse: split at tifcha on YHWH) [VERIFIED: SNAPSHOT Exod.6.10 idx1 tifcha; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֶל מֹשֶׁ֥ה לֵּאמֹֽר</span> · <i>el-moshe le-mor</i> · to Moses, saying (verse-final le-mor) [VERIFIED: SNAPSHOT Exod.6.10 idx2-4]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yedaber_YHWH_el_moshe_lemor, t0)</span><br><span class="gloss">= HOLDS(and-yedaber-the-LORD-to-Moses-lemor, t0)</span><br>THE FRAME [EX06-01 MARQUEE]. va-yedaber YHWH el-MOSHE LEMOR — &#x27;to Moses, SAYING&#x27;: the Michlol&#x27;s two-sided rule, quoted whole by MS, lands on this five-word frame — the lamed of &#x27;to Moses, saying&#x27; is ALWAYS dageshed; the lamed of &#x27;to Moses AND TO AARON, saying&#x27; is NEVER dageshed — and the stream carries the law almost whole (VERIFIED): the compound stations soft all FOURTEEN times, the Moses-alone stations dageshed at 77 of 79 (both in-span stations hard — here and 6:29); Or Torah ruled &#x27;the whole Torah except ONE&#x27; (the sons-of-Gad verse, Num 32:25 — indeed soft), but the stream carries a SECOND soft he did not name (the sons-of-Israel plea, Num 17:27): both exceptions are the PEOPLE pressing Moses — the divine frame never once drops its dagesh, and the census files the discrepancy observation against Or Torah&#x27;s count: a rule verified at 91 of 93 stations on the commonest sentence in the Torah.
+</td><td><span class="he">וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר</span> · <i>va-yedaber YHWH el-moshe le-mor</i><br><span class="gloss">= and-yedaber the-LORD to-Moses to-mor</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The frame-verse; the dageshed lamed&#x27;s station.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_11 · Exod.6.11 · <span class='expr'>GO_SPEAK_TO_PHARAOH</span></h3>
+<p><span class="he">בֹּא דַבֵּר אֶל־פַּרְעֹה מֶלֶךְ מִצְרָיִם וִישַׁלַּח אֶת־בְּנֵי־יִשְׂרָאֵל מֵאַרְצוֹ</span> · <i>bo daber el-paro melekh mitzrayim vi-yshalach et-bene-yisrael me-artz-o</i> · Go, speak to Pharaoh king of Egypt, that he send the sons of Israel out of his land.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">בֹּ֣א דַבֵּ֔ר אֶל פַּרְעֹ֖ה מֶ֣לֶךְ מִצְרָ֑יִם</span> · <i>bo daber el-paro melekh mitzrayim</i> · go, speak to Pharaoh king of Egypt (etnachta on mitzrayim) [VERIFIED: SNAPSHOT Exod.6.11 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וִֽישַׁלַּ֥ח אֶת בְּנֵֽי יִשְׂרָאֵ֖ל מֵאַרְצֽוֹ</span> · <i>vi-yshalach et-bene-yisrael me-artz-o</i> · that he send the sons of Israel out of his land (verse-final me-artz-o) [VERIFIED: SNAPSHOT Exod.6.11 idx6-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(bo_daber_el_paro))</span><br><span class="gloss">= DECLARE(the-LORD, LET(in-it-daber-to-paro))</span><br>THE GO-SPEAK DEMAND. BO DABER el paro melekh mitzrayim — &#x27;GO, SPEAK to Pharaoh king of Egypt&#x27;: the double imperative pushed on Moses (the volitive census&#x27;s real card: go, and speak); vi-YSHALACH et bene yisrael ME-ARTZO — &#x27;that he SEND the sons of Israel OUT OF HIS LAND&#x27;: the send-verb again with 6:1&#x27;s land-word (me-artzo — the drive-out&#x27;s address repeated from the promise to the errand); the machine pushes the card OPEN with its receipt armed one unit over: 7:6&#x27;s &#x27;and Moses and Aaron DID as the LORD commanded them&#x27; — the compliance-verse that will pop this card sits three verses into the next chapter, and the resumption at 6:29 will re-press this same demand before it is paid.
+</td><td><span class="he">בֹּא דַבֵּר אֶל־פַּרְעֹה מֶלֶךְ מִצְרָיִם</span> · <i>bo daber el-paro melekh mitzrayim</i><br><span class="gloss">= in-it daber to-paro melekh mitzrayim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The go-speak demand pushed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_12 · Exod.6.12 · <span class='expr'>UNCIRCUMCISED_LIPS</span></h3>
+<p><span class="he">וַיְדַבֵּר מֹשֶׁה לִפְנֵי יְהוָה לֵאמֹר הֵן בְּנֵי־יִשְׂרָאֵל לֹא־שָׁמְעוּ אֵלַי וְאֵיךְ יִשְׁמָעֵנִי פַרְעֹה וַאֲנִי עֲרַל שְׂפָתָיִם</span> · <i>va-yedaber moshe li-fene YHWH le-mor hen bene-yisrael lo-shamu el-y ve-ekh yishmae-ni faro va-ani aral sefatayim</i> · And Moses spoke before the LORD, saying: Behold, the sons of Israel have not heard me; how then shall Pharaoh hear me — and I am of uncircumcised lips.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְדַבֵּ֣ר מֹשֶׁ֔ה לִפְנֵ֥י יְהוָ֖ה לֵאמֹ֑ר</span> · <i>va-yedaber moshe li-fene YHWH le-mor</i> · and Moses spoke before the LORD, saying (etnachta on le-mor) [VERIFIED: SNAPSHOT Exod.6.12 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">הֵ֤ן בְּנֵֽי יִשְׂרָאֵל֙ לֹֽא שָׁמְע֣וּ אֵלַ֔י וְאֵיךְ֙ יִשְׁמָעֵ֣נִי פַרְעֹ֔ה וַאֲנִ֖י עֲרַ֥ל שְׂפָתָֽיִם</span> · <i>hen bene-yisrael lo-shamu el-y ve-ekh yishmae-ni faro va-ani aral sefatayim</i> · behold, the sons of Israel have not heard me; how then shall Pharaoh hear me — and I am of uncircumcised lips (verse-final sefatayim) [VERIFIED: SNAPSHOT Exod.6.12 idx5-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hen_lo_shamu_elay, t0)</span><br><span class="gloss">= HOLDS(hen-not-shamu-elay, t0)</span><br>THE OBJECTION. hen bene-yisrael LO-SHAMU elay — &#x27;behold, the sons of Israel have NOT HEARD me&#x27;: Moses wields 6:9&#x27;s outcome as argument (the machine notes the state-read: the un-carded failure becomes the next plea&#x27;s premise); ve-EKH yishmaeni FARO — &#x27;HOW then shall Pharaoh hear me&#x27; (the a-fortiori the readings count among the Torah&#x27;s ten, named-only); va-ani ARAL SEFATAYIM — &#x27;and I am of UNCIRCUMCISED LIPS&#x27;: the lips-plea in its first station — the exact pair-phrase will return verbatim at 6:30 (asserted at the build: the chapter brackets its genealogy inside the doubled objection), and the Masorah&#x27;s answer-file waits on the second station [EX06-08 armed].
+</td><td><span class="he">וְאֵיךְ יִשְׁמָעֵנִי פַרְעֹה וַאֲנִי עֲרַל שְׂפָתָיִם</span> · <i>ve-ekh yishmae-ni faro va-ani aral sefatayim</i><br><span class="gloss">= and-ekh yishmae-ni faro and-ani aral sefatayim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The objection; the argument built from 6:9.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_13 · Exod.6.13 · <span class='expr'>THE_JOINT_CHARGE</span></h3>
+<p><span class="he">וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה וְאֶל־אַהֲרֹן וַיְצַוֵּם אֶל־בְּנֵי יִשְׂרָאֵל וְאֶל־פַּרְעֹה מֶלֶךְ מִצְרָיִם לְהוֹצִיא אֶת־בְּנֵי־יִשְׂרָאֵל מֵאֶרֶץ מִצְרָיִם</span> · <i>va-yedaber YHWH el-moshe ve-el-aharon va-yetzave-m el-bene yisrael ve-el-paro melekh mitzrayim le-hotzi et-bene-yisrael me-eretz mitzrayim</i> · And the LORD spoke to Moses and to Aaron, and gave them a charge to the sons of Israel, and to Pharaoh king of Egypt, to bring the sons of Israel out of the land of Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְדַבֵּ֣ר יְהוָה֮ אֶל מֹשֶׁ֣ה וְאֶֽל אַהֲרֹן֒ וַיְצַוֵּם֙ אֶל בְּנֵ֣י יִשְׂרָאֵ֔ל וְאֶל פַּרְעֹ֖ה מֶ֣לֶךְ מִצְרָ֑יִם</span> · <i>va-yedaber YHWH el-moshe ve-el-aharon va-yetzave-m el-bene yisrael ve-el-paro melekh mitzrayim</i> · and the LORD spoke to Moses and to Aaron, and charged them to the sons of Israel and to Pharaoh king of Egypt (etnachta on mitzrayim) [VERIFIED: SNAPSHOT Exod.6.13 idx13 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לְהוֹצִ֥יא אֶת בְּנֵֽי יִשְׂרָאֵ֖ל מֵאֶ֥רֶץ מִצְרָֽיִם</span> · <i>le-hotzi et-bene-yisrael me-eretz mitzrayim</i> · to bring the sons of Israel out of the land of Egypt (verse-final mitzrayim) [VERIFIED: SNAPSHOT Exod.6.13 idx14-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim))</span><br><span class="gloss">= DECLARE(the-LORD, LET(hotzi-bene-yisrael-from-earth-mitzrayim))</span><br>THE CHARGE [EX06-06]. va-yedaber YHWH el-moshe VE-el-aharon — the first joint address since the errand began (Aaron enters the command-frame: the compound the registry will certify at 6:26-27); va-YETZAVEM — &#x27;and He COMMANDED them&#x27;: the command-them verb&#x27;s exact Torah-pair (VERIFIED) — here, and at the descent from Sinai (34:32, &#x27;he commanded them ALL that the LORD had spoken&#x27;); the Kitzur&#x27;s Masorah counts four with the Prophets&#x27; two — Yehoyada&#x27;s coup-command (bloodshed) and the Samaritans&#x27; charge (idolatry): &#x27;so too here — to keep far from idolatry and from bloodshed&#x27; (the charge&#x27;s content read from its concordance-row); le-HOTZI et bene yisrael me-eretz mitzrayim — &#x27;to BRING OUT the sons of Israel&#x27;: the machine pushes the charge-card OPEN at book-scale — its receipt is the going-out itself (12:51, &#x27;the selfsame day&#x27; — armed six chapters long).
+</td><td><span class="he">וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה וְאֶל־אַהֲרֹן</span> · <i>va-yedaber YHWH el-moshe ve-el-aharon</i><br><span class="gloss">= and-yedaber the-LORD to-Moses and-to-Aaron</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The charge-card; the command-verb&#x27;s pair.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_14 · Exod.6.14 · <span class='expr'>THE_REGISTRY_OPENS</span></h3>
+<p><span class="he">אֵלֶּה רָאשֵׁי בֵית־אֲבֹתָם בְּנֵי רְאוּבֵן בְּכֹר יִשְׂרָאֵל חֲנוֹךְ וּפַלּוּא חֶצְרוֹן וְכַרְמִי אֵלֶּה מִשְׁפְּחֹת רְאוּבֵן</span> · <i>ele rashe vet-avota-m bene reuven bekhor yisrael chanokh u-falu chetzron ve-kharmi ele mishpchot reuven</i> · These are the heads of their fathers&#x27; houses: the sons of Reuben, Israel&#x27;s firstborn — Enoch and Pallu, Hezron and Carmi; these are the families of Reuben.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אֵ֖לֶּה רָאשֵׁ֣י בֵית אֲבֹתָ֑ם</span> · <i>ele rashe vet-avota-m</i> · these are the heads of their fathers&#x27; houses (etnachta on avota-m) [VERIFIED: SNAPSHOT Exod.6.14 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">בְּנֵ֨י רְאוּבֵ֜ן בְּכֹ֣ר יִשְׂרָאֵ֗ל חֲנ֤וֹךְ וּפַלּוּא֙ חֶצְר֣וֹן וְכַרְמִ֔י אֵ֖לֶּה מִשְׁפְּחֹ֥ת רְאוּבֵֽן</span> · <i>bene reuven bekhor yisrael chanokh u-falu chetzron ve-kharmi ele mishpchot reuven</i> · the sons of Reuben, Israel&#x27;s firstborn: Enoch and Pallu, Hezron and Carmi — these are the families of Reuben (verse-final reuven) [VERIFIED: SNAPSHOT Exod.6.14 idx4-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ele_rashe_vet_avotam, t0)</span><br><span class="gloss">= HOLDS(ele-rashe-vet-avotam, t0)</span><br>THE BRACKET. ELE rashe VET-avotam — &#x27;THESE are the heads of their fathers&#x27; houses&#x27; (the bet of vet soft — MS&#x27;s rafe ruling, asserted at the build): the narrative halts mid-commission and opens a REGISTRY (the letter&#x27;s own order: before the speakers face Pharaoh, the book certifies who they are — the machine reads 6:14-25 as the credential-file the twin attestation-verses will sign); bene REUVEN bekhor yisrael — the list boots from the firstborn (Reuben, then Simeon — the eldest lines despatched in a verse each, the file aiming at LEVI).
+</td><td><span class="he">אֵלֶּה רָאשֵׁי בֵית־אֲבֹתָם</span> · <i>ele rashe vet-avota-m</i><br><span class="gloss">= ele rashe vet-avota-m</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The bracket opens; the commission pauses to certify WHO.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_15 · Exod.6.15 · <span class='expr'>SIMEONS_SONS</span></h3>
+<p><span class="he">וּבְנֵי שִׁמְעוֹן יְמוּאֵל וְיָמִין וְאֹהַד וְיָכִין וְצֹחַר וְשָׁאוּל בֶּן־הַכְּנַעֲנִית אֵלֶּה מִשְׁפְּחֹת שִׁמְעוֹן</span> · <i>u-vene shimon yemuel ve-yamin ve-ohad ve-yakhin ve-tzochar ve-shaul ben-ha-kenaanit ele mishpchot shimon</i> · And the sons of Simeon: Jemuel, and Jamin, and Ohad, and Jachin, and Zohar, and Saul the son of the Canaanite woman; these are the families of Simeon.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבְנֵ֣י שִׁמְע֗וֹן יְמוּאֵ֨ל וְיָמִ֤ין וְאֹ֨הַד֙ וְיָכִ֣ין וְצֹ֔חַר וְשָׁא֖וּל בֶּן הַֽכְּנַעֲנִ֑ית</span> · <i>u-vene shimon yemuel ve-yamin ve-ohad ve-yakhin ve-tzochar ve-shaul ben-ha-kenaanit</i> · and the sons of Simeon: Jemuel, Jamin, Ohad, Jachin, Zohar, and Saul the son of the Canaanite woman (etnachta on ha-kenaanit) [VERIFIED: SNAPSHOT Exod.6.15 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֵ֖לֶּה מִשְׁפְּחֹ֥ת שִׁמְעֽוֹן</span> · <i>ele mishpchot shimon</i> · these are the families of Simeon (verse-final shimon) [VERIFIED: SNAPSHOT Exod.6.15 idx10-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ele_mishpechot_shimon, t0)</span><br><span class="gloss">= HOLDS(ele-mishpechot-shimon, t0)</span><br>THE SECOND LINE. u-vene SHIMON — Simeon&#x27;s six, closing on shaul ben- ha-KENAANIT (&#x27;the son of the CANAANITE woman&#x27; — the one annotated son in the two despatch-verses; the readings&#x27; hearings on Dinah&#x27;s line named-only, unclaimed): the machine files the pattern — two tribal headers verbatim from Gen 46&#x27;s ledger (the corpus&#x27;s roster- file), and the list arrives at the tribe it came for.
+</td><td><span class="he">וּבְנֵי שִׁמְעוֹן</span> · <i>u-vene shimon</i><br><span class="gloss">= and-vene shimon</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The second line despatched.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_16 · Exod.6.16 · <span class='expr'>LEVIS_YEARS</span></h3>
+<p><span class="he">וְאֵלֶּה שְׁמוֹת בְּנֵי־לֵוִי לְתֹלְדֹתָם גֵּרְשׁוֹן וּקְהָת וּמְרָרִי וּשְׁנֵי חַיֵּי לֵוִי שֶׁבַע וּשְׁלֹשִׁים וּמְאַת שָׁנָה</span> · <i>ve-ele shemot bene-levi le-toldota-m gershon u-qehat u-merari u-shene chaye levi sheva u-sheloshim u-meat shana</i> · And these are the names of the sons of Levi by their generations: Gershon, and Kohath, and Merari; and the years of Levi&#x27;s life were seven and thirty and a hundred years.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאֵ֨לֶּה שְׁמ֤וֹת בְּנֵֽי לֵוִי֙ לְתֹ֣לְדֹתָ֔ם גֵּרְשׁ֕וֹן וּקְהָ֖ת וּמְרָרִ֑י</span> · <i>ve-ele shemot bene-levi le-toldota-m gershon u-qehat u-merari</i> · and these are the names of the sons of Levi by their generations: Gershon, Kohath, and Merari (etnachta on u-merari) [VERIFIED: SNAPSHOT Exod.6.16 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּשְׁנֵי֙ חַיֵּ֣י לֵוִ֔י שֶׁ֧בַע וּשְׁלֹשִׁ֛ים וּמְאַ֖ת שָׁנָֽה</span> · <i>u-shene chaye levi sheva u-sheloshim u-meat shana</i> · and the years of Levi&#x27;s life: seven and thirty and a hundred years (verse-final shana) [VERIFIED: SNAPSHOT Exod.6.16 idx8-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(u_shene_chaye_levi, t0)</span><br><span class="gloss">= HOLDS(and-shene-chaye-levi, t0)</span><br>THE THIRD LINE. ve-ELE SHEMOT bene LEVI — &#x27;and these are the NAMES of the sons of Levi&#x27;: the book of NAMES (shemot) re-sounds its title-word over the one tribe it will follow; li-TOLDOTAM — &#x27;by their GENERATIONS&#x27; (the doubly-lean toledot-skeleton, gen_42&#x27;s Vaera-pair file — this is that Vaera station); u-shene CHAYE LEVI — the registry starts counting LIFE-TOTALS (137; only Levi&#x27;s line gets years in this file — the readings: the tribe&#x27;s span measures the exile it outlived, named-only): the machine opens the three-house structure the priesthood will stand on.
+</td><td><span class="he">וְאֵלֶּה שְׁמוֹת בְּנֵי־לֵוִי לְתֹלְדֹתָם</span> · <i>ve-ele shemot bene-levi le-toldota-m</i><br><span class="gloss">= and-ele names bene-levi to-toldota-m</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The names-word returns; the first life-total.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_17 · Exod.6.17 · <span class='expr'>GERSHONS_SONS</span></h3>
+<p><span class="he">בְּנֵי גֵרְשׁוֹן לִבְנִי וְשִׁמְעִי לְמִשְׁפְּחֹתָם</span> · <i>bene gershon livni ve-shimi le-mishpchota-m</i> · The sons of Gershon: Libni and Shimei, by their families.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">בְּנֵ֥י גֵרְשׁ֛וֹן לִבְנִ֥י וְשִׁמְעִ֖י</span> · <i>bene gershon livni ve-shimi</i> · the sons of Gershon: Libni and Shimei (NO etnachta in verse: split at tifcha on ve-shimi) [VERIFIED: SNAPSHOT Exod.6.17 idx3 tifcha; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">לְמִשְׁפְּחֹתָֽם</span> · <i>le-mishpchota-m</i> · by their families (verse-final le-mishpchota-m) [VERIFIED: SNAPSHOT Exod.6.17 idx4-4]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(bene_gershon, t0)</span><br><span class="gloss">= HOLDS(bene-gershon, t0)</span><br>THE FIRST HOUSE. bene GERSHON livni ve-shimi — Gershon&#x27;s two, le- mishpechotam (&#x27;by their families&#x27;): the machine files the house- record plain (no etnachta in the five-word verse — the split rides the tifcha, the frame&#x27;s own small pause).
+</td><td><span class="he">בְּנֵי גֵרְשׁוֹן לִבְנִי וְשִׁמְעִי</span> · <i>bene gershon livni ve-shimi</i><br><span class="gloss">= bene gershon livni and-shimi</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The first house.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_18 · Exod.6.18 · <span class='expr'>KOHATHS_SONS</span></h3>
+<p><span class="he">וּבְנֵי קְהָת עַמְרָם וְיִצְהָר וְחֶבְרוֹן וְעֻזִּיאֵל וּשְׁנֵי חַיֵּי קְהָת שָׁלֹשׁ וּשְׁלֹשִׁים וּמְאַת שָׁנָה</span> · <i>u-vene qehat amram ve-yitzhar ve-chevron ve-uziel u-shene chaye qehat shalosh u-sheloshim u-meat shana</i> · And the sons of Kohath: Amram, and Izhar, and Hebron, and Uzziel; and the years of Kohath&#x27;s life were three and thirty and a hundred years.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבְנֵ֣י קְהָ֔ת עַמְרָ֣ם וְיִצְהָ֔ר וְחֶבְר֖וֹן וְעֻזִּיאֵ֑ל</span> · <i>u-vene qehat amram ve-yitzhar ve-chevron ve-uziel</i> · and the sons of Kohath: Amram, Izhar, Hebron, and Uzziel (etnachta on ve-uziel) [VERIFIED: SNAPSHOT Exod.6.18 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּשְׁנֵי֙ חַיֵּ֣י קְהָ֔ת שָׁלֹ֧שׁ וּשְׁלֹשִׁ֛ים וּמְאַ֖ת שָׁנָֽה</span> · <i>u-shene chaye qehat shalosh u-sheloshim u-meat shana</i> · and the years of Kohath&#x27;s life: three and thirty and a hundred years (verse-final shana) [VERIFIED: SNAPSHOT Exod.6.18 idx6-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(u_vene_qehat, t0)</span><br><span class="gloss">= HOLDS(and-vene-qehat, t0)</span><br>THE SECOND HOUSE. u-vene QEHAT: AMRAM — the father-name enters the file (the man 2:1 left as &#x27;a MAN of the house of Levi&#x27; — the registry is three verses from signing him); ve-YITZHAR (whose first son is Korach, 6:21) ve-CHEVRON ve-UZIEL (whose sons are the corpse- carriers of Lev 10:4, armed at 6:22); u-shene chaye QEHAT — 133: the second life-total (Kohath, the ark-house; the count the readings tie to the descent&#x27;s clock, named-only).
+</td><td><span class="he">עַמְרָם</span> · <i>amram</i><br><span class="gloss">= amram</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The second house; Amram enters.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_19 · Exod.6.19 · <span class='expr'>MERARIS_SONS</span></h3>
+<p><span class="he">וּבְנֵי מְרָרִי מַחְלִי וּמוּשִׁי אֵלֶּה מִשְׁפְּחֹת הַלֵּוִי לְתֹלְדֹתָם</span> · <i>u-vene merari machli u-mushi ele mishpchot ha-levi le-toldota-m</i> · And the sons of Merari: Machli and Mushi; these are the families of the Levite by their generations.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבְנֵ֥י מְרָרִ֖י מַחְלִ֣י וּמוּשִׁ֑י</span> · <i>u-vene merari machli u-mushi</i> · and the sons of Merari: Machli and Mushi (etnachta on u-mushi) [VERIFIED: SNAPSHOT Exod.6.19 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֵ֛לֶּה מִשְׁפְּחֹ֥ת הַלֵּוִ֖י לְתֹלְדֹתָֽם</span> · <i>ele mishpchot ha-levi le-toldota-m</i> · these are the families of the Levite by their generations (verse-final le-toldota-m) [VERIFIED: SNAPSHOT Exod.6.19 idx4-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(u_vene_merari, t0)</span><br><span class="gloss">= HOLDS(and-vene-merari, t0)</span><br>THE THIRD HOUSE [EX06-11]. u-vene MERARI: MACHLI — and MS files the name&#x27;s half-vowel by the received tradition: &#x27;the chet takes the BARE SHEVA alone — and so NACHSHON&#x27; (6:23), citing a manuscript grammar: &#x27;these are among the NAMES whose guttural letters take only the bare half-vowel, by the received tradition&#x27; — both names VERIFIED in the stream: the corpus&#x27;s half-vowel law (stations on resh, tzadi, lamed, qof; gutturals bare at ayin and he) gains two CHET witnesses inside proper names, with the tradition&#x27;s own seal on exactly the reading the stream carries; ele mishpechot ha-LEVI le- toldotam — the three houses close their header.
+</td><td><span class="he">מַחְלִי וּמוּשִׁי</span> · <i>machli u-mushi</i><br><span class="gloss">= machli and-mushi</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The third house; the bare-sheva name.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_20 · Exod.6.20 · <span class='expr'>AMRAM_TAKES_YOKHEVED</span></h3>
+<p><span class="he">וַיִּקַּח עַמְרָם אֶת־יוֹכֶבֶד דֹּדָתוֹ לוֹ לְאִשָּׁה וַתֵּלֶד לוֹ אֶת־אַהֲרֹן וְאֶת־מֹשֶׁה וּשְׁנֵי חַיֵּי עַמְרָם שֶׁבַע וּשְׁלֹשִׁים וּמְאַת שָׁנָה</span> · <i>va-yiqach amram et-yokheved dodat-o l-o le-isha va-teled l-o et-aharon ve-et-moshe u-shene chaye amram sheva u-sheloshim u-meat shana</i> · And Amram took Yokheved his father&#x27;s sister to himself as wife, and she bore him Aaron and Moses; and the years of Amram&#x27;s life were seven and thirty and a hundred years.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּקַּ֨ח עַמְרָ֜ם אֶת יוֹכֶ֤בֶד דֹּֽדָתוֹ֙ ל֣וֹ לְאִשָּׁ֔ה וַתֵּ֣לֶד ל֔וֹ אֶֽת אַהֲרֹ֖ן וְאֶת מֹשֶׁ֑ה</span> · <i>va-yiqach amram et-yokheved dodat-o l-o le-isha va-teled l-o et-aharon ve-et-moshe</i> · and Amram took Yokheved his father&#x27;s sister to himself as wife, and she bore him Aaron and Moses (etnachta on moshe) [VERIFIED: SNAPSHOT Exod.6.20 idx12 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּשְׁנֵי֙ חַיֵּ֣י עַמְרָ֔ם שֶׁ֧בַע וּשְׁלֹשִׁ֛ים וּמְאַ֖ת שָׁנָֽה</span> · <i>u-shene chaye amram sheva u-sheloshim u-meat shana</i> · and the years of Amram&#x27;s life: seven and thirty and a hundred years (verse-final shana) [VERIFIED: SNAPSHOT Exod.6.20 idx13-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yiqach_amram_et_yokheved, t0)</span><br><span class="gloss">= HOLDS(and-yiqach-amram-yokheved, t0)</span><br>THE PARENTS SIGNED. va-yiqach AMRAM et YOKHEVED dodato lo le-isha — &#x27;and Amram took YOKHEVED his father&#x27;s sister to himself as wife&#x27;: the letter signs the names it withheld at 2:1 (&#x27;a man of the house of Levi took a daughter of Levi&#x27;) — exo_02&#x27;s registry restraint (the corpus refused to invent the parents) is PAID here, four chapters late, by the registry itself: the machine&#x27;s world-file writes amram and yokheved on this verse&#x27;s authority (the fold&#x27;s entity-registry additions cite 6:20); va-TELED lo et-AHARON ve-et-MOSHE — Aaron before Moses (the order the attestation-verses will weigh at 6:26-27); u-shene chaye AMRAM — 137, Levi&#x27;s own total repeated on his grandson (the readings&#x27; aunt-marriage hearings — dodato before Sinai&#x27;s law — named-only, unclaimed).
+</td><td><span class="he">וַיִּקַּח עַמְרָם אֶת־יוֹכֶבֶד דֹּדָתוֹ</span> · <i>va-yiqach amram et-yokheved dodat-o</i><br><span class="gloss">= and-yiqach amram yokheved dodat-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The parents signed; exo_02&#x27;s restraint pays off.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_21 · Exod.6.21 · <span class='expr'>IZHARS_SONS</span></h3>
+<p><span class="he">וּבְנֵי יִצְהָר קֹרַח וָנֶפֶג וְזִכְרִי</span> · <i>u-vene yitzhar qorach va-nefeg ve-zikhri</i> · And the sons of Izhar: Korach, and Nepheg, and Zichri.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבְנֵ֖י יִצְהָ֑ר</span> · <i>u-vene yitzhar</i> · and the sons of Izhar (etnachta on yitzhar) [VERIFIED: SNAPSHOT Exod.6.21 idx1 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">קֹ֥רַח וָנֶ֖פֶג וְזִכְרִֽי</span> · <i>qorach va-nefeg ve-zikhri</i> · Korach, and Nepheg, and Zichri (verse-final ve-zikhri) [VERIFIED: SNAPSHOT Exod.6.21 idx2-4]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(u_vene_yitzhar, t0)</span><br><span class="gloss">= HOLDS(and-vene-yitzhar, t0)</span><br>THE COUSIN-LINE. u-vene YITZHAR: QORACH — the name enters the registry two generations before its rebellion (Num 16 armed at the entry itself; the machine files the record without foreknowledge — a name, a house, a family); ve-NEFEG ve-ZIKHRI close the verse (a three-name record, no etnachta-half needed beyond the header&#x27;s pause).
+</td><td><span class="he">קֹרַח</span> · <i>qorach</i><br><span class="gloss">= qorach</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Korach enters the file.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_22 · Exod.6.22 · <span class='expr'>UZZIELS_SONS</span></h3>
+<p><span class="he">וּבְנֵי עֻזִּיאֵל מִישָׁאֵל וְאֶלְצָפָן וְסִתְרִי</span> · <i>u-vene uziel mishael ve-eltzafan ve-sitri</i> · And the sons of Uzziel: Mishael, and Elzaphan, and Sithri.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבְנֵ֖י עֻזִּיאֵ֑ל</span> · <i>u-vene uziel</i> · and the sons of Uzziel (etnachta on uziel) [VERIFIED: SNAPSHOT Exod.6.22 idx1 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">מִֽישָׁאֵ֥ל וְאֶלְצָפָ֖ן וְסִתְרִֽי</span> · <i>mishael ve-eltzafan ve-sitri</i> · Mishael, and Elzaphan, and Sithri (verse-final ve-sitri) [VERIFIED: SNAPSHOT Exod.6.22 idx2-4]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(u_vene_uziel, t0)</span><br><span class="gloss">= HOLDS(and-vene-uziel, t0)</span><br>THE CARRIER-LINE. u-vene UZIEL: MISHAEL ve-ELTZAFAN — the two cousins the corpus already needs: Lev 10:4 (&#x27;come near, carry your brothers from before the sanctuary&#x27;) summons exactly these two names to carry Nadav and Avihu&#x27;s bodies — and both the dead (6:23) and their bearers (here) enter the Torah in adjacent verses of one registry (the machine arms the cross-book receipt: the corpus&#x27;s Leviticus units already hold the strange-fire file); ve-SITRI closes the record.
+</td><td><span class="he">מִישָׁאֵל וְאֶלְצָפָן</span> · <i>mishael ve-eltzafan</i><br><span class="gloss">= mishael and-eltzafan</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The carriers pre-armed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_23 · Exod.6.23 · <span class='expr'>AARON_TAKES_ELISHEVA</span></h3>
+<p><span class="he">וַיִּקַּח אַהֲרֹן אֶת־אֱלִישֶׁבַע בַּת־עַמִּינָדָב אֲחוֹת נַחְשׁוֹן לוֹ לְאִשָּׁה וַתֵּלֶד לוֹ אֶת־נָדָב וְאֶת־אֲבִיהוּא אֶת־אֶלְעָזָר וְאֶת־אִיתָמָר</span> · <i>va-yiqach aharon et-elisheva bat-aminadav achot nachshon l-o le-isha va-teled l-o et-nadav ve-et-avihu et-elazar ve-et-itamar</i> · And Aaron took Elisheva, daughter of Amminadav, sister of Nachshon, to himself as wife; and she bore him Nadav and Avihu, Elazar and Itamar.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּקַּ֨ח אַהֲרֹ֜ן אֶת אֱלִישֶׁ֧בַע בַּת עַמִּינָדָ֛ב אֲח֥וֹת נַחְשׁ֖וֹן ל֣וֹ לְאִשָּׁ֑ה</span> · <i>va-yiqach aharon et-elisheva bat-aminadav achot nachshon l-o le-isha</i> · and Aaron took Elisheva, daughter of Amminadav, sister of Nachshon, to himself as wife (etnachta on le-isha) [VERIFIED: SNAPSHOT Exod.6.23 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתֵּ֣לֶד ל֗וֹ אֶת נָדָב֙ וְאֶת אֲבִיה֔וּא אֶת אֶלְעָזָ֖ר וְאֶת אִֽיתָמָֽר</span> · <i>va-teled l-o et-nadav ve-et-avihu et-elazar ve-et-itamar</i> · and she bore him Nadav and Avihu, Elazar and Itamar (verse-final itamar) [VERIFIED: SNAPSHOT Exod.6.23 idx10-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yiqach_aharon_et_elisheva, t0)</span><br><span class="gloss">= HOLDS(and-yiqach-Aaron-elisheva, t0)</span><br>THE PRIESTLY MARRIAGE [EX06-12; EX06-11]. va-yiqach AHARON et ELISHEVA bat-AMINADAV achot NACHSHON — the priestly line marries into Judah&#x27;s princely house (Nachshon, the wilderness roster&#x27;s first prince — his chet on the bare sheva, MS&#x27;s second received-name, VERIFIED [EX06-11]); and the verse is the Ramah&#x27;s one-word file [EX06-12]: ELISHEVA one word with its yod, AMINADAV one word with its yod &#x27;and all the Torah likewise&#x27; (six stations, no lean twin — VERIFIED at the build; so too Masekhet Soferim), AVIHU one word: the four sons born in the second half — NADAV va-AVIHU (Lev 10:1&#x27;s fire armed), ELAZAR ve-ITAMAR (the succession): every name in the priesthood&#x27;s founding record written whole.
+</td><td><span class="he">וַיִּקַּח אַהֲרֹן אֶת־אֱלִישֶׁבַע בַּת־עַמִּינָדָב אֲחוֹת נַחְשׁוֹן</span> · <i>va-yiqach aharon et-elisheva bat-aminadav achot nachshon</i><br><span class="gloss">= and-yiqach Aaron elisheva bat-aminadav achot nachshon</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The priestly marriage; the one-word names.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_24 · Exod.6.24 · <span class='expr'>KORACHS_SONS</span></h3>
+<p><span class="he">וּבְנֵי קֹרַח אַסִּיר וְאֶלְקָנָה וַאֲבִיאָסָף אֵלֶּה מִשְׁפְּחֹת הַקָּרְחִי</span> · <i>u-vene qorach asir ve-elqana va-aviasaf ele mishpchot ha-qarchi</i> · And the sons of Korach: Assir, and Elkanah, and Aviasaph; these are the families of the Korahite.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבְנֵ֣י קֹ֔רַח אַסִּ֥יר וְאֶלְקָנָ֖ה וַאֲבִיאָסָ֑ף</span> · <i>u-vene qorach asir ve-elqana va-aviasaf</i> · and the sons of Korach: Assir, and Elkanah, and Aviasaph (etnachta on va-aviasaf) [VERIFIED: SNAPSHOT Exod.6.24 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֵ֖לֶּה מִשְׁפְּחֹ֥ת הַקָּרְחִֽי</span> · <i>ele mishpchot ha-qarchi</i> · these are the families of the Korahite (verse-final ha-qarchi) [VERIFIED: SNAPSHOT Exod.6.24 idx5-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(u_vene_qorach, t0)</span><br><span class="gloss">= HOLDS(and-vene-qorach, t0)</span><br>THE PRISONER&#x27;S NAME [EX06-07]. u-vene QORACH: ASSIR — the name stands ONCE in the Torah (VERIFIED), and the Kitzur&#x27;s Masorah pairs it with its common-noun twin, &#x27;to bring out from the prison the BOUND&#x27; (Isa 42:7): &#x27;a place was FORTIFIED for the sons of Korach in Gehinnom&#x27; (the ledge of the pit, Num 26:11&#x27;s they-did-not-die) — &#x27;and this is: to bring out from prison the bound&#x27;: Korach&#x27;s firstborn carries, at his single station, the name of his line&#x27;s release (the sons-of-Korach psalms named); va-AVIASAF one word (the Ramah, asserted); ha-QARCHI on its dageshed qof (MS, asserted): the rebel&#x27;s house entered with its redemption spelled into the first son.
+</td><td><span class="he">אַסִּיר וְאֶלְקָנָה וַאֲבִיאָסָף</span> · <i>asir ve-elqana va-aviasaf</i><br><span class="gloss">= asir and-elqana and-aviasaf</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The prisoner&#x27;s name; the release pre-written.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_25 · Exod.6.25 · <span class='expr'>ELAZAR_AND_PINCHAS</span></h3>
+<p><span class="he">וְאֶלְעָזָר בֶּן־אַהֲרֹן לָקַח־לוֹ מִבְּנוֹת פּוּטִיאֵל לוֹ לְאִשָּׁה וַתֵּלֶד לוֹ אֶת־פִּינְחָס אֵלֶּה רָאשֵׁי אֲבוֹת הַלְוִיִּם לְמִשְׁפְּחֹתָם</span> · <i>ve-elazar ben-aharon laqach-l-o mi-benot putiel l-o le-isha va-teled l-o et-pinchas ele rashe avot ha-leviyim le-mishpchota-m</i> · And Elazar, Aaron&#x27;s son, took for himself of the daughters of Putiel as wife; and she bore him Pinchas. These are the heads of the fathers of the Levites by their families.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאֶלְעָזָ֨ר בֶּֽן אַהֲרֹ֜ן לָקַֽח ל֨וֹ מִבְּנ֤וֹת פּֽוּטִיאֵל֙ ל֣וֹ לְאִשָּׁ֔ה וַתֵּ֥לֶד ל֖וֹ אֶת פִּֽינְחָ֑ס</span> · <i>ve-elazar ben-aharon laqach-l-o mi-benot putiel l-o le-isha va-teled l-o et-pinchas</i> · and Elazar, Aaron&#x27;s son, took for himself of the daughters of Putiel as wife, and she bore him Pinchas (etnachta on pinchas) [VERIFIED: SNAPSHOT Exod.6.25 idx12 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֵ֗לֶּה רָאשֵׁ֛י אֲב֥וֹת הַלְוִיִּ֖ם לְמִשְׁפְּחֹתָֽם</span> · <i>ele rashe avot ha-leviyim le-mishpchota-m</i> · these are the heads of the fathers of the Levites by their families (verse-final le-mishpchota-m) [VERIFIED: SNAPSHOT Exod.6.25 idx13-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_teled_lo_et_pinchas, t0)</span><br><span class="gloss">= HOLDS(and-teled-not-pinchas, t0)</span><br>THE LAST ENTRY [EX06-12 MARQUEE; EX06-04]. ve-ELAZAR ben-aharon laqach-lo mi-benot PUTIEL — the third taking (the registry&#x27;s three marriages: Amram&#x27;s, Aaron&#x27;s, Elazar&#x27;s — each va-teled lo, each one son-line deeper); va-teled lo et-PINCHAS — &#x27;and she bore him PINCHAS&#x27;: the priest-line&#x27;s end-point enters FULL — &#x27;written with yod, and all the Torah likewise&#x27; (the Ramah): all four Torah stations carry the yod and the lean skeleton stands ZERO times (VERIFIED; the lean forms live in Samuel, outside the stream — MS&#x27;s own cross-note named); and EX06-04&#x27;s pair closes its loop: the man of the SECOND therefore-say (Num 25:12&#x27;s covenant of peace) is born eight verses after the first therefore-say (6:6) — the registry&#x27;s last name is the last redeemer&#x27;s; ele rashe avot ha-LEVIYIM — the bracket&#x27;s closing formula.
+</td><td><span class="he">וַתֵּלֶד לוֹ אֶת־פִּינְחָס</span> · <i>va-teled l-o et-pinchas</i><br><span class="gloss">= and-teled l-o pinchas</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The registry closes on the zealot&#x27;s birth.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_26 · Exod.6.26 · <span class='expr'>THAT_AARON_AND_MOSES</span></h3>
+<p><span class="he">הוּא אַהֲרֹן וּמֹשֶׁה אֲשֶׁר אָמַר יְהוָה לָהֶם הוֹצִיאוּ אֶת־בְּנֵי יִשְׂרָאֵל מֵאֶרֶץ מִצְרַיִם עַל־צִבְאֹתָם</span> · <i>hu aharon u-moshe asher amar YHWH la-hem hotziu et-bene yisrael me-eretz mitzrayim al-tzivota-m</i> · This is that Aaron and Moses, to whom the LORD said: Bring out the sons of Israel from the land of Egypt by their hosts.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ה֥וּא אַהֲרֹ֖ן וּמֹשֶׁ֑ה</span> · <i>hu aharon u-moshe</i> · this is that Aaron and Moses (etnachta on u-moshe) [VERIFIED: SNAPSHOT Exod.6.26 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֲשֶׁ֨ר אָמַ֤ר יְהוָה֙ לָהֶ֔ם הוֹצִ֜יאוּ אֶת בְּנֵ֧י יִשְׂרָאֵ֛ל מֵאֶ֥רֶץ מִצְרַ֖יִם עַל צִבְאֹתָֽם</span> · <i>asher amar YHWH la-hem hotziu et-bene yisrael me-eretz mitzrayim al-tzivota-m</i> · to whom the LORD said: bring out the sons of Israel from the land of Egypt by their hosts (verse-final tzivota-m) [VERIFIED: SNAPSHOT Exod.6.26 idx3-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hu_aharon_u_moshe, t0)</span><br><span class="gloss">= HOLDS(that-Aaron-and-Moses, t0)</span><br>THE ATTESTATION. HU aharon u-MOSHE — &#x27;THIS is that Aaron and Moses&#x27;: the registry&#x27;s purpose lands — the identity-verse points from the file back to the commissioned pair (asserted at the build: aharon- then-moshe here); asher AMAR YHWH lahem — &#x27;to whom the LORD SAID&#x27; — hotziu et bene yisrael me-eretz mitzrayim al-TZIVOTAM: the charge of 6:13 quoted back nearly verbatim inside the certification (the machine matches the card&#x27;s content to the credential&#x27;s wording), with the hosts-word added (&#x27;by their HOSTS&#x27; — 7:4&#x27;s tzivotai and 12:51&#x27;s al-tzivotam armed: the going-out will use this verse&#x27;s own term).
+</td><td><span class="he">הוּא אַהֲרֹן וּמֹשֶׁה</span> · <i>hu aharon u-moshe</i><br><span class="gloss">= that Aaron Moses</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The attestation; the charge quoted back.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_27 · Exod.6.27 · <span class='expr'>THE_SPEAKERS_FLIPPED</span></h3>
+<p><span class="he">הֵם הַמְדַבְּרִים אֶל־פַּרְעֹה מֶלֶךְ־מִצְרַיִם לְהוֹצִיא אֶת־בְּנֵי־יִשְׂרָאֵל מִמִּצְרָיִם הוּא מֹשֶׁה וְאַהֲרֹן</span> · <i>hem ha-medabrim el-paro melekh-mitzrayim le-hotzi et-bene-yisrael mi-mitzrayim hu moshe ve-aharon</i> · They are the ones who speak to Pharaoh king of Egypt, to bring out the sons of Israel from Egypt: this is that Moses and Aaron.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">הֵ֗ם הַֽמְדַבְּרִים֙ אֶל פַּרְעֹ֣ה מֶֽלֶךְ מִצְרַ֔יִם לְהוֹצִ֥יא אֶת בְּנֵֽי יִשְׂרָאֵ֖ל מִמִּצְרָ֑יִם</span> · <i>hem ha-medabrim el-paro melekh-mitzrayim le-hotzi et-bene-yisrael mi-mitzrayim</i> · they are the ones who speak to Pharaoh king of Egypt, to bring the sons of Israel out of Egypt (etnachta on mi-mitzrayim) [VERIFIED: SNAPSHOT Exod.6.27 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">ה֥וּא מֹשֶׁ֖ה וְאַהֲרֹֽן</span> · <i>hu moshe ve-aharon</i> · this is that Moses and Aaron (verse-final ve-aharon) [VERIFIED: SNAPSHOT Exod.6.27 idx11-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hu_moshe_ve_aharon, t0)</span><br><span class="gloss">= HOLDS(that-Moses-and-Aaron, t0)</span><br>THE FLIP. hem ha-MEDABRIM el-paro — &#x27;THEY are the ones who SPEAK to Pharaoh&#x27; (the speaking-participle: the go-speak card&#x27;s addressee and agents restated as standing fact); hu MOSHE ve-AHARON — &#x27;this is that MOSES and Aaron&#x27;: the order FLIPS across the twin verses (6:26 aharon u-moshe / 6:27 moshe ve-aharon — both orders asserted at the build): the stream certifies the compound in both directions, and the machine files the two-way signature on the two-man entity (moshe_ve_aharon, the world-registry&#x27;s compound) before the throne- audiences resume.
+</td><td><span class="he">הוּא מֹשֶׁה וְאַהֲרֹן</span> · <i>hu moshe ve-aharon</i><br><span class="gloss">= that Moses Aaron</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The flip; the compound certified both ways.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_28 · Exod.6.28 · <span class='expr'>THE_RESUMPTION_DAY</span></h3>
+<p><span class="he">וַיְהִי בְּיוֹם דִּבֶּר יְהוָה אֶל־מֹשֶׁה בְּאֶרֶץ מִצְרָיִם</span> · <i>va-yehi be-yom diber YHWH el-moshe be-eretz mitzrayim</i> · And it came to pass, on the day the LORD spoke to Moses in the land of Egypt:</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֗י בְּי֨וֹם דִּבֶּ֧ר יְהוָ֛ה אֶל מֹשֶׁ֖ה</span> · <i>va-yehi be-yom diber YHWH el-moshe</i> · and it came to pass, on the day the LORD spoke to Moses (NO etnachta in verse: split at tifcha on moshe) [VERIFIED: SNAPSHOT Exod.6.28 idx5 tifcha; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">בְּאֶ֥רֶץ מִצְרָֽיִם</span> · <i>be-eretz mitzrayim</i> · in the land of Egypt (verse-final mitzrayim) [VERIFIED: SNAPSHOT Exod.6.28 idx6-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yehi_be_yom_diber, t0)</span><br><span class="gloss">= HOLDS(and-yehi-in-day-diber, t0)</span><br>THE RE-GRIP. va-yehi be-YOM diber YHWH el-moshe — &#x27;on the DAY the LORD spoke&#x27;: the narrative re-dates itself after the bracket (the resumptive frame: eight words, no etnachta — the split rides the tifcha before the closing place-phrase); be-ERETZ MITZRAYIM — &#x27;in the land of EGYPT&#x27;: the venue restated (the Kitzur&#x27;s outside-the- city reading of 6:1-2 still governing the file [EX06-14]): the machine marks the seam — what follows re-presses what 6:10-12 left open.
+</td><td><span class="he">וַיְהִי בְּיוֹם דִּבֶּר יְהוָה אֶל־</span> · <i>va-yehi be-yom diber YHWH el-</i><br><span class="gloss">= and-yehi day diber the-LORD to</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The narrative re-grips.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_29 · Exod.6.29 · <span class='expr'>SPEAK_ALL_THAT_I_SPEAK</span></h3>
+<p><span class="he">וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר אֲנִי יְהוָה דַּבֵּר אֶל־פַּרְעֹה מֶלֶךְ מִצְרַיִם אֵת כָּל־אֲשֶׁר אֲנִי דֹּבֵר אֵלֶיךָ</span> · <i>va-yedaber YHWH el-moshe le-mor ani YHWH daber el-paro melekh mitzrayim et kal-asher ani dover ele-kha</i> · And the LORD spoke to Moses, saying: I am the LORD; speak to Pharaoh king of Egypt all that I speak to you.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְדַבֵּ֧ר יְהוָ֛ה אֶל מֹשֶׁ֥ה לֵּאמֹ֖ר אֲנִ֣י יְהוָ֑ה</span> · <i>va-yedaber YHWH el-moshe le-mor ani YHWH</i> · and the LORD spoke to Moses, saying: I am the LORD (etnachta on YHWH) [VERIFIED: SNAPSHOT Exod.6.29 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">דַּבֵּ֗ר אֶל פַּרְעֹה֙ מֶ֣לֶךְ מִצְרַ֔יִם אֵ֛ת כָּל אֲשֶׁ֥ר אֲנִ֖י דֹּבֵ֥ר אֵלֶֽיךָ</span> · <i>daber el-paro melekh mitzrayim et kal-asher ani dover ele-kha</i> · speak to Pharaoh king of Egypt all that I speak to you (verse-final ele-kha) [VERIFIED: SNAPSHOT Exod.6.29 idx7-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(daber_el_paro_et_kol_asher_ani_dover, t0)</span><br><span class="gloss">= HOLDS(daber-to-paro-all-which-ani-dover, t0)</span><br>THE RE-ISSUE [EX06-01]. ani YHWH — the envelope-formula re-opens; DABER el-paro melekh mitzrayim et KOL-asher ani dover elekha — &#x27;speak to Pharaoh ALL that I speak to you&#x27;: the resumption re- presses the OPEN go-speak card (6:11&#x27;s demand restated, not doubled — one demand, one card, the machine notes the resumptive class) and WIDENS its content: from &#x27;that he send&#x27; to &#x27;ALL that I speak&#x27; (the plague-cycle&#x27;s standing commission pre-loaded into the card the next unit will pop at 7:6); el-MOSHE LEMOR carries the dageshed lamed&#x27;s second in-span station (VERIFIED [EX06-01] — the divine frame that never drops its dagesh).
+</td><td><span class="he">דַּבֵּר אֶל־פַּרְעֹה מֶלֶךְ מִצְרַיִם</span> · <i>daber el-paro melekh mitzrayim</i><br><span class="gloss">= daber to-paro melekh mitzrayim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The re-issue; the card widened, not doubled.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_6_30 · Exod.6.30 · <span class='expr'>THE_SECOND_PLEA</span></h3>
+<p><span class="he">וַיֹּאמֶר מֹשֶׁה לִפְנֵי יְהוָה הֵן אֲנִי עֲרַל שְׂפָתַיִם וְאֵיךְ יִשְׁמַע אֵלַי פַּרְעֹה</span> · <i>va-yomer moshe li-fene YHWH hen ani aral sefatayim ve-ekh yishma el-y paro</i> · And Moses said before the LORD: Behold, I am of uncircumcised lips; how shall Pharaoh hear me?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֥אמֶר מֹשֶׁ֖ה לִפְנֵ֣י יְהוָ֑ה</span> · <i>va-yomer moshe li-fene YHWH</i> · and Moses said before the LORD (etnachta on YHWH) [VERIFIED: SNAPSHOT Exod.6.30 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">הֵ֤ן אֲנִי֙ עֲרַ֣ל שְׂפָתַ֔יִם וְאֵ֕יךְ יִשְׁמַ֥ע אֵלַ֖י פַּרְעֹֽה</span> · <i>hen ani aral sefatayim ve-ekh yishma el-y paro</i> · behold, I am of uncircumcised lips; how shall Pharaoh hear me? (verse-final paro) [VERIFIED: SNAPSHOT Exod.6.30 idx4-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hen_ani_aral_sefatayim, t0)</span><br><span class="gloss">= HOLDS(hen-ani-aral-sefatayim, t0)</span><br>THE SECOND PLEA [EX06-08]. HEN ANI aral sefatayim — &#x27;BEHOLD, I am of uncircumcised lips&#x27;: the doubled objection closes its bracket (6:12&#x27;s exact pair-phrase, asserted) — and the behold-I pair stands ONCE in the Torah (VERIFIED), completed by the Masorah&#x27;s four leaning-stations across Scripture: &#x27;Behold, I am toward God AS YOUR MOUTH&#x27; (Job 33:6 — the Kitzur: Heaven&#x27;s own answer, &#x27;do not fear the foreskin of your lips, for I will be WITH YOUR MOUTH&#x27;), the left- alone of Isa 49:21, the eunuch&#x27;s dry tree of Isa 56:3: the concordance answers the plea the narrative will answer at 7:1 (&#x27;see, I have set you as elohim to Pharaoh — and Aaron your brother shall be your prophet,&#x27; armed): the unit ends mid-dialogue with two cards open and the answer one verse over the border — the same seam-shape exo_05 ended on, one book-beat later.
+</td><td><span class="he">הֵן אֲנִי עֲרַל שְׂפָתַיִם</span> · <i>hen ani aral sefatayim</i><br><span class="gloss">= hen ani aral sefatayim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The chapter ends mid-objection; the answer armed.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Ex_6_1 — now you shall see</td><td>And the LORD said to Moses: Now you shall see what I will do to Pharaoh; for by a strong hand he shall send them, and by a strong hand he shall drive them out of his land.</td><td>no test, no name.</td><td><span class="he">וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה</span> · <i>va-yomer YHWH el-moshe</i><br><span class="gloss">= and-yomer the-LORD to-Moses</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Ex_6_2 — I am the LORD</td><td>And God spoke to Moses, and said to him: I am the LORD.</td><td>no test, no name.</td><td><span class="he">וַיְדַבֵּ֥ר אֱלֹהִ֖ים אֶל מֹשֶׁ֑ה</span> · <i>va-yedaber Elohim el-moshe</i><br><span class="gloss">= and-yedaber God to-Moses</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Ex_6_3 — not by My name known</td><td>And I appeared to Abraham, to Isaac, and to Jacob as God Almighty; but by My name the LORD I was not known to them.</td><td>no test, no name.</td><td><span class="he">וָאֵרָ֗א אֶל אַבְרָהָ֛ם אֶל</span> · <i>va-era el-avraham el-</i><br><span class="gloss">= and-era to-avraham to</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Ex_6_4 — the covenant stood</td><td>And I also established My covenant with them, to give them the land of Canaan, the land of their sojournings, wherein they sojourned.</td><td>no test, no name.</td><td><span class="he">וְגַ֨ם הֲקִמֹ֤תִי אֶת בְּרִיתִי֙</span> · <i>ve-gam haqimoti et-beriti-y</i><br><span class="gloss">= and-also haqimoti beriti-y</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Ex_6_5 — the groaning heard</td><td>And I also heard the groaning of the sons of Israel, whom Egypt holds in bondage; and I remembered My covenant.</td><td>no test, no name.</td><td><span class="he">וְגַ֣ם אֲנִ֣י שָׁמַ֗עְתִּי אֶֽת</span> · <i>ve-gam ani shamati et-</i><br><span class="gloss">= and-also ani shamati et-</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Ex_6_6 — therefore say</td><td>Therefore say to the sons of Israel: I am the LORD; and I will bring you out from under the burdens of Egypt, and I will deliver you from their bondage; and I will redeem you with an outstretched arm, and with great judgments.</td><td>LET(emor_li_vene_yisrael_ani_YHWH) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(emor-to-me-vene-yisrael-ani-the-LORD) pushed and OPEN; no test, no name.</span></td><td><span class="he">לָכֵ֞ן אֱמֹ֥ר לִבְנֵֽי יִשְׂרָאֵ֘ל</span> · <i>la-khen emor li-vene-yisrael</i><br><span class="gloss">= so emor to-me-vene-yisrael</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Ex_6_7 — I will take you</td><td>And I will take you to Me for a people, and I will be to you a God; and you shall know that I am the LORD your God, who brings you out from under the burdens of Egypt.</td><td>LET(emor_li_vene_yisrael_ani_YHWH) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(emor-to-me-vene-yisrael-ani-the-LORD) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְלָקַחְתִּ֨י אֶתְכֶ֥ם לִי֙ לְעָ֔ם</span> · <i>ve-laqachti et-khem li-y le-am</i><br><span class="gloss">= and-laqachti khem to-me-y to-am</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Ex_6_8 — I will bring you in</td><td>And I will bring you into the land which I lifted My hand to give to Abraham, to Isaac, and to Jacob; and I will give it to you as a heritage: I am the LORD.</td><td>LET(emor_li_vene_yisrael_ani_YHWH) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(emor-to-me-vene-yisrael-ani-the-LORD) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהֵבֵאתִ֤י אֶתְכֶם֙ אֶל הָאָ֔רֶץ</span> · <i>ve-heveti et-khem el-ha-aretz</i><br><span class="gloss">= and-heveti khem to-the-earth</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Ex_6_9 — Moses spoke so</td><td>And Moses spoke so to the sons of Israel; but they did not hear Moses, from shortness of breath and from hard bondage.</td><td>no test, no name.</td><td><span class="he">וַיְדַבֵּ֥ר מֹשֶׁ֛ה כֵּ֖ן אֶל</span> · <i>va-yedaber moshe ken el-</i><br><span class="gloss">= and-yedaber Moses ken to</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Ex_6_10 — the go-speak frame</td><td>And the LORD spoke to Moses, saying:</td><td>no test, no name.</td><td><span class="he">וַיְדַבֵּ֥ר יְהוָ֖ה אֶל מֹשֶׁ֥ה</span> · <i>va-yedaber YHWH el-moshe</i><br><span class="gloss">= and-yedaber the-LORD to-Moses</span></td></tr>
+<tr><td><b>S11</b></td><td>after STEP_Ex_6_11 — go, speak to Pharaoh</td><td>Go, speak to Pharaoh king of Egypt, that he send the sons of Israel out of his land.</td><td>LET(bo_daber_el_paro) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-daber-to-paro) pushed and OPEN; no test, no name.</span></td><td><span class="he">בֹּ֣א דַבֵּ֔ר אֶל פַּרְעֹ֖ה</span> · <i>bo daber el-paro</i><br><span class="gloss">= in-it daber to-paro</span></td></tr>
+<tr><td><b>S12</b></td><td>after STEP_Ex_6_12 — uncircumcised lips</td><td>And Moses spoke before the LORD, saying: Behold, the sons of Israel have not heard me; how then shall Pharaoh hear me — and I am of uncircumcised lips.</td><td>LET(bo_daber_el_paro) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-daber-to-paro) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְדַבֵּ֣ר מֹשֶׁ֔ה לִפְנֵ֥י יְהוָ֖ה</span> · <i>va-yedaber moshe li-fene YHWH</i><br><span class="gloss">= and-yedaber Moses to-me-fene the-LORD</span></td></tr>
+<tr><td><b>S13</b></td><td>after STEP_Ex_6_13 — the joint charge</td><td>And the LORD spoke to Moses and to Aaron, and gave them a charge to the sons of Israel, and to Pharaoh king of Egypt, to bring the sons of Israel out of the land of Egypt.</td><td>LET(bo_daber_el_paro) pushed and OPEN; LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-daber-to-paro) pushed and OPEN; LET(hotzi-bene-yisrael-from-earth-mitzrayim) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְדַבֵּ֣ר יְהוָה֮ אֶל מֹשֶׁ֣ה</span> · <i>va-yedaber YHWH el-moshe</i><br><span class="gloss">= and-yedaber the-LORD to-Moses</span></td></tr>
+<tr><td><b>S14</b></td><td>after STEP_Ex_6_14 — the registry opens</td><td>These are the heads of their fathers&#x27; houses: the sons of Reuben, Israel&#x27;s firstborn — Enoch and Pallu, Hezron and Carmi; these are the families of Reuben.</td><td>LET(bo_daber_el_paro) pushed and OPEN; LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-daber-to-paro) pushed and OPEN; LET(hotzi-bene-yisrael-from-earth-mitzrayim) pushed and OPEN; no test, no name.</span></td><td><span class="he">אֵ֖לֶּה רָאשֵׁ֣י בֵית אֲבֹתָ֑ם</span> · <i>ele rashe vet-avota-m</i><br><span class="gloss">= ele rashe vet-avota-m</span></td></tr>
+<tr><td><b>S15</b></td><td>after STEP_Ex_6_15 — Simeon&#x27;s sons</td><td>And the sons of Simeon: Jemuel, and Jamin, and Ohad, and Jachin, and Zohar, and Saul the son of the Canaanite woman; these are the families of Simeon.</td><td>LET(bo_daber_el_paro) pushed and OPEN; LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-daber-to-paro) pushed and OPEN; LET(hotzi-bene-yisrael-from-earth-mitzrayim) pushed and OPEN; no test, no name.</span></td><td><span class="he">וּבְנֵ֣י שִׁמְע֗וֹן יְמוּאֵ֨ל וְיָמִ֤ין</span> · <i>u-vene shimon yemuel ve-yamin</i><br><span class="gloss">= and-vene shimon yemuel and-yamin</span></td></tr>
+<tr><td><b>S16</b></td><td>after STEP_Ex_6_16 — Levi&#x27;s years</td><td>And these are the names of the sons of Levi by their generations: Gershon, and Kohath, and Merari; and the years of Levi&#x27;s life were seven and thirty and a hundred years.</td><td>LET(bo_daber_el_paro) pushed and OPEN; LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-daber-to-paro) pushed and OPEN; LET(hotzi-bene-yisrael-from-earth-mitzrayim) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְאֵ֨לֶּה שְׁמ֤וֹת בְּנֵֽי לֵוִי֙</span> · <i>ve-ele shemot bene-levi</i><br><span class="gloss">= and-ele names bene-levi</span></td></tr>
+<tr><td><b>S17</b></td><td>after STEP_Ex_6_17 — Gershon&#x27;s sons</td><td>The sons of Gershon: Libni and Shimei, by their families.</td><td>LET(bo_daber_el_paro) pushed and OPEN; LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-daber-to-paro) pushed and OPEN; LET(hotzi-bene-yisrael-from-earth-mitzrayim) pushed and OPEN; no test, no name.</span></td><td><span class="he">בְּנֵ֥י גֵרְשׁ֛וֹן לִבְנִ֥י וְשִׁמְעִ֖י</span> · <i>bene gershon livni ve-shimi</i><br><span class="gloss">= bene gershon livni and-shimi</span></td></tr>
+<tr><td><b>S18</b></td><td>after STEP_Ex_6_18 — Kohath&#x27;s sons</td><td>And the sons of Kohath: Amram, and Izhar, and Hebron, and Uzziel; and the years of Kohath&#x27;s life were three and thirty and a hundred years.</td><td>LET(bo_daber_el_paro) pushed and OPEN; LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-daber-to-paro) pushed and OPEN; LET(hotzi-bene-yisrael-from-earth-mitzrayim) pushed and OPEN; no test, no name.</span></td><td><span class="he">וּבְנֵ֣י קְהָ֔ת עַמְרָ֣ם וְיִצְהָ֔ר</span> · <i>u-vene qehat amram ve-yitzhar</i><br><span class="gloss">= and-vene qehat amram and-yitzhar</span></td></tr>
+<tr><td><b>S19</b></td><td>after STEP_Ex_6_19 — Merari&#x27;s sons</td><td>And the sons of Merari: Machli and Mushi; these are the families of the Levite by their generations.</td><td>LET(bo_daber_el_paro) pushed and OPEN; LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-daber-to-paro) pushed and OPEN; LET(hotzi-bene-yisrael-from-earth-mitzrayim) pushed and OPEN; no test, no name.</span></td><td><span class="he">וּבְנֵ֥י מְרָרִ֖י מַחְלִ֣י וּמוּשִׁ֑י</span> · <i>u-vene merari machli u-mushi</i><br><span class="gloss">= and-vene merari machli and-mushi</span></td></tr>
+<tr><td><b>S20</b></td><td>after STEP_Ex_6_20 — Amram takes Yokheved</td><td>And Amram took Yokheved his father&#x27;s sister to himself as wife, and she bore him Aaron and Moses; and the years of Amram&#x27;s life were seven and thirty and a hundred years.</td><td>LET(bo_daber_el_paro) pushed and OPEN; LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-daber-to-paro) pushed and OPEN; LET(hotzi-bene-yisrael-from-earth-mitzrayim) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּקַּ֨ח עַמְרָ֜ם אֶת יוֹכֶ֤בֶד</span> · <i>va-yiqach amram et-yokheved</i><br><span class="gloss">= and-yiqach amram yokheved</span></td></tr>
+<tr><td><b>S21</b></td><td>after STEP_Ex_6_21 — Izhar&#x27;s sons</td><td>And the sons of Izhar: Korach, and Nepheg, and Zichri.</td><td>LET(bo_daber_el_paro) pushed and OPEN; LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-daber-to-paro) pushed and OPEN; LET(hotzi-bene-yisrael-from-earth-mitzrayim) pushed and OPEN; no test, no name.</span></td><td><span class="he">וּבְנֵ֖י יִצְהָ֑ר קֹ֥רַח וָנֶ֖פֶג</span> · <i>u-vene yitzhar qorach va-nefeg</i><br><span class="gloss">= and-vene yitzhar qorach and-nefeg</span></td></tr>
+<tr><td><b>S22</b></td><td>after STEP_Ex_6_22 — Uzziel&#x27;s sons</td><td>And the sons of Uzziel: Mishael, and Elzaphan, and Sithri.</td><td>LET(bo_daber_el_paro) pushed and OPEN; LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-daber-to-paro) pushed and OPEN; LET(hotzi-bene-yisrael-from-earth-mitzrayim) pushed and OPEN; no test, no name.</span></td><td><span class="he">וּבְנֵ֖י עֻזִּיאֵ֑ל מִֽישָׁאֵ֥ל וְאֶלְצָפָ֖ן</span> · <i>u-vene uziel mishael ve-eltzafan</i><br><span class="gloss">= and-vene uziel mishael and-eltzafan</span></td></tr>
+<tr><td><b>S23</b></td><td>after STEP_Ex_6_23 — Aaron takes Elisheva</td><td>And Aaron took Elisheva, daughter of Amminadav, sister of Nachshon, to himself as wife; and she bore him Nadav and Avihu, Elazar and Itamar.</td><td>LET(bo_daber_el_paro) pushed and OPEN; LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-daber-to-paro) pushed and OPEN; LET(hotzi-bene-yisrael-from-earth-mitzrayim) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּקַּ֨ח אַהֲרֹ֜ן אֶת אֱלִישֶׁ֧בַע</span> · <i>va-yiqach aharon et-elisheva</i><br><span class="gloss">= and-yiqach Aaron elisheva</span></td></tr>
+<tr><td><b>S24</b></td><td>after STEP_Ex_6_24 — Korach&#x27;s sons</td><td>And the sons of Korach: Assir, and Elkanah, and Aviasaph; these are the families of the Korahite.</td><td>LET(bo_daber_el_paro) pushed and OPEN; LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-daber-to-paro) pushed and OPEN; LET(hotzi-bene-yisrael-from-earth-mitzrayim) pushed and OPEN; no test, no name.</span></td><td><span class="he">וּבְנֵ֣י קֹ֔רַח אַסִּ֥יר וְאֶלְקָנָ֖ה</span> · <i>u-vene qorach asir ve-elqana</i><br><span class="gloss">= and-vene qorach asir and-elqana</span></td></tr>
+<tr><td><b>S25</b></td><td>after STEP_Ex_6_25 — Elazar and Pinchas</td><td>And Elazar, Aaron&#x27;s son, took for himself of the daughters of Putiel as wife; and she bore him Pinchas. These are the heads of the fathers of the Levites by their families.</td><td>LET(bo_daber_el_paro) pushed and OPEN; LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-daber-to-paro) pushed and OPEN; LET(hotzi-bene-yisrael-from-earth-mitzrayim) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְאֶלְעָזָ֨ר בֶּֽן אַהֲרֹ֜ן לָקַֽח</span> · <i>ve-elazar ben-aharon laqach-</i><br><span class="gloss">= and-elazar ben-Aaron laqach</span></td></tr>
+<tr><td><b>S26</b></td><td>after STEP_Ex_6_26 — that Aaron and Moses</td><td>This is that Aaron and Moses, to whom the LORD said: Bring out the sons of Israel from the land of Egypt by their hosts.</td><td>LET(bo_daber_el_paro) pushed and OPEN; LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-daber-to-paro) pushed and OPEN; LET(hotzi-bene-yisrael-from-earth-mitzrayim) pushed and OPEN; no test, no name.</span></td><td><span class="he">ה֥וּא אַהֲרֹ֖ן וּמֹשֶׁ֑ה אֲשֶׁ֨ר</span> · <i>hu aharon u-moshe asher</i><br><span class="gloss">= that Aaron Moses which</span></td></tr>
+<tr><td><b>S27</b></td><td>after STEP_Ex_6_27 — the speakers flipped</td><td>They are the ones who speak to Pharaoh king of Egypt, to bring out the sons of Israel from Egypt: this is that Moses and Aaron.</td><td>LET(bo_daber_el_paro) pushed and OPEN; LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-daber-to-paro) pushed and OPEN; LET(hotzi-bene-yisrael-from-earth-mitzrayim) pushed and OPEN; no test, no name.</span></td><td><span class="he">הֵ֗ם הַֽמְדַבְּרִים֙ אֶל פַּרְעֹ֣ה</span> · <i>hem ha-medabrim el-paro</i><br><span class="gloss">= hem the-medabrim to-paro</span></td></tr>
+<tr><td><b>S28</b></td><td>after STEP_Ex_6_28 — the resumption day</td><td>And it came to pass, on the day the LORD spoke to Moses in the land of Egypt:</td><td>LET(bo_daber_el_paro) pushed and OPEN; LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-daber-to-paro) pushed and OPEN; LET(hotzi-bene-yisrael-from-earth-mitzrayim) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְהִ֗י בְּי֨וֹם דִּבֶּ֧ר יְהוָ֛ה</span> · <i>va-yehi be-yom diber YHWH</i><br><span class="gloss">= and-yehi day diber the-LORD</span></td></tr>
+<tr><td><b>S29</b></td><td>after STEP_Ex_6_29 — speak all that I speak</td><td>And the LORD spoke to Moses, saying: I am the LORD; speak to Pharaoh king of Egypt all that I speak to you.</td><td>LET(bo_daber_el_paro) pushed and OPEN; LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-daber-to-paro) pushed and OPEN; LET(hotzi-bene-yisrael-from-earth-mitzrayim) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְדַבֵּ֧ר יְהוָ֛ה אֶל מֹשֶׁ֥ה</span> · <i>va-yedaber YHWH el-moshe</i><br><span class="gloss">= and-yedaber the-LORD to-Moses</span></td></tr>
+<tr><td><b>S30</b></td><td>after STEP_Ex_6_30 — the second plea</td><td>And Moses said before the LORD: Behold, I am of uncircumcised lips; how shall Pharaoh hear me?</td><td>LET(bo_daber_el_paro) pushed and OPEN; LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-daber-to-paro) pushed and OPEN; LET(hotzi-bene-yisrael-from-earth-mitzrayim) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֥אמֶר מֹשֶׁ֖ה לִפְנֵ֣י יְהוָ֑ה</span> · <i>va-yomer moshe li-fene YHWH</i><br><span class="gloss">= and-yomer Moses to-me-fene the-LORD</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: exo_06_i_am_the_lord — I am the LORD (6:1-30) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — after STEP_Ex_6_1 — now you shall see
+    וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה (va-yomer YHWH el-moshe)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Ex_6_2 — I am the LORD
+    וַיְדַבֵּ֥ר אֱלֹהִ֖ים אֶל מֹשֶׁ֑ה (va-yedaber Elohim el-moshe)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Ex_6_3 — not by My name known
+    וָאֵרָ֗א אֶל אַבְרָהָ֛ם אֶל (va-era el-avraham el-)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Ex_6_4 — the covenant stood
+    וְגַ֨ם הֲקִמֹ֤תִי אֶת בְּרִיתִי֙ (ve-gam haqimoti et-beriti-y)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Ex_6_5 — the groaning heard
+    וְגַ֣ם אֲנִ֣י שָׁמַ֗עְתִּי אֶֽת (ve-gam ani shamati et-)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Ex_6_6 — therefore say
+    לָכֵ֞ן אֱמֹ֥ר לִבְנֵֽי יִשְׂרָאֵ֘ל (la-khen emor li-vene-yisrael)
+    PASS  LET(emor_li_vene_yisrael_ani_YHWH) pushed and OPEN  (queue=[&#x27;emor_li_vene_yisrael_ani_YHWH&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — after STEP_Ex_6_7 — I will take you
+    וְלָקַחְתִּ֨י אֶתְכֶ֥ם לִי֙ לְעָ֔ם (ve-laqachti et-khem li-y le-am)
+    PASS  LET(emor_li_vene_yisrael_ani_YHWH) pushed and OPEN  (queue=[&#x27;emor_li_vene_yisrael_ani_YHWH&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S8 — after STEP_Ex_6_8 — I will bring you in
+    וְהֵבֵאתִ֤י אֶתְכֶם֙ אֶל הָאָ֔רֶץ (ve-heveti et-khem el-ha-aretz)
+    PASS  LET(emor_li_vene_yisrael_ani_YHWH) pushed and OPEN  (queue=[&#x27;emor_li_vene_yisrael_ani_YHWH&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S9 — after STEP_Ex_6_9 — Moses spoke so
+    וַיְדַבֵּ֥ר מֹשֶׁ֛ה כֵּ֖ן אֶל (va-yedaber moshe ken el-)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S10 — after STEP_Ex_6_10 — the go-speak frame
+    וַיְדַבֵּ֥ר יְהוָ֖ה אֶל מֹשֶׁ֥ה (va-yedaber YHWH el-moshe)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S11 — after STEP_Ex_6_11 — go, speak to Pharaoh
+    בֹּ֣א דַבֵּ֔ר אֶל פַּרְעֹ֖ה (bo daber el-paro)
+    PASS  LET(bo_daber_el_paro) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S12 — after STEP_Ex_6_12 — uncircumcised lips
+    וַיְדַבֵּ֣ר מֹשֶׁ֔ה לִפְנֵ֥י יְהוָ֖ה (va-yedaber moshe li-fene YHWH)
+    PASS  LET(bo_daber_el_paro) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S13 — after STEP_Ex_6_13 — the joint charge
+    וַיְדַבֵּ֣ר יְהוָה֮ אֶל מֹשֶׁ֣ה (va-yedaber YHWH el-moshe)
+    PASS  LET(bo_daber_el_paro) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S14 — after STEP_Ex_6_14 — the registry opens
+    אֵ֖לֶּה רָאשֵׁ֣י בֵית אֲבֹתָ֑ם (ele rashe vet-avota-m)
+    PASS  LET(bo_daber_el_paro) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S15 — after STEP_Ex_6_15 — Simeon&#x27;s sons
+    וּבְנֵ֣י שִׁמְע֗וֹן יְמוּאֵ֨ל וְיָמִ֤ין (u-vene shimon yemuel ve-yamin)
+    PASS  LET(bo_daber_el_paro) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S16 — after STEP_Ex_6_16 — Levi&#x27;s years
+    וְאֵ֨לֶּה שְׁמ֤וֹת בְּנֵֽי לֵוִי֙ (ve-ele shemot bene-levi)
+    PASS  LET(bo_daber_el_paro) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S17 — after STEP_Ex_6_17 — Gershon&#x27;s sons
+    בְּנֵ֥י גֵרְשׁ֛וֹן לִבְנִ֥י וְשִׁמְעִ֖י (bene gershon livni ve-shimi)
+    PASS  LET(bo_daber_el_paro) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S18 — after STEP_Ex_6_18 — Kohath&#x27;s sons
+    וּבְנֵ֣י קְהָ֔ת עַמְרָ֣ם וְיִצְהָ֔ר (u-vene qehat amram ve-yitzhar)
+    PASS  LET(bo_daber_el_paro) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S19 — after STEP_Ex_6_19 — Merari&#x27;s sons
+    וּבְנֵ֥י מְרָרִ֖י מַחְלִ֣י וּמוּשִׁ֑י (u-vene merari machli u-mushi)
+    PASS  LET(bo_daber_el_paro) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S20 — after STEP_Ex_6_20 — Amram takes Yokheved
+    וַיִּקַּ֨ח עַמְרָ֜ם אֶת יוֹכֶ֤בֶד (va-yiqach amram et-yokheved)
+    PASS  LET(bo_daber_el_paro) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S21 — after STEP_Ex_6_21 — Izhar&#x27;s sons
+    וּבְנֵ֖י יִצְהָ֑ר קֹ֥רַח וָנֶ֖פֶג (u-vene yitzhar qorach va-nefeg)
+    PASS  LET(bo_daber_el_paro) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S22 — after STEP_Ex_6_22 — Uzziel&#x27;s sons
+    וּבְנֵ֖י עֻזִּיאֵ֑ל מִֽישָׁאֵ֥ל וְאֶלְצָפָ֖ן (u-vene uziel mishael ve-eltzafan)
+    PASS  LET(bo_daber_el_paro) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S23 — after STEP_Ex_6_23 — Aaron takes Elisheva
+    וַיִּקַּ֨ח אַהֲרֹ֜ן אֶת אֱלִישֶׁ֧בַע (va-yiqach aharon et-elisheva)
+    PASS  LET(bo_daber_el_paro) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S24 — after STEP_Ex_6_24 — Korach&#x27;s sons
+    וּבְנֵ֣י קֹ֔רַח אַסִּ֥יר וְאֶלְקָנָ֖ה (u-vene qorach asir ve-elqana)
+    PASS  LET(bo_daber_el_paro) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S25 — after STEP_Ex_6_25 — Elazar and Pinchas
+    וְאֶלְעָזָ֨ר בֶּֽן אַהֲרֹ֜ן לָקַֽח (ve-elazar ben-aharon laqach-)
+    PASS  LET(bo_daber_el_paro) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S26 — after STEP_Ex_6_26 — that Aaron and Moses
+    ה֥וּא אַהֲרֹ֖ן וּמֹשֶׁ֑ה אֲשֶׁ֨ר (hu aharon u-moshe asher)
+    PASS  LET(bo_daber_el_paro) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S27 — after STEP_Ex_6_27 — the speakers flipped
+    הֵ֗ם הַֽמְדַבְּרִים֙ אֶל פַּרְעֹ֣ה (hem ha-medabrim el-paro)
+    PASS  LET(bo_daber_el_paro) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S28 — after STEP_Ex_6_28 — the resumption day
+    וַיְהִ֗י בְּי֨וֹם דִּבֶּ֧ר יְהוָ֛ה (va-yehi be-yom diber YHWH)
+    PASS  LET(bo_daber_el_paro) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S29 — after STEP_Ex_6_29 — speak all that I speak
+    וַיְדַבֵּ֧ר יְהוָ֛ה אֶל מֹשֶׁ֥ה (va-yedaber YHWH el-moshe)
+    PASS  LET(bo_daber_el_paro) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S30 — after STEP_Ex_6_30 — the second plea
+    וַיֹּ֥אמֶר מֹשֶׁ֖ה לִפְנֵ֣י יְהוָ֑ה (va-yomer moshe li-fene YHWH)
+    PASS  LET(bo_daber_el_paro) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  LET(hotzi_et_bene_yisrael_me_eretz_mitzrayim) pushed and OPEN  (queue=[&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/exo_06_i_am_the_lord.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# exo_06_i_am_the_lord — 6:1-30
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/exo_06_i_am_the_lord.yaml) is CANONICAL (Pre-Code);
+# this file is a derived, runnable rendering. Do not edit — regenerate. The
+# assertion block at the bottom is baked from the Stage D interpreter&#x27;s
+# actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;I am the LORD (6:1-30)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;exo_06_i_am_the_lord&quot;)
+
+# -------------------------- Exod.6.1 · NOW_YOU_SHALL_SEE -------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה עַתָּה תִרְאֶה אֲשֶׁר אֶעֱשֶׂה לְפַרְעֹה כִּי
+# בְיָד חֲזָקָה יְשַׁלְּחֵם וּבְיָד חֲזָקָה יְגָרְשֵׁם מֵאַרְצוֹ
+# &quot;[EN-AID] And the LORD said to Moses: Now you shall see what I will do to
+# Pharaoh; for by a strong hand he shall send them, and by a strong hand he
+# shall drive them out of his land.&quot;
+m.step(&quot;Exod.6.1&quot;)
+# ‹עַתָּה תִרְאֶה אֲשֶׁר אֶעֱשֶׂה לְפַרְעֹה› (“now see which make to-
+# Pharaoh”) — fact holds: now-see-which-make-to-Pharaoh
+m.fact(&quot;ata_tire_asher_eese_le_faro&quot;)
+
+# -------------------------- Exod.6.2 · I_AM_YHWH ---------------------------
+# וַיְדַבֵּר אֱלֹהִים אֶל־מֹשֶׁה וַיֹּאמֶר אֵלָיו אֲנִי יְהוָה
+# &quot;[EN-AID] And God spoke to Moses, and said to him: I am the LORD.&quot;
+m.step(&quot;Exod.6.2&quot;)
+# ‹אֲנִי יְהוָה› (“YHWH”) — fact holds: I-the-LORD
+m.fact(&quot;ani_YHWH&quot;)
+
+# -------------------------- Exod.6.3 · NOT_BY_MY_NAME_KNOWN ----------------
+# וָאֵרָא אֶל־אַבְרָהָם אֶל־יִצְחָק וְאֶל־יַעֲקֹב בְּאֵל שַׁדָּי וּשְׁמִי
+# יְהוָה לֹא נוֹדַעְתִּי לָהֶם
+# &quot;[EN-AID] And I appeared to Abraham, to Isaac, and to Jacob as God
+# Almighty; but by My name the LORD I was not known to them.&quot;
+m.step(&quot;Exod.6.3&quot;)
+# ‹וָאֵרָא אֶל־אַבְרָהָם› (“and-see to Abraham”) — fact holds: and-shemi-
+# the-LORD-not-know-to-them
+m.fact(&quot;u_shemi_YHWH_lo_nodati_lahem&quot;)
+
+# -------------------------- Exod.6.4 · THE_COVENANT_STOOD ------------------
+# וְגַם הֲקִמֹתִי אֶת־בְּרִיתִי אִתָּם לָתֵת לָהֶם אֶת־אֶרֶץ כְּנָעַן אֵת
+# אֶרֶץ מְגֻרֵיהֶם אֲשֶׁר־גָּרוּ בָהּ
+# &quot;[EN-AID] And I also established My covenant with them, to give them the
+# land of Canaan, the land of their sojournings, wherein they sojourned.&quot;
+m.step(&quot;Exod.6.4&quot;)
+# ‹אֵת אֶרֶץ מְגֻרֵיהֶם אֲשֶׁר־גָּרוּ בָהּ› (“obj-marker earth sojourning-
+# them/their which turn-aside-from-the-road in-her/its”) — fact holds:
+# arise-obj-marker-beriti
+m.fact(&quot;haqimoti_et_beriti&quot;)
+
+# -------------------------- Exod.6.5 · THE_GROANING_HEARD ------------------
+# וְגַם אֲנִי שָׁמַעְתִּי אֶת־נַאֲקַת בְּנֵי יִשְׂרָאֵל אֲשֶׁר מִצְרַיִם
+# מַעֲבִדִים אֹתָם וָאֶזְכֹּר אֶת־בְּרִיתִי
+# &quot;[EN-AID] And I also heard the groaning of the sons of Israel, whom Egypt
+# holds in bondage; and I remembered My covenant.&quot;
+m.step(&quot;Exod.6.5&quot;)
+# ‹שָׁמַעְתִּי אֶת־נַאֲקַת בְּנֵי יִשְׂרָאֵל› (“hear obj-marker groan son
+# Israel”) — fact holds: hear-and-mark
+m.fact(&quot;shamati_va_ezkor&quot;)
+
+# -------------------------- Exod.6.6 · THEREFORE_SAY -----------------------
+# לָכֵן אֱמֹר לִבְנֵי־יִשְׂרָאֵל אֲנִי יְהוָה וְהוֹצֵאתִי אֶתְכֶם מִתַּחַת
+# סִבְלֹת מִצְרַיִם וְהִצַּלְתִּי אֶתְכֶם מֵעֲבֹדָתָם וְגָאַלְתִּי אֶתְכֶם
+# בִּזְרוֹעַ נְטוּיָה וּבִשְׁפָטִים גְּדֹלִים
+# &quot;[EN-AID] Therefore say to the sons of Israel: I am the LORD; and I will
+# bring you out from under the burdens of Egypt, and I will deliver you from
+# their bondage; and I will redeem you with an outstretched arm, and with
+# great judgments.&quot;
+m.step(&quot;Exod.6.6&quot;)
+# ‹לָכֵן אֱמֹר לִבְנֵי־יִשְׂרָאֵל אֲנִי יְהוָה› (“to-so say to-son Israel
+# YHWH”) — the-LORD speaks a demand — LET: say-to-me-son-Israel-I-the-LORD
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;emor_li_vene_yisrael_ani_YHWH&quot;)
+
+# -------------------------- Exod.6.7 · I_WILL_TAKE_YOU ---------------------
+# וְלָקַחְתִּי אֶתְכֶם לִי לְעָם וְהָיִיתִי לָכֶם לֵאלֹהִים וִידַעְתֶּם כִּי
+# אֲנִי יְהוָה אֱלֹהֵיכֶם הַמּוֹצִיא אֶתְכֶם מִתַּחַת סִבְלוֹת מִצְרָיִם
+# &quot;[EN-AID] And I will take you to Me for a people, and I will be to you a
+# God; and you shall know that I am the LORD your God, who brings you out
+# from under the burdens of Egypt.&quot;
+m.step(&quot;Exod.6.7&quot;)
+# ‹וְלָקַחְתִּי אֶתְכֶם לִי לְעָם› (“and-take obj-marker-you/your(pl) to-
+# me/my to-people”) — fact holds: and-take-etkhem-to-me-to-people
+m.fact(&quot;ve_laqachti_etkhem_li_le_am&quot;)
+
+# -------------------------- Exod.6.8 · I_WILL_BRING_YOU_IN -----------------
+# וְהֵבֵאתִי אֶתְכֶם אֶל־הָאָרֶץ אֲשֶׁר נָשָׂאתִי אֶת־יָדִי לָתֵת אֹתָהּ
+# לְאַבְרָהָם לְיִצְחָק וּלְיַעֲקֹב וְנָתַתִּי אֹתָהּ לָכֶם מוֹרָשָׁה אֲנִי
+# יְהוָה
+# &quot;[EN-AID] And I will bring you into the land which I lifted My hand to
+# give to Abraham, to Isaac, and to Jacob; and I will give it to you as a
+# heritage: I am the LORD.&quot;
+m.step(&quot;Exod.6.8&quot;)
+# ‹וְנָתַתִּי אֹתָהּ לָכֶם מוֹרָשָׁה אֲנִי יְהוָה› (“and-set obj-marker-
+# her/its to-you/your(pl) possession YHWH”) — fact holds: and-come/bring-
+# etkhem-to-the-earth
+m.fact(&quot;ve_heveti_etkhem_el_ha_aretz&quot;)
+
+# -------------------------- Exod.6.9 · MOSES_SPOKE_SO ----------------------
+# וַיְדַבֵּר מֹשֶׁה כֵּן אֶל־בְּנֵי יִשְׂרָאֵל וְלֹא שָׁמְעוּ אֶל־מֹשֶׁה
+# מִקֹּצֶר רוּחַ וּמֵעֲבֹדָה קָשָׁה
+# &quot;[EN-AID] And Moses spoke so to the sons of Israel; but they did not hear
+# Moses, from shortness of breath and from hard bondage.&quot;
+m.step(&quot;Exod.6.9&quot;)
+# ‹וַיְדַבֵּר מֹשֶׁה כֵּן אֶל־בְּנֵי יִשְׂרָאֵל› (“and-speak Moses so to son
+# Israel”) — demand settled (popped from the queue): say-to-me-son-Israel-I-
+# the-LORD
+m.result(&quot;emor_li_vene_yisrael_ani_YHWH&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Exod.6.10 · THE_GO_SPEAK_FRAME -----------------
+# וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר
+# &quot;[EN-AID] And the LORD spoke to Moses, saying:&quot;
+m.step(&quot;Exod.6.10&quot;)
+# ‹וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר› (“and-speak YHWH to Moses to-say”)
+# — fact holds: and-speak-the-LORD-to-Moses-lemor
+m.fact(&quot;va_yedaber_YHWH_el_moshe_lemor&quot;)
+
+# -------------------------- Exod.6.11 · GO_SPEAK_TO_PHARAOH ----------------
+# בֹּא דַבֵּר אֶל־פַּרְעֹה מֶלֶךְ מִצְרָיִם וִישַׁלַּח אֶת־בְּנֵי־יִשְׂרָאֵל
+# מֵאַרְצוֹ
+# &quot;[EN-AID] Go, speak to Pharaoh king of Egypt, that he send the sons of
+# Israel out of his land.&quot;
+m.step(&quot;Exod.6.11&quot;)
+# ‹בֹּא דַבֵּר אֶל־פַּרְעֹה מֶלֶךְ מִצְרָיִם› (“come/bring speak to Pharaoh
+# king Egypt”) — the-LORD speaks a demand — LET: come/bring-speak-to-Pharaoh
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;bo_daber_el_paro&quot;)
+
+# -------------------------- Exod.6.12 · UNCIRCUMCISED_LIPS -----------------
+# וַיְדַבֵּר מֹשֶׁה לִפְנֵי יְהוָה לֵאמֹר הֵן בְּנֵי־יִשְׂרָאֵל לֹא־שָׁמְעוּ
+# אֵלַי וְאֵיךְ יִשְׁמָעֵנִי פַרְעֹה וַאֲנִי עֲרַל שְׂפָתָיִם
+# &quot;[EN-AID] And Moses spoke before the LORD, saying: Behold, the sons of
+# Israel have not heard me; how then shall Pharaoh hear me — and I am of
+# uncircumcised lips.&quot;
+m.step(&quot;Exod.6.12&quot;)
+# ‹וְאֵיךְ יִשְׁמָעֵנִי פַרְעֹה וַאֲנִי עֲרַל שְׂפָתָיִם› (“and-how? hear-
+# me/my Pharaoh and-I uncircumcised lip”) — fact holds: lo!-not-hear-elay
+m.fact(&quot;hen_lo_shamu_elay&quot;)
+
+# -------------------------- Exod.6.13 · THE_JOINT_CHARGE -------------------
+# וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה וְאֶל־אַהֲרֹן וַיְצַוֵּם אֶל־בְּנֵי
+# יִשְׂרָאֵל וְאֶל־פַּרְעֹה מֶלֶךְ מִצְרָיִם לְהוֹצִיא אֶת־בְּנֵי־יִשְׂרָאֵל
+# מֵאֶרֶץ מִצְרָיִם
+# &quot;[EN-AID] And the LORD spoke to Moses and to Aaron, and gave them a charge
+# to the sons of Israel, and to Pharaoh king of Egypt, to bring the sons of
+# Israel out of the land of Egypt.&quot;
+m.step(&quot;Exod.6.13&quot;)
+# ‹וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה וְאֶל־אַהֲרֹן› (“and-speak YHWH to Moses
+# and-to Aaron”) — the-LORD speaks a demand — LET: bring-forth-obj-marker-
+# son-Israel-from-earth-Egypt
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;hotzi_et_bene_yisrael_me_eretz_mitzrayim&quot;)
+
+# -------------------------- Exod.6.14 · THE_REGISTRY_OPENS -----------------
+# אֵלֶּה רָאשֵׁי בֵית־אֲבֹתָם בְּנֵי רְאוּבֵן בְּכֹר יִשְׂרָאֵל חֲנוֹךְ
+# וּפַלּוּא חֶצְרוֹן וְכַרְמִי אֵלֶּה מִשְׁפְּחֹת רְאוּבֵן
+# &quot;[EN-AID] These are the heads of their fathers&#x27; houses: the sons of
+# Reuben, Israel&#x27;s firstborn — Enoch and Pallu, Hezron and Carmi; these are
+# the families of Reuben.&quot;
+m.step(&quot;Exod.6.14&quot;)
+# ‹אֵלֶּה רָאשֵׁי בֵית־אֲבֹתָם› (“these head house father-them/their”) —
+# fact holds: these-head-house-avotam
+m.fact(&quot;ele_rashe_vet_avotam&quot;)
+
+# -------------------------- Exod.6.15 · SIMEONS_SONS -----------------------
+# וּבְנֵי שִׁמְעוֹן יְמוּאֵל וְיָמִין וְאֹהַד וְיָכִין וְצֹחַר וְשָׁאוּל
+# בֶּן־הַכְּנַעֲנִית אֵלֶּה מִשְׁפְּחֹת שִׁמְעוֹן
+# &quot;[EN-AID] And the sons of Simeon: Jemuel, and Jamin, and Ohad, and Jachin,
+# and Zohar, and Saul the son of the Canaanite woman; these are the families
+# of Simeon.&quot;
+m.step(&quot;Exod.6.15&quot;)
+# ‹וּבְנֵי שִׁמְעוֹן› (“and-son Simeon”) — fact holds: these-mishpechot-
+# Simeon
+m.fact(&quot;ele_mishpechot_shimon&quot;)
+
+# -------------------------- Exod.6.16 · LEVIS_YEARS ------------------------
+# וְאֵלֶּה שְׁמוֹת בְּנֵי־לֵוִי לְתֹלְדֹתָם גֵּרְשׁוֹן וּקְהָת וּמְרָרִי
+# וּשְׁנֵי חַיֵּי לֵוִי שֶׁבַע וּשְׁלֹשִׁים וּמְאַת שָׁנָה
+# &quot;[EN-AID] And these are the names of the sons of Levi by their
+# generations: Gershon, and Kohath, and Merari; and the years of Levi&#x27;s life
+# were seven and thirty and a hundred years.&quot;
+m.step(&quot;Exod.6.16&quot;)
+# ‹וְאֵלֶּה שְׁמוֹת בְּנֵי־לֵוִי לְתֹלְדֹתָם› (“and-these name son Levi to-
+# generations-them/their”) — fact holds: and-years-alive-Levi
+m.fact(&quot;u_shene_chaye_levi&quot;)
+
+# -------------------------- Exod.6.17 · GERSHONS_SONS ----------------------
+# בְּנֵי גֵרְשׁוֹן לִבְנִי וְשִׁמְעִי לְמִשְׁפְּחֹתָם
+# &quot;[EN-AID] The sons of Gershon: Libni and Shimei, by their families.&quot;
+m.step(&quot;Exod.6.17&quot;)
+# ‹בְּנֵי גֵרְשׁוֹן לִבְנִי וְשִׁמְעִי› (“son Gershon Libni and-Shimeah”) —
+# fact holds: son-Gershon
+m.fact(&quot;bene_gershon&quot;)
+
+# -------------------------- Exod.6.18 · KOHATHS_SONS -----------------------
+# וּבְנֵי קְהָת עַמְרָם וְיִצְהָר וְחֶבְרוֹן וְעֻזִּיאֵל וּשְׁנֵי חַיֵּי
+# קְהָת שָׁלֹשׁ וּשְׁלֹשִׁים וּמְאַת שָׁנָה
+# &quot;[EN-AID] And the sons of Kohath: Amram, and Izhar, and Hebron, and
+# Uzziel; and the years of Kohath&#x27;s life were three and thirty and a hundred
+# years.&quot;
+m.step(&quot;Exod.6.18&quot;)
+# ‹עַמְרָם› (“Amram”) — fact holds: and-son-Kohath
+m.fact(&quot;u_vene_qehat&quot;)
+
+# -------------------------- Exod.6.19 · MERARIS_SONS -----------------------
+# וּבְנֵי מְרָרִי מַחְלִי וּמוּשִׁי אֵלֶּה מִשְׁפְּחֹת הַלֵּוִי לְתֹלְדֹתָם
+# &quot;[EN-AID] And the sons of Merari: Machli and Mushi; these are the families
+# of the Levite by their generations.&quot;
+m.step(&quot;Exod.6.19&quot;)
+# ‹מַחְלִי וּמוּשִׁי› (“Mahli and-Mushi”) — fact holds: and-son-Merari
+m.fact(&quot;u_vene_merari&quot;)
+
+# -------------------------- Exod.6.20 · AMRAM_TAKES_YOKHEVED ---------------
+# וַיִּקַּח עַמְרָם אֶת־יוֹכֶבֶד דֹּדָתוֹ לוֹ לְאִשָּׁה וַתֵּלֶד לוֹ
+# אֶת־אַהֲרֹן וְאֶת־מֹשֶׁה וּשְׁנֵי חַיֵּי עַמְרָם שֶׁבַע וּשְׁלֹשִׁים
+# וּמְאַת שָׁנָה
+# &quot;[EN-AID] And Amram took Yokheved his father&#x27;s sister to himself as wife,
+# and she bore him Aaron and Moses; and the years of Amram&#x27;s life were seven
+# and thirty and a hundred years.&quot;
+m.step(&quot;Exod.6.20&quot;)
+# ‹וַיִּקַּח עַמְרָם אֶת־יוֹכֶבֶד דֹּדָתוֹ› (“and-take Amram obj-marker
+# Jochebed aunt-him/its”) — fact holds: and-take-Amram-obj-marker-Jochebed
+m.fact(&quot;va_yiqach_amram_et_yokheved&quot;)
+
+# -------------------------- Exod.6.21 · IZHARS_SONS ------------------------
+# וּבְנֵי יִצְהָר קֹרַח וָנֶפֶג וְזִכְרִי
+# &quot;[EN-AID] And the sons of Izhar: Korach, and Nepheg, and Zichri.&quot;
+m.step(&quot;Exod.6.21&quot;)
+# ‹קֹרַח› (“Korah”) — fact holds: and-son-Izhar
+m.fact(&quot;u_vene_yitzhar&quot;)
+
+# -------------------------- Exod.6.22 · UZZIELS_SONS -----------------------
+# וּבְנֵי עֻזִּיאֵל מִישָׁאֵל וְאֶלְצָפָן וְסִתְרִי
+# &quot;[EN-AID] And the sons of Uzziel: Mishael, and Elzaphan, and Sithri.&quot;
+m.step(&quot;Exod.6.22&quot;)
+# ‹מִישָׁאֵל וְאֶלְצָפָן› (“Mishael and-Elizaphan”) — fact holds: and-son-
+# Uzziel
+m.fact(&quot;u_vene_uziel&quot;)
+
+# -------------------------- Exod.6.23 · AARON_TAKES_ELISHEVA ---------------
+# וַיִּקַּח אַהֲרֹן אֶת־אֱלִישֶׁבַע בַּת־עַמִּינָדָב אֲחוֹת נַחְשׁוֹן לוֹ
+# לְאִשָּׁה וַתֵּלֶד לוֹ אֶת־נָדָב וְאֶת־אֲבִיהוּא אֶת־אֶלְעָזָר
+# וְאֶת־אִיתָמָר
+# &quot;[EN-AID] And Aaron took Elisheva, daughter of Amminadav, sister of
+# Nachshon, to himself as wife; and she bore him Nadav and Avihu, Elazar and
+# Itamar.&quot;
+m.step(&quot;Exod.6.23&quot;)
+# ‹וַיִּקַּח אַהֲרֹן אֶת־אֱלִישֶׁבַע בַּת־עַמִּינָדָב אֲחוֹת נַחְשׁוֹן›
+# (“and-take Aaron obj-marker Elisheba daughter Amminadab sister Naashon”) —
+# fact holds: and-take-Aaron-obj-marker-Elisheba
+m.fact(&quot;va_yiqach_aharon_et_elisheva&quot;)
+
+# -------------------------- Exod.6.24 · KORACHS_SONS -----------------------
+# וּבְנֵי קֹרַח אַסִּיר וְאֶלְקָנָה וַאֲבִיאָסָף אֵלֶּה מִשְׁפְּחֹת
+# הַקָּרְחִי
+# &quot;[EN-AID] And the sons of Korach: Assir, and Elkanah, and Aviasaph; these
+# are the families of the Korahite.&quot;
+m.step(&quot;Exod.6.24&quot;)
+# ‹אַסִּיר וְאֶלְקָנָה וַאֲבִיאָסָף› (“Assir and-Elkanah and-Abiasaph”) —
+# fact holds: and-son-Korah
+m.fact(&quot;u_vene_qorach&quot;)
+
+# -------------------------- Exod.6.25 · ELAZAR_AND_PINCHAS -----------------
+# וְאֶלְעָזָר בֶּן־אַהֲרֹן לָקַח־לוֹ מִבְּנוֹת פּוּטִיאֵל לוֹ לְאִשָּׁה
+# וַתֵּלֶד לוֹ אֶת־פִּינְחָס אֵלֶּה רָאשֵׁי אֲבוֹת הַלְוִיִּם
+# לְמִשְׁפְּחֹתָם
+# &quot;[EN-AID] And Elazar, Aaron&#x27;s son, took for himself of the daughters of
+# Putiel as wife; and she bore him Pinchas. These are the heads of the
+# fathers of the Levites by their families.&quot;
+m.step(&quot;Exod.6.25&quot;)
+# ‹וַתֵּלֶד לוֹ אֶת־פִּינְחָס› (“and-bear-young to-him/its obj-marker
+# Phinehas”) — fact holds: and-bear-young-not-obj-marker-Phinehas
+m.fact(&quot;va_teled_lo_et_pinchas&quot;)
+
+# -------------------------- Exod.6.26 · THAT_AARON_AND_MOSES ---------------
+# הוּא אַהֲרֹן וּמֹשֶׁה אֲשֶׁר אָמַר יְהוָה לָהֶם הוֹצִיאוּ אֶת־בְּנֵי
+# יִשְׂרָאֵל מֵאֶרֶץ מִצְרַיִם עַל־צִבְאֹתָם
+# &quot;[EN-AID] This is that Aaron and Moses, to whom the LORD said: Bring out
+# the sons of Israel from the land of Egypt by their hosts.&quot;
+m.step(&quot;Exod.6.26&quot;)
+# ‹הוּא אַהֲרֹן וּמֹשֶׁה› (“he/it Aaron and-Moses”) — fact holds: he/it-
+# Aaron-and-Moses
+m.fact(&quot;hu_aharon_u_moshe&quot;)
+
+# -------------------------- Exod.6.27 · THE_SPEAKERS_FLIPPED ---------------
+# הֵם הַמְדַבְּרִים אֶל־פַּרְעֹה מֶלֶךְ־מִצְרַיִם לְהוֹצִיא
+# אֶת־בְּנֵי־יִשְׂרָאֵל מִמִּצְרָיִם הוּא מֹשֶׁה וְאַהֲרֹן
+# &quot;[EN-AID] They are the ones who speak to Pharaoh king of Egypt, to bring
+# out the sons of Israel from Egypt: this is that Moses and Aaron.&quot;
+m.step(&quot;Exod.6.27&quot;)
+# ‹הוּא מֹשֶׁה וְאַהֲרֹן› (“he/it Moses and-Aaron”) — fact holds: he/it-
+# Moses-and-Aaron
+m.fact(&quot;hu_moshe_ve_aharon&quot;)
+
+# -------------------------- Exod.6.28 · THE_RESUMPTION_DAY -----------------
+# וַיְהִי בְּיוֹם דִּבֶּר יְהוָה אֶל־מֹשֶׁה בְּאֶרֶץ מִצְרָיִם
+# &quot;[EN-AID] And it came to pass, on the day the LORD spoke to Moses in the
+# land of Egypt:&quot;
+m.step(&quot;Exod.6.28&quot;)
+# ‹וַיְהִי בְּיוֹם דִּבֶּר יְהוָה אֶל־› (“and-be in-day speak YHWH to”) —
+# fact holds: and-be-in-day-speak
+m.fact(&quot;va_yehi_be_yom_diber&quot;)
+
+# -------------------------- Exod.6.29 · SPEAK_ALL_THAT_I_SPEAK -------------
+# וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר אֲנִי יְהוָה דַּבֵּר אֶל־פַּרְעֹה
+# מֶלֶךְ מִצְרַיִם אֵת כָּל־אֲשֶׁר אֲנִי דֹּבֵר אֵלֶיךָ
+# &quot;[EN-AID] And the LORD spoke to Moses, saying: I am the LORD; speak to
+# Pharaoh king of Egypt all that I speak to you.&quot;
+m.step(&quot;Exod.6.29&quot;)
+# ‹דַּבֵּר אֶל־פַּרְעֹה מֶלֶךְ מִצְרַיִם› (“speak to Pharaoh king Egypt”) —
+# fact holds: speak-to-Pharaoh-obj-marker-all-which-I-speak
+m.fact(&quot;daber_el_paro_et_kol_asher_ani_dover&quot;)
+
+# -------------------------- Exod.6.30 · THE_SECOND_PLEA --------------------
+# וַיֹּאמֶר מֹשֶׁה לִפְנֵי יְהוָה הֵן אֲנִי עֲרַל שְׂפָתַיִם וְאֵיךְ
+# יִשְׁמַע אֵלַי פַּרְעֹה
+# &quot;[EN-AID] And Moses said before the LORD: Behold, I am of uncircumcised
+# lips; how shall Pharaoh hear me?&quot;
+m.step(&quot;Exod.6.30&quot;)
+# ‹הֵן אֲנִי עֲרַל שְׂפָתַיִם› (“lo! uncircumcised lip”) — fact holds:
+# lo!-I-uncircumcised-lip
+m.fact(&quot;hen_ani_aral_sefatayim&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;bo_daber_el_paro&#x27;, &#x27;hotzi_et_bene_yisrael_me_eretz_mitzrayim&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 3
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;ata_tire_asher_eese_le_faro&#x27;, &#x27;ani_YHWH&#x27;, &#x27;u_shemi_YHWH_lo_nodati_lahem&#x27;, &#x27;haqimoti_et_beriti&#x27;, &#x27;shamati_va_ezkor&#x27;, &#x27;ve_laqachti_etkhem_li_le_am&#x27;, &#x27;ve_heveti_etkhem_el_ha_aretz&#x27;, &#x27;va_yedaber_YHWH_el_moshe_lemor&#x27;, &#x27;hen_lo_shamu_elay&#x27;, &#x27;ele_rashe_vet_avotam&#x27;, &#x27;ele_mishpechot_shimon&#x27;, &#x27;u_shene_chaye_levi&#x27;, &#x27;bene_gershon&#x27;, &#x27;u_vene_qehat&#x27;, &#x27;u_vene_merari&#x27;, &#x27;va_yiqach_amram_et_yokheved&#x27;, &#x27;u_vene_yitzhar&#x27;, &#x27;u_vene_uziel&#x27;, &#x27;va_yiqach_aharon_et_elisheva&#x27;, &#x27;u_vene_qorach&#x27;, &#x27;va_teled_lo_et_pinchas&#x27;, &#x27;hu_aharon_u_moshe&#x27;, &#x27;hu_moshe_ve_aharon&#x27;, &#x27;va_yehi_be_yom_diber&#x27;, &#x27;daber_el_paro_et_kol_asher_ani_dover&#x27;, &#x27;hen_ani_aral_sefatayim&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 4
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

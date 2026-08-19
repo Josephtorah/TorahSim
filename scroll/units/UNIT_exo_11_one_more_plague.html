@@ -1,0 +1,378 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>exo_11_one_more_plague — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/exo_11_one_more_plague?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>One plague more (11:1-10) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>exo_11_one_more_plague</b> · Exodus 11:1-10 · derive logic_derived_v1 · phase FWD-25</div>
+<div class="meta"><a href="../#Exod/11/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">ע֣וֹד נֶ֤גַע אֶחָד֙</span> · <i>od nega echad</i> · &#x27;one plague more&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DERIVED 2026-08-09 · FORWARD ERA unit #25 (run FWD-6 block 1; Exod 1-11 continuous behind it). Span: 11:1-10, whole chapter (the tenth plague announced): 10 verses (SNAPSHOT-verified), every verse with an etnachta. Oral layer IN-PIPELINE: manifest 8/8 VERIFIED, zero FAILED — see oral_audit_note_en. MACHINE PROFILE. ONE DECLARE, nine PRECONDITION_STATEs — the chapter is a FORECAST-DECK: nearly every card pushed here pops in chapter 12. The ASK-COMMAND (11:2 — vessels of silver and gold: 3:21-22&#x27;s forecast moved to order, Gen 15:14&#x27;s great-property clause behind it) is the unit&#x27;s one OPEN demand — receipted at 12:35-36 (next unit; settlement link authored at the run&#x27;s world-fold). Forecast-cards armed: the send-and-drive (11:1 — the doubled drive-verb, 6:1&#x27;s promise whole, asserted → 12:31-33, 12:39); the midnight going-out (11:4 → 12:29); the firstborn-grid (11:5 — 4:23&#x27;s oldest arm issued whole, throne to millstone → 12:29); the great cry (11:6 → 12:30); the dog-silence distinction (11:7); the servants&#x27;-bow (11:8 → 12:31-33); the not-listen resumption (11:9 — 7:4&#x27;s exact twin: the resumptive-repetition class bracketing the whole cycle). MID-SCENE LAW: 11:4-8 is spoken INSIDE the severed audience of 10:28-29 — the same doorway, the last words before the ban&#x27;s issuer-breach; the exit in HOT ANGER (11:8, asserted) severs the audience in both directions. The COLOPHON (11:10): the cycle&#x27;s summary verse — the wonders done in gross, the divine strengthening&#x27;s fourth station (asserted), the refusal-formula&#x27;s final sounding with the land-suffix (me-artzo). The favor GRANTED (11:3 — 3:21&#x27;s first installment; the second at 12:36). Queue at close: ONE machine-open in-unit (the ask-command) plus the cycle&#x27;s standing opens (the send-demand refused at 5:2 → 12:31-32; the judgment-plea; the dead-by-refusal four). REGISTRY 0; TESTS 0. CARE-POINTS: the cry-adjacency (asserted: great-cry exactly three in the Torah — Esau&#x27;s Gen 27:34, the forecast 11:6, the payment 12:30: the account the readings keep); the superlative ladder CLOSES (9:18, 9:24, 10:6, 10:14, 11:6); the going-out verb claimed first-person by the Name (11:4 ani yotze); the ONE-YOD bracket pair (7:4 lean / 11:9 full — EX11-01); the tenth named as ONE (od nega echad). WATCHLIST ARMS: 12:29 (midnight + the grid), 12:30 (the cry), 12:31-33 (the descent, the go-out, the send), 12:35-36 (the ask-command&#x27;s pop + the favor&#x27;s second installment), 12:39 (the thrust-out), 12:12 (judgments on the gods — the Jehu pair standing).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-09 (IN-PIPELINE, forward era; manifest logic/oral_audit/manifests/exo_11_one_more_plague_claims.json 8/8 VERIFIED, zero FAILED; record logic/oral_audit/AUDIT_exo_11_2026-08-09.md). CROWNS (chain-attested + DB-verified). THE SIX LEAN TO-YOU&#x27;S [EX11-01, MS on 11:9 — the Hilleli, the Yerushalmi, the Masorah at Miqetz, the Ramah] — THE UNIT&#x27;S MARQUEE: אלכם (&quot;to you&quot;) written LEAN exactly SIX times in the Torah (census exact): Gen 42:14 — IN MIQETZ, the very parasha where MS says the Masorah signs the list — then Exod 7:4 and 7:9 (Vaera), then Deut 1:9, 1:20, 1:29; while 11:9 stands FULL in all books against the Hilleli&#x27;s lean (dual-tracked): and the corpus adds the machinery — 7:4 and 11:9 are the SAME not-listen forecast bracketing the nine plagues, kept apart by ONE YOD, with the six-list as the instrument. THE DOUBLED GREATNESS [EX11-02, Kitzur on 11:3]: the finals of גם האיש משה (&quot;also the man Moses&quot;) read forward משה (&quot;Moses&quot;) and reversed השם (&quot;the Name&quot;) — one three-letter seal, both readings checked: the run&#x27;s third finals-crown. THE BEKHOR-THREE [EX11-03, Kitzur on 11:5]: the bare firstborn-word exactly THREE in the verse (checked) — the father&#x27;s, the mother&#x27;s, the house&#x27;s eldest, with the beast&#x27;s &quot;needed for itself.&quot; THE JOSIAH FRAME [EX11-04, Kitzur on 11:6]: וכמהו (&quot;and like it&quot;) Torah-UNIQUE here (checked); its Masorah-twin Josiah&#x27;s none-before-him (2 Kgs 23:25): none-before / none-after lent across the canon. THE SEVIRIN CRY [EX11-05, MS on 11:6]: TWO sevirin — the cry is feminine (nihyata conjugates her so, checked in-verse) yet both like-it words stand MASCULINE: presumed kamoha, written kamohu — the presumed-but-not-written class gains its cry-pair (joining exo_02&#x27;s presumed-she file). THE DOG&#x27;S LEAN TONGUE [EX11-06, MS on 11:7 + Lekach Tov]: לשנו (&quot;its tongue&quot;) lean — read &quot;not with its TOOTH and not with its TONGUE&quot;; census exact TWO in the Torah (checked): the dog&#x27;s stilled tongue here and the invader nation&#x27;s un-understood tongue (Deut 28:49); MS&#x27;s apology preserved: &quot;because it is the work of Heaven.&quot; THE LETTER-FILE [EX11-07, MS]: three hard gimels ruled in one note (garesh 11:1 checked; gam / gadol 11:3 asserted); the qadma on the shin of כשלחו (&quot;when he sends you,&quot; checked) with the send-word&#x27;s dageshed lamed (exo_06&#x27;s rule at the release-verse, asserted); the lengthener in the mem of me-im (11:8, checked); the Amos cross-reference named-only. THE LARGE TZADI [EX11-08, MS on 11:8]: צא (&quot;GO OUT&quot;) — one large-letter list and an old tikkun write the tzadi RABBATI, the other books plain: a genuine books-divided large-letter station on the exodus-verb itself, dual-tracked; the stream&#x27;s plain tzadi standing.</div>
+<div class="meta">confidence: structure tested; oral layer verified 8/8</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>FORWARD ERA run 6, block 1 (owner: &quot;process the next 5 blocks of exodus&quot;). Canon continuation: Exod 11:1-10 — one plague more; whole chapter.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Span + source + conventions</td><td>SNAPSHOT prestage: 10 verses, every one with an etnachta. No ketiv/qere pairs in-span. Volitive census: ONE real push — the ask-command (11:2, daber-na + ve-yishalu). The midnight-speech&#x27;s futures (11:4-8) are declarative forecasts, encoded as armed PRECONDITION_STATE cards; the tze of 11:8 is quoted future speech inside the forecast, fenced.</td><td>established</td></tr>
+<tr><td><b>C</b></td><td>Machine structure</td><td>One DECLARE (the ask-command — the unit&#x27;s only open demand, receipted 12:35-36 by settlement link), nine PRECONDITION_STATEs (the forecast-deck: send-and-drive, midnight, the firstborn-grid, the cry, the dog-silence, the servants&#x27;-bow, the not-listen resumption, the favor granted, the colophon). Mid-scene law: 11:4-8 inside 10:28-29&#x27;s severed audience. The cycle&#x27;s colophon at 11:10 (fourth strengthening; the refusal-formula&#x27;s final sounding).</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Exod 11 (8 notes) + Kitzur Baal HaTurim on Exod 11 (3 notes). Manifest 8 rows: 8 VERIFIED / 0 FAILED / 0 UNCHECKABLE. The six lean to-you&#x27;s (the Miqetz-signed list verified exact); the Moses/Name finals; the bekhor-three; the Josiah frame; the sevirin cry; the dog&#x27;s lean tongue; the letter-file; the large-tzadi books-split.</td><td>established</td></tr>
+<tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 8/8 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-09 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits. Run FWD-6 opens: Exod 1-11 continuous.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Ex_11_1 · Exod.11.1 · <span class='expr'>ONE_PLAGUE_MORE</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה עוֹד נֶגַע אֶחָד אָבִיא עַל־פַּרְעֹה וְעַל־מִצְרַיִם אַחֲרֵי־כֵן יְשַׁלַּח אֶתְכֶם מִזֶּה כְּשַׁלְּחוֹ כָּלָה גָּרֵשׁ יְגָרֵשׁ אֶתְכֶם מִזֶּה</span> · <i>va-yomer YHWH el-moshe od nega echad avi al-paro ve-al-mitzrayim achare-khen yeshalach et-khem mi-ze ke-shalch-o kala garesh yegaresh et-khem mi-ze</i> · And the LORD said to Moses: One plague more I bring upon Pharaoh and upon Egypt; afterwards he will send you from here — when he sends, completely, driving he shall drive you out from here.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר יְהוָ֜ה אֶל מֹשֶׁ֗ה ע֣וֹד נֶ֤גַע אֶחָד֙ אָבִ֤יא עַל פַּרְעֹה֙ וְעַל מִצְרַ֔יִם אַֽחֲרֵי כֵ֕ן יְשַׁלַּ֥ח אֶתְכֶ֖ם מִזֶּ֑ה</span> · <i>va-yomer YHWH el-moshe od nega echad avi al-paro ve-al-mitzrayim achare-khen yeshalach et-khem mi-ze</i> · and the LORD said to Moses: one plague more I bring upon Pharaoh and upon Egypt; afterwards he will send you from here (etnachta on mi-ze) [VERIFIED: SNAPSHOT Exod.11.1 idx16 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כְּשַׁ֨לְּח֔וֹ כָּלָ֕ה גָּרֵ֛שׁ יְגָרֵ֥שׁ אֶתְכֶ֖ם מִזֶּֽה</span> · <i>ke-shalch-o kala garesh yegaresh et-khem mi-ze</i> · when he sends, completely, driving he shall drive you out from here (verse-final mi-ze) [VERIFIED: SNAPSHOT Exod.11.1 idx17-22]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(od_nega_echad_avi, t0)</span><br><span class="gloss">= HOLDS(od-nega-echad-avi, t0)</span><br>THE FORECAST [EX11-07]. OD NEGA ECHAD avi al-paro — &#x27;ONE plague MORE I bring&#x27;: the tenth named as ONE (the nine behind it summed into a cycle, the last standing alone — 10:29&#x27;s except-the-firstborn hint now the program); achare khen YESHALACH etkhem mi-ze — &#x27;AFTERWARDS he will SEND you&#x27;: the send-verb at last in the future indicative, with the king as subject (the demand of 5:2 priced: what was refused will be performed — armed at 12:31-33); ke-SHALLECHO kala — &#x27;when he sends, COMPLETELY&#x27; (the send-word&#x27;s dageshed lamed and ruled qadma, checked [EX11-07]: the intensive release — no men-only, no flocks- stay: the bargain-ladder&#x27;s every rung annulled in one adverb); GARESH YEGARESH etkhem mi-ze — &#x27;DRIVING he shall DRIVE YOU OUT&#x27; (asserted: the doubled drive-verb — 6:1&#x27;s promise whole, its down- payment already spent on the deliverers at 10:11; armed at 12:39&#x27;s thrust-out): the machine arms the exit&#x27;s whole grammar before the plague that buys it.
+</td><td><span class="he">עוֹד נֶגַע אֶחָד אָבִיא עַל־פַּרְעֹה וְעַל־מִצְרַיִם</span> · <i>od nega echad avi al-paro ve-al-mitzrayim</i><br><span class="gloss">= od nega echad avi upon-paro and-upon-mitzrayim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The tenth named as one; the send-and-drive forecast.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_11_2 · Exod.11.2 · <span class='expr'>ASK_OF_YOUR_NEIGHBOR</span></h3>
+<p><span class="he">דַּבֶּר־נָא בְּאָזְנֵי הָעָם וְיִשְׁאֲלוּ אִישׁ מֵאֵת רֵעֵהוּ וְאִשָּׁה מֵאֵת רְעוּתָהּ כְּלֵי־כֶסֶף וּכְלֵי זָהָב</span> · <i>daber-na be-azne ha-am ve-yishalu ish me-et ree-hu ve-isha me-et reuta-ה kele-khesef u-khele zahav</i> · Speak, pray, in the ears of the people: let them ask, each man of his neighbor and each woman of her neighbor, vessels of silver and vessels of gold.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">דַּבֶּר נָ֖א בְּאָזְנֵ֣י הָעָ֑ם</span> · <i>daber-na be-azne ha-am</i> · speak, pray, in the ears of the people (etnachta on ha-am) [VERIFIED: SNAPSHOT Exod.11.2 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְיִשְׁאֲל֞וּ אִ֣ישׁ מֵאֵ֣ת רֵעֵ֗הוּ וְאִשָּׁה֙ מֵאֵ֣ת רְעוּתָ֔הּ כְּלֵי כֶ֖סֶף וּכְלֵ֥י זָהָֽב</span> · <i>ve-yishalu ish me-et ree-hu ve-isha me-et reuta-ה kele-khesef u-khele zahav</i> · let them ask, each man of his neighbor and each woman of her neighbor, vessels of silver and vessels of gold (verse-final zahav) [VERIFIED: SNAPSHOT Exod.11.2 idx4-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(ve_yishalu_ish_kele_khesef))</span><br><span class="gloss">= DECLARE(the-LORD, LET(and-yishalu-man-kele-khesef))</span><br>THE ASK-COMMAND. DABER-NA be-azne ha-am — &#x27;SPEAK, PRAY, in the EARS of the people&#x27; (the na-particle on a divine command — the readings hear the entreaty: let them not leave empty, that the promise be kept whole); ve-YISHALU ish me-et reehu ve-isha me-et reuta KELE- KHESEF U-KHLE ZAHAV — &#x27;let them ASK... VESSELS OF SILVER and VESSELS OF GOLD&#x27;: the card 3:21-22 armed now PUSHED as its own demand (exo_03&#x27;s forecast — &#x27;you shall not go empty; each woman shall ask of her neighbor&#x27; — moved from forecast to order): and behind it the corpus&#x27;s oldest open account: &#x27;and afterward they shall go out WITH GREAT PROPERTY&#x27; (Gen 15:14, the covenant-between-the-pieces clause): the machine pushes the collection-order OPEN — receipted at 12:35-36 (they asked, and Egypt was emptied — the card&#x27;s pop is the next unit&#x27;s business).
+</td><td><span class="he">דַּבֶּר־נָא בְּאָזְנֵי הָעָם</span> · <i>daber-na be-azne ha-am</i><br><span class="gloss">= daber-na in-azne the-am</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The ask-command pushed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_11_3 · Exod.11.3 · <span class='expr'>THE_MAN_MOSES</span></h3>
+<p><span class="he">וַיִּתֵּן יְהוָה אֶת־חֵן הָעָם בְּעֵינֵי מִצְרָיִם גַּם הָאִישׁ מֹשֶׁה גָּדוֹל מְאֹד בְּאֶרֶץ מִצְרַיִם בְּעֵינֵי עַבְדֵי־פַרְעֹה וּבְעֵינֵי הָעָם</span> · <i>va-yiten YHWH et-chen ha-am be-ene mitzrayim gam ha-ish moshe gadol meod be-eretz mitzrayim be-ene avde-faro u-ve-ene ha-am</i> · And the LORD gave the people favor in the eyes of Egypt; also the man Moses was very great in the land of Egypt, in the eyes of Pharaoh&#x27;s servants and in the eyes of the people.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּתֵּ֧ן יְהוָ֛ה אֶת חֵ֥ן הָעָ֖ם בְּעֵינֵ֣י מִצְרָ֑יִם</span> · <i>va-yiten YHWH et-chen ha-am be-ene mitzrayim</i> · and the LORD gave the people favor in the eyes of Egypt (etnachta on mitzrayim) [VERIFIED: SNAPSHOT Exod.11.3 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">גַּ֣ם הָאִ֣ישׁ מֹשֶׁ֗ה גָּד֤וֹל מְאֹד֙ בְּאֶ֣רֶץ מִצְרַ֔יִם בְּעֵינֵ֥י עַבְדֵֽי פַרְעֹ֖ה וּבְעֵינֵ֥י הָעָֽם</span> · <i>gam ha-ish moshe gadol meod be-eretz mitzrayim be-ene avde-faro u-ve-ene ha-am</i> · also the man Moses was very great in the land of Egypt, in the eyes of Pharaoh&#x27;s servants and in the eyes of the people (verse-final ha-am) [VERIFIED: SNAPSHOT Exod.11.3 idx7-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yiten_chen_ha_am, t0)</span><br><span class="gloss">= HOLDS(and-yiten-chen-the-am, t0)</span><br>THE FAVOR [EX11-02 CROWN]. va-YITEN YHWH et-CHEN ha-am be-ene mitzrayim — &#x27;and the LORD GAVE the people FAVOR in the eyes of Egypt&#x27;: 3:21&#x27;s promise-of-favor PAID (the forecast&#x27;s first installment — the second at 12:36 when the favor performs the asking); gam HA-ISH MOSHE gadol meod — &#x27;also THE MAN MOSES was very GREAT&#x27; (the hard gimels of gam and gadol ruled, asserted [EX11-07]) — and the verse seals the greatness in its FINALS (VERIFIED): the tails of gam / ha-ish / moshe read forward the letters of משה (&#x27;MOSES&#x27;) and reversed השם (&#x27;THE NAME&#x27;) — the Kitzur: &#x27;a hint that his greatness was DOUBLED&#x27;: the run&#x27;s third finals-crown — the man&#x27;s own name and the Name that sent him, folded into one three-letter seal at the verse where Egypt learns to honor both.
+</td><td><span class="he">וַיִּתֵּן יְהוָה אֶת־חֵן הָעָם בְּעֵינֵי מִצְרָיִם</span> · <i>va-yiten YHWH et-chen ha-am be-ene mitzrayim</i><br><span class="gloss">= and-yiten the-LORD chen the-am in-ene mitzrayim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The favor granted; the doubled-greatness finals.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_11_4 · Exod.11.4 · <span class='expr'>ABOUT_MIDNIGHT</span></h3>
+<p><span class="he">וַיֹּאמֶר מֹשֶׁה כֹּה אָמַר יְהוָה כַּחֲצֹת הַלַּיְלָה אֲנִי יוֹצֵא בְּתוֹךְ מִצְרָיִם</span> · <i>va-yomer moshe ko amar YHWH ka-chatzot ha-layla ani yotze be-tokh mitzrayim</i> · And Moses said: Thus says the LORD: About midnight I go out in the midst of Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֣אמֶר מֹשֶׁ֔ה כֹּ֖ה אָמַ֣ר יְהוָ֑ה</span> · <i>va-yomer moshe ko amar YHWH</i> · and Moses said: thus says the LORD (etnachta on YHWH) [VERIFIED: SNAPSHOT Exod.11.4 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כַּחֲצֹ֣ת הַלַּ֔יְלָה אֲנִ֥י יוֹצֵ֖א בְּת֥וֹךְ מִצְרָֽיִם</span> · <i>ka-chatzot ha-layla ani yotze be-tokh mitzrayim</i> · about midnight I go out in the midst of Egypt (verse-final mitzrayim) [VERIFIED: SNAPSHOT Exod.11.4 idx5-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ka_chatzot_ani_yotze, t0)</span><br><span class="gloss">= HOLDS(like-chatzot-ani-yotze, t0)</span><br>THE MIDNIGHT [mid-scene]. va-yomer MOSHE — the speech resumes INSIDE the severed audience (10:29&#x27;s &#x27;I will not again see your face&#x27; still standing: the machine files the join — 11:4-8 is spoken in the same doorway, the last words Pharaoh hears from Moses until his own midnight summons breaks the ban he issued); ko amar YHWH — the messenger-formula&#x27;s last sounding to the throne; KA-CHATZOT ha-layla — &#x27;ABOUT MIDNIGHT&#x27; (asserted; the readings on the rounded hour — lest the astrologers miscount and call the clock a liar — named- only); ANI YOTZE be-tokh mitzrayim — &#x27;I GO OUT in the midst of Egypt&#x27;: the going-out verb claimed by the Name itself (the exodus- verb&#x27;s first person: before Israel goes out, He does): the forecast- card pushed, armed at 12:29.
+</td><td><span class="he">כַּחֲצֹת הַלַּיְלָה אֲנִי יוֹצֵא בְּתוֹךְ מִצְרָיִם</span> · <i>ka-chatzot ha-layla ani yotze be-tokh mitzrayim</i><br><span class="gloss">= like-chatzot night ani yotze in-tokh mitzrayim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The midnight-speech opens mid-scene.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_11_5 · Exod.11.5 · <span class='expr'>EVERY_FIRSTBORN_DIES</span></h3>
+<p><span class="he">וּמֵת כָּל־בְּכוֹר בְּאֶרֶץ מִצְרַיִם מִבְּכוֹר פַּרְעֹה הַיֹּשֵׁב עַל־כִּסְאוֹ עַד בְּכוֹר הַשִּׁפְחָה אֲשֶׁר אַחַר הָרֵחָיִם וְכֹל בְּכוֹר בְּהֵמָה</span> · <i>u-met kal-bekhor be-eretz mitzrayim mi-bekhor paro ha-yoshev al-kis-o ad bekhor ha-shifcha asher achar ha-rechayim ve-khol bekhor behema</i> · And every firstborn in the land of Egypt shall die, from the firstborn of Pharaoh who sits on his throne to the firstborn of the slave-girl who is behind the millstones, and every firstborn of beast.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּמֵ֣ת כָּל בְּכוֹר֮ בְּאֶ֣רֶץ מִצְרַיִם֒ מִבְּכ֤וֹר פַּרְעֹה֙ הַיֹּשֵׁ֣ב עַל כִּסְא֔וֹ עַ֚ד בְּכ֣וֹר הַשִּׁפְחָ֔ה אֲשֶׁ֖ר אַחַ֣ר הָרֵחָ֑יִם</span> · <i>u-met kal-bekhor be-eretz mitzrayim mi-bekhor paro ha-yoshev al-kis-o ad bekhor ha-shifcha asher achar ha-rechayim</i> · and every firstborn in the land of Egypt shall die, from the firstborn of Pharaoh who sits on his throne (etnachta on ha-rechayim) [VERIFIED: SNAPSHOT Exod.11.5 idx15 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְכֹ֖ל בְּכ֥וֹר בְּהֵמָֽה</span> · <i>ve-khol bekhor behema</i> · to the firstborn of the slave-girl who is behind the millstones, and every firstborn of beast (verse-final behema) [VERIFIED: SNAPSHOT Exod.11.5 idx16-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(u_met_kol_bekhor, t0)</span><br><span class="gloss">= HOLDS(and-met-all-bekhor, t0)</span><br>THE GRID [EX11-03 CROWN]. u-MET kol-BEKHOR be-eretz mitzrayim — &#x27;and every FIRSTBORN shall DIE&#x27;: 4:23&#x27;s oldest arm (&#x27;behold, I slay YOUR son, YOUR firstborn&#x27; — pushed at the bush-unit&#x27;s close, restated through the cycle) now issued as the full grid: mi-BEKHOR paro ha- yoshev al-kiso ad BEKHOR ha-shifcha asher achar ha-rechayim ve-khol BEKHOR behema — throne to millstone to stall; and the bare firstborn-word stands exactly THREE times in the verse (VERIFIED): the Kitzur&#x27;s legal grid — &#x27;the firstborn of the FATHER, the firstborn of the MOTHER, and the ELDEST OF THE HOUSE — and the beast&#x27;s firstborn not of that count, for it is needed for itself&#x27;: the tradition reads the token-arithmetic as the plague&#x27;s statute; armed at 12:29 (the performance-verse will answer this grid clause for clause).
+</td><td><span class="he">וּמֵת כָּל־בְּכוֹר בְּאֶרֶץ מִצְרַיִם</span> · <i>u-met kal-bekhor be-eretz mitzrayim</i><br><span class="gloss">= and-met kal-bekhor earth mitzrayim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The grid; the bekhor-three.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_11_6 · Exod.11.6 · <span class='expr'>A_CRY_LIKE_NO_OTHER</span></h3>
+<p><span class="he">וְהָיְתָה צְעָקָה גְדֹלָה בְּכָל־אֶרֶץ מִצְרָיִם אֲשֶׁר כָּמֹהוּ לֹא נִהְיָתָה וְכָמֹהוּ לֹא תֹסִף</span> · <i>ve-hayta tzeaqa gedola be-khal-eretz mitzrayim asher kamo-hu lo nihyata ve-khamo-hu lo tosif</i> · And there shall be a great cry in all the land of Egypt, such as like it never was and like it shall never be again.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהָֽיְתָ֛ה צְעָקָ֥ה גְדֹלָ֖ה בְּכָל אֶ֣רֶץ מִצְרָ֑יִם</span> · <i>ve-hayta tzeaqa gedola be-khal-eretz mitzrayim</i> · and there shall be a great cry in all the land of Egypt (etnachta on mitzrayim) [VERIFIED: SNAPSHOT Exod.11.6 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֲשֶׁ֤ר כָּמֹ֨הוּ֙ לֹ֣א נִהְיָ֔תָה וְכָמֹ֖הוּ לֹ֥א תֹסִֽף</span> · <i>asher kamo-hu lo nihyata ve-khamo-hu lo tosif</i> · such as like it never was and like it shall never be again (verse-final tosif) [VERIFIED: SNAPSHOT Exod.11.6 idx6-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(tzeaqa_gedola_kamohu_lo_nihyata, t0)</span><br><span class="gloss">= HOLDS(tzeaqa-gedola-kamohu-not-nihyata, t0)</span><br>THE CRY [EX11-04; EX11-05 CROWNS]. ve-hayta TZEAQA GEDOLA be-khol- eretz mitzrayim — &#x27;a GREAT CRY in all the land of Egypt&#x27;: and the great-cry adjacency stands exactly THREE times in the Torah (asserted): ESAU&#x27;S great and bitter cry (Gen 27:34), the forecast here, and the payment (12:30) — the corpus files the account the readings keep: the cry taken from Esau returned upon Egypt, forecast and receipt in one span; asher KAMOHU lo NIHYATA ve-KHAMOHU lo tosif — the superlative ladder&#x27;s LAST RUNG (since-founding 9:18, since- nationhood 9:24, the fathers&#x27; memory 10:6, never-before-and-after 10:14, now the cry that closes the series) — carried on the run&#x27;s finest grammar-file: MS&#x27;s TWO SEVIRIN (VERIFIED in-verse: the cry is feminine — her own verb nihyata conjugates her so — yet both like-it words stand MASCULINE: the presumption reads kamoha, the text keeps kamohu, dual-tracked); and the and-like-it word Torah-UNIQUE here (VERIFIED), its Masorah-twin JOSIAH&#x27;S none-before-him (2 Kgs 23:25 — the Kitzur: &#x27;also after him none arose — as it is written here: and- like-it shall not continue&#x27;): Egypt&#x27;s worst night and Israel&#x27;s best king, sharing one comparison-frame across the canon.
+</td><td><span class="he">וְהָיְתָה צְעָקָה גְדֹלָה בְּכָל־אֶרֶץ מִצְרָיִם</span> · <i>ve-hayta tzeaqa gedola be-khal-eretz mitzrayim</i><br><span class="gloss">= and-hayta tzeaqa gedola in-khal-earth mitzrayim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The ladder&#x27;s last rung; the sevirin pair; the Josiah frame.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_11_7 · Exod.11.7 · <span class='expr'>NOT_A_DOG_SHALL_SHARPEN</span></h3>
+<p><span class="he">וּלְכֹל בְּנֵי יִשְׂרָאֵל לֹא יֶחֱרַץ־כֶּלֶב לְשֹׁנוֹ לְמֵאִישׁ וְעַד־בְּהֵמָה לְמַעַן תֵּדְעוּן אֲשֶׁר יַפְלֶה יְהוָה בֵּין מִצְרַיִם וּבֵין יִשְׂרָאֵל</span> · <i>u-le-khol bene yisrael lo yecheratz-kelev leshon-o le-me-ish ve-ad-behema lemaan tedu-n asher yafle YHWH ben mitzrayim u-ven yisrael</i> · And against all the sons of Israel not a dog shall sharpen its tongue, against man or beast — in order that you may know that the LORD distinguishes between Egypt and Israel.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּלְכֹ֣ל בְּנֵ֣י יִשְׂרָאֵ֗ל לֹ֤א יֶֽחֱרַץ כֶּ֨לֶב֙ לְשֹׁנ֔וֹ לְמֵאִ֖ישׁ וְעַד בְּהֵמָ֑ה</span> · <i>u-le-khol bene yisrael lo yecheratz-kelev leshon-o le-me-ish ve-ad-behema</i> · and against all the sons of Israel not a dog shall sharpen its tongue, against man or beast (etnachta on behema) [VERIFIED: SNAPSHOT Exod.11.7 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לְמַ֨עַן֙ תֵּֽדְע֔וּן אֲשֶׁר֙ יַפְלֶ֣ה יְהוָ֔ה בֵּ֥ין מִצְרַ֖יִם וּבֵ֥ין יִשְׂרָאֵֽל</span> · <i>lemaan tedu-n asher yafle YHWH ben mitzrayim u-ven yisrael</i> · in order that you may know that the LORD distinguishes between Egypt and Israel (verse-final yisrael) [VERIFIED: SNAPSHOT Exod.11.7 idx10-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lo_yecheratz_kelev_leshono, t0)</span><br><span class="gloss">= HOLDS(not-yecheratz-kelev-leshono, t0)</span><br>THE DOG [EX11-06 CROWN]. u-le-khol bene yisrael LO YECHERATZ KELEV LESHONO — &#x27;not a dog shall SHARPEN its TONGUE&#x27;: the distinction- file&#x27;s last statement (the swarms 8:18, the cattle 9:4, the hail 9:26, the light 10:23 — now silence itself: on the loudest night, Israel&#x27;s quarter keeps so still the dogs find nothing); and the tongue-word written LEAN (VERIFIED): Lekach Tov&#x27;s double-read — &#x27;not with its TOOTH and not with its TONGUE&#x27; (one lean skeleton, both harms denied), MS adding his apology for writing what every Torah- station spells anyway: &#x27;because it is the WORK OF HEAVEN&#x27;; the census exact (VERIFIED): the dog&#x27;s stilled tongue here and the invader &#x27;whose TONGUE you shall not understand&#x27; (Deut 28:49) — the Torah&#x27;s two lean tongues; lemaan TEDUN asher YAFLE YHWH — &#x27;that you may KNOW that the LORD DISTINGUISHES&#x27;: the wonder-of-separation verb (8:18&#x27;s hifleti) and the know-ledger joined in the forecast&#x27;s own moral.
+</td><td><span class="he">וּלְכֹל בְּנֵי יִשְׂרָאֵל לֹא יֶחֱרַץ־כֶּלֶב לְשֹׁנוֹ</span> · <i>u-le-khol bene yisrael lo yecheratz-kelev leshon-o</i><br><span class="gloss">= all bene yisrael not yecheratz-kelev leshon-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The distinction&#x27;s last statement; the lean tongue.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_11_8 · Exod.11.8 · <span class='expr'>YOUR_SERVANTS_WILL_BOW</span></h3>
+<p><span class="he">וְיָרְדוּ כָל־עֲבָדֶיךָ אֵלֶּה אֵלַי וְהִשְׁתַּחֲוּוּ־לִי לֵאמֹר צֵא אַתָּה וְכָל־הָעָם אֲשֶׁר־בְּרַגְלֶיךָ וְאַחֲרֵי־כֵן אֵצֵא וַיֵּצֵא מֵעִם־פַּרְעֹה בָּחֳרִי־אָף</span> · <i>ve-yardu khal-avade-kha ele el-y ve-hishtachauu-li-y le-mor tze ata ve-khal-ha-am asher-be-ragle-kha ve-achare-khen etze va-yetze me-im-paro ba-chori-af</i> · And all these your servants shall come down to me and bow to me, saying: Go out, you and all the people at your feet — and after that I will go out. And he went out from Pharaoh in hot anger.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְיָרְד֣וּ כָל עֲבָדֶיךָ֩ אֵ֨לֶּה אֵלַ֜י וְהִשְׁתַּֽחֲוּוּ לִ֣י לֵאמֹ֗ר צֵ֤א אַתָּה֙ וְכָל הָעָ֣ם אֲשֶׁר בְּרַגְלֶ֔יךָ וְאַחֲרֵי כֵ֖ן אֵצֵ֑א</span> · <i>ve-yardu khal-avade-kha ele el-y ve-hishtachauu-li-y le-mor tze ata ve-khal-ha-am asher-be-ragle-kha ve-achare-khen etze</i> · and all these your servants shall come down to me and bow to me, saying: go out, you and all the people at your feet — and after that I will go out (etnachta on etze) [VERIFIED: SNAPSHOT Exod.11.8 idx16 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֵּצֵ֥א מֵֽעִם פַּרְעֹ֖ה בָּחֳרִי אָֽף</span> · <i>va-yetze me-im-paro ba-chori-af</i> · and he went out from Pharaoh in hot anger (verse-final af) [VERIFIED: SNAPSHOT Exod.11.8 idx17-21]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_yardu_avadekha_ele, t0), t0</span><br><span class="gloss">= HOLDS(and-yardu-avadekha-ele, t0), t0</span><br>THE BOW [EX11-08]. ve-yardu KHOL-AVADEKHA ele elai ve-hishtachavu-li — &#x27;all these YOUR SERVANTS shall come down and BOW to me&#x27;: the forecast filed with the readings&#x27; courtesy-note (named-only: Moses says your-servants where the event will say Pharaoh himself — the king&#x27;s own midnight descent left for the deed to tell, honor kept toward the throne); TZE ata ve-khol-ha-am — &#x27;GO OUT, you and all the people at your feet&#x27; (the go-out command placed in Egypt&#x27;s future mouth — and its tzadi a genuine LARGE-LETTER books-split, dual- tracked [EX11-08]: some lists wrote large the one word the book waits for); ve-achare-khen ETZE — &#x27;and AFTER THAT I will go out&#x27;; va-YETZE me-im-paro BA-CHORI-AF — &#x27;and he WENT OUT from Pharaoh in HOT ANGER&#x27; (asserted; the lengthener in the exit&#x27;s mem checked [EX11-07]): the audience is now severed in BOTH directions — the ban accepted at 10:29, the anger answering 10:28&#x27;s death-threat: armed at 12:31-33 (the descent, the summons, the go-out spoken by the king).
+</td><td><span class="he">וְיָרְדוּ כָל־עֲבָדֶיךָ אֵלֶּה אֵלַי וְהִשְׁתַּחֲוּוּ־לִי לֵאמֹר</span> · <i>ve-yardu khal-avade-kha ele el-y ve-hishtachauu-li-y le-mor</i><br><span class="gloss">= and-yardu khal-avade-kha ele to-y and-hishtachauu-to-me-y to-mor</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The bow-forecast; the large tzadi; the exit in anger.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_11_9 · Exod.11.9 · <span class='expr'>HE_WILL_NOT_LISTEN</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה לֹא־יִשְׁמַע אֲלֵיכֶם פַּרְעֹה לְמַעַן רְבוֹת מוֹפְתַי בְּאֶרֶץ מִצְרָיִם</span> · <i>va-yomer YHWH el-moshe lo-yishma ale-khem paro lemaan revot mofta-y be-eretz mitzrayim</i> · And the LORD said to Moses: Pharaoh will not listen to you — in order that My wonders may be multiplied in the land of Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה לֹא יִשְׁמַ֥ע אֲלֵיכֶ֖ם פַּרְעֹ֑ה</span> · <i>va-yomer YHWH el-moshe lo-yishma ale-khem paro</i> · and the LORD said to Moses: Pharaoh will not listen to you (etnachta on paro) [VERIFIED: SNAPSHOT Exod.11.9 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לְמַ֛עַן רְב֥וֹת מוֹפְתַ֖י בְּאֶ֥רֶץ מִצְרָֽיִם</span> · <i>lemaan revot mofta-y be-eretz mitzrayim</i> · in order that My wonders may be multiplied in the land of Egypt (verse-final mitzrayim) [VERIFIED: SNAPSHOT Exod.11.9 idx8-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lo_yishma_alekhem_paro_2, t0)</span><br><span class="gloss">= HOLDS(not-yishma-alekhem-paro-2, t0)</span><br>THE RESUMPTION [EX11-01 CROWN — THE MARQUEE]. LO-YISHMA ALEKHEM PARO — &#x27;Pharaoh will NOT LISTEN to you&#x27;: 7:4&#x27;s forecast resumed verbatim at the cycle&#x27;s other end (the resumptive-repetition class: one forecast, two stations bracketing the nine plagues) — and the letter keeps the two stations apart by ONE YOD: MS — the Hilleli writes here lean, &#x27;but in ALL the books FULL, for it is NOT counted with the Masorah&#x27;s SIX lean in the Torah, signed at Miqetz&#x27; — and the census verifies the printed Masorah EXACTLY (VERIFIED): lean אלכם (&#x27;to you&#x27;) precisely six — Gen 42:14 (Joseph to his brothers, IN MIQETZ where the list is signed), the two Vaera stations (7:4, 7:9 — the opening bracket ITSELF on the list), and Moses&#x27; three bear-alone verses (Deut 1:9, 1:20, 1:29) — while the closing bracket here stands FULL: the resumed forecast distinguished from its original by a single yod, and the Masorah&#x27;s six-list is the instrument that keeps the brackets straight; lemaan REVOT moftai — &#x27;that My WONDERS be MULTIPLIED&#x27;: the wonder-word&#x27;s purpose-clause (7:3&#x27;s forecast paid in nine and counting).
+</td><td><span class="he">לֹא־יִשְׁמַע אֲלֵיכֶם פַּרְעֹה</span> · <i>lo-yishma ale-khem paro</i><br><span class="gloss">= not-yishma ale-khem paro</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The not-listen forecast resumed; the one-yod pair.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_11_10 · Exod.11.10 · <span class='expr'>THE_CYCLE_COLOPHON</span></h3>
+<p><span class="he">וּמֹשֶׁה וְאַהֲרֹן עָשׂוּ אֶת־כָּל־הַמֹּפְתִים הָאֵלֶּה לִפְנֵי פַרְעֹה וַיְחַזֵּק יְהוָה אֶת־לֵב פַּרְעֹה וְלֹא־שִׁלַּח אֶת־בְּנֵי־יִשְׂרָאֵל מֵאַרְצוֹ</span> · <i>u-moshe ve-aharon asu et-kal-ha-moftim ha-ele li-fene faro va-yechazeq YHWH et-lev paro ve-lo-shilach et-bene-yisrael me-artz-o</i> · And Moses and Aaron did all these wonders before Pharaoh; and the LORD strengthened Pharaoh&#x27;s heart, and he did not send the sons of Israel out of his land.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּמֹשֶׁ֣ה וְאַהֲרֹ֗ן עָשׂ֛וּ אֶת כָּל הַמֹּפְתִ֥ים הָאֵ֖לֶּה לִפְנֵ֣י פַרְעֹ֑ה</span> · <i>u-moshe ve-aharon asu et-kal-ha-moftim ha-ele li-fene faro</i> · and Moses and Aaron did all these wonders before Pharaoh (etnachta on faro) [VERIFIED: SNAPSHOT Exod.11.10 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיְחַזֵּ֤ק יְהוָה֙ אֶת לֵ֣ב פַּרְעֹ֔ה וְלֹֽא שִׁלַּ֥ח אֶת בְּנֵֽי יִשְׂרָאֵ֖ל מֵאַרְצֽוֹ</span> · <i>va-yechazeq YHWH et-lev paro ve-lo-shilach et-bene-yisrael me-artz-o</i> · and the LORD strengthened Pharaoh&#x27;s heart, and he did not send the sons of Israel out of his land (verse-final me-artz-o) [VERIFIED: SNAPSHOT Exod.11.10 idx9-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(u_moshe_ve_aharon_asu, t0)</span><br><span class="gloss">= HOLDS(and-Moses-and-Aaron-asu, t0)</span><br>THE COLOPHON. u-moshe ve-aharon ASU et-kol-ha-moftim ha-ele lifne faro — &#x27;and Moses and Aaron DID all these wonders&#x27;: the cycle&#x27;s summary verse (the machine reads the bookkeeping: 4:21&#x27;s charge — &#x27;all the wonders I have set in your hand, do them before Pharaoh&#x27; — receipted in gross at the cycle&#x27;s close; 7:6&#x27;s go-and-do pattern summed); va-YECHAZEQ YHWH et-lev paro — the divine strengthening&#x27;s FOURTH narrated station (asserted: 9:12 the turn, 10:20, 10:27, now the seal on the whole cycle); ve-LO-SHILACH et-bene-yisrael ME-ARTZO — &#x27;he did not send the sons of Israel OUT OF HIS LAND&#x27;: the refusal- formula&#x27;s final sounding, with the land-suffix added (me-artzo — the stakes named whole as the narrative shuts the plague-ledger and opens the statute-book: 12:1&#x27;s calendar is the next word spoken).
+</td><td><span class="he">וּמֹשֶׁה וְאַהֲרֹן עָשׂוּ אֶת־כָּל־הַמֹּפְתִים הָאֵלֶּה</span> · <i>u-moshe ve-aharon asu et-kal-ha-moftim ha-ele</i><br><span class="gloss">= Moses Aaron asu kal-the-moftim the-ele</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The cycle sealed; the fourth strengthening.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Ex_11_1 — one plague more</td><td>And the LORD said to Moses: One plague more I bring upon Pharaoh and upon Egypt; afterwards he will send you from here — when he sends, completely, driving he shall drive you out from here.</td><td>no test, no name.</td><td><span class="he">וַיֹּ֨אמֶר יְהוָ֜ה אֶל מֹשֶׁ֗ה</span> · <i>va-yomer YHWH el-moshe</i><br><span class="gloss">= and-yomer the-LORD to-Moses</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Ex_11_2 — ask of your neighbor</td><td>Speak, pray, in the ears of the people: let them ask, each man of his neighbor and each woman of her neighbor, vessels of silver and vessels of gold.</td><td>LET(ve_yishalu_ish_kele_khesef) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-yishalu-man-kele-khesef) pushed and OPEN; no test, no name.</span></td><td><span class="he">דַּבֶּר נָ֖א בְּאָזְנֵ֣י הָעָ֑ם</span> · <i>daber-na be-azne ha-am</i><br><span class="gloss">= daber-na in-azne the-am</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Ex_11_3 — the man Moses</td><td>And the LORD gave the people favor in the eyes of Egypt; also the man Moses was very great in the land of Egypt, in the eyes of Pharaoh&#x27;s servants and in the eyes of the people.</td><td>LET(ve_yishalu_ish_kele_khesef) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-yishalu-man-kele-khesef) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּתֵּ֧ן יְהוָ֛ה אֶת חֵ֥ן</span> · <i>va-yiten YHWH et-chen</i><br><span class="gloss">= and-yiten the-LORD chen</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Ex_11_4 — about midnight</td><td>And Moses said: Thus says the LORD: About midnight I go out in the midst of Egypt.</td><td>LET(ve_yishalu_ish_kele_khesef) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-yishalu-man-kele-khesef) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֣אמֶר מֹשֶׁ֔ה כֹּ֖ה אָמַ֣ר</span> · <i>va-yomer moshe ko amar</i><br><span class="gloss">= and-yomer Moses ko amar</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Ex_11_5 — every firstborn dies</td><td>And every firstborn in the land of Egypt shall die, from the firstborn of Pharaoh who sits on his throne to the firstborn of the slave-girl who is behind the millstones, and every firstborn of beast.</td><td>LET(ve_yishalu_ish_kele_khesef) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-yishalu-man-kele-khesef) pushed and OPEN; no test, no name.</span></td><td><span class="he">וּמֵ֣ת כָּל בְּכוֹר֮ בְּאֶ֣רֶץ</span> · <i>u-met kal-bekhor be-eretz</i><br><span class="gloss">= and-met kal-bekhor earth</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Ex_11_6 — a cry like no other</td><td>And there shall be a great cry in all the land of Egypt, such as like it never was and like it shall never be again.</td><td>LET(ve_yishalu_ish_kele_khesef) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-yishalu-man-kele-khesef) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהָֽיְתָ֛ה צְעָקָ֥ה גְדֹלָ֖ה בְּכָל</span> · <i>ve-hayta tzeaqa gedola be-khal-</i><br><span class="gloss">= and-hayta tzeaqa gedola in-khal</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Ex_11_7 — not a dog shall sharpen</td><td>And against all the sons of Israel not a dog shall sharpen its tongue, against man or beast — in order that you may know that the LORD distinguishes between Egypt and Israel.</td><td>LET(ve_yishalu_ish_kele_khesef) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-yishalu-man-kele-khesef) pushed and OPEN; no test, no name.</span></td><td><span class="he">וּלְכֹ֣ל בְּנֵ֣י יִשְׂרָאֵ֗ל לֹ֤א</span> · <i>u-le-khol bene yisrael lo</i><br><span class="gloss">= all bene yisrael not</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Ex_11_8 — your servants will bow</td><td>And all these your servants shall come down to me and bow to me, saying: Go out, you and all the people at your feet — and after that I will go out. And he went out from Pharaoh in hot anger.</td><td>LET(ve_yishalu_ish_kele_khesef) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-yishalu-man-kele-khesef) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְיָרְד֣וּ כָל עֲבָדֶיךָ֩ אֵ֨לֶּה</span> · <i>ve-yardu khal-avade-kha ele</i><br><span class="gloss">= and-yardu khal-avade-kha ele</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Ex_11_9 — he will not listen</td><td>And the LORD said to Moses: Pharaoh will not listen to you — in order that My wonders may be multiplied in the land of Egypt.</td><td>LET(ve_yishalu_ish_kele_khesef) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-yishalu-man-kele-khesef) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה</span> · <i>va-yomer YHWH el-moshe</i><br><span class="gloss">= and-yomer the-LORD to-Moses</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Ex_11_10 — the cycle colophon</td><td>And Moses and Aaron did all these wonders before Pharaoh; and the LORD strengthened Pharaoh&#x27;s heart, and he did not send the sons of Israel out of his land.</td><td>LET(ve_yishalu_ish_kele_khesef) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-yishalu-man-kele-khesef) pushed and OPEN; no test, no name.</span></td><td><span class="he">וּמֹשֶׁ֣ה וְאַהֲרֹ֗ן עָשׂ֛וּ אֶת</span> · <i>u-moshe ve-aharon asu et-</i><br><span class="gloss">= Moses Aaron asu et-</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: exo_11_one_more_plague — One plague more (11:1-10) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — after STEP_Ex_11_1 — one plague more
+    וַיֹּ֨אמֶר יְהוָ֜ה אֶל מֹשֶׁ֗ה (va-yomer YHWH el-moshe)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Ex_11_2 — ask of your neighbor
+    דַּבֶּר נָ֖א בְּאָזְנֵ֣י הָעָ֑ם (daber-na be-azne ha-am)
+    PASS  LET(ve_yishalu_ish_kele_khesef) pushed and OPEN  (queue=[&#x27;ve_yishalu_ish_kele_khesef&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Ex_11_3 — the man Moses
+    וַיִּתֵּ֧ן יְהוָ֛ה אֶת חֵ֥ן (va-yiten YHWH et-chen)
+    PASS  LET(ve_yishalu_ish_kele_khesef) pushed and OPEN  (queue=[&#x27;ve_yishalu_ish_kele_khesef&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Ex_11_4 — about midnight
+    וַיֹּ֣אמֶר מֹשֶׁ֔ה כֹּ֖ה אָמַ֣ר (va-yomer moshe ko amar)
+    PASS  LET(ve_yishalu_ish_kele_khesef) pushed and OPEN  (queue=[&#x27;ve_yishalu_ish_kele_khesef&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Ex_11_5 — every firstborn dies
+    וּמֵ֣ת כָּל בְּכוֹר֮ בְּאֶ֣רֶץ (u-met kal-bekhor be-eretz)
+    PASS  LET(ve_yishalu_ish_kele_khesef) pushed and OPEN  (queue=[&#x27;ve_yishalu_ish_kele_khesef&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Ex_11_6 — a cry like no other
+    וְהָֽיְתָ֛ה צְעָקָ֥ה גְדֹלָ֖ה בְּכָל (ve-hayta tzeaqa gedola be-khal-)
+    PASS  LET(ve_yishalu_ish_kele_khesef) pushed and OPEN  (queue=[&#x27;ve_yishalu_ish_kele_khesef&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — after STEP_Ex_11_7 — not a dog shall sharpen
+    וּלְכֹ֣ל בְּנֵ֣י יִשְׂרָאֵ֗ל לֹ֤א (u-le-khol bene yisrael lo)
+    PASS  LET(ve_yishalu_ish_kele_khesef) pushed and OPEN  (queue=[&#x27;ve_yishalu_ish_kele_khesef&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S8 — after STEP_Ex_11_8 — your servants will bow
+    וְיָרְד֣וּ כָל עֲבָדֶיךָ֩ אֵ֨לֶּה (ve-yardu khal-avade-kha ele)
+    PASS  LET(ve_yishalu_ish_kele_khesef) pushed and OPEN  (queue=[&#x27;ve_yishalu_ish_kele_khesef&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S9 — after STEP_Ex_11_9 — he will not listen
+    וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה (va-yomer YHWH el-moshe)
+    PASS  LET(ve_yishalu_ish_kele_khesef) pushed and OPEN  (queue=[&#x27;ve_yishalu_ish_kele_khesef&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S10 — after STEP_Ex_11_10 — the cycle colophon
+    וּמֹשֶׁ֣ה וְאַהֲרֹ֗ן עָשׂ֛וּ אֶת (u-moshe ve-aharon asu et-)
+    PASS  LET(ve_yishalu_ish_kele_khesef) pushed and OPEN  (queue=[&#x27;ve_yishalu_ish_kele_khesef&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/exo_11_one_more_plague.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# exo_11_one_more_plague — 11:1-10
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/exo_11_one_more_plague.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;One plague more (11:1-10)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;exo_11_one_more_plague&quot;)
+
+# -------------------------- Exod.11.1 · ONE_PLAGUE_MORE --------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה עוֹד נֶגַע אֶחָד אָבִיא עַל־פַּרְעֹה
+# וְעַל־מִצְרַיִם אַחֲרֵי־כֵן יְשַׁלַּח אֶתְכֶם מִזֶּה כְּשַׁלְּחוֹ כָּלָה
+# גָּרֵשׁ יְגָרֵשׁ אֶתְכֶם מִזֶּה
+# &quot;[EN-AID] And the LORD said to Moses: One plague more I bring upon Pharaoh
+# and upon Egypt; afterwards he will send you from here — when he sends,
+# completely, driving he shall drive you out from here.&quot;
+m.step(&quot;Exod.11.1&quot;)
+# ‹עוֹד נֶגַע אֶחָד אָבִיא עַל־פַּרְעֹה וְעַל־מִצְרַיִם› (“still/again blow
+# one come/bring over Pharaoh and-over Egypt”) — fact holds: still/again-
+# blow-one-come/bring
+m.fact(&quot;od_nega_echad_avi&quot;)
+
+# -------------------------- Exod.11.2 · ASK_OF_YOUR_NEIGHBOR ---------------
+# דַּבֶּר־נָא בְּאָזְנֵי הָעָם וְיִשְׁאֲלוּ אִישׁ מֵאֵת רֵעֵהוּ וְאִשָּׁה
+# מֵאֵת רְעוּתָהּ כְּלֵי־כֶסֶף וּכְלֵי זָהָב
+# &quot;[EN-AID] Speak, pray, in the ears of the people: let them ask, each man
+# of his neighbor and each woman of her neighbor, vessels of silver and
+# vessels of gold.&quot;
+m.step(&quot;Exod.11.2&quot;)
+# ‹דַּבֶּר־נָא בְּאָזְנֵי הָעָם› (“speak please in-broadness.-i.e.-the-ear
+# the-people”) — the-LORD speaks a demand — LET: and-inquire-man-vessel-
+# silver
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;ve_yishalu_ish_kele_khesef&quot;)
+
+# -------------------------- Exod.11.3 · THE_MAN_MOSES ----------------------
+# וַיִּתֵּן יְהוָה אֶת־חֵן הָעָם בְּעֵינֵי מִצְרָיִם גַּם הָאִישׁ מֹשֶׁה
+# גָּדוֹל מְאֹד בְּאֶרֶץ מִצְרַיִם בְּעֵינֵי עַבְדֵי־פַרְעֹה וּבְעֵינֵי
+# הָעָם
+# &quot;[EN-AID] And the LORD gave the people favor in the eyes of Egypt; also
+# the man Moses was very great in the land of Egypt, in the eyes of
+# Pharaoh&#x27;s servants and in the eyes of the people.&quot;
+m.step(&quot;Exod.11.3&quot;)
+# ‹וַיִּתֵּן יְהוָה אֶת־חֵן הָעָם בְּעֵינֵי מִצְרָיִם› (“and-set YHWH obj-
+# marker graciousness the-people in-eye Egyptian”) — fact holds: and-set-
+# graciousness-the-people
+m.fact(&quot;va_yiten_chen_ha_am&quot;)
+
+# -------------------------- Exod.11.4 · ABOUT_MIDNIGHT ---------------------
+# וַיֹּאמֶר מֹשֶׁה כֹּה אָמַר יְהוָה כַּחֲצֹת הַלַּיְלָה אֲנִי יוֹצֵא
+# בְּתוֹךְ מִצְרָיִם
+# &quot;[EN-AID] And Moses said: Thus says the LORD: About midnight I go out in
+# the midst of Egypt.&quot;
+m.step(&quot;Exod.11.4&quot;)
+# ‹כַּחֲצֹת הַלַּיְלָה אֲנִי יוֹצֵא בְּתוֹךְ מִצְרָיִם› (“like-middle the-
+# night bring-forth in-midst Egypt”) — fact holds: like-chatzot-ani-bring-
+# forth
+m.fact(&quot;ka_chatzot_ani_yotze&quot;)
+
+# -------------------------- Exod.11.5 · EVERY_FIRSTBORN_DIES ---------------
+# וּמֵת כָּל־בְּכוֹר בְּאֶרֶץ מִצְרַיִם מִבְּכוֹר פַּרְעֹה הַיֹּשֵׁב
+# עַל־כִּסְאוֹ עַד בְּכוֹר הַשִּׁפְחָה אֲשֶׁר אַחַר הָרֵחָיִם וְכֹל בְּכוֹר
+# בְּהֵמָה
+# &quot;[EN-AID] And every firstborn in the land of Egypt shall die, from the
+# firstborn of Pharaoh who sits on his throne to the firstborn of the slave-
+# girl who is behind the millstones, and every firstborn of beast.&quot;
+m.step(&quot;Exod.11.5&quot;)
+# ‹וּמֵת כָּל־בְּכוֹר בְּאֶרֶץ מִצְרַיִם› (“and-die all firstborn in-earth
+# Egypt”) — fact holds: and-die-all-firstborn
+m.fact(&quot;u_met_kol_bekhor&quot;)
+
+# -------------------------- Exod.11.6 · A_CRY_LIKE_NO_OTHER ----------------
+# וְהָיְתָה צְעָקָה גְדֹלָה בְּכָל־אֶרֶץ מִצְרָיִם אֲשֶׁר כָּמֹהוּ לֹא
+# נִהְיָתָה וְכָמֹהוּ לֹא תֹסִף
+# &quot;[EN-AID] And there shall be a great cry in all the land of Egypt, such as
+# like it never was and like it shall never be again.&quot;
+m.step(&quot;Exod.11.6&quot;)
+# ‹וְהָיְתָה צְעָקָה גְדֹלָה בְּכָל־אֶרֶץ מִצְרָיִם› (“and-be shriek great
+# in-all earth Egypt”) — fact holds: shriek-great-kamohu-not-be
+m.fact(&quot;tzeaqa_gedola_kamohu_lo_nihyata&quot;)
+
+# -------------------------- Exod.11.7 · NOT_A_DOG_SHALL_SHARPEN ------------
+# וּלְכֹל בְּנֵי יִשְׂרָאֵל לֹא יֶחֱרַץ־כֶּלֶב לְשֹׁנוֹ לְמֵאִישׁ
+# וְעַד־בְּהֵמָה לְמַעַן תֵּדְעוּן אֲשֶׁר יַפְלֶה יְהוָה בֵּין מִצְרַיִם
+# וּבֵין יִשְׂרָאֵל
+# &quot;[EN-AID] And against all the sons of Israel not a dog shall sharpen its
+# tongue, against man or beast — in order that you may know that the LORD
+# distinguishes between Egypt and Israel.&quot;
+m.step(&quot;Exod.11.7&quot;)
+# ‹וּלְכֹל בְּנֵי יִשְׂרָאֵל לֹא יֶחֱרַץ־כֶּלֶב לְשֹׁנוֹ› (“and-to-all son
+# Israel not point-sharply dog tongue-him/its”) — fact holds: not-point-
+# sharply-dog-leshono
+m.fact(&quot;lo_yecheratz_kelev_leshono&quot;)
+
+# -------------------------- Exod.11.8 · YOUR_SERVANTS_WILL_BOW -------------
+# וְיָרְדוּ כָל־עֲבָדֶיךָ אֵלֶּה אֵלַי וְהִשְׁתַּחֲוּוּ־לִי לֵאמֹר צֵא
+# אַתָּה וְכָל־הָעָם אֲשֶׁר־בְּרַגְלֶיךָ וְאַחֲרֵי־כֵן אֵצֵא וַיֵּצֵא
+# מֵעִם־פַּרְעֹה בָּחֳרִי־אָף
+# &quot;[EN-AID] And all these your servants shall come down to me and bow to me,
+# saying: Go out, you and all the people at your feet — and after that I
+# will go out. And he went out from Pharaoh in hot anger.&quot;
+m.step(&quot;Exod.11.8&quot;)
+# ‹וְיָרְדוּ כָל־עֲבָדֶיךָ אֵלֶּה אֵלַי וְהִשְׁתַּחֲוּוּ־לִי לֵאמֹר› (“and-
+# go-down all servant-you/your these to-me/my and-afflict to-me/my to-say”)
+# — fact holds: and-go-down-avadekha-these
+m.fact(&quot;ve_yardu_avadekha_ele&quot;)
+
+# -------------------------- Exod.11.9 · HE_WILL_NOT_LISTEN -----------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה לֹא־יִשְׁמַע אֲלֵיכֶם פַּרְעֹה לְמַעַן רְבוֹת
+# מוֹפְתַי בְּאֶרֶץ מִצְרָיִם
+# &quot;[EN-AID] And the LORD said to Moses: Pharaoh will not listen to you — in
+# order that My wonders may be multiplied in the land of Egypt.&quot;
+m.step(&quot;Exod.11.9&quot;)
+# ‹לֹא־יִשְׁמַע אֲלֵיכֶם פַּרְעֹה› (“not hear to-you/your(pl) Pharaoh”) —
+# fact holds: not-hear-alekhem-Pharaoh-2
+m.fact(&quot;lo_yishma_alekhem_paro_2&quot;)
+
+# -------------------------- Exod.11.10 · THE_CYCLE_COLOPHON ----------------
+# וּמֹשֶׁה וְאַהֲרֹן עָשׂוּ אֶת־כָּל־הַמֹּפְתִים הָאֵלֶּה לִפְנֵי פַרְעֹה
+# וַיְחַזֵּק יְהוָה אֶת־לֵב פַּרְעֹה וְלֹא־שִׁלַּח אֶת־בְּנֵי־יִשְׂרָאֵל
+# מֵאַרְצוֹ
+# &quot;[EN-AID] And Moses and Aaron did all these wonders before Pharaoh; and
+# the LORD strengthened Pharaoh&#x27;s heart, and he did not send the sons of
+# Israel out of his land.&quot;
+m.step(&quot;Exod.11.10&quot;)
+# ‹וּמֹשֶׁה וְאַהֲרֹן עָשׂוּ אֶת־כָּל־הַמֹּפְתִים הָאֵלֶּה› (“and-Moses and-
+# Aaron make obj-marker all the-miracle the-these”) — fact holds: and-Moses-
+# and-Aaron-make
+m.fact(&quot;u_moshe_ve_aharon_asu&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;ve_yishalu_ish_kele_khesef&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 1
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;od_nega_echad_avi&#x27;, &#x27;va_yiten_chen_ha_am&#x27;, &#x27;ka_chatzot_ani_yotze&#x27;, &#x27;u_met_kol_bekhor&#x27;, &#x27;tzeaqa_gedola_kamohu_lo_nihyata&#x27;, &#x27;lo_yecheratz_kelev_leshono&#x27;, &#x27;ve_yardu_avadekha_ele&#x27;, &#x27;lo_yishma_alekhem_paro_2&#x27;, &#x27;u_moshe_ve_aharon_asu&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 1
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

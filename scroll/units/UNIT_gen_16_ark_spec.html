@@ -1,0 +1,995 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_16_ark_spec — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_16_ark_spec?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The ark spec: the blueprint, the covenant word, the first obeyed command (6:9-22) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_16_ark_spec</b> · Genesis 6:9-22 · derive logic_derived_v1 · phase C-16</div>
+<div class="meta"><a href="../#Gen/6/9">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">עֲשֵׂה לְךָ תֵּבַת — וַיַּעַשׂ נֹחַ כְּכֹל אֲשֶׁר צִוָּה</span> · <i>aseh lekha tevat — va-yaas Noach ke-khol asher tzivah</i> · &#x27;make yourself an ark&#x27; — &#x27;and Noah did according to all that was commanded&#x27;</p>
+<div class="note">Derived 2026-08-01 at owner&#x27;s order (&quot;next block&quot;) — the third unit under the AUTO-FREEZE process. Calibrated coverage (charter 4.1): Onkelos read Tier-A at derive time (14 sequential fetches, Data/FETCHLOG.md — the buffer SPECIFIES the violence into ROBBERY, carrying the chain&#x27;s sealed-over-robbery doctrine as a lexical choice; restricts the corruption to &quot;all flesh OF MAN&quot;; votes the two hapaxes — light, cedar; and re-applies Chanokh&#x27;s fear-of-the-LORD buffer to Noach&#x27;s walk); trees from the DB&#x27;s stored tree_json. TWELFTH PROSPECTIVE MIDDOT RUN (logic/ middot_scan/WATCHLIST_gen16_prospective_2026-08-01.md): cache holds ZERO sources for Gen 6:9-22 — tenth tripwire in a row. INTERPRETER: ZERO extensions — seventh extension-free derivation in a row.</div>
+<div class="note">Logic-derived v1: v3 ta&#x27;amim trees (from DB tree_json) -&gt; leaf role frames from OSHB morph -&gt; operator lines citing TIR rules -&gt; machine-state scenarios. Machine tokens apostrophe-free and underscore-joined (shelosh_meot_amah_orekh, va_hakimoti_et_briti_itakh).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (retro, oral-first era; manifest logic/oral_audit/manifests/gen_16_ark_spec_claims.json — 10 VERIFIED, 0 FAILED, 0 UNCHECKABLE; record logic/oral_audit/AUDIT_gen_16_2026-08-08.md). CROWNS (chain-attested, DB-verified): (1) G16-01 the four bare headers: אלה תולדות (&quot;these are the generations,&quot; no joining vav) stands exactly FOUR times — the heavens (2:4), Noah (6:9), Shem (11:10), Jacob (37:2) — the Kitzur Baal HaTurim: &quot;each disqualifies what precedes it&quot; (chaos; the wicked generations; Ham and Japheth; Esau): SNAPSHOT adjacency confirms the four, the vav-prefixed headers stand apart — the tradition&#x27;s own frame beside this unit&#x27;s third-header analysis. (2) G16-02 Noah&#x27;s name written THREE times in his header verse — &quot;he saw three worlds,&quot; &quot;he saved three by his merit&quot; (Kitzur). (3) G16-03 the wise finals: את האלהים התהלך נח (&quot;with God walked Noah&quot;) — the walk-clause&#x27;s final letters spell חכם (&quot;wise&quot;), read tail-first: &quot;the wise one takes souls&quot; (Prov 11:30, Kitzur). (4) G16-04 the hundred initials: משחיתם את הארץ (&quot;destroying them with the earth&quot;) — initial letters spell מאה (&quot;hundred&quot;): their hundred-cubit stature destroyed (Kitzur). (5) G16-05 ותמלא (&quot;and it was filled&quot;) — the Masorah (received tradition) pair: the earth filled with VIOLENCE (6:11), the land filled with ISRAEL (Exod 1:7) — measure for measure (Kitzur); SNAPSHOT discriminates the pair by verb-form. (6) G16-06 והנני (&quot;and behold I,&quot; the destroy-decree) — Torah-side the word&#x27;s ONLY token; the Kitzur&#x27;s trio spans to the Prophets (&quot;I said to build the world up, and they ruined it&quot;). (7) G16-07 the two thirds: ושלשים (&quot;and third [decks]&quot;) — the ark&#x27;s third story (6:16) and the camp that JOURNEYS THIRD (Num 2:24): the word&#x27;s only two Torah tokens — &quot;by the merit of the banners they were saved&quot; (Kitzur). (8) G16-08 וזה אשר (&quot;and this is what...&quot;) opens exactly THREE Torah instructions — the ARK spec, the ALTAR spec (Exod 29:38), the permitted-birds law (Deut 14:12); the Kitzur&#x27;s pair is the two MAKE-commands: &quot;as the altar atones, so the ark.&quot; (9) G16-09/10 the walking segol: התהלך־נח (&quot;walked Noah&quot;) — lamed with segol (short e-vowel) &quot;in all the books&quot; BECAUSE the maqqef (joining hyphen) binds it to a first-stressed word (Minchat Shai; the Mikhlol): SNAPSHOT carries the segol in its letters and the maqqef in its own column — the ruling and its reason each locked. READINGS (named-only, unclaimed): the three-worlds / three-saved homilies on the triple name (Kitzur 6:9); תמים היה (&quot;he was blameless&quot;) — the was-word&#x27;s letter-value twenty: blameless through the twenty generations Adam-to-Abraham (Kitzur 6:9; letter-arithmetic class); the חמס (&quot;violence&quot;) letter-arithmetic pairs — &quot;the waters of Noah,&quot; &quot;Gehinnom,&quot; &quot;uncovering of nakedness&quot; (Kitzur 6:11/6:13); קץ (&quot;end&quot;) as 190 — forty days of rain plus one hundred fifty of surge (Kitzur 6:13); the buried-treasure violence tale (Kitzur 6:11); צהר (&quot;the light-opening&quot;) as the shining stone (Kitzur 6:16 — beside this unit&#x27;s tsohar [OPEN]); the dove dwelt beside him (Kitzur 6:19); &quot;not torn, not missing a limb&quot; (Kitzur 6:19; letter-arithmetic); elephants&#x27; branches and camels&#x27; feed (Kitzur 6:21). DISCREPANCIES: none. INSTRUMENT GAPS: none new.</div>
+<div class="meta">confidence: structure tested; operator readings tested-per-TIR; intent hypothesis</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>The ark commission (6:9-22): from the third toledot (&quot;generations&quot;) header to the compliance receipt — 7:1 opens the boarding order (&quot;come, you and all your house&quot;), the next block. Inside: the righteous walker introduced, the corruption indictment (three verses, one root), the end-decree, the build spec (6:14-16), the flood announcement and the covenant promise (6:17-18), the manifest and provisioning (6:19-21), and the receipt (6:22). The unit is one command-arc: indictment -&gt; commission -&gt; compliance.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Hebrew source + trees</td><td>All 14 verses from DB tree_json (rule set v3, unique, pure binary; ascii rendered 2026-08-01). Tree facts: 6:9 [the header and the character | the walk — the verse rests between reputation and practice]; 6:12 [the seeing and the behold-corrupted | the reason: all flesh corrupted its way]; 6:13 [the end has come before Me | behold I destroy them with the earth]; 6:14 [make the ark, rooms | and pitch it in-and-out]; 6:15 [the three-hundred length | the fifty and the thirty]; 6:16 [the light and the finishing cubit | the door and the three decks]; 6:17 [behold I bring the flood | all that is in the earth expires]; 6:18 [the covenant established | the boarding list]; 6:22 [did according to all commanded | so he did — the receipt doubled around the rest].</td><td>tested</td></tr>
+<tr><td><b>C</b></td><td>Segment structure</td><td>Verb morphology (#IMPOSED OSHB, DB-verified 2026-08-01): 6:9 the third toledot header (2:4 heaven-and-earth, 5:1 the book, now Noach) — and the name DOUBLES across the seam (&quot;toledot Noach — Noach was...&quot;); TZADDIK (&quot;righteous&quot;) debuts on him (token 2 = 7:1, the divine second-person confirmation; then the Sodom argument); TAMIM (&quot;blameless&quot;) debuts beside it (token 2 = 17:1 — &quot;walk before Me and BE tamim&quot;: the altar&#x27;s future spec-word starts as a man&#x27;s character); BE-DOROTAV (&quot;in his GENERATIONS&quot; — plural) [OPEN: the chain&#x27;s relative-righteousness war; named-only]; ET-HA-ELOHIM HITHALEKH — Chanokh&#x27;s walk verbatim (the walk-verb&#x27;s token 4; Onkelos re-applies the same fear-buffer). 6:10 the triple begetting re-stated (the toledot re-boot pattern: 5:32&#x27;s info re-keyed under the new header). 6:11-13 THE INDICTMENT, one root five ways: va-TISHACHET (niphal — the earth WAS CORRUPTED), NISHCHATAH (behold-corrupted), HISHCHIT (all flesh CORRUPTED its way — DEREKH, 3:24&#x27;s guarded way-word), MASHCHITAM (&quot;I am about to DESTROY them&quot;), LE-SHACHET (6:17, &quot;to destroy all flesh&quot;) — the crime-verb IS the sentence-verb (tokens 6-7 of the root: the covenant&#x27;s never-again, 9:11/9:15); CHAMAS (&quot;violence&quot;) x2 — tokens 1-2 (Onkelos: CHATOFIN, &quot;robbery&quot; — the doctrine as lexicon; dual-track); the THIRD seeing-mutation: va-yar Elohim... VE-HINNEH — 1:31&#x27;s exact inspection grammar, verdict slot flipped (tov meod -&gt; nishchatah); QETZ (&quot;end&quot;) token 2 (4:3&#x27;s offering-time, here the end-decree, 8:6 the window). 6:14-16 THE BLUEPRINT: ASEH — imperative (TIR-027): the corpus&#x27;s first divine imperative-mood command to a NAMED INDIVIDUAL (1:22/1:28 blessed species; 2:16 ruled by infinitive; 4:23 was human); TEVAH — the two-rescues word (Genesis 26 tokens; the ONLY other Torah tokens are Moses&#x27; basket, Exod 2:3/2:5); GOFER wood — Torah hapax (Onkelos votes cedar); QINIM (&quot;nests&quot; -&gt; rooms); VE-KHAFARTA... BA-KOFER — the KAPHAR family&#x27;s first tokens: the atonement root debuts as waterproofing [letter fact: the root of the ark-cover (kapporet) and the Day of Atonement enters the corpus sealing a boat]; AMAH (&quot;cubit&quot;) — first four tokens are this spec (token 5 = 7:20: the flood measured in the ark&#x27;s own unit); 300 x 50 x 30; TZOHAR — Torah hapax [OPEN: window/light/gem — the chain splits; Onkelos votes light]; PETACH (&quot;door&quot;) — 4:7&#x27;s door-word: where sin crouched, now the way in; the three decks (lower, second, third — the corpus&#x27;s first ordinal architecture). 6:17-18 the announcement and the promise: VA-ANI HINENI MEVI — behold + participle (TIR-031, imminence); MABUL (&quot;flood&quot;) — first of 12 tokens, ALL inside Gen 6-11; YIGVA (&quot;expire&quot;) debuts (7:21 the execution; then the patriarchs&#x27; peaceful deaths); VA-HAKIMOTI ET-BRITI — BRIT (&quot;covenant&quot;) FIRST TOKEN, weqatal promise (TIR-029), given to ONE MAN before the un-creation (tokens 2-5: Gen 9, the establishment); the boarding list groups by gender (you+sons, wife+sons&#x27;-wives). 6:19-21 THE MANIFEST: two of all, MALE AND FEMALE (1:27&#x27;s pair as cargo spec), each LE-MINO (&quot;by its kind&quot; — day 5-6&#x27;s taxonomy word x3): creation-in-miniature; the animals COME BY THEMSELVES (yavou elekha — imperfect: self-loading cargo); VE-ATAH QACH — the second imperative (provisioning); OKHLAH — 1:29-30&#x27;s food-grant word (token 4 = 9:3, the post-flood re-grant). 6:22 THE RECEIPT: va-YAAS Noach KE-KHOL ASHER TZIVAH oto Elohim KEN ASAH — the make-verb doubled around the verse; TZAVAH&#x27;s arc: 2:16 (the first rule — violated), 3:11/3:17 (the indictment quotes), 6:22 (the FIRST OBEYED), 7:5/7:9/7:16 (the refrain continues); the formula&#x27;s far career is the Tabernacle build refrain (Exod 39-40).</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Predicates &amp; outcomes</td><td>The unit is one command-arc executed clean: an indictment whose morphology carries the measure-for-measure (the corruption-verb sentences itself), a commission delivered as the corpus&#x27;s first true blueprint, a covenant word planted before the destruction it will outlive, and a receipt that answers EVERYTHING AT ONCE — &quot;according to ALL that God commanded, so he did.&quot; Against gen_13&#x27;s city (participle, unfinished, named for a son) the ark closes its build: receipted complete, to-spec, nameless. The machine&#x27;s queue tells the corpus&#x27;s moral arc in one unit: two demands pushed, two popped — the first divine command cycle to a human that settles. (The wipe-resolve and the favor of gen_15 stand outside this standalone unit; the ark is the prose between them.)</td><td>tested</td></tr>
+<tr><td><b>E</b></td><td>Logic format choice</td><td>Operator lines; NO ledger row. SECTION at 6:9 (header #3; installs nothing) + the character FACTS + NOTE_PRESUPPOSED noach. EVENT beget (6:10 — one event, three Themes: the re-statement). The indictment: EVENT corrupt (niphal agentless, TIR-032), EVENT see + NOTE_SPEC_DELTA (the third mutation, cited against frozen 1:31), EVENT say + the end-decree FACTS. The commission: DECLARE(Elohim, LET(aseh(noach, tevah))) at 6:14 (TIR-027 — first divine imperative to a named individual) with the blueprint as FACTS (material+sealant, three dimensions, light+door+decks — a spec-sheet is standing state, not separate demands: the letter&#x27;s own receipt treats the bundle as ONE &quot;all&quot;); DECLARE(Elohim, LET(qach(noach, mi_kol_maakhal))) at 6:21 (the second imperative). The announcement/promise/manifest: FACTS (hinneh+participle TIR-031; the BRIT weqatal TIR-029; the kinds and pairs). THE RECEIPT (6:22): EVENT make + REGISTRY_INSTALL (WORLD += {tevah} — the SECOND human-built install, and the first RECEIPTED COMPLETE: gen_13&#x27;s city was a participle) + RESULT x2 popping BOTH demands (gen_09&#x27;s mechanics, first divine-to-human settlement). SPECS ends EMPTY — pushed and paid inside one unit. Interpreter extensions: NONE.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Bilingual logic objects</td><td>Every operator line carries he + he_translit + en. Machine tokens apostrophe-free: ish_tzaddik_tamim_be_dorotav, hishchit_kol_basar_et_darko, tevat_atzei_gofer_qinim, ve_khafarta_ba_kofer, shelosh_meot_amah_orekh, tachtiyim_shniyim_u_shlishim, va_hakimoti_et_briti_itakh, shnayim_mi_kol_tavi_el_ha_tevah.</td><td>established</td></tr>
+<tr><td><b>G</b></td><td>Oral (named only) + Tier-A translation check</td><td>Named but NOT read (cache: zero for Gen 6:9-22 — tenth tripwire; gen_16 Tier-A queue): Bereshit Rabbah 30-31 (the span; the tzaddik-in-his-generations war; the ark&#x27;s years); Bavli Sanhedrin 108a-b (the generation&#x27;s verdict SEALED OVER ROBBERY — the doctrine Onkelos carries as a lexical choice below; the ark as 120-year public warning); Rashi at 6:9 (the two be-dorotav readings), 6:14, 6:16 (the tzohar split: window vs gem); Pirkei DeRabbi Eliezer 23. Tier-A Onkelos (14 fetches, FETCHLOG 2026-08-01): CHAMAS -&gt; CHATOFIN (&quot;robbery&quot;) x2 — the general violence-noun specified into the property crime: the chain&#x27;s sealed-over-robbery doctrine sitting inside the translation (flagged; dual-track); 6:12 the corruption RESTRICTED — &quot;all flesh OF MAN&quot;: the buffer shields the animals from the charge the letter levels at all flesh, and 6:13 inserts a motive (&quot;because of their evil deeds&quot;) (flagged); 6:9 Noach&#x27;s walk gets Chanokh&#x27;s exact buffer (&quot;walked in the FEAR of the LORD&quot;; tzaddik -&gt; zakkai, tamim -&gt; shelim); the hapax votes: tzohar -&gt; NEHOR (&quot;light&quot;), gofer -&gt; KADROM (cedar-family), qinim -&gt; MEDORIN (&quot;dwellings&quot;); mabul -&gt; tofana; yigva (&quot;expire&quot;) -&gt; yemut (&quot;die&quot; — the gentle verb flattened); BRIT -&gt; KEYAM (the Aramaic covenant-word); the receipt&#x27;s Elohim -&gt; YY (the name flattened at 6:22).</td><td>tested</td></tr>
+<tr><td><b>H</b></td><td>Scenarios</td><td>S1 the header: the character facts hold; the queue empty; noach flagged as read. S2 the indictment: spec-delta #1 (the third seeing-mutation) flagged; the corrupted-way fact. S3 the commission: LET(aseh...) pushed and OPEN. S4 the blueprint standing (dimensions, light, decks) while the demand stays open. S5 the covenant promise on the books. S6 both demands open (make + take) — the fullest queue any unit has carried mid-flight. S7 the receipt: WORLD = {tevah} and SPECS EMPTY — both popped by one compliance formula: the first settled divine command cycle. S8_negative: LET? contract guard; S9_negative: flag-never-block.</td><td>tested</td></tr>
+<tr><td><b>I</b></td><td>English leakage review</td><td>Operators derive from morph codes (imperatives TIR-027, niphal agentless TIR-032, hinneh+participle TIR-031, weqatal TIR-029, spec-imperfects held inside the command bundle, et TIR-014) and DB censuses run BEFORE drafting (tzaddik/tamim/chamas/tevah/gofer/tzohar/kofer/amah/mabul/ gava/brit first tokens; the shachat root&#x27;s five-in-span; the tzavah arc; qetz and okhlah and petach trails; the two-rescues tevah census; the min taxonomy). NOT supplied: why Noach (the letter gives character, not cause), what tzohar is, what gofer is, the be-dorotav comparison, or any content for the covenant beyond its promise — every one [OPEN] or held; the Onkelos specifications (robbery; of-man) stay dual-track.</td><td>established</td></tr>
+<tr><td><b>J</b></td><td>Pre-flight + auto-freeze</td><td>Pre-flight 2026-08-01 against the UNMODIFIED repo interpreter — zero injected prototypes. Per the standing process orders: AUTO-FREEZE on green, then regression, then the PYTHON RENDERING (must run GREEN), then page/index. Amend/narrative/triage/commit gates unchanged. Changes require a new derive pass, not silent edits.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_6_9 · Gen.6.9 · <span class='expr'>TOLEDOT_NOACH_THE_WALKER</span></h3>
+<p><span class="he">אֵלֶּה תּוֹלְדֹת נֹחַ נֹחַ אִישׁ צַדִּיק תָּמִים הָיָה בְּדֹרֹתָיו אֶת־הָאֱלֹהִים הִתְהַלֶּךְ־נֹחַ</span> · <i>eleh toledot Noach Noach ish tzaddik tamim hayah be-dorotav et-ha-Elohim hithalekh-Noach</i> · [EN-AID/JPS] These are the generations of Noah. Noah was in his generations a man righteous and whole-hearted; Noah walked with God.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אלה תולדת נח נח איש צדיק תמים היה בדרתיו</span> · <i>eleh toledot Noach Noach ish tzaddik tamim hayah be-dorotav</i> · the header and the character (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">את האלהים התהלך נח</span> · <i>et-ha-Elohim hithalekh-Noach</i> · with God walked Noach</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>SECTION</td><td><span class="expr">SECTION(toledot_noach, eleh toledot noach — the third generations header)</span><br><span class="gloss">= SECTION(generations-Noach, these generations Noach — the third generations header)</span><br>Toledot (&#x27;generations&#x27;) header #3 in our spans (2:4 heaven-and-earth, 5:1 the book of Adam, now Noach) — and the name DOUBLES across the seam: &#x27;the generations of NOACH: NOACH was...&#x27; — the header hands its subject straight to the character line. A header labels; it installs nothing.
+</td><td><span class="he">אֵלֶּה תּוֹלְדֹת נֹחַ</span> · <i>eleh toledot Noach</i><br><span class="gloss">= these generations Noach</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ish_tzaddik_tamim_be_dorotav, t0) ∧ HOLDS(et_ha_elohim_hithalekh_noach, t0)</span><br><span class="gloss">= HOLDS(man-righteous-whole-in-his-generations, t0) ∧ HOLDS(with-the-God-walked-Noach, t0)</span><br>Two debuts land on one man: TZADDIK (&#x27;righteous&#x27; — token 2 is 7:1&#x27;s divine second-person confirmation; the word&#x27;s career runs through the Sodom argument to the law&#x27;s court-word) and TAMIM (&#x27;blameless/whole&#x27; — token 2 is 17:1&#x27;s &#x27;walk before Me and BE tamim&#x27;; its far career is the altar&#x27;s unblemished-spec). BE-DOROTAV (&#x27;in his GENERATIONS&#x27; — plural) [OPEN: relative or absolute righteousness — the chain&#x27;s war; the machine stores the suffix and no verdict]. And the walk: ET-HA-ELOHIM HITHALEKH — CHANOKH&#x27;S PHRASE VERBATIM (the walk-verb&#x27;s token 4; 5:22/24 its only priors): the ledger&#x27;s exception verb returns on the flood&#x27;s exception man (Onkelos: &#x27;walked in the FEAR of the LORD&#x27; — the same buffer, re-applied; dual-track).
+</td><td><span class="he">אִישׁ צַדִּיק תָּמִים הָיָה בְּדֹרֹתָיו אֶת־הָאֱלֹהִים הִתְהַלֶּךְ־נֹחַ</span> · <i>ish tzaddik tamim hayah be-dorotav et-ha-Elohim hithalekh-Noach</i><br><span class="gloss">= man righteous whole was his-generations with-the-God walked-Noach</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">noach are READ without prior install (gen_15&#x27;s favor-finder, resumed under his own header)</span><br><span class="gloss">= Noach are READ without prior install (gen-15&#x27;s favor-finder, resumed under his own header)</span><br>flag, not fix</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The third header opens on the first man the corpus calls righteous — described in Chanokh&#x27;s verb, measured by an open plural.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_6_10 · Gen.6.10 · <span class='expr'>THREE_SONS_RESTATED</span></h3>
+<p><span class="he">וַיּוֹלֶד נֹחַ שְׁלֹשָׁה בָנִים אֶת־שֵׁם אֶת־חָם וְאֶת־יָפֶת</span> · <i>va-yoled Noach shloshah vanim et-Shem et-Cham ve-et-Yafet</i> · [EN-AID/JPS] And Noah begot three sons, Shem, Ham, and Japheth.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויולד נח שלשה בנים</span> · <i>va-yoled Noach shloshah vanim</i> · Noach begot three sons (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">את שם את חם ואת יפת</span> · <i>et-Shem et-Cham ve-et-Yafet</i> · Shem, Cham, and Yafet</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">beget(e1) ∧ Agent(e1, noach) ∧ Theme(e1, shem) ∧ Theme(e1, cham) ∧ Theme(e1, yafet)</span><br><span class="gloss">= beget(e1) ∧ Agent(e1, Noach) ∧ Theme(e1, Shem) ∧ Theme(e1, Cham) ∧ Theme(e1, Yafet)</span><br>The toledot re-boot pattern: 5:32&#x27;s triple begetting re-stated under the new header (the ledger&#x27;s open row re-keyed as this story&#x27;s cast list) — now with the count spoken: THREE sons.
+</td><td><span class="he">וַיּוֹלֶד נֹחַ שְׁלֹשָׁה בָנִים אֶת־שֵׁם אֶת־חָם וְאֶת־יָפֶת</span> · <i>va-yoled Noach shloshah vanim et-Shem et-Cham ve-et-Yafet</i><br><span class="gloss">= he-begot Noach shloshah sons with-Shem with-Cham and-with-Yafet</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+</table>
+<div class="meta">The cast re-stated; the ledger&#x27;s unfinished row becomes this unit&#x27;s opening credit.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_6_11 · Gen.6.11 · <span class='expr'>EARTH_CORRUPTED_FILLED</span></h3>
+<p><span class="he">וַתִּשָּׁחֵת הָאָרֶץ לִפְנֵי הָאֱלֹהִים וַתִּמָּלֵא הָאָרֶץ חָמָס</span> · <i>va-tishachet ha-aretz lifnei ha-Elohim va-timale ha-aretz chamas</i> · [EN-AID/JPS] And the earth was corrupt before God, and the earth was filled with violence.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ותשחת הארץ לפני האלהים</span> · <i>va-tishachet ha-aretz lifnei ha-Elohim</i> · the earth was corrupted before God (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ותמלא הארץ חמס</span> · <i>va-timale ha-aretz chamas</i> · and the earth was filled with violence</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">corrupt(e2) ∧ Theme(e2, ha_aretz)</span><br><span class="gloss">= corrupt(e2) ∧ Theme(e2, the-earth)</span><br>The SHACHAT root&#x27;s first token — niphal, agentless (TIR-032): the earth WAS CORRUPTED, corrupter unstated. The root will do all the span&#x27;s work: the crime (here, 6:12), the sentence (6:13, 6:17), and later the never-again (9:11, 9:15) — one verb, measure for measure. LIFNEI HA-ELOHIM (&#x27;before God&#x27;) — the corruption happens in the Inspector&#x27;s presence.
+</td><td><span class="he">וַתִּשָּׁחֵת הָאָרֶץ לִפְנֵי הָאֱלֹהִים</span> · <i>va-tishachet ha-aretz lifnei ha-Elohim</i><br><span class="gloss">= was-corrupted earth lifnei God</span></td><td class='cite'>TIR-032</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_timale_ha_aretz_chamas, t1)</span><br><span class="gloss">= HOLDS(and-was-filled-the-earth-violence, t1)</span><br>CHAMAS (&#x27;violence&#x27;) — first corpus token (its second is two verses down; tokens 3-4: Sarai&#x27;s grievance, the swords of Shimon and Levi). The FILL-verb is 1:28&#x27;s own blessing-word (&#x27;fill the earth&#x27;) executed wrong: the earth is filled — with violence. Onkelos: CHATOFIN (&#x27;robbery&#x27;) — the general noun specified into the property crime: the chain&#x27;s sealed-over-robbery doctrine carried as a lexical choice (dual-track, flagged).
+</td><td><span class="he">וַתִּמָּלֵא הָאָרֶץ חָמָס</span> · <i>va-timale ha-aretz chamas</i><br><span class="gloss">= was-filled earth violence</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The blessing&#x27;s fill-verb returns with the wrong object, and the span&#x27;s master-root enters agentless.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_6_12 · Gen.6.12 · <span class='expr'>THIRD_SEEING_BEHOLD_CORRUPTED</span></h3>
+<p><span class="he">וַיַּרְא אֱלֹהִים אֶת־הָאָרֶץ וְהִנֵּה נִשְׁחָתָה כִּי־הִשְׁחִית כָּל־בָּשָׂר אֶת־דַּרְכּוֹ עַל־הָאָרֶץ</span> · <i>va-yar Elohim et-ha-aretz ve-hinneh nishchatah ki-hishchit kol-basar et-darko al-ha-aretz</i> · [EN-AID/JPS] And God saw the earth, and, behold, it was corrupt; for all flesh had corrupted their way upon the earth.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וירא אלהים את הארץ והנה נשחתה</span> · <i>va-yar Elohim et-ha-aretz ve-hinneh nishchatah</i> · God saw the earth — behold, corrupted (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">כי השחית כל בשר את דרכו על הארץ</span> · <i>ki-hishchit kol-basar et-darko al-ha-aretz</i> · for all flesh had corrupted its way</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">see(e3) ∧ Agent(e3, Elohim) ∧ Theme(e3, ha_aretz)</span><br><span class="gloss">= see(e3) ∧ Agent(e3, God) ∧ Theme(e3, the-earth)</span><br>The inspection formula&#x27;s THIRD run in two units — this time in 1:31&#x27;s exact grammar: see + object + BEHOLD + verdict.
+</td><td><span class="he">וַיַּרְא אֱלֹהִים אֶת־הָאָרֶץ</span> · <i>va-yar Elohim et-ha-aretz</i><br><span class="gloss">= He-saw God with-the-earth</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_SPEC_DELTA</td><td><span class="expr">flag: spec &#x27;va-yar Elohim et-kol-asher asah ve-hinneh tov meod — and behold, very good (1:31, frozen day 6)&#x27; delivered &#x27;va-yar Elohim et-ha-aretz ve-hinneh nishchatah — and behold, CORRUPTED (6:12)&#x27;</span><br><span class="gloss">= flag: spec &#x27;and-He-saw God with-all-which make and-behold good very — and behold, very good (1:31, frozen day 6)&#x27; delivered &#x27;and-He-saw God with-the-earth and-behold was-corrupted — and behold, CORRUPTED (6:12)&#x27;</span><br>The verdict slot of the week&#x27;s closing inspection, re-filled: VE-HINNEH TOV MEOD -&gt; VE-HINNEH NISHCHATAH. After the theft (6:2, creature eyes) and the inversion (6:5, the evil seen), the formula itself returns verbatim-with-delta — the machine&#x27;s third flag against frozen week text in two units.
+</td><td><span class="he">וְהִנֵּה נִשְׁחָתָה</span> · <i>ve-hinneh nishchatah</i><br><span class="gloss">= behold was-corrupted</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hishchit_kol_basar_et_darko, t1)</span><br><span class="gloss">= HOLDS(had-corrupted-all-flesh-with-its-way, t1)</span><br>The reason clause: ALL FLESH corrupted its WAY — DEREKH, 3:24&#x27;s word (the guarded way to the tree of life): the way-word&#x27;s second token is the way corrupted. KOL-BASAR sweeps wider than humanity [the letter&#x27;s scope; Onkelos inserts &#x27;of MAN&#x27; and shields the animals — dual-track, flagged].
+</td><td><span class="he">כִּי־הִשְׁחִית כָּל־בָּשָׂר אֶת־דַּרְכּוֹ</span> · <i>ki-hishchit kol-basar et-darko</i><br><span class="gloss">= for-had-corrupted all-flesh with-its-way</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The week&#x27;s closing formula runs again and returns the opposite word. The machine flags the delta and keeps the letter&#x27;s all-flesh scope against the buffer&#x27;s narrowing.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_6_13 · Gen.6.13 · <span class='expr'>END_DECREE_SPOKEN_TO_NOACH</span></h3>
+<p><span class="he">וַיֹּאמֶר אֱלֹהִים לְנֹחַ קֵץ כָּל־בָּשָׂר בָּא לְפָנַי כִּי־מָלְאָה הָאָרֶץ חָמָס מִפְּנֵיהֶם וְהִנְנִי מַשְׁחִיתָם אֶת־הָאָרֶץ</span> · <i>va-yomer Elohim le-Noach qetz kol-basar ba lefanai ki-malah ha-aretz chamas mi-pneihem ve-hineni mashchitam et-ha-aretz</i> · [EN-AID/JPS] And God said unto Noah: &#x27;The end of all flesh is come before Me; for the earth is filled with violence through them; and, behold, I will destroy them with the earth.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר אלהים לנח קץ כל בשר בא לפני כי מלאה הארץ חמס מפניהם</span> · <i>va-yomer Elohim le-Noach qetz kol-basar ba lefanai ki-malah ha-aretz chamas mi-pneihem</i> · the end of all flesh has come before Me (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">והנני משחיתם את הארץ</span> · <i>ve-hineni mashchitam et-ha-aretz</i> · behold, I destroy them with the earth</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">say(e4) ∧ Agent(e4, Elohim) ∧ Theme(e4, noach)</span><br><span class="gloss">= say(e4) ∧ Agent(e4, God) ∧ Theme(e4, Noach)</span><br>The first divine speech ADDRESSED TO NOACH — the sentence is announced to its exception: where Eden&#x27;s verdicts were spoken to the guilty, the flood&#x27;s is confided to the righteous, with the remedy attached.
+</td><td><span class="he">וַיֹּאמֶר אֱלֹהִים לְנֹחַ</span> · <i>va-yomer Elohim le-Noach</i><br><span class="gloss">= He-said God to-Noach</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(qetz_kol_basar_ba_lefanai, t1) ∧ HOLDS(hineni_mashchitam_et_ha_aretz, t1)</span><br><span class="gloss">= HOLDS(end-of-all-flesh-has-come-before-Me, t1) ∧ HOLDS(behold-I-destroying-them-with-the-earth, t1)</span><br>QETZ (&#x27;end&#x27;) token 2 (4:3&#x27;s offering-time; 8:6&#x27;s window next): the end arrives as a legal filing — &#x27;has COME BEFORE ME.&#x27; The sentence: HINENI MASHCHITAM — behold + participle (TIR-031, imminence): the crime-root now conjugated as its own punishment, &#x27;destroying them WITH the earth&#x27; (the medium condemned with its tenants, as 3:17 cursed the ground for the man). Onkelos inserts the motive &#x27;because of their evil deeds&#x27; (dual-track).
+</td><td><span class="he">קֵץ כָּל־בָּשָׂר בָּא לְפָנַי … וְהִנְנִי מַשְׁחִיתָם אֶת־הָאָרֶץ</span> · <i>qetz kol-basar ba lefanai … ve-hineni mashchitam et-ha-aretz</i><br><span class="gloss">= end-of all-flesh has-come before-Me behold-I destroying-them with-the-earth</span></td><td class='cite'>TIR-031</td><td>tested</td></tr>
+</table>
+<div class="meta">The indictment becomes a decree, spoken to the one man it exempts — the corpus&#x27;s first advance disclosure of judgment.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_6_14 · Gen.6.14 · <span class='expr'>COMMISSION_MAKE_THE_ARK</span></h3>
+<p><span class="he">עֲשֵׂה לְךָ תֵּבַת עֲצֵי־גֹפֶר קִנִּים תַּעֲשֶׂה אֶת־הַתֵּבָה וְכָפַרְתָּ אֹתָהּ מִבַּיִת וּמִחוּץ בַּכֹּפֶר</span> · <i>aseh lekha tevat atzei-gofer qinim taaseh et-ha-tevah ve-khafarta otah mi-bayit u-mi-chutz ba-kofer</i> · [EN-AID/JPS] Make thee an ark of gopher wood; with rooms shalt thou make the ark, and shalt pitch it within and without with pitch.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">עשה לך תבת עצי גפר קנים תעשה את התבה</span> · <i>aseh lekha tevat atzei-gofer qinim taaseh et-ha-tevah</i> · make yourself an ark of gofer wood, rooms (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וכפרת אתה מבית ומחוץ בכפר</span> · <i>ve-khafarta otah mi-bayit u-mi-chutz ba-kofer</i> · and pitch it inside and out with pitch</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(Elohim, LET(aseh(noach, tevah)))</span><br><span class="gloss">= DECLARE(God, LET(make(Noach, ark)))</span><br>ASEH — imperative (TIR-027), and a corpus first: the divine imperative mood aimed at a NAMED INDIVIDUAL (1:22/1:28 blessed species in the plural; 2:16 ruled by infinitive-and-imperfect; 4:23&#x27;s imperatives were a human&#x27;s). The demand enters the queue: MAKE the TEVAH — the two-rescues word (26 Genesis tokens; its ONLY other Torah appearances are Moses&#x27; basket, Exod 2:3/2:5: one word, two water-rescues, two deliverers). GOFER wood — a Torah hapax (Onkelos votes cedar-family; the machine stores the unknown).
+</td><td><span class="he">עֲשֵׂה לְךָ תֵּבַת עֲצֵי־גֹפֶר</span> · <i>aseh lekha tevat atzei-gofer</i><br><span class="gloss">= make to-you ark-of wood-of-gofer</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(tevat_atzei_gofer_qinim, t1) ∧ HOLDS(ve_khafarta_ba_kofer, t1)</span><br><span class="gloss">= HOLDS(ark-of-wood-of-gofer-rooms, t1) ∧ HOLDS(and-you-shall-pitch-has-come-pitch, t1)</span><br>The spec-sheet opens (the imperfects and weqatals that follow the imperative are the command&#x27;s own continuation — one bundle, as the receipt&#x27;s &#x27;ALL&#x27; will confirm): QINIM (&#x27;nests&#x27; — rooms: the bird-word domesticated into architecture; Onkelos: &#x27;dwellings&#x27;) and the sealant — VE-KHAFARTA... BA-KOFER: the KAPHAR family&#x27;s first tokens. The root of the ark-cover (kapporet), of the ransom, of the Day of Atonement, enters the corpus as WATERPROOFING — cover it inside and out [letter fact, held: the atonement vocabulary debuts sealing a rescue vessel against judgment-water].
+</td><td><span class="he">קִנִּים תַּעֲשֶׂה אֶת־הַתֵּבָה וְכָפַרְתָּ אֹתָהּ … בַּכֹּפֶר</span> · <i>qinim taaseh et-ha-tevah ve-khafarta otah … ba-kofer</i><br><span class="gloss">= rooms taaseh with-the-ark you-shall-pitch her pitch</span></td><td class='cite'>TIR-029</td><td>tested</td></tr>
+</table>
+<div class="meta">The first commanded build begins with an unknown wood and the atonement root applied with a brush.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_6_15 · Gen.6.15 · <span class='expr'>BLUEPRINT_DIMENSIONS</span></h3>
+<p><span class="he">וְזֶה אֲשֶׁר תַּעֲשֶׂה אֹתָהּ שְׁלֹשׁ מֵאוֹת אַמָּה אֹרֶךְ הַתֵּבָה חֲמִשִּׁים אַמָּה רָחְבָּהּ וּשְׁלֹשִׁים אַמָּה קוֹמָתָהּ</span> · <i>ve-zeh asher taaseh otah shlosh meot amah orekh ha-tevah chamishim amah rochbah u-shloshim amah qomatah</i> · [EN-AID/JPS] And this is how thou shalt make it: the length of the ark three hundred cubits, the breadth of it fifty cubits, and the height of it thirty cubits.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וזה אשר תעשה אתה שלש מאות אמה ארך התבה</span> · <i>ve-zeh asher taaseh otah shlosh meot amah orekh ha-tevah</i> · and this is how: three hundred cubits the length (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">חמשים אמה רחבה ושלשים אמה קומתה</span> · <i>chamishim amah rochbah u-shloshim amah qomatah</i> · fifty the width, thirty the height</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shelosh_meot_amah_orekh, t1) ∧ HOLDS(chamishim_amah_rochbah, t1) ∧ HOLDS(sheloshim_amah_qomatah, t1)</span><br><span class="gloss">= HOLDS(three-hundred-cubit-length-of, t1) ∧ HOLDS(fifty-cubit-its-width, t1) ∧ HOLDS(thirty-cubit-its-height, t1)</span><br>THE CORPUS&#x27;S FIRST DIMENSIONED BLUEPRINT: &#x27;and THIS is how you shall make it&#x27; — length 300, width 50, height 30. AMAH (&#x27;cubit&#x27;) — the measure-word&#x27;s first four tokens are this spec (its fifth is 7:20: the floodwater&#x27;s own fifteen cubits — the judgment measured in the rescue&#x27;s unit). Three standing facts; the machine holds a blueprint the way it holds any state — and the far echo is the Tabernacle&#x27;s cubit-lists.
+</td><td><span class="he">שְׁלֹשׁ מֵאוֹת אַמָּה אֹרֶךְ … חֲמִשִּׁים אַמָּה רָחְבָּהּ וּשְׁלֹשִׁים אַמָּה קוֹמָתָהּ</span> · <i>shlosh meot amah orekh … chamishim amah rochbah u-shloshim amah qomatah</i><br><span class="gloss">= shlosh hundred cubit length-of fifty cubit its-width and-shloshim cubit its-height</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Revelation acquires units of measure. The spec-genre the law will perfect at Sinai opens here at sea-scale.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_6_16 · Gen.6.16 · <span class='expr'>BLUEPRINT_LIGHT_DOOR_DECKS</span></h3>
+<p><span class="he">צֹהַר תַּעֲשֶׂה לַתֵּבָה וְאֶל־אַמָּה תְּכַלֶנָּה מִלְמַעְלָה וּפֶתַח הַתֵּבָה בְּצִדָּהּ תָּשִׂים תַּחְתִּיִּם שְׁנִיִּם וּשְׁלִשִׁים תַּעֲשֶׂהָ</span> · <i>tzohar taaseh la-tevah ve-el-amah tekhalenah mi-lemalah u-fetach ha-tevah be-tzidah tasim tachtiyim shniyim u-shlishim taaseha</i> · [EN-AID/JPS] A light shalt thou make to the ark, and to a cubit shalt thou finish it upward; and the door of the ark shalt thou set in the side thereof; with lower, second, and third stories shalt thou make it.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">צהר תעשה לתבה ואל אמה תכלנה מלמעלה</span> · <i>tzohar taaseh la-tevah ve-el-amah tekhalenah mi-lemalah</i> · a tzohar you shall make, finished to a cubit above (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ופתח התבה בצדה תשים תחתים שנים ושלשים תעשה</span> · <i>u-fetach ha-tevah be-tzidah tasim tachtiyim shniyim u-shlishim taaseha</i> · the door in its side; lower, second, and third decks</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(tzohar_la_tevah, t1) ∧ HOLDS(petach_ba_tzidah, t1) ∧ HOLDS(tachtiyim_shniyim_u_shlishim, t1)</span><br><span class="gloss">= HOLDS(a-light-to-ark, t1) ∧ HOLDS(door-opening-has-come-its-side, t1) ∧ HOLDS(lower-second-decks-and-third-decks, t1)</span><br>TZOHAR — a Torah hapax [OPEN: window / light / gem — the chain&#x27;s three-way split; Onkelos votes NEHOR, &#x27;light&#x27;; the machine stores the unknown word and its finish-to-a-cubit clause]. PETACH (&#x27;door/opening&#x27;) — 4:7&#x27;s door-word: where sin crouched at the petach, the rescue now gets one, set in the side. And the three decks — TACHTIYIM SHNIYIM U-SHLISHIM (&#x27;lower, second, third&#x27;): the corpus&#x27;s first ordinal architecture — a three-story world for the world&#x27;s remainder.
+</td><td><span class="he">צֹהַר … וּפֶתַח הַתֵּבָה בְּצִדָּהּ … תַּחְתִּיִּם שְׁנִיִּם וּשְׁלִשִׁים</span> · <i>tzohar … u-fetach ha-tevah be-tzidah … tachtiyim shniyim u-shlishim</i><br><span class="gloss">= a-light door-of ark its-side lower second-decks third-decks</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">An unknown light-source, sin&#x27;s old door repurposed as an entrance, and the first building with floors.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_6_17 · Gen.6.17 · <span class='expr'>FLOOD_ANNOUNCED</span></h3>
+<p><span class="he">וַאֲנִי הִנְנִי מֵבִיא אֶת־הַמַּבּוּל מַיִם עַל־הָאָרֶץ לְשַׁחֵת כָּל־בָּשָׂר אֲשֶׁר־בּוֹ רוּחַ חַיִּים מִתַּחַת הַשָּׁמָיִם כֹּל אֲשֶׁר־בָּאָרֶץ יִגְוָע</span> · <i>va-ani hineni mevi et-ha-mabul mayim al-ha-aretz le-shachet kol-basar asher-bo ruach chayim mi-tachat ha-shamayim kol asher-ba-aretz yigva</i> · [EN-AID/JPS] And I, behold, I do bring the flood of waters upon the earth, to destroy all flesh, wherein is the breath of life, from under heaven; every thing that is in the earth shall perish.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ואני הנני מביא את המבול מים על הארץ לשחת כל בשר אשר בו רוח חיים מתחת השמים</span> · <i>va-ani hineni mevi et-ha-mabul mayim al-ha-aretz le-shachet kol-basar asher-bo ruach chayim mi-tachat ha-shamayim</i> · behold, I bring the flood to destroy all breathing flesh (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">כל אשר בארץ יגוע</span> · <i>kol asher-ba-aretz yigva</i> · all that is in the earth shall expire</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hineni_mevi_et_ha_mabul_mayim, t1) ∧ HOLDS(kol_asher_ba_aretz_yigva, t1)</span><br><span class="gloss">= HOLDS(behold-I-bringing-with-the-flood-waters, t1) ∧ HOLDS(all-which-has-come-earth-shall-expire, t1)</span><br>VA-ANI HINENI MEVI — &#x27;and I, behold I, am BRINGING&#x27;: behold + participle (TIR-031, imminence), with the pronoun doubled — the Speaker signs the flood personally. MABUL (&#x27;flood&#x27;) — first of 12 tokens, every one inside Gen 6-11: the word never leaves this story. The instrument: MAYIM (&#x27;waters&#x27; — day 2&#x27;s element, unbounded again). The scope: all flesh with RUACH CHAYIM (&#x27;the breath of life&#x27; — 2:7&#x27;s gift named as the target list&#x27;s criterion). YIGVA (&#x27;shall expire&#x27;) — the gentle death-verb&#x27;s debut (7:21 the execution; then the patriarchs breathe out in peace with the same word; Onkelos flattens it to &#x27;die&#x27; — dual-track).
+</td><td><span class="he">וַאֲנִי הִנְנִי מֵבִיא אֶת־הַמַּבּוּל … כֹּל אֲשֶׁר־בָּאָרֶץ יִגְוָע</span> · <i>va-ani hineni mevi et-ha-mabul … kol asher-ba-aretz yigva</i><br><span class="gloss">= I behold-I bringing with-the-flood all which-has-come-earth shall-expire</span></td><td class='cite'>TIR-031</td><td>tested</td></tr>
+</table>
+<div class="meta">The announcement counter-signs the commission: the same voice that said MAKE says I BRING — the ark and the flood are one speech.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_6_18 · Gen.6.18 · <span class='expr'>COVENANT_PROMISED_BOARDING_LIST</span></h3>
+<p><span class="he">וַהֲקִמֹתִי אֶת־בְּרִיתִי אִתָּךְ וּבָאתָ אֶל־הַתֵּבָה אַתָּה וּבָנֶיךָ וְאִשְׁתְּךָ וּנְשֵׁי־בָנֶיךָ אִתָּךְ</span> · <i>va-hakimoti et-briti itakh u-vata el-ha-tevah atah u-vanekha ve-ishtekha u-neshei-vanekha itakh</i> · [EN-AID/JPS] But I will establish My covenant with thee; and thou shalt come into the ark, thou, and thy sons, and thy wife, and thy sons&#x27; wives with thee.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">והקמתי את בריתי אתך</span> · <i>va-hakimoti et-briti itakh</i> · and I will establish my covenant with you (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ובאת אל התבה אתה ובניך ואשתך ונשי בניך אתך</span> · <i>u-vata el-ha-tevah atah u-vanekha ve-ishtekha u-neshei-vanekha itakh</i> · and you shall come into the ark — the boarding list</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_hakimoti_et_briti_itakh, t1) ∧ HOLDS(u_vata_el_ha_tevah_atah_u_vanekha, t1)</span><br><span class="gloss">= HOLDS(and-I-will-establish-with-My-covenant-with-you, t1) ∧ HOLDS(and-you-shall-come-to-the-ark-you-and-your-sons, t1)</span><br>BRIT (&#x27;covenant&#x27;) — THE WORD&#x27;S FIRST TOKEN, weqatal promise (TIR-029): &#x27;I will ESTABLISH my covenant WITH YOU&#x27; — singular, to one man, spoken before the un-creation it will outlive (tokens 2-5 are all Gen 9: the establishment; the promise precedes the flood, the ratification follows it). The boarding clause continues the command bundle: come in — you, your sons, your wife, your sons&#x27; wives (the list grouped by gender [letter fact, held]). Onkelos: brit -&gt; KEYAM, the Aramaic covenant-word (dual-track).
+</td><td><span class="he">וַהֲקִמֹתִי אֶת־בְּרִיתִי אִתָּךְ וּבָאתָ אֶל־הַתֵּבָה</span> · <i>va-hakimoti et-briti itakh u-vata el-ha-tevah</i><br><span class="gloss">= I-will-establish with-My-covenant with-you you-shall-come to-the-ark</span></td><td class='cite'>TIR-029</td><td>tested</td></tr>
+</table>
+<div class="meta">The corpus&#x27;s covenant vocabulary is born in the middle of a demolition order — promised to eight passengers before the water.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_6_19 · Gen.6.19 · <span class='expr'>MANIFEST_TWO_OF_ALL</span></h3>
+<p><span class="he">וּמִכָּל־הָחַי מִכָּל־בָּשָׂר שְׁנַיִם מִכֹּל תָּבִיא אֶל־הַתֵּבָה לְהַחֲיֹת אִתָּךְ זָכָר וּנְקֵבָה יִהְיוּ</span> · <i>u-mi-kol-ha-chai mi-kol-basar shnayim mi-kol tavi el-ha-tevah le-hachayot itakh zakhar u-nekevah yihyu</i> · [EN-AID/JPS] And of every living thing of all flesh, two of every sort shalt thou bring into the ark, to keep them alive with thee; they shall be male and female.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ומכל החי מכל בשר שנים מכל תביא אל התבה להחית אתך</span> · <i>u-mi-kol-ha-chai mi-kol-basar shnayim mi-kol tavi el-ha-tevah le-hachayot itakh</i> · two of all flesh you shall bring in, to keep alive (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">זכר ונקבה יהיו</span> · <i>zakhar u-nekevah yihyu</i> · male and female they shall be</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shnayim_mi_kol_tavi_el_ha_tevah, t1) ∧ HOLDS(zakhar_u_nekevah_yihyu, t1)</span><br><span class="gloss">= HOLDS(two-from-all-you-shall-bring-to-the-ark, t1) ∧ HOLDS(male-and-female-they-shall-be, t1)</span><br>The cargo spec: TWO of all, TO KEEP ALIVE (le-hachayot — the live-root as the mission verb), MALE AND FEMALE — 1:27&#x27;s creation pair re-issued as a manifest line: the ark carries the week&#x27;s taxonomy as freight. The purpose clause makes Noach the counter-instrument: the flood un-creates; the ark le-hachayot, keeps alive.
+</td><td><span class="he">שְׁנַיִם מִכֹּל תָּבִיא … זָכָר וּנְקֵבָה יִהְיוּ</span> · <i>shnayim mi-kol tavi … zakhar u-nekevah yihyu</i><br><span class="gloss">= two all you-shall-bring male female they-shall-be</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+</table>
+<div class="meta">Creation&#x27;s pair-language becomes a bill of lading.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_6_20 · Gen.6.20 · <span class='expr'>MANIFEST_BY_KINDS_SELF_LOADING</span></h3>
+<p><span class="he">מֵהָעוֹף לְמִינֵהוּ וּמִן־הַבְּהֵמָה לְמִינָהּ מִכֹּל רֶמֶשׂ הָאֲדָמָה לְמִינֵהוּ שְׁנַיִם מִכֹּל יָבֹאוּ אֵלֶיךָ לְהַחֲיוֹת</span> · <i>me-ha-of le-minehu u-min-ha-behemah le-minah mi-kol remes ha-adamah le-minehu shnayim mi-kol yavou elekha le-hachayot</i> · [EN-AID/JPS] Of the fowl after their kind, and of the cattle after their kind, of every creeping thing of the ground after its kind, two of every sort shall come unto thee, to keep them alive.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">מהעוף למינהו ומן הבהמה למינה מכל רמש האדמה למינהו</span> · <i>me-ha-of le-minehu u-min-ha-behemah le-minah mi-kol remes ha-adamah le-minehu</i> · birds, livestock, creepers — each by its kind (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">שנים מכל יבאו אליך להחיות</span> · <i>shnayim mi-kol yavou elekha le-hachayot</i> · two of all SHALL COME to you, to keep alive</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(le_minehu_manifest_of_behemah_remes, t1)</span><br><span class="gloss">= HOLDS(to-its-kind-manifest-bird-livestock-creeper-of, t1)</span><br>The taxonomy manifest: birds / livestock / ground-creepers — day 5-6&#x27;s categories — each LE-MINO (&#x27;by its KIND&#x27;): the week&#x27;s classification word x3, running the creation lists as cargo classes (the wipe-scope of 6:7 named the same classes for destruction; the manifest names them for rescue). And the load is SELF-DELIVERING: YAVOU ELEKHA — &#x27;they shall COME to you&#x27; (imperfect: the animals arrive on their own; Noach&#x27;s verb is receiving, not hunting) [letter fact, held].
+</td><td><span class="he">מֵהָעוֹף לְמִינֵהוּ … שְׁנַיִם מִכֹּל יָבֹאוּ אֵלֶיךָ</span> · <i>me-ha-of le-minehu … shnayim mi-kol yavou elekha</i><br><span class="gloss">= bird its-kind two all shall-come to-you</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The ark&#x27;s hold is the creation week filed by kind — and the cargo walks itself up the ramp.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_6_21 · Gen.6.21 · <span class='expr'>SECOND_IMPERATIVE_PROVISIONS</span></h3>
+<p><span class="he">וְאַתָּה קַח־לְךָ מִכָּל־מַאֲכָל אֲשֶׁר יֵאָכֵל וְאָסַפְתָּ אֵלֶיךָ וְהָיָה לְךָ וְלָהֶם לְאָכְלָה</span> · <i>ve-atah qach-lekha mi-kol-maakhal asher yeakhel ve-asafta elekha ve-hayah lekha ve-lahem le-akhlah</i> · [EN-AID/JPS] And take thou unto thee of all food that is eaten, and gather it to thee; and it shall be for food for thee, and for them.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ואתה קח לך מכל מאכל אשר יאכל ואספת אליך</span> · <i>ve-atah qach-lekha mi-kol-maakhal asher yeakhel ve-asafta elekha</i> · take of all food that is eaten, and gather it (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">והיה לך ולהם לאכלה</span> · <i>ve-hayah lekha ve-lahem le-akhlah</i> · and it shall be food for you and for them</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(Elohim, LET(qach(noach, mi_kol_maakhal)))</span><br><span class="gloss">= DECLARE(God, LET(take(Noach, from-all-food)))</span><br>The second imperative (TIR-027): QACH — &#x27;TAKE for yourself of all food that is eaten.&#x27; The take-verb that ran dark through the takings (3:6, 4:19, 6:2) is commanded straight: taking as stewardship. The queue now holds TWO open demands — the fullest mid-unit queue any derived span has carried.
+</td><td><span class="he">וְאַתָּה קַח־לְךָ מִכָּל־מַאֲכָל אֲשֶׁר יֵאָכֵל</span> · <i>ve-atah qach-lekha mi-kol-maakhal asher yeakhel</i><br><span class="gloss">= you take-to-you from-all-food which is-eaten</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_hayah_lekha_ve_lahem_le_akhlah, t1)</span><br><span class="gloss">= HOLDS(and-was-to-you-and-to-them-to-food, t1)</span><br>LE-AKHLAH (&#x27;for food&#x27;) — 1:29-30&#x27;s food-grant word: Eden&#x27;s provision formula re-issued inside the rescue (its next token is 9:3 — the post-flood re-grant, widened). The grant covers &#x27;you AND THEM&#x27;: one table for the whole manifest.
+</td><td><span class="he">וְהָיָה לְךָ וְלָהֶם לְאָכְלָה</span> · <i>ve-hayah lekha ve-lahem le-akhlah</i><br><span class="gloss">= was to-you to-them food</span></td><td class='cite'>TIR-029</td><td>tested</td></tr>
+</table>
+<div class="meta">The last spec line is a pantry: the food-grant vocabulary of the garden, requisitioned for the boat.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_6_22 · Gen.6.22 · <span class='expr'>THE_RECEIPT_BOTH_POPPED</span></h3>
+<p><span class="he">וַיַּעַשׂ נֹחַ כְּכֹל אֲשֶׁר צִוָּה אֹתוֹ אֱלֹהִים כֵּן עָשָׂה</span> · <i>va-yaas Noach ke-khol asher tzivah oto Elohim ken asah</i> · [EN-AID/JPS] Thus did Noah; according to all that God commanded him, so did he.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויעש נח ככל אשר צוה אתו אלהים</span> · <i>va-yaas Noach ke-khol asher tzivah oto Elohim</i> · Noach did according to all God commanded (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">כן עשה</span> · <i>ken asah</i> · so he did</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">make(e5) ∧ Agent(e5, noach) ∧ Theme(e5, tevah)</span><br><span class="gloss">= make(e5) ∧ Agent(e5, Noach) ∧ Theme(e5, ark)</span><br>The commanded verb executed: ASEH (&#x27;make&#x27;) answered by VA-YAAS (&#x27;and he made&#x27;) — the echo-class receipt (gen_09: the demand&#x27;s own verb returns as the deed&#x27;s).
+</td><td><span class="he">וַיַּעַשׂ נֹחַ</span> · <i>va-yaas Noach</i><br><span class="gloss">= he-made Noach</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>REGISTRY_INSTALL</td><td><span class="expr">WORLD += {tevah}</span><br><span class="gloss">= WORLD += {ark}</span><br>The SECOND human-built WORLD install — and the first RECEIPTED COMPLETE: gen_13&#x27;s city was a participle (building, never finished, named for a son); the ark closes its build to-spec and takes no name at all. The corpus&#x27;s two human constructions: a monument that never ends, a rescue that does.
+</td><td><span class="he">וַיַּעַשׂ נֹחַ כְּכֹל אֲשֶׁר צִוָּה</span> · <i>va-yaas Noach ke-khol asher tzivah</i><br><span class="gloss">= he-made Noach according-to-all which commanded</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(aseh(noach, tevah), t2)</span><br><span class="gloss">= RESULT: HOLDS(make(Noach, ark), t2)</span><br>Demand one POPPED — the build command receipted by the compliance formula: KE-KHOL ASHER TZIVAH (&#x27;according to ALL that commanded&#x27;). TZAVAH&#x27;s arc is the corpus&#x27;s moral history in four tokens: 2:16 the first rule (violated), 3:11/3:17 the indictment quoting it, 6:22 the FIRST OBEYED — and the refrain continues into the flood (7:5, 7:9, 7:16) and lands, far downstream, as the Tabernacle build refrain (Exod 39-40).
+</td><td><span class="he">כְּכֹל אֲשֶׁר צִוָּה אֹתוֹ אֱלֹהִים</span> · <i>ke-khol asher tzivah oto Elohim</i><br><span class="gloss">= according-to-all which commanded it God</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(qach(noach, mi_kol_maakhal), t2)</span><br><span class="gloss">= RESULT: HOLDS(take(Noach, from-all-food), t2)</span><br>Demand two POPPED by the same formula — KEN ASAH (&#x27;so he did&#x27;): the make-verb doubled around the verse, closing both imperatives at once (&#x27;ALL that God commanded&#x27; covers the pantry with the hull). SPECS ends EMPTY: the first fully-settled divine-to-human command cycle in the corpus — pushed and paid inside one unit.
+</td><td><span class="he">כֵּן עָשָׂה</span> · <i>ken asah</i><br><span class="gloss">= so make</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Nine verses of command, one verse of receipt, zero remainder — the queue&#x27;s first clean settlement, sealed with a doubled verb.</div>
+</div>
+<h2>State machine</h2>
+<div class="meta">The ark spec (standalone; registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER).</div>
+<table><tr><th>state</th><th>meaning</th></tr>
+<tr><td><b>S_boot</b></td><td>Before 6:9 — all registers empty (standalone unit)</td></tr>
+<tr><td><b>S_header</b></td><td>After 6:9-10 — the third toledot; the righteous walker&#x27;s facts; the cast re-stated; noach flagged as read</td></tr>
+<tr><td><b>S_indictment</b></td><td>After 6:11-13 — the corruption events (one root); the third seeing-mutation flagged; the end-decree confided to the exception</td></tr>
+<tr><td><b>S_commission</b></td><td>After 6:14 — LET(aseh(noach, tevah)) pushed: the first divine imperative to a named individual; the spec-sheet opens</td></tr>
+<tr><td><b>S_blueprint</b></td><td>After 6:15-17 — dimensions, light, door, decks standing; the flood announced over the Speaker&#x27;s own signature</td></tr>
+<tr><td><b>S_covenant</b></td><td>After 6:18-20 — the covenant word&#x27;s first token (promised, not yet established); the manifest by kinds, self-loading</td></tr>
+<tr><td><b>S_two_demands</b></td><td>After 6:21 — LET(qach(...)) pushed beside LET(aseh(...)): two open demands, the fullest mid-unit queue yet</td></tr>
+<tr><td><b>S_receipt</b></td><td>After 6:22 — WORLD += tevah (receipted complete); BOTH demands popped by one compliance formula; SPECS empty: the first settled cycle</td></tr>
+</table><table><tr><th>from</th><th>to</th><th>via</th></tr>
+<tr><td>S_boot</td><td>S_header</td><td>STEP_Gn_6_9</td></tr>
+<tr><td>S_header</td><td>S_header</td><td>STEP_Gn_6_10</td></tr>
+<tr><td>S_header</td><td>S_indictment</td><td>STEP_Gn_6_11</td></tr>
+<tr><td>S_indictment</td><td>S_indictment</td><td>STEP_Gn_6_12</td></tr>
+<tr><td>S_indictment</td><td>S_indictment</td><td>STEP_Gn_6_13</td></tr>
+<tr><td>S_indictment</td><td>S_commission</td><td>STEP_Gn_6_14</td></tr>
+<tr><td>S_commission</td><td>S_blueprint</td><td>STEP_Gn_6_15</td></tr>
+<tr><td>S_blueprint</td><td>S_blueprint</td><td>STEP_Gn_6_16</td></tr>
+<tr><td>S_blueprint</td><td>S_blueprint</td><td>STEP_Gn_6_17</td></tr>
+<tr><td>S_blueprint</td><td>S_covenant</td><td>STEP_Gn_6_18</td></tr>
+<tr><td>S_covenant</td><td>S_covenant</td><td>STEP_Gn_6_19</td></tr>
+<tr><td>S_covenant</td><td>S_covenant</td><td>STEP_Gn_6_20</td></tr>
+<tr><td>S_covenant</td><td>S_two_demands</td><td>STEP_Gn_6_21</td></tr>
+<tr><td>S_two_demands</td><td>S_receipt</td><td>STEP_Gn_6_22</td></tr>
+</table>
+<div class="note"><b>AFTER_S_receipt</b> — WORLD: ONE install — tevah (the ark: the SECOND human-built entry and the first RECEIPTED COMPLETE — against gen_13&#x27;s city, a participle that never finishes; +1 presupposed: noach, read). Standing facts (16): the character pair (righteous- blameless-in-his-generations [OPEN]; the walk in Chanokh&#x27;s verbatim phrase), the violence fill, the corrupted way, the end-decree pair, the spec-sheet (material+rooms, the atonement-root sealant, three dimensions, the hapax light, sin&#x27;s door-word as entrance, three decks), the flood announcement pair (behold-I-bring; all-shall-expire), the covenant promise (BRIT&#x27;s first token — weqatal, ratification waiting in Gen 9) with the boarding list, the manifest pair (two-of-all male-and-female; by-kinds self-loading), and the food-grant re-issue. EVENTS: the triple begetting re-stated, the agentless corruption, the third seeing, the end-decree speech, the receipted MAKE — plus the two declares and the two results. REGISTRY: ZERO writes (second unit running — the spec names nothing, not even the ark). SPECS: EMPTY at unit end — and that emptiness is the unit&#x27;s SIGNATURE: two demands pushed (the corpus&#x27;s first divine imperatives to a named individual — make, 6:14; take, 6:21) and BOTH POPPED by the one compliance formula (ke-khol asher tzivah... ken asah — the make-verb doubled): the FIRST FULLY-SETTLED DIVINE-TO-HUMAN COMMAND CYCLE (2:16&#x27;s first rule was violated; 6:14&#x27;s is built; the corpus-wide inherited debt — five open demands in prior frozen units — stands outside this standalone machine, prose until Stage E). TESTS: EMPTY (no verdict token; the third seeing returns a flagged mutation, not a test). LEDGER: EMPTY. FLAGS (2): read_before_install x1 (noach), spec_delta x1 (ve-hinneh tov meod -&gt; ve-hinneh nishchatah, cited against frozen 1:31). The machine ends with a finished hull, an empty queue, and a covenant word waiting for its ratifying unit.</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>The header and the walker: after STEP_Gn_6_9</td><td>All registers empty (standalone unit).</td><td>Facts ish_tzaddik_tamim_be_dorotav/et_ha_elohim_hithalekh_noach HOLD; SPECS empty; flags noach as read-before-install.<br><span class="gloss">= Facts man-righteous-whole-in-his-generations/with-the-God-walked-Noach HOLD; SPECS empty; flags Noach as read-before-install.</span></td><td><span class="he">אֶת־הָאֱלֹהִים הִתְהַלֶּךְ־נֹחַ</span> · <i>et-ha-Elohim hithalekh-Noach</i><br><span class="gloss">= with-the-God walked-Noach</span></td></tr>
+<tr><td><b>S2</b></td><td>The third seeing-mutation flagged: after STEP_Gn_6_12</td><td>S1 state + the corruption (6:10-11).</td><td>machine flags spec-delta; Facts hishchit_kol_basar_et_darko HOLD.<br><span class="gloss">= machine flags spec-delta; Facts had-corrupted-all-flesh-with-its-way HOLD.</span></td><td><span class="he">וְהִנֵּה נִשְׁחָתָה</span> · <i>ve-hinneh nishchatah</i><br><span class="gloss">= behold was-corrupted</span></td></tr>
+<tr><td><b>S3</b></td><td>The commission pushed: after STEP_Gn_6_14</td><td>S2 state + the end-decree (6:13).</td><td>LET(aseh(noach, tevah)) pushed and OPEN.<br><span class="gloss">= LET(make(Noach, ark)) pushed and OPEN.</span></td><td><span class="he">עֲשֵׂה לְךָ תֵּבַת</span> · <i>aseh lekha tevat</i><br><span class="gloss">= make to-you ark-of</span></td></tr>
+<tr><td><b>S4</b></td><td>The blueprint stands while the demand waits: after STEP_Gn_6_16</td><td>S3 state.</td><td>Facts shelosh_meot_amah_orekh/tzohar_la_tevah/tachtiyim_shniyim_u_shlishim HOLD; LET(aseh(noach, tevah)) pushed and OPEN.<br><span class="gloss">= Facts three-hundred-cubit-length-of/a-light-to-ark/lower-second-decks-and-third-decks HOLD; LET(make(Noach, ark)) pushed and OPEN.</span></td><td><span class="he">שְׁלֹשׁ מֵאוֹת אַמָּה</span> · <i>shlosh meot amah</i><br><span class="gloss">= shlosh hundred cubit</span></td></tr>
+<tr><td><b>S5</b></td><td>The covenant word on the books: after STEP_Gn_6_18</td><td>S4 state + the announcement (6:17).</td><td>Facts va_hakimoti_et_briti_itakh HOLD.<br><span class="gloss">= Facts and-I-will-establish-with-My-covenant-with-you HOLD.</span></td><td><span class="he">וַהֲקִמֹתִי אֶת־בְּרִיתִי</span> · <i>va-hakimoti et-briti</i><br><span class="gloss">= I-will-establish with-My-covenant</span></td></tr>
+<tr><td><b>S6</b></td><td>Two demands open — the fullest queue: after STEP_Gn_6_21</td><td>S5 state + the manifest (6:19-20).</td><td>LET(qach(noach, mi_kol_maakhal)) pushed and OPEN; LET(aseh(noach, tevah)) pushed and OPEN.<br><span class="gloss">= LET(take(Noach, from-all-food)) pushed and OPEN; LET(make(Noach, ark)) pushed and OPEN.</span></td><td><span class="he">וְאַתָּה קַח־לְךָ</span> · <i>ve-atah qach-lekha</i><br><span class="gloss">= you take-to-you</span></td></tr>
+<tr><td><b>S7</b></td><td>The receipt — both popped, the hull installed: after STEP_Gn_6_22</td><td>S6 state.</td><td>WORLD = {tevah}; SPECS empty.<br><span class="gloss">= WORLD = {ark}; SPECS empty.</span></td><td><span class="he">כְּכֹל אֲשֶׁר צִוָּה אֹתוֹ אֱלֹהִים כֵּן עָשָׂה</span> · <i>ke-khol asher tzivah oto Elohim ken asah</i><br><span class="gloss">= according-to-all which commanded it God so make</span></td></tr>
+<tr><td><b>S8_negative</b></td><td>Negative: the machine&#x27;s ? stays guarded</td><td>A synthetic LET? demand (the machine&#x27;s own contract self-test).</td><td>LET? never auto-upgrades: resolution without citation must REFUSE; with a per-unit citation it may resolve — receipts pop demands; nothing but citation moves a mood.</td><td></td></tr>
+<tr><td><b>S9_negative</b></td><td>Negative: flags never block</td><td>A synthetic commit with TESTS empty (the machine&#x27;s own contract self-test).</td><td>Cycle close with TESTS empty must be FLAGGED, never blocked.<br><span class="gloss">= Cycle close with TESTS empty must in FLAGGED, never blocked.</span></td><td></td></tr>
+</table>
+<h2>Exports (reusable patterns)</h2><table><tr><th>id</th><th>content</th></tr>
+<tr><td>EXPORT_first_settled_cycle</td><td><span class="he">עֲשֵׂה … קַח … וַיַּעַשׂ נֹחַ כְּכֹל אֲשֶׁר צִוָּה אֹתוֹ אֱלֹהִים כֵּן עָשָׂה</span> · <i>aseh … qach … va-yaas Noach ke-khol asher tzivah oto Elohim ken asah</i> · two divine imperatives (TIR-027&#x27;s first to a named individual) pushed and BOTH popped by one compliance formula — the first fully-settled divine-to-human command cycle; the command-verb&#x27;s arc: 2:16 violated, 3:11/3:17 indicted, 6:22 OBEYED, 7:5/9/16 the refrain — far career: the Tabernacle build refrain (Exod 39-40)</td></tr>
+<tr><td>EXPORT_shachat_measure_for_measure</td><td><span class="he">וַתִּשָּׁחֵת … נִשְׁחָתָה … הִשְׁחִית … מַשְׁחִיתָם … לְשַׁחֵת</span> · <i>va-tishachet … nishchatah … hishchit … mashchitam … le-shachet</i> · one root, five tokens, both directions: the earth corrupted, all flesh corrupted its way, I destroy them — the crime-verb IS the sentence-verb; tokens 6-7 are the covenant&#x27;s never-again (9:11, 9:15); the corrupted object is DEREKH, 3:24&#x27;s guarded way-word</td></tr>
+<tr><td>EXPORT_third_seeing_mutation</td><td><span class="he">וְהִנֵּה נִשְׁחָתָה</span> · <i>ve-hinneh nishchatah</i> · 1:31&#x27;s closing inspection re-run in its exact grammar with the verdict slot flipped (behold-very-good -&gt; behold-corrupted) — the week formula&#x27;s third mutation across gen_15/16 (stolen, inverted, re-verdicted), each held as spec-delta against frozen text</td></tr>
+<tr><td>EXPORT_tevah_two_rescues</td><td><span class="he">תֵּבַת עֲצֵי־גֹפֶר</span> · <i>tevat atzei-gofer</i> · the ark-word&#x27;s whole Torah career is two water-rescues: 26 Genesis tokens + Moses&#x27; basket (Exod 2:3,5) — nothing else; built of a hapax wood, lit by a hapax tzohar [OPEN: window/light/gem], entered through sin&#x27;s old door-word (4:7&#x27;s petach), sealed with the ATONEMENT root as pitch (kaphar&#x27;s debut), measured in the corpus&#x27;s first cubits (the flood itself measured in the same unit, 7:20)</td></tr>
+<tr><td>EXPORT_brit_debut</td><td><span class="he">וַהֲקִמֹתִי אֶת־בְּרִיתִי אִתָּךְ</span> · <i>va-hakimoti et-briti itakh</i> · the covenant word&#x27;s first token — a weqatal promise to ONE man, spoken inside a demolition order, ratified only across the flood (tokens 2-5 = Gen 9); Onkelos renders keyam — the Aramaic covenant vocabulary begins here too</td></tr>
+<tr><td>EXPORT_manifest_creation_in_miniature</td><td><span class="he">שְׁנַיִם מִכֹּל … זָכָר וּנְקֵבָה … לְמִינֵהוּ</span> · <i>shnayim mi-kol … zakhar u-nekevah … le-minehu</i> · the cargo spec re-issues the week: 1:27&#x27;s male-and-female as manifest line, day 5-6&#x27;s by-its-kind x3 as cargo classes, 1:29-30&#x27;s food-grant word as pantry clause — and the load is self-delivering (they SHALL COME to you): the ark is creation filed for storage</td></tr>
+<tr><td>EXPORT_city_vs_ark</td><td><span class="he">וַיְהִי בֹּנֶה עִיר … וַיַּעַשׂ נֹחַ</span> · <i>va-yehi boneh ir … va-yaas Noach</i> · the corpus&#x27;s two human builds, machine-contrasted: the city (gen_13) installs from an unfinished participle, named for a son; the ark installs receipted complete, to-spec, and takes no name — the first WORLD entry with a compliance certificate</td></tr>
+</table>
+<h2>Oral notes (named, tiered, dual-track — never merged)</h2>
+<div class="note"><span class="badge tier-o">observation</span> <b>Bereshit Rabbah 30-31 (the span; the tzaddik-in-his-generations war; the building years); Bavli Sanhedrin 108a-b (the verdict sealed over ROBBERY — carried by Onkelos&#x27;s lexical choice below; the ark as public warning); Rashi at 6:9 (the two be-dorotav readings), 6:14, 6:16 (the tzohar split); Pirkei DeRabbi Eliezer 23 — gen_16 Tier-A queue</b><br><span class="he">בְּדֹרֹתָיו</span> · <i>(queue — named only)</i> · Named, not read: the cache holds ZERO sources anchored to Gen 6:9-22 — tenth tripwire span. Detector classes predicted: the chamas -&gt; robbery specification is a crime-specification class (doctrine carried as lexicon); the be-dorotav plural is a diyyuk-class target (doctrine from a suffix&#x27;s number); the tzohar hapax is a three-way lexical fork.
+<br><i>Queue entry — no claim made beyond the naming.</i></div>
+<div class="note"><span class="badge tier-v">verified</span> <b>Onkelos Genesis 6:9-22 — read Tier-A at derive time (14 sequential fetches, Data/FETCHLOG.md 2026-08-01)</b><br><span class="he">חֲטוֹפִין</span> · <i>chatofin</i> · The span&#x27;s translation witness: CHAMAS -&gt; CHATOFIN (&#x27;robbery&#x27;) twice — the general violence specified into the property crime: Sanhedrin 108a&#x27;s sealed-over-robbery doctrine operating as a translation choice (flagged); the corruption RESTRICTED to &#x27;all flesh OF MAN&#x27; (6:12 — the animals shielded from the letter&#x27;s all-flesh charge) with a motive inserted at 6:13 (&#x27;because of their evil deeds&#x27;) (flagged); Noach&#x27;s walk gets Chanokh&#x27;s exact fear-buffer; the hapax votes: tzohar -&gt; NEHOR (&#x27;light&#x27;), gofer -&gt; KADROM (cedar-family), qinim -&gt; &#x27;dwellings&#x27;; mabul -&gt; tofana; the gentle expire-verb flattened to &#x27;die&#x27;; BRIT -&gt; KEYAM; and the receipt&#x27;s Elohim -&gt; YY. The buffer&#x27;s pattern across the span: crimes get more specific, scopes get narrower, hapaxes get decided — the letter&#x27;s opens are the translation&#x27;s closes.
+<br><i>Read from Data/sefaria_texts/ (local, gitignored; FETCHLOG is provenance). Dual-track; not merged.</i></div>
+<h2>Binary trees (ta'amim v3, glue bricks)</h2>
+<h3>Gen.6.9 · parser unique · 13 words</h3>
+<div class="meta"><span class="he">אֵלֶּה תּוֹלְדֹת נֹחַ נֹחַ אִישׁ צַדִּיק תָּמִים הָיָה בְּדֹרֹתָיו אֶת־הָאֱלֹהִים הִתְהַלֶּךְ־נֹחַ</span> · <i>ele toldot nocha nocha ish tzadiq tamim haya be-dorotay-v et-ha-Elohim hithalekh-nocha</i> · The generations of Noach: righteous, whole — with God walked Noach. [EN-AID]</div>
+<pre>PHRASE (binary 13w) אֵ֚לֶּה תּוֹלְדֹ֣ת נֹ֔חַ נֹ֗חַ אִ֥ישׁ צַדִּ֛יק …
+├── PHRASE (binary 9w) אֵ֚לֶּה תּוֹלְדֹ֣ת נֹ֔חַ נֹ֗חַ אִ֥ישׁ צַדִּ֛יק …
+│   ├── PHRASE (binary 3w) אֵ֚לֶּה תּוֹלְדֹ֣ת נֹ֔חַ
+│   │   ├── [0] אֵ֚לֶּה (yetiv, rank=3)
+│   │   └── [1-2] GLUE תּוֹלְדֹ֣ת נֹ֔חַ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 6w) נֹ֗חַ אִ֥ישׁ צַדִּ֛יק תָּמִ֥ים הָיָ֖ה בְּ/דֹֽרֹ…
+│       ├── PHRASE (binary 5w) נֹ֗חַ אִ֥ישׁ צַדִּ֛יק תָּמִ֥ים הָיָ֖ה
+│       │   ├── [3] נֹ֗חַ (revia, rank=3)
+│       │   └── PHRASE (binary 4w) אִ֥ישׁ צַדִּ֛יק תָּמִ֥ים הָיָ֖ה
+│       │       ├── [4-5] GLUE אִ֥ישׁ צַדִּ֛יק (tevir, rank=3)
+│       │       └── [6-7] GLUE תָּמִ֥ים הָיָ֖ה (tifcha, rank=2)
+│       └── [8] בְּ/דֹֽרֹתָ֑י/ו (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) אֶת הָֽ/אֱלֹהִ֖ים הִֽתְהַלֶּךְ נֹֽחַ
+    ├── [9-10] GLUE אֶת הָֽ/אֱלֹהִ֖ים (tifcha, rank=2)
+    └── [11-12] GLUE הִֽתְהַלֶּךְ נֹֽחַ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.6.10 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">וַיּוֹלֶד נֹחַ שְׁלֹשָׁה בָנִים אֶת־שֵׁם אֶת־חָם וְאֶת־יָפֶת</span> · <i>va-yoled nocha shelosha vanim et-shem et-cham ve-et-yafet</i> · Noach begot three sons: Shem, Cham, Yafet. [EN-AID]</div>
+<pre>PHRASE (binary 10w) וַ/יּ֥וֹלֶד נֹ֖חַ שְׁלֹשָׁ֣ה בָנִ֑ים אֶת שֵׁ֖ם …
+├── PHRASE (binary 4w) וַ/יּ֥וֹלֶד נֹ֖חַ שְׁלֹשָׁ֣ה בָנִ֑ים
+│   ├── [0-1] GLUE וַ/יּ֥וֹלֶד נֹ֖חַ (tifcha, rank=2)
+│   └── [2-3] GLUE שְׁלֹשָׁ֣ה בָנִ֑ים (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) אֶת שֵׁ֖ם אֶת חָ֥ם וְ/אֶת יָֽפֶת
+    ├── [4-5] GLUE אֶת שֵׁ֖ם (tifcha, rank=2)
+    └── [6-9] GLUE אֶת חָ֥ם וְ/אֶת יָֽפֶת (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.6.11 · parser unique · 7 words</h3>
+<div class="meta"><span class="he">וַתִּשָּׁחֵת הָאָרֶץ לִפְנֵי הָאֱלֹהִים וַתִּמָּלֵא הָאָרֶץ חָמָס</span> · <i>va-tishachet ha-aretz li-fene ha-Elohim va-timale ha-aretz chamas</i> · The earth was corrupted before God — and filled with violence. [EN-AID]</div>
+<pre>PHRASE (binary 7w) וַ/תִּשָּׁחֵ֥ת הָ/אָ֖רֶץ לִ/פְנֵ֣י הָֽ/אֱלֹהִ֑י…
+├── PHRASE (binary 4w) וַ/תִּשָּׁחֵ֥ת הָ/אָ֖רֶץ לִ/פְנֵ֣י הָֽ/אֱלֹהִ֑ים
+│   ├── [0-1] GLUE וַ/תִּשָּׁחֵ֥ת הָ/אָ֖רֶץ (tifcha, rank=2)
+│   └── [2-3] GLUE לִ/פְנֵ֣י הָֽ/אֱלֹהִ֑ים (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וַ/תִּמָּלֵ֥א הָ/אָ֖רֶץ חָמָֽס
+    ├── [4-5] GLUE וַ/תִּמָּלֵ֥א הָ/אָ֖רֶץ (tifcha, rank=2)
+    └── [6] חָמָֽס (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.6.12 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">וַיַּרְא אֱלֹהִים אֶת־הָאָרֶץ וְהִנֵּה נִשְׁחָתָה כִּי־הִשְׁחִית כָּל־בָּשָׂר אֶת־דַּרְכּוֹ עַל־הָאָרֶץ</span> · <i>va-yar Elohim et-ha-aretz ve-hine nishchata ki-hishchit kal-basar et-dark-o al-ha-aretz</i> · God saw the earth: behold, CORRUPTED — all flesh had corrupted its way. [EN-AID]</div>
+<pre>PHRASE (binary 14w) וַ/יַּ֧רְא אֱלֹהִ֛ים אֶת הָ/אָ֖רֶץ וְ/הִנֵּ֣ה נ…
+├── PHRASE (binary 6w) וַ/יַּ֧רְא אֱלֹהִ֛ים אֶת הָ/אָ֖רֶץ וְ/הִנֵּ֣ה נ…
+│   ├── PHRASE (binary 4w) וַ/יַּ֧רְא אֱלֹהִ֛ים אֶת הָ/אָ֖רֶץ
+│   │   ├── [0-1] GLUE וַ/יַּ֧רְא אֱלֹהִ֛ים (tevir, rank=3)
+│   │   └── [2-3] GLUE אֶת הָ/אָ֖רֶץ (tifcha, rank=2)
+│   └── [4-5] GLUE וְ/הִנֵּ֣ה נִשְׁחָ֑תָה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) כִּֽי הִשְׁחִ֧ית כָּל בָּשָׂ֛ר אֶת דַּרְכּ֖/וֹ …
+    ├── PHRASE (binary 6w) כִּֽי הִשְׁחִ֧ית כָּל בָּשָׂ֛ר אֶת דַּרְכּ֖/וֹ
+    │   ├── [6-9] GLUE כִּֽי הִשְׁחִ֧ית כָּל בָּשָׂ֛ר (tevir, rank=3)
+    │   └── [10-11] GLUE אֶת דַּרְכּ֖/וֹ (tifcha, rank=2)
+    └── [12-13] GLUE עַל הָ/אָֽרֶץ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.6.13 · parser unique · 17 words</h3>
+<div class="meta"><span class="he">וַיֹּאמֶר אֱלֹהִים לְנֹחַ קֵץ כָּל־בָּשָׂר בָּא לְפָנַי כִּי־מָלְאָה הָאָרֶץ חָמָס מִפְּנֵיהֶם וְהִנְנִי מַשְׁחִיתָם אֶת־הָאָרֶץ</span> · <i>va-yomer Elohim le-nocha qetz kal-basar ba le-fana-y ki-mala ha-aretz chamas mi-pene-hem ve-hin-ni mashchita-m et-ha-aretz</i> · The end of all flesh has come before Me — behold, I destroy them with the earth. [EN-AID]</div>
+<pre>PHRASE (binary 17w) וַ/יֹּ֨אמֶר אֱלֹהִ֜ים לְ/נֹ֗חַ קֵ֤ץ כָּל בָּשָׂ…
+├── PHRASE (binary 13w) וַ/יֹּ֨אמֶר אֱלֹהִ֜ים לְ/נֹ֗חַ קֵ֤ץ כָּל בָּשָׂ…
+│   ├── PHRASE (binary 8w) וַ/יֹּ֨אמֶר אֱלֹהִ֜ים לְ/נֹ֗חַ קֵ֤ץ כָּל בָּשָׂ…
+│   │   ├── PHRASE (binary 3w) וַ/יֹּ֨אמֶר אֱלֹהִ֜ים לְ/נֹ֗חַ
+│   │   │   ├── [0-1] GLUE וַ/יֹּ֨אמֶר אֱלֹהִ֜ים (geresh, rank=4)
+│   │   │   └── [2] לְ/נֹ֗חַ (revia, rank=3)
+│   │   └── PHRASE (binary 5w) קֵ֤ץ כָּל בָּשָׂר֙ בָּ֣א לְ/פָנַ֔/י
+│   │       ├── [3-5] GLUE קֵ֤ץ כָּל בָּשָׂר֙ (pashta, rank=3)
+│   │       └── [6-7] GLUE בָּ֣א לְ/פָנַ֔/י (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) כִּֽי מָלְאָ֥ה הָ/אָ֛רֶץ חָמָ֖ס מִ/פְּנֵי/הֶ֑ם
+│       ├── PHRASE (binary 4w) כִּֽי מָלְאָ֥ה הָ/אָ֛רֶץ חָמָ֖ס
+│       │   ├── [8-10] GLUE כִּֽי מָלְאָ֥ה הָ/אָ֛רֶץ (tevir, rank=3)
+│       │   └── [11] חָמָ֖ס (tifcha, rank=2)
+│       └── [12] מִ/פְּנֵי/הֶ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וְ/הִנְ/נִ֥י מַשְׁחִיתָ֖/ם אֶת הָ/אָֽרֶץ
+    ├── [13-14] GLUE וְ/הִנְ/נִ֥י מַשְׁחִיתָ֖/ם (tifcha, rank=2)
+    └── [15-16] GLUE אֶת הָ/אָֽרֶץ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.6.14 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">עֲשֵׂה לְךָ תֵּבַת עֲצֵי־גֹפֶר קִנִּים תַּעֲשֶׂה אֶת־הַתֵּבָה וְכָפַרְתָּ אֹתָהּ מִבַּיִת וּמִחוּץ בַּכֹּפֶר</span> · <i>ase le-kha tevat atze-gofer qinim taase et-ha-teva ve-khafarta et-ה mi-bayit u-mi-chutz ba-kofer</i> · Make yourself an ark of gofer wood; rooms; pitch it inside and out. [EN-AID]</div>
+<pre>PHRASE (binary 14w) עֲשֵׂ֤ה לְ/ךָ֙ תֵּבַ֣ת עֲצֵי גֹ֔פֶר קִנִּ֖ים תּ…
+├── PHRASE (binary 9w) עֲשֵׂ֤ה לְ/ךָ֙ תֵּבַ֣ת עֲצֵי גֹ֔פֶר קִנִּ֖ים תּ…
+│   ├── PHRASE (binary 5w) עֲשֵׂ֤ה לְ/ךָ֙ תֵּבַ֣ת עֲצֵי גֹ֔פֶר
+│   │   ├── [0-1] GLUE עֲשֵׂ֤ה לְ/ךָ֙ (pashta, rank=3)
+│   │   └── [2-4] GLUE תֵּבַ֣ת עֲצֵי גֹ֔פֶר (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) קִנִּ֖ים תַּֽעֲשֶׂ֣ה אֶת הַ/תֵּבָ֑ה
+│       ├── [5] קִנִּ֖ים (tifcha, rank=2)
+│       └── [6-8] GLUE תַּֽעֲשֶׂ֣ה אֶת הַ/תֵּבָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) וְ/כָֽפַרְתָּ֥ אֹתָ֛/הּ מִ/בַּ֥יִת וּ/מִ/ח֖וּץ …
+    ├── PHRASE (binary 4w) וְ/כָֽפַרְתָּ֥ אֹתָ֛/הּ מִ/בַּ֥יִת וּ/מִ/ח֖וּץ
+    │   ├── [9-10] GLUE וְ/כָֽפַרְתָּ֥ אֹתָ֛/הּ (tevir, rank=3)
+    │   └── [11-12] GLUE מִ/בַּ֥יִת וּ/מִ/ח֖וּץ (tifcha, rank=2)
+    └── [13] בַּ/כֹּֽפֶר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.6.15 · parser unique · 15 words</h3>
+<div class="meta"><span class="he">וְזֶה אֲשֶׁר תַּעֲשֶׂה אֹתָהּ שְׁלֹשׁ מֵאוֹת אַמָּה אֹרֶךְ הַתֵּבָה חֲמִשִּׁים אַמָּה רָחְבָּהּ וּשְׁלֹשִׁים אַמָּה קוֹמָתָהּ</span> · <i>ve-ze asher taase et-ה shelosh meot ama orekh ha-teva chamishim ama rachba-ה u-sheloshim ama qomata-ה</i> · Three hundred cubits the length, fifty the width, thirty the height. [EN-AID]</div>
+<pre>PHRASE (binary 15w) וְ/זֶ֕ה אֲשֶׁ֥ר תַּֽעֲשֶׂ֖ה אֹתָ֑/הּ שְׁלֹ֧שׁ מ…
+├── PHRASE (binary 4w) וְ/זֶ֕ה אֲשֶׁ֥ר תַּֽעֲשֶׂ֖ה אֹתָ֑/הּ
+│   ├── [0] וְ/זֶ֕ה (zaqef gadol, rank=2)
+│   └── PHRASE (binary 3w) אֲשֶׁ֥ר תַּֽעֲשֶׂ֖ה אֹתָ֑/הּ
+│       ├── [1-2] GLUE אֲשֶׁ֥ר תַּֽעֲשֶׂ֖ה (tifcha, rank=2)
+│       └── [3] אֹתָ֑/הּ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 11w) שְׁלֹ֧שׁ מֵא֣וֹת אַמָּ֗ה אֹ֚רֶךְ הַ/תֵּבָ֔ה חֲמ…
+    ├── PHRASE (binary 5w) שְׁלֹ֧שׁ מֵא֣וֹת אַמָּ֗ה אֹ֚רֶךְ הַ/תֵּבָ֔ה
+    │   ├── [4-6] GLUE שְׁלֹ֧שׁ מֵא֣וֹת אַמָּ֗ה (revia, rank=3)
+    │   └── PHRASE (binary 2w) אֹ֚רֶךְ הַ/תֵּבָ֔ה
+    │       ├── [7] אֹ֚רֶךְ (yetiv, rank=3)
+    │       └── [8] הַ/תֵּבָ֔ה (zaqef qatan, rank=2)
+    └── PHRASE (binary 6w) חֲמִשִּׁ֤ים אַמָּה֙ רָחְבָּ֔/הּ וּ/שְׁלֹשִׁ֥ים …
+        ├── PHRASE (binary 3w) חֲמִשִּׁ֤ים אַמָּה֙ רָחְבָּ֔/הּ
+        │   ├── [9-10] GLUE חֲמִשִּׁ֤ים אַמָּה֙ (pashta, rank=3)
+        │   └── [11] רָחְבָּ֔/הּ (zaqef qatan, rank=2)
+        └── PHRASE (binary 3w) וּ/שְׁלֹשִׁ֥ים אַמָּ֖ה קוֹמָתָֽ/הּ
+            ├── [12-13] GLUE וּ/שְׁלֹשִׁ֥ים אַמָּ֖ה (tifcha, rank=2)
+            └── [14] קוֹמָתָֽ/הּ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.6.16 · parser unique · 15 words</h3>
+<div class="meta"><span class="he">צֹהַר תַּעֲשֶׂה לַתֵּבָה וְאֶל־אַמָּה תְּכַלֶנָּה מִלְמַעְלָה וּפֶתַח הַתֵּבָה בְּצִדָּהּ תָּשִׂים תַּחְתִּיִּם שְׁנִיִּם וּשְׁלִשִׁים תַּעֲשֶׂהָ</span> · <i>tzohar taase la-teva ve-el-ama tekhale-na mi-le-mala-ה u-fetach ha-teva be-tzida-ה tasim tachtiyim sheniyim u-shelishim taase-ha</i> · A light; finish to a cubit; the door in the side; three decks. [EN-AID]</div>
+<pre>PHRASE (binary 15w) צֹ֣הַר תַּֽעֲשֶׂ֣ה לַ/תֵּבָ֗ה וְ/אֶל אַמָּה֙ תּ…
+├── PHRASE (binary 11w) צֹ֣הַר תַּֽעֲשֶׂ֣ה לַ/תֵּבָ֗ה וְ/אֶל אַמָּה֙ תּ…
+│   ├── PHRASE (binary 7w) צֹ֣הַר תַּֽעֲשֶׂ֣ה לַ/תֵּבָ֗ה וְ/אֶל אַמָּה֙ תּ…
+│   │   ├── [0-2] GLUE צֹ֣הַר תַּֽעֲשֶׂ֣ה לַ/תֵּבָ֗ה (revia, rank=3)
+│   │   └── PHRASE (binary 4w) וְ/אֶל אַמָּה֙ תְּכַלֶ֣/נָּה מִ/לְ/מַ֔עְלָ/ה
+│   │       ├── [3-4] GLUE וְ/אֶל אַמָּה֙ (pashta, rank=3)
+│   │       └── [5-6] GLUE תְּכַלֶ֣/נָּה מִ/לְ/מַ֔עְלָ/ה (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) וּ/פֶ֥תַח הַ/תֵּבָ֖ה בְּ/צִדָּ֣/הּ תָּשִׂ֑ים
+│       ├── [7-8] GLUE וּ/פֶ֥תַח הַ/תֵּבָ֖ה (tifcha, rank=2)
+│       └── [9-10] GLUE בְּ/צִדָּ֣/הּ תָּשִׂ֑ים (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) תַּחְתִּיִּ֛ם שְׁנִיִּ֥ם וּ/שְׁלִשִׁ֖ים תַּֽעֲש…
+    ├── PHRASE (binary 3w) תַּחְתִּיִּ֛ם שְׁנִיִּ֥ם וּ/שְׁלִשִׁ֖ים
+    │   ├── [11] תַּחְתִּיִּ֛ם (tevir, rank=3)
+    │   └── [12-13] GLUE שְׁנִיִּ֥ם וּ/שְׁלִשִׁ֖ים (tifcha, rank=2)
+    └── [14] תַּֽעֲשֶֽׂ/הָ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.6.17 · parser unique · 21 words</h3>
+<div class="meta"><span class="he">וַאֲנִי הִנְנִי מֵבִיא אֶת־הַמַּבּוּל מַיִם עַל־הָאָרֶץ לְשַׁחֵת כָּל־בָּשָׂר אֲשֶׁר־בּוֹ רוּחַ חַיִּים מִתַּחַת הַשָּׁמָיִם כֹּל אֲשֶׁר־בָּאָרֶץ יִגְוָע</span> · <i>va-ani hin-ni mevi et-ha-mabul mayim al-ha-aretz le-shachet kal-basar asher-b-o rucha chayim mi-tachat ha-shamayim kol asher-ba-aretz yigva</i> · Behold, I bring the flood to destroy all breathing flesh — all shall expire. [EN-AID]</div>
+<pre>PHRASE (binary 21w) וַ/אֲנִ֗י הִנְ/נִי֩ מֵבִ֨יא אֶת הַ/מַּבּ֥וּל מַ…
+├── PHRASE (binary 17w) וַ/אֲנִ֗י הִנְ/נִי֩ מֵבִ֨יא אֶת הַ/מַּבּ֥וּל מַ…
+│   ├── PHRASE (binary 8w) וַ/אֲנִ֗י הִנְ/נִי֩ מֵבִ֨יא אֶת הַ/מַּבּ֥וּל מַ…
+│   │   ├── [0] וַ/אֲנִ֗י (revia, rank=3)
+│   │   └── PHRASE (binary 7w) הִנְ/נִי֩ מֵבִ֨יא אֶת הַ/מַּבּ֥וּל מַ֨יִם֙ עַל …
+│   │       ├── [1-5] GLUE הִנְ/נִי֩ מֵבִ֨יא אֶת הַ/מַּבּ֥וּל מַ֨יִם֙ (pashta, rank=3)
+│   │       └── [6-7] GLUE עַל הָ/אָ֔רֶץ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 9w) לְ/שַׁחֵ֣ת כָּל בָּשָׂ֗ר אֲשֶׁר בּ/וֹ֙ ר֣וּחַ ח…
+│       ├── PHRASE (binary 7w) לְ/שַׁחֵ֣ת כָּל בָּשָׂ֗ר אֲשֶׁר בּ/וֹ֙ ר֣וּחַ ח…
+│       │   ├── [8-10] GLUE לְ/שַׁחֵ֣ת כָּל בָּשָׂ֗ר (revia, rank=3)
+│       │   └── PHRASE (binary 4w) אֲשֶׁר בּ/וֹ֙ ר֣וּחַ חַיִּ֔ים
+│       │       ├── [11-12] GLUE אֲשֶׁר בּ/וֹ֙ (pashta, rank=3)
+│       │       └── [13-14] GLUE ר֣וּחַ חַיִּ֔ים (zaqef qatan, rank=2)
+│       └── PHRASE (binary 2w) מִ/תַּ֖חַת הַ/שָּׁמָ֑יִם
+│           ├── [15] מִ/תַּ֖חַת (tifcha, rank=2)
+│           └── [16] הַ/שָּׁמָ֑יִם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) כֹּ֥ל אֲשֶׁר בָּ/אָ֖רֶץ יִגְוָֽע
+    ├── [17-19] GLUE כֹּ֥ל אֲשֶׁר בָּ/אָ֖רֶץ (tifcha, rank=2)
+    └── [20] יִגְוָֽע (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.6.18 · parser unique · 13 words</h3>
+<div class="meta"><span class="he">וַהֲקִמֹתִי אֶת־בְּרִיתִי אִתָּךְ וּבָאתָ אֶל־הַתֵּבָה אַתָּה וּבָנֶיךָ וְאִשְׁתְּךָ וּנְשֵׁי־בָנֶיךָ אִתָּךְ</span> · <i>va-haqimoti et-beriti-y et-khe u-vata el-ha-teva ata u-vane-kha ve-isht-kha u-neshe-vane-kha et-khe</i> · I will establish my covenant with you — come in, you and your house. [EN-AID]</div>
+<pre>PHRASE (binary 13w) וַ/הֲקִמֹתִ֥י אֶת בְּרִיתִ֖/י אִתָּ֑/ךְ וּ/בָאת…
+├── PHRASE (binary 4w) וַ/הֲקִמֹתִ֥י אֶת בְּרִיתִ֖/י אִתָּ֑/ךְ
+│   ├── [0-2] GLUE וַ/הֲקִמֹתִ֥י אֶת בְּרִיתִ֖/י (tifcha, rank=2)
+│   └── [3] אִתָּ֑/ךְ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 9w) וּ/בָאתָ֙ אֶל הַ/תֵּבָ֔ה אַתָּ֕ה וּ/בָנֶ֛י/ךָ ו…
+    ├── PHRASE (binary 3w) וּ/בָאתָ֙ אֶל הַ/תֵּבָ֔ה
+    │   ├── [4] וּ/בָאתָ֙ (pashta, rank=3)
+    │   └── [5-6] GLUE אֶל הַ/תֵּבָ֔ה (zaqef qatan, rank=2)
+    └── PHRASE (binary 6w) אַתָּ֕ה וּ/בָנֶ֛י/ךָ וְ/אִשְׁתְּ/ךָ֥ וּ/נְשֵֽׁי…
+        ├── [7] אַתָּ֕ה (zaqef gadol, rank=2)
+        └── PHRASE (binary 5w) וּ/בָנֶ֛י/ךָ וְ/אִשְׁתְּ/ךָ֥ וּ/נְשֵֽׁי בָנֶ֖י/…
+            ├── PHRASE (binary 4w) וּ/בָנֶ֛י/ךָ וְ/אִשְׁתְּ/ךָ֥ וּ/נְשֵֽׁי בָנֶ֖י/…
+            │   ├── [8] וּ/בָנֶ֛י/ךָ (tevir, rank=3)
+            │   └── [9-11] GLUE וְ/אִשְׁתְּ/ךָ֥ וּ/נְשֵֽׁי בָנֶ֖י/ךָ (tifcha, rank=2)
+            └── [12] אִתָּֽ/ךְ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.6.19 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">וּמִכָּל־הָחַי מִכָּל־בָּשָׂר שְׁנַיִם מִכֹּל תָּבִיא אֶל־הַתֵּבָה לְהַחֲיֹת אִתָּךְ זָכָר וּנְקֵבָה יִהְיוּ</span> · <i>u-mi-kal-ha-chay mi-kal-basar shenayim mi-kol tavi el-ha-teva le-hachayot et-khe zakhar u-neqeva yihyu</i> · Two of all flesh you shall bring in — male and female. [EN-AID]</div>
+<pre>PHRASE (binary 14w) וּ/מִ/כָּל הָ֠/חַי מִֽ/כָּל בָּשָׂ֞ר שְׁנַ֧יִם …
+├── PHRASE (binary 11w) וּ/מִ/כָּל הָ֠/חַי מִֽ/כָּל בָּשָׂ֞ר שְׁנַ֧יִם …
+│   ├── PHRASE (binary 9w) וּ/מִ/כָּל הָ֠/חַי מִֽ/כָּל בָּשָׂ֞ר שְׁנַ֧יִם …
+│   │   ├── PHRASE (binary 6w) וּ/מִ/כָּל הָ֠/חַי מִֽ/כָּל בָּשָׂ֞ר שְׁנַ֧יִם …
+│   │   │   ├── [0-1] GLUE וּ/מִ/כָּל הָ֠/חַי (telisha gedola, rank=4)
+│   │   │   └── PHRASE (binary 4w) מִֽ/כָּל בָּשָׂ֞ר שְׁנַ֧יִם מִ/כֹּ֛ל
+│   │   │       ├── [2-3] GLUE מִֽ/כָּל בָּשָׂ֞ר (gershayim, rank=4)
+│   │   │       └── [4-5] GLUE שְׁנַ֧יִם מִ/כֹּ֛ל (tevir, rank=3)
+│   │   └── [6-8] GLUE תָּבִ֥יא אֶל הַ/תֵּבָ֖ה (tifcha, rank=2)
+│   └── [9-10] GLUE לְ/הַחֲיֹ֣ת אִתָּ֑/ךְ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) זָכָ֥ר וּ/נְקֵבָ֖ה יִֽהְיֽוּ
+    ├── [11-12] GLUE זָכָ֥ר וּ/נְקֵבָ֖ה (tifcha, rank=2)
+    └── [13] יִֽהְיֽוּ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.6.20 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">מֵהָעוֹף לְמִינֵהוּ וּמִן־הַבְּהֵמָה לְמִינָהּ מִכֹּל רֶמֶשׂ הָאֲדָמָה לְמִינֵהוּ שְׁנַיִם מִכֹּל יָבֹאוּ אֵלֶיךָ לְהַחֲיוֹת</span> · <i>me-ha-of le-mine-hu u-min-ha-behema le-mina-ה mi-kol remes ha-adama le-mine-hu shenayim mi-kol yavou ele-kha le-hachayot</i> · Birds, livestock, creepers, each by kind — two of all SHALL COME to you. [EN-AID]</div>
+<pre>PHRASE (binary 14w) מֵ/הָ/ע֣וֹף לְ/מִינֵ֗/הוּ וּ/מִן הַ/בְּהֵמָה֙ ל…
+├── PHRASE (binary 9w) מֵ/הָ/ע֣וֹף לְ/מִינֵ֗/הוּ וּ/מִן הַ/בְּהֵמָה֙ ל…
+│   ├── PHRASE (binary 5w) מֵ/הָ/ע֣וֹף לְ/מִינֵ֗/הוּ וּ/מִן הַ/בְּהֵמָה֙ ל…
+│   │   ├── [0-1] GLUE מֵ/הָ/ע֣וֹף לְ/מִינֵ֗/הוּ (revia, rank=3)
+│   │   └── PHRASE (binary 3w) וּ/מִן הַ/בְּהֵמָה֙ לְ/מִינָ֔/הּ
+│   │       ├── [2-3] GLUE וּ/מִן הַ/בְּהֵמָה֙ (pashta, rank=3)
+│   │       └── [4] לְ/מִינָ֔/הּ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) מִ/כֹּ֛ל רֶ֥מֶשׂ הָֽ/אֲדָמָ֖ה לְ/מִינֵ֑/הוּ
+│       ├── PHRASE (binary 3w) מִ/כֹּ֛ל רֶ֥מֶשׂ הָֽ/אֲדָמָ֖ה
+│       │   ├── [5] מִ/כֹּ֛ל (tevir, rank=3)
+│       │   └── [6-7] GLUE רֶ֥מֶשׂ הָֽ/אֲדָמָ֖ה (tifcha, rank=2)
+│       └── [8] לְ/מִינֵ֑/הוּ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) שְׁנַ֧יִם מִ/כֹּ֛ל יָבֹ֥אוּ אֵלֶ֖י/ךָ לְ/הַֽחֲי…
+    ├── PHRASE (binary 4w) שְׁנַ֧יִם מִ/כֹּ֛ל יָבֹ֥אוּ אֵלֶ֖י/ךָ
+    │   ├── [9-10] GLUE שְׁנַ֧יִם מִ/כֹּ֛ל (tevir, rank=3)
+    │   └── [11-12] GLUE יָבֹ֥אוּ אֵלֶ֖י/ךָ (tifcha, rank=2)
+    └── [13] לְ/הַֽחֲיֽוֹת (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.6.21 · parser unique · 13 words</h3>
+<div class="meta"><span class="he">וְאַתָּה קַח־לְךָ מִכָּל־מַאֲכָל אֲשֶׁר יֵאָכֵל וְאָסַפְתָּ אֵלֶיךָ וְהָיָה לְךָ וְלָהֶם לְאָכְלָה</span> · <i>ve-ata qach-le-kha mi-kal-maakhal asher yeakhel ve-asafta ele-kha ve-haya le-kha ve-la-hem le-akhla</i> · Take of all food that is eaten — for you and for them. [EN-AID]</div>
+<pre>PHRASE (binary 13w) וְ/אַתָּ֣ה קַח לְ/ךָ֗ מִ/כָּל מַֽאֲכָל֙ אֲשֶׁ֣ר…
+├── PHRASE (binary 9w) וְ/אַתָּ֣ה קַח לְ/ךָ֗ מִ/כָּל מַֽאֲכָל֙ אֲשֶׁ֣ר…
+│   ├── PHRASE (binary 7w) וְ/אַתָּ֣ה קַח לְ/ךָ֗ מִ/כָּל מַֽאֲכָל֙ אֲשֶׁ֣ר…
+│   │   ├── [0-2] GLUE וְ/אַתָּ֣ה קַח לְ/ךָ֗ (revia, rank=3)
+│   │   └── PHRASE (binary 4w) מִ/כָּל מַֽאֲכָל֙ אֲשֶׁ֣ר יֵֽאָכֵ֔ל
+│   │       ├── [3-4] GLUE מִ/כָּל מַֽאֲכָל֙ (pashta, rank=3)
+│   │       └── [5-6] GLUE אֲשֶׁ֣ר יֵֽאָכֵ֔ל (zaqef qatan, rank=2)
+│   └── PHRASE (binary 2w) וְ/אָסַפְתָּ֖ אֵלֶ֑י/ךָ
+│       ├── [7] וְ/אָסַפְתָּ֖ (tifcha, rank=2)
+│       └── [8] אֵלֶ֑י/ךָ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וְ/הָיָ֥ה לְ/ךָ֛ וְ/לָ/הֶ֖ם לְ/אָכְלָֽה
+    ├── PHRASE (binary 3w) וְ/הָיָ֥ה לְ/ךָ֛ וְ/לָ/הֶ֖ם
+    │   ├── [9-10] GLUE וְ/הָיָ֥ה לְ/ךָ֛ (tevir, rank=3)
+    │   └── [11] וְ/לָ/הֶ֖ם (tifcha, rank=2)
+    └── [12] לְ/אָכְלָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.6.22 · parser unique · 9 words</h3>
+<div class="meta"><span class="he">וַיַּעַשׂ נֹחַ כְּכֹל אֲשֶׁר צִוָּה אֹתוֹ אֱלֹהִים כֵּן עָשָׂה</span> · <i>va-yaas nocha ke-khol asher tziva et-o Elohim ken asa</i> · Noach did according to ALL that God commanded — so he did. [EN-AID]</div>
+<pre>PHRASE (binary 9w) וַ/יַּ֖עַשׂ נֹ֑חַ כְּ֠/כֹל אֲשֶׁ֨ר צִוָּ֥ה אֹת֛…
+├── PHRASE (binary 2w) וַ/יַּ֖עַשׂ נֹ֑חַ
+│   ├── [0] וַ/יַּ֖עַשׂ (tifcha, rank=2)
+│   └── [1] נֹ֑חַ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) כְּ֠/כֹל אֲשֶׁ֨ר צִוָּ֥ה אֹת֛/וֹ אֱלֹהִ֖ים כֵּ֥…
+    ├── PHRASE (binary 5w) כְּ֠/כֹל אֲשֶׁ֨ר צִוָּ֥ה אֹת֛/וֹ אֱלֹהִ֖ים
+    │   ├── PHRASE (binary 4w) כְּ֠/כֹל אֲשֶׁ֨ר צִוָּ֥ה אֹת֛/וֹ
+    │   │   ├── [2] כְּ֠/כֹל (telisha gedola, rank=4)
+    │   │   └── [3-5] GLUE אֲשֶׁ֨ר צִוָּ֥ה אֹת֛/וֹ (tevir, rank=3)
+    │   └── [6] אֱלֹהִ֖ים (tifcha, rank=2)
+    └── [7-8] GLUE כֵּ֥ן עָשָֽׂה (silluq (verse-end emperor), rank=1)
+</pre>
+<h2>Word coverage — 189/189 words with named roles</h2>
+<table><tr><th>ref</th><th>#</th><th>Hebrew</th><th>translit</th><th>English</th><th>role</th><th>kind</th><th>rule</th></tr>
+<tr><td>Gen.6.9</td><td>0</td><td class='he-cell'>אלה</td><td>ele</td><td>these</td><td>header</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.9</td><td>1</td><td class='he-cell'>תולדת</td><td>toldot</td><td>generations-of</td><td>TOLEDOT_3rd_section</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.9</td><td>2</td><td class='he-cell'>נח</td><td>nocha</td><td>Noach</td><td>Noach</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.9</td><td>3</td><td class='he-cell'>נח</td><td>nocha</td><td>Noach</td><td>NAME_DOUBLED_at_seam</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.9</td><td>4</td><td class='he-cell'>איש</td><td>ish</td><td>man</td><td>man</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.9</td><td>5</td><td class='he-cell'>צדיק</td><td>tzadiq</td><td>righteous</td><td>TZADDIK_FIRST_TOKEN</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.9</td><td>6</td><td class='he-cell'>תמים</td><td>tamim</td><td>whole</td><td>TAMIM_FIRST_TOKEN_17_1_next</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.9</td><td>7</td><td class='he-cell'>היה</td><td>haya</td><td>was</td><td>was</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.9</td><td>8</td><td class='he-cell'>בדרתיו</td><td>be-dorotay-v</td><td>in-his-generations</td><td>BE_DOROTAV_plural_OPEN</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.9</td><td>9</td><td class='he-cell'>את</td><td>et</td><td>with</td><td>WITH_854</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.6.9</td><td>10</td><td class='he-cell'>האלהים</td><td>ha-Elohim</td><td>the-God</td><td>the-God</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.9</td><td>11</td><td class='he-cell'>התהלך</td><td>hithalekh</td><td>walked</td><td>WALK_chanokh_verbatim_token_4</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.9</td><td>12</td><td class='he-cell'>נח</td><td>nocha</td><td>Noach</td><td>Noach</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.10</td><td>0</td><td class='he-cell'>ויולד</td><td>va-yoled</td><td>and-he-begot</td><td>toledot_reboot_beget</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.10</td><td>1</td><td class='he-cell'>נח</td><td>nocha</td><td>Noach</td><td>Noach</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.10</td><td>2</td><td class='he-cell'>שלשה</td><td>shelosha</td><td>three</td><td>three</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.10</td><td>3</td><td class='he-cell'>בנים</td><td>vanim</td><td>sons</td><td>sons</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.10</td><td>4</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.6.10</td><td>5</td><td class='he-cell'>שם</td><td>shem</td><td>Shem</td><td>Shem</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.10</td><td>6</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.6.10</td><td>7</td><td class='he-cell'>חם</td><td>cham</td><td>Cham</td><td>Cham</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.10</td><td>8</td><td class='he-cell'>ואת</td><td>ve-et</td><td>and-obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.6.10</td><td>9</td><td class='he-cell'>יפת</td><td>yafet</td><td>Yafet</td><td>Yafet</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.11</td><td>0</td><td class='he-cell'>ותשחת</td><td>va-tishachet</td><td>and-was-corrupted</td><td>SHACHAT_token_1_niphal_agentless</td><td>logic_bearing</td><td class='cite'>TIR-032</td></tr>
+<tr><td>Gen.6.11</td><td>1</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.11</td><td>2</td><td class='he-cell'>לפני</td><td>li-fene</td><td>before</td><td>before</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.11</td><td>3</td><td class='he-cell'>האלהים</td><td>ha-Elohim</td><td>the-God</td><td>the_inspector</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.11</td><td>4</td><td class='he-cell'>ותמלא</td><td>va-timale</td><td>and-was-filled</td><td>FILL_1_28_blessing_verb_wrong_object</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.11</td><td>5</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.11</td><td>6</td><td class='he-cell'>חמס</td><td>chamas</td><td>violence</td><td>CHAMAS_FIRST_TOKEN_onkelos_robbery</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.12</td><td>0</td><td class='he-cell'>וירא</td><td>va-yar</td><td>and-He-saw</td><td>THIRD_SEEING_1_31_grammar</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.12</td><td>1</td><td class='he-cell'>אלהים</td><td>Elohim</td><td>God</td><td>God</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.12</td><td>2</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.6.12</td><td>3</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.12</td><td>4</td><td class='he-cell'>והנה</td><td>ve-hine</td><td>and-behold</td><td>VE_HINNEH_1_31_slot</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.12</td><td>5</td><td class='he-cell'>נשחתה</td><td>nishchata</td><td>corrupted</td><td>NISHCHATAH_verdict_flipped</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.12</td><td>6</td><td class='he-cell'>כי</td><td>ki</td><td>for</td><td>for</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.12</td><td>7</td><td class='he-cell'>השחית</td><td>hishchit</td><td>had-corrupted</td><td>shachat_token_3_hiphil</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.12</td><td>8</td><td class='he-cell'>כל</td><td>kal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.12</td><td>9</td><td class='he-cell'>בשר</td><td>basar</td><td>flesh</td><td>kol_basar_letter_scope</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.12</td><td>10</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.6.12</td><td>11</td><td class='he-cell'>דרכו</td><td>dark-o</td><td>its-way</td><td>DEREKH_3_24_way_word</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.12</td><td>12</td><td class='he-cell'>על</td><td>al</td><td>upon</td><td>upon</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.12</td><td>13</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.13</td><td>0</td><td class='he-cell'>ויאמר</td><td>va-yomer</td><td>and-He-said</td><td>decree_speech</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.13</td><td>1</td><td class='he-cell'>אלהים</td><td>Elohim</td><td>God</td><td>God</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.13</td><td>2</td><td class='he-cell'>לנח</td><td>le-nocha</td><td>to-Noach</td><td>TO_NOACH_confided_to_exception</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.13</td><td>3</td><td class='he-cell'>קץ</td><td>qetz</td><td>end-of</td><td>QETZ_token_2</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.13</td><td>4</td><td class='he-cell'>כל</td><td>kal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.13</td><td>5</td><td class='he-cell'>בשר</td><td>basar</td><td>flesh</td><td>flesh</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.13</td><td>6</td><td class='he-cell'>בא</td><td>ba</td><td>has-come</td><td>has_come_legal_filing</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.13</td><td>7</td><td class='he-cell'>לפני</td><td>le-fana-y</td><td>before-Me</td><td>before-Me</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.13</td><td>8</td><td class='he-cell'>כי</td><td>ki</td><td>for</td><td>for</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.13</td><td>9</td><td class='he-cell'>מלאה</td><td>mala</td><td>is-filled</td><td>filled</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.13</td><td>10</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.13</td><td>11</td><td class='he-cell'>חמס</td><td>chamas</td><td>violence</td><td>chamas_token_2</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.13</td><td>12</td><td class='he-cell'>מפניהם</td><td>mi-pene-hem</td><td>from-before-them</td><td>from-before-them</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.13</td><td>13</td><td class='he-cell'>והנני</td><td>ve-hin-ni</td><td>and-behold-Me</td><td>HINENI_imminence</td><td>logic_bearing</td><td class='cite'>TIR-031</td></tr>
+<tr><td>Gen.6.13</td><td>14</td><td class='he-cell'>משחיתם</td><td>mashchita-m</td><td>destroying-them</td><td>MASHCHITAM_crime_root_as_sentence</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.13</td><td>15</td><td class='he-cell'>את</td><td>et</td><td>with</td><td>WITH_854</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.13</td><td>16</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the_earth_condemned_with_tenants</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.14</td><td>0</td><td class='he-cell'>עשה</td><td>ase</td><td>make</td><td>ASEH_first_divine_imperative_to_individual</td><td>logic_bearing</td><td class='cite'>TIR-027</td></tr>
+<tr><td>Gen.6.14</td><td>1</td><td class='he-cell'>לך</td><td>le-kha</td><td>for-yourself</td><td>for-yourself</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.14</td><td>2</td><td class='he-cell'>תבת</td><td>tevat</td><td>ark-of</td><td>TEVAH_FIRST_TOKEN_two_rescues_word</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.14</td><td>3</td><td class='he-cell'>עצי</td><td>atze</td><td>woods-of</td><td>woods-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.14</td><td>4</td><td class='he-cell'>גפר</td><td>gofer</td><td>gofer</td><td>GOFER_TORAH_HAPAX</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.14</td><td>5</td><td class='he-cell'>קנים</td><td>qinim</td><td>rooms</td><td>QINIM_nests_as_rooms</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.14</td><td>6</td><td class='he-cell'>תעשה</td><td>taase</td><td>you-shall-make</td><td>spec_imperfect</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.14</td><td>7</td><td class='he-cell'>את</td><td>et</td><td>with</td><td>with_854</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.14</td><td>8</td><td class='he-cell'>התבה</td><td>ha-teva</td><td>the-ark</td><td>the-ark</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.14</td><td>9</td><td class='he-cell'>וכפרת</td><td>ve-khafarta</td><td>and-you-shall-pitch</td><td>KAPHAR_ROOT_DEBUT_weqatal</td><td>logic_bearing</td><td class='cite'>TIR-029</td></tr>
+<tr><td>Gen.6.14</td><td>10</td><td class='he-cell'>אתה</td><td>et-h</td><td>it</td><td>it</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.14</td><td>11</td><td class='he-cell'>מבית</td><td>mi-bayit</td><td>from-inside</td><td>from-inside</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.14</td><td>12</td><td class='he-cell'>ומחוץ</td><td>u-mi-chutz</td><td>and-from-outside</td><td>and-from-outside</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.14</td><td>13</td><td class='he-cell'>בכפר</td><td>ba-kofer</td><td>with-the-pitch</td><td>KOFER_pitch_atonement_family</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.15</td><td>0</td><td class='he-cell'>וזה</td><td>ve-ze</td><td>and-this</td><td>blueprint_formula</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.15</td><td>1</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>which</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.15</td><td>2</td><td class='he-cell'>תעשה</td><td>taase</td><td>you-shall-make</td><td>spec_imperfect</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.15</td><td>3</td><td class='he-cell'>אתה</td><td>et-h</td><td>it</td><td>it</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.15</td><td>4</td><td class='he-cell'>שלש</td><td>shelosh</td><td>three</td><td>THREE</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.15</td><td>5</td><td class='he-cell'>מאות</td><td>meot</td><td>hundred</td><td>HUNDRED_length</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.15</td><td>6</td><td class='he-cell'>אמה</td><td>ama</td><td>cubit</td><td>AMAH_FIRST_TOKENS</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.15</td><td>7</td><td class='he-cell'>ארך</td><td>orekh</td><td>length-of</td><td>length-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.15</td><td>8</td><td class='he-cell'>התבה</td><td>ha-teva</td><td>the-ark</td><td>the-ark</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.15</td><td>9</td><td class='he-cell'>חמשים</td><td>chamishim</td><td>fifty</td><td>FIFTY_width</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.15</td><td>10</td><td class='he-cell'>אמה</td><td>ama</td><td>cubit</td><td>cubit</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.15</td><td>11</td><td class='he-cell'>רחבה</td><td>rachba-h</td><td>its-width</td><td>its-width</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.15</td><td>12</td><td class='he-cell'>ושלשים</td><td>u-sheloshim</td><td>and-thirty</td><td>THIRTY_height</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.15</td><td>13</td><td class='he-cell'>אמה</td><td>ama</td><td>cubit</td><td>cubit</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.15</td><td>14</td><td class='he-cell'>קומתה</td><td>qomata-h</td><td>its-height</td><td>its-height</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.16</td><td>0</td><td class='he-cell'>צהר</td><td>tzohar</td><td>a-light</td><td>TZOHAR_TORAH_HAPAX_OPEN</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.16</td><td>1</td><td class='he-cell'>תעשה</td><td>taase</td><td>you-shall-make</td><td>spec_imperfect</td><td>logic_bearing</td><td class='cite'>TIR-028</td></tr>
+<tr><td>Gen.6.16</td><td>2</td><td class='he-cell'>לתבה</td><td>la-teva</td><td>for-the-ark</td><td>for-the-ark</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.16</td><td>3</td><td class='he-cell'>ואל</td><td>ve-el</td><td>and-to</td><td>and-to</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.16</td><td>4</td><td class='he-cell'>אמה</td><td>ama</td><td>a-cubit</td><td>finishing_cubit</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.16</td><td>5</td><td class='he-cell'>תכלנה</td><td>tekhale-na</td><td>you-shall-finish-it</td><td>you-shall-finish-it</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.16</td><td>6</td><td class='he-cell'>מלמעלה</td><td>mi-le-mala-h</td><td>from-above</td><td>from-above</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.16</td><td>7</td><td class='he-cell'>ופתח</td><td>u-fetach</td><td>and-door-of</td><td>PETACH_4_7_door_word</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.16</td><td>8</td><td class='he-cell'>התבה</td><td>ha-teva</td><td>the-ark</td><td>the-ark</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.16</td><td>9</td><td class='he-cell'>בצדה</td><td>be-tzida-h</td><td>in-its-side</td><td>in-its-side</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.16</td><td>10</td><td class='he-cell'>תשים</td><td>tasim</td><td>you-shall-set</td><td>you-shall-set</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.16</td><td>11</td><td class='he-cell'>תחתים</td><td>tachtiyim</td><td>lower</td><td>DECK_lower</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.16</td><td>12</td><td class='he-cell'>שנים</td><td>sheniyim</td><td>second</td><td>DECK_second</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.16</td><td>13</td><td class='he-cell'>ושלשים</td><td>u-shelishim</td><td>and-third</td><td>DECK_third_first_ordinal_architecture</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.16</td><td>14</td><td class='he-cell'>תעשה</td><td>taase-ha</td><td>you-shall-make-it</td><td>spec_imperfect</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.17</td><td>0</td><td class='he-cell'>ואני</td><td>va-ani</td><td>and-I</td><td>pronoun_doubled</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.17</td><td>1</td><td class='he-cell'>הנני</td><td>hin-ni</td><td>behold-Me</td><td>HINENI_imminence_participle</td><td>logic_bearing</td><td class='cite'>TIR-031</td></tr>
+<tr><td>Gen.6.17</td><td>2</td><td class='he-cell'>מביא</td><td>mevi</td><td>bringing</td><td>bringing</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.17</td><td>3</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.6.17</td><td>4</td><td class='he-cell'>המבול</td><td>ha-mabul</td><td>the-flood</td><td>MABUL_FIRST_TOKEN_never_leaves_gen</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.17</td><td>5</td><td class='he-cell'>מים</td><td>mayim</td><td>waters</td><td>waters_day_2_element</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.17</td><td>6</td><td class='he-cell'>על</td><td>al</td><td>upon</td><td>upon</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.17</td><td>7</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.17</td><td>8</td><td class='he-cell'>לשחת</td><td>le-shachet</td><td>to-destroy</td><td>shachat_token_5_piel</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.17</td><td>9</td><td class='he-cell'>כל</td><td>kal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.17</td><td>10</td><td class='he-cell'>בשר</td><td>basar</td><td>flesh</td><td>flesh</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.17</td><td>11</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>which</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.17</td><td>12</td><td class='he-cell'>בו</td><td>b-o</td><td>in-it</td><td>in-it</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.17</td><td>13</td><td class='he-cell'>רוח</td><td>rucha</td><td>breath-of</td><td>RUACH_CHAYIM_2_7_criterion</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.17</td><td>14</td><td class='he-cell'>חיים</td><td>chayim</td><td>life</td><td>life</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.17</td><td>15</td><td class='he-cell'>מתחת</td><td>mi-tachat</td><td>from-under</td><td>from-under</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.17</td><td>16</td><td class='he-cell'>השמים</td><td>ha-shamayim</td><td>the-heavens</td><td>the-heavens</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.17</td><td>17</td><td class='he-cell'>כל</td><td>kol</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.17</td><td>18</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>which</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.17</td><td>19</td><td class='he-cell'>בארץ</td><td>ba-aretz</td><td>in-the-earth</td><td>in-the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.17</td><td>20</td><td class='he-cell'>יגוע</td><td>yigva</td><td>shall-expire</td><td>YIGVA_gentle_death_debut</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.18</td><td>0</td><td class='he-cell'>והקמתי</td><td>va-haqimoti</td><td>and-I-will-establish</td><td>BRIT_FIRST_TOKEN_weqatal_promise</td><td>logic_bearing</td><td class='cite'>TIR-029</td></tr>
+<tr><td>Gen.6.18</td><td>1</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.6.18</td><td>2</td><td class='he-cell'>בריתי</td><td>beriti-y</td><td>My-covenant</td><td>My-covenant</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.18</td><td>3</td><td class='he-cell'>אתך</td><td>et-khe</td><td>with-you</td><td>with-you-singular</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.18</td><td>4</td><td class='he-cell'>ובאת</td><td>u-vata</td><td>and-you-shall-come</td><td>boarding_weqatal</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.18</td><td>5</td><td class='he-cell'>אל</td><td>el</td><td>to</td><td>to</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.18</td><td>6</td><td class='he-cell'>התבה</td><td>ha-teva</td><td>the-ark</td><td>the-ark</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.18</td><td>7</td><td class='he-cell'>אתה</td><td>ata</td><td>you</td><td>you</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.18</td><td>8</td><td class='he-cell'>ובניך</td><td>u-vane-kha</td><td>and-your-sons</td><td>and-your-sons</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.18</td><td>9</td><td class='he-cell'>ואשתך</td><td>ve-isht-kha</td><td>and-your-wife</td><td>and-your-wife</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.18</td><td>10</td><td class='he-cell'>ונשי</td><td>u-neshe</td><td>and-wives-of</td><td>and-wives-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.18</td><td>11</td><td class='he-cell'>בניך</td><td>vane-kha</td><td>your-sons</td><td>your-sons</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.18</td><td>12</td><td class='he-cell'>אתך</td><td>et-khe</td><td>with-you</td><td>with-you</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.19</td><td>0</td><td class='he-cell'>ומכל</td><td>u-mi-kal</td><td>and-from-all</td><td>manifest_opens</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.19</td><td>1</td><td class='he-cell'>החי</td><td>ha-chay</td><td>the-living</td><td>the-living</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.19</td><td>2</td><td class='he-cell'>מכל</td><td>mi-kal</td><td>from-all</td><td>from-all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.19</td><td>3</td><td class='he-cell'>בשר</td><td>basar</td><td>flesh</td><td>flesh</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.19</td><td>4</td><td class='he-cell'>שנים</td><td>shenayim</td><td>two</td><td>TWO_of_all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.19</td><td>5</td><td class='he-cell'>מכל</td><td>mi-kol</td><td>from-all</td><td>from-all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.19</td><td>6</td><td class='he-cell'>תביא</td><td>tavi</td><td>you-shall-bring</td><td>you-shall-bring</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.19</td><td>7</td><td class='he-cell'>אל</td><td>el</td><td>to</td><td>to</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.19</td><td>8</td><td class='he-cell'>התבה</td><td>ha-teva</td><td>the-ark</td><td>the-ark</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.19</td><td>9</td><td class='he-cell'>להחית</td><td>le-hachayot</td><td>to-keep-alive</td><td>LE_HACHAYOT_mission_verb</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.19</td><td>10</td><td class='he-cell'>אתך</td><td>et-khe</td><td>with-you</td><td>with-you</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.19</td><td>11</td><td class='he-cell'>זכר</td><td>zakhar</td><td>male</td><td>MALE_1_27_pair</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.19</td><td>12</td><td class='he-cell'>ונקבה</td><td>u-neqeva</td><td>and-female</td><td>AND_FEMALE_1_27_pair</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.19</td><td>13</td><td class='he-cell'>יהיו</td><td>yihyu</td><td>they-shall-be</td><td>they-shall-be</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.20</td><td>0</td><td class='he-cell'>מהעוף</td><td>me-ha-of</td><td>from-the-bird</td><td>birds_day_5</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.20</td><td>1</td><td class='he-cell'>למינהו</td><td>le-mine-hu</td><td>by-its-kind</td><td>LE_MINO_taxonomy_1</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.20</td><td>2</td><td class='he-cell'>ומן</td><td>u-min</td><td>and-from</td><td>and-from</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.20</td><td>3</td><td class='he-cell'>הבהמה</td><td>ha-behema</td><td>the-livestock</td><td>livestock_day_6</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.20</td><td>4</td><td class='he-cell'>למינה</td><td>le-mina-h</td><td>by-its-kind</td><td>LE_MINO_taxonomy_2</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.20</td><td>5</td><td class='he-cell'>מכל</td><td>mi-kol</td><td>from-all</td><td>from-all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.20</td><td>6</td><td class='he-cell'>רמש</td><td>remes</td><td>creeper-of</td><td>creeper_day_6</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.20</td><td>7</td><td class='he-cell'>האדמה</td><td>ha-adama</td><td>the-ground</td><td>the-ground</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.20</td><td>8</td><td class='he-cell'>למינהו</td><td>le-mine-hu</td><td>by-its-kind</td><td>LE_MINO_taxonomy_3</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.20</td><td>9</td><td class='he-cell'>שנים</td><td>shenayim</td><td>two</td><td>two</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.20</td><td>10</td><td class='he-cell'>מכל</td><td>mi-kol</td><td>from-all</td><td>from-all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.20</td><td>11</td><td class='he-cell'>יבאו</td><td>yavou</td><td>shall-come</td><td>SELF_LOADING_shall_come</td><td>logic_bearing</td><td class='cite'>TIR-029</td></tr>
+<tr><td>Gen.6.20</td><td>12</td><td class='he-cell'>אליך</td><td>ele-kha</td><td>to-you</td><td>to-you</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.20</td><td>13</td><td class='he-cell'>להחיות</td><td>le-hachayot</td><td>to-keep-alive</td><td>to-keep-alive</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.21</td><td>0</td><td class='he-cell'>ואתה</td><td>ve-ata</td><td>and-you</td><td>and-you</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.21</td><td>1</td><td class='he-cell'>קח</td><td>qach</td><td>take</td><td>QACH_second_imperative</td><td>logic_bearing</td><td class='cite'>TIR-027</td></tr>
+<tr><td>Gen.6.21</td><td>2</td><td class='he-cell'>לך</td><td>le-kha</td><td>for-yourself</td><td>for-yourself</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.21</td><td>3</td><td class='he-cell'>מכל</td><td>mi-kal</td><td>from-all</td><td>from-all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.21</td><td>4</td><td class='he-cell'>מאכל</td><td>maakhal</td><td>food</td><td>food</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.21</td><td>5</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>which</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.21</td><td>6</td><td class='he-cell'>יאכל</td><td>yeakhel</td><td>is-eaten</td><td>is-eaten-passive</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.21</td><td>7</td><td class='he-cell'>ואספת</td><td>ve-asafta</td><td>and-you-shall-gather</td><td>gather_weqatal</td><td>logic_bearing</td><td class='cite'>TIR-029</td></tr>
+<tr><td>Gen.6.21</td><td>8</td><td class='he-cell'>אליך</td><td>ele-kha</td><td>to-you</td><td>to-you</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.21</td><td>9</td><td class='he-cell'>והיה</td><td>ve-haya</td><td>and-it-shall-be</td><td>and-it-shall-be</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.21</td><td>10</td><td class='he-cell'>לך</td><td>le-kha</td><td>for-you</td><td>for-you</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.21</td><td>11</td><td class='he-cell'>ולהם</td><td>ve-la-hem</td><td>and-for-them</td><td>and-for-them</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.21</td><td>12</td><td class='he-cell'>לאכלה</td><td>le-akhla</td><td>for-food</td><td>OKHLAH_1_29_food_grant_word</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.22</td><td>0</td><td class='he-cell'>ויעש</td><td>va-yaas</td><td>and-he-made</td><td>VA_YAAS_echo_receipt</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.22</td><td>1</td><td class='he-cell'>נח</td><td>nocha</td><td>Noach</td><td>Noach</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.22</td><td>2</td><td class='he-cell'>ככל</td><td>ke-khol</td><td>according-to-all</td><td>KE_KHOL_the_bundle</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.22</td><td>3</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>which</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.22</td><td>4</td><td class='he-cell'>צוה</td><td>tziva</td><td>commanded</td><td>TZIVAH_first_obeyed</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.22</td><td>5</td><td class='he-cell'>אתו</td><td>et-o</td><td>him</td><td>him</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.22</td><td>6</td><td class='he-cell'>אלהים</td><td>Elohim</td><td>God</td><td>God</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.22</td><td>7</td><td class='he-cell'>כן</td><td>ken</td><td>so</td><td>KEN_doubled</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.6.22</td><td>8</td><td class='he-cell'>עשה</td><td>asa</td><td>he-did</td><td>ASAH_doubled_close</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_16_ark_spec — The ark spec: the blueprint, the covenant word, the first obeyed command (6:9-22) [frozen]
+
+final state: WORLD=[&#x27;tevah&#x27;] (+1 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[&#x27;read_before_install&#x27;, &#x27;spec_delta&#x27;]
+
+=== S1 — The header and the walker: after STEP_Gn_6_9
+    אֶת־הָאֱלֹהִים הִתְהַלֶּךְ־נֹחַ (et-ha-Elohim hithalekh-Noach)
+    PASS  Facts ish_tzaddik_tamim_be_dorotav/et_ha_elohim_hithalekh_noach HOLD  (2 facts)
+    PASS  SPECS empty  (queue=0)
+    PASS  flags noach as read-before-install.  (flagged=[&#x27;noach&#x27;])
+
+=== S2 — The third seeing-mutation flagged: after STEP_Gn_6_12
+    וְהִנֵּה נִשְׁחָתָה (ve-hinneh nishchatah)
+    PASS  machine flags spec-delta  (flags=[&#x27;read_before_install&#x27;, &#x27;spec_delta&#x27;])
+    PASS  Facts hishchit_kol_basar_et_darko HOLD.  (4 facts)
+
+=== S3 — The commission pushed: after STEP_Gn_6_14
+    עֲשֵׂה לְךָ תֵּבַת (aseh lekha tevat)
+    PASS  LET(aseh(noach, tevah)) pushed and OPEN.  (queue=[&#x27;aseh(noach, tevah)&#x27;])
+
+=== S4 — The blueprint stands while the demand waits: after STEP_Gn_6_16
+    שְׁלֹשׁ מֵאוֹת אַמָּה (shlosh meot amah)
+    PASS  Facts shelosh_meot_amah_orekh/tzohar_la_tevah/tachtiyim_shniyim_u_shlishim HOLD  (14 facts)
+    PASS  LET(aseh(noach, tevah)) pushed and OPEN.  (queue=[&#x27;aseh(noach, tevah)&#x27;])
+
+=== S5 — The covenant word on the books: after STEP_Gn_6_18
+    וַהֲקִמֹתִי אֶת־בְּרִיתִי (va-hakimoti et-briti)
+    PASS  Facts va_hakimoti_et_briti_itakh HOLD.  (18 facts)
+
+=== S6 — Two demands open — the fullest queue: after STEP_Gn_6_21
+    וְאַתָּה קַח־לְךָ (ve-atah qach-lekha)
+    PASS  LET(qach(noach, mi_kol_maakhal)) pushed and OPEN  (queue=[&#x27;aseh(noach, tevah)&#x27;, &#x27;qach(noach, mi_kol_maakhal)&#x27;])
+    PASS  LET(aseh(noach, tevah)) pushed and OPEN.  (queue=[&#x27;aseh(noach, tevah)&#x27;, &#x27;qach(noach, mi_kol_maakhal)&#x27;])
+
+=== S7 — The receipt — both popped, the hull installed: after STEP_Gn_6_22
+    כְּכֹל אֲשֶׁר צִוָּה אֹתוֹ אֱלֹהִים כֵּן עָשָׂה (ke-khol asher tzivah oto Elohim ken asah)
+    PASS  WORLD = {tevah}  (created=[&#x27;tevah&#x27;])
+    PASS  SPECS empty.  (queue=0)
+
+=== S8_negative — Negative: the machine&#x27;s ? stays guarded
+    PASS  imperfect-in-command parsed as LET? (question mark kept)  (mood=LET?)
+    PASS  auto-upgrade REFUSED  (TIR-028: LET? never auto-upgrades to LET — a per-unit judgme...)
+    PASS  upgrade WITH citation allowed  (cite=per-unit judgment (owner), TIR-028 resolution)
+
+=== S9_negative — Negative: flags never block
+    PASS  commit proceeded (not blocked)  (LEDGER=[99])
+    PASS  pattern deviation FLAGGED  (flags=[&#x27;commit_without_test&#x27;])
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_16_ark_spec.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_16_ark_spec — 6:9-22
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_16_ark_spec.yaml) is CANONICAL (Pre-Code); this
+# file is a derived, runnable rendering. Do not edit — regenerate. The
+# assertion block at the bottom is baked from the Stage D interpreter&#x27;s
+# actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;The ark spec: the blueprint, the covenant word, the first obeyed command (6:9-22)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_16_ark_spec&quot;)
+
+# -------------------------- Gen.6.9 · TOLEDOT_NOACH_THE_WALKER -------------
+# אֵלֶּה תּוֹלְדֹת נֹחַ נֹחַ אִישׁ צַדִּיק תָּמִים הָיָה בְּדֹרֹתָיו
+# אֶת־הָאֱלֹהִים הִתְהַלֶּךְ־נֹחַ
+# &quot;These are the generations of Noah. Noah was in his generations a man
+# righteous and whole-hearted; Noah walked with God.&quot;
+m.step(&quot;Gen.6.9&quot;)
+# ‹אֵלֶּה תּוֹלְדֹת נֹחַ› (“these generations-of Noach”) — section
+# generations-Noach: eleh toledot noach — the third generations header
+m.section(&quot;toledot_noach&quot;, &quot;eleh toledot noach — the third generations header&quot;)
+# ‹אִישׁ צַדִּיק תָּמִים הָיָה בְּדֹרֹתָיו אֶת־הָאֱלֹהִים הִתְהַלֶּךְ־נֹחַ›
+# (“man righteous whole was in-his-generations with the-God walked Noach”) —
+# fact holds: man-righteous-whole-in-his-generations; with-the-God-walked-
+# Noach
+m.fact(&quot;ish_tzaddik_tamim_be_dorotav&quot;,
+       &quot;et_ha_elohim_hithalekh_noach&quot;)
+# reads without prior install (flag, not fix): Noach
+m.presupposed(&quot;noach&quot;)
+
+# -------------------------- Gen.6.10 · THREE_SONS_RESTATED -----------------
+# וַיּוֹלֶד נֹחַ שְׁלֹשָׁה בָנִים אֶת־שֵׁם אֶת־חָם וְאֶת־יָפֶת
+# &quot;And Noah begot three sons, Shem, Ham, and Japheth.&quot;
+m.step(&quot;Gen.6.10&quot;)
+# ‹וַיּוֹלֶד נֹחַ שְׁלֹשָׁה בָנִים אֶת־שֵׁם אֶת־חָם וְאֶת־יָפֶת› (“and-he-
+# begot Noach three sons obj-marker Shem obj-marker Cham and-obj-marker
+# Yafet”) — event: beget — agent Noach; theme Shem, Cham, Yafet
+m.event(&quot;beget&quot;, agent=&quot;noach&quot;, themes=[&quot;shem&quot;, &quot;cham&quot;, &quot;yafet&quot;])
+
+# -------------------------- Gen.6.11 · EARTH_CORRUPTED_FILLED --------------
+# וַתִּשָּׁחֵת הָאָרֶץ לִפְנֵי הָאֱלֹהִים וַתִּמָּלֵא הָאָרֶץ חָמָס
+# &quot;And the earth was corrupt before God, and the earth was filled with
+# violence.&quot;
+m.step(&quot;Gen.6.11&quot;)
+# ‹וַתִּשָּׁחֵת הָאָרֶץ לִפְנֵי הָאֱלֹהִים› (“and-was-corrupted the-earth
+# before the-God”) — event: corrupt — theme the-earth
+m.event(&quot;corrupt&quot;, themes=[&quot;ha_aretz&quot;])
+# ‹וַתִּמָּלֵא הָאָרֶץ חָמָס› (“and-was-filled the-earth violence”) — fact
+# holds: and-was-filled-the-earth-violence
+m.fact(&quot;va_timale_ha_aretz_chamas&quot;)
+
+# -------------------------- Gen.6.12 · THIRD_SEEING_BEHOLD_CORRUPTED -------
+# וַיַּרְא אֱלֹהִים אֶת־הָאָרֶץ וְהִנֵּה נִשְׁחָתָה כִּי־הִשְׁחִית
+# כָּל־בָּשָׂר אֶת־דַּרְכּוֹ עַל־הָאָרֶץ
+# &quot;And God saw the earth, and, behold, it was corrupt; for all flesh had
+# corrupted their way upon the earth.&quot;
+m.step(&quot;Gen.6.12&quot;)
+# ‹וַיַּרְא אֱלֹהִים אֶת־הָאָרֶץ› (“and-He-saw God obj-marker the-earth”) —
+# event: see — agent God; theme the-earth
+m.event(&quot;see&quot;, agent=&quot;Elohim&quot;, themes=[&quot;ha_aretz&quot;])
+# ‹וְהִנֵּה נִשְׁחָתָה› (“and-behold corrupted”) — spec-delta — spec said
+# and-He-saw God with-all-which make and-behold good very — and behold, very
+# good (1:31, frozen day 6), delivery says and-He-saw God with-the-earth
+# and-behold was-corrupted — and behold, CORRUPTED (6:12)
+m.spec_delta(&quot;va-yar Elohim et-kol-asher asah ve-hinneh tov meod — and behold, very good (1:31, frozen day 6)&quot;,
+             &quot;va-yar Elohim et-ha-aretz ve-hinneh nishchatah — and behold, CORRUPTED (6:12)&quot;)
+# ‹כִּי־הִשְׁחִית כָּל־בָּשָׂר אֶת־דַּרְכּוֹ› (“for had-corrupted all flesh
+# obj-marker its-way”) — fact holds: had-corrupted-all-flesh-with-its-way
+m.fact(&quot;hishchit_kol_basar_et_darko&quot;)
+
+# -------------------------- Gen.6.13 · END_DECREE_SPOKEN_TO_NOACH ----------
+# וַיֹּאמֶר אֱלֹהִים לְנֹחַ קֵץ כָּל־בָּשָׂר בָּא לְפָנַי כִּי־מָלְאָה
+# הָאָרֶץ חָמָס מִפְּנֵיהֶם וְהִנְנִי מַשְׁחִיתָם אֶת־הָאָרֶץ
+# &quot;And God said unto Noah: &#x27;The end of all flesh is come before Me; for the
+# earth is filled with violence through them; and, behold, I will destroy
+# them with the earth.&#x27;&quot;
+m.step(&quot;Gen.6.13&quot;)
+# ‹וַיֹּאמֶר אֱלֹהִים לְנֹחַ› (“and-He-said God to-Noach”) — event: say —
+# agent God; theme Noach
+m.event(&quot;say&quot;, agent=&quot;Elohim&quot;, themes=[&quot;noach&quot;])
+# ‹קֵץ כָּל־בָּשָׂר בָּא לְפָנַי … וְהִנְנִי מַשְׁחִיתָם אֶת־הָאָרֶץ› (“end-
+# of all flesh has-come before-Me … and-behold-Me destroying-them with the-
+# earth”) — fact holds: end-of-all-flesh-has-come-before-Me; behold-I-
+# destroying-them-with-the-earth
+m.fact(&quot;qetz_kol_basar_ba_lefanai&quot;,
+       &quot;hineni_mashchitam_et_ha_aretz&quot;)
+
+# -------------------------- Gen.6.14 · COMMISSION_MAKE_THE_ARK -------------
+# עֲשֵׂה לְךָ תֵּבַת עֲצֵי־גֹפֶר קִנִּים תַּעֲשֶׂה אֶת־הַתֵּבָה וְכָפַרְתָּ
+# אֹתָהּ מִבַּיִת וּמִחוּץ בַּכֹּפֶר
+# &quot;Make thee an ark of gopher wood; with rooms shalt thou make the ark, and
+# shalt pitch it within and without with pitch.&quot;
+m.step(&quot;Gen.6.14&quot;)
+# ‹עֲשֵׂה לְךָ תֵּבַת עֲצֵי־גֹפֶר› (“make for-yourself ark-of woods-of
+# gofer”) — God speaks a demand — LET: make(Noach, ark)
+m.declare(&quot;Elohim&quot;, &quot;LET&quot;,
+          &quot;aseh(noach, tevah)&quot;)
+# ‹קִנִּים תַּעֲשֶׂה אֶת־הַתֵּבָה וְכָפַרְתָּ אֹתָהּ … בַּכֹּפֶר› (“rooms
+# you-shall-make with the-ark and-you-shall-pitch it … with-the-pitch”) —
+# fact holds: ark-of-wood-of-gofer-rooms; and-you-shall-pitch-has-come-pitch
+m.fact(&quot;tevat_atzei_gofer_qinim&quot;,
+       &quot;ve_khafarta_ba_kofer&quot;)
+
+# -------------------------- Gen.6.15 · BLUEPRINT_DIMENSIONS ----------------
+# וְזֶה אֲשֶׁר תַּעֲשֶׂה אֹתָהּ שְׁלֹשׁ מֵאוֹת אַמָּה אֹרֶךְ הַתֵּבָה
+# חֲמִשִּׁים אַמָּה רָחְבָּהּ וּשְׁלֹשִׁים אַמָּה קוֹמָתָהּ
+# &quot;And this is how thou shalt make it: the length of the ark three hundred
+# cubits, the breadth of it fifty cubits, and the height of it thirty
+# cubits.&quot;
+m.step(&quot;Gen.6.15&quot;)
+# ‹שְׁלֹשׁ מֵאוֹת אַמָּה אֹרֶךְ … חֲמִשִּׁים אַמָּה רָחְבָּהּ וּשְׁלֹשִׁים
+# אַמָּה קוֹמָתָהּ› (“three hundred cubit length-of … fifty cubit its-width
+# and-thirty cubit its-height”) — fact holds: three-hundred-cubit-length-of;
+# fifty-cubit-its-width; thirty-cubit-its-height
+m.fact(&quot;shelosh_meot_amah_orekh&quot;,
+       &quot;chamishim_amah_rochbah&quot;,
+       &quot;sheloshim_amah_qomatah&quot;)
+
+# -------------------------- Gen.6.16 · BLUEPRINT_LIGHT_DOOR_DECKS ----------
+# צֹהַר תַּעֲשֶׂה לַתֵּבָה וְאֶל־אַמָּה תְּכַלֶנָּה מִלְמַעְלָה וּפֶתַח
+# הַתֵּבָה בְּצִדָּהּ תָּשִׂים תַּחְתִּיִּם שְׁנִיִּם וּשְׁלִשִׁים
+# תַּעֲשֶׂהָ
+# &quot;A light shalt thou make to the ark, and to a cubit shalt thou finish it
+# upward; and the door of the ark shalt thou set in the side thereof; with
+# lower, second, and third stories shalt thou make it.&quot;
+m.step(&quot;Gen.6.16&quot;)
+# ‹צֹהַר … וּפֶתַח הַתֵּבָה בְּצִדָּהּ … תַּחְתִּיִּם שְׁנִיִּם
+# וּשְׁלִשִׁים› (“a-light … and-door-of the-ark in-its-side … lower second
+# and-third”) — fact holds: a-light-to-ark; door-opening-has-come-its-side;
+# lower-second-decks-and-third-decks
+m.fact(&quot;tzohar_la_tevah&quot;,
+       &quot;petach_ba_tzidah&quot;,
+       &quot;tachtiyim_shniyim_u_shlishim&quot;)
+
+# -------------------------- Gen.6.17 · FLOOD_ANNOUNCED ---------------------
+# וַאֲנִי הִנְנִי מֵבִיא אֶת־הַמַּבּוּל מַיִם עַל־הָאָרֶץ לְשַׁחֵת
+# כָּל־בָּשָׂר אֲשֶׁר־בּוֹ רוּחַ חַיִּים מִתַּחַת הַשָּׁמָיִם כֹּל
+# אֲשֶׁר־בָּאָרֶץ יִגְוָע
+# &quot;And I, behold, I do bring the flood of waters upon the earth, to destroy
+# all flesh, wherein is the breath of life, from under heaven; every thing
+# that is in the earth shall perish.&quot;
+m.step(&quot;Gen.6.17&quot;)
+# ‹וַאֲנִי הִנְנִי מֵבִיא אֶת־הַמַּבּוּל … כֹּל אֲשֶׁר־בָּאָרֶץ יִגְוָע›
+# (“and-I behold-Me bringing obj-marker the-flood … all which in-the-earth
+# shall-expire”) — fact holds: behold-I-bringing-with-the-flood-waters; all-
+# which-has-come-earth-shall-expire
+m.fact(&quot;hineni_mevi_et_ha_mabul_mayim&quot;,
+       &quot;kol_asher_ba_aretz_yigva&quot;)
+
+# -------------------------- Gen.6.18 · COVENANT_PROMISED_BOARDING_LIST -----
+# וַהֲקִמֹתִי אֶת־בְּרִיתִי אִתָּךְ וּבָאתָ אֶל־הַתֵּבָה אַתָּה וּבָנֶיךָ
+# וְאִשְׁתְּךָ וּנְשֵׁי־בָנֶיךָ אִתָּךְ
+# &quot;But I will establish My covenant with thee; and thou shalt come into the
+# ark, thou, and thy sons, and thy wife, and thy sons&#x27; wives with thee.&quot;
+m.step(&quot;Gen.6.18&quot;)
+# ‹וַהֲקִמֹתִי אֶת־בְּרִיתִי אִתָּךְ וּבָאתָ אֶל־הַתֵּבָה› (“and-I-will-
+# establish obj-marker My-covenant with-you and-you-shall-come to the-ark”)
+# — fact holds: and-I-will-establish-with-My-covenant-with-you; and-you-
+# shall-come-to-the-ark-you-and-your-sons
+m.fact(&quot;va_hakimoti_et_briti_itakh&quot;,
+       &quot;u_vata_el_ha_tevah_atah_u_vanekha&quot;)
+
+# -------------------------- Gen.6.19 · MANIFEST_TWO_OF_ALL -----------------
+# וּמִכָּל־הָחַי מִכָּל־בָּשָׂר שְׁנַיִם מִכֹּל תָּבִיא אֶל־הַתֵּבָה
+# לְהַחֲיֹת אִתָּךְ זָכָר וּנְקֵבָה יִהְיוּ
+# &quot;And of every living thing of all flesh, two of every sort shalt thou
+# bring into the ark, to keep them alive with thee; they shall be male and
+# female.&quot;
+m.step(&quot;Gen.6.19&quot;)
+# ‹שְׁנַיִם מִכֹּל תָּבִיא … זָכָר וּנְקֵבָה יִהְיוּ› (“two from-all you-
+# shall-bring … male and-female they-shall-be”) — fact holds: two-from-all-
+# you-shall-bring-to-the-ark; male-and-female-they-shall-be
+m.fact(&quot;shnayim_mi_kol_tavi_el_ha_tevah&quot;,
+       &quot;zakhar_u_nekevah_yihyu&quot;)
+
+# -------------------------- Gen.6.20 · MANIFEST_BY_KINDS_SELF_LOADING ------
+# מֵהָעוֹף לְמִינֵהוּ וּמִן־הַבְּהֵמָה לְמִינָהּ מִכֹּל רֶמֶשׂ הָאֲדָמָה
+# לְמִינֵהוּ שְׁנַיִם מִכֹּל יָבֹאוּ אֵלֶיךָ לְהַחֲיוֹת
+# &quot;Of the fowl after their kind, and of the cattle after their kind, of
+# every creeping thing of the ground after its kind, two of every sort shall
+# come unto thee, to keep them alive.&quot;
+m.step(&quot;Gen.6.20&quot;)
+# ‹מֵהָעוֹף לְמִינֵהוּ … שְׁנַיִם מִכֹּל יָבֹאוּ אֵלֶיךָ› (“from-the-bird
+# by-its-kind … two from-all shall-come to-you”) — fact holds: to-its-kind-
+# manifest-bird-livestock-creeper-of
+m.fact(&quot;le_minehu_manifest_of_behemah_remes&quot;)
+
+# -------------------------- Gen.6.21 · SECOND_IMPERATIVE_PROVISIONS --------
+# וְאַתָּה קַח־לְךָ מִכָּל־מַאֲכָל אֲשֶׁר יֵאָכֵל וְאָסַפְתָּ אֵלֶיךָ
+# וְהָיָה לְךָ וְלָהֶם לְאָכְלָה
+# &quot;And take thou unto thee of all food that is eaten, and gather it to thee;
+# and it shall be for food for thee, and for them.&#x27;&quot;
+m.step(&quot;Gen.6.21&quot;)
+# ‹וְאַתָּה קַח־לְךָ מִכָּל־מַאֲכָל אֲשֶׁר יֵאָכֵל› (“and-you take for-
+# yourself from-all food which is-eaten”) — God speaks a demand — LET:
+# take(Noach, from-all-food)
+m.declare(&quot;Elohim&quot;, &quot;LET&quot;,
+          &quot;qach(noach, mi_kol_maakhal)&quot;)
+# ‹וְהָיָה לְךָ וְלָהֶם לְאָכְלָה› (“and-it-shall-be for-yourself and-for-
+# them for-food”) — fact holds: and-was-to-you-and-to-them-to-food
+m.fact(&quot;ve_hayah_lekha_ve_lahem_le_akhlah&quot;)
+
+# -------------------------- Gen.6.22 · THE_RECEIPT_BOTH_POPPED -------------
+# וַיַּעַשׂ נֹחַ כְּכֹל אֲשֶׁר צִוָּה אֹתוֹ אֱלֹהִים כֵּן עָשָׂה
+# &quot;Thus did Noah; according to all that God commanded him, so did he.&quot;
+m.step(&quot;Gen.6.22&quot;)
+# ‹וַיַּעַשׂ נֹחַ› (“and-he-made Noach”) — event: make — agent Noach; theme
+# ark
+m.event(&quot;make&quot;, agent=&quot;noach&quot;, themes=[&quot;tevah&quot;])
+# ‹וַיַּעַשׂ נֹחַ כְּכֹל אֲשֶׁר צִוָּה› (“and-he-made Noach according-to-all
+# which commanded”) — the world gains: ark
+m.install(&quot;tevah&quot;)
+# ‹כְּכֹל אֲשֶׁר צִוָּה אֹתוֹ אֱלֹהִים› (“according-to-all which commanded
+# him God”) — demand settled (popped from the queue): make(Noach, ark)
+m.result(&quot;aseh(noach, tevah)&quot;, tmark=&quot;t2&quot;)
+# ‹כֵּן עָשָׂה› (“so he-did”) — demand settled (popped from the queue):
+# take(Noach, from-all-food)
+m.result(&quot;qach(noach, mi_kol_maakhal)&quot;, tmark=&quot;t2&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == {&#x27;tevah&#x27;}
+    assert m.presupposed_set() == {&#x27;noach&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS[&quot;log&quot;]) == 2
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;read_before_install&#x27;: 1, &#x27;spec_delta&#x27;: 1}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;ish_tzaddik_tamim_be_dorotav&#x27;, &#x27;et_ha_elohim_hithalekh_noach&#x27;, &#x27;va_timale_ha_aretz_chamas&#x27;, &#x27;hishchit_kol_basar_et_darko&#x27;, &#x27;qetz_kol_basar_ba_lefanai&#x27;, &#x27;hineni_mashchitam_et_ha_aretz&#x27;, &#x27;tevat_atzei_gofer_qinim&#x27;, &#x27;ve_khafarta_ba_kofer&#x27;, &#x27;shelosh_meot_amah_orekh&#x27;, &#x27;chamishim_amah_rochbah&#x27;, &#x27;sheloshim_amah_qomatah&#x27;, &#x27;tzohar_la_tevah&#x27;, &#x27;petach_ba_tzidah&#x27;, &#x27;tachtiyim_shniyim_u_shlishim&#x27;, &#x27;hineni_mevi_et_ha_mabul_mayim&#x27;, &#x27;kol_asher_ba_aretz_yigva&#x27;, &#x27;va_hakimoti_et_briti_itakh&#x27;, &#x27;u_vata_el_ha_tevah_atah_u_vanekha&#x27;, &#x27;shnayim_mi_kol_tavi_el_ha_tevah&#x27;, &#x27;zakhar_u_nekevah_yihyu&#x27;, &#x27;le_minehu_manifest_of_behemah_remes&#x27;, &#x27;ve_hayah_lekha_ve_lahem_le_akhlah&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 10
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre>
+<div class="note">FROZEN 2026-08-01 (derived on owner order &quot;next block&quot;; frozen automatically per the 2026-08-01 process order — auto-freeze #3): seventeenth frozen unit — THE ARK SPEC; seventh extension-free derivation in a row. Central findings, all DB-verified before drafting: the FIRST FULLY-SETTLED DIVINE COMMAND CYCLE — two imperatives (make, take: TIR-027&#x27;s first divine imperative-mood commands to a named individual) pushed and BOTH POPPED by 6:22&#x27;s compliance formula (the command-verb&#x27;s arc: 2:16 violated, 3:11/3:17 indicted, 6:22 OBEYED — far career the Tabernacle refrain); the SHACHAT root&#x27;s five-in-span carrying crime and sentence in one verb (tokens 6-7 = the covenant&#x27;s never-again); the THIRD week-formula mutation (1:31&#x27;s behold-very-good -&gt; behold-corrupted, flagged); TEVAH the two-rescues word (26 Genesis tokens + Moses&#x27; basket, nothing else); the atonement root debuting as pitch; the corpus&#x27;s first cubit-dimensioned blueprint (the flood itself measured in the ark&#x27;s unit at 7:20); two Torah hapaxes held open (gofer, tzohar); BRIT&#x27;s first token — a covenant promised to one man inside a demolition order; the manifest as creation-in-miniature (by-kinds x3, male-and-female, the food-grant word), self-loading; and the machine contrast of the corpus&#x27;s two human builds: the city (participle, unfinished, namesake) vs the ark (receipted complete, to-spec, nameless — WORLD += tevah with a compliance certificate). Onkelos: violence -&gt; ROBBERY (doctrine as lexicon), the corruption narrowed to &quot;flesh OF MAN&quot;, the hapaxes decided (light; cedar), Chanokh&#x27;s fear-buffer re-applied to Noach&#x27;s walk. Machine state: one install, zero registry writes, zero tests, SPECS EMPTY BY SETTLEMENT — pushed and paid inside one unit.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

@@ -35,11 +35,13 @@ binding religious law, and not a substitute for studying the sources.
 ## Run it (stock Python 3, nothing to install)
 
 ```
+python3 tools/check.py                # every gate, one exit code — the green button
 python3 app/app.py                    # the Tanakh run — open http://127.0.0.1:8021
 python3 machines/exo21/chapter.py     # the chapter machine: asserts + 60-edge proof
 python3 units/run_all.py              # re-prove all 97 derivation units
 python3 sim/house_of_david.py         # the simulation sketch
 open viz/inheritance.html             # the inheritance flow (any browser)
+python3 -m http.server 8012 -d scroll # the Torah as a scroll — http://127.0.0.1:8012
 ```
 
 Everything is self-contained — the Hebrew text, word tags, and English
@@ -75,10 +77,15 @@ units/      97 runnable derivation units, Genesis 1 – Exodus 21
 scans/      the evidence layer: coverage ledger · 100 witnessed-claim
             manifests · the scanning-day notes
 app/        the Tanakh-run web app (64 scenes, forms, replay)
+scroll/     the Torah as a scroll: the whole Torah verse by verse —
+            leaves, morphs, roles, search — with the 97 derivation
+            review pages under scroll/units/
 viz/        the inheritance visualizer
 sim/        the simulation sketch + its findings
 tools/      the source-shelf fetchers and the whole-work corpus mirror
-            (to continue deriving) · the gloss linter
+            (to continue deriving) · the gloss linter · the check
+            battery (every gate, one exit code) · the static-site
+            exporter behind torahsim.org
 ```
 
 To **continue the derivation work** — scan and code new chapters — see

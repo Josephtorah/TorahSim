@@ -1,0 +1,526 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_43_isaac_twins_birthright — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_43_isaac_twins_birthright?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Isaac&#x27;s toledot: twins and the birthright (25:19-34) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_43_isaac_twins_birthright</b> · Genesis 25:19-34 · derive  · phase </div>
+<div class="meta"><a href="../#Gen/25/19">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">מִכְרָה כַיּוֹם אֶת־בְּכֹרָתְךָ</span> · <i>mikhra ka-yom et bekhorat-kha</i> · &#x27;Sell as of today your birthright&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> FROZEN 2026-08-06 after amendment-wave pieces 1–3 external verification and Claude whole-unit review PASS (RELAY #7): mikhra debut-cycle; double pop 25:33 (shava tok9–10); bekhorah career 4:4→25:31–34 (27:36 waiting); hapaxes; four-unit swear-chain continuous — zero errors. LAST amendment unit; closes remediation wave. Owner-authorized amend of committed state (was b715772). Full bar C. SNAPSHOT + debut_map; dumps piece1–3. verse_trees OMITTED [bar C.7]. Elisions … . §1a Claude law. Freeze ritual this wave; commit stays with the owner. HEADLINE: BIRTHRIGHT MACHINE — haliteni hapax residual OPEN forever (other-verb at 34); sell+swear double-pop (#22-or-#23 / #23-or-#24). Secondary: dual namings; oracle FACT; atar debut pair. REGISTRY 2 (esav, yaaqov). SPECS depth 1 OPEN at wall. NUMBERED FLAGS (ratify-or-reverse; leave OPEN): (1) NAME CHOICE: gen_43_isaac_twins_birthright (id kept). (2) 25:19 ve-ele toldot yitzchaq — SECTION header. toldot 8435 tok10/29 (seam from gen_42 tok8/9 Ishmael; tok10 opens Isaac) [VERIFIED debut_map]. Not SPECS. (3) 25:20 age-forty + Rivqah from Padan-aram / sister of Laban — marriage FACT/install continuity with gen_41. arbaim 705 tok11 (echo Esau forty later 26:34 tok12). (4) 25:21 ENTREAT-PAIR [owner care]: va-yetar (HC/Vqw3ms 6279 tok1/10) + va-yeater (HC/VNw3ms niphal 6279 tok2/10) — BOTH tokens in one verse; TORAH DEBUT of atar (entreat) as a pair [VERIFIED: SNAPSHOT Gen.25.21 idx0,8]. Isaac entreats YHWH opposite his wife; YHWH is entreated; Rivqah conceives. SAFE: dual EVENT (human petition + divine answer + conceive) — not SPECS push (prayer/receipt narrative, zero volitive 2ms). BOLD: LET(yetar) pop by yeater — staged OPEN, rejected under non-demand form. aqara (6135 tok2/6; tok1=11:30 Sarai) [VERIFIED] — barren-word career lands. (5) 25:22 va-yitrotzatzu (7533 tok1/2) struggle EVENT; Rivqah&#x27;s lamah-ze anokhi question FACT. li-derosh et-YHWH (1875 tok4/22) — darash root earlier at 9:5 edrosh x3 (blood demand), but this is the corpus&#x27;s FIRST oracle consultation of YHWH (inquire-of-YHWH frame) [care (2)]. EVENT go-to-inquire; not SPECS. (6) 25:23 ORACLE — divine imperfects = decree-FACTS, not SPECS pushes [care (3)]. shene goyim / shene leumim (3816 tok1–3 debut cluster in-verse); yiparedu; leom mi-leom yeematz; ve-rav (7227 tok7) yaavod (5647 tok9) tzair (6810 tok5) [VERIFIED SNAPSHOT]. &quot;the elder shall serve the younger&quot; — standing oracle FACT for later units (incl. Gen 27). SPECS empty. (7) Piece-1 end: SPECS empty; REGISTRY 0; TESTS 0. --- piece 2 flags (25:24-28; RELAY #5) — NAMING-LAW CENTERPIECE --- (8) 25:24 tomim (8380 tok1/2) twins FACT in womb. True etnachta on la-ledet. (9) 25:25 birth of first: admoni (132 tok1/1 hapax &#x27;reddish&#x27;); ke-aderet (155 tok1/1 hapax &#x27;mantle&#x27;); sear (8181 tok1/18 &#x27;hair&#x27;) [VERIFIED]. va-yiqru shemo esav — FULL NAME formula (va-yiqra + shem + name), PLURAL namer (HVqw3mp) — SAFE NAME name(esav):=esav; REGISTRY 1 write [naming law; gen_45 full-formula class]. (10) 25:26 ba-aqev (6119 tok2/4 heel; tok1=3:15) — DISTINCT from eqev 6118 &#x27;because&#x27; (tok1=22:18) [care: do not conflate; ordinals filed]. va-yiqra shemo yaaqov — FULL NAME formula, bare singular 3ms subject (va-yiqra HVqw3ms) — namer WITHHELD by the letter. SAFE: NAME name(yaaqov):=yaaqov (formula carries the write); REGISTRY 2 writes. Apply gen_30 withheld-subject discipline: &quot;the machine does not resolve what the letter hides&quot; — namer-identity left OPEN (not Isaac by default; not &quot;they&quot;). BOLD: namer=Isaac / namer=generic — staged OPEN. Age sixty FACT at birth. (11) 25:27 grows: Esav ish yodea tzayid ish sade; Yaaqov ish tam (8535 tok1/2 debut &#x27;complete/whole&#x27;) yoshev ohalim. Character FACT; no SPECS. (12) 25:28 split loves: va-yeehav (157 tok3) Isaac→Esav; ohevet (157 tok4) Rivqah→Yaaqov [VERIFIED; career tok1=22:2 ahavta; tok2=24:67 va-yeehave-ha gen_41]. EVENT only; no moral TEST. SPECS still empty (namings are REGISTRY not SPECS). (13) Piece-2 end: SPECS empty; REGISTRY 2 writes (esav, yaaqov); TESTS 0. --- piece 3 flags (25:29-34; RELAY #6) — BIRTHRIGHT MACHINE --- (14) 25:29 stew EVENT: va-yazed nazid (2102 tok1; 5138 tok1); Esav from field ayef (5889 tok1). Not SPECS. (15) 25:30 LIVE PUSH haliteni (HVhv2ms/Sp1cs 3938 tok1/1 TORAH HAPAX) [VERIFIED SNAPSHOT] — LET(haliteni(min_ha_adom)). ha-adom x2 (122 tok1–2). SPECS depth 1. (16) 25:30 al-ken qara shemo edom — al-ken etiology REPORT class, NO NAME write. Quote frozen gen_45 26:33: &quot;al-ken shem ha-ir beer sheva … al-ken etiology / report class (city-name proverb), NOT a second NAME write. REGISTRY sleeps on the city line&quot; [VERIFIED: gen_45_wells flag 25 / STEP_Gn_26_33]. edom (123 tok1). REGISTRY stays 2. (17) 25:31 LIVE PUSH mikhra (HVqv2ms 4376 tok1) — LET(mikhra(bekhorat_kha, ka_yom)). bekhorah 1062 tok2 (tok1=4:4 mi-bekhorot). SPECS depth 2. (18) 25:32 Esav dismisses birthright speech FACT (bekhora tok3) — not a push. (19) 25:33 LIVE PUSH hishava (HVNv2ms 7650 tok9) — LET(hishava(li, ka_yom)). Then DOUBLE POP same verse: va-yishava (7650 tok10) RESULT of hishava — label &quot;cycle #22-or-#23, contingent on the crown ruling&quot; (after gen_41 tehi #21-or-#22); va-yimkor (4376 tok2) RESULT of mikhra — label &quot;cycle #23-or-#24, contingent on the crown ruling&quot;. Two same-root receipts in order. SPECS after: only haliteni OPEN. bekhorat-o tok4. (20) 25:34 give bread+lentil stew EVENT; four wayyiqtols va-yokhal va-yesht va-yaqam va-yelakh — OTHER-VERB vs haliteni (akhal 398 ≠ la&#x27;at 3938) — gulp demand LEFT OPEN forever (shell insight + census). va-yivez (959 tok1/2 TORAH DEBUT of bazah &#x27;despise&#x27;) et ha-bekhora (1062 tok5) — despised the birthright FACT. SPECS residual: haliteni OPEN. REGISTRY 2. TESTS 0. Seam 26:1 = frozen gen_44 wall. (21) UNIT-END SPECS depth 1 OPEN: LET(haliteni(min_ha_adom)). SETTLED: mikhra, hishava. REGISTRY 2 (esav, yaaqov). TESTS 0. STOP for whole-unit review.</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (retro, oral-first era; record: logic/oral_audit/AUDIT_gen_43_2026-08-08.md; manifest verified 19/19, zero FAILED, zero-iteration pass). CROWNS (chain-attested + DB-verified). THE TWO PROUD ONES IN THE WOMB [G43-01/02, Minchat Shai on 25:23; Avodah Zarah 11a; Bereshit Rabbah]: שני גיים (&quot;TWO NATIONS are in your womb&quot;) — the Torah&#x27;s ONE nations-word written with two yods and no vav (read גוים): SNAPSHOT carries written and read side by side (two-token encoding), and the census locks the rule — bare plene גוים eighteen tokens, the lean two-yod form ONCE; the Talmud&#x27;s derash rides the written form: read it GEYIM, the two lordly ones — Rebbi and Antoninus at one table. THE TWO-WAY SERVE-VERB [G43-03, Minchat Shai on 25:23; Bereshit Rabbah 63 via the Yefeh Toar]: ורב יעבד צעיר (&quot;and the elder shall serve the younger&quot; — or the reverse) — DEFECTIVE, and the midrash makes the ambiguity explicit (&quot;if worthy... if not&quot;): the oracle&#x27;s double edge lives in the missing vav; the form stands SIX times in the Torah, all lean (no plene token exists, builder-asserted), sharing its verb with the service-laws — the Hebrew slave (Exod 21:2), the jubilee hireling (Lev 25:40), the Levite&#x27;s retirement (Num 8:25-26), the unworked valley (Deut 21:4). THE LEAN TWINS AND THE FULL [G43-06/07, Kitzur Baal HaTurim on 25:24]: תומם (&quot;behold, TWINS in her womb&quot;) — doubly lean (no aleph, no yod), unique; its one full counterpart is Tamar&#x27;s תאומים (Gen 38:27, also unique): Rebecca&#x27;s twins (one wicked) written lean, Tamar&#x27;s (both righteous) written whole — the tradition&#x27;s contrast letter-exact. THE TWO RUDDY ONES [G43-04/05, Minchat Shai on 25:25]: אדמוני (&quot;and the first came out RUDDY&quot;) — unique in the Torah, plene as the precise books rule; the Masorah&#x27;s pair-leg is David (I Sam 16:12, 17:42; edges): Esau and David share the red, and the midrash&#x27;s contrast (blood by whim, blood by the court&#x27;s word) hangs on the pair. THE BOTH-BARREN SKELETON [G43-08, Minchat Shai on 25:21; Yevamot 64]: כי עקרה הוא (&quot;for she was barren&quot;) — the she-word written in the masculine skeleton הוא with the feminine vowel (the pentateuchal written-he), and the Talmud rides exactly that: both were barren, he was entreated FOR HIM. THE PRAYER OUT IN PATACH, THE ANSWER BACK IN SEGOL [G43-09, Minchat Shai on 25:21]: the verse&#x27;s two entreat-verbs — ויעתר (&quot;he entreated&quot;) then ויעתר (&quot;He was entreated&quot;) — pointed apart; the tav-segol of the answered form verified as ruled. THE PRESSED QUESTIONS [G43-11/12, Minchat Shai on 25:22; Kitzur on 25:32]: למה זה (&quot;WHY THEN am I thus?&quot; — Rebecca) with the zayin dageshed as ruled; and Esau&#x27;s ולמה־זה (&quot;WHY THEN a birthright to me?&quot;) joined by maqqef, machine-checked — the second leg of the Masorah&#x27;s joined pair is the vain-breath verse (Job 27:12; edge). THE MICHLOL&#x27;S SOFT LAMED [G43-13, Minchat Shai on 25:23]: ולאם מלאם (&quot;one PEOPLE stronger THAN THE OTHER&quot;) — the lamed of מלאם soft against the doubling custom (the Michlol&#x27;s noted exception), both people-words lean of vav. SHEM IN THE FINALS [G43-14, Kitzur on 25:27]: איש תם (&quot;a WHOLESOME MAN, dwelling in tents&quot;) — closes ש-ם, the letters of שם (&quot;Shem&quot;), in order: the tent-sitter&#x27;s teacher sealed in the phrase&#x27;s ends. HAMAN IN THE GULP [G43-15, Kitzur on 25:30]: הלעיטני נא מן (&quot;POUR INTO ME, please, from...&quot;) — initials ה-נ-מ, the letters of המן (&quot;Haman&quot;): the descendant sold-for-bread already in the wolfed-down stew (as Jacob bought Esau with bread and lentils, Mordechai bought Haman with bread). THE ARAMEAN IS THE DECEIVER [G43-16, Kitzur on 25:20]: הארמי (&quot;Laban THE ARAMEAN&quot;) — the gentilic&#x27;s letters are exactly the letters of הרמאי (&quot;the deceiver&quot;), verified letter for letter at Laban&#x27;s token. THE UNIQUE WORDS AND THEIR CANON LEGS [G43-17/18/19, Kitzur]: בקחתו (&quot;at his TAKING of Rebecca,&quot; 25:20) unique — the Masorah&#x27;s pair is Jeremiah taken bound (Jer 40:1; edge), Isaac&#x27;s barren boundness read in; וידו (&quot;AND HIS HAND grasping the heel,&quot; 25:26) unique — the legs are the outstretched hand and the line-dividing hand over the nations (Isa 14:26-27, 34:17; edges); ויבז (&quot;and Esau DESPISED the birthright,&quot; 25:34) unique — the pair-leg is Haman&#x27;s despising (Esth 3:6; edge): &quot;the despiser son of the despiser.&quot; DISCREPANCY [G43-10, Minchat Shai on 25:22]: ויתרצצו (&quot;and the children STRUGGLED within her&quot;) — the ruling wants the tzadi with plain sheva &quot;per our custom&quot;; SNAPSHOT points HATAF PATACH (the compound half-vowel): the sheva-vs-hataf codex split&#x27;s FOURTH station (the bless-word class: 12:3, 22:18, 24:60 — now the twins&#x27; first struggle). Watchlist. INSTRUMENT GAPS: ואלה תולדת (25:19) opens a parasha petucha (open paragraph) — paragraph layer uninstrumented; the header&#x27;s bare-spelled תולדת joins the bare-toledot ledger (frozen gen_16&#x27;s four-header crown; this station verified in the stream). READINGS (named-only, unclaimed): the Kitzur&#x27;s gematria pieces without rows — the struggling twins dividing after צו (&quot;command&quot;) and idols; the ten nations of the גיים reading; אשתו read toward straw and fire; לדרוש toward Shem&#x27;s academy; יושב אהלים counted toward the Presence&#x27;s tent-years; נזיד toward mourning-food (Jacob&#x27;s lentils on the day of Abraham&#x27;s death — the Kitzur&#x27;s own frame for the stew).</div>
+<div class="meta">confidence: </div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Reconstruction notice (2026-08-08)</td><td>This unit was frozen in the lean era (meta + scenarios + boot steps; no step table was written at freeze). The steps below were reconstructed on 2026-08-08 from the freeze-era draft note (meta.draft_note_en, displayed on the unit page), the era&#x27;s continue-docs, and git history. No new derivation claims are introduced: every entry restates recorded decisions, and the full per-verse machine record is the boot steps below.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Source + span + structure</td><td>Genesis 25:19-34 — the Isaac generations header, the twins&#x27; birth and naming, the oracle, the birthright sale. The seam falls at 26:1, the frozen famine unit&#x27;s wall. Evidence: the SNAPSHOT database plus the debut-map attachment; verse trees omitted per the bar-C protocol.</td><td>reconstructed</td></tr>
+<tr><td><b>C</b></td><td>Draft path + review</td><td>First frozen with the previous unit at commit b715772; the amendment wave unfroze it for a full re-derive (commit 93dfe52); three pieces externally verified (the sell-verb debut cycle, the double pop of 25:33, the birthright career from 4:4 with 27:36 still waiting, the one-time words, the four-unit swear-chain continuous — zero errors); re-frozen 2026-08-06 at commit 8d97a24, closing the remediation wave, after Claude whole-unit review PASS.</td><td>reconstructed</td></tr>
+<tr><td><b>D</b></td><td>Flagged-choice ledger (distilled)</td><td>Twenty-one numbered ratify-or-reverse flags, including: the entreat pair — the verb&#x27;s first and second Torah tokens land in ONE verse (25:21, petition and answer) — ruled a dual event, not a push, the pop-reading staged open and rejected; the consultation of 25:22 the corpus&#x27;s first inquire-of-YHWH frame, an event; the oracle&#x27;s divine imperfects (25:23) ruled decree-facts, not pushes — &quot;the elder shall serve the younger&quot; filed as a standing fact for the blessing chapters ahead; both twins named by the FULL name-formula — a plural namer writes Esau, and Jacob&#x27;s namer is WITHHELD by the letter (singular verb, subject hidden), the withheld-subject discipline applied: the machine does not resolve what the letter hides; &quot;therefore his name was called Edom&quot; (25:30) ruled the etiology report class on the frozen precedent — no name write; the heel-word of 25:26 kept distinct from its look-alike because-word.</td><td>reconstructed</td></tr>
+<tr><td><b>E</b></td><td>Machine design</td><td>Three live pushes — feed-me (25:30, a Torah one-time word), sell (25:31), and swear (25:33). A double pop inside one verse: &quot;and he swore&quot; settles the swear demand (cycle #22-or-#23, contingent numbering) and &quot;and he sold&quot; settles the sale (cycle #23-or-#24). The feed-me demand is left open forever: the letter answers it with eat, drink, rise, go — other verbs than the gulp that was demanded. Registry: 2 writes (the twins). Zero tests.</td><td>reconstructed</td></tr>
+<tr><td><b>F</b></td><td>Freeze + later history</td><td>Frozen at commit b715772; unfrozen in the amendment wave (commit 93dfe52); re-frozen at commit 8d97a24 (Genesis 1:1-26:35 gapless, 46 frozen units, zero hollow tags corpus-wide); relay #8 tag fixes at commit 99a86cb. The oral audit of 2026-08-08 was folded at commit 0406ed8: 19 rows VERIFIED, 0 FAILED, 0 UNCHECKABLE (record: logic/oral_audit/AUDIT_gen_43_2026-08-08.md; the crowns are displayed in the audit note above).</td><td>reconstructed</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_25_19 · Gen.25.19 · <span class='expr'>THE_TOLEDOT_OF_ISAAC</span></h3>
+<p><span class="he">וְאֵ֛לֶּה תּוֹלְדֹ֥ת יִצְחָ֖ק בֶּן־אַבְרָהָ֑ם אַבְרָהָ֖ם הוֹלִ֥יד אֶת־יִצְחָֽק</span> · <i>ve-ele toldot yitzchaq ben-avraham avraham holid et-yitzchaq</i> · And these are the generations of Isaac, Abraham&#x27;s son: Abraham begot Isaac.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאֵ֛לֶּה תּוֹלְדֹ֥ת יִצְחָ֖ק בֶּן־אַבְרָהָ֑ם</span> · <i>ve-ele toldot yitzchaq ben-avraham</i> · these are the generations of Isaac son of Abraham (etnachta on avraham) [VERIFIED: SNAPSHOT Gen.25.19 idx4 mark_id=etnachta rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">אַבְרָהָ֖ם הוֹלִ֥יד אֶת־יִצְחָֽק</span> · <i>avraham holid et-yitzchaq</i> · Abraham begot Isaac (verse-final yitzchaq) [VERIFIED: SNAPSHOT Gen.25.19 idx5-8; silluq idx8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(toledot_yitzchaq_section_header, t0) — SECTION not SPECS</span><br><span class="gloss">= HOLDS(generations-yitzchaq-section-header, t0) — SECTION not SPECS</span><br>TOLEDOT SECTION [flag 2 SAFE]. toldot (8435 tok10/29) [VERIFIED: SNAPSHOT Gen.25.19 idx1 strong=8435 ordinal=10/29] — seam from gen_42 Ishmael tok8/9; Isaac&#x27;s line opens. Header only. SPECS empty.
+</td><td><span class="he">תּוֹלְדֹת יִצְחָק</span> · <i>toldot yitzchaq</i><br><span class="gloss">= toldot yitzchaq</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Isaac&#x27;s toledot opens where Ishmael&#x27;s closed — next generation ledger.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_25_20 · Gen.25.20 · <span class='expr'>THE_MARRIAGE_AGE_AND_ORIGIN</span></h3>
+<p><span class="he">וַיְהִ֤י יִצְחָק֙ בֶּן־אַרְבָּעִ֣ים שָׁנָ֔ה בְּקַחְתּ֣וֹ אֶת־רִבְקָ֗ה בַּת־בְּתוּאֵל֙ הָֽאֲרַמִּ֔י מִפַּדַּ֖ן אֲרָ֑ם אֲח֛וֹת לָבָ֥ן הָאֲרַמִּ֖י ל֥וֹ לְאִשָּֽׁה</span> · <i>va-yehi yitzchaq ben-arbaim shana be-qacht-o et-rivqa bat-betuel ha-arami mi-padan aram achot lavan ha-arami l-o le-isha</i> · And Isaac was forty years old when he took Rivqah, daughter of Betuel the Aramean of Padan-aram, sister of Laban the Aramean, as wife for himself.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֤י יִצְחָק֙ בֶּן־אַרְבָּעִ֣ים שָׁנָ֔ה בְּקַחְתּ֣וֹ אֶת־רִבְקָ֗ה בַּת־בְּתוּאֵל֙ הָֽאֲרַמִּ֔י מִפַּדַּ֖ן אֲרָ֑ם</span> · <i>va-yehi yitzchaq ben-arbaim shana be-qacht-o et-rivqa bat-betuel ha-arami mi-padan aram</i> · Isaac was forty when he took Rivqah of Padan-aram (etnachta on aram) [VERIFIED: SNAPSHOT Gen.25.20 idx12 mark_id=etnachta rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֲח֛וֹת לָבָ֥ן הָאֲרַמִּ֖י ל֥וֹ לְאִשָּֽׁה</span> · <i>achot lavan ha-arami l-o le-isha</i> · sister of Laban the Aramean, as wife for him (verse-final le-isha) [VERIFIED: SNAPSHOT Gen.25.20 idx13-17; silluq idx17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(yitzchaq_forty_takes_rivqa_from_padan_aram, t0)</span><br><span class="gloss">= HOLDS(yitzchaq-forty-takes-rivqa-from-padan-aram, t0)</span><br>MARRIAGE/AGE FACT [flag 3 SAFE]. arbaim (705 tok11/61) [VERIFIED: SNAPSHOT Gen.25.20 idx3] — forty years. Rivqah continuity from gen_41. Padan-aram / Laban FACT. SPECS empty.
+</td><td><span class="he">בֶּן־אַרְבָּעִים שָׁנָה … רִבְקָה … מִפַּדַּן אֲרָם</span> · <i>ben-arbaim shana … rivqa … mi-padan aram</i><br><span class="gloss">= ben-arbaim shana rivqa from-padan aram</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Forty and a wife from the Aramean house — the toledot has its parents.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_25_21 · Gen.25.21 · <span class='expr'>THE_ENTREAT_PAIR</span></h3>
+<p><span class="he">וַיֶּעְתַּ֨ר יִצְחָ֤ק לַֽיהוָה֙ לְנֹ֣כַח אִשְׁתּ֔וֹ כִּ֥י עֲקָרָ֖ה הִ֑וא וַיֵּעָ֤תֶר לוֹ֙ יְהוָ֔ה וַתַּ֖הַר רִבְקָ֥ה אִשְׁתּֽוֹ</span> · <i>va-yetar yitzchaq la-YHWH le-nokhach isht-o ki aqara hiv va-yeater l-o YHWH va-tahar rivqa isht-o</i> · And Isaac entreated YHWH opposite his wife, for she was barren; and YHWH was entreated of him, and Rivqah his wife conceived.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֶּעְתַּ֨ר יִצְחָ֤ק לַֽיהוָה֙ לְנֹ֣כַח אִשְׁתּ֔וֹ כִּ֥י עֲקָרָ֖ה הִ֑וא</span> · <i>va-yetar yitzchaq la-YHWH le-nokhach isht-o ki aqara hiv</i> · Isaac entreated YHWH opposite his wife, for she was barren (etnachta on hiv) [VERIFIED: SNAPSHOT Gen.25.21 idx7 mark_id=etnachta rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֵּעָ֤תֶר לוֹ֙ יְהוָ֔ה וַתַּ֖הַר רִבְקָ֥ה אִשְׁתּֽוֹ</span> · <i>va-yeater l-o YHWH va-tahar rivqa isht-o</i> · and YHWH was entreated of him, and Rivqah his wife conceived (verse-final isht-o) [VERIFIED: SNAPSHOT Gen.25.21 idx8-13; silluq idx13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">entreat_and_be_entreated(e21) ∧ Agent_human(e21, yitzchaq) ∧ Agent_divine(e21, YHWH) ∧ Theme(e21, isht-o)</span><br><span class="gloss">= entreat-and-in-entreated(e21) ∧ Agent-human(e21, yitzchaq) ∧ Agent-divine(e21, the-LORD) ∧ Theme(e21, isht-o)</span><br>ENTREAT-PAIR EVENT [flag 4 SAFE; owner care — debut pair]. va-yetar (HC/Vqw3ms 6279 tok1/10) [VERIFIED: SNAPSHOT Gen.25.21 idx0 morph=HC/Vqw3ms strong=6279 ordinal=1/10] — he entreated. va-yeater (HC/VNw3ms niphal 6279 tok2/10) [VERIFIED: idx8 morph=HC/VNw3ms ordinal=2/10] — He was entreated. TORAH DEBUT of atar as a same-verse pair (active petition + niphal receipt). Not a SPECS push (no 2ms volitive demand form). BOLD LET(yetar)→pop yeater staged OPEN. aqara (6135 tok2/6) [VERIFIED: idx6; tok1=11:30 Sarai] — barren-word career. va-tahar conceive EVENT. SPECS empty.
+</td><td><span class="he">וַיֶּעְתַּר … וַיֵּעָתֶר … וַתַּהַר</span> · <i>va-yetar … va-yeater … va-tahar</i><br><span class="gloss">= and-yetar and-yeater and-tahar</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+</table>
+<div class="meta">Entreat and be-entreated — the verb&#x27;s first two tokens open and close the same breath.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_25_22 · Gen.25.22 · <span class='expr'>THE_STRUGGLE_AND_INQUIRE</span></h3>
+<p><span class="he">וַיִּתְרֹֽצֲצ֤וּ הַבָּנִים֙ בְּקִרְבָּ֔הּ וַתֹּ֣אמֶר אִם־כֵּ֔ן לָ֥מָּה זֶּ֖ה אָנֹ֑כִי וַתֵּ֖לֶךְ לִדְרֹ֥שׁ אֶת־יְהוָֽה</span> · <i>va-yitrotzatzu ha-banim be-qirbah va-tomer im-ken la-ma ze anokhi va-telekh li-derosh et-YHWH</i> · And the children struggled together within her; and she said: If it be so, why am I thus? And she went to inquire of YHWH.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּתְרֹֽצֲצ֤וּ הַבָּנִים֙ בְּקִרְבָּ֔הּ וַתֹּ֣אמֶר אִם־כֵּ֔ן לָ֥מָּה זֶּ֖ה אָנֹ֑כִי</span> · <i>va-yitrotzatzu ha-banim be-qirbah va-tomer im-ken la-ma ze anokhi</i> · the children struggled within her; she said: if so, why am I? (etnachta on anokhi) [VERIFIED: SNAPSHOT Gen.25.22 idx8 mark_id=etnachta rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתֵּ֖לֶךְ לִדְרֹ֥שׁ אֶת־יְהוָֽה</span> · <i>va-telekh li-derosh et-YHWH</i> · and she went to inquire of YHWH (verse-final YHWH) [VERIFIED: SNAPSHOT Gen.25.22 idx9-12; silluq idx12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">struggle_and_inquire(e22) ∧ Agents_struggle(e22, ha_banim) ∧ Agent_inquire(e22, rivqah)</span><br><span class="gloss">= struggle-and-inquire(e22) ∧ Agents-struggle(e22, the-banim) ∧ Agent-inquire(e22, rivqah)</span><br>STRUGGLE + INQUIRE EVENT [flag 5 SAFE]. va-yitrotzatzu (HC/Vrw3mp 7533 tok1/2) [VERIFIED: SNAPSHOT Gen.25.22 idx0 morph=HC/Vrw3mp strong=7533 ordinal=1/2]. Question FACT: lamah ze anokhi. li-derosh (HR/Vqc 1875 tok4/22) [VERIFIED: idx10 morph=HR/Vqc strong=1875 ordinal=4/22] — root earlier at 9:5 edrosh x3 (blood-require), but this is the corpus&#x27;s FIRST oracle consultation of YHWH (inquire-of-YHWH frame) [care (2)]. SPECS empty.
+</td><td><span class="he">וַיִּתְרֹצֲצוּ … לִדְרֹשׁ אֶת־יְהוָה</span> · <i>va-yitrotzatzu … li-derosh et-YHWH</i><br><span class="gloss">= and-yitrotzatzu to-me-derosh the-LORD</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+</table>
+<div class="meta">Struggle inside; she walks out to ask YHWH — the first inquire-of-YHWH in the letter.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_25_23 · Gen.25.23 · <span class='expr'>THE_ORACLE_DECREE_FACTS</span></h3>
+<p><span class="he">וַיֹּ֨אמֶר יְהוָ֜ה לָ֗הּ שְׁנֵ֤י גיים גוֹיִם֙ בְּבִטְנֵ֔ךְ וּשְׁנֵ֣י לְאֻמִּ֔ים מִמֵּעַ֖יִךְ יִפָּרֵ֑דוּ וּלְאֹם֙ מִלְאֹ֣ם יֶֽאֱמָ֔ץ וְרַ֖ב יַעֲבֹ֥ד צָעִֽיר</span> · <i>va-yomer YHWH lah shene goyim be-vitne-khe u-shene leumim mi-meayi-khe yiparedu u-leom mi-leom yeematz ve-rav yaavod tzair</i> · And YHWH said to her: Two nations are in your womb, and two peoples shall be separated from your bowels; and one people shall be stronger than the other people; and the elder shall serve the younger.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר יְהוָ֜ה לָ֗הּ שְׁנֵ֤י גיים גוֹיִם֙ בְּבִטְנֵ֔ךְ וּשְׁנֵ֣י לְאֻמִּ֔ים מִמֵּעַ֖יִךְ יִפָּרֵ֑דוּ</span> · <i>va-yomer YHWH lah shene goyim be-vitne-khe u-shene leumim mi-meayi-khe yiparedu</i> · YHWH said: two nations in your womb; two peoples shall separate (etnachta on yiparedu) [VERIFIED: SNAPSHOT Gen.25.23 idx10 mark_id=etnachta rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּלְאֹם֙ מִלְאֹ֣ם יֶֽאֱמָ֔ץ וְרַ֖ב יַעֲבֹ֥ד צָעִֽיר</span> · <i>u-leom mi-leom yeematz ve-rav yaavod tzair</i> · one people stronger than the other; the elder shall serve the younger (verse-final tzair) [VERIFIED: SNAPSHOT Gen.25.23 idx11-16; silluq idx16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(oracle_two_nations_elder_serves_younger, t0) — decree-FACTS not SPECS</span><br><span class="gloss">= HOLDS(oracle-two-nations-elder-serves-younger, t0) — decree-FACTS not SPECS</span><br>ORACLE DECREE-FACTS [flag 6 SAFE; owner care (3)]. KTIV: plain/DB has defective גיים (gyym) + plene גוים (goyim) as two tokens same verse [VERIFIED: SNAPSHOT Gen.25.23 idx4-5]; translit reads goyim once. Divine imperfects — not SPECS pushes (no demand on human addressee as LET/CMD; standing decree content). leumim (3816 tok1–3) debut cluster [VERIFIED: SNAPSHOT Gen.25.23 idx8,11,12]. ve-rav (7227 tok7/66) [VERIFIED: idx14]; yaavod (5647 tok9/113) [idx15]; tzair (6810 tok5/8) [idx16] — &quot;the elder shall serve the younger.&quot; yiparedu (6504 tok7); yeematz (553 tok1/7 debut). Pays forward to Gen 27. SPECS empty. Piece-1 end. STOP before 25:24.
+</td><td><span class="he">שְׁנֵי גוֹיִם … וְרַב יַעֲבֹד צָעִיר</span> · <i>shene goyim … ve-rav yaavod tzair</i><br><span class="gloss">= shene goyim and-rav yaavod tzair</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Two nations, and the elder shall serve the younger — oracle fact, not a stack push.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_25_24 · Gen.25.24 · <span class='expr'>THE_TWINS_IN_THE_WOMB</span></h3>
+<p><span class="he">וַיִּמְלְא֥וּ יָמֶ֖יהָ לָלֶ֑דֶת וְהִנֵּ֥ה תוֹמִ֖ם בְּבִטְנָֽהּ</span> · <i>va-yimlu yame-ha la-ledet ve-hine tomim be-vitnah</i> · And her days to give birth were filled; and behold, twins were in her womb.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּמְלְא֥וּ יָמֶ֖יהָ לָלֶ֑דֶת</span> · <i>va-yimlu yame-ha la-ledet</i> · her days to give birth were filled (etnachta on la-ledet) [VERIFIED: SNAPSHOT Gen.25.24 idx2 mark_id=etnachta rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהִנֵּ֥ה תוֹמִ֖ם בְּבִטְנָֽהּ</span> · <i>ve-hine tomim be-vitnah</i> · and behold, twins in her womb (verse-final be-vitnah) [VERIFIED: SNAPSHOT Gen.25.24 idx3-5; silluq idx5]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">birth_due(e24) ∧ Theme(e24, tomim)</span><br><span class="gloss">= birth-due(e24) ∧ Theme(e24, tomim)</span><br>TWINS FACT [flag 8 SAFE]. tomim (8380 tok1/2) [VERIFIED: SNAPSHOT Gen.25.24 idx4 strong=8380 ordinal=1/2]. SPECS empty; REGISTRY still 0.
+</td><td><span class="he">תוֹמִם בְּבִטְנָהּ</span> · <i>tomim be-vitnah</i><br><span class="gloss">= tomim in-vitnah</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+</table>
+<div class="meta">Twins in the womb — the oracle&#x27;s two nations arrive as bodies.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_25_25 · Gen.25.25 · <span class='expr'>THE_ESAV_NAMING</span></h3>
+<p><span class="he">וַיֵּצֵ֤א הָרִאשׁוֹן֙ אַדְמוֹנִ֔י כֻּלּ֖וֹ כְּאַדֶּ֣רֶת שֵׂעָ֑ר וַיִּקְרְא֥וּ שְׁמ֖וֹ עֵשָֽׂו</span> · <i>va-yetze ha-rishon admoni kul-o ke-aderet sear va-yiqru shem-o esav</i> · And the first came out reddish, all of him like a hairy mantle; and they called his name Esau.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֵּצֵ֤א הָרִאשׁוֹן֙ אַדְמוֹנִ֔י כֻּלּ֖וֹ כְּאַדֶּ֣רֶת שֵׂעָ֑ר</span> · <i>va-yetze ha-rishon admoni kul-o ke-aderet sear</i> · the first came out reddish, all like a hairy mantle (etnachta on sear) [VERIFIED: SNAPSHOT Gen.25.25 idx5 mark_id=etnachta rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּקְרְא֥וּ שְׁמ֖וֹ עֵשָֽׂו</span> · <i>va-yiqru shem-o esav</i> · and THEY called his name Esau (verse-final esav) [VERIFIED: SNAPSHOT Gen.25.25 idx6-8; silluq idx8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">birth_first(e25) ∧ Theme(e25, ha_rishon)</span><br><span class="gloss">= birth-first(e25) ∧ Theme(e25, the-rishon)</span><br>FIRSTBORN APPEARANCE [flag 9 SAFE]. admoni (132 tok1/1 hapax) [VERIFIED: SNAPSHOT Gen.25.25 idx2]; ke-aderet (155 tok1/1 hapax) [idx4]; sear (8181 tok1/18) [idx5] — red + hairy-mantle census.
+</td><td><span class="he">וַיֵּצֵא הָרִאשׁוֹן אַדְמוֹנִי … כְּאַדֶּרֶת שֵׂעָר</span> · <i>va-yetze ha-rishon admoni … ke-aderet sear</i><br><span class="gloss">= and-yetze the-rishon admoni like-aderet hair</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>NAME</td><td><span class="expr">name(esav) := esav</span><br>FULL NAME FORMULA + PLURAL NAMER [flag 9 SAFE; naming-law centerpiece]. va-yiqru (HC/Vqw3mp 7121 ord=46) [VERIFIED: SNAPSHOT Gen.25.25 idx6 morph=HC/Vqw3mp] + shem-o + esav (6215 tok1/82) [idx8] — they called his name Esau. SAFE REGISTRY write (gen_45 full-formula class). REGISTRY 1 write. SPECS empty.
+</td><td><span class="he">וַיִּקְרְאוּ שְׁמוֹ עֵשָׂו</span> · <i>va-yiqru shem-o esav</i><br><span class="gloss">= and-yiqru shem-o esav</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Red and hairy — and they name him Esau.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_25_26 · Gen.25.26 · <span class='expr'>THE_YAAQOV_NAMING</span></h3>
+<p><span class="he">וְאַֽחֲרֵי־כֵ֞ן יָצָ֣א אָחִ֗יו וְיָד֤וֹ אֹחֶ֨זֶת֙ בַּעֲקֵ֣ב עֵשָׂ֔ו וַיִּקְרָ֥א שְׁמ֖וֹ יַעֲקֹ֑ב וְיִצְחָ֛ק בֶּן־שִׁשִּׁ֥ים שָׁנָ֖ה בְּלֶ֥דֶת אֹתָֽם</span> · <i>ve-achare-khen yatza achi-v ve-yad-o ochezet ba-aqev esav va-yiqra shem-o yaaqov ve-yitzchaq ben-shishim shana be-ledet et-m</i> · And after that his brother came out, and his hand was holding Esau&#x27;s heel; and he called his name Jacob; and Isaac was sixty years old when she bore them.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאַֽחֲרֵי־כֵ֞ן יָצָ֣א אָחִ֗יו וְיָד֤וֹ אֹחֶ֨זֶת֙ בַּעֲקֵ֣ב עֵשָׂ֔ו וַיִּקְרָ֥א שְׁמ֖וֹ יַעֲקֹ֑ב</span> · <i>ve-achare-khen yatza achi-v ve-yad-o ochezet ba-aqev esav va-yiqra shem-o yaaqov</i> · his brother came out holding Esau&#x27;s heel; he called his name Jacob (etnachta on yaaqov) [VERIFIED: SNAPSHOT Gen.25.26 idx10 mark_id=etnachta rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְיִצְחָ֛ק בֶּן־שִׁשִּׁ֥ים שָׁנָ֖ה בְּלֶ֥דֶת אֹתָֽם</span> · <i>ve-yitzchaq ben-shishim shana be-ledet et-m</i> · and Isaac was sixty years old when she bore them (verse-final et-m) [VERIFIED: SNAPSHOT Gen.25.26 idx11-16; silluq idx16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">birth_second_heel(e26) ∧ Theme(e26, achi_v)</span><br><span class="gloss">= birth-second-heel(e26) ∧ Theme(e26, my-brother-v)</span><br>HEEL GRASP [flag 10 SAFE]. ba-aqev (6119 tok2/4) [VERIFIED: SNAPSHOT Gen.25.26 idx6 strong=6119 ordinal=2/4; tok1=Gen.3.15 aqev]. DISTINCT from eqev 6118 &#x27;because&#x27; (tok1=22:18; tok2=26:5) — do not conflate [VERIFIED debut_map both strongs]. Etymology of Yaaqov from heel-word.
+</td><td><span class="he">יָדוֹ אֹחֶזֶת בַּעֲקֵב עֵשָׂו</span> · <i>yad-o ochezet ba-aqev esav</i><br><span class="gloss">= yad-o ochezet in-the-aqev esav</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>NAME</td><td><span class="expr">name(yaaqov) := yaaqov</span><br>FULL NAME FORMULA + BARE SINGULAR NAMER [flag 10 SAFE; naming-law centerpiece]. va-yiqra (HC/Vqw3ms 7121 ord=47) [VERIFIED: SNAPSHOT Gen.25.26 idx8 morph=HC/Vqw3ms] + shem-o + yaaqov (3290 tok1/212) [idx10] — full formula carries REGISTRY write. Namer is bare 3ms — letter HIDES who called. gen_30 withheld-subject discipline: the machine does not resolve what the letter hides [VERIFIED class: gen_30/gen_31 withheld-subject]. SAFE encode NAME write; flag namer-ambiguity OPEN (not defaulted to Isaac). BOLD namer=Isaac / namer=generic — staged OPEN. REGISTRY 2 writes. Age sixty FACT (shishim 8346 tok7). SPECS empty.
+</td><td><span class="he">וַיִּקְרָא שְׁמוֹ יַעֲקֹב</span> · <i>va-yiqra shem-o yaaqov</i><br><span class="gloss">= and-yiqra shem-o yaaqov</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Heel in hand — named Jacob; who named him, the letter will not say.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_25_27 · Gen.25.27 · <span class='expr'>THE_TWO_MEN_GROW</span></h3>
+<p><span class="he">וַֽיִּגְדְּלוּ֙ הַנְּעָרִ֔ים וַיְהִ֣י עֵשָׂ֗ו אִ֛ישׁ יֹדֵ֥עַ צַ֖יִד אִ֣ישׁ שָׂדֶ֑ה וְיַעֲקֹב֙ אִ֣ישׁ תָּ֔ם יֹשֵׁ֖ב אֹהָלִֽים</span> · <i>va-yigdlu ha-nearim va-yehi esav ish yodea tzayid ish sade ve-yaaqov ish tam yoshev ohalim</i> · And the boys grew; and Esau was a man knowing hunting, a man of the field; and Jacob was a complete man, dwelling in tents.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַֽיִּגְדְּלוּ֙ הַנְּעָרִ֔ים וַיְהִ֣י עֵשָׂ֗ו אִ֛ישׁ יֹדֵ֥עַ צַ֖יִד אִ֣ישׁ שָׂדֶ֑ה</span> · <i>va-yigdlu ha-nearim va-yehi esav ish yodea tzayid ish sade</i> · the boys grew; Esau a hunter, a man of the field (etnachta on sade) [VERIFIED: SNAPSHOT Gen.25.27 idx8 mark_id=etnachta rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְיַעֲקֹב֙ אִ֣ישׁ תָּ֔ם יֹשֵׁ֖ב אֹהָלִֽים</span> · <i>ve-yaaqov ish tam yoshev ohalim</i> · and Jacob a complete man, dwelling in tents (verse-final ohalim) [VERIFIED: SNAPSHOT Gen.25.27 idx9-13; silluq idx13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(esav_hunter_yaaqov_ish_tam, t0)</span><br><span class="gloss">= HOLDS(esav-hunter-yaaqov-man-tam, t0)</span><br>CHARACTER FACT [flag 11 SAFE]. tam (8535 tok1/2) [VERIFIED: SNAPSHOT Gen.25.27 idx11 strong=8535 ordinal=1/2] — ish tam &#x27;complete man&#x27; debut. tzayid (6718 tok3). No SPECS. REGISTRY still 2.
+</td><td><span class="he">עֵשָׂו אִישׁ יֹדֵעַ צַיִד … יַעֲקֹב אִישׁ תָּם</span> · <i>esav ish yodea tzayid … yaaqov ish tam</i><br><span class="gloss">= esav man yodea tzayid yaaqov man tam</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Hunter of the field; complete man of the tents — two paths from one womb.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_25_28 · Gen.25.28 · <span class='expr'>THE_SPLIT_LOVES</span></h3>
+<p><span class="he">וַיֶּאֱהַ֥ב יִצְחָ֛ק אֶת־עֵשָׂ֖ו כִּי־צַ֣יִד בְּפִ֑יו וְרִבְקָ֖ה אֹהֶ֥בֶת אֶֽת־יַעֲקֹֽב</span> · <i>va-yeehav yitzchaq et-esav ki-tzayid be-fi-v ve-rivqa ohevet et-yaaqov</i> · And Isaac loved Esau because game was in his mouth; and Rivqah loved Jacob.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֶּאֱהַ֥ב יִצְחָ֛ק אֶת־עֵשָׂ֖ו כִּי־צַ֣יִד בְּפִ֑יו</span> · <i>va-yeehav yitzchaq et-esav ki-tzayid be-fi-v</i> · Isaac loved Esau because game was in his mouth (etnachta on be-fi-v) [VERIFIED: SNAPSHOT Gen.25.28 idx6 mark_id=etnachta rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְרִבְקָ֖ה אֹהֶ֥בֶת אֶֽת־יַעֲקֹֽב</span> · <i>ve-rivqa ohevet et-yaaqov</i> · and Rivqah loved Jacob (verse-final yaaqov) [VERIFIED: SNAPSHOT Gen.25.28 idx7-10; silluq idx10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">love_split(e28) ∧ love(yitzchaq, esav) ∧ love(rivqa, yaaqov)</span><br><span class="gloss">= love-split(e28) ∧ love(yitzchaq, esav) ∧ love(rivqa, yaaqov)</span><br>SPLIT LOVES [flag 12 SAFE; owner care ahav tok3–4]. va-yeehav (157 tok3/41) [VERIFIED: SNAPSHOT Gen.25.28 idx0 strong=157 ordinal=3/41]; ohevet (157 tok4/41) [VERIFIED: idx8 ordinal=4/41]. Career: tok1=22:2 ahavta (gen_38); tok2=24:67 va-yeehave-ha (gen_41) [VERIFIED]. Isaac loves Esau; Rivqah loves Jacob. EVENT only — no moral TEST. SPECS empty. REGISTRY 2. Piece-2 end. STOP before 25:29.
+</td><td><span class="he">וַיֶּאֱהַב יִצְחָק אֶת־עֵשָׂו … וְרִבְקָה אֹהֶבֶת אֶת־יַעֲקֹב</span> · <i>va-yeehav yitzchaq et-esav … ve-rivqa ohevet et-yaaqov</i><br><span class="gloss">= and-yeehav yitzchaq esav and-rivqa ohevet yaaqov</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+</table>
+<div class="meta">Two loves split the house — tokens 3 and 4 of the love-verb land on each twin.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_25_29 · Gen.25.29 · <span class='expr'>THE_STEW_AND_THE_WEARY</span></h3>
+<p><span class="he">וַיָּ֥זֶד יַעֲקֹ֖ב נָזִ֑יד וַיָּבֹ֥א עֵשָׂ֛ו מִן־הַשָּׂדֶ֖ה וְה֥וּא עָיֵֽף</span> · <i>va-yazed yaaqov nazid va-yavo esav min-ha-sade ve-hu ayef</i> · And Jacob boiled stew; and Esau came in from the field, and he was weary.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּ֥זֶד יַעֲקֹ֖ב נָזִ֑יד</span> · <i>va-yazed yaaqov nazid</i> · Jacob boiled stew (etnachta on nazid) [VERIFIED: SNAPSHOT Gen.25.29 idx2 mark_id=etnachta rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיָּבֹ֥א עֵשָׂ֛ו מִן־הַשָּׂדֶ֖ה וְה֥וּא עָיֵֽף</span> · <i>va-yavo esav min-ha-sade ve-hu ayef</i> · Esau came from the field and he was weary (verse-final ayef) [VERIFIED: SNAPSHOT Gen.25.29 idx3-8; silluq idx8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">stew_and_arrive(e29) ∧ Agent_stew(e29, yaaqov) ∧ Agent_arrive(e29, esav)</span><br><span class="gloss">= stew-and-arrive(e29) ∧ Agent-stew(e29, yaaqov) ∧ Agent-arrive(e29, esav)</span><br>STEW + WEARY EVENT [flag 14 SAFE]. va-yazed (2102 tok1/6); nazid (5138 tok1/2); ayef (5889 tok1/3) [VERIFIED: SNAPSHOT Gen.25.29]. Setup for the machine. SPECS empty; REGISTRY 2.
+</td><td><span class="he">וַיָּזֶד … נָזִיד … עָיֵף</span> · <i>va-yazed … nazid … ayef</i><br><span class="gloss">= and-yazed nazid ayef</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+</table>
+<div class="meta">Stew on the fire; the hunter comes in empty.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_25_30 · Gen.25.30 · <span class='expr'>THE_HALITENI_AND_EDOM_REPORT</span></h3>
+<p><span class="he">וַיֹּ֨אמֶר עֵשָׂ֜ו אֶֽל־יַעֲקֹ֗ב הַלְעִיטֵ֤נִי נָא֙ מִן־הָאָדֹ֤ם הָאָדֹם֙ הַזֶּ֔ה כִּ֥י עָיֵ֖ף אָנֹ֑כִי עַל־כֵּ֥ן קָרָֽא־שְׁמ֖וֹ אֱדֽוֹם</span> · <i>va-yomer esav el-yaaqov halite-ni na min-ha-adom ha-adom ha-ze ki ayef anokhi al-ken qara-shem-o edom</i> · And Esau said to Jacob: Let me gulp, please, from this red, this red, for I am weary; therefore his name was called Edom.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר עֵשָׂ֜ו אֶֽל־יַעֲקֹ֗ב הַלְעִיטֵ֤נִי נָא֙ מִן־הָאָדֹ֤ם הָאָדֹם֙ הַזֶּ֔ה כִּ֥י עָיֵ֖ף אָנֹ֑כִי</span> · <i>va-yomer esav el-yaaqov halite-ni na min-ha-adom ha-adom ha-ze ki ayef anokhi</i> · Esau said: let me gulp this red — for I am weary (etnachta on anokhi) [VERIFIED: SNAPSHOT Gen.25.30 idx12 mark_id=etnachta rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">עַל־כֵּ֥ן קָרָֽא־שְׁמ֖וֹ אֱדֽוֹם</span> · <i>al-ken qara-shem-o edom</i> · therefore his name was called Edom (verse-final edom) [VERIFIED: SNAPSHOT Gen.25.30 idx13-17; silluq idx17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(esav, LET(haliteni(min_ha_adom)))</span><br><span class="gloss">= DECLARE(esav, LET(haliteni(from-the-adom)))</span><br>LIVE PUSH [flag 15 SAFE]. haliteni (HVhv2ms/Sp1cs 3938 tok1/1 TORAH HAPAX) [VERIFIED: SNAPSHOT Gen.25.30 idx4 morph=HVhv2ms/Sp1cs strong=3938 ordinal=1/1] — &#x27;let me GULP&#x27;. ha-adom x2 (122 tok1–2) [idx7-8]. SPECS depth 1: haliteni OPEN.
+</td><td><span class="he">הַלְעִיטֵנִי נָא</span> · <i>halite-ni na</i><br><span class="gloss">= halite-ni na</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(al_ken_qara_shemo_edom_report_only, t0) — etiology; no NAME write</span><br><span class="gloss">= HOLDS(upon-ken-qara-shemo-edom-report-only, t0) — etiology; no NAME write</span><br>AL-KEN REPORT [flag 16 SAFE; owner care]. al-ken (3651 ord=24) + qara shem-o edom (123 tok1/23) [VERIFIED: SNAPSHOT Gen.25.30 idx13-17] — etiology of Edom name. Quote frozen gen_45 26:33 city line: &quot;al-ken shem ha-ir beer sheva … al-ken etiology / report class (city-name proverb), NOT a second NAME write. REGISTRY sleeps on the city line&quot; [VERIFIED: logic/units/gen_45_wells_covenant_esau_wives.yaml flag 25 / STEP_Gn_26_33]. REGISTRY stays 2 (esav, yaaqov already written). No third write.
+</td><td><span class="he">עַל־כֵּן קָרָא־שְׁמוֹ אֱדוֹם</span> · <i>al-ken qara-shem-o edom</i><br><span class="gloss">= upon-ken qara-shem-o edom</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Gulp the red — and the report names him Edom without a registry write.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_25_31 · Gen.25.31 · <span class='expr'>THE_MIKHRA_PUSH</span></h3>
+<p><span class="he">וַיֹּ֖אמֶר יַעֲקֹ֑ב מִכְרָ֥ה כַיּ֛וֹם אֶת־בְּכֹֽרָתְךָ֖ לִֽי</span> · <i>va-yomer yaaqov mikhra ka-yom et-bekhorat-kha li-y</i> · And Jacob said: Sell me as of today your birthright.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֖אמֶר יַעֲקֹ֑ב</span> · <i>va-yomer yaaqov</i> · and Jacob said (etnachta on yaaqov) [VERIFIED: SNAPSHOT Gen.25.31 idx1 mark_id=etnachta rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">מִכְרָ֥ה כַיּ֛וֹם אֶת־בְּכֹֽרָתְךָ֖ לִֽי</span> · <i>mikhra ka-yom et-bekhorat-kha li-y</i> · SELL as of today your birthright to me (verse-final li-y) [VERIFIED: SNAPSHOT Gen.25.31 idx2-6; silluq idx6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yaaqov, LET(mikhra(bekhorat_kha, ka_yom)))</span><br><span class="gloss">= DECLARE(yaaqov, LET(mikhra(bekhorat-kha, like-day)))</span><br>LIVE PUSH [flag 17 SAFE]. mikhra (HVqv2ms 4376 tok1/39) [VERIFIED: SNAPSHOT Gen.25.31 idx2 morph=HVqv2ms strong=4376 ordinal=1/39] — SELL today. bekhorat-kha (1062 tok2/11) [VERIFIED: idx5; tok1=4:4 mi-bekhorot]. SPECS depth 2: haliteni + mikhra.
+</td><td><span class="he">מִכְרָה כַיּוֹם אֶת־בְּכֹרָתְךָ לִי</span> · <i>mikhra ka-yom et-bekhorat-kha li-y</i><br><span class="gloss">= mikhra like-day bekhorat-kha to-me-y</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
+</table>
+<div class="meta">Sell me the birthright today — the price of the red stew is named.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_25_32 · Gen.25.32 · <span class='expr'>THE_DISMISS_SPEECH</span></h3>
+<p><span class="he">וַיֹּ֣אמֶר עֵשָׂ֔ו הִנֵּ֛ה אָנֹכִ֥י הוֹלֵ֖ךְ לָמ֑וּת וְלָמָּה־זֶּ֥ה לִ֖י בְּכֹרָֽה</span> · <i>va-yomer esav hine anokhi holekh la-mut ve-la-ma-ze li-y bekhora</i> · And Esau said: Behold, I am going to die; and what is this birthright to me?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֣אמֶר עֵשָׂ֔ו הִנֵּ֛ה אָנֹכִ֥י הוֹלֵ֖ךְ לָמ֑וּת</span> · <i>va-yomer esav hine anokhi holekh la-mut</i> · Esau said: I am going to die (etnachta on la-mut) [VERIFIED: SNAPSHOT Gen.25.32 idx5 mark_id=etnachta rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְלָמָּה־זֶּ֥ה לִ֖י בְּכֹרָֽה</span> · <i>ve-la-ma-ze li-y bekhora</i> · and what is this birthright to me? (verse-final bekhora) [VERIFIED: SNAPSHOT Gen.25.32 idx6-9; silluq idx9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(esav_dismisses_bekhora_speech, t0) — speech FACT not push</span><br><span class="gloss">= HOLDS(esav-dismisses-bekhora-speech, t0) — speech FACT not push</span><br>DISMISS SPEECH FACT [flag 18 SAFE]. bekhora (1062 tok3) [VERIFIED: SNAPSHOT Gen.25.32 idx9]. Not a SPECS push. SPECS still depth 2.
+</td><td><span class="he">וְלָמָּה־זֶּה לִי בְּכֹרָה</span> · <i>ve-la-ma-ze li-y bekhora</i><br><span class="gloss">= and-to-ma-ze to-me-y bekhora</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">I am dying — what is a birthright to me?</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_25_33 · Gen.25.33 · <span class='expr'>THE_DOUBLE_POP_SWEAR_AND_SELL</span></h3>
+<p><span class="he">וַיֹּ֣אמֶר יַעֲקֹ֗ב הִשָּׁ֤בְעָה לִּי֙ כַּיּ֔וֹם וַיִּשָּׁבַ֖ע ל֑וֹ וַיִּמְכֹּ֥ר אֶת־בְּכֹרָת֖וֹ לְיַעֲקֹֽב</span> · <i>va-yomer yaaqov hishava li-y ka-yom va-yishava l-o va-yimkor et-bekhorat-o le-yaaqov</i> · And Jacob said: Swear to me as of today; and he swore to him; and he sold his birthright to Jacob.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֣אמֶר יַעֲקֹ֗ב הִשָּׁ֤בְעָה לִּי֙ כַּיּ֔וֹם וַיִּשָּׁבַ֖ע ל֑וֹ</span> · <i>va-yomer yaaqov hishava li-y ka-yom va-yishava l-o</i> · Jacob said: swear today; and he swore to him (etnachta on l-o) [VERIFIED: SNAPSHOT Gen.25.33 idx6 mark_id=etnachta rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּמְכֹּ֥ר אֶת־בְּכֹרָת֖וֹ לְיַעֲקֹֽב</span> · <i>va-yimkor et-bekhorat-o le-yaaqov</i> · and he sold his birthright to Jacob (verse-final le-yaaqov) [VERIFIED: SNAPSHOT Gen.25.33 idx7-10; silluq idx10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yaaqov, LET(hishava(li, ka_yom)))</span><br><span class="gloss">= DECLARE(yaaqov, LET(hishava(to-me, like-day)))</span><br>LIVE PUSH [flag 19 SAFE]. hishava (HVNv2ms/Sh 7650 tok9/70) [VERIFIED: SNAPSHOT Gen.25.33 idx2 morph=HVNv2ms/Sp… strong=7650 ordinal=9/70] — SWEAR to me today. SPECS depth 3 momentarily: haliteni + mikhra + hishava.
+</td><td><span class="he">הִשָּׁבְעָה לִי כַּיּוֹם</span> · <i>hishava li-y ka-yom</i><br><span class="gloss">= hishava to-me-y like-day</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">HOLDS(hishava(li, ka_yom), t1)</span><br><span class="gloss">= HOLDS(hishava(to-me, like-day), t1)</span><br>RESULT POP of hishava [flag 19 SAFE]. va-yishava (HC/VNw3ms 7650 tok10) [VERIFIED: SNAPSHOT Gen.25.33 idx5 morph=HC/VNw3ms ordinal=10/70] — same root by demandee Esav. Label: &quot;cycle #22-or-#23, contingent on the crown ruling&quot; (after gen_41 tehi #21-or-#22). Resolve nothing beyond the pop.
+</td><td><span class="he">וַיִּשָּׁבַע לוֹ</span> · <i>va-yishava l-o</i><br><span class="gloss">= and-yishava l-o</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">HOLDS(mikhra(bekhorat_kha, ka_yom), t2)</span><br><span class="gloss">= HOLDS(mikhra(bekhorat-kha, like-day), t2)</span><br>RESULT POP of mikhra [flag 19 SAFE] — second same-verse same-root-class receipt. va-yimkor (HC/Vqw3ms 4376 tok2) [VERIFIED: SNAPSHOT Gen.25.33 idx7 morph=HC/Vqw3ms ordinal=2/39] — sell root by demandee; object bekhorat-o (1062 tok4). Label: &quot;cycle #23-or-#24, contingent on the crown ruling&quot;. SPECS after double pop: only LET(haliteni(min_ha_adom)) OPEN (depth 1).
+</td><td><span class="he">וַיִּמְכֹּר אֶת־בְּכֹרָתוֹ לְיַעֲקֹב</span> · <i>va-yimkor et-bekhorat-o le-yaaqov</i><br><span class="gloss">= and-yimkor bekhorat-o to-yaaqov</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
+</table>
+<div class="meta">Swear and sell in one breath — two pops; the gulp demand still waits.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_25_34 · Gen.25.34 · <span class='expr'>THE_MEAL_AND_THE_DESPISE</span></h3>
+<p><span class="he">וְיַעֲקֹ֞ב נָתַ֣ן לְעֵשָׂ֗ו לֶ֚חֶם וּנְזִ֣יד עֲדָשִׁ֔ים וַיֹּ֣אכַל וַיֵּ֔שְׁתְּ וַיָּ֖קָם וַיֵּלַ֑ךְ וַיִּ֥בֶז עֵשָׂ֖ו אֶת־הַבְּכֹרָֽה</span> · <i>ve-yaaqov natan le-esav lechem u-nezid adashim va-yokhal va-yesht va-yaqam va-yelakh va-yivez esav et-ha-bekhora</i> · And Jacob gave Esau bread and lentil stew; and he ate and drank and rose and went; and Esau despised the birthright.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְיַעֲקֹ֞ב נָתַ֣ן לְעֵשָׂ֗ו לֶ֚חֶם וּנְזִ֣יד עֲדָשִׁ֔ים וַיֹּ֣אכַל וַיֵּ֔שְׁתְּ וַיָּ֖קָם וַיֵּלַ֑ךְ</span> · <i>ve-yaaqov natan le-esav lechem u-nezid adashim va-yokhal va-yesht va-yaqam va-yelakh</i> · Jacob gave bread and lentil stew; he ate drank rose went (etnachta on va-yelakh) [VERIFIED: SNAPSHOT Gen.25.34 idx9 mark_id=etnachta rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּ֥בֶז עֵשָׂ֖ו אֶת־הַבְּכֹרָֽה</span> · <i>va-yivez esav et-ha-bekhora</i> · and Esau despised the birthright (verse-final ha-bekhora) [VERIFIED: SNAPSHOT Gen.25.34 idx10-13; silluq idx13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">meal_and_depart(e34a) ∧ Agent(e34a, esav)</span><br><span class="gloss">= meal-and-depart(e34a) ∧ Agent(e34a, esav)</span><br>FOUR WAYYIQTOLS [flag 20 SAFE]. va-yokhal (398 ord=30) + va-yesht (8354 ord=11) + va-yaqam (6965 ord=28) + va-yelakh (3212 ord=42) [VERIFIED: SNAPSHOT Gen.25.34 idx6-9]. OTHER-VERB vs open LET(haliteni): akhal ≠ la&#x27;at (3938) — gulp demand LEFT OPEN forever (paid only in another root; shell insight + census). SPECS residual: haliteni OPEN.
+</td><td><span class="he">וַיֹּאכַל וַיֵּשְׁתְּ וַיָּקָם וַיֵּלַךְ</span> · <i>va-yokhal va-yesht va-yaqam va-yelakh</i><br><span class="gloss">= and-yokhal and-yesht and-yaqam and-yelakh</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">despise(e34b) ∧ Agent(e34b, esav) ∧ Theme(e34b, ha_bekhora)</span><br><span class="gloss">= despise(e34b) ∧ Agent(e34b, esav) ∧ Theme(e34b, the-bekhora)</span><br>DESPISE EVENT [flag 20 SAFE]. va-yivez (HC/Vqw3ms 959 tok1/2 TORAH DEBUT of bazah) [VERIFIED: SNAPSHOT Gen.25.34 idx10 morph=HC/Vqw3ms strong=959 ordinal=1/2] — he despised the birthright (ha-bekhora 1062 tok5) [idx13]. Career of bekhorah in piece: tok2 sell-object · tok3 dismiss · tok4 sold · tok5 despised [VERIFIED]. Unit end. Seam: 26:1 frozen gen_44. SPECS depth 1 OPEN (haliteni). REGISTRY 2. TESTS 0. STOP for Claude whole-unit review.
+</td><td><span class="he">וַיִּבֶז עֵשָׂו אֶת־הַבְּכֹרָה</span> · <i>va-yivez esav et-ha-bekhora</i><br><span class="gloss">= and-yivez esav the-bekhora</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+</table>
+<div class="meta">Ate, drank, rose, went — and despised what he sold; the gulp demand never settles in its own verb.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Gn_25_19 — toledot Isaac opens; SPECS empty</td><td>Generations of Isaac son of Abraham.</td><td>SPECS empty; no test, no name.</td><td><span class="he">תּוֹלְדֹת יִצְחָק</span> · <i>toldot yitzchaq</i><br><span class="gloss">= toldot yitzchaq</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Gn_25_21 — entreat-pair + barren; SPECS empty</td><td>Isaac entreats; YHWH is entreated; Rivqah conceives.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיֶּעְתַּר … וַיֵּעָתֶר</span> · <i>va-yetar … va-yeater</i><br><span class="gloss">= and-yetar and-yeater</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Gn_25_22 — first inquire of YHWH; SPECS empty</td><td>She goes to inquire of YHWH.</td><td>SPECS empty; no test, no name.</td><td><span class="he">לִדְרֹשׁ אֶת־יְהוָה</span> · <i>li-derosh et-YHWH</i><br><span class="gloss">= to-me-derosh the-LORD</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Gn_25_23 — oracle decree-FACTS; piece-1 end</td><td>Elder shall serve the younger.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וְרַב יַעֲבֹד צָעִיר</span> · <i>ve-rav yaavod tzair</i><br><span class="gloss">= and-rav yaavod tzair</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Gn_25_25 — Esav NAME write; REGISTRY 1</td><td>They called his name Esau.</td><td>SPECS empty; REGISTRY 1 writes.</td><td><span class="he">וַיִּקְרְאוּ שְׁמוֹ עֵשָׂו</span> · <i>va-yiqru shem-o esav</i><br><span class="gloss">= and-yiqru shem-o esav</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Gn_25_26 — Yaaqov NAME write; REGISTRY 2</td><td>He called his name Jacob; bare namer withheld.</td><td>SPECS empty; REGISTRY 2 writes.</td><td><span class="he">וַיִּקְרָא שְׁמוֹ יַעֲקֹב</span> · <i>va-yiqra shem-o yaaqov</i><br><span class="gloss">= and-yiqra shem-o yaaqov</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Gn_25_28 — split loves ahav tok3–4; piece-2 end</td><td>Isaac loves Esau; Rivqah loves Jacob.</td><td>SPECS empty; REGISTRY 2 writes.</td><td><span class="he">וַיֶּאֱהַב … אֹהֶבֶת</span> · <i>va-yeehav … ohevet</i><br><span class="gloss">= and-yeehav ohevet</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Gn_25_30 — haliteni LIVE OPEN; Edom report no write</td><td>Let me gulp the red; therefore Edom.</td><td>LET(haliteni(min_ha_adom)) pushed and OPEN; REGISTRY 2 writes.<br><span class="gloss">= LET(haliteni(from-the-adom)) pushed and OPEN; REGISTRY 2 writes.</span></td><td><span class="he">הַלְעִיטֵנִי</span> · <i>halite-ni</i><br><span class="gloss">= halite-ni</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Gn_25_31 — mikhra LIVE OPEN</td><td>Sell me today your birthright.</td><td>LET(haliteni(min_ha_adom)) pushed and OPEN; LET(mikhra(bekhorat_kha, ka_yom)) pushed and OPEN; REGISTRY 2 writes.<br><span class="gloss">= LET(haliteni(from-the-adom)) pushed and OPEN; LET(mikhra(bekhorat-kha, like-day)) pushed and OPEN; REGISTRY 2 writes.</span></td><td><span class="he">מִכְרָה כַיּוֹם</span> · <i>mikhra ka-yom</i><br><span class="gloss">= mikhra like-day</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Gn_25_33 — double pop swear+sell; gulp still OPEN</td><td>Swear; he swore; he sold the birthright.</td><td>LET(haliteni(min_ha_adom)) pushed and OPEN; REGISTRY 2 writes.<br><span class="gloss">= LET(haliteni(from-the-adom)) pushed and OPEN; REGISTRY 2 writes.</span></td><td><span class="he">וַיִּשָּׁבַע … וַיִּמְכֹּר</span> · <i>va-yishava … va-yimkor</i><br><span class="gloss">= and-yishava and-yimkor</span></td></tr>
+<tr><td><b>S11</b></td><td>after STEP_Gn_25_34 — gulp residual; despise; unit end</td><td>Ate drank rose went; despised the birthright.</td><td>LET(haliteni(min_ha_adom)) pushed and OPEN; REGISTRY 2 writes.<br><span class="gloss">= LET(haliteni(from-the-adom)) pushed and OPEN; REGISTRY 2 writes.</span></td><td><span class="he">וַיִּבֶז עֵשָׂו אֶת־הַבְּכֹרָה</span> · <i>va-yivez esav et ha-bekhora</i><br><span class="gloss">= and-yivez esav et the-bekhora</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_43_isaac_twins_birthright — Isaac&#x27;s toledot: twins and the birthright (25:19-34) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={&#x27;esav&#x27;: &#x27;esav&#x27;, &#x27;yaaqov&#x27;: &#x27;yaaqov&#x27;} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[&#x27;named_before_any_presence&#x27;, &#x27;named_before_any_presence&#x27;]
+
+=== S1 — after STEP_Gn_25_19 — toledot Isaac opens; SPECS empty
+    תּוֹלְדֹת יִצְחָק (toldot yitzchaq)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Gn_25_21 — entreat-pair + barren; SPECS empty
+    וַיֶּעְתַּר … וַיֵּעָתֶר (va-yetar … va-yeater)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Gn_25_22 — first inquire of YHWH; SPECS empty
+    לִדְרֹשׁ אֶת־יְהוָה (li-derosh et-YHWH)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Gn_25_23 — oracle decree-FACTS; piece-1 end
+    וְרַב יַעֲבֹד צָעִיר (ve-rav yaavod tzair)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Gn_25_25 — Esav NAME write; REGISTRY 1
+    וַיִּקְרְאוּ שְׁמוֹ עֵשָׂו (va-yiqru shem-o esav)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY 1 writes.  (writes=1 names=[&#x27;esav&#x27;])
+
+=== S6 — after STEP_Gn_25_26 — Yaaqov NAME write; REGISTRY 2
+    וַיִּקְרָא שְׁמוֹ יַעֲקֹב (va-yiqra shem-o yaaqov)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY 2 writes.  (writes=2 names=[&#x27;esav&#x27;, &#x27;yaaqov&#x27;])
+
+=== S7 — after STEP_Gn_25_28 — split loves ahav tok3–4; piece-2 end
+    וַיֶּאֱהַב … אֹהֶבֶת (va-yeehav … ohevet)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY 2 writes.  (writes=2 names=[&#x27;esav&#x27;, &#x27;yaaqov&#x27;])
+
+=== S8 — after STEP_Gn_25_30 — haliteni LIVE OPEN; Edom report no write
+    הַלְעִיטֵנִי (halite-ni)
+    PASS  LET(haliteni(min_ha_adom)) pushed and OPEN  (queue=[&#x27;haliteni(min_ha_adom)&#x27;])
+    PASS  REGISTRY 2 writes.  (writes=2 names=[&#x27;esav&#x27;, &#x27;yaaqov&#x27;])
+
+=== S9 — after STEP_Gn_25_31 — mikhra LIVE OPEN
+    מִכְרָה כַיּוֹם (mikhra ka-yom)
+    PASS  LET(haliteni(min_ha_adom)) pushed and OPEN  (queue=[&#x27;haliteni(min_ha_adom)&#x27;, &#x27;mikhra(bekhorat_kha, ka_yom)&#x27;])
+    PASS  LET(mikhra(bekhorat_kha, ka_yom)) pushed and OPEN  (queue=[&#x27;haliteni(min_ha_adom)&#x27;, &#x27;mikhra(bekhorat_kha, ka_yom)&#x27;])
+    PASS  REGISTRY 2 writes.  (writes=2 names=[&#x27;esav&#x27;, &#x27;yaaqov&#x27;])
+
+=== S10 — after STEP_Gn_25_33 — double pop swear+sell; gulp still OPEN
+    וַיִּשָּׁבַע … וַיִּמְכֹּר (va-yishava … va-yimkor)
+    PASS  LET(haliteni(min_ha_adom)) pushed and OPEN  (queue=[&#x27;haliteni(min_ha_adom)&#x27;])
+    PASS  REGISTRY 2 writes.  (writes=2 names=[&#x27;esav&#x27;, &#x27;yaaqov&#x27;])
+
+=== S11 — after STEP_Gn_25_34 — gulp residual; despise; unit end
+    וַיִּבֶז עֵשָׂו אֶת־הַבְּכֹרָה (va-yivez esav et ha-bekhora)
+    PASS  LET(haliteni(min_ha_adom)) pushed and OPEN  (queue=[&#x27;haliteni(min_ha_adom)&#x27;])
+    PASS  REGISTRY 2 writes.  (writes=2 names=[&#x27;esav&#x27;, &#x27;yaaqov&#x27;])
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_43_isaac_twins_birthright.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_43_isaac_twins_birthright — 25:19-34
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_43_isaac_twins_birthright.yaml) is CANONICAL
+# (Pre-Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Isaac&#x27;s toledot: twins and the birthright (25:19-34)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_43_isaac_twins_birthright&quot;)
+
+# -------------------------- Gen.25.19 · THE_TOLEDOT_OF_ISAAC ---------------
+# וְאֵ֛לֶּה תּוֹלְדֹ֥ת יִצְחָ֖ק בֶּן־אַבְרָהָ֑ם אַבְרָהָ֖ם הוֹלִ֥יד
+# אֶת־יִצְחָֽק
+# &quot;[EN-AID] And these are the generations of Isaac, Abraham&#x27;s son: Abraham
+# begot Isaac.&quot;
+m.step(&quot;Gen.25.19&quot;)
+# ‹תּוֹלְדֹת יִצְחָק› (“generations Isaac”) — fact holds: generations-Isaac-
+# section-header
+m.fact(&quot;toledot_yitzchaq_section_header&quot;)
+
+# -------------------------- Gen.25.20 · THE_MARRIAGE_AGE_AND_ORIGIN --------
+# וַיְהִ֤י יִצְחָק֙ בֶּן־אַרְבָּעִ֣ים שָׁנָ֔ה בְּקַחְתּ֣וֹ אֶת־רִבְקָ֗ה
+# בַּת־בְּתוּאֵל֙ הָֽאֲרַמִּ֔י מִפַּדַּ֖ן אֲרָ֑ם אֲח֛וֹת לָבָ֥ן הָאֲרַמִּ֖י
+# ל֥וֹ לְאִשָּֽׁה
+# &quot;[EN-AID] And Isaac was forty years old when he took Rivqah, daughter of
+# Betuel the Aramean of Padan-aram, sister of Laban the Aramean, as wife for
+# himself.&quot;
+m.step(&quot;Gen.25.20&quot;)
+# ‹בֶּן־אַרְבָּעִים שָׁנָה … רִבְקָה … מִפַּדַּן אֲרָם› (“son forty years …
+# Rebekah … from Padan”) — fact holds: Isaac-forty-takes-Rebekah-from-from-
+# Padan
+m.fact(&quot;yitzchaq_forty_takes_rivqa_from_padan_aram&quot;)
+
+# -------------------------- Gen.25.21 · THE_ENTREAT_PAIR -------------------
+# וַיֶּעְתַּ֨ר יִצְחָ֤ק לַֽיהוָה֙ לְנֹ֣כַח אִשְׁתּ֔וֹ כִּ֥י עֲקָרָ֖ה הִ֑וא
+# וַיֵּעָ֤תֶר לוֹ֙ יְהוָ֔ה וַתַּ֖הַר רִבְקָ֥ה אִשְׁתּֽוֹ
+# &quot;[EN-AID] And Isaac entreated YHWH opposite his wife, for she was barren;
+# and YHWH was entreated of him, and Rivqah his wife conceived.&quot;
+m.step(&quot;Gen.25.21&quot;)
+# ‹וַיֶּעְתַּר … וַיֵּעָתֶר … וַתַּהַר› (“and-burn-incense-in-worship … and-
+# burn-incense-in-worship … and-be-pregnant”) — event: entreat-and-in-
+# entreated — theme woman-him/its
+m.event(&quot;entreat_and_be_entreated&quot;, themes=[&quot;isht-o&quot;])
+
+# -------------------------- Gen.25.22 · THE_STRUGGLE_AND_INQUIRE -----------
+# וַיִּתְרֹֽצֲצ֤וּ הַבָּנִים֙ בְּקִרְבָּ֔הּ וַתֹּ֣אמֶר אִם־כֵּ֔ן לָ֥מָּה
+# זֶּ֖ה אָנֹ֑כִי וַתֵּ֖לֶךְ לִדְרֹ֥שׁ אֶת־יְהוָֽה
+# &quot;[EN-AID] And the children struggled together within her; and she said: If
+# it be so, why am I thus? And she went to inquire of YHWH.&quot;
+m.step(&quot;Gen.25.22&quot;)
+# ‹וַיִּתְרֹצֲצוּ … לִדְרֹשׁ אֶת־יְהוָה› (“and-crack-in-pieces … to-tread
+# obj-marker YHWH”) — event: struggle-and-inquire
+m.event(&quot;struggle_and_inquire&quot;)
+
+# -------------------------- Gen.25.23 · THE_ORACLE_DECREE_FACTS ------------
+# וַיֹּ֨אמֶר יְהוָ֜ה לָ֗הּ שְׁנֵ֤י גיים גוֹיִם֙ בְּבִטְנֵ֔ךְ וּשְׁנֵ֣י
+# לְאֻמִּ֔ים מִמֵּעַ֖יִךְ יִפָּרֵ֑דוּ וּלְאֹם֙ מִלְאֹ֣ם יֶֽאֱמָ֔ץ וְרַ֖ב
+# יַעֲבֹ֥ד צָעִֽיר
+# &quot;[EN-AID] And YHWH said to her: Two nations are in your womb, and two
+# peoples shall be separated from your bowels; and one people shall be
+# stronger than the other people; and the elder shall serve the younger.&quot;
+m.step(&quot;Gen.25.23&quot;)
+# ‹שְׁנֵי גוֹיִם … וְרַב יַעֲבֹד צָעִיר› (“two nation … and-many/great
+# work/serve little”) — fact holds: oracle-two-nations-elder-serves-younger
+m.fact(&quot;oracle_two_nations_elder_serves_younger&quot;)
+
+# -------------------------- Gen.25.24 · THE_TWINS_IN_THE_WOMB --------------
+# וַיִּמְלְא֥וּ יָמֶ֖יהָ לָלֶ֑דֶת וְהִנֵּ֥ה תוֹמִ֖ם בְּבִטְנָֽהּ
+# &quot;[EN-AID] And her days to give birth were filled; and behold, twins were
+# in her womb.&quot;
+m.step(&quot;Gen.25.24&quot;)
+# ‹תוֹמִם בְּבִטְנָהּ› (“twin in-belly-her/its”) — event: birth-due — theme
+# twin
+m.event(&quot;birth_due&quot;, themes=[&quot;tomim&quot;])
+
+# -------------------------- Gen.25.25 · THE_ESAV_NAMING --------------------
+# וַיֵּצֵ֤א הָרִאשׁוֹן֙ אַדְמוֹנִ֔י כֻּלּ֖וֹ כְּאַדֶּ֣רֶת שֵׂעָ֑ר
+# וַיִּקְרְא֥וּ שְׁמ֖וֹ עֵשָֽׂו
+# &quot;[EN-AID] And the first came out reddish, all of him like a hairy mantle;
+# and they called his name Esau.&quot;
+m.step(&quot;Gen.25.25&quot;)
+# ‹וַיֵּצֵא הָרִאשׁוֹן אַדְמוֹנִי … כְּאַדֶּרֶת שֵׂעָר› (“and-bring-forth
+# the-first reddish … like-something-ample hair”) — event: birth-first —
+# theme the-first
+m.event(&quot;birth_first&quot;, themes=[&quot;ha_rishon&quot;])
+# ‹וַיִּקְרְאוּ שְׁמוֹ עֵשָׂו› (“and-call name-him/its Esau”) — named: Esau
+# := Esau
+m.name(&quot;esav&quot;, &quot;esav&quot;)
+
+# -------------------------- Gen.25.26 · THE_YAAQOV_NAMING ------------------
+# וְאַֽחֲרֵי־כֵ֞ן יָצָ֣א אָחִ֗יו וְיָד֤וֹ אֹחֶ֨זֶת֙ בַּעֲקֵ֣ב עֵשָׂ֔ו
+# וַיִּקְרָ֥א שְׁמ֖וֹ יַעֲקֹ֑ב וְיִצְחָ֛ק בֶּן־שִׁשִּׁ֥ים שָׁנָ֖ה בְּלֶ֥דֶת
+# אֹתָֽם
+# &quot;[EN-AID] And after that his brother came out, and his hand was holding
+# Esau&#x27;s heel; and he called his name Jacob; and Isaac was sixty years old
+# when she bore them.&quot;
+m.step(&quot;Gen.25.26&quot;)
+# ‹יָדוֹ אֹחֶזֶת בַּעֲקֵב עֵשָׂו› (“hand-him/its seize in-heel Esau”) —
+# event: birth-second-heel — theme brother-him/its
+m.event(&quot;birth_second_heel&quot;, themes=[&quot;achi_v&quot;])
+# ‹וַיִּקְרָא שְׁמוֹ יַעֲקֹב› (“and-call name-him/its Jacob”) — named: Jacob
+# := Jacob
+m.name(&quot;yaaqov&quot;, &quot;yaaqov&quot;)
+
+# -------------------------- Gen.25.27 · THE_TWO_MEN_GROW -------------------
+# וַֽיִּגְדְּלוּ֙ הַנְּעָרִ֔ים וַיְהִ֣י עֵשָׂ֗ו אִ֛ישׁ יֹדֵ֥עַ צַ֖יִד אִ֣ישׁ
+# שָׂדֶ֑ה וְיַעֲקֹב֙ אִ֣ישׁ תָּ֔ם יֹשֵׁ֖ב אֹהָלִֽים
+# &quot;[EN-AID] And the boys grew; and Esau was a man knowing hunting, a man of
+# the field; and Jacob was a complete man, dwelling in tents.&quot;
+m.step(&quot;Gen.25.27&quot;)
+# ‹עֵשָׂו אִישׁ יֹדֵעַ צַיִד … יַעֲקֹב אִישׁ תָּם› (“Esau man know chase …
+# Jacob man complete”) — fact holds: Esau-hunter-Jacob-man-complete
+m.fact(&quot;esav_hunter_yaaqov_ish_tam&quot;)
+
+# -------------------------- Gen.25.28 · THE_SPLIT_LOVES --------------------
+# וַיֶּאֱהַ֥ב יִצְחָ֛ק אֶת־עֵשָׂ֖ו כִּי־צַ֣יִד בְּפִ֑יו וְרִבְקָ֖ה אֹהֶ֥בֶת
+# אֶֽת־יַעֲקֹֽב
+# &quot;[EN-AID] And Isaac loved Esau because game was in his mouth; and Rivqah
+# loved Jacob.&quot;
+m.step(&quot;Gen.25.28&quot;)
+# ‹וַיֶּאֱהַב יִצְחָק אֶת־עֵשָׂו … וְרִבְקָה אֹהֶבֶת אֶת־יַעֲקֹב› (“and-
+# have-affection-for Isaac obj-marker Esau … and-Rebekah have-affection-for
+# obj-marker Jacob”) — event: love-split
+m.event(&quot;love_split&quot;)
+
+# -------------------------- Gen.25.29 · THE_STEW_AND_THE_WEARY -------------
+# וַיָּ֥זֶד יַעֲקֹ֖ב נָזִ֑יד וַיָּבֹ֥א עֵשָׂ֛ו מִן־הַשָּׂדֶ֖ה וְה֥וּא עָיֵֽף
+# &quot;[EN-AID] And Jacob boiled stew; and Esau came in from the field, and he
+# was weary.&quot;
+m.step(&quot;Gen.25.29&quot;)
+# ‹וַיָּזֶד … נָזִיד … עָיֵף› (“and-seethe … something-boiled … languid”) —
+# event: stew-and-arrive
+m.event(&quot;stew_and_arrive&quot;)
+
+# -------------------------- Gen.25.30 · THE_HALITENI_AND_EDOM_REPORT -------
+# וַיֹּ֨אמֶר עֵשָׂ֜ו אֶֽל־יַעֲקֹ֗ב הַלְעִיטֵ֤נִי נָא֙ מִן־הָאָדֹ֤ם הָאָדֹם֙
+# הַזֶּ֔ה כִּ֥י עָיֵ֖ף אָנֹ֑כִי עַל־כֵּ֥ן קָרָֽא־שְׁמ֖וֹ אֱדֽוֹם
+# &quot;[EN-AID] And Esau said to Jacob: Let me gulp, please, from this red, this
+# red, for I am weary; therefore his name was called Edom.&quot;
+m.step(&quot;Gen.25.30&quot;)
+# ‹הַלְעִיטֵנִי נָא› (“swallow-greedily-me/my please”) — Esau speaks a
+# demand — LET: haliteni(from-the-rosy)
+m.declare(&quot;esav&quot;, &quot;LET&quot;,
+          &quot;haliteni(min_ha_adom)&quot;)
+# ‹עַל־כֵּן קָרָא־שְׁמוֹ אֱדוֹם› (“over so call name-him/its Edom”) — fact
+# holds: over-so-call-shemo-Edom-report-only
+m.fact(&quot;al_ken_qara_shemo_edom_report_only&quot;)
+
+# -------------------------- Gen.25.31 · THE_MIKHRA_PUSH --------------------
+# וַיֹּ֖אמֶר יַעֲקֹ֑ב מִכְרָ֥ה כַיּ֛וֹם אֶת־בְּכֹֽרָתְךָ֖ לִֽי
+# &quot;[EN-AID] And Jacob said: Sell me as of today your birthright.&quot;
+m.step(&quot;Gen.25.31&quot;)
+# ‹מִכְרָה כַיּוֹם אֶת־בְּכֹרָתְךָ לִי› (“sell-ward like-day obj-marker
+# firstling-of-man-you/your to-me/my”) — Jacob speaks a demand — LET:
+# mikhra(firstling-of-man-you/your, day)
+m.declare(&quot;yaaqov&quot;, &quot;LET&quot;,
+          &quot;mikhra(bekhorat_kha, ka_yom)&quot;)
+
+# -------------------------- Gen.25.32 · THE_DISMISS_SPEECH -----------------
+# וַיֹּ֣אמֶר עֵשָׂ֔ו הִנֵּ֛ה אָנֹכִ֥י הוֹלֵ֖ךְ לָמ֑וּת וְלָמָּה־זֶּ֥ה לִ֖י
+# בְּכֹרָֽה
+# &quot;[EN-AID] And Esau said: Behold, I am going to die; and what is this
+# birthright to me?&quot;
+m.step(&quot;Gen.25.32&quot;)
+# ‹וְלָמָּה־זֶּה לִי בְּכֹרָה› (“and-to-what this to-me/my firstling-of-
+# man”) — fact holds: Esau-dismisses-firstling-of-man-speech
+m.fact(&quot;esav_dismisses_bekhora_speech&quot;)
+
+# -------------------------- Gen.25.33 · THE_DOUBLE_POP_SWEAR_AND_SELL ------
+# וַיֹּ֣אמֶר יַעֲקֹ֗ב הִשָּׁ֤בְעָה לִּי֙ כַּיּ֔וֹם וַיִּשָּׁבַ֖ע ל֑וֹ
+# וַיִּמְכֹּ֥ר אֶת־בְּכֹרָת֖וֹ לְיַעֲקֹֽב
+# &quot;[EN-AID] And Jacob said: Swear to me as of today; and he swore to him;
+# and he sold his birthright to Jacob.&quot;
+m.step(&quot;Gen.25.33&quot;)
+# ‹הִשָּׁבְעָה לִי כַּיּוֹם› (“swear-ward to-me/my like-day”) — Jacob speaks
+# a demand — LET: hishava(to-me, day)
+m.declare(&quot;yaaqov&quot;, &quot;LET&quot;,
+          &quot;hishava(li, ka_yom)&quot;)
+# ‹וַיִּשָּׁבַע לוֹ› (“and-swear to-him/its”) — demand settled (popped from
+# the queue): hishava(to-me, day)
+m.result(&quot;hishava(li, ka_yom)&quot;, tmark=&quot;t1&quot;)
+# ‹וַיִּמְכֹּר אֶת־בְּכֹרָתוֹ לְיַעֲקֹב› (“and-sell obj-marker firstling-of-
+# man-him/its to-Jacob”) — demand settled (popped from the queue):
+# mikhra(firstling-of-man-you/your, day)
+m.result(&quot;mikhra(bekhorat_kha, ka_yom)&quot;, tmark=&quot;t2&quot;)
+
+# -------------------------- Gen.25.34 · THE_MEAL_AND_THE_DESPISE -----------
+# וְיַעֲקֹ֞ב נָתַ֣ן לְעֵשָׂ֗ו לֶ֚חֶם וּנְזִ֣יד עֲדָשִׁ֔ים וַיֹּ֣אכַל
+# וַיֵּ֔שְׁתְּ וַיָּ֖קָם וַיֵּלַ֑ךְ וַיִּ֥בֶז עֵשָׂ֖ו אֶת־הַבְּכֹרָֽה
+# &quot;[EN-AID] And Jacob gave Esau bread and lentil stew; and he ate and drank
+# and rose and went; and Esau despised the birthright.&quot;
+m.step(&quot;Gen.25.34&quot;)
+# ‹וַיֹּאכַל וַיֵּשְׁתְּ וַיָּקָם וַיֵּלַךְ› (“and-eat and-drink and-arise
+# and-go”) — event: ?
+m.event(&quot;?&quot;)
+# ‹וַיִּבֶז עֵשָׂו אֶת־הַבְּכֹרָה› (“and-disesteem Esau obj-marker the-
+# firstling-of-man”) — event: ?
+m.event(&quot;?&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {&#x27;esav&#x27;: &#x27;esav&#x27;, &#x27;yaaqov&#x27;: &#x27;yaaqov&#x27;}
+    assert m.REGISTRY[&quot;writes&quot;] == 2
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;haliteni(min_ha_adom)&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 3
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;named_before_any_presence&#x27;: 2}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;toledot_yitzchaq_section_header&#x27;, &#x27;yitzchaq_forty_takes_rivqa_from_padan_aram&#x27;, &#x27;oracle_two_nations_elder_serves_younger&#x27;, &#x27;esav_hunter_yaaqov_ish_tam&#x27;, &#x27;al_ken_qara_shemo_edom_report_only&#x27;, &#x27;esav_dismisses_bekhora_speech&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 16
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

@@ -1,0 +1,956 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_61_yehuda_tamar — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_61_yehuda_tamar?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Judah and Tamar: the pledge that speaks (38:1-30) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_61_yehuda_tamar</b> · Genesis 38:1-30 · derive logic_derived_v1 · phase FWD-2</div>
+<div class="meta"><a href="../#Gen/38/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">הַכֶּר נָא לְמִי הַחֹתֶמֶת וְהַפְּתִילִים וְהַמַּטֶּה</span> · <i>haker-na le-mi ha-chotemet ve-ha-petilim ve-ha-mate</i> · &#x27;recognize, please — whose are the seal and the cords and the staff&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DERIVED 2026-08-08 · FORWARD ERA unit #2 (run FWD-1 block 2; freeze review waived — mechanical gates only). Span: 38:1-30, whole chapter: 30 verses · 405 tokens (SNAPSHOT-verified, prestage). Conventions unchanged; every verse carries an etnachta. Oral layer IN-PIPELINE: manifest 12/12 VERIFIED, zero FAILED — see oral_audit_note_en. MACHINE PROFILE. The run&#x27;s first REGISTRY-ACTIVE unit: FIVE naming acts, five writes — Er by the FATHER&#x27;s voice (va-yiqra, one of the Masorah&#x27;s three he-named births), Onan and Shelah by the mother&#x27;s (va-tiqra), Peretz and Zerach at the double birth. Volitive census 8 (7 imperatives + 1 cohortative), modeled as FIVE DECLAREs: the levirate seed-demand (38:8), the sit-as-widow demand (38:11 — the span&#x27;s only pushed-and-satisfied-in-the-SAME-verse demand), the roadside request (38:16), the burn-order (38:24), and Tamar&#x27;s haker-na (38:25). FOUR RESULTs. END-STATE: the burn-order ALONE stays open — pushed at 38:24, reversed in effect by the recognition and confession, never executed and never revoked on the letter: the second demand in two units to DIE ON THE QUEUE (gen_60&#x27;s kill-demand). THE MACHINE HEART: the seed-demand (haqem zera le-achikha) is pushed on ONAN, refused from inside (obedience in form, refusal in substance — the machine keeps it open through his act), and DISCHARGED THROUGH JUDAH HIMSELF at the twins (38:27): the demandee-mismatch class (gen_46&#x27;s Isaac-blessing precedent) at full chapter scale. TESTS 0 (zero tov). LEDGER 0. CARE-POINTS: the sit-demand&#x27;s CONDITION (Shelah grown -&gt; Tamar given) is convicted by the narrator&#x27;s own clause at 38:14 (ki gadal shela ve-hiv lo nitna lo) and by Judah&#x27;s confession (38:26 ki al ken lo netatiha le-shela) — the demand was satisfied, the promise behind it broken; filed as letter-note, not a machine flag. The GOAT-COIN: the kid of the goats (38:17-23) prices this deception as the goat&#x27;s blood priced the coat (37:31) — one animal-class, two frauds, consecutive chapters. The IDENTITY-OBJECTS: seal, cord, staff, scarlet thread — the chapter argues by tokens, and the pledge-triple returns as evidence at 38:25. The word-shift zona (38:15, Judah&#x27;s eyes) -&gt; qedesha (38:21-22, Hirah&#x27;s mouth, the townsmen&#x27;s answer) — the span&#x27;s politest lie, letter-note. The passive tellings (va-yugad 38:13, 38:24) — both actors act on agentless news. bat-shua enters and dies nameless while Tamar enters by name (38:6). vi-kheziv (38:5): the birthplace of the withheld son carries the lie-word&#x27;s skeleton; letter-note. WATCHLIST ARMS: 46:12 (Er and Onan dead in the descent-roster; Peretz&#x27;s sons); Num 26:19-22 (the Masorah&#x27;s ledger of this house); Deut 25:5-10 (the levirate LAW the narrative precedes — the shoe where the seed-demand gets its statute); Ruth 4:12,18 (&quot;like the house of PERETZ&quot; — the kingdom the Kitzur reads from ki gadal, outside the instrument, named); Exod 17:5 (the staff armed by G61-06); 25:24&#x27;s lean twins vs 38:27&#x27;s full (the two-spelling twin-pair, armed).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (IN-PIPELINE, forward era; manifest logic/oral_audit/manifests/gen_61_yehuda_tamar_claims.json 12/12 VERIFIED, zero FAILED; record logic/oral_audit/AUDIT_gen_61_2026-08-08.md). CROWNS (chain-attested + DB-verified). THE HE-NAMED FIRSTBORN [G61-01, the Masorah via Minchat Shai on 38:3; the Toledo-corrected books; Ramban]: every &quot;she conceived and bore&quot; takes SHE-named except THREE he-named — Er here, Gershom (Exod 2:22), Beriah (Chronicles, named) — and the stream splits exactly: ויקרא (&quot;and HE called&quot;) for Er, ותקרא (&quot;and SHE called&quot;) for Onan and Shelah; Ramban reads Judah as the namer; a book-variance (some copies she-name Er too) filed named. THE ONE FULL FIRSTBORN [G61-02, MS on 38:6]: בכורו (&quot;his firstborn&quot;) written FULL with vav ONCE in the Torah — on Er, the firstborn who dies first; the lean pair (Sidon 10:15, Uz 22:21) asserted. THE FURNACE-VERSE&#x27;S LETTERS [G61-03/04/05, MS on 38:25; Bereshit Rabbah 85; Ketubot 67b; Sotah 10b; Bava Metzia 59a; R. Chananel; the Arukh; the Ritva; the Hilleli and Yerushalmi codices; the Ramah]: הוא מוצאת (&quot;SHE was brought out&quot;) — written he-vav, read she: R. Huna — SHE and HE were due to come out; the written skeleton keeps the sentencing man inside her verse (in-stream). The furnace-teaching (better the furnace than a fellow&#x27;s public shame) hangs on מוצאת — R. Chananel&#x27;s text read it LEAN of its aleph (&quot;set alight&quot;), the Ritva answers &quot;no book has it so,&quot; and SNAPSHOT writes the aleph with the books, the kindling-reading surviving as the homily&#x27;s read-it-as. And והפתילים (&quot;the cords&quot;) FULL-OF-FULL — both yods — with the Yerushalmi codex and the Ramah AGAINST the Hilleli&#x27;s lean: the stream rules against the Hilleli at the very word the recognition turns on. THE STAFF OF THE WONDERS [G61-06, Kitzur on 38:18]: ומטך (&quot;and your staff&quot;) stands exactly TWICE in the Torah — Judah&#x27;s pledge in Tamar&#x27;s hand and &quot;your staff with which you struck the Nile&quot; (Exod 17:5): the Kitzur — the staff given into her hand is the staff of the miracles. THE NAME IN THE VERDICT [G61-07, Kitzur on 38:24]: the initials of &quot;Judah... bring-her-out... and-let-her-be-burned&quot; + the next verse&#x27;s opening she-word — four initials spelling the four-letter Name across the verse-seam: the Holy One summoned her the signs that were lost (three initials checked, the fourth asserted). FEAR IN THE FINALS [G61-08, Kitzur on 38:25]: the four words of &quot;recognize, please, whose is the seal&quot; close in letters that read, from the last word back, תירא (&quot;FEAR&quot;) — fear the One and confess (ordered finals checked). THE KI-GADAL PAIR [G61-09, Kitzur on 38:14]: &quot;for Shelah WAS GROWN&quot; — the adjacency stands exactly twice in the Torah, Tamar&#x27;s seeing and Isaac&#x27;s growing greatness (26:13): from her seeing came the house that grows very great. THE FOUND-HER SKELETON [G61-10, Kitzur on 38:20]: ולא מצאה (&quot;he did not find her&quot;) — the skeleton&#x27;s four Torah stations locked (the dove&#x27;s no-rest 8:9, the road 38:20, the redeemer&#x27;s sufficiency Lev 25:28, the field Deut 22:27); the Kitzur pairs road and field. THE DAGESH AND METEG SET [G61-11/12, MS ×9]: adulami&#x27;s lamed dagesheed at both stations; the lamed of לו (&quot;to WHOM I am with child&quot;) dagesheed at the pledge-speech; tiqach (&quot;let her keep it&quot;) with the qof dagesheed AND — where MS records the books divided on the meteg — SNAPSHOT writing BOTH strokes: a both-camps station (the divide-word class). gam and ha-gedi dagesheed, hotziuha&#x27;s tifcha on the aleph, natan&#x27;s soft tav, bet-avikh&#x27;s soft bet (asserted). DISCREPANCY: titen LI (&quot;what will you give ME,&quot; 38:16) — MS rules the lamed SOFT; SNAPSHOT writes the crowding dagesh: the stream against MS&#x27;s camp, filed. Stress-variance at ve-lo yasaf od (38:26, end-stressed against the Michlol&#x27;s custom) named, with the double reading (did not continue / did not cease). READINGS (named-only): the burning&#x27;s law (Rashi&#x27;s priest&#x27;s-daughter vs Ramban&#x27;s ruler&#x27;s-court); the cords as tefillin; Petach Enayim&#x27;s Abraham-count; the harlot-pair with the city (Isaiah); the scorn-pair (Proverbs); Peretz toward David (the atbash and the sum); Er&#x27;s deed supplied from Onan&#x27;s; the twins&#x27; two spellings (38:27 full vs 25:24 lean).</div>
+<div class="meta">confidence: structure tested; oral layer verified 12/12</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>FORWARD ERA run 1, block 2. Canon continuation: Gen 38:1-30, the whole Judah-Tamar chapter — the narrative interleaved between the sale and Potiphar&#x27;s house.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Span + source + conventions</td><td>SNAPSHOT prestage: 30 verses, 405 tokens; every verse carries an etnachta. No ketiv/qere token-pairs in span (the hiv-class written-vav-read-yod at 38:25 is single-token pointing, not a pair). Volitive census: 8 (7 imperative, 1 cohortative).</td><td>established</td></tr>
+<tr><td><b>C</b></td><td>Machine structure</td><td>First REGISTRY-active unit of the run: 5 naming acts (REGISTRY 5 writes; entities installed at birth, then named — no named-before-presence flags). 5 DECLAREs, 4 RESULTs; end-state: the burn-order alone open (the queue&#x27;s second dead demand in two units); the seed-demand discharged through the demander (demandee-mismatch class). TESTS 0, LEDGER 0. Existing handler vocabulary only.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Gen 38 (18 notes) + Kitzur Baal HaTurim on Gen 38 (16 notes). Manifest 12 rows: 12 VERIFIED / 0 FAILED / 0 UNCHECKABLE; one pointing DISCREPANCY recorded (titen-li dagesh vs MS&#x27;s soft ruling) and one stress-variance named.</td><td>established</td></tr>
+<tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 12/12 zero FAILED; verify_text.py green (text layer independently recomputed); preflight ALL GREEN; gloss_lint clean both files. Review waived per the revised standing law.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-08 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_38_1 · Gen.38.1 · <span class='expr'>THE_DESCENT_TO_ADULLAM</span></h3>
+<p><span class="he">וַיְהִי בָּעֵת הַהִוא וַיֵּרֶד יְהוּדָה מֵאֵת אֶחָיו וַיֵּט עַד־אִישׁ עֲדֻלָּמִי וּשְׁמוֹ חִירָה</span> · <i>va-yehi ba-et ha-hiv va-yered yehuda me-et echay-v va-yet ad-ish adulami u-shem-o chira</i> · And it came to pass at that time that Judah went down from his brothers, and turned aside to an Adullamite man, and his name was Hirah.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַֽיְהִי֙ בָּעֵ֣ת הַהִ֔וא וַיֵּ֥רֶד יְהוּדָ֖ה מֵאֵ֣ת אֶחָ֑יו</span> · <i>va-yehi ba-et ha-hiv va-yered yehuda me-et echay-v</i> · at that time Judah went down from his brothers (etnachta on echay-v) [VERIFIED: SNAPSHOT Gen.38.1 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֵּ֛ט עַד אִ֥ישׁ עֲדֻלָּמִ֖י וּשְׁמ֥וֹ חִירָֽה</span> · <i>va-yet ad-ish adulami u-shem-o chira</i> · and turned to an Adullamite man named Hirah (verse-final chira) [VERIFIED: SNAPSHOT Gen.38.1 idx7-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(yarad_me_et_echay_v(yehuda), t0)</span><br><span class="gloss">= HOLDS(yarad-from-echay-v(yehuda), t0)</span><br>THE DESCENT. va-yered yehuda me-et echav — the seller of gen_60 goes DOWN from his brothers while Joseph goes down to Egypt: the letter runs the two descents in parallel. adulami with the lamed dagesheed [VERIFIED: manifest G61-11].
+</td><td><span class="he">וַיְהִי בָּעֵת הַהִוא וַיֵּרֶד יְהוּדָה מֵאֵת אֶחָיו</span> · <i>va-yehi ba-et ha-hiv va-yered yehuda me-et echay-v</i><br><span class="gloss">= and-yehi in-the the-hiv and-yered yehuda from echay-v</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Judah leaves the brothers between the sale and Egypt; the letter interleaves.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_2 · Gen.38.2 · <span class='expr'>THE_CANAANITE_WIFE</span></h3>
+<p><span class="he">וַיַּרְא־שָׁם יְהוּדָה בַּת־אִישׁ כְּנַעֲנִי וּשְׁמוֹ שׁוּעַ וַיִּקָּחֶהָ וַיָּבֹא אֵלֶיהָ</span> · <i>va-yar-sham yehuda bat-ish kenaani u-shem-o shua va-yiqache-ha va-yavo ele-ha</i> · And Judah saw there the daughter of a Canaanite man, and his name was Shua; and he took her and came to her.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּרְא שָׁ֧ם יְהוּדָ֛ה בַּת אִ֥ישׁ כְּנַעֲנִ֖י וּשְׁמ֣וֹ שׁ֑וּעַ</span> · <i>va-yar-sham yehuda bat-ish kenaani u-shem-o shua</i> · Judah saw there the daughter of a Canaanite named Shua (etnachta on shua) [VERIFIED: SNAPSHOT Gen.38.2 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּקָּחֶ֖הָ וַיָּבֹ֥א אֵלֶֽיהָ</span> · <i>va-yiqache-ha va-yavo ele-ha</i> · and he took her and came to her (verse-final ele-ha) [VERIFIED: SNAPSHOT Gen.38.2 idx8-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(laqach_bat_shua(yehuda), t0)</span><br><span class="gloss">= HOLDS(laqach-bat-shua(yehuda), t0)</span><br>THE TAKING. va-yar sham yehuda bat ish kenaani u-shemo shua — the wife enters nameless, a daughter of her father&#x27;s name only; the ledger will record her death the same way (38:12).
+</td><td><span class="he">וַיַּרְא־שָׁם יְהוּדָה בַּת־אִישׁ כְּנַעֲנִי וּשְׁמוֹ שׁוּעַ</span> · <i>va-yar-sham yehuda bat-ish kenaani u-shem-o shua</i><br><span class="gloss">= and-yar-there yehuda bat-man kenaani and-shem-o shua</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The unnamed wife: bat-Shua throughout.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_3 · Gen.38.3 · <span class='expr'>THE_FATHER_NAMES_ER</span></h3>
+<p><span class="he">וַתַּהַר וַתֵּלֶד בֵּן וַיִּקְרָא אֶת־שְׁמוֹ עֵר</span> · <i>va-tahar va-teled ben va-yiqra et-shem-o er</i> · And she conceived and bore a son; and he called his name Er.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתַּ֖הַר וַתֵּ֣לֶד בֵּ֑ן</span> · <i>va-tahar va-teled ben</i> · and she conceived and bore a son (etnachta on ben) [VERIFIED: SNAPSHOT Gen.38.3 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּקְרָ֥א אֶת שְׁמ֖וֹ עֵֽר</span> · <i>va-yiqra et-shem-o er</i> · and HE called his name Er (verse-final er) [VERIFIED: SNAPSHOT Gen.38.3 idx3-6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>REGISTRY_INSTALL</td><td><span class="expr">WORLD += {er}</span><br>THE FIRSTBORN BORN. va-tahar va-teled ben.
+</td><td><span class="he">וַתַּהַר וַתֵּלֶד בֵּן</span> · <i>va-tahar va-teled ben</i><br><span class="gloss">= and-tahar and-teled ben</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NAME</td><td><span class="expr">name(er) := er</span><br>HE NAMED [G61-01]. va-YIQRA et shemo er — the Masorah&#x27;s rule: every conceived-and-bore takes SHE-named except THREE he-named (Er here, Gershom, Beriah) [VERIFIED: manifest G61-01; the stream splits exactly — the father names the firstborn, the mother names the next two]. Ramban: Judah himself named him. REGISTRY write 1.
+</td><td><span class="he">וַיִּקְרָא אֶת־שְׁמוֹ עֵר</span> · <i>va-yiqra et-shem-o er</i><br><span class="gloss">= and-yiqra shem-o er</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The he-named firstborn: one of the Masorah&#x27;s three.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_4 · Gen.38.4 · <span class='expr'>THE_MOTHER_NAMES_ONAN</span></h3>
+<p><span class="he">וַתַּהַר עוֹד וַתֵּלֶד בֵּן וַתִּקְרָא אֶת־שְׁמוֹ אוֹנָן</span> · <i>va-tahar od va-teled ben va-tiqra et-shem-o onan</i> · And she conceived again and bore a son; and she called his name Onan.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתַּ֥הַר ע֖וֹד וַתֵּ֣לֶד בֵּ֑ן</span> · <i>va-tahar od va-teled ben</i> · and she conceived again and bore a son (etnachta on ben) [VERIFIED: SNAPSHOT Gen.38.4 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתִּקְרָ֥א אֶת שְׁמ֖וֹ אוֹנָֽן</span> · <i>va-tiqra et-shem-o onan</i> · and SHE called his name Onan (verse-final onan) [VERIFIED: SNAPSHOT Gen.38.4 idx4-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>REGISTRY_INSTALL</td><td><span class="expr">WORLD += {onan}</span><br>THE SECOND SON. va-tahar od va-teled ben.
+</td><td><span class="he">וַתַּהַר עוֹד וַתֵּלֶד בֵּן</span> · <i>va-tahar od va-teled ben</i><br><span class="gloss">= and-tahar od and-teled ben</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NAME</td><td><span class="expr">name(onan) := onan</span><br>SHE NAMED. va-TIQRA et shemo onan — the rule&#x27;s ordinary voice returns [G61-01, asserted]. REGISTRY write 2.
+</td><td><span class="he">וַתִּקְרָא אֶת־שְׁמוֹ אוֹנָן</span> · <i>va-tiqra et-shem-o onan</i><br><span class="gloss">= and-tiqra shem-o onan</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The naming voice shifts to the mother.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_5 · Gen.38.5 · <span class='expr'>THE_MOTHER_NAMES_SHELAH</span></h3>
+<p><span class="he">וַתֹּסֶף עוֹד וַתֵּלֶד בֵּן וַתִּקְרָא אֶת־שְׁמוֹ שֵׁלָה וְהָיָה בִכְזִיב בְּלִדְתָּהּ אֹתוֹ</span> · <i>va-tosef od va-teled ben va-tiqra et-shem-o shela ve-haya vi-kheziv be-lidta-ה et-o</i> · And she yet again bore a son, and she called his name Shelah; and he was at Cheziv when she bore him.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתֹּ֤סֶף עוֹד֙ וַתֵּ֣לֶד בֵּ֔ן וַתִּקְרָ֥א אֶת שְׁמ֖וֹ שֵׁלָ֑ה</span> · <i>va-tosef od va-teled ben va-tiqra et-shem-o shela</i> · and she yet again bore a son, and called his name Shelah (etnachta on shela) [VERIFIED: SNAPSHOT Gen.38.5 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהָיָ֥ה בִכְזִ֖יב בְּלִדְתָּ֥הּ אֹתֽוֹ</span> · <i>ve-haya vi-kheziv be-lidta-ה et-o</i> · and he was at Cheziv when she bore him (verse-final et-o) [VERIFIED: SNAPSHOT Gen.38.5 idx8-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>REGISTRY_INSTALL</td><td><span class="expr">WORLD += {shela}</span><br>THE THIRD SON. va-tosef od va-teled ben.
+</td><td><span class="he">וַתֹּסֶף עוֹד וַתֵּלֶד בֵּן</span> · <i>va-tosef od va-teled ben</i><br><span class="gloss">= and-tosef od and-teled ben</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NAME</td><td><span class="expr">name(shela) := shela</span><br>SHE NAMED AGAIN. va-tiqra et shemo shela — ve-haya vi-KHEZIV be- lidtah oto: the birthplace&#x27;s skeleton is the lie-word (kazav), the reading tradition&#x27;s note on the son who will be withheld on a false promise; letter-note. REGISTRY write 3.
+</td><td><span class="he">וַתִּקְרָא אֶת־שְׁמוֹ שֵׁלָה</span> · <i>va-tiqra et-shem-o shela</i><br><span class="gloss">= and-tiqra shem-o shela</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The third son; the place-notice the readers hear as &#x27;deception&#x27;.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_6 · Gen.38.6 · <span class='expr'>TAMAR_TAKEN_FOR_ER</span></h3>
+<p><span class="he">וַיִּקַּח יְהוּדָה אִשָּׁה לְעֵר בְּכוֹרוֹ וּשְׁמָהּ תָּמָר</span> · <i>va-yiqach yehuda isha le-er bekhor-o u-shema-ה tamar</i> · And Judah took a wife for Er his firstborn, and her name was Tamar.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּקַּ֧ח יְהוּדָ֛ה אִשָּׁ֖ה לְעֵ֣ר בְּכוֹר֑וֹ</span> · <i>va-yiqach yehuda isha le-er bekhor-o</i> · and Judah took a wife for Er his firstborn (etnachta on bekhor-o) [VERIFIED: SNAPSHOT Gen.38.6 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּשְׁמָ֖הּ תָּמָֽר</span> · <i>u-shema-ה tamar</i> · and her name was Tamar (verse-final tamar) [VERIFIED: SNAPSHOT Gen.38.6 idx5-6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(laqach_isha_le_er_bekhoro(yehuda, tamar), t0)</span><br><span class="gloss">= HOLDS(laqach-isha-to-er-bekhoro(yehuda, tamar), t0)</span><br>THE ONE FULL FIRSTBORN [G61-02]. le-er BEKHORO — &#x27;his firstborn&#x27; written FULL with vav, ONCE in the Torah, here on the son about to die [VERIFIED: manifest G61-02; the lean pair, Sidon and Uz, asserted]; u-shemah TAMAR — she enters by name, unlike the wife of 38:2.
+</td><td><span class="he">וַיִּקַּח יְהוּדָה אִשָּׁה לְעֵר בְּכוֹרוֹ</span> · <i>va-yiqach yehuda isha le-er bekhor-o</i><br><span class="gloss">= and-yiqach yehuda isha to-er bekhor-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Tamar enters; the one full firstborn-word.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_7 · Gen.38.7 · <span class='expr'>ER_DIES</span></h3>
+<p><span class="he">וַיְהִי עֵר בְּכוֹר יְהוּדָה רַע בְּעֵינֵי יְהוָה וַיְמִתֵהוּ יְהוָה</span> · <i>va-yehi er bekhor yehuda ra be-ene YHWH va-yemite-hu YHWH</i> · And Er, Judah&#x27;s firstborn, was evil in the eyes of the LORD; and the LORD put him to death.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֗י עֵ֚ר בְּכ֣וֹר יְהוּדָ֔ה רַ֖ע בְּעֵינֵ֣י יְהוָ֑ה</span> · <i>va-yehi er bekhor yehuda ra be-ene YHWH</i> · and Er, Judah&#x27;s firstborn, was evil in the LORD&#x27;s eyes (etnachta on YHWH) [VERIFIED: SNAPSHOT Gen.38.7 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיְמִתֵ֖הוּ יְהוָֽה</span> · <i>va-yemite-hu YHWH</i> · and the LORD put him to death (verse-final YHWH) [VERIFIED: SNAPSHOT Gen.38.7 idx7-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ra_be_ene_YHWH_va_yemitehu(er), t0)</span><br><span class="gloss">= HOLDS(evil-in-ene-the-LORD-and-yemitehu(er), t0)</span><br>THE FIRST DEATH. va-yehi er... ra be-ene YHWH va-yemitehu YHWH — the verdict and the execution in one verse; the letter never names the deed (the reading tradition supplies it from Onan&#x27;s, named).
+</td><td><span class="he">וַיְהִי עֵר בְּכוֹר יְהוּדָה רַע בְּעֵינֵי יְהוָה וַיְמִתֵהוּ יְהוָה</span> · <i>va-yehi er bekhor yehuda ra be-ene YHWH va-yemite-hu YHWH</i><br><span class="gloss">= and-yehi er bekhor yehuda evil in-ene the-LORD and-yemite-that the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The first death; no cause narrated beyond the verdict-word.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_8 · Gen.38.8 · <span class='expr'>THE_LEVIRATE_DEMAND</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוּדָה לְאוֹנָן בֹּא אֶל־אֵשֶׁת אָחִיךָ וְיַבֵּם אֹתָהּ וְהָקֵם זֶרַע לְאָחִיךָ</span> · <i>va-yomer yehuda le-onan bo el-eshet achi-kha ve-yabem et-ה ve-haqem zera le-achi-kha</i> · And Judah said to Onan: Come to your brother&#x27;s wife, and perform the brother&#x27;s duty to her, and raise up seed for your brother.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר יְהוּדָה֙ לְאוֹנָ֔ן בֹּ֛א אֶל אֵ֥שֶׁת אָחִ֖יךָ וְיַבֵּ֣ם אֹתָ֑הּ</span> · <i>va-yomer yehuda le-onan bo el-eshet achi-kha ve-yabem et-ה</i> · come to your brother&#x27;s wife and perform the brother&#x27;s duty (etnachta on et-ה) [VERIFIED: SNAPSHOT Gen.38.8 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהָקֵ֥ם זֶ֖רַע לְאָחִֽיךָ</span> · <i>ve-haqem zera le-achi-kha</i> · and raise up seed for your brother (verse-final le-achi-kha) [VERIFIED: SNAPSHOT Gen.38.8 idx9-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yehuda, LET(haqem_zera_le_achikha))</span><br><span class="gloss">= DECLARE(yehuda, LET(haqem-seed-to-your-brother))</span><br>THE SEED-DEMAND. bo el eshet achikha ve-yabem otah ve-haqem ZERA le- achikha — three imperatives folded to one demand: raise seed for your brother. Pushed on ONAN — and the span will discharge it through JUDAH HIMSELF (38:27, the twins): the demandee-mismatch class (gen_46&#x27;s Isaac-blessing precedent), the unit&#x27;s machine heart.
+</td><td><span class="he">בֹּא אֶל־אֵשֶׁת אָחִיךָ וְיַבֵּם אֹתָהּ וְהָקֵם זֶרַע לְאָחִיךָ</span> · <i>bo el-eshet achi-kha ve-yabem et-ה ve-haqem zera le-achi-kha</i><br><span class="gloss">= in-it to-wife-of my-brother-kha and-yabem ה and-haqem seed to-my-brother-kha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The levirate demand pushed on Onan.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_9 · Gen.38.9 · <span class='expr'>THE_SUBVERSION</span></h3>
+<p><span class="he">וַיֵּדַע אוֹנָן כִּי לֹּא לוֹ יִהְיֶה הַזָּרַע וְהָיָה אִם־בָּא אֶל־אֵשֶׁת אָחִיו וְשִׁחֵת אַרְצָה לְבִלְתִּי נְתָן־זֶרַע לְאָחִיו</span> · <i>va-yeda onan ki lo l-o yihye ha-zara ve-haya im-ba el-eshet achi-v ve-shichet artza-ה le-vilti netan-zera le-achi-v</i> · And Onan knew that the seed would not be his; and it was, when he came to his brother&#x27;s wife, he wasted it to the ground, so as not to give seed to his brother.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֵּ֣דַע אוֹנָ֔ן כִּ֛י לֹּ֥א ל֖וֹ יִהְיֶ֣ה הַזָּ֑רַע</span> · <i>va-yeda onan ki lo l-o yihye ha-zara</i> · Onan knew the seed would not be his (etnachta on ha-zara) [VERIFIED: SNAPSHOT Gen.38.9 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהָיָ֞ה אִם בָּ֨א אֶל אֵ֤שֶׁת אָחִיו֙ וְשִׁחֵ֣ת אַ֔רְצָה לְבִלְתִּ֥י נְתָן זֶ֖רַע לְאָחִֽיו</span> · <i>ve-haya im-ba el-eshet achi-v ve-shichet artza-ה le-vilti netan-zera le-achi-v</i> · he wasted it to the ground, not to give seed to his brother (verse-final le-achi-v) [VERIFIED: SNAPSHOT Gen.38.9 idx7-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shichet_artza_levilti_netan_zera(onan), t0)</span><br><span class="gloss">= HOLDS(shichet-artza-so-as-not-netan-seed(onan), t0)</span><br>THE SUBVERSION. ve-shichet artza le-vilti netan-zera le-achiv — Onan performs the coming and refuses the demand&#x27;s substance: the machine keeps the seed-demand OPEN through his act (obedience in form, refusal in fact). netan with the tav soft, qamatz alone, per MS (asserted); lo LO with the soft-lamed ruling of the precise books (named).
+</td><td><span class="he">וְשִׁחֵת אַרְצָה לְבִלְתִּי נְתָן־זֶרַע לְאָחִיו</span> · <i>ve-shichet artza-ה le-vilti netan-zera le-achi-v</i><br><span class="gloss">= and-shichet artza-ה to-vilti netan-seed to-my-brother-v</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The demand subverted from inside.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_10 · Gen.38.10 · <span class='expr'>ONAN_DIES</span></h3>
+<p><span class="he">וַיֵּרַע בְּעֵינֵי יְהוָה אֲשֶׁר עָשָׂה וַיָּמֶת גַּם־אֹתוֹ</span> · <i>va-yera be-ene YHWH asher asa va-yamet gam-et-o</i> · And what he did was evil in the eyes of the LORD; and He put him to death also.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֵּ֛רַע בְּעֵינֵ֥י יְהוָ֖ה אֲשֶׁ֣ר עָשָׂ֑ה</span> · <i>va-yera be-ene YHWH asher asa</i> · and what he did was evil in the LORD&#x27;s eyes (etnachta on asa) [VERIFIED: SNAPSHOT Gen.38.10 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיָּ֖מֶת גַּם אֹתֽוֹ</span> · <i>va-yamet gam-et-o</i> · and He put him to death also (verse-final et-o) [VERIFIED: SNAPSHOT Gen.38.10 idx5-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yamet_gam_oto(YHWH), t0)</span><br><span class="gloss">= HOLDS(and-yamet-also-it(the-LORD), t0)</span><br>THE SECOND DEATH. va-yamet GAM oto — the also-word with its hardening dot [VERIFIED: manifest G61-12 set, asserted]: the letter counts the deaths.
+</td><td><span class="he">וַיָּמֶת גַּם־אֹתוֹ</span> · <i>va-yamet gam-et-o</i><br><span class="gloss">= and-yamet also-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The second death; gam dagesheed.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_11 · Gen.38.11 · <span class='expr'>THE_WIDOW_SEATED</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוּדָה לְתָמָר כַּלָּתוֹ שְׁבִי אַלְמָנָה בֵית־אָבִיךְ עַד־יִגְדַּל שֵׁלָה בְנִי כִּי אָמַר פֶּן־יָמוּת גַּם־הוּא כְּאֶחָיו וַתֵּלֶךְ תָּמָר וַתֵּשֶׁב בֵּית אָבִיהָ</span> · <i>va-yomer yehuda le-tamar kalat-o shevi almana vet-avi-khe ad-yigdal shela veni-y ki amar pen-yamut gam-hu ke-echay-v va-telekh tamar va-teshev bet avi-ha</i> · And Judah said to Tamar his daughter-in-law: Sit as a widow in your father&#x27;s house until Shelah my son grows — for he said, lest he too die like his brothers. And Tamar went and sat in her father&#x27;s house.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֣אמֶר יְהוּדָה֩ לְתָמָ֨ר כַּלָּת֜וֹ שְׁבִ֧י אַלְמָנָ֣ה בֵית אָבִ֗יךְ עַד יִגְדַּל֙ שֵׁלָ֣ה בְנִ֔י כִּ֣י אָמַ֔ר פֶּן יָמ֥וּת גַּם ה֖וּא כְּאֶחָ֑יו</span> · <i>va-yomer yehuda le-tamar kalat-o shevi almana vet-avi-khe ad-yigdal shela veni-y ki amar pen-yamut gam-hu ke-echay-v</i> · sit as a widow in your father&#x27;s house until Shelah my son grows — for he said, lest he too die (etnachta on ke-echay-v) [VERIFIED: SNAPSHOT Gen.38.11 idx18 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתֵּ֣לֶךְ תָּמָ֔ר וַתֵּ֖שֶׁב בֵּ֥ית אָבִֽיהָ</span> · <i>va-telekh tamar va-teshev bet avi-ha</i> · and Tamar went and sat in her father&#x27;s house (verse-final avi-ha) [VERIFIED: SNAPSHOT Gen.38.11 idx19-23]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yehuda, LET(shevi_almana_vet_avikh))</span><br><span class="gloss">= DECLARE(yehuda, LET(shevi-almana-vet-avikh))</span><br>THE SIT-DEMAND. shevi almana vet-avikh ad yigdal shela veni — pushed with a stated condition; the narrator immediately discloses the true clause (ki amar pen yamut gam hu). Tamar obeys within the verse.
+</td><td><span class="he">שְׁבִי אַלְמָנָה בֵית־אָבִיךְ</span> · <i>shevi almana vet-avi-khe</i><br><span class="gloss">= shevi almana vet-avi-khe</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(shevi_almana_vet_avikh, t1)</span><br><span class="gloss">= RESULT: HOLDS(shevi-almana-vet-avikh, t1)</span><br>OBEYED AT ONCE. va-telekh tamar va-teshev bet aviha — pushed and satisfied in the SAME verse: the only instantly-obeyed demand in the span; its condition (Shelah grown, Tamar given) is the one the letter will convict at 38:14 and 38:26. bet-avikh&#x27;s bet soft per MS (asserted).
+</td><td><span class="he">וַתֵּלֶךְ תָּמָר וַתֵּשֶׁב בֵּית אָבִיהָ</span> · <i>va-telekh tamar va-teshev bet avi-ha</i><br><span class="gloss">= and-telekh tamar and-teshev bet avi-the</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The sit-demand: pushed and obeyed in the same verse; the promise behind it will not be kept.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_12 · Gen.38.12 · <span class='expr'>THE_TIME_PASSES</span></h3>
+<p><span class="he">וַיִּרְבּוּ הַיָּמִים וַתָּמָת בַּת־שׁוּעַ אֵשֶׁת־יְהוּדָה וַיִּנָּחֶם יְהוּדָה וַיַּעַל עַל־גֹּזֲזֵי צֹאנוֹ הוּא וְחִירָה רֵעֵהוּ הָעֲדֻלָּמִי תִּמְנָתָה</span> · <i>va-yirbu ha-yamim va-tamat bat-shua eshet-yehuda va-yinachem yehuda va-yaal al-gozaze tzon-o hu ve-chira ree-hu ha-adulami timnata-ה</i> · And the days multiplied, and the daughter of Shua, Judah&#x27;s wife, died; and Judah was comforted, and went up to his sheepshearers, he and Hirah his friend the Adullamite, to Timnah.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּרְבּוּ֙ הַיָּמִ֔ים וַתָּ֖מָת בַּת שׁ֣וּעַ אֵֽשֶׁת יְהוּדָ֑ה</span> · <i>va-yirbu ha-yamim va-tamat bat-shua eshet-yehuda</i> · the days multiplied; Judah&#x27;s wife died; he was comforted (etnachta on yehuda) [VERIFIED: SNAPSHOT Gen.38.12 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּנָּ֣חֶם יְהוּדָ֗ה וַיַּ֜עַל עַל גֹּֽזֲזֵ֤י צֹאנוֹ֙ ה֗וּא וְחִירָ֛ה רֵעֵ֥הוּ הָעֲדֻלָּמִ֖י תִּמְנָֽתָה</span> · <i>va-yinachem yehuda va-yaal al-gozaze tzon-o hu ve-chira ree-hu ha-adulami timnata-ה</i> · and went up to his sheepshearers with Hirah, to Timnah (verse-final timnata-ה) [VERIFIED: SNAPSHOT Gen.38.12 idx7-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_tamat_bat_shua_va_yinachem(yehuda), t0)</span><br><span class="gloss">= HOLDS(and-tamat-bat-shua-and-yinachem(yehuda), t0)</span><br>THE PIVOT. va-tamat bat-shua... va-yinachem yehuda — Judah&#x27;s comfort ACCEPTED against his father&#x27;s comfort REFUSED (37:35): the letter sets the two mourners one chapter apart. va-yaal al gozaze tzono — the shearing road, where the house of Jacob transacts (31:19, and 38&#x27;s own road ahead).
+</td><td><span class="he">וַיִּרְבּוּ הַיָּמִים וַתָּמָת בַּת־שׁוּעַ אֵשֶׁת־יְהוּדָה וַיִּנָּחֶם יְהוּדָה</span> · <i>va-yirbu ha-yamim va-tamat bat-shua eshet-yehuda va-yinachem yehuda</i><br><span class="gloss">= and-yirbu seas and-tamat bat-shua wife-of-yehuda and-yinachem yehuda</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The pivot verse: death, comfort, the shearing road.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_13 · Gen.38.13 · <span class='expr'>THE_TELLING</span></h3>
+<p><span class="he">וַיֻּגַּד לְתָמָר לֵאמֹר הִנֵּה חָמִיךְ עֹלֶה תִמְנָתָה לָגֹז צֹאנוֹ</span> · <i>va-yugad le-tamar le-mor hine chami-khe ole timnata-ה la-goz tzon-o</i> · And it was told to Tamar, saying: Behold, your father-in-law goes up to Timnah to shear his flock.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֻּגַּ֥ד לְתָמָ֖ר לֵאמֹ֑ר</span> · <i>va-yugad le-tamar le-mor</i> · and it was told to Tamar (etnachta on le-mor) [VERIFIED: SNAPSHOT Gen.38.13 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">הִנֵּ֥ה חָמִ֛יךְ עֹלֶ֥ה תִמְנָ֖תָה לָגֹ֥ז צֹאנֽוֹ</span> · <i>hine chami-khe ole timnata-ה la-goz tzon-o</i> · behold, your father-in-law goes up to Timnah to shear his flock (verse-final tzon-o) [VERIFIED: SNAPSHOT Gen.38.13 idx3-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hugad_le_tamar_chamikh_ole_timnata, t0)</span><br><span class="gloss">= HOLDS(hugad-to-tamar-chamikh-ole-timnata, t0)</span><br>THE TELLING. va-yugad le-tamar lemor — the agentless report (the span&#x27;s telling-verbs run passive: 38:13, 38:24); she acts on news, as Judah will.
+</td><td><span class="he">וַיֻּגַּד לְתָמָר לֵאמֹר</span> · <i>va-yugad le-tamar le-mor</i><br><span class="gloss">= and-yugad to-tamar to-mor</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The passive telling that arms the plan.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_14 · Gen.38.14 · <span class='expr'>THE_GARMENTS_SWAPPED</span></h3>
+<p><span class="he">וַתָּסַר בִּגְדֵי אַלְמְנוּתָהּ מֵעָלֶיהָ וַתְּכַס בַּצָּעִיף וַתִּתְעַלָּף וַתֵּשֶׁב בְּפֶתַח עֵינַיִם אֲשֶׁר עַל־דֶּרֶךְ תִּמְנָתָה כִּי רָאֲתָה כִּי־גָדַל שֵׁלָה וְהִוא לֹא־נִתְּנָה לוֹ לְאִשָּׁה</span> · <i>va-tasar bigde almnuta-ה me-ale-ha va-tekhas ba-tzaif va-titalaf va-teshev be-fetach enayim asher al-derekh timnata-ה ki raata ki-gadal shela ve-hiv lo-nitna l-o le-isha</i> · And she removed her widow&#x27;s garments from upon her, and covered herself with the veil and wrapped herself, and sat at the opening of Enaim which is on the road to Timnah — for she saw that Shelah was grown, and she had not been given to him as a wife.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתָּסַר֩ בִּגְדֵ֨י אַלְמְנוּתָ֜הּ מֵֽעָלֶ֗יהָ וַתְּכַ֤ס בַּצָּעִיף֙ וַתִּתְעַלָּ֔ף וַתֵּ֨שֶׁב֙ בְּפֶ֣תַח עֵינַ֔יִם אֲשֶׁ֖ר עַל דֶּ֣רֶךְ תִּמְנָ֑תָה</span> · <i>va-tasar bigde almnuta-ה me-ale-ha va-tekhas ba-tzaif va-titalaf va-teshev be-fetach enayim asher al-derekh timnata-ה</i> · she removed her widow&#x27;s garments, veiled herself, and sat at the opening of Enaim on the Timnah road (etnachta on timnata-ה) [VERIFIED: SNAPSHOT Gen.38.14 idx13 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּ֤י רָאֲתָה֙ כִּֽי גָדַ֣ל שֵׁלָ֔ה וְהִ֕וא לֹֽא נִתְּנָ֥ה ל֖וֹ לְאִשָּֽׁה</span> · <i>ki raata ki-gadal shela ve-hiv lo-nitna l-o le-isha</i> · for she saw that Shelah was grown, and she had not been given to him as a wife (verse-final le-isha) [VERIFIED: SNAPSHOT Gen.38.14 idx14-23]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(yashva_be_fetach_enayim_ki_gadal_shela(tamar), t0)</span><br><span class="gloss">= HOLDS(yashva-in-fetach-enayim-when-gadal-shela(tamar), t0)</span><br>THE INDICTMENT CLAUSE [G61-09]. ki raata KI GADAL shela ve-hiv lo nitna lo le-isha — the narrator convicts the condition of 38:11: Shelah IS grown, Tamar is NOT given. And ki gadal stands exactly TWICE in the Torah — here and Isaac&#x27;s greatness (26:13) [VERIFIED: manifest G61-09]: the Kitzur reads the pair toward the kingdom that grows from her. The garments do the speaking: widow&#x27;s off, veil on (and back, 38:19) — the span&#x27;s second garment-code after gen_60&#x27;s coat.
+</td><td><span class="he">כִּי רָאֲתָה כִּי־גָדַל שֵׁלָה וְהִוא לֹא־נִתְּנָה לוֹ לְאִשָּׁה</span> · <i>ki raata ki-gadal shela ve-hiv lo-nitna l-o le-isha</i><br><span class="gloss">= when raata when-gadal shela and-hiv not-nitna l-o to-isha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The letter&#x27;s own indictment clause.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_15 · Gen.38.15 · <span class='expr'>THE_MISREADING</span></h3>
+<p><span class="he">וַיִּרְאֶהָ יְהוּדָה וַיַּחְשְׁבֶהָ לְזוֹנָה כִּי כִסְּתָה פָּנֶיהָ</span> · <i>va-yire-ha yehuda va-yachshve-ha le-zona ki khista pane-ha</i> · And Judah saw her, and thought her a harlot, for she had covered her face.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּרְאֶ֣הָ יְהוּדָ֔ה וַֽיַּחְשְׁבֶ֖הָ לְזוֹנָ֑ה</span> · <i>va-yire-ha yehuda va-yachshve-ha le-zona</i> · and Judah saw her and thought her a harlot (etnachta on le-zona) [VERIFIED: SNAPSHOT Gen.38.15 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּ֥י כִסְּתָ֖ה פָּנֶֽיהָ</span> · <i>ki khista pane-ha</i> · for she had covered her face (verse-final pane-ha) [VERIFIED: SNAPSHOT Gen.38.15 idx4-6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yachsheveha_le_zona(yehuda), t0)</span><br><span class="gloss">= HOLDS(and-yachsheveha-to-zona(yehuda), t0)</span><br>THE MISREADING. va-yachsheveha le-zona ki khista paneha — the Kitzur&#x27;s harlot-pair (Isaiah&#x27;s city, outside the instrument) files named: Tamar in disgrace and honored at the end, as the city.
+</td><td><span class="he">וַיִּרְאֶהָ יְהוּדָה וַיַּחְשְׁבֶהָ לְזוֹנָה</span> · <i>va-yire-ha yehuda va-yachshve-ha le-zona</i><br><span class="gloss">= and-yire-the yehuda and-yachshve-the to-zona</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The reckoning verse.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_16 · Gen.38.16 · <span class='expr'>THE_ROADSIDE_REQUEST</span></h3>
+<p><span class="he">וַיֵּט אֵלֶיהָ אֶל־הַדֶּרֶךְ וַיֹּאמֶר הָבָה־נָּא אָבוֹא אֵלַיִךְ כִּי לֹא יָדַע כִּי כַלָּתוֹ הִוא וַתֹּאמֶר מַה־תִּתֶּן־לִּי כִּי תָבוֹא אֵלָי</span> · <i>va-yet ele-ha el-ha-derekh va-yomer hava-ה-na avo elayi-khe ki lo yada ki khalat-o hiv va-tomer ma-titen-li-y ki tavo el-y</i> · And he turned to her by the road and said: Come now, let me come to you — for he did not know that she was his daughter-in-law. And she said: What will you give me, that you come to me?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֵּ֨ט אֵלֶ֜יהָ אֶל הַדֶּ֗רֶךְ וַיֹּ֨אמֶר֙ הָֽבָה נָּא֙ אָב֣וֹא אֵלַ֔יִךְ כִּ֚י לֹ֣א יָדַ֔ע כִּ֥י כַלָּת֖וֹ הִ֑וא</span> · <i>va-yet ele-ha el-ha-derekh va-yomer hava-ה-na avo elayi-khe ki lo yada ki khalat-o hiv</i> · he turned to her by the road: come now, let me come to you — for he did not know she was his daughter-in-law (etnachta on hiv) [VERIFIED: SNAPSHOT Gen.38.16 idx14 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתֹּ֨אמֶר֙ מַה תִּתֶּן לִּ֔י כִּ֥י תָב֖וֹא אֵלָֽי</span> · <i>va-tomer ma-titen-li-y ki tavo el-y</i> · and she said: what will you give me, that you come to me (verse-final el-y) [VERIFIED: SNAPSHOT Gen.38.16 idx15-21]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yehuda, LET(hava_avo_elayikh))</span><br><span class="gloss">= DECLARE(yehuda, LET(hava-avo-elayikh))</span><br>THE REQUEST. hava-na avo elayikh — pushed; the narrator&#x27;s disclosure rides it (ki lo yada ki khalato hiv). Her answer is a price- question: ma titen li — and SNAPSHOT writes the crowding dagesh in LI where MS rules the lamed soft: a pointing DISCREPANCY, filed [manifest G61-12].
+</td><td><span class="he">וַיֹּאמֶר הָבָה־נָּא אָבוֹא אֵלַיִךְ</span> · <i>va-yomer hava-ה-na avo elayi-khe</i><br><span class="gloss">= and-yomer hava-ה-na avo elayi-khe</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The request pushed; her counter-question opens the pledge.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_17 · Gen.38.17 · <span class='expr'>THE_KID_AND_THE_PLEDGE_ASKED</span></h3>
+<p><span class="he">וַיֹּאמֶר אָנֹכִי אֲשַׁלַּח גְּדִי־עִזִּים מִן־הַצֹּאן וַתֹּאמֶר אִם־תִּתֵּן עֵרָבוֹן עַד שָׁלְחֶךָ</span> · <i>va-yomer anokhi ashalach gedi-izim min-ha-tzon va-tomer im-titen eravon ad shalche-kha</i> · And he said: I will send a kid of the goats from the flock. And she said: If you give a pledge until you send it.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֕אמֶר אָנֹכִ֛י אֲשַׁלַּ֥ח גְּדִֽי עִזִּ֖ים מִן הַצֹּ֑אן</span> · <i>va-yomer anokhi ashalach gedi-izim min-ha-tzon</i> · I will send a kid of the goats from the flock (etnachta on ha-tzon) [VERIFIED: SNAPSHOT Gen.38.17 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתֹּ֕אמֶר אִם תִּתֵּ֥ן עֵרָב֖וֹן עַ֥ד שָׁלְחֶֽךָ</span> · <i>va-tomer im-titen eravon ad shalche-kha</i> · if you give a pledge until you send it (verse-final shalche-kha) [VERIFIED: SNAPSHOT Gen.38.17 idx7-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(gedi_izim_ve_eravon(siach), t0)</span><br><span class="gloss">= HOLDS(gedi-izim-and-eravon(shrub), t0)</span><br>THE GOAT AGAIN. anokhi ashalach GEDI IZIM min ha-tzon — a kid of the goats: the same animal-class whose blood played Joseph&#x27;s death one chapter ago (37:31) now offered as a harlot&#x27;s fee; the letter prices the deceptions in the same coin. Her word: ERAVON (&#x27;pledge&#x27;) — the security-noun&#x27;s Torah career lives in this chapter (38:17, 18, 20).
+</td><td><span class="he">וַיֹּאמֶר אָנֹכִי אֲשַׁלַּח גְּדִי־עִזִּים מִן־הַצֹּאן</span> · <i>va-yomer anokhi ashalach gedi-izim min-ha-tzon</i><br><span class="gloss">= and-yomer anokhi ashalach gedi-izim from-the-tzon</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The kid enters — the goat again — and the pledge-word.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_18 · Gen.38.18 · <span class='expr'>THE_THREE_PLEDGES_AND_THE_CONCEPTION</span></h3>
+<p><span class="he">וַיֹּאמֶר מָה הָעֵרָבוֹן אֲשֶׁר אֶתֶּן־לָּךְ וַתֹּאמֶר חֹתָמְךָ וּפְתִילֶךָ וּמַטְּךָ אֲשֶׁר בְּיָדֶךָ וַיִּתֶּן־לָּהּ וַיָּבֹא אֵלֶיהָ וַתַּהַר לוֹ</span> · <i>va-yomer ma ha-eravon asher eten-la-khe va-tomer chotam-kha u-fetile-kha u-mat-kha asher be-yade-kha va-yiten-la-ה va-yavo ele-ha va-tahar l-o</i> · And he said: What is the pledge that I shall give you? And she said: Your seal and your cord and your staff that is in your hand. And he gave them to her, and came to her, and she conceived by him.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֗אמֶר מָ֣ה הָֽעֵרָבוֹן֮ אֲשֶׁ֣ר אֶתֶּן לָּךְ֒ וַתֹּ֗אמֶר חֹתָֽמְךָ֙ וּפְתִילֶ֔ךָ וּמַטְּךָ֖ אֲשֶׁ֣ר בְּיָדֶ֑ךָ</span> · <i>va-yomer ma ha-eravon asher eten-la-khe va-tomer chotam-kha u-fetile-kha u-mat-kha asher be-yade-kha</i> · what pledge? — your seal, your cord, and your staff in your hand (etnachta on be-yade-kha) [VERIFIED: SNAPSHOT Gen.38.18 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּתֶּן לָּ֛הּ וַיָּבֹ֥א אֵלֶ֖יהָ וַתַּ֥הַר לֽוֹ</span> · <i>va-yiten-la-ה va-yavo ele-ha va-tahar l-o</i> · and he gave them, and came to her, and she conceived by him (verse-final l-o) [VERIFIED: SNAPSHOT Gen.38.18 idx12-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(hava_avo_elayikh, t1)</span><br><span class="gloss">= RESULT: HOLDS(hava-avo-elayikh, t1)</span><br>GIVEN, COME, CONCEIVED. va-yiten lah va-yavo eleha va-tahar LO — the request discharges and the conception is credited to him by the letter&#x27;s own dative.
+</td><td><span class="he">וַיִּתֶּן־לָּהּ וַיָּבֹא אֵלֶיהָ וַתַּהַר לוֹ</span> · <i>va-yiten-la-ה va-yavo ele-ha va-tahar l-o</i><br><span class="gloss">= and-yiten-to-ה and-yavo ele-the and-tahar l-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(chotam_petil_mate_be_yad_tamar, t0)</span><br><span class="gloss">= HOLDS(chotam-petil-mate-in-yad-tamar, t0)</span><br>THE STAFF OF THE WONDERS [G61-06]. chotamkha u-fetilekha u-matekha — and the staff-word u-matkha stands exactly TWICE in the Torah: Judah&#x27;s pledge and &#x27;your staff with which you struck the Nile&#x27; (Exod 17:5) [VERIFIED: manifest G61-06]: the Kitzur — the staff left in her hand is the staff of the miracles. The Kitzur&#x27;s cord-reading (the cords = the tefillin) files named.
+</td><td><span class="he">וַתֹּאמֶר חֹתָמְךָ וּפְתִילֶךָ וּמַטְּךָ אֲשֶׁר בְּיָדֶךָ</span> · <i>va-tomer chotam-kha u-fetile-kha u-mat-kha asher be-yade-kha</i><br><span class="gloss">= and-tomer chotam-kha and-fetile-kha and-mat-kha which in-yade-kha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The identity-objects handed over; the request satisfied; the conception.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_19 · Gen.38.19 · <span class='expr'>THE_GARMENTS_RETURNED</span></h3>
+<p><span class="he">וַתָּקָם וַתֵּלֶךְ וַתָּסַר צְעִיפָהּ מֵעָלֶיהָ וַתִּלְבַּשׁ בִּגְדֵי אַלְמְנוּתָהּ</span> · <i>va-taqam va-telekh va-tasar tzeifa-ה me-ale-ha va-tilbash bigde almnuta-ה</i> · And she arose and went, and removed her veil from upon her, and put on the garments of her widowhood.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתָּ֣קָם וַתֵּ֔לֶךְ וַתָּ֥סַר צְעִיפָ֖הּ מֵעָלֶ֑יהָ</span> · <i>va-taqam va-telekh va-tasar tzeifa-ה me-ale-ha</i> · she arose and went and removed her veil (etnachta on me-ale-ha) [VERIFIED: SNAPSHOT Gen.38.19 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתִּלְבַּ֖שׁ בִּגְדֵ֥י אַלְמְנוּתָֽהּ</span> · <i>va-tilbash bigde almnuta-ה</i> · and put on the garments of her widowhood (verse-final almnuta-ה) [VERIFIED: SNAPSHOT Gen.38.19 idx5-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shava_le_vigde_almenuta(tamar), t0)</span><br><span class="gloss">= HOLDS(shava-to-vigde-almenuta(tamar), t0)</span><br>THE CODE CLOSES. va-tasar tzeifah me-aleha va-tilbash bigde almenutah — the veil off, the widowhood back on: her disguise lasted one transaction; Judah&#x27;s misreading is the only thing that stays dressed.
+</td><td><span class="he">וַתָּקָם וַתֵּלֶךְ וַתָּסַר צְעִיפָהּ מֵעָלֶיהָ</span> · <i>va-taqam va-telekh va-tasar tzeifa-ה me-ale-ha</i><br><span class="gloss">= and-taqam and-telekh and-tasar tzeifa-ה from-ale-the</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The garment-code closes its loop.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_20 · Gen.38.20 · <span class='expr'>THE_KID_SENT_SHE_IS_NOT_FOUND</span></h3>
+<p><span class="he">וַיִּשְׁלַח יְהוּדָה אֶת־גְּדִי הָעִזִּים בְּיַד רֵעֵהוּ הָעֲדֻלָּמִי לָקַחַת הָעֵרָבוֹן מִיַּד הָאִשָּׁה וְלֹא מְצָאָהּ</span> · <i>va-yishlach yehuda et-gedi ha-izim be-yad ree-hu ha-adulami la-qachat ha-eravon mi-yad ha-isha ve-lo metzaa-ה</i> · And Judah sent the kid of the goats by the hand of his friend the Adullamite, to take the pledge from the woman&#x27;s hand — and he did not find her.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּשְׁלַ֨ח יְהוּדָ֜ה אֶת גְּדִ֣י הָֽעִזִּ֗ים בְּיַד֙ רֵעֵ֣הוּ הָֽעֲדֻלָּמִ֔י לָקַ֥חַת הָעֵרָב֖וֹן מִיַּ֣ד הָאִשָּׁ֑ה</span> · <i>va-yishlach yehuda et-gedi ha-izim be-yad ree-hu ha-adulami la-qachat ha-eravon mi-yad ha-isha</i> · Judah sent the kid by his friend the Adullamite, to take back the pledge (etnachta on ha-isha) [VERIFIED: SNAPSHOT Gen.38.20 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְלֹ֖א מְצָאָֽהּ</span> · <i>ve-lo metzaa-ה</i> · and he did not find her (verse-final metzaa-ה) [VERIFIED: SNAPSHOT Gen.38.20 idx12-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shalach_ha_gedi_ve_lo_metzaa(chira), t0)</span><br><span class="gloss">= HOLDS(shalach-the-gedi-and-not-metzaa(chira), t0)</span><br>NOT FOUND [G61-10]. ve-lo METZAAH — the found-her skeleton has exactly FOUR Torah stations: the dove that found no rest (8:9), this road (38:20), the redeemer&#x27;s sufficiency (Lev 25:28), and &#x27;in the field he found her&#x27; (Deut 22:27) [VERIFIED: manifest G61-10]: the Kitzur pairs the road and the field — found once at the road, never again.
+</td><td><span class="he">וַיִּשְׁלַח יְהוּדָה אֶת־גְּדִי הָעִזִּים בְּיַד רֵעֵהוּ הָעֲדֻלָּמִי</span> · <i>va-yishlach yehuda et-gedi ha-izim be-yad ree-hu ha-adulami</i><br><span class="gloss">= and-yishlach yehuda gedi the-izim in-yad ree-that the-adulami</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The payment fails; the find-verb&#x27;s station.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_21 · Gen.38.21 · <span class='expr'>THE_ASKING</span></h3>
+<p><span class="he">וַיִּשְׁאַל אֶת־אַנְשֵׁי מְקֹמָהּ לֵאמֹר אַיֵּה הַקְּדֵשָׁה הִוא בָעֵינַיִם עַל־הַדָּרֶךְ וַיֹּאמְרוּ לֹא־הָיְתָה בָזֶה קְדֵשָׁה</span> · <i>va-yishal et-anshe meqoma-ה le-mor aye ha-qedesha hiv va-enayim al-ha-darekh va-yomru lo-hayta va-ze qedesha</i> · And he asked the men of her place, saying: Where is the consecrated one, she at Enaim by the road? And they said: There was no consecrated one here.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּשְׁאַ֞ל אֶת אַנְשֵׁ֤י מְקֹמָהּ֙ לֵאמֹ֔ר אַיֵּ֧ה הַקְּדֵשָׁ֛ה הִ֥וא בָעֵינַ֖יִם עַל הַדָּ֑רֶךְ</span> · <i>va-yishal et-anshe meqoma-ה le-mor aye ha-qedesha hiv va-enayim al-ha-darekh</i> · where is the consecrated one, she at Enaim by the road (etnachta on ha-darekh) [VERIFIED: SNAPSHOT Gen.38.21 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּ֣אמְר֔וּ לֹא הָיְתָ֥ה בָזֶ֖ה קְדֵשָֽׁה</span> · <i>va-yomru lo-hayta va-ze qedesha</i> · and they said: there was no consecrated one here (verse-final qedesha) [VERIFIED: SNAPSHOT Gen.38.21 idx11-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ayeh_ha_qedesha_lo_hayta(anshe_meqoma), t0)</span><br><span class="gloss">= HOLDS(ayeh-the-qedesha-not-hayta(anshe-meqoma), t0)</span><br>THE WORD-SHIFT. aye ha-QEDESHA — the friend softens Judah&#x27;s zona (38:15) to the cult-word before strangers; the townsmen answer with the same word doubled (38:21, 38:22): lo hayta va-ze qedesha. Letter-note: the span&#x27;s politest lie.
+</td><td><span class="he">לֵאמֹר אַיֵּה הַקְּדֵשָׁה הִוא בָעֵינַיִם עַל־הַדָּרֶךְ</span> · <i>le-mor aye ha-qedesha hiv va-enayim al-ha-darekh</i><br><span class="gloss">= to-mor aye the-qedesha hiv and-enayim upon-the-darekh</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The word-shift: zona in Judah&#x27;s eyes, qedesha in Hirah&#x27;s mouth.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_22 · Gen.38.22 · <span class='expr'>THE_REPORT_BACK</span></h3>
+<p><span class="he">וַיָּשָׁב אֶל־יְהוּדָה וַיֹּאמֶר לֹא מְצָאתִיהָ וְגַם אַנְשֵׁי הַמָּקוֹם אָמְרוּ לֹא־הָיְתָה בָזֶה קְדֵשָׁה</span> · <i>va-yashav el-yehuda va-yomer lo metzati-ha ve-gam anshe ha-maqom amru lo-hayta va-ze qedesha</i> · And he returned to Judah and said: I have not found her; and also the men of the place said, There was no consecrated one here.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּ֨שָׁב֙ אֶל יְהוּדָ֔ה וַיֹּ֖אמֶר לֹ֣א מְצָאתִ֑יהָ</span> · <i>va-yashav el-yehuda va-yomer lo metzati-ha</i> · and he returned to Judah and said: I have not found her (etnachta on metzati-ha) [VERIFIED: SNAPSHOT Gen.38.22 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְגַ֨ם אַנְשֵׁ֤י הַמָּקוֹם֙ אָֽמְר֔וּ לֹא הָיְתָ֥ה בָזֶ֖ה קְדֵשָֽׁה</span> · <i>ve-gam anshe ha-maqom amru lo-hayta va-ze qedesha</i> · and also the men of the place said: there was no consecrated one here (verse-final qedesha) [VERIFIED: SNAPSHOT Gen.38.22 idx6-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lo_metzatiha_ve_gam_anshe_ha_maqom(chira), t0)</span><br><span class="gloss">= HOLDS(not-metzatiha-and-also-anshe-the-maqom(chira), t0)</span><br>THE REPORT. lo metzatiha — the errand returns empty; the pledge stays in her hand for the day it must speak.
+</td><td><span class="he">וַיָּשָׁב אֶל־יְהוּדָה וַיֹּאמֶר לֹא מְצָאתִיהָ</span> · <i>va-yashav el-yehuda va-yomer lo metzati-ha</i><br><span class="gloss">= and-yashav to-yehuda and-yomer not metzati-the</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The failed errand reported.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_23 · Gen.38.23 · <span class='expr'>LEST_WE_BE_SCORNED</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוּדָה תִּקַּח־לָהּ פֶּן נִהְיֶה לָבוּז הִנֵּה שָׁלַחְתִּי הַגְּדִי הַזֶּה וְאַתָּה לֹא מְצָאתָהּ</span> · <i>va-yomer yehuda tiqach-la-ה pen nihye la-vuz hine shalachti ha-gedi ha-ze ve-ata lo metzata-ה</i> · And Judah said: Let her keep them, lest we become a scorn; behold, I sent this kid, and you did not find her.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר יְהוּדָה֙ תִּֽקַּֽח לָ֔הּ פֶּ֖ן נִהְיֶ֣ה לָב֑וּז</span> · <i>va-yomer yehuda tiqach-la-ה pen nihye la-vuz</i> · let her keep them, lest we become a scorn (etnachta on la-vuz) [VERIFIED: SNAPSHOT Gen.38.23 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">הִנֵּ֤ה שָׁלַ֨חְתִּי֙ הַגְּדִ֣י הַזֶּ֔ה וְאַתָּ֖ה לֹ֥א מְצָאתָֽהּ</span> · <i>hine shalachti ha-gedi ha-ze ve-ata lo metzata-ה</i> · behold, I sent this kid, and you did not find her (verse-final metzata-ה) [VERIFIED: SNAPSHOT Gen.38.23 idx7-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(tiqach_lah_pen_nihye_la_vuz(yehuda), t0)</span><br><span class="gloss">= HOLDS(tiqach-lah-lest-nihye-to-vuz(yehuda), t0)</span><br>THE SCORN-WORD [G61-12]. TIQACH lah pen nihye LA-VUZ — tiqach with the qof dagesheed, and where MS records the books DIVIDED on the meteg (tav-camp vs qof-camp) SNAPSHOT writes BOTH strokes: a both- camps station [VERIFIED: manifest G61-12]. The Kitzur&#x27;s scorn-pair: because he crooked his father&#x27;s heart with haker-na, he became the scorn of haker-na (named — the pair lands at 38:25).
+</td><td><span class="he">תִּקַּח־לָהּ פֶּן נִהְיֶה לָבוּז</span> · <i>tiqach-la-ה pen nihye la-vuz</i><br><span class="gloss">= tiqach-to-ה lest nihye to-vuz</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The scorn-verse; the both-metegs station.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_24 · Gen.38.24 · <span class='expr'>THE_VERDICT</span></h3>
+<p><span class="he">וַיְהִי כְּמִשְׁלֹשׁ חֳדָשִׁים וַיֻּגַּד לִיהוּדָה לֵאמֹר זָנְתָה תָּמָר כַּלָּתֶךָ וְגַם הִנֵּה הָרָה לִזְנוּנִים וַיֹּאמֶר יְהוּדָה הוֹצִיאוּהָ וְתִשָּׂרֵף</span> · <i>va-yehi ke-mi-shelosh chodashim va-yugad li-yhuda le-mor zanta tamar kalate-kha ve-gam hine hara li-zenunim va-yomer yehuda hotziu-ha ve-tisaref</i> · And it was, about three months, and it was told to Judah, saying: Tamar your daughter-in-law has played the harlot, and behold, she is with child by harlotry. And Judah said: Bring her out and let her be burned.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֣י כְּמִשְׁלֹ֣שׁ חֳדָשִׁ֗ים וַיֻּגַּ֨ד לִֽיהוּדָ֤ה לֵֽאמֹר֙ זָֽנְתָה֙ תָּמָ֣ר כַּלָּתֶ֔ךָ וְגַ֛ם הִנֵּ֥ה הָרָ֖ה לִזְנוּנִ֑ים</span> · <i>va-yehi ke-mi-shelosh chodashim va-yugad li-yhuda le-mor zanta tamar kalate-kha ve-gam hine hara li-zenunim</i> · Tamar your daughter-in-law has played the harlot, and is with child (etnachta on li-zenunim) [VERIFIED: SNAPSHOT Gen.38.24 idx12 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּ֣אמֶר יְהוּדָ֔ה הוֹצִיא֖וּהָ וְתִשָּׂרֵֽף</span> · <i>va-yomer yehuda hotziu-ha ve-tisaref</i> · and Judah said: bring her out and let her be burned (verse-final ve-tisaref) [VERIFIED: SNAPSHOT Gen.38.24 idx13-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yehuda, LET(hotziu_ha_ve_tisaref))</span><br><span class="gloss">= DECLARE(yehuda, LET(hotziu-the-and-tisaref))</span><br>THE ORDER THAT DIES [G61-07]. hotziuha ve-tisaref — pushed, and NEVER executed: the recognition reverses it and the span ends with the burn-order still open on the queue — the second dead demand in two units (gen_60&#x27;s kill-demand). And the verdict carries the Name in its initials: yehuda-hotziuha-ve-tisaref + the next verse&#x27;s opening hi = the four letters [VERIFIED: manifest G61-07]: the Kitzur — the Holy One summoned her the signs that had been lost. hotziuha with tifcha on the aleph per MS (asserted). The halakhic puzzle of the burning (Rashi&#x27;s priest&#x27;s-daughter vs Ramban&#x27;s ruler&#x27;s-court) files named.
+</td><td><span class="he">וַיֹּאמֶר יְהוּדָה הוֹצִיאוּהָ וְתִשָּׂרֵף</span> · <i>va-yomer yehuda hotziu-ha ve-tisaref</i><br><span class="gloss">= and-yomer yehuda hotziu-the and-tisaref</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The execution order pushed — it will die on the queue.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_25 · Gen.38.25 · <span class='expr'>HAKER_NA_RETURNS</span></h3>
+<p><span class="he">הִוא מוּצֵאת וְהִיא שָׁלְחָה אֶל־חָמִיהָ לֵאמֹר לְאִישׁ אֲשֶׁר־אֵלֶּה לּוֹ אָנֹכִי הָרָה וַתֹּאמֶר הַכֶּר־נָא לְמִי הַחֹתֶמֶת וְהַפְּתִילִים וְהַמַּטֶּה הָאֵלֶּה</span> · <i>hiv mutzet ve-hi shalcha el-chami-ha le-mor le-ish asher-ele l-o anokhi hara va-tomer haker-na le-mi ha-chotemet ve-ha-petilim ve-ha-mate ha-ele</i> · She was brought out, and she sent to her father-in-law, saying: By the man whose these are, I am with child. And she said: Recognize, please, whose are the seal and the cords and the staff, these.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">הִ֣וא מוּצֵ֗את וְהִ֨יא שָׁלְחָ֤ה אֶל חָמִ֨יהָ֙ לֵאמֹ֔ר לְאִישׁ֙ אֲשֶׁר אֵ֣לֶּה לּ֔וֹ אָנֹכִ֖י הָרָ֑ה</span> · <i>hiv mutzet ve-hi shalcha el-chami-ha le-mor le-ish asher-ele l-o anokhi hara</i> · she was brought out, and sent to her father-in-law: by the man whose these are, I am with child (etnachta on hara) [VERIFIED: SNAPSHOT Gen.38.25 idx12 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתֹּ֨אמֶר֙ הַכֶּר נָ֔א לְמִ֞י הַחֹתֶ֧מֶת וְהַפְּתִילִ֛ים וְהַמַּטֶּ֖ה הָאֵֽלֶּה</span> · <i>va-tomer haker-na le-mi ha-chotemet ve-ha-petilim ve-ha-mate ha-ele</i> · recognize, please — whose are the seal and the cords and the staff (verse-final ha-ele) [VERIFIED: SNAPSHOT Gen.38.25 idx13-20]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(tamar, LET(haker_na_le_mi))</span><br><span class="gloss">= DECLARE(tamar, LET(haker-na-to-from))</span><br>THE PAIR LANDS [G60-12 -&gt; G61]. haker-na le-mi ha-chotemet — the EXACT phrase of the coat (37:32) returned to its sender: Sotah 10b&#x27;s measure-for-measure, the two-unit crown closed. And the four words&#x27; FINAL letters, read from the last word back, spell tira — FEAR: she said, fear the One and confess [VERIFIED: manifest G61-08]. lo anokhi with the lamed dagesheed [G61-11, asserted].
+</td><td><span class="he">וַתֹּאמֶר הַכֶּר־נָא לְמִי הַחֹתֶמֶת</span> · <i>va-tomer haker-na le-mi ha-chotemet</i><br><span class="gloss">= and-tomer haker-na to-from the-chotemet</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hiv_mutzet_ve_ha_petilim(tamar), t0)</span><br><span class="gloss">= HOLDS(hiv-mutzet-and-the-petilim(tamar), t0)</span><br>THE FURNACE-VERSE&#x27;S LETTERS [G61-03/04/05]. hiv MUTZET — written he- vav, read she [VERIFIED: manifest G61-03]: R. Huna — SHE and HE were due to come out; the written form keeps the man inside her sentence. The furnace-teaching (better the furnace than a fellow&#x27;s public shame — Ketubot 67b, Sotah 10b, Bava Metzia 59a) hangs on this word, and R. Chananel read it LEAN of its aleph (&#x27;set alight&#x27;) — the Ritva: no book has it so; SNAPSHOT writes the aleph with the books [VERIFIED: manifest G61-04]. And ve-ha-petilim (&#x27;the cords&#x27;) FULL- OF-FULL, both yods, with the Yerushalmi codex and the Ramah against the Hilleli&#x27;s lean [VERIFIED: manifest G61-05] — the stream against the Hilleli at the very word the recognition turns on.
+</td><td><span class="he">הִוא מוּצֵאת</span> · <i>hiv mutzet</i><br><span class="gloss">= hiv mutzet</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The pledge speaks; the two-unit pair lands.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_26 · Gen.38.26 · <span class='expr'>THE_RECOGNITION_AND_CONFESSION</span></h3>
+<p><span class="he">וַיַּכֵּר יְהוּדָה וַיֹּאמֶר צָדְקָה מִמֶּנִּי כִּי־עַל־כֵּן לֹא־נְתַתִּיהָ לְשֵׁלָה בְנִי וְלֹא־יָסַף עוֹד לְדַעְתָּה</span> · <i>va-yaker yehuda va-yomer tzadqa mime-ni ki-al-ken lo-netati-ha le-shela veni-y ve-lo-yasaf od le-data-ה</i> · And Judah recognized, and said: She is more righteous than I, for therefore I did not give her to Shelah my son. And he did not know her again any more.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּכֵּ֣ר יְהוּדָ֗ה וַיֹּ֨אמֶר֙ צָֽדְקָ֣ה מִמֶּ֔נִּי כִּֽי עַל כֵּ֥ן לֹא נְתַתִּ֖יהָ לְשֵׁלָ֣ה בְנִ֑י</span> · <i>va-yaker yehuda va-yomer tzadqa mime-ni ki-al-ken lo-netati-ha le-shela veni-y</i> · and Judah recognized and said: she is more righteous than I — for I did not give her to Shelah my son (etnachta on veni-y) [VERIFIED: SNAPSHOT Gen.38.26 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְלֹֽא יָסַ֥ף ע֖וֹד לְדַעְתָּֽה</span> · <i>ve-lo-yasaf od le-data-ה</i> · and he did not know her again any more (verse-final le-data-ה) [VERIFIED: SNAPSHOT Gen.38.26 idx12-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(haker_na_le_mi, t2)</span><br><span class="gloss">= RESULT: HOLDS(haker-na-to-from, t2)</span><br>RECOGNIZED AND CONFESSED. va-yaker yehuda — the demand discharges in one verb, and the confession follows: tzadqa mimeni, &#x27;she is more righteous than I&#x27; — the only self-verdict in the span, spoken by the man who ordered the burning; the order itself is never executed and never revoked on the letter: it dies open. ve-lo yasaf od le-data — with the stress falling end-ward against the Michlol&#x27;s custom (MS, variance named): read by the tradition both as &#x27;he did not continue&#x27; and &#x27;he did not cease&#x27; (the two readings filed, named).
+</td><td><span class="he">וַיַּכֵּר יְהוּדָה וַיֹּאמֶר צָדְקָה מִמֶּנִּי</span> · <i>va-yaker yehuda va-yomer tzadqa mime-ni</i><br><span class="gloss">= and-yaker yehuda and-yomer tzadqa mime-ni</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The recognize-demand satisfied; the confession; the burn-order left standing unexecuted.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_27 · Gen.38.27 · <span class='expr'>THE_TWINS_DISCOVERED</span></h3>
+<p><span class="he">וַיְהִי בְּעֵת לִדְתָּהּ וְהִנֵּה תְאוֹמִים בְּבִטְנָהּ</span> · <i>va-yehi be-et lidta-ה ve-hine teomim be-vitna-ה</i> · And it came to pass at the time of her bearing, and behold, twins in her womb.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֖י בְּעֵ֣ת לִדְתָּ֑הּ</span> · <i>va-yehi be-et lidta-ה</i> · at the time of her bearing (etnachta on lidta-ה) [VERIFIED: SNAPSHOT Gen.38.27 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהִנֵּ֥ה תְאוֹמִ֖ים בְּבִטְנָֽהּ</span> · <i>ve-hine teomim be-vitna-ה</i> · behold, twins in her womb (verse-final be-vitna-ה) [VERIFIED: SNAPSHOT Gen.38.27 idx3-5]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(haqem_zera_le_achikha, t3)</span><br><span class="gloss">= RESULT: HOLDS(haqem-seed-to-your-brother, t3)</span><br>THE DEMAND COMES HOME. ve-hine TEOMIM be-vitnah — the seed-demand Judah pushed on Onan (38:8) discharges through JUDAH HIMSELF: the demandee-mismatch class (gen_46&#x27;s precedent) at full span — pushed on the brother, refused, and satisfied by the father of the command. teomim here written FULL against the lean תומם of Rebecca&#x27;s twins (25:24, gen_43&#x27;s crown) — the two twin-verses split their spelling; letter-note.
+</td><td><span class="he">וְהִנֵּה תְאוֹמִים בְּבִטְנָהּ</span> · <i>ve-hine teomim be-vitna-ה</i><br><span class="gloss">= and-hine teomim in-vitna-ה</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The seed-demand discharges — through the demander.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_28 · Gen.38.28 · <span class='expr'>THE_SCARLET_THREAD</span></h3>
+<p><span class="he">וַיְהִי בְלִדְתָּהּ וַיִּתֶּן־יָד וַתִּקַּח הַמְיַלֶּדֶת וַתִּקְשֹׁר עַל־יָדוֹ שָׁנִי לֵאמֹר זֶה יָצָא רִאשֹׁנָה</span> · <i>va-yehi ve-lidta-ה va-yiten-yad va-tiqach ha-meyaledet va-tiqshor al-yad-o shani le-mor ze yatza rishona</i> · And it was in her bearing, that one put out a hand; and the midwife took and bound on his hand scarlet, saying: This came out first.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֥י בְלִדְתָּ֖הּ וַיִּתֶּן יָ֑ד</span> · <i>va-yehi ve-lidta-ה va-yiten-yad</i> · in her bearing, one put out a hand (etnachta on yad) [VERIFIED: SNAPSHOT Gen.38.28 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתִּקַּ֣ח הַמְיַלֶּ֗דֶת וַתִּקְשֹׁ֨ר עַל יָד֤וֹ שָׁנִי֙ לֵאמֹ֔ר זֶ֖ה יָצָ֥א רִאשֹׁנָֽה</span> · <i>va-tiqach ha-meyaledet va-tiqshor al-yad-o shani le-mor ze yatza rishona</i> · and the midwife bound scarlet on his hand: this came out first (verse-final rishona) [VERIFIED: SNAPSHOT Gen.38.28 idx4-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yiten_yad_va_tiqshor_shani(ha_meyaledet), t0)</span><br><span class="gloss">= HOLDS(and-yiten-yad-and-tiqshor-shani(the-meyaledet), t0)</span><br>THE MARKED HAND. va-yiten yad... va-tiqshor al yado SHANI — the scarlet thread marks a firstbornhood that withdraws: the span&#x27;s last identity-object (seal, cord, staff, thread — the chapter argues by tokens).
+</td><td><span class="he">וַיִּתֶּן־יָד וַתִּקַּח הַמְיַלֶּדֶת וַתִּקְשֹׁר עַל־יָדוֹ שָׁנִי</span> · <i>va-yiten-yad va-tiqach ha-meyaledet va-tiqshor al-yad-o shani</i><br><span class="gloss">= and-yiten-yad and-tiqach the-meyaledet and-tiqshor upon-yad-o shani</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The firstborn-marker tied to the hand that retreats.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_29 · Gen.38.29 · <span class='expr'>PERETZ_NAMED</span></h3>
+<p><span class="he">וַיְהִי כְּמֵשִׁיב יָדוֹ וְהִנֵּה יָצָא אָחִיו וַתֹּאמֶר מַה־פָּרַצְתָּ עָלֶיךָ פָּרֶץ וַיִּקְרָא שְׁמוֹ פָּרֶץ</span> · <i>va-yehi ke-meshiv yad-o ve-hine yatza achi-v va-tomer ma-paratzta ale-kha paretz va-yiqra shem-o paretz</i> · And it was, as he drew back his hand, behold, his brother came out; and she said: How have you breached! Upon you a breach. And he called his name Peretz.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֣י כְּמֵשִׁ֣יב יָד֗וֹ וְהִנֵּה֙ יָצָ֣א אָחִ֔יו וַתֹּ֕אמֶר מַה פָּרַ֖צְתָּ עָלֶ֣יךָ פָּ֑רֶץ</span> · <i>va-yehi ke-meshiv yad-o ve-hine yatza achi-v va-tomer ma-paratzta ale-kha paretz</i> · as he drew back his hand, his brother came out — how have you breached (etnachta on paretz) [VERIFIED: SNAPSHOT Gen.38.29 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּקְרָ֥א שְׁמ֖וֹ פָּֽרֶץ</span> · <i>va-yiqra shem-o paretz</i> · and he called his name Peretz (verse-final paretz) [VERIFIED: SNAPSHOT Gen.38.29 idx11-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>REGISTRY_INSTALL</td><td><span class="expr">WORLD += {paretz}</span><br>THE BREACH. ve-hine yatza achiv — the unmarked one comes first.
+</td><td><span class="he">וְהִנֵּה יָצָא אָחִיו</span> · <i>ve-hine yatza achi-v</i><br><span class="gloss">= and-hine yatza my-brother-v</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NAME</td><td><span class="expr">name(paretz) := paretz</span><br>NAMED FOR THE BREACH. ma paratzta alekha paretz va-yiqra shemo paretz — the Kitzur: the king breaches fences and none may protest; the atbash-and-sum readings toward David file named. REGISTRY write 4.
+</td><td><span class="he">וַיִּקְרָא שְׁמוֹ פָּרֶץ</span> · <i>va-yiqra shem-o paretz</i><br><span class="gloss">= and-yiqra shem-o paretz</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The breach-child; REGISTRY write 4.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_38_30 · Gen.38.30 · <span class='expr'>ZERACH_NAMED</span></h3>
+<p><span class="he">וְאַחַר יָצָא אָחִיו אֲשֶׁר עַל־יָדוֹ הַשָּׁנִי וַיִּקְרָא שְׁמוֹ זָרַח</span> · <i>ve-achar yatza achi-v asher al-yad-o ha-shani va-yiqra shem-o zarach</i> · And afterward his brother came out, on whose hand was the scarlet; and he called his name Zerach.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאַחַר֙ יָצָ֣א אָחִ֔יו אֲשֶׁ֥ר עַל יָד֖וֹ הַשָּׁנִ֑י</span> · <i>ve-achar yatza achi-v asher al-yad-o ha-shani</i> · afterward came his brother, the scarlet on his hand (etnachta on ha-shani) [VERIFIED: SNAPSHOT Gen.38.30 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּקְרָ֥א שְׁמ֖וֹ זָֽרַח</span> · <i>va-yiqra shem-o zarach</i> · and he called his name Zerach (verse-final zarach) [VERIFIED: SNAPSHOT Gen.38.30 idx7-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>REGISTRY_INSTALL</td><td><span class="expr">WORLD += {zarach}</span><br>THE MARKED ONE SECOND. ve-achar yatza achiv asher al yado ha-shani.
+</td><td><span class="he">וְאַחַר יָצָא אָחִיו</span> · <i>ve-achar yatza achi-v</i><br><span class="gloss">= and-achar yatza my-brother-v</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NAME</td><td><span class="expr">name(zarach) := zarach</span><br>NAMED FOR THE SHINING. va-yiqra shemo zarach — five names in the span, five REGISTRY writes: Er, Onan, Shelah by the parents&#x27; split voices; Peretz and Zerach by the birth itself. The span closes with the burn-order still open — the machine&#x27;s record that the sentence was never carried out, only outgrown.
+</td><td><span class="he">וַיִּקְרָא שְׁמוֹ זָרַח</span> · <i>va-yiqra shem-o zarach</i><br><span class="gloss">= and-yiqra shem-o zarach</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The marked one second; REGISTRY closes at 5.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Gn_38_1 — the descent to Adullam</td><td>And it came to pass at that time that Judah went down from his brothers, and turned aside to an Adullamite man, and his name was Hirah.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַֽיְהִי֙ בָּעֵ֣ת הַהִ֔וא וַיֵּ֥רֶד</span> · <i>va-yehi ba-et ha-hiv va-yered</i><br><span class="gloss">= and-yehi in-the the-hiv and-yered</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Gn_38_2 — the Canaanite wife</td><td>And Judah saw there the daughter of a Canaanite man, and his name was Shua; and he took her and came to her.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיַּרְא שָׁ֧ם יְהוּדָ֛ה בַּת</span> · <i>va-yar-sham yehuda bat-</i><br><span class="gloss">= and-yar-there yehuda bat</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Gn_38_3 — the father names Er</td><td>And she conceived and bore a son; and he called his name Er.</td><td>SPECS empty; REGISTRY 1 writes;</td><td><span class="he">וַתַּ֖הַר וַתֵּ֣לֶד בֵּ֑ן וַיִּקְרָ֥א</span> · <i>va-tahar va-teled ben va-yiqra</i><br><span class="gloss">= and-tahar and-teled ben and-yiqra</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Gn_38_4 — the mother names Onan</td><td>And she conceived again and bore a son; and she called his name Onan.</td><td>SPECS empty; REGISTRY 2 writes;</td><td><span class="he">וַתַּ֥הַר ע֖וֹד וַתֵּ֣לֶד בֵּ֑ן</span> · <i>va-tahar od va-teled ben</i><br><span class="gloss">= and-tahar od and-teled ben</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Gn_38_5 — the mother names Shelah</td><td>And she yet again bore a son, and she called his name Shelah; and he was at Cheziv when she bore him.</td><td>SPECS empty; REGISTRY 3 writes;</td><td><span class="he">וַתֹּ֤סֶף עוֹד֙ וַתֵּ֣לֶד בֵּ֔ן</span> · <i>va-tosef od va-teled ben</i><br><span class="gloss">= and-tosef od and-teled ben</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Gn_38_6 — Tamar taken for Er</td><td>And Judah took a wife for Er his firstborn, and her name was Tamar.</td><td>SPECS empty; REGISTRY 3 writes;</td><td><span class="he">וַיִּקַּ֧ח יְהוּדָ֛ה אִשָּׁ֖ה לְעֵ֣ר</span> · <i>va-yiqach yehuda isha le-er</i><br><span class="gloss">= and-yiqach yehuda isha to-er</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Gn_38_7 — Er dies</td><td>And Er, Judah&#x27;s firstborn, was evil in the eyes of the LORD; and the LORD put him to death.</td><td>SPECS empty; REGISTRY 3 writes;</td><td><span class="he">וַיְהִ֗י עֵ֚ר בְּכ֣וֹר יְהוּדָ֔ה</span> · <i>va-yehi er bekhor yehuda</i><br><span class="gloss">= and-yehi er bekhor yehuda</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Gn_38_8 — the levirate demand</td><td>And Judah said to Onan: Come to your brother&#x27;s wife, and perform the brother&#x27;s duty to her, and raise up seed for your brother.</td><td>LET(haqem_zera_le_achikha) pushed and OPEN; REGISTRY 3 writes;<br><span class="gloss">= LET(haqem-seed-to-your-brother) pushed and OPEN; REGISTRY 3 writes;</span></td><td><span class="he">וַיֹּ֤אמֶר יְהוּדָה֙ לְאוֹנָ֔ן בֹּ֛א</span> · <i>va-yomer yehuda le-onan bo</i><br><span class="gloss">= and-yomer yehuda to-onan in-it</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Gn_38_9 — the subversion</td><td>And Onan knew that the seed would not be his; and it was, when he came to his brother&#x27;s wife, he wasted it to the ground, so as not to give seed to his brother.</td><td>LET(haqem_zera_le_achikha) pushed and OPEN; REGISTRY 3 writes;<br><span class="gloss">= LET(haqem-seed-to-your-brother) pushed and OPEN; REGISTRY 3 writes;</span></td><td><span class="he">וַיֵּ֣דַע אוֹנָ֔ן כִּ֛י לֹּ֥א</span> · <i>va-yeda onan ki lo</i><br><span class="gloss">= and-yeda onan when not</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Gn_38_10 — Onan dies</td><td>And what he did was evil in the eyes of the LORD; and He put him to death also.</td><td>LET(haqem_zera_le_achikha) pushed and OPEN; REGISTRY 3 writes;<br><span class="gloss">= LET(haqem-seed-to-your-brother) pushed and OPEN; REGISTRY 3 writes;</span></td><td><span class="he">וַיֵּ֛רַע בְּעֵינֵ֥י יְהוָ֖ה אֲשֶׁ֣ר</span> · <i>va-yera be-ene YHWH asher</i><br><span class="gloss">= and-yera in-ene the-LORD which</span></td></tr>
+<tr><td><b>S11</b></td><td>after STEP_Gn_38_11 — the widow seated</td><td>And Judah said to Tamar his daughter-in-law: Sit as a widow in your father&#x27;s house until Shelah my son grows — for he said, lest he too die like his brothers. And Tamar went and sat in her father&#x27;s house.</td><td>LET(haqem_zera_le_achikha) pushed and OPEN; LET(shevi_almana_vet_avikh) pushed then satisfied in the SAME verse;<br><span class="gloss">= LET(haqem-seed-to-your-brother) pushed and OPEN; LET(shevi-almana-vet-avikh) pushed then satisfied in the SAME verse;</span></td><td><span class="he">וַיֹּ֣אמֶר יְהוּדָה֩ לְתָמָ֨ר כַּלָּת֜וֹ</span> · <i>va-yomer yehuda le-tamar kalat-o</i><br><span class="gloss">= and-yomer yehuda to-tamar kalat-o</span></td></tr>
+<tr><td><b>S12</b></td><td>after STEP_Gn_38_12 — the time passes</td><td>And the days multiplied, and the daughter of Shua, Judah&#x27;s wife, died; and Judah was comforted, and went up to his sheepshearers, he and Hirah his friend the Adullamite, to Timnah.</td><td>LET(haqem_zera_le_achikha) pushed and OPEN; REGISTRY 3 writes;<br><span class="gloss">= LET(haqem-seed-to-your-brother) pushed and OPEN; REGISTRY 3 writes;</span></td><td><span class="he">וַיִּרְבּוּ֙ הַיָּמִ֔ים וַתָּ֖מָת בַּת</span> · <i>va-yirbu ha-yamim va-tamat bat-</i><br><span class="gloss">= and-yirbu seas and-tamat bat</span></td></tr>
+<tr><td><b>S13</b></td><td>after STEP_Gn_38_13 — the telling</td><td>And it was told to Tamar, saying: Behold, your father-in-law goes up to Timnah to shear his flock.</td><td>LET(haqem_zera_le_achikha) pushed and OPEN; REGISTRY 3 writes;<br><span class="gloss">= LET(haqem-seed-to-your-brother) pushed and OPEN; REGISTRY 3 writes;</span></td><td><span class="he">וַיֻּגַּ֥ד לְתָמָ֖ר לֵאמֹ֑ר הִנֵּ֥ה</span> · <i>va-yugad le-tamar le-mor hine</i><br><span class="gloss">= and-yugad to-tamar to-mor hine</span></td></tr>
+<tr><td><b>S14</b></td><td>after STEP_Gn_38_14 — the garments swapped</td><td>And she removed her widow&#x27;s garments from upon her, and covered herself with the veil and wrapped herself, and sat at the opening of Enaim which is on the road to Timnah — for she saw that Shelah was grown, and she had not been given to him as a wife.</td><td>LET(haqem_zera_le_achikha) pushed and OPEN; REGISTRY 3 writes;<br><span class="gloss">= LET(haqem-seed-to-your-brother) pushed and OPEN; REGISTRY 3 writes;</span></td><td><span class="he">וַתָּסַר֩ בִּגְדֵ֨י אַלְמְנוּתָ֜הּ מֵֽעָלֶ֗יהָ</span> · <i>va-tasar bigde almnuta-ה me-ale-ha</i><br><span class="gloss">= and-tasar bigde almnuta-ה from-ale-the</span></td></tr>
+<tr><td><b>S15</b></td><td>after STEP_Gn_38_15 — the misreading</td><td>And Judah saw her, and thought her a harlot, for she had covered her face.</td><td>LET(haqem_zera_le_achikha) pushed and OPEN; REGISTRY 3 writes;<br><span class="gloss">= LET(haqem-seed-to-your-brother) pushed and OPEN; REGISTRY 3 writes;</span></td><td><span class="he">וַיִּרְאֶ֣הָ יְהוּדָ֔ה וַֽיַּחְשְׁבֶ֖הָ לְזוֹנָ֑ה</span> · <i>va-yire-ha yehuda va-yachshve-ha le-zona</i><br><span class="gloss">= and-yire-the yehuda and-yachshve-the to-zona</span></td></tr>
+<tr><td><b>S16</b></td><td>after STEP_Gn_38_16 — the roadside request</td><td>And he turned to her by the road and said: Come now, let me come to you — for he did not know that she was his daughter-in-law. And she said: What will you give me, that you come to me?</td><td>LET(haqem_zera_le_achikha) pushed and OPEN; LET(hava_avo_elayikh) pushed and OPEN;<br><span class="gloss">= LET(haqem-seed-to-your-brother) pushed and OPEN; LET(hava-avo-elayikh) pushed and OPEN;</span></td><td><span class="he">וַיֵּ֨ט אֵלֶ֜יהָ אֶל הַדֶּ֗רֶךְ</span> · <i>va-yet ele-ha el-ha-derekh</i><br><span class="gloss">= and-yet ele-the to-the-derekh</span></td></tr>
+<tr><td><b>S17</b></td><td>after STEP_Gn_38_17 — the kid and the pledge asked</td><td>And he said: I will send a kid of the goats from the flock. And she said: If you give a pledge until you send it.</td><td>LET(haqem_zera_le_achikha) pushed and OPEN; LET(hava_avo_elayikh) pushed and OPEN;<br><span class="gloss">= LET(haqem-seed-to-your-brother) pushed and OPEN; LET(hava-avo-elayikh) pushed and OPEN;</span></td><td><span class="he">וַיֹּ֕אמֶר אָנֹכִ֛י אֲשַׁלַּ֥ח גְּדִֽי</span> · <i>va-yomer anokhi ashalach gedi-</i><br><span class="gloss">= and-yomer anokhi ashalach gedi</span></td></tr>
+<tr><td><b>S18</b></td><td>after STEP_Gn_38_18 — the three pledges and the conception</td><td>And he said: What is the pledge that I shall give you? And she said: Your seal and your cord and your staff that is in your hand. And he gave them to her, and came to her, and she conceived by him.</td><td>LET(haqem_zera_le_achikha) pushed and OPEN; REGISTRY 3 writes;<br><span class="gloss">= LET(haqem-seed-to-your-brother) pushed and OPEN; REGISTRY 3 writes;</span></td><td><span class="he">וַיֹּ֗אמֶר מָ֣ה הָֽעֵרָבוֹן֮ אֲשֶׁ֣ר</span> · <i>va-yomer ma ha-eravon asher</i><br><span class="gloss">= and-yomer ma the-eravon which</span></td></tr>
+<tr><td><b>S19</b></td><td>after STEP_Gn_38_19 — the garments returned</td><td>And she arose and went, and removed her veil from upon her, and put on the garments of her widowhood.</td><td>LET(haqem_zera_le_achikha) pushed and OPEN; REGISTRY 3 writes;<br><span class="gloss">= LET(haqem-seed-to-your-brother) pushed and OPEN; REGISTRY 3 writes;</span></td><td><span class="he">וַתָּ֣קָם וַתֵּ֔לֶךְ וַתָּ֥סַר צְעִיפָ֖הּ</span> · <i>va-taqam va-telekh va-tasar tzeifa-ה</i><br><span class="gloss">= and-taqam and-telekh and-tasar tzeifa-ה</span></td></tr>
+<tr><td><b>S20</b></td><td>after STEP_Gn_38_20 — the kid sent, she is not found</td><td>And Judah sent the kid of the goats by the hand of his friend the Adullamite, to take the pledge from the woman&#x27;s hand — and he did not find her.</td><td>LET(haqem_zera_le_achikha) pushed and OPEN; REGISTRY 3 writes;<br><span class="gloss">= LET(haqem-seed-to-your-brother) pushed and OPEN; REGISTRY 3 writes;</span></td><td><span class="he">וַיִּשְׁלַ֨ח יְהוּדָ֜ה אֶת גְּדִ֣י</span> · <i>va-yishlach yehuda et-gedi</i><br><span class="gloss">= and-yishlach yehuda gedi</span></td></tr>
+<tr><td><b>S21</b></td><td>after STEP_Gn_38_21 — the asking</td><td>And he asked the men of her place, saying: Where is the consecrated one, she at Enaim by the road? And they said: There was no consecrated one here.</td><td>LET(haqem_zera_le_achikha) pushed and OPEN; REGISTRY 3 writes;<br><span class="gloss">= LET(haqem-seed-to-your-brother) pushed and OPEN; REGISTRY 3 writes;</span></td><td><span class="he">וַיִּשְׁאַ֞ל אֶת אַנְשֵׁ֤י מְקֹמָהּ֙</span> · <i>va-yishal et-anshe meqoma-ה</i><br><span class="gloss">= and-yishal anshe meqoma-ה</span></td></tr>
+<tr><td><b>S22</b></td><td>after STEP_Gn_38_22 — the report back</td><td>And he returned to Judah and said: I have not found her; and also the men of the place said, There was no consecrated one here.</td><td>LET(haqem_zera_le_achikha) pushed and OPEN; REGISTRY 3 writes;<br><span class="gloss">= LET(haqem-seed-to-your-brother) pushed and OPEN; REGISTRY 3 writes;</span></td><td><span class="he">וַיָּ֨שָׁב֙ אֶל יְהוּדָ֔ה וַיֹּ֖אמֶר</span> · <i>va-yashav el-yehuda va-yomer</i><br><span class="gloss">= and-yashav to-yehuda and-yomer</span></td></tr>
+<tr><td><b>S23</b></td><td>after STEP_Gn_38_23 — lest we be scorned</td><td>And Judah said: Let her keep them, lest we become a scorn; behold, I sent this kid, and you did not find her.</td><td>LET(haqem_zera_le_achikha) pushed and OPEN; REGISTRY 3 writes;<br><span class="gloss">= LET(haqem-seed-to-your-brother) pushed and OPEN; REGISTRY 3 writes;</span></td><td><span class="he">וַיֹּ֤אמֶר יְהוּדָה֙ תִּֽקַּֽח לָ֔הּ</span> · <i>va-yomer yehuda tiqach-la-ה</i><br><span class="gloss">= and-yomer yehuda tiqach-to-ה</span></td></tr>
+<tr><td><b>S24</b></td><td>after STEP_Gn_38_24 — the verdict</td><td>And it was, about three months, and it was told to Judah, saying: Tamar your daughter-in-law has played the harlot, and behold, she is with child by harlotry. And Judah said: Bring her out and let her be burned.</td><td>LET(haqem_zera_le_achikha) pushed and OPEN; LET(hotziu_ha_ve_tisaref) pushed and OPEN;<br><span class="gloss">= LET(haqem-seed-to-your-brother) pushed and OPEN; LET(hotziu-the-and-tisaref) pushed and OPEN;</span></td><td><span class="he">וַיְהִ֣י כְּמִשְׁלֹ֣שׁ חֳדָשִׁ֗ים וַיֻּגַּ֨ד</span> · <i>va-yehi ke-mi-shelosh chodashim va-yugad</i><br><span class="gloss">= and-yehi like-from-shelosh chodashim and-yugad</span></td></tr>
+<tr><td><b>S25</b></td><td>after STEP_Gn_38_25 — haker-na returns</td><td>She was brought out, and she sent to her father-in-law, saying: By the man whose these are, I am with child. And she said: Recognize, please, whose are the seal and the cords and the staff, these.</td><td>LET(haqem_zera_le_achikha) pushed and OPEN; LET(hotziu_ha_ve_tisaref) pushed and OPEN; LET(haker_na_le_mi) pushed and OPEN;<br><span class="gloss">= LET(haqem-seed-to-your-brother) pushed and OPEN; LET(hotziu-the-and-tisaref) pushed and OPEN; LET(haker-na-to-from) pushed and OPEN;</span></td><td><span class="he">הִ֣וא מוּצֵ֗את וְהִ֨יא שָׁלְחָ֤ה</span> · <i>hiv mutzet ve-hi shalcha</i><br><span class="gloss">= hiv mutzet and-hi shalcha</span></td></tr>
+<tr><td><b>S26</b></td><td>after STEP_Gn_38_26 — the recognition and confession</td><td>And Judah recognized, and said: She is more righteous than I, for therefore I did not give her to Shelah my son. And he did not know her again any more.</td><td>LET(haqem_zera_le_achikha) pushed and OPEN; LET(hotziu_ha_ve_tisaref) pushed and OPEN;<br><span class="gloss">= LET(haqem-seed-to-your-brother) pushed and OPEN; LET(hotziu-the-and-tisaref) pushed and OPEN;</span></td><td><span class="he">וַיַּכֵּ֣ר יְהוּדָ֗ה וַיֹּ֨אמֶר֙ צָֽדְקָ֣ה</span> · <i>va-yaker yehuda va-yomer tzadqa</i><br><span class="gloss">= and-yaker yehuda and-yomer tzadqa</span></td></tr>
+<tr><td><b>S27</b></td><td>after STEP_Gn_38_27 — the twins discovered</td><td>And it came to pass at the time of her bearing, and behold, twins in her womb.</td><td>LET(hotziu_ha_ve_tisaref) pushed and OPEN; REGISTRY 3 writes;<br><span class="gloss">= LET(hotziu-the-and-tisaref) pushed and OPEN; REGISTRY 3 writes;</span></td><td><span class="he">וַיְהִ֖י בְּעֵ֣ת לִדְתָּ֑הּ וְהִנֵּ֥ה</span> · <i>va-yehi be-et lidta-ה ve-hine</i><br><span class="gloss">= and-yehi in lidta-ה and-hine</span></td></tr>
+<tr><td><b>S28</b></td><td>after STEP_Gn_38_28 — the scarlet thread</td><td>And it was in her bearing, that one put out a hand; and the midwife took and bound on his hand scarlet, saying: This came out first.</td><td>LET(hotziu_ha_ve_tisaref) pushed and OPEN; REGISTRY 3 writes;<br><span class="gloss">= LET(hotziu-the-and-tisaref) pushed and OPEN; REGISTRY 3 writes;</span></td><td><span class="he">וַיְהִ֥י בְלִדְתָּ֖הּ וַיִּתֶּן יָ֑ד</span> · <i>va-yehi ve-lidta-ה va-yiten-yad</i><br><span class="gloss">= and-yehi and-lidta-ה and-yiten-yad</span></td></tr>
+<tr><td><b>S29</b></td><td>after STEP_Gn_38_29 — Peretz named</td><td>And it was, as he drew back his hand, behold, his brother came out; and she said: How have you breached! Upon you a breach. And he called his name Peretz.</td><td>LET(hotziu_ha_ve_tisaref) pushed and OPEN; REGISTRY 4 writes;<br><span class="gloss">= LET(hotziu-the-and-tisaref) pushed and OPEN; REGISTRY 4 writes;</span></td><td><span class="he">וַיְהִ֣י כְּמֵשִׁ֣יב יָד֗וֹ וְהִנֵּה֙</span> · <i>va-yehi ke-meshiv yad-o ve-hine</i><br><span class="gloss">= and-yehi like-meshiv yad-o and-hine</span></td></tr>
+<tr><td><b>S30</b></td><td>after STEP_Gn_38_30 — Zerach named</td><td>And afterward his brother came out, on whose hand was the scarlet; and he called his name Zerach.</td><td>LET(hotziu_ha_ve_tisaref) pushed and OPEN; REGISTRY 5 writes;<br><span class="gloss">= LET(hotziu-the-and-tisaref) pushed and OPEN; REGISTRY 5 writes;</span></td><td><span class="he">וְאַחַר֙ יָצָ֣א אָחִ֔יו אֲשֶׁ֥ר</span> · <i>ve-achar yatza achi-v asher</i><br><span class="gloss">= and-achar yatza my-brother-v which</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_61_yehuda_tamar — Judah and Tamar: the pledge that speaks (38:1-30) [frozen]
+
+final state: WORLD=[&#x27;er&#x27;, &#x27;onan&#x27;, &#x27;paretz&#x27;, &#x27;shela&#x27;, &#x27;zarach&#x27;] (+0 presupposed) | REGISTRY={&#x27;er&#x27;: &#x27;er&#x27;, &#x27;onan&#x27;: &#x27;onan&#x27;, &#x27;shela&#x27;: &#x27;shela&#x27;, &#x27;paretz&#x27;: &#x27;paretz&#x27;, &#x27;zarach&#x27;: &#x27;zarach&#x27;} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — after STEP_Gn_38_1 — the descent to Adullam
+    וַֽיְהִי֙ בָּעֵ֣ת הַהִ֔וא וַיֵּ֥רֶד (va-yehi ba-et ha-hiv va-yered)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Gn_38_2 — the Canaanite wife
+    וַיַּרְא שָׁ֧ם יְהוּדָ֛ה בַּת (va-yar-sham yehuda bat-)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Gn_38_3 — the father names Er
+    וַתַּ֖הַר וַתֵּ֣לֶד בֵּ֑ן וַיִּקְרָ֥א (va-tahar va-teled ben va-yiqra)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY 1 writes  (writes=1 names=[&#x27;er&#x27;])
+
+=== S4 — after STEP_Gn_38_4 — the mother names Onan
+    וַתַּ֥הַר ע֖וֹד וַתֵּ֣לֶד בֵּ֑ן (va-tahar od va-teled ben)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY 2 writes  (writes=2 names=[&#x27;er&#x27;, &#x27;onan&#x27;])
+
+=== S5 — after STEP_Gn_38_5 — the mother names Shelah
+    וַתֹּ֤סֶף עוֹד֙ וַתֵּ֣לֶד בֵּ֔ן (va-tosef od va-teled ben)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY 3 writes  (writes=3 names=[&#x27;er&#x27;, &#x27;onan&#x27;, &#x27;shela&#x27;])
+
+=== S6 — after STEP_Gn_38_6 — Tamar taken for Er
+    וַיִּקַּ֧ח יְהוּדָ֛ה אִשָּׁ֖ה לְעֵ֣ר (va-yiqach yehuda isha le-er)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY 3 writes  (writes=3 names=[&#x27;er&#x27;, &#x27;onan&#x27;, &#x27;shela&#x27;])
+
+=== S7 — after STEP_Gn_38_7 — Er dies
+    וַיְהִ֗י עֵ֚ר בְּכ֣וֹר יְהוּדָ֔ה (va-yehi er bekhor yehuda)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY 3 writes  (writes=3 names=[&#x27;er&#x27;, &#x27;onan&#x27;, &#x27;shela&#x27;])
+
+=== S8 — after STEP_Gn_38_8 — the levirate demand
+    וַיֹּ֤אמֶר יְהוּדָה֙ לְאוֹנָ֔ן בֹּ֛א (va-yomer yehuda le-onan bo)
+    PASS  LET(haqem_zera_le_achikha) pushed and OPEN  (queue=[&#x27;haqem_zera_le_achikha&#x27;])
+    PASS  REGISTRY 3 writes  (writes=3 names=[&#x27;er&#x27;, &#x27;onan&#x27;, &#x27;shela&#x27;])
+
+=== S9 — after STEP_Gn_38_9 — the subversion
+    וַיֵּ֣דַע אוֹנָ֔ן כִּ֛י לֹּ֥א (va-yeda onan ki lo)
+    PASS  LET(haqem_zera_le_achikha) pushed and OPEN  (queue=[&#x27;haqem_zera_le_achikha&#x27;])
+    PASS  REGISTRY 3 writes  (writes=3 names=[&#x27;er&#x27;, &#x27;onan&#x27;, &#x27;shela&#x27;])
+
+=== S10 — after STEP_Gn_38_10 — Onan dies
+    וַיֵּ֛רַע בְּעֵינֵ֥י יְהוָ֖ה אֲשֶׁ֣ר (va-yera be-ene YHWH asher)
+    PASS  LET(haqem_zera_le_achikha) pushed and OPEN  (queue=[&#x27;haqem_zera_le_achikha&#x27;])
+    PASS  REGISTRY 3 writes  (writes=3 names=[&#x27;er&#x27;, &#x27;onan&#x27;, &#x27;shela&#x27;])
+
+=== S11 — after STEP_Gn_38_11 — the widow seated
+    וַיֹּ֣אמֶר יְהוּדָה֩ לְתָמָ֨ר כַּלָּת֜וֹ (va-yomer yehuda le-tamar kalat-o)
+    PASS  LET(haqem_zera_le_achikha) pushed and OPEN  (queue=[&#x27;haqem_zera_le_achikha&#x27;])
+    PASS  LET(shevi_almana_vet_avikh) pushed then satisfied in the SAME verse  (pushed=Gen.38.11 satisfied=Gen.38.11)
+
+=== S12 — after STEP_Gn_38_12 — the time passes
+    וַיִּרְבּוּ֙ הַיָּמִ֔ים וַתָּ֖מָת בַּת (va-yirbu ha-yamim va-tamat bat-)
+    PASS  LET(haqem_zera_le_achikha) pushed and OPEN  (queue=[&#x27;haqem_zera_le_achikha&#x27;])
+    PASS  REGISTRY 3 writes  (writes=3 names=[&#x27;er&#x27;, &#x27;onan&#x27;, &#x27;shela&#x27;])
+
+=== S13 — after STEP_Gn_38_13 — the telling
+    וַיֻּגַּ֥ד לְתָמָ֖ר לֵאמֹ֑ר הִנֵּ֥ה (va-yugad le-tamar le-mor hine)
+    PASS  LET(haqem_zera_le_achikha) pushed and OPEN  (queue=[&#x27;haqem_zera_le_achikha&#x27;])
+    PASS  REGISTRY 3 writes  (writes=3 names=[&#x27;er&#x27;, &#x27;onan&#x27;, &#x27;shela&#x27;])
+
+=== S14 — after STEP_Gn_38_14 — the garments swapped
+    וַתָּסַר֩ בִּגְדֵ֨י אַלְמְנוּתָ֜הּ מֵֽעָלֶ֗יהָ (va-tasar bigde almnuta-ה me-ale-ha)
+    PASS  LET(haqem_zera_le_achikha) pushed and OPEN  (queue=[&#x27;haqem_zera_le_achikha&#x27;])
+    PASS  REGISTRY 3 writes  (writes=3 names=[&#x27;er&#x27;, &#x27;onan&#x27;, &#x27;shela&#x27;])
+
+=== S15 — after STEP_Gn_38_15 — the misreading
+    וַיִּרְאֶ֣הָ יְהוּדָ֔ה וַֽיַּחְשְׁבֶ֖הָ לְזוֹנָ֑ה (va-yire-ha yehuda va-yachshve-ha le-zona)
+    PASS  LET(haqem_zera_le_achikha) pushed and OPEN  (queue=[&#x27;haqem_zera_le_achikha&#x27;])
+    PASS  REGISTRY 3 writes  (writes=3 names=[&#x27;er&#x27;, &#x27;onan&#x27;, &#x27;shela&#x27;])
+
+=== S16 — after STEP_Gn_38_16 — the roadside request
+    וַיֵּ֨ט אֵלֶ֜יהָ אֶל הַדֶּ֗רֶךְ (va-yet ele-ha el-ha-derekh)
+    PASS  LET(haqem_zera_le_achikha) pushed and OPEN  (queue=[&#x27;haqem_zera_le_achikha&#x27;, &#x27;hava_avo_elayikh&#x27;])
+    PASS  LET(hava_avo_elayikh) pushed and OPEN  (queue=[&#x27;haqem_zera_le_achikha&#x27;, &#x27;hava_avo_elayikh&#x27;])
+
+=== S17 — after STEP_Gn_38_17 — the kid and the pledge asked
+    וַיֹּ֕אמֶר אָנֹכִ֛י אֲשַׁלַּ֥ח גְּדִֽי (va-yomer anokhi ashalach gedi-)
+    PASS  LET(haqem_zera_le_achikha) pushed and OPEN  (queue=[&#x27;haqem_zera_le_achikha&#x27;, &#x27;hava_avo_elayikh&#x27;])
+    PASS  LET(hava_avo_elayikh) pushed and OPEN  (queue=[&#x27;haqem_zera_le_achikha&#x27;, &#x27;hava_avo_elayikh&#x27;])
+
+=== S18 — after STEP_Gn_38_18 — the three pledges and the conception
+    וַיֹּ֗אמֶר מָ֣ה הָֽעֵרָבוֹן֮ אֲשֶׁ֣ר (va-yomer ma ha-eravon asher)
+    PASS  LET(haqem_zera_le_achikha) pushed and OPEN  (queue=[&#x27;haqem_zera_le_achikha&#x27;])
+    PASS  REGISTRY 3 writes  (writes=3 names=[&#x27;er&#x27;, &#x27;onan&#x27;, &#x27;shela&#x27;])
+
+=== S19 — after STEP_Gn_38_19 — the garments returned
+    וַתָּ֣קָם וַתֵּ֔לֶךְ וַתָּ֥סַר צְעִיפָ֖הּ (va-taqam va-telekh va-tasar tzeifa-ה)
+    PASS  LET(haqem_zera_le_achikha) pushed and OPEN  (queue=[&#x27;haqem_zera_le_achikha&#x27;])
+    PASS  REGISTRY 3 writes  (writes=3 names=[&#x27;er&#x27;, &#x27;onan&#x27;, &#x27;shela&#x27;])
+
+=== S20 — after STEP_Gn_38_20 — the kid sent, she is not found
+    וַיִּשְׁלַ֨ח יְהוּדָ֜ה אֶת גְּדִ֣י (va-yishlach yehuda et-gedi)
+    PASS  LET(haqem_zera_le_achikha) pushed and OPEN  (queue=[&#x27;haqem_zera_le_achikha&#x27;])
+    PASS  REGISTRY 3 writes  (writes=3 names=[&#x27;er&#x27;, &#x27;onan&#x27;, &#x27;shela&#x27;])
+
+=== S21 — after STEP_Gn_38_21 — the asking
+    וַיִּשְׁאַ֞ל אֶת אַנְשֵׁ֤י מְקֹמָהּ֙ (va-yishal et-anshe meqoma-ה)
+    PASS  LET(haqem_zera_le_achikha) pushed and OPEN  (queue=[&#x27;haqem_zera_le_achikha&#x27;])
+    PASS  REGISTRY 3 writes  (writes=3 names=[&#x27;er&#x27;, &#x27;onan&#x27;, &#x27;shela&#x27;])
+
+=== S22 — after STEP_Gn_38_22 — the report back
+    וַיָּ֨שָׁב֙ אֶל יְהוּדָ֔ה וַיֹּ֖אמֶר (va-yashav el-yehuda va-yomer)
+    PASS  LET(haqem_zera_le_achikha) pushed and OPEN  (queue=[&#x27;haqem_zera_le_achikha&#x27;])
+    PASS  REGISTRY 3 writes  (writes=3 names=[&#x27;er&#x27;, &#x27;onan&#x27;, &#x27;shela&#x27;])
+
+=== S23 — after STEP_Gn_38_23 — lest we be scorned
+    וַיֹּ֤אמֶר יְהוּדָה֙ תִּֽקַּֽח לָ֔הּ (va-yomer yehuda tiqach-la-ה)
+    PASS  LET(haqem_zera_le_achikha) pushed and OPEN  (queue=[&#x27;haqem_zera_le_achikha&#x27;])
+    PASS  REGISTRY 3 writes  (writes=3 names=[&#x27;er&#x27;, &#x27;onan&#x27;, &#x27;shela&#x27;])
+
+=== S24 — after STEP_Gn_38_24 — the verdict
+    וַיְהִ֣י כְּמִשְׁלֹ֣שׁ חֳדָשִׁ֗ים וַיֻּגַּ֨ד (va-yehi ke-mi-shelosh chodashim va-yugad)
+    PASS  LET(haqem_zera_le_achikha) pushed and OPEN  (queue=[&#x27;haqem_zera_le_achikha&#x27;, &#x27;hotziu_ha_ve_tisaref&#x27;])
+    PASS  LET(hotziu_ha_ve_tisaref) pushed and OPEN  (queue=[&#x27;haqem_zera_le_achikha&#x27;, &#x27;hotziu_ha_ve_tisaref&#x27;])
+
+=== S25 — after STEP_Gn_38_25 — haker-na returns
+    הִ֣וא מוּצֵ֗את וְהִ֨יא שָׁלְחָ֤ה (hiv mutzet ve-hi shalcha)
+    PASS  LET(haqem_zera_le_achikha) pushed and OPEN  (queue=[&#x27;haqem_zera_le_achikha&#x27;, &#x27;hotziu_ha_ve_tisaref&#x27;, &#x27;haker_na_le_mi&#x27;])
+    PASS  LET(hotziu_ha_ve_tisaref) pushed and OPEN  (queue=[&#x27;haqem_zera_le_achikha&#x27;, &#x27;hotziu_ha_ve_tisaref&#x27;, &#x27;haker_na_le_mi&#x27;])
+    PASS  LET(haker_na_le_mi) pushed and OPEN  (queue=[&#x27;haqem_zera_le_achikha&#x27;, &#x27;hotziu_ha_ve_tisaref&#x27;, &#x27;haker_na_le_mi&#x27;])
+
+=== S26 — after STEP_Gn_38_26 — the recognition and confession
+    וַיַּכֵּ֣ר יְהוּדָ֗ה וַיֹּ֨אמֶר֙ צָֽדְקָ֣ה (va-yaker yehuda va-yomer tzadqa)
+    PASS  LET(haqem_zera_le_achikha) pushed and OPEN  (queue=[&#x27;haqem_zera_le_achikha&#x27;, &#x27;hotziu_ha_ve_tisaref&#x27;])
+    PASS  LET(hotziu_ha_ve_tisaref) pushed and OPEN  (queue=[&#x27;haqem_zera_le_achikha&#x27;, &#x27;hotziu_ha_ve_tisaref&#x27;])
+
+=== S27 — after STEP_Gn_38_27 — the twins discovered
+    וַיְהִ֖י בְּעֵ֣ת לִדְתָּ֑הּ וְהִנֵּ֥ה (va-yehi be-et lidta-ה ve-hine)
+    PASS  LET(hotziu_ha_ve_tisaref) pushed and OPEN  (queue=[&#x27;hotziu_ha_ve_tisaref&#x27;])
+    PASS  REGISTRY 3 writes  (writes=3 names=[&#x27;er&#x27;, &#x27;onan&#x27;, &#x27;shela&#x27;])
+
+=== S28 — after STEP_Gn_38_28 — the scarlet thread
+    וַיְהִ֥י בְלִדְתָּ֖הּ וַיִּתֶּן יָ֑ד (va-yehi ve-lidta-ה va-yiten-yad)
+    PASS  LET(hotziu_ha_ve_tisaref) pushed and OPEN  (queue=[&#x27;hotziu_ha_ve_tisaref&#x27;])
+    PASS  REGISTRY 3 writes  (writes=3 names=[&#x27;er&#x27;, &#x27;onan&#x27;, &#x27;shela&#x27;])
+
+=== S29 — after STEP_Gn_38_29 — Peretz named
+    וַיְהִ֣י כְּמֵשִׁ֣יב יָד֗וֹ וְהִנֵּה֙ (va-yehi ke-meshiv yad-o ve-hine)
+    PASS  LET(hotziu_ha_ve_tisaref) pushed and OPEN  (queue=[&#x27;hotziu_ha_ve_tisaref&#x27;])
+    PASS  REGISTRY 4 writes  (writes=4 names=[&#x27;er&#x27;, &#x27;onan&#x27;, &#x27;paretz&#x27;, &#x27;shela&#x27;])
+
+=== S30 — after STEP_Gn_38_30 — Zerach named
+    וְאַחַר֙ יָצָ֣א אָחִ֔יו אֲשֶׁ֥ר (ve-achar yatza achi-v asher)
+    PASS  LET(hotziu_ha_ve_tisaref) pushed and OPEN  (queue=[&#x27;hotziu_ha_ve_tisaref&#x27;])
+    PASS  REGISTRY 5 writes  (writes=5 names=[&#x27;er&#x27;, &#x27;onan&#x27;, &#x27;paretz&#x27;, &#x27;shela&#x27;, &#x27;zarach&#x27;])
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_61_yehuda_tamar.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_61_yehuda_tamar — 38:1-30
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_61_yehuda_tamar.yaml) is CANONICAL (Pre-Code);
+# this file is a derived, runnable rendering. Do not edit — regenerate. The
+# assertion block at the bottom is baked from the Stage D interpreter&#x27;s
+# actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Judah and Tamar: the pledge that speaks (38:1-30)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_61_yehuda_tamar&quot;)
+
+# -------------------------- Gen.38.1 · THE_DESCENT_TO_ADULLAM --------------
+# וַיְהִי בָּעֵת הַהִוא וַיֵּרֶד יְהוּדָה מֵאֵת אֶחָיו וַיֵּט עַד־אִישׁ
+# עֲדֻלָּמִי וּשְׁמוֹ חִירָה
+# &quot;[EN-AID] And it came to pass at that time that Judah went down from his
+# brothers, and turned aside to an Adullamite man, and his name was Hirah.&quot;
+m.step(&quot;Gen.38.1&quot;)
+# ‹וַיְהִי בָּעֵת הַהִוא וַיֵּרֶד יְהוּדָה מֵאֵת אֶחָיו› (“and-be in-time
+# that and-go-down Judah from-with brother-him/its”) — fact holds: yarad-
+# from-with-echay-v(Judah)
+m.fact(&quot;yarad_me_et_echay_v(yehuda)&quot;)
+
+# -------------------------- Gen.38.2 · THE_CANAANITE_WIFE ------------------
+# וַיַּרְא־שָׁם יְהוּדָה בַּת־אִישׁ כְּנַעֲנִי וּשְׁמוֹ שׁוּעַ וַיִּקָּחֶהָ
+# וַיָּבֹא אֵלֶיהָ
+# &quot;[EN-AID] And Judah saw there the daughter of a Canaanite man, and his
+# name was Shua; and he took her and came to her.&quot;
+m.step(&quot;Gen.38.2&quot;)
+# ‹וַיַּרְא־שָׁם יְהוּדָה בַּת־אִישׁ כְּנַעֲנִי וּשְׁמוֹ שׁוּעַ› (“and-see
+# there Judah daughter man Kenaanite and-name-him/its Shua”) — fact holds:
+# laqach-daughter-Shua(Judah)
+m.fact(&quot;laqach_bat_shua(yehuda)&quot;)
+
+# -------------------------- Gen.38.3 · THE_FATHER_NAMES_ER -----------------
+# וַתַּהַר וַתֵּלֶד בֵּן וַיִּקְרָא אֶת־שְׁמוֹ עֵר
+# &quot;[EN-AID] And she conceived and bore a son; and he called his name Er.&quot;
+m.step(&quot;Gen.38.3&quot;)
+# ‹וַתַּהַר וַתֵּלֶד בֵּן› (“and-be-pregnant and-bear-young son”) — the
+# world gains: Er
+m.install(&quot;er&quot;)
+# ‹וַיִּקְרָא אֶת־שְׁמוֹ עֵר› (“and-call obj-marker name-him/its Er”) —
+# named: Er := Er
+m.name(&quot;er&quot;, &quot;er&quot;)
+
+# -------------------------- Gen.38.4 · THE_MOTHER_NAMES_ONAN ---------------
+# וַתַּהַר עוֹד וַתֵּלֶד בֵּן וַתִּקְרָא אֶת־שְׁמוֹ אוֹנָן
+# &quot;[EN-AID] And she conceived again and bore a son; and she called his name
+# Onan.&quot;
+m.step(&quot;Gen.38.4&quot;)
+# ‹וַתַּהַר עוֹד וַתֵּלֶד בֵּן› (“and-be-pregnant still/again and-bear-young
+# son”) — the world gains: Onan
+m.install(&quot;onan&quot;)
+# ‹וַתִּקְרָא אֶת־שְׁמוֹ אוֹנָן› (“and-call obj-marker name-him/its Onan”) —
+# named: Onan := Onan
+m.name(&quot;onan&quot;, &quot;onan&quot;)
+
+# -------------------------- Gen.38.5 · THE_MOTHER_NAMES_SHELAH -------------
+# וַתֹּסֶף עוֹד וַתֵּלֶד בֵּן וַתִּקְרָא אֶת־שְׁמוֹ שֵׁלָה וְהָיָה בִכְזִיב
+# בְּלִדְתָּהּ אֹתוֹ
+# &quot;[EN-AID] And she yet again bore a son, and she called his name Shelah;
+# and he was at Cheziv when she bore him.&quot;
+m.step(&quot;Gen.38.5&quot;)
+# ‹וַתֹּסֶף עוֹד וַתֵּלֶד בֵּן› (“and-add still/again and-bear-young son”) —
+# the world gains: Shelah
+m.install(&quot;shela&quot;)
+# ‹וַתִּקְרָא אֶת־שְׁמוֹ שֵׁלָה› (“and-call obj-marker name-him/its Shelah”)
+# — named: Shelah := Shelah
+m.name(&quot;shela&quot;, &quot;shela&quot;)
+
+# -------------------------- Gen.38.6 · TAMAR_TAKEN_FOR_ER ------------------
+# וַיִּקַּח יְהוּדָה אִשָּׁה לְעֵר בְּכוֹרוֹ וּשְׁמָהּ תָּמָר
+# &quot;[EN-AID] And Judah took a wife for Er his firstborn, and her name was
+# Tamar.&quot;
+m.step(&quot;Gen.38.6&quot;)
+# ‹וַיִּקַּח יְהוּדָה אִשָּׁה לְעֵר בְּכוֹרוֹ› (“and-take Judah woman to-Er
+# firstborn-him/its”) — fact holds: laqach-woman-to-Er-bekhoro(Judah, Tamar)
+m.fact(&quot;laqach_isha_le_er_bekhoro(yehuda, tamar)&quot;)
+
+# -------------------------- Gen.38.7 · ER_DIES -----------------------------
+# וַיְהִי עֵר בְּכוֹר יְהוּדָה רַע בְּעֵינֵי יְהוָה וַיְמִתֵהוּ יְהוָה
+# &quot;[EN-AID] And Er, Judah&#x27;s firstborn, was evil in the eyes of the LORD; and
+# the LORD put him to death.&quot;
+m.step(&quot;Gen.38.7&quot;)
+# ‹וַיְהִי עֵר בְּכוֹר יְהוּדָה רַע בְּעֵינֵי יְהוָה וַיְמִתֵהוּ יְהוָה›
+# (“and-be Er firstborn Judah bad in-eye YHWH and-die-him/its YHWH”) — fact
+# holds: bad-in-eye-the-LORD-and-yemitehu(Er)
+m.fact(&quot;ra_be_ene_YHWH_va_yemitehu(er)&quot;)
+
+# -------------------------- Gen.38.8 · THE_LEVIRATE_DEMAND -----------------
+# וַיֹּאמֶר יְהוּדָה לְאוֹנָן בֹּא אֶל־אֵשֶׁת אָחִיךָ וְיַבֵּם אֹתָהּ
+# וְהָקֵם זֶרַע לְאָחִיךָ
+# &quot;[EN-AID] And Judah said to Onan: Come to your brother&#x27;s wife, and perform
+# the brother&#x27;s duty to her, and raise up seed for your brother.&quot;
+m.step(&quot;Gen.38.8&quot;)
+# ‹בֹּא אֶל־אֵשֶׁת אָחִיךָ וְיַבֵּם אֹתָהּ וְהָקֵם זֶרַע לְאָחִיךָ›
+# (“come/bring to woman brother-you/your and-marry-a-brother&#x27;s-widow obj-
+# marker-her/its and-arise seed to-brother-you/your”) — Judah speaks a
+# demand — LET: arise-seed-to-your-brother
+m.declare(&quot;yehuda&quot;, &quot;LET&quot;,
+          &quot;haqem_zera_le_achikha&quot;)
+
+# -------------------------- Gen.38.9 · THE_SUBVERSION ----------------------
+# וַיֵּדַע אוֹנָן כִּי לֹּא לוֹ יִהְיֶה הַזָּרַע וְהָיָה אִם־בָּא אֶל־אֵשֶׁת
+# אָחִיו וְשִׁחֵת אַרְצָה לְבִלְתִּי נְתָן־זֶרַע לְאָחִיו
+# &quot;[EN-AID] And Onan knew that the seed would not be his; and it was, when
+# he came to his brother&#x27;s wife, he wasted it to the ground, so as not to
+# give seed to his brother.&quot;
+m.step(&quot;Gen.38.9&quot;)
+# ‹וְשִׁחֵת אַרְצָה לְבִלְתִּי נְתָן־זֶרַע לְאָחִיו› (“and-decay earth-ward
+# to-failure-of set seed to-brother-him/its”) — fact holds: decay-artza-so-
+# as-not-set-seed(Onan)
+m.fact(&quot;shichet_artza_levilti_netan_zera(onan)&quot;)
+
+# -------------------------- Gen.38.10 · ONAN_DIES --------------------------
+# וַיֵּרַע בְּעֵינֵי יְהוָה אֲשֶׁר עָשָׂה וַיָּמֶת גַּם־אֹתוֹ
+# &quot;[EN-AID] And what he did was evil in the eyes of the LORD; and He put him
+# to death also.&quot;
+m.step(&quot;Gen.38.10&quot;)
+# ‹וַיָּמֶת גַּם־אֹתוֹ› (“and-die also obj-marker-him/its”) — fact holds:
+# and-die-also-it(the-LORD)
+m.fact(&quot;va_yamet_gam_oto(YHWH)&quot;)
+
+# -------------------------- Gen.38.11 · THE_WIDOW_SEATED -------------------
+# וַיֹּאמֶר יְהוּדָה לְתָמָר כַּלָּתוֹ שְׁבִי אַלְמָנָה בֵית־אָבִיךְ
+# עַד־יִגְדַּל שֵׁלָה בְנִי כִּי אָמַר פֶּן־יָמוּת גַּם־הוּא כְּאֶחָיו
+# וַתֵּלֶךְ תָּמָר וַתֵּשֶׁב בֵּית אָבִיהָ
+# &quot;[EN-AID] And Judah said to Tamar his daughter-in-law: Sit as a widow in
+# your father&#x27;s house until Shelah my son grows — for he said, lest he too
+# die like his brothers. And Tamar went and sat in her father&#x27;s house.&quot;
+m.step(&quot;Gen.38.11&quot;)
+# ‹שְׁבִי אַלְמָנָה בֵית־אָבִיךְ› (“dwell/sit widow house father-you/your”)
+# — Judah speaks a demand — LET: dwell/sit-widow-house-avikh
+m.declare(&quot;yehuda&quot;, &quot;LET&quot;,
+          &quot;shevi_almana_vet_avikh&quot;)
+# ‹וַתֵּלֶךְ תָּמָר וַתֵּשֶׁב בֵּית אָבִיהָ› (“and-go Tamar and-dwell/sit
+# house father-her/its”) — demand settled (popped from the queue):
+# dwell/sit-widow-house-avikh
+m.result(&quot;shevi_almana_vet_avikh&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Gen.38.12 · THE_TIME_PASSES --------------------
+# וַיִּרְבּוּ הַיָּמִים וַתָּמָת בַּת־שׁוּעַ אֵשֶׁת־יְהוּדָה וַיִּנָּחֶם
+# יְהוּדָה וַיַּעַל עַל־גֹּזֲזֵי צֹאנוֹ הוּא וְחִירָה רֵעֵהוּ הָעֲדֻלָּמִי
+# תִּמְנָתָה
+# &quot;[EN-AID] And the days multiplied, and the daughter of Shua, Judah&#x27;s wife,
+# died; and Judah was comforted, and went up to his sheepshearers, he and
+# Hirah his friend the Adullamite, to Timnah.&quot;
+m.step(&quot;Gen.38.12&quot;)
+# ‹וַיִּרְבּוּ הַיָּמִים וַתָּמָת בַּת־שׁוּעַ אֵשֶׁת־יְהוּדָה וַיִּנָּחֶם
+# יְהוּדָה› (“and-multiply the-day and-die daughter Shua woman Judah and-
+# sigh Judah”) — fact holds: and-die-daughter-Shua-and-sigh(Judah)
+m.fact(&quot;va_tamat_bat_shua_va_yinachem(yehuda)&quot;)
+
+# -------------------------- Gen.38.13 · THE_TELLING ------------------------
+# וַיֻּגַּד לְתָמָר לֵאמֹר הִנֵּה חָמִיךְ עֹלֶה תִמְנָתָה לָגֹז צֹאנוֹ
+# &quot;[EN-AID] And it was told to Tamar, saying: Behold, your father-in-law
+# goes up to Timnah to shear his flock.&quot;
+m.step(&quot;Gen.38.13&quot;)
+# ‹וַיֻּגַּד לְתָמָר לֵאמֹר› (“and-tell to-Tamar to-say”) — fact holds:
+# hugad-to-Tamar-chamikh-go-up-timnata
+m.fact(&quot;hugad_le_tamar_chamikh_ole_timnata&quot;)
+
+# -------------------------- Gen.38.14 · THE_GARMENTS_SWAPPED ---------------
+# וַתָּסַר בִּגְדֵי אַלְמְנוּתָהּ מֵעָלֶיהָ וַתְּכַס בַּצָּעִיף
+# וַתִּתְעַלָּף וַתֵּשֶׁב בְּפֶתַח עֵינַיִם אֲשֶׁר עַל־דֶּרֶךְ תִּמְנָתָה
+# כִּי רָאֲתָה כִּי־גָדַל שֵׁלָה וְהִוא לֹא־נִתְּנָה לוֹ לְאִשָּׁה
+# &quot;[EN-AID] And she removed her widow&#x27;s garments from upon her, and covered
+# herself with the veil and wrapped herself, and sat at the opening of Enaim
+# which is on the road to Timnah — for she saw that Shelah was grown, and
+# she had not been given to him as a wife.&quot;
+m.step(&quot;Gen.38.14&quot;)
+# ‹כִּי רָאֲתָה כִּי־גָדַל שֵׁלָה וְהִוא לֹא־נִתְּנָה לוֹ לְאִשָּׁה› (“that
+# see that be-large Shelah and-he/it not set to-him/its to-woman”) — fact
+# holds: yashva-in-opening-Enaim-that-be-large-Shelah(Tamar)
+m.fact(&quot;yashva_be_fetach_enayim_ki_gadal_shela(tamar)&quot;)
+
+# -------------------------- Gen.38.15 · THE_MISREADING ---------------------
+# וַיִּרְאֶהָ יְהוּדָה וַיַּחְשְׁבֶהָ לְזוֹנָה כִּי כִסְּתָה פָּנֶיהָ
+# &quot;[EN-AID] And Judah saw her, and thought her a harlot, for she had covered
+# her face.&quot;
+m.step(&quot;Gen.38.15&quot;)
+# ‹וַיִּרְאֶהָ יְהוּדָה וַיַּחְשְׁבֶהָ לְזוֹנָה› (“and-see-her/its Judah
+# and-plait-her/its to-commit-adultery”) — fact holds: and-yachsheveha-to-
+# commit-adultery(Judah)
+m.fact(&quot;va_yachsheveha_le_zona(yehuda)&quot;)
+
+# -------------------------- Gen.38.16 · THE_ROADSIDE_REQUEST ---------------
+# וַיֵּט אֵלֶיהָ אֶל־הַדֶּרֶךְ וַיֹּאמֶר הָבָה־נָּא אָבוֹא אֵלַיִךְ כִּי לֹא
+# יָדַע כִּי כַלָּתוֹ הִוא וַתֹּאמֶר מַה־תִּתֶּן־לִּי כִּי תָבוֹא אֵלָי
+# &quot;[EN-AID] And he turned to her by the road and said: Come now, let me come
+# to you — for he did not know that she was his daughter-in-law. And she
+# said: What will you give me, that you come to me?&quot;
+m.step(&quot;Gen.38.16&quot;)
+# ‹וַיֹּאמֶר הָבָה־נָּא אָבוֹא אֵלַיִךְ› (“and-say give-ward please
+# come/bring to-you/your”) — Judah speaks a demand — LET: hava-come/bring-
+# elayikh
+m.declare(&quot;yehuda&quot;, &quot;LET&quot;,
+          &quot;hava_avo_elayikh&quot;)
+
+# -------------------------- Gen.38.17 · THE_KID_AND_THE_PLEDGE_ASKED -------
+# וַיֹּאמֶר אָנֹכִי אֲשַׁלַּח גְּדִי־עִזִּים מִן־הַצֹּאן וַתֹּאמֶר
+# אִם־תִּתֵּן עֵרָבוֹן עַד שָׁלְחֶךָ
+# &quot;[EN-AID] And he said: I will send a kid of the goats from the flock. And
+# she said: If you give a pledge until you send it.&quot;
+m.step(&quot;Gen.38.17&quot;)
+# ‹וַיֹּאמֶר אָנֹכִי אֲשַׁלַּח גְּדִי־עִזִּים מִן־הַצֹּאן› (“and-say send
+# young-goat she-goat from the-flock”) — fact holds: young-goat-she-goat-
+# and-pawn(shrub)
+m.fact(&quot;gedi_izim_ve_eravon(siach)&quot;)
+
+# -------------------------- Gen.38.18 · THE_THREE_PLEDGES_AND_THE_CONCEPTION -
+# וַיֹּאמֶר מָה הָעֵרָבוֹן אֲשֶׁר אֶתֶּן־לָּךְ וַתֹּאמֶר חֹתָמְךָ
+# וּפְתִילֶךָ וּמַטְּךָ אֲשֶׁר בְּיָדֶךָ וַיִּתֶּן־לָּהּ וַיָּבֹא אֵלֶיהָ
+# וַתַּהַר לוֹ
+# &quot;[EN-AID] And he said: What is the pledge that I shall give you? And she
+# said: Your seal and your cord and your staff that is in your hand. And he
+# gave them to her, and came to her, and she conceived by him.&quot;
+m.step(&quot;Gen.38.18&quot;)
+# ‹וַיִּתֶּן־לָּהּ וַיָּבֹא אֵלֶיהָ וַתַּהַר לוֹ› (“and-set to-her/its and-
+# come/bring to-her/its and-be-pregnant to-him/its”) — demand settled
+# (popped from the queue): hava-come/bring-elayikh
+m.result(&quot;hava_avo_elayikh&quot;, tmark=&quot;t1&quot;)
+# ‹וַתֹּאמֶר חֹתָמְךָ וּפְתִילֶךָ וּמַטְּךָ אֲשֶׁר בְּיָדֶךָ› (“and-say
+# signature-ring-you/your and-twine-you/your and-staff/tribe-you/your which
+# in-hand-you/your”) — fact holds: chotam-petil-staff/tribe-in-hand-Tamar
+m.fact(&quot;chotam_petil_mate_be_yad_tamar&quot;)
+
+# -------------------------- Gen.38.19 · THE_GARMENTS_RETURNED --------------
+# וַתָּקָם וַתֵּלֶךְ וַתָּסַר צְעִיפָהּ מֵעָלֶיהָ וַתִּלְבַּשׁ בִּגְדֵי
+# אַלְמְנוּתָהּ
+# &quot;[EN-AID] And she arose and went, and removed her veil from upon her, and
+# put on the garments of her widowhood.&quot;
+m.step(&quot;Gen.38.19&quot;)
+# ‹וַתָּקָם וַתֵּלֶךְ וַתָּסַר צְעִיפָהּ מֵעָלֶיהָ› (“and-arise and-go and-
+# turn-aside veil-her/its from-over-her/its”) — fact holds: shava-to-vigde-
+# almenuta(Tamar)
+m.fact(&quot;shava_le_vigde_almenuta(tamar)&quot;)
+
+# -------------------------- Gen.38.20 · THE_KID_SENT_SHE_IS_NOT_FOUND ------
+# וַיִּשְׁלַח יְהוּדָה אֶת־גְּדִי הָעִזִּים בְּיַד רֵעֵהוּ הָעֲדֻלָּמִי
+# לָקַחַת הָעֵרָבוֹן מִיַּד הָאִשָּׁה וְלֹא מְצָאָהּ
+# &quot;[EN-AID] And Judah sent the kid of the goats by the hand of his friend
+# the Adullamite, to take the pledge from the woman&#x27;s hand — and he did not
+# find her.&quot;
+m.step(&quot;Gen.38.20&quot;)
+# ‹וַיִּשְׁלַח יְהוּדָה אֶת־גְּדִי הָעִזִּים בְּיַד רֵעֵהוּ הָעֲדֻלָּמִי›
+# (“and-send Judah obj-marker young-goat the-she-goat in-hand associate-
+# him/its the-Adullamite”) — fact holds: shalach-the-young-goat-and-not-
+# metzaa(Hirah)
+m.fact(&quot;shalach_ha_gedi_ve_lo_metzaa(chira)&quot;)
+
+# -------------------------- Gen.38.21 · THE_ASKING -------------------------
+# וַיִּשְׁאַל אֶת־אַנְשֵׁי מְקֹמָהּ לֵאמֹר אַיֵּה הַקְּדֵשָׁה הִוא
+# בָעֵינַיִם עַל־הַדָּרֶךְ וַיֹּאמְרוּ לֹא־הָיְתָה בָזֶה קְדֵשָׁה
+# &quot;[EN-AID] And he asked the men of her place, saying: Where is the
+# consecrated one, she at Enaim by the road? And they said: There was no
+# consecrated one here.&quot;
+m.step(&quot;Gen.38.21&quot;)
+# ‹לֵאמֹר אַיֵּה הַקְּדֵשָׁה הִוא בָעֵינַיִם עַל־הַדָּרֶךְ› (“to-say where?
+# the-female-devotee he/it in-Enaim over the-way/road”) — fact holds: ayeh-
+# the-female-devotee-not-be(man-meqoma)
+m.fact(&quot;ayeh_ha_qedesha_lo_hayta(anshe_meqoma)&quot;)
+
+# -------------------------- Gen.38.22 · THE_REPORT_BACK --------------------
+# וַיָּשָׁב אֶל־יְהוּדָה וַיֹּאמֶר לֹא מְצָאתִיהָ וְגַם אַנְשֵׁי הַמָּקוֹם
+# אָמְרוּ לֹא־הָיְתָה בָזֶה קְדֵשָׁה
+# &quot;[EN-AID] And he returned to Judah and said: I have not found her; and
+# also the men of the place said, There was no consecrated one here.&quot;
+m.step(&quot;Gen.38.22&quot;)
+# ‹וַיָּשָׁב אֶל־יְהוּדָה וַיֹּאמֶר לֹא מְצָאתִיהָ› (“and-return to Judah
+# and-say not find-her/its”) — fact holds: not-metzatiha-and-also-man-the-
+# place(Hirah)
+m.fact(&quot;lo_metzatiha_ve_gam_anshe_ha_maqom(chira)&quot;)
+
+# -------------------------- Gen.38.23 · LEST_WE_BE_SCORNED -----------------
+# וַיֹּאמֶר יְהוּדָה תִּקַּח־לָהּ פֶּן נִהְיֶה לָבוּז הִנֵּה שָׁלַחְתִּי
+# הַגְּדִי הַזֶּה וְאַתָּה לֹא מְצָאתָהּ
+# &quot;[EN-AID] And Judah said: Let her keep them, lest we become a scorn;
+# behold, I sent this kid, and you did not find her.&quot;
+m.step(&quot;Gen.38.23&quot;)
+# ‹תִּקַּח־לָהּ פֶּן נִהְיֶה לָבוּז› (“take to-her/its lest be to-
+# disrespect”) — fact holds: take-lah-lest-be-to-disrespect(Judah)
+m.fact(&quot;tiqach_lah_pen_nihye_la_vuz(yehuda)&quot;)
+
+# -------------------------- Gen.38.24 · THE_VERDICT ------------------------
+# וַיְהִי כְּמִשְׁלֹשׁ חֳדָשִׁים וַיֻּגַּד לִיהוּדָה לֵאמֹר זָנְתָה תָּמָר
+# כַּלָּתֶךָ וְגַם הִנֵּה הָרָה לִזְנוּנִים וַיֹּאמֶר יְהוּדָה הוֹצִיאוּהָ
+# וְתִשָּׂרֵף
+# &quot;[EN-AID] And it was, about three months, and it was told to Judah,
+# saying: Tamar your daughter-in-law has played the harlot, and behold, she
+# is with child by harlotry. And Judah said: Bring her out and let her be
+# burned.&quot;
+m.step(&quot;Gen.38.24&quot;)
+# ‹וַיֹּאמֶר יְהוּדָה הוֹצִיאוּהָ וְתִשָּׂרֵף› (“and-say Judah bring-forth-
+# her/its and-be-on-fire”) — Judah speaks a demand — LET: hotziu-the-and-be-
+# on-fire
+m.declare(&quot;yehuda&quot;, &quot;LET&quot;,
+          &quot;hotziu_ha_ve_tisaref&quot;)
+
+# -------------------------- Gen.38.25 · HAKER_NA_RETURNS -------------------
+# הִוא מוּצֵאת וְהִיא שָׁלְחָה אֶל־חָמִיהָ לֵאמֹר לְאִישׁ אֲשֶׁר־אֵלֶּה לּוֹ
+# אָנֹכִי הָרָה וַתֹּאמֶר הַכֶּר־נָא לְמִי הַחֹתֶמֶת וְהַפְּתִילִים
+# וְהַמַּטֶּה הָאֵלֶּה
+# &quot;[EN-AID] She was brought out, and she sent to her father-in-law, saying:
+# By the man whose these are, I am with child. And she said: Recognize,
+# please, whose are the seal and the cords and the staff, these.&quot;
+m.step(&quot;Gen.38.25&quot;)
+# ‹וַתֹּאמֶר הַכֶּר־נָא לְמִי הַחֹתֶמֶת› (“and-say scrutinize please to-who?
+# the-seal”) — Tamar speaks a demand — LET: scrutinize-please-to-who?
+m.declare(&quot;tamar&quot;, &quot;LET&quot;,
+          &quot;haker_na_le_mi&quot;)
+# ‹הִוא מוּצֵאת› (“he/it bring-forth”) — fact holds: that-bring-forth-and-
+# the-twine(Tamar)
+m.fact(&quot;hiv_mutzet_ve_ha_petilim(tamar)&quot;)
+
+# -------------------------- Gen.38.26 · THE_RECOGNITION_AND_CONFESSION -----
+# וַיַּכֵּר יְהוּדָה וַיֹּאמֶר צָדְקָה מִמֶּנִּי כִּי־עַל־כֵּן
+# לֹא־נְתַתִּיהָ לְשֵׁלָה בְנִי וְלֹא־יָסַף עוֹד לְדַעְתָּה
+# &quot;[EN-AID] And Judah recognized, and said: She is more righteous than I,
+# for therefore I did not give her to Shelah my son. And he did not know her
+# again any more.&quot;
+m.step(&quot;Gen.38.26&quot;)
+# ‹וַיַּכֵּר יְהוּדָה וַיֹּאמֶר צָדְקָה מִמֶּנִּי› (“and-scrutinize Judah
+# and-say be-right from-me/my”) — demand settled (popped from the queue):
+# scrutinize-please-to-who?
+m.result(&quot;haker_na_le_mi&quot;, tmark=&quot;t2&quot;)
+
+# -------------------------- Gen.38.27 · THE_TWINS_DISCOVERED ---------------
+# וַיְהִי בְּעֵת לִדְתָּהּ וְהִנֵּה תְאוֹמִים בְּבִטְנָהּ
+# &quot;[EN-AID] And it came to pass at the time of her bearing, and behold,
+# twins in her womb.&quot;
+m.step(&quot;Gen.38.27&quot;)
+# ‹וְהִנֵּה תְאוֹמִים בְּבִטְנָהּ› (“and-behold twin in-belly-her/its”) —
+# demand settled (popped from the queue): arise-seed-to-your-brother
+m.result(&quot;haqem_zera_le_achikha&quot;, tmark=&quot;t3&quot;)
+
+# -------------------------- Gen.38.28 · THE_SCARLET_THREAD -----------------
+# וַיְהִי בְלִדְתָּהּ וַיִּתֶּן־יָד וַתִּקַּח הַמְיַלֶּדֶת וַתִּקְשֹׁר
+# עַל־יָדוֹ שָׁנִי לֵאמֹר זֶה יָצָא רִאשֹׁנָה
+# &quot;[EN-AID] And it was in her bearing, that one put out a hand; and the
+# midwife took and bound on his hand scarlet, saying: This came out first.&quot;
+m.step(&quot;Gen.38.28&quot;)
+# ‹וַיִּתֶּן־יָד וַתִּקַּח הַמְיַלֶּדֶת וַתִּקְשֹׁר עַל־יָדוֹ שָׁנִי› (“and-
+# set hand and-take the-bear-young and-tie over hand-him/its crimson”) —
+# fact holds: and-set-hand-and-tie-crimson(the-bear-young)
+m.fact(&quot;va_yiten_yad_va_tiqshor_shani(ha_meyaledet)&quot;)
+
+# -------------------------- Gen.38.29 · PERETZ_NAMED -----------------------
+# וַיְהִי כְּמֵשִׁיב יָדוֹ וְהִנֵּה יָצָא אָחִיו וַתֹּאמֶר מַה־פָּרַצְתָּ
+# עָלֶיךָ פָּרֶץ וַיִּקְרָא שְׁמוֹ פָּרֶץ
+# &quot;[EN-AID] And it was, as he drew back his hand, behold, his brother came
+# out; and she said: How have you breached! Upon you a breach. And he called
+# his name Peretz.&quot;
+m.step(&quot;Gen.38.29&quot;)
+# ‹וְהִנֵּה יָצָא אָחִיו› (“and-behold bring-forth brother-him/its”) — the
+# world gains: break
+m.install(&quot;paretz&quot;)
+# ‹וַיִּקְרָא שְׁמוֹ פָּרֶץ› (“and-call name-him/its Perez”) — named: break
+# := break
+m.name(&quot;paretz&quot;, &quot;paretz&quot;)
+
+# -------------------------- Gen.38.30 · ZERACH_NAMED -----------------------
+# וְאַחַר יָצָא אָחִיו אֲשֶׁר עַל־יָדוֹ הַשָּׁנִי וַיִּקְרָא שְׁמוֹ זָרַח
+# &quot;[EN-AID] And afterward his brother came out, on whose hand was the
+# scarlet; and he called his name Zerach.&quot;
+m.step(&quot;Gen.38.30&quot;)
+# ‹וְאַחַר יָצָא אָחִיו› (“and-after bring-forth brother-him/its”) — the
+# world gains: Zarah
+m.install(&quot;zarach&quot;)
+# ‹וַיִּקְרָא שְׁמוֹ זָרַח› (“and-call name-him/its Zarah”) — named: Zarah
+# := Zarah
+m.name(&quot;zarach&quot;, &quot;zarach&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == {&#x27;zarach&#x27;, &#x27;onan&#x27;, &#x27;er&#x27;, &#x27;paretz&#x27;, &#x27;shela&#x27;}
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {&#x27;er&#x27;: &#x27;er&#x27;, &#x27;onan&#x27;: &#x27;onan&#x27;, &#x27;shela&#x27;: &#x27;shela&#x27;, &#x27;paretz&#x27;: &#x27;paretz&#x27;, &#x27;zarach&#x27;: &#x27;zarach&#x27;}
+    assert m.REGISTRY[&quot;writes&quot;] == 5
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;hotziu_ha_ve_tisaref&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 5
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;yarad_me_et_echay_v(yehuda)&#x27;, &#x27;laqach_bat_shua(yehuda)&#x27;, &#x27;laqach_isha_le_er_bekhoro(yehuda, tamar)&#x27;, &#x27;ra_be_ene_YHWH_va_yemitehu(er)&#x27;, &#x27;shichet_artza_levilti_netan_zera(onan)&#x27;, &#x27;va_yamet_gam_oto(YHWH)&#x27;, &#x27;va_tamat_bat_shua_va_yinachem(yehuda)&#x27;, &#x27;hugad_le_tamar_chamikh_ole_timnata&#x27;, &#x27;yashva_be_fetach_enayim_ki_gadal_shela(tamar)&#x27;, &#x27;va_yachsheveha_le_zona(yehuda)&#x27;, &#x27;gedi_izim_ve_eravon(siach)&#x27;, &#x27;chotam_petil_mate_be_yad_tamar&#x27;, &#x27;shava_le_vigde_almenuta(tamar)&#x27;, &#x27;shalach_ha_gedi_ve_lo_metzaa(chira)&#x27;, &#x27;ayeh_ha_qedesha_lo_hayta(anshe_meqoma)&#x27;, &#x27;lo_metzatiha_ve_gam_anshe_ha_maqom(chira)&#x27;, &#x27;tiqach_lah_pen_nihye_la_vuz(yehuda)&#x27;, &#x27;hiv_mutzet_ve_ha_petilim(tamar)&#x27;, &#x27;va_yiten_yad_va_tiqshor_shani(ha_meyaledet)&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 14
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

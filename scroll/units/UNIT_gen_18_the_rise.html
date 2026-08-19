@@ -1,0 +1,671 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_18_the_rise — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_18_the_rise?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The rise: the waters lift the ark, all flesh dies, only Noach is left (7:17-24) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_18_the_rise</b> · Genesis 7:17-24 · derive logic_derived_v1 · phase C-18</div>
+<div class="meta"><a href="../#Gen/7/17">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">וַיִּשְׂאוּ אֶת־הַתֵּבָה — וַיִּשָּׁאֶר אַךְ־נֹחַ</span> · <i>va-yisu et-ha-tevah — va-yishaer akh-Noach</i> · &#x27;and they lifted the ark&#x27; — &#x27;and only Noach was left&#x27;</p>
+<div class="note">Derived 2026-08-01 by the derivation agent (owner-approved trial: ONE persistent subagent runs the mechanics; the main loop keeps seed, review, freeze, and reporting — freeze-after-review, no auto-freeze from the agent). REVIEW PASSED and FROZEN 2026-08-01 by the main loop: all 1422 draft lines read; every census spot-reverified against the snapshot DB (including independent re-runs of the face-of-the-waters three-token phrase, the zero-divine-names scan, and the zero-speech/zero-imperative scans); glossing airtight; [OPEN] discipline intact; nothing invented. Calibrated coverage (charter 4.1): Onkelos read Tier-A at derive time (8 sequential fetches, Data/FETCHLOG.md — the buffer passivizes the ark&#x27;s rise, de-animates its walk to a participle, levels the expire-verb to the die-verb and the two crawl-words to one root, but PRESERVES the compounded breath-formula, the wipe&#x27;s doubling, the remnant-debut, and the span&#x27;s total divine-name silence); trees from the DB&#x27;s stored tree_json. FOURTEENTH PROSPECTIVE MIDDOT RUN (logic/middot_scan/WATCHLIST_gen18_prospective_2026-08-01.md): cache holds ZERO sources for Gen 7:17-24 — twelfth tripwire in a row. INTERPRETER: ZERO extensions — ninth extension-free derivation in a row.</div>
+<div class="note">Logic-derived v1: v3 ta&#x27;amim trees (from DB tree_json) -&gt; leaf role frames from OSHB morph -&gt; operator lines citing TIR rules -&gt; machine-state scenarios. Machine tokens apostrophe-free and underscore-joined (nishmat_ruach_chayim_be_apav, chamishim_u_meat_yom).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (retro, oral-first era; manifest logic/oral_audit/manifests/gen_18_the_rise_claims.json — 4 VERIFIED, 0 FAILED, 0 UNCHECKABLE; record logic/oral_audit/AUDIT_gen_18_2026-08-08.md). The span&#x27;s oral layer is thin; the audit is proportionate. CROWNS (chain-attested, DB-verified): (1) G18-01 the dot that must not be read: וימח (&quot;and He ERASED,&quot; 7:23) — mem SOFT in the precise manuscripts, the simple active stem; Minchat Shai&#x27;s warning: with the dagesh (doubling dot) it becomes the passive and the sentence says the unsayable — &quot;one must be exceedingly careful,&quot; Gur Aryeh&#x27;s dagesh-books called corrupt, Rashi&#x27;s own grammar note the same ruling — SNAPSHOT reads soft, the careful reading arbitrated at one codepoint. (2) G18-02 וימחו (&quot;and they WERE erased&quot; — the creatures, correctly passive) — tifcha (pause accent) confirmed: active erasing and passive being-erased eight words apart in one verse, distinguished by the single dot. (3) G18-03/04 the remnant clause: וישאר (&quot;and there was LEFT only Noah&quot;) — darga (stair-step accent) on the shin per the precise books, alef with segol (short e-vowel) as first-stress requires (&quot;were it end-stressed, tsere — like Ruth&#x27;s ותשאר&quot;) — accent and vowel each locked. DISCREPANCIES: none. INHERITANCE EDGES: none in span (export_links bare-verse query empty — a checked absence). READINGS (named-only, unclaimed): אך נח (&quot;only Noah&quot;) — letter-value equals עוג (&quot;Og&quot;): the giant survived, &quot;restriction after restriction comes to include&quot; (Kitzur Baal HaTurim 7:23; Zevachim 113b / Niddah 61a tradition; letter-arithmetic class); the fish were spared — &quot;whatever was on the DRY land died&quot; (Sanhedrin 108a via Rashi 7:22 — riding this unit&#x27;s compounded breath-criterion analysis); fifteen cubits above the summits (Yoma 76a via Rashi 7:20 — this unit&#x27;s measure clause).</div>
+<div class="meta">confidence: structure tested; operator readings tested-per-TIR; intent hypothesis</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>The rise (7:17-24): from the waters lifting the ark to the hundred and fifty days — 8:1 opens the remembering (Elohim remembers Noach; the wind; the recession), the next block. Inside: the forty running, the lift and the rise, the walk on the face of the waters, the four-beat prevail cluster, the mountains covered twice, the fifteen cubits, the dying-list, the compounded breath-criterion, the double wipe, the remnant — and the waters still prevailing at the close. The unit ends underwater: no closure, no clock, one survivor.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Hebrew source + trees</td><td>All 8 verses from DB tree_json (rule set v3, unique, pure binary; ascii rendered 2026-08-01). Tree facts: 7:17 [the forty of the flood | the waters multiplied, LIFTED the ark, and it ROSE]; 7:18 [the waters prevail and multiply | the ark WALKS the face of the waters]; 7:19 [prevailed exceedingly exceedingly | all the high mountains under ALL the heavens covered]; 7:20 [fifteen cubits upward (etnachta arm carries the measure) | and the mountains were covered]; 7:21 [the dying-list: creeping flesh, bird, livestock, beast, swarmer | AND ALL HUMANKIND — man&#x27;s death ALONE on the verse-end arm]; 7:22 [the compounded breath-criterion and the dry land | DIED — a single word on the verse-end]; 7:23 [the wipe active, the decree-scope, the wipe passive | AND ONLY NOACH WAS LEFT — the remnant clause alone on the verse-end arm]; 7:24 [the waters prevailed | a hundred and fifty days]. Three verse-end isolations in four verses: the letter keeps its heaviest words for the last position.</td><td>tested</td></tr>
+<tr><td><b>C</b></td><td>Segment structure</td><td>Verb morphology (#IMPOSED OSHB, DB-verified 2026-08-01), all censuses run BEFORE drafting. 7:17 VA-YISU (&#x27;and they LIFTED&#x27;) — the nasa bear-verb&#x27;s TOKEN 2 of 168 in the Torah (token 1 = 4:13, Cain&#x27;s &#x27;my punishment is too great to BEAR&#x27;): ACTIVE, PLURAL, the waters as agent — the judgment water carries the rescue; VA-TARAM (&#x27;and it ROSE&#x27;) — the rum rise-verb&#x27;s FIRST TOKEN of 46 (career: Abram&#x27;s raised-hand oath 14:22, the staff over the Nile Exod 7:20, Israel&#x27;s high hand Exod 14:8). 7:18 VA-TELEKH (&#x27;and it WALKED&#x27;) — the go-verb stem&#x27;s token 2 (token 1 = 3:14, the serpent&#x27;s belly-crawl sentence), applied to a VESSEL, AL-PNEI HA-MAYIM (&#x27;on the face of the waters&#x27;) — a THREE-token Torah phrase: 1:2 the spirit hovers there, 7:18 the ark walks there, Exod 32:20 the calf-dust is scattered there. 7:18-24 GAVAR (&#x27;prevail/be strong&#x27;) — 7 Torah tokens TOTAL, tokens 1-4 ALL IN-SPAN (7:18, 19, 20, 24): the strengthen-verb born as flood grammar (career: the father&#x27;s blessings prevail 49:26; Israel and Amalek prevail Exod 17:11 x2); morphology splits the four — two narrative and-then forms (7:18, 7:24) framing two perfects (7:19, 7:20): two events bracketing two standing states. 7:19-20 HAR (&#x27;mountain&#x27;) — FIRST TOKENS of 150, both drowned (token 3 = 8:4, the ark RESTS on the mountains of Ararat); GAVOHA (&#x27;high&#x27;) — 3 Torah tokens, token 1 here; KASAH (&#x27;cover&#x27;) — first two tokens of 47, both agentless passives (pual — &#x27;and they WERE COVERED&#x27;; token 3 = 9:23, the sons covering their father&#x27;s nakedness); AMAH (&#x27;cubit&#x27;) TOKEN 5 — tokens 1-4 are the ark&#x27;s blueprint (6:15 x3, 6:16), token 6 opens Exod 25:10, the ark of the covenant: the flood measured in the rescue&#x27;s unit. 7:21 VA-YIGVA (&#x27;and it EXPIRED&#x27;) — gava token 2 (token 1 = 6:17, the decree&#x27;s own verb receipted in the deed; career: the patriarchs&#x27; peaceful deaths, the Korach panic Num 17:27-28); the dying-list runs bird -&gt; livestock -&gt; beast -&gt; swarmer -&gt; ALL HUMANKIND — man LAST, alone on the verse-end arm. 7:22 NISHMAT-RUACH CHAYIM BE-APAV (&#x27;the breath of the SPIRIT of life in its nostrils&#x27;) — NESHAMAH (&#x27;breath&#x27;) has exactly 3 Torah tokens: 2:7&#x27;s gift (nishmat chayim, &#x27;breath of life&#x27;), this drowning-quote COMPOUNDED with ruach (&#x27;spirit/wind&#x27;) inserted, and Deut 20:16&#x27;s ban (kol-neshamah, &#x27;anything that breathes&#x27;) [quote-diff vs 2:7 held at PROSE level — 2:7 is frozen in a prior unit; standalone machines carry no cross-unit spec: no machine delta; decision recorded]; BE-CHARAVAH (&#x27;on the dry land&#x27;) — a TWO-token Torah word: here (all on it died) and Exod 14:21 (the sea turned INTO dry land): the drowning word and the rescue-path word are the same word. 7:23 MACHAH (&#x27;wipe&#x27;) TOKENS 3 AND 4 IN ONE VERSE — active VA-YIMACH (&#x27;and He wiped&#x27;) + niphal VA-YIMACHU (&#x27;and they were wiped&#x27;): deed and undergoing doubled (career: Amalek&#x27;s memory Exod 17:14, &#x27;wipe me from Your book&#x27; Exod 32:32-33); the wipe-scope runs me-adam ad-behemah ad-remes ve-ad-of — VERBATIM 6:7&#x27;s decree list, humankind FIRST (vs the dying-list&#x27;s humankind LAST; neither is 1:20-27&#x27;s build order — three orders, held as letter fact); YEQUM (&#x27;standing-substance&#x27;) token 2 of exactly 3 (7:4 decree, here, Deut 11:6 Korach); the span holds ZERO divine names (DB lemma scan) — the wipe&#x27;s subject is COVERT; its named antecedent (YHWH, 7:16) stands across the unit boundary in frozen gen_17 [letter fact, held; [OPEN]]; and VA-YISHAER AKH-NOACH (&#x27;and ONLY NOACH was left&#x27;) — SHAAR, the remnant-root, FIRST TOKEN of 29 in the Torah, niphal agentless, born naming one man and the ark&#x27;s company (career: the war&#x27;s survivors 14:10, Jacob&#x27;s camp-that-is-left 32:9, Benjamin-left-alone 42:38, what the plagues leave); AKH (&#x27;only&#x27;) — the restriction particle rides the debut. 7:24 the fourth prevail-beat; CHAMISHIM U-MEAT YOM (&#x27;fifty and a hundred days&#x27; — the letter counts small-first): the phrase occurs exactly TWICE in the Torah — here (the rise) and 8:3 (the recession): opened here, closed there, like heaven&#x27;s windows.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Predicates &amp; outcomes</td><td>The unit is the un-creation&#x27;s climax told entirely in third person with the voice withdrawn: no speech, no command, no name. Every register the boarding filled goes quiet; what moves is water and one buoyant box. The letter&#x27;s arithmetic is exact — the announced forty runs, the flood is measured once (in cubits borrowed from the rescue&#x27;s blueprint), the 150 opens a bracket that 8:3 will close. The dying is told creation-wise (humankind last); the wiping quotes the decree (humankind first). And the span&#x27;s one genuinely new word for the future is the remnant-root, minted on the survivor.</td><td>tested</td></tr>
+<tr><td><b>E</b></td><td>Logic format choice</td><td>Operator lines; NO ledger row, NO installs, NO registry writes, NO SPECS traffic (nothing pushed, nothing popped — the wipe answers gen_15&#x27;s queue across unit walls: prose + [OPEN], the Stage E linker&#x27;s test case), NO TEST (no inspection formula in the letter), NO TIME_ANCHOR — decision: the forty (7:17) and the hundred-fifty (7:24) are DURATIONS the letter states, not calendar anchors; encoding a span as an epoch would misstate the letter (gen_17&#x27;s t0 was a DATE); both enter as plain HOLDS facts. EVENTS carry the plot: lift(waters -&gt; ark) + rise(ark) at 7:17; prevail(waters) + walk(ark) at 7:18; cover x2 agentless at 7:19-20 (pual — the intensive passive: no agent on the page; encoded WITHOUT a TIR-032 cite, which names the niphal — prose notes the same agentless class; decision recorded); expire at 7:21; wipe (NO Agent() — the letter&#x27;s subject is covert; the machine encodes only what the letter says) + wiped (niphal agentless, TIR-032) + remain (niphal agentless, TIR-032 — the remnant debut) at 7:23; prevail at 7:24. The metu perfect of 7:22 (&#x27;they died&#x27;) enters as a summary FACT, not an event — the perfect states the outcome of 7:21&#x27;s expire-event (decision recorded). NOTE_PRESUPPOSED: tevah + mayim at 7:17, noach at 7:23. Interpreter extensions: NONE.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Bilingual logic objects</td><td>Every operator line carries he + he_translit + en. Machine tokens apostrophe-free: ha_mabul_arbaim_yom_al_ha_aretz, chamesh_esreh_amah_mi_lemalah_gavru, nishmat_ruach_chayim_be_apav, me_adam_ad_behemah_ad_remes_ve_ad_of, akh_noach_va_asher_ito, chamishim_u_meat_yom_al_ha_aretz.</td><td>established</td></tr>
+<tr><td><b>G</b></td><td>Oral (named only) + Tier-A translation check</td><td>Named but NOT read (cache: zero for Gen 7:17-24 — twelfth tripwire; gen_18 Tier-A queue): Bavli Sanhedrin 108a-b (the flood span: the generation&#x27;s sentence, the scalding waters, the ark in the storm); Bereshit Rabbah 32 (32:11 reads AKH (&#x27;only&#x27;) at 7:23 as a diminution — Noach himself diminished: doctrine hung on one restriction particle); Bavli Zevachim 113a-b (did the flood fall on the Land of Israel — a debate on 7:19&#x27;s &#x27;under ALL the heavens&#x27;); Rashi at 7:20 (the fifteen-cubit arithmetic), 7:22 (the nostrils), 7:23 (akh Noach). Tier-A Onkelos (8 fetches, FETCHLOG 2026-08-01): the lift kept ACTIVE (u-netalu, &#x27;and they carried&#x27; — the waters keep the deed) but the rise PASSIVIZED (va-taram &#x27;and it rose&#x27; -&gt; ve-ittaramat &#x27;and it WAS RAISED&#x27;); the walk de-animated to a durative participle (u-mehallekha, &#x27;and it was moving about&#x27; — the vessel moves, it does not stride); the buffer&#x27;s &#x27;high mountains&#x27; is the RUM-root adjective (turaya ramaya, &#x27;the high mountains&#x27;) — tying peaks to the ark-lift in a way the Hebrew does not; gavar rendered tekifu (&#x27;grew mighty&#x27;) at all four beats — the cluster survives; VA-YIGVA (&#x27;expired&#x27;) leveled to u-mit (&#x27;died&#x27;) — the 6:17 decree-echo lost; the remes/sheretz crawl-words leveled to ONE root (rachesh, &#x27;creep/crawl&#x27;); the COMPOUNDED breath-formula PRESERVED word for word (nishmeta rucha de-chayin, &#x27;breath of the spirit of life&#x27; — the 2:7 quote-diff is translation-stable); be-charavah (&#x27;on the dry land&#x27;) leveled to be-yabbeshta (&#x27;on the dry ground&#x27; — the two-token thread lost); the wipe kept double (u-mecha &#x27;and He wiped&#x27; / ve-itmechiu &#x27;and they were wiped&#x27;), the remnant kept in cognate (ve-ishtaar, &#x27;and he was left&#x27;), AKH -&gt; BERAM (&#x27;only&#x27;); the 150 reversed to big-first (meah ve-chamshin, &#x27;a hundred and fifty&#x27;); and ZERO divine names inserted — the covert subject stays covert in translation.</td><td>tested</td></tr>
+<tr><td><b>H</b></td><td>Scenarios</td><td>S1 the lift and the rise: the forty-fact holds; tevah/mayim flagged as read. S2 the prevail debut and the walk. S3 the mountains under all the heavens. S4 the fifteen cubits. S5 all flesh expires, humankind last. S6 the compounded breath-formula and the dry-land death. S7 the wipe executed, only Noach left; noach flagged as read; the queue never had an entry. S8 the hundred and fifty days, still rising at the close. S9_negative: LET? contract guard; S10_negative: flag-never-block.</td><td>tested</td></tr>
+<tr><td><b>I</b></td><td>English leakage review</td><td>Operators derive from morph codes (narrative and-then forms vs perfects splitting the gavar cluster; the niphal agentless events TIR-032; the pual agentless covers held cite-less; the covert 3ms subject of the wipe encoded agent-less) and DB censuses run BEFORE drafting (nasa / rum / yalakh / face-of-the-waters / gavar / har / gavoha / kasah / amah / gava / neshamah / charavah / machah / yequm / shaar / mabul / the 150-phrase; the three death-orders compared; the divine-name and speech-frame zero-scans). NOT supplied: why the waters carry what the verdict spares, any reading of the covert wipe-subject beyond its 7:16 antecedent, any harmonizing of the three death-orders, or the 2:7-compound&#x27;s meaning — every one [OPEN] or held; the Onkelos passivization and levelings stay dual-track.</td><td>established</td></tr>
+<tr><td><b>J</b></td><td>Pre-flight + freeze-after-review (agent trial)</td><td>Pre-flight 2026-08-01 against the UNMODIFIED repo interpreter — zero injected prototypes; GREEN (8/8 steps, 10/10 scenarios, 19/19 clause checks). AGENT-TRIAL derivation: the agent delivered status DRAFT; the MAIN LOOP then reviewed the full prose (glossing, census spot-reverification against the DB, [OPEN] discipline, no invention) and froze on a passing review — freeze-after-review #1, per the owner-approved trial process. Changes henceforth require an amend order, not silent edits.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_7_17 · Gen.7.17 · <span class='expr'>THE_LIFT_AND_THE_RISE</span></h3>
+<p><span class="he">וַיְהִי הַמַּבּוּל אַרְבָּעִים יוֹם עַל־הָאָרֶץ וַיִּרְבּוּ הַמַּיִם וַיִּשְׂאוּ אֶת־הַתֵּבָה וַתָּרָם מֵעַל הָאָרֶץ</span> · <i>va-yehi ha-mabul arbaim yom al-ha-aretz va-yirbu ha-mayim va-yisu et-ha-tevah va-taram me-al ha-aretz</i> · [EN-AID/JPS] And the flood was forty days upon the earth; and the waters increased, and bore up the ark, and it was lifted up above the earth.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויהי המבול ארבעים יום על הארץ</span> · <i>va-yehi ha-mabul arbaim yom al-ha-aretz</i> · the flood, forty days on the earth (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וירבו המים וישאו את התבה ותרם מעל הארץ</span> · <i>va-yirbu ha-mayim va-yisu et-ha-tevah va-taram me-al ha-aretz</i> · the waters multiplied, LIFTED the ark, and it ROSE above the earth</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ha_mabul_arbaim_yom_al_ha_aretz, t1)</span><br><span class="gloss">= HOLDS(the-deluge-forty-day-over-the-earth, t1)</span><br>The announced forty runs: 7:4 promised it, 7:12 started it, here it stands as the flood&#x27;s own duration. A DURATION, not a date — the TIME register stays empty in this standalone machine (gen_17&#x27;s t0 was a calendar value; this letter gives spans; decision recorded). MABUL (&#x27;the deluge&#x27;) token 5 of 12.
+</td><td><span class="he">וַיְהִי הַמַּבּוּל אַרְבָּעִים יוֹם עַל־הָאָרֶץ</span> · <i>va-yehi ha-mabul arbaim yom al-ha-aretz</i><br><span class="gloss">= be deluge forty day over-the-earth</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">lift(e1) ∧ Agent(e1, ha_mayim) ∧ Theme(e1, ha_tevah)</span><br><span class="gloss">= lift(e1) ∧ Agent(e1, the-waters) ∧ Theme(e1, the-ark)</span><br>VA-YISU — &#x27;and they LIFTED/BORE the ark&#x27;: the nasa bear-verb&#x27;s TOKEN 2 in the Torah (token 1 = 4:13, Cain&#x27;s &#x27;my punishment is too great to BEAR&#x27; — the verb gen_12 met as a weight no man could carry now carries the rescue). ACTIVE and PLURAL: the letter makes the judgment water itself the bearer [the agent is the WATERS — no passive here; letter fact].
+</td><td><span class="he">וַיִּרְבּוּ הַמַּיִם וַיִּשְׂאוּ אֶת־הַתֵּבָה</span> · <i>va-yirbu ha-mayim va-yisu et-ha-tevah</i><br><span class="gloss">= increased waters they-lifted obj-marker·et-the-ark</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">rise(e2) ∧ Theme(e2, ha_tevah)</span><br><span class="gloss">= rise(e2) ∧ Theme(e2, the-ark)</span><br>VA-TARAM — &#x27;and it ROSE above the earth&#x27;: the rum rise-verb&#x27;s FIRST TOKEN of 46 in the Torah, debuting on the ark (career: Abram&#x27;s raised-hand oath 14:22, the staff over the Nile Exod 7:20, Israel leaving with a HIGH hand Exod 14:8). The ark&#x27;s one self-verb in the span [Onkelos passivizes it — &#x27;and it was raised&#x27;; dual-track, flagged].
+</td><td><span class="he">וַתָּרָם מֵעַל הָאָרֶץ</span> · <i>va-taram me-al ha-aretz</i><br><span class="gloss">= it-rose over earth</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">tevah, mayim are READ without prior install (gen_16&#x27;s build; day-1 waters resumed)</span><br><span class="gloss">= ark, waters are READ without prior install (gen-16&#x27;s build; day-1 waters resumed)</span><br>flag, not fix</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The flood&#x27;s first deed toward the ark is carriage: the water sent to wipe bears the box built to float.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_7_18 · Gen.7.18 · <span class='expr'>THE_PREVAIL_DEBUT_THE_ARK_WALKS</span></h3>
+<p><span class="he">וַיִּגְבְּרוּ הַמַּיִם וַיִּרְבּוּ מְאֹד עַל־הָאָרֶץ וַתֵּלֶךְ הַתֵּבָה עַל־פְּנֵי הַמָּיִם</span> · <i>va-yigberu ha-mayim va-yirbu meod al-ha-aretz va-telekh ha-tevah al-pnei ha-mayim</i> · [EN-AID/JPS] And the waters prevailed, and increased greatly upon the earth; and the ark went upon the face of the waters.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויגברו המים וירבו מאד על הארץ</span> · <i>va-yigberu ha-mayim va-yirbu meod al-ha-aretz</i> · the waters prevailed and multiplied greatly (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ותלך התבה על פני המים</span> · <i>va-telekh ha-tevah al-pnei ha-mayim</i> · and the ark WALKED on the face of the waters</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">prevail(e3) ∧ Agent(e3, ha_mayim)</span><br><span class="gloss">= prevail(e3) ∧ Agent(e3, the-waters)</span><br>VA-YIGBERU — &#x27;and the waters PREVAILED&#x27;: GAVAR, the strengthen-verb, FIRST TOKEN — and its whole debut is this span: 7 Torah tokens total, tokens 1-4 all here (7:18, 19, 20, 24; career: the father&#x27;s blessings prevail 49:26, Israel and Amalek prevail by Moses&#x27; hands Exod 17:11). The verb of might is born as rising water.
+</td><td><span class="he">וַיִּגְבְּרוּ הַמַּיִם</span> · <i>va-yigberu ha-mayim</i><br><span class="gloss">= and-yigberu waters</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yirbu_meod_al_ha_aretz, t1)</span><br><span class="gloss">= HOLDS(and-increased-very-over-the-earth, t1)</span><br>And they multiplied GREATLY — the swarm-blessing&#x27;s verb (1:22&#x27;s revu, &#x27;multiply&#x27;) running on water instead of creatures: increase itself has changed sides.
+</td><td><span class="he">וַיִּרְבּוּ מְאֹד עַל־הָאָרֶץ</span> · <i>va-yirbu meod al-ha-aretz</i><br><span class="gloss">= increased very over-the-earth</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">walk(e4) ∧ Agent(e4, ha_tevah) ∧ Theme(e4, al_pnei_ha_mayim)</span><br><span class="gloss">= walk(e4) ∧ Agent(e4, the-ark) ∧ Theme(e4, over-face-of-the-waters)</span><br>VA-TELEKH — &#x27;and the ark WALKED&#x27;: the go-verb stem&#x27;s token 2 (token 1 = 3:14, the serpent sentenced to GO on its belly), now a vessel&#x27;s verb — AL-PNEI HA-MAYIM, &#x27;on the FACE OF THE WATERS&#x27;: a three-token Torah phrase — 1:2 the spirit of God hovers there, here the ark walks there, Exod 32:20 the calf-dust is scattered there. The builder walked with God (6:9, the other walk-stem); his build walks the deep [Onkelos de-animates to &#x27;was moving about&#x27;; dual-track, flagged].
+</td><td><span class="he">וַתֵּלֶךְ הַתֵּבָה עַל־פְּנֵי הַמָּיִם</span> · <i>va-telekh ha-tevah al-pnei ha-mayim</i><br><span class="gloss">= it-walked ark over-face-of waters</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The strengthen-verb is born and the rescue answers it by walking the hover-line of day one.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_7_19 · Gen.7.19 · <span class='expr'>THE_MOUNTAINS_GO_UNDER</span></h3>
+<p><span class="he">וְהַמַּיִם גָּבְרוּ מְאֹד מְאֹד עַל־הָאָרֶץ וַיְכֻסּוּ כָּל־הֶהָרִים הַגְּבֹהִים אֲשֶׁר־תַּחַת כָּל־הַשָּׁמָיִם</span> · <i>ve-ha-mayim gavru meod meod al-ha-aretz va-yekhusu kol-he-harim ha-gevohim asher-tachat kol-ha-shamayim</i> · [EN-AID/JPS] And the waters prevailed exceedingly upon the earth; and all the high mountains that were under the whole heaven were covered.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">והמים גברו מאד מאד על הארץ</span> · <i>ve-ha-mayim gavru meod meod al-ha-aretz</i> · the waters prevailed exceedingly exceedingly (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויכסו כל ההרים הגבהים אשר תחת כל השמים</span> · <i>va-yekhusu kol-he-harim ha-gevohim asher-tachat kol-ha-shamayim</i> · all the high mountains under ALL the heavens were covered</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(gavru_meod_meod_al_ha_aretz, t1) ∧ HOLDS(kol_he_harim_ha_gevohim_tachat_kol_ha_shamayim, t1)</span><br><span class="gloss">= HOLDS(prevailed-very-very-over-the-earth, t1) ∧ HOLDS(all-he-mountains-the-high-under-all-the-heavens, t1)</span><br>GAVRU (&#x27;they prevailed&#x27;; perfect — a standing state, not a fresh beat: the morphology splits the four-token cluster into two and-then events framing two perfects) MEOD MEOD — &#x27;exceedingly exceedingly&#x27;, the intensifier doubled. And the totality clause: ALL the high mountains under ALL the heavens [the chain&#x27;s Israel-exemption debate hangs on this clause — Bavli Zevachim 113; named-only].
+</td><td><span class="he">גָּבְרוּ מְאֹד מְאֹד … כָּל־הֶהָרִים הַגְּבֹהִים אֲשֶׁר־תַּחַת כָּל־הַשָּׁמָיִם</span> · <i>gavru meod meod … kol-he-harim ha-gevohim asher-tachat kol-ha-shamayim</i><br><span class="gloss">= prevailed very very all-he-mountains high which-under all-the-heavens</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">cover(e5) ∧ Theme(e5, kol_he_harim_ha_gevohim)</span><br><span class="gloss">= cover(e5) ∧ Theme(e5, all-he-mountains-the-high)</span><br>VA-YEKHUSU — &#x27;and they WERE COVERED&#x27;: KASAH, the cover-verb, FIRST TOKEN of 47, an agentless passive (pual, the intensive passive — no agent on the page; the same agentless-event class as the niphal breaches of 7:11, held WITHOUT the TIR-032 cite, which names the niphal; decision recorded). And the covered things are HAR (&#x27;mountain&#x27;) — FIRST TOKENS of 150 in the Torah, here and 7:20: the mountains enter the corpus drowned (token 3 = 8:4, the ark RESTS on them); GAVOHA (&#x27;high&#x27;) — 3 Torah tokens, token 1 here. The cover-verb&#x27;s next appearance is 9:23 — the sons covering their father&#x27;s nakedness: it debuts burying mountains and returns as mercy.
+</td><td><span class="he">וַיְכֻסּוּ כָּל־הֶהָרִים הַגְּבֹהִים</span> · <i>va-yekhusu kol-he-harim ha-gevohim</i><br><span class="gloss">= were-covered all-he-mountains high</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The corpus meets its mountains already under water — height itself debuts drowned.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_7_20 · Gen.7.20 · <span class='expr'>FIFTEEN_CUBITS_UPWARD</span></h3>
+<p><span class="he">חֲמֵשׁ עֶשְׂרֵה אַמָּה מִלְמַעְלָה גָּבְרוּ הַמָּיִם וַיְכֻסּוּ הֶהָרִים</span> · <i>chamesh esreh amah mi-lemalah gavru ha-mayim va-yekhusu he-harim</i> · [EN-AID/JPS] Fifteen cubits upward did the waters prevail; and the mountains were covered.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">חמש עשרה אמה מלמעלה גברו המים</span> · <i>chamesh esreh amah mi-lemalah gavru ha-mayim</i> · fifteen cubits upward the waters prevailed (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויכסו ההרים</span> · <i>va-yekhusu he-harim</i> · and the mountains were covered</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(chamesh_esreh_amah_mi_lemalah_gavru, t1)</span><br><span class="gloss">= HOLDS(five--teen-cubit-from-upward-prevailed, t1)</span><br>The flood&#x27;s ONLY measurement: fifteen cubits upward — AMAH (&#x27;cubit&#x27;) TOKEN 5, and tokens 1-4 are all the ark&#x27;s blueprint (6:15 x3, 6:16): the catastrophe is measured in the rescue&#x27;s own unit. Token 6 opens Exod 25:10 — the dimensions of the ark of the covenant: the cubit&#x27;s next job after gauging the flood is the next ark. [The chain&#x27;s draft-arithmetic (eleven cubits&#x27; draught) is named-only.]
+</td><td><span class="he">חֲמֵשׁ עֶשְׂרֵה אַמָּה מִלְמַעְלָה גָּבְרוּ הַמָּיִם</span> · <i>chamesh esreh amah mi-lemalah gavru ha-mayim</i><br><span class="gloss">= five -teen cubit upward prevailed waters</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">cover(e6) ∧ Theme(e6, he_harim)</span><br><span class="gloss">= cover(e6) ∧ Theme(e6, mountains)</span><br>The cover-verb&#x27;s second token, agentless passive again — the letter says the mountains were covered TWICE (7:19 with the totality clause, 7:20 with the measure): once for scope, once for depth.
+</td><td><span class="he">וַיְכֻסּוּ הֶהָרִים</span> · <i>va-yekhusu he-harim</i><br><span class="gloss">= were-covered mountains</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Scope, then depth: the letter surveys the drowning like a builder — in cubits.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_7_21 · Gen.7.21 · <span class='expr'>ALL_FLESH_EXPIRES</span></h3>
+<p><span class="he">וַיִּגְוַע כָּל־בָּשָׂר הָרֹמֵשׂ עַל־הָאָרֶץ בָּעוֹף וּבַבְּהֵמָה וּבַחַיָּה וּבְכָל־הַשֶּׁרֶץ הַשֹּׁרֵץ עַל־הָאָרֶץ וְכֹל הָאָדָם</span> · <i>va-yigva kol-basar ha-romes al-ha-aretz ba-of u-va-behemah u-va-chayah u-ve-khol-ha-sheretz ha-shoretz al-ha-aretz ve-khol ha-adam</i> · [EN-AID/JPS] And all flesh perished that moved upon the earth, both fowl, and cattle, and beast, and every swarming thing that swarmeth upon the earth, and every man;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויגוע כל בשר הרמש על הארץ בעוף ובבהמה ובחיה ובכל השרץ השרץ על הארץ</span> · <i>va-yigva kol-basar ha-romes al-ha-aretz ba-of u-va-behemah u-va-chayah u-ve-khol-ha-sheretz ha-shoretz al-ha-aretz</i> · all creeping flesh expired — bird, livestock, beast, swarmer (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וכל האדם</span> · <i>ve-khol ha-adam</i> · AND ALL HUMANKIND — alone on the verse-end arm</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">expire(e7) ∧ Theme(e7, kol_basar)</span><br><span class="gloss">= expire(e7) ∧ Theme(e7, all-flesh)</span><br>VA-YIGVA — &#x27;and all flesh EXPIRED&#x27;: GAVA token 2 — token 1 is 6:17, the decree&#x27;s own verb (&#x27;all that is on the earth shall EXPIRE&#x27;): the sentence receipted in its own word (career: the patriarchs&#x27; peaceful deaths 25:8, 25:17, 35:29, 49:33; the Korach panic Num 17:27-28) [Onkelos levels it to the plain die-verb — the decree-echo lost in translation; dual-track, flagged].
+</td><td><span class="he">וַיִּגְוַע כָּל־בָּשָׂר</span> · <i>va-yigva kol-basar</i><br><span class="gloss">= expired all-flesh</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ba_of_u_va_behemah_u_va_chayah_u_va_sheretz_ve_khol_ha_adam, t1)</span><br><span class="gloss">= HOLDS(in-the-flying-creature-and-and-livestock-and-and-beast-and-and-swarming-creature-and-all-the-human, t1)</span><br>The dying-list: bird -&gt; livestock -&gt; beast -&gt; swarmer -&gt; ALL HUMANKIND. A THIRD order — not 6:7&#x27;s decree order (human first), not 1:20-27&#x27;s build order either — with one firm structural fact: humankind CLOSES it, isolated by the accents on the verse-end arm. The dying is told creation-wise, last-made last [three orders held as letter fact; no harmonizing].
+</td><td><span class="he">בָּעוֹף וּבַבְּהֵמָה וּבַחַיָּה וּבְכָל־הַשֶּׁרֶץ … וְכֹל הָאָדָם</span> · <i>ba-of u-va-behemah u-va-chayah u-ve-khol-ha-sheretz … ve-khol ha-adam</i><br><span class="gloss">= flying-creature livestock beast and-and-all-the-swarming-creature all human</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The decree&#x27;s verb comes true across the whole taxonomy, and the letter saves humankind for the final, solitary beat.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_7_22 · Gen.7.22 · <span class='expr'>THE_COMPOUNDED_BREATH_CRITERION</span></h3>
+<p><span class="he">כֹּל אֲשֶׁר נִשְׁמַת־רוּחַ חַיִּים בְּאַפָּיו מִכֹּל אֲשֶׁר בֶּחָרָבָה מֵתוּ</span> · <i>kol asher nishmat-ruach chayim be-apav mi-kol asher be-charavah metu</i> · [EN-AID/JPS] all in whose nostrils was the breath of the spirit of life, whatsoever was in the dry land, died.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">כל אשר נשמת רוח חיים באפיו מכל אשר בחרבה</span> · <i>kol asher nishmat-ruach chayim be-apav mi-kol asher be-charavah</i> · all with the breath of the SPIRIT of life in its nostrils, all on the dry land (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">מתו</span> · <i>metu</i> · DIED — a single word on the verse-end</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(nishmat_ruach_chayim_be_apav, t1) ∧ HOLDS(mi_kol_asher_be_charavah_metu, t1)</span><br><span class="gloss">= HOLDS(breath-of-spirit-wind-life-in-his-nostrils, t1) ∧ HOLDS(from-all-which-in-dry-land-died, t1)</span><br>2:7&#x27;s gift-formula quoted at the drowning — COMPOUNDED: NISHMAT CHAYIM (&#x27;breath of life&#x27;, breathed into the man&#x27;s nostrils) returns as NISHMAT-RUACH CHAYIM (&#x27;breath of the SPIRIT of life&#x27;, in the nostrils of all that died). NESHAMAH (&#x27;breath&#x27;) has exactly 3 Torah tokens: the gift (2:7), this drowning-quote, and Deut 20:16&#x27;s ban [quote-diff vs 2:7 HELD AT PROSE — 2:7 is frozen in a prior unit; standalone machines carry no cross-unit spec, so no machine delta; decision recorded; [OPEN]: what the inserted ruach (&#x27;spirit/wind&#x27;) marks — named-only; Onkelos preserves the compound word for word]. And BE-CHARAVAH (&#x27;on the dry land&#x27;) — a TWO-token Torah word: here everything ON dry land dies; at Exod 14:21 the sea is turned INTO dry land as the rescue-path: the drowning word and the salvation word are the same word. The perfect METU (&#x27;they died&#x27;) enters as summary FACT, not event — the outcome of 7:21&#x27;s expire, isolated by the accents as the verse&#x27;s last lone word (decision recorded).
+</td><td><span class="he">נִשְׁמַת־רוּחַ חַיִּים בְּאַפָּיו … מִכֹּל אֲשֶׁר בֶּחָרָבָה מֵתוּ</span> · <i>nishmat-ruach chayim be-apav … mi-kol asher be-charavah metu</i><br><span class="gloss">= breath-of-spirit-wind life his-nostrils all which dry-land died</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The criterion of the gift becomes the criterion of the grave, one word wider than it was at creation.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_7_23 · Gen.7.23 · <span class='expr'>THE_WIPE_EXECUTED_ONLY_NOACH_LEFT</span></h3>
+<p><span class="he">וַיִּמַח אֶת־כָּל־הַיְקוּם אֲשֶׁר עַל־פְּנֵי הָאֲדָמָה מֵאָדָם עַד־בְּהֵמָה עַד־רֶמֶשׂ וְעַד־עוֹף הַשָּׁמַיִם וַיִּמָּחוּ מִן־הָאָרֶץ וַיִשָּׁאֶר אַךְ־נֹחַ וַאֲשֶׁר אִתּוֹ בַּתֵּבָה</span> · <i>va-yimach et-kol-ha-yequm asher al-pnei ha-adamah me-adam ad-behemah ad-remes ve-ad-of ha-shamayim va-yimachu min-ha-aretz va-yishaer akh-Noach va-asher ito ba-tevah</i> · [EN-AID/JPS] And He blotted out every living substance which was upon the face of the ground, both man, and cattle, and creeping thing, and fowl of the heaven; and they were blotted out from the earth; and Noah only was left, and they that were with him in the ark.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וימח את כל היקום אשר על פני האדמה מאדם עד בהמה עד רמש ועד עוף השמים וימחו מן הארץ</span> · <i>va-yimach et-kol-ha-yequm asher al-pnei ha-adamah me-adam ad-behemah ad-remes ve-ad-of ha-shamayim va-yimachu min-ha-aretz</i> · He wiped all the standing-substance, human to bird, and they were wiped (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וישאר אך נח ואשר אתו בתבה</span> · <i>va-yishaer akh-Noach va-asher ito ba-tevah</i> · and ONLY NOACH WAS LEFT, and those with him in the ark</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">wipe(e8) ∧ Theme(e8, kol_ha_yequm)</span><br><span class="gloss">= wipe(e8) ∧ Theme(e8, all-the-standing-substance)</span><br>VA-YIMACH — &#x27;and He WIPED all the standing-substance&#x27;: MACHAH token 3 (decree 6:7, schedule 7:4, execution here; career: Amalek&#x27;s memory Exod 17:14, &#x27;wipe me from Your book&#x27; Exod 32:32-33); YEQUM (&#x27;standing-substance&#x27;) token 2 of exactly 3 (7:4, here, Deut 11:6 — Korach&#x27;s swallowing). ENCODED WITHOUT AGENT: the letter&#x27;s subject is COVERT — the span holds ZERO divine names (DB scan); the nearest named antecedent is YHWH at 7:16, across the unit boundary in frozen gen_17 [letter fact, held]. [OPEN — cross-unit]: gen_15 pushed the wipe-resolve in ITS OWN queue; standalone units do not pop each other&#x27;s demands — this execution is the future Stage E linker&#x27;s test case; prose only, no RESULT here.
+</td><td><span class="he">וַיִּמַח אֶת־כָּל־הַיְקוּם</span> · <i>va-yimach et-kol-ha-yequm</i><br><span class="gloss">= He-wiped obj-marker·et-all-the-standing-substance</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(me_adam_ad_behemah_ad_remes_ve_ad_of, t1)</span><br><span class="gloss">= HOLDS(from-human-until-livestock-until-creeper-and-until-flying-creature, t1)</span><br>The wipe-scope: from-human to-livestock to-creeper to-bird — VERBATIM 6:7&#x27;s decree list, word for word (DB compare): the execution QUOTES the decree, humankind FIRST — where 7:21&#x27;s dying-list put humankind LAST. The dying is told creation-wise; the wiping decree-wise [letter fact, held].
+</td><td><span class="he">מֵאָדָם עַד־בְּהֵמָה עַד־רֶמֶשׂ וְעַד־עוֹף הַשָּׁמַיִם</span> · <i>me-adam ad-behemah ad-remes ve-ad-of ha-shamayim</i><br><span class="gloss">= human until-livestock until-creeper and-until-flying-creature heavens</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">wiped(e9) ∧ Theme(e9, kol_ha_yequm)</span><br><span class="gloss">= wiped(e9) ∧ Theme(e9, all-the-standing-substance)</span><br>VA-YIMACHU — &#x27;and they WERE WIPED from the earth&#x27;: MACHAH token 4, niphal (simple passive), agentless (TIR-032) — tokens 3 AND 4 in ONE verse: the deed and the undergoing, doubled. The verse performs the wipe from both sides and names no wiper.
+</td><td><span class="he">וַיִּמָּחוּ מִן־הָאָרֶץ</span> · <i>va-yimachu min-ha-aretz</i><br><span class="gloss">= they-were-wiped from-the-earth</span></td><td class='cite'>TIR-032</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">remain(e10) ∧ Theme(e10, akh_noach_va_asher_ito)</span><br><span class="gloss">= remain(e10) ∧ Theme(e10, only-Noach-and-which-with-him)</span><br>VA-YISHAER AKH-NOACH — &#x27;and ONLY NOACH WAS LEFT, and those with him in the ark&#x27;: SHAAR, the REMNANT-ROOT, FIRST TOKEN of 29 in the Torah — niphal, agentless (TIR-032), born naming one man and a boat&#x27;s company at the bottom of the flood (career: the war&#x27;s survivors 14:10, Jacob&#x27;s camp-that-is-left 32:9, Benjamin left alone 42:38, what the plagues leave). AKH (&#x27;only&#x27;) — the restriction particle — rides the debut [the chain reads the particle as diminution, BR 32:11; named-only]. The word every remnant-promise will stand on is minted here.
+</td><td><span class="he">וַיִשָּׁאֶר אַךְ־נֹחַ וַאֲשֶׁר אִתּוֹ בַּתֵּבָה</span> · <i>va-yishaer akh-Noach va-asher ito ba-tevah</i><br><span class="gloss">= was-left only-Noach which with-him ark</span></td><td class='cite'>TIR-032</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">noach are READ without prior install (gen_17&#x27;s boarder, resumed mid-story)</span><br><span class="gloss">= Noach are READ without prior install (gen-17&#x27;s boarder, resumed mid-story)</span><br>flag, not fix (single name; the machine&#x27;s READ-notation kept verbatim)</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The longest verse in the span does the decree&#x27;s whole work and then spends its last arm on the survivor: the wipe gets nineteen words, the remnant six.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_7_24 · Gen.7.24 · <span class='expr'>THE_HUNDRED_AND_FIFTY_DAYS</span></h3>
+<p><span class="he">וַיִּגְבְּרוּ הַמַּיִם עַל־הָאָרֶץ חֲמִשִּׁים וּמְאַת יוֹם</span> · <i>va-yigberu ha-mayim al-ha-aretz chamishim u-meat yom</i> · [EN-AID/JPS] And the waters prevailed upon the earth a hundred and fifty days.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויגברו המים על הארץ</span> · <i>va-yigberu ha-mayim al-ha-aretz</i> · and the waters prevailed on the earth (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">חמשים ומאת יום</span> · <i>chamishim u-meat yom</i> · fifty and a hundred days</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">prevail(e11) ∧ Agent(e11, ha_mayim)</span><br><span class="gloss">= prevail(e11) ∧ Agent(e11, the-waters)</span><br>VA-YIGBERU — &#x27;and the waters PREVAILED&#x27;: the cluster&#x27;s FOURTH and closing beat (and-then form again, matching 7:18&#x27;s opening beat — the cluster is a ring: event, state, state, event). The unit&#x27;s last verb belongs to the waters.
+</td><td><span class="he">וַיִּגְבְּרוּ הַמַּיִם עַל־הָאָרֶץ</span> · <i>va-yigberu ha-mayim al-ha-aretz</i><br><span class="gloss">= and-yigberu waters over-the-earth</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(chamishim_u_meat_yom_al_ha_aretz, t1)</span><br><span class="gloss">= HOLDS(fifty-and-hundred-day-over-the-earth, t1)</span><br>CHAMISHIM U-MEAT YOM — &#x27;FIFTY and a HUNDRED days&#x27;, the letter counting small-first [Onkelos reverses to big-first; noted]: the phrase occurs exactly TWICE in the Torah — here (the rise&#x27;s duration) and 8:3 (the recession&#x27;s): a bracket opened here and closed there, like heaven&#x27;s windows (7:11/8:2). A DURATION, not a date: no TIME anchor (decision recorded) — the unit ends underwater with the clock unset and the waters still prevailing.
+</td><td><span class="he">חֲמִשִּׁים וּמְאַת יוֹם</span> · <i>chamishim u-meat yom</i><br><span class="gloss">= fifty hundred day</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">No closure: the span&#x27;s last fact is that the flood is still winning, on a number the recession will need again.</div>
+</div>
+<h2>State machine</h2>
+<div class="meta">The rise (standalone; registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER).</div>
+<table><tr><th>state</th><th>meaning</th></tr>
+<tr><td><b>S_boot</b></td><td>Before 7:17 — all registers empty (standalone unit)</td></tr>
+<tr><td><b>S_risen</b></td><td>After 7:17 — the forty-fact holds; the waters LIFT the ark (bear-verb token 2, waters as agent) and it RISES (rise-verb debut); tevah/mayim flagged as read</td></tr>
+<tr><td><b>S_walking</b></td><td>After 7:18 — the prevail-verb debuts (beat 1 of 4); the increase-fact holds; the ark WALKS the face of the waters (the 1:2 hover-line)</td></tr>
+<tr><td><b>S_under</b></td><td>After 7:19-20 — the exceedingly-state and the totality clause hold; the mountains covered twice (cover-verb debut, agentless); the fifteen-cubit measure holds</td></tr>
+<tr><td><b>S_expired</b></td><td>After 7:21-22 — all flesh expired (decree-verb receipted); the dying-list with humankind last; the compounded breath-criterion and the dry-land death hold</td></tr>
+<tr><td><b>S_wiped</b></td><td>After 7:23 — the wipe executed twice (active + agentless passive), no name on the page; the decree-scope quoted verbatim; ONLY NOACH LEFT (remnant-root debut); noach flagged as read</td></tr>
+<tr><td><b>S_prevailing</b></td><td>After 7:24 — the fourth prevail-beat; the hundred-fifty-day fact holds; the unit ends underwater, queue empty as it began</td></tr>
+</table><table><tr><th>from</th><th>to</th><th>via</th></tr>
+<tr><td>S_boot</td><td>S_risen</td><td>STEP_Gn_7_17</td></tr>
+<tr><td>S_risen</td><td>S_walking</td><td>STEP_Gn_7_18</td></tr>
+<tr><td>S_walking</td><td>S_under</td><td>STEP_Gn_7_19</td></tr>
+<tr><td>S_under</td><td>S_under</td><td>STEP_Gn_7_20</td></tr>
+<tr><td>S_under</td><td>S_expired</td><td>STEP_Gn_7_21</td></tr>
+<tr><td>S_expired</td><td>S_expired</td><td>STEP_Gn_7_22</td></tr>
+<tr><td>S_expired</td><td>S_wiped</td><td>STEP_Gn_7_23</td></tr>
+<tr><td>S_wiped</td><td>S_prevailing</td><td>STEP_Gn_7_24</td></tr>
+</table>
+<div class="note"><b>AFTER_S_prevailing</b> — TIME: t0 EMPTY — decision: the letter gives DURATIONS (the forty of 7:17, the hundred-fifty of 7:24), not a calendar anchor; gen_17&#x27;s date stands in its own unit; encoding a span as an epoch would misstate the letter. WORLD: ZERO installs (+3 presupposed: tevah, mayim, noach — the build, the waters, the boarder, all read from prior frozen state). Standing facts (10): the forty running, the great increase, the exceedingly-state, the totality clause (all the high mountains under ALL the heavens), the fifteen cubits in the blueprint&#x27;s unit, the dying-list with humankind last, the COMPOUNDED breath-criterion (2:7 quoted one word wider — prose-held quote-diff), the dry-land death, the decree-scope quoted verbatim (6:7 word for word, humankind first), the hundred and fifty days. EVENTS (11): lift (the waters as agent — the bear-verb&#x27;s token 2 carrying the rescue), rise (the rise-verb&#x27;s Torah debut), prevail x2 (beats 1 and 4 of the born-here cluster, ringing two perfect-tense states), walk (the ark on the 1:2 hover-line), cover x2 (the cover-verb&#x27;s debut, agentless, burying the corpus&#x27;s first mountains), expire (the decree&#x27;s verb receipted), wipe (NO agent — the letter&#x27;s subject covert, ZERO divine names in the span), wiped (niphal agentless — the deed doubled from the undergoing side), and REMAIN — the remnant-root&#x27;s FIRST Torah token, naming only Noach and the ark&#x27;s company. REGISTRY: ZERO writes (fourth unit running). SPECS: EMPTY THROUGHOUT — nothing pushed, nothing popped: the corpus&#x27;s first zero-traffic demand queue; the wipe this unit narrates answers gen_15&#x27;s queue ACROSS UNIT WALLS (prose + [OPEN]; the Stage E linker&#x27;s test case). TESTS: EMPTY (no inspection formula in the letter; flags never block). LEDGER: EMPTY. FLAGS (3): read_before_install x3 (tevah, mayim, noach). NO spec-delta (the 2:7-compound held at prose level; decision recorded). The machine ends underwater: no clock, no verdict, no queue, no name on the page — eleven events, ten facts, three flags, one survivor.</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>The waters lift the ark and it rises: after STEP_Gn_7_17</td><td>All registers empty (standalone unit).</td><td>Facts ha_mabul_arbaim_yom HOLD; flags tevah/mayim as read-before-install; SPECS empty.<br><span class="gloss">= Facts the-deluge-forty-day HOLD; flags ark/waters as read-before-install; SPECS empty.</span></td><td><span class="he">וַיִּשְׂאוּ אֶת־הַתֵּבָה וַתָּרָם מֵעַל הָאָרֶץ</span> · <i>va-yisu et-ha-tevah va-taram me-al ha-aretz</i><br><span class="gloss">= they-lifted obj-marker·et-the-ark it-rose over earth</span></td></tr>
+<tr><td><b>S2</b></td><td>The prevail-verb debuts and the ark walks: after STEP_Gn_7_18</td><td>S1 state.</td><td>Facts va_yirbu_meod_al_ha_aretz HOLD; SPECS empty.<br><span class="gloss">= Facts and-increased-very-over-the-earth HOLD; SPECS empty.</span></td><td><span class="he">וַתֵּלֶךְ הַתֵּבָה עַל־פְּנֵי הַמָּיִם</span> · <i>va-telekh ha-tevah al-pnei ha-mayim</i><br><span class="gloss">= it-walked ark over-face-of waters</span></td></tr>
+<tr><td><b>S3</b></td><td>The high mountains under all the heavens go under: after STEP_Gn_7_19</td><td>S2 state.</td><td>Facts gavru_meod_meod/kol_he_harim_ha_gevohim HOLD.<br><span class="gloss">= Facts prevailed-very-very/all-he-mountains-the-high HOLD.</span></td><td><span class="he">וַיְכֻסּוּ כָּל־הֶהָרִים הַגְּבֹהִים</span> · <i>va-yekhusu kol-he-harim ha-gevohim</i><br><span class="gloss">= were-covered all-he-mountains high</span></td></tr>
+<tr><td><b>S4</b></td><td>Fifteen cubits in the blueprint&#x27;s unit: after STEP_Gn_7_20</td><td>S3 state.</td><td>Facts chamesh_esreh_amah_mi_lemalah_gavru HOLD.<br><span class="gloss">= Facts five--teen-cubit-from-upward-prevailed HOLD.</span></td><td><span class="he">חֲמֵשׁ עֶשְׂרֵה אַמָּה מִלְמַעְלָה</span> · <i>chamesh esreh amah mi-lemalah</i><br><span class="gloss">= five -teen cubit upward</span></td></tr>
+<tr><td><b>S5</b></td><td>All flesh expires, humankind last: after STEP_Gn_7_21</td><td>S4 state.</td><td>Facts ba_of_u_va_behemah_u_va_chayah HOLD.<br><span class="gloss">= Facts in-the-flying-creature-and-and-livestock-and-and-beast HOLD.</span></td><td><span class="he">וְכֹל הָאָדָם</span> · <i>ve-khol ha-adam</i><br><span class="gloss">= all human</span></td></tr>
+<tr><td><b>S6</b></td><td>The compounded breath-formula at the drowning: after STEP_Gn_7_22</td><td>S5 state.</td><td>Facts nishmat_ruach_chayim_be_apav/mi_kol_asher_be_charavah_metu HOLD.<br><span class="gloss">= Facts breath-of-spirit-wind-life-in-his-nostrils/from-all-which-in-dry-land-died HOLD.</span></td><td><span class="he">נִשְׁמַת־רוּחַ חַיִּים בְּאַפָּיו</span> · <i>nishmat-ruach chayim be-apav</i><br><span class="gloss">= breath-of-spirit-wind life his-nostrils</span></td></tr>
+<tr><td><b>S7</b></td><td>The wipe executed, only Noach left: after STEP_Gn_7_23</td><td>S6 state.</td><td>Facts me_adam_ad_behemah_ad_remes_ve_ad_of HOLD; flags noach as read-before-install; SPECS empty.<br><span class="gloss">= Facts from-human-until-livestock-until-creeper-and-until-flying-creature HOLD; flags Noach as read-before-install; SPECS empty.</span></td><td><span class="he">וַיִשָּׁאֶר אַךְ־נֹחַ</span> · <i>va-yishaer akh-Noach</i><br><span class="gloss">= was-left only-Noach</span></td></tr>
+<tr><td><b>S8</b></td><td>The hundred and fifty days, still rising: after STEP_Gn_7_24</td><td>S7 state.</td><td>Facts chamishim_u_meat_yom HOLD; SPECS empty.<br><span class="gloss">= Facts fifty-and-hundred-day HOLD; SPECS empty.</span></td><td><span class="he">חֲמִשִּׁים וּמְאַת יוֹם</span> · <i>chamishim u-meat yom</i><br><span class="gloss">= fifty hundred day</span></td></tr>
+<tr><td><b>S9_negative</b></td><td>Negative: the machine&#x27;s ? stays guarded</td><td>A synthetic LET? demand (the machine&#x27;s own contract self-test).</td><td>LET? never auto-upgrades: resolution without citation must REFUSE; with a per-unit citation it may resolve — entries pop demands; nothing but citation moves a mood.</td><td></td></tr>
+<tr><td><b>S10_negative</b></td><td>Negative: flags never block</td><td>A synthetic commit with TESTS empty (the machine&#x27;s own contract self-test).</td><td>Cycle close with TESTS empty must be FLAGGED, never blocked.<br><span class="gloss">= Cycle close with TESTS empty must in FLAGGED, never blocked.</span></td><td></td></tr>
+</table>
+<h2>Exports (reusable patterns)</h2><table><tr><th>id</th><th>content</th></tr>
+<tr><td>EXPORT_the_waters_bear_the_ark</td><td><span class="he">וַיִּשְׂאוּ אֶת־הַתֵּבָה וַתָּרָם</span> · <i>va-yisu et-ha-tevah va-taram</i> · the nasa bear-verb&#x27;s token 2 (token 1: Cain&#x27;s &#x27;too great to BEAR&#x27;, 4:13) fires ACTIVE and PLURAL with the judgment WATERS as agent — the flood carries the rescue; and the rum rise-verb&#x27;s Torah DEBUT follows on the ark (career: Abram&#x27;s raised hand, the staff over the Nile, Israel&#x27;s high hand out of Egypt); Onkelos passivizes the rise (&#x27;it was raised&#x27;) — dual-track</td></tr>
+<tr><td>EXPORT_the_ark_walks_the_hover_line</td><td><span class="he">וַתֵּלֶךְ הַתֵּבָה עַל־פְּנֵי הַמָּיִם</span> · <i>va-telekh ha-tevah al-pnei ha-mayim</i> · the go-verb stem&#x27;s token 2 (token 1: the serpent&#x27;s belly-crawl sentence, 3:14) applied to a vessel, on a THREE-token Torah phrase — the spirit hovers on the face of the waters (1:2), the ark walks it (7:18), the calf-dust is scattered on it (Exod 32:20); the builder walked with God (6:9), his build walks the deep; Onkelos de-animates to a durative participle — dual-track</td></tr>
+<tr><td>EXPORT_prevail_born_as_flood</td><td><span class="he">וַיִּגְבְּרוּ הַמַּיִם … גָּבְרוּ … גָּבְרוּ … וַיִּגְבְּרוּ</span> · <i>va-yigberu ha-mayim … gavru … gavru … va-yigberu</i> · GAVAR (&#x27;prevail/be strong&#x27;) — 7 Torah tokens total, tokens 1-4 ALL in this span (7:18, 19, 20, 24): the strengthen-verb born as four beats of rising water, ringed and-then/perfect/perfect/and-then (two events framing two states); career: the father&#x27;s blessings prevail (49:26), Israel and Amalek prevail by Moses&#x27; hands (Exod 17:11)</td></tr>
+<tr><td>EXPORT_mountains_debut_drowned</td><td><span class="he">וַיְכֻסּוּ כָּל־הֶהָרִים הַגְּבֹהִים אֲשֶׁר־תַּחַת כָּל־הַשָּׁמָיִם</span> · <i>va-yekhusu kol-he-harim ha-gevohim asher-tachat kol-ha-shamayim</i> · HAR (&#x27;mountain&#x27;) enters the corpus at 7:19-20 already under water (token 3: the ark RESTS on the mountains of Ararat, 8:4); GAVOHA (&#x27;high&#x27;) debuts on the drowned peaks (3 Torah tokens); KASAH (&#x27;cover&#x27;) debuts as two agentless passives burying them — and its next token covers a father&#x27;s nakedness (9:23); AMAH (&#x27;cubit&#x27;) token 5 measures the flood in the ark-blueprint&#x27;s own unit (tokens 1-4: the spec; token 6: the ark of the covenant, Exod 25:10)</td></tr>
+<tr><td>EXPORT_three_death_orders</td><td><span class="he">בָּעוֹף וּבַבְּהֵמָה וּבַחַיָּה וּבְכָל־הַשֶּׁרֶץ … וְכֹל הָאָדָם / מֵאָדָם עַד־בְּהֵמָה עַד־רֶמֶשׂ וְעַד־עוֹף</span> · <i>ba-of u-va-behemah u-va-chayah u-ve-khol-ha-sheretz … ve-khol ha-adam / me-adam ad-behemah ad-remes ve-ad-of</i> · the dying-list (7:21) runs bird-to-HUMANKIND-LAST (man isolated on the verse-end arm); the wipe-scope (7:23) quotes 6:7&#x27;s decree VERBATIM with humankind FIRST; neither is creation&#x27;s build order: the dying is told creation-wise, the wiping decree-wise — three orders held as letter fact, no harmonizing</td></tr>
+<tr><td>EXPORT_compounded_breath</td><td><span class="he">נִשְׁמַת־רוּחַ חַיִּים בְּאַפָּיו</span> · <i>nishmat-ruach chayim be-apav</i> · 2:7&#x27;s gift-formula (nishmat chayim, &#x27;breath of life&#x27;) quoted at the drowning one word WIDER — nishmat-RUACH chayim (&#x27;breath of the SPIRIT of life&#x27;); NESHAMAH has exactly 3 Torah tokens (the gift, the drowning, the ban of Deut 20:16); quote-diff held at PROSE (2:7 frozen in a prior unit; no cross-unit machine spec) [OPEN: what the inserted ruach marks]; Onkelos preserves the compound word for word; and CHARAVAH (&#x27;dry land&#x27;) is a two-token word shared with the sea&#x27;s rescue-path (Exod 14:21)</td></tr>
+<tr><td>EXPORT_wipe_executed_nameless</td><td><span class="he">וַיִּמַח אֶת־כָּל־הַיְקוּם … וַיִּמָּחוּ</span> · <i>va-yimach et-kol-ha-yequm … va-yimachu</i> · MACHAH (&#x27;wipe&#x27;) tokens 3 AND 4 in one verse — active deed + niphal undergoing, doubled; YEQUM (&#x27;standing-substance&#x27;) token 2 of exactly 3; the span holds ZERO divine names (and zero speech, zero imperatives): the executioner is covert, his nearest named antecedent across the unit boundary (YHWH shuts, 7:16); gen_15&#x27;s wipe-demand is NOT popped — standalone queues; the Stage E linker&#x27;s test case</td></tr>
+<tr><td>EXPORT_remnant_root_born</td><td><span class="he">וַיִשָּׁאֶר אַךְ־נֹחַ וַאֲשֶׁר אִתּוֹ בַּתֵּבָה</span> · <i>va-yishaer akh-Noach va-asher ito ba-tevah</i> · SHAAR (&#x27;be left / remain&#x27;) — the REMNANT-ROOT&#x27;s first Torah token (of 29), niphal agentless, born naming one man and a boat&#x27;s company at the bottom of the flood, with AKH (&#x27;only&#x27;) riding the debut; career: the war&#x27;s survivors (14:10), Jacob&#x27;s camp-that-is-left (32:9), Benjamin alone (42:38), what the plagues leave; the word remnant-theology stands on is minted at the corpus&#x27;s emptiest moment</td></tr>
+</table>
+<h2>Oral notes (named, tiered, dual-track — never merged)</h2>
+<div class="note"><span class="badge tier-o">observation</span> <b>Bavli Sanhedrin 108a-b (the flood span: the generation&#x27;s sentence, the scalding waters, the ark in the storm); Bereshit Rabbah 32:11 (AKH as diminution — Noach himself diminished); Bavli Zevachim 113a-b (the Land-of-Israel exemption debate on &#x27;under ALL the heavens&#x27;); Rashi at 7:20 (the fifteen-cubit arithmetic), 7:22 (the nostrils), 7:23 (akh Noach) — gen_18 Tier-A queue</b><br><span class="he">וַיִשָּׁאֶר אַךְ־נֹחַ</span> · <i>(queue — named only)</i> · Named, not read: the cache holds ZERO sources anchored to Gen 7:17-24 — twelfth tripwire span. Detector classes predicted: BR 32:11&#x27;s akh-reading is a restriction-particle class (doctrine from a single limiting word); Zevachim 113&#x27;s exemption debate is a totality-clause-scope class (how far &#x27;under ALL the heavens&#x27; reaches); the fifteen-cubit draft-arithmetic is a measure-harmonization class.
+<br><i>Queue entry — no claim made beyond the naming.</i></div>
+<div class="note"><span class="badge tier-v">verified</span> <b>Onkelos Genesis 7:17-24 — read Tier-A at derive time (8 sequential fetches, Data/FETCHLOG.md 2026-08-01)</b><br><span class="he">וְאִשְׁתָּאַר בְּרַם נֹחַ</span> · <i>ve-ishtaar beram Noach</i> · The span&#x27;s translation witness: the lift kept ACTIVE (the waters keep the deed) but the RISE PASSIVIZED (va-taram &#x27;and it rose&#x27; -&gt; ve-ittaramat &#x27;and it WAS RAISED&#x27; — the ark&#x27;s one self-verb handed to an unnamed lifter; flagged); the WALK de-animated (va-telekh &#x27;and it walked&#x27; -&gt; u-mehallekha &#x27;and it was moving about&#x27;, durative participle; flagged) while the face-of-the-waters echo SURVIVES (al apei mayya, &#x27;on the face of the waters&#x27;); the buffer&#x27;s &#x27;high mountains&#x27; is the RUM-root adjective (turaya ramaya, &#x27;the high mountains&#x27;) — peaks and ark-lift tied by one root the Hebrew keeps separate; the prevail-cluster survives as one verb (tekifu, &#x27;grew mighty&#x27;, x4 — the doubled &#x27;very&#x27; kept doubled); the expire-verb leveled to the plain die-verb (the 6:17 decree-echo lost; flagged); the remes/sheretz crawl-words leveled to one root; the COMPOUNDED breath-formula preserved word for word (nishmeta rucha de-chayin, &#x27;breath of the spirit of life&#x27; — the quote-diff is translation-stable); the two-token dry-land word leveled to the common one (be-yabbeshta, &#x27;on the dry ground&#x27;; flagged); the wipe kept DOUBLE (u-mecha &#x27;and He wiped&#x27; / ve-itmechiu &#x27;and they were wiped&#x27;), the remnant kept in its own cognate (ve-ishtaar, &#x27;and he was left&#x27;), the restriction kept (beram, &#x27;only&#x27;); the 150 reversed to big-first; and ZERO divine names inserted — the covert subject stays covert.
+<br><i>Read from Data/sefaria_texts/ (local, gitignored; FETCHLOG is provenance). Dual-track; not merged.</i></div>
+<h2>Binary trees (ta'amim v3, glue bricks)</h2>
+<h3>Gen.7.17 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">ויהי המבול ארבעים יום על־הארץ וירבו המים וישׂאו את־התבה ותרם מעל הארץ</span> · <i>va-yehi ha-mabul arbaim yom al-ha-aretz va-yirbu ha-mayim va-yisu et-ha-teva va-taram me-al ha-aretz</i> · The flood forty days — the waters increased, LIFTED the ark, and it ROSE above the earth. [EN-AID]</div>
+<pre>PHRASE (binary 14w) וַֽ/יְהִ֧י הַ/מַּבּ֛וּל אַרְבָּעִ֥ים י֖וֹם עַל …
+├── PHRASE (binary 6w) וַֽ/יְהִ֧י הַ/מַּבּ֛וּל אַרְבָּעִ֥ים י֖וֹם עַל …
+│   ├── PHRASE (binary 4w) וַֽ/יְהִ֧י הַ/מַּבּ֛וּל אַרְבָּעִ֥ים י֖וֹם
+│   │   ├── [0-1] GLUE וַֽ/יְהִ֧י הַ/מַּבּ֛וּל (tevir, rank=3)
+│   │   └── [2-3] GLUE אַרְבָּעִ֥ים י֖וֹם (tifcha, rank=2)
+│   └── [4-5] GLUE עַל הָ/אָ֑רֶץ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) וַ/יִּרְבּ֣וּ הַ/מַּ֗יִם וַ/יִּשְׂאוּ֙ אֶת הַ/ת…
+    ├── PHRASE (binary 5w) וַ/יִּרְבּ֣וּ הַ/מַּ֗יִם וַ/יִּשְׂאוּ֙ אֶת הַ/ת…
+    │   ├── [6-7] GLUE וַ/יִּרְבּ֣וּ הַ/מַּ֗יִם (revia, rank=3)
+    │   └── PHRASE (binary 3w) וַ/יִּשְׂאוּ֙ אֶת הַ/תֵּבָ֔ה
+    │       ├── [8] וַ/יִּשְׂאוּ֙ (pashta, rank=3)
+    │       └── [9-10] GLUE אֶת הַ/תֵּבָ֔ה (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) וַ/תָּ֖רָם מֵ/עַ֥ל הָ/אָֽרֶץ
+        ├── [11] וַ/תָּ֖רָם (tifcha, rank=2)
+        └── [12-13] GLUE מֵ/עַ֥ל הָ/אָֽרֶץ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.7.18 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">ויגברו המים וירבו מאד על־הארץ ותלך התבה על־פני המים</span> · <i>va-yigbru ha-mayim va-yirbu meod al-ha-aretz va-telekh ha-teva al-pene ha-mayim</i> · The waters prevailed — and the ark WALKED on the face of the waters. [EN-AID]</div>
+<pre>PHRASE (binary 11w) וַ/יִּגְבְּר֥וּ הַ/מַּ֛יִם וַ/יִּרְבּ֥וּ מְאֹ֖ד…
+├── PHRASE (binary 6w) וַ/יִּגְבְּר֥וּ הַ/מַּ֛יִם וַ/יִּרְבּ֥וּ מְאֹ֖ד…
+│   ├── PHRASE (binary 4w) וַ/יִּגְבְּר֥וּ הַ/מַּ֛יִם וַ/יִּרְבּ֥וּ מְאֹ֖ד
+│   │   ├── [0-1] GLUE וַ/יִּגְבְּר֥וּ הַ/מַּ֛יִם (tevir, rank=3)
+│   │   └── [2-3] GLUE וַ/יִּרְבּ֥וּ מְאֹ֖ד (tifcha, rank=2)
+│   └── [4-5] GLUE עַל הָ/אָ֑רֶץ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) וַ/תֵּ֥לֶךְ הַ/תֵּבָ֖ה עַל פְּנֵ֥י הַ/מָּֽיִם
+    ├── [6-7] GLUE וַ/תֵּ֥לֶךְ הַ/תֵּבָ֖ה (tifcha, rank=2)
+    └── [8-10] GLUE עַל פְּנֵ֥י הַ/מָּֽיִם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.7.19 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">והמים גברו מאד מאד על־הארץ ויכסו כל־ההרים הגבהים אשׁר־תחת כל־השׁמים</span> · <i>ve-ha-mayim gavru meod meod al-ha-aretz va-yekhusu kal-he-harim ha-gevohim asher-tachat kal-ha-shamayim</i> · The waters prevailed exceedingly — all the high mountains under all the heavens were covered. [EN-AID]</div>
+<pre>PHRASE (binary 14w) וְ/הַ/מַּ֗יִם גָּֽבְר֛וּ מְאֹ֥ד מְאֹ֖ד עַל הָ/א…
+├── PHRASE (binary 6w) וְ/הַ/מַּ֗יִם גָּֽבְר֛וּ מְאֹ֥ד מְאֹ֖ד עַל הָ/א…
+│   ├── PHRASE (binary 4w) וְ/הַ/מַּ֗יִם גָּֽבְר֛וּ מְאֹ֥ד מְאֹ֖ד
+│   │   ├── [0] וְ/הַ/מַּ֗יִם (revia, rank=3)
+│   │   └── PHRASE (binary 3w) גָּֽבְר֛וּ מְאֹ֥ד מְאֹ֖ד
+│   │       ├── [1] גָּֽבְר֛וּ (tevir, rank=3)
+│   │       └── [2-3] GLUE מְאֹ֥ד מְאֹ֖ד (tifcha, rank=2)
+│   └── [4-5] GLUE עַל הָ/אָ֑רֶץ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) וַ/יְכֻסּ֗וּ כָּל הֶֽ/הָרִים֙ הַ/גְּבֹהִ֔ים אֲש…
+    ├── PHRASE (binary 4w) וַ/יְכֻסּ֗וּ כָּל הֶֽ/הָרִים֙ הַ/גְּבֹהִ֔ים
+    │   ├── [6] וַ/יְכֻסּ֗וּ (revia, rank=3)
+    │   └── PHRASE (binary 3w) כָּל הֶֽ/הָרִים֙ הַ/גְּבֹהִ֔ים
+    │       ├── [7-8] GLUE כָּל הֶֽ/הָרִים֙ (pashta, rank=3)
+    │       └── [9] הַ/גְּבֹהִ֔ים (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) אֲשֶׁר תַּ֖חַת כָּל הַ/שָּׁמָֽיִם
+        ├── [10-11] GLUE אֲשֶׁר תַּ֖חַת (tifcha, rank=2)
+        └── [12-13] GLUE כָּל הַ/שָּׁמָֽיִם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.7.20 · parser unique · 8 words</h3>
+<div class="meta"><span class="he">חמשׁ עשׂרה אמה מלמעלה גברו המים ויכסו ההרים</span> · <i>chamesh esre ama mi-le-mala-ה gavru ha-mayim va-yekhusu he-harim</i> · Fifteen cubits upward the waters prevailed — and the mountains were covered. [EN-AID]</div>
+<pre>PHRASE (binary 8w) חֲמֵ֨שׁ עֶשְׂרֵ֤ה אַמָּה֙ מִ/לְ/מַ֔עְלָ/ה גָּבְ…
+├── PHRASE (binary 6w) חֲמֵ֨שׁ עֶשְׂרֵ֤ה אַמָּה֙ מִ/לְ/מַ֔עְלָ/ה גָּבְ…
+│   ├── PHRASE (binary 4w) חֲמֵ֨שׁ עֶשְׂרֵ֤ה אַמָּה֙ מִ/לְ/מַ֔עְלָ/ה
+│   │   ├── [0-2] GLUE חֲמֵ֨שׁ עֶשְׂרֵ֤ה אַמָּה֙ (pashta, rank=3)
+│   │   └── [3] מִ/לְ/מַ֔עְלָ/ה (zaqef qatan, rank=2)
+│   └── PHRASE (binary 2w) גָּבְר֖וּ הַ/מָּ֑יִם
+│       ├── [4] גָּבְר֖וּ (tifcha, rank=2)
+│       └── [5] הַ/מָּ֑יִם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 2w) וַ/יְכֻסּ֖וּ הֶ/הָרִֽים
+    ├── [6] וַ/יְכֻסּ֖וּ (tifcha, rank=2)
+    └── [7] הֶ/הָרִֽים (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.7.21 · parser unique · 16 words</h3>
+<div class="meta"><span class="he">ויגוע כל־בשׂר הרמשׂ על־הארץ בעוף ובבהמה ובחיה ובכל־השׁרץ השׁרץ על־הארץ וכל האדם</span> · <i>va-yigva kal-basar ha-romes al-ha-aretz ba-of u-va-behema u-va-chaya u-ve-khal-ha-sheretz ha-shoretz al-ha-aretz ve-khol ha-adam</i> · All flesh expired — bird, livestock, beast, swarmer, and all humankind last. [EN-AID]</div>
+<pre>PHRASE (binary 16w) וַ/יִּגְוַ֞ע כָּל בָּשָׂ֣ר הָ/רֹמֵ֣שׂ עַל הָ/אָ…
+├── PHRASE (binary 14w) וַ/יִּגְוַ֞ע כָּל בָּשָׂ֣ר הָ/רֹמֵ֣שׂ עַל הָ/אָ…
+│   ├── PHRASE (binary 9w) וַ/יִּגְוַ֞ע כָּל בָּשָׂ֣ר הָ/רֹמֵ֣שׂ עַל הָ/אָ…
+│   │   ├── PHRASE (binary 6w) וַ/יִּגְוַ֞ע כָּל בָּשָׂ֣ר הָ/רֹמֵ֣שׂ עַל הָ/אָ…
+│   │   │   ├── [0] וַ/יִּגְוַ֞ע (gershayim, rank=4)
+│   │   │   └── [1-5] GLUE כָּל בָּשָׂ֣ר הָ/רֹמֵ֣שׂ עַל הָ/אָ֗רֶץ (revia, rank=3)
+│   │   └── PHRASE (binary 3w) בָּ/ע֤וֹף וּ/בַ/בְּהֵמָה֙ וּ/בַ֣/חַיָּ֔ה
+│   │       ├── [6-7] GLUE בָּ/ע֤וֹף וּ/בַ/בְּהֵמָה֙ (pashta, rank=3)
+│   │       └── [8] וּ/בַ֣/חַיָּ֔ה (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) וּ/בְ/כָל הַ/שֶּׁ֖רֶץ הַ/שֹּׁרֵ֣ץ עַל הָ/אָ֑רֶץ
+│       ├── [9-10] GLUE וּ/בְ/כָל הַ/שֶּׁ֖רֶץ (tifcha, rank=2)
+│       └── [11-13] GLUE הַ/שֹּׁרֵ֣ץ עַל הָ/אָ֑רֶץ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 2w) וְ/כֹ֖ל הָ/אָדָֽם
+    ├── [14] וְ/כֹ֖ל (tifcha, rank=2)
+    └── [15] הָ/אָדָֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.7.22 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">כל אשׁר נשׁמת־רוח חיים באפיו מכל אשׁר בחרבה מתו</span> · <i>kol asher nishmat-rucha chayim be-apay-v mi-kol asher be-charava metu</i> · All with the breath of the spirit of life in its nostrils, all on the dry land — died. [EN-AID]</div>
+<pre>PHRASE (binary 10w) כֹּ֡ל אֲשֶׁר֩ נִשְׁמַת ר֨וּחַ חַיִּ֜ים בְּ/אַפּ…
+├── PHRASE (binary 9w) כֹּ֡ל אֲשֶׁר֩ נִשְׁמַת ר֨וּחַ חַיִּ֜ים בְּ/אַפּ…
+│   ├── PHRASE (binary 6w) כֹּ֡ל אֲשֶׁר֩ נִשְׁמַת ר֨וּחַ חַיִּ֜ים בְּ/אַפּ…
+│   │   ├── [0] כֹּ֡ל (pazer, rank=4)
+│   │   └── PHRASE (binary 5w) אֲשֶׁר֩ נִשְׁמַת ר֨וּחַ חַיִּ֜ים בְּ/אַפָּ֗י/ו
+│   │       ├── [1-4] GLUE אֲשֶׁר֩ נִשְׁמַת ר֨וּחַ חַיִּ֜ים (geresh, rank=4)
+│   │       └── [5] בְּ/אַפָּ֗י/ו (revia, rank=3)
+│   └── PHRASE (binary 3w) מִ/כֹּ֛ל אֲשֶׁ֥ר בֶּ/חָֽרָבָ֖ה
+│       ├── [6] מִ/כֹּ֛ל (tevir, rank=3)
+│       └── [7-8] GLUE אֲשֶׁ֥ר בֶּ/חָֽרָבָ֖ה (tifcha, rank=2)
+└── [9] מֵֽתוּ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.7.23 · parser unique · 25 words</h3>
+<div class="meta"><span class="he">וימח את־כל־היקום אשׁר על־פני האדמה מאדם עד־בהמה עד־רמשׂ ועד־עוף השׁמים וימחו מן־הארץ וישׁאר אך־נח ואשׁר אתו בתבה</span> · <i>va-yimach et-kal-ha-yequm asher al-pene ha-adama me-adam ad-behema ad-remes ve-ad-of ha-shamayim va-yimachu min-ha-aretz va-yishaer akh-nocha va-asher et-o ba-teva</i> · He wiped all the standing-substance — and only Noach was left, and those with him in the ark. [EN-AID]</div>
+<pre>PHRASE (binary 25w) וַ/יִּ֜מַח אֶֽת כָּל הַ/יְק֣וּם אֲשֶׁ֣ר עַל פְּ…
+├── PHRASE (binary 19w) וַ/יִּ֜מַח אֶֽת כָּל הַ/יְק֣וּם אֲשֶׁ֣ר עַל פְּ…
+│   ├── PHRASE (binary 16w) וַ/יִּ֜מַח אֶֽת כָּל הַ/יְק֣וּם אֲשֶׁ֣ר עַל פְּ…
+│   │   ├── PHRASE (binary 8w) וַ/יִּ֜מַח אֶֽת כָּל הַ/יְק֣וּם אֲשֶׁ֣ר עַל פְּ…
+│   │   │   ├── [0] וַ/יִּ֜מַח (geresh, rank=4)
+│   │   │   └── [1-7] GLUE אֶֽת כָּל הַ/יְק֣וּם אֲשֶׁ֣ר עַל פְּנֵ֣י הָֽ/אֲדָמָ֗ה (revia, rank=3)
+│   │   └── PHRASE (binary 8w) מֵ/אָדָ֤ם עַד בְּהֵמָה֙ עַד רֶ֨מֶשׂ֙ וְ/עַד ע֣ו…
+│   │       ├── [8-10] GLUE מֵ/אָדָ֤ם עַד בְּהֵמָה֙ (pashta, rank=3)
+│   │       └── PHRASE (binary 5w) עַד רֶ֨מֶשׂ֙ וְ/עַד ע֣וֹף הַ/שָּׁמַ֔יִם
+│   │           ├── [11-12] GLUE עַד רֶ֨מֶשׂ֙ (pashta, rank=3)
+│   │           └── [13-15] GLUE וְ/עַד ע֣וֹף הַ/שָּׁמַ֔יִם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) וַ/יִּמָּח֖וּ מִן הָ/אָ֑רֶץ
+│       ├── [16] וַ/יִּמָּח֖וּ (tifcha, rank=2)
+│       └── [17-18] GLUE מִן הָ/אָ֑רֶץ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) וַ/יִשָּׁ֧אֶר אַךְ נֹ֛חַ וַֽ/אֲשֶׁ֥ר אִתּ֖/וֹ ב…
+    ├── PHRASE (binary 5w) וַ/יִשָּׁ֧אֶר אַךְ נֹ֛חַ וַֽ/אֲשֶׁ֥ר אִתּ֖/וֹ
+    │   ├── [19-21] GLUE וַ/יִשָּׁ֧אֶר אַךְ נֹ֛חַ (tevir, rank=3)
+    │   └── [22-23] GLUE וַֽ/אֲשֶׁ֥ר אִתּ֖/וֹ (tifcha, rank=2)
+    └── [24] בַּ/תֵּבָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.7.24 · parser unique · 7 words</h3>
+<div class="meta"><span class="he">ויגברו המים על־הארץ חמשׁים ומאת יום</span> · <i>va-yigbru ha-mayim al-ha-aretz chamishim u-meat yom</i> · And the waters prevailed on the earth, a hundred and fifty days. [EN-AID]</div>
+<pre>PHRASE (binary 7w) וַ/יִּגְבְּר֥וּ הַ/מַּ֖יִם עַל הָ/אָ֑רֶץ חֲמִשׁ…
+├── PHRASE (binary 4w) וַ/יִּגְבְּר֥וּ הַ/מַּ֖יִם עַל הָ/אָ֑רֶץ
+│   ├── [0-1] GLUE וַ/יִּגְבְּר֥וּ הַ/מַּ֖יִם (tifcha, rank=2)
+│   └── [2-3] GLUE עַל הָ/אָ֑רֶץ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) חֲמִשִּׁ֥ים וּ/מְאַ֖ת יֽוֹם
+    ├── [4-5] GLUE חֲמִשִּׁ֥ים וּ/מְאַ֖ת (tifcha, rank=2)
+    └── [6] יֽוֹם (silluq (verse-end emperor), rank=1)
+</pre>
+<h2>Word coverage — 105/105 words with named roles</h2>
+<table><tr><th>ref</th><th>#</th><th>Hebrew</th><th>translit</th><th>English</th><th>role</th><th>kind</th><th>rule</th></tr>
+<tr><td>Gen.7.17</td><td>0</td><td class='he-cell'>ויהי</td><td>va-yehi</td><td>and-be</td><td>and-be</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.17</td><td>1</td><td class='he-cell'>המבול</td><td>ha-mabul</td><td>the-deluge</td><td>MABUL_token_5</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.17</td><td>2</td><td class='he-cell'>ארבעים</td><td>arbaim</td><td>forty</td><td>forty</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.17</td><td>3</td><td class='he-cell'>יום</td><td>yom</td><td>day</td><td>day</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.17</td><td>4</td><td class='he-cell'>על</td><td>al</td><td>over</td><td>over</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.17</td><td>5</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.17</td><td>6</td><td class='he-cell'>וירבו</td><td>va-yirbu</td><td>and-increased</td><td>and-increased</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.17</td><td>7</td><td class='he-cell'>המים</td><td>ha-mayim</td><td>the-waters</td><td>the-waters</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.17</td><td>8</td><td class='he-cell'>וישאו</td><td>va-yisu</td><td>and-they-lifted</td><td>NASA_token_2_waters_as_agent</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.17</td><td>9</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.7.17</td><td>10</td><td class='he-cell'>התבה</td><td>ha-teva</td><td>the-box</td><td>the-box</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.17</td><td>11</td><td class='he-cell'>ותרם</td><td>va-taram</td><td>and-it-rose</td><td>RUM_FIRST_TOKEN_high_hand_next</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.17</td><td>12</td><td class='he-cell'>מעל</td><td>me-al</td><td>from-over</td><td>from-over</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.17</td><td>13</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.18</td><td>0</td><td class='he-cell'>ויגברו</td><td>va-yigbru</td><td>and-prevailed</td><td>GAVAR_FIRST_TOKEN_debut_cluster</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.18</td><td>1</td><td class='he-cell'>המים</td><td>ha-mayim</td><td>the-waters</td><td>the-waters</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.18</td><td>2</td><td class='he-cell'>וירבו</td><td>va-yirbu</td><td>and-increased</td><td>and-increased</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.18</td><td>3</td><td class='he-cell'>מאד</td><td>meod</td><td>very</td><td>very</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.18</td><td>4</td><td class='he-cell'>על</td><td>al</td><td>over</td><td>over</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.18</td><td>5</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.18</td><td>6</td><td class='he-cell'>ותלך</td><td>va-telekh</td><td>and-it-walked</td><td>YALAKH_token_2_serpent_was_first</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.18</td><td>7</td><td class='he-cell'>התבה</td><td>ha-teva</td><td>the-box</td><td>the-box</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.18</td><td>8</td><td class='he-cell'>על</td><td>al</td><td>over</td><td>over</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.18</td><td>9</td><td class='he-cell'>פני</td><td>pene</td><td>face-of</td><td>AL_PNEI_HA_MAYIM_1_2_echo</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.18</td><td>10</td><td class='he-cell'>המים</td><td>ha-mayim</td><td>the-waters</td><td>the-waters</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.19</td><td>0</td><td class='he-cell'>והמים</td><td>ve-ha-mayim</td><td>and-the-waters</td><td>and-the-waters</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.19</td><td>1</td><td class='he-cell'>גברו</td><td>gavru</td><td>prevailed</td><td>gavar_token_2_perfect_state</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.19</td><td>2</td><td class='he-cell'>מאד</td><td>meod</td><td>very</td><td>very</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.19</td><td>3</td><td class='he-cell'>מאד</td><td>meod</td><td>very</td><td>very</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.19</td><td>4</td><td class='he-cell'>על</td><td>al</td><td>over</td><td>over</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.19</td><td>5</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.19</td><td>6</td><td class='he-cell'>ויכסו</td><td>va-yekhusu</td><td>and-were-covered</td><td>KASAH_FIRST_TOKEN_pual_agentless</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.19</td><td>7</td><td class='he-cell'>כל</td><td>kal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.19</td><td>8</td><td class='he-cell'>ההרים</td><td>he-harim</td><td>the-mountains</td><td>HAR_FIRST_TOKEN_drowned_at_debut</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.19</td><td>9</td><td class='he-cell'>הגבהים</td><td>ha-gevohim</td><td>the-high</td><td>GAVOHA_FIRST_TOKEN_of_3</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.19</td><td>10</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>which</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.19</td><td>11</td><td class='he-cell'>תחת</td><td>tachat</td><td>under</td><td>under</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.19</td><td>12</td><td class='he-cell'>כל</td><td>kal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.19</td><td>13</td><td class='he-cell'>השמים</td><td>ha-shamayim</td><td>the-heavens</td><td>the-heavens</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.20</td><td>0</td><td class='he-cell'>חמש</td><td>chamesh</td><td>five</td><td>fifteen_cubits</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.20</td><td>1</td><td class='he-cell'>עשרה</td><td>esre</td><td>teen</td><td>fifteen_cubits_b</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.20</td><td>2</td><td class='he-cell'>אמה</td><td>ama</td><td>cubit</td><td>AMAH_token_5_blueprint_unit</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.20</td><td>3</td><td class='he-cell'>מלמעלה</td><td>mi-le-mala-h</td><td>upward</td><td>mi_lemalah_upward</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.20</td><td>4</td><td class='he-cell'>גברו</td><td>gavru</td><td>prevailed</td><td>gavar_token_3_perfect_state</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.20</td><td>5</td><td class='he-cell'>המים</td><td>ha-mayim</td><td>the-waters</td><td>the-waters</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.20</td><td>6</td><td class='he-cell'>ויכסו</td><td>va-yekhusu</td><td>and-were-covered</td><td>kasah_token_2_pual_agentless</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.20</td><td>7</td><td class='he-cell'>ההרים</td><td>he-harim</td><td>the-mountains</td><td>the-mountains</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.21</td><td>0</td><td class='he-cell'>ויגוע</td><td>va-yigva</td><td>and-expired</td><td>GAVA_token_2_decree_verb_receipted</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.21</td><td>1</td><td class='he-cell'>כל</td><td>kal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.21</td><td>2</td><td class='he-cell'>בשר</td><td>basar</td><td>flesh</td><td>flesh</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.21</td><td>3</td><td class='he-cell'>הרמש</td><td>ha-romes</td><td>the-creeping</td><td>the-creeping</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.21</td><td>4</td><td class='he-cell'>על</td><td>al</td><td>over</td><td>over</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.21</td><td>5</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.21</td><td>6</td><td class='he-cell'>בעוף</td><td>ba-of</td><td>in-flying-creature</td><td>in-flying-creature</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.21</td><td>7</td><td class='he-cell'>ובבהמה</td><td>u-va-behema</td><td>and-in-livestock</td><td>and-in-livestock</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.21</td><td>8</td><td class='he-cell'>ובחיה</td><td>u-va-chaya</td><td>and-in-beast</td><td>and-in-beast</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.21</td><td>9</td><td class='he-cell'>ובכל</td><td>u-ve-khal</td><td>and-in-all</td><td>and-in-all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.21</td><td>10</td><td class='he-cell'>השרץ</td><td>ha-sheretz</td><td>the-swarming-creature</td><td>the-swarming-creature</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.21</td><td>11</td><td class='he-cell'>השרץ</td><td>ha-shoretz</td><td>the-swarming</td><td>the-swarming</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.21</td><td>12</td><td class='he-cell'>על</td><td>al</td><td>over</td><td>over</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.21</td><td>13</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.21</td><td>14</td><td class='he-cell'>וכל</td><td>ve-khol</td><td>and-all</td><td>and-all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.21</td><td>15</td><td class='he-cell'>האדם</td><td>ha-adam</td><td>the-human</td><td>HA_ADAM_last_alone_on_verse_end</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.22</td><td>0</td><td class='he-cell'>כל</td><td>kol</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.22</td><td>1</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>which</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.22</td><td>2</td><td class='he-cell'>נשמת</td><td>nishmat</td><td>breath-of</td><td>NESHAMAH_token_2_of_3_compounded</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.22</td><td>3</td><td class='he-cell'>רוח</td><td>rucha</td><td>spirit</td><td>RUACH_inserted_into_2_7_formula</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.22</td><td>4</td><td class='he-cell'>חיים</td><td>chayim</td><td>life</td><td>life</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.22</td><td>5</td><td class='he-cell'>באפיו</td><td>be-apay-v</td><td>in-his-nostrils</td><td>in-his-nostrils</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.22</td><td>6</td><td class='he-cell'>מכל</td><td>mi-kol</td><td>from-all</td><td>from-all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.22</td><td>7</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>which</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.22</td><td>8</td><td class='he-cell'>בחרבה</td><td>be-charava</td><td>on-dry-land</td><td>CHARAVAH_two_token_word_sea_next</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.22</td><td>9</td><td class='he-cell'>מתו</td><td>metu</td><td>died</td><td>metu_alone_on_verse_end</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.23</td><td>0</td><td class='he-cell'>וימח</td><td>va-yimach</td><td>and-He-wiped</td><td>MACHAH_token_3_covert_subject</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.23</td><td>1</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.7.23</td><td>2</td><td class='he-cell'>כל</td><td>kal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.23</td><td>3</td><td class='he-cell'>היקום</td><td>ha-yequm</td><td>the-standing-substance</td><td>YEQUM_token_2_of_3</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.23</td><td>4</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>which</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.23</td><td>5</td><td class='he-cell'>על</td><td>al</td><td>over</td><td>over</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.23</td><td>6</td><td class='he-cell'>פני</td><td>pene</td><td>face-of</td><td>face-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.23</td><td>7</td><td class='he-cell'>האדמה</td><td>ha-adama</td><td>the-ground</td><td>the-ground</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.23</td><td>8</td><td class='he-cell'>מאדם</td><td>me-adam</td><td>from-human</td><td>from-human</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.23</td><td>9</td><td class='he-cell'>עד</td><td>ad</td><td>until</td><td>until</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.23</td><td>10</td><td class='he-cell'>בהמה</td><td>behema</td><td>livestock</td><td>livestock</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.23</td><td>11</td><td class='he-cell'>עד</td><td>ad</td><td>until</td><td>until</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.23</td><td>12</td><td class='he-cell'>רמש</td><td>remes</td><td>creeper</td><td>creeper</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.23</td><td>13</td><td class='he-cell'>ועד</td><td>ve-ad</td><td>and-until</td><td>and-until</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.23</td><td>14</td><td class='he-cell'>עוף</td><td>of</td><td>flying-creature</td><td>flying-creature</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.23</td><td>15</td><td class='he-cell'>השמים</td><td>ha-shamayim</td><td>the-heavens</td><td>the-heavens</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.23</td><td>16</td><td class='he-cell'>וימחו</td><td>va-yimachu</td><td>and-they-were-wiped</td><td>MACHAH_token_4_niphal_agentless</td><td>logic_bearing</td><td class='cite'>TIR-032</td></tr>
+<tr><td>Gen.7.23</td><td>17</td><td class='he-cell'>מן</td><td>min</td><td>from</td><td>from</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.23</td><td>18</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.23</td><td>19</td><td class='he-cell'>וישאר</td><td>va-yishaer</td><td>and-was-left</td><td>SHAAR_FIRST_TOKEN_remnant_born</td><td>logic_bearing</td><td class='cite'>TIR-032</td></tr>
+<tr><td>Gen.7.23</td><td>20</td><td class='he-cell'>אך</td><td>akh</td><td>only</td><td>AKH_restriction_particle</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.23</td><td>21</td><td class='he-cell'>נח</td><td>nocha</td><td>Noah</td><td>name_nocha</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.23</td><td>22</td><td class='he-cell'>ואשר</td><td>va-asher</td><td>and-which</td><td>and-which</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.23</td><td>23</td><td class='he-cell'>אתו</td><td>et-o</td><td>with-him</td><td>with-him</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.23</td><td>24</td><td class='he-cell'>בתבה</td><td>ba-teva</td><td>in-box</td><td>in-box</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.24</td><td>0</td><td class='he-cell'>ויגברו</td><td>va-yigbru</td><td>and-prevailed</td><td>gavar_token_4_closing_beat</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.24</td><td>1</td><td class='he-cell'>המים</td><td>ha-mayim</td><td>the-waters</td><td>the-waters</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.24</td><td>2</td><td class='he-cell'>על</td><td>al</td><td>over</td><td>over</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.24</td><td>3</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.24</td><td>4</td><td class='he-cell'>חמשים</td><td>chamishim</td><td>fifty</td><td>fifty</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.24</td><td>5</td><td class='he-cell'>ומאת</td><td>u-meat</td><td>and-hundred</td><td>and-hundred</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.7.24</td><td>6</td><td class='he-cell'>יום</td><td>yom</td><td>day</td><td>day</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_18_the_rise — The rise: the waters lift the ark, all flesh dies, only Noach is left (7:17-24) [frozen]
+
+final state: WORLD=[] (+3 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[&#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;]
+
+=== S1 — The waters lift the ark and it rises: after STEP_Gn_7_17
+    וַיִּשְׂאוּ אֶת־הַתֵּבָה וַתָּרָם מֵעַל הָאָרֶץ (va-yisu et-ha-tevah va-taram me-al ha-aretz)
+    PASS  Facts ha_mabul_arbaim_yom HOLD  (1 facts)
+    PASS  flags tevah/mayim as read-before-install  (flagged=[&#x27;mayim&#x27;, &#x27;tevah&#x27;])
+    PASS  SPECS empty.  (queue=0)
+
+=== S2 — The prevail-verb debuts and the ark walks: after STEP_Gn_7_18
+    וַתֵּלֶךְ הַתֵּבָה עַל־פְּנֵי הַמָּיִם (va-telekh ha-tevah al-pnei ha-mayim)
+    PASS  Facts va_yirbu_meod_al_ha_aretz HOLD  (2 facts)
+    PASS  SPECS empty.  (queue=0)
+
+=== S3 — The high mountains under all the heavens go under: after STEP_Gn_7_19
+    וַיְכֻסּוּ כָּל־הֶהָרִים הַגְּבֹהִים (va-yekhusu kol-he-harim ha-gevohim)
+    PASS  Facts gavru_meod_meod/kol_he_harim_ha_gevohim HOLD.  (4 facts)
+
+=== S4 — Fifteen cubits in the blueprint&#x27;s unit: after STEP_Gn_7_20
+    חֲמֵשׁ עֶשְׂרֵה אַמָּה מִלְמַעְלָה (chamesh esreh amah mi-lemalah)
+    PASS  Facts chamesh_esreh_amah_mi_lemalah_gavru HOLD.  (5 facts)
+
+=== S5 — All flesh expires, humankind last: after STEP_Gn_7_21
+    וְכֹל הָאָדָם (ve-khol ha-adam)
+    PASS  Facts ba_of_u_va_behemah_u_va_chayah HOLD.  (6 facts)
+
+=== S6 — The compounded breath-formula at the drowning: after STEP_Gn_7_22
+    נִשְׁמַת־רוּחַ חַיִּים בְּאַפָּיו (nishmat-ruach chayim be-apav)
+    PASS  Facts nishmat_ruach_chayim_be_apav/mi_kol_asher_be_charavah_metu HOLD.  (8 facts)
+
+=== S7 — The wipe executed, only Noach left: after STEP_Gn_7_23
+    וַיִשָּׁאֶר אַךְ־נֹחַ (va-yishaer akh-Noach)
+    PASS  Facts me_adam_ad_behemah_ad_remes_ve_ad_of HOLD  (9 facts)
+    PASS  flags noach as read-before-install  (flagged=[&#x27;mayim&#x27;, &#x27;noach&#x27;, &#x27;tevah&#x27;])
+    PASS  SPECS empty.  (queue=0)
+
+=== S8 — The hundred and fifty days, still rising: after STEP_Gn_7_24
+    חֲמִשִּׁים וּמְאַת יוֹם (chamishim u-meat yom)
+    PASS  Facts chamishim_u_meat_yom HOLD  (10 facts)
+    PASS  SPECS empty.  (queue=0)
+
+=== S9_negative — Negative: the machine&#x27;s ? stays guarded
+    PASS  imperfect-in-command parsed as LET? (question mark kept)  (mood=LET?)
+    PASS  auto-upgrade REFUSED  (TIR-028: LET? never auto-upgrades to LET — a per-unit judgme...)
+    PASS  upgrade WITH citation allowed  (cite=per-unit judgment (owner), TIR-028 resolution)
+
+=== S10_negative — Negative: flags never block
+    PASS  commit proceeded (not blocked)  (LEDGER=[99])
+    PASS  pattern deviation FLAGGED  (flags=[&#x27;commit_without_test&#x27;])
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_18_the_rise.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_18_the_rise — 7:17-24
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_18_the_rise.yaml) is CANONICAL (Pre-Code); this
+# file is a derived, runnable rendering. Do not edit — regenerate. The
+# assertion block at the bottom is baked from the Stage D interpreter&#x27;s
+# actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;The rise: the waters lift the ark, all flesh dies, only Noach is left (7:17-24)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_18_the_rise&quot;)
+
+# -------------------------- Gen.7.17 · THE_LIFT_AND_THE_RISE ---------------
+# וַיְהִי הַמַּבּוּל אַרְבָּעִים יוֹם עַל־הָאָרֶץ וַיִּרְבּוּ הַמַּיִם
+# וַיִּשְׂאוּ אֶת־הַתֵּבָה וַתָּרָם מֵעַל הָאָרֶץ
+# &quot;And the flood was forty days upon the earth; and the waters increased,
+# and bore up the ark, and it was lifted up above the earth.&quot;
+m.step(&quot;Gen.7.17&quot;)
+# ‹וַיְהִי הַמַּבּוּל אַרְבָּעִים יוֹם עַל־הָאָרֶץ› (“and-be the-deluge
+# forty day over the-earth”) — fact holds: the-deluge-forty-day-over-the-
+# earth
+m.fact(&quot;ha_mabul_arbaim_yom_al_ha_aretz&quot;)
+# ‹וַיִּרְבּוּ הַמַּיִם וַיִּשְׂאוּ אֶת־הַתֵּבָה› (“and-increased the-waters
+# and-they-lifted obj-marker the-ark”) — event: lift — agent the-waters;
+# theme the-ark
+m.event(&quot;lift&quot;, agent=&quot;ha_mayim&quot;, themes=[&quot;ha_tevah&quot;])
+# ‹וַתָּרָם מֵעַל הָאָרֶץ› (“and-it-rose from-over the-earth”) — event: rise
+# — theme the-ark
+m.event(&quot;rise&quot;, themes=[&quot;ha_tevah&quot;])
+# reads without prior install (flag, not fix): ark, waters
+m.presupposed(&quot;tevah&quot;, &quot;mayim&quot;)
+
+# -------------------------- Gen.7.18 · THE_PREVAIL_DEBUT_THE_ARK_WALKS -----
+# וַיִּגְבְּרוּ הַמַּיִם וַיִּרְבּוּ מְאֹד עַל־הָאָרֶץ וַתֵּלֶךְ הַתֵּבָה
+# עַל־פְּנֵי הַמָּיִם
+# &quot;And the waters prevailed, and increased greatly upon the earth; and the
+# ark went upon the face of the waters.&quot;
+m.step(&quot;Gen.7.18&quot;)
+# ‹וַיִּגְבְּרוּ הַמַּיִם› (“and-prevailed the-waters”) — event: prevail —
+# agent the-waters
+m.event(&quot;prevail&quot;, agent=&quot;ha_mayim&quot;)
+# ‹וַיִּרְבּוּ מְאֹד עַל־הָאָרֶץ› (“and-increased very over the-earth”) —
+# fact holds: and-increased-very-over-the-earth
+m.fact(&quot;va_yirbu_meod_al_ha_aretz&quot;)
+# ‹וַתֵּלֶךְ הַתֵּבָה עַל־פְּנֵי הַמָּיִם› (“and-it-walked the-ark over
+# face-of the-waters”) — event: walk — agent the-ark; theme over-face-of-
+# the-waters
+m.event(&quot;walk&quot;, agent=&quot;ha_tevah&quot;, themes=[&quot;al_pnei_ha_mayim&quot;])
+
+# -------------------------- Gen.7.19 · THE_MOUNTAINS_GO_UNDER --------------
+# וְהַמַּיִם גָּבְרוּ מְאֹד מְאֹד עַל־הָאָרֶץ וַיְכֻסּוּ כָּל־הֶהָרִים
+# הַגְּבֹהִים אֲשֶׁר־תַּחַת כָּל־הַשָּׁמָיִם
+# &quot;And the waters prevailed exceedingly upon the earth; and all the high
+# mountains that were under the whole heaven were covered.&quot;
+m.step(&quot;Gen.7.19&quot;)
+# ‹גָּבְרוּ מְאֹד מְאֹד … כָּל־הֶהָרִים הַגְּבֹהִים אֲשֶׁר־תַּחַת
+# כָּל־הַשָּׁמָיִם› (“prevailed very very … all the-mountains the-high which
+# under all the-heavens”) — fact holds: prevailed-very-very-over-the-earth;
+# all-he-mountains-the-high-under-all-the-heavens
+m.fact(&quot;gavru_meod_meod_al_ha_aretz&quot;,
+       &quot;kol_he_harim_ha_gevohim_tachat_kol_ha_shamayim&quot;)
+# ‹וַיְכֻסּוּ כָּל־הֶהָרִים הַגְּבֹהִים› (“and-were-covered all the-
+# mountains the-high”) — event: cover — theme all-he-mountains-the-high
+m.event(&quot;cover&quot;, themes=[&quot;kol_he_harim_ha_gevohim&quot;])
+
+# -------------------------- Gen.7.20 · FIFTEEN_CUBITS_UPWARD ---------------
+# חֲמֵשׁ עֶשְׂרֵה אַמָּה מִלְמַעְלָה גָּבְרוּ הַמָּיִם וַיְכֻסּוּ הֶהָרִים
+# &quot;Fifteen cubits upward did the waters prevail; and the mountains were
+# covered.&quot;
+m.step(&quot;Gen.7.20&quot;)
+# ‹חֲמֵשׁ עֶשְׂרֵה אַמָּה מִלְמַעְלָה גָּבְרוּ הַמָּיִם› (“five teen cubit
+# upward prevailed the-waters”) — fact holds: five--teen-cubit-from-upward-
+# prevailed
+m.fact(&quot;chamesh_esreh_amah_mi_lemalah_gavru&quot;)
+# ‹וַיְכֻסּוּ הֶהָרִים› (“and-were-covered the-mountains”) — event: cover —
+# theme mountains
+m.event(&quot;cover&quot;, themes=[&quot;he_harim&quot;])
+
+# -------------------------- Gen.7.21 · ALL_FLESH_EXPIRES -------------------
+# וַיִּגְוַע כָּל־בָּשָׂר הָרֹמֵשׂ עַל־הָאָרֶץ בָּעוֹף וּבַבְּהֵמָה
+# וּבַחַיָּה וּבְכָל־הַשֶּׁרֶץ הַשֹּׁרֵץ עַל־הָאָרֶץ וְכֹל הָאָדָם
+# &quot;And all flesh perished that moved upon the earth, both fowl, and cattle,
+# and beast, and every swarming thing that swarmeth upon the earth, and
+# every man;&quot;
+m.step(&quot;Gen.7.21&quot;)
+# ‹וַיִּגְוַע כָּל־בָּשָׂר› (“and-expired all flesh”) — event: expire —
+# theme all-flesh
+m.event(&quot;expire&quot;, themes=[&quot;kol_basar&quot;])
+# ‹בָּעוֹף וּבַבְּהֵמָה וּבַחַיָּה וּבְכָל־הַשֶּׁרֶץ … וְכֹל הָאָדָם› (“in-
+# flying-creature and-in-livestock and-in-beast and-in-all the-swarming-
+# creature … and-all the-human”) — fact holds: in-the-flying-creature-and-
+# and-livestock-and-and-beast-and-and-swarming-creature-and-all-the-human
+m.fact(&quot;ba_of_u_va_behemah_u_va_chayah_u_va_sheretz_ve_khol_ha_adam&quot;)
+
+# -------------------------- Gen.7.22 · THE_COMPOUNDED_BREATH_CRITERION -----
+# כֹּל אֲשֶׁר נִשְׁמַת־רוּחַ חַיִּים בְּאַפָּיו מִכֹּל אֲשֶׁר בֶּחָרָבָה
+# מֵתוּ
+# &quot;all in whose nostrils was the breath of the spirit of life, whatsoever
+# was in the dry land, died.&quot;
+m.step(&quot;Gen.7.22&quot;)
+# ‹נִשְׁמַת־רוּחַ חַיִּים בְּאַפָּיו … מִכֹּל אֲשֶׁר בֶּחָרָבָה מֵתוּ›
+# (“breath-of spirit life in-his-nostrils … from-all which on-dry-land
+# died”) — fact holds: breath-of-spirit-wind-life-in-his-nostrils; from-all-
+# which-in-dry-land-died
+m.fact(&quot;nishmat_ruach_chayim_be_apav&quot;,
+       &quot;mi_kol_asher_be_charavah_metu&quot;)
+
+# -------------------------- Gen.7.23 · THE_WIPE_EXECUTED_ONLY_NOACH_LEFT ---
+# וַיִּמַח אֶת־כָּל־הַיְקוּם אֲשֶׁר עַל־פְּנֵי הָאֲדָמָה מֵאָדָם
+# עַד־בְּהֵמָה עַד־רֶמֶשׂ וְעַד־עוֹף הַשָּׁמַיִם וַיִּמָּחוּ מִן־הָאָרֶץ
+# וַיִשָּׁאֶר אַךְ־נֹחַ וַאֲשֶׁר אִתּוֹ בַּתֵּבָה
+# &quot;And He blotted out every living substance which was upon the face of the
+# ground, both man, and cattle, and creeping thing, and fowl of the heaven;
+# and they were blotted out from the earth; and Noah only was left, and they
+# that were with him in the ark.&quot;
+m.step(&quot;Gen.7.23&quot;)
+# ‹וַיִּמַח אֶת־כָּל־הַיְקוּם› (“and-He-wiped obj-marker all the-standing-
+# substance”) — event: wipe — theme all-the-standing-substance
+m.event(&quot;wipe&quot;, themes=[&quot;kol_ha_yequm&quot;])
+# ‹מֵאָדָם עַד־בְּהֵמָה עַד־רֶמֶשׂ וְעַד־עוֹף הַשָּׁמַיִם› (“from-human
+# until livestock until creeper and-until flying-creature the-heavens”) —
+# fact holds: from-human-until-livestock-until-creeper-and-until-flying-
+# creature
+m.fact(&quot;me_adam_ad_behemah_ad_remes_ve_ad_of&quot;)
+# ‹וַיִּמָּחוּ מִן־הָאָרֶץ› (“and-they-were-wiped from the-earth”) — event:
+# wiped — theme all-the-standing-substance
+m.event(&quot;wiped&quot;, themes=[&quot;kol_ha_yequm&quot;])
+# ‹וַיִשָּׁאֶר אַךְ־נֹחַ וַאֲשֶׁר אִתּוֹ בַּתֵּבָה› (“and-was-left only Noah
+# and-which with-him in-ark”) — event: remain — theme only-Noach-and-which-
+# with-him
+m.event(&quot;remain&quot;, themes=[&quot;akh_noach_va_asher_ito&quot;])
+# reads without prior install (flag, not fix): Noach
+m.presupposed(&quot;noach&quot;)
+
+# -------------------------- Gen.7.24 · THE_HUNDRED_AND_FIFTY_DAYS ----------
+# וַיִּגְבְּרוּ הַמַּיִם עַל־הָאָרֶץ חֲמִשִּׁים וּמְאַת יוֹם
+# &quot;And the waters prevailed upon the earth a hundred and fifty days.&quot;
+m.step(&quot;Gen.7.24&quot;)
+# ‹וַיִּגְבְּרוּ הַמַּיִם עַל־הָאָרֶץ› (“and-prevailed the-waters over the-
+# earth”) — event: prevail — agent the-waters
+m.event(&quot;prevail&quot;, agent=&quot;ha_mayim&quot;)
+# ‹חֲמִשִּׁים וּמְאַת יוֹם› (“fifty and-hundred day”) — fact holds: fifty-
+# and-hundred-day-over-the-earth
+m.fact(&quot;chamishim_u_meat_yom_al_ha_aretz&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == {&#x27;noach&#x27;, &#x27;tevah&#x27;, &#x27;mayim&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS[&quot;log&quot;]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;read_before_install&#x27;: 3}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;ha_mabul_arbaim_yom_al_ha_aretz&#x27;, &#x27;va_yirbu_meod_al_ha_aretz&#x27;, &#x27;gavru_meod_meod_al_ha_aretz&#x27;, &#x27;kol_he_harim_ha_gevohim_tachat_kol_ha_shamayim&#x27;, &#x27;chamesh_esreh_amah_mi_lemalah_gavru&#x27;, &#x27;ba_of_u_va_behemah_u_va_chayah_u_va_sheretz_ve_khol_ha_adam&#x27;, &#x27;nishmat_ruach_chayim_be_apav&#x27;, &#x27;mi_kol_asher_be_charavah_metu&#x27;, &#x27;me_adam_ad_behemah_ad_remes_ve_ad_of&#x27;, &#x27;chamishim_u_meat_yom_al_ha_aretz&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 11
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre>
+<div class="note">FROZEN 2026-08-01 (AGENT-TRIAL derivation, owner-approved 2026-08-01: mechanics by the derivation agent; review and freeze stayed with the main loop — freeze-after-review #1, review PASSED): nineteenth frozen unit — THE RISE; ninth extension-free derivation in a row. Central findings, all DB-verified before drafting: the judgment waters LIFT the ark (the nasa bear-verb&#x27;s token 2 — token 1 was Cain&#x27;s too-heavy bearing — ACTIVE, the waters as agent) and it RISES (the rum rise-verb&#x27;s Torah debut; career: the raised-hand oath, the staff over the Nile, the high hand out of Egypt); the ark WALKS (the go-verb stem&#x27;s token 2 — the serpent&#x27;s crawl was token 1) on the face-of-the-waters, a three-token phrase shared with 1:2&#x27;s hovering spirit and the calf-dust of Exod 32:20; GAVAR (&#x27;prevail&#x27;) is BORN as this span — 7 Torah tokens, the first four here, ringed event/state/state/event; the mountains and the high-word DEBUT drowned under the cover-verb&#x27;s first two agentless tokens (its next token covers a father&#x27;s nakedness); the flood&#x27;s only measure is fifteen cubits — the ark-blueprint&#x27;s own unit, whose next token measures the ark of the covenant; three death-orders (dying-list with humankind LAST and alone on the verse-end arm; wipe-scope quoting 6:7&#x27;s decree VERBATIM with humankind FIRST; neither creation&#x27;s order); 2:7&#x27;s breath-formula quoted one word WIDER at the drowning (nishmat-RUACH chayim, &#x27;breath of the SPIRIT of life&#x27; — prose-held quote-diff, translation-stable in Onkelos); the wipe executed TWICE in one verse (active + niphal agentless) with ZERO divine names, zero speech, zero imperatives in the span — the executioner covert, his antecedent across the unit boundary; and the crown: VA-YISHAER AKH-NOACH (&#x27;and only Noach was left&#x27;) — the SHAAR remnant-root&#x27;s FIRST Torah token, born naming one man and a boat&#x27;s company. Machine state: no clock (durations, not dates — t0 empty by decision), zero installs (+3 presupposed), zero writes, zero queue traffic, zero tests, eleven events, ten facts, three read-flags — the unit ends underwater with the waters still prevailing.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

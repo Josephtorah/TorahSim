@@ -1,0 +1,676 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>exo_01_names_and_midwives — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/exo_01_names_and_midwives?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The names and the midwives (1:1-22) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>exo_01_names_and_midwives</b> · Exodus 1:1-22 · derive logic_derived_v1 · phase FWD-15</div>
+<div class="meta"><a href="../#Exod/1/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">וַתְּחַיֶּיןָ אֶת הַיְלָדִים</span> · <i>va-techayena et ha-yeladim</i> · &#x27;and they kept the children alive&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DERIVED 2026-08-09 · FORWARD ERA unit #15 (run FWD-4 block 1 — EXODUS OPENS; Genesis stands complete behind it, 76 units 1:1-50:26 gapless). Span: 1:1-22, whole chapter: 22 verses (SNAPSHOT-verified). Oral layer IN-PIPELINE: manifest 13/13 VERIFIED, zero FAILED — see oral_audit_note_en. MACHINE PROFILE. THREE DECLAREs, ONE RESULT. The court SCHEME (hava nitchakma, 1:10 — Babel&#x27;s let-us grammar) pops in the taskmasters-verse (1:11) and its GOAL inverts at 1:12 (pen-yirbe answered by ken-yirbe — the pop buys the deed, not the purpose); the KILL-ORDER to the midwives (im ben hu va-hamiten oto, 1:16) is REFUSED in the letter&#x27;s own words (1:17 &#x27;ve-lo asu&#x27; — the DEAD-BY-REFUSAL class, gen_71&#x27;s law: OPEN forever, no performance will ever be recorded); the NILE DECREE (kol ha-ben ha-yilod, 1:22 — the refused secret order gone public and universal) stands OPEN at the chapter&#x27;s close (its subverted compliance armed at 2:3). ONE EVENT: the arising of the new king (1:8 — the not-knowing installed as the book&#x27;s hinge). ONE SECTION: the names-header (1:1 — gen_69&#x27;s seventy-ledger reopened across the book-boundary; registry restraint: the roster lists, it does not install; the midwives&#x27; names likewise held as precondition, 1:15). REGISTRY 0; TESTS 0; LEDGER 0. Queue at close: TWO OPEN (the refused kill-order — permanent by class; the Nile decree). CARE-POINTS: Joseph&#x27;s death RETOLD at 1:6 (gen_73&#x27;s EVENT not re-installed — the one-world law); the covenant&#x27;s serve-verb arrives in the present tense (1:13 va-yaavidu — the pieces-covenant&#x27;s va-avadum clause, gen_31); creation&#x27;s grammar runs through the oppression (the swarm-verb&#x27;s only narrative token 1:7; the fill-verb; the one-yod increase-word the Ramah pairs with the fowl-blessing 1:20); the enemy king is the first to call Israel a PEOPLE (1:9); the two midwives are named while the king never is. WATCHLIST ARMS: 2:3 (the mortar-and-pitch ark — the Nile decree&#x27;s subverted compliance; the lean mortar-pair completes), 2:5-10 (the ha-yilod reversal: the hunted child raised in the hunter&#x27;s house), 2:11 (the burdens seen), 2:23-25 (the cry, the remembering — gen_31&#x27;s covenant clock), 12:8 (the bitterness-root at the going-out table), Exod 13:19 (the bones — gen_73&#x27;s open demand rides through this book).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-09 (IN-PIPELINE, forward era; manifest logic/oral_audit/manifests/exo_01_names_and_midwives_claims.json 13/13 VERIFIED, zero FAILED; record logic/oral_audit/AUDIT_exo_01_2026-08-09.md). CROWNS (chain-attested + DB-verified). THE LEAN MIDWIVES [EX01-01, MS on 1:17; the Hilleli; the Ramah] — THE UNIT&#x27;S MARQUEE: the printed Masorah&#x27;s note at 1:17 (&#x27;unique, lean&#x27;) ruled an ERROR by MS&#x27;s collation — ALL the Torah&#x27;s midwife-words are lean — and the stream verifies the ruling WHOLE: the full spelling&#x27;s census is EMPTY (zero in the Torah), the lean word stands nine times (Rachel&#x27;s midwife 35:17, Tamar&#x27;s 38:28, and the seven stations of this chapter). THE UNIQUE LEAN TO-THEM [EX01-02, MS on 1:19]: אלהן (&quot;to them&quot;) — the Torah&#x27;s ONLY thinned token, inside the excuse-verse&#x27;s &#x27;before the midwife COMES TO THEM&#x27;; the full form exactly twice (1:17, Deut 1:22). RAAMSES&#x27; PATACH [EX01-03, MS on 1:11 — his own cross-ref to Vayigash]: the store-city&#x27;s ayin-patach checked in-stream — the FWD-3 one-vowel two-cities map verified from the Exodus end. THE FOWL-PAIRED INCREASE [EX01-04, the Ramah via MS on 1:20]: וירב (&quot;and it multiplied&quot;) — one yod, chiriq — the chain itself pairs the people&#x27;s increase with creation&#x27;s fowl-blessing (Gen 1:22, same skeleton). THE SWARM-VERB [EX01-05, Kitzur on 1:7]: וישרצו (&quot;and they swarmed&quot;) — the only narrative token in the Torah; the six increase- expressions named. VE-NOSAF THREE [EX01-06, Kitzur on 1:10]: Torah-side two exact (1:10, Num 36:3), the scatter-and-increase reversal named (Prov 11:24). THE AFFLICT-WORD [EX01-07, Kitzur on 1:11]: ענתו (&quot;to afflict him&quot;) Torah-unique; the Amnon-pair named. THE BIRTHSTOOL [EX01-08, Kitzur on 1:16]: האבנים pointed ha-AVNAYIM — one Torah token among eleven stone-skeletons; the potter&#x27;s wheel its only Scripture-twin (Jer 18:3); Sota&#x27;s sign named. THE TWO LIFE-GIVINGS [EX01-09, Kitzur on 1:18]: ותחיין (&quot;and they kept alive&quot;) exactly twice — deed and indictment — Sota&#x27;s water-and-food measure named. THE BORN-SON [EX01-10, Kitzur on 1:22]: הילוד (&quot;the son that is born&quot;) — Torah-unique; the David-pair named; the raised-in-his-house reversal armed at Moses. THE MORTAR FILE [EX01-11, Kitzur + MS on 1:14]: בחמר (&quot;with mortar&quot;) lean, exactly twice in the Torah — the bondage and the ark-basket (2:3): slavery&#x27;s substance, rescue&#x27;s substance; the 248-limbs reading and the four-afflictions arithmetic named. THE ACCENT-AND-DOT FILE [EX01-12, MS]: revia on the opening word; zaqef qatan twice in the summons-verse; the tav-dagesh separating the midwives&#x27; HOUSES from Isaiah&#x27;s DESOLATION; the daughter- clause&#x27;s bet-dagesh — five rulings on the stream&#x27;s own marks. READINGS (named-only) [EX01-13]: the shabbat final-letters (CHECKED mechanically), the unchanged names, the twice-Scripture mnemonic, the twelve pillars vav-to-vav, the bent ayin (letter-shape beyond the stream), hava = twelve, the soft mouth, Shifra&#x27;s reed-pipe, the midwife gematrias, the first-to-crumble wordplay on the store-city.</div>
+<div class="meta">confidence: structure tested; oral layer verified 13/13</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>FORWARD ERA run 4, block 1 (owner: &quot;do the first 5 blocks of exodus&quot;). Canon continuation across the book-boundary: Exod 1:1-22 — the names-header, the scheme, the midwives, the Nile decree; whole chapter. EXODUS OPENS.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Span + source + conventions</td><td>SNAPSHOT prestage: 22 verses; five without an etnachta (the mid-verse pause) — the three roster-verses (1:2-4), the death-verse (1:6), and the service-verse (1:13): the fallback split at the strongest disjunctive applies (verify_text&#x27;s own rule). No ketiv/qere pairs in-span. Volitive census: the hava-cohortative (1:10), the kill-imperatives to the midwives (1:16), the cast-imperative to all the people (1:22) — three DECLAREs; 1:9&#x27;s speech-opening installs nothing.</td><td>established</td></tr>
+<tr><td><b>C</b></td><td>Machine structure</td><td>Three DECLAREs, one RESULT (the scheme performed at 1:11; its goal inverted at 1:12 — the pop buys the deed, not the purpose). EVENT at 1:8 (the new king arises). SECTION at 1:1 (the names-header; registry restraint — the roster lists, it does not install). The kill-order dies the dead-by-refusal death at 1:17 (gen_71&#x27;s class law: open forever). Queue at close: two open (the refused kill-order; the Nile decree, armed at 2:3). REGISTRY 0; TESTS 0; LEDGER 0.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Exod 1 (10 notes) + Kitzur Baal HaTurim on Exod 1 (19 notes). Manifest 13 rows: 13 VERIFIED / 0 FAILED / 0 UNCHECKABLE. A printed- Masorah error corrected by collation and verified whole (the lean midwives, empty full-census); a unique-lean verified with its full stations exact; the FWD-3 Rameses map confirmed from the Exodus end.</td><td>established</td></tr>
+<tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 13/13 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-09 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Ex_1_1 · Exod.1.1 · <span class='expr'>THE_NAMES_REOPENED</span></h3>
+<p><span class="he">וְאֵלֶּה שְׁמוֹת בְּנֵי יִשְׂרָאֵל הַבָּאִים מִצְרָיְמָה אֵת יַעֲקֹב אִישׁ וּבֵיתוֹ בָּאוּ</span> · <i>ve-ele shemot bene yisrael ha-baim mitzrayma-ה et yaaqov ish u-vet-o bau</i> · And these are the names of the sons of Israel who came to Egypt; with Jacob, each man and his household, they came.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאֵ֗לֶּה שְׁמוֹת֙ בְּנֵ֣י יִשְׂרָאֵ֔ל הַבָּאִ֖ים מִצְרָ֑יְמָה</span> · <i>ve-ele shemot bene yisrael ha-baim mitzrayma-ה</i> · these are the names of the sons of Israel who came to Egypt (etnachta on mitzrayma-ה) [VERIFIED: SNAPSHOT Exod.1.1 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֵ֣ת יַעֲקֹ֔ב אִ֥ישׁ וּבֵית֖וֹ בָּֽאוּ</span> · <i>et yaaqov ish u-vet-o bau</i> · with Jacob, each man and his household, they came (verse-final bau) [VERIFIED: SNAPSHOT Exod.1.1 idx6-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>SECTION</td><td><span class="expr">SECTION(shemot_bene_yisrael, bene_lea, ben_rachel, bene_ha_shefachot)</span><br><span class="gloss">= SECTION(names-bene-yisrael, bene-lea, ben-rachel, bene-the-shefachot)</span><br>THE HEADER [EX01-13]. ve-ELE shemot bene yisrael — &#x27;and THESE are the names&#x27;: the vav of the opening CONNECTS (the readings: the and- word adds to the first matter — gen_69&#x27;s seventy-ledger reopened verbatim across the book-boundary, the watchlist&#x27;s first armed verse landing); the machine files the restraint it learned at the ledger (REGISTRY untouched — the roster lists, it does not install); the readings&#x27; opening files carried named [VERIFIED: manifest EX01-13 — the shabbat-letters closing the verse&#x27;s Jacob-clause checked in- stream]: a book opens by counting what it already counted, because the count is about to be contested.
+</td><td><span class="he">וְאֵלֶּה שְׁמוֹת בְּנֵי יִשְׂרָאֵל</span> · <i>ve-ele shemot bene yisrael</i><br><span class="gloss">= and-ele names bene yisrael</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The ledger reopened across the book-boundary.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_1_2 · Exod.1.2 · <span class='expr'>LEAHS_FOUR</span></h3>
+<p><span class="he">רְאוּבֵן שִׁמְעוֹן לֵוִי וִיהוּדָה</span> · <i>reuven shimon levi vi-yhuda</i> · Reuben, Simeon, Levi, and Judah;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">רְאוּבֵ֣ן שִׁמְע֔וֹן</span> · <i>reuven shimon</i> · Reuben, Simeon (NO etnachta in verse: split at zaqef qatan on shimon) [VERIFIED: SNAPSHOT Exod.1.2 idx1 zaqef qatan; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">לֵוִ֖י וִיהוּדָֽה</span> · <i>levi vi-yhuda</i> · Levi, and Judah (verse-final vi-yhuda) [VERIFIED: SNAPSHOT Exod.1.2 idx2-3]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(reuven_shimon_levi_vi_yhuda, t0)</span><br><span class="gloss">= HOLDS(reuven-shimon-levi-vi-yhuda, t0)</span><br>THE FIRST COLUMN. reuven shimon levi vi-yhuda — four names, one verse, no verbs: the machine holds the roster as PRECONDITION (the persons are gen_51&#x27;s registry, not this unit&#x27;s); the readings&#x27; twelve-pillars figure on the vav-to-vav opening named at the header [EX01-13]: the names the decree will try to erase are laid out first, in the birth-order the corpus derived.
+</td><td><span class="he">רְאוּבֵן שִׁמְעוֹן לֵוִי וִיהוּדָה</span> · <i>reuven shimon levi vi-yhuda</i><br><span class="gloss">= reuven shimon levi vi-yhuda</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The roster: Leah&#x27;s first four.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_1_3 · Exod.1.3 · <span class='expr'>LEAHS_LAST_AND_RACHELS</span></h3>
+<p><span class="he">יִשָּׂשכָר זְבוּלֻן וּבְנְיָמִן</span> · <i>yisashkhar zevulun u-venyamin</i> · Issachar, Zebulun, and Benjamin;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">יִשָּׂשכָ֥ר זְבוּלֻ֖ן</span> · <i>yisashkhar zevulun</i> · Issachar, Zebulun (NO etnachta in verse: split at tifcha on zevulun) [VERIFIED: SNAPSHOT Exod.1.3 idx1 tifcha; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּבְנְיָמִֽן</span> · <i>u-venyamin</i> · and Benjamin (verse-final u-venyamin) [VERIFIED: SNAPSHOT Exod.1.3 idx2-2]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(yisashkhar_zevulun_u_venyamin, t0)</span><br><span class="gloss">= HOLDS(yisashkhar-zevulun-and-venyamin, t0)</span><br>THE SECOND COLUMN. yisashkhar zevulun u-venyamin — Leah&#x27;s file closes and Rachel&#x27;s ONE living-in-Canaan son stands alone (Joseph is already below, 1:5): the machine notes the ledger&#x27;s silent asymmetry — the column of three where the mothers&#x27; arithmetic once ruled the house (gen_51&#x27;s four mothers): the roster compresses a book of births into three verses.
+</td><td><span class="he">יִשָּׂשכָר זְבוּלֻן וּבְנְיָמִן</span> · <i>yisashkhar zevulun u-venyamin</i><br><span class="gloss">= yisashkhar zevulun and-venyamin</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The roster: Leah&#x27;s last two and Rachel&#x27;s one.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_1_4 · Exod.1.4 · <span class='expr'>THE_HANDMAIDS_FOUR</span></h3>
+<p><span class="he">דָּן וְנַפְתָּלִי גָּד וְאָשֵׁר</span> · <i>dan ve-naftali gad ve-asher</i> · Dan, and Naphtali; Gad, and Asher.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">דָּ֥ן וְנַפְתָּלִ֖י</span> · <i>dan ve-naftali</i> · Dan, and Naphtali (NO etnachta in verse: split at tifcha on ve-naftali) [VERIFIED: SNAPSHOT Exod.1.4 idx1 tifcha; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">גָּ֥ד וְאָשֵֽׁר</span> · <i>gad ve-asher</i> · Gad, and Asher (verse-final ve-asher) [VERIFIED: SNAPSHOT Exod.1.4 idx2-3]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(dan_ve_naftali_gad_ve_asher, t0)</span><br><span class="gloss">= HOLDS(dan-and-naftali-gad-and-which, t0)</span><br>THE THIRD COLUMN. dan ve-naftali gad ve-asher — the handmaids&#x27; four close the roster in gen_69&#x27;s own ledger-order (Bilhah&#x27;s pair, Zilpah&#x27;s pair): eleven names counted; the machine files the missing twelfth as the next verse&#x27;s hinge — the ledger knows where Joseph is.
+</td><td><span class="he">דָּן וְנַפְתָּלִי גָּד וְאָשֵׁר</span> · <i>dan ve-naftali gad ve-asher</i><br><span class="gloss">= dan and-naftali gad and-which</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The roster closes: the handmaids&#x27; four.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_1_5 · Exod.1.5 · <span class='expr'>SEVENTY_SOULS_AND_JOSEPH</span></h3>
+<p><span class="he">וַיְהִי כָּל־נֶפֶשׁ יֹצְאֵי יֶרֶךְ־יַעֲקֹב שִׁבְעִים נָפֶשׁ וְיוֹסֵף הָיָה בְמִצְרָיִם</span> · <i>va-yehi kal-nefesh yotze yerekh-yaaqov shivim nafesh ve-yosef haya ve-mitzrayim</i> · And all the souls that came out of the loins of Jacob were seventy souls; and Joseph was in Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַֽיְהִ֗י כָּל נֶ֛פֶשׁ יֹצְאֵ֥י יֶֽרֶךְ יַעֲקֹ֖ב שִׁבְעִ֣ים נָ֑פֶשׁ</span> · <i>va-yehi kal-nefesh yotze yerekh-yaaqov shivim nafesh</i> · all the souls out of the loins of Jacob were seventy souls (etnachta on nafesh) [VERIFIED: SNAPSHOT Exod.1.5 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְיוֹסֵ֖ף הָיָ֥ה בְמִצְרָֽיִם</span> · <i>ve-yosef haya ve-mitzrayim</i> · and Joseph was in Egypt (verse-final ve-mitzrayim) [VERIFIED: SNAPSHOT Exod.1.5 idx8-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shivim_nefesh_ve_yosef_be_mitzrayim, t0)</span><br><span class="gloss">= HOLDS(shivim-nefesh-and-yosef-in-mitzrayim, t0)</span><br>THE COUNT [gen_69&#x27;s ledger]. kol nefesh yotze yerekh yaaqov SHIVIM nafesh — the SEVENTY re-attested across the book-boundary (46:27&#x27;s census, the number Egypt wept for seventy days, gen_73): the corpus&#x27;s ledger and this header agree to the digit; ve-YOSEF haya ve-mitzrayim — &#x27;and Joseph WAS in Egypt&#x27;: the readings hear the standing-fact — he was already there, the same Joseph, righteous below as above: the machine holds the count and the location as the book&#x27;s two opening givens.
+</td><td><span class="he">יַעֲקֹב שִׁבְעִים נָפֶשׁ וְיוֹסֵף הָיָה בְמִצְרָיִם</span> · <i>yaaqov shivim nafesh ve-yosef haya ve-mitzrayim</i><br><span class="gloss">= yaaqov shivim nafesh and-yosef haya and-mitzrayim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The seventy re-attested; the twelfth already below.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_1_6 · Exod.1.6 · <span class='expr'>THE_DEATH_RETOLD</span></h3>
+<p><span class="he">וַיָּמָת יוֹסֵף וְכָל־אֶחָיו וְכֹל הַדּוֹר הַהוּא</span> · <i>va-yamat yosef ve-khal-echay-v ve-khol ha-dor ha-hu</i> · And Joseph died, and all his brothers, and all that generation.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּ֤מָת יוֹסֵף֙ וְכָל אֶחָ֔יו</span> · <i>va-yamat yosef ve-khal-echay-v</i> · and Joseph died, and all his brothers (NO etnachta in verse: split at zaqef qatan on echay-v) [VERIFIED: SNAPSHOT Exod.1.6 idx3 zaqef qatan; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְכֹ֖ל הַדּ֥וֹר הַהֽוּא</span> · <i>ve-khol ha-dor ha-hu</i> · and all that generation (verse-final ha-hu) [VERIFIED: SNAPSHOT Exod.1.6 idx4-6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yamat_yosef_ve_khol_ha_dor, t0)</span><br><span class="gloss">= HOLDS(and-yamat-yosef-and-all-the-dor, t0)</span><br>THE RETELLING. va-YAMAT yosef — the death the machine already recorded (gen_73&#x27;s EVENT at 50:26) RETOLD, not re-installed: the machine holds the recap as precondition and files the care-point — a generation&#x27;s whole passing in one verse (ve-khol ha-dor ha-hu): the letter clears the stage so that 1:8&#x27;s not-knowing has something to not know; no second death-event enters the world (the one-world law: the coffin of 50:26 is still the coffin).
+</td><td><span class="he">וַיָּמָת יוֹסֵף</span> · <i>va-yamat yosef</i><br><span class="gloss">= and-yamat yosef</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The recap, not a new event.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_1_7 · Exod.1.7 · <span class='expr'>THE_SIX_INCREASE_WORDS</span></h3>
+<p><span class="he">וּבְנֵי יִשְׂרָאֵל פָּרוּ וַיִּשְׁרְצוּ וַיִּרְבּוּ וַיַּעַצְמוּ בִּמְאֹד מְאֹד וַתִּמָּלֵא הָאָרֶץ אֹתָם</span> · <i>u-vene yisrael paru va-yishrtzu va-yirbu va-yaatzmu bi-meod meod va-timale ha-aretz et-m</i> · And the sons of Israel were fruitful, and swarmed, and multiplied, and grew mighty — exceedingly, exceedingly; and the land was filled with them.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבְנֵ֣י יִשְׂרָאֵ֗ל פָּר֧וּ וַֽיִּשְׁרְצ֛וּ וַיִּרְבּ֥וּ וַיַּֽעַצְמ֖וּ בִּמְאֹ֣ד מְאֹ֑ד</span> · <i>u-vene yisrael paru va-yishrtzu va-yirbu va-yaatzmu bi-meod meod</i> · the sons of Israel were fruitful, swarmed, multiplied, grew mighty — exceedingly (etnachta on meod) [VERIFIED: SNAPSHOT Exod.1.7 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתִּמָּלֵ֥א הָאָ֖רֶץ אֹתָֽם</span> · <i>va-timale ha-aretz et-m</i> · and the land was filled with them (verse-final et-m) [VERIFIED: SNAPSHOT Exod.1.7 idx8-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_timale_ha_aretz_otam, t0)</span><br><span class="gloss">= HOLDS(and-timale-the-earth-otam, t0)</span><br>THE INCREASE [EX01-05]. paru va-YISHRETZU va-yirbu va-yaatzmu bi- meod meod — the readings count SIX expressions of increase (&#x27;six at one belly&#x27; named), and the stream&#x27;s own crown verifies: va- yishretzu, &#x27;and they SWARMED,&#x27; is the swarm-verb&#x27;s ONLY narrative token in the Torah — creation&#x27;s fifth-day word (the waters&#x27; swarms, gen_05) landing as a DEED exactly once, on Israel in Egypt [VERIFIED: manifest EX01-05]; va-TIMALE ha-aretz otam — &#x27;the land was FILLED with them&#x27;: the fill-verb of the creation blessing (1:28&#x27;s fill-the-earth, gen_06) narrated done in Goshen: the machine files the arc — the empire is about to legislate against the first commandment&#x27;s grammar.
+</td><td><span class="he">פָּרוּ וַיִּשְׁרְצוּ וַיִּרְבּוּ וַיַּעַצְמוּ בִּמְאֹד מְאֹד</span> · <i>paru va-yishrtzu va-yirbu va-yaatzmu bi-meod meod</i><br><span class="gloss">= paru and-yishrtzu and-yirbu and-yaatzmu very very</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Creation&#x27;s grammar lands on Israel.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_1_8 · Exod.1.8 · <span class='expr'>A_KING_WHO_KNEW_NOT</span></h3>
+<p><span class="he">וַיָּקָם מֶלֶךְ־חָדָשׁ עַל־מִצְרָיִם אֲשֶׁר לֹא־יָדַע אֶת־יוֹסֵף</span> · <i>va-yaqam melekh-chadash al-mitzrayim asher lo-yada et-yosef</i> · And there arose a new king over Egypt, who knew not Joseph.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּ֥קָם מֶֽלֶךְ חָדָ֖שׁ עַל מִצְרָ֑יִם</span> · <i>va-yaqam melekh-chadash al-mitzrayim</i> · there arose a new king over Egypt (etnachta on mitzrayim) [VERIFIED: SNAPSHOT Exod.1.8 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֲשֶׁ֥ר לֹֽא יָדַ֖ע אֶת יוֹסֵֽף</span> · <i>asher lo-yada et-yosef</i> · who knew not Joseph (verse-final yosef) [VERIFIED: SNAPSHOT Exod.1.8 idx5-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">qam(e1); Agent(e1, melekh_chadash)</span><br><span class="gloss">= qam(e1); Agent(e1, melekh-chadash)</span><br>THE ARISING [the watchlist&#x27;s verse]. va-YAQAM melekh CHADASH al mitzrayim — the arise-verb installs the book&#x27;s hinge as a machine EVENT: a NEW king (the readings&#x27; two houses — actually new, or new- decreed — named, never merged); asher LO YADA et yosef — &#x27;who KNEW NOT Joseph&#x27;: the know-verb negated over the man whose knowing fed the empire (41:39&#x27;s none-so-discerning): the machine notes the mechanism of every oppression in the corpus so far — first the forgetting, then the decree; gen_73&#x27;s watchlist verse lands exactly as armed.
+</td><td><span class="he">וַיָּקָם מֶלֶךְ־חָדָשׁ עַל־מִצְרָיִם</span> · <i>va-yaqam melekh-chadash al-mitzrayim</i><br><span class="gloss">= and-yaqam melekh-chadash upon-mitzrayim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The hinge event: the not-knowing arises.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_1_9 · Exod.1.9 · <span class='expr'>BEHOLD_THE_PEOPLE</span></h3>
+<p><span class="he">וַיֹּאמֶר אֶל־עַמּוֹ הִנֵּה עַם בְּנֵי יִשְׂרָאֵל רַב וְעָצוּם מִמֶּנּוּ</span> · <i>va-yomer el-am-o hine am bene yisrael rav ve-atzum mime-nu</i> · And he said to his people: Behold, the people of the sons of Israel are more numerous and mightier than we.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֖אמֶר אֶל עַמּ֑וֹ</span> · <i>va-yomer el-am-o</i> · and he said to his people (etnachta on am-o) [VERIFIED: SNAPSHOT Exod.1.9 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">הִנֵּ֗ה עַ֚ם בְּנֵ֣י יִשְׂרָאֵ֔ל רַ֥ב וְעָצ֖וּם מִמֶּֽנּוּ</span> · <i>hine am bene yisrael rav ve-atzum mime-nu</i> · behold, the people of the sons of Israel are more and mightier than we (verse-final mime-nu) [VERIFIED: SNAPSHOT Exod.1.9 idx3-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(rav_ve_atzum_mimenu, t0)</span><br><span class="gloss">= HOLDS(rav-and-atzum-from-it, t0)</span><br>THE SPEECH OPENS [EX01-13]. hine AM bene yisrael — &#x27;behold, the PEOPLE of the sons of Israel&#x27;: the first speaker in the Torah to call Israel a PEOPLE is the enemy king (the readings note the promotion the hatred confers); RAV ve-ATZUM mimenu — &#x27;more numerous and mightier THAN WE&#x27;: the increase-verbs of 1:7 read back as threat-arithmetic; the readings&#x27; bent-ayin on el-AMO carried named (a letter-shape beyond the stream&#x27;s reach [EX01-13]: &#x27;with seventy they came down, and already...&#x27;): the machine files the state&#x27;s first census of fear.
+</td><td><span class="he">רַב וְעָצוּם מִמֶּנּוּ</span> · <i>rav ve-atzum mime-nu</i><br><span class="gloss">= rav and-atzum mime-nu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The counting eye; the bent letter named.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_1_10 · Exod.1.10 · <span class='expr'>COME_LET_US_OUTWIT</span></h3>
+<p><span class="he">הָבָה נִתְחַכְּמָה לוֹ פֶּן־יִרְבֶּה וְהָיָה כִּי־תִקְרֶאנָה מִלְחָמָה וְנוֹסַף גַּם־הוּא עַל־שֹׂנְאֵינוּ וְנִלְחַם־בָּנוּ וְעָלָה מִן־הָאָרֶץ</span> · <i>hava-ה nitchakma l-o pen-yirbe ve-haya ki-tiqrena milchama ve-nosaf gam-hu al-sone-nu ve-nilcham-ba-nu ve-ala min-ha-aretz</i> · Come, let us deal wisely with him, lest he multiply, and it come to pass, when war befalls, that he too be added to our enemies, and fight against us, and go up from the land.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">הָ֥בָה נִֽתְחַכְּמָ֖ה ל֑וֹ</span> · <i>hava-ה nitchakma l-o</i> · come, let us deal wisely with him, lest he multiply (etnachta on l-o) [VERIFIED: SNAPSHOT Exod.1.10 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">פֶּן יִרְבֶּ֗ה וְהָיָ֞ה כִּֽי תִקְרֶ֤אנָה מִלְחָמָה֙ וְנוֹסַ֤ף גַּם הוּא֙ עַל שֹׂ֣נְאֵ֔ינוּ וְנִלְחַם בָּ֖נוּ וְעָלָ֥ה מִן הָאָֽרֶץ</span> · <i>pen-yirbe ve-haya ki-tiqrena milchama ve-nosaf gam-hu al-sone-nu ve-nilcham-ba-nu ve-ala min-ha-aretz</i> · lest, when war befalls, he be added to our enemies, and fight us, and go up from the land (verse-final ha-aretz) [VERIFIED: SNAPSHOT Exod.1.10 idx3-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(melekh_chadash, LET(hava_nitchakma_lo))</span><br><span class="gloss">= DECLARE(melekh-chadash, LET(hava-nitchakma-not))</span><br>THE SCHEME [EX01-06]. HAVA nitchakma LO — &#x27;COME, let us deal WISELY with him&#x27;: the hava-cohortative (Babel&#x27;s own let-us grammar, gen_25&#x27;s tower) pushes the court&#x27;s collective demand — the machine records the state scheming against a singular &#x27;him&#x27; (the readings&#x27; twelve-gematria named [EX01-13]); pen YIRBE — &#x27;LEST HE MULTIPLY&#x27;: the king legislates against 1:7&#x27;s verbs; ve-NOSAF gam hu al sonenu — &#x27;and he too be ADDED to our enemies&#x27;: the add-word&#x27;s Torah-pair verified with the midrash&#x27;s reversal named (&#x27;you would scatter and diminish? there is one who scatters and INCREASES,&#x27; Prov 11:24) [VERIFIED: manifest EX01-06]; ve-ALA min ha-aretz — &#x27;and GO UP from the land&#x27;: the king&#x27;s nightmare is the corpus&#x27;s open promise (46:4&#x27;s I-will-bring-you-up; the bones-oath, gen_73): the demand pushed at court.
+</td><td><span class="he">הָבָה נִתְחַכְּמָה לוֹ</span> · <i>hava-ה nitchakma l-o</i><br><span class="gloss">= hava-ה nitchakma l-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The scheme pushed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_1_11 · Exod.1.11 · <span class='expr'>TASKMASTERS_SET</span></h3>
+<p><span class="he">וַיָּשִׂימוּ עָלָיו שָׂרֵי מִסִּים לְמַעַן עַנֹּתוֹ בְּסִבְלֹתָם וַיִּבֶן עָרֵי מִסְכְּנוֹת לְפַרְעֹה אֶת־פִּתֹם וְאֶת־רַעַמְסֵס</span> · <i>va-yasimu alay-v sare misim lemaan anot-o be-sivlota-m va-yiven are misknot le-faro et-pitom ve-et-raamses</i> · And they set over him taskmasters of levies, in order to afflict him with their burdens; and he built store-cities for Pharaoh: Pitom, and Raamses.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּשִׂ֤ימוּ עָלָיו֙ שָׂרֵ֣י מִסִּ֔ים לְמַ֥עַן עַנֹּת֖וֹ בְּסִבְלֹתָ֑ם</span> · <i>va-yasimu alay-v sare misim lemaan anot-o be-sivlota-m</i> · they set over him taskmasters of levies, to afflict him with their burdens (etnachta on be-sivlota-m) [VERIFIED: SNAPSHOT Exod.1.11 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּ֜בֶן עָרֵ֤י מִסְכְּנוֹת֙ לְפַרְעֹ֔ה אֶת פִּתֹ֖ם וְאֶת רַעַמְסֵֽס</span> · <i>va-yiven are misknot le-faro et-pitom ve-et-raamses</i> · and he built store-cities for Pharaoh: Pitom, and Raamses (verse-final raamses) [VERIFIED: SNAPSHOT Exod.1.11 idx7-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(hava_nitchakma_lo, t1)</span><br><span class="gloss">= RESULT: HOLDS(hava-nitchakma-not, t1)</span><br>THE PERFORMANCE [EX01-03; EX01-07]. va-YASIMU alav sare misim — &#x27;they SET over him taskmasters of levies&#x27;: the court&#x27;s let-us-deal- wisely is DONE — the demand pops in the deed-verse (the machine notes what the pop buys: the DEED, not the goal — the goal inverts next verse); lemaan ANOTO be-sivlotam — &#x27;to AFFLICT him with their burdens&#x27;: the afflict-word&#x27;s ONE Torah token, its Amnon-pair named (the affliction aimed at the increase itself) [VERIFIED: manifest EX01-07], and the burden-word opens the burdens-file (2:11 armed); et PITOM ve-et RAAMSES — the store-city wearing the PATACH that keeps it apart from Israel&#x27;s dwelling-land on the chain&#x27;s own one- vowel map (MS&#x27;s cross-ref to his Vayigash ruling — the FWD-3 file verified from this end) [VERIFIED: manifest EX01-03].
+</td><td><span class="he">וַיָּשִׂימוּ עָלָיו שָׂרֵי מִסִּים לְמַעַן עַנֹּתוֹ בְּסִבְלֹתָם</span> · <i>va-yasimu alay-v sare misim lemaan anot-o be-sivlota-m</i><br><span class="gloss">= and-yasimu alay-v sare misim lemaan anot-o in-sivlota-m</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The scheme performed; the pop.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_1_12 · Exod.1.12 · <span class='expr'>THE_MORE_AFFLICTED_THE_MORE</span></h3>
+<p><span class="he">וְכַאֲשֶׁר יְעַנּוּ אֹתוֹ כֵּן יִרְבֶּה וְכֵן יִפְרֹץ וַיָּקֻצוּ מִפְּנֵי בְּנֵי יִשְׂרָאֵל</span> · <i>ve-kha-asher yeanu et-o ken yirbe ve-khen yifrotz va-yaqutzu mi-pene bene yisrael</i> · And as they afflicted him, so he multiplied and so he spread; and they dreaded because of the sons of Israel.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְכַאֲשֶׁר֙ יְעַנּ֣וּ אֹת֔וֹ כֵּ֥ן יִרְבֶּ֖ה וְכֵ֣ן יִפְרֹ֑ץ</span> · <i>ve-kha-asher yeanu et-o ken yirbe ve-khen yifrotz</i> · as they afflicted him, so he multiplied and so he spread (etnachta on yifrotz) [VERIFIED: SNAPSHOT Exod.1.12 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיָּקֻ֕צוּ מִפְּנֵ֖י בְּנֵ֥י יִשְׂרָאֵֽל</span> · <i>va-yaqutzu mi-pene bene yisrael</i> · and they dreaded because of the sons of Israel (verse-final yisrael) [VERIFIED: SNAPSHOT Exod.1.12 idx7-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ken_yirbe_ve_khen_yifrotz, t0)</span><br><span class="gloss">= HOLDS(ken-yirbe-and-so-yifrotz, t0)</span><br>THE INVERSION. ve-kha-asher yeanu oto KEN yirbe ve-KHEN yifrotz — &#x27;AS they afflicted him, SO he multiplied, SO he spread&#x27;: the ken- formula (the corpus&#x27;s did-so receipt-grammar) turned against the state — the deed was performed (1:11&#x27;s pop) and its PURPOSE failed in the same breath: pen-yirbe answered by ken-yirbe, one letter apart; the spread-verb paratz (the Bethel pledge&#x27;s own word, 28:14 — you shall SPREAD) performing under the whip; va-YAQUTZU — &#x27;they DREADED&#x27;: the machine files the corpus&#x27;s law of inverted schemes (the sold dreamer ruling Egypt, gen_60-64): affliction is an increase-engine here.
+</td><td><span class="he">כֵּן יִרְבֶּה וְכֵן יִפְרֹץ</span> · <i>ken yirbe ve-khen yifrotz</i><br><span class="gloss">= ken yirbe so yifrotz</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The scheme&#x27;s goal inverted.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_1_13 · Exod.1.13 · <span class='expr'>WITH_CRUSHING_SERVICE</span></h3>
+<p><span class="he">וַיַּעֲבִדוּ מִצְרַיִם אֶת־בְּנֵי יִשְׂרָאֵל בְּפָרֶךְ</span> · <i>va-yaavidu mitzrayim et-bene yisrael be-farekh</i> · And Egypt made the sons of Israel serve with crushing service.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּעֲבִ֧דוּ מִצְרַ֛יִם אֶת בְּנֵ֥י יִשְׂרָאֵ֖ל</span> · <i>va-yaavidu mitzrayim et-bene yisrael</i> · and Egypt made the sons of Israel serve (NO etnachta in verse: split at tifcha on yisrael) [VERIFIED: SNAPSHOT Exod.1.13 idx4 tifcha; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">בְּפָֽרֶךְ</span> · <i>be-farekh</i> · with crushing service (verse-final be-farekh) [VERIFIED: SNAPSHOT Exod.1.13 idx5-5]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yaavidu_mitzrayim_be_farekh, t0)</span><br><span class="gloss">= HOLDS(and-yaavidu-mitzrayim-in-farekh, t0)</span><br>THE SERVICE [EX01-13]. va-YAAVIDU mitzrayim et bene yisrael be- FAREKH — the serve-verb in the causative: EGYPT (the whole nation, not the crown alone — the readings note the subject) makes Israel SERVE; be-farekh — &#x27;with CRUSHING service&#x27;: the readings&#x27; soft-mouth reading carried named (be-FE RAKH — the enslavement opened as invitation, Sota&#x27;s file [EX01-13]); the machine notes the covenant&#x27;s own word arriving: va-avadum — &#x27;and they shall SERVE them&#x27; (15:13, the pieces-covenant, gen_31) — the four-hundred-year clause&#x27;s verb now narrated in the present tense.
+</td><td><span class="he">וַיַּעֲבִדוּ מִצְרַיִם אֶת־בְּנֵי יִשְׂרָאֵל בְּפָרֶךְ</span> · <i>va-yaavidu mitzrayim et-bene yisrael be-farekh</i><br><span class="gloss">= and-yaavidu mitzrayim bene yisrael in-farekh</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The service imposed; the soft mouth named.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_1_14 · Exod.1.14 · <span class='expr'>THE_FOUR_AFFLICTIONS</span></h3>
+<p><span class="he">וַיְמָרְרוּ אֶת־חַיֵּיהֶם בַּעֲבֹדָה קָשָׁה בְּחֹמֶר וּבִלְבֵנִים וּבְכָל־עֲבֹדָה בַּשָּׂדֶה אֵת כָּל־עֲבֹדָתָם אֲשֶׁר־עָבְדוּ בָהֶם בְּפָרֶךְ</span> · <i>va-yemarru et-chaye-hem ba-avoda qasha be-chomer u-vi-levenim u-ve-khal-avoda ba-sade et kal-avodata-m asher-avdu va-hem be-farekh</i> · And they made their lives bitter with hard service — with mortar and with bricks, and with all service in the field; all their service in which they made them serve with crushing service.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְמָרְר֨וּ אֶת חַיֵּיהֶ֜ם בַּעֲבֹדָ֣ה קָשָׁ֗ה בְּחֹ֨מֶר֙ וּבִלְבֵנִ֔ים וּבְכָל עֲבֹדָ֖ה בַּשָּׂדֶ֑ה</span> · <i>va-yemarru et-chaye-hem ba-avoda qasha be-chomer u-vi-levenim u-ve-khal-avoda ba-sade</i> · they made their lives bitter with hard service, with mortar and bricks, and all field-service (etnachta on ba-sade) [VERIFIED: SNAPSHOT Exod.1.14 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֵ֚ת כָּל עֲבֹ֣דָתָ֔ם אֲשֶׁר עָבְד֥וּ בָהֶ֖ם בְּפָֽרֶךְ</span> · <i>et kal-avodata-m asher-avdu va-hem be-farekh</i> · all their service in which they made them serve with crushing service (verse-final be-farekh) [VERIFIED: SNAPSHOT Exod.1.14 idx10-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yemarru_et_chayehem, t0)</span><br><span class="gloss">= HOLDS(and-yemarru-chayehem, t0)</span><br>THE BITTERNESS [EX01-11]. va-YEMARERU et chayehem — &#x27;they made their lives BITTER&#x27; (the resh on its simple sheva, MS&#x27;s pointing asserted): the readings count the verse&#x27;s FOUR afflictions (hard service / mortar-and-bricks / field-service / the crushing all) with the plague-arithmetic named (each plague four — the ten armed); be- CHOMER — the MORTAR written LEAN, the 248-limbs reading named, and the stream&#x27;s census planted: the lean mortar-word stands exactly TWICE in the Torah — the bondage here and the pitch-and-mortar of the little ark (2:3, armed): the substance of the slavery is about to be the substance of a rescue [VERIFIED: manifest EX01-11]; the bitterness-root files forward (the bitter herbs of the night of going out, 12:8, armed).
+</td><td><span class="he">וַיְמָרְרוּ אֶת־חַיֵּיהֶם בַּעֲבֹדָה קָשָׁה</span> · <i>va-yemarru et-chaye-hem ba-avoda qasha</i><br><span class="gloss">= and-yemarru chaye-hem in-the-avoda qasha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The bitterness itemized.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_1_15 · Exod.1.15 · <span class='expr'>SHIFRA_AND_PUA</span></h3>
+<p><span class="he">וַיֹּאמֶר מֶלֶךְ מִצְרַיִם לַמְיַלְּדֹת הָעִבְרִיֹּת אֲשֶׁר שֵׁם הָאַחַת שִׁפְרָה וְשֵׁם הַשֵּׁנִית פּוּעָה</span> · <i>va-yomer melekh mitzrayim la-meyaldot ha-ivriyot asher shem ha-achat shifra ve-shem ha-shenit pua</i> · And the king of Egypt said to the midwives of the Hebrews, of whom the name of the one was Shifra, and the name of the second Pua:</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר֙ מֶ֣לֶךְ מִצְרַ֔יִם לַֽמְיַלְּדֹ֖ת הָֽעִבְרִיֹּ֑ת</span> · <i>va-yomer melekh mitzrayim la-meyaldot ha-ivriyot</i> · the king of Egypt said to the midwives of the Hebrews (etnachta on ha-ivriyot) [VERIFIED: SNAPSHOT Exod.1.15 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֲשֶׁ֨ר שֵׁ֤ם הָֽאַחַת֙ שִׁפְרָ֔ה וְשֵׁ֥ם הַשֵּׁנִ֖ית פּוּעָֽה</span> · <i>asher shem ha-achat shifra ve-shem ha-shenit pua</i> · the name of the one Shifra, and the name of the second Pua (verse-final pua) [VERIFIED: SNAPSHOT Exod.1.15 idx5-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shifra_u_fua, t0)</span><br><span class="gloss">= HOLDS(shifra-and-fua, t0)</span><br>THE TWO NAMES [EX01-01; EX01-13]. la-MEYALDOT ha-ivriyot — the midwife-word entering its chapter LEAN, as the whole Torah writes it (the marquee&#x27;s file, next verse&#x27;s decree the reason the file matters); asher SHEM ha-achat SHIFRA ve-shem ha-shenit PUA — the letter does what the decree cannot prevent: it NAMES them (the readings&#x27; identifications and the reed-pipe reading carried named [EX01-13]) — two working women named in a chapter whose king goes unnamed throughout: the machine holds the names as precondition (registry restraint — the verse reports names, it performs no naming), and files the asymmetry as the chapter&#x27;s quiet verdict.
+</td><td><span class="he">הָאַחַת שִׁפְרָה וְשֵׁם הַשֵּׁנִית פּוּעָה</span> · <i>ha-achat shifra ve-shem ha-shenit pua</i><br><span class="gloss">= the-achat shifra and-shem second-time pua</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The two named; the registry restrained.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_1_16 · Exod.1.16 · <span class='expr'>THE_KILL_ORDER</span></h3>
+<p><span class="he">וַיֹּאמֶר בְּיַלֶּדְכֶן אֶת־הָעִבְרִיּוֹת וּרְאִיתֶן עַל־הָאָבְנָיִם אִם־בֵּן הוּא וַהֲמִתֶּן אֹתוֹ וְאִם־בַּת הִיא וָחָיָה</span> · <i>va-yomer be-yaled-khen et-ha-ivriot u-reiten al-ha-avnayim im-ben hu va-hamiten et-o ve-im-bat hi va-chaya</i> · And he said: When you deliver the Hebrew women, and you see upon the birthstool: if it is a son, you shall kill him; and if it is a daughter, she shall live.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֗אמֶר בְּיַלֶּדְכֶן֙ אֶת הָֽעִבְרִיּ֔וֹת וּרְאִיתֶ֖ן עַל הָאָבְנָ֑יִם</span> · <i>va-yomer be-yaled-khen et-ha-ivriot u-reiten al-ha-avnayim</i> · when you deliver the Hebrew women and see upon the birthstool (etnachta on ha-avnayim) [VERIFIED: SNAPSHOT Exod.1.16 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אִם בֵּ֥ן הוּא֙ וַהֲמִתֶּ֣ן אֹת֔וֹ וְאִם בַּ֥ת הִ֖יא וָחָֽיָה</span> · <i>im-ben hu va-hamiten et-o ve-im-bat hi va-chaya</i> · if a son, you shall kill him; if a daughter, she shall live (verse-final va-chaya) [VERIFIED: SNAPSHOT Exod.1.16 idx7-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(melekh_mitzrayim, LET(im_ben_hu_va_hamiten_oto))</span><br><span class="gloss">= DECLARE(melekh-mitzrayim, LET(if-ben-that-and-hamiten-it))</span><br>THE ORDER [EX01-08]. u-reiten al ha-AVNAYIM — &#x27;and you SEE upon the BIRTHSTOOL&#x27;: the dual-form&#x27;s one Torah token, its Scripture-twin the POTTER&#x27;S WHEEL (Jer 18:3), Sota&#x27;s sign and geometry named [VERIFIED: manifest EX01-08] — the king drafts the birth-stool itself into surveillance; im BEN hu va-HAMITEN oto — &#x27;if a SON, you shall KILL him&#x27;: the demand pushed on the two named women — the state&#x27;s first secret decree (the readings: secret, deniable, aimed at the sex the war-fear counts); ve-im BAT hi va-CHAYA — the daughter-clause the readings weigh named: the machine records the order and waits one verse for the answer.
+</td><td><span class="he">אִם־בֵּן הוּא וַהֲמִתֶּן אֹתוֹ</span> · <i>im-ben hu va-hamiten et-o</i><br><span class="gloss">= if-ben that and-hamiten o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The kill-order pushed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_1_17 · Exod.1.17 · <span class='expr'>THEY_DID_NOT_DO</span></h3>
+<p><span class="he">וַתִּירֶאןָ הַמְיַלְּדֹת אֶת־הָאֱלֹהִים וְלֹא עָשׂוּ כַּאֲשֶׁר דִּבֶּר אֲלֵיהֶן מֶלֶךְ מִצְרָיִם וַתְּחַיֶּיןָ אֶת־הַיְלָדִים</span> · <i>va-tirena ha-meyaldot et-ha-Elohim ve-lo asu ka-asher diber ale-hen melekh mitzrayim va-techayena et-ha-yeladim</i> · And the midwives feared God, and did not do as the king of Egypt spoke to them; and they kept the children alive.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתִּירֶ֤אןָ הַֽמְיַלְּדֹת֙ אֶת הָ֣אֱלֹהִ֔ים וְלֹ֣א עָשׂ֔וּ כַּאֲשֶׁ֛ר דִּבֶּ֥ר אֲלֵיהֶ֖ן מֶ֣לֶךְ מִצְרָ֑יִם</span> · <i>va-tirena ha-meyaldot et-ha-Elohim ve-lo asu ka-asher diber ale-hen melekh mitzrayim</i> · the midwives feared God, and did not do as the king of Egypt spoke to them (etnachta on mitzrayim) [VERIFIED: SNAPSHOT Exod.1.17 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתְּחַיֶּ֖יןָ אֶת הַיְלָדִֽים</span> · <i>va-techayena et-ha-yeladim</i> · and they kept the children alive (verse-final ha-yeladim) [VERIFIED: SNAPSHOT Exod.1.17 idx11-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_lo_asu_kaasher_diber, t0)</span><br><span class="gloss">= HOLDS(and-not-asu-kaasher-diber, t0)</span><br>THE REFUSAL [EX01-01 MARQUEE; EX01-09]. va-TIRENA ha-meyaldot et ha- ELOHIM — &#x27;the midwives FEARED GOD&#x27;: the fear that outranks the throne (the corpus&#x27;s fear-of-God class — Abraham&#x27;s surely-no-fear at Gerar, gen_36, inverted: here the fear IS present, in Egypt, in two women); ve-LO ASU ka-asher DIBER alehen melekh mitzrayim — &#x27;they did NOT DO as the king SPOKE to them&#x27;: the letter&#x27;s own refusal-receipt — the kill-order dies the DEAD-BY-REFUSAL death (gen_71&#x27;s class law: the refused demand stays OPEN forever; no performance will ever be recorded against it): the Torah&#x27;s first civil disobedience, filed as an unpayable debt on the king&#x27;s own queue; va-TECHAYENA et ha- yeladim — &#x27;they KEPT the children ALIVE&#x27;: the life-verb&#x27;s first station (Sota&#x27;s two-services reading at its pair, next verse) [VERIFIED under EX01-09]; and the verse&#x27;s midwife-token stands LEAN with all nine of the Torah&#x27;s midwife-words — MS&#x27;s collation against the printed Masorah&#x27;s &#x27;unique,&#x27; the Hilleli and the Ramah concurring, the FULL form&#x27;s census EMPTY [VERIFIED: manifest EX01-01].
+</td><td><span class="he">וְלֹא עָשׂוּ כַּאֲשֶׁר דִּבֶּר אֲלֵיהֶן מֶלֶךְ מִצְרָיִם</span> · <i>ve-lo asu ka-asher diber ale-hen melekh mitzrayim</i><br><span class="gloss">= and-not asu like-which diber ale-hen melekh mitzrayim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The refusal: dead-by-refusal, open forever.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_1_18 · Exod.1.18 · <span class='expr'>WHY_HAVE_YOU_DONE</span></h3>
+<p><span class="he">וַיִּקְרָא מֶלֶךְ־מִצְרַיִם לַמְיַלְּדֹת וַיֹּאמֶר לָהֶן מַדּוּעַ עֲשִׂיתֶן הַדָּבָר הַזֶּה וַתְּחַיֶּיןָ אֶת־הַיְלָדִים</span> · <i>va-yiqra melekh-mitzrayim la-meyaldot va-yomer la-hen madua asiten ha-davar ha-ze va-techayena et-ha-yeladim</i> · And the king of Egypt called the midwives, and said to them: Why have you done this thing, and kept the children alive?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּקְרָ֤א מֶֽלֶךְ מִצְרַ֨יִם֙ לַֽמְיַלְּדֹ֔ת וַיֹּ֣אמֶר לָהֶ֔ן מַדּ֥וּעַ עֲשִׂיתֶ֖ן הַדָּבָ֣ר הַזֶּ֑ה</span> · <i>va-yiqra melekh-mitzrayim la-meyaldot va-yomer la-hen madua asiten ha-davar ha-ze</i> · the king of Egypt called the midwives (etnachta on ha-ze) [VERIFIED: SNAPSHOT Exod.1.18 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתְּחַיֶּ֖יןָ אֶת הַיְלָדִֽים</span> · <i>va-techayena et-ha-yeladim</i> · why have you done this thing, and kept the children alive? (verse-final ha-yeladim) [VERIFIED: SNAPSHOT Exod.1.18 idx10-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(madua_asiten, t0)</span><br><span class="gloss">= HOLDS(madua-asiten, t0)</span><br>THE SUMMONS [EX01-09; EX01-12]. va-yiqra melekh mitzrayim la- MEYALDOT (zaqef qatan on the call&#x27;s object, MS&#x27;s accent ruling landing on the stream&#x27;s mark [VERIFIED under EX01-12]) — madua ASITEN et ha-davar ha-ze — &#x27;WHY have you DONE this thing&#x27;: the king indicts by QUOTING the deed — va-TECHAYENA et ha-yeladim, the life- verb verbatim from 1:17: the letter makes the crown pronounce the mercy it forbade (the doubled life-verb&#x27;s census exact; Sota&#x27;s measure — &#x27;not only did not kill: supplied water and food&#x27; — carried at the pair) [VERIFIED: manifest EX01-09]; the asiten-word&#x27;s abomination-pair named (Sota&#x27;s proposition file): the machine notes the interrogation holds no punishment-clause — the king who decreed in secret cannot sentence in public.
+</td><td><span class="he">מַדּוּעַ עֲשִׂיתֶן הַדָּבָר הַזֶּה</span> · <i>madua asiten ha-davar ha-ze</i><br><span class="gloss">= madua asiten the-davar the-ze</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The summons; the deed quoted back.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_1_19 · Exod.1.19 · <span class='expr'>FOR_THEY_ARE_LIVELY</span></h3>
+<p><span class="he">וַתֹּאמַרְןָ הַמְיַלְּדֹת אֶל־פַּרְעֹה כִּי לֹא כַנָּשִׁים הַמִּצְרִיֹּת הָעִבְרִיֹּת כִּי־חָיוֹת הֵנָּה בְּטֶרֶם תָּבוֹא אֲלֵהֶן הַמְיַלֶּדֶת וְיָלָדוּ</span> · <i>va-tomarna ha-meyaldot el-paro ki lo kha-nashim ha-mitzriyot ha-ivriyot ki-chayot hena be-terem tavo el-hen ha-meyaledet ve-yaladu</i> · And the midwives said to Pharaoh: Because the Hebrew women are not as the Egyptian women, for they are lively; before the midwife comes to them, they have given birth.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתֹּאמַ֤רְןָ הַֽמְיַלְּדֹת֙ אֶל פַּרְעֹ֔ה כִּ֣י לֹ֧א כַנָּשִׁ֛ים הַמִּצְרִיֹּ֖ת הָֽעִבְרִיֹּ֑ת</span> · <i>va-tomarna ha-meyaldot el-paro ki lo kha-nashim ha-mitzriyot ha-ivriyot</i> · the midwives said to Pharaoh: the Hebrew women are not as the Egyptian women (etnachta on ha-ivriyot) [VERIFIED: SNAPSHOT Exod.1.19 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּֽי חָי֣וֹת הֵ֔נָּה בְּטֶ֨רֶם תָּב֧וֹא אֲלֵהֶ֛ן הַמְיַלֶּ֖דֶת וְיָלָֽדוּ</span> · <i>ki-chayot hena be-terem tavo el-hen ha-meyaledet ve-yaladu</i> · for they are lively; before the midwife comes to them, they have given birth (verse-final ve-yaladu) [VERIFIED: SNAPSHOT Exod.1.19 idx9-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ki_chayot_hena, t0)</span><br><span class="gloss">= HOLDS(when-chayot-hena, t0)</span><br>THE ANSWER [EX01-02]. ki CHAYOT hena — &#x27;for they are LIVELY&#x27;: the midwives answer the king in the life-root he tried to legislate against (the readings&#x27; senses — vigorous as the beasts of the field; themselves midwives — named, never merged); be-terem tavo ALEHEN ha- meyaledet — &#x27;before the midwife comes TO THEM&#x27;: and the to-them word stands here LEAN, the Torah&#x27;s ONLY thinned token of it, the rest all full — MS&#x27;s unique-lean verified whole [VERIFIED: manifest EX01-02]: the letter thins the arrival-word in the very clause that denies the arrival — the excuse is spelled like what it claims.
+</td><td><span class="he">כִּי־חָיוֹת הֵנָּה</span> · <i>ki-chayot hena</i><br><span class="gloss">= when-chayot hena</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The answer; the thinned arrival-word.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_1_20 · Exod.1.20 · <span class='expr'>GOD_DEALT_WELL</span></h3>
+<p><span class="he">וַיֵּיטֶב אֱלֹהִים לַמְיַלְּדֹת וַיִּרֶב הָעָם וַיַּעַצְמוּ מְאֹד</span> · <i>va-yetev Elohim la-meyaldot va-yirev ha-am va-yaatzmu meod</i> · And God dealt well with the midwives; and the people multiplied, and grew very mighty.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֵּ֥יטֶב אֱלֹהִ֖ים לַֽמְיַלְּדֹ֑ת</span> · <i>va-yetev Elohim la-meyaldot</i> · God dealt well with the midwives (etnachta on la-meyaldot) [VERIFIED: SNAPSHOT Exod.1.20 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּ֧רֶב הָעָ֛ם וַיַּֽעַצְמ֖וּ מְאֹֽד</span> · <i>va-yirev ha-am va-yaatzmu meod</i> · and the people multiplied, and grew very mighty (verse-final meod) [VERIFIED: SNAPSHOT Exod.1.20 idx3-6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yetev_elohim_la_meyaldot, t0)</span><br><span class="gloss">= HOLDS(and-yetev-God-to-meyaldot, t0)</span><br>THE DEALING-WELL [EX01-04]. va-YETEV Elohim la-meyaldot — &#x27;God DEALT WELL with the midwives&#x27;: the good-verb over the refusers (the machine notes the queue-mechanics: the reward attaches to the women on whose refusal the king&#x27;s demand still hangs open); va-YIREV ha-am — &#x27;and the people MULTIPLIED&#x27;: the one-yod increase-word the Ramah pairs with creation&#x27;s fowl-blessing (ve-ha-of YIREV, Gen 1:22 — the same skeleton, the chain&#x27;s own pairing) [VERIFIED: manifest EX01-04]: under the decree the nation increases in the spelling of the fifth day — the letter keeps citing creation while the state fights it.
+</td><td><span class="he">וַיֵּיטֶב אֱלֹהִים לַמְיַלְּדֹת</span> · <i>va-yetev Elohim la-meyaldot</i><br><span class="gloss">= and-yetev God to-meyaldot</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The reward clause; creation&#x27;s spelling.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_1_21 · Exod.1.21 · <span class='expr'>HE_MADE_THEM_HOUSES</span></h3>
+<p><span class="he">וַיְהִי כִּי־יָרְאוּ הַמְיַלְּדֹת אֶת־הָאֱלֹהִים וַיַּעַשׂ לָהֶם בָּתִּים</span> · <i>va-yehi ki-yaru ha-meyaldot et-ha-Elohim va-yaas la-hem batim</i> · And it was, because the midwives feared God, that He made them houses.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֕י כִּֽי יָֽרְא֥וּ הַֽמְיַלְּדֹ֖ת אֶת הָאֱלֹהִ֑ים</span> · <i>va-yehi ki-yaru ha-meyaldot et-ha-Elohim</i> · because the midwives feared God (etnachta on ha-Elohim) [VERIFIED: SNAPSHOT Exod.1.21 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּ֥עַשׂ לָהֶ֖ם בָּתִּֽים</span> · <i>va-yaas la-hem batim</i> · He made them houses (verse-final batim) [VERIFIED: SNAPSHOT Exod.1.21 idx6-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yaas_lahem_batim, t0)</span><br><span class="gloss">= HOLDS(and-yaas-to-them-batim, t0)</span><br>THE HOUSES [EX01-12]. va-yehi KI YARU ha-meyaldot et ha-Elohim — the fear-clause repeated as the reward&#x27;s own grounds (the letter states the causation twice, 1:17 and here: no ambiguity about what was paid for); va-YAAS lahem BATIM — &#x27;He made them HOUSES&#x27;: the readings&#x27; houses named (priesthood and Levites, kingship — the dynasties); and the grammarians&#x27; dot carried: the tav DAGESHED, separating the houses of the reward from the DESOLATION-word of Isaiah&#x27;s vineyard (batah, Isa 5:6) — one dot between reward and ruin [VERIFIED under EX01-12]: the machine files the exchange — the king offered the midwives his court; the letter built them houses.
+</td><td><span class="he">וַיַּעַשׂ לָהֶם בָּתִּים</span> · <i>va-yaas la-hem batim</i><br><span class="gloss">= and-yaas to-hem batim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The reward: houses, with the separating dot.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_1_22 · Exod.1.22 · <span class='expr'>THE_NILE_DECREE</span></h3>
+<p><span class="he">וַיְצַו פַּרְעֹה לְכָל־עַמּוֹ לֵאמֹר כָּל־הַבֵּן הַיִּלּוֹד הַיְאֹרָה תַּשְׁלִיכֻהוּ וְכָל־הַבַּת תְּחַיּוּן</span> · <i>va-yetzav paro le-khal-am-o le-mor kal-ha-ben ha-yilod ha-yeora-ה tashlikhu-hu ve-khal-ha-bat techayu-n</i> · And Pharaoh commanded all his people, saying: Every son that is born — into the Nile you shall cast him; and every daughter you shall keep alive.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְצַ֣ו פַּרְעֹ֔ה לְכָל עַמּ֖וֹ לֵאמֹ֑ר</span> · <i>va-yetzav paro le-khal-am-o le-mor</i> · Pharaoh commanded all his people (etnachta on le-mor) [VERIFIED: SNAPSHOT Exod.1.22 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כָּל הַבֵּ֣ן הַיִּלּ֗וֹד הַיְאֹ֨רָה֙ תַּשְׁלִיכֻ֔הוּ וְכָל הַבַּ֖ת תְּחַיּֽוּן</span> · <i>kal-ha-ben ha-yilod ha-yeora-ה tashlikhu-hu ve-khal-ha-bat techayu-n</i> · every son that is born — into the Nile you shall cast him; and every daughter you shall keep alive (verse-final techayu-n) [VERIFIED: SNAPSHOT Exod.1.22 idx5-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(paro, LET(kol_ha_ben_ha_yilod_ha_yeora_tashlikhuhu))</span><br><span class="gloss">= DECLARE(paro, LET(all-the-ben-the-yilod-the-yeora-tashlikhuhu))</span><br>THE DECREE [EX01-10]. va-yetzav PARO le-KHOL AMO — Pharaoh commands ALL HIS PEOPLE: the secret order the midwives refused goes PUBLIC and universal (the readings: even on Egypt&#x27;s own sons that day, named) — the escalation-mechanics of a refused demand: what two women would not do, a nation is conscripted for; kol ha-BEN ha-YILOD — &#x27;every son that is BORN&#x27;: the born-word&#x27;s ONE Torah token, its Scripture-twin at David&#x27;s child, and the Kitzur&#x27;s reversal armed — the child this decree hunts will be RAISED IN PHARAOH&#x27;S OWN HOUSE and bring the plagues (Moses in the palace, 2:5-10 armed) [VERIFIED: manifest EX01-10]; ha-YEORA tashlikhuhu — &#x27;into the NILE you shall cast him&#x27;: the demand stands OPEN at the chapter&#x27;s close (its dark compliances and its one subverted compliance — the mother who WILL place her son in the Nile, 2:3 — armed); ve-khol ha-BAT techayun — the daughter-clause with its dageshed bet [VERIFIED under EX01-12]: the book&#x27;s first chapter ends with a kill-order on the queue and the life-verb still conjugating.
+</td><td><span class="he">כָּל־הַבֵּן הַיִּלּוֹד הַיְאֹרָה תַּשְׁלִיכֻהוּ</span> · <i>kal-ha-ben ha-yilod ha-yeora-ה tashlikhu-hu</i><br><span class="gloss">= kal-the-ben the-yilod the-yeora-ה tashlikhu-that</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The open decree pushed; the chapter closes on it.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Ex_1_1 — the names reopened</td><td>And these are the names of the sons of Israel who came to Egypt; with Jacob, each man and his household, they came.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וְאֵ֗לֶּה שְׁמוֹת֙ בְּנֵ֣י יִשְׂרָאֵ֔ל</span> · <i>ve-ele shemot bene yisrael</i><br><span class="gloss">= and-ele names bene yisrael</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Ex_1_2 — Leah&#x27;s four</td><td>Reuben, Simeon, Levi, and Judah;</td><td>SPECS empty; no test, no name.</td><td><span class="he">רְאוּבֵ֣ן שִׁמְע֔וֹן לֵוִ֖י וִיהוּדָֽה</span> · <i>reuven shimon levi vi-yhuda</i><br><span class="gloss">= reuven shimon levi vi-yhuda</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Ex_1_3 — Leah&#x27;s last and Rachel&#x27;s</td><td>Issachar, Zebulun, and Benjamin;</td><td>SPECS empty; no test, no name.</td><td><span class="he">יִשָּׂשכָ֥ר זְבוּלֻ֖ן וּבְנְיָמִֽן</span> · <i>yisashkhar zevulun u-venyamin</i><br><span class="gloss">= yisashkhar zevulun and-venyamin</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Ex_1_4 — the handmaids&#x27; four</td><td>Dan, and Naphtali; Gad, and Asher.</td><td>SPECS empty; no test, no name.</td><td><span class="he">דָּ֥ן וְנַפְתָּלִ֖י גָּ֥ד וְאָשֵֽׁר</span> · <i>dan ve-naftali gad ve-asher</i><br><span class="gloss">= dan and-naftali gad and-which</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Ex_1_5 — seventy souls, and Joseph</td><td>And all the souls that came out of the loins of Jacob were seventy souls; and Joseph was in Egypt.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַֽיְהִ֗י כָּל נֶ֛פֶשׁ יֹצְאֵ֥י</span> · <i>va-yehi kal-nefesh yotze</i><br><span class="gloss">= and-yehi kal-nefesh yotze</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Ex_1_6 — the death retold</td><td>And Joseph died, and all his brothers, and all that generation.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיָּ֤מָת יוֹסֵף֙ וְכָל אֶחָ֔יו</span> · <i>va-yamat yosef ve-khal-echay-v</i><br><span class="gloss">= and-yamat yosef and-khal-echay-v</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Ex_1_7 — the six increase-words</td><td>And the sons of Israel were fruitful, and swarmed, and multiplied, and grew mighty — exceedingly, exceedingly; and the land was filled with them.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וּבְנֵ֣י יִשְׂרָאֵ֗ל פָּר֧וּ וַֽיִּשְׁרְצ֛וּ</span> · <i>u-vene yisrael paru va-yishrtzu</i><br><span class="gloss">= and-vene yisrael paru and-yishrtzu</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Ex_1_8 — a king who knew not</td><td>And there arose a new king over Egypt, who knew not Joseph.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיָּ֥קָם מֶֽלֶךְ חָדָ֖שׁ עַל</span> · <i>va-yaqam melekh-chadash al-</i><br><span class="gloss">= and-yaqam melekh-chadash upon</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Ex_1_9 — behold the people</td><td>And he said to his people: Behold, the people of the sons of Israel are more numerous and mightier than we.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיֹּ֖אמֶר אֶל עַמּ֑וֹ הִנֵּ֗ה</span> · <i>va-yomer el-am-o hine</i><br><span class="gloss">= and-yomer to-am-o hine</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Ex_1_10 — come, let us outwit</td><td>Come, let us deal wisely with him, lest he multiply, and it come to pass, when war befalls, that he too be added to our enemies, and fight against us, and go up from the land.</td><td>LET(hava_nitchakma_lo) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(hava-nitchakma-not) pushed and OPEN; no test, no name.</span></td><td><span class="he">הָ֥בָה נִֽתְחַכְּמָ֖ה ל֑וֹ פֶּן</span> · <i>hava-ה nitchakma l-o pen-</i><br><span class="gloss">= hava-ה nitchakma l-o lest</span></td></tr>
+<tr><td><b>S11</b></td><td>after STEP_Ex_1_11 — taskmasters set</td><td>And they set over him taskmasters of levies, in order to afflict him with their burdens; and he built store-cities for Pharaoh: Pitom, and Raamses.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיָּשִׂ֤ימוּ עָלָיו֙ שָׂרֵ֣י מִסִּ֔ים</span> · <i>va-yasimu alay-v sare misim</i><br><span class="gloss">= and-yasimu alay-v sare misim</span></td></tr>
+<tr><td><b>S12</b></td><td>after STEP_Ex_1_12 — the more afflicted, the more</td><td>And as they afflicted him, so he multiplied and so he spread; and they dreaded because of the sons of Israel.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וְכַאֲשֶׁר֙ יְעַנּ֣וּ אֹת֔וֹ כֵּ֥ן</span> · <i>ve-kha-asher yeanu et-o ken</i><br><span class="gloss">= and-kha-which yeanu o ken</span></td></tr>
+<tr><td><b>S13</b></td><td>after STEP_Ex_1_13 — with crushing service</td><td>And Egypt made the sons of Israel serve with crushing service.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיַּעֲבִ֧דוּ מִצְרַ֛יִם אֶת בְּנֵ֥י</span> · <i>va-yaavidu mitzrayim et-bene</i><br><span class="gloss">= and-yaavidu mitzrayim bene</span></td></tr>
+<tr><td><b>S14</b></td><td>after STEP_Ex_1_14 — the four afflictions</td><td>And they made their lives bitter with hard service — with mortar and with bricks, and with all service in the field; all their service in which they made them serve with crushing service.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיְמָרְר֨וּ אֶת חַיֵּיהֶ֜ם בַּעֲבֹדָ֣ה</span> · <i>va-yemarru et-chaye-hem ba-avoda</i><br><span class="gloss">= and-yemarru chaye-hem in-the-avoda</span></td></tr>
+<tr><td><b>S15</b></td><td>after STEP_Ex_1_15 — Shifra and Pua</td><td>And the king of Egypt said to the midwives of the Hebrews, of whom the name of the one was Shifra, and the name of the second Pua:</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיֹּ֨אמֶר֙ מֶ֣לֶךְ מִצְרַ֔יִם לַֽמְיַלְּדֹ֖ת</span> · <i>va-yomer melekh mitzrayim la-meyaldot</i><br><span class="gloss">= and-yomer melekh mitzrayim to-meyaldot</span></td></tr>
+<tr><td><b>S16</b></td><td>after STEP_Ex_1_16 — the kill-order</td><td>And he said: When you deliver the Hebrew women, and you see upon the birthstool: if it is a son, you shall kill him; and if it is a daughter, she shall live.</td><td>LET(im_ben_hu_va_hamiten_oto) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(if-ben-that-and-hamiten-it) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֗אמֶר בְּיַלֶּדְכֶן֙ אֶת הָֽעִבְרִיּ֔וֹת</span> · <i>va-yomer be-yaled-khen et-ha-ivriot</i><br><span class="gloss">= and-yomer in-yaled-so the-ivriot</span></td></tr>
+<tr><td><b>S17</b></td><td>after STEP_Ex_1_17 — they did not do</td><td>And the midwives feared God, and did not do as the king of Egypt spoke to them; and they kept the children alive.</td><td>LET(im_ben_hu_va_hamiten_oto) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(if-ben-that-and-hamiten-it) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַתִּירֶ֤אןָ הַֽמְיַלְּדֹת֙ אֶת הָ֣אֱלֹהִ֔ים</span> · <i>va-tirena ha-meyaldot et-ha-Elohim</i><br><span class="gloss">= and-tirena the-meyaldot the-God</span></td></tr>
+<tr><td><b>S18</b></td><td>after STEP_Ex_1_18 — why have you done</td><td>And the king of Egypt called the midwives, and said to them: Why have you done this thing, and kept the children alive?</td><td>LET(im_ben_hu_va_hamiten_oto) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(if-ben-that-and-hamiten-it) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּקְרָ֤א מֶֽלֶךְ מִצְרַ֨יִם֙ לַֽמְיַלְּדֹ֔ת</span> · <i>va-yiqra melekh-mitzrayim la-meyaldot</i><br><span class="gloss">= and-yiqra melekh-mitzrayim to-meyaldot</span></td></tr>
+<tr><td><b>S19</b></td><td>after STEP_Ex_1_19 — for they are lively</td><td>And the midwives said to Pharaoh: Because the Hebrew women are not as the Egyptian women, for they are lively; before the midwife comes to them, they have given birth.</td><td>LET(im_ben_hu_va_hamiten_oto) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(if-ben-that-and-hamiten-it) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַתֹּאמַ֤רְןָ הַֽמְיַלְּדֹת֙ אֶל פַּרְעֹ֔ה</span> · <i>va-tomarna ha-meyaldot el-paro</i><br><span class="gloss">= and-tomarna the-meyaldot to-paro</span></td></tr>
+<tr><td><b>S20</b></td><td>after STEP_Ex_1_20 — God dealt well</td><td>And God dealt well with the midwives; and the people multiplied, and grew very mighty.</td><td>LET(im_ben_hu_va_hamiten_oto) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(if-ben-that-and-hamiten-it) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֵּ֥יטֶב אֱלֹהִ֖ים לַֽמְיַלְּדֹ֑ת וַיִּ֧רֶב</span> · <i>va-yetev Elohim la-meyaldot va-yirev</i><br><span class="gloss">= and-yetev God to-meyaldot and-yirev</span></td></tr>
+<tr><td><b>S21</b></td><td>after STEP_Ex_1_21 — He made them houses</td><td>And it was, because the midwives feared God, that He made them houses.</td><td>LET(im_ben_hu_va_hamiten_oto) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(if-ben-that-and-hamiten-it) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְהִ֕י כִּֽי יָֽרְא֥וּ הַֽמְיַלְּדֹ֖ת</span> · <i>va-yehi ki-yaru ha-meyaldot</i><br><span class="gloss">= and-yehi when-yaru the-meyaldot</span></td></tr>
+<tr><td><b>S22</b></td><td>after STEP_Ex_1_22 — the Nile decree</td><td>And Pharaoh commanded all his people, saying: Every son that is born — into the Nile you shall cast him; and every daughter you shall keep alive.</td><td>LET(im_ben_hu_va_hamiten_oto) pushed and OPEN; LET(kol_ha_ben_ha_yilod_ha_yeora_tashlikhuhu) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(if-ben-that-and-hamiten-it) pushed and OPEN; LET(all-the-ben-the-yilod-the-yeora-tashlikhuhu) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְצַ֣ו פַּרְעֹ֔ה לְכָל עַמּ֖וֹ</span> · <i>va-yetzav paro le-khal-am-o</i><br><span class="gloss">= and-yetzav paro to-khal-am-o</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: exo_01_names_and_midwives — The names and the midwives (1:1-22) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — after STEP_Ex_1_1 — the names reopened
+    וְאֵ֗לֶּה שְׁמוֹת֙ בְּנֵ֣י יִשְׂרָאֵ֔ל (ve-ele shemot bene yisrael)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Ex_1_2 — Leah&#x27;s four
+    רְאוּבֵ֣ן שִׁמְע֔וֹן לֵוִ֖י וִיהוּדָֽה (reuven shimon levi vi-yhuda)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Ex_1_3 — Leah&#x27;s last and Rachel&#x27;s
+    יִשָּׂשכָ֥ר זְבוּלֻ֖ן וּבְנְיָמִֽן (yisashkhar zevulun u-venyamin)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Ex_1_4 — the handmaids&#x27; four
+    דָּ֥ן וְנַפְתָּלִ֖י גָּ֥ד וְאָשֵֽׁר (dan ve-naftali gad ve-asher)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Ex_1_5 — seventy souls, and Joseph
+    וַֽיְהִ֗י כָּל נֶ֛פֶשׁ יֹצְאֵ֥י (va-yehi kal-nefesh yotze)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Ex_1_6 — the death retold
+    וַיָּ֤מָת יוֹסֵף֙ וְכָל אֶחָ֔יו (va-yamat yosef ve-khal-echay-v)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — after STEP_Ex_1_7 — the six increase-words
+    וּבְנֵ֣י יִשְׂרָאֵ֗ל פָּר֧וּ וַֽיִּשְׁרְצ֛וּ (u-vene yisrael paru va-yishrtzu)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S8 — after STEP_Ex_1_8 — a king who knew not
+    וַיָּ֥קָם מֶֽלֶךְ חָדָ֖שׁ עַל (va-yaqam melekh-chadash al-)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S9 — after STEP_Ex_1_9 — behold the people
+    וַיֹּ֖אמֶר אֶל עַמּ֑וֹ הִנֵּ֗ה (va-yomer el-am-o hine)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S10 — after STEP_Ex_1_10 — come, let us outwit
+    הָ֥בָה נִֽתְחַכְּמָ֖ה ל֑וֹ פֶּן (hava-ה nitchakma l-o pen-)
+    PASS  LET(hava_nitchakma_lo) pushed and OPEN  (queue=[&#x27;hava_nitchakma_lo&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S11 — after STEP_Ex_1_11 — taskmasters set
+    וַיָּשִׂ֤ימוּ עָלָיו֙ שָׂרֵ֣י מִסִּ֔ים (va-yasimu alay-v sare misim)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S12 — after STEP_Ex_1_12 — the more afflicted, the more
+    וְכַאֲשֶׁר֙ יְעַנּ֣וּ אֹת֔וֹ כֵּ֥ן (ve-kha-asher yeanu et-o ken)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S13 — after STEP_Ex_1_13 — with crushing service
+    וַיַּעֲבִ֧דוּ מִצְרַ֛יִם אֶת בְּנֵ֥י (va-yaavidu mitzrayim et-bene)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S14 — after STEP_Ex_1_14 — the four afflictions
+    וַיְמָרְר֨וּ אֶת חַיֵּיהֶ֜ם בַּעֲבֹדָ֣ה (va-yemarru et-chaye-hem ba-avoda)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S15 — after STEP_Ex_1_15 — Shifra and Pua
+    וַיֹּ֨אמֶר֙ מֶ֣לֶךְ מִצְרַ֔יִם לַֽמְיַלְּדֹ֖ת (va-yomer melekh mitzrayim la-meyaldot)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S16 — after STEP_Ex_1_16 — the kill-order
+    וַיֹּ֗אמֶר בְּיַלֶּדְכֶן֙ אֶת הָֽעִבְרִיּ֔וֹת (va-yomer be-yaled-khen et-ha-ivriot)
+    PASS  LET(im_ben_hu_va_hamiten_oto) pushed and OPEN  (queue=[&#x27;im_ben_hu_va_hamiten_oto&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S17 — after STEP_Ex_1_17 — they did not do
+    וַתִּירֶ֤אןָ הַֽמְיַלְּדֹת֙ אֶת הָ֣אֱלֹהִ֔ים (va-tirena ha-meyaldot et-ha-Elohim)
+    PASS  LET(im_ben_hu_va_hamiten_oto) pushed and OPEN  (queue=[&#x27;im_ben_hu_va_hamiten_oto&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S18 — after STEP_Ex_1_18 — why have you done
+    וַיִּקְרָ֤א מֶֽלֶךְ מִצְרַ֨יִם֙ לַֽמְיַלְּדֹ֔ת (va-yiqra melekh-mitzrayim la-meyaldot)
+    PASS  LET(im_ben_hu_va_hamiten_oto) pushed and OPEN  (queue=[&#x27;im_ben_hu_va_hamiten_oto&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S19 — after STEP_Ex_1_19 — for they are lively
+    וַתֹּאמַ֤רְןָ הַֽמְיַלְּדֹת֙ אֶל פַּרְעֹ֔ה (va-tomarna ha-meyaldot el-paro)
+    PASS  LET(im_ben_hu_va_hamiten_oto) pushed and OPEN  (queue=[&#x27;im_ben_hu_va_hamiten_oto&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S20 — after STEP_Ex_1_20 — God dealt well
+    וַיֵּ֥יטֶב אֱלֹהִ֖ים לַֽמְיַלְּדֹ֑ת וַיִּ֧רֶב (va-yetev Elohim la-meyaldot va-yirev)
+    PASS  LET(im_ben_hu_va_hamiten_oto) pushed and OPEN  (queue=[&#x27;im_ben_hu_va_hamiten_oto&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S21 — after STEP_Ex_1_21 — He made them houses
+    וַיְהִ֕י כִּֽי יָֽרְא֥וּ הַֽמְיַלְּדֹ֖ת (va-yehi ki-yaru ha-meyaldot)
+    PASS  LET(im_ben_hu_va_hamiten_oto) pushed and OPEN  (queue=[&#x27;im_ben_hu_va_hamiten_oto&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S22 — after STEP_Ex_1_22 — the Nile decree
+    וַיְצַ֣ו פַּרְעֹ֔ה לְכָל עַמּ֖וֹ (va-yetzav paro le-khal-am-o)
+    PASS  LET(im_ben_hu_va_hamiten_oto) pushed and OPEN  (queue=[&#x27;im_ben_hu_va_hamiten_oto&#x27;, &#x27;kol_ha_ben_ha_yilod_ha_yeora_tashlikhuhu&#x27;])
+    PASS  LET(kol_ha_ben_ha_yilod_ha_yeora_tashlikhuhu) pushed and OPEN  (queue=[&#x27;im_ben_hu_va_hamiten_oto&#x27;, &#x27;kol_ha_ben_ha_yilod_ha_yeora_tashlikhuhu&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/exo_01_names_and_midwives.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# exo_01_names_and_midwives — 1:1-22
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/exo_01_names_and_midwives.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;The names and the midwives (1:1-22)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;exo_01_names_and_midwives&quot;)
+
+# -------------------------- Exod.1.1 · THE_NAMES_REOPENED ------------------
+# וְאֵלֶּה שְׁמוֹת בְּנֵי יִשְׂרָאֵל הַבָּאִים מִצְרָיְמָה אֵת יַעֲקֹב אִישׁ
+# וּבֵיתוֹ בָּאוּ
+# &quot;[EN-AID] And these are the names of the sons of Israel who came to Egypt;
+# with Jacob, each man and his household, they came.&quot;
+m.step(&quot;Exod.1.1&quot;)
+# ‹וְאֵלֶּה שְׁמוֹת בְּנֵי יִשְׂרָאֵל› (“and-these name son Israel”) —
+# section name-son-Israel: son-lea, son-rachel, son-the-shefachot
+m.section(&quot;shemot_bene_yisrael&quot;, &quot;bene_lea&quot;, &quot;ben_rachel&quot;, &quot;bene_ha_shefachot&quot;)
+
+# -------------------------- Exod.1.2 · LEAHS_FOUR --------------------------
+# רְאוּבֵן שִׁמְעוֹן לֵוִי וִיהוּדָה
+# &quot;[EN-AID] Reuben, Simeon, Levi, and Judah;&quot;
+m.step(&quot;Exod.1.2&quot;)
+# ‹רְאוּבֵן שִׁמְעוֹן לֵוִי וִיהוּדָה› (“Reuben Simeon Levi and-Judah”) —
+# fact holds: Reuben-Simeon-Levi-vi-yhuda
+m.fact(&quot;reuven_shimon_levi_vi_yhuda&quot;)
+
+# -------------------------- Exod.1.3 · LEAHS_LAST_AND_RACHELS --------------
+# יִשָּׂשכָר זְבוּלֻן וּבְנְיָמִן
+# &quot;[EN-AID] Issachar, Zebulun, and Benjamin;&quot;
+m.step(&quot;Exod.1.3&quot;)
+# ‹יִשָּׂשכָר זְבוּלֻן וּבְנְיָמִן› (“Issachar Zebulun and-Benjamin”) — fact
+# holds: Issachar-Zebulun-and-Benjamin
+m.fact(&quot;yisashkhar_zevulun_u_venyamin&quot;)
+
+# -------------------------- Exod.1.4 · THE_HANDMAIDS_FOUR ------------------
+# דָּן וְנַפְתָּלִי גָּד וְאָשֵׁר
+# &quot;[EN-AID] Dan, and Naphtali; Gad, and Asher.&quot;
+m.step(&quot;Exod.1.4&quot;)
+# ‹דָּן וְנַפְתָּלִי גָּד וְאָשֵׁר› (“Daniel and-Naphtali Gad and-Asher”) —
+# fact holds: Daniel-and-Naphtali-Gad-and-Asher
+m.fact(&quot;dan_ve_naftali_gad_ve_asher&quot;)
+
+# -------------------------- Exod.1.5 · SEVENTY_SOULS_AND_JOSEPH ------------
+# וַיְהִי כָּל־נֶפֶשׁ יֹצְאֵי יֶרֶךְ־יַעֲקֹב שִׁבְעִים נָפֶשׁ וְיוֹסֵף הָיָה
+# בְמִצְרָיִם
+# &quot;[EN-AID] And all the souls that came out of the loins of Jacob were
+# seventy souls; and Joseph was in Egypt.&quot;
+m.step(&quot;Exod.1.5&quot;)
+# ‹יַעֲקֹב שִׁבְעִים נָפֶשׁ וְיוֹסֵף הָיָה בְמִצְרָיִם› (“Jacob seventy
+# living-being and-Joseph be in-Egypt”) — fact holds: seventy-living-being-
+# and-Joseph-in-Egypt
+m.fact(&quot;shivim_nefesh_ve_yosef_be_mitzrayim&quot;)
+
+# -------------------------- Exod.1.6 · THE_DEATH_RETOLD --------------------
+# וַיָּמָת יוֹסֵף וְכָל־אֶחָיו וְכֹל הַדּוֹר הַהוּא
+# &quot;[EN-AID] And Joseph died, and all his brothers, and all that generation.&quot;
+m.step(&quot;Exod.1.6&quot;)
+# ‹וַיָּמָת יוֹסֵף› (“and-die Joseph”) — fact holds: and-die-Joseph-and-all-
+# the-generation
+m.fact(&quot;va_yamat_yosef_ve_khol_ha_dor&quot;)
+
+# -------------------------- Exod.1.7 · THE_SIX_INCREASE_WORDS --------------
+# וּבְנֵי יִשְׂרָאֵל פָּרוּ וַיִּשְׁרְצוּ וַיִּרְבּוּ וַיַּעַצְמוּ בִּמְאֹד
+# מְאֹד וַתִּמָּלֵא הָאָרֶץ אֹתָם
+# &quot;[EN-AID] And the sons of Israel were fruitful, and swarmed, and
+# multiplied, and grew mighty — exceedingly, exceedingly; and the land was
+# filled with them.&quot;
+m.step(&quot;Exod.1.7&quot;)
+# ‹פָּרוּ וַיִּשְׁרְצוּ וַיִּרְבּוּ וַיַּעַצְמוּ בִּמְאֹד מְאֹד› (“be-
+# fruitful and-swarm and-multiply and-bind-fast in-very very”) — fact holds:
+# and-fill-the-earth-otam
+m.fact(&quot;va_timale_ha_aretz_otam&quot;)
+
+# -------------------------- Exod.1.8 · A_KING_WHO_KNEW_NOT -----------------
+# וַיָּקָם מֶלֶךְ־חָדָשׁ עַל־מִצְרָיִם אֲשֶׁר לֹא־יָדַע אֶת־יוֹסֵף
+# &quot;[EN-AID] And there arose a new king over Egypt, who knew not Joseph.&quot;
+m.step(&quot;Exod.1.8&quot;)
+# ‹וַיָּקָם מֶלֶךְ־חָדָשׁ עַל־מִצְרָיִם› (“and-arise king new over Egypt”) —
+# event: qam — agent king-new
+m.event(&quot;qam&quot;, agent=&quot;melekh_chadash&quot;)
+
+# -------------------------- Exod.1.9 · BEHOLD_THE_PEOPLE -------------------
+# וַיֹּאמֶר אֶל־עַמּוֹ הִנֵּה עַם בְּנֵי יִשְׂרָאֵל רַב וְעָצוּם מִמֶּנּוּ
+# &quot;[EN-AID] And he said to his people: Behold, the people of the sons of
+# Israel are more numerous and mightier than we.&quot;
+m.step(&quot;Exod.1.9&quot;)
+# ‹רַב וְעָצוּם מִמֶּנּוּ› (“many/great and-powerful from-us/our”) — fact
+# holds: many/great-and-powerful-from-it
+m.fact(&quot;rav_ve_atzum_mimenu&quot;)
+
+# -------------------------- Exod.1.10 · COME_LET_US_OUTWIT -----------------
+# הָבָה נִתְחַכְּמָה לוֹ פֶּן־יִרְבֶּה וְהָיָה כִּי־תִקְרֶאנָה מִלְחָמָה
+# וְנוֹסַף גַּם־הוּא עַל־שֹׂנְאֵינוּ וְנִלְחַם־בָּנוּ וְעָלָה מִן־הָאָרֶץ
+# &quot;[EN-AID] Come, let us deal wisely with him, lest he multiply, and it come
+# to pass, when war befalls, that he too be added to our enemies, and fight
+# against us, and go up from the land.&quot;
+m.step(&quot;Exod.1.10&quot;)
+# ‹הָבָה נִתְחַכְּמָה לוֹ› (“give-ward be-wise to-him/its”) — king-new
+# speaks a demand — LET: hava-be-wise-not
+m.declare(&quot;melekh_chadash&quot;, &quot;LET&quot;,
+          &quot;hava_nitchakma_lo&quot;)
+
+# -------------------------- Exod.1.11 · TASKMASTERS_SET --------------------
+# וַיָּשִׂימוּ עָלָיו שָׂרֵי מִסִּים לְמַעַן עַנֹּתוֹ בְּסִבְלֹתָם וַיִּבֶן
+# עָרֵי מִסְכְּנוֹת לְפַרְעֹה אֶת־פִּתֹם וְאֶת־רַעַמְסֵס
+# &quot;[EN-AID] And they set over him taskmasters of levies, in order to afflict
+# him with their burdens; and he built store-cities for Pharaoh: Pitom, and
+# Raamses.&quot;
+m.step(&quot;Exod.1.11&quot;)
+# ‹וַיָּשִׂימוּ עָלָיו שָׂרֵי מִסִּים לְמַעַן עַנֹּתוֹ בְּסִבְלֹתָם› (“and-
+# put/set over-him/its officer burden so-that afflict-literally-him/its in-
+# porterage-them/their”) — demand settled (popped from the queue): hava-be-
+# wise-not
+m.result(&quot;hava_nitchakma_lo&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Exod.1.12 · THE_MORE_AFFLICTED_THE_MORE --------
+# וְכַאֲשֶׁר יְעַנּוּ אֹתוֹ כֵּן יִרְבֶּה וְכֵן יִפְרֹץ וַיָּקֻצוּ מִפְּנֵי
+# בְּנֵי יִשְׂרָאֵל
+# &quot;[EN-AID] And as they afflicted him, so he multiplied and so he spread;
+# and they dreaded because of the sons of Israel.&quot;
+m.step(&quot;Exod.1.12&quot;)
+# ‹כֵּן יִרְבֶּה וְכֵן יִפְרֹץ› (“so multiply and-so break-out”) — fact
+# holds: so-multiply-and-so-break-out
+m.fact(&quot;ken_yirbe_ve_khen_yifrotz&quot;)
+
+# -------------------------- Exod.1.13 · WITH_CRUSHING_SERVICE --------------
+# וַיַּעֲבִדוּ מִצְרַיִם אֶת־בְּנֵי יִשְׂרָאֵל בְּפָרֶךְ
+# &quot;[EN-AID] And Egypt made the sons of Israel serve with crushing service.&quot;
+m.step(&quot;Exod.1.13&quot;)
+# ‹וַיַּעֲבִדוּ מִצְרַיִם אֶת־בְּנֵי יִשְׂרָאֵל בְּפָרֶךְ› (“and-work/serve
+# Egyptian obj-marker son Israel in-fracture”) — fact holds: and-work/serve-
+# Egypt-in-fracture
+m.fact(&quot;va_yaavidu_mitzrayim_be_farekh&quot;)
+
+# -------------------------- Exod.1.14 · THE_FOUR_AFFLICTIONS ---------------
+# וַיְמָרְרוּ אֶת־חַיֵּיהֶם בַּעֲבֹדָה קָשָׁה בְּחֹמֶר וּבִלְבֵנִים
+# וּבְכָל־עֲבֹדָה בַּשָּׂדֶה אֵת כָּל־עֲבֹדָתָם אֲשֶׁר־עָבְדוּ בָהֶם
+# בְּפָרֶךְ
+# &quot;[EN-AID] And they made their lives bitter with hard service — with mortar
+# and with bricks, and with all service in the field; all their service in
+# which they made them serve with crushing service.&quot;
+m.step(&quot;Exod.1.14&quot;)
+# ‹וַיְמָרְרוּ אֶת־חַיֵּיהֶם בַּעֲבֹדָה קָשָׁה› (“and-be-bitter obj-marker
+# alive-them/their in-service/work severe”) — fact holds: and-be-bitter-
+# with-chayehem
+m.fact(&quot;va_yemarru_et_chayehem&quot;)
+
+# -------------------------- Exod.1.15 · SHIFRA_AND_PUA ---------------------
+# וַיֹּאמֶר מֶלֶךְ מִצְרַיִם לַמְיַלְּדֹת הָעִבְרִיֹּת אֲשֶׁר שֵׁם הָאַחַת
+# שִׁפְרָה וְשֵׁם הַשֵּׁנִית פּוּעָה
+# &quot;[EN-AID] And the king of Egypt said to the midwives of the Hebrews, of
+# whom the name of the one was Shifra, and the name of the second Pua:&quot;
+m.step(&quot;Exod.1.15&quot;)
+# ‹הָאַחַת שִׁפְרָה וְשֵׁם הַשֵּׁנִית פּוּעָה› (“the-one Shiphrah and-name
+# the-second Puah”) — fact holds: Shiphrah-and-fua
+m.fact(&quot;shifra_u_fua&quot;)
+
+# -------------------------- Exod.1.16 · THE_KILL_ORDER ---------------------
+# וַיֹּאמֶר בְּיַלֶּדְכֶן אֶת־הָעִבְרִיּוֹת וּרְאִיתֶן עַל־הָאָבְנָיִם
+# אִם־בֵּן הוּא וַהֲמִתֶּן אֹתוֹ וְאִם־בַּת הִיא וָחָיָה
+# &quot;[EN-AID] And he said: When you deliver the Hebrew women, and you see upon
+# the birthstool: if it is a son, you shall kill him; and if it is a
+# daughter, she shall live.&quot;
+m.step(&quot;Exod.1.16&quot;)
+# ‹אִם־בֵּן הוּא וַהֲמִתֶּן אֹתוֹ› (“if son he/it and-die obj-marker-
+# him/its”) — king-Egypt speaks a demand — LET: if-son-that-and-die-it
+m.declare(&quot;melekh_mitzrayim&quot;, &quot;LET&quot;,
+          &quot;im_ben_hu_va_hamiten_oto&quot;)
+
+# -------------------------- Exod.1.17 · THEY_DID_NOT_DO --------------------
+# וַתִּירֶאןָ הַמְיַלְּדֹת אֶת־הָאֱלֹהִים וְלֹא עָשׂוּ כַּאֲשֶׁר דִּבֶּר
+# אֲלֵיהֶן מֶלֶךְ מִצְרָיִם וַתְּחַיֶּיןָ אֶת־הַיְלָדִים
+# &quot;[EN-AID] And the midwives feared God, and did not do as the king of Egypt
+# spoke to them; and they kept the children alive.&quot;
+m.step(&quot;Exod.1.17&quot;)
+# ‹וְלֹא עָשׂוּ כַּאֲשֶׁר דִּבֶּר אֲלֵיהֶן מֶלֶךְ מִצְרָיִם› (“and-not make
+# like-as/which speak to-them/their king Egypt”) — fact holds: and-not-make-
+# kaasher-speak
+m.fact(&quot;ve_lo_asu_kaasher_diber&quot;)
+
+# -------------------------- Exod.1.18 · WHY_HAVE_YOU_DONE ------------------
+# וַיִּקְרָא מֶלֶךְ־מִצְרַיִם לַמְיַלְּדֹת וַיֹּאמֶר לָהֶן מַדּוּעַ
+# עֲשִׂיתֶן הַדָּבָר הַזֶּה וַתְּחַיֶּיןָ אֶת־הַיְלָדִים
+# &quot;[EN-AID] And the king of Egypt called the midwives, and said to them: Why
+# have you done this thing, and kept the children alive?&quot;
+m.step(&quot;Exod.1.18&quot;)
+# ‹מַדּוּעַ עֲשִׂיתֶן הַדָּבָר הַזֶּה› (“what-known? make the-word/thing
+# the-this”) — fact holds: what-known?-make
+m.fact(&quot;madua_asiten&quot;)
+
+# -------------------------- Exod.1.19 · FOR_THEY_ARE_LIVELY ----------------
+# וַתֹּאמַרְןָ הַמְיַלְּדֹת אֶל־פַּרְעֹה כִּי לֹא כַנָּשִׁים הַמִּצְרִיֹּת
+# הָעִבְרִיֹּת כִּי־חָיוֹת הֵנָּה בְּטֶרֶם תָּבוֹא אֲלֵהֶן הַמְיַלֶּדֶת
+# וְיָלָדוּ
+# &quot;[EN-AID] And the midwives said to Pharaoh: Because the Hebrew women are
+# not as the Egyptian women, for they are lively; before the midwife comes
+# to them, they have given birth.&quot;
+m.step(&quot;Exod.1.19&quot;)
+# ‹כִּי־חָיוֹת הֵנָּה› (“that vigorous themselves”) — fact holds: that-
+# vigorous-themselves
+m.fact(&quot;ki_chayot_hena&quot;)
+
+# -------------------------- Exod.1.20 · GOD_DEALT_WELL ---------------------
+# וַיֵּיטֶב אֱלֹהִים לַמְיַלְּדֹת וַיִּרֶב הָעָם וַיַּעַצְמוּ מְאֹד
+# &quot;[EN-AID] And God dealt well with the midwives; and the people multiplied,
+# and grew very mighty.&quot;
+m.step(&quot;Exod.1.20&quot;)
+# ‹וַיֵּיטֶב אֱלֹהִים לַמְיַלְּדֹת› (“and-be-make-well God to-bear-young”) —
+# fact holds: and-be-make-well-God-to-bear-young
+m.fact(&quot;va_yetev_elohim_la_meyaldot&quot;)
+
+# -------------------------- Exod.1.21 · HE_MADE_THEM_HOUSES ----------------
+# וַיְהִי כִּי־יָרְאוּ הַמְיַלְּדֹת אֶת־הָאֱלֹהִים וַיַּעַשׂ לָהֶם בָּתִּים
+# &quot;[EN-AID] And it was, because the midwives feared God, that He made them
+# houses.&quot;
+m.step(&quot;Exod.1.21&quot;)
+# ‹וַיַּעַשׂ לָהֶם בָּתִּים› (“and-make to-them/their house”) — fact holds:
+# and-make-to-them-house
+m.fact(&quot;va_yaas_lahem_batim&quot;)
+
+# -------------------------- Exod.1.22 · THE_NILE_DECREE --------------------
+# וַיְצַו פַּרְעֹה לְכָל־עַמּוֹ לֵאמֹר כָּל־הַבֵּן הַיִּלּוֹד הַיְאֹרָה
+# תַּשְׁלִיכֻהוּ וְכָל־הַבַּת תְּחַיּוּן
+# &quot;[EN-AID] And Pharaoh commanded all his people, saying: Every son that is
+# born — into the Nile you shall cast him; and every daughter you shall keep
+# alive.&quot;
+m.step(&quot;Exod.1.22&quot;)
+# ‹כָּל־הַבֵּן הַיִּלּוֹד הַיְאֹרָה תַּשְׁלִיכֻהוּ› (“all the-son the-born
+# the-Nile-ward throw-out-him/its”) — Pharaoh speaks a demand — LET: all-
+# the-son-the-born-the-yeora-tashlikhuhu
+m.declare(&quot;paro&quot;, &quot;LET&quot;,
+          &quot;kol_ha_ben_ha_yilod_ha_yeora_tashlikhuhu&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;im_ben_hu_va_hamiten_oto&#x27;, &#x27;kol_ha_ben_ha_yilod_ha_yeora_tashlikhuhu&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 3
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;reuven_shimon_levi_vi_yhuda&#x27;, &#x27;yisashkhar_zevulun_u_venyamin&#x27;, &#x27;dan_ve_naftali_gad_ve_asher&#x27;, &#x27;shivim_nefesh_ve_yosef_be_mitzrayim&#x27;, &#x27;va_yamat_yosef_ve_khol_ha_dor&#x27;, &#x27;va_timale_ha_aretz_otam&#x27;, &#x27;rav_ve_atzum_mimenu&#x27;, &#x27;ken_yirbe_ve_khen_yifrotz&#x27;, &#x27;va_yaavidu_mitzrayim_be_farekh&#x27;, &#x27;va_yemarru_et_chayehem&#x27;, &#x27;shifra_u_fua&#x27;, &#x27;ve_lo_asu_kaasher_diber&#x27;, &#x27;madua_asiten&#x27;, &#x27;ki_chayot_hena&#x27;, &#x27;va_yetev_elohim_la_meyaldot&#x27;, &#x27;va_yaas_lahem_batim&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 6
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

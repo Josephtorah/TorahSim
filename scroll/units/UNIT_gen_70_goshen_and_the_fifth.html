@@ -1,0 +1,968 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_70_goshen_and_the_fifth — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_70_goshen_and_the_fifth?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Goshen and the fifth (47:1-31) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_70_goshen_and_the_fifth</b> · Genesis 47:1-31 · derive logic_derived_v1 · phase FWD-11</div>
+<div class="meta"><a href="../#Gen/47/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">וַיֵּשֶׁב יִשְׂרָאֵל בְּאֶרֶץ גֹּשֶׁן</span> · <i>va-yeshev yisrael be-eretz goshen</i> · &#x27;And Israel dwelt in the land of Goshen&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DERIVED 2026-08-09 · FORWARD ERA unit #11 (run FWD-3 block 1; freeze review waived — mechanical gates only). Span: 47:1-31, whole chapter: 31 verses (SNAPSHOT-verified). Oral layer IN-PIPELINE: manifest 13/13 VERIFIED, zero FAILED — see oral_audit_note_en. MACHINE PROFILE. SIX DECLAREs, FOUR RESULTs. The span&#x27;s queue runs in four waves: the GOSHEN PETITION (yeshvu-na, 47:4 — &#x27;let your servants dwell, pray, in Goshen&#x27;) popped by the king&#x27;s own grant two verses on (47:6, yeshvu be-eretz goshen); the BREAD-CRY of all Egypt (hava lanu lechem, 47:15) popped in the herd-currency (47:17); the SELF-SALE (qene otanu ve-ten zera, 47:19) popped at the behold-word (47:23, he lakhem zera); and the deathbed file — the BAN (al-na tiqbreni be-mitzrayim, 47:29) and the CHARGE (u-qevartani bi-qvuratam, 47:30) both OPEN at the span&#x27;s end (the carrying-out, 50:4-13, ARMED for this run&#x27;s last block), with the OATH (hishava li, 47:31) pushed and discharged in its own verse (the same-verse class). TWO BLESS stations: the patriarch blesses the throne entering (47:7, BLESS installed) and leaving (47:10, the pair sealed as event). One STATUTE: the fifth (47:26, le-faro la-chomesh, &#x27;to this day&#x27;), with the priests&#x27; exemption (47:22, choq) written into its text. CROSS-UNIT: gen_69&#x27;s scripted answer (va-amartem, 46:34) is PERFORMED at 47:3 — carried as a corpus settlement link (the one-world law). REGISTRY 0; TESTS 0; LEDGER 0. CARE-POINTS: the performance deviates from the script — the brothers say the SHEPHERD-word (roe tzon) the script softened to &#x27;men of livestock&#x27;, and the letter marks the delivery: gam avotenu FULL-OF-FULL at 47:3 (the Torah&#x27;s only token) where the script&#x27;s own (46:34) is LEAN. Joseph&#x27;s acceptance of the burial charge (anokhi eese khi-devarekha, 47:30) is acceptance, NOT performance — the demand stays open for the deed. The sojourn-word (la-gur, 47:4) against the holding (achuza, 47:11) against the increase (47:27): the machine files the temporary-stay language hardening into settlement without ruling on it. WATCHLIST ARMS: 48:2 (the bed-file&#x27;s strengthening), 49:29-32 (the cave named), 50:4-13 (the carrying-out and the oath pleaded before Pharaoh), Exod 1:7 (the increase-verbs retold), Exod 1:8 (the king who knew not Joseph — the forgetting G70-05&#x27;s pair punishes), Exod 8:20 (the swarm at the house).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-09 (IN-PIPELINE, forward era; manifest logic/oral_audit/manifests/gen_70_goshen_and_the_fifth_claims.json 13/13 VERIFIED, zero FAILED; record logic/oral_audit/AUDIT_gen_70_2026-08-09.md). CROWNS (chain-attested + DB-verified). THE FULL FATHERS [G70-01, MS on 47:3] — THE UNIT&#x27;S MARQUEE: אבותינו (&quot;our fathers&quot;) written FULL-OF-FULL exactly ONCE in the whole Torah — at the performance verse of the scripted answer, while the script&#x27;s own token (46:34, gam avotenu — &quot;both we and our fathers&quot;) is LEAN: the census verifies EXACT (one full, the lean six counted with the script among them) — the delivery one vav fuller than the rehearsal. THE SINGULAR SHEPHERD [G70-02, MS on 47:3]: רעה (&quot;a shepherd of&quot;) — the final he locked by the Masorah (the letter-tradition&#x27;s ledger) under a PLURAL sense: many brothers, one singular noun. THE TWO CITIES [G70-03, MS with Ibn Ezra on 47:11]: רעמסס (&quot;Rameses&quot;) — ONE VOWEL SPLITS TWO PLACES: the ayin SILENT (sheva) at Israel&#x27;s dwelling AND at all three departure-verses (Exod 12:37, Num 33:3, 33:5), OPEN (patach) at the bondage store-city alone (Exod 1:11) — the whole map checked in-stream. THE ACADEMIES&#x27; SPLIT [G70-04, a manuscript Masorah via MS; the Ramah, on 47:19]: אדמתנו (&quot;our ground&quot;) — Sura all-lean, Nehardea all-full, the dispute deferred &#x27;UNTIL EZRA COMES&#x27;; the Ramah rules lean and adds the vav-pattern for the verse&#x27;s three tokens (bare, bare, vav&#x27;d) — the stream sits with the Ramah, checked to the letter. THE HOUSE-PAIR [G70-05, Kitzur on 47:14]: ביתה פרעה (&quot;into Pharaoh&#x27;s house&quot;) exactly twice — the silver in, the swarm in (Exod 8:20): measure for measure at one door (adjacency checked). THE TWO SUPPORTED STANDINGS [G70-06, Kitzur on 47:7]: ויעמדהו (&quot;and he stood him&quot;) exactly twice, both LEAN — old Jacob before Pharaoh, abashed Joshua before Eleazar (Num 27:22): no complete standing (census checked). THE BEHOLD-WORD [G70-07, Kitzur on 47:23]: הא (&quot;behold&quot;) — the Torah&#x27;s ONE token, at the seed-grant; the Kitzur&#x27;s Scripture-three named (Ezek 16:43, Dan 2:43). THE APPROACHING DAYS [G70-08, Kitzur on 47:29]: ויקרבו ימי (&quot;and the days drew near&quot;) — the Torah&#x27;s one adjacency; David&#x27;s partner named (1 Kgs 2:1): 147 psalms for 147 years. THE GALGAL QUESTION [G70-09, MS on 47:26]: וישם (&quot;and he set&quot;) — MS reads the galgal (the rolling stroke), SNAPSHOT writes the connector (munach): mark-split carried named, the stream&#x27;s stroke checked; the corpus galgal census stands at nine. THE SEALED PORTION [G70-10, MS on 47:28]: ויחי (&quot;and he lived&quot;) — NO section gap before the seder&#x27;s head, closed nor open (&#x27;as the sages expounded&#x27;; MS from a manuscript Bible): carried NAMED-ONLY BY DESIGN — layout lives on the scroll&#x27;s spacing, not the stream&#x27;s characters; the station checked. THE POINTING FILE [G70-11/12, MS ×7; Or Torah]: הושב (&quot;settle!&quot;) shin in tsere (checked); מגוריהם (&quot;their sojournings&quot;) gimel soft; נגדך (&quot;before you&quot;) dalet dageshed; גויתנו (&quot;our body&quot;) gimel dageshed (checked); ותן (&quot;give&quot;) tav in segol; ולאשר (&quot;and for those&quot;) alef in chataf patach; אעשה (&quot;I will do&quot;) — the old Sepharad codices point the ayin BARE SHEVA (&#x27;beautifully pointed&#x27;, their margins say; Or Torah concurs), the stream writes CHATAF SEGOL: split carried named. READINGS (named-only) [G70-13, Kitzur]: the five weak ones from the edge (47:2); best-of-the-land = GOSHEN by count (47:6); na yadkha = CIRCUMCISION (47:29); אמת (&quot;truth&quot;) as coffin-bier-shrouds initials — the kindness with the dead (Rashi via the Kitzur); the bow as thanks for good news (47:31); seventeen years for seventeen years (47:28); the days-formula that never reaches the fathers (Enoch, Lamech named); the bed-file — the righteous strengthen on it (48:2 ahead), Haman falls on it (Esth 7:8, named).</div>
+<div class="meta">confidence: structure tested; oral layer verified 13/13</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>FORWARD ERA run 3, block 1. Canon continuation: Gen 47:1-31 — the audience, the four transactions, the burial oath; whole chapter.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Span + source + conventions</td><td>SNAPSHOT prestage: 31 verses, every verse with an etnachta (the mid-verse pause); no ketiv/qere pairs surfaced by the claim probes. Volitive census: the Goshen petition (47:4), the bread-cry (47:15), the self-sale with its seed-clause (47:19), the burial ban (47:29), the burial charge (47:30), the oath (47:31) — six DECLAREs; Pharaoh&#x27;s grant-imperatives (47:6) are the pop of 47:4, not new demands.</td><td>established</td></tr>
+<tr><td><b>C</b></td><td>Machine structure</td><td>Six DECLAREs, four RESULTs (the grant 47:6; the bread 47:17; the seed 47:23; the oath same-verse 47:31). BLESS at 47:7 with the pair sealed as event at 47:10. STATUTE at 47:26 (the fifth, with 47:22&#x27;s priestly exemption inside it). OPEN at span end: the ban and the charge (both armed at 50:4-13). gen_69&#x27;s say-demand settles at 47:3 via corpus link. REGISTRY 0; TESTS 0; LEDGER 0.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Gen 47 (22 notes) + Kitzur Baal HaTurim on Gen 47 (17 notes). Manifest 13 rows: 13 VERIFIED / 0 FAILED / 0 UNCHECKABLE. Two mark/point splits carried named: the galgal-vs-munach at 47:26 and the old-codices&#x27; bare sheva vs the stream&#x27;s chataf segol at 47:30. One layout crown carried named-only by design (the sealed portion, 47:28).</td><td>established</td></tr>
+<tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 13/13 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-09 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_47_1 · Gen.47.1 · <span class='expr'>THE_BRIEFING_DELIVERED</span></h3>
+<p><span class="he">וַיָּבֹא יוֹסֵף וַיַּגֵּד לְפַרְעֹה וַיֹּאמֶר אָבִי וְאַחַי וְצֹאנָם וּבְקָרָם וְכָל־אֲשֶׁר לָהֶם בָּאוּ מֵאֶרֶץ כְּנָעַן וְהִנָּם בְּאֶרֶץ גֹּשֶׁן</span> · <i>va-yavo yosef va-yaged le-faro va-yomer avi-y ve-acha-y ve-tzona-m u-veqara-m ve-khal-asher la-hem bau me-eretz kenaan ve-hina-m be-eretz goshen</i> · And Joseph came and told Pharaoh, and said: My father and my brothers, with their flocks and their herds and all that is theirs, have come from the land of Canaan; and behold, they are in the land of Goshen.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּבֹ֣א יוֹסֵף֮ וַיַּגֵּ֣ד לְפַרְעֹה֒ וַיֹּ֗אמֶר אָבִ֨י וְאַחַ֜י וְצֹאנָ֤ם וּבְקָרָם֙ וְכָל אֲשֶׁ֣ר לָהֶ֔ם בָּ֖אוּ מֵאֶ֣רֶץ כְּנָ֑עַן</span> · <i>va-yavo yosef va-yaged le-faro va-yomer avi-y ve-acha-y ve-tzona-m u-veqara-m ve-khal-asher la-hem bau me-eretz kenaan</i> · Joseph came and told Pharaoh: my father and brothers have come from Canaan (etnachta on kenaan) [VERIFIED: SNAPSHOT Gen.47.1 idx14 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהִנָּ֖ם בְּאֶ֥רֶץ גֹּֽשֶׁן</span> · <i>ve-hina-m be-eretz goshen</i> · and behold, they are in the land of Goshen (verse-final goshen) [VERIFIED: SNAPSHOT Gen.47.1 idx15-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yaged_le_faro_bau_me_eretz_kenaan, t0)</span><br><span class="gloss">= HOLDS(and-yaged-to-faro-bau-from-earth-kenaan, t0)</span><br>THE BRIEFING PERFORMED. va-YAGED le-faro — the governor delivers the audience he scripted at 46:31 (&#x27;I will go up and TELL Pharaoh&#x27;): the tell-verb lands within two verses of its rehearsal; ve-hinam be- eretz GOSHEN — the family parked at the district the script aims to win: the machine notes the stage set before the king speaks.
+</td><td><span class="he">וַיָּבֹא יוֹסֵף וַיַּגֵּד לְפַרְעֹה</span> · <i>va-yavo yosef va-yaged le-faro</i><br><span class="gloss">= and-yavo yosef and-yaged to-faro</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The briefing performed as scripted.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_2 · Gen.47.2 · <span class='expr'>FIVE_FROM_THE_EDGE</span></h3>
+<p><span class="he">וּמִקְצֵה אֶחָיו לָקַח חֲמִשָּׁה אֲנָשִׁים וַיַּצִּגֵם לִפְנֵי פַרְעֹה</span> · <i>u-mi-qetze echay-v laqach chamisha anashim va-yatzige-m li-fene faro</i> · And from the edge of his brothers he took five men, and presented them before Pharaoh.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּמִקְצֵ֣ה אֶחָ֔יו לָקַ֖ח חֲמִשָּׁ֣ה אֲנָשִׁ֑ים</span> · <i>u-mi-qetze echay-v laqach chamisha anashim</i> · from the edge of his brothers he took five men (etnachta on anashim) [VERIFIED: SNAPSHOT Gen.47.2 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּצִּגֵ֖ם לִפְנֵ֥י פַרְעֹֽה</span> · <i>va-yatzige-m li-fene faro</i> · and presented them before Pharaoh (verse-final faro) [VERIFIED: SNAPSHOT Gen.47.2 idx5-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(chamisha_anashim_lifne_faro, t0)</span><br><span class="gloss">= HOLDS(chamisha-anashim-lifne-faro, t0)</span><br>THE FIVE [G70-13]. u-mi-QETZE echav — &#x27;from the EDGE of his brothers&#x27; he took FIVE: the Kitzur&#x27;s letter-count reads the edge- word as &#x27;these are the WEAK ones&#x27; (the five who could not be shown off as soldiers, lest Pharaoh draft them) — carried named; the governor curates even his family&#x27;s face.
+</td><td><span class="he">וּמִקְצֵה אֶחָיו לָקַח חֲמִשָּׁה אֲנָשִׁים</span> · <i>u-mi-qetze echay-v laqach chamisha anashim</i><br><span class="gloss">= and-from-qetze echay-v laqach chamisha anashim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The curated delegation.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_3 · Gen.47.3 · <span class='expr'>THE_SCRIPT_PERFORMED</span></h3>
+<p><span class="he">וַיֹּאמֶר פַּרְעֹה אֶל־אֶחָיו מַה־מַּעֲשֵׂיכֶם וַיֹּאמְרוּ אֶל־פַּרְעֹה רֹעֵה צֹאן עֲבָדֶיךָ גַּם־אֲנַחְנוּ גַּם־אֲבוֹתֵינוּ</span> · <i>va-yomer paro el-echay-v ma-maase-khem va-yomru el-paro roe tzon avade-kha gam-anachnu gam-avote-nu</i> · And Pharaoh said to his brothers: What is your work? And they said to Pharaoh: Your servants are a shepherd of flocks, both we and our fathers.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֧אמֶר פַּרְעֹ֛ה אֶל אֶחָ֖יו מַה מַּעֲשֵׂיכֶ֑ם</span> · <i>va-yomer paro el-echay-v ma-maase-khem</i> · Pharaoh said to his brothers: what is your work? (etnachta on maase-khem) [VERIFIED: SNAPSHOT Gen.47.3 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּאמְר֣וּ אֶל פַּרְעֹ֗ה רֹעֵ֥ה צֹאן֙ עֲבָדֶ֔יךָ גַּם אֲנַ֖חְנוּ גַּם אֲבוֹתֵֽינוּ</span> · <i>va-yomru el-paro roe tzon avade-kha gam-anachnu gam-avote-nu</i> · they said: a shepherd of flocks are your servants, both we and our fathers (verse-final avote-nu) [VERIFIED: SNAPSHOT Gen.47.3 idx6-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(roe_tzon_avadekha_gam_anachnu_gam_avotenu, t0)</span><br><span class="gloss">= HOLDS(roe-tzon-avadekha-also-anachnu-also-avotenu, t0)</span><br>THE PERFORMANCE [G70-01 MARQUEE; G70-02]. ma maasekhem — the king asks the question VERBATIM as Joseph predicted it (46:33); the answer performs 46:34&#x27;s scripted va-amartem (&#x27;you shall say&#x27;) — gen_69&#x27;s open say-demand settles HERE (carried as a corpus settlement link: the one-world law, no in-unit RESULT for another unit&#x27;s queue). And the letter marks the delivery TWICE: ROE tzon avadekha — &#x27;your servants are a SHEPHERD of flocks&#x27;, the he locked singular by the Masorah under a plural sense [VERIFIED: manifest G70-02] — and the brothers say the SHEPHERD-word the script had softened to &#x27;men of livestock&#x27; (the abomination named to the throne&#x27;s face, and Goshen won by it); gam AVOTENU — &#x27;our fathers&#x27; written FULL-OF-FULL, the Torah&#x27;s ONLY such token, where the script&#x27;s own gam avotenu (46:34) is LEAN: the performance one vav fuller than the rehearsal [VERIFIED: manifest G70-01].
+</td><td><span class="he">רֹעֵה צֹאן עֲבָדֶיךָ גַּם־אֲנַחְנוּ גַּם־אֲבוֹתֵינוּ</span> · <i>roe tzon avade-kha gam-anachnu gam-avote-nu</i><br><span class="gloss">= roe tzon avade-kha also-anachnu also-avote-nu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The scripted answer performed — one vav fuller.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_4 · Gen.47.4 · <span class='expr'>LET_US_DWELL_IN_GOSHEN</span></h3>
+<p><span class="he">וַיֹּאמְרוּ אֶל־פַּרְעֹה לָגוּר בָּאָרֶץ בָּאנוּ כִּי־אֵין מִרְעֶה לַצֹּאן אֲשֶׁר לַעֲבָדֶיךָ כִּי־כָבֵד הָרָעָב בְּאֶרֶץ כְּנָעַן וְעַתָּה יֵשְׁבוּ־נָא עֲבָדֶיךָ בְּאֶרֶץ גֹּשֶׁן</span> · <i>va-yomru el-paro la-gur ba-aretz banu ki-en mire la-tzon asher la-avade-kha ki-khaved ha-raav be-eretz kenaan ve-ata yeshvu-na avade-kha be-eretz goshen</i> · And they said to Pharaoh: To sojourn in the land we have come, for there is no pasture for the flock of your servants, for the famine is heavy in the land of Canaan; and now, let your servants dwell, pray, in the land of Goshen.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּאמְר֣וּ אֶל פַּרְעֹ֗ה לָג֣וּר בָּאָרֶץ֮ בָּאנוּ֒ כִּי אֵ֣ין מִרְעֶ֗ה לַצֹּאן֙ אֲשֶׁ֣ר לַעֲבָדֶ֔יךָ כִּֽי כָבֵ֥ד הָרָעָ֖ב בְּאֶ֣רֶץ כְּנָ֑עַן</span> · <i>va-yomru el-paro la-gur ba-aretz banu ki-en mire la-tzon asher la-avade-kha ki-khaved ha-raav be-eretz kenaan</i> · to sojourn in the land we have come, for the famine is heavy in Canaan (etnachta on kenaan) [VERIFIED: SNAPSHOT Gen.47.4 idx16 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְעַתָּ֛ה יֵֽשְׁבוּ נָ֥א עֲבָדֶ֖יךָ בְּאֶ֥רֶץ גֹּֽשֶׁן</span> · <i>ve-ata yeshvu-na avade-kha be-eretz goshen</i> · and now, let your servants dwell, pray, in the land of Goshen (verse-final goshen) [VERIFIED: SNAPSHOT Gen.47.4 idx17-22]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(bene_yaaqov, LET(yeshvu_na_avadekha_be_eretz_goshen))</span><br><span class="gloss">= DECLARE(bene-yaaqov, LET(yeshvu-na-avadekha-in-earth-goshen))</span><br>THE PETITION. la-GUR ba-aretz banu — &#x27;to SOJOURN in the land we have come&#x27;: the sojourn-word declares the stay temporary at the very gate of the four-hundred-year descent (the machine files the irony without ruling on it); yeshvu-NA avadekha be-eretz GOSHEN — the pray-word (na) makes it a petition, not a plan: the demand pushed before the king, awaiting the king&#x27;s own mouth.
+</td><td><span class="he">וְעַתָּה יֵשְׁבוּ־נָא עֲבָדֶיךָ בְּאֶרֶץ גֹּשֶׁן</span> · <i>ve-ata yeshvu-na avade-kha be-eretz goshen</i><br><span class="gloss">= and-ata yeshvu-na avade-kha earth goshen</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The petition pushed at the throne.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_5 · Gen.47.5 · <span class='expr'>THEY_HAVE_COME_TO_YOU</span></h3>
+<p><span class="he">וַיֹּאמֶר פַּרְעֹה אֶל־יוֹסֵף לֵאמֹר אָבִיךָ וְאַחֶיךָ בָּאוּ אֵלֶיךָ</span> · <i>va-yomer paro el-yosef le-mor avi-kha ve-ache-kha bau ele-kha</i> · And Pharaoh said to Joseph, saying: Your father and your brothers have come to you.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֣אמֶר פַּרְעֹ֔ה אֶל יוֹסֵ֖ף לֵאמֹ֑ר</span> · <i>va-yomer paro el-yosef le-mor</i> · Pharaoh said to Joseph, saying (etnachta on le-mor) [VERIFIED: SNAPSHOT Gen.47.5 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אָבִ֥יךָ וְאַחֶ֖יךָ בָּ֥אוּ אֵלֶֽיךָ</span> · <i>avi-kha ve-ache-kha bau ele-kha</i> · your father and your brothers have come to you (verse-final ele-kha) [VERIFIED: SNAPSHOT Gen.47.5 idx5-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(avikha_ve_achekha_bau_elekha, t0)</span><br><span class="gloss">= HOLDS(avikha-and-achekha-bau-to-you, t0)</span><br>THE TURN. avikha ve-achekha BAU ELEKHA — &#x27;have come TO YOU&#x27;: the king answers the brothers by addressing the brother — the grant will pass through Joseph&#x27;s hand, as the whole span&#x27;s bread does; the machine notes the court&#x27;s chain of command.
+</td><td><span class="he">אָבִיךָ וְאַחֶיךָ בָּאוּ אֵלֶיךָ</span> · <i>avi-kha ve-ache-kha bau ele-kha</i><br><span class="gloss">= avi-kha and-ache-kha bau ele-kha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The king turns to his governor.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_6 · Gen.47.6 · <span class='expr'>THE_LAND_BEFORE_YOU</span></h3>
+<p><span class="he">אֶרֶץ מִצְרַיִם לְפָנֶיךָ הִוא בְּמֵיטַב הָאָרֶץ הוֹשֵׁב אֶת־אָבִיךָ וְאֶת־אַחֶיךָ יֵשְׁבוּ בְּאֶרֶץ גֹּשֶׁן וְאִם־יָדַעְתָּ וְיֶשׁ־בָּם אַנְשֵׁי־חַיִל וְשַׂמְתָּם שָׂרֵי מִקְנֶה עַל־אֲשֶׁר־לִי</span> · <i>eretz mitzrayim le-fane-kha hiv be-metav ha-aretz hoshev et-avi-kha ve-et-ache-kha yeshvu be-eretz goshen ve-im-yadata ve-yesh-ba-m anshe-chayil ve-samta-m sare miqne al-asher-li-y</i> · The land of Egypt is before you: in the best of the land settle your father and your brothers; let them dwell in the land of Goshen. And if you know that there are able men among them, set them as chiefs of livestock over what is mine.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אֶ֤רֶץ מִצְרַ֨יִם֙ לְפָנֶ֣יךָ הִ֔וא בְּמֵיטַ֣ב הָאָ֔רֶץ הוֹשֵׁ֥ב אֶת אָבִ֖יךָ וְאֶת אַחֶ֑יךָ</span> · <i>eretz mitzrayim le-fane-kha hiv be-metav ha-aretz hoshev et-avi-kha ve-et-ache-kha</i> · in the best of the land settle your father and brothers (etnachta on ache-kha) [VERIFIED: SNAPSHOT Gen.47.6 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">יֵשְׁבוּ֙ בְּאֶ֣רֶץ גֹּ֔שֶׁן וְאִם יָדַ֗עְתָּ וְיֶשׁ בָּם֙ אַנְשֵׁי חַ֔יִל וְשַׂמְתָּ֛ם שָׂרֵ֥י מִקְנֶ֖ה עַל אֲשֶׁר לִֽי</span> · <i>yeshvu be-eretz goshen ve-im-yadata ve-yesh-ba-m anshe-chayil ve-samta-m sare miqne al-asher-li-y</i> · let them dwell in Goshen; and set able men as chiefs over my livestock (verse-final li-y) [VERIFIED: SNAPSHOT Gen.47.6 idx11-25]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(yeshvu_na_avadekha_be_eretz_goshen, t1)</span><br><span class="gloss">= RESULT: HOLDS(yeshvu-na-avadekha-in-earth-goshen, t1)</span><br>THE GRANT [G70-11; G70-13]. YESHVU be-eretz GOSHEN — the king answers the petition in its own words (yeshvu for yeshvu-na, Goshen for Goshen): the demand pops two verses after its push; be-METAV ha- aretz HOSHEV — &#x27;in the BEST of the land SETTLE them&#x27;: the settle- imperative with the shin in tsere [VERIFIED under G70-11], and the Kitzur&#x27;s count reads best-of-the-land = GOSHEN by the letters&#x27; own arithmetic (named [G70-13]); sare MIQNE al asher li — the able among them set over the king&#x27;s own herds: the shepherd-trade the court abominates (46:34) is the trade the king hires.
+</td><td><span class="he">יֵשְׁבוּ בְּאֶרֶץ גֹּשֶׁן</span> · <i>yeshvu be-eretz goshen</i><br><span class="gloss">= yeshvu earth goshen</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The grant: the petition popped by the king.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_7 · Gen.47.7 · <span class='expr'>JACOB_BLESSES_PHARAOH</span></h3>
+<p><span class="he">וַיָּבֵא יוֹסֵף אֶת־יַעֲקֹב אָבִיו וַיַּעֲמִדֵהוּ לִפְנֵי פַרְעֹה וַיְבָרֶךְ יַעֲקֹב אֶת־פַּרְעֹה</span> · <i>va-yave yosef et-yaaqov avi-v va-yaamide-hu li-fene faro va-yevarekh yaaqov et-paro</i> · And Joseph brought Jacob his father, and stood him before Pharaoh; and Jacob blessed Pharaoh.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּבֵ֤א יוֹסֵף֙ אֶת יַֽעֲקֹ֣ב אָבִ֔יו וַיַּֽעֲמִדֵ֖הוּ לִפְנֵ֣י פַרְעֹ֑ה</span> · <i>va-yave yosef et-yaaqov avi-v va-yaamide-hu li-fene faro</i> · Joseph brought Jacob his father and stood him before Pharaoh (etnachta on faro) [VERIFIED: SNAPSHOT Gen.47.7 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיְבָ֥רֶךְ יַעֲקֹ֖ב אֶת פַּרְעֹֽה</span> · <i>va-yevarekh yaaqov et-paro</i> · and Jacob blessed Pharaoh (verse-final paro) [VERIFIED: SNAPSHOT Gen.47.7 idx8-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>BLESS</td><td><span class="expr">BLESS(yaaqov, paro)</span><br>THE BLESSING GIVEN [G70-06]. va-YAAMIDEHU lifne faro — &#x27;and he STOOD HIM before Pharaoh&#x27;: the stand-verb written LEAN, exactly TWICE in the Torah — Jacob supported before the king, Joshua supported before Eleazar (Num 27:22) — the Kitzur: neither standing was complete, and the letter thins both [VERIFIED: manifest G70-06]; va-YEVAREKH yaaqov et paro — the landless shepherd BLESSES the throne of Egypt: the machine installs the mandate — the covenant-carrier gives, the empire receives (the pair&#x27;s second station at 47:10).
+</td><td><span class="he">וַיְבָרֶךְ יַעֲקֹב אֶת־פַּרְעֹה</span> · <i>va-yevarekh yaaqov et-paro</i><br><span class="gloss">= and-yevarekh yaaqov paro</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The supported standing; the first blessing.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_8 · Gen.47.8 · <span class='expr'>HOW_MANY_YOUR_DAYS</span></h3>
+<p><span class="he">וַיֹּאמֶר פַּרְעֹה אֶל־יַעֲקֹב כַּמָּה יְמֵי שְׁנֵי חַיֶּיךָ</span> · <i>va-yomer paro el-yaaqov ka-ma yeme shene chaye-kha</i> · And Pharaoh said to Jacob: How many are the days of the years of your life?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֥אמֶר פַּרְעֹ֖ה אֶֽל יַעֲקֹ֑ב</span> · <i>va-yomer paro el-yaaqov</i> · Pharaoh said to Jacob (etnachta on yaaqov) [VERIFIED: SNAPSHOT Gen.47.8 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כַּמָּ֕ה יְמֵ֖י שְׁנֵ֥י חַיֶּֽיךָ</span> · <i>ka-ma yeme shene chaye-kha</i> · how many are the days of the years of your life? (verse-final chaye-kha) [VERIFIED: SNAPSHOT Gen.47.8 idx4-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(kama_yeme_shene_chayekha, t0)</span><br><span class="gloss">= HOLDS(kama-yeme-shene-your-life, t0)</span><br>THE QUESTION. ka-MA yeme shene chayekha — the king who asked the brothers their WORK asks the father his DAYS: the court reads Jacob&#x27;s face as a number; the machine files the question the answer will bend.
+</td><td><span class="he">כַּמָּה יְמֵי שְׁנֵי חַיֶּיךָ</span> · <i>ka-ma yeme shene chaye-kha</i><br><span class="gloss">= like-ma yeme shene chaye-kha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The king&#x27;s one question.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_9 · Gen.47.9 · <span class='expr'>FEW_AND_EVIL</span></h3>
+<p><span class="he">וַיֹּאמֶר יַעֲקֹב אֶל־פַּרְעֹה יְמֵי שְׁנֵי מְגוּרַי שְׁלֹשִׁים וּמְאַת שָׁנָה מְעַט וְרָעִים הָיוּ יְמֵי שְׁנֵי חַיַּי וְלֹא הִשִּׂיגוּ אֶת־יְמֵי שְׁנֵי חַיֵּי אֲבֹתַי בִּימֵי מְגוּרֵיהֶם</span> · <i>va-yomer yaaqov el-paro yeme shene megura-y sheloshim u-meat shana meat ve-raim hayu yeme shene chaya-y ve-lo hisigu et-yeme shene chaye avota-y bi-yme megure-hem</i> · And Jacob said to Pharaoh: The days of the years of my sojournings are a hundred and thirty years; few and evil have been the days of the years of my life, and they have not reached the days of the years of the lives of my fathers in the days of their sojournings.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר יַעֲקֹב֙ אֶל פַּרְעֹ֔ה יְמֵי֙ שְׁנֵ֣י מְגוּרַ֔י שְׁלֹשִׁ֥ים וּמְאַ֖ת שָׁנָ֑ה</span> · <i>va-yomer yaaqov el-paro yeme shene megura-y sheloshim u-meat shana</i> · the days of the years of my sojournings are a hundred and thirty years (etnachta on shana) [VERIFIED: SNAPSHOT Gen.47.9 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">מְעַ֣ט וְרָעִ֗ים הָיוּ֙ יְמֵי֙ שְׁנֵ֣י חַיַּ֔י וְלֹ֣א הִשִּׂ֗יגוּ אֶת יְמֵי֙ שְׁנֵי֙ חַיֵּ֣י אֲבֹתַ֔י בִּימֵ֖י מְגוּרֵיהֶֽם</span> · <i>meat ve-raim hayu yeme shene chaya-y ve-lo hisigu et-yeme shene chaye avota-y bi-yme megure-hem</i> · few and evil, and they have not reached my fathers&#x27; days in their sojournings (verse-final megure-hem) [VERIFIED: SNAPSHOT Gen.47.9 idx10-24]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(meat_ve_raim_yeme_shene_chayai, t0)</span><br><span class="gloss">= HOLDS(meat-and-raim-yeme-shene-chayai, t0)</span><br>THE ANSWER [G70-11]. yeme shene MEGURAI — Jacob answers &#x27;life&#x27; with &#x27;SOJOURNINGS&#x27; (the gimel soft in megurehem at the verse&#x27;s close, asserted under G70-11): the father corrects the king&#x27;s noun — he has not LIVED here, he has lodged; meat ve-RAIM — &#x27;few and evil&#x27;: the Kitzur&#x27;s pattern-file (ve-yehi yeme — whoever is given the days- formula did not reach his fathers&#x27; days: Enoch, Lamech, named [G70-13]) will seal it at 47:28: one hundred thirty against Abraham&#x27;s one hundred seventy-five, Isaac&#x27;s one hundred eighty.
+</td><td><span class="he">מְעַט וְרָעִים הָיוּ יְמֵי שְׁנֵי חַיַּי</span> · <i>meat ve-raim hayu yeme shene chaya-y</i><br><span class="gloss">= meat and-raim hayu yeme shene living-y</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The sojourner&#x27;s arithmetic.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_10 · Gen.47.10 · <span class='expr'>THE_SECOND_BLESSING</span></h3>
+<p><span class="he">וַיְבָרֶךְ יַעֲקֹב אֶת־פַּרְעֹה וַיֵּצֵא מִלִּפְנֵי פַרְעֹה</span> · <i>va-yevarekh yaaqov et-paro va-yetze mi-li-fene faro</i> · And Jacob blessed Pharaoh, and went out from before Pharaoh.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְבָ֥רֶךְ יַעֲקֹ֖ב אֶת פַּרְעֹ֑ה</span> · <i>va-yevarekh yaaqov et-paro</i> · and Jacob blessed Pharaoh (etnachta on paro) [VERIFIED: SNAPSHOT Gen.47.10 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֵּצֵ֖א מִלִּפְנֵ֥י פַרְעֹֽה</span> · <i>va-yetze mi-li-fene faro</i> · and went out from before Pharaoh (verse-final faro) [VERIFIED: SNAPSHOT Gen.47.10 idx4-6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">berakh(e1); Agent(e1, yaaqov); Theme(e1, paro)</span><br>THE PAIR SEALED. va-YEVAREKH yaaqov et paro — the bless-verb doubled around the audience (47:7 and here): entry-blessing and exit- blessing bracket the interview — the readings give the exit-blessing content (that the Nile rise to his feet); the machine marks the event: the audience opened and closed by the patriarch&#x27;s mouth, not the king&#x27;s.
+</td><td><span class="he">וַיְבָרֶךְ יַעֲקֹב אֶת־פַּרְעֹה</span> · <i>va-yevarekh yaaqov et-paro</i><br><span class="gloss">= and-yevarekh yaaqov paro</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The blessing pair closes the audience.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_11 · Gen.47.11 · <span class='expr'>SETTLED_IN_RAMESES</span></h3>
+<p><span class="he">וַיּוֹשֵׁב יוֹסֵף אֶת־אָבִיו וְאֶת־אֶחָיו וַיִּתֵּן לָהֶם אֲחֻזָּה בְּאֶרֶץ מִצְרַיִם בְּמֵיטַב הָאָרֶץ בְּאֶרֶץ רַעְמְסֵס כַּאֲשֶׁר צִוָּה פַרְעֹה</span> · <i>va-yoshev yosef et-avi-v ve-et-echay-v va-yiten la-hem achuza be-eretz mitzrayim be-metav ha-aretz be-eretz ramses ka-asher tziva faro</i> · And Joseph settled his father and his brothers, and gave them a holding in the land of Egypt, in the best of the land, in the land of Rameses, as Pharaoh had commanded.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיּוֹשֵׁ֣ב יוֹסֵף֮ אֶת אָבִ֣יו וְאֶת אֶחָיו֒ וַיִּתֵּ֨ן לָהֶ֤ם אֲחֻזָּה֙ בְּאֶ֣רֶץ מִצְרַ֔יִם בְּמֵיטַ֥ב הָאָ֖רֶץ בְּאֶ֣רֶץ רַעְמְסֵ֑ס</span> · <i>va-yoshev yosef et-avi-v ve-et-echay-v va-yiten la-hem achuza be-eretz mitzrayim be-metav ha-aretz be-eretz ramses</i> · Joseph settled his father and brothers with a holding in the best of the land, in Rameses (etnachta on ramses) [VERIFIED: SNAPSHOT Gen.47.11 idx14 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כַּאֲשֶׁ֖ר צִוָּ֥ה פַרְעֹֽה</span> · <i>ka-asher tziva faro</i> · as Pharaoh had commanded (verse-final faro) [VERIFIED: SNAPSHOT Gen.47.11 idx15-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(achuza_be_eretz_ramses_kaasher_tziva_faro, t0)</span><br><span class="gloss">= HOLDS(achuza-in-earth-ramses-kaasher-tziva-faro, t0)</span><br>THE HOLDING [G70-03]. va-YOSHEV yosef — the settle-verb performs the king&#x27;s hoshev (47:6); ACHUZA — a HOLDING: stronger than the sojourn they asked (la-gur, 47:4) — the machine notes the upgrade the text does not comment on; be-eretz RAMSES — the ayin SILENT (sheva): MS against Ibn Ezra — THIS Rameses, the dwelling, is not the store-city of the bondage (Exod 1:11, ayin OPEN with patach), and the stream verifies the whole map — sheva at the dwelling and at all three departure-verses, patach at the store-city alone: one vowel keeps the two cities apart [VERIFIED: manifest G70-03]; ka-asher TZIVA faro — the royal command receipted in the deed.
+</td><td><span class="he">בְּמֵיטַב הָאָרֶץ בְּאֶרֶץ רַעְמְסֵס</span> · <i>be-metav ha-aretz be-eretz ramses</i><br><span class="gloss">= in-metav earth earth ramses</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The grant executed; one vowel splits two cities.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_12 · Gen.47.12 · <span class='expr'>BREAD_FOR_THE_MOUTHS</span></h3>
+<p><span class="he">וַיְכַלְכֵּל יוֹסֵף אֶת־אָבִיו וְאֶת־אֶחָיו וְאֵת כָּל־בֵּית אָבִיו לֶחֶם לְפִי הַטָּף</span> · <i>va-yekhalkel yosef et-avi-v ve-et-echay-v ve-et kal-bet avi-v lechem le-fi ha-taf</i> · And Joseph sustained his father, and his brothers, and all his father&#x27;s house, with bread, by the mouth of the little ones.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְכַלְכֵּ֤ל יוֹסֵף֙ אֶת אָבִ֣יו וְאֶת אֶחָ֔יו וְאֵ֖ת כָּל בֵּ֣ית אָבִ֑יו</span> · <i>va-yekhalkel yosef et-avi-v ve-et-echay-v ve-et kal-bet avi-v</i> · Joseph sustained his father and brothers and all his father&#x27;s house (etnachta on avi-v) [VERIFIED: SNAPSHOT Gen.47.12 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לֶ֖חֶם לְפִ֥י הַטָּֽף</span> · <i>lechem le-fi ha-taf</i> · with bread, by the mouth of the little ones (verse-final ha-taf) [VERIFIED: SNAPSHOT Gen.47.12 idx10-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yekhalkel_lechem_lefi_hataf, t0)</span><br><span class="gloss">= HOLDS(and-yekhalkel-lechem-lefi-hataf, t0)</span><br>THE SUSTAINING. va-YEKHALKEL — the sustain-verb (45:11&#x27;s promise &#x27;ve-khilkalti otkha there&#x27; now performed — the machine notes the promise-keeping without a queue: covenant speech, receipted in narrative); lechem LEFI ha-taf — &#x27;by the MOUTH of the little ones&#x27;: bread measured to the smallest eater — the readings hear tenderness in the clause; the Kitzur&#x27;s seventeen-for-seventeen (the son returns the father&#x27;s rearing years, named [G70-13]) begins counting here.
+</td><td><span class="he">לֶחֶם לְפִי הַטָּף</span> · <i>lechem le-fi ha-taf</i><br><span class="gloss">= lechem to-fi the-taf</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The sustenance measure.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_13 · Gen.47.13 · <span class='expr'>THE_LAND_LANGUISHES</span></h3>
+<p><span class="he">וְלֶחֶם אֵין בְּכָל־הָאָרֶץ כִּי־כָבֵד הָרָעָב מְאֹד וַתֵּלַהּ אֶרֶץ מִצְרַיִם וְאֶרֶץ כְּנַעַן מִפְּנֵי הָרָעָב</span> · <i>ve-lechem en be-khal-ha-aretz ki-khaved ha-raav meod va-tela eretz mitzrayim ve-eretz kenaan mi-pene ha-raav</i> · And there was no bread in all the land, for the famine was very heavy; and the land of Egypt and the land of Canaan languished before the famine.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְלֶ֤חֶם אֵין֙ בְּכָל הָאָ֔רֶץ כִּֽי כָבֵ֥ד הָרָעָ֖ב מְאֹ֑ד</span> · <i>ve-lechem en be-khal-ha-aretz ki-khaved ha-raav meod</i> · there was no bread in all the land, for the famine was very heavy (etnachta on meod) [VERIFIED: SNAPSHOT Gen.47.13 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתֵּ֜לַהּ אֶ֤רֶץ מִצְרַ֨יִם֙ וְאֶ֣רֶץ כְּנַ֔עַן מִפְּנֵ֖י הָרָעָֽב</span> · <i>va-tela eretz mitzrayim ve-eretz kenaan mi-pene ha-raav</i> · and Egypt and Canaan languished before the famine (verse-final ha-raav) [VERIFIED: SNAPSHOT Gen.47.13 idx8-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_telah_eretz_mitzrayim_ve_eretz_kenaan, t0)</span><br><span class="gloss">= HOLDS(and-telah-earth-mitzrayim-and-earth-kenaan, t0)</span><br>THE LANGUISHING. va-TELAH — the languish-verb (its rare stem: the land itself goes faint); eretz mitzrayim VE-ERETZ kenaan — both lands in one exhaustion: the famine the dreams decreed (41:30&#x27;s &#x27;the famine shall consume the land&#x27;) now eats the sentence&#x27;s own geography; the machine files the narrative floor under the four transactions ahead.
+</td><td><span class="he">וַתֵּלַהּ אֶרֶץ מִצְרַיִם וְאֶרֶץ כְּנַעַן מִפְּנֵי הָרָעָב</span> · <i>va-tela eretz mitzrayim ve-eretz kenaan mi-pene ha-raav</i><br><span class="gloss">= and-tela earth mitzrayim earth kenaan from-pene the-raav</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The languish-verb; the decree&#x27;s fifth year.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_14 · Gen.47.14 · <span class='expr'>THE_SILVER_GATHERED</span></h3>
+<p><span class="he">וַיְלַקֵּט יוֹסֵף אֶת־כָּל־הַכֶּסֶף הַנִּמְצָא בְאֶרֶץ־מִצְרַיִם וּבְאֶרֶץ כְּנַעַן בַּשֶּׁבֶר אֲשֶׁר־הֵם שֹׁבְרִים וַיָּבֵא יוֹסֵף אֶת־הַכֶּסֶף בֵּיתָה פַרְעֹה</span> · <i>va-yelaqet yosef et-kal-ha-kesef ha-nimtza ve-eretz-mitzrayim u-ve-eretz kenaan ba-shever asher-hem shovrim va-yave yosef et-ha-kesef beta-ה faro</i> · And Joseph gleaned all the silver found in the land of Egypt and in the land of Canaan for the grain which they were buying; and Joseph brought the silver into Pharaoh&#x27;s house.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְלַקֵּ֣ט יוֹסֵ֗ף אֶת כָּל הַכֶּ֨סֶף֙ הַנִּמְצָ֤א בְאֶֽרֶץ מִצְרַ֨יִם֙ וּבְאֶ֣רֶץ כְּנַ֔עַן בַּשֶּׁ֖בֶר אֲשֶׁר הֵ֣ם שֹׁבְרִ֑ים</span> · <i>va-yelaqet yosef et-kal-ha-kesef ha-nimtza ve-eretz-mitzrayim u-ve-eretz kenaan ba-shever asher-hem shovrim</i> · Joseph gleaned all the silver of Egypt and Canaan for the grain (etnachta on shovrim) [VERIFIED: SNAPSHOT Gen.47.14 idx13 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיָּבֵ֥א יוֹסֵ֛ף אֶת הַכֶּ֖סֶף בֵּ֥יתָה פַרְעֹֽה</span> · <i>va-yave yosef et-ha-kesef beta-ה faro</i> · and Joseph brought the silver into Pharaoh&#x27;s house (verse-final faro) [VERIFIED: SNAPSHOT Gen.47.14 idx14-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(kol_ha_kesef_beta_faro, t0)</span><br><span class="gloss">= HOLDS(all-the-kesef-beta-faro, t0)</span><br>THE SILVER [G70-05]. va-yelaqet... et KOL ha-kesef — transaction ONE of the four: ALL the silver of two lands gleaned for grain; BETA faro — &#x27;into the HOUSE of Pharaoh&#x27;: the phrase&#x27;s Torah-pair is the swarm entering &#x27;the house of Pharaoh&#x27; FIRST (Exod 8:20) — the Kitzur&#x27;s measure-for-measure: the king who will forget the silver- bringer receives the plague by the same door [VERIFIED: manifest G70-05]; the machine notes the honesty-clause the readings praise: nothing sticks to the governor&#x27;s hands.
+</td><td><span class="he">וַיָּבֵא יוֹסֵף אֶת־הַכֶּסֶף בֵּיתָה פַרְעֹה</span> · <i>va-yave yosef et-ha-kesef beta-ה faro</i><br><span class="gloss">= and-yave yosef the-kesef beta-ה faro</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Transaction one: the silver; the house-pair armed.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_15 · Gen.47.15 · <span class='expr'>GIVE_US_BREAD</span></h3>
+<p><span class="he">וַיִּתֹּם הַכֶּסֶף מֵאֶרֶץ מִצְרַיִם וּמֵאֶרֶץ כְּנַעַן וַיָּבֹאוּ כָל־מִצְרַיִם אֶל־יוֹסֵף לֵאמֹר הָבָה־לָּנוּ לֶחֶם וְלָמָּה נָמוּת נֶגְדֶּךָ כִּי אָפֵס כָּסֶף</span> · <i>va-yitom ha-kesef me-eretz mitzrayim u-me-eretz kenaan va-yavou khal-mitzrayim el-yosef le-mor hava-ה-la-nu lechem ve-la-ma namut negde-kha ki afes kasef</i> · And the silver was spent from the land of Egypt and from the land of Canaan; and all Egypt came to Joseph, saying: Give us bread — and why should we die before you, for the silver is gone.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּתֹּ֣ם הַכֶּ֗סֶף מֵאֶ֣רֶץ מִצְרַיִם֮ וּמֵאֶ֣רֶץ כְּנַעַן֒ וַיָּבֹאוּ֩ כָל מִצְרַ֨יִם אֶל יוֹסֵ֤ף לֵאמֹר֙ הָֽבָה לָּ֣נוּ לֶ֔חֶם וְלָ֥מָּה נָמ֖וּת נֶגְדֶּ֑ךָ</span> · <i>va-yitom ha-kesef me-eretz mitzrayim u-me-eretz kenaan va-yavou khal-mitzrayim el-yosef le-mor hava-ה-la-nu lechem ve-la-ma namut negde-kha</i> · the silver was spent; all Egypt came to Joseph saying: give us bread (etnachta on negde-kha) [VERIFIED: SNAPSHOT Gen.47.15 idx17 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּ֥י אָפֵ֖ס כָּֽסֶף</span> · <i>ki afes kasef</i> · why should we die before you, for the silver is gone (verse-final kasef) [VERIFIED: SNAPSHOT Gen.47.15 idx18-20]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(mitzrayim, LET(hava_lanu_lechem))</span><br><span class="gloss">= DECLARE(mitzrayim, LET(hava-lanu-lechem))</span><br>THE CRY. va-YITOM ha-kesef — the silver COMPLETES (the tam-verb: spent to its end); HAVA lanu LECHEM — &#x27;GIVE us bread&#x27;: all Egypt pushes the demand the brothers once carried (43:2&#x27;s shivru-lanu inverted: now the empire begs at the Hebrew&#x27;s door); ve-lama NAMUT negdekha — &#x27;why should we DIE before you&#x27;: the die-word that will anchor the next demand too — the queue holds an empire&#x27;s hunger.
+</td><td><span class="he">הָבָה־לָּנוּ לֶחֶם</span> · <i>hava-ה-la-nu lechem</i><br><span class="gloss">= hava-ה-to-nu lechem</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The bread-demand pushed by an empire.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_16 · Gen.47.16 · <span class='expr'>GIVE_YOUR_LIVESTOCK</span></h3>
+<p><span class="he">וַיֹּאמֶר יוֹסֵף הָבוּ מִקְנֵיכֶם וְאֶתְּנָה לָכֶם בְּמִקְנֵיכֶם אִם־אָפֵס כָּסֶף</span> · <i>va-yomer yosef havu miqne-khem ve-etna la-khem be-miqne-khem im-afes kasef</i> · And Joseph said: Give your livestock, and I will give you for your livestock, if the silver is gone.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר יוֹסֵף֙ הָב֣וּ מִקְנֵיכֶ֔ם וְאֶתְּנָ֥ה לָכֶ֖ם בְּמִקְנֵיכֶ֑ם</span> · <i>va-yomer yosef havu miqne-khem ve-etna la-khem be-miqne-khem</i> · Joseph said: give your livestock and I will give you for your livestock (etnachta on be-miqne-khem) [VERIFIED: SNAPSHOT Gen.47.16 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אִם אָפֵ֖ס כָּֽסֶף</span> · <i>im-afes kasef</i> · if the silver is gone (verse-final kasef) [VERIFIED: SNAPSHOT Gen.47.16 idx7-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(havu_miqnekhem_ve_etna_lakhem, t0)</span><br><span class="gloss">= HOLDS(havu-miqnekhem-and-etna-lakhem, t0)</span><br>THE EXCHANGE OFFERED. HAVU miqnekhem — the governor answers the give-word (hava) with the same stem: give-for-give — bread priced in herds; im AFES kasef — &#x27;if the silver is NOTHING&#x27; (the efes-word: the zero the ledger just wrote): transaction TWO opens on the herds the family was hired to keep (47:6).
+</td><td><span class="he">הָבוּ מִקְנֵיכֶם וְאֶתְּנָה לָכֶם בְּמִקְנֵיכֶם</span> · <i>havu miqne-khem ve-etna la-khem be-miqne-khem</i><br><span class="gloss">= havu miqne-khem and-etna to-khem in-miqne-khem</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The second currency named.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_17 · Gen.47.17 · <span class='expr'>BREAD_FOR_THE_HERDS</span></h3>
+<p><span class="he">וַיָּבִיאוּ אֶת־מִקְנֵיהֶם אֶל־יוֹסֵף וַיִּתֵּן לָהֶם יוֹסֵף לֶחֶם בַּסּוּסִים וּבְמִקְנֵה הַצֹּאן וּבְמִקְנֵה הַבָּקָר וּבַחֲמֹרִים וַיְנַהֲלֵם בַּלֶּחֶם בְּכָל־מִקְנֵהֶם בַּשָּׁנָה הַהִוא</span> · <i>va-yaviu et-miqne-hem el-yosef va-yiten la-hem yosef lechem ba-susim u-ve-miqne ha-tzon u-ve-miqne ha-baqar u-va-chamorim va-yenahale-m ba-lechem be-khal-miqne-hem ba-shana ha-hiv</i> · And they brought their livestock to Joseph; and Joseph gave them bread for the horses, and for the livestock of the flocks, and for the livestock of the herds, and for the donkeys; and he carried them with bread for all their livestock that year.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּבִ֣יאוּ אֶת מִקְנֵיהֶם֮ אֶל יוֹסֵף֒ וַיִּתֵּ֣ן לָהֶם֩ יוֹסֵ֨ף לֶ֜חֶם בַּסּוּסִ֗ים וּבְמִקְנֵ֥ה הַצֹּ֛אן וּבְמִקְנֵ֥ה הַבָּקָ֖ר וּבַחֲמֹרִ֑ים</span> · <i>va-yaviu et-miqne-hem el-yosef va-yiten la-hem yosef lechem ba-susim u-ve-miqne ha-tzon u-ve-miqne ha-baqar u-va-chamorim</i> · they brought their livestock, and Joseph gave them bread for horses, flocks, herds, donkeys (etnachta on u-va-chamorim) [VERIFIED: SNAPSHOT Gen.47.17 idx14 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיְנַהֲלֵ֤ם בַּלֶּ֨חֶם֙ בְּכָל מִקְנֵהֶ֔ם בַּשָּׁנָ֖ה הַהִֽוא</span> · <i>va-yenahale-m ba-lechem be-khal-miqne-hem ba-shana ha-hiv</i> · and he carried them with bread for all their livestock that year (verse-final ha-hiv) [VERIFIED: SNAPSHOT Gen.47.17 idx15-20]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(hava_lanu_lechem, t2)</span><br><span class="gloss">= RESULT: HOLDS(hava-lanu-lechem, t2)</span><br>THE CARRYING [the pop]. va-yiten lahem yosef LECHEM — bread given: the empire&#x27;s demand (47:15) discharges in the herd-currency; va- yeNAHALEM ba-lechem — &#x27;and he CARRIED them with bread&#x27;: the shepherd&#x27;s lead-gently verb (the one Jacob used for the nursing flocks, 33:14) — the machine notes the trade&#x27;s grammar: the abomination-trade&#x27;s own verb now feeds Egypt; ba-shana HA-HI — the first of the two counted years.
+</td><td><span class="he">וַיְנַהֲלֵם בַּלֶּחֶם בְּכָל־מִקְנֵהֶם</span> · <i>va-yenahale-m ba-lechem be-khal-miqne-hem</i><br><span class="gloss">= and-yenahale-m in-the-lechem in-khal-miqne-hem</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The bread-demand popped; the shepherd-verb on the feeder.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_18 · Gen.47.18 · <span class='expr'>BODY_AND_GROUND</span></h3>
+<p><span class="he">וַתִּתֹּם הַשָּׁנָה הַהִוא וַיָּבֹאוּ אֵלָיו בַּשָּׁנָה הַשֵּׁנִית וַיֹּאמְרוּ לוֹ לֹא־נְכַחֵד מֵאֲדֹנִי כִּי אִם־תַּם הַכֶּסֶף וּמִקְנֵה הַבְּהֵמָה אֶל־אֲדֹנִי לֹא נִשְׁאַר לִפְנֵי אֲדֹנִי בִּלְתִּי אִם־גְּוִיָּתֵנוּ וְאַדְמָתֵנוּ</span> · <i>va-titom ha-shana ha-hiv va-yavou elay-v ba-shana ha-shenit va-yomru l-o lo-nekhached me-adoni-y ki im-tam ha-kesef u-miqne ha-behema el-adoni-y lo nishar li-fene adoni-y bilti im-geviyate-nu ve-admate-nu</i> · And that year ended, and they came to him the second year and said to him: We will not hide from my lord that the silver is spent, and the herds of beasts are my lord&#x27;s; nothing is left before my lord but our body and our ground.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתִּתֹּם֮ הַשָּׁנָ֣ה הַהִוא֒ וַיָּבֹ֨אוּ אֵלָ֜יו בַּשָּׁנָ֣ה הַשֵּׁנִ֗ית וַיֹּ֤אמְרוּ לוֹ֙ לֹֽא נְכַחֵ֣ד מֵֽאֲדֹנִ֔י כִּ֚י אִם תַּ֣ם הַכֶּ֔סֶף וּמִקְנֵ֥ה הַבְּהֵמָ֖ה אֶל אֲדֹנִ֑י</span> · <i>va-titom ha-shana ha-hiv va-yavou elay-v ba-shana ha-shenit va-yomru l-o lo-nekhached me-adoni-y ki im-tam ha-kesef u-miqne ha-behema el-adoni-y</i> · that year ended; they came the second year: the silver is spent, the herds are my lord&#x27;s (etnachta on adoni-y) [VERIFIED: SNAPSHOT Gen.47.18 idx19 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לֹ֤א נִשְׁאַר֙ לִפְנֵ֣י אֲדֹנִ֔י בִּלְתִּ֥י אִם גְּוִיָּתֵ֖נוּ וְאַדְמָתֵֽנוּ</span> · <i>lo nishar li-fene adoni-y bilti im-geviyate-nu ve-admate-nu</i> · nothing is left before my lord but our body and our ground (verse-final ve-admate-nu) [VERIFIED: SNAPSHOT Gen.47.18 idx20-27]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(bilti_im_geviyatenu_ve_admatenu, t0)</span><br><span class="gloss">= HOLDS(bilti-if-geviyatenu-and-admatenu, t0)</span><br>THE LAST TWO ITEMS [G70-12]. lo NEKHACHED me-adoni — &#x27;we will not HIDE from my lord&#x27; (the hide-verb of confession); bilti im GEVIYATENU ve-ADMATENU — &#x27;nothing but our BODY and our GROUND&#x27;: the gimel of the body-word DAGESHED [VERIFIED under G70-12], the ground- word opening the file the academies split over (G70-04, at the next verse): the empire inventories itself down to skin and soil.
+</td><td><span class="he">בִּלְתִּי אִם־גְּוִיָּתֵנוּ וְאַדְמָתֵנוּ</span> · <i>bilti im-geviyate-nu ve-admate-nu</i><br><span class="gloss">= bilti if-geviyate-nu and-admate-nu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The inventory of nothing.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_19 · Gen.47.19 · <span class='expr'>BUY_US_GIVE_SEED</span></h3>
+<p><span class="he">לָמָּה נָמוּת לְעֵינֶיךָ גַּם־אֲנַחְנוּ גַּם אַדְמָתֵנוּ קְנֵה־אֹתָנוּ וְאֶת־אַדְמָתֵנוּ בַּלָּחֶם וְנִהְיֶה אֲנַחְנוּ וְאַדְמָתֵנוּ עֲבָדִים לְפַרְעֹה וְתֶן־זֶרַע וְנִחְיֶה וְלֹא נָמוּת וְהָאֲדָמָה לֹא תֵשָׁם</span> · <i>la-ma namut le-ene-kha gam-anachnu gam admate-nu qene-et-nu ve-et-admate-nu ba-lachem ve-nihye anachnu ve-admate-nu avadim le-faro ve-ten-zera ve-nichye ve-lo namut ve-ha-adama lo tesham</i> · Why should we die before your eyes, both we and our ground too? Buy us and our ground for bread, and we with our ground will be servants to Pharaoh; and give seed, that we may live and not die, and the ground not be desolate.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">לָ֧מָּה נָמ֣וּת לְעֵינֶ֗יךָ גַּם אֲנַ֨חְנוּ֙ גַּ֣ם אַדְמָתֵ֔נוּ קְנֵֽה אֹתָ֥נוּ וְאֶת אַדְמָתֵ֖נוּ בַּלָּ֑חֶם</span> · <i>la-ma namut le-ene-kha gam-anachnu gam admate-nu qene-et-nu ve-et-admate-nu ba-lachem</i> · why should we die before your eyes? buy us and our ground for bread (etnachta on ba-lachem) [VERIFIED: SNAPSHOT Gen.47.19 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְנִֽהְיֶ֞ה אֲנַ֤חְנוּ וְאַדְמָתֵ֨נוּ֙ עֲבָדִ֣ים לְפַרְעֹ֔ה וְתֶן זֶ֗רַע וְנִֽחְיֶה֙ וְלֹ֣א נָמ֔וּת וְהָאֲדָמָ֖ה לֹ֥א תֵשָֽׁם</span> · <i>ve-nihye anachnu ve-admate-nu avadim le-faro ve-ten-zera ve-nichye ve-lo namut ve-ha-adama lo tesham</i> · and give seed, that we may live and not die, and the ground not be desolate (verse-final tesham) [VERIFIED: SNAPSHOT Gen.47.19 idx12-24]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(mitzrayim, LET(qene_otanu_ve_ten_zera))</span><br><span class="gloss">= DECLARE(mitzrayim, LET(qene-otanu-and-ten-seed))</span><br>THE SELF-SALE [G70-04]. QENE otanu ve-et ADMATENU ba-lachem — &#x27;BUY us and our ground for bread&#x27;: the empire petitions for its own purchase — the demand pushed with two clauses (the buying and the seed); ve-TEN zera — &#x27;GIVE seed&#x27; (the tav in segol, asserted under G70-12): the future&#x27;s demand inside the present&#x27;s; and the verse&#x27;s own key word carries the ACADEMIES&#x27; SPLIT — ADMATENU three times: Sura all-lean, Nehardea all-full, the dispute deferred &#x27;UNTIL EZRA COMES&#x27; in the Masorah MS found; the Ramah rules lean, and the stream sits with the Ramah — first two tokens bare, the third vav&#x27;d, exactly his pattern [VERIFIED: manifest G70-04]; ve-ha-adama lo TESHAM — &#x27;that the ground not be DESOLATE&#x27;: even the soil is given a survival-clause.
+</td><td><span class="he">קְנֵה־אֹתָנוּ וְאֶת־אַדְמָתֵנוּ בַּלָּחֶם</span> · <i>qene-et-nu ve-et-admate-nu ba-lachem</i><br><span class="gloss">= qene-nu and-admate-nu in-the-lachem</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The self-sale demand; the academies&#x27; split on its key word.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_20 · Gen.47.20 · <span class='expr'>THE_LAND_TO_PHARAOH</span></h3>
+<p><span class="he">וַיִּקֶן יוֹסֵף אֶת־כָּל־אַדְמַת מִצְרַיִם לְפַרְעֹה כִּי־מָכְרוּ מִצְרַיִם אִישׁ שָׂדֵהוּ כִּי־חָזַק עֲלֵהֶם הָרָעָב וַתְּהִי הָאָרֶץ לְפַרְעֹה</span> · <i>va-yiqen yosef et-kal-admat mitzrayim le-faro ki-makhru mitzrayim ish sade-hu ki-chazaq ale-hem ha-raav va-tehi ha-aretz le-faro</i> · And Joseph bought all the ground of Egypt for Pharaoh, for Egypt sold every man his field, for the famine was strong upon them; and the land became Pharaoh&#x27;s.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּ֨קֶן יוֹסֵ֜ף אֶת כָּל אַדְמַ֤ת מִצְרַ֨יִם֙ לְפַרְעֹ֔ה כִּֽי מָכְר֤וּ מִצְרַ֨יִם֙ אִ֣ישׁ שָׂדֵ֔הוּ כִּֽי חָזַ֥ק עֲלֵהֶ֖ם הָרָעָ֑ב</span> · <i>va-yiqen yosef et-kal-admat mitzrayim le-faro ki-makhru mitzrayim ish sade-hu ki-chazaq ale-hem ha-raav</i> · Joseph bought all the ground of Egypt, for every man sold his field (etnachta on ha-raav) [VERIFIED: SNAPSHOT Gen.47.20 idx15 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתְּהִ֥י הָאָ֖רֶץ לְפַרְעֹֽה</span> · <i>va-tehi ha-aretz le-faro</i> · and the land became Pharaoh&#x27;s (verse-final le-faro) [VERIFIED: SNAPSHOT Gen.47.20 idx16-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_tehi_ha_aretz_le_faro, t0)</span><br><span class="gloss">= HOLDS(and-tehi-the-earth-to-faro, t0)</span><br>THE PURCHASE. va-YIQEN yosef et KOL admat mitzrayim — transaction THREE: the whole ground of Egypt passes in one verse; ish SADEHU — &#x27;every man his FIELD&#x27;: the singular distributes the sale to each seller (the machine notes the letter&#x27;s arithmetic of totality: all = each); va-tehi ha-aretz LE-FARO — the land&#x27;s new genitive.
+</td><td><span class="he">וַיִּקֶן יוֹסֵף אֶת־כָּל־אַדְמַת מִצְרַיִם לְפַרְעֹה</span> · <i>va-yiqen yosef et-kal-admat mitzrayim le-faro</i><br><span class="gloss">= and-yiqen yosef kal-admat mitzrayim to-faro</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Transaction three executed.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_21 · Gen.47.21 · <span class='expr'>THE_PEOPLE_TO_CITIES</span></h3>
+<p><span class="he">וְאֶת־הָעָם הֶעֱבִיר אֹתוֹ לֶעָרִים מִקְצֵה גְבוּל־מִצְרַיִם וְעַד־קָצֵהוּ</span> · <i>ve-et-ha-am heevir et-o le-arim mi-qetze gevul-mitzrayim ve-ad-qatze-hu</i> · And the people — he moved them to the cities, from one end of the border of Egypt to its other end.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאֶ֨ת הָעָ֔ם הֶעֱבִ֥יר אֹת֖וֹ לֶעָרִ֑ים</span> · <i>ve-et-ha-am heevir et-o le-arim</i> · and the people — he moved them to the cities (etnachta on le-arim) [VERIFIED: SNAPSHOT Gen.47.21 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">מִקְצֵ֥ה גְבוּל מִצְרַ֖יִם וְעַד קָצֵֽהוּ</span> · <i>mi-qetze gevul-mitzrayim ve-ad-qatze-hu</i> · from one end of Egypt&#x27;s border to its other end (verse-final qatze-hu) [VERIFIED: SNAPSHOT Gen.47.21 idx5-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(heevir_oto_le_arim, t0)</span><br><span class="gloss">= HOLDS(heevir-it-to-arim, t0)</span><br>THE TRANSFER. ve-et ha-am HEEVIR oto le-ARIM — the people PASSED OVER into the cities, border to border: the readings&#x27; account (Rashi&#x27;s — so the brothers would not be called exiles in a land of the uprooted) is named; the machine files the verse as administration, not judgment: the mover was moved once too.
+</td><td><span class="he">וְאֶת־הָעָם הֶעֱבִיר אֹתוֹ לֶעָרִים</span> · <i>ve-et-ha-am heevir et-o le-arim</i><br><span class="gloss">= and-the-am heevir o to-arim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The great transfer.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_22 · Gen.47.22 · <span class='expr'>THE_PRIESTS_EXEMPT</span></h3>
+<p><span class="he">רַק אַדְמַת הַכֹּהֲנִים לֹא קָנָה כִּי חֹק לַכֹּהֲנִים מֵאֵת פַּרְעֹה וְאָכְלוּ אֶת־חֻקָּם אֲשֶׁר נָתַן לָהֶם פַּרְעֹה עַל־כֵּן לֹא מָכְרוּ אֶת־אַדְמָתָם</span> · <i>raq admat ha-kohanim lo qana ki choq la-kohanim me-et paro ve-akhlu et-chuqa-m asher natan la-hem paro al-ken lo makhru et-admata-m</i> · Only the ground of the priests he did not buy, for the priests had a statute-portion from Pharaoh, and they ate their statute-portion which Pharaoh gave them; therefore they did not sell their ground.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">רַ֛ק אַדְמַ֥ת הַכֹּהֲנִ֖ים לֹ֣א קָנָ֑ה</span> · <i>raq admat ha-kohanim lo qana</i> · only the ground of the priests he did not buy (etnachta on qana) [VERIFIED: SNAPSHOT Gen.47.22 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּי֩ חֹ֨ק לַכֹּהֲנִ֜ים מֵאֵ֣ת פַּרְעֹ֗ה וְאָֽכְל֤וּ אֶת חֻקָּם֙ אֲשֶׁ֨ר נָתַ֤ן לָהֶם֙ פַּרְעֹ֔ה עַל כֵּ֕ן לֹ֥א מָכְר֖וּ אֶת אַדְמָתָֽם</span> · <i>ki choq la-kohanim me-et paro ve-akhlu et-chuqa-m asher natan la-hem paro al-ken lo makhru et-admata-m</i> · for the priests had a statute-portion from Pharaoh; therefore they did not sell (verse-final admata-m) [VERIFIED: SNAPSHOT Gen.47.22 idx5-22]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(raq_admat_ha_kohanim_lo_qana, t0)</span><br><span class="gloss">= HOLDS(raq-admat-the-kohanim-not-qana, t0)</span><br>THE EXEMPTION. RAQ admat ha-KOHANIM lo qana — &#x27;ONLY the priests&#x27; ground he did not buy&#x27;: the restrictive raq carves the single hole in the total sale; ki CHOQ la-kohanim — a STATUTE-portion from Pharaoh (the choq-word twice in the verse): the machine notes the precedent — a standing allotment defeats even a famine-sale; the statute Joseph will write at 47:26 borrows this verse&#x27;s own word.
+</td><td><span class="he">רַק אַדְמַת הַכֹּהֲנִים לֹא קָנָה</span> · <i>raq admat ha-kohanim lo qana</i><br><span class="gloss">= raq admat the-kohanim not qana</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The one exemption; the choq-word twice.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_23 · Gen.47.23 · <span class='expr'>HERE_IS_SEED</span></h3>
+<p><span class="he">וַיֹּאמֶר יוֹסֵף אֶל־הָעָם הֵן קָנִיתִי אֶתְכֶם הַיּוֹם וְאֶת־אַדְמַתְכֶם לְפַרְעֹה הֵא־לָכֶם זֶרַע וּזְרַעְתֶּם אֶת־הָאֲדָמָה</span> · <i>va-yomer yosef el-ha-am hen qaniti et-khem ha-yom ve-et-admat-khem le-faro he-la-khem zera u-zeratem et-ha-adama</i> · And Joseph said to the people: Behold, I have bought you this day and your ground for Pharaoh; here is seed for you — and you shall sow the ground.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר יוֹסֵף֙ אֶל הָעָ֔ם הֵן֩ קָנִ֨יתִי אֶתְכֶ֥ם הַיּ֛וֹם וְאֶת אַדְמַתְכֶ֖ם לְפַרְעֹ֑ה</span> · <i>va-yomer yosef el-ha-am hen qaniti et-khem ha-yom ve-et-admat-khem le-faro</i> · behold, I have bought you this day and your ground for Pharaoh (etnachta on le-faro) [VERIFIED: SNAPSHOT Gen.47.23 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">הֵֽא לָכֶ֣ם זֶ֔רַע וּזְרַעְתֶּ֖ם אֶת הָאֲדָמָֽה</span> · <i>he-la-khem zera u-zeratem et-ha-adama</i> · here is seed for you — and you shall sow the ground (verse-final ha-adama) [VERIFIED: SNAPSHOT Gen.47.23 idx11-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(qene_otanu_ve_ten_zera, t3)</span><br><span class="gloss">= RESULT: HOLDS(qene-otanu-and-ten-seed, t3)</span><br>THE SEED [G70-07]. hen QANITI etkhem ha-YOM — &#x27;I have BOUGHT you this day&#x27;: the self-sale demand&#x27;s first clause receipted in the perfect tense; HE lakhem ZERA — &#x27;BEHOLD, seed for you&#x27;: the second clause (ten zera) granted with the behold-word — the pop lands on the Torah&#x27;s ONE token of the Aramaic-flavored he (&#x27;behold&#x27;), and the Kitzur&#x27;s Masorah-three spans Scripture: behold-SEED here, behold- YOUR-WAY (Ezek 16:43), behold-the-IRON (Dan 2:43) [VERIFIED: manifest G70-07]; u-zeratem et ha-adama — the sow-imperative hands the future back.
+</td><td><span class="he">הֵא־לָכֶם זֶרַע</span> · <i>he-la-khem zera</i><br><span class="gloss">= he-to-khem seed</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The seed granted: the demand popped with the behold-word.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_24 · Gen.47.24 · <span class='expr'>THE_FIFTH_NAMED</span></h3>
+<p><span class="he">וְהָיָה בַּתְּבוּאֹת וּנְתַתֶּם חֲמִישִׁית לְפַרְעֹה וְאַרְבַּע הַיָּדֹת יִהְיֶה לָכֶם לְזֶרַע הַשָּׂדֶה וּלְאָכְלְכֶם וְלַאֲשֶׁר בְּבָתֵּיכֶם וְלֶאֱכֹל לְטַפְּכֶם</span> · <i>ve-haya ba-tevuot u-netatem chamishit le-faro ve-arba ha-yadot yihye la-khem le-zera ha-sade u-le-akhl-khem ve-la-asher be-vate-khem ve-le-ekhol le-tap-khem</i> · And it shall be at the ingatherings, that you shall give a fifth to Pharaoh; and four hands shall be yours: for seed of the field, and for your food, and for those in your houses, and for your little ones to eat.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהָיָה֙ בַּתְּבוּאֹ֔ת וּנְתַתֶּ֥ם חֲמִישִׁ֖ית לְפַרְעֹ֑ה</span> · <i>ve-haya ba-tevuot u-netatem chamishit le-faro</i> · at the ingatherings you shall give a fifth to Pharaoh (etnachta on le-faro) [VERIFIED: SNAPSHOT Gen.47.24 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאַרְבַּ֣ע הַיָּדֹ֡ת יִהְיֶ֣ה לָכֶם֩ לְזֶ֨רַע הַשָּׂדֶ֧ה וּֽלְאָכְלְכֶ֛ם וְלַאֲשֶׁ֥ר בְּבָתֵּיכֶ֖ם וְלֶאֱכֹ֥ל לְטַפְּכֶֽם</span> · <i>ve-arba ha-yadot yihye la-khem le-zera ha-sade u-le-akhl-khem ve-la-asher be-vate-khem ve-le-ekhol le-tap-khem</i> · and four hands shall be yours: seed, food, your households, your little ones (verse-final le-tap-khem) [VERIFIED: SNAPSHOT Gen.47.24 idx5-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(u_netatem_chamishit_le_faro, t0)</span><br><span class="gloss">= HOLDS(and-netatem-chamishit-to-faro, t0)</span><br>THE TERMS [G70-12]. u-netatem CHAMISHIT le-faro — &#x27;you shall give a FIFTH to Pharaoh&#x27;: the rate the dreams&#x27; economy fixed (41:34&#x27;s chimesh-verb in the counsel) becomes the empire&#x27;s rent; ve-ARBA ha- yadot — &#x27;and FOUR HANDS shall be yours&#x27;: the letter counts the people&#x27;s share double-double the crown&#x27;s; ve-LA-ASHER be-vatekhem — the alef in chataf patach (asserted under G70-12): even the dependents clause is pointed with care — seed, food, houses, little ones: four mouths for four hands.
+</td><td><span class="he">וּנְתַתֶּם חֲמִישִׁית לְפַרְעֹה</span> · <i>u-netatem chamishit le-faro</i><br><span class="gloss">= and-netatem chamishit to-faro</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The terms of the fifth.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_25 · Gen.47.25 · <span class='expr'>YOU_HAVE_KEPT_US_ALIVE</span></h3>
+<p><span class="he">וַיֹּאמְרוּ הֶחֱיִתָנוּ נִמְצָא־חֵן בְּעֵינֵי אֲדֹנִי וְהָיִינוּ עֲבָדִים לְפַרְעֹה</span> · <i>va-yomru hecheyita-nu nimtza-chen be-ene adoni-y ve-hayinu avadim le-faro</i> · And they said: You have kept us alive; let us find favor in the eyes of my lord, and we will be servants to Pharaoh.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּאמְר֖וּ הֶחֱיִתָ֑נוּ</span> · <i>va-yomru hecheyita-nu</i> · they said: you have kept us alive (etnachta on hecheyita-nu) [VERIFIED: SNAPSHOT Gen.47.25 idx1 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">נִמְצָא חֵן֙ בְּעֵינֵ֣י אֲדֹנִ֔י וְהָיִ֥ינוּ עֲבָדִ֖ים לְפַרְעֹֽה</span> · <i>nimtza-chen be-ene adoni-y ve-hayinu avadim le-faro</i> · let us find favor in my lord&#x27;s eyes, and we will be servants to Pharaoh (verse-final le-faro) [VERIFIED: SNAPSHOT Gen.47.25 idx2-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hecheyitanu_nimtza_chen, t0)</span><br><span class="gloss">= HOLDS(hecheyitanu-nimtza-chen, t0)</span><br>THE RECEIPT. HECHEYITANU — &#x27;you have KEPT US ALIVE&#x27;: one word answers the whole file of die-words (namut at 47:15, 47:19) — the empire&#x27;s receipt for its own survival; ve-hayinu AVADIM le-faro — the servant-clause accepted willingly: the machine notes the exchange&#x27;s close — bread for silver, herds, ground, and body, and the payers say thank you.
+</td><td><span class="he">וַיֹּאמְרוּ הֶחֱיִתָנוּ</span> · <i>va-yomru hecheyita-nu</i><br><span class="gloss">= and-yomru hecheyita-nu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The receipt in one word.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_26 · Gen.47.26 · <span class='expr'>THE_FIFTH_A_STATUTE</span></h3>
+<p><span class="he">וַיָּשֶׂם אֹתָהּ יוֹסֵף לְחֹק עַד־הַיּוֹם הַזֶּה עַל־אַדְמַת מִצְרַיִם לְפַרְעֹה לַחֹמֶשׁ רַק אַדְמַת הַכֹּהֲנִים לְבַדָּם לֹא הָיְתָה לְפַרְעֹה</span> · <i>va-yasem et-ה yosef le-choq ad-ha-yom ha-ze al-admat mitzrayim le-faro la-chomesh raq admat ha-kohanim le-vada-m lo hayta le-faro</i> · And Joseph set it as a statute to this day upon the ground of Egypt: to Pharaoh a fifth; only the ground of the priests alone did not become Pharaoh&#x27;s.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּ֣שֶׂם אֹתָ֣הּ יוֹסֵ֡ף לְחֹק֩ עַד הַיּ֨וֹם הַזֶּ֜ה עַל אַדְמַ֥ת מִצְרַ֛יִם לְפַרְעֹ֖ה לַחֹ֑מֶשׁ</span> · <i>va-yasem et-ה yosef le-choq ad-ha-yom ha-ze al-admat mitzrayim le-faro la-chomesh</i> · Joseph set it as a statute to this day: to Pharaoh a fifth (etnachta on la-chomesh) [VERIFIED: SNAPSHOT Gen.47.26 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">רַ֞ק אַדְמַ֤ת הַכֹּֽהֲנִים֙ לְבַדָּ֔ם לֹ֥א הָיְתָ֖ה לְפַרְעֹֽה</span> · <i>raq admat ha-kohanim le-vada-m lo hayta le-faro</i> · only the priests&#x27; ground alone did not become Pharaoh&#x27;s (verse-final le-faro) [VERIFIED: SNAPSHOT Gen.47.26 idx12-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>STATUTE</td><td><span class="expr">STATUTE BIND(le_faro_la_chomesh)</span><br><span class="gloss">= STATUTE BIND(to-faro-to-chomesh)</span><br>THE STATUTE [G70-09]. va-YASEM ota yosef LE-CHOQ — the machine installs the standing rule: ad ha-yom ha-ZE — &#x27;to THIS DAY&#x27; (the narrator&#x27;s own clock reaches past the story); le-faro la-CHOMESH — the fifth as law, the exemption (raq admat ha-kohanim) written into the statute&#x27;s own text from 47:22; and the set-verb carries the chapter&#x27;s mark-question: MS reads va-yasem WITH THE GALGAL (the rolling stroke that serves the great pazer two tokens on), SNAPSHOT writes the plain connector (munach) — the mark-split carried named, the stream&#x27;s stroke checked [VERIFIED: manifest G70-09]; the corpus&#x27;s galgal census stands at its nine stations.
+</td><td><span class="he">וַיָּשֶׂם אֹתָהּ יוֹסֵף לְחֹק עַד־הַיּוֹם הַזֶּה עַל־אַדְמַת מִצְרַיִם לְפַרְעֹה לַחֹמֶשׁ</span> · <i>va-yasem et-ה yosef le-choq ad-ha-yom ha-ze al-admat mitzrayim le-faro la-chomesh</i><br><span class="gloss">= and-yasem ה yosef to-choq until-the-day the-ze upon-admat mitzrayim to-faro to-chomesh</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The fifth institutionalized; the galgal question.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_27 · Gen.47.27 · <span class='expr'>FRUITFUL_IN_GOSHEN</span></h3>
+<p><span class="he">וַיֵּשֶׁב יִשְׂרָאֵל בְּאֶרֶץ מִצְרַיִם בְּאֶרֶץ גֹּשֶׁן וַיֵּאָחֲזוּ בָהּ וַיִּפְרוּ וַיִּרְבּוּ מְאֹד</span> · <i>va-yeshev yisrael be-eretz mitzrayim be-eretz goshen va-yeachazu va-ה va-yifru va-yirbu meod</i> · And Israel dwelt in the land of Egypt, in the land of Goshen; and they took holding in it, and were fruitful, and multiplied greatly.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֵּ֧שֶׁב יִשְׂרָאֵ֛ל בְּאֶ֥רֶץ מִצְרַ֖יִם בְּאֶ֣רֶץ גֹּ֑שֶׁן</span> · <i>va-yeshev yisrael be-eretz mitzrayim be-eretz goshen</i> · Israel dwelt in the land of Egypt, in the land of Goshen (etnachta on goshen) [VERIFIED: SNAPSHOT Gen.47.27 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֵּאָחֲז֣וּ בָ֔הּ וַיִּפְר֥וּ וַיִּרְבּ֖וּ מְאֹֽד</span> · <i>va-yeachazu va-ה va-yifru va-yirbu meod</i> · they took holding in it, and were fruitful, and multiplied greatly (verse-final meod) [VERIFIED: SNAPSHOT Gen.47.27 idx6-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yifru_va_yirbu_meod, t0)</span><br><span class="gloss">= HOLDS(and-yifru-and-yirbu-very, t0)</span><br>THE INCREASE. va-yeshev YISRAEL — the dwell-verb lands on the name Israel (the grant of 47:6 lived-in); va-YEACHAZU vah — they TOOK HOLDING (the achuza of 47:11 conjugated into a life); va-YIFRU va- YIRBU meod — the be-fruitful-and-multiply pair (1:28&#x27;s blessing- verbs; 35:11&#x27;s promise to this very man) narrated DONE on the seventy: the machine notes the covenant arithmetic beginning — the next book&#x27;s first paragraph (Exod 1:7, armed) will retell these verbs with four more; the Kitzur&#x27;s letter-counts on the increase (named [G70-13]).
+</td><td><span class="he">וַיֵּאָחֲזוּ בָהּ וַיִּפְרוּ וַיִּרְבּוּ מְאֹד</span> · <i>va-yeachazu va-ה va-yifru va-yirbu meod</i><br><span class="gloss">= and-yeachazu and-ה and-yifru and-yirbu very</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The creation-pair on the family.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_28 · Gen.47.28 · <span class='expr'>SEVENTEEN_YEARS</span></h3>
+<p><span class="he">וַיְחִי יַעֲקֹב בְּאֶרֶץ מִצְרַיִם שְׁבַע עֶשְׂרֵה שָׁנָה וַיְהִי יְמֵי־יַעֲקֹב שְׁנֵי חַיָּיו שֶׁבַע שָׁנִים וְאַרְבָּעִים וּמְאַת שָׁנָה</span> · <i>va-yechi yaaqov be-eretz mitzrayim sheva esre shana va-yehi yeme-yaaqov shene chayay-v sheva shanim ve-arbaim u-meat shana</i> · And Jacob lived in the land of Egypt seventeen years; and the days of Jacob, the years of his life, were seven years and forty and a hundred years.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְחִ֤י יַעֲקֹב֙ בְּאֶ֣רֶץ מִצְרַ֔יִם שְׁבַ֥ע עֶשְׂרֵ֖ה שָׁנָ֑ה</span> · <i>va-yechi yaaqov be-eretz mitzrayim sheva esre shana</i> · Jacob lived in the land of Egypt seventeen years (etnachta on shana) [VERIFIED: SNAPSHOT Gen.47.28 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיְהִ֤י יְמֵֽי יַעֲקֹב֙ שְׁנֵ֣י חַיָּ֔יו שֶׁ֣בַע שָׁנִ֔ים וְאַרְבָּעִ֥ים וּמְאַ֖ת שָׁנָֽה</span> · <i>va-yehi yeme-yaaqov shene chayay-v sheva shanim ve-arbaim u-meat shana</i> · and Jacob&#x27;s days, the years of his life: seven and forty and a hundred years (verse-final shana) [VERIFIED: SNAPSHOT Gen.47.28 idx7-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(yeme_yaaqov_sheva_arbaim_u_meat_shana, t0)</span><br><span class="gloss">= HOLDS(yeme-yaaqov-seven-arbaim-and-meat-shana, t0)</span><br>THE SEALED YEARS [G70-10]. VA-YECHI yaaqov — &#x27;and Jacob LIVED&#x27;: and before this word the scroll leaves NO GAP — not a closed break, not an open one: the SEALED PORTION (MS from a manuscript Bible: the seder marked, the text unbroken — &#x27;as the sages expounded&#x27;: the eyes of Israel closed by the exile beginning here) — carried named-only by design: layout lives on the scroll&#x27;s spacing, not the stream&#x27;s characters [VERIFIED: manifest G70-10, the station checked]; SHEVA esre shana — seventeen years: the Kitzur&#x27;s measure — the years Jacob reared Joseph, returned in bread (named [G70-13]); sheva shanim ve- ARBAIM u-meat shana — one hundred forty-seven, the count smallest- first (the Kitzur: because his days were few and evil — the number confesses with him); the David-partner of the approach-formula waits one verse on.
+</td><td><span class="he">וַיְחִי יַעֲקֹב בְּאֶרֶץ מִצְרַיִם שְׁבַע עֶשְׂרֵה שָׁנָה</span> · <i>va-yechi yaaqov be-eretz mitzrayim sheva esre shana</i><br><span class="gloss">= and-yechi yaaqov earth mitzrayim seven esre shana</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The sealed portion; the 147 sealed.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_29 · Gen.47.29 · <span class='expr'>THE_THIGH_AND_THE_BAN</span></h3>
+<p><span class="he">וַיִּקְרְבוּ יְמֵי־יִשְׂרָאֵל לָמוּת וַיִּקְרָא לִבְנוֹ לְיוֹסֵף וַיֹּאמֶר לוֹ אִם־נָא מָצָאתִי חֵן בְּעֵינֶיךָ שִׂים־נָא יָדְךָ תַּחַת יְרֵכִי וְעָשִׂיתָ עִמָּדִי חֶסֶד וֶאֱמֶת אַל־נָא תִקְבְּרֵנִי בְּמִצְרָיִם</span> · <i>va-yiqrvu yeme-yisrael la-mut va-yiqra li-ven-o le-yosef va-yomer l-o im-na matzati chen be-ene-kha sim-na yad-kha tachat yerekhi-y ve-asita imadi-y chesed ve-emet el-na tiqbre-ni be-mitzrayim</i> · And the days of Israel drew near to die; and he called his son Joseph, and said to him: If, pray, I have found favor in your eyes, put, pray, your hand under my thigh, and do with me kindness and truth: do not, pray, bury me in Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּקְרְב֣וּ יְמֵֽי יִשְׂרָאֵ֘ל לָמוּת֒ וַיִּקְרָ֣א לִבְנ֣וֹ לְיוֹסֵ֗ף וַיֹּ֤אמֶר לוֹ֙ אִם נָ֨א מָצָ֤אתִי חֵן֙ בְּעֵינֶ֔יךָ שִֽׂים נָ֥א יָדְךָ֖ תַּ֣חַת יְרֵכִ֑י</span> · <i>va-yiqrvu yeme-yisrael la-mut va-yiqra li-ven-o le-yosef va-yomer l-o im-na matzati chen be-ene-kha sim-na yad-kha tachat yerekhi-y</i> · Israel&#x27;s days drew near to die; he called Joseph: put your hand under my thigh (etnachta on yerekhi-y) [VERIFIED: SNAPSHOT Gen.47.29 idx18 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְעָשִׂ֤יתָ עִמָּדִי֙ חֶ֣סֶד וֶאֱמֶ֔ת אַל נָ֥א תִקְבְּרֵ֖נִי בְּמִצְרָֽיִם</span> · <i>ve-asita imadi-y chesed ve-emet el-na tiqbre-ni be-mitzrayim</i> · do with me kindness and truth: do not, pray, bury me in Egypt (verse-final be-mitzrayim) [VERIFIED: SNAPSHOT Gen.47.29 idx19-26]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yisrael, LET-NOT(al_na_tiqbreni_be_mitzrayim))</span><br><span class="gloss">= DECLARE(yisrael, LET-NOT(upon-na-tiqbreni-in-mitzrayim))</span><br>THE BAN [G70-08; G70-13]. va-YIQRVU yeme yisrael la-MUT — &#x27;and the days of Israel DREW NEAR to die&#x27;: the death-approach formula&#x27;s one Torah adjacency [VERIFIED: manifest G70-08] — its Scripture-partner is DAVID&#x27;s (1 Kgs 2:1, named): one hundred forty-seven psalms answering one hundred forty-seven years, each father crowned his son alive; SIM na yadkha TACHAT yerekhi — the thigh-oath gesture: Abraham&#x27;s steward swore so (24:2, the file&#x27;s first station) — now the grandson&#x27;s son under the same thigh-covenant (the Kitzur&#x27;s count: na yadkha = CIRCUMCISION, the covenant it touches, named [G70-13]); CHESED ve-EMET — kindness-and-TRUTH: the kindness done the dead (Rashi via the Kitzur — the only kindness with no repayment; the coffin-bier-shrouds initials, named); AL-NA tiqbreni be-MITZRAYIM — the ban pushed: not in Egypt — OPEN, its honoring beyond the span (the carrying-out, 50:4-13, ARMED).
+</td><td><span class="he">אַל־נָא תִקְבְּרֵנִי בְּמִצְרָיִם</span> · <i>el-na tiqbre-ni be-mitzrayim</i><br><span class="gloss">= to-na tiqbre-ni in-mitzrayim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The death-approach formula; the burial ban pushed.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_30 · Gen.47.30 · <span class='expr'>CARRY_ME_AND_BURY_ME</span></h3>
+<p><span class="he">וְשָׁכַבְתִּי עִם־אֲבֹתַי וּנְשָׂאתַנִי מִמִּצְרַיִם וּקְבַרְתַּנִי בִּקְבֻרָתָם וַיֹּאמַר אָנֹכִי אֶעֱשֶׂה כִדְבָרֶךָ</span> · <i>ve-shakhavti im-avota-y u-nesata-ni mi-mitzrayim u-qevarta-ni bi-qevurata-m va-yomar anokhi eese khi-devare-kha</i> · And I will lie with my fathers, and you shall carry me from Egypt, and bury me in their burying-place. And he said: I will do according to your word.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְשָֽׁכַבְתִּי֙ עִם אֲבֹתַ֔י וּנְשָׂאתַ֨נִי֙ מִמִּצְרַ֔יִם וּקְבַרְתַּ֖נִי בִּקְבֻרָתָ֑ם</span> · <i>ve-shakhavti im-avota-y u-nesata-ni mi-mitzrayim u-qevarta-ni bi-qevurata-m</i> · I will lie with my fathers: carry me from Egypt, bury me in their grave (etnachta on bi-qevurata-m) [VERIFIED: SNAPSHOT Gen.47.30 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּאמַ֕ר אָנֹכִ֖י אֶֽעֱשֶׂ֥ה כִדְבָרֶֽךָ</span> · <i>va-yomar anokhi eese khi-devare-kha</i> · and he said: I will do according to your word (verse-final khi-devare-kha) [VERIFIED: SNAPSHOT Gen.47.30 idx7-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yisrael, LET(u_qevartani_bi_qvuratam))</span><br><span class="gloss">= DECLARE(yisrael, LET(and-qevartani-bi-qvuratam))</span><br>THE CHARGE [G70-12]. ve-SHAKHAVTI im avotai — &#x27;I will LIE with my fathers&#x27;: the lying-formula claims the cave before naming it (49:29 will name it); u-nesatani mi-mitzrayim u-QEVARTANI bi-qvuratam — &#x27;CARRY me from Egypt and BURY me in their burying-place&#x27;: the positive charge pushed beside the ban — the queue holds the death before the death; anokhi EESE khi-devarekha — &#x27;I will DO according to your word&#x27;: Joseph ACCEPTS — and acceptance is not performance: the demand stands OPEN for the deed (50:7-13, ARMED); the accept- verb&#x27;s ayin carries a split: the old Sepharad codices point BARE SHEVA (&#x27;beautifully pointed&#x27;, their margins say; Or Torah concurs), the stream writes CHATAF SEGOL — carried named [VERIFIED under G70-12].
+</td><td><span class="he">וּנְשָׂאתַנִי מִמִּצְרַיִם וּקְבַרְתַּנִי בִּקְבֻרָתָם</span> · <i>u-nesata-ni mi-mitzrayim u-qevarta-ni bi-qevurata-m</i><br><span class="gloss">= and-nesata-ni from-mitzrayim and-qevarta-ni bi-qevurata-m</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The burial charge pushed; the acceptance is not the deed.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_47_31 · Gen.47.31 · <span class='expr'>SWEAR_TO_ME</span></h3>
+<p><span class="he">וַיֹּאמֶר הִשָּׁבְעָה לִי וַיִּשָּׁבַע לוֹ וַיִּשְׁתַּחוּ יִשְׂרָאֵל עַל־רֹאשׁ הַמִּטָּה</span> · <i>va-yomer hishava-ה li-y va-yishava l-o va-yishtachu yisrael al-rosh ha-mita</i> · And he said: Swear to me. And he swore to him. And Israel bowed upon the head of the bed.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֗אמֶר הִשָּֽׁבְעָה֙ לִ֔י וַיִּשָּׁבַ֖ע ל֑וֹ</span> · <i>va-yomer hishava-ה li-y va-yishava l-o</i> · he said: swear to me — and he swore to him (etnachta on l-o) [VERIFIED: SNAPSHOT Gen.47.31 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּשְׁתַּ֥חוּ יִשְׂרָאֵ֖ל עַל רֹ֥אשׁ הַמִּטָּֽה</span> · <i>va-yishtachu yisrael al-rosh ha-mita</i> · and Israel bowed upon the head of the bed (verse-final ha-mita) [VERIFIED: SNAPSHOT Gen.47.31 idx5-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yisrael, LET(hishava_li))</span><br><span class="gloss">= DECLARE(yisrael, LET(hishava-to-me))</span><br>THE OATH ASKED. HISHAVA li — &#x27;SWEAR to me&#x27;: the father converts the acceptance (47:30) into covenant-grade security — the word alone did not suffice where a grave is at stake (the machine notes the escalation: word, then oath; 50:5-6 will trade on exactly this oath before Pharaoh).
+</td><td><span class="he">וַיֹּאמֶר הִשָּׁבְעָה לִי</span> · <i>va-yomer hishava-ה li-y</i><br><span class="gloss">= and-yomer hishava-ה to-me-y</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(hishava_li, t4)</span><br><span class="gloss">= RESULT: HOLDS(hishava-to-me, t4)</span><br>SWORN IN PLACE [G70-13]. va-YISHAVA lo — &#x27;and he SWORE to him&#x27;: the demand discharges inside its own verse (the same-verse class); va- YISHTACHU yisrael al ROSH ha-mita — &#x27;and Israel BOWED on the head of the BED&#x27;: the Kitzur&#x27;s count reads the bow as thanks for good news, and his bed-file arms — the righteous STRENGTHEN on the bed (48:2, next span) where Haman FALLS on it (Esth 7:8, named) [G70-13]: the span closes with the father bowing toward the sworn future.
+</td><td><span class="he">וַיִּשָּׁבַע לוֹ</span> · <i>va-yishava l-o</i><br><span class="gloss">= and-yishava l-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The oath demanded and given in one verse.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Gn_47_1 — the briefing delivered</td><td>And Joseph came and told Pharaoh, and said: My father and my brothers, with their flocks and their herds and all that is theirs, have come from the land of Canaan; and behold, they are in the land of Goshen.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיָּבֹ֣א יוֹסֵף֮ וַיַּגֵּ֣ד לְפַרְעֹה֒</span> · <i>va-yavo yosef va-yaged le-faro</i><br><span class="gloss">= and-yavo yosef and-yaged to-faro</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Gn_47_2 — five from the edge</td><td>And from the edge of his brothers he took five men, and presented them before Pharaoh.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וּמִקְצֵ֣ה אֶחָ֔יו לָקַ֖ח חֲמִשָּׁ֣ה</span> · <i>u-mi-qetze echay-v laqach chamisha</i><br><span class="gloss">= and-from-qetze echay-v laqach chamisha</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Gn_47_3 — the script performed</td><td>And Pharaoh said to his brothers: What is your work? And they said to Pharaoh: Your servants are a shepherd of flocks, both we and our fathers.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיֹּ֧אמֶר פַּרְעֹ֛ה אֶל אֶחָ֖יו</span> · <i>va-yomer paro el-echay-v</i><br><span class="gloss">= and-yomer paro to-echay-v</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Gn_47_4 — let us dwell in Goshen</td><td>And they said to Pharaoh: To sojourn in the land we have come, for there is no pasture for the flock of your servants, for the famine is heavy in the land of Canaan; and now, let your servants dwell, pray, in the land of Goshen.</td><td>LET(yeshvu_na_avadekha_be_eretz_goshen) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(yeshvu-na-avadekha-in-earth-goshen) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּאמְר֣וּ אֶל פַּרְעֹ֗ה לָג֣וּר</span> · <i>va-yomru el-paro la-gur</i><br><span class="gloss">= and-yomru to-paro to-gur</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Gn_47_5 — they have come to you</td><td>And Pharaoh said to Joseph, saying: Your father and your brothers have come to you.</td><td>LET(yeshvu_na_avadekha_be_eretz_goshen) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(yeshvu-na-avadekha-in-earth-goshen) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֣אמֶר פַּרְעֹ֔ה אֶל יוֹסֵ֖ף</span> · <i>va-yomer paro el-yosef</i><br><span class="gloss">= and-yomer paro to-yosef</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Gn_47_6 — the land before you</td><td>The land of Egypt is before you: in the best of the land settle your father and your brothers; let them dwell in the land of Goshen. And if you know that there are able men among them, set them as chiefs of livestock over what is mine.</td><td>SPECS empty; no test, no name.</td><td><span class="he">אֶ֤רֶץ מִצְרַ֨יִם֙ לְפָנֶ֣יךָ הִ֔וא</span> · <i>eretz mitzrayim le-fane-kha hiv</i><br><span class="gloss">= earth mitzrayim to-fane-kha hiv</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Gn_47_7 — Jacob blesses Pharaoh</td><td>And Joseph brought Jacob his father, and stood him before Pharaoh; and Jacob blessed Pharaoh.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיָּבֵ֤א יוֹסֵף֙ אֶת יַֽעֲקֹ֣ב</span> · <i>va-yave yosef et-yaaqov</i><br><span class="gloss">= and-yave yosef yaaqov</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Gn_47_8 — how many your days</td><td>And Pharaoh said to Jacob: How many are the days of the years of your life?</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיֹּ֥אמֶר פַּרְעֹ֖ה אֶֽל יַעֲקֹ֑ב</span> · <i>va-yomer paro el-yaaqov</i><br><span class="gloss">= and-yomer paro to-yaaqov</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Gn_47_9 — few and evil</td><td>And Jacob said to Pharaoh: The days of the years of my sojournings are a hundred and thirty years; few and evil have been the days of the years of my life, and they have not reached the days of the years of the lives of my fathers in the days of their sojournings.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיֹּ֤אמֶר יַעֲקֹב֙ אֶל פַּרְעֹ֔ה</span> · <i>va-yomer yaaqov el-paro</i><br><span class="gloss">= and-yomer yaaqov to-paro</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Gn_47_10 — the second blessing</td><td>And Jacob blessed Pharaoh, and went out from before Pharaoh.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיְבָ֥רֶךְ יַעֲקֹ֖ב אֶת פַּרְעֹ֑ה</span> · <i>va-yevarekh yaaqov et-paro</i><br><span class="gloss">= and-yevarekh yaaqov paro</span></td></tr>
+<tr><td><b>S11</b></td><td>after STEP_Gn_47_11 — settled in Rameses</td><td>And Joseph settled his father and his brothers, and gave them a holding in the land of Egypt, in the best of the land, in the land of Rameses, as Pharaoh had commanded.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיּוֹשֵׁ֣ב יוֹסֵף֮ אֶת אָבִ֣יו</span> · <i>va-yoshev yosef et-avi-v</i><br><span class="gloss">= and-yoshev yosef avi-v</span></td></tr>
+<tr><td><b>S12</b></td><td>after STEP_Gn_47_12 — bread for the mouths</td><td>And Joseph sustained his father, and his brothers, and all his father&#x27;s house, with bread, by the mouth of the little ones.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיְכַלְכֵּ֤ל יוֹסֵף֙ אֶת אָבִ֣יו</span> · <i>va-yekhalkel yosef et-avi-v</i><br><span class="gloss">= and-yekhalkel yosef avi-v</span></td></tr>
+<tr><td><b>S13</b></td><td>after STEP_Gn_47_13 — the land languishes</td><td>And there was no bread in all the land, for the famine was very heavy; and the land of Egypt and the land of Canaan languished before the famine.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וְלֶ֤חֶם אֵין֙ בְּכָל הָאָ֔רֶץ</span> · <i>ve-lechem en be-khal-ha-aretz</i><br><span class="gloss">= and-lechem en in-khal-the-earth</span></td></tr>
+<tr><td><b>S14</b></td><td>after STEP_Gn_47_14 — the silver gathered</td><td>And Joseph gleaned all the silver found in the land of Egypt and in the land of Canaan for the grain which they were buying; and Joseph brought the silver into Pharaoh&#x27;s house.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיְלַקֵּ֣ט יוֹסֵ֗ף אֶת כָּל</span> · <i>va-yelaqet yosef et-kal-</i><br><span class="gloss">= and-yelaqet yosef kal</span></td></tr>
+<tr><td><b>S15</b></td><td>after STEP_Gn_47_15 — give us bread</td><td>And the silver was spent from the land of Egypt and from the land of Canaan; and all Egypt came to Joseph, saying: Give us bread — and why should we die before you, for the silver is gone.</td><td>LET(hava_lanu_lechem) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(hava-lanu-lechem) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּתֹּ֣ם הַכֶּ֗סֶף מֵאֶ֣רֶץ מִצְרַיִם֮</span> · <i>va-yitom ha-kesef me-eretz mitzrayim</i><br><span class="gloss">= and-yitom the-kesef earth mitzrayim</span></td></tr>
+<tr><td><b>S16</b></td><td>after STEP_Gn_47_16 — give your livestock</td><td>And Joseph said: Give your livestock, and I will give you for your livestock, if the silver is gone.</td><td>LET(hava_lanu_lechem) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(hava-lanu-lechem) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֤אמֶר יוֹסֵף֙ הָב֣וּ מִקְנֵיכֶ֔ם</span> · <i>va-yomer yosef havu miqne-khem</i><br><span class="gloss">= and-yomer yosef havu miqne-khem</span></td></tr>
+<tr><td><b>S17</b></td><td>after STEP_Gn_47_17 — bread for the herds</td><td>And they brought their livestock to Joseph; and Joseph gave them bread for the horses, and for the livestock of the flocks, and for the livestock of the herds, and for the donkeys; and he carried them with bread for all their livestock that year.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיָּבִ֣יאוּ אֶת מִקְנֵיהֶם֮ אֶל</span> · <i>va-yaviu et-miqne-hem el-</i><br><span class="gloss">= and-yaviu miqne-hem to</span></td></tr>
+<tr><td><b>S18</b></td><td>after STEP_Gn_47_18 — body and ground</td><td>And that year ended, and they came to him the second year and said to him: We will not hide from my lord that the silver is spent, and the herds of beasts are my lord&#x27;s; nothing is left before my lord but our body and our ground.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַתִּתֹּם֮ הַשָּׁנָ֣ה הַהִוא֒ וַיָּבֹ֨אוּ</span> · <i>va-titom ha-shana ha-hiv va-yavou</i><br><span class="gloss">= and-titom the-shana the-hiv and-yavou</span></td></tr>
+<tr><td><b>S19</b></td><td>after STEP_Gn_47_19 — buy us, give seed</td><td>Why should we die before your eyes, both we and our ground too? Buy us and our ground for bread, and we with our ground will be servants to Pharaoh; and give seed, that we may live and not die, and the ground not be desolate.</td><td>LET(qene_otanu_ve_ten_zera) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qene-otanu-and-ten-seed) pushed and OPEN; no test, no name.</span></td><td><span class="he">לָ֧מָּה נָמ֣וּת לְעֵינֶ֗יךָ גַּם</span> · <i>la-ma namut le-ene-kha gam-</i><br><span class="gloss">= to-ma namut to-ene-kha also</span></td></tr>
+<tr><td><b>S20</b></td><td>after STEP_Gn_47_20 — the land to Pharaoh</td><td>And Joseph bought all the ground of Egypt for Pharaoh, for Egypt sold every man his field, for the famine was strong upon them; and the land became Pharaoh&#x27;s.</td><td>LET(qene_otanu_ve_ten_zera) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qene-otanu-and-ten-seed) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּ֨קֶן יוֹסֵ֜ף אֶת כָּל</span> · <i>va-yiqen yosef et-kal-</i><br><span class="gloss">= and-yiqen yosef kal</span></td></tr>
+<tr><td><b>S21</b></td><td>after STEP_Gn_47_21 — the people to cities</td><td>And the people — he moved them to the cities, from one end of the border of Egypt to its other end.</td><td>LET(qene_otanu_ve_ten_zera) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qene-otanu-and-ten-seed) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְאֶ֨ת הָעָ֔ם הֶעֱבִ֥יר אֹת֖וֹ</span> · <i>ve-et-ha-am heevir et-o</i><br><span class="gloss">= and-the-am heevir o</span></td></tr>
+<tr><td><b>S22</b></td><td>after STEP_Gn_47_22 — the priests exempt</td><td>Only the ground of the priests he did not buy, for the priests had a statute-portion from Pharaoh, and they ate their statute-portion which Pharaoh gave them; therefore they did not sell their ground.</td><td>LET(qene_otanu_ve_ten_zera) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qene-otanu-and-ten-seed) pushed and OPEN; no test, no name.</span></td><td><span class="he">רַ֛ק אַדְמַ֥ת הַכֹּהֲנִ֖ים לֹ֣א</span> · <i>raq admat ha-kohanim lo</i><br><span class="gloss">= raq admat the-kohanim not</span></td></tr>
+<tr><td><b>S23</b></td><td>after STEP_Gn_47_23 — here is seed</td><td>And Joseph said to the people: Behold, I have bought you this day and your ground for Pharaoh; here is seed for you — and you shall sow the ground.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיֹּ֤אמֶר יוֹסֵף֙ אֶל הָעָ֔ם</span> · <i>va-yomer yosef el-ha-am</i><br><span class="gloss">= and-yomer yosef to-the-am</span></td></tr>
+<tr><td><b>S24</b></td><td>after STEP_Gn_47_24 — the fifth named</td><td>And it shall be at the ingatherings, that you shall give a fifth to Pharaoh; and four hands shall be yours: for seed of the field, and for your food, and for those in your houses, and for your little ones to eat.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וְהָיָה֙ בַּתְּבוּאֹ֔ת וּנְתַתֶּ֥ם חֲמִישִׁ֖ית</span> · <i>ve-haya ba-tevuot u-netatem chamishit</i><br><span class="gloss">= and-haya in-the-tevuot and-netatem chamishit</span></td></tr>
+<tr><td><b>S25</b></td><td>after STEP_Gn_47_25 — you have kept us alive</td><td>And they said: You have kept us alive; let us find favor in the eyes of my lord, and we will be servants to Pharaoh.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיֹּאמְר֖וּ הֶחֱיִתָ֑נוּ נִמְצָא חֵן֙</span> · <i>va-yomru hecheyita-nu nimtza-chen</i><br><span class="gloss">= and-yomru hecheyita-nu nimtza-chen</span></td></tr>
+<tr><td><b>S26</b></td><td>after STEP_Gn_47_26 — the fifth a statute</td><td>And Joseph set it as a statute to this day upon the ground of Egypt: to Pharaoh a fifth; only the ground of the priests alone did not become Pharaoh&#x27;s.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיָּ֣שֶׂם אֹתָ֣הּ יוֹסֵ֡ף לְחֹק֩</span> · <i>va-yasem et-ה yosef le-choq</i><br><span class="gloss">= and-yasem ה yosef to-choq</span></td></tr>
+<tr><td><b>S27</b></td><td>after STEP_Gn_47_27 — fruitful in Goshen</td><td>And Israel dwelt in the land of Egypt, in the land of Goshen; and they took holding in it, and were fruitful, and multiplied greatly.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיֵּ֧שֶׁב יִשְׂרָאֵ֛ל בְּאֶ֥רֶץ מִצְרַ֖יִם</span> · <i>va-yeshev yisrael be-eretz mitzrayim</i><br><span class="gloss">= and-yeshev yisrael earth mitzrayim</span></td></tr>
+<tr><td><b>S28</b></td><td>after STEP_Gn_47_28 — seventeen years</td><td>And Jacob lived in the land of Egypt seventeen years; and the days of Jacob, the years of his life, were seven years and forty and a hundred years.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיְחִ֤י יַעֲקֹב֙ בְּאֶ֣רֶץ מִצְרַ֔יִם</span> · <i>va-yechi yaaqov be-eretz mitzrayim</i><br><span class="gloss">= and-yechi yaaqov earth mitzrayim</span></td></tr>
+<tr><td><b>S29</b></td><td>after STEP_Gn_47_29 — the thigh and the ban</td><td>And the days of Israel drew near to die; and he called his son Joseph, and said to him: If, pray, I have found favor in your eyes, put, pray, your hand under my thigh, and do with me kindness and truth: do not, pray, bury me in Egypt.</td><td>LET-NOT(al_na_tiqbreni_be_mitzrayim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-na-tiqbreni-in-mitzrayim) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּקְרְב֣וּ יְמֵֽי יִשְׂרָאֵ֘ל לָמוּת֒</span> · <i>va-yiqrvu yeme-yisrael la-mut</i><br><span class="gloss">= and-yiqrvu yeme-yisrael to-mut</span></td></tr>
+<tr><td><b>S30</b></td><td>after STEP_Gn_47_30 — carry me and bury me</td><td>And I will lie with my fathers, and you shall carry me from Egypt, and bury me in their burying-place. And he said: I will do according to your word.</td><td>LET-NOT(al_na_tiqbreni_be_mitzrayim) pushed and OPEN; LET(u_qevartani_bi_qvuratam) pushed and OPEN; no test, no name.<br><span class="gloss">= LET-NOT(upon-na-tiqbreni-in-mitzrayim) pushed and OPEN; LET(and-qevartani-bi-qvuratam) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְשָֽׁכַבְתִּי֙ עִם אֲבֹתַ֔י וּנְשָׂאתַ֨נִי֙</span> · <i>ve-shakhavti im-avota-y u-nesata-ni</i><br><span class="gloss">= and-shakhavti if-avota-y and-nesata-ni</span></td></tr>
+<tr><td><b>S31</b></td><td>after STEP_Gn_47_31 — swear to me</td><td>And he said: Swear to me. And he swore to him. And Israel bowed upon the head of the bed.</td><td>LET-NOT(al_na_tiqbreni_be_mitzrayim) pushed and OPEN; LET(u_qevartani_bi_qvuratam) pushed and OPEN; LET(hishava_li) pushed then satisfied in the SAME verse; no test, no name.<br><span class="gloss">= LET-NOT(upon-na-tiqbreni-in-mitzrayim) pushed and OPEN; LET(and-qevartani-bi-qvuratam) pushed and OPEN; LET(hishava-to-me) pushed then satisfied in the SAME verse; no test, no name.</span></td><td><span class="he">וַיֹּ֗אמֶר הִשָּֽׁבְעָה֙ לִ֔י וַיִּשָּׁבַ֖ע</span> · <i>va-yomer hishava-ה li-y va-yishava</i><br><span class="gloss">= and-yomer hishava-ה to-me-y and-yishava</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_70_goshen_and_the_fifth — Goshen and the fifth (47:1-31) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — after STEP_Gn_47_1 — the briefing delivered
+    וַיָּבֹ֣א יוֹסֵף֮ וַיַּגֵּ֣ד לְפַרְעֹה֒ (va-yavo yosef va-yaged le-faro)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Gn_47_2 — five from the edge
+    וּמִקְצֵ֣ה אֶחָ֔יו לָקַ֖ח חֲמִשָּׁ֣ה (u-mi-qetze echay-v laqach chamisha)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Gn_47_3 — the script performed
+    וַיֹּ֧אמֶר פַּרְעֹ֛ה אֶל אֶחָ֖יו (va-yomer paro el-echay-v)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Gn_47_4 — let us dwell in Goshen
+    וַיֹּאמְר֣וּ אֶל פַּרְעֹ֗ה לָג֣וּר (va-yomru el-paro la-gur)
+    PASS  LET(yeshvu_na_avadekha_be_eretz_goshen) pushed and OPEN  (queue=[&#x27;yeshvu_na_avadekha_be_eretz_goshen&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Gn_47_5 — they have come to you
+    וַיֹּ֣אמֶר פַּרְעֹ֔ה אֶל יוֹסֵ֖ף (va-yomer paro el-yosef)
+    PASS  LET(yeshvu_na_avadekha_be_eretz_goshen) pushed and OPEN  (queue=[&#x27;yeshvu_na_avadekha_be_eretz_goshen&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Gn_47_6 — the land before you
+    אֶ֤רֶץ מִצְרַ֨יִם֙ לְפָנֶ֣יךָ הִ֔וא (eretz mitzrayim le-fane-kha hiv)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — after STEP_Gn_47_7 — Jacob blesses Pharaoh
+    וַיָּבֵ֤א יוֹסֵף֙ אֶת יַֽעֲקֹ֣ב (va-yave yosef et-yaaqov)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S8 — after STEP_Gn_47_8 — how many your days
+    וַיֹּ֥אמֶר פַּרְעֹ֖ה אֶֽל יַעֲקֹ֑ב (va-yomer paro el-yaaqov)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S9 — after STEP_Gn_47_9 — few and evil
+    וַיֹּ֤אמֶר יַעֲקֹב֙ אֶל פַּרְעֹ֔ה (va-yomer yaaqov el-paro)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S10 — after STEP_Gn_47_10 — the second blessing
+    וַיְבָ֥רֶךְ יַעֲקֹ֖ב אֶת פַּרְעֹ֑ה (va-yevarekh yaaqov et-paro)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S11 — after STEP_Gn_47_11 — settled in Rameses
+    וַיּוֹשֵׁ֣ב יוֹסֵף֮ אֶת אָבִ֣יו (va-yoshev yosef et-avi-v)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S12 — after STEP_Gn_47_12 — bread for the mouths
+    וַיְכַלְכֵּ֤ל יוֹסֵף֙ אֶת אָבִ֣יו (va-yekhalkel yosef et-avi-v)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S13 — after STEP_Gn_47_13 — the land languishes
+    וְלֶ֤חֶם אֵין֙ בְּכָל הָאָ֔רֶץ (ve-lechem en be-khal-ha-aretz)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S14 — after STEP_Gn_47_14 — the silver gathered
+    וַיְלַקֵּ֣ט יוֹסֵ֗ף אֶת כָּל (va-yelaqet yosef et-kal-)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S15 — after STEP_Gn_47_15 — give us bread
+    וַיִּתֹּ֣ם הַכֶּ֗סֶף מֵאֶ֣רֶץ מִצְרַיִם֮ (va-yitom ha-kesef me-eretz mitzrayim)
+    PASS  LET(hava_lanu_lechem) pushed and OPEN  (queue=[&#x27;hava_lanu_lechem&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S16 — after STEP_Gn_47_16 — give your livestock
+    וַיֹּ֤אמֶר יוֹסֵף֙ הָב֣וּ מִקְנֵיכֶ֔ם (va-yomer yosef havu miqne-khem)
+    PASS  LET(hava_lanu_lechem) pushed and OPEN  (queue=[&#x27;hava_lanu_lechem&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S17 — after STEP_Gn_47_17 — bread for the herds
+    וַיָּבִ֣יאוּ אֶת מִקְנֵיהֶם֮ אֶל (va-yaviu et-miqne-hem el-)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S18 — after STEP_Gn_47_18 — body and ground
+    וַתִּתֹּם֮ הַשָּׁנָ֣ה הַהִוא֒ וַיָּבֹ֨אוּ (va-titom ha-shana ha-hiv va-yavou)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S19 — after STEP_Gn_47_19 — buy us, give seed
+    לָ֧מָּה נָמ֣וּת לְעֵינֶ֗יךָ גַּם (la-ma namut le-ene-kha gam-)
+    PASS  LET(qene_otanu_ve_ten_zera) pushed and OPEN  (queue=[&#x27;qene_otanu_ve_ten_zera&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S20 — after STEP_Gn_47_20 — the land to Pharaoh
+    וַיִּ֨קֶן יוֹסֵ֜ף אֶת כָּל (va-yiqen yosef et-kal-)
+    PASS  LET(qene_otanu_ve_ten_zera) pushed and OPEN  (queue=[&#x27;qene_otanu_ve_ten_zera&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S21 — after STEP_Gn_47_21 — the people to cities
+    וְאֶ֨ת הָעָ֔ם הֶעֱבִ֥יר אֹת֖וֹ (ve-et-ha-am heevir et-o)
+    PASS  LET(qene_otanu_ve_ten_zera) pushed and OPEN  (queue=[&#x27;qene_otanu_ve_ten_zera&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S22 — after STEP_Gn_47_22 — the priests exempt
+    רַ֛ק אַדְמַ֥ת הַכֹּהֲנִ֖ים לֹ֣א (raq admat ha-kohanim lo)
+    PASS  LET(qene_otanu_ve_ten_zera) pushed and OPEN  (queue=[&#x27;qene_otanu_ve_ten_zera&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S23 — after STEP_Gn_47_23 — here is seed
+    וַיֹּ֤אמֶר יוֹסֵף֙ אֶל הָעָ֔ם (va-yomer yosef el-ha-am)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S24 — after STEP_Gn_47_24 — the fifth named
+    וְהָיָה֙ בַּתְּבוּאֹ֔ת וּנְתַתֶּ֥ם חֲמִישִׁ֖ית (ve-haya ba-tevuot u-netatem chamishit)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S25 — after STEP_Gn_47_25 — you have kept us alive
+    וַיֹּאמְר֖וּ הֶחֱיִתָ֑נוּ נִמְצָא חֵן֙ (va-yomru hecheyita-nu nimtza-chen)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S26 — after STEP_Gn_47_26 — the fifth a statute
+    וַיָּ֣שֶׂם אֹתָ֣הּ יוֹסֵ֡ף לְחֹק֩ (va-yasem et-ה yosef le-choq)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S27 — after STEP_Gn_47_27 — fruitful in Goshen
+    וַיֵּ֧שֶׁב יִשְׂרָאֵ֛ל בְּאֶ֥רֶץ מִצְרַ֖יִם (va-yeshev yisrael be-eretz mitzrayim)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S28 — after STEP_Gn_47_28 — seventeen years
+    וַיְחִ֤י יַעֲקֹב֙ בְּאֶ֣רֶץ מִצְרַ֔יִם (va-yechi yaaqov be-eretz mitzrayim)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S29 — after STEP_Gn_47_29 — the thigh and the ban
+    וַיִּקְרְב֣וּ יְמֵֽי יִשְׂרָאֵ֘ל לָמוּת֒ (va-yiqrvu yeme-yisrael la-mut)
+    PASS  LET-NOT(al_na_tiqbreni_be_mitzrayim) pushed and OPEN  (queue=[&#x27;al_na_tiqbreni_be_mitzrayim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S30 — after STEP_Gn_47_30 — carry me and bury me
+    וְשָֽׁכַבְתִּי֙ עִם אֲבֹתַ֔י וּנְשָׂאתַ֨נִי֙ (ve-shakhavti im-avota-y u-nesata-ni)
+    PASS  LET-NOT(al_na_tiqbreni_be_mitzrayim) pushed and OPEN  (queue=[&#x27;al_na_tiqbreni_be_mitzrayim&#x27;, &#x27;u_qevartani_bi_qvuratam&#x27;])
+    PASS  LET(u_qevartani_bi_qvuratam) pushed and OPEN  (queue=[&#x27;al_na_tiqbreni_be_mitzrayim&#x27;, &#x27;u_qevartani_bi_qvuratam&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S31 — after STEP_Gn_47_31 — swear to me
+    וַיֹּ֗אמֶר הִשָּֽׁבְעָה֙ לִ֔י וַיִּשָּׁבַ֖ע (va-yomer hishava-ה li-y va-yishava)
+    PASS  LET-NOT(al_na_tiqbreni_be_mitzrayim) pushed and OPEN  (queue=[&#x27;al_na_tiqbreni_be_mitzrayim&#x27;, &#x27;u_qevartani_bi_qvuratam&#x27;])
+    PASS  LET(u_qevartani_bi_qvuratam) pushed and OPEN  (queue=[&#x27;al_na_tiqbreni_be_mitzrayim&#x27;, &#x27;u_qevartani_bi_qvuratam&#x27;])
+    PASS  LET(hishava_li) pushed then satisfied in the SAME verse  (pushed=Gen.47.31 satisfied=Gen.47.31)
+    PASS  no test, no name.  (tests=0 names=0)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_70_goshen_and_the_fifth.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_70_goshen_and_the_fifth — 47:1-31
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_70_goshen_and_the_fifth.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Goshen and the fifth (47:1-31)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_70_goshen_and_the_fifth&quot;)
+
+# -------------------------- Gen.47.1 · THE_BRIEFING_DELIVERED --------------
+# וַיָּבֹא יוֹסֵף וַיַּגֵּד לְפַרְעֹה וַיֹּאמֶר אָבִי וְאַחַי וְצֹאנָם
+# וּבְקָרָם וְכָל־אֲשֶׁר לָהֶם בָּאוּ מֵאֶרֶץ כְּנָעַן וְהִנָּם בְּאֶרֶץ
+# גֹּשֶׁן
+# &quot;[EN-AID] And Joseph came and told Pharaoh, and said: My father and my
+# brothers, with their flocks and their herds and all that is theirs, have
+# come from the land of Canaan; and behold, they are in the land of Goshen.&quot;
+m.step(&quot;Gen.47.1&quot;)
+# ‹וַיָּבֹא יוֹסֵף וַיַּגֵּד לְפַרְעֹה› (“and-come/bring Joseph and-tell to-
+# Pharaoh”) — fact holds: and-tell-to-Pharaoh-come/bring-from-earth-Canaan
+m.fact(&quot;va_yaged_le_faro_bau_me_eretz_kenaan&quot;)
+
+# -------------------------- Gen.47.2 · FIVE_FROM_THE_EDGE ------------------
+# וּמִקְצֵה אֶחָיו לָקַח חֲמִשָּׁה אֲנָשִׁים וַיַּצִּגֵם לִפְנֵי פַרְעֹה
+# &quot;[EN-AID] And from the edge of his brothers he took five men, and
+# presented them before Pharaoh.&quot;
+m.step(&quot;Gen.47.2&quot;)
+# ‹וּמִקְצֵה אֶחָיו לָקַח חֲמִשָּׁה אֲנָשִׁים› (“and-from-end brother-
+# him/its take five man”) — fact holds: five-man-lifne-Pharaoh
+m.fact(&quot;chamisha_anashim_lifne_faro&quot;)
+
+# -------------------------- Gen.47.3 · THE_SCRIPT_PERFORMED ----------------
+# וַיֹּאמֶר פַּרְעֹה אֶל־אֶחָיו מַה־מַּעֲשֵׂיכֶם וַיֹּאמְרוּ אֶל־פַּרְעֹה
+# רֹעֵה צֹאן עֲבָדֶיךָ גַּם־אֲנַחְנוּ גַּם־אֲבוֹתֵינוּ
+# &quot;[EN-AID] And Pharaoh said to his brothers: What is your work? And they
+# said to Pharaoh: Your servants are a shepherd of flocks, both we and our
+# fathers.&quot;
+m.step(&quot;Gen.47.3&quot;)
+# ‹רֹעֵה צֹאן עֲבָדֶיךָ גַּם־אֲנַחְנוּ גַּם־אֲבוֹתֵינוּ› (“graze flock
+# servant-you/your also we also father-us/our”) — fact holds: graze-flock-
+# avadekha-also-we-also-avotenu
+m.fact(&quot;roe_tzon_avadekha_gam_anachnu_gam_avotenu&quot;)
+
+# -------------------------- Gen.47.4 · LET_US_DWELL_IN_GOSHEN --------------
+# וַיֹּאמְרוּ אֶל־פַּרְעֹה לָגוּר בָּאָרֶץ בָּאנוּ כִּי־אֵין מִרְעֶה לַצֹּאן
+# אֲשֶׁר לַעֲבָדֶיךָ כִּי־כָבֵד הָרָעָב בְּאֶרֶץ כְּנָעַן וְעַתָּה
+# יֵשְׁבוּ־נָא עֲבָדֶיךָ בְּאֶרֶץ גֹּשֶׁן
+# &quot;[EN-AID] And they said to Pharaoh: To sojourn in the land we have come,
+# for there is no pasture for the flock of your servants, for the famine is
+# heavy in the land of Canaan; and now, let your servants dwell, pray, in
+# the land of Goshen.&quot;
+m.step(&quot;Gen.47.4&quot;)
+# ‹וְעַתָּה יֵשְׁבוּ־נָא עֲבָדֶיךָ בְּאֶרֶץ גֹּשֶׁן› (“and-now dwell/sit
+# please servant-you/your in-earth Goshen”) — bene-Jacob speaks a demand —
+# LET: dwell/sit-please-avadekha-in-earth-Goshen
+m.declare(&quot;bene_yaaqov&quot;, &quot;LET&quot;,
+          &quot;yeshvu_na_avadekha_be_eretz_goshen&quot;)
+
+# -------------------------- Gen.47.5 · THEY_HAVE_COME_TO_YOU ---------------
+# וַיֹּאמֶר פַּרְעֹה אֶל־יוֹסֵף לֵאמֹר אָבִיךָ וְאַחֶיךָ בָּאוּ אֵלֶיךָ
+# &quot;[EN-AID] And Pharaoh said to Joseph, saying: Your father and your
+# brothers have come to you.&quot;
+m.step(&quot;Gen.47.5&quot;)
+# ‹אָבִיךָ וְאַחֶיךָ בָּאוּ אֵלֶיךָ› (“father-you/your and-brother-you/your
+# come/bring to-you/your”) — fact holds: avikha-and-achekha-come/bring-to-
+# you
+m.fact(&quot;avikha_ve_achekha_bau_elekha&quot;)
+
+# -------------------------- Gen.47.6 · THE_LAND_BEFORE_YOU -----------------
+# אֶרֶץ מִצְרַיִם לְפָנֶיךָ הִוא בְּמֵיטַב הָאָרֶץ הוֹשֵׁב אֶת־אָבִיךָ
+# וְאֶת־אַחֶיךָ יֵשְׁבוּ בְּאֶרֶץ גֹּשֶׁן וְאִם־יָדַעְתָּ וְיֶשׁ־בָּם
+# אַנְשֵׁי־חַיִל וְשַׂמְתָּם שָׂרֵי מִקְנֶה עַל־אֲשֶׁר־לִי
+# &quot;[EN-AID] The land of Egypt is before you: in the best of the land settle
+# your father and your brothers; let them dwell in the land of Goshen. And
+# if you know that there are able men among them, set them as chiefs of
+# livestock over what is mine.&quot;
+m.step(&quot;Gen.47.6&quot;)
+# ‹יֵשְׁבוּ בְּאֶרֶץ גֹּשֶׁן› (“dwell/sit in-earth Goshen”) — demand settled
+# (popped from the queue): dwell/sit-please-avadekha-in-earth-Goshen
+m.result(&quot;yeshvu_na_avadekha_be_eretz_goshen&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Gen.47.7 · JACOB_BLESSES_PHARAOH ---------------
+# וַיָּבֵא יוֹסֵף אֶת־יַעֲקֹב אָבִיו וַיַּעֲמִדֵהוּ לִפְנֵי פַרְעֹה
+# וַיְבָרֶךְ יַעֲקֹב אֶת־פַּרְעֹה
+# &quot;[EN-AID] And Joseph brought Jacob his father, and stood him before
+# Pharaoh; and Jacob blessed Pharaoh.&quot;
+m.step(&quot;Gen.47.7&quot;)
+# ‹וַיְבָרֶךְ יַעֲקֹב אֶת־פַּרְעֹה› (“and-bless Jacob obj-marker Pharaoh”) —
+# blessing: Jacob blesses Pharaoh
+m.bless(&quot;yaaqov&quot;, &quot;paro&quot;)
+
+# -------------------------- Gen.47.8 · HOW_MANY_YOUR_DAYS ------------------
+# וַיֹּאמֶר פַּרְעֹה אֶל־יַעֲקֹב כַּמָּה יְמֵי שְׁנֵי חַיֶּיךָ
+# &quot;[EN-AID] And Pharaoh said to Jacob: How many are the days of the years of
+# your life?&quot;
+m.step(&quot;Gen.47.8&quot;)
+# ‹כַּמָּה יְמֵי שְׁנֵי חַיֶּיךָ› (“like-what day years alive-you/your”) —
+# fact holds: kama-day-years-your-life
+m.fact(&quot;kama_yeme_shene_chayekha&quot;)
+
+# -------------------------- Gen.47.9 · FEW_AND_EVIL ------------------------
+# וַיֹּאמֶר יַעֲקֹב אֶל־פַּרְעֹה יְמֵי שְׁנֵי מְגוּרַי שְׁלֹשִׁים וּמְאַת
+# שָׁנָה מְעַט וְרָעִים הָיוּ יְמֵי שְׁנֵי חַיַּי וְלֹא הִשִּׂיגוּ אֶת־יְמֵי
+# שְׁנֵי חַיֵּי אֲבֹתַי בִּימֵי מְגוּרֵיהֶם
+# &quot;[EN-AID] And Jacob said to Pharaoh: The days of the years of my
+# sojournings are a hundred and thirty years; few and evil have been the
+# days of the years of my life, and they have not reached the days of the
+# years of the lives of my fathers in the days of their sojournings.&quot;
+m.step(&quot;Gen.47.9&quot;)
+# ‹מְעַט וְרָעִים הָיוּ יְמֵי שְׁנֵי חַיַּי› (“little and-bad be day years
+# alive-me/my”) — fact holds: hundred-and-bad-day-years-chayai
+m.fact(&quot;meat_ve_raim_yeme_shene_chayai&quot;)
+
+# -------------------------- Gen.47.10 · THE_SECOND_BLESSING ----------------
+# וַיְבָרֶךְ יַעֲקֹב אֶת־פַּרְעֹה וַיֵּצֵא מִלִּפְנֵי פַרְעֹה
+# &quot;[EN-AID] And Jacob blessed Pharaoh, and went out from before Pharaoh.&quot;
+m.step(&quot;Gen.47.10&quot;)
+# ‹וַיְבָרֶךְ יַעֲקֹב אֶת־פַּרְעֹה› (“and-bless Jacob obj-marker Pharaoh”) —
+# event: berakh — agent Jacob; theme Pharaoh
+m.event(&quot;berakh&quot;, agent=&quot;yaaqov&quot;, themes=[&quot;paro&quot;])
+
+# -------------------------- Gen.47.11 · SETTLED_IN_RAMESES -----------------
+# וַיּוֹשֵׁב יוֹסֵף אֶת־אָבִיו וְאֶת־אֶחָיו וַיִּתֵּן לָהֶם אֲחֻזָּה
+# בְּאֶרֶץ מִצְרַיִם בְּמֵיטַב הָאָרֶץ בְּאֶרֶץ רַעְמְסֵס כַּאֲשֶׁר צִוָּה
+# פַרְעֹה
+# &quot;[EN-AID] And Joseph settled his father and his brothers, and gave them a
+# holding in the land of Egypt, in the best of the land, in the land of
+# Rameses, as Pharaoh had commanded.&quot;
+m.step(&quot;Gen.47.11&quot;)
+# ‹בְּמֵיטַב הָאָרֶץ בְּאֶרֶץ רַעְמְסֵס› (“in-best-part the-earth in-earth
+# Raamses”) — fact holds: something-seized-in-earth-Raamses-kaasher-command-
+# Pharaoh
+m.fact(&quot;achuza_be_eretz_ramses_kaasher_tziva_faro&quot;)
+
+# -------------------------- Gen.47.12 · BREAD_FOR_THE_MOUTHS ---------------
+# וַיְכַלְכֵּל יוֹסֵף אֶת־אָבִיו וְאֶת־אֶחָיו וְאֵת כָּל־בֵּית אָבִיו לֶחֶם
+# לְפִי הַטָּף
+# &quot;[EN-AID] And Joseph sustained his father, and his brothers, and all his
+# father&#x27;s house, with bread, by the mouth of the little ones.&quot;
+m.step(&quot;Gen.47.12&quot;)
+# ‹לֶחֶם לְפִי הַטָּף› (“food to-mouth the-family”) — fact holds: and-keep-
+# in-food-lefi-hataf
+m.fact(&quot;va_yekhalkel_lechem_lefi_hataf&quot;)
+
+# -------------------------- Gen.47.13 · THE_LAND_LANGUISHES ----------------
+# וְלֶחֶם אֵין בְּכָל־הָאָרֶץ כִּי־כָבֵד הָרָעָב מְאֹד וַתֵּלַהּ אֶרֶץ
+# מִצְרַיִם וְאֶרֶץ כְּנַעַן מִפְּנֵי הָרָעָב
+# &quot;[EN-AID] And there was no bread in all the land, for the famine was very
+# heavy; and the land of Egypt and the land of Canaan languished before the
+# famine.&quot;
+m.step(&quot;Gen.47.13&quot;)
+# ‹וַתֵּלַהּ אֶרֶץ מִצְרַיִם וְאֶרֶץ כְּנַעַן מִפְּנֵי הָרָעָב› (“and-be-
+# rabid earth Egypt and-earth Canaan from-face the-hunger”) — fact holds:
+# and-telah-earth-Egypt-and-earth-Canaan
+m.fact(&quot;va_telah_eretz_mitzrayim_ve_eretz_kenaan&quot;)
+
+# -------------------------- Gen.47.14 · THE_SILVER_GATHERED ----------------
+# וַיְלַקֵּט יוֹסֵף אֶת־כָּל־הַכֶּסֶף הַנִּמְצָא בְאֶרֶץ־מִצְרַיִם וּבְאֶרֶץ
+# כְּנַעַן בַּשֶּׁבֶר אֲשֶׁר־הֵם שֹׁבְרִים וַיָּבֵא יוֹסֵף אֶת־הַכֶּסֶף
+# בֵּיתָה פַרְעֹה
+# &quot;[EN-AID] And Joseph gleaned all the silver found in the land of Egypt and
+# in the land of Canaan for the grain which they were buying; and Joseph
+# brought the silver into Pharaoh&#x27;s house.&quot;
+m.step(&quot;Gen.47.14&quot;)
+# ‹וַיָּבֵא יוֹסֵף אֶת־הַכֶּסֶף בֵּיתָה פַרְעֹה› (“and-come/bring Joseph
+# obj-marker the-silver house-ward Pharaoh”) — fact holds: all-the-silver-
+# beta-Pharaoh
+m.fact(&quot;kol_ha_kesef_beta_faro&quot;)
+
+# -------------------------- Gen.47.15 · GIVE_US_BREAD ----------------------
+# וַיִּתֹּם הַכֶּסֶף מֵאֶרֶץ מִצְרַיִם וּמֵאֶרֶץ כְּנַעַן וַיָּבֹאוּ
+# כָל־מִצְרַיִם אֶל־יוֹסֵף לֵאמֹר הָבָה־לָּנוּ לֶחֶם וְלָמָּה נָמוּת
+# נֶגְדֶּךָ כִּי אָפֵס כָּסֶף
+# &quot;[EN-AID] And the silver was spent from the land of Egypt and from the
+# land of Canaan; and all Egypt came to Joseph, saying: Give us bread — and
+# why should we die before you, for the silver is gone.&quot;
+m.step(&quot;Gen.47.15&quot;)
+# ‹הָבָה־לָּנוּ לֶחֶם› (“give-ward to-us/our food”) — Egypt speaks a demand
+# — LET: hava-lanu-food
+m.declare(&quot;mitzrayim&quot;, &quot;LET&quot;,
+          &quot;hava_lanu_lechem&quot;)
+
+# -------------------------- Gen.47.16 · GIVE_YOUR_LIVESTOCK ----------------
+# וַיֹּאמֶר יוֹסֵף הָבוּ מִקְנֵיכֶם וְאֶתְּנָה לָכֶם בְּמִקְנֵיכֶם אִם־אָפֵס
+# כָּסֶף
+# &quot;[EN-AID] And Joseph said: Give your livestock, and I will give you for
+# your livestock, if the silver is gone.&quot;
+m.step(&quot;Gen.47.16&quot;)
+# ‹הָבוּ מִקְנֵיכֶם וְאֶתְּנָה לָכֶם בְּמִקְנֵיכֶם› (“give something-bought-
+# you/your(pl) and-set to-you/your(pl) in-something-bought-you/your”) — fact
+# holds: give-miqnekhem-and-set-lakhem
+m.fact(&quot;havu_miqnekhem_ve_etna_lakhem&quot;)
+
+# -------------------------- Gen.47.17 · BREAD_FOR_THE_HERDS ----------------
+# וַיָּבִיאוּ אֶת־מִקְנֵיהֶם אֶל־יוֹסֵף וַיִּתֵּן לָהֶם יוֹסֵף לֶחֶם
+# בַּסּוּסִים וּבְמִקְנֵה הַצֹּאן וּבְמִקְנֵה הַבָּקָר וּבַחֲמֹרִים
+# וַיְנַהֲלֵם בַּלֶּחֶם בְּכָל־מִקְנֵהֶם בַּשָּׁנָה הַהִוא
+# &quot;[EN-AID] And they brought their livestock to Joseph; and Joseph gave them
+# bread for the horses, and for the livestock of the flocks, and for the
+# livestock of the herds, and for the donkeys; and he carried them with
+# bread for all their livestock that year.&quot;
+m.step(&quot;Gen.47.17&quot;)
+# ‹וַיְנַהֲלֵם בַּלֶּחֶם בְּכָל־מִקְנֵהֶם› (“and-run-with-asparkle-
+# them/their in-food in-all something-bought-them/their”) — demand settled
+# (popped from the queue): hava-lanu-food
+m.result(&quot;hava_lanu_lechem&quot;, tmark=&quot;t2&quot;)
+
+# -------------------------- Gen.47.18 · BODY_AND_GROUND --------------------
+# וַתִּתֹּם הַשָּׁנָה הַהִוא וַיָּבֹאוּ אֵלָיו בַּשָּׁנָה הַשֵּׁנִית
+# וַיֹּאמְרוּ לוֹ לֹא־נְכַחֵד מֵאֲדֹנִי כִּי אִם־תַּם הַכֶּסֶף וּמִקְנֵה
+# הַבְּהֵמָה אֶל־אֲדֹנִי לֹא נִשְׁאַר לִפְנֵי אֲדֹנִי בִּלְתִּי
+# אִם־גְּוִיָּתֵנוּ וְאַדְמָתֵנוּ
+# &quot;[EN-AID] And that year ended, and they came to him the second year and
+# said to him: We will not hide from my lord that the silver is spent, and
+# the herds of beasts are my lord&#x27;s; nothing is left before my lord but our
+# body and our ground.&quot;
+m.step(&quot;Gen.47.18&quot;)
+# ‹בִּלְתִּי אִם־גְּוִיָּתֵנוּ וְאַדְמָתֵנוּ› (“failure-of if body-us/our
+# and-ground-us/our”) — fact holds: failure-of-if-geviyatenu-and-admatenu
+m.fact(&quot;bilti_im_geviyatenu_ve_admatenu&quot;)
+
+# -------------------------- Gen.47.19 · BUY_US_GIVE_SEED -------------------
+# לָמָּה נָמוּת לְעֵינֶיךָ גַּם־אֲנַחְנוּ גַּם אַדְמָתֵנוּ קְנֵה־אֹתָנוּ
+# וְאֶת־אַדְמָתֵנוּ בַּלָּחֶם וְנִהְיֶה אֲנַחְנוּ וְאַדְמָתֵנוּ עֲבָדִים
+# לְפַרְעֹה וְתֶן־זֶרַע וְנִחְיֶה וְלֹא נָמוּת וְהָאֲדָמָה לֹא תֵשָׁם
+# &quot;[EN-AID] Why should we die before your eyes, both we and our ground too?
+# Buy us and our ground for bread, and we with our ground will be servants
+# to Pharaoh; and give seed, that we may live and not die, and the ground
+# not be desolate.&quot;
+m.step(&quot;Gen.47.19&quot;)
+# ‹קְנֵה־אֹתָנוּ וְאֶת־אַדְמָתֵנוּ בַּלָּחֶם› (“possessor obj-marker-us/our
+# and-obj-marker ground-us/our in-food”) — Egypt speaks a demand — LET:
+# possessor-otanu-and-set-seed
+m.declare(&quot;mitzrayim&quot;, &quot;LET&quot;,
+          &quot;qene_otanu_ve_ten_zera&quot;)
+
+# -------------------------- Gen.47.20 · THE_LAND_TO_PHARAOH ----------------
+# וַיִּקֶן יוֹסֵף אֶת־כָּל־אַדְמַת מִצְרַיִם לְפַרְעֹה כִּי־מָכְרוּ
+# מִצְרַיִם אִישׁ שָׂדֵהוּ כִּי־חָזַק עֲלֵהֶם הָרָעָב וַתְּהִי הָאָרֶץ
+# לְפַרְעֹה
+# &quot;[EN-AID] And Joseph bought all the ground of Egypt for Pharaoh, for Egypt
+# sold every man his field, for the famine was strong upon them; and the
+# land became Pharaoh&#x27;s.&quot;
+m.step(&quot;Gen.47.20&quot;)
+# ‹וַיִּקֶן יוֹסֵף אֶת־כָּל־אַדְמַת מִצְרַיִם לְפַרְעֹה› (“and-erect Joseph
+# obj-marker all ground Egypt to-Pharaoh”) — fact holds: and-be-the-earth-
+# to-Pharaoh
+m.fact(&quot;va_tehi_ha_aretz_le_faro&quot;)
+
+# -------------------------- Gen.47.21 · THE_PEOPLE_TO_CITIES ---------------
+# וְאֶת־הָעָם הֶעֱבִיר אֹתוֹ לֶעָרִים מִקְצֵה גְבוּל־מִצְרַיִם וְעַד־קָצֵהוּ
+# &quot;[EN-AID] And the people — he moved them to the cities, from one end of
+# the border of Egypt to its other end.&quot;
+m.step(&quot;Gen.47.21&quot;)
+# ‹וְאֶת־הָעָם הֶעֱבִיר אֹתוֹ לֶעָרִים› (“and-obj-marker the-people pass-
+# over obj-marker-him/its to-city”) — fact holds: pass-over-it-to-city
+m.fact(&quot;heevir_oto_le_arim&quot;)
+
+# -------------------------- Gen.47.22 · THE_PRIESTS_EXEMPT -----------------
+# רַק אַדְמַת הַכֹּהֲנִים לֹא קָנָה כִּי חֹק לַכֹּהֲנִים מֵאֵת פַּרְעֹה
+# וְאָכְלוּ אֶת־חֻקָּם אֲשֶׁר נָתַן לָהֶם פַּרְעֹה עַל־כֵּן לֹא מָכְרוּ
+# אֶת־אַדְמָתָם
+# &quot;[EN-AID] Only the ground of the priests he did not buy, for the priests
+# had a statute-portion from Pharaoh, and they ate their statute-portion
+# which Pharaoh gave them; therefore they did not sell their ground.&quot;
+m.step(&quot;Gen.47.22&quot;)
+# ‹רַק אַדְמַת הַכֹּהֲנִים לֹא קָנָה› (“leanness ground the-priest not
+# possessor”) — fact holds: leanness-ground-the-priest-not-possessor
+m.fact(&quot;raq_admat_ha_kohanim_lo_qana&quot;)
+
+# -------------------------- Gen.47.23 · HERE_IS_SEED -----------------------
+# וַיֹּאמֶר יוֹסֵף אֶל־הָעָם הֵן קָנִיתִי אֶתְכֶם הַיּוֹם וְאֶת־אַדְמַתְכֶם
+# לְפַרְעֹה הֵא־לָכֶם זֶרַע וּזְרַעְתֶּם אֶת־הָאֲדָמָה
+# &quot;[EN-AID] And Joseph said to the people: Behold, I have bought you this
+# day and your ground for Pharaoh; here is seed for you — and you shall sow
+# the ground.&quot;
+m.step(&quot;Gen.47.23&quot;)
+# ‹הֵא־לָכֶם זֶרַע› (“lo! to-you/your(pl) seed”) — demand settled (popped
+# from the queue): possessor-otanu-and-set-seed
+m.result(&quot;qene_otanu_ve_ten_zera&quot;, tmark=&quot;t3&quot;)
+
+# -------------------------- Gen.47.24 · THE_FIFTH_NAMED --------------------
+# וְהָיָה בַּתְּבוּאֹת וּנְתַתֶּם חֲמִישִׁית לְפַרְעֹה וְאַרְבַּע הַיָּדֹת
+# יִהְיֶה לָכֶם לְזֶרַע הַשָּׂדֶה וּלְאָכְלְכֶם וְלַאֲשֶׁר בְּבָתֵּיכֶם
+# וְלֶאֱכֹל לְטַפְּכֶם
+# &quot;[EN-AID] And it shall be at the ingatherings, that you shall give a fifth
+# to Pharaoh; and four hands shall be yours: for seed of the field, and for
+# your food, and for those in your houses, and for your little ones to eat.&quot;
+m.step(&quot;Gen.47.24&quot;)
+# ‹וּנְתַתֶּם חֲמִישִׁית לְפַרְעֹה› (“and-set fifth to-Pharaoh”) — fact
+# holds: and-set-fifth-to-Pharaoh
+m.fact(&quot;u_netatem_chamishit_le_faro&quot;)
+
+# -------------------------- Gen.47.25 · YOU_HAVE_KEPT_US_ALIVE -------------
+# וַיֹּאמְרוּ הֶחֱיִתָנוּ נִמְצָא־חֵן בְּעֵינֵי אֲדֹנִי וְהָיִינוּ עֲבָדִים
+# לְפַרְעֹה
+# &quot;[EN-AID] And they said: You have kept us alive; let us find favor in the
+# eyes of my lord, and we will be servants to Pharaoh.&quot;
+m.step(&quot;Gen.47.25&quot;)
+# ‹וַיֹּאמְרוּ הֶחֱיִתָנוּ› (“and-say live-us/our”) — fact holds:
+# hecheyitanu-find-graciousness
+m.fact(&quot;hecheyitanu_nimtza_chen&quot;)
+
+# -------------------------- Gen.47.26 · THE_FIFTH_A_STATUTE ----------------
+# וַיָּשֶׂם אֹתָהּ יוֹסֵף לְחֹק עַד־הַיּוֹם הַזֶּה עַל־אַדְמַת מִצְרַיִם
+# לְפַרְעֹה לַחֹמֶשׁ רַק אַדְמַת הַכֹּהֲנִים לְבַדָּם לֹא הָיְתָה לְפַרְעֹה
+# &quot;[EN-AID] And Joseph set it as a statute to this day upon the ground of
+# Egypt: to Pharaoh a fifth; only the ground of the priests alone did not
+# become Pharaoh&#x27;s.&quot;
+m.step(&quot;Gen.47.26&quot;)
+# ‹וַיָּשֶׂם אֹתָהּ יוֹסֵף לְחֹק עַד־הַיּוֹם הַזֶּה עַל־אַדְמַת מִצְרַיִם
+# לְפַרְעֹה לַחֹמֶשׁ› (“and-put/set obj-marker-her/its Joseph to-enactment
+# until the-day the-this over ground Egypt to-Pharaoh to-fifth-tax”) —
+m.statute(&quot;BIND&quot;, &quot;le_faro_la_chomesh&quot;)
+
+# -------------------------- Gen.47.27 · FRUITFUL_IN_GOSHEN -----------------
+# וַיֵּשֶׁב יִשְׂרָאֵל בְּאֶרֶץ מִצְרַיִם בְּאֶרֶץ גֹּשֶׁן וַיֵּאָחֲזוּ בָהּ
+# וַיִּפְרוּ וַיִּרְבּוּ מְאֹד
+# &quot;[EN-AID] And Israel dwelt in the land of Egypt, in the land of Goshen;
+# and they took holding in it, and were fruitful, and multiplied greatly.&quot;
+m.step(&quot;Gen.47.27&quot;)
+# ‹וַיֵּאָחֲזוּ בָהּ וַיִּפְרוּ וַיִּרְבּוּ מְאֹד› (“and-seize in-her/its
+# and-be-fruitful and-multiply very”) — fact holds: and-be-fruitful-and-
+# multiply-very
+m.fact(&quot;va_yifru_va_yirbu_meod&quot;)
+
+# -------------------------- Gen.47.28 · SEVENTEEN_YEARS --------------------
+# וַיְחִי יַעֲקֹב בְּאֶרֶץ מִצְרַיִם שְׁבַע עֶשְׂרֵה שָׁנָה וַיְהִי
+# יְמֵי־יַעֲקֹב שְׁנֵי חַיָּיו שֶׁבַע שָׁנִים וְאַרְבָּעִים וּמְאַת שָׁנָה
+# &quot;[EN-AID] And Jacob lived in the land of Egypt seventeen years; and the
+# days of Jacob, the years of his life, were seven years and forty and a
+# hundred years.&quot;
+m.step(&quot;Gen.47.28&quot;)
+# ‹וַיְחִי יַעֲקֹב בְּאֶרֶץ מִצְרַיִם שְׁבַע עֶשְׂרֵה שָׁנָה› (“and-live
+# Jacob in-earth Egypt seven -teen years”) — fact holds: day-Jacob-seven-
+# forty-and-hundred-years
+m.fact(&quot;yeme_yaaqov_sheva_arbaim_u_meat_shana&quot;)
+
+# -------------------------- Gen.47.29 · THE_THIGH_AND_THE_BAN --------------
+# וַיִּקְרְבוּ יְמֵי־יִשְׂרָאֵל לָמוּת וַיִּקְרָא לִבְנוֹ לְיוֹסֵף וַיֹּאמֶר
+# לוֹ אִם־נָא מָצָאתִי חֵן בְּעֵינֶיךָ שִׂים־נָא יָדְךָ תַּחַת יְרֵכִי
+# וְעָשִׂיתָ עִמָּדִי חֶסֶד וֶאֱמֶת אַל־נָא תִקְבְּרֵנִי בְּמִצְרָיִם
+# &quot;[EN-AID] And the days of Israel drew near to die; and he called his son
+# Joseph, and said to him: If, pray, I have found favor in your eyes, put,
+# pray, your hand under my thigh, and do with me kindness and truth: do not,
+# pray, bury me in Egypt.&quot;
+m.step(&quot;Gen.47.29&quot;)
+# ‹אַל־נָא תִקְבְּרֵנִי בְּמִצְרָיִם› (“do-not please inter-me/my in-Egypt”)
+# — Israel speaks a demand — LET-NOT: over-please-tiqbreni-in-Egypt
+m.declare(&quot;yisrael&quot;, &quot;LET-NOT&quot;,
+          &quot;al_na_tiqbreni_be_mitzrayim&quot;)
+
+# -------------------------- Gen.47.30 · CARRY_ME_AND_BURY_ME ---------------
+# וְשָׁכַבְתִּי עִם־אֲבֹתַי וּנְשָׂאתַנִי מִמִּצְרַיִם וּקְבַרְתַּנִי
+# בִּקְבֻרָתָם וַיֹּאמַר אָנֹכִי אֶעֱשֶׂה כִדְבָרֶךָ
+# &quot;[EN-AID] And I will lie with my fathers, and you shall carry me from
+# Egypt, and bury me in their burying-place. And he said: I will do
+# according to your word.&quot;
+m.step(&quot;Gen.47.30&quot;)
+# ‹וּנְשָׂאתַנִי מִמִּצְרַיִם וּקְבַרְתַּנִי בִּקְבֻרָתָם› (“and-lift/carry-
+# me/my from-Egypt and-inter-me/my in-sepulture-them/their”) — Israel speaks
+# a demand — LET: and-qevartani-bi-qvuratam
+m.declare(&quot;yisrael&quot;, &quot;LET&quot;,
+          &quot;u_qevartani_bi_qvuratam&quot;)
+
+# -------------------------- Gen.47.31 · SWEAR_TO_ME ------------------------
+# וַיֹּאמֶר הִשָּׁבְעָה לִי וַיִּשָּׁבַע לוֹ וַיִּשְׁתַּחוּ יִשְׂרָאֵל
+# עַל־רֹאשׁ הַמִּטָּה
+# &quot;[EN-AID] And he said: Swear to me. And he swore to him. And Israel bowed
+# upon the head of the bed.&quot;
+m.step(&quot;Gen.47.31&quot;)
+# ‹וַיֹּאמֶר הִשָּׁבְעָה לִי› (“and-say swear-ward to-me/my”) — Israel
+# speaks a demand — LET: hishava-to-me
+m.declare(&quot;yisrael&quot;, &quot;LET&quot;,
+          &quot;hishava_li&quot;)
+# ‹וַיִּשָּׁבַע לוֹ› (“and-swear to-him/its”) — demand settled (popped from
+# the queue): hishava-to-me
+m.result(&quot;hishava_li&quot;, tmark=&quot;t4&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;al_na_tiqbreni_be_mitzrayim&#x27;, &#x27;u_qevartani_bi_qvuratam&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 6
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;va_yaged_le_faro_bau_me_eretz_kenaan&#x27;, &#x27;chamisha_anashim_lifne_faro&#x27;, &#x27;roe_tzon_avadekha_gam_anachnu_gam_avotenu&#x27;, &#x27;avikha_ve_achekha_bau_elekha&#x27;, &#x27;kama_yeme_shene_chayekha&#x27;, &#x27;meat_ve_raim_yeme_shene_chayai&#x27;, &#x27;achuza_be_eretz_ramses_kaasher_tziva_faro&#x27;, &#x27;va_yekhalkel_lechem_lefi_hataf&#x27;, &#x27;va_telah_eretz_mitzrayim_ve_eretz_kenaan&#x27;, &#x27;kol_ha_kesef_beta_faro&#x27;, &#x27;havu_miqnekhem_ve_etna_lakhem&#x27;, &#x27;bilti_im_geviyatenu_ve_admatenu&#x27;, &#x27;va_tehi_ha_aretz_le_faro&#x27;, &#x27;heevir_oto_le_arim&#x27;, &#x27;raq_admat_ha_kohanim_lo_qana&#x27;, &#x27;u_netatem_chamishit_le_faro&#x27;, &#x27;hecheyitanu_nimtza_chen&#x27;, &#x27;statute: BIND(le_faro_la_chomesh)&#x27;, &#x27;va_yifru_va_yirbu_meod&#x27;, &#x27;yeme_yaaqov_sheva_arbaim_u_meat_shana&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 13
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

@@ -1,0 +1,704 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_09_helper_woman_first_speech — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_09_helper_woman_first_speech?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Eden II: not-good, the helper, the woman, first human speech (2:18-25) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_09_helper_woman_first_speech</b> · Genesis 2:18-25 · derive logic_derived_v1 · phase C-9</div>
+<div class="meta"><a href="../#Gen/2/18">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">לֹא־טוֹב — עֵזֶר כְּנֶגְדּוֹ וְהָאִשָּׁה</span> · <i>lo-tov — ezer kenegdo ve-ha-ishah</i> · &#x27;not good&#x27; — a helper corresponding to him, and the woman</p>
+<div class="note">Derived 2026-08-01 at owner&#x27;s order (&quot;go derive gen 9&quot;), directly after the gen_08 freeze — book order continuing. Calibrated coverage (charter 4.1): Onkelos read Tier-A at derive time (8 sequential per-verse fetches, Data/FETCHLOG.md); trees pulled from the DB&#x27;s stored tree_json (canonical source — parser CLI re-run dropped per the owner&#x27;s process review); prior triage anchor found: Yalkut Shimoni 22:9 (day-1 row 241) counts 2:18 IN the ten-utterances census dissent. FIFTH PROSPECTIVE MIDDOT RUN (logic/middot_scan/ WATCHLIST_gen09_prospective_2026-08-01.md): cache holds ZERO sources anchored to 2:18-25 — third tripwire span in a row; Eden chain- primaries (BR 17; Yevamot 63a; Berakhot 61a side-vs-tail; Sanhedrin 58a on 2:24 — whose reading already surfaces in Onkelos&#x27;s &#x27;bed-chamber&#x27; rendering) enter at triage. Interpreter vocabulary needed at freeze: TEST verdict FAIL (2:18 lo-tov — Onkelos renders with day-6&#x27;s own verdict word negated: la takkin); PATTERN operator (2:24 al-ken etiology — a standing generalization in law grammar, no trigger clause: not a HANDLER); TESTS-FAIL checker pattern — all prototyped in the pre-flight harness first (repo untouched at draft). FROZEN 2026-08-01 on owner order (&quot;freeze gen_09 and gen_10 and commit and push&quot;): the three extensions folded into run_unit.py, the unit re-verified green through the real interpreter, all prior frozen units regression-run green.</div>
+<div class="note">Logic-derived v1: v3 ta&#x27;amim trees (from DB tree_json) -&gt; leaf role frames from OSHB morph -&gt; operator lines citing TIR rules -&gt; machine-state scenarios. Machine tokens apostrophe-free and underscore-joined (ezer_kenegdo, heyot_ha_adam_levado, basar_echad).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> AMENDED 2026-08-08 (standing owner order, gen_08 precedent: &quot;one source of truth&quot;) — retro oral audit folded in; the FIRST fully local-first audit: ZERO web fetches, all sources read verbatim from the Data/sefaria_export/ mirror via export_texts/export_links. Machine layer UNTOUCHED (pure insertion). Manifest = logic/oral_audit/manifests/gen_09_helper_woman_first_speech_claims.json; verifier result 9 VERIFIED / 0 FAILED / 2 UNCHECKABLE. Sources: Kitzur Baal HaTurim (the short commentary of Masorah counts and gematria, letter-arithmetic; Masorah = the tradition&#x27;s spelling-and-count notes) · Minchat Shai (the Masoretic spelling treatise) · Rashi with his Talmud loci · the local citation graph. CROWNS (DB-verified; ids in the manifest): [G09-01] va-yisgor (&quot;and He closed&quot;) occurs exactly TWICE in the TORAH — the flesh closed over Adam&#x27;s side (2:21) and the ark door closed behind Noah (7:16): the Torah&#x27;s only two closings, both divine, identical consonants; the Kitzur&#x27;s Masorah pair is exactly these two (later-Prophets human closings lie outside the Torah instrument). [G09-02] u-le-adam (&quot;and for the man&quot;) — two Torah tokens: &quot;no helper found&quot; (2:20) and the sentencing &quot;because you listened to the voice of your wife&quot; (3:17) (Kitzur; third token Eccl 2:21). [G09-03] va-yapel (&quot;and He caused to fall&quot;) — two Torah tokens: the deep sleep (2:21) and the manslaughter fall (Num 35:23) (Kitzur; third Ps 78:28). [G09-04/05] va-yevie-ha (&quot;and He/he brought her&quot;) — exactly two Torah tokens: the woman brought to the man (2:22) and Rebekah brought into Sarah&#x27;s tent (24:67) — Adam&#x27;s bride and Isaac&#x27;s bride carried by the same word, BOTH written defective, missing the yod (Kitzur; Minchat Shai: &quot;two, lacking yod; its fellow — Isaac into the tent&quot;). [G09-06] le-zot (&quot;to THIS one shall be called woman&quot;) is Torah-unique to 2:23 (Masorah pair: Job 37:1). [G09-07/08] the span&#x27;s closing spelling pair: arumim (&quot;naked&quot;, 2:25) written FULL with the vav (Masorah pair Job 22:6 — the full spelling with dagesh, the dot marking a doubled letter, marks the naked-class against the cunning-class arum of 3:1, Minchat Shai) while yitboshashu (&quot;they were not ashamed&quot;) is written DEFECTIVE, no second vav — the Masoretic letter-side of this unit&#x27;s naked/cunning bridge and its claim that boosh (the shame-root) debuts negated. [G09-09] this unit&#x27;s own note that the side-noun recurs x19 in the sanctuary is Rashi&#x27;s cross-reference (Exod 26:20) completed by count: tzela (&quot;side&quot;) has 21 Torah tokens — the two Eden tokens (2:21 the taking, 2:22 the building of the woman) and nineteen ark/tabernacle sides: outside Eden, EVERY Torah tzela is a sanctuary side — the woman and the sanctuary are the only things built from one (cf. Eruvin 18a&#x27;s side-or-face dispute, filed). INSTRUMENT GAPS (UNCHECKABLE, filed): [G09-10] Minchat Shai reads a paseq (separator bar) between Elohim (&quot;God&quot;) and tardemah (&quot;deep sleep&quot;) &quot;for the honor of the Name&quot; — SNAPSHOT encodes zero paseq marks corpus-wide (discovered this audit; affects the whole claim class); [G09-11] the ha-tzela pointing dispute (qamatz vs patach — the two a-vowel signs — across manuscripts; variants not encoded). MINED-ONLY CLAIMS (no chain attestation in sources read, NO conflicts — stand as reviewed): banah (&quot;build&quot;) first token at 2:22; matza (&quot;find&quot;) first token debuting in a failed search; ish (&quot;man&quot;) first token inside the woman-etymology; av (&quot;father&quot;) and em (&quot;mother&quot;) debuting at 2:24; the first negative verdict (lo-tov, &quot;not good&quot;); the first human speech; the bulk-naming registry non-write. READINGS (named-only, unclaimed, triage law): Sanhedrin 57b-58a derives the Noachide forbidden-relations phrase-by-phrase from 2:24 — attesting this unit&#x27;s PATTERN (&quot;therefore&quot;-generalization) read as LAW GRAMMAR, the second command-verse legal derivation after gen_08&#x27;s Sanhedrin 56b; Yevamot 63a (worthy = a help, unworthy = opposed; the failed search); Eruvin 18a (two-faces); Berakhot 61a (built like a storehouse; He braided her hair); Sanhedrin 39a (asleep so she not be despised); Niddah 45b (va-yiven, &quot;and He built,&quot; read as binah, &quot;understanding,&quot; given the woman in extra measure); Bereshit Rabbah 17-18 (28 links on the span); the ish/isha (&quot;man&quot;/&quot;woman&quot;) sound-match as proof of the Holy Tongue at creation (Rashi; BR 18:4); va-yevie-ha letter-sum 24 = the twenty-four bridal adornments (Kitzur and the Zohar, the mystical commentary, via Minchat Shai). Full record: logic/oral_audit/AUDIT_gen_09_2026-08-08.md (this yaml is the source of truth).</div>
+<div class="meta">confidence: structure tested; operator readings tested-per-TIR; intent hypothesis</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>Eden II (2:18-25): opens on a fresh divine speech (va-yomer, 2:18 — the companion problem) and closes on the span&#x27;s own closing state (2:25, the two naked and unashamed), whose last content word is the pun-bridge into 3:1 (arumim/arum — one Torah token EACH, DB-verified). Inside: the negative verdict, the animals formed and brought for naming, the delegated registry, the failed search, the sleep-surgery, the build, the presentation, the first human speech (the recognition poem + the passive naming), and the narrator&#x27;s first al-ken (&quot;therefore&quot;) generalization. The chain&#x27;s census dissent (Yalkut Shimoni 22:9, prior triage row) counts 2:18 among the ten creation utterances — the chain&#x27;s own bracket includes this opening in the week&#x27;s speech series (dual-track).</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Hebrew source + trees</td><td>All 8 verses from the DB&#x27;s stored tree_json (rule set v3, status unique, pure_binary true — the canonical store; ascii rendered 2026-08-01). Tree facts: 2:18 [verdict: not-good ... ALONE | repair plan: I-will-make]; 2:20 [the bulk naming succeeds over three classes | the search fails: no helper]; 2:21 [sleep falls — the etnachta sits ON va-yishan &#x27;and he slept&#x27; | the surgery: took one side + closed flesh]; 2:22 [built the side into a woman | brought her to the human]; 2:23 — the FIRST HUMAN SPEECH opens with accent furniture the parser itself labels rare-in-prose (zinor + segol): the accent register shifts toward poetry exactly where the human first speaks; [recognition: bone-of-my-bones, flesh-of-my-flesh | naming: to-this shall-be-called ishah, for from ish was taken this]; 2:24 [leaves father and mother | cleaves to his wife, one flesh].</td><td>tested</td></tr>
+<tr><td><b>C</b></td><td>Segment structure</td><td>Verb morphology (#IMPOSED OSHB, DB-verified 2026-08-01): 2:18 va-yomer + LO-TOV (the verdict word negated — say-mode, against the week&#x27;s see-mode va-yar ki-tov) + E&#x27;ESEH (Vqi1cs — the 1cs volitive: the CMD-US family&#x27;s SINGULAR member, gen_06&#x27;s na&#x27;aseh being the plural; coded imperfect =&gt; TIR-028&#x27;s mandatory ?). 2:19 va-yitzer with SINGLE yod (the animals) — the human&#x27;s 2:7 token is the DOUBLE-yod one: the two-formations contrast is human-vs-animal (he_plain DB-verified both); li-reot (&#x27;to SEE&#x27;) — the week&#x27;s test verb as purpose infinitive with the HUMAN as performer; the ratification is nominal and standing (hu shemo, &#x27;THAT is its name&#x27;). 2:20 va-yiqra ha-adam — the corpus&#x27;s first creature-agent main-line event; lo matza (&#x27;did not find&#x27; — matza&#x27;s first token, debuting in a FAILED search). 2:21 four events: cast-sleep (tardemah — 2 Torah tokens, the other is Abram&#x27;s covenant sleep, Gen 15:12), slept, took one tzela (&#x27;side/rib&#x27; — every other Torah token is TABERNACLE architecture, x19), and VA-YISGOR (&#x27;and He CLOSED flesh&#x27;) — sagar&#x27;s first corpus token: the root of the ark-shutting (7:16) and Lev 13&#x27;s quarantine (Onkelos named the disease segiru by THIS root). 2:22 VA-YIVEN (&#x27;and He BUILT&#x27;) — banah&#x27;s first token, the third build verb (bara/yatzar/banah); the demand pops here: spec said MAKE (e&#x27;eseh), delivery says BUILD — spec-delta, machine-flagged. 2:23 va-yomer HA-ADAM — first human speech; the naming inside it is NIPHAL PASSIVE (yiqare, &#x27;shall-BE-called&#x27;, TIR-032) against his ACTIVE naming of the animals; ish&#x27;s first token sits INSIDE the derivation clause (ki me-ish lukocha-zot). 2:24 AL-KEN (&#x27;therefore&#x27;) + imperfect (yaazov) + TWO WEQATALS (ve-davak, ve-hayu — TIR-029): the narrator&#x27;s generalization runs on the law codes&#x27; own verb chain; av (&#x27;father&#x27;) and em (&#x27;mother&#x27;) debut in the verse about LEAVING them. 2:25 closing state: arumim (&#x27;naked&#x27;) + lo yitboshashu (&#x27;not ashamed&#x27; — boosh&#x27;s first token, debuting negated).</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Predicates &amp; outcomes</td><td>The arc: verdict (not-good: alone) -&gt; plan (a helper &#x27;corresponding to him&#x27; — kenegdo [OPEN]: the two-way reading is the chain&#x27;s, Yevamot 63a, named-only) -&gt; first attempt space (the animals formed, brought, and named — the delegation ratified standing, but &#x27;for a human he found no helper corresponding&#x27;) -&gt; the operation (sleep; one side taken; flesh closed) -&gt; the build (the side becomes a woman; she is BROUGHT to the human — the same bringing verb as the animals at 2:19: the parallel is the letter&#x27;s) -&gt; recognition (&#x27;THIS TIME&#x27;: zot ha-paam — the phrase implies prior rounds [OPEN, BR 17:4 named-only]; bone-of-my- bones) -&gt; the passive naming with its derivation (ishah from ish — the corpus&#x27;s first etymology) -&gt; the narrator&#x27;s THEREFORE (leave, cleave, one flesh — standing pattern) -&gt; the closing state (naked, unashamed — loaded for 3:1).</td><td>tested</td></tr>
+<tr><td><b>E</b></td><td>Logic format choice</td><td>Operator lines; NO ledger row (no commit — the ledger stays empty; gen_08&#x27;s open demands and armed handler are untouched by this span: the debt carries forward). NEW at 2:18: TEST with verdict FAIL — the week&#x27;s instrument firing negative (Onkelos warrant: la TAKKIN, day-6&#x27;s verdict word negated); the FAIL verdict is an interpreter extension (h_test knew only PASS). DECLARE CMD-US?(make(ezer_kenegdo, le_adam)) — the 1cs volitive joins gen_06&#x27;s 1cp under the same mood family and the same mandatory ?. The demand POPS at 2:22 via RESULT — the execution-as-receipt class the runtime model documented at Miriam (command answered by narrative execution), with NOTE_SPEC_DELTA recording the verb swap (asah demanded, banah delivered). 2:20&#x27;s bulk naming: EVENT only — the letter withholds every name value (the corpus&#x27;s first bulk registry write executes UNLOGGED; the machine writes nothing rather than invent values). 2:23&#x27;s naming DOES log: NAME ishah -&gt; ishah (the kind-word is the name; the derivation clause is the en&#x27;s content) — the unit&#x27;s only REGISTRY write. 2:24: NEW operator PATTERN — a standing WORLD fact for the narrator&#x27;s al-ken generalization: law grammar with NO trigger clause (not a HANDLER: nothing fires it; it holds). 2:25: closing state facts. Flags expected: read_before_install x3 (adam, adamah, behemah — the livestock class is NAMED in this span but never formed in it: the seam between the accounts, machine-visible), spec_delta x1.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Bilingual logic objects</td><td>Every operator line carries he + he_translit + en. Machine tokens apostrophe-free: ezer_kenegdo, heyot_ha_adam_levado, chayat_ha_sadeh, of_ha_shamayim, basar_echad, lo_yitboshashu.</td><td>established</td></tr>
+<tr><td><b>G</b></td><td>Oral (named only) + Tier-A translation check</td><td>Prior triage anchor (verified, day-1 ledger row 241): Yalkut Shimoni 22:9 — the ten-utterances census DISSENT includes 2:18: part of the chain counts this unit&#x27;s opening verdict-speech among the creation utterances. Named but NOT read (cache: zero sources for the span; gen_09 Tier-A queue): Bereshit Rabbah 17 (the helper dossier; 17:4 — the naming contest and zot ha-paam&#x27;s prior rounds); Bavli Yevamot 63a (ezer KENEGDO two-way: &#x27;worthy — a help; unworthy — against him&#x27;); Bavli Berakhot 61a (tzela: side vs tail vs two-faces — the same page as the double-yod dossier); Bavli Sanhedrin 58a (2:24 as Noachide sexual law); Bavli Ketubot 8a (one formation or two — the wedding blessings&#x27; own dispute); Pirkei DeRabbi Eliezer 12 (the wedding in the garden). Tier-A Onkelos read at derive time (8 fetches, FETCHLOG 2026-08-01): lo-tov -&gt; la TAKKIN (&#x27;not well-ordered&#x27; — day 6&#x27;s verdict word negated: the translation runs the week&#x27;s instrument here, warrant for TEST-FAIL); ezer kenegdo -&gt; semakh le-kivleh (&#x27;a SUPPORT corresponding&#x27;); both formation verbs -&gt; u-vra (the yod pair leveled, twice); tardemah -&gt; plain shinta (&#x27;sleep&#x27;); va-yisgor -&gt; u-MLEI (&#x27;and FILLED&#x27; — the translation AVOIDS the shut-root at the healing closure, the very root it adopted for the disease at Lev 13); ki me-ish -&gt; arei mi-BAALA (&#x27;from her HUSBAND&#x27; — the ish/ishah pun untranslatable, replaced by the relationship word; 3:16&#x27;s shadow); 2:24 -&gt; &#x27;a man leaves the BED-CHAMBER (beit mishkevei) of his father and mother&#x27; — the translation is already halakhic exegesis (the Sanhedrin 58a dossier surfacing in Tier-A); lo yitboshashu -&gt; la mitkalmin (&#x27;not disgraced&#x27;).</td><td>tested</td></tr>
+<tr><td><b>H</b></td><td>Scenarios</td><td>S1 the negative verdict + the pushed plan (TESTS += FAIL — new checker; CMD-US? open; adam flagged presupposed). S2 the animals installed + the delegation ratified standing. S3 the bulk naming leaves the REGISTRY untouched (values unlogged) and the search fails; behemah flagged (named-in-span, never formed-in-span). S4 the surgery installs nothing (WORLD unchanged). S5 THE POP: SPECS empty after va-yiven — the in-span receipt arc — with the spec-delta flagged (make-&gt;build). S6 the only registry write (ishah). S7 the standing pattern fact. S8 the closing state + LEDGER stays EMPTY. S9_negative re-runs the CMD-US? contract (the 1cs member inherits the ? guard); S10_negative flag-never-block.</td><td>tested</td></tr>
+<tr><td><b>I</b></td><td>English leakage review</td><td>Operators derive from morph codes (Vqw/Vhw wayyiqtol spine; Vqi1cs volitive; VNi3ms niphal passive naming TIR-032; Vqq weqatals TIR-029; Vqc purpose infinitives TIR-030; To markers TIR-014) and DB censuses run BEFORE drafting (first tokens: ish, ishah, av, em, banah, basar, sagar, matza, paam, boosh; the single-vs-double yod pair; tzela&#x27;s Tabernacle exclusivity; tardemah&#x27;s two covenant sleeps; ezer&#x27;s divine-title trail; davak&#x27;s covenant trail; the one-token pun pair). The FAIL verdict rests on the letter (lo + the week&#x27;s own oracle word) with the Tier-A warrant recorded; kenegdo, zot ha-paam, and the two-accounts seam stay [OPEN] with chain dossiers named.</td><td>established</td></tr>
+<tr><td><b>J</b></td><td>Pre-flight + freeze gate</td><td>Pre-flight 2026-08-01: scratchpad harness with THREE injected prototypes (repo run_unit.py untouched): (1) h_test extended to verdicts PASS|FAIL; (2) checker pattern &quot;TESTS += FAIL(x, y)&quot;; (3) PATTERN operator — standing WORLD fact, notation &#x27;PATTERN(p)&#x27;. All scenarios green in the harness. FROZEN 2026-08-01 on owner order: the three extensions folded into run_unit.py, unit re-verified green through the real interpreter, all prior frozen units regression-run green. Narrative (ASK FIRST) and triage remain owner-gated. Changes require a new derive pass, not silent edits.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_2_18 · Gen.2.18 · <span class='expr'>VERDICT_FAIL_AND_PLAN</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֱלֹהִים לֹא־טוֹב הֱיוֹת הָאָדָם לְבַדּוֹ אֶעֱשֶׂה־לּוֹ עֵזֶר כְּנֶגְדּוֹ</span> · <i>va-yomer YHWH Elohim lo-tov heyot ha-adam levado e&#x27;eseh-lo ezer kenegdo</i> · [EN-AID/JPS] And the LORD God said: &#x27;It is not good that the man should be alone; I will make him a help meet for him.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר יהוה אלהים לא טוב היות האדם לבדו</span> · <i>va-yomer YHWH Elohim lo-tov heyot ha-adam levado</i> · the verdict: NOT GOOD is the human&#x27;s being ALONE (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">אעשה לו עזר כנגדו</span> · <i>e&#x27;eseh-lo ezer kenegdo</i> · the repair plan: I will make him a helper corresponding</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>TEST</td><td><span class="expr">TESTS += FAIL(tov, heyot_ha_adam_levado)</span><br><span class="gloss">= TESTS += FAIL(good, the-human-being-alone)</span><br>THE INSTRUMENT FIRES NEGATIVE — the corpus&#x27;s first FAIL: the week&#x27;s verdict word (tov), negated, over the state &#x27;the-human&#x27;s-being-alone&#x27;. Mode shift recorded: the week tested by PERCEPTION (va-yar ki-tov, &#x27;He SAW that it was good&#x27;); this verdict arrives in SPEECH (va-yomer). Tier-A warrant: Onkelos renders la TAKKIN (&#x27;not WELL-ORDERED&#x27;) — the SAME Aramaic word it used for day 6&#x27;s tov me&#x27;od (&#x27;very good&#x27; -&gt; takin lachada): the translation itself runs the week&#x27;s instrument here. The chain&#x27;s census dissent (Yalkut Shimoni 22:9, prior triage row 241) counts this speech among the ten creation utterances — dual-track. INTERPRETER NOTE: the TEST operator knew only PASS through nine units; the FAIL verdict is this unit&#x27;s extension.
+</td><td><span class="he">לֹא־טוֹב הֱיוֹת הָאָדָם לְבַדּוֹ</span> · <i>lo-tov heyot ha-adam levado</i><br><span class="gloss">= not-good being human alone</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH_Elohim, CMD-US?(make(ezer_kenegdo, le_adam)))</span><br><span class="gloss">= DECLARE(the-LORD-God, CMD-US?(make(helper-corresponding-to-him, to-human)))</span><br>The repair plan as a SELF-DIRECTIVE demand: e&#x27;eseh (&#x27;I will MAKE&#x27;) — 1cs volitive, the CMD-US mood family&#x27;s SINGULAR member (gen_06&#x27;s na&#x27;aseh, &#x27;let US make&#x27;, was the plural); coded imperfect, so TIR-028&#x27;s ? is mandatory — form alone cannot split resolve/forecast. The demand: make(ezer_kenegdo) — a helper KENEGDO (&#x27;corresponding to him&#x27; / &#x27;over against him&#x27;) — [OPEN]: the two-way force of the preposition is the chain&#x27;s own reading (Yevamot 63a, named-only). ezer (&#x27;helper&#x27;) is a 3-token word: its only non-Eden Torah token is Deut 33:29 — GOD as Israel&#x27;s helper (A-join). Onkelos: semakh le-kivleh, &#x27;a SUPPORT corresponding&#x27;. The demand enters SPECS and waits four verses.
+</td><td><span class="he">אֶעֱשֶׂה־לּוֹ עֵזֶר כְּנֶגְדּוֹ</span> · <i>e&#x27;eseh-lo ezer kenegdo</i><br><span class="gloss">= e&#x27;eseh-not helper corresponding-to-him</span></td><td class='cite'>TIR-033, TIR-028</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">adam are READ without prior install (standalone machine; the human of gen_06/gen_08)</span><br><span class="gloss">= human are READ without prior install (standalone machine; the human fowl-of gen-06/gen-08)</span><br>flag, not fix — the verdict&#x27;s subject enters presupposed</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The first thing in the corpus called not-good is an ALONENESS — and the machine&#x27;s first FAIL verdict opens a demand instead of a ledger row. Fix planned, spec stated, queue non-empty.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_2_19 · Gen.2.19 · <span class='expr'>FORM_BRING_DELEGATE</span></h3>
+<p><span class="he">וַיִּצֶר יְהוָה אֱלֹהִים מִן־הָאֲדָמָה כָּל־חַיַּת הַשָּׂדֶה וְאֵת כָּל־עוֹף הַשָּׁמַיִם וַיָּבֵא אֶל־הָאָדָם לִרְאוֹת מַה־יִּקְרָא־לוֹ וְכֹל אֲשֶׁר יִקְרָא־לוֹ הָאָדָם נֶפֶשׁ חַיָּה הוּא שְׁמוֹ</span> · <i>va-yitzer YHWH Elohim min-ha-adamah kol-chayat ha-sadeh ve-et kol-of ha-shamayim va-yave el-ha-adam li-reot mah-yiqra-lo ve-khol asher yiqra-lo ha-adam nefesh chayah hu shemo</i> · [EN-AID/JPS] And out of the ground the LORD God formed every beast of the field, and every fowl of the air; and brought them unto the man to see what he would call them; and whatsoever the man would call every living creature, that was to be the name thereof.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויצר יהוה אלהים מן האדמה כל חית השדה ואת כל עוף השמים ויבא אל האדם לראות מה יקרא לו</span> · <i>va-yitzer … va-yave el-ha-adam li-reot mah-yiqra-lo</i> · forming + bringing, closing on &#x27;to SEE what he would call&#x27; (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וכל אשר יקרא לו האדם נפש חיה הוא שמו</span> · <i>ve-khol asher yiqra-lo ha-adam nefesh chayah hu shemo</i> · the ratification: whatever he called it — THAT is its name</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">form(e1) ∧ Agent(e1, YHWH_Elohim) ∧ Theme(e1, chayat_ha_sadeh) ∧ Theme(e1, of_ha_shamayim)</span><br><span class="gloss">= form(e1) ∧ Agent(e1, the-LORD-God) ∧ Theme(e1, beast-of-the-field) ∧ Theme(e1, fowl-of-the-sky)</span><br>The animals formed from the SAME ground as the human — but va-yitzer here is written with SINGLE yod (he_plain DB-verified) against the human&#x27;s DOUBLE-yod token at 2:7: the two-formations letter contrast is HUMAN-vs-ANIMAL (chain dossier BR 14:5 / Berakhot 61a, named-only). Onkelos levels both to u-vra (&#x27;created&#x27;) — the yod-count untranslatable, twice surrendered. The two-accounts seam (animals after the verdict here; before the human in the week) is flagged by order, merged never.
+</td><td><span class="he">וַיִּצֶר … מִן־הָאֲדָמָה</span> · <i>va-yitzer … min-ha-adamah</i><br><span class="gloss">= he-formed from-the-ground</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>REGISTRY_INSTALL</td><td><span class="expr">WORLD += {chayat_ha_sadeh, of_ha_shamayim}</span><br><span class="gloss">= WORLD += {beast-of-the-field, fowl-of-the-sky}</span><br>the field-beast and sky-fowl classes installed by this span&#x27;s own forming</td><td><span class="he">כָּל־חַיַּת הַשָּׂדֶה וְאֵת כָּל־עוֹף הַשָּׁמַיִם</span> · <i>kol-chayat ha-sadeh ve-et kol-of ha-shamayim</i><br><span class="gloss">= all-beast-of field obj-marker·et all-fowl-of heavens</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">bring(e2) ∧ Agent(e2, YHWH_Elohim) ∧ Theme(e2, chayat_ha_sadeh)</span><br><span class="gloss">= bring(e2) ∧ Agent(e2, the-LORD-God) ∧ Theme(e2, beast-of-the-field)</span><br>Brought TO the human &#x27;to SEE what he would call it&#x27; — the week&#x27;s test verb (ra&#x27;ah) as a PURPOSE infinitive (TIR-030) with the HUMAN as the watched performer: the seeing instrument delegated. The NAME device is being handed over on camera.
+</td><td><span class="he">וַיָּבֵא אֶל־הָאָדָם לִרְאוֹת מַה־יִּקְרָא־לוֹ</span> · <i>va-yave el-ha-adam li-reot mah-yiqra-lo</i><br><span class="gloss">= he-brought to-the-human see mah-he-will-call-not</span></td><td class='cite'>TIR-030</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hu_shemo(kol_asher_yiqra_lo_ha_adam), t1)</span><br><span class="gloss">= HOLDS(that-is-its-name(all-which-he-will-call-not-the-human), t1)</span><br>THE RATIFICATION, standing: &#x27;whatever the human called it — a living being — THAT is its name&#x27;: a nominal clause (hu shemo) making the delegation PERMANENT. The registry authority transfers, and the transfer is recorded as a standing fact. nefesh chayah — the same category word the human himself became at 2:7 — sits in apposition: the namer and the named share the class.
+</td><td><span class="he">וְכֹל אֲשֶׁר יִקְרָא־לוֹ הָאָדָם נֶפֶשׁ חַיָּה הוּא שְׁמוֹ</span> · <i>ve-khol asher yiqra-lo ha-adam nefesh chayah hu shemo</i><br><span class="gloss">= all which he-will-call-not human living-being beast that shemo</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">adamah are READ without prior install (the forming&#x27;s source ground)</span><br><span class="gloss">= ground are READ without prior install (the forming&#x27;s source ground)</span><br>flag, not fix</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">God forms, God brings — and then stands back to SEE. The verse&#x27;s grammar puts the week&#x27;s own test verb in the delegation clause: the human is now the instrument&#x27;s operator, and whatever he says sticks.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_2_20 · Gen.2.20 · <span class='expr'>BULK_NAMING_FAILED_SEARCH</span></h3>
+<p><span class="he">וַיִּקְרָא הָאָדָם שֵׁמוֹת לְכָל־הַבְּהֵמָה וּלְעוֹף הַשָּׁמַיִם וּלְכֹל חַיַּת הַשָּׂדֶה וּלְאָדָם לֹא־מָצָא עֵזֶר כְּנֶגְדּוֹ</span> · <i>va-yiqra ha-adam shemot le-khol-ha-behemah u-le-of ha-shamayim u-le-khol chayat ha-sadeh u-le-adam lo-matza ezer kenegdo</i> · [EN-AID/JPS] And the man gave names to all cattle, and to the fowl of the air, and to every beast of the field; but for Adam there was not found a help meet for him.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויקרא האדם שמות לכל הבהמה ולעוף השמים ולכל חית השדה</span> · <i>va-yiqra ha-adam shemot le-khol-ha-behemah u-le-of ha-shamayim u-le-khol chayat ha-sadeh</i> · the bulk naming over three classes (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ולאדם לא מצא עזר כנגדו</span> · <i>u-le-adam lo-matza ezer kenegdo</i> · the failed search: for a human, no corresponding helper</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">call(e3) ∧ Agent(e3, adam) ∧ Theme(e3, shemot)</span><br><span class="gloss">= call(e3) ∧ Agent(e3, human) ∧ Theme(e3, names)</span><br>THE CORPUS&#x27;S FIRST CREATURE-AGENT MAIN-LINE EVENT: the human performs the NAME device (va-yiqra — day 1&#x27;s verb, God&#x27;s until now) over three classes. And the letter WITHHOLDS every value: &#x27;called NAMES&#x27; — not one name is quoted. The machine writes nothing into REGISTRY rather than invent values: the corpus&#x27;s first bulk registry write executes UNLOGGED (S3 asserts the registry untouched). The classes re-enumerated are the week&#x27;s (behemah, of, chayah) — and behemah (&#x27;livestock&#x27;) is NAMED here without being FORMED in this span (2:19 formed field-beast and fowl only): flagged presupposed below — the seam between the accounts, machine-visible.
+</td><td><span class="he">וַיִּקְרָא הָאָדָם שֵׁמוֹת</span> · <i>va-yiqra ha-adam shemot</i><br><span class="gloss">= he-will-call human names</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lo_matza(ezer_kenegdo, le_adam), t1)</span><br><span class="gloss">= HOLDS(did-not-find(helper-corresponding-to-him, to-human), t1)</span><br>THE SEARCH FAILS — and matza (&#x27;find&#x27;) is having its FIRST corpus token inside the failure: finding enters the vocabulary as not-finding (like boosh/shame at 2:25, debuting negated). The naming round doubled as a search round (the chain&#x27;s reading of the round as mate-review is BR 17:4&#x27;s dossier, named-only [OPEN] — with zot ha-paam at 2:23 as its letter anchor); the machine records the outcome the letter records: a standing lack.
+</td><td><span class="he">וּלְאָדָם לֹא־מָצָא עֵזֶר כְּנֶגְדּוֹ</span> · <i>u-le-adam lo-matza ezer kenegdo</i><br><span class="gloss">= human did-not-find helper corresponding-to-him</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">behemah are READ without prior install (named in this span, never formed in it — formed at gen_06&#x27;s 1:24-25)</span><br><span class="gloss">= livestock are READ without prior install (named in this span, never formed in it — formed at gen-06&#x27;s 1:24-25)</span><br>flag, not fix — the livestock class crosses the account seam</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The delegation succeeds three times and the search fails once — in one verse, bracketed by the rest. The registry grows by zero rows (values withheld); the lack-list grows by one.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_2_21 · Gen.2.21 · <span class='expr'>SLEEP_AND_SURGERY</span></h3>
+<p><span class="he">וַיַּפֵּל יְהוָה אֱלֹהִים תַּרְדֵּמָה עַל־הָאָדָם וַיִּישָׁן וַיִּקַּח אַחַת מִצַּלְעֹתָיו וַיִּסְגֹּר בָּשָׂר תַּחְתֶּנָּה</span> · <i>va-yapel YHWH Elohim tardemah al-ha-adam va-yishan va-yiqach achat mi-tzalotav va-yisgor basar tachtenah</i> · [EN-AID/JPS] And the LORD God caused a deep sleep to fall upon the man, and he slept; and He took one of his ribs, and closed up the place with flesh instead thereof.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויפל יהוה אלהים תרדמה על האדם ויישן</span> · <i>va-yapel YHWH Elohim tardemah al-ha-adam va-yishan</i> · the anesthesia — the rest sits ON &#x27;and he slept&#x27; (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויקח אחת מצלעתיו ויסגר בשר תחתנה</span> · <i>va-yiqach achat mi-tzalotav va-yisgor basar tachtenah</i> · the surgery: one side taken, flesh closed beneath</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">cast_sleep(e4) ∧ Agent(e4, YHWH_Elohim) ∧ Theme(e4, tardemah)</span><br><span class="gloss">= cast-sleep(e4) ∧ Agent(e4, the-LORD-God) ∧ Theme(e4, deep-sleep)</span><br>tardemah (&#x27;deep sleep&#x27;) has exactly TWO Torah tokens: this one and Gen 15:12 — ABRAM&#x27;S covenant-between-the-pieces sleep (A-join, DB-verified): both are divinely-cast sleeps before a covenant-grade operation. The accent tree isolates va-yishan (&#x27;and he SLEPT&#x27;) at the rest: anesthesia | surgery is the verse&#x27;s own bracket. Onkelos levels to plain shinta (&#x27;sleep&#x27;).
+</td><td><span class="he">וַיַּפֵּל … תַּרְדֵּמָה עַל־הָאָדָם וַיִּישָׁן</span> · <i>va-yapel … tardemah al-ha-adam va-yishan</i><br><span class="gloss">= he-cast deep-sleep over-the-human he-slept</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">take(e5) ∧ Agent(e5, YHWH_Elohim) ∧ Theme(e5, tzela)</span><br><span class="gloss">= take(e5) ∧ Agent(e5, the-LORD-God) ∧ Theme(e5, side)</span><br>&#x27;One of his TZELA&#x27; (&#x27;side/rib&#x27;) — and the word&#x27;s every other Torah token (x19) is TABERNACLE ARCHITECTURE: the ark&#x27;s sides, the frames, the altar (Exod 25-38; A-join). The woman is built from the one body-word that is otherwise exclusively sanctuary structure — with gen_08&#x27;s shoham and bedolach, the Eden-&gt;sanctuary lexical bridge is systematic. Side vs rib vs two-faces is the chain&#x27;s dispute (Berakhot 61a, named-only [OPEN]).
+</td><td><span class="he">וַיִּקַּח אַחַת מִצַּלְעֹתָיו</span> · <i>va-yiqach achat mi-tzalotav</i><br><span class="gloss">= he-took one from-tzalotav</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">close(e6) ∧ Agent(e6, YHWH_Elohim) ∧ Theme(e6, basar)</span><br><span class="gloss">= close(e6) ∧ Agent(e6, the-LORD-God) ∧ Theme(e6, flesh)</span><br>SAGAR&#x27;S FIRST CORPUS TOKEN — &#x27;and He CLOSED flesh beneath it&#x27;: the shut-root debuts as HEALING closure. Its trail: the ark&#x27;s door (7:16, &#x27;YHWH shut him in&#x27; — protection), Lot&#x27;s door (19:6,10 — defense), the sea trap (Exod 14:3 — siege), and Lev 13&#x27;s quarantine verb (hisgir) — the root Onkelos used to NAME the disease (segiru), now source-verified at its birthplace. And basar (&#x27;flesh&#x27;) is ALSO having its first token here (138 Torah-wide; lev_13&#x27;s import chain verified). Onkelos here AVOIDS the root: u-mlei (&#x27;and FILLED&#x27;) — shut-as-healing resisted, shut-as-quarantine adopted (Tier-A, dual-track).
+</td><td><span class="he">וַיִּסְגֹּר בָּשָׂר תַּחְתֶּנָּה</span> · <i>va-yisgor basar tachtenah</i><br><span class="gloss">= he-closed flesh tachtenah</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Four wayyiqtols, no speech: cast, slept, took, closed. Two first-tokens (sagar, basar) inside the corpus&#x27;s first surgery — both re-used by the purity law this machine has already derived.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_2_22 · Gen.2.22 · <span class='expr'>BUILD_WOMAN_RECEIPT</span></h3>
+<p><span class="he">וַיִּבֶן יְהוָה אֱלֹהִים אֶת־הַצֵּלָע אֲשֶׁר־לָקַח מִן־הָאָדָם לְאִשָּׁה וַיְבִאֶהָ אֶל־הָאָדָם</span> · <i>va-yiven YHWH Elohim et-ha-tzela asher-laqach min-ha-adam le-ishah va-yevieha el-ha-adam</i> · [EN-AID/JPS] And the rib, which the LORD God had taken from the man, made He a woman, and brought her unto the man.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויבן יהוה אלהים את הצלע אשר לקח מן האדם לאשה</span> · <i>va-yiven … et-ha-tzela asher-laqach min-ha-adam le-ishah</i> · the build: the taken side INTO a woman (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויבאה אל האדם</span> · <i>va-yevieha el-ha-adam</i> · the presentation: brought her to the human</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">build(e7) ∧ Agent(e7, YHWH_Elohim) ∧ Theme(e7, ishah)</span><br><span class="gloss">= build(e7) ∧ Agent(e7, the-LORD-God) ∧ Theme(e7, woman)</span><br>VA-YIVEN — banah&#x27;s (&#x27;build&#x27;) FIRST corpus token: the THIRD build verb (day 1 bara &#x27;created&#x27;; 2:7 yatzar &#x27;formed&#x27;; now banah &#x27;built&#x27;), each with its own material story (nothing; dust; a living side). Next users of the verb: Cain&#x27;s city (4:17), Noah&#x27;s altar (8:20), Babel&#x27;s tower (11:4) — and the sanctuary era. ishah&#x27;s first token arrives as the build&#x27;s PRODUCT (le-ishah, &#x27;into a woman&#x27;).
+</td><td><span class="he">וַיִּבֶן … אֶת־הַצֵּלָע … לְאִשָּׁה</span> · <i>va-yiven … et-ha-tzela … le-ishah</i><br><span class="gloss">= he-built obj-marker·et-the-side woman</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>REGISTRY_INSTALL</td><td><span class="expr">WORLD += {ishah}</span><br><span class="gloss">= WORLD += {woman}</span><br>the woman installed — the span&#x27;s one new being</td><td><span class="he">לְאִשָּׁה</span> · <i>le-ishah</i><br><span class="gloss">= woman</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(make(ezer_kenegdo, le_adam), t1) — the 2:18 demand POPS: execution-as-receipt (the runtime model&#x27;s Miriam class: a command answered by narrative execution, no receipt formula)</span><br><span class="gloss">= RESULT: HOLDS(make(helper-corresponding-to-him, to-human), t1) — the 2:18 demand POPS: execution-as-receipt (the runtime model&#x27;s Miriam class: a command answered by narrative execution, no receipt formula)</span><br>THE POP: e&#x27;eseh (&#x27;I will make&#x27;, 2:18) is answered by va-yiven (&#x27;and He built&#x27;) + the presentation — the demand leaves the queue with no va-yehi khen anywhere: narrative execution IS the receipt (the class the runtime model documented at Miriam: tisager -&gt; va-tisager). The mood stays CMD-US? in the log — popping satisfies, never upgrades (TIR-028). She is BROUGHT to the human with the same bringing verb as the animals at 2:19 — the parallel is the letter&#x27;s own, and what breaks it is the response: the animals got names; she gets a poem.
+</td><td><span class="he">וַיִּבֶן … וַיְבִאֶהָ אֶל־הָאָדָם</span> · <i>va-yiven … va-yevieha el-ha-adam</i><br><span class="gloss">= he-built and-yevieha to-the-human</span></td><td class='cite'>TIR-028</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_SPEC_DELTA</td><td><span class="expr">spec &#x27;e&#x27;eseh (I will MAKE — asah, the week&#x27;s build verb)&#x27; delivered &#x27;va-yiven (He BUILT — banah, first token)&#x27;</span><br><span class="gloss">= spec &#x27;e&#x27;I-will-make (I will MAKE — make, the week&#x27;s build verb)&#x27; delivered &#x27;and-he-built (He BUILT — build, first token)&#x27;</span><br>the plan said make, the delivery says build — the verb swap machine-flagged, beside the two prior build-verb deltas</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Push at 2:18, pop at 2:22: the unit closes its own arc — the first in-span demand-&gt;receipt loop since the week, and the first ever whose receipt is pure execution.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_2_23 · Gen.2.23 · <span class='expr'>FIRST_HUMAN_SPEECH_NAME</span></h3>
+<p><span class="he">וַיֹּאמֶר הָאָדָם זֹאת הַפַּעַם עֶצֶם מֵעֲצָמַי וּבָשָׂר מִבְּשָׂרִי לְזֹאת יִקָּרֵא אִשָּׁה כִּי מֵאִישׁ לֻקֳחָה־זֹּאת</span> · <i>va-yomer ha-adam zot ha-paam etzem me-atzamai u-vasar mi-besari le-zot yiqare ishah ki me-ish lukocha-zot</i> · [EN-AID/JPS] And the man said: &#x27;This is now bone of my bones, and flesh of my flesh; she shall be called Woman, because she was taken out of Man.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר האדם זאת הפעם עצם מעצמי ובשר מבשרי</span> · <i>va-yomer ha-adam zot ha-paam etzem me-atzamai u-vasar mi-besari</i> · the recognition: THIS TIME — bone of my bones, flesh of my flesh (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">לזאת יקרא אשה כי מאיש לקחה זאת</span> · <i>le-zot yiqare ishah ki me-ish lukocha-zot</i> · the naming with its derivation: ishah, for from ish was taken this</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">say(e8) ∧ Agent(e8, adam)</span><br><span class="gloss">= say(e8) ∧ Agent(e8, human)</span><br>THE FIRST HUMAN SPEECH OF THE CORPUS — and the accent system marks the shift: the parser&#x27;s own labels on the opening pair are zinor (&#x27;poetic cousin; RARE IN PROSE&#x27;) + segol. The register leans toward poetry exactly where the human&#x27;s voice enters. zot ha-paam (&#x27;THIS time / at last&#x27;) — paam&#x27;s first token; the phrase implies prior rounds [OPEN] (BR 17:4&#x27;s dossier, named-only — its letter anchor is exactly here).
+</td><td><span class="he">וַיֹּאמֶר הָאָדָם</span> · <i>va-yomer ha-adam</i><br><span class="gloss">= he-said human</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NAME</td><td><span class="expr">name(ishah) := ishah</span><br><span class="gloss">= name(woman) := woman</span><br>The unit&#x27;s ONLY logged registry write — and the corpus&#x27;s first ETYMOLOGY: &#x27;to this one shall-BE-called ishah, for from ISH was taken this.&#x27; The naming verb is NIPHAL PASSIVE (yiqare, &#x27;shall-be-called&#x27; — TIR-032&#x27;s agentless class): the human named the animals ACTIVELY (2:20) but names the woman in the passive — the name presented as recognized, not imposed. ish&#x27;s own first token sits INSIDE the derivation clause: the man-word enters the corpus as the etymon of the woman-word. The kind-word IS the logged name (ishah); the derivation is the letter&#x27;s reason clause. Onkelos surrenders the sound-pun (itta does not derive from its rendering): arei mi-BAALA nesiva da — &#x27;from her HUSBAND/master was taken this&#x27; — the relationship word substituted, 3:16&#x27;s shadow (Tier-A, dual-track). lukocha (&#x27;was TAKEN&#x27;) — passive of the 2:21/2:22 taking: the speech&#x27;s grammar receipts the surgery.
+</td><td><span class="he">לְזֹאת יִקָּרֵא אִשָּׁה כִּי מֵאִישׁ לֻקֳחָה־זֹּאת</span> · <i>le-zot yiqare ishah ki me-ish lukocha-zot</i><br><span class="gloss">= this shall-be-called woman for man lukocha-this</span></td><td class='cite'>TIR-032</td><td>tested</td></tr>
+</table>
+<div class="meta">The delegated device comes home: the human&#x27;s first words perform the registry write the animals never got a quote for — passive voice, derivation attached, near-poetic accents overhead.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_2_24 · Gen.2.24 · <span class='expr'>ETIOLOGY_PATTERN</span></h3>
+<p><span class="he">עַל־כֵּן יַעֲזָב־אִישׁ אֶת־אָבִיו וְאֶת־אִמּוֹ וְדָבַק בְּאִשְׁתּוֹ וְהָיוּ לְבָשָׂר אֶחָד</span> · <i>al-ken yaazov-ish et-aviv ve-et-imo ve-davak be-ishto ve-hayu le-vasar echad</i> · [EN-AID/JPS] Therefore shall a man leave his father and his mother, and shall cleave unto his wife, and they shall be one flesh.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">על כן יעזב איש את אביו ואת אמו</span> · <i>al-ken yaazov-ish et-aviv ve-et-imo</i> · THEREFORE a man leaves father and mother (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ודבק באשתו והיו לבשר אחד</span> · <i>ve-davak be-ishto ve-hayu le-vasar echad</i> · cleaves to his wife — one flesh</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PATTERN</td><td><span class="expr">PATTERN(azav(ish, av_ve_em) ∧ davak(ish, be_ishto) ∧ hayu(basar_echad))</span><br><span class="gloss">= PATTERN(leave(man, father-and-mother) ∧ cleave(man, in-his-wife) ∧ they-become(one-flesh))</span><br>THE CORPUS&#x27;S FIRST NARRATOR ETIOLOGY — al-ken (&#x27;THEREFORE&#x27;): a one-time surgery generalized into a standing pattern, and the grammar is the LAW&#x27;S OWN: imperfect (yaazov, &#x27;leaves&#x27;) + two weqatal chains (ve-davak &#x27;and-cleaves&#x27;, ve-hayu &#x27;and-they-become&#x27; — TIR-029, the legal spine form). But there is NO trigger clause and NO addressee: not a HANDLER (nothing fires it), not a demand (nothing is asked) — a standing PATTERN fact, the operator this unit adds. The vocabulary is all debuts and trails: av (&#x27;father&#x27;) and em (&#x27;mother&#x27;) have their FIRST tokens in the verse about LEAVING them; davak (&#x27;cleave&#x27;) goes from this marriage verb to Deuteronomy&#x27;s covenant formula (&#x27;cleave to YHWH&#x27; — 10:20, 11:22, 13:5, 30:20; A-join); basar echad (&#x27;ONE FLESH&#x27;) re-uses 2:21&#x27;s brand-new flesh word as the union term. Onkelos expands halakhically: &#x27;a man leaves the BED-CHAMBER (beit mishkevei) of his father and his mother&#x27; — the translation already carries the Sanhedrin 58a reading (2:24 as Noachide law; named-only, the span&#x27;s tripwire dossier). Voice [OPEN]: narrator&#x27;s aside vs continued speech — the chain splits; the machine records the pattern either way.
+</td><td><span class="he">עַל־כֵּן יַעֲזָב־אִישׁ … וְדָבַק … וְהָיוּ לְבָשָׂר אֶחָד</span> · <i>al-ken yaazov-ish … ve-davak … ve-hayu le-vasar echad</i><br><span class="gloss">= over-so yaazov-man cleave they-become flesh one</span></td><td class='cite'>TIR-029</td><td>tested</td></tr>
+</table>
+<div class="meta">One verse of law grammar inside a narrative span: no event, no demand — a pattern installed over every ish to come. The machine&#x27;s WORLD gains its first standing generalization.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_2_25 · Gen.2.25 · <span class='expr'>CLOSING_STATE_BRIDGE</span></h3>
+<p><span class="he">וַיִּהְיוּ שְׁנֵיהֶם עֲרוּמִּים הָאָדָם וְאִשְׁתּוֹ וְלֹא יִתְבֹּשָׁשׁוּ</span> · <i>va-yihyu shneihem arumim ha-adam ve-ishto ve-lo yitboshashu</i> · [EN-AID/JPS] And they were both naked, the man and his wife, and were not ashamed.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויהיו שניהם ערומים האדם ואשתו</span> · <i>va-yihyu shneihem arumim ha-adam ve-ishto</i> · the two of them naked — the man and his wife (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ולא יתבששו</span> · <i>ve-lo yitboshashu</i> · and they were not ashamed</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(arumim(ha_adam_ve_ishto), t2) ∧ HOLDS(lo_yitboshashu(shneihem), t2)</span><br><span class="gloss">= HOLDS(naked(the-human-and-his-wife), t2) ∧ HOLDS(were-not-ashamed(both-of-them), t2)</span><br>The closing state, two facts: NAKED (arumim — ONE Torah token of this form) and NOT-ASHAMED (boosh&#x27;s first corpus token, debuting NEGATED — shame enters the vocabulary as its own absence, exactly as finding entered at 2:20 as not-finding). The BRIDGE: 3:1 opens with the serpent as arum (&#x27;CUNNING&#x27;) — also ONE Torah token, same letters, adjacent verse: the span&#x27;s last description of the humans is the next span&#x27;s first description of the serpent (DB-verified pair; the pun is the seam). The state stands loaded: what the pair lacks (shame) and what the serpent has (the same word) meet in gen_10.
+</td><td><span class="he">עֲרוּמִּים … וְלֹא יִתְבֹּשָׁשׁוּ</span> · <i>arumim … ve-lo yitboshashu</i><br><span class="gloss">= naked not were-ashamed</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">No event closes the span — a state does: two beings, one adjective, no shame. Every register but WORLD&#x27;s fact-list is quiet, and gen_08&#x27;s two open demands and armed handler stand exactly where the next unit&#x27;s serpent will find them.</div>
+</div>
+<h2>State machine</h2>
+<div class="meta">Eden II (standalone; registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER).</div>
+<table><tr><th>state</th><th>meaning</th></tr>
+<tr><td><b>S_boot</b></td><td>Before 2:18 — all registers empty (standalone unit)</td></tr>
+<tr><td><b>S_fail_and_plan</b></td><td>After 2:18 — TESTS holds the corpus&#x27;s first FAIL; CMD-US?(make(ezer_kenegdo, le_adam)) OPEN; adam flagged presupposed</td></tr>
+<tr><td><b>S_delegation</b></td><td>After 2:19 — field-beast and fowl installed; the naming delegation ratified standing (hu shemo)</td></tr>
+<tr><td><b>S_named_not_found</b></td><td>After 2:20 — bulk naming executed with values UNLOGGED (REGISTRY untouched); the search fails (lo matza); behemah flagged (named, never formed in-span)</td></tr>
+<tr><td><b>S_surgery</b></td><td>After 2:21 — sleep cast, side taken, flesh closed (sagar + basar first tokens); WORLD unchanged</td></tr>
+<tr><td><b>S_receipt</b></td><td>After 2:22 — ishah installed; the 2:18 demand POPPED (execution-as-receipt); spec-delta flagged (make-&gt;build); SPECS EMPTY</td></tr>
+<tr><td><b>S_speech_name</b></td><td>After 2:23 — first human speech; the unit&#x27;s one registry write (ishah), passive-voiced, derivation attached</td></tr>
+<tr><td><b>S_pattern</b></td><td>After 2:24 — the al-ken pattern standing in WORLD (leave-cleave-one-flesh, law grammar, no trigger)</td></tr>
+<tr><td><b>S_closing_bridge</b></td><td>After 2:25 — naked + not-ashamed hold; LEDGER empty; the pun-bridge loaded for 3:1</td></tr>
+</table><table><tr><th>from</th><th>to</th><th>via</th></tr>
+<tr><td>S_boot</td><td>S_fail_and_plan</td><td>STEP_Gn_2_18</td></tr>
+<tr><td>S_fail_and_plan</td><td>S_delegation</td><td>STEP_Gn_2_19</td></tr>
+<tr><td>S_delegation</td><td>S_named_not_found</td><td>STEP_Gn_2_20</td></tr>
+<tr><td>S_named_not_found</td><td>S_surgery</td><td>STEP_Gn_2_21</td></tr>
+<tr><td>S_surgery</td><td>S_receipt</td><td>STEP_Gn_2_22</td></tr>
+<tr><td>S_receipt</td><td>S_speech_name</td><td>STEP_Gn_2_23</td></tr>
+<tr><td>S_speech_name</td><td>S_pattern</td><td>STEP_Gn_2_24</td></tr>
+<tr><td>S_pattern</td><td>S_closing_bridge</td><td>STEP_Gn_2_25</td></tr>
+</table>
+<div class="note"><b>AFTER_S_closing_bridge</b> — WORLD: 3 installs — chayat_ha_sadeh, of_ha_shamayim, ishah; standing facts: the delegation ratification (hu shemo), the failed search (lo matza), the al-ken PATTERN (leave-cleave-one-flesh), and the closing pair (naked, not-ashamed). REGISTRY: 1 write — ishah (passive-voiced, the corpus&#x27;s first etymology); the bulk animal naming executed with values UNLOGGED — the letter withholds them, the machine invents nothing. SPECS: EMPTY — the 2:18 demand popped at 2:22 (execution-as-receipt): the unit closes its own arc, unlike gen_08. TESTS: 1 FAIL — the corpus&#x27;s first negative verdict (and no PASS anywhere: the repair is narrated, never re-tested — the letter&#x27;s own silence, held open). LEDGER: EMPTY — no commit; the week&#x27;s transaction and gen_08&#x27;s rule-debt stand. TIME: t1 (the arc), t2 (the closing state). FLAGS: read_before_install x3 (adam, adamah, behemah), spec_delta x1 (make-&gt;build) — none blocking.</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>The first FAIL and the pushed plan: after STEP_Gn_2_18</td><td>All registers empty (standalone unit).</td><td>TESTS += FAIL(tov, heyot_ha_adam_levado); CMD-US?(make(ezer_kenegdo, le_adam)) pushed and OPEN; flags adam as read-before-install.<br><span class="gloss">= TESTS += FAIL(good, the-human-being-alone); CMD-US?(make(helper-corresponding-to-him, to-human)) pushed and OPEN; flags human as read-before-install.</span></td><td><span class="he">לֹא־טוֹב</span> · <i>lo-tov</i><br><span class="gloss">= not-good</span></td></tr>
+<tr><td><b>S2</b></td><td>The animals and the standing delegation: after STEP_Gn_2_19</td><td>S1 state.</td><td>WORLD = {chayat_ha_sadeh, of_ha_shamayim}; Facts hu_shemo HOLD.<br><span class="gloss">= WORLD = {beast-of-the-field, fowl-of-the-sky}; Facts that-is-its-name HOLD.</span></td><td><span class="he">הוּא שְׁמוֹ</span> · <i>hu shemo</i><br><span class="gloss">= that shemo</span></td></tr>
+<tr><td><b>S3</b></td><td>Bulk naming unlogged; the search fails: after STEP_Gn_2_20</td><td>S2 state.</td><td>Facts lo_matza HOLD; flags behemah as read-before-install; CMD-US?(make(ezer_kenegdo, le_adam)) pushed and OPEN.<br><span class="gloss">= Facts did-not-find HOLD; flags livestock as read-before-install; CMD-US?(make(helper-corresponding-to-him, to-human)) pushed and OPEN.</span></td><td><span class="he">וּלְאָדָם לֹא־מָצָא</span> · <i>u-le-adam lo-matza</i><br><span class="gloss">= human did-not-find</span></td></tr>
+<tr><td><b>S4</b></td><td>The surgery installs nothing: after STEP_Gn_2_21</td><td>S3 state.</td><td>WORLD = {chayat_ha_sadeh, of_ha_shamayim}.<br><span class="gloss">= WORLD = {beast-of-the-field, fowl-of-the-sky}.</span></td><td><span class="he">וַיִּסְגֹּר בָּשָׂר</span> · <i>va-yisgor basar</i><br><span class="gloss">= he-closed flesh</span></td></tr>
+<tr><td><b>S5</b></td><td>The pop — execution as receipt: after STEP_Gn_2_22</td><td>S4 state.</td><td>WORLD = {chayat_ha_sadeh, of_ha_shamayim, ishah}; SPECS empty; machine flags spec-delta.<br><span class="gloss">= WORLD = {beast-of-the-field, fowl-of-the-sky, woman}; SPECS empty; machine flags spec-delta.</span></td><td><span class="he">וַיִּבֶן … וַיְבִאֶהָ</span> · <i>va-yiven … va-yevieha</i><br><span class="gloss">= he-built and-yevieha</span></td></tr>
+<tr><td><b>S6</b></td><td>The one logged name: after STEP_Gn_2_23</td><td>S5 state.</td><td>REGISTRY: ishah-&gt;ishah (1 write).<br><span class="gloss">= REGISTRY: woman-&gt;woman (1 write).</span></td><td><span class="he">יִקָּרֵא אִשָּׁה</span> · <i>yiqare ishah</i><br><span class="gloss">= shall-be-called woman</span></td></tr>
+<tr><td><b>S7</b></td><td>The standing pattern: after STEP_Gn_2_24</td><td>S6 state.</td><td>Facts pattern-basar_echad HOLD.<br><span class="gloss">= Facts pattern-one-flesh HOLD.</span></td><td><span class="he">עַל־כֵּן</span> · <i>al-ken</i><br><span class="gloss">= over-so</span></td></tr>
+<tr><td><b>S8</b></td><td>Closing state, ledger silent, bridge loaded: after STEP_Gn_2_25</td><td>S7 state.</td><td>Facts arumim/lo_yitboshashu HOLD; SPECS empty; LEDGER stays EMPTY (open transaction).<br><span class="gloss">= Facts naked/were-not-ashamed HOLD; SPECS empty; LEDGER stays EMPTY (open transaction).</span></td><td><span class="he">עֲרוּמִּים … וְלֹא יִתְבֹּשָׁשׁוּ</span> · <i>arumim … ve-lo yitboshashu</i><br><span class="gloss">= naked not were-ashamed</span></td></tr>
+<tr><td><b>S9_negative</b></td><td>Negative: the 1cs volitive inherits the CMD-US? guard</td><td>A synthetic CMD-US? demand (the machine&#x27;s own contract self-test).</td><td>CMD-US? never auto-upgrades: resolution without citation must REFUSE; with a per-unit citation it may resolve — the singular member (e&#x27;eseh) inherits the plural&#x27;s contract unchanged.<br><span class="gloss">= CMD-US? never auto-upgrades: resolution without citation must REFUSE; with a per-unit citation it may resolve — the singular member (e&#x27;I-will-make) inherits the plural&#x27;s contract unchanged.</span></td><td></td></tr>
+<tr><td><b>S10_negative</b></td><td>Negative: flags never block</td><td>A synthetic commit with TESTS empty (the machine&#x27;s own contract self-test).</td><td>Cycle close with TESTS empty must be FLAGGED, never blocked — the standing rule re-asserted; this unit attempts no commit, and its TESTS register holds a FAIL that blocks nothing either: verdicts are data.<br><span class="gloss">= Cycle close with TESTS empty must in FLAGGED, never blocked — the standing rule re-asserted; this unit attempts no commit, and its TESTS register holds a FAIL that blocks nothing either: verdicts are data.</span></td><td></td></tr>
+</table>
+<h2>Exports (reusable patterns)</h2><table><tr><th>id</th><th>content</th></tr>
+<tr><td>EXPORT_first_fail</td><td><span class="he">לֹא־טוֹב</span> · <i>lo-tov</i> · the corpus&#x27;s first FAIL verdict — the week&#x27;s instrument negated, in speech mode; Onkelos runs day 6&#x27;s own verdict word negated (la takkin); the chain&#x27;s census dissent counts the utterance among the ten (Yalkut Shimoni 22:9)</td></tr>
+<tr><td>EXPORT_in_span_arc</td><td><span class="he">אֶעֱשֶׂה … וַיִּבֶן</span> · <i>e&#x27;eseh … va-yiven</i> · push 2:18, pop 2:22: the demand-&gt;receipt arc closes in-span with NO receipt formula — execution-as-receipt (the Miriam class), with the make-&gt;build spec-delta flagged; contrast gen_08, which ends owing</td></tr>
+<tr><td>EXPORT_delegated_registry</td><td><span class="he">וְכֹל אֲשֶׁר יִקְרָא־לוֹ הָאָדָם … הוּא שְׁמוֹ</span> · <i>ve-khol asher yiqra-lo ha-adam … hu shemo</i> · the NAME device changes hands, ratified standing — and the first creature-performed bulk write executes with every value withheld: the registry rows the letter never quotes stay unwritten in the machine</td></tr>
+<tr><td>EXPORT_first_human_speech</td><td><span class="he">זֹאת הַפַּעַם עֶצֶם מֵעֲצָמַי</span> · <i>zot ha-paam etzem me-atzamai</i> · the first human speech — accent-marked near-poetic (zinor/segol, the parser&#x27;s own rare-in-prose labels), naming by NIPHAL passive (yiqare), carrying the corpus&#x27;s first etymology (ishah from ish)</td></tr>
+<tr><td>EXPORT_tzela_sanctuary</td><td><span class="he">אַחַת מִצַּלְעֹתָיו</span> · <i>achat mi-tzalotav</i> · the woman is built from tzela (&#x27;side&#x27;) — every other Torah token of the word (x19) is Tabernacle architecture: with shoham and bedolach (gen_08), the Eden-&gt;sanctuary lexical bridge is systematic</td></tr>
+<tr><td>EXPORT_sagar_debut</td><td><span class="he">וַיִּסְגֹּר בָּשָׂר</span> · <i>va-yisgor basar</i> · sagar (&#x27;shut/close&#x27;) and basar (&#x27;flesh&#x27;) both debut in the surgery — the roots of the ark-shutting (7:16) and Lev 13&#x27;s quarantine (hisgir/segiru): the purity law&#x27;s verb is born as HEALING closure; Onkelos avoids it here (u-mlei, &#x27;filled&#x27;) and adopts it there — dual-track</td></tr>
+<tr><td>EXPORT_alken_pattern</td><td><span class="he">עַל־כֵּן יַעֲזָב־אִישׁ</span> · <i>al-ken yaazov-ish</i> · the first narrator etiology, in law grammar (imperfect + weqatal chain, TIR-029) with no trigger and no addressee — a standing PATTERN, not a handler; av/em debut in the leaving clause; davak&#x27;s trail runs to Deuteronomy&#x27;s &#x27;cleave to YHWH&#x27;; Onkelos&#x27;s &#x27;bed-chamber&#x27; rendering is the Sanhedrin 58a dossier surfacing in translation</td></tr>
+<tr><td>EXPORT_naked_cunning_bridge</td><td><span class="he">עֲרוּמִּים … עָרוּם</span> · <i>arumim … arum</i> · the bridge pun: naked (2:25) and cunning (3:1) — one Torah token EACH, same letters, adjacent verses; shame debuts negated (lo yitboshashu), and the serpent arrives wearing the humans&#x27; last adjective</td></tr>
+</table>
+<h2>Oral notes (named, tiered, dual-track — never merged)</h2>
+<div class="note"><span class="badge tier-v">verified</span> <b>Yalkut Shimoni on Torah 22:9 — the ten-utterances census dissent block; day-1 triage row 241, re-verified local 2026-08-01</b><br><span class="he">עֲשָׂרָה מַאֲמָרוֹת</span> · <i>asarah ma&#x27;amarot</i> · The census dissent counts 2:18 (&#x27;it is not good...&#x27;) among the ten creation utterances — part of the chain reads this unit&#x27;s opening verdict-speech as a member of the week&#x27;s own speech series: the bracket between the week and Eden II is porous in the chain&#x27;s own count. Dual-track beside the machine&#x27;s FAIL verdict.
+<br><i>Verified from Data/sefaria_texts/ (local). Dual-track; not merged.</i></div>
+<div class="note"><span class="badge tier-o">observation</span> <b>Bereshit Rabbah 17 (the helper dossier; 17:4 the naming rounds and zot ha-paam); Bavli Yevamot 63a (ezer kenegdo two-way); Bavli Berakhot 61a (tzela: side/tail/two-faces); Bavli Sanhedrin 58a (2:24 as Noachide law — Onkelos&#x27;s bed-chamber rendering is its surface); Bavli Ketubot 8a (one formation or two); Pirkei DeRabbi Eliezer 12 (the garden wedding) — gen_09 Tier-A queue</b><br><span class="he">עֵזֶר כְּנֶגְדּוֹ</span> · <i>(queue — named only)</i> · Named, not read: the cache holds ZERO sources anchored to 2:18-25 (watch-list C) — third tripwire span in a row; the Sanhedrin 58a row is this span&#x27;s law-from-narrative tripwire (the legal formulas should fire on it, as predicted for 56b at gen_08).
+<br><i>Queue entry — no claim made beyond the naming.</i></div>
+<div class="note"><span class="badge tier-v">verified</span> <b>Onkelos Genesis 2:18-25 — read Tier-A at derive time (8 sequential fetches, Data/FETCHLOG.md 2026-08-01)</b><br><span class="he">לָא תַקִּין</span> · <i>la takkin</i> · The span&#x27;s translation witness: la TAKKIN (&#x27;not well-ordered&#x27;) for lo-tov — day 6&#x27;s verdict word negated (the TEST-FAIL warrant); semakh (&#x27;support&#x27;) for ezer; both formation verbs leveled to u-vra; shinta for the covenant-sleep word; u-MLEI (&#x27;filled&#x27;) where the Hebrew CLOSES flesh — the shut-root refused here, embraced at Lev 13; mi-BAALA (&#x27;from her husband&#x27;) where the pun dies in translation; the halakhic &#x27;bed-chamber&#x27; expansion at 2:24; la mitkalmin (&#x27;not disgraced&#x27;) closing.
+<br><i>Read from Data/sefaria_texts/ (local, gitignored; FETCHLOG is provenance). Dual-track; not merged.</i></div>
+<h2>Binary trees (ta'amim v3, glue bricks)</h2>
+<h3>Gen.2.18 · parser unique · 12 words</h3>
+<div class="meta"><span class="he">ויאמר יהוה אלהים לא־טוב היות האדם לבדו אעשׂה־לו עזר כנגדו</span> · <i>va-yomer YHWH Elohim lo-tov heot ha-adam le-vad-o eese-l-o ezer ke-negd-o</i> · Not good, the human alone — I will make him a corresponding helper. [EN-AID]</div>
+<pre>PHRASE (binary 12w) וַ/יֹּ֨אמֶר֙ יְהוָ֣ה אֱלֹהִ֔ים לֹא ט֛וֹב הֱי֥וֹ…
+├── PHRASE (binary 8w) וַ/יֹּ֨אמֶר֙ יְהוָ֣ה אֱלֹהִ֔ים לֹא ט֛וֹב הֱי֥וֹ…
+│   ├── PHRASE (binary 3w) וַ/יֹּ֨אמֶר֙ יְהוָ֣ה אֱלֹהִ֔ים
+│   │   ├── [0] וַ/יֹּ֨אמֶר֙ (pashta, rank=3)
+│   │   └── [1-2] GLUE יְהוָ֣ה אֱלֹהִ֔ים (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) לֹא ט֛וֹב הֱי֥וֹת הָֽ/אָדָ֖ם לְ/בַדּ֑/וֹ
+│       ├── PHRASE (binary 4w) לֹא ט֛וֹב הֱי֥וֹת הָֽ/אָדָ֖ם
+│       │   ├── [3-4] GLUE לֹא ט֛וֹב (tevir, rank=3)
+│       │   └── [5-6] GLUE הֱי֥וֹת הָֽ/אָדָ֖ם (tifcha, rank=2)
+│       └── [7] לְ/בַדּ֑/וֹ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) אֶֽעֱשֶׂהּ לּ֥/וֹ עֵ֖זֶר כְּ/נֶגְדּֽ/וֹ
+    ├── [8-10] GLUE אֶֽעֱשֶׂהּ לּ֥/וֹ עֵ֖זֶר (tifcha, rank=2)
+    └── [11] כְּ/נֶגְדּֽ/וֹ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.2.19 · parser unique · 28 words</h3>
+<div class="meta"><span class="he">ויצר יהוה אלהים מן־האדמה כל־חית השׂדה ואת כל־עוף השׁמים ויבא אל־האדם לראות מה־יקרא־לו וכל אשׁר יקרא־לו האדם נפשׁ חיה הוא שׁמו</span> · <i>va-yitzer YHWH Elohim min-ha-adama kal-chayat ha-sade ve-et kal-of ha-shamayim va-yave el-ha-adam li-reot ma-yiqra-l-o ve-khol asher yiqra-l-o ha-adam nefesh chaya hu shem-o</i> · Formed beasts and fowl from the ground, brought to the human to see what he calls them — that is its name. [EN-AID]</div>
+<pre>PHRASE (binary 28w) וַ/יִּצֶר֩ יְהוָ֨ה אֱלֹהִ֜ים מִן הָֽ/אֲדָמָ֗ה כ…
+├── PHRASE (binary 19w) וַ/יִּצֶר֩ יְהוָ֨ה אֱלֹהִ֜ים מִן הָֽ/אֲדָמָ֗ה כ…
+│   ├── PHRASE (binary 12w) וַ/יִּצֶר֩ יְהוָ֨ה אֱלֹהִ֜ים מִן הָֽ/אֲדָמָ֗ה כ…
+│   │   ├── PHRASE (binary 5w) וַ/יִּצֶר֩ יְהוָ֨ה אֱלֹהִ֜ים מִן הָֽ/אֲדָמָ֗ה
+│   │   │   ├── [0-2] GLUE וַ/יִּצֶר֩ יְהוָ֨ה אֱלֹהִ֜ים (geresh, rank=4)
+│   │   │   └── [3-4] GLUE מִן הָֽ/אֲדָמָ֗ה (revia, rank=3)
+│   │   └── PHRASE (binary 7w) כָּל חַיַּ֤ת הַ/שָּׂדֶה֙ וְ/אֵת֙ כָּל ע֣וֹף הַ/…
+│   │       ├── [5-7] GLUE כָּל חַיַּ֤ת הַ/שָּׂדֶה֙ (pashta, rank=3)
+│   │       └── PHRASE (binary 4w) וְ/אֵת֙ כָּל ע֣וֹף הַ/שָּׁמַ֔יִם
+│   │           ├── [8] וְ/אֵת֙ (pashta, rank=3)
+│   │           └── [9-11] GLUE כָּל ע֣וֹף הַ/שָּׁמַ֔יִם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 7w) וַ/יָּבֵא֙ אֶל הָ֣/אָדָ֔ם לִ/רְא֖וֹת מַה יִּקְר…
+│       ├── PHRASE (binary 3w) וַ/יָּבֵא֙ אֶל הָ֣/אָדָ֔ם
+│       │   ├── [12] וַ/יָּבֵא֙ (pashta, rank=3)
+│       │   └── [13-14] GLUE אֶל הָ֣/אָדָ֔ם (zaqef qatan, rank=2)
+│       └── PHRASE (binary 4w) לִ/רְא֖וֹת מַה יִּקְרָא ל֑/וֹ
+│           ├── [15] לִ/רְא֖וֹת (tifcha, rank=2)
+│           └── [16-18] GLUE מַה יִּקְרָא ל֑/וֹ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 9w) וְ/כֹל֩ אֲשֶׁ֨ר יִקְרָא ל֧/וֹ הָֽ/אָדָ֛ם נֶ֥פֶש…
+    ├── PHRASE (binary 7w) וְ/כֹל֩ אֲשֶׁ֨ר יִקְרָא ל֧/וֹ הָֽ/אָדָ֛ם נֶ֥פֶש…
+    │   ├── [19-23] GLUE וְ/כֹל֩ אֲשֶׁ֨ר יִקְרָא ל֧/וֹ הָֽ/אָדָ֛ם (tevir, rank=3)
+    │   └── [24-25] GLUE נֶ֥פֶשׁ חַיָּ֖ה (tifcha, rank=2)
+    └── [26-27] GLUE ה֥וּא שְׁמֽ/וֹ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.2.20 · parser unique · 15 words</h3>
+<div class="meta"><span class="he">ויקרא האדם שׁמות לכל־הבהמה ולעוף השׁמים ולכל חית השׂדה ולאדם לא־מצא עזר כנגדו</span> · <i>va-yiqra ha-adam shemot le-khal-ha-behema u-le-of ha-shamayim u-le-khol chayat ha-sade u-le-adam lo-matza ezer ke-negd-o</i> · The human named all livestock, fowl, and beasts — but for a human, no corresponding helper found. [EN-AID]</div>
+<pre>PHRASE (binary 15w) וַ/יִּקְרָ֨א הָֽ/אָדָ֜ם שֵׁמ֗וֹת לְ/כָל הַ/בְּה…
+├── PHRASE (binary 10w) וַ/יִּקְרָ֨א הָֽ/אָדָ֜ם שֵׁמ֗וֹת לְ/כָל הַ/בְּה…
+│   ├── PHRASE (binary 7w) וַ/יִּקְרָ֨א הָֽ/אָדָ֜ם שֵׁמ֗וֹת לְ/כָל הַ/בְּה…
+│   │   ├── PHRASE (binary 3w) וַ/יִּקְרָ֨א הָֽ/אָדָ֜ם שֵׁמ֗וֹת
+│   │   │   ├── [0-1] GLUE וַ/יִּקְרָ֨א הָֽ/אָדָ֜ם (geresh, rank=4)
+│   │   │   └── [2] שֵׁמ֗וֹת (revia, rank=3)
+│   │   └── PHRASE (binary 4w) לְ/כָל הַ/בְּהֵמָה֙ וּ/לְ/ע֣וֹף הַ/שָּׁמַ֔יִם
+│   │       ├── [3-4] GLUE לְ/כָל הַ/בְּהֵמָה֙ (pashta, rank=3)
+│   │       └── [5-6] GLUE וּ/לְ/ע֣וֹף הַ/שָּׁמַ֔יִם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) וּ/לְ/כֹ֖ל חַיַּ֣ת הַ/שָּׂדֶ֑ה
+│       ├── [7] וּ/לְ/כֹ֖ל (tifcha, rank=2)
+│       └── [8-9] GLUE חַיַּ֣ת הַ/שָּׂדֶ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) וּ/לְ/אָדָ֕ם לֹֽא מָצָ֥א עֵ֖זֶר כְּ/נֶגְדּֽ/וֹ
+    ├── [10] וּ/לְ/אָדָ֕ם (zaqef gadol, rank=2)
+    └── PHRASE (binary 4w) לֹֽא מָצָ֥א עֵ֖זֶר כְּ/נֶגְדּֽ/וֹ
+        ├── [11-13] GLUE לֹֽא מָצָ֥א עֵ֖זֶר (tifcha, rank=2)
+        └── [14] כְּ/נֶגְדּֽ/וֹ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.2.21 · parser unique · 13 words</h3>
+<div class="meta"><span class="he">ויפל יהוה אלהים תרדמה על־האדם ויישׁן ויקח אחת מצלעתיו ויסגר בשׂר תחתנה</span> · <i>va-yapel YHWH Elohim tardema al-ha-adam va-yishan va-yiqach achat mi-tzalotay-v va-yisgor basar tachte-na</i> · Deep sleep fell; he slept — one side taken, flesh closed beneath. [EN-AID]</div>
+<pre>PHRASE (binary 13w) וַ/יַּפֵּל֩ יְהוָ֨ה אֱלֹהִ֧ים תַּרְדֵּמָ֛ה עַל …
+├── PHRASE (binary 7w) וַ/יַּפֵּל֩ יְהוָ֨ה אֱלֹהִ֧ים תַּרְדֵּמָ֛ה עַל …
+│   ├── PHRASE (binary 6w) וַ/יַּפֵּל֩ יְהוָ֨ה אֱלֹהִ֧ים תַּרְדֵּמָ֛ה עַל …
+│   │   ├── [0-3] GLUE וַ/יַּפֵּל֩ יְהוָ֨ה אֱלֹהִ֧ים תַּרְדֵּמָ֛ה (tevir, rank=3)
+│   │   └── [4-5] GLUE עַל הָ/אָדָ֖ם (tifcha, rank=2)
+│   └── [6] וַ/יִּישָׁ֑ן (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) וַ/יִּקַּ֗ח אַחַת֙ מִ/צַּלְעֹתָ֔י/ו וַ/יִּסְגֹּ…
+    ├── PHRASE (binary 3w) וַ/יִּקַּ֗ח אַחַת֙ מִ/צַּלְעֹתָ֔י/ו
+    │   ├── [7] וַ/יִּקַּ֗ח (revia, rank=3)
+    │   └── PHRASE (binary 2w) אַחַת֙ מִ/צַּלְעֹתָ֔י/ו
+    │       ├── [8] אַחַת֙ (pashta, rank=3)
+    │       └── [9] מִ/צַּלְעֹתָ֔י/ו (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) וַ/יִּסְגֹּ֥ר בָּשָׂ֖ר תַּחְתֶּֽ/נָּה
+        ├── [10-11] GLUE וַ/יִּסְגֹּ֥ר בָּשָׂ֖ר (tifcha, rank=2)
+        └── [12] תַּחְתֶּֽ/נָּה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.2.22 · parser unique · 13 words</h3>
+<div class="meta"><span class="he">ויבן יהוה אלהים את־הצלע אשׁר־לקח מן־האדם לאשׁה ויבאה אל־האדם</span> · <i>va-yiven YHWH Elohim et-ha-tzela asher-laqach min-ha-adam le-isha va-yevie-ha el-ha-adam</i> · Built the taken side into a woman — and brought her to the human. [EN-AID]</div>
+<pre>PHRASE (binary 13w) וַ/יִּבֶן֩ יְהוָ֨ה אֱלֹהִ֧ים אֶֽת הַ/צֵּלָ֛ע אֲ…
+├── PHRASE (binary 10w) וַ/יִּבֶן֩ יְהוָ֨ה אֱלֹהִ֧ים אֶֽת הַ/צֵּלָ֛ע אֲ…
+│   ├── PHRASE (binary 9w) וַ/יִּבֶן֩ יְהוָ֨ה אֱלֹהִ֧ים אֶֽת הַ/צֵּלָ֛ע אֲ…
+│   │   ├── [0-4] GLUE וַ/יִּבֶן֩ יְהוָ֨ה אֱלֹהִ֧ים אֶֽת הַ/צֵּלָ֛ע (tevir, rank=3)
+│   │   └── [5-8] GLUE אֲשֶׁר לָקַ֥ח מִן הָֽ/אָדָ֖ם (tifcha, rank=2)
+│   └── [9] לְ/אִשָּׁ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וַ/יְבִאֶ֖/הָ אֶל הָֽ/אָדָֽם
+    ├── [10] וַ/יְבִאֶ֖/הָ (tifcha, rank=2)
+    └── [11-12] GLUE אֶל הָֽ/אָדָֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.2.23 · parser unique · 15 words</h3>
+<div class="meta"><span class="he">ויאמר האדם זאת הפעם עצם מעצמי ובשׂר מבשׂרי לזאת יקרא אשׁה כי מאישׁ לקחה־זאת</span> · <i>va-yomer ha-adam zot ha-paam etzem me-atzama-y u-vasar mi-besari-y le-zot yiqare isha ki me-ish luqocha-zot</i> · This time: bone of my bones — she shall be called woman, for from man was she taken. [EN-AID]</div>
+<pre>PHRASE (binary 15w) וַ/יֹּאמֶר֮ הָֽ/אָדָם֒ זֹ֣את הַ/פַּ֗עַם עֶ֚צֶם …
+├── PHRASE (binary 8w) וַ/יֹּאמֶר֮ הָֽ/אָדָם֒ זֹ֣את הַ/פַּ֗עַם עֶ֚צֶם …
+│   ├── PHRASE (binary 2w) וַ/יֹּאמֶר֮ הָֽ/אָדָם֒
+│   │   ├── [0] וַ/יֹּאמֶר֮ (zinor (poetic cousin; rare in prose), rank=3)
+│   │   └── [1] הָֽ/אָדָם֒ (segol, rank=2)
+│   └── PHRASE (binary 6w) זֹ֣את הַ/פַּ֗עַם עֶ֚צֶם מֵֽ/עֲצָמַ֔/י וּ/בָשָׂ֖…
+│       ├── PHRASE (binary 4w) זֹ֣את הַ/פַּ֗עַם עֶ֚צֶם מֵֽ/עֲצָמַ֔/י
+│       │   ├── [2-3] GLUE זֹ֣את הַ/פַּ֗עַם (revia, rank=3)
+│       │   └── PHRASE (binary 2w) עֶ֚צֶם מֵֽ/עֲצָמַ֔/י
+│       │       ├── [4] עֶ֚צֶם (yetiv, rank=3)
+│       │       └── [5] מֵֽ/עֲצָמַ֔/י (zaqef qatan, rank=2)
+│       └── PHRASE (binary 2w) וּ/בָשָׂ֖ר מִ/בְּשָׂרִ֑/י
+│           ├── [6] וּ/בָשָׂ֖ר (tifcha, rank=2)
+│           └── [7] מִ/בְּשָׂרִ֑/י (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) לְ/זֹאת֙ יִקָּרֵ֣א אִשָּׁ֔ה כִּ֥י מֵ/אִ֖ישׁ לֻֽ…
+    ├── PHRASE (binary 3w) לְ/זֹאת֙ יִקָּרֵ֣א אִשָּׁ֔ה
+    │   ├── [8] לְ/זֹאת֙ (pashta, rank=3)
+    │   └── [9-10] GLUE יִקָּרֵ֣א אִשָּׁ֔ה (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) כִּ֥י מֵ/אִ֖ישׁ לֻֽקֳחָה זֹּֽאת
+        ├── [11-12] GLUE כִּ֥י מֵ/אִ֖ישׁ (tifcha, rank=2)
+        └── [13-14] GLUE לֻֽקֳחָה זֹּֽאת (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.2.24 · parser unique · 13 words</h3>
+<div class="meta"><span class="he">על־כן יעזב־אישׁ את־אביו ואת־אמו ודבק באשׁתו והיו לבשׂר אחד</span> · <i>al-ken yaazav-ish et-avi-v ve-et-im-o ve-davaq be-isht-o ve-hayu le-vasar echad</i> · Therefore a man leaves father and mother — cleaves to his wife: one flesh. [EN-AID]</div>
+<pre>PHRASE (binary 13w) עַל כֵּן֙ יַֽעֲזָב אִ֔ישׁ אֶת אָבִ֖י/ו וְ/אֶת א…
+├── PHRASE (binary 8w) עַל כֵּן֙ יַֽעֲזָב אִ֔ישׁ אֶת אָבִ֖י/ו וְ/אֶת א…
+│   ├── PHRASE (binary 4w) עַל כֵּן֙ יַֽעֲזָב אִ֔ישׁ
+│   │   ├── [0-1] GLUE עַל כֵּן֙ (pashta, rank=3)
+│   │   └── [2-3] GLUE יַֽעֲזָב אִ֔ישׁ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) אֶת אָבִ֖י/ו וְ/אֶת אִמּ֑/וֹ
+│       ├── [4-5] GLUE אֶת אָבִ֖י/ו (tifcha, rank=2)
+│       └── [6-7] GLUE וְ/אֶת אִמּ֑/וֹ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) וְ/דָבַ֣ק בְּ/אִשְׁתּ֔/וֹ וְ/הָי֖וּ לְ/בָשָׂ֥ר …
+    ├── [8-9] GLUE וְ/דָבַ֣ק בְּ/אִשְׁתּ֔/וֹ (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) וְ/הָי֖וּ לְ/בָשָׂ֥ר אֶחָֽד
+        ├── [10] וְ/הָי֖וּ (tifcha, rank=2)
+        └── [11-12] GLUE לְ/בָשָׂ֥ר אֶחָֽד (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.2.25 · parser unique · 7 words</h3>
+<div class="meta"><span class="he">ויהיו שׁניהם ערומים האדם ואשׁתו ולא יתבשׁשׁו</span> · <i>va-yihyu shene-hem arumim ha-adam ve-isht-o ve-lo yitboshashu</i> · The two of them naked, the man and his wife — and not ashamed. [EN-AID]</div>
+<pre>PHRASE (binary 7w) וַ/יִּֽהְי֤וּ שְׁנֵי/הֶם֙ עֲרוּמִּ֔ים הָֽ/אָדָ֖…
+├── PHRASE (binary 5w) וַ/יִּֽהְי֤וּ שְׁנֵי/הֶם֙ עֲרוּמִּ֔ים הָֽ/אָדָ֖…
+│   ├── PHRASE (binary 3w) וַ/יִּֽהְי֤וּ שְׁנֵי/הֶם֙ עֲרוּמִּ֔ים
+│   │   ├── [0-1] GLUE וַ/יִּֽהְי֤וּ שְׁנֵי/הֶם֙ (pashta, rank=3)
+│   │   └── [2] עֲרוּמִּ֔ים (zaqef qatan, rank=2)
+│   └── PHRASE (binary 2w) הָֽ/אָדָ֖ם וְ/אִשְׁתּ֑/וֹ
+│       ├── [3] הָֽ/אָדָ֖ם (tifcha, rank=2)
+│       └── [4] וְ/אִשְׁתּ֑/וֹ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 2w) וְ/לֹ֖א יִתְבֹּשָֽׁשׁוּ
+    ├── [5] וְ/לֹ֖א (tifcha, rank=2)
+    └── [6] יִתְבֹּשָֽׁשׁוּ (silluq (verse-end emperor), rank=1)
+</pre>
+<h2>Word coverage — 116/116 words with named roles</h2>
+<table><tr><th>ref</th><th>#</th><th>Hebrew</th><th>translit</th><th>English</th><th>role</th><th>kind</th><th>rule</th></tr>
+<tr><td>Gen.2.18</td><td>0</td><td class='he-cell'>ויאמר</td><td>va-yomer</td><td>and-he-said</td><td>speech_verdict_opener</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.18</td><td>1</td><td class='he-cell'>יהוה</td><td>YHWH</td><td>YHWH</td><td>agent_compound</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.18</td><td>2</td><td class='he-cell'>אלהים</td><td>Elohim</td><td>God</td><td>agent_compound</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.18</td><td>3</td><td class='he-cell'>לא</td><td>lo</td><td>not</td><td>verdict_negator_FIRST_FAIL</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.18</td><td>4</td><td class='he-cell'>טוב</td><td>tov</td><td>good</td><td>verdict_word_negated</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.18</td><td>5</td><td class='he-cell'>היות</td><td>heot</td><td>being-of</td><td>state_infinitive</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.18</td><td>6</td><td class='he-cell'>האדם</td><td>ha-adam</td><td>the-human</td><td>human_presupposed</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.18</td><td>7</td><td class='he-cell'>לבדו</td><td>le-vad-o</td><td>alone-him</td><td>aloneness_the_failed_state</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.18</td><td>8</td><td class='he-cell'>אעשה</td><td>eese</td><td>I-will-make</td><td>volitive_1cs_CMD_US_singular</td><td>logic_bearing</td><td class='cite'>TIR-033</td></tr>
+<tr><td>Gen.2.18</td><td>9</td><td class='he-cell'>לו</td><td>l-o</td><td>for-him</td><td>beneficiary</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.18</td><td>10</td><td class='he-cell'>עזר</td><td>ezer</td><td>helper</td><td>helper_A_join_divine_title</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.18</td><td>11</td><td class='he-cell'>כנגדו</td><td>ke-negd-o</td><td>corresponding-him</td><td>corresponding_OPEN_two_way</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.19</td><td>0</td><td class='he-cell'>ויצר</td><td>va-yitzer</td><td>and-he-formed</td><td>formation_verb_SINGLE_YOD_animals</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.19</td><td>1</td><td class='he-cell'>יהוה</td><td>YHWH</td><td>YHWH</td><td>agent_compound</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.19</td><td>2</td><td class='he-cell'>אלהים</td><td>Elohim</td><td>God</td><td>agent_compound</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.19</td><td>3</td><td class='he-cell'>מן</td><td>min</td><td>from</td><td>preposition_from</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.19</td><td>4</td><td class='he-cell'>האדמה</td><td>ha-adama</td><td>the-ground</td><td>source_ground_presupposed</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.19</td><td>5</td><td class='he-cell'>כל</td><td>kal</td><td>all</td><td>totality_quantifier</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.19</td><td>6</td><td class='he-cell'>חית</td><td>chayat</td><td>beast-of</td><td>class_installed</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.19</td><td>7</td><td class='he-cell'>השדה</td><td>ha-sade</td><td>the-field</td><td>field_register</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.19</td><td>8</td><td class='he-cell'>ואת</td><td>ve-et</td><td>and-obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.2.19</td><td>9</td><td class='he-cell'>כל</td><td>kal</td><td>all</td><td>totality_quantifier</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.19</td><td>10</td><td class='he-cell'>עוף</td><td>of</td><td>fowl-of</td><td>class_installed</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.19</td><td>11</td><td class='he-cell'>השמים</td><td>ha-shamayim</td><td>the-heavens</td><td>sky_register</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.19</td><td>12</td><td class='he-cell'>ויבא</td><td>va-yave</td><td>and-he-brought</td><td>bring_verb_parallel_to_2_22</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.19</td><td>13</td><td class='he-cell'>אל</td><td>el</td><td>to</td><td>preposition_to</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.19</td><td>14</td><td class='he-cell'>האדם</td><td>ha-adam</td><td>the-human</td><td>addressee_observer</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.19</td><td>15</td><td class='he-cell'>לראות</td><td>li-reot</td><td>to-see</td><td>delegation_purpose_SEE_test_verb</td><td>logic_bearing</td><td class='cite'>TIR-030</td></tr>
+<tr><td>Gen.2.19</td><td>16</td><td class='he-cell'>מה</td><td>ma</td><td>what</td><td>interrogative_open_value</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.19</td><td>17</td><td class='he-cell'>יקרא</td><td>yiqra</td><td>he-will-call</td><td>call_imperfect_delegated</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.19</td><td>18</td><td class='he-cell'>לו</td><td>l-o</td><td>to-it</td><td>dative</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.19</td><td>19</td><td class='he-cell'>וכל</td><td>ve-khol</td><td>and-all</td><td>totality_quantifier</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.19</td><td>20</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>relative_scope_opener</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.19</td><td>21</td><td class='he-cell'>יקרא</td><td>yiqra</td><td>he-will-call</td><td>call_imperfect_delegated</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.19</td><td>22</td><td class='he-cell'>לו</td><td>l-o</td><td>to-it</td><td>dative</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.19</td><td>23</td><td class='he-cell'>האדם</td><td>ha-adam</td><td>the-human</td><td>delegated_namer</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.19</td><td>24</td><td class='he-cell'>נפש</td><td>nefesh</td><td>living-being</td><td>category_word_shared</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.19</td><td>25</td><td class='he-cell'>חיה</td><td>chaya</td><td>living</td><td>category_word_shared</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.19</td><td>26</td><td class='he-cell'>הוא</td><td>hu</td><td>that</td><td>ratification_copula</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.19</td><td>27</td><td class='he-cell'>שמו</td><td>shem-o</td><td>its-name</td><td>ratification_standing_name</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.20</td><td>0</td><td class='he-cell'>ויקרא</td><td>va-yiqra</td><td>and-he-called</td><td>first_creature_agent_event</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.20</td><td>1</td><td class='he-cell'>האדם</td><td>ha-adam</td><td>the-human</td><td>creature_agent</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.20</td><td>2</td><td class='he-cell'>שמות</td><td>shemot</td><td>names</td><td>bulk_values_UNLOGGED</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.20</td><td>3</td><td class='he-cell'>לכל</td><td>le-khal</td><td>to-all</td><td>totality_quantifier</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.20</td><td>4</td><td class='he-cell'>הבהמה</td><td>ha-behema</td><td>the-livestock</td><td>class_named_never_formed_flag</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.20</td><td>5</td><td class='he-cell'>ולעוף</td><td>u-le-of</td><td>and-to-flying-creature</td><td>class_named</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.20</td><td>6</td><td class='he-cell'>השמים</td><td>ha-shamayim</td><td>the-heavens</td><td>sky_register</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.20</td><td>7</td><td class='he-cell'>ולכל</td><td>u-le-khol</td><td>and-to-all</td><td>totality_quantifier</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.20</td><td>8</td><td class='he-cell'>חית</td><td>chayat</td><td>beast-of</td><td>class_named</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.20</td><td>9</td><td class='he-cell'>השדה</td><td>ha-sade</td><td>the-field</td><td>field_register</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.20</td><td>10</td><td class='he-cell'>ולאדם</td><td>u-le-adam</td><td>and-for-human</td><td>search_domain_human</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.20</td><td>11</td><td class='he-cell'>לא</td><td>lo</td><td>not</td><td>search_negator</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.20</td><td>12</td><td class='he-cell'>מצא</td><td>matza</td><td>he-found</td><td>find_FIRST_TOKEN_in_failure</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.20</td><td>13</td><td class='he-cell'>עזר</td><td>ezer</td><td>helper</td><td>helper_sought</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.20</td><td>14</td><td class='he-cell'>כנגדו</td><td>ke-negd-o</td><td>corresponding-him</td><td>corresponding_OPEN_two_way</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.21</td><td>0</td><td class='he-cell'>ויפל</td><td>va-yapel</td><td>and-he-cast</td><td>cast_sleep_hiphil</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.21</td><td>1</td><td class='he-cell'>יהוה</td><td>YHWH</td><td>YHWH</td><td>agent_compound</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.21</td><td>2</td><td class='he-cell'>אלהים</td><td>Elohim</td><td>God</td><td>agent_compound</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.21</td><td>3</td><td class='he-cell'>תרדמה</td><td>tardema</td><td>deep-sleep</td><td>deep_sleep_covenant_pair_15_12</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.21</td><td>4</td><td class='he-cell'>על</td><td>al</td><td>over</td><td>preposition_over</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.21</td><td>5</td><td class='he-cell'>האדם</td><td>ha-adam</td><td>the-human</td><td>patient</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.21</td><td>6</td><td class='he-cell'>ויישן</td><td>va-yishan</td><td>and-he-slept</td><td>slept_isolated_at_rest</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.21</td><td>7</td><td class='he-cell'>ויקח</td><td>va-yiqach</td><td>and-he-took</td><td>take_verb</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.21</td><td>8</td><td class='he-cell'>אחת</td><td>achat</td><td>one</td><td>one_of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.21</td><td>9</td><td class='he-cell'>מצלעתיו</td><td>mi-tzalotay-v</td><td>from-his-sides</td><td>side_TABERNACLE_word</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.21</td><td>10</td><td class='he-cell'>ויסגר</td><td>va-yisgor</td><td>and-he-closed</td><td>close_verb_SAGAR_FIRST_TOKEN</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.21</td><td>11</td><td class='he-cell'>בשר</td><td>basar</td><td>flesh</td><td>flesh_FIRST_TOKEN</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.21</td><td>12</td><td class='he-cell'>תחתנה</td><td>tachte-na</td><td>beneath-it</td><td>beneath_it</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.22</td><td>0</td><td class='he-cell'>ויבן</td><td>va-yiven</td><td>and-he-built</td><td>build_verb_BANAH_FIRST_TOKEN</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.22</td><td>1</td><td class='he-cell'>יהוה</td><td>YHWH</td><td>YHWH</td><td>agent_compound</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.22</td><td>2</td><td class='he-cell'>אלהים</td><td>Elohim</td><td>God</td><td>agent_compound</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.22</td><td>3</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.2.22</td><td>4</td><td class='he-cell'>הצלע</td><td>ha-tzela</td><td>the-side</td><td>side_material</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.22</td><td>5</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>relative_scope_opener</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.22</td><td>6</td><td class='he-cell'>לקח</td><td>laqach</td><td>he-took</td><td>taken_recap</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.22</td><td>7</td><td class='he-cell'>מן</td><td>min</td><td>from</td><td>preposition_from</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.22</td><td>8</td><td class='he-cell'>האדם</td><td>ha-adam</td><td>the-human</td><td>source_human</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.22</td><td>9</td><td class='he-cell'>לאשה</td><td>le-isha</td><td>into-woman</td><td>product_woman_install</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.22</td><td>10</td><td class='he-cell'>ויבאה</td><td>va-yevie-ha</td><td>and-he-brought-her</td><td>presentation_receipt_bring</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.22</td><td>11</td><td class='he-cell'>אל</td><td>el</td><td>to</td><td>preposition_to</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.22</td><td>12</td><td class='he-cell'>האדם</td><td>ha-adam</td><td>the-human</td><td>recipient</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.23</td><td>0</td><td class='he-cell'>ויאמר</td><td>va-yomer</td><td>and-he-said</td><td>first_human_speech_zinor_segol</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.23</td><td>1</td><td class='he-cell'>האדם</td><td>ha-adam</td><td>the-human</td><td>human_speaker</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.23</td><td>2</td><td class='he-cell'>זאת</td><td>zot</td><td>this</td><td>deictic_recognition</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.23</td><td>3</td><td class='he-cell'>הפעם</td><td>ha-paam</td><td>the-time</td><td>time_word_FIRST_prior_rounds_OPEN</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.23</td><td>4</td><td class='he-cell'>עצם</td><td>etzem</td><td>bone</td><td>bone_recognition</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.23</td><td>5</td><td class='he-cell'>מעצמי</td><td>me-atzama-y</td><td>from-my-bones</td><td>bone_of_my_bones</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.23</td><td>6</td><td class='he-cell'>ובשר</td><td>u-vasar</td><td>and-flesh</td><td>flesh_recognition</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.23</td><td>7</td><td class='he-cell'>מבשרי</td><td>mi-besari-y</td><td>from-my-flesh</td><td>flesh_of_my_flesh</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.23</td><td>8</td><td class='he-cell'>לזאת</td><td>le-zot</td><td>to-this</td><td>naming_dative</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.23</td><td>9</td><td class='he-cell'>יקרא</td><td>yiqare</td><td>shall-be-called</td><td>passive_naming_niphal</td><td>logic_bearing</td><td class='cite'>TIR-032</td></tr>
+<tr><td>Gen.2.23</td><td>10</td><td class='he-cell'>אשה</td><td>isha</td><td>woman</td><td>name_value_ishah</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.23</td><td>11</td><td class='he-cell'>כי</td><td>ki</td><td>for</td><td>derivation_conjunction</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.2.23</td><td>12</td><td class='he-cell'>מאיש</td><td>me-ish</td><td>from-man</td><td>etymon_ISH_FIRST_TOKEN</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.23</td><td>13</td><td class='he-cell'>לקחה</td><td>luqocha</td><td>was-taken</td><td>taken_passive_receipts_surgery</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.23</td><td>14</td><td class='he-cell'>זאת</td><td>zot</td><td>this</td><td>deictic</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.24</td><td>0</td><td class='he-cell'>על</td><td>al</td><td>upon</td><td>etiology_marker</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.24</td><td>1</td><td class='he-cell'>כן</td><td>ken</td><td>so</td><td>etiology_marker_THEREFORE</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.24</td><td>2</td><td class='he-cell'>יעזב</td><td>yaazav</td><td>he-leaves</td><td>pattern_imperfect_gnomic</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.24</td><td>3</td><td class='he-cell'>איש</td><td>ish</td><td>man</td><td>every_man_subject</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.24</td><td>4</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.24</td><td>5</td><td class='he-cell'>אביו</td><td>avi-v</td><td>his-father</td><td>father_FIRST_TOKEN</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.24</td><td>6</td><td class='he-cell'>ואת</td><td>ve-et</td><td>and-obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.24</td><td>7</td><td class='he-cell'>אמו</td><td>im-o</td><td>his-mother</td><td>mother_FIRST_TOKEN</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.24</td><td>8</td><td class='he-cell'>ודבק</td><td>ve-davaq</td><td>and-cleaves</td><td>weqatal_cleave_covenant_trail</td><td>logic_bearing</td><td class='cite'>TIR-029</td></tr>
+<tr><td>Gen.2.24</td><td>9</td><td class='he-cell'>באשתו</td><td>be-isht-o</td><td>to-his-wife</td><td>wife_object</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.24</td><td>10</td><td class='he-cell'>והיו</td><td>ve-hayu</td><td>and-they-become</td><td>weqatal_become</td><td>logic_bearing</td><td class='cite'>TIR-029</td></tr>
+<tr><td>Gen.2.24</td><td>11</td><td class='he-cell'>לבשר</td><td>le-vasar</td><td>to-flesh</td><td>union_term_flesh</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.24</td><td>12</td><td class='he-cell'>אחד</td><td>echad</td><td>one</td><td>union_term_one</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.25</td><td>0</td><td class='he-cell'>ויהיו</td><td>va-yihyu</td><td>and-they-were</td><td>closing_state_verb</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.25</td><td>1</td><td class='he-cell'>שניהם</td><td>shene-hem</td><td>the-two-of-them</td><td>the_pair</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.25</td><td>2</td><td class='he-cell'>ערומים</td><td>arumim</td><td>naked</td><td>naked_pun_bridge_3_1</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.25</td><td>3</td><td class='he-cell'>האדם</td><td>ha-adam</td><td>the-human</td><td>human</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.25</td><td>4</td><td class='he-cell'>ואשתו</td><td>ve-isht-o</td><td>and-his-wife</td><td>his_wife</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.25</td><td>5</td><td class='he-cell'>ולא</td><td>ve-lo</td><td>and-not</td><td>shame_negator</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.2.25</td><td>6</td><td class='he-cell'>יתבששו</td><td>yitboshashu</td><td>were-ashamed</td><td>shame_FIRST_TOKEN_negated</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_09_helper_woman_first_speech — Eden II: not-good, the helper, the woman, first human speech (2:18-25) [frozen]
+
+final state: WORLD=[&#x27;chayat_ha_sadeh&#x27;, &#x27;ishah&#x27;, &#x27;of_ha_shamayim&#x27;] (+3 presupposed) | REGISTRY={&#x27;ishah&#x27;: &#x27;ishah&#x27;} | TESTS=1 PASS | LEDGER days=[] | FLAGS=[&#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;spec_delta&#x27;]
+
+=== S1 — The first FAIL and the pushed plan: after STEP_Gn_2_18
+    לֹא־טוֹב (lo-tov)
+    PASS  TESTS += FAIL(tov, heyot_ha_adam_levado)  (tests=[(&#x27;FAIL&#x27;, &#x27;tov&#x27;, &#x27;heyot_ha_adam_levado&#x27;)])
+    PASS  CMD-US?(make(ezer_kenegdo, le_adam)) pushed and OPEN  (queue=[&#x27;make(ezer_kenegdo, le_adam)&#x27;])
+    PASS  flags adam as read-before-install.  (flagged=[&#x27;adam&#x27;])
+
+=== S2 — The animals and the standing delegation: after STEP_Gn_2_19
+    הוּא שְׁמוֹ (hu shemo)
+    PASS  WORLD = {chayat_ha_sadeh, of_ha_shamayim}  (created=[&#x27;chayat_ha_sadeh&#x27;, &#x27;of_ha_shamayim&#x27;])
+    PASS  Facts hu_shemo HOLD.  (1 facts)
+
+=== S3 — Bulk naming unlogged; the search fails: after STEP_Gn_2_20
+    וּלְאָדָם לֹא־מָצָא (u-le-adam lo-matza)
+    PASS  Facts lo_matza HOLD  (2 facts)
+    PASS  flags behemah as read-before-install  (flagged=[&#x27;adam&#x27;, &#x27;adamah&#x27;, &#x27;behemah&#x27;])
+    PASS  CMD-US?(make(ezer_kenegdo, le_adam)) pushed and OPEN.  (queue=[&#x27;make(ezer_kenegdo, le_adam)&#x27;])
+
+=== S4 — The surgery installs nothing: after STEP_Gn_2_21
+    וַיִּסְגֹּר בָּשָׂר (va-yisgor basar)
+    PASS  WORLD = {chayat_ha_sadeh, of_ha_shamayim}.  (created=[&#x27;chayat_ha_sadeh&#x27;, &#x27;of_ha_shamayim&#x27;])
+
+=== S5 — The pop — execution as receipt: after STEP_Gn_2_22
+    וַיִּבֶן … וַיְבִאֶהָ (va-yiven … va-yevieha)
+    PASS  WORLD = {chayat_ha_sadeh, of_ha_shamayim, ishah}  (created=[&#x27;chayat_ha_sadeh&#x27;, &#x27;ishah&#x27;, &#x27;of_ha_shamayim&#x27;])
+    PASS  SPECS empty  (queue=0)
+    PASS  machine flags spec-delta.  (flags=[&#x27;read_before_install&#x27;, &#x27;spec_delta&#x27;])
+
+=== S6 — The one logged name: after STEP_Gn_2_23
+    יִקָּרֵא אִשָּׁה (yiqare ishah)
+    PASS  REGISTRY: ishah-&gt;ishah (1 write).  (names={&#x27;ishah&#x27;: &#x27;ishah&#x27;} writes=1)
+
+=== S7 — The standing pattern: after STEP_Gn_2_24
+    עַל־כֵּן (al-ken)
+    PASS  Facts pattern-basar_echad HOLD.  (3 facts)
+
+=== S8 — Closing state, ledger silent, bridge loaded: after STEP_Gn_2_25
+    עֲרוּמִּים … וְלֹא יִתְבֹּשָׁשׁוּ (arumim … ve-lo yitboshashu)
+    PASS  Facts arumim/lo_yitboshashu HOLD  (5 facts)
+    PASS  SPECS empty  (queue=0)
+    PASS  LEDGER stays EMPTY (open transaction).  (ledger_days=[])
+
+=== S9_negative — Negative: the 1cs volitive inherits the CMD-US? guard
+    PASS  volitive 1cp parsed as CMD-US? (question mark kept)  (mood=CMD-US?)
+    PASS  auto-upgrade REFUSED  (TIR-028: CMD-US? never auto-upgrades to CMD-US — a per-unit ...)
+    PASS  upgrade WITH citation allowed  (cite=per-unit judgment (owner), TIR-028 resolution)
+
+=== S10_negative — Negative: flags never block
+    PASS  commit proceeded (not blocked)  (LEDGER=[99])
+    PASS  pattern deviation FLAGGED  (flags=[&#x27;commit_without_test&#x27;])
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_09_helper_woman_first_speech.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_09_helper_woman_first_speech — 2:18-25
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_09_helper_woman_first_speech.yaml) is CANONICAL
+# (Pre-Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Eden II: not-good, the helper, the woman, first human speech (2:18-25)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_09_helper_woman_first_speech&quot;)
+
+# -------------------------- Gen.2.18 · VERDICT_FAIL_AND_PLAN ---------------
+# וַיֹּאמֶר יְהוָה אֱלֹהִים לֹא־טוֹב הֱיוֹת הָאָדָם לְבַדּוֹ אֶעֱשֶׂה־לּוֹ
+# עֵזֶר כְּנֶגְדּוֹ
+# &quot;And the LORD God said: &#x27;It is not good that the man should be alone; I
+# will make him a help meet for him.&#x27;&quot;
+m.step(&quot;Gen.2.18&quot;)
+# ‹לֹא־טוֹב הֱיוֹת הָאָדָם לְבַדּוֹ› (“not good being-of the-human alone-
+# him”) — test FAIL — oracle-word good, on the-human-being-alone
+m.test(&quot;FAIL&quot;, &quot;tov&quot;, &quot;heyot_ha_adam_levado&quot;)
+# ‹אֶעֱשֶׂה־לּוֹ עֵזֶר כְּנֶגְדּוֹ› (“I-will-make for-him helper
+# corresponding-him”) — the-LORD-God speaks a demand — CMD-US?: make(helper-
+# corresponding-to-him, to-human)
+m.declare(&quot;YHWH_Elohim&quot;, &quot;CMD-US?&quot;,
+          &quot;make(ezer_kenegdo, le_adam)&quot;)
+# reads without prior install (flag, not fix): human
+m.presupposed(&quot;adam&quot;)
+
+# -------------------------- Gen.2.19 · FORM_BRING_DELEGATE -----------------
+# וַיִּצֶר יְהוָה אֱלֹהִים מִן־הָאֲדָמָה כָּל־חַיַּת הַשָּׂדֶה וְאֵת
+# כָּל־עוֹף הַשָּׁמַיִם וַיָּבֵא אֶל־הָאָדָם לִרְאוֹת מַה־יִּקְרָא־לוֹ וְכֹל
+# אֲשֶׁר יִקְרָא־לוֹ הָאָדָם נֶפֶשׁ חַיָּה הוּא שְׁמוֹ
+# &quot;And out of the ground the LORD God formed every beast of the field, and
+# every fowl of the air; and brought them unto the man to see what he would
+# call them; and whatsoever the man would call every living creature, that
+# was to be the name thereof.&quot;
+m.step(&quot;Gen.2.19&quot;)
+# ‹וַיִּצֶר … מִן־הָאֲדָמָה› (“and-he-formed … from the-ground”) — event:
+# form — agent the-LORD-God; theme beast-of-the-field, fowl-of-the-sky
+m.event(&quot;form&quot;, agent=&quot;YHWH_Elohim&quot;, themes=[&quot;chayat_ha_sadeh&quot;, &quot;of_ha_shamayim&quot;])
+# ‹כָּל־חַיַּת הַשָּׂדֶה וְאֵת כָּל־עוֹף הַשָּׁמַיִם› (“all beast-of the-
+# field and-obj-marker all fowl-of the-heavens”) — the world gains: beast-
+# of-the-field, fowl-of-the-sky
+m.install(&quot;chayat_ha_sadeh&quot;, &quot;of_ha_shamayim&quot;)
+# ‹וַיָּבֵא אֶל־הָאָדָם לִרְאוֹת מַה־יִּקְרָא־לוֹ› (“and-he-brought to the-
+# human to-see what he-will-call to-it”) — event: bring — agent the-LORD-
+# God; theme beast-of-the-field
+m.event(&quot;bring&quot;, agent=&quot;YHWH_Elohim&quot;, themes=[&quot;chayat_ha_sadeh&quot;])
+# ‹וְכֹל אֲשֶׁר יִקְרָא־לוֹ הָאָדָם נֶפֶשׁ חַיָּה הוּא שְׁמוֹ› (“and-all
+# which he-will-call to-it the-human living-being living that its-name”) —
+# fact holds: that-is-its-name(all-which-he-will-call-not-the-human)
+m.fact(&quot;hu_shemo(kol_asher_yiqra_lo_ha_adam)&quot;)
+# reads without prior install (flag, not fix): ground
+m.presupposed(&quot;adamah&quot;)
+
+# -------------------------- Gen.2.20 · BULK_NAMING_FAILED_SEARCH -----------
+# וַיִּקְרָא הָאָדָם שֵׁמוֹת לְכָל־הַבְּהֵמָה וּלְעוֹף הַשָּׁמַיִם וּלְכֹל
+# חַיַּת הַשָּׂדֶה וּלְאָדָם לֹא־מָצָא עֵזֶר כְּנֶגְדּוֹ
+# &quot;And the man gave names to all cattle, and to the fowl of the air, and to
+# every beast of the field; but for Adam there was not found a help meet for
+# him.&quot;
+m.step(&quot;Gen.2.20&quot;)
+# ‹וַיִּקְרָא הָאָדָם שֵׁמוֹת› (“and-he-called the-human names”) — event:
+# call — agent human; theme names
+m.event(&quot;call&quot;, agent=&quot;adam&quot;, themes=[&quot;shemot&quot;])
+# ‹וּלְאָדָם לֹא־מָצָא עֵזֶר כְּנֶגְדּוֹ› (“and-for-human not he-found
+# helper corresponding-him”) — fact holds: did-not-find(helper-
+# corresponding-to-him, to-human)
+m.fact(&quot;lo_matza(ezer_kenegdo, le_adam)&quot;)
+# reads without prior install (flag, not fix): livestock
+m.presupposed(&quot;behemah&quot;)
+
+# -------------------------- Gen.2.21 · SLEEP_AND_SURGERY -------------------
+# וַיַּפֵּל יְהוָה אֱלֹהִים תַּרְדֵּמָה עַל־הָאָדָם וַיִּישָׁן וַיִּקַּח
+# אַחַת מִצַּלְעֹתָיו וַיִּסְגֹּר בָּשָׂר תַּחְתֶּנָּה
+# &quot;And the LORD God caused a deep sleep to fall upon the man, and he slept;
+# and He took one of his ribs, and closed up the place with flesh instead
+# thereof.&quot;
+m.step(&quot;Gen.2.21&quot;)
+# ‹וַיַּפֵּל … תַּרְדֵּמָה עַל־הָאָדָם וַיִּישָׁן› (“and-he-cast … deep-
+# sleep over the-human and-he-slept”) — event: cast-sleep — agent the-LORD-
+# God; theme deep-sleep
+m.event(&quot;cast_sleep&quot;, agent=&quot;YHWH_Elohim&quot;, themes=[&quot;tardemah&quot;])
+# ‹וַיִּקַּח אַחַת מִצַּלְעֹתָיו› (“and-he-took one from-his-sides”) —
+# event: take — agent the-LORD-God; theme side
+m.event(&quot;take&quot;, agent=&quot;YHWH_Elohim&quot;, themes=[&quot;tzela&quot;])
+# ‹וַיִּסְגֹּר בָּשָׂר תַּחְתֶּנָּה› (“and-he-closed flesh beneath-it”) —
+# event: close — agent the-LORD-God; theme flesh
+m.event(&quot;close&quot;, agent=&quot;YHWH_Elohim&quot;, themes=[&quot;basar&quot;])
+
+# -------------------------- Gen.2.22 · BUILD_WOMAN_RECEIPT -----------------
+# וַיִּבֶן יְהוָה אֱלֹהִים אֶת־הַצֵּלָע אֲשֶׁר־לָקַח מִן־הָאָדָם לְאִשָּׁה
+# וַיְבִאֶהָ אֶל־הָאָדָם
+# &quot;And the rib, which the LORD God had taken from the man, made He a woman,
+# and brought her unto the man.&quot;
+m.step(&quot;Gen.2.22&quot;)
+# ‹וַיִּבֶן … אֶת־הַצֵּלָע … לְאִשָּׁה› (“and-he-built … obj-marker the-side
+# … into-woman”) — event: build — agent the-LORD-God; theme woman
+m.event(&quot;build&quot;, agent=&quot;YHWH_Elohim&quot;, themes=[&quot;ishah&quot;])
+# ‹לְאִשָּׁה› (“into-woman”) — the world gains: woman
+m.install(&quot;ishah&quot;)
+# ‹וַיִּבֶן … וַיְבִאֶהָ אֶל־הָאָדָם› (“and-he-built … and-he-brought-her to
+# the-human”) — demand settled (popped from the queue): make(helper-
+# corresponding-to-him, to-human)
+m.result(&quot;make(ezer_kenegdo, le_adam)&quot;, tmark=&quot;t1&quot;)
+# spec-delta — spec said e&#x27;I-will-make (I will MAKE — make, the week&#x27;s build
+# verb), delivery says and-he-built (He BUILT — build, first token)
+m.spec_delta(&quot;e&#x27;eseh (I will MAKE — asah, the week&#x27;s build verb)&quot;,
+             &quot;va-yiven (He BUILT — banah, first token)&quot;)
+
+# -------------------------- Gen.2.23 · FIRST_HUMAN_SPEECH_NAME -------------
+# וַיֹּאמֶר הָאָדָם זֹאת הַפַּעַם עֶצֶם מֵעֲצָמַי וּבָשָׂר מִבְּשָׂרִי
+# לְזֹאת יִקָּרֵא אִשָּׁה כִּי מֵאִישׁ לֻקֳחָה־זֹּאת
+# &quot;And the man said: &#x27;This is now bone of my bones, and flesh of my flesh;
+# she shall be called Woman, because she was taken out of Man.&#x27;&quot;
+m.step(&quot;Gen.2.23&quot;)
+# ‹וַיֹּאמֶר הָאָדָם› (“and-he-said the-human”) — event: say — agent human
+m.event(&quot;say&quot;, agent=&quot;adam&quot;)
+# ‹לְזֹאת יִקָּרֵא אִשָּׁה כִּי מֵאִישׁ לֻקֳחָה־זֹּאת› (“to-this shall-be-
+# called woman for from-man was-taken this”) — named: woman := woman
+m.name(&quot;ishah&quot;, &quot;ishah&quot;)
+
+# -------------------------- Gen.2.24 · ETIOLOGY_PATTERN --------------------
+# עַל־כֵּן יַעֲזָב־אִישׁ אֶת־אָבִיו וְאֶת־אִמּוֹ וְדָבַק בְּאִשְׁתּוֹ
+# וְהָיוּ לְבָשָׂר אֶחָד
+# &quot;Therefore shall a man leave his father and his mother, and shall cleave
+# unto his wife, and they shall be one flesh.&quot;
+m.step(&quot;Gen.2.24&quot;)
+# ‹עַל־כֵּן יַעֲזָב־אִישׁ … וְדָבַק … וְהָיוּ לְבָשָׂר אֶחָד› (“upon so he-
+# leaves man … and-cleaves … and-they-become to-flesh one”) — pattern
+# recorded: leave(man, father-and-mother) ∧ cleave(man, in-his-wife) ∧ they-
+# become(one-flesh)
+m.pattern(&quot;azav(ish, av_ve_em) ∧ davak(ish, be_ishto) ∧ hayu(basar_echad)&quot;)
+
+# -------------------------- Gen.2.25 · CLOSING_STATE_BRIDGE ----------------
+# וַיִּהְיוּ שְׁנֵיהֶם עֲרוּמִּים הָאָדָם וְאִשְׁתּוֹ וְלֹא יִתְבֹּשָׁשׁוּ
+# &quot;And they were both naked, the man and his wife, and were not ashamed.&quot;
+m.step(&quot;Gen.2.25&quot;)
+# ‹עֲרוּמִּים … וְלֹא יִתְבֹּשָׁשׁוּ› (“naked … and-not were-ashamed”) —
+# fact holds: naked(the-human-and-his-wife); were-not-ashamed(both-of-them)
+m.fact(&quot;arumim(ha_adam_ve_ishto)&quot;,
+       &quot;lo_yitboshashu(shneihem)&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == {&#x27;ishah&#x27;, &#x27;chayat_ha_sadeh&#x27;, &#x27;of_ha_shamayim&#x27;}
+    assert m.presupposed_set() == {&#x27;adamah&#x27;, &#x27;behemah&#x27;, &#x27;adam&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {&#x27;ishah&#x27;: &#x27;ishah&#x27;}
+    assert m.REGISTRY[&quot;writes&quot;] == 1
+    assert m.tests_list() == [(&#x27;FAIL&#x27;, &#x27;tov&#x27;, &#x27;heyot_ha_adam_levado&#x27;)]
+    assert m.open_demands() == []
+    assert len(m.SPECS[&quot;log&quot;]) == 1
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;read_before_install&#x27;: 3, &#x27;spec_delta&#x27;: 1}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;hu_shemo(kol_asher_yiqra_lo_ha_adam)&#x27;, &#x27;lo_matza(ezer_kenegdo, le_adam)&#x27;, &#x27;pattern: azav(ish, av_ve_em) ∧ davak(ish, be_ishto) ∧ hayu(basar_echad)&#x27;, &#x27;arumim(ha_adam_ve_ishto)&#x27;, &#x27;lo_yitboshashu(shneihem)&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 12
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre>
+<div class="note">FROZEN 2026-08-01 (owner order &quot;freeze gen_09 and gen_10 and commit and push&quot;; derived same day, &quot;go derive gen 9&quot;): tenth frozen unit. Central findings, all DB-verified before drafting: the corpus&#x27;s FIRST FAIL verdict (lo-tov — speech-mode, against the week&#x27;s see-mode; Onkelos negates day 6&#x27;s own verdict word: la takkin); the in-span demand-&gt;receipt arc (e&#x27;eseh pushed at 2:18, popped by va-yiven at 2:22 — execution-as-receipt, the Miriam class — with the make-&gt;build spec-delta flagged); the 1cs volitive joining gen_06&#x27;s CMD-US family; the formation minimal pair completing ACROSS CREATURES (single-yod animals, double-yod human); the NAME device delegated, ratified standing (hu shemo), and executed as the corpus&#x27;s first creature-agent event — with every value withheld by the letter (the registry stays unwritten rather than invented); sagar and basar debuting in the surgery (the quarantine root born as healing closure); tzela&#x27;s Tabernacle-exclusive trail (the woman built from sanctuary vocabulary); the first human speech (near-poetic accents, passive naming, the corpus&#x27;s first etymology: ishah from ish); the first narrator etiology in law grammar (al-ken + imperfect + weqatal — the PATTERN operator, standing fact with no trigger); shame debuting negated; and the one-token naked/cunning pun bridging to the serpent. gen_08&#x27;s two open demands and armed handler are UNTOUCHED — the debt carries into Gen 3. Pre-flight green in the scratchpad harness (TEST-FAIL, PATTERN, one checker pattern injected; repo interpreter untouched). Freeze, narrative (ASK FIRST), and triage await owner order. Not binding religious law.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

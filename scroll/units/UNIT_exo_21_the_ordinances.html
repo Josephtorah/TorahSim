@@ -1,0 +1,1094 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>exo_21_the_ordinances — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/exo_21_the_ordinances?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The ordinances (21:1-37) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>exo_21_the_ordinances</b> · Exodus 21:1-37 · derive logic_derived_v1 · phase FWD-35</div>
+<div class="meta"><a href="../#Exod/21/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">וְאֵ֨לֶּה֙ הַמִּשְׁפָּטִ֔ים</span> · <i>ve-ele ha-mishpatim</i> · &#x27;and these are the ordinances&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DERIVED 2026-08-10 · FORWARD ERA unit #35 (run FWD-8 block 5; Exod 1-21 continuous behind it). Span: 21:1-37, whole chapter: 37 verses (SNAPSHOT-verified; six without a mid-verse rest, incl. the header and the four capital participles). Oral layer IN-PIPELINE: manifest 13/13 VERIFIED, zero FAILED — see oral_audit_note_en. MACHINE PROFILE. NINE CASES, FOURTEEN HANDLERS, FOUR STATUTES — the corpus&#x27;s first PURE CASUISTIC CODE in the exodus stack (lev_13&#x27;s CASE/HANDLER operators at their source): nine ki-intake-filters (the Hebrew slave, the daughter, the brawl, the struck slave, the struck mother, the goring ox, the pit, ox-against-ox, the thief), fourteen standing IF-THEN handlers, and four capital PARTICIPLES installed as statutes (the man-striker, the parent-striker, the man-stealer, the parent-curser — STATUTES 4 standing at 21:17). NOTHING OWED TO THE QUEUE: laws install, cases execute later — the queue closes empty (the corpus&#x27;s law-genre signature: zero DECLAREs, zero RESULTs, zero EVENTS — the first exodus-stack unit with no narrative op at all). Wires closed IN-SPAN: 19:13&#x27;s surely-stoned pair lands at the ox (21:28 — the Sinai-fence protocol becomes court-law); 15:26&#x27;s I-am-your-Healer answered by 21:19&#x27;s human license (the Torah&#x27;s only he-shall-surely-heal); 17:2&#x27;s quarrel-verb domesticated at 21:18; 20:12&#x27;s honor-command priced at 21:15/17; 20:15&#x27;s theft identified at 21:16 (the kidnapper); the six-and-one frame&#x27;s third scale (the slave&#x27;s six years). MACHINE EVIDENCE asserted at the build: the header&#x27;s fraud-finals + five words; the alef/vav qere pair adjacent (21:8); the alef-to-alef brackets (21:19, 21:21); the vav-to-vav freedom pair with its 26 words; the awl&#x27;s 400; the no-benefit 98; the two yesterdays (lean 29 / full 36) with their censuses; the exit-verb&#x27;s three women; the goring pair in-span. Queue at close: EMPTY in-unit. REGISTRY 0; TESTS 0. CARE-POINTS: the one-op-per-verse discipline (the pericope&#x27;s IF sometimes lives a verse before its HANDLER — the handler quotes the IF); the participial statutes vs the ki-cases (apodictic form inside the casuistic code — the grammar-shift for capital law); the talion-table held with the tradition&#x27;s monetary law named prominently (21:23-25); the hard verses (21:4&#x27;s split household, 21:21&#x27;s ki-khaspo) kept at the text&#x27;s surface, lean-record, the tradition&#x27;s boundaries named-only; THE OPEN SEAM: the thief&#x27;s pericope (21:37) runs past the chapter into the next span — the code does not pause at the chapter-break. WATCHLIST ARMS: 22:1-3 (the thief&#x27;s law continues — the tunneler, the double payment), 22:24 (the code turns to the poor), 24:7 (the book of the covenant read aloud — this code&#x27;s public reading), Lev 24:19-20 (the talion restated), Lev 25:39-46 (the slave-laws&#x27; second pass; the jubilee&#x27;s forever), Num 35 (the refuge-cities built from 21:13&#x27;s seed), Deut 15 (the release re-legislated; the awl re-explained), Deut 19:4-6 (the manslayer&#x27;s lean yesterday). Outside- Torah names (named-only): Josh 9 (the Gibeonites&#x27; scheme), 1 Kgs 2:28-34 (Joab at the altar-horns — 21:14 executed), 2 Sam 16 (Shimi&#x27;s verse-end curse), Ps 49 (the precious ransom), Isa 58:4 (the wicked fist), Eccl 5:12 (wealth to its owner&#x27;s hurt).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-10 (IN-PIPELINE, forward era; manifest logic/oral_audit/manifests/exo_21_the_ordinances_claims.json 13/13 VERIFIED, zero FAILED; record logic/oral_audit/AUDIT_exo_21_2026-08-10.md). CROWNS (chain-attested + DB-verified). THE FRAUD-FINALS [EX21-01, KB on 21:1]: the header&#x27;s four words end in the letters of מרמה (&quot;fraud,&quot; final-letters checked): &quot;if a fraudulent case comes before the judge, probe it to its truth&quot;; five words = the five books — the true judge as creation&#x27;s partner; the first-letter duties named. THE AWL&#x27;S FOUR HUNDRED [EX21-02, KB on 21:6]: מרצע (&quot;awl&quot;) = 400 EXACT (asserted) — &quot;redeemed after 400 years of bondage, and he went and enslaved himself: pierced by the awl of four hundred&quot;; the door — &quot;let him guard his master&#x27;s house&quot;; the lean forever. THE GARMENT-BETRAYAL PAIR [EX21-03, KB on 21:8]: בבגדו (&quot;in his garment / his betrayal&quot;) exactly twice (checked): the treacherous master and POTIPHAR&#x27;S WIFE seizing Joseph&#x27;s garment — Rabbi Eliezer&#x27;s spread cloth, Rabbi Aqiva&#x27;s &quot;there too was betrayal.&quot; THE ALEF-VAV TRIO [EX21-04, MS on 21:8]: written לא (&quot;not&quot;), read לו (&quot;for himself&quot;) — one of the Torah&#x27;s THREE alef-written-vav-read words (adjacent tokens checked; the locust&#x27;s legs, the walled city): &quot;he OUGHT to have designated her — designation precedes redemption&quot; (Onkelos): mercy voiced out of negation. THE THREE WOMEN&#x27;S EXITS [EX21-05, KB on 21:7-11]: ויצאה (&quot;and she shall go out&quot;) exactly three in the Torah (checked) — ALL women leaving a man&#x27;s house: the wife with him, the maid free, the divorcee; the maid likened to the wife; כצאת the Moses-pair (asserted; the sun-twin); וענתה lean — &quot;the essential season is the Sabbath.&quot; THE TWO PRESUMPTIONS [EX21-06, MS + KB on 21:14]: יזד lean at the schemer, full at the FALSE PROPHET (Deut 18:20; both unique, checked/asserted) — &quot;the prophet who presumes is as one who murders&quot;; בערמה unique — the schemer taken FROM the altar, the Gibeonites&#x27; scheme brought TO it. THE HEALING LICENSE [EX21-07, KB on 21:19]: ירפא (&quot;he shall heal&quot;) — the Torah&#x27;s ONLY station (checked): &quot;from here, permission is granted to the physician to heal&quot; (Marah&#x27;s Divine Healer and the human license — the corpus&#x27;s two healing-grants); the verse runs alef to alef (asserted) — sufferings sent with a decree; the three amnesties (the healed, the cleared, the king). THE CAIN-SKELETON [EX21-08, KB on 21:21]: יקם four in the Torah (checked): CAIN&#x27;s sevenfold, LAMECH&#x27;s, the slave NOT avenged — the vengeance-verb born at the first murder, regulated at the slave-law (Eve&#x27;s &quot;acquired&quot; read into the for-he-is-his-money clause); Esau&#x27;s arise the fourth face; alef-to-alef — the full cycle. THE VAV-TO-VAV FREEDOM [EX21-09, KB on 21:26-27]: both freedom-verses open and close with vav, together exactly 26 words (checked/counted) — the limb-roster by which a slave goes free; Noah&#x27;s curse-and-bless verses share the frame: the verses that free a slave&#x27;s eye answering the verses where slavery entered the canon. THE NO-BENEFIT CIPHER [EX21-10, KB on 21:28]: ולא יאכל (&quot;it shall not be eaten&quot;) = ולא הנאה (&quot;and no benefit,&quot; 98 = 98, asserted) — the halakha in the arithmetic; 19:13&#x27;s stoning-pair closes in-span. THE TWO YESTERDAYS [EX21-11, MS on 21:29/36]: מתמל lean at the warned ox, מתמול full seven verses later — the exemplars split both ways, the Ramah seals both; the lean pair (checked): the ox convicted by its yesterdays, the manslayer acquitted by his (Deut 19:4); נגח (&quot;a gorer&quot;) the in-span pair. THE PRECIOUS RANSOM [EX21-12, KB on 21:30]: פדין lean, unique (checked) — the Psalm&#x27;s twin: &quot;the ransom ATONES — because their soul is precious to Him&quot;; the owner-file to Ecclesiastes&#x27; wealth-to-his-hurt. THE CURSER&#x27;S CAREER [EX21-13, KB + MS]: ומקלל unique at its VERSE&#x27;S HEAD (checked), Shimi&#x27;s curse at its verse&#x27;s END — &quot;head of the Sanhedrin, and became the tail&quot;; באגרף unique (the wicked fist); ענוש full, בפללים lean-full (the exemplar-splits); the closed section at the thief — whose law outruns the chapter.</div>
+<div class="meta">confidence: structure tested; oral layer verified 13/13</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>FORWARD ERA run 8, block 5 (owner: &quot;lets do 5 more blocks&quot;). Canon continuation: Exod 21:1-37 — the ordinances, whole chapter.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Span + source + conventions</td><td>SNAPSHOT prestage: 37 verses; six without etnachta (the header + the capital participles + the talion rows). Volitive census: ZERO queue-cards — the chapter is pure law: nine ki-cases, fourteen weqatal handlers, four participial capital statutes. The thief&#x27;s pericope (21:37) runs past the chapter-break (care-point).</td><td>established</td></tr>
+<tr><td><b>C</b></td><td>Machine structure</td><td>9 CASES / 14 HANDLERS / 4 STATUTES / 0D / 0R / 0E — the first pure law-code unit of the exodus stack (lev_13&#x27;s operators at their source). Laws install; the queue closes empty. In-span wires: the stoned-ox pair from 19:13; the healing license answering Marah; the quarrel-verb domesticated; the Decalogue priced. Asserted evidence: the fraud-finals; the alef/vav adjacent pair; the four letter-brackets; 400; 98; the two yesterdays; the three women&#x27;s exits; 26 words.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Exod 21 (19 notes) + Kitzur Baal HaTurim on Exod 21 (34 notes). Manifest 13 rows: 13 VERIFIED / 0 FAILED / 0 UNCHECKABLE, first run. The fraud-finals; the awl&#x27;s 400; the garment-betrayal pair; the alef-vav trio; the three exits; the two presumptions; the healing license; the Cain-skeleton; the vav-to-vav freedom; the no-benefit cipher; the two yesterdays; the precious ransom; the curser&#x27;s career.</td><td>established</td></tr>
+<tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 13/13 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-10 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits. Exod 1-21 continuous.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Ex_21_1 · Exod.21.1 · <span class='expr'>AND_THESE_ARE_THE_ORDINANCES</span></h3>
+<p><span class="he">וְאֵלֶּה הַמִּשְׁפָּטִים אֲשֶׁר תָּשִׂים לִפְנֵיהֶם</span> · <i>ve-ele ha-mishpatim asher tasim li-fene-hem</i> · And these are the ordinances which you shall set before them.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאֵ֨לֶּה֙ הַמִּשְׁפָּטִ֔ים</span> · <i>ve-ele ha-mishpatim</i> · and these are the ordinances (NO etnachta in verse: split at zaqef qatan on ha-mishpatim) [VERIFIED: SNAPSHOT Exod.21.1 idx1 zaqef qatan; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֲשֶׁ֥ר תָּשִׂ֖ים לִפְנֵיהֶֽם</span> · <i>asher tasim li-fene-hem</i> · which you shall set before them (verse-final li-fene-hem) [VERIFIED: SNAPSHOT Exod.21.1 idx2-4]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_ele_ha_mishpatim, t0)</span><br><span class="gloss">= HOLDS(and-ele-the-mishpatim, t0)</span><br>THE HEADER [EX21-01 CROWN]. VE-ELE ha-MISHPATIM — &#x27;AND THESE are the ordinances&#x27;: the vav of continuity (the readings: as the former from Sinai, so these from Sinai — the civil code joined to the Decalogue by one letter); asher TASIM lifnehem — &#x27;which you shall SET BEFORE THEM&#x27; (set like a laid table, the readings named-only); and the header&#x27;s four words END IN THE LETTERS OF MIRMA, fraud (VERIFIED final-letters): &#x27;if a FRAUDULENT CASE comes before the judge, let him probe it to its truth&#x27; — the code&#x27;s title warning its own bench; FIVE words (asserted): the true judge as upholder of the five books and partner in creation (18:13&#x27;s He-He doctrine at the code&#x27;s door); the Kitzur&#x27;s acronym-duties named (probe the case; offer compromise first; if both parties will): the machine notes the addressees: lifnehem — BEFORE THEM, the judges of 18&#x27;s pyramid: the courts Jethro drew now get their statute-book.
+</td><td><span class="he">וְאֵלֶּה הַמִּשְׁפָּטִים אֲשֶׁר תָּשִׂים לִפְנֵיהֶם</span> · <i>ve-ele ha-mishpatim asher tasim li-fene-hem</i><br><span class="gloss">= and-ele the-mishpatim which tasim to-me-fene-hem</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The code&#x27;s door; the fraud-finals.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_2 · Exod.21.2 · <span class='expr'>THE_HEBREW_SLAVE</span></h3>
+<p><span class="he">כִּי תִקְנֶה עֶבֶד עִבְרִי שֵׁשׁ שָׁנִים יַעֲבֹד וּבַשְּׁבִעִת יֵצֵא לַחָפְשִׁי חִנָּם</span> · <i>ki tiqne eved ivri shesh shanim yaavod u-va-sheviit yetze la-chafshi chinam</i> · When you acquire a Hebrew slave, six years he shall serve; and in the seventh he shall go out free, for nothing.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">כִּ֤י תִקְנֶה֙ עֶ֣בֶד עִבְרִ֔י שֵׁ֥שׁ שָׁנִ֖ים יַעֲבֹ֑ד</span> · <i>ki tiqne eved ivri shesh shanim yaavod</i> · when you acquire a Hebrew slave, six years he shall serve (etnachta on yaavod) [VERIFIED: SNAPSHOT Exod.21.2 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּבַ֨שְּׁבִעִ֔ת יֵצֵ֥א לַֽחָפְשִׁ֖י חִנָּֽם</span> · <i>u-va-sheviit yetze la-chafshi chinam</i> · and in the seventh he shall go out free, for nothing (verse-final chinam) [VERIFIED: SNAPSHOT Exod.21.2 idx7-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>CASE</td><td><span class="expr">CASE(ki tiqne eved ivri) ROUTE(eved_ivri)</span><br><span class="gloss">= CASE(when tiqne eved ivri) ROUTE(eved-ivri)</span><br>THE FIRST CASE. ki tiqne EVED IVRI — &#x27;when you acquire a HEBREW SLAVE&#x27;: the case-opener installed (the ki-filter of the law-genre: the code&#x27;s first word of substance is SLAVE — the machine files the order as doctrine: a nation of freed slaves legislates slavery FIRST, and legislates it as a countdown); SHESH shanim yaavod u-va- SHEVIIT yetze la-CHOFSHI CHINAM — &#x27;six years he shall serve, and in the SEVENTH he goes out FREE, FOR NOTHING&#x27;: the six-and-one frame&#x27;s third appearance (creation&#x27;s week, the manna&#x27;s week, now the SLAVE&#x27;S week — the Sabbath-shape scaled to years: the machine wires 20:9-11&#x27;s frame onto a human term of service); the shin of u-va- sheviit under the guard-stroke (MS, named).
+</td><td><span class="he">כִּי תִקְנֶה עֶבֶד עִבְרִי</span> · <i>ki tiqne eved ivri</i><br><span class="gloss">= when tiqne eved ivri</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The code opens with release.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_3 · Exod.21.3 · <span class='expr'>AS_HE_CAME</span></h3>
+<p><span class="he">אִם־בְּגַפּוֹ יָבֹא בְּגַפּוֹ יֵצֵא אִם־בַּעַל אִשָּׁה הוּא וְיָצְאָה אִשְׁתּוֹ עִמּוֹ</span> · <i>im-be-gap-o yavo be-gap-o yetze im-baal isha hu ve-yatza isht-o im-o</i> · If he came in by himself, he shall go out by himself; if he was the husband of a wife, then his wife shall go out with him.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אִם בְּגַפּ֥וֹ יָבֹ֖א בְּגַפּ֣וֹ יֵצֵ֑א</span> · <i>im-be-gap-o yavo be-gap-o yetze</i> · if he came in by himself, he shall go out by himself (etnachta on yetze) [VERIFIED: SNAPSHOT Exod.21.3 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אִם בַּ֤עַל אִשָּׁה֙ ה֔וּא וְיָצְאָ֥ה אִשְׁתּ֖וֹ עִמּֽוֹ</span> · <i>im-baal isha hu ve-yatza isht-o im-o</i> · if he was the husband of a wife, then his wife shall go out with him (verse-final im-o) [VERIFIED: SNAPSHOT Exod.21.3 idx5-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(be_gapo_yavo_be_gapo_yetze, t0)</span><br><span class="gloss">= HOLDS(in-gapo-yavo-in-gapo-yetze, t0)</span><br>THE MIRROR. im-be-GAPO yavo be-GAPO yetze — &#x27;by HIMSELF in, by HIMSELF out&#x27; (the rare gap-word doubled: the term of service may not subtract a man&#x27;s family state); im-BAAL ISHA hu VE-YATZA ishto imo — &#x27;his wife goes out WITH HIM&#x27;: the exit-verb&#x27;s first station of the chapter (the corpus&#x27;s exit-file opens: VE-YATZA — the machine arms 21:11&#x27;s crown: the three Torah she-went-outs are all women leaving a man&#x27;s house, and the first is a wife leaving WITH her man): the readings on the master&#x27;s duty to feed her meanwhile, named-only.
+</td><td><span class="he">אִם־בְּגַפּוֹ יָבֹא בְּגַפּוֹ יֵצֵא</span> · <i>im-be-gap-o yavo be-gap-o yetze</i><br><span class="gloss">= if-in-gap-o yavo in-gap-o yetze</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The exit mirrors the entry.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_4 · Exod.21.4 · <span class='expr'>THE_MASTERS_WIFE</span></h3>
+<p><span class="he">אִם־אֲדֹנָיו יִתֶּן־לוֹ אִשָּׁה וְיָלְדָה־לוֹ בָנִים אוֹ בָנוֹת הָאִשָּׁה וִילָדֶיהָ תִּהְיֶה לַאדֹנֶיהָ וְהוּא יֵצֵא בְגַפּוֹ</span> · <i>im-adonay-v yiten-l-o isha ve-yalda-l-o vanim o vanot ha-isha vi-ylade-ha tihye la-done-ha ve-hu yetze ve-gap-o</i> · If his master gives him a wife, and she bears him sons or daughters — the wife and her children shall be her master&#x27;s, and he shall go out by himself.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אִם אֲדֹנָיו֙ יִתֶּן ל֣וֹ אִשָּׁ֔ה וְיָלְדָה ל֥וֹ בָנִ֖ים א֣וֹ בָנ֑וֹת</span> · <i>im-adonay-v yiten-l-o isha ve-yalda-l-o vanim o vanot</i> · if his master gives him a wife, and she bears him sons or daughters (etnachta on vanot) [VERIFIED: SNAPSHOT Exod.21.4 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">הָאִשָּׁ֣ה וִילָדֶ֗יהָ תִּהְיֶה֙ לַֽאדֹנֶ֔יהָ וְה֖וּא יֵצֵ֥א בְגַפּֽוֹ</span> · <i>ha-isha vi-ylade-ha tihye la-done-ha ve-hu yetze ve-gap-o</i> · the wife and her children shall be her master&#x27;s, and he shall go out by himself (verse-final ve-gap-o) [VERIFIED: SNAPSHOT Exod.21.4 idx10-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ha_isha_vi_yladeha_tihye_la_adoneha, t0)</span><br><span class="gloss">= HOLDS(the-isha-vi-yladeha-tihye-to-adoneha, t0)</span><br>THE SPLIT. im-ADONAV yiten-lo ISHA — &#x27;if his MASTER gives him a wife&#x27; (the Canaanite bondwoman, the readings); ha-isha vi-YLADEHA tihye la-ADONEHA — &#x27;the wife and her children shall be HER MASTER&#x27;S, and he goes out by himself&#x27;: the machine files the case&#x27;s hard edge without softening it (the readings&#x27; law: the master-given union ends with the term — the lean record keeps the verse&#x27;s own severity), and notes what the NEXT verse does with it: the law immediately stages the man who refuses this arithmetic — the code writes its own exception before the ink dries.
+</td><td><span class="he">הָאִשָּׁה וִילָדֶיהָ תִּהְיֶה לַאדֹנֶיהָ וְהוּא יֵצֵא בְגַפּוֹ</span> · <i>ha-isha vi-ylade-ha tihye la-done-ha ve-hu yetze ve-gap-o</i><br><span class="gloss">= the-isha vi-ylade-the tihye to-done-the and-that yetze and-gap-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The split household.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_5 · Exod.21.5 · <span class='expr'>I_LOVE_MY_MASTER</span></h3>
+<p><span class="he">וְאִם־אָמֹר יֹאמַר הָעֶבֶד אָהַבְתִּי אֶת־אֲדֹנִי אֶת־אִשְׁתִּי וְאֶת־בָּנָי לֹא אֵצֵא חָפְשִׁי</span> · <i>ve-im-amor yomar ha-eved ahavti et-adoni-y et-ishti-y ve-et-bana-y lo etze chafshi</i> · And if the slave shall plainly say: I love my master, my wife, and my sons — I will not go out free.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאִם אָמֹ֤ר יֹאמַר֙ הָעֶ֔בֶד אָהַ֨בְתִּי֙ אֶת אֲדֹנִ֔י אֶת אִשְׁתִּ֖י וְאֶת בָּנָ֑י</span> · <i>ve-im-amor yomar ha-eved ahavti et-adoni-y et-ishti-y ve-et-bana-y</i> · and if the slave shall plainly say: I love my master, my wife, and my sons (etnachta on bana-y) [VERIFIED: SNAPSHOT Exod.21.5 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לֹ֥א אֵצֵ֖א חָפְשִֽׁי</span> · <i>lo etze chafshi</i> · I will not go out free (verse-final chafshi) [VERIFIED: SNAPSHOT Exod.21.5 idx11-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ahavti_et_adoni, t0)</span><br><span class="gloss">= HOLDS(ahavti-adoni, t0)</span><br>THE DECLARATION. ve-im-AMOR YOMAR ha-eved — &#x27;if the slave shall PLAINLY SAY&#x27; (the doubled saying: the readings&#x27; law — said and said again, once and once more at the term&#x27;s edge); AHAVTI et-ADONI et- ISHTI ve-et-BANAI — &#x27;I LOVE my master, my wife, and my sons&#x27;: the love-verb&#x27;s strangest deployment in the corpus (the machine notes the inventory: master first, then wife, then sons — the declaration lists its loves in the order the LAW created them); LO ETZE CHOFSHI — &#x27;I will NOT go out free&#x27;: the corpus&#x27;s first recorded REFUSAL OF FREEDOM (8:22&#x27;s refusal was Moses refusing Pharaoh&#x27;s grant; this is a man refusing the code&#x27;s own gift — the readings&#x27; verdict arms the next verse&#x27;s awl).
+</td><td><span class="he">אָמֹר יֹאמַר הָעֶבֶד אָהַבְתִּי אֶת־אֲדֹנִי אֶת־אִשְׁתִּי וְאֶת־בָּנָי</span> · <i>amor yomar ha-eved ahavti et-adoni-y et-ishti-y ve-et-bana-y</i><br><span class="gloss">= amor yomar the-eved ahavti adoni-y ishti-y and-bana-y</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The refusal of freedom.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_6 · Exod.21.6 · <span class='expr'>THE_AWL_AND_THE_DOOR</span></h3>
+<p><span class="he">וְהִגִּישׁוֹ אֲדֹנָיו אֶל־הָאֱלֹהִים וְהִגִּישׁוֹ אֶל־הַדֶּלֶת אוֹ אֶל־הַמְּזוּזָה וְרָצַע אֲדֹנָיו אֶת־אָזְנוֹ בַּמַּרְצֵעַ וַעֲבָדוֹ לְעֹלָם</span> · <i>ve-higish-o adonay-v el-ha-Elohim ve-higish-o el-ha-delet o el-ha-mezuza ve-ratza adonay-v et-azn-o ba-martzea va-avad-o le-olam</i> · Then his master shall bring him to God, and bring him to the door, or to the doorpost; and his master shall pierce his ear with the awl — and he shall serve him forever.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהִגִּישׁ֤וֹ אֲדֹנָיו֙ אֶל הָ֣אֱלֹהִ֔ים וְהִגִּישׁוֹ֙ אֶל הַדֶּ֔לֶת א֖וֹ אֶל הַמְּזוּזָ֑ה</span> · <i>ve-higish-o adonay-v el-ha-Elohim ve-higish-o el-ha-delet o el-ha-mezuza</i> · then his master shall bring him to God, and bring him to the door, or to the doorpost (etnachta on ha-mezuza) [VERIFIED: SNAPSHOT Exod.21.6 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְרָצַ֨ע אֲדֹנָ֤יו אֶת אָזְנוֹ֙ בַּמַּרְצֵ֔עַ וַעֲבָד֖וֹ לְעֹלָֽם</span> · <i>ve-ratza adonay-v et-azn-o ba-martzea va-avad-o le-olam</i> · and his master shall pierce his ear with the awl — and he shall serve him forever (verse-final le-olam) [VERIFIED: SNAPSHOT Exod.21.6 idx10-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>HANDLER</td><td><span class="expr">HANDLER IF(amor yomar ha-eved ahavti) THEN(ve-ratza et-azno ba-martzea, va-avado le-olam)</span><br><span class="gloss">= HANDLER IF(amor yomar the-eved ahavti) THEN(and-ratza et-azno in-the-martzea, and-avado to-olam)</span><br>THE PROCEDURE [EX21-02 CROWN]. ve-higisho adonav el-ha-ELOHIM — &#x27;to GOD&#x27; (the judges, the readings — the refusal must pass the bench); ve-higisho el-ha-DELET o el-ha-MEZUZA — &#x27;to the DOOR or the doorpost&#x27;: the Kitzur — &#x27;let him guard his master&#x27;s house&#x27; (the threshold as the sentence); ve-RATZA adonav et-AZNO ba-MARTZEA — &#x27;and pierce his EAR with the AWL&#x27;: and MARTZEA = 400, EXACT (VERIFIED at the build) — &#x27;the Name redeemed us after FOUR HUNDRED YEARS of bondage, and this man went and enslaved himself: let him be pierced by the awl of four hundred&#x27; (Gen 15:13&#x27;s number driven through the ear that chose new servitude; the ear that heard at Sinai, the readings); va-avado LE-OLAM — &#x27;FOREVER&#x27; written LEAN (to the jubilee, the readings — the machine notes the letter-scale justice: 19:9&#x27;s faith and ban got the FULL forevers; servitude gets the thinned one).
+</td><td><span class="he">וְרָצַע אֲדֹנָיו אֶת־אָזְנוֹ בַּמַּרְצֵעַ וַעֲבָדוֹ לְעֹלָם</span> · <i>ve-ratza adonay-v et-azn-o ba-martzea va-avad-o le-olam</i><br><span class="gloss">= and-ratza adonay-v azn-o in-the-martzea and-avad-o to-olam</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The handler; the awl&#x27;s four hundred.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_7 · Exod.21.7 · <span class='expr'>THE_DAUGHTER_SOLD</span></h3>
+<p><span class="he">וְכִי־יִמְכֹּר אִישׁ אֶת־בִּתּוֹ לְאָמָה לֹא תֵצֵא כְּצֵאת הָעֲבָדִים</span> · <i>ve-ki-yimkor ish et-bit-o le-ama lo tetze ke-tzet ha-avadim</i> · And when a man sells his daughter as a maidservant, she shall not go out as the slaves go out.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְכִֽי יִמְכֹּ֥ר אִ֛ישׁ אֶת בִּתּ֖וֹ לְאָמָ֑ה</span> · <i>ve-ki-yimkor ish et-bit-o le-ama</i> · and when a man sells his daughter as a maidservant (etnachta on le-ama) [VERIFIED: SNAPSHOT Exod.21.7 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לֹ֥א תֵצֵ֖א כְּצֵ֥את הָעֲבָדִֽים</span> · <i>lo tetze ke-tzet ha-avadim</i> · she shall not go out as the slaves go out (verse-final ha-avadim) [VERIFIED: SNAPSHOT Exod.21.7 idx6-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>CASE</td><td><span class="expr">CASE(ve-khi yimkor ish et bito le-ama) ROUTE(ama_ivriya)</span><br><span class="gloss">= CASE(and-khi yimkor man et bito to-ama) ROUTE(ama-ivriya)</span><br>THE SECOND CASE [EX21-05]. ve-khi-YIMKOR ish et-BITO le-AMA — &#x27;when a man sells HIS DAUGHTER as a maidservant&#x27;: the case installed (the poverty-sale, the readings — the code regulates what it does not praise); LO TETZE ke-TZET ha-avadim — &#x27;she shall NOT go out AS THE SLAVES go out&#x27;: the going-out word&#x27;s Torah-pair (asserted at the build): the maid&#x27;s exit and MOSES&#x27; going out to the tent (33:8) — the Kitzur&#x27;s sun-twin named (&#x27;the face of Moses like the face of the sun... as the sun goes out in its might&#x27;): her exit is NOT the slaves&#x27; — the machine notes the code&#x27;s method: the girl&#x27;s protections will be stated as a ladder of exits (designation, redemption, or free), each one guarded.
+</td><td><span class="he">וְכִי־יִמְכֹּר אִישׁ אֶת־בִּתּוֹ לְאָמָה</span> · <i>ve-ki-yimkor ish et-bit-o le-ama</i><br><span class="gloss">= and-when-yimkor man bit-o to-ama</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The second case.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_8 · Exod.21.8 · <span class='expr'>THE_QERE_OF_MERCY</span></h3>
+<p><span class="he">אִם־רָעָה בְּעֵינֵי אֲדֹנֶיהָ אֲשֶׁר־לא לוֹ יְעָדָהּ וְהֶפְדָּהּ לְעַם נָכְרִי לֹא־יִמְשֹׁל לְמָכְרָהּ בְּבִגְדוֹ־בָהּ</span> · <i>im-raa be-ene adone-ha asher-l l-o yeada-ה ve-hefda-ה le-am nakhri lo-yimshol le-makhra-ה be-vigd-o-va-ה</i> · If she is bad in the eyes of her master, who has not designated her — then he shall let her be redeemed; to a foreign people he shall not rule to sell her, since he has dealt treacherously with her.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אִם רָעָ֞ה בְּעֵינֵ֧י אֲדֹנֶ֛יהָ אֲשֶׁר לא ל֥וֹ יְעָדָ֖הּ וְהֶפְדָּ֑הּ</span> · <i>im-raa be-ene adone-ha asher-l l-o yeada-ה ve-hefda-ה</i> · if she is bad in the eyes of her master, who has not designated her — then he shall let her be redeemed (etnachta on ve-hefda-ה) [VERIFIED: SNAPSHOT Exod.21.8 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לְעַ֥ם נָכְרִ֛י לֹא יִמְשֹׁ֥ל לְמָכְרָ֖הּ בְּבִגְדוֹ בָֽהּ</span> · <i>le-am nakhri lo-yimshol le-makhra-ה be-vigd-o-va-ה</i> · to a foreign people he shall not rule to sell her, since he has dealt treacherously with her (verse-final va-ה) [VERIFIED: SNAPSHOT Exod.21.8 idx9-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_hefda, t0)</span><br><span class="gloss">= HOLDS(and-hefda, t0)</span><br>THE MERCY-QERE [EX21-03 + EX21-04 CROWNS]. asher-LO yeada — WRITTEN &#x27;who has NOT designated her&#x27; (alef), READ &#x27;who has designated her FOR HIMSELF&#x27; (vav): one of the Torah&#x27;s THREE alef-written-vav-read words (VERIFIED adjacent-token pair at the build; the Shemini roster: the locust&#x27;s legs, the walled city) — &#x27;and all three come for exposition&#x27;: HE OUGHT TO HAVE DESIGNATED HER — &#x27;the duty of designation precedes the duty of redemption&#x27; (Onkelos): the law&#x27;s mercy voiced out of its own negation; ve-HEFDA — &#x27;he shall let her be REDEEMED&#x27;; le-am NAKHRI lo-yimshol le-makhra BE-VIGDO bah — &#x27;to a FOREIGN people he shall not sell her, since he has DEALT TREACHEROUSLY with her&#x27;: and the garment-betrayal word&#x27;s Torah-pair (VERIFIED): this master and POTIPHAR&#x27;S WIFE (&#x27;she seized him BY HIS GARMENT,&#x27; Gen 39:12) — Rabbi Eliezer: the spread garment forbids the sale; Rabbi Aqiva: the betrayal does (&#x27;for THERE TOO was betrayal&#x27;): cloth and treason one skeleton, the maid&#x27;s law and Joseph&#x27;s trial reading each other.
+</td><td><span class="he">אֲשֶׁר־לא לוֹ יְעָדָהּ וְהֶפְדָּהּ</span> · <i>asher-l l-o yeada-ה ve-hefda-ה</i><br><span class="gloss">= which-l l-o yeada-ה and-hefda-ה</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The alef read as vav; the garment pair.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_9 · Exod.21.9 · <span class='expr'>AS_THE_DAUGHTERS</span></h3>
+<p><span class="he">וְאִם־לִבְנוֹ יִיעָדֶנָּה כְּמִשְׁפַּט הַבָּנוֹת יַעֲשֶׂה־לָּהּ</span> · <i>ve-im-li-ven-o yiade-na ke-mishpat ha-banot yaase-la-ה</i> · And if he designates her for his son — according to the ordinance of the daughters he shall do for her.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאִם לִבְנ֖וֹ יִֽיעָדֶ֑נָּה</span> · <i>ve-im-li-ven-o yiade-na</i> · and if he designates her for his son (etnachta on yiade-na) [VERIFIED: SNAPSHOT Exod.21.9 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כְּמִשְׁפַּ֥ט הַבָּנ֖וֹת יַעֲשֶׂה לָּֽהּ</span> · <i>ke-mishpat ha-banot yaase-la-ה</i> · according to the ordinance of the daughters he shall do for her (verse-final la-ה) [VERIFIED: SNAPSHOT Exod.21.9 idx3-6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ke_mishpat_ha_banot, t0)</span><br><span class="gloss">= HOLDS(like-mishpat-the-daughters, t0)</span><br>THE STANDARD. ve-im-li-VENO yiadena — &#x27;if he designates her FOR HIS SON&#x27;; ke-MISHPAT ha-BANOT yaase-lah — &#x27;according to the ORDINANCE OF THE DAUGHTERS he shall do for her&#x27;: the code&#x27;s title-word (mishpatim) makes its first in-span return — and it returns to protect a purchased girl with a FREE DAUGHTER&#x27;S standard (the machine files the equation: the ama designated to the son is re- classed OUT of the property rules into family law — the readings on food, clothing, and season, arming the next verse).
+</td><td><span class="he">כְּמִשְׁפַּט הַבָּנוֹת יַעֲשֶׂה־לָּהּ</span> · <i>ke-mishpat ha-banot yaase-la-ה</i><br><span class="gloss">= like-mishpat daughters yaase-to-ה</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The daughter-standard.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_10 · Exod.21.10 · <span class='expr'>HER_THREE_RIGHTS</span></h3>
+<p><span class="he">אִם־אַחֶרֶת יִקַּח־לוֹ שְׁאֵרָהּ כְּסוּתָהּ וְעֹנָתָהּ לֹא יִגְרָע</span> · <i>im-acheret yiqach-l-o sheera-ה kesuta-ה ve-onata-ה lo yigra</i> · If he takes himself another — her flesh, her covering, and her season he shall not diminish.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אִם אַחֶ֖רֶת יִֽקַּֽח ל֑וֹ</span> · <i>im-acheret yiqach-l-o</i> · if he takes himself another (etnachta on l-o) [VERIFIED: SNAPSHOT Exod.21.10 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">שְׁאֵרָ֛הּ כְּסוּתָ֥הּ וְעֹנָתָ֖הּ לֹ֥א יִגְרָֽע</span> · <i>sheera-ה kesuta-ה ve-onata-ה lo yigra</i> · her flesh, her covering, and her season he shall not diminish (verse-final yigra) [VERIFIED: SNAPSHOT Exod.21.10 idx4-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(sheera_kesuta_ve_onata, t0)</span><br><span class="gloss">= HOLDS(sheera-kesuta-and-onata, t0)</span><br>THE THREE [EX21-05]. im-ACHERET yiqach-lo — &#x27;if he takes ANOTHER&#x27;; SHEERA KESUTA VE-ONATA lo yigra — &#x27;her FLESH (food), her COVERING, and her SEASON he shall not DIMINISH&#x27;: the corpus&#x27;s first marital- duty triple (the three rights the tradition reads onto every wife from the maidservant&#x27;s case — the a-fortiori the readings draw, named-only); and VE-ONATA written LEAN (the answer-skeleton&#x27;s four stations asserted at the build: Jacob&#x27;s testifying righteousness, the chalitza&#x27;s answer, the song&#x27;s testimony — and this, the only conjugal one): the Kitzur on the missing letter: &#x27;the ESSENTIAL season is the SABBATH, not the six weekdays&#x27; — the law of tenderness carried by a lean spelling.
+</td><td><span class="he">שְׁאֵרָהּ כְּסוּתָהּ וְעֹנָתָהּ לֹא יִגְרָע</span> · <i>sheera-ה kesuta-ה ve-onata-ה lo yigra</i><br><span class="gloss">= sheera-ה kesuta-ה and-onata-ה not yigra</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The three duties; the lean season.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_11 · Exod.21.11 · <span class='expr'>OUT_FREE_WITHOUT_MONEY</span></h3>
+<p><span class="he">וְאִם־שְׁלָשׁ־אֵלֶּה לֹא יַעֲשֶׂה לָהּ וְיָצְאָה חִנָּם אֵין כָּסֶף</span> · <i>ve-im-shelash-ele lo yaase la-ה ve-yatza chinam en kasef</i> · And if these three he does not do for her — then she shall go out for nothing, without money.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאִם שְׁלָ֨שׁ אֵ֔לֶּה לֹ֥א יַעֲשֶׂ֖ה לָ֑הּ</span> · <i>ve-im-shelash-ele lo yaase la-ה</i> · and if these three he does not do for her (etnachta on la-ה) [VERIFIED: SNAPSHOT Exod.21.11 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְיָצְאָ֥ה חִנָּ֖ם אֵ֥ין כָּֽסֶף</span> · <i>ve-yatza chinam en kasef</i> · then she shall go out for nothing, without money (verse-final kasef) [VERIFIED: SNAPSHOT Exod.21.11 idx6-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>HANDLER</td><td><span class="expr">HANDLER IF(shelash ele lo yaase lah) THEN(ve-yatza chinam en kasef)</span><br><span class="gloss">= HANDLER IF(shelash ele not yaase lah) THEN(and-yatza chinam en kasef)</span><br>THE RELEASE [EX21-05 CROWN]. ve-im-SHELASH-ELE lo yaase lah — &#x27;if these THREE he does not do&#x27; (the clipped qamatz under the binder, MS named); VE-YATZA CHINAM EN KASEF — &#x27;she shall GO OUT for nothing, WITHOUT MONEY&#x27;: the handler installed — and the she-went-out verb&#x27;s Torah-census is exactly THREE (VERIFIED), ALL WOMEN LEAVING A MAN&#x27;S HOUSE: the slave&#x27;s WIFE with him (21:3), the MAIDSERVANT free here, and the DIVORCEE (Deut 24:2) — the Kitzur&#x27;s likeness sealed by the pair: &#x27;the maid is likened to the wife — as the wife by document, so the maid&#x27; (one exit-verb walking the corpus&#x27;s three doors); en KASEF — the Kitzur&#x27;s juxtaposition named (no-money beside the death-law: the greater penalty swallows the payment): the girl&#x27;s ladder tops out at free.
+</td><td><span class="he">וְיָצְאָה חִנָּם אֵין כָּסֶף</span> · <i>ve-yatza chinam en kasef</i><br><span class="gloss">= and-yatza chinam en kasef</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The handler; the three women&#x27;s exits.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_12 · Exod.21.12 · <span class='expr'>THE_STRIKER_OF_MAN</span></h3>
+<p><span class="he">מַכֵּה אִישׁ וָמֵת מוֹת יוּמָת</span> · <i>make ish va-met mot yumat</i> · He who strikes a man, and he dies — shall surely be put to death.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">מַכֵּ֥ה אִ֛ישׁ וָמֵ֖ת</span> · <i>make ish va-met</i> · he who strikes a man, and he dies (NO etnachta in verse: split at tifcha on va-met) [VERIFIED: SNAPSHOT Exod.21.12 idx2 tifcha; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">מ֥וֹת יוּמָֽת</span> · <i>mot yumat</i> · shall surely be put to death (verse-final yumat) [VERIFIED: SNAPSHOT Exod.21.12 idx3-4]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>STATUTE</td><td><span class="expr">STATUTE FORBID(makkeh_ish)</span><br><span class="gloss">= STATUTE FORBID(makkeh-man)</span><br>THE CAPITAL CODE OPENS. MAKKE ISH va-MET, MOT YUMAT — &#x27;he who STRIKES A MAN, and he dies — shall SURELY BE PUT TO DEATH&#x27;: the participial statute (the apodictic form inside the casuistic code: no ki, no if — a standing description of a doomed man: the machine notes the grammar-shift the law-genre makes for murder); the death- doubling MOT YUMAT (16:29&#x27;s court-file armed at exo_16 now in its home genre); the readings on witnesses and warning, named-only: the corpus installs the statute bare, as the verse does.
+</td><td><span class="he">מַכֵּה אִישׁ וָמֵת מוֹת יוּמָת</span> · <i>make ish va-met mot yumat</i><br><span class="gloss">= make man and-met dying yumat</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The first capital statute.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_13 · Exod.21.13 · <span class='expr'>THE_PLACE_TO_FLEE</span></h3>
+<p><span class="he">וַאֲשֶׁר לֹא צָדָה וְהָאֱלֹהִים אִנָּה לְיָדוֹ וְשַׂמְתִּי לְךָ מָקוֹם אֲשֶׁר יָנוּס שָׁמָּה</span> · <i>va-asher lo tzada ve-ha-Elohim ina le-yad-o ve-samti le-kha maqom asher yanus shama-ה</i> · And he who did not lie in wait, but God caused it to come to his hand — I will set for you a place where he may flee.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַאֲשֶׁר֙ לֹ֣א צָדָ֔ה וְהָאֱלֹהִ֖ים אִנָּ֣ה לְיָד֑וֹ</span> · <i>va-asher lo tzada ve-ha-Elohim ina le-yad-o</i> · and he who did not lie in wait, but God caused it to come to his hand (etnachta on le-yad-o) [VERIFIED: SNAPSHOT Exod.21.13 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְשַׂמְתִּ֤י לְךָ֙ מָק֔וֹם אֲשֶׁ֥ר יָנ֖וּס שָֽׁמָּה</span> · <i>ve-samti le-kha maqom asher yanus shama-ה</i> · I will set for you a place where he may flee (verse-final shama-ה) [VERIFIED: SNAPSHOT Exod.21.13 idx6-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>HANDLER</td><td><span class="expr">HANDLER IF(lo tzada, ve-ha-elohim ina le-yado) THEN(ve-samti lekha maqom asher yanus shama)</span><br><span class="gloss">= HANDLER IF(not tzada, and-the-God ina to-his-hand) THEN(and-samti to-you maqom which yanus shama)</span><br>THE REFUGE. va-asher LO TZADA — &#x27;who did NOT lie in wait&#x27; — ve-ha- ELOHIM INA le-yado — &#x27;but GOD caused it to come to his hand&#x27;: the corpus&#x27;s boldest theology of accident (the unintended death assigned to the Hand behind hands — the readings&#x27; two-hotels doctrine, named- only); VE-SAMTI lekha MAQOM asher YANUS shama — &#x27;I will SET for you a PLACE where he may FLEE&#x27;: the handler installed — the CITY-OF- REFUGE law in seed (Num 35 and Deut 19 armed; the Kitzur&#x27;s boundary- gematria named as the tradition&#x27;s device): the machine notes the speaker-shift: the I of the code (ve-samti) — the refuge is the one institution in the chapter God builds Himself.
+</td><td><span class="he">וְשַׂמְתִּי לְךָ מָקוֹם אֲשֶׁר יָנוּס שָׁמָּה</span> · <i>ve-samti le-kha maqom asher yanus shama-ה</i><br><span class="gloss">= and-samti to-kha maqom which yanus shama-ה</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The refuge handler.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_14 · Exod.21.14 · <span class='expr'>FROM_MY_ALTAR</span></h3>
+<p><span class="he">וְכִי־יָזִד אִישׁ עַל־רֵעֵהוּ לְהָרְגוֹ בְעָרְמָה מֵעִם מִזְבְּחִי תִּקָּחֶנּוּ לָמוּת</span> · <i>ve-ki-yazid ish al-ree-hu le-harg-o ve-arma me-im mizbchi-y tiqache-nu la-mut</i> · And when a man presumes against his fellow, to kill him by scheme — from My altar you shall take him, to die.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְכִֽי יָזִ֥ד אִ֛ישׁ עַל רֵעֵ֖הוּ לְהָרְג֣וֹ בְעָרְמָ֑ה</span> · <i>ve-ki-yazid ish al-ree-hu le-harg-o ve-arma</i> · and when a man presumes against his fellow, to kill him by scheme (etnachta on ve-arma) [VERIFIED: SNAPSHOT Exod.21.14 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">מֵעִ֣ם מִזְבְּחִ֔י תִּקָּחֶ֖נּוּ לָמֽוּת</span> · <i>me-im mizbchi-y tiqache-nu la-mut</i> · from My altar you shall take him, to die (verse-final la-mut) [VERIFIED: SNAPSHOT Exod.21.14 idx7-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>HANDLER</td><td><span class="expr">HANDLER IF(yazid ish al reehu le-horgo ve-arma) THEN(me-im mizbechi tiqachenu la-mut)</span><br><span class="gloss">= HANDLER IF(yazid man upon reehu to-horgo and-arma) THEN(from-if mizbechi tiqachenu to-mut)</span><br>NO ASYLUM [EX21-06 CROWN]. ve-khi-YAZID ish al-reehu — &#x27;when a man PRESUMES against his fellow&#x27;: the presume-verb LEAN here and FULL at the FALSE PROPHET (VERIFIED: the Torah&#x27;s only other station, Deut 18:20&#x27;s yazid — MS: &#x27;one lean, one full&#x27;; the Kitzur: &#x27;the prophet who presumes is AS ONE WHO MURDERS&#x27; — the scheming killer and the lying prophet one verb, two spellings); le-horgo VE-ARMA — &#x27;by SCHEME&#x27;: Torah-unique (VERIFIED at the build) — the GIBEONITES its Scripture-twin: &#x27;this one schemed to kill and was taken FROM MY ALTAR to die; those schemed to join and were brought TO the altar&#x27; (one cunning-word, the altar refusing and receiving); me-im MIZBECHI tiqachenu LA-MUT — &#x27;from MY ALTAR you shall take him&#x27;: the handler installed — sanctity is no shield for the deliberate (the readings: even a priest mid-service; Joab at the horns armed, named-only).
+</td><td><span class="he">מֵעִם מִזְבְּחִי תִּקָּחֶנּוּ לָמוּת</span> · <i>me-im mizbchi-y tiqache-nu la-mut</i><br><span class="gloss">= from-if mizbchi-y tiqache-nu to-mut</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The two presumptions; no asylum.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_15 · Exod.21.15 · <span class='expr'>THE_STRIKER_OF_PARENTS</span></h3>
+<p><span class="he">וּמַכֵּה אָבִיו וְאִמּוֹ מוֹת יוּמָת</span> · <i>u-make avi-v ve-im-o mot yumat</i> · And he who strikes his father and his mother shall surely be put to death.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּמַכֵּ֥ה אָבִ֛יו וְאִמּ֖וֹ</span> · <i>u-make avi-v ve-im-o</i> · and he who strikes his father and his mother (NO etnachta in verse: split at tifcha on ve-im-o) [VERIFIED: SNAPSHOT Exod.21.15 idx2 tifcha; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">מ֥וֹת יוּמָֽת</span> · <i>mot yumat</i> · shall surely be put to death (verse-final yumat) [VERIFIED: SNAPSHOT Exod.21.15 idx3-4]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>STATUTE</td><td><span class="expr">STATUTE FORBID(makkeh_aviv_ve_imo)</span><br><span class="gloss">= STATUTE FORBID(makkeh-aviv-and-imo)</span><br>THE PARENT-STRIKER. u-MAKKE AVIV ve-IMO, MOT YUMAT — &#x27;he who STRIKES his father and his mother shall surely die&#x27;: the second participial statute — the fifth utterance&#x27;s dark mirror (20:12 commanded the honoring; 21:15 prices the striking: the machine wires the Decalogue to its case-law across one chapter); the readings&#x27; wound- requirement, named-only; and the placement noted: the parent-striker stands between the man-striker and the man-stealer — the code files violence against parents WITH the capital violences, not with the property wrongs.
+</td><td><span class="he">וּמַכֵּה אָבִיו וְאִמּוֹ מוֹת יוּמָת</span> · <i>u-make avi-v ve-im-o mot yumat</i><br><span class="gloss">= make avi-v and-if-o dying yumat</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The second capital statute.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_16 · Exod.21.16 · <span class='expr'>THE_MAN_STEALER</span></h3>
+<p><span class="he">וְגֹנֵב אִישׁ וּמְכָרוֹ וְנִמְצָא בְיָדוֹ מוֹת יוּמָת</span> · <i>ve-gonev ish u-mekhar-o ve-nimtza ve-yad-o mot yumat</i> · And he who steals a man, and sells him, and he is found in his hand — shall surely be put to death.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְגֹנֵ֨ב אִ֧ישׁ וּמְכָר֛וֹ וְנִמְצָ֥א בְיָד֖וֹ</span> · <i>ve-gonev ish u-mekhar-o ve-nimtza ve-yad-o</i> · and he who steals a man, and sells him, and he is found in his hand (NO etnachta in verse: split at tifcha on ve-yad-o) [VERIFIED: SNAPSHOT Exod.21.16 idx4 tifcha; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">מ֥וֹת יוּמָֽת</span> · <i>mot yumat</i> · shall surely be put to death (verse-final yumat) [VERIFIED: SNAPSHOT Exod.21.16 idx5-6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>STATUTE</td><td><span class="expr">STATUTE FORBID(gonev_ish)</span><br><span class="gloss">= STATUTE FORBID(gonev-man)</span><br>THE KIDNAPPER. ve-GONEV ISH u-mekharo ve-nimtza ve-yado, MOT YUMAT — &#x27;he who STEALS A MAN, and sells him... shall surely die&#x27;: the third participial statute — and the eighth utterance&#x27;s referent by the tradition&#x27;s own count (20:15&#x27;s two-word lo-tignov read here: THE THEFT AMONG THE TEN IS THIS ONE, the capital theft — the Kitzur&#x27;s cipher at the Decalogue named): the machine notes the code&#x27;s hierarchy made explicit: stealing PROPERTY ends this chapter in repayment (21:37); stealing a PERSON stands here among the death- laws — the corpus prices a man as the one thing that cannot be restituted.
+</td><td><span class="he">וְגֹנֵב אִישׁ וּמְכָרוֹ וְנִמְצָא בְיָדוֹ</span> · <i>ve-gonev ish u-mekhar-o ve-nimtza ve-yad-o</i><br><span class="gloss">= and-gonev man and-mekhar-o and-nimtza and-yad-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The third capital statute.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_17 · Exod.21.17 · <span class='expr'>THE_CURSER_OF_PARENTS</span></h3>
+<p><span class="he">וּמְקַלֵּל אָבִיו וְאִמּוֹ מוֹת יוּמָת</span> · <i>u-meqalel avi-v ve-im-o mot yumat</i> · And he who curses his father and his mother shall surely be put to death.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּמְקַלֵּ֥ל אָבִ֛יו וְאִמּ֖וֹ</span> · <i>u-meqalel avi-v ve-im-o</i> · and he who curses his father and his mother (NO etnachta in verse: split at tifcha on ve-im-o) [VERIFIED: SNAPSHOT Exod.21.17 idx2 tifcha; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">מ֥וֹת יוּמָֽת</span> · <i>mot yumat</i> · shall surely be put to death (verse-final yumat) [VERIFIED: SNAPSHOT Exod.21.17 idx3-4]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>STATUTE</td><td><span class="expr">STATUTE FORBID(meqalel_aviv_ve_imo)</span><br><span class="gloss">= STATUTE FORBID(meqalel-aviv-and-imo)</span><br>THE CURSER [EX21-13 CROWN]. u-MEQALEL AVIV ve-imo, MOT YUMAT — &#x27;he who CURSES his father and his mother shall surely die&#x27;: the fourth participial statute — and the curser-word&#x27;s only Torah station (VERIFIED), standing at its VERSE&#x27;S HEAD while its Scripture-twin (SHIMI cursing David) closes its own verse: the Kitzur — &#x27;the curser WAS HEAD of the Sanhedrin AND BECAME THE TAIL&#x27; (the word&#x27;s two placements as the curser&#x27;s career); the machine files the pair 21:15/21:17 as the code&#x27;s own commentary: the STRIKE and the CURSE of parents carry one sentence — the hand and the mouth weighed equal at the family&#x27;s root (the readings on the curse&#x27;s stone-penalty cipher named).
+</td><td><span class="he">וּמְקַלֵּל אָבִיו וְאִמּוֹ מוֹת יוּמָת</span> · <i>u-meqalel avi-v ve-im-o mot yumat</i><br><span class="gloss">= and-meqalel avi-v and-if-o dying yumat</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The fourth capital statute; the head and the tail.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_18 · Exod.21.18 · <span class='expr'>THE_BRAWL</span></h3>
+<p><span class="he">וְכִי־יְרִיבֻן אֲנָשִׁים וְהִכָּה־אִישׁ אֶת־רֵעֵהוּ בְּאֶבֶן אוֹ בְאֶגְרֹף וְלֹא יָמוּת וְנָפַל לְמִשְׁכָּב</span> · <i>ve-ki-yerivu-n anashim ve-hika-ish et-ree-hu be-even o ve-egrof ve-lo yamut ve-nafal le-mishkav</i> · And when men quarrel, and a man strikes his fellow with a stone or with a fist, and he does not die, but falls to bed —</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְכִֽי יְרִיבֻ֣ן אֲנָשִׁ֔ים וְהִכָּה אִישׁ֙ אֶת רֵעֵ֔הוּ בְּאֶ֖בֶן א֣וֹ בְאֶגְרֹ֑ף</span> · <i>ve-ki-yerivu-n anashim ve-hika-ish et-ree-hu be-even o ve-egrof</i> · and when men quarrel, and a man strikes his fellow with a stone or with a fist (etnachta on ve-egrof) [VERIFIED: SNAPSHOT Exod.21.18 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְלֹ֥א יָמ֖וּת וְנָפַ֥ל לְמִשְׁכָּֽב</span> · <i>ve-lo yamut ve-nafal le-mishkav</i> · and he does not die, but falls to bed (verse-final le-mishkav) [VERIFIED: SNAPSHOT Exod.21.18 idx10-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>CASE</td><td><span class="expr">CASE(ve-khi yerivun anashim ve-hika ish et reehu) ROUTE(makkeh_reehu)</span><br><span class="gloss">= CASE(and-khi yerivun anashim and-hika man et reehu) ROUTE(makkeh-reehu)</span><br>THE THIRD CASE. ve-khi-YERIVUN anashim — &#x27;when men QUARREL&#x27; (17:2&#x27;s quarrel-verb domesticated: Massah&#x27;s riv against Heaven becomes the street-brawl the courts inherit); ve-hika ish et-reehu be-EVEN o ve- EGROF — &#x27;with a STONE or with a FIST&#x27;: the fist-word Torah-unique (VERIFIED at the build) — Isaiah&#x27;s &#x27;fist of wickedness&#x27; its Scripture-twin (the Kitzur: the blow must carry killing-force — the fist that jails its owner); ve-lo yamut ve-nafal le-MISHKAV — &#x27;and he does not die, but falls TO BED&#x27;: the case installed — the corpus&#x27;s first NON-FATAL violence law (until now the code priced death; here it learns to price a lost week).
+</td><td><span class="he">וְכִי־יְרִיבֻן אֲנָשִׁים וְהִכָּה־אִישׁ אֶת־רֵעֵהוּ</span> · <i>ve-ki-yerivu-n anashim ve-hika-ish et-ree-hu</i><br><span class="gloss">= and-when-yerivu-n anashim and-hika-man ree-that</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The injury case.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_19 · Exod.21.19 · <span class='expr'>THE_HEALING_LICENSE</span></h3>
+<p><span class="he">אִם־יָקוּם וְהִתְהַלֵּךְ בַּחוּץ עַל־מִשְׁעַנְתּוֹ וְנִקָּה הַמַּכֶּה רַק שִׁבְתּוֹ יִתֵּן וְרַפֹּא יְרַפֵּא</span> · <i>im-yaqum ve-hithalekh ba-chutz al-mishant-o ve-niqa ha-make raq shivt-o yiten ve-rapo yerape</i> · If he rises, and walks outside on his staff, then the striker shall be cleared; only his sitting he shall give — and he shall surely heal.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אִם יָק֞וּם וְהִתְהַלֵּ֥ךְ בַּח֛וּץ עַל מִשְׁעַנְתּ֖וֹ וְנִקָּ֣ה הַמַּכֶּ֑ה</span> · <i>im-yaqum ve-hithalekh ba-chutz al-mishant-o ve-niqa ha-make</i> · if he rises, and walks outside on his staff, then the striker shall be cleared (etnachta on ha-make) [VERIFIED: SNAPSHOT Exod.21.19 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">רַ֥ק שִׁבְתּ֛וֹ יִתֵּ֖ן וְרַפֹּ֥א יְרַפֵּֽא</span> · <i>raq shivt-o yiten ve-rapo yerape</i> · only his sitting he shall give — and he shall surely heal (verse-final yerape) [VERIFIED: SNAPSHOT Exod.21.19 idx8-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>HANDLER</td><td><span class="expr">HANDLER IF(yaqum ve-hithalekh ba-chutz al mishanto) THEN(ve-niqa ha-makke, shivto yiten ve-rapo yerape)</span><br><span class="gloss">= HANDLER IF(yaqum and-walked-about in-the-chutz upon mishanto) THEN(and-niqa the-makke, shivto yiten and-rapo yerape)</span><br>THE LICENSE [EX21-07 CROWN]. im-YAQUM ve-hithalekh ba-chutz al- MISHANTO — &#x27;if he rises and walks outside ON HIS STAFF&#x27; (on his own strength, the readings); ve-NIQA ha-makke — &#x27;the striker is CLEARED&#x27; (the Kitzur&#x27;s three amnesties named: &#x27;THREE are forgiven all their sins — the sick man who recovered, the bridegroom, and the king&#x27;); raq SHIVTO yiten — his idleness paid (&#x27;excluding the patient who defied the physician,&#x27; the Kitzur&#x27;s rider); VE-RAPO YERAPE — &#x27;and he shall SURELY HEAL&#x27;: the heal-word&#x27;s ONLY Torah station in this form (VERIFIED) — the tradition&#x27;s charter: FROM HERE, PERMISSION IS GRANTED TO THE PHYSICIAN TO HEAL (the corpus&#x27;s two healing-grants: Marah&#x27;s &#x27;I am the LORD your Healer&#x27; and this human license — the machine closes exo_15&#x27;s arm: the Healer&#x27;s title did not retire the doctor; it commissioned him); and the verse runs ALEF TO ALEF (VERIFIED brackets): &#x27;sufferings are sent WITH A DECREE — to such a day, to such an hour&#x27; (the sickness bracketed like its verse).
+</td><td><span class="he">רַק שִׁבְתּוֹ יִתֵּן וְרַפֹּא יְרַפֵּא</span> · <i>raq shivt-o yiten ve-rapo yerape</i><br><span class="gloss">= raq shivt-o yiten and-rapo yerape</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The handler; the physician&#x27;s charter.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_20 · Exod.21.20 · <span class='expr'>THE_STRUCK_SLAVE</span></h3>
+<p><span class="he">וְכִי־יַכֶּה אִישׁ אֶת־עַבְדּוֹ אוֹ אֶת־אֲמָתוֹ בַּשֵּׁבֶט וּמֵת תַּחַת יָדוֹ נָקֹם יִנָּקֵם</span> · <i>ve-ki-yake ish et-avd-o o et-amat-o ba-shevet u-met tachat yad-o naqom yinaqem</i> · And when a man strikes his slave or his maidservant with the rod, and he dies under his hand — he shall surely be avenged.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְכִֽי יַכֶּה֩ אִ֨ישׁ אֶת עַבְדּ֜וֹ א֤וֹ אֶת אֲמָתוֹ֙ בַּשֵּׁ֔בֶט וּמֵ֖ת תַּ֣חַת יָד֑וֹ</span> · <i>ve-ki-yake ish et-avd-o o et-amat-o ba-shevet u-met tachat yad-o</i> · and when a man strikes his slave or his maidservant with the rod, and he dies under his hand (etnachta on yad-o) [VERIFIED: SNAPSHOT Exod.21.20 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">נָקֹ֖ם יִנָּקֵֽם</span> · <i>naqom yinaqem</i> · he shall surely be avenged (verse-final yinaqem) [VERIFIED: SNAPSHOT Exod.21.20 idx12-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>CASE</td><td><span class="expr">CASE(ve-khi yake ish et avdo o et amato ba-shevet u-met) ROUTE(makkeh_avdo)</span><br><span class="gloss">= CASE(and-khi yake man et avdo o et amato in-the-shevet u-met) ROUTE(makkeh-avdo)</span><br>THE FOURTH CASE. ve-khi-YAKE ish et-AVDO o et-AMATO ba-SHEVET u-MET tachat yado — &#x27;when a man strikes his SLAVE or his MAIDSERVANT with the rod, and he dies UNDER HIS HAND&#x27;: the case installed — NAQOM YINAQEM, &#x27;he shall surely be AVENGED&#x27;: the machine files the legal revolution at its size: the Canaanite slave&#x27;s death is AVENGED (the vengeance-doubling the code&#x27;s strongest for a servant — the readings: death by the sword; the corpus notes the ancient world&#x27;s silence this verse breaks: the master is not the owner of the breath).
+</td><td><span class="he">וְכִי־יַכֶּה אִישׁ אֶת־עַבְדּוֹ אוֹ אֶת־אֲמָתוֹ בַּשֵּׁבֶט וּמֵת תַּחַת יָדוֹ</span> · <i>ve-ki-yake ish et-avd-o o et-amat-o ba-shevet u-met tachat yad-o</i><br><span class="gloss">= and-when-yake man avd-o o amat-o in-the-shevet and-met tachat yad-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The slave&#x27;s blood counts.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_21 · Exod.21.21 · <span class='expr'>A_DAY_OR_TWO_DAYS</span></h3>
+<p><span class="he">אַךְ אִם־יוֹם אוֹ יוֹמַיִם יַעֲמֹד לֹא יֻקַּם כִּי כַסְפּוֹ הוּא</span> · <i>akh im-yom o yomayim yaamod lo yuqam ki khasp-o hu</i> · But if he stand a day or two days, he shall not be avenged — for he is his money.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אַ֥ךְ אִם י֛וֹם א֥וֹ יוֹמַ֖יִם יַעֲמֹ֑ד</span> · <i>akh im-yom o yomayim yaamod</i> · but if he stand a day or two days, he shall not be avenged (etnachta on yaamod) [VERIFIED: SNAPSHOT Exod.21.21 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לֹ֣א יֻקַּ֔ם כִּ֥י כַסְפּ֖וֹ הֽוּא</span> · <i>lo yuqam ki khasp-o hu</i> · for he is his money (verse-final hu) [VERIFIED: SNAPSHOT Exod.21.21 idx6-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>HANDLER</td><td><span class="expr">HANDLER IF(yom o yomayim yaamod) THEN(lo yuqam, ki khaspo hu)</span><br><span class="gloss">= HANDLER IF(day o yomayim yaamod) THEN(not yuqam, when khaspo that)</span><br>THE EXCEPTION [EX21-08 CROWN]. akh im-YOM o YOMAYIM yaamod — &#x27;but if he STAND a day or two days&#x27; — LO YUQAM ki KHASPO hu — &#x27;he shall NOT BE AVENGED, for he is his money&#x27;: the handler installed — and the avenge-skeleton&#x27;s Torah-census is FOUR (VERIFIED): CAIN (&#x27;sevenfold shall he be AVENGED,&#x27; Gen 4:15), LAMECH (&#x27;seventy-seven,&#x27; 4:24), the struck slave here — the vengeance-verb born at the first murder, regulated at the slave-law (the Kitzur wiring Eve&#x27;s qaniti into ki- khaspo: the acquired man) — with ESAU&#x27;s let-my-father-ARISE the skeleton&#x27;s fourth face (Gen 27:31, the rise-verb sharing the letters, named); and the verse runs ALEF TO ALEF (VERIFIED): &#x27;he must live A FULL CYCLE, from time to time&#x27; (the Kitzur — the day-or- two bracketed like the healing-verse); the machine holds the hard verse at its surface, lean-record: the exception is the verse&#x27;s, and the tradition&#x27;s boundaries on it are named-only.
+</td><td><span class="he">יַעֲמֹד לֹא יֻקַּם כִּי כַסְפּוֹ הוּא</span> · <i>yaamod lo yuqam ki khasp-o hu</i><br><span class="gloss">= yaamod not yuqam when khasp-o that</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The handler; the Cain-skeleton.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_22 · Exod.21.22 · <span class='expr'>THE_STRUCK_MOTHER</span></h3>
+<p><span class="he">וְכִי־יִנָּצוּ אֲנָשִׁים וְנָגְפוּ אִשָּׁה הָרָה וְיָצְאוּ יְלָדֶיהָ וְלֹא יִהְיֶה אָסוֹן עָנוֹשׁ יֵעָנֵשׁ כַּאֲשֶׁר יָשִׁית עָלָיו בַּעַל הָאִשָּׁה וְנָתַן בִּפְלִלִים</span> · <i>ve-ki-yinatzu anashim ve-nagfu isha hara ve-yatzu yelade-ha ve-lo yihye ason anosh yeanesh ka-asher yashit alay-v baal ha-isha ve-natan bi-felilim</i> · And when men fight, and strike a pregnant woman, and her children go out, and there is no harm — he shall surely be fined, as the woman&#x27;s husband lays on him, and he shall give by the judges.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְכִֽי יִנָּצ֣וּ אֲנָשִׁ֗ים וְנָ֨גְפ֜וּ אִשָּׁ֤ה הָרָה֙ וְיָצְא֣וּ יְלָדֶ֔יהָ וְלֹ֥א יִהְיֶ֖ה אָס֑וֹן</span> · <i>ve-ki-yinatzu anashim ve-nagfu isha hara ve-yatzu yelade-ha ve-lo yihye ason</i> · and when men fight, and strike a pregnant woman, and her children go out, and there is no harm (etnachta on ason) [VERIFIED: SNAPSHOT Exod.21.22 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">עָנ֣וֹשׁ יֵעָנֵ֗שׁ כַּֽאֲשֶׁ֨ר יָשִׁ֤ית עָלָיו֙ בַּ֣עַל הָֽאִשָּׁ֔ה וְנָתַ֖ן בִּפְלִלִֽים</span> · <i>anosh yeanesh ka-asher yashit alay-v baal ha-isha ve-natan bi-felilim</i> · he shall surely be fined, as the woman&#x27;s husband lays on him, and he shall give by the judges (verse-final bi-felilim) [VERIFIED: SNAPSHOT Exod.21.22 idx11-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>CASE</td><td><span class="expr">CASE(ve-khi yinatzu anashim ve-nagfu isha hara ve-yatzu yeladeha) ROUTE(ason_o_lo)</span><br><span class="gloss">= CASE(and-khi yinatzu anashim and-nagfu isha hara and-yatzu yeladeha) ROUTE(ason-o-not)</span><br>THE FIFTH CASE. ve-khi-YINATZU anashim — &#x27;when men FIGHT&#x27; (the Kitzur&#x27;s pair named: this fight and Deut 25:11&#x27;s — &#x27;as there, money; so here, money&#x27;: the two brawl-verses one rule); ve-nagfu ISHA HARA ve-yatzu YELADEHA — &#x27;and strike a PREGNANT woman, and her children GO OUT&#x27; — ve-lo yihye ASON — &#x27;and there is NO HARM&#x27;: the case installed on its fork (ason or no ason — the readings&#x27; entire jurisprudence of the unborn hangs on this word, named-only); ANOSH YEANESH — &#x27;he shall surely be FINED&#x27; (the fine-word FULL against the Jerusalem exemplar&#x27;s lean — MS with the Ramah); ve-natan BI-FELILIM — &#x27;by the JUDGES&#x27; (lean-then-full, the exemplars split — MS): the miscarried pregnancy priced by the bench, not the street.
+</td><td><span class="he">וְכִי־יִנָּצוּ אֲנָשִׁים וְנָגְפוּ אִשָּׁה הָרָה וְיָצְאוּ יְלָדֶיהָ וְלֹא יִהְיֶה אָסוֹן</span> · <i>ve-ki-yinatzu anashim ve-nagfu isha hara ve-yatzu yelade-ha ve-lo yihye ason</i><br><span class="gloss">= and-when-yinatzu anashim and-nagfu isha hara and-yatzu yelade-the and-not yihye ason</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The unborn priced.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_23 · Exod.21.23 · <span class='expr'>LIFE_FOR_LIFE</span></h3>
+<p><span class="he">וְאִם־אָסוֹן יִהְיֶה וְנָתַתָּה נֶפֶשׁ תַּחַת נָפֶשׁ</span> · <i>ve-im-ason yihye ve-natata nefesh tachat nafesh</i> · And if there is harm — then you shall give life for life.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאִם אָס֖וֹן יִהְיֶ֑ה</span> · <i>ve-im-ason yihye</i> · and if there is harm (etnachta on yihye) [VERIFIED: SNAPSHOT Exod.21.23 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְנָתַתָּ֥ה נֶ֖פֶשׁ תַּ֥חַת נָֽפֶשׁ</span> · <i>ve-natata nefesh tachat nafesh</i> · then you shall give life for life (verse-final nafesh) [VERIFIED: SNAPSHOT Exod.21.23 idx3-6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>HANDLER</td><td><span class="expr">HANDLER IF(ason yihye) THEN(ve-natata nefesh tachat nafesh)</span><br><span class="gloss">= HANDLER IF(ason yihye) THEN(and-natata nefesh tachat nafesh)</span><br>THE HARM-FORK. ve-im-ASON yihye — &#x27;and if there IS harm&#x27; — ve-natata NEFESH TACHAT NAFESH — &#x27;you shall give LIFE FOR LIFE&#x27;: the handler installed — the tachat-formula&#x27;s first rung (the machine notes the grammar the tradition reads: VE-NATATA, you shall GIVE — the talion spoken in the currency-verb: the giving-word that carries payment everywhere else in the code carries this clause too; the readings&#x27; monetary reading rides the verb itself, named prominently as the tradition&#x27;s law).
+</td><td><span class="he">וְנָתַתָּה נֶפֶשׁ תַּחַת נָפֶשׁ</span> · <i>ve-natata nefesh tachat nafesh</i><br><span class="gloss">= and-natata nefesh tachat nafesh</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The talion&#x27;s head.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_24 · Exod.21.24 · <span class='expr'>EYE_FOR_EYE</span></h3>
+<p><span class="he">עַיִן תַּחַת עַיִן שֵׁן תַּחַת שֵׁן יָד תַּחַת יָד רֶגֶל תַּחַת רָגֶל</span> · <i>ayin tachat ayin shen tachat shen yad tachat yad regel tachat ragel</i> · Eye for eye, tooth for tooth, hand for hand, foot for foot,</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">עַ֚יִן תַּ֣חַת עַ֔יִן שֵׁ֖ן תַּ֣חַת שֵׁ֑ן</span> · <i>ayin tachat ayin shen tachat shen</i> · eye for eye, tooth for tooth (etnachta on shen) [VERIFIED: SNAPSHOT Exod.21.24 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">יָ֚ד תַּ֣חַת יָ֔ד רֶ֖גֶל תַּ֥חַת רָֽגֶל</span> · <i>yad tachat yad regel tachat ragel</i> · hand for hand, foot for foot (verse-final ragel) [VERIFIED: SNAPSHOT Exod.21.24 idx6-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ayin_tachat_ayin, t0)</span><br><span class="gloss">= HOLDS(ayin-tachat-ayin, t0)</span><br>THE TABLE. AYIN tachat AYIN, SHEN tachat SHEN, YAD tachat YAD, REGEL tachat RAGEL — &#x27;EYE for eye, TOOTH for tooth, HAND for hand, FOOT for foot&#x27;: the corpus&#x27;s most famous table — four pairs on one pivot- word (TACHAT, the under-word: eight body-words balanced on four unders) — and the tradition&#x27;s unanimous law carried at full prominence: MONETARY COMPENSATION (&#x27;eye for eye — MONEY,&#x27; the readings&#x27; universal ruling; the Talmud&#x27;s proofs named-only): the machine files the table as the code&#x27;s measuring-doctrine: not symmetry of wounds but EQUIVALENCE OF VALUE — the next verses (the slave freed for an eye) are the table&#x27;s own commentary.
+</td><td><span class="he">עַיִן תַּחַת עַיִן שֵׁן תַּחַת שֵׁן</span> · <i>ayin tachat ayin shen tachat shen</i><br><span class="gloss">= ayin tachat ayin shen tachat shen</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The talion table.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_25 · Exod.21.25 · <span class='expr'>BURN_FOR_BURN</span></h3>
+<p><span class="he">כְּוִיָּה תַּחַת כְּוִיָּה פֶּצַע תַּחַת פָּצַע חַבּוּרָה תַּחַת חַבּוּרָה</span> · <i>keviya tachat keviya petza tachat patza chabura tachat chabura</i> · burn for burn, wound for wound, bruise for bruise.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">כְּוִיָּה֙ תַּ֣חַת כְּוִיָּ֔ה פֶּ֖צַע תַּ֣חַת פָּ֑צַע</span> · <i>keviya tachat keviya petza tachat patza</i> · burn for burn, wound for wound (etnachta on patza) [VERIFIED: SNAPSHOT Exod.21.25 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">חַבּוּרָ֕ה תַּ֖חַת חַבּוּרָֽה</span> · <i>chabura tachat chabura</i> · bruise for bruise (verse-final chabura) [VERIFIED: SNAPSHOT Exod.21.25 idx6-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(kviya_tachat_kviya, t0)</span><br><span class="gloss">= HOLDS(kviya-tachat-kviya, t0)</span><br>THE SECOND ROW. KEVIYA tachat keviya, PETZA tachat patza, CHABURA tachat chabura — &#x27;BURN for burn, WOUND for wound, BRUISE for bruise&#x27;: the table descends from lost limbs to marks that heal (the machine notes the code&#x27;s precision: three grades of non-permanent injury each priced — the readings&#x27; five payment-heads (damage, pain, healing, idleness, shame) distributed across 21:19&#x27;s and this verse&#x27;s clauses, named): the corpus&#x27;s injury-law complete in two verses and seven unders.
+</td><td><span class="he">כְּוִיָּה תַּחַת כְּוִיָּה פֶּצַע תַּחַת פָּצַע</span> · <i>keviya tachat keviya petza tachat patza</i><br><span class="gloss">= keviya tachat keviya petza tachat patza</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The table&#x27;s second row.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_26 · Exod.21.26 · <span class='expr'>THE_EYE_THAT_FREES</span></h3>
+<p><span class="he">וְכִי־יַכֶּה אִישׁ אֶת־עֵין עַבְדּוֹ אוֹ־אֶת־עֵין אֲמָתוֹ וְשִׁחֲתָהּ לַחָפְשִׁי יְשַׁלְּחֶנּוּ תַּחַת עֵינוֹ</span> · <i>ve-ki-yake ish et-en avd-o o-et-en amat-o ve-shichata-ה la-chafshi yeshalche-nu tachat en-o</i> · And when a man strikes the eye of his slave, or the eye of his maidservant, and destroys it — he shall let him go free for his eye.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְכִֽי יַכֶּ֨ה אִ֜ישׁ אֶת עֵ֥ין עַבְדּ֛וֹ אֽוֹ אֶת עֵ֥ין אֲמָת֖וֹ וְשִֽׁחֲתָ֑הּ</span> · <i>ve-ki-yake ish et-en avd-o o-et-en amat-o ve-shichata-ה</i> · and when a man strikes the eye of his slave, or the eye of his maidservant, and destroys it (etnachta on ve-shichata-ה) [VERIFIED: SNAPSHOT Exod.21.26 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לַֽחָפְשִׁ֥י יְשַׁלְּחֶ֖נּוּ תַּ֥חַת עֵינֽוֹ</span> · <i>la-chafshi yeshalche-nu tachat en-o</i> · he shall let him go free for his eye (verse-final en-o) [VERIFIED: SNAPSHOT Exod.21.26 idx11-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>HANDLER</td><td><span class="expr">HANDLER IF(yake ish et en avdo ve-shichatah) THEN(la-chafshi yeshalchenu tachat eno)</span><br><span class="gloss">= HANDLER IF(yake man et en avdo and-shichatah) THEN(to-chafshi yeshalchenu tachat eno)</span><br>THE EYE [EX21-09 CROWN]. ve-khi-yake ish et-EN avdo o et-en amato VE-SHICHATAH — &#x27;strikes the EYE of his slave... and DESTROYS it&#x27; — LA-CHOFSHI yeshalchenu TACHAT ENO — &#x27;he shall let him go FREE for his eye&#x27;: the handler installed — the talion-table applied to the slave becomes MANUMISSION (the under-word&#x27;s third use in three verses: the slave&#x27;s eye is &#x27;paid&#x27; with his liberty); and the letter- frame VERIFIED at the build: this verse and the tooth-verse BOTH OPEN WITH VAV AND CLOSE WITH VAV, together exactly TWENTY-SIX WORDS — the Kitzur: the twenty-four limb-tips by which a slave goes free, with TOOTH and EYE joined: twenty-six (the freedom-roster counted by the verses that establish it) — and the far parallel named: Noah&#x27;s CURSED-CANAAN and BLESSED-THE-LORD verses share the same frame (vav to vav, twenty-six words): the verses that freed a slave&#x27;s eye answering the verses where slavery entered the canon.
+</td><td><span class="he">לַחָפְשִׁי יְשַׁלְּחֶנּוּ תַּחַת עֵינוֹ</span> · <i>la-chafshi yeshalche-nu tachat en-o</i><br><span class="gloss">= to-chafshi yeshalche-nu tachat en-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The handler; the vav brackets.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_27 · Exod.21.27 · <span class='expr'>THE_TOOTH_THAT_FREES</span></h3>
+<p><span class="he">וְאִם־שֵׁן עַבְדּוֹ אוֹ־שֵׁן אֲמָתוֹ יַפִּיל לַחָפְשִׁי יְשַׁלְּחֶנּוּ תַּחַת שִׁנּוֹ</span> · <i>ve-im-shen avd-o o-shen amat-o yapil la-chafshi yeshalche-nu tachat shin-o</i> · And if he makes the tooth of his slave, or the tooth of his maidservant, fall out — he shall let him go free for his tooth.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאִם שֵׁ֥ן עַבְדּ֛וֹ אֽוֹ שֵׁ֥ן אֲמָת֖וֹ יַפִּ֑יל</span> · <i>ve-im-shen avd-o o-shen amat-o yapil</i> · and if he makes the tooth of his slave, or the tooth of his maidservant, fall out (etnachta on yapil) [VERIFIED: SNAPSHOT Exod.21.27 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לַֽחָפְשִׁ֥י יְשַׁלְּחֶ֖נּוּ תַּ֥חַת שִׁנּֽוֹ</span> · <i>la-chafshi yeshalche-nu tachat shin-o</i> · he shall let him go free for his tooth (verse-final shin-o) [VERIFIED: SNAPSHOT Exod.21.27 idx7-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>HANDLER</td><td><span class="expr">HANDLER IF(shen avdo o shen amato yapil) THEN(la-chafshi yeshalchenu tachat shino)</span><br><span class="gloss">= HANDLER IF(shen avdo o shen amato yapil) THEN(to-chafshi yeshalchenu tachat shino)</span><br>THE TOOTH [EX21-09]. ve-im-SHEN avdo o-shen amato YAPIL — &#x27;if he makes the TOOTH of his slave fall&#x27; — la-CHOFSHI yeshalchenu tachat SHINO — &#x27;free for his tooth&#x27;: the second freedom-handler (the vav- to-vav frame&#x27;s second half, VERIFIED) — the machine notes the a-fortiori the pair performs: the EYE is a man&#x27;s world and the TOOTH his smallest permanent part, and the code prices both at the SAME liberty: between the greatest loss and the least, the master&#x27;s title does not survive either (the readings&#x27; twenty-four extensions ride exactly this equivalence).
+</td><td><span class="he">לַחָפְשִׁי יְשַׁלְּחֶנּוּ תַּחַת שִׁנּוֹ</span> · <i>la-chafshi yeshalche-nu tachat shin-o</i><br><span class="gloss">= to-chafshi yeshalche-nu tachat shin-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The smallest limb; the same door.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_28 · Exod.21.28 · <span class='expr'>THE_GORING_OX</span></h3>
+<p><span class="he">וְכִי־יִגַּח שׁוֹר אֶת־אִישׁ אוֹ אֶת־אִשָּׁה וָמֵת סָקוֹל יִסָּקֵל הַשּׁוֹר וְלֹא יֵאָכֵל אֶת־בְּשָׂרוֹ וּבַעַל הַשּׁוֹר נָקִי</span> · <i>ve-ki-yigach shor et-ish o et-isha va-met saqol yisaqel ha-shor ve-lo yeakhel et-besar-o u-vaal ha-shor naqi</i> · And when an ox gores a man or a woman, and he dies — the ox shall surely be stoned, and its flesh shall not be eaten; and the owner of the ox is clear.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְכִֽי יִגַּ֨ח שׁ֥וֹר אֶת אִ֛ישׁ א֥וֹ אֶת אִשָּׁ֖ה וָמֵ֑ת</span> · <i>ve-ki-yigach shor et-ish o et-isha va-met</i> · and when an ox gores a man or a woman, and he dies — the ox shall surely be stoned, and its flesh shall not be eaten (etnachta on va-met) [VERIFIED: SNAPSHOT Exod.21.28 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">סָק֨וֹל יִסָּקֵ֜ל הַשּׁ֗וֹר וְלֹ֤א יֵאָכֵל֙ אֶת בְּשָׂר֔וֹ וּבַ֥עַל הַשּׁ֖וֹר נָקִֽי</span> · <i>saqol yisaqel ha-shor ve-lo yeakhel et-besar-o u-vaal ha-shor naqi</i> · and the owner of the ox is clear (verse-final naqi) [VERIFIED: SNAPSHOT Exod.21.28 idx9-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>CASE</td><td><span class="expr">CASE(ve-khi yigach shor et ish o et isha va-met) ROUTE(shor_nagach)</span><br><span class="gloss">= CASE(and-khi yigach shor et man o et isha and-met) ROUTE(shor-nagach)</span><br>THE SIXTH CASE [EX21-10 CROWN]. ve-khi-YIGACH SHOR et-ish o et-isha va-MET — &#x27;when an OX GORES a man or a woman, and he dies&#x27;: the case installed — SAQOL YISAQEL ha-shor: the surely-stoned doubling&#x27;s second and last Torah station (the 19:13 pair CLOSES IN-SPAN: the mountain-toucher&#x27;s protocol becomes the ox&#x27;s — &#x27;from here we learn for the generations&#x27;: the Sinai-fence&#x27;s one-time rule now standing court-law); VE-LO YEAKHEL et-besaro — &#x27;its flesh shall NOT BE EATEN&#x27;: and the cipher EXACT (VERIFIED at the build): ve-lo yeakhel = VE-LO HANAA, &#x27;and no BENEFIT&#x27; (98 = 98 — the halakha&#x27;s benefit-ban encoded in the letters&#x27; own arithmetic); u-vaal ha-shor NAQI — &#x27;and the owner is CLEAR&#x27; (first goring — the readings&#x27; three readings of naqi, named-only): the machine files the marvel plainly: the corpus puts an ANIMAL ON TRIAL, executes it by the mountain&#x27;s own protocol, and quarantines its carcass by cipher.
+</td><td><span class="he">וְכִי־יִגַּח שׁוֹר אֶת־אִישׁ אוֹ אֶת־אִשָּׁה וָמֵת</span> · <i>ve-ki-yigach shor et-ish o et-isha va-met</i><br><span class="gloss">= and-when-yigach shor man o isha and-met</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The beast on trial.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_29 · Exod.21.29 · <span class='expr'>THE_WARNED_OX</span></h3>
+<p><span class="he">וְאִם שׁוֹר נַגָּח הוּא מִתְּמֹל שִׁלְשֹׁם וְהוּעַד בִּבְעָלָיו וְלֹא יִשְׁמְרֶנּוּ וְהֵמִית אִישׁ אוֹ אִשָּׁה הַשּׁוֹר יִסָּקֵל וְגַם־בְּעָלָיו יוּמָת</span> · <i>ve-im shor nagach hu mi-temol shilshom ve-huad bi-vealay-v ve-lo yishmre-nu ve-hemit ish o isha ha-shor yisaqel ve-gam-bealay-v yumat</i> · And if it was a goring ox from yesterday and the day before, and its owner was warned, and he did not guard it, and it killed a man or a woman — the ox shall be stoned, and its owner shall also die.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאִ֡ם שׁוֹר֩ נַגָּ֨ח ה֜וּא מִתְּמֹ֣ל שִׁלְשֹׁ֗ם וְהוּעַ֤ד בִּבְעָלָיו֙ וְלֹ֣א יִשְׁמְרֶ֔נּוּ וְהֵמִ֥ית אִ֖ישׁ א֣וֹ אִשָּׁ֑ה</span> · <i>ve-im shor nagach hu mi-temol shilshom ve-huad bi-vealay-v ve-lo yishmre-nu ve-hemit ish o isha</i> · and if it was a goring ox from yesterday and the day before, and its owner was warned, and he did not guard it, and it killed a man or a woman (etnachta on isha) [VERIFIED: SNAPSHOT Exod.21.29 idx13 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">הַשּׁוֹר֙ יִסָּקֵ֔ל וְגַם בְּעָלָ֖יו יוּמָֽת</span> · <i>ha-shor yisaqel ve-gam-bealay-v yumat</i> · the ox shall be stoned, and its owner shall also die (verse-final yumat) [VERIFIED: SNAPSHOT Exod.21.29 idx14-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>HANDLER</td><td><span class="expr">HANDLER IF(shor nagach hu mi-temol shilshom, ve-huad bi-vealav ve-lo yishmerenu, ve-hemit) THEN(ha-shor yisaqel ve-gam bealav yumat)</span><br><span class="gloss">= HANDLER IF(shor nagach that from-temol shilshom, and-huad bi-vealav and-not yishmerenu, and-hemit) THEN(the-shor yisaqel and-also bealav yumat)</span><br>THE WARNED OWNER [EX21-11 CROWN]. ve-im SHOR NAGACH hu MI-TEMOL shilshom — &#x27;a GORING ox FROM YESTERDAY and before&#x27;: the from- yesterday word LEAN — and the same idiom returns FULL at 21:36 (asserted): TWO SPELLINGS, ONE CHAPTER — MS documenting the guardianship: the Hillel and Jerusalem exemplars SPLIT OVER BOTH VERSES IN OPPOSITE DIRECTIONS, &#x27;and in all our books: lean at the first, full at the second&#x27; (the Ramah sealing both); and the lean form&#x27;s Torah-pair VERIFIED: this ox and the MANSLAYER (&#x27;who hated him not FROM YESTERDAY,&#x27; Deut 19:4) — the ox CONVICTED by its yesterdays, the manslayer ACQUITTED by his (one thinned word carrying past-record both ways); ve-HUAD bi-vealav — &#x27;and its owner was WARNED&#x27; (the muad-doctrine installs: liability follows knowledge); ve-gam BEALAV YUMAT — &#x27;its owner SHALL ALSO DIE&#x27; (with the next verse&#x27;s ransom the readings read it to Heaven&#x27;s court, named): NAGACH&#x27;s in-span pair asserted — &#x27;damages learned from death.&#x27;
+</td><td><span class="he">וְאִם שׁוֹר נַגָּח הוּא מִתְּמֹל שִׁלְשֹׁם וְהוּעַד בִּבְעָלָיו וְלֹא יִשְׁמְרֶנּוּ</span> · <i>ve-im shor nagach hu mi-temol shilshom ve-huad bi-vealay-v ve-lo yishmre-nu</i><br><span class="gloss">= and-if shor nagach that from-temol shilshom and-huad bi-vealay-v and-not yishmre-nu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The handler; the lean yesterday.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_30 · Exod.21.30 · <span class='expr'>THE_RANSOM</span></h3>
+<p><span class="he">אִם־כֹּפֶר יוּשַׁת עָלָיו וְנָתַן פִּדְיֹן נַפְשׁוֹ כְּכֹל אֲשֶׁר־יוּשַׁת עָלָיו</span> · <i>im-kofer yushat alay-v ve-natan pidyon nafsh-o ke-khol asher-yushat alay-v</i> · If a ransom be laid on him — then he shall give the redemption of his life, according to all that is laid on him.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אִם כֹּ֖פֶר יוּשַׁ֣ת עָלָ֑יו</span> · <i>im-kofer yushat alay-v</i> · if a ransom be laid on him (etnachta on alay-v) [VERIFIED: SNAPSHOT Exod.21.30 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְנָתַן֙ פִּדְיֹ֣ן נַפְשׁ֔וֹ כְּכֹ֥ל אֲשֶׁר יוּשַׁ֖ת עָלָֽיו</span> · <i>ve-natan pidyon nafsh-o ke-khol asher-yushat alay-v</i> · then he shall give the redemption of his life, according to all that is laid on him (verse-final alay-v) [VERIFIED: SNAPSHOT Exod.21.30 idx4-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>HANDLER</td><td><span class="expr">HANDLER IF(kofer yushat alav) THEN(ve-natan pidyon nafsho)</span><br><span class="gloss">= HANDLER IF(pitch yushat alav) THEN(and-natan pidyon nafsho)</span><br>THE RANSOM [EX21-12 CROWN]. im-KOFER yushat alav — &#x27;if a RANSOM be laid on him&#x27; — ve-natan PIDYON NAFSHO — &#x27;the REDEMPTION of his life&#x27;: the handler installed — and the redemption-word&#x27;s only Torah station, written LEAN (VERIFIED); its Scripture-twin the Psalm (&#x27;PRECIOUS is the redemption of their soul&#x27;): the Kitzur — &#x27;a hint that THE RANSOM ATONES: because their soul is PRECIOUS in the eyes of the Holy One, He granted a ransom for atonement&#x27; (the code&#x27;s only capital charge that money may answer — the machine files the theology: the life is buyable back because it is dear, not cheap).
+</td><td><span class="he">וְנָתַן פִּדְיֹן נַפְשׁוֹ</span> · <i>ve-natan pidyon nafsh-o</i><br><span class="gloss">= and-natan pidyon nafsh-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The handler; the priced life.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_31 · Exod.21.31 · <span class='expr'>SON_OR_DAUGHTER</span></h3>
+<p><span class="he">אוֹ־בֵן יִגָּח אוֹ־בַת יִגָּח כַּמִּשְׁפָּט הַזֶּה יֵעָשֶׂה לּוֹ</span> · <i>o-ven yigach o-vat yigach ka-mishpat ha-ze yease l-o</i> · Whether it gore a son, or gore a daughter — according to this ordinance shall it be done to him.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אוֹ בֵ֥ן יִגָּ֖ח אוֹ בַ֣ת יִגָּ֑ח</span> · <i>o-ven yigach o-vat yigach</i> · whether it gore a son, or gore a daughter (etnachta on yigach) [VERIFIED: SNAPSHOT Exod.21.31 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כַּמִּשְׁפָּ֥ט הַזֶּ֖ה יֵעָ֥שֶׂה לּֽוֹ</span> · <i>ka-mishpat ha-ze yease l-o</i> · according to this ordinance shall it be done to him (verse-final l-o) [VERIFIED: SNAPSHOT Exod.21.31 idx6-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ka_mishpat_ha_ze, t0)</span><br><span class="gloss">= HOLDS(like-mishpat-the-ze, t0)</span><br>THE EXTENSION. o-VEN yigach o-VAT yigach — &#x27;whether a SON it gore or a DAUGHTER&#x27; — ka-MISHPAT ha-ZE yease lo — &#x27;according to THIS ORDINANCE&#x27;: the code&#x27;s title-word again (the mishpat applied to minors: the Kitzur&#x27;s rule from the Masorah-pair named — &#x27;liability for the small as for the great&#x27;): the machine notes the verse&#x27;s quiet doctrine: the child&#x27;s life carries the adult&#x27;s law — no discount for size.
+</td><td><span class="he">כַּמִּשְׁפָּט הַזֶּה יֵעָשֶׂה לּוֹ</span> · <i>ka-mishpat ha-ze yease l-o</i><br><span class="gloss">= like-mishpat the-ze yease l-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The minors covered.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_32 · Exod.21.32 · <span class='expr'>THIRTY_SHEKELS</span></h3>
+<p><span class="he">אִם־עֶבֶד יִגַּח הַשּׁוֹר אוֹ אָמָה כֶּסֶף שְׁלֹשִׁים שְׁקָלִים יִתֵּן לַאדֹנָיו וְהַשּׁוֹר יִסָּקֵל</span> · <i>im-eved yigach ha-shor o ama kesef sheloshim sheqalim yiten la-donay-v ve-ha-shor yisaqel</i> · If the ox gore a slave or a maidservant — thirty shekels of silver he shall give to his master, and the ox shall be stoned.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אִם עֶ֛בֶד יִגַּ֥ח הַשּׁ֖וֹר א֣וֹ אָמָ֑ה</span> · <i>im-eved yigach ha-shor o ama</i> · if the ox gore a slave or a maidservant (etnachta on ama) [VERIFIED: SNAPSHOT Exod.21.32 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כֶּ֣סֶף שְׁלֹשִׁ֣ים שְׁקָלִ֗ים יִתֵּן֙ לַֽאדֹנָ֔יו וְהַשּׁ֖וֹר יִסָּקֵֽל</span> · <i>kesef sheloshim sheqalim yiten la-donay-v ve-ha-shor yisaqel</i> · thirty shekels of silver he shall give to his master, and the ox shall be stoned (verse-final yisaqel) [VERIFIED: SNAPSHOT Exod.21.32 idx6-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>HANDLER</td><td><span class="expr">HANDLER IF(eved yigach ha-shor o ama) THEN(kesef sheloshim sheqalim yiten la-adonav, ve-ha-shor yisaqel)</span><br><span class="gloss">= HANDLER IF(eved yigach the-shor o ama) THEN(kesef sheloshim sheqalim yiten to-adonav, and-the-shor yisaqel)</span><br>THE SLAVE&#x27;S TARIFF. im-EVED yigach ha-shor o AMA — &#x27;if the ox gore a SLAVE or a MAIDSERVANT&#x27; — kesef SHELOSHIM SHEQALIM yiten la-adonav — &#x27;THIRTY SHEKELS to his master&#x27;: the handler installed — the code&#x27;s one FIXED tariff (free victims are priced by ransom-assessment; the slave by flat rate — the machine files the asymmetry as data, lean- record, with the readings&#x27; whether-worth-more rule named); ve-ha- SHOR YISAQEL — &#x27;and the ox SHALL BE STONED&#x27;: the stoning stands regardless of the victim&#x27;s status (the machine notes the floor under the asymmetry: the OX dies for the slave exactly as for the free — the execution-protocol knows no rank even where the tariff does).
+</td><td><span class="he">כֶּסֶף שְׁלֹשִׁים שְׁקָלִים יִתֵּן לַאדֹנָיו וְהַשּׁוֹר יִסָּקֵל</span> · <i>kesef sheloshim sheqalim yiten la-donay-v ve-ha-shor yisaqel</i><br><span class="gloss">= kesef sheloshim sheqalim yiten to-donay-v and-the-shor yisaqel</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The fixed price; the stoning stands.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_33 · Exod.21.33 · <span class='expr'>THE_OPEN_PIT</span></h3>
+<p><span class="he">וְכִי־יִפְתַּח אִישׁ בּוֹר אוֹ כִּי־יִכְרֶה אִישׁ בֹּר וְלֹא יְכַסֶּנּוּ וְנָפַל־שָׁמָּה שּׁוֹר אוֹ חֲמוֹר</span> · <i>ve-ki-yiftach ish bor o ki-yikhre ish bor ve-lo yekhase-nu ve-nafal-shama-ה shor o chamor</i> · And when a man opens a pit, or when a man digs a pit, and does not cover it — and an ox or a donkey falls in there:</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְכִֽי יִפְתַּ֨ח אִ֜ישׁ בּ֗וֹר א֠וֹ כִּֽי יִכְרֶ֥ה אִ֛ישׁ בֹּ֖ר וְלֹ֣א יְכַסֶּ֑נּוּ</span> · <i>ve-ki-yiftach ish bor o ki-yikhre ish bor ve-lo yekhase-nu</i> · and when a man opens a pit, or when a man digs a pit, and does not cover it (etnachta on yekhase-nu) [VERIFIED: SNAPSHOT Exod.21.33 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְנָֽפַל שָׁ֥מָּה שּׁ֖וֹר א֥וֹ חֲמֽוֹר</span> · <i>ve-nafal-shama-ה shor o chamor</i> · and an ox or a donkey falls in there (verse-final chamor) [VERIFIED: SNAPSHOT Exod.21.33 idx11-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>CASE</td><td><span class="expr">CASE(ve-khi yiftach ish bor o ki yikhre ish bor ve-lo yekhasenu) ROUTE(baal_ha_bor)</span><br><span class="gloss">= CASE(and-khi yiftach man bor o when yikhre man bor and-not yekhasenu) ROUTE(baal-the-bor)</span><br>THE SEVENTH CASE. ve-khi-YIFTACH ish BOR o ki-YIKHRE ish bor — &#x27;when a man OPENS a pit, or DIGS a pit&#x27; (the opener and the digger both — the readings: even the re-opener of another&#x27;s digging owns the hazard); VE-LO YEKHASENU — &#x27;and does NOT COVER IT&#x27;: the case installed on the omission (the machine files the category-shift: the code moves from blows and horns to NEGLIGENCE — liability without any striking hand: the pit-owner&#x27;s crime is a lid not placed); ve- nafal SHAMA shor o CHAMOR — the shin of the falling ox dageshed in the precise codices (MS, named).
+</td><td><span class="he">וְכִי־יִפְתַּח אִישׁ בּוֹר אוֹ כִּי־יִכְרֶה אִישׁ בֹּר וְלֹא יְכַסֶּנּוּ</span> · <i>ve-ki-yiftach ish bor o ki-yikhre ish bor ve-lo yekhase-nu</i><br><span class="gloss">= and-when-yiftach man bor o when-yikhre man bor and-not yekhase-nu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The negligence case.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_34 · Exod.21.34 · <span class='expr'>THE_PIT_PAYS</span></h3>
+<p><span class="he">בַּעַל הַבּוֹר יְשַׁלֵּם כֶּסֶף יָשִׁיב לִבְעָלָיו וְהַמֵּת יִהְיֶה־לּוֹ</span> · <i>baal ha-bor yeshalem kesef yashiv li-vealay-v ve-ha-met yihye-l-o</i> · The owner of the pit shall pay; silver he shall return to its owner — and the dead shall be his.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">בַּ֤עַל הַבּוֹר֙ יְשַׁלֵּ֔ם כֶּ֖סֶף יָשִׁ֣יב לִבְעָלָ֑יו</span> · <i>baal ha-bor yeshalem kesef yashiv li-vealay-v</i> · the owner of the pit shall pay; silver he shall return to its owner (etnachta on li-vealay-v) [VERIFIED: SNAPSHOT Exod.21.34 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהַמֵּ֖ת יִֽהְיֶה לּֽוֹ</span> · <i>ve-ha-met yihye-l-o</i> · and the dead shall be his (verse-final l-o) [VERIFIED: SNAPSHOT Exod.21.34 idx6-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>HANDLER</td><td><span class="expr">HANDLER IF(nafal shama shor o chamor) THEN(baal ha-bor yeshalem, kesef yashiv li-vealav)</span><br><span class="gloss">= HANDLER IF(nafal shama shor o chamor) THEN(baal the-bor yeshalem, kesef yashiv to-me-vealav)</span><br>THE RESTITUTION [EX21-12]. BAAL HA-BOR yeshalem — &#x27;the OWNER OF THE PIT shall pay&#x27;: the handler installed — the code&#x27;s restitution-verb (shalem) opens its career (the machine notes the ledger the next chapter will run on this verb); KESEF yashiv li-VEALAV — &#x27;silver he shall RETURN to its owner&#x27; (the Kitzur&#x27;s owner-file: this payment, the bailee&#x27;s (22:13), and Ecclesiastes&#x27; &#x27;wealth kept for its owner TO HIS HURT&#x27; — &#x27;from his wealth he dug the pit, and it is to his hurt&#x27;; the even-bran rule named); ve-ha-MET yihye-LO — &#x27;and the dead shall be HIS&#x27; (the carcass to the victim&#x27;s owner in the accounting — the readings; the Kitzur&#x27;s tending-cipher named): the corpus&#x27;s first tort settled in full.
+</td><td><span class="he">בַּעַל הַבּוֹר יְשַׁלֵּם כֶּסֶף יָשִׁיב לִבְעָלָיו</span> · <i>baal ha-bor yeshalem kesef yashiv li-vealay-v</i><br><span class="gloss">= baal the-bor yeshalem kesef yashiv to-me-vealay-v</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The handler; the first restitution.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_35 · Exod.21.35 · <span class='expr'>OX_AGAINST_OX</span></h3>
+<p><span class="he">וְכִי־יִגֹּף שׁוֹר־אִישׁ אֶת־שׁוֹר רֵעֵהוּ וָמֵת וּמָכְרוּ אֶת־הַשּׁוֹר הַחַי וְחָצוּ אֶת־כַּסְפּוֹ וְגַם אֶת־הַמֵּת יֶחֱצוּן</span> · <i>ve-ki-yigof shor-ish et-shor ree-hu va-met u-makhru et-ha-shor ha-chay ve-chatzu et-kasp-o ve-gam et-ha-met yechetzu-n</i> · And when a man&#x27;s ox strikes his fellow&#x27;s ox, and it dies — they shall sell the living ox and divide its silver, and the dead one they shall also divide.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְכִֽי יִגֹּ֧ף שֽׁוֹר אִ֛ישׁ אֶת שׁ֥וֹר רֵעֵ֖הוּ וָמֵ֑ת</span> · <i>ve-ki-yigof shor-ish et-shor ree-hu va-met</i> · and when a man&#x27;s ox strikes his fellow&#x27;s ox, and it dies (etnachta on va-met) [VERIFIED: SNAPSHOT Exod.21.35 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּמָ֨כְר֜וּ אֶת הַשּׁ֤וֹר הַחַי֙ וְחָצ֣וּ אֶת כַּסְפּ֔וֹ וְגַ֥ם אֶת הַמֵּ֖ת יֶֽחֱצֽוּן</span> · <i>u-makhru et-ha-shor ha-chay ve-chatzu et-kasp-o ve-gam et-ha-met yechetzu-n</i> · they shall sell the living ox and divide its silver, and the dead one they shall also divide (verse-final yechetzu-n) [VERIFIED: SNAPSHOT Exod.21.35 idx8-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>CASE</td><td><span class="expr">CASE(ve-khi yigof shor ish et shor reehu va-met) ROUTE(shor_et_shor)</span><br><span class="gloss">= CASE(and-khi yigof shor man et shor reehu and-met) ROUTE(shor-shor)</span><br>THE EIGHTH CASE. ve-khi-YIGOF shor-ish et-SHOR REEHU va-met — &#x27;when a man&#x27;s ox strikes HIS FELLOW&#x27;S OX, and it dies&#x27;: the case installed — beast against beast (no human victim: the code completing its coverage matrix — man on man, man on beast&#x27;s owner, beast on man, now beast on beast); u-makhru et-ha-shor ha-CHAI ve-CHATZU et-kaspo ve-gam et-ha-MET yechetzun — &#x27;they shall SELL the LIVING ox and DIVIDE its silver, and the DEAD they shall also divide&#x27;: the fifty- fifty of the first, unwarned goring (the readings&#x27; half-damages doctrine riding the split, named): the machine files the verse&#x27;s elegant court-math: two owners, one carcass, one live ox — everything halved because fault is not yet assigned.
+</td><td><span class="he">וְכִי־יִגֹּף שׁוֹר־אִישׁ אֶת־שׁוֹר רֵעֵהוּ וָמֵת</span> · <i>ve-ki-yigof shor-ish et-shor ree-hu va-met</i><br><span class="gloss">= and-when-yigof shor-man shor ree-that and-met</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The split loss.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_36 · Exod.21.36 · <span class='expr'>THE_KNOWN_GORER</span></h3>
+<p><span class="he">אוֹ נוֹדַע כִּי שׁוֹר נַגָּח הוּא מִתְּמוֹל שִׁלְשֹׁם וְלֹא יִשְׁמְרֶנּוּ בְּעָלָיו שַׁלֵּם יְשַׁלֵּם שׁוֹר תַּחַת הַשּׁוֹר וְהַמֵּת יִהְיֶה־לּוֹ</span> · <i>o noda ki shor nagach hu mi-temol shilshom ve-lo yishmre-nu bealay-v shalem yeshalem shor tachat ha-shor ve-ha-met yihye-l-o</i> · Or it was known that it was a goring ox from yesterday and the day before, and its owner did not guard it — he shall surely pay ox for ox, and the dead shall be his.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">א֣וֹ נוֹדַ֗ע כִּ֠י שׁ֣וֹר נַגָּ֥ח הוּא֙ מִתְּמ֣וֹל שִׁלְשֹׁ֔ם וְלֹ֥א יִשְׁמְרֶ֖נּוּ בְּעָלָ֑יו</span> · <i>o noda ki shor nagach hu mi-temol shilshom ve-lo yishmre-nu bealay-v</i> · or it was known that it was a goring ox from yesterday and the day before, and its owner did not guard it (etnachta on bealay-v) [VERIFIED: SNAPSHOT Exod.21.36 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">שַׁלֵּ֨ם יְשַׁלֵּ֥ם שׁוֹר֙ תַּ֣חַת הַשּׁ֔וֹר וְהַמֵּ֖ת יִֽהְיֶה לּֽוֹ</span> · <i>shalem yeshalem shor tachat ha-shor ve-ha-met yihye-l-o</i> · he shall surely pay ox for ox, and the dead shall be his (verse-final l-o) [VERIFIED: SNAPSHOT Exod.21.36 idx11-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>HANDLER</td><td><span class="expr">HANDLER IF(noda ki shor nagach hu mi-temol shilshom ve-lo yishmerenu bealav) THEN(shalem yeshalem shor tachat ha-shor)</span><br><span class="gloss">= HANDLER IF(noda when shor nagach that from-temol shilshom and-not yishmerenu bealav) THEN(shalem yeshalem shor tachat the-shor)</span><br>THE KNOWN GORER [EX21-11]. o NODA ki shor NAGACH hu MI-TEMOL shilshom — &#x27;or it was KNOWN that it was a goring ox FROM YESTERDAY&#x27;: the from-yesterday word now FULL (VERIFIED census at the build — the four full stations; the exemplars&#x27; opposite splits sealed by the Ramah: lean at 29, full here) — and the goring-word&#x27;s in-span pair closes (21:29 + 21:36, asserted); SHALEM YESHALEM shor tachat ha- shor — &#x27;he shall SURELY PAY, ox for ox&#x27;: the handler installed — knowledge converts the half-split to FULL restitution (the muad- doctrine priced: the tachat-formula&#x27;s last in-span use — the under- word that ran the talion-table closes the chapter&#x27;s accounting); ve- ha-MET yihye-lo — the carcass credited (the second lamed dageshed like the first, MS named).
+</td><td><span class="he">שַׁלֵּם יְשַׁלֵּם שׁוֹר תַּחַת הַשּׁוֹר</span> · <i>shalem yeshalem shor tachat ha-shor</i><br><span class="gloss">= shalem yeshalem shor tachat the-shor</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The handler; the full yesterday.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_21_37 · Exod.21.37 · <span class='expr'>FIVE_OXEN_FOUR_SHEEP</span></h3>
+<p><span class="he">כִּי יִגְנֹב־אִישׁ שׁוֹר אוֹ־שֶׂה וּטְבָחוֹ אוֹ מְכָרוֹ חֲמִשָּׁה בָקָר יְשַׁלֵּם תַּחַת הַשּׁוֹר וְאַרְבַּע־צֹאן תַּחַת הַשֶּׂה</span> · <i>ki yignov-ish shor o-se u-tevach-o o mekhar-o chamisha vaqar yeshalem tachat ha-shor ve-arba-tzon tachat ha-se</i> · When a man steals an ox or a sheep, and slaughters it or sells it — five oxen he shall pay for the ox, and four sheep for the sheep.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">כִּ֤י יִגְנֹֽב אִישׁ֙ שׁ֣וֹר אוֹ שֶׂ֔ה וּטְבָח֖וֹ א֣וֹ מְכָר֑וֹ</span> · <i>ki yignov-ish shor o-se u-tevach-o o mekhar-o</i> · when a man steals an ox or a sheep, and slaughters it or sells it (etnachta on mekhar-o) [VERIFIED: SNAPSHOT Exod.21.37 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">חֲמִשָּׁ֣ה בָקָ֗ר יְשַׁלֵּם֙ תַּ֣חַת הַשּׁ֔וֹר וְאַרְבַּע צֹ֖אן תַּ֥חַת הַשֶּֽׂה</span> · <i>chamisha vaqar yeshalem tachat ha-shor ve-arba-tzon tachat ha-se</i> · five oxen he shall pay for the ox, and four sheep for the sheep (verse-final ha-se) [VERIFIED: SNAPSHOT Exod.21.37 idx9-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>CASE</td><td><span class="expr">CASE(ki yignov ish shor o se u-tevacho o mekharo) ROUTE(ganav_shor_o_se)</span><br><span class="gloss">= CASE(when yignov man shor o se u-tevacho o mekharo) ROUTE(ganav-shor-o-se)</span><br>THE NINTH CASE [EX21-13]. ki YIGNOV ish SHOR o-SE u-TEVACHO o mekharo — &#x27;when a man STEALS an ox or a sheep, and SLAUGHTERS it or sells it&#x27;: the case installed at a CLOSED SECTION (MS: the break stands here, with the held vowel-and-binder note) — CHAMISHA VAQAR yeshalem tachat ha-shor ve-ARBA-TZON tachat ha-se — &#x27;FIVE oxen for the ox, FOUR sheep for the sheep&#x27;: the multiplied restitution (the readings&#x27; two accounts of the ox&#x27;s extra ox — the beast&#x27;s lost labor, or the thief&#x27;s shoulder-shame spared the sheep-carrier — named-only); and the machine files the chapter&#x27;s final care-point: THE PERICOPE DOES NOT END HERE — the thief&#x27;s law runs past the chapter-break into the next span (the tunneler, the double-payment: armed): the code, unlike the chapter, does not pause — the corpus&#x27;s law-genre has learned to be continuous.
+</td><td><span class="he">כִּי יִגְנֹב־אִישׁ שׁוֹר אוֹ־שֶׂה וּטְבָחוֹ אוֹ מְכָרוֹ</span> · <i>ki yignov-ish shor o-se u-tevach-o o mekhar-o</i><br><span class="gloss">= when yignov-man shor o-se and-tevach-o o mekhar-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The ninth case; the open seam.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Ex_21_1 — and these are the ordinances</td><td>And these are the ordinances which you shall set before them.</td><td>no test, no name.</td><td><span class="he">וְאֵ֨לֶּה֙ הַמִּשְׁפָּטִ֔ים אֲשֶׁ֥ר תָּשִׂ֖ים</span> · <i>ve-ele ha-mishpatim asher tasim</i><br><span class="gloss">= and-ele the-mishpatim which tasim</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Ex_21_2 — the Hebrew slave</td><td>When you acquire a Hebrew slave, six years he shall serve; and in the seventh he shall go out free, for nothing.</td><td>Facts eved_ivri HOLD; no test, no name.<br><span class="gloss">= Facts eved-ivri HOLD; no test, no name.</span></td><td><span class="he">כִּ֤י תִקְנֶה֙ עֶ֣בֶד עִבְרִ֔י</span> · <i>ki tiqne eved ivri</i><br><span class="gloss">= when tiqne eved ivri</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Ex_21_3 — as he came</td><td>If he came in by himself, he shall go out by himself; if he was the husband of a wife, then his wife shall go out with him.</td><td>no test, no name.</td><td><span class="he">אִם בְּגַפּ֥וֹ יָבֹ֖א בְּגַפּ֣וֹ</span> · <i>im-be-gap-o yavo be-gap-o</i><br><span class="gloss">= if-in-gap-o yavo in-gap-o</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Ex_21_4 — the master&#x27;s wife</td><td>If his master gives him a wife, and she bears him sons or daughters — the wife and her children shall be her master&#x27;s, and he shall go out by himself.</td><td>no test, no name.</td><td><span class="he">אִם אֲדֹנָיו֙ יִתֶּן ל֣וֹ</span> · <i>im-adonay-v yiten-l-o</i><br><span class="gloss">= if-adonay-v yiten-l-o</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Ex_21_5 — I love my master</td><td>And if the slave shall plainly say: I love my master, my wife, and my sons — I will not go out free.</td><td>no test, no name.</td><td><span class="he">וְאִם אָמֹ֤ר יֹאמַר֙ הָעֶ֔בֶד</span> · <i>ve-im-amor yomar ha-eved</i><br><span class="gloss">= and-if-amor yomar the-eved</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Ex_21_6 — the awl and the door</td><td>Then his master shall bring him to God, and bring him to the door, or to the doorpost; and his master shall pierce his ear with the awl — and he shall serve him forever.</td><td>Facts martzea HOLD; no test, no name.</td><td><span class="he">וְהִגִּישׁ֤וֹ אֲדֹנָיו֙ אֶל הָ֣אֱלֹהִ֔ים</span> · <i>ve-higish-o adonay-v el-ha-Elohim</i><br><span class="gloss">= and-higish-o adonay-v to-the-God</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Ex_21_7 — the daughter sold</td><td>And when a man sells his daughter as a maidservant, she shall not go out as the slaves go out.</td><td>Facts ama_ivriya HOLD; no test, no name.<br><span class="gloss">= Facts ama-ivriya HOLD; no test, no name.</span></td><td><span class="he">וְכִֽי יִמְכֹּ֥ר אִ֛ישׁ אֶת</span> · <i>ve-ki-yimkor ish et-</i><br><span class="gloss">= and-when-yimkor man et-</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Ex_21_8 — the qere of mercy</td><td>If she is bad in the eyes of her master, who has not designated her — then he shall let her be redeemed; to a foreign people he shall not rule to sell her, since he has dealt treacherously with her.</td><td>no test, no name.</td><td><span class="he">אִם רָעָ֞ה בְּעֵינֵ֧י אֲדֹנֶ֛יהָ</span> · <i>im-raa be-ene adone-ha</i><br><span class="gloss">= if-raa in-ene adone-the</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Ex_21_9 — as the daughters</td><td>And if he designates her for his son — according to the ordinance of the daughters he shall do for her.</td><td>no test, no name.</td><td><span class="he">וְאִם לִבְנ֖וֹ יִֽיעָדֶ֑נָּה כְּמִשְׁפַּ֥ט</span> · <i>ve-im-li-ven-o yiade-na ke-mishpat</i><br><span class="gloss">= and-if-to-me-ven-o yiade-na like-mishpat</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Ex_21_10 — her three rights</td><td>If he takes himself another — her flesh, her covering, and her season he shall not diminish.</td><td>no test, no name.</td><td><span class="he">אִם אַחֶ֖רֶת יִֽקַּֽח ל֑וֹ</span> · <i>im-acheret yiqach-l-o</i><br><span class="gloss">= if-acheret yiqach-l-o</span></td></tr>
+<tr><td><b>S11</b></td><td>after STEP_Ex_21_11 — out free, without money</td><td>And if these three he does not do for her — then she shall go out for nothing, without money.</td><td>Facts chinam HOLD; no test, no name.</td><td><span class="he">וְאִם שְׁלָ֨שׁ אֵ֔לֶּה לֹ֥א</span> · <i>ve-im-shelash-ele lo</i><br><span class="gloss">= and-if-shelash-ele not</span></td></tr>
+<tr><td><b>S12</b></td><td>after STEP_Ex_21_12 — the striker of man</td><td>He who strikes a man, and he dies — shall surely be put to death.</td><td>STATUTES 1 standing no test, no name.</td><td><span class="he">מַכֵּ֥ה אִ֛ישׁ וָמֵ֖ת מ֥וֹת</span> · <i>make ish va-met mot</i><br><span class="gloss">= make man and-met dying</span></td></tr>
+<tr><td><b>S13</b></td><td>after STEP_Ex_21_13 — the place to flee</td><td>And he who did not lie in wait, but God caused it to come to his hand — I will set for you a place where he may flee.</td><td>Facts yanus HOLD; no test, no name.</td><td><span class="he">וַאֲשֶׁר֙ לֹ֣א צָדָ֔ה וְהָאֱלֹהִ֖ים</span> · <i>va-asher lo tzada ve-ha-Elohim</i><br><span class="gloss">= and-which not tzada and-the-God</span></td></tr>
+<tr><td><b>S14</b></td><td>after STEP_Ex_21_14 — from My altar</td><td>And when a man presumes against his fellow, to kill him by scheme — from My altar you shall take him, to die.</td><td>Facts mizbechi HOLD; no test, no name.</td><td><span class="he">וְכִֽי יָזִ֥ד אִ֛ישׁ עַל</span> · <i>ve-ki-yazid ish al-</i><br><span class="gloss">= and-when-yazid man upon</span></td></tr>
+<tr><td><b>S15</b></td><td>after STEP_Ex_21_15 — the striker of parents</td><td>And he who strikes his father and his mother shall surely be put to death.</td><td>STATUTES 2 standing no test, no name.</td><td><span class="he">וּמַכֵּ֥ה אָבִ֛יו וְאִמּ֖וֹ מ֥וֹת</span> · <i>u-make avi-v ve-im-o mot</i><br><span class="gloss">= make avi-v and-if-o dying</span></td></tr>
+<tr><td><b>S16</b></td><td>after STEP_Ex_21_16 — the man-stealer</td><td>And he who steals a man, and sells him, and he is found in his hand — shall surely be put to death.</td><td>STATUTES 3 standing no test, no name.</td><td><span class="he">וְגֹנֵ֨ב אִ֧ישׁ וּמְכָר֛וֹ וְנִמְצָ֥א</span> · <i>ve-gonev ish u-mekhar-o ve-nimtza</i><br><span class="gloss">= and-gonev man and-mekhar-o and-nimtza</span></td></tr>
+<tr><td><b>S17</b></td><td>after STEP_Ex_21_17 — the curser of parents</td><td>And he who curses his father and his mother shall surely be put to death.</td><td>STATUTES 4 standing no test, no name.</td><td><span class="he">וּמְקַלֵּ֥ל אָבִ֛יו וְאִמּ֖וֹ מ֥וֹת</span> · <i>u-meqalel avi-v ve-im-o mot</i><br><span class="gloss">= and-meqalel avi-v and-if-o dying</span></td></tr>
+<tr><td><b>S18</b></td><td>after STEP_Ex_21_18 — the brawl</td><td>And when men quarrel, and a man strikes his fellow with a stone or with a fist, and he does not die, but falls to bed —</td><td>Facts makkeh_reehu HOLD; no test, no name.<br><span class="gloss">= Facts makkeh-reehu HOLD; no test, no name.</span></td><td><span class="he">וְכִֽי יְרִיבֻ֣ן אֲנָשִׁ֔ים וְהִכָּה</span> · <i>ve-ki-yerivu-n anashim ve-hika-</i><br><span class="gloss">= and-when-yerivu-n anashim and-hika</span></td></tr>
+<tr><td><b>S19</b></td><td>after STEP_Ex_21_19 — the healing license</td><td>If he rises, and walks outside on his staff, then the striker shall be cleared; only his sitting he shall give — and he shall surely heal.</td><td>Facts yerape HOLD; no test, no name.</td><td><span class="he">אִם יָק֞וּם וְהִתְהַלֵּ֥ךְ בַּח֛וּץ</span> · <i>im-yaqum ve-hithalekh ba-chutz</i><br><span class="gloss">= if-yaqum walked-about in-the-chutz</span></td></tr>
+<tr><td><b>S20</b></td><td>after STEP_Ex_21_20 — the struck slave</td><td>And when a man strikes his slave or his maidservant with the rod, and he dies under his hand — he shall surely be avenged.</td><td>Facts makkeh_avdo HOLD; no test, no name.<br><span class="gloss">= Facts makkeh-avdo HOLD; no test, no name.</span></td><td><span class="he">וְכִֽי יַכֶּה֩ אִ֨ישׁ אֶת</span> · <i>ve-ki-yake ish et-</i><br><span class="gloss">= and-when-yake man et-</span></td></tr>
+<tr><td><b>S21</b></td><td>after STEP_Ex_21_21 — a day or two days</td><td>But if he stand a day or two days, he shall not be avenged — for he is his money.</td><td>Facts khaspo HOLD; no test, no name.</td><td><span class="he">אַ֥ךְ אִם י֛וֹם א֥וֹ</span> · <i>akh im-yom o</i><br><span class="gloss">= akh if-day o</span></td></tr>
+<tr><td><b>S22</b></td><td>after STEP_Ex_21_22 — the struck mother</td><td>And when men fight, and strike a pregnant woman, and her children go out, and there is no harm — he shall surely be fined, as the woman&#x27;s husband lays on him, and he shall give by the judges.</td><td>Facts ason_o_lo HOLD; no test, no name.<br><span class="gloss">= Facts ason-o-not HOLD; no test, no name.</span></td><td><span class="he">וְכִֽי יִנָּצ֣וּ אֲנָשִׁ֗ים וְנָ֨גְפ֜וּ</span> · <i>ve-ki-yinatzu anashim ve-nagfu</i><br><span class="gloss">= and-when-yinatzu anashim and-nagfu</span></td></tr>
+<tr><td><b>S23</b></td><td>after STEP_Ex_21_23 — life for life</td><td>And if there is harm — then you shall give life for life.</td><td>Facts nefesh HOLD; no test, no name.</td><td><span class="he">וְאִם אָס֖וֹן יִהְיֶ֑ה וְנָתַתָּ֥ה</span> · <i>ve-im-ason yihye ve-natata</i><br><span class="gloss">= and-if-ason yihye and-natata</span></td></tr>
+<tr><td><b>S24</b></td><td>after STEP_Ex_21_24 — eye for eye</td><td>Eye for eye, tooth for tooth, hand for hand, foot for foot,</td><td>no test, no name.</td><td><span class="he">עַ֚יִן תַּ֣חַת עַ֔יִן שֵׁ֖ן</span> · <i>ayin tachat ayin shen</i><br><span class="gloss">= ayin tachat ayin shen</span></td></tr>
+<tr><td><b>S25</b></td><td>after STEP_Ex_21_25 — burn for burn</td><td>burn for burn, wound for wound, bruise for bruise.</td><td>no test, no name.</td><td><span class="he">כְּוִיָּה֙ תַּ֣חַת כְּוִיָּ֔ה פֶּ֖צַע</span> · <i>keviya tachat keviya petza</i><br><span class="gloss">= keviya tachat keviya petza</span></td></tr>
+<tr><td><b>S26</b></td><td>after STEP_Ex_21_26 — the eye that frees</td><td>And when a man strikes the eye of his slave, or the eye of his maidservant, and destroys it — he shall let him go free for his eye.</td><td>Facts chafshi HOLD; no test, no name.</td><td><span class="he">וְכִֽי יַכֶּ֨ה אִ֜ישׁ אֶת</span> · <i>ve-ki-yake ish et-</i><br><span class="gloss">= and-when-yake man et-</span></td></tr>
+<tr><td><b>S27</b></td><td>after STEP_Ex_21_27 — the tooth that frees</td><td>And if he makes the tooth of his slave, or the tooth of his maidservant, fall out — he shall let him go free for his tooth.</td><td>Facts shino HOLD; no test, no name.</td><td><span class="he">וְאִם שֵׁ֥ן עַבְדּ֛וֹ אֽוֹ</span> · <i>ve-im-shen avd-o o-</i><br><span class="gloss">= and-if-shen avd-o o</span></td></tr>
+<tr><td><b>S28</b></td><td>after STEP_Ex_21_28 — the goring ox</td><td>And when an ox gores a man or a woman, and he dies — the ox shall surely be stoned, and its flesh shall not be eaten; and the owner of the ox is clear.</td><td>Facts shor_nagach HOLD; no test, no name.<br><span class="gloss">= Facts shor-nagach HOLD; no test, no name.</span></td><td><span class="he">וְכִֽי יִגַּ֨ח שׁ֥וֹר אֶת</span> · <i>ve-ki-yigach shor et-</i><br><span class="gloss">= and-when-yigach shor et-</span></td></tr>
+<tr><td><b>S29</b></td><td>after STEP_Ex_21_29 — the warned ox</td><td>And if it was a goring ox from yesterday and the day before, and its owner was warned, and he did not guard it, and it killed a man or a woman — the ox shall be stoned, and its owner shall also die.</td><td>Facts yisaqel HOLD; no test, no name.</td><td><span class="he">וְאִ֡ם שׁוֹר֩ נַגָּ֨ח ה֜וּא</span> · <i>ve-im shor nagach hu</i><br><span class="gloss">= and-if shor nagach that</span></td></tr>
+<tr><td><b>S30</b></td><td>after STEP_Ex_21_30 — the ransom</td><td>If a ransom be laid on him — then he shall give the redemption of his life, according to all that is laid on him.</td><td>Facts pidyon HOLD; no test, no name.</td><td><span class="he">אִם כֹּ֖פֶר יוּשַׁ֣ת עָלָ֑יו</span> · <i>im-kofer yushat alay-v</i><br><span class="gloss">= if-pitch yushat alay-v</span></td></tr>
+<tr><td><b>S31</b></td><td>after STEP_Ex_21_31 — son or daughter</td><td>Whether it gore a son, or gore a daughter — according to this ordinance shall it be done to him.</td><td>no test, no name.</td><td><span class="he">אוֹ בֵ֥ן יִגָּ֖ח אוֹ</span> · <i>o-ven yigach o-</i><br><span class="gloss">= o-ven yigach o</span></td></tr>
+<tr><td><b>S32</b></td><td>after STEP_Ex_21_32 — thirty shekels</td><td>If the ox gore a slave or a maidservant — thirty shekels of silver he shall give to his master, and the ox shall be stoned.</td><td>Facts sheqalim HOLD; no test, no name.</td><td><span class="he">אִם עֶ֛בֶד יִגַּ֥ח הַשּׁ֖וֹר</span> · <i>im-eved yigach ha-shor</i><br><span class="gloss">= if-eved yigach the-shor</span></td></tr>
+<tr><td><b>S33</b></td><td>after STEP_Ex_21_33 — the open pit</td><td>And when a man opens a pit, or when a man digs a pit, and does not cover it — and an ox or a donkey falls in there:</td><td>Facts baal_ha_bor HOLD; no test, no name.<br><span class="gloss">= Facts baal-the-bor HOLD; no test, no name.</span></td><td><span class="he">וְכִֽי יִפְתַּ֨ח אִ֜ישׁ בּ֗וֹר</span> · <i>ve-ki-yiftach ish bor</i><br><span class="gloss">= and-when-yiftach man bor</span></td></tr>
+<tr><td><b>S34</b></td><td>after STEP_Ex_21_34 — the pit pays</td><td>The owner of the pit shall pay; silver he shall return to its owner — and the dead shall be his.</td><td>Facts yeshalem HOLD; no test, no name.</td><td><span class="he">בַּ֤עַל הַבּוֹר֙ יְשַׁלֵּ֔ם כֶּ֖סֶף</span> · <i>baal ha-bor yeshalem kesef</i><br><span class="gloss">= baal the-bor yeshalem kesef</span></td></tr>
+<tr><td><b>S35</b></td><td>after STEP_Ex_21_35 — ox against ox</td><td>And when a man&#x27;s ox strikes his fellow&#x27;s ox, and it dies — they shall sell the living ox and divide its silver, and the dead one they shall also divide.</td><td>Facts shor_et_shor HOLD; no test, no name.<br><span class="gloss">= Facts shor-shor HOLD; no test, no name.</span></td><td><span class="he">וְכִֽי יִגֹּ֧ף שֽׁוֹר אִ֛ישׁ</span> · <i>ve-ki-yigof shor-ish</i><br><span class="gloss">= and-when-yigof shor-man</span></td></tr>
+<tr><td><b>S36</b></td><td>after STEP_Ex_21_36 — the known gorer</td><td>Or it was known that it was a goring ox from yesterday and the day before, and its owner did not guard it — he shall surely pay ox for ox, and the dead shall be his.</td><td>Facts shalem HOLD; no test, no name.</td><td><span class="he">א֣וֹ נוֹדַ֗ע כִּ֠י שׁ֣וֹר</span> · <i>o noda ki shor</i><br><span class="gloss">= o noda when shor</span></td></tr>
+<tr><td><b>S37</b></td><td>after STEP_Ex_21_37 — five oxen, four sheep</td><td>When a man steals an ox or a sheep, and slaughters it or sells it — five oxen he shall pay for the ox, and four sheep for the sheep.</td><td>Facts ganav_shor_o_se HOLD; no test, no name.<br><span class="gloss">= Facts ganav-shor-o-se HOLD; no test, no name.</span></td><td><span class="he">כִּ֤י יִגְנֹֽב אִישׁ֙ שׁ֣וֹר</span> · <i>ki yignov-ish shor</i><br><span class="gloss">= when yignov-man shor</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: exo_21_the_ordinances — The ordinances (21:1-37) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — after STEP_Ex_21_1 — and these are the ordinances
+    וְאֵ֨לֶּה֙ הַמִּשְׁפָּטִ֔ים אֲשֶׁ֥ר תָּשִׂ֖ים (ve-ele ha-mishpatim asher tasim)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Ex_21_2 — the Hebrew slave
+    כִּ֤י תִקְנֶה֙ עֶ֣בֶד עִבְרִ֔י (ki tiqne eved ivri)
+    PASS  Facts eved_ivri HOLD  (2 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Ex_21_3 — as he came
+    אִם בְּגַפּ֥וֹ יָבֹ֖א בְּגַפּ֣וֹ (im-be-gap-o yavo be-gap-o)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Ex_21_4 — the master&#x27;s wife
+    אִם אֲדֹנָיו֙ יִתֶּן ל֣וֹ (im-adonay-v yiten-l-o)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Ex_21_5 — I love my master
+    וְאִם אָמֹ֤ר יֹאמַר֙ הָעֶ֔בֶד (ve-im-amor yomar ha-eved)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Ex_21_6 — the awl and the door
+    וְהִגִּישׁ֤וֹ אֲדֹנָיו֙ אֶל הָ֣אֱלֹהִ֔ים (ve-higish-o adonay-v el-ha-Elohim)
+    PASS  Facts martzea HOLD  (6 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — after STEP_Ex_21_7 — the daughter sold
+    וְכִֽי יִמְכֹּ֥ר אִ֛ישׁ אֶת (ve-ki-yimkor ish et-)
+    PASS  Facts ama_ivriya HOLD  (7 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S8 — after STEP_Ex_21_8 — the qere of mercy
+    אִם רָעָ֞ה בְּעֵינֵ֧י אֲדֹנֶ֛יהָ (im-raa be-ene adone-ha)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S9 — after STEP_Ex_21_9 — as the daughters
+    וְאִם לִבְנ֖וֹ יִֽיעָדֶ֑נָּה כְּמִשְׁפַּ֥ט (ve-im-li-ven-o yiade-na ke-mishpat)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S10 — after STEP_Ex_21_10 — her three rights
+    אִם אַחֶ֖רֶת יִֽקַּֽח ל֑וֹ (im-acheret yiqach-l-o)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S11 — after STEP_Ex_21_11 — out free, without money
+    וְאִם שְׁלָ֨שׁ אֵ֔לֶּה לֹ֥א (ve-im-shelash-ele lo)
+    PASS  Facts chinam HOLD  (11 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S12 — after STEP_Ex_21_12 — the striker of man
+    מַכֵּ֥ה אִ֛ישׁ וָמֵ֖ת מ֥וֹת (make ish va-met mot)
+    PASS  STATUTES 1 standing no test, no name.  (tests=0 names=0)
+
+=== S13 — after STEP_Ex_21_13 — the place to flee
+    וַאֲשֶׁר֙ לֹ֣א צָדָ֔ה וְהָאֱלֹהִ֖ים (va-asher lo tzada ve-ha-Elohim)
+    PASS  Facts yanus HOLD  (13 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S14 — after STEP_Ex_21_14 — from My altar
+    וְכִֽי יָזִ֥ד אִ֛ישׁ עַל (ve-ki-yazid ish al-)
+    PASS  Facts mizbechi HOLD  (14 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S15 — after STEP_Ex_21_15 — the striker of parents
+    וּמַכֵּ֥ה אָבִ֛יו וְאִמּ֖וֹ מ֥וֹת (u-make avi-v ve-im-o mot)
+    PASS  STATUTES 2 standing no test, no name.  (tests=0 names=0)
+
+=== S16 — after STEP_Ex_21_16 — the man-stealer
+    וְגֹנֵ֨ב אִ֧ישׁ וּמְכָר֛וֹ וְנִמְצָ֥א (ve-gonev ish u-mekhar-o ve-nimtza)
+    PASS  STATUTES 3 standing no test, no name.  (tests=0 names=0)
+
+=== S17 — after STEP_Ex_21_17 — the curser of parents
+    וּמְקַלֵּ֥ל אָבִ֛יו וְאִמּ֖וֹ מ֥וֹת (u-meqalel avi-v ve-im-o mot)
+    PASS  STATUTES 4 standing no test, no name.  (tests=0 names=0)
+
+=== S18 — after STEP_Ex_21_18 — the brawl
+    וְכִֽי יְרִיבֻ֣ן אֲנָשִׁ֔ים וְהִכָּה (ve-ki-yerivu-n anashim ve-hika-)
+    PASS  Facts makkeh_reehu HOLD  (18 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S19 — after STEP_Ex_21_19 — the healing license
+    אִם יָק֞וּם וְהִתְהַלֵּ֥ךְ בַּח֛וּץ (im-yaqum ve-hithalekh ba-chutz)
+    PASS  Facts yerape HOLD  (19 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S20 — after STEP_Ex_21_20 — the struck slave
+    וְכִֽי יַכֶּה֩ אִ֨ישׁ אֶת (ve-ki-yake ish et-)
+    PASS  Facts makkeh_avdo HOLD  (20 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S21 — after STEP_Ex_21_21 — a day or two days
+    אַ֥ךְ אִם י֛וֹם א֥וֹ (akh im-yom o)
+    PASS  Facts khaspo HOLD  (21 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S22 — after STEP_Ex_21_22 — the struck mother
+    וְכִֽי יִנָּצ֣וּ אֲנָשִׁ֗ים וְנָ֨גְפ֜וּ (ve-ki-yinatzu anashim ve-nagfu)
+    PASS  Facts ason_o_lo HOLD  (22 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S23 — after STEP_Ex_21_23 — life for life
+    וְאִם אָס֖וֹן יִהְיֶ֑ה וְנָתַתָּ֥ה (ve-im-ason yihye ve-natata)
+    PASS  Facts nefesh HOLD  (23 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S24 — after STEP_Ex_21_24 — eye for eye
+    עַ֚יִן תַּ֣חַת עַ֔יִן שֵׁ֖ן (ayin tachat ayin shen)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S25 — after STEP_Ex_21_25 — burn for burn
+    כְּוִיָּה֙ תַּ֣חַת כְּוִיָּ֔ה פֶּ֖צַע (keviya tachat keviya petza)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S26 — after STEP_Ex_21_26 — the eye that frees
+    וְכִֽי יַכֶּ֨ה אִ֜ישׁ אֶת (ve-ki-yake ish et-)
+    PASS  Facts chafshi HOLD  (26 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S27 — after STEP_Ex_21_27 — the tooth that frees
+    וְאִם שֵׁ֥ן עַבְדּ֛וֹ אֽוֹ (ve-im-shen avd-o o-)
+    PASS  Facts shino HOLD  (27 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S28 — after STEP_Ex_21_28 — the goring ox
+    וְכִֽי יִגַּ֨ח שׁ֥וֹר אֶת (ve-ki-yigach shor et-)
+    PASS  Facts shor_nagach HOLD  (28 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S29 — after STEP_Ex_21_29 — the warned ox
+    וְאִ֡ם שׁוֹר֩ נַגָּ֨ח ה֜וּא (ve-im shor nagach hu)
+    PASS  Facts yisaqel HOLD  (29 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S30 — after STEP_Ex_21_30 — the ransom
+    אִם כֹּ֖פֶר יוּשַׁ֣ת עָלָ֑יו (im-kofer yushat alay-v)
+    PASS  Facts pidyon HOLD  (30 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S31 — after STEP_Ex_21_31 — son or daughter
+    אוֹ בֵ֥ן יִגָּ֖ח אוֹ (o-ven yigach o-)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S32 — after STEP_Ex_21_32 — thirty shekels
+    אִם עֶ֛בֶד יִגַּ֥ח הַשּׁ֖וֹר (im-eved yigach ha-shor)
+    PASS  Facts sheqalim HOLD  (32 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S33 — after STEP_Ex_21_33 — the open pit
+    וְכִֽי יִפְתַּ֨ח אִ֜ישׁ בּ֗וֹר (ve-ki-yiftach ish bor)
+    PASS  Facts baal_ha_bor HOLD  (33 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S34 — after STEP_Ex_21_34 — the pit pays
+    בַּ֤עַל הַבּוֹר֙ יְשַׁלֵּ֔ם כֶּ֖סֶף (baal ha-bor yeshalem kesef)
+    PASS  Facts yeshalem HOLD  (34 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S35 — after STEP_Ex_21_35 — ox against ox
+    וְכִֽי יִגֹּ֧ף שֽׁוֹר אִ֛ישׁ (ve-ki-yigof shor-ish)
+    PASS  Facts shor_et_shor HOLD  (35 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S36 — after STEP_Ex_21_36 — the known gorer
+    א֣וֹ נוֹדַ֗ע כִּ֠י שׁ֣וֹר (o noda ki shor)
+    PASS  Facts shalem HOLD  (36 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S37 — after STEP_Ex_21_37 — five oxen, four sheep
+    כִּ֤י יִגְנֹֽב אִישׁ֙ שׁ֣וֹר (ki yignov-ish shor)
+    PASS  Facts ganav_shor_o_se HOLD  (37 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/exo_21_the_ordinances.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# exo_21_the_ordinances — 21:1-37
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/exo_21_the_ordinances.yaml) is CANONICAL (Pre-Code);
+# this file is a derived, runnable rendering. Do not edit — regenerate. The
+# assertion block at the bottom is baked from the Stage D interpreter&#x27;s
+# actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;The ordinances (21:1-37)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;exo_21_the_ordinances&quot;)
+
+# -------------------------- Exod.21.1 · AND_THESE_ARE_THE_ORDINANCES -------
+# וְאֵלֶּה הַמִּשְׁפָּטִים אֲשֶׁר תָּשִׂים לִפְנֵיהֶם
+# &quot;[EN-AID] And these are the ordinances which you shall set before them.&quot;
+m.step(&quot;Exod.21.1&quot;)
+# ‹וְאֵלֶּה הַמִּשְׁפָּטִים אֲשֶׁר תָּשִׂים לִפְנֵיהֶם› (“and-these the-
+# judgment which put/set to-face-them/their”) — fact holds: and-these-the-
+# judgment
+m.fact(&quot;ve_ele_ha_mishpatim&quot;)
+
+# -------------------------- Exod.21.2 · THE_HEBREW_SLAVE -------------------
+# כִּי תִקְנֶה עֶבֶד עִבְרִי שֵׁשׁ שָׁנִים יַעֲבֹד וּבַשְּׁבִעִת יֵצֵא
+# לַחָפְשִׁי חִנָּם
+# &quot;[EN-AID] When you acquire a Hebrew slave, six years he shall serve; and
+# in the seventh he shall go out free, for nothing.&quot;
+m.step(&quot;Exod.21.2&quot;)
+# ‹כִּי תִקְנֶה עֶבֶד עִבְרִי› (“that possessor servant Hebrew”) — case that
+# possessor servant Hebrew routes to servant-Hebrew
+m.case(&quot;ki tiqne eved ivri&quot;, &quot;eved_ivri&quot;)
+
+# -------------------------- Exod.21.3 · AS_HE_CAME -------------------------
+# אִם־בְּגַפּוֹ יָבֹא בְּגַפּוֹ יֵצֵא אִם־בַּעַל אִשָּׁה הוּא וְיָצְאָה
+# אִשְׁתּוֹ עִמּוֹ
+# &quot;[EN-AID] If he came in by himself, he shall go out by himself; if he was
+# the husband of a wife, then his wife shall go out with him.&quot;
+m.step(&quot;Exod.21.3&quot;)
+# ‹אִם־בְּגַפּוֹ יָבֹא בְּגַפּוֹ יֵצֵא› (“if in-back-him/its come/bring in-
+# back-him/its bring-forth”) — fact holds: in-gapo-come/bring-in-gapo-bring-
+# forth
+m.fact(&quot;be_gapo_yavo_be_gapo_yetze&quot;)
+
+# -------------------------- Exod.21.4 · THE_MASTERS_WIFE -------------------
+# אִם־אֲדֹנָיו יִתֶּן־לוֹ אִשָּׁה וְיָלְדָה־לוֹ בָנִים אוֹ בָנוֹת הָאִשָּׁה
+# וִילָדֶיהָ תִּהְיֶה לַאדֹנֶיהָ וְהוּא יֵצֵא בְגַפּוֹ
+# &quot;[EN-AID] If his master gives him a wife, and she bears him sons or
+# daughters — the wife and her children shall be her master&#x27;s, and he shall
+# go out by himself.&quot;
+m.step(&quot;Exod.21.4&quot;)
+# ‹הָאִשָּׁה וִילָדֶיהָ תִּהְיֶה לַאדֹנֶיהָ וְהוּא יֵצֵא בְגַפּוֹ› (“the-
+# woman and-child-her/its be to-lord-her/its and-he/it bring-forth in-back-
+# him/its”) — fact holds: the-woman-vi-yladeha-be-to-adoneha
+m.fact(&quot;ha_isha_vi_yladeha_tihye_la_adoneha&quot;)
+
+# -------------------------- Exod.21.5 · I_LOVE_MY_MASTER -------------------
+# וְאִם־אָמֹר יֹאמַר הָעֶבֶד אָהַבְתִּי אֶת־אֲדֹנִי אֶת־אִשְׁתִּי
+# וְאֶת־בָּנָי לֹא אֵצֵא חָפְשִׁי
+# &quot;[EN-AID] And if the slave shall plainly say: I love my master, my wife,
+# and my sons — I will not go out free.&quot;
+m.step(&quot;Exod.21.5&quot;)
+# ‹אָמֹר יֹאמַר הָעֶבֶד אָהַבְתִּי אֶת־אֲדֹנִי אֶת־אִשְׁתִּי וְאֶת־בָּנָי›
+# (“say say the-servant have-affection-for obj-marker lord-me/my obj-marker
+# woman-me/my and-obj-marker son-me/my”) — fact holds: have-affection-for-
+# obj-marker-adoni
+m.fact(&quot;ahavti_et_adoni&quot;)
+
+# -------------------------- Exod.21.6 · THE_AWL_AND_THE_DOOR ---------------
+# וְהִגִּישׁוֹ אֲדֹנָיו אֶל־הָאֱלֹהִים וְהִגִּישׁוֹ אֶל־הַדֶּלֶת אוֹ
+# אֶל־הַמְּזוּזָה וְרָצַע אֲדֹנָיו אֶת־אָזְנוֹ בַּמַּרְצֵעַ וַעֲבָדוֹ
+# לְעֹלָם
+# &quot;[EN-AID] Then his master shall bring him to God, and bring him to the
+# door, or to the doorpost; and his master shall pierce his ear with the awl
+# — and he shall serve him forever.&quot;
+m.step(&quot;Exod.21.6&quot;)
+# ‹וְרָצַע אֲדֹנָיו אֶת־אָזְנוֹ בַּמַּרְצֵעַ וַעֲבָדוֹ לְעֹלָם› (“and-pierce
+# lord-him/its obj-marker broadness.-i.e.-the-ear-him/its in-awl and-
+# work/serve-him/its to-forever”) — standing handler — if say say the-
+# servant have-affection-for then and-pierce obj-marker-azno in-the-martzea,
+# and-avado to-forever
+m.handler(&quot;amor yomar ha-eved ahavti&quot;,
+          &quot;ve-ratza et-azno ba-martzea, va-avado le-olam&quot;)
+
+# -------------------------- Exod.21.7 · THE_DAUGHTER_SOLD ------------------
+# וְכִי־יִמְכֹּר אִישׁ אֶת־בִּתּוֹ לְאָמָה לֹא תֵצֵא כְּצֵאת הָעֲבָדִים
+# &quot;[EN-AID] And when a man sells his daughter as a maidservant, she shall
+# not go out as the slaves go out.&quot;
+m.step(&quot;Exod.21.7&quot;)
+# ‹וְכִי־יִמְכֹּר אִישׁ אֶת־בִּתּוֹ לְאָמָה› (“and-that sell man obj-marker
+# daughter-him/its to-maidservant”) — case and-khi sell man obj-marker bito
+# to-maidservant routes to maidservant-ivriya
+m.case(&quot;ve-khi yimkor ish et bito le-ama&quot;, &quot;ama_ivriya&quot;)
+
+# -------------------------- Exod.21.8 · THE_QERE_OF_MERCY ------------------
+# אִם־רָעָה בְּעֵינֵי אֲדֹנֶיהָ אֲשֶׁר־לא לוֹ יְעָדָהּ וְהֶפְדָּהּ לְעַם
+# נָכְרִי לֹא־יִמְשֹׁל לְמָכְרָהּ בְּבִגְדוֹ־בָהּ
+# &quot;[EN-AID] If she is bad in the eyes of her master, who has not designated
+# her — then he shall let her be redeemed; to a foreign people he shall not
+# rule to sell her, since he has dealt treacherously with her.&quot;
+m.step(&quot;Exod.21.8&quot;)
+# ‹אֲשֶׁר־לא לוֹ יְעָדָהּ וְהֶפְדָּהּ› (“which not to-him/its fix-upon-
+# her/its and-sever-her/its”) — fact holds: and-hefda
+m.fact(&quot;ve_hefda&quot;)
+
+# -------------------------- Exod.21.9 · AS_THE_DAUGHTERS -------------------
+# וְאִם־לִבְנוֹ יִיעָדֶנָּה כְּמִשְׁפַּט הַבָּנוֹת יַעֲשֶׂה־לָּהּ
+# &quot;[EN-AID] And if he designates her for his son — according to the
+# ordinance of the daughters he shall do for her.&quot;
+m.step(&quot;Exod.21.9&quot;)
+# ‹כְּמִשְׁפַּט הַבָּנוֹת יַעֲשֶׂה־לָּהּ› (“like-judgment the-daughter make
+# to-her/its”) — fact holds: like-judgment-the-daughter
+m.fact(&quot;ke_mishpat_ha_banot&quot;)
+
+# -------------------------- Exod.21.10 · HER_THREE_RIGHTS ------------------
+# אִם־אַחֶרֶת יִקַּח־לוֹ שְׁאֵרָהּ כְּסוּתָהּ וְעֹנָתָהּ לֹא יִגְרָע
+# &quot;[EN-AID] If he takes himself another — her flesh, her covering, and her
+# season he shall not diminish.&quot;
+m.step(&quot;Exod.21.10&quot;)
+# ‹שְׁאֵרָהּ כְּסוּתָהּ וְעֹנָתָהּ לֹא יִגְרָע› (“flesh-her/its cover-
+# her/its and-sexual-her/its not scrape-off”) — fact holds: sheera-kesuta-
+# and-onata
+m.fact(&quot;sheera_kesuta_ve_onata&quot;)
+
+# -------------------------- Exod.21.11 · OUT_FREE_WITHOUT_MONEY ------------
+# וְאִם־שְׁלָשׁ־אֵלֶּה לֹא יַעֲשֶׂה לָהּ וְיָצְאָה חִנָּם אֵין כָּסֶף
+# &quot;[EN-AID] And if these three he does not do for her — then she shall go
+# out for nothing, without money.&quot;
+m.step(&quot;Exod.21.11&quot;)
+# ‹וְיָצְאָה חִנָּם אֵין כָּסֶף› (“and-bring-forth gratis there-is-not
+# silver”) — standing handler — if three these not make lah then and-bring-
+# forth gratis there-is-not silver
+m.handler(&quot;shelash ele lo yaase lah&quot;,
+          &quot;ve-yatza chinam en kasef&quot;)
+
+# -------------------------- Exod.21.12 · THE_STRIKER_OF_MAN ----------------
+# מַכֵּה אִישׁ וָמֵת מוֹת יוּמָת
+# &quot;[EN-AID] He who strikes a man, and he dies — shall surely be put to
+# death.&quot;
+m.step(&quot;Exod.21.12&quot;)
+# ‹מַכֵּה אִישׁ וָמֵת מוֹת יוּמָת› (“strike man and-die die die”) —
+m.statute(&quot;FORBID&quot;, &quot;makkeh_ish&quot;)
+
+# -------------------------- Exod.21.13 · THE_PLACE_TO_FLEE -----------------
+# וַאֲשֶׁר לֹא צָדָה וְהָאֱלֹהִים אִנָּה לְיָדוֹ וְשַׂמְתִּי לְךָ מָקוֹם
+# אֲשֶׁר יָנוּס שָׁמָּה
+# &quot;[EN-AID] And he who did not lie in wait, but God caused it to come to his
+# hand — I will set for you a place where he may flee.&quot;
+m.step(&quot;Exod.21.13&quot;)
+# ‹וְשַׂמְתִּי לְךָ מָקוֹם אֲשֶׁר יָנוּס שָׁמָּה› (“and-put/set to-you/your
+# place which flit there-ward”) — standing handler — if not chase, and-the-
+# God approach to-his-hand then and-put/set to-you place which flit shama
+m.handler(&quot;lo tzada, ve-ha-elohim ina le-yado&quot;,
+          &quot;ve-samti lekha maqom asher yanus shama&quot;)
+
+# -------------------------- Exod.21.14 · FROM_MY_ALTAR ---------------------
+# וְכִי־יָזִד אִישׁ עַל־רֵעֵהוּ לְהָרְגוֹ בְעָרְמָה מֵעִם מִזְבְּחִי
+# תִּקָּחֶנּוּ לָמוּת
+# &quot;[EN-AID] And when a man presumes against his fellow, to kill him by
+# scheme — from My altar you shall take him, to die.&quot;
+m.step(&quot;Exod.21.14&quot;)
+# ‹מֵעִם מִזְבְּחִי תִּקָּחֶנּוּ לָמוּת› (“from-with altar-me/my take-
+# him/its to-die”) — standing handler — if seethe man over reehu to-horgo
+# and-trickery then from-if mizbechi tiqachenu to-die
+m.handler(&quot;yazid ish al reehu le-horgo ve-arma&quot;,
+          &quot;me-im mizbechi tiqachenu la-mut&quot;)
+
+# -------------------------- Exod.21.15 · THE_STRIKER_OF_PARENTS ------------
+# וּמַכֵּה אָבִיו וְאִמּוֹ מוֹת יוּמָת
+# &quot;[EN-AID] And he who strikes his father and his mother shall surely be put
+# to death.&quot;
+m.step(&quot;Exod.21.15&quot;)
+# ‹וּמַכֵּה אָבִיו וְאִמּוֹ מוֹת יוּמָת› (“and-strike father-him/its and-
+# mother-him/its die die”) —
+m.statute(&quot;FORBID&quot;, &quot;makkeh_aviv_ve_imo&quot;)
+
+# -------------------------- Exod.21.16 · THE_MAN_STEALER -------------------
+# וְגֹנֵב אִישׁ וּמְכָרוֹ וְנִמְצָא בְיָדוֹ מוֹת יוּמָת
+# &quot;[EN-AID] And he who steals a man, and sells him, and he is found in his
+# hand — shall surely be put to death.&quot;
+m.step(&quot;Exod.21.16&quot;)
+# ‹וְגֹנֵב אִישׁ וּמְכָרוֹ וְנִמְצָא בְיָדוֹ› (“and-steal man and-sell-
+# him/its and-find in-hand-him/its”) —
+m.statute(&quot;FORBID&quot;, &quot;gonev_ish&quot;)
+
+# -------------------------- Exod.21.17 · THE_CURSER_OF_PARENTS -------------
+# וּמְקַלֵּל אָבִיו וְאִמּוֹ מוֹת יוּמָת
+# &quot;[EN-AID] And he who curses his father and his mother shall surely be put
+# to death.&quot;
+m.step(&quot;Exod.21.17&quot;)
+# ‹וּמְקַלֵּל אָבִיו וְאִמּוֹ מוֹת יוּמָת› (“and-be-light father-him/its
+# and-mother-him/its die die”) —
+m.statute(&quot;FORBID&quot;, &quot;meqalel_aviv_ve_imo&quot;)
+
+# -------------------------- Exod.21.18 · THE_BRAWL -------------------------
+# וְכִי־יְרִיבֻן אֲנָשִׁים וְהִכָּה־אִישׁ אֶת־רֵעֵהוּ בְּאֶבֶן אוֹ בְאֶגְרֹף
+# וְלֹא יָמוּת וְנָפַל לְמִשְׁכָּב
+# &quot;[EN-AID] And when men quarrel, and a man strikes his fellow with a stone
+# or with a fist, and he does not die, but falls to bed —&quot;
+m.step(&quot;Exod.21.18&quot;)
+# ‹וְכִי־יְרִיבֻן אֲנָשִׁים וְהִכָּה־אִישׁ אֶת־רֵעֵהוּ› (“and-that toss-ward
+# man and-strike man obj-marker associate-him/its”) — case and-khi yerivun
+# man and-strike man obj-marker reehu routes to makkeh-reehu
+m.case(&quot;ve-khi yerivun anashim ve-hika ish et reehu&quot;, &quot;makkeh_reehu&quot;)
+
+# -------------------------- Exod.21.19 · THE_HEALING_LICENSE ---------------
+# אִם־יָקוּם וְהִתְהַלֵּךְ בַּחוּץ עַל־מִשְׁעַנְתּוֹ וְנִקָּה הַמַּכֶּה רַק
+# שִׁבְתּוֹ יִתֵּן וְרַפֹּא יְרַפֵּא
+# &quot;[EN-AID] If he rises, and walks outside on his staff, then the striker
+# shall be cleared; only his sitting he shall give — and he shall surely
+# heal.&quot;
+m.step(&quot;Exod.21.19&quot;)
+# ‹רַק שִׁבְתּוֹ יִתֵּן וְרַפֹּא יְרַפֵּא› (“leanness rest-him/its set and-
+# mend mend”) — standing handler — if arise and-walk/go in-the-chutz over
+# mishanto then and-be-clean the-makke, shivto set and-mend mend
+m.handler(&quot;yaqum ve-hithalekh ba-chutz al mishanto&quot;,
+          &quot;ve-niqa ha-makke, shivto yiten ve-rapo yerape&quot;)
+
+# -------------------------- Exod.21.20 · THE_STRUCK_SLAVE ------------------
+# וְכִי־יַכֶּה אִישׁ אֶת־עַבְדּוֹ אוֹ אֶת־אֲמָתוֹ בַּשֵּׁבֶט וּמֵת תַּחַת
+# יָדוֹ נָקֹם יִנָּקֵם
+# &quot;[EN-AID] And when a man strikes his slave or his maidservant with the
+# rod, and he dies under his hand — he shall surely be avenged.&quot;
+m.step(&quot;Exod.21.20&quot;)
+# ‹וְכִי־יַכֶּה אִישׁ אֶת־עַבְדּוֹ אוֹ אֶת־אֲמָתוֹ בַּשֵּׁבֶט וּמֵת תַּחַת
+# יָדוֹ› (“and-that strike man obj-marker servant-him/its or obj-marker
+# maidservant-him/its in-scion and-die under hand-him/its”) — case and-khi
+# strike man obj-marker avdo o obj-marker amato in-the-shevet u-die routes
+# to makkeh-avdo
+m.case(&quot;ve-khi yake ish et avdo o et amato ba-shevet u-met&quot;, &quot;makkeh_avdo&quot;)
+
+# -------------------------- Exod.21.21 · A_DAY_OR_TWO_DAYS -----------------
+# אַךְ אִם־יוֹם אוֹ יוֹמַיִם יַעֲמֹד לֹא יֻקַּם כִּי כַסְפּוֹ הוּא
+# &quot;[EN-AID] But if he stand a day or two days, he shall not be avenged — for
+# he is his money.&quot;
+m.step(&quot;Exod.21.21&quot;)
+# ‹יַעֲמֹד לֹא יֻקַּם כִּי כַסְפּוֹ הוּא› (“stand not grudge that silver-
+# him/its he/it”) — standing handler — if day o day stand then not grudge,
+# that khaspo he/it
+m.handler(&quot;yom o yomayim yaamod&quot;,
+          &quot;lo yuqam, ki khaspo hu&quot;)
+
+# -------------------------- Exod.21.22 · THE_STRUCK_MOTHER -----------------
+# וְכִי־יִנָּצוּ אֲנָשִׁים וְנָגְפוּ אִשָּׁה הָרָה וְיָצְאוּ יְלָדֶיהָ וְלֹא
+# יִהְיֶה אָסוֹן עָנוֹשׁ יֵעָנֵשׁ כַּאֲשֶׁר יָשִׁית עָלָיו בַּעַל הָאִשָּׁה
+# וְנָתַן בִּפְלִלִים
+# &quot;[EN-AID] And when men fight, and strike a pregnant woman, and her
+# children go out, and there is no harm — he shall surely be fined, as the
+# woman&#x27;s husband lays on him, and he shall give by the judges.&quot;
+m.step(&quot;Exod.21.22&quot;)
+# ‹וְכִי־יִנָּצוּ אֲנָשִׁים וְנָגְפוּ אִשָּׁה הָרָה וְיָצְאוּ יְלָדֶיהָ
+# וְלֹא יִהְיֶה אָסוֹן› (“and-that go-forth man and-push woman pregnant and-
+# bring-forth child-her/its and-not be hurt”) — case and-khi go-forth man
+# and-push woman pregnant and-bring-forth yeladeha routes to hurt-or-not
+m.case(&quot;ve-khi yinatzu anashim ve-nagfu isha hara ve-yatzu yeladeha&quot;, &quot;ason_o_lo&quot;)
+
+# -------------------------- Exod.21.23 · LIFE_FOR_LIFE ---------------------
+# וְאִם־אָסוֹן יִהְיֶה וְנָתַתָּה נֶפֶשׁ תַּחַת נָפֶשׁ
+# &quot;[EN-AID] And if there is harm — then you shall give life for life.&quot;
+m.step(&quot;Exod.21.23&quot;)
+# ‹וְנָתַתָּה נֶפֶשׁ תַּחַת נָפֶשׁ› (“and-set living-being under living-
+# being”) — standing handler — if hurt be then and-set living-being under
+# living-being
+m.handler(&quot;ason yihye&quot;,
+          &quot;ve-natata nefesh tachat nafesh&quot;)
+
+# -------------------------- Exod.21.24 · EYE_FOR_EYE -----------------------
+# עַיִן תַּחַת עַיִן שֵׁן תַּחַת שֵׁן יָד תַּחַת יָד רֶגֶל תַּחַת רָגֶל
+# &quot;[EN-AID] Eye for eye, tooth for tooth, hand for hand, foot for foot,&quot;
+m.step(&quot;Exod.21.24&quot;)
+# ‹עַיִן תַּחַת עַיִן שֵׁן תַּחַת שֵׁן› (“eye under eye tooth under tooth”)
+# — fact holds: eye-under-eye
+m.fact(&quot;ayin_tachat_ayin&quot;)
+
+# -------------------------- Exod.21.25 · BURN_FOR_BURN ---------------------
+# כְּוִיָּה תַּחַת כְּוִיָּה פֶּצַע תַּחַת פָּצַע חַבּוּרָה תַּחַת חַבּוּרָה
+# &quot;[EN-AID] burn for burn, wound for wound, bruise for bruise.&quot;
+m.step(&quot;Exod.21.25&quot;)
+# ‹כְּוִיָּה תַּחַת כְּוִיָּה פֶּצַע תַּחַת פָּצַע› (“branding under
+# branding wound under wound”) — fact holds: kviya-under-kviya
+m.fact(&quot;kviya_tachat_kviya&quot;)
+
+# -------------------------- Exod.21.26 · THE_EYE_THAT_FREES ----------------
+# וְכִי־יַכֶּה אִישׁ אֶת־עֵין עַבְדּוֹ אוֹ־אֶת־עֵין אֲמָתוֹ וְשִׁחֲתָהּ
+# לַחָפְשִׁי יְשַׁלְּחֶנּוּ תַּחַת עֵינוֹ
+# &quot;[EN-AID] And when a man strikes the eye of his slave, or the eye of his
+# maidservant, and destroys it — he shall let him go free for his eye.&quot;
+m.step(&quot;Exod.21.26&quot;)
+# ‹לַחָפְשִׁי יְשַׁלְּחֶנּוּ תַּחַת עֵינוֹ› (“to-exempt send-him/its under
+# eye-him/its”) — standing handler — if strike man obj-marker there-is-not
+# avdo and-shichatah then to-exempt yeshalchenu under eno
+m.handler(&quot;yake ish et en avdo ve-shichatah&quot;,
+          &quot;la-chafshi yeshalchenu tachat eno&quot;)
+
+# -------------------------- Exod.21.27 · THE_TOOTH_THAT_FREES --------------
+# וְאִם־שֵׁן עַבְדּוֹ אוֹ־שֵׁן אֲמָתוֹ יַפִּיל לַחָפְשִׁי יְשַׁלְּחֶנּוּ
+# תַּחַת שִׁנּוֹ
+# &quot;[EN-AID] And if he makes the tooth of his slave, or the tooth of his
+# maidservant, fall out — he shall let him go free for his tooth.&quot;
+m.step(&quot;Exod.21.27&quot;)
+# ‹לַחָפְשִׁי יְשַׁלְּחֶנּוּ תַּחַת שִׁנּוֹ› (“to-exempt send-him/its under
+# tooth-him/its”) — standing handler — if tooth avdo o tooth amato fall then
+# to-exempt yeshalchenu under shino
+m.handler(&quot;shen avdo o shen amato yapil&quot;,
+          &quot;la-chafshi yeshalchenu tachat shino&quot;)
+
+# -------------------------- Exod.21.28 · THE_GORING_OX ---------------------
+# וְכִי־יִגַּח שׁוֹר אֶת־אִישׁ אוֹ אֶת־אִשָּׁה וָמֵת סָקוֹל יִסָּקֵל
+# הַשּׁוֹר וְלֹא יֵאָכֵל אֶת־בְּשָׂרוֹ וּבַעַל הַשּׁוֹר נָקִי
+# &quot;[EN-AID] And when an ox gores a man or a woman, and he dies — the ox
+# shall surely be stoned, and its flesh shall not be eaten; and the owner of
+# the ox is clear.&quot;
+m.step(&quot;Exod.21.28&quot;)
+# ‹וְכִי־יִגַּח שׁוֹר אֶת־אִישׁ אוֹ אֶת־אִשָּׁה וָמֵת› (“and-that butt-with-
+# the-horns bullock obj-marker man or obj-marker woman and-die”) — case and-
+# khi butt-with-the-horns bullock obj-marker man o obj-marker woman and-die
+# routes to bullock-butting
+m.case(&quot;ve-khi yigach shor et ish o et isha va-met&quot;, &quot;shor_nagach&quot;)
+
+# -------------------------- Exod.21.29 · THE_WARNED_OX ---------------------
+# וְאִם שׁוֹר נַגָּח הוּא מִתְּמֹל שִׁלְשֹׁם וְהוּעַד בִּבְעָלָיו וְלֹא
+# יִשְׁמְרֶנּוּ וְהֵמִית אִישׁ אוֹ אִשָּׁה הַשּׁוֹר יִסָּקֵל וְגַם־בְּעָלָיו
+# יוּמָת
+# &quot;[EN-AID] And if it was a goring ox from yesterday and the day before, and
+# its owner was warned, and he did not guard it, and it killed a man or a
+# woman — the ox shall be stoned, and its owner shall also die.&quot;
+m.step(&quot;Exod.21.29&quot;)
+# ‹וְאִם שׁוֹר נַגָּח הוּא מִתְּמֹל שִׁלְשֹׁם וְהוּעַד בִּבְעָלָיו וְלֹא
+# יִשְׁמְרֶנּוּ› (“and-if bullock butting he/it from-ago trebly and-
+# duplicate in-master-him/its and-not keep/guard-him/its”) — standing
+# handler — if bullock butting he/it from-ago trebly, and-duplicate bi-
+# vealav and-not yishmerenu, and-die then the-bullock be-weighty and-also
+# bealav die
+m.handler(&quot;shor nagach hu mi-temol shilshom, ve-huad bi-vealav ve-lo yishmerenu, ve-hemit&quot;,
+          &quot;ha-shor yisaqel ve-gam bealav yumat&quot;)
+
+# -------------------------- Exod.21.30 · THE_RANSOM ------------------------
+# אִם־כֹּפֶר יוּשַׁת עָלָיו וְנָתַן פִּדְיֹן נַפְשׁוֹ כְּכֹל אֲשֶׁר־יוּשַׁת
+# עָלָיו
+# &quot;[EN-AID] If a ransom be laid on him — then he shall give the redemption
+# of his life, according to all that is laid on him.&quot;
+m.step(&quot;Exod.21.30&quot;)
+# ‹וְנָתַן פִּדְיֹן נַפְשׁוֹ› (“and-set ransom living-being-him/its”) —
+# standing handler — if cover place alav then and-set ransom nafsho
+m.handler(&quot;kofer yushat alav&quot;,
+          &quot;ve-natan pidyon nafsho&quot;)
+
+# -------------------------- Exod.21.31 · SON_OR_DAUGHTER -------------------
+# אוֹ־בֵן יִגָּח אוֹ־בַת יִגָּח כַּמִּשְׁפָּט הַזֶּה יֵעָשֶׂה לּוֹ
+# &quot;[EN-AID] Whether it gore a son, or gore a daughter — according to this
+# ordinance shall it be done to him.&quot;
+m.step(&quot;Exod.21.31&quot;)
+# ‹כַּמִּשְׁפָּט הַזֶּה יֵעָשֶׂה לּוֹ› (“like-judgment the-this make to-
+# him/its”) — fact holds: like-judgment-the-this
+m.fact(&quot;ka_mishpat_ha_ze&quot;)
+
+# -------------------------- Exod.21.32 · THIRTY_SHEKELS --------------------
+# אִם־עֶבֶד יִגַּח הַשּׁוֹר אוֹ אָמָה כֶּסֶף שְׁלֹשִׁים שְׁקָלִים יִתֵּן
+# לַאדֹנָיו וְהַשּׁוֹר יִסָּקֵל
+# &quot;[EN-AID] If the ox gore a slave or a maidservant — thirty shekels of
+# silver he shall give to his master, and the ox shall be stoned.&quot;
+m.step(&quot;Exod.21.32&quot;)
+# ‹כֶּסֶף שְׁלֹשִׁים שְׁקָלִים יִתֵּן לַאדֹנָיו וְהַשּׁוֹר יִסָּקֵל›
+# (“silver thirty weight set to-lord-him/its and-the-bullock be-weighty”) —
+# standing handler — if servant butt-with-the-horns the-bullock o
+# maidservant then silver thirty weight set to-adonav, and-the-bullock be-
+# weighty
+m.handler(&quot;eved yigach ha-shor o ama&quot;,
+          &quot;kesef sheloshim sheqalim yiten la-adonav, ve-ha-shor yisaqel&quot;)
+
+# -------------------------- Exod.21.33 · THE_OPEN_PIT ----------------------
+# וְכִי־יִפְתַּח אִישׁ בּוֹר אוֹ כִּי־יִכְרֶה אִישׁ בֹּר וְלֹא יְכַסֶּנּוּ
+# וְנָפַל־שָׁמָּה שּׁוֹר אוֹ חֲמוֹר
+# &quot;[EN-AID] And when a man opens a pit, or when a man digs a pit, and does
+# not cover it — and an ox or a donkey falls in there:&quot;
+m.step(&quot;Exod.21.33&quot;)
+# ‹וְכִי־יִפְתַּח אִישׁ בּוֹר אוֹ כִּי־יִכְרֶה אִישׁ בֹּר וְלֹא יְכַסֶּנּוּ›
+# (“and-that open-wide man pit or that dig man pit and-not plump-him/its”) —
+# case and-khi open-wide man pit o that dig man pit and-not yekhasenu routes
+# to master-the-pit
+m.case(&quot;ve-khi yiftach ish bor o ki yikhre ish bor ve-lo yekhasenu&quot;, &quot;baal_ha_bor&quot;)
+
+# -------------------------- Exod.21.34 · THE_PIT_PAYS ----------------------
+# בַּעַל הַבּוֹר יְשַׁלֵּם כֶּסֶף יָשִׁיב לִבְעָלָיו וְהַמֵּת יִהְיֶה־לּוֹ
+# &quot;[EN-AID] The owner of the pit shall pay; silver he shall return to its
+# owner — and the dead shall be his.&quot;
+m.step(&quot;Exod.21.34&quot;)
+# ‹בַּעַל הַבּוֹר יְשַׁלֵּם כֶּסֶף יָשִׁיב לִבְעָלָיו› (“master the-pit be-
+# safe silver return to-master-him/its”) — standing handler — if fall shama
+# bullock o male-ass then master the-pit be-safe, silver return to-me-vealav
+m.handler(&quot;nafal shama shor o chamor&quot;,
+          &quot;baal ha-bor yeshalem, kesef yashiv li-vealav&quot;)
+
+# -------------------------- Exod.21.35 · OX_AGAINST_OX ---------------------
+# וְכִי־יִגֹּף שׁוֹר־אִישׁ אֶת־שׁוֹר רֵעֵהוּ וָמֵת וּמָכְרוּ אֶת־הַשּׁוֹר
+# הַחַי וְחָצוּ אֶת־כַּסְפּוֹ וְגַם אֶת־הַמֵּת יֶחֱצוּן
+# &quot;[EN-AID] And when a man&#x27;s ox strikes his fellow&#x27;s ox, and it dies — they
+# shall sell the living ox and divide its silver, and the dead one they
+# shall also divide.&quot;
+m.step(&quot;Exod.21.35&quot;)
+# ‹וְכִי־יִגֹּף שׁוֹר־אִישׁ אֶת־שׁוֹר רֵעֵהוּ וָמֵת› (“and-that push bullock
+# man obj-marker bullock associate-him/its and-die”) — case and-khi push
+# bullock man obj-marker bullock reehu and-die routes to bullock-obj-marker-
+# bullock
+m.case(&quot;ve-khi yigof shor ish et shor reehu va-met&quot;, &quot;shor_et_shor&quot;)
+
+# -------------------------- Exod.21.36 · THE_KNOWN_GORER -------------------
+# אוֹ נוֹדַע כִּי שׁוֹר נַגָּח הוּא מִתְּמוֹל שִׁלְשֹׁם וְלֹא יִשְׁמְרֶנּוּ
+# בְּעָלָיו שַׁלֵּם יְשַׁלֵּם שׁוֹר תַּחַת הַשּׁוֹר וְהַמֵּת יִהְיֶה־לּוֹ
+# &quot;[EN-AID] Or it was known that it was a goring ox from yesterday and the
+# day before, and its owner did not guard it — he shall surely pay ox for
+# ox, and the dead shall be his.&quot;
+m.step(&quot;Exod.21.36&quot;)
+# ‹שַׁלֵּם יְשַׁלֵּם שׁוֹר תַּחַת הַשּׁוֹר› (“be-safe be-safe bullock under
+# the-bullock”) — standing handler — if know that bullock butting he/it
+# from-ago trebly and-not yishmerenu bealav then be-safe be-safe bullock
+# under the-bullock
+m.handler(&quot;noda ki shor nagach hu mi-temol shilshom ve-lo yishmerenu bealav&quot;,
+          &quot;shalem yeshalem shor tachat ha-shor&quot;)
+
+# -------------------------- Exod.21.37 · FIVE_OXEN_FOUR_SHEEP --------------
+# כִּי יִגְנֹב־אִישׁ שׁוֹר אוֹ־שֶׂה וּטְבָחוֹ אוֹ מְכָרוֹ חֲמִשָּׁה בָקָר
+# יְשַׁלֵּם תַּחַת הַשּׁוֹר וְאַרְבַּע־צֹאן תַּחַת הַשֶּׂה
+# &quot;[EN-AID] When a man steals an ox or a sheep, and slaughters it or sells
+# it — five oxen he shall pay for the ox, and four sheep for the sheep.&quot;
+m.step(&quot;Exod.21.37&quot;)
+# ‹כִּי יִגְנֹב־אִישׁ שׁוֹר אוֹ־שֶׂה וּטְבָחוֹ אוֹ מְכָרוֹ› (“that steal man
+# bullock or member-of-a-flock and-slaughter-him/its or sell-him/its”) —
+# case that steal man bullock o member-of-a-flock u-tevacho o mekharo routes
+# to ganav-bullock-or-member-of-a-flock
+m.case(&quot;ki yignov ish shor o se u-tevacho o mekharo&quot;, &quot;ganav_shor_o_se&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS[&quot;log&quot;]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;ve_ele_ha_mishpatim&#x27;, &#x27;case: ki tiqne eved ivri -&gt; eved_ivri&#x27;, &#x27;be_gapo_yavo_be_gapo_yetze&#x27;, &#x27;ha_isha_vi_yladeha_tihye_la_adoneha&#x27;, &#x27;ahavti_et_adoni&#x27;, &#x27;handler: IF(amor yomar ha-eved ahavti) THEN(ve-ratza et-azno ba-martzea, va-avado le-olam)&#x27;, &#x27;case: ve-khi yimkor ish et bito le-ama -&gt; ama_ivriya&#x27;, &#x27;ve_hefda&#x27;, &#x27;ke_mishpat_ha_banot&#x27;, &#x27;sheera_kesuta_ve_onata&#x27;, &#x27;handler: IF(shelash ele lo yaase lah) THEN(ve-yatza chinam en kasef)&#x27;, &#x27;statute: FORBID(makkeh_ish)&#x27;, &#x27;handler: IF(lo tzada, ve-ha-elohim ina le-yado) THEN(ve-samti lekha maqom asher yanus shama)&#x27;, &#x27;handler: IF(yazid ish al reehu le-horgo ve-arma) THEN(me-im mizbechi tiqachenu la-mut)&#x27;, &#x27;statute: FORBID(makkeh_aviv_ve_imo)&#x27;, &#x27;statute: FORBID(gonev_ish)&#x27;, &#x27;statute: FORBID(meqalel_aviv_ve_imo)&#x27;, &#x27;case: ve-khi yerivun anashim ve-hika ish et reehu -&gt; makkeh_reehu&#x27;, &#x27;handler: IF(yaqum ve-hithalekh ba-chutz al mishanto) THEN(ve-niqa ha-makke, shivto yiten ve-rapo yerape)&#x27;, &#x27;case: ve-khi yake ish et avdo o et amato ba-shevet u-met -&gt; makkeh_avdo&#x27;, &#x27;handler: IF(yom o yomayim yaamod) THEN(lo yuqam, ki khaspo hu)&#x27;, &#x27;case: ve-khi yinatzu anashim ve-nagfu isha hara ve-yatzu yeladeha -&gt; ason_o_lo&#x27;, &#x27;handler: IF(ason yihye) THEN(ve-natata nefesh tachat nafesh)&#x27;, &#x27;ayin_tachat_ayin&#x27;, &#x27;kviya_tachat_kviya&#x27;, &#x27;handler: IF(yake ish et en avdo ve-shichatah) THEN(la-chafshi yeshalchenu tachat eno)&#x27;, &#x27;handler: IF(shen avdo o shen amato yapil) THEN(la-chafshi yeshalchenu tachat shino)&#x27;, &#x27;case: ve-khi yigach shor et ish o et isha va-met -&gt; shor_nagach&#x27;, &#x27;handler: IF(shor nagach hu mi-temol shilshom, ve-huad bi-vealav ve-lo yishmerenu, ve-hemit) THEN(ha-shor yisaqel ve-gam bealav yumat)&#x27;, &#x27;handler: IF(kofer yushat alav) THEN(ve-natan pidyon nafsho)&#x27;, &#x27;ka_mishpat_ha_ze&#x27;, &#x27;handler: IF(eved yigach ha-shor o ama) THEN(kesef sheloshim sheqalim yiten la-adonav, ve-ha-shor yisaqel)&#x27;, &#x27;case: ve-khi yiftach ish bor o ki yikhre ish bor ve-lo yekhasenu -&gt; baal_ha_bor&#x27;, &#x27;handler: IF(nafal shama shor o chamor) THEN(baal ha-bor yeshalem, kesef yashiv li-vealav)&#x27;, &#x27;case: ve-khi yigof shor ish et shor reehu va-met -&gt; shor_et_shor&#x27;, &#x27;handler: IF(noda ki shor nagach hu mi-temol shilshom ve-lo yishmerenu bealav) THEN(shalem yeshalem shor tachat ha-shor)&#x27;, &#x27;case: ki yignov ish shor o se u-tevacho o mekharo -&gt; ganav_shor_o_se&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 27
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-10 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

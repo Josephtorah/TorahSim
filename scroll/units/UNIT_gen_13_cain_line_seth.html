@@ -1,0 +1,822 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_13_cain_line_seth — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_13_cain_line_seth?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Cain&#x27;s line and Seth: the first city, the crafts, seventy-seven, calling on the Name (4:17-26) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_13_cain_line_seth</b> · Genesis 4:17-26 · derive logic_derived_v1 · phase C-13</div>
+<div class="meta"><a href="../#Gen/4/17">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">תּוֹלְדֹת קַיִן וָשֵׁת — אָז הוּחַל לִקְרֹא בְּשֵׁם יְהוָה</span> · <i>toledot Kayin va-Shet — az huchal likro be-shem YHWH</i> · the generations of Cain and Seth — &#x27;then calling on the Name of YHWH was begun&#x27;</p>
+<div class="note">Derived 2026-08-01 at owner&#x27;s order (&quot;derive the next block&quot;) — the genealogy bridge between the Cain cycle and the book of Adam&#x27;s line (5:1); gen_11 and gen_12 remain at the owner&#x27;s freeze gate (standalone derivations do not depend on them). Calibrated coverage (charter 4.1): Onkelos read Tier-A at derive time (10 sequential fetches, Data/FETCHLOG.md — the span holds the translation&#x27;s SHARPEST INVERSION in our derived spans: 4:23&#x27;s boast NEGATED into a protest of innocence, and 4:26&#x27;s begun-fork VOTED to ceased/profaned); trees from the DB&#x27;s stored tree_json. NINTH PROSPECTIVE MIDDOT RUN (logic/middot_scan/ WATCHLIST_gen13_prospective_2026-08-01.md): cache holds ZERO sources for Gen 4:17-26 — seventh tripwire in a row (the huchal lexical fork — one lemma carrying both &quot;begin&quot; and &quot;profane&quot; — is the span&#x27;s law-from-lexical-fork detector test: Onkelos votes one side and the law code&#x27;s idolatry-history stands on it). INTERPRETER: ZERO extensions — fourth extension-free derivation in a row.</div>
+<div class="note">Logic-derived v1: v3 ta&#x27;amim trees (from DB tree_json) -&gt; leaf role frames from OSHB morph -&gt; operator lines citing TIR rules -&gt; machine-state scenarios. Machine tokens apostrophe-free and underscore-joined (avi_yoshev_ohel_u_mikneh, huchal_likro_be_shem_YHWH).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (retro, oral-first era; manifest logic/oral_audit/manifests/gen_13_cain_line_seth_claims.json — 8 VERIFIED, 0 FAILED, 0 UNCHECKABLE; record logic/oral_audit/AUDIT_gen_13_2026-08-08.md). CROWNS (chain-attested, DB-verified): (1) G13-01/02 one man, two spellings, one verse: מחויאל (&quot;Mechuyael,&quot; vav before the yod) begets as ומחייאל (&quot;and Mechiyael,&quot; double yod) inside 4:18 — one of the Masorah&#x27;s (received tradition&#x27;s) SEVEN CHANGING PAIRS of respelled names: THIS UNIT&#x27;S OWN held letter-fact (&quot;held, not fixed&quot; in step C), now chain-attested, both spellings locked. (2) G13-03 וצלה גם הוא (&quot;and Tzillah, she also&quot;) — הוא written with the masculine vav skeleton, pointed הִוא with hiriq to be READ feminine: the Torah&#x27;s standing ktiv/qere (written-form vs read-form) pronoun, confirmed here by manuscripts and the early print (Minchat Shai). (3) G13-04/05 the two &quot;also&quot;s: Tzillah&#x27;s גם (4:22) SOFT, Seth&#x27;s גם (4:26) with dagesh (doubling dot) — a pointed minimal pair bracketing the pivot from Cain&#x27;s line to the replacement seed. (4) G13-06/07 Tubal-Cain East and West: the Easterners write תובל קין (&quot;Tubal-Cain&quot;) as ONE word, the Westerners — &quot;and we hold like the Westerners&quot; (Minchat Shai, Ramah) — as TWO: SNAPSHOT holds two tokens at both occurrences; and the Ramah&#x27;s spelling rule lands exactly — תובל plene with vav has NO Torah tokens beyond these two (Japheth&#x27;s תבל — &quot;Tubal&quot; — at 10:2, defective). (5) G13-08 האזנה (&quot;give ear,&quot; the sword-song&#x27;s summons) — the copies split on the zayin — segol (the short e-vowel) or tsere (the long e-vowel); SNAPSHOT reads TSERE with quiescent alef: the Chizkuni/Mikhlol camp. READINGS (named-only, unclaimed): Tubal-Cain &quot;refined Cain&#x27;s craft&quot; — weapons for murderers, the spice-word wordplay (Bereshit Rabbah 23:3 via Rashi — beside this unit&#x27;s broken-office-formula observation); Naamah = Noah&#x27;s wife (Bereshit Rabbah 23:3); the blind-Lamech tale AND the Midrash&#x27;s own dissent (&quot;Bereshit Rabbah does not mention that Lamech slew anyone&quot;) — both filed (Rashi 4:23-24); the wives&#x27; separation and Adam&#x27;s 130 years (Rashi 4:25); אז הוחל (&quot;then it was begun,&quot; 4:26) read as PROFANATION — idols called by the Name (Bereshit Rabbah 23:7 via Rashi) — the reading CONTESTS this unit&#x27;s plain-sense worship-debut note: filed against it, unmerged; the Enoch/Metatron gematria (letter-arithmetic) pair (Kitzur Baal HaTurim 4:18 — gematria class, no verifier check type; named-only); Yaval&#x27;s tents as idolatry-shrines (Bereshit Rabbah 23:3 via Rashi 4:20). DISCREPANCIES: none. INSTRUMENT GAPS: none new.</div>
+<div class="meta">confidence: structure tested; operator readings tested-per-TIR; intent hypothesis</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>The genealogy bridge (4:17-26): from the wanderer&#x27;s city to the calling on the Name — 5:1 opens a NEW toledot (&quot;generations&quot;) header (the book of Adam&#x27;s line), the next block. Inside: seven begettings in Cain&#x27;s line (Adam to Lamech — the seventh speaks in sevens), the first city (built by the man sentenced to wander), the first polygamy, the three crafts founders and a sister, the sword-song with its seventy-seven, and the pivot to Seth: the replacement seed, Enosh, and the huchal close. The unit ends where the corpus&#x27;s worship vocabulary begins.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Hebrew source + trees</td><td>All 10 verses from DB tree_json (rule set v3, unique, pure binary; ascii rendered 2026-08-01). Tree facts: 4:17 [the knowing and Enoch&#x27;s birth | the city built and named for the son]; 4:18 [born-to-Enoch Irad; Irad begot Mechuyael | Mechiyael begot Metushael; Metushael begot Lamech] — the chain in perfect binary pairs; 4:20 and 4:21 are SHAPE-IDENTICAL trees (the office formula gets a repeated template, avi [&quot;father-of&quot;] isolated on its own accent in both); 4:22 [Tuval-Kayin and his craft | the sister Naamah — alone on the verse-end]; 4:23 [the summons: hear my voice / give ear to my speech | the boast: a man for my wound / a boy for my bruise] — the four cola of the sword-song carved by prose accents bending around verse; 4:24 [sevenfold for Cain | Lamech: seventy-seven]; 4:25 [the birth and naming of Shet | the reason-speech: God has SET another seed in place of Abel, for Cain killed him]; 4:26 [to Seth a son: Enosh | THEN was begun the calling on the Name of YHWH].</td><td>tested</td></tr>
+<tr><td><b>C</b></td><td>Segment structure</td><td>Verb morphology (#IMPOSED OSHB, DB-verified 2026-08-01): 4:17 the know-formula repeated from 4:1 (the exile&#x27;s wife READ with no source [OPEN: who?]); BONEH — a PARTICIPLE (TIR-031): &quot;he was BUILDING a city&quot; — the standing-state form: the letter never finishes the city; ir (&quot;city&quot;) corpus tokens 1 AND 2 in this verse (next: Nineveh 10:11-12, Babel 11:4-5); the naming verb spent on the CITY, not the child — ke-shem BENO, for the son. 4:18 one PASSIVE birth (va-yivaled, &quot;was born to&quot; — agentless, TIR-032: no mother named in the whole chain) then three ACTIVE begettings (yalad x3); Mechuyael spelled TWO WAYS INSIDE THE ONE VERSE (mem-chet-VAV-yod... then mem-chet-YOD-YOD... — letter fact, held, not fixed). 4:19 va-yiqach... SHTEI NASHIM — the first polygamy; nashim (&quot;women/wives&quot;) is the plural&#x27;s FIRST TOKEN (next: 6:2, the taking by the sons-of-God); the wives&#x27; names REPORTED (nominal shem... shem...), not conferred — no naming verb. 4:20-22 the crafts: AVI (&quot;father-of&quot;) as office formula twice (the father-word&#x27;s tokens 2-3, after 2:24), then BROKEN for Tuval-Kayin (lotesh, &quot;hammerer&quot; — direct participle, no avi; Onkelos levels it — dual-track); first tokens: ohel (&quot;tent&quot;), kinor (&quot;harp&quot;; token 2 = 31:27 Laban), ugav (&quot;pipe&quot; — the ONLY Torah token), nechoshet (&quot;bronze&quot;; token 2 = Exod 25:3, the TABERNACLE donations), barzel (&quot;iron&quot;; token 2 = Lev 26:19, skies-like-iron — a curse text), achot (&quot;sister&quot; — Naamah, role unstated [OPEN]); mikneh (&quot;herds&quot;) carries the qanah root of Kayin&#x27;s own name-etymology (4:1 kaniti -&gt; 4:20 mikneh: the acquisition root passes from name to office); 4:21 Yuval enters by NAME ONLY — no birth verb; 4:22 gam-HIV: the he-written/she-read spelling&#x27;s third token (3:12, 3:20, 4:22). 4:23 the sword-song: SHEMAAN / HAAZENAH — the corpus&#x27;s FIRST HUMAN-ISSUED IMPERATIVES (every prior imperative is divine blessing: 1:22 x3, 1:28 x5) and the first feminine-plural ones (TIR-027); qoli (&quot;my voice&quot;) — the voice-thread&#x27;s fifth station (3:8 God&#x27;s voice walking; 3:10 hiding from it; 3:17 listened to the wife&#x27;s voice; 4:10 the bloods&#x27; voice; now a human DEMANDS hearing); ish HARAGTI — the kill-verb INSIDE A QUOTE (harag token 4; tokens 1-5 all in Gen 4: the chapter owns the verb&#x27;s debut): boast, memory, or hypothetical — the perfect cannot say [OPEN]; the machine logs the SPEECH as fact and NO kill event: no second death is narrated. 4:24 the QUOTE-DIFF: ki SHIVATAYIM YUKAM Kayin — 4:15&#x27;s decree words verbatim (shivatayim exists in the Torah EXACTLY TWICE: the decree and this quotation — zero noise floor) — then ve-LEMEKH shivim ve-shivah: seventy-seven; the hophal yukam kept (TIR-032). 4:25 the know-formula returns to Eden&#x27;s pair (od, &quot;again&quot;); the mother NAMES (va-tiqra) with the corpus&#x27;s second birth-etymology: ki SHAT li ELOHIM zera acher tachat Hevel — the SET-verb (shit): Gen 1-10 holds exactly two tokens, 3:15 ashit (&quot;I will SET enmity&quot;) and this one; zera (&quot;seed&quot;) is 3:15&#x27;s contested word, now &quot;ANOTHER seed&quot;; TACHAT — replacement semantics; ELOHIM — switched from her 4:1 YHWH (Onkelos erases the switch — dual-track); ki HARAGO KAYIN — the murder named in a human mouth: the corpus&#x27;s first retrospective testimony of it. 4:26 yulad (passive again — the bracket: the chain opened and the Seth line closes on agentless births, TIR-032); the FATHER names (va-yiqra — the naming alternates mother/father); ENOSH — the frail third word for &quot;man&quot; (adam, ish, now enosh); AZ (&quot;then&quot;) — the time-adverb&#x27;s own FIRST TOKEN; HUCHAL — hophal agentless (TIR-032: WHO began is unstated [OPEN]) and a LEXICAL FORK (lemma 2490: &quot;begin&quot; AND &quot;profane&quot; share the entry — the chain&#x27;s famous split; Onkelos votes ceased/profaned; the letter stays open); likro BE-SHEM YHWH — the formula&#x27;s next tokens are 12:8 and 26:25, both WITH altars: worship&#x27;s phrase debuts agentless, then becomes patriarchal practice.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Predicates &amp; outcomes</td><td>The genealogy is the corpus&#x27;s first CIVILIZATION dossier: the condemned line builds everything (city, herds-and-tents, music, metallurgy) while the machine&#x27;s registers stay almost silent — one WORLD install (the city: the first HUMAN-built entry, still a participle), three profession facts, zero tests, zero handlers. Its one legal event is ILLEGITIMATE: a human quoting the sevenfold decree and inflating it (seventy-seven, issuer swapped, target swapped, NO divine ratification) — the machine holds it as a spec-delta FLAG and refuses the boast the power to install a handler. Against that: the Seth close — a replacement seed named with 3:15&#x27;s SET-verb, a second agentless birth, and worship&#x27;s formula debuting with no subject: the unit ends with a demand still open (Lamech&#x27;s hear-command — no compliance narrated) and a fork the letter refuses to close.</td><td>tested</td></tr>
+<tr><td><b>E</b></td><td>Logic format choice</td><td>Operator lines; NO ledger row. The city: REGISTRY_INSTALL (WORLD += {ir}) at 4:17 — the first human-built install — then NAME name(ir) := Chanokh (the naming verb is spent on the city; the machine&#x27;s naming registry takes a PLACE for the first time). The begetting chain: EVENTs (one passive, three active — TIR-032 on the passive). The polygamy and the wives&#x27; names: FACTS (reported nominal, no naming verb — no NAME op: letter-honest). The crafts: PRECONDITION_STATE facts per gen_12&#x27;s profession precedent (hayah — narrated state, not appointment; no ASSIGN); Yuval&#x27;s birthlessness held in prose. The sword-song: DECLARE(lemekh, LET(shema(neshei_lemekh, qol_lemekh))) — TIR-027&#x27;s first HUMAN issuer; pushed and NEVER popped (no compliance narrated): the queue&#x27;s debt grows to FOUR (gen_08&#x27;s two, gen_12&#x27;s timshol, now a human demand) — the first human entry in the demand queue; the boast content a testimony FACT (gen_10 protocol), NO kill event logged. 4:24: NOTE_SPEC_DELTA quoting gen_12&#x27;s frozen 4:15 text — quote-diff device #2, the first HUMAN-mouth mutation (multiplier x11, issuer YHWH-&gt;lemekh, target kayin-&gt;lemekh, mood decree-&gt;boast, ratification NONE) — NOT a HANDLER: the machine refuses installation authority to a boast. 4:25-26: NAME x2 (Shet by the mother, Enosh by the father) with named_before_any_presence flags (persons are never WORLD installs — gen_12&#x27;s precedent); huchal as a standing FACT with the fork [OPEN]. Interpreter extensions: NONE.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Bilingual logic objects</td><td>Every operator line carries he + he_translit + en. Machine tokens apostrophe-free: avi_yoshev_ohel_u_mikneh, lotesh_kol_choresh_nechoshet_u_varzel, shivim_ve_shivah, huchal_likro_be_shem_YHWH, shat_li_elohim_zera_acher.</td><td>established</td></tr>
+<tr><td><b>G</b></td><td>Oral (named only) + Tier-A translation check</td><td>Named but NOT read (cache: zero for Gen 4:17-26 — seventh tripwire; gen_13 Tier-A queue): Bereshit Rabbah 23 (the two wives split procreation/pleasure; the blind-Lamech legend behind the sword-song; Naamah as Noah&#x27;s wife; 23:6-7 the PROFANED reading of Enosh&#x27;s verse — idolatry&#x27;s start); Tanchuma Bereshit 11; Pirkei DeRabbi Eliezer 22; Rambam Hilkhot Avodah Zarah 1:1 (idolatry&#x27;s history codified as law FROM the huchal fork — the span&#x27;s law-from-lexical-fork tripwire); Rashi at 4:19-26 (observation tier). Tier-A Onkelos (10 fetches, FETCHLOG 2026-08-01): 4:23 the boast NEGATED — &quot;I have NOT killed a man that I should bear sins (savil chovin — the burden vocabulary) for him, NOR wounded a youth that my seed be destroyed&quot;: confession -&gt; protest of innocence, the sharpest inversion in our spans (flagged); 4:24 &quot;seven GENERATIONS were suspended for Cain — shall not Lamech his son [get] seventy-seven?&quot; — vengeance become mercy arithmetic, an a-fortiori plea (consistent with Onkelos 4:15&#x27;s generation-clock); 4:26 the fork VOTED: &quot;in his days the sons of man CEASED/PROFANED (chalu) from praying in the Name&quot; — subject supplied, calling upgraded to prayer, the dark sense chosen (flagged; the letter stays open); 4:20-22 avi -&gt; RABBHON (&quot;guild-master-of&quot;) — and the master-title GRANTED to Tuval-Kayin where the letter withholds it (the broken formula leveled); 4:20 tents -&gt; mashkenin (the Tabernacle root for a herdsman&#x27;s dwelling); 4:25 the divine-name switch ERASED (Elohim -&gt; &quot;the LORD&quot;) and shat flattened to &quot;gave&quot; — the 3:15 root-echo deleted in translation; 4:22 the she-spelling leveled to plain &quot;she too.&quot;</td><td>tested</td></tr>
+<tr><td><b>H</b></td><td>Scenarios</td><td>S1 the city: WORLD = {ir} (the first human install), the registry takes a place-name; the exile pair flagged as read. S2 the chain: registers unchanged (events on the trace). S3 the polygamy facts. S4 the crafts facts standing (after 4:22). S5 the sword-song: LET(shema...) pushed and OPEN — the first human demand in the queue. S6 the quote-diff: machine flags spec-delta; the demand still open. S7 Seth: the etymology fact; Eden&#x27;s pair flagged as read. S8 the close: WORLD still only {ir}; huchal fact holds; the human demand STILL OPEN at unit end; LEDGER empty. S9_negative: LET? contract (the machine&#x27;s ? is guarded); S10_negative: flag-never-block.</td><td>tested</td></tr>
+<tr><td><b>I</b></td><td>English leakage review</td><td>Operators derive from morph codes (participles boneh/yoshev/tofes/lotesh TIR-031, imperatives TIR-027, agentless passives va-yivaled/yuqam/yulad/huchal TIR-032, et TIR-014) and DB censuses run BEFORE drafting (ir&#x27;s first tokens; shivatayim&#x27;s two-token Torah census; harag&#x27;s five-token chapter; shit&#x27;s two tokens; the imperative census; nashim&#x27;s plural debut; the crafts first-token cluster; az; achot; the qanah root pass; the two-line lemma sharing; Mechuyael&#x27;s double spelling; the third he-written/she-read). NOT supplied: the wife&#x27;s origin, the city&#x27;s completion, a second death behind Lamech&#x27;s perfect, a verdict on polygamy, Naamah&#x27;s role, the huchal fork&#x27;s resolution, or a divine ratification of seventy-seven — every one held [OPEN] or flagged; the Onkelos inversions stay dual-track.</td><td>established</td></tr>
+<tr><td><b>J</b></td><td>Pre-flight + freeze gate</td><td>Pre-flight 2026-08-01: the draft runs against the UNMODIFIED repo interpreter — zero injected prototypes. AT FREEZE (owner order only): flip status to frozen, re-verify, regression-run the frozen units. Narrative (ASK FIRST) and triage remain owner-gated. Changes require a new derive pass, not silent edits.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_4_17 · Gen.4.17 · <span class='expr'>FIRST_CITY_BUILT_NAMED</span></h3>
+<p><span class="he">וַיֵּדַע קַיִן אֶת־אִשְׁתּוֹ וַתַּהַר וַתֵּלֶד אֶת־חֲנוֹךְ וַיְהִי בֹּנֶה עִיר וַיִּקְרָא שֵׁם הָעִיר כְּשֵׁם בְּנוֹ חֲנוֹךְ</span> · <i>va-yeda Kayin et-ishto va-tahar va-teled et-Chanokh va-yehi boneh ir va-yiqra shem ha-ir ke-shem beno Chanokh</i> · [EN-AID/JPS] And Cain knew his wife; and she conceived, and bore Enoch; and he builded a city, and called the name of the city after the name of his son Enoch.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וידע קין את אשתו ותהר ותלד את חנוך</span> · <i>va-yeda Kayin et-ishto va-tahar va-teled et-Chanokh</i> · the knowing, the conception, Enoch born (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויהי בנה עיר ויקרא שם העיר כשם בנו חנוך</span> · <i>va-yehi boneh ir va-yiqra shem ha-ir ke-shem beno Chanokh</i> · he was building a city — named for his son Enoch</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">bear(e1) ∧ Agent(e1, eshet_kayin) ∧ Theme(e1, chanokh)</span><br><span class="gloss">= bear(e1) ∧ Agent(e1, wife-of-Cain) ∧ Theme(e1, Enoch)</span><br>The 4:1 formula re-run in exile: knew / conceived / bore. The WIFE HAS NO SOURCE — no birth, no building, no naming precedes her [OPEN: the letter&#x27;s most famous silent presence; the chain&#x27;s dossiers queue; nothing invented]. The child: Chanokh — a name the letter will use again in the OTHER line (5:18: same lemma) for the man who walks with God.
+</td><td><span class="he">וַיֵּדַע קַיִן אֶת־אִשְׁתּוֹ וַתַּהַר וַתֵּלֶד אֶת־חֲנוֹךְ</span> · <i>va-yeda Kayin et-ishto va-tahar va-teled et-Chanokh</i><br><span class="gloss">= he-knew Kayin obj-marker·et-his-wife she-conceived she-bore obj-marker·et-Chanokh</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>REGISTRY_INSTALL</td><td><span class="expr">WORLD += {ir}</span><br><span class="gloss">= WORLD += {city}</span><br>THE FIRST HUMAN WORLD INSTALL — every created entity so far was made by God; the corpus&#x27;s first human-built thing is a CITY, built by the man sentenced to WANDER (the letter&#x27;s structural irony: na va-nad -&gt; boneh ir). And the verb is a PARTICIPLE (TIR-031): &#x27;he WAS BUILDING&#x27; — a standing state, not a completed act: the letter never finishes the city. ir&#x27;s corpus career from here: tokens 1-2 this verse; then Nineveh (10:11-12); then BABEL (11:4-5) — founder-under-curse, empire, tower.
+</td><td><span class="he">וַיְהִי בֹּנֶה עִיר</span> · <i>va-yehi boneh ir</i><br><span class="gloss">= he-was boneh city</span></td><td class='cite'>TIR-031</td><td>tested</td></tr>
+<tr class="opline"><td>NAME</td><td><span class="expr">name(ir) := Chanokh</span><br><span class="gloss">= name(city) := Chanokh</span><br>The naming verb (va-yiqra — day 1&#x27;s instrument, the registry&#x27;s formula) is spent on the CITY, not the child: the boy&#x27;s own naming is never narrated. The registry takes a PLACE for the first time — and the name points AWAY from the builder: ke-shem BENO, &#x27;after the name of his SON.&#x27; The wanderer&#x27;s monument bears the next generation&#x27;s name.
+</td><td><span class="he">וַיִּקְרָא שֵׁם הָעִיר כְּשֵׁם בְּנוֹ חֲנוֹךְ</span> · <i>va-yiqra shem ha-ir ke-shem beno Chanokh</i><br><span class="gloss">= he-called name-of city name-of beno Chanokh</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">kayin, eshet_kayin are READ without prior install (the exile of gen_12; a wife with no source)</span><br><span class="gloss">= Cain, wife-of-Cain are READ without prior install (the exile fowl gen-12; a wife with no source)</span><br>flag, not fix</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">One verse: a birth, the first human-built thing (unfinished by grammar), and a naming that skips a person for a place. The exile&#x27;s first act in Wandering is to stop wandering.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_4_18 · Gen.4.18 · <span class='expr'>BEGETTING_CHAIN_FOUR_LINKS</span></h3>
+<p><span class="he">וַיִּוָּלֵד לַחֲנוֹךְ אֶת־עִירָד וְעִירָד יָלַד אֶת־מְחוּיָאֵל וּמְחִיּיָאֵל יָלַד אֶת־מְתוּשָׁאֵל וּמְתוּשָׁאֵל יָלַד אֶת־לָמֶךְ</span> · <i>va-yivaled la-Chanokh et-Irad ve-Irad yalad et-Mechuyael u-Mechiyael yalad et-Metushael u-Metushael yalad et-Lamekh</i> · [EN-AID/JPS] And unto Enoch was born Irad; and Irad begot Mehujael; and Mehujael begot Methushael; and Methushael begot Lamech.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויולד לחנוך את עירד ועירד ילד את מחויאל</span> · <i>va-yivaled la-Chanokh et-Irad ve-Irad yalad et-Mechuyael</i> · born to Enoch: Irad; Irad begot Mechuyael (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ומחייאל ילד את מתושאל ומתושאל ילד את למך</span> · <i>u-Mechiyael yalad et-Metushael u-Metushael yalad et-Lamekh</i> · Mechiyael begot Metushael; Metushael begot Lamech</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">born(e2) ∧ Theme(e2, irad) ∧ Goal(e2, chanokh)</span><br><span class="gloss">= born(e2) ∧ Theme(e2, Irad) ∧ Goal(e2, Enoch)</span><br>The chain opens PASSIVE and agentless (TIR-032): &#x27;was born TO Enoch&#x27; — no mother is named in the entire chain (the wives surface only when Lamech takes two). The fastest genealogical verse yet: four generations in sixteen words.
+</td><td><span class="he">וַיִּוָּלֵד לַחֲנוֹךְ אֶת־עִירָד</span> · <i>va-yivaled la-Chanokh et-Irad</i><br><span class="gloss">= was-born to-Chanokh obj-marker·et-Irad</span></td><td class='cite'>TIR-032</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">beget(e3) ∧ Agent(e3, irad) ∧ Theme(e3, mechuyael)</span><br><span class="gloss">= beget(e3) ∧ Agent(e3, Irad) ∧ Theme(e3, Mehujael)</span><br>Active link one — and the letter spells the son&#x27;s name TWO WAYS INSIDE THIS ONE VERSE: Mechuyael (with vav) at birth, Mechiyael (with double yod) as father, six words later [letter fact, DB-verified; held, not fixed — nothing invented to explain it].
+</td><td><span class="he">וְעִירָד יָלַד אֶת־מְחוּיָאֵל</span> · <i>ve-Irad yalad et-Mechuyael</i><br><span class="gloss">= and-Irad begot obj-marker·et-Mechuyael</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">beget(e4) ∧ Agent(e4, mechuyael) ∧ Theme(e4, metushael)</span><br><span class="gloss">= beget(e4) ∧ Agent(e4, Mehujael) ∧ Theme(e4, Methusael)</span><br>Active link two. The two lines will share this name-shape: Metushael (lemma 4967) here, Metushelach (lemma 4968 — ADJACENT dictionary entries) in Seth&#x27;s line — beside Chanokh = Chanokh and Lemekh = Lemekh (SAME lemmas) and Qayin/Qenan, Irad/Yered: two genealogies drawing on one name-pool [OPEN — the letter offers no comment].
+</td><td><span class="he">וּמְחִיּיָאֵל יָלַד אֶת־מְתוּשָׁאֵל</span> · <i>u-Mechiyael yalad et-Metushael</i><br><span class="gloss">= and-Mechiyael begot obj-marker·et-Metushael</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">beget(e5) ∧ Agent(e5, metushael) ∧ Theme(e5, lemekh)</span><br><span class="gloss">= beget(e5) ∧ Agent(e5, Methusael) ∧ Theme(e5, Lamech)</span><br>Active link three, arriving at LAMECH — the SEVENTH from Adam in this line (Adam, Kayin, Chanokh, Irad, Mechuyael, Metushael, Lemekh): the seventh man will speak in sevens (4:24). In the other line the seventh from Adam is the Chanokh who walks with God (5:24) — the same slot, the two lines&#x27; sharpest contrast.
+</td><td><span class="he">וּמְתוּשָׁאֵל יָלַד אֶת־לָמֶךְ</span> · <i>u-Metushael yalad et-Lamekh</i><br><span class="gloss">= and-Metushael begot obj-marker·et-Lamekh</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Sixteen words, four generations, one double-spelled name, no mothers, no ages, no deaths — the anti-chapter-5: Cain&#x27;s chain runs on bare verbs.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_4_19 · Gen.4.19 · <span class='expr'>FIRST_POLYGAMY</span></h3>
+<p><span class="he">וַיִּקַּח־לוֹ לֶמֶךְ שְׁתֵּי נָשִׁים שֵׁם הָאַחַת עָדָה וְשֵׁם הַשֵּׁנִית צִלָּה</span> · <i>va-yiqach-lo Lemekh shtei nashim shem ha-achat Adah ve-shem ha-shenit Tzilah</i> · [EN-AID/JPS] And Lamech took unto him two wives; the name of the one was Adah, and the name of the other Zillah.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויקח לו למך שתי נשים</span> · <i>va-yiqach-lo Lemekh shtei nashim</i> · Lamech took himself two wives (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">שם האחת עדה ושם השנית צלה</span> · <i>shem ha-achat Adah ve-shem ha-shenit Tzilah</i> · the names: the first Adah, the second Tzillah</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">take(e6) ∧ Agent(e6, lemekh) ∧ Theme(e6, shte_nashim)</span><br><span class="gloss">= take(e6) ∧ Agent(e6, Lamech) ∧ Theme(e6, two-of-wives)</span><br>THE FIRST POLYGAMY — and the first tokens of the PLURAL of &#x27;woman&#x27; (nashim: this verse, then Lamech&#x27;s own mouth x2 at 4:23, then 6:2 — the sons-of-God taking): the plural enters the corpus with the doubling of marriage. The taking-verb is 2:15&#x27;s and 3:6&#x27;s (laqach); 2:24&#x27;s one-flesh pattern (gen_09&#x27;s PATTERN install) stands UNREFERENCED beside it — the letter states NO evaluation [OPEN: the machine records the event; the tension is the chain&#x27;s to argue].
+</td><td><span class="he">וַיִּקַּח־לוֹ לֶמֶךְ שְׁתֵּי נָשִׁים</span> · <i>va-yiqach-lo Lemekh shtei nashim</i><br><span class="gloss">= and-he-took-not Lemekh shtei wives</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shte_nashim_le_lemekh, t0) ∧ HOLDS(shem_ha_achat_adah, t0) ∧ HOLDS(shem_ha_shenit_tzilah, t0)</span><br><span class="gloss">= HOLDS(two-of-wives-to-Lamech, t0) ∧ HOLDS(name-of-the-first-Adah, t0) ∧ HOLDS(name-of-the-second-Tzillah, t0)</span><br>The wives&#x27; names are REPORTED, not conferred: nominal clauses (shem... shem...), NO naming verb — so no NAME operator (letter-honest: the registry&#x27;s formula is va-yiqra, and it does not appear). Held as standing facts. These are the corpus&#x27;s first named living women after Chavah — and they are named to be commanded (4:23).
+</td><td><span class="he">שֵׁם הָאַחַת עָדָה וְשֵׁם הַשֵּׁנִית צִלָּה</span> · <i>shem ha-achat Adah ve-shem ha-shenit Tzilah</i><br><span class="gloss">= name-of first Adah name-of second Tzilah</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Marriage doubles in the seventh generation; the letter counts the wives (the-first, the-second) and says nothing else.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_4_20 · Gen.4.20 · <span class='expr'>OFFICE_TENT_AND_HERD</span></h3>
+<p><span class="he">וַתֵּלֶד עָדָה אֶת־יָבָל הוּא הָיָה אֲבִי יֹשֵׁב אֹהֶל וּמִקְנֶה</span> · <i>va-teled Adah et-Yaval hu hayah avi yoshev ohel u-mikneh</i> · [EN-AID/JPS] And Adah bore Jabal; he was the father of such as dwell in tents and have cattle.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ותלד עדה את יבל</span> · <i>va-teled Adah et-Yaval</i> · Adah bore Yaval (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">הוא היה אבי ישב אהל ומקנה</span> · <i>hu hayah avi yoshev ohel u-mikneh</i> · he was father of tent-dweller-and-herd</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">bear(e7) ∧ Agent(e7, adah) ∧ Theme(e7, yaval)</span><br><span class="gloss">= bear(e7) ∧ Agent(e7, Adah) ∧ Theme(e7, Yaval)</span><br>The crafts half-verses begin. Yaval — the first of the three founder-brothers.
+</td><td><span class="he">וַתֵּלֶד עָדָה אֶת־יָבָל</span> · <i>va-teled Adah et-Yaval</i><br><span class="gloss">= she-bore Adah obj-marker·et-Yaval</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(avi_yoshev_ohel_u_mikneh(yaval), t0)</span><br><span class="gloss">= HOLDS(father-of-dweller-of-tent-and-livestock(Yaval), t0)</span><br>THE OFFICE FORMULA: AVI (&#x27;father-of&#x27; — the father-word&#x27;s token 2, after 2:24) + a standing participle (yoshev, TIR-031): &#x27;father of tent-dweller and herds&#x27; — fatherhood extended past biology into FOUNDING: the corpus&#x27;s first craft-office. First tokens: OHEL (&#x27;tent&#x27; — the dwelling the Tabernacle chapters will inherit) and MIKNEH (&#x27;herds&#x27; — the qanah root of KAYIN&#x27;S OWN NAME-ETYMOLOGY: 4:1 kaniti -&gt; 4:20 mikneh — the acquisition root passes from the firstborn&#x27;s name into the first office). Narrated state (hayah), not appointment — a FACT, not an ASSIGN (gen_12&#x27;s profession precedent). Onkelos: avi -&gt; RABBHON (&#x27;guild-master of&#x27;), tents -&gt; mashkenin — the Tabernacle root for a herdsman&#x27;s dwelling (dual-track).
+</td><td><span class="he">הוּא הָיָה אֲבִי יֹשֵׁב אֹהֶל וּמִקְנֶה</span> · <i>hu hayah avi yoshev ohel u-mikneh</i><br><span class="gloss">= he was father-of dweller-of tent livestock</span></td><td class='cite'>TIR-031</td><td>tested</td></tr>
+</table>
+<div class="meta">Civilization&#x27;s registry opens: the man of tents and herds — Abel&#x27;s trade, refounded as an office in Cain&#x27;s line.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_4_21 · Gen.4.21 · <span class='expr'>OFFICE_HARP_AND_PIPE</span></h3>
+<p><span class="he">וְשֵׁם אָחִיו יוּבָל הוּא הָיָה אֲבִי כָּל־תֹּפֵשׂ כִּנּוֹר וְעוּגָב</span> · <i>ve-shem achiv Yuval hu hayah avi kol-tofes kinor ve-ugav</i> · [EN-AID/JPS] And his brother&#x27;s name was Jubal; he was the father of all such as handle the harp and pipe.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ושם אחיו יובל</span> · <i>ve-shem achiv Yuval</i> · his brother&#x27;s name: Yuval (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">הוא היה אבי כל תפש כנור ועוגב</span> · <i>hu hayah avi kol-tofes kinor ve-ugav</i> · father of all who handle harp and pipe</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shem_achiv_yuval, t0) ∧ HOLDS(avi_kol_tofes_kinor_ve_ugav(yuval), t0)</span><br><span class="gloss">= HOLDS(name-of-his-brother-Yuval, t0) ∧ HOLDS(father-of-all-handler-of-harp-and-pipe(Yuval), t0)</span><br>Yuval enters BY NAME ONLY — no birth verb anywhere (the letter&#x27;s economy: &#x27;and his brother&#x27;s name was...&#x27;). The office formula repeats EXACTLY — the 4:20 and 4:21 trees are SHAPE-IDENTICAL (DB tree fact: the accents isolate avi on its own branch in both — the formula has become a template). The office: ALL who handle (tofes, participle TIR-031) KINOR (&#x27;harp&#x27; — first token; token 2 is Laban&#x27;s send-off music, 31:27) and UGAV (&#x27;pipe&#x27; — the ONLY token in the whole Torah: an instrument the law never sees again). MUSIC is founded in the condemned line, brother to the tent.
+</td><td><span class="he">וְשֵׁם אָחִיו יוּבָל הוּא הָיָה אֲבִי כָּל־תֹּפֵשׂ כִּנּוֹר וְעוּגָב</span> · <i>ve-shem achiv Yuval hu hayah avi kol-tofes kinor ve-ugav</i><br><span class="gloss">= name-of his-brother Yuval he was father-of all-handler-of harp pipe</span></td><td class='cite'>TIR-031</td><td>tested</td></tr>
+</table>
+<div class="meta">The second office: music. The tree repeats the first office&#x27;s shape exactly — the letter is building a registry by template.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_4_22 · Gen.4.22 · <span class='expr'>OFFICE_BRONZE_IRON_SISTER</span></h3>
+<p><span class="he">וְצִלָּה גַם־הִוא יָלְדָה אֶת־תּוּבַל קַיִן לֹטֵשׁ כָּל־חֹרֵשׁ נְחֹשֶׁת וּבַרְזֶל וַאֲחוֹת תּוּבַל־קַיִן נַעֲמָה</span> · <i>ve-Tzilah gam-hi yaldah et-Tuval-Kayin lotesh kol-choresh nechoshet u-varzel va-achot Tuval-Kayin Naamah</i> · [EN-AID/JPS] And Zillah, she also bore Tubal-cain, the forger of every cutting instrument of brass and iron; and the sister of Tubal-cain was Naamah.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וצלה גם הוא ילדה את תובל קין לטש כל חרש נחשת וברזל</span> · <i>ve-Tzilah gam-hi yaldah et-Tuval-Kayin lotesh kol-choresh nechoshet u-varzel</i> · Tzillah also bore Tuval-Kayin, hammerer of bronze-and-iron craft (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ואחות תובל קין נעמה</span> · <i>va-achot Tuval-Kayin Naamah</i> · and the sister of Tuval-Kayin: Naamah</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">bear(e8) ∧ Agent(e8, tzilah) ∧ Theme(e8, tuval_kayin)</span><br><span class="gloss">= bear(e8) ∧ Agent(e8, Tzillah) ∧ Theme(e8, Tuval-Cain)</span><br>GAM-HI (&#x27;she ALSO&#x27;) — the also-thread&#x27;s second station (4:4 Abel ALSO brought; here; 4:26 Seth ALSO fathered) — written with the he-written/she-read spelling (its third token in our spans: 3:12, 3:20, 4:22 — letter fact, held). The child carries the ancestor&#x27;s name INSIDE his own: Tuval-KAYIN — the only compound name in either line.
+</td><td><span class="he">וְצִלָּה גַם־הִוא יָלְדָה אֶת־תּוּבַל קַיִן</span> · <i>ve-Tzilah gam-hi yaldah et-Tuval-Kayin</i><br><span class="gloss">= and-Tzilah also-hi yaldah obj-marker·et-Tuval-Kayin</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lotesh_kol_choresh_nechoshet_u_varzel(tuval_kayin), t0) ∧ HOLDS(achot_tuval_kayin_naamah, t0)</span><br><span class="gloss">= HOLDS(hammerer-of-all-craftsman-of-bronze-and-iron(Tuval-Cain), t0) ∧ HOLDS(sister-of-Tuval-Cain-Naamah, t0)</span><br>THE FORMULA BREAKS: no avi — Tuval-Kayin is LOTESH (&#x27;hammerer&#x27;, direct participle TIR-031) of every choresh (&#x27;craftsman&#x27;) of NECHOSHET and BARZEL: bronze and iron, both first tokens — bronze&#x27;s token 2 is the TABERNACLE donation list (Exod 25:3); iron&#x27;s token 2 is skies-like-iron (Lev 26:19, a curse text). The smith gets no father-title (Onkelos GRANTS him the guild-master title anyway — the asymmetry leveled in translation; dual-track, flagged in the edition). And the sister: ACHOT&#x27;s first corpus token — NAAMAH, with NO role, trade, or marriage stated [OPEN: the only woman in either line mentioned without function; the chain marries her to Noah — named-only].
+</td><td><span class="he">לֹטֵשׁ כָּל־חֹרֵשׁ נְחֹשֶׁת וּבַרְזֶל וַאֲחוֹת תּוּבַל־קַיִן נַעֲמָה</span> · <i>lotesh kol-choresh nechoshet u-varzel va-achot Tuval-Kayin Naamah</i><br><span class="gloss">= hammerer-of all-craftsman-of bronze iron sister-of Tuval-Kayin Naamah</span></td><td class='cite'>TIR-031</td><td>tested</td></tr>
+</table>
+<div class="meta">The third office arrives without the title, and a sister arrives without a sentence. Metallurgy and an open question close the crafts registry.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_4_23 · Gen.4.23 · <span class='expr'>SWORD_SONG_FIRST_HUMAN_IMPERATIVES</span></h3>
+<p><span class="he">וַיֹּאמֶר לֶמֶךְ לְנָשָׁיו עָדָה וְצִלָּה שְׁמַעַן קוֹלִי נְשֵׁי לֶמֶךְ הַאְזֵנָּה אִמְרָתִי כִּי אִישׁ הָרַגְתִּי לְפִצְעִי וְיֶלֶד לְחַבֻּרָתִי</span> · <i>va-yomer Lemekh le-nashav Adah ve-Tzilah shemaan qoli neshei Lemekh haazenah imrati ki ish haragti le-fitzi ve-yeled le-chaburati</i> · [EN-AID/JPS] And Lamech said unto his wives: Adah and Zillah, hear my voice; ye wives of Lamech, hearken unto my speech; for I have slain a man for wounding me, and a young man for bruising me.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר למך לנשיו עדה וצלה שמען קולי נשי למך האזנה אמרתי</span> · <i>va-yomer Lemekh le-nashav Adah ve-Tzilah shemaan qoli neshei Lemekh haazenah imrati</i> · the summons: hear my voice / give ear to my speech (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">כי איש הרגתי לפצעי וילד לחברתי</span> · <i>ki ish haragti le-fitzi ve-yeled le-chaburati</i> · the boast: a man for my wound, a boy for my bruise</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">say(e9) ∧ Agent(e9, lemekh) ∧ Theme(e9, neshei_lemekh)</span><br><span class="gloss">= say(e9) ∧ Agent(e9, Lamech) ∧ Theme(e9, wives-of-Lamech)</span><br>The genealogy breaks into VERSE: the tree carves four parallel cola (summons-pair, boast-pair) — prose accents bending around a poem. The first human poem since 2:23 — and where the man&#x27;s poem greeted a wife, this one is addressed AT two wives, by name.
+</td><td><span class="he">וַיֹּאמֶר לֶמֶךְ לְנָשָׁיו עָדָה וְצִלָּה</span> · <i>va-yomer Lemekh le-nashav Adah ve-Tzilah</i><br><span class="gloss">= he-said Lemekh to-nashav Adah and-Tzilah</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(lemekh, LET(shema(neshei_lemekh, qol_lemekh)))</span><br><span class="gloss">= DECLARE(Lamech, LET(hear(wives-of-Lamech, voice-Lamech)))</span><br>THE CORPUS&#x27;S FIRST HUMAN-ISSUED IMPERATIVES (TIR-027): every imperative before this verse is divine blessing (1:22, 1:28); the mood&#x27;s first human use is a man commanding his wives to hear a kill-boast — and they are the first feminine-plural commands (shemaan / haazenah, the hear/give-ear pair the prophets will inherit). The demanded object is QOLI (&#x27;MY voice&#x27;) — the voice-thread&#x27;s fifth station (3:8 God&#x27;s voice walking; 3:10 hiding from it; 3:17 &#x27;you listened to your wife&#x27;s voice&#x27;; 4:10 the bloods&#x27; voice crying; now a human demands the hearing). The machine pushes LET(shema(...)) — the FIRST HUMAN ENTRY IN THE DEMAND QUEUE (the issuer field carries lemekh; the queue is bookkeeping, not endorsement) — and NO compliance is ever narrated: the wives&#x27; answer does not exist. The demand stays OPEN at unit end — the queue&#x27;s debt grows to four, and this one is human.
+</td><td><span class="he">שְׁמַעַן קוֹלִי … הַאְזֵנָּה אִמְרָתִי</span> · <i>shemaan qoli … haazenah imrati</i><br><span class="gloss">= hear qoli haazenah imrati</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ish_haragti_le_fitzi_ve_yeled_le_chaburati, t0)</span><br><span class="gloss">= HOLDS(a-man-I-have-killed-to-fitzi-and-a-boy-to-my-wound, t0)</span><br>The boast held as TESTIMONY FACT (gen_10&#x27;s protocol) and NOT as a kill event: harag&#x27;s fourth token sits INSIDE A QUOTE — &#x27;a man I killed for my wound, a boy for my bruise&#x27; — and the perfect cannot say whether it is memory, boast, or bravado-hypothetical [OPEN: no second death is narrated anywhere; the machine logs the SPEECH and invents no corpse]. Onkelos NEGATES the whole line — &#x27;I have NOT killed a man...&#x27; (confession -&gt; protest of innocence: the sharpest translation inversion in our spans; dual-track, flagged). The wound-vocabulary (petza, chaburah) next appears in the law&#x27;s talion list (Exod 21:25 — wound for wound, bruise for bruise): the boast&#x27;s nouns are a lex-talionis pair, pre-inflated.
+</td><td><span class="he">כִּי אִישׁ הָרַגְתִּי לְפִצְעִי וְיֶלֶד לְחַבֻּרָתִי</span> · <i>ki ish haragti le-fitzi ve-yeled le-chaburati</i><br><span class="gloss">= for a-man I-have-killed to-fitzi a-boy my-wound</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The law&#x27;s mood arrives in a human mouth attached to a vengeance poem; the machine takes the command into the queue and the boast into testimony — and refuses both any more authority than that.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_4_24 · Gen.4.24 · <span class='expr'>QUOTE_DIFF_SEVENTY_SEVEN</span></h3>
+<p><span class="he">כִּי שִׁבְעָתַיִם יֻקַּם־קָיִן וְלֶמֶךְ שִׁבְעִים וְשִׁבְעָה</span> · <i>ki shivatayim yukam-Kayin ve-Lemekh shivim ve-shivah</i> · [EN-AID/JPS] If Cain shall be avenged sevenfold, truly Lamech seventy and sevenfold.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">כי שבעתים יקם קין</span> · <i>ki shivatayim yukam-Kayin</i> · if sevenfold avenged is Cain (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ולמך שבעים ושבעה</span> · <i>ve-Lemekh shivim ve-shivah</i> · then Lamech: seventy-seven</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>NOTE_SPEC_DELTA</td><td><span class="expr">flag: spec &#x27;kol-horeg Kayin shivatayim yukam — issuer YHWH, decree with mark (4:15, frozen gen_12)&#x27; delivered &#x27;ki shivatayim yukam-Kayin ve-Lemekh shivim ve-shivah — issuer lemekh, boast, multiplier x11, target self, ratification NONE (4:24)&#x27;</span><br><span class="gloss">= flag: spec &#x27;all-slayer Kayin sevenfold shall-be-avenged — issuer the-LORD, decree with mark (4:15, frozen gen-12)&#x27; delivered &#x27;for sevenfold shall-be-avenged-Kayin and-Lemekh seventy and-seven — issuer Lamech, boast, multiplier x11, target self, ratification NONE (4:24)&#x27;</span><br>QUOTE-DIFF DEVICE #2 — and the first HUMAN-MOUTH mutation of a divine ruling. The quoted core is VERBATIM (shivatayim yukam + Kayin — and SHIVATAYIM exists in the whole Torah exactly TWICE: the decree and this quotation: the census gives the device a zero noise floor). The deltas: multiplier 7 -&gt; 77 (x11); issuer YHWH -&gt; Lamech; beneficiary Kayin -&gt; the speaker himself; mood protective decree -&gt; vengeance boast; divine ratification — NONE [OPEN: heaven never countersigns; the letter reports the claim and moves to Seth]. The machine holds ONE spec-delta FLAG and installs NO handler: a boast cannot write to the rulebook (the 4:15 handler was DECLARED by the ruling&#x27;s issuer; this quotation has only an echo&#x27;s authority). Hophal yukam kept from the original (TIR-032). Onkelos re-reads the arithmetic as MERCY: &#x27;seven generations were suspended for Cain — shall not Lamech get seventy-seven?&#x27; — the boast turned a-fortiori plea (dual-track). The number&#x27;s afterlife: seventy-seven-fold forgiveness is the chain&#x27;s echo territory — named-only.
+</td><td><span class="he">כִּי שִׁבְעָתַיִם יֻקַּם־קָיִן וְלֶמֶךְ שִׁבְעִים וְשִׁבְעָה</span> · <i>ki shivatayim yukam-Kayin ve-Lemekh shivim ve-shivah</i><br><span class="gloss">= for sevenfold shall-be-avenged-Kayin and-Lemekh seventy seven</span></td><td class='cite'>TIR-032</td><td>tested</td></tr>
+</table>
+<div class="meta">The first divine decree a human ever quotes is quoted to inflate it. The machine&#x27;s rulebook does not move; the flag register does.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_4_25 · Gen.4.25 · <span class='expr'>SETH_REPLACEMENT_SEED</span></h3>
+<p><span class="he">וַיֵּדַע אָדָם עוֹד אֶת־אִשְׁתּוֹ וַתֵּלֶד בֵּן וַתִּקְרָא אֶת־שְׁמוֹ שֵׁת כִּי שָׁת־לִי אֱלֹהִים זֶרַע אַחֵר תַּחַת הֶבֶל כִּי הֲרָגוֹ קָיִן</span> · <i>va-yeda Adam od et-ishto va-teled ben va-tiqra et-shemo Shet ki shat-li Elohim zera acher tachat Hevel ki harago Kayin</i> · [EN-AID/JPS] And Adam knew his wife again; and she bore a son, and called his name Seth: &#x27;for God hath appointed me another seed instead of Abel; for Cain slew him.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וידע אדם עוד את אשתו ותלד בן ותקרא את שמו שת</span> · <i>va-yeda Adam od et-ishto va-teled ben va-tiqra et-shemo Shet</i> · the birth and the naming: Shet (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">כי שת לי אלהים זרע אחר תחת הבל כי הרגו קין</span> · <i>ki shat-li Elohim zera acher tachat Hevel ki harago Kayin</i> · the reason: God has SET another seed in place of Abel, for Cain killed him</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">bear(e10) ∧ Agent(e10, eshet_adam) ∧ Theme(e10, shet)</span><br><span class="gloss">= bear(e10) ∧ Agent(e10, wife-of-Adam) ∧ Theme(e10, Shet)</span><br>The camera returns to Eden&#x27;s pair: the 4:1 know-formula with OD (&#x27;again&#x27;) — the narrative resumes over the dead son&#x27;s gap. The wife goes unnamed here (ishto — Chavah&#x27;s name last appeared at 4:1).
+</td><td><span class="he">וַיֵּדַע אָדָם עוֹד אֶת־אִשְׁתּוֹ וַתֵּלֶד בֵּן</span> · <i>va-yeda Adam od et-ishto va-teled ben</i><br><span class="gloss">= he-knew Adam again obj-marker·et-his-wife she-bore son</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>NAME</td><td><span class="expr">name(shet) := Shet</span><br><span class="gloss">= name(Shet) := Shet</span><br>The MOTHER names again (va-tiqra — as at 4:1; the naming alternates: mother, mother, father-for-a-city, mother, and 4:26&#x27;s father): the corpus&#x27;s second birth-etymology, hers again.
+</td><td><span class="he">וַתִּקְרָא אֶת־שְׁמוֹ שֵׁת</span> · <i>va-tiqra et-shemo Shet</i><br><span class="gloss">= she-called obj-marker·et-shemo Shet</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shat_li_elohim_zera_acher_tachat_hevel, t0) ∧ HOLDS(harago_kayin_named_in_speech, t0)</span><br><span class="gloss">= HOLDS(has-SET-to-me-God-seed-another-place-of-Abel, t0) ∧ HOLDS(slew-him-Cain-named-in-speech, t0)</span><br>The etymology&#x27;s verb is 3:15&#x27;s: SHAT (&#x27;has SET&#x27;) — the shit root&#x27;s ONLY other token in Gen 1-10 is ASHIT (&#x27;I will SET&#x27; — the enmity, gen_11&#x27;s PATTERN): the root that set the war between seeds now sets a replacement seed — and ZERA (&#x27;seed&#x27;) is that verse&#x27;s own contested word, here &#x27;ANOTHER seed&#x27; with TACHAT (&#x27;in place of&#x27;): replacement semantics entering the corpus over Abel&#x27;s name. The divine name SWITCHES: her 4:1 speech said YHWH; this one says ELOHIM [letter fact; Onkelos erases the switch — &#x27;the LORD&#x27; both times — and flattens shat to &#x27;gave&#x27;: the root-echo deleted in translation; dual-track]. And the speech ends by NAMING THE MURDER — ki HARAGO KAYIN: the corpus&#x27;s first human retrospective testimony of the killing (harag token 5 — the verb&#x27;s whole five-token debut is this chapter), spoken by the mother of both.
+</td><td><span class="he">כִּי שָׁת־לִי אֱלֹהִים זֶרַע אַחֵר תַּחַת הֶבֶל כִּי הֲרָגוֹ קָיִן</span> · <i>ki shat-li Elohim zera acher tachat Hevel ki harago Kayin</i><br><span class="gloss">= for has-SET-to-me God seed another place-of Hevel for slew-him Kayin</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">adam, eshet_adam are READ without prior install (Eden&#x27;s pair, resumed)</span><br><span class="gloss">= Adam, wife-of-Adam are READ without prior install (Eden&#x27;s pair, resumed)</span><br>flag, not fix</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The second line begins with the first line&#x27;s vocabulary: a set-verb from the enmity verse, a seed from the same sentence, and a murder finally spoken aloud — by the mother.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_4_26 · Gen.4.26 · <span class='expr'>ENOSH_CALLING_ON_THE_NAME</span></h3>
+<p><span class="he">וּלְשֵׁת גַּם־הוּא יֻלַּד־בֵּן וַיִּקְרָא אֶת־שְׁמוֹ אֱנוֹשׁ אָז הוּחַל לִקְרֹא בְּשֵׁם יְהוָה</span> · <i>u-le-Shet gam-hu yulad-ben va-yiqra et-shemo Enosh az huchal likro be-shem YHWH</i> · [EN-AID/JPS] And to Seth, to him also there was born a son; and he called his name Enosh; then began men to call upon the name of the LORD.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ולשת גם הוא ילד בן ויקרא את שמו אנוש</span> · <i>u-le-Shet gam-hu yulad-ben va-yiqra et-shemo Enosh</i> · to Seth a son: Enosh (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">אז הוחל לקרא בשם יהוה</span> · <i>az huchal likro be-shem YHWH</i> · then was begun the calling on the Name of YHWH</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">born(e11) ∧ Theme(e11, enosh) ∧ Goal(e11, shet)</span><br><span class="gloss">= born(e11) ∧ Theme(e11, Enosh) ∧ Goal(e11, Shet)</span><br>GAM-HU (&#x27;he ALSO&#x27;) — the also-thread&#x27;s close (Abel also brought; Tzillah also bore; Seth also fathered) — and the birth is PASSIVE again (yulad, TIR-032): the unit&#x27;s births bracket agentless (4:18 opened the Cain chain passive; the Seth line opens passive too — no mother appears in either frame).
+</td><td><span class="he">וּלְשֵׁת גַּם־הוּא יֻלַּד־בֵּן</span> · <i>u-le-Shet gam-hu yulad-ben</i><br><span class="gloss">= and-to-Shet also-he was-born-son</span></td><td class='cite'>TIR-032</td><td>tested</td></tr>
+<tr class="opline"><td>NAME</td><td><span class="expr">name(enosh) := Enosh</span><br><span class="gloss">= name(Enosh) := Enosh</span><br>The FATHER names (va-yiqra, masculine — the alternation&#x27;s last turn), and the name is the corpus&#x27;s THIRD WORD FOR &#x27;MAN&#x27;: adam (the species, from the ground), ish (the male, from the rib-poem), now ENOSH — the frail one (the poets&#x27; word for man-as-mortal): the line that will carry the Name names its child &#x27;mortal.&#x27;
+</td><td><span class="he">וַיִּקְרָא אֶת־שְׁמוֹ אֱנוֹשׁ</span> · <i>va-yiqra et-shemo Enosh</i><br><span class="gloss">= he-called obj-marker·et-shemo Enosh</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(huchal_likro_be_shem_YHWH, t1)</span><br><span class="gloss">= HOLDS(was-begun-to-call-in-name-of-the-LORD, t1)</span><br>The close: AZ (&#x27;then&#x27; — the time-adverb&#x27;s own first token) HUCHAL — hophal, AGENTLESS (TIR-032: WHO began is unstated [OPEN]) — likro BE-SHEM YHWH (&#x27;to call on the NAME of YHWH&#x27;: the divine name returns after its Cain-line absence — zero tokens in 4:17-24 — exactly at the worship formula). HUCHAL IS A LEXICAL FORK [OPEN]: one dictionary entry (chalal) carries both &#x27;BEGIN&#x27; (its Genesis career: 6:1, 9:20, 10:8, 11:6) and &#x27;PROFANE/PIERCE&#x27; (49:4 and the law&#x27;s holiness registers) — &#x27;then calling was BEGUN&#x27; and &#x27;then calling was PROFANED&#x27; sit in the same letters: the chain&#x27;s most famous split, and the span&#x27;s law-from-lexical-fork tripwire (Onkelos VOTES: &#x27;the sons of man CEASED/ PROFANED from praying&#x27; — subject supplied, dark sense chosen; the law code builds idolatry&#x27;s history on that side; the plain-sense readers keep &#x27;begun&#x27;; the letter holds both and the machine holds the fact with the fork standing). The phrase&#x27;s next tokens: 12:8 and 26:25 — Abram and Isaac, both WITH altars: whatever huchal did, the patriarchs resume the formula as practice.
+</td><td><span class="he">אָז הוּחַל לִקְרֹא בְּשֵׁם יְהוָה</span> · <i>az huchal likro be-shem YHWH</i><br><span class="gloss">= then was-begun to-call name-of the-LORD</span></td><td class='cite'>TIR-032</td><td>tested</td></tr>
+</table>
+<div class="meta">The unit ends on the corpus&#x27;s deepest ambiguity: worship&#x27;s formula debuts with no subject and a verb that means begin and profane in the same letters. The machine ends holding a fact with a fork in it — and a human command still open in the queue.</div>
+</div>
+<h2>State machine</h2>
+<div class="meta">Cain&#x27;s line and Seth (standalone; registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER).</div>
+<table><tr><th>state</th><th>meaning</th></tr>
+<tr><td><b>S_boot</b></td><td>Before 4:17 — all registers empty (standalone unit)</td></tr>
+<tr><td><b>S_city</b></td><td>After 4:17 — the first human WORLD install (ir, still a participle); the registry holds a place-name; the exile pair flagged as read</td></tr>
+<tr><td><b>S_chain</b></td><td>After 4:18 — four generations on the trace (one passive, three active); Lamech reached — the seventh from Adam</td></tr>
+<tr><td><b>S_wives</b></td><td>After 4:19 — the first polygamy; the wives&#x27; names standing as reported facts (no naming verb)</td></tr>
+<tr><td><b>S_crafts</b></td><td>After 4:20-22 — the three craft offices standing (tent-and-herd, harp-and-pipe, bronze-and-iron: the third without the title); the sister held open</td></tr>
+<tr><td><b>S_song</b></td><td>After 4:23 — the first human imperatives: LET(shema...) pushed by a human issuer — OPEN; the boast held as testimony, no kill event</td></tr>
+<tr><td><b>S_boast</b></td><td>After 4:24 — quote-diff #2 flagged (sevenfold -&gt; seventy-seven, no ratification); the rulebook unmoved</td></tr>
+<tr><td><b>S_seth</b></td><td>After 4:25 — the replacement seed named with 3:15&#x27;s SET-verb; the murder named in human testimony; Eden&#x27;s pair flagged as read</td></tr>
+<tr><td><b>S_calling</b></td><td>After 4:26 — Enosh; the huchal fact standing with its fork [OPEN]; the human demand STILL OPEN; LEDGER empty</td></tr>
+</table><table><tr><th>from</th><th>to</th><th>via</th></tr>
+<tr><td>S_boot</td><td>S_city</td><td>STEP_Gn_4_17</td></tr>
+<tr><td>S_city</td><td>S_chain</td><td>STEP_Gn_4_18</td></tr>
+<tr><td>S_chain</td><td>S_wives</td><td>STEP_Gn_4_19</td></tr>
+<tr><td>S_wives</td><td>S_crafts</td><td>STEP_Gn_4_20</td></tr>
+<tr><td>S_crafts</td><td>S_crafts</td><td>STEP_Gn_4_21</td></tr>
+<tr><td>S_crafts</td><td>S_crafts</td><td>STEP_Gn_4_22</td></tr>
+<tr><td>S_crafts</td><td>S_song</td><td>STEP_Gn_4_23</td></tr>
+<tr><td>S_song</td><td>S_boast</td><td>STEP_Gn_4_24</td></tr>
+<tr><td>S_boast</td><td>S_seth</td><td>STEP_Gn_4_25</td></tr>
+<tr><td>S_seth</td><td>S_calling</td><td>STEP_Gn_4_26</td></tr>
+</table>
+<div class="note"><b>AFTER_S_calling</b> — WORLD: ONE install — ir (the city: the corpus&#x27;s FIRST HUMAN-BUILT entry, installed from a participle — the letter never finishes it); standing facts: the polygamy and the wives&#x27; reported names, the three craft offices (the third title-less), the sister (role open), the sword-song boast (testimony only — no kill event), the huchal calling-fact (fork open). REGISTRY: 3 writes — ir-&gt;Chanokh (the registry&#x27;s first PLACE), shet-&gt;Shet, enosh-&gt;Enosh (the naming verb alternates mother/father; the wives and Yuval enter nameless of ceremony — reported, not conferred). SPECS: ONE OPEN — LET(shema(neshei_lemekh, qol_lemekh)): the corpus&#x27;s first HUMAN-issued demand, pushed at 4:23 with no compliance ever narrated; it stands in the queue beside gen_08&#x27;s two and gen_12&#x27;s violated counsel (the corpus-wide debt: four, one now human). TESTS: EMPTY (no verdict token in the span — the first derived unit with neither test nor verdict). LEDGER: EMPTY. FLAGS: read_before_install x4 (kayin, eshet_kayin, adam, eshet_adam), named_before_any_presence x2 (shet, enosh — persons are never WORLD installs; the city IS one, so ir&#x27;s naming carries no flag), spec_delta x1 (the seventy-seven quote-diff — the first human-mouth mutation of a divine ruling; the machine flags and installs nothing). The genealogy builds civilization while the machine&#x27;s law registers stay still: one install, one flag, one open human demand, and a fork the letter refuses to close.</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>The wanderer builds — the first human WORLD install: after STEP_Gn_4_17</td><td>All registers empty (standalone unit).</td><td>WORLD = {ir}; REGISTRY: ir-&gt;Chanokh (1 writes); SPECS empty; flags kayin/eshet_kayin as read-before-install.<br><span class="gloss">= WORLD = {city}; REGISTRY: city-&gt;Chanokh (1 writes); SPECS empty; flags Cain/wife-of-Cain as read-before-install.</span></td><td><span class="he">וַיְהִי בֹּנֶה עִיר</span> · <i>va-yehi boneh ir</i><br><span class="gloss">= he-was boneh city</span></td></tr>
+<tr><td><b>S2</b></td><td>The begetting chain leaves no register trace: after STEP_Gn_4_18</td><td>S1 state.</td><td>WORLD = {ir}; SPECS empty.<br><span class="gloss">= WORLD = {city}; SPECS empty.</span></td><td><span class="he">וּמְתוּשָׁאֵל יָלַד אֶת־לָמֶךְ</span> · <i>u-Metushael yalad et-Lamekh</i><br><span class="gloss">= and-Metushael begot obj-marker·et-Lamekh</span></td></tr>
+<tr><td><b>S3</b></td><td>Polygamy recorded, not evaluated: after STEP_Gn_4_19</td><td>S2 state.</td><td>Facts shte_nashim_le_lemekh/shem_ha_achat_adah/shem_ha_shenit_tzilah HOLD; SPECS empty.<br><span class="gloss">= Facts two-of-wives-to-Lamech/name-of-the-first-Adah/name-of-the-second-Tzillah HOLD; SPECS empty.</span></td><td><span class="he">שְׁתֵּי נָשִׁים</span> · <i>shtei nashim</i><br><span class="gloss">= shtei wives</span></td></tr>
+<tr><td><b>S4</b></td><td>The crafts registry standing: after STEP_Gn_4_22</td><td>S3 state + the two office verses (4:20-21).</td><td>Facts avi_yoshev_ohel_u_mikneh/avi_kol_tofes_kinor_ve_ugav/lotesh_kol_choresh_nechoshet_u_varzel/achot_tuval_kayin_naamah HOLD; WORLD = {ir}.<br><span class="gloss">= Facts father-of-dweller-of-tent-and-livestock/father-of-all-handler-of-harp-and-pipe/hammerer-of-all-craftsman-of-bronze-and-iron/sister-of-Tuval-Cain-Naamah HOLD; WORLD = {city}.</span></td><td><span class="he">אֲבִי … אֲבִי … לֹטֵשׁ</span> · <i>avi … avi … lotesh</i><br><span class="gloss">= father-of father-of hammerer-of</span></td></tr>
+<tr><td><b>S5</b></td><td>The sword-song — a human pushes the queue: after STEP_Gn_4_23</td><td>S4 state.</td><td>LET(shema(neshei_lemekh, qol_lemekh)) pushed and OPEN; Facts ish_haragti_le_fitzi_ve_yeled_le_chaburati HOLD.<br><span class="gloss">= LET(hear(wives-of-Lamech, voice-Lamech)) pushed and OPEN; Facts a-man-I-have-killed-to-fitzi-and-a-boy-to-my-wound HOLD.</span></td><td><span class="he">שְׁמַעַן קוֹלִי</span> · <i>shemaan qoli</i><br><span class="gloss">= hear qoli</span></td></tr>
+<tr><td><b>S6</b></td><td>Seventy-seven — the machine flags and refuses: after STEP_Gn_4_24</td><td>S5 state.</td><td>machine flags spec-delta; LET(shema(neshei_lemekh, qol_lemekh)) pushed and OPEN.<br><span class="gloss">= machine flags spec-delta; LET(hear(wives-of-Lamech, voice-Lamech)) pushed and OPEN.</span></td><td><span class="he">שִׁבְעִים וְשִׁבְעָה</span> · <i>shivim ve-shivah</i><br><span class="gloss">= seventy seven</span></td></tr>
+<tr><td><b>S7</b></td><td>The replacement seed: after STEP_Gn_4_25</td><td>S6 state.</td><td>Facts shat_li_elohim_zera_acher_tachat_hevel/harago_kayin_named_in_speech HOLD; flags adam/eshet_adam as read-before-install.<br><span class="gloss">= Facts has-SET-to-me-God-seed-another-place-of-Abel/slew-him-Cain-named-in-speech HOLD; flags Adam/wife-of-Adam as read-before-install.</span></td><td><span class="he">זֶרַע אַחֵר תַּחַת הֶבֶל</span> · <i>zera acher tachat Hevel</i><br><span class="gloss">= seed another place-of Hevel</span></td></tr>
+<tr><td><b>S8</b></td><td>The calling and the fork — the unit ends owing: after STEP_Gn_4_26</td><td>S7 state.</td><td>WORLD = {ir}; Facts huchal_likro_be_shem_YHWH HOLD; LET(shema(neshei_lemekh, qol_lemekh)) pushed and OPEN.<br><span class="gloss">= WORLD = {city}; Facts was-begun-to-call-in-name-of-the-LORD HOLD; LET(hear(wives-of-Lamech, voice-Lamech)) pushed and OPEN.</span></td><td><span class="he">אָז הוּחַל לִקְרֹא בְּשֵׁם יְהוָה</span> · <i>az huchal likro be-shem YHWH</i><br><span class="gloss">= then was-begun to-call name-of the-LORD</span></td></tr>
+<tr><td><b>S9_negative</b></td><td>Negative: the machine&#x27;s ? stays guarded</td><td>A synthetic LET? demand (the machine&#x27;s own contract self-test).</td><td>LET? never auto-upgrades: resolution without citation must REFUSE; with a per-unit citation it may resolve — no boast, quotation, or silence ever flips a mood on its own.<br><span class="gloss">= LET? never auto-upgrades: resolution without citation must REFUSE; with a per-unit citation it may resolve — no boast, quotation, light silence ever flips a mood on its own.</span></td><td></td></tr>
+<tr><td><b>S10_negative</b></td><td>Negative: flags never block</td><td>A synthetic commit with TESTS empty (the machine&#x27;s own contract self-test).</td><td>Cycle close with TESTS empty must be FLAGGED, never blocked.<br><span class="gloss">= Cycle close with TESTS empty must in FLAGGED, never blocked.</span></td><td></td></tr>
+</table>
+<h2>Exports (reusable patterns)</h2><table><tr><th>id</th><th>content</th></tr>
+<tr><td>EXPORT_first_city</td><td><span class="he">וַיְהִי בֹּנֶה עִיר</span> · <i>va-yehi boneh ir</i> · the first human WORLD install — the wanderer builds a city (participle: never narrated finished) and names it for his son; ir&#x27;s thread runs founder-under-curse -&gt; Nineveh -&gt; Babel</td></tr>
+<tr><td>EXPORT_crafts_registry</td><td><span class="he">אֲבִי יֹשֵׁב אֹהֶל וּמִקְנֶה … אֲבִי כָּל־תֹּפֵשׂ כִּנּוֹר וְעוּגָב … לֹטֵשׁ כָּל־חֹרֵשׁ נְחֹשֶׁת וּבַרְזֶל</span> · <i>avi yoshev ohel u-mikneh … avi kol-tofes kinor ve-ugav … lotesh kol-choresh nechoshet u-varzel</i> · the civilization offices founded in the condemned line — avi (&#x27;father-of&#x27;) as office formula, template-identical trees, broken for the smith; first tokens: tent, harp, pipe (the Torah&#x27;s only), bronze (next stop: the Tabernacle), iron (next stop: a curse); the herd-word carries Kayin&#x27;s own name-root</td></tr>
+<tr><td>EXPORT_first_human_imperatives</td><td><span class="he">שְׁמַעַן קוֹלִי … הַאְזֵנָּה אִמְרָתִי</span> · <i>shemaan qoli … haazenah imrati</i> · the law&#x27;s command mood debuts in a human mouth (TIR-027&#x27;s first human issuer) demanding a hearing for a kill-boast — the first human entry in the demand queue, never answered, OPEN at unit end; the voice-thread&#x27;s fifth station</td></tr>
+<tr><td>EXPORT_seventy_seven</td><td><span class="he">כִּי שִׁבְעָתַיִם יֻקַּם־קָיִן וְלֶמֶךְ שִׁבְעִים וְשִׁבְעָה</span> · <i>ki shivatayim yukam-Kayin ve-Lemekh shivim ve-shivah</i> · quote-diff device #2 — the first divine decree a human quotes, quoted to inflate it (x11, issuer swapped, self-directed, never ratified); shivatayim&#x27;s whole Torah career is the decree and this echo; the machine flags spec-delta and refuses the boast a handler</td></tr>
+<tr><td>EXPORT_replacement_seed</td><td><span class="he">כִּי שָׁת־לִי אֱלֹהִים זֶרַע אַחֵר תַּחַת הֶבֶל</span> · <i>ki shat-li Elohim zera acher tachat Hevel</i> · the SET-verb of 3:15&#x27;s enmity (its only other Gen 1-10 token) sets the replacement seed; zera is that verse&#x27;s word; tachat debuts replacement semantics; the mother&#x27;s speech names the murder — the first human retrospective testimony — and switches the divine name (YHWH at 4:1, Elohim here; Onkelos erases the switch)</td></tr>
+<tr><td>EXPORT_huchal_fork</td><td><span class="he">אָז הוּחַל לִקְרֹא בְּשֵׁם יְהוָה</span> · <i>az huchal likro be-shem YHWH</i> · worship&#x27;s formula debuts agentless (hophal, TIR-032) under a lexical fork — begin/profane in one lemma [OPEN]; Onkelos votes the dark side and law-history stands on it; the phrase&#x27;s next tokens are Abram&#x27;s and Isaac&#x27;s altars; the span&#x27;s law-from-lexical-fork detector tripwire</td></tr>
+<tr><td>EXPORT_two_lines_one_namepool</td><td><span class="he">חֲנוֹךְ … לֶמֶךְ … מְתוּשָׁאֵל</span> · <i>Chanokh … Lemekh … Metushael</i> · Cain&#x27;s and Seth&#x27;s lines share names at the LEMMA level (Chanokh and Lemekh identical; Metushael/Metushelach adjacent entries; Qayin/Qenan, Irad/Yered near-pairs) — the seventh slot holds the contrast: sevens-speaking Lamech vs the Chanokh who walks with God [OPEN]</td></tr>
+</table>
+<h2>Oral notes (named, tiered, dual-track — never merged)</h2>
+<div class="note"><span class="badge tier-o">observation</span> <b>Bereshit Rabbah 23 (the wives, the blind-Lamech legend, Naamah, the Enosh profanation reading); Midrash Tanchuma Bereshit 11; Pirkei DeRabbi Eliezer 22; Rambam Hilkhot Avodah Zarah 1:1 (idolatry&#x27;s history codified from the huchal fork); Rashi at 4:19-26 — gen_13 Tier-A queue</b><br><span class="he">אָז הוּחַל</span> · <i>(queue — named only)</i> · Named, not read: the cache holds ZERO sources anchored to Gen 4:17-26 — seventh tripwire span. The huchal fork is a law-from-lexical-fork specimen (cleaner than an al-tikrei [&quot;do not read X but Y&quot;] class: no re-vocalization needed — both senses share the dictionary entry); the detector&#x27;s dual-sense formulas should fire on it when cached, with the law code&#x27;s idolatry-history as the law-grade shadow.
+<br><i>Queue entry — no claim made beyond the naming.</i></div>
+<div class="note"><span class="badge tier-v">verified</span> <b>Onkelos Genesis 4:17-26 — read Tier-A at derive time (10 sequential fetches, Data/FETCHLOG.md 2026-08-01)</b><br><span class="he">לָא גַּבְרָא קְטָלִית</span> · <i>la gavra ketalit</i> · The span&#x27;s translation witness — the sharpest INVERSION in our derived spans: 4:23&#x27;s boast NEGATED (&#x27;I have NOT killed a man that I should bear sins for him, NOR wounded a youth that my seed be destroyed&#x27; — confession -&gt; protest of innocence; the added vocabulary loaded: savil = bear, the burden thread; the destroyed seed echoes the 4:10 descendants doctrine); 4:24 vengeance re-read as MERCY arithmetic (&#x27;seven generations suspended for Cain — shall not Lamech his son get seventy-seven?&#x27; — a-fortiori plea); 4:26 the fork VOTED (&#x27;the sons of man CEASED/PROFANED from praying in the Name&#x27; — subject supplied, calling upgraded to prayer, dark sense chosen); avi -&gt; RABBHON (guild-master), granted even to the title-less smith; tents -&gt; mashkenin (the Tabernacle root); 4:25 the divine-name switch erased and the SET-verb flattened to &#x27;gave&#x27; (the 3:15 root-echo deleted); the she-spelling leveled.
+<br><i>Read from Data/sefaria_texts/ (local, gitignored; FETCHLOG is provenance). Dual-track; not merged.</i></div>
+<h2>Binary trees (ta'amim v3, glue bricks)</h2>
+<h3>Gen.4.17 · parser unique · 17 words</h3>
+<div class="meta"><span class="he">וידע קין את־אשׁתו ותהר ותלד את־חנוך ויהי בנה עיר ויקרא שׁם העיר כשׁם בנו חנוך</span> · <i>va-yeda qayin et-isht-o va-tahar va-teled et-chanokh va-yehi bone ir va-yiqra shem ha-ir ke-shem ben-o chanokh</i> · Cain knew his wife — Enoch born; he was building a city, named for his son. [EN-AID]</div>
+<pre>PHRASE (binary 17w) וַ/יֵּ֤דַע קַ֨יִן֙ אֶת אִשְׁתּ֔/וֹ וַ/תַּ֖הַר ו…
+├── PHRASE (binary 8w) וַ/יֵּ֤דַע קַ֨יִן֙ אֶת אִשְׁתּ֔/וֹ וַ/תַּ֖הַר ו…
+│   ├── PHRASE (binary 4w) וַ/יֵּ֤דַע קַ֨יִן֙ אֶת אִשְׁתּ֔/וֹ
+│   │   ├── [0-1] GLUE וַ/יֵּ֤דַע קַ֨יִן֙ (pashta, rank=3)
+│   │   └── [2-3] GLUE אֶת אִשְׁתּ֔/וֹ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) וַ/תַּ֖הַר וַ/תֵּ֣לֶד אֶת חֲנ֑וֹךְ
+│       ├── [4] וַ/תַּ֖הַר (tifcha, rank=2)
+│       └── [5-7] GLUE וַ/תֵּ֣לֶד אֶת חֲנ֑וֹךְ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 9w) וַֽ/יְהִי֙ בֹּ֣נֶה עִ֔יר וַ/יִּקְרָא֙ שֵׁ֣ם הָ/…
+    ├── PHRASE (binary 3w) וַֽ/יְהִי֙ בֹּ֣נֶה עִ֔יר
+    │   ├── [8] וַֽ/יְהִי֙ (pashta, rank=3)
+    │   └── [9-10] GLUE בֹּ֣נֶה עִ֔יר (zaqef qatan, rank=2)
+    └── PHRASE (binary 6w) וַ/יִּקְרָא֙ שֵׁ֣ם הָ/עִ֔יר כְּ/שֵׁ֖ם בְּנ֥/וֹ …
+        ├── PHRASE (binary 3w) וַ/יִּקְרָא֙ שֵׁ֣ם הָ/עִ֔יר
+        │   ├── [11] וַ/יִּקְרָא֙ (pashta, rank=3)
+        │   └── [12-13] GLUE שֵׁ֣ם הָ/עִ֔יר (zaqef qatan, rank=2)
+        └── PHRASE (binary 3w) כְּ/שֵׁ֖ם בְּנ֥/וֹ חֲנֽוֹךְ
+            ├── [14] כְּ/שֵׁ֖ם (tifcha, rank=2)
+            └── [15-16] GLUE בְּנ֥/וֹ חֲנֽוֹךְ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.4.18 · parser unique · 16 words</h3>
+<div class="meta"><span class="he">ויולד לחנוך את־עירד ועירד ילד את־מחויאל ומחייאל ילד את־מתושׁאל ומתושׁאל ילד את־למך</span> · <i>va-yivaled la-chanokh et-irad ve-irad yalad et-mechuyael u-mechiyael yalad et-metushael u-metushael yalad et-lamekh</i> · To Enoch was born Irad; Irad begot Mehujael; Mehijael begot Methusael; Methusael begot Lamech. [EN-AID]</div>
+<pre>PHRASE (binary 16w) וַ/יִּוָּלֵ֤ד לַֽ/חֲנוֹךְ֙ אֶת עִירָ֔ד וְ/עִירָ…
+├── PHRASE (binary 8w) וַ/יִּוָּלֵ֤ד לַֽ/חֲנוֹךְ֙ אֶת עִירָ֔ד וְ/עִירָ…
+│   ├── PHRASE (binary 4w) וַ/יִּוָּלֵ֤ד לַֽ/חֲנוֹךְ֙ אֶת עִירָ֔ד
+│   │   ├── [0-1] GLUE וַ/יִּוָּלֵ֤ד לַֽ/חֲנוֹךְ֙ (pashta, rank=3)
+│   │   └── [2-3] GLUE אֶת עִירָ֔ד (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) וְ/עִירָ֕ד יָלַ֖ד אֶת מְחֽוּיָאֵ֑ל
+│       ├── [4] וְ/עִירָ֕ד (zaqef gadol, rank=2)
+│       └── PHRASE (binary 3w) יָלַ֖ד אֶת מְחֽוּיָאֵ֑ל
+│           ├── [5] יָלַ֖ד (tifcha, rank=2)
+│           └── [6-7] GLUE אֶת מְחֽוּיָאֵ֑ל (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) וּ/מְחִיּיָאֵ֗ל יָלַד֙ אֶת מְת֣וּשָׁאֵ֔ל וּ/מְת…
+    ├── PHRASE (binary 4w) וּ/מְחִיּיָאֵ֗ל יָלַד֙ אֶת מְת֣וּשָׁאֵ֔ל
+    │   ├── [8] וּ/מְחִיּיָאֵ֗ל (revia, rank=3)
+    │   └── PHRASE (binary 3w) יָלַד֙ אֶת מְת֣וּשָׁאֵ֔ל
+    │       ├── [9] יָלַד֙ (pashta, rank=3)
+    │       └── [10-11] GLUE אֶת מְת֣וּשָׁאֵ֔ל (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) וּ/מְתוּשָׁאֵ֖ל יָלַ֥ד אֶת לָֽמֶךְ
+        ├── [12] וּ/מְתוּשָׁאֵ֖ל (tifcha, rank=2)
+        └── [13-15] GLUE יָלַ֥ד אֶת לָֽמֶךְ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.4.19 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">ויקח־לו למך שׁתי נשׁים שׁם האחת עדה ושׁם השׁנית צלה</span> · <i>va-yiqach-l-o lemekh shete nashim shem ha-achat ada ve-shem ha-shenit tzila</i> · Lamech took two wives: the first Adah, the second Tzillah. [EN-AID]</div>
+<pre>PHRASE (binary 11w) וַ/יִּֽקַּֽח ל֥/וֹ לֶ֖מֶךְ שְׁתֵּ֣י נָשִׁ֑ים שׁ…
+├── PHRASE (binary 5w) וַ/יִּֽקַּֽח ל֥/וֹ לֶ֖מֶךְ שְׁתֵּ֣י נָשִׁ֑ים
+│   ├── [0-2] GLUE וַ/יִּֽקַּֽח ל֥/וֹ לֶ֖מֶךְ (tifcha, rank=2)
+│   └── [3-4] GLUE שְׁתֵּ֣י נָשִׁ֑ים (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) שֵׁ֤ם הָֽ/אַחַת֙ עָדָ֔ה וְ/שֵׁ֥ם הַ/שֵּׁנִ֖ית צ…
+    ├── PHRASE (binary 3w) שֵׁ֤ם הָֽ/אַחַת֙ עָדָ֔ה
+    │   ├── [5-6] GLUE שֵׁ֤ם הָֽ/אַחַת֙ (pashta, rank=3)
+    │   └── [7] עָדָ֔ה (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) וְ/שֵׁ֥ם הַ/שֵּׁנִ֖ית צִלָּֽה
+        ├── [8-9] GLUE וְ/שֵׁ֥ם הַ/שֵּׁנִ֖ית (tifcha, rank=2)
+        └── [10] צִלָּֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.4.20 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">ותלד עדה את־יבל הוא היה אבי ישׁב אהל ומקנה</span> · <i>va-teled ada et-yaval hu haya avi yoshev ohel u-miqne</i> · Adah bore Yaval — father of tent-and-herd dwellers. [EN-AID]</div>
+<pre>PHRASE (binary 10w) וַ/תֵּ֥לֶד עָדָ֖ה אֶת יָבָ֑ל ה֣וּא הָיָ֔ה אֲבִ֕…
+├── PHRASE (binary 4w) וַ/תֵּ֥לֶד עָדָ֖ה אֶת יָבָ֑ל
+│   ├── [0-1] GLUE וַ/תֵּ֥לֶד עָדָ֖ה (tifcha, rank=2)
+│   └── [2-3] GLUE אֶת יָבָ֑ל (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) ה֣וּא הָיָ֔ה אֲבִ֕י יֹשֵׁ֥ב אֹ֖הֶל וּ/מִקְנֶֽה
+    ├── [4-5] GLUE ה֣וּא הָיָ֔ה (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) אֲבִ֕י יֹשֵׁ֥ב אֹ֖הֶל וּ/מִקְנֶֽה
+        ├── [6] אֲבִ֕י (zaqef gadol, rank=2)
+        └── PHRASE (binary 3w) יֹשֵׁ֥ב אֹ֖הֶל וּ/מִקְנֶֽה
+            ├── [7-8] GLUE יֹשֵׁ֥ב אֹ֖הֶל (tifcha, rank=2)
+            └── [9] וּ/מִקְנֶֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.4.21 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">ושׁם אחיו יובל הוא היה אבי כל־תפשׂ כנור ועוגב</span> · <i>ve-shem achi-v yuval hu haya avi kal-tofes kinor ve-ugav</i> · His brother&#x27;s name: Yuval — father of all who handle harp and pipe. [EN-AID]</div>
+<pre>PHRASE (binary 10w) וְ/שֵׁ֥ם אָחִ֖י/ו יוּבָ֑ל ה֣וּא הָיָ֔ה אֲבִ֕י כ…
+├── PHRASE (binary 3w) וְ/שֵׁ֥ם אָחִ֖י/ו יוּבָ֑ל
+│   ├── [0-1] GLUE וְ/שֵׁ֥ם אָחִ֖י/ו (tifcha, rank=2)
+│   └── [2] יוּבָ֑ל (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) ה֣וּא הָיָ֔ה אֲבִ֕י כָּל תֹּפֵ֥שׂ כִּנּ֖וֹר וְ/…
+    ├── [3-4] GLUE ה֣וּא הָיָ֔ה (zaqef qatan, rank=2)
+    └── PHRASE (binary 5w) אֲבִ֕י כָּל תֹּפֵ֥שׂ כִּנּ֖וֹר וְ/עוּגָֽב
+        ├── [5] אֲבִ֕י (zaqef gadol, rank=2)
+        └── PHRASE (binary 4w) כָּל תֹּפֵ֥שׂ כִּנּ֖וֹר וְ/עוּגָֽב
+            ├── [6-8] GLUE כָּל תֹּפֵ֥שׂ כִּנּ֖וֹר (tifcha, rank=2)
+            └── [9] וְ/עוּגָֽב (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.4.22 · parser unique · 16 words</h3>
+<div class="meta"><span class="he">וצלה גם־הוא ילדה את־תובל קין לטשׁ כל־חרשׁ נחשׁת וברזל ואחות תובל־קין נעמה</span> · <i>ve-tzila gam-hiv yalda et-tuval qayin lotesh kal-choresh nechoshet u-varzel va-achot tuval-qayin naama</i> · Tzillah also bore Tuval-Kayin, hammerer of bronze-and-iron craft — and his sister Naamah. [EN-AID]</div>
+<pre>PHRASE (binary 16w) וְ/צִלָּ֣ה גַם הִ֗וא יָֽלְדָה֙ אֶת תּ֣וּבַל קַ֔…
+├── PHRASE (binary 12w) וְ/צִלָּ֣ה גַם הִ֗וא יָֽלְדָה֙ אֶת תּ֣וּבַל קַ֔…
+│   ├── PHRASE (binary 7w) וְ/צִלָּ֣ה גַם הִ֗וא יָֽלְדָה֙ אֶת תּ֣וּבַל קַ֔…
+│   │   ├── [0-2] GLUE וְ/צִלָּ֣ה גַם הִ֗וא (revia, rank=3)
+│   │   └── PHRASE (binary 4w) יָֽלְדָה֙ אֶת תּ֣וּבַל קַ֔יִן
+│   │       ├── [3] יָֽלְדָה֙ (pashta, rank=3)
+│   │       └── [4-6] GLUE אֶת תּ֣וּבַל קַ֔יִן (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) לֹטֵ֕שׁ כָּל חֹרֵ֥שׁ נְחֹ֖שֶׁת וּ/בַרְזֶ֑ל
+│       ├── [7] לֹטֵ֕שׁ (zaqef gadol, rank=2)
+│       └── PHRASE (binary 4w) כָּל חֹרֵ֥שׁ נְחֹ֖שֶׁת וּ/בַרְזֶ֑ל
+│           ├── [8-10] GLUE כָּל חֹרֵ֥שׁ נְחֹ֖שֶׁת (tifcha, rank=2)
+│           └── [11] וּ/בַרְזֶ֑ל (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וַֽ/אֲח֥וֹת תּֽוּבַל קַ֖יִן נַֽעֲמָֽה
+    ├── [12-14] GLUE וַֽ/אֲח֥וֹת תּֽוּבַל קַ֖יִן (tifcha, rank=2)
+    └── [15] נַֽעֲמָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.4.23 · parser unique · 17 words</h3>
+<div class="meta"><span class="he">ויאמר למך לנשׁיו עדה וצלה שׁמען קולי נשׁי למך האזנה אמרתי כי אישׁ הרגתי לפצעי וילד לחברתי</span> · <i>va-yomer lemekh le-nashay-v ada ve-tzila shemaan qoli-y neshe lemekh hazena imrati-y ki ish haragti le-fitzi-y ve-yeled le-chaburati-y</i> · Hear my voice, wives of Lamech: a man I killed for my wound, a boy for my bruise. [EN-AID]</div>
+<pre>PHRASE (binary 17w) וַ/יֹּ֨אמֶר לֶ֜מֶךְ לְ/נָשָׁ֗י/ו עָדָ֤ה וְ/צִלּ…
+├── PHRASE (binary 11w) וַ/יֹּ֨אמֶר לֶ֜מֶךְ לְ/נָשָׁ֗י/ו עָדָ֤ה וְ/צִלּ…
+│   ├── PHRASE (binary 7w) וַ/יֹּ֨אמֶר לֶ֜מֶךְ לְ/נָשָׁ֗י/ו עָדָ֤ה וְ/צִלּ…
+│   │   ├── PHRASE (binary 3w) וַ/יֹּ֨אמֶר לֶ֜מֶךְ לְ/נָשָׁ֗י/ו
+│   │   │   ├── [0-1] GLUE וַ/יֹּ֨אמֶר לֶ֜מֶךְ (geresh, rank=4)
+│   │   │   └── [2] לְ/נָשָׁ֗י/ו (revia, rank=3)
+│   │   └── PHRASE (binary 4w) עָדָ֤ה וְ/צִלָּה֙ שְׁמַ֣עַן קוֹלִ֔/י
+│   │       ├── [3-4] GLUE עָדָ֤ה וְ/צִלָּה֙ (pashta, rank=3)
+│   │       └── [5-6] GLUE שְׁמַ֣עַן קוֹלִ֔/י (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) נְשֵׁ֣י לֶ֔מֶךְ הַאְזֵ֖נָּה אִמְרָתִ֑/י
+│       ├── [7-8] GLUE נְשֵׁ֣י לֶ֔מֶךְ (zaqef qatan, rank=2)
+│       └── PHRASE (binary 2w) הַאְזֵ֖נָּה אִמְרָתִ֑/י
+│           ├── [9] הַאְזֵ֖נָּה (tifcha, rank=2)
+│           └── [10] אִמְרָתִ֑/י (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) כִּ֣י אִ֤ישׁ הָרַ֨גְתִּי֙ לְ/פִצְעִ֔/י וְ/יֶ֖לֶ…
+    ├── PHRASE (binary 4w) כִּ֣י אִ֤ישׁ הָרַ֨גְתִּי֙ לְ/פִצְעִ֔/י
+    │   ├── [11-13] GLUE כִּ֣י אִ֤ישׁ הָרַ֨גְתִּי֙ (pashta, rank=3)
+    │   └── [14] לְ/פִצְעִ֔/י (zaqef qatan, rank=2)
+    └── PHRASE (binary 2w) וְ/יֶ֖לֶד לְ/חַבֻּרָתִֽ/י
+        ├── [15] וְ/יֶ֖לֶד (tifcha, rank=2)
+        └── [16] לְ/חַבֻּרָתִֽ/י (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.4.24 · parser unique · 7 words</h3>
+<div class="meta"><span class="he">כי שׁבעתים יקם־קין ולמך שׁבעים ושׁבעה</span> · <i>ki shivatayim yuqam-qayin ve-lemekh shivim ve-shiva</i> · If sevenfold avenged is Cain — then Lamech seventy-seven. [EN-AID]</div>
+<pre>PHRASE (binary 7w) כִּ֥י שִׁבְעָתַ֖יִם יֻקַּם קָ֑יִן וְ/לֶ֖מֶךְ שׁ…
+├── PHRASE (binary 4w) כִּ֥י שִׁבְעָתַ֖יִם יֻקַּם קָ֑יִן
+│   ├── [0-1] GLUE כִּ֥י שִׁבְעָתַ֖יִם (tifcha, rank=2)
+│   └── [2-3] GLUE יֻקַּם קָ֑יִן (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וְ/לֶ֖מֶךְ שִׁבְעִ֥ים וְ/שִׁבְעָֽה
+    ├── [4] וְ/לֶ֖מֶךְ (tifcha, rank=2)
+    └── [5-6] GLUE שִׁבְעִ֥ים וְ/שִׁבְעָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.4.25 · parser unique · 22 words</h3>
+<div class="meta"><span class="he">וידע אדם עוד את־אשׁתו ותלד בן ותקרא את־שׁמו שׁת כי שׁת־לי אלהים זרע אחר תחת הבל כי הרגו קין</span> · <i>va-yeda adam od et-isht-o va-teled ben va-tiqra et-shem-o shet ki shat-li-y Elohim zera acher tachat hevel ki harag-o qayin</i> · Adam knew his wife again — Seth: God has SET me another seed in place of Abel. [EN-AID]</div>
+<pre>PHRASE (binary 22w) וַ/יֵּ֨דַע אָדָ֥ם עוֹד֙ אֶת אִשְׁתּ֔/וֹ וַ/תֵּ֣…
+├── PHRASE (binary 11w) וַ/יֵּ֨דַע אָדָ֥ם עוֹד֙ אֶת אִשְׁתּ֔/וֹ וַ/תֵּ֣…
+│   ├── PHRASE (binary 5w) וַ/יֵּ֨דַע אָדָ֥ם עוֹד֙ אֶת אִשְׁתּ֔/וֹ
+│   │   ├── [0-2] GLUE וַ/יֵּ֨דַע אָדָ֥ם עוֹד֙ (pashta, rank=3)
+│   │   └── [3-4] GLUE אֶת אִשְׁתּ֔/וֹ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 6w) וַ/תֵּ֣לֶד בֵּ֔ן וַ/תִּקְרָ֥א אֶת שְׁמ֖/וֹ שֵׁ֑ת
+│       ├── [5-6] GLUE וַ/תֵּ֣לֶד בֵּ֔ן (zaqef qatan, rank=2)
+│       └── PHRASE (binary 4w) וַ/תִּקְרָ֥א אֶת שְׁמ֖/וֹ שֵׁ֑ת
+│           ├── [7-9] GLUE וַ/תִּקְרָ֥א אֶת שְׁמ֖/וֹ (tifcha, rank=2)
+│           └── [10] שֵׁ֑ת (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 11w) כִּ֣י שָֽׁת לִ֤/י אֱלֹהִים֙ זֶ֣רַע אַחֵ֔ר תַּ֣ח…
+    ├── PHRASE (binary 6w) כִּ֣י שָֽׁת לִ֤/י אֱלֹהִים֙ זֶ֣רַע אַחֵ֔ר
+    │   ├── [11-14] GLUE כִּ֣י שָֽׁת לִ֤/י אֱלֹהִים֙ (pashta, rank=3)
+    │   └── [15-16] GLUE זֶ֣רַע אַחֵ֔ר (zaqef qatan, rank=2)
+    └── PHRASE (binary 5w) תַּ֣חַת הֶ֔בֶל כִּ֥י הֲרָג֖/וֹ קָֽיִן
+        ├── [17-18] GLUE תַּ֣חַת הֶ֔בֶל (zaqef qatan, rank=2)
+        └── PHRASE (binary 3w) כִּ֥י הֲרָג֖/וֹ קָֽיִן
+            ├── [19-20] GLUE כִּ֥י הֲרָג֖/וֹ (tifcha, rank=2)
+            └── [21] קָֽיִן (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.4.26 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">ולשׁת גם־הוא ילד־בן ויקרא את־שׁמו אנושׁ אז הוחל לקרא בשׁם יהוה</span> · <i>u-le-shet gam-hu yulad-ben va-yiqra et-shem-o enosh az huchal li-qero be-shem YHWH</i> · To Seth too a son — Enosh; then calling on the Name of YHWH was begun. [EN-AID]</div>
+<pre>PHRASE (binary 14w) וּ/לְ/שֵׁ֤ת גַּם הוּא֙ יֻלַּד בֵּ֔ן וַ/יִּקְרָ֥…
+├── PHRASE (binary 9w) וּ/לְ/שֵׁ֤ת גַּם הוּא֙ יֻלַּד בֵּ֔ן וַ/יִּקְרָ֥…
+│   ├── PHRASE (binary 5w) וּ/לְ/שֵׁ֤ת גַּם הוּא֙ יֻלַּד בֵּ֔ן
+│   │   ├── [0-2] GLUE וּ/לְ/שֵׁ֤ת גַּם הוּא֙ (pashta, rank=3)
+│   │   └── [3-4] GLUE יֻלַּד בֵּ֔ן (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) וַ/יִּקְרָ֥א אֶת שְׁמ֖/וֹ אֱנ֑וֹשׁ
+│       ├── [5-7] GLUE וַ/יִּקְרָ֥א אֶת שְׁמ֖/וֹ (tifcha, rank=2)
+│       └── [8] אֱנ֑וֹשׁ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) אָ֣ז הוּחַ֔ל לִ/קְרֹ֖א בְּ/שֵׁ֥ם יְהוָֽה
+    ├── [9-10] GLUE אָ֣ז הוּחַ֔ל (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) לִ/קְרֹ֖א בְּ/שֵׁ֥ם יְהוָֽה
+        ├── [11] לִ/קְרֹ֖א (tifcha, rank=2)
+        └── [12-13] GLUE בְּ/שֵׁ֥ם יְהוָֽה (silluq (verse-end emperor), rank=1)
+</pre>
+<h2>Word coverage — 140/140 words with named roles</h2>
+<table><tr><th>ref</th><th>#</th><th>Hebrew</th><th>translit</th><th>English</th><th>role</th><th>kind</th><th>rule</th></tr>
+<tr><td>Gen.4.17</td><td>0</td><td class='he-cell'>וידע</td><td>va-yeda</td><td>and-he-knew</td><td>know_formula_4_1_rerun</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.17</td><td>1</td><td class='he-cell'>קין</td><td>qayin</td><td>Cain</td><td>the_wanderer</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.17</td><td>2</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.4.17</td><td>3</td><td class='he-cell'>אשתו</td><td>isht-o</td><td>his-wife</td><td>WIFE_NO_SOURCE_OPEN</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.17</td><td>4</td><td class='he-cell'>ותהר</td><td>va-tahar</td><td>and-she-conceived</td><td>conception</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.17</td><td>5</td><td class='he-cell'>ותלד</td><td>va-teled</td><td>and-she-bore</td><td>birth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.17</td><td>6</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.4.17</td><td>7</td><td class='he-cell'>חנוך</td><td>chanokh</td><td>Enoch</td><td>Chanokh_the_son</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.17</td><td>8</td><td class='he-cell'>ויהי</td><td>va-yehi</td><td>and-he-was</td><td>and-he-was</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.17</td><td>9</td><td class='he-cell'>בנה</td><td>bone</td><td>building</td><td>BUILDING_participle_unfinished</td><td>logic_bearing</td><td class='cite'>TIR-031</td></tr>
+<tr><td>Gen.4.17</td><td>10</td><td class='he-cell'>עיר</td><td>ir</td><td>city</td><td>IR_FIRST_TOKEN_city</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.17</td><td>11</td><td class='he-cell'>ויקרא</td><td>va-yiqra</td><td>and-he-called</td><td>naming_verb_spent_on_city</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.17</td><td>12</td><td class='he-cell'>שם</td><td>shem</td><td>name-of</td><td>name-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.17</td><td>13</td><td class='he-cell'>העיר</td><td>ha-ir</td><td>the-city</td><td>the-city</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.17</td><td>14</td><td class='he-cell'>כשם</td><td>ke-shem</td><td>like-name-of</td><td>KE_SHEM_for_the_son</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.17</td><td>15</td><td class='he-cell'>בנו</td><td>ben-o</td><td>his-son</td><td>his-son</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.17</td><td>16</td><td class='he-cell'>חנוך</td><td>chanokh</td><td>Enoch</td><td>the_namesake</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.18</td><td>0</td><td class='he-cell'>ויולד</td><td>va-yivaled</td><td>and-was-born</td><td>passive_birth_agentless</td><td>logic_bearing</td><td class='cite'>TIR-032</td></tr>
+<tr><td>Gen.4.18</td><td>1</td><td class='he-cell'>לחנוך</td><td>la-chanokh</td><td>to-Enoch</td><td>to-Enoch</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.18</td><td>2</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.4.18</td><td>3</td><td class='he-cell'>עירד</td><td>irad</td><td>Irad</td><td>Irad</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.18</td><td>4</td><td class='he-cell'>ועירד</td><td>ve-irad</td><td>and-Irad</td><td>chain_link_1</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.18</td><td>5</td><td class='he-cell'>ילד</td><td>yalad</td><td>begot</td><td>begot_active_1</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.18</td><td>6</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.4.18</td><td>7</td><td class='he-cell'>מחויאל</td><td>mechuyael</td><td>Mehujael</td><td>SPELLING_A_with_vav</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.18</td><td>8</td><td class='he-cell'>ומחייאל</td><td>u-mechiyael</td><td>and-Mehijael</td><td>SPELLING_B_double_yod_SAME_VERSE</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.18</td><td>9</td><td class='he-cell'>ילד</td><td>yalad</td><td>begot</td><td>begot_active_2</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.18</td><td>10</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.4.18</td><td>11</td><td class='he-cell'>מתושאל</td><td>metushael</td><td>Methusael</td><td>Metushael_lemma_4967</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.18</td><td>12</td><td class='he-cell'>ומתושאל</td><td>u-metushael</td><td>and-Methusael</td><td>chain_link_3</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.18</td><td>13</td><td class='he-cell'>ילד</td><td>yalad</td><td>begot</td><td>begot_active_3</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.18</td><td>14</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.4.18</td><td>15</td><td class='he-cell'>למך</td><td>lamekh</td><td>Lamech</td><td>LEMEKH_seventh_from_adam</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.19</td><td>0</td><td class='he-cell'>ויקח</td><td>va-yiqach</td><td>and-he-took</td><td>took_laqach</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.19</td><td>1</td><td class='he-cell'>לו</td><td>l-o</td><td>for-himself</td><td>for-himself</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.19</td><td>2</td><td class='he-cell'>למך</td><td>lemekh</td><td>Lamech</td><td>Lamech</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.19</td><td>3</td><td class='he-cell'>שתי</td><td>shete</td><td>two</td><td>TWO_first_polygamy</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.19</td><td>4</td><td class='he-cell'>נשים</td><td>nashim</td><td>wives</td><td>NASHIM_PLURAL_FIRST_TOKEN</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.19</td><td>5</td><td class='he-cell'>שם</td><td>shem</td><td>name-of</td><td>name_reported_not_conferred</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.19</td><td>6</td><td class='he-cell'>האחת</td><td>ha-achat</td><td>the-first</td><td>the-first</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.19</td><td>7</td><td class='he-cell'>עדה</td><td>ada</td><td>Adah</td><td>Adah</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.19</td><td>8</td><td class='he-cell'>ושם</td><td>ve-shem</td><td>and-name-of</td><td>and-name-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.19</td><td>9</td><td class='he-cell'>השנית</td><td>ha-shenit</td><td>the-second</td><td>the-second</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.19</td><td>10</td><td class='he-cell'>צלה</td><td>tzila</td><td>Tzillah</td><td>Tzillah</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.20</td><td>0</td><td class='he-cell'>ותלד</td><td>va-teled</td><td>and-she-bore</td><td>birth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.20</td><td>1</td><td class='he-cell'>עדה</td><td>ada</td><td>Adah</td><td>Adah</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.20</td><td>2</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.4.20</td><td>3</td><td class='he-cell'>יבל</td><td>yaval</td><td>Yaval</td><td>Yaval</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.20</td><td>4</td><td class='he-cell'>הוא</td><td>hu</td><td>he</td><td>he</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.20</td><td>5</td><td class='he-cell'>היה</td><td>haya</td><td>was</td><td>was</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.20</td><td>6</td><td class='he-cell'>אבי</td><td>avi</td><td>father-of</td><td>AVI_OFFICE_FORMULA_1</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.20</td><td>7</td><td class='he-cell'>ישב</td><td>yoshev</td><td>dweller-of</td><td>tent_dweller_participle</td><td>logic_bearing</td><td class='cite'>TIR-031</td></tr>
+<tr><td>Gen.4.20</td><td>8</td><td class='he-cell'>אהל</td><td>ohel</td><td>tent</td><td>OHEL_FIRST_TOKEN</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.20</td><td>9</td><td class='he-cell'>ומקנה</td><td>u-miqne</td><td>and-herds</td><td>MIQNE_kayin_name_root</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.21</td><td>0</td><td class='he-cell'>ושם</td><td>ve-shem</td><td>and-name-of</td><td>name_nominal_NO_BIRTH_VERB</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.21</td><td>1</td><td class='he-cell'>אחיו</td><td>achi-v</td><td>his-brother</td><td>his-brother</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.21</td><td>2</td><td class='he-cell'>יובל</td><td>yuval</td><td>Yuval</td><td>Yuval</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.21</td><td>3</td><td class='he-cell'>הוא</td><td>hu</td><td>he</td><td>he</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.21</td><td>4</td><td class='he-cell'>היה</td><td>haya</td><td>was</td><td>was</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.21</td><td>5</td><td class='he-cell'>אבי</td><td>avi</td><td>father-of</td><td>AVI_OFFICE_FORMULA_2_template</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.21</td><td>6</td><td class='he-cell'>כל</td><td>kal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.21</td><td>7</td><td class='he-cell'>תפש</td><td>tofes</td><td>handler-of</td><td>handler_participle</td><td>logic_bearing</td><td class='cite'>TIR-031</td></tr>
+<tr><td>Gen.4.21</td><td>8</td><td class='he-cell'>כנור</td><td>kinor</td><td>harp</td><td>KINOR_FIRST_TOKEN</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.21</td><td>9</td><td class='he-cell'>ועוגב</td><td>ve-ugav</td><td>and-pipe</td><td>UGAV_ONLY_TORAH_TOKEN</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.22</td><td>0</td><td class='he-cell'>וצלה</td><td>ve-tzila</td><td>and-Tzillah</td><td>Tzillah</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.22</td><td>1</td><td class='he-cell'>גם</td><td>gam</td><td>also</td><td>also_thread</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.22</td><td>2</td><td class='he-cell'>הוא</td><td>hiv</td><td>she</td><td>SHE_hu_written_hi_read_3rd</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.22</td><td>3</td><td class='he-cell'>ילדה</td><td>yalda</td><td>bore</td><td>bore</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.22</td><td>4</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.4.22</td><td>5</td><td class='he-cell'>תובל</td><td>tuval</td><td>Tuval</td><td>Tuval</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.22</td><td>6</td><td class='he-cell'>קין</td><td>qayin</td><td>Kayin</td><td>ancestor_name_inside_name</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.22</td><td>7</td><td class='he-cell'>לטש</td><td>lotesh</td><td>hammerer-of</td><td>LOTESH_formula_broken_no_avi</td><td>logic_bearing</td><td class='cite'>TIR-031</td></tr>
+<tr><td>Gen.4.22</td><td>8</td><td class='he-cell'>כל</td><td>kal</td><td>every</td><td>every</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.22</td><td>9</td><td class='he-cell'>חרש</td><td>choresh</td><td>craftsman-of</td><td>craftsman</td><td>logic_bearing</td><td class='cite'>TIR-031</td></tr>
+<tr><td>Gen.4.22</td><td>10</td><td class='he-cell'>נחשת</td><td>nechoshet</td><td>bronze</td><td>NECHOSHET_FIRST_TOKEN_tabernacle_next</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.22</td><td>11</td><td class='he-cell'>וברזל</td><td>u-varzel</td><td>and-iron</td><td>BARZEL_FIRST_TOKEN_curse_next</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.22</td><td>12</td><td class='he-cell'>ואחות</td><td>va-achot</td><td>and-sister-of</td><td>ACHOT_FIRST_TOKEN</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.22</td><td>13</td><td class='he-cell'>תובל</td><td>tuval</td><td>Tuval</td><td>Tuval</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.22</td><td>14</td><td class='he-cell'>קין</td><td>qayin</td><td>Kayin</td><td>Kayin</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.22</td><td>15</td><td class='he-cell'>נעמה</td><td>naama</td><td>Naamah</td><td>NAAMAH_role_unstated_OPEN</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.23</td><td>0</td><td class='he-cell'>ויאמר</td><td>va-yomer</td><td>and-he-said</td><td>song_opens</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.23</td><td>1</td><td class='he-cell'>למך</td><td>lemekh</td><td>Lamech</td><td>Lamech</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.23</td><td>2</td><td class='he-cell'>לנשיו</td><td>le-nashay-v</td><td>to-his-wives</td><td>to-his-wives</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.23</td><td>3</td><td class='he-cell'>עדה</td><td>ada</td><td>Adah</td><td>Adah</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.23</td><td>4</td><td class='he-cell'>וצלה</td><td>ve-tzila</td><td>and-Tzillah</td><td>and-Tzillah</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.23</td><td>5</td><td class='he-cell'>שמען</td><td>shemaan</td><td>hear</td><td>FIRST_HUMAN_IMPERATIVE</td><td>logic_bearing</td><td class='cite'>TIR-027</td></tr>
+<tr><td>Gen.4.23</td><td>6</td><td class='he-cell'>קולי</td><td>qoli-y</td><td>my-voice</td><td>qol_thread_station_5</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.23</td><td>7</td><td class='he-cell'>נשי</td><td>neshe</td><td>wives-of</td><td>wives-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.23</td><td>8</td><td class='he-cell'>למך</td><td>lemekh</td><td>Lamech</td><td>Lamech</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.23</td><td>9</td><td class='he-cell'>האזנה</td><td>hazena</td><td>give-ear</td><td>IMPERATIVE_PAIR_give_ear</td><td>logic_bearing</td><td class='cite'>TIR-027</td></tr>
+<tr><td>Gen.4.23</td><td>10</td><td class='he-cell'>אמרתי</td><td>imrati-y</td><td>my-speech</td><td>my-speech</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.23</td><td>11</td><td class='he-cell'>כי</td><td>ki</td><td>for</td><td>for</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.23</td><td>12</td><td class='he-cell'>איש</td><td>ish</td><td>a-man</td><td>a-man</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.23</td><td>13</td><td class='he-cell'>הרגתי</td><td>haragti</td><td>I-have-killed</td><td>HARAG_token_4_INSIDE_QUOTE</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.23</td><td>14</td><td class='he-cell'>לפצעי</td><td>le-fitzi-y</td><td>for-my-wound</td><td>wound_talion_pair_word</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.23</td><td>15</td><td class='he-cell'>וילד</td><td>ve-yeled</td><td>and-a-boy</td><td>and-a-boy</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.23</td><td>16</td><td class='he-cell'>לחברתי</td><td>le-chaburati-y</td><td>for-my-bruise</td><td>bruise_talion_pair_word</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.24</td><td>0</td><td class='he-cell'>כי</td><td>ki</td><td>if</td><td>quote_opens</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.24</td><td>1</td><td class='he-cell'>שבעתים</td><td>shivatayim</td><td>sevenfold</td><td>QUOTE_shivatayim_two_torah_tokens</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.24</td><td>2</td><td class='he-cell'>יקם</td><td>yuqam</td><td>shall-be-avenged</td><td>QUOTE_yuqam_hophal</td><td>logic_bearing</td><td class='cite'>TIR-032</td></tr>
+<tr><td>Gen.4.24</td><td>3</td><td class='he-cell'>קין</td><td>qayin</td><td>Cain</td><td>QUOTE_target_kayin</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.24</td><td>4</td><td class='he-cell'>ולמך</td><td>ve-lemekh</td><td>then-Lamech</td><td>ISSUER_SWAP_self_directed</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.24</td><td>5</td><td class='he-cell'>שבעים</td><td>shivim</td><td>seventy</td><td>SEVENTY_inflation</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.24</td><td>6</td><td class='he-cell'>ושבעה</td><td>ve-shiva</td><td>and-seven</td><td>AND_SEVEN_x11_no_ratification_OPEN</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.25</td><td>0</td><td class='he-cell'>וידע</td><td>va-yeda</td><td>and-he-knew</td><td>know_formula_eden_pair</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.25</td><td>1</td><td class='he-cell'>אדם</td><td>adam</td><td>Adam</td><td>Adam</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.25</td><td>2</td><td class='he-cell'>עוד</td><td>od</td><td>again</td><td>AGAIN_over_the_gap</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.25</td><td>3</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.4.25</td><td>4</td><td class='he-cell'>אשתו</td><td>isht-o</td><td>his-wife</td><td>his-wife</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.25</td><td>5</td><td class='he-cell'>ותלד</td><td>va-teled</td><td>and-she-bore</td><td>birth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.25</td><td>6</td><td class='he-cell'>בן</td><td>ben</td><td>son</td><td>son</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.25</td><td>7</td><td class='he-cell'>ותקרא</td><td>va-tiqra</td><td>and-she-called</td><td>MOTHER_NAMES_va_tiqra</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.25</td><td>8</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.4.25</td><td>9</td><td class='he-cell'>שמו</td><td>shem-o</td><td>his-name</td><td>his-name</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.25</td><td>10</td><td class='he-cell'>שת</td><td>shet</td><td>Shet</td><td>SHET_named</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.25</td><td>11</td><td class='he-cell'>כי</td><td>ki</td><td>for</td><td>for</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.25</td><td>12</td><td class='he-cell'>שת</td><td>shat</td><td>has-SET</td><td>SHAT_3_15_ashit_root</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.25</td><td>13</td><td class='he-cell'>לי</td><td>li-y</td><td>to-me</td><td>to-me</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.25</td><td>14</td><td class='he-cell'>אלהים</td><td>Elohim</td><td>God</td><td>ELOHIM_name_switch_from_4_1</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.25</td><td>15</td><td class='he-cell'>זרע</td><td>zera</td><td>seed</td><td>ZERA_3_15_word</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.25</td><td>16</td><td class='he-cell'>אחר</td><td>acher</td><td>another</td><td>another</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.25</td><td>17</td><td class='he-cell'>תחת</td><td>tachat</td><td>in-place-of</td><td>TACHAT_replacement_debut</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.25</td><td>18</td><td class='he-cell'>הבל</td><td>hevel</td><td>Abel</td><td>Abel</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.25</td><td>19</td><td class='he-cell'>כי</td><td>ki</td><td>for</td><td>for</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.25</td><td>20</td><td class='he-cell'>הרגו</td><td>harag-o</td><td>killed-him</td><td>MURDER_NAMED_first_human_testimony</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.25</td><td>21</td><td class='he-cell'>קין</td><td>qayin</td><td>Cain</td><td>Cain</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.26</td><td>0</td><td class='he-cell'>ולשת</td><td>u-le-shet</td><td>and-to-Seth</td><td>to-Seth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.26</td><td>1</td><td class='he-cell'>גם</td><td>gam</td><td>also</td><td>also_thread_closes</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.26</td><td>2</td><td class='he-cell'>הוא</td><td>hu</td><td>he</td><td>he</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.26</td><td>3</td><td class='he-cell'>ילד</td><td>yulad</td><td>was-born</td><td>passive_birth_bracket</td><td>logic_bearing</td><td class='cite'>TIR-032</td></tr>
+<tr><td>Gen.4.26</td><td>4</td><td class='he-cell'>בן</td><td>ben</td><td>son</td><td>son</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.26</td><td>5</td><td class='he-cell'>ויקרא</td><td>va-yiqra</td><td>and-he-called</td><td>FATHER_NAMES</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.26</td><td>6</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.4.26</td><td>7</td><td class='he-cell'>שמו</td><td>shem-o</td><td>his-name</td><td>his-name</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.26</td><td>8</td><td class='he-cell'>אנוש</td><td>enosh</td><td>Enosh</td><td>ENOSH_frail_third_word_for_man</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.26</td><td>9</td><td class='he-cell'>אז</td><td>az</td><td>then</td><td>AZ_FIRST_TOKEN</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.26</td><td>10</td><td class='he-cell'>הוחל</td><td>huchal</td><td>was-begun</td><td>HUCHAL_lexical_fork_OPEN</td><td>logic_bearing</td><td class='cite'>TIR-032</td></tr>
+<tr><td>Gen.4.26</td><td>11</td><td class='he-cell'>לקרא</td><td>li-qero</td><td>to-call</td><td>to-call</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.26</td><td>12</td><td class='he-cell'>בשם</td><td>be-shem</td><td>in-name-of</td><td>in-name-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.4.26</td><td>13</td><td class='he-cell'>יהוה</td><td>YHWH</td><td>YHWH</td><td>YHWH_returns_at_the_formula</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_13_cain_line_seth — Cain&#x27;s line and Seth: the first city, the crafts, seventy-seven, calling on the Name (4:17-26) [frozen]
+
+final state: WORLD=[&#x27;ir&#x27;] (+4 presupposed) | REGISTRY={&#x27;ir&#x27;: &#x27;Chanokh&#x27;, &#x27;shet&#x27;: &#x27;Shet&#x27;, &#x27;enosh&#x27;: &#x27;Enosh&#x27;} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[&#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;spec_delta&#x27;, &#x27;named_before_any_presence&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;named_before_any_presence&#x27;]
+
+=== S1 — The wanderer builds — the first human WORLD install: after STEP_Gn_4_17
+    וַיְהִי בֹּנֶה עִיר (va-yehi boneh ir)
+    PASS  WORLD = {ir}  (created=[&#x27;ir&#x27;])
+    PASS  REGISTRY: ir-&gt;Chanokh (1 writes)  (names={&#x27;ir&#x27;: &#x27;Chanokh&#x27;} writes=1)
+    PASS  SPECS empty  (queue=0)
+    PASS  flags kayin/eshet_kayin as read-before-install.  (flagged=[&#x27;eshet_kayin&#x27;, &#x27;kayin&#x27;])
+
+=== S2 — The begetting chain leaves no register trace: after STEP_Gn_4_18
+    וּמְתוּשָׁאֵל יָלַד אֶת־לָמֶךְ (u-Metushael yalad et-Lamekh)
+    PASS  WORLD = {ir}  (created=[&#x27;ir&#x27;])
+    PASS  SPECS empty.  (queue=0)
+
+=== S3 — Polygamy recorded, not evaluated: after STEP_Gn_4_19
+    שְׁתֵּי נָשִׁים (shtei nashim)
+    PASS  Facts shte_nashim_le_lemekh/shem_ha_achat_adah/shem_ha_shenit_tzilah HOLD  (3 facts)
+    PASS  SPECS empty.  (queue=0)
+
+=== S4 — The crafts registry standing: after STEP_Gn_4_22
+    אֲבִי … אֲבִי … לֹטֵשׁ (avi … avi … lotesh)
+    PASS  Facts avi_yoshev_ohel_u_mikneh/avi_kol_tofes_kinor_ve_ugav/lotesh_kol_choresh_nechoshet_u_varzel/achot_tuval_kayin_naamah HOLD  (8 facts)
+    PASS  WORLD = {ir}.  (created=[&#x27;ir&#x27;])
+
+=== S5 — The sword-song — a human pushes the queue: after STEP_Gn_4_23
+    שְׁמַעַן קוֹלִי (shemaan qoli)
+    PASS  LET(shema(neshei_lemekh, qol_lemekh)) pushed and OPEN  (queue=[&#x27;shema(neshei_lemekh, qol_lemekh)&#x27;])
+    PASS  Facts ish_haragti_le_fitzi_ve_yeled_le_chaburati HOLD.  (9 facts)
+
+=== S6 — Seventy-seven — the machine flags and refuses: after STEP_Gn_4_24
+    שִׁבְעִים וְשִׁבְעָה (shivim ve-shivah)
+    PASS  machine flags spec-delta  (flags=[&#x27;read_before_install&#x27;, &#x27;spec_delta&#x27;])
+    PASS  LET(shema(neshei_lemekh, qol_lemekh)) pushed and OPEN.  (queue=[&#x27;shema(neshei_lemekh, qol_lemekh)&#x27;])
+
+=== S7 — The replacement seed: after STEP_Gn_4_25
+    זֶרַע אַחֵר תַּחַת הֶבֶל (zera acher tachat Hevel)
+    PASS  Facts shat_li_elohim_zera_acher_tachat_hevel/harago_kayin_named_in_speech HOLD  (11 facts)
+    PASS  flags adam/eshet_adam as read-before-install.  (flagged=[&#x27;adam&#x27;, &#x27;eshet_adam&#x27;, &#x27;eshet_kayin&#x27;, &#x27;kayin&#x27;])
+
+=== S8 — The calling and the fork — the unit ends owing: after STEP_Gn_4_26
+    אָז הוּחַל לִקְרֹא בְּשֵׁם יְהוָה (az huchal likro be-shem YHWH)
+    PASS  WORLD = {ir}  (created=[&#x27;ir&#x27;])
+    PASS  Facts huchal_likro_be_shem_YHWH HOLD  (12 facts)
+    PASS  LET(shema(neshei_lemekh, qol_lemekh)) pushed and OPEN.  (queue=[&#x27;shema(neshei_lemekh, qol_lemekh)&#x27;])
+
+=== S9_negative — Negative: the machine&#x27;s ? stays guarded
+    PASS  imperfect-in-command parsed as LET? (question mark kept)  (mood=LET?)
+    PASS  auto-upgrade REFUSED  (TIR-028: LET? never auto-upgrades to LET — a per-unit judgme...)
+    PASS  upgrade WITH citation allowed  (cite=per-unit judgment (owner), TIR-028 resolution)
+
+=== S10_negative — Negative: flags never block
+    PASS  commit proceeded (not blocked)  (LEDGER=[99])
+    PASS  pattern deviation FLAGGED  (flags=[&#x27;commit_without_test&#x27;])
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_13_cain_line_seth.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_13_cain_line_seth — 4:17-26
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_13_cain_line_seth.yaml) is CANONICAL (Pre-Code);
+# this file is a derived, runnable rendering. Do not edit — regenerate. The
+# assertion block at the bottom is baked from the Stage D interpreter&#x27;s
+# actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Cain&#x27;s line and Seth: the first city, the crafts, seventy-seven, calling on the Name (4:17-26)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_13_cain_line_seth&quot;)
+
+# -------------------------- Gen.4.17 · FIRST_CITY_BUILT_NAMED --------------
+# וַיֵּדַע קַיִן אֶת־אִשְׁתּוֹ וַתַּהַר וַתֵּלֶד אֶת־חֲנוֹךְ וַיְהִי בֹּנֶה
+# עִיר וַיִּקְרָא שֵׁם הָעִיר כְּשֵׁם בְּנוֹ חֲנוֹךְ
+# &quot;And Cain knew his wife; and she conceived, and bore Enoch; and he builded
+# a city, and called the name of the city after the name of his son Enoch.&quot;
+m.step(&quot;Gen.4.17&quot;)
+# ‹וַיֵּדַע קַיִן אֶת־אִשְׁתּוֹ וַתַּהַר וַתֵּלֶד אֶת־חֲנוֹךְ› (“and-he-knew
+# Cain obj-marker his-wife and-she-conceived and-she-bore obj-marker Enoch”)
+# — event: bear — agent wife-of-Cain; theme Enoch
+m.event(&quot;bear&quot;, agent=&quot;eshet_kayin&quot;, themes=[&quot;chanokh&quot;])
+# ‹וַיְהִי בֹּנֶה עִיר› (“and-he-was building city”) — the world gains: city
+m.install(&quot;ir&quot;)
+# ‹וַיִּקְרָא שֵׁם הָעִיר כְּשֵׁם בְּנוֹ חֲנוֹךְ› (“and-he-called name-of
+# the-city like-name-of his-son Enoch”) — named: city := Chanokh
+m.name(&quot;ir&quot;, &quot;Chanokh&quot;)
+# reads without prior install (flag, not fix): Cain, wife-of-Cain
+m.presupposed(&quot;kayin&quot;, &quot;eshet_kayin&quot;)
+
+# -------------------------- Gen.4.18 · BEGETTING_CHAIN_FOUR_LINKS ----------
+# וַיִּוָּלֵד לַחֲנוֹךְ אֶת־עִירָד וְעִירָד יָלַד אֶת־מְחוּיָאֵל
+# וּמְחִיּיָאֵל יָלַד אֶת־מְתוּשָׁאֵל וּמְתוּשָׁאֵל יָלַד אֶת־לָמֶךְ
+# &quot;And unto Enoch was born Irad; and Irad begot Mehujael; and Mehujael begot
+# Methushael; and Methushael begot Lamech.&quot;
+m.step(&quot;Gen.4.18&quot;)
+# ‹וַיִּוָּלֵד לַחֲנוֹךְ אֶת־עִירָד› (“and-was-born to-Enoch obj-marker
+# Irad”) — event: born — theme Irad
+m.event(&quot;born&quot;, themes=[&quot;irad&quot;])
+# ‹וְעִירָד יָלַד אֶת־מְחוּיָאֵל› (“and-Irad begot obj-marker Mehujael”) —
+# event: beget — agent Irad; theme Mehujael
+m.event(&quot;beget&quot;, agent=&quot;irad&quot;, themes=[&quot;mechuyael&quot;])
+# ‹וּמְחִיּיָאֵל יָלַד אֶת־מְתוּשָׁאֵל› (“and-Mehijael begot obj-marker
+# Methusael”) — event: beget — agent Mehujael; theme Methusael
+m.event(&quot;beget&quot;, agent=&quot;mechuyael&quot;, themes=[&quot;metushael&quot;])
+# ‹וּמְתוּשָׁאֵל יָלַד אֶת־לָמֶךְ› (“and-Methusael begot obj-marker Lamech”)
+# — event: beget — agent Methusael; theme Lamech
+m.event(&quot;beget&quot;, agent=&quot;metushael&quot;, themes=[&quot;lemekh&quot;])
+
+# -------------------------- Gen.4.19 · FIRST_POLYGAMY ----------------------
+# וַיִּקַּח־לוֹ לֶמֶךְ שְׁתֵּי נָשִׁים שֵׁם הָאַחַת עָדָה וְשֵׁם הַשֵּׁנִית
+# צִלָּה
+# &quot;And Lamech took unto him two wives; the name of the one was Adah, and the
+# name of the other Zillah.&quot;
+m.step(&quot;Gen.4.19&quot;)
+# ‹וַיִּקַּח־לוֹ לֶמֶךְ שְׁתֵּי נָשִׁים› (“and-he-took for-himself Lamech
+# two wives”) — event: take — agent Lamech; theme two-of-wives
+m.event(&quot;take&quot;, agent=&quot;lemekh&quot;, themes=[&quot;shte_nashim&quot;])
+# ‹שֵׁם הָאַחַת עָדָה וְשֵׁם הַשֵּׁנִית צִלָּה› (“name-of the-first Adah
+# and-name-of the-second Tzillah”) — fact holds: two-of-wives-to-Lamech;
+# name-of-the-first-Adah; name-of-the-second-Tzillah
+m.fact(&quot;shte_nashim_le_lemekh&quot;,
+       &quot;shem_ha_achat_adah&quot;,
+       &quot;shem_ha_shenit_tzilah&quot;)
+
+# -------------------------- Gen.4.20 · OFFICE_TENT_AND_HERD ----------------
+# וַתֵּלֶד עָדָה אֶת־יָבָל הוּא הָיָה אֲבִי יֹשֵׁב אֹהֶל וּמִקְנֶה
+# &quot;And Adah bore Jabal; he was the father of such as dwell in tents and have
+# cattle.&quot;
+m.step(&quot;Gen.4.20&quot;)
+# ‹וַתֵּלֶד עָדָה אֶת־יָבָל› (“and-she-bore Adah obj-marker Yaval”) — event:
+# bear — agent Adah; theme Yaval
+m.event(&quot;bear&quot;, agent=&quot;adah&quot;, themes=[&quot;yaval&quot;])
+# ‹הוּא הָיָה אֲבִי יֹשֵׁב אֹהֶל וּמִקְנֶה› (“he was father-of dweller-of
+# tent and-herds”) — fact holds: father-of-dweller-of-tent-and-
+# livestock(Yaval)
+m.fact(&quot;avi_yoshev_ohel_u_mikneh(yaval)&quot;)
+
+# -------------------------- Gen.4.21 · OFFICE_HARP_AND_PIPE ----------------
+# וְשֵׁם אָחִיו יוּבָל הוּא הָיָה אֲבִי כָּל־תֹּפֵשׂ כִּנּוֹר וְעוּגָב
+# &quot;And his brother&#x27;s name was Jubal; he was the father of all such as handle
+# the harp and pipe.&quot;
+m.step(&quot;Gen.4.21&quot;)
+# ‹וְשֵׁם אָחִיו יוּבָל הוּא הָיָה אֲבִי כָּל־תֹּפֵשׂ כִּנּוֹר וְעוּגָב›
+# (“and-name-of his-brother Yuval he was father-of all handler-of harp and-
+# pipe”) — fact holds: name-of-his-brother-Yuval; father-of-all-handler-of-
+# harp-and-pipe(Yuval)
+m.fact(&quot;shem_achiv_yuval&quot;,
+       &quot;avi_kol_tofes_kinor_ve_ugav(yuval)&quot;)
+
+# -------------------------- Gen.4.22 · OFFICE_BRONZE_IRON_SISTER -----------
+# וְצִלָּה גַם־הִוא יָלְדָה אֶת־תּוּבַל קַיִן לֹטֵשׁ כָּל־חֹרֵשׁ נְחֹשֶׁת
+# וּבַרְזֶל וַאֲחוֹת תּוּבַל־קַיִן נַעֲמָה
+# &quot;And Zillah, she also bore Tubal-cain, the forger of every cutting
+# instrument of brass and iron; and the sister of Tubal-cain was Naamah.&quot;
+m.step(&quot;Gen.4.22&quot;)
+# ‹וְצִלָּה גַם־הִוא יָלְדָה אֶת־תּוּבַל קַיִן› (“and-Tzillah also she bore
+# obj-marker Tuval Kayin”) — event: bear — agent Tzillah; theme Tuval-Cain
+m.event(&quot;bear&quot;, agent=&quot;tzilah&quot;, themes=[&quot;tuval_kayin&quot;])
+# ‹לֹטֵשׁ כָּל־חֹרֵשׁ נְחֹשֶׁת וּבַרְזֶל וַאֲחוֹת תּוּבַל־קַיִן נַעֲמָה›
+# (“hammerer-of every craftsman-of bronze and-iron and-sister-of Tuval Kayin
+# Naamah”) — fact holds: hammerer-of-all-craftsman-of-bronze-and-iron(Tuval-
+# Cain); sister-of-Tuval-Cain-Naamah
+m.fact(&quot;lotesh_kol_choresh_nechoshet_u_varzel(tuval_kayin)&quot;,
+       &quot;achot_tuval_kayin_naamah&quot;)
+
+# -------------------------- Gen.4.23 · SWORD_SONG_FIRST_HUMAN_IMPERATIVES --
+# וַיֹּאמֶר לֶמֶךְ לְנָשָׁיו עָדָה וְצִלָּה שְׁמַעַן קוֹלִי נְשֵׁי לֶמֶךְ
+# הַאְזֵנָּה אִמְרָתִי כִּי אִישׁ הָרַגְתִּי לְפִצְעִי וְיֶלֶד לְחַבֻּרָתִי
+# &quot;And Lamech said unto his wives: Adah and Zillah, hear my voice; ye wives
+# of Lamech, hearken unto my speech; for I have slain a man for wounding me,
+# and a young man for bruising me.&quot;
+m.step(&quot;Gen.4.23&quot;)
+# ‹וַיֹּאמֶר לֶמֶךְ לְנָשָׁיו עָדָה וְצִלָּה› (“and-he-said Lamech to-his-
+# wives Adah and-Tzillah”) — event: say — agent Lamech; theme wives-of-
+# Lamech
+m.event(&quot;say&quot;, agent=&quot;lemekh&quot;, themes=[&quot;neshei_lemekh&quot;])
+# ‹שְׁמַעַן קוֹלִי … הַאְזֵנָּה אִמְרָתִי› (“hear my-voice … give-ear my-
+# speech”) — Lamech speaks a demand — LET: hear(wives-of-Lamech, voice-
+# Lamech)
+m.declare(&quot;lemekh&quot;, &quot;LET&quot;,
+          &quot;shema(neshei_lemekh, qol_lemekh)&quot;)
+# ‹כִּי אִישׁ הָרַגְתִּי לְפִצְעִי וְיֶלֶד לְחַבֻּרָתִי› (“for a-man I-have-
+# killed for-my-wound and-a-boy for-my-bruise”) — fact holds: a-man-I-have-
+# killed-to-fitzi-and-a-boy-to-my-wound
+m.fact(&quot;ish_haragti_le_fitzi_ve_yeled_le_chaburati&quot;)
+
+# -------------------------- Gen.4.24 · QUOTE_DIFF_SEVENTY_SEVEN ------------
+# כִּי שִׁבְעָתַיִם יֻקַּם־קָיִן וְלֶמֶךְ שִׁבְעִים וְשִׁבְעָה
+# &quot;If Cain shall be avenged sevenfold, truly Lamech seventy and sevenfold.&quot;
+m.step(&quot;Gen.4.24&quot;)
+# ‹כִּי שִׁבְעָתַיִם יֻקַּם־קָיִן וְלֶמֶךְ שִׁבְעִים וְשִׁבְעָה› (“if
+# sevenfold shall-be-avenged Cain then-Lamech seventy and-seven”) — spec-
+# delta — spec said all-slayer Kayin sevenfold shall-be-avenged — issuer
+# the-LORD, decree with mark (4:15, frozen gen-12), delivery says for
+# sevenfold shall-be-avenged-Kayin and-Lemekh seventy and-seven — issuer
+# Lamech, boast, multiplier x11, target self, ratification NONE (4:24)
+m.spec_delta(&quot;kol-horeg Kayin shivatayim yukam — issuer YHWH, decree with mark (4:15, frozen gen_12)&quot;,
+             &quot;ki shivatayim yukam-Kayin ve-Lemekh shivim ve-shivah — issuer lemekh, boast, multiplier x11, target self, ratification NONE (4:24)&quot;)
+
+# -------------------------- Gen.4.25 · SETH_REPLACEMENT_SEED ---------------
+# וַיֵּדַע אָדָם עוֹד אֶת־אִשְׁתּוֹ וַתֵּלֶד בֵּן וַתִּקְרָא אֶת־שְׁמוֹ שֵׁת
+# כִּי שָׁת־לִי אֱלֹהִים זֶרַע אַחֵר תַּחַת הֶבֶל כִּי הֲרָגוֹ קָיִן
+# &quot;And Adam knew his wife again; and she bore a son, and called his name
+# Seth: &#x27;for God hath appointed me another seed instead of Abel; for Cain
+# slew him.&#x27;&quot;
+m.step(&quot;Gen.4.25&quot;)
+# ‹וַיֵּדַע אָדָם עוֹד אֶת־אִשְׁתּוֹ וַתֵּלֶד בֵּן› (“and-he-knew Adam again
+# obj-marker his-wife and-she-bore son”) — event: bear — agent wife-of-Adam;
+# theme Shet
+m.event(&quot;bear&quot;, agent=&quot;eshet_adam&quot;, themes=[&quot;shet&quot;])
+# ‹וַתִּקְרָא אֶת־שְׁמוֹ שֵׁת› (“and-she-called obj-marker his-name Shet”) —
+# named: Shet := Shet
+m.name(&quot;shet&quot;, &quot;Shet&quot;)
+# ‹כִּי שָׁת־לִי אֱלֹהִים זֶרַע אַחֵר תַּחַת הֶבֶל כִּי הֲרָגוֹ קָיִן› (“for
+# Shet to-me God seed another in-place-of Abel for killed-him Cain”) — fact
+# holds: has-SET-to-me-God-seed-another-place-of-Abel; slew-him-Cain-named-
+# in-speech
+m.fact(&quot;shat_li_elohim_zera_acher_tachat_hevel&quot;,
+       &quot;harago_kayin_named_in_speech&quot;)
+# reads without prior install (flag, not fix): Adam, wife-of-Adam
+m.presupposed(&quot;adam&quot;, &quot;eshet_adam&quot;)
+
+# -------------------------- Gen.4.26 · ENOSH_CALLING_ON_THE_NAME -----------
+# וּלְשֵׁת גַּם־הוּא יֻלַּד־בֵּן וַיִּקְרָא אֶת־שְׁמוֹ אֱנוֹשׁ אָז הוּחַל
+# לִקְרֹא בְּשֵׁם יְהוָה
+# &quot;And to Seth, to him also there was born a son; and he called his name
+# Enosh; then began men to call upon the name of the LORD.&quot;
+m.step(&quot;Gen.4.26&quot;)
+# ‹וּלְשֵׁת גַּם־הוּא יֻלַּד־בֵּן› (“and-to-Seth also he was-born son”) —
+# event: born — theme Enosh
+m.event(&quot;born&quot;, themes=[&quot;enosh&quot;])
+# ‹וַיִּקְרָא אֶת־שְׁמוֹ אֱנוֹשׁ› (“and-he-called obj-marker his-name
+# Enosh”) — named: Enosh := Enosh
+m.name(&quot;enosh&quot;, &quot;Enosh&quot;)
+# ‹אָז הוּחַל לִקְרֹא בְּשֵׁם יְהוָה› (“then was-begun to-call in-name-of
+# YHWH”) — fact holds: was-begun-to-call-in-name-of-the-LORD
+m.fact(&quot;huchal_likro_be_shem_YHWH&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == {&#x27;ir&#x27;}
+    assert m.presupposed_set() == {&#x27;kayin&#x27;, &#x27;eshet_adam&#x27;, &#x27;eshet_kayin&#x27;, &#x27;adam&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {&#x27;ir&#x27;: &#x27;Chanokh&#x27;, &#x27;shet&#x27;: &#x27;Shet&#x27;, &#x27;enosh&#x27;: &#x27;Enosh&#x27;}
+    assert m.REGISTRY[&quot;writes&quot;] == 3
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;shema(neshei_lemekh, qol_lemekh)&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 1
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;read_before_install&#x27;: 4, &#x27;spec_delta&#x27;: 1, &#x27;named_before_any_presence&#x27;: 2}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;shte_nashim_le_lemekh&#x27;, &#x27;shem_ha_achat_adah&#x27;, &#x27;shem_ha_shenit_tzilah&#x27;, &#x27;avi_yoshev_ohel_u_mikneh(yaval)&#x27;, &#x27;shem_achiv_yuval&#x27;, &#x27;avi_kol_tofes_kinor_ve_ugav(yuval)&#x27;, &#x27;lotesh_kol_choresh_nechoshet_u_varzel(tuval_kayin)&#x27;, &#x27;achot_tuval_kayin_naamah&#x27;, &#x27;ish_haragti_le_fitzi_ve_yeled_le_chaburati&#x27;, &#x27;shat_li_elohim_zera_acher_tachat_hevel&#x27;, &#x27;harago_kayin_named_in_speech&#x27;, &#x27;huchal_likro_be_shem_YHWH&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 15
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre>
+<div class="note">FROZEN 2026-08-01 (owner order &quot;freeze all commit&quot;; derived same day): fourteenth frozen unit — CAIN&#x27;S LINE AND SETH, the corpus&#x27;s first genealogy unit; fourth extension-free derivation in a row. Central findings, all DB-verified before drafting: the WANDERER BUILDS THE FIRST CITY (ir tokens 1-2 in one verse; the build verb a participle — never finished; the naming verb spent on the city, for the son; the first HUMAN WORLD install); the crafts offices founded by template (shape-identical trees at 4:20-21; avi as office formula, BROKEN for the smith; first tokens: tent, harp, the Torah&#x27;s only pipe, bronze whose next stop is the Tabernacle, iron whose next stop is a curse; the herd-word carrying Kayin&#x27;s own name-root); the FIRST HUMAN IMPERATIVES (every prior imperative is divine blessing) demanding a hearing for a kill-boast the machine holds as testimony, not event — and Onkelos NEGATES; QUOTE-DIFF #2: the sevenfold decree quoted VERBATIM and inflated x11 by a human mouth with no ratification (shivatayim&#x27;s whole Torah census is the decree and this echo) — flagged, never installed; the REPLACEMENT SEED named with 3:15&#x27;s SET-verb (the root&#x27;s only other Gen 1-10 token) while the mother names the murder and switches the divine name; and the close: AZ&#x27;s own first token, worship&#x27;s formula agentless under the begin/profane LEXICAL FORK — Onkelos votes the dark side; the letter holds both; the machine ends with one install, one flag, one open HUMAN demand, and the fork standing.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

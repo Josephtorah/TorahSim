@@ -1,0 +1,462 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_48_bethel_ladder_vow — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_48_bethel_ladder_vow?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The Bethel ladder, the name write, and the first vow (28:10-22) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_48_bethel_ladder_vow</b> · Genesis 28:10-22 · derive  · phase </div>
+<div class="meta"><a href="../#Gen/28/10">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">וַיֵּצֵא יַעֲקֹב</span> · <i>va-yetze yaaqov</i> · &#x27;And Jacob went out&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DRAFT 2026-08-06 · SOLO ERA unit #1 (Claude coordinator+deriver; external fresh-context review before freeze per standing law). Span: 28:10–22, the natural Bethel boundary (29:1 opens the Haran arrival). 13 verses · 191 tokens (SNAPSHOT-verified). SNAPSHOT + debut_map. bar C. Conventions: step he: = plain (no accents/meteg; maqqef ־ per snapshot); tree halves = accents kept, morpheme slashes stripped; split at etnachta. Onkelos BUFFER PENDING. Instruments asleep (tov/shaah/tzaddik/nichoach 0 hits). UNIT SHAPE (the machine&#x27;s quietest ledger since the primeval units): ZERO volitives in the whole span (morph scan verified — no imperative, jussive, or cohortative anywhere). SPECS stays EMPTY all 13 steps: God speaks only 1cs commitments (promise-FACTS; the gen_32 demand-on-God fence never triggers because nothing is volitive), and Jacob answers with the Torah&#x27;s FIRST VOW — a conditional self-obligation installed as a standing HANDLER (lev_13 class: nothing demanded of the narrative present, no receipt owed). The unit&#x27;s one register motion is the NAME WRITE at 28:19 (first REGISTRY write since gen_45&#x27;s four wells). CARE-POINTS (filed before derivation; every ordinal below DB-verified): (1) 28:10 DEPARTURE. yatza 3318 tok50 va-yetze; Beer-sheva 884 tok9; charan 2771 toks 5→6 CONSECUTIVE — 27:43 mother&#x27;s &quot;flee to Haran&quot; → 28:10 his road (gen_47 landing-note pays). (2) 28:11 THE PLACE ×3. maqom 4725 toks 25-26-27 (six in-span, 25–30 — place-word saturation); paga 6293 tok2 (tok1=23:8 Machpelah &quot;entreat&quot;); SUN FRAME: shemesh 8121 tok4 SETS here — toks 1-2 = 15:12/15:17 the covenant-between-the-pieces sunset; tok5 = 32:32 the sun RISES at Peniel on his return: the exile is framed sunset→sunrise; even 68 tok3 (stones plural); meraashot 4763 tok1/2 — BOTH Torah tokens inside this unit (28:11, 28:18); shakhav 7901 tok10. (3) 28:12 THE DREAM DEBUT. chalam VERB 2492 tok1/18 DEBUT (the dream noun 2472 debuted at 20:3 with Avimelech; the verb is born HERE and then SLEEPS UNTIL JOSEPH: tok2 = 37:5 — the 31:10-11 Laban-cycle dreams use the NOUN, 2472 toks 3-4); sulam 5551 tok1/1 TORAH HAPAX (the ladder); mutzav 5324 tok6 hophal &quot;stationed.&quot; (4) 28:13 THE STATIONED LORD. nitzav 5324 tok7 — root toks 6→7 BACK-TO-BACK: the ladder is stationed, YHWH is stationed (prior career: 18:2 three men, 21:28-29 set-apart ewes, 24:13/43 servant at the well); ani YHWH elohe Avraham avikha ve-lohe Yitzchaq (self-identification FACT); shokhev 7901 tok11 — God names Jacob&#x27;s lying-place as the grant; etnena 5414 tok60 — give-verb toks 60-61-62 all IN-UNIT (28:13 grant / 28:20 vow-condition / 28:22 tithe-condition), extending gen_47&#x27;s 56-59: SEVEN give-tokens walk 27:28→28:22 (56=27:28, 57=27:37, 58-59=28:4, 60-61-62 here) blessing→sustenance→grant→promise→vow→tithe. All 1cs divine speech = COMMITMENT-FACT class, no push. (5) 28:14 THE DUST FORMULA. afar 6083 tok9 (toks 5-6 = 13:16 Abraham&#x27;s dust-promise ×2); paratz 6555 tok1/7 DEBUT (spread abroad); four directions; ve-nivrakhu 1288 tok55 — bless-verb toks 50–55: SIX consecutive career tokens inside the gen_47+48 spans; the all-families formula RETURNS TO ITS 12:3 NIPHAL FORM (12:3 tok10 niphal → 18:18 tok17 niphal → 22:18/26:4 toks 20/30 hitpael → 28:14 tok55 niphal, now to Jacob). (6) 28:15 THE FIVE-FOLD PROMISE (1cs commitment-FACTS): anokhi imakh; u-shemartikha 8104 tok9 (keep); va-hashivotikha 7725 tok31 — return toks 31-32 IN-UNIT continue gen_47&#x27;s 29-30: the mother&#x27;s wrath-return wait-pair → God&#x27;s return-promise → the vow&#x27;s return-condition; lo eezavkha 5800 tok3 — leave-verb toks 1-2-3: 2:24 a man LEAVES father and mother → 24:27 God has not left covenant-kindness → &quot;I will not leave YOU,&quot; said to the man who has just left father and mother; ad asher im-asiti (performance horizon, God&#x27;s own). (7) 28:16 THE WAKING. yaqatz 3364 tok2 — tok1 = 9:24 NOAH, the only prior waker in the Torah (wine→curse vs dream→awe); shena 8142 tok1/2 DEBUT (sleep-noun); akhen 403 tok1/2 DEBUT (&quot;surely&quot;); yesh YHWH ba-maqom (maqom tok28); ve-anokhi lo yadati. (8) 28:17 THE FEAR DOUBLET. yare 3372 toks 9-10 — SAME ROOT twice in one verse (va-yira narrative + nora niphal participle &quot;awesome&quot;); bet Elohim (bayit 1004 tok34); shaar 8179 tok6 — gate career: 19:1 Sodom&#x27;s gate → 22:17 enemies&#x27; gate → 23:10/18 Machpelah witnesses → 24:60 seed-gate blessing → the GATE OF HEAVEN. (9) 28:18 THE PILLAR AND THE OIL. hishkim 7925 tok7 (full prior career toks 1-6: 19:2 Lot&#x27;s guests, 19:27 Abraham to the smoke, 20:8 Avimelech, 21:14 Hagar&#x27;s bread, 22:3 the Aqedah, 26:31 the Gerar oath); laqach 3947 tok85 (THE stone); sim 7760 toks 17-18 in-verse (sam placed → va-yasem set as pillar; tok19 = 28:22 samti vow-recall); matzeva 4676 tok1/16 DEBUT (pillar); yatzaq 3332 tok1/19 DEBUT (pour; career → Exodus casting and anointing); shemen 8081 tok1/106 — OIL ITSELF DEBUTS on this stone (career → anointing oil, menorah, the offerings). (10) 28:19 THE NAME WRITE. va-yiqra et-shem formula → REGISTRY write #1: name(ha_maqom_luz) := beit_el. Beit-El 1008 tok5 — toks 1-4 are ALL narrator-proleptic (12:8 ×2, 13:3 ×2 — Abraham&#x27;s altar site): the letter used the name four times before the naming; ulam 199 tok1/4 DEBUT (&quot;however&quot;) + luz 3870 tok1/3 (toks 2-3 = 35:6, 48:3 — Jacob himself retells the Luz naming). NAME entity slug ha_maqom_luz (the place formerly Luz); named_before_any_presence flag expected (gen_45 wells precedent — place never installed as entity). (11) 28:20 THE FIRST VOW. nadar 5087 tok1/15 + neder 5088 tok1/34 — verb + noun COGNATE-ACCUSATIVE DOUBLE DEBUT: the vow-institution is born here (noun career → Lev 27, Num 30 vow-law); conditions open: im yihye Elohim imadi; u-shemarani 8104 tok10 — keep-verb toks 9→10 CONSECUTIVE: God&#x27;s promise-word quoted straight back as the vow&#x27;s condition; ve-natan 5414 tok61; THE BREAD-AND-GARMENT PAIR: lechem 3899 tok7 — toks 5-6-7 = 25:34 the birthright-sale bread → 27:17 the deception bread → the vow&#x27;s bread; beged 899 tok4 — toks 1-2-3 = 24:53 bride-gifts → 27:15 the deception garments → 27:27 the smelled garments → the vow&#x27;s garment. BOTH vow-objects arrive with the deception as their immediately previous career token. (12) 28:21 conditions close: ve-shavti 7725 tok32 + ve-shalom 7965 tok4 (toks 1-3: 15:15 grave-peace to Abraham, 26:29/31 the Gerar oath-peace) el bet avi; then-clause: ve-haya YHWH li le-Elohim. (13) 28:22 THE HANDLER. even 68 tok5 (stone toks 3-4-5 in-unit; toks 6+ = 29:2-3 the WELL stone — the career bridges into the next unit); samti 7760 tok19; matzeva 4676 tok2; titen 5414 tok62; aser aasrenu 6237 toks 1-2/5 — tithe-VERB double debut, infinitive-absolute pair (&quot;I will surely tithe&quot;); the noun maaser 4643 tok1 = 14:20, Abram&#x27;s tithe to Malkitzedek: the grandfather tithed a priest, the grandson vows the tithe to God directly. Vow installed as standing HANDLER (lev_13 weqatal-chain class) — a WORLD fact, never a SPECS push. UNIT END: SPECS 0 throughout · REGISTRY 1 write (beit_el) · TESTS 0.</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (retro, oral-first era; record: logic/oral_audit/AUDIT_gen_48_2026-08-08.md; manifest verified 17/17 checkable, zero FAILED, one manual row). CROWNS (chain-attested + DB-verified). THE THREE PLACE-WORDS [G48-01/02, Kitzur Baal HaTurim; Chullin 91b named]: the place-word stands THREE times in the arrival verse (28:11 — &quot;he ENCOUNTERED the place... the stones OF THE PLACE... he lay down IN THE PLACE&quot;) = the three pilgrimage ascents of his children, counted whole on SNAPSHOT. THE QUENCHED SUN [G48-03, Kitzur]: כי בא השמש (&quot;for the sun had come&quot;) — the initials spell כבה (&quot;EXTINGUISHED&quot;): the early sunset in the first letters. THE ESCORT-ANGELS&#x27; TWO STATIONS [G48-04, Kitzur]: מלאכי אלהים (&quot;angels of God&quot;) exactly TWICE in the Torah — the ladder (28:12) and the camp that MEETS him at Machanaim (32:2): those who ascended at the exile&#x27;s first night come down to meet him at its end — the escort-exchange reading on a two-token census. THE ONE STATIONED-WORD [G48-05, Kitzur]: the passive stationed-form (&quot;a ladder STATIONED toward the ground&quot;) has ONE Torah token; the Masorah&#x27;s other two — Shechem&#x27;s oak (Judg 9:6) and the siege-post (Isa 29:3) — are Prophets-side: entry and exile in the word&#x27;s own later career. THE TORAH&#x27;S ONE &quot;AND BEHOLD — YHWH&quot; [G48-06, Kitzur]: the four-letter Name directly after &quot;and behold&quot; stands once in the Torah, stationed over the ladder (28:13); the Masorah&#x27;s other three (the plumb-wall, the sky-windows, the passing at Horeb) are all Prophets chariot-visions, named. ACCENTS AS RULED [G48-07/12/14/17, Minchat Shai]: השמימה (&quot;heavenward&quot;) with no pashta (the forward-leaning accent) — the verse&#x27;s rest sits on it; זה (&quot;THIS is none other&quot;) under revia (the resting dot); לחם (&quot;the vow&#x27;s bread&quot;) under tevir (the broken descending accent); שבע of Beer-sheva with the shin in pausal qamatz (the long a) — the printed patach and the segol book rejected in Minchat Shai&#x27;s own words, &quot;the wind shall carry them all.&quot; THE SEED-WORD&#x27;S BARE VAV [G48-08]: ובזרעך (&quot;and in your seed&quot;) — no meteg (the lengthening stroke) on the vav, as ruled. AGAINST THE ANOMALY [G48-09]: אעזבך (&quot;I will not LEAVE you&quot;) in hataf segol (the compound short e), not the Jerusalem manuscript&#x27;s hataf qamatz that Minchat Shai calls &quot;a great anomaly&quot; — SNAPSHOT sides with him (the twin, &quot;I will serve you&quot; of the wage, banked for the next unit). THE FULL WAKING [G48-10]: וייקץ (&quot;and Jacob AWOKE&quot;) with TWO yods per all the precise books and the Ramah&#x27;s Noah-verse precedent; the Masorah&#x27;s three lean wake-tokens — Samson&#x27;s, Solomon&#x27;s, the sleeper-psalm&#x27;s — all outside the Torah: the Torah wakes its sleepers full. THE CONGREGATION IN THE FINALS [G48-11, Kitzur]: the four words &quot;and Jacob AWOKE from his sleep and SAID&quot; end in the letters of צבור (&quot;congregation&quot;), in order — prayer heard only in community, read off the last letters at the house of God. THE SECOND SPLIT-ATTESTED STATION [G48-13]: ויצק (&quot;and he POURED oil&quot;) — the books divided on the tzadi: Or Torah soft, the custom dagesh (the doubling dot); SNAPSHOT reads it SOFT, joining Or Torah&#x27;s camp (the note&#x27;s own cross-reference to the pillar&#x27;s second anointing at 35:14 banked). THE FIRST VOWER [G48-15, Kitzur]: וידר (&quot;and he VOWED&quot;) exactly twice in the Torah — Bethel (28:20) and Israel&#x27;s vow at Hormah (Num 21:2); Jephthah&#x27;s is Prophets-side: the vow-psalm&#x27;s &quot;Mighty One of JACOB&quot; because he opened the vows — the census puts him first on the letter. THE HIGH PRIEST IN THE VOW&#x27;S GARMENT [G48-16, Kitzur; Bereshit Rabbah&#x27;s Michael exchange]: ללבש (&quot;to WEAR&quot;) — two Torah tokens: the vow&#x27;s garment (28:20) and the HIGH-PRIEST investiture clause (Lev 21:10, &quot;on whose head the anointing oil was poured... to WEAR the garments&quot;): the Jacob-as-high-priest teaching rides the pair — beside the oil this unit pours on a head-stone. INSTRUMENT GAP [G48-18, manual]: whether a CLOSED paragraph-break precedes &quot;and Jacob went out&quot; (28:10) — Sefer Tagi against the Spanish codices; the Kitzur reads the closedness as the flight&#x27;s own secrecy; paragraph layer uninstrumented. READINGS (named-only, unclaimed): the Kitzur&#x27;s ladder cluster — the ladder as Sinai, as the exiles&#x27; ends, as prayer&#x27;s voice, as the Temple ramp with its priests, as the throne-vision; the ascending-descending counted as the four kingdoms; &quot;from his sleep&quot; read &quot;from his study&quot;; dawn as the gate-opening hour of prayer; the tithe capped at a fifth; &quot;and you shall spread out&quot; as the splitting of the sea.</div>
+<div class="meta">confidence: </div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Reconstruction notice (2026-08-08)</td><td>This unit was frozen in the lean era (meta + scenarios + boot steps; no step table was written at freeze). The steps below were reconstructed on 2026-08-08 from the freeze-era draft note (meta.draft_note_en, displayed on the unit page), the era&#x27;s continue-docs, and git history. No new derivation claims are introduced: every entry restates recorded decisions, and the full per-verse machine record is the boot steps below.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Source + span + structure</td><td>Genesis 28:10-22, the natural Bethel boundary (29:1 opens the Haran arrival): 13 verses, 191 tokens, source-verified. Evidence: the SNAPSHOT database plus the debut-map attachment; trees split at the mid-verse rest; instruments asleep (zero instrument words in span).</td><td>reconstructed</td></tr>
+<tr><td><b>C</b></td><td>Draft path + review</td><td>Solo-era unit #1: Claude as coordinator and deriver in one, with an external fresh-context review before freeze per the standing law. Frozen 2026-08-06.</td><td>reconstructed</td></tr>
+<tr><td><b>D</b></td><td>Care-point ledger (distilled)</td><td>Thirteen care-points filed before derivation, every ordinal source-verified, including: the dream-VERB is born here and then sleeps until Joseph (the noun debuted earlier, with Abimelech); the ladder a Torah one-time word; the stationed pair back-to-back — the ladder is stationed, then YHWH is stationed; the all-families blessing formula RETURNS to its 12:3 passive form, now said to Jacob; the five-fold promise all first-person commitment-facts; the only prior waker in the Torah is Noah; the gate career closes at the gate of heaven; pillar, pour, and oil itself all debut on this stone; the vow&#x27;s two objects — bread and garment — each arrive with the deception scene as their immediately previous career token; the tithe-verb&#x27;s double debut answers the grandfather&#x27;s tithe to a priest with the grandson&#x27;s vow to God directly; the letter used the name Bethel four times, narrator-proleptic, before the naming.</td><td>reconstructed</td></tr>
+<tr><td><b>E</b></td><td>Machine design</td><td>The machine&#x27;s quietest ledger since the primeval units: ZERO volitives in the whole span (morph-scan verified — no imperative, jussive, or cohortative anywhere), so the queue stays EMPTY through all thirteen steps. God speaks only first-person commitments (promise-facts; the demand-on-God fence never triggers because nothing is volitive), and Jacob answers with the Torah&#x27;s FIRST VOW — a conditional self-obligation installed as a standing HANDLER (nothing demanded of the narrative present, no receipt owed). The unit&#x27;s one register motion is the NAME WRITE at 28:19: the place formerly Luz written as Bethel — the first registry write since the four wells — with the named-before-any-presence flag expected per the wells precedent. Zero tests.</td><td>reconstructed</td></tr>
+<tr><td><b>F</b></td><td>Freeze + later history</td><td>Frozen at commit c88b200 (2026-08-06, &quot;Freeze gen_48: Bethel ladder, name write, first vow&quot;). Oral audit 2026-08-08 folded same day (run 6 block 2): 17 VERIFIED, 0 FAILED, 1 manual row (record: logic/oral_audit/AUDIT_gen_48_2026-08-08.md; the crowns are displayed in the audit note above).</td><td>reconstructed</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_28_10 · Gen.28.10 · <span class='expr'>THE_DEPARTURE_BEER_SHEVA_TO_HARAN</span></h3>
+<p><span class="he">וַיֵּצֵא יַעֲקֹב מִבְּאֵר שָׁבַע וַיֵּלֶךְ חָרָנָה</span> · <i>va-yetze yaaqov mi-beer shava va-yelekh charanah</i> · And Jacob went out from Beer-sheva and went toward Haran.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֵּצֵ֥א יַעֲקֹ֖ב מִבְּאֵ֣ר שָׁ֑בַע</span> · <i>va-yetze yaaqov mi-beer shava</i> · and Jacob went out from Beer-sheva (etnachta on shava) [VERIFIED: SNAPSHOT Gen.28.10 idx3 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֵּ֖לֶךְ חָרָֽנָה</span> · <i>va-yelekh charanah</i> · and went toward Haran (verse-final charanah) [VERIFIED: SNAPSHOT Gen.28.10 idx4-5]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(yaaqov_departed_beer_sheva_toward_charan, t0) ∧ SPECS=[]</span><br><span class="gloss">= HOLDS(yaaqov-departed-beer-seven-toward-charan, t0) ∧ SPECS=[]</span><br>DEPARTURE [care 1]. va-yetze (3318 tok50/348) [VERIFIED: SNAPSHOT Gen.28.10 idx0 ordinal=50/348]; Beer-sheva (884 tok9/11) [VERIFIED: idx3 ordinal=9/11]; charanah (2771 tok6/7) [VERIFIED: idx5 ordinal=6/7] — Haran toks 5→6 CONSECUTIVE: 27:43 the mother&#x27;s &quot;flee to Haran&quot; → 28:10 his road (gen_47 landing-note pays; the letter still says GOING, va-yelekh 3212 tok56, not fleeing). Unit boots SPECS empty. REGISTRY 0. TESTS 0. Onkelos BUFFER PENDING.
+</td><td><span class="he">וַיֵּצֵא … וַיֵּלֶךְ חָרָנָה</span> · <i>va-yetze … va-yelekh charanah</i><br><span class="gloss">= and-yetze and-yelekh charanah</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Jacob leaves Beer-sheva toward Haran; SPECS empty.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_28_11 · Gen.28.11 · <span class='expr'>THE_PLACE_SUNSET_AND_STONE_PILLOW</span></h3>
+<p><span class="he">וַיִּפְגַּע בַּמָּקוֹם וַיָּלֶן שָׁם כִּי־בָא הַשֶּׁמֶשׁ וַיִּקַּח מֵאַבְנֵי הַמָּקוֹם וַיָּשֶׂם מְרַאֲשֹׁתָיו וַיִּשְׁכַּב בַּמָּקוֹם הַהוּא</span> · <i>va-yifga ba-maqom va-yalen sham ki-va ha-shemesh va-yiqach me-avne ha-maqom va-yasem meraashotav va-yishkav ba-maqom ha-hu</i> · And he lit upon the place and lodged there, for the sun had set; and he took of the stones of the place and set them at his head, and lay down in that place.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּפְגַּ֨ע בַּמָּק֜וֹם וַיָּ֤לֶן שָׁם֙ כִּי בָ֣א הַשֶּׁ֔מֶשׁ וַיִּקַּח֙ מֵאַבְנֵ֣י הַמָּק֔וֹם וַיָּ֖שֶׂם מְרַֽאֲשֹׁתָ֑יו</span> · <i>va-yifga ba-maqom va-yalen sham ki va ha-shemesh va-yiqach me-avne ha-maqom va-yasem meraashotav</i> · he lit upon the place and lodged there for the sun had set; took of its stones and set at his head (etnachta on meraashotav) [VERIFIED: SNAPSHOT Gen.28.11 idx11 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּשְׁכַּ֖ב בַּמָּק֥וֹם הַהֽוּא</span> · <i>va-yishkav ba-maqom ha-hu</i> · and lay down in that place (verse-final ha-hu) [VERIFIED: SNAPSHOT Gen.28.11 idx12-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(sun_set_stone_pillow_at_ha_maqom, t0) ∧ SPECS=[]</span><br><span class="gloss">= HOLDS(sun-set-stone-pillow-at-the-maqom, t0) ∧ SPECS=[]</span><br>THE PLACE ×3 + THE SUN FRAME [care 2]. maqom (4725 toks 25-26-27) [VERIFIED: SNAPSHOT Gen.28.11 idx1 ordinal=25/133; idx9 ordinal=26; idx13 ordinal=27] — six place-tokens in-span (25–30). va-yifga (6293 tok2/8) [VERIFIED: idx0 ordinal=2/8] — tok1 = 23:8 Machpelah &quot;entreat.&quot; ha-shemesh (8121 tok4/23) [VERIFIED: idx6 ordinal=4/23] SETS — sun toks 1-2 = 15:12/15:17, the covenant-between-the-pieces sunset; NEXT sun-token tok5 = 32:32 RISES at Peniel on his return: the exile is framed sunset→sunrise. me-avne (68 tok3/88) [VERIFIED: idx8 ordinal=3/88] stones plural. meraashotav (4763 tok1/2) [VERIFIED: idx11 ordinal=1/2] — BOTH Torah tokens of the head-place word are inside this unit (28:11, 28:18). va-yishkav (7901 tok10/62) [VERIFIED: idx12 ordinal=10/62]. SPECS empty. REGISTRY 0. TESTS 0.
+</td><td><span class="he">כִּי־בָא הַשֶּׁמֶשׁ … מֵאַבְנֵי הַמָּקוֹם</span> · <i>ki-va ha-shemesh … me-avne ha-maqom</i><br><span class="gloss">= when-and the-shemesh from-avne the-maqom</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Sunset, stone pillow, the place named three times; SPECS empty.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_28_12 · Gen.28.12 · <span class='expr'>THE_DREAM_DEBUT_AND_LADDER_HAPAX</span></h3>
+<p><span class="he">וַיַּחֲלֹם וְהִנֵּה סֻלָּם מֻצָּב אַרְצָה וְרֹאשׁוֹ מַגִּיעַ הַשָּׁמָיְמָה וְהִנֵּה מַלְאֲכֵי אֱלֹהִים עֹלִים וְיֹרְדִים בּוֹ</span> · <i>va-yachalom ve-hine sulam mutzav artzah ve-rosho magia ha-shamaymah ve-hine malakhe Elohim olim ve-yordim bo</i> · And he dreamed — and behold a ladder set earthward, its head reaching heavenward; and behold, angels of God ascending and descending on it.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַֽיַּחֲלֹ֗ם וְהִנֵּ֤ה סֻלָּם֙ מֻצָּ֣ב אַ֔רְצָה וְרֹאשׁ֖וֹ מַגִּ֣יעַ הַשָּׁמָ֑יְמָה</span> · <i>va-yachalom ve-hine sulam mutzav artzah ve-rosho magia ha-shamaymah</i> · he dreamed — a ladder set earthward, its head reaching heavenward (etnachta on ha-shamaymah) [VERIFIED: SNAPSHOT Gen.28.12 idx7 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהִנֵּה֙ מַלְאֲכֵ֣י אֱלֹהִ֔ים עֹלִ֥ים וְיֹרְדִ֖ים בּֽוֹ</span> · <i>ve-hine malakhe Elohim olim ve-yordim bo</i> · and behold angels of God ascending and descending on it (verse-final bo) [VERIFIED: SNAPSHOT Gen.28.12 idx8-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">dream_event(e12, yaaqov, sulam) — the Torah&#x27;s first narrated dream-act</span><br><span class="gloss">= dream-event(e12, yaaqov, sulam) — the Torah&#x27;s first narrated dream-act</span><br>THE DREAM DEBUT [care 3]. va-yachalom (2492 tok1/18 DEBUT) [VERIFIED: SNAPSHOT Gen.28.12 idx0 morph=HC/Vqw3ms ordinal=1/18] — the dream VERB is born here (the dream noun 2472 debuted at 20:3 with Avimelech; the verb then SLEEPS UNTIL JOSEPH — tok2 = 37:5; the 31:10-11 Laban-cycle dreams use the NOUN, 2472 toks 3-4).
+</td><td><span class="he">וַיַּחֲלֹם</span> · <i>va-yachalom</i><br><span class="gloss">= and-yachalom</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(sulam_earthward_head_heavenward_angels, t0) ∧ SPECS=[]</span><br><span class="gloss">= HOLDS(sulam-earthward-head-heavenward-angels, t0) ∧ SPECS=[]</span><br>THE LADDER [care 3]. sulam (5551 tok1/1) [VERIFIED: idx2 ordinal=1/1] — TORAH HAPAX. mutzav (5324 tok6/28 hophal VHsmsa &quot;stationed&quot;) [VERIFIED: idx3 morph=HVHsmsa ordinal=6/28]. Angels ascending and descending (olim ve-yordim, both participles). Dream content = FACTS. SPECS empty. REGISTRY 0. TESTS 0.
+</td><td><span class="he">סֻלָּם מֻצָּב אַרְצָה</span> · <i>sulam mutzav artzah</i><br><span class="gloss">= sulam mutzav artzah</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">First dream in the Torah; ladder hapax; SPECS empty.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_28_13 · Gen.28.13 · <span class='expr'>THE_STATIONED_LORD_AND_LAND_COMMITMENT</span></h3>
+<p><span class="he">וְהִנֵּה יְהוָה נִצָּב עָלָיו וַיֹּאמַר אֲנִי יְהוָה אֱלֹהֵי אַבְרָהָם אָבִיךָ וֵאלֹהֵי יִצְחָק הָאָרֶץ אֲשֶׁר אַתָּה שֹׁכֵב עָלֶיהָ לְךָ אֶתְּנֶנָּה וּלְזַרְעֶךָ</span> · <i>ve-hine YHWH nitzav alav va-yomar ani YHWH elohe avraham avikha ve-lohe yitzchaq ha-aretz asher ata shokhev aleha lekha etnenah u-le-zarekha</i> · And behold, YHWH stood over him and said: I am YHWH, God of Abraham your father and God of Isaac; the land on which you lie, to you I will give it and to your seed.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהִנֵּ֨ה יְהוָ֜ה נִצָּ֣ב עָלָיו֮ וַיֹּאמַר֒ אֲנִ֣י יְהוָ֗ה אֱלֹהֵי֙ אַבְרָהָ֣ם אָבִ֔יךָ וֵאלֹהֵ֖י יִצְחָ֑ק</span> · <i>ve-hine YHWH nitzav alav va-yomar ani YHWH elohe avraham avikha ve-lohe yitzchaq</i> · and behold YHWH stood over him: I am YHWH, God of Abraham your father and God of Isaac (etnachta on yitzchaq) [VERIFIED: SNAPSHOT Gen.28.13 idx11 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">הָאָ֗רֶץ אֲשֶׁ֤ר אַתָּה֙ שֹׁכֵ֣ב עָלֶ֔יהָ לְךָ֥ אֶתְּנֶ֖נָּה וּלְזַרְעֶֽךָ</span> · <i>ha-aretz asher ata shokhev aleha lekha etnenah u-le-zarekha</i> · the land you lie on, to you I give it and to your seed (verse-final u-le-zarekha) [VERIFIED: SNAPSHOT Gen.28.13 idx12-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(YHWH_nitzav_self_identification_land_commitment, t0) ∧ SPECS=[]</span><br><span class="gloss">= HOLDS(the-LORD-nitzav-self-identification-land-commitment, t0) ∧ SPECS=[]</span><br>THE STATIONED LORD [care 4]. nitzav (5324 tok7/28 niphal) [VERIFIED: SNAPSHOT Gen.28.13 idx2 morph=HVNrmsa ordinal=7/28] — root toks 6→7 BACK-TO-BACK: the ladder is stationed (28:12 hophal), YHWH is stationed (niphal); prior career 18:2 three men, 21:28-29 set-apart ewes, 24:13/43 the servant at the well. Self-identification FACT: ani YHWH elohe Avraham avikha ve-lohe Yitzchaq. shokhev (7901 tok11) [VERIFIED: idx15 ordinal=11/62] — God names Jacob&#x27;s lying-place as the grant-land. etnenah (5414 tok60 HVqi1cs) [VERIFIED: idx18 morph=HVqi1cs/Sp3fs ordinal=60/647] — give-verb toks 60-61-62 all IN-UNIT (28:13 grant / 28:20 vow-condition / 28:22 tithe-condition), extending gen_47&#x27;s 56-59 seam: seven give-tokens walk 27:28→28:22. 1cs divine speech = COMMITMENT-FACT (zero volitives in span; the gen_32 demand-on-God fence never triggers — nothing pushed, nothing owed a receipt in-unit). SPECS empty. REGISTRY 0. TESTS 0.
+</td><td><span class="he">נִצָּב עָלָיו … לְךָ אֶתְּנֶנָּה</span> · <i>nitzav alav … lekha etnenah</i><br><span class="gloss">= nitzav alav to-you etnenah</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">YHWH stationed over the stationed ladder; land commitment as FACT.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_28_14 · Gen.28.14 · <span class='expr'>THE_DUST_FORMULA_ALL_FAMILIES_NIPHAL</span></h3>
+<p><span class="he">וְהָיָה זַרְעֲךָ כַּעֲפַר הָאָרֶץ וּפָרַצְתָּ יָמָּה וָקֵדְמָה וְצָפֹנָה וָנֶגְבָּה וְנִבְרֲכוּ בְךָ כָּל־מִשְׁפְּחֹת הָאֲדָמָה וּבְזַרְעֶךָ</span> · <i>ve-haya zarakha ka-afar ha-aretz u-faratzta yamah va-qedmah ve-tzafonah va-negbah ve-nivrakhu vekha kol-mishpechot ha-adamah u-ve-zarekha</i> · And your seed shall be as the dust of the earth, and you shall spread west and east and north and south; and all the families of the ground shall be blessed in you and in your seed.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהָיָ֤ה זַרְעֲךָ֙ כַּעֲפַ֣ר הָאָ֔רֶץ וּפָרַצְתָּ֛ יָ֥מָּה וָקֵ֖דְמָה וְצָפֹ֣נָה וָנֶ֑גְבָּה</span> · <i>ve-haya zarakha ka-afar ha-aretz u-faratzta yamah va-qedmah ve-tzafonah va-negbah</i> · your seed as the dust, spreading west east north south (etnachta on va-negbah) [VERIFIED: SNAPSHOT Gen.28.14 idx8 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְנִבְרֲכ֥וּ בְךָ֛ כָּל מִשְׁפְּחֹ֥ת הָאֲדָמָ֖ה וּבְזַרְעֶֽךָ</span> · <i>ve-nivrakhu vekha kol mishpechot ha-adamah u-ve-zarekha</i> · and all families of the ground blessed in you and your seed (verse-final u-ve-zarekha) [VERIFIED: SNAPSHOT Gen.28.14 idx9-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(dust_seed_spread_all_families_blessed, t0) ∧ SPECS=[]</span><br><span class="gloss">= HOLDS(dust-seed-spread-all-families-blessed, t0) ∧ SPECS=[]</span><br>THE DUST FORMULA [care 5]. ka-afar (6083 tok9/23) [VERIFIED: SNAPSHOT Gen.28.14 idx2 ordinal=9/23] — dust toks 5-6 = 13:16, Abraham&#x27;s dust-promise ×2. u-faratzta (6555 tok1/7 DEBUT) [VERIFIED: idx4 ordinal=1/7] — spread-abroad born here; four directions. ve-nivrakhu (1288 tok55/137 HC/VNp3cp niphal) [VERIFIED: idx9 morph=HC/VNp3cp ordinal=55/137] — bless-verb toks 50–55: six consecutive career tokens inside the gen_47+48 spans; the all-families formula RETURNS TO ITS 12:3 NIPHAL FORM (12:3 tok10 niphal → 18:18 tok17 niphal → 22:18/26:4 toks 20/30 hitpael → 28:14 tok55 niphal, now to Jacob). Commitment-FACT. SPECS empty. REGISTRY 0. TESTS 0.
+</td><td><span class="he">כַּעֲפַר הָאָרֶץ … וְנִבְרֲכוּ בְךָ</span> · <i>ka-afar ha-aretz … ve-nivrakhu vekha</i><br><span class="gloss">= like-afar earth and-nivrakhu vekha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Dust-seed and the 12:3 niphal formula now on Jacob; FACT only.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_28_15 · Gen.28.15 · <span class='expr'>THE_FIVE_FOLD_PROMISE_NOT_LEAVE</span></h3>
+<p><span class="he">וְהִנֵּה אָנֹכִי עִמָּךְ וּשְׁמַרְתִּיךָ בְּכֹל אֲשֶׁר־תֵּלֵךְ וַהֲשִׁבֹתִיךָ אֶל־הָאֲדָמָה הַזֹּאת כִּי לֹא אֶעֱזָבְךָ עַד אֲשֶׁר אִם־עָשִׂיתִי אֵת אֲשֶׁר־דִּבַּרְתִּי לָךְ</span> · <i>ve-hine anokhi imakh u-shemartikha be-khol asher-telekh va-hashivotikha el-ha-adamah ha-zot ki lo eezavkha ad asher im-asiti et asher-dibarti lakh</i> · And behold, I am with you, and I will keep you wherever you go, and I will bring you back to this ground; for I will not leave you until I have done what I have spoken to you.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהִנֵּ֨ה אָנֹכִ֜י עִמָּ֗ךְ וּשְׁמַרְתִּ֨יךָ֙ בְּכֹ֣ל אֲשֶׁר תֵּלֵ֔ךְ וַהֲשִׁ֣בֹתִ֔יךָ אֶל הָאֲדָמָ֖ה הַזֹּ֑את</span> · <i>ve-hine anokhi imakh u-shemartikha be-khol asher telekh va-hashivotikha el ha-adamah ha-zot</i> · I am with you, will keep you wherever you go, and bring you back to this ground (etnachta on ha-zot) [VERIFIED: SNAPSHOT Gen.28.15 idx10 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּ֚י לֹ֣א אֶֽעֱזָבְךָ֔ עַ֚ד אֲשֶׁ֣ר אִם עָשִׂ֔יתִי אֵ֥ת אֲשֶׁר דִּבַּ֖רְתִּי לָֽךְ</span> · <i>ki lo eezavkha ad asher im asiti et asher dibarti lakh</i> · for I will not leave you until I have done what I spoke to you (verse-final lakh) [VERIFIED: SNAPSHOT Gen.28.15 idx11-21]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(five_fold_promise_with_keep_return_not_leave_until_done, t0) ∧ SPECS=[]</span><br><span class="gloss">= HOLDS(five-fold-promise-with-keep-return-not-leave-until-done, t0) ∧ SPECS=[]</span><br>THE FIVE-FOLD PROMISE [care 6] — all 1cs commitment-FACTS: (i) anokhi imakh; (ii) u-shemartikha (8104 tok9/148) [VERIFIED: SNAPSHOT Gen.28.15 idx3 ordinal=9/148]; (iii) va-hashivotikha (7725 tok31/180 hiphil) [VERIFIED: idx7 morph=HC/Vhq1cs/Sp2ms ordinal=31/180] — return toks 31-32 in-unit continue gen_47&#x27;s 29-30: the mother&#x27;s wrath-return wait-pair → God&#x27;s return-promise → the vow&#x27;s return-condition; (iv) lo eezavkha (5800 tok3/29) [VERIFIED: idx13 ordinal=3/29] — leave toks 1-2-3: 2:24 a man LEAVES father and mother → 24:27 God has not left covenant-kindness → &quot;I will not leave YOU,&quot; to the man who has just left father and mother; (v) ad asher im-asiti — God&#x27;s own performance horizon. telekh (3212 tok57) [VERIFIED: idx6 ordinal=57/229]. SPECS empty. REGISTRY 0. TESTS 0.
+</td><td><span class="he">וּשְׁמַרְתִּיךָ … וַהֲשִׁבֹתִיךָ … לֹא אֶעֱזָבְךָ</span> · <i>u-shemartikha … va-hashivotikha … lo eezavkha</i><br><span class="gloss">= and-shemartikha and-hashivotikha not eezavkha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">With-keep-return-not-leave-until-done; commitments as FACTS.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_28_16 · Gen.28.16 · <span class='expr'>THE_WAKING_AKHEN_AND_NOT_KNOWING</span></h3>
+<p><span class="he">וַיִּיקַץ יַעֲקֹב מִשְּׁנָתוֹ וַיֹּאמֶר אָכֵן יֵשׁ יְהוָה בַּמָּקוֹם הַזֶּה וְאָנֹכִי לֹא יָדָעְתִּי</span> · <i>va-yiqatz yaaqov mi-shenato va-yomer akhen yesh YHWH ba-maqom ha-ze ve-anokhi lo yadati</i> · And Jacob awoke from his sleep and said: Surely YHWH is in this place, and I did not know.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּיקַ֣ץ יַעֲקֹב֮ מִשְּׁנָתוֹ֒ וַיֹּ֕אמֶר אָכֵן֙ יֵ֣שׁ יְהוָ֔ה בַּמָּק֖וֹם הַזֶּ֑ה</span> · <i>va-yiqatz yaaqov mi-shenato va-yomer akhen yesh YHWH ba-maqom ha-ze</i> · Jacob awoke and said: surely YHWH is in this place (etnachta on ha-ze) [VERIFIED: SNAPSHOT Gen.28.16 idx8 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאָנֹכִ֖י לֹ֥א יָדָֽעְתִּי</span> · <i>ve-anokhi lo yadati</i> · and I did not know (verse-final yadati) [VERIFIED: SNAPSHOT Gen.28.16 idx9-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(yaaqov_woke_akhen_YHWH_in_place_unknown, t0) ∧ SPECS=[]</span><br><span class="gloss">= HOLDS(yaaqov-woke-akhen-the-LORD-in-place-unknown, t0) ∧ SPECS=[]</span><br>THE WAKING [care 7]. va-yiqatz (3364 tok2/5) [VERIFIED: SNAPSHOT Gen.28.16 idx0 ordinal=2/5] — tok1 = 9:24, NOAH: the only prior waker in the Torah (wine→curse there; dream→awe here). mi-shenato (8142 tok1/2 DEBUT) [VERIFIED: idx2 ordinal=1/2] — the sleep-noun is born. akhen (403 tok1/2 DEBUT &quot;surely&quot;) [VERIFIED: idx4 ordinal=1/2]. ba-maqom (4725 tok28) [VERIFIED: idx7 ordinal=28/133]. ve-anokhi lo yadati — the knowing-verb negated on the knower. FACT speech. SPECS empty. REGISTRY 0. TESTS 0.
+</td><td><span class="he">וַיִּיקַץ … אָכֵן … לֹא יָדָעְתִּי</span> · <i>va-yiqatz … akhen … lo yadati</i><br><span class="gloss">= and-yiqatz akhen not yadati</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Second waking in the Torah; surely-word debut; SPECS empty.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_28_17 · Gen.28.17 · <span class='expr'>THE_FEAR_DOUBLET_GATE_OF_HEAVEN</span></h3>
+<p><span class="he">וַיִּירָא וַיֹּאמַר מַה־נּוֹרָא הַמָּקוֹם הַזֶּה אֵין זֶה כִּי אִם־בֵּית אֱלֹהִים וְזֶה שַׁעַר הַשָּׁמָיִם</span> · <i>va-yira va-yomar ma-nora ha-maqom ha-ze en ze ki im-bet Elohim ve-ze shaar ha-shamayim</i> · And he feared and said: How awesome is this place! This is none other than the house of God, and this is the gate of heaven.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּירָא֙ וַיֹּאמַ֔ר מַה נּוֹרָ֖א הַמָּק֣וֹם הַזֶּ֑ה</span> · <i>va-yira va-yomar ma nora ha-maqom ha-ze</i> · he feared and said: how awesome is this place (etnachta on ha-ze) [VERIFIED: SNAPSHOT Gen.28.17 idx5 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֵ֣ין זֶ֗ה כִּ֚י אִם בֵּ֣ית אֱלֹהִ֔ים וְזֶ֖ה שַׁ֥עַר הַשָּׁמָֽיִם</span> · <i>en ze ki im bet Elohim ve-ze shaar ha-shamayim</i> · none other than God&#x27;s house, and this is heaven&#x27;s gate (verse-final ha-shamayim) [VERIFIED: SNAPSHOT Gen.28.17 idx6-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(fear_doublet_bet_elohim_shaar_ha_shamayim, t0) ∧ SPECS=[]</span><br><span class="gloss">= HOLDS(fear-doublet-bet-God-shaar-the-heavens, t0) ∧ SPECS=[]</span><br>THE FEAR DOUBLET [care 8]. va-yira (3372 tok9/81) + nora (tok10, niphal participle) [VERIFIED: SNAPSHOT Gen.28.17 idx0 ordinal=9/81; idx3 morph=HVNrmsa ordinal=10/81] — the SAME fear-root twice in one verse. bet Elohim (1004 tok34) [VERIFIED: idx10 ordinal=34/324]. shaar (8179 tok6/56) [VERIFIED: idx13 ordinal=6/56] — gate career: 19:1 Sodom&#x27;s gate → 22:17 enemies&#x27; gate → 23:10/18 Machpelah witnesses → 24:60 seed-gate blessing → the GATE OF HEAVEN. FACT speech. SPECS empty. REGISTRY 0. TESTS 0.
+</td><td><span class="he">וַיִּירָא … מַה־נּוֹרָא … שַׁעַר הַשָּׁמָיִם</span> · <i>va-yira … ma-nora … shaar ha-shamayim</i><br><span class="gloss">= and-yira ma-nora shaar heavens</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Fear doubled on its own root; God&#x27;s house, heaven&#x27;s gate; SPECS empty.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_28_18 · Gen.28.18 · <span class='expr'>THE_PILLAR_AND_THE_OIL_DEBUT</span></h3>
+<p><span class="he">וַיַּשְׁכֵּם יַעֲקֹב בַּבֹּקֶר וַיִּקַּח אֶת־הָאֶבֶן אֲשֶׁר־שָׂם מְרַאֲשֹׁתָיו וַיָּשֶׂם אֹתָהּ מַצֵּבָה וַיִּצֹק שֶׁמֶן עַל־רֹאשָׁהּ</span> · <i>va-yashkem yaaqov ba-boqer va-yiqach et-ha-even asher-sam meraashotav va-yasem otah matzevah va-yitzoq shemen al-roshah</i> · And Jacob rose early in the morning and took the stone he had set at his head, and set it as a pillar, and poured oil on its head.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּשְׁכֵּ֨ם יַעֲקֹ֜ב בַּבֹּ֗קֶר וַיִּקַּ֤ח אֶת הָאֶ֨בֶן֙ אֲשֶׁר שָׂ֣ם מְרַֽאֲשֹׁתָ֔יו וַיָּ֥שֶׂם אֹתָ֖הּ מַצֵּבָ֑ה</span> · <i>va-yashkem yaaqov ba-boqer va-yiqach et ha-even asher sam meraashotav va-yasem otah matzevah</i> · early in the morning he took the stone from his head-place and set it as a pillar (etnachta on matzevah) [VERIFIED: SNAPSHOT Gen.28.18 idx11 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּצֹ֥ק שֶׁ֖מֶן עַל רֹאשָֽׁהּ</span> · <i>va-yitzoq shemen al roshah</i> · and poured oil on its head (verse-final roshah) [VERIFIED: SNAPSHOT Gen.28.18 idx12-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">matzeva_anoint_event(e18, yaaqov, even_shemen) — pillar set and oiled</span><br><span class="gloss">= matzeva-anoint-event(e18, yaaqov, even-shemen) — pillar set and oiled</span><br>THE PILLAR EVENT [care 9]. matzeva (4676 tok1/16 DEBUT) [VERIFIED: SNAPSHOT Gen.28.18 idx11 ordinal=1/16] — the pillar is born. va-yitzoq (3332 tok1/19 DEBUT) [VERIFIED: idx12 ordinal=1/19] — the pour-verb is born (career → Exodus casting and anointing). shemen (8081 tok1/106 DEBUT) [VERIFIED: idx13 ordinal=1/106] — OIL ITSELF debuts on this stone; its 106-token career runs to the anointing oil, the menorah, the offerings.
+</td><td><span class="he">וַיָּשֶׂם אֹתָהּ מַצֵּבָה וַיִּצֹק שֶׁמֶן</span> · <i>va-yasem otah matzevah va-yitzoq shemen</i><br><span class="gloss">= and-yasem her matzevah and-yitzoq shemen</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(early_rise_stone_taken_set_as_pillar, t0) ∧ SPECS=[]</span><br><span class="gloss">= HOLDS(early-rise-stone-taken-set-as-pillar, t0) ∧ SPECS=[]</span><br>va-yashkem (7925 tok7/14) [VERIFIED: idx0 ordinal=7/14] — full prior rise-early career toks 1-6: 19:2 Lot&#x27;s guests, 19:27 Abraham to the smoke, 20:8 Avimelech, 21:14 Hagar&#x27;s bread, 22:3 the Aqedah, 26:31 the Gerar oath. va-yiqach (3947 tok85) [VERIFIED: idx3 ordinal=85/393] THE stone (68 tok4) [VERIFIED: idx5 ordinal=4/88]. sam + va-yasem (7760 toks 17-18) [VERIFIED: idx7 ordinal=17/152; idx9 ordinal=18/152] — placed → set-as-pillar (tok19 = 28:22 samti, the vow&#x27;s recall). meraashotav (4763 tok2/2) [VERIFIED: idx8 ordinal=2/2] — the head-place word closes its two-token career. SPECS empty. REGISTRY 0. TESTS 0.
+</td><td><span class="he">וַיַּשְׁכֵּם … וַיִּקַּח אֶת־הָאֶבֶן</span> · <i>va-yashkem … va-yiqach et-ha-even</i><br><span class="gloss">= and-yashkem and-yiqach the-even</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Pillar set, oil debuts on the stone; SPECS empty.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_28_19 · Gen.28.19 · <span class='expr'>THE_NAME_WRITE_BEIT_EL</span></h3>
+<p><span class="he">וַיִּקְרָא אֶת־שֵׁם־הַמָּקוֹם הַהוּא בֵּית־אֵל וְאוּלָם לוּז שֵׁם־הָעִיר לָרִאשֹׁנָה</span> · <i>va-yiqra et-shem-ha-maqom ha-hu bet-el ve-ulam luz shem-ha-ir la-rishonah</i> · And he called the name of that place Bethel; but Luz was the name of the city at first.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּקְרָ֛א אֶת שֵֽׁם הַמָּק֥וֹם הַה֖וּא בֵּֽית אֵ֑ל</span> · <i>va-yiqra et shem ha-maqom ha-hu bet el</i> · he called the name of that place Bethel (etnachta on el) [VERIFIED: SNAPSHOT Gen.28.19 idx6 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאוּלָ֛ם ל֥וּז שֵׁם הָעִ֖יר לָרִאשֹׁנָֽה</span> · <i>ve-ulam luz shem ha-ir la-rishonah</i> · but Luz was the city&#x27;s name at first (verse-final la-rishonah) [VERIFIED: SNAPSHOT Gen.28.19 idx7-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>NAME</td><td><span class="expr">name(ha_maqom_luz) := beit_el</span><br><span class="gloss">= name(the-maqom-luz) := beit-to</span><br>THE NAME WRITE [care 10] — va-yiqra et-shem, the explicit naming formula: REGISTRY write #1, the first since gen_45&#x27;s four wells. Beit-El (1008 tok5/13) [VERIFIED: SNAPSHOT Gen.28.19 idx5-6 ordinal=5/13] — toks 1-4 are ALL narrator-proleptic (12:8 ×2, 13:3 ×2, Abraham&#x27;s altar site): the letter used the name four times before the naming. ve-ulam (199 tok1/4 DEBUT &quot;however&quot;) [VERIFIED: idx7 ordinal=1/4]; luz (3870 tok1/3) [VERIFIED: idx8 ordinal=1/3] — toks 2-3 = 35:6, 48:3: Jacob himself will retell the Luz naming. Expected flag named_before_any_presence (gen_45 wells precedent — the place was never installed as a WORLD entity).
+</td><td><span class="he">וַיִּקְרָא אֶת־שֵׁם־הַמָּקוֹם הַהוּא בֵּית־אֵל</span> · <i>va-yiqra et-shem-ha-maqom ha-hu bet-el</i><br><span class="gloss">= and-yiqra shem-the-maqom the-that bet-to</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The place formerly Luz written as Bethel; REGISTRY 1 write.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_28_20 · Gen.28.20 · <span class='expr'>THE_FIRST_VOW_CONDITIONS_OPEN</span></h3>
+<p><span class="he">וַיִּדַּר יַעֲקֹב נֶדֶר לֵאמֹר אִם־יִהְיֶה אֱלֹהִים עִמָּדִי וּשְׁמָרַנִי בַּדֶּרֶךְ הַזֶּה אֲשֶׁר אָנֹכִי הוֹלֵךְ וְנָתַן־לִי לֶחֶם לֶאֱכֹל וּבֶגֶד לִלְבֹּשׁ</span> · <i>va-yidar yaaqov neder le-mor im-yihye Elohim imadi u-shemarani ba-derekh ha-ze asher anokhi holekh ve-natan-li lechem le-ekhol u-veged lilbosh</i> · And Jacob vowed a vow, saying: If God will be with me and keep me on this way that I go, and give me bread to eat and a garment to wear —</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּדַּ֥ר יַעֲקֹ֖ב נֶ֣דֶר לֵאמֹ֑ר</span> · <i>va-yidar yaaqov neder le-mor</i> · and Jacob vowed a vow, saying (etnachta on le-mor) [VERIFIED: SNAPSHOT Gen.28.20 idx3 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">אִם יִהְיֶ֨ה אֱלֹהִ֜ים עִמָּדִ֗י וּשְׁמָרַ֨נִי֙ בַּדֶּ֤רֶךְ הַזֶּה֙ אֲשֶׁ֣ר אָנֹכִ֣י הוֹלֵ֔ךְ וְנָֽתַן לִ֥י לֶ֛חֶם לֶאֱכֹ֖ל וּבֶ֥גֶד לִלְבֹּֽשׁ</span> · <i>im yihye Elohim imadi u-shemarani ba-derekh ha-ze asher anokhi holekh ve-natan li lechem le-ekhol u-veged lilbosh</i> · if God is with me and keeps me on this way and gives bread to eat and garment to wear (verse-final lilbosh) [VERIFIED: SNAPSHOT Gen.28.20 idx4-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(neder_opened_conditions_with_keep_bread_garment, t0) ∧ SPECS=[]</span><br><span class="gloss">= HOLDS(neder-opened-conditions-with-keep-bread-garment, t0) ∧ SPECS=[]</span><br>THE FIRST VOW [care 11]. va-yidar (5087 tok1/15 DEBUT) + neder (5088 tok1/34 DEBUT) [VERIFIED: SNAPSHOT Gen.28.20 idx0 ordinal=1/15; idx2 ordinal=1/34] — verb + noun COGNATE-ACCUSATIVE DOUBLE DEBUT: the vow-institution is born here (noun career → Lev 27, Num 30 vow-law). Conditions open: im yihye Elohim imadi; u-shemarani (8104 tok10/148) [VERIFIED: idx8 ordinal=10/148] — keep-verb toks 9→10 CONSECUTIVE: God&#x27;s 28:15 promise-word quoted straight back as the vow&#x27;s condition. ve-natan (5414 tok61) [VERIFIED: idx14 ordinal=61/647]. THE BREAD-AND-GARMENT PAIR: lechem (3899 tok7/84) [VERIFIED: idx16 ordinal=7/84] — bread toks 5-6-7 = 25:34 the birthright-sale bread → 27:17 the deception bread → the vow&#x27;s bread; u-veged (899 tok4/113) [VERIFIED: idx18 ordinal=4/113] — garment toks 1-2-3 = 24:53 bride-gifts → 27:15 the deception garments → 27:27 the smelled garments → the vow&#x27;s garment. BOTH vow-objects arrive with the deception as their immediately previous career token. Vow speech = conditional self-obligation, no addressee-demand: no SPECS push. SPECS empty. REGISTRY 1 (beit_el). TESTS 0.
+</td><td><span class="he">וַיִּדַּר יַעֲקֹב נֶדֶר … לֶחֶם … וּבֶגֶד</span> · <i>va-yidar yaaqov neder … lechem … u-veged</i><br><span class="gloss">= and-yidar yaaqov neder lechem and-veged</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Vow-verb and vow-noun born together; bread and garment carry the deception careers; SPECS empty.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_28_21 · Gen.28.21 · <span class='expr'>THE_RETURN_IN_PEACE_AND_THEN_CLAUSE</span></h3>
+<p><span class="he">וְשַׁבְתִּי בְשָׁלוֹם אֶל־בֵּית אָבִי וְהָיָה יְהוָה לִי לֵאלֹהִים</span> · <i>ve-shavti ve-shalom el-bet avi ve-haya YHWH li le-Elohim</i> · And I return in peace to my father&#x27;s house — then YHWH will be my God.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְשַׁבְתִּ֥י בְשָׁל֖וֹם אֶל בֵּ֣ית אָבִ֑י</span> · <i>ve-shavti ve-shalom el bet avi</i> · and I return in peace to my father&#x27;s house (etnachta on avi) [VERIFIED: SNAPSHOT Gen.28.21 idx4 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהָיָ֧ה יְהוָ֛ה לִ֖י לֵאלֹהִֽים</span> · <i>ve-haya YHWH li le-Elohim</i> · then YHWH will be my God (verse-final le-Elohim) [VERIFIED: SNAPSHOT Gen.28.21 idx5-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(return_in_peace_condition_then_YHWH_my_God, t0) ∧ SPECS=[]</span><br><span class="gloss">= HOLDS(return-in-peace-condition-then-the-LORD-my-God, t0) ∧ SPECS=[]</span><br>CONDITIONS CLOSE, THEN-CLAUSE OPENS [care 12]. ve-shavti (7725 tok32/180) [VERIFIED: SNAPSHOT Gen.28.21 idx0 ordinal=32/180] — return toks 29-30 (gen_47 wait-pair) → 31 (God&#x27;s promise) → 32 (the vow&#x27;s condition). ve-shalom (7965 tok4/26) [VERIFIED: idx1 ordinal=4/26] — peace toks 1-3: 15:15 grave-peace to Abraham, 26:29/31 the Gerar oath-peace. el bet avi — to the father&#x27;s house he has just left. Then-clause: ve-haya YHWH li le-Elohim. Still no push; the whole vow lands in the 28:22 handler. SPECS empty. REGISTRY 1. TESTS 0.
+</td><td><span class="he">וְשַׁבְתִּי בְשָׁלוֹם … וְהָיָה יְהוָה לִי לֵאלֹהִים</span> · <i>ve-shavti ve-shalom … ve-haya YHWH li le-Elohim</i><br><span class="gloss">= and-shavti and-shalom and-haya the-LORD to-me to-God</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Return-in-peace condition; then-clause opens; SPECS empty.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_28_22 · Gen.28.22 · <span class='expr'>THE_VOW_HANDLER_STONE_HOUSE_TITHE</span></h3>
+<p><span class="he">וְהָאֶבֶן הַזֹּאת אֲשֶׁר־שַׂמְתִּי מַצֵּבָה יִהְיֶה בֵּית אֱלֹהִים וְכֹל אֲשֶׁר תִּתֶּן־לִי עַשֵּׂר אֲעַשְּׂרֶנּוּ לָךְ</span> · <i>ve-ha-even ha-zot asher-samti matzevah yihye bet Elohim ve-khol asher titen-li aser aasrenu lakh</i> · And this stone which I have set as a pillar shall be the house of God; and all that You give me I will surely tithe to You.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהָאֶ֣בֶן הַזֹּ֗את אֲשֶׁר שַׂ֨מְתִּי֙ מַצֵּבָ֔ה יִהְיֶ֖ה בֵּ֣ית אֱלֹהִ֑ים</span> · <i>ve-ha-even ha-zot asher samti matzevah yihye bet Elohim</i> · this stone I set as a pillar shall be God&#x27;s house (etnachta on Elohim) [VERIFIED: SNAPSHOT Gen.28.22 idx7 mark_rank=1]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְכֹל֙ אֲשֶׁ֣ר תִּתֶּן לִ֔י עַשֵּׂ֖ר אֲעַשְּׂרֶ֥נּוּ לָֽךְ</span> · <i>ve-khol asher titen li aser aasrenu lakh</i> · and all You give me I will surely tithe to You (verse-final lakh) [VERIFIED: SNAPSHOT Gen.28.22 idx8-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>HANDLER</td><td><span class="expr">HANDLER IF(elohim_imadi ∧ shemarani_ba_derekh ∧ natan_lechem_u_veged ∧ shavti_ve_shalom) THEN(YHWH_li_le_Elohim ∧ ha_even_bet_Elohim ∧ aser_aasrenu)</span><br><span class="gloss">= HANDLER IF(God-with-me ∧ shemarani-in-the-derekh ∧ natan-lechem-and-veged ∧ shavti-and-shalom) THEN(the-LORD-to-me-to-God ∧ the-even-bet-God ∧ aser-aasrenu)</span><br>THE VOW HANDLER [care 13]. The whole vow (28:20-22) installs as ONE standing IF-THEN (lev_13 weqatal-chain class): IF God-with-me ∧ keeps-me ∧ gives-bread-and-garment ∧ I-return-in-peace, THEN YHWH-my-God ∧ this-stone-God&#x27;s-house ∧ surely-tithe. Handlers are installed, never executed — a WORLD fact, no receipt owed, SPECS untouched (nothing was demanded of the narrative present; the conditions sit on GOD&#x27;s future performance, the consequences on Jacob&#x27;s own).
+</td><td><span class="he">אִם־יִהְיֶה אֱלֹהִים עִמָּדִי … עַשֵּׂר אֲעַשְּׂרֶנּוּ לָךְ</span> · <i>im-yihye Elohim imadi … aser aasrenu lakh</i><br><span class="gloss">= if-yihye God with-me aser aasrenu to-you</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(stone_house_tithe_vow_content, t0) ∧ SPECS=[]</span><br><span class="gloss">= HOLDS(stone-house-tithe-vow-content, t0) ∧ SPECS=[]</span><br>ve-ha-even (68 tok5/88) [VERIFIED: SNAPSHOT Gen.28.22 idx0 ordinal=5/88] — stone toks 3-4-5 in-unit; toks 6+ = 29:2-3, the WELL stone: the career bridges into the next unit. samti (7760 tok19) [VERIFIED: idx3 ordinal=19/152]; matzeva (4676 tok2/16) [VERIFIED: idx4 ordinal=2/16]; titen (5414 tok62) [VERIFIED: idx10 ordinal=62/647] — the give-verb&#x27;s ninth token since 27:28, now in Jacob&#x27;s mouth toward God. aser aasrenu (6237 toks 1-2/5 DOUBLE DEBUT, infinitive absolute + piel imperfect) [VERIFIED: idx12 morph=HVpa ordinal=1/5; idx13 morph=HVpi1cs/Sp3ms ordinal=2/5] — the tithe-VERB is born in the vow; the noun maaser (4643) tok1 = 14:20, Abram&#x27;s tithe to Malkitzedek: the grandfather tithed a priest, the grandson vows the tithe to God directly. UNIT END: SPECS 0 throughout (zero volitives — no demand exchanged in the whole unit). REGISTRY 1 write (ha_maqom_luz-&gt;beit_el). TESTS 0 (instruments slept). Onkelos BUFFER PENDING.
+</td><td><span class="he">וְהָאֶבֶן הַזֹּאת … עַשֵּׂר אֲעַשְּׂרֶנּוּ</span> · <i>ve-ha-even ha-zot … aser aasrenu</i><br><span class="gloss">= and-the-even the-this aser aasrenu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The vow installs as a standing handler; stone-house and tithe content; unit ends SPECS 0, REGISTRY 1. END OF UNIT.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Gn_28_10 — departure Beer-sheva to Haran; SPECS empty</td><td>Jacob went out from Beer-sheva and went toward Haran.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיֵּ֖לֶךְ חָרָֽנָה</span> · <i>va-yelekh charanah</i><br><span class="gloss">= and-yelekh charanah</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Gn_28_11 — the place, sunset, stone pillow; SPECS empty</td><td>He lit upon the place, took of its stones, and lay down there.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיִּשְׁכַּ֖ב בַּמָּק֥וֹם הַהֽוּא</span> · <i>va-yishkav ba-maqom ha-hu</i><br><span class="gloss">= and-yishkav in-the-maqom the-that</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Gn_28_12 — the dream debut, ladder hapax; SPECS empty</td><td>He dreamed: a ladder set earthward, its head reaching heavenward, angels on it.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וְהִנֵּ֤ה סֻלָּם֙ מֻצָּ֣ב אַ֔רְצָה</span> · <i>ve-hine sulam mutzav artzah</i><br><span class="gloss">= and-hine sulam mutzav artzah</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Gn_28_13 — YHWH stationed; land commitment FACT; SPECS empty</td><td>YHWH stood over him: I am the God of Abraham and Isaac; the land I will give you.</td><td>SPECS empty; no test, no name.</td><td><span class="he">לְךָ֥ אֶתְּנֶ֖נָּה וּלְזַרְעֶֽךָ</span> · <i>lekha etnenah u-le-zarekha</i><br><span class="gloss">= to-you etnenah and-to-zarekha</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Gn_28_14 — dust formula, all-families niphal; SPECS empty</td><td>Seed as dust, spreading four directions; all families blessed in you.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וְנִבְרֲכ֥וּ בְךָ֛ כָּל מִשְׁפְּחֹ֥ת הָאֲדָמָ֖ה</span> · <i>ve-nivrakhu vekha kol mishpechot ha-adamah</i><br><span class="gloss">= and-nivrakhu vekha all mishpechot ground</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Gn_28_15 — five-fold promise, not-leave; SPECS empty</td><td>I am with you, will keep you, bring you back; I will not leave you.</td><td>SPECS empty; no test, no name.</td><td><span class="he">כִּ֚י לֹ֣א אֶֽעֱזָבְךָ֔</span> · <i>ki lo eezavkha</i><br><span class="gloss">= when not eezavkha</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Gn_28_16 — the waking, akhen debut; SPECS empty</td><td>Jacob awoke: surely YHWH is in this place and I did not know.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וְאָנֹכִ֖י לֹ֥א יָדָֽעְתִּי</span> · <i>ve-anokhi lo yadati</i><br><span class="gloss">= and-anokhi not yadati</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Gn_28_17 — fear doublet, gate of heaven; SPECS empty</td><td>He feared: how awesome; this is God&#x27;s house and heaven&#x27;s gate.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וְזֶ֖ה שַׁ֥עַר הַשָּׁמָֽיִם</span> · <i>ve-ze shaar ha-shamayim</i><br><span class="gloss">= and-ze shaar heavens</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Gn_28_18 — pillar set, oil debuts; SPECS empty</td><td>Early rising he set the stone as a pillar and poured oil on its head.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיִּצֹ֥ק שֶׁ֖מֶן עַל רֹאשָֽׁהּ</span> · <i>va-yitzoq shemen al roshah</i><br><span class="gloss">= and-yitzoq shemen upon roshah</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Gn_28_19 — NAME WRITE beit_el; REGISTRY 1</td><td>He called the name of that place Bethel; Luz was the city&#x27;s name at first.</td><td>SPECS empty; REGISTRY: ha_maqom_luz-&gt;beit_el (1 write)<br><span class="gloss">= SPECS empty; REGISTRY: the-maqom-luz-&gt;beit-to (1 write)</span></td><td><span class="he">וַיִּקְרָ֛א אֶת שֵֽׁם הַמָּק֥וֹם הַה֖וּא בֵּֽית אֵ֑ל</span> · <i>va-yiqra et shem ha-maqom ha-hu bet el</i><br><span class="gloss">= and-yiqra et shem the-maqom the-that bet to</span></td></tr>
+<tr><td><b>S11</b></td><td>after STEP_Gn_28_20 — first vow opens; REGISTRY holds 1</td><td>Jacob vowed a vow: if God is with me and keeps me and gives bread and garment.</td><td>SPECS empty; REGISTRY: ha_maqom_luz-&gt;beit_el (1 write)<br><span class="gloss">= SPECS empty; REGISTRY: the-maqom-luz-&gt;beit-to (1 write)</span></td><td><span class="he">וַיִּדַּ֥ר יַעֲקֹ֖ב נֶ֣דֶר לֵאמֹ֑ר</span> · <i>va-yidar yaaqov neder le-mor</i><br><span class="gloss">= and-yidar yaaqov neder to-mor</span></td></tr>
+<tr><td><b>S12</b></td><td>after STEP_Gn_28_21 — return-in-peace condition; REGISTRY holds 1</td><td>And I return in peace to my father&#x27;s house — then YHWH will be my God.</td><td>SPECS empty; REGISTRY: ha_maqom_luz-&gt;beit_el (1 write)<br><span class="gloss">= SPECS empty; REGISTRY: the-maqom-luz-&gt;beit-to (1 write)</span></td><td><span class="he">וְהָיָ֧ה יְהוָ֛ה לִ֖י לֵאלֹהִֽים</span> · <i>ve-haya YHWH li le-Elohim</i><br><span class="gloss">= and-haya the-LORD to-me to-God</span></td></tr>
+<tr><td><b>S13</b></td><td>after STEP_Gn_28_22 — vow handler installed; unit end SPECS 0, REGISTRY 1</td><td>This stone shall be God&#x27;s house; all You give me I will surely tithe.</td><td>SPECS empty; REGISTRY: ha_maqom_luz-&gt;beit_el (1 write)<br><span class="gloss">= SPECS empty; REGISTRY: the-maqom-luz-&gt;beit-to (1 write)</span></td><td><span class="he">עַשֵּׂ֖ר אֲעַשְּׂרֶ֥נּוּ לָֽךְ</span> · <i>aser aasrenu lakh</i><br><span class="gloss">= aser aasrenu to-you</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_48_bethel_ladder_vow — The Bethel ladder, the name write, and the first vow (28:10-22) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={&#x27;ha_maqom_luz&#x27;: &#x27;beit_el&#x27;} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[&#x27;named_before_any_presence&#x27;]
+
+=== S1 — after STEP_Gn_28_10 — departure Beer-sheva to Haran; SPECS empty
+    וַיֵּ֖לֶךְ חָרָֽנָה (va-yelekh charanah)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Gn_28_11 — the place, sunset, stone pillow; SPECS empty
+    וַיִּשְׁכַּ֖ב בַּמָּק֥וֹם הַהֽוּא (va-yishkav ba-maqom ha-hu)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Gn_28_12 — the dream debut, ladder hapax; SPECS empty
+    וְהִנֵּ֤ה סֻלָּם֙ מֻצָּ֣ב אַ֔רְצָה (ve-hine sulam mutzav artzah)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Gn_28_13 — YHWH stationed; land commitment FACT; SPECS empty
+    לְךָ֥ אֶתְּנֶ֖נָּה וּלְזַרְעֶֽךָ (lekha etnenah u-le-zarekha)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Gn_28_14 — dust formula, all-families niphal; SPECS empty
+    וְנִבְרֲכ֥וּ בְךָ֛ כָּל מִשְׁפְּחֹ֥ת הָאֲדָמָ֖ה (ve-nivrakhu vekha kol mishpechot ha-adamah)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Gn_28_15 — five-fold promise, not-leave; SPECS empty
+    כִּ֚י לֹ֣א אֶֽעֱזָבְךָ֔ (ki lo eezavkha)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — after STEP_Gn_28_16 — the waking, akhen debut; SPECS empty
+    וְאָנֹכִ֖י לֹ֥א יָדָֽעְתִּי (ve-anokhi lo yadati)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S8 — after STEP_Gn_28_17 — fear doublet, gate of heaven; SPECS empty
+    וְזֶ֖ה שַׁ֥עַר הַשָּׁמָֽיִם (ve-ze shaar ha-shamayim)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S9 — after STEP_Gn_28_18 — pillar set, oil debuts; SPECS empty
+    וַיִּצֹ֥ק שֶׁ֖מֶן עַל רֹאשָֽׁהּ (va-yitzoq shemen al roshah)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S10 — after STEP_Gn_28_19 — NAME WRITE beit_el; REGISTRY 1
+    וַיִּקְרָ֛א אֶת שֵֽׁם הַמָּק֥וֹם הַה֖וּא בֵּֽית אֵ֑ל (va-yiqra et shem ha-maqom ha-hu bet el)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY: ha_maqom_luz-&gt;beit_el (1 write)  (names={&#x27;ha_maqom_luz&#x27;: &#x27;beit_el&#x27;} writes=1)
+
+=== S11 — after STEP_Gn_28_20 — first vow opens; REGISTRY holds 1
+    וַיִּדַּ֥ר יַעֲקֹ֖ב נֶ֣דֶר לֵאמֹ֑ר (va-yidar yaaqov neder le-mor)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY: ha_maqom_luz-&gt;beit_el (1 write)  (names={&#x27;ha_maqom_luz&#x27;: &#x27;beit_el&#x27;} writes=1)
+
+=== S12 — after STEP_Gn_28_21 — return-in-peace condition; REGISTRY holds 1
+    וְהָיָ֧ה יְהוָ֛ה לִ֖י לֵאלֹהִֽים (ve-haya YHWH li le-Elohim)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY: ha_maqom_luz-&gt;beit_el (1 write)  (names={&#x27;ha_maqom_luz&#x27;: &#x27;beit_el&#x27;} writes=1)
+
+=== S13 — after STEP_Gn_28_22 — vow handler installed; unit end SPECS 0, REGISTRY 1
+    עַשֵּׂ֖ר אֲעַשְּׂרֶ֥נּוּ לָֽךְ (aser aasrenu lakh)
+    PASS  SPECS empty  (queue=0)
+    PASS  REGISTRY: ha_maqom_luz-&gt;beit_el (1 write)  (names={&#x27;ha_maqom_luz&#x27;: &#x27;beit_el&#x27;} writes=1)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_48_bethel_ladder_vow.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_48_bethel_ladder_vow — 28:10-22
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_48_bethel_ladder_vow.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;The Bethel ladder, the name write, and the first vow (28:10-22)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_48_bethel_ladder_vow&quot;)
+
+# -------------------------- Gen.28.10 · THE_DEPARTURE_BEER_SHEVA_TO_HARAN --
+# וַיֵּצֵא יַעֲקֹב מִבְּאֵר שָׁבַע וַיֵּלֶךְ חָרָנָה
+# &quot;[EN-AID] And Jacob went out from Beer-sheva and went toward Haran.&quot;
+m.step(&quot;Gen.28.10&quot;)
+# ‹וַיֵּצֵא … וַיֵּלֶךְ חָרָנָה› (“and-bring-forth … and-go Haran-ward”) —
+# fact holds: Jacob-departed-from-seven-toward-charan
+m.fact(&quot;yaaqov_departed_beer_sheva_toward_charan&quot;)
+
+# -------------------------- Gen.28.11 · THE_PLACE_SUNSET_AND_STONE_PILLOW --
+# וַיִּפְגַּע בַּמָּקוֹם וַיָּלֶן שָׁם כִּי־בָא הַשֶּׁמֶשׁ וַיִּקַּח
+# מֵאַבְנֵי הַמָּקוֹם וַיָּשֶׂם מְרַאֲשֹׁתָיו וַיִּשְׁכַּב בַּמָּקוֹם הַהוּא
+# &quot;[EN-AID] And he lit upon the place and lodged there, for the sun had set;
+# and he took of the stones of the place and set them at his head, and lay
+# down in that place.&quot;
+m.step(&quot;Gen.28.11&quot;)
+# ‹כִּי־בָא הַשֶּׁמֶשׁ … מֵאַבְנֵי הַמָּקוֹם› (“that come/bring the-sun …
+# from-stone the-place”) — fact holds: sun-set-stone-pillow-at-the-place
+m.fact(&quot;sun_set_stone_pillow_at_ha_maqom&quot;)
+
+# -------------------------- Gen.28.12 · THE_DREAM_DEBUT_AND_LADDER_HAPAX ---
+# וַיַּחֲלֹם וְהִנֵּה סֻלָּם מֻצָּב אַרְצָה וְרֹאשׁוֹ מַגִּיעַ הַשָּׁמָיְמָה
+# וְהִנֵּה מַלְאֲכֵי אֱלֹהִים עֹלִים וְיֹרְדִים בּוֹ
+# &quot;[EN-AID] And he dreamed — and behold a ladder set earthward, its head
+# reaching heavenward; and behold, angels of God ascending and descending on
+# it.&quot;
+m.step(&quot;Gen.28.12&quot;)
+# ‹וַיַּחֲלֹם› (“and-bind-firmly”) — event: ?
+m.event(&quot;?&quot;)
+# ‹סֻלָּם מֻצָּב אַרְצָה› (“stair-case stand earth-ward”) — fact holds:
+# stair-case-earthward-head-heavenward-angels
+m.fact(&quot;sulam_earthward_head_heavenward_angels&quot;)
+
+# -------------------------- Gen.28.13 · THE_STATIONED_LORD_AND_LAND_COMMITMENT -
+# וְהִנֵּה יְהוָה נִצָּב עָלָיו וַיֹּאמַר אֲנִי יְהוָה אֱלֹהֵי אַבְרָהָם
+# אָבִיךָ וֵאלֹהֵי יִצְחָק הָאָרֶץ אֲשֶׁר אַתָּה שֹׁכֵב עָלֶיהָ לְךָ
+# אֶתְּנֶנָּה וּלְזַרְעֶךָ
+# &quot;[EN-AID] And behold, YHWH stood over him and said: I am YHWH, God of
+# Abraham your father and God of Isaac; the land on which you lie, to you I
+# will give it and to your seed.&quot;
+m.step(&quot;Gen.28.13&quot;)
+# ‹נִצָּב עָלָיו … לְךָ אֶתְּנֶנָּה› (“stand over-him/its … to-you/your set-
+# her/its”) — fact holds: the-LORD-stand-self-identification-land-commitment
+m.fact(&quot;YHWH_nitzav_self_identification_land_commitment&quot;)
+
+# -------------------------- Gen.28.14 · THE_DUST_FORMULA_ALL_FAMILIES_NIPHAL -
+# וְהָיָה זַרְעֲךָ כַּעֲפַר הָאָרֶץ וּפָרַצְתָּ יָמָּה וָקֵדְמָה וְצָפֹנָה
+# וָנֶגְבָּה וְנִבְרֲכוּ בְךָ כָּל־מִשְׁפְּחֹת הָאֲדָמָה וּבְזַרְעֶךָ
+# &quot;[EN-AID] And your seed shall be as the dust of the earth, and you shall
+# spread west and east and north and south; and all the families of the
+# ground shall be blessed in you and in your seed.&quot;
+m.step(&quot;Gen.28.14&quot;)
+# ‹כַּעֲפַר הָאָרֶץ … וְנִבְרֲכוּ בְךָ› (“like-dust the-earth … and-bless
+# in-you/your”) — fact holds: dust-seed-spread-all-families-blessed
+m.fact(&quot;dust_seed_spread_all_families_blessed&quot;)
+
+# -------------------------- Gen.28.15 · THE_FIVE_FOLD_PROMISE_NOT_LEAVE ----
+# וְהִנֵּה אָנֹכִי עִמָּךְ וּשְׁמַרְתִּיךָ בְּכֹל אֲשֶׁר־תֵּלֵךְ
+# וַהֲשִׁבֹתִיךָ אֶל־הָאֲדָמָה הַזֹּאת כִּי לֹא אֶעֱזָבְךָ עַד אֲשֶׁר
+# אִם־עָשִׂיתִי אֵת אֲשֶׁר־דִּבַּרְתִּי לָךְ
+# &quot;[EN-AID] And behold, I am with you, and I will keep you wherever you go,
+# and I will bring you back to this ground; for I will not leave you until I
+# have done what I have spoken to you.&quot;
+m.step(&quot;Gen.28.15&quot;)
+# ‹וּשְׁמַרְתִּיךָ … וַהֲשִׁבֹתִיךָ … לֹא אֶעֱזָבְךָ› (“and-keep/guard-
+# you/your … and-return-you/your … not loosen-you/your”) — fact holds: five-
+# fold-promise-with-keep-return-not-leave-until-done
+m.fact(&quot;five_fold_promise_with_keep_return_not_leave_until_done&quot;)
+
+# -------------------------- Gen.28.16 · THE_WAKING_AKHEN_AND_NOT_KNOWING ---
+# וַיִּיקַץ יַעֲקֹב מִשְּׁנָתוֹ וַיֹּאמֶר אָכֵן יֵשׁ יְהוָה בַּמָּקוֹם
+# הַזֶּה וְאָנֹכִי לֹא יָדָעְתִּי
+# &quot;[EN-AID] And Jacob awoke from his sleep and said: Surely YHWH is in this
+# place, and I did not know.&quot;
+m.step(&quot;Gen.28.16&quot;)
+# ‹וַיִּיקַץ … אָכֵן … לֹא יָדָעְתִּי› (“and-awake … firmly … not know”) —
+# fact holds: Jacob-woke-firmly-the-LORD-in-place-unknown
+m.fact(&quot;yaaqov_woke_akhen_YHWH_in_place_unknown&quot;)
+
+# -------------------------- Gen.28.17 · THE_FEAR_DOUBLET_GATE_OF_HEAVEN ----
+# וַיִּירָא וַיֹּאמַר מַה־נּוֹרָא הַמָּקוֹם הַזֶּה אֵין זֶה כִּי אִם־בֵּית
+# אֱלֹהִים וְזֶה שַׁעַר הַשָּׁמָיִם
+# &quot;[EN-AID] And he feared and said: How awesome is this place! This is none
+# other than the house of God, and this is the gate of heaven.&quot;
+m.step(&quot;Gen.28.17&quot;)
+# ‹וַיִּירָא … מַה־נּוֹרָא … שַׁעַר הַשָּׁמָיִם› (“and-fear … what fear …
+# gate the-heavens”) — fact holds: fear-doublet-house-God-gate-the-heavens
+m.fact(&quot;fear_doublet_bet_elohim_shaar_ha_shamayim&quot;)
+
+# -------------------------- Gen.28.18 · THE_PILLAR_AND_THE_OIL_DEBUT -------
+# וַיַּשְׁכֵּם יַעֲקֹב בַּבֹּקֶר וַיִּקַּח אֶת־הָאֶבֶן אֲשֶׁר־שָׂם
+# מְרַאֲשֹׁתָיו וַיָּשֶׂם אֹתָהּ מַצֵּבָה וַיִּצֹק שֶׁמֶן עַל־רֹאשָׁהּ
+# &quot;[EN-AID] And Jacob rose early in the morning and took the stone he had
+# set at his head, and set it as a pillar, and poured oil on its head.&quot;
+m.step(&quot;Gen.28.18&quot;)
+# ‹וַיָּשֶׂם אֹתָהּ מַצֵּבָה וַיִּצֹק שֶׁמֶן› (“and-put/set obj-marker-
+# her/its pillar and-pour-out oil”) — event: ?
+m.event(&quot;?&quot;)
+# ‹וַיַּשְׁכֵּם … וַיִּקַּח אֶת־הָאֶבֶן› (“and-rise-early … and-take obj-
+# marker the-stone”) — fact holds: early-rise-stone-taken-set-as-pillar
+m.fact(&quot;early_rise_stone_taken_set_as_pillar&quot;)
+
+# -------------------------- Gen.28.19 · THE_NAME_WRITE_BEIT_EL -------------
+# וַיִּקְרָא אֶת־שֵׁם־הַמָּקוֹם הַהוּא בֵּית־אֵל וְאוּלָם לוּז שֵׁם־הָעִיר
+# לָרִאשֹׁנָה
+# &quot;[EN-AID] And he called the name of that place Bethel; but Luz was the
+# name of the city at first.&quot;
+m.step(&quot;Gen.28.19&quot;)
+# ‹וַיִּקְרָא אֶת־שֵׁם־הַמָּקוֹם הַהוּא בֵּית־אֵל› (“and-call obj-marker
+# name the-place that Beth-el”) — named: the-place-Luz := beit-to
+m.name(&quot;ha_maqom_luz&quot;, &quot;beit_el&quot;)
+
+# -------------------------- Gen.28.20 · THE_FIRST_VOW_CONDITIONS_OPEN ------
+# וַיִּדַּר יַעֲקֹב נֶדֶר לֵאמֹר אִם־יִהְיֶה אֱלֹהִים עִמָּדִי וּשְׁמָרַנִי
+# בַּדֶּרֶךְ הַזֶּה אֲשֶׁר אָנֹכִי הוֹלֵךְ וְנָתַן־לִי לֶחֶם לֶאֱכֹל וּבֶגֶד
+# לִלְבֹּשׁ
+# &quot;[EN-AID] And Jacob vowed a vow, saying: If God will be with me and keep
+# me on this way that I go, and give me bread to eat and a garment to wear
+# —&quot;
+m.step(&quot;Gen.28.20&quot;)
+# ‹וַיִּדַּר יַעֲקֹב נֶדֶר … לֶחֶם … וּבֶגֶד› (“and-promise Jacob promise …
+# food … and-garment”) — fact holds: promise-opened-conditions-with-keep-
+# bread-garment
+m.fact(&quot;neder_opened_conditions_with_keep_bread_garment&quot;)
+
+# -------------------------- Gen.28.21 · THE_RETURN_IN_PEACE_AND_THEN_CLAUSE -
+# וְשַׁבְתִּי בְשָׁלוֹם אֶל־בֵּית אָבִי וְהָיָה יְהוָה לִי לֵאלֹהִים
+# &quot;[EN-AID] And I return in peace to my father&#x27;s house — then YHWH will be
+# my God.&quot;
+m.step(&quot;Gen.28.21&quot;)
+# ‹וְשַׁבְתִּי בְשָׁלוֹם … וְהָיָה יְהוָה לִי לֵאלֹהִים› (“and-return in-
+# safe … and-be YHWH to-me/my to-God”) — fact holds: return-in-peace-
+# condition-then-the-LORD-my-God
+m.fact(&quot;return_in_peace_condition_then_YHWH_my_God&quot;)
+
+# -------------------------- Gen.28.22 · THE_VOW_HANDLER_STONE_HOUSE_TITHE --
+# וְהָאֶבֶן הַזֹּאת אֲשֶׁר־שַׂמְתִּי מַצֵּבָה יִהְיֶה בֵּית אֱלֹהִים וְכֹל
+# אֲשֶׁר תִּתֶּן־לִי עַשֵּׂר אֲעַשְּׂרֶנּוּ לָךְ
+# &quot;[EN-AID] And this stone which I have set as a pillar shall be the house
+# of God; and all that You give me I will surely tithe to You.&quot;
+m.step(&quot;Gen.28.22&quot;)
+# ‹אִם־יִהְיֶה אֱלֹהִים עִמָּדִי … עַשֵּׂר אֲעַשְּׂרֶנּוּ לָךְ› (“if be God
+# along-with-me/my … tithe tithe-him/its to-you/your”) — standing handler —
+# if God-with-me ∧ shemarani-in-the-derekh ∧ set-food-and-garment ∧ return-
+# and-safe then the-LORD-to-me-to-God ∧ the-stone-house-God ∧ tithe-aasrenu
+m.handler(&quot;elohim_imadi ∧ shemarani_ba_derekh ∧ natan_lechem_u_veged ∧ shavti_ve_shalom&quot;,
+          &quot;YHWH_li_le_Elohim ∧ ha_even_bet_Elohim ∧ aser_aasrenu&quot;)
+# ‹וְהָאֶבֶן הַזֹּאת … עַשֵּׂר אֲעַשְּׂרֶנּוּ› (“and-the-stone the-this …
+# tithe tithe-him/its”) — fact holds: stone-house-tithe-vow-content
+m.fact(&quot;stone_house_tithe_vow_content&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {&#x27;ha_maqom_luz&#x27;: &#x27;beit_el&#x27;}
+    assert m.REGISTRY[&quot;writes&quot;] == 1
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS[&quot;log&quot;]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;named_before_any_presence&#x27;: 1}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;yaaqov_departed_beer_sheva_toward_charan&#x27;, &#x27;sun_set_stone_pillow_at_ha_maqom&#x27;, &#x27;sulam_earthward_head_heavenward_angels&#x27;, &#x27;YHWH_nitzav_self_identification_land_commitment&#x27;, &#x27;dust_seed_spread_all_families_blessed&#x27;, &#x27;five_fold_promise_with_keep_return_not_leave_until_done&#x27;, &#x27;yaaqov_woke_akhen_YHWH_in_place_unknown&#x27;, &#x27;fear_doublet_bet_elohim_shaar_ha_shamayim&#x27;, &#x27;early_rise_stone_taken_set_as_pillar&#x27;, &#x27;neder_opened_conditions_with_keep_bread_garment&#x27;, &#x27;return_in_peace_condition_then_YHWH_my_God&#x27;, &#x27;handler: IF(elohim_imadi ∧ shemarani_ba_derekh ∧ natan_lechem_u_veged ∧ shavti_ve_shalom) THEN(YHWH_li_le_Elohim ∧ ha_even_bet_Elohim ∧ aser_aasrenu)&#x27;, &#x27;stone_house_tithe_vow_content&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 4
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

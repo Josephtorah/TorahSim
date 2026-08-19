@@ -1,0 +1,1156 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_30_war_of_kings — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_30_war_of_kings?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The war of the kings: the annal, the rescue, the priest, the refused spoils (14:1-24) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_30_war_of_kings</b> · Genesis 14:1-24 · derive logic_derived_v1 · phase C-30</div>
+<div class="meta"><a href="../#Gen/14/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">הֲרִימֹתִי יָדִי אֶל־יְהוָה</span> · <i>harimoti yadi el-YHWH</i> · &#x27;I have raised my hand to YHWH&#x27;</p>
+<div class="note">REVIEW PASSED and FROZEN 2026-08-03 by the main loop: every census re-run independently against the raw snapshot and confirmed EXACT — melekh (&#x27;king&#x27;) in-span x27 with tokens 28-29 = 17:6/17:16 (&#x27;kings shall come out of you&#x27;); kohen (&#x27;priest&#x27;) token 1 = 14:18, tokens 2-5 all Egypt&#x27;s priests; el (the divine name 410) tokens 1-4 ALL in-span as El Elyon (&#x27;God Most High&#x27;), token 5 = 16:13 (the El-ladder confirmed); brit (&#x27;covenant&#x27;) tokens 1-8 all divine (6:18 + Gen 9&#x27;s seven), TOKEN 9 = 14:13&#x27;s baalei verit (&#x27;masters of covenant&#x27; — first human-human), token 10 = 15:18; barakh (&#x27;bless&#x27;) tokens 1-5 divine, 6 = 9:26 human-to-God, 7-10 = the 12:2-3 promise cluster, TOKEN 11 = 14:19 — the FIRST HUMAN-BLESSES-HUMAN, with token 12 the same verse&#x27;s second barukh; maaser (&#x27;tithe&#x27;) token 1 = 14:20, tokens 2-4 = Lev 27:30-32 (the tithe law — the bridge-class again); shava (&#x27;swear&#x27;) absent until 21:23-24 while the ONLY im (&#x27;if&#x27;) + first-person-imperfect oath-clause in Gen 1-14 is 14:23 — THE CORPUS&#x27;S FIRST HUMAN OATH verified; rum (&#x27;raise&#x27;) tokens 1-2 = 7:17 (the waters lifting the ark) / 14:22 (the raised hand); qanah (&#x27;acquire&#x27;) tokens 1-3 = 4:1 (Chavah&#x27;s verb) / 14:19 / 14:22; melach (&#x27;salt&#x27;) 1-2 = 14:3 / 19:26 (Lot&#x27;s wife next); ivri (&#x27;Hebrew&#x27;) token 1 = 14:13, tokens 2-3 = 39:14/17 (Egypt, as staged); chanikh (&#x27;trained man&#x27;) TORAH HAPAX 14:14; migen (&#x27;delivered&#x27;, piel) TORAH HAPAX 14:20 vs magen (&#x27;shield&#x27;, noun) token 1 = 15:1 — the seam-pun&#x27;s TWO LEMMAS confirmed, seam not encoded; Dan token 1 = 14:14 (birth 30:6) and the Amalekite gentilic before Amalek&#x27;s 36:12 birth — proleptics named-only, ratified; Shinar tokens 3-4 in-span; rekhush (&#x27;property&#x27;) tokens 3-7 of 13 all in-span (gen_27&#x27;s debut line quoted — reviewer note: the quote elides the frozen line&#x27;s inline gloss parenthetical, content identical); MORPHS verified: ten (&#x27;give!&#x27;) and qach (&#x27;take!&#x27;) both true imperatives HVqv2ms, yiqchu (&#x27;let them take&#x27;) JUSSIVE HVqj3mp (flag 2&#x27;s morph-driven overturn confirmed), harimoti performative hiphil perfect; Abram&#x27;s three speeches hold EXACTLY ONE YHWH token (14:22); Tzevoyim = two-row ktiv/qere pairs at BOTH 14:2 and 14:8 (corpus doubles-in-frozen-spans now EIGHT); span word_total 343. ALL THIRTEEN FLAGGED CHOICES RATIFIED. Flag 1 (the boldest): THE REFUSAL RULING — a refusal is a FACT about a demand, not an operation on it; the queue records debts, not attitudes; zero new operators (the decline-class weighed and rejected under the owner-gated-interpreter constraint); the letter&#x27;s own sequence seals it — the persons were brought back at 14:16 BEFORE the king demanded them. RATIFIED as frozen law for future refusals. Flag 2 ratified (the third demand pushed and open on gen_23&#x27;s jussive device — the letter&#x27;s mood decides). Flag 3 ratified (the tithe agentless, both pronouns bare; Onkelos declines to vote — dual-track). Flags 4-13 ratified as argued. All frozen-unit quotes verified verbatim (gen_13/23/24/27/28). Onkelos (Aramaic translation) Tier-A, 24 sequential fetches FETCHLOG&#x27;d — headline find-class: 14:18&#x27;s DOUBLE MOVE (Salem named JERUSALEM; the priest-word withheld — meshamesh kodam, &#x27;one who serves before&#x27;); the oath gains prayer; the compass-for-body-relative policy confirmed as repeat buffer. TWENTY-SIXTH PROSPECTIVE MIDDOT RUN (logic/middot_scan/WATCHLIST_gen30_prospective_2026-08-03.md): cache holds ZERO sources for Gen 14:1-24 — TWENTY-FOURTH tripwire in a row. INTERPRETER: ZERO extensions — twenty-first extension-free derivation in a row. Derived by the FOURTH-GENERATION agent (its second unit; thirteenth agent-derived unit overall; first-run green, zero corrections, one self-caught prose/machine count mismatch fixed before shipping). THE DRAFT&#x27;S FLAGGED CHOICES (all ratified): (1) THE REFUSAL RULING — the unit&#x27;s boldest call. The king of Sodom&#x27;s imperative pair (TEN-li ha-nefesh &#x27;GIVE me the persons&#x27; + ve-ha-rekhush QACH-lakh &#x27;and the goods TAKE for yourself&#x27; — both HVqv2ms, DB-verified) pushes TWO human LET demands (gen_13&#x27;s class, quoted); Abram&#x27;s oath-speech REFUSES them aloud — and the machine records the refusal as SPOKEN FACTS while the demands stand OPEN, with ZERO new operators: a refusal is a FACT ABOUT a demand, not an operation ON it. The queue arithmetic is exactly frozen gen_28&#x27;s, quoted (&#x27;ZERO RESULT ops — no demand receipts in-span [bold; the letter&#x27;s arithmetic]&#x27;): RESULT pops only an executed demand, and NOTHING is executed — Abram takes no goods (the oath negates the taking in the demand&#x27;s own verb: ve-im EQACH, &#x27;if I TAKE...!&#x27;), and no transfer of persons to the king is narrated ANYWHERE (the letter&#x27;s own sequence is sharper still: the persons were already BROUGHT BACK at 14:16, before the king ever asked). The machine-difference between gen_28&#x27;s silence and this refusal lives entirely in the FACTS register (two standing oath-facts) and in prose — the queue records debts, not attitudes. Weighed against inventing a decline/annul class: REJECTED — the interpreter is owner-gated, the extension-free record stands (twenty-one in a row), and the letter itself never cancels the demands; it answers them with an oath and an exception-clause. FLAGGED for ratify-or-reverse. (2) 14:24&#x27;s HEM YIQCHU CHELQAM (&#x27;let THEM take their portion&#x27;) — the DB tags yiqchu JUSSIVE (HVqj3mp), and the controlling precedent is frozen gen_23&#x27;s four-jussive device, quoted: &#x27;THE FOUR JUSSIVES as DECLARE + LET demands (TIR-026; gen_01&#x27;s &quot;DECLARE(Elohim, LET(exists(or)))&quot; quoted; gen_13&#x27;s &quot;DECLARE(lemekh, LET(shema(neshei_lemekh, qol_lemekh)))&quot; the human-demand precedent)... All four pushed and letter-faithfully OPEN.&#x27; So HERE: pushed as DECLARE(avram, LET(yiqchu(aner_eshkol_ mamre, chelqam))) — Abram&#x27;s second demand-issuing ever (his first, 13:9&#x27;s hipared, is the corpus&#x27;s only settled human demand, frozen gen_29) — and OPEN: no taking by the allies is narrated. The initial staging lean (hold as oath-internal fact) was OVERTURNED BY THE MORPH + the frozen jussive class — the letter&#x27;s mood decides, flagged. (3) THE TITHE&#x27;S HIDDEN PRONOUNS — va-yiten-LO maaser mi-kol (&#x27;and HE gave HIM a tenth of all&#x27;, 14:20): the giver and receiver are both bare pronouns; the give-event is encoded AGENTLESS (give(e18) with Theme only — the letter&#x27;s ambiguity preserved; the discipline is TIR-032&#x27;s agentless class, applied to an active verb whose subject the letter withholds). Held OPEN, not resolved. Onkelos&#x27;s vote checked as ordered: vi-hav leh (&#x27;and he gave him&#x27;) — THE BUFFER DECLINES TO VOTE: both pronouns stay bare in Aramaic too [dual-track]. (4) THE CORPUS&#x27;S FIRST HUMAN OATH claimed [census-backed]: 14:22-23&#x27;s harimoti yadi (&#x27;I have RAISED MY HAND&#x27; — performative perfect, rum token 2; token 1 is 7:17, the waters LIFTING the ark) + the im-formula self-curse (&#x27;IF from a thread to a sandal-thong, and IF I take...&#x27;) — the swear-verb itself (shava) debuts only at 21:23-24, and the census finds NO earlier im + first-person-imperfect oath-clause in the corpus (the only hit in Gen 1-14 is 14:23&#x27;s eqach): the oath-FORM exists seven chapters before the oath-VERB. Counterexample hunt run; precise reframe stands ready if review finds one. (5) BRIT (&#x27;covenant&#x27;) TOKEN 9 = 14:13&#x27;s baalei verit-avram (&#x27;masters of Abram&#x27;s covenant&#x27;) — tokens 1-8 are ALL DIVINE (6:18 + the seven of Gen 9, census-verified): the covenant-word&#x27;s FIRST HUMAN-HUMAN token is three Emorite brothers allied with Abram; token 10 is 15:18 (the covenant of the pieces, across the seam, named-only). (6) THE FIRST HUMAN-BLESSES-HUMAN: 14:19&#x27;s va-yevarkhehu (barakh token 11; tokens 1-5 divine piel, token 6 = 9:26 — frozen gen_23&#x27;s direction-inversion, quoted: &#x27;every prior BLESS speaker was Elohim; here a human blesses YHWH (BLESS(noach, yhwh_elohei_shem))&#x27; — tokens 7-10 = 12:2-3&#x27;s promise cluster): Malki-Tzedek completes the triangle — a human blesses a HUMAN, and the human he blesses is the man of frozen gen_27&#x27;s 12:3 guard-clause (&#x27;I will bless your blessers&#x27;) — the guard&#x27;s first field is a priest-king [cross-unit, prose only, nothing pops]. BLESS x2 encoded (the double barukh: Abram at 14:19, El Elyon at 14:20 — gen_23&#x27;s human-to-God direction repeating in the second). (7) ABRAM&#x27;S FIRST SPOKEN YHWH [census]: his three recorded speeches (12:11-13 fear, 13:8-9 peace, 14:22-24 refusal) contain exactly ONE YHWH token — 14:22: the first time the man of the call says the Name aloud, and he says it fused to the foreign priest&#x27;s epithet with the fusion&#x27;s OWN order: YHWH FIRST (el-YHWH el elyon qoneh shamayim va-aretz — 14:19-20&#x27;s epithet YHWH-prefixed, letter fact; the chain&#x27;s readings named-only). (8) EL (the divine name, 410) tokens 1-4 ALL in-span as EL ELYON (&#x27;God Most High&#x27;) — verified; the El-title ladder that follows is 16:13 (El Roi), 17:1 (El Shaddai), 21:33 (El Olam) [careers, prose, named at the step]. ELYON&#x27;s 9 Torah tokens: four here, then a basket-top (40:17), Bilam (Num 24:16), and Deuteronomy. (9) GLOSS_FIX candidates from this span&#x27;s gloss column: dan &#x27;Daniel&#x27; -&gt; &#x27;Dan (the place)&#x27; (1835); melach &#x27;the-powder&#x27; -&gt; &#x27;salt&#x27; (4417); migen &#x27;shield&#x27; -&gt; &#x27;delivered&#x27; (4042 — the piel VERB, Torah hapax; the noun magen &#x27;shield&#x27; is 4043, whose token 1 is 15:1 across the seam); qoneh &#x27;erect&#x27; -&gt; &#x27;possessor/maker&#x27; (7069); elyon &#x27;elevation&#x27; -&gt; &#x27;Most High&#x27; (5945); midbar &#x27;pasture&#x27; -&gt; &#x27;wilderness&#x27; (4057); nus &#x27;flit&#x27; -&gt; &#x27;flee&#x27; (5127); chalaq &#x27;be-smooth&#x27; -&gt; &#x27;divide&#x27; (2505/2506); raq &#x27;leanness&#x27; -&gt; &#x27;only&#x27; (7535). (10) KTIV/QERE x2: Tzevoyim is a two-row written/read pair at BOTH 14:2 and 14:8 (the census&#x27;s corpus adjacency-pair list); the 343-token span total counts all rows. (11) PROLEPTIC NAMES held named-only, no claims: ha-Amaleqi (14:7) precedes Amalek&#x27;s birth (36:12 — census); Dan (14:14) precedes Dan&#x27;s birth (30:6 — census); the chain&#x27;s harmonizations are the chain&#x27;s. (12) MAMRE person/place: frozen gen_29 installed the altar at elonei Mamre (the grove-construct, place); 14:13/24&#x27;s Mamre is an EMORITE MAN, brother of Eshkol and Aner — same lemma, the eponym materialized as an ally [letter fact, prose]. (13) Seed/staging self-corrections: the staged &#x27;Goyim proper-name ordinal&#x27; claim dropped (the debut map normalizes the 1471 b lemma-split; the words table alone carries the b-tag — stated as lemma-tag observation only); the staged lean on 14:24 (flag 2) overturned by the morph. ONKELOS (Aramaic translation) read Tier-A at derive time (24 sequential fetches, 0.5s spacing, Data/FETCHLOG.md 2026-08-03) — headline: 14:18&#x27;s DOUBLE MOVE — Salem is IDENTIFIED (malka di-YERUSHLEM, &#x27;king of JERUSALEM&#x27;) and the priest-word is WITHHELD: kohen&#x27;s Torah-debut token is rendered MESHAMESH KODAM (&#x27;one who SERVES BEFORE&#x27;) El Elyon — the buffer names the city the letter conceals and un-priests the man the letter ordains. Full findings and repeat-buffers in ORAL_onkelos_tier_a. Watch-points answered: the oath gains PRAYER (bi-tzlo, &#x27;in prayer&#x27; — inserted at 14:22); the maaser pronouns stay ambiguous (the buffer declines to vote); mi-semol (&#x27;on the left of&#x27;) Damascus -&gt; MI-TZIPUNA (&#x27;on the NORTH&#x27;) — frozen gen_29&#x27;s compass-for-body-relative policy CONFIRMED as a repeat buffer; the take-verb turns captive (u-shvo) and the king&#x27;s qach turns lead (devar — the lead-for-take buffer again). PROSPECTIVE MIDDOT RUN queued as WATCHLIST_gen30_prospective (scratchpad; the cache middot scan is the MAIN LOOP&#x27;S gate, not claimed here). INTERPRETER: ZERO extensions — every operator, mood, and scenario clause parses under the UNMODIFIED repo interpreter (preflight from scratchpad, draft-guard bypassed for preview only).</div>
+<div class="note">Logic-derived v1: v3 taamim (cantillation accents) trees from DB tree_json -&gt; leaf role frames from OSHB morph -&gt; operator lines citing TIR rules -&gt; machine-state scenarios. Machine tokens apostrophe-free and underscore-joined (ten(avram, ha_nefesh), qach(avram, ha_rekhush), yiqchu(aner_eshkol_mamre, chelqam), harimoti_yadi_el_YHWH_el_elyon). HYBRID steps: three grouped annal-rows (gen_24&#x27;s device) + thirteen per-verse (sixteen steps).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (retro, PROCESS.md oral-first era; manifest logic/oral_audit/manifests/gen_30_war_of_kings_claims.json — 23 VERIFIED, 0 FAILED, 1 UNCHECKABLE; record logic/oral_audit/AUDIT_gen_30_2026-08-08.md). CROWNS (chain-attested + DB-verified): (1) THE HUNDRED WORDS (G30-02..08, Kitzur on 14:19): the Torah&#x27;s SEVEN verses of blessing spoken TO God — ברוך יהוה אלהי שם (&quot;blessed be the LORD, God of Shem,&quot; 9:26), וברוך אל עליון (&quot;and blessed be God Most High,&quot; 14:20 — this span&#x27;s priest-verse), the servant&#x27;s two (24:27, 24:48), Jethro&#x27;s (Exod 18:10), the grace-command (Deut 8:10), Gad&#x27;s (Deut 33:20) — total EXACTLY ONE HUNDRED words (9+11+20+19+18+12+11), &quot;against the hundred daily blessings; seven verses against Sabbath&#x27;s seven.&quot; SNAPSHOT: one hundred, word for word. (2) Chedorlaomer ONE WORD (G30-10): Bavli Chullin 65a transmits the writing-rule; the precise manuscripts, the Ramah and the Meiri rule one word — SNAPSHOT: a single written word at all five Torah tokens (14:1/4/5/9/17). (3) חניכיו (&quot;his trained men,&quot; the machine&#x27;s hapax) written with TWO YODS (G30-09): the printed Rashi&#x27;s &quot;written singular&quot; is Minchat Shai&#x27;s &quot;astonishment — no book lacks the yods&quot;; SNAPSHOT arbitrates with the Ramah. (4) THE THREE SOFT TITHES (G30-18/19/20, the Masorah via Minchat Shai): מעשר (&quot;tithe&quot;) with ayin in hataf patach (the compound half-vowel) exactly at its Torah debut on Abram&#x27;s spoils (14:20) and Korach&#x27;s two (Num 18:21, 18:26) — the machine&#x27;s own tithe-word bridge (token 1 then the law) now carries a POINTING law across three books. (5) הרימתי (&quot;I have raised&quot;) — exactly two Torah tokens: the oath-hand (14:22, the unit&#x27;s title-word) and Potiphar&#x27;s wife&#x27;s raised voice (39:15) (G30-11, Kitzur: &quot;she too intended for good&quot;). (6) Malki-Tzedek (G30-14/15): the initials of מלך שלם (&quot;king of Salem&quot;) carry שם (&quot;Shem&quot; — the chain&#x27;s identification riding the letters); the name itself is the traditions&#x27; split (one word / two words one line / &quot;written two read one&quot;; the Ramah undecided) — SNAPSHOT: two rows JOINED by maqqef (the joining hyphen), a camp recorded where the Ramah stayed silent. (7) האימים (&quot;the Emim&quot;) written fully full — two yods — ONCE in the Torah (14:5); Deut 2:10-11 drop the first yod as ruled; Jer 50:38 is Scripture&#x27;s second (edge) (G30-22/23). (8) הם יקחו חלקם (&quot;let THEM take their portion&quot;) — pronoun BEFORE jussive, against the Venice 1560 print&#x27;s inversion (G30-16): the third DECLARE&#x27;s word-order locked. (9) ובארבע verse-initial once (14:5) — paired with Sennacherib&#x27;s fourteenth year (II Kings 18:13; edge) (G30-13); לדמשק once (14:15) — paired with Amos&#x27; &quot;beyond Damascus&quot; (5:27; edge) (G30-12); ויהי בימי (&quot;and it was in the days of&quot;) once in the Torah, opening this annal — the Masorah&#x27;s formula of woe (Ruth, Esther legs; edges) (G30-21). (10) Tzevoyim written צביים read with vav at BOTH 14:2/14:8, two DB rows each — the frozen ktiv/qere accounting now chain-attested (G30-17, Minchat Shai). DISCREPANCY (filed, not merged): THE ELEVEN THAT ARE EIGHTEEN (G30-01, the Ramah&#x27;s written-with-yod list opening at this span&#x27;s &quot;Bela — it is Zoar&quot;): SNAPSHOT carries all eleven of the list PLUS SEVEN more yod-pronouns (Gen 19:20, 26:7, 40:10, Exod 1:16, Lev 5:11, 13:6, 20:18) — the largest counted-law vs codex split recorded; filed beside the 9:29 death-total war. INHERITANCE EDGES (export_links, Torah side verified): 14:18 → Psalm 110 — the priest-word&#x27;s Torah DEBUT inherited by &quot;a priest forever, after the order of Malki-Tzedek&quot;; 14:14 → I Kings 12:28-30 — proleptic Dan inherited by Jeroboam&#x27;s calf at Dan; 14:5 → Deut 1:4/2:10/2:20/3:11 and Amos 6:13 — the giants&#x27; geography re-walked, Karnaim taunted; 14:7 → Num 20:1 and II Chr 20:2 — Kadesh and Hatzatzon-Tamar reused. INSTRUMENT GAP: עליהם ׀ לילה — Minchat Shai&#x27;s paseq (the separator bar) between the words (14:15); the words table sees no between-word bar: paseq class, recurrence (G30-24). READINGS (named-only): the escapee = Og (Pirkei DeRabbi Eliezer via Kitzur, with Ezekiel&#x27;s escapee as pair); the chapter&#x27;s pointing minutiae (bארת&#x27;s compound segol, הרה&#x27;s segol-vs-tsere with Masorah &quot;unique,&quot; the dagesh trio, שוה&#x27;s tsere, בהררם&#x27;s two-similar-letters rule pointing back to 12:3&#x27;s bless-word law) filed without rows. Machine layer untouched.</div>
+<div class="meta">confidence: structure tested; operator readings tested-per-TIR; intent hypothesis</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>Gen 14:1-24 as ONE UNIT (owner ruling on the staged recommendation, adopted WITH the hybrid format): the annal — coalition and vale (14:1-3), tribute clock and southern sweep (14:4-7), battle, pits, plunder (14:8-11); then per-verse — Lot taken (14:12), the refugee and the allies (14:13), the muster (14:14), the night-split (14:15), the bringing-back (14:16), the king&#x27;s meeting (14:17), bread and wine (14:18), the two blessings and the tenth (14:19-20), the demands (14:21), the oath (14:22-23), the exception (14:24). The no-split-at-14:13 reasoning ratified: the laqach (&#x27;take&#x27;) arc binds the halves — taken at 14:11-12, brought back at 14:16, demanded at 14:21, refused at 14:23, stipulated at 14:24. 15:1 breaks genre completely (the word in a vision) and carries the seam-pun (14:20 miggen / 15:1 magen — flag at step, careers only, seam NOT encoded). 24 verses, 343 tokens.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Hebrew source + trees</td><td>All 24 verses from DB tree_json (rule set v3, unique, pure binary; ascii rendered 2026-08-03). Grouped annal-steps carry the LEAD verse&#x27;s etnachta arms (gen_24&#x27;s device, quoted in the draft note); every verse&#x27;s full tree stands in binary_trees. Tree facts (accent positions DB-verified): 14:3 ends on yam ha-MELACH (&#x27;the Salt Sea&#x27;); 14:4 ends on MARADU (&#x27;they rebelled&#x27;); 14:9 ends on et ha-CHAMISHAH (&#x27;against the FIVE&#x27;); 14:11 ends on the single word VA-YELEKHU (&#x27;and they went&#x27;); 14:12 ends on BI-SEDOM — Lot&#x27;s verse ends on Sodom AGAIN (frozen gen_29&#x27;s 13:12 ended on ad-sedom: two units, two Lot-verses, one verse-final address) [cross-unit tree fact, prose]; 14:13 ends on baalei verit-AVRAM; 14:14 rests on ACHIV (&#x27;his brother&#x27;) and ends on ad-DAN; 14:17 carries the RARE ZINOR + SEGOL accent pair (poetic cousins in prose) and ends on emeq ha-MELEKH (&#x27;the King&#x27;s Vale&#x27;); 14:19 has a TWO-WORD etnachta arm (va-yevarkhehu va-yomar — &#x27;he blessed him and said&#x27;: the blessing IS the rest) and ends on shamayim va-ARETZ; 14:20 ends on mi-KOL (&#x27;of ALL&#x27; — the tenth verse-final); 14:21 ENDS ON QACH-LAKH (&#x27;TAKE for yourself&#x27;) — a human demand seated on the silluq (verse-end) throne, exactly frozen gen_28&#x27;s class (&#x27;12:19 ENDS ON VA-LEKH... the king&#x27;s go-imperative sits verse-final&#x27; — quoted); 14:22 ends on shamayim va-aretz AGAIN — the blessing&#x27;s epithet and the oath&#x27;s epithet close their verses with the same two words; 14:23 ends on heesharti et-AVRAM (&#x27;I made Abram rich&#x27; — the motive verse-final); 14:24 ends on YIQCHU CHELQAM (&#x27;let them take their portion&#x27; — the jussive on the throne).</td><td>tested</td></tr>
+<tr><td><b>C</b></td><td>Segment structure</td><td>Verb morphology (#IMPOSED OSHB, DB-verified 2026-08-03) and censuses run BEFORE drafting. THE DEMAND FIELD: 14:21 TEN + QACH — both TRUE IMPERATIVES (HVqv2ms; no guard, gen_27&#x27;s ratified rule); 14:24 YIQCHU — JUSSIVE (HVqj3mp; gen_23&#x27;s jussive-LET class, flag 2); 14:22 HARIMOTI — performative perfect (Vhp1cs); 14:23&#x27;s im-clauses — the oath-negative formula (the census&#x27;s only im + 1cs-imperfect oath in Gen 1-14). MELEKH (&#x27;king&#x27;) — TORAH DEBUT x27 IN-SPAN (tokens 1-27 of 101, count verified exact): the letter never called Nimrod, Pharaoh, or Babel&#x27;s builders king; tokens 28-29 are 17:6/17:16 — &#x27;KINGS shall come out of you&#x27;: the word is born in a war and next appears in the covenant [career, prose]. MILCHAMAH (&#x27;war&#x27;) debut x2 (asu milchamah — war is MADE, with the make-verb; tokens 3-5: Egypt&#x27;s fear, the Sea road, YHWH ish milchamah). KOHEN (&#x27;priest&#x27;) — TORAH DEBUT at 14:18 (tokens 2-5 are all EGYPT&#x27;S priests, 41:45-47:22: one Salem, four Egypt, before Aaron&#x27;s 280+). EL (410) tokens 1-4 ALL in-span as EL ELYON (flag 8); ELYON x4 of its 9. MAASER (&#x27;tithe&#x27;) — TORAH DEBUT; tokens 2-4 are Lev 27:30-32, THE TITHE LAW: the law&#x27;s word born in an ambiguous gift (the lev_13/nega bridge-class — a law-word debuting as narrative, three books early) [career, prose]. BRIT token 9 (flag 5). BARAKH tokens 11-13 (flag 6). QANAH (&#x27;acquire&#x27;) tokens 2-3 = the qoneh epithet (token 1 = 4:1, Chavah&#x27;s qaniti &#x27;I have ACQUIRED a man with YHWH&#x27; — the acquire-verb&#x27;s career: a mother&#x27;s first cry, then God&#x27;s title as Owner of heaven and earth) [census, prose]. RUM token 2 = the oath-gesture (token 1 = 7:17: the waters LIFTED the ark; tokens 4-5 = 39:15/18, harimoti qoli — the SAME 1cs form in Potiphar&#x27;s wife&#x27;s false accusation) [career, prose]. LAQACH tokens 24-28 in-span — the arc: plunder taken (24), LOT taken (25), the king&#x27;s qach-demand (26), Abram&#x27;s im-eqach refusal (27), the allies&#x27; jussive (28); tokens 21-23 were frozen gen_28&#x27;s passive/confession/imperative triad; token 29 is 15:9&#x27;s qechah-li — GOD says take next, across the seam [career, prose]. SHUV tokens 8-11 in-span: va-yashuvu (the annal&#x27;s pivot, 14:7), VA-YASHEV + HESHIV (14:16 — BOTH HIPHIL: &#x27;he BROUGHT BACK&#x27;, the restore-voice&#x27;s Torah debut x2 in one verse; tokens 1-2 = 3:19&#x27;s dust-return), shuvo (14:17). IVRI (&#x27;Hebrew&#x27;) — TORAH DEBUT at 14:13 (frozen gen_27 noted avar &#x27;cross&#x27; token 2 at 12:6 with the crosser-naming named-only — the gentilic lands HERE); tokens 2-6 are ALL Yosef-in-Egypt, 7-8 the midwives: the Hebrew-name is born in war and lives in Egypt [census, prose]. CHANIKHAV (&#x27;his trained men&#x27;) — TORAH HAPAX, verified; 318 held as letter fact, no numerology [chain readings named-only]. NEFESH tokens 14-15: 12:5&#x27;s souls-MADE-in-Charan (frozen gen_27), 14:21&#x27;s souls-DEMANDED-by-Sodom [career, prose]. REKHUSH tokens 3-7 of 13 in-span (gen_27&#x27;s debut line quoted at the step); token 8 = 15:14&#x27;s exodus decree (&#x27;they will come out bi-rekhush gadol&#x27;), named-only. MELACH (&#x27;salt&#x27;) debut names the doomed vale&#x27;s sea; TOKEN 2 = 19:26 — LOT&#x27;S WIFE, the pillar [career, prose]. LECHEM token 2 (token 1 = 3:19&#x27;s sweat-bread; token 3 = 18:5, Abraham&#x27;s own hospitality); YAYIN token 3 (tokens 1-2 = Noach&#x27;s fall; tokens 4-6 = LOT&#x27;S DAUGHTERS, 19:32-34) [careers, prose]. War-lexicon debut burst: midbar, nus x2, radaf x2, shavah (&#x27;taken captive&#x27; — nishbah achiv), arakh (&#x27;array&#x27;), chalaq verb (the night-SPLIT, niphal) + cheleq noun x2 (the spoils-PORTION — one root splits the army and the plunder), naar token 1 (the young men of the exception-clause), am token 2, baal token 1, tzar token 1, palit debut, En-mishpat (the mishpat-skeleton&#x27;s first surface, as a PLACE name), beerot beerot chemar (the well-word debuts DOUBLED as tar-pits), the giant-peoples file (Refaim/Emim/Zuzim/Chorim), Yam ha-Melach, Dan, Chovah, Damaseq, Shalem (hapax). SAY-ROSTER: the annal is SPEECHLESS (14:1-17 — zero say-tokens; the corpus&#x27;s longest voiceless stretch of narrative); then 14:19 Malki-Tzedek, 14:21 the king of Sodom, 14:22 ABRAM — his THIRD recorded speech, his FIRST spoken YHWH (flag 7).</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Predicates &amp; outcomes</td><td>The machine&#x27;s queue re-runs gen_28&#x27;s shape (THREE human demands open, zero settled) with the moral geometry inverted: in Egypt the demands were unanswered because no one spoke; here TWO of the three are REFUSED ALOUD — the corpus&#x27;s first oath stands against them as spoken fact — and the third is Abram&#x27;s own counter-stipulation for his allies. Around the queue: eleven verses of speechless annal (the king-word&#x27;s 27 tokens, the four-vs-five, the clock, the pits), the capture that completes Lot&#x27;s slide across the frozen wall, the muster and night-split and double-hiphil bringing-back, the priest-king&#x27;s bread and wine, BLESS x2 (the first human-blesses-human, then gen_23&#x27;s human-to-God direction), the agentless tenth (flag 3), and the oath whose epithet repeats the blessing&#x27;s, YHWH-prefixed. TESTS empty (no roster instrument anywhere — a war judged by no one); NAME zero (the El Elyon fusion is quoted speech, not a naming act); REGISTRY zero writes; INSTALLS zero (nothing is built — an army moves and nothing persists); LEDGER empty.</td><td>tested</td></tr>
+<tr><td><b>E</b></td><td>Logic format choice</td><td>Operator lines; HYBRID steps — three grouped annal-rows (gen_24&#x27;s ratified device) + thirteen per-verse (sixteen steps). DECLARE x3, ALL HUMAN: LET(ten(avram, ha_nefesh)) + LET(qach(avram, ha_rekhush)) [14:21, the king&#x27;s pair — gen_13&#x27;s class; TIR-027] and LET(yiqchu(aner_eshkol_mamre, chelqam)) [14:24, Abram&#x27;s jussive — gen_23&#x27;s device; TIR-026]. ZERO RESULT ops [flag 1 — the refusal ruling]. BLESS x2 [14:19, 14:20 — gen_05&#x27;s operator, gen_23&#x27;s directions]. EVENTs (20): make_war (the annal&#x27;s one predicate over 14:1-3), strike (14:5-7 the sweep), array_battle + flee + take (14:8-11), take (14:12 — Lot), come + tell (14:13), hear + muster + pursue (14:14), split + strike + pursue (14:15), bring_back (14:16 — the double hiphil), go_out (14:17), bring_out (14:18), give (14:20 — AGENTLESS, flag 3), say x2 (14:21, 14:22). Standing facts (14 fact-lines): the coalition-and-vale, the clock, the four-vs-five, the pits, Lot&#x27;s address, the ally-covenant (brit token 9), the 318, Damascus-north, the priest-fact, the two barukh formulas, the miggen clause, the oath-gesture, the thread-and-thong + motive pair, the eaten-exception. NOTE_PRESUPPOSED x6 ops / 23 names — the largest read-roster yet (flagged letter-faithfully, per seed order). NAME x0, TESTS x0, LEDGER x0, REGISTRY_INSTALL x0, INVARIANT x0. Queue at rest: 3 OPEN, all human, two refused aloud. Interpreter extensions: NONE.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Bilingual logic objects</td><td>Every operator line carries he + he_translit + en. Machine tokens apostrophe-free: ten(avram, ha_nefesh), qach(avram, ha_rekhush), yiqchu(aner_eshkol_mamre, chelqam), harimoti_yadi_el_YHWH_el_elyon_qoneh_shamayim_va_aretz, im_mi_chut_ve_ad_serokh_naal_ve_im_eqach_mi_kol_asher_lakh, ve_hem_baalei_verit_avram, ve_hu_khohen_le_el_elyon.</td><td>established</td></tr>
+<tr><td><b>G</b></td><td>Oral (named only) + Tier-A translation check</td><td>Named but NOT read (queue only — the cache middot scan is the main loop&#x27;s gate): Bereshit Rabbah 42-43 (the span; the Amraphel-is-Nimrod identification class; the 318 as Eliezer&#x27;s gematria class — NAMED ONLY, no numerology enters the machine); Rashi at 14:7 (En-mishpat), 14:13 (the refugee&#x27;s identity file), 14:14 (the 318), 14:18 (Malki-Tzedek-is-Shem class), 14:22 (the raised hand as oath); Ramban at 14:1 (the four-kingdoms typology class); Bavli Nedarim 32b (Malki-Tzedek and the priesthood&#x27;s transfer class); Chullin 89a (the thread-and-thong&#x27;s reward class — the tzitzit thread and the tefillin strap); the maaser giver-identity dispute. Tier-A Onkelos (24 fetches, Data/FETCHLOG.md 2026-08-03): findings in ORAL_onkelos_tier_a — headline: 14:18&#x27;s Jerusalem-naming + priest-withholding; the oath gains prayer; the tithe stays ambiguous; gen_29&#x27;s compass-policy confirmed as repeat buffer.</td><td>tested</td></tr>
+<tr><td><b>H</b></td><td>Scenarios</td><td>S1 the coalition: annal facts hold, ten geography names flagged, SPECS empty. S2 the clock and sweep: served/rebelled facts hold, SPECS empty. S3 the battle and plunder: four-vs-five and pits facts hold, SPECS STILL empty — eleven verses, no demand, no speech. S4 Lot taken: the address-fact holds. S5 the allies: brit-token-9 fact holds, no test, no name. S6 the bringing-back: the 318-fact holds, SPECS empty (the restoration precedes every demand). S7 the priest: the kohen-fact holds, no test, no name. S8 the blessings and the tenth: both barukh facts hold, SPECS empty. S9 the king&#x27;s pair pushed: both LETs OPEN. S10 the close: all three demands OPEN, oath-facts hold, no test, no name, LEDGER stays EMPTY. S11_negative LET? guard; S12_negative flag-never-block.</td><td>tested</td></tr>
+<tr><td><b>I</b></td><td>English leakage review</td><td>Operators derive from morph codes (the two imperatives, the jussive, the performative perfect, the double hiphil, the niphal night-split, the agentless give; TIR-014/026/027/032) and censuses run BEFORE drafting (melekh x27 exact; kohen/ el/elyon/maaser/brit/barakh/qanah/rum/shava/laqach/shuv/ ivri/chanikh/nefesh/rekhush/melach/lechem/yayin rosters; the im-oath hunt; the say-roster; the proleptic-name censuses). NOT supplied: who gave the tenth to whom (the letter hides it; the buffer declines too — held OPEN), who the refugee was, what the 318 means (named-only), whether the persons were ever transferred to the king (never narrated — the demands stand OPEN), Malki-Tzedek&#x27;s identity (the chain&#x27;s files named-only), the four-kingdoms typology (named-only), Amalek&#x27;s and Dan&#x27;s prolepsis (named-only), and the miggen/magen seam-pun&#x27;s other half (15:1 is across the seam — careers only, nothing encoded).</td><td>established</td></tr>
+<tr><td><b>J</b></td><td>Pre-flight + draft ship</td><td>Pre-flight 2026-08-03 against the UNMODIFIED repo interpreter — zero injected prototypes (scratchpad preflight_gen30.py; draft guard bypassed for preview only). Ships as STATUS: DRAFT by the gen-4 block agent (mechanics only, second unit of its tenure); the main loop verifies quotes, re-runs censuses, rules on flags 1-13, and freezes through the standard gate chain.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_14_1_3 · Gen.14.1 · <span class='expr'>THE_COALITION_AND_THE_VALE</span></h3>
+<p><span class="he">וַיְהִי בִּימֵי אַמְרָפֶל מֶלֶךְ־שִׁנְעָר אַרְיוֹךְ מֶלֶךְ אֶלָּסָר כְּדָרְלָעֹמֶר מֶלֶךְ עֵילָם וְתִדְעָל מֶלֶךְ גּוֹיִם … כָּל־אֵלֶּה חָבְרוּ אֶל־עֵמֶק הַשִּׂדִּים הוּא יָם הַמֶּלַח</span> · <i>va-yehi bi-ymei amrafel melekh-shinar aryokh melekh elasar kedarlaomer melekh elam ve-tidal melekh goyim … kol-eleh chavru el-emeq ha-sidim hu yam ha-melach</i> · [EN-AID/JPS 14:1-3] And it came to pass in the days of Amraphel king of Shinar, Arioch king of Ellasar, Chedorlaomer king of Elam, and Tidal king of Goiim, that they made war with Bera king of Sodom, and with Birsha king of Gomorrah, Shinab king of Admah, and Shemeber king of Zeboiim, and the king of Bela — the same is Zoar. All these came as allies unto the vale of Siddim — the same is the Salt Sea.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויהי בימי אמרפל מלך־שנער אריוך מלך אלסר</span> · <i>va-yehi bi-ymei amrafel melekh-shinar aryokh melekh elasar</i> · in the days of Amraphel and Arioch (LEAD verse 14:1 etnachta arm — gen_24&#x27;s grouped device)</div><div class="arm"><b>RIGHT</b><br><span class="he">כדרלעמר מלך עילם ותדעל מלך גוים</span> · <i>kedarlaomer melekh elam ve-tidal melekh goyim</i> · Chedorlaomer and Tidal — 14:1 ends on melekh goyim (&#x27;king of Goyim&#x27;)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">make_war(e1) ∧ Agent(e1, arbaat_ha_melakhim)</span><br><span class="gloss">= make-war(e1) ∧ Agent(e1, arbaat-the-melakhim)</span><br>MELEKH (&#x27;king&#x27;) — TORAH DEBUT, and the letter spends it: 27 tokens in this one span (count verified exact; tokens 1-27 of 101). The corpus never called Nimrod, Babel&#x27;s builders, or Egypt&#x27;s Pharaoh king — the word is BORN plural, foreign, and at war; its next tokens (28-29) are 17:6/17:16, &#x27;KINGS shall come out of you&#x27; [career, prose]. MILCHAMAH (&#x27;war&#x27;) — TORAH DEBUT, and war is MADE: asu milchamah, the make-verb of the six days on its darkest object [letter fact]. The five adversary kings&#x27; names carry their verdicts in their skeletons (Bera/ Birsha with ra &#x27;evil&#x27; and resha &#x27;wickedness&#x27; inside) — held as sound-observation only, no claim [flagged observation class, gen_28&#x27;s sarei/Saray precedent]. Tidal is melekh GOYIM — the DB splits the lemma (1471 b, proper-name tag) from the common goy [lemma-tag observation; flag 13].
+</td><td><span class="he">עָשׂוּ מִלְחָמָה אֶת־בֶּרַע מֶלֶךְ סְדֹם</span> · <i>asu milchamah et-bera melekh sedom</i><br><span class="gloss">= asu milchamah bera melekh sedom</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(kol_eleh_chavru_el_emeq_ha_sidim_hu_yam_ha_melach, t0)</span><br><span class="gloss">= HOLDS(all-these-chavru-to-emeq-the-sidim-that-yam-the-melach, t0)</span><br>The muster-fact: CHAVAR (&#x27;join/ally&#x27;) — TORAH DEBUT; EMEQ (&#x27;vale&#x27;) debut (tokens 1-5 ALL in-span — the war is fought entirely in vales); and the letter&#x27;s own gloss: hu YAM HA-MELACH (&#x27;that is the SALT SEA&#x27;) — MELACH (&#x27;salt&#x27;) TORAH DEBUT naming the doomed vale&#x27;s water, and its token 2 is 19:26: LOT&#x27;S WIFE, the pillar — the salt-word&#x27;s first two tokens are the vale Lot chose and the woman who looked back at it [career census, prose; GLOSS_FIX: DB glosses melach &#x27;the-powder&#x27;]. 14:3 ends on the sea&#x27;s name [tree fact].
+</td><td><span class="he">כָּל־אֵלֶּה חָבְרוּ אֶל־עֵמֶק הַשִּׂדִּים הוּא יָם הַמֶּלַח</span> · <i>kol-eleh chavru el-emeq ha-sidim hu yam ha-melach</i><br><span class="gloss">= all-these chavru to-emeq the-sidim that yam the-melach</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">shinar, elasar, elam, sedom, amora, admah, tzevoyim, tzoar, emeq_ha_sidim, yam_ha_melach are READ without prior install (known geography)</span><br><span class="gloss">= shinar, elasar, elam, sedom, amora, admah, tzevoyim, tzoar, emeq-the-sidim, yam-the-melach are READ without prior install (known geography)</span><br>flag, not fix (Shinar tokens 3-4 after gen_24/gen_25&#x27;s Babel; Sodom tokens 5+ after the border debut and gen_29&#x27;s verdict; Admah/Tzevoyim from gen_24&#x27;s border verse; the vale and its sea new — ten names, the annal&#x27;s first row of the largest read-roster yet)</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Three verses of proper names and one verb of alliance: the king-word enters the corpus nine crowns at a time, and the letter footnotes the battlefield with the name of the sea that will swallow it.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_14_4_7 · Gen.14.4 · <span class='expr'>THE_CLOCK_AND_THE_SWEEP</span></h3>
+<p><span class="he">שְׁתֵּים עֶשְׂרֵה שָׁנָה עָבְדוּ אֶת־כְּדָרְלָעֹמֶר וּשְׁלֹשׁ־עֶשְׂרֵה שָׁנָה מָרָדוּ … וַיַּכּוּ אֶת־כָּל־שְׂדֵה הָעֲמָלֵקִי וְגַם אֶת־הָאֱמֹרִי הַיֹּשֵׁב בְּחַצְצֹן תָּמָר</span> · <i>shtem esreh shanah avdu et-kedarlaomer u-shelosh-esreh shanah maradu … va-yaku et-kol-sdeh ha-amaleqi ve-gam et-ha-emori ha-yoshev be-chatztzon tamar</i> · [EN-AID/JPS 14:4-7] Twelve years they served Chedorlaomer, and in the thirteenth year they rebelled. And in the fourteenth year came Chedorlaomer and the kings that were with him, and smote the Rephaim in Ashteroth-karnaim, and the Zuzim in Ham, and the Emim in Shaveh-kiriathaim, and the Horites in their mount Seir, unto El-paran, which is by the wilderness. And they turned back, and came to En-mishpat — the same is Kadesh — and smote all the country of the Amalekites, and also the Amorites, that dwelt in Hazazon-tamar.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">שתים עשרה שנה עבדו את־כדרלעמר</span> · <i>shtem esreh shanah avdu et-kedarlaomer</i> · twelve years they served (LEAD verse 14:4 etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ושלש־עשרה שנה מרדו</span> · <i>u-shelosh-esreh shanah maradu</i> · and in the thirteenth they rebelled — 14:4 ends on maradu</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shtem_esreh_shanah_avdu_et_kedarlaomer_u_shelosh_esreh_maradu, t0)</span><br><span class="gloss">= HOLDS(shtem--teen-year-avdu-kedarlaomer-and-shelosh--teen-maradu, t0)</span><br>The tribute clock held as fact: AVAD (&#x27;serve&#x27;) token 6 — the garden&#x27;s work-verb (2:5, 2:15, 3:23, 4:2, 4:12) taken up by vassal politics: its first five tokens till ground; the sixth serves an empire [career, prose]. MARAD (&#x27;rebel&#x27;) — TORAH DEBUT (its only other token is Num 14:9, do-not-rebel). The verse ends on the rebellion [tree fact]: twelve served, one word of revolt on the throne.
+</td><td><span class="he">שְׁתֵּים עֶשְׂרֵה שָׁנָה עָבְדוּ … וּשְׁלֹשׁ־עֶשְׂרֵה שָׁנָה מָרָדוּ</span> · <i>shtem esreh shanah avdu … u-shelosh-esreh shanah maradu</i><br><span class="gloss">= shtem -teen year avdu and-shelosh--teen year maradu</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">strike(e2) ∧ Agent(e2, kedarlaomer_ve_ha_melakhim) ∧ Theme(e2, refaim_zuzim_emim_chori_amaleqi_emori)</span><br><span class="gloss">= strike(e2) ∧ Agent(e2, kedarlaomer-and-the-melakhim) ∧ Theme(e2, refaim-zuzim-emim-chori-amaleqi-emori)</span><br>The southern sweep — one strike-event, six peoples (nakah &#x27;strike&#x27; tokens 3-4 here; tokens 1-2 were 4:15 and 8:21: Cain&#x27;s protection and never-again-smite — the strike-verb&#x27;s first narrative plural is an itinerary of conquests) [career, prose]. The giant-peoples file debuts (Refaim/Zuzim/Emim/Chorim — Onkelos translates them to epithets: &#x27;the mighty, the strong, the terrible&#x27;; dual-track). HA-AMALEQI (14:7) — the gentilic BEFORE the ancestor: Amalek is born at 36:12 [census; proleptic, named-only, flag 11]. EN-MISHPAT (&#x27;Spring of JUDGMENT&#x27;) — the mishpat-skeleton&#x27;s FIRST surface in the corpus, as a place-name; its next surfaces are 18:19/18:25 (Abraham and &#x27;the Judge of all the earth&#x27; — named-only) [letter fact, prose; the &#x27;?&#x27;-gloss compound class, 5880+]. MIDBAR (&#x27;wilderness&#x27;) — TORAH DEBUT (tokens 2-4 are Hagar&#x27;s and Ishmael&#x27;s — the word waits for the outcasts) [career, prose; GLOSS_FIX: DB &#x27;pasture&#x27;].
+</td><td><span class="he">וַיַּכּוּ אֶת־רְפָאִים … וְאֶת־הַזּוּזִים … וְאֵת הָאֵימִים … וְאֶת־הַחֹרִי … אֶת־כָּל־שְׂדֵה הָעֲמָלֵקִי וְגַם אֶת־הָאֱמֹרִי</span> · <i>va-yaku et-refaim … ve-et-ha-zuzim … ve-et ha-emim … ve-et-ha-chori … et-kol-sdeh ha-amaleqi ve-gam et-ha-emori</i><br><span class="gloss">= and-yaku refaim and-the-zuzim and the-emim and-the-chori all-sdeh the-amaleqi and-also the-emori</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">ashterot_qarnayim, ham, shaveh_qiryatayim, har_seir, el_paran, en_mishpat_qadesh, chatzetzon_tamar are READ without prior install (known geography)</span><br><span class="gloss">= ashterot-qarnayim, ham, shaveh-qiryatayim, har-seir, to-paran, en-mishpat-qadesh, chatzetzon-tamar are READ without prior install (known geography)</span><br>flag, not fix (seven more map-points — the sweep&#x27;s itinerary read as known ground; Seir token 1 before Esav&#x27;s line claims it, named-only)</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Four verses of empire-arithmetic: twelve, thirteen, fourteen — then a hammer swung south through six peoples, timed by a tribute ledger and mapped in names the corpus has never heard before.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_14_8_11 · Gen.14.8 · <span class='expr'>THE_BATTLE_THE_PITS_THE_PLUNDER</span></h3>
+<p><span class="he">וַיֵּצֵא מֶלֶךְ־סְדֹם … וַיַּעַרְכוּ אִתָּם מִלְחָמָה בְּעֵמֶק הַשִּׂדִּים … אַרְבָּעָה מְלָכִים אֶת־הַחֲמִשָּׁה … וַיִּקְחוּ אֶת־כָּל־רְכֻשׁ סְדֹם וַעֲמֹרָה וְאֶת־כָּל־אָכְלָם וַיֵּלֵכוּ</span> · <i>va-yetze melekh-sedom … va-yaarkhu itam milchamah be-emeq ha-sidim … arbaah melakhim et-ha-chamishah … va-yiqchu et-kol-rekhush sedom va-amorah ve-et-kol-okhlam va-yelekhu</i> · [EN-AID/JPS 14:8-11] And there went out the king of Sodom... and they set the battle in array against them in the vale of Siddim; against Chedorlaomer... four kings against the five. Now the vale of Siddim was full of slime pits; and the kings of Sodom and Gomorrah fled, and they fell there, and they that remained fled to the mountain. And they took all the goods of Sodom and Gomorrah, and all their victuals, and went their way.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויצא מלך־סדם ומלך עמרה ומלך אדמה ומלך צבוים ומלך בלע הוא־צער</span> · <i>va-yetze melekh-sedom u-melekh amorah u-melekh admah u-melekh tzevoyim u-melekh bela hi-tzoar</i> · the five kings went out (LEAD verse 14:8 etnachta arm ends on hi-tzoar)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויערכו אתם מלחמה בעמק השדים</span> · <i>va-yaarkhu itam milchamah be-emeq ha-sidim</i> · and arrayed battle in the vale of Siddim — 14:8 ends on ha-sidim</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">array_battle(e3) ∧ Agent(e3, chameshet_ha_melakhim)</span><br><span class="gloss">= array-battle(e3) ∧ Agent(e3, chameshet-the-melakhim)</span><br>ARAKH (&#x27;set in array&#x27;) — TORAH DEBUT on a battle-line; the verb&#x27;s later career is the ALTAR&#x27;S (22:9 &#x27;arranged the wood&#x27;; Lev 1:7-8&#x27;s arrangement law) — the array-verb is born military and dies liturgical [career, prose]. The geometry held as fact below: ARBAAH MELAKHIM ET HA-CHAMISHAH (&#x27;FOUR kings against the FIVE&#x27;) — the letter counts its own war and seats the count on 14:9&#x27;s throne [tree fact].
+</td><td><span class="he">וַיַּעַרְכוּ אִתָּם מִלְחָמָה</span> · <i>va-yaarkhu itam milchamah</i><br><span class="gloss">= and-yaarkhu itam milchamah</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(arbaah_melakhim_et_ha_chamishah, t0) ∧ HOLDS(emeq_ha_sidim_beerot_beerot_chemar, t0)</span><br><span class="gloss">= HOLDS(four-melakhim-the-chamishah, t0) ∧ HOLDS(emeq-the-sidim-beerot-beerot-chemar, t0)</span><br>The odds and the ground: BEEROT BEEROT CHEMAR (&#x27;pits, pits of bitumen&#x27;) — BEER, the WELL-word, debuts DOUBLED as a tar-trap: the word that will water every patriarch dispute (21:25-30, 26:15-33) enters the corpus as the hole kings fall into [career, prose]; CHEMAR (&#x27;bitumen&#x27;) token 2 — token 1 was 11:3, BABEL&#x27;S MORTAR: the tower-builders&#x27; glue and the kings&#x27; grave are one word [census, prose].
+</td><td><span class="he">אַרְבָּעָה מְלָכִים אֶת־הַחֲמִשָּׁה … וְעֵמֶק הַשִׂדִּים בֶּאֱרֹת בֶּאֱרֹת חֵמָר</span> · <i>arbaah melakhim et-ha-chamishah … ve-emeq ha-sidim beerot beerot chemar</i><br><span class="gloss">= four melakhim the-chamishah and-emeq the-sidim beerot beerot chemar</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">flee(e4) ∧ Agent(e4, melekh_sedom_va_amorah)</span><br><span class="gloss">= flee(e4) ∧ Agent(e4, melekh-sedom-and-amorah)</span><br>NUS (&#x27;flee&#x27;) — TORAH DEBUT x2 in one verse (its token 3 is 19:20 — LOT fleeing the same geography); the kings of Sodom and Gomorrah &#x27;FELL there&#x27; — into their own vale&#x27;s pits [letter fact; the falling is the flight&#x27;s cost, held; GLOSS_FIX: DB glosses nus &#x27;flit&#x27;].
+</td><td><span class="he">וַיָּנֻסוּ מֶלֶךְ־סְדֹם וַעֲמֹרָה וַיִּפְּלוּ־שָׁמָּה</span> · <i>va-yanusu melekh-sedom va-amorah va-yiplu-shamah</i><br><span class="gloss">= and-yanusu melekh-sedom and-amorah and-yiplu-shamah</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">take(e5) ∧ Agent(e5, arbaat_ha_melakhim) ∧ Theme(e5, kol_rekhush_sedom_va_amorah)</span><br><span class="gloss">= take(e5) ∧ Agent(e5, arbaat-the-melakhim) ∧ Theme(e5, all-rekhush-sedom-and-amorah)</span><br>LAQACH token 24 — the plunder-take: frozen gen_27&#x27;s rekhush line lands (&#x27;rekhush [&quot;property&quot;] debuts beside its own verb rakhashu&#x27; — quoted; the property-word&#x27;s tokens 3-7 of 13 saturate THIS span: what the family acquired, the strife divided, the war now carries off) [career, prose]. OKHEL (&#x27;food&#x27;) debuts as loot. The verse ends on the single word VA-YELEKHU (&#x27;and they went&#x27;) — the annal&#x27;s last motion [tree fact]. ELEVEN VERSES, ZERO SPEECH so far: the corpus&#x27;s longest voiceless narrative stretch [say-roster census].
+</td><td><span class="he">וַיִּקְחוּ אֶת־כָּל־רְכֻשׁ סְדֹם וַעֲמֹרָה וְאֶת־כָּל־אָכְלָם וַיֵּלֵכוּ</span> · <i>va-yiqchu et-kol-rekhush sedom va-amorah ve-et-kol-okhlam va-yelekhu</i><br><span class="gloss">= and-yiqchu all-rekhush sedom and-amorah and-all-okhlam and-yelekhu</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">goyim_land are READ without prior install (Tidal&#x27;s realm, the split-lemma proper name)</span><br><span class="gloss">= goyim-land are READ without prior install (Tidal&#x27;s realm, the split-lemma proper name)</span><br>flag, not fix (the b-tagged lemma 1471 &#x27;Goyim&#x27; as a polity name — read once, in the king-list)</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The battle takes one verse and the plunder two: four against five, tar under everyone, kings in the pits their own vale dug — and the annal walks off with the goods without anyone having said a word.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_14_12 · Gen.14.12 · <span class='expr'>THE_TAKING_OF_LOT</span></h3>
+<p><span class="he">וַיִּקְחוּ אֶת־לוֹט וְאֶת־רְכֻשׁוֹ בֶּן־אֲחִי אַבְרָם וַיֵּלֵכוּ וְהוּא יֹשֵׁב בִּסְדֹם</span> · <i>va-yiqchu et-lot ve-et-rekhusho ben-achi avram va-yelekhu ve-hu yoshev bi-sedom</i> · [EN-AID/JPS] And they took Lot, Abram&#x27;s brother&#x27;s son, who dwelt in Sodom, and his goods, and departed.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויקחו את־לוט ואת־רכשו בן־אחי אברם וילכו</span> · <i>va-yiqchu et-lot ve-et-rekhusho ben-achi avram va-yelekhu</i> · they took Lot and his goods and went (etnachta arm ends on va-yelekhu)</div><div class="arm"><b>RIGHT</b><br><span class="he">והוא ישב בסדם</span> · <i>ve-hu yoshev bi-sedom</i> · and he was dwelling in Sodom — the verse ends on Sodom</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">take(e6) ∧ Agent(e6, arbaat_ha_melakhim) ∧ Theme(e6, lot)</span><br><span class="gloss">= take(e6) ∧ Agent(e6, arbaat-the-melakhim) ∧ Theme(e6, lot)</span><br>LAQACH token 25 — the same verb, one verse later, on a PERSON: the annal makes no grammatical difference between Lot and the groceries [letter fact — one verb, two verses, goods then kin]. The letter re-introduces him as BEN-ACHI AVRAM (&#x27;son of Abram&#x27;s BROTHER&#x27;) — the brother-word (tokens 17+) that frozen gen_29 parted on (&#x27;ish me-al ACHIV — the parting measured in the word the plea leaned on&#x27;) now files the captive under his uncle&#x27;s name [cross-unit, prose]. Onkelos hardens the verb: U-SHVO (&#x27;they took CAPTIVE&#x27;) for both takes — the buffer criminalizes what the annal narrates flatly [dual-track].
+</td><td><span class="he">וַיִּקְחוּ אֶת־לוֹט וְאֶת־רְכֻשׁוֹ</span> · <i>va-yiqchu et-lot ve-et-rekhusho</i><br><span class="gloss">= and-yiqchu lot and-rekhusho</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_hu_yoshev_bi_sedom, t0)</span><br><span class="gloss">= HOLDS(and-that-yoshev-bi-sedom, t0)</span><br>The address held as fact — and the slide across the frozen wall completes: frozen gen_29 encoded &#x27;va-yeehal ad-sedom&#x27; (13:12 — &#x27;TENTED as far as Sodom&#x27;, the verse ending on Sodom) with the verdict filed one verse later; HERE he is YOSHEV BI-SEDOM (&#x27;DWELLING IN Sodom&#x27;, yashav token 13) and this verse TOO ends on Sodom [two units, two Lot-verses, one verse-final address — cross-unit tree fact, prose + [OPEN], nothing pops]. The tent became an address; the address became a capture [the letter&#x27;s own sequence; the moralization is the chain&#x27;s, named-only].
+</td><td><span class="he">וְהוּא יֹשֵׁב בִּסְדֹם</span> · <i>ve-hu yoshev bi-sedom</i><br><span class="gloss">= and-that yoshev bi-sedom</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The annal&#x27;s take-verb reaches the family: Lot is lifted with his property in a single clause, labeled by his uncle&#x27;s name, and his verse — like his last one — ends on the word Sodom.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_14_13 · Gen.14.13 · <span class='expr'>THE_REFUGEE_AND_THE_HEBREW</span></h3>
+<p><span class="he">וַיָּבֹא הַפָּלִיט וַיַּגֵּד לְאַבְרָם הָעִבְרִי וְהוּא שֹׁכֵן בְּאֵלֹנֵי מַמְרֵא הָאֱמֹרִי אֲחִי אֶשְׁכֹּל וַאֲחִי עָנֵר וְהֵם בַּעֲלֵי בְרִית־אַבְרָם</span> · <i>va-yavo ha-palit va-yaged le-avram ha-ivri ve-hu shokhen be-elonei mamre ha-emori achi eshkol va-achi aner ve-hem baalei verit-avram</i> · [EN-AID/JPS] And there came one that had escaped, and told Abram the Hebrew — now he dwelt by the terebinths of Mamre the Amorite, brother of Eshcol, and brother of Aner; and these were confederate with Abram.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויבא הפליט ויגד לאברם העברי</span> · <i>va-yavo ha-palit va-yaged le-avram ha-ivri</i> · the refugee came and told Abram the HEBREW (etnachta arm ends on ha-ivri)</div><div class="arm"><b>RIGHT</b><br><span class="he">והוא שכן באלני ממרא האמרי אחי אשכל ואחי ענר והם בעלי ברית־אברם</span> · <i>ve-hu shokhen be-elonei mamre ha-emori achi eshkol va-achi aner ve-hem baalei verit-avram</i> · dwelling at Mamre&#x27;s terebinths, with the covenant-masters — the verse ends on Abram</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">come(e7) ∧ Agent(e7, ha_palit) ∧ Goal(e7, avram)</span><br><span class="gloss">= come(e7) ∧ Agent(e7, the-palit) ∧ Goal(e7, avram)</span><br>HA-PALIT (&#x27;THE refugee/escapee&#x27;) — TORAH DEBUT, definite, anonymous: the letter marks him with an article and no name [held; the identity files are the chain&#x27;s, named-only].
+</td><td><span class="he">וַיָּבֹא הַפָּלִיט</span> · <i>va-yavo ha-palit</i><br><span class="gloss">= and-yavo the-palit</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">tell(e8) ∧ Agent(e8, ha_palit) ∧ Goal(e8, avram)</span><br><span class="gloss">= tell(e8) ∧ Agent(e8, the-palit) ∧ Goal(e8, avram)</span><br>AVRAM HA-IVRI (&#x27;Abram the HEBREW&#x27;) — the gentilic&#x27;s TORAH DEBUT, seated on the etnachta [tree fact]: frozen gen_27 noted avar (&#x27;pass/cross&#x27;) token 2 at 12:6 with the crosser-naming named-only — the name LANDS here, in a war notice; its tokens 2-6 are ALL Yosef-in-Egypt (39:14- 43:32) and 7-8 the midwives&#x27; verses: the Hebrew-name is born in war and lives its early life in Egyptian mouths [census, prose]. NAGAD (&#x27;tell&#x27;) token 5 — the disclosure-verb&#x27;s career continues (3:11, 9:22, 12:18) [career, prose].
+</td><td><span class="he">וַיַּגֵּד לְאַבְרָם הָעִבְרִי</span> · <i>va-yaged le-avram ha-ivri</i><br><span class="gloss">= and-yaged to-avram the-ivri</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_hem_baalei_verit_avram, t0)</span><br><span class="gloss">= HOLDS(and-hem-baalei-verit-avram, t0)</span><br>BRIT (&#x27;covenant&#x27;) TOKEN 9 — THE FIRST HUMAN-HUMAN COVENANT TOKEN [flag 5; census: tokens 1-8 are ALL divine — 6:18&#x27;s ark-covenant and the seven of Gen 9]: three Emorite brothers hold Abram&#x27;s covenant before God cuts one with him (token 10 = 15:18, across the seam, named-only). BAAL (&#x27;master/owner&#x27;) — TORAH DEBUT inside the alliance-idiom. MAMRE — the PERSON: frozen gen_29 installed mizbeach_chevron at elonei Mamre (the grove-construct); here Mamre is an EMORITE MAN with brothers — the eponym materialized as an ally [flag 12, letter fact]. The verse ends on AVRAM [tree fact]. Onkelos: enashei QEYAMEH (&#x27;men of his PACT&#x27;) — the buffer&#x27;s standing covenant-noun [dual-track].
+</td><td><span class="he">וְהֵם בַּעֲלֵי בְרִית־אַבְרָם</span> · <i>ve-hem baalei verit-avram</i><br><span class="gloss">= and-hem baalei verit-avram</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The news travels through three debuts: an unnamed refugee, a first-named Hebrew, and a covenant that — for the first time in the corpus — runs between human hands.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_14_14 · Gen.14.14 · <span class='expr'>THE_MUSTER_OF_THE_318</span></h3>
+<p><span class="he">וַיִּשְׁמַע אַבְרָם כִּי נִשְׁבָּה אָחִיו וַיָּרֶק אֶת־חֲנִיכָיו יְלִידֵי בֵיתוֹ שְׁמֹנָה עָשָׂר וּשְׁלֹשׁ מֵאוֹת וַיִּרְדֹּף עַד־דָּן</span> · <i>va-yishma avram ki nishbah achiv va-yareq et-chanikhav yelidei veito shmonah asar u-shelosh meot va-yirdof ad-dan</i> · [EN-AID/JPS] And when Abram heard that his brother was taken captive, he led forth his trained men, born in his house, three hundred and eighteen, and pursued as far as Dan.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וישמע אברם כי נשבה אחיו</span> · <i>va-yishma avram ki nishbah achiv</i> · Abram heard that his BROTHER was captive (etnachta arm ends on achiv)</div><div class="arm"><b>RIGHT</b><br><span class="he">וירק את־חניכיו ילידי ביתו שמנה עשר ושלש מאות וירדף עד־דן</span> · <i>va-yareq et-chanikhav yelidei veito shmonah asar u-shelosh meot va-yirdof ad-dan</i> · he emptied out his 318 trained men and pursued to Dan</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">hear(e9) ∧ Agent(e9, avram)</span><br>The letter promotes the kinship: 14:12 filed Lot as BEN-ACHI (&#x27;son of the brother&#x27;); what Abram HEARS is ACHIV — &#x27;his BROTHER&#x27;, unqualified, at the etnachta [tree fact; the word frozen gen_29&#x27;s plea leaned on returns compressed]. SHAVAH (&#x27;taken captive&#x27;) — TORAH DEBUT, niphal, agentless in the hearing [letter fact].
+</td><td><span class="he">וַיִּשְׁמַע אַבְרָם כִּי נִשְׁבָּה אָחִיו</span> · <i>va-yishma avram ki nishbah achiv</i><br><span class="gloss">= and-yishma avram when nishbah his-brother</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">muster(e10) ∧ Agent(e10, avram) ∧ Theme(e10, chanikhav)</span><br>VA-YAREQ (&#x27;he EMPTIED OUT/unsheathed&#x27;) — the rare muster-verb (4 Torah tokens; its others unsheathe SWORDS, Exod 15:9 / Lev 26:33) on MEN; CHANIKHAV (&#x27;his TRAINED men&#x27;) — TORAH HAPAX, verified: the initiate-word (the chanukh-root of dedication) exists in the Torah only here, only his [census]. The count held as fact: 318, yelidei veito (&#x27;born of his house&#x27;) — letter fact, NO numerology [the gematria files are the chain&#x27;s, named-only].
+</td><td><span class="he">וַיָּרֶק אֶת־חֲנִיכָיו יְלִידֵי בֵיתוֹ</span> · <i>va-yareq et-chanikhav yelidei veito</i><br><span class="gloss">= and-yareq chanikhav yelidei veito</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(chanikhav_yelidei_veito_shmonah_asar_u_shelosh_meot, t0)</span><br><span class="gloss">= HOLDS(chanikhav-yelidei-veito-shmonah-asar-and-shelosh-meot, t0)</span><br>Three hundred and eighteen — the corpus&#x27;s first muster roll, counted in the letter&#x27;s own backward order (eight and ten and three hundreds) [held].
+</td><td><span class="he">שְׁמֹנָה עָשָׂר וּשְׁלֹשׁ מֵאוֹת</span> · <i>shmonah asar u-shelosh meot</i><br><span class="gloss">= shmonah asar and-shelosh meot</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">pursue(e11) ∧ Agent(e11, avram) ∧ Goal(e11, dan)</span><br>RADAF (&#x27;pursue&#x27;) — TORAH DEBUT; AD-DAN, verse-final: the place bears the name of a great-grandson not yet born (Dan arrives at 30:6 — census; proleptic, named-only, flag 11; GLOSS_FIX: the DB glosses the place &#x27;Daniel&#x27;).
+</td><td><span class="he">וַיִּרְדֹּף עַד־דָּן</span> · <i>va-yirdof ad-dan</i><br><span class="gloss">= and-yirdof until-dan</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">dan are READ without prior install (known geography)</span><br>flag, not fix (the pursuit&#x27;s landmark, read as known ground)</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">One hearing, one rare verb, one impossible number: the man who coined two verbs to avoid a quarrel empties his house of three hundred eighteen trained men the moment the word &#x27;brother&#x27; turns captive.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_14_15 · Gen.14.15 · <span class='expr'>THE_NIGHT_SPLIT</span></h3>
+<p><span class="he">וַיֵּחָלֵק עֲלֵיהֶם לַיְלָה הוּא וַעֲבָדָיו וַיַּכֵּם וַיִּרְדְּפֵם עַד־חוֹבָה אֲשֶׁר מִשְּׂמֹאל לְדַמָּשֶׂק</span> · <i>va-yechaleq aleihem laylah hu va-avadav va-yakem va-yirdefem ad-chovah asher mi-semol le-damaseq</i> · [EN-AID/JPS] And he divided himself against them by night, he and his servants, and smote them, and pursued them unto Hobah, which is on the left hand of Damascus.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויחלק עליהם לילה הוא ועבדיו ויכם</span> · <i>va-yechaleq aleihem laylah hu va-avadav va-yakem</i> · he split against them by night and struck them (etnachta arm ends on va-yakem)</div><div class="arm"><b>RIGHT</b><br><span class="he">וירדפם עד־חובה אשר משמאל לדמשק</span> · <i>va-yirdefem ad-chovah asher mi-semol le-damaseq</i> · and pursued them to Chovah, left of Damascus</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">split(e12) ∧ Agent(e12, avram_va_avadav)</span><br><span class="gloss">= split(e12) ∧ Agent(e12, avram-and-avadav)</span><br>CHALAQ (&#x27;divide&#x27;) — TORAH DEBUT, NIPHAL, tactical: he divides HIMSELF against them by night; the same root returns nine verses later as CHELEQ (&#x27;portion&#x27;) in the spoils-clause — one skeleton splits the army and the plunder [in-span root pair, census; GLOSS_FIX: DB &#x27;be-smooth&#x27;].
+</td><td><span class="he">וַיֵּחָלֵק עֲלֵיהֶם לַיְלָה</span> · <i>va-yechaleq aleihem laylah</i><br><span class="gloss">= and-yechaleq aleihem night</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">strike(e13) ∧ Agent(e13, avram_va_avadav)</span><br><span class="gloss">= strike(e13) ∧ Agent(e13, avram-and-avadav)</span><br>The annal&#x27;s own strike-verb (14:5, 14:7) turned back on the strikers — nakah token 5 [career symmetry, prose].
+</td><td><span class="he">וַיַּכֵּם</span> · <i>va-yakem</i><br><span class="gloss">= and-yakem</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">pursue(e14) ∧ Agent(e14, avram_va_avadav) ∧ Goal(e14, chovah)</span><br><span class="gloss">= pursue(e14) ∧ Agent(e14, avram-and-avadav) ∧ Goal(e14, chovah)</span><br>MI-SEMOL LE-DAMASEQ (&#x27;on the LEFT of Damascus&#x27;) — SEMOL token 2: the direction-word of frozen gen_29&#x27;s offer (13:9&#x27;s hapax pair) now maps a pursuit; and Onkelos repeats its policy EXACTLY: mi-semol -&gt; MI-TZIPUNA (&#x27;on the NORTH&#x27;) — the body-relative flattened to compass, the same buffer that erased 13:9&#x27;s hapaxes [repeat-buffer CONFIRMED across units; dual-track].
+</td><td><span class="he">וַיִּרְדְּפֵם עַד־חוֹבָה אֲשֶׁר מִשְּׂמֹאל לְדַמָּשֶׂק</span> · <i>va-yirdefem ad-chovah asher mi-semol le-damaseq</i><br><span class="gloss">= and-yirdefem until-chovah which from-semol to-damaseq</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">chovah, damaseq are READ without prior install (known geography)</span><br>flag, not fix (the pursuit&#x27;s far markers; Damascus token 1 — its token 2 is 15:2, Eliezer&#x27;s city, across the seam, named-only)</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The tactics take five words: split, night, strike, pursue, done — the letter spends more ink on where Chovah sits than on how three hundred eighteen beat four kings.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_14_16 · Gen.14.16 · <span class='expr'>THE_BRINGING_BACK</span></h3>
+<p><span class="he">וַיָּשֶׁב אֵת כָּל־הָרְכֻשׁ וְגַם אֶת־לוֹט אָחִיו וּרְכֻשׁוֹ הֵשִׁיב וְגַם אֶת־הַנָּשִׁים וְאֶת־הָעָם</span> · <i>va-yashev et kol-ha-rekhush ve-gam et-lot achiv u-rekhusho heshiv ve-gam et-ha-nashim ve-et-ha-am</i> · [EN-AID/JPS] And he brought back all the goods, and also brought back his brother Lot, and his goods, and the women also, and the people.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וישב את כל־הרכש</span> · <i>va-yashev et kol-ha-rekhush</i> · he brought back ALL the property (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וגם את־לוט אחיו ורכשו השיב וגם את־הנשים ואת־העם</span> · <i>ve-gam et-lot achiv u-rekhusho heshiv ve-gam et-ha-nashim ve-et-ha-am</i> · and Lot his brother, and the women, and the people — the verse ends on ha-am</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">bring_back(e15) ∧ Agent(e15, avram) ∧ Theme(e15, kol_ha_rekhush_ve_lot_ve_ha_nashim_ve_ha_am)</span><br><span class="gloss">= bring-back(e15) ∧ Agent(e15, avram) ∧ Theme(e15, all-the-rekhush-and-lot-and-the-nashim-and-the-am)</span><br>SHUV IN HIPHIL — &#x27;he BROUGHT BACK&#x27; — the restore-voice&#x27;s TORAH DEBUT, and the letter says it TWICE in one verse (va-yashev... heshiv — tokens 9-10; the verb&#x27;s tokens 1-2 are 3:19&#x27;s dust-return): the take-arc&#x27;s answer in its own verse — what 14:11-12 took (va-yiqchu... va-yiqchu), 14:16 returns doubled [career + in-span symmetry, prose]. The restoration list runs property, LOT AKHIV (&#x27;his brother&#x27; — the third kinship token, now bare), the WOMEN, the PEOPLE — the letter counts persons last taken, first named [held]. AND THE SEQUENCE IS THE POINT for what follows: everything is already restored BEFORE any king speaks — the demand of 14:21 will ask for what its asker already has back [letter sequence, feeds flag 1].
+</td><td><span class="he">וַיָּשֶׁב אֵת כָּל־הָרְכֻשׁ … הֵשִׁיב</span> · <i>va-yashev et kol-ha-rekhush … heshiv</i><br><span class="gloss">= and-yashev et all-the-rekhush heshiv</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+</table>
+<div class="meta">The rescue&#x27;s whole grammar is one verb in a new voice, said twice: brought back, brought back — goods, brother, women, people — and not a word spoken yet by anyone.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_14_17 · Gen.14.17 · <span class='expr'>THE_KINGS_MEETING</span></h3>
+<p><span class="he">וַיֵּצֵא מֶלֶךְ־סְדֹם לִקְרָאתוֹ אַחֲרֵי שׁוּבוֹ מֵהַכּוֹת אֶת־כְּדָרלָעֹמֶר וְאֶת־הַמְּלָכִים אֲשֶׁר אִתּוֹ אֶל־עֵמֶק שָׁוֵה הוּא עֵמֶק הַמֶּלֶךְ</span> · <i>va-yetze melekh-sedom liqrato acharei shuvo me-hakot et-kedarlaomer ve-et-ha-melakhim asher ito el-emeq shaveh hu emeq ha-melekh</i> · [EN-AID/JPS] And the king of Sodom went out to meet him, after his return from the slaughter of Chedorlaomer and the kings that were with him, at the vale of Shaveh — the same is the King&#x27;s Vale.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויצא מלך־סדם לקראתו אחרי שובו מהכות את־כדרלעמר ואת־המלכים אשר אתו</span> · <i>va-yetze melekh-sedom liqrato acharei shuvo me-hakot et-kedarlaomer ve-et-ha-melakhim asher ito</i> · the king of Sodom went out to meet him after the striking (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">אל־עמק שוה הוא עמק המלך</span> · <i>el-emeq shaveh hu emeq ha-melekh</i> · to the vale of Shaveh — the King&#x27;s Vale</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">go_out(e16) ∧ Agent(e16, melekh_sedom) ∧ Goal(e16, emeq_shaveh)</span><br><span class="gloss">= go-out(e16) ∧ Agent(e16, melekh-sedom) ∧ Goal(e16, emeq-shaveh)</span><br>The pit-survivor comes out to meet the rescuer: QARA (&#x27;meet/encounter&#x27;) — the towards-form&#x27;s TORAH DEBUT (liqrato); the timestamp is the restore-verb again (ACHAREI SHUVO, &#x27;after his RETURN&#x27; — shuv token 11, the narrator counter-signing 14:16&#x27;s double hiphil in its own frame, exactly the class frozen gen_29 used at 13:14&#x27;s acharei hipared) [career + timestamp class, prose]. The verse carries the span&#x27;s RAREST ACCENTS (zinor + segol, poetic cousins in prose — tree fact) and ends on EMEQ HA-MELEKH (&#x27;the KING&#x27;S Vale&#x27;) — the vale-word&#x27;s fifth in-span token, now bearing the debut-word itself [tree fact].
+</td><td><span class="he">וַיֵּצֵא מֶלֶךְ־סְדֹם לִקְרָאתוֹ</span> · <i>va-yetze melekh-sedom liqrato</i><br><span class="gloss">= and-yetze melekh-sedom liqrato</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">emeq_shaveh are READ without prior install (known geography)</span><br><span class="gloss">= emeq-shaveh are READ without prior install (known geography)</span><br>flag, not fix (the meeting ground; Onkelos identifies it as the king&#x27;s racecourse — beit reisa de-malka; dual-track, named at the oral note)</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Two exits meet in a vale named for kings: the king who fell into tar comes out for his people, and the letter pauses the scene one verse so a third king can arrive with bread.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_14_18 · Gen.14.18 · <span class='expr'>BREAD_WINE_AND_A_PRIEST</span></h3>
+<p><span class="he">וּמַלְכִּי־צֶדֶק מֶלֶךְ שָׁלֵם הוֹצִיא לֶחֶם וָיָיִן וְהוּא כֹהֵן לְאֵל עֶלְיוֹן</span> · <i>u-malki-tzedeq melekh shalem hotzi lechem va-yayin ve-hu khohen le-el elyon</i> · [EN-AID/JPS] And Melchizedek king of Salem brought forth bread and wine; and he was priest of God the Most High.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ומלכי־צדק מלך שלם הוציא לחם ויין</span> · <i>u-malki-tzedeq melekh shalem hotzi lechem va-yayin</i> · Malki-Tzedek king of Salem brought out bread and wine (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">והוא כהן לאל עליון</span> · <i>ve-hu khohen le-el elyon</i> · and he was priest to El Elyon — the verse ends on the title</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">bring_out(e17) ∧ Agent(e17, malki_tzedeq) ∧ Theme(e17, lechem_va_yayin)</span><br><span class="gloss">= bring-out(e17) ∧ Agent(e17, malki-tzedeq) ∧ Theme(e17, lechem-and-yayin)</span><br>MALKI-TZEDEK (&#x27;my king is righteousness&#x27;) MELEKH SHALEM — the name rides the split-lemma &#x27;?&#x27;-gloss class (4442+); SHALEM is a TORAH HAPAX. He BRINGS OUT (hotzi — the same yatza root the war-kings &#x27;went out&#x27; with at 14:8/14:17, now hiphil, carrying food) LECHEM VA-YAYIN: bread token 2 — token 1 was 3:19&#x27;s sweat-bread, token 3 is 18:5, Abraham&#x27;s own hospitality; wine token 3 — tokens 1-2 were Noach&#x27;s fall, tokens 4-6 are LOT&#x27;S DAUGHTERS (19:32-34): between a drunk father and a drugged father, one king pours wine that shames no one [careers, prose].
+</td><td><span class="he">הוֹצִיא לֶחֶם וָיָיִן</span> · <i>hotzi lechem va-yayin</i><br><span class="gloss">= hotzi lechem and-yayin</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_hu_khohen_le_el_elyon, t0)</span><br><span class="gloss">= HOLDS(and-that-khohen-to-to-elyon, t0)</span><br>KOHEN (&#x27;priest&#x27;) — TORAH DEBUT of the word that owns 295 Torah tokens: before Aaron, before Levi exists, the priest-word belongs to a Canaanite king of Salem — and its tokens 2-5 are ALL EGYPT&#x27;S priests (Potiphera and the temple-lands, 41:45-47:22): one Salem, four Egypt, then the law [census, prose]. EL — THE DIVINE NAME&#x27;S TORAH DEBUT (410 tokens 1-4 all in-span, flag 8), inside a foreign priest&#x27;s title: EL ELYON (&#x27;God Most High&#x27;); the El-title ladder that follows: El Roi (16:13, Hagar&#x27;s), El Shaddai (17:1), El Olam (21:33) [career, prose]. Onkelos performs the unit&#x27;s HEADLINE double move here: Salem -&gt; YERUSHLEM (&#x27;Jerusalem&#x27; — the city named) and kohen -&gt; MESHAMESH KODAM (&#x27;one who SERVES BEFORE&#x27; — the priest un-priested) [dual-track, flagged].
+</td><td><span class="he">וְהוּא כֹהֵן לְאֵל עֶלְיוֹן</span> · <i>ve-hu khohen le-el elyon</i><br><span class="gloss">= and-that khohen to-to elyon</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">shalem are READ without prior install (known geography)</span><br>flag, not fix (the hapax city; the buffer&#x27;s identification is the buffer&#x27;s)</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">A third king enters carrying neither demand nor sword: bread that remembers sweat, wine that remembers shame, and a title — priest — that the whole book of Leviticus is waiting for.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_14_19 · Gen.14.19 · <span class='expr'>THE_BLESSING_OF_ABRAM</span></h3>
+<p><span class="he">וַיְבָרְכֵהוּ וַיֹּאמַר בָּרוּךְ אַבְרָם לְאֵל עֶלְיוֹן קֹנֵה שָׁמַיִם וָאָרֶץ</span> · <i>va-yevarkhehu va-yomar barukh avram le-el elyon qoneh shamayim va-aretz</i> · [EN-AID/JPS] And he blessed him, and said: &#x27;Blessed be Abram of God Most High, Maker of heaven and earth;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויברכהו ויאמר</span> · <i>va-yevarkhehu va-yomar</i> · he blessed him and said (a TWO-WORD etnachta arm — the blessing itself is the rest)</div><div class="arm"><b>RIGHT</b><br><span class="he">ברוך אברם לאל עליון קנה שמים וארץ</span> · <i>barukh avram le-el elyon qoneh shamayim va-aretz</i> · blessed be Abram of El Elyon, owner of heaven and earth</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>BLESS</td><td><span class="expr">BLESS(malki_tzedeq, avram)</span><br><span class="gloss">= BLESS(malki-tzedeq, avram)</span><br>THE FIRST HUMAN-BLESSES-HUMAN [flag 6]: BARAKH token 11 — the census: tokens 1-5 are divine piel (days, creatures, the seventh day, the human pair, Noach&#x27;s house); token 6 is 9:26, frozen gen_23&#x27;s inversion, quoted: &#x27;every prior BLESS speaker was Elohim; here a human blesses YHWH (BLESS(noach, yhwh_elohei_shem))&#x27;; tokens 7-10 are 12:2-3, the promise cluster. Token 11 completes the triangle: a human blesses a HUMAN — and the human blessed is the man whose frozen 12:3 guard-clause promised &#x27;I will bless your blessers&#x27; (va-avarakhah mevarakhekha): the guard-fact&#x27;s first field is a priest-king [cross-unit, prose only, nothing pops]. The tree seats the whole blessing-act as the etnachta arm — two words, then rest [tree fact].
+</td><td><span class="he">וַיְבָרְכֵהוּ</span> · <i>va-yevarkhehu</i><br><span class="gloss">= and-yevarkhehu</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(barukh_avram_le_el_elyon_qoneh_shamayim_va_aretz, t0)</span><br><span class="gloss">= HOLDS(barukh-avram-to-to-elyon-qoneh-heavens-and-earth, t0)</span><br>The formula held as spoken fact: QONEH SHAMAYIM VA-ARETZ (&#x27;OWNER/MAKER of heaven and earth&#x27;) — QANAH tokens 2-3 are this epithet&#x27;s two speakings (here and 14:22); token 1 is 4:1: Chavah&#x27;s qaniti (&#x27;I have ACQUIRED a man with YHWH&#x27;) — the acquire-verb&#x27;s career: a mother&#x27;s first cry over a baby, then God&#x27;s title over the cosmos [census, prose; GLOSS_FIX: DB glosses qoneh &#x27;erect&#x27;]. Onkelos: di-QINYANEH shmaya ve-ara (&#x27;whose POSSESSION are heaven and earth&#x27;) — and qinyana is the SAME noun the buffer uses for the war&#x27;s rekhush all span long: in Aramaic, the plunder the kings die for and the cosmos God owns share one word [dual-track, cross-buffer observation].
+</td><td><span class="he">בָּרוּךְ אַבְרָם לְאֵל עֶלְיוֹן קֹנֵה שָׁמַיִם וָאָרֶץ</span> · <i>barukh avram le-el elyon qoneh shamayim va-aretz</i><br><span class="gloss">= barukh avram to-to elyon qoneh heavens earth</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The blessing takes the verse&#x27;s front seat: two words, rest, then a formula that files heaven and earth as property — under the only Owner in the chapter who never took anything.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_14_20 · Gen.14.20 · <span class='expr'>THE_BLESSING_OF_EL_ELYON_AND_THE_TENTH</span></h3>
+<p><span class="he">וּבָרוּךְ אֵל עֶלְיוֹן אֲשֶׁר־מִגֵּן צָרֶיךָ בְּיָדֶךָ וַיִּתֶּן־לוֹ מַעֲשֵׂר מִכֹּל</span> · <i>u-varukh el elyon asher-miggen tzarekha be-yadekha va-yiten-lo maaser mi-kol</i> · [EN-AID/JPS] and blessed be God the Most High, who hath delivered thine enemies into thy hand.&#x27; And he gave him a tenth of all.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וברוך אל עליון אשר־מגן צריך בידך</span> · <i>u-varukh el elyon asher-miggen tzarekha be-yadekha</i> · and blessed be El Elyon who delivered your foes into your hand (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויתן־לו מעשר מכל</span> · <i>va-yiten-lo maaser mi-kol</i> · and he gave him a tenth of all — the verse ends on mi-kol</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>BLESS</td><td><span class="expr">BLESS(malki_tzedeq, el_elyon)</span><br><span class="gloss">= BLESS(malki-tzedeq, to-elyon)</span><br>The second barukh (token 13) runs UPWARD — a human blessing God: frozen gen_23&#x27;s 9:26 direction repeating with the foreign name [class held]. The formula&#x27;s ground: ASHER-MIGGEN TZAREKHA BE-YADEKHA (&#x27;who DELIVERED your foes into your hand&#x27;) — MIGGEN, PIEL PERFECT, TORAH HAPAX (4042; GLOSS_FIX: the DB glosses it &#x27;shield&#x27; — it is the verb &#x27;delivered&#x27;); TZAR (&#x27;foe&#x27;) debuts inside it. THE SEAM-PUN, careers only, seam NOT encoded: the noun MAGEN (&#x27;shield&#x27;, 4043) has exactly two Torah tokens and its FIRST is 15:1 — anokhi MAGEN lakh (&#x27;I am your SHIELD&#x27;), the very next verse of the corpus: the priest says &#x27;He delivered&#x27; (miggen) and God will answer &#x27;I am a shield&#x27; (magen) — same skeleton, verb then noun, across the wall [flag at step; nothing crosses] .
+</td><td><span class="he">וּבָרוּךְ אֵל עֶלְיוֹן</span> · <i>u-varukh el elyon</i><br><span class="gloss">= and-varukh to elyon</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(asher_miggen_tzarekha_be_yadekha, t0)</span><br><span class="gloss">= HOLDS(which-miggen-tzarekha-in-yadekha, t0)</span><br>The deliverance-clause held as spoken fact — the war&#x27;s only theology, and it is the guest&#x27;s: no narrator verse credits God with the victory; the claim exists solely in Malki-Tzedek&#x27;s mouth [letter fact, held not asserted].
+</td><td><span class="he">אֲשֶׁר־מִגֵּן צָרֶיךָ בְּיָדֶךָ</span> · <i>asher-miggen tzarekha be-yadekha</i><br><span class="gloss">= which-miggen tzarekha in-yadekha</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">give(e18) ∧ Theme(e18, maaser_mi_kol)</span><br><span class="gloss">= give(e18) ∧ Theme(e18, maaser-from-all)</span><br>THE AGENTLESS TENTH [flag 3]: va-yiten-LO — &#x27;and HE gave HIM&#x27;: two bare pronouns, no names — the letter does not say who tithed to whom, and the machine does not either (the give-event carries a Theme and NO Agent — TIR-032&#x27;s agentless discipline applied to an active verb with a withheld subject; held OPEN, the identity files are the chain&#x27;s, named-only). MAASER (&#x27;tithe&#x27;) — TORAH DEBUT; tokens 2-4 are Lev 27:30-32, THE TITHE LAW: the law&#x27;s word born three books early in a gift with hidden hands — the nega-class bridge again (frozen gen_28/lev_13&#x27;s pattern: a law-word debuting as narrative) [census, prose]. Onkelos&#x27;s vote checked as ordered: vi-hav leh — the buffer KEEPS both pronouns bare: it declines to vote [dual-track]. The verse ends on MI-KOL (&#x27;of ALL&#x27;) [tree fact].
+</td><td><span class="he">וַיִּתֶּן־לוֹ מַעֲשֵׂר מִכֹּל</span> · <i>va-yiten-lo maaser mi-kol</i><br><span class="gloss">= and-yiten-not maaser all</span></td><td class='cite'>TIR-032</td><td>tested</td></tr>
+</table>
+<div class="meta">Two blessings and a transaction with no visible hands: the chapter&#x27;s only theology is spoken by a guest, and its only gift is given by a pronoun to a pronoun, a tenth of &#x27;all.&#x27;</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_14_21 · Gen.14.21 · <span class='expr'>THE_KINGS_DEMANDS</span></h3>
+<p><span class="he">וַיֹּאמֶר מֶלֶךְ־סְדֹם אֶל־אַבְרָם תֶּן־לִי הַנֶּפֶשׁ וְהָרְכֻשׁ קַח־לָךְ</span> · <i>va-yomer melekh-sedom el-avram ten-li ha-nefesh ve-ha-rekhush qach-lakh</i> · [EN-AID/JPS] And the king of Sodom said unto Abram: &#x27;Give me the persons, and take the goods to thyself.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר מלך־סדם אל־אברם</span> · <i>va-yomer melekh-sedom el-avram</i> · the king of Sodom said to Abram (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">תן־לי הנפש והרכש קח־לך</span> · <i>ten-li ha-nefesh ve-ha-rekhush qach-lakh</i> · give me the persons; the goods — TAKE for yourself: the verse ends on qach-lakh</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">say(e19) ∧ Agent(e19, melekh_sedom) ∧ Goal(e19, avram)</span><br><span class="gloss">= say(e19) ∧ Agent(e19, melekh-sedom) ∧ Goal(e19, avram)</span><br>The span&#x27;s second speech — and the pit-king&#x27;s first words in the corpus are two imperatives with no thanks in them [letter fact; the say-roster: eleven speechless annal-verses, then blessing, then this].
+</td><td><span class="he">וַיֹּאמֶר מֶלֶךְ־סְדֹם אֶל־אַבְרָם</span> · <i>va-yomer melekh-sedom el-avram</i><br><span class="gloss">= and-yomer melekh-sedom to-avram</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(melekh_sedom, LET(ten(avram, ha_nefesh)))</span><br><span class="gloss">= DECLARE(melekh-sedom, LET(ten(avram, the-nefesh)))</span><br>TEN (&#x27;GIVE!&#x27;) — true imperative (HVqv2ms; TIR-027, gen_13&#x27;s human-demand class, quoted: &#x27;the queue is bookkeeping, not endorsement&#x27;): the give-verb whose divine imperfects pledged the land (frozen gen_29&#x27;s etnenah) arrives as a human demand for PERSONS — HA-NEFESH token 15; token 14 was 12:5&#x27;s &#x27;the souls they had MADE in Charan&#x27; (frozen gen_27): the souls Abram makes, Sodom claims [career, prose]. Pushed; and the letter&#x27;s sequence stands against it: the persons were BROUGHT BACK at 14:16 before this sentence was spoken — no transfer to the king is narrated anywhere [OPEN; feeds flag 1].
+</td><td><span class="he">תֶּן־לִי הַנֶּפֶשׁ</span> · <i>ten-li ha-nefesh</i><br><span class="gloss">= ten-to-me the-nefesh</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(melekh_sedom, LET(qach(avram, ha_rekhush)))</span><br><span class="gloss">= DECLARE(melekh-sedom, LET(qach(avram, the-rekhush)))</span><br>QACH (&#x27;TAKE!&#x27;) — the second imperative, VERSE-FINAL on the silluq: frozen gen_28&#x27;s throne-class, quoted (&#x27;12:19 ENDS ON VA-LEKH... the king&#x27;s go-imperative sits verse-final&#x27;) — a second king of a second catastrophe seats a second demand on the verse-end [tree fact, class landed]. LAQACH token 26 — the arc: the war took (24-25), the king says take (26), Abram will refuse in the same verb (27) [career, prose]. Onkelos: DVAR (&#x27;LEAD away&#x27; — variant sav) — the lead-for-take buffer on the king&#x27;s own imperative [dual-track]. Pushed; watch 14:23 [OPEN; flag 1].
+</td><td><span class="he">וְהָרְכֻשׁ קַח־לָךְ</span> · <i>ve-ha-rekhush qach-lakh</i><br><span class="gloss">= and-the-rekhush qach-to-you</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
+</table>
+<div class="meta">The rescued king divides the rescue like plunder: persons to me, goods to you — two imperatives from a man who owes his breath to the man he is commanding, the second one throned at the verse&#x27;s end.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_14_22 · Gen.14.22 · <span class='expr'>THE_RAISED_HAND</span></h3>
+<p><span class="he">וַיֹּאמֶר אַבְרָם אֶל־מֶלֶךְ סְדֹם הֲרִימֹתִי יָדִי אֶל־יְהוָה אֵל עֶלְיוֹן קֹנֵה שָׁמַיִם וָאָרֶץ</span> · <i>va-yomer avram el-melekh sedom harimoti yadi el-YHWH el elyon qoneh shamayim va-aretz</i> · [EN-AID/JPS] And Abram said to the king of Sodom: &#x27;I have lifted up my hand unto the LORD, God Most High, Maker of heaven and earth,</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר אברם אל־מלך סדם</span> · <i>va-yomer avram el-melekh sedom</i> · Abram said to the king of Sodom (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">הרימתי ידי אל־יהוה אל עליון קנה שמים וארץ</span> · <i>harimoti yadi el-YHWH el elyon qoneh shamayim va-aretz</i> · I have raised my hand to YHWH, El Elyon, owner of heaven and earth</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">say(e20) ∧ Agent(e20, avram) ∧ Goal(e20, melekh_sedom)</span><br><span class="gloss">= say(e20) ∧ Agent(e20, avram) ∧ Goal(e20, melekh-sedom)</span><br>ABRAM&#x27;S THIRD RECORDED SPEECH — and HIS FIRST SPOKEN YHWH [flag 7; census: his three speeches hold exactly one YHWH token, here]: fear to his wife (12:11), peace to his kinsman (13:8), and now refusal to a king — the Name enters his mouth only when he is turning wealth down. He answers the king&#x27;s TWO questions... demands with neither verb obeyed [letter fact].
+</td><td><span class="he">וַיֹּאמֶר אַבְרָם אֶל־מֶלֶךְ סְדֹם</span> · <i>va-yomer avram el-melekh sedom</i><br><span class="gloss">= and-yomer avram to-melekh sedom</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(harimoti_yadi_el_YHWH_el_elyon_qoneh_shamayim_va_aretz, t0)</span><br><span class="gloss">= HOLDS(harimoti-yadi-to-the-LORD-to-elyon-qoneh-heavens-and-earth, t0)</span><br>THE CORPUS&#x27;S FIRST HUMAN OATH-GESTURE [flag 4, census-backed]: HARIMOTI YADI (&#x27;I have RAISED MY HAND&#x27; — performative perfect; RUM token 2 — token 1 is 7:17, the waters LIFTING the ark: the raise-verb&#x27;s first human subject swears; tokens 4-5 are Potiphar&#x27;s wife&#x27;s harimoti qoli, the same form in a false cry [career, prose]). The swear-verb (shava) does not exist yet — it debuts at 21:23-24: the oath-FORM precedes the oath-VERB by seven chapters [census]. And the address: EL-YHWH EL ELYON QONEH SHAMAYIM VA-ARETZ — the priest&#x27;s epithet ADOPTED AND YHWH-PREFIXED [letter fact, seed order 2: 14:19-20&#x27;s formula re-said with the Name set first; the fusion is quoted speech, not a NAME op — REGISTRY untouched; the chain&#x27;s readings named-only]. The verse ends on shamayim va-aretz exactly as 14:19 did [tree fact]. Onkelos liturgizes: areimit yedai BI-TZLO kodam YHWH (&#x27;I have raised my hands IN PRAYER before YHWH&#x27;) — the buffer inserts prayer into the oath, the tzali-family policy a third time [dual-track].
+</td><td><span class="he">הֲרִימֹתִי יָדִי אֶל־יְהוָה אֵל עֶלְיוֹן קֹנֵה שָׁמַיִם וָאָרֶץ</span> · <i>harimoti yadi el-YHWH el elyon qoneh shamayim va-aretz</i><br><span class="gloss">= harimoti yadi to-the-LORD to elyon qoneh heavens earth</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The refusal begins above the argument: a hand already raised, a Name spoken for the first time by this speaker, and the guest-king&#x27;s cosmology repeated word for word with YHWH set in front of it.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_14_23 · Gen.14.23 · <span class='expr'>THE_THREAD_AND_THE_THONG</span></h3>
+<p><span class="he">אִם־מִחוּט וְעַד שְׂרוֹךְ־נַעַל וְאִם־אֶקַּח מִכָּל־אֲשֶׁר־לָךְ וְלֹא תֹאמַר אֲנִי הֶעֱשַׁרְתִּי אֶת־אַבְרָם</span> · <i>im-mi-chut ve-ad serokh-naal ve-im-eqach mi-kol-asher-lakh ve-lo tomar ani heesharti et-avram</i> · [EN-AID/JPS] that I will not take a thread nor a shoe-latchet nor aught that is thine, lest thou shouldest say: I have made Abram rich;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אם־מחוט ועד שרוך־נעל ואם־אקח מכל־אשר־לך</span> · <i>im-mi-chut ve-ad serokh-naal ve-im-eqach mi-kol-asher-lakh</i> · if a thread, if a sandal-thong, if I take of anything yours — (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ולא תאמר אני העשרתי את־אברם</span> · <i>ve-lo tomar ani heesharti et-avram</i> · so you shall never say: I enriched Abram — the verse ends on his name</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(im_mi_chut_ve_ad_serokh_naal_ve_im_eqach_mi_kol_asher_lakh, t0) ∧ HOLDS(ve_lo_tomar_ani_heesharti_et_avram, t0)</span><br><span class="gloss">= HOLDS(if-from-chut-and-until-serokh-naal-and-if-eqach-from-all-which-to-you, t0) ∧ HOLDS(and-not-tomar-ani-heesharti-avram, t0)</span><br>THE REFUSAL, HELD AS SPOKEN FACTS — AND THE QUEUE DOES NOT MOVE [flag 1, the unit&#x27;s boldest call]: the im-oath formula (&#x27;IF from a thread to a sandal-thong, and IF I TAKE of all that is yours...&#x27; — the self-curse left hanging, its apodosis unspoken) NEGATES the qach-demand in the demand&#x27;s own verb (ve-im EQACH — laqach token 27, answering token 26 one verse up), and the motive-clause names the stake: &#x27;lest you say I ENRICHED Abram&#x27; (heesharti — the rich-verb&#x27;s ONLY Torah token: the wealth-word coined to be refused; CHUT &#x27;thread&#x27; and SEROKH &#x27;thong&#x27; both Torah hapaxes — the inventory of nothing is made of words used never again) [censuses]. MACHINE RULING: no RESULT fires — RESULT records execution, and nothing is executed: the goods stay untaken, the persons&#x27; transfer is never narrated; the demands stand OPEN with two oath-facts standing against them — a refusal is a FACT about a demand, not an operation on it (frozen gen_28&#x27;s arithmetic, quoted: &#x27;ZERO RESULT ops — no demand receipts in-span [bold; the letter&#x27;s arithmetic]&#x27;); no decline-operator invented [zero extensions — flagged for ratify-or-reverse]. The verse ends on et-AVRAM: the name the king would have bought sits at the verse-end, unbought [tree fact]. The span&#x27;s ad (&#x27;until&#x27;)-ladder shrinks to its smallest run: from a THREAD until a THONG — frozen gen_29&#x27;s ladder ran places to forever; this one runs nothing to nothing [letter echo, prose].
+</td><td><span class="he">אִם־מִחוּט וְעַד שְׂרוֹךְ־נַעַל וְאִם־אֶקַּח … וְלֹא תֹאמַר אֲנִי הֶעֱשַׁרְתִּי אֶת־אַבְרָם</span> · <i>im-mi-chut ve-ad serokh-naal ve-im-eqach … ve-lo tomar ani heesharti et-avram</i><br><span class="gloss">= if-from-chut and-until serokh-naal and-if-eqach and-not tomar ani heesharti avram</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The oath inventories what it refuses in two words the Torah will never need again: a thread, a strap — so that no king of Sodom can ever stand behind Abram&#x27;s wealth saying MINE.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_14_24 · Gen.14.24 · <span class='expr'>THE_EXCEPTION_AND_THE_PORTION</span></h3>
+<p><span class="he">בִּלְעָדַי רַק אֲשֶׁר אָכְלוּ הַנְּעָרִים וְחֵלֶק הָאֲנָשִׁים אֲשֶׁר הָלְכוּ אִתִּי עָנֵר אֶשְׁכֹּל וּמַמְרֵא הֵם יִקְחוּ חֶלְקָם</span> · <i>biladai raq asher akhlu ha-nearim ve-cheleq ha-anashim asher halkhu iti aner eshkol u-mamre hem yiqchu chelqam</i> · [EN-AID/JPS] save only that which the young men have eaten, and the portion of the men which went with me, Aner, Eshcol, and Mamre, let them take their portion.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">בלעדי רק אשר אכלו הנערים וחלק האנשים אשר הלכו אתי</span> · <i>biladai raq asher akhlu ha-nearim ve-cheleq ha-anashim asher halkhu iti</i> · except what the young men ate, and the walkers&#x27; portion (etnachta arm ends on iti)</div><div class="arm"><b>RIGHT</b><br><span class="he">ענר אשכל וממרא הם יקחו חלקם</span> · <i>aner eshkol u-mamre hem yiqchu chelqam</i> · Aner, Eshkol, Mamre — THEY shall take their portion: the jussive ends the chapter</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(biladai_raq_asher_akhlu_ha_nearim, t0)</span><br><span class="gloss">= HOLDS(biladai-raq-which-akhlu-the-nearim, t0)</span><br>The eaten-exception held as fact: BILADAI (&#x27;apart from me&#x27;) — Torah debut (its next tokens are YOSEF&#x27;S &#x27;it is not in me&#x27;, 41:16/44 — the disclaimer-word&#x27;s career is humility before kings); NAAR (&#x27;young man&#x27;) token 1 — the word&#x27;s debut feeds soldiers; what is already EATEN is outside every ledger: the letter subtracts the unreturnable [letter fact, held].
+</td><td><span class="he">בִּלְעָדַי רַק אֲשֶׁר אָכְלוּ הַנְּעָרִים</span> · <i>biladai raq asher akhlu ha-nearim</i><br><span class="gloss">= biladai raq which akhlu the-nearim</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(avram, LET(yiqchu(aner_eshkol_mamre, chelqam)))</span><br><span class="gloss">= DECLARE(avram, LET(yiqchu(aner-eshkol-mamre, chelqam)))</span><br>HEM YIQCHU CHELQAM (&#x27;THEY shall take their portion&#x27;) — YIQCHU is JUSSIVE (HVqj3mp, DB-verified), and the controlling class is frozen gen_23&#x27;s, quoted [flag 2]: &#x27;THE FOUR JUSSIVES as DECLARE + LET demands (TIR-026...) All four pushed and letter-faithfully OPEN.&#x27; Pushed: Abram&#x27;s SECOND demand-issuing ever — his first (13:9&#x27;s hipared) is the corpus&#x27;s only settled human demand (frozen gen_29); this one stipulates FOR OTHERS, at the king, in the take-verb everyone else has abused (laqach token 28 — the arc&#x27;s last in-span token: took, took, take!, if-I-take, LET-THEM-TAKE) [career, prose]. OPEN: no taking by the allies is narrated [letter-faithful; the staged lean overturned by the morph — flag 2]. The jussive sits VERSE-FINAL — the chapter&#x27;s last words are a demand on the throne [tree fact]. CHELEQ (&#x27;portion&#x27;) tokens 1-2 both in this verse — the noun of the night-SPLIT&#x27;s root (14:15&#x27;s va-yechaleq): one skeleton divided the army, now the spoils [in-span root pair].
+</td><td><span class="he">עָנֵר אֶשְׁכֹּל וּמַמְרֵא הֵם יִקְחוּ חֶלְקָם</span> · <i>aner eshkol u-mamre hem yiqchu chelqam</i><br><span class="gloss">= aner eshkol and-mamre hem yiqchu chelqam</span></td><td class='cite'>TIR-026</td><td>tested</td></tr>
+</table>
+<div class="meta">The chapter of kings ends on other men&#x27;s portions: nothing for the man who won, bread already eaten for his servants, a lawful share for his three allies — and the last word of the war is a demand Abram makes for someone else.</div>
+</div>
+<h2>State machine</h2>
+<div class="meta">The war of the kings (standalone; registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER).</div>
+<table><tr><th>state</th><th>meaning</th></tr>
+<tr><td><b>S_boot</b></td><td>Before 14:1 — all registers empty (standalone unit)</td></tr>
+<tr><td><b>S_coalition</b></td><td>After 14:1-3 — make_war fired (melekh born x27); the muster-fact holds; ten geography names flagged</td></tr>
+<tr><td><b>S_swept</b></td><td>After 14:4-7 — the tribute clock holds; the southern sweep strikes six peoples; seven more names flagged</td></tr>
+<tr><td><b>S_plundered</b></td><td>After 14:8-11 — battle, pits, flight; the plunder taken (laqach 24); eleven verses, zero speech, SPECS empty</td></tr>
+<tr><td><b>S_lot_taken</b></td><td>After 14:12 — take reaches the family (laqach 25); the address-fact holds (yoshev bi-Sedom — gen_29&#x27;s slide completes across the wall)</td></tr>
+<tr><td><b>S_told</b></td><td>After 14:13 — the refugee tells Abram the HEBREW (ivri debut); brit token 9 — the first human-human covenant fact holds</td></tr>
+<tr><td><b>S_mustered</b></td><td>After 14:14 — hear/muster/pursue; the 318-fact holds (chanikh hapax); Dan flagged</td></tr>
+<tr><td><b>S_night_split</b></td><td>After 14:15 — split/strike/pursue to Chovah; mi-semol -&gt; the buffer&#x27;s compass again (repeat-buffer confirmed)</td></tr>
+<tr><td><b>S_restored</b></td><td>After 14:16 — bring_back fires the hiphil restore-voice TWICE; everything returns BEFORE any demand exists; SPECS still empty</td></tr>
+<tr><td><b>S_met</b></td><td>After 14:17 — the king of Sodom comes out; the rare zinor/segol verse; the King&#x27;s Vale</td></tr>
+<tr><td><b>S_priested</b></td><td>After 14:18 — bread and wine; kohen debuts on a Canaanite king; el elyon tokens 1-2; shalem flagged</td></tr>
+<tr><td><b>S_blessed</b></td><td>After 14:19 — BLESS(malki_tzedeq, avram): the first human-blesses-human (barakh token 11); the qoneh formula holds</td></tr>
+<tr><td><b>S_tithed</b></td><td>After 14:20 — BLESS upward (gen_23&#x27;s direction); the miggen-fact holds; give fires AGENTLESS (the tithe&#x27;s hidden pronouns, held OPEN)</td></tr>
+<tr><td><b>S_demanded</b></td><td>After 14:21 — LET(ten) + LET(qach) pushed (the king&#x27;s pair; qach-lakh on the silluq throne — gen_28&#x27;s class); both OPEN</td></tr>
+<tr><td><b>S_hand_raised</b></td><td>After 14:22 — Abram&#x27;s third speech, his FIRST spoken YHWH; the oath-gesture fact holds (rum token 2; the corpus&#x27;s first human oath)</td></tr>
+<tr><td><b>S_refused</b></td><td>After 14:23 — the im-oath facts hold; NO RESULT fires — the refusal is fact, not operation (flag 1); demands stay OPEN</td></tr>
+<tr><td><b>S_portioned</b></td><td>After 14:24 — the eaten-exception holds; LET(yiqchu) pushed (Abram&#x27;s jussive for his allies — gen_23&#x27;s class); QUEUE ENDS 3 OPEN, all human, two refused aloud; every other register empty</td></tr>
+</table><table><tr><th>from</th><th>to</th><th>via</th></tr>
+<tr><td>S_boot</td><td>S_coalition</td><td>STEP_Gn_14_1_3</td></tr>
+<tr><td>S_coalition</td><td>S_swept</td><td>STEP_Gn_14_4_7</td></tr>
+<tr><td>S_swept</td><td>S_plundered</td><td>STEP_Gn_14_8_11</td></tr>
+<tr><td>S_plundered</td><td>S_lot_taken</td><td>STEP_Gn_14_12</td></tr>
+<tr><td>S_lot_taken</td><td>S_told</td><td>STEP_Gn_14_13</td></tr>
+<tr><td>S_told</td><td>S_mustered</td><td>STEP_Gn_14_14</td></tr>
+<tr><td>S_mustered</td><td>S_night_split</td><td>STEP_Gn_14_15</td></tr>
+<tr><td>S_night_split</td><td>S_restored</td><td>STEP_Gn_14_16</td></tr>
+<tr><td>S_restored</td><td>S_met</td><td>STEP_Gn_14_17</td></tr>
+<tr><td>S_met</td><td>S_priested</td><td>STEP_Gn_14_18</td></tr>
+<tr><td>S_priested</td><td>S_blessed</td><td>STEP_Gn_14_19</td></tr>
+<tr><td>S_blessed</td><td>S_tithed</td><td>STEP_Gn_14_20</td></tr>
+<tr><td>S_tithed</td><td>S_demanded</td><td>STEP_Gn_14_21</td></tr>
+<tr><td>S_demanded</td><td>S_hand_raised</td><td>STEP_Gn_14_22</td></tr>
+<tr><td>S_hand_raised</td><td>S_refused</td><td>STEP_Gn_14_23</td></tr>
+<tr><td>S_refused</td><td>S_portioned</td><td>STEP_Gn_14_24</td></tr>
+</table>
+<div class="note"><b>AFTER_S_portioned</b> — TIME: t0, no marks (no RESULT ever fires — flag 1). WORLD: ZERO installs (an army moves and nothing persists) + 23 presupposed reads flagged — the largest read-roster in the corpus (ten coalition/vale names, seven sweep names, dan, chovah, damaseq, emeq_shaveh, shalem, goyim_land). REGISTRY: ZERO writes (the El Elyon fusion is quoted speech, not a naming act). EVENTS: 20 narrative + 2 BLESS + 3 declares. SPECS: THREE pushed, ZERO popped, THREE OPEN — all human, and the shape re-runs frozen gen_28&#x27;s three-open-all-human with the moral geometry inverted: there the demands hung in silence; here TWO are REFUSED ALOUD (LET(ten(avram, ha_nefesh)) — no transfer of persons is ever narrated, and the letter&#x27;s sequence has them already restored at 14:16 before the king asked; LET(qach(avram, ha_rekhush)) — negated in its own verb by the oath&#x27;s ve-im-eqach) and the THIRD is Abram&#x27;s own jussive for his allies (LET(yiqchu(aner_ eshkol_mamre, chelqam)) — gen_23&#x27;s class; no taking narrated) [all OPEN at the wall]. Standing facts (14 fact-lines): the coalition-and-vale (melekh born x27; the Salt Sea named over the doomed vale), the tribute clock, the four-vs-five + the bitumen pits (Babel&#x27;s mortar-word), Lot&#x27;s address (the slide across the frozen wall complete), the ally-covenant (brit token 9 — the first human-human), the 318 (chanikh hapax), the priest-fact (kohen&#x27;s debut on a Canaanite king; el tokens 1-4 all El Elyon), the two barukh formulas (the first human-blesses-human; the qoneh epithet — Chavah&#x27;s verb on the cosmos), the miggen deliverance-clause (the war&#x27;s only theology, a guest&#x27;s), the oath-gesture (the corpus&#x27;s first human oath, before the swear-verb exists; Abram&#x27;s first spoken YHWH, the priest&#x27;s epithet YHWH-prefixed), the thread-and-thong + motive pair (three hapaxes spent on refusing), the eaten-exception. The AGENTLESS TENTH stands as an event with hidden hands [flag 3 — held OPEN, the buffer declines to vote too]. TESTS: EMPTY (a war judged by no one in the letter). LEDGER: EMPTY. FLAGS: read_before_install x23. THE SHAPE IS THE STATE: eleven verses of voiceless annal, then every speech in the chapter is about giving and taking — a priest gives bread and blessing and (someone) gives a tenth; a king demands give and take; and the man who could keep everything raises a hand, says the Name for the first time, and keeps nothing but other men&#x27;s portions.</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>The coalition musters: after STEP_Gn_14_1_3</td><td>All registers empty (standalone unit). (make_war(e1) fired — melekh born x27; grouped annal-row per gen_24&#x27;s device.)</td><td>Facts chavru HOLD; Facts yam-ha-melach HOLD; flags shinar/elasar/elam/sedom/amora/admah/tzevoyim/tzoar/emeq_ha_sidim/yam_ha_melach as read-before-install; SPECS empty.<br><span class="gloss">= Facts chavru HOLD; Facts yam-the-melach HOLD; flags shinar/elasar/elam/sedom/amora/admah/tzevoyim/tzoar/emeq-the-sidim/yam-the-melach as read-before-install; SPECS empty.</span></td><td><span class="he">כָּל־אֵלֶּה חָבְרוּ אֶל־עֵמֶק הַשִּׂדִּים</span> · <i>kol-eleh chavru el-emeq ha-sidim</i><br><span class="gloss">= all-these chavru to-emeq the-sidim</span></td></tr>
+<tr><td><b>S2</b></td><td>The clock and the sweep: after STEP_Gn_14_4_7</td><td>S1 state. (strike(e2) — six peoples; the proleptic names held named-only.)</td><td>Facts avdu-maradu HOLD; flags ashterot_qarnayim/ham/shaveh_qiryatayim/har_seir/el_paran/en_mishpat_qadesh/chatzetzon_tamar as read-before-install; SPECS empty.<br><span class="gloss">= Facts avdu-maradu HOLD; flags ashterot-qarnayim/ham/shaveh-qiryatayim/har-seir/to-paran/en-mishpat-qadesh/chatzetzon-tamar as read-before-install; SPECS empty.</span></td><td><span class="he">שְׁתֵּים עֶשְׂרֵה שָׁנָה עָבְדוּ … וּשְׁלֹשׁ־עֶשְׂרֵה שָׁנָה מָרָדוּ</span> · <i>shtem esreh shanah avdu … u-shelosh-esreh shanah maradu</i><br><span class="gloss">= shtem -teen year avdu and-shelosh--teen year maradu</span></td></tr>
+<tr><td><b>S3</b></td><td>The battle, the pits, the plunder: after STEP_Gn_14_8_11</td><td>S2 state. (array_battle/flee/take fired — eleven verses and not one word spoken.)</td><td>Facts arbaah-melakhim HOLD; Facts beerot-chemar HOLD; SPECS empty.<br><span class="gloss">= Facts four-melakhim HOLD; Facts beerot-chemar HOLD; SPECS empty.</span></td><td><span class="he">אַרְבָּעָה מְלָכִים אֶת־הַחֲמִשָּׁה</span> · <i>arbaah melakhim et-ha-chamishah</i><br><span class="gloss">= four melakhim the-chamishah</span></td></tr>
+<tr><td><b>S4</b></td><td>Lot taken with the goods: after STEP_Gn_14_12</td><td>S3 state. (take(e6) — the annal&#x27;s verb reaches the family; gen_29&#x27;s slide completes across the frozen wall, prose.)</td><td>Facts yoshev-bi-sedom HOLD; SPECS empty.</td><td><span class="he">וְהוּא יֹשֵׁב בִּסְדֹם</span> · <i>ve-hu yoshev bi-sedom</i><br><span class="gloss">= and-that yoshev bi-sedom</span></td></tr>
+<tr><td><b>S5</b></td><td>The Hebrew and the covenant-masters: after STEP_Gn_14_13</td><td>S4 state. (come/tell — ivri debut; brit token 9, the first human-human covenant token.)</td><td>Facts baalei-verit HOLD; no test, no name.</td><td><span class="he">וְהֵם בַּעֲלֵי בְרִית־אַבְרָם</span> · <i>ve-hem baalei verit-avram</i><br><span class="gloss">= and-hem baalei verit-avram</span></td></tr>
+<tr><td><b>S6</b></td><td>Everything back before anyone asks: after STEP_Gn_14_16</td><td>S5 state plus 14:14-15 (the muster and the night-split). (bring_back(e15) — the double hiphil; the restoration precedes every demand.)</td><td>Facts shmonah-asar HOLD; SPECS empty.</td><td><span class="he">וַיָּשֶׁב אֵת כָּל־הָרְכֻשׁ … הֵשִׁיב</span> · <i>va-yashev et kol-ha-rekhush … heshiv</i><br><span class="gloss">= and-yashev et all-the-rekhush heshiv</span></td></tr>
+<tr><td><b>S7</b></td><td>The priest of El Elyon: after STEP_Gn_14_18</td><td>S6 state plus 14:17 (the king&#x27;s meeting). (bring_out(e17) — bread and wine; kohen debuts.)</td><td>Facts khohen-elyon HOLD; no test, no name.</td><td><span class="he">וְהוּא כֹהֵן לְאֵל עֶלְיוֹן</span> · <i>ve-hu khohen le-el elyon</i><br><span class="gloss">= and-that khohen to-to elyon</span></td></tr>
+<tr><td><b>S8</b></td><td>Two blessings and a hidden-handed tenth: after STEP_Gn_14_20</td><td>S7 state. (BLESS x2 — the first human-blesses-human, then gen_23&#x27;s upward direction; give(e18) AGENTLESS — flag 3.)</td><td>Facts barukh-avram HOLD; Facts miggen-tzarekha HOLD; SPECS empty.</td><td><span class="he">בָּרוּךְ אַבְרָם לְאֵל עֶלְיוֹן</span> · <i>barukh avram le-el elyon</i><br><span class="gloss">= barukh avram to-to elyon</span></td></tr>
+<tr><td><b>S9</b></td><td>The king&#x27;s pair pushed: after STEP_Gn_14_21</td><td>S8 state. (say(e19) — two imperatives, no thanks; qach-lakh on the silluq throne.)</td><td>LET(ten(avram, ha_nefesh)) pushed and OPEN; LET(qach(avram, ha_rekhush)) pushed and OPEN.<br><span class="gloss">= LET(ten(avram, the-nefesh)) pushed and OPEN; LET(qach(avram, the-rekhush)) pushed and OPEN.</span></td><td><span class="he">תֶּן־לִי הַנֶּפֶשׁ וְהָרְכֻשׁ קַח־לָךְ</span> · <i>ten-li ha-nefesh ve-ha-rekhush qach-lakh</i><br><span class="gloss">= ten-to-me the-nefesh and-the-rekhush qach-to-you</span></td></tr>
+<tr><td><b>S10</b></td><td>Refused aloud, open on the books: after STEP_Gn_14_24</td><td>S9 state plus 14:22-23 (the oath — no RESULT fires: the refusal is fact, not operation; flag 1). (LET(yiqchu) pushed — Abram&#x27;s jussive for his allies, gen_23&#x27;s class.)</td><td>LET(ten(avram, ha_nefesh)) pushed and OPEN; LET(qach(avram, ha_rekhush)) pushed and OPEN; LET(yiqchu(aner_eshkol_mamre, chelqam)) pushed and OPEN; Facts harimoti-yadi HOLD; Facts im-mi-chut HOLD; no test, no name; LEDGER stays EMPTY (open transaction).<br><span class="gloss">= LET(ten(avram, the-nefesh)) pushed and OPEN; LET(qach(avram, the-rekhush)) pushed and OPEN; LET(yiqchu(aner-eshkol-mamre, chelqam)) pushed and OPEN; Facts harimoti-yadi HOLD; Facts if-from-chut HOLD; no test, no name; LEDGER stays EMPTY (open transaction).</span></td><td><span class="he">הֲרִימֹתִי יָדִי אֶל־יְהוָה … הֵם יִקְחוּ חֶלְקָם</span> · <i>harimoti yadi el-YHWH … hem yiqchu chelqam</i><br><span class="gloss">= harimoti yadi to-the-LORD hem yiqchu chelqam</span></td></tr>
+<tr><td><b>S11_negative</b></td><td>Negative: the LET? contract guard</td><td>A synthetic LET? demand (the machine&#x27;s own contract self-test).</td><td>LET? never auto-upgrades: resolution without citation must REFUSE; with a per-unit citation it may resolve — entries pop demands; nothing but citation moves a mood.</td><td><span class="he">קַח־לָךְ</span> · <i>qach-lakh</i><br><span class="gloss">= qach-to-you</span></td></tr>
+<tr><td><b>S12_negative</b></td><td>Negative: flags never block</td><td>A synthetic commit with TESTS empty (the machine&#x27;s own contract self-test).</td><td>Cycle close with TESTS empty must be FLAGGED, never blocked.<br><span class="gloss">= Cycle close with TESTS empty must in FLAGGED, never blocked.</span></td><td></td></tr>
+</table>
+<h2>Exports (reusable patterns)</h2><table><tr><th>id</th><th>content</th></tr>
+<tr><td>EXPORT_refused_demands_and_the_first_oath</td><td><span class="he">תֶּן־לִי הַנֶּפֶשׁ וְהָרְכֻשׁ קַח־לָךְ … הֲרִימֹתִי יָדִי אֶל־יְהוָה</span> · <i>ten-li ha-nefesh ve-ha-rekhush qach-lakh … harimoti yadi el-YHWH</i> · THE REFUSAL RULING [flag 1, boldest]: the king of Sodom&#x27;s imperative pair pushes two human LET demands (gen_13&#x27;s class; qach-lakh VERSE-FINAL — gen_28&#x27;s demand-on-the-silluq class, quoted and landed) and Abram REFUSES ALOUD with the corpus&#x27;s FIRST HUMAN OATH — harimoti yadi (&#x27;I have raised my hand&#x27;, rum token 2 after the ark-lifting waters; the im-formula self-curse whose only Gen-1-14 instance is 14:23; the swear-verb debuts seven chapters later) — and THE QUEUE DOES NOT MOVE: no RESULT fires because nothing is executed (the goods stay untaken — the oath negates the demand in its own verb, eqach answering qach; the persons were already BROUGHT BACK at 14:16 before the king asked, and no transfer is ever narrated); a refusal is a FACT about a demand, not an operation on it — frozen gen_28&#x27;s arithmetic quoted, zero interpreter extensions; the third demand is Abram&#x27;s own jussive for his allies (yiqchu — gen_23&#x27;s jussive-LET class, his second issuing ever after the corpus&#x27;s only settled human demand, frozen gen_29&#x27;s hipared); queue ends 3 OPEN, all human, two refused aloud, one issued in another&#x27;s favor</td></tr>
+<tr><td>EXPORT_malki_tzedeq_field</td><td><span class="he">וְהוּא כֹהֵן לְאֵל עֶלְיוֹן … וַיִּתֶּן־לוֹ מַעֲשֵׂר מִכֹּל</span> · <i>ve-hu khohen le-el elyon … va-yiten-lo maaser mi-kol</i> · the Salem field: KOHEN (&#x27;priest&#x27;) debuts on a Canaanite king (tokens 2-5 all Egypt&#x27;s priests — one Salem, four Egypt, before Aaron&#x27;s law); EL — the divine name&#x27;s debut, tokens 1-4 all EL ELYON in-span, the El-title ladder following (El Roi 16:13, El Shaddai 17:1, El Olam 21:33); the FIRST HUMAN-BLESSES-HUMAN (barakh token 11; gen_23&#x27;s 9:26 inversion quoted — the triangle completes: God blessed humans, a human blessed God, now a human blesses a human, and he is the man of gen_27&#x27;s 12:3 blessers-guard [prose, nothing pops]); QONEH shamayim va-aretz — Chavah&#x27;s acquire-verb (4:1 qaniti) become the cosmos&#x27;s title-deed; the AGENTLESS TENTH [flag 3]: va-yiten-LO maaser mi-kol — giver and receiver both bare pronouns, held OPEN (Onkelos keeps both pronouns bare — the buffer declines to vote); maaser&#x27;s tokens 2-4 are Lev 27:30-32, THE TITHE LAW: the law-word born three books early in a gift with hidden hands (the nega bridge-class); Abram&#x27;s oath ADOPTS the epithet YHWH-PREFIXED (el-YHWH el elyon qoneh...) — his first spoken YHWH, fused to a foreign priest&#x27;s liturgy [letter fact; chain files named-only]</td></tr>
+<tr><td>EXPORT_the_annal_and_the_king_word</td><td><span class="he">וַיְהִי בִּימֵי אַמְרָפֶל … אַרְבָּעָה מְלָכִים אֶת־הַחֲמִשָּׁה</span> · <i>va-yehi bi-ymei amrafel … arbaah melakhim et-ha-chamishah</i> · the corpus&#x27;s first WAR ANNAL — eleven verses, ZERO speech (the longest voiceless narrative stretch): MELEKH (&#x27;king&#x27;) born x27 exact (the letter never crowned Nimrod, Babel, or Pharaoh; tokens 28-29 are the covenant&#x27;s &#x27;kings shall come out of you&#x27;, 17:6/17:16); MILCHAMAH (&#x27;war&#x27;) debuts MADE (asu — the six days&#x27; make-verb); the tribute clock (avad token 6 — the garden&#x27;s work-verb turned vassalage; marad &#x27;rebel&#x27; debut); the four-vs-five; beerot beerot chemar — the WELL-word debuts doubled as tar-pits and the bitumen is Babel&#x27;s mortar-word (11:3, token 2); yam ha-MELACH: the salt-word debuts naming the doomed vale&#x27;s sea and its token 2 is 19:26 — Lot&#x27;s wife, the pillar; En-mishpat — the JUDGMENT-skeleton&#x27;s first surface, a place-name before the concept (18:19/25 next); the proleptic names held named-only (ha-Amaleqi before Amalek&#x27;s birth at 36:12; Dan before 30:6); the giant-peoples file; and the hybrid encoding itself — gen_24&#x27;s grouped-row device on the letter&#x27;s own annal-paragraphs, ratified by the owner</td></tr>
+<tr><td>EXPORT_rescue_arc_take_and_restore</td><td><span class="he">וַיִּקְחוּ אֶת־לוֹט … וַיָּשֶׁב אֵת כָּל־הָרְכֻשׁ … הֵשִׁיב</span> · <i>va-yiqchu et-lot … va-yashev et kol-ha-rekhush … heshiv</i> · the take/restore arc across three units: LAQACH tokens 24-28 in-span (plunder taken, LOT taken — one verb for goods and kin; the king&#x27;s qach!; Abram&#x27;s ve-im-eqach; the allies&#x27; yiqchu) after gen_28&#x27;s passive/confession/imperative triad (tokens 21-23), and token 29 is 15:9 — GOD says take next, across the seam; SHUV IN HIPHIL debuts DOUBLED (va-yashev... heshiv, 14:16 — the restore-voice born on persons and goods, everything returned BEFORE any demand was spoken); AVRAM HA-IVRI — the Hebrew-gentilic&#x27;s debut (gen_27&#x27;s crosser-note lands; tokens 2-6 all Yosef-in-Egypt); BRIT token 9 = baalei verit-avram, the covenant-word&#x27;s first human-human token (tokens 1-8 all divine — census); the 318 chanikhav (Torah hapax) mustered by va-yareq (the sword-unsheathing verb on men); Lot&#x27;s slide complete across the frozen wall (gen_29&#x27;s va-yeehal ad-sedom -&gt; yoshev bi-Sedom, both verse-final on Sodom); and the seam-pun staged, not encoded: 14:20&#x27;s miggen (&#x27;delivered&#x27;, piel hapax) awaits 15:1&#x27;s magen (&#x27;shield&#x27;) — same skeleton, verb then noun, wall between them</td></tr>
+</table>
+<h2>Oral notes (named, tiered, dual-track — never merged)</h2>
+<div class="note"><span class="badge tier-o">observation</span> <b>Bereshit Rabbah 42-43 (the span; Amraphel-is-Nimrod class; the 318-as-Eliezer gematria class); Rashi at 14:7, 14:13, 14:14, 14:18, 14:22; Ramban at 14:1 (the four-kingdoms typology); Bavli Nedarim 32b (Malki-Tzedek and the priesthood-transfer class); Chullin 89a (the thread-and-thong reward class — the tzitzit thread, the tefillin strap); the maaser giver-identity dispute — gen_30 Tier-A queue</b><br><span class="he">וּמַלְכִּי־צֶדֶק מֶלֶךְ שָׁלֵם</span> · <i>(queue — named only)</i> · Named, not read. The cache middot scan is the MAIN LOOP&#x27;S gate and is not claimed by this draft [flagged]. Predicted classes: the IDENTIFICATION class (Amraphel/Nimrod, Malki-Tzedek/Shem, Salem/Jerusalem — and the buffer itself performs the last one, see Tier-A); the GEMATRIA class (318/Eliezer — named-only, no numerology in the machine); the FOUR-KINGDOMS typology class (Ramban&#x27;s program on the four kings); the PRIESTHOOD-TRANSFER class (Nedarim 32b on kohen&#x27;s debut); the REFUSAL-REWARD class (Chullin 89a: the thread and the thong repaid as commandments); the TITHE-DIRECTION dispute (who gave to whom — the letter&#x27;s hidden pronouns).
+<br><i>Queue entry — no claim made beyond the naming.</i></div>
+<div class="note"><span class="badge tier-v">verified</span> <b>Onkelos Genesis 14:1-24 — read Tier-A at derive time (24 sequential fetches, 0.5s spacing, Data/FETCHLOG.md 2026-08-03)</b><br><span class="he">מַלְכָּא דִירוּשְׁלֶם … מְשַׁמֵּשׁ קֳדָם אֵל עִלָּאָה</span> · <i>malka di-yerushlem … meshamesh kodam el ilaah</i> · The span&#x27;s translation witness — headline: 14:18&#x27;s DOUBLE MOVE. Salem is IDENTIFIED — malka di-YERUSHLEM (&#x27;king of JERUSALEM&#x27;): the buffer names the city the letter conceals; and in the same verse the priest-word is WITHHELD — kohen&#x27;s Torah-debut token is rendered MESHAMESH KODAM (&#x27;one who SERVES BEFORE&#x27;) El Elyon: the buffer un-priests the man the letter ordains [find-class: identification + title-dodge in one verse; dual-track, flagged]. SECOND: the oath gains PRAYER — harimoti yadi -&gt; areimit yedai BI-TZLO kodam YHWH (&#x27;I have raised my hands IN PRAYER before the LORD&#x27;): the raw hand-gesture liturgized, the tzali-family policy a third consecutive unit (gen_27&#x27;s call-as-prayer, gen_29&#x27;s ve-tzali, now the oath) [repeat-policy, landed]. THIRD: the QINYAN convergence — qoneh shamayim va-aretz -&gt; di-QINYANEH (&#x27;whose POSSESSION&#x27;), and qinyana is the buffer&#x27;s word for the war&#x27;s rekhush (&#x27;property&#x27;) all span long (14:11, 12, 16, 21): in Aramaic the plunder kings die for and the cosmos God owns share one noun [cross-buffer observation]. FOURTH: the compass policy CONFIRMED as repeat buffer — mi-semol le-damaseq (&#x27;on the LEFT of Damascus&#x27;) -&gt; MI-TZIPUNA (&#x27;on the NORTH&#x27;): the same body-relative-to-compass conversion that erased frozen gen_29&#x27;s two hapax direction-verbs at 13:9 [repeat-buffer, landed]. FIFTH: the take-verb hardened — va-yiqchu x2 (14:11-12) -&gt; U-SHVO (&#x27;they took CAPTIVE&#x27;), and the king&#x27;s qach (14:21) -&gt; DVAR (&#x27;LEAD away&#x27;; variant sav): the lead-for-take buffer (gen_26&#x27;s 11:31, gen_28&#x27;s triad) now criminalizes plunder and buffers even a demand&#x27;s imperative [repeat-policy]. Watch-points answered: the MAASER pronouns stay bare (vi-hav leh — the buffer DECLINES TO VOTE on the tithe&#x27;s direction); the im-oath formula KEPT (im... ve-im essav — contrast 13:16&#x27;s dare, which the buffer resolved). Also: the giant-peoples translated to epithets (Refaim -&gt; gibbaraya &#x27;the mighty&#x27;, Zuzim -&gt; takifaya &#x27;the strong&#x27;, Emim -&gt; eimtanei &#x27;the terrible&#x27;); En-mishpat -&gt; meishar pillug dina (&#x27;the plain of the DIVISION OF JUDGMENT&#x27;) with Kadesh -&gt; Reqam and Chatzetzon-tamar -&gt; EIN GEDI [identifications]; emeq shaveh -&gt; beit reisa de-malka (&#x27;the king&#x27;s racecourse&#x27; — a hippodrome inserted); Shinar -&gt; BAVEL x2; Goyim -&gt; ammei (&#x27;peoples&#x27;); baalei brit -&gt; enashei qeyameh; chanikhav -&gt; uleimohi (&#x27;his young men&#x27; — the hapax flattened); va-yareq -&gt; ve-zareiz (&#x27;he armed&#x27;).
+<br><i>Read from Data/sefaria_texts/ (local; FETCHLOG is provenance). Dual-track; not merged.</i></div>
+<h2>Binary trees (ta'amim v3, glue bricks)</h2>
+<h3>Gen.14.1 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">ויהי בימי אמרפל מלך־שנער אריוך מלך אלסר כדרלעמר מלך עילם ותדעל מלך גוים</span> · <i>va-yehi bi-yme amrafel melekh-shinar aryokh melekh elasar kedarlaomer melekh elam ve-tidal melekh goyim</i> · In the days of Amraphel: four kings named, crowns born in war. [EN-AID]</div>
+<pre>PHRASE (binary 14w) וַ/יְהִ֗י בִּ/ימֵי֙ אַמְרָפֶ֣ל מֶֽלֶךְ שִׁנְעָ֔…
+├── PHRASE (binary 8w) וַ/יְהִ֗י בִּ/ימֵי֙ אַמְרָפֶ֣ל מֶֽלֶךְ שִׁנְעָ֔…
+│   ├── PHRASE (binary 5w) וַ/יְהִ֗י בִּ/ימֵי֙ אַמְרָפֶ֣ל מֶֽלֶךְ שִׁנְעָ֔ר
+│   │   ├── [0] וַ/יְהִ֗י (revia, rank=3)
+│   │   └── PHRASE (binary 4w) בִּ/ימֵי֙ אַמְרָפֶ֣ל מֶֽלֶךְ שִׁנְעָ֔ר
+│   │       ├── [1] בִּ/ימֵי֙ (pashta, rank=3)
+│   │       └── [2-4] GLUE אַמְרָפֶ֣ל מֶֽלֶךְ שִׁנְעָ֔ר (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) אַרְי֖וֹךְ מֶ֣לֶךְ אֶלָּסָ֑ר
+│       ├── [5] אַרְי֖וֹךְ (tifcha, rank=2)
+│       └── [6-7] GLUE מֶ֣לֶךְ אֶלָּסָ֑ר (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) כְּדָרְלָעֹ֨מֶר֙ מֶ֣לֶךְ עֵילָ֔ם וְ/תִדְעָ֖ל מֶ…
+    ├── PHRASE (binary 3w) כְּדָרְלָעֹ֨מֶר֙ מֶ֣לֶךְ עֵילָ֔ם
+    │   ├── [8] כְּדָרְלָעֹ֨מֶר֙ (pashta, rank=3)
+    │   └── [9-10] GLUE מֶ֣לֶךְ עֵילָ֔ם (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) וְ/תִדְעָ֖ל מֶ֥לֶךְ גּוֹיִֽם
+        ├── [11] וְ/תִדְעָ֖ל (tifcha, rank=2)
+        └── [12-13] GLUE מֶ֥לֶךְ גּוֹיִֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.14.2 · parser unique · 21 words</h3>
+<div class="meta"><span class="he">עשו מלחמה את־ברע מלך סדם ואת־ברשע מלך עמרה שנאב מלך אדמה ושמאבר מלך צביים צבויים ומלך בלע היא־צער</span> · <i>asu milchama et-bera melekh sedom ve-et-birsha melekh amora shinav melekh adma ve-shemever melekh tzvyym tzevoyim u-melekh bela hi-tzoar</i> · They made war with the five kings of the cities of the plain. [EN-AID]</div>
+<pre>PHRASE (binary 21w) עָשׂ֣וּ מִלְחָמָ֗ה אֶת בֶּ֨רַע֙ מֶ֣לֶךְ סְדֹ֔ם …
+├── PHRASE (binary 10w) עָשׂ֣וּ מִלְחָמָ֗ה אֶת בֶּ֨רַע֙ מֶ֣לֶךְ סְדֹ֔ם …
+│   ├── PHRASE (binary 6w) עָשׂ֣וּ מִלְחָמָ֗ה אֶת בֶּ֨רַע֙ מֶ֣לֶךְ סְדֹ֔ם
+│   │   ├── [0-1] GLUE עָשׂ֣וּ מִלְחָמָ֗ה (revia, rank=3)
+│   │   └── PHRASE (binary 4w) אֶת בֶּ֨רַע֙ מֶ֣לֶךְ סְדֹ֔ם
+│   │       ├── [2-3] GLUE אֶת בֶּ֨רַע֙ (pashta, rank=3)
+│   │       └── [4-5] GLUE מֶ֣לֶךְ סְדֹ֔ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) וְ/אֶת בִּרְשַׁ֖ע מֶ֣לֶךְ עֲמֹרָ֑ה
+│       ├── [6-7] GLUE וְ/אֶת בִּרְשַׁ֖ע (tifcha, rank=2)
+│       └── [8-9] GLUE מֶ֣לֶךְ עֲמֹרָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 11w) שִׁנְאָ֣ב מֶ֣לֶךְ אַדְמָ֗ה וְ/שֶׁמְאֵ֨בֶר֙ מֶ֣ל…
+    ├── PHRASE (binary 7w) שִׁנְאָ֣ב מֶ֣לֶךְ אַדְמָ֗ה וְ/שֶׁמְאֵ֨בֶר֙ מֶ֣ל…
+    │   ├── [10-12] GLUE שִׁנְאָ֣ב מֶ֣לֶךְ אַדְמָ֗ה (revia, rank=3)
+    │   └── PHRASE (binary 4w) וְ/שֶׁמְאֵ֨בֶר֙ מֶ֣לֶךְ צביים צְבוֹיִ֔ים
+    │       ├── [13] וְ/שֶׁמְאֵ֨בֶר֙ (pashta, rank=3)
+    │       └── [14-16] GLUE מֶ֣לֶךְ צביים צְבוֹיִ֔ים (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) וּ/מֶ֥לֶךְ בֶּ֖לַע הִיא צֹֽעַר
+        ├── [17-18] GLUE וּ/מֶ֥לֶךְ בֶּ֖לַע (tifcha, rank=2)
+        └── [19-20] GLUE הִיא צֹֽעַר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.14.3 · parser unique · 9 words</h3>
+<div class="meta"><span class="he">כל־אלה חברו אל־עמק השדים הוא ים המלח</span> · <i>kal-ele chavru el-emeq ha-sidim hu yam ha-melach</i> · All allied at the vale of Siddim — that is the Salt Sea. [EN-AID]</div>
+<pre>PHRASE (binary 9w) כָּל אֵ֨לֶּה֙ חָֽבְר֔וּ אֶל עֵ֖מֶק הַ/שִּׂדִּ֑י…
+├── PHRASE (binary 6w) כָּל אֵ֨לֶּה֙ חָֽבְר֔וּ אֶל עֵ֖מֶק הַ/שִּׂדִּ֑ים
+│   ├── PHRASE (binary 3w) כָּל אֵ֨לֶּה֙ חָֽבְר֔וּ
+│   │   ├── [0-1] GLUE כָּל אֵ֨לֶּה֙ (pashta, rank=3)
+│   │   └── [2] חָֽבְר֔וּ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) אֶל עֵ֖מֶק הַ/שִּׂדִּ֑ים
+│       ├── [3-4] GLUE אֶל עֵ֖מֶק (tifcha, rank=2)
+│       └── [5] הַ/שִּׂדִּ֑ים (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) ה֖וּא יָ֥ם הַ/מֶּֽלַח
+    ├── [6] ה֖וּא (tifcha, rank=2)
+    └── [7-8] GLUE יָ֥ם הַ/מֶּֽלַח (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.14.4 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">שתים עשרה שנה עבדו את־כדרלעמר ושלש־עשרה שנה מרדו</span> · <i>shetem esre shana avdu et-kedarlaomer u-shelosh-esre shana maradu</i> · Twelve years they served Chedorlaomer; the thirteenth they rebelled. [EN-AID]</div>
+<pre>PHRASE (binary 10w) שְׁתֵּ֤ים עֶשְׂרֵה֙ שָׁנָ֔ה עָבְד֖וּ אֶת כְּדָר…
+├── PHRASE (binary 6w) שְׁתֵּ֤ים עֶשְׂרֵה֙ שָׁנָ֔ה עָבְד֖וּ אֶת כְּדָר…
+│   ├── PHRASE (binary 3w) שְׁתֵּ֤ים עֶשְׂרֵה֙ שָׁנָ֔ה
+│   │   ├── [0-1] GLUE שְׁתֵּ֤ים עֶשְׂרֵה֙ (pashta, rank=3)
+│   │   └── [2] שָׁנָ֔ה (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) עָבְד֖וּ אֶת כְּדָרְלָעֹ֑מֶר
+│       ├── [3] עָבְד֖וּ (tifcha, rank=2)
+│       └── [4-5] GLUE אֶת כְּדָרְלָעֹ֑מֶר (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וּ/שְׁלֹשׁ עֶשְׂרֵ֥ה שָׁנָ֖ה מָרָֽדוּ
+    ├── [6-8] GLUE וּ/שְׁלֹשׁ עֶשְׂרֵ֥ה שָׁנָ֖ה (tifcha, rank=2)
+    └── [9] מָרָֽדוּ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.14.5 · parser unique · 20 words</h3>
+<div class="meta"><span class="he">ובארבע עשרה שנה בא כדרלעמר והמלכים אשר אתו ויכו את־רפאים בעשתרת קרנים ואת־הזוזים בהם ואת האימים בשוה קריתים</span> · <i>u-ve-arba esre shana ba khedarlaomer ve-ha-melakhim asher et-o va-yaku et-refaim be-ashtrot qarnayim ve-et-ha-zuzim be-ham ve-et ha-emim be-shave qiryatayim</i> · In the fourteenth year the four came and smote the giant-peoples. [EN-AID]</div>
+<pre>PHRASE (binary 20w) וּ/בְ/אַרְבַּע֩ עֶשְׂרֵ֨ה שָׁנָ֜ה בָּ֣א כְדָרְל…
+├── PHRASE (binary 16w) וּ/בְ/אַרְבַּע֩ עֶשְׂרֵ֨ה שָׁנָ֜ה בָּ֣א כְדָרְל…
+│   ├── PHRASE (binary 8w) וּ/בְ/אַרְבַּע֩ עֶשְׂרֵ֨ה שָׁנָ֜ה בָּ֣א כְדָרְל…
+│   │   ├── PHRASE (binary 5w) וּ/בְ/אַרְבַּע֩ עֶשְׂרֵ֨ה שָׁנָ֜ה בָּ֣א כְדָרְל…
+│   │   │   ├── [0-2] GLUE וּ/בְ/אַרְבַּע֩ עֶשְׂרֵ֨ה שָׁנָ֜ה (geresh, rank=4)
+│   │   │   └── [3-4] GLUE בָּ֣א כְדָרְלָעֹ֗מֶר (revia, rank=3)
+│   │   └── PHRASE (binary 3w) וְ/הַ/מְּלָכִים֙ אֲשֶׁ֣ר אִתּ֔/וֹ
+│   │       ├── [5] וְ/הַ/מְּלָכִים֙ (pashta, rank=3)
+│   │       └── [6-7] GLUE אֲשֶׁ֣ר אִתּ֔/וֹ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 8w) וַ/יַּכּ֤וּ אֶת רְפָאִים֙ בְּ/עַשְׁתְּרֹ֣ת קַרְ…
+│       ├── PHRASE (binary 5w) וַ/יַּכּ֤וּ אֶת רְפָאִים֙ בְּ/עַשְׁתְּרֹ֣ת קַרְ…
+│       │   ├── [8-10] GLUE וַ/יַּכּ֤וּ אֶת רְפָאִים֙ (pashta, rank=3)
+│       │   └── [11-12] GLUE בְּ/עַשְׁתְּרֹ֣ת קַרְנַ֔יִם (zaqef qatan, rank=2)
+│       └── PHRASE (binary 3w) וְ/אֶת הַ/זּוּזִ֖ים בְּ/הָ֑ם
+│           ├── [13-14] GLUE וְ/אֶת הַ/זּוּזִ֖ים (tifcha, rank=2)
+│           └── [15] בְּ/הָ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וְ/אֵת֙ הָֽ/אֵימִ֔ים בְּ/שָׁוֵ֖ה קִרְיָתָֽיִם
+    ├── PHRASE (binary 2w) וְ/אֵת֙ הָֽ/אֵימִ֔ים
+    │   ├── [16] וְ/אֵת֙ (pashta, rank=3)
+    │   └── [17] הָֽ/אֵימִ֔ים (zaqef qatan, rank=2)
+    └── PHRASE (binary 2w) בְּ/שָׁוֵ֖ה קִרְיָתָֽיִם
+        ├── [18] בְּ/שָׁוֵ֖ה (tifcha, rank=2)
+        └── [19] קִרְיָתָֽיִם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.14.6 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">ואת־החרי בהררם שעיר עד איל פארן אשר על־המדבר</span> · <i>ve-et-ha-chori be-harra-m seir ad el paran asher al-ha-midbar</i> · And the Horites in mount Seir, to El-paran by the wilderness. [EN-AID]</div>
+<pre>PHRASE (binary 10w) וְ/אֶת הַ/חֹרִ֖י בְּ/הַרְרָ֣/ם שֵׂעִ֑יר עַ֚ד אֵ…
+├── PHRASE (binary 4w) וְ/אֶת הַ/חֹרִ֖י בְּ/הַרְרָ֣/ם שֵׂעִ֑יר
+│   ├── [0-1] GLUE וְ/אֶת הַ/חֹרִ֖י (tifcha, rank=2)
+│   └── [2-3] GLUE בְּ/הַרְרָ֣/ם שֵׂעִ֑יר (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) עַ֚ד אֵ֣יל פָּארָ֔ן אֲשֶׁ֖ר עַל הַ/מִּדְבָּֽר
+    ├── PHRASE (binary 3w) עַ֚ד אֵ֣יל פָּארָ֔ן
+    │   ├── [4] עַ֚ד (yetiv, rank=3)
+    │   └── [5-6] GLUE אֵ֣יל פָּארָ֔ן (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) אֲשֶׁ֖ר עַל הַ/מִּדְבָּֽר
+        ├── [7] אֲשֶׁ֖ר (tifcha, rank=2)
+        └── [8-9] GLUE עַל הַ/מִּדְבָּֽר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.14.7 · parser unique · 18 words</h3>
+<div class="meta"><span class="he">וישבו ויבאו אל־עין משפט הוא קדש ויכו את־כל־שדה העמלקי וגם את־האמרי הישב בחצצן תמר</span> · <i>va-yashuvu va-yavou el-en mishpat hiv qadesh va-yaku et-kal-sede ha-amaleqi ve-gam et-ha-emori ha-yoshev be-chatztzon tamar</i> · They turned to En-mishpat and smote Amalekite country and the Amorite. [EN-AID]</div>
+<pre>PHRASE (binary 18w) וַ֠/יָּשֻׁבוּ וַ/יָּבֹ֜אוּ אֶל עֵ֤ין מִשְׁפָּט֙…
+├── PHRASE (binary 12w) וַ֠/יָּשֻׁבוּ וַ/יָּבֹ֜אוּ אֶל עֵ֤ין מִשְׁפָּט֙…
+│   ├── PHRASE (binary 7w) וַ֠/יָּשֻׁבוּ וַ/יָּבֹ֜אוּ אֶל עֵ֤ין מִשְׁפָּט֙…
+│   │   ├── PHRASE (binary 5w) וַ֠/יָּשֻׁבוּ וַ/יָּבֹ֜אוּ אֶל עֵ֤ין מִשְׁפָּט֙
+│   │   │   ├── [0] וַ֠/יָּשֻׁבוּ (telisha gedola, rank=4)
+│   │   │   └── PHRASE (binary 4w) וַ/יָּבֹ֜אוּ אֶל עֵ֤ין מִשְׁפָּט֙
+│   │   │       ├── [1] וַ/יָּבֹ֜אוּ (geresh, rank=4)
+│   │   │       └── [2-4] GLUE אֶל עֵ֤ין מִשְׁפָּט֙ (pashta, rank=3)
+│   │   └── [5-6] GLUE הִ֣וא קָדֵ֔שׁ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) וַ/יַּכּ֕וּ אֶֽת כָּל שְׂדֵ֖ה הָ/עֲמָלֵקִ֑י
+│       ├── [7] וַ/יַּכּ֕וּ (zaqef gadol, rank=2)
+│       └── PHRASE (binary 4w) אֶֽת כָּל שְׂדֵ֖ה הָ/עֲמָלֵקִ֑י
+│           ├── [8-10] GLUE אֶֽת כָּל שְׂדֵ֖ה (tifcha, rank=2)
+│           └── [11] הָ/עֲמָלֵקִ֑י (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) וְ/גַם֙ אֶת הָ֣/אֱמֹרִ֔י הַ/יֹּשֵׁ֖ב בְּ/חַֽצְצ…
+    ├── PHRASE (binary 3w) וְ/גַם֙ אֶת הָ֣/אֱמֹרִ֔י
+    │   ├── [12] וְ/גַם֙ (pashta, rank=3)
+    │   └── [13-14] GLUE אֶת הָ֣/אֱמֹרִ֔י (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) הַ/יֹּשֵׁ֖ב בְּ/חַֽצְצֹ֥ן תָּמָֽר
+        ├── [15] הַ/יֹּשֵׁ֖ב (tifcha, rank=2)
+        └── [16-17] GLUE בְּ/חַֽצְצֹ֥ן תָּמָֽר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.14.8 · parser unique · 19 words</h3>
+<div class="meta"><span class="he">ויצא מלך־סדם ומלך עמרה ומלך אדמה ומלך צביים צבוים ומלך בלע הוא־צער ויערכו אתם מלחמה בעמק השדים</span> · <i>va-yetze melekh-sedom u-melekh amora u-melekh adma u-melekh tzvyym tzevoyim u-melekh bela hiv-tzoar va-yaarkhu et-m milchama be-emeq ha-sidim</i> · The five kings went out and arrayed battle in the vale of Siddim. [EN-AID]</div>
+<pre>PHRASE (binary 19w) וַ/יֵּצֵ֨א מֶֽלֶךְ סְדֹ֜ם וּ/מֶ֣לֶךְ עֲמֹרָ֗ה ו…
+├── PHRASE (binary 14w) וַ/יֵּצֵ֨א מֶֽלֶךְ סְדֹ֜ם וּ/מֶ֣לֶךְ עֲמֹרָ֗ה ו…
+│   ├── PHRASE (binary 10w) וַ/יֵּצֵ֨א מֶֽלֶךְ סְדֹ֜ם וּ/מֶ֣לֶךְ עֲמֹרָ֗ה ו…
+│   │   ├── PHRASE (binary 5w) וַ/יֵּצֵ֨א מֶֽלֶךְ סְדֹ֜ם וּ/מֶ֣לֶךְ עֲמֹרָ֗ה
+│   │   │   ├── [0-2] GLUE וַ/יֵּצֵ֨א מֶֽלֶךְ סְדֹ֜ם (geresh, rank=4)
+│   │   │   └── [3-4] GLUE וּ/מֶ֣לֶךְ עֲמֹרָ֗ה (revia, rank=3)
+│   │   └── PHRASE (binary 5w) וּ/מֶ֤לֶךְ אַדְמָה֙ וּ/מֶ֣לֶךְ צביים צְבוֹיִ֔ם
+│   │       ├── [5-6] GLUE וּ/מֶ֤לֶךְ אַדְמָה֙ (pashta, rank=3)
+│   │       └── [7-9] GLUE וּ/מֶ֣לֶךְ צביים צְבוֹיִ֔ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) וּ/מֶ֥לֶךְ בֶּ֖לַע הִוא צֹ֑עַר
+│       ├── [10-11] GLUE וּ/מֶ֥לֶךְ בֶּ֖לַע (tifcha, rank=2)
+│       └── [12-13] GLUE הִוא צֹ֑עַר (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) וַ/יַּֽעַרְכ֤וּ אִתָּ/ם֙ מִלְחָמָ֔ה בְּ/עֵ֖מֶק …
+    ├── PHRASE (binary 3w) וַ/יַּֽעַרְכ֤וּ אִתָּ/ם֙ מִלְחָמָ֔ה
+    │   ├── [14-15] GLUE וַ/יַּֽעַרְכ֤וּ אִתָּ/ם֙ (pashta, rank=3)
+    │   └── [16] מִלְחָמָ֔ה (zaqef qatan, rank=2)
+    └── PHRASE (binary 2w) בְּ/עֵ֖מֶק הַ/שִּׂדִּֽים
+        ├── [17] בְּ/עֵ֖מֶק (tifcha, rank=2)
+        └── [18] הַ/שִּׂדִּֽים (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.14.9 · parser unique · 17 words</h3>
+<div class="meta"><span class="he">את כדרלעמר מלך עילם ותדעל מלך גוים ואמרפל מלך שנער ואריוך מלך אלסר ארבעה מלכים את־החמשה</span> · <i>et kedarlaomer melekh elam ve-tidal melekh goyim ve-amrafel melekh shinar ve-aryokh melekh elasar arbaa melakhim et-ha-chamisha</i> · Against the four: four kings against the five. [EN-AID]</div>
+<pre>PHRASE (binary 17w) אֵ֣ת כְּדָרְלָעֹ֜מֶר מֶ֣לֶךְ עֵילָ֗ם וְ/תִדְעָל…
+├── PHRASE (binary 13w) אֵ֣ת כְּדָרְלָעֹ֜מֶר מֶ֣לֶךְ עֵילָ֗ם וְ/תִדְעָל…
+│   ├── PHRASE (binary 7w) אֵ֣ת כְּדָרְלָעֹ֜מֶר מֶ֣לֶךְ עֵילָ֗ם וְ/תִדְעָל…
+│   │   ├── PHRASE (binary 4w) אֵ֣ת כְּדָרְלָעֹ֜מֶר מֶ֣לֶךְ עֵילָ֗ם
+│   │   │   ├── [0-1] GLUE אֵ֣ת כְּדָרְלָעֹ֜מֶר (geresh, rank=4)
+│   │   │   └── [2-3] GLUE מֶ֣לֶךְ עֵילָ֗ם (revia, rank=3)
+│   │   └── PHRASE (binary 3w) וְ/תִדְעָל֙ מֶ֣לֶךְ גּוֹיִ֔ם
+│   │       ├── [4] וְ/תִדְעָל֙ (pashta, rank=3)
+│   │       └── [5-6] GLUE מֶ֣לֶךְ גּוֹיִ֔ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 6w) וְ/אַמְרָפֶל֙ מֶ֣לֶךְ שִׁנְעָ֔ר וְ/אַרְי֖וֹךְ מ…
+│       ├── PHRASE (binary 3w) וְ/אַמְרָפֶל֙ מֶ֣לֶךְ שִׁנְעָ֔ר
+│       │   ├── [7] וְ/אַמְרָפֶל֙ (pashta, rank=3)
+│       │   └── [8-9] GLUE מֶ֣לֶךְ שִׁנְעָ֔ר (zaqef qatan, rank=2)
+│       └── PHRASE (binary 3w) וְ/אַרְי֖וֹךְ מֶ֣לֶךְ אֶלָּסָ֑ר
+│           ├── [10] וְ/אַרְי֖וֹךְ (tifcha, rank=2)
+│           └── [11-12] GLUE מֶ֣לֶךְ אֶלָּסָ֑ר (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) אַרְבָּעָ֥ה מְלָכִ֖ים אֶת הַ/חֲמִשָּֽׁה
+    ├── [13-14] GLUE אַרְבָּעָ֥ה מְלָכִ֖ים (tifcha, rank=2)
+    └── [15-16] GLUE אֶת הַ/חֲמִשָּֽׁה (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.14.10 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">ועמק השדים בארת בארת חמר וינסו מלך־סדם ועמרה ויפלו־שמה והנשארים הרה נסו</span> · <i>ve-emeq ha-sidim beerot beerot chemar va-yanusu melekh-sedom va-amora va-yiplu-shama-ה ve-ha-nisharim hera-ה nasu</i> · The vale was tar-pits; the kings fled and fell; the rest fled uphill. [EN-AID]</div>
+<pre>PHRASE (binary 14w) וְ/עֵ֣מֶק הַ/שִׂדִּ֗ים בֶּֽאֱרֹ֤ת בֶּאֱרֹת֙ חֵמ…
+├── PHRASE (binary 11w) וְ/עֵ֣מֶק הַ/שִׂדִּ֗ים בֶּֽאֱרֹ֤ת בֶּאֱרֹת֙ חֵמ…
+│   ├── PHRASE (binary 5w) וְ/עֵ֣מֶק הַ/שִׂדִּ֗ים בֶּֽאֱרֹ֤ת בֶּאֱרֹת֙ חֵמ…
+│   │   ├── [0-1] GLUE וְ/עֵ֣מֶק הַ/שִׂדִּ֗ים (revia, rank=3)
+│   │   └── PHRASE (binary 3w) בֶּֽאֱרֹ֤ת בֶּאֱרֹת֙ חֵמָ֔ר
+│   │       ├── [2-3] GLUE בֶּֽאֱרֹ֤ת בֶּאֱרֹת֙ (pashta, rank=3)
+│   │       └── [4] חֵמָ֔ר (zaqef qatan, rank=2)
+│   └── PHRASE (binary 6w) וַ/יָּנֻ֛סוּ מֶֽלֶךְ סְדֹ֥ם וַ/עֲמֹרָ֖ה וַ/יִּפ…
+│       ├── PHRASE (binary 4w) וַ/יָּנֻ֛סוּ מֶֽלֶךְ סְדֹ֥ם וַ/עֲמֹרָ֖ה
+│       │   ├── [5] וַ/יָּנֻ֛סוּ (tevir, rank=3)
+│       │   └── [6-8] GLUE מֶֽלֶךְ סְדֹ֥ם וַ/עֲמֹרָ֖ה (tifcha, rank=2)
+│       └── [9-10] GLUE וַ/יִּפְּלוּ שָׁ֑מָּ/ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וְ/הַ/נִּשְׁאָרִ֖ים הֶ֥רָ/ה נָּֽסוּ
+    ├── [11] וְ/הַ/נִּשְׁאָרִ֖ים (tifcha, rank=2)
+    └── [12-13] GLUE הֶ֥רָ/ה נָּֽסוּ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.14.11 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">ויקחו את־כל־רכש סדם ועמרה ואת־כל־אכלם וילכו</span> · <i>va-yiqchu et-kal-rekhush sedom va-amora ve-et-kal-akhla-m va-yelekhu</i> · They took all the goods of Sodom and Gomorrah, and all their food, and went. [EN-AID]</div>
+<pre>PHRASE (binary 10w) וַ֠/יִּקְחוּ אֶת כָּל רְכֻ֨שׁ סְדֹ֧ם וַ/עֲמֹרָ֛…
+├── PHRASE (binary 9w) וַ֠/יִּקְחוּ אֶת כָּל רְכֻ֨שׁ סְדֹ֧ם וַ/עֲמֹרָ֛…
+│   ├── PHRASE (binary 6w) וַ֠/יִּקְחוּ אֶת כָּל רְכֻ֨שׁ סְדֹ֧ם וַ/עֲמֹרָ֛ה
+│   │   ├── [0] וַ֠/יִּקְחוּ (telisha gedola, rank=4)
+│   │   └── [1-5] GLUE אֶת כָּל רְכֻ֨שׁ סְדֹ֧ם וַ/עֲמֹרָ֛ה (tevir, rank=3)
+│   └── [6-8] GLUE וְ/אֶת כָּל אָכְלָ֖/ם (tifcha, rank=2)
+└── [9] וַ/יֵּלֵֽכוּ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.14.12 · parser unique · 12 words</h3>
+<div class="meta"><span class="he">ויקחו את־לוט ואת־רכשו בן־אחי אברם וילכו והוא ישב בסדם</span> · <i>va-yiqchu et-lot ve-et-rekhush-o ben-achi avram va-yelekhu ve-hu yoshev bi-sedom</i> · They took Lot, Abram&#x27;s brother&#x27;s son — dwelling in Sodom — and went. [EN-AID]</div>
+<pre>PHRASE (binary 12w) וַ/יִּקְח֨וּ אֶת ל֧וֹט וְ/אֶת רְכֻשׁ֛/וֹ בֶּן א…
+├── PHRASE (binary 9w) וַ/יִּקְח֨וּ אֶת ל֧וֹט וְ/אֶת רְכֻשׁ֛/וֹ בֶּן א…
+│   ├── PHRASE (binary 8w) וַ/יִּקְח֨וּ אֶת ל֧וֹט וְ/אֶת רְכֻשׁ֛/וֹ בֶּן א…
+│   │   ├── [0-4] GLUE וַ/יִּקְח֨וּ אֶת ל֧וֹט וְ/אֶת רְכֻשׁ֛/וֹ (tevir, rank=3)
+│   │   └── [5-7] GLUE בֶּן אֲחִ֥י אַבְרָ֖ם (tifcha, rank=2)
+│   └── [8] וַ/יֵּלֵ֑כוּ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וְ/ה֥וּא יֹשֵׁ֖ב בִּ/סְדֹֽם
+    ├── [9-10] GLUE וְ/ה֥וּא יֹשֵׁ֖ב (tifcha, rank=2)
+    └── [11] בִּ/סְדֹֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.14.13 · parser unique · 18 words</h3>
+<div class="meta"><span class="he">ויבא הפליט ויגד לאברם העברי והוא שכן באלני ממרא האמרי אחי אשכל ואחי ענר והם בעלי ברית־אברם</span> · <i>va-yavo ha-palit va-yaged le-avram ha-ivri ve-hu shokhen be-elone mamre ha-emori achi eshkol va-achi aner ve-hem baale verit-avram</i> · The refugee told Abram the Hebrew, at Mamre of the covenant-masters. [EN-AID]</div>
+<pre>PHRASE (binary 18w) וַ/יָּבֹא֙ הַ/פָּלִ֔יט וַ/יַּגֵּ֖ד לְ/אַבְרָ֣ם …
+├── PHRASE (binary 5w) וַ/יָּבֹא֙ הַ/פָּלִ֔יט וַ/יַּגֵּ֖ד לְ/אַבְרָ֣ם …
+│   ├── PHRASE (binary 2w) וַ/יָּבֹא֙ הַ/פָּלִ֔יט
+│   │   ├── [0] וַ/יָּבֹא֙ (pashta, rank=3)
+│   │   └── [1] הַ/פָּלִ֔יט (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) וַ/יַּגֵּ֖ד לְ/אַבְרָ֣ם הָ/עִבְרִ֑י
+│       ├── [2] וַ/יַּגֵּ֖ד (tifcha, rank=2)
+│       └── [3-4] GLUE לְ/אַבְרָ֣ם הָ/עִבְרִ֑י (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 13w) וְ/הוּא֩ שֹׁכֵ֨ן בְּ/אֵֽלֹנֵ֜י מַמְרֵ֣א הָ/אֱמֹ…
+    ├── PHRASE (binary 9w) וְ/הוּא֩ שֹׁכֵ֨ן בְּ/אֵֽלֹנֵ֜י מַמְרֵ֣א הָ/אֱמֹ…
+    │   ├── PHRASE (binary 5w) וְ/הוּא֩ שֹׁכֵ֨ן בְּ/אֵֽלֹנֵ֜י מַמְרֵ֣א הָ/אֱמֹ…
+    │   │   ├── [5-7] GLUE וְ/הוּא֩ שֹׁכֵ֨ן בְּ/אֵֽלֹנֵ֜י (geresh, rank=4)
+    │   │   └── [8-9] GLUE מַמְרֵ֣א הָ/אֱמֹרִ֗י (revia, rank=3)
+    │   └── PHRASE (binary 4w) אֲחִ֤י אֶשְׁכֹּל֙ וַ/אֲחִ֣י עָנֵ֔ר
+    │       ├── [10-11] GLUE אֲחִ֤י אֶשְׁכֹּל֙ (pashta, rank=3)
+    │       └── [12-13] GLUE וַ/אֲחִ֣י עָנֵ֔ר (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) וְ/הֵ֖ם בַּעֲלֵ֥י בְרִית אַבְרָֽם
+        ├── [14] וְ/הֵ֖ם (tifcha, rank=2)
+        └── [15-17] GLUE בַּעֲלֵ֥י בְרִית אַבְרָֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.14.14 · parser unique · 17 words</h3>
+<div class="meta"><span class="he">וישמע אברם כי נשבה אחיו וירק את־חניכיו ילידי ביתו שמנה עשר ושלש מאות וירדף עד־דן</span> · <i>va-yishma avram ki nishba achi-v va-yareq et-chanikhay-v yelide vet-o shemona asar u-shelosh meot va-yirdof ad-dan</i> · Abram heard, emptied out his 318 trained men, pursued to Dan. [EN-AID]</div>
+<pre>PHRASE (binary 17w) וַ/יִּשְׁמַ֣ע אַבְרָ֔ם כִּ֥י נִשְׁבָּ֖ה אָחִ֑י/…
+├── PHRASE (binary 5w) וַ/יִּשְׁמַ֣ע אַבְרָ֔ם כִּ֥י נִשְׁבָּ֖ה אָחִ֑י/ו
+│   ├── [0-1] GLUE וַ/יִּשְׁמַ֣ע אַבְרָ֔ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) כִּ֥י נִשְׁבָּ֖ה אָחִ֑י/ו
+│       ├── [2-3] GLUE כִּ֥י נִשְׁבָּ֖ה (tifcha, rank=2)
+│       └── [4] אָחִ֑י/ו (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 12w) וַ/יָּ֨רֶק אֶת חֲנִיכָ֜י/ו יְלִידֵ֣י בֵית֗/וֹ ש…
+    ├── PHRASE (binary 9w) וַ/יָּ֨רֶק אֶת חֲנִיכָ֜י/ו יְלִידֵ֣י בֵית֗/וֹ ש…
+    │   ├── PHRASE (binary 5w) וַ/יָּ֨רֶק אֶת חֲנִיכָ֜י/ו יְלִידֵ֣י בֵית֗/וֹ
+    │   │   ├── [5-7] GLUE וַ/יָּ֨רֶק אֶת חֲנִיכָ֜י/ו (geresh, rank=4)
+    │   │   └── [8-9] GLUE יְלִידֵ֣י בֵית֗/וֹ (revia, rank=3)
+    │   └── PHRASE (binary 4w) שְׁמֹנָ֤ה עָשָׂר֙ וּ/שְׁלֹ֣שׁ מֵא֔וֹת
+    │       ├── [10-11] GLUE שְׁמֹנָ֤ה עָשָׂר֙ (pashta, rank=3)
+    │       └── [12-13] GLUE וּ/שְׁלֹ֣שׁ מֵא֔וֹת (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) וַ/יִּרְדֹּ֖ף עַד דָּֽן
+        ├── [14] וַ/יִּרְדֹּ֖ף (tifcha, rank=2)
+        └── [15-16] GLUE עַד דָּֽן (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.14.15 · parser unique · 12 words</h3>
+<div class="meta"><span class="he">ויחלק עליהם לילה הוא ועבדיו ויכם וירדפם עד־חובה אשר משמאל לדמשק</span> · <i>va-yechaleq ale-hem layla hu va-avaday-v va-yake-m va-yirdfe-m ad-chova asher mi-semol le-damaseq</i> · He split by night, struck them, pursued to Chovah, left of Damascus. [EN-AID]</div>
+<pre>PHRASE (binary 12w) וַ/יֵּחָלֵ֨ק עֲלֵי/הֶ֧ם לַ֛יְלָה ה֥וּא וַ/עֲבָד…
+├── PHRASE (binary 6w) וַ/יֵּחָלֵ֨ק עֲלֵי/הֶ֧ם לַ֛יְלָה ה֥וּא וַ/עֲבָד…
+│   ├── PHRASE (binary 5w) וַ/יֵּחָלֵ֨ק עֲלֵי/הֶ֧ם לַ֛יְלָה ה֥וּא וַ/עֲבָד…
+│   │   ├── [0-2] GLUE וַ/יֵּחָלֵ֨ק עֲלֵי/הֶ֧ם לַ֛יְלָה (tevir, rank=3)
+│   │   └── [3-4] GLUE ה֥וּא וַ/עֲבָדָ֖י/ו (tifcha, rank=2)
+│   └── [5] וַ/יַּכֵּ֑/ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) וַֽ/יִּרְדְּפֵ/ם֙ עַד חוֹבָ֔ה אֲשֶׁ֥ר מִ/שְּׂמֹ…
+    ├── PHRASE (binary 3w) וַֽ/יִּרְדְּפֵ/ם֙ עַד חוֹבָ֔ה
+    │   ├── [6] וַֽ/יִּרְדְּפֵ/ם֙ (pashta, rank=3)
+    │   └── [7-8] GLUE עַד חוֹבָ֔ה (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) אֲשֶׁ֥ר מִ/שְּׂמֹ֖אל לְ/דַמָּֽשֶׂק
+        ├── [9-10] GLUE אֲשֶׁ֥ר מִ/שְּׂמֹ֖אל (tifcha, rank=2)
+        └── [11] לְ/דַמָּֽשֶׂק (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.14.16 · parser unique · 15 words</h3>
+<div class="meta"><span class="he">וישב את כל־הרכש וגם את־לוט אחיו ורכשו השיב וגם את־הנשים ואת־העם</span> · <i>va-yashev et kal-ha-rekhush ve-gam et-lot achi-v u-rekhush-o heshiv ve-gam et-ha-nashim ve-et-ha-am</i> · He brought back all the goods, and Lot, and the women, and the people. [EN-AID]</div>
+<pre>PHRASE (binary 15w) וַ/יָּ֕שֶׁב אֵ֖ת כָּל הָ/רְכֻ֑שׁ וְ/גַם֩ אֶת ל֨…
+├── PHRASE (binary 4w) וַ/יָּ֕שֶׁב אֵ֖ת כָּל הָ/רְכֻ֑שׁ
+│   ├── [0] וַ/יָּ֕שֶׁב (zaqef gadol, rank=2)
+│   └── PHRASE (binary 3w) אֵ֖ת כָּל הָ/רְכֻ֑שׁ
+│       ├── [1] אֵ֖ת (tifcha, rank=2)
+│       └── [2-3] GLUE כָּל הָ/רְכֻ֑שׁ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 11w) וְ/גַם֩ אֶת ל֨וֹט אָחִ֤י/ו וּ/רְכֻשׁ/וֹ֙ הֵשִׁ֔…
+    ├── PHRASE (binary 6w) וְ/גַם֩ אֶת ל֨וֹט אָחִ֤י/ו וּ/רְכֻשׁ/וֹ֙ הֵשִׁ֔…
+    │   ├── [4-8] GLUE וְ/גַם֩ אֶת ל֨וֹט אָחִ֤י/ו וּ/רְכֻשׁ/וֹ֙ (pashta, rank=3)
+    │   └── [9] הֵשִׁ֔יב (zaqef qatan, rank=2)
+    └── PHRASE (binary 5w) וְ/גַ֥ם אֶת הַ/נָּשִׁ֖ים וְ/אֶת הָ/עָֽם
+        ├── [10-12] GLUE וְ/גַ֥ם אֶת הַ/נָּשִׁ֖ים (tifcha, rank=2)
+        └── [13-14] GLUE וְ/אֶת הָ/עָֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.14.17 · parser unique · 19 words</h3>
+<div class="meta"><span class="he">ויצא מלך־סדם לקראתו אחרי שובו מהכות את־כדרלעמר ואת־המלכים אשר אתו אל־עמק שוה הוא עמק המלך</span> · <i>va-yetze melekh-sedom li-qerat-o achare shuv-o me-hakot et-kedarlaomer ve-et-ha-melakhim asher et-o el-emeq shave hu emeq ha-melekh</i> · The king of Sodom came out to meet him at the King&#x27;s Vale. [EN-AID]</div>
+<pre>PHRASE (binary 19w) וַ/יֵּצֵ֣א מֶֽלֶךְ סְדֹם֮ לִ/קְרָאת/וֹ֒ אַחֲרֵ֣…
+├── PHRASE (binary 13w) וַ/יֵּצֵ֣א מֶֽלֶךְ סְדֹם֮ לִ/קְרָאת/וֹ֒ אַחֲרֵ֣…
+│   ├── PHRASE (binary 4w) וַ/יֵּצֵ֣א מֶֽלֶךְ סְדֹם֮ לִ/קְרָאת/וֹ֒
+│   │   ├── [0-2] GLUE וַ/יֵּצֵ֣א מֶֽלֶךְ סְדֹם֮ (zinor (poetic cousin; rare in prose), rank=3)
+│   │   └── [3] לִ/קְרָאת/וֹ֒ (segol, rank=2)
+│   └── PHRASE (binary 9w) אַחֲרֵ֣י שׁוּב֗/וֹ מֵֽ/הַכּוֹת֙ אֶת כְּדָרלָעֹ֔…
+│       ├── PHRASE (binary 5w) אַחֲרֵ֣י שׁוּב֗/וֹ מֵֽ/הַכּוֹת֙ אֶת כְּדָרלָעֹ֔…
+│       │   ├── [4-5] GLUE אַחֲרֵ֣י שׁוּב֗/וֹ (revia, rank=3)
+│       │   └── PHRASE (binary 3w) מֵֽ/הַכּוֹת֙ אֶת כְּדָרלָעֹ֔מֶר
+│       │       ├── [6] מֵֽ/הַכּוֹת֙ (pashta, rank=3)
+│       │       └── [7-8] GLUE אֶת כְּדָרלָעֹ֔מֶר (zaqef qatan, rank=2)
+│       └── PHRASE (binary 4w) וְ/אֶת הַ/מְּלָכִ֖ים אֲשֶׁ֣ר אִתּ֑/וֹ
+│           ├── [9-10] GLUE וְ/אֶת הַ/מְּלָכִ֖ים (tifcha, rank=2)
+│           └── [11-12] GLUE אֲשֶׁ֣ר אִתּ֑/וֹ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) אֶל עֵ֣מֶק שָׁוֵ֔ה ה֖וּא עֵ֥מֶק הַ/מֶּֽלֶךְ
+    ├── [13-15] GLUE אֶל עֵ֣מֶק שָׁוֵ֔ה (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) ה֖וּא עֵ֥מֶק הַ/מֶּֽלֶךְ
+        ├── [16] ה֖וּא (tifcha, rank=2)
+        └── [17-18] GLUE עֵ֥מֶק הַ/מֶּֽלֶךְ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.14.18 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">ומלכי־צדק מלך שלם הוציא לחם ויין והוא כהן לאל עליון</span> · <i>u-malki-tzedeq melekh shalem hotzi lechem va-yayin ve-hu khohen le-el elyon</i> · Malki-Tzedek king of Salem brought bread and wine — priest of El Elyon. [EN-AID]</div>
+<pre>PHRASE (binary 11w) וּ/מַלְכִּי צֶ֨דֶק֙ מֶ֣לֶךְ שָׁלֵ֔ם הוֹצִ֖יא לֶ…
+├── PHRASE (binary 7w) וּ/מַלְכִּי צֶ֨דֶק֙ מֶ֣לֶךְ שָׁלֵ֔ם הוֹצִ֖יא לֶ…
+│   ├── PHRASE (binary 4w) וּ/מַלְכִּי צֶ֨דֶק֙ מֶ֣לֶךְ שָׁלֵ֔ם
+│   │   ├── [0-1] GLUE וּ/מַלְכִּי צֶ֨דֶק֙ (pashta, rank=3)
+│   │   └── [2-3] GLUE מֶ֣לֶךְ שָׁלֵ֔ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) הוֹצִ֖יא לֶ֣חֶם וָ/יָ֑יִן
+│       ├── [4] הוֹצִ֖יא (tifcha, rank=2)
+│       └── [5-6] GLUE לֶ֣חֶם וָ/יָ֑יִן (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וְ/ה֥וּא כֹהֵ֖ן לְ/אֵ֥ל עֶלְיֽוֹן
+    ├── [7-8] GLUE וְ/ה֥וּא כֹהֵ֖ן (tifcha, rank=2)
+    └── [9-10] GLUE לְ/אֵ֥ל עֶלְיֽוֹן (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.14.19 · parser unique · 9 words</h3>
+<div class="meta"><span class="he">ויברכהו ויאמר ברוך אברם לאל עליון קנה שמים וארץ</span> · <i>va-yevarkhe-hu va-yomar barukh avram le-el elyon qone shamayim va-aretz</i> · He blessed him: blessed be Abram of El Elyon, owner of heaven and earth. [EN-AID]</div>
+<pre>PHRASE (binary 9w) וַֽ/יְבָרְכֵ֖/הוּ וַ/יֹּאמַ֑ר בָּר֤וּךְ אַבְרָם…
+├── PHRASE (binary 2w) וַֽ/יְבָרְכֵ֖/הוּ וַ/יֹּאמַ֑ר
+│   ├── [0] וַֽ/יְבָרְכֵ֖/הוּ (tifcha, rank=2)
+│   └── [1] וַ/יֹּאמַ֑ר (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) בָּר֤וּךְ אַבְרָם֙ לְ/אֵ֣ל עֶלְי֔וֹן קֹנֵ֖ה שָׁ…
+    ├── PHRASE (binary 4w) בָּר֤וּךְ אַבְרָם֙ לְ/אֵ֣ל עֶלְי֔וֹן
+    │   ├── [2-3] GLUE בָּר֤וּךְ אַבְרָם֙ (pashta, rank=3)
+    │   └── [4-5] GLUE לְ/אֵ֣ל עֶלְי֔וֹן (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) קֹנֵ֖ה שָׁמַ֥יִם וָ/אָֽרֶץ
+        ├── [6] קֹנֵ֖ה (tifcha, rank=2)
+        └── [7-8] GLUE שָׁמַ֥יִם וָ/אָֽרֶץ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.14.20 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">וברוך אל עליון אשר־מגן צריך בידך ויתן־לו מעשר מכל</span> · <i>u-varukh el elyon asher-migen tzare-kha be-yade-kha va-yiten-l-o maaser mi-kol</i> · And blessed be El Elyon who delivered your foes; he gave him a tenth. [EN-AID]</div>
+<pre>PHRASE (binary 11w) וּ/בָרוּךְ֙ אֵ֣ל עֶלְי֔וֹן אֲשֶׁר מִגֵּ֥ן צָרֶ֖…
+├── PHRASE (binary 7w) וּ/בָרוּךְ֙ אֵ֣ל עֶלְי֔וֹן אֲשֶׁר מִגֵּ֥ן צָרֶ֖…
+│   ├── PHRASE (binary 3w) וּ/בָרוּךְ֙ אֵ֣ל עֶלְי֔וֹן
+│   │   ├── [0] וּ/בָרוּךְ֙ (pashta, rank=3)
+│   │   └── [1-2] GLUE אֵ֣ל עֶלְי֔וֹן (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) אֲשֶׁר מִגֵּ֥ן צָרֶ֖י/ךָ בְּ/יָדֶ֑/ךָ
+│       ├── [3-5] GLUE אֲשֶׁר מִגֵּ֥ן צָרֶ֖י/ךָ (tifcha, rank=2)
+│       └── [6] בְּ/יָדֶ֑/ךָ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וַ/יִּתֶּן ל֥/וֹ מַעֲשֵׂ֖ר מִ/כֹּֽל
+    ├── [7-9] GLUE וַ/יִּתֶּן ל֥/וֹ מַעֲשֵׂ֖ר (tifcha, rank=2)
+    └── [10] מִ/כֹּֽל (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.14.21 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">ויאמר מלך־סדם אל־אברם תן־לי הנפש והרכש קח־לך</span> · <i>va-yomer melekh-sedom el-avram ten-li-y ha-nefesh ve-ha-rekhush qach-la-khe</i> · The king of Sodom: give me the persons; the goods, take for yourself. [EN-AID]</div>
+<pre>PHRASE (binary 11w) וַ/יֹּ֥אמֶר מֶֽלֶךְ סְדֹ֖ם אֶל אַבְרָ֑ם תֶּן לִ…
+├── PHRASE (binary 5w) וַ/יֹּ֥אמֶר מֶֽלֶךְ סְדֹ֖ם אֶל אַבְרָ֑ם
+│   ├── [0-2] GLUE וַ/יֹּ֥אמֶר מֶֽלֶךְ סְדֹ֖ם (tifcha, rank=2)
+│   └── [3-4] GLUE אֶל אַבְרָ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) תֶּן לִ֣/י הַ/נֶּ֔פֶשׁ וְ/הָ/רְכֻ֖שׁ קַֽח לָֽ/ךְ
+    ├── [5-7] GLUE תֶּן לִ֣/י הַ/נֶּ֔פֶשׁ (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) וְ/הָ/רְכֻ֖שׁ קַֽח לָֽ/ךְ
+        ├── [8] וְ/הָ/רְכֻ֖שׁ (tifcha, rank=2)
+        └── [9-10] GLUE קַֽח לָֽ/ךְ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.14.22 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">ויאמר אברם אל־מלך סדם הרימתי ידי אל־יהוה אל עליון קנה שמים וארץ</span> · <i>va-yomer avram el-melekh sedom harimoti yadi-y el-YHWH el elyon qone shamayim va-aretz</i> · Abram: I have raised my hand to YHWH, El Elyon, owner of heaven and earth. [EN-AID]</div>
+<pre>PHRASE (binary 14w) וַ/יֹּ֥אמֶר אַבְרָ֖ם אֶל מֶ֣לֶךְ סְדֹ֑ם הֲרִימֹ…
+├── PHRASE (binary 5w) וַ/יֹּ֥אמֶר אַבְרָ֖ם אֶל מֶ֣לֶךְ סְדֹ֑ם
+│   ├── [0-1] GLUE וַ/יֹּ֥אמֶר אַבְרָ֖ם (tifcha, rank=2)
+│   └── [2-4] GLUE אֶל מֶ֣לֶךְ סְדֹ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 9w) הֲרִימֹ֨תִי יָדִ֤/י אֶל יְהוָה֙ אֵ֣ל עֶלְי֔וֹן …
+    ├── PHRASE (binary 6w) הֲרִימֹ֨תִי יָדִ֤/י אֶל יְהוָה֙ אֵ֣ל עֶלְי֔וֹן
+    │   ├── [5-8] GLUE הֲרִימֹ֨תִי יָדִ֤/י אֶל יְהוָה֙ (pashta, rank=3)
+    │   └── [9-10] GLUE אֵ֣ל עֶלְי֔וֹן (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) קֹנֵ֖ה שָׁמַ֥יִם וָ/אָֽרֶץ
+        ├── [11] קֹנֵ֖ה (tifcha, rank=2)
+        └── [12-13] GLUE שָׁמַ֥יִם וָ/אָֽרֶץ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.14.23 · parser unique · 16 words</h3>
+<div class="meta"><span class="he">אם־מחוט ועד שרוך־נעל ואם־אקח מכל־אשר־לך ולא תאמר אני העשרתי את־אברם</span> · <i>im-mi-chut ve-ad serokh-naal ve-im-eqach mi-kal-asher-la-khe ve-lo tomar ani heesharti et-avram</i> · Not a thread nor a sandal-thong — lest you say: I enriched Abram. [EN-AID]</div>
+<pre>PHRASE (binary 16w) אִם מִ/חוּט֙ וְ/עַ֣ד שְׂרֽוֹךְ נַ֔עַל וְ/אִם אֶ…
+├── PHRASE (binary 10w) אִם מִ/חוּט֙ וְ/עַ֣ד שְׂרֽוֹךְ נַ֔עַל וְ/אִם אֶ…
+│   ├── PHRASE (binary 5w) אִם מִ/חוּט֙ וְ/עַ֣ד שְׂרֽוֹךְ נַ֔עַל
+│   │   ├── [0-1] GLUE אִם מִ/חוּט֙ (pashta, rank=3)
+│   │   └── [2-4] GLUE וְ/עַ֣ד שְׂרֽוֹךְ נַ֔עַל (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) וְ/אִם אֶקַּ֖ח מִ/כָּל אֲשֶׁר לָ֑/ךְ
+│       ├── [5-6] GLUE וְ/אִם אֶקַּ֖ח (tifcha, rank=2)
+│       └── [7-9] GLUE מִ/כָּל אֲשֶׁר לָ֑/ךְ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) וְ/לֹ֣א תֹאמַ֔ר אֲנִ֖י הֶעֱשַׁ֥רְתִּי אֶת אַבְר…
+    ├── [10-11] GLUE וְ/לֹ֣א תֹאמַ֔ר (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) אֲנִ֖י הֶעֱשַׁ֥רְתִּי אֶת אַבְרָֽם
+        ├── [12] אֲנִ֖י (tifcha, rank=2)
+        └── [13-15] GLUE הֶעֱשַׁ֥רְתִּי אֶת אַבְרָֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.14.24 · parser unique · 16 words</h3>
+<div class="meta"><span class="he">בלעדי רק אשר אכלו הנערים וחלק האנשים אשר הלכו אתי ענר אשכל וממרא הם יקחו חלקם</span> · <i>bilada-y raq asher akhlu ha-nearim ve-cheleq ha-anashim asher halkhu et-y aner eshkol u-mamre hem yiqchu chelqa-m</i> · Only what the young men ate — and let the allies take their portion. [EN-AID]</div>
+<pre>PHRASE (binary 16w) בִּלְעָדַ֗/י רַ֚ק אֲשֶׁ֣ר אָֽכְל֣וּ הַ/נְּעָרִ֔…
+├── PHRASE (binary 10w) בִּלְעָדַ֗/י רַ֚ק אֲשֶׁ֣ר אָֽכְל֣וּ הַ/נְּעָרִ֔…
+│   ├── PHRASE (binary 5w) בִּלְעָדַ֗/י רַ֚ק אֲשֶׁ֣ר אָֽכְל֣וּ הַ/נְּעָרִ֔…
+│   │   ├── [0] בִּלְעָדַ֗/י (revia, rank=3)
+│   │   └── PHRASE (binary 4w) רַ֚ק אֲשֶׁ֣ר אָֽכְל֣וּ הַ/נְּעָרִ֔ים
+│   │       ├── [1] רַ֚ק (yetiv, rank=3)
+│   │       └── [2-4] GLUE אֲשֶׁ֣ר אָֽכְל֣וּ הַ/נְּעָרִ֔ים (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) וְ/חֵ֨לֶק֙ הָֽ/אֲנָשִׁ֔ים אֲשֶׁ֥ר הָלְכ֖וּ אִתּ…
+│       ├── PHRASE (binary 2w) וְ/חֵ֨לֶק֙ הָֽ/אֲנָשִׁ֔ים
+│       │   ├── [5] וְ/חֵ֨לֶק֙ (pashta, rank=3)
+│       │   └── [6] הָֽ/אֲנָשִׁ֔ים (zaqef qatan, rank=2)
+│       └── PHRASE (binary 3w) אֲשֶׁ֥ר הָלְכ֖וּ אִתִּ֑/י
+│           ├── [7-8] GLUE אֲשֶׁ֥ר הָלְכ֖וּ (tifcha, rank=2)
+│           └── [9] אִתִּ֑/י (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) עָנֵר֙ אֶשְׁכֹּ֣ל וּ/מַמְרֵ֔א הֵ֖ם יִקְח֥וּ חֶל…
+    ├── PHRASE (binary 3w) עָנֵר֙ אֶשְׁכֹּ֣ל וּ/מַמְרֵ֔א
+    │   ├── [10] עָנֵר֙ (pashta, rank=3)
+    │   └── [11-12] GLUE אֶשְׁכֹּ֣ל וּ/מַמְרֵ֔א (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) הֵ֖ם יִקְח֥וּ חֶלְקָֽ/ם
+        ├── [13] הֵ֖ם (tifcha, rank=2)
+        └── [14-15] GLUE יִקְח֥וּ חֶלְקָֽ/ם (silluq (verse-end emperor), rank=1)
+</pre>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_30_war_of_kings — The war of the kings: the annal, the rescue, the priest, the refused spoils (14:1-24) [frozen]
+
+final state: WORLD=[] (+23 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[&#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;]
+
+=== S1 — The coalition musters: after STEP_Gn_14_1_3
+    כָּל־אֵלֶּה חָבְרוּ אֶל־עֵמֶק הַשִּׂדִּים (kol-eleh chavru el-emeq ha-sidim)
+    PASS  Facts chavru HOLD  (1 facts)
+    PASS  Facts yam-ha-melach HOLD  (1 facts)
+    PASS  flags shinar/elasar/elam/sedom/amora/admah/tzevoyim/tzoar/emeq_ha_sidim/yam_ha_melach as read-before-install  (flagged=[&#x27;admah&#x27;, &#x27;amora&#x27;, &#x27;elam&#x27;, &#x27;elasar&#x27;, &#x27;emeq_ha_sidim&#x27;, &#x27;sedom&#x27;, &#x27;shinar&#x27;, &#x27;tzevoyim&#x27;, &#x27;tzoar&#x27;, &#x27;yam_ha_melach&#x27;])
+    PASS  SPECS empty.  (queue=0)
+
+=== S2 — The clock and the sweep: after STEP_Gn_14_4_7
+    שְׁתֵּים עֶשְׂרֵה שָׁנָה עָבְדוּ … וּשְׁלֹשׁ־עֶשְׂרֵה שָׁנָה מָרָדוּ (shtem esreh shanah avdu … u-shelosh-esreh shanah maradu)
+    PASS  Facts avdu-maradu HOLD  (2 facts)
+    PASS  flags ashterot_qarnayim/ham/shaveh_qiryatayim/har_seir/el_paran/en_mishpat_qadesh/chatzetzon_tamar as read-before-install  (flagged=[&#x27;admah&#x27;, &#x27;amora&#x27;, &#x27;ashterot_qarnayim&#x27;, &#x27;chatzetzon_tamar&#x27;, &#x27;el_paran&#x27;, &#x27;elam&#x27;, &#x27;elasar&#x27;, &#x27;emeq_ha_sidim&#x27;, &#x27;en_mishpat_qadesh&#x27;, &#x27;ham&#x27;, &#x27;har_seir&#x27;, &#x27;sedom&#x27;, &#x27;shaveh_qiryatayim&#x27;, &#x27;shinar&#x27;, &#x27;tzevoyim&#x27;, &#x27;tzoar&#x27;, &#x27;yam_ha_melach&#x27;])
+    PASS  SPECS empty.  (queue=0)
+
+=== S3 — The battle, the pits, the plunder: after STEP_Gn_14_8_11
+    אַרְבָּעָה מְלָכִים אֶת־הַחֲמִשָּׁה (arbaah melakhim et-ha-chamishah)
+    PASS  Facts arbaah-melakhim HOLD  (4 facts)
+    PASS  Facts beerot-chemar HOLD  (4 facts)
+    PASS  SPECS empty.  (queue=0)
+
+=== S4 — Lot taken with the goods: after STEP_Gn_14_12
+    וְהוּא יֹשֵׁב בִּסְדֹם (ve-hu yoshev bi-sedom)
+    PASS  Facts yoshev-bi-sedom HOLD  (5 facts)
+    PASS  SPECS empty.  (queue=0)
+
+=== S5 — The Hebrew and the covenant-masters: after STEP_Gn_14_13
+    וְהֵם בַּעֲלֵי בְרִית־אַבְרָם (ve-hem baalei verit-avram)
+    PASS  Facts baalei-verit HOLD  (6 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — Everything back before anyone asks: after STEP_Gn_14_16
+    וַיָּשֶׁב אֵת כָּל־הָרְכֻשׁ … הֵשִׁיב (va-yashev et kol-ha-rekhush … heshiv)
+    PASS  Facts shmonah-asar HOLD  (7 facts)
+    PASS  SPECS empty.  (queue=0)
+
+=== S7 — The priest of El Elyon: after STEP_Gn_14_18
+    וְהוּא כֹהֵן לְאֵל עֶלְיוֹן (ve-hu khohen le-el elyon)
+    PASS  Facts khohen-elyon HOLD  (8 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S8 — Two blessings and a hidden-handed tenth: after STEP_Gn_14_20
+    בָּרוּךְ אַבְרָם לְאֵל עֶלְיוֹן (barukh avram le-el elyon)
+    PASS  Facts barukh-avram HOLD  (10 facts)
+    PASS  Facts miggen-tzarekha HOLD  (10 facts)
+    PASS  SPECS empty.  (queue=0)
+
+=== S9 — The king&#x27;s pair pushed: after STEP_Gn_14_21
+    תֶּן־לִי הַנֶּפֶשׁ וְהָרְכֻשׁ קַח־לָךְ (ten-li ha-nefesh ve-ha-rekhush qach-lakh)
+    PASS  LET(ten(avram, ha_nefesh)) pushed and OPEN  (queue=[&#x27;ten(avram, ha_nefesh)&#x27;, &#x27;qach(avram, ha_rekhush)&#x27;])
+    PASS  LET(qach(avram, ha_rekhush)) pushed and OPEN.  (queue=[&#x27;ten(avram, ha_nefesh)&#x27;, &#x27;qach(avram, ha_rekhush)&#x27;])
+
+=== S10 — Refused aloud, open on the books: after STEP_Gn_14_24
+    הֲרִימֹתִי יָדִי אֶל־יְהוָה … הֵם יִקְחוּ חֶלְקָם (harimoti yadi el-YHWH … hem yiqchu chelqam)
+    PASS  LET(ten(avram, ha_nefesh)) pushed and OPEN  (queue=[&#x27;ten(avram, ha_nefesh)&#x27;, &#x27;qach(avram, ha_rekhush)&#x27;, &#x27;yiqchu(aner_eshkol_mamre, chelqam)&#x27;])
+    PASS  LET(qach(avram, ha_rekhush)) pushed and OPEN  (queue=[&#x27;ten(avram, ha_nefesh)&#x27;, &#x27;qach(avram, ha_rekhush)&#x27;, &#x27;yiqchu(aner_eshkol_mamre, chelqam)&#x27;])
+    PASS  LET(yiqchu(aner_eshkol_mamre, chelqam)) pushed and OPEN  (queue=[&#x27;ten(avram, ha_nefesh)&#x27;, &#x27;qach(avram, ha_rekhush)&#x27;, &#x27;yiqchu(aner_eshkol_mamre, chelqam)&#x27;])
+    PASS  Facts harimoti-yadi HOLD  (14 facts)
+    PASS  Facts im-mi-chut HOLD  (14 facts)
+    PASS  no test, no name  (tests=0 names=0)
+    PASS  LEDGER stays EMPTY (open transaction).  (ledger_days=[])
+
+=== S11_negative — Negative: the LET? contract guard
+    קַח־לָךְ (qach-lakh)
+    PASS  imperfect-in-command parsed as LET? (question mark kept)  (mood=LET?)
+    PASS  auto-upgrade REFUSED  (TIR-028: LET? never auto-upgrades to LET — a per-unit judgme...)
+    PASS  upgrade WITH citation allowed  (cite=per-unit judgment (owner), TIR-028 resolution)
+
+=== S12_negative — Negative: flags never block
+    PASS  commit proceeded (not blocked)  (LEDGER=[99])
+    PASS  pattern deviation FLAGGED  (flags=[&#x27;commit_without_test&#x27;])
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_30_war_of_kings.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_30_war_of_kings — 14:1-24
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_30_war_of_kings.yaml) is CANONICAL (Pre-Code);
+# this file is a derived, runnable rendering. Do not edit — regenerate. The
+# assertion block at the bottom is baked from the Stage D interpreter&#x27;s
+# actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;The war of the kings: the annal, the rescue, the priest, the refused spoils (14:1-24)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_30_war_of_kings&quot;)
+
+# -------------------------- Gen.14.1 · THE_COALITION_AND_THE_VALE ----------
+# וַיְהִי בִּימֵי אַמְרָפֶל מֶלֶךְ־שִׁנְעָר אַרְיוֹךְ מֶלֶךְ אֶלָּסָר
+# כְּדָרְלָעֹמֶר מֶלֶךְ עֵילָם וְתִדְעָל מֶלֶךְ גּוֹיִם … כָּל־אֵלֶּה
+# חָבְרוּ אֶל־עֵמֶק הַשִּׂדִּים הוּא יָם הַמֶּלַח
+# &quot;[EN-AID/JPS 14:1-3] And it came to pass in the days of Amraphel king of
+# Shinar, Arioch king of Ellasar, Chedorlaomer king of Elam, and Tidal king
+# of Goiim, that they made war with Bera king of Sodom, and with Birsha king
+# of Gomorrah, Shinab king of Admah, and Shemeber king of Zeboiim, and the
+# king of Bela — the same is Zoar. All these came as allies unto the vale of
+# Siddim — the same is the Salt Sea.&quot;
+m.step(&quot;Gen.14.1&quot;)
+# ‹עָשׂוּ מִלְחָמָה אֶת־בֶּרַע מֶלֶךְ סְדֹם› (“Esau battle obj-marker in-bad
+# king Sodom”) — event: make-war — agent arbaat-the-king
+m.event(&quot;make_war&quot;, agent=&quot;arbaat_ha_melakhim&quot;)
+# ‹כָּל־אֵלֶּה חָבְרוּ אֶל־עֵמֶק הַשִּׂדִּים הוּא יָם הַמֶּלַח› (“all these
+# join to deep the-Siddim he/it seas the-powder”) — fact holds: all-these-
+# chavru-to-vale-the-Siddim-he/it-yam-the-melach
+m.fact(&quot;kol_eleh_chavru_el_emeq_ha_sidim_hu_yam_ha_melach&quot;)
+# reads without prior install (flag, not fix): Shinar, Ellasar, Elam, Sodom,
+# Gomorrah, admah, Zeboiim, Zoar, vale-the-Siddim, yam-the-melach
+m.presupposed(&quot;shinar&quot;, &quot;elasar&quot;, &quot;elam&quot;, &quot;sedom&quot;, &quot;amora&quot;, &quot;admah&quot;, &quot;tzevoyim&quot;, &quot;tzoar&quot;, &quot;emeq_ha_sidim&quot;, &quot;yam_ha_melach&quot;)
+
+# -------------------------- Gen.14.4 · THE_CLOCK_AND_THE_SWEEP -------------
+# שְׁתֵּים עֶשְׂרֵה שָׁנָה עָבְדוּ אֶת־כְּדָרְלָעֹמֶר וּשְׁלֹשׁ־עֶשְׂרֵה
+# שָׁנָה מָרָדוּ … וַיַּכּוּ אֶת־כָּל־שְׂדֵה הָעֲמָלֵקִי וְגַם אֶת־הָאֱמֹרִי
+# הַיֹּשֵׁב בְּחַצְצֹן תָּמָר
+# &quot;[EN-AID/JPS 14:4-7] Twelve years they served Chedorlaomer, and in the
+# thirteenth year they rebelled. And in the fourteenth year came
+# Chedorlaomer and the kings that were with him, and smote the Rephaim in
+# Ashteroth-karnaim, and the Zuzim in Ham, and the Emim in Shaveh-
+# kiriathaim, and the Horites in their mount Seir, unto El-paran, which is
+# by the wilderness. And they turned back, and came to En-mishpat — the same
+# is Kadesh — and smote all the country of the Amalekites, and also the
+# Amorites, that dwelt in Hazazon-tamar.&quot;
+m.step(&quot;Gen.14.4&quot;)
+# ‹שְׁתֵּים עֶשְׂרֵה שָׁנָה עָבְדוּ … וּשְׁלֹשׁ־עֶשְׂרֵה שָׁנָה מָרָדוּ›
+# (“two -teen years work/serve … and-three -teen years rebel”) — fact holds:
+# shtem--teen-year-work/serve-obj-marker-Chedorlaomer-and-three--teen-rebel
+m.fact(&quot;shtem_esreh_shanah_avdu_et_kedarlaomer_u_shelosh_esreh_maradu&quot;)
+# ‹וַיַּכּוּ אֶת־רְפָאִים … וְאֶת־הַזּוּזִים … וְאֵת הָאֵימִים …
+# וְאֶת־הַחֹרִי … אֶת־כָּל־שְׂדֵה הָעֲמָלֵקִי וְגַם אֶת־הָאֱמֹרִי› (“and-
+# strike obj-marker Rapha&#x27; … and-obj-marker the-Zuzites … and-obj-marker
+# the-Emims … and-obj-marker the-Chorite … obj-marker all field the-
+# Amalekite and-also obj-marker the-Emorite”) — event: strike — agent
+# Chedorlaomer-and-the-king; theme refaim-zuzim-emim-chori-amaleqi-Emorite
+m.event(&quot;strike&quot;, agent=&quot;kedarlaomer_ve_ha_melakhim&quot;, themes=[&quot;refaim_zuzim_emim_chori_amaleqi_emori&quot;])
+# reads without prior install (flag, not fix): ashterot-qarnayim, ham,
+# shaveh-qiryatayim, har-seir, to-paran, en-mishpat-qadesh, chatzetzon-tamar
+m.presupposed(&quot;ashterot_qarnayim&quot;, &quot;ham&quot;, &quot;shaveh_qiryatayim&quot;, &quot;har_seir&quot;, &quot;el_paran&quot;, &quot;en_mishpat_qadesh&quot;, &quot;chatzetzon_tamar&quot;)
+
+# -------------------------- Gen.14.8 · THE_BATTLE_THE_PITS_THE_PLUNDER -----
+# וַיֵּצֵא מֶלֶךְ־סְדֹם … וַיַּעַרְכוּ אִתָּם מִלְחָמָה בְּעֵמֶק הַשִּׂדִּים
+# … אַרְבָּעָה מְלָכִים אֶת־הַחֲמִשָּׁה … וַיִּקְחוּ אֶת־כָּל־רְכֻשׁ סְדֹם
+# וַעֲמֹרָה וְאֶת־כָּל־אָכְלָם וַיֵּלֵכוּ
+# &quot;[EN-AID/JPS 14:8-11] And there went out the king of Sodom... and they set
+# the battle in array against them in the vale of Siddim; against
+# Chedorlaomer... four kings against the five. Now the vale of Siddim was
+# full of slime pits; and the kings of Sodom and Gomorrah fled, and they
+# fell there, and they that remained fled to the mountain. And they took all
+# the goods of Sodom and Gomorrah, and all their victuals, and went their
+# way.&quot;
+m.step(&quot;Gen.14.8&quot;)
+# ‹וַיַּעַרְכוּ אִתָּם מִלְחָמָה› (“and-set-in-a-row with-them/their
+# battle”) — event: array-battle — agent chameshet-the-king
+m.event(&quot;array_battle&quot;, agent=&quot;chameshet_ha_melakhim&quot;)
+# ‹אַרְבָּעָה מְלָכִים אֶת־הַחֲמִשָּׁה … וְעֵמֶק הַשִׂדִּים בֶּאֱרֹת
+# בֶּאֱרֹת חֵמָר› (“four king obj-marker the-five … and-vale the-Siddim pit
+# pit male-ass”) — fact holds: four-king-obj-marker-the-chamishah; vale-the-
+# Siddim-beerot-beerot-chemar
+m.fact(&quot;arbaah_melakhim_et_ha_chamishah&quot;,
+       &quot;emeq_ha_sidim_beerot_beerot_chemar&quot;)
+# ‹וַיָּנֻסוּ מֶלֶךְ־סְדֹם וַעֲמֹרָה וַיִּפְּלוּ־שָׁמָּה› (“and-flit king
+# Sodom and-Gomorrah and-fall there-ward”) — event: flee — agent king-Sodom-
+# and-amorah
+m.event(&quot;flee&quot;, agent=&quot;melekh_sedom_va_amorah&quot;)
+# ‹וַיִּקְחוּ אֶת־כָּל־רְכֻשׁ סְדֹם וַעֲמֹרָה וְאֶת־כָּל־אָכְלָם וַיֵּלֵכוּ›
+# (“and-take obj-marker all lay-up Sodom and-Gomorrah and-obj-marker all
+# food-them/their and-go”) — event: take — agent arbaat-the-king; theme all-
+# property-Sodom-and-amorah
+m.event(&quot;take&quot;, agent=&quot;arbaat_ha_melakhim&quot;, themes=[&quot;kol_rekhush_sedom_va_amorah&quot;])
+# reads without prior install (flag, not fix): Gentile-land
+m.presupposed(&quot;goyim_land&quot;)
+
+# -------------------------- Gen.14.12 · THE_TAKING_OF_LOT ------------------
+# וַיִּקְחוּ אֶת־לוֹט וְאֶת־רְכֻשׁוֹ בֶּן־אֲחִי אַבְרָם וַיֵּלֵכוּ וְהוּא
+# יֹשֵׁב בִּסְדֹם
+# &quot;And they took Lot, Abram&#x27;s brother&#x27;s son, who dwelt in Sodom, and his
+# goods, and departed.&quot;
+m.step(&quot;Gen.14.12&quot;)
+# ‹וַיִּקְחוּ אֶת־לוֹט וְאֶת־רְכֻשׁוֹ› (“and-take obj-marker Lot and-obj-
+# marker property-him/its”) — event: take — agent arbaat-the-king; theme Lot
+m.event(&quot;take&quot;, agent=&quot;arbaat_ha_melakhim&quot;, themes=[&quot;lot&quot;])
+# ‹וְהוּא יֹשֵׁב בִּסְדֹם› (“and-he/it dwell/sit in-Sodom”) — fact holds:
+# and-he/it-dwell/sit-bi-Sodom
+m.fact(&quot;ve_hu_yoshev_bi_sedom&quot;)
+
+# -------------------------- Gen.14.13 · THE_REFUGEE_AND_THE_HEBREW ---------
+# וַיָּבֹא הַפָּלִיט וַיַּגֵּד לְאַבְרָם הָעִבְרִי וְהוּא שֹׁכֵן בְּאֵלֹנֵי
+# מַמְרֵא הָאֱמֹרִי אֲחִי אֶשְׁכֹּל וַאֲחִי עָנֵר וְהֵם בַּעֲלֵי
+# בְרִית־אַבְרָם
+# &quot;And there came one that had escaped, and told Abram the Hebrew — now he
+# dwelt by the terebinths of Mamre the Amorite, brother of Eshcol, and
+# brother of Aner; and these were confederate with Abram.&quot;
+m.step(&quot;Gen.14.13&quot;)
+# ‹וַיָּבֹא הַפָּלִיט› (“and-come/bring the-refugee”) — event: come — agent
+# the-refugee
+m.event(&quot;come&quot;, agent=&quot;ha_palit&quot;)
+# ‹וַיַּגֵּד לְאַבְרָם הָעִבְרִי› (“and-tell to-Abram the-Hebrew”) — event:
+# tell — agent the-refugee
+m.event(&quot;tell&quot;, agent=&quot;ha_palit&quot;)
+# ‹וְהֵם בַּעֲלֵי בְרִית־אַבְרָם› (“and-they master covenant Abram”) — fact
+# holds: and-they-baalei-covenant-Abram
+m.fact(&quot;ve_hem_baalei_verit_avram&quot;)
+
+# -------------------------- Gen.14.14 · THE_MUSTER_OF_THE_318 --------------
+# וַיִּשְׁמַע אַבְרָם כִּי נִשְׁבָּה אָחִיו וַיָּרֶק אֶת־חֲנִיכָיו יְלִידֵי
+# בֵיתוֹ שְׁמֹנָה עָשָׂר וּשְׁלֹשׁ מֵאוֹת וַיִּרְדֹּף עַד־דָּן
+# &quot;And when Abram heard that his brother was taken captive, he led forth his
+# trained men, born in his house, three hundred and eighteen, and pursued as
+# far as Dan.&quot;
+m.step(&quot;Gen.14.14&quot;)
+# ‹וַיִּשְׁמַע אַבְרָם כִּי נִשְׁבָּה אָחִיו› (“and-hear Abram that
+# transport-into-captivity brother-him/its”) — event: hear — agent Abram
+m.event(&quot;hear&quot;, agent=&quot;avram&quot;)
+# ‹וַיָּרֶק אֶת־חֲנִיכָיו יְלִידֵי בֵיתוֹ› (“and-pour-out obj-marker
+# initiated-him/its born house-him/its”) — event: muster — agent Abram;
+# theme chanikhav
+m.event(&quot;muster&quot;, agent=&quot;avram&quot;, themes=[&quot;chanikhav&quot;])
+# ‹שְׁמֹנָה עָשָׂר וּשְׁלֹשׁ מֵאוֹת› (“number -teen and-three hundred”) —
+# fact holds: chanikhav-yelidei-veito-shmonah--teen-and-three-hundred
+m.fact(&quot;chanikhav_yelidei_veito_shmonah_asar_u_shelosh_meot&quot;)
+# ‹וַיִּרְדֹּף עַד־דָּן› (“and-run-after-gone-by) until Daniel”) — event:
+# pursue — agent Abram
+m.event(&quot;pursue&quot;, agent=&quot;avram&quot;)
+# reads without prior install (flag, not fix): Daniel
+m.presupposed(&quot;dan&quot;)
+
+# -------------------------- Gen.14.15 · THE_NIGHT_SPLIT --------------------
+# וַיֵּחָלֵק עֲלֵיהֶם לַיְלָה הוּא וַעֲבָדָיו וַיַּכֵּם וַיִּרְדְּפֵם
+# עַד־חוֹבָה אֲשֶׁר מִשְּׂמֹאל לְדַמָּשֶׂק
+# &quot;And he divided himself against them by night, he and his servants, and
+# smote them, and pursued them unto Hobah, which is on the left hand of
+# Damascus.&quot;
+m.step(&quot;Gen.14.15&quot;)
+# ‹וַיֵּחָלֵק עֲלֵיהֶם לַיְלָה› (“and-be-smooth over-them/their night”) —
+# event: split — agent Abram-and-avadav
+m.event(&quot;split&quot;, agent=&quot;avram_va_avadav&quot;)
+# ‹וַיַּכֵּם› (“and-strike-them/their”) — event: strike — agent Abram-and-
+# avadav
+m.event(&quot;strike&quot;, agent=&quot;avram_va_avadav&quot;)
+# ‹וַיִּרְדְּפֵם עַד־חוֹבָה אֲשֶׁר מִשְּׂמֹאל לְדַמָּשֶׂק› (“and-run-after-
+# gone-by)-them/their until Hobah which from-dark to-Damascus”) — event:
+# pursue — agent Abram-and-avadav
+m.event(&quot;pursue&quot;, agent=&quot;avram_va_avadav&quot;)
+# reads without prior install (flag, not fix): chovah, Damascus
+m.presupposed(&quot;chovah&quot;, &quot;damaseq&quot;)
+
+# -------------------------- Gen.14.16 · THE_BRINGING_BACK ------------------
+# וַיָּשֶׁב אֵת כָּל־הָרְכֻשׁ וְגַם אֶת־לוֹט אָחִיו וּרְכֻשׁוֹ הֵשִׁיב וְגַם
+# אֶת־הַנָּשִׁים וְאֶת־הָעָם
+# &quot;And he brought back all the goods, and also brought back his brother Lot,
+# and his goods, and the women also, and the people.&quot;
+m.step(&quot;Gen.14.16&quot;)
+# ‹וַיָּשֶׁב אֵת כָּל־הָרְכֻשׁ … הֵשִׁיב› (“and-return obj-marker all the-
+# property … return”) — event: bring-back — agent Abram; theme all-the-
+# property-and-Lot-and-the-woman-and-the-people
+m.event(&quot;bring_back&quot;, agent=&quot;avram&quot;, themes=[&quot;kol_ha_rekhush_ve_lot_ve_ha_nashim_ve_ha_am&quot;])
+
+# -------------------------- Gen.14.17 · THE_KINGS_MEETING ------------------
+# וַיֵּצֵא מֶלֶךְ־סְדֹם לִקְרָאתוֹ אַחֲרֵי שׁוּבוֹ מֵהַכּוֹת
+# אֶת־כְּדָרלָעֹמֶר וְאֶת־הַמְּלָכִים אֲשֶׁר אִתּוֹ אֶל־עֵמֶק שָׁוֵה הוּא
+# עֵמֶק הַמֶּלֶךְ
+# &quot;And the king of Sodom went out to meet him, after his return from the
+# slaughter of Chedorlaomer and the kings that were with him, at the vale of
+# Shaveh — the same is the King&#x27;s Vale.&quot;
+m.step(&quot;Gen.14.17&quot;)
+# ‹וַיֵּצֵא מֶלֶךְ־סְדֹם לִקְרָאתוֹ› (“and-bring-forth king Sodom to-
+# encountering-him/its”) — event: go-out — agent king-Sodom
+m.event(&quot;go_out&quot;, agent=&quot;melekh_sedom&quot;)
+# reads without prior install (flag, not fix): vale-shaveh
+m.presupposed(&quot;emeq_shaveh&quot;)
+
+# -------------------------- Gen.14.18 · BREAD_WINE_AND_A_PRIEST ------------
+# וּמַלְכִּי־צֶדֶק מֶלֶךְ שָׁלֵם הוֹצִיא לֶחֶם וָיָיִן וְהוּא כֹהֵן לְאֵל
+# עֶלְיוֹן
+# &quot;And Melchizedek king of Salem brought forth bread and wine; and he was
+# priest of God the Most High.&quot;
+m.step(&quot;Gen.14.18&quot;)
+# ‹הוֹצִיא לֶחֶם וָיָיִן› (“bring-forth food and-wine”) — event: bring-out —
+# agent I-Melchizedek; theme food-and-wine
+m.event(&quot;bring_out&quot;, agent=&quot;malki_tzedeq&quot;, themes=[&quot;lechem_va_yayin&quot;])
+# ‹וְהוּא כֹהֵן לְאֵל עֶלְיוֹן› (“and-he/it priest to-God Most-High”) — fact
+# holds: and-he/it-priest-to-to-Most-High
+m.fact(&quot;ve_hu_khohen_le_el_elyon&quot;)
+# reads without prior install (flag, not fix): Salem
+m.presupposed(&quot;shalem&quot;)
+
+# -------------------------- Gen.14.19 · THE_BLESSING_OF_ABRAM --------------
+# וַיְבָרְכֵהוּ וַיֹּאמַר בָּרוּךְ אַבְרָם לְאֵל עֶלְיוֹן קֹנֵה שָׁמַיִם
+# וָאָרֶץ
+# &quot;And he blessed him, and said: &#x27;Blessed be Abram of God Most High, Maker
+# of heaven and earth;&quot;
+m.step(&quot;Gen.14.19&quot;)
+# ‹וַיְבָרְכֵהוּ› (“and-bless-him/its”) — blessing: I-Melchizedek blesses
+# Abram
+m.bless(&quot;malki_tzedeq&quot;, &quot;avram&quot;)
+# ‹בָּרוּךְ אַבְרָם לְאֵל עֶלְיוֹן קֹנֵה שָׁמַיִם וָאָרֶץ› (“bless Abram to-
+# God Most-High possessor heavens and-earth”) — fact holds: bless-Abram-to-
+# to-Most-High-qoneh-heavens-and-earth
+m.fact(&quot;barukh_avram_le_el_elyon_qoneh_shamayim_va_aretz&quot;)
+
+# -------------------------- Gen.14.20 · THE_BLESSING_OF_EL_ELYON_AND_THE_TENTH -
+# וּבָרוּךְ אֵל עֶלְיוֹן אֲשֶׁר־מִגֵּן צָרֶיךָ בְּיָדֶךָ וַיִּתֶּן־לוֹ
+# מַעֲשֵׂר מִכֹּל
+# &quot;and blessed be God the Most High, who hath delivered thine enemies into
+# thy hand.&#x27; And he gave him a tenth of all.&quot;
+m.step(&quot;Gen.14.20&quot;)
+# ‹וּבָרוּךְ אֵל עֶלְיוֹן› (“and-bless strength Most-High”) — blessing:
+# I-Melchizedek blesses to-Most-High
+m.bless(&quot;malki_tzedeq&quot;, &quot;el_elyon&quot;)
+# ‹אֲשֶׁר־מִגֵּן צָרֶיךָ בְּיָדֶךָ› (“which shield narrow-you/your in-hand-
+# you/your”) — fact holds: which-miggen-tzarekha-in-yadekha
+m.fact(&quot;asher_miggen_tzarekha_be_yadekha&quot;)
+# ‹וַיִּתֶּן־לוֹ מַעֲשֵׂר מִכֹּל› (“and-set to-him/its tenth from-all”) —
+# event: give — theme tenth-from-all
+m.event(&quot;give&quot;, themes=[&quot;maaser_mi_kol&quot;])
+
+# -------------------------- Gen.14.21 · THE_KINGS_DEMANDS ------------------
+# וַיֹּאמֶר מֶלֶךְ־סְדֹם אֶל־אַבְרָם תֶּן־לִי הַנֶּפֶשׁ וְהָרְכֻשׁ קַח־לָךְ
+# &quot;And the king of Sodom said unto Abram: &#x27;Give me the persons, and take the
+# goods to thyself.&#x27;&quot;
+m.step(&quot;Gen.14.21&quot;)
+# ‹וַיֹּאמֶר מֶלֶךְ־סְדֹם אֶל־אַבְרָם› (“and-say king Sodom to Abram”) —
+# event: say — agent king-Sodom
+m.event(&quot;say&quot;, agent=&quot;melekh_sedom&quot;)
+# ‹תֶּן־לִי הַנֶּפֶשׁ› (“set to-me/my the-living-being”) — king-Sodom speaks
+# a demand — LET: set(Abram, the-living-being)
+m.declare(&quot;melekh_sedom&quot;, &quot;LET&quot;,
+          &quot;ten(avram, ha_nefesh)&quot;)
+# ‹וְהָרְכֻשׁ קַח־לָךְ› (“and-the-property take to-you/your”) — king-Sodom
+# speaks a demand — LET: take(Abram, the-property)
+m.declare(&quot;melekh_sedom&quot;, &quot;LET&quot;,
+          &quot;qach(avram, ha_rekhush)&quot;)
+
+# -------------------------- Gen.14.22 · THE_RAISED_HAND --------------------
+# וַיֹּאמֶר אַבְרָם אֶל־מֶלֶךְ סְדֹם הֲרִימֹתִי יָדִי אֶל־יְהוָה אֵל
+# עֶלְיוֹן קֹנֵה שָׁמַיִם וָאָרֶץ
+# &quot;And Abram said to the king of Sodom: &#x27;I have lifted up my hand unto the
+# LORD, God Most High, Maker of heaven and earth,&quot;
+m.step(&quot;Gen.14.22&quot;)
+# ‹וַיֹּאמֶר אַבְרָם אֶל־מֶלֶךְ סְדֹם› (“and-say Abram to king Sodom”) —
+# event: say — agent Abram
+m.event(&quot;say&quot;, agent=&quot;avram&quot;)
+# ‹הֲרִימֹתִי יָדִי אֶל־יְהוָה אֵל עֶלְיוֹן קֹנֵה שָׁמַיִם וָאָרֶץ› (“rise-
+# high hand-me/my to YHWH strength Most-High possessor heavens and-earth”) —
+# fact holds: rise-high-yadi-to-the-LORD-to-Most-High-qoneh-heavens-and-
+# earth
+m.fact(&quot;harimoti_yadi_el_YHWH_el_elyon_qoneh_shamayim_va_aretz&quot;)
+
+# -------------------------- Gen.14.23 · THE_THREAD_AND_THE_THONG -----------
+# אִם־מִחוּט וְעַד שְׂרוֹךְ־נַעַל וְאִם־אֶקַּח מִכָּל־אֲשֶׁר־לָךְ וְלֹא
+# תֹאמַר אֲנִי הֶעֱשַׁרְתִּי אֶת־אַבְרָם
+# &quot;that I will not take a thread nor a shoe-latchet nor aught that is thine,
+# lest thou shouldest say: I have made Abram rich;&quot;
+m.step(&quot;Gen.14.23&quot;)
+# ‹אִם־מִחוּט וְעַד שְׂרוֹךְ־נַעַל וְאִם־אֶקַּח … וְלֹא תֹאמַר אֲנִי
+# הֶעֱשַׁרְתִּי אֶת־אַבְרָם› (“if from-string and-until thong sandal-tongue
+# and-if take … and-not say accumulate obj-marker Abram”) — fact holds: if-
+# from-string-and-until-thong-sandal-tongue-and-if-take-from-all-which-to-
+# you; and-not-say-ani-accumulate-obj-marker-Abram
+m.fact(&quot;im_mi_chut_ve_ad_serokh_naal_ve_im_eqach_mi_kol_asher_lakh&quot;,
+       &quot;ve_lo_tomar_ani_heesharti_et_avram&quot;)
+
+# -------------------------- Gen.14.24 · THE_EXCEPTION_AND_THE_PORTION ------
+# בִּלְעָדַי רַק אֲשֶׁר אָכְלוּ הַנְּעָרִים וְחֵלֶק הָאֲנָשִׁים אֲשֶׁר
+# הָלְכוּ אִתִּי עָנֵר אֶשְׁכֹּל וּמַמְרֵא הֵם יִקְחוּ חֶלְקָם
+# &quot;save only that which the young men have eaten, and the portion of the men
+# which went with me, Aner, Eshcol, and Mamre, let them take their
+# portion.&#x27;&quot;
+m.step(&quot;Gen.14.24&quot;)
+# ‹בִּלְעָדַי רַק אֲשֶׁר אָכְלוּ הַנְּעָרִים› (“except-me/my leanness which
+# eat the-boy”) — fact holds: biladai-leanness-which-eat-the-boy
+m.fact(&quot;biladai_raq_asher_akhlu_ha_nearim&quot;)
+# ‹עָנֵר אֶשְׁכֹּל וּמַמְרֵא הֵם יִקְחוּ חֶלְקָם› (“Aner Eshcol and-Mamre
+# they take smoothness-them/their”) — Abram speaks a demand — LET:
+# take(Aner-Eshcol-Mamre, chelqam)
+m.declare(&quot;avram&quot;, &quot;LET&quot;,
+          &quot;yiqchu(aner_eshkol_mamre, chelqam)&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == {&#x27;yam_ha_melach&#x27;, &#x27;tzevoyim&#x27;, &#x27;goyim_land&#x27;, &#x27;emeq_shaveh&#x27;, &#x27;emeq_ha_sidim&#x27;, &#x27;shinar&#x27;, &#x27;dan&#x27;, &#x27;en_mishpat_qadesh&#x27;, &#x27;amora&#x27;, &#x27;elam&#x27;, &#x27;tzoar&#x27;, &#x27;elasar&#x27;, &#x27;chatzetzon_tamar&#x27;, &#x27;shaveh_qiryatayim&#x27;, &#x27;damaseq&#x27;, &#x27;har_seir&#x27;, &#x27;sedom&#x27;, &#x27;ham&#x27;, &#x27;admah&#x27;, &#x27;ashterot_qarnayim&#x27;, &#x27;chovah&#x27;, &#x27;shalem&#x27;, &#x27;el_paran&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;ten(avram, ha_nefesh)&#x27;, &#x27;qach(avram, ha_rekhush)&#x27;, &#x27;yiqchu(aner_eshkol_mamre, chelqam)&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 3
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;read_before_install&#x27;: 23}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;kol_eleh_chavru_el_emeq_ha_sidim_hu_yam_ha_melach&#x27;, &#x27;shtem_esreh_shanah_avdu_et_kedarlaomer_u_shelosh_esreh_maradu&#x27;, &#x27;arbaah_melakhim_et_ha_chamishah&#x27;, &#x27;emeq_ha_sidim_beerot_beerot_chemar&#x27;, &#x27;ve_hu_yoshev_bi_sedom&#x27;, &#x27;ve_hem_baalei_verit_avram&#x27;, &#x27;chanikhav_yelidei_veito_shmonah_asar_u_shelosh_meot&#x27;, &#x27;ve_hu_khohen_le_el_elyon&#x27;, &#x27;barukh_avram_le_el_elyon_qoneh_shamayim_va_aretz&#x27;, &#x27;asher_miggen_tzarekha_be_yadekha&#x27;, &#x27;harimoti_yadi_el_YHWH_el_elyon_qoneh_shamayim_va_aretz&#x27;, &#x27;im_mi_chut_ve_ad_serokh_naal_ve_im_eqach_mi_kol_asher_lakh&#x27;, &#x27;ve_lo_tomar_ani_heesharti_et_avram&#x27;, &#x27;biladai_raq_asher_akhlu_ha_nearim&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 25
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

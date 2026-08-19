@@ -1,0 +1,757 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_25_babel — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_25_babel?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Babel: come, let us build — come, let Us go down (11:1-9) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_25_babel</b> · Genesis 11:1-9 · derive logic_derived_v1 · phase C-25</div>
+<div class="meta"><a href="../#Gen/11/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">הָבָה נִבְנֶה־לָּנוּ עִיר — הָבָה נֵרְדָה וְנָבְלָה שָׁם שְׂפָתָם</span> · <i>havah nivneh-lanu ir — havah nerdah ve-navlah sham sefatam</i> · &#x27;Come, let us build us a city&#x27; — &#x27;Come, let Us go down and confuse there their lip&#x27;</p>
+<div class="note">REVIEW PASSED and FROZEN 2026-08-03 by the main loop: the mood-split verified independently (the DB tags all six council verbs cohortative; the ?-guard on nivneh/naaseh rests, correctly, on gen_06&#x27;s frozen form-class rule — final-heh verbs show no distinct cohortative — plus the 1:26 precedent itself; pen-nafutz is plain imperfect and rightly a FACT); the navlah/balal root-identity lemma-verified (settled cycle #5 confirmed); YHWH x5 / Elohim zero confirmed; saphah/davar/am/rea/migdal/yarad/chalal/havah careers and the sevenfold shem-sham count re-run; the five-open end-state and the no-install ruling ratified as letter-faithful; glossing airtight; nothing invented. Derived 2026-08-03 by the second-generation derivation agent (freeze-after-review by the main loop — no agent freeze); its third unit, seventh under the PIPELINE + DEBUT-MAP process, and its LAST before planned succession. Precedents pulled verbatim before drafting: gen_06&#x27;s 1:26 council (&#x27;naaseh — TIR-033 CMD-US — CODED IMPERFECT (final-heh verbs show no distinct cohortative form) — TIR-028&#x27;s mandatory ? applies: CMD-US?&#x27;; its demand popped by delivery: &#x27;HOLDS(make(adam), spec=b_tzelem_k_demut, t2) — receipt by delivery alone&#x27;), gen_19&#x27;s seeing-without-judging (&#x27;VA-YAR VE-HINNEH — the week&#x27;s inspection verb with NO verdict-word&#x27;), gen_09&#x27;s and gen_24&#x27;s PATTERN classes (the al-ken &#x27;therefore&#x27; formula&#x27;s practice- and saying-etiologies), gen_24&#x27;s report-naming rule (no NAME op without the va-yiqra formula), gen_13&#x27;s open-forever human demand, and the echo-receipt RESULT class. Calibrated coverage (charter 4.1): Onkelos read Tier-A at derive time (9 sequential fetches, Data/FETCHLOG.md — the buffer turns the descent into a REVEALING and the neutral seeing into PUNISHING, keeps the council-plural, keeps the bavel/balbel pun doubled, LEVELS the lip/tongue sibling-split, temporalizes the east, and rhymes the cessation with the nothing-withheld assessment through one Aramaic root); trees from the DB&#x27;s stored tree_json. TWENTY-FIRST PROSPECTIVE MIDDOT RUN (logic/middot_scan/WATCHLIST_gen25_prospective_2026-08-03.md): cache holds ZERO sources for Gen 11:1-9 — NINETEENTH tripwire in a row. INTERPRETER: ZERO extensions — sixteenth extension-free derivation candidate in a row.</div>
+<div class="note">Logic-derived v1: v3 ta&#x27;amim trees (from DB tree_json) -&gt; leaf role frames from OSHB morph -&gt; operator lines citing TIR rules -&gt; machine-state scenarios. Machine tokens apostrophe-free and underscore-joined (naaseh(lanu_shem), navlah(sham_sefatam), va_yachdelu_livnot_ha_ir).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (retro, oral-first era; manifest logic/oral_audit/manifests/gen_25_babel_claims.json — 10 VERIFIED, 0 FAILED, 0 UNCHECKABLE; record logic/oral_audit/AUDIT_gen_25_2026-08-08.md). CROWNS (chain-attested, DB-verified): (1) G25-01 the three unseeables: לראת (&quot;to see&quot;) — plene throughout the Torah EXCEPT THREE defective (the Ramah): the land that cannot BE SEEN under the locusts (Exod 10:5), God&#x27;s descent TO SEE the tower (11:5), &quot;you cannot SEE My face&quot; (Exod 33:20) — SNAPSHOT exactly those three: a trio about the limits of seeing, each missing a letter. (2) G25-02 tranquility in the finals: איש אל רעהו הבה (&quot;each to his fellow: come!&quot;) — the final letters spell שלוה (&quot;tranquility&quot;): &quot;from excess tranquility they sinned&quot; (Kitzur Baal HaTurim). (3) G25-03 בנסעם (&quot;as they journeyed&quot;) — Babel&#x27;s migration (11:2) and the camp leaving Sinai (Num 10:34), the word&#x27;s only two tokens: &quot;like a child running from school; they journeyed from the Ancient One of the world.&quot; (4) G25-05 ויחדלו (&quot;and they ceased&quot;) — the building ceased (11:8) and the sounds-and-hail ceased (Exod 9:33): &quot;these too were judged with sounds and hail&quot; — the only two tokens. (5) G25-04 ויפץ (&quot;and He scattered&quot;) — Babel (11:8) and Egypt&#x27;s straw-scattering (Exod 5:12); the Kitzur&#x27;s third leg (Saul&#x27;s scattering people, I Sam 13:8) an inheritance edge. (6) G25-06/07 two singletons with prophetic legs: ודברים (&quot;and words,&quot; 11:1 — only Torah token; pairs with Ecclesiastes&#x27; many words, 5:6) and לאבן (&quot;for stone,&quot; 11:3 — only Torah token; pairs with Nabal&#x27;s stone heart, I Sam 25:37: &quot;harder to them than death was a falling brick&quot;). (7) G25-08 Ben Asher confirmation #3: the maarikh (lengthening stroke) on וימצאו (&quot;and they found,&quot; 11:2), locked at the codepoint level. (8) G25-09/10 the soft bet of בשמים (&quot;in the heavens,&quot; 11:4); the dotted bet of בני האדם (&quot;the sons of man,&quot; 11:5). DISCREPANCIES: none. INHERITANCE EDGES (attested; Torah side verified, inheritor wording pending): Gen 11:4 → Jeremiah 51:9 (the tower&#x27;s head in the heavens / Babylon&#x27;s judgment &quot;reaching to the skies&quot;); Gen 11:6 → Jeremiah 51:12 (the nothing-withheld resolve, read back against Babylon); Gen 11:8 → Jeremiah 51:20-24 (the scattering into the shatter-litany); Gen 11:9 → Zephaniah 3:9 (the confusion REVERSED: &quot;then I will turn to the peoples a PURE speech&quot; — the un-Babel: the span&#x27;s crown edge); the Samuel and Ecclesiastes legs ride as verified claims. READINGS (named-only, unclaimed): שפה אחת (&quot;one speech&quot;) — letter-value equals לשון הקדש (&quot;the holy tongue&quot;; Kitzur 11:1, letter-arithmetic class); Chizkuni&#x27;s pointing notes on לאבן and החלם (&quot;their beginning&quot;) — pronunciation class, no letter at stake.</div>
+<div class="meta">confidence: structure tested; operator readings tested-per-TIR; intent hypothesis</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>Babel (11:1-9): the ring between the nations table (10:32&#x27;s scattered nations get their how) and Shem&#x27;s toledot (&#x27;generations&#x27;) ledger at 11:10 — the next unit&#x27;s seam. Inside: the one-lip opening (11:1), the journey east to Shinar (11:2), the first human council-speech — brick and burn (11:3), the second — city, tower, name, and the fear (11:4), the descent to see (11:5), the assessment (11:6), the mirrored counter-council (11:7), the scatter and the ceasing (11:8), and the name-etiology (11:9). The unit ends with four human demands standing open over an abandoned build, one divine demand popped by its own verb, and one still open — the letter records one descent only.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Hebrew source + trees</td><td>All 9 verses from DB tree_json (rule set v3, unique, pure binary; ascii rendered 2026-08-03). Tree facts: 11:1 [the etnachta (major mid-verse rest) splits ONE LIP | ONE WORDS — the two oneness-claims get one arm each]; 11:2 [as they journeyed from the east | found a valley in Shinar, settled there]; 11:3 [the speech to the etnachta — come, let us brick and burn | the narrator&#x27;s substitution-report: brick for stone, bitumen for mortar]; 11:4 [city, tower, head-in-the-heavens, name (etnachta) | the FEAR gets the closing arm: lest we scatter]; 11:5 [YHWH descended to see city and tower (etnachta) | which the sons of the humankind had built]; 11:6 [one people, one lip, this they begin (etnachta) | now nothing they plan will be withheld]; 11:7 [come, let Us descend and confuse there their lip (etnachta) | that they hear not each his fellow&#x27;s lip]; 11:8 [YHWH scattered them over all the earth (etnachta) | and they CEASED building the city — the abandonment is the closing arm]; 11:9 [therefore its name Bavel, for THERE YHWH confused the lip of all the earth (etnachta) | and from THERE He scattered them — the etiology&#x27;s two grounds, one arm each].</td><td>tested</td></tr>
+<tr><td><b>C</b></td><td>Segment structure</td><td>Verb morphology (#IMPOSED OSHB, DB-verified 2026-08-03); survey complete via the debut map (48 flagged lemmas in 121 tokens), careers and precedents pulled before drafting. THE MIRRORED GRAMMAR [morphology-verified]: HAVAH (&#x27;come!&#x27;) — Torah tokens 1-3 ALL in-span, human x2 then divine x1; token 9 = Exodus 1:10, Pharaoh&#x27;s &#x27;come, let us deal wisely&#x27; — the Torah&#x27;s next havah-conspiracy is against Israel. SIX COHORTATIVES (&#x27;let-us&#x27; forms, coded Vqh1cp): four human (nilbenah &#x27;let us brick&#x27;, ve-nisrefah &#x27;let us burn&#x27;, nivneh &#x27;let us build&#x27;, ve-naaseh &#x27;let us make&#x27;), two divine (nerdah &#x27;let Us descend&#x27;, ve-navlah &#x27;let Us confuse&#x27;) — and 11:4&#x27;s verb is NAASEH ITSELF, 1:26&#x27;s council-verb in human mouths [letter fact]. YHWH-ONLY span (x5; Elohim ZERO) — the counter-span to gen_22&#x27;s Elohim-only covenant. YARAD (&#x27;descend&#x27;) — the descend-verb&#x27;s TORAH DEBUT is God&#x27;s descent (11:5); token 2 the divine cohortative; token 3 = 12:10 (Abram down to Egypt); token 5 = 18:21&#x27;s eradah-na (&#x27;let Me go down&#x27;) at SODOM — the inspection-descent recurs. THE FEAR ANSWERED VERBATIM [internal arc, inside one unit]: PUTZ (&#x27;scatter&#x27;) tokens 2-4 — 11:4&#x27;s pen-nafutz (&#x27;LEST we be scattered&#x27;), 11:8&#x27;s va-yafetz (the execution), 11:9&#x27;s hefitzam (the summary); token 1 = 10:18 (frozen gen_24 staged it as &#x27;the verb Babel fears and receives&#x27; — LANDS). More staged bridges land: QEDEM (&#x27;east&#x27;) token 4 = 11:2; SHINAR token 2 = 11:2; BAVEL token 2 = 11:9 (closing 10:10&#x27;s name-before-story bracket); CHALAL (&#x27;begin&#x27;) token 5 = 11:6&#x27;s hachillam (&#x27;this they BEGIN to do&#x27; — the threshold-chain complete: 4:26, 6:1, 9:20, 10:8, 11:6). DEBUT-FIELD: DAVAR (&#x27;word/thing&#x27;, 256 tokens) debuts in devarim achadim (&#x27;one words&#x27; — the plural oddity held); AM (&#x27;people&#x27;, 445 tokens) debuts in GOD&#x27;S assessment (hen am echad); REA (&#x27;fellow/neighbor&#x27;, 52 tokens — the commandments&#x27; word) debuts x2 (the conspiracy&#x27;s each-to-his-fellow; the confusion&#x27;s target); NASA (&#x27;journey&#x27;) debuts at 11:2 (token 2 = 12:9, Abram); ZAMAM (&#x27;plan&#x27;) — two Torah tokens: here and Deut 19:19&#x27;s scheming witness; MIGDAL (&#x27;tower&#x27;) — the Torah&#x27;s ONLY two tower-tokens (11:4, 11:5); CHADAL (&#x27;cease&#x27;) debuts at 11:8 (token 2 = 18:11, Sarah&#x27;s ceased way); BATZAR (&#x27;be withheld&#x27;) debuts in lo yibatzer. THE MATERIALS RERUN AT EGYPT [career facts]: LEVENAH (&#x27;brick&#x27;) tokens 1-2 here, tokens 3-8 ALL the slavery (Exod 1:14; 5:7-19); CHOMER (&#x27;mortar&#x27;) token 2 = Exod 1:14; CHEMAR (&#x27;bitumen&#x27;) token 2 = the Siddim pits (14:10), token 3 = MOSES&#x27; ARK (Exod 2:3); the letter&#x27;s own substitution-structure: brick FOR stone, bitumen FOR mortar. BALAL (&#x27;confuse&#x27;) debuts with the BAVEL pun (tokens 1-2; bavel/balal) — tokens 3+ are the offerings MIXED with oil (belulot ba-shemen, Exod 29:2 on): the tongue-confuser becomes the Sanctuary&#x27;s mixing-word [career crown]. SAPHAH (&#x27;lip&#x27;) tokens 1-5 all in-span (x5) — the staged sibling-split vs the table&#x27;s LASHON; token 6 = 22:17, the SEASHORE&#x27;S lip in the oath-blessing. ECHAD (&#x27;one&#x27;) x4 (one lip, one words, one people, one lip). THE SHEM/SHAM SOUNDPLAY [census-verified]: shem (&#x27;name&#x27;) x2 + sham (&#x27;there&#x27;) x5 = SEVEN sh-m tokens in nine verses — and the name-seekers stand one verse after the SHEM section (10:21-31) [letter fact, held]. BANAH (&#x27;build&#x27;) tokens 5-7 (cohortative, perfect, ceased infinitive) — the chain: rib, Cain&#x27;s city, altar, Ninveh, BABEL; IR (&#x27;city&#x27;) tokens 5-7. HA-ADAM (&#x27;the humankind&#x27;) is the builders&#x27; only name (11:5) — the subjects of 11:2-4 are suspended until God&#x27;s inspection names the species [letter fact]. NO date in span.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Predicates &amp; outcomes</td><td>The story is a grammar trap sprung twice: humankind borrows the divine council&#x27;s let-us to build a name against scattering, and heaven answers in the borrowed grammar — then grants the exact verb they feared. The letter keeps every symmetry visible: one lip in verse one, one people in God&#x27;s mouth; havah against havah; the descent that only SEES set against a speech that only assesses; the project that ceases mid-verse; and a name-etiology that files the whole story under its own pun. The machine&#x27;s asymmetries are the letter&#x27;s: the human demands never pop (the corpus&#x27;s first abandoned project), the divine confuse-demand pops by its own root (the fifth settled cycle), the divine descend-demand finds no second descent-deed, and nothing installs — the chain&#x27;s builds were all finished things; this one the text refuses to finish.</td><td>tested</td></tr>
+<tr><td><b>E</b></td><td>Logic format choice</td><td>Operator lines; NO ledger row. THE HUMAN COUNCIL-DEMANDS [decision recorded, precedents quoted]: the corpus&#x27;s FIRST HUMAN CMD-US pushes — gen_06&#x27;s class (&#x27;naaseh — TIR-033 CMD-US — CODED IMPERFECT... TIR-028&#x27;s mandatory ?: CMD-US?&#x27;). The mood-mark follows the FORM: the -ah-marked cohortatives (nilbenah, nisrefah; the divine nerdah, navlah) are morph-CODED volitives — TIR-033&#x27;s plain CMD-US, no ambiguity, no ?; the two final-heh verbs (nivneh, NAASEH — 1:26&#x27;s own verb with 1:26&#x27;s own form-problem) carry gen_06&#x27;s exact ambiguity — CMD-US? [the split recorded; both precedent-anchored]. Speaker ish_el_reehu (&#x27;each to his fellow&#x27;) — the letter&#x27;s own collective. RECEIPTS: the four human demands get NONE — the letter kills the project: 11:8&#x27;s cessation held as FACT and the queue left OPEN (gen_13&#x27;s open-forever class; NO interpreter extension for abandoned projects — the open queue plus the cessation-fact IS the state [decision recorded]); 11:5&#x27;s banu (&#x27;they had built&#x27;) is the inspection&#x27;s background relative clause, NOT a receipt [decision recorded]; 11:3b&#x27;s substitution-report is a material-fact, not a deed-receipt. THE DIVINE COUNTER-COUNCIL: same shape, DECLARE(YHWH, CMD-US(..)) x2; the confuse-demand POPS at 11:9 by the echo-receipt class (gen_16/17/20: the demand&#x27;s own root returns as deed — navlah -&gt; balal): RESULT &#x27;HOLDS(navlah(sham_sefatam), t2)&#x27; — SETTLED CYCLE #5 (the confuse-cycle, joining make / aseh+qach / bo / tze+hotze); the descend-demand has NO second descent-deed in the letter — it stays OPEN [letter-honest; the chain notices; named-only]. THE DESCENT (11:5): EVENT with NO TEST — gen_19&#x27;s class quoted (&#x27;the week&#x27;s inspection verb with NO verdict-word: seeing without judging&#x27;) [Onkelos inserts the verdict the letter withheld — dual-track]. THE SCATTER (11:8): EVENT + the cessation FACT (CHADAL debut). THE NAMING (11:9): PATTERN (the al-ken formula&#x27;s THIRD genre — practice 2:24, saying 10:9, NAME here; gen_09&#x27;s and gen_24&#x27;s encodings quoted) + facts for the ki-clause grounds; NO NAME op — KARA is a bare perfect with an indefinite subject, no va-yiqra formula (gen_24&#x27;s report-naming rule quoted) [decision recorded]. INSTALL DECISION [recorded]: the city and tower do NOT install — every install precedent (city, ark, altar, vineyard, the Ninveh four) is a COMPLETED build; 11:8&#x27;s cessation leaves this one unfinished: the corpus&#x27;s first abandoned project stays out of WORLD. NO TIME_ANCHOR. NOTE_PRESUPPOSED: shinar (known geography — gen_08&#x27;s eden class; 10:10&#x27;s token is a prose echo, no cross-wall receipt). Interpreter extensions: NONE.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Bilingual logic objects</td><td>Every operator line carries he + he_translit + en. Machine tokens apostrophe-free: kol_ha_aretz_safah_echat_u_devarim_achadim, be_nasam_mi_qedem, nilbenah(levenim), nisrefah(li_serefah), va_tehi_lahem_ha_levenah_le_aven, nivneh(ir_u_migdal), naaseh(lanu_shem), pen_nafutz_al_pnei_khol_ha_aretz, asher_banu_bnei_ha_adam, hen_am_echad_ve_safah_achat_le_khulam, nerdah(sham), navlah(sham_sefatam), va_yachdelu_livnot_ha_ir, al_ken_kara_shemah_bavel, ki_sham_balal_yhwh_sefat_kol_ha_aretz.</td><td>established</td></tr>
+<tr><td><b>G</b></td><td>Oral (named only) + Tier-A translation check</td><td>Named but NOT read (cache: zero for Gen 11:1-9 — NINETEENTH tripwire; gen_25 Tier-A queue): Bavli Sanhedrin 109a (&#x27;Bavli&#x27; = Babylonian Talmud; the division-generation — parties and fates); Bavli Chullin 89a; Bereshit Rabbah 38 (the span; the brick-over-man mourning); Rashi at 11:1 (one lip — the holy tongue), 11:5 (the descent — to teach judges), 11:7 (the plural — He and His court), 11:9 (the measure against the flood-generation&#x27;s). Tier-A Onkelos (9 fetches, FETCHLOG 2026-08-03): THE DESCENT BECOMES A REVEALING AND THE SEEING BECOMES PUNISHING [find-class] — va-yered YHWH lirot -&gt; &#x27;the LORD WAS REVEALED to EXACT PUNISHMENT upon the DEEDS of the city and tower&#x27;: the anthropomorphism dodged, the letter&#x27;s withheld verdict INSERTED (gen_19&#x27;s seeing-without-judging is exactly what the buffer refuses), the buildings turned to deeds — the machine&#x27;s no-TEST stands on the letter; dual-track, flagged. The divine cohortative re-voiced with the reveal-verb (havu NITGELI, &#x27;come, let us be revealed&#x27;) but the COUNCIL-PLURAL KEPT (u-nevalbel, &#x27;let Us confuse&#x27;). The bavel/balal pun survives DOUBLED (balal -&gt; BALBEL — the name&#x27;s letters twice); but SAPHAH (&#x27;lip&#x27;) -&gt; LISHAN throughout: the lip/tongue sibling-split LEVELED to the table&#x27;s tongue-word; devarim achadim -&gt; mamlal chad (&#x27;one SPEECH&#x27; — the plural oddity smoothed). MI-QEDEM (&#x27;from the east&#x27;) -&gt; BE-KADMEITA (&#x27;AT FIRST&#x27;) — geography temporalized, the Eden-to-Babel east-line invisible; Shinar -&gt; &#x27;the land of BABEL&#x27; again; the materials recast (nirmei &#x27;let us CAST&#x27; bricks; be-nura &#x27;in FIRE&#x27;; shia &#x27;plaster&#x27;); the tower&#x27;s head &#x27;reaching to THE TOP OF the heavens&#x27; (the hyperbole measured). THE CESSATION BECOMES A RESTRAINT rhymed with the assessment: va-yachdelu (&#x27;they ceased&#x27;) -&gt; u-menau (&#x27;they were RESTRAINED&#x27;) — the same m-n-a root the buffer gave 11:6&#x27;s lo yibatzer (&#x27;nothing will be withheld&#x27; -&gt; la yitmena): one Aramaic root where the letter has two verbs — a buffer-side arc the letter does not draw (flagged).</td><td>tested</td></tr>
+<tr><td><b>H</b></td><td>Scenarios</td><td>S1 one lip, one words. S2 the journey east (one read-flag: shinar). S3 the substitution-facts hold (the first human council pushed). S4 the two ?-demands pushed and open (city-tower; the name). S5 the descent: the built-so-far fact holds, NO test. S6 the assessment-facts hold. S7 the counter-council: the ?-moods untouched. S8 the scatter and the cessation-fact. S9 the etiology: the pattern and the grounds hold, the confuse-demand popped (queue 5 open). S10_negative: CMD-US? contract guard; S11_negative: flag-never-block.</td><td>tested</td></tr>
+<tr><td><b>I</b></td><td>English leakage review</td><td>Operators derive from morph codes (the six Vqh1cp cohortatives and the mood-split by form-class; the pen-clause held as fear-fact, not demand; the bare-perfect kara vs the va-yiqra formula; zero imperatives beyond the havah come-particles) and the complete debut-map survey plus precedent pulls run BEFORE drafting (saphah / lashon / balal / havah / yarad / putz / qedem / shinar / bavel / chalal / davar / am / rea / nasa / zamam / migdal / chadal / batzar / levenah / chomer / chemar / saraf / banah / ir / echad / shem-sham careers; the YHWH-only scan). NOT supplied: why the descent, the holy-tongue identification, the judges-teaching, the He-and-His-court plural, the measure against the flood-generation, what the tower was FOR — every one [OPEN] or named-only; the buffer&#x27;s inserted verdict and its restraint-rhyme stay dual-track.</td><td>established</td></tr>
+<tr><td><b>J</b></td><td>Pre-flight (draft; freeze is the main loop&#x27;s)</td><td>Pre-flight 2026-08-03 against the UNMODIFIED repo interpreter — zero injected prototypes; GREEN (9/9 steps, 11/11 scenarios). Delivered status DRAFT — review and freeze stay with the main loop (freeze-after-review; the agent never freezes; succession after this unit).</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_11_1 · Gen.11.1 · <span class='expr'>ONE_LIP_ONE_WORDS</span></h3>
+<p><span class="he">וַיְהִי כָל־הָאָרֶץ שָׂפָה אֶחָת וּדְבָרִים אֲחָדִים</span> · <i>va-yehi khol-ha-aretz safah echat u-devarim achadim</i> · [EN-AID/JPS] And the whole earth was of one language and of one speech.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויהי כל הארץ שפה אחת</span> · <i>va-yehi khol-ha-aretz safah echat</i> · and all the earth was ONE LIP (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ודברים אחדים</span> · <i>u-devarim achadim</i> · and ONE WORDS (the plural oddity — its own arm)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(kol_ha_aretz_safah_echat_u_devarim_achadim, t1)</span><br><span class="gloss">= HOLDS(all-the-earth-safah-one-and-words-one, t1)</span><br>The opening state: SAPHAH (&#x27;lip/language&#x27;) — Torah token 1 of five, ALL five in this span (the table used the SIBLING lashon, &#x27;tongue&#x27; — the staged split; token 6 = 22:17, the seashore&#x27;s lip in the oath-blessing). DAVAR (&#x27;word/thing&#x27;) — the word-word&#x27;s Torah debut (256 tokens), in the odd plural DEVARIM ACHADIM (&#x27;one words&#x27;) [letter fact, held; the chain&#x27;s readings named-only; Onkelos smooths to &#x27;one speech&#x27; — dual-track]. ECHAD (&#x27;one&#x27;) opens its span-run of four.
+</td><td><span class="he">כָל־הָאָרֶץ שָׂפָה אֶחָת וּדְבָרִים אֲחָדִים</span> · <i>khol-ha-aretz safah echat u-devarim achadim</i><br><span class="gloss">= all-the-earth safah one words one</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The story starts from the state every conspiracy needs: everyone can talk to everyone.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_11_2 · Gen.11.2 · <span class='expr'>THE_JOURNEY_EAST_TO_SHINAR</span></h3>
+<p><span class="he">וַיְהִי בְּנָסְעָם מִקֶּדֶם וַיִּמְצְאוּ בִקְעָה בְּאֶרֶץ שִׁנְעָר וַיֵּשְׁבוּ שָׁם</span> · <i>va-yehi be-nasam mi-qedem va-yimtzeu viqah be-eretz Shinar va-yeshvu sham</i> · [EN-AID/JPS] And it came to pass, as they journeyed east, that they found a plain in the land of Shinar; and they dwelt there.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויהי בנסעם מקדם</span> · <i>va-yehi be-nasam mi-qedem</i> · as they journeyed from the east (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וימצאו בקעה בארץ שנער וישבו שם</span> · <i>va-yimtzeu viqah be-eretz Shinar va-yeshvu sham</i> · they found a valley in the land of Shinar and settled THERE</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(be_nasam_mi_qedem, t1)</span><br><span class="gloss">= HOLDS(in-nasam-from-east, t1)</span><br>NASA (&#x27;journey&#x27;) — Torah debut (token 2 = 12:9, Abram journeying on); MI-QEDEM (&#x27;from the east&#x27;) — QEDEM token 4: Eden planted mi-qedem (2:8), the cherubim stationed mi-qedem (3:24), the east-mountain (10:30), now the drift INTO Shinar — frozen gen_24&#x27;s staged bridge LANDS [Onkelos temporalizes: &#x27;AT FIRST&#x27; — the east-line invisible; dual-track].
+</td><td><span class="he">בְּנָסְעָם מִקֶּדֶם</span> · <i>be-nasam mi-qedem</i><br><span class="gloss">= in-nasam east</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">find(e1) ∧ Theme(e1, viqah_be_eretz_shinar)</span><br><span class="gloss">= find(e1) ∧ Theme(e1, viqah-in-earth-Shinar)</span><br>AGENTLESS by the letter&#x27;s own design: the subjects of 11:2-4 are never named — &#x27;the humankind&#x27; arrives only at 11:5, in God&#x27;s inspection [letter fact, held]. SHINAR token 2 (the second staged bridge lands; 10:10 gave the kingdom&#x27;s beginning there).
+</td><td><span class="he">וַיִּמְצְאוּ בִקְעָה בְּאֶרֶץ שִׁנְעָר</span> · <i>va-yimtzeu viqah be-eretz Shinar</i><br><span class="gloss">= and-yimtzeu viqah earth Shinar</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">settle(e2) ∧ Theme(e2, sham)</span><br><span class="gloss">= settle(e2) ∧ Theme(e2, there)</span><br>&#x27;And they settled THERE&#x27; — SHAM (&#x27;there&#x27;) begins its span-run of five, against SHEM (&#x27;name&#x27;) x2: SEVEN sh-m tokens in nine verses [the soundplay census-verified; letter fact].
+</td><td><span class="he">וַיֵּשְׁבוּ שָׁם</span> · <i>va-yeshvu sham</i><br><span class="gloss">= they-settled there</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">shinar are READ without prior install (known geography — gen_08s eden class; 10:10s token is a prose echo, no cross-wall receipt)</span><br><span class="gloss">= Shinar are READ without prior install (known geography — gen-08s Eden class; 10:10s token is a prose echo, no cross-wall receipt)</span><br>flag, not fix</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">An anonymous everyone drifts east and finds the flat place where the first kingdom already had its beginning.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_11_3 · Gen.11.3 · <span class='expr'>COME_LET_US_BRICK</span></h3>
+<p><span class="he">וַיֹּאמְרוּ אִישׁ אֶל־רֵעֵהוּ הָבָה נִלְבְּנָה לְבֵנִים וְנִשְׂרְפָה לִשְׂרֵפָה וַתְּהִי לָהֶם הַלְּבֵנָה לְאָבֶן וְהַחֵמָר הָיָה לָהֶם לַחֹמֶר</span> · <i>va-yomru ish el-reehu havah nilbenah levenim ve-nisrefah li-serefah va-tehi lahem ha-levenah le-aven ve-ha-chemar hayah lahem la-chomer</i> · [EN-AID/JPS] And they said one to another: &#x27;Come, let us make brick, and burn them thoroughly.&#x27; And they had brick for stone, and slime had they for mortar.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמרו איש אל רעהו הבה נלבנה לבנים ונשרפה לשרפה</span> · <i>va-yomru ish el-reehu havah nilbenah levenim ve-nisrefah li-serefah</i> · each said to his fellow: COME, let us brick bricks and burn them burning (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ותהי להם הלבנה לאבן והחמר היה להם לחמר</span> · <i>va-tehi lahem ha-levenah le-aven ve-ha-chemar hayah lahem la-chomer</i> · and the brick was for them STONE, and the bitumen was for them MORTAR</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">speak(e3) ∧ Agent(e3, ish_el_reehu)</span><br><span class="gloss">= speak(e3) ∧ Agent(e3, man-to-reehu)</span><br>THE FIRST HUMAN COUNCIL-SPEECH: HAVAH (&#x27;come!&#x27;) — Torah token 1 (tokens 1-3 all in-span; token 9 = Exodus 1:10, Pharaoh&#x27;s &#x27;come, let us deal wisely&#x27;: the next havah-conspiracy is against Israel). REA (&#x27;fellow/neighbor&#x27;) — the commandments&#x27; neighbor-word debuts inside the conspiracy&#x27;s ish el-reehu (&#x27;each to his fellow&#x27;) [letter facts].
+</td><td><span class="he">וַיֹּאמְרוּ אִישׁ אֶל־רֵעֵהוּ הָבָה</span> · <i>va-yomru ish el-reehu havah</i><br><span class="gloss">= say man to-reehu havah</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(ish_el_reehu, CMD-US(nilbenah(levenim)))</span><br><span class="gloss">= DECLARE(man-to-reehu, CMD-US(nilbenah(bricks)))</span><br>THE CORPUS&#x27;S FIRST HUMAN CMD-US [decision recorded, precedent quoted]: gen_06 held 1:26&#x27;s divine council as &#x27;CMD-US?&#x27; because &#x27;naaseh — CODED IMPERFECT (final-heh verbs show no distinct cohortative form) — TIR-028&#x27;s mandatory ? applies&#x27;. NILBENAH is -ah-MARKED — a morph-coded volitive (Vqh): TIR-033&#x27;s plain CMD-US, no ambiguity, no ? [the mood-split by form recorded]. LEVENAH (&#x27;brick&#x27;) tokens 1-2 — tokens 3-8 are ALL Egypt&#x27;s slavery bricks (Exod 1:14; 5:7-19): the material debuts at Babel and reruns at the bondage [career fact].
+</td><td><span class="he">נִלְבְּנָה לְבֵנִים</span> · <i>nilbenah levenim</i><br><span class="gloss">= nilbenah bricks</span></td><td class='cite'>TIR-033</td><td>tested</td></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(ish_el_reehu, CMD-US(nisrefah(li_serefah)))</span><br><span class="gloss">= DECLARE(man-to-reehu, CMD-US(nisrefah(to-me-serefah)))</span><br>The second demand: &#x27;let us BURN them a BURNING&#x27; — SARAF (&#x27;burn&#x27;) debuts at the brick-firing (the cognate doubling is the letter&#x27;s own). Like every human demand in this unit, NO receipt verse will ever pop it — the project is killed at 11:8 [gen_13&#x27;s open-forever class; the letter&#x27;s abandoned state].
+</td><td><span class="he">וְנִשְׂרְפָה לִשְׂרֵפָה</span> · <i>ve-nisrefah li-serefah</i><br><span class="gloss">= and-nisrefah to-me-serefah</span></td><td class='cite'>TIR-033</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_tehi_lahem_ha_levenah_le_aven, t1) ∧ HOLDS(ve_ha_chemar_hayah_lahem_la_chomer, t1)</span><br><span class="gloss">= HOLDS(and-be-to-them-the-levenah-to-stone, t1) ∧ HOLDS(and-the-bitumen-was-to-them-to-mortar, t1)</span><br>The narrator&#x27;s SUBSTITUTION-REPORT held as material-facts, NOT deed-receipts [decision recorded]: brick FOR stone, bitumen FOR mortar — the letter&#x27;s own lahem...le- structure. CHEMAR (&#x27;bitumen&#x27;) token 1 — token 2 the Siddim pits (14:10), token 3 MOSES&#x27; ARK (Exod 2:3: the waterproofing that built Babel saves the deliverer); CHOMER (&#x27;mortar&#x27;) token 2 = Exod 1:14 [career facts; Onkelos recasts — cast-bricks, fire, plaster; dual-track].
+</td><td><span class="he">וַתְּהִי לָהֶם הַלְּבֵנָה לְאָבֶן וְהַחֵמָר הָיָה לָהֶם לַחֹמֶר</span> · <i>va-tehi lahem ha-levenah le-aven ve-ha-chemar hayah lahem la-chomer</i><br><span class="gloss">= be to-them the-levenah stone bitumen was to-them mortar</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The conspiracy begins as a materials order: substitute technology for geology, and the neighbor-word is born taking minutes.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_11_4 · Gen.11.4 · <span class='expr'>CITY_TOWER_NAME_AND_FEAR</span></h3>
+<p><span class="he">וַיֹּאמְרוּ הָבָה נִבְנֶה־לָּנוּ עִיר וּמִגְדָּל וְרֹאשׁוֹ בַשָּׁמַיִם וְנַעֲשֶׂה־לָּנוּ שֵׁם פֶּן־נָפוּץ עַל־פְּנֵי כָל־הָאָרֶץ</span> · <i>va-yomru havah nivneh-lanu ir u-migdal ve-rosho va-shamayim ve-naaseh-lanu shem pen-nafutz al-pnei khol-ha-aretz</i> · [EN-AID/JPS] And they said: &#x27;Come, let us build us a city, and a tower, with its top in heaven, and let us make us a name; lest we be scattered abroad upon the face of the whole earth.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמרו הבה נבנה לנו עיר ומגדל וראשו בשמים ונעשה לנו שם</span> · <i>va-yomru havah nivneh-lanu ir u-migdal ve-rosho va-shamayim ve-naaseh-lanu shem</i> · come, let us build us a city and a tower, head in the heavens — and make us a NAME (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">פן נפוץ על פני כל הארץ</span> · <i>pen-nafutz al-pnei khol-ha-aretz</i> · LEST WE BE SCATTERED over the face of all the earth (the fear gets the closing arm)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">speak(e4) ∧ Agent(e4, ish_el_reehu)</span><br><span class="gloss">= speak(e4) ∧ Agent(e4, man-to-reehu)</span><br>The second council-speech — HAVAH token 2: the same come-particle, the project scaled from bricks to a world-anchor [letter fact].
+</td><td><span class="he">וַיֹּאמְרוּ הָבָה</span> · <i>va-yomru havah</i><br><span class="gloss">= say havah</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(ish_el_reehu, CMD-US?(nivneh(ir_u_migdal)))</span><br><span class="gloss">= DECLARE(man-to-reehu, CMD-US?(nivneh(a-city-and-a-tower)))</span><br>NIVNEH is a FINAL-HEH verb — gen_06&#x27;s exact form-problem (&#x27;final-heh verbs show no distinct cohortative form&#x27;): TIR-028&#x27;s mandatory ? applies — CMD-US? [the mood-split by form; precedent quoted]. BANAH (&#x27;build&#x27;) token 5 — the chain: the rib (2:22), Cain&#x27;s city, the altar, Ninveh, now BABEL; IR (&#x27;city&#x27;) token 5; MIGDAL (&#x27;tower&#x27;) — the Torah&#x27;s ONLY two tower-tokens are this project&#x27;s (11:4, 11:5); the head-in-the-heavens hyperbole held as fact below.
+</td><td><span class="he">נִבְנֶה־לָּנוּ עִיר וּמִגְדָּל וְרֹאשׁוֹ בַשָּׁמַיִם</span> · <i>nivneh-lanu ir u-migdal ve-rosho va-shamayim</i><br><span class="gloss">= nivneh-lanu a-city a-tower and-rosho heavens</span></td><td class='cite'>TIR-028</td><td>tested</td></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(ish_el_reehu, CMD-US?(naaseh(lanu_shem)))</span><br><span class="gloss">= DECLARE(man-to-reehu, CMD-US?(naaseh(lanu-a-name)))</span><br>THE LETTER&#x27;S SHARPEST MIRROR: the verb is NAASEH ITSELF — 1:26&#x27;s council-verb (&#x27;let US make man&#x27;), same verb, same final-heh form, same CMD-US? mood-mark — now in human mouths making a NAME (gen_06&#x27;s encoding matched exactly; the divine deliberation-grammar borrowed) [letter fact]. SHEM (&#x27;name&#x27;) — and the name-seekers stand ONE VERSE after the SHEM section (10:21-31): the brother&#x27;s name is the word they crave [letter fact, held; the demand never pops — the name they get is BAVEL, the narrator&#x27;s, not theirs: the irony is the letter&#x27;s, held in prose].
+</td><td><span class="he">וְנַעֲשֶׂה־לָּנוּ שֵׁם</span> · <i>ve-naaseh-lanu shem</i><br><span class="gloss">= and-naaseh-lanu a-name</span></td><td class='cite'>TIR-028</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_rosho_va_shamayim, t1) ∧ HOLDS(pen_nafutz_al_pnei_khol_ha_aretz, t1)</span><br><span class="gloss">= HOLDS(and-rosho-and-heavens, t1) ∧ HOLDS(lest-we-be-scattered-over-face-of-all-the-earth, t1)</span><br>The tower&#x27;s head in the heavens, and THE FEAR held as fact, not demand [decision recorded: pen (&#x27;lest&#x27;) + imperfect is a fear-clause]: PEN-NAFUTZ (&#x27;lest we be SCATTERED&#x27;) — PUTZ token 2; token 1 was 10:18&#x27;s Canaanite spread (frozen gen_24: &#x27;the verb Babel fears and receives&#x27; — landing); the fear will be granted VERBATIM at 11:8 [internal arc, inside this unit].
+</td><td><span class="he">וְרֹאשׁוֹ בַשָּׁמַיִם … פֶּן־נָפוּץ עַל־פְּנֵי כָל־הָאָרֶץ</span> · <i>ve-rosho va-shamayim … pen-nafutz al-pnei khol-ha-aretz</i><br><span class="gloss">= and-rosho heavens lest-we-be-scattered over-face-of all-the-earth</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The demand escalates to heaven&#x27;s floor and a name of their own — with the whole story&#x27;s ending already stated as the thing they fear.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_11_5 · Gen.11.5 · <span class='expr'>THE_DESCENT_TO_SEE</span></h3>
+<p><span class="he">וַיֵּרֶד יְהוָה לִרְאֹת אֶת־הָעִיר וְאֶת־הַמִּגְדָּל אֲשֶׁר בָּנוּ בְּנֵי הָאָדָם</span> · <i>va-yered YHWH lirot et-ha-ir ve-et-ha-migdal asher banu bnei ha-adam</i> · [EN-AID/JPS] And the LORD came down to see the city and the tower, which the children of men builded.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וירד יהוה לראת את העיר ואת המגדל</span> · <i>va-yered YHWH lirot et-ha-ir ve-et-ha-migdal</i> · and YHWH DESCENDED to SEE the city and the tower (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">אשר בנו בני האדם</span> · <i>asher banu bnei ha-adam</i> · which the sons of the HUMANKIND had built</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">descend(e5) ∧ Agent(e5, YHWH) ∧ Theme(e5, lirot_et_ha_ir_ve_et_ha_migdal)</span><br><span class="gloss">= descend(e5) ∧ Agent(e5, the-LORD) ∧ Theme(e5, lirot-obj-marker·et-the-a-city-and-obj-marker·et-the-a-tower)</span><br>YARAD (&#x27;descend&#x27;) — the descend-verb&#x27;s TORAH DEBUT is GOD&#x27;S descent, aimed by a purpose-infinitive at SEEING — and NO verdict-word follows: gen_19&#x27;s class quoted (&#x27;the week&#x27;s inspection verb with NO verdict-word: seeing without judging&#x27;) — NO TEST [decision recorded; Onkelos turns the descent into a REVEALING and the seeing into PUNISHING — the withheld verdict inserted by the buffer; dual-track, flagged]. Token 3 = 12:10 (Abram down to Egypt); token 5 = 18:21&#x27;s &#x27;let Me go down&#x27; at Sodom — the inspection-descent recurs. The span is YHWH-ONLY (x5; Elohim ZERO) — the counter-span to gen_22&#x27;s Elohim-only covenant [letter fact].
+</td><td><span class="he">וַיֵּרֶד יְהוָה לִרְאֹת</span> · <i>va-yered YHWH lirot</i><br><span class="gloss">= He-descended the-LORD lirot</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(asher_banu_bnei_ha_adam, t1)</span><br><span class="gloss">= HOLDS(which-they-built-sons-of-the-humankind, t1)</span><br>The built-so-far, held as BACKGROUND fact — a relative clause, NOT a receipt for the build-demand [decision recorded: the demand stays open; the project dies unfinished at 11:8]. BANAH token 6. And the builders finally get a name — BNEI HA-ADAM (&#x27;the sons of the humankind&#x27;): the species-word, withheld through 11:2-4, granted by the inspection [letter fact].
+</td><td><span class="he">אֲשֶׁר בָּנוּ בְּנֵי הָאָדָם</span> · <i>asher banu bnei ha-adam</i><br><span class="gloss">= which they-built sons-of humankind</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Heaven&#x27;s answer begins as pure looking: the tower that wanted the heavens gets a visitor from them, and the anonymous builders get only their species for a name.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_11_6 · Gen.11.6 · <span class='expr'>ONE_PEOPLE_THE_ASSESSMENT</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה הֵן עַם אֶחָד וְשָׂפָה אַחַת לְכֻלָּם וְזֶה הַחִלָּם לַעֲשׂוֹת וְעַתָּה לֹא־יִבָּצֵר מֵהֶם כֹּל אֲשֶׁר יָזְמוּ לַעֲשׂוֹת</span> · <i>va-yomer YHWH hen am echad ve-safah achat le-khulam ve-zeh hachillam la-asot ve-atah lo-yibatzer mehem kol asher yazmu la-asot</i> · [EN-AID/JPS] And the LORD said: &#x27;Behold, they are one people, and they have all one language; and this is what they begin to do; and now nothing will be withholden from them, which they purpose to do.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר יהוה הן עם אחד ושפה אחת לכלם וזה החלם לעשות</span> · <i>va-yomer YHWH hen am echad ve-safah achat le-khulam ve-zeh hachillam la-asot</i> · behold: ONE PEOPLE, ONE LIP for them all — and this is their BEGINNING (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ועתה לא יבצר מהם כל אשר יזמו לעשות</span> · <i>ve-atah lo-yibatzer mehem kol asher yazmu la-asot</i> · and now nothing they PLAN to do will be withheld from them</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">speak(e6) ∧ Agent(e6, YHWH) ∧ Theme(e6, hen_am_echad)</span><br><span class="gloss">= speak(e6) ∧ Agent(e6, the-LORD) ∧ Theme(e6, behold-people-one)</span><br>The divine assessment opens: AM (&#x27;people&#x27;) — the people-word&#x27;s TORAH DEBUT (445 tokens) is God naming this crowd ONE PEOPLE; the one-lip claim of 11:1 re-sounded in His mouth [letter fact].
+</td><td><span class="he">וַיֹּאמֶר יְהוָה הֵן עַם אֶחָד</span> · <i>va-yomer YHWH hen am echad</i><br><span class="gloss">= say the-LORD behold people one</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hen_am_echad_ve_safah_achat_le_khulam, t1) ∧ HOLDS(ve_zeh_hachillam_la_asot, t1) ∧ HOLDS(lo_yibatzer_mehem_kol_asher_yazmu, t1)</span><br><span class="gloss">= HOLDS(behold-people-one-and-safah-one-to-khulam, t1) ∧ HOLDS(and-this-hachillam-to-do, t1) ∧ HOLDS(not-will-be-withheld-mehem-all-which-they-plan, t1)</span><br>Three assessment-facts: the oneness; HACHILLAM (&#x27;their BEGINNING&#x27;) — CHALAL token 5, completing the staged threshold-chain (4:26 calling begun, 6:1 multiplying, 9:20 the vineyard, 10:8 Nimrod&#x27;s might, here the city); and LO-YIBATZER (&#x27;nothing will be WITHHELD&#x27;) — BATZAR&#x27;s debut, with ZAMAM (&#x27;plan&#x27;) — two Torah tokens: here and Deut 19:19&#x27;s scheming witness [letter facts; Onkelos will rhyme this withheld-verb with 11:8&#x27;s cessation — a buffer-side arc, dual-track].
+</td><td><span class="he">הֵן עַם אֶחָד … וְזֶה הַחִלָּם לַעֲשׂוֹת … לֹא־יִבָּצֵר מֵהֶם</span> · <i>hen am echad … ve-zeh hachillam la-asot … lo-yibatzer mehem</i><br><span class="gloss">= behold people one this hachillam do not-will-be-withheld mehem</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The assessment states the machine&#x27;s own premise back at it: one lip is capability, and capability unbounded.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_11_7 · Gen.11.7 · <span class='expr'>THE_MIRRORED_COUNTER_COUNCIL</span></h3>
+<p><span class="he">הָבָה נֵרְדָה וְנָבְלָה שָׁם שְׂפָתָם אֲשֶׁר לֹא יִשְׁמְעוּ אִישׁ שְׂפַת רֵעֵהוּ</span> · <i>havah nerdah ve-navlah sham sefatam asher lo yishmeu ish sefat reehu</i> · [EN-AID/JPS] &#x27;Come, let us go down, and there confound their language, that they may not understand one another&#x27;s speech.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">הבה נרדה ונבלה שם שפתם</span> · <i>havah nerdah ve-navlah sham sefatam</i> · COME, let Us descend and confuse THERE their lip (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">אשר לא ישמעו איש שפת רעהו</span> · <i>asher lo yishmeu ish sefat reehu</i> · that they hear not, each, his fellow&#x27;s lip</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, CMD-US(nerdah(sham)))</span><br><span class="gloss">= DECLARE(the-LORD, CMD-US(nerdah(there)))</span><br>THE GRAMMAR MIRRORED [letter fact]: the SAME havah (token 3) + cohortative shape as the human speeches, now from heaven — the speech continues 11:6&#x27;s saying (one va-yomer; no new speech-event). NERDAH (&#x27;let Us descend&#x27;) — -ah-marked volitive: plain CMD-US (TIR-033). THE LETTER RECORDS NO SECOND DESCENT-DEED: this demand never pops — it stands OPEN [letter-honest; the chain notices the single descent; named-only; Onkelos re-voices with the reveal-verb but KEEPS the council-plural — dual-track].
+</td><td><span class="he">הָבָה נֵרְדָה</span> · <i>havah nerdah</i><br><span class="gloss">= havah nerdah</span></td><td class='cite'>TIR-033</td><td>tested</td></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, CMD-US(navlah(sham_sefatam)))</span><br><span class="gloss">= DECLARE(the-LORD, CMD-US(navlah(there-sefatam)))</span><br>NAVLAH (&#x27;let Us CONFUSE&#x27;) — BALAL&#x27;s Torah token 1, the confuse-verb born as a divine demand; its own root will return as deed at 11:9 (the echo-receipt) — tokens 3+ are the offerings MIXED with oil (belulot ba-shemen, Exod 29:2 on): the tongue-confuser becomes the Sanctuary&#x27;s mixing-word [career crown]. The purpose-clause turns the neighbor-word (REA token 2) from the conspiracy&#x27;s address into the confusion&#x27;s casualty: &#x27;that they hear not, each, his fellow&#x27;s lip&#x27; [letter fact].
+</td><td><span class="he">וְנָבְלָה שָׁם שְׂפָתָם</span> · <i>ve-navlah sham sefatam</i><br><span class="gloss">= and-navlah there sefatam</span></td><td class='cite'>TIR-033</td><td>tested</td></tr>
+</table>
+<div class="meta">Heaven quotes the conspiracy back at itself — same come, same let-us — and aims it at the one thing the conspiracy ran on.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_11_8 · Gen.11.8 · <span class='expr'>THE_SCATTER_AND_THE_CEASING</span></h3>
+<p><span class="he">וַיָּפֶץ יְהוָה אֹתָם מִשָּׁם עַל־פְּנֵי כָל־הָאָרֶץ וַיַּחְדְּלוּ לִבְנֹת הָעִיר</span> · <i>va-yafetz YHWH otam mi-sham al-pnei khol-ha-aretz va-yachdelu livnot ha-ir</i> · [EN-AID/JPS] So the LORD scattered them abroad from thence upon the face of all the earth; and they left off to build the city.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויפץ יהוה אתם משם על פני כל הארץ</span> · <i>va-yafetz YHWH otam mi-sham al-pnei khol-ha-aretz</i> · and YHWH SCATTERED them from there over the face of all the earth (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויחדלו לבנת העיר</span> · <i>va-yachdelu livnot ha-ir</i> · and they CEASED building the city (the abandonment is the closing arm)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">scatter(e7) ∧ Agent(e7, YHWH) ∧ Theme(e7, mi_sham_al_pnei_khol_ha_aretz)</span><br><span class="gloss">= scatter(e7) ∧ Agent(e7, the-LORD) ∧ Theme(e7, from-there-over-face-of-all-the-earth)</span><br>THE FEAR GRANTED VERBATIM [internal arc, one unit]: PUTZ token 3 executes 11:4&#x27;s pen-nafutz in the same words — al-pnei khol-ha-aretz (&#x27;over the face of all the earth&#x27;) — the thing they built against, delivered BY the building [letter fact].
+</td><td><span class="he">וַיָּפֶץ יְהוָה אֹתָם מִשָּׁם</span> · <i>va-yafetz YHWH otam mi-sham</i><br><span class="gloss">= He-scattered the-LORD otam there</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yachdelu_livnot_ha_ir, t1)</span><br><span class="gloss">= HOLDS(and-yachdelu-livnot-the-a-city, t1)</span><br>THE CORPUS&#x27;S FIRST ABANDONED PROJECT, held as the CESSATION-FACT [decision recorded]: CHADAL (&#x27;cease&#x27;) debuts here (token 2 = 18:11, Sarah&#x27;s ceased way); BANAH token 7 (the ceased infinitive). NO INSTALL [decision recorded]: every install precedent — city, ark, altar, vineyard, the Ninveh four — is a COMPLETED build; this one the letter stops mid-verse: the city and tower stay OUT of WORLD, and the four human demands stay OPEN above this fact — the machine&#x27;s abandoned state is exactly the letter&#x27;s [Onkelos: &#x27;they were RESTRAINED from building&#x27; — the cessation rhymed with 11:6&#x27;s withheld-verb by one Aramaic root; buffer-side arc, dual-track].
+</td><td><span class="he">וַיַּחְדְּלוּ לִבְנֹת הָעִיר</span> · <i>va-yachdelu livnot ha-ir</i><br><span class="gloss">= and-yachdelu livnot a-city</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The ending is a bookkeeping horror: the demands never close, the building never finishes, and the fear clause executes as written.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_11_9 · Gen.11.9 · <span class='expr'>THE_NAME_ETIOLOGY_AND_THE_ECHO</span></h3>
+<p><span class="he">עַל־כֵּן קָרָא שְׁמָהּ בָּבֶל כִּי־שָׁם בָּלַל יְהוָה שְׂפַת כָּל־הָאָרֶץ וּמִשָּׁם הֱפִיצָם יְהוָה עַל־פְּנֵי כָּל־הָאָרֶץ</span> · <i>al-ken kara shemah Bavel ki-sham balal YHWH sefat kol-ha-aretz u-mi-sham hefitzam YHWH al-pnei khol-ha-aretz</i> · [EN-AID/JPS] Therefore was the name of it called Babel; because the LORD did there confound the language of all the earth; and from thence did the LORD scatter them abroad upon the face of all the earth.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">על כן קרא שמה בבל כי שם בלל יהוה שפת כל הארץ</span> · <i>al-ken kara shemah Bavel ki-sham balal YHWH sefat kol-ha-aretz</i> · THEREFORE its name Bavel — for THERE YHWH CONFUSED the lip of all the earth (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ומשם הפיצם יהוה על פני כל הארץ</span> · <i>u-mi-sham hefitzam YHWH al-pnei khol-ha-aretz</i> · and from THERE YHWH scattered them over the face of all the earth</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">HOLDS(navlah(sham_sefatam), t2)</span><br><span class="gloss">= HOLDS(navlah(there-sefatam), t2)</span><br>THE ECHO-RECEIPT (gen_16/17/20&#x27;s class): the divine confuse-demand&#x27;s OWN ROOT returns as deed — navlah (&#x27;let Us confuse&#x27;) -&gt; BALAL (&#x27;He confused&#x27;), qal to qal, inside the naming&#x27;s ki-clause: the demand pops — SETTLED CYCLE #5, the confuse-cycle (joining make, aseh+qach, bo, tze+hotze) [decision recorded; gen_06&#x27;s own council-demand popped by delivery — the mechanics mirrored].
+</td><td><span class="he">כִּי־שָׁם בָּלַל יְהוָה שְׂפַת כָּל־הָאָרֶץ</span> · <i>ki-sham balal YHWH sefat kol-ha-aretz</i><br><span class="gloss">= for-there He-confused the-LORD lip-of all-the-earth</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PATTERN</td><td><span class="expr">PATTERN(al_ken_kara_shemah_bavel)</span><br><span class="gloss">= PATTERN(over-so-kara-shemah-Babel)</span><br>THE AL-KEN (&#x27;therefore&#x27;) FORMULA&#x27;S THIRD GENRE [precedents quoted]: gen_09&#x27;s practice-etiology (&#x27;PATTERN(azav(ish, av_ve_em) ∧ davak(ish, be_ishto) ∧ hayu(basar_echad))&#x27;), gen_24&#x27;s saying-etiology (10:9&#x27;s proverb), now a NAME-etiology — standing, untriggered, addressed to no one. NO NAME op [decision recorded]: KARA is a bare perfect with an indefinite subject (&#x27;one called&#x27;) — no va-yiqra (&#x27;and-he-called&#x27;) narrative formula: gen_24&#x27;s report-naming rule holds; the REGISTRY takes nothing. BAVEL token 2 closes 10:10&#x27;s name-before-story bracket; the pun BAVEL/BALAL is the etiology&#x27;s engine [letter fact; Onkelos keeps it doubled — balbel; dual-track]. The name they wanted (11:4) and the name they got: the letter&#x27;s whole irony in one formula [held in prose].
+</td><td><span class="he">עַל־כֵּן קָרָא שְׁמָהּ בָּבֶל</span> · <i>al-ken kara shemah Bavel</i><br><span class="gloss">= over-so kara shemah Bavel</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ki_sham_balal_yhwh_sefat_kol_ha_aretz, t1) ∧ HOLDS(u_mi_sham_hefitzam_yhwh, t1)</span><br><span class="gloss">= HOLDS(for-there-He-confused-yhwh-lip-of-all-the-earth, t1) ∧ HOLDS(and-from-there-hefitzam-yhwh, t1)</span><br>The etiology&#x27;s two grounds as facts: THERE He confused the lip of all the earth (SAPHAH token 5 — the lip-word&#x27;s span-run closes; token 6 is 22:17&#x27;s seashore); from THERE He scattered them (PUTZ token 4; SHAM tokens close the sevenfold shem/sham soundplay) [letter facts].
+</td><td><span class="he">כִּי־שָׁם בָּלַל … וּמִשָּׁם הֱפִיצָם</span> · <i>ki-sham balal … u-mi-sham hefitzam</i><br><span class="gloss">= for-there He-confused there hefitzam</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The narrator files the ruin under its own pun: the city of the name gets a name that means the end of understanding — and the ledger closes with the confusion received and the descent still open.</div>
+</div>
+<h2>State machine</h2>
+<div class="meta">Babel (standalone; registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER).</div>
+<table><tr><th>state</th><th>meaning</th></tr>
+<tr><td><b>S_boot</b></td><td>Before 11:1 — all registers empty (standalone unit)</td></tr>
+<tr><td><b>S_one_lip</b></td><td>After 11:1 — the one-lip/one-words state holds</td></tr>
+<tr><td><b>S_shinar</b></td><td>After 11:2 — the eastward journey-facts; found and settled (agentless — the letter&#x27;s suspended subject); shinar flagged as read</td></tr>
+<tr><td><b>S_brick_council</b></td><td>After 11:3 — the corpus&#x27;s FIRST HUMAN CMD-US demands pushed (brick, burn — plain volitives); the substitution-facts hold; queue 2 open</td></tr>
+<tr><td><b>S_name_council</b></td><td>After 11:4 — the city-tower and make-us-a-name demands pushed (CMD-US? — gen_06&#x27;s final-heh class, naaseh itself); the fear-fact held; queue 4 open</td></tr>
+<tr><td><b>S_descent</b></td><td>After 11:5 — the descend-to-see event fired, NO TEST (gen_19&#x27;s class); the built-so-far background fact; the builders named only as the humankind</td></tr>
+<tr><td><b>S_assessment</b></td><td>After 11:6 — the divine speech: one-people/beginning/nothing-withheld facts hold</td></tr>
+<tr><td><b>S_counter_council</b></td><td>After 11:7 — the mirrored divine CMD-US pair pushed (descend, confuse); queue 6 open</td></tr>
+<tr><td><b>S_scattered</b></td><td>After 11:8 — the scatter executed (the fear granted verbatim); the cessation-fact holds; NO install — the abandoned build</td></tr>
+<tr><td><b>S_named</b></td><td>After 11:9 — the confuse-demand POPPED by its own root (settled cycle #5); the al-ken name-PATTERN standing; queue ends 5 open</td></tr>
+</table><table><tr><th>from</th><th>to</th><th>via</th></tr>
+<tr><td>S_boot</td><td>S_one_lip</td><td>STEP_Gn_11_1</td></tr>
+<tr><td>S_one_lip</td><td>S_shinar</td><td>STEP_Gn_11_2</td></tr>
+<tr><td>S_shinar</td><td>S_brick_council</td><td>STEP_Gn_11_3</td></tr>
+<tr><td>S_brick_council</td><td>S_name_council</td><td>STEP_Gn_11_4</td></tr>
+<tr><td>S_name_council</td><td>S_descent</td><td>STEP_Gn_11_5</td></tr>
+<tr><td>S_descent</td><td>S_assessment</td><td>STEP_Gn_11_6</td></tr>
+<tr><td>S_assessment</td><td>S_counter_council</td><td>STEP_Gn_11_7</td></tr>
+<tr><td>S_counter_council</td><td>S_scattered</td><td>STEP_Gn_11_8</td></tr>
+<tr><td>S_scattered</td><td>S_named</td><td>STEP_Gn_11_9</td></tr>
+</table>
+<div class="note"><b>AFTER_S_named</b> — TIME: t0 EMPTY; one mark (t2 — the echo-receipt&#x27;s timestamp). WORLD: ZERO installs — the city and tower are the corpus&#x27;s FIRST ABANDONED PROJECT: every install precedent was a completed build, and 11:8 stops this one mid-verse [decision recorded] — plus 1 presupposed (shinar, known geography). Standing facts (12): the one-lip/one-words opening, the eastward journey, the two substitution-facts (brick for stone, bitumen for mortar — material-facts, not receipts), the head-in-the-heavens and the FEAR (pen-nafutz — answered verbatim at 11:8: an internal arc, closed inside the unit), the built-so-far background clause, the three assessment-facts (one people; the begin-threshold&#x27;s fifth token; nothing-withheld), the cessation (chadal&#x27;s debut over the unfinished city), and the etiology&#x27;s two grounds (there He confused; from there He scattered). PATTERN (1): al_ken_kara_shemah_bavel — the therefore-formula&#x27;s THIRD genre (practice 2:24, saying 10:9, NAME here); NO registry write (bare-perfect kara, no va-yiqra formula — gen_24&#x27;s rule). SPECS: SIX demands pushed, ONE popped, FIVE OPEN at rest — the four human council-demands (brick, burn, city-tower, make-us-a-name: the corpus&#x27;s first human CMD-US family, mood-marked by form — two plain volitives, two CMD-US? on gen_06&#x27;s final-heh class including naaseh itself) stand letter-faithfully open over the cessation-fact (no receipt verses exist; the project is killed, not delivered), and the divine DESCEND-demand stays open (the letter records no second descent-deed); the divine CONFUSE-demand popped at 11:9 by its own root returning as deed (navlah -&gt; balal) — SETTLED CYCLE #5, the confuse-cycle. TESTS: EMPTY — the descent SEES and never judges (gen_19&#x27;s class; the buffer inserts the verdict, the letter does not). REGISTRY: ZERO writes. LEDGER: EMPTY. EVENTS: seven narrative (find, settle, speak x3, descend, scatter) + six declares + one result. FLAGS (1): read_before_install x1 (shinar). The machine ends mid-ruin by design: a queue nothing will ever pop, a build nothing will ever finish, and a standing name that files the whole state under CONFUSION.</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>One lip, one words: after STEP_Gn_11_1</td><td>All registers empty (standalone unit).</td><td>Facts safah-echat HOLD; SPECS empty.<br><span class="gloss">= Facts safah-one HOLD; SPECS empty.</span></td><td><span class="he">שָׂפָה אֶחָת וּדְבָרִים אֲחָדִים</span> · <i>safah echat u-devarim achadim</i><br><span class="gloss">= safah one words one</span></td></tr>
+<tr><td><b>S2</b></td><td>The journey east, the suspended subject: after STEP_Gn_11_2</td><td>S1 state.</td><td>flags shinar as read-before-install; Facts mi-qedem HOLD.<br><span class="gloss">= flags Shinar as read-before-install; Facts from-east HOLD.</span></td><td><span class="he">וַיִּמְצְאוּ בִקְעָה בְּאֶרֶץ שִׁנְעָר</span> · <i>va-yimtzeu viqah be-eretz Shinar</i><br><span class="gloss">= and-yimtzeu viqah earth Shinar</span></td></tr>
+<tr><td><b>S3</b></td><td>The first human council, the substitution-facts: after STEP_Gn_11_3</td><td>S2 state.</td><td>Facts levenah-le-aven HOLD; Facts chemar-la-chomer HOLD.<br><span class="gloss">= Facts levenah-to-stone HOLD; Facts bitumen-to-mortar HOLD.</span></td><td><span class="he">הָבָה נִלְבְּנָה לְבֵנִים</span> · <i>havah nilbenah levenim</i><br><span class="gloss">= havah nilbenah bricks</span></td></tr>
+<tr><td><b>S4</b></td><td>The name-demands pushed and open: after STEP_Gn_11_4</td><td>S3 state.</td><td>CMD-US?(nivneh(ir_u_migdal)) pushed and OPEN; CMD-US?(naaseh(lanu_shem)) pushed and OPEN.<br><span class="gloss">= CMD-US?(nivneh(a-city-and-a-tower)) pushed and OPEN; CMD-US?(naaseh(lanu-a-name)) pushed and OPEN.</span></td><td><span class="he">וְנַעֲשֶׂה־לָּנוּ שֵׁם</span> · <i>ve-naaseh-lanu shem</i><br><span class="gloss">= and-naaseh-lanu a-name</span></td></tr>
+<tr><td><b>S5</b></td><td>The descent sees, no verdict: after STEP_Gn_11_5</td><td>S4 state.</td><td>Facts asher-banu-bnei-ha-adam HOLD; no test, no name.<br><span class="gloss">= Facts which-they-built-sons-of-the-humankind HOLD; no test, no name.</span></td><td><span class="he">וַיֵּרֶד יְהוָה לִרְאֹת</span> · <i>va-yered YHWH lirot</i><br><span class="gloss">= He-descended the-LORD lirot</span></td></tr>
+<tr><td><b>S6</b></td><td>The assessment-facts hold: after STEP_Gn_11_6</td><td>S5 state.</td><td>Facts am-echad HOLD; Facts lo-yibatzer HOLD.<br><span class="gloss">= Facts people-one HOLD; Facts not-will-be-withheld HOLD.</span></td><td><span class="he">הֵן עַם אֶחָד וְשָׂפָה אַחַת לְכֻלָּם</span> · <i>hen am echad ve-safah achat le-khulam</i><br><span class="gloss">= behold people one and-safah one to-khulam</span></td></tr>
+<tr><td><b>S7</b></td><td>The counter-council, the ?-moods untouched: after STEP_Gn_11_7</td><td>S6 state.</td><td>CMD-US?(naaseh(lanu_shem)) mood remains CMD-US?.<br><span class="gloss">= CMD-US?(naaseh(lanu-a-name)) mood remains CMD-US?.</span></td><td><span class="he">הָבָה נֵרְדָה וְנָבְלָה שָׁם שְׂפָתָם</span> · <i>havah nerdah ve-navlah sham sefatam</i><br><span class="gloss">= havah nerdah and-navlah there sefatam</span></td></tr>
+<tr><td><b>S8</b></td><td>The fear granted, the build abandoned: after STEP_Gn_11_8</td><td>S7 state.</td><td>Facts va-yachdelu-livnot HOLD.<br><span class="gloss">= Facts and-yachdelu-livnot HOLD.</span></td><td><span class="he">וַיַּחְדְּלוּ לִבְנֹת הָעִיר</span> · <i>va-yachdelu livnot ha-ir</i><br><span class="gloss">= and-yachdelu livnot a-city</span></td></tr>
+<tr><td><b>S9</b></td><td>The etiology stands, the echo received: after STEP_Gn_11_9</td><td>S8 state.</td><td>Facts pattern-kara-bavel HOLD; Facts sham-balal-yhwh HOLD.<br><span class="gloss">= Facts pattern-kara-Babel HOLD; Facts there-He-confused-yhwh HOLD.</span></td><td><span class="he">עַל־כֵּן קָרָא שְׁמָהּ בָּבֶל</span> · <i>al-ken kara shemah Bavel</i><br><span class="gloss">= over-so kara shemah Bavel</span></td></tr>
+<tr><td><b>S10_negative</b></td><td>Negative: the machine&#x27;s ? stays guarded</td><td>A synthetic CMD-US? demand (the machine&#x27;s own contract self-test).</td><td>CMD-US? never auto-upgrades: resolution without citation must REFUSE; with a per-unit citation it may resolve — entries pop demands; nothing but citation moves a mood.</td><td><span class="he">נַעֲשֶׂה</span> · <i>naaseh</i><br><span class="gloss">= naaseh</span></td></tr>
+<tr><td><b>S11_negative</b></td><td>Negative: flags never block</td><td>A synthetic commit with TESTS empty (the machine&#x27;s own contract self-test).</td><td>Cycle close with TESTS empty must be FLAGGED, never blocked.<br><span class="gloss">= Cycle close with TESTS empty must in FLAGGED, never blocked.</span></td><td></td></tr>
+</table>
+<h2>Exports (reusable patterns)</h2><table><tr><th>id</th><th>content</th></tr>
+<tr><td>EXPORT_first_human_cmd_us</td><td><span class="he">הָבָה נִבְנֶה־לָּנוּ … וְנַעֲשֶׂה־לָּנוּ שֵׁם</span> · <i>havah nivneh-lanu … ve-naaseh-lanu shem</i> · the corpus&#x27;s FIRST HUMAN CMD-US demands — gen_06&#x27;s council class in human mouths, and 11:4&#x27;s verb is NAASEH ITSELF (1:26&#x27;s &#x27;let US make&#x27;, same verb, same final-heh form-problem, same CMD-US? mood-mark); the mood-split by form recorded (the -ah-marked volitives plain CMD-US per TIR-033; the final-heh pair CMD-US? per TIR-028); HAVAH (&#x27;come!&#x27;) tokens 1-3 all in-span — human, human, DIVINE: the grammar mirrored from heaven — and token 9 is Exodus 1:10, Pharaoh&#x27;s &#x27;come, let us deal wisely&#x27;: the Torah&#x27;s next havah-conspiracy is against Israel</td></tr>
+<tr><td>EXPORT_abandoned_project</td><td><span class="he">וַיַּחְדְּלוּ לִבְנֹת הָעִיר</span> · <i>va-yachdelu livnot ha-ir</i> · the corpus&#x27;s FIRST ABANDONED PROJECT: four human demands stand open forever over a cessation-fact (CHADAL &#x27;cease&#x27; debuts; gen_13&#x27;s open-forever class; no interpreter extension — the open queue plus the fact IS the letter&#x27;s state); NO install (every install precedent was a COMPLETED build — city, ark, altar, vineyard, the Ninveh four; this build the letter stops mid-verse); the fear granted VERBATIM inside one unit — 11:4&#x27;s pen-nafutz (&#x27;lest we be scattered&#x27;) executed word-for-word at 11:8 (putz tokens 2-3; token 1 was 10:18&#x27;s staged debut) [internal arc]; MIGDAL (&#x27;tower&#x27;) — the Torah&#x27;s only two tower-tokens are this ruin&#x27;s</td></tr>
+<tr><td>EXPORT_confuse_cycle_settled</td><td><span class="he">וְנָבְלָה … כִּי־שָׁם בָּלַל יְהוָה</span> · <i>ve-navlah … ki-sham balal YHWH</i> · SETTLED CYCLE #5 — the confuse-cycle: the divine demand&#x27;s own root returns as deed (navlah &#x27;let Us confuse&#x27; -&gt; balal &#x27;He confused&#x27;), popped by the echo-receipt class (gen_16/17/20); the divine DESCEND-demand stays open — the letter records ONE descent only (11:5, before the speech) [letter-honest; named-only]; the descent itself takes NO TEST (gen_19&#x27;s seeing-without-judging — and Onkelos inserts the verdict the letter withheld: &#x27;was REVEALED to PUNISH&#x27;; dual-track); BALAL&#x27;s later career: the offerings MIXED with oil — the tongue-confuser becomes the Sanctuary&#x27;s mixing-word [career crown]</td></tr>
+<tr><td>EXPORT_babel_debut_field</td><td><span class="he">שָׂפָה אֶחָת וּדְבָרִים אֲחָדִים</span> · <i>safah echat u-devarim achadim</i> · the debut-field: DAVAR (&#x27;word/thing&#x27;, 256 tokens) born in &#x27;one words&#x27;; AM (&#x27;people&#x27;, 445 tokens) born in GOD&#x27;S assessment of Babel; REA (the commandments&#x27; neighbor-word) born in the conspiracy&#x27;s each-to-his-fellow and confused one verse later; NASA (&#x27;journey&#x27;) born on the road to Shinar (token 2 = Abram&#x27;s); ZAMAM (&#x27;plan&#x27;) — here and the scheming witness only; SAPHAH (&#x27;lip&#x27;) tokens 1-5 all in-span vs the table&#x27;s LASHON (the sibling-split — leveled in Onkelos); the SHEM/SHAM soundplay census-verified (name x2 + there x5 = seven sh-m tokens) with the name-seekers one verse after the SHEM section; the YHWH-only span (x5, Elohim zero) countering gen_22&#x27;s Elohim-only</td></tr>
+<tr><td>EXPORT_babel_egypt_rerun</td><td><span class="he">נִלְבְּנָה לְבֵנִים … וְנִשְׂרְפָה לִשְׂרֵפָה</span> · <i>nilbenah levenim … ve-nisrefah li-serefah</i> · the material-vocabulary debuts at Babel and re-runs at Egypt&#x27;s slavery: LEVENAH (&#x27;brick&#x27;) tokens 1-2 here, tokens 3-8 ALL Exodus bondage (1:14; 5:7-19); CHOMER (&#x27;mortar&#x27;) token 2 = Exod 1:14; CHEMAR (&#x27;bitumen&#x27;) token 2 = the Siddim pits, token 3 = MOSES&#x27; ARK (Exod 2:3 — Babel&#x27;s waterproofing saves the deliverer); the letter&#x27;s own substitution-structure (brick FOR stone, bitumen FOR mortar) held as material-facts; the begin-threshold chain completes (4:26, 6:1, 9:20, 10:8, 11:6 — chalal token 5, the staged landing); the al-ken formula&#x27;s third genre (practice, saying, NAME) with no registry write (bare-perfect kara — gen_24&#x27;s report-naming rule)</td></tr>
+</table>
+<h2>Oral notes (named, tiered, dual-track — never merged)</h2>
+<div class="note"><span class="badge tier-o">observation</span> <b>Bavli Sanhedrin 109a (the division-generation); Bavli Chullin 89a; Bereshit Rabbah 38 (the span; the brick-over-man mourning); Rashi at 11:1 (one lip — the holy tongue), 11:5 (the descent — to teach judges), 11:7 (the plural — He and His court), 11:9 (the measure against the flood-generation&#x27;s) — gen_25 Tier-A queue</b><br><span class="he">הָבָה נֵרְדָה</span> · <i>(queue — named only)</i> · Named, not read: the cache holds ZERO sources anchored to Gen 11:1-9 — NINETEENTH tripwire span. Detector classes predicted: the descent-to-judge teachings are a JUDICIAL-PROCEDURE class (doctrine from the purpose-clause); the nerdah-plural re-runs gen_06&#x27;s council-plural class; the one-lip identification is a LANGUAGE-IDENTIFICATION class; the two-generations comparison is a MEASURE-FOR-MEASURE class.
+<br><i>Queue entry — no claim made beyond the naming.</i></div>
+<div class="note"><span class="badge tier-v">verified</span> <b>Onkelos Genesis 11:1-9 — read Tier-A at derive time (9 sequential fetches, Data/FETCHLOG.md 2026-08-03)</b><br><span class="he">וְאִתְגְּלִי יְיָ לְאִתְפְּרָעָא</span> · <i>ve-itgeli YY le-itpara</i> · The span&#x27;s translation witness: THE DESCENT BECOMES A REVEALING AND THE SEEING BECOMES PUNISHING [find-class] — &#x27;the LORD was REVEALED to EXACT PUNISHMENT upon the DEEDS of the city and tower&#x27;: the anthropomorphism dodged, the letter&#x27;s withheld verdict INSERTED (gen_19&#x27;s seeing-without-judging is precisely what the buffer refuses to carry), the buildings turned to deeds (the machine&#x27;s no-TEST stands on the letter; dual-track, flagged). The divine cohortative re-voiced with the reveal-verb (havu nitgeli) but the COUNCIL-PLURAL KEPT (u-nevalbel, &#x27;let Us confuse&#x27;). The BAVEL/BALAL pun survives DOUBLED (balal -&gt; balbel); SAPHAH -&gt; LISHAN throughout — the lip/tongue sibling-split leveled to the table&#x27;s tongue-word; &#x27;one words&#x27; -&gt; &#x27;one speech&#x27;. The east TEMPORALIZED (mi-qedem -&gt; &#x27;at first&#x27; — the Eden-to-Babel east-line invisible); Shinar -&gt; &#x27;the land of Babel&#x27; again; the materials recast (cast-bricks, fire, plaster); the tower&#x27;s head &#x27;reaching to the TOP OF the heavens&#x27;. The cessation becomes a RESTRAINT rhymed with the assessment: &#x27;they ceased&#x27; -&gt; &#x27;they were RESTRAINED&#x27;, the same Aramaic root the buffer gave 11:6&#x27;s &#x27;nothing will be withheld&#x27; — one root where the letter has two verbs: a buffer-side arc the letter does not draw (flagged).
+<br><i>Read from Data/sefaria_texts/ (local, gitignored; FETCHLOG is provenance). Dual-track; not merged.</i></div>
+<h2>Binary trees (ta'amim v3, glue bricks)</h2>
+<h3>Gen.11.1 · parser unique · 7 words</h3>
+<div class="meta"><span class="he">ויהי כל־הארץ שׂפה אחת ודברים אחדים</span> · <i>va-yehi khal-ha-aretz safa echat u-devarim achadim</i> · All the earth: one lip, and one words. [EN-AID]</div>
+<pre>PHRASE (binary 7w) וַֽ/יְהִ֥י כָל הָ/אָ֖רֶץ שָׂפָ֣ה אֶחָ֑ת וּ/דְבָ…
+├── PHRASE (binary 5w) וַֽ/יְהִ֥י כָל הָ/אָ֖רֶץ שָׂפָ֣ה אֶחָ֑ת
+│   ├── [0-2] GLUE וַֽ/יְהִ֥י כָל הָ/אָ֖רֶץ (tifcha, rank=2)
+│   └── [3-4] GLUE שָׂפָ֣ה אֶחָ֑ת (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 2w) וּ/דְבָרִ֖ים אֲחָדִֽים
+    ├── [5] וּ/דְבָרִ֖ים (tifcha, rank=2)
+    └── [6] אֲחָדִֽים (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.2 · parser unique · 9 words</h3>
+<div class="meta"><span class="he">ויהי בנסעם מקדם וימצאו בקעה בארץ שׁנער וישׁבו שׁם</span> · <i>va-yehi be-nasa-m mi-qedem va-yimtzu viqa be-eretz shinar va-yeshvu sham</i> · They journeyed east, found a valley in Shinar, settled there. [EN-AID]</div>
+<pre>PHRASE (binary 9w) וַֽ/יְהִ֖י בְּ/נָסְעָ֣/ם מִ/קֶּ֑דֶם וַֽ/יִּמְצְ…
+├── PHRASE (binary 3w) וַֽ/יְהִ֖י בְּ/נָסְעָ֣/ם מִ/קֶּ֑דֶם
+│   ├── [0] וַֽ/יְהִ֖י (tifcha, rank=2)
+│   └── [1-2] GLUE בְּ/נָסְעָ֣/ם מִ/קֶּ֑דֶם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) וַֽ/יִּמְצְא֥וּ בִקְעָ֛ה בְּ/אֶ֥רֶץ שִׁנְעָ֖ר ו…
+    ├── PHRASE (binary 4w) וַֽ/יִּמְצְא֥וּ בִקְעָ֛ה בְּ/אֶ֥רֶץ שִׁנְעָ֖ר
+    │   ├── [3-4] GLUE וַֽ/יִּמְצְא֥וּ בִקְעָ֛ה (tevir, rank=3)
+    │   └── [5-6] GLUE בְּ/אֶ֥רֶץ שִׁנְעָ֖ר (tifcha, rank=2)
+    └── [7-8] GLUE וַ/יֵּ֥שְׁבוּ שָֽׁם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.3 · parser unique · 17 words</h3>
+<div class="meta"><span class="he">ויאמרו אישׁ אל־רעהו הבה נלבנה לבנים ונשׂרפה לשׂרפה ותהי להם הלבנה לאבן והחמר היה להם לחמר</span> · <i>va-yomru ish el-ree-hu hava-ה nilbna levenim ve-nisrfa li-serefa va-tehi la-hem ha-levena le-aven ve-ha-chemar haya la-hem la-chomer</i> · Come, let us brick bricks and burn them — brick for stone. [EN-AID]</div>
+<pre>PHRASE (binary 17w) וַ/יֹּאמְר֞וּ אִ֣ישׁ אֶל רֵעֵ֗/הוּ הָ֚בָ/ה נִלְ…
+├── PHRASE (binary 9w) וַ/יֹּאמְר֞וּ אִ֣ישׁ אֶל רֵעֵ֗/הוּ הָ֚בָ/ה נִלְ…
+│   ├── PHRASE (binary 7w) וַ/יֹּאמְר֞וּ אִ֣ישׁ אֶל רֵעֵ֗/הוּ הָ֚בָ/ה נִלְ…
+│   │   ├── PHRASE (binary 4w) וַ/יֹּאמְר֞וּ אִ֣ישׁ אֶל רֵעֵ֗/הוּ
+│   │   │   ├── [0] וַ/יֹּאמְר֞וּ (gershayim, rank=4)
+│   │   │   └── [1-3] GLUE אִ֣ישׁ אֶל רֵעֵ֗/הוּ (revia, rank=3)
+│   │   └── PHRASE (binary 3w) הָ֚בָ/ה נִלְבְּנָ֣ה לְבֵנִ֔ים
+│   │       ├── [4] הָ֚בָ/ה (yetiv, rank=3)
+│   │       └── [5-6] GLUE נִלְבְּנָ֣ה לְבֵנִ֔ים (zaqef qatan, rank=2)
+│   └── PHRASE (binary 2w) וְ/נִשְׂרְפָ֖ה לִ/שְׂרֵפָ֑ה
+│       ├── [7] וְ/נִשְׂרְפָ֖ה (tifcha, rank=2)
+│       └── [8] לִ/שְׂרֵפָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) וַ/תְּהִ֨י לָ/הֶ֤ם הַ/לְּבֵנָה֙ לְ/אָ֔בֶן וְ/הַ…
+    ├── PHRASE (binary 4w) וַ/תְּהִ֨י לָ/הֶ֤ם הַ/לְּבֵנָה֙ לְ/אָ֔בֶן
+    │   ├── [9-11] GLUE וַ/תְּהִ֨י לָ/הֶ֤ם הַ/לְּבֵנָה֙ (pashta, rank=3)
+    │   └── [12] לְ/אָ֔בֶן (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) וְ/הַ֣/חֵמָ֔ר הָיָ֥ה לָ/הֶ֖ם לַ/חֹֽמֶר
+        ├── [13] וְ/הַ֣/חֵמָ֔ר (zaqef qatan, rank=2)
+        └── PHRASE (binary 3w) הָיָ֥ה לָ/הֶ֖ם לַ/חֹֽמֶר
+            ├── [14-15] GLUE הָיָ֥ה לָ/הֶ֖ם (tifcha, rank=2)
+            └── [16] לַ/חֹֽמֶר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.4 · parser unique · 17 words</h3>
+<div class="meta"><span class="he">ויאמרו הבה נבנה־לנו עיר ומגדל וראשׁו בשׁמים ונעשׂה־לנו שׁם פן־נפוץ על־פני כל־הארץ</span> · <i>va-yomru hava-ה nivne-la-nu ir u-migdal ve-rosh-o va-shamayim ve-naase-la-nu shem pen-nafutz al-pene khal-ha-aretz</i> · Come, let us build a city and tower — a name, lest we scatter. [EN-AID]</div>
+<pre>PHRASE (binary 17w) וַ/יֹּאמְר֞וּ הָ֣בָ/ה נִבְנֶה לָּ֣/נוּ עִ֗יר וּ…
+├── PHRASE (binary 11w) וַ/יֹּאמְר֞וּ הָ֣בָ/ה נִבְנֶה לָּ֣/נוּ עִ֗יר וּ…
+│   ├── PHRASE (binary 8w) וַ/יֹּאמְר֞וּ הָ֣בָ/ה נִבְנֶה לָּ֣/נוּ עִ֗יר וּ…
+│   │   ├── PHRASE (binary 5w) וַ/יֹּאמְר֞וּ הָ֣בָ/ה נִבְנֶה לָּ֣/נוּ עִ֗יר
+│   │   │   ├── [0] וַ/יֹּאמְר֞וּ (gershayim, rank=4)
+│   │   │   └── [1-4] GLUE הָ֣בָ/ה נִבְנֶה לָּ֣/נוּ עִ֗יר (revia, rank=3)
+│   │   └── PHRASE (binary 3w) וּ/מִגְדָּל֙ וְ/רֹאשׁ֣/וֹ בַ/שָּׁמַ֔יִם
+│   │       ├── [5] וּ/מִגְדָּל֙ (pashta, rank=3)
+│   │       └── [6-7] GLUE וְ/רֹאשׁ֣/וֹ בַ/שָּׁמַ֔יִם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) וְ/נַֽעֲשֶׂה לָּ֖/נוּ שֵׁ֑ם
+│       ├── [8-9] GLUE וְ/נַֽעֲשֶׂה לָּ֖/נוּ (tifcha, rank=2)
+│       └── [10] שֵׁ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) פֶּן נָפ֖וּץ עַל פְּנֵ֥י כָל הָ/אָֽרֶץ
+    ├── [11-12] GLUE פֶּן נָפ֖וּץ (tifcha, rank=2)
+    └── [13-16] GLUE עַל פְּנֵ֥י כָל הָ/אָֽרֶץ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.5 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">וירד יהוה לראת את־העיר ואת־המגדל אשׁר בנו בני האדם</span> · <i>va-yered YHWH li-reot et-ha-ir ve-et-ha-migdal asher banu bene ha-adam</i> · And YHWH descended to SEE what the humankind had built. [EN-AID]</div>
+<pre>PHRASE (binary 11w) וַ/יֵּ֣רֶד יְהוָ֔ה לִ/רְאֹ֥ת אֶת הָ/עִ֖יר וְ/אֶ…
+├── PHRASE (binary 7w) וַ/יֵּ֣רֶד יְהוָ֔ה לִ/רְאֹ֥ת אֶת הָ/עִ֖יר וְ/אֶ…
+│   ├── [0-1] GLUE וַ/יֵּ֣רֶד יְהוָ֔ה (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) לִ/רְאֹ֥ת אֶת הָ/עִ֖יר וְ/אֶת הַ/מִּגְדָּ֑ל
+│       ├── [2-4] GLUE לִ/רְאֹ֥ת אֶת הָ/עִ֖יר (tifcha, rank=2)
+│       └── [5-6] GLUE וְ/אֶת הַ/מִּגְדָּ֑ל (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) אֲשֶׁ֥ר בָּנ֖וּ בְּנֵ֥י הָ/אָדָֽם
+    ├── [7-8] GLUE אֲשֶׁ֥ר בָּנ֖וּ (tifcha, rank=2)
+    └── [9-10] GLUE בְּנֵ֥י הָ/אָדָֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.6 · parser unique · 19 words</h3>
+<div class="meta"><span class="he">ויאמר יהוה הן עם אחד ושׂפה אחת לכלם וזה החלם לעשׂות ועתה לא־יבצר מהם כל אשׁר יזמו לעשׂות</span> · <i>va-yomer YHWH hen am echad ve-safa achat le-khula-m ve-ze hachila-m la-asot ve-ata lo-yibatzer me-hem kol asher yazmu la-asot</i> · One people, one lip — nothing they plan will be withheld. [EN-AID]</div>
+<pre>PHRASE (binary 19w) וַ/יֹּ֣אמֶר יְהוָ֗ה הֵ֣ן עַ֤ם אֶחָד֙ וְ/שָׂפָ֤ה…
+├── PHRASE (binary 11w) וַ/יֹּ֣אמֶר יְהוָ֗ה הֵ֣ן עַ֤ם אֶחָד֙ וְ/שָׂפָ֤ה…
+│   ├── PHRASE (binary 8w) וַ/יֹּ֣אמֶר יְהוָ֗ה הֵ֣ן עַ֤ם אֶחָד֙ וְ/שָׂפָ֤ה…
+│   │   ├── [0-1] GLUE וַ/יֹּ֣אמֶר יְהוָ֗ה (revia, rank=3)
+│   │   └── PHRASE (binary 6w) הֵ֣ן עַ֤ם אֶחָד֙ וְ/שָׂפָ֤ה אַחַת֙ לְ/כֻלָּ֔/ם
+│   │       ├── [2-4] GLUE הֵ֣ן עַ֤ם אֶחָד֙ (pashta, rank=3)
+│   │       └── PHRASE (binary 3w) וְ/שָׂפָ֤ה אַחַת֙ לְ/כֻלָּ֔/ם
+│   │           ├── [5-6] GLUE וְ/שָׂפָ֤ה אַחַת֙ (pashta, rank=3)
+│   │           └── [7] לְ/כֻלָּ֔/ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) וְ/זֶ֖ה הַחִלָּ֣/ם לַ/עֲשׂ֑וֹת
+│       ├── [8] וְ/זֶ֖ה (tifcha, rank=2)
+│       └── [9-10] GLUE הַחִלָּ֣/ם לַ/עֲשׂ֑וֹת (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) וְ/עַתָּה֙ לֹֽא יִבָּצֵ֣ר מֵ/הֶ֔ם כֹּ֛ל אֲשֶׁ֥ר…
+    ├── PHRASE (binary 4w) וְ/עַתָּה֙ לֹֽא יִבָּצֵ֣ר מֵ/הֶ֔ם
+    │   ├── [11] וְ/עַתָּה֙ (pashta, rank=3)
+    │   └── [12-14] GLUE לֹֽא יִבָּצֵ֣ר מֵ/הֶ֔ם (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) כֹּ֛ל אֲשֶׁ֥ר יָזְמ֖וּ לַֽ/עֲשֽׂוֹת
+        ├── PHRASE (binary 3w) כֹּ֛ל אֲשֶׁ֥ר יָזְמ֖וּ
+        │   ├── [15] כֹּ֛ל (tevir, rank=3)
+        │   └── [16-17] GLUE אֲשֶׁ֥ר יָזְמ֖וּ (tifcha, rank=2)
+        └── [18] לַֽ/עֲשֽׂוֹת (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.7 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">הבה נרדה ונבלה שׁם שׂפתם אשׁר לא ישׁמעו אישׁ שׂפת רעהו</span> · <i>hava-ה nerda ve-navla sham sefata-m asher lo yishmu ish sefat ree-hu</i> · Come, let Us descend and confuse there their lip. [EN-AID]</div>
+<pre>PHRASE (binary 11w) הָ֚בָ/ה נֵֽרְדָ֔ה וְ/נָבְלָ֥ה שָׁ֖ם שְׂפָתָ֑/ם …
+├── PHRASE (binary 5w) הָ֚בָ/ה נֵֽרְדָ֔ה וְ/נָבְלָ֥ה שָׁ֖ם שְׂפָתָ֑/ם
+│   ├── PHRASE (binary 2w) הָ֚בָ/ה נֵֽרְדָ֔ה
+│   │   ├── [0] הָ֚בָ/ה (yetiv, rank=3)
+│   │   └── [1] נֵֽרְדָ֔ה (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) וְ/נָבְלָ֥ה שָׁ֖ם שְׂפָתָ֑/ם
+│       ├── [2-3] GLUE וְ/נָבְלָ֥ה שָׁ֖ם (tifcha, rank=2)
+│       └── [4] שְׂפָתָ֑/ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) אֲשֶׁר֙ לֹ֣א יִשְׁמְע֔וּ אִ֖ישׁ שְׂפַ֥ת רֵעֵֽ/ה…
+    ├── PHRASE (binary 3w) אֲשֶׁר֙ לֹ֣א יִשְׁמְע֔וּ
+    │   ├── [5] אֲשֶׁר֙ (pashta, rank=3)
+    │   └── [6-7] GLUE לֹ֣א יִשְׁמְע֔וּ (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) אִ֖ישׁ שְׂפַ֥ת רֵעֵֽ/הוּ
+        ├── [8] אִ֖ישׁ (tifcha, rank=2)
+        └── [9-10] GLUE שְׂפַ֥ת רֵעֵֽ/הוּ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.8 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">ויפץ יהוה אתם משׁם על־פני כל־הארץ ויחדלו לבנת העיר</span> · <i>va-yafetz YHWH et-m mi-sham al-pene khal-ha-aretz va-yachdlu li-venot ha-ir</i> · YHWH scattered them — and they ceased building the city. [EN-AID]</div>
+<pre>PHRASE (binary 11w) וַ/יָּ֨פֶץ יְהוָ֥ה אֹתָ֛/ם מִ/שָּׁ֖ם עַל פְּנֵ֣…
+├── PHRASE (binary 8w) וַ/יָּ֨פֶץ יְהוָ֥ה אֹתָ֛/ם מִ/שָּׁ֖ם עַל פְּנֵ֣…
+│   ├── PHRASE (binary 4w) וַ/יָּ֨פֶץ יְהוָ֥ה אֹתָ֛/ם מִ/שָּׁ֖ם
+│   │   ├── [0-2] GLUE וַ/יָּ֨פֶץ יְהוָ֥ה אֹתָ֛/ם (tevir, rank=3)
+│   │   └── [3] מִ/שָּׁ֖ם (tifcha, rank=2)
+│   └── [4-7] GLUE עַל פְּנֵ֣י כָל הָ/אָ֑רֶץ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וַֽ/יַּחְדְּל֖וּ לִ/בְנֹ֥ת הָ/עִֽיר
+    ├── [8] וַֽ/יַּחְדְּל֖וּ (tifcha, rank=2)
+    └── [9-10] GLUE לִ/בְנֹ֥ת הָ/עִֽיר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.11.9 · parser unique · 19 words</h3>
+<div class="meta"><span class="he">על־כן קרא שׁמה בבל כי־שׁם בלל יהוה שׂפת כל־הארץ ומשׁם הפיצם יהוה על־פני כל־הארץ</span> · <i>al-ken qara shema-ה bavel ki-sham balal YHWH sefat kal-ha-aretz u-mi-sham hefitza-m YHWH al-pene kal-ha-aretz</i> · Therefore its name is Babel: there He confused, from there He scattered. [EN-AID]</div>
+<pre>PHRASE (binary 19w) עַל כֵּ֞ן קָרָ֤א שְׁמָ/הּ֙ בָּבֶ֔ל כִּי שָׁ֛ם ב…
+├── PHRASE (binary 12w) עַל כֵּ֞ן קָרָ֤א שְׁמָ/הּ֙ בָּבֶ֔ל כִּי שָׁ֛ם ב…
+│   ├── PHRASE (binary 5w) עַל כֵּ֞ן קָרָ֤א שְׁמָ/הּ֙ בָּבֶ֔ל
+│   │   ├── PHRASE (binary 4w) עַל כֵּ֞ן קָרָ֤א שְׁמָ/הּ֙
+│   │   │   ├── [0-1] GLUE עַל כֵּ֞ן (gershayim, rank=4)
+│   │   │   └── [2-3] GLUE קָרָ֤א שְׁמָ/הּ֙ (pashta, rank=3)
+│   │   └── [4] בָּבֶ֔ל (zaqef qatan, rank=2)
+│   └── PHRASE (binary 7w) כִּי שָׁ֛ם בָּלַ֥ל יְהוָ֖ה שְׂפַ֣ת כָּל הָ/אָ֑ר…
+│       ├── PHRASE (binary 4w) כִּי שָׁ֛ם בָּלַ֥ל יְהוָ֖ה
+│       │   ├── [5-6] GLUE כִּי שָׁ֛ם (tevir, rank=3)
+│       │   └── [7-8] GLUE בָּלַ֥ל יְהוָ֖ה (tifcha, rank=2)
+│       └── [9-11] GLUE שְׂפַ֣ת כָּל הָ/אָ֑רֶץ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) וּ/מִ/שָּׁם֙ הֱפִיצָ֣/ם יְהוָ֔ה עַל פְּנֵ֖י כָּ…
+    ├── PHRASE (binary 3w) וּ/מִ/שָּׁם֙ הֱפִיצָ֣/ם יְהוָ֔ה
+    │   ├── [12] וּ/מִ/שָּׁם֙ (pashta, rank=3)
+    │   └── [13-14] GLUE הֱפִיצָ֣/ם יְהוָ֔ה (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) עַל פְּנֵ֖י כָּל הָ/אָֽרֶץ
+        ├── [15-16] GLUE עַל פְּנֵ֖י (tifcha, rank=2)
+        └── [17-18] GLUE כָּל הָ/אָֽרֶץ (silluq (verse-end emperor), rank=1)
+</pre>
+<h2>Word coverage — 121/121 words with named roles</h2>
+<table><tr><th>ref</th><th>#</th><th>Hebrew</th><th>translit</th><th>English</th><th>role</th><th>kind</th><th>rule</th></tr>
+<tr><td>Gen.11.1</td><td>0</td><td class='he-cell'>ויהי</td><td>va-yehi</td><td>and-be</td><td>and-be</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.1</td><td>1</td><td class='he-cell'>כל</td><td>khal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.1</td><td>2</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.1</td><td>3</td><td class='he-cell'>שפה</td><td>safa</td><td>lip</td><td>SAPHAH_TOKEN_1_of_five_all_in_span</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.1</td><td>4</td><td class='he-cell'>אחת</td><td>echat</td><td>one</td><td>echad_span_run_of_four</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.1</td><td>5</td><td class='he-cell'>ודברים</td><td>u-devarim</td><td>and-words</td><td>DAVAR_TOKEN_1_the_word_word</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.1</td><td>6</td><td class='he-cell'>אחדים</td><td>achadim</td><td>one</td><td>the_plural_oddity_one_words</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.2</td><td>0</td><td class='he-cell'>ויהי</td><td>va-yehi</td><td>and-be</td><td>and-be</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.2</td><td>1</td><td class='he-cell'>בנסעם</td><td>be-nasa-m</td><td>as-they-journeyed</td><td>NASA_TOKEN_1_abram_next</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.2</td><td>2</td><td class='he-cell'>מקדם</td><td>mi-qedem</td><td>from-the-east</td><td>QEDEM_token_4_staged_bridge_lands</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.2</td><td>3</td><td class='he-cell'>וימצאו</td><td>va-yimtzu</td><td>and-find</td><td>and-find</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.2</td><td>4</td><td class='he-cell'>בקעה</td><td>viqa</td><td>a-valley</td><td>biqah_debut</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.2</td><td>5</td><td class='he-cell'>בארץ</td><td>be-eretz</td><td>in-earth</td><td>in-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.2</td><td>6</td><td class='he-cell'>שנער</td><td>shinar</td><td>Shinar</td><td>SHINAR_token_2_staged_bridge_lands</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.2</td><td>7</td><td class='he-cell'>וישבו</td><td>va-yeshvu</td><td>and-they-settled</td><td>and-they-settled</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.2</td><td>8</td><td class='he-cell'>שם</td><td>sham</td><td>there</td><td>SHAM_the_soundplay_begins</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.3</td><td>0</td><td class='he-cell'>ויאמרו</td><td>va-yomru</td><td>and-say</td><td>and-say</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.3</td><td>1</td><td class='he-cell'>איש</td><td>ish</td><td>man</td><td>man</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.3</td><td>2</td><td class='he-cell'>אל</td><td>el</td><td>to</td><td>to</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.3</td><td>3</td><td class='he-cell'>רעהו</td><td>ree-hu</td><td>his-fellow</td><td>REA_TOKEN_1_the_neighbor_word</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.3</td><td>4</td><td class='he-cell'>הבה</td><td>hava-h</td><td>come</td><td>HAVAH_TOKEN_1_pharaoh_at_token_9</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.3</td><td>5</td><td class='he-cell'>נלבנה</td><td>nilbna</td><td>let-us-brick</td><td>nilbenah_marked_volitive_CMD_US</td><td>logic_bearing</td><td class='cite'>TIR-033</td></tr>
+<tr><td>Gen.11.3</td><td>6</td><td class='he-cell'>לבנים</td><td>levenim</td><td>bricks</td><td>LEVENAH_TOKEN_1_egypts_bricks_next</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.3</td><td>7</td><td class='he-cell'>ונשרפה</td><td>ve-nisrfa</td><td>and-let-us-burn</td><td>SARAF_debut_at_the_firing</td><td>logic_bearing</td><td class='cite'>TIR-033</td></tr>
+<tr><td>Gen.11.3</td><td>8</td><td class='he-cell'>לשרפה</td><td>li-serefa</td><td>a-burning</td><td>a-burning</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.3</td><td>9</td><td class='he-cell'>ותהי</td><td>va-tehi</td><td>and-be</td><td>and-be</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.3</td><td>10</td><td class='he-cell'>להם</td><td>la-hem</td><td>for-them</td><td>for-them</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.3</td><td>11</td><td class='he-cell'>הלבנה</td><td>ha-levena</td><td>the-brick</td><td>levenah_token_2</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.3</td><td>12</td><td class='he-cell'>לאבן</td><td>le-aven</td><td>for-stone</td><td>the_substitution_structure</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.3</td><td>13</td><td class='he-cell'>והחמר</td><td>ve-ha-chemar</td><td>and-the-bitumen</td><td>CHEMAR_TOKEN_1_moses_ark_at_3</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.3</td><td>14</td><td class='he-cell'>היה</td><td>haya</td><td>be</td><td>be</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.3</td><td>15</td><td class='he-cell'>להם</td><td>la-hem</td><td>for-them</td><td>for-them</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.3</td><td>16</td><td class='he-cell'>לחמר</td><td>la-chomer</td><td>for-mortar</td><td>CHOMER_TOKEN_1_exodus_1_14_next</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.4</td><td>0</td><td class='he-cell'>ויאמרו</td><td>va-yomru</td><td>and-say</td><td>and-say</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.4</td><td>1</td><td class='he-cell'>הבה</td><td>hava-h</td><td>come</td><td>havah_token_2</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.4</td><td>2</td><td class='he-cell'>נבנה</td><td>nivne</td><td>let-us-build</td><td>BANAH_token_5_final_heh_CMD_US_query</td><td>logic_bearing</td><td class='cite'>TIR-028</td></tr>
+<tr><td>Gen.11.4</td><td>3</td><td class='he-cell'>לנו</td><td>la-nu</td><td>for-us</td><td>for-us</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.4</td><td>4</td><td class='he-cell'>עיר</td><td>ir</td><td>a-city</td><td>IR_token_5_cains_nimrods_babels</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.4</td><td>5</td><td class='he-cell'>ומגדל</td><td>u-migdal</td><td>and-a-tower</td><td>MIGDAL_TOKEN_1_of_two_both_here</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.4</td><td>6</td><td class='he-cell'>וראשו</td><td>ve-rosh-o</td><td>and-its-head</td><td>and-its-head</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.4</td><td>7</td><td class='he-cell'>בשמים</td><td>va-shamayim</td><td>in-the-heavens</td><td>the_head_hyperbole</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.4</td><td>8</td><td class='he-cell'>ונעשה</td><td>ve-naase</td><td>and-let-us-make</td><td>NAASEH_1_26s_own_verb_CMD_US_query</td><td>logic_bearing</td><td class='cite'>TIR-028</td></tr>
+<tr><td>Gen.11.4</td><td>9</td><td class='he-cell'>לנו</td><td>la-nu</td><td>for-us</td><td>for-us</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.4</td><td>10</td><td class='he-cell'>שם</td><td>shem</td><td>a-name</td><td>SHEM_the_craved_word_after_the_shem_section</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.4</td><td>11</td><td class='he-cell'>פן</td><td>pen</td><td>lest</td><td>pen_the_fear_clause</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.4</td><td>12</td><td class='he-cell'>נפוץ</td><td>nafutz</td><td>we-be-scattered</td><td>PUTZ_token_2_the_fear</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.4</td><td>13</td><td class='he-cell'>על</td><td>al</td><td>over</td><td>over</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.4</td><td>14</td><td class='he-cell'>פני</td><td>pene</td><td>the-face-of</td><td>the-face-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.4</td><td>15</td><td class='he-cell'>כל</td><td>khal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.4</td><td>16</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.5</td><td>0</td><td class='he-cell'>וירד</td><td>va-yered</td><td>and-He-descended</td><td>YARAD_TORAH_DEBUT_gods_descent</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.5</td><td>1</td><td class='he-cell'>יהוה</td><td>YHWH</td><td>YHWH</td><td>name_YHWH</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.5</td><td>2</td><td class='he-cell'>לראת</td><td>li-reot</td><td>to-see</td><td>seeing_without_judging_gen_19_no_TEST</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.5</td><td>3</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.11.5</td><td>4</td><td class='he-cell'>העיר</td><td>ha-ir</td><td>the-city</td><td>the-city</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.5</td><td>5</td><td class='he-cell'>ואת</td><td>ve-et</td><td>obj-marker·et</td><td>obj_marker</td><td>glue</td><td class='cite'>TIR-008</td></tr>
+<tr><td>Gen.11.5</td><td>6</td><td class='he-cell'>המגדל</td><td>ha-migdal</td><td>the-tower</td><td>migdal_token_2</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.5</td><td>7</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>which</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.5</td><td>8</td><td class='he-cell'>בנו</td><td>banu</td><td>they-built</td><td>banah_token_6_background_not_receipt</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.5</td><td>9</td><td class='he-cell'>בני</td><td>bene</td><td>son</td><td>son</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.5</td><td>10</td><td class='he-cell'>האדם</td><td>ha-adam</td><td>the-humankind</td><td>bnei_ha_adam_the_suspended_subject_named</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.6</td><td>0</td><td class='he-cell'>ויאמר</td><td>va-yomer</td><td>and-say</td><td>and-say</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.6</td><td>1</td><td class='he-cell'>יהוה</td><td>YHWH</td><td>YHWH</td><td>yhwh_only_span_x5_elohim_zero</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.6</td><td>2</td><td class='he-cell'>הן</td><td>hen</td><td>behold</td><td>behold</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.6</td><td>3</td><td class='he-cell'>עם</td><td>am</td><td>people</td><td>AM_TOKEN_1_born_in_gods_assessment</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.6</td><td>4</td><td class='he-cell'>אחד</td><td>echad</td><td>one</td><td>echad_token_three_of_span</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.6</td><td>5</td><td class='he-cell'>ושפה</td><td>ve-safa</td><td>and-lip</td><td>and-lip</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.6</td><td>6</td><td class='he-cell'>אחת</td><td>achat</td><td>one</td><td>one</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.6</td><td>7</td><td class='he-cell'>לכלם</td><td>le-khula-m</td><td>for-all-of-them</td><td>for-all-of-them</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.6</td><td>8</td><td class='he-cell'>וזה</td><td>ve-ze</td><td>and-this</td><td>and-this</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.6</td><td>9</td><td class='he-cell'>החלם</td><td>hachila-m</td><td>their-beginning</td><td>CHALAL_token_5_threshold_chain_complete</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.6</td><td>10</td><td class='he-cell'>לעשות</td><td>la-asot</td><td>to-do</td><td>to-do</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.6</td><td>11</td><td class='he-cell'>ועתה</td><td>ve-ata</td><td>and-now</td><td>and-now</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.6</td><td>12</td><td class='he-cell'>לא</td><td>lo</td><td>not</td><td>not</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.6</td><td>13</td><td class='he-cell'>יבצר</td><td>yibatzer</td><td>will-be-withheld</td><td>BATZAR_debut_lo_yibatzer</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.6</td><td>14</td><td class='he-cell'>מהם</td><td>me-hem</td><td>from-them</td><td>from-them</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.6</td><td>15</td><td class='he-cell'>כל</td><td>kol</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.6</td><td>16</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>which</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.6</td><td>17</td><td class='he-cell'>יזמו</td><td>yazmu</td><td>they-plan</td><td>ZAMAM_of_two_deut_witness</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.6</td><td>18</td><td class='he-cell'>לעשות</td><td>la-asot</td><td>to-do</td><td>to-do</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.7</td><td>0</td><td class='he-cell'>הבה</td><td>hava-h</td><td>come</td><td>havah_token_3_the_grammar_mirrored</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.7</td><td>1</td><td class='he-cell'>נרדה</td><td>nerda</td><td>let-Us-descend</td><td>nerdah_divine_CMD_US_stays_open</td><td>logic_bearing</td><td class='cite'>TIR-033</td></tr>
+<tr><td>Gen.11.7</td><td>2</td><td class='he-cell'>ונבלה</td><td>ve-navla</td><td>and-let-Us-confuse</td><td>BALAL_TOKEN_1_the_demand</td><td>logic_bearing</td><td class='cite'>TIR-033</td></tr>
+<tr><td>Gen.11.7</td><td>3</td><td class='he-cell'>שם</td><td>sham</td><td>there</td><td>sham_the_soundplay</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.7</td><td>4</td><td class='he-cell'>שפתם</td><td>sefata-m</td><td>their-lip</td><td>saphah_token_3</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.7</td><td>5</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>which</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.7</td><td>6</td><td class='he-cell'>לא</td><td>lo</td><td>not</td><td>not</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.7</td><td>7</td><td class='he-cell'>ישמעו</td><td>yishmu</td><td>understand</td><td>understand</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.7</td><td>8</td><td class='he-cell'>איש</td><td>ish</td><td>man</td><td>man</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.7</td><td>9</td><td class='he-cell'>שפת</td><td>sefat</td><td>lip-of</td><td>saphah_token_4</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.7</td><td>10</td><td class='he-cell'>רעהו</td><td>ree-hu</td><td>his-fellow</td><td>rea_token_2_now_the_casualty</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.8</td><td>0</td><td class='he-cell'>ויפץ</td><td>va-yafetz</td><td>and-He-scattered</td><td>PUTZ_token_3_the_fear_granted_verbatim</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.8</td><td>1</td><td class='he-cell'>יהוה</td><td>YHWH</td><td>YHWH</td><td>name_YHWH</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.8</td><td>2</td><td class='he-cell'>אתם</td><td>et-m</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.11.8</td><td>3</td><td class='he-cell'>משם</td><td>mi-sham</td><td>from-there</td><td>from-there</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.8</td><td>4</td><td class='he-cell'>על</td><td>al</td><td>over</td><td>over</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.8</td><td>5</td><td class='he-cell'>פני</td><td>pene</td><td>the-face-of</td><td>the-face-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.8</td><td>6</td><td class='he-cell'>כל</td><td>khal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.8</td><td>7</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.8</td><td>8</td><td class='he-cell'>ויחדלו</td><td>va-yachdlu</td><td>and-they-ceased</td><td>CHADAL_DEBUT_the_abandoned_project</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.8</td><td>9</td><td class='he-cell'>לבנת</td><td>li-venot</td><td>to-build</td><td>banah_token_7_no_install</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.8</td><td>10</td><td class='he-cell'>העיר</td><td>ha-ir</td><td>the-city</td><td>the-city</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.9</td><td>0</td><td class='he-cell'>על</td><td>al</td><td>over</td><td>over</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.9</td><td>1</td><td class='he-cell'>כן</td><td>ken</td><td>so</td><td>so</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.9</td><td>2</td><td class='he-cell'>קרא</td><td>qara</td><td>one-called</td><td>kara_bare_perfect_no_NAME_op</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.9</td><td>3</td><td class='he-cell'>שמה</td><td>shema-h</td><td>its-name</td><td>shem_token_2_the_name_they_got</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.9</td><td>4</td><td class='he-cell'>בבל</td><td>bavel</td><td>Babel</td><td>BAVEL_token_2_closes_10_10_bracket</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.9</td><td>5</td><td class='he-cell'>כי</td><td>ki</td><td>for</td><td>for</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.9</td><td>6</td><td class='he-cell'>שם</td><td>sham</td><td>there</td><td>sham_the_pun_ground</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.9</td><td>7</td><td class='he-cell'>בלל</td><td>balal</td><td>He-confused</td><td>BALAL_token_2_the_echo_receipt</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.9</td><td>8</td><td class='he-cell'>יהוה</td><td>YHWH</td><td>YHWH</td><td>name_YHWH</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.9</td><td>9</td><td class='he-cell'>שפת</td><td>sefat</td><td>lip-of</td><td>saphah_token_5</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.9</td><td>10</td><td class='he-cell'>כל</td><td>kal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.9</td><td>11</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.9</td><td>12</td><td class='he-cell'>ומשם</td><td>u-mi-sham</td><td>and-from-there</td><td>and-from-there</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.9</td><td>13</td><td class='he-cell'>הפיצם</td><td>hefitza-m</td><td>He-scattered-them</td><td>putz_token_4_the_summary</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.9</td><td>14</td><td class='he-cell'>יהוה</td><td>YHWH</td><td>YHWH</td><td>name_YHWH</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.9</td><td>15</td><td class='he-cell'>על</td><td>al</td><td>over</td><td>over</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.9</td><td>16</td><td class='he-cell'>פני</td><td>pene</td><td>the-face-of</td><td>the-face-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.9</td><td>17</td><td class='he-cell'>כל</td><td>kal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.11.9</td><td>18</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_25_babel — Babel: come, let us build — come, let Us go down (11:1-9) [frozen]
+
+final state: WORLD=[] (+1 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[&#x27;read_before_install&#x27;]
+
+=== S1 — One lip, one words: after STEP_Gn_11_1
+    שָׂפָה אֶחָת וּדְבָרִים אֲחָדִים (safah echat u-devarim achadim)
+    PASS  Facts safah-echat HOLD  (1 facts)
+    PASS  SPECS empty.  (queue=0)
+
+=== S2 — The journey east, the suspended subject: after STEP_Gn_11_2
+    וַיִּמְצְאוּ בִקְעָה בְּאֶרֶץ שִׁנְעָר (va-yimtzeu viqah be-eretz Shinar)
+    PASS  flags shinar as read-before-install  (flagged=[&#x27;shinar&#x27;])
+    PASS  Facts mi-qedem HOLD.  (2 facts)
+
+=== S3 — The first human council, the substitution-facts: after STEP_Gn_11_3
+    הָבָה נִלְבְּנָה לְבֵנִים (havah nilbenah levenim)
+    PASS  Facts levenah-le-aven HOLD  (4 facts)
+    PASS  Facts chemar-la-chomer HOLD.  (4 facts)
+
+=== S4 — The name-demands pushed and open: after STEP_Gn_11_4
+    וְנַעֲשֶׂה־לָּנוּ שֵׁם (ve-naaseh-lanu shem)
+    PASS  CMD-US?(nivneh(ir_u_migdal)) pushed and OPEN  (queue=[&#x27;nilbenah(levenim)&#x27;, &#x27;nisrefah(li_serefah)&#x27;, &#x27;nivneh(ir_u_migdal)&#x27;, &#x27;naaseh(lanu_shem)&#x27;])
+    PASS  CMD-US?(naaseh(lanu_shem)) pushed and OPEN.  (queue=[&#x27;nilbenah(levenim)&#x27;, &#x27;nisrefah(li_serefah)&#x27;, &#x27;nivneh(ir_u_migdal)&#x27;, &#x27;naaseh(lanu_shem)&#x27;])
+
+=== S5 — The descent sees, no verdict: after STEP_Gn_11_5
+    וַיֵּרֶד יְהוָה לִרְאֹת (va-yered YHWH lirot)
+    PASS  Facts asher-banu-bnei-ha-adam HOLD  (7 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — The assessment-facts hold: after STEP_Gn_11_6
+    הֵן עַם אֶחָד וְשָׂפָה אַחַת לְכֻלָּם (hen am echad ve-safah achat le-khulam)
+    PASS  Facts am-echad HOLD  (10 facts)
+    PASS  Facts lo-yibatzer HOLD.  (10 facts)
+
+=== S7 — The counter-council, the ?-moods untouched: after STEP_Gn_11_7
+    הָבָה נֵרְדָה וְנָבְלָה שָׁם שְׂפָתָם (havah nerdah ve-navlah sham sefatam)
+    PASS  CMD-US?(naaseh(lanu_shem)) mood remains CMD-US?.  (mood=CMD-US?)
+
+=== S8 — The fear granted, the build abandoned: after STEP_Gn_11_8
+    וַיַּחְדְּלוּ לִבְנֹת הָעִיר (va-yachdelu livnot ha-ir)
+    PASS  Facts va-yachdelu-livnot HOLD.  (11 facts)
+
+=== S9 — The etiology stands, the echo received: after STEP_Gn_11_9
+    עַל־כֵּן קָרָא שְׁמָהּ בָּבֶל (al-ken kara shemah Bavel)
+    PASS  Facts pattern-kara-bavel HOLD  (14 facts)
+    PASS  Facts sham-balal-yhwh HOLD.  (14 facts)
+
+=== S10_negative — Negative: the machine&#x27;s ? stays guarded
+    נַעֲשֶׂה (naaseh)
+    PASS  volitive 1cp parsed as CMD-US? (question mark kept)  (mood=CMD-US?)
+    PASS  auto-upgrade REFUSED  (TIR-028: CMD-US? never auto-upgrades to CMD-US — a per-unit ...)
+    PASS  upgrade WITH citation allowed  (cite=per-unit judgment (owner), TIR-028 resolution)
+
+=== S11_negative — Negative: flags never block
+    PASS  commit proceeded (not blocked)  (LEDGER=[99])
+    PASS  pattern deviation FLAGGED  (flags=[&#x27;commit_without_test&#x27;])
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_25_babel.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_25_babel — 11:1-9
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_25_babel.yaml) is CANONICAL (Pre-Code); this
+# file is a derived, runnable rendering. Do not edit — regenerate. The
+# assertion block at the bottom is baked from the Stage D interpreter&#x27;s
+# actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Babel: come, let us build — come, let Us go down (11:1-9)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_25_babel&quot;)
+
+# -------------------------- Gen.11.1 · ONE_LIP_ONE_WORDS -------------------
+# וַיְהִי כָל־הָאָרֶץ שָׂפָה אֶחָת וּדְבָרִים אֲחָדִים
+# &quot;And the whole earth was of one language and of one speech.&quot;
+m.step(&quot;Gen.11.1&quot;)
+# ‹כָל־הָאָרֶץ שָׂפָה אֶחָת וּדְבָרִים אֲחָדִים› (“all the-earth lip one
+# and-words one”) — fact holds: all-the-earth-safah-one-and-words-one
+m.fact(&quot;kol_ha_aretz_safah_echat_u_devarim_achadim&quot;)
+
+# -------------------------- Gen.11.2 · THE_JOURNEY_EAST_TO_SHINAR ----------
+# וַיְהִי בְּנָסְעָם מִקֶּדֶם וַיִּמְצְאוּ בִקְעָה בְּאֶרֶץ שִׁנְעָר
+# וַיֵּשְׁבוּ שָׁם
+# &quot;And it came to pass, as they journeyed east, that they found a plain in
+# the land of Shinar; and they dwelt there.&quot;
+m.step(&quot;Gen.11.2&quot;)
+# ‹בְּנָסְעָם מִקֶּדֶם› (“as-they-journeyed from-the-east”) — fact holds:
+# in-nasam-from-east
+m.fact(&quot;be_nasam_mi_qedem&quot;)
+# ‹וַיִּמְצְאוּ בִקְעָה בְּאֶרֶץ שִׁנְעָר› (“and-find a-valley in-earth
+# Shinar”) — event: find — theme viqah-in-earth-Shinar
+m.event(&quot;find&quot;, themes=[&quot;viqah_be_eretz_shinar&quot;])
+# ‹וַיֵּשְׁבוּ שָׁם› (“and-they-settled there”) — event: settle — theme
+# there
+m.event(&quot;settle&quot;, themes=[&quot;sham&quot;])
+# reads without prior install (flag, not fix): Shinar
+m.presupposed(&quot;shinar&quot;)
+
+# -------------------------- Gen.11.3 · COME_LET_US_BRICK -------------------
+# וַיֹּאמְרוּ אִישׁ אֶל־רֵעֵהוּ הָבָה נִלְבְּנָה לְבֵנִים וְנִשְׂרְפָה
+# לִשְׂרֵפָה וַתְּהִי לָהֶם הַלְּבֵנָה לְאָבֶן וְהַחֵמָר הָיָה לָהֶם לַחֹמֶר
+# &quot;And they said one to another: &#x27;Come, let us make brick, and burn them
+# thoroughly.&#x27; And they had brick for stone, and slime had they for mortar.&quot;
+m.step(&quot;Gen.11.3&quot;)
+# ‹וַיֹּאמְרוּ אִישׁ אֶל־רֵעֵהוּ הָבָה› (“and-say man to his-fellow come”) —
+# event: speak — agent man-to-reehu
+m.event(&quot;speak&quot;, agent=&quot;ish_el_reehu&quot;)
+# ‹נִלְבְּנָה לְבֵנִים› (“let-us-brick bricks”) — man-to-reehu speaks a
+# demand — CMD-US: nilbenah(bricks)
+m.declare(&quot;ish_el_reehu&quot;, &quot;CMD-US&quot;,
+          &quot;nilbenah(levenim)&quot;)
+# ‹וְנִשְׂרְפָה לִשְׂרֵפָה› (“and-let-us-burn a-burning”) — man-to-reehu
+# speaks a demand — CMD-US: nisrefah(to-me-serefah)
+m.declare(&quot;ish_el_reehu&quot;, &quot;CMD-US&quot;,
+          &quot;nisrefah(li_serefah)&quot;)
+# ‹וַתְּהִי לָהֶם הַלְּבֵנָה לְאָבֶן וְהַחֵמָר הָיָה לָהֶם לַחֹמֶר› (“and-be
+# for-them the-brick for-stone and-the-bitumen be for-them for-mortar”) —
+# fact holds: and-be-to-them-the-levenah-to-stone; and-the-bitumen-was-to-
+# them-to-mortar
+m.fact(&quot;va_tehi_lahem_ha_levenah_le_aven&quot;,
+       &quot;ve_ha_chemar_hayah_lahem_la_chomer&quot;)
+
+# -------------------------- Gen.11.4 · CITY_TOWER_NAME_AND_FEAR ------------
+# וַיֹּאמְרוּ הָבָה נִבְנֶה־לָּנוּ עִיר וּמִגְדָּל וְרֹאשׁוֹ בַשָּׁמַיִם
+# וְנַעֲשֶׂה־לָּנוּ שֵׁם פֶּן־נָפוּץ עַל־פְּנֵי כָל־הָאָרֶץ
+# &quot;And they said: &#x27;Come, let us build us a city, and a tower, with its top
+# in heaven, and let us make us a name; lest we be scattered abroad upon the
+# face of the whole earth.&#x27;&quot;
+m.step(&quot;Gen.11.4&quot;)
+# ‹וַיֹּאמְרוּ הָבָה› (“and-say come”) — event: speak — agent man-to-reehu
+m.event(&quot;speak&quot;, agent=&quot;ish_el_reehu&quot;)
+# ‹נִבְנֶה־לָּנוּ עִיר וּמִגְדָּל וְרֹאשׁוֹ בַשָּׁמַיִם› (“let-us-build for-
+# us a-city and-a-tower and-its-head in-the-heavens”) — man-to-reehu speaks
+# a demand — CMD-US?: nivneh(a-city-and-a-tower)
+m.declare(&quot;ish_el_reehu&quot;, &quot;CMD-US?&quot;,
+          &quot;nivneh(ir_u_migdal)&quot;)
+# ‹וְנַעֲשֶׂה־לָּנוּ שֵׁם› (“and-let-us-make for-us a-name”) — man-to-reehu
+# speaks a demand — CMD-US?: naaseh(lanu-a-name)
+m.declare(&quot;ish_el_reehu&quot;, &quot;CMD-US?&quot;,
+          &quot;naaseh(lanu_shem)&quot;)
+# ‹וְרֹאשׁוֹ בַשָּׁמַיִם … פֶּן־נָפוּץ עַל־פְּנֵי כָל־הָאָרֶץ› (“and-its-
+# head in-the-heavens … lest we-be-scattered over the-face-of all the-
+# earth”) — fact holds: and-rosho-and-heavens; lest-we-be-scattered-over-
+# face-of-all-the-earth
+m.fact(&quot;ve_rosho_va_shamayim&quot;,
+       &quot;pen_nafutz_al_pnei_khol_ha_aretz&quot;)
+
+# -------------------------- Gen.11.5 · THE_DESCENT_TO_SEE ------------------
+# וַיֵּרֶד יְהוָה לִרְאֹת אֶת־הָעִיר וְאֶת־הַמִּגְדָּל אֲשֶׁר בָּנוּ בְּנֵי
+# הָאָדָם
+# &quot;And the LORD came down to see the city and the tower, which the children
+# of men builded.&quot;
+m.step(&quot;Gen.11.5&quot;)
+# ‹וַיֵּרֶד יְהוָה לִרְאֹת› (“and-He-descended YHWH to-see”) — event:
+# descend — agent the-LORD; theme lirot-obj-marker·et-the-a-city-and-obj-
+# marker·et-the-a-tower
+m.event(&quot;descend&quot;, agent=&quot;YHWH&quot;, themes=[&quot;lirot_et_ha_ir_ve_et_ha_migdal&quot;])
+# ‹אֲשֶׁר בָּנוּ בְּנֵי הָאָדָם› (“which they-built son the-humankind”) —
+# fact holds: which-they-built-sons-of-the-humankind
+m.fact(&quot;asher_banu_bnei_ha_adam&quot;)
+
+# -------------------------- Gen.11.6 · ONE_PEOPLE_THE_ASSESSMENT -----------
+# וַיֹּאמֶר יְהוָה הֵן עַם אֶחָד וְשָׂפָה אַחַת לְכֻלָּם וְזֶה הַחִלָּם
+# לַעֲשׂוֹת וְעַתָּה לֹא־יִבָּצֵר מֵהֶם כֹּל אֲשֶׁר יָזְמוּ לַעֲשׂוֹת
+# &quot;And the LORD said: &#x27;Behold, they are one people, and they have all one
+# language; and this is what they begin to do; and now nothing will be
+# withholden from them, which they purpose to do.&#x27;&quot;
+m.step(&quot;Gen.11.6&quot;)
+# ‹וַיֹּאמֶר יְהוָה הֵן עַם אֶחָד› (“and-say YHWH behold people one”) —
+# event: speak — agent the-LORD; theme behold-people-one
+m.event(&quot;speak&quot;, agent=&quot;YHWH&quot;, themes=[&quot;hen_am_echad&quot;])
+# ‹הֵן עַם אֶחָד … וְזֶה הַחִלָּם לַעֲשׂוֹת … לֹא־יִבָּצֵר מֵהֶם› (“behold
+# people one … and-this their-beginning to-do … not will-be-withheld from-
+# them”) — fact holds: behold-people-one-and-safah-one-to-khulam; and-this-
+# hachillam-to-do; not-will-be-withheld-mehem-all-which-they-plan
+m.fact(&quot;hen_am_echad_ve_safah_achat_le_khulam&quot;,
+       &quot;ve_zeh_hachillam_la_asot&quot;,
+       &quot;lo_yibatzer_mehem_kol_asher_yazmu&quot;)
+
+# -------------------------- Gen.11.7 · THE_MIRRORED_COUNTER_COUNCIL --------
+# הָבָה נֵרְדָה וְנָבְלָה שָׁם שְׂפָתָם אֲשֶׁר לֹא יִשְׁמְעוּ אִישׁ שְׂפַת
+# רֵעֵהוּ
+# &quot;&#x27;Come, let us go down, and there confound their language, that they may
+# not understand one another&#x27;s speech.&#x27;&quot;
+m.step(&quot;Gen.11.7&quot;)
+# ‹הָבָה נֵרְדָה› (“come let-Us-descend”) — the-LORD speaks a demand — CMD-
+# US: nerdah(there)
+m.declare(&quot;YHWH&quot;, &quot;CMD-US&quot;,
+          &quot;nerdah(sham)&quot;)
+# ‹וְנָבְלָה שָׁם שְׂפָתָם› (“and-let-Us-confuse there their-lip”) — the-
+# LORD speaks a demand — CMD-US: navlah(there-sefatam)
+m.declare(&quot;YHWH&quot;, &quot;CMD-US&quot;,
+          &quot;navlah(sham_sefatam)&quot;)
+
+# -------------------------- Gen.11.8 · THE_SCATTER_AND_THE_CEASING ---------
+# וַיָּפֶץ יְהוָה אֹתָם מִשָּׁם עַל־פְּנֵי כָל־הָאָרֶץ וַיַּחְדְּלוּ לִבְנֹת
+# הָעִיר
+# &quot;So the LORD scattered them abroad from thence upon the face of all the
+# earth; and they left off to build the city.&quot;
+m.step(&quot;Gen.11.8&quot;)
+# ‹וַיָּפֶץ יְהוָה אֹתָם מִשָּׁם› (“and-He-scattered YHWH obj-marker from-
+# there”) — event: scatter — agent the-LORD; theme from-there-over-face-of-
+# all-the-earth
+m.event(&quot;scatter&quot;, agent=&quot;YHWH&quot;, themes=[&quot;mi_sham_al_pnei_khol_ha_aretz&quot;])
+# ‹וַיַּחְדְּלוּ לִבְנֹת הָעִיר› (“and-they-ceased to-build the-city”) —
+# fact holds: and-yachdelu-livnot-the-a-city
+m.fact(&quot;va_yachdelu_livnot_ha_ir&quot;)
+
+# -------------------------- Gen.11.9 · THE_NAME_ETIOLOGY_AND_THE_ECHO ------
+# עַל־כֵּן קָרָא שְׁמָהּ בָּבֶל כִּי־שָׁם בָּלַל יְהוָה שְׂפַת כָּל־הָאָרֶץ
+# וּמִשָּׁם הֱפִיצָם יְהוָה עַל־פְּנֵי כָּל־הָאָרֶץ
+# &quot;Therefore was the name of it called Babel; because the LORD did there
+# confound the language of all the earth; and from thence did the LORD
+# scatter them abroad upon the face of all the earth.&quot;
+m.step(&quot;Gen.11.9&quot;)
+# ‹כִּי־שָׁם בָּלַל יְהוָה שְׂפַת כָּל־הָאָרֶץ› (“for there He-confused YHWH
+# lip-of all the-earth”) — demand settled (popped from the queue):
+# navlah(there-sefatam)
+m.result(&quot;navlah(sham_sefatam)&quot;, tmark=&quot;t2&quot;)
+# ‹עַל־כֵּן קָרָא שְׁמָהּ בָּבֶל› (“over so one-called its-name Babel”) —
+# pattern recorded: over-so-kara-shemah-Babel
+m.pattern(&quot;al_ken_kara_shemah_bavel&quot;)
+# ‹כִּי־שָׁם בָּלַל … וּמִשָּׁם הֱפִיצָם› (“for there He-confused … and-
+# from-there He-scattered-them”) — fact holds: for-there-He-confused-yhwh-
+# lip-of-all-the-earth; and-from-there-hefitzam-yhwh
+m.fact(&quot;ki_sham_balal_yhwh_sefat_kol_ha_aretz&quot;,
+       &quot;u_mi_sham_hefitzam_yhwh&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == {&#x27;shinar&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;nilbenah(levenim)&#x27;, &#x27;nisrefah(li_serefah)&#x27;, &#x27;nivneh(ir_u_migdal)&#x27;, &#x27;naaseh(lanu_shem)&#x27;, &#x27;nerdah(sham)&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 6
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;read_before_install&#x27;: 1}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;kol_ha_aretz_safah_echat_u_devarim_achadim&#x27;, &#x27;be_nasam_mi_qedem&#x27;, &#x27;va_tehi_lahem_ha_levenah_le_aven&#x27;, &#x27;ve_ha_chemar_hayah_lahem_la_chomer&#x27;, &#x27;ve_rosho_va_shamayim&#x27;, &#x27;pen_nafutz_al_pnei_khol_ha_aretz&#x27;, &#x27;asher_banu_bnei_ha_adam&#x27;, &#x27;hen_am_echad_ve_safah_achat_le_khulam&#x27;, &#x27;ve_zeh_hachillam_la_asot&#x27;, &#x27;lo_yibatzer_mehem_kol_asher_yazmu&#x27;, &#x27;va_yachdelu_livnot_ha_ir&#x27;, &#x27;pattern: al_ken_kara_shemah_bavel&#x27;, &#x27;ki_sham_balal_yhwh_sefat_kol_ha_aretz&#x27;, &#x27;u_mi_sham_hefitzam_yhwh&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 15
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre>
+<div class="note">FROZEN 2026-08-03 (second-generation derivation agent; freeze-after-review by the main loop — NO agent freeze; seventh unit under the PIPELINE + DEBUT-MAP process, the agent&#x27;s third and LAST before planned succession): twenty-sixth-unit candidate — BABEL; sixteenth extension-free derivation candidate in a row. Two speech-worlds in one grammar, and the machine mirrors the letter&#x27;s symmetry and its asymmetries alike: the corpus&#x27;s FIRST HUMAN CMD-US demands (gen_06&#x27;s council class in human mouths — 11:4&#x27;s verb is NAASEH itself, 1:26&#x27;s verb with 1:26&#x27;s final-heh form-problem and 1:26&#x27;s mood-mark; the mood-split by form recorded: -ah-marked volitives plain CMD-US per TIR-033, the final-heh pair CMD-US? per TIR-028); the corpus&#x27;s FIRST ABANDONED PROJECT (four human demands open forever over the chadal cessation-fact; NO install — every install precedent was a completed build; no interpreter extension: the open queue plus the fact IS the letter&#x27;s state); the fear granted VERBATIM inside one unit (pen-nafutz -&gt; va-yafetz, putz tokens 2-3 on 10:18&#x27;s staged debut) [internal arc]; the descent that SEES and never judges (gen_19&#x27;s class; no TEST — while Onkelos inserts the verdict: &#x27;was REVEALED to PUNISH&#x27;; dual-track); the divine counter-council in the mirrored havah grammar, its confuse-demand POPPED by its own root returning as deed (navlah -&gt; balal: the echo-receipt class — SETTLED CYCLE #5, the confuse-cycle) and its descend-demand left open (the letter records one descent only); the al-ken formula&#x27;s THIRD genre (a NAME-etiology as PATTERN, no registry write — gen_24&#x27;s report-naming rule; the bavel/balal pun the etiology&#x27;s engine, kept doubled in the buffer). The debut-field held as letter facts (davar, am, rea, nasa, zamam, migdal, chadal, batzar; the saphah run vs the table&#x27;s lashon — leveled in the buffer; the sevenfold shem/sham soundplay census-verified; the YHWH-only span countering gen_22&#x27;s Elohim-only; the Babel-to-Egypt material rerun). Machine state: t0 empty, ZERO installs (+1 presupposed), zero registry writes, SIX demands pushed / ONE popped / FIVE open at rest, zero tests, one pattern, twelve facts, one read-flag — a ruin at rest, filed under its own pun.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

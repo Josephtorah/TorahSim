@@ -1,0 +1,638 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_52_send_me_speckled_wage_rods — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_52_send_me_speckled_wage_rods?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Send me away: the speckled wage and the peeled rods (30:25-43) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_52_send_me_speckled_wage_rods</b> · Genesis 30:25-43 · derive  · phase </div>
+<div class="meta"><a href="../#Gen/30/25">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">שַׁלְּחֵנִי וְאֵלְכָה</span> · <i>shalcheni ve-elkha</i> · &#x27;Send me away, that I may go&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DRAFT 2026-08-07 · SOLO ERA unit #6 (Claude coordinator+deriver; external fresh-context adversarial review before freeze per standing law). Span: 30:25-43, from the moment of Joseph&#x27;s birth to the flock explosion. 19 verses · 278 tokens (SNAPSHOT-verified). SNAPSHOT + debut_map. bar C. Conventions: step he: = plain (no accents/meteg; maqqef ־ per snapshot); tree halves = accents kept, slashes stripped; split at etnachta (all 19 verses have one; at 30:28 it sits on the FIRST token va-yomar, at 30:34 on the third, hen — one-word and three-word left halves, mechanical). Onkelos BUFFER PENDING. UNIT SHAPE — THREE pushes, ONE pop, and a never-performed send. The unit opens on gen_51&#x27;s last write (&quot;when Rachel had borne Joseph&quot;): Jacob pushes LET(shalcheni(lavan)) — SEND ME — and LET(tena_nashai_viladai (lavan)) — hand over my wives and children. Laban counter-pushes LET(naqva_sekhar(yaaqov)) — designate your wage — and that card pops at 30:32 by content-performance: the wage is NAMED (every speckled, spotted, and dark head, &quot;ve-haya sekhari&quot;). The other two never pop: no give-token ever hands over wives or children (the give-walk&#x27;s in-span objects are checked), and the send-demand is performed by NO ONE — chapter 31 answers it with FLIGHT; the send-verb&#x27;s next tokens are Jacob sending FOR his wives (31:4), Laban&#x27;s counterfactual &quot;I would have SENT you away with joy&quot; (31:27), and Jacob&#x27;s &quot;you would have SENT me away empty&quot; (31:42): the never-performance filed in both mouths, beyond the wall. Ends SPECS depth 2 OPEN — the second consecutive unit wall at depth 2 (gen_51 ended depth 2; gen_50 ended depth 1). REGISTRY 0 (no naming formula in-span). TESTS 0 (zero tov-tokens in-span, DB-checked). CARE-POINTS (filed before derivation; every ordinal DB-verified): (1) 30:25 THE CLOCK: va-yehi ka-asher yalda rachel et-yosef — the unit opens on gen_51&#x27;s twelfth write; yosef name-token 2/175. shalcheni (7971 tok30/201 HVpv2ms+1cs suffix) — PUSH; ve-elkha (HC/Vqh1cs) purpose-cohortative, gen_46 27:4 class, no push. el-meqomi u-le-artzi — place and land (the Bethel handler&#x27;s return-clause resonance, prose only). (2) 30:26 tena (5414 tok77/647 HVqv2ms+Sh) — PUSH tena_nashai_viladai; avodah 5656 tok2/83 (tok1 = 29:27 its birth, gen_50&#x27;s care 13 bridge LANDS; toks 3+ = Exod 1:14 Egypt); avadti/avadticha (5647 toks 18-19/113); ve-elekha cohortative again. (3) 30:27 nichashti (5172 tok1/7 DEBUT) — THE DIVINATION-VERB IS BORN IN LABAN&#x27;S MOUTH: toks 2-5 = 44:5,15 JOSEPH&#x27;s cup ×4; toks 6-7 = the PROHIBITIONS (Lev 19:26, Deut 18:10) — debut in Laban, career to Joseph&#x27;s cup, death in law. chen 2580 tok4/27 (Noah 6:8, Abraham 18:3, Lot 19:19 — then Laban; next block = Jacob toward Esau, 32:6-33:15). biglal 1558 tok2/6 — for-your-sake: 12:13 (Abram at Sarai) → Laban at Jacob → 39:5 (YHWH blesses the EGYPTIAN&#x27;s house for JOSEPH&#x27;s sake). YHWH in Laban&#x27;s mouth (va-yevarakheni YHWH). (4) 30:28 naqva (5344 tok1/7 DEBUT HVqv2ms+Sh) — the DESIGNATE-verb is born as &quot;name your wage&quot;; its six later tokens: Lev 24:11,16 ×3 (the blasphemer PRONOUNCING the Name), Num 1:17 (the census men designated BY NAME), Num 23:8,25 (Balaam&#x27;s curse-designations). PUSH LET(naqva_sekhar(yaaqov)); sakhar-noun 7939 tok3/12 (gen_51 care 18 bridge LANDS: toks 3-5 in-span); ve-etena (5414 tok78) cohortative counter. Depth 3. (5) 30:29-30 THE AUDIT: avadticha tok20; miqneh 4735 tok8/51. paratz (6555 tok2/7) — THE BETHEL PLEDGE LANDS: tok1 = 28:14 u-faratzta (&quot;you shall BREAK OUT,&quot; God&#x27;s own pledge at the ladder) — its first return performs on Laban&#x27;s flock; tok3 = 30:43, on Jacob himself. la-rov (7230 tok3/12: 16:10 Hagar&#x27;s seed, 27:28 the blessing&#x27;s abundance); le-ragli (7272 tok7/60; tok6 = 29:1 &quot;lifted his feet&quot;); matai eese gam anokhi le-veti — when for MY house (the vow&#x27;s bet-Elohim resonance, prose only). (6) 30:31 lo titen li meuma — GIVE NOTHING: give toks 79-80 (ma eten / lo titen); meuma 3972 tok2/9 — tok1 = 22:12 THE AKEDAH (&quot;do not do ANYTHING to him&quot;); toks 3-6 = the Joseph house-trust cluster (39:6,9,23, 40:15). ashuva ere eshmor — 1cs cohortative with NO addressee: pushes nothing (gen_47&#x27;s 27:41 ve-aharga fence). (7) 30:32 THE POP: the wage NAMED — kol se naqod ve-talu ... ve-haya sekhari (sakhar tok4). naqod 5348 toks 1-2/9 DEBUT ×2 (toks 6-9 = 31:8-12, the next unit&#x27;s retell); tala 2921 toks 1-2/6 (all six in-span); chum 2345 tok1/4 (all four in-span); seh 7716 toks 3-4/28 — toks 1-2 = THE AKEDAH&#x27;s lamb (22:7,8): the lamb-word&#x27;s career runs altar-question → wage-definition → pesach (Exod 12). POP naqva_sekhar, latency 4 verses, content-performance. Depth 2. (8) 30:33 THE HONESTY CLAUSE: tzedaqah 6666 tok3/9 — the righteousness-word&#x27;s third token ever: 15:6 (counted to Abram), 18:19 (the way of YHWH), now a flock audit (&quot;my righteousness shall ANSWER for me&quot;). machar 4279 tok1/17 DEBUT — TOMORROW is born here; career = the plague-tomorrows and the catechism-tomorrows (Exod 13:14, Deut 6:20). ganuv (1589 tok1/21 DEBUT) — the STEAL-verb is born inside an innocence formula (&quot;counted as STOLEN with me&quot;) and its next EIGHT tokens are chapter 31&#x27;s theft-storm (terafim 31:19, heart-stealing 31:20,26,27...). Depth 2. (9) 30:34 hen lu yehi khi-devarekha — the deal accepted on the word yehi (1961 tok192/1050, HVqi3ms imperfect — same surface as 1:3&#x27;s fiat, different tag: fenced, prose only). Etnachta on hen (idx2). (10) 30:35-36 THE SAME-DAY REMOVAL: va-yasar BA-YOM HA-HU — the yom walk 96-99 in-span: ha-yom (the deal, 30:32) → be-yom machar (the audit, 30:33) → ba-yom ha-hu (the trick, 30:35) → derekh sheloshet YAMIM (the gap, 30:36); tok100 = 31:22 (&quot;on the THIRD day Laban was told&quot; — the seam continues). teyashim 8495 tok1/2 (tok2 = 32:15, the Esau-tribute he-goats). lavan-WHITE 3836 tok1/25 DEBUT — &quot;every one that had WHITE in it&quot; — see care 12. va-yiten be-yad BANAV (give tok81) — the give-verb&#x27;s trick-token: into his SONS&#x27; hand. notarot (3498 tok1/33 DEBUT) — the REMAIN-verb debuts on the leftover flock; tok2 = 32:25 va-yivater yaaqov LEVADO — Jacob himself the remnant at Peniel. sheloshet yamim — the three-days gap (22:4&#x27;s third day; 31:22 next). (11) 30:37-38 THE RODS: maqal 4731 toks 1-2/9 DEBUT (toks 3-6 in-span; tok7 = 32:11 &quot;with my STAFF I crossed this Jordan&quot;). THREE tree-hapaxes in one verse: livne poplar 3839 1/1 (itself from the white-root), luz almond 3869 1/1 (the tree-word wears the surface of LUZ the city renamed Beit-El in gen_48 — different strong, 3869 vs 3870, FENCED), armon plane 6196 1/1. patzal 6478 toks 1-2/2 (career complete in-span) + petzalot 6479 1/1 + machsof 4286 1/1 — five hapax-class tokens in the rod-verse pair. rahat 7298 toks 1-2/3 — tok3 = Exod 2:16, ZIPPORAH&#x27;s troughs: the trough-word&#x27;s whole career is shepherd-courtship scenes and this trick. shoqet 8268 tok2/2 — CAREER CLOSES: tok1 = 24:20, REBEKAH&#x27;s bride-test trough. yacham 3179 tok1/6 DEBUT (conceive-heat; toks 1-4 of 6 in-span, tok5 = 31:10 the dream-retell). (12) 30:37 THE WHITE PEELED — the name-pun as token-fact: petzalot LEVANOT machsof HA-LAVAN — the white-adjective (3836, toks 2-3/25; tok1 = 30:35) debuts and clusters INSIDE the Laban-name story (3837, seven in-span name-tokens) — Jacob peels the white out of laban&#x27;s rods; strongs distinct (3836 white / 3837 Laban), the pun is carried by surface alone, FENCED as token-fact. The white-word&#x27;s career: tok4 = 49:12 (teeth white with milk), tok5 = Exod 16:31 (the manna), toks 6+ = LEVITICUS 13 — the quarantine-law&#x27;s diagnostic color: the corpus&#x27;s law unit (lev_13) reads its whiteness from a career that debuts on these rods. (13) 30:39-40 THE CONCEPTION AND THE SORT: va-teladna aqudim nequdim u-teluim — the offspring wear the deal&#x27;s three adjectives (aqod 6124 toks 1-3/7 in-span; toks 4-7 = 31:8-12 retell). hifrid (6504 tok8/9) — THE ORACLE&#x27;S VERB: toks 1-7 = Eden&#x27;s river parting (2:10), the nations (10:5,32), Abram-Lot (13:9,11,14), and 25:23&#x27;s &quot;two peoples SHALL BE PARTED&quot; — the separation-word becomes husbandry. eder 5739 tok5/10 (toks 1-4 = gen_49&#x27;s well-flocks; toks 6-10 = the Esau-gift droves, 32:17,20 — all ten tokens live in the Jacob cycle). give tok82 (va-yiten pene ha-tzon). (14) 30:41-42 THE STRONG AND THE FEEBLE: mequsharot/qeshurim (7194 toks 1-2/6) — the BIND-verb debuts in flock-sorting; its career ends at Deut 6:8/11:18 &quot;BIND them as a sign&quot; (the sign-binding command) — token-walk only. ataf 5848 toks 1-2/2 — the feeble-word&#x27;s whole career inside one verse. The sort-line: the feeble to Laban, the bound-strong to Jacob. (15) 30:43 THE BREAK-OUT DOUBLED: va-yifrotz ha-ish MEOD MEOD — paratz tok3/7 (28:14&#x27;s pledge now performing on Jacob himself); the consecutive meod-meod pair&#x27;s four precedents (DB-scan of consecutive 3966 pairs): 7:19 (the waters prevailed meod meod) and 17:2/6/20 — the covenant multiply-exceedingly formula (Abram ×2, Ishmael): the flock explosion borrows the covenant&#x27;s doubling. Wealth-list: tzon rabot u-shefachot va-avadim u-gemalim va-chamorim (shifchah 8198 tok21/31 — gen_50&#x27;s dowry maid-word now plural property; list-form kin: 12:16, 24:35, 26:14 — prose only). UNIT END: depth 2 OPEN (shalcheni · tena_nashai_viladai). REGISTRY 0. TESTS 0.</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (retro, oral-first era; record: logic/oral_audit/AUDIT_gen_52_2026-08-08.md; manifest verified 19/19 checkable, zero FAILED, one manual row). CROWNS (chain-attested + DB-verified). THE REMAINING FLOCK AND THE SKELETON COLLISION [G52-08/09, Minchat Shai citing the Masorah, the Ramah, and Bereshit Rabbah 73]: the letter-skeleton הנותרת (&quot;the remaining&quot;) stands exactly THREE times in the Torah, but only two are the Masorah&#x27;s word — the plural &quot;the flock REMAINING&quot; (30:36) and &quot;according to the years REMAINING&quot; (Lev 27:18), both written lean without the second vav as ruled, Jeremiah&#x27;s full third (34:7) named outside; the third Torah token (Lev 10:12) is the SINGULAR &quot;the meal-offering that remains,&quot; a different word — and it is precisely the plural&#x27;s missing vav that collapses the two words into one skeleton. SNAPSHOT stands with the Masorah&#x27;s written form against Resh Lakish&#x27;s claimed form נתרת (&quot;dropped away&quot; — both vavs gone). THE SPECKLED-WORD LEAN EVERYWHERE [G52-06]: נקד (&quot;speckled&quot;) bare exactly twice — the wage named (30:32) and the wage audited (&quot;whatever is not speckled... is stolen,&quot; 30:33) — lean with the Hilleli and all the books against the Yerushalmi&#x27;s full form, and the Ramah&#x27;s whole-Torah rule holds: no full speckled-form anywhere in the Torah, builder-checked across every prefixed and suffixed form. THE ANDROGYNOUS VERB AT THE TROUGHS [G52-13]: ויחמנה (&quot;and they CAME INTO HEAT when they came to drink,&quot; 30:38) — the Masorah&#x27;s THREE-word list of forms bearing both signs, the masculine yod at the head and the feminine nun-he at the tail, &quot;the male preceding the female&quot;; the Torah&#x27;s one member carries exactly that skeleton in the stream (the cows of Beth Shemesh, I Sam 6:12, and Daniel&#x27;s four kingdoms, Dan 8:22, named outside). THE SEVIRIN &quot;ON&quot; [G52-14]: ולא שתם על צאן לבן (&quot;he did not set them ON the flock of Laban,&quot; 30:40) — the sense expects WITH (עם), the letter writes ON (על), and the written form stands in the stream: the sevirin class takes its second in-corpus member after Sodom&#x27;s morning (19:23). TOMORROW&#x27;S DAY, SPOKEN ONCE [G52-18, Kitzur Baal HaTurim]: ביום מחר (&quot;so shall my righteousness answer for me IN THE DAY TO COME,&quot; 30:33) — the two-word form Torah-unique at Jacob&#x27;s one boast about tomorrow, paired by the Masorah with &quot;do not boast about the day to come&quot; (Prov 27:1, named): the Kitzur hears the rebuke arm itself at the gate of the Dinah chapters. THE FEEBLE ONES AND THE FAMINE [G52-17, Kitzur]: העטפים (&quot;the FEEBLE ones were Laban&#x27;s,&quot; 30:42) — the word&#x27;s only Torah token, paired by the Masorah with &quot;the ones WRAPPED in famine at the head of every street&quot; (Lam 2:19, named); quiet variance noted: the Kitzur&#x27;s headword cites the pair full with vav, SNAPSHOT writes the Torah member lean, the u-vowel carried by the point alone. THE PEEL-VERB&#x27;S LONG E [G52-11]: פצל (&quot;the rods that he had PEELED,&quot; 30:38) — tzadi dageshed in tzere with all the books and the Michlol, Minchat Shai&#x27;s own arbitration AGAINST the Mikraot Gedolot printer who called every pointer mistaken. MY-PLACE WRITTEN FULL [G52-01]: מקומי (&quot;to MY PLACE,&quot; 30:25 — the first word of the never-performed send-me demand) plene with the Ramah against one old book&#x27;s recorded lean form. POINTING AS RULED [G52-03/04/05/07/10/15/16, Minchat Shai]: גם (&quot;also I&quot;) soft gimel; לי (&quot;give ME nothing&quot;) soft lamed; שה (&quot;every dark LAMB&quot;) joined by maqqef (the joining stroke) with NO meteg on the shin per Ben Asher&#x27;s own variant-lists; העזים (&quot;the she-goats&quot;) zayin dageshed; לבנה (&quot;poplar&quot;) nun in segol; המקשרות (&quot;the sturdy ones&quot;) mem soft against the minority meteg camp; ליחמנה (&quot;that they might come into heat&quot;) mem in tzere with the precise Sephardic books. DISCREPANCIES: the bless-word&#x27;s half-vowel, station ELEVEN [G52-02] — ויברכני (&quot;and YHWH has BLESSED ME,&quot; in Laban&#x27;s mouth, 30:27): ruled resh with plain sheva, SNAPSHOT hataf patach (the compound half-vowel) — the characterized law&#x27;s eleventh station, the bless-word family&#x27;s fifth; and the wrapping-verb&#x27;s absent strokes [G52-19] — ובהעטיף (30:42): Ben Asher&#x27;s metegs on the vav and tet absent from the stream, meteg-omission class member 4. SPLIT-ATTESTED: the troughs&#x27; half-vowel — THE CLASS TAKES A QOF [G52-12]: בשקתות (&quot;in the water TROUGHS,&quot; 30:38) — Minchat Shai&#x27;s books write the qof with hataf patach, the Michlol&#x27;s precise books plain sheva (compound only in the mouth, by force of the meteg on the hiriq); SNAPSHOT joins the written-hataf camp WHILE carrying the Michlol&#x27;s driving meteg in the same word — split-attested station 4, the class&#x27;s first qof, a fourth consonant for the consonant-general law. INSTRUMENT GAPS: the large-pe question [G52-20, manual] — the pe of ובהעטיף (&quot;and when the flock was feeble&quot;): some printed books make it large, Minchat Shai sides with the precise books AGAINST the enlargement; the letter-size layer is uninstrumented, the question filed, not settled. READINGS (named-only, unclaimed): the Kitzur&#x27;s Dinah-warning at tomorrow&#x27;s day; the Kitzur&#x27;s two readings of the feeble stock; Resh Lakish reading the remaining flock as dropped away like the Caesar&#x27;s teeth (Bereshit Rabbah 73), overruled by the Masorah&#x27;s own count.</div>
+<div class="meta">confidence: </div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Reconstruction notice (2026-08-08)</td><td>This unit was frozen in the lean era (meta + scenarios + boot steps; no step table was written at freeze). The steps below were reconstructed on 2026-08-08 from the freeze-era draft note (meta.draft_note_en, displayed on the unit page), the era&#x27;s continue-docs, and git history. No new derivation claims are introduced: every entry restates recorded decisions, and the full per-verse machine record is the boot steps below.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Source + span + structure</td><td>Genesis 30:25-43, from the moment of Joseph&#x27;s birth to the flock explosion: 19 verses, 278 tokens, source-verified. Trees split at the mid-verse rest (all nineteen have one; at 30:28 it sits on the verse&#x27;s FIRST token and at 30:34 on its third — one-word and three-word left halves, taken mechanically). Evidence: the SNAPSHOT database plus the debut-map attachment.</td><td>reconstructed</td></tr>
+<tr><td><b>C</b></td><td>Draft path + review</td><td>Solo-era unit #6: Claude as coordinator and deriver, with an external fresh-context adversarial review before freeze per the standing law. Frozen 2026-08-07.</td><td>reconstructed</td></tr>
+<tr><td><b>D</b></td><td>Care-point ledger (distilled)</td><td>Fifteen care-points filed before derivation, every ordinal source-verified, including: the divination-verb is BORN in Laban&#x27;s mouth, its career runs to Joseph&#x27;s cup and dies in the law&#x27;s prohibitions; the designate-verb is born as &quot;name your wage&quot; and its later tokens are the blasphemer pronouncing the Name, the census men designated by name, and Balaam&#x27;s curse-designations; the break-out pledge of the ladder scene performs first on Laban&#x27;s flock and then on Jacob himself; the steal-verb debuts inside an innocence formula and its next eight tokens are chapter 31&#x27;s theft-storm; TOMORROW is born in the honesty clause, its career the plague-tomorrows and the catechism-tomorrows; the righteousness-word&#x27;s third token ever — after &quot;counted to Abram&quot; and &quot;the way of YHWH&quot; — audits a flock; the lamb-word&#x27;s career runs from the altar-question of the Binding to the wage-definition to Passover; the rod-verses carry five hapax-class tokens and three tree-hapaxes, one wearing the surface of Luz the city renamed Bethel (different lexeme — fenced); the white-adjective debuts and clusters INSIDE the Laban-name story — Jacob peels the white out of Laban&#x27;s rods, the pun carried by surface alone, fenced as token-fact, and the white-word&#x27;s career runs to the quarantine-law&#x27;s diagnostic color; the trough-word&#x27;s whole career is shepherd-courtship scenes and this trick; the flock explosion borrows the covenant&#x27;s multiply-exceedingly doubling.</td><td>reconstructed</td></tr>
+<tr><td><b>E</b></td><td>Machine design</td><td>Three pushes, one pop, and a never-performed send. Jacob pushes SEND ME and hand-over-my-wives-and-children; Laban counter-pushes designate-your-wage, and that card pops at 30:32 by content-performance — the wage is NAMED, latency four verses. The other two never pop: no give-token ever hands over wives or children (the in-span give-objects checked whole), and the send-demand is performed by NO ONE — chapter 31 answers it with FLIGHT, and the send-verb&#x27;s next tokens put the never-performance in both mouths across the wall (&quot;I would have sent you away with joy&quot; / &quot;you would have sent me away empty&quot;). The unit ends at depth two open — the second consecutive wall at that depth. Zero registry writes, zero tests (zero good-word tokens in-span, source-checked).</td><td>reconstructed</td></tr>
+<tr><td><b>F</b></td><td>Freeze + later history</td><td>Frozen at commit be3190e (2026-08-07, &quot;Freeze gen_52: send me away — the speckled wage and the peeled rods&quot;). Oral audit 2026-08-08 folded same day (run 7 block 1): 19 VERIFIED, 0 FAILED, 1 UNCHECKABLE (the large-pe letter-size gap); headline: the remaining-flock skeleton collision, the qof split-attested half-vowel station at the troughs, and bless-word station eleven at Laban&#x27;s blessing.</td><td>reconstructed</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_30_25 · Gen.30.25 · <span class='expr'>THE_SEND_ME_DEMAND</span></h3>
+<p><span class="he">וַיְהִי כַּאֲשֶׁר יָלְדָה רָחֵל אֶת־יוֹסֵף וַיֹּאמֶר יַעֲקֹב אֶל־לָבָן שַׁלְּחֵנִי וְאֵלְכָה אֶל־מְקוֹמִי וּלְאַרְצִי</span> · <i>va-yehi ka-asher yalda rachel et-yosef va-yomer yaaqov el-lavan shalcheni ve-elkha el-meqomi u-le-artzi</i> · And it was, when Rachel had borne Joseph, that Jacob said to Laban: Send me away, that I may go to my own place and to my land.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֕י כַּאֲשֶׁ֛ר יָלְדָ֥ה רָחֵ֖ל אֶת יוֹסֵ֑ף</span> · <i>va-yehi ka-asher yalda rachel et-yosef</i> · when Rachel had borne Joseph (etnachta on yosef) [VERIFIED: SNAPSHOT Gen.30.25 idx5 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּ֤אמֶר יַעֲקֹב֙ אֶל לָבָ֔ן שַׁלְּחֵ֨נִי֙ וְאֵ֣לְכָ֔ה אֶל מְקוֹמִ֖י וּלְאַרְצִֽי</span> · <i>va-yomer yaaqov el-lavan shalcheni ve-elkha el-meqomi u-le-artzi</i> · send me away, that I may go to my place and my land (verse-final artzi) [VERIFIED: SNAPSHOT Gen.30.25 idx6-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yaaqov, LET(shalcheni(lavan)))</span><br>THE FIRST PUSH [care 1]. THE CLOCK: va-yehi ka-asher yalda rachel et-yosef — the unit opens on gen_51&#x27;s twelfth REGISTRY write; yosef (3130 tok2/175) [VERIFIED: SNAPSHOT Gen.30.25 idx5 ordinal=2/175]. shalcheni (7971 tok30/201, HVpv2ms+Sp1cs) [VERIFIED: idx10 ordinal=30/201 morph=HVpv2ms/Sp1cs] — SEND ME: the demand chapter 31 will answer with flight, not sending (see care 15&#x27;s landing notes). ve-elkha (HC/Vqh1cs) [VERIFIED: idx11] — purpose-cohortative after the imperative (gen_46 27:4 ve-okhela class): content, no second push. el-meqomi u-le-artzi [idx13-14] — my place, my land: the return-clause language of the Bethel arc (prose resonance only). PUSH LET(shalcheni(lavan)). Depth 1.
+</td><td><span class="he">שַׁלְּחֵנִי וְאֵלְכָה אֶל־מְקוֹמִי וּלְאַרְצִי</span> · <i>shalcheni ve-elkha el-meqomi u-le-artzi</i><br><span class="gloss">= shalcheni and-elkha to-meqomi and-to-artzi</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The unit&#x27;s clock starts at Joseph&#x27;s birth; send-me pushed; depth 1.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_30_26 · Gen.30.26 · <span class='expr'>THE_WIVES_AND_CHILDREN_DEMAND</span></h3>
+<p><span class="he">תְּנָה אֶת־נָשַׁי וְאֶת־יְלָדַי אֲשֶׁר עָבַדְתִּי אֹתְךָ בָּהֵן וְאֵלֵכָה כִּי אַתָּה יָדַעְתָּ אֶת־עֲבֹדָתִי אֲשֶׁר עֲבַדְתִּיךָ</span> · <i>tena et-nashai ve-et-yeladai asher avadti otkha ba-hen ve-elekha ki ata yadata et-avodati asher avadticha</i> · Give my wives and my children, for whom I have served you, and let me go; for you know my service which I have served you.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">תְּנָ֞ה אֶת נָשַׁ֣י וְאֶת יְלָדַ֗י אֲשֶׁ֨ר עָבַ֧דְתִּי אֹֽתְךָ֛ בָּהֵ֖ן וְאֵלֵ֑כָה</span> · <i>tena et-nashai ve-et-yeladai asher avadti otkha ba-hen ve-elekha</i> · give my wives and children for whom I served you, and let me go (etnachta on elekha) [VERIFIED: SNAPSHOT Gen.30.26 idx9 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּ֚י אַתָּ֣ה יָדַ֔עְתָּ אֶת עֲבֹדָתִ֖י אֲשֶׁ֥ר עֲבַדְתִּֽיךָ</span> · <i>ki ata yadata et-avodati asher avadticha</i> · for you know my service which I have served you (verse-final avadticha) [VERIFIED: SNAPSHOT Gen.30.26 idx10-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yaaqov, LET(tena_nashai_viladai(lavan)))</span><br><span class="gloss">= DECLARE(yaaqov, LET(tena-nashai-viladai(lavan)))</span><br>THE SECOND PUSH [care 2]. tena (5414 tok77/647, HVqv2ms+Sh) [VERIFIED: SNAPSHOT Gen.30.26 idx0 ordinal=77/647 morph=HVqv2ms/Sh] — the give-walk&#x27;s in-span imperative: HAND OVER my wives and my children. avodati (5656 tok2/83) [VERIFIED: idx14 ordinal=2/83] — the service-noun&#x27;s second token ever: born at 29:27 naming marriage-labor (gen_50&#x27;s bridge LANDS); its next tokens are Egypt (Exod 1:14 ×3, 2:23 ×2). avadti … avadticha (5647 toks 18-19/113) [VERIFIED: idx6 ordinal=18/113; idx16 ordinal=19/113] — the serve-verb&#x27;s ledger continues (toks 21-22 = 31:6,41, the twenty-years account). ve-elekha [idx9 HC/Vqh1cs] — the same purpose-cohortative as 30:25, fenced. PUSH LET(tena_nashai_viladai(lavan)). Depth 2.
+</td><td><span class="he">תְּנָה אֶת־נָשַׁי וְאֶת־יְלָדַי</span> · <i>tena et-nashai ve-et-yeladai</i><br><span class="gloss">= tena nashai and-yeladai</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Wives-and-children demanded of the man who gave them; depth 2.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_30_27 · Gen.30.27 · <span class='expr'>THE_DIVINATION_CONFESSION</span></h3>
+<p><span class="he">וַיֹּאמֶר אֵלָיו לָבָן אִם־נָא מָצָאתִי חֵן בְּעֵינֶיךָ נִחַשְׁתִּי וַיְבָרֲכֵנִי יְהוָה בִּגְלָלֶךָ</span> · <i>va-yomer elav lavan im-na matzati chen be-enekha nichashti va-yevarakheni YHWH biglalekha</i> · And Laban said to him: If now I have found favor in your eyes — I have divined that YHWH has blessed me for your sake.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר אֵלָיו֙ לָבָ֔ן אִם נָ֛א מָצָ֥אתִי חֵ֖ן בְּעֵינֶ֑יךָ</span> · <i>va-yomer elav lavan im-na matzati chen be-enekha</i> · if I have found favor in your eyes (etnachta on enekha) [VERIFIED: SNAPSHOT Gen.30.27 idx7 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">נִחַ֕שְׁתִּי וַיְבָרֲכֵ֥נִי יְהוָ֖ה בִּגְלָלֶֽךָ</span> · <i>nichashti va-yevarakheni YHWH biglalekha</i> · I divined that YHWH blessed me for your sake (verse-final biglalekha) [VERIFIED: SNAPSHOT Gen.30.27 idx8-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(berakh_YHWH_biglal_yaaqov(lavan), t1)</span><br><span class="gloss">= HOLDS(berakh-the-LORD-biglal-yaaqov(lavan), t1)</span><br>THE DIVINER&#x27;S FACT [care 3]. nichashti (5172 tok1/7 DEBUT) [VERIFIED: SNAPSHOT Gen.30.27 idx8 ordinal=1/7] — THE DIVINATION-VERB IS BORN IN LABAN&#x27;S MOUTH: toks 2-5 = 44:5,15 — JOSEPH&#x27;s divining cup ×4; toks 6-7 = the PROHIBITIONS (Lev 19:26 lo tenachashu, Deut 18:10) — the verb debuts here, runs to the cup of the son just born, and dies in law. matzati chen be-enekha (2580 tok4/27) [VERIFIED: idx6 ordinal=4/27] — the favor-formula&#x27;s walk: Noah (6:8), Abraham&#x27;s visitors (18:3), Lot (19:19) — then Laban to Jacob; the next block is Jacob toward ESAU (32:6-33:15). va-yevarakheni YHWH biglalekha (1558 tok2/6) [VERIFIED: idx11 ordinal=2/6] — FOR-YOUR-SAKE: tok1 = 12:13 (Abram at Sarai, &quot;that it may be well with me for your sake&quot;); tok3 = 39:5 (YHWH blesses the EGYPTIAN&#x27;s house for JOSEPH&#x27;s sake) — the word&#x27;s walk is patriarch-in-a-stranger&#x27;s-house, and Laban stands in the middle naming YHWH as his blesser. No queue motion. Depth 2.
+</td><td><span class="he">נִחַשְׁתִּי וַיְבָרֲכֵנִי יְהוָה בִּגְלָלֶךָ</span> · <i>nichashti va-yevarakheni YHWH biglalekha</i><br><span class="gloss">= nichashti and-yevarakheni the-LORD biglalekha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Laban&#x27;s divination files the blessing-fact; no queue motion.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_30_28 · Gen.30.28 · <span class='expr'>THE_WAGE_DESIGNATION_DEMAND</span></h3>
+<p><span class="he">וַיֹּאמַר נָקְבָה שְׂכָרְךָ עָלַי וְאֶתֵּנָה</span> · <i>va-yomar naqva sekharkha alay ve-etena</i> · And he said: Designate your wage upon me, and I will give it.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּאמַ֑ר</span> · <i>va-yomar</i> · and he said (etnachta on yomar) [VERIFIED: SNAPSHOT Gen.30.28 idx0 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">נָקְבָ֧ה שְׂכָרְךָ֛ עָלַ֖י וְאֶתֵּֽנָה</span> · <i>naqva sekharkha alay ve-etena</i> · designate your wage upon me and I will give (verse-final etena) [VERIFIED: SNAPSHOT Gen.30.28 idx1-4]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(lavan, LET(naqva_sekhar(yaaqov)))</span><br><span class="gloss">= DECLARE(lavan, LET(naqva-sekhar(yaaqov)))</span><br>THE THIRD PUSH [care 4]. naqva (5344 tok1/7 DEBUT, HVqv2ms+Sh) [VERIFIED: SNAPSHOT Gen.30.28 idx1 ordinal=1/7 morph=HVqv2ms/Sh] — the DESIGNATE-verb is born as &quot;name your wage&quot;: its six later tokens are Lev 24:11,16 ×3 — the blasphemer PRONOUNCING the Name — Num 1:17 — the census men &quot;DESIGNATED by name&quot; — and Num 23:8,25, Balaam&#x27;s &quot;how shall I DESIGNATE-curse whom God has not&quot; — designation as naming-power, born in a wage haggle. sekharkha (7939 tok3/12) [VERIFIED: idx2 ordinal=3/12] — gen_51&#x27;s care-18 bridge LANDS: the wage-noun&#x27;s toks 3-5 are this span&#x27;s (30:28/32/33), after God-as-wage (15:1) and Leah&#x27;s God-given wage (30:18). ve-etena (5414 tok78/647, HC/Vqh1cs) [VERIFIED: idx4] — Laban&#x27;s cohortative counter (&quot;and I WILL GIVE&quot;) — first-person volitive, no addressee-demand: no push (gen_47 27:41 fence). The verse is FIVE tokens with the etnachta on its FIRST (va-yomar, idx0) — a one-word left half, mechanical. PUSH LET(naqva_sekhar(yaaqov)). Depth 3.
+</td><td><span class="he">נָקְבָה שְׂכָרְךָ עָלַי וְאֶתֵּנָה</span> · <i>naqva sekharkha alay ve-etena</i><br><span class="gloss">= naqva sekharkha alay and-etena</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Laban demands the wage be designated; three cards open.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_30_29 · Gen.30.29 · <span class='expr'>THE_SERVICE_AUDIT</span></h3>
+<p><span class="he">וַיֹּאמֶר אֵלָיו אַתָּה יָדַעְתָּ אֵת אֲשֶׁר עֲבַדְתִּיךָ וְאֵת אֲשֶׁר־הָיָה מִקְנְךָ אִתִּי</span> · <i>va-yomer elav ata yadata et asher avadticha ve-et asher-haya miqnekha iti</i> · And he said to him: You know how I have served you, and how your livestock has fared with me.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֣אמֶר אֵלָ֔יו אַתָּ֣ה יָדַ֔עְתָּ אֵ֖ת אֲשֶׁ֣ר עֲבַדְתִּ֑יךָ</span> · <i>va-yomer elav ata yadata et asher avadticha</i> · you know how I have served you (etnachta on avadticha) [VERIFIED: SNAPSHOT Gen.30.29 idx6 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאֵ֛ת אֲשֶׁר הָיָ֥ה מִקְנְךָ֖ אִתִּֽי</span> · <i>ve-et asher-haya miqnekha iti</i> · and how your livestock fared with me (verse-final iti) [VERIFIED: SNAPSHOT Gen.30.29 idx7-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(yadata_avodati(lavan), t2)</span><br><span class="gloss">= HOLDS(yadata-avodati(lavan), t2)</span><br>THE AUDIT OPENS [care 5]. ata yadata — Jacob does not name a wage; he files facts. avadticha (5647 tok20/113) [VERIFIED: SNAPSHOT Gen.30.29 idx6 ordinal=20/113] — the serve-ledger&#x27;s third in-span token. miqnekha (4735 tok8/51) [VERIFIED: idx10 ordinal=8/51] — the livestock-word (toks 5-6 = 26:14, Isaac&#x27;s envied herds; toks 9-11 = 31:9,18 — the next unit&#x27;s carried-off miqneh). Depth 3.
+</td><td><span class="he">אַתָּה יָדַעְתָּ אֵת אֲשֶׁר עֲבַדְתִּיךָ</span> · <i>ata yadata et asher avadticha</i><br><span class="gloss">= ata yadata et which avadticha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The service audit begins; no wage named yet.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_30_30 · Gen.30.30 · <span class='expr'>THE_BREAK_OUT_AUDIT</span></h3>
+<p><span class="he">כִּי מְעַט אֲשֶׁר־הָיָה לְךָ לְפָנַי וַיִּפְרֹץ לָרֹב וַיְבָרֶךְ יְהוָה אֹתְךָ לְרַגְלִי וְעַתָּה מָתַי אֶעֱשֶׂה גַם־אָנֹכִי לְבֵיתִי</span> · <i>ki meat asher-haya lekha le-fanay va-yifrotz la-rov va-yevarekh YHWH otkha le-ragli ve-ata matay eese gam-anokhi le-veti</i> · For the little you had before me has broken out into abundance, and YHWH has blessed you at my foot; and now, when shall I do for my own house also?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">כִּ֡י מְעַט֩ אֲשֶׁר הָיָ֨ה לְךָ֤ לְפָנַי֙ וַיִּפְרֹ֣ץ לָרֹ֔ב וַיְבָ֧רֶךְ יְהוָ֛ה אֹתְךָ֖ לְרַגְלִ֑י</span> · <i>ki meat asher-haya lekha le-fanay va-yifrotz la-rov va-yevarekh YHWH otkha le-ragli</i> · your little broke out to abundance; YHWH blessed you at my foot (etnachta on ragli) [VERIFIED: SNAPSHOT Gen.30.30 idx11 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְעַתָּ֗ה מָתַ֛י אֶֽעֱשֶׂ֥ה גַם אָנֹכִ֖י לְבֵיתִֽי</span> · <i>ve-ata matay eese gam-anokhi le-veti</i> · when shall I provide for my own house also (verse-final veti) [VERIFIED: SNAPSHOT Gen.30.30 idx12-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(paratz_la_rov_le_ragli(miqne_lavan), t2)</span><br><span class="gloss">= HOLDS(paratz-to-rov-to-ragli(miqne-lavan), t2)</span><br>THE PLEDGE LANDS [care 5]. va-yifrotz (6555 tok2/7) [VERIFIED: SNAPSHOT Gen.30.30 idx6 ordinal=2/7] — THE BETHEL WORD: tok1 = 28:14 u-faratzta, God&#x27;s own ladder-pledge &quot;you shall BREAK OUT&quot; — its first return performs on LABAN&#x27;s flock under Jacob&#x27;s hand (tok3 = 30:43, on Jacob himself: the pledge-verb frames the unit&#x27;s close). la-rov (7230 tok3/12) [VERIFIED: idx7 ordinal=3/12] — tok1 = 16:10 (Hagar&#x27;s uncountable seed), tok2 = 27:28 (the stolen blessing&#x27;s &quot;abundance of grain&quot;): the abundance-word audits the blessing. va-yevarekh YHWH otkha le-ragli (7272 tok7/60) [VERIFIED: idx11 ordinal=7/60] — at my FOOT; tok6 = 29:1 (&quot;Jacob lifted his feet&quot; — gen_49&#x27;s opening): the foot that walked east now carries blessing. matai eese gam anokhi le-veti — when for MY house (the vow&#x27;s bet-Elohim word, prose resonance only). Depth 3.
+</td><td><span class="he">וַיִּפְרֹץ לָרֹב וַיְבָרֶךְ יְהוָה אֹתְךָ לְרַגְלִי</span> · <i>va-yifrotz la-rov va-yevarekh YHWH otkha le-ragli</i><br><span class="gloss">= and-yifrotz to-rov and-yevarekh the-LORD otkha to-ragli</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The audit names the pledge-verb performing on Laban&#x27;s flock.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_30_31 · Gen.30.31 · <span class='expr'>THE_NOTHING_WAGE</span></h3>
+<p><span class="he">וַיֹּאמֶר מָה אֶתֶּן־לָךְ וַיֹּאמֶר יַעֲקֹב לֹא־תִתֶּן־לִי מְאוּמָה אִם־תַּעֲשֶׂה־לִּי הַדָּבָר הַזֶּה אָשׁוּבָה אֶרְעֶה צֹאנְךָ אֶשְׁמֹר</span> · <i>va-yomer ma eten-lakh va-yomer yaaqov lo-titen li meuma im-taase li ha-davar ha-ze ashuva ere tzonkha eshmor</i> · And he said: What shall I give you? And Jacob said: You shall not give me anything. If you will do this thing for me, I will again feed and keep your flock:</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֖אמֶר מָ֣ה אֶתֶּן לָ֑ךְ</span> · <i>va-yomer ma eten-lakh</i> · what shall I give you (etnachta on lakh) [VERIFIED: SNAPSHOT Gen.30.31 idx3 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּ֤אמֶר יַעֲקֹב֙ לֹא תִתֶּן לִ֣י מְא֔וּמָה אִם תַּֽעֲשֶׂה לִּי֙ הַדָּבָ֣ר הַזֶּ֔ה אָשׁ֛וּבָה אֶרְעֶ֥ה צֹֽאנְךָ֖ אֶשְׁמֹֽר</span> · <i>va-yomer yaaqov lo-titen li meuma im-taase li ha-davar ha-ze ashuva ere tzonkha eshmor</i> · give me nothing; if you do this, I return to feed and keep your flock (verse-final eshmor) [VERIFIED: SNAPSHOT Gen.30.31 idx4-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lo_titen_li_meuma(exchange), t2)</span><br><span class="gloss">= HOLDS(not-titen-to-me-meuma(exchange), t2)</span><br>THE REFUSED GIVE [care 6]. ma eten … lo titen li meuma (5414 toks 79-80/647) [VERIFIED: SNAPSHOT Gen.30.31 idx2 ordinal=79/647; idx7 ordinal=80/647] — the give-verb offered and REFUSED in one verse. meuma (3972 tok2/9) [VERIFIED: idx9 ordinal=2/9] — ANYTHING: tok1 = 22:12, the AKEDAH&#x27;s &quot;do not do ANYTHING to him&quot;; toks 3-6 = the Joseph trust-cluster (39:6,9,23; 40:15) — the nothing-word walks from the withheld knife to the entrusted house. ashuva ere eshmor [VERIFIED: idx15 morph=HVqh1cs] — 1cs cohortative with NO addressee: pushes NOTHING (gen_47&#x27;s 27:41 ve-aharga fence — a self-directed volitive is not a demand). Depth 3.
+</td><td><span class="he">לֹא־תִתֶּן־לִי מְאוּמָה</span> · <i>lo-titen li meuma</i><br><span class="gloss">= not-titen to-me meuma</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Jacob refuses payment-in-goods; self-commitment fenced, no push.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_30_32 · Gen.30.32 · <span class='expr'>THE_WAGE_NAMED_POP</span></h3>
+<p><span class="he">אֶעֱבֹר בְּכָל־צֹאנְךָ הַיּוֹם הָסֵר מִשָּׁם כָּל־שֶׂה נָקֹד וְטָלוּא וְכָל־שֶׂה־חוּם בַּכְּשָׂבִים וְטָלוּא וְנָקֹד בָּעִזִּים וְהָיָה שְׂכָרִי</span> · <i>eevor be-khal-tzonkha ha-yom haser mi-sham kal-se naqod ve-talu ve-khal-se chum ba-kesavim ve-talu ve-naqod ba-izim ve-haya sekhari</i> · I will pass through all your flock today, removing from there every speckled and spotted lamb, and every dark lamb among the sheep, and the spotted and speckled among the goats; and that shall be my wage.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אֶֽעֱבֹ֨ר בְּכָל צֹֽאנְךָ֜ הַיּ֗וֹם הָסֵ֨ר מִשָּׁ֜ם כָּל שֶׂ֣ה נָקֹ֣ד וְטָל֗וּא וְכָל שֶׂה חוּם֙ בַּכְּשָׂבִ֔ים וְטָל֥וּא וְנָקֹ֖ד בָּעִזִּ֑ים</span> · <i>eevor be-khal-tzonkha ha-yom haser mi-sham kal-se naqod ve-talu ve-khal-se chum ba-kesavim ve-talu ve-naqod ba-izim</i> · I pass through your flock today removing the speckled and spotted (etnachta on izim) [VERIFIED: SNAPSHOT Gen.30.32 idx16 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהָיָ֖ה שְׂכָרִֽי</span> · <i>ve-haya sekhari</i> · and that shall be my wage (verse-final sekhari) [VERIFIED: SNAPSHOT Gen.30.32 idx17-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">HOLDS(naqva_sekhar(yaaqov), t3)</span><br><span class="gloss">= HOLDS(naqva-sekhar(yaaqov), t3)</span><br>THE POP [care 7]. The demand was NAQVA — designate — and here the wage is DESIGNATED: kol se naqod ve-talu, ve-khol se chum ba-kesavim, ve-talu ve-naqod ba-izim — ve-haya SEKHARI (7939 tok4/12) [VERIFIED: SNAPSHOT Gen.30.32 idx18 ordinal=4/12] — content-performance, latency four verses. naqod (5348 toks 1-2/9 DEBUT ×2) [VERIFIED: idx8 ordinal=1/9; idx15 ordinal=2/9] — the speckled-word born in the wage-clause (toks 6-9 = 31:8-12, the retell). tala (2921 toks 1-2/6) [VERIFIED: idx9 ordinal=1/6; idx14 ordinal=2/6] and chum (2345 tok1/4) [VERIFIED: idx12 ordinal=1/4] — ALL tokens of both words live in-span: two whole careers inside the deal. se (7716 toks 3-4/28) [VERIFIED: idx7 ordinal=3/28; idx11 ordinal=4/28] — the LAMB-word: toks 1-2 = the AKEDAH (22:7,8 &quot;where is the lamb / God will see to the lamb&quot;); its next stop after the wage-clause is the pesach lamb (Exod 12:3-5). POP LET(naqva_sekhar). Depth 2.
+</td><td><span class="he">וְהָיָה שְׂכָרִי</span> · <i>ve-haya sekhari</i><br><span class="gloss">= and-haya sekhari</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The wage designated in speckled and dark; the third card pops.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_30_33 · Gen.30.33 · <span class='expr'>THE_RIGHTEOUSNESS_CLAUSE</span></h3>
+<p><span class="he">וְעָנְתָה־בִּי צִדְקָתִי בְּיוֹם מָחָר כִּי־תָבוֹא עַל־שְׂכָרִי לְפָנֶיךָ כֹּל אֲשֶׁר־אֵינֶנּוּ נָקֹד וְטָלוּא בָּעִזִּים וְחוּם בַּכְּשָׂבִים גָּנוּב הוּא אִתִּי</span> · <i>ve-anta-bi-y tzidqati be-yom machar ki-tavo al-sekhari le-fanekha kol asher-enenu naqod ve-talu ba-izim ve-chum ba-kesavim ganuv hu iti</i> · And my righteousness will answer for me on a day to come, when you come concerning my wage before you: every one that is not speckled and spotted among the goats and dark among the sheep, it is stolen with me.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְעָֽנְתָה בִּ֤י צִדְקָתִי֙ בְּי֣וֹם מָחָ֔ר כִּֽי תָב֥וֹא עַל שְׂכָרִ֖י לְפָנֶ֑יךָ</span> · <i>ve-anta-bi-y tzidqati be-yom machar ki-tavo al-sekhari le-fanekha</i> · my righteousness will answer for me on the day of tomorrow (etnachta on fanekha) [VERIFIED: SNAPSHOT Gen.30.33 idx9 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">כֹּ֣ל אֲשֶׁר אֵינֶנּוּ֩ נָקֹ֨ד וְטָל֜וּא בָּֽעִזִּ֗ים וְחוּם֙ בַּכְּשָׂבִ֔ים גָּנ֥וּב ה֖וּא אִתִּֽי</span> · <i>kol asher-enenu naqod ve-talu ba-izim ve-chum ba-kesavim ganuv hu iti</i> · whatever is not speckled or dark, count it stolen with me (verse-final iti) [VERIFIED: SNAPSHOT Gen.30.33 idx10-20]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(tzedaqa_ana_be_yom_machar(yaaqov), t3)</span><br><span class="gloss">= HOLDS(tzedaqa-ana-in-day-machar(yaaqov), t3)</span><br>THE HONESTY CLAUSE [care 8]. tzidqati (6666 tok3/9) [VERIFIED: SNAPSHOT Gen.30.33 idx2 ordinal=3/9] — the RIGHTEOUSNESS-word&#x27;s third token ever: 15:6 (&quot;he counted it to him as righteousness&quot;), 18:19 (&quot;to do righteousness and justice&quot;) — and now a livestock audit: &quot;my righteousness will ANSWER for me.&quot; be-yom machar (4279 tok1/17 DEBUT) [VERIFIED: idx4 ordinal=1/17] — TOMORROW is born in this clause; its career is the plague-tomorrows (Exod 8-10) and the catechism-tomorrows (&quot;when your son asks tomorrow,&quot; Exod 13:14, Deut 6:20). ganuv (1589 tok1/21 DEBUT) [VERIFIED: idx18 ordinal=1/21] — THE STEAL-VERB IS BORN IN AN INNOCENCE FORMULA (&quot;count it STOLEN with me&quot;) — and its next EIGHT tokens are chapter 31&#x27;s theft-storm: Rachel steals the terafim (31:19), Jacob steals Laban&#x27;s heart (31:20,26), the accusations and the never-stolen defense (31:27-39). The verb debuts as a clean man&#x27;s self-audit and immediately becomes the next unit&#x27;s weather. Depth 2.
+</td><td><span class="he">וְעָנְתָה־בִּי צִדְקָתִי בְּיוֹם מָחָר</span> · <i>ve-anta-bi-y tzidqati be-yom machar</i><br><span class="gloss">= and-anta-bi-y tzidqati day machar</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Righteousness, tomorrow, and theft all debut in one honesty clause.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_30_34 · Gen.30.34 · <span class='expr'>THE_YEHI_ACCEPTANCE</span></h3>
+<p><span class="he">וַיֹּאמֶר לָבָן הֵן לוּ יְהִי כִדְבָרֶךָ</span> · <i>va-yomer lavan hen lu yehi khi-devarekha</i> · And Laban said: Behold, would that it be according to your word.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֥אמֶר לָבָ֖ן הֵ֑ן</span> · <i>va-yomer lavan hen</i> · and Laban said: behold (etnachta on hen) [VERIFIED: SNAPSHOT Gen.30.34 idx2 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">ל֖וּ יְהִ֥י כִדְבָרֶֽךָ</span> · <i>lu yehi khi-devarekha</i> · would that it be according to your word (verse-final devarekha) [VERIFIED: SNAPSHOT Gen.30.34 idx3-5]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lu_yehi_khi_devarekha(lavan), t3)</span><br><span class="gloss">= HOLDS(lu-yehi-khi-devarekha(lavan), t3)</span><br>THE ACCEPTANCE [care 9]. hen lu YEHI khi-devarekha (1961 tok192/1050) [VERIFIED: SNAPSHOT Gen.30.34 idx4 ordinal=192/1050 morph=HVqi3ms] — the deal is sealed on the word yehi — the surface of 1:3&#x27;s LET-THERE-BE, here tagged plain imperfect (1:3 is jussive-tagged): FENCED as surface-echo only, prose not operator. khi-devarekha — &quot;according to your WORD&quot;: Laban accepts a wage-world spoken into being by specification. Etnachta on hen (idx2, the third token) — a three-word left half. No queue motion. Depth 2.
+</td><td><span class="he">לוּ יְהִי כִדְבָרֶךָ</span> · <i>lu yehi khi-devarekha</i><br><span class="gloss">= lu yehi khi-devarekha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The deal accepted on a let-it-be; state only.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_30_35 · Gen.30.35 · <span class='expr'>THE_SAME_DAY_REMOVAL</span></h3>
+<p><span class="he">וַיָּסַר בַּיּוֹם הַהוּא אֶת־הַתְּיָשִׁים הָעֲקֻדִּים וְהַטְּלֻאִים וְאֵת כָּל־הָעִזִּים הַנְּקֻדּוֹת וְהַטְּלֻאֹת כֹּל אֲשֶׁר־לָבָן בּוֹ וְכָל־חוּם בַּכְּשָׂבִים וַיִּתֵּן בְּיַד־בָּנָיו</span> · <i>va-yasar ba-yom ha-hu et-ha-teyashim ha-aqudim ve-ha-teluim ve-et kal-ha-izim ha-nequdot ve-ha-teluot kol asher-lavan bo ve-khal-chum ba-kesavim va-yiten be-yad-banav</i> · And he removed on that day the striped and spotted he-goats and all the speckled and spotted she-goats — every one that had white in it — and every dark one among the sheep, and gave them into the hand of his sons.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּ֣סַר בַּיּוֹם֩ הַה֨וּא אֶת הַתְּיָשִׁ֜ים הָֽעֲקֻדִּ֣ים וְהַטְּלֻאִ֗ים וְאֵ֤ת כָּל הָֽעִזִּים֙ הַנְּקֻדּ֣וֹת וְהַטְּלֻאֹ֔ת כֹּ֤ל אֲשֶׁר לָבָן֙ בּ֔וֹ וְכָל ח֖וּם בַּכְּשָׂבִ֑ים</span> · <i>va-yasar ba-yom ha-hu et-ha-teyashim ha-aqudim ve-ha-teluim ve-et kal-ha-izim ha-nequdot ve-ha-teluot kol asher-lavan bo ve-khal-chum ba-kesavim</i> · he removed that day the striped he-goats and spotted she-goats (etnachta on kesavim) [VERIFIED: SNAPSHOT Gen.30.35 idx18 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּתֵּ֖ן בְּיַד בָּנָֽיו</span> · <i>va-yiten be-yad-banav</i> · all with white in it, and the dark sheep, into his sons&#x27; hand (verse-final banav) [VERIFIED: SNAPSHOT Gen.30.35 idx19-21]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hesir_lavan_ba_yom_ha_hu(ha_aqudim), t4)</span><br><span class="gloss">= HOLDS(hesir-lavan-in-the-day-the-that(the-aqudim), t4)</span><br>THE TRICK [care 10]. va-yasar BA-YOM HA-HU — Laban strips the deal&#x27;s stock THE SAME DAY. The yom-walk (3117 toks 96-99/668 in-span) [VERIFIED: 30:32 idx3; 30:33 idx3; 30:35 idx1; 30:36 idx3]: ha-yom (the deal&#x27;s today) → be-yom machar (the audit&#x27;s tomorrow) → BA-YOM HA-HU (the trick&#x27;s same-day) → derekh sheloshet YAMIM (the gap) — and tok100 = 31:22, &quot;on the THIRD day Laban was told&quot;: the walk crosses the wall. ha-teyashim (8495 tok1/2) [VERIFIED: idx4 ordinal=1/2] — he-goats; tok2 = 32:15, the Esau-tribute. kol asher LAVAN bo (3836 tok1/25 DEBUT) [VERIFIED: idx14 ordinal=1/25] — the WHITE-adjective&#x27;s first token ever: &quot;every one that had WHITE in it&quot; — see care 12 at 30:37. va-yiten be-yad BANAV (5414 tok81/647) [VERIFIED: idx19 ordinal=81/647] — the give-walk&#x27;s trick-token: given not to Jacob but into his SONS&#x27; hand. aqod (6124 tok1/7 DEBUT) [VERIFIED: idx5 ordinal=1/7] — the striped-word born in the removal itself. Depth 2.
+</td><td><span class="he">וַיָּסַר בַּיּוֹם הַהוּא</span> · <i>va-yasar ba-yom ha-hu</i><br><span class="gloss">= and-yasar day the-that</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Laban removes the wage-stock the same day; the give-verb turns trick.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_30_36 · Gen.30.36 · <span class='expr'>THE_THREE_DAYS_GAP</span></h3>
+<p><span class="he">וַיָּשֶׂם דֶּרֶךְ שְׁלֹשֶׁת יָמִים בֵּינוֹ וּבֵין יַעֲקֹב וְיַעֲקֹב רֹעֶה אֶת־צֹאן לָבָן הַנּוֹתָרֹת</span> · <i>va-yasem derekh sheloshet yamim beno u-ven yaaqov ve-yaaqov roe et-tzon lavan ha-notarot</i> · And he set a way of three days between himself and Jacob; and Jacob was shepherding the remnant of Laban&#x27;s flock.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּ֗שֶׂם דֶּ֚רֶךְ שְׁלֹ֣שֶׁת יָמִ֔ים בֵּינ֖וֹ וּבֵ֣ין יַעֲקֹ֑ב</span> · <i>va-yasem derekh sheloshet yamim beno u-ven yaaqov</i> · he set three days&#x27; way between himself and Jacob (etnachta on yaaqov) [VERIFIED: SNAPSHOT Gen.30.36 idx6 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְיַעֲקֹ֗ב רֹעֶ֛ה אֶת צֹ֥אן לָבָ֖ן הַנּוֹתָרֹֽת</span> · <i>ve-yaaqov roe et-tzon lavan ha-notarot</i> · and Jacob shepherded the remnant of Laban&#x27;s flock (verse-final notarot) [VERIFIED: SNAPSHOT Gen.30.36 idx7-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(derekh_sheloshet_yamim(ben_lavan_u_ven_yaaqov), t4)</span><br><span class="gloss">= HOLDS(derekh-sheloshet-seas(ben-lavan-and-ven-yaaqov), t4)</span><br>THE GAP [care 10]. derekh sheloshet yamim — the three-days distance (the 22:4 third-day class; 31:22&#x27;s third-day notice is the walk&#x27;s next stop, care 10). ha-notarot (3498 tok1/33 DEBUT) [VERIFIED: SNAPSHOT Gen.30.36 idx12 ordinal=1/33] — THE REMAIN-VERB DEBUTS on the leftover flock — and its second token is 32:25, va-yivater yaaqov LEVADO: &quot;Jacob REMAINED alone&quot; — the remnant-word passes from the flock Jacob keeps to Jacob himself at Peniel. Depth 2.
+</td><td><span class="he">וַיָּשֶׂם דֶּרֶךְ שְׁלֹשֶׁת יָמִים בֵּינוֹ וּבֵין יַעֲקֹב</span> · <i>va-yasem derekh sheloshet yamim beno u-ven yaaqov</i><br><span class="gloss">= and-yasem derekh sheloshet seas beno and-ven yaaqov</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Three days set between them; the remnant-word debuts on the flock.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_30_37 · Gen.30.37 · <span class='expr'>THE_WHITE_PEELED</span></h3>
+<p><span class="he">וַיִּקַּח־לוֹ יַעֲקֹב מַקַּל לִבְנֶה לַח וְלוּז וְעֶרְמוֹן וַיְפַצֵּל בָּהֵן פְּצָלוֹת לְבָנוֹת מַחְשֹׂף הַלָּבָן אֲשֶׁר עַל־הַמַּקְלוֹת</span> · <i>va-yiqach-lo yaaqov maqal livne lach ve-luz ve-ermon va-yefatzel ba-hen petzalot levanot machsof ha-lavan asher al-ha-maqlot</i> · And Jacob took himself fresh rods of poplar and almond and plane, and peeled white peelings in them, laying bare the white which was on the rods.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּֽקַּֽח ל֣וֹ יַעֲקֹ֗ב מַקַּ֥ל לִבְנֶ֛ה לַ֖ח וְל֣וּז וְעֶרְמ֑וֹן</span> · <i>va-yiqach-lo yaaqov maqal livne lach ve-luz ve-ermon</i> · Jacob took fresh rods of poplar, almond, and plane (etnachta on ermon) [VERIFIED: SNAPSHOT Gen.30.37 idx7 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיְפַצֵּ֤ל בָּהֵן֙ פְּצָל֣וֹת לְבָנ֔וֹת מַחְשֹׂף֙ הַלָּבָ֔ן אֲשֶׁ֖ר עַל הַמַּקְלֽוֹת</span> · <i>va-yefatzel ba-hen petzalot levanot machsof ha-lavan asher al-ha-maqlot</i> · peeled white peelings, laying bare the white on the rods (verse-final maqlot) [VERIFIED: SNAPSHOT Gen.30.37 idx8-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(pitzel_machsof_ha_lavan(maqlot), t5)</span><br><span class="gloss">= HOLDS(pitzel-machsof-the-lavan(maqlot), t5)</span><br>THE PUN AS TOKEN-FACT [cares 11-12]. maqal (4731 toks 1-2/9 DEBUT) [VERIFIED: SNAPSHOT Gen.30.37 idx3 ordinal=1/9; idx16 ordinal=2/9] — the rod-word born here (tok7 = 32:11, &quot;with my STAFF I crossed this Jordan&quot;). THREE TREE-HAPAXES in one verse: livne poplar (3839 1/1) [VERIFIED: idx4], ve-luz almond (3869 1/1) [VERIFIED: idx6 — the tree-word wears the SURFACE of Luz the city renamed Beit-El (gen_48), but the strongs are distinct, 3869 tree / 3870 city: FENCED as surface-echo], ve-ermon plane (6196 1/1) [VERIFIED: idx7]. va-yefatzel … petzalot (6478 tok1/2 + 6479 1/1) [VERIFIED: idx8 ordinal=1/2; idx10 ordinal=1/1] machsof (4286 1/1) [VERIFIED: idx12] — peel-verb, peeling-noun, laying-bare-noun: five hapax-class tokens in the rod-work. LEVANOT … HA-LAVAN (3836 toks 2-3/25) [VERIFIED: idx11 ordinal=2/25; idx13 ordinal=3/25] — JACOB PEELS THE WHITE OUT OF THE RODS INSIDE THE LABAN STORY: the white-adjective (3836) clusters its first three tokens ever (30:35, 30:37 ×2) among seven in-span tokens of the NAME Laban (3837) — distinct strongs, the pun carried by surface alone, FENCED as token-fact. The white-word&#x27;s career from these rods: 49:12 (teeth white with milk), Exod 16:31 (the manna), then LEVITICUS 13 — the diagnostic white of the quarantine law: the corpus&#x27;s law unit reads its color from a career that debuts here. Depth 2.
+</td><td><span class="he">וַיְפַצֵּל בָּהֵן פְּצָלוֹת לְבָנוֹת מַחְשֹׂף הַלָּבָן</span> · <i>va-yefatzel ba-hen petzalot levanot machsof ha-lavan</i><br><span class="gloss">= and-yefatzel in-the-hen petzalot levanot machsof the-lavan</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Five hapaxes and the white-word&#x27;s debut cluster: laban peeled from Laban&#x27;s rods.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_30_38 · Gen.30.38 · <span class='expr'>THE_TROUGH_SIGHTLINE</span></h3>
+<p><span class="he">וַיַּצֵּג אֶת־הַמַּקְלוֹת אֲשֶׁר פִּצֵּל בָּרֳהָטִים בְּשִׁקֲתוֹת הַמָּיִם אֲשֶׁר תָּבֹאןָ הַצֹּאן לִשְׁתּוֹת לְנֹכַח הַצֹּאן וַיֵּחַמְנָה בְּבֹאָן לִשְׁתּוֹת</span> · <i>va-yatzeg et-ha-maqlot asher pitzel ba-rohatim be-shiqatot ha-mayim asher tavona ha-tzon li-shetot le-nokhach ha-tzon va-yechamna be-voan li-shetot</i> · And he set the rods which he had peeled in the runnels, in the watering troughs where the flock came to drink, in front of the flock; and they came to heat when they came to drink.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּצֵּ֗ג אֶת הַמַּקְלוֹת֙ אֲשֶׁ֣ר פִּצֵּ֔ל בָּרֳהָטִ֖ים בְּשִֽׁקֲת֣וֹת הַמָּ֑יִם</span> · <i>va-yatzeg et-ha-maqlot asher pitzel ba-rohatim be-shiqatot ha-mayim</i> · he set the peeled rods in the troughs where the flock drank (etnachta on mayim) [VERIFIED: SNAPSHOT Gen.30.38 idx7 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֲשֶׁר֩ תָּבֹ֨אןָ הַצֹּ֤אן לִשְׁתּוֹת֙ לְנֹ֣כַח הַצֹּ֔אן וַיֵּחַ֖מְנָה בְּבֹאָ֥ן לִשְׁתּֽוֹת</span> · <i>asher tavona ha-tzon li-shetot le-nokhach ha-tzon va-yechamna be-voan li-shetot</i> · and they conceived-heat when they came to drink (verse-final shetot) [VERIFIED: SNAPSHOT Gen.30.38 idx8-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(maqlot_ba_rehatim(le_nokhach_ha_tzon), t5)</span><br><span class="gloss">= HOLDS(maqlot-in-the-rehatim(to-nokhach-the-tzon), t5)</span><br>THE SIGHTLINE [care 11]. ba-rohatim (7298 toks 1-2/3) [VERIFIED: SNAPSHOT Gen.30.38 idx5 ordinal=1/3; 30:41 idx11 ordinal=2/3] — the runnel-word: its ONLY other token is Exod 2:16 — ZIPPORAH&#x27;s troughs: the word&#x27;s whole career is shepherd-courtship wells and this trick. be-shiqatot (8268 tok2/2) [VERIFIED: idx6 ordinal=2/2] — the trough-word&#x27;s career CLOSES here: tok1 = 24:20, REBEKAH&#x27;s bride-test trough — from the tested kindness at a well to the engineered sightline at one. va-yechamna (3179 tok1/6 DEBUT) [VERIFIED: idx14 ordinal=1/6] — the conceive-heat verb born here; four of its six tokens in-span, tok5 = 31:10 (the dream-retell). Depth 2.
+</td><td><span class="he">וַיַּצֵּג אֶת־הַמַּקְלוֹת אֲשֶׁר פִּצֵּל בָּרֳהָטִים בְּשִׁקֲתוֹת הַמָּיִם</span> · <i>va-yatzeg et-ha-maqlot asher pitzel ba-rohatim be-shiqatot ha-mayim</i><br><span class="gloss">= and-yatzeg the-maqlot which pitzel in-the-rohatim in-shiqatot waters</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Rods at the water-line; the trough-careers converge and close.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_30_39 · Gen.30.39 · <span class='expr'>THE_FLOCK_CONCEIVES_STRIPED</span></h3>
+<p><span class="he">וַיֶּחֱמוּ הַצֹּאן אֶל־הַמַּקְלוֹת וַתֵּלַדְןָ הַצֹּאן עֲקֻדִּים נְקֻדִּים וּטְלֻאִים</span> · <i>va-yechemu ha-tzon el-ha-maqlot va-teladna ha-tzon aqudim nequdim u-teluim</i> · And the flock conceived-heat at the rods; and the flock bore striped, speckled, and spotted.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֶּחֱמ֥וּ הַצֹּ֖אן אֶל הַמַּקְל֑וֹת</span> · <i>va-yechemu ha-tzon el-ha-maqlot</i> · the flock conceived at the rods (etnachta on maqlot) [VERIFIED: SNAPSHOT Gen.30.39 idx3 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתֵּלַ֣דְןָ הַצֹּ֔אן עֲקֻדִּ֥ים נְקֻדִּ֖ים וּטְלֻאִֽים</span> · <i>va-teladna ha-tzon aqudim nequdim u-teluim</i> · and bore striped, speckled, and spotted (verse-final teluim) [VERIFIED: SNAPSHOT Gen.30.39 idx4-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(teladna_aqudim_nequdim_teluim(ha_tzon), t5)</span><br><span class="gloss">= HOLDS(teladna-aqudim-nequdim-teluim(the-tzon), t5)</span><br>THE YIELD [care 13]. va-yechemu (3179 tok2/6) [VERIFIED: SNAPSHOT Gen.30.39 idx0 ordinal=2/6] … va-teladna ha-tzon AQUDIM NEQUDIM U-TELUIM (6124 tok2/7; 5348 tok5/9; 2921 tok6/6) [VERIFIED: idx6 ordinal=2/7; idx7 ordinal=5/9; idx8 ordinal=6/6] — the offspring wear the deal&#x27;s three adjectives; tala&#x27;s career COMPLETES here (all six tokens in-span). The bear-verb that filled gen_51 (18 in-span tokens there) returns for livestock. Depth 2.
+</td><td><span class="he">וַתֵּלַדְןָ הַצֹּאן עֲקֻדִּים נְקֻדִּים וּטְלֻאִים</span> · <i>va-teladna ha-tzon aqudim nequdim u-teluim</i><br><span class="gloss">= and-teladna the-tzon aqudim nequdim and-teluim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The flock bears the deal&#x27;s own adjectives; the spotted-career closes.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_30_40 · Gen.30.40 · <span class='expr'>THE_SEPARATION</span></h3>
+<p><span class="he">וְהַכְּשָׂבִים הִפְרִיד יַעֲקֹב וַיִּתֵּן פְּנֵי הַצֹּאן אֶל־עָקֹד וְכָל־חוּם בְּצֹאן לָבָן וַיָּשֶׁת־לוֹ עֲדָרִים לְבַדּוֹ וְלֹא שָׁתָם עַל־צֹאן לָבָן</span> · <i>ve-ha-kesavim hifrid yaaqov va-yiten pene ha-tzon el-aqod ve-khal-chum be-tzon lavan va-yashet-lo adarim levado ve-lo shatam al-tzon lavan</i> · And Jacob separated the lambs, and set the faces of the flock toward the striped and every dark one in Laban&#x27;s flock; and he set himself droves alone, and did not set them with Laban&#x27;s flock.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהַכְּשָׂבִים֮ הִפְרִ֣יד יַעֲקֹב֒ וַ֠יִּתֵּן פְּנֵ֨י הַצֹּ֧אן אֶל עָקֹ֛ד וְכָל ח֖וּם בְּצֹ֣אן לָבָ֑ן</span> · <i>ve-ha-kesavim hifrid yaaqov va-yiten pene ha-tzon el-aqod ve-khal-chum be-tzon lavan</i> · Jacob separated the lambs, faces toward the striped and dark (etnachta on lavan) [VERIFIED: SNAPSHOT Gen.30.40 idx11 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיָּֽשֶׁת ל֤וֹ עֲדָרִים֙ לְבַדּ֔וֹ וְלֹ֥א שָׁתָ֖ם עַל צֹ֥אן לָבָֽן</span> · <i>va-yashet-lo adarim levado ve-lo shatam al-tzon lavan</i> · he set his droves apart, not with Laban&#x27;s flock (verse-final lavan) [VERIFIED: SNAPSHOT Gen.30.40 idx12-20]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hifrid_adarim_levado(yaaqov), t5)</span><br><span class="gloss">= HOLDS(hifrid-adarim-alone(yaaqov), t5)</span><br>THE ORACLE&#x27;S VERB [care 13]. hifrid (6504 tok8/9) [VERIFIED: SNAPSHOT Gen.30.40 idx1 ordinal=8/9] — the SEPARATE-verb&#x27;s walk: Eden&#x27;s river parting (2:10), the nations dividing (10:5,32), Abram and Lot (13:9,11,14), and 25:23&#x27;s oracle — &quot;two peoples FROM YOUR WOMB SHALL BE PARTED&quot; — now a husbandry technique in the hands of the oracle&#x27;s younger son. adarim (5739 tok5/10) [VERIFIED: idx14 ordinal=5/10] — the drove-word: toks 1-4 = gen_49&#x27;s three flocks at the well; toks 6-10 = the Esau-tribute droves (32:17,20) — all ten tokens live inside the Jacob cycle. va-yiten pene ha-tzon (5414 tok82/647) [VERIFIED: idx3 ordinal=82/647] — the give-walk&#x27;s last in-span token: giving as aiming. Depth 2.
+</td><td><span class="he">וְהַכְּשָׂבִים הִפְרִיד יַעֲקֹב</span> · <i>ve-ha-kesavim hifrid yaaqov</i><br><span class="gloss">= and-the-kesavim hifrid yaaqov</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The oracle&#x27;s separation-verb becomes breeding practice.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_30_41 · Gen.30.41 · <span class='expr'>THE_STRONG_ONES</span></h3>
+<p><span class="he">וְהָיָה בְּכָל־יַחֵם הַצֹּאן הַמְקֻשָּׁרוֹת וְשָׂם יַעֲקֹב אֶת־הַמַּקְלוֹת לְעֵינֵי הַצֹּאן בָּרֳהָטִים לְיַחְמֵנָּה בַּמַּקְלוֹת</span> · <i>ve-haya be-khal-yachem ha-tzon ha-mequsharot ve-sam yaaqov et-ha-maqlot le-ene ha-tzon ba-rohatim le-yachme-na ba-maqlot</i> · And it was, whenever the bound-strong of the flock conceived, that Jacob set the rods before the eyes of the flock in the runnels, to make them conceive among the rods.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהָיָ֗ה בְּכָל יַחֵם֮ הַצֹּ֣אן הַמְקֻשָּׁרוֹת֒ וְשָׂ֨ם יַעֲקֹ֧ב אֶת הַמַּקְל֛וֹת לְעֵינֵ֥י הַצֹּ֖אן בָּרֳהָטִ֑ים</span> · <i>ve-haya be-khal-yachem ha-tzon ha-mequsharot ve-sam yaaqov et-ha-maqlot le-ene ha-tzon ba-rohatim</i> · whenever the strong ones conceived, Jacob set the rods (etnachta on rohatim) [VERIFIED: SNAPSHOT Gen.30.41 idx11 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">לְיַחְמֵ֖נָּה בַּמַּקְלֽוֹת</span> · <i>le-yachme-na ba-maqlot</i> · before the flock&#x27;s eyes in the runnels, to heat them at the rods (verse-final maqlot) [VERIFIED: SNAPSHOT Gen.30.41 idx12-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(maqlot_le_ene_ha_mequsharot(yaaqov), t5)</span><br><span class="gloss">= HOLDS(maqlot-to-ene-the-mequsharot(yaaqov), t5)</span><br>THE SELECTION [care 14]. ha-mequsharot (7194 tok1/6 DEBUT) [VERIFIED: SNAPSHOT Gen.30.41 idx4 ordinal=1/6] — the BIND-verb is born naming the vigorous (&quot;the bound-up ones&quot;); with 30:42&#x27;s qeshurim it holds toks 1-2/6, and the career&#x27;s far end is Deut 6:8 and 11:18 — &quot;you shall BIND them as a sign upon your hand&quot;: the sign-binding command&#x27;s verb debuts in selective breeding (token-walk only, no claim beyond the letter). yachem ×2 (3179 toks 3-4/6) [VERIFIED: idx2 ordinal=3/6; idx12 ordinal=4/6]. Depth 2.
+</td><td><span class="he">וְשָׂם יַעֲקֹב אֶת־הַמַּקְלוֹת</span> · <i>ve-sam yaaqov et-ha-maqlot</i><br><span class="gloss">= and-sam yaaqov the-maqlot</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The bind-verb debuts on the strong ones; rods only for them.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_30_42 · Gen.30.42 · <span class='expr'>THE_SORT</span></h3>
+<p><span class="he">וּבְהַעֲטִיף הַצֹּאן לֹא יָשִׂים וְהָיָה הָעֲטֻפִים לְלָבָן וְהַקְּשֻׁרִים לְיַעֲקֹב</span> · <i>u-ve-haatif ha-tzon lo yasim ve-haya ha-atufim le-lavan ve-ha-qeshurim le-yaaqov</i> · And when the flock were feeble, he did not set them; and the feeble were Laban&#x27;s, and the bound-strong Jacob&#x27;s.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּבְהַעֲטִ֥יף הַצֹּ֖אן לֹ֣א יָשִׂ֑ים</span> · <i>u-ve-haatif ha-tzon lo yasim</i> · when the flock were feeble he did not set them (etnachta on yasim) [VERIFIED: SNAPSHOT Gen.30.42 idx3 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהָיָ֤ה הָעֲטֻפִים֙ לְלָבָ֔ן וְהַקְּשֻׁרִ֖ים לְיַעֲקֹֽב</span> · <i>ve-haya ha-atufim le-lavan ve-ha-qeshurim le-yaaqov</i> · the feeble to Laban, the strong to Jacob (verse-final yaaqov) [VERIFIED: SNAPSHOT Gen.30.42 idx4-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(atufim_le_lavan_qeshurim_le_yaaqov(ha_tzon), t6)</span><br><span class="gloss">= HOLDS(atufim-to-lavan-qeshurim-to-yaaqov(the-tzon), t6)</span><br>THE SORT-LINE [care 14]. u-ve-haatif … ha-atufim (5848 toks 1-2/2) [VERIFIED: SNAPSHOT Gen.30.42 idx0 ordinal=1/2; idx5 ordinal=2/2] — the FEEBLE-word&#x27;s entire Torah career lives inside this one verse. ve-ha-qeshurim (7194 tok2/6) [VERIFIED: idx7 ordinal=2/6]. The machine&#x27;s sort: feeble → Laban, bound-strong → Jacob — the deal&#x27;s letter executing as a partition of the flock. Depth 2.
+</td><td><span class="he">וְהָיָה הָעֲטֻפִים לְלָבָן וְהַקְּשֻׁרִים לְיַעֲקֹב</span> · <i>ve-haya ha-atufim le-lavan ve-ha-qeshurim le-yaaqov</i><br><span class="gloss">= and-haya the-atufim to-lavan and-the-qeshurim to-yaaqov</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The feeble to Laban, the strong to Jacob; a career completes in-verse.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_30_43 · Gen.30.43 · <span class='expr'>THE_BREAK_OUT_DOUBLED</span></h3>
+<p><span class="he">וַיִּפְרֹץ הָאִישׁ מְאֹד מְאֹד וַיְהִי־לוֹ צֹאן רַבּוֹת וּשְׁפָחוֹת וַעֲבָדִים וּגְמַלִּים וַחֲמֹרִים</span> · <i>va-yifrotz ha-ish meod meod va-yehi-lo tzon rabot u-shefachot va-avadim u-gemalim va-chamorim</i> · And the man broke out exceedingly, exceedingly; and he had many flocks, and maidservants and menservants, and camels and donkeys.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּפְרֹ֥ץ הָאִ֖ישׁ מְאֹ֣ד מְאֹ֑ד</span> · <i>va-yifrotz ha-ish meod meod</i> · the man broke out exceedingly exceedingly (etnachta on meod) [VERIFIED: SNAPSHOT Gen.30.43 idx3 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַֽיְהִי לוֹ֙ צֹ֣אן רַבּ֔וֹת וּשְׁפָחוֹת֙ וַעֲבָדִ֔ים וּגְמַלִּ֖ים וַחֲמֹרִֽים</span> · <i>va-yehi-lo tzon rabot u-shefachot va-avadim u-gemalim va-chamorim</i> · flocks, maidservants, menservants, camels, and donkeys (verse-final chamorim) [VERIFIED: SNAPSHOT Gen.30.43 idx4-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(paratz_meod_meod(ha_ish), t7)</span><br><span class="gloss">= HOLDS(paratz-very-very(the-man), t7)</span><br>THE CLOSE [care 15]. va-yifrotz ha-ish MEOD MEOD (6555 tok3/7) [VERIFIED: SNAPSHOT Gen.30.43 idx0 ordinal=3/7] — the Bethel pledge-verb&#x27;s second in-span performance, now on Jacob himself (28:14 u-faratzta → 30:30 Laban&#x27;s flock → 30:43 ha-ish). The consecutive MEOD-MEOD pair (3966 toks 27-28/75) [VERIFIED: idx2-3; full consecutive-pair scan] has exactly four precedents: 7:19 (the waters prevailed meod meod) and 17:2, 17:6, 17:20 — the covenant&#x27;s multiply-you-exceedingly formula (Abram ×2, Ishmael): the flock explosion borrows the covenant&#x27;s own doubling. The wealth-list: tzon rabot u-SHEFACHOT (8198 tok21/31) [VERIFIED: idx8 ordinal=21/31] — gen_50&#x27;s dowry maid-word now plural property — va-avadim u-gemalim va-chamorim (the possession-list form of 12:16, 24:35, 26:14 — prose kinship only). UNIT END: SPECS depth 2 OPEN — LET(shalcheni(lavan)): performed by NO ONE; chapter 31 answers with flight, and the send-verb&#x27;s next tokens are 31:4 (Jacob SENDS for Rachel and Leah — the demander fetching for himself), 31:27 (Laban: &quot;I would have SENT you away with joy&quot;), 31:42 (&quot;you would have SENT me away empty&quot;) — the never- performance filed in both mouths beyond the wall. LET(tena_nashai_viladai(lavan)): no give-token ever hands over wives or children [VERIFIED: give-walk 77-82 objects — tena is the demand itself; 78-80 the refused exchange; 81 the trick-give to Laban&#x27;s sons; 82 the aiming of faces]. REGISTRY 0. TESTS 0 (zero tov-tokens in-span). The second consecutive unit wall at depth 2 (after gen_51).
+</td><td><span class="he">וַיִּפְרֹץ הָאִישׁ מְאֹד מְאֹד</span> · <i>va-yifrotz ha-ish meod meod</i><br><span class="gloss">= and-yifrotz man very very</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The covenant&#x27;s doubled exceedingly lands on the flocks; two cards stay open.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Gn_30_25 — send-me pushed at Joseph&#x27;s birth; depth 1</td><td>When Rachel had borne Joseph: send me away, that I may go to my place.</td><td>LET(shalcheni(lavan)) pushed and OPEN; no test, no name.</td><td><span class="he">שַׁלְּחֵ֨נִי֙ וְאֵ֣לְכָ֔ה</span> · <i>shalcheni ve-elkha</i><br><span class="gloss">= shalcheni and-elkha</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Gn_30_26 — wives-and-children pushed; depth 2</td><td>Give my wives and my children, for whom I have served you.</td><td>LET(shalcheni(lavan)) pushed and OPEN; LET(tena_nashai_viladai(lavan)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalcheni(lavan)) pushed and OPEN; LET(tena-nashai-viladai(lavan)) pushed and OPEN; no test, no name.</span></td><td><span class="he">תְּנָ֞ה אֶת נָשַׁ֣י וְאֶת יְלָדַ֗י</span> · <i>tena et-nashai ve-et-yeladai</i><br><span class="gloss">= tena nashai and-yeladai</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Gn_30_27 — Laban&#x27;s divination; depth still 2</td><td>I have divined that YHWH has blessed me for your sake.</td><td>LET(shalcheni(lavan)) pushed and OPEN; LET(tena_nashai_viladai(lavan)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalcheni(lavan)) pushed and OPEN; LET(tena-nashai-viladai(lavan)) pushed and OPEN; no test, no name.</span></td><td><span class="he">נִחַ֕שְׁתִּי וַיְבָרֲכֵ֥נִי יְהוָ֖ה בִּגְלָלֶֽךָ</span> · <i>nichashti va-yevarakheni YHWH biglalekha</i><br><span class="gloss">= nichashti and-yevarakheni the-LORD biglalekha</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Gn_30_28 — designate-your-wage pushed; depth 3</td><td>Designate your wage upon me, and I will give it.</td><td>LET(shalcheni(lavan)) pushed and OPEN; LET(tena_nashai_viladai(lavan)) pushed and OPEN; LET(naqva_sekhar(yaaqov)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalcheni(lavan)) pushed and OPEN; LET(tena-nashai-viladai(lavan)) pushed and OPEN; LET(naqva-sekhar(yaaqov)) pushed and OPEN; no test, no name.</span></td><td><span class="he">נָקְבָ֧ה שְׂכָרְךָ֛ עָלַ֖י וְאֶתֵּֽנָה</span> · <i>naqva sekharkha alay ve-etena</i><br><span class="gloss">= naqva sekharkha alay and-etena</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Gn_30_29 — the service audit; depth still 3</td><td>You know how I served you and how your livestock fared with me.</td><td>LET(shalcheni(lavan)) pushed and OPEN; LET(tena_nashai_viladai(lavan)) pushed and OPEN; LET(naqva_sekhar(yaaqov)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalcheni(lavan)) pushed and OPEN; LET(tena-nashai-viladai(lavan)) pushed and OPEN; LET(naqva-sekhar(yaaqov)) pushed and OPEN; no test, no name.</span></td><td><span class="he">אַתָּ֣ה יָדַ֔עְתָּ אֵ֖ת אֲשֶׁ֣ר עֲבַדְתִּ֑יךָ</span> · <i>ata yadata et asher avadticha</i><br><span class="gloss">= ata yadata et which avadticha</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Gn_30_30 — the break-out audit; depth still 3</td><td>Your little broke out into abundance; YHWH blessed you at my foot.</td><td>LET(shalcheni(lavan)) pushed and OPEN; LET(tena_nashai_viladai(lavan)) pushed and OPEN; LET(naqva_sekhar(yaaqov)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalcheni(lavan)) pushed and OPEN; LET(tena-nashai-viladai(lavan)) pushed and OPEN; LET(naqva-sekhar(yaaqov)) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּפְרֹ֣ץ לָרֹ֔ב וַיְבָ֧רֶךְ יְהוָ֛ה אֹתְךָ֖ לְרַגְלִ֑י</span> · <i>va-yifrotz la-rov va-yevarekh YHWH otkha le-ragli</i><br><span class="gloss">= and-yifrotz to-rov and-yevarekh the-LORD otkha to-ragli</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Gn_30_31 — give-me-nothing; self-commitment fenced; depth 3</td><td>You shall not give me anything; I will again feed and keep your flock.</td><td>LET(shalcheni(lavan)) pushed and OPEN; LET(tena_nashai_viladai(lavan)) pushed and OPEN; LET(naqva_sekhar(yaaqov)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalcheni(lavan)) pushed and OPEN; LET(tena-nashai-viladai(lavan)) pushed and OPEN; LET(naqva-sekhar(yaaqov)) pushed and OPEN; no test, no name.</span></td><td><span class="he">לֹא תִתֶּן לִ֣י מְא֔וּמָה</span> · <i>lo-titen li meuma</i><br><span class="gloss">= not-titen to-me meuma</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Gn_30_32 — the wage NAMED; naqva_sekhar pops; depth 2</td><td>Every speckled, spotted, and dark one — that shall be my wage.</td><td>LET(shalcheni(lavan)) pushed and OPEN; LET(tena_nashai_viladai(lavan)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalcheni(lavan)) pushed and OPEN; LET(tena-nashai-viladai(lavan)) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהָיָ֖ה שְׂכָרִֽי</span> · <i>ve-haya sekhari</i><br><span class="gloss">= and-haya sekhari</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Gn_30_33 — righteousness, tomorrow, and theft debut; depth 2</td><td>My righteousness will answer for me tomorrow; the rest, count stolen.</td><td>LET(shalcheni(lavan)) pushed and OPEN; LET(tena_nashai_viladai(lavan)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalcheni(lavan)) pushed and OPEN; LET(tena-nashai-viladai(lavan)) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְעָֽנְתָה בִּ֤י צִדְקָתִי֙ בְּי֣וֹם מָחָ֔ר</span> · <i>ve-anta-bi-y tzidqati be-yom machar</i><br><span class="gloss">= and-anta-bi-y tzidqati day machar</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Gn_30_34 — the deal accepted on yehi; depth 2</td><td>Behold, would that it be according to your word.</td><td>LET(shalcheni(lavan)) pushed and OPEN; LET(tena_nashai_viladai(lavan)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalcheni(lavan)) pushed and OPEN; LET(tena-nashai-viladai(lavan)) pushed and OPEN; no test, no name.</span></td><td><span class="he">ל֖וּ יְהִ֥י כִדְבָרֶֽךָ</span> · <i>lu yehi khi-devarekha</i><br><span class="gloss">= lu yehi khi-devarekha</span></td></tr>
+<tr><td><b>S11</b></td><td>after STEP_Gn_30_35 — the same-day removal; depth 2</td><td>He removed that day the striped and spotted, into his sons&#x27; hand.</td><td>LET(shalcheni(lavan)) pushed and OPEN; LET(tena_nashai_viladai(lavan)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalcheni(lavan)) pushed and OPEN; LET(tena-nashai-viladai(lavan)) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיָּ֣סַר בַּיּוֹם֩ הַה֨וּא</span> · <i>va-yasar ba-yom ha-hu</i><br><span class="gloss">= and-yasar day the-that</span></td></tr>
+<tr><td><b>S12</b></td><td>after STEP_Gn_30_36 — three days&#x27; way; the remnant; depth 2</td><td>A way of three days between them; Jacob shepherded the remnant.</td><td>LET(shalcheni(lavan)) pushed and OPEN; LET(tena_nashai_viladai(lavan)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalcheni(lavan)) pushed and OPEN; LET(tena-nashai-viladai(lavan)) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיָּ֗שֶׂם דֶּ֚רֶךְ שְׁלֹ֣שֶׁת יָמִ֔ים בֵּינ֖וֹ וּבֵ֣ין יַעֲקֹ֑ב</span> · <i>va-yasem derekh sheloshet yamim beno u-ven yaaqov</i><br><span class="gloss">= and-yasem derekh sheloshet seas beno and-ven yaaqov</span></td></tr>
+<tr><td><b>S13</b></td><td>after STEP_Gn_30_37 — the white peeled from the rods; depth 2</td><td>He peeled white peelings, laying bare the white on the rods.</td><td>LET(shalcheni(lavan)) pushed and OPEN; LET(tena_nashai_viladai(lavan)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalcheni(lavan)) pushed and OPEN; LET(tena-nashai-viladai(lavan)) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְפַצֵּ֤ל בָּהֵן֙ פְּצָל֣וֹת לְבָנ֔וֹת מַחְשֹׂף֙ הַלָּבָ֔ן</span> · <i>va-yefatzel ba-hen petzalot levanot machsof ha-lavan</i><br><span class="gloss">= and-yefatzel in-the-hen petzalot levanot machsof the-lavan</span></td></tr>
+<tr><td><b>S14</b></td><td>after STEP_Gn_30_38 — rods at the troughs; depth 2</td><td>He set the rods in the troughs, and the flock conceived at drinking.</td><td>LET(shalcheni(lavan)) pushed and OPEN; LET(tena_nashai_viladai(lavan)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalcheni(lavan)) pushed and OPEN; LET(tena-nashai-viladai(lavan)) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיַּצֵּ֗ג אֶת הַמַּקְלוֹת֙ אֲשֶׁ֣ר פִּצֵּ֔ל בָּרֳהָטִ֖ים בְּשִֽׁקֲת֣וֹת הַמָּ֑יִם</span> · <i>va-yatzeg et-ha-maqlot asher pitzel ba-rohatim be-shiqatot ha-mayim</i><br><span class="gloss">= and-yatzeg the-maqlot which pitzel in-the-rohatim in-shiqatot waters</span></td></tr>
+<tr><td><b>S15</b></td><td>after STEP_Gn_30_39 — the flock bears the deal&#x27;s adjectives; depth 2</td><td>The flock bore striped, speckled, and spotted.</td><td>LET(shalcheni(lavan)) pushed and OPEN; LET(tena_nashai_viladai(lavan)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalcheni(lavan)) pushed and OPEN; LET(tena-nashai-viladai(lavan)) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַתֵּלַ֣דְןָ הַצֹּ֔אן עֲקֻדִּ֥ים נְקֻדִּ֖ים וּטְלֻאִֽים</span> · <i>va-teladna ha-tzon aqudim nequdim u-teluim</i><br><span class="gloss">= and-teladna the-tzon aqudim nequdim and-teluim</span></td></tr>
+<tr><td><b>S16</b></td><td>after STEP_Gn_30_40 — Jacob separates droves; depth 2</td><td>Jacob separated the lambs and set himself droves alone.</td><td>LET(shalcheni(lavan)) pushed and OPEN; LET(tena_nashai_viladai(lavan)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalcheni(lavan)) pushed and OPEN; LET(tena-nashai-viladai(lavan)) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהַכְּשָׂבִים֮ הִפְרִ֣יד יַעֲקֹב֒</span> · <i>ve-ha-kesavim hifrid yaaqov</i><br><span class="gloss">= and-the-kesavim hifrid yaaqov</span></td></tr>
+<tr><td><b>S17</b></td><td>after STEP_Gn_30_41 — rods for the strong ones; depth 2</td><td>Whenever the strong conceived, Jacob set the rods before their eyes.</td><td>LET(shalcheni(lavan)) pushed and OPEN; LET(tena_nashai_viladai(lavan)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalcheni(lavan)) pushed and OPEN; LET(tena-nashai-viladai(lavan)) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְשָׂ֨ם יַעֲקֹ֧ב אֶת הַמַּקְל֛וֹת</span> · <i>ve-sam yaaqov et-ha-maqlot</i><br><span class="gloss">= and-sam yaaqov the-maqlot</span></td></tr>
+<tr><td><b>S18</b></td><td>after STEP_Gn_30_42 — the sort: feeble to Laban, strong to Jacob</td><td>The feeble were Laban&#x27;s, and the bound-strong Jacob&#x27;s.</td><td>LET(shalcheni(lavan)) pushed and OPEN; LET(tena_nashai_viladai(lavan)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalcheni(lavan)) pushed and OPEN; LET(tena-nashai-viladai(lavan)) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהָיָ֤ה הָעֲטֻפִים֙ לְלָבָ֔ן וְהַקְּשֻׁרִ֖ים לְיַעֲקֹֽב</span> · <i>ve-haya ha-atufim le-lavan ve-ha-qeshurim le-yaaqov</i><br><span class="gloss">= and-haya the-atufim to-lavan and-the-qeshurim to-yaaqov</span></td></tr>
+<tr><td><b>S19</b></td><td>after STEP_Gn_30_43 — the doubled break-out; two cards stay open</td><td>The man broke out exceedingly; flocks, servants, camels, donkeys.</td><td>LET(shalcheni(lavan)) pushed and OPEN; LET(tena_nashai_viladai(lavan)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(shalcheni(lavan)) pushed and OPEN; LET(tena-nashai-viladai(lavan)) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּפְרֹ֥ץ הָאִ֖ישׁ מְאֹ֣ד מְאֹ֑ד</span> · <i>va-yifrotz ha-ish meod meod</i><br><span class="gloss">= and-yifrotz man very very</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_52_send_me_speckled_wage_rods — Send me away: the speckled wage and the peeled rods (30:25-43) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — after STEP_Gn_30_25 — send-me pushed at Joseph&#x27;s birth; depth 1
+    שַׁלְּחֵ֨נִי֙ וְאֵ֣לְכָ֔ה (shalcheni ve-elkha)
+    PASS  LET(shalcheni(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Gn_30_26 — wives-and-children pushed; depth 2
+    תְּנָ֞ה אֶת נָשַׁ֣י וְאֶת יְלָדַ֗י (tena et-nashai ve-et-yeladai)
+    PASS  LET(shalcheni(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  LET(tena_nashai_viladai(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Gn_30_27 — Laban&#x27;s divination; depth still 2
+    נִחַ֕שְׁתִּי וַיְבָרֲכֵ֥נִי יְהוָ֖ה בִּגְלָלֶֽךָ (nichashti va-yevarakheni YHWH biglalekha)
+    PASS  LET(shalcheni(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  LET(tena_nashai_viladai(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Gn_30_28 — designate-your-wage pushed; depth 3
+    נָקְבָ֧ה שְׂכָרְךָ֛ עָלַ֖י וְאֶתֵּֽנָה (naqva sekharkha alay ve-etena)
+    PASS  LET(shalcheni(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;, &#x27;naqva_sekhar(yaaqov)&#x27;])
+    PASS  LET(tena_nashai_viladai(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;, &#x27;naqva_sekhar(yaaqov)&#x27;])
+    PASS  LET(naqva_sekhar(yaaqov)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;, &#x27;naqva_sekhar(yaaqov)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Gn_30_29 — the service audit; depth still 3
+    אַתָּ֣ה יָדַ֔עְתָּ אֵ֖ת אֲשֶׁ֣ר עֲבַדְתִּ֑יךָ (ata yadata et asher avadticha)
+    PASS  LET(shalcheni(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;, &#x27;naqva_sekhar(yaaqov)&#x27;])
+    PASS  LET(tena_nashai_viladai(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;, &#x27;naqva_sekhar(yaaqov)&#x27;])
+    PASS  LET(naqva_sekhar(yaaqov)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;, &#x27;naqva_sekhar(yaaqov)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Gn_30_30 — the break-out audit; depth still 3
+    וַיִּפְרֹ֣ץ לָרֹ֔ב וַיְבָ֧רֶךְ יְהוָ֛ה אֹתְךָ֖ לְרַגְלִ֑י (va-yifrotz la-rov va-yevarekh YHWH otkha le-ragli)
+    PASS  LET(shalcheni(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;, &#x27;naqva_sekhar(yaaqov)&#x27;])
+    PASS  LET(tena_nashai_viladai(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;, &#x27;naqva_sekhar(yaaqov)&#x27;])
+    PASS  LET(naqva_sekhar(yaaqov)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;, &#x27;naqva_sekhar(yaaqov)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — after STEP_Gn_30_31 — give-me-nothing; self-commitment fenced; depth 3
+    לֹא תִתֶּן לִ֣י מְא֔וּמָה (lo-titen li meuma)
+    PASS  LET(shalcheni(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;, &#x27;naqva_sekhar(yaaqov)&#x27;])
+    PASS  LET(tena_nashai_viladai(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;, &#x27;naqva_sekhar(yaaqov)&#x27;])
+    PASS  LET(naqva_sekhar(yaaqov)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;, &#x27;naqva_sekhar(yaaqov)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S8 — after STEP_Gn_30_32 — the wage NAMED; naqva_sekhar pops; depth 2
+    וְהָיָ֖ה שְׂכָרִֽי (ve-haya sekhari)
+    PASS  LET(shalcheni(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  LET(tena_nashai_viladai(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S9 — after STEP_Gn_30_33 — righteousness, tomorrow, and theft debut; depth 2
+    וְעָֽנְתָה בִּ֤י צִדְקָתִי֙ בְּי֣וֹם מָחָ֔ר (ve-anta-bi-y tzidqati be-yom machar)
+    PASS  LET(shalcheni(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  LET(tena_nashai_viladai(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S10 — after STEP_Gn_30_34 — the deal accepted on yehi; depth 2
+    ל֖וּ יְהִ֥י כִדְבָרֶֽךָ (lu yehi khi-devarekha)
+    PASS  LET(shalcheni(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  LET(tena_nashai_viladai(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S11 — after STEP_Gn_30_35 — the same-day removal; depth 2
+    וַיָּ֣סַר בַּיּוֹם֩ הַה֨וּא (va-yasar ba-yom ha-hu)
+    PASS  LET(shalcheni(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  LET(tena_nashai_viladai(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S12 — after STEP_Gn_30_36 — three days&#x27; way; the remnant; depth 2
+    וַיָּ֗שֶׂם דֶּ֚רֶךְ שְׁלֹ֣שֶׁת יָמִ֔ים בֵּינ֖וֹ וּבֵ֣ין יַעֲקֹ֑ב (va-yasem derekh sheloshet yamim beno u-ven yaaqov)
+    PASS  LET(shalcheni(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  LET(tena_nashai_viladai(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S13 — after STEP_Gn_30_37 — the white peeled from the rods; depth 2
+    וַיְפַצֵּ֤ל בָּהֵן֙ פְּצָל֣וֹת לְבָנ֔וֹת מַחְשֹׂף֙ הַלָּבָ֔ן (va-yefatzel ba-hen petzalot levanot machsof ha-lavan)
+    PASS  LET(shalcheni(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  LET(tena_nashai_viladai(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S14 — after STEP_Gn_30_38 — rods at the troughs; depth 2
+    וַיַּצֵּ֗ג אֶת הַמַּקְלוֹת֙ אֲשֶׁ֣ר פִּצֵּ֔ל בָּרֳהָטִ֖ים בְּשִֽׁקֲת֣וֹת הַמָּ֑יִם (va-yatzeg et-ha-maqlot asher pitzel ba-rohatim be-shiqatot ha-mayim)
+    PASS  LET(shalcheni(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  LET(tena_nashai_viladai(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S15 — after STEP_Gn_30_39 — the flock bears the deal&#x27;s adjectives; depth 2
+    וַתֵּלַ֣דְןָ הַצֹּ֔אן עֲקֻדִּ֥ים נְקֻדִּ֖ים וּטְלֻאִֽים (va-teladna ha-tzon aqudim nequdim u-teluim)
+    PASS  LET(shalcheni(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  LET(tena_nashai_viladai(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S16 — after STEP_Gn_30_40 — Jacob separates droves; depth 2
+    וְהַכְּשָׂבִים֮ הִפְרִ֣יד יַעֲקֹב֒ (ve-ha-kesavim hifrid yaaqov)
+    PASS  LET(shalcheni(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  LET(tena_nashai_viladai(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S17 — after STEP_Gn_30_41 — rods for the strong ones; depth 2
+    וְשָׂ֨ם יַעֲקֹ֧ב אֶת הַמַּקְל֛וֹת (ve-sam yaaqov et-ha-maqlot)
+    PASS  LET(shalcheni(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  LET(tena_nashai_viladai(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S18 — after STEP_Gn_30_42 — the sort: feeble to Laban, strong to Jacob
+    וְהָיָ֤ה הָעֲטֻפִים֙ לְלָבָ֔ן וְהַקְּשֻׁרִ֖ים לְיַעֲקֹֽב (ve-haya ha-atufim le-lavan ve-ha-qeshurim le-yaaqov)
+    PASS  LET(shalcheni(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  LET(tena_nashai_viladai(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S19 — after STEP_Gn_30_43 — the doubled break-out; two cards stay open
+    וַיִּפְרֹ֥ץ הָאִ֖ישׁ מְאֹ֣ד מְאֹ֑ד (va-yifrotz ha-ish meod meod)
+    PASS  LET(shalcheni(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  LET(tena_nashai_viladai(lavan)) pushed and OPEN  (queue=[&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_52_send_me_speckled_wage_rods.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_52_send_me_speckled_wage_rods — 30:25-43
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_52_send_me_speckled_wage_rods.yaml) is CANONICAL
+# (Pre-Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Send me away: the speckled wage and the peeled rods (30:25-43)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_52_send_me_speckled_wage_rods&quot;)
+
+# -------------------------- Gen.30.25 · THE_SEND_ME_DEMAND -----------------
+# וַיְהִי כַּאֲשֶׁר יָלְדָה רָחֵל אֶת־יוֹסֵף וַיֹּאמֶר יַעֲקֹב אֶל־לָבָן
+# שַׁלְּחֵנִי וְאֵלְכָה אֶל־מְקוֹמִי וּלְאַרְצִי
+# &quot;[EN-AID] And it was, when Rachel had borne Joseph, that Jacob said to
+# Laban: Send me away, that I may go to my own place and to my land.&quot;
+m.step(&quot;Gen.30.25&quot;)
+# ‹שַׁלְּחֵנִי וְאֵלְכָה אֶל־מְקוֹמִי וּלְאַרְצִי› (“send-me/my and-go to
+# place-me/my and-to-earth-me/my”) — Jacob speaks a demand — LET:
+# shalcheni(Laban)
+m.declare(&quot;yaaqov&quot;, &quot;LET&quot;,
+          &quot;shalcheni(lavan)&quot;)
+
+# -------------------------- Gen.30.26 · THE_WIVES_AND_CHILDREN_DEMAND ------
+# תְּנָה אֶת־נָשַׁי וְאֶת־יְלָדַי אֲשֶׁר עָבַדְתִּי אֹתְךָ בָּהֵן וְאֵלֵכָה
+# כִּי אַתָּה יָדַעְתָּ אֶת־עֲבֹדָתִי אֲשֶׁר עֲבַדְתִּיךָ
+# &quot;[EN-AID] Give my wives and my children, for whom I have served you, and
+# let me go; for you know my service which I have served you.&quot;
+m.step(&quot;Gen.30.26&quot;)
+# ‹תְּנָה אֶת־נָשַׁי וְאֶת־יְלָדַי› (“set-ward obj-marker woman-me/my and-
+# obj-marker child-me/my”) — Jacob speaks a demand — LET: tena-nashai-
+# viladai(Laban)
+m.declare(&quot;yaaqov&quot;, &quot;LET&quot;,
+          &quot;tena_nashai_viladai(lavan)&quot;)
+
+# -------------------------- Gen.30.27 · THE_DIVINATION_CONFESSION ----------
+# וַיֹּאמֶר אֵלָיו לָבָן אִם־נָא מָצָאתִי חֵן בְּעֵינֶיךָ נִחַשְׁתִּי
+# וַיְבָרֲכֵנִי יְהוָה בִּגְלָלֶךָ
+# &quot;[EN-AID] And Laban said to him: If now I have found favor in your eyes —
+# I have divined that YHWH has blessed me for your sake.&quot;
+m.step(&quot;Gen.30.27&quot;)
+# ‹נִחַשְׁתִּי וַיְבָרֲכֵנִי יְהוָה בִּגְלָלֶךָ› (“hiss and-bless-me/my YHWH
+# in-circumstance-you/your”) — fact holds: berakh-the-LORD-biglal-
+# Jacob(Laban)
+m.fact(&quot;berakh_YHWH_biglal_yaaqov(lavan)&quot;)
+
+# -------------------------- Gen.30.28 · THE_WAGE_DESIGNATION_DEMAND --------
+# וַיֹּאמַר נָקְבָה שְׂכָרְךָ עָלַי וְאֶתֵּנָה
+# &quot;[EN-AID] And he said: Designate your wage upon me, and I will give it.&quot;
+m.step(&quot;Gen.30.28&quot;)
+# ‹נָקְבָה שְׂכָרְךָ עָלַי וְאֶתֵּנָה› (“puncture-ward wage-you/your over-
+# me/my and-set”) — Laban speaks a demand — LET: naqva-sekhar(Jacob)
+m.declare(&quot;lavan&quot;, &quot;LET&quot;,
+          &quot;naqva_sekhar(yaaqov)&quot;)
+
+# -------------------------- Gen.30.29 · THE_SERVICE_AUDIT ------------------
+# וַיֹּאמֶר אֵלָיו אַתָּה יָדַעְתָּ אֵת אֲשֶׁר עֲבַדְתִּיךָ וְאֵת
+# אֲשֶׁר־הָיָה מִקְנְךָ אִתִּי
+# &quot;[EN-AID] And he said to him: You know how I have served you, and how your
+# livestock has fared with me.&quot;
+m.step(&quot;Gen.30.29&quot;)
+# ‹אַתָּה יָדַעְתָּ אֵת אֲשֶׁר עֲבַדְתִּיךָ› (“you know obj-marker which
+# work/serve-you/your”) — fact holds: know-avodati(Laban)
+m.fact(&quot;yadata_avodati(lavan)&quot;)
+
+# -------------------------- Gen.30.30 · THE_BREAK_OUT_AUDIT ----------------
+# כִּי מְעַט אֲשֶׁר־הָיָה לְךָ לְפָנַי וַיִּפְרֹץ לָרֹב וַיְבָרֶךְ יְהוָה
+# אֹתְךָ לְרַגְלִי וְעַתָּה מָתַי אֶעֱשֶׂה גַם־אָנֹכִי לְבֵיתִי
+# &quot;[EN-AID] For the little you had before me has broken out into abundance,
+# and YHWH has blessed you at my foot; and now, when shall I do for my own
+# house also?&quot;
+m.step(&quot;Gen.30.30&quot;)
+# ‹וַיִּפְרֹץ לָרֹב וַיְבָרֶךְ יְהוָה אֹתְךָ לְרַגְלִי› (“and-break-out to-
+# abundance and-bless YHWH obj-marker-you/your to-foot-me/my”) — fact holds:
+# paratz-to-abundance-to-ragli(miqne-Laban)
+m.fact(&quot;paratz_la_rov_le_ragli(miqne_lavan)&quot;)
+
+# -------------------------- Gen.30.31 · THE_NOTHING_WAGE -------------------
+# וַיֹּאמֶר מָה אֶתֶּן־לָךְ וַיֹּאמֶר יַעֲקֹב לֹא־תִתֶּן־לִי מְאוּמָה
+# אִם־תַּעֲשֶׂה־לִּי הַדָּבָר הַזֶּה אָשׁוּבָה אֶרְעֶה צֹאנְךָ אֶשְׁמֹר
+# &quot;[EN-AID] And he said: What shall I give you? And Jacob said: You shall
+# not give me anything. If you will do this thing for me, I will again feed
+# and keep your flock:&quot;
+m.step(&quot;Gen.30.31&quot;)
+# ‹לֹא־תִתֶּן־לִי מְאוּמָה› (“not set to-me/my speck”) — fact holds: not-
+# set-to-me-speck(exchange)
+m.fact(&quot;lo_titen_li_meuma(exchange)&quot;)
+
+# -------------------------- Gen.30.32 · THE_WAGE_NAMED_POP -----------------
+# אֶעֱבֹר בְּכָל־צֹאנְךָ הַיּוֹם הָסֵר מִשָּׁם כָּל־שֶׂה נָקֹד וְטָלוּא
+# וְכָל־שֶׂה־חוּם בַּכְּשָׂבִים וְטָלוּא וְנָקֹד בָּעִזִּים וְהָיָה שְׂכָרִי
+# &quot;[EN-AID] I will pass through all your flock today, removing from there
+# every speckled and spotted lamb, and every dark lamb among the sheep, and
+# the spotted and speckled among the goats; and that shall be my wage.&quot;
+m.step(&quot;Gen.30.32&quot;)
+# ‹וְהָיָה שְׂכָרִי› (“and-be wage-me/my”) — demand settled (popped from the
+# queue): naqva-sekhar(Jacob)
+m.result(&quot;naqva_sekhar(yaaqov)&quot;, tmark=&quot;t3&quot;)
+
+# -------------------------- Gen.30.33 · THE_RIGHTEOUSNESS_CLAUSE -----------
+# וְעָנְתָה־בִּי צִדְקָתִי בְּיוֹם מָחָר כִּי־תָבוֹא עַל־שְׂכָרִי לְפָנֶיךָ
+# כֹּל אֲשֶׁר־אֵינֶנּוּ נָקֹד וְטָלוּא בָּעִזִּים וְחוּם בַּכְּשָׂבִים
+# גָּנוּב הוּא אִתִּי
+# &quot;[EN-AID] And my righteousness will answer for me on a day to come, when
+# you come concerning my wage before you: every one that is not speckled and
+# spotted among the goats and dark among the sheep, it is stolen with me.&quot;
+m.step(&quot;Gen.30.33&quot;)
+# ‹וְעָנְתָה־בִּי צִדְקָתִי בְּיוֹם מָחָר› (“and-eye in-me/my rightness-
+# me/my in-day deferred”) — fact holds: tzedaqa-ana-in-day-deferred(Jacob)
+m.fact(&quot;tzedaqa_ana_be_yom_machar(yaaqov)&quot;)
+
+# -------------------------- Gen.30.34 · THE_YEHI_ACCEPTANCE ----------------
+# וַיֹּאמֶר לָבָן הֵן לוּ יְהִי כִדְבָרֶךָ
+# &quot;[EN-AID] And Laban said: Behold, would that it be according to your
+# word.&quot;
+m.step(&quot;Gen.30.34&quot;)
+# ‹לוּ יְהִי כִדְבָרֶךָ› (“conditional-particle be like-word/thing-
+# you/your”) — fact holds: conditional-particle-be-khi-devarekha(Laban)
+m.fact(&quot;lu_yehi_khi_devarekha(lavan)&quot;)
+
+# -------------------------- Gen.30.35 · THE_SAME_DAY_REMOVAL ---------------
+# וַיָּסַר בַּיּוֹם הַהוּא אֶת־הַתְּיָשִׁים הָעֲקֻדִּים וְהַטְּלֻאִים וְאֵת
+# כָּל־הָעִזִּים הַנְּקֻדּוֹת וְהַטְּלֻאֹת כֹּל אֲשֶׁר־לָבָן בּוֹ וְכָל־חוּם
+# בַּכְּשָׂבִים וַיִּתֵּן בְּיַד־בָּנָיו
+# &quot;[EN-AID] And he removed on that day the striped and spotted he-goats and
+# all the speckled and spotted she-goats — every one that had white in it —
+# and every dark one among the sheep, and gave them into the hand of his
+# sons.&quot;
+m.step(&quot;Gen.30.35&quot;)
+# ‹וַיָּסַר בַּיּוֹם הַהוּא› (“and-turn-aside in-day that”) — fact holds:
+# hesir-Laban-in-the-day-the-he/it(the-striped)
+m.fact(&quot;hesir_lavan_ba_yom_ha_hu(ha_aqudim)&quot;)
+
+# -------------------------- Gen.30.36 · THE_THREE_DAYS_GAP -----------------
+# וַיָּשֶׂם דֶּרֶךְ שְׁלֹשֶׁת יָמִים בֵּינוֹ וּבֵין יַעֲקֹב וְיַעֲקֹב רֹעֶה
+# אֶת־צֹאן לָבָן הַנּוֹתָרֹת
+# &quot;[EN-AID] And he set a way of three days between himself and Jacob; and
+# Jacob was shepherding the remnant of Laban&#x27;s flock.&quot;
+m.step(&quot;Gen.30.36&quot;)
+# ‹וַיָּשֶׂם דֶּרֶךְ שְׁלֹשֶׁת יָמִים בֵּינוֹ וּבֵין יַעֲקֹב› (“and-put/set
+# way/road three day between-him/its and-between Jacob”) — fact holds:
+# way/road-three-day(ben-Laban-and-between-Jacob)
+m.fact(&quot;derekh_sheloshet_yamim(ben_lavan_u_ven_yaaqov)&quot;)
+
+# -------------------------- Gen.30.37 · THE_WHITE_PEELED -------------------
+# וַיִּקַּח־לוֹ יַעֲקֹב מַקַּל לִבְנֶה לַח וְלוּז וְעֶרְמוֹן וַיְפַצֵּל
+# בָּהֵן פְּצָלוֹת לְבָנוֹת מַחְשֹׂף הַלָּבָן אֲשֶׁר עַל־הַמַּקְלוֹת
+# &quot;[EN-AID] And Jacob took himself fresh rods of poplar and almond and
+# plane, and peeled white peelings in them, laying bare the white which was
+# on the rods.&quot;
+m.step(&quot;Gen.30.37&quot;)
+# ‹וַיְפַצֵּל בָּהֵן פְּצָלוֹת לְבָנוֹת מַחְשֹׂף הַלָּבָן› (“and-peel in-
+# them/their peeling white peeling the-white”) — fact holds: peel-peeling-
+# the-Laban(shoot)
+m.fact(&quot;pitzel_machsof_ha_lavan(maqlot)&quot;)
+
+# -------------------------- Gen.30.38 · THE_TROUGH_SIGHTLINE ---------------
+# וַיַּצֵּג אֶת־הַמַּקְלוֹת אֲשֶׁר פִּצֵּל בָּרֳהָטִים בְּשִׁקֲתוֹת הַמָּיִם
+# אֲשֶׁר תָּבֹאןָ הַצֹּאן לִשְׁתּוֹת לְנֹכַח הַצֹּאן וַיֵּחַמְנָה בְּבֹאָן
+# לִשְׁתּוֹת
+# &quot;[EN-AID] And he set the rods which he had peeled in the runnels, in the
+# watering troughs where the flock came to drink, in front of the flock; and
+# they came to heat when they came to drink.&quot;
+m.step(&quot;Gen.30.38&quot;)
+# ‹וַיַּצֵּג אֶת־הַמַּקְלוֹת אֲשֶׁר פִּצֵּל בָּרֳהָטִים בְּשִׁקֲתוֹת
+# הַמָּיִם› (“and-place-permanently obj-marker the-shoot which peel in-
+# channel in-trough the-waters”) — fact holds: shoot-in-the-rehatim(to-
+# front-part-the-flock)
+m.fact(&quot;maqlot_ba_rehatim(le_nokhach_ha_tzon)&quot;)
+
+# -------------------------- Gen.30.39 · THE_FLOCK_CONCEIVES_STRIPED --------
+# וַיֶּחֱמוּ הַצֹּאן אֶל־הַמַּקְלוֹת וַתֵּלַדְןָ הַצֹּאן עֲקֻדִּים נְקֻדִּים
+# וּטְלֻאִים
+# &quot;[EN-AID] And the flock conceived-heat at the rods; and the flock bore
+# striped, speckled, and spotted.&quot;
+m.step(&quot;Gen.30.39&quot;)
+# ‹וַתֵּלַדְןָ הַצֹּאן עֲקֻדִּים נְקֻדִּים וּטְלֻאִים› (“and-bear-young the-
+# flock striped spotted and-cover-with-pieces”) — fact holds: bear-young-
+# striped-spotted-cover-with-pieces(the-flock)
+m.fact(&quot;teladna_aqudim_nequdim_teluim(ha_tzon)&quot;)
+
+# -------------------------- Gen.30.40 · THE_SEPARATION ---------------------
+# וְהַכְּשָׂבִים הִפְרִיד יַעֲקֹב וַיִּתֵּן פְּנֵי הַצֹּאן אֶל־עָקֹד
+# וְכָל־חוּם בְּצֹאן לָבָן וַיָּשֶׁת־לוֹ עֲדָרִים לְבַדּוֹ וְלֹא שָׁתָם
+# עַל־צֹאן לָבָן
+# &quot;[EN-AID] And Jacob separated the lambs, and set the faces of the flock
+# toward the striped and every dark one in Laban&#x27;s flock; and he set himself
+# droves alone, and did not set them with Laban&#x27;s flock.&quot;
+m.step(&quot;Gen.30.40&quot;)
+# ‹וְהַכְּשָׂבִים הִפְרִיד יַעֲקֹב› (“and-the-young-sheep break-through
+# Jacob”) — fact holds: break-through-arrangement-alone(Jacob)
+m.fact(&quot;hifrid_adarim_levado(yaaqov)&quot;)
+
+# -------------------------- Gen.30.41 · THE_STRONG_ONES --------------------
+# וְהָיָה בְּכָל־יַחֵם הַצֹּאן הַמְקֻשָּׁרוֹת וְשָׂם יַעֲקֹב אֶת־הַמַּקְלוֹת
+# לְעֵינֵי הַצֹּאן בָּרֳהָטִים לְיַחְמֵנָּה בַּמַּקְלוֹת
+# &quot;[EN-AID] And it was, whenever the bound-strong of the flock conceived,
+# that Jacob set the rods before the eyes of the flock in the runnels, to
+# make them conceive among the rods.&quot;
+m.step(&quot;Gen.30.41&quot;)
+# ‹וְשָׂם יַעֲקֹב אֶת־הַמַּקְלוֹת› (“and-put/set Jacob obj-marker the-
+# shoot”) — fact holds: shoot-to-eye-the-tie(Jacob)
+m.fact(&quot;maqlot_le_ene_ha_mequsharot(yaaqov)&quot;)
+
+# -------------------------- Gen.30.42 · THE_SORT ---------------------------
+# וּבְהַעֲטִיף הַצֹּאן לֹא יָשִׂים וְהָיָה הָעֲטֻפִים לְלָבָן וְהַקְּשֻׁרִים
+# לְיַעֲקֹב
+# &quot;[EN-AID] And when the flock were feeble, he did not set them; and the
+# feeble were Laban&#x27;s, and the bound-strong Jacob&#x27;s.&quot;
+m.step(&quot;Gen.30.42&quot;)
+# ‹וְהָיָה הָעֲטֻפִים לְלָבָן וְהַקְּשֻׁרִים לְיַעֲקֹב› (“and-be the-shroud
+# to-Laban and-the-tie to-Jacob”) — fact holds: shroud-to-Laban-tie-to-
+# Jacob(the-flock)
+m.fact(&quot;atufim_le_lavan_qeshurim_le_yaaqov(ha_tzon)&quot;)
+
+# -------------------------- Gen.30.43 · THE_BREAK_OUT_DOUBLED --------------
+# וַיִּפְרֹץ הָאִישׁ מְאֹד מְאֹד וַיְהִי־לוֹ צֹאן רַבּוֹת וּשְׁפָחוֹת
+# וַעֲבָדִים וּגְמַלִּים וַחֲמֹרִים
+# &quot;[EN-AID] And the man broke out exceedingly, exceedingly; and he had many
+# flocks, and maidservants and menservants, and camels and donkeys.&quot;
+m.step(&quot;Gen.30.43&quot;)
+# ‹וַיִּפְרֹץ הָאִישׁ מְאֹד מְאֹד› (“and-break-out the-man very very”) —
+# fact holds: paratz-very-very(the-man)
+m.fact(&quot;paratz_meod_meod(ha_ish)&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;shalcheni(lavan)&#x27;, &#x27;tena_nashai_viladai(lavan)&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 3
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;berakh_YHWH_biglal_yaaqov(lavan)&#x27;, &#x27;yadata_avodati(lavan)&#x27;, &#x27;paratz_la_rov_le_ragli(miqne_lavan)&#x27;, &#x27;lo_titen_li_meuma(exchange)&#x27;, &#x27;tzedaqa_ana_be_yom_machar(yaaqov)&#x27;, &#x27;lu_yehi_khi_devarekha(lavan)&#x27;, &#x27;hesir_lavan_ba_yom_ha_hu(ha_aqudim)&#x27;, &#x27;derekh_sheloshet_yamim(ben_lavan_u_ven_yaaqov)&#x27;, &#x27;pitzel_machsof_ha_lavan(maqlot)&#x27;, &#x27;maqlot_ba_rehatim(le_nokhach_ha_tzon)&#x27;, &#x27;teladna_aqudim_nequdim_teluim(ha_tzon)&#x27;, &#x27;hifrid_adarim_levado(yaaqov)&#x27;, &#x27;maqlot_le_ene_ha_mequsharot(yaaqov)&#x27;, &#x27;atufim_le_lavan_qeshurim_le_yaaqov(ha_tzon)&#x27;, &#x27;paratz_meod_meod(ha_ish)&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 4
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

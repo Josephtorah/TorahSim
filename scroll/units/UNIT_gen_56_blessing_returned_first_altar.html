@@ -1,0 +1,668 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_56_blessing_returned_first_altar — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_56_blessing_returned_first_altar?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The blessing returned and the first altar (33:1-20) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_56_blessing_returned_first_altar</b> · Genesis 33:1-20 · derive  · phase </div>
+<div class="meta"><a href="../#Gen/33/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">קַח־נָא אֶת־בִּרְכָתִי</span> · <i>qach-na et-birkhati</i> · &#x27;Take, please, my blessing&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DRAFT 2026-08-07 · SOLO ERA unit #10 (Claude coordinator+deriver; external fresh-context adversarial review before freeze per standing law). Span: 33:1-20, from the lifted eyes to the named altar. 20 verses · 268 tokens (SNAPSHOT-verified). SNAPSHOT + debut_map. bar C. Conventions: step he: = plain (no accents/meteg; maqqef ־ per snapshot); tree halves = accents kept, slashes stripped; split at etnachta — TWO verses carry NONE: 33:6 (5 tokens, split at the tifcha idx3, rank 2) and 33:16 (6 tokens, split at the tifcha idx4, rank 2) — gen_03 1:13 / gen_50 29:22 fallback law. Onkelos BUFFER PENDING. Translit note: &quot;ahol-o&quot; (33:19) polishes to &quot;aholo&quot; via EXTRA_SUBS only — frozen gen_54 keeps the raw form at 31:25 (subs.py NOTE). UNIT SHAPE — FOUR pushes, ONE POP, THREE OPEN: after gen_54 and gen_55 pushed fourteen cards and popped NONE, the run&#x27;s first RESULT fires — and the demand that clears is TAKE-BACK-THE-BLESSING. (1) 33:9 LET(yehi(lekha_asher_lakh)) — Esau&#x27;s keep-what-is-yours jussive (HVqj3ms, mood law gen_32): pushed, then UNDONE BY ITS OWN DEMANDER — at 33:11 Esau takes (va-yiqach) the very gift his jussive told Jacob to keep: the demander performs his demand&#x27;s own reversal (no haya-root receipt ever fires; card OPEN with the self-reversal filed — a new mismatch-family shape). (2) 33:11 THE POP: LET(qach_na_et_birkhati(esav)) — qach (3947 tok102/393, HVqv2ms) → va-yiftzar bo VA-YIQACH (tok103/393): the demand&#x27;s own root returns as a foreground deed by the demandee IN THE SAME VERSE — demand and receipt are CONSECUTIVE career tokens (echo-receipt law, gen_25/ gen_35; latency zero verses — gen_51&#x27;s bo pop had latency one). (3) 33:12 CMD-US?(nisa_ve_nelekha(esav_ve_yaaqov)) — Esau&#x27;s joint-journey double cohortative (nisa HVqh1cp + ve-nelekha HC/Vqh1cp, TIR-033): politely declined (33:13-14) and answered by OPPOSITE VECTORS — 33:16 Esau returns to Seir, 33:17 Jacob journeys to Sukkot; and the journey-verb&#x27;s own career walks demand → solo deed: nasa 5265 tok6 = the cohortative NISA itself, tok7 = 33:17 Jacob&#x27;s SOLO nasa — the let-US-journey answered by a one-man journey the other way, consecutive tokens: card OPEN. (4) 33:14 LET(yaavar_na(adoni, li_fene_avdo)) — Jacob&#x27;s pass-before jussive (HVqj3ms): Esau never passes-before — 33:16 gives him SHUV (returned to his way), the other root (gen_45 Excerpt B): card OPEN. FENCED, NO PUSH: 33:15&#x27;s atziga (HVhh1cs — 1cs cohortative offer, gen_52&#x27;s 30:31 ashuva self-commit class; declined by la-ma ze) and 33:15&#x27;s emtza (HVqh1cs inside a rhetorical question); 33:14&#x27;s etnahala + avo el adoni seira — self-commit content (and the stated Seir-visit has NO arrival token in the corpus: Jacob&#x27;s next narrated station is Sukkot; filed as letter-note, no adjudication of intent). END: SPECS depth 3 OPEN (yehi · nisa_ve_nelekha · yaavar_na — all three are the brothers&#x27; courtesies; the one card that CLEARED in this whole three-block run is the returned blessing). REGISTRY 1 write (the altar). TESTS 0 (zero tov-adjective tokens in Gen 33 — debut_map scan). CROWN — THE RETURNED WORD (33:11): qach na et BIRKHATI — the blessing-noun 1293 tok9/30, and its toks 3-7 are the Gen 27 wound: 27:35 &quot;he took YOUR BLESSING&quot; (birkhatekha), 27:36 Esau&#x27;s own cry &quot;he took MY BLESSING&quot; (birkhati), 27:36/38/41 the blessing fought over. Now the taker says TAKE (laqach, the very verb of 27:35-36) + MY BLESSING (birkhati, Esau&#x27;s own word from 27:36) — TO ESAU: verb and noun of the theft-cry, speaker and addressee exchanged — and Esau TAKES: the 27:36 sentence performed with the roles reversed, and the machine pops its first card in three units on it. THE SECOND CROWN (33:20): va-yatzev sham mizbecha — Jacob&#x27;s FIRST altar (mizbeach 4196 tok10/198; toks 1-9 = Noah ×2 at 8:20, Abram ×4 at 12:7/12:8/13:4/13:18, Moriah ×2 at 22:9, Isaac at 26:25 — all his fathers&#x27;) — and he NAMES it (va-yiqra LO — full formula, the write fires): name := el_elohe_yisrael — &quot;El, God of ISRAEL&quot;: yisrael tok3/587 sits INSIDE the altar-name — the REGISTRY receives the name israel for the first time not as the man&#x27;s label (32:29&#x27;s decree wrote nothing; 35:10&#x27;s formula-write is still ahead) but inside God&#x27;s title on an altar: the renamed man files his new name obliquely, as a genitive of El. The set-up verb: va-yatzev 5324 tok8/28 — toks 6-7 = 28:12-13, the ladder SET UP (mutzav) and YHWH STANDING (nitzav) on it; toks 9-10 = 35:14 (Bethel&#x27;s pillar re-set) and 35:20 (Rachel&#x27;s grave-pillar): ladder, altar, pillar, grave. CARE-POINTS (ordinals from debut_map via prestage unless tagged): (1) 33:1-2 THE ORDER OF LOVE: maids+children first, Leah&#x27;s group, Rachel+Joseph LAST (acharonim 314 toks 1-2/11 DEBUT ×2 — the last-word debuts double in the safest place); rishona 7223 tok7/55. yosef 3130 toks 3-4/175 — Joseph&#x27;s first NARRATIVE tokens (toks 1-2 were his naming, gen_51): the boy enters the story placed hindmost, and bows (33:7). va-yachatz (2673 tok2/6) — gen_55&#x27;s divide-verb divides the CHILDREN one verse after dividing camps. (2) 33:3 THE BOW INVERTED: ve-hu avar li-fenehem (5674 tok19/130 — the cross-verb: Jacob crosses FIRST, ahead of the order he built); va-yishtachu artza SHEVA peamim (7812 tok12/47) — THE BLESSING PERFORMED BACKWARDS: hishtachavah&#x27;s toks 9-11 are 27:29&#x27;s own decree — &quot;peoples will bow to you, YOUR MOTHER&#x27;S SONS WILL BOW TO YOU&quot; (gen_46&#x27;s blessing, incl. the ketiv token) — and the verb&#x27;s VERY NEXT token (12) is JACOB bowing, seven times, TO THE BROTHER: the bow-verb goes from decree to inverse performance with nothing between — wrong-direction landing on the stolen blessing&#x27;s own grammar. sheva peamim (7651 tok29/185; 6471 tok7/39 — the seven-word of the served years now counts prostrations). (3) 33:4 THE HAND BECOMES ARMS [gen_55 landing-note; frozen ledger untouched]: va-yaratz esav liqrato (7323 tok9/12 — the RUN-verb: toks 3-8 are the well-and-hearth hospitality runs of Gen 24/29 — Laban ran to Jacob at 29:13 (tok8); Esau&#x27;s run is tok9: the two arrival-runs of the cycle) va-yechabqehu (2263 tok2/3 — the EMBRACE-verb: tok1 = 29:13 LABAN embracing Jacob at the cycle&#x27;s door, tok2 = ESAU embracing at its exit, tok3 = 48:10 Jacob embracing Joseph&#x27;s sons — three embraces, all this family) va-yipol al TZAVARAV (6677 tok3/9 — the NECK: tok1 = 27:16, the kid-skins ON JACOB&#x27;S NECK — the deception&#x27;s costume; tok2 = 27:40, Esau&#x27;s anti-blessing yoke ON YOUR NECK; tok3 = Esau falling ON THE DECEIVER&#x27;S NECK in tears: the neck-word&#x27;s first three tokens are disguise, yoke, embrace) va-yishaqehu (5401 tok7/13 — the kiss-walk&#x27;s reconciliation token) va-yivku — AND THEY WEPT: bakha 1058 tok5/29, and toks 1-4 are ALL SINGULAR (Hagar 21:16, Abraham 23:2, ESAU ALONE at the blessing-theft 27:38, Jacob at the well 29:11) [VERIFIED: morphs 3fs/inf/3ms/3ms] — tok5 = va-yivku HC/Vqw3mp, the verb&#x27;s FIRST PLURAL token: the man who wept alone at 27:38 now weeps WITH the man who caused it — the weep-verb learns the plural at the reconciliation. The gen_55 hatzileni card&#x27;s feared HAND (mi-yad esav) arrives as arms around the neck — no natzal-token fires; the fear dissolves without its demanded verb (cross-unit landing-note). (4) 33:5 THE GRACE-VERB IS BORN: mi ele lakh → ha-yeladim asher CHANAN Elohim et avdekha (2603 tok1/10 DEBUT) — the grace-verb&#x27;s debut names the children God-graced; tok2 = 33:11 chanani (BOTH in-span: born twice in one meeting); full career: 42:21 (Joseph&#x27;s pleading recalled by his brothers), 43:29 (Joseph to Benjamin, &quot;God be gracious to you&quot; — the same blessing-shape over a younger brother), Exod 33:19 ×2 (&quot;I will be GRACIOUS to whom I will be gracious&quot; — the Attributes&#x27; own grammar), Num 6:25 (the PRIESTLY BLESSING&#x27;s vi-chuneka), Deut 3:23 (va-etchanan), then the two grace-DENIALS that close it (Deut 7:2 lo techanem, 28:50 lo yachon) — the verb that REACHES the priestly blessing begins in a father&#x27;s answer about children. (5) 33:6-7 THE WAVES BOW (33:6 = etnachta-less, tifcha split): va-tigashna / va-tigash / nigash (5066 toks 12-14/45 — the APPROACH-verb: toks 8-9 = 27:26-27, gesha-na — the deception&#x27;s &quot;come near and kiss me&quot;; now the whole family approaches the deceived party&#x27;s son in waves); hishtachavah toks 13-15/47 — the bowing multiplies (maids, Leah, Joseph-and-Rachel); hena 2007 tok3/17. (6) 33:8-10 THE CAMP EXPLAINED AND THE FACE-CODA: mi lekha kal ha-machane ha-ze asher PAGASHTI (6298 tok2/4 — gen_55&#x27;s meet-verb in ESAU&#x27;S mouth: the anticipated dangerous meeting, told by the met one; machane 4264 tok7/104 — the camp-word&#x27;s first token in another speaker&#x27;s mouth); li-metzo chen be-ene adoni (the grace- formula, chen 2580 tok6/27; adoni ×5 in-span, 113 toks 35-39/91 — Jacob keeps the servant-grammar even after the embrace); 33:10: im na matzati chen... ve-laqachta minchati mi-yadi (3947 tok101 — the take-verb warms up one verse before the pop; 4503 tok8/113 minchati — the offering-noun&#x27;s Cain-and-Abel career in its brother-reconciliation token) KI AL KEN RAITI FANEKHA KI-REOT PENE ELOHIM (6440 toks 90-91/627; 7200 toks 84-85/396) — the face-coda: one unit after panim-el-panim at Peniel, Jacob tells Esau your face is like God&#x27;s face — the face-walk of gen_55 closes on the brother&#x27;s; VA-TIRTZENI (7521 tok1/14 DEBUT) — THE ACCEPTANCE-VERB IS BORN: &quot;and you have ACCEPTED me&quot; — its career is Leviticus&#x27;s sacrificial acceptance formula (Lev 1:4 ve-nirtza lo, 7:18/19:7/22:23-27 yeratze) and Lev 26&#x27;s sabbath-repayment: the verb by which the altar accepts debuts in a brother accepting a brother — offering-noun and acceptance-verb meet in one sentence a chapter before Jacob&#x27;s first altar. (7) 33:11 THE POP [CROWN]; plus: asher HUVAT lakh (935 tok114/619 hophal — &quot;which was BROUGHT to you&quot;: the bring-verb gone passive for the gift); ki chanani Elohim ve-khi yesh li KHOL (&quot;I have ALL&quot; — 3605 tok239/1595: Esau said yesh li RAV, &quot;I have MUCH&quot; (7227 tok10/66, 33:9); Jacob answers yesh li KHOL, &quot;I have ALL&quot; — much against all, the two inventories one verse apart); va-yiftzar bo (6484 tok3/3 CLOSES — the URGE-verb&#x27;s whole career: Lot urging the angels (19:3), the mob urging Lot (19:9), Jacob urging Esau — two Sodom doors and a reconciliation, done). (8) 33:12-14 THE DECLINED CONVOY: nisa ve-nelekha [UNIT SHAPE (3)]; ve-elkha le-negdekha (5048 tok7/17 — neged: the CORRESPOND- word of 2:18&#x27;s ke-negdo — &quot;I will go OPPOSITE you&quot;: the helper- grammar offered brother-to-brother); adoni yodea ki ha-yeladim RAKIM (7390 tok3/6 — tender: tok2 = 29:17 Leah&#x27;s tender eyes — the word&#x27;s two Jacob-cycle tokens are eyes and children); alot (5763 tok1/1 HAPAX — the nursing ones) alay; u-defaqum yom echad (1849 tok1/1 HAPAX — the OVERDRIVE-verb, once ever) va-metu kal ha-tzon; yaavar na adoni [UNIT SHAPE (4)]; va-ani ETNAHALA LE-ITI (5095 tok1/3 DEBUT — the LEAD-GENTLY verb: tok2 = 47:17 Joseph leading Egypt through famine-bread, tok3 = Exod 15:13 NEHALTA — the Song of the Sea&#x27;s &quot;You led in Your strength to Your holy habitation&quot;: the gentle-lead verb debuts in Jacob&#x27;s flock-pace and lands in the Exodus hymn; 328 le-iti tok1/1 HAPAX — &quot;at my slow pace&quot;, said once in the Torah) le-regel ha-melakha (4399 tok4/65 — MELAKHA: toks 1-3 = GOD&#x27;S OWN WORK at 2:2-3, the Sabbath&#x27;s thrice-said melakha; tok4 = the drovers&#x27; work — the labor-noun&#x27;s first post-creation token; career → Exod 20:9-10&#x27;s Sabbath command cluster) u-le-regel ha-yeladim (7272 toks 8-9/60 — at the FOOT-pace of work and children) ad asher avo el adoni SEIRA — the stated Seir-arrival has no narrated token anywhere in the corpus (Jacob&#x27;s next station is Sukkot, 33:17; letter-note only, intent not adjudicated). (9) 33:15 THE DECLINED GARRISON: atziga-na (3322 tok2/6 — the STATION-verb: tok1 = 30:38 Jacob STATIONING the rods (gen_52&#x27;s device!); tok2 = Esau offering to station MEN; toks 3-4 = 43:9 Judah&#x27;s ve-hitzagtiv (setting Benjamin before his father) and 47:2 (Joseph stationing five brothers before Pharaoh)) — 1cs cohortative offer, gen_52&#x27;s ashuva self-commit class, no push; declined: la-ma ze emtza chen be-ene adoni (the grace-formula&#x27;s third in-span token closes the negotiation). (10) 33:16-17 THE OPPOSITE VECTORS (33:16 = etnachta-less, tifcha split): va-yashav esav le-darko SEIRA / ve-yaaqov nasa SUKOTA — one verse-pair, two directions [UNIT SHAPE (3)]; va-yiven lo BAYIT (1129 tok15/41 — the build-verb: Jacob&#x27;s first BUILDING; its Jacob-cycle neighbor is 30:3&#x27;s ve-ibane, &quot;that I may be BUILT&quot;) u-le-miqnehu asa SUKOT — booths FOR THE CATTLE — and the noun&#x27;s career: sukka 5521 tok1/8 DEBUT, toks 2-5 = LEV 23:34-43 (the FESTIVAL OF SUKKOT law: ba-sukot teshvu, &quot;in BOOTHS you shall dwell&quot;), toks 6-8 = Deut 16:13,16 + 31:10 — every later token of the booth-noun is the festival&#x27;s: the feast of Booths&#x27; whole vocabulary springs from cattle-shelters at a road-fork; AL KEN qara shem ha-maqom SUKOT — al-ken etiology = REPORT class (gen_45&#x27;s 26:33 law: no NAME write; the registry sleeps); the PLACE sukot (5523 toks 1-2/6) career: tok3 = EXOD 12:37 — &quot;the children of Israel journeyed FROM RAMSES TO SUKKOT&quot;: the Exodus&#x27;s FIRST STATION bears this stop&#x27;s name (+ 13:20, Num 33:5-6 the itinerary pair). (11) 33:18-19 THE ARRIVAL AND THE SECOND PURCHASE: va-yavo yaaqov SHALEM (8003 tok2/6 — the WHOLE-word: tok1 = 15:16, &quot;the iniquity of the Amorite is NOT YET WHOLE&quot;; tok2 = Jacob arriving WHOLE to Shechem&#x27;s city — the word&#x27;s two Genesis tokens weigh an unfilled measure and a filled man) ir shekhem (7927 tok2/18 — Shechem&#x27;s second token; toks 4-18 = the Dinah story&#x27;s cast, next unit&#x27;s span) be-eretz KENAAN be-voo mi-PADAN ARAM (3667 tok20/65; 6307 tok7/11) — the return-formula closes 28:2&#x27;s departure arc: sent to Paddan-Aram (toks 2-5, gen_47&#x27;s span), back from Paddan-Aram; va-YICHAN et pene ha-ir (2583 tok2/86 — the ENCAMP-verb: tok1 = 26:17 Isaac in Gerar&#x27;s wadi; tok2 = Jacob before Shechem; toks 3+ = the wilderness itinerary&#x27;s va-yachanu — the encamping of Israel&#x27;s journeys debuts its patriarch-leg here); va-YIQEN et chelqat ha-sade (7069 tok5/25 — the BUY-verb: tok4 = 25:10 &quot;the field ABRAHAM BOUGHT&quot; (Machpelah), tok5 = Jacob&#x27;s plot — the Torah&#x27;s two patriarch land-purchases are adjacent career tokens; toks 11-12 = 49:30/50:13, Machpelah retold at the burials); CHELQAT (2513 tok2/3) — the SMOOTH/PORTION homograph: tok1 = 27:16, chelqat tzavarav — &quot;the SMOOTH of his neck&quot;, the deception&#x27;s kid-skin site; tok2 = the PORTION of field — the word that dressed the lie buys the first homestead (tok3 = Deut 33:21); mi-yad bene CHAMOR (2544 tok1/11 DEBUT — Hamor: all eleven tokens are this purchase + the Dinah story) avi shekhem; be-mea QESITA (7192 tok1/1 HAPAX — the coin-word, once ever in the Torah); nata sham aholo (5186 tok4/50). (12) 33:20 THE ALTAR AND THE OBLIQUE WRITE [CROWN 2]. Divine-name walk: Elohim ×3 (33:5,10,11 — all in grace-speech) + el elohe yisrael (33:20); YHWH ×0 in-span [debut_map 3068 — no token in Gen 33]; the unit&#x27;s God-talk is all chen/chanan grammar until the altar speaks El. WATCHLIST ARMS (prospective, filed): shekhem toks 4-18 + chamor toks 2-11 + ir tokens = GEN 34 (the Dinah span, next block-run&#x27;s door); 35:1-7 (qum aleh bet-el: the altar God COMMANDS after the altar Jacob volunteered; mizbeach toks 11-13); 35:10 (the Israel formula-write); 35:14/20 (va-yatzev toks 9-10: pillar and grave-pillar); 43:29 (chanan tok4 over Benjamin); 47:17 (nahal tok2); Exod 12:37 (sukkot station); Exod 15:13 (nehalta); Lev 1:4 (the acceptance-formula; ratzah career); Lev 23:34-43 (the Sukkot festival law); Num 6:25 (the priestly blessing&#x27;s chanan); Deut 3:23 (va-etchanan).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (retro, oral-first era; record: logic/oral_audit/AUDIT_gen_56_2026-08-08.md; manifest 8/8 checkable VERIFIED, zero FAILED, one manual row). CROWNS (chain-attested + DB-verified). THE SIX-DOTTED KISS [G56-01, Minchat Shai citing Bereshit Rabbah, Shir HaShirim Rabbah, the Zohar; Pirkei de-R. Eliezer&#x27;s &quot;read not he-KISSED but he-BIT&quot;]: וישקהו (&quot;and he fell on his neck AND KISSED HIM, and they wept,&quot; 33:4) — the FOURTH of the TEN DOTTED PLACES reached in canon order, and SNAPSHOT carries all SIX dots, one over each letter, exactly as the midrash counts them (DB-checked at the codepoint level): the kiss-read-as-bite riding letter by letter in the stream. ELIJAH IN THE FINALS OF THE SEIR PROMISE [G56-03, Kitzur Baal HaTurim]: אבא אל אדני שעירה (&quot;until I COME to my lord, to Seir,&quot; 33:14 — the visit Jacob never pays in his lifetime) — the four words&#x27; final letters spell אליה (Elijah, DB-checked in order): the deferred arrival read to the end of days, when the saviors ascend Mount Zion to judge Esau&#x27;s mountain (Obadiah, named); and the Seir-word itself stands exactly twice in the Torah, both in this meeting (33:14, 33:16), the Joshua member outside. THE NECK WRITTEN ONE, READ MANY [G56-02]: צוארו (&quot;he fell on his NECK,&quot; 33:4) — the Masorah reads the plural, the letter writes the singular with no yod in the stream: a written/read split carried as a single written-form token (unlike the two-token encoding at 8:17) — the instrument varying by site, as characterized. WHO-IS-TO-YOU, TWICE IN THE TORAH [G56-07, Kitzur]: the question-pair מי לך stands exactly twice — the angel at Sodom to Lot (&quot;WHO else is TO YOU here?&quot;, 19:12) and Jacob&#x27;s meeting (&quot;WHO is all this camp TO YOU?&quot;, 33:8), Isaiah&#x27;s tomb-hewer named third; and Esau&#x27;s offered escort declined in a soft letter — לנגדך (&quot;let me go BESIDE YOU,&quot; 33:12) gimel soft as ruled, the word Torah-unique, its Masorah partner the psalm&#x27;s &quot;our sins set BEFORE YOU&quot; (Ps 90:8, named). THE CHILDREN&#x27;S UNSTROKED HE [G56-08, the Michlol via Minchat Shai]: הילדים (&quot;the children are tender,&quot; 33:13) — the rule that the-children never takes the stress-stroke on its he holds across all seven Torah tokens (builder-checked, five in this unit): the tender ones carried lightly in the pointing itself. AS RULED [G56-05/06]: אלה לך (&quot;who are these TO YOU&quot;) lamed dageshed; פגשתי (&quot;all this camp that I MET&quot;) gimel in qamatz (the long a) with the precise books against the printer&#x27;s emendation. VARIANCE: the wheel-accent&#x27;s stations two and three [G56-04] — at &quot;and he saw, AND BEHOLD, Esau coming&quot; (33:1) and &quot;FOR therefore I have seen your face&quot; (33:10) Minchat Shai rules galgal (the wheel-accent), not maqqef (the joining stroke): SNAPSHOT carries no joining stroke at either station exactly as ruled, but stores the munach stroke where the wheel should turn — the class of galgal rulings stored as munach strokes grows to three stations (with 29:27). INSTRUMENT GAPS: the profane sight [G56-09, manual] — tractate Soferim rules the אלהים of &quot;as one sees the face of אלהים&quot; (33:10) PROFANE (Esau&#x27;s own angel, per the Kitzur&#x27;s word-count reading); the stream carries no holy/profane layer — station eleven filed; the seeing-word כראת (&quot;as one sees&quot;) itself verified lean, no vav. READINGS (named-only): the seven bows (&quot;seven times falls the righteous and rises&quot;); the bite-arithmetic on the dotted kiss; the five-member nursing-flock list (Jacob and David the gentle shepherds); the altar-name אל אלהי ישראל (&quot;God, the God of Israel&quot;) with Minchat Shai&#x27;s Jeremiah cross-reference.</div>
+<div class="meta">confidence: </div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Reconstruction notice (2026-08-08)</td><td>This unit was frozen in the lean era (meta + scenarios + boot steps; no step table was written at freeze). The steps below were reconstructed on 2026-08-08 from the freeze-era draft note (meta.draft_note_en, displayed on the unit page), the era&#x27;s continue-docs, and git history. No new derivation claims are introduced: every entry restates recorded decisions, and the full per-verse machine record is the boot steps below.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Source + span + structure</td><td>Genesis 33:1-20, from the lifted eyes to the named altar: 20 verses, 268 tokens, source-verified. Two verses carry no mid-verse rest (33:6 and 33:16) — each split at its strongest disjunctive per the frozen fallback law. Evidence: the SNAPSHOT database plus the debut-map attachment.</td><td>reconstructed</td></tr>
+<tr><td><b>C</b></td><td>Draft path + review</td><td>Solo-era unit #10: Claude as coordinator and deriver, with an external fresh-context adversarial review before freeze per the standing law. Frozen 2026-08-07.</td><td>reconstructed</td></tr>
+<tr><td><b>D</b></td><td>Care-point ledger (distilled)</td><td>The crown: THE RETURNED WORD (33:11). &quot;Take, please, MY BLESSING&quot; — the verb and the noun of the 27:36 theft-cry (&quot;he took my blessing&quot;) return with speaker and addressee EXCHANGED, and Esau takes: the stolen-blessing sentence performed with the roles reversed. The second crown: Jacob&#x27;s FIRST altar (every prior altar is his fathers&#x27;), named by the full formula — and the registry receives the name ISRAEL for the first time OBLIQUELY, inside God&#x27;s title on the altar, before any formula-write of the man&#x27;s own name. Among twelve care-points: the weep-verb&#x27;s four prior tokens are all SINGULAR — its first plural token has the man who wept alone at the blessing-theft weeping WITH the man who caused it; the bow-verb steps straight from the blessing&#x27;s your-mother&#x27;s-sons-will-bow decree to its inverse performance — Jacob bowing seven times to the brother — with nothing between; the neck-word&#x27;s first three tokens are the disguise, the yoke, and the embrace; the grace-verb is born twice in one meeting and its career reaches the priestly blessing; the acceptance-verb of the sacrificial formulas is born in a brother accepting a brother, one chapter before the first altar; the Booths-festival&#x27;s whole vocabulary springs from cattle-shelters at a road-fork (the naming there an etiology report — no write); the buy-verb holds the Torah&#x27;s two patriarch land-purchases as adjacent career tokens; the smooth/portion homograph — the word that dressed the lie buys the first homestead; and the span carries zero YHWH-tokens — all its God-talk is grace-grammar until the altar speaks.</td><td>reconstructed</td></tr>
+<tr><td><b>E</b></td><td>Machine design</td><td>Four pushes, ONE POP, three open — after fourteen unpopped cards across the two prior units, the run&#x27;s first RESULT fires, and the demand that clears is TAKE-BACK-THE-BLESSING: the demand&#x27;s own root returns as a foreground deed by the demandee in the SAME VERSE — demand and receipt consecutive career tokens, latency zero. Still open, all three the brothers&#x27; courtesies: Esau&#x27;s keep-what-is-yours jussive, UNDONE BY ITS OWN DEMANDER two verses later when he takes the very gift he said to keep (a new mismatch-family shape — the demander performs his demand&#x27;s own reversal); the joint-journey double cohortative, politely declined and answered by OPPOSITE VECTORS — one brother to Seir, one to Sukkot, the let-US-journey answered by a one-man journey the other way; and the pass-before jussive, answered in the other root (returned, never passed). Registry one write (the altar). Zero tests.</td><td>reconstructed</td></tr>
+<tr><td><b>F</b></td><td>Freeze + later history</td><td>Frozen at commit dac2080 (2026-08-07, &quot;Freeze gen_56: the blessing returned and the first altar&quot;). Oral audit 2026-08-08 folded same day (run 7 block 5): 8 VERIFIED, 0 FAILED, 1 UNCHECKABLE; headline: the six-dotted kiss fully carried in the stream, and Elijah in the finals of the Seir promise.</td><td>reconstructed</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_33_1 · Gen.33.1 · <span class='expr'>THE_LIFTED_EYES_AND_THE_SPLIT</span></h3>
+<p><span class="he">וַיִּשָּׂא יַעֲקֹב עֵינָיו וַיַּרְא וְהִנֵּה עֵשָׂו בָּא וְעִמּוֹ אַרְבַּע מֵאוֹת אִישׁ וַיַּחַץ אֶת־הַיְלָדִים עַל־לֵאָה וְעַל־רָחֵל וְעַל שְׁתֵּי הַשְּׁפָחוֹת</span> · <i>va-yisa yaaqov enay-v va-yar ve-hine esav ba ve-im-o arba meot ish va-yachatz et-ha-yeladim al-leah ve-al-rachel ve-al shete ha-shefachot</i> · And Jacob lifted his eyes and saw, and behold, Esau was coming, and with him four hundred men. And he divided the children unto Leah and unto Rachel and unto the two maids.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּשָּׂ֨א יַעֲקֹ֜ב עֵינָ֗יו וַיַּרְא֙ וְהִנֵּ֣ה עֵשָׂ֣ו בָּ֔א וְעִמּ֕וֹ אַרְבַּ֥ע מֵא֖וֹת אִ֑ישׁ</span> · <i>va-yisa yaaqov enay-v va-yar ve-hine esav ba ve-im-o arba meot ish</i> · Jacob saw Esau coming with four hundred men (etnachta on ish) [VERIFIED: SNAPSHOT Gen.33.1 idx10 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּ֣חַץ אֶת הַיְלָדִ֗ים עַל לֵאָה֙ וְעַל רָחֵ֔ל וְעַ֖ל שְׁתֵּ֥י הַשְּׁפָחֽוֹת</span> · <i>va-yachatz et-ha-yeladim al-leah ve-al-rachel ve-al shete ha-shefachot</i> · he divided the children among the mothers (verse-final shefachot) [VERIFIED: SNAPSHOT Gen.33.1 idx11-20]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yar_esav_ba_va_yachatz(arba_meot_ish), t0)</span><br><span class="gloss">= HOLDS(and-yar-esav-in-the-and-yachatz(arba-meot-man), t0)</span><br>THE COLUMN FORMS [care 1]. va-yisa yaaqov enav va-yar (5375 tok24/168; 7200 tok82/396) [VERIFIED: SNAPSHOT Gen.33.1 idx0-3] — the lifted eyes meet the feared sight: esav ba ve-imo arba meot ish — the 32:7 army-count arrives in narrative present. va-yachatz (2673 tok2/6) [VERIFIED: idx11 ordinal=2/6] — gen_55&#x27;s divide-verb, one career-token later, divides the CHILDREN as it divided the camps: the split-strategy shrinks from camps to kids. REGISTRY 0. TESTS 0. Onkelos BUFFER PENDING.
+</td><td><span class="he">וַיִּשָּׂא יַעֲקֹב עֵינָיו וַיַּרְא וְהִנֵּה עֵשָׂו בָּא</span> · <i>va-yisa yaaqov enay-v va-yar ve-hine esav ba</i><br><span class="gloss">= and-yisa yaaqov enay-v and-yar and-hine esav in-the</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The four hundred arrive; the divide-verb moves from camps to children.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_33_2 · Gen.33.2 · <span class='expr'>THE_ORDER_OF_LOVE</span></h3>
+<p><span class="he">וַיָּשֶׂם אֶת־הַשְּׁפָחוֹת וְאֶת־יַלְדֵיהֶן רִאשֹׁנָה וְאֶת־לֵאָה וִילָדֶיהָ אַחֲרֹנִים וְאֶת־רָחֵל וְאֶת־יוֹסֵף אַחֲרֹנִים</span> · <i>va-yasem et-ha-shefachot ve-et-yaldehen rishona ve-et-leah vi-yladeha acharonim ve-et-rachel ve-et-yosef acharonim</i> · And he put the maids and their children first, and Leah and her children behind, and Rachel and Joseph hindmost.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּ֧שֶׂם אֶת הַשְּׁפָח֛וֹת וְאֶת יַלְדֵיהֶ֖ן רִֽאשֹׁנָ֑ה</span> · <i>va-yasem et-ha-shefachot ve-et-yaldehen rishona</i> · the maids and their children first (etnachta on rishona) [VERIFIED: SNAPSHOT Gen.33.2 idx5 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאֶת לֵאָ֤ה וִֽילָדֶ֨יהָ֙ אַחֲרֹנִ֔ים וְאֶת רָחֵ֥ל וְאֶת יוֹסֵ֖ף אַחֲרֹנִֽים</span> · <i>ve-et-leah vi-yladeha acharonim ve-et-rachel ve-et-yosef acharonim</i> · Leah behind, Rachel and Joseph hindmost (verse-final acharonim) [VERIFIED: SNAPSHOT Gen.33.2 idx6-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(rishona_acharonim_acharonim(seder_ha_machane), t0)</span><br><span class="gloss">= HOLDS(rishona-acharonim-acharonim(seder-the-machane), t0)</span><br>THE LAST-WORD DEBUTS DOUBLE [care 1]. va-yasem (7760 tok28/152 — the set-verb of gen_54&#x27;s saga now arranges the family); acharonim ×2 (314 toks 1-2/11 DEBUT) [VERIFIED: SNAPSHOT Gen.33.2 idx9,14 ordinals=1-2/11] — the LAST-word enters the Torah twice in one verse, both times marking the protected rear; rishona (7223 tok7/55) [VERIFIED: idx5]. yosef (3130 tok3/175) [VERIFIED: idx13 ordinal=3/175] — Joseph&#x27;s first NARRATIVE token (toks 1-2 = his naming, gen_51): the story meets the boy hindmost-placed, the safest slot in a feared line.
+</td><td><span class="he">וַיָּשֶׂם אֶת־הַשְּׁפָחוֹת וְאֶת־יַלְדֵיהֶן רִאשֹׁנָה</span> · <i>va-yasem et-ha-shefachot ve-et-yaldehen rishona</i><br><span class="gloss">= and-yasem the-shefachot and-yaldehen rishona</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Joseph enters the narrative in the safest place; the last-word is born.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_33_3 · Gen.33.3 · <span class='expr'>THE_BOW_INVERTED</span></h3>
+<p><span class="he">וְהוּא עָבַר לִפְנֵיהֶם וַיִּשְׁתַּחוּ אַרְצָה שֶׁבַע פְּעָמִים עַד־גִּשְׁתּוֹ עַד־אָחִיו</span> · <i>ve-hu avar li-fene-hem va-yishtachu artzah sheva peamim ad-gishto ad-achi-v</i> · And he himself crossed over before them and bowed to the ground seven times, until he came near to his brother.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְה֖וּא עָבַ֣ר לִפְנֵיהֶ֑ם</span> · <i>ve-hu avar li-fene-hem</i> · he himself crossed over before them (etnachta on hem) [VERIFIED: SNAPSHOT Gen.33.3 idx2 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּשְׁתַּ֤חוּ אַ֨רְצָה֙ שֶׁ֣בַע פְּעָמִ֔ים עַד גִּשְׁתּ֖וֹ עַד אָחִֽיו</span> · <i>va-yishtachu artzah sheva peamim ad-gishto ad-achi-v</i> · bowed to the ground seven times, nearing his brother (verse-final v) [VERIFIED: SNAPSHOT Gen.33.3 idx3-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yishtachu_sheva_peamim(hipukh_ha_berakha), t0)</span><br><span class="gloss">= HOLDS(and-yishtachu-seven-peamim(hipukh-the-berakha), t0)</span><br>THE BLESSING PERFORMED BACKWARDS [care 2]. ve-hu avar li-fenehem (5674 tok19/130) [VERIFIED: SNAPSHOT Gen.33.3 idx1] — the cross-verb: the man who ordered others before him (32:17) now crosses FIRST. va-yishtachu artza sheva peamim (7812 tok12/47) [VERIFIED: idx3 ordinal=12/47] — THE INVERSION: the bow-verb&#x27;s toks 9-11 are 27:29&#x27;s own decree — &quot;peoples will bow to you... your mother&#x27;s sons will bow to you&quot; (gen_46&#x27;s stolen blessing, ketiv token included) — and its VERY NEXT token is JACOB bowing, seven times, TO THE BROTHER: decree → inverse performance, consecutive tokens, the stolen blessing&#x27;s own grammar walking backwards. sheva peamim (7651 tok29/185; 6471 tok7/39) [VERIFIED: idx5-6] — the seven-word that counted served years now counts prostrations. ad gishto ad achiv (5066 tok11/45) — the approach-verb warms toward care 5&#x27;s waves.
+</td><td><span class="he">וַיִּשְׁתַּחוּ אַרְצָה שֶׁבַע פְּעָמִים</span> · <i>va-yishtachu artzah sheva peamim</i><br><span class="gloss">= and-yishtachu artzah seven peamim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The bow-decree&#x27;s next token bows the wrong way, seven times.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_33_4 · Gen.33.4 · <span class='expr'>THE_HAND_BECOMES_ARMS</span></h3>
+<p><span class="he">וַיָּרָץ עֵשָׂו לִקְרָאתוֹ וַיְחַבְּקֵהוּ וַיִּפֹּל עַל־צַוָּארָו וַׄיִּׄשָּׁׄקֵׄהׄוּׄ וַיִּבְכּוּ</span> · <i>va-yaratz esav liqrato va-yechabqehu va-yipol al-tzavarav va-yishaqehu va-yivku</i> · And Esau ran to meet him and embraced him, and fell on his neck and kissed him; and they wept.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּ֨רָץ עֵשָׂ֤ו לִקְרָאתוֹ֙ וַֽיְחַבְּקֵ֔הוּ וַיִּפֹּ֥ל עַל צַוָּארָ֖ו וַׄיִּׄשָּׁׄקֵ֑ׄהׄוּׄ</span> · <i>va-yaratz esav liqrato va-yechabqehu va-yipol al-tzavarav va-yishaqehu</i> · Esau ran, embraced him, fell on his neck, kissed him (etnachta on yishaqehu) [VERIFIED: SNAPSHOT Gen.33.4 idx7 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּבְכּֽוּ</span> · <i>va-yivku</i> · and they wept (verse-final yivku) [VERIFIED: SNAPSHOT Gen.33.4 idx8-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yechabqehu_va_yivku(esav_ve_yaaqov), t0)</span><br><span class="gloss">= HOLDS(and-yechabqehu-and-yivku(esav-and-yaaqov), t0)</span><br>THE FIRST PLURAL WEEPING [care 3]. va-yaratz esav liqrato (7323 tok9/12; 7125 tok10/31) [VERIFIED: SNAPSHOT Gen.33.4 idx0-2] — the run-verb&#x27;s second cycle-arrival (Laban ran to Jacob, 29:13 tok8; Esau runs to him now). va-yechabqehu (2263 tok2/3) [VERIFIED: idx3 ordinal=2/3] — the embrace-verb: Laban&#x27;s arrival-embrace (29:13), Esau&#x27;s return-embrace, Jacob&#x27;s grandsons (48:10) — the career is three family embraces. va-yipol al TZAVARAV (5307 tok11/58; 6677 tok3/9) [VERIFIED: idx4-6; ordinal=3/9] — the NECK-word&#x27;s first three tokens: 27:16 the kid-skins ON JACOB&#x27;S NECK (the costume), 27:40 the yoke ON ESAU&#x27;S NECK (the anti-blessing), 33:4 Esau falling ON THE DECEIVER&#x27;S NECK — disguise, yoke, embrace. va-yishaqehu (5401 tok7/13) [VERIFIED: idx7] — the kiss-walk&#x27;s reconciliation token. VA-YIVKU (1058 tok5/29, HC/Vqw3mp) [VERIFIED: idx8 morph=HC/Vqw3mp] — the weep-verb&#x27;s toks 1-4 are all SINGULAR (Hagar, Abraham, ESAU ALONE at 27:38, Jacob at 29:11) [VERIFIED: morph census toks 1-4] — tok5 is its FIRST PLURAL: the man who wept alone at the theft weeps WITH the thief. GEN_55 LANDING-NOTE (frozen ledger untouched): the hatzileni-card&#x27;s feared mi-yad esav (from Esau&#x27;s HAND) arrives as arms around the neck — no rescue-verb fires; the fear dissolves without its demanded root.
+</td><td><span class="he">וַיָּרָץ עֵשָׂו לִקְרָאתוֹ וַיְחַבְּקֵהוּ</span> · <i>va-yaratz esav liqrato va-yechabqehu</i><br><span class="gloss">= and-yaratz esav liqrato and-yechabqehu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The feared hand embraces; the weep-verb learns the plural.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_33_5 · Gen.33.5 · <span class='expr'>THE_GRACE_VERB_IS_BORN</span></h3>
+<p><span class="he">וַיִּשָּׂא אֶת־עֵינָיו וַיַּרְא אֶת־הַנָּשִׁים וְאֶת־הַיְלָדִים וַיֹּאמֶר מִי־אֵלֶּה לָּךְ וַיֹּאמַר הַיְלָדִים אֲשֶׁר־חָנַן אֱלֹהִים אֶת־עַבְדֶּךָ</span> · <i>va-yisa et-enay-v va-yar et-ha-nashim ve-et-ha-yeladim va-yomer mi-ele lakh va-yomar ha-yeladim asher-chanan Elohim et-avdekha</i> · And he lifted his eyes and saw the women and the children, and said: Who are these to you? And he said: The children with whom God has graced your servant.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּשָּׂ֣א אֶת עֵינָ֗יו וַיַּ֤רְא אֶת הַנָּשִׁים֙ וְאֶת הַיְלָדִ֔ים וַיֹּ֖אמֶר מִי אֵ֣לֶּה לָּ֑ךְ</span> · <i>va-yisa et-enay-v va-yar et-ha-nashim ve-et-ha-yeladim va-yomer mi-ele lakh</i> · who are these to you? (etnachta on lakh) [VERIFIED: SNAPSHOT Gen.33.5 idx11 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּאמַ֕ר הַיְלָדִ֕ים אֲשֶׁר חָנַ֥ן אֱלֹהִ֖ים אֶת עַבְדֶּֽךָ</span> · <i>va-yomar ha-yeladim asher-chanan Elohim et-avdekha</i> · the children with whom God has graced your servant (verse-final avdekha) [VERIFIED: SNAPSHOT Gen.33.5 idx12-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ha_yeladim_asher_chanan_Elohim(maane_yaaqov), t0)</span><br><span class="gloss">= HOLDS(the-yeladim-which-chanan-God(maane-yaaqov), t0)</span><br>CHANAN DEBUTS [care 4]. mi ele lakh (4310 tok13/55) — Esau&#x27;s question; ha-yeladim asher CHANAN Elohim et avdekha (2603 tok1/10 DEBUT) [VERIFIED: SNAPSHOT Gen.33.5 idx15 ordinal=1/10] — the GRACE-verb enters the Torah counting children; tok2 = 33:11 chanani (both debut-tokens live in this one meeting); full career: 42:21 (Joseph&#x27;s pleading recalled), 43:29 (Joseph graces Benjamin with this verse&#x27;s own shape), Exod 33:19 ×2 (&quot;I will be gracious to whom I will be gracious&quot; — the Attributes&#x27; grammar), Num 6:25 (the priestly blessing&#x27;s vi-chuneka), Deut 3:23 (va-etchanan), and the closing grace-denials (Deut 7:2 lo techanem, 28:50 lo yachon) — the verb REACHES the priestly blessing from a father&#x27;s answer about children. avdekha (5650 tok43/180) — the servant-grammar survives the embrace.
+</td><td><span class="he">חָנַן אֱלֹהִים אֶת־עַבְדֶּךָ</span> · <i>chanan Elohim et-avdekha</i><br><span class="gloss">= chanan God avdekha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The grace-verb opens on children and reaches the priestly blessing.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_33_6 · Gen.33.6 · <span class='expr'>THE_FIRST_WAVE</span></h3>
+<p><span class="he">וַתִּגַּשְׁןָ הַשְּׁפָחוֹת הֵנָּה וְיַלְדֵיהֶן וַתִּשְׁתַּחֲוֶיןָ</span> · <i>va-tigashna ha-shefachot hena ve-yalde-hen va-tishtachavena</i> · And the maids came near, they and their children, and they bowed.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתִּגַּ֧שְׁןָ הַשְּׁפָח֛וֹת הֵ֥נָּה וְיַלְדֵיהֶ֖ן</span> · <i>va-tigashna ha-shefachot hena ve-yalde-hen</i> · the maids came near with their children (NO etnachta in verse: split at tifcha on hen) [VERIFIED: SNAPSHOT Gen.33.6 idx3 mark_id=tifcha rank=2; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתִּֽשְׁתַּחֲוֶֽיןָ</span> · <i>va-tishtachavena</i> · and they bowed (verse-final tishtachavena) [VERIFIED: SNAPSHOT Gen.33.6 idx4-4]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_tigashna_va_tishtachavena(ha_shefachot), t0)</span><br><span class="gloss">= HOLDS(and-tigashna-and-tishtachavena(the-shefachot), t0)</span><br>THE WAVES BEGIN [care 5; etnachta-less verse #1 — five tokens, no mid-verse rest: split at the tifcha idx3 (rank 2), the gen_03 1:13 fallback]. va-tigashna (5066 tok12/45) [VERIFIED: SNAPSHOT Gen.33.6 idx0 ordinal=12/45] — the approach-verb: toks 8-9 were 27:26-27&#x27;s gesha-na, the deception&#x27;s &quot;come-near-and-kiss&quot;; the family now approaches the deceived line&#x27;s son wave by wave. va-tishtachavena (7812 tok13/47) — bow-wave one.
+</td><td><span class="he">וַתִּגַּשְׁןָ הַשְּׁפָחוֹת הֵנָּה וְיַלְדֵיהֶן וַתִּשְׁתַּחֲוֶיןָ</span> · <i>va-tigashna ha-shefachot hena ve-yalde-hen va-tishtachavena</i><br><span class="gloss">= and-tigashna the-shefachot hena and-yalde-hen and-tishtachavena</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">First bowing wave; the approach-verb&#x27;s deception tokens behind it.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_33_7 · Gen.33.7 · <span class='expr'>THE_SECOND_AND_THIRD_WAVES</span></h3>
+<p><span class="he">וַתִּגַּשׁ גַּם־לֵאָה וִילָדֶיהָ וַיִּשְׁתַּחֲווּ וְאַחַר נִגַּשׁ יוֹסֵף וְרָחֵל וַיִּשְׁתַּחֲווּ</span> · <i>va-tigash gam-leah vi-yladeha va-yishtachavu ve-achar nigash yosef ve-rachel va-yishtachavu</i> · And Leah too came near, and her children, and they bowed; and after came Joseph near, and Rachel, and they bowed.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַתִּגַּ֧שׁ גַּם לֵאָ֛ה וִילָדֶ֖יהָ וַיִּֽשְׁתַּחֲו֑וּ</span> · <i>va-tigash gam-leah vi-yladeha va-yishtachavu</i> · Leah and her children came near and bowed (etnachta on yishtachavu) [VERIFIED: SNAPSHOT Gen.33.7 idx4 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאַחַ֗ר נִגַּ֥שׁ יוֹסֵ֛ף וְרָחֵ֖ל וַיִּֽשְׁתַּחֲוֽוּ</span> · <i>ve-achar nigash yosef ve-rachel va-yishtachavu</i> · after them Joseph and Rachel bowed (verse-final yishtachavu) [VERIFIED: SNAPSHOT Gen.33.7 idx5-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yishtachavu_kulam(lea_yosef_ve_rachel), t0)</span><br><span class="gloss">= HOLDS(and-yishtachavu-kulam(lea-yosef-and-rachel), t0)</span><br>THE ORDER HOLDS [care 5]. va-tigash gam lea... ve-achar NIGASH YOSEF ve-rachel (5066 toks 13-14/45; 3130 tok4/175) [VERIFIED: SNAPSHOT Gen.33.7 idx0,6-8] — the child placed last comes last, and the letter puts JOSEPH BEFORE RACHEL in the approach (nigash yosef ve-rachel — the boy steps ahead of his mother; his second narrative token is already an act). hishtachavah toks 14-15/47 — bow-waves two and three: the 27:29 decree&#x27;s verb has now bowed this household to Esau five times in five verses.
+</td><td><span class="he">וַתִּגַּשׁ גַּם־לֵאָה וִילָדֶיהָ וַיִּשְׁתַּחֲווּ</span> · <i>va-tigash gam-leah vi-yladeha va-yishtachavu</i><br><span class="gloss">= and-tigash also-leah vi-yladeha and-yishtachavu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Joseph steps before Rachel; the bowing count reaches the whole house.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_33_8 · Gen.33.8 · <span class='expr'>THE_CAMP_EXPLAINED</span></h3>
+<p><span class="he">וַיֹּאמֶר מִי לְךָ כָּל־הַמַּחֲנֶה הַזֶּה אֲשֶׁר פָּגָשְׁתִּי וַיֹּאמֶר לִמְצֹא־חֵן בְּעֵינֵי אֲדֹנִי</span> · <i>va-yomer mi lekha kal-ha-machane ha-ze asher pagashti va-yomer li-metzo-chen be-ene adoni</i> · And he said: What to you is all this camp which I met? And he said: To find grace in the eyes of my lord.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֕אמֶר מִ֥י לְךָ֛ כָּל הַמַּחֲנֶ֥ה הַזֶּ֖ה אֲשֶׁ֣ר פָּגָ֑שְׁתִּי</span> · <i>va-yomer mi lekha kal-ha-machane ha-ze asher pagashti</i> · what is all this camp which I met? (etnachta on pagashti) [VERIFIED: SNAPSHOT Gen.33.8 idx7 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּ֕אמֶר לִמְצֹא חֵ֖ן בְּעֵינֵ֥י אֲדֹנִֽי</span> · <i>va-yomer li-metzo-chen be-ene adoni</i> · to find grace in the eyes of my lord (verse-final adoni) [VERIFIED: SNAPSHOT Gen.33.8 idx8-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(mi_lekha_kal_ha_machane(pagashti), t0)</span><br><span class="gloss">= HOLDS(from-to-you-kal-the-machane(pagashti), t0)</span><br>THE MET ONE SPEAKS [care 6]. mi lekha kal ha-machane ha-ze asher PAGASHTI (4264 tok7/104; 6298 tok2/4) [VERIFIED: SNAPSHOT Gen.33.8 idx1-7; pagashti ordinal=2/4] — gen_55&#x27;s meet-verb (born at 32:18 in Jacob&#x27;s anticipation-script) returns in ESAU&#x27;S mouth: the encounter scripted in fear is narrated by its object as a puzzle; the camp-word&#x27;s first token in ANOTHER SPEAKER&#x27;S mouth (toks 1,3,4,5 are Jacob&#x27;s speech; 2 and 6 the narrator&#x27;s). li-metzo chen be-ene adoni (2580 tok6/27; 113 tok35/91) [VERIFIED: idx9-12] — the grace-formula, first of three in-span; adoni — five my-lord tokens in this meeting (toks 35-39/91): the blessing&#x27;s &quot;be lord to your brothers&quot; stays reversed in Jacob&#x27;s grammar to the end.
+</td><td><span class="he">מִי לְךָ כָּל־הַמַּחֲנֶה הַזֶּה אֲשֶׁר</span> · <i>mi lekha kal-ha-machane ha-ze asher</i><br><span class="gloss">= from to-you kal-the-machane the-ze which</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The feared meeting retold as Esau&#x27;s question; grace-formula one.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_33_9 · Gen.33.9 · <span class='expr'>THE_KEEP_IT_JUSSIVE</span></h3>
+<p><span class="he">וַיֹּאמֶר עֵשָׂו יֶשׁ־לִי רָב אָחִי יְהִי לְךָ אֲשֶׁר־לָךְ</span> · <i>va-yomer esav yesh-li rav achi-y yehi lekha asher-lakh</i> · And Esau said: I have much, my brother; let what is yours be yours.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֥אמֶר עֵשָׂ֖ו יֶשׁ לִ֣י רָ֑ב</span> · <i>va-yomer esav yesh-li rav</i> · and Esau said: I have much (etnachta on rav) [VERIFIED: SNAPSHOT Gen.33.9 idx4 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">אָחִ֕י יְהִ֥י לְךָ֖ אֲשֶׁר לָֽךְ</span> · <i>achi-y yehi lekha asher-lakh</i> · my brother — let what is yours be yours (verse-final lakh) [VERIFIED: SNAPSHOT Gen.33.9 idx5-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(esav, LET(yehi(lekha_asher_lakh)))</span><br><span class="gloss">= DECLARE(esav, LET(yehi(to-you-which-to-you)))</span><br>THE KEEP-DEMAND [UNIT SHAPE (1)]. yesh li RAV achi (3426 tok8/30; 7227 tok10/66) [VERIFIED: SNAPSHOT Gen.33.9 idx2-5] — &quot;I have MUCH, my brother&quot; — and ACHI: Esau&#x27;s first direct brother-address to Jacob in the corpus&#x27;s narrative present (27:41&#x27;s brother-talk was inner speech; token-note). YEHI lekha asher lakh (1961 tok207/1050, HVqj3ms TRUE JUSSIVE) [VERIFIED: idx6 morph=HVqj3ms] — the mood law (gen_32: the letter&#x27;s mood decides) pushes the courtesy: let-what-is-yours-BE-yours, a jussive of the be-verb aimed at Jacob&#x27;s property. Its fate is the unit&#x27;s strangest: no haya-root receipt ever fires, and at 33:11 the DEMANDER HIMSELF takes the gift his jussive declined — the demand undone by its own issuer (self-reversal, filed to the mismatch family). PUSH LET(yehi(lekha_asher_lakh)). Depth 1.
+</td><td><span class="he">יֶשׁ־לִי רָב אָחִי</span> · <i>yesh-li rav achi-y</i><br><span class="gloss">= yesh-to-me rav my-brother-y</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Esau&#x27;s keep-it jussive pushes; its own speaker will reverse it.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_33_10 · Gen.33.10 · <span class='expr'>THE_FACE_CODA_AND_THE_ACCEPT_VERB</span></h3>
+<p><span class="he">וַיֹּאמֶר יַעֲקֹב אַל־נָא אִם־נָא מָצָאתִי חֵן בְּעֵינֶיךָ וְלָקַחְתָּ מִנְחָתִי מִיָּדִי כִּי עַל־כֵּן רָאִיתִי פָנֶיךָ כִּרְאֹת פְּנֵי אֱלֹהִים וַתִּרְצֵנִי</span> · <i>va-yomer yaaqov el-na im-na matzati chen be-enekha ve-laqachta minchati mi-yadi ki al-ken raiti fane-kha ki-reot pene Elohim va-tirtzeni</i> · And Jacob said: No, please — if now I have found grace in your eyes, then take my offering from my hand; for therefore have I seen your face, as one sees the face of God, and you have accepted me.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֣אמֶר יַעֲקֹ֗ב אַל נָא֙ אִם נָ֨א מָצָ֤אתִי חֵן֙ בְּעֵינֶ֔יךָ וְלָקַחְתָּ֥ מִנְחָתִ֖י מִיָּדִ֑י</span> · <i>va-yomer yaaqov el-na im-na matzati chen be-enekha ve-laqachta minchati mi-yadi</i> · take my offering from my hand (etnachta on yadi) [VERIFIED: SNAPSHOT Gen.33.10 idx11 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּ֣י עַל כֵּ֞ן רָאִ֣יתִי פָנֶ֗יךָ כִּרְאֹ֛ת פְּנֵ֥י אֱלֹהִ֖ים וַתִּרְצֵֽנִי</span> · <i>ki al-ken raiti fane-kha ki-reot pene Elohim va-tirtzeni</i> · I saw your face as one sees God&#x27;s face — you accepted me (verse-final tirtzeni) [VERIFIED: SNAPSHOT Gen.33.10 idx12-20]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ki_reot_pene_Elohim_va_tirtzeni(peniel_coda), t1)</span><br><span class="gloss">= HOLDS(when-see-pene-God-and-tirtzeni(peniel-coda), t1)</span><br>THE ACCEPTANCE-VERB IS BORN [care 6]. al na... ve-laqachta minchati mi-yadi (3947 tok101/393 weqatal — duty-content shape warming the take-verb one verse before the pop; 4503 tok8/113 — the offering-noun&#x27;s brother-token, its Cain-and-Abel debut inverted into appeasement accepted). ki al ken RAITI FANEKHA KI-REOT PENE ELOHIM (7200 toks 84-85/396; 6440 toks 90-91/627) [VERIFIED: SNAPSHOT Gen.33.10 idx15-18] — the face-coda: one unit after panim-el-panim (32:31), Jacob names his brother&#x27;s face with God&#x27;s — gen_55&#x27;s ten-face walk closes on Esau&#x27;s. VA-TIRTZENI (7521 tok1/14 DEBUT, HC/Vqw2ms/Sp1cs) [VERIFIED: idx20 ordinal=1/14] — the ACCEPT-verb enters the Torah in a brother&#x27;s welcome; its career is the altar&#x27;s acceptance-formula — Lev 1:4 ve-nirtza lo (&quot;it shall be ACCEPTED for him&quot;), Lev 7:18, 19:7, 22:23-27 yeratze — and Lev 26&#x27;s sabbath-repayments: offering- noun and acceptance-verb share this sentence a chapter before Jacob&#x27;s first altar. Depth 1.
+</td><td><span class="he">כִּי עַל־כֵּן רָאִיתִי פָנֶיךָ כִּרְאֹת פְּנֵי אֱלֹהִים וַתִּרְצֵנִי</span> · <i>ki al-ken raiti fane-kha ki-reot pene Elohim va-tirtzeni</i><br><span class="gloss">= when upon-ken raiti fane-kha when-see pene God and-tirtzeni</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Your face as God&#x27;s face; the acceptance-verb debuts pre-altar.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_33_11 · Gen.33.11 · <span class='expr'>THE_POP_THE_BLESSING_RETURNED</span></h3>
+<p><span class="he">קַח־נָא אֶת־בִּרְכָתִי אֲשֶׁר הֻבָאת לָךְ כִּי־חַנַּנִי אֱלֹהִים וְכִי יֶשׁ־לִי־כֹל וַיִּפְצַר־בּוֹ וַיִּקָּח</span> · <i>qach-na et-birkhati asher huvat lakh ki-chanani Elohim ve-ki yesh-li khol va-yiftzar-bo va-yiqach</i> · Take, please, my blessing that was brought to you, for God has graced me, and because I have all. And he urged him, and he took.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">קַח נָ֤א אֶת בִּרְכָתִי֙ אֲשֶׁ֣ר הֻבָ֣את לָ֔ךְ כִּֽי חַנַּ֥נִי אֱלֹהִ֖ים וְכִ֣י יֶשׁ לִי כֹ֑ל</span> · <i>qach-na et-birkhati asher huvat lakh ki-chanani Elohim ve-ki yesh-li khol</i> · take, please, my blessing that was brought to you (etnachta on khol) [VERIFIED: SNAPSHOT Gen.33.11 idx13 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּפְצַר בּ֖וֹ וַיִּקָּֽח</span> · <i>va-yiftzar-bo va-yiqach</i> · he urged him — and he took (verse-final yiqach) [VERIFIED: SNAPSHOT Gen.33.11 idx14-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yaaqov, LET(qach_na_et_birkhati(esav)))</span><br><span class="gloss">= DECLARE(yaaqov, LET(qach-na-birkhati(esav)))</span><br>THE RETURNED WORD [CROWN; UNIT SHAPE (2)]. qach na et BIRKHATI (3947 tok102/393, HVqv2ms; 1293 tok9/30) [VERIFIED: SNAPSHOT Gen.33.11 idx0-3 morph=HVqv2ms; ordinal=9/30] — the blessing-noun&#x27;s toks 3-7 are the Gen 27 wound (27:35 &quot;he took YOUR blessing&quot;, 27:36 Esau&#x27;s cry &quot;he took MY BLESSING — birkhati&quot;, 27:38,41); now the taker says TAKE (the very laqach of 27:35-36) + MY BLESSING (Esau&#x27;s own word) — TO ESAU: the theft-cry&#x27;s verb and noun with speaker and addressee exchanged. asher HUVAT lakh (935 tok114/619, hophal) — brought-to-you, the gift gone passive. ki chanani Elohim (2603 tok2/10 — the grace-verb&#x27;s second debut-token) ve-khi yesh li KHOL (3605 tok239/1595) — Esau said RAV (&quot;much&quot;), Jacob answers KHOL (&quot;all&quot;): the two inventories one verse apart. PUSH LET(qach_na_et_birkhati(esav)). Depth 2.
+</td><td><span class="he">קַח־נָא אֶת־בִּרְכָתִי</span> · <i>qach-na et-birkhati</i><br><span class="gloss">= qach-na birkhati</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">HOLDS(qach_na_et_birkhati(esav), t2)</span><br><span class="gloss">= HOLDS(qach-na-birkhati(esav), t2)</span><br>THE RUN&#x27;S FIRST POP. va-yiftzar bo VA-YIQACH (6484 tok3/3 CLOSES; 3947 tok103/393) [VERIFIED: SNAPSHOT Gen.33.11 idx14-16; ordinals 3/3, 103/393] — the demand&#x27;s own root returns as a foreground deed by the demandee IN THE SAME VERSE: qach (tok102) → va-yiqach (tok103), demand and receipt CONSECUTIVE career tokens, latency zero (the echo-receipt law, gen_25/gen_35; gen_51&#x27;s bo-pop ran latency one verse). After gen_54 and gen_55 pushed fourteen cards and popped none, the first RESULT of the run fires on TAKE-BACK-THE-BLESSING — the Gen 27 debt is the one demand the letter clears. AND THE SELF-REVERSAL [UNIT SHAPE (1)]: the taking undoes 33:9&#x27;s yehi — Esau performs the opposite of his own keep-it jussive; that card stays OPEN (no haya-receipt), its content reversed by its own demander. va-yiftzar — the URGE-verb&#x27;s whole career closes here: Lot urging the angels (19:3), the mob urging Lot (19:9), Jacob urging Esau — two Sodom doors and a reconciliation. Depth 1.
+</td><td><span class="he">וַיִּפְצַר־בּוֹ וַיִּקָּח</span> · <i>va-yiftzar-bo va-yiqach</i><br><span class="gloss">= and-yiftzar-in-it and-yiqach</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The stolen-blessing sentence performed in reverse; the run&#x27;s first pop.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_33_12 · Gen.33.12 · <span class='expr'>THE_DECLINED_CONVOY</span></h3>
+<p><span class="he">וַיֹּאמֶר נִסְעָה וְנֵלֵכָה וְאֵלְכָה לְנֶגְדֶּךָ</span> · <i>va-yomer nisa ve-nelekha ve-elkha le-negdekha</i> · And he said: Let us journey and go, and I will go opposite you.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֖אמֶר נִסְעָ֣ה וְנֵלֵ֑כָה</span> · <i>va-yomer nisa ve-nelekha</i> · let us journey and go (etnachta on nelekha) [VERIFIED: SNAPSHOT Gen.33.12 idx2 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאֵלְכָ֖ה לְנֶגְדֶּֽךָ</span> · <i>ve-elkha le-negdekha</i> · I will go opposite you (verse-final negdekha) [VERIFIED: SNAPSHOT Gen.33.12 idx3-4]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(esav, CMD-US?(nisa_ve_nelekha(esav_ve_yaaqov)))</span><br><span class="gloss">= DECLARE(esav, CMD-US?(nisa-and-nelekha(esav-and-yaaqov)))</span><br>THE JOINT-JOURNEY CARD [UNIT SHAPE (3)]. nisa ve-nelekha (5265 tok6/120, HVqh1cp; 3212 tok66/229, HC/Vqh1cp — DOUBLE true cohortative) [VERIFIED: SNAPSHOT Gen.33.12 idx1-2 morphs HVqh1cp, HC/Vqh1cp] — TIR-033: cohortative → CMD-US, ?-guard kept while the receipt path stays open (gen_45&#x27;s law). ve-elkha le-negdekha (5048 tok7/17) [VERIFIED: idx4 ordinal=7/17] — &quot;I will go OPPOSITE you&quot;: neged, the helper-word of 2:18&#x27;s ke-negdo, offered brother-to-brother. The card&#x27;s fate is 33:16-17 [see step 33:17]. PUSH CMD-US?(nisa_ve_nelekha(...)). Depth 2.
+</td><td><span class="he">נִסְעָה וְנֵלֵכָה וְאֵלְכָה לְנֶגְדֶּךָ</span> · <i>nisa ve-nelekha ve-elkha le-negdekha</i><br><span class="gloss">= nisa and-nelekha and-elkha to-negdekha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Esau&#x27;s double cohortative pushes guarded; the convoy is proposed.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_33_13 · Gen.33.13 · <span class='expr'>THE_TENDER_PACE</span></h3>
+<p><span class="he">וַיֹּאמֶר אֵלָיו אֲדֹנִי יֹדֵעַ כִּי־הַיְלָדִים רַכִּים וְהַצֹּאן וְהַבָּקָר עָלוֹת עָלָי וּדְפָקוּם יוֹם אֶחָד וָמֵתוּ כָּל־הַצֹּאן</span> · <i>va-yomer elav adoni yodea ki-ha-yeladim rakim ve-ha-tzon ve-ha-baqar alot alay u-defaqum yom echad va-metu kal-ha-tzon</i> · And he said to him: My lord knows that the children are tender, and the flock and herd giving suck are upon me; and were they overdriven one day, all the flock would die.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֣אמֶר אֵלָ֗יו אֲדֹנִ֤י יֹדֵ֨עַ֙ כִּֽי הַיְלָדִ֣ים רַכִּ֔ים וְהַצֹּ֥אן וְהַבָּקָ֖ר עָל֣וֹת עָלָ֑י</span> · <i>va-yomer elav adoni yodea ki-ha-yeladim rakim ve-ha-tzon ve-ha-baqar alot alay</i> · my lord knows the children are tender (etnachta on alay) [VERIFIED: SNAPSHOT Gen.33.13 idx10 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּדְפָקוּם֙ י֣וֹם אֶחָ֔ד וָמֵ֖תוּ כָּל הַצֹּֽאן</span> · <i>u-defaqum yom echad va-metu kal-ha-tzon</i> · overdriven one day, all the flock would die (verse-final tzon) [VERIFIED: SNAPSHOT Gen.33.13 idx11-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ha_yeladim_rakim_ve_alot_alay(taanat_yaaqov), t2)</span><br><span class="gloss">= HOLDS(the-yeladim-rakim-and-alot-alay(taanat-yaaqov), t2)</span><br>TWO HAPAXES IN THE EXCUSE [care 8]. adoni yodea ki ha-yeladim RAKIM (7390 tok3/6) [VERIFIED: SNAPSHOT Gen.33.13 idx6 ordinal=3/6] — TENDER: tok2 = 29:17, Leah&#x27;s tender eyes — the word&#x27;s two Jacob-cycle tokens are eyes and children. ve-ha-tzon ve-ha-baqar ALOT alay (5763 tok1/1 HAPAX) [VERIFIED: idx9 ordinal=1/1] — the nursing ones, named once in the Torah. U-DEFAQUM yom echad (1849 tok1/1 HAPAX) [VERIFIED: idx11 ordinal=1/1] — the OVERDRIVE-verb, conjugated once ever, in a shepherd&#x27;s refusal; va-metu kal ha-tzon (4191 tok40/303) — the diplomatic mortality forecast. Depth 2.
+</td><td><span class="he">אֲדֹנִי יֹדֵעַ כִּי־הַיְלָדִים רַכִּים</span> · <i>adoni yodea ki-ha-yeladim rakim</i><br><span class="gloss">= adoni yodea when-the-yeladim rakim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The pace-plea carries two of the Torah&#x27;s one-time words.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_33_14 · Gen.33.14 · <span class='expr'>THE_PASS_BEFORE_JUSSIVE</span></h3>
+<p><span class="he">יַעֲבָר־נָא אֲדֹנִי לִפְנֵי עַבְדּוֹ וַאֲנִי אֶתְנָהֲלָה לְאִטִּי לְרֶגֶל הַמְּלָאכָה אֲשֶׁר־לְפָנַי וּלְרֶגֶל הַיְלָדִים עַד אֲשֶׁר־אָבֹא אֶל־אֲדֹנִי שֵׂעִירָה</span> · <i>yaavar-na adoni li-fene avdo va-ani etnahala le-iti le-regel ha-melakha asher-le-fanay u-le-regel ha-yeladim ad asher-avo el-adoni seirah</i> · Let my lord pass, please, before his servant, and I will lead on gently at my slow pace, at the foot of the work before me and at the foot of the children, until I come to my lord, to Seir.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">יַעֲבָר נָ֥א אֲדֹנִ֖י לִפְנֵ֣י עַבְדּ֑וֹ</span> · <i>yaavar-na adoni li-fene avdo</i> · let my lord pass before his servant (etnachta on avdo) [VERIFIED: SNAPSHOT Gen.33.14 idx4 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַאֲנִ֞י אֶֽתְנָהֲלָ֣ה לְאִטִּ֗י לְרֶ֨גֶל הַמְּלָאכָ֤ה אֲשֶׁר לְפָנַי֙ וּלְרֶ֣גֶל הַיְלָדִ֔ים עַ֛ד אֲשֶׁר אָבֹ֥א אֶל אֲדֹנִ֖י שֵׂעִֽירָה</span> · <i>va-ani etnahala le-iti le-regel ha-melakha asher-le-fanay u-le-regel ha-yeladim ad asher-avo el-adoni seirah</i> · I will lead gently — until I come to my lord, to Seir (verse-final seirah) [VERIFIED: SNAPSHOT Gen.33.14 idx5-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yaaqov, LET(yaavar_na(adoni, li_fene_avdo)))</span><br><span class="gloss">= DECLARE(yaaqov, LET(yaavar-na(adoni, to-me-fene-avdo)))</span><br>THE PASS-CARD [UNIT SHAPE (4)]. yaavar na adoni li-fene avdo (5674 tok20/130, HVqj3ms TRUE JUSSIVE) [VERIFIED: SNAPSHOT Gen.33.14 idx0 morph=HVqj3ms ordinal=20/130] — the cross-verb AGAIN as a demand (gen_55&#x27;s ivru card was its imperative): mood law pushes the courtesy-jussive. Esau never passes-before: 33:16 narrates SHUV (returned to his way) — the other root (gen_45 Excerpt B) — card OPEN. va-ani ETNAHALA (5095 tok1/3 DEBUT, HVth1cs — self-commit content, no second push) [VERIFIED: idx6 ordinal=1/3] — the LEAD-GENTLY verb: tok2 = 47:17 (Joseph leading Egypt through famine-bread), tok3 = Exod 15:13 NEHALTA (&quot;You LED in Your strength to Your holy habitation&quot;) — from flock-pace to the Song of the Sea. LE-ITI (328 tok1/1 HAPAX) [VERIFIED: idx7 ordinal=1/1] — &quot;at my slow pace&quot;, once ever. le-regel ha-MELAKHA (4399 tok4/65) [VERIFIED: idx9 ordinal=4/65] — the WORK-noun: toks 1-3 are God&#x27;s own melakha at 2:2-3 (the Sabbath&#x27;s thrice-said word); tok4 is the drovers&#x27; — the labor-noun&#x27;s first post-creation token walks toward Exod 20:9&#x27;s Sabbath command. ad asher avo el adoni SEIRA — the stated Seir-arrival has NO narrated token anywhere in the corpus (Jacob&#x27;s next station is 33:17&#x27;s Sukkot; letter-note only, intent not adjudicated). PUSH LET(yaavar_na(...)). Depth 3.
+</td><td><span class="he">יַעֲבָר־נָא אֲדֹנִי לִפְנֵי עַבְדּוֹ</span> · <i>yaavar-na adoni li-fene avdo</i><br><span class="gloss">= yaavar-na adoni to-me-fene avdo</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Pass-before pushed; the gentle-lead verb debuts toward the Sea-song.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_33_15 · Gen.33.15 · <span class='expr'>THE_DECLINED_GARRISON</span></h3>
+<p><span class="he">וַיֹּאמֶר עֵשָׂו אַצִּיגָה־נָּא עִמְּךָ מִן־הָעָם אֲשֶׁר אִתִּי וַיֹּאמֶר לָמָּה זֶּה אֶמְצָא־חֵן בְּעֵינֵי אֲדֹנִי</span> · <i>va-yomer esav atziga-na im-kha min-ha-am asher iti va-yomer la-ma ze emtza-chen be-ene adoni</i> · And Esau said: Let me station with you, please, some of the people who are with me. And he said: Why so? Let me find grace in the eyes of my lord.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֣אמֶר עֵשָׂ֔ו אַצִּֽיגָה נָּ֣א עִמְּךָ֔ מִן הָעָ֖ם אֲשֶׁ֣ר אִתִּ֑י</span> · <i>va-yomer esav atziga-na im-kha min-ha-am asher iti</i> · let me station some of my people with you (etnachta on iti) [VERIFIED: SNAPSHOT Gen.33.15 idx8 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּ֨אמֶר֙ לָ֣מָּה זֶּ֔ה אֶמְצָא חֵ֖ן בְּעֵינֵ֥י אֲדֹנִֽי</span> · <i>va-yomer la-ma ze emtza-chen be-ene adoni</i> · why so? let me find grace in my lord&#x27;s eyes (verse-final adoni) [VERIFIED: SNAPSHOT Gen.33.15 idx9-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(atziga_na_declined(la_ma_ze), t3)</span><br><span class="gloss">= HOLDS(atziga-na-declined(to-ma-ze), t3)</span><br>THE OFFER DIES POLITELY [care 9]. atziga-na imkha (3322 tok2/6, HVhh1cs) [VERIFIED: SNAPSHOT Gen.33.15 idx2 morph=HVhh1cs ordinal=2/6] — a 1cs cohortative OFFER (gen_52&#x27;s 30:31 ashuva self-commit class; gen_47&#x27;s no-addressee law: the speaker volunteers his own act — no push): the STATION-verb&#x27;s tok1 = 30:38, Jacob stationing the rods (gen_52&#x27;s device); tok2 = Esau offering to station MEN; toks 3-4 = 43:9 (Judah setting Benjamin before his father), 47:2 (Joseph stationing brothers before Pharaoh). Declined: la-ma ze EMTZA chen be-ene adoni (4672 tok34/122, HVqh1cs inside a rhetorical question — no push; 2580 tok8/27) — the grace-formula&#x27;s third sounding closes the negotiation: no convoy, no garrison, just grace. Depth 3.
+</td><td><span class="he">אַצִּיגָה־נָּא עִמְּךָ מִן־הָעָם</span> · <i>atziga-na im-kha min-ha-am</i><br><span class="gloss">= atziga-na if-kha from-the-am</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The station-offer declined; three grace-formulas seal the parting.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_33_16 · Gen.33.16 · <span class='expr'>THE_FIRST_VECTOR</span></h3>
+<p><span class="he">וַיָּשָׁב בַּיּוֹם הַהוּא עֵשָׂו לְדַרְכּוֹ שֵׂעִירָה</span> · <i>va-yashav ba-yom ha-hu esav le-darko seirah</i> · And Esau returned that day on his way to Seir.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּשָׁב֩ בַּיּ֨וֹם הַה֥וּא עֵשָׂ֛ו לְדַרְכּ֖וֹ</span> · <i>va-yashav ba-yom ha-hu esav le-darko</i> · Esau returned that day (NO etnachta in verse: split at tifcha on darko) [VERIFIED: SNAPSHOT Gen.33.16 idx4 mark_id=tifcha rank=2; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">שֵׂעִֽירָה</span> · <i>seirah</i> · on his way to Seir (verse-final seirah) [VERIFIED: SNAPSHOT Gen.33.16 idx5-5]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yashav_esav_seira(le_darko), t3)</span><br><span class="gloss">= HOLDS(and-yashav-esav-seira(to-its-way), t3)</span><br>THE OTHER ROOT [UNIT SHAPE (4); etnachta-less verse #2 — six tokens, split at the tifcha idx4 (rank 2), gen_03 1:13 fallback]. va-yashav ba-yom ha-hu esav le-darko SEIRA (7725 tok40/180; 1870 tok18/116; 8165 tok4/20) [VERIFIED: SNAPSHOT Gen.33.16 idx0-5] — the yaavar-card asked PASSING-BEFORE; the letter gives Esau RETURNING (shuv, the other root — gen_45 Excerpt B): the card holds OPEN, and the return-verb is the very one YHWH&#x27;s 31:3 command laid on JACOB — each brother now carries a shuv: Jacob&#x27;s commanded return (still OPEN in gen_53&#x27;s frozen ledger), Esau&#x27;s narrated one. le-darko — the derekh-noun&#x27;s two went-his-way tokens are JACOB at 32:2 (leaving Laban) and ESAU here [VERIFIED: 1870 toks 17-18]: each parting of this cycle closes on the same formula. Depth 3.
+</td><td><span class="he">וַיָּשָׁב בַּיּוֹם הַהוּא עֵשָׂו לְדַרְכּוֹ שֵׂעִירָה</span> · <i>va-yashav ba-yom ha-hu esav le-darko seirah</i><br><span class="gloss">= and-yashav day the-that esav its-way seirah</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Esau exits on the other root; the pass-before card stands.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_33_17 · Gen.33.17 · <span class='expr'>THE_SECOND_VECTOR_AND_THE_BOOTHS</span></h3>
+<p><span class="he">וְיַעֲקֹב נָסַע סֻכֹּתָה וַיִּבֶן לוֹ בָּיִת וּלְמִקְנֵהוּ עָשָׂה סֻכֹּת עַל־כֵּן קָרָא שֵׁם־הַמָּקוֹם סֻכּוֹת</span> · <i>ve-yaaqov nasa sukotah va-yiven lo bayit u-le-miqnehu asa sukot al-ken qara shem-ha-maqom sukot</i> · And Jacob journeyed to Sukkot, and built himself a house, and for his cattle he made booths; therefore he called the name of the place Sukkot.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְיַעֲקֹב֙ נָסַ֣ע סֻכֹּ֔תָה וַיִּ֥בֶן ל֖וֹ בָּ֑יִת</span> · <i>ve-yaaqov nasa sukotah va-yiven lo bayit</i> · Jacob journeyed to Sukkot, built a house (etnachta on bayit) [VERIFIED: SNAPSHOT Gen.33.17 idx5 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּלְמִקְנֵ֨הוּ֙ עָשָׂ֣ה סֻכֹּ֔ת עַל כֵּ֛ן קָרָ֥א שֵׁם הַמָּק֖וֹם סֻכּֽוֹת</span> · <i>u-le-miqnehu asa sukot al-ken qara shem-ha-maqom sukot</i> · booths for his cattle; so the place is called Sukkot (verse-final sukot) [VERIFIED: SNAPSHOT Gen.33.17 idx6-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_yaaqov_nasa_sukota(bayit_u_sukot, report_only), t3)</span><br><span class="gloss">= HOLDS(and-yaaqov-nasa-sukota(bayit-and-sukot, report-only), t3)</span><br>THE SOLO JOURNEY [UNIT SHAPE (3); care 10]. ve-yaaqov NASA sukota (5265 tok7/120) [VERIFIED: SNAPSHOT Gen.33.17 idx1 ordinal=7/120] — the journey-verb&#x27;s tok6 was 33:12&#x27;s NISA — the let-US-journey cohortative itself; tok7 is Jacob journeying ALONE, the other way: demand → solo deed, consecutive tokens — the CMD-US? card&#x27;s non-receipt written into the career (joint demanded, single performed, opposite vector; card OPEN). va-yiven lo BAYIT (1129 tok15/41; 1004 tok43/324) — Jacob&#x27;s first house-building (his cycle&#x27;s earlier build-token is 30:3&#x27;s ve-ibane, &quot;that I may be BUILT&quot; — person then property); u-le-miqnehu asa SUKOT (5521 tok1/8 DEBUT) [VERIFIED: idx8 ordinal=1/8] — THE BOOTH-NOUN IS BORN as cattle-shelter, and every later token is the FESTIVAL&#x27;S: Lev 23:34-43 (chag ha-SUKOT; ba-SUKOT teshvu — &quot;in booths you shall dwell&quot;, toks 2-5), Deut 16:13,16, 31:10 (toks 6-8) — the feast of Booths&#x27; entire vocabulary springs from livestock sheds at a road-fork (init→law, the run&#x27;s second specimen). AL KEN qara shem ha-maqom sukot — al-ken etiology: REPORT class (gen_45&#x27;s 26:33 law), NO write, the registry sleeps; the PLACE-name&#x27;s career (5523 toks 1-2/6): tok3 = EXOD 12:37 — &quot;the children of Israel journeyed from Ramses TO SUKKOT&quot;: the Exodus&#x27;s FIRST STATION bears this stop&#x27;s name (13:20, Num 33:5-6 continue the itinerary). Depth 3.
+</td><td><span class="he">וְיַעֲקֹב נָסַע סֻכֹּתָה</span> · <i>ve-yaaqov nasa sukotah</i><br><span class="gloss">= and-yaaqov nasa sukotah</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The us-journey performs solo; the festival&#x27;s noun is born in a shed.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_33_18 · Gen.33.18 · <span class='expr'>THE_WHOLE_ARRIVAL</span></h3>
+<p><span class="he">וַיָּבֹא יַעֲקֹב שָׁלֵם עִיר שְׁכֶם אֲשֶׁר בְּאֶרֶץ כְּנַעַן בְּבֹאוֹ מִפַּדַּן אֲרָם וַיִּחַן אֶת־פְּנֵי הָעִיר</span> · <i>va-yavo yaaqov shalem ir shekhem asher be-eretz kenaan be-voo mi-padan aram va-yichan et-pene ha-ir</i> · And Jacob came whole to the city of Shechem, which is in the land of Canaan, in his coming from Paddan-Aram; and he encamped before the city.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּבֹא֩ יַעֲקֹ֨ב שָׁלֵ֜ם עִ֣יר שְׁכֶ֗ם אֲשֶׁר֙ בְּאֶ֣רֶץ כְּנַ֔עַן בְּבֹא֖וֹ מִפַּדַּ֣ן אֲרָ֑ם</span> · <i>va-yavo yaaqov shalem ir shekhem asher be-eretz kenaan be-voo mi-padan aram</i> · Jacob came whole to the city of Shechem (etnachta on aram) [VERIFIED: SNAPSHOT Gen.33.18 idx10 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּ֖חַן אֶת פְּנֵ֥י הָעִֽיר</span> · <i>va-yichan et-pene ha-ir</i> · from Paddan-Aram; he encamped before the city (verse-final ir) [VERIFIED: SNAPSHOT Gen.33.18 idx11-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yavo_shalem_mi_padan_aram(va_yichan), t3)</span><br><span class="gloss">= HOLDS(and-yavo-shalem-from-padan-aram(and-yichan), t3)</span><br>SHALEM [care 11]. va-yavo yaaqov SHALEM ir shekhem (935 tok116/619; 8003 tok2/6; 7927 tok2/18) [VERIFIED: SNAPSHOT Gen.33.18 idx0-4; shalem ordinal=2/6] — the WHOLE-word&#x27;s two Genesis tokens: 15:16 &quot;the iniquity of the Amorite is NOT YET WHOLE&quot; and Jacob arriving WHOLE — an unfilled measure and a filled man. be-eretz kenaan be-voo MI-PADAN ARAM (3667 tok20/65; 6307 tok7/11) [VERIFIED: idx6-10] — the return- formula closes 28:2&#x27;s arc: sent to Paddan-Aram (gen_47&#x27;s departure tokens), back from it — the Laban cycle&#x27;s geographic bracket shuts. va-YICHAN et pene ha-ir (2583 tok2/86) [VERIFIED: idx11 ordinal=2/86] — the ENCAMP-verb: tok1 = 26:17 (Isaac in Gerar&#x27;s wadi); tok2 = Jacob before Shechem; its career becomes the wilderness itinerary&#x27;s va-yachanu (Exod 13:20 onward) — Israel&#x27;s encampments debut their patriarch-leg. shekhem toks 2-3/18 + ha-ir — the Dinah story&#x27;s stage assembles (toks 4-18 = Gen 34; next block-run&#x27;s door). Depth 3.
+</td><td><span class="he">וַיָּבֹא יַעֲקֹב שָׁלֵם עִיר שְׁכֶם</span> · <i>va-yavo yaaqov shalem ir shekhem</i><br><span class="gloss">= and-yavo yaaqov shalem ir shekhem</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Whole to Shechem; the encamp-verb starts Israel&#x27;s itinerary grammar.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_33_19 · Gen.33.19 · <span class='expr'>THE_SECOND_PURCHASE</span></h3>
+<p><span class="he">וַיִּקֶן אֶת־חֶלְקַת הַשָּׂדֶה אֲשֶׁר נָטָה־שָׁם אָהֳלוֹ מִיַּד בְּנֵי־חֲמוֹר אֲבִי שְׁכֶם בְּמֵאָה קְשִׂיטָה</span> · <i>va-yiqen et-chelqat ha-sade asher nata-sham aholo mi-yad bene-chamor avi shekhem be-mea qesita</i> · And he bought the portion of the field where he had pitched his tent from the hand of the sons of Hamor, father of Shechem, for a hundred qesita.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּ֜קֶן אֶת חֶלְקַ֣ת הַשָּׂדֶ֗ה אֲשֶׁ֤ר נָֽטָה שָׁם֙ אָהֳל֔וֹ מִיַּ֥ד בְּנֵֽי חֲמ֖וֹר אֲבִ֣י שְׁכֶ֑ם</span> · <i>va-yiqen et-chelqat ha-sade asher nata-sham aholo mi-yad bene-chamor avi shekhem</i> · he bought the portion of the field (etnachta on shekhem) [VERIFIED: SNAPSHOT Gen.33.19 idx12 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">בְּמֵאָ֖ה קְשִׂיטָֽה</span> · <i>be-mea qesita</i> · from the sons of Hamor, for a hundred qesita (verse-final qesita) [VERIFIED: SNAPSHOT Gen.33.19 idx13-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yiqen_chelqat_ha_sade(be_mea_qesita), t3)</span><br><span class="gloss">= HOLDS(and-yiqen-chelqat-the-sade(in-mea-qesita), t3)</span><br>THE SMOOTH WORD BUYS A FIELD [care 11]. va-YIQEN (7069 tok5/25) [VERIFIED: SNAPSHOT Gen.33.19 idx0 ordinal=5/25] — the BUY-verb: tok4 = 25:10, &quot;the field ABRAHAM BOUGHT&quot; (Machpelah); tok5 = Jacob&#x27;s plot — the Torah&#x27;s two patriarch land-purchases sit on adjacent career tokens (toks 11-12 = 49:30/50:13, Machpelah retold at the burials). CHELQAT ha-sade (2513 tok2/3) [VERIFIED: idx2 ordinal=2/3] — the SMOOTH/PORTION homograph: tok1 = 27:16, chelqat tzavarav — &quot;the SMOOTH of his neck&quot;, the kid-skin site of the deception; tok2 = the PORTION of field: the word that dressed the lie buys the first homestead (tok3 = Deut 33:21). mi-yad bene CHAMOR (2544 tok1/11 DEBUT) [VERIFIED: idx10 ordinal=1/11] — Hamor: all eleven tokens are this purchase and the Dinah story it stages. be-mea QESITA (7192 tok1/1 HAPAX) [VERIFIED: idx14 ordinal=1/1] — the coin-word, once in the Torah. nata sham aholo (5186 tok4/50) — tent pitched on owned ground. Depth 3.
+</td><td><span class="he">וַיִּקֶן אֶת־חֶלְקַת הַשָּׂדֶה</span> · <i>va-yiqen et-chelqat ha-sade</i><br><span class="gloss">= and-yiqen chelqat the-sade</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The deception&#x27;s smooth-word buys the field; the coin is a hapax.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_33_20 · Gen.33.20 · <span class='expr'>THE_ALTAR_AND_THE_OBLIQUE_WRITE</span></h3>
+<p><span class="he">וַיַּצֶּב־שָׁם מִזְבֵּחַ וַיִּקְרָא־לוֹ אֵל אֱלֹהֵי יִשְׂרָאֵל</span> · <i>va-yatzev-sham mizbecha va-yiqra-lo el elohe yisrael</i> · And he set up there an altar, and called it El-Elohe-Israel [God, the God of Israel].</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּצֶּב שָׁ֖ם מִזְבֵּ֑חַ</span> · <i>va-yatzev-sham mizbecha</i> · he set up there an altar (etnachta on mizbecha) [VERIFIED: SNAPSHOT Gen.33.20 idx2 mark_id=etnachta]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּ֨קְרָא ל֔וֹ אֵ֖ל אֱלֹהֵ֥י יִשְׂרָאֵֽל</span> · <i>va-yiqra-lo el elohe yisrael</i> · and called it El-Elohe-Israel (verse-final yisrael) [VERIFIED: SNAPSHOT Gen.33.20 idx3-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>REGISTRY_INSTALL</td><td><span class="expr">WORLD += {ha_mizbeach}</span><br><span class="gloss">= WORLD += {the-altar}</span><br>THE FIRST ALTAR [CROWN 2; care 12]. va-YATZEV sham MIZBEACH (5324 tok8/28; 4196 tok10/198) [VERIFIED: SNAPSHOT Gen.33.20 idx0-2; ordinals 8/28, 10/198] — Jacob&#x27;s FIRST altar: the altar-noun&#x27;s toks 1-9 are his fathers&#x27; — Noah ×2 (8:20), Abram ×4 (12:7, 12:8, 13:4, 13:18), Moriah ×2 (22:9), Isaac (26:25) [VERIFIED: debut_map 4196 toks 1-9]; tok10 is his. The set-up verb&#x27;s career: toks 6-7 = 28:12-13 — the ladder SET UP (mutzav) and YHWH STANDING (nitzav) upon it; tok8 = this altar; toks 9-10 = 35:14 (Bethel&#x27;s pillar) and 35:20 (Rachel&#x27;s grave-pillar): ladder, altar, pillar, grave. WORLD += ha_mizbeach.
+</td><td><span class="he">וַיַּצֶּב־שָׁם מִזְבֵּחַ</span> · <i>va-yatzev-sham mizbecha</i><br><span class="gloss">= and-yatzev-there mizbecha</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NAME</td><td><span class="expr">name(ha_mizbeach) := el_elohe_yisrael</span><br><span class="gloss">= name(the-altar) := to-elohe-yisrael</span><br>WRITE #1 — ISRAEL ENTERS THE REGISTRY OBLIQUELY. va-yiqra LO el elohe yisrael (7121 tok82/193; 410 tok11/50; 3478 tok3/587) [VERIFIED: SNAPSHOT Gen.33.20 idx3-7] — full va-yiqra-lo formula: the write FIRES (contrast 32:29&#x27;s decree, which wrote nothing — gen_33&#x27;s class) — and the VALUE carries the decreed name: el_elohe_yisrael, &quot;El, God of ISRAEL&quot; — yisrael&#x27;s third Torah token, and the registry&#x27;s first: the renamed man&#x27;s first naming-act files his own new name inside God&#x27;s title on an altar — the ledger meets israel as a genitive of El before it ever meets it as the man&#x27;s label (35:10&#x27;s formula-write is still ahead; the gen_33 NAME-triage neighborhood stays OPEN, no ruling sought). The el-word (410): gen_54&#x27;s power-idiom observation aside, this token is El the name proper, on Jacob&#x27;s lips over his first altar. UNIT END: SPECS depth 3 OPEN (yehi — self-reversed by its own demander · nisa_ve_nelekha — answered by a solo journey the other way · yaavar_na — answered in the other root); ONE POP (the returned blessing — the run&#x27;s only cleared card). REGISTRY 1 write. TESTS 0 [VERIFIED: zero tov-adjective tokens in Gen 33]. YHWH ×0 in-span; Elohim ×3 + el elohe yisrael — the unit&#x27;s God-grammar runs on grace until the altar speaks.
+</td><td><span class="he">וַיִּקְרָא־לוֹ אֵל אֱלֹהֵי יִשְׂרָאֵל</span> · <i>va-yiqra-lo el elohe yisrael</i><br><span class="gloss">= and-yiqra-not to elohe yisrael</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The first altar takes the wrestled name into the ledger, inside El&#x27;s title.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Gn_33_1 — the four hundred arrive; queue empty</td><td>Esau was coming, and with him four hundred men.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיִּשָּׂ֨א יַעֲקֹ֜ב עֵינָ֗יו וַיַּרְא֙ וְהִנֵּ֣ה עֵשָׂ֣ו בָּ֔א</span> · <i>va-yisa yaaqov enay-v va-yar ve-hine esav ba</i><br><span class="gloss">= and-yisa yaaqov enay-v and-yar and-hine esav in-the</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Gn_33_2 — the order of love; queue empty</td><td>Rachel and Joseph hindmost.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיָּ֧שֶׂם אֶת הַשְּׁפָח֛וֹת וְאֶת יַלְדֵיהֶ֖ן רִֽאשֹׁנָ֑ה</span> · <i>va-yasem et-ha-shefachot ve-et-yaldehen rishona</i><br><span class="gloss">= and-yasem the-shefachot and-yaldehen rishona</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Gn_33_3 — seven bows the wrong way; queue empty</td><td>He bowed to the ground seven times, nearing his brother.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיִּשְׁתַּ֤חוּ אַ֨רְצָה֙ שֶׁ֣בַע פְּעָמִ֔ים</span> · <i>va-yishtachu artzah sheva peamim</i><br><span class="gloss">= and-yishtachu artzah seven peamim</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Gn_33_4 — the embrace and the first plural weeping</td><td>He fell on his neck and kissed him; and they wept.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיָּ֨רָץ עֵשָׂ֤ו לִקְרָאתוֹ֙ וַֽיְחַבְּקֵ֔הוּ</span> · <i>va-yaratz esav liqrato va-yechabqehu</i><br><span class="gloss">= and-yaratz esav liqrato and-yechabqehu</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Gn_33_5 — the grace-verb born; queue empty</td><td>The children with whom God has graced your servant.</td><td>SPECS empty; no test, no name.</td><td><span class="he">חָנַ֥ן אֱלֹהִ֖ים אֶת עַבְדֶּֽךָ</span> · <i>chanan Elohim et-avdekha</i><br><span class="gloss">= chanan God avdekha</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Gn_33_6 — the first wave bows; queue empty</td><td>The maids came near with their children and bowed.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַתִּגַּ֧שְׁןָ הַשְּׁפָח֛וֹת הֵ֥נָּה וְיַלְדֵיהֶ֖ן וַתִּֽשְׁתַּחֲוֶֽיןָ</span> · <i>va-tigashna ha-shefachot hena ve-yalde-hen va-tishtachavena</i><br><span class="gloss">= and-tigashna the-shefachot hena and-yalde-hen and-tishtachavena</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Gn_33_7 — all the waves have bowed; queue empty</td><td>After came Joseph near, and Rachel, and they bowed.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַתִּגַּ֧שׁ גַּם לֵאָ֛ה וִילָדֶ֖יהָ וַיִּֽשְׁתַּחֲו֑וּ</span> · <i>va-tigash gam-leah vi-yladeha va-yishtachavu</i><br><span class="gloss">= and-tigash also-leah vi-yladeha and-yishtachavu</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Gn_33_8 — the camp explained; queue empty</td><td>What is all this camp which I met?</td><td>SPECS empty; no test, no name.</td><td><span class="he">מִ֥י לְךָ֛ כָּל הַמַּחֲנֶ֥ה הַזֶּ֖ה אֲשֶׁ֣ר</span> · <i>mi lekha kal-ha-machane ha-ze asher</i><br><span class="gloss">= from to-you kal-the-machane the-ze which</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Gn_33_9 — the keep-it jussive pushed; depth 1</td><td>I have much, my brother; let what is yours be yours.</td><td>LET(yehi(lekha_asher_lakh)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(yehi(to-you-which-to-you)) pushed and OPEN; no test, no name.</span></td><td><span class="he">יֶשׁ לִ֣י רָ֑ב אָחִ֕י</span> · <i>yesh-li rav achi-y</i><br><span class="gloss">= yesh-to-me rav my-brother-y</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Gn_33_10 — the face-coda and the accept-verb; depth 1</td><td>I saw your face as one sees the face of God.</td><td>LET(yehi(lekha_asher_lakh)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(yehi(to-you-which-to-you)) pushed and OPEN; no test, no name.</span></td><td><span class="he">כִּ֣י עַל כֵּ֞ן רָאִ֣יתִי פָנֶ֗יךָ כִּרְאֹ֛ת פְּנֵ֥י אֱלֹהִ֖ים וַתִּרְצֵֽנִי</span> · <i>ki al-ken raiti fane-kha ki-reot pene Elohim va-tirtzeni</i><br><span class="gloss">= when upon-ken raiti fane-kha when-see pene God and-tirtzeni</span></td></tr>
+<tr><td><b>S11</b></td><td>after STEP_Gn_33_11 — the blessing returned and TAKEN; depth 1</td><td>Take, please, my blessing. And he urged him, and he took.</td><td>LET(yehi(lekha_asher_lakh)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(yehi(to-you-which-to-you)) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּפְצַר בּ֖וֹ וַיִּקָּֽח</span> · <i>va-yiftzar-bo va-yiqach</i><br><span class="gloss">= and-yiftzar-in-it and-yiqach</span></td></tr>
+<tr><td><b>S12</b></td><td>after STEP_Gn_33_12 — the joint-journey pushed guarded; depth 2</td><td>Let us journey and go, and I will go opposite you.</td><td>LET(yehi(lekha_asher_lakh)) pushed and OPEN; CMD-US?(nisa_ve_nelekha(esav_ve_yaaqov)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(yehi(to-you-which-to-you)) pushed and OPEN; CMD-US?(nisa-and-nelekha(esav-and-yaaqov)) pushed and OPEN; no test, no name.</span></td><td><span class="he">נִסְעָ֣ה וְנֵלֵ֑כָה וְאֵלְכָ֖ה לְנֶגְדֶּֽךָ</span> · <i>nisa ve-nelekha ve-elkha le-negdekha</i><br><span class="gloss">= nisa and-nelekha and-elkha to-negdekha</span></td></tr>
+<tr><td><b>S13</b></td><td>after STEP_Gn_33_13 — the tender-pace plea; depth 2</td><td>The children are tender; overdriven one day, the flock dies.</td><td>LET(yehi(lekha_asher_lakh)) pushed and OPEN; CMD-US?(nisa_ve_nelekha(esav_ve_yaaqov)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(yehi(to-you-which-to-you)) pushed and OPEN; CMD-US?(nisa-and-nelekha(esav-and-yaaqov)) pushed and OPEN; no test, no name.</span></td><td><span class="he">אֲדֹנִ֤י יֹדֵ֨עַ֙ כִּֽי הַיְלָדִ֣ים רַכִּ֔ים</span> · <i>adoni yodea ki-ha-yeladim rakim</i><br><span class="gloss">= adoni yodea when-the-yeladim rakim</span></td></tr>
+<tr><td><b>S14</b></td><td>after STEP_Gn_33_14 — pass-before pushed; depth 3</td><td>Let my lord pass before his servant; I will lead on gently.</td><td>LET(yehi(lekha_asher_lakh)) pushed and OPEN; CMD-US?(nisa_ve_nelekha(esav_ve_yaaqov)) pushed and OPEN; LET(yaavar_na(adoni, li_fene_avdo)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(yehi(to-you-which-to-you)) pushed and OPEN; CMD-US?(nisa-and-nelekha(esav-and-yaaqov)) pushed and OPEN; LET(yaavar-na(adoni, to-me-fene-avdo)) pushed and OPEN; no test, no name.</span></td><td><span class="he">יַעֲבָר נָ֥א אֲדֹנִ֖י לִפְנֵ֣י עַבְדּ֑וֹ</span> · <i>yaavar-na adoni li-fene avdo</i><br><span class="gloss">= yaavar-na adoni to-me-fene avdo</span></td></tr>
+<tr><td><b>S15</b></td><td>after STEP_Gn_33_15 — the garrison declined; depth 3</td><td>Let me station some of my people — why so?</td><td>LET(yehi(lekha_asher_lakh)) pushed and OPEN; CMD-US?(nisa_ve_nelekha(esav_ve_yaaqov)) pushed and OPEN; LET(yaavar_na(adoni, li_fene_avdo)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(yehi(to-you-which-to-you)) pushed and OPEN; CMD-US?(nisa-and-nelekha(esav-and-yaaqov)) pushed and OPEN; LET(yaavar-na(adoni, to-me-fene-avdo)) pushed and OPEN; no test, no name.</span></td><td><span class="he">אַצִּֽיגָה נָּ֣א עִמְּךָ֔ מִן הָעָ֖ם</span> · <i>atziga-na im-kha min-ha-am</i><br><span class="gloss">= atziga-na if-kha from-the-am</span></td></tr>
+<tr><td><b>S16</b></td><td>after STEP_Gn_33_16 — Esau returns by the other root; depth 3</td><td>Esau returned that day on his way to Seir.</td><td>LET(yehi(lekha_asher_lakh)) pushed and OPEN; CMD-US?(nisa_ve_nelekha(esav_ve_yaaqov)) pushed and OPEN; LET(yaavar_na(adoni, li_fene_avdo)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(yehi(to-you-which-to-you)) pushed and OPEN; CMD-US?(nisa-and-nelekha(esav-and-yaaqov)) pushed and OPEN; LET(yaavar-na(adoni, to-me-fene-avdo)) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיָּשָׁב֩ בַּיּ֨וֹם הַה֥וּא עֵשָׂ֛ו לְדַרְכּ֖וֹ שֵׂעִֽירָה</span> · <i>va-yashav ba-yom ha-hu esav le-darko seirah</i><br><span class="gloss">= and-yashav day the-that esav its-way seirah</span></td></tr>
+<tr><td><b>S17</b></td><td>after STEP_Gn_33_17 — the solo journey; the booths; depth 3</td><td>Jacob journeyed to Sukkot and made booths for his cattle.</td><td>LET(yehi(lekha_asher_lakh)) pushed and OPEN; CMD-US?(nisa_ve_nelekha(esav_ve_yaaqov)) pushed and OPEN; LET(yaavar_na(adoni, li_fene_avdo)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(yehi(to-you-which-to-you)) pushed and OPEN; CMD-US?(nisa-and-nelekha(esav-and-yaaqov)) pushed and OPEN; LET(yaavar-na(adoni, to-me-fene-avdo)) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְיַעֲקֹב֙ נָסַ֣ע סֻכֹּ֔תָה</span> · <i>ve-yaaqov nasa sukotah</i><br><span class="gloss">= and-yaaqov nasa sukotah</span></td></tr>
+<tr><td><b>S18</b></td><td>after STEP_Gn_33_18 — whole to Shechem; depth 3</td><td>Jacob came whole to the city of Shechem.</td><td>LET(yehi(lekha_asher_lakh)) pushed and OPEN; CMD-US?(nisa_ve_nelekha(esav_ve_yaaqov)) pushed and OPEN; LET(yaavar_na(adoni, li_fene_avdo)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(yehi(to-you-which-to-you)) pushed and OPEN; CMD-US?(nisa-and-nelekha(esav-and-yaaqov)) pushed and OPEN; LET(yaavar-na(adoni, to-me-fene-avdo)) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיָּבֹא֩ יַעֲקֹ֨ב שָׁלֵ֜ם עִ֣יר שְׁכֶ֗ם</span> · <i>va-yavo yaaqov shalem ir shekhem</i><br><span class="gloss">= and-yavo yaaqov shalem ir shekhem</span></td></tr>
+<tr><td><b>S19</b></td><td>after STEP_Gn_33_19 — the field bought; depth 3</td><td>He bought the portion of the field for a hundred qesita.</td><td>LET(yehi(lekha_asher_lakh)) pushed and OPEN; CMD-US?(nisa_ve_nelekha(esav_ve_yaaqov)) pushed and OPEN; LET(yaavar_na(adoni, li_fene_avdo)) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(yehi(to-you-which-to-you)) pushed and OPEN; CMD-US?(nisa-and-nelekha(esav-and-yaaqov)) pushed and OPEN; LET(yaavar-na(adoni, to-me-fene-avdo)) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּ֜קֶן אֶת חֶלְקַ֣ת הַשָּׂדֶ֗ה</span> · <i>va-yiqen et-chelqat ha-sade</i><br><span class="gloss">= and-yiqen chelqat the-sade</span></td></tr>
+<tr><td><b>S20</b></td><td>after STEP_Gn_33_20 — the first altar named; three open, one popped</td><td>He set up an altar and called it El-Elohe-Israel.</td><td>LET(yehi(lekha_asher_lakh)) pushed and OPEN; CMD-US?(nisa_ve_nelekha(esav_ve_yaaqov)) pushed and OPEN; LET(yaavar_na(adoni, li_fene_avdo)) pushed and OPEN; WORLD += ha_mizbeach; REGISTRY 1 writes<br><span class="gloss">= LET(yehi(to-you-which-to-you)) pushed and OPEN; CMD-US?(nisa-and-nelekha(esav-and-yaaqov)) pushed and OPEN; LET(yaavar-na(adoni, to-me-fene-avdo)) pushed and OPEN; WORLD += the-altar; REGISTRY 1 writes</span></td><td><span class="he">וַיַּצֶּב שָׁ֖ם מִזְבֵּ֑חַ</span> · <i>va-yatzev-sham mizbecha</i><br><span class="gloss">= and-yatzev-there mizbecha</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_56_blessing_returned_first_altar — The blessing returned and the first altar (33:1-20) [frozen]
+
+final state: WORLD=[&#x27;ha_mizbeach&#x27;] (+0 presupposed) | REGISTRY={&#x27;ha_mizbeach&#x27;: &#x27;el_elohe_yisrael&#x27;} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — after STEP_Gn_33_1 — the four hundred arrive; queue empty
+    וַיִּשָּׂ֨א יַעֲקֹ֜ב עֵינָ֗יו וַיַּרְא֙ וְהִנֵּ֣ה עֵשָׂ֣ו בָּ֔א (va-yisa yaaqov enay-v va-yar ve-hine esav ba)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Gn_33_2 — the order of love; queue empty
+    וַיָּ֧שֶׂם אֶת הַשְּׁפָח֛וֹת וְאֶת יַלְדֵיהֶ֖ן רִֽאשֹׁנָ֑ה (va-yasem et-ha-shefachot ve-et-yaldehen rishona)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Gn_33_3 — seven bows the wrong way; queue empty
+    וַיִּשְׁתַּ֤חוּ אַ֨רְצָה֙ שֶׁ֣בַע פְּעָמִ֔ים (va-yishtachu artzah sheva peamim)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Gn_33_4 — the embrace and the first plural weeping
+    וַיָּ֨רָץ עֵשָׂ֤ו לִקְרָאתוֹ֙ וַֽיְחַבְּקֵ֔הוּ (va-yaratz esav liqrato va-yechabqehu)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Gn_33_5 — the grace-verb born; queue empty
+    חָנַ֥ן אֱלֹהִ֖ים אֶת עַבְדֶּֽךָ (chanan Elohim et-avdekha)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Gn_33_6 — the first wave bows; queue empty
+    וַתִּגַּ֧שְׁןָ הַשְּׁפָח֛וֹת הֵ֥נָּה וְיַלְדֵיהֶ֖ן וַתִּֽשְׁתַּחֲוֶֽיןָ (va-tigashna ha-shefachot hena ve-yalde-hen va-tishtachavena)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — after STEP_Gn_33_7 — all the waves have bowed; queue empty
+    וַתִּגַּ֧שׁ גַּם לֵאָ֛ה וִילָדֶ֖יהָ וַיִּֽשְׁתַּחֲו֑וּ (va-tigash gam-leah vi-yladeha va-yishtachavu)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S8 — after STEP_Gn_33_8 — the camp explained; queue empty
+    מִ֥י לְךָ֛ כָּל הַמַּחֲנֶ֥ה הַזֶּ֖ה אֲשֶׁ֣ר (mi lekha kal-ha-machane ha-ze asher)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S9 — after STEP_Gn_33_9 — the keep-it jussive pushed; depth 1
+    יֶשׁ לִ֣י רָ֑ב אָחִ֕י (yesh-li rav achi-y)
+    PASS  LET(yehi(lekha_asher_lakh)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S10 — after STEP_Gn_33_10 — the face-coda and the accept-verb; depth 1
+    כִּ֣י עַל כֵּ֞ן רָאִ֣יתִי פָנֶ֗יךָ כִּרְאֹ֛ת פְּנֵ֥י אֱלֹהִ֖ים וַתִּרְצֵֽנִי (ki al-ken raiti fane-kha ki-reot pene Elohim va-tirtzeni)
+    PASS  LET(yehi(lekha_asher_lakh)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S11 — after STEP_Gn_33_11 — the blessing returned and TAKEN; depth 1
+    וַיִּפְצַר בּ֖וֹ וַיִּקָּֽח (va-yiftzar-bo va-yiqach)
+    PASS  LET(yehi(lekha_asher_lakh)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S12 — after STEP_Gn_33_12 — the joint-journey pushed guarded; depth 2
+    נִסְעָ֣ה וְנֵלֵ֑כָה וְאֵלְכָ֖ה לְנֶגְדֶּֽךָ (nisa ve-nelekha ve-elkha le-negdekha)
+    PASS  LET(yehi(lekha_asher_lakh)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;, &#x27;nisa_ve_nelekha(esav_ve_yaaqov)&#x27;])
+    PASS  CMD-US?(nisa_ve_nelekha(esav_ve_yaaqov)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;, &#x27;nisa_ve_nelekha(esav_ve_yaaqov)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S13 — after STEP_Gn_33_13 — the tender-pace plea; depth 2
+    אֲדֹנִ֤י יֹדֵ֨עַ֙ כִּֽי הַיְלָדִ֣ים רַכִּ֔ים (adoni yodea ki-ha-yeladim rakim)
+    PASS  LET(yehi(lekha_asher_lakh)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;, &#x27;nisa_ve_nelekha(esav_ve_yaaqov)&#x27;])
+    PASS  CMD-US?(nisa_ve_nelekha(esav_ve_yaaqov)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;, &#x27;nisa_ve_nelekha(esav_ve_yaaqov)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S14 — after STEP_Gn_33_14 — pass-before pushed; depth 3
+    יַעֲבָר נָ֥א אֲדֹנִ֖י לִפְנֵ֣י עַבְדּ֑וֹ (yaavar-na adoni li-fene avdo)
+    PASS  LET(yehi(lekha_asher_lakh)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;, &#x27;nisa_ve_nelekha(esav_ve_yaaqov)&#x27;, &#x27;yaavar_na(adoni, li_fene_avdo)&#x27;])
+    PASS  CMD-US?(nisa_ve_nelekha(esav_ve_yaaqov)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;, &#x27;nisa_ve_nelekha(esav_ve_yaaqov)&#x27;, &#x27;yaavar_na(adoni, li_fene_avdo)&#x27;])
+    PASS  LET(yaavar_na(adoni, li_fene_avdo)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;, &#x27;nisa_ve_nelekha(esav_ve_yaaqov)&#x27;, &#x27;yaavar_na(adoni, li_fene_avdo)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S15 — after STEP_Gn_33_15 — the garrison declined; depth 3
+    אַצִּֽיגָה נָּ֣א עִמְּךָ֔ מִן הָעָ֖ם (atziga-na im-kha min-ha-am)
+    PASS  LET(yehi(lekha_asher_lakh)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;, &#x27;nisa_ve_nelekha(esav_ve_yaaqov)&#x27;, &#x27;yaavar_na(adoni, li_fene_avdo)&#x27;])
+    PASS  CMD-US?(nisa_ve_nelekha(esav_ve_yaaqov)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;, &#x27;nisa_ve_nelekha(esav_ve_yaaqov)&#x27;, &#x27;yaavar_na(adoni, li_fene_avdo)&#x27;])
+    PASS  LET(yaavar_na(adoni, li_fene_avdo)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;, &#x27;nisa_ve_nelekha(esav_ve_yaaqov)&#x27;, &#x27;yaavar_na(adoni, li_fene_avdo)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S16 — after STEP_Gn_33_16 — Esau returns by the other root; depth 3
+    וַיָּשָׁב֩ בַּיּ֨וֹם הַה֥וּא עֵשָׂ֛ו לְדַרְכּ֖וֹ שֵׂעִֽירָה (va-yashav ba-yom ha-hu esav le-darko seirah)
+    PASS  LET(yehi(lekha_asher_lakh)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;, &#x27;nisa_ve_nelekha(esav_ve_yaaqov)&#x27;, &#x27;yaavar_na(adoni, li_fene_avdo)&#x27;])
+    PASS  CMD-US?(nisa_ve_nelekha(esav_ve_yaaqov)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;, &#x27;nisa_ve_nelekha(esav_ve_yaaqov)&#x27;, &#x27;yaavar_na(adoni, li_fene_avdo)&#x27;])
+    PASS  LET(yaavar_na(adoni, li_fene_avdo)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;, &#x27;nisa_ve_nelekha(esav_ve_yaaqov)&#x27;, &#x27;yaavar_na(adoni, li_fene_avdo)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S17 — after STEP_Gn_33_17 — the solo journey; the booths; depth 3
+    וְיַעֲקֹב֙ נָסַ֣ע סֻכֹּ֔תָה (ve-yaaqov nasa sukotah)
+    PASS  LET(yehi(lekha_asher_lakh)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;, &#x27;nisa_ve_nelekha(esav_ve_yaaqov)&#x27;, &#x27;yaavar_na(adoni, li_fene_avdo)&#x27;])
+    PASS  CMD-US?(nisa_ve_nelekha(esav_ve_yaaqov)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;, &#x27;nisa_ve_nelekha(esav_ve_yaaqov)&#x27;, &#x27;yaavar_na(adoni, li_fene_avdo)&#x27;])
+    PASS  LET(yaavar_na(adoni, li_fene_avdo)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;, &#x27;nisa_ve_nelekha(esav_ve_yaaqov)&#x27;, &#x27;yaavar_na(adoni, li_fene_avdo)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S18 — after STEP_Gn_33_18 — whole to Shechem; depth 3
+    וַיָּבֹא֩ יַעֲקֹ֨ב שָׁלֵ֜ם עִ֣יר שְׁכֶ֗ם (va-yavo yaaqov shalem ir shekhem)
+    PASS  LET(yehi(lekha_asher_lakh)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;, &#x27;nisa_ve_nelekha(esav_ve_yaaqov)&#x27;, &#x27;yaavar_na(adoni, li_fene_avdo)&#x27;])
+    PASS  CMD-US?(nisa_ve_nelekha(esav_ve_yaaqov)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;, &#x27;nisa_ve_nelekha(esav_ve_yaaqov)&#x27;, &#x27;yaavar_na(adoni, li_fene_avdo)&#x27;])
+    PASS  LET(yaavar_na(adoni, li_fene_avdo)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;, &#x27;nisa_ve_nelekha(esav_ve_yaaqov)&#x27;, &#x27;yaavar_na(adoni, li_fene_avdo)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S19 — after STEP_Gn_33_19 — the field bought; depth 3
+    וַיִּ֜קֶן אֶת חֶלְקַ֣ת הַשָּׂדֶ֗ה (va-yiqen et-chelqat ha-sade)
+    PASS  LET(yehi(lekha_asher_lakh)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;, &#x27;nisa_ve_nelekha(esav_ve_yaaqov)&#x27;, &#x27;yaavar_na(adoni, li_fene_avdo)&#x27;])
+    PASS  CMD-US?(nisa_ve_nelekha(esav_ve_yaaqov)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;, &#x27;nisa_ve_nelekha(esav_ve_yaaqov)&#x27;, &#x27;yaavar_na(adoni, li_fene_avdo)&#x27;])
+    PASS  LET(yaavar_na(adoni, li_fene_avdo)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;, &#x27;nisa_ve_nelekha(esav_ve_yaaqov)&#x27;, &#x27;yaavar_na(adoni, li_fene_avdo)&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S20 — after STEP_Gn_33_20 — the first altar named; three open, one popped
+    וַיַּצֶּב שָׁ֖ם מִזְבֵּ֑חַ (va-yatzev-sham mizbecha)
+    PASS  LET(yehi(lekha_asher_lakh)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;, &#x27;nisa_ve_nelekha(esav_ve_yaaqov)&#x27;, &#x27;yaavar_na(adoni, li_fene_avdo)&#x27;])
+    PASS  CMD-US?(nisa_ve_nelekha(esav_ve_yaaqov)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;, &#x27;nisa_ve_nelekha(esav_ve_yaaqov)&#x27;, &#x27;yaavar_na(adoni, li_fene_avdo)&#x27;])
+    PASS  LET(yaavar_na(adoni, li_fene_avdo)) pushed and OPEN  (queue=[&#x27;yehi(lekha_asher_lakh)&#x27;, &#x27;nisa_ve_nelekha(esav_ve_yaaqov)&#x27;, &#x27;yaavar_na(adoni, li_fene_avdo)&#x27;])
+    PASS  WORLD += ha_mizbeach  (entity={&#x27;mode&#x27;: &#x27;created&#x27;, &#x27;by&#x27;: &#x27;narration&#x27;, &#x27;step&#x27;: &#x27;Gen.33.20&#x27;})
+    PASS  REGISTRY 1 writes  (writes=1 names=[&#x27;ha_mizbeach&#x27;])
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_56_blessing_returned_first_altar.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_56_blessing_returned_first_altar — 33:1-20
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_56_blessing_returned_first_altar.yaml) is
+# CANONICAL (Pre-Code); this file is a derived, runnable rendering. Do not
+# edit — regenerate. The assertion block at the bottom is baked from the
+# Stage D interpreter&#x27;s actual final state: running this file re-proves the
+# unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;The blessing returned and the first altar (33:1-20)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_56_blessing_returned_first_altar&quot;)
+
+# -------------------------- Gen.33.1 · THE_LIFTED_EYES_AND_THE_SPLIT -------
+# וַיִּשָּׂא יַעֲקֹב עֵינָיו וַיַּרְא וְהִנֵּה עֵשָׂו בָּא וְעִמּוֹ אַרְבַּע
+# מֵאוֹת אִישׁ וַיַּחַץ אֶת־הַיְלָדִים עַל־לֵאָה וְעַל־רָחֵל וְעַל שְׁתֵּי
+# הַשְּׁפָחוֹת
+# &quot;[EN-AID] And Jacob lifted his eyes and saw, and behold, Esau was coming,
+# and with him four hundred men. And he divided the children unto Leah and
+# unto Rachel and unto the two maids.&quot;
+m.step(&quot;Gen.33.1&quot;)
+# ‹וַיִּשָּׂא יַעֲקֹב עֵינָיו וַיַּרְא וְהִנֵּה עֵשָׂו בָּא› (“and-
+# lift/carry Jacob eye-him/its and-see and-behold Esau come/bring”) — fact
+# holds: and-see-Esau-come/bring-and-cut(four-hundred-man)
+m.fact(&quot;va_yar_esav_ba_va_yachatz(arba_meot_ish)&quot;)
+
+# -------------------------- Gen.33.2 · THE_ORDER_OF_LOVE -------------------
+# וַיָּשֶׂם אֶת־הַשְּׁפָחוֹת וְאֶת־יַלְדֵיהֶן רִאשֹׁנָה וְאֶת־לֵאָה
+# וִילָדֶיהָ אַחֲרֹנִים וְאֶת־רָחֵל וְאֶת־יוֹסֵף אַחֲרֹנִים
+# &quot;[EN-AID] And he put the maids and their children first, and Leah and her
+# children behind, and Rachel and Joseph hindmost.&quot;
+m.step(&quot;Gen.33.2&quot;)
+# ‹וַיָּשֶׂם אֶת־הַשְּׁפָחוֹת וְאֶת־יַלְדֵיהֶן רִאשֹׁנָה› (“and-put/set obj-
+# marker the-female-slave and-obj-marker child-them/their first”) — fact
+# holds: first-other-other(seder-the-camp)
+m.fact(&quot;rishona_acharonim_acharonim(seder_ha_machane)&quot;)
+
+# -------------------------- Gen.33.3 · THE_BOW_INVERTED --------------------
+# וְהוּא עָבַר לִפְנֵיהֶם וַיִּשְׁתַּחוּ אַרְצָה שֶׁבַע פְּעָמִים
+# עַד־גִּשְׁתּוֹ עַד־אָחִיו
+# &quot;[EN-AID] And he himself crossed over before them and bowed to the ground
+# seven times, until he came near to his brother.&quot;
+m.step(&quot;Gen.33.3&quot;)
+# ‹וַיִּשְׁתַּחוּ אַרְצָה שֶׁבַע פְּעָמִים› (“and-afflict earth-ward seven
+# stroke”) — fact holds: and-afflict-seven-stroke(hipukh-the-berakha)
+m.fact(&quot;va_yishtachu_sheva_peamim(hipukh_ha_berakha)&quot;)
+
+# -------------------------- Gen.33.4 · THE_HAND_BECOMES_ARMS ---------------
+# וַיָּרָץ עֵשָׂו לִקְרָאתוֹ וַיְחַבְּקֵהוּ וַיִּפֹּל עַל־צַוָּארָו
+# וַׄיִּׄשָּׁׄקֵׄהׄוּׄ וַיִּבְכּוּ
+# &quot;[EN-AID] And Esau ran to meet him and embraced him, and fell on his neck
+# and kissed him; and they wept.&quot;
+m.step(&quot;Gen.33.4&quot;)
+# ‹וַיָּרָץ עֵשָׂו לִקְרָאתוֹ וַיְחַבְּקֵהוּ› (“and-run Esau to-
+# encountering-him/its and-clasp-him/its”) — fact holds: and-yechabqehu-and-
+# weep(Esau-and-Jacob)
+m.fact(&quot;va_yechabqehu_va_yivku(esav_ve_yaaqov)&quot;)
+
+# -------------------------- Gen.33.5 · THE_GRACE_VERB_IS_BORN --------------
+# וַיִּשָּׂא אֶת־עֵינָיו וַיַּרְא אֶת־הַנָּשִׁים וְאֶת־הַיְלָדִים וַיֹּאמֶר
+# מִי־אֵלֶּה לָּךְ וַיֹּאמַר הַיְלָדִים אֲשֶׁר־חָנַן אֱלֹהִים אֶת־עַבְדֶּךָ
+# &quot;[EN-AID] And he lifted his eyes and saw the women and the children, and
+# said: Who are these to you? And he said: The children with whom God has
+# graced your servant.&quot;
+m.step(&quot;Gen.33.5&quot;)
+# ‹חָנַן אֱלֹהִים אֶת־עַבְדֶּךָ› (“bend God obj-marker servant-you/your”) —
+# fact holds: the-child-which-bend-God(maane-Jacob)
+m.fact(&quot;ha_yeladim_asher_chanan_Elohim(maane_yaaqov)&quot;)
+
+# -------------------------- Gen.33.6 · THE_FIRST_WAVE ----------------------
+# וַתִּגַּשְׁןָ הַשְּׁפָחוֹת הֵנָּה וְיַלְדֵיהֶן וַתִּשְׁתַּחֲוֶיןָ
+# &quot;[EN-AID] And the maids came near, they and their children, and they
+# bowed.&quot;
+m.step(&quot;Gen.33.6&quot;)
+# ‹וַתִּגַּשְׁןָ הַשְּׁפָחוֹת הֵנָּה וְיַלְדֵיהֶן וַתִּשְׁתַּחֲוֶיןָ› (“and-
+# be the-female-slave themselves and-child-them/their and-afflict”) — fact
+# holds: and-be-and-afflict(the-female-slave)
+m.fact(&quot;va_tigashna_va_tishtachavena(ha_shefachot)&quot;)
+
+# -------------------------- Gen.33.7 · THE_SECOND_AND_THIRD_WAVES ----------
+# וַתִּגַּשׁ גַּם־לֵאָה וִילָדֶיהָ וַיִּשְׁתַּחֲווּ וְאַחַר נִגַּשׁ יוֹסֵף
+# וְרָחֵל וַיִּשְׁתַּחֲווּ
+# &quot;[EN-AID] And Leah too came near, and her children, and they bowed; and
+# after came Joseph near, and Rachel, and they bowed.&quot;
+m.step(&quot;Gen.33.7&quot;)
+# ‹וַתִּגַּשׁ גַּם־לֵאָה וִילָדֶיהָ וַיִּשְׁתַּחֲווּ› (“and-be also Leah
+# and-child-her/its and-afflict”) — fact holds: and-afflict-kulam(Leah-
+# Joseph-and-Rachel)
+m.fact(&quot;va_yishtachavu_kulam(lea_yosef_ve_rachel)&quot;)
+
+# -------------------------- Gen.33.8 · THE_CAMP_EXPLAINED ------------------
+# וַיֹּאמֶר מִי לְךָ כָּל־הַמַּחֲנֶה הַזֶּה אֲשֶׁר פָּגָשְׁתִּי וַיֹּאמֶר
+# לִמְצֹא־חֵן בְּעֵינֵי אֲדֹנִי
+# &quot;[EN-AID] And he said: What to you is all this camp which I met? And he
+# said: To find grace in the eyes of my lord.&quot;
+m.step(&quot;Gen.33.8&quot;)
+# ‹מִי לְךָ כָּל־הַמַּחֲנֶה הַזֶּה אֲשֶׁר› (“who? to-you/your all the-camp
+# the-this which”) — fact holds: who?-to-you-all-the-camp(come-in-contact-
+# with)
+m.fact(&quot;mi_lekha_kal_ha_machane(pagashti)&quot;)
+
+# -------------------------- Gen.33.9 · THE_KEEP_IT_JUSSIVE -----------------
+# וַיֹּאמֶר עֵשָׂו יֶשׁ־לִי רָב אָחִי יְהִי לְךָ אֲשֶׁר־לָךְ
+# &quot;[EN-AID] And Esau said: I have much, my brother; let what is yours be
+# yours.&quot;
+m.step(&quot;Gen.33.9&quot;)
+# ‹יֶשׁ־לִי רָב אָחִי› (“there-is to-me/my many/great brother-me/my”) — Esau
+# speaks a demand — LET: be(to-you-which-to-you)
+m.declare(&quot;esav&quot;, &quot;LET&quot;,
+          &quot;yehi(lekha_asher_lakh)&quot;)
+
+# -------------------------- Gen.33.10 · THE_FACE_CODA_AND_THE_ACCEPT_VERB --
+# וַיֹּאמֶר יַעֲקֹב אַל־נָא אִם־נָא מָצָאתִי חֵן בְּעֵינֶיךָ וְלָקַחְתָּ
+# מִנְחָתִי מִיָּדִי כִּי עַל־כֵּן רָאִיתִי פָנֶיךָ כִּרְאֹת פְּנֵי אֱלֹהִים
+# וַתִּרְצֵנִי
+# &quot;[EN-AID] And Jacob said: No, please — if now I have found grace in your
+# eyes, then take my offering from my hand; for therefore have I seen your
+# face, as one sees the face of God, and you have accepted me.&quot;
+m.step(&quot;Gen.33.10&quot;)
+# ‹כִּי עַל־כֵּן רָאִיתִי פָנֶיךָ כִּרְאֹת פְּנֵי אֱלֹהִים וַתִּרְצֵנִי›
+# (“very-widely-used-as-a-relati above set-upright see face-you/your like-
+# see face God and-be-pleased-with-me/my”) — fact holds: very-widely-used-
+# as-a-relati-see-face-God-and-tirtzeni(peniel-coda)
+m.fact(&quot;ki_reot_pene_Elohim_va_tirtzeni(peniel_coda)&quot;)
+
+# -------------------------- Gen.33.11 · THE_POP_THE_BLESSING_RETURNED ------
+# קַח־נָא אֶת־בִּרְכָתִי אֲשֶׁר הֻבָאת לָךְ כִּי־חַנַּנִי אֱלֹהִים וְכִי
+# יֶשׁ־לִי־כֹל וַיִּפְצַר־בּוֹ וַיִּקָּח
+# &quot;[EN-AID] Take, please, my blessing that was brought to you, for God has
+# graced me, and because I have all. And he urged him, and he took.&quot;
+m.step(&quot;Gen.33.11&quot;)
+# ‹קַח־נָא אֶת־בִּרְכָתִי› (“take please obj-marker blessing-me/my”) — Jacob
+# speaks a demand — LET: take-please-obj-marker-birkhati(Esau)
+m.declare(&quot;yaaqov&quot;, &quot;LET&quot;,
+          &quot;qach_na_et_birkhati(esav)&quot;)
+# ‹וַיִּפְצַר־בּוֹ וַיִּקָּח› (“and-peck-at in-him/its and-take”) — demand
+# settled (popped from the queue): take-please-obj-marker-birkhati(Esau)
+m.result(&quot;qach_na_et_birkhati(esav)&quot;, tmark=&quot;t2&quot;)
+
+# -------------------------- Gen.33.12 · THE_DECLINED_CONVOY ----------------
+# וַיֹּאמֶר נִסְעָה וְנֵלֵכָה וְאֵלְכָה לְנֶגְדֶּךָ
+# &quot;[EN-AID] And he said: Let us journey and go, and I will go opposite you.&quot;
+m.step(&quot;Gen.33.12&quot;)
+# ‹נִסְעָה וְנֵלֵכָה וְאֵלְכָה לְנֶגְדֶּךָ› (“journey and-go and-go to-
+# front-you/your”) — Esau speaks a demand — CMD-US?: journey-and-go(Esau-
+# and-Jacob)
+m.declare(&quot;esav&quot;, &quot;CMD-US?&quot;,
+          &quot;nisa_ve_nelekha(esav_ve_yaaqov)&quot;)
+
+# -------------------------- Gen.33.13 · THE_TENDER_PACE --------------------
+# וַיֹּאמֶר אֵלָיו אֲדֹנִי יֹדֵעַ כִּי־הַיְלָדִים רַכִּים וְהַצֹּאן
+# וְהַבָּקָר עָלוֹת עָלָי וּדְפָקוּם יוֹם אֶחָד וָמֵתוּ כָּל־הַצֹּאן
+# &quot;[EN-AID] And he said to him: My lord knows that the children are tender,
+# and the flock and herd giving suck are upon me; and were they overdriven
+# one day, all the flock would die.&quot;
+m.step(&quot;Gen.33.13&quot;)
+# ‹אֲדֹנִי יֹדֵעַ כִּי־הַיְלָדִים רַכִּים› (“lord-me/my know that the-child
+# tender”) — fact holds: the-child-tender-and-suckle-alay(taanat-Jacob)
+m.fact(&quot;ha_yeladim_rakim_ve_alot_alay(taanat_yaaqov)&quot;)
+
+# -------------------------- Gen.33.14 · THE_PASS_BEFORE_JUSSIVE ------------
+# יַעֲבָר־נָא אֲדֹנִי לִפְנֵי עַבְדּוֹ וַאֲנִי אֶתְנָהֲלָה לְאִטִּי לְרֶגֶל
+# הַמְּלָאכָה אֲשֶׁר־לְפָנַי וּלְרֶגֶל הַיְלָדִים עַד אֲשֶׁר־אָבֹא
+# אֶל־אֲדֹנִי שֵׂעִירָה
+# &quot;[EN-AID] Let my lord pass, please, before his servant, and I will lead on
+# gently at my slow pace, at the foot of the work before me and at the foot
+# of the children, until I come to my lord, to Seir.&quot;
+m.step(&quot;Gen.33.14&quot;)
+# ‹יַעֲבָר־נָא אֲדֹנִי לִפְנֵי עַבְדּוֹ› (“pass-over please lord-me/my to-
+# face servant-him/its”) — Jacob speaks a demand — LET: pass-over-
+# please(adoni, to-me-fene-avdo)
+m.declare(&quot;yaaqov&quot;, &quot;LET&quot;,
+          &quot;yaavar_na(adoni, li_fene_avdo)&quot;)
+
+# -------------------------- Gen.33.15 · THE_DECLINED_GARRISON --------------
+# וַיֹּאמֶר עֵשָׂו אַצִּיגָה־נָּא עִמְּךָ מִן־הָעָם אֲשֶׁר אִתִּי וַיֹּאמֶר
+# לָמָּה זֶּה אֶמְצָא־חֵן בְּעֵינֵי אֲדֹנִי
+# &quot;[EN-AID] And Esau said: Let me station with you, please, some of the
+# people who are with me. And he said: Why so? Let me find grace in the eyes
+# of my lord.&quot;
+m.step(&quot;Gen.33.15&quot;)
+# ‹אַצִּיגָה־נָּא עִמְּךָ מִן־הָעָם› (“place-permanently please with-
+# you/your from the-people”) — fact holds: place-permanently-please-
+# declined(to-what-this)
+m.fact(&quot;atziga_na_declined(la_ma_ze)&quot;)
+
+# -------------------------- Gen.33.16 · THE_FIRST_VECTOR -------------------
+# וַיָּשָׁב בַּיּוֹם הַהוּא עֵשָׂו לְדַרְכּוֹ שֵׂעִירָה
+# &quot;[EN-AID] And Esau returned that day on his way to Seir.&quot;
+m.step(&quot;Gen.33.16&quot;)
+# ‹וַיָּשָׁב בַּיּוֹם הַהוּא עֵשָׂו לְדַרְכּוֹ שֵׂעִירָה› (“and-return in-
+# day that Esau to-way/road-him/its Seir-ward”) — fact holds: and-return-
+# Esau-seira(to-its-way)
+m.fact(&quot;va_yashav_esav_seira(le_darko)&quot;)
+
+# -------------------------- Gen.33.17 · THE_SECOND_VECTOR_AND_THE_BOOTHS ---
+# וְיַעֲקֹב נָסַע סֻכֹּתָה וַיִּבֶן לוֹ בָּיִת וּלְמִקְנֵהוּ עָשָׂה סֻכֹּת
+# עַל־כֵּן קָרָא שֵׁם־הַמָּקוֹם סֻכּוֹת
+# &quot;[EN-AID] And Jacob journeyed to Sukkot, and built himself a house, and
+# for his cattle he made booths; therefore he called the name of the place
+# Sukkot.&quot;
+m.step(&quot;Gen.33.17&quot;)
+# ‹וְיַעֲקֹב נָסַע סֻכֹּתָה› (“and-Jacob journey Succoth-ward”) — fact
+# holds: and-Jacob-journey-sukota(house-and-hut, report-only)
+m.fact(&quot;ve_yaaqov_nasa_sukota(bayit_u_sukot, report_only)&quot;)
+
+# -------------------------- Gen.33.18 · THE_WHOLE_ARRIVAL ------------------
+# וַיָּבֹא יַעֲקֹב שָׁלֵם עִיר שְׁכֶם אֲשֶׁר בְּאֶרֶץ כְּנַעַן בְּבֹאוֹ
+# מִפַּדַּן אֲרָם וַיִּחַן אֶת־פְּנֵי הָעִיר
+# &quot;[EN-AID] And Jacob came whole to the city of Shechem, which is in the
+# land of Canaan, in his coming from Paddan-Aram; and he encamped before the
+# city.&quot;
+m.step(&quot;Gen.33.18&quot;)
+# ‹וַיָּבֹא יַעֲקֹב שָׁלֵם עִיר שְׁכֶם› (“and-come/bring Jacob complete city
+# Shechem”) — fact holds: and-come/bring-complete-who?-from-Padan(and-
+# encamp)
+m.fact(&quot;va_yavo_shalem_mi_padan_aram(va_yichan)&quot;)
+
+# -------------------------- Gen.33.19 · THE_SECOND_PURCHASE ----------------
+# וַיִּקֶן אֶת־חֶלְקַת הַשָּׂדֶה אֲשֶׁר נָטָה־שָׁם אָהֳלוֹ מִיַּד
+# בְּנֵי־חֲמוֹר אֲבִי שְׁכֶם בְּמֵאָה קְשִׂיטָה
+# &quot;[EN-AID] And he bought the portion of the field where he had pitched his
+# tent from the hand of the sons of Hamor, father of Shechem, for a hundred
+# qesita.&quot;
+m.step(&quot;Gen.33.19&quot;)
+# ‹וַיִּקֶן אֶת־חֶלְקַת הַשָּׂדֶה› (“and-erect obj-marker smoothness the-
+# field”) — fact holds: and-erect-smoothness-the-field(in-hundred-ingot)
+m.fact(&quot;va_yiqen_chelqat_ha_sade(be_mea_qesita)&quot;)
+
+# -------------------------- Gen.33.20 · THE_ALTAR_AND_THE_OBLIQUE_WRITE ----
+# וַיַּצֶּב־שָׁם מִזְבֵּחַ וַיִּקְרָא־לוֹ אֵל אֱלֹהֵי יִשְׂרָאֵל
+# &quot;[EN-AID] And he set up there an altar, and called it El-Elohe-Israel
+# [God, the God of Israel].&quot;
+m.step(&quot;Gen.33.20&quot;)
+# ‹וַיַּצֶּב־שָׁם מִזְבֵּחַ› (“and-stand there altar”) — the world gains:
+# the-altar
+m.install(&quot;ha_mizbeach&quot;)
+# ‹וַיִּקְרָא־לוֹ אֵל אֱלֹהֵי יִשְׂרָאֵל› (“and-call to-him/its strength God
+# Israel”) — named: the-altar := do-not-God-Israel
+m.name(&quot;ha_mizbeach&quot;, &quot;el_elohe_yisrael&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == {&#x27;ha_mizbeach&#x27;}
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {&#x27;ha_mizbeach&#x27;: &#x27;el_elohe_yisrael&#x27;}
+    assert m.REGISTRY[&quot;writes&quot;] == 1
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;yehi(lekha_asher_lakh)&#x27;, &#x27;nisa_ve_nelekha(esav_ve_yaaqov)&#x27;, &#x27;yaavar_na(adoni, li_fene_avdo)&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 4
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;va_yar_esav_ba_va_yachatz(arba_meot_ish)&#x27;, &#x27;rishona_acharonim_acharonim(seder_ha_machane)&#x27;, &#x27;va_yishtachu_sheva_peamim(hipukh_ha_berakha)&#x27;, &#x27;va_yechabqehu_va_yivku(esav_ve_yaaqov)&#x27;, &#x27;ha_yeladim_asher_chanan_Elohim(maane_yaaqov)&#x27;, &#x27;va_tigashna_va_tishtachavena(ha_shefachot)&#x27;, &#x27;va_yishtachavu_kulam(lea_yosef_ve_rachel)&#x27;, &#x27;mi_lekha_kal_ha_machane(pagashti)&#x27;, &#x27;ki_reot_pene_Elohim_va_tirtzeni(peniel_coda)&#x27;, &#x27;ha_yeladim_rakim_ve_alot_alay(taanat_yaaqov)&#x27;, &#x27;atziga_na_declined(la_ma_ze)&#x27;, &#x27;va_yashav_esav_seira(le_darko)&#x27;, &#x27;ve_yaaqov_nasa_sukota(bayit_u_sukot, report_only)&#x27;, &#x27;va_yavo_shalem_mi_padan_aram(va_yichan)&#x27;, &#x27;va_yiqen_chelqat_ha_sade(be_mea_qesita)&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 6
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

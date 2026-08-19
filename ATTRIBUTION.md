@@ -32,6 +32,15 @@ public domain), corrected and supplemented by hand glosses written for this
 project (CC BY 4.0, this repository). The glosses are a reading aid, not a
 translation.
 
+## Chapter translation in the scroll reader — JPS 1917 (public domain)
+
+The whole-verse English lines in the scroll reader (`scroll/`) are from
+**The Holy Scriptures According to the Masoretic Text** (Jewish
+Publication Society, 1917), in the **public domain**. Where the JPS
+versification differs from the text's (three Decalogue-region chapters),
+the reader falls back to the word-gloss chain rather than misalign a
+translation.
+
 ## Oral-law sources — cited, not redistributed
 
 The scan records and claim manifests cite and briefly quote works of the

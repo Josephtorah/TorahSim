@@ -1,0 +1,789 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>exo_19_sinai_and_the_covenant — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/exo_19_sinai_and_the_covenant?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Sinai and the covenant (19:1-25) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>exo_19_sinai_and_the_covenant</b> · Exodus 19:1-25 · derive logic_derived_v1 · phase FWD-33</div>
+<div class="meta"><a href="../#Exod/19/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">מַמְלֶ֥כֶת כֹּהֲנִ֖ים וְג֣וֹי קָד֑וֹשׁ</span> · <i>mamlekhet kohanim ve-goy qadosh</i> · &#x27;a kingdom of priests and a holy nation&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DERIVED 2026-08-10 · FORWARD ERA unit #33 (run FWD-8 block 3; Exod 1-19 continuous behind it). Span: 19:1-25, whole chapter: 25 verses (SNAPSHOT-verified). Oral layer IN-PIPELINE: manifest 13/13 VERIFIED, zero FAILED — see oral_audit_note_en; TWO tradition-vs-SNAPSHOT divergences filed openly (19:11&#x27;s second third-word: MS/Ramah lean, SNAPSHOT full both; 19:19&#x27;s shofar: MS among the nine lean, SNAPSHOT full there and lean at 19:16/20:18) — dual-tracked observations, the stream standing. MACHINE PROFILE. FOUR DECLAREs, THREE RESULTs, TWO EVENTS. The chapter runs the corpus&#x27;s LARGEST EXCHANGE: the covenant offer (19:5 im-shamoa tishmeu — Marah&#x27;s doubled hear-grammar re-scaled from health-law to election) pops at 19:8 on the nation&#x27;s unanimous acceptance (kol asher diber YHWH naase, asserted; the accepted condition becomes standing world-fact, perpetual-class). The preparation card (19:10) pops at 19:14 in mirrored verbs. The FENCE (19:12) stays OPEN at close — the corpus&#x27;s rare card with its EXPIRY WRITTEN IN (19:13 bimshokh ha-yovel: at the long blast the mountain opens; unfired in-span). The warning card (19:21) pops at 19:25 MID-SENTENCE — va-yomer alehem, the chapter ending inside the verb, the next canon word God&#x27;s own (the corpus&#x27;s boldest cliff-edge). TWO EVENTS: the signs (19:16) and the DESCENT (19:20 — forecast at 19:11, performed on schedule, zero variance). 3:12&#x27;s LONG-ARMED SIGN PAYS at 19:1-2 (you shall serve God on THIS mountain — the commission&#x27;s collateral arrives; settlement candidate for the corpus fold). Moses&#x27; elevator: three ascents, three descents counted. MACHINE EVIDENCE asserted at the build: the singular camp (va-yichan) against the plural journey; the kaved-root&#x27;s arrival at the Presence (the heavy cloud — heart, hands, caseload, cloud); the kiln&#x27;s third station (Sodom, the boils, Sinai); the acceptance-formula tokens; the finals of the treasure-clause (the letters of circumcision); the head-and-tail sanctify pair placements (19:23 verse-final / Lev 21:8 verse-initial). Queue at close: ONE OPEN in-unit (the fence, awaiting its horn) plus the standing opens. REGISTRY 0; TESTS 0. CARE-POINTS: the offer-card&#x27;s pop closes the EXCHANGE, not the condition (the covenant&#x27;s if-you-hear runs perpetual — Marah precedent); the fence-card&#x27;s release-clause (unfired); the double-warning protocol (19:21 + 19:24 — &#x27;warn before the deed and again at the deed&#x27;); Moses&#x27; procedural objection (19:23 cites the OPEN fence-card back to its Issuer — the corpus&#x27;s first queue-state pleading); the priests-before-the- priesthood seam (19:22&#x27;s firstborn clergy vs 19:6&#x27;s all-priests offer vs Lev 21&#x27;s line). WATCHLIST ARMS: 20:1 (the utterances — the open mouth of 19:25), 20:15-18 (the trembling paid out), 24:1-11 (the ascent-roster executed; naase ve-nishma), 24:16-18 (the cloud entered), 32:19 (the descent that breaks the tablets), Lev 21:8 (the priest&#x27;s verse-initial sanctify), Num 10:33 (the mountain left), Deut 4-5 (the retelling). Outside-Torah names (named-only): Josh 6 (Jericho&#x27;s yovel-horn), 2 Sam 3:1 (David going-and-strengthening), Isa 61:6 (the returned priesthood), Jer 6:22/50:41 (the roused nation), Hos 2 (the betrothals), Ps 68 (the mountain&#x27;s envy).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-10 (IN-PIPELINE, forward era; manifest logic/oral_audit/manifests/exo_19_sinai_and_the_covenant_claims.json 13/13 VERIFIED, zero FAILED; record logic/oral_audit/AUDIT_exo_19_2026-08-10.md). CROWNS (chain-attested + DB-verified). THE GOING-OUT FILE [EX19-01, KB on 19:1]: לצאת בני (&quot;of the going-out of the sons of...&quot;) dating-formula twice in the Torah (adjacency checked): the Sinai arrival and Aaron&#x27;s death (Num 33:38), the Temple&#x27;s 480th year the Scripture-third — the wedding, the atoning death, the house all clocked from the exodus; the freed captive&#x27;s three-month wait; Rashi: Torah-words new as if given today. THE SINGULAR CAMP [EX19-02, Rashi/Mekhilta + MS — THE MARQUEE]: ויחן (&quot;and he camped,&quot; singular) exactly THREE in the Torah (census checked): Isaac (Gen 26:17), Jacob (Gen 33:18), and ISRAEL — &quot;as ONE MAN, with ONE HEART; all other campings in quarrels&quot;; מרפידים (&quot;from Rephidim&quot;) full-with-both-letters, census-unique (asserted) — the Ramah&#x27;s two full-fulls are the arrival (17:1) and this departure: the name healed on the way out, in repentance. THE TEN-YOD TELL [EX19-03, MS + KB + Lekach Tov]: ותגיד (&quot;and tell&quot;) the Torah&#x27;s ONLY full tell-form (checked; the Ramah: all others lean) — the yod = the TEN utterances; say to the women gently, tell the men words hard as sinews (Shabbat&#x27;s restore/sinew pair). THE FOUR YOUs [EX19-04, KB on 19:4]: verse- opening אתם (&quot;YOU&quot;) three in the Torah (verse-initial census checked): the straw-verse (5:11), the eagle-verse, the standing (Deut 29:9) — Isaiah&#x27;s witnesses the fourth; the straw answered by the wings. THE TWO LEAN COMINGS [EX19-05, MS + KB]: ואבא (&quot;and I came/brought&quot;) lean exactly twice (checked): the servant&#x27;s bridal errand (Gen 24:42) and the LORD&#x27;s carrying Israel to Himself — both COURTSHIPS; the betrothal: money, document (morasha read meorasa), union. THE TREASURE&#x27;S FINALS [EX19-06, KB on 19:5]: סגלה (&quot;treasure&quot;) four in the Torah (checked): the offer + its three Deuteronomy ratifications; the final letters of the treasure-clause = the letters of מילה (&quot;circumcision,&quot; asserted at the build). THE ONE VE-GOY [EX19-07, KB on 19:6]: וגוי (&quot;and a nation&quot;) Torah-unique (checked) — the conditional fork: the nations that run toward (Isaiah) or the nation roused against (Jeremiah); all high priests, had they merited — and it returns. THE TWO FULL FOREVERS [EX19-08, KB on 19:9]: לעולם (&quot;forever&quot;) full exactly twice (checked): believe-in-you-forever and never-seek-their-peace-forever (Deut 23:7) — trust without end and a door shut without end; Moses returns with the wilderness generation (the midrash — the old homily the Kitzur carries). THE FOUR LEAN ASCENTS [EX19-09, MS on 19:23]: לעלת (&quot;to ascend&quot;) lean four times (census checked, five with Num 28:23&#x27;s offering-noun): Sinai&#x27;s two fences and the spies&#x27; two failures — and MS catches the PRINTER omitting the fourth from the printed Masorah, the letter-roster itself docked one entry. THE STONING PAIR [EX19-10, KB on 19:13]: סקול יסקל (&quot;surely stoned&quot;) exactly twice (adjacency checked): the mountain-toucher and the goring ox (21:28) — &quot;from here, for the generations: pushing and stoning&quot;; במשך (&quot;when [the horn] draws out&quot;) Torah-unique (asserted) — Jericho its twin: Isaac&#x27;s ram at both horns. THE DOUBLY-LEAN THUNDERS [EX19-11, MS + KB on 19:16]: קלת (&quot;thunders&quot;) doubly lean, exactly three (checked): the hail twice (9:23, 9:28) and Sinai — the voices Pharaoh begged away are the voices Israel hears; בהית (&quot;when [morning] was&quot;) unique (asserted) — the six eons complete; the heavy cloud (the weight-root&#x27;s homecoming, machine). THE STRENGTHENING VOICE [EX19-12, KB on 19:19]: הולך וחזק (&quot;going and strengthening&quot;) once in the Torah (adjacency checked) — David its Scripture-twin (Eruvin: the open teacher grows); Moses speaks, God answers in a voice — the standing dialogue; the shofar-divergence filed (MS&#x27;s nine-lean vs SNAPSHOT). THE HEAD-AND-TAIL SANCTIFY [EX19-13, KB + MS on 19:23-24]: וקדשתו (&quot;and sanctify him&quot;) exactly twice (census checked) — verse-FINAL here, verse-INITIAL at the priest (Lev 21:8; placements asserted): &quot;the priest&#x27;s sanctity at the head, the scholar&#x27;s at the end&quot;; העדתה&#x27;s final He (the warning-tongues); the clipped qamatz under the binder-stroke (Rashi&#x27;s own note in the mirror); תגשו dageshed; the 19:11 third-word divergence filed (MS/Ramah lean, SNAPSHOT full both — observation, stream standing).</div>
+<div class="meta">confidence: structure tested; oral layer verified 13/13</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>FORWARD ERA run 8, block 3 (owner: &quot;lets do 5 more blocks&quot;). Canon continuation: Exod 19:1-25 — the Sinai arrival and covenant, whole chapter.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Span + source + conventions</td><td>SNAPSHOT prestage: 25 verses, all with etnachta. Volitive census: four real pushes (19:5 the covenant offer, 19:10 the preparation, 19:12 the fence, 19:21 the warning); 19:15&#x27;s three-days folds into the preparation&#x27;s relay; 19:24&#x27;s roster is the warning-conversation&#x27;s content.</td><td>established</td></tr>
+<tr><td><b>C</b></td><td>Machine structure</td><td>4D/3R/2E. The offer pops on the unanimous acceptance (19:8; the condition becomes perpetual world-fact); the preparation pops in mirrored verbs (19:14); the fence stays OPEN with its expiry written in (the yovel-blast, unfired); the warning pops mid-sentence at 19:25 (the open mouth). Events: the signs (19:16) and the scheduled descent (19:20). 3:12&#x27;s sign pays at the arrival. Asserted evidence: the singular camp; the kaved-root at the Presence; the kiln&#x27;s third station; the treasure- clause finals; the sanctify-pair placements; two divergences filed (19:11, 19:19).</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Exod 19 (16 notes) + Kitzur Baal HaTurim on Exod 19 (16 notes) + Rashi on Exod 19 targeted pulls (19:1-2, 19:20-25). Manifest 13 rows: 13 VERIFIED / 0 FAILED / 0 UNCHECKABLE, first run. The going-out file; the singular camp (the marquee); the ten-yod tell; the four YOUs; the two lean comings; the treasure&#x27;s finals; the one ve-goy; the two full forevers; the four lean ascents (the printer caught); the stoning pair; the doubly-lean thunders; the strengthening voice; the head-and-tail sanctify.</td><td>established</td></tr>
+<tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 13/13 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-10 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits. Exod 1-19 continuous.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Ex_19_1 · Exod.19.1 · <span class='expr'>THE_THIRD_MONTH</span></h3>
+<p><span class="he">בַּחֹדֶשׁ הַשְּׁלִישִׁי לְצֵאת בְּנֵי־יִשְׂרָאֵל מֵאֶרֶץ מִצְרָיִם בַּיּוֹם הַזֶּה בָּאוּ מִדְבַּר סִינָי</span> · <i>ba-chodesh ha-shelishi le-tzet bene-yisrael me-eretz mitzrayim ba-yom ha-ze bau midbar sinay</i> · In the third month of the going-out of the sons of Israel from the land of Egypt — on this day they came to the wilderness of Sinai.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">בַּחֹ֨דֶשׁ֙ הַשְּׁלִישִׁ֔י לְצֵ֥את בְּנֵי יִשְׂרָאֵ֖ל מֵאֶ֣רֶץ מִצְרָ֑יִם</span> · <i>ba-chodesh ha-shelishi le-tzet bene-yisrael me-eretz mitzrayim</i> · in the third month of the going-out of the sons of Israel from the land of Egypt (etnachta on mitzrayim) [VERIFIED: SNAPSHOT Exod.19.1 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">בַּיּ֣וֹם הַזֶּ֔ה בָּ֖אוּ מִדְבַּ֥ר סִינָֽי</span> · <i>ba-yom ha-ze bau midbar sinay</i> · on this day they came to the wilderness of Sinai (verse-final sinay) [VERIFIED: SNAPSHOT Exod.19.1 idx7-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(bau_midbar_sinay, t0)</span><br><span class="gloss">= HOLDS(bau-midbar-sinay, t0)</span><br>THE ARRIVAL [EX19-01 CROWN]. ba-chodesh ha-SHELISHI le-TZET bene yisrael — &#x27;in the THIRD month OF THE GOING-OUT&#x27;: the exodus as the calendar&#x27;s zero — and the dating-formula&#x27;s Torah-pair (VERIFIED): this arrival and AARON&#x27;S DEATH (Num 33:38), with the TEMPLE&#x27;s four- hundred-eightieth year the Scripture-third (the Kitzur: the wedding, the atoning death, the house — all clocked from the going-out); the three months the BRIDE&#x27;S WAIT (&#x27;the freed captive does not marry until three months have passed — Israel waited three months to the day they were wedded to the Holy One&#x27;); ba-YOM HA-ZE bau midbar SINAY — &#x27;on THIS day&#x27; (Rashi: &#x27;that the words of Torah be NEW to you, as if given today&#x27;): and the machine closes its longest-armed wire: 3:12&#x27;s sign — &#x27;when you bring the people out, YOU SHALL SERVE GOD ON THIS MOUNTAIN&#x27; — has arrived at its mountain: the commission&#x27;s collateral is on the table.
+</td><td><span class="he">בַּיּוֹם הַזֶּה בָּאוּ מִדְבַּר סִינָי</span> · <i>ba-yom ha-ze bau midbar sinay</i><br><span class="gloss">= day the-ze bau midbar sinay</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The dated arrival; the sign pays.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_19_2 · Exod.19.2 · <span class='expr'>AS_ONE_MAN</span></h3>
+<p><span class="he">וַיִּסְעוּ מֵרְפִידִים וַיָּבֹאוּ מִדְבַּר סִינַי וַיַּחֲנוּ בַּמִּדְבָּר וַיִּחַן־שָׁם יִשְׂרָאֵל נֶגֶד הָהָר</span> · <i>va-yisu me-refidim va-yavou midbar sinay va-yachanu ba-midbar va-yichan-sham yisrael neged ha-har</i> · And they set out from Rephidim, and came to the wilderness of Sinai, and camped in the wilderness — and Israel camped there before the mountain.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּסְע֣וּ מֵרְפִידִ֗ים וַיָּבֹ֨אוּ֙ מִדְבַּ֣ר סִינַ֔י וַֽיַּחֲנ֖וּ בַּמִּדְבָּ֑ר</span> · <i>va-yisu me-refidim va-yavou midbar sinay va-yachanu ba-midbar</i> · and they set out from Rephidim, and came to the wilderness of Sinai, and camped in the wilderness (etnachta on ba-midbar) [VERIFIED: SNAPSHOT Exod.19.2 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּֽחַן שָׁ֥ם יִשְׂרָאֵ֖ל נֶ֥גֶד הָהָֽר</span> · <i>va-yichan-sham yisrael neged ha-har</i> · and Israel camped there before the mountain (verse-final ha-har) [VERIFIED: SNAPSHOT Exod.19.2 idx7-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yichan_sham_yisrael, t0)</span><br><span class="gloss">= HOLDS(and-yichan-there-yisrael, t0)</span><br>THE CAMP [EX19-02 CROWN — THE MARQUEE]. va-yisu me-REFIDIM — the departure-word FULL with both letters (asserted at the build: census-unique — the Ramah&#x27;s roster: the Torah&#x27;s only two full-full Rephidims are the arrival 17:1 and the departure here; the name that thinned at the battle leaves whole — Rashi: &#x27;their departure from Rephidim was in REPENTANCE, like their arrival at Sinai&#x27;); va- yachanu ba-midbar — &#x27;and THEY camped&#x27; (plural) — VA-YICHAN sham YISRAEL neged ha-har — &#x27;and ISRAEL CAMPED&#x27; (SINGULAR): the verse re- camps the nation in one grammatical body, and the singular camp- verb&#x27;s Torah-census is exactly THREE (VERIFIED): ISAAC in the valley (Gen 26:17), JACOB before Shechem (Gen 33:18), ISRAEL here — Rashi from the mirror (the Mekhilta beneath him): &#x27;AS ONE MAN, WITH ONE HEART — but all the other campings were in complaints and in quarrels&#x27;: two patriarchs who camped alone, and then a nation camping as ONE — the machine files the grammar as the chapter&#x27;s precondition: the covenant will be offered to a singular.
+</td><td><span class="he">וַיִּחַן־שָׁם יִשְׂרָאֵל נֶגֶד הָהָר</span> · <i>va-yichan-sham yisrael neged ha-har</i><br><span class="gloss">= and-yichan-there yisrael neged the-har</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The singular camp; the healed spelling.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_19_3 · Exod.19.3 · <span class='expr'>HOUSE_OF_JACOB_SONS_OF_ISRAEL</span></h3>
+<p><span class="he">וּמֹשֶׁה עָלָה אֶל־הָאֱלֹהִים וַיִּקְרָא אֵלָיו יְהוָה מִן־הָהָר לֵאמֹר כֹּה תֹאמַר לְבֵית יַעֲקֹב וְתַגֵּיד לִבְנֵי יִשְׂרָאֵל</span> · <i>u-moshe ala el-ha-Elohim va-yiqra elay-v YHWH min-ha-har le-mor ko tomar le-vet yaaqov ve-taged li-vene yisrael</i> · And Moses went up to God; and the LORD called to him from the mountain, saying: So shall you say to the house of Jacob, and tell the sons of Israel.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּמֹשֶׁ֥ה עָלָ֖ה אֶל הָאֱלֹהִ֑ים</span> · <i>u-moshe ala el-ha-Elohim</i> · and Moses went up to God; and the LORD called to him from the mountain, saying (etnachta on ha-Elohim) [VERIFIED: SNAPSHOT Exod.19.3 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּקְרָ֨א אֵלָ֤יו יְהוָה֙ מִן הָהָ֣ר לֵאמֹ֔ר כֹּ֤ה תֹאמַר֙ לְבֵ֣ית יַעֲקֹ֔ב וְתַגֵּ֖יד לִבְנֵ֥י יִשְׂרָאֵֽל</span> · <i>va-yiqra elay-v YHWH min-ha-har le-mor ko tomar le-vet yaaqov ve-taged li-vene yisrael</i> · so shall you say to the house of Jacob, and tell the sons of Israel (verse-final yisrael) [VERIFIED: SNAPSHOT Exod.19.3 idx4-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(u_moshe_ala_el_ha_elohim, t0)</span><br><span class="gloss">= HOLDS(and-Moses-ala-to-the-God, t0)</span><br>THE COMMISSION [EX19-03 CROWN]. u-moshe ALA el-ha-ELOHIM — &#x27;and Moses WENT UP to God&#x27; (the chapter&#x27;s elevator begins: Moses will climb and descend this mountain three times in-span — the machine counts the trips); va-yiqra elav YHWH min-ha-har — the call from the mountain (3:4&#x27;s call from the bush upgraded to the summit); KO TOMAR le-vet YAAQOV — &#x27;so shall you SAY to the house of Jacob&#x27; — VE-TAGED li-vne YISRAEL — &#x27;and TELL the sons of Israel&#x27;: the tell-word FULL with yod, the Torah&#x27;s ONLY plene tell-form (VERIFIED; the Ramah: every other lean) — the Kitzur: the yod = THE TEN (&#x27;that he tell them the ten utterances&#x27;); Lekach Tov: &#x27;SAY to the house of Jacob — THE WOMEN, gently; TELL the sons of Israel — THE MEN, words hard as SINEWS&#x27; (Shabbat&#x27;s pair: va-yashev restores, va-yaged is sinew): one letter carrying either the Decalogue or the toughness — the corpus files the address-order the readings prize: the women first.
+</td><td><span class="he">כֹּה תֹאמַר לְבֵית יַעֲקֹב וְתַגֵּיד לִבְנֵי יִשְׂרָאֵל</span> · <i>ko tomar le-vet yaaqov ve-taged li-vene yisrael</i><br><span class="gloss">= ko tomar to-vet yaaqov and-taged to-me-vene yisrael</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The first ascent; the two audiences.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_19_4 · Exod.19.4 · <span class='expr'>ON_EAGLES_WINGS</span></h3>
+<p><span class="he">אַתֶּם רְאִיתֶם אֲשֶׁר עָשִׂיתִי לְמִצְרָיִם וָאֶשָּׂא אֶתְכֶם עַל־כַּנְפֵי נְשָׁרִים וָאָבִא אֶתְכֶם אֵלָי</span> · <i>atem reitem asher asiti le-mitzrayim va-esa et-khem al-kanfe nesharim va-avi et-khem el-y</i> · You have seen what I did to Egypt; and I bore you on eagles&#x27; wings, and brought you to Me.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אַתֶּ֣ם רְאִיתֶ֔ם אֲשֶׁ֥ר עָשִׂ֖יתִי לְמִצְרָ֑יִם</span> · <i>atem reitem asher asiti le-mitzrayim</i> · you have seen what I did to Egypt (etnachta on le-mitzrayim) [VERIFIED: SNAPSHOT Exod.19.4 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וָאֶשָּׂ֤א אֶתְכֶם֙ עַל כַּנְפֵ֣י נְשָׁרִ֔ים וָאָבִ֥א אֶתְכֶ֖ם אֵלָֽי</span> · <i>va-esa et-khem al-kanfe nesharim va-avi et-khem el-y</i> · and I bore you on eagles&#x27; wings, and brought you to Me (verse-final el-y) [VERIFIED: SNAPSHOT Exod.19.4 idx5-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_esa_etkhem_al_kanfe_nesharim, t0)</span><br><span class="gloss">= HOLDS(and-esa-etkhem-upon-kanfe-nesharim, t0)</span><br>THE WINGS [EX19-04 + EX19-05 CROWNS]. ATEM REITEM asher asiti le- mitzrayim — &#x27;YOU have seen what I did to Egypt&#x27;: the verse-opening YOU — the Torah&#x27;s three (VERIFIED verse-initial census): Pharaoh&#x27;s &#x27;YOU — go get your straw&#x27; (5:11), the eagle-verse, Deuteronomy&#x27;s &#x27;YOU are standing&#x27; (with Isaiah&#x27;s &#x27;YOU are My witnesses&#x27; the Scripture-fourth — the Kitzur: the straw-verse ANSWERED by this one: &#x27;because Egypt would not give straw — you have seen what I did to Egypt&#x27;); va-ESA etkhem al-KANFE NESHARIM — the eagle that carries its young on its back (the readings, named-only); VA-AVI etkhem ELAI — &#x27;and I BROUGHT YOU TO ME&#x27;: the brought-word LEAN, and its Torah- twin is the SERVANT AT THE WELL (VERIFIED pair: Gen 24:42&#x27;s bridal errand) — the Torah&#x27;s two lean I-cames are BOTH COURTSHIPS — the Kitzur unrolling the wedding: money (the spoil), document (the Torah — morasha read MEORASA, betrothed), and the coming (Hosea&#x27;s threefold I-will-betroth-you named): the machine notes the addressee of the fetching: not to Sinai, not to the land — TO ME.
+</td><td><span class="he">וָאֶשָּׂא אֶתְכֶם עַל־כַּנְפֵי נְשָׁרִים וָאָבִא אֶתְכֶם אֵלָי</span> · <i>va-esa et-khem al-kanfe nesharim va-avi et-khem el-y</i><br><span class="gloss">= and-esa khem upon-kanfe nesharim and-avi khem to-y</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The eagle retrospective; the courtship.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_19_5 · Exod.19.5 · <span class='expr'>IF_YOU_WILL_HEAR</span></h3>
+<p><span class="he">וְעַתָּה אִם־שָׁמוֹעַ תִּשְׁמְעוּ בְּקֹלִי וּשְׁמַרְתֶּם אֶת־בְּרִיתִי וִהְיִיתֶם לִי סְגֻלָּה מִכָּל־הָעַמִּים כִּי־לִי כָּל־הָאָרֶץ</span> · <i>ve-ata im-shamoa tishmu be-qoli-y u-shemartem et-beriti-y vi-heyitem li-y segula mi-kal-ha-amim ki-li-y kal-ha-aretz</i> · And now, if you will surely hear My voice, and keep My covenant — then you shall be to Me a treasure out of all the peoples, for all the earth is Mine.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְעַתָּ֗ה אִם שָׁמ֤וֹעַ תִּשְׁמְעוּ֙ בְּקֹלִ֔י וּשְׁמַרְתֶּ֖ם אֶת בְּרִיתִ֑י</span> · <i>ve-ata im-shamoa tishmu be-qoli-y u-shemartem et-beriti-y</i> · and now, if you will surely hear My voice, and keep My covenant (etnachta on beriti-y) [VERIFIED: SNAPSHOT Exod.19.5 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וִהְיִ֨יתֶם לִ֤י סְגֻלָּה֙ מִכָּל הָ֣עַמִּ֔ים כִּי לִ֖י כָּל הָאָֽרֶץ</span> · <i>vi-heyitem li-y segula mi-kal-ha-amim ki-li-y kal-ha-aretz</i> · then you shall be to Me a treasure out of all the peoples, for all the earth is Mine (verse-final ha-aretz) [VERIFIED: SNAPSHOT Exod.19.5 idx8-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(im_shamoa_tishmeu_be_qoli))</span><br><span class="gloss">= DECLARE(the-LORD, LET(if-shamoa-tishmeu-in-qoli))</span><br>THE OFFER [EX19-06 CROWN]. ve-ata IM-SHAMOA TISHMEU be-qoli — &#x27;if you will SURELY HEAR My voice&#x27;: the card pushed — THE COVENANT OFFER, the corpus&#x27;s largest conditional (and the doubled hear-verb is MARAH&#x27;S: 15:26&#x27;s im-shamoa tishma, the statute-station&#x27;s perpetual card, RE-SCALED from health-law to election — the machine wires the echo: the grammar rehearsed at the spring returns at the mountain); u-shemartem et-BERITI — &#x27;and keep My COVENANT&#x27; (the noun&#x27;s first second-person plural assignment: Noah&#x27;s and Abraham&#x27;s covenants were granted; this one is OFFERED for keeping); vi-heyitem li SEGULA mi-kol-ha-amim — &#x27;a TREASURE out of all the peoples&#x27;: the treasure-word&#x27;s Torah-four (VERIFIED): the offer and its three Deuteronomy ratifications — and the FINAL LETTERS of the treasure- clause spell the letters of MILA, circumcision (asserted at the build: the covenant-mark already in the flesh signing the covenant- offer&#x27;s word-ends); ki-li KOL-HA-ARETZ — &#x27;for ALL THE EARTH IS MINE&#x27;: the election framed inside ownership of everything (the readings, named-only).
+</td><td><span class="he">אִם־שָׁמוֹעַ תִּשְׁמְעוּ בְּקֹלִי וּשְׁמַרְתֶּם אֶת־בְּרִיתִי</span> · <i>im-shamoa tishmu be-qoli-y u-shemartem et-beriti-y</i><br><span class="gloss">= if-shamoa tishmu in-qoli-y and-shemartem beriti-y</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The covenant offer pushed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_19_6 · Exod.19.6 · <span class='expr'>A_KINGDOM_OF_PRIESTS</span></h3>
+<p><span class="he">וְאַתֶּם תִּהְיוּ־לִי מַמְלֶכֶת כֹּהֲנִים וְגוֹי קָדוֹשׁ אֵלֶּה הַדְּבָרִים אֲשֶׁר תְּדַבֵּר אֶל־בְּנֵי יִשְׂרָאֵל</span> · <i>ve-atem tihyu-li-y mamlekhet kohanim ve-goy qadosh ele ha-devarim asher tedaber el-bene yisrael</i> · And you — you shall be to Me a kingdom of priests and a holy nation; these are the words which you shall speak to the sons of Israel.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאַתֶּ֧ם תִּהְיוּ לִ֛י מַמְלֶ֥כֶת כֹּהֲנִ֖ים וְג֣וֹי קָד֑וֹשׁ</span> · <i>ve-atem tihyu-li-y mamlekhet kohanim ve-goy qadosh</i> · and you — you shall be to Me a kingdom of priests and a holy nation (etnachta on qadosh) [VERIFIED: SNAPSHOT Exod.19.6 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֵ֚לֶּה הַדְּבָרִ֔ים אֲשֶׁ֥ר תְּדַבֵּ֖ר אֶל בְּנֵ֥י יִשְׂרָאֵֽל</span> · <i>ele ha-devarim asher tedaber el-bene yisrael</i> · these are the words which you shall speak to the sons of Israel (verse-final yisrael) [VERIFIED: SNAPSHOT Exod.19.6 idx7-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(mamlekhet_kohanim_ve_goy_qadosh, t0)</span><br><span class="gloss">= HOLDS(mamlekhet-kohanim-and-goy-qadosh, t0)</span><br>THE TITLE [EX19-07 CROWN]. ve-atem tihyu-li MAMLEKHET KOHANIM — &#x27;a KINGDOM OF PRIESTS&#x27;: the Kitzur — &#x27;had Israel merited, ALL of them would be HIGH PRIESTS; and in the time to come it RETURNS: and you shall be called the priests of the LORD&#x27; (the office held nation- wide for one chapter, before Aaron&#x27;s line inherits it — the machine notes the sequence: the offer precedes the priesthood); VE-GOY QADOSH — &#x27;and a holy NATION&#x27;: the and-a-nation word Torah-unique (VERIFIED) — the Kitzur&#x27;s conditional file: &#x27;if you are the holy nation — a nation that knew you not shall RUN to you; if not — a great nation shall be ROUSED from the ends of the earth&#x27; (Isaiah&#x27;s runners against Jeremiah&#x27;s rousing: the one ve-goy holding the fork); ELE ha-devarim — &#x27;THESE are the words&#x27;: the message sealed verbatim (the readings: no more and no less — named-only).
+</td><td><span class="he">וְאַתֶּם תִּהְיוּ־לִי מַמְלֶכֶת כֹּהֲנִים וְגוֹי קָדוֹשׁ</span> · <i>ve-atem tihyu-li-y mamlekhet kohanim ve-goy qadosh</i><br><span class="gloss">= and-atem tihyu-to-me-y mamlekhet kohanim and-goy qadosh</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The office offered to all.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_19_7 · Exod.19.7 · <span class='expr'>BEFORE_THE_ELDERS</span></h3>
+<p><span class="he">וַיָּבֹא מֹשֶׁה וַיִּקְרָא לְזִקְנֵי הָעָם וַיָּשֶׂם לִפְנֵיהֶם אֵת כָּל־הַדְּבָרִים הָאֵלֶּה אֲשֶׁר צִוָּהוּ יְהוָה</span> · <i>va-yavo moshe va-yiqra le-ziqne ha-am va-yasem li-fene-hem et kal-ha-devarim ha-ele asher tziva-hu YHWH</i> · And Moses came, and called for the elders of the people — and set before them all these words which the LORD had commanded him.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּבֹ֣א מֹשֶׁ֔ה וַיִּקְרָ֖א לְזִקְנֵ֣י הָעָ֑ם</span> · <i>va-yavo moshe va-yiqra le-ziqne ha-am</i> · and Moses came, and called for the elders of the people (etnachta on ha-am) [VERIFIED: SNAPSHOT Exod.19.7 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיָּ֣שֶׂם לִפְנֵיהֶ֗ם אֵ֚ת כָּל הַדְּבָרִ֣ים הָאֵ֔לֶּה אֲשֶׁ֥ר צִוָּ֖הוּ יְהוָֽה</span> · <i>va-yasem li-fene-hem et kal-ha-devarim ha-ele asher tziva-hu YHWH</i> · and set before them all these words which the LORD had commanded him (verse-final YHWH) [VERIFIED: SNAPSHOT Exod.19.7 idx5-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yasem_lifnehem, t0)</span><br><span class="gloss">= HOLDS(and-yasem-lifnehem, t0)</span><br>THE TABLING. va-yavo moshe va-yiqra le-ZIQNE ha-am — the ELDERS convened (the bench of 3:16 and 4:29, the witnesses of 17:6 — the corpus&#x27;s standing quorum); va-YASEM lifnehem et kol-ha-devarim — &#x27;and SET BEFORE THEM all these words&#x27;: the offer laid out like a table (the readings on set-before as arranged-meal, named-only — the machine notes the procedure: the covenant is TABLED, not imposed: the nation must answer before the mountain speaks).
+</td><td><span class="he">וַיָּשֶׂם לִפְנֵיהֶם אֵת כָּל־הַדְּבָרִים הָאֵלֶּה</span> · <i>va-yasem li-fene-hem et kal-ha-devarim ha-ele</i><br><span class="gloss">= and-yasem to-me-fene-hem et kal-the-devarim the-ele</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The offer tabled.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_19_8 · Exod.19.8 · <span class='expr'>ALL_THAT_THE_LORD_HAS_SPOKEN</span></h3>
+<p><span class="he">וַיַּעֲנוּ כָל־הָעָם יַחְדָּו וַיֹּאמְרוּ כֹּל אֲשֶׁר־דִּבֶּר יְהוָה נַעֲשֶׂה וַיָּשֶׁב מֹשֶׁה אֶת־דִּבְרֵי הָעָם אֶל־יְהוָה</span> · <i>va-yaanu khal-ha-am yachdav va-yomru kol asher-diber YHWH naase va-yashev moshe et-divre ha-am el-YHWH</i> · And all the people answered together, and said: All that the LORD has spoken, we will do. And Moses brought back the words of the people to the LORD.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּעֲנ֨וּ כָל הָעָ֤ם יַחְדָּו֙ וַיֹּ֣אמְר֔וּ כֹּ֛ל אֲשֶׁר דִּבֶּ֥ר יְהוָ֖ה נַעֲשֶׂ֑ה</span> · <i>va-yaanu khal-ha-am yachdav va-yomru kol asher-diber YHWH naase</i> · and all the people answered together, and said: all that the LORD has spoken, we will do (etnachta on naase) [VERIFIED: SNAPSHOT Exod.19.8 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיָּ֧שֶׁב מֹשֶׁ֛ה אֶת דִּבְרֵ֥י הָעָ֖ם אֶל יְהוָֽה</span> · <i>va-yashev moshe et-divre ha-am el-YHWH</i> · and Moses brought back the words of the people to the LORD (verse-final YHWH) [VERIFIED: SNAPSHOT Exod.19.8 idx10-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(im_shamoa_tishmeu_be_qoli, t1)</span><br><span class="gloss">= RESULT: HOLDS(if-shamoa-tishmeu-in-qoli, t1)</span><br>THE ACCEPTANCE. va-yaanu KOL-ha-am YACHDAV — &#x27;and ALL the people answered TOGETHER&#x27; (the one-heart camp of 19:2 speaking with its one mouth); KOL ASHER DIBER YHWH NAASE — &#x27;ALL that the LORD has spoken, WE WILL DO&#x27; (asserted): the offer-card POPS on the nation&#x27;s unanimous yes — the corpus&#x27;s largest acceptance (the machine books the exchange carefully: the CARD closes — offer made, answer given — while the accepted CONDITION becomes standing world-fact: the covenant&#x27;s if-you-hear now runs perpetual, Marah-style; the readings on answering before hearing the terms arm 24:7&#x27;s naase-ve-nishma, named-only); va-YASHEV moshe et-divre ha-am el-YHWH — &#x27;and Moses BROUGHT BACK the words&#x27;: the restore-verb (Shabbat&#x27;s pair: va- yashev, words that restore — the prophet as two-way courier, and the machine notes the protocol: the Omniscient is TOLD the answer, because covenant is procedure, not telepathy).
+</td><td><span class="he">וַיַּעֲנוּ כָל־הָעָם יַחְדָּו וַיֹּאמְרוּ כֹּל אֲשֶׁר־דִּבֶּר יְהוָה נַעֲשֶׂה</span> · <i>va-yaanu khal-ha-am yachdav va-yomru kol asher-diber YHWH naase</i><br><span class="gloss">= and-yaanu khal-the-am yachdav and-yomru all which-diber the-LORD naase</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The card pops; the unanimous yes.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_19_9 · Exod.19.9 · <span class='expr'>THE_THICK_CLOUD</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה הִנֵּה אָנֹכִי בָּא אֵלֶיךָ בְּעַב הֶעָנָן בַּעֲבוּר יִשְׁמַע הָעָם בְּדַבְּרִי עִמָּךְ וְגַם־בְּךָ יַאֲמִינוּ לְעוֹלָם וַיַּגֵּד מֹשֶׁה אֶת־דִּבְרֵי הָעָם אֶל־יְהוָה</span> · <i>va-yomer YHWH el-moshe hine anokhi ba ele-kha be-av he-anan ba-avur yishma ha-am be-dabri-y ima-khe ve-gam-be-kha yaaminu le-olam va-yaged moshe et-divre ha-am el-YHWH</i> · And the LORD said to Moses: Behold, I come to you in the thickness of the cloud, that the people may hear in My speaking with you, and also believe in you forever. And Moses told the words of the people to the LORD.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר יְהוָ֜ה אֶל מֹשֶׁ֗ה הִנֵּ֨ה אָנֹכִ֜י בָּ֣א אֵלֶיךָ֮ בְּעַ֣ב הֶֽעָנָן֒ בַּעֲב֞וּר יִשְׁמַ֤ע הָעָם֙ בְּדַבְּרִ֣י עִמָּ֔ךְ וְגַם בְּךָ֖ יַאֲמִ֣ינוּ לְעוֹלָ֑ם</span> · <i>va-yomer YHWH el-moshe hine anokhi ba ele-kha be-av he-anan ba-avur yishma ha-am be-dabri-y ima-khe ve-gam-be-kha yaaminu le-olam</i> · and the LORD said to Moses: behold, I come to you in the thickness of the cloud, that the people may hear in My speaking with you, and also believe in you forever (etnachta on le-olam) [VERIFIED: SNAPSHOT Exod.19.9 idx18 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּגֵּ֥ד מֹשֶׁ֛ה אֶת דִּבְרֵ֥י הָעָ֖ם אֶל יְהוָֽה</span> · <i>va-yaged moshe et-divre ha-am el-YHWH</i> · and Moses told the words of the people to the LORD (verse-final YHWH) [VERIFIED: SNAPSHOT Exod.19.9 idx19-25]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(baavur_yishma_ha_am, t0)</span><br><span class="gloss">= HOLDS(baavur-yishma-the-am, t0)</span><br>THE FOREVER [EX19-08 CROWN]. hine anokhi BA elekha be-AV he-ANAN — &#x27;I come to you in the THICKNESS of the cloud&#x27; (the Presence announcing its own opacity: heard, not seen — the readings named- only); baavur YISHMA ha-am be-dabri IMAKH — &#x27;that the people may HEAR in My speaking WITH YOU&#x27; (prophecy certified by public audition: the corpus&#x27;s epistemology moment); ve-gam bekha YAAMINU LE-OLAM — &#x27;and also BELIEVE IN YOU FOREVER&#x27;: the forever-word FULL — exactly TWICE in the Torah (VERIFIED): the faith in Moses here and the ban&#x27;s clock (&#x27;you shall not seek their peace... FOREVER,&#x27; Deut 23:7 — Ammon and Moab): the two full eternities, trust without end and a door shut without end (the ten lean forevers asserted; the Kitzur&#x27;s midrash carried: &#x27;in the days of the Messiah MOSES COMES, leading the wilderness generation&#x27; — the forever-believed prophet returns with his forever-flock); va-YAGED moshe — and this report uses the SINEW-verb (19:3&#x27;s hard-word: the readings on what needed hardness here, named-only).
+</td><td><span class="he">בַּעֲבוּר יִשְׁמַע הָעָם בְּדַבְּרִי עִמָּךְ וְגַם־בְּךָ יַאֲמִינוּ לְעוֹלָם</span> · <i>ba-avur yishma ha-am be-dabri-y ima-khe ve-gam-be-kha yaaminu le-olam</i><br><span class="gloss">= in-the-avur yishma the-am in-dabri-y ima-khe and-also-in-kha yaaminu to-olam</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The two full forevers.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_19_10 · Exod.19.10 · <span class='expr'>SANCTIFY_THEM</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה לֵךְ אֶל־הָעָם וְקִדַּשְׁתָּם הַיּוֹם וּמָחָר וְכִבְּסוּ שִׂמְלֹתָם</span> · <i>va-yomer YHWH el-moshe lekh el-ha-am ve-qidashta-m ha-yom u-machar ve-khibsu simlota-m</i> · And the LORD said to Moses: Go to the people, and sanctify them today and tomorrow — and let them wash their garments.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר יְהוָ֤ה אֶל מֹשֶׁה֙ לֵ֣ךְ אֶל הָעָ֔ם וְקִדַּשְׁתָּ֥ם הַיּ֖וֹם וּמָחָ֑ר</span> · <i>va-yomer YHWH el-moshe lekh el-ha-am ve-qidashta-m ha-yom u-machar</i> · and the LORD said to Moses: go to the people, and sanctify them today and tomorrow (etnachta on u-machar) [VERIFIED: SNAPSHOT Exod.19.10 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְכִבְּס֖וּ שִׂמְלֹתָֽם</span> · <i>ve-khibsu simlota-m</i> · and let them wash their garments (verse-final simlota-m) [VERIFIED: SNAPSHOT Exod.19.10 idx10-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(ve_qidashtam_ha_yom_u_machar))</span><br><span class="gloss">= DECLARE(the-LORD, LET(and-qidashtam-the-day-and-machar))</span><br>THE PREPARATION. lekh el-ha-am ve-QIDASHTAM ha-yom u-MACHAR — &#x27;sanctify them TODAY AND TOMORROW&#x27;: the card pushed — the corpus&#x27;s first commanded PURIFICATION REGIMEN (holiness with a calendar: two days of laundry and abstention before one morning of thunder); ve- khibsu SIMLOTAM — &#x27;let them wash their GARMENTS&#x27;: the machine notes the medium: the covenant&#x27;s first demanded act after &#x27;we will do&#x27; is laundry — the readings on immersion beneath the washing, named-only; and the schedule arms 19:16&#x27;s third morning.
+</td><td><span class="he">לֵךְ אֶל־הָעָם וְקִדַּשְׁתָּם הַיּוֹם וּמָחָר וְכִבְּסוּ שִׂמְלֹתָם</span> · <i>lekh el-ha-am ve-qidashta-m ha-yom u-machar ve-khibsu simlota-m</i><br><span class="gloss">= lekh to-the-am and-qidashta-m day and-machar and-khibsu simlota-m</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The preparation card pushed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_19_11 · Exod.19.11 · <span class='expr'>READY_FOR_THE_THIRD_DAY</span></h3>
+<p><span class="he">וְהָיוּ נְכֹנִים לַיּוֹם הַשְּׁלִישִׁי כִּי בַּיּוֹם הַשְּׁלִישִׁי יֵרֵד יְהוָה לְעֵינֵי כָל־הָעָם עַל־הַר סִינָי</span> · <i>ve-hayu nekhonim la-yom ha-shelishi ki ba-yom ha-shelishi yered YHWH le-ene khal-ha-am al-har sinay</i> · And they shall be ready for the third day — for on the third day the LORD will descend, before the eyes of all the people, on mount Sinai.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהָי֥וּ נְכֹנִ֖ים לַיּ֣וֹם הַשְּׁלִישִׁ֑י</span> · <i>ve-hayu nekhonim la-yom ha-shelishi</i> · and they shall be ready for the third day (etnachta on ha-shelishi) [VERIFIED: SNAPSHOT Exod.19.11 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּ֣י בַּיּ֣וֹם הַשְּׁלִישִׁ֗י יֵרֵ֧ד יְהוָ֛ה לְעֵינֵ֥י כָל הָעָ֖ם עַל הַ֥ר סִינָֽי</span> · <i>ki ba-yom ha-shelishi yered YHWH le-ene khal-ha-am al-har sinay</i> · for on the third day the LORD will descend, before the eyes of all the people, on mount Sinai (verse-final sinay) [VERIFIED: SNAPSHOT Exod.19.11 idx4-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(yered_YHWH_le_ene_khol_ha_am, t0)</span><br><span class="gloss">= HOLDS(yered-the-LORD-to-ene-all-the-am, t0)</span><br>THE FORECAST [EX19-13]. ve-hayu NEKHONIM la-yom ha-SHELISHI — &#x27;READY for the THIRD day&#x27;; ki ba-yom ha-shelishi YERED YHWH le-ENE KHOL-HA- AM al-HAR SINAY — &#x27;the LORD will DESCEND, before the EYES OF ALL THE PEOPLE&#x27;: the descent pre-announced with its audience clause (16:10&#x27;s glory appeared to the congregation; 19:11 promises descent WITNESSED BY EVERY EYE — the corpus&#x27;s maximum-publicity event, armed for 19:20); and the letter-file&#x27;s DIVERGENCE filed openly (asserted at the build): MS with the Ramah rule this verse&#x27;s second third-word the Torah&#x27;s ONE lean shelishi — the SNAPSHOT writes both full: tradition vs SNAPSHOT, the observation recorded, the stream standing (the corpus&#x27;s dual-track law: divergences are data, not defeats).
+</td><td><span class="he">כִּי בַּיּוֹם הַשְּׁלִישִׁי יֵרֵד יְהוָה לְעֵינֵי כָל־הָעָם עַל־הַר סִינָי</span> · <i>ki ba-yom ha-shelishi yered YHWH le-ene khal-ha-am al-har sinay</i><br><span class="gloss">= when day the-shelishi yered the-LORD to-ene khal-the-am upon-har sinay</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The descent forecast.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_19_12 · Exod.19.12 · <span class='expr'>FENCE_THE_PEOPLE</span></h3>
+<p><span class="he">וְהִגְבַּלְתָּ אֶת־הָעָם סָבִיב לֵאמֹר הִשָּׁמְרוּ לָכֶם עֲלוֹת בָּהָר וּנְגֹעַ בְּקָצֵהוּ כָּל־הַנֹּגֵעַ בָּהָר מוֹת יוּמָת</span> · <i>ve-higbalta et-ha-am saviv le-mor hishamru la-khem alot ba-har u-negoa be-qatze-hu kal-ha-nogea ba-har mot yumat</i> · And you shall set bounds for the people round about, saying: Guard yourselves against going up into the mountain, or touching its edge; whoever touches the mountain shall surely be put to death.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהִגְבַּלְתָּ֤ אֶת הָעָם֙ סָבִ֣יב לֵאמֹ֔ר הִשָּׁמְר֥וּ לָכֶ֛ם עֲל֥וֹת בָּהָ֖ר וּנְגֹ֣עַ בְּקָצֵ֑הוּ</span> · <i>ve-higbalta et-ha-am saviv le-mor hishamru la-khem alot ba-har u-negoa be-qatze-hu</i> · and you shall set bounds for the people round about, saying: guard yourselves against going up into the mountain, or touching its edge (etnachta on be-qatze-hu) [VERIFIED: SNAPSHOT Exod.19.12 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כָּל הַנֹּגֵ֥עַ בָּהָ֖ר מ֥וֹת יוּמָֽת</span> · <i>kal-ha-nogea ba-har mot yumat</i> · whoever touches the mountain shall surely be put to death (verse-final yumat) [VERIFIED: SNAPSHOT Exod.19.12 idx11-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(ve_higbalta_et_ha_am))</span><br><span class="gloss">= DECLARE(the-LORD, LET(and-higbalta-the-am))</span><br>THE FENCE. VE-HIGBALTA et-ha-am SAVIV — &#x27;and you shall SET BOUNDS for the people round about&#x27;: the card pushed — the corpus&#x27;s second spatial law (16:29 fenced the Sabbath&#x27;s space; 19:12 fences the mountain&#x27;s: holiness as geometry again — but INVERTED: the Sabbath- fence kept each man IN his place; Sinai&#x27;s keeps every man OUT of one); HISHAMRU lakhem ALOT ba-har u-negoa be-QATZEHU — &#x27;guard yourselves against going UP... or touching its EDGE&#x27; (the perimeter drawn at the hem, not the summit); kol-ha-nogea ba-har MOT YUMAT — the death-formula: the mountain is briefly the deadliest object in the corpus — the machine notes the paradox it files: the summit every soul will crave is fatal to approach: nearness itself becomes the regulated substance.
+</td><td><span class="he">וְהִגְבַּלְתָּ אֶת־הָעָם סָבִיב לֵאמֹר</span> · <i>ve-higbalta et-ha-am saviv le-mor</i><br><span class="gloss">= and-higbalta the-am saviv to-mor</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The fence card pushed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_19_13 · Exod.19.13 · <span class='expr'>WHEN_THE_HORN_DRAWS_OUT</span></h3>
+<p><span class="he">לֹא־תִגַּע בּוֹ יָד כִּי־סָקוֹל יִסָּקֵל אוֹ־יָרֹה יִיָּרֶה אִם־בְּהֵמָה אִם־אִישׁ לֹא יִחְיֶה בִּמְשֹׁךְ הַיֹּבֵל הֵמָּה יַעֲלוּ בָהָר</span> · <i>lo-tiga b-o yad ki-saqol yisaqel o-yaro yiyare im-behema im-ish lo yichye bi-meshokh ha-yovel hema yaalu va-har</i> · No hand shall touch him, but he shall surely be stoned, or surely shot; whether beast or man, it shall not live. When the ram&#x27;s horn draws out — they shall come up on the mountain.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">לֹא תִגַּ֨ע בּ֜וֹ יָ֗ד כִּֽי סָק֤וֹל יִסָּקֵל֙ אוֹ יָרֹ֣ה יִיָּרֶ֔ה אִם בְּהֵמָ֥ה אִם אִ֖ישׁ לֹ֣א יִחְיֶ֑ה</span> · <i>lo-tiga b-o yad ki-saqol yisaqel o-yaro yiyare im-behema im-ish lo yichye</i> · no hand shall touch him, but he shall surely be stoned, or surely shot; whether beast or man, it shall not live (etnachta on yichye) [VERIFIED: SNAPSHOT Exod.19.13 idx15 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">בִּמְשֹׁךְ֙ הַיֹּבֵ֔ל הֵ֖מָּה יַעֲל֥וּ בָהָֽר</span> · <i>bi-meshokh ha-yovel hema yaalu va-har</i> · when the ram&#x27;s horn draws out — they shall come up on the mountain (verse-final va-har) [VERIFIED: SNAPSHOT Exod.19.13 idx16-20]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(bimshokh_ha_yovel_hema_yaalu, t0)</span><br><span class="gloss">= HOLDS(bimshokh-the-yovel-hema-yaalu, t0)</span><br>THE PROTOCOL [EX19-10 CROWN]. lo-tiga BO yad — &#x27;no HAND shall touch him&#x27; (even the executioners keep the distance: the breacher is removed by REMOTE means); ki-SAQOL YISAQEL o-yaro yiyare — &#x27;surely STONED, or surely SHOT&#x27;: and the surely-stoned doubling stands exactly TWICE in the Torah (VERIFIED adjacency): the mountain- toucher and the GORING OX (21:28) — the Kitzur: &#x27;from here we learn FOR THE GENERATIONS: pushing and stoning&#x27; (the courts&#x27; execution- protocol read out of Sinai&#x27;s fence — and the pair&#x27;s own justice: the beast that gores and the man who breaches, one procedure); im-BEHEMA im-ISH — beast or man (the fence reads species-blind); bi-MESHOKH ha-YOVEL hema YAALU — &#x27;when the RAM&#x27;S HORN draws out, THEY shall come up&#x27;: the drawn-out word Torah-unique (asserted; JERICHO its Scripture-twin — the Kitzur: Isaac&#x27;s ram at both horns: &#x27;by the merit of the Torah-giving&#x27;s shofar, Jericho&#x27;s wall fell&#x27;): the machine files the card&#x27;s rare shape: a boundary with its EXPIRY WRITTEN IN — at the long blast, the fence stands down (unfired in- span: the card stays OPEN at close).
+</td><td><span class="he">בִּמְשֹׁךְ הַיֹּבֵל הֵמָּה יַעֲלוּ בָהָר</span> · <i>bi-meshokh ha-yovel hema yaalu va-har</i><br><span class="gloss">= bi-meshokh the-yovel hema yaalu and-har</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The protocol; the release clause.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_19_14 · Exod.19.14 · <span class='expr'>MOSES_SANCTIFIES</span></h3>
+<p><span class="he">וַיֵּרֶד מֹשֶׁה מִן־הָהָר אֶל־הָעָם וַיְקַדֵּשׁ אֶת־הָעָם וַיְכַבְּסוּ שִׂמְלֹתָם</span> · <i>va-yered moshe min-ha-har el-ha-am va-yeqadesh et-ha-am va-yekhabsu simlota-m</i> · And Moses went down from the mountain to the people — and he sanctified the people, and they washed their garments.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֵּ֧רֶד מֹשֶׁ֛ה מִן הָהָ֖ר אֶל הָעָ֑ם</span> · <i>va-yered moshe min-ha-har el-ha-am</i> · and Moses went down from the mountain to the people (etnachta on ha-am) [VERIFIED: SNAPSHOT Exod.19.14 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיְקַדֵּשׁ֙ אֶת הָעָ֔ם וַֽיְכַבְּס֖וּ שִׂמְלֹתָֽם</span> · <i>va-yeqadesh et-ha-am va-yekhabsu simlota-m</i> · and he sanctified the people, and they washed their garments (verse-final simlota-m) [VERIFIED: SNAPSHOT Exod.19.14 idx6-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(ve_qidashtam_ha_yom_u_machar, t1)</span><br><span class="gloss">= RESULT: HOLDS(and-qidashtam-the-day-and-machar, t1)</span><br>THE COMPLIANCE. va-yered moshe min-ha-har el-ha-am — descent two (the elevator&#x27;s count runs); va-YEQADESH et-ha-am va-YEKHABSU simlotam — &#x27;he SANCTIFIED the people, and they WASHED their garments&#x27;: the preparation-card POPS in mirrored verbs (commanded qidashtam/khibsu, narrated yeqadesh/yekhabsu — the machine notes the clean echo: the corpus&#x27;s compliance-grammar at its tightest: command conjugated into deed with only the persons changed).
+</td><td><span class="he">וַיְקַדֵּשׁ אֶת־הָעָם וַיְכַבְּסוּ שִׂמְלֹתָם</span> · <i>va-yeqadesh et-ha-am va-yekhabsu simlota-m</i><br><span class="gloss">= and-yeqadesh the-am and-yekhabsu simlota-m</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The preparation pops.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_19_15 · Exod.19.15 · <span class='expr'>THREE_DAYS</span></h3>
+<p><span class="he">וַיֹּאמֶר אֶל־הָעָם הֱיוּ נְכֹנִים לִשְׁלֹשֶׁת יָמִים אַל־תִּגְּשׁוּ אֶל־אִשָּׁה</span> · <i>va-yomer el-ha-am heu nekhonim li-sheloshet yamim el-tigshu el-isha</i> · And he said to the people: Be ready for three days — approach not a woman.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר֙ אֶל הָעָ֔ם הֱי֥וּ נְכֹנִ֖ים לִשְׁלֹ֣שֶׁת יָמִ֑ים</span> · <i>va-yomer el-ha-am heu nekhonim li-sheloshet yamim</i> · and he said to the people: be ready for three days (etnachta on yamim) [VERIFIED: SNAPSHOT Exod.19.15 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אַֽל תִּגְּשׁ֖וּ אֶל אִשָּֽׁה</span> · <i>el-tigshu el-isha</i> · approach not a woman (verse-final isha) [VERIFIED: SNAPSHOT Exod.19.15 idx7-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(heyu_nekhonim_li_sheloshet_yamim, t0)</span><br><span class="gloss">= HOLDS(heyu-nekhonim-to-me-sheloshet-seas, t0)</span><br>THE TERM [EX19-13]. heyu NEKHONIM li-SHELOSHET yamim — &#x27;be READY for THREE days&#x27;; AL-TIGSHU el-ISHA — &#x27;APPROACH NOT a woman&#x27;: Moses&#x27; relay adds the abstention in words (the readings on the added day — Moses&#x27; own fence upheld by the Presence — named-only: the corpus&#x27;s first recorded stringency-of-the-messenger); the gimel of TIGSHU under the guard-stroke (checked at the build): the machine files the regimen complete: laundry, distance, and days — the body scheduled for revelation.
+</td><td><span class="he">הֱיוּ נְכֹנִים לִשְׁלֹשֶׁת יָמִים אַל־תִּגְּשׁוּ אֶל־אִשָּׁה</span> · <i>heu nekhonim li-sheloshet yamim el-tigshu el-isha</i><br><span class="gloss">= heu nekhonim to-me-sheloshet seas to-tigshu to-isha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The third term.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_19_16 · Exod.19.16 · <span class='expr'>THUNDERS_AND_LIGHTNINGS</span></h3>
+<p><span class="he">וַיְהִי בַיּוֹם הַשְּׁלִישִׁי בִּהְיֹת הַבֹּקֶר וַיְהִי קֹלֹת וּבְרָקִים וְעָנָן כָּבֵד עַל־הָהָר וְקֹל שֹׁפָר חָזָק מְאֹד וַיֶּחֱרַד כָּל־הָעָם אֲשֶׁר בַּמַּחֲנֶה</span> · <i>va-yehi va-yom ha-shelishi bi-heyot ha-boqer va-yehi qolot u-veraqim ve-anan kaved al-ha-har ve-qol shofar chazaq meod va-yecherad kal-ha-am asher ba-machane</i> · And it was on the third day, when the morning was, that there were thunders and lightnings, and a heavy cloud on the mountain, and a shofar-voice exceedingly strong — and all the people that were in the camp trembled.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִי֩ בַיּ֨וֹם הַשְּׁלִישִׁ֜י בִּֽהְיֹ֣ת הַבֹּ֗קֶר וַיְהִי֩ קֹלֹ֨ת וּבְרָקִ֜ים וְעָנָ֤ן כָּבֵד֙ עַל הָהָ֔ר וְקֹ֥ל שֹׁפָ֖ר חָזָ֣ק מְאֹ֑ד</span> · <i>va-yehi va-yom ha-shelishi bi-heyot ha-boqer va-yehi qolot u-veraqim ve-anan kaved al-ha-har ve-qol shofar chazaq meod</i> · and it was on the third day, when the morning was, that there were thunders and lightnings, and a heavy cloud on the mountain, and a shofar-voice exceedingly strong (etnachta on meod) [VERIFIED: SNAPSHOT Exod.19.16 idx15 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֶּחֱרַ֥ד כָּל הָעָ֖ם אֲשֶׁ֥ר בַּֽמַּחֲנֶֽה</span> · <i>va-yecherad kal-ha-am asher ba-machane</i> · and all the people that were in the camp trembled (verse-final ba-machane) [VERIFIED: SNAPSHOT Exod.19.16 idx16-20]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">qolot_u_veraqim(e1); Theme(e1, har-sinay)</span><br><span class="gloss">= qolot-and-veraqim(e1); Theme(e1, har-sinay)</span><br>THE SIGNS [EX19-11 CROWN]. va-yehi va-yom ha-shelishi bi-HEYOT ha- boqer — &#x27;when the morning WAS&#x27;: the being-word Torah-unique lean (VERIFIED at the build) — the Kitzur: &#x27;for then SIX EONS WERE COMPLETE&#x27; (the missing letter as the spent ages); va-yehi QOLOT u-VERAQIM — &#x27;THUNDERS and lightnings&#x27;: THE EVENT — and the thunders- word is DOUBLY LEAN, its Torah-census exactly THREE (VERIFIED): the HAIL twice (9:23&#x27;s thunders-and-hail, 9:28&#x27;s &#x27;thunders of GOD&#x27; that Pharaoh begged to stop) and SINAI — one thinned skeleton from the plague-sky to the Torah-sky: the voices Egypt could not bear are the voices Israel is scheduled to hear; ve-ANAN KAVED al-ha-har — &#x27;a HEAVY cloud&#x27;: the kaved-root ARRIVES AT THE PRESENCE (asserted in- span: the heart, the hands, the caseload — and now the cloud: the weight-word&#x27;s homecoming); ve-qol SHOFAR chazaq meod — the lean shofar (its skeleton-mates asserted: Naphtali&#x27;s fair words, the fair mountain of the itinerary); va-YECHERAD kol-ha-am — &#x27;and all the people TREMBLED&#x27;: the machine opens the fear-ledger the chapter will hand to 20:15-18.
+</td><td><span class="he">וַיְהִי קֹלֹת וּבְרָקִים וְעָנָן כָּבֵד עַל־הָהָר וְקֹל שֹׁפָר חָזָק מְאֹד</span> · <i>va-yehi qolot u-veraqim ve-anan kaved al-ha-har ve-qol shofar chazaq meod</i><br><span class="gloss">= and-yehi qolot and-veraqim and-anan kaved upon-the-har voice shofar chazaq very</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The event; the plague-sky&#x27;s skeleton.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_19_17 · Exod.19.17 · <span class='expr'>TO_MEET_GOD</span></h3>
+<p><span class="he">וַיּוֹצֵא מֹשֶׁה אֶת־הָעָם לִקְרַאת הָאֱלֹהִים מִן־הַמַּחֲנֶה וַיִּתְיַצְּבוּ בְּתַחְתִּית הָהָר</span> · <i>va-yotze moshe et-ha-am li-qerat ha-Elohim min-ha-machane va-yityatzvu be-tachtit ha-har</i> · And Moses brought the people out toward God, out of the camp — and they stationed themselves at the underside of the mountain.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיּוֹצֵ֨א מֹשֶׁ֧ה אֶת הָעָ֛ם לִקְרַ֥את הָֽאֱלֹהִ֖ים מִן הַֽמַּחֲנֶ֑ה</span> · <i>va-yotze moshe et-ha-am li-qerat ha-Elohim min-ha-machane</i> · and Moses brought the people out toward God, out of the camp (etnachta on ha-machane) [VERIFIED: SNAPSHOT Exod.19.17 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּֽתְיַצְּב֖וּ בְּתַחְתִּ֥ית הָהָֽר</span> · <i>va-yityatzvu be-tachtit ha-har</i> · and they stationed themselves at the underside of the mountain (verse-final ha-har) [VERIFIED: SNAPSHOT Exod.19.17 idx8-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yityatzvu_be_tachtit_ha_har, t0)</span><br><span class="gloss">= HOLDS(and-yityatzvu-in-tachtit-the-har, t0)</span><br>THE MUSTER. va-YOTZE moshe et-ha-am LIQRAT ha-ELOHIM — &#x27;and Moses BROUGHT THE PEOPLE OUT TO MEET GOD&#x27; (the exodus-verb hotzi spent on its highest errand: out of Egypt, now out of the CAMP — the machine notes the two goings-out: the first from bondage, this one toward the Bond); va-yityatzvu be-TACHTIT ha-har — &#x27;they stationed themselves at the UNDERSIDE of the mountain&#x27;: the Kitzur carries the tradition whole: &#x27;the mountain was TORN FROM ITS PLACE and held as a mountain OVER a mountain&#x27; (the underside read literally — the wedding canopy or the upturned barrel, the two faces of standing beneath: the readings named-only, the coercion-question with them); the chet&#x27;s silent rest and the dageshed tav (MS with the Ramah, the full yod — checked at the build).
+</td><td><span class="he">וַיִּתְיַצְּבוּ בְּתַחְתִּית הָהָר</span> · <i>va-yityatzvu be-tachtit ha-har</i><br><span class="gloss">= and-yityatzvu in-tachtit the-har</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The muster; the held mountain.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_19_18 · Exod.19.18 · <span class='expr'>THE_MOUNTAIN_SMOKED</span></h3>
+<p><span class="he">וְהַר סִינַי עָשַׁן כֻּלּוֹ מִפְּנֵי אֲשֶׁר יָרַד עָלָיו יְהוָה בָּאֵשׁ וַיַּעַל עֲשָׁנוֹ כְּעֶשֶׁן הַכִּבְשָׁן וַיֶּחֱרַד כָּל־הָהָר מְאֹד</span> · <i>ve-har sinay ashan kul-o mi-pene asher yarad alay-v YHWH ba-esh va-yaal ashan-o ke-eshen ha-kivshan va-yecherad kal-ha-har meod</i> · And mount Sinai smoked, all of it, because the LORD descended on it in fire; and its smoke went up like the smoke of the kiln — and the whole mountain trembled exceedingly.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהַ֤ר סִינַי֙ עָשַׁ֣ן כֻּלּ֔וֹ מִ֠פְּנֵי אֲשֶׁ֨ר יָרַ֥ד עָלָ֛יו יְהוָ֖ה בָּאֵ֑שׁ</span> · <i>ve-har sinay ashan kul-o mi-pene asher yarad alay-v YHWH ba-esh</i> · and mount Sinai smoked, all of it, because the LORD descended on it in fire; and its smoke went up like the smoke of the kiln (etnachta on ba-esh) [VERIFIED: SNAPSHOT Exod.19.18 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּ֤עַל עֲשָׁנוֹ֙ כְּעֶ֣שֶׁן הַכִּבְשָׁ֔ן וַיֶּחֱרַ֥ד כָּל הָהָ֖ר מְאֹֽד</span> · <i>va-yaal ashan-o ke-eshen ha-kivshan va-yecherad kal-ha-har meod</i> · and the whole mountain trembled exceedingly (verse-final meod) [VERIFIED: SNAPSHOT Exod.19.18 idx10-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_har_sinay_ashan_kulo, t0)</span><br><span class="gloss">= HOLDS(and-har-sinay-ashan-kulo, t0)</span><br>THE FIRE. ve-har sinay ASHAN KULO — &#x27;and mount Sinai SMOKED, ALL OF IT&#x27; — mipne asher YARAD alav YHWH ba-ESH — &#x27;because the LORD DESCENDED on it IN FIRE&#x27;: the bush&#x27;s fire (3:2) scaled to the whole mountain (the machine wires the two burnings: the fire that did not consume a shrub now wraps the massif — same mountain, same fire, new magnitude); ke-ESHEN ha-KIVSHAN — &#x27;like the smoke of the KILN&#x27;: the kiln-word&#x27;s third station (asserted from the file: Sodom&#x27;s smoke Gen 19:28, the furnace-soot of the boils 9:8-10, Sinai — the kiln that judged, the kiln that plagued, the kiln that speaks); va-YECHERAD kol-ha-HAR meod — &#x27;the whole MOUNTAIN trembled&#x27;: 19:16&#x27;s verb passed from the people to the rock (the machine notes the contagion: first the camp trembles, then the mountain itself — fear as the meeting&#x27;s shared language).
+</td><td><span class="he">וְהַר סִינַי עָשַׁן כֻּלּוֹ מִפְּנֵי אֲשֶׁר יָרַד עָלָיו יְהוָה בָּאֵשׁ</span> · <i>ve-har sinay ashan kul-o mi-pene asher yarad alay-v YHWH ba-esh</i><br><span class="gloss">= and-har sinay ashan kul-o from-pene which yarad alay-v the-LORD in-the-esh</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The kiln; the trembling spreads.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_19_19 · Exod.19.19 · <span class='expr'>VOICE_FOR_VOICE</span></h3>
+<p><span class="he">וַיְהִי קוֹל הַשּׁוֹפָר הוֹלֵךְ וְחָזֵק מְאֹד מֹשֶׁה יְדַבֵּר וְהָאֱלֹהִים יַעֲנֶנּוּ בְקוֹל</span> · <i>va-yehi qol ha-shofar holekh ve-chazeq meod moshe yedaber ve-ha-Elohim yaane-nu ve-qol</i> · And the voice of the shofar went on, going and strengthening exceedingly; Moses would speak — and God would answer him in a voice.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִי֙ ק֣וֹל הַשּׁוֹפָ֔ר הוֹלֵ֖ךְ וְחָזֵ֣ק מְאֹ֑ד</span> · <i>va-yehi qol ha-shofar holekh ve-chazeq meod</i> · and the voice of the shofar went on, going and strengthening exceedingly (etnachta on meod) [VERIFIED: SNAPSHOT Exod.19.19 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">מֹשֶׁ֣ה יְדַבֵּ֔ר וְהָאֱלֹהִ֖ים יַעֲנֶ֥נּוּ בְקֽוֹל</span> · <i>moshe yedaber ve-ha-Elohim yaane-nu ve-qol</i> · Moses would speak — and God would answer him in a voice (verse-final ve-qol) [VERIFIED: SNAPSHOT Exod.19.19 idx6-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(moshe_yedaber_ve_ha_elohim_yaanenu, t0)</span><br><span class="gloss">= HOLDS(Moses-yedaber-and-the-God-yaanenu, t0)</span><br>THE DIALOGUE [EX19-12 CROWN]. va-yehi qol ha-shofar HOLEKH VE-CHAZEQ meod — &#x27;GOING AND STRENGTHENING exceedingly&#x27;: the pair&#x27;s only Torah station (VERIFIED adjacency) — its Scripture-twin DAVID (&#x27;and David went on going and strengthening&#x27;) — the Kitzur from Eruvin: &#x27;David, who REVEALED his tractate — going and strengthening; Saul, who did not — going and poorer: and so the TORAH, of which it is written going and strengthening&#x27; (the open teacher and the growing voice one idiom — a shofar that swells instead of fading, physics reversed as signature); MOSHE YEDABER ve-ha-ELOHIM YAANENU ve-QOL — &#x27;Moses would SPEAK, and God would ANSWER him in a VOICE&#x27;: the corpus&#x27;s only narrated standing dialogue inside a theophany (iterative verbs: not one exchange but a CHANNEL — the readings on answered-about-the- voice, named-only); the shofar-letter divergence filed (MS&#x27;s nine- lean vs the SNAPSHOT&#x27;s full form here — asserted; the observation stands, the stream stands).
+</td><td><span class="he">מֹשֶׁה יְדַבֵּר וְהָאֱלֹהִים יַעֲנֶנּוּ בְקוֹל</span> · <i>moshe yedaber ve-ha-Elohim yaane-nu ve-qol</i><br><span class="gloss">= Moses yedaber and-the-God yaane-nu voice</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The dialogue inside the storm.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_19_20 · Exod.19.20 · <span class='expr'>THE_DESCENT</span></h3>
+<p><span class="he">וַיֵּרֶד יְהוָה עַל־הַר סִינַי אֶל־רֹאשׁ הָהָר וַיִּקְרָא יְהוָה לְמֹשֶׁה אֶל־רֹאשׁ הָהָר וַיַּעַל מֹשֶׁה</span> · <i>va-yered YHWH al-har sinay el-rosh ha-har va-yiqra YHWH le-moshe el-rosh ha-har va-yaal moshe</i> · And the LORD descended on mount Sinai, to the top of the mountain; and the LORD called Moses to the top of the mountain — and Moses went up.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֵּ֧רֶד יְהוָ֛ה עַל הַ֥ר סִינַ֖י אֶל רֹ֣אשׁ הָהָ֑ר</span> · <i>va-yered YHWH al-har sinay el-rosh ha-har</i> · and the LORD descended on mount Sinai, to the top of the mountain (etnachta on ha-har) [VERIFIED: SNAPSHOT Exod.19.20 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּקְרָ֨א יְהוָ֧ה לְמֹשֶׁ֛ה אֶל רֹ֥אשׁ הָהָ֖ר וַיַּ֥עַל מֹשֶֽׁה</span> · <i>va-yiqra YHWH le-moshe el-rosh ha-har va-yaal moshe</i> · and the LORD called Moses to the top of the mountain — and Moses went up (verse-final moshe) [VERIFIED: SNAPSHOT Exod.19.20 idx8-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">yeridat_YHWH(e2); Agent(e2, YHWH)</span><br><span class="gloss">= yeridat-the-LORD(e2); Agent(e2, the-LORD)</span><br>THE DESCENT. va-YERED YHWH al-har sinay el-ROSH ha-har — &#x27;and the LORD DESCENDED on mount Sinai, to the TOP of the mountain&#x27;: THE EVENT — 19:11&#x27;s forecast pays on schedule (the third day, the promised descent: the corpus&#x27;s most-announced arrival lands exactly as scheduled — the machine notes the ledger: forecast 19:11, performed 19:20, zero variance); Rashi from the mirror (the Mekhilta): &#x27;He bent the upper heavens and the lower and spread them on the mountain LIKE BEDDING ON A BED, and the throne of glory descended on them&#x27; (the descent that brings its own floor — transcendence undamaged, the readings named-only); va-yiqra YHWH le- moshe el-rosh ha-har VA-YAAL moshe — the call and the climb: ascent three — the machine files the summit protocol: the mountain everyone else may not touch, one man is SUMMONED up.
+</td><td><span class="he">וַיֵּרֶד יְהוָה עַל־הַר סִינַי אֶל־רֹאשׁ הָהָר</span> · <i>va-yered YHWH al-har sinay el-rosh ha-har</i><br><span class="gloss">= and-yered the-LORD upon-har sinay to-rosh the-har</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The event; the summit meeting.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_19_21 · Exod.19.21 · <span class='expr'>GO_DOWN_WARN</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה רֵד הָעֵד בָּעָם פֶּן־יֶהֶרְסוּ אֶל־יְהוָה לִרְאוֹת וְנָפַל מִמֶּנּוּ רָב</span> · <i>va-yomer YHWH el-moshe red haed ba-am pen-yehersu el-YHWH li-reot ve-nafal mime-nu rav</i> · And the LORD said to Moses: Go down, warn the people — lest they break through to the LORD to see, and many of them fall.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה רֵ֖ד הָעֵ֣ד בָּעָ֑ם</span> · <i>va-yomer YHWH el-moshe red haed ba-am</i> · and the LORD said to Moses: go down, warn the people (etnachta on ba-am) [VERIFIED: SNAPSHOT Exod.19.21 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">פֶּן יֶהֶרְס֤וּ אֶל יְהוָה֙ לִרְא֔וֹת וְנָפַ֥ל מִמֶּ֖נּוּ רָֽב</span> · <i>pen-yehersu el-YHWH li-reot ve-nafal mime-nu rav</i> · lest they break through to the LORD to see, and many of them fall (verse-final rav) [VERIFIED: SNAPSHOT Exod.19.21 idx7-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(red_haed_ba_am))</span><br><span class="gloss">= DECLARE(the-LORD, LET(red-haed-in-the-am))</span><br>THE WARNING. RED HAED ba-am — &#x27;GO DOWN, WARN the people&#x27;: the card pushed (Moses summoned up at 19:20 and sent down at 19:21 — the machine notes the summit visit&#x27;s entire content: a warning for OTHERS: the top of Sinai used as a megaphone pointed back at the base); pen-YEHERSU el-YHWH LIROT — &#x27;lest they BREAK THROUGH to the LORD, TO SEE&#x27; (Rashi: every breach &#x27;unbuilds the formation&#x27; — the fence-law read as architecture: the crowd that presses forward dismantles itself; the seeing-word FULL, MS); ve-NAFAL mimenu RAV — &#x27;and MANY of them fall&#x27; — Rashi: &#x27;whatever falls of them, EVEN ONE, is counted before Me as MANY&#x27; (the arithmetic of the single soul, carried from the mirror): the machine arms the double-warning protocol: 19:24 will send him down AGAIN.
+</td><td><span class="he">רֵד הָעֵד בָּעָם</span> · <i>red haed ba-am</i><br><span class="gloss">= red haed in-the-am</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The warning card pushed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_19_22 · Exod.19.22 · <span class='expr'>THE_PRIESTS_TOO</span></h3>
+<p><span class="he">וְגַם הַכֹּהֲנִים הַנִּגָּשִׁים אֶל־יְהוָה יִתְקַדָּשׁוּ פֶּן־יִפְרֹץ בָּהֶם יְהוָה</span> · <i>ve-gam ha-kohanim ha-nigashim el-YHWH yitqadashu pen-yifrotz ba-hem YHWH</i> · And also the priests, who approach the LORD, shall sanctify themselves — lest the LORD break out against them.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְגַ֧ם הַכֹּהֲנִ֛ים הַנִּגָּשִׁ֥ים אֶל יְהוָ֖ה יִתְקַדָּ֑שׁוּ</span> · <i>ve-gam ha-kohanim ha-nigashim el-YHWH yitqadashu</i> · and also the priests, who approach the LORD, shall sanctify themselves (etnachta on yitqadashu) [VERIFIED: SNAPSHOT Exod.19.22 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">פֶּן יִפְרֹ֥ץ בָּהֶ֖ם יְהוָֽה</span> · <i>pen-yifrotz ba-hem YHWH</i> · lest the LORD break out against them (verse-final YHWH) [VERIFIED: SNAPSHOT Exod.19.22 idx6-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_gam_ha_kohanim_yitqadashu, t0)</span><br><span class="gloss">= HOLDS(and-also-the-kohanim-yitqadashu, t0)</span><br>THE RANKS. ve-GAM ha-KOHANIM ha-nigashim el-YHWH YITQADASHU — &#x27;ALSO the priests, who APPROACH the LORD, shall sanctify themselves&#x27; (Rashi: the FIRSTBORN, in whom the service then rested — the pre- Aaronic clergy named mid-transition: the machine files the corpus&#x27;s priesthood-timeline: 19:6 offered the office to all, 19:22 regulates its current holders, Lev 21 will seal its future line); pen-YIFROTZ bahem YHWH — &#x27;lest the LORD BREAK OUT against them&#x27;: the breach-verb answering 19:21&#x27;s breaking-through (yehersu/yifrotz — the machine notes the mirrored physics: a human breach inward draws a divine breach outward; proximity privileges cancel at the fence).
+</td><td><span class="he">וְגַם הַכֹּהֲנִים הַנִּגָּשִׁים אֶל־יְהוָה יִתְקַדָּשׁוּ</span> · <i>ve-gam ha-kohanim ha-nigashim el-YHWH yitqadashu</i><br><span class="gloss">= and-also the-kohanim the-nigashim to-the-LORD yitqadashu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">No rank exemption.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_19_23 · Exod.19.23 · <span class='expr'>THE_FENCE_STANDS</span></h3>
+<p><span class="he">וַיֹּאמֶר מֹשֶׁה אֶל־יְהוָה לֹא־יוּכַל הָעָם לַעֲלֹת אֶל־הַר סִינָי כִּי־אַתָּה הַעֵדֹתָה בָּנוּ לֵאמֹר הַגְבֵּל אֶת־הָהָר וְקִדַּשְׁתּוֹ</span> · <i>va-yomer moshe el-YHWH lo-yukhal ha-am la-alot el-har sinay ki-ata haedota ba-nu le-mor hagbel et-ha-har ve-qidasht-o</i> · And Moses said to the LORD: The people cannot come up to mount Sinai — for You warned us, saying: Fence the mountain, and sanctify it.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר מֹשֶׁה֙ אֶל יְהוָ֔ה לֹא יוּכַ֣ל הָעָ֔ם לַעֲלֹ֖ת אֶל הַ֣ר סִינָ֑י</span> · <i>va-yomer moshe el-YHWH lo-yukhal ha-am la-alot el-har sinay</i> · and Moses said to the LORD: the people cannot come up to mount Sinai (etnachta on sinay) [VERIFIED: SNAPSHOT Exod.19.23 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּֽי אַתָּ֞ה הַעֵדֹ֤תָה בָּ֨נוּ֙ לֵאמֹ֔ר הַגְבֵּ֥ל אֶת הָהָ֖ר וְקִדַּשְׁתּֽוֹ</span> · <i>ki-ata haedota ba-nu le-mor hagbel et-ha-har ve-qidasht-o</i> · for You warned us, saying: fence the mountain, and sanctify it (verse-final ve-qidasht-o) [VERIFIED: SNAPSHOT Exod.19.23 idx11-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lo_yukhal_ha_am_la_alot, t0)</span><br><span class="gloss">= HOLDS(not-yukhal-the-am-to-alot, t0)</span><br>THE CITATION [EX19-09 + EX19-13 CROWNS]. lo-yukhal ha-am LA-ALOT el- har sinay — &#x27;the people CANNOT COME UP&#x27;: the ascend-word LEAN — and MS walks the Masorah&#x27;s FOUR lean to-ascends (VERIFIED census, five with the offering-noun): Sinai&#x27;s two fence-verses (19:23, 19:24) and the SPIES&#x27; two (Deut 1:26 &#x27;you would not come up,&#x27; 1:41 &#x27;you made ready to come up&#x27;) — permission withheld and nerve withheld on one thinned verb — &#x27;and THE PRINTER FORGOT THE FOURTH&#x27; (MS catching the printed Masorah&#x27;s own omission); ki-ATA HAEDOTA banu — &#x27;for YOU warned US&#x27; (the final-He warning-word — Bachya&#x27;s tongues-of-warning, named): Moses CITES THE STANDING CARD back to its Issuer (the machine delights in the move: the fence of 19:12 is still OPEN on the queue, and Moses pleads the queue-state as law — the corpus&#x27;s first procedural objection); hagbel et-ha-har VE-QIDASHTO — and the citation&#x27;s last word is the head-and-tail pair (VERIFIED census with placement asserted): sanctify-him ENDS this verse and OPENS the priest&#x27;s (Lev 21:8) — the Kitzur: &#x27;the priest&#x27;s sanctity at the head, the scholar&#x27;s at the end.&#x27;
+</td><td><span class="he">כִּי־אַתָּה הַעֵדֹתָה בָּנוּ לֵאמֹר הַגְבֵּל אֶת־הָהָר וְקִדַּשְׁתּוֹ</span> · <i>ki-ata haedota ba-nu le-mor hagbel et-ha-har ve-qidasht-o</i><br><span class="gloss">= when-ata haedota in-the-nu to-mor hagbel the-har and-qidasht-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The protocol citation.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_19_24 · Exod.19.24 · <span class='expr'>BARRIERS_BY_RANK</span></h3>
+<p><span class="he">וַיֹּאמֶר אֵלָיו יְהוָה לֶךְ־רֵד וְעָלִיתָ אַתָּה וְאַהֲרֹן עִמָּךְ וְהַכֹּהֲנִים וְהָעָם אַל־יֶהֶרְסוּ לַעֲלֹת אֶל־יְהוָה פֶּן־יִפְרָץ־בָּם</span> · <i>va-yomer elay-v YHWH lekh-red ve-alita ata ve-aharon ima-khe ve-ha-kohanim ve-ha-am el-yehersu la-alot el-YHWH pen-yifratz-ba-m</i> · And the LORD said to him: Go, descend — and you shall come up, you and Aaron with you; and the priests and the people shall not break through to come up to the LORD, lest He break out against them.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר אֵלָ֤יו יְהוָה֙ לֶךְ רֵ֔ד וְעָלִ֥יתָ אַתָּ֖ה וְאַהֲרֹ֣ן עִמָּ֑ךְ</span> · <i>va-yomer elay-v YHWH lekh-red ve-alita ata ve-aharon ima-khe</i> · and the LORD said to him: go, descend — and you shall come up, you and Aaron with you (etnachta on ima-khe) [VERIFIED: SNAPSHOT Exod.19.24 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהַכֹּהֲנִ֣ים וְהָעָ֗ם אַל יֶֽהֶרְס֛וּ לַעֲלֹ֥ת אֶל יְהוָ֖ה פֶּן יִפְרָץ בָּֽם</span> · <i>ve-ha-kohanim ve-ha-am el-yehersu la-alot el-YHWH pen-yifratz-ba-m</i> · and the priests and the people shall not break through to come up to the LORD, lest He break out against them (verse-final ba-m) [VERIFIED: SNAPSHOT Exod.19.24 idx9-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_alita_ata_ve_aharon_imakh, t0)</span><br><span class="gloss">= HOLDS(and-alita-ata-and-Aaron-imakh, t0)</span><br>THE ROSTER. LEKH-RED — &#x27;go, DESCEND&#x27; (Rashi from the Mekhilta: &#x27;warn them BEFORE the deed and warn them AGAIN AT the deed&#x27; — the double- warning doctrine: the corpus&#x27;s law of repeated caution); ve-ALITA ATA ve-AHARON imakh — &#x27;and you shall come up, YOU and AARON with you&#x27;: Rashi drawing the barriers: &#x27;you a barrier for yourself, Aaron a barrier for himself, the priests for themselves — Moses nearer than Aaron, Aaron nearer than the priests, and the people not at all&#x27; (the mountain stratified into concentric permissions: the machine files the geometry that the Tabernacle will freeze into architecture); ve-ha-kohanim ve-ha-am AL-YEHERSU — the breach-verb third time (the chapter&#x27;s most-repeated warning); pen-yifratz-BAM — in the CLIPPED QAMATZ forced by the binder-stroke (MS; Rashi&#x27;s own grammar-note on it carried in the mirror — checked at the build via the stroke): even the vowel bends under the binding.
+</td><td><span class="he">לֶךְ־רֵד וְעָלִיתָ אַתָּה וְאַהֲרֹן עִמָּךְ</span> · <i>lekh-red ve-alita ata ve-aharon ima-khe</i><br><span class="gloss">= lekh-red and-alita ata Aaron ima-khe</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The ascent roster.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_19_25 · Exod.19.25 · <span class='expr'>AND_SAID_TO_THEM</span></h3>
+<p><span class="he">וַיֵּרֶד מֹשֶׁה אֶל־הָעָם וַיֹּאמֶר אֲלֵהֶם</span> · <i>va-yered moshe el-ha-am va-yomer el-hem</i> · And Moses went down to the people — and said to them.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֵּ֥רֶד מֹשֶׁ֖ה אֶל הָעָ֑ם</span> · <i>va-yered moshe el-ha-am</i> · and Moses went down to the people (etnachta on ha-am) [VERIFIED: SNAPSHOT Exod.19.25 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּ֖אמֶר אֲלֵהֶֽם</span> · <i>va-yomer el-hem</i> · and said to them (verse-final el-hem) [VERIFIED: SNAPSHOT Exod.19.25 idx4-5]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(red_haed_ba_am, t1)</span><br><span class="gloss">= RESULT: HOLDS(red-haed-in-the-am, t1)</span><br>THE RELAY. va-YERED moshe el-ha-am — descent three: the warn-card POPS on the going-down; va-YOMER ALEHEM — &#x27;AND SAID TO THEM&#x27;: the chapter ends INSIDE THE VERB (Rashi: &#x27;this warning&#x27; — he said the warning; and the readings hear more: the verse breaks off with the mouth open, because what he says next is 20:1&#x27;s I-AM: the machine files the corpus&#x27;s boldest cliff-edge: a RESULT that pops mid- sentence, the compliance narrated up to the colon — and the next word in the canon is God&#x27;s).
+</td><td><span class="he">וַיֵּרֶד מֹשֶׁה אֶל־הָעָם וַיֹּאמֶר אֲלֵהֶם</span> · <i>va-yered moshe el-ha-am va-yomer el-hem</i><br><span class="gloss">= and-yered Moses to-the-am and-yomer to-hem</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The card pops; the open mouth.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Ex_19_1 — the third month</td><td>In the third month of the going-out of the sons of Israel from the land of Egypt — on this day they came to the wilderness of Sinai.</td><td>no test, no name.</td><td><span class="he">בַּחֹ֨דֶשׁ֙ הַשְּׁלִישִׁ֔י לְצֵ֥את בְּנֵי</span> · <i>ba-chodesh ha-shelishi le-tzet bene-</i><br><span class="gloss">= in-the-chodesh the-shelishi to-tzet bene</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Ex_19_2 — as one man</td><td>And they set out from Rephidim, and came to the wilderness of Sinai, and camped in the wilderness — and Israel camped there before the mountain.</td><td>no test, no name.</td><td><span class="he">וַיִּסְע֣וּ מֵרְפִידִ֗ים וַיָּבֹ֨אוּ֙ מִדְבַּ֣ר</span> · <i>va-yisu me-refidim va-yavou midbar</i><br><span class="gloss">= and-yisu from-refidim and-yavou midbar</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Ex_19_3 — house of Jacob, sons of Israel</td><td>And Moses went up to God; and the LORD called to him from the mountain, saying: So shall you say to the house of Jacob, and tell the sons of Israel.</td><td>no test, no name.</td><td><span class="he">וּמֹשֶׁ֥ה עָלָ֖ה אֶל הָאֱלֹהִ֑ים</span> · <i>u-moshe ala el-ha-Elohim</i><br><span class="gloss">= Moses ala to-the-God</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Ex_19_4 — on eagles&#x27; wings</td><td>You have seen what I did to Egypt; and I bore you on eagles&#x27; wings, and brought you to Me.</td><td>no test, no name.</td><td><span class="he">אַתֶּ֣ם רְאִיתֶ֔ם אֲשֶׁ֥ר עָשִׂ֖יתִי</span> · <i>atem reitem asher asiti</i><br><span class="gloss">= atem reitem which asiti</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Ex_19_5 — if you will hear</td><td>And now, if you will surely hear My voice, and keep My covenant — then you shall be to Me a treasure out of all the peoples, for all the earth is Mine.</td><td>LET(im_shamoa_tishmeu_be_qoli) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(if-shamoa-tishmeu-in-qoli) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְעַתָּ֗ה אִם שָׁמ֤וֹעַ תִּשְׁמְעוּ֙</span> · <i>ve-ata im-shamoa tishmu</i><br><span class="gloss">= and-ata if-shamoa tishmu</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Ex_19_6 — a kingdom of priests</td><td>And you — you shall be to Me a kingdom of priests and a holy nation; these are the words which you shall speak to the sons of Israel.</td><td>LET(im_shamoa_tishmeu_be_qoli) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(if-shamoa-tishmeu-in-qoli) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְאַתֶּ֧ם תִּהְיוּ לִ֛י מַמְלֶ֥כֶת</span> · <i>ve-atem tihyu-li-y mamlekhet</i><br><span class="gloss">= and-atem tihyu-to-me-y mamlekhet</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Ex_19_7 — before the elders</td><td>And Moses came, and called for the elders of the people — and set before them all these words which the LORD had commanded him.</td><td>LET(im_shamoa_tishmeu_be_qoli) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(if-shamoa-tishmeu-in-qoli) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיָּבֹ֣א מֹשֶׁ֔ה וַיִּקְרָ֖א לְזִקְנֵ֣י</span> · <i>va-yavo moshe va-yiqra le-ziqne</i><br><span class="gloss">= and-yavo Moses and-yiqra to-ziqne</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Ex_19_8 — all that the LORD has spoken</td><td>And all the people answered together, and said: All that the LORD has spoken, we will do. And Moses brought back the words of the people to the LORD.</td><td>no test, no name.</td><td><span class="he">וַיַּעֲנ֨וּ כָל הָעָ֤ם יַחְדָּו֙</span> · <i>va-yaanu khal-ha-am yachdav</i><br><span class="gloss">= and-yaanu khal-the-am yachdav</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Ex_19_9 — the thick cloud</td><td>And the LORD said to Moses: Behold, I come to you in the thickness of the cloud, that the people may hear in My speaking with you, and also believe in you forever. And Moses told the words of the people to the LORD.</td><td>no test, no name.</td><td><span class="he">וַיֹּ֨אמֶר יְהוָ֜ה אֶל מֹשֶׁ֗ה</span> · <i>va-yomer YHWH el-moshe</i><br><span class="gloss">= and-yomer the-LORD to-Moses</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Ex_19_10 — sanctify them</td><td>And the LORD said to Moses: Go to the people, and sanctify them today and tomorrow — and let them wash their garments.</td><td>LET(ve_qidashtam_ha_yom_u_machar) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-qidashtam-the-day-and-machar) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֨אמֶר יְהוָ֤ה אֶל מֹשֶׁה֙</span> · <i>va-yomer YHWH el-moshe</i><br><span class="gloss">= and-yomer the-LORD to-Moses</span></td></tr>
+<tr><td><b>S11</b></td><td>after STEP_Ex_19_11 — ready for the third day</td><td>And they shall be ready for the third day — for on the third day the LORD will descend, before the eyes of all the people, on mount Sinai.</td><td>LET(ve_qidashtam_ha_yom_u_machar) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-qidashtam-the-day-and-machar) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהָי֥וּ נְכֹנִ֖ים לַיּ֣וֹם הַשְּׁלִישִׁ֑י</span> · <i>ve-hayu nekhonim la-yom ha-shelishi</i><br><span class="gloss">= and-hayu nekhonim day the-shelishi</span></td></tr>
+<tr><td><b>S12</b></td><td>after STEP_Ex_19_12 — fence the people</td><td>And you shall set bounds for the people round about, saying: Guard yourselves against going up into the mountain, or touching its edge; whoever touches the mountain shall surely be put to death.</td><td>LET(ve_qidashtam_ha_yom_u_machar) pushed and OPEN; LET(ve_higbalta_et_ha_am) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-qidashtam-the-day-and-machar) pushed and OPEN; LET(and-higbalta-the-am) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהִגְבַּלְתָּ֤ אֶת הָעָם֙ סָבִ֣יב</span> · <i>ve-higbalta et-ha-am saviv</i><br><span class="gloss">= and-higbalta the-am saviv</span></td></tr>
+<tr><td><b>S13</b></td><td>after STEP_Ex_19_13 — when the horn draws out</td><td>No hand shall touch him, but he shall surely be stoned, or surely shot; whether beast or man, it shall not live. When the ram&#x27;s horn draws out — they shall come up on the mountain.</td><td>LET(ve_qidashtam_ha_yom_u_machar) pushed and OPEN; LET(ve_higbalta_et_ha_am) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-qidashtam-the-day-and-machar) pushed and OPEN; LET(and-higbalta-the-am) pushed and OPEN; no test, no name.</span></td><td><span class="he">לֹא תִגַּ֨ע בּ֜וֹ יָ֗ד</span> · <i>lo-tiga b-o yad</i><br><span class="gloss">= not-tiga b-o yad</span></td></tr>
+<tr><td><b>S14</b></td><td>after STEP_Ex_19_14 — Moses sanctifies</td><td>And Moses went down from the mountain to the people — and he sanctified the people, and they washed their garments.</td><td>LET(ve_higbalta_et_ha_am) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-higbalta-the-am) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֵּ֧רֶד מֹשֶׁ֛ה מִן הָהָ֖ר</span> · <i>va-yered moshe min-ha-har</i><br><span class="gloss">= and-yered Moses from-the-har</span></td></tr>
+<tr><td><b>S15</b></td><td>after STEP_Ex_19_15 — three days</td><td>And he said to the people: Be ready for three days — approach not a woman.</td><td>LET(ve_higbalta_et_ha_am) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-higbalta-the-am) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֨אמֶר֙ אֶל הָעָ֔ם הֱי֥וּ</span> · <i>va-yomer el-ha-am heu</i><br><span class="gloss">= and-yomer to-the-am heu</span></td></tr>
+<tr><td><b>S16</b></td><td>after STEP_Ex_19_16 — thunders and lightnings</td><td>And it was on the third day, when the morning was, that there were thunders and lightnings, and a heavy cloud on the mountain, and a shofar-voice exceedingly strong — and all the people that were in the camp trembled.</td><td>LET(ve_higbalta_et_ha_am) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-higbalta-the-am) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְהִי֩ בַיּ֨וֹם הַשְּׁלִישִׁ֜י בִּֽהְיֹ֣ת</span> · <i>va-yehi va-yom ha-shelishi bi-heyot</i><br><span class="gloss">= and-yehi day the-shelishi being</span></td></tr>
+<tr><td><b>S17</b></td><td>after STEP_Ex_19_17 — to meet God</td><td>And Moses brought the people out toward God, out of the camp — and they stationed themselves at the underside of the mountain.</td><td>LET(ve_higbalta_et_ha_am) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-higbalta-the-am) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיּוֹצֵ֨א מֹשֶׁ֧ה אֶת הָעָ֛ם</span> · <i>va-yotze moshe et-ha-am</i><br><span class="gloss">= and-yotze Moses the-am</span></td></tr>
+<tr><td><b>S18</b></td><td>after STEP_Ex_19_18 — the mountain smoked</td><td>And mount Sinai smoked, all of it, because the LORD descended on it in fire; and its smoke went up like the smoke of the kiln — and the whole mountain trembled exceedingly.</td><td>LET(ve_higbalta_et_ha_am) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-higbalta-the-am) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהַ֤ר סִינַי֙ עָשַׁ֣ן כֻּלּ֔וֹ</span> · <i>ve-har sinay ashan kul-o</i><br><span class="gloss">= and-har sinay ashan kul-o</span></td></tr>
+<tr><td><b>S19</b></td><td>after STEP_Ex_19_19 — voice for voice</td><td>And the voice of the shofar went on, going and strengthening exceedingly; Moses would speak — and God would answer him in a voice.</td><td>LET(ve_higbalta_et_ha_am) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-higbalta-the-am) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְהִי֙ ק֣וֹל הַשּׁוֹפָ֔ר הוֹלֵ֖ךְ</span> · <i>va-yehi qol ha-shofar holekh</i><br><span class="gloss">= and-yehi voice the-shofar holekh</span></td></tr>
+<tr><td><b>S20</b></td><td>after STEP_Ex_19_20 — the descent</td><td>And the LORD descended on mount Sinai, to the top of the mountain; and the LORD called Moses to the top of the mountain — and Moses went up.</td><td>LET(ve_higbalta_et_ha_am) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-higbalta-the-am) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֵּ֧רֶד יְהוָ֛ה עַל הַ֥ר</span> · <i>va-yered YHWH al-har</i><br><span class="gloss">= and-yered the-LORD upon-har</span></td></tr>
+<tr><td><b>S21</b></td><td>after STEP_Ex_19_21 — go down, warn</td><td>And the LORD said to Moses: Go down, warn the people — lest they break through to the LORD to see, and many of them fall.</td><td>LET(ve_higbalta_et_ha_am) pushed and OPEN; LET(red_haed_ba_am) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-higbalta-the-am) pushed and OPEN; LET(red-haed-in-the-am) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה</span> · <i>va-yomer YHWH el-moshe</i><br><span class="gloss">= and-yomer the-LORD to-Moses</span></td></tr>
+<tr><td><b>S22</b></td><td>after STEP_Ex_19_22 — the priests too</td><td>And also the priests, who approach the LORD, shall sanctify themselves — lest the LORD break out against them.</td><td>LET(ve_higbalta_et_ha_am) pushed and OPEN; LET(red_haed_ba_am) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-higbalta-the-am) pushed and OPEN; LET(red-haed-in-the-am) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְגַ֧ם הַכֹּהֲנִ֛ים הַנִּגָּשִׁ֥ים אֶל</span> · <i>ve-gam ha-kohanim ha-nigashim el-</i><br><span class="gloss">= and-also the-kohanim the-nigashim to</span></td></tr>
+<tr><td><b>S23</b></td><td>after STEP_Ex_19_23 — the fence stands</td><td>And Moses said to the LORD: The people cannot come up to mount Sinai — for You warned us, saying: Fence the mountain, and sanctify it.</td><td>LET(ve_higbalta_et_ha_am) pushed and OPEN; LET(red_haed_ba_am) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-higbalta-the-am) pushed and OPEN; LET(red-haed-in-the-am) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֤אמֶר מֹשֶׁה֙ אֶל יְהוָ֔ה</span> · <i>va-yomer moshe el-YHWH</i><br><span class="gloss">= and-yomer Moses to-the-LORD</span></td></tr>
+<tr><td><b>S24</b></td><td>after STEP_Ex_19_24 — barriers by rank</td><td>And the LORD said to him: Go, descend — and you shall come up, you and Aaron with you; and the priests and the people shall not break through to come up to the LORD, lest He break out against them.</td><td>LET(ve_higbalta_et_ha_am) pushed and OPEN; LET(red_haed_ba_am) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-higbalta-the-am) pushed and OPEN; LET(red-haed-in-the-am) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֨אמֶר אֵלָ֤יו יְהוָה֙ לֶךְ</span> · <i>va-yomer elay-v YHWH lekh-</i><br><span class="gloss">= and-yomer elay-v the-LORD lekh</span></td></tr>
+<tr><td><b>S25</b></td><td>after STEP_Ex_19_25 — and said to them</td><td>And Moses went down to the people — and said to them.</td><td>LET(ve_higbalta_et_ha_am) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(and-higbalta-the-am) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֵּ֥רֶד מֹשֶׁ֖ה אֶל הָעָ֑ם</span> · <i>va-yered moshe el-ha-am</i><br><span class="gloss">= and-yered Moses to-the-am</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: exo_19_sinai_and_the_covenant — Sinai and the covenant (19:1-25) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — after STEP_Ex_19_1 — the third month
+    בַּחֹ֨דֶשׁ֙ הַשְּׁלִישִׁ֔י לְצֵ֥את בְּנֵי (ba-chodesh ha-shelishi le-tzet bene-)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Ex_19_2 — as one man
+    וַיִּסְע֣וּ מֵרְפִידִ֗ים וַיָּבֹ֨אוּ֙ מִדְבַּ֣ר (va-yisu me-refidim va-yavou midbar)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Ex_19_3 — house of Jacob, sons of Israel
+    וּמֹשֶׁ֥ה עָלָ֖ה אֶל הָאֱלֹהִ֑ים (u-moshe ala el-ha-Elohim)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Ex_19_4 — on eagles&#x27; wings
+    אַתֶּ֣ם רְאִיתֶ֔ם אֲשֶׁ֥ר עָשִׂ֖יתִי (atem reitem asher asiti)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Ex_19_5 — if you will hear
+    וְעַתָּ֗ה אִם שָׁמ֤וֹעַ תִּשְׁמְעוּ֙ (ve-ata im-shamoa tishmu)
+    PASS  LET(im_shamoa_tishmeu_be_qoli) pushed and OPEN  (queue=[&#x27;im_shamoa_tishmeu_be_qoli&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Ex_19_6 — a kingdom of priests
+    וְאַתֶּ֧ם תִּהְיוּ לִ֛י מַמְלֶ֥כֶת (ve-atem tihyu-li-y mamlekhet)
+    PASS  LET(im_shamoa_tishmeu_be_qoli) pushed and OPEN  (queue=[&#x27;im_shamoa_tishmeu_be_qoli&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — after STEP_Ex_19_7 — before the elders
+    וַיָּבֹ֣א מֹשֶׁ֔ה וַיִּקְרָ֖א לְזִקְנֵ֣י (va-yavo moshe va-yiqra le-ziqne)
+    PASS  LET(im_shamoa_tishmeu_be_qoli) pushed and OPEN  (queue=[&#x27;im_shamoa_tishmeu_be_qoli&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S8 — after STEP_Ex_19_8 — all that the LORD has spoken
+    וַיַּעֲנ֨וּ כָל הָעָ֤ם יַחְדָּו֙ (va-yaanu khal-ha-am yachdav)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S9 — after STEP_Ex_19_9 — the thick cloud
+    וַיֹּ֨אמֶר יְהוָ֜ה אֶל מֹשֶׁ֗ה (va-yomer YHWH el-moshe)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S10 — after STEP_Ex_19_10 — sanctify them
+    וַיֹּ֨אמֶר יְהוָ֤ה אֶל מֹשֶׁה֙ (va-yomer YHWH el-moshe)
+    PASS  LET(ve_qidashtam_ha_yom_u_machar) pushed and OPEN  (queue=[&#x27;ve_qidashtam_ha_yom_u_machar&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S11 — after STEP_Ex_19_11 — ready for the third day
+    וְהָי֥וּ נְכֹנִ֖ים לַיּ֣וֹם הַשְּׁלִישִׁ֑י (ve-hayu nekhonim la-yom ha-shelishi)
+    PASS  LET(ve_qidashtam_ha_yom_u_machar) pushed and OPEN  (queue=[&#x27;ve_qidashtam_ha_yom_u_machar&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S12 — after STEP_Ex_19_12 — fence the people
+    וְהִגְבַּלְתָּ֤ אֶת הָעָם֙ סָבִ֣יב (ve-higbalta et-ha-am saviv)
+    PASS  LET(ve_qidashtam_ha_yom_u_machar) pushed and OPEN  (queue=[&#x27;ve_qidashtam_ha_yom_u_machar&#x27;, &#x27;ve_higbalta_et_ha_am&#x27;])
+    PASS  LET(ve_higbalta_et_ha_am) pushed and OPEN  (queue=[&#x27;ve_qidashtam_ha_yom_u_machar&#x27;, &#x27;ve_higbalta_et_ha_am&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S13 — after STEP_Ex_19_13 — when the horn draws out
+    לֹא תִגַּ֨ע בּ֜וֹ יָ֗ד (lo-tiga b-o yad)
+    PASS  LET(ve_qidashtam_ha_yom_u_machar) pushed and OPEN  (queue=[&#x27;ve_qidashtam_ha_yom_u_machar&#x27;, &#x27;ve_higbalta_et_ha_am&#x27;])
+    PASS  LET(ve_higbalta_et_ha_am) pushed and OPEN  (queue=[&#x27;ve_qidashtam_ha_yom_u_machar&#x27;, &#x27;ve_higbalta_et_ha_am&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S14 — after STEP_Ex_19_14 — Moses sanctifies
+    וַיֵּ֧רֶד מֹשֶׁ֛ה מִן הָהָ֖ר (va-yered moshe min-ha-har)
+    PASS  LET(ve_higbalta_et_ha_am) pushed and OPEN  (queue=[&#x27;ve_higbalta_et_ha_am&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S15 — after STEP_Ex_19_15 — three days
+    וַיֹּ֨אמֶר֙ אֶל הָעָ֔ם הֱי֥וּ (va-yomer el-ha-am heu)
+    PASS  LET(ve_higbalta_et_ha_am) pushed and OPEN  (queue=[&#x27;ve_higbalta_et_ha_am&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S16 — after STEP_Ex_19_16 — thunders and lightnings
+    וַיְהִי֩ בַיּ֨וֹם הַשְּׁלִישִׁ֜י בִּֽהְיֹ֣ת (va-yehi va-yom ha-shelishi bi-heyot)
+    PASS  LET(ve_higbalta_et_ha_am) pushed and OPEN  (queue=[&#x27;ve_higbalta_et_ha_am&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S17 — after STEP_Ex_19_17 — to meet God
+    וַיּוֹצֵ֨א מֹשֶׁ֧ה אֶת הָעָ֛ם (va-yotze moshe et-ha-am)
+    PASS  LET(ve_higbalta_et_ha_am) pushed and OPEN  (queue=[&#x27;ve_higbalta_et_ha_am&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S18 — after STEP_Ex_19_18 — the mountain smoked
+    וְהַ֤ר סִינַי֙ עָשַׁ֣ן כֻּלּ֔וֹ (ve-har sinay ashan kul-o)
+    PASS  LET(ve_higbalta_et_ha_am) pushed and OPEN  (queue=[&#x27;ve_higbalta_et_ha_am&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S19 — after STEP_Ex_19_19 — voice for voice
+    וַיְהִי֙ ק֣וֹל הַשּׁוֹפָ֔ר הוֹלֵ֖ךְ (va-yehi qol ha-shofar holekh)
+    PASS  LET(ve_higbalta_et_ha_am) pushed and OPEN  (queue=[&#x27;ve_higbalta_et_ha_am&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S20 — after STEP_Ex_19_20 — the descent
+    וַיֵּ֧רֶד יְהוָ֛ה עַל הַ֥ר (va-yered YHWH al-har)
+    PASS  LET(ve_higbalta_et_ha_am) pushed and OPEN  (queue=[&#x27;ve_higbalta_et_ha_am&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S21 — after STEP_Ex_19_21 — go down, warn
+    וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה (va-yomer YHWH el-moshe)
+    PASS  LET(ve_higbalta_et_ha_am) pushed and OPEN  (queue=[&#x27;ve_higbalta_et_ha_am&#x27;, &#x27;red_haed_ba_am&#x27;])
+    PASS  LET(red_haed_ba_am) pushed and OPEN  (queue=[&#x27;ve_higbalta_et_ha_am&#x27;, &#x27;red_haed_ba_am&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S22 — after STEP_Ex_19_22 — the priests too
+    וְגַ֧ם הַכֹּהֲנִ֛ים הַנִּגָּשִׁ֥ים אֶל (ve-gam ha-kohanim ha-nigashim el-)
+    PASS  LET(ve_higbalta_et_ha_am) pushed and OPEN  (queue=[&#x27;ve_higbalta_et_ha_am&#x27;, &#x27;red_haed_ba_am&#x27;])
+    PASS  LET(red_haed_ba_am) pushed and OPEN  (queue=[&#x27;ve_higbalta_et_ha_am&#x27;, &#x27;red_haed_ba_am&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S23 — after STEP_Ex_19_23 — the fence stands
+    וַיֹּ֤אמֶר מֹשֶׁה֙ אֶל יְהוָ֔ה (va-yomer moshe el-YHWH)
+    PASS  LET(ve_higbalta_et_ha_am) pushed and OPEN  (queue=[&#x27;ve_higbalta_et_ha_am&#x27;, &#x27;red_haed_ba_am&#x27;])
+    PASS  LET(red_haed_ba_am) pushed and OPEN  (queue=[&#x27;ve_higbalta_et_ha_am&#x27;, &#x27;red_haed_ba_am&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S24 — after STEP_Ex_19_24 — barriers by rank
+    וַיֹּ֨אמֶר אֵלָ֤יו יְהוָה֙ לֶךְ (va-yomer elay-v YHWH lekh-)
+    PASS  LET(ve_higbalta_et_ha_am) pushed and OPEN  (queue=[&#x27;ve_higbalta_et_ha_am&#x27;, &#x27;red_haed_ba_am&#x27;])
+    PASS  LET(red_haed_ba_am) pushed and OPEN  (queue=[&#x27;ve_higbalta_et_ha_am&#x27;, &#x27;red_haed_ba_am&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S25 — after STEP_Ex_19_25 — and said to them
+    וַיֵּ֥רֶד מֹשֶׁ֖ה אֶל הָעָ֑ם (va-yered moshe el-ha-am)
+    PASS  LET(ve_higbalta_et_ha_am) pushed and OPEN  (queue=[&#x27;ve_higbalta_et_ha_am&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/exo_19_sinai_and_the_covenant.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# exo_19_sinai_and_the_covenant — 19:1-25
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/exo_19_sinai_and_the_covenant.yaml) is CANONICAL
+# (Pre-Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Sinai and the covenant (19:1-25)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;exo_19_sinai_and_the_covenant&quot;)
+
+# -------------------------- Exod.19.1 · THE_THIRD_MONTH --------------------
+# בַּחֹדֶשׁ הַשְּׁלִישִׁי לְצֵאת בְּנֵי־יִשְׂרָאֵל מֵאֶרֶץ מִצְרָיִם
+# בַּיּוֹם הַזֶּה בָּאוּ מִדְבַּר סִינָי
+# &quot;[EN-AID] In the third month of the going-out of the sons of Israel from
+# the land of Egypt — on this day they came to the wilderness of Sinai.&quot;
+m.step(&quot;Exod.19.1&quot;)
+# ‹בַּיּוֹם הַזֶּה בָּאוּ מִדְבַּר סִינָי› (“in-day the-this come/bring
+# pasture Sinai”) — fact holds: come/bring-pasture-Sinai
+m.fact(&quot;bau_midbar_sinay&quot;)
+
+# -------------------------- Exod.19.2 · AS_ONE_MAN -------------------------
+# וַיִּסְעוּ מֵרְפִידִים וַיָּבֹאוּ מִדְבַּר סִינַי וַיַּחֲנוּ בַּמִּדְבָּר
+# וַיִּחַן־שָׁם יִשְׂרָאֵל נֶגֶד הָהָר
+# &quot;[EN-AID] And they set out from Rephidim, and came to the wilderness of
+# Sinai, and camped in the wilderness — and Israel camped there before the
+# mountain.&quot;
+m.step(&quot;Exod.19.2&quot;)
+# ‹וַיִּחַן־שָׁם יִשְׂרָאֵל נֶגֶד הָהָר› (“and-encamp there Israel front
+# the-mountain”) — fact holds: and-encamp-there-Israel
+m.fact(&quot;va_yichan_sham_yisrael&quot;)
+
+# -------------------------- Exod.19.3 · HOUSE_OF_JACOB_SONS_OF_ISRAEL ------
+# וּמֹשֶׁה עָלָה אֶל־הָאֱלֹהִים וַיִּקְרָא אֵלָיו יְהוָה מִן־הָהָר לֵאמֹר
+# כֹּה תֹאמַר לְבֵית יַעֲקֹב וְתַגֵּיד לִבְנֵי יִשְׂרָאֵל
+# &quot;[EN-AID] And Moses went up to God; and the LORD called to him from the
+# mountain, saying: So shall you say to the house of Jacob, and tell the
+# sons of Israel.&quot;
+m.step(&quot;Exod.19.3&quot;)
+# ‹כֹּה תֹאמַר לְבֵית יַעֲקֹב וְתַגֵּיד לִבְנֵי יִשְׂרָאֵל› (“like-this say
+# to-house Jacob and-tell to-son Israel”) — fact holds: and-Moses-go-up-to-
+# the-God
+m.fact(&quot;u_moshe_ala_el_ha_elohim&quot;)
+
+# -------------------------- Exod.19.4 · ON_EAGLES_WINGS --------------------
+# אַתֶּם רְאִיתֶם אֲשֶׁר עָשִׂיתִי לְמִצְרָיִם וָאֶשָּׂא אֶתְכֶם
+# עַל־כַּנְפֵי נְשָׁרִים וָאָבִא אֶתְכֶם אֵלָי
+# &quot;[EN-AID] You have seen what I did to Egypt; and I bore you on eagles&#x27;
+# wings, and brought you to Me.&quot;
+m.step(&quot;Exod.19.4&quot;)
+# ‹וָאֶשָּׂא אֶתְכֶם עַל־כַּנְפֵי נְשָׁרִים וָאָבִא אֶתְכֶם אֵלָי› (“and-
+# lift/carry obj-marker-you/your(pl) over wing eagle and-come/bring obj-
+# marker-you/your(pl) to-me/my”) — fact holds: and-lift/carry-etkhem-over-
+# wing-eagle
+m.fact(&quot;va_esa_etkhem_al_kanfe_nesharim&quot;)
+
+# -------------------------- Exod.19.5 · IF_YOU_WILL_HEAR -------------------
+# וְעַתָּה אִם־שָׁמוֹעַ תִּשְׁמְעוּ בְּקֹלִי וּשְׁמַרְתֶּם אֶת־בְּרִיתִי
+# וִהְיִיתֶם לִי סְגֻלָּה מִכָּל־הָעַמִּים כִּי־לִי כָּל־הָאָרֶץ
+# &quot;[EN-AID] And now, if you will surely hear My voice, and keep My covenant
+# — then you shall be to Me a treasure out of all the peoples, for all the
+# earth is Mine.&quot;
+m.step(&quot;Exod.19.5&quot;)
+# ‹אִם־שָׁמוֹעַ תִּשְׁמְעוּ בְּקֹלִי וּשְׁמַרְתֶּם אֶת־בְּרִיתִי› (“if hear
+# hear in-voice/sound-me/my and-keep/guard obj-marker covenant-me/my”) —
+# the-LORD speaks a demand — LET: if-hear-tishmeu-in-qoli
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;im_shamoa_tishmeu_be_qoli&quot;)
+
+# -------------------------- Exod.19.6 · A_KINGDOM_OF_PRIESTS ---------------
+# וְאַתֶּם תִּהְיוּ־לִי מַמְלֶכֶת כֹּהֲנִים וְגוֹי קָדוֹשׁ אֵלֶּה
+# הַדְּבָרִים אֲשֶׁר תְּדַבֵּר אֶל־בְּנֵי יִשְׂרָאֵל
+# &quot;[EN-AID] And you — you shall be to Me a kingdom of priests and a holy
+# nation; these are the words which you shall speak to the sons of Israel.&quot;
+m.step(&quot;Exod.19.6&quot;)
+# ‹וְאַתֶּם תִּהְיוּ־לִי מַמְלֶכֶת כֹּהֲנִים וְגוֹי קָדוֹשׁ› (“and-you be
+# to-me/my dominion priest and-nation sacred”) — fact holds: dominion-
+# priest-and-nation-sacred
+m.fact(&quot;mamlekhet_kohanim_ve_goy_qadosh&quot;)
+
+# -------------------------- Exod.19.7 · BEFORE_THE_ELDERS ------------------
+# וַיָּבֹא מֹשֶׁה וַיִּקְרָא לְזִקְנֵי הָעָם וַיָּשֶׂם לִפְנֵיהֶם אֵת
+# כָּל־הַדְּבָרִים הָאֵלֶּה אֲשֶׁר צִוָּהוּ יְהוָה
+# &quot;[EN-AID] And Moses came, and called for the elders of the people — and
+# set before them all these words which the LORD had commanded him.&quot;
+m.step(&quot;Exod.19.7&quot;)
+# ‹וַיָּשֶׂם לִפְנֵיהֶם אֵת כָּל־הַדְּבָרִים הָאֵלֶּה› (“and-put/set to-
+# face-them/their obj-marker all the-word/thing the-these”) — fact holds:
+# and-put/set-lifnehem
+m.fact(&quot;va_yasem_lifnehem&quot;)
+
+# -------------------------- Exod.19.8 · ALL_THAT_THE_LORD_HAS_SPOKEN -------
+# וַיַּעֲנוּ כָל־הָעָם יַחְדָּו וַיֹּאמְרוּ כֹּל אֲשֶׁר־דִּבֶּר יְהוָה
+# נַעֲשֶׂה וַיָּשֶׁב מֹשֶׁה אֶת־דִּבְרֵי הָעָם אֶל־יְהוָה
+# &quot;[EN-AID] And all the people answered together, and said: All that the
+# LORD has spoken, we will do. And Moses brought back the words of the
+# people to the LORD.&quot;
+m.step(&quot;Exod.19.8&quot;)
+# ‹וַיַּעֲנוּ כָל־הָעָם יַחְדָּו וַיֹּאמְרוּ כֹּל אֲשֶׁר־דִּבֶּר יְהוָה
+# נַעֲשֶׂה› (“and-eye all the-people unit and-say all which speak YHWH
+# make”) — demand settled (popped from the queue): if-hear-tishmeu-in-qoli
+m.result(&quot;im_shamoa_tishmeu_be_qoli&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Exod.19.9 · THE_THICK_CLOUD --------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה הִנֵּה אָנֹכִי בָּא אֵלֶיךָ בְּעַב הֶעָנָן
+# בַּעֲבוּר יִשְׁמַע הָעָם בְּדַבְּרִי עִמָּךְ וְגַם־בְּךָ יַאֲמִינוּ
+# לְעוֹלָם וַיַּגֵּד מֹשֶׁה אֶת־דִּבְרֵי הָעָם אֶל־יְהוָה
+# &quot;[EN-AID] And the LORD said to Moses: Behold, I come to you in the
+# thickness of the cloud, that the people may hear in My speaking with you,
+# and also believe in you forever. And Moses told the words of the people to
+# the LORD.&quot;
+m.step(&quot;Exod.19.9&quot;)
+# ‹בַּעֲבוּר יִשְׁמַע הָעָם בְּדַבְּרִי עִמָּךְ וְגַם־בְּךָ יַאֲמִינוּ
+# לְעוֹלָם› (“for-the-sake-of hear the-people in-speak-me/my with-you/your
+# and-also in-you/your build-up to-forever”) — fact holds: baavur-hear-the-
+# people
+m.fact(&quot;baavur_yishma_ha_am&quot;)
+
+# -------------------------- Exod.19.10 · SANCTIFY_THEM ---------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה לֵךְ אֶל־הָעָם וְקִדַּשְׁתָּם הַיּוֹם וּמָחָר
+# וְכִבְּסוּ שִׂמְלֹתָם
+# &quot;[EN-AID] And the LORD said to Moses: Go to the people, and sanctify them
+# today and tomorrow — and let them wash their garments.&quot;
+m.step(&quot;Exod.19.10&quot;)
+# ‹לֵךְ אֶל־הָעָם וְקִדַּשְׁתָּם הַיּוֹם וּמָחָר וְכִבְּסוּ שִׂמְלֹתָם› (“go
+# to the-people and-sanctify-them/their the-day and-deferred and-trample
+# dress-them/their”) — the-LORD speaks a demand — LET: and-qidashtam-the-
+# day-and-deferred
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;ve_qidashtam_ha_yom_u_machar&quot;)
+
+# -------------------------- Exod.19.11 · READY_FOR_THE_THIRD_DAY -----------
+# וְהָיוּ נְכֹנִים לַיּוֹם הַשְּׁלִישִׁי כִּי בַּיּוֹם הַשְּׁלִישִׁי יֵרֵד
+# יְהוָה לְעֵינֵי כָל־הָעָם עַל־הַר סִינָי
+# &quot;[EN-AID] And they shall be ready for the third day — for on the third day
+# the LORD will descend, before the eyes of all the people, on mount Sinai.&quot;
+m.step(&quot;Exod.19.11&quot;)
+# ‹כִּי בַּיּוֹם הַשְּׁלִישִׁי יֵרֵד יְהוָה לְעֵינֵי כָל־הָעָם עַל־הַר
+# סִינָי› (“that in-day the-third go-down YHWH to-eye all the-people over
+# mountain Sinai”) — fact holds: go-down-the-LORD-to-eye-all-the-people
+m.fact(&quot;yered_YHWH_le_ene_khol_ha_am&quot;)
+
+# -------------------------- Exod.19.12 · FENCE_THE_PEOPLE ------------------
+# וְהִגְבַּלְתָּ אֶת־הָעָם סָבִיב לֵאמֹר הִשָּׁמְרוּ לָכֶם עֲלוֹת בָּהָר
+# וּנְגֹעַ בְּקָצֵהוּ כָּל־הַנֹּגֵעַ בָּהָר מוֹת יוּמָת
+# &quot;[EN-AID] And you shall set bounds for the people round about, saying:
+# Guard yourselves against going up into the mountain, or touching its edge;
+# whoever touches the mountain shall surely be put to death.&quot;
+m.step(&quot;Exod.19.12&quot;)
+# ‹וְהִגְבַּלְתָּ אֶת־הָעָם סָבִיב לֵאמֹר› (“and-twist-as-arope obj-marker
+# the-people circle to-say”) — the-LORD speaks a demand — LET: and-twist-as-
+# arope-obj-marker-the-people
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;ve_higbalta_et_ha_am&quot;)
+
+# -------------------------- Exod.19.13 · WHEN_THE_HORN_DRAWS_OUT -----------
+# לֹא־תִגַּע בּוֹ יָד כִּי־סָקוֹל יִסָּקֵל אוֹ־יָרֹה יִיָּרֶה אִם־בְּהֵמָה
+# אִם־אִישׁ לֹא יִחְיֶה בִּמְשֹׁךְ הַיֹּבֵל הֵמָּה יַעֲלוּ בָהָר
+# &quot;[EN-AID] No hand shall touch him, but he shall surely be stoned, or
+# surely shot; whether beast or man, it shall not live. When the ram&#x27;s horn
+# draws out — they shall come up on the mountain.&quot;
+m.step(&quot;Exod.19.13&quot;)
+# ‹בִּמְשֹׁךְ הַיֹּבֵל הֵמָּה יַעֲלוּ בָהָר› (“in-draw the-blast-of-a-horn
+# they go-up in-mountain”) — fact holds: bimshokh-the-blast-of-a-horn-they-
+# go-up
+m.fact(&quot;bimshokh_ha_yovel_hema_yaalu&quot;)
+
+# -------------------------- Exod.19.14 · MOSES_SANCTIFIES ------------------
+# וַיֵּרֶד מֹשֶׁה מִן־הָהָר אֶל־הָעָם וַיְקַדֵּשׁ אֶת־הָעָם וַיְכַבְּסוּ
+# שִׂמְלֹתָם
+# &quot;[EN-AID] And Moses went down from the mountain to the people — and he
+# sanctified the people, and they washed their garments.&quot;
+m.step(&quot;Exod.19.14&quot;)
+# ‹וַיְקַדֵּשׁ אֶת־הָעָם וַיְכַבְּסוּ שִׂמְלֹתָם› (“and-sanctify obj-marker
+# the-people and-trample dress-them/their”) — demand settled (popped from
+# the queue): and-qidashtam-the-day-and-deferred
+m.result(&quot;ve_qidashtam_ha_yom_u_machar&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Exod.19.15 · THREE_DAYS ------------------------
+# וַיֹּאמֶר אֶל־הָעָם הֱיוּ נְכֹנִים לִשְׁלֹשֶׁת יָמִים אַל־תִּגְּשׁוּ
+# אֶל־אִשָּׁה
+# &quot;[EN-AID] And he said to the people: Be ready for three days — approach
+# not a woman.&quot;
+m.step(&quot;Exod.19.15&quot;)
+# ‹הֱיוּ נְכֹנִים לִשְׁלֹשֶׁת יָמִים אַל־תִּגְּשׁוּ אֶל־אִשָּׁה› (“be be-
+# erect to-three day do-not be to woman”) — fact holds: heyu-be-erect-to-me-
+# sheloshet-day
+m.fact(&quot;heyu_nekhonim_li_sheloshet_yamim&quot;)
+
+# -------------------------- Exod.19.16 · THUNDERS_AND_LIGHTNINGS -----------
+# וַיְהִי בַיּוֹם הַשְּׁלִישִׁי בִּהְיֹת הַבֹּקֶר וַיְהִי קֹלֹת וּבְרָקִים
+# וְעָנָן כָּבֵד עַל־הָהָר וְקֹל שֹׁפָר חָזָק מְאֹד וַיֶּחֱרַד כָּל־הָעָם
+# אֲשֶׁר בַּמַּחֲנֶה
+# &quot;[EN-AID] And it was on the third day, when the morning was, that there
+# were thunders and lightnings, and a heavy cloud on the mountain, and a
+# shofar-voice exceedingly strong — and all the people that were in the camp
+# trembled.&quot;
+m.step(&quot;Exod.19.16&quot;)
+# ‹וַיְהִי קֹלֹת וּבְרָקִים וְעָנָן כָּבֵד עַל־הָהָר וְקֹל שֹׁפָר חָזָק
+# מְאֹד› (“and-be voice/sound and-lightning and-cloud heavy over the-
+# mountain and-voice/sound cornet strong very”) — event: voice/sound-and-
+# lightning — theme har-sinay
+m.event(&quot;qolot_u_veraqim&quot;, themes=[&quot;har-sinay&quot;])
+
+# -------------------------- Exod.19.17 · TO_MEET_GOD -----------------------
+# וַיּוֹצֵא מֹשֶׁה אֶת־הָעָם לִקְרַאת הָאֱלֹהִים מִן־הַמַּחֲנֶה
+# וַיִּתְיַצְּבוּ בְּתַחְתִּית הָהָר
+# &quot;[EN-AID] And Moses brought the people out toward God, out of the camp —
+# and they stationed themselves at the underside of the mountain.&quot;
+m.step(&quot;Exod.19.17&quot;)
+# ‹וַיִּתְיַצְּבוּ בְּתַחְתִּית הָהָר› (“and-place in-lowermost the-
+# mountain”) — fact holds: and-place-in-lowermost-the-mountain
+m.fact(&quot;va_yityatzvu_be_tachtit_ha_har&quot;)
+
+# -------------------------- Exod.19.18 · THE_MOUNTAIN_SMOKED ---------------
+# וְהַר סִינַי עָשַׁן כֻּלּוֹ מִפְּנֵי אֲשֶׁר יָרַד עָלָיו יְהוָה בָּאֵשׁ
+# וַיַּעַל עֲשָׁנוֹ כְּעֶשֶׁן הַכִּבְשָׁן וַיֶּחֱרַד כָּל־הָהָר מְאֹד
+# &quot;[EN-AID] And mount Sinai smoked, all of it, because the LORD descended on
+# it in fire; and its smoke went up like the smoke of the kiln — and the
+# whole mountain trembled exceedingly.&quot;
+m.step(&quot;Exod.19.18&quot;)
+# ‹וְהַר סִינַי עָשַׁן כֻּלּוֹ מִפְּנֵי אֲשֶׁר יָרַד עָלָיו יְהוָה בָּאֵשׁ›
+# (“and-mountain Sinai smoke all-him/its from-face which go-down over-
+# him/its YHWH in-fire”) — fact holds: and-mountain-Sinai-smoke-kulo
+m.fact(&quot;ve_har_sinay_ashan_kulo&quot;)
+
+# -------------------------- Exod.19.19 · VOICE_FOR_VOICE -------------------
+# וַיְהִי קוֹל הַשּׁוֹפָר הוֹלֵךְ וְחָזֵק מְאֹד מֹשֶׁה יְדַבֵּר וְהָאֱלֹהִים
+# יַעֲנֶנּוּ בְקוֹל
+# &quot;[EN-AID] And the voice of the shofar went on, going and strengthening
+# exceedingly; Moses would speak — and God would answer him in a voice.&quot;
+m.step(&quot;Exod.19.19&quot;)
+# ‹מֹשֶׁה יְדַבֵּר וְהָאֱלֹהִים יַעֲנֶנּוּ בְקוֹל› (“Moses speak and-the-God
+# eye-him/its in-voice/sound”) — fact holds: Moses-speak-and-the-God-yaanenu
+m.fact(&quot;moshe_yedaber_ve_ha_elohim_yaanenu&quot;)
+
+# -------------------------- Exod.19.20 · THE_DESCENT -----------------------
+# וַיֵּרֶד יְהוָה עַל־הַר סִינַי אֶל־רֹאשׁ הָהָר וַיִּקְרָא יְהוָה לְמֹשֶׁה
+# אֶל־רֹאשׁ הָהָר וַיַּעַל מֹשֶׁה
+# &quot;[EN-AID] And the LORD descended on mount Sinai, to the top of the
+# mountain; and the LORD called Moses to the top of the mountain — and Moses
+# went up.&quot;
+m.step(&quot;Exod.19.20&quot;)
+# ‹וַיֵּרֶד יְהוָה עַל־הַר סִינַי אֶל־רֹאשׁ הָהָר› (“and-go-down YHWH over
+# mountain Sinai to head the-mountain”) — event: yeridat-the-LORD — agent
+# the-LORD
+m.event(&quot;yeridat_YHWH&quot;, agent=&quot;YHWH&quot;)
+
+# -------------------------- Exod.19.21 · GO_DOWN_WARN ----------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה רֵד הָעֵד בָּעָם פֶּן־יֶהֶרְסוּ אֶל־יְהוָה
+# לִרְאוֹת וְנָפַל מִמֶּנּוּ רָב
+# &quot;[EN-AID] And the LORD said to Moses: Go down, warn the people — lest they
+# break through to the LORD to see, and many of them fall.&quot;
+m.step(&quot;Exod.19.21&quot;)
+# ‹רֵד הָעֵד בָּעָם› (“go-down duplicate in-people”) — the-LORD speaks a
+# demand — LET: go-down-duplicate-come/bring-people
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;red_haed_ba_am&quot;)
+
+# -------------------------- Exod.19.22 · THE_PRIESTS_TOO -------------------
+# וְגַם הַכֹּהֲנִים הַנִּגָּשִׁים אֶל־יְהוָה יִתְקַדָּשׁוּ פֶּן־יִפְרֹץ
+# בָּהֶם יְהוָה
+# &quot;[EN-AID] And also the priests, who approach the LORD, shall sanctify
+# themselves — lest the LORD break out against them.&quot;
+m.step(&quot;Exod.19.22&quot;)
+# ‹וְגַם הַכֹּהֲנִים הַנִּגָּשִׁים אֶל־יְהוָה יִתְקַדָּשׁוּ› (“and-also the-
+# priest the-be to YHWH sanctify”) — fact holds: and-also-the-priest-
+# sanctify
+m.fact(&quot;ve_gam_ha_kohanim_yitqadashu&quot;)
+
+# -------------------------- Exod.19.23 · THE_FENCE_STANDS ------------------
+# וַיֹּאמֶר מֹשֶׁה אֶל־יְהוָה לֹא־יוּכַל הָעָם לַעֲלֹת אֶל־הַר סִינָי
+# כִּי־אַתָּה הַעֵדֹתָה בָּנוּ לֵאמֹר הַגְבֵּל אֶת־הָהָר וְקִדַּשְׁתּוֹ
+# &quot;[EN-AID] And Moses said to the LORD: The people cannot come up to mount
+# Sinai — for You warned us, saying: Fence the mountain, and sanctify it.&quot;
+m.step(&quot;Exod.19.23&quot;)
+# ‹כִּי־אַתָּה הַעֵדֹתָה בָּנוּ לֵאמֹר הַגְבֵּל אֶת־הָהָר וְקִדַּשְׁתּוֹ›
+# (“that you duplicate in-us/our to-say twist-as-arope obj-marker the-
+# mountain and-sanctify-him/its”) — fact holds: not-be-able-the-people-to-
+# go-up
+m.fact(&quot;lo_yukhal_ha_am_la_alot&quot;)
+
+# -------------------------- Exod.19.24 · BARRIERS_BY_RANK ------------------
+# וַיֹּאמֶר אֵלָיו יְהוָה לֶךְ־רֵד וְעָלִיתָ אַתָּה וְאַהֲרֹן עִמָּךְ
+# וְהַכֹּהֲנִים וְהָעָם אַל־יֶהֶרְסוּ לַעֲלֹת אֶל־יְהוָה פֶּן־יִפְרָץ־בָּם
+# &quot;[EN-AID] And the LORD said to him: Go, descend — and you shall come up,
+# you and Aaron with you; and the priests and the people shall not break
+# through to come up to the LORD, lest He break out against them.&quot;
+m.step(&quot;Exod.19.24&quot;)
+# ‹לֶךְ־רֵד וְעָלִיתָ אַתָּה וְאַהֲרֹן עִמָּךְ› (“go go-down and-go-up you
+# and-Aaron with-you/your”) — fact holds: and-go-up-now-and-Aaron-imakh
+m.fact(&quot;ve_alita_ata_ve_aharon_imakh&quot;)
+
+# -------------------------- Exod.19.25 · AND_SAID_TO_THEM ------------------
+# וַיֵּרֶד מֹשֶׁה אֶל־הָעָם וַיֹּאמֶר אֲלֵהֶם
+# &quot;[EN-AID] And Moses went down to the people — and said to them.&quot;
+m.step(&quot;Exod.19.25&quot;)
+# ‹וַיֵּרֶד מֹשֶׁה אֶל־הָעָם וַיֹּאמֶר אֲלֵהֶם› (“and-go-down Moses to the-
+# people and-say to-them/their”) — demand settled (popped from the queue):
+# go-down-duplicate-come/bring-people
+m.result(&quot;red_haed_ba_am&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;ve_higbalta_et_ha_am&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 4
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;bau_midbar_sinay&#x27;, &#x27;va_yichan_sham_yisrael&#x27;, &#x27;u_moshe_ala_el_ha_elohim&#x27;, &#x27;va_esa_etkhem_al_kanfe_nesharim&#x27;, &#x27;mamlekhet_kohanim_ve_goy_qadosh&#x27;, &#x27;va_yasem_lifnehem&#x27;, &#x27;baavur_yishma_ha_am&#x27;, &#x27;yered_YHWH_le_ene_khol_ha_am&#x27;, &#x27;bimshokh_ha_yovel_hema_yaalu&#x27;, &#x27;heyu_nekhonim_li_sheloshet_yamim&#x27;, &#x27;va_yityatzvu_be_tachtit_ha_har&#x27;, &#x27;ve_har_sinay_ashan_kulo&#x27;, &#x27;moshe_yedaber_ve_ha_elohim_yaanenu&#x27;, &#x27;ve_gam_ha_kohanim_yitqadashu&#x27;, &#x27;lo_yukhal_ha_am_la_alot&#x27;, &#x27;ve_alita_ata_ve_aharon_imakh&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 9
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-10 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

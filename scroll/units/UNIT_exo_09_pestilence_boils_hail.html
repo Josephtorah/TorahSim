@@ -1,0 +1,1078 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>exo_09_pestilence_boils_hail — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/exo_09_pestilence_boils_hail?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Pestilence, boils, hail (9:1-35) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>exo_09_pestilence_boils_hail</b> · Exodus 9:1-35 · derive logic_derived_v1 · phase FWD-23</div>
+<div class="meta"><a href="../#Exod/9/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">כִּ֛י אֵ֥ין כָּמֹ֖נִי בְּכָל הָאָֽרֶץ</span> · <i>ki en kamo-ni be-khal-ha-aretz</i> · &#x27;there is none like Me in all the earth&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DERIVED 2026-08-09 · FORWARD ERA unit #23 (run FWD-5 block 4; Exod 1-9 continuous behind it). Span: 9:1-35, whole chapter (plagues five, six, seven): 35 verses (SNAPSHOT-verified), every verse with an etnachta. Oral layer IN-PIPELINE: manifest 13/13 VERIFIED, zero FAILED — see oral_audit_note_en. MACHINE PROFILE. FIVE DECLAREs, THREE RESULTs. The cattle-errand (9:1) OPEN (unnarrated-compliance; the plague executes at 9:6 — the first plague executed wholly OFF-STAGE: no stretch, no staff, the appointed word alone); the boils-command (9:8, the UNANNOUNCED sixth) pops at 9:10; the hail-errand (9:13, the third morning-station, the cycle&#x27;s longest warning-speech) OPEN; the stretch-command (9:22) pops at 9:23 — plague seven; the third entreat-demand (9:28) pops at 9:33 (the spread palms performed verbatim). THE TURN AT 9:12: the FIRST DIVINE HARDENING (va-yechazeq YHWH — asserted; 7:3&#x27;s declared policy activates at the sixth plague; through five the heart hardened itself). The seal-formula gains its instrument-clause at 9:35 (BE-YAD MOSHE — by the hand of Moses, asserted: the citation-formula debuts). The CONFESSION-LEDGER opens and closes in-span: chatati 9:27 -&gt; va-yosef la-chato 9:34 (graded by 9:30&#x27;s terem tiraun prophecy — CONFIRMED). The send-promise&#x27;s THIRD breach (9:28 -&gt; 9:35). The distinction-file: cattle 9:4, Goshen 9:26 (stations two and three). The BRANCHING VERSE-PAIR 9:20-21 (the fearer / the heedless — one warning, two ledger-columns, paid out at 9:25). The crop-parenthesis 9:31-32 (the corpus&#x27;s first in-text damage-assessment; the locusts&#x27; menu pre-defined). The audit at 9:7 (the send-verb spent on inspectors, asserted). Queue at close: TWO OPEN in-unit (the cattle-errand; the hail-errand). REGISTRY 0; TESTS 0; LEDGER: the two appointments (9:5 machar; 9:18 ka-et machar). CARE-POINTS: the know-ledger summits at 9:14 (none-like-Me in all the earth; 8:6 and 8:18 beneath it; la-YHWH ha-aretz 9:29); the counterfactual 9:15-16 (the plagues as measured restraint; the standing granted — heemadtikha — against the chapter&#x27;s lean stand-file); the superlative ladder opens (since-founding 9:18, since-nationhood 9:24; 10:6 and 11:6 armed); the grip-word 9:2 (machaziq — the hardening root on the king&#x27;s hands). WATCHLIST ARMS: 10:1 (the locusts&#x27; summons — I have made his heart heavy), 10:5 (the hail&#x27;s leavings eaten), 10:23 (the light in the dwellings), 13:4 (the aviv-month named), 14:4/18 (Egypt shall know), 19:16 (Sinai&#x27;s lean thunders).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-09 (IN-PIPELINE, forward era; manifest logic/oral_audit/manifests/exo_09_pestilence_boils_hail_claims.json 13/13 VERIFIED, zero FAILED; record logic/oral_audit/AUDIT_exo_09_2026-08-09.md). CROWNS (chain-attested + DB-verified). THE THUNDER-WORD FILE [EX09-01, MS on 9:29 + the Ramah + the Masorah&#x27;s six; Kitzur on 9:29] — THE UNIT&#x27;S MARQUEE: הקלות (&quot;the thunders&quot;) written lean-first FULL-LAST exactly TWICE in the Torah (9:29, 9:33 — the Ramah&#x27;s own two), the remaining stations doubly lean (9:23, 9:28, 9:34, asserted), the Hilleli collated, the Masorah&#x27;s six-class named (sign at Ps 93); and the Kitzur&#x27;s no-more asymmetry (&quot;the thunders will return at the GIVING OF THE TORAH&quot;) gains a letter it never claimed: Sinai&#x27;s קלת (19:16) stands in the same lean census. THE BABEL CEASE-PAIR [EX09-02, Kitzur on 9:33]: ויחדלו (&quot;and they ceased&quot;) — exact Torah-pair: Babel&#x27;s builders (Gen 11:8) and the thunders here — the THIRD Babel-Egypt letter-bond (bricks, scatter, cease): two building-empires stopped by voices. THE HE AND THE ALEF [EX09-03, MS + Kitzur on 9:4]: והפלה (&quot;will set apart,&quot; he) / והפלא (&quot;will make wondrous,&quot; alef, Deut 28:59) — both unique; the he as FIVE (five plagues, then the body); the law of him who was flogged and flogged again — EVERY THIRD PLAGUE UNWARNED — the machine&#x27;s own warned/unwarned grid attested from the spelling. THE FEARER [EX09-04, Kitzur on 9:20]: הירא (&quot;he who feared&quot;) — exact Torah-pair with the war-exemption (Deut 20:8); the best-of-Egypt homily and the sea&#x27;s horses named. THE LEAN STANDING [EX09-05, MS on 9:28 + the Ramah]: לעמד (&quot;to stand&quot;) — ALL FOUR Torah stations lean, full skeleton zero: the magicians&#x27; lost standing (9:11), the king&#x27;s renounced standing (9:28), the Levites&#x27; inherited standing (Deut 10:8, 18:5). THE CHARIOT&#x27;S FIRE [EX09-06, Kitzur on 9:24]: ואש מתלקחת (&quot;fire taking hold of itself&quot;) — Torah-unique; Ezekiel 1:4 its only Scripture-twin: the throne-vision&#x27;s fire inside the plague&#x27;s ice. THE RAINED-WORD [EX09-07, Kitzur on 9:23]: וימטר (&quot;and He rained&quot;) Torah-unique; the quail-psalm twin (Ps 78:27). THE POURED-WORD [EX09-08, Kitzur on 9:33]: נתך (&quot;poured&quot;) Torah-unique; Rizpah&#x27;s rain and Jerusalem&#x27;s wrath named — prayer withholds and brings down. THE FEAR-PAIR [EX09-09, Kitzur on 9:30]: תיראון (&quot;you fear&quot;) — exact Torah-pair with Deut 1:29; fear that melts with the ice vs fear commanded away. THE NOT-GATHERED [EX09-10, Kitzur on 9:19]: ולא יאסף (&quot;and shall not be gathered&quot;) — the Torah&#x27;s only such adjacency; Job&#x27;s rich man (27:19) named. THE DECLARE-POINTING [EX09-11, Kitzur on 9:16]: ספר (&quot;declare&quot;) — of the Torah&#x27;s eight book-skeleton homographs, only 9:16 carries the declare-vowels (asserted); Isaiah&#x27;s court-summons (43:26) named: judgment exalts the Name. THE LETTER-AND-ACCENT FILE [EX09-12, MS; Chizkuni; Radak]: the TELISHA on אשר (&quot;which,&quot; 9:24) landing exactly (checked); הוסדה (&quot;it was founded&quot;) with NO dot in its he (the Masorah; Radak three times over); the half-vowel of לבך (&quot;your heart&quot;); the vowels of לאבק (&quot;into dust&quot;); the soft first bet of אבעבעת (&quot;blisters&quot;) at both stations; the hard dalet of הדבר (&quot;the thing&quot;); the second mem of ממחרת (&quot;on the morrow&quot;) bare — the wheel-class&#x27;s first NEGATIVE ruling, stream consistent; and ONE DIVERGENCE dual-tracked: ותהלך אש (&quot;and fire went&quot;) — MS rules the binder, the stream writes a space (asserted; the Joshua-6 cross-note named). READINGS (named-only) [EX09-13]: the no-more clause on the hail alone (anchored) — Sinai&#x27;s thunders pre-booked in the syntax; the BALAAM acrostic at 9:17 (the three-counselors tradition: Balaam, Job, Jethro).</div>
+<div class="meta">confidence: structure tested; oral layer verified 13/13</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>FORWARD ERA run 5, block 4. Canon continuation: Exod 9:1-35 — pestilence, boils, hail; whole chapter.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Span + source + conventions</td><td>SNAPSHOT prestage: 35 verses, every one with an etnachta. No ketiv/qere pairs in-span. Volitive census: five real pushes — the cattle-errand (9:1), the boils-command (9:8), the hail-errand (9:13), the stretch-command (9:22), Pharaoh&#x27;s entreat-3 (9:28); the flee-warning (9:19 shelach haez) is advisory content inside the hail-errand&#x27;s speech, not a tracked card (the machine notes the mercy-clause); the send-promise at 9:28 is STATE (the promise-ledger&#x27;s third entry).</td><td>established</td></tr>
+<tr><td><b>C</b></td><td>Machine structure</td><td>Five DECLAREs, three RESULTs (9:8-&gt;9:10; 9:22-&gt;9:23; 9:28-&gt;9:33); the two errand-cards OPEN (unnarrated-compliance class). THE TURN: the first divine hardening at 9:12 (asserted); the seal gains be-yad-moshe at 9:35 (asserted). The confession-ledger opens and expires in-span (9:27 -&gt; 9:34, graded by 9:30). The branching verse-pair 9:20-21 paid out at 9:25. Plague five executes off-stage on the appointed day. Queue at close: two open in-unit.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Exod 9 (12 notes) + Kitzur Baal HaTurim on Exod 9 (11 notes). Manifest 13 rows: 13 VERIFIED / 0 FAILED / 0 UNCHECKABLE. The thunder-word file whole with Sinai&#x27;s lean bonus; the Babel cease-pair (bond three); the he/alef pair attesting the unwarned-thirds grid; the lean stand-file; one binder-divergence dual-tracked.</td><td>established</td></tr>
+<tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 13/13 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-09 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits. Run FWD-5 block 4: Exod 1-9 continuous.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Ex_9_1 · Exod.9.1 · <span class='expr'>THE_CATTLE_ERRAND</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה בֹּא אֶל־פַּרְעֹה וְדִבַּרְתָּ אֵלָיו כֹּה־אָמַר יְהוָה אֱלֹהֵי הָעִבְרִים שַׁלַּח אֶת־עַמִּי וְיַעַבְדֻנִי</span> · <i>va-yomer YHWH el-moshe bo el-paro ve-dibarta elay-v ko-amar YHWH elohe ha-ivrim shalach et-ami-y ve-yaavdu-ni</i> · And the LORD said to Moses: Come to Pharaoh, and speak to him: Thus says the LORD, the God of the Hebrews: Send My people, that they may serve Me.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה בֹּ֖א אֶל פַּרְעֹ֑ה</span> · <i>va-yomer YHWH el-moshe bo el-paro</i> · and the LORD said to Moses: come to Pharaoh (etnachta on paro) [VERIFIED: SNAPSHOT Exod.9.1 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְדִבַּרְתָּ֣ אֵלָ֗יו כֹּֽה אָמַ֤ר יְהוָה֙ אֱלֹהֵ֣י הָֽעִבְרִ֔ים שַׁלַּ֥ח אֶת עַמִּ֖י וְיַֽעַבְדֻֽנִי</span> · <i>ve-dibarta elay-v ko-amar YHWH elohe ha-ivrim shalach et-ami-y ve-yaavdu-ni</i> · and speak to him: thus says the LORD, the God of the Hebrews: send My people, that they may serve Me (verse-final ve-yaavdu-ni) [VERIFIED: SNAPSHOT Exod.9.1 idx7-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(bo_el_paro_ve_dibarta))</span><br><span class="gloss">= DECLARE(the-LORD, LET(in-it-to-paro-and-dibarta))</span><br>THE FIFTH SUMMONS. BO el-paro VE-DIBARTA elav — &#x27;COME to Pharaoh and SPEAK to him&#x27;: the errand-formula again (the fifth sounding of the send-formula behind it — 5:1, 7:16, 7:26, 8:16, here); ko amar YHWH elohe ha-IVRIM — the Hebrews&#x27;-God credential (3:18&#x27;s coinage, standing); SHALACH et-AMI ve-yaavduni — the standing demand re- pressed: the machine pushes the errand-card knowing its class (the unnarrated-compliance family — the delivery will not be shown, the plague will execute at 9:6): the warned plagues now run on their own liturgy — summons, condition, distinction, execution.
+</td><td><span class="he">בֹּא אֶל־פַּרְעֹה</span> · <i>bo el-paro</i><br><span class="gloss">= in-it to-paro</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The fifth summons; the errand-card pushed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_2 · Exod.9.2 · <span class='expr'>IF_YOU_REFUSE_TO_SEND</span></h3>
+<p><span class="he">כִּי אִם־מָאֵן אַתָּה לְשַׁלֵּחַ וְעוֹדְךָ מַחֲזִיק בָּם</span> · <i>ki im-maen ata le-shalecha ve-od-kha machaziq ba-m</i> · For if you refuse to send, and still hold them fast —</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">כִּ֛י אִם מָאֵ֥ן אַתָּ֖ה לְשַׁלֵּ֑חַ</span> · <i>ki im-maen ata le-shalecha</i> · for if you refuse to send (etnachta on le-shalecha) [VERIFIED: SNAPSHOT Exod.9.2 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְעוֹדְךָ֖ מַחֲזִ֥יק בָּֽם</span> · <i>ve-od-kha machaziq ba-m</i> · and still hold them fast (verse-final ba-m) [VERIFIED: SNAPSHOT Exod.9.2 idx5-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_odkha_machaziq_bam, t0)</span><br><span class="gloss">= HOLDS(and-odkha-machaziq-bam, t0)</span><br>THE CONDITION. ki im-MAEN ata le-shaleach — &#x27;if you REFUSE to send&#x27; (7:14&#x27;s refuse-verb, the third conditional built on it); ve-ODKHA MACHAZIQ bam — &#x27;and STILL HOLD THEM FAST&#x27;: the grip-participle (the strengthen-root chazaq — the same root the hardening-ledger conjugates: the hand that grips the people and the heart that grips itself share one verb-family, the machine files the pun of the ledger): the condition names the crime as a grip.
+</td><td><span class="he">וְעוֹדְךָ מַחֲזִיק בָּם</span> · <i>ve-od-kha machaziq ba-m</i><br><span class="gloss">= and-od-kha machaziq in-the-m</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The condition; the grip-word.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_3 · Exod.9.3 · <span class='expr'>THE_HAND_ON_THE_CATTLE</span></h3>
+<p><span class="he">הִנֵּה יַד־יְהוָה הוֹיָה בְּמִקְנְךָ אֲשֶׁר בַּשָּׂדֶה בַּסּוּסִים בַּחֲמֹרִים בַּגְּמַלִּים בַּבָּקָר וּבַצֹּאן דֶּבֶר כָּבֵד מְאֹד</span> · <i>hine yad-YHWH hoya be-miqn-kha asher ba-sade ba-susim ba-chamorim ba-gemalim ba-baqar u-va-tzon dever kaved meod</i> · Behold, the hand of the LORD is upon your cattle which are in the field — upon the horses, upon the donkeys, upon the camels, upon the herds, and upon the flocks — a very heavy pestilence.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">הִנֵּ֨ה יַד יְהוָ֜ה הוֹיָ֗ה בְּמִקְנְךָ֙ אֲשֶׁ֣ר בַּשָּׂדֶ֔ה בַּסּוּסִ֤ים בַּֽחֲמֹרִים֙ בַּגְּמַלִּ֔ים בַּבָּקָ֖ר וּבַצֹּ֑אן</span> · <i>hine yad-YHWH hoya be-miqn-kha asher ba-sade ba-susim ba-chamorim ba-gemalim ba-baqar u-va-tzon</i> · behold, the hand of the LORD is upon your cattle in the field — horses, donkeys, camels, herds, and flocks (etnachta on u-va-tzon) [VERIFIED: SNAPSHOT Exod.9.3 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">דֶּ֖בֶר כָּבֵ֥ד מְאֹֽד</span> · <i>dever kaved meod</i> · a very heavy pestilence (verse-final meod) [VERIFIED: SNAPSHOT Exod.9.3 idx12-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(yad_YHWH_hoya_be_miqnekha, t0)</span><br><span class="gloss">= HOLDS(yad-the-LORD-hoya-in-miqnekha, t0)</span><br>THE HAND. hine yad-YHWH HOYA be-miqnekha — &#x27;the HAND of the LORD IS upon your cattle&#x27; (the being-word hoya — the Name&#x27;s own verb in a rare feminine participle, the readings&#x27; present-tense hand, named- only); the FIVE species enumerated (horses, donkeys, camels, herds, flocks — the readings note the horses first: the sea&#x27;s chariots already grazing here, named-only); DEVER KAVED MEOD — &#x27;a very HEAVY pestilence&#x27;: the heavy-word again (the kaved-file: mouth, service, heart, swarms, now the plague itself — the ledger&#x27;s adjective migrating from the king&#x27;s heart to the king&#x27;s losses).
+</td><td><span class="he">הִנֵּה יַד־יְהוָה הוֹיָה</span> · <i>hine yad-YHWH hoya</i><br><span class="gloss">= hine yad-the-LORD hoya</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The fifth plague priced.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_4 · Exod.9.4 · <span class='expr'>THE_SET_APART</span></h3>
+<p><span class="he">וְהִפְלָה יְהוָה בֵּין מִקְנֵה יִשְׂרָאֵל וּבֵין מִקְנֵה מִצְרָיִם וְלֹא יָמוּת מִכָּל־לִבְנֵי יִשְׂרָאֵל דָּבָר</span> · <i>ve-hifla YHWH ben miqne yisrael u-ven miqne mitzrayim ve-lo yamut mi-kal-li-vene yisrael davar</i> · And the LORD will set apart between the cattle of Israel and the cattle of Egypt; and nothing shall die of all that belongs to the sons of Israel.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהִפְלָ֣ה יְהוָ֔ה בֵּ֚ין מִקְנֵ֣ה יִשְׂרָאֵ֔ל וּבֵ֖ין מִקְנֵ֣ה מִצְרָ֑יִם</span> · <i>ve-hifla YHWH ben miqne yisrael u-ven miqne mitzrayim</i> · and the LORD will set apart between the cattle of Israel and the cattle of Egypt (etnachta on mitzrayim) [VERIFIED: SNAPSHOT Exod.9.4 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְלֹ֥א יָמ֛וּת מִכָּל לִבְנֵ֥י יִשְׂרָאֵ֖ל דָּבָֽר</span> · <i>ve-lo yamut mi-kal-li-vene yisrael davar</i> · and nothing shall die of all that belongs to the sons of Israel (verse-final davar) [VERIFIED: SNAPSHOT Exod.9.4 idx8-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_hifla_YHWH_ben_miqne, t0)</span><br><span class="gloss">= HOLDS(and-hifla-the-LORD-ben-miqne, t0)</span><br>THE DISTINCTION [EX09-03 CROWN]. ve-HIFLA YHWH ben miqne yisrael u-ven miqne mitzrayim — &#x27;and the LORD will SET APART&#x27;: the distinction-clause&#x27;s second station (8:18&#x27;s Goshen now a cattle- ledger) — and the word is written with a final HE, its Masorah- partner at the curses with an ALEF (&#x27;and the LORD will make WONDROUS your plagues,&#x27; Deut 28:59 — both unique, VERIFIED): the Kitzur reads the pair twice — the body-blow correspondence, and the HE as FIVE: &#x27;after five plagues they were struck in their BODIES with boils, the sixth&#x27;; and from the pair the chain derives the flogged-twice law: &#x27;every THIRD plague came WITHOUT WARNING&#x27; — the machine&#x27;s own warned/unwarned grid (lice, boils, darkness unannounced) attested from the letter&#x27;s own he and alef: the corpus&#x27;s structure certified by a spelling.
+</td><td><span class="he">וְהִפְלָה יְהוָה בֵּין מִקְנֵה יִשְׂרָאֵל וּבֵין מִקְנֵה מִצְרָיִם</span> · <i>ve-hifla YHWH ben miqne yisrael u-ven miqne mitzrayim</i><br><span class="gloss">= and-hifla the-LORD ben miqne yisrael and-ven miqne mitzrayim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The he/alef pair; the third-unwarned law.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_5 · Exod.9.5 · <span class='expr'>THE_APPOINTED_TIME</span></h3>
+<p><span class="he">וַיָּשֶׂם יְהוָה מוֹעֵד לֵאמֹר מָחָר יַעֲשֶׂה יְהוָה הַדָּבָר הַזֶּה בָּאָרֶץ</span> · <i>va-yasem YHWH moed le-mor machar yaase YHWH ha-davar ha-ze ba-aretz</i> · And the LORD set an appointed time, saying: Tomorrow the LORD will do this thing in the land.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּ֥שֶׂם יְהוָ֖ה מוֹעֵ֣ד לֵאמֹ֑ר</span> · <i>va-yasem YHWH moed le-mor</i> · and the LORD set an appointed time, saying (etnachta on le-mor) [VERIFIED: SNAPSHOT Exod.9.5 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">מָחָ֗ר יַעֲשֶׂ֧ה יְהוָ֛ה הַדָּבָ֥ר הַזֶּ֖ה בָּאָֽרֶץ</span> · <i>machar yaase YHWH ha-davar ha-ze ba-aretz</i> · tomorrow the LORD will do this thing in the land (verse-final ba-aretz) [VERIFIED: SNAPSHOT Exod.9.5 idx4-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yasem_YHWH_moed, t0)</span><br><span class="gloss">= HOLDS(and-yasem-the-LORD-moed, t0)</span><br>THE APPOINTMENT. va-yasem YHWH MOED — &#x27;and the LORD set an APPOINTED TIME&#x27;: the calendar-word (the moed that will name the festivals — the readings, named-only) spent on a plague&#x27;s schedule; MACHAR — &#x27;TOMORROW&#x27;: the machine files the pre-announced clock (8:6&#x27;s king chose tomorrow; now Heaven sets it unasked): the plague that can be dated cannot be called weather — the argument-by-scheduling the hail will repeat at 9:18 (ka-et machar, &#x27;about this time tomorrow&#x27;).
+</td><td><span class="he">וַיָּשֶׂם יְהוָה מוֹעֵד לֵאמֹר</span> · <i>va-yasem YHWH moed le-mor</i><br><span class="gloss">= and-yasem the-LORD moed to-mor</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The clock set in advance.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_6 · Exod.9.6 · <span class='expr'>THE_CATTLE_DIE</span></h3>
+<p><span class="he">וַיַּעַשׂ יְהוָה אֶת־הַדָּבָר הַזֶּה מִמָּחֳרָת וַיָּמָת כֹּל מִקְנֵה מִצְרָיִם וּמִמִּקְנֵה בְנֵי־יִשְׂרָאֵל לֹא־מֵת אֶחָד</span> · <i>va-yaas YHWH et-ha-davar ha-ze mi-machorat va-yamat kol miqne mitzrayim u-mi-miqne vene-yisrael lo-met echad</i> · And the LORD did this thing on the morrow: and all the cattle of Egypt died; and of the cattle of the sons of Israel not one died.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּ֨עַשׂ יְהוָ֜ה אֶת הַדָּבָ֤ר הַזֶּה֙ מִֽמָּחֳרָ֔ת וַיָּ֕מָת כֹּ֖ל מִקְנֵ֣ה מִצְרָ֑יִם</span> · <i>va-yaas YHWH et-ha-davar ha-ze mi-machorat va-yamat kol miqne mitzrayim</i> · and the LORD did this thing on the morrow: and all the cattle of Egypt died (etnachta on mitzrayim) [VERIFIED: SNAPSHOT Exod.9.6 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּמִמִּקְנֵ֥ה בְנֵֽי יִשְׂרָאֵ֖ל לֹא מֵ֥ת אֶחָֽד</span> · <i>u-mi-miqne vene-yisrael lo-met echad</i> · and of the cattle of the sons of Israel not one died (verse-final echad) [VERIFIED: SNAPSHOT Exod.9.6 idx10-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yamat_kol_miqne_mitzrayim, t0)</span><br><span class="gloss">= HOLDS(and-yamat-all-miqne-mitzrayim, t0)</span><br>PLAGUE FIVE. va-yaas YHWH et-ha-davar ha-ze MI-MACHORAT — &#x27;on the MORROW&#x27; (the appointment kept to the day; the morrow-word&#x27;s second mem bare of any second stroke — MS&#x27;s negative wheel-ruling, asserted [EX09-12]); va-YAMAT kol miqne mitzrayim — &#x27;ALL the cattle of Egypt died&#x27; (the all-word against 9:19-21&#x27;s surviving cattle: the readings&#x27; field-only resolution carried, named-only — the letter itself says which-are-in-the-field at 9:3); u-mi-miqne bene-yisrael lo-met ECHAD — &#x27;not ONE died&#x27;: the distinction executed to the single head: the machine files the plague as the first executed wholly OFF-STAGE — no stretch, no staff, no performer: the appointed word alone.
+</td><td><span class="he">וַיָּמָת כֹּל מִקְנֵה מִצְרָיִם</span> · <i>va-yamat kol miqne mitzrayim</i><br><span class="gloss">= and-yamat all miqne mitzrayim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Plague five executes on schedule.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_7 · Exod.9.7 · <span class='expr'>THE_AUDIT</span></h3>
+<p><span class="he">וַיִּשְׁלַח פַּרְעֹה וְהִנֵּה לֹא־מֵת מִמִּקְנֵה יִשְׂרָאֵל עַד־אֶחָד וַיִּכְבַּד לֵב פַּרְעֹה וְלֹא שִׁלַּח אֶת־הָעָם</span> · <i>va-yishlach paro ve-hine lo-met mi-miqne yisrael ad-echad va-yikhbad lev paro ve-lo shilach et-ha-am</i> · And Pharaoh sent — and behold, not even one of the cattle of Israel had died; and Pharaoh&#x27;s heart grew heavy, and he did not send the people.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּשְׁלַ֣ח פַּרְעֹ֔ה וְהִנֵּ֗ה לֹא מֵ֛ת מִמִּקְנֵ֥ה יִשְׂרָאֵ֖ל עַד אֶחָ֑ד</span> · <i>va-yishlach paro ve-hine lo-met mi-miqne yisrael ad-echad</i> · and Pharaoh sent — and behold, not even one of the cattle of Israel had died (etnachta on echad) [VERIFIED: SNAPSHOT Exod.9.7 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּכְבַּד֙ לֵ֣ב פַּרְעֹ֔ה וְלֹ֥א שִׁלַּ֖ח אֶת הָעָֽם</span> · <i>va-yikhbad lev paro ve-lo shilach et-ha-am</i> · and Pharaoh&#x27;s heart grew heavy, and he did not send the people (verse-final ha-am) [VERIFIED: SNAPSHOT Exod.9.7 idx9-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yishlach_paro_ve_hine, t0)</span><br><span class="gloss">= HOLDS(and-yishlach-paro-and-hine, t0)</span><br>THE AUDIT. va-YISHLACH paro — &#x27;and Pharaoh SENT&#x27;: the send-verb the whole book demands of him — spent on an AUDIT (asserted: the one dispatch the king makes is inspectors to Goshen; the machine files the irony in the ledger&#x27;s own verb); ve-hine lo-met... ad-ECHAD — the distinction CONFIRMED by the throne&#x27;s own commission (&#x27;not even ONE&#x27;); va-YIKHBAD lev paro — and the heart grows heavy on the evidence (the hardening-ledger: the verified sign hardens what it should soften — the relief-relapse law of 8:11 now a data-relapse); ve-lo shilach et-ha-am — the refusal-formula again: the king who sent to check does not send to free.
+</td><td><span class="he">וַיִּשְׁלַח פַּרְעֹה וְהִנֵּה</span> · <i>va-yishlach paro ve-hine</i><br><span class="gloss">= and-yishlach paro and-hine</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The send-verb spent on an audit.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_8 · Exod.9.8 · <span class='expr'>SOOT_HEAVENWARD</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה וְאֶל־אַהֲרֹן קְחוּ לָכֶם מְלֹא חָפְנֵיכֶם פִּיחַ כִּבְשָׁן וּזְרָקוֹ מֹשֶׁה הַשָּׁמַיְמָה לְעֵינֵי פַרְעֹה</span> · <i>va-yomer YHWH el-moshe ve-el-aharon qechu la-khem melo chafne-khem picha kivshan u-zeraq-o moshe ha-shamayma-ה le-ene faro</i> · And the LORD said to Moses and to Aaron: Take for yourselves handfuls of soot of the furnace, and let Moses throw it heavenward before the eyes of Pharaoh.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֣אמֶר יְהוָה֮ אֶל מֹשֶׁ֣ה וְאֶֽל אַהֲרֹן֒ קְח֤וּ לָכֶם֙ מְלֹ֣א חָפְנֵיכֶ֔ם פִּ֖יחַ כִּבְשָׁ֑ן</span> · <i>va-yomer YHWH el-moshe ve-el-aharon qechu la-khem melo chafne-khem picha kivshan</i> · and the LORD said to Moses and to Aaron: take for yourselves handfuls of soot of the furnace (etnachta on kivshan) [VERIFIED: SNAPSHOT Exod.9.8 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּזְרָק֥וֹ מֹשֶׁ֛ה הַשָּׁמַ֖יְמָה לְעֵינֵ֥י פַרְעֹֽה</span> · <i>u-zeraq-o moshe ha-shamayma-ה le-ene faro</i> · and let Moses throw it heavenward before the eyes of Pharaoh (verse-final faro) [VERIFIED: SNAPSHOT Exod.9.8 idx12-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(qechu_piach_u_zeraqo))</span><br><span class="gloss">= DECLARE(the-LORD, LET(qechu-piach-and-zeraqo))</span><br>THE SIXTH COMMAND. QECHU lakhem melo chafnekhem PIACH KIVSHAN — &#x27;TAKE handfuls of SOOT OF THE FURNACE&#x27; (the furnace-word: the readings hear the bricks&#x27; kilns — the oppression&#x27;s own ash thrown back at heaven, named-only); u-ZERAQO moshe ha-SHAMAYMA — &#x27;and let MOSES THROW it HEAVENWARD&#x27;: the throw-verb (the blood-rite&#x27;s future verb, unhunted) aimed UP for the first time; le-ene faro — the publicity-clause again; NO WARNING precedes (the third-of-the- triplet law EX09-03 just attested: lice, BOILS, darkness — the machine files the unannounced sixth): the card is pushed with both brothers taking and one hand throwing.
+</td><td><span class="he">קְחוּ לָכֶם מְלֹא חָפְנֵיכֶם פִּיחַ כִּבְשָׁן</span> · <i>qechu la-khem melo chafne-khem picha kivshan</i><br><span class="gloss">= qechu to-khem melo chafne-khem picha kivshan</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The unannounced sixth pushed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_9 · Exod.9.9 · <span class='expr'>THE_DUST_OF_BOILS</span></h3>
+<p><span class="he">וְהָיָה לְאָבָק עַל כָּל־אֶרֶץ מִצְרָיִם וְהָיָה עַל־הָאָדָם וְעַל־הַבְּהֵמָה לִשְׁחִין פֹּרֵחַ אֲבַעְבֻּעֹת בְּכָל־אֶרֶץ מִצְרָיִם</span> · <i>ve-haya le-avaq al kal-eretz mitzrayim ve-haya al-ha-adam ve-al-ha-behema li-shechin porecha avabuot be-khal-eretz mitzrayim</i> · And it shall become fine dust over all the land of Egypt, and it shall become on man and on beast boils blooming with blisters, in all the land of Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהָיָ֣ה לְאָבָ֔ק עַ֖ל כָּל אֶ֣רֶץ מִצְרָ֑יִם</span> · <i>ve-haya le-avaq al kal-eretz mitzrayim</i> · and it shall become fine dust over all the land of Egypt (etnachta on mitzrayim) [VERIFIED: SNAPSHOT Exod.9.9 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהָיָ֨ה עַל הָאָדָ֜ם וְעַל הַבְּהֵמָ֗ה לִשְׁחִ֥ין פֹּרֵ֛חַ אֲבַעְבֻּעֹ֖ת בְּכָל אֶ֥רֶץ מִצְרָֽיִם</span> · <i>ve-haya al-ha-adam ve-al-ha-behema li-shechin porecha avabuot be-khal-eretz mitzrayim</i> · and it shall become on man and on beast boils blooming with blisters, in all the land of Egypt (verse-final mitzrayim) [VERIFIED: SNAPSHOT Exod.9.9 idx6-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_haya_le_avaq, t0)</span><br><span class="gloss">= HOLDS(and-haya-to-avaq, t0)</span><br>THE FORECAST [EX09-12]. ve-haya le-AVAQ — &#x27;and it shall become fine DUST&#x27; (the dust-word on its ruled vowels — lamed half-vowel, alef long — Chizkuni, asserted): a handful against a land (the readings&#x27; little-holding-much, named-only); li-SHCHIN poreach AVABUOT — &#x27;BOILS blooming with BLISTERS&#x27;: the blister-word&#x27;s first bet SOFT, &#x27;and so its neighbor&#x27; (both stations asserted [EX09-12]): the machine files the trajectory — soot up, dust across, sores down: the furnace of the bricks repaid in the skin of the builders&#x27; masters.
+</td><td><span class="he">לִשְׁחִין פֹּרֵחַ אֲבַעְבֻּעֹת</span> · <i>li-shechin porecha avabuot</i><br><span class="gloss">= to-me-shechin porecha avabuot</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The forecast; the letter-file.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_10 · Exod.9.10 · <span class='expr'>THE_BOILS_BLOOM</span></h3>
+<p><span class="he">וַיִּקְחוּ אֶת־פִּיחַ הַכִּבְשָׁן וַיַּעַמְדוּ לִפְנֵי פַרְעֹה וַיִּזְרֹק אֹתוֹ מֹשֶׁה הַשָּׁמָיְמָה וַיְהִי שְׁחִין אֲבַעְבֻּעֹת פֹּרֵחַ בָּאָדָם וּבַבְּהֵמָה</span> · <i>va-yiqchu et-picha ha-kivshan va-yaamdu li-fene faro va-yizroq et-o moshe ha-shamayma-ה va-yehi shechin avabuot porecha ba-adam u-va-behema</i> · And they took the soot of the furnace, and stood before Pharaoh; and Moses threw it heavenward; and it became boils of blisters, blooming on man and on beast.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּקְח֞וּ אֶת פִּ֣יחַ הַכִּבְשָׁ֗ן וַיַּֽעַמְדוּ֙ לִפְנֵ֣י פַרְעֹ֔ה וַיִּזְרֹ֥ק אֹת֛וֹ מֹשֶׁ֖ה הַשָּׁמָ֑יְמָה</span> · <i>va-yiqchu et-picha ha-kivshan va-yaamdu li-fene faro va-yizroq et-o moshe ha-shamayma-ה</i> · and they took the soot of the furnace, and stood before Pharaoh; and Moses threw it heavenward (etnachta on ha-shamayma-ה) [VERIFIED: SNAPSHOT Exod.9.10 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיְהִ֗י שְׁחִין֙ אֲבַעְבֻּעֹ֔ת פֹּרֵ֕חַ בָּאָדָ֖ם וּבַבְּהֵמָֽה</span> · <i>va-yehi shechin avabuot porecha ba-adam u-va-behema</i> · and it became boils of blisters, blooming on man and on beast (verse-final u-va-behema) [VERIFIED: SNAPSHOT Exod.9.10 idx11-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(qechu_piach_u_zeraqo, t1)</span><br><span class="gloss">= RESULT: HOLDS(qechu-piach-and-zeraqo, t1)</span><br>PLAGUE SIX. va-yiqchu... va-yaamdu lifne faro — they took and STOOD (the stand-verb whose lean file this chapter carries [EX09-05] — the brothers stand where the magicians are about to fall); va-yizroq oto moshe ha-shamayma — the throw performed; va-yehi SHCHIN AVABUOT poreach — the boils BLOOM (the bloom-verb: the readings&#x27; dark flowering, named-only): the machine pops the card in its own next verse and files plague six — the first to touch the BODY (the Kitzur&#x27;s five-then-body arithmetic on the extra he, EX09-03): the count the letter kept in a spelling now keeps itself in flesh.
+</td><td><span class="he">וַיְהִי שְׁחִין אֲבַעְבֻּעֹת פֹּרֵחַ</span> · <i>va-yehi shechin avabuot porecha</i><br><span class="gloss">= and-yehi shechin avabuot porecha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Plague six lands.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_11 · Exod.9.11 · <span class='expr'>THE_CRAFT_CANNOT_STAND</span></h3>
+<p><span class="he">וְלֹא־יָכְלוּ הַחַרְטֻמִּים לַעֲמֹד לִפְנֵי מֹשֶׁה מִפְּנֵי הַשְּׁחִין כִּי־הָיָה הַשְּׁחִין בַּחֲרְטֻמִּם וּבְכָל־מִצְרָיִם</span> · <i>ve-lo-yakhlu ha-chartumim la-amod li-fene moshe mi-pene ha-shechin ki-haya ha-shechin ba-chartumim u-ve-khal-mitzrayim</i> · And the magicians could not stand before Moses because of the boils; for the boils were on the magicians, and on all Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְלֹֽא יָכְל֣וּ הַֽחַרְטֻמִּ֗ים לַעֲמֹ֛ד לִפְנֵ֥י מֹשֶׁ֖ה מִפְּנֵ֣י הַשְּׁחִ֑ין</span> · <i>ve-lo-yakhlu ha-chartumim la-amod li-fene moshe mi-pene ha-shechin</i> · and the magicians could not stand before Moses because of the boils (etnachta on ha-shechin) [VERIFIED: SNAPSHOT Exod.9.11 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּֽי הָיָ֣ה הַשְּׁחִ֔ין בַּֽחֲרְטֻמִּ֖ם וּבְכָל מִצְרָֽיִם</span> · <i>ki-haya ha-shechin ba-chartumim u-ve-khal-mitzrayim</i> · for the boils were on the magicians, and on all Egypt (verse-final mitzrayim) [VERIFIED: SNAPSHOT Exod.9.11 idx8-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_lo_yakhlu_ha_chartumim_laamod, t0)</span><br><span class="gloss">= HOLDS(and-not-yakhlu-the-chartumim-laamod, t0)</span><br>THE EXIT [EX09-05; EX08-01&#x27;s agreed half]. ve-lo-yakhlu ha-chartumim LA-AMOD lifne moshe — &#x27;the magicians COULD NOT STAND before Moses&#x27;: the could-not of 8:14 completed — then their craft failed, now their BODIES fail; and the stand-word is the Ramah&#x27;s LEAN file (all four Torah stations lean, VERIFIED [EX09-05]: the standing the craft loses here, the standing the king renounces at 9:28, the standing the LEVITES inherit at Deut 10:8/18:5); ki-haya ha-shchin BA- CHARTUMIM — &#x27;the boils were ON THE MAGICIANS&#x27;: the boils-station of the magician-word&#x27;s file — written LEAN here WITH the Masorah&#x27;s ruling (the agreed half of exo_08&#x27;s front-rank discrepancy, VERIFIED under EX08-01): the imitators leave the book with their word spelled one letter short, exactly as Rabbenu Bachya read it — the yod of their wisdom fallen.
+</td><td><span class="he">וְלֹא־יָכְלוּ הַחַרְטֻמִּים לַעֲמֹד לִפְנֵי מֹשֶׁה</span> · <i>ve-lo-yakhlu ha-chartumim la-amod li-fene moshe</i><br><span class="gloss">= and-not-yakhlu the-chartumim to-amod to-me-fene Moses</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The craft&#x27;s exit; the lean stand-word.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_12 · Exod.9.12 · <span class='expr'>THE_DIVINE_HARDENING</span></h3>
+<p><span class="he">וַיְחַזֵּק יְהוָה אֶת־לֵב פַּרְעֹה וְלֹא שָׁמַע אֲלֵהֶם כַּאֲשֶׁר דִּבֶּר יְהוָה אֶל־מֹשֶׁה</span> · <i>va-yechazeq YHWH et-lev paro ve-lo shama el-hem ka-asher diber YHWH el-moshe</i> · And the LORD strengthened the heart of Pharaoh, and he did not hear them, as the LORD had spoken to Moses.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְחַזֵּ֤ק יְהוָה֙ אֶת לֵ֣ב פַּרְעֹ֔ה וְלֹ֥א שָׁמַ֖ע אֲלֵהֶ֑ם</span> · <i>va-yechazeq YHWH et-lev paro ve-lo shama el-hem</i> · and the LORD strengthened the heart of Pharaoh, and he did not hear them (etnachta on el-hem) [VERIFIED: SNAPSHOT Exod.9.12 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כַּאֲשֶׁ֛ר דִּבֶּ֥ר יְהוָ֖ה אֶל מֹשֶֽׁה</span> · <i>ka-asher diber YHWH el-moshe</i> · as the LORD had spoken to Moses (verse-final moshe) [VERIFIED: SNAPSHOT Exod.9.12 idx8-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yechazeq_YHWH_et_lev_paro, t0)</span><br><span class="gloss">= HOLDS(and-yechazeq-the-LORD-lev-paro, t0)</span><br>THE TURN. va-yechazeq YHWH et-lev paro — &#x27;and THE LORD STRENGTHENED the heart of Pharaoh&#x27;: the FIRST DIVINE HARDENING (asserted — the machine&#x27;s ledger turns its page: through five plagues the heart strengthened itself or the king made it heavy; at the sixth, 7:3&#x27;s declared policy ACTIVATES: va-ani aqshe — &#x27;and I will harden&#x27; — begins to perform; the readings&#x27; five-and-five doors — he closed the first five himself — named-only, unclaimed); ve-lo shama alehem KA- ASHER DIBER YHWH el-moshe — the seal-formula with its addressee for the first time in-span (&#x27;as the LORD had spoken TO MOSES&#x27;): the machine files the corpus&#x27;s heaviest state-transition on the quietest verse in the chapter.
+</td><td><span class="he">וַיְחַזֵּק יְהוָה אֶת־לֵב פַּרְעֹה</span> · <i>va-yechazeq YHWH et-lev paro</i><br><span class="gloss">= and-yechazeq the-LORD lev paro</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">THE TURN: the policy activates.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_13 · Exod.9.13 · <span class='expr'>THE_HAIL_ERRAND</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה הַשְׁכֵּם בַּבֹּקֶר וְהִתְיַצֵּב לִפְנֵי פַרְעֹה וְאָמַרְתָּ אֵלָיו כֹּה־אָמַר יְהוָה אֱלֹהֵי הָעִבְרִים שַׁלַּח אֶת־עַמִּי וְיַעַבְדֻנִי</span> · <i>va-yomer YHWH el-moshe hashkem ba-boqer ve-hityatzev li-fene faro ve-amarta elay-v ko-amar YHWH elohe ha-ivrim shalach et-ami-y ve-yaavdu-ni</i> · And the LORD said to Moses: Rise early in the morning, and station yourself before Pharaoh, and say to him: Thus says the LORD, the God of the Hebrews: Send My people, that they may serve Me.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה הַשְׁכֵּ֣ם בַּבֹּ֔קֶר וְהִתְיַצֵּ֖ב לִפְנֵ֣י פַרְעֹ֑ה</span> · <i>va-yomer YHWH el-moshe hashkem ba-boqer ve-hityatzev li-fene faro</i> · and the LORD said to Moses: rise early in the morning, and station yourself before Pharaoh (etnachta on faro) [VERIFIED: SNAPSHOT Exod.9.13 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאָמַרְתָּ֣ אֵלָ֗יו כֹּֽה אָמַ֤ר יְהוָה֙ אֱלֹהֵ֣י הָֽעִבְרִ֔ים שַׁלַּ֥ח אֶת עַמִּ֖י וְיַֽעַבְדֻֽנִי</span> · <i>ve-amarta elay-v ko-amar YHWH elohe ha-ivrim shalach et-ami-y ve-yaavdu-ni</i> · and say to him: thus says the LORD, the God of the Hebrews: send My people, that they may serve Me (verse-final ve-yaavdu-ni) [VERIFIED: SNAPSHOT Exod.9.13 idx9-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(hashkem_ve_hityatzev_2))</span><br><span class="gloss">= DECLARE(the-LORD, LET(hashkem-and-hityatzev-2))</span><br>THE THIRD MORNING-STATION. HASHKEM ba-boqer ve-HITYATZEV lifne faro — the early-rising formula&#x27;s second sounding (8:16&#x27;s card-class: the errand whose delivery goes unnarrated); shalach et-ami ve-yaavduni — the send-formula&#x27;s SIXTH sounding: the machine pushes the seventh plague&#x27;s errand and notes the liturgy&#x27;s escalation — what follows (9:14-19) is the longest warning-speech in the cycle: the plague that gets the sermon gets the mercy-clause too (9:19&#x27;s flee- warning).
+</td><td><span class="he">הַשְׁכֵּם בַּבֹּקֶר וְהִתְיַצֵּב לִפְנֵי פַרְעֹה</span> · <i>hashkem ba-boqer ve-hityatzev li-fene faro</i><br><span class="gloss">= hashkem morning and-hityatzev to-me-fene faro</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The third morning-station.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_14 · Exod.9.14 · <span class='expr'>ALL_MY_PLAGUES_TO_YOUR_HEART</span></h3>
+<p><span class="he">כִּי בַּפַּעַם הַזֹּאת אֲנִי שֹׁלֵחַ אֶת־כָּל־מַגֵּפֹתַי אֶל־לִבְּךָ וּבַעֲבָדֶיךָ וּבְעַמֶּךָ בַּעֲבוּר תֵּדַע כִּי אֵין כָּמֹנִי בְּכָל־הָאָרֶץ</span> · <i>ki ba-paam ha-zot ani sholecha et-kal-magefota-y el-lib-kha u-va-avade-kha u-ve-ame-kha ba-avur teda ki en kamo-ni be-khal-ha-aretz</i> · For this time I send all My plagues to your heart, and on your servants, and on your people — in order that you may know that there is none like Me in all the earth.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">כִּ֣י בַּפַּ֣עַם הַזֹּ֗את אֲנִ֨י שֹׁלֵ֜חַ אֶת כָּל מַגֵּפֹתַי֙ אֶֽל לִבְּךָ֔ וּבַעֲבָדֶ֖יךָ וּבְעַמֶּ֑ךָ</span> · <i>ki ba-paam ha-zot ani sholecha et-kal-magefota-y el-lib-kha u-va-avade-kha u-ve-ame-kha</i> · for this time I send all My plagues to your heart, and on your servants, and on your people (etnachta on u-ve-ame-kha) [VERIFIED: SNAPSHOT Exod.9.14 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">בַּעֲב֣וּר תֵּדַ֔ע כִּ֛י אֵ֥ין כָּמֹ֖נִי בְּכָל הָאָֽרֶץ</span> · <i>ba-avur teda ki en kamo-ni be-khal-ha-aretz</i> · in order that you may know that there is none like Me in all the earth (verse-final ha-aretz) [VERIFIED: SNAPSHOT Exod.9.14 idx12-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(en_kamoni_be_khol_ha_aretz, t0)</span><br><span class="gloss">= HOLDS(en-kamoni-in-all-the-earth, t0)</span><br>THE SUMMIT CLAUSE [EX09-12]. ki ba-paam ha-zot ani sholeach et-KOL- MAGEFOTAI el-LIBKHA — &#x27;ALL My plagues TO YOUR HEART&#x27; (the heart that hardens is the plague&#x27;s named address now — the letter aims the cycle at the ledger&#x27;s own organ; the bet of libkha on its half- vowel, Chizkuni, asserted); baavur TEDA ki EN KAMONI be-khol-ha- aretz — &#x27;that you may KNOW that there is NONE LIKE ME in all the earth&#x27;: the know-ledger&#x27;s summit (who-is-He 5:2; by-this-you-shall- know 7:17; none-like-our-God 8:6; in-the-midst 8:18; now NONE-LIKE- ME, whole-earth scope): the machine files the syllabus complete — the remaining plagues teach a knowing already fully specified.
+</td><td><span class="he">בַּעֲבוּר תֵּדַע כִּי אֵין כָּמֹנִי בְּכָל־הָאָרֶץ</span> · <i>ba-avur teda ki en kamo-ni be-khal-ha-aretz</i><br><span class="gloss">= in-the-avur teda when en kamo-ni in-khal-the-earth</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The know-ledger&#x27;s summit clause.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_15 · Exod.9.15 · <span class='expr'>BY_NOW_I_COULD_HAVE</span></h3>
+<p><span class="he">כִּי עַתָּה שָׁלַחְתִּי אֶת־יָדִי וָאַךְ אוֹתְךָ וְאֶת־עַמְּךָ בַּדָּבֶר וַתִּכָּחֵד מִן־הָאָרֶץ</span> · <i>ki ata shalachti et-yadi-y va-akh ot-kha ve-et-am-kha ba-daver va-tikached min-ha-aretz</i> · For by now I could have sent out My hand, and struck you and your people with the pestilence; and you would have been effaced from the earth.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">כִּ֤י עַתָּה֙ שָׁלַ֣חְתִּי אֶת יָדִ֔י וָאַ֥ךְ אוֹתְךָ֛ וְאֶֽת עַמְּךָ֖ בַּדָּ֑בֶר</span> · <i>ki ata shalachti et-yadi-y va-akh ot-kha ve-et-am-kha ba-daver</i> · for by now I could have sent out My hand, and struck you and your people with the pestilence (etnachta on ba-daver) [VERIFIED: SNAPSHOT Exod.9.15 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַתִּכָּחֵ֖ד מִן הָאָֽרֶץ</span> · <i>va-tikached min-ha-aretz</i> · and you would have been effaced from the earth (verse-final ha-aretz) [VERIFIED: SNAPSHOT Exod.9.15 idx10-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ki_ata_shalachti_et_yadi, t0)</span><br><span class="gloss">= HOLDS(when-ata-shalachti-yadi, t0)</span><br>THE COUNTERFACTUAL. ki ATA SHALACHTI et-yadi — &#x27;by NOW I could have SENT OUT My hand&#x27; (the send-verb in the divine counterfactual — the grammar of restraint: what was not sent); va-akh otkha... ba-DAVER — &#x27;struck YOU... with the pestilence&#x27; (the cattle-plague&#x27;s word aimed at the throne and withheld); va-TIKACHED min-ha-aretz — &#x27;you would have been EFFACED from the earth&#x27;: the machine files the verse as the cycle&#x27;s own explanation-of-itself — the plagues are not the limit of power but its measurement: the next verse says why the throne still stands.
+</td><td><span class="he">כִּי עַתָּה שָׁלַחְתִּי אֶת־יָדִי</span> · <i>ki ata shalachti et-yadi-y</i><br><span class="gloss">= when ata shalachti yadi-y</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The counterfactual.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_16 · Exod.9.16 · <span class='expr'>I_MADE_YOU_STAND</span></h3>
+<p><span class="he">וְאוּלָם בַּעֲבוּר זֹאת הֶעֱמַדְתִּיךָ בַּעֲבוּר הַרְאֹתְךָ אֶת־כֹּחִי וּלְמַעַן סַפֵּר שְׁמִי בְּכָל־הָאָרֶץ</span> · <i>ve-ulam ba-avur zot heemadti-kha ba-avur harot-kha et-kochi-y u-lemaan saper shemi-y be-khal-ha-aretz</i> · But for this very cause I have made you stand: in order to show you My power, and that My Name be declared in all the earth.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאוּלָ֗ם בַּעֲב֥וּר זֹאת֙ הֶעֱמַדְתִּ֔יךָ בַּעֲב֖וּר הַרְאֹתְךָ֣ אֶת כֹּחִ֑י</span> · <i>ve-ulam ba-avur zot heemadti-kha ba-avur harot-kha et-kochi-y</i> · but for this very cause I have made you stand: in order to show you My power (etnachta on kochi-y) [VERIFIED: SNAPSHOT Exod.9.16 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּלְמַ֛עַן סַפֵּ֥ר שְׁמִ֖י בְּכָל הָאָֽרֶץ</span> · <i>u-lemaan saper shemi-y be-khal-ha-aretz</i> · and that My Name be declared in all the earth (verse-final ha-aretz) [VERIFIED: SNAPSHOT Exod.9.16 idx8-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(heemadtikha_baavur_harotkha, t0)</span><br><span class="gloss">= HOLDS(heemadtikha-baavur-harotkha, t0)</span><br>THE STANDING GRANTED [EX09-11 CROWN]. ve-ulam baavur zot HEEMADTIKHA — &#x27;for THIS cause I MADE YOU STAND&#x27; (the stand-root again — the chapter&#x27;s word: the magicians cannot stand, the king is STOOD UP by decree, the lean stand-file underneath [EX09-05]); baavur HAROTKHA et-KOCHI — &#x27;to SHOW you My POWER&#x27;; u-lemaan SAPER SHEMI be-khol-ha- aretz — &#x27;and that My NAME be DECLARED in all the earth&#x27;: the declare-pointing stands ONCE in the Torah (VERIFIED — of the eight book-skeleton homographs, only this one carries the declare-vowels), its Masorah-partner Isaiah&#x27;s court-summons (&#x27;DECLARE, that you may be justified,&#x27; Isa 43:26): the Kitzur — &#x27;when the Holy One executes judgment on the wicked, His Name is EXALTED&#x27;: the king kept standing as the Name&#x27;s own witness-stand.
+</td><td><span class="he">וּלְמַעַן סַפֵּר שְׁמִי בְּכָל־הָאָרֶץ</span> · <i>u-lemaan saper shemi-y be-khal-ha-aretz</i><br><span class="gloss">= and-lemaan saper shemi-y in-khal-the-earth</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The declare-word; the standing granted.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_17 · Exod.9.17 · <span class='expr'>STILL_EXALTING_YOURSELF</span></h3>
+<p><span class="he">עוֹדְךָ מִסְתּוֹלֵל בְּעַמִּי לְבִלְתִּי שַׁלְּחָם</span> · <i>od-kha mistolel be-ami-y le-vilti shalcha-m</i> · You still exalt yourself over My people, not to send them.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">עוֹדְךָ֖ מִסְתּוֹלֵ֣ל בְּעַמִּ֑י</span> · <i>od-kha mistolel be-ami-y</i> · you still exalt yourself over My people (etnachta on be-ami-y) [VERIFIED: SNAPSHOT Exod.9.17 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לְבִלְתִּ֖י שַׁלְּחָֽם</span> · <i>le-vilti shalcha-m</i> · not to send them (verse-final shalcha-m) [VERIFIED: SNAPSHOT Exod.9.17 idx3-4]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(odkha_mistolel_be_ami, t0)</span><br><span class="gloss">= HOLDS(odkha-mistolel-in-ami, t0)</span><br>THE INDICTMENT [EX09-13]. ODKHA MISTOLEL be-ami — &#x27;you STILL EXALT YOURSELF over My people&#x27; (the self-exalting participle, Torah- unique, unhunted — the highway-word&#x27;s root: the king paves himself over the people); le-vilti SHALCHAM — &#x27;not to send them&#x27;: the send- refusal restated as the exaltation&#x27;s content; and the Kitzur reads the COUNSELOR&#x27;S NAME riding the clause&#x27;s letters (Balaam — &#x27;for three sat in that counsel&#x27;: Balaam, Job, Jethro — the three- counselors tradition, named-only [EX09-13]): the verse indicts the posture, and the chain hears the advisor inside it.
+</td><td><span class="he">עוֹדְךָ מִסְתּוֹלֵל בְּעַמִּי</span> · <i>od-kha mistolel be-ami-y</i><br><span class="gloss">= od-kha mistolel in-ami-y</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The counsel-acrostic named.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_18 · Exod.9.18 · <span class='expr'>HAIL_TOMORROW</span></h3>
+<p><span class="he">הִנְנִי מַמְטִיר כָּעֵת מָחָר בָּרָד כָּבֵד מְאֹד אֲשֶׁר לֹא־הָיָה כָמֹהוּ בְּמִצְרַיִם לְמִן־הַיּוֹם הִוָּסְדָה וְעַד־עָתָּה</span> · <i>hin-ni mamtir ka-et machar barad kaved meod asher lo-haya khamo-hu be-mitzrayim le-min-ha-yom hivasda-ה ve-ad-ata</i> · Behold, about this time tomorrow I rain a very heavy hail, such as has not been in Egypt from the day it was founded until now.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">הִנְנִ֤י מַמְטִיר֙ כָּעֵ֣ת מָחָ֔ר בָּרָ֖ד כָּבֵ֣ד מְאֹ֑ד</span> · <i>hin-ni mamtir ka-et machar barad kaved meod</i> · behold, about this time tomorrow I rain a very heavy hail (etnachta on meod) [VERIFIED: SNAPSHOT Exod.9.18 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֲשֶׁ֨ר לֹא הָיָ֤ה כָמֹ֨הוּ֙ בְּמִצְרַ֔יִם לְמִן הַיּ֥וֹם הִוָּסְדָ֖ה וְעַד עָֽתָּה</span> · <i>asher lo-haya khamo-hu be-mitzrayim le-min-ha-yom hivasda-ה ve-ad-ata</i> · such as has not been in Egypt from the day it was founded until now (verse-final ata) [VERIFIED: SNAPSHOT Exod.9.18 idx7-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hineni_mamtir_kaet_machar, t0)</span><br><span class="gloss">= HOLDS(behold-I-mamtir-kaet-machar, t0)</span><br>THE SCHEDULE [EX09-12]. hineni MAMTIR ka-et MACHAR — &#x27;about this time TOMORROW I RAIN&#x27;: the appointment-argument again (9:5&#x27;s method now with an hour); barad KAVED meod — the heavy-word on its third plague (pestilence 9:3, the swarms 8:20, now hail); asher lo-haya khamohu... le-min ha-yom HIVASDA — &#x27;from the day it was FOUNDED&#x27;: the founding-word&#x27;s final he carries NO dot — the Masorah&#x27;s ruling with Radak three times over (Ezekiel 16, the Michlol, the Shorashim; asserted [EX09-12]): the machine files the never-since-founding clause as the plague&#x27;s own superlative — and its echo-class armed (9:24&#x27;s since-becoming-a-nation, 10:6&#x27;s fathers&#x27;-fathers, 11:6&#x27;s never-again).
+</td><td><span class="he">הִנְנִי מַמְטִיר כָּעֵת מָחָר</span> · <i>hin-ni mamtir ka-et machar</i><br><span class="gloss">= hin-ni mamtir like machar</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The scheduled hail; the soft-breathing he.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_19 · Exod.9.19 · <span class='expr'>THE_FLEE_WARNING</span></h3>
+<p><span class="he">וְעַתָּה שְׁלַח הָעֵז אֶת־מִקְנְךָ וְאֵת כָּל־אֲשֶׁר לְךָ בַּשָּׂדֶה כָּל־הָאָדָם וְהַבְּהֵמָה אֲשֶׁר־יִמָּצֵא בַשָּׂדֶה וְלֹא יֵאָסֵף הַבַּיְתָה וְיָרַד עֲלֵהֶם הַבָּרָד וָמֵתוּ</span> · <i>ve-ata shelach haez et-miqn-kha ve-et kal-asher le-kha ba-sade kal-ha-adam ve-ha-behema asher-yimatze va-sade ve-lo yeasef ha-bayta-ה ve-yarad ale-hem ha-barad va-metu</i> · And now — send, bring your cattle and all that is yours in the field into safety: every man and beast that is found in the field and not gathered into the house — the hail shall come down on them, and they shall die.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְעַתָּ֗ה שְׁלַ֤ח הָעֵז֙ אֶֽת מִקְנְךָ֔ וְאֵ֛ת כָּל אֲשֶׁ֥ר לְךָ֖ בַּשָּׂדֶ֑ה</span> · <i>ve-ata shelach haez et-miqn-kha ve-et kal-asher le-kha ba-sade</i> · and now — send, bring your cattle and all that is yours in the field into safety (etnachta on ba-sade) [VERIFIED: SNAPSHOT Exod.9.19 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כָּל הָאָדָ֨ם וְהַבְּהֵמָ֜ה אֲשֶֽׁר יִמָּצֵ֣א בַשָּׂדֶ֗ה וְלֹ֤א יֵֽאָסֵף֙ הַבַּ֔יְתָה וְיָרַ֧ד עֲלֵהֶ֛ם הַבָּרָ֖ד וָמֵֽתוּ</span> · <i>kal-ha-adam ve-ha-behema asher-yimatze va-sade ve-lo yeasef ha-bayta-ה ve-yarad ale-hem ha-barad va-metu</i> · every man and beast found in the field and not gathered into the house — the hail shall come down on them, and they shall die (verse-final va-metu) [VERIFIED: SNAPSHOT Exod.9.19 idx10-22]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_ata_shelach_haez, t0)</span><br><span class="gloss">= HOLDS(and-ata-shelach-haez, t0)</span><br>THE MERCY-CLAUSE [EX09-10]. ve-ata SHELACH HAEZ et-miqnekha — &#x27;and now — SEND, BRING INTO SAFETY your cattle&#x27;: the send-verb handed BACK to the king as rescue (the book&#x27;s demand-verb, lent to the enemy for his own herds — the machine files the loan in the ledger); ve-lo YEASEF ha-bayta — &#x27;and not GATHERED into the house&#x27;: the Torah&#x27;s only not-gathered pair (adjacency VERIFIED), its Scripture- twin JOB&#x27;S rich man (&#x27;lies down and is not GATHERED,&#x27; Job 27:19) — the Kitzur: &#x27;he who was rich with much cattle — in a moment he lies down un-gathered, for the hail struck him&#x27;: the warning prices the field in Job&#x27;s grammar of sudden ruin: a plague that publishes its own evacuation-order.
+</td><td><span class="he">וְעַתָּה שְׁלַח הָעֵז</span> · <i>ve-ata shelach haez</i><br><span class="gloss">= and-ata shelach haez</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The mercy-clause inside the plague.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_20 · Exod.9.20 · <span class='expr'>THE_FEARER</span></h3>
+<p><span class="he">הַיָּרֵא אֶת־דְּבַר יְהוָה מֵעַבְדֵי פַּרְעֹה הֵנִיס אֶת־עֲבָדָיו וְאֶת־מִקְנֵהוּ אֶל־הַבָּתִּים</span> · <i>ha-yare et-devar YHWH me-avde paro henis et-avaday-v ve-et-miqne-hu el-ha-batim</i> · He who feared the word of the LORD among the servants of Pharaoh made his servants and his cattle flee into the houses.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">הַיָּרֵא֙ אֶת דְּבַ֣ר יְהוָ֔ה מֵֽעַבְדֵ֖י פַּרְעֹ֑ה</span> · <i>ha-yare et-devar YHWH me-avde paro</i> · he who feared the word of the LORD among the servants of Pharaoh (etnachta on paro) [VERIFIED: SNAPSHOT Exod.9.20 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">הֵנִ֛יס אֶת עֲבָדָ֥יו וְאֶת מִקְנֵ֖הוּ אֶל הַבָּתִּֽים</span> · <i>henis et-avaday-v ve-et-miqne-hu el-ha-batim</i> · made his servants and his cattle flee into the houses (verse-final ha-batim) [VERIFIED: SNAPSHOT Exod.9.20 idx6-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ha_yare_et_devar_YHWH, t0)</span><br><span class="gloss">= HOLDS(the-yare-devar-the-LORD, t0)</span><br>THE FEARER [EX09-04 CROWN]. ha-YARE et-devar YHWH me-avde faro — &#x27;HE WHO FEARED the word of the LORD among Pharaoh&#x27;s servants&#x27;: the fearer-form&#x27;s exact Torah-pair (VERIFIED) — here, and the war- exemption&#x27;s &#x27;FEARFUL and faint of heart&#x27; (Deut 20:8): the Kitzur — &#x27;as there one who fears for the transgressions in his hand, so here they feared for their transgressions; from here they said: the BEST of the Egyptians — for it is written HE WHO FEARED... and adjacent: and the hail came down and they died&#x27; (the spared cattle become the sea&#x27;s chariot-horses — the reading&#x27;s long arc named): the machine files the split the warning created: the plague now sorts Egypt by its ears.
+</td><td><span class="he">הַיָּרֵא אֶת־דְּבַר יְהוָה</span> · <i>ha-yare et-devar YHWH</i><br><span class="gloss">= the-yare devar the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The fearer&#x27;s pair.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_21 · Exod.9.21 · <span class='expr'>THE_HEEDLESS</span></h3>
+<p><span class="he">וַאֲשֶׁר לֹא־שָׂם לִבּוֹ אֶל־דְּבַר יְהוָה וַיַּעֲזֹב אֶת־עֲבָדָיו וְאֶת־מִקְנֵהוּ בַּשָּׂדֶה</span> · <i>va-asher lo-sam lib-o el-devar YHWH va-yaazov et-avaday-v ve-et-miqne-hu ba-sade</i> · And he who did not set his heart to the word of the LORD left his servants and his cattle in the field.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַאֲשֶׁ֥ר לֹא שָׂ֛ם לִבּ֖וֹ אֶל דְּבַ֣ר יְהוָ֑ה</span> · <i>va-asher lo-sam lib-o el-devar YHWH</i> · and he who did not set his heart to the word of the LORD (etnachta on YHWH) [VERIFIED: SNAPSHOT Exod.9.21 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַֽיַּעֲזֹ֛ב אֶת עֲבָדָ֥יו וְאֶת מִקְנֵ֖הוּ בַּשָּׂדֶֽה</span> · <i>va-yaazov et-avaday-v ve-et-miqne-hu ba-sade</i> · left his servants and his cattle in the field (verse-final ba-sade) [VERIFIED: SNAPSHOT Exod.9.21 idx7-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_asher_lo_sam_libo, t0)</span><br><span class="gloss">= HOLDS(and-which-not-sam-His-heart, t0)</span><br>THE HEEDLESS. va-asher LO-SAM LIBO el-devar YHWH — &#x27;he who did not SET HIS HEART to the word&#x27;: 7:23&#x27;s unset-heart idiom returns as a category of person (the king&#x27;s habit franchised to his servants — the machine files the heart-ledger&#x27;s spread); va-YAAZOV... ba-sade — &#x27;LEFT his servants and his cattle in the field&#x27;: the leave-verb pricing the heedlessness in bodies: the machine notes the pair 9:20-21 as the cycle&#x27;s first BRANCHING VERSE-PAIR — one warning, two ledger-columns, and tomorrow&#x27;s hail will read the columns back.
+</td><td><span class="he">וַאֲשֶׁר לֹא־שָׂם לִבּוֹ</span> · <i>va-asher lo-sam lib-o</i><br><span class="gloss">= and-which not-sam lib-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The unset heart&#x27;s cost.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_22 · Exod.9.22 · <span class='expr'>STRETCH_TOWARD_HEAVEN</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה נְטֵה אֶת־יָדְךָ עַל־הַשָּׁמַיִם וִיהִי בָרָד בְּכָל־אֶרֶץ מִצְרָיִם עַל־הָאָדָם וְעַל־הַבְּהֵמָה וְעַל כָּל־עֵשֶׂב הַשָּׂדֶה בְּאֶרֶץ מִצְרָיִם</span> · <i>va-yomer YHWH el-moshe nete et-yad-kha al-ha-shamayim vi-yhi varad be-khal-eretz mitzrayim al-ha-adam ve-al-ha-behema ve-al kal-esev ha-sade be-eretz mitzrayim</i> · And the LORD said to Moses: Stretch out your hand toward heaven, and there shall be hail in all the land of Egypt — on man, and on beast, and on every herb of the field in the land of Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר יְהוָ֜ה אֶל מֹשֶׁה נְטֵ֤ה אֶת יָֽדְךָ֙ עַל הַשָּׁמַ֔יִם וִיהִ֥י בָרָ֖ד בְּכָל אֶ֣רֶץ מִצְרָ֑יִם</span> · <i>va-yomer YHWH el-moshe nete et-yad-kha al-ha-shamayim vi-yhi varad be-khal-eretz mitzrayim</i> · and the LORD said to Moses: stretch out your hand toward heaven, and there shall be hail in all the land of Egypt (etnachta on mitzrayim) [VERIFIED: SNAPSHOT Exod.9.22 idx13 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">עַל הָאָדָ֣ם וְעַל הַבְּהֵמָ֗ה וְעַ֛ל כָּל עֵ֥שֶׂב הַשָּׂדֶ֖ה בְּאֶ֥רֶץ מִצְרָֽיִם</span> · <i>al-ha-adam ve-al-ha-behema ve-al kal-esev ha-sade be-eretz mitzrayim</i> · on man, and on beast, and on every herb of the field in the land of Egypt (verse-final mitzrayim) [VERIFIED: SNAPSHOT Exod.9.22 idx14-23]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(nete_yadkha_al_ha_shamayim))</span><br><span class="gloss">= DECLARE(the-LORD, LET(nete-yadkha-upon-the-heavens))</span><br>THE STRETCH-COMMAND. NETE et-yadkha AL-HA-SHAMAYIM — &#x27;STRETCH OUT your hand TOWARD HEAVEN&#x27;: the stretch-formula&#x27;s third plague (blood 7:19, frogs 8:1 — Aaron&#x27;s arm; now MOSES&#x27; own hand, and not over waters but toward the SKY: the machine files the escalation of both agent and axis); vi-yhi VARAD... al-ha-adam ve-al-ha-behema ve-al kol-esev ha-sade — the target-list read out (man, beast, every herb): the card is pushed with its pop one verse away.
+</td><td><span class="he">נְטֵה אֶת־יָדְךָ עַל־הַשָּׁמַיִם</span> · <i>nete et-yad-kha al-ha-shamayim</i><br><span class="gloss">= nete yad-kha upon-the-heavens</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The stretch-command.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_23 · Exod.9.23 · <span class='expr'>FIRE_WALKS_TO_EARTH</span></h3>
+<p><span class="he">וַיֵּט מֹשֶׁה אֶת־מַטֵּהוּ עַל־הַשָּׁמַיִם וַיהוָה נָתַן קֹלֹת וּבָרָד וַתִּהֲלַךְ אֵשׁ אָרְצָה וַיַּמְטֵר יְהוָה בָּרָד עַל־אֶרֶץ מִצְרָיִם</span> · <i>va-yet moshe et-mate-hu al-ha-shamayim va-YHWH natan qolot u-varad va-tihalakh esh artza-ה va-yamter YHWH barad al-eretz mitzrayim</i> · And Moses stretched out his staff toward heaven; and the LORD gave voices and hail, and fire went walking to earth; and the LORD rained hail on the land of Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֵּ֨ט מֹשֶׁ֣ה אֶת מַטֵּהוּ֮ עַל הַשָּׁמַיִם֒ וַֽיהוָ֗ה נָתַ֤ן קֹלֹת֙ וּבָרָ֔ד וַתִּ֥הֲלַךְ אֵ֖שׁ אָ֑רְצָה</span> · <i>va-yet moshe et-mate-hu al-ha-shamayim va-YHWH natan qolot u-varad va-tihalakh esh artza-ה</i> · and Moses stretched out his staff toward heaven; and the LORD gave voices and hail, and fire went walking to earth (etnachta on artza-ה) [VERIFIED: SNAPSHOT Exod.9.23 idx12 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּמְטֵ֧ר יְהוָ֛ה בָּרָ֖ד עַל אֶ֥רֶץ מִצְרָֽיִם</span> · <i>va-yamter YHWH barad al-eretz mitzrayim</i> · and the LORD rained hail on the land of Egypt (verse-final mitzrayim) [VERIFIED: SNAPSHOT Exod.9.23 idx13-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(nete_yadkha_al_ha_shamayim, t1)</span><br><span class="gloss">= RESULT: HOLDS(nete-yadkha-upon-the-heavens, t1)</span><br>PLAGUE SEVEN [EX09-07; EX09-12]. va-yet moshe et-matehu — the stretch performed, the card popped; va-YHWH natan QOLOT u-varad — &#x27;and the LORD GAVE voices and hail&#x27; (the give-verb on thunder — the readings hear Sinai&#x27;s grammar rehearsing, named-only; the thunder- word doubly lean, the file of EX09-01); va-tihalakh ESH artza — &#x27;and fire went WALKING to earth&#x27; (the walking-fire — and MS rules the pair joined by the BINDER where the stream writes its own stroke and a space: the divergence filed dual-track, asserted [EX09-12]); va- YAMTER YHWH barad — &#x27;and the LORD RAINED hail&#x27;: the rained-form&#x27;s ONLY Torah station (VERIFIED), its Scripture-twin the QUAIL-psalm (&#x27;He RAINED flesh on them like dust,&#x27; Ps 78:27 — the Kitzur: the quail came down with force, striking as the hail struck): what falls from heaven falls in judgment&#x27;s grammar, meat and ice alike.
+</td><td><span class="he">וַיַּמְטֵר יְהוָה בָּרָד עַל־אֶרֶץ מִצְרָיִם</span> · <i>va-yamter YHWH barad al-eretz mitzrayim</i><br><span class="gloss">= and-yamter the-LORD barad upon-earth mitzrayim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Plague seven lands; the rained-word.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_24 · Exod.9.24 · <span class='expr'>FIRE_IN_THE_ICE</span></h3>
+<p><span class="he">וַיְהִי בָרָד וְאֵשׁ מִתְלַקַּחַת בְּתוֹךְ הַבָּרָד כָּבֵד מְאֹד אֲשֶׁר לֹא־הָיָה כָמֹהוּ בְּכָל־אֶרֶץ מִצְרַיִם מֵאָז הָיְתָה לְגוֹי</span> · <i>va-yehi varad ve-esh mitlaqachat be-tokh ha-barad kaved meod asher lo-haya khamo-hu be-khal-eretz mitzrayim me-az hayta le-goy</i> · And there was hail, and fire taking hold of itself within the hail, very heavy, such as had not been in all the land of Egypt since it became a nation.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֣י בָרָ֔ד וְאֵ֕שׁ מִתְלַקַּ֖חַת בְּת֣וֹךְ הַבָּרָ֑ד</span> · <i>va-yehi varad ve-esh mitlaqachat be-tokh ha-barad</i> · and there was hail, and fire taking hold of itself within the hail, very heavy (etnachta on ha-barad) [VERIFIED: SNAPSHOT Exod.9.24 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כָּבֵ֣ד מְאֹ֔ד אֲ֠שֶׁר לֹֽא הָיָ֤ה כָמֹ֨הוּ֙ בְּכָל אֶ֣רֶץ מִצְרַ֔יִם מֵאָ֖ז הָיְתָ֥ה לְגֽוֹי</span> · <i>kaved meod asher lo-haya khamo-hu be-khal-eretz mitzrayim me-az hayta le-goy</i> · such as had not been in all the land of Egypt since it became a nation (verse-final le-goy) [VERIFIED: SNAPSHOT Exod.9.24 idx6-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_esh_mitlaqachat_betokh_ha_barad, t0)</span><br><span class="gloss">= HOLDS(and-esh-mitlaqachat-betokh-the-barad, t0)</span><br>THE FIRE IN THE ICE [EX09-06 CROWN; EX09-12]. ve-ESH MITLAQACHAT betokh ha-barad — &#x27;and FIRE TAKING HOLD OF ITSELF within the hail&#x27;: the self-kindling participle stands ONCE in the Torah (VERIFIED) — its only Scripture-twin EZEKIEL&#x27;S CHARIOT-VISION (&#x27;a great cloud, and fire taking hold of itself, and a RADIANCE round about,&#x27; Ezek 1:4): the Kitzur — &#x27;here too, within the hail was the fire, and sparks and lights went out of it — that is: and a radiance round about&#x27;: the plague carries the throne-vision&#x27;s own fire inside its ice (the peace-of-opposites reading the chain builds elsewhere, named-only); asher lo-haya khamohu — the superlative again, me-az hayta le-GOY (&#x27;since it became a NATION&#x27; — the founding-clause ladder&#x27;s second rung), with ASHER on its ruled TELISHA, not a qadma (MS — the mark landing exactly, VERIFIED): the rarest of the chapter&#x27;s strokes sits on the incomparability-clause.
+</td><td><span class="he">וְאֵשׁ מִתְלַקַּחַת בְּתוֹךְ הַבָּרָד</span> · <i>ve-esh mitlaqachat be-tokh ha-barad</i><br><span class="gloss">= and-esh mitlaqachat in-tokh the-barad</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The chariot&#x27;s fire; the ruled telisha.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_25 · Exod.9.25 · <span class='expr'>THE_STRIKE_CENSUS</span></h3>
+<p><span class="he">וַיַּךְ הַבָּרָד בְּכָל־אֶרֶץ מִצְרַיִם אֵת כָּל־אֲשֶׁר בַּשָּׂדֶה מֵאָדָם וְעַד־בְּהֵמָה וְאֵת כָּל־עֵשֶׂב הַשָּׂדֶה הִכָּה הַבָּרָד וְאֶת־כָּל־עֵץ הַשָּׂדֶה שִׁבֵּר</span> · <i>va-yakh ha-barad be-khal-eretz mitzrayim et kal-asher ba-sade me-adam ve-ad-behema ve-et kal-esev ha-sade hika ha-barad ve-et-kal-etz ha-sade shiber</i> · And the hail struck in all the land of Egypt all that was in the field, from man to beast; and every herb of the field the hail struck, and every tree of the field it shattered.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּ֨ךְ הַבָּרָ֜ד בְּכָל אֶ֣רֶץ מִצְרַ֗יִם אֵ֚ת כָּל אֲשֶׁ֣ר בַּשָּׂדֶ֔ה מֵאָדָ֖ם וְעַד בְּהֵמָ֑ה</span> · <i>va-yakh ha-barad be-khal-eretz mitzrayim et kal-asher ba-sade me-adam ve-ad-behema</i> · and the hail struck in all the land of Egypt all that was in the field, from man to beast (etnachta on behema) [VERIFIED: SNAPSHOT Exod.9.25 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאֵ֨ת כָּל עֵ֤שֶׂב הַשָּׂדֶה֙ הִכָּ֣ה הַבָּרָ֔ד וְאֶת כָּל עֵ֥ץ הַשָּׂדֶ֖ה שִׁבֵּֽר</span> · <i>ve-et kal-esev ha-sade hika ha-barad ve-et-kal-etz ha-sade shiber</i> · and every herb of the field the hail struck, and every tree of the field it shattered (verse-final shiber) [VERIFIED: SNAPSHOT Exod.9.25 idx12-22]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yakh_ha_barad, t0)</span><br><span class="gloss">= HOLDS(and-yakh-the-barad, t0)</span><br>THE CENSUS. va-YAKH ha-barad — &#x27;and the hail STRUCK&#x27;: the strike- verb (2:11&#x27;s file, the plague-cycle&#x27;s own meter) with its census read out — all in the field, man to beast, every herb, every tree SHATTERED (shiber — the break-verb&#x27;s debut on timber): the machine files the ledger against 9:19-21&#x27;s columns: what the fearer housed lives, what the heedless left is itemized here — the branching verse-pair&#x27;s payout, line by line.
+</td><td><span class="he">וַיַּךְ הַבָּרָד</span> · <i>va-yakh ha-barad</i><br><span class="gloss">= and-yakh the-barad</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The census of the blow.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_26 · Exod.9.26 · <span class='expr'>ONLY_GOSHEN</span></h3>
+<p><span class="he">רַק בְּאֶרֶץ גֹּשֶׁן אֲשֶׁר־שָׁם בְּנֵי יִשְׂרָאֵל לֹא הָיָה בָּרָד</span> · <i>raq be-eretz goshen asher-sham bene yisrael lo haya barad</i> · Only in the land of Goshen, where the sons of Israel were, there was no hail.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">רַ֚ק בְּאֶ֣רֶץ גֹּ֔שֶׁן אֲשֶׁר שָׁ֖ם בְּנֵ֣י יִשְׂרָאֵ֑ל</span> · <i>raq be-eretz goshen asher-sham bene yisrael</i> · only in the land of Goshen, where the sons of Israel were (etnachta on yisrael) [VERIFIED: SNAPSHOT Exod.9.26 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לֹ֥א הָיָ֖ה בָּרָֽד</span> · <i>lo haya barad</i> · there was no hail (verse-final barad) [VERIFIED: SNAPSHOT Exod.9.26 idx7-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(raq_be_eretz_goshen, t0)</span><br><span class="gloss">= HOLDS(raq-in-earth-goshen, t0)</span><br>THE EXEMPTION. RAQ be-eretz GOSHEN... lo haya barad — &#x27;ONLY in Goshen there was NO hail&#x27;: the distinction-file&#x27;s third station (the swarms 8:18, the cattle 9:4, now the sky itself sorting by border — the machine notes the escalation: the exemption now governs WEATHER); asher-sham bene yisrael — the residence-clause: the file is armed forward (10:23&#x27;s light in the dwellings, 11:7&#x27;s silent dogs): the machine files the geography of the covenant tightening plague by plague.
+</td><td><span class="he">רַק בְּאֶרֶץ גֹּשֶׁן</span> · <i>raq be-eretz goshen</i><br><span class="gloss">= raq earth goshen</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Distinction station three.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_27 · Exod.9.27 · <span class='expr'>I_HAVE_SINNED</span></h3>
+<p><span class="he">וַיִּשְׁלַח פַּרְעֹה וַיִּקְרָא לְמֹשֶׁה וּלְאַהֲרֹן וַיֹּאמֶר אֲלֵהֶם חָטָאתִי הַפָּעַם יְהוָה הַצַּדִּיק וַאֲנִי וְעַמִּי הָרְשָׁעִים</span> · <i>va-yishlach paro va-yiqra le-moshe u-le-aharon va-yomer el-hem chatati ha-paam YHWH ha-tzadiq va-ani ve-ami-y ha-reshaim</i> · And Pharaoh sent and called for Moses and for Aaron, and said to them: I have sinned this time; the LORD is the righteous one, and I and my people are the wicked.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּשְׁלַ֣ח פַּרְעֹ֗ה וַיִּקְרָא֙ לְמֹשֶׁ֣ה וּֽלְאַהֲרֹ֔ן וַיֹּ֥אמֶר אֲלֵהֶ֖ם חָטָ֣אתִי הַפָּ֑עַם</span> · <i>va-yishlach paro va-yiqra le-moshe u-le-aharon va-yomer el-hem chatati ha-paam</i> · and Pharaoh sent and called for Moses and for Aaron (etnachta on ha-paam) [VERIFIED: SNAPSHOT Exod.9.27 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">יְהוָה֙ הַצַּדִּ֔יק וַאֲנִ֥י וְעַמִּ֖י הָרְשָׁעִֽים</span> · <i>YHWH ha-tzadiq va-ani ve-ami-y ha-reshaim</i> · and said to them: I have sinned this time; the LORD is the righteous one, and I and my people are the wicked (verse-final ha-reshaim) [VERIFIED: SNAPSHOT Exod.9.27 idx9-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(chatati_ha_paam, t0)</span><br><span class="gloss">= HOLDS(chatati-the-paam, t0)</span><br>THE CONFESSION. CHATATI ha-paam — &#x27;I HAVE SINNED this time&#x27;: the throne&#x27;s first confession (the sin-word enters the king&#x27;s mouth — the machine opens the confession-ledger knowing its half-life: 9:34&#x27;s sinned-AGAIN is seven verses away); YHWH HA-TZADIQ va-ani ve- ami HA-RESHAIM — &#x27;the LORD is THE RIGHTEOUS ONE, and I and my people THE WICKED&#x27;: the court-vocabulary complete (the readings on the definite articles — the Righteous One, the wicked ones — named- only): the machine files the verdict pronounced by the defendant — and notes it came with the weather.
+</td><td><span class="he">חָטָאתִי הַפָּעַם יְהוָה הַצַּדִּיק וַאֲנִי וְעַמִּי הָרְשָׁעִים</span> · <i>chatati ha-paam YHWH ha-tzadiq va-ani ve-ami-y ha-reshaim</i><br><span class="gloss">= chatati the-paam the-LORD the-tzadiq and-ani and-ami-y the-reshaim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The confession.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_28 · Exod.9.28 · <span class='expr'>ENTREAT_ENOUGH</span></h3>
+<p><span class="he">הַעְתִּירוּ אֶל־יְהוָה וְרַב מִהְיֹת קֹלֹת אֱלֹהִים וּבָרָד וַאֲשַׁלְּחָה אֶתְכֶם וְלֹא תֹסִפוּן לַעֲמֹד</span> · <i>hatiru el-YHWH ve-rav mi-heyot qolot Elohim u-varad va-ashalcha et-khem ve-lo tosifu-n la-amod</i> · Entreat the LORD — and enough of there being voices of God and hail — and I will send you, and you shall not continue to stand.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">הַעְתִּ֨ירוּ֙ אֶל יְהוָ֔ה וְרַ֕ב מִֽהְיֹ֛ת קֹלֹ֥ת אֱלֹהִ֖ים וּבָרָ֑ד</span> · <i>hatiru el-YHWH ve-rav mi-heyot qolot Elohim u-varad</i> · entreat the LORD — and enough of there being voices of God and hail (etnachta on u-varad) [VERIFIED: SNAPSHOT Exod.9.28 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַאֲשַׁלְּחָ֣ה אֶתְכֶ֔ם וְלֹ֥א תֹסִפ֖וּן לַעֲמֹֽד</span> · <i>va-ashalcha et-khem ve-lo tosifu-n la-amod</i> · and I will send you, and you shall not continue to stand (verse-final la-amod) [VERIFIED: SNAPSHOT Exod.9.28 idx8-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(paro, LET(hatiru_el_YHWH_3))</span><br><span class="gloss">= DECLARE(paro, LET(hatiru-to-the-LORD-3))</span><br>THE THIRD ENTREAT [EX09-05]. HATIRU el-YHWH — the entreat-demand&#x27;s third issue (8:4, 8:24, here — the throne&#x27;s one reliable prayer: make it stop); ve-RAV mi-heyot QOLOT elohim u-varad — &#x27;ENOUGH of there being VOICES OF GOD and hail&#x27; (the king&#x27;s own theology surfacing in the panic: qolot ELOHIM — he names the thunder&#x27;s Owner; the lean thunder-word again [EX09-01]); va-ashalcha etkhem — the send-promise&#x27;s THIRD issue (the breach-ledger already two deep); ve- lo TOSIFUN LA-AMOD — &#x27;you shall not CONTINUE TO STAND&#x27;: the stand- word&#x27;s second in-span station (the Ramah&#x27;s lean file, VERIFIED [EX09-05]) — the king renounces the very standing 9:16 said was granted him: the machine pushes the card and files the irony.
+</td><td><span class="he">הַעְתִּירוּ אֶל־יְהוָה</span> · <i>hatiru el-YHWH</i><br><span class="gloss">= hatiru to-the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The third entreat-demand; the renounced standing.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_29 · Exod.9.29 · <span class='expr'>PALMS_SPREAD_THE_PROMISE</span></h3>
+<p><span class="he">וַיֹּאמֶר אֵלָיו מֹשֶׁה כְּצֵאתִי אֶת־הָעִיר אֶפְרֹשׂ אֶת־כַּפַּי אֶל־יְהוָה הַקֹּלוֹת יֶחְדָּלוּן וְהַבָּרָד לֹא יִהְיֶה־עוֹד לְמַעַן תֵּדַע כִּי לַיהוָה הָאָרֶץ</span> · <i>va-yomer elay-v moshe ke-tzeti-y et-ha-ir efros et-kapa-y el-YHWH ha-qolot yechdalu-n ve-ha-barad lo yihye-od lemaan teda ki la-YHWH ha-aretz</i> · And Moses said to him: As I go out of the city, I will spread out my palms to the LORD; the thunders shall cease, and the hail shall be no more — in order that you may know that the earth is the LORD&#x27;s.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר אֵלָיו֙ מֹשֶׁ֔ה כְּצֵאתִי֙ אֶת הָעִ֔יר אֶפְרֹ֥שׂ אֶת כַּפַּ֖י אֶל יְהוָ֑ה</span> · <i>va-yomer elay-v moshe ke-tzeti-y et-ha-ir efros et-kapa-y el-YHWH</i> · and Moses said to him: as I go out of the city, I will spread out my palms to the LORD (etnachta on YHWH) [VERIFIED: SNAPSHOT Exod.9.29 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">הַקֹּל֣וֹת יֶחְדָּל֗וּן וְהַבָּרָד֙ לֹ֣א יִֽהְיֶה ע֔וֹד לְמַ֣עַן תֵּדַ֔ע כִּ֥י לַיהוָ֖ה הָאָֽרֶץ</span> · <i>ha-qolot yechdalu-n ve-ha-barad lo yihye-od lemaan teda ki la-YHWH ha-aretz</i> · the thunders shall cease, and the hail shall be no more — in order that you may know that the earth is the LORD&#x27;s (verse-final ha-aretz) [VERIFIED: SNAPSHOT Exod.9.29 idx11-21]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ha_qolot_yechdalun, t0)</span><br><span class="gloss">= HOLDS(the-qolot-yechdalun, t0)</span><br>THE PROMISE [EX09-01 MARQUEE; EX09-13]. ke-tzeti et-ha-ir efros et- KAPAI el-YHWH — &#x27;I will SPREAD OUT MY PALMS&#x27; (outside the idols&#x27; city — the readings, named-only; the palm-spread the prayer-file&#x27;s gesture); ha-QOLOT YECHDALUN — &#x27;the THUNDERS shall CEASE&#x27;: the thunder-word written lean-first FULL-LAST — the Ramah&#x27;s exact TWO (here and 9:33, VERIFIED whole with the all-lean stations asserted; the Masorah&#x27;s six-class named, Hilleli collated); ve-ha-barad LO YIHYE OD — &#x27;and the hail shall be NO MORE&#x27;: the no-more clause sits on the HAIL ALONE (anchored [EX09-13]) — the Kitzur: &#x27;of the thunders he did not say no-more, for they will return at the GIVING OF THE TORAH&#x27; — and Sinai&#x27;s thunder-word (19:16) stands in the same lean census (asserted): the promise&#x27;s syntax leaves the door open exactly where the mountain will walk through it; lemaan teda ki la- YHWH ha-aretz — the know-ledger: &#x27;the earth is the LORD&#x27;s.&#x27;
+</td><td><span class="he">הַקֹּלוֹת יֶחְדָּלוּן וְהַבָּרָד לֹא יִהְיֶה־עוֹד</span> · <i>ha-qolot yechdalu-n ve-ha-barad lo yihye-od</i><br><span class="gloss">= the-qolot yechdalu-n and-the-barad not yihye-od</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The thunder-file&#x27;s marquee verse.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_30 · Exod.9.30 · <span class='expr'>NOT_YET_FEARING</span></h3>
+<p><span class="he">וְאַתָּה וַעֲבָדֶיךָ יָדַעְתִּי כִּי טֶרֶם תִּירְאוּן מִפְּנֵי יְהוָה אֱלֹהִים</span> · <i>ve-ata va-avade-kha yadati ki terem tiru-n mi-pene YHWH Elohim</i> · And you and your servants — I know that you do not yet fear before the LORD God.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאַתָּ֖ה וַעֲבָדֶ֑יךָ</span> · <i>ve-ata va-avade-kha</i> · and you and your servants (etnachta on va-avade-kha) [VERIFIED: SNAPSHOT Exod.9.30 idx1 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">יָדַ֕עְתִּי כִּ֚י טֶ֣רֶם תִּֽירְא֔וּן מִפְּנֵ֖י יְהוָ֥ה אֱלֹהִֽים</span> · <i>yadati ki terem tiru-n mi-pene YHWH Elohim</i> · I know that you do not yet fear before the LORD God (verse-final Elohim) [VERIFIED: SNAPSHOT Exod.9.30 idx2-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(terem_tiraun, t0)</span><br><span class="gloss">= HOLDS(not-yet-tiraun, t0)</span><br>THE DIAGNOSIS [EX09-09]. yadati ki TEREM TIRAUN — &#x27;I KNOW that you do not YET FEAR&#x27;: Moses reads the confession&#x27;s expiry-date in advance (the know-verb on the prophet&#x27;s side of the ledger now); and the fear-form stands exactly TWICE in the Torah (VERIFIED) — here and the spies&#x27; &#x27;you shall not dread and you shall not FEAR&#x27; (Deut 1:29): the Kitzur — &#x27;until the plague turns aside you will fear; when relief comes, you shall not dread and you shall not fear&#x27; (8:11&#x27;s relief-relapse law quoted into the pair): one verb-form for the fear that melts with the ice and the fear Israel is commanded to refuse: the machine files the prophecy the last two verses of the chapter will grade.
+</td><td><span class="he">יָדַעְתִּי כִּי טֶרֶם תִּירְאוּן</span> · <i>yadati ki terem tiru-n</i><br><span class="gloss">= yadati when not-yet tiru-n</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The fear-pair; the diagnosis.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_31 · Exod.9.31 · <span class='expr'>FLAX_AND_BARLEY</span></h3>
+<p><span class="he">וְהַפִּשְׁתָּה וְהַשְּׂעֹרָה נֻכָּתָה כִּי הַשְּׂעֹרָה אָבִיב וְהַפִּשְׁתָּה גִּבְעֹל</span> · <i>ve-ha-pishta ve-ha-seora nukata ki ha-seora aviv ve-ha-pishta givol</i> · And the flax and the barley were struck; for the barley was in the ear, and the flax was in bud.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהַפִּשְׁתָּ֥ה וְהַשְּׂעֹרָ֖ה נֻכָּ֑תָה</span> · <i>ve-ha-pishta ve-ha-seora nukata</i> · and the flax and the barley were struck (etnachta on nukata) [VERIFIED: SNAPSHOT Exod.9.31 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּ֤י הַשְּׂעֹרָה֙ אָבִ֔יב וְהַפִּשְׁתָּ֖ה גִּבְעֹֽל</span> · <i>ki ha-seora aviv ve-ha-pishta givol</i> · for the barley was in the ear, and the flax was in bud (verse-final givol) [VERIFIED: SNAPSHOT Exod.9.31 idx3-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_ha_pishta_ve_ha_seora_nukata, t0)</span><br><span class="gloss">= HOLDS(and-the-pishta-and-the-seora-nukata, t0)</span><br>THE STRUCK COLUMN. ve-ha-PISHTA ve-ha-SEORA nukata — &#x27;the FLAX and the BARLEY were struck&#x27;: the crop-parenthesis opens (the narrator pauses the palace-scene for agronomy — the machine reads the two- verse aside as the plague&#x27;s dated receipt: what stood ripe, died); ki ha-seora AVIV — &#x27;the barley was in the EAR&#x27; (the aviv-word: the month the exodus will be named by, 13:4 armed — the readings, named- only): the ledger&#x27;s struck column, timed by the ear of grain.
+</td><td><span class="he">וְהַפִּשְׁתָּה וְהַשְּׂעֹרָה נֻכָּתָה</span> · <i>ve-ha-pishta ve-ha-seora nukata</i><br><span class="gloss">= and-the-pishta and-the-seora nukata</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The crop-ledger, struck column.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_32 · Exod.9.32 · <span class='expr'>WHEAT_AND_SPELT</span></h3>
+<p><span class="he">וְהַחִטָּה וְהַכֻּסֶּמֶת לֹא נֻכּוּ כִּי אֲפִילֹת הֵנָּה</span> · <i>ve-ha-chita ve-ha-kusemet lo nuku ki afilot hena</i> · And the wheat and the spelt were not struck; for they are late.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהַחִטָּ֥ה וְהַכֻּסֶּ֖מֶת לֹ֣א נֻכּ֑וּ</span> · <i>ve-ha-chita ve-ha-kusemet lo nuku</i> · and the wheat and the spelt were not struck (etnachta on nuku) [VERIFIED: SNAPSHOT Exod.9.32 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּ֥י אֲפִילֹ֖ת הֵֽנָּה</span> · <i>ki afilot hena</i> · for they are late (verse-final hena) [VERIFIED: SNAPSHOT Exod.9.32 idx4-6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ki_afilot_hena, t0)</span><br><span class="gloss">= HOLDS(when-afilot-hena, t0)</span><br>THE SPARED COLUMN. ve-ha-CHITA ve-ha-KUSEMET lo nuku — &#x27;the WHEAT and the SPELT were NOT struck&#x27;; ki AFILOT hena — &#x27;for they are LATE&#x27; (the late-word, Torah-unique, unhunted — the readings&#x27; wonders- within-wonders on the soft stalks, named-only): the machine closes the parenthesis and notes its function: the letter itself explains WHY a plague&#x27;s damage was partial — the corpus&#x27;s first in-text damage-assessment, and the locusts&#x27; menu (10:5: what the hail LEFT) is now defined one chapter early.
+</td><td><span class="he">כִּי אֲפִילֹת הֵנָּה</span> · <i>ki afilot hena</i><br><span class="gloss">= when afilot hena</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The spared column.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_33 · Exod.9.33 · <span class='expr'>THE_CEASING</span></h3>
+<p><span class="he">וַיֵּצֵא מֹשֶׁה מֵעִם פַּרְעֹה אֶת־הָעִיר וַיִּפְרֹשׂ כַּפָּיו אֶל־יְהוָה וַיַּחְדְּלוּ הַקֹּלוֹת וְהַבָּרָד וּמָטָר לֹא־נִתַּךְ אָרְצָה</span> · <i>va-yetze moshe me-im paro et-ha-ir va-yifros kapay-v el-YHWH va-yachdlu ha-qolot ve-ha-barad u-matar lo-nitakh artza-ה</i> · And Moses went out of the city from Pharaoh, and spread out his palms to the LORD; and the thunders and the hail ceased, and rain was not poured to earth.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֵּצֵ֨א מֹשֶׁ֜ה מֵעִ֤ם פַּרְעֹה֙ אֶת הָעִ֔יר וַיִּפְרֹ֥שׂ כַּפָּ֖יו אֶל יְהוָ֑ה</span> · <i>va-yetze moshe me-im paro et-ha-ir va-yifros kapay-v el-YHWH</i> · and Moses went out of the city from Pharaoh, and spread out his palms to the LORD (etnachta on YHWH) [VERIFIED: SNAPSHOT Exod.9.33 idx9 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַֽיַּחְדְּל֤וּ הַקֹּלוֹת֙ וְהַבָּרָ֔ד וּמָטָ֖ר לֹא נִתַּ֥ךְ אָֽרְצָה</span> · <i>va-yachdlu ha-qolot ve-ha-barad u-matar lo-nitakh artza-ה</i> · and the thunders and the hail ceased, and rain was not poured to earth (verse-final artza-ה) [VERIFIED: SNAPSHOT Exod.9.33 idx10-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(hatiru_el_YHWH_3, t1)</span><br><span class="gloss">= RESULT: HOLDS(hatiru-to-the-LORD-3, t1)</span><br>THE CEASING [EX09-02 CROWN; EX09-08]. va-yetze moshe... va-yifros kapav el-YHWH — the promised gesture performed verbatim (the card pops on the spread palms); va-YACHDELU ha-qolot ve-ha-barad — &#x27;and the thunders and the hail CEASED&#x27;: the ceased-verb&#x27;s exact Torah- pair (VERIFIED) — &#x27;and they CEASED building the city&#x27; at BABEL (Gen 11:8): the Kitzur — &#x27;there the Name confounded them WITH VOICES until they ceased building; here too they ceased building through the VOICES over Egypt&#x27;s burdens&#x27; — the THIRD Babel-Egypt letter-bond (bricks, scatter, now cease: two building-empires stopped by voices); u-matar lo NITAKH artza — &#x27;rain was not POURED to earth&#x27;: the poured-verb&#x27;s only Torah station (VERIFIED), its Masorah-three named (Rizpah&#x27;s rain granted, Jerusalem&#x27;s wrath poured): &#x27;the prayer of the righteous WITHHOLDS the rain, and the prayer of the righteous BRINGS IT DOWN&#x27; — this verse filed as the withholding&#x27;s own proof- text.
+</td><td><span class="he">וַיַּחְדְּלוּ הַקֹּלוֹת וְהַבָּרָד וּמָטָר לֹא־נִתַּךְ אָרְצָה</span> · <i>va-yachdlu ha-qolot ve-ha-barad u-matar lo-nitakh artza-ה</i><br><span class="gloss">= and-yachdlu the-qolot and-the-barad and-matar not-nitakh artza-ה</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The Babel cease-pair; the entreat popped.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_34 · Exod.9.34 · <span class='expr'>SINNING_AGAIN</span></h3>
+<p><span class="he">וַיַּרְא פַּרְעֹה כִּי־חָדַל הַמָּטָר וְהַבָּרָד וְהַקֹּלֹת וַיֹּסֶף לַחֲטֹא וַיַּכְבֵּד לִבּוֹ הוּא וַעֲבָדָיו</span> · <i>va-yar paro ki-chadal ha-matar ve-ha-barad ve-ha-qolot va-yosef la-chato va-yakhbed lib-o hu va-avaday-v</i> · And Pharaoh saw that the rain and the hail and the thunders had ceased — and he continued to sin, and made his heart heavy, he and his servants.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּ֣רְא פַּרְעֹ֗ה כִּֽי חָדַ֨ל הַמָּטָ֧ר וְהַבָּרָ֛ד וְהַקֹּלֹ֖ת וַיֹּ֣סֶף לַחֲטֹ֑א</span> · <i>va-yar paro ki-chadal ha-matar ve-ha-barad ve-ha-qolot va-yosef la-chato</i> · and Pharaoh saw that the rain and the hail and the thunders had ceased (etnachta on la-chato) [VERIFIED: SNAPSHOT Exod.9.34 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּכְבֵּ֥ד לִבּ֖וֹ ה֥וּא וַעֲבָדָֽיו</span> · <i>va-yakhbed lib-o hu va-avaday-v</i> · and he continued to sin, and made his heart heavy, he and his servants (verse-final va-avaday-v) [VERIFIED: SNAPSHOT Exod.9.34 idx9-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yosef_la_chato, t0)</span><br><span class="gloss">= HOLDS(and-yosef-to-chato, t0)</span><br>THE RELAPSE. va-yar paro ki-CHADAL ha-matar — &#x27;Pharaoh SAW that the rain had CEASED&#x27; (the seeing-then-relapse engine, third running: 8:11 the relief, 9:7 the audit, now the weather); va-YOSEF LA-CHATO — &#x27;and he CONTINUED TO SIN&#x27;: the sin-word&#x27;s return (9:27&#x27;s chatati graded by its sequel — the confession lasted exactly as long as the storm, as 9:30 predicted); va-yakhbed libo HU VA-AVADAV — &#x27;he AND HIS SERVANTS&#x27;: the hardening now PLURAL (the heart-ledger franchised — the fearers of 9:20 notwithstanding, the court hardens with its king): the machine files the diagnosis of 9:30 as CONFIRMED.
+</td><td><span class="he">וַיֹּסֶף לַחֲטֹא</span> · <i>va-yosef la-chato</i><br><span class="gloss">= and-yosef to-chato</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The confession expires.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_9_35 · Exod.9.35 · <span class='expr'>THE_SEAL_BY_MOSES_HAND</span></h3>
+<p><span class="he">וַיֶּחֱזַק לֵב פַּרְעֹה וְלֹא שִׁלַּח אֶת־בְּנֵי יִשְׂרָאֵל כַּאֲשֶׁר דִּבֶּר יְהוָה בְּיַד־מֹשֶׁה</span> · <i>va-yechezaq lev paro ve-lo shilach et-bene yisrael ka-asher diber YHWH be-yad-moshe</i> · And the heart of Pharaoh was strengthened, and he did not send the sons of Israel, as the LORD had spoken by the hand of Moses.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַֽיֶּחֱזַק֙ לֵ֣ב פַּרְעֹ֔ה וְלֹ֥א שִׁלַּ֖ח אֶת בְּנֵ֣י יִשְׂרָאֵ֑ל</span> · <i>va-yechezaq lev paro ve-lo shilach et-bene yisrael</i> · and the heart of Pharaoh was strengthened, and he did not send the sons of Israel (etnachta on yisrael) [VERIFIED: SNAPSHOT Exod.9.35 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כַּאֲשֶׁ֛ר דִּבֶּ֥ר יְהוָ֖ה בְּיַד מֹשֶֽׁה</span> · <i>ka-asher diber YHWH be-yad-moshe</i> · as the LORD had spoken by the hand of Moses (verse-final moshe) [VERIFIED: SNAPSHOT Exod.9.35 idx8-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ka_asher_diber_YHWH_be_yad_moshe, t0)</span><br><span class="gloss">= HOLDS(like-which-diber-the-LORD-in-yad-Moses, t0)</span><br>THE NEW SEAL. va-yechezaq lev paro — the strengthened-form returns for the close; ve-lo shilach et-bene yisrael — the refusal-formula (the send-promise of 9:28 now the ledger&#x27;s THIRD breach); KA-ASHER DIBER YHWH BE-YAD MOSHE — &#x27;as the LORD had spoken BY THE HAND OF MOSES&#x27;: the seal-formula gains its instrument-clause for the first time (asserted — the by-the-hand-of-Moses idiom debuts: the corpus&#x27;s future citation-formula for the whole Torah, the readings note, named-only): the chapter closes with three plagues spent, the confession expired, and the errand-cards of the cycle still open — the locusts&#x27; summons is the next verse over the border (10:1 armed).
+</td><td><span class="he">כַּאֲשֶׁר דִּבֶּר יְהוָה בְּיַד־מֹשֶׁה</span> · <i>ka-asher diber YHWH be-yad-moshe</i><br><span class="gloss">= like-which diber the-LORD in-yad-Moses</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The chapter closes on the new seal.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Ex_9_1 — the cattle-errand</td><td>And the LORD said to Moses: Come to Pharaoh, and speak to him: Thus says the LORD, the God of the Hebrews: Send My people, that they may serve Me.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה</span> · <i>va-yomer YHWH el-moshe</i><br><span class="gloss">= and-yomer the-LORD to-Moses</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Ex_9_2 — if you refuse to send</td><td>For if you refuse to send, and still hold them fast —</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; no test, no name.</span></td><td><span class="he">כִּ֛י אִם מָאֵ֥ן אַתָּ֖ה</span> · <i>ki im-maen ata</i><br><span class="gloss">= when if-maen ata</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Ex_9_3 — the hand on the cattle</td><td>Behold, the hand of the LORD is upon your cattle which are in the field — upon the horses, upon the donkeys, upon the camels, upon the herds, and upon the flocks — a very heavy pestilence.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; no test, no name.</span></td><td><span class="he">הִנֵּ֨ה יַד יְהוָ֜ה הוֹיָ֗ה</span> · <i>hine yad-YHWH hoya</i><br><span class="gloss">= hine yad-the-LORD hoya</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Ex_9_4 — the set-apart</td><td>And the LORD will set apart between the cattle of Israel and the cattle of Egypt; and nothing shall die of all that belongs to the sons of Israel.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהִפְלָ֣ה יְהוָ֔ה בֵּ֚ין מִקְנֵ֣ה</span> · <i>ve-hifla YHWH ben miqne</i><br><span class="gloss">= and-hifla the-LORD ben miqne</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Ex_9_5 — the appointed time</td><td>And the LORD set an appointed time, saying: Tomorrow the LORD will do this thing in the land.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיָּ֥שֶׂם יְהוָ֖ה מוֹעֵ֣ד לֵאמֹ֑ר</span> · <i>va-yasem YHWH moed le-mor</i><br><span class="gloss">= and-yasem the-LORD moed to-mor</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Ex_9_6 — the cattle die</td><td>And the LORD did this thing on the morrow: and all the cattle of Egypt died; and of the cattle of the sons of Israel not one died.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיַּ֨עַשׂ יְהוָ֜ה אֶת הַדָּבָ֤ר</span> · <i>va-yaas YHWH et-ha-davar</i><br><span class="gloss">= and-yaas the-LORD the-davar</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Ex_9_7 — the audit</td><td>And Pharaoh sent — and behold, not even one of the cattle of Israel had died; and Pharaoh&#x27;s heart grew heavy, and he did not send the people.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּשְׁלַ֣ח פַּרְעֹ֔ה וְהִנֵּ֗ה לֹא</span> · <i>va-yishlach paro ve-hine lo-</i><br><span class="gloss">= and-yishlach paro and-hine not</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Ex_9_8 — soot heavenward</td><td>And the LORD said to Moses and to Aaron: Take for yourselves handfuls of soot of the furnace, and let Moses throw it heavenward before the eyes of Pharaoh.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; LET(qechu_piach_u_zeraqo) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; LET(qechu-piach-and-zeraqo) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֣אמֶר יְהוָה֮ אֶל מֹשֶׁ֣ה</span> · <i>va-yomer YHWH el-moshe</i><br><span class="gloss">= and-yomer the-LORD to-Moses</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Ex_9_9 — the dust of boils</td><td>And it shall become fine dust over all the land of Egypt, and it shall become on man and on beast boils blooming with blisters, in all the land of Egypt.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; LET(qechu_piach_u_zeraqo) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; LET(qechu-piach-and-zeraqo) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהָיָ֣ה לְאָבָ֔ק עַ֖ל כָּל</span> · <i>ve-haya le-avaq al kal-</i><br><span class="gloss">= and-haya to-avaq upon kal</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Ex_9_10 — the boils bloom</td><td>And they took the soot of the furnace, and stood before Pharaoh; and Moses threw it heavenward; and it became boils of blisters, blooming on man and on beast.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּקְח֞וּ אֶת פִּ֣יחַ הַכִּבְשָׁ֗ן</span> · <i>va-yiqchu et-picha ha-kivshan</i><br><span class="gloss">= and-yiqchu picha the-kivshan</span></td></tr>
+<tr><td><b>S11</b></td><td>after STEP_Ex_9_11 — the craft cannot stand</td><td>And the magicians could not stand before Moses because of the boils; for the boils were on the magicians, and on all Egypt.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְלֹֽא יָכְל֣וּ הַֽחַרְטֻמִּ֗ים לַעֲמֹ֛ד</span> · <i>ve-lo-yakhlu ha-chartumim la-amod</i><br><span class="gloss">= and-not-yakhlu the-chartumim to-amod</span></td></tr>
+<tr><td><b>S12</b></td><td>after STEP_Ex_9_12 — the divine hardening</td><td>And the LORD strengthened the heart of Pharaoh, and he did not hear them, as the LORD had spoken to Moses.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְחַזֵּ֤ק יְהוָה֙ אֶת לֵ֣ב</span> · <i>va-yechazeq YHWH et-lev</i><br><span class="gloss">= and-yechazeq the-LORD lev</span></td></tr>
+<tr><td><b>S13</b></td><td>after STEP_Ex_9_13 — the hail-errand</td><td>And the LORD said to Moses: Rise early in the morning, and station yourself before Pharaoh, and say to him: Thus says the LORD, the God of the Hebrews: Send My people, that they may serve Me.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; LET(hashkem_ve_hityatzev_2) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; LET(hashkem-and-hityatzev-2) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה</span> · <i>va-yomer YHWH el-moshe</i><br><span class="gloss">= and-yomer the-LORD to-Moses</span></td></tr>
+<tr><td><b>S14</b></td><td>after STEP_Ex_9_14 — all My plagues to your heart</td><td>For this time I send all My plagues to your heart, and on your servants, and on your people — in order that you may know that there is none like Me in all the earth.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; LET(hashkem_ve_hityatzev_2) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; LET(hashkem-and-hityatzev-2) pushed and OPEN; no test, no name.</span></td><td><span class="he">כִּ֣י בַּפַּ֣עַם הַזֹּ֗את אֲנִ֨י</span> · <i>ki ba-paam ha-zot ani</i><br><span class="gloss">= when in-the-paam the-this ani</span></td></tr>
+<tr><td><b>S15</b></td><td>after STEP_Ex_9_15 — by now I could have</td><td>For by now I could have sent out My hand, and struck you and your people with the pestilence; and you would have been effaced from the earth.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; LET(hashkem_ve_hityatzev_2) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; LET(hashkem-and-hityatzev-2) pushed and OPEN; no test, no name.</span></td><td><span class="he">כִּ֤י עַתָּה֙ שָׁלַ֣חְתִּי אֶת</span> · <i>ki ata shalachti et-</i><br><span class="gloss">= when ata shalachti et-</span></td></tr>
+<tr><td><b>S16</b></td><td>after STEP_Ex_9_16 — I made you stand</td><td>But for this very cause I have made you stand: in order to show you My power, and that My Name be declared in all the earth.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; LET(hashkem_ve_hityatzev_2) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; LET(hashkem-and-hityatzev-2) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְאוּלָ֗ם בַּעֲב֥וּר זֹאת֙ הֶעֱמַדְתִּ֔יךָ</span> · <i>ve-ulam ba-avur zot heemadti-kha</i><br><span class="gloss">= and-ulam in-the-avur this heemadti-kha</span></td></tr>
+<tr><td><b>S17</b></td><td>after STEP_Ex_9_17 — still exalting yourself</td><td>You still exalt yourself over My people, not to send them.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; LET(hashkem_ve_hityatzev_2) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; LET(hashkem-and-hityatzev-2) pushed and OPEN; no test, no name.</span></td><td><span class="he">עוֹדְךָ֖ מִסְתּוֹלֵ֣ל בְּעַמִּ֑י לְבִלְתִּ֖י</span> · <i>od-kha mistolel be-ami-y le-vilti</i><br><span class="gloss">= od-kha mistolel in-ami-y to-vilti</span></td></tr>
+<tr><td><b>S18</b></td><td>after STEP_Ex_9_18 — hail tomorrow</td><td>Behold, about this time tomorrow I rain a very heavy hail, such as has not been in Egypt from the day it was founded until now.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; LET(hashkem_ve_hityatzev_2) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; LET(hashkem-and-hityatzev-2) pushed and OPEN; no test, no name.</span></td><td><span class="he">הִנְנִ֤י מַמְטִיר֙ כָּעֵ֣ת מָחָ֔ר</span> · <i>hin-ni mamtir ka-et machar</i><br><span class="gloss">= hin-ni mamtir like machar</span></td></tr>
+<tr><td><b>S19</b></td><td>after STEP_Ex_9_19 — the flee-warning</td><td>And now — send, bring your cattle and all that is yours in the field into safety: every man and beast that is found in the field and not gathered into the house — the hail shall come down on them, and they shall die.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; LET(hashkem_ve_hityatzev_2) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; LET(hashkem-and-hityatzev-2) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְעַתָּ֗ה שְׁלַ֤ח הָעֵז֙ אֶֽת</span> · <i>ve-ata shelach haez et-</i><br><span class="gloss">= and-ata shelach haez et-</span></td></tr>
+<tr><td><b>S20</b></td><td>after STEP_Ex_9_20 — the fearer</td><td>He who feared the word of the LORD among the servants of Pharaoh made his servants and his cattle flee into the houses.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; LET(hashkem_ve_hityatzev_2) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; LET(hashkem-and-hityatzev-2) pushed and OPEN; no test, no name.</span></td><td><span class="he">הַיָּרֵא֙ אֶת דְּבַ֣ר יְהוָ֔ה</span> · <i>ha-yare et-devar YHWH</i><br><span class="gloss">= the-yare devar the-LORD</span></td></tr>
+<tr><td><b>S21</b></td><td>after STEP_Ex_9_21 — the heedless</td><td>And he who did not set his heart to the word of the LORD left his servants and his cattle in the field.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; LET(hashkem_ve_hityatzev_2) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; LET(hashkem-and-hityatzev-2) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַאֲשֶׁ֥ר לֹא שָׂ֛ם לִבּ֖וֹ</span> · <i>va-asher lo-sam lib-o</i><br><span class="gloss">= and-which not-sam lib-o</span></td></tr>
+<tr><td><b>S22</b></td><td>after STEP_Ex_9_22 — stretch toward heaven</td><td>And the LORD said to Moses: Stretch out your hand toward heaven, and there shall be hail in all the land of Egypt — on man, and on beast, and on every herb of the field in the land of Egypt.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; LET(hashkem_ve_hityatzev_2) pushed and OPEN; LET(nete_yadkha_al_ha_shamayim) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; LET(hashkem-and-hityatzev-2) pushed and OPEN; LET(nete-yadkha-upon-the-heavens) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֨אמֶר יְהוָ֜ה אֶל מֹשֶׁה</span> · <i>va-yomer YHWH el-moshe</i><br><span class="gloss">= and-yomer the-LORD to-Moses</span></td></tr>
+<tr><td><b>S23</b></td><td>after STEP_Ex_9_23 — fire walks to earth</td><td>And Moses stretched out his staff toward heaven; and the LORD gave voices and hail, and fire went walking to earth; and the LORD rained hail on the land of Egypt.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; LET(hashkem_ve_hityatzev_2) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; LET(hashkem-and-hityatzev-2) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֵּ֨ט מֹשֶׁ֣ה אֶת מַטֵּהוּ֮</span> · <i>va-yet moshe et-mate-hu</i><br><span class="gloss">= and-yet Moses mate-that</span></td></tr>
+<tr><td><b>S24</b></td><td>after STEP_Ex_9_24 — fire in the ice</td><td>And there was hail, and fire taking hold of itself within the hail, very heavy, such as had not been in all the land of Egypt since it became a nation.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; LET(hashkem_ve_hityatzev_2) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; LET(hashkem-and-hityatzev-2) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְהִ֣י בָרָ֔ד וְאֵ֕שׁ מִתְלַקַּ֖חַת</span> · <i>va-yehi varad ve-esh mitlaqachat</i><br><span class="gloss">= and-yehi varad and-esh mitlaqachat</span></td></tr>
+<tr><td><b>S25</b></td><td>after STEP_Ex_9_25 — the strike census</td><td>And the hail struck in all the land of Egypt all that was in the field, from man to beast; and every herb of the field the hail struck, and every tree of the field it shattered.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; LET(hashkem_ve_hityatzev_2) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; LET(hashkem-and-hityatzev-2) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיַּ֨ךְ הַבָּרָ֜ד בְּכָל אֶ֣רֶץ</span> · <i>va-yakh ha-barad be-khal-eretz</i><br><span class="gloss">= and-yakh the-barad in-khal-earth</span></td></tr>
+<tr><td><b>S26</b></td><td>after STEP_Ex_9_26 — only Goshen</td><td>Only in the land of Goshen, where the sons of Israel were, there was no hail.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; LET(hashkem_ve_hityatzev_2) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; LET(hashkem-and-hityatzev-2) pushed and OPEN; no test, no name.</span></td><td><span class="he">רַ֚ק בְּאֶ֣רֶץ גֹּ֔שֶׁן אֲשֶׁר</span> · <i>raq be-eretz goshen asher-</i><br><span class="gloss">= raq earth goshen which</span></td></tr>
+<tr><td><b>S27</b></td><td>after STEP_Ex_9_27 — I have sinned</td><td>And Pharaoh sent and called for Moses and for Aaron, and said to them: I have sinned this time; the LORD is the righteous one, and I and my people are the wicked.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; LET(hashkem_ve_hityatzev_2) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; LET(hashkem-and-hityatzev-2) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּשְׁלַ֣ח פַּרְעֹ֗ה וַיִּקְרָא֙ לְמֹשֶׁ֣ה</span> · <i>va-yishlach paro va-yiqra le-moshe</i><br><span class="gloss">= and-yishlach paro and-yiqra Moses</span></td></tr>
+<tr><td><b>S28</b></td><td>after STEP_Ex_9_28 — entreat — enough</td><td>Entreat the LORD — and enough of there being voices of God and hail — and I will send you, and you shall not continue to stand.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; LET(hashkem_ve_hityatzev_2) pushed and OPEN; LET(hatiru_el_YHWH_3) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; LET(hashkem-and-hityatzev-2) pushed and OPEN; LET(hatiru-to-the-LORD-3) pushed and OPEN; no test, no name.</span></td><td><span class="he">הַעְתִּ֨ירוּ֙ אֶל יְהוָ֔ה וְרַ֕ב</span> · <i>hatiru el-YHWH ve-rav</i><br><span class="gloss">= hatiru to-the-LORD and-rav</span></td></tr>
+<tr><td><b>S29</b></td><td>after STEP_Ex_9_29 — palms spread the promise</td><td>And Moses said to him: As I go out of the city, I will spread out my palms to the LORD; the thunders shall cease, and the hail shall be no more — in order that you may know that the earth is the LORD&#x27;s.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; LET(hashkem_ve_hityatzev_2) pushed and OPEN; LET(hatiru_el_YHWH_3) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; LET(hashkem-and-hityatzev-2) pushed and OPEN; LET(hatiru-to-the-LORD-3) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֤אמֶר אֵלָיו֙ מֹשֶׁ֔ה כְּצֵאתִי֙</span> · <i>va-yomer elay-v moshe ke-tzeti-y</i><br><span class="gloss">= and-yomer elay-v Moses like-tzeti-y</span></td></tr>
+<tr><td><b>S30</b></td><td>after STEP_Ex_9_30 — not yet fearing</td><td>And you and your servants — I know that you do not yet fear before the LORD God.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; LET(hashkem_ve_hityatzev_2) pushed and OPEN; LET(hatiru_el_YHWH_3) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; LET(hashkem-and-hityatzev-2) pushed and OPEN; LET(hatiru-to-the-LORD-3) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְאַתָּ֖ה וַעֲבָדֶ֑יךָ יָדַ֕עְתִּי כִּ֚י</span> · <i>ve-ata va-avade-kha yadati ki</i><br><span class="gloss">= and-ata and-avade-kha yadati when</span></td></tr>
+<tr><td><b>S31</b></td><td>after STEP_Ex_9_31 — flax and barley</td><td>And the flax and the barley were struck; for the barley was in the ear, and the flax was in bud.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; LET(hashkem_ve_hityatzev_2) pushed and OPEN; LET(hatiru_el_YHWH_3) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; LET(hashkem-and-hityatzev-2) pushed and OPEN; LET(hatiru-to-the-LORD-3) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהַפִּשְׁתָּ֥ה וְהַשְּׂעֹרָ֖ה נֻכָּ֑תָה כִּ֤י</span> · <i>ve-ha-pishta ve-ha-seora nukata ki</i><br><span class="gloss">= and-the-pishta and-the-seora nukata when</span></td></tr>
+<tr><td><b>S32</b></td><td>after STEP_Ex_9_32 — wheat and spelt</td><td>And the wheat and the spelt were not struck; for they are late.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; LET(hashkem_ve_hityatzev_2) pushed and OPEN; LET(hatiru_el_YHWH_3) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; LET(hashkem-and-hityatzev-2) pushed and OPEN; LET(hatiru-to-the-LORD-3) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהַחִטָּ֥ה וְהַכֻּסֶּ֖מֶת לֹ֣א נֻכּ֑וּ</span> · <i>ve-ha-chita ve-ha-kusemet lo nuku</i><br><span class="gloss">= and-the-chita and-the-kusemet not nuku</span></td></tr>
+<tr><td><b>S33</b></td><td>after STEP_Ex_9_33 — the ceasing</td><td>And Moses went out of the city from Pharaoh, and spread out his palms to the LORD; and the thunders and the hail ceased, and rain was not poured to earth.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; LET(hashkem_ve_hityatzev_2) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; LET(hashkem-and-hityatzev-2) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֵּצֵ֨א מֹשֶׁ֜ה מֵעִ֤ם פַּרְעֹה֙</span> · <i>va-yetze moshe me-im paro</i><br><span class="gloss">= and-yetze Moses from-if paro</span></td></tr>
+<tr><td><b>S34</b></td><td>after STEP_Ex_9_34 — sinning again</td><td>And Pharaoh saw that the rain and the hail and the thunders had ceased — and he continued to sin, and made his heart heavy, he and his servants.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; LET(hashkem_ve_hityatzev_2) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; LET(hashkem-and-hityatzev-2) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיַּ֣רְא פַּרְעֹ֗ה כִּֽי חָדַ֨ל</span> · <i>va-yar paro ki-chadal</i><br><span class="gloss">= and-yar paro when-chadal</span></td></tr>
+<tr><td><b>S35</b></td><td>after STEP_Ex_9_35 — the seal by Moses&#x27; hand</td><td>And the heart of Pharaoh was strengthened, and he did not send the sons of Israel, as the LORD had spoken by the hand of Moses.</td><td>LET(bo_el_paro_ve_dibarta) pushed and OPEN; LET(hashkem_ve_hityatzev_2) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(in-it-to-paro-and-dibarta) pushed and OPEN; LET(hashkem-and-hityatzev-2) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַֽיֶּחֱזַק֙ לֵ֣ב פַּרְעֹ֔ה וְלֹ֥א</span> · <i>va-yechezaq lev paro ve-lo</i><br><span class="gloss">= and-yechezaq lev paro and-not</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: exo_09_pestilence_boils_hail — Pestilence, boils, hail (9:1-35) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — after STEP_Ex_9_1 — the cattle-errand
+    וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה (va-yomer YHWH el-moshe)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Ex_9_2 — if you refuse to send
+    כִּ֛י אִם מָאֵ֥ן אַתָּ֖ה (ki im-maen ata)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Ex_9_3 — the hand on the cattle
+    הִנֵּ֨ה יַד יְהוָ֜ה הוֹיָ֗ה (hine yad-YHWH hoya)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Ex_9_4 — the set-apart
+    וְהִפְלָ֣ה יְהוָ֔ה בֵּ֚ין מִקְנֵ֣ה (ve-hifla YHWH ben miqne)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Ex_9_5 — the appointed time
+    וַיָּ֥שֶׂם יְהוָ֖ה מוֹעֵ֣ד לֵאמֹ֑ר (va-yasem YHWH moed le-mor)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Ex_9_6 — the cattle die
+    וַיַּ֨עַשׂ יְהוָ֜ה אֶת הַדָּבָ֤ר (va-yaas YHWH et-ha-davar)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — after STEP_Ex_9_7 — the audit
+    וַיִּשְׁלַ֣ח פַּרְעֹ֔ה וְהִנֵּ֗ה לֹא (va-yishlach paro ve-hine lo-)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S8 — after STEP_Ex_9_8 — soot heavenward
+    וַיֹּ֣אמֶר יְהוָה֮ אֶל מֹשֶׁ֣ה (va-yomer YHWH el-moshe)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;qechu_piach_u_zeraqo&#x27;])
+    PASS  LET(qechu_piach_u_zeraqo) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;qechu_piach_u_zeraqo&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S9 — after STEP_Ex_9_9 — the dust of boils
+    וְהָיָ֣ה לְאָבָ֔ק עַ֖ל כָּל (ve-haya le-avaq al kal-)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;qechu_piach_u_zeraqo&#x27;])
+    PASS  LET(qechu_piach_u_zeraqo) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;qechu_piach_u_zeraqo&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S10 — after STEP_Ex_9_10 — the boils bloom
+    וַיִּקְח֞וּ אֶת פִּ֣יחַ הַכִּבְשָׁ֗ן (va-yiqchu et-picha ha-kivshan)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S11 — after STEP_Ex_9_11 — the craft cannot stand
+    וְלֹֽא יָכְל֣וּ הַֽחַרְטֻמִּ֗ים לַעֲמֹ֛ד (ve-lo-yakhlu ha-chartumim la-amod)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S12 — after STEP_Ex_9_12 — the divine hardening
+    וַיְחַזֵּ֤ק יְהוָה֙ אֶת לֵ֣ב (va-yechazeq YHWH et-lev)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S13 — after STEP_Ex_9_13 — the hail-errand
+    וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה (va-yomer YHWH el-moshe)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  LET(hashkem_ve_hityatzev_2) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S14 — after STEP_Ex_9_14 — all My plagues to your heart
+    כִּ֣י בַּפַּ֣עַם הַזֹּ֗את אֲנִ֨י (ki ba-paam ha-zot ani)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  LET(hashkem_ve_hityatzev_2) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S15 — after STEP_Ex_9_15 — by now I could have
+    כִּ֤י עַתָּה֙ שָׁלַ֣חְתִּי אֶת (ki ata shalachti et-)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  LET(hashkem_ve_hityatzev_2) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S16 — after STEP_Ex_9_16 — I made you stand
+    וְאוּלָ֗ם בַּעֲב֥וּר זֹאת֙ הֶעֱמַדְתִּ֔יךָ (ve-ulam ba-avur zot heemadti-kha)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  LET(hashkem_ve_hityatzev_2) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S17 — after STEP_Ex_9_17 — still exalting yourself
+    עוֹדְךָ֖ מִסְתּוֹלֵ֣ל בְּעַמִּ֑י לְבִלְתִּ֖י (od-kha mistolel be-ami-y le-vilti)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  LET(hashkem_ve_hityatzev_2) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S18 — after STEP_Ex_9_18 — hail tomorrow
+    הִנְנִ֤י מַמְטִיר֙ כָּעֵ֣ת מָחָ֔ר (hin-ni mamtir ka-et machar)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  LET(hashkem_ve_hityatzev_2) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S19 — after STEP_Ex_9_19 — the flee-warning
+    וְעַתָּ֗ה שְׁלַ֤ח הָעֵז֙ אֶֽת (ve-ata shelach haez et-)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  LET(hashkem_ve_hityatzev_2) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S20 — after STEP_Ex_9_20 — the fearer
+    הַיָּרֵא֙ אֶת דְּבַ֣ר יְהוָ֔ה (ha-yare et-devar YHWH)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  LET(hashkem_ve_hityatzev_2) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S21 — after STEP_Ex_9_21 — the heedless
+    וַאֲשֶׁ֥ר לֹא שָׂ֛ם לִבּ֖וֹ (va-asher lo-sam lib-o)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  LET(hashkem_ve_hityatzev_2) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S22 — after STEP_Ex_9_22 — stretch toward heaven
+    וַיֹּ֨אמֶר יְהוָ֜ה אֶל מֹשֶׁה (va-yomer YHWH el-moshe)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;, &#x27;nete_yadkha_al_ha_shamayim&#x27;])
+    PASS  LET(hashkem_ve_hityatzev_2) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;, &#x27;nete_yadkha_al_ha_shamayim&#x27;])
+    PASS  LET(nete_yadkha_al_ha_shamayim) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;, &#x27;nete_yadkha_al_ha_shamayim&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S23 — after STEP_Ex_9_23 — fire walks to earth
+    וַיֵּ֨ט מֹשֶׁ֣ה אֶת מַטֵּהוּ֮ (va-yet moshe et-mate-hu)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  LET(hashkem_ve_hityatzev_2) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S24 — after STEP_Ex_9_24 — fire in the ice
+    וַיְהִ֣י בָרָ֔ד וְאֵ֕שׁ מִתְלַקַּ֖חַת (va-yehi varad ve-esh mitlaqachat)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  LET(hashkem_ve_hityatzev_2) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S25 — after STEP_Ex_9_25 — the strike census
+    וַיַּ֨ךְ הַבָּרָ֜ד בְּכָל אֶ֣רֶץ (va-yakh ha-barad be-khal-eretz)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  LET(hashkem_ve_hityatzev_2) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S26 — after STEP_Ex_9_26 — only Goshen
+    רַ֚ק בְּאֶ֣רֶץ גֹּ֔שֶׁן אֲשֶׁר (raq be-eretz goshen asher-)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  LET(hashkem_ve_hityatzev_2) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S27 — after STEP_Ex_9_27 — I have sinned
+    וַיִּשְׁלַ֣ח פַּרְעֹ֗ה וַיִּקְרָא֙ לְמֹשֶׁ֣ה (va-yishlach paro va-yiqra le-moshe)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  LET(hashkem_ve_hityatzev_2) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S28 — after STEP_Ex_9_28 — entreat — enough
+    הַעְתִּ֨ירוּ֙ אֶל יְהוָ֔ה וְרַ֕ב (hatiru el-YHWH ve-rav)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;, &#x27;hatiru_el_YHWH_3&#x27;])
+    PASS  LET(hashkem_ve_hityatzev_2) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;, &#x27;hatiru_el_YHWH_3&#x27;])
+    PASS  LET(hatiru_el_YHWH_3) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;, &#x27;hatiru_el_YHWH_3&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S29 — after STEP_Ex_9_29 — palms spread the promise
+    וַיֹּ֤אמֶר אֵלָיו֙ מֹשֶׁ֔ה כְּצֵאתִי֙ (va-yomer elay-v moshe ke-tzeti-y)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;, &#x27;hatiru_el_YHWH_3&#x27;])
+    PASS  LET(hashkem_ve_hityatzev_2) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;, &#x27;hatiru_el_YHWH_3&#x27;])
+    PASS  LET(hatiru_el_YHWH_3) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;, &#x27;hatiru_el_YHWH_3&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S30 — after STEP_Ex_9_30 — not yet fearing
+    וְאַתָּ֖ה וַעֲבָדֶ֑יךָ יָדַ֕עְתִּי כִּ֚י (ve-ata va-avade-kha yadati ki)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;, &#x27;hatiru_el_YHWH_3&#x27;])
+    PASS  LET(hashkem_ve_hityatzev_2) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;, &#x27;hatiru_el_YHWH_3&#x27;])
+    PASS  LET(hatiru_el_YHWH_3) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;, &#x27;hatiru_el_YHWH_3&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S31 — after STEP_Ex_9_31 — flax and barley
+    וְהַפִּשְׁתָּ֥ה וְהַשְּׂעֹרָ֖ה נֻכָּ֑תָה כִּ֤י (ve-ha-pishta ve-ha-seora nukata ki)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;, &#x27;hatiru_el_YHWH_3&#x27;])
+    PASS  LET(hashkem_ve_hityatzev_2) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;, &#x27;hatiru_el_YHWH_3&#x27;])
+    PASS  LET(hatiru_el_YHWH_3) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;, &#x27;hatiru_el_YHWH_3&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S32 — after STEP_Ex_9_32 — wheat and spelt
+    וְהַחִטָּ֥ה וְהַכֻּסֶּ֖מֶת לֹ֣א נֻכּ֑וּ (ve-ha-chita ve-ha-kusemet lo nuku)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;, &#x27;hatiru_el_YHWH_3&#x27;])
+    PASS  LET(hashkem_ve_hityatzev_2) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;, &#x27;hatiru_el_YHWH_3&#x27;])
+    PASS  LET(hatiru_el_YHWH_3) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;, &#x27;hatiru_el_YHWH_3&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S33 — after STEP_Ex_9_33 — the ceasing
+    וַיֵּצֵ֨א מֹשֶׁ֜ה מֵעִ֤ם פַּרְעֹה֙ (va-yetze moshe me-im paro)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  LET(hashkem_ve_hityatzev_2) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S34 — after STEP_Ex_9_34 — sinning again
+    וַיַּ֣רְא פַּרְעֹ֗ה כִּֽי חָדַ֨ל (va-yar paro ki-chadal)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  LET(hashkem_ve_hityatzev_2) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S35 — after STEP_Ex_9_35 — the seal by Moses&#x27; hand
+    וַֽיֶּחֱזַק֙ לֵ֣ב פַּרְעֹ֔ה וְלֹ֥א (va-yechezaq lev paro ve-lo)
+    PASS  LET(bo_el_paro_ve_dibarta) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  LET(hashkem_ve_hityatzev_2) pushed and OPEN  (queue=[&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/exo_09_pestilence_boils_hail.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# exo_09_pestilence_boils_hail — 9:1-35
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/exo_09_pestilence_boils_hail.yaml) is CANONICAL
+# (Pre-Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Pestilence, boils, hail (9:1-35)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;exo_09_pestilence_boils_hail&quot;)
+
+# -------------------------- Exod.9.1 · THE_CATTLE_ERRAND -------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה בֹּא אֶל־פַּרְעֹה וְדִבַּרְתָּ אֵלָיו
+# כֹּה־אָמַר יְהוָה אֱלֹהֵי הָעִבְרִים שַׁלַּח אֶת־עַמִּי וְיַעַבְדֻנִי
+# &quot;[EN-AID] And the LORD said to Moses: Come to Pharaoh, and speak to him:
+# Thus says the LORD, the God of the Hebrews: Send My people, that they may
+# serve Me.&quot;
+m.step(&quot;Exod.9.1&quot;)
+# ‹בֹּא אֶל־פַּרְעֹה› (“come/bring to Pharaoh”) — the-LORD speaks a demand —
+# LET: come/bring-to-Pharaoh-and-speak
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;bo_el_paro_ve_dibarta&quot;)
+
+# -------------------------- Exod.9.2 · IF_YOU_REFUSE_TO_SEND ---------------
+# כִּי אִם־מָאֵן אַתָּה לְשַׁלֵּחַ וְעוֹדְךָ מַחֲזִיק בָּם
+# &quot;[EN-AID] For if you refuse to send, and still hold them fast —&quot;
+m.step(&quot;Exod.9.2&quot;)
+# ‹וְעוֹדְךָ מַחֲזִיק בָּם› (“and-still/again-you/your fasten-upon in-
+# them/their”) — fact holds: and-odkha-fasten-upon-bam
+m.fact(&quot;ve_odkha_machaziq_bam&quot;)
+
+# -------------------------- Exod.9.3 · THE_HAND_ON_THE_CATTLE --------------
+# הִנֵּה יַד־יְהוָה הוֹיָה בְּמִקְנְךָ אֲשֶׁר בַּשָּׂדֶה בַּסּוּסִים
+# בַּחֲמֹרִים בַּגְּמַלִּים בַּבָּקָר וּבַצֹּאן דֶּבֶר כָּבֵד מְאֹד
+# &quot;[EN-AID] Behold, the hand of the LORD is upon your cattle which are in
+# the field — upon the horses, upon the donkeys, upon the camels, upon the
+# herds, and upon the flocks — a very heavy pestilence.&quot;
+m.step(&quot;Exod.9.3&quot;)
+# ‹הִנֵּה יַד־יְהוָה הוֹיָה› (“behold hand YHWH be”) — fact holds: hand-the-
+# LORD-be-in-miqnekha
+m.fact(&quot;yad_YHWH_hoya_be_miqnekha&quot;)
+
+# -------------------------- Exod.9.4 · THE_SET_APART -----------------------
+# וְהִפְלָה יְהוָה בֵּין מִקְנֵה יִשְׂרָאֵל וּבֵין מִקְנֵה מִצְרָיִם וְלֹא
+# יָמוּת מִכָּל־לִבְנֵי יִשְׂרָאֵל דָּבָר
+# &quot;[EN-AID] And the LORD will set apart between the cattle of Israel and the
+# cattle of Egypt; and nothing shall die of all that belongs to the sons of
+# Israel.&quot;
+m.step(&quot;Exod.9.4&quot;)
+# ‹וְהִפְלָה יְהוָה בֵּין מִקְנֵה יִשְׂרָאֵל וּבֵין מִקְנֵה מִצְרָיִם›
+# (“and-distinguish YHWH between something-bought Israel and-between
+# something-bought Egypt”) — fact holds: and-distinguish-the-LORD-between-
+# something-bought
+m.fact(&quot;ve_hifla_YHWH_ben_miqne&quot;)
+
+# -------------------------- Exod.9.5 · THE_APPOINTED_TIME ------------------
+# וַיָּשֶׂם יְהוָה מוֹעֵד לֵאמֹר מָחָר יַעֲשֶׂה יְהוָה הַדָּבָר הַזֶּה
+# בָּאָרֶץ
+# &quot;[EN-AID] And the LORD set an appointed time, saying: Tomorrow the LORD
+# will do this thing in the land.&quot;
+m.step(&quot;Exod.9.5&quot;)
+# ‹וַיָּשֶׂם יְהוָה מוֹעֵד לֵאמֹר› (“and-put/set YHWH seasons to-say”) —
+# fact holds: and-put/set-the-LORD-seasons
+m.fact(&quot;va_yasem_YHWH_moed&quot;)
+
+# -------------------------- Exod.9.6 · THE_CATTLE_DIE ----------------------
+# וַיַּעַשׂ יְהוָה אֶת־הַדָּבָר הַזֶּה מִמָּחֳרָת וַיָּמָת כֹּל מִקְנֵה
+# מִצְרָיִם וּמִמִּקְנֵה בְנֵי־יִשְׂרָאֵל לֹא־מֵת אֶחָד
+# &quot;[EN-AID] And the LORD did this thing on the morrow: and all the cattle of
+# Egypt died; and of the cattle of the sons of Israel not one died.&quot;
+m.step(&quot;Exod.9.6&quot;)
+# ‹וַיָּמָת כֹּל מִקְנֵה מִצְרָיִם› (“and-die all something-bought
+# Egyptian”) — fact holds: and-die-all-something-bought-Egypt
+m.fact(&quot;va_yamat_kol_miqne_mitzrayim&quot;)
+
+# -------------------------- Exod.9.7 · THE_AUDIT ---------------------------
+# וַיִּשְׁלַח פַּרְעֹה וְהִנֵּה לֹא־מֵת מִמִּקְנֵה יִשְׂרָאֵל עַד־אֶחָד
+# וַיִּכְבַּד לֵב פַּרְעֹה וְלֹא שִׁלַּח אֶת־הָעָם
+# &quot;[EN-AID] And Pharaoh sent — and behold, not even one of the cattle of
+# Israel had died; and Pharaoh&#x27;s heart grew heavy, and he did not send the
+# people.&quot;
+m.step(&quot;Exod.9.7&quot;)
+# ‹וַיִּשְׁלַח פַּרְעֹה וְהִנֵּה› (“and-send Pharaoh and-behold”) — fact
+# holds: and-send-Pharaoh-and-behold
+m.fact(&quot;va_yishlach_paro_ve_hine&quot;)
+
+# -------------------------- Exod.9.8 · SOOT_HEAVENWARD ---------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה וְאֶל־אַהֲרֹן קְחוּ לָכֶם מְלֹא חָפְנֵיכֶם
+# פִּיחַ כִּבְשָׁן וּזְרָקוֹ מֹשֶׁה הַשָּׁמַיְמָה לְעֵינֵי פַרְעֹה
+# &quot;[EN-AID] And the LORD said to Moses and to Aaron: Take for yourselves
+# handfuls of soot of the furnace, and let Moses throw it heavenward before
+# the eyes of Pharaoh.&quot;
+m.step(&quot;Exod.9.8&quot;)
+# ‹קְחוּ לָכֶם מְלֹא חָפְנֵיכֶם פִּיחַ כִּבְשָׁן› (“take to-you/your(pl)
+# fulness fist-you/your(pl) powder smelting-furnace”) — the-LORD speaks a
+# demand — LET: take-piach-and-zeraqo
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;qechu_piach_u_zeraqo&quot;)
+
+# -------------------------- Exod.9.9 · THE_DUST_OF_BOILS -------------------
+# וְהָיָה לְאָבָק עַל כָּל־אֶרֶץ מִצְרָיִם וְהָיָה עַל־הָאָדָם
+# וְעַל־הַבְּהֵמָה לִשְׁחִין פֹּרֵחַ אֲבַעְבֻּעֹת בְּכָל־אֶרֶץ מִצְרָיִם
+# &quot;[EN-AID] And it shall become fine dust over all the land of Egypt, and it
+# shall become on man and on beast boils blooming with blisters, in all the
+# land of Egypt.&quot;
+m.step(&quot;Exod.9.9&quot;)
+# ‹לִשְׁחִין פֹּרֵחַ אֲבַעְבֻּעֹת› (“to-inflammation break-forth-as-a-bud
+# inflammatory-pustule”) — fact holds: and-be-to-light-particles
+m.fact(&quot;ve_haya_le_avaq&quot;)
+
+# -------------------------- Exod.9.10 · THE_BOILS_BLOOM --------------------
+# וַיִּקְחוּ אֶת־פִּיחַ הַכִּבְשָׁן וַיַּעַמְדוּ לִפְנֵי פַרְעֹה וַיִּזְרֹק
+# אֹתוֹ מֹשֶׁה הַשָּׁמָיְמָה וַיְהִי שְׁחִין אֲבַעְבֻּעֹת פֹּרֵחַ בָּאָדָם
+# וּבַבְּהֵמָה
+# &quot;[EN-AID] And they took the soot of the furnace, and stood before Pharaoh;
+# and Moses threw it heavenward; and it became boils of blisters, blooming
+# on man and on beast.&quot;
+m.step(&quot;Exod.9.10&quot;)
+# ‹וַיְהִי שְׁחִין אֲבַעְבֻּעֹת פֹּרֵחַ› (“and-be inflammation inflammatory-
+# pustule break-forth-as-a-bud”) — demand settled (popped from the queue):
+# take-piach-and-zeraqo
+m.result(&quot;qechu_piach_u_zeraqo&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Exod.9.11 · THE_CRAFT_CANNOT_STAND -------------
+# וְלֹא־יָכְלוּ הַחַרְטֻמִּים לַעֲמֹד לִפְנֵי מֹשֶׁה מִפְּנֵי הַשְּׁחִין
+# כִּי־הָיָה הַשְּׁחִין בַּחֲרְטֻמִּם וּבְכָל־מִצְרָיִם
+# &quot;[EN-AID] And the magicians could not stand before Moses because of the
+# boils; for the boils were on the magicians, and on all Egypt.&quot;
+m.step(&quot;Exod.9.11&quot;)
+# ‹וְלֹא־יָכְלוּ הַחַרְטֻמִּים לַעֲמֹד לִפְנֵי מֹשֶׁה› (“and-not be-able
+# the-horoscopist to-stand to-face Moses”) — fact holds: and-not-be-able-
+# the-horoscopist-laamod
+m.fact(&quot;ve_lo_yakhlu_ha_chartumim_laamod&quot;)
+
+# -------------------------- Exod.9.12 · THE_DIVINE_HARDENING ---------------
+# וַיְחַזֵּק יְהוָה אֶת־לֵב פַּרְעֹה וְלֹא שָׁמַע אֲלֵהֶם כַּאֲשֶׁר דִּבֶּר
+# יְהוָה אֶל־מֹשֶׁה
+# &quot;[EN-AID] And the LORD strengthened the heart of Pharaoh, and he did not
+# hear them, as the LORD had spoken to Moses.&quot;
+m.step(&quot;Exod.9.12&quot;)
+# ‹וַיְחַזֵּק יְהוָה אֶת־לֵב פַּרְעֹה› (“and-fasten-upon YHWH obj-marker
+# heart Pharaoh”) — fact holds: and-fasten-upon-the-LORD-obj-marker-heart-
+# Pharaoh
+m.fact(&quot;va_yechazeq_YHWH_et_lev_paro&quot;)
+
+# -------------------------- Exod.9.13 · THE_HAIL_ERRAND --------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה הַשְׁכֵּם בַּבֹּקֶר וְהִתְיַצֵּב לִפְנֵי
+# פַרְעֹה וְאָמַרְתָּ אֵלָיו כֹּה־אָמַר יְהוָה אֱלֹהֵי הָעִבְרִים שַׁלַּח
+# אֶת־עַמִּי וְיַעַבְדֻנִי
+# &quot;[EN-AID] And the LORD said to Moses: Rise early in the morning, and
+# station yourself before Pharaoh, and say to him: Thus says the LORD, the
+# God of the Hebrews: Send My people, that they may serve Me.&quot;
+m.step(&quot;Exod.9.13&quot;)
+# ‹הַשְׁכֵּם בַּבֹּקֶר וְהִתְיַצֵּב לִפְנֵי פַרְעֹה› (“rise-early in-morning
+# and-place to-face Pharaoh”) — the-LORD speaks a demand — LET: rise-early-
+# and-place-2
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;hashkem_ve_hityatzev_2&quot;)
+
+# -------------------------- Exod.9.14 · ALL_MY_PLAGUES_TO_YOUR_HEART -------
+# כִּי בַּפַּעַם הַזֹּאת אֲנִי שֹׁלֵחַ אֶת־כָּל־מַגֵּפֹתַי אֶל־לִבְּךָ
+# וּבַעֲבָדֶיךָ וּבְעַמֶּךָ בַּעֲבוּר תֵּדַע כִּי אֵין כָּמֹנִי
+# בְּכָל־הָאָרֶץ
+# &quot;[EN-AID] For this time I send all My plagues to your heart, and on your
+# servants, and on your people — in order that you may know that there is
+# none like Me in all the earth.&quot;
+m.step(&quot;Exod.9.14&quot;)
+# ‹בַּעֲבוּר תֵּדַע כִּי אֵין כָּמֹנִי בְּכָל־הָאָרֶץ› (“for-the-sake-of
+# know that there-is-not form-of-the-prefix-&#x27;k-&#x27;-me/my in-all the-earth”) —
+# fact holds: there-is-not-kamoni-in-all-the-earth
+m.fact(&quot;en_kamoni_be_khol_ha_aretz&quot;)
+
+# -------------------------- Exod.9.15 · BY_NOW_I_COULD_HAVE ----------------
+# כִּי עַתָּה שָׁלַחְתִּי אֶת־יָדִי וָאַךְ אוֹתְךָ וְאֶת־עַמְּךָ בַּדָּבֶר
+# וַתִּכָּחֵד מִן־הָאָרֶץ
+# &quot;[EN-AID] For by now I could have sent out My hand, and struck you and
+# your people with the pestilence; and you would have been effaced from the
+# earth.&quot;
+m.step(&quot;Exod.9.15&quot;)
+# ‹כִּי עַתָּה שָׁלַחְתִּי אֶת־יָדִי› (“that now send obj-marker hand-
+# me/my”) — fact holds: very-widely-used-as-a-relati-you-send-obj-marker-
+# yadi
+m.fact(&quot;ki_ata_shalachti_et_yadi&quot;)
+
+# -------------------------- Exod.9.16 · I_MADE_YOU_STAND -------------------
+# וְאוּלָם בַּעֲבוּר זֹאת הֶעֱמַדְתִּיךָ בַּעֲבוּר הַרְאֹתְךָ אֶת־כֹּחִי
+# וּלְמַעַן סַפֵּר שְׁמִי בְּכָל־הָאָרֶץ
+# &quot;[EN-AID] But for this very cause I have made you stand: in order to show
+# you My power, and that My Name be declared in all the earth.&quot;
+m.step(&quot;Exod.9.16&quot;)
+# ‹וּלְמַעַן סַפֵּר שְׁמִי בְּכָל־הָאָרֶץ› (“and-so-that count name-me/my
+# in-all the-earth”) — fact holds: heemadtikha-baavur-harotkha
+m.fact(&quot;heemadtikha_baavur_harotkha&quot;)
+
+# -------------------------- Exod.9.17 · STILL_EXALTING_YOURSELF ------------
+# עוֹדְךָ מִסְתּוֹלֵל בְּעַמִּי לְבִלְתִּי שַׁלְּחָם
+# &quot;[EN-AID] You still exalt yourself over My people, not to send them.&quot;
+m.step(&quot;Exod.9.17&quot;)
+# ‹עוֹדְךָ מִסְתּוֹלֵל בְּעַמִּי› (“still/again-you/your mound-up in-people-
+# me/my”) — fact holds: odkha-mound-up-in-ami
+m.fact(&quot;odkha_mistolel_be_ami&quot;)
+
+# -------------------------- Exod.9.18 · HAIL_TOMORROW ----------------------
+# הִנְנִי מַמְטִיר כָּעֵת מָחָר בָּרָד כָּבֵד מְאֹד אֲשֶׁר לֹא־הָיָה כָמֹהוּ
+# בְּמִצְרַיִם לְמִן־הַיּוֹם הִוָּסְדָה וְעַד־עָתָּה
+# &quot;[EN-AID] Behold, about this time tomorrow I rain a very heavy hail, such
+# as has not been in Egypt from the day it was founded until now.&quot;
+m.step(&quot;Exod.9.18&quot;)
+# ‹הִנְנִי מַמְטִיר כָּעֵת מָחָר› (“lo!-me/my rain like-time deferred”) —
+# fact holds: behold-I-rain-kaet-deferred
+m.fact(&quot;hineni_mamtir_kaet_machar&quot;)
+
+# -------------------------- Exod.9.19 · THE_FLEE_WARNING -------------------
+# וְעַתָּה שְׁלַח הָעֵז אֶת־מִקְנְךָ וְאֵת כָּל־אֲשֶׁר לְךָ בַּשָּׂדֶה
+# כָּל־הָאָדָם וְהַבְּהֵמָה אֲשֶׁר־יִמָּצֵא בַשָּׂדֶה וְלֹא יֵאָסֵף
+# הַבַּיְתָה וְיָרַד עֲלֵהֶם הַבָּרָד וָמֵתוּ
+# &quot;[EN-AID] And now — send, bring your cattle and all that is yours in the
+# field into safety: every man and beast that is found in the field and not
+# gathered into the house — the hail shall come down on them, and they shall
+# die.&quot;
+m.step(&quot;Exod.9.19&quot;)
+# ‹וְעַתָּה שְׁלַח הָעֵז› (“and-now send be-strong”) — fact holds: and-you-
+# send-be-strong
+m.fact(&quot;ve_ata_shelach_haez&quot;)
+
+# -------------------------- Exod.9.20 · THE_FEARER -------------------------
+# הַיָּרֵא אֶת־דְּבַר יְהוָה מֵעַבְדֵי פַּרְעֹה הֵנִיס אֶת־עֲבָדָיו
+# וְאֶת־מִקְנֵהוּ אֶל־הַבָּתִּים
+# &quot;[EN-AID] He who feared the word of the LORD among the servants of Pharaoh
+# made his servants and his cattle flee into the houses.&quot;
+m.step(&quot;Exod.9.20&quot;)
+# ‹הַיָּרֵא אֶת־דְּבַר יְהוָה› (“the-fear obj-marker word/thing YHWH”) —
+# fact holds: the-fear-obj-marker-word/thing-the-LORD
+m.fact(&quot;ha_yare_et_devar_YHWH&quot;)
+
+# -------------------------- Exod.9.21 · THE_HEEDLESS -----------------------
+# וַאֲשֶׁר לֹא־שָׂם לִבּוֹ אֶל־דְּבַר יְהוָה וַיַּעֲזֹב אֶת־עֲבָדָיו
+# וְאֶת־מִקְנֵהוּ בַּשָּׂדֶה
+# &quot;[EN-AID] And he who did not set his heart to the word of the LORD left
+# his servants and his cattle in the field.&quot;
+m.step(&quot;Exod.9.21&quot;)
+# ‹וַאֲשֶׁר לֹא־שָׂם לִבּוֹ› (“and-which not put/set heart-him/its”) — fact
+# holds: and-which-not-put/set-His-heart
+m.fact(&quot;va_asher_lo_sam_libo&quot;)
+
+# -------------------------- Exod.9.22 · STRETCH_TOWARD_HEAVEN --------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה נְטֵה אֶת־יָדְךָ עַל־הַשָּׁמַיִם וִיהִי בָרָד
+# בְּכָל־אֶרֶץ מִצְרָיִם עַל־הָאָדָם וְעַל־הַבְּהֵמָה וְעַל כָּל־עֵשֶׂב
+# הַשָּׂדֶה בְּאֶרֶץ מִצְרָיִם
+# &quot;[EN-AID] And the LORD said to Moses: Stretch out your hand toward heaven,
+# and there shall be hail in all the land of Egypt — on man, and on beast,
+# and on every herb of the field in the land of Egypt.&quot;
+m.step(&quot;Exod.9.22&quot;)
+# ‹נְטֵה אֶת־יָדְךָ עַל־הַשָּׁמַיִם› (“stretch obj-marker hand-you/your over
+# the-heavens”) — the-LORD speaks a demand — LET: stretch-yadkha-over-the-
+# heavens
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;nete_yadkha_al_ha_shamayim&quot;)
+
+# -------------------------- Exod.9.23 · FIRE_WALKS_TO_EARTH ----------------
+# וַיֵּט מֹשֶׁה אֶת־מַטֵּהוּ עַל־הַשָּׁמַיִם וַיהוָה נָתַן קֹלֹת וּבָרָד
+# וַתִּהֲלַךְ אֵשׁ אָרְצָה וַיַּמְטֵר יְהוָה בָּרָד עַל־אֶרֶץ מִצְרָיִם
+# &quot;[EN-AID] And Moses stretched out his staff toward heaven; and the LORD
+# gave voices and hail, and fire went walking to earth; and the LORD rained
+# hail on the land of Egypt.&quot;
+m.step(&quot;Exod.9.23&quot;)
+# ‹וַיַּמְטֵר יְהוָה בָּרָד עַל־אֶרֶץ מִצְרָיִם› (“and-rain YHWH hail over
+# earth Egypt”) — demand settled (popped from the queue): stretch-yadkha-
+# over-the-heavens
+m.result(&quot;nete_yadkha_al_ha_shamayim&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Exod.9.24 · FIRE_IN_THE_ICE --------------------
+# וַיְהִי בָרָד וְאֵשׁ מִתְלַקַּחַת בְּתוֹךְ הַבָּרָד כָּבֵד מְאֹד אֲשֶׁר
+# לֹא־הָיָה כָמֹהוּ בְּכָל־אֶרֶץ מִצְרַיִם מֵאָז הָיְתָה לְגוֹי
+# &quot;[EN-AID] And there was hail, and fire taking hold of itself within the
+# hail, very heavy, such as had not been in all the land of Egypt since it
+# became a nation.&quot;
+m.step(&quot;Exod.9.24&quot;)
+# ‹וְאֵשׁ מִתְלַקַּחַת בְּתוֹךְ הַבָּרָד› (“and-fire take in-midst the-
+# hail”) — fact holds: and-fire-take-betokh-the-hail
+m.fact(&quot;ve_esh_mitlaqachat_betokh_ha_barad&quot;)
+
+# -------------------------- Exod.9.25 · THE_STRIKE_CENSUS ------------------
+# וַיַּךְ הַבָּרָד בְּכָל־אֶרֶץ מִצְרַיִם אֵת כָּל־אֲשֶׁר בַּשָּׂדֶה מֵאָדָם
+# וְעַד־בְּהֵמָה וְאֵת כָּל־עֵשֶׂב הַשָּׂדֶה הִכָּה הַבָּרָד וְאֶת־כָּל־עֵץ
+# הַשָּׂדֶה שִׁבֵּר
+# &quot;[EN-AID] And the hail struck in all the land of Egypt all that was in the
+# field, from man to beast; and every herb of the field the hail struck, and
+# every tree of the field it shattered.&quot;
+m.step(&quot;Exod.9.25&quot;)
+# ‹וַיַּךְ הַבָּרָד› (“and-strike the-hail”) — fact holds: and-strike-the-
+# hail
+m.fact(&quot;va_yakh_ha_barad&quot;)
+
+# -------------------------- Exod.9.26 · ONLY_GOSHEN ------------------------
+# רַק בְּאֶרֶץ גֹּשֶׁן אֲשֶׁר־שָׁם בְּנֵי יִשְׂרָאֵל לֹא הָיָה בָּרָד
+# &quot;[EN-AID] Only in the land of Goshen, where the sons of Israel were, there
+# was no hail.&quot;
+m.step(&quot;Exod.9.26&quot;)
+# ‹רַק בְּאֶרֶץ גֹּשֶׁן› (“leanness in-earth Goshen”) — fact holds:
+# leanness-in-earth-Goshen
+m.fact(&quot;raq_be_eretz_goshen&quot;)
+
+# -------------------------- Exod.9.27 · I_HAVE_SINNED ----------------------
+# וַיִּשְׁלַח פַּרְעֹה וַיִּקְרָא לְמֹשֶׁה וּלְאַהֲרֹן וַיֹּאמֶר אֲלֵהֶם
+# חָטָאתִי הַפָּעַם יְהוָה הַצַּדִּיק וַאֲנִי וְעַמִּי הָרְשָׁעִים
+# &quot;[EN-AID] And Pharaoh sent and called for Moses and for Aaron, and said to
+# them: I have sinned this time; the LORD is the righteous one, and I and my
+# people are the wicked.&quot;
+m.step(&quot;Exod.9.27&quot;)
+# ‹חָטָאתִי הַפָּעַם יְהוָה הַצַּדִּיק וַאֲנִי וְעַמִּי הָרְשָׁעִים› (“sin
+# the-stroke YHWH the-just and-I and-people-me/my the-wrong”) — fact holds:
+# sin-the-stroke
+m.fact(&quot;chatati_ha_paam&quot;)
+
+# -------------------------- Exod.9.28 · ENTREAT_ENOUGH ---------------------
+# הַעְתִּירוּ אֶל־יְהוָה וְרַב מִהְיֹת קֹלֹת אֱלֹהִים וּבָרָד וַאֲשַׁלְּחָה
+# אֶתְכֶם וְלֹא תֹסִפוּן לַעֲמֹד
+# &quot;[EN-AID] Entreat the LORD — and enough of there being voices of God and
+# hail — and I will send you, and you shall not continue to stand.&quot;
+m.step(&quot;Exod.9.28&quot;)
+# ‹הַעְתִּירוּ אֶל־יְהוָה› (“burn-incense-in-worship to YHWH”) — Pharaoh
+# speaks a demand — LET: burn-incense-in-worship-to-the-LORD-3
+m.declare(&quot;paro&quot;, &quot;LET&quot;,
+          &quot;hatiru_el_YHWH_3&quot;)
+
+# -------------------------- Exod.9.29 · PALMS_SPREAD_THE_PROMISE -----------
+# וַיֹּאמֶר אֵלָיו מֹשֶׁה כְּצֵאתִי אֶת־הָעִיר אֶפְרֹשׂ אֶת־כַּפַּי
+# אֶל־יְהוָה הַקֹּלוֹת יֶחְדָּלוּן וְהַבָּרָד לֹא יִהְיֶה־עוֹד לְמַעַן
+# תֵּדַע כִּי לַיהוָה הָאָרֶץ
+# &quot;[EN-AID] And Moses said to him: As I go out of the city, I will spread
+# out my palms to the LORD; the thunders shall cease, and the hail shall be
+# no more — in order that you may know that the earth is the LORD&#x27;s.&quot;
+m.step(&quot;Exod.9.29&quot;)
+# ‹הַקֹּלוֹת יֶחְדָּלוּן וְהַבָּרָד לֹא יִהְיֶה־עוֹד› (“the-voice/sound
+# cease-ward and-the-hail not be still/again”) — fact holds: the-
+# voice/sound-yechdalun
+m.fact(&quot;ha_qolot_yechdalun&quot;)
+
+# -------------------------- Exod.9.30 · NOT_YET_FEARING --------------------
+# וְאַתָּה וַעֲבָדֶיךָ יָדַעְתִּי כִּי טֶרֶם תִּירְאוּן מִפְּנֵי יְהוָה
+# אֱלֹהִים
+# &quot;[EN-AID] And you and your servants — I know that you do not yet fear
+# before the LORD God.&quot;
+m.step(&quot;Exod.9.30&quot;)
+# ‹יָדַעְתִּי כִּי טֶרֶם תִּירְאוּן› (“know that non-occurrence fear-ward”)
+# — fact holds: non-occurrence-tiraun
+m.fact(&quot;terem_tiraun&quot;)
+
+# -------------------------- Exod.9.31 · FLAX_AND_BARLEY --------------------
+# וְהַפִּשְׁתָּה וְהַשְּׂעֹרָה נֻכָּתָה כִּי הַשְּׂעֹרָה אָבִיב
+# וְהַפִּשְׁתָּה גִּבְעֹל
+# &quot;[EN-AID] And the flax and the barley were struck; for the barley was in
+# the ear, and the flax was in bud.&quot;
+m.step(&quot;Exod.9.31&quot;)
+# ‹וְהַפִּשְׁתָּה וְהַשְּׂעֹרָה נֻכָּתָה› (“and-the-flax and-the-barley
+# strike”) — fact holds: and-the-flax-and-the-barley-strike
+m.fact(&quot;ve_ha_pishta_ve_ha_seora_nukata&quot;)
+
+# -------------------------- Exod.9.32 · WHEAT_AND_SPELT --------------------
+# וְהַחִטָּה וְהַכֻּסֶּמֶת לֹא נֻכּוּ כִּי אֲפִילֹת הֵנָּה
+# &quot;[EN-AID] And the wheat and the spelt were not struck; for they are late.&quot;
+m.step(&quot;Exod.9.32&quot;)
+# ‹כִּי אֲפִילֹת הֵנָּה› (“that unripe themselves”) — fact holds: very-
+# widely-used-as-a-relati-unripe-themselves
+m.fact(&quot;ki_afilot_hena&quot;)
+
+# -------------------------- Exod.9.33 · THE_CEASING ------------------------
+# וַיֵּצֵא מֹשֶׁה מֵעִם פַּרְעֹה אֶת־הָעִיר וַיִּפְרֹשׂ כַּפָּיו אֶל־יְהוָה
+# וַיַּחְדְּלוּ הַקֹּלוֹת וְהַבָּרָד וּמָטָר לֹא־נִתַּךְ אָרְצָה
+# &quot;[EN-AID] And Moses went out of the city from Pharaoh, and spread out his
+# palms to the LORD; and the thunders and the hail ceased, and rain was not
+# poured to earth.&quot;
+m.step(&quot;Exod.9.33&quot;)
+# ‹וַיַּחְדְּלוּ הַקֹּלוֹת וְהַבָּרָד וּמָטָר לֹא־נִתַּךְ אָרְצָה› (“and-
+# cease the-voice/sound and-the-hail and-rain not flow-forth earth-ward”) —
+# demand settled (popped from the queue): burn-incense-in-worship-to-the-
+# LORD-3
+m.result(&quot;hatiru_el_YHWH_3&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Exod.9.34 · SINNING_AGAIN ----------------------
+# וַיַּרְא פַּרְעֹה כִּי־חָדַל הַמָּטָר וְהַבָּרָד וְהַקֹּלֹת וַיֹּסֶף
+# לַחֲטֹא וַיַּכְבֵּד לִבּוֹ הוּא וַעֲבָדָיו
+# &quot;[EN-AID] And Pharaoh saw that the rain and the hail and the thunders had
+# ceased — and he continued to sin, and made his heart heavy, he and his
+# servants.&quot;
+m.step(&quot;Exod.9.34&quot;)
+# ‹וַיֹּסֶף לַחֲטֹא› (“and-add to-sin”) — fact holds: and-add-to-sin
+m.fact(&quot;va_yosef_la_chato&quot;)
+
+# -------------------------- Exod.9.35 · THE_SEAL_BY_MOSES_HAND -------------
+# וַיֶּחֱזַק לֵב פַּרְעֹה וְלֹא שִׁלַּח אֶת־בְּנֵי יִשְׂרָאֵל כַּאֲשֶׁר
+# דִּבֶּר יְהוָה בְּיַד־מֹשֶׁה
+# &quot;[EN-AID] And the heart of Pharaoh was strengthened, and he did not send
+# the sons of Israel, as the LORD had spoken by the hand of Moses.&quot;
+m.step(&quot;Exod.9.35&quot;)
+# ‹כַּאֲשֶׁר דִּבֶּר יְהוָה בְּיַד־מֹשֶׁה› (“like-as/which speak YHWH in-
+# hand Moses”) — fact holds: like-which-speak-the-LORD-in-hand-Moses
+m.fact(&quot;ka_asher_diber_YHWH_be_yad_moshe&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;bo_el_paro_ve_dibarta&#x27;, &#x27;hashkem_ve_hityatzev_2&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 5
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;ve_odkha_machaziq_bam&#x27;, &#x27;yad_YHWH_hoya_be_miqnekha&#x27;, &#x27;ve_hifla_YHWH_ben_miqne&#x27;, &#x27;va_yasem_YHWH_moed&#x27;, &#x27;va_yamat_kol_miqne_mitzrayim&#x27;, &#x27;va_yishlach_paro_ve_hine&#x27;, &#x27;ve_haya_le_avaq&#x27;, &#x27;ve_lo_yakhlu_ha_chartumim_laamod&#x27;, &#x27;va_yechazeq_YHWH_et_lev_paro&#x27;, &#x27;en_kamoni_be_khol_ha_aretz&#x27;, &#x27;ki_ata_shalachti_et_yadi&#x27;, &#x27;heemadtikha_baavur_harotkha&#x27;, &#x27;odkha_mistolel_be_ami&#x27;, &#x27;hineni_mamtir_kaet_machar&#x27;, &#x27;ve_ata_shelach_haez&#x27;, &#x27;ha_yare_et_devar_YHWH&#x27;, &#x27;va_asher_lo_sam_libo&#x27;, &#x27;ve_esh_mitlaqachat_betokh_ha_barad&#x27;, &#x27;va_yakh_ha_barad&#x27;, &#x27;raq_be_eretz_goshen&#x27;, &#x27;chatati_ha_paam&#x27;, &#x27;ha_qolot_yechdalun&#x27;, &#x27;terem_tiraun&#x27;, &#x27;ve_ha_pishta_ve_ha_seora_nukata&#x27;, &#x27;ki_afilot_hena&#x27;, &#x27;va_yosef_la_chato&#x27;, &#x27;ka_asher_diber_YHWH_be_yad_moshe&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 8
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

@@ -63,6 +63,10 @@ ALLOW = {
     ("gen_33_shaddai_covenant_flesh.py", "silver-bi-khlal"),
     ("gen_34_mamre_laugh_plea.py", "relati-khavdah-very"),
     ("gen_38_moriah_binding_oath.py", "inherit-gate-oyvav"),
+    # CSS property/value tokens in the scroll reader's stylesheet that the
+    # transliteration heuristic misreads as Hebrew compounds
+    ("index.html", "webkit-text-size-adjust"),
+    ("index.html", "inline-block"),
 }
 
 

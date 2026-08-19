@@ -1,0 +1,757 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_22_covenant_bow — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_22_covenant_bow?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The covenant and the bow: My bow I have set in the cloud (9:8-17) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_22_covenant_bow</b> · Genesis 9:8-17 · derive logic_derived_v1 · phase C-22</div>
+<div class="meta"><a href="../#Gen/9/8">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">אֶת־קַשְׁתִּי נָתַתִּי בֶּעָנָן — וְזָכַרְתִּי אֶת־בְּרִיתִי</span> · <i>et-qashti natati be-anan — ve-zakharti et-briti</i> · &#x27;My bow I have set in the cloud&#x27; — &#x27;and I will remember My covenant&#x27;</p>
+<div class="note">Derived 2026-08-03 by the persistent derivation agent (freeze-after-review by the main loop — no agent freeze); fourth unit under the PIPELINE + DEBUT-MAP process and the agent&#x27;s fifth and final unit before planned succession. REVIEW PASSED and FROZEN 2026-08-03 by the main loop: precedent quotes verified verbatim against the frozen units; twelve censuses independently re-run (covenant-saturation, negated cut-debut, bow/cloud/sign careers, remember 2-3, the bein x12 / brit x7 repetition counts, zero imperatives, Elohim-only speaker); glossing airtight; nothing invented. Precedents pulled verbatim before drafting: gen_16&#x27;s 6:18 (the covenant-promise held as FACT — nothing pushed there, nothing pops here: the 6:18-to-9:9 arc is prose, the Stage E linker&#x27;s covenant test case), gen_04&#x27;s 1:14 sign-clause and gen_12&#x27;s 4:15 mark (both fact-class — ASSIGN and INSTALL weighed and declined for the bow), gen_20&#x27;s INVARIANT pledges (the public never-again pair), gen_12/gen_21&#x27;s HANDLER (the letter&#x27;s own when-then chain carries the memory-duty), gen_17&#x27;s imminence-participle-as-fact (the aspect-ladder&#x27;s first rung). Calibrated coverage (charter 4.1): Onkelos read Tier-A at derive time (10 sequential fetches, Data/FETCHLOG.md — the buffer seats the MEMRA in God&#x27;s place five times, keeps the covenant&#x27;s self-pledged remembering ACTIVE against its own 8:1 precedent, loses the cut-play and the decree-echo, keeps &#x27;MY bow&#x27;); trees from the DB&#x27;s stored tree_json. EIGHTEENTH PROSPECTIVE MIDDOT RUN (logic/middot_scan/WATCHLIST_gen22_prospective_2026-08-03.md): cache holds ZERO sources for Gen 9:8-17 — sixteenth tripwire in a row. INTERPRETER: ZERO extensions — thirteenth extension-free derivation candidate in a row.</div>
+<div class="note">Logic-derived v1: v3 ta&#x27;amim trees (from DB tree_json) -&gt; leaf role frames from OSHB morph -&gt; operator lines citing TIR rules -&gt; machine-state scenarios. Machine tokens apostrophe-free and underscore-joined (hinni_mekim_et_briti_itkhem, ve_lo_yikkaret_kol_basar_od).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (retro, oral-first era; manifest logic/oral_audit/manifests/gen_22_covenant_bow_claims.json — 7 VERIFIED, 0 FAILED, 0 UNCHECKABLE; record logic/oral_audit/AUDIT_gen_22_2026-08-08.md). CROWNS (chain-attested, DB-verified): (1) G22-04 the deficient generations: לדרת עולם (&quot;for everlasting GENERATIONS,&quot; 9:12) — doubly defective, and the chain reads the missing letters twice over: R. Yudan (Bereshit Rabbah 35) — the defective spelling EXCLUDES the generations that needed no bow (Hezekiah&#x27;s; the Great Assembly&#x27;s; some add R. Shimon bar Yochai&#x27;s); Rabbeinu Bachya — &quot;לדרת defective, and immediately beside it את קשתי (&#x27;My bow&#x27;): the sign appears only in the deficient generations.&quot; SNAPSHOT: the bare stem locked. (2) G22-02/07 the covenant verb bare at both ends: והקמתי (&quot;I will establish,&quot; 9:11) and הקמתי (&quot;I have established,&quot; 9:17) both doubly defective per the precise books (one old book and the Yerushalmi read plene; the Ramah and Hilleli rule defective) — the frame opens and seals on the same bare spelling. (3) G22-01 בבהמה (&quot;among the livestock,&quot; 9:10) — both bets dotted with dagesh (doubling dot). (4) G22-03 אשר אני (&quot;which I am giving,&quot; 9:12) joined by maqqef (joining hyphen) as ruled; the note&#x27;s other halves — no galgal, no paseq (the separator bar) — stay uninstrumented. (5) G22-05 בענני (&quot;when I cloud a cloud,&quot; 9:14) — first nun with sheva alone: the Sepharad/Hilleli camp against the Zanvuki copy&#x27;s sheva-patach; Radak&#x27;s &quot;lightened against custom&quot; named. (6) G22-06 zaqef qatan (&quot;small upright&quot; pause) on the Name in the between-clause (9:16). DISCREPANCIES: none. INHERITANCE EDGES: none in span (checked absence; Isaiah 54:9&#x27;s waters-of-Noah verse does not anchor here in the link index). READINGS: R. Yudan&#x27;s and Bachya&#x27;s readings ride inside G22-04 with their sources.</div>
+<div class="meta">confidence: structure tested; operator readings tested-per-TIR; intent hypothesis</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>The covenant and the bow (9:8-17): the triple-framed covenant-speech — 9:18 opens the sons-and-vineyard narrative (the next unit&#x27;s seam). Inside: the frame opens (9:8), the aspect-ladder&#x27;s first rung and the all-flesh partner-list (9:9-10), the ladder&#x27;s second rung with the public never-again pair (9:11), the frame re-opens on the sign (9:12), the bow set in the cloud (9:13), the weather-wired memory-handler (9:14-15), the everlasting remembering (9:16), and the frame seals on the perfect (9:17). The unit ends with the machine&#x27;s registers at rest and three standing structures: two invariants and a handler no event can retire.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Hebrew source + trees</td><td>All 10 verses from DB tree_json (rule set v3, unique, pure binary; ascii rendered 2026-08-03). Tree facts: 9:8 [an eight-word frame verse, NO etnachta: God spoke to Noach and his sons]; 9:9 [behold, I AM ESTABLISHING — with you (etnachta) | and with your seed after you]; 9:10 [every living soul with you (etnachta on the second with-you) | from all that went OUT of the ark]; 9:11 [I WILL establish — no more cutting-off from the deluge&#x27;s waters (etnachta on the deluge) | and no more deluge to destroy the earth]; 9:12 [this is the sign I AM GIVING, between Me and you and every living soul (etnachta) | for everlasting generations]; 9:13 [MY BOW I HAVE SET IN THE CLOUD (etnachta on the cloud) | and it shall be a covenant-sign between Me and the earth]; 9:14 [when I cloud up a cloud over the earth (etnachta) | the bow is seen in the cloud — and the sentence runs on ACROSS the verse-break]; 9:15 [THEN I remember My covenant... every living soul in all flesh (etnachta) | and the waters shall never again become a deluge]; 9:16 [the bow in the cloud (etnachta) | and I will SEE it, to REMEMBER the everlasting covenant — between ELOHIM, third person, and every living soul]; 9:17 [the seal: to Noach (etnachta) | THIS is the sign of the covenant I HAVE ESTABLISHED].</td><td>tested</td></tr>
+<tr><td><b>C</b></td><td>Segment structure</td><td>Verb morphology (#IMPOSED OSHB, DB-verified 2026-08-03); survey complete via the debut map (31 flagged lemmas), careers and precedents pulled before drafting. BRIT (&#x27;covenant&#x27;) — tokens 2-8 of the word&#x27;s first eight Torah tokens ALL in-span (token 1 = 6:18; tokens 9-10 = Abram&#x27;s allies, the pieces-covenant): x7 in ten verses. The ESTABLISH-verb (QUM hiphil) climbs an ASPECT-LADDER: 9:9 MEKIM (participle — &#x27;I AM establishing&#x27;; the imminence-participle class, TIR-031, gen_17&#x27;s anokhi-mamtir precedent), 9:11 VA-HAKIMOTI (weqatal — 6:18&#x27;s EXACT form re-sounded; TIR-029, gen_16&#x27;s own class), 9:17 HAKIMOTI (perfect — &#x27;I HAVE established&#x27;): no narrative and-then form anywhere — the establishment lives entirely in speech-grammar [letter fact]; and QUM token 1 = 4:8, Cain RISING against his brother: the verb&#x27;s career runs from the murder&#x27;s rise to the covenant&#x27;s raising. A SECOND aspect-pair rides the give-verb: 9:12 ANI NOTEN (participle) -&gt; 9:13 NATATI (perfect — gen_21&#x27;s performative class). 9:11 KARAT (&#x27;cut&#x27;) — TORAH TOKEN 1, NEGATED [crown]: VE-LO YIKKARET (&#x27;all flesh shall not be CUT OFF&#x27;) — the verb that will seal every covenant (likhrot brit from 15:18 on) is born refusing a cutting-off, inside a covenant ESTABLISHED, not cut; and the decree&#x27;s own destroy-verb quoted in the negation: LE-SHACHET — SHACHAT tokens 6-7 after the 6:11-6:17 corruption cluster: the flood&#x27;s verb survives only inside never-again; MABUL tokens 6-8 — its last divine-speech tokens (9-12 are narrator memory-lines). 9:12-17 OT (&#x27;sign&#x27;) tokens 3-5 — token 1 = 1:14&#x27;s calendar-signs (gen_04: the weqatal job-list), token 2 = 4:15&#x27;s Cain-mark (gen_12: a HOLDS fact), token 6 = 17:11&#x27;s circumcision: the sign-word&#x27;s early life is all marks-that-mean. 9:13 QESHET (&#x27;bow&#x27;) tokens 1-3 of 7 in-span — every later Torah token is WEAPONRY (Hagar&#x27;s bowshot, Esau&#x27;s hunting bow, Jacob&#x27;s sword-and-bow, the archer&#x27;s bow): the only non-weapon bows in the Torah hang in this cloud. ANAN (&#x27;cloud&#x27;) tokens 1-4 of 51 — tokens 5+ are THE PILLAR OF CLOUD and Sinai: the sign&#x27;s canvas becomes the Presence&#x27;s vehicle [the cloud-VERB be-anni shares a lemma with the soothsayer-word me&#x27;onen — lemma-share only, no claim]. 9:14-15 the WHEN-THEN chain: VE-HAYAH BE-ANNI ANAN... VE-NIREATAH HA-QESHET... VE-ZAKHARTI (&#x27;and it shall be, WHEN I cloud up a cloud... AND the bow is seen... THEN I will REMEMBER&#x27;) — the letter&#x27;s own conditional grammar, running ACROSS the verse-break [tree fact]; ZAKHAR (&#x27;remember&#x27;) tokens 2-3 — FROZEN gen_19&#x27;s logged career prediction (&#x27;the rainbow covenant 9:15-16&#x27;) LANDS; 9:16 U-REITIHA LI-ZEKOR BRIT OLAM (&#x27;and I will SEE it, to REMEMBER the everlasting covenant&#x27;) — the week&#x27;s inspection verb aimed at His own sign, and the parties named in the THIRD PERSON inside His own speech (&#x27;between ELOHIM and every living soul&#x27;) [letter fact, held]. The repetition-table is the letter&#x27;s own structure: BRIT x7, BEIN (&#x27;between&#x27;) x12, CHAYAH x6, BASAR x5, NEFESH x4, OT x3, QUM x3, MABUL x3, OD x3, OLAM x2, under a TRIPLE VA-YOMER ELOHIM frame (9:8, 9:12, 9:17). Speaker ELOHIM only (x4; zero YHWH; zero imperatives — verified). Frame details: HINNI token 4 — token 3 was 6:13&#x27;s ve-hinni announcing the flood: the same behold-I announces the covenant; DOR token 3 (le-dorot olam) after 6:9/7:1&#x27;s Noach-generations; OLAM tokens 4-5 after Eden&#x27;s live-forever, the 120, the men of old; ZARAKHEM (&#x27;your SEED&#x27;) carries the 3:15 thread into covenant; the partners include the ANIMALS — kol nefesh chayah x4, with 9:10&#x27;s roster &#x27;from all that went OUT of the ark&#x27; (the ark&#x27;s one token: read, flagged). NO date in span.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Predicates &amp; outcomes</td><td>The unit is the flood-story&#x27;s counter-decree in full dress: what 8:21 said to His own heart is here said to faces, widened to every living soul, tied to a visible object, and wired to a mechanism — when the weather that once killed returns, the retired weapon appears, and God reads His own sign and remembers. The letter builds it as ring (three speech-acts) and ladder (doing -&gt; done, twice), keeps the animals inside the treaty, and spends its two sharpest surprises on grammar: the covenant-cutting verb born refusing a cutting-off, and God speaking of Himself in the third person at the pledge&#x27;s deepest point. The machine ends at rest with three standing structures no event can retire — and its emptiness elsewhere (no demand, no test, no clock) is the letter&#x27;s own shape.</td><td>tested</td></tr>
+<tr><td><b>E</b></td><td>Logic format choice</td><td>Operator lines; NO ledger row. EVENTS: exactly three — the letter&#x27;s own frame (speak x3: 9:8, 9:12, 9:17; wayyiqtol- class and-then forms, the span&#x27;s only narrative verbs). THE ASPECT-LADDER AS FACTS in three grammars [decision recorded, precedents quoted]: 9:9 participle -&gt; PRECONDITION_STATE with TIR-031 (gen_17&#x27;s anokhi-mamtir class); 9:11 weqatal -&gt; PRECONDITION_STATE with TIR-029 (gen_16&#x27;s OWN encoding of the same verb at 6:18: &#x27;HOLDS(va_hakimoti_et_briti_itakh, t1)&#x27; — quoted); 9:17 perfect -&gt; PRECONDITION_STATE (completion). STANDALONE DISCIPLINE: gen_16 held 6:18 as a FACT — nothing was pushed, nothing pops here; the 6:18-to-9:9 arc is prose + [OPEN] (the Stage E linker&#x27;s covenant test case). The NEVER-AGAIN PAIR as INVARIANT x2 (gen_20&#x27;s class — the interior pledges&#x27; PUBLIC edition; delta named: 8:21 el-libo, 9:11 to Noach and sons); 9:15&#x27;s re-sounding held as FACT (the pledge inside the mechanism). THE MEMORY-DUTY as HANDLER (gen_12&#x27;s class: &#x27;HANDLER IF(horeg(kayin)) THEN(shivatayim_yukam)&#x27; — quoted): the letter&#x27;s when-then weqatal chain decides for HANDLER over INVARIANT — IF(I cloud up AND the bow is seen) THEN(I remember) [decision recorded; the chain crosses the 9:14/9:15 break — the HANDLER sits on the IF-verse, the THEN-verse holds the facts]. THE BOW-SIGN AS FACTS ONLY [decisions recorded]: ASSIGN declined (gen_12&#x27;s mark was a HOLDS fact — &#x27;HOLDS(ot_le_kayin_levilti_hakot(kayin), t2)&#x27; — quoted; gen_04&#x27;s sign-clause was job-list content; no office-binding syntax here); INSTALL declined (the install precedents — city, ark, altar — are BUILDS with build-verbs; the bow is GIVEN, &#x27;My bow&#x27;, a possession stationed: the mark&#x27;s va-yasem class); NATATI as performative-perfect fact (gen_21&#x27;s class). NO TEST, NO SPECS traffic (zero imperatives), t0 EMPTY. NOTE_PRESUPPOSED: noach, banav, tevah. Interpreter extensions: NONE.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Bilingual logic objects</td><td>Every operator line carries he + he_translit + en. Machine tokens apostrophe-free: hinni_mekim_et_briti_itkhem, va_hakimoti_et_briti_itkhem, ve_lo_yikkaret_kol_basar_od_mi_mei_ha_mabul, ve_lo_yihyeh_od_mabul_le_shachet_ha_aretz, et_qashti_natati_be_anan, be_anni_anan_ve_nireatah_ha_qeshet, ve_zakharti_et_briti, zot_ot_ha_brit_asher_hakimoti.</td><td>established</td></tr>
+<tr><td><b>G</b></td><td>Oral (named only) + Tier-A translation check</td><td>Named but NOT read (cache: zero for Gen 9:8-17 — sixteenth tripwire; gen_22 Tier-A queue): Bavli Berakhot 59a (the blessing on seeing the bow — liturgy from 9:16&#x27;s seeing); Bavli Chagigah 16a and Ketubot 77b (gazing at the bow; the generations that needed none); Bereshit Rabbah 35 (the span; the defective le-dorot spelling; the exempt generations); Rashi at 9:12, 9:14, 9:16. Tier-A Onkelos (10 fetches, FETCHLOG 2026-08-03): THE MEMRA TAKES GOD&#x27;S SEAT x5 — &#x27;between ME&#x27; -&gt; &#x27;between MY WORD&#x27; (9:12, 9:13, 9:15, 9:17) and 9:16&#x27;s third-person &#x27;between ELOHIM&#x27; -&gt; &#x27;between the WORD of the LORD&#x27;: the covenant&#x27;s divine party systematically replaced (flagged; the machine&#x27;s parties stand on the letter). AGAINST its own 8:1 precedent, the buffer keeps the covenant&#x27;s self-pledged remembering ACTIVE (u-dekhirna, &#x27;I will remember&#x27;; ve-echazinnah, &#x27;I will see it&#x27; — first person kept): narration about God softened, God&#x27;s own promises kept in His mouth (class-contrast noted). The cut-play lost (yikkaret -&gt; &#x27;be destroyed&#x27;, no cut-cognate) and the decree-echo lost (le-shachet -&gt; &#x27;to ruin&#x27;). The aspect-ladder SURVIVES in Aramaic grammar (participle -&gt; future -&gt; perfect); the give-pair survives; &#x27;MY bow&#x27; KEPT (kashti — no dodge); brit -&gt; KEYAM (as at gen_16&#x27;s 6:18); mabul -&gt; tofana; Elohim -&gt; YY at all three frames (the leveling&#x27;s fifth running span); the triple frame intact.</td><td>tested</td></tr>
+<tr><td><b>H</b></td><td>Scenarios</td><td>S1 the frame opens: three read-flags, queue empty. S2 the ladder&#x27;s first rung holds (participle-fact). S3 the second rung + BOTH public invariants active. S4 the bow-facts hold (set + sign-office). S5 the handler installed (the when-then chain on the books). S6 the remember-facts hold (gen_19&#x27;s prediction landed). S7 the seal: the perfect-rung fact holds, queue still empty end to end. S8_negative: LET? contract guard; S9_negative: flag-never-block.</td><td>tested</td></tr>
+<tr><td><b>I</b></td><td>English leakage review</td><td>Operators derive from morph codes (the three wayyiqtol- class frames; participle/weqatal/perfect ladder mapping; the when-then weqatal chain; zero imperatives verified) and the complete debut-map survey plus precedent pulls run BEFORE drafting (brit / qum / karat / qeshet / anan / ot / zakhar / shachat / mabul / dor / olam / hinni careers; the repetition table; the 6:18, 8:21, 1:14, 4:15 compares; the speaker and date zero-scans). NOT supplied: why the sign is a weapon, the le-dorot spelling teachings, the bow-blessing liturgy, the third-person turn&#x27;s meaning, or any cross-wall receipt of 6:18 — every one [OPEN] or named-only; the Memra substitutions stay dual-track.</td><td>established</td></tr>
+<tr><td><b>J</b></td><td>Pre-flight + freeze-after-review (agent derivation)</td><td>Pre-flight 2026-08-03 against the UNMODIFIED repo interpreter — zero injected prototypes; GREEN (10/10 steps, 9/9 scenarios, 17/17 clause checks). The agent delivered status DRAFT; the MAIN LOOP verified every precedent quote and twelve censuses independently, and froze on a passing review — freeze-after-review #5. Changes henceforth require an amend order, not silent edits.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_9_8 · Gen.9.8 · <span class='expr'>THE_TRIPLE_FRAME_OPENS</span></h3>
+<p><span class="he">וַיֹּאמֶר אֱלֹהִים אֶל־נֹחַ וְאֶל־בָּנָיו אִתּוֹ לֵאמֹר</span> · <i>va-yomer Elohim el-Noach ve-el-banav ito lemor</i> · [EN-AID/JPS] And God spoke unto Noah, and to his sons with him, saying:</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר אלהים</span> · <i>va-yomer Elohim</i> · and God said (top split — an eight-word frame verse, no etnachta)</div><div class="arm"><b>RIGHT</b><br><span class="he">אל נח ואל בניו אתו לאמר</span> · <i>el-Noach ve-el-banav ito lemor</i> · to Noach and to his sons with him, saying</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">speak(e1) ∧ Agent(e1, elohim) ∧ Theme(e1, el_noach_ve_el_banav)</span><br><span class="gloss">= speak(e1) ∧ Agent(e1, God) ∧ Theme(e1, to-Noach-and-to-banav)</span><br>FRAME ONE of three: the covenant comes in a TRIPLE va-yomer frame (9:8 opens, 9:12 re-opens, 9:17 seals — one covenant, three speech-acts; the frames are the span&#x27;s ONLY narrative verbs). The addressees are plural — Noach AND his sons: the covenant&#x27;s human party is a family [letter fact]. Speaker ELOHIM (the fifth Elohim-toned span since 8:1; zero YHWH tokens — verified) [Onkelos levels to the LORD-name at all three frames — dual-track].
+</td><td><span class="he">וַיֹּאמֶר אֱלֹהִים אֶל־נֹחַ וְאֶל־בָּנָיו אִתּוֹ</span> · <i>va-yomer Elohim el-Noach ve-el-banav ito</i><br><span class="gloss">= He-said God to-Noach and-to-banav with-him</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>NOTE_PRESUPPOSED</td><td><span class="expr">noach, banav, tevah are READ without prior install (the family, and the ark read once at 9:10s roster)</span><br><span class="gloss">= Noach, banav, ark are READ without prior install (the family, and the ark read once at 9:10s roster)</span><br>flag, not fix</td><td>—</td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The frame is the plot: what happens in this span is that God says, says again, and says it is done.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_9_9 · Gen.9.9 · <span class='expr'>I_AM_ESTABLISHING</span></h3>
+<p><span class="he">וַאֲנִי הִנְנִי מֵקִים אֶת־בְּרִיתִי אִתְּכֶם וְאֶת־זַרְעֲכֶם אַחֲרֵיכֶם</span> · <i>va-ani hinni mekim et-briti itkhem ve-et-zarakhem achareikhem</i> · [EN-AID/JPS] &#x27;As for Me, behold, I establish My covenant with you, and with your seed after you;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ואני הנני מקים את בריתי אתכם</span> · <i>va-ani hinni mekim et-briti itkhem</i> · behold, I AM ESTABLISHING My covenant with you (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ואת זרעכם אחריכם</span> · <i>ve-et-zarakhem achareikhem</i> · and with your seed after you</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hinni_mekim_et_briti_itkhem, t1)</span><br><span class="gloss">= HOLDS(hinni-mekim-obj-marker·et-My-covenant-itkhem, t1)</span><br>THE ASPECT-LADDER&#x27;S FIRST RUNG: HINNI MEKIM — &#x27;behold, I AM ESTABLISHING&#x27; (participle: the present act; the imminence-participle class, TIR-031 — gen_17&#x27;s anokhi-mamtir precedent holds it as FACT). HINNI (&#x27;behold, I&#x27;) token 4 — token 3 was 6:13&#x27;s ve-hinni announcing the flood: the same behold-I now announces the covenant [letter fact]. BRIT token 2 — tokens 2-8 of the word&#x27;s first eight all in this span (token 1 = 6:18&#x27;s promise, held by frozen gen_16 as FACT: nothing pushed there, nothing pops here — the 6:18-to-9:9 arc is prose until Stage E [OPEN — cross-unit]). QUM&#x27;s token 1 is 4:8 — Cain RISING against his brother: the establish-verb&#x27;s career runs murder to covenant. ZARAKHEM (&#x27;your SEED&#x27;) — 3:15&#x27;s word made a covenant party.
+</td><td><span class="he">הִנְנִי מֵקִים אֶת־בְּרִיתִי אִתְּכֶם וְאֶת־זַרְעֲכֶם</span> · <i>hinni mekim et-briti itkhem ve-et-zarakhem</i><br><span class="gloss">= hinni mekim obj-marker·et-My-covenant itkhem and-obj-marker·et-zarakhem</span></td><td class='cite'>TIR-031</td><td>tested</td></tr>
+</table>
+<div class="meta">The verb that once rose to kill now rises to promise — in the present tense, to faces.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_9_10 · Gen.9.10 · <span class='expr'>EVERY_LIVING_SOUL_A_PARTY</span></h3>
+<p><span class="he">וְאֵת כָּל־נֶפֶשׁ הַחַיָּה אֲשֶׁר אִתְּכֶם בָּעוֹף בַּבְּהֵמָה וּבְכָל־חַיַּת הָאָרֶץ אִתְּכֶם מִכֹּל יֹצְאֵי הַתֵּבָה לְכֹל חַיַּת הָאָרֶץ</span> · <i>ve-et kol-nefesh ha-chayah asher itkhem ba-of ba-behemah u-ve-khol-chayat ha-aretz itkhem mi-kol yotzei ha-tevah le-khol chayat ha-aretz</i> · [EN-AID/JPS] and with every living creature that is with you, the fowl, the cattle, and every beast of the earth with you; of all that go out of the ark, even every beast of the earth.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ואת כל נפש החיה אשר אתכם בעוף בבהמה ובכל חית הארץ אתכם</span> · <i>ve-et kol-nefesh ha-chayah asher itkhem ba-of ba-behemah u-ve-khol-chayat ha-aretz itkhem</i> · and with every living soul with you — bird, cattle, beast (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">מכל יצאי התבה לכל חית הארץ</span> · <i>mi-kol yotzei ha-tevah le-khol chayat ha-aretz</i> · from all that went OUT of the ark, to every beast of the earth</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_et_kol_nefesh_ha_chayah_asher_itkhem, t1)</span><br><span class="gloss">= HOLDS(and-obj-marker·et-all-soul-of-the-beast-which-itkhem, t1)</span><br>The partner-list: EVERY LIVING SOUL — bird, cattle, beast — &#x27;from all that WENT OUT of the ark&#x27;: the covenant&#x27;s parties include the ANIMALS (kol nefesh chayah — x4 across the span; the exit-roster of 8:19 becomes a treaty roster). The ark is read once here (yotzei ha-tevah — flagged presupposed) [letter facts].
+</td><td><span class="he">וְאֵת כָּל־נֶפֶשׁ הַחַיָּה אֲשֶׁר אִתְּכֶם … מִכֹּל יֹצְאֵי הַתֵּבָה</span> · <i>ve-et kol-nefesh ha-chayah asher itkhem … mi-kol yotzei ha-tevah</i><br><span class="gloss">= obj-marker·et all-soul-of beast which itkhem all yotzei ark</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The treaty&#x27;s signature page lists every heartbeat that walked down the ramp.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_9_11 · Gen.9.11 · <span class='expr'>THE_CUT_VERB_BORN_REFUSING</span></h3>
+<p><span class="he">וַהֲקִמֹתִי אֶת־בְּרִיתִי אִתְּכֶם וְלֹא־יִכָּרֵת כָּל־בָּשָׂר עוֹד מִמֵּי הַמַּבּוּל וְלֹא־יִהְיֶה עוֹד מַבּוּל לְשַׁחֵת הָאָרֶץ</span> · <i>va-hakimoti et-briti itkhem ve-lo-yikkaret kol-basar od mi-mei ha-mabul ve-lo-yihyeh od mabul le-shachet ha-aretz</i> · [EN-AID/JPS] And I will establish My covenant with you; neither shall all flesh be cut off any more by the waters of the flood; neither shall there any more be a flood to destroy the earth.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">והקמתי את בריתי אתכם ולא יכרת כל בשר עוד ממי המבול</span> · <i>va-hakimoti et-briti itkhem ve-lo-yikkaret kol-basar od mi-mei ha-mabul</i> · I WILL establish — no more cutting-off by the deluge&#x27;s waters (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ולא יהיה עוד מבול לשחת הארץ</span> · <i>ve-lo-yihyeh od mabul le-shachet ha-aretz</i> · and never again a deluge to destroy the earth</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_hakimoti_et_briti_itkhem, t1)</span><br><span class="gloss">= HOLDS(and-I-will-establish-obj-marker·et-My-covenant-itkhem, t1)</span><br>THE LADDER&#x27;S SECOND RUNG: VA-HAKIMOTI — 6:18&#x27;s EXACT FORM re-sounded (weqatal, TIR-029), now plural (itkhem, &#x27;with YOU ALL&#x27; — 6:18&#x27;s itakh was singular): frozen gen_16 encoded the same verb-form as &#x27;HOLDS(va_hakimoti_et_briti_itakh, t1)&#x27; — the class matched, the promise now spoken past the flood it preceded [near-verbatim + named delta: singular -&gt; plural].
+</td><td><span class="he">וַהֲקִמֹתִי אֶת־בְּרִיתִי אִתְּכֶם</span> · <i>va-hakimoti et-briti itkhem</i><br><span class="gloss">= I-will-establish obj-marker·et-My-covenant itkhem</span></td><td class='cite'>TIR-029</td><td>tested</td></tr>
+<tr class="opline"><td>INVARIANT</td><td><span class="expr">INVARIANT(ve_lo_yikkaret_kol_basar_od_mi_mei_ha_mabul) during t1</span><br><span class="gloss">= INVARIANT(and-not-yikkaret-all-flesh-still/again-from-waters-of-the-deluge) during t1</span><br>NEVER-AGAIN, PUBLIC EDITION #1 — and a crown-class debut inside it: KARAT (&#x27;cut&#x27;) — TORAH TOKEN 1, NEGATED: the verb that will seal every covenant (likhrot brit, &#x27;to CUT a covenant&#x27;, from 15:18 on) is born refusing a cutting-off, inside a covenant that is ESTABLISHED, not cut [letter fact; Onkelos renders &#x27;be destroyed&#x27; — the cut-play does not survive; dual-track]. The INVARIANT class per gen_20 — 8:21&#x27;s pair was said to His heart; this one to Noach and his sons: the interior pledge made public [delta named].
+</td><td><span class="he">וְלֹא־יִכָּרֵת כָּל־בָּשָׂר עוֹד מִמֵּי הַמַּבּוּל</span> · <i>ve-lo-yikkaret kol-basar od mi-mei ha-mabul</i><br><span class="gloss">= and-not-yikkaret all-flesh still/again waters-of deluge</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>INVARIANT</td><td><span class="expr">INVARIANT(ve_lo_yihyeh_od_mabul_le_shachet_ha_aretz) during t1</span><br><span class="gloss">= INVARIANT(and-not-yihyeh-still/again-deluge-to-destroy-the-earth) during t1</span><br>NEVER-AGAIN #2: no deluge again, EVER — with the decree&#x27;s own destroy-verb quoted inside the negation: LE-SHACHET — SHACHAT tokens 6-7 (after the 6:11-6:17 corruption/destroy cluster): the flood&#x27;s verb survives only inside never-again. MABUL tokens 6-8 in-span — the deluge-word&#x27;s LAST divine-speech tokens (its remaining four are narrator memory-lines).
+</td><td><span class="he">וְלֹא־יִהְיֶה עוֹד מַבּוּל לְשַׁחֵת הָאָרֶץ</span> · <i>ve-lo-yihyeh od mabul le-shachet ha-aretz</i><br><span class="gloss">= and-not-yihyeh still/again deluge destroy earth</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The covenant&#x27;s first clause is a grammar joke with teeth: the cutting verb, uncut; the flooding word, retired.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_9_12 · Gen.9.12 · <span class='expr'>THE_FRAME_REOPENS_ON_THE_SIGN</span></h3>
+<p><span class="he">וַיֹּאמֶר אֱלֹהִים זֹאת אוֹת־הַבְּרִית אֲשֶׁר־אֲנִי נֹתֵן בֵּינִי וּבֵינֵיכֶם וּבֵין כָּל־נֶפֶשׁ חַיָּה אֲשֶׁר אִתְּכֶם לְדֹרֹת עוֹלָם</span> · <i>va-yomer Elohim zot ot-ha-brit asher-ani noten beini u-veineikhem u-vein kol-nefesh chayah asher itkhem le-dorot olam</i> · [EN-AID/JPS] And God said: &#x27;This is the token of the covenant which I make between Me and you and every living creature that is with you, for perpetual generations:</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר אלהים זאת אות הברית אשר אני נתן ביני וביניכם ובין כל נפש חיה אשר אתכם</span> · <i>va-yomer Elohim zot ot-ha-brit asher-ani noten beini u-veineikhem u-vein kol-nefesh chayah asher itkhem</i> · frame two: THIS is the covenant-sign I AM GIVING, between Me and you and every living soul (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">לדרת עולם</span> · <i>le-dorot olam</i> · for everlasting generations</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">speak(e2) ∧ Agent(e2, elohim) ∧ Theme(e2, zot_ot_ha_brit)</span><br><span class="gloss">= speak(e2) ∧ Agent(e2, God) ∧ Theme(e2, this-sign-of-the-brit)</span><br>FRAME TWO: the speech re-opens to name the SIGN. OT (&#x27;sign&#x27;) token 3 — token 1 = 1:14&#x27;s calendar-signs, token 2 = 4:15&#x27;s Cain-mark, token 6 = 17:11&#x27;s circumcision: the sign-word&#x27;s early career is all marks-that-mean [letter fact].
+</td><td><span class="he">וַיֹּאמֶר אֱלֹהִים זֹאת אוֹת־הַבְּרִית</span> · <i>va-yomer Elohim zot ot-ha-brit</i><br><span class="gloss">= He-said God this sign-of-the-brit</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ani_noten_beini_u_veineikhem_le_dorot_olam, t1)</span><br><span class="gloss">= HOLDS(I-giving-beini-and-veineikhem-to-generations-of-everlasting, t1)</span><br>The give-verb&#x27;s OWN ladder begins: ANI NOTEN — &#x27;I AM GIVING&#x27; (participle; the perfect follows at 9:13). The span&#x27;s between-word begins its dozen: BEIN x12 in ten verses — the covenant is drawn as a web of betweens. LE-DOROT OLAM (&#x27;for everlasting generations&#x27;) — DOR token 3 after 6:9/7:1&#x27;s Noach-generations; OLAM tokens 4-5 after Eden&#x27;s live-forever, the 120-year limit, the men of old [the chain&#x27;s defective-spelling teaching on le-dorot is named-only].
+</td><td><span class="he">אֲשֶׁר־אֲנִי נֹתֵן בֵּינִי וּבֵינֵיכֶם … לְדֹרֹת עוֹלָם</span> · <i>asher-ani noten beini u-veineikhem … le-dorot olam</i><br><span class="gloss">= which-I giving beini and-veineikhem generations-of everlasting</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The second saying gives the covenant a face it can be recognized by, for as long as generations run.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_9_13 · Gen.9.13 · <span class='expr'>MY_BOW_IN_THE_CLOUD</span></h3>
+<p><span class="he">אֶת־קַשְׁתִּי נָתַתִּי בֶּעָנָן וְהָיְתָה לְאוֹת בְּרִית בֵּינִי וּבֵין הָאָרֶץ</span> · <i>et-qashti natati be-anan ve-haytah le-ot brit beini u-vein ha-aretz</i> · [EN-AID/JPS] I have set My bow in the cloud, and it shall be for a token of a covenant between Me and the earth.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">את קשתי נתתי בענן</span> · <i>et-qashti natati be-anan</i> · MY BOW I have set in the cloud (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">והיתה לאות ברית ביני ובין הארץ</span> · <i>ve-haytah le-ot brit beini u-vein ha-aretz</i> · and it shall be a covenant-sign between Me and the earth</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(et_qashti_natati_be_anan, t1) ∧ HOLDS(ve_haytah_le_ot_brit_beini_u_vein_ha_aretz, t1)</span><br><span class="gloss">= HOLDS(obj-marker·et-qashti-I-have-set-in-cloud, t1) ∧ HOLDS(and-haytah-to-sign-of-brit-beini-and-vein-the-earth, t1)</span><br>THE BOW-SIGN, held as FACTS on the sign-precedents [decisions recorded]: NATATI — &#x27;I HAVE SET&#x27; (the give-ladder&#x27;s perfect rung; gen_21&#x27;s performative class) — and VE-HAYTAH LE-OT (&#x27;and it shall be for a sign&#x27;) — 1:14&#x27;s own weqatal sign-syntax (gen_04&#x27;s job-list class); ASSIGN declined (gen_12&#x27;s Cain-mark was a HOLDS fact, and this is the mark&#x27;s va-yasem class: a sign SET, not an office bound); INSTALL declined (city, ark, altar were BUILDS; the bow is &#x27;MY bow&#x27; — a possession stationed, not a thing made). QESHET (&#x27;bow&#x27;) tokens 1-3 of 7 in-span — every later Torah token is WEAPONRY (Hagar&#x27;s bowshot, Esau&#x27;s hunting bow, Jacob&#x27;s sword-and-bow, the archer&#x27;s): the only non-weapon bows in the Torah hang in this cloud. ANAN (&#x27;cloud&#x27;) tokens 1-4 — tokens 5+ are THE PILLAR OF CLOUD and Sinai: the sign&#x27;s canvas becomes the Presence&#x27;s vehicle [letter facts; Onkelos keeps &#x27;MY bow&#x27; but seats the Memra in the between-clause — dual-track, flagged].
+</td><td><span class="he">אֶת־קַשְׁתִּי נָתַתִּי בֶּעָנָן וְהָיְתָה לְאוֹת בְּרִית</span> · <i>et-qashti natati be-anan ve-haytah le-ot brit</i><br><span class="gloss">= obj-marker·et-qashti I-have-set cloud and-haytah sign-of brit</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">A weapon is hung up butt-forward in the weather that did the killing: the sign is an armistice made visible.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_9_14 · Gen.9.14 · <span class='expr'>THE_WEATHER_WIRED_HANDLER</span></h3>
+<p><span class="he">וְהָיָה בְּעַנְנִי עָנָן עַל־הָאָרֶץ וְנִרְאֲתָה הַקֶּשֶׁת בֶּעָנָן</span> · <i>ve-hayah be-anni anan al-ha-aretz ve-nireatah ha-qeshet be-anan</i> · [EN-AID/JPS] And it shall come to pass, when I bring clouds over the earth, and the bow is seen in the cloud,</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">והיה בענני ענן על הארץ</span> · <i>ve-hayah be-anni anan al-ha-aretz</i> · when I cloud up a cloud over the earth (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ונראתה הקשת בענן</span> · <i>ve-nireatah ha-qeshet be-anan</i> · and the bow is seen in the cloud —</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>HANDLER</td><td><span class="expr">HANDLER IF(be_anni_anan_ve_nireatah_ha_qeshet) THEN(ve_zakharti_et_briti)</span><br><span class="gloss">= HANDLER IF(in-anni-cloud-and-nireatah-the-bow) THEN(and-I-will-remember-obj-marker·et-My-covenant)</span><br>THE MEMORY-DUTY AS STANDING LAW-GRAMMAR — the letter&#x27;s own when-then weqatal chain: WHEN I cloud up a cloud over the earth AND the bow is seen in the cloud, THEN I will REMEMBER My covenant — gen_12&#x27;s HANDLER class matched (&#x27;HANDLER IF(horeg(kayin)) THEN(shivatayim_yukam)&#x27;): a trigger, a consequence, standing forever; HANDLER chosen over INVARIANT because the letter gives an explicit conditional [decision recorded]. The sentence runs ACROSS the 9:14/9:15 verse-break [tree fact] — the IF sits here, the THEN&#x27;s facts land in the next step. God wires His own remembering to the WEATHER: the cloud that will carry the Presence (the pillar, Sinai — anan&#x27;s very next tokens) here carries the reminder [the cloud-verb be-anni shares a lemma with the soothsayer-word — lemma-share only, no claim].
+</td><td><span class="he">וְהָיָה בְּעַנְנִי עָנָן … וְנִרְאֲתָה הַקֶּשֶׁת … וְזָכַרְתִּי</span> · <i>ve-hayah be-anni anan … ve-nireatah ha-qeshet … ve-zakharti</i><br><span class="gloss">= was in-anni cloud and-nireatah bow I-will-remember</span></td><td class='cite'>TIR-029</td><td>tested</td></tr>
+</table>
+<div class="meta">The mechanism is meteorological: the sky that broke the world is re-plumbed to jog the memory of its Judge.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_9_15 · Gen.9.15 · <span class='expr'>THE_REMEMBERING_PLEDGED</span></h3>
+<p><span class="he">וְזָכַרְתִּי אֶת־בְּרִיתִי אֲשֶׁר בֵּינִי וּבֵינֵיכֶם וּבֵין כָּל־נֶפֶשׁ חַיָּה בְּכָל־בָּשָׂר וְלֹא־יִהְיֶה עוֹד הַמַּיִם לְמַבּוּל לְשַׁחֵת כָּל־בָּשָׂר</span> · <i>ve-zakharti et-briti asher beini u-veineikhem u-vein kol-nefesh chayah be-khol-basar ve-lo-yihyeh od ha-mayim le-mabul le-shachet kol-basar</i> · [EN-AID/JPS] that I will remember My covenant, which is between Me and you and every living creature of all flesh; and the waters shall no more become a flood to destroy all flesh.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וזכרתי את בריתי אשר ביני וביניכם ובין כל נפש חיה בכל בשר</span> · <i>ve-zakharti et-briti asher beini u-veineikhem u-vein kol-nefesh chayah be-khol-basar</i> · THEN I remember My covenant — Me, you, every living soul in all flesh (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ולא יהיה עוד המים למבול לשחת כל בשר</span> · <i>ve-lo-yihyeh od ha-mayim le-mabul le-shachet kol-basar</i> · and the waters shall never again become a deluge to destroy all flesh</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_zakharti_et_briti_beini_u_veineikhem, t1) ∧ HOLDS(ve_lo_yihyeh_od_ha_mayim_le_mabul, t1)</span><br><span class="gloss">= HOLDS(and-I-will-remember-obj-marker·et-My-covenant-beini-and-veineikhem, t1) ∧ HOLDS(and-not-yihyeh-still/again-the-waters-to-deluge, t1)</span><br>THE THEN-CLAUSE LANDS: VE-ZAKHARTI — &#x27;and I will REMEMBER My covenant&#x27;: ZAKHAR token 2 — FROZEN gen_19&#x27;s logged career prediction (&#x27;the rainbow covenant 9:15-16&#x27;) LANDS at the verb&#x27;s very next token after its 8:1 debut [frozen-unit prediction landing]. And the never-again re-sounded INSIDE the mechanism (the pledge as the remembering&#x27;s outcome — 9:11&#x27;s invariant quoted back; held as fact, the standing constraint already on the books) [letter fact; Onkelos keeps this self-pledged remembering ACTIVE, against its own 8:1 mindful-state precedent — class-contrast noted, dual-track].
+</td><td><span class="he">וְזָכַרְתִּי אֶת־בְּרִיתִי … וְלֹא־יִהְיֶה עוֹד הַמַּיִם לְמַבּוּל</span> · <i>ve-zakharti et-briti … ve-lo-yihyeh od ha-mayim le-mabul</i><br><span class="gloss">= I-will-remember obj-marker·et-My-covenant and-not-yihyeh still/again waters deluge</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The covenant remembers forward: every storm that ends in a bow is a scheduled act of memory.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_9_16 · Gen.9.16 · <span class='expr'>TO_REMEMBER_THE_EVERLASTING</span></h3>
+<p><span class="he">וְהָיְתָה הַקֶּשֶׁת בֶּעָנָן וּרְאִיתִיהָ לִזְכֹּר בְּרִית עוֹלָם בֵּין אֱלֹהִים וּבֵין כָּל־נֶפֶשׁ חַיָּה בְּכָל־בָּשָׂר אֲשֶׁר עַל־הָאָרֶץ</span> · <i>ve-haytah ha-qeshet be-anan u-reitiha li-zekor brit olam bein Elohim u-vein kol-nefesh chayah be-khol-basar asher al-ha-aretz</i> · [EN-AID/JPS] And the bow shall be in the cloud; and I will look upon it, that I may remember the everlasting covenant between God and every living creature of all flesh that is upon the earth.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">והיתה הקשת בענן</span> · <i>ve-haytah ha-qeshet be-anan</i> · and the bow shall be in the cloud (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וראיתיה לזכר ברית עולם בין אלהים ובין כל נפש חיה בכל בשר אשר על הארץ</span> · <i>u-reitiha li-zekor brit olam bein Elohim u-vein kol-nefesh chayah be-khol-basar asher al-ha-aretz</i> · and I will SEE it, to REMEMBER the everlasting covenant — between ELOHIM and every living soul</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(u_reitiha_li_zekor_brit_olam, t1)</span><br><span class="gloss">= HOLDS(and-reitiha-to-me-zekor-brit-everlasting, t1)</span><br>The everlasting rung: U-REITIHA — &#x27;and I will SEE it&#x27; (the week&#x27;s inspection verb aimed at His own sign) — LI-ZEKOR BRIT OLAM (&#x27;to REMEMBER the everlasting covenant&#x27;): ZAKHAR token 3 — the memory-duty made purposive. And the letter&#x27;s strangest turn: the parties named in the THIRD PERSON inside God&#x27;s own speech — &#x27;between ELOHIM and every living soul&#x27; [letter fact, held; the chain&#x27;s readings named-only; Onkelos re-seats it as &#x27;between the WORD of the LORD&#x27; — the third-person turn absorbed into the Memra; dual-track, flagged].
+</td><td><span class="he">וּרְאִיתִיהָ לִזְכֹּר בְּרִית עוֹלָם בֵּין אֱלֹהִים וּבֵין כָּל־נֶפֶשׁ חַיָּה</span> · <i>u-reitiha li-zekor brit olam bein Elohim u-vein kol-nefesh chayah</i><br><span class="gloss">= and-reitiha remember brit everlasting between God and-vein all-soul-of beast</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">At the pledge&#x27;s deepest point the speaker steps outside His own name and countersigns as a third party.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_9_17 · Gen.9.17 · <span class='expr'>THE_SEAL_I_HAVE_ESTABLISHED</span></h3>
+<p><span class="he">וַיֹּאמֶר אֱלֹהִים אֶל־נֹחַ זֹאת אוֹת־הַבְּרִית אֲשֶׁר הֲקִמֹתִי בֵּינִי וּבֵין כָּל־בָּשָׂר אֲשֶׁר עַל־הָאָרֶץ</span> · <i>va-yomer Elohim el-Noach zot ot-ha-brit asher hakimoti beini u-vein kol-basar asher al-ha-aretz</i> · [EN-AID/JPS] And God said unto Noah: &#x27;This is the token of the covenant which I have established between Me and all flesh that is upon the earth.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר אלהים אל נח</span> · <i>va-yomer Elohim el-Noach</i> · frame three: and God said to Noach (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">זאת אות הברית אשר הקמתי ביני ובין כל בשר אשר על הארץ</span> · <i>zot ot-ha-brit asher hakimoti beini u-vein kol-basar asher al-ha-aretz</i> · THIS is the covenant-sign I HAVE ESTABLISHED with all flesh</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">speak(e3) ∧ Agent(e3, elohim) ∧ Theme(e3, el_noach)</span><br><span class="gloss">= speak(e3) ∧ Agent(e3, God) ∧ Theme(e3, to-Noach)</span><br>FRAME THREE — the seal: the third and last speech-act narrows back to Noach alone (frame one addressed the sons too) [letter fact].
+</td><td><span class="he">וַיֹּאמֶר אֱלֹהִים אֶל־נֹחַ</span> · <i>va-yomer Elohim el-Noach</i><br><span class="gloss">= He-said God to-Noach</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(zot_ot_ha_brit_asher_hakimoti, t1)</span><br><span class="gloss">= HOLDS(this-sign-of-the-brit-which-I-will-establish, t1)</span><br>THE LADDER&#x27;S LAST RUNG: HAKIMOTI — &#x27;I HAVE ESTABLISHED&#x27; (perfect): participle (9:9), weqatal (9:11), perfect (here) — doing, willing, done: the covenant is completed entirely inside speech-grammar, without one narrative deed-verb [letter fact, recorded]. BRIT token 8 and OT token 5 close their clusters; the speech ends where its ladder tops out.
+</td><td><span class="he">זֹאת אוֹת־הַבְּרִית אֲשֶׁר הֲקִמֹתִי</span> · <i>zot ot-ha-brit asher hakimoti</i><br><span class="gloss">= this sign-of-the-brit which I-will-establish</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Nothing was built, nothing marched, nobody moved: the span&#x27;s whole action is a promise conjugating itself to completion.</div>
+</div>
+<h2>State machine</h2>
+<div class="meta">The covenant and the bow (standalone; registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER).</div>
+<table><tr><th>state</th><th>meaning</th></tr>
+<tr><td><b>S_boot</b></td><td>Before 9:8 — all registers empty (standalone unit)</td></tr>
+<tr><td><b>S_frame_one</b></td><td>After 9:8 — speech-event one (Elohim to Noach AND his sons); noach/banav/tevah flagged as read</td></tr>
+<tr><td><b>S_establishing</b></td><td>After 9:9-10 — the ladder&#x27;s participle rung holds (I AM establishing, TIR-031); the all-flesh partner-list holds</td></tr>
+<tr><td><b>S_pledged_public</b></td><td>After 9:11 — the weqatal rung (6:18&#x27;s exact form, plural now); BOTH public never-again INVARIANTs standing (the cut-verb born refusing)</td></tr>
+<tr><td><b>S_frame_two</b></td><td>After 9:12 — speech-event two: the sign named; the give-ladder&#x27;s participle rung</td></tr>
+<tr><td><b>S_bow_set</b></td><td>After 9:13 — the bow-facts hold (set-perfect + sign-office weqatal); ASSIGN and INSTALL declined on the mark-precedent</td></tr>
+<tr><td><b>S_handler_wired</b></td><td>After 9:14 — the weather-wired memory HANDLER installed (IF cloud+bow THEN remember; the sentence crossing the verse-break)</td></tr>
+<tr><td><b>S_remembering</b></td><td>After 9:15-16 — the THEN-facts hold (zakhar tokens 2-3: gen_19&#x27;s prediction landed); the third-person Elohim clause held</td></tr>
+<tr><td><b>S_sealed_ladder</b></td><td>After 9:17 — speech-event three: the perfect rung (I HAVE established); registers at rest, three standing structures</td></tr>
+</table><table><tr><th>from</th><th>to</th><th>via</th></tr>
+<tr><td>S_boot</td><td>S_frame_one</td><td>STEP_Gn_9_8</td></tr>
+<tr><td>S_frame_one</td><td>S_establishing</td><td>STEP_Gn_9_9</td></tr>
+<tr><td>S_establishing</td><td>S_establishing</td><td>STEP_Gn_9_10</td></tr>
+<tr><td>S_establishing</td><td>S_pledged_public</td><td>STEP_Gn_9_11</td></tr>
+<tr><td>S_pledged_public</td><td>S_frame_two</td><td>STEP_Gn_9_12</td></tr>
+<tr><td>S_frame_two</td><td>S_bow_set</td><td>STEP_Gn_9_13</td></tr>
+<tr><td>S_bow_set</td><td>S_handler_wired</td><td>STEP_Gn_9_14</td></tr>
+<tr><td>S_handler_wired</td><td>S_remembering</td><td>STEP_Gn_9_15</td></tr>
+<tr><td>S_remembering</td><td>S_remembering</td><td>STEP_Gn_9_16</td></tr>
+<tr><td>S_remembering</td><td>S_sealed_ladder</td><td>STEP_Gn_9_17</td></tr>
+</table>
+<div class="note"><b>AFTER_S_sealed_ladder</b> — TIME: t0 EMPTY (no date — the covenant&#x27;s own duration-words are le-dorot olam, &#x27;for everlasting generations&#x27;: scope, not anchor). WORLD: ZERO installs (+3 presupposed: noach, banav, tevah — the ark read once, in 9:10&#x27;s exit-roster). Standing facts (9 + the handler): the ladder&#x27;s three rungs (participle TIR-031 / weqatal TIR-029 — 6:18&#x27;s exact form, gone plural / closing perfect), the all-flesh partner-list, the give-participle with le-dorot-olam, the two bow-facts (the set-perfect and the sign-office weqatal — ASSIGN and INSTALL declined on the Cain-mark precedent), the THEN-facts (the remembering pledged — zakhar tokens 2-3, frozen gen_19&#x27;s prediction landed — and the never-again re-sounded inside the mechanism), and the everlasting third-person clause (between ELOHIM and every living soul — the letter&#x27;s strangest turn, held). INVARIANTS (2): the public never-again pair — the cut-verb&#x27;s negated Torah debut inside #1, the decree&#x27;s destroy-verb quoted inside #2 (8:21&#x27;s interior pledges made covenant; delta named). HANDLERS (1): the weather-wired memory-duty — IF(I cloud up AND the bow is seen) THEN(I remember My covenant): gen_12&#x27;s class, the letter&#x27;s own when-then chain, crossing the 9:14/9:15 verse-break. EVENTS: exactly THREE — the triple va-yomer frame (9:8 to Noach and sons; 9:12 the sign named; 9:17 the seal, to Noach alone): the span&#x27;s only narrative verbs; the establishment itself never takes a deed-verb — the covenant completes inside speech-grammar. SPECS: EMPTY end to end (zero imperatives — the third zero-traffic queue). TESTS: EMPTY. REGISTRY: ZERO writes. LEDGER: EMPTY. FLAGS (3): read_before_install x3. The machine ends at rest holding three structures no event can retire: two forever-negations and one standing remember-rule — the counter-decree completed.</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>Frame one opens, the registers sleep on: after STEP_Gn_9_8</td><td>All registers empty (standalone unit).</td><td>flags noach/banav/tevah as read-before-install; SPECS empty.<br><span class="gloss">= flags Noach/banav/ark as read-before-install; SPECS empty.</span></td><td><span class="he">וַיֹּאמֶר אֱלֹהִים אֶל־נֹחַ וְאֶל־בָּנָיו</span> · <i>va-yomer Elohim el-Noach ve-el-banav</i><br><span class="gloss">= He-said God to-Noach and-to-banav</span></td></tr>
+<tr><td><b>S2</b></td><td>The ladder&#x27;s participle rung holds: after STEP_Gn_9_9</td><td>S1 state.</td><td>Facts hinni_mekim_et_briti HOLD.<br><span class="gloss">= Facts hinni-mekim-obj-marker·et-My-covenant HOLD.</span></td><td><span class="he">הִנְנִי מֵקִים אֶת־בְּרִיתִי</span> · <i>hinni mekim et-briti</i><br><span class="gloss">= hinni mekim obj-marker·et-My-covenant</span></td></tr>
+<tr><td><b>S3</b></td><td>The public never-agains stand: after STEP_Gn_9_11</td><td>S2 state + the partner-list (9:10).</td><td>Facts va_hakimoti_et_briti_itkhem HOLD; ve_lo_yikkaret INVARIANT active; ve_lo_yihyeh_od_mabul INVARIANT active.<br><span class="gloss">= Facts and-I-will-establish-obj-marker·et-My-covenant-itkhem HOLD; and-not-yikkaret INVARIANT active; and-not-yihyeh-still/again-deluge INVARIANT active.</span></td><td><span class="he">וְלֹא־יִכָּרֵת כָּל־בָּשָׂר עוֹד</span> · <i>ve-lo-yikkaret kol-basar od</i><br><span class="gloss">= and-not-yikkaret all-flesh still/again</span></td></tr>
+<tr><td><b>S4</b></td><td>The bow set, the sign-office held: after STEP_Gn_9_13</td><td>S3 state + frame two (9:12).</td><td>Facts et_qashti_natati_be_anan/ve_haytah_le_ot_brit HOLD.<br><span class="gloss">= Facts obj-marker·et-qashti-I-have-set-in-cloud/and-haytah-to-sign-of-brit HOLD.</span></td><td><span class="he">אֶת־קַשְׁתִּי נָתַתִּי בֶּעָנָן</span> · <i>et-qashti natati be-anan</i><br><span class="gloss">= obj-marker·et-qashti I-have-set cloud</span></td></tr>
+<tr><td><b>S5</b></td><td>The weather-wired handler installed: after STEP_Gn_9_14</td><td>S4 state.</td><td>Facts be_anni_anan HOLD.<br><span class="gloss">= Facts in-anni-cloud HOLD.</span></td><td><span class="he">וְנִרְאֲתָה הַקֶּשֶׁת בֶּעָנָן</span> · <i>ve-nireatah ha-qeshet be-anan</i><br><span class="gloss">= and-nireatah bow cloud</span></td></tr>
+<tr><td><b>S6</b></td><td>The remembering pledged — gen_19&#x27;s prediction lands: after STEP_Gn_9_15</td><td>S5 state.</td><td>Facts ve_zakharti_et_briti/ve_lo_yihyeh_od_ha_mayim HOLD.<br><span class="gloss">= Facts and-I-will-remember-obj-marker·et-My-covenant/and-not-yihyeh-still/again-the-waters HOLD.</span></td><td><span class="he">וְזָכַרְתִּי אֶת־בְּרִיתִי</span> · <i>ve-zakharti et-briti</i><br><span class="gloss">= I-will-remember obj-marker·et-My-covenant</span></td></tr>
+<tr><td><b>S7</b></td><td>The seal — the ladder tops out in the perfect: after STEP_Gn_9_17</td><td>S6 state + the everlasting clause (9:16).</td><td>Facts zot_ot_ha_brit_asher_hakimoti HOLD; SPECS empty.<br><span class="gloss">= Facts this-sign-of-the-brit-which-I-will-establish HOLD; SPECS empty.</span></td><td><span class="he">זֹאת אוֹת־הַבְּרִית אֲשֶׁר הֲקִמֹתִי</span> · <i>zot ot-ha-brit asher hakimoti</i><br><span class="gloss">= this sign-of-the-brit which I-will-establish</span></td></tr>
+<tr><td><b>S8_negative</b></td><td>Negative: the machine&#x27;s ? stays guarded</td><td>A synthetic LET? demand (the machine&#x27;s own contract self-test).</td><td>LET? never auto-upgrades: resolution without citation must REFUSE; with a per-unit citation it may resolve — entries pop demands; nothing but citation moves a mood.</td><td></td></tr>
+<tr><td><b>S9_negative</b></td><td>Negative: flags never block</td><td>A synthetic commit with TESTS empty (the machine&#x27;s own contract self-test).</td><td>Cycle close with TESTS empty must be FLAGGED, never blocked.<br><span class="gloss">= Cycle close with TESTS empty must in FLAGGED, never blocked.</span></td><td></td></tr>
+</table>
+<h2>Exports (reusable patterns)</h2><table><tr><th>id</th><th>content</th></tr>
+<tr><td>EXPORT_brit_saturation_ladder</td><td><span class="he">הִנְנִי מֵקִים … וַהֲקִמֹתִי … הֲקִמֹתִי</span> · <i>hinni mekim … va-hakimoti … hakimoti</i> · BRIT (&#x27;covenant&#x27;) tokens 2-8 of its first eight all in-span (x7 in ten verses) while the establish-verb climbs an ASPECT-LADDER — participle (I AM establishing, TIR-031), weqatal (6:18&#x27;s EXACT form re-sounded, plural now), perfect (I HAVE established): no narrative deed-verb anywhere — the covenant completes inside speech-grammar; a second pair climbs beside it (I AM giving -&gt; I HAVE set); QUM token 1 = 4:8, Cain RISING: the verb&#x27;s career runs murder to covenant; frozen gen_16 held 6:18 as FACT — nothing pops across the wall (the Stage E covenant arc)</td></tr>
+<tr><td>EXPORT_cut_verb_born_refusing</td><td><span class="he">וְלֹא־יִכָּרֵת כָּל־בָּשָׂר עוֹד</span> · <i>ve-lo-yikkaret kol-basar od</i> · KARAT (&#x27;cut&#x27;) — the verb that will seal every covenant (likhrot brit from 15:18 on) has its Torah TOKEN 1 NEGATED: &#x27;all flesh shall NOT be cut off&#x27; — born refusing a cutting-off, inside a covenant ESTABLISHED, not cut [crown]; the public never-again pair carries it (gen_20&#x27;s INVARIANT class externalized: 8:21 to His heart, 9:11 to faces), with the decree&#x27;s own destroy-verb (shachat tokens 6-7 after the 6:11-17 cluster) surviving only inside the negation; the deluge-word takes its last divine-speech tokens here</td></tr>
+<tr><td>EXPORT_war_bow_retired</td><td><span class="he">אֶת־קַשְׁתִּי נָתַתִּי בֶּעָנָן</span> · <i>et-qashti natati be-anan</i> · QESHET (&#x27;bow&#x27;) tokens 1-3 in-span and every later Torah token is WEAPONRY (Hagar&#x27;s bowshot, Esau&#x27;s hunt, Jacob&#x27;s sword-and-bow, the archer): the Torah&#x27;s only non-weapon bows hang in this cloud; ANAN (&#x27;cloud&#x27;) tokens 1-4 here — its next tokens are the PILLAR OF CLOUD and Sinai: the sign&#x27;s canvas becomes the Presence&#x27;s vehicle; the sign held as FACTS on the Cain-mark precedent (no ASSIGN, no INSTALL — a possession stationed, not a thing built); OT (&#x27;sign&#x27;) tokens 3-5: calendar, Cain-mark, bow — then circumcision: the sign-word&#x27;s early life is all marks-that-mean</td></tr>
+<tr><td>EXPORT_weather_wired_memory</td><td><span class="he">וְהָיָה בְּעַנְנִי עָנָן … וְנִרְאֲתָה הַקֶּשֶׁת … וְזָכַרְתִּי</span> · <i>ve-hayah be-anni anan … ve-nireatah ha-qeshet … ve-zakharti</i> · the memory-duty as standing law-grammar — HANDLER (gen_12&#x27;s class): IF(I cloud up AND the bow is seen) THEN(I remember My covenant) — the letter&#x27;s own when-then weqatal chain, running ACROSS the 9:14/9:15 verse-break; ZAKHAR tokens 2-3 land frozen gen_19&#x27;s logged prediction; 9:16 adds the purposive li-zekor brit olam on God&#x27;s own future SEEING — and names the parties in the THIRD PERSON inside His own speech (&#x27;between ELOHIM and every living soul&#x27;) [letter fact, held]</td></tr>
+<tr><td>EXPORT_triple_frame_repetition</td><td><span class="he">וַיֹּאמֶר אֱלֹהִים … וַיֹּאמֶר אֱלֹהִים … וַיֹּאמֶר אֱלֹהִים</span> · <i>va-yomer Elohim x3</i> · one covenant, three speech-acts (9:8 opens to Noach and sons; 9:12 names the sign; 9:17 seals to Noach alone) — the machine&#x27;s only three events; the letter&#x27;s own redundancy is the structure: brit x7, bein (&#x27;between&#x27;) x12, chayah x6, basar x5, nefesh x4, ot x3, qum x3, mabul x3, od x3, olam x2; the partners include the ANIMALS (every living soul, from all that went OUT of the ark); Elohim-only speech-world, fifth span running; Onkelos seats the Memra (&#x27;My Word&#x27;) in God&#x27;s place five times — dual-track</td></tr>
+</table>
+<h2>Oral notes (named, tiered, dual-track — never merged)</h2>
+<div class="note"><span class="badge tier-o">observation</span> <b>Bavli Berakhot 59a (the blessing on seeing the bow); Bavli Chagigah 16a and Ketubot 77b (gazing; the generations that needed no bow); Bereshit Rabbah 35 (the span; the defective le-dorot; the exempt generations); Rashi at 9:12 (le-dorot written short), 9:14 (the cloud-clause), 9:16 (the seeing and remembering) — gen_22 Tier-A queue</b><br><span class="he">זֹאת אוֹת־הַבְּרִית</span> · <i>(queue — named only)</i> · Named, not read: the cache holds ZERO sources anchored to Gen 9:8-17 — sixteenth tripwire span. Detector classes predicted: the le-dorot short-spelling teaching is an ORTHOGRAPHY class (doctrine from a missing letter); the bow-pointed-away teaching is a symbol-inversion class (the war-bow aimed heavenward as mercy); the blessing-on-seeing is a liturgy-from-sign class.
+<br><i>Queue entry — no claim made beyond the naming.</i></div>
+<div class="note"><span class="badge tier-v">verified</span> <b>Onkelos Genesis 9:8-17 — read Tier-A at derive time (10 sequential fetches, Data/FETCHLOG.md 2026-08-03)</b><br><span class="he">בֵּין מֵימְרִי וּבֵינֵיכוֹן</span> · <i>bein meimri u-veineikhon</i> · The span&#x27;s translation witness: THE MEMRA TAKES GOD&#x27;S SEAT x5 — &#x27;between ME&#x27; -&gt; &#x27;between MY WORD&#x27; (9:12, 9:13, 9:15, 9:17, all bolded) and 9:16&#x27;s third-person &#x27;between ELOHIM&#x27; -&gt; &#x27;between the WORD of the LORD&#x27;: the covenant&#x27;s divine party systematically replaced (flagged; the machine&#x27;s parties stand on the letter). AGAINST its own 8:1 precedent (where narrative remembering became a mindful STATE), the buffer keeps the covenant&#x27;s self-pledged remembering and seeing ACTIVE and first-person (u-dekhirna &#x27;I will remember&#x27;; ve-echazinnah &#x27;I will see it&#x27;) — narration about God softened, God&#x27;s own promises kept in His mouth (class-contrast noted). The cut-play lost (yikkaret -&gt; &#x27;be destroyed&#x27;, no cut-cognate) and the decree-echo lost (le-shachet -&gt; &#x27;to ruin&#x27;). The ASPECT-LADDER survives in Aramaic grammar (participle -&gt; future -&gt; perfect); the give-pair survives; &#x27;MY bow&#x27; KEPT (kashti — no dodge on the anthropomorphic possession); brit -&gt; KEYAM (as at gen_16&#x27;s 6:18), ot -&gt; at, mabul -&gt; tofana, hinni -&gt; ha-ana; ELOHIM -&gt; YY at all three frames (the leveling&#x27;s fifth running span); the triple frame itself intact.
+<br><i>Read from Data/sefaria_texts/ (local, gitignored; FETCHLOG is provenance). Dual-track; not merged.</i></div>
+<h2>Binary trees (ta'amim v3, glue bricks)</h2>
+<h3>Gen.9.8 · parser unique · 8 words</h3>
+<div class="meta"><span class="he">ויאמר אלהים אל־נח ואל־בניו אתו לאמר</span> · <i>va-yomer Elohim el-nocha ve-el-banay-v et-o le-mor</i> · And God said to Noach and his sons — frame one of three. [EN-AID]</div>
+<pre>PHRASE (binary 8w) וַ/יֹּ֤אמֶר אֱלֹהִים֙ אֶל נֹ֔חַ וְ/אֶל בָּנָ֥י/…
+├── PHRASE (binary 4w) וַ/יֹּ֤אמֶר אֱלֹהִים֙ אֶל נֹ֔חַ
+│   ├── [0-1] GLUE וַ/יֹּ֤אמֶר אֱלֹהִים֙ (pashta, rank=3)
+│   └── [2-3] GLUE אֶל נֹ֔חַ (zaqef qatan, rank=2)
+└── PHRASE (binary 4w) וְ/אֶל בָּנָ֥י/ו אִתּ֖/וֹ לֵ/אמֹֽר
+    ├── [4-6] GLUE וְ/אֶל בָּנָ֥י/ו אִתּ֖/וֹ (tifcha, rank=2)
+    └── [7] לֵ/אמֹֽר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.9.9 · parser unique · 9 words</h3>
+<div class="meta"><span class="he">ואני הנני מקים את־בריתי אתכם ואת־זרעכם אחריכם</span> · <i>va-ani hinni-y meqim et-beriti-y et-khem ve-et-zara-khem achare-khem</i> · Behold, I AM ESTABLISHING My covenant — with you and your seed. [EN-AID]</div>
+<pre>PHRASE (binary 9w) וַ/אֲנִ֕י הִנְנִ֥/י מֵקִ֛ים אֶת בְּרִיתִ֖/י אִת…
+├── PHRASE (binary 6w) וַ/אֲנִ֕י הִנְנִ֥/י מֵקִ֛ים אֶת בְּרִיתִ֖/י אִת…
+│   ├── [0] וַ/אֲנִ֕י (zaqef gadol, rank=2)
+│   └── PHRASE (binary 5w) הִנְנִ֥/י מֵקִ֛ים אֶת בְּרִיתִ֖/י אִתְּ/כֶ֑ם
+│       ├── PHRASE (binary 4w) הִנְנִ֥/י מֵקִ֛ים אֶת בְּרִיתִ֖/י
+│       │   ├── [1-2] GLUE הִנְנִ֥/י מֵקִ֛ים (tevir, rank=3)
+│       │   └── [3-4] GLUE אֶת בְּרִיתִ֖/י (tifcha, rank=2)
+│       └── [5] אִתְּ/כֶ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וְ/אֶֽת זַרְעֲ/כֶ֖ם אַֽחֲרֵי/כֶֽם
+    ├── [6-7] GLUE וְ/אֶֽת זַרְעֲ/כֶ֖ם (tifcha, rank=2)
+    └── [8] אַֽחֲרֵי/כֶֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.9.10 · parser unique · 18 words</h3>
+<div class="meta"><span class="he">ואת כל־נפשׁ החיה אשׁר אתכם בעוף בבהמה ובכל־חית הארץ אתכם מכל יצאי התבה לכל חית הארץ</span> · <i>ve-et kal-nefesh ha-chaya asher et-khem ba-of ba-behema u-ve-khal-chayat ha-aretz et-khem mi-kol yotze ha-teva le-khol chayat ha-aretz</i> · And with every living soul that left the ark — the animals sign too. [EN-AID]</div>
+<pre>PHRASE (binary 18w) וְ/אֵ֨ת כָּל נֶ֤פֶשׁ הַֽ/חַיָּה֙ אֲשֶׁ֣ר אִתְּ/…
+├── PHRASE (binary 12w) וְ/אֵ֨ת כָּל נֶ֤פֶשׁ הַֽ/חַיָּה֙ אֲשֶׁ֣ר אִתְּ/…
+│   ├── PHRASE (binary 6w) וְ/אֵ֨ת כָּל נֶ֤פֶשׁ הַֽ/חַיָּה֙ אֲשֶׁ֣ר אִתְּ/…
+│   │   ├── [0-3] GLUE וְ/אֵ֨ת כָּל נֶ֤פֶשׁ הַֽ/חַיָּה֙ (pashta, rank=3)
+│   │   └── [4-5] GLUE אֲשֶׁ֣ר אִתְּ/כֶ֔ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 6w) בָּ/ע֧וֹף בַּ/בְּהֵמָ֛ה וּֽ/בְ/כָל חַיַּ֥ת הָ/א…
+│       ├── PHRASE (binary 5w) בָּ/ע֧וֹף בַּ/בְּהֵמָ֛ה וּֽ/בְ/כָל חַיַּ֥ת הָ/א…
+│       │   ├── [6-7] GLUE בָּ/ע֧וֹף בַּ/בְּהֵמָ֛ה (tevir, rank=3)
+│       │   └── [8-10] GLUE וּֽ/בְ/כָל חַיַּ֥ת הָ/אָ֖רֶץ (tifcha, rank=2)
+│       └── [11] אִתְּ/כֶ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) מִ/כֹּל֙ יֹצְאֵ֣י הַ/תֵּבָ֔ה לְ/כֹ֖ל חַיַּ֥ת הָ…
+    ├── PHRASE (binary 3w) מִ/כֹּל֙ יֹצְאֵ֣י הַ/תֵּבָ֔ה
+    │   ├── [12] מִ/כֹּל֙ (pashta, rank=3)
+    │   └── [13-14] GLUE יֹצְאֵ֣י הַ/תֵּבָ֔ה (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) לְ/כֹ֖ל חַיַּ֥ת הָ/אָֽרֶץ
+        ├── [15] לְ/כֹ֖ל (tifcha, rank=2)
+        └── [16-17] GLUE חַיַּ֥ת הָ/אָֽרֶץ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.9.11 · parser unique · 17 words</h3>
+<div class="meta"><span class="he">והקמתי את־בריתי אתכם ולא־יכרת כל־בשׂר עוד ממי המבול ולא־יהיה עוד מבול לשׁחת הארץ</span> · <i>va-haqimoti et-beriti-y et-khem ve-lo-yikaret kal-basar od mi-me ha-mabul ve-lo-yihye od mabul le-shachet ha-aretz</i> · I WILL establish: no more cutting-off, never again a deluge. [EN-AID]</div>
+<pre>PHRASE (binary 17w) וַ/הֲקִמֹתִ֤י אֶת בְּרִיתִ/י֙ אִתְּ/כֶ֔ם וְ/לֹֽ…
+├── PHRASE (binary 11w) וַ/הֲקִמֹתִ֤י אֶת בְּרִיתִ/י֙ אִתְּ/כֶ֔ם וְ/לֹֽ…
+│   ├── PHRASE (binary 4w) וַ/הֲקִמֹתִ֤י אֶת בְּרִיתִ/י֙ אִתְּ/כֶ֔ם
+│   │   ├── [0-2] GLUE וַ/הֲקִמֹתִ֤י אֶת בְּרִיתִ/י֙ (pashta, rank=3)
+│   │   └── [3] אִתְּ/כֶ֔ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 7w) וְ/לֹֽא יִכָּרֵ֧ת כָּל בָּשָׂ֛ר ע֖וֹד מִ/מֵּ֣י …
+│       ├── PHRASE (binary 5w) וְ/לֹֽא יִכָּרֵ֧ת כָּל בָּשָׂ֛ר ע֖וֹד
+│       │   ├── [4-7] GLUE וְ/לֹֽא יִכָּרֵ֧ת כָּל בָּשָׂ֛ר (tevir, rank=3)
+│       │   └── [8] ע֖וֹד (tifcha, rank=2)
+│       └── [9-10] GLUE מִ/מֵּ֣י הַ/מַּבּ֑וּל (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) וְ/לֹֽא יִהְיֶ֥ה ע֛וֹד מַבּ֖וּל לְ/שַׁחֵ֥ת הָ/א…
+    ├── PHRASE (binary 4w) וְ/לֹֽא יִהְיֶ֥ה ע֛וֹד מַבּ֖וּל
+    │   ├── [11-13] GLUE וְ/לֹֽא יִהְיֶ֥ה ע֛וֹד (tevir, rank=3)
+    │   └── [14] מַבּ֖וּל (tifcha, rank=2)
+    └── [15-16] GLUE לְ/שַׁחֵ֥ת הָ/אָֽרֶץ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.9.12 · parser unique · 18 words</h3>
+<div class="meta"><span class="he">ויאמר אלהים זאת אות־הברית אשׁר־אני נתן ביני וביניכם ובין כל־נפשׁ חיה אשׁר אתכם לדרת עולם</span> · <i>va-yomer Elohim zot ot-ha-berit asher-ani noten beni-y u-vene-khem u-ven kal-nefesh chaya asher et-khem le-dorot olam</i> · Frame two: THIS is the sign I AM GIVING, for everlasting generations. [EN-AID]</div>
+<pre>PHRASE (binary 18w) וַ/יֹּ֣אמֶר אֱלֹהִ֗ים זֹ֤את אֽוֹת הַ/בְּרִית֙ א…
+├── PHRASE (binary 16w) וַ/יֹּ֣אמֶר אֱלֹהִ֗ים זֹ֤את אֽוֹת הַ/בְּרִית֙ א…
+│   ├── PHRASE (binary 10w) וַ/יֹּ֣אמֶר אֱלֹהִ֗ים זֹ֤את אֽוֹת הַ/בְּרִית֙ א…
+│   │   ├── [0-1] GLUE וַ/יֹּ֣אמֶר אֱלֹהִ֗ים (revia, rank=3)
+│   │   └── PHRASE (binary 8w) זֹ֤את אֽוֹת הַ/בְּרִית֙ אֲשֶׁר אֲנִ֣י נֹתֵ֗ן בּ…
+│   │       ├── [2-4] GLUE זֹ֤את אֽוֹת הַ/בְּרִית֙ (pashta, rank=3)
+│   │       └── PHRASE (binary 5w) אֲשֶׁר אֲנִ֣י נֹתֵ֗ן בֵּינִ/י֙ וּ/בֵ֣ינֵי/כֶ֔ם
+│   │           ├── [5-7] GLUE אֲשֶׁר אֲנִ֣י נֹתֵ֗ן (revia, rank=3)
+│   │           └── PHRASE (binary 2w) בֵּינִ/י֙ וּ/בֵ֣ינֵי/כֶ֔ם
+│   │               ├── [8] בֵּינִ/י֙ (pashta, rank=3)
+│   │               └── [9] וּ/בֵ֣ינֵי/כֶ֔ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 6w) וּ/בֵ֛ין כָּל נֶ֥פֶשׁ חַיָּ֖ה אֲשֶׁ֣ר אִתְּ/כֶ֑ם
+│       ├── PHRASE (binary 4w) וּ/בֵ֛ין כָּל נֶ֥פֶשׁ חַיָּ֖ה
+│       │   ├── [10] וּ/בֵ֛ין (tevir, rank=3)
+│       │   └── [11-13] GLUE כָּל נֶ֥פֶשׁ חַיָּ֖ה (tifcha, rank=2)
+│       └── [14-15] GLUE אֲשֶׁ֣ר אִתְּ/כֶ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 2w) לְ/דֹרֹ֖ת עוֹלָֽם
+    ├── [16] לְ/דֹרֹ֖ת (tifcha, rank=2)
+    └── [17] עוֹלָֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.9.13 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">את־קשׁתי נתתי בענן והיתה לאות ברית ביני ובין הארץ</span> · <i>et-qashti-y natati be-anan ve-hayta le-ot berit beni-y u-ven ha-aretz</i> · My BOW I have set in the cloud — a covenant-sign with the earth. [EN-AID]</div>
+<pre>PHRASE (binary 10w) אֶת קַשְׁתִּ֕/י נָתַ֖תִּי בֶּֽ/עָנָ֑ן וְ/הָֽיְת…
+├── PHRASE (binary 4w) אֶת קַשְׁתִּ֕/י נָתַ֖תִּי בֶּֽ/עָנָ֑ן
+│   ├── [0-1] GLUE אֶת קַשְׁתִּ֕/י (zaqef gadol, rank=2)
+│   └── PHRASE (binary 2w) נָתַ֖תִּי בֶּֽ/עָנָ֑ן
+│       ├── [2] נָתַ֖תִּי (tifcha, rank=2)
+│       └── [3] בֶּֽ/עָנָ֑ן (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 6w) וְ/הָֽיְתָה֙ לְ/א֣וֹת בְּרִ֔ית בֵּינִ֖/י וּ/בֵ֥…
+    ├── PHRASE (binary 3w) וְ/הָֽיְתָה֙ לְ/א֣וֹת בְּרִ֔ית
+    │   ├── [4] וְ/הָֽיְתָה֙ (pashta, rank=3)
+    │   └── [5-6] GLUE לְ/א֣וֹת בְּרִ֔ית (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) בֵּינִ֖/י וּ/בֵ֥ין הָ/אָֽרֶץ
+        ├── [7] בֵּינִ֖/י (tifcha, rank=2)
+        └── [8-9] GLUE וּ/בֵ֥ין הָ/אָֽרֶץ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.9.14 · parser unique · 8 words</h3>
+<div class="meta"><span class="he">והיה בענני ענן על־הארץ ונראתה הקשׁת בענן</span> · <i>ve-haya be-anni-y anan al-ha-aretz ve-nirata ha-qeshet be-anan</i> · When I cloud up a cloud and the bow is seen — [EN-AID]</div>
+<pre>PHRASE (binary 8w) וְ/הָיָ֕ה בְּ/עַֽנְנִ֥/י עָנָ֖ן עַל הָ/אָ֑רֶץ ו…
+├── PHRASE (binary 5w) וְ/הָיָ֕ה בְּ/עַֽנְנִ֥/י עָנָ֖ן עַל הָ/אָ֑רֶץ
+│   ├── [0] וְ/הָיָ֕ה (zaqef gadol, rank=2)
+│   └── PHRASE (binary 4w) בְּ/עַֽנְנִ֥/י עָנָ֖ן עַל הָ/אָ֑רֶץ
+│       ├── [1-2] GLUE בְּ/עַֽנְנִ֥/י עָנָ֖ן (tifcha, rank=2)
+│       └── [3-4] GLUE עַל הָ/אָ֑רֶץ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וְ/נִרְאֲתָ֥ה הַ/קֶּ֖שֶׁת בֶּ/עָנָֽן
+    ├── [5-6] GLUE וְ/נִרְאֲתָ֥ה הַ/קֶּ֖שֶׁת (tifcha, rank=2)
+    └── [7] בֶּ/עָנָֽן (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.9.15 · parser unique · 20 words</h3>
+<div class="meta"><span class="he">וזכרתי את־בריתי אשׁר ביני וביניכם ובין כל־נפשׁ חיה בכל־בשׂר ולא־יהיה עוד המים למבול לשׁחת כל־בשׂר</span> · <i>ve-zakharti et-beriti-y asher beni-y u-vene-khem u-ven kal-nefesh chaya be-khal-basar ve-lo-yihye od ha-mayim le-mabul le-shachet kal-basar</i> · — then I REMEMBER My covenant: never again the waters a deluge. [EN-AID]</div>
+<pre>PHRASE (binary 20w) וְ/זָכַרְתִּ֣י אֶת בְּרִיתִ֗/י אֲשֶׁ֤ר בֵּינִ/י…
+├── PHRASE (binary 12w) וְ/זָכַרְתִּ֣י אֶת בְּרִיתִ֗/י אֲשֶׁ֤ר בֵּינִ/י…
+│   ├── PHRASE (binary 6w) וְ/זָכַרְתִּ֣י אֶת בְּרִיתִ֗/י אֲשֶׁ֤ר בֵּינִ/י…
+│   │   ├── [0-2] GLUE וְ/זָכַרְתִּ֣י אֶת בְּרִיתִ֗/י (revia, rank=3)
+│   │   └── PHRASE (binary 3w) אֲשֶׁ֤ר בֵּינִ/י֙ וּ/בֵ֣ינֵי/כֶ֔ם
+│   │       ├── [3-4] GLUE אֲשֶׁ֤ר בֵּינִ/י֙ (pashta, rank=3)
+│   │       └── [5] וּ/בֵ֣ינֵי/כֶ֔ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 6w) וּ/בֵ֛ין כָּל נֶ֥פֶשׁ חַיָּ֖ה בְּ/כָל בָּשָׂ֑ר
+│       ├── PHRASE (binary 4w) וּ/בֵ֛ין כָּל נֶ֥פֶשׁ חַיָּ֖ה
+│       │   ├── [6] וּ/בֵ֛ין (tevir, rank=3)
+│       │   └── [7-9] GLUE כָּל נֶ֥פֶשׁ חַיָּ֖ה (tifcha, rank=2)
+│       └── [10-11] GLUE בְּ/כָל בָּשָׂ֑ר (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) וְ/לֹֽא יִֽהְיֶ֨ה ע֤וֹד הַ/מַּ֨יִם֙ לְ/מַבּ֔וּל…
+    ├── PHRASE (binary 5w) וְ/לֹֽא יִֽהְיֶ֨ה ע֤וֹד הַ/מַּ֨יִם֙ לְ/מַבּ֔וּל
+    │   ├── [12-15] GLUE וְ/לֹֽא יִֽהְיֶ֨ה ע֤וֹד הַ/מַּ֨יִם֙ (pashta, rank=3)
+    │   └── [16] לְ/מַבּ֔וּל (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) לְ/שַׁחֵ֖ת כָּל בָּשָֽׂר
+        ├── [17] לְ/שַׁחֵ֖ת (tifcha, rank=2)
+        └── [18-19] GLUE כָּל בָּשָֽׂר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.9.16 · parser unique · 18 words</h3>
+<div class="meta"><span class="he">והיתה הקשׁת בענן וראיתיה לזכר ברית עולם בין אלהים ובין כל־נפשׁ חיה בכל־בשׂר אשׁר על־הארץ</span> · <i>ve-hayta ha-qeshet be-anan u-reiti-ha li-zekor berit olam ben Elohim u-ven kal-nefesh chaya be-khal-basar asher al-ha-aretz</i> · The bow in the cloud: I will SEE it, to remember the everlasting covenant. [EN-AID]</div>
+<pre>PHRASE (binary 18w) וְ/הָיְתָ֥ה הַ/קֶּ֖שֶׁת בֶּֽ/עָנָ֑ן וּ/רְאִיתִ֗…
+├── PHRASE (binary 3w) וְ/הָיְתָ֥ה הַ/קֶּ֖שֶׁת בֶּֽ/עָנָ֑ן
+│   ├── [0-1] GLUE וְ/הָיְתָ֥ה הַ/קֶּ֖שֶׁת (tifcha, rank=2)
+│   └── [2] בֶּֽ/עָנָ֑ן (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 15w) וּ/רְאִיתִ֗י/הָ לִ/זְכֹּר֙ בְּרִ֣ית עוֹלָ֔ם בֵּ…
+    ├── PHRASE (binary 4w) וּ/רְאִיתִ֗י/הָ לִ/זְכֹּר֙ בְּרִ֣ית עוֹלָ֔ם
+    │   ├── [3] וּ/רְאִיתִ֗י/הָ (revia, rank=3)
+    │   └── PHRASE (binary 3w) לִ/זְכֹּר֙ בְּרִ֣ית עוֹלָ֔ם
+    │       ├── [4] לִ/זְכֹּר֙ (pashta, rank=3)
+    │       └── [5-6] GLUE בְּרִ֣ית עוֹלָ֔ם (zaqef qatan, rank=2)
+    └── PHRASE (binary 11w) בֵּ֣ין אֱלֹהִ֔ים וּ/בֵין֙ כָּל נֶ֣פֶשׁ חַיָּ֔ה …
+        ├── [7-8] GLUE בֵּ֣ין אֱלֹהִ֔ים (zaqef qatan, rank=2)
+        └── PHRASE (binary 9w) וּ/בֵין֙ כָּל נֶ֣פֶשׁ חַיָּ֔ה בְּ/כָל בָּשָׂ֖ר …
+            ├── PHRASE (binary 4w) וּ/בֵין֙ כָּל נֶ֣פֶשׁ חַיָּ֔ה
+            │   ├── [9] וּ/בֵין֙ (pashta, rank=3)
+            │   └── [10-12] GLUE כָּל נֶ֣פֶשׁ חַיָּ֔ה (zaqef qatan, rank=2)
+            └── PHRASE (binary 5w) בְּ/כָל בָּשָׂ֖ר אֲשֶׁ֥ר עַל הָ/אָֽרֶץ
+                ├── [13-14] GLUE בְּ/כָל בָּשָׂ֖ר (tifcha, rank=2)
+                └── [15-17] GLUE אֲשֶׁ֥ר עַל הָ/אָֽרֶץ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.9.17 · parser unique · 16 words</h3>
+<div class="meta"><span class="he">ויאמר אלהים אל־נח זאת אות־הברית אשׁר הקמתי ביני ובין כל־בשׂר אשׁר על־הארץ</span> · <i>va-yomer Elohim el-nocha zot ot-ha-berit asher haqimoti beni-y u-ven kal-basar asher al-ha-aretz</i> · Frame three, the seal: the sign of the covenant I HAVE ESTABLISHED. [EN-AID]</div>
+<pre>PHRASE (binary 16w) וַ/יֹּ֥אמֶר אֱלֹהִ֖ים אֶל נֹ֑חַ זֹ֤את אֽוֹת הַ/…
+├── PHRASE (binary 4w) וַ/יֹּ֥אמֶר אֱלֹהִ֖ים אֶל נֹ֑חַ
+│   ├── [0-1] GLUE וַ/יֹּ֥אמֶר אֱלֹהִ֖ים (tifcha, rank=2)
+│   └── [2-3] GLUE אֶל נֹ֑חַ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 12w) זֹ֤את אֽוֹת הַ/בְּרִית֙ אֲשֶׁ֣ר הֲקִמֹ֔תִי בֵּי…
+    ├── PHRASE (binary 5w) זֹ֤את אֽוֹת הַ/בְּרִית֙ אֲשֶׁ֣ר הֲקִמֹ֔תִי
+    │   ├── [4-6] GLUE זֹ֤את אֽוֹת הַ/בְּרִית֙ (pashta, rank=3)
+    │   └── [7-8] GLUE אֲשֶׁ֣ר הֲקִמֹ֔תִי (zaqef qatan, rank=2)
+    └── PHRASE (binary 7w) בֵּינִ֕/י וּ/בֵ֥ין כָּל בָּשָׂ֖ר אֲשֶׁ֥ר עַל הָ…
+        ├── [9] בֵּינִ֕/י (zaqef gadol, rank=2)
+        └── PHRASE (binary 6w) וּ/בֵ֥ין כָּל בָּשָׂ֖ר אֲשֶׁ֥ר עַל הָ/אָֽרֶץ
+            ├── [10-12] GLUE וּ/בֵ֥ין כָּל בָּשָׂ֖ר (tifcha, rank=2)
+            └── [13-15] GLUE אֲשֶׁ֥ר עַל הָ/אָֽרֶץ (silluq (verse-end emperor), rank=1)
+</pre>
+<h2>Word coverage — 142/142 words with named roles</h2>
+<table><tr><th>ref</th><th>#</th><th>Hebrew</th><th>translit</th><th>English</th><th>role</th><th>kind</th><th>rule</th></tr>
+<tr><td>Gen.9.8</td><td>0</td><td class='he-cell'>ויאמר</td><td>va-yomer</td><td>and-He-said</td><td>FRAME_ONE_of_three</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.8</td><td>1</td><td class='he-cell'>אלהים</td><td>Elohim</td><td>God</td><td>ELOHIM_only_speaker</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.8</td><td>2</td><td class='he-cell'>אל</td><td>el</td><td>to</td><td>to</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.8</td><td>3</td><td class='he-cell'>נח</td><td>nocha</td><td>Noah</td><td>name_nocha</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.8</td><td>4</td><td class='he-cell'>ואל</td><td>ve-el</td><td>and-to</td><td>and-to</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.8</td><td>5</td><td class='he-cell'>בניו</td><td>banay-v</td><td>his-sons</td><td>his-sons</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.8</td><td>6</td><td class='he-cell'>אתו</td><td>et-o</td><td>with-him</td><td>with-him</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.8</td><td>7</td><td class='he-cell'>לאמר</td><td>le-mor</td><td>saying</td><td>saying</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.9</td><td>0</td><td class='he-cell'>ואני</td><td>va-ani</td><td>and-I</td><td>and-I</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.9</td><td>1</td><td class='he-cell'>הנני</td><td>hinni-y</td><td>behold-I</td><td>HINNI_token_4_flood_announcer_returns</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.9</td><td>2</td><td class='he-cell'>מקים</td><td>meqim</td><td>establishing</td><td>MEKIM_participle_ladder_rung_one</td><td>logic_bearing</td><td class='cite'>TIR-031</td></tr>
+<tr><td>Gen.9.9</td><td>3</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.9.9</td><td>4</td><td class='he-cell'>בריתי</td><td>beriti-y</td><td>My-covenant</td><td>BRIT_token_2_first_eight_in_span</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.9</td><td>5</td><td class='he-cell'>אתכם</td><td>et-khem</td><td>with-you</td><td>with-you</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.9</td><td>6</td><td class='he-cell'>ואת</td><td>ve-et</td><td>and-with</td><td>and-with</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.9</td><td>7</td><td class='he-cell'>זרעכם</td><td>zara-khem</td><td>your-seed</td><td>ZERA_thread_covenant_party</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.9</td><td>8</td><td class='he-cell'>אחריכם</td><td>achare-khem</td><td>after-you</td><td>after-you</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.10</td><td>0</td><td class='he-cell'>ואת</td><td>ve-et</td><td>and-with</td><td>and-with</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.10</td><td>1</td><td class='he-cell'>כל</td><td>kal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.10</td><td>2</td><td class='he-cell'>נפש</td><td>nefesh</td><td>soul-of</td><td>kol_nefesh_chayah_party</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.10</td><td>3</td><td class='he-cell'>החיה</td><td>ha-chaya</td><td>the-living</td><td>the-living</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.10</td><td>4</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>which</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.10</td><td>5</td><td class='he-cell'>אתכם</td><td>et-khem</td><td>with-you</td><td>with-you</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.10</td><td>6</td><td class='he-cell'>בעוף</td><td>ba-of</td><td>in-flying-creature</td><td>in-flying-creature</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.10</td><td>7</td><td class='he-cell'>בבהמה</td><td>ba-behema</td><td>in-livestock</td><td>in-livestock</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.10</td><td>8</td><td class='he-cell'>ובכל</td><td>u-ve-khal</td><td>and-in-all</td><td>and-in-all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.10</td><td>9</td><td class='he-cell'>חית</td><td>chayat</td><td>living</td><td>living</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.10</td><td>10</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.10</td><td>11</td><td class='he-cell'>אתכם</td><td>et-khem</td><td>with-you</td><td>with-you</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.10</td><td>12</td><td class='he-cell'>מכל</td><td>mi-kol</td><td>from-all</td><td>from-all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.10</td><td>13</td><td class='he-cell'>יצאי</td><td>yotze</td><td>goers-out-of</td><td>exit_roster_becomes_treaty_roster</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.10</td><td>14</td><td class='he-cell'>התבה</td><td>ha-teva</td><td>the-ark</td><td>tevah_read_flagged</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.10</td><td>15</td><td class='he-cell'>לכל</td><td>le-khol</td><td>to-all</td><td>to-all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.10</td><td>16</td><td class='he-cell'>חית</td><td>chayat</td><td>living</td><td>living</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.10</td><td>17</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.11</td><td>0</td><td class='he-cell'>והקמתי</td><td>va-haqimoti</td><td>and-I-will-establish</td><td>VA_HAKIMOTI_6_18_form_ladder_rung_two</td><td>logic_bearing</td><td class='cite'>TIR-029</td></tr>
+<tr><td>Gen.9.11</td><td>1</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.9.11</td><td>2</td><td class='he-cell'>בריתי</td><td>beriti-y</td><td>My-covenant</td><td>brit_token_3</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.11</td><td>3</td><td class='he-cell'>אתכם</td><td>et-khem</td><td>with-you</td><td>with-you</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.11</td><td>4</td><td class='he-cell'>ולא</td><td>ve-lo</td><td>and-not</td><td>and-not</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.11</td><td>5</td><td class='he-cell'>יכרת</td><td>yikaret</td><td>be-cut-off</td><td>KARAT_TOKEN_1_NEGATED_crown</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.11</td><td>6</td><td class='he-cell'>כל</td><td>kal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.11</td><td>7</td><td class='he-cell'>בשר</td><td>basar</td><td>flesh</td><td>flesh</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.11</td><td>8</td><td class='he-cell'>עוד</td><td>od</td><td>still/again</td><td>still_again</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.11</td><td>9</td><td class='he-cell'>ממי</td><td>mi-me</td><td>from-the-waters-of</td><td>from-the-waters-of</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.11</td><td>10</td><td class='he-cell'>המבול</td><td>ha-mabul</td><td>the-deluge</td><td>mabul_token_6</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.11</td><td>11</td><td class='he-cell'>ולא</td><td>ve-lo</td><td>and-not</td><td>and-not</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.11</td><td>12</td><td class='he-cell'>יהיה</td><td>yihye</td><td>be</td><td>be</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.11</td><td>13</td><td class='he-cell'>עוד</td><td>od</td><td>still/again</td><td>still_again</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.11</td><td>14</td><td class='he-cell'>מבול</td><td>mabul</td><td>deluge</td><td>mabul_token_7_last_speech_tokens</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.11</td><td>15</td><td class='he-cell'>לשחת</td><td>le-shachet</td><td>to-destroy</td><td>SHACHAT_token_6_decree_verb_in_negation</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.11</td><td>16</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.12</td><td>0</td><td class='he-cell'>ויאמר</td><td>va-yomer</td><td>and-He-said</td><td>FRAME_TWO_the_sign</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.12</td><td>1</td><td class='he-cell'>אלהים</td><td>Elohim</td><td>God</td><td>God</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.12</td><td>2</td><td class='he-cell'>זאת</td><td>zot</td><td>this</td><td>this</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.12</td><td>3</td><td class='he-cell'>אות</td><td>ot</td><td>sign-of</td><td>OT_token_3_calendar_mark_bow</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.12</td><td>4</td><td class='he-cell'>הברית</td><td>ha-berit</td><td>the-covenant</td><td>the-covenant</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.12</td><td>5</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>which</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.12</td><td>6</td><td class='he-cell'>אני</td><td>ani</td><td>I</td><td>I</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.12</td><td>7</td><td class='he-cell'>נתן</td><td>noten</td><td>giving</td><td>NOTEN_participle_give_ladder_one</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.12</td><td>8</td><td class='he-cell'>ביני</td><td>beni-y</td><td>between-Me</td><td>between-Me</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.12</td><td>9</td><td class='he-cell'>וביניכם</td><td>u-vene-khem</td><td>and-between-you</td><td>and-between-you</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.12</td><td>10</td><td class='he-cell'>ובין</td><td>u-ven</td><td>and-between</td><td>and-between</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.12</td><td>11</td><td class='he-cell'>כל</td><td>kal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.12</td><td>12</td><td class='he-cell'>נפש</td><td>nefesh</td><td>living-soul</td><td>living-soul</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.12</td><td>13</td><td class='he-cell'>חיה</td><td>chaya</td><td>living</td><td>living</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.12</td><td>14</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>which</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.12</td><td>15</td><td class='he-cell'>אתכם</td><td>et-khem</td><td>with-you</td><td>with-you</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.12</td><td>16</td><td class='he-cell'>לדרת</td><td>le-dorot</td><td>for-generations-of</td><td>DOR_token_3</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.12</td><td>17</td><td class='he-cell'>עולם</td><td>olam</td><td>everlasting</td><td>olam_token_4</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.13</td><td>0</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.9.13</td><td>1</td><td class='he-cell'>קשתי</td><td>qashti-y</td><td>My-bow</td><td>QESHET_TOKEN_1_war_word_retired</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.13</td><td>2</td><td class='he-cell'>נתתי</td><td>natati</td><td>I-have-set</td><td>NATATI_perfect_give_ladder_two</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.13</td><td>3</td><td class='he-cell'>בענן</td><td>be-anan</td><td>in-the-cloud</td><td>ANAN_token_1_pillar_next</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.13</td><td>4</td><td class='he-cell'>והיתה</td><td>ve-hayta</td><td>and-be</td><td>and-be</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.13</td><td>5</td><td class='he-cell'>לאות</td><td>le-ot</td><td>for-a-sign</td><td>ot_token_4_1_14_syntax</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.13</td><td>6</td><td class='he-cell'>ברית</td><td>berit</td><td>covenant</td><td>covenant</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.13</td><td>7</td><td class='he-cell'>ביני</td><td>beni-y</td><td>between-Me</td><td>between-Me</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.13</td><td>8</td><td class='he-cell'>ובין</td><td>u-ven</td><td>and-between</td><td>and-between</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.13</td><td>9</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.14</td><td>0</td><td class='he-cell'>והיה</td><td>ve-haya</td><td>and-be</td><td>and-be</td><td>logic_bearing</td><td class='cite'>TIR-029</td></tr>
+<tr><td>Gen.9.14</td><td>1</td><td class='he-cell'>בענני</td><td>be-anni-y</td><td>when-I-cloud-up</td><td>ANAN_VERB_handler_trigger</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.14</td><td>2</td><td class='he-cell'>ענן</td><td>anan</td><td>cloud</td><td>anan_token_2</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.14</td><td>3</td><td class='he-cell'>על</td><td>al</td><td>over</td><td>over</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.14</td><td>4</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.14</td><td>5</td><td class='he-cell'>ונראתה</td><td>ve-nirata</td><td>and-is-seen</td><td>the_bow_seen_trigger_two</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.14</td><td>6</td><td class='he-cell'>הקשת</td><td>ha-qeshet</td><td>the-bow</td><td>qeshet_token_2</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.14</td><td>7</td><td class='he-cell'>בענן</td><td>be-anan</td><td>in-the-cloud</td><td>anan_token_3</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.15</td><td>0</td><td class='he-cell'>וזכרתי</td><td>ve-zakharti</td><td>and-I-will-remember</td><td>ZAKHAR_token_2_gen_19_prediction_lands</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.15</td><td>1</td><td class='he-cell'>את</td><td>et</td><td>obj-marker·et</td><td>obj_marker</td><td>logic_bearing</td><td class='cite'>TIR-014</td></tr>
+<tr><td>Gen.9.15</td><td>2</td><td class='he-cell'>בריתי</td><td>beriti-y</td><td>My-covenant</td><td>brit_token_6</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.15</td><td>3</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>which</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.15</td><td>4</td><td class='he-cell'>ביני</td><td>beni-y</td><td>between-Me</td><td>between-Me</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.15</td><td>5</td><td class='he-cell'>וביניכם</td><td>u-vene-khem</td><td>and-between-you</td><td>and-between-you</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.15</td><td>6</td><td class='he-cell'>ובין</td><td>u-ven</td><td>and-between</td><td>and-between</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.15</td><td>7</td><td class='he-cell'>כל</td><td>kal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.15</td><td>8</td><td class='he-cell'>נפש</td><td>nefesh</td><td>living-soul</td><td>living-soul</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.15</td><td>9</td><td class='he-cell'>חיה</td><td>chaya</td><td>living</td><td>living</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.15</td><td>10</td><td class='he-cell'>בכל</td><td>be-khal</td><td>in-all</td><td>in-all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.15</td><td>11</td><td class='he-cell'>בשר</td><td>basar</td><td>flesh</td><td>flesh</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.15</td><td>12</td><td class='he-cell'>ולא</td><td>ve-lo</td><td>and-not</td><td>and-not</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.15</td><td>13</td><td class='he-cell'>יהיה</td><td>yihye</td><td>be</td><td>be</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.15</td><td>14</td><td class='he-cell'>עוד</td><td>od</td><td>still/again</td><td>still_again</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.15</td><td>15</td><td class='he-cell'>המים</td><td>ha-mayim</td><td>the-waters</td><td>the-waters</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.15</td><td>16</td><td class='he-cell'>למבול</td><td>le-mabul</td><td>into-a-deluge</td><td>mabul_token_8</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.15</td><td>17</td><td class='he-cell'>לשחת</td><td>le-shachet</td><td>to-destroy</td><td>shachat_token_7</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.15</td><td>18</td><td class='he-cell'>כל</td><td>kal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.15</td><td>19</td><td class='he-cell'>בשר</td><td>basar</td><td>flesh</td><td>flesh</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.16</td><td>0</td><td class='he-cell'>והיתה</td><td>ve-hayta</td><td>and-be</td><td>and-be</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.16</td><td>1</td><td class='he-cell'>הקשת</td><td>ha-qeshet</td><td>the-bow</td><td>qeshet_token_3</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.16</td><td>2</td><td class='he-cell'>בענן</td><td>be-anan</td><td>in-the-cloud</td><td>anan_token_4</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.16</td><td>3</td><td class='he-cell'>וראיתיה</td><td>u-reiti-ha</td><td>and-I-will-see-it</td><td>inspection_verb_Godward</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.16</td><td>4</td><td class='he-cell'>לזכר</td><td>li-zekor</td><td>to-remember</td><td>ZAKHAR_token_3_brit_olam</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.16</td><td>5</td><td class='he-cell'>ברית</td><td>berit</td><td>covenant</td><td>covenant</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.16</td><td>6</td><td class='he-cell'>עולם</td><td>olam</td><td>everlasting</td><td>olam_token_5</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.16</td><td>7</td><td class='he-cell'>בין</td><td>ben</td><td>between</td><td>between</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.16</td><td>8</td><td class='he-cell'>אלהים</td><td>Elohim</td><td>God</td><td>ELOHIM_third_person_in_own_speech</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.16</td><td>9</td><td class='he-cell'>ובין</td><td>u-ven</td><td>and-between</td><td>and-between</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.16</td><td>10</td><td class='he-cell'>כל</td><td>kal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.16</td><td>11</td><td class='he-cell'>נפש</td><td>nefesh</td><td>living-soul</td><td>living-soul</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.16</td><td>12</td><td class='he-cell'>חיה</td><td>chaya</td><td>living</td><td>living</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.16</td><td>13</td><td class='he-cell'>בכל</td><td>be-khal</td><td>in-all</td><td>in-all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.16</td><td>14</td><td class='he-cell'>בשר</td><td>basar</td><td>flesh</td><td>flesh</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.16</td><td>15</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>which</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.16</td><td>16</td><td class='he-cell'>על</td><td>al</td><td>over</td><td>over</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.16</td><td>17</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.17</td><td>0</td><td class='he-cell'>ויאמר</td><td>va-yomer</td><td>and-He-said</td><td>FRAME_THREE_the_seal</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.17</td><td>1</td><td class='he-cell'>אלהים</td><td>Elohim</td><td>God</td><td>God</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.17</td><td>2</td><td class='he-cell'>אל</td><td>el</td><td>to</td><td>to</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.17</td><td>3</td><td class='he-cell'>נח</td><td>nocha</td><td>Noah</td><td>name_nocha</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.17</td><td>4</td><td class='he-cell'>זאת</td><td>zot</td><td>this</td><td>this</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.17</td><td>5</td><td class='he-cell'>אות</td><td>ot</td><td>sign-of</td><td>ot_token_5</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.17</td><td>6</td><td class='he-cell'>הברית</td><td>ha-berit</td><td>the-covenant</td><td>the-covenant</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.17</td><td>7</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>which</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.17</td><td>8</td><td class='he-cell'>הקמתי</td><td>haqimoti</td><td>I-have-established</td><td>HAKIMOTI_perfect_ladder_rung_three</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.17</td><td>9</td><td class='he-cell'>ביני</td><td>beni-y</td><td>between-Me</td><td>between-Me</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.17</td><td>10</td><td class='he-cell'>ובין</td><td>u-ven</td><td>and-between</td><td>and-between</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.17</td><td>11</td><td class='he-cell'>כל</td><td>kal</td><td>all</td><td>all</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.17</td><td>12</td><td class='he-cell'>בשר</td><td>basar</td><td>flesh</td><td>flesh</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.17</td><td>13</td><td class='he-cell'>אשר</td><td>asher</td><td>which</td><td>which</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.17</td><td>14</td><td class='he-cell'>על</td><td>al</td><td>over</td><td>over</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+<tr><td>Gen.9.17</td><td>15</td><td class='he-cell'>הארץ</td><td>ha-aretz</td><td>the-earth</td><td>the-earth</td><td>logic_bearing</td><td class='cite'>none</td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_22_covenant_bow — The covenant and the bow: My bow I have set in the cloud (9:8-17) [frozen]
+
+final state: WORLD=[] (+3 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[&#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;, &#x27;read_before_install&#x27;]
+
+=== S1 — Frame one opens, the registers sleep on: after STEP_Gn_9_8
+    וַיֹּאמֶר אֱלֹהִים אֶל־נֹחַ וְאֶל־בָּנָיו (va-yomer Elohim el-Noach ve-el-banav)
+    PASS  flags noach/banav/tevah as read-before-install  (flagged=[&#x27;banav&#x27;, &#x27;noach&#x27;, &#x27;tevah&#x27;])
+    PASS  SPECS empty.  (queue=0)
+
+=== S2 — The ladder&#x27;s participle rung holds: after STEP_Gn_9_9
+    הִנְנִי מֵקִים אֶת־בְּרִיתִי (hinni mekim et-briti)
+    PASS  Facts hinni_mekim_et_briti HOLD.  (1 facts)
+
+=== S3 — The public never-agains stand: after STEP_Gn_9_11
+    וְלֹא־יִכָּרֵת כָּל־בָּשָׂר עוֹד (ve-lo-yikkaret kol-basar od)
+    PASS  Facts va_hakimoti_et_briti_itkhem HOLD  (3 facts)
+    PASS  ve_lo_yikkaret INVARIANT active  (invariants=[&#x27;ve_lo_yikkaret_kol_basar_od_mi_mei_ha_mabul&#x27;, &#x27;ve_lo_yihyeh_od_mabul_le_shachet_ha_aretz&#x27;])
+    PASS  ve_lo_yihyeh_od_mabul INVARIANT active.  (invariants=[&#x27;ve_lo_yikkaret_kol_basar_od_mi_mei_ha_mabul&#x27;, &#x27;ve_lo_yihyeh_od_mabul_le_shachet_ha_aretz&#x27;])
+
+=== S4 — The bow set, the sign-office held: after STEP_Gn_9_13
+    אֶת־קַשְׁתִּי נָתַתִּי בֶּעָנָן (et-qashti natati be-anan)
+    PASS  Facts et_qashti_natati_be_anan/ve_haytah_le_ot_brit HOLD.  (6 facts)
+
+=== S5 — The weather-wired handler installed: after STEP_Gn_9_14
+    וְנִרְאֲתָה הַקֶּשֶׁת בֶּעָנָן (ve-nireatah ha-qeshet be-anan)
+    PASS  Facts be_anni_anan HOLD.  (7 facts)
+
+=== S6 — The remembering pledged — gen_19&#x27;s prediction lands: after STEP_Gn_9_15
+    וְזָכַרְתִּי אֶת־בְּרִיתִי (ve-zakharti et-briti)
+    PASS  Facts ve_zakharti_et_briti/ve_lo_yihyeh_od_ha_mayim HOLD.  (9 facts)
+
+=== S7 — The seal — the ladder tops out in the perfect: after STEP_Gn_9_17
+    זֹאת אוֹת־הַבְּרִית אֲשֶׁר הֲקִמֹתִי (zot ot-ha-brit asher hakimoti)
+    PASS  Facts zot_ot_ha_brit_asher_hakimoti HOLD  (11 facts)
+    PASS  SPECS empty.  (queue=0)
+
+=== S8_negative — Negative: the machine&#x27;s ? stays guarded
+    PASS  imperfect-in-command parsed as LET? (question mark kept)  (mood=LET?)
+    PASS  auto-upgrade REFUSED  (TIR-028: LET? never auto-upgrades to LET — a per-unit judgme...)
+    PASS  upgrade WITH citation allowed  (cite=per-unit judgment (owner), TIR-028 resolution)
+
+=== S9_negative — Negative: flags never block
+    PASS  commit proceeded (not blocked)  (LEDGER=[99])
+    PASS  pattern deviation FLAGGED  (flags=[&#x27;commit_without_test&#x27;])
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_22_covenant_bow.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_22_covenant_bow — 9:8-17
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_22_covenant_bow.yaml) is CANONICAL (Pre-Code);
+# this file is a derived, runnable rendering. Do not edit — regenerate. The
+# assertion block at the bottom is baked from the Stage D interpreter&#x27;s
+# actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;The covenant and the bow: My bow I have set in the cloud (9:8-17)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_22_covenant_bow&quot;)
+
+# -------------------------- Gen.9.8 · THE_TRIPLE_FRAME_OPENS ---------------
+# וַיֹּאמֶר אֱלֹהִים אֶל־נֹחַ וְאֶל־בָּנָיו אִתּוֹ לֵאמֹר
+# &quot;And God spoke unto Noah, and to his sons with him, saying:&quot;
+m.step(&quot;Gen.9.8&quot;)
+# ‹וַיֹּאמֶר אֱלֹהִים אֶל־נֹחַ וְאֶל־בָּנָיו אִתּוֹ› (“and-He-said God to
+# Noah and-to his-sons with-him”) — event: speak — agent God; theme to-
+# Noach-and-to-banav
+m.event(&quot;speak&quot;, agent=&quot;elohim&quot;, themes=[&quot;el_noach_ve_el_banav&quot;])
+# reads without prior install (flag, not fix): Noach, banav, ark
+m.presupposed(&quot;noach&quot;, &quot;banav&quot;, &quot;tevah&quot;)
+
+# -------------------------- Gen.9.9 · I_AM_ESTABLISHING --------------------
+# וַאֲנִי הִנְנִי מֵקִים אֶת־בְּרִיתִי אִתְּכֶם וְאֶת־זַרְעֲכֶם אַחֲרֵיכֶם
+# &quot;&#x27;As for Me, behold, I establish My covenant with you, and with your seed
+# after you;&quot;
+m.step(&quot;Gen.9.9&quot;)
+# ‹הִנְנִי מֵקִים אֶת־בְּרִיתִי אִתְּכֶם וְאֶת־זַרְעֲכֶם› (“behold-I
+# establishing obj-marker My-covenant with-you and-with your-seed”) — fact
+# holds: hinni-mekim-obj-marker·et-My-covenant-itkhem
+m.fact(&quot;hinni_mekim_et_briti_itkhem&quot;)
+
+# -------------------------- Gen.9.10 · EVERY_LIVING_SOUL_A_PARTY -----------
+# וְאֵת כָּל־נֶפֶשׁ הַחַיָּה אֲשֶׁר אִתְּכֶם בָּעוֹף בַּבְּהֵמָה
+# וּבְכָל־חַיַּת הָאָרֶץ אִתְּכֶם מִכֹּל יֹצְאֵי הַתֵּבָה לְכֹל חַיַּת
+# הָאָרֶץ
+# &quot;and with every living creature that is with you, the fowl, the cattle,
+# and every beast of the earth with you; of all that go out of the ark, even
+# every beast of the earth.&quot;
+m.step(&quot;Gen.9.10&quot;)
+# ‹וְאֵת כָּל־נֶפֶשׁ הַחַיָּה אֲשֶׁר אִתְּכֶם … מִכֹּל יֹצְאֵי הַתֵּבָה›
+# (“and-with all soul-of the-living which with-you … from-all goers-out-of
+# the-ark”) — fact holds: and-obj-marker·et-all-soul-of-the-beast-which-
+# itkhem
+m.fact(&quot;ve_et_kol_nefesh_ha_chayah_asher_itkhem&quot;)
+
+# -------------------------- Gen.9.11 · THE_CUT_VERB_BORN_REFUSING ----------
+# וַהֲקִמֹתִי אֶת־בְּרִיתִי אִתְּכֶם וְלֹא־יִכָּרֵת כָּל־בָּשָׂר עוֹד מִמֵּי
+# הַמַּבּוּל וְלֹא־יִהְיֶה עוֹד מַבּוּל לְשַׁחֵת הָאָרֶץ
+# &quot;And I will establish My covenant with you; neither shall all flesh be cut
+# off any more by the waters of the flood; neither shall there any more be a
+# flood to destroy the earth.&#x27;&quot;
+m.step(&quot;Gen.9.11&quot;)
+# ‹וַהֲקִמֹתִי אֶת־בְּרִיתִי אִתְּכֶם› (“and-I-will-establish obj-marker My-
+# covenant with-you”) — fact holds: and-I-will-establish-obj-marker·et-My-
+# covenant-itkhem
+m.fact(&quot;va_hakimoti_et_briti_itkhem&quot;)
+# ‹וְלֹא־יִכָּרֵת כָּל־בָּשָׂר עוֹד מִמֵּי הַמַּבּוּל› (“and-not be-cut-off
+# all flesh still/again from-the-waters-of the-deluge”) — standing
+# constraint: and-not-yikkaret-all-flesh-still/again-from-waters-of-the-
+# deluge
+m.invariant(&quot;ve_lo_yikkaret_kol_basar_od_mi_mei_ha_mabul&quot;)
+# ‹וְלֹא־יִהְיֶה עוֹד מַבּוּל לְשַׁחֵת הָאָרֶץ› (“and-not be still/again
+# deluge to-destroy the-earth”) — standing constraint: and-not-yihyeh-
+# still/again-deluge-to-destroy-the-earth
+m.invariant(&quot;ve_lo_yihyeh_od_mabul_le_shachet_ha_aretz&quot;)
+
+# -------------------------- Gen.9.12 · THE_FRAME_REOPENS_ON_THE_SIGN -------
+# וַיֹּאמֶר אֱלֹהִים זֹאת אוֹת־הַבְּרִית אֲשֶׁר־אֲנִי נֹתֵן בֵּינִי
+# וּבֵינֵיכֶם וּבֵין כָּל־נֶפֶשׁ חַיָּה אֲשֶׁר אִתְּכֶם לְדֹרֹת עוֹלָם
+# &quot;And God said: &#x27;This is the token of the covenant which I make between Me
+# and you and every living creature that is with you, for perpetual
+# generations:&quot;
+m.step(&quot;Gen.9.12&quot;)
+# ‹וַיֹּאמֶר אֱלֹהִים זֹאת אוֹת־הַבְּרִית› (“and-He-said God this sign-of
+# the-covenant”) — event: speak — agent God; theme this-sign-of-the-brit
+m.event(&quot;speak&quot;, agent=&quot;elohim&quot;, themes=[&quot;zot_ot_ha_brit&quot;])
+# ‹אֲשֶׁר־אֲנִי נֹתֵן בֵּינִי וּבֵינֵיכֶם … לְדֹרֹת עוֹלָם› (“which I giving
+# between-Me and-between-you … for-generations-of everlasting”) — fact
+# holds: I-giving-beini-and-veineikhem-to-generations-of-everlasting
+m.fact(&quot;ani_noten_beini_u_veineikhem_le_dorot_olam&quot;)
+
+# -------------------------- Gen.9.13 · MY_BOW_IN_THE_CLOUD -----------------
+# אֶת־קַשְׁתִּי נָתַתִּי בֶּעָנָן וְהָיְתָה לְאוֹת בְּרִית בֵּינִי וּבֵין
+# הָאָרֶץ
+# &quot;I have set My bow in the cloud, and it shall be for a token of a covenant
+# between Me and the earth.&quot;
+m.step(&quot;Gen.9.13&quot;)
+# ‹אֶת־קַשְׁתִּי נָתַתִּי בֶּעָנָן וְהָיְתָה לְאוֹת בְּרִית› (“obj-marker
+# My-bow I-have-set in-the-cloud and-be for-a-sign covenant”) — fact holds:
+# obj-marker·et-qashti-I-have-set-in-cloud; and-haytah-to-sign-of-brit-
+# beini-and-vein-the-earth
+m.fact(&quot;et_qashti_natati_be_anan&quot;,
+       &quot;ve_haytah_le_ot_brit_beini_u_vein_ha_aretz&quot;)
+
+# -------------------------- Gen.9.14 · THE_WEATHER_WIRED_HANDLER -----------
+# וְהָיָה בְּעַנְנִי עָנָן עַל־הָאָרֶץ וְנִרְאֲתָה הַקֶּשֶׁת בֶּעָנָן
+# &quot;And it shall come to pass, when I bring clouds over the earth, and the
+# bow is seen in the cloud,&quot;
+m.step(&quot;Gen.9.14&quot;)
+# ‹וְהָיָה בְּעַנְנִי עָנָן … וְנִרְאֲתָה הַקֶּשֶׁת … וְזָכַרְתִּי› (“and-be
+# when-I-cloud-up cloud … and-is-seen the-bow … and-mark”) — standing
+# handler — if in-anni-cloud-and-nireatah-the-bow then and-I-will-remember-
+# obj-marker·et-My-covenant
+m.handler(&quot;be_anni_anan_ve_nireatah_ha_qeshet&quot;,
+          &quot;ve_zakharti_et_briti&quot;)
+
+# -------------------------- Gen.9.15 · THE_REMEMBERING_PLEDGED -------------
+# וְזָכַרְתִּי אֶת־בְּרִיתִי אֲשֶׁר בֵּינִי וּבֵינֵיכֶם וּבֵין כָּל־נֶפֶשׁ
+# חַיָּה בְּכָל־בָּשָׂר וְלֹא־יִהְיֶה עוֹד הַמַּיִם לְמַבּוּל לְשַׁחֵת
+# כָּל־בָּשָׂר
+# &quot;that I will remember My covenant, which is between Me and you and every
+# living creature of all flesh; and the waters shall no more become a flood
+# to destroy all flesh.&quot;
+m.step(&quot;Gen.9.15&quot;)
+# ‹וְזָכַרְתִּי אֶת־בְּרִיתִי … וְלֹא־יִהְיֶה עוֹד הַמַּיִם לְמַבּוּל›
+# (“and-I-will-remember obj-marker My-covenant … and-not be still/again the-
+# waters into-a-deluge”) — fact holds: and-I-will-remember-obj-marker·et-My-
+# covenant-beini-and-veineikhem; and-not-yihyeh-still/again-the-waters-to-
+# deluge
+m.fact(&quot;ve_zakharti_et_briti_beini_u_veineikhem&quot;,
+       &quot;ve_lo_yihyeh_od_ha_mayim_le_mabul&quot;)
+
+# -------------------------- Gen.9.16 · TO_REMEMBER_THE_EVERLASTING ---------
+# וְהָיְתָה הַקֶּשֶׁת בֶּעָנָן וּרְאִיתִיהָ לִזְכֹּר בְּרִית עוֹלָם בֵּין
+# אֱלֹהִים וּבֵין כָּל־נֶפֶשׁ חַיָּה בְּכָל־בָּשָׂר אֲשֶׁר עַל־הָאָרֶץ
+# &quot;And the bow shall be in the cloud; and I will look upon it, that I may
+# remember the everlasting covenant between God and every living creature of
+# all flesh that is upon the earth.&#x27;&quot;
+m.step(&quot;Gen.9.16&quot;)
+# ‹וּרְאִיתִיהָ לִזְכֹּר בְּרִית עוֹלָם בֵּין אֱלֹהִים וּבֵין כָּל־נֶפֶשׁ
+# חַיָּה› (“and-I-will-see-it to-remember covenant everlasting between God
+# and-between all living-soul living”) — fact holds: and-reitiha-to-me-
+# zekor-brit-everlasting
+m.fact(&quot;u_reitiha_li_zekor_brit_olam&quot;)
+
+# -------------------------- Gen.9.17 · THE_SEAL_I_HAVE_ESTABLISHED ---------
+# וַיֹּאמֶר אֱלֹהִים אֶל־נֹחַ זֹאת אוֹת־הַבְּרִית אֲשֶׁר הֲקִמֹתִי בֵּינִי
+# וּבֵין כָּל־בָּשָׂר אֲשֶׁר עַל־הָאָרֶץ
+# &quot;And God said unto Noah: &#x27;This is the token of the covenant which I have
+# established between Me and all flesh that is upon the earth.&#x27;&quot;
+m.step(&quot;Gen.9.17&quot;)
+# ‹וַיֹּאמֶר אֱלֹהִים אֶל־נֹחַ› (“and-He-said God to Noah”) — event: speak —
+# agent God; theme to-Noach
+m.event(&quot;speak&quot;, agent=&quot;elohim&quot;, themes=[&quot;el_noach&quot;])
+# ‹זֹאת אוֹת־הַבְּרִית אֲשֶׁר הֲקִמֹתִי› (“this sign-of the-covenant which
+# I-have-established”) — fact holds: this-sign-of-the-brit-which-I-will-
+# establish
+m.fact(&quot;zot_ot_ha_brit_asher_hakimoti&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == {&#x27;banav&#x27;, &#x27;noach&#x27;, &#x27;tevah&#x27;}
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS[&quot;log&quot;]) == 0
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {&#x27;read_before_install&#x27;: 3}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;hinni_mekim_et_briti_itkhem&#x27;, &#x27;ve_et_kol_nefesh_ha_chayah_asher_itkhem&#x27;, &#x27;va_hakimoti_et_briti_itkhem&#x27;, &#x27;ani_noten_beini_u_veineikhem_le_dorot_olam&#x27;, &#x27;et_qashti_natati_be_anan&#x27;, &#x27;ve_haytah_le_ot_brit_beini_u_vein_ha_aretz&#x27;, &#x27;handler: IF(be_anni_anan_ve_nireatah_ha_qeshet) THEN(ve_zakharti_et_briti)&#x27;, &#x27;ve_zakharti_et_briti_beini_u_veineikhem&#x27;, &#x27;ve_lo_yihyeh_od_ha_mayim_le_mabul&#x27;, &#x27;u_reitiha_li_zekor_brit_olam&#x27;, &#x27;zot_ot_ha_brit_asher_hakimoti&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == [&#x27;ve_lo_yikkaret_kol_basar_od_mi_mei_ha_mabul&#x27;, &#x27;ve_lo_yihyeh_od_mabul_le_shachet_ha_aretz&#x27;]
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 4
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre>
+<div class="note">FROZEN 2026-08-03 (persistent derivation agent; freeze-after-review by the main loop — NO agent freeze; fourth unit under the PIPELINE + DEBUT-MAP process): twenty-third-unit candidate — THE COVENANT AND THE BOW; thirteenth extension-free derivation candidate in a row. One covenant in three speech-acts (the machine&#x27;s only three events), every call precedent-matched with encodings quoted: the ASPECT-LADDER as facts in three grammars (participle TIR-031 per gen_17&#x27;s anokhi-mamtir; weqatal TIR-029 per gen_16&#x27;s OWN 6:18 encoding of the same verb — re-sounded plural here; closing perfect) — the establishment never takes a narrative deed-verb; BRIT tokens 2-8 of its first eight all in-span; KARAT (&#x27;cut&#x27;) born NEGATED — the covenant-cutting verb&#x27;s Torah debut refuses a cutting-off [crown]; the public never-again pair as INVARIANT x2 (gen_20&#x27;s interior pledges externalized, delta named) with the decree&#x27;s destroy-verb quoted inside; the war-bow (all later tokens weaponry) hung in the cloud (whose next tokens are the pillar of cloud) — held as FACTS on the Cain-mark precedent, ASSIGN and INSTALL declined; the weather-wired memory-duty as HANDLER (gen_12&#x27;s class; the letter&#x27;s own when-then chain crossing the 9:14/15 break); ZAKHAR tokens 2-3 landing frozen gen_19&#x27;s prediction; the third-person Elohim clause held as the letter&#x27;s strangest turn; the repetition-table (brit x7, bein x12) as the letter&#x27;s own structure. Onkelos seats the Memra in God&#x27;s place five times, keeps the self-pledged remembering active against its 8:1 precedent, keeps MY-bow, loses the cut-play — dual-track. Machine state: t0 empty, zero installs (+3 presupposed), zero writes, zero queue traffic, zero tests, three events, two invariants, one handler, nine facts, three read-flags — the counter-decree completed, at rest.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

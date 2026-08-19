@@ -1,0 +1,707 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_71_crossed_hands — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_71_crossed_hands?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The crossed hands (48:1-22) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_71_crossed_hands</b> · Genesis 48:1-22 · derive logic_derived_v1 · phase FWD-12</div>
+<div class="meta"><a href="../#Gen/48/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">יְשִׂמְךָ אֱלֹהִים כְּאֶפְרַיִם וְכִמְנַשֶּׁה</span> · <i>yesimkha Elohim ke-efrayim ve-khi-menashe</i> · &#x27;God make you as Ephraim and as Manasseh&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DERIVED 2026-08-09 · FORWARD ERA unit #12 (run FWD-3 block 2; freeze review waived — mechanical gates only). Span: 48:1-22, whole chapter: 22 verses (SNAPSHOT-verified). Oral layer IN-PIPELINE: manifest 13/13 VERIFIED, zero FAILED — see oral_audit_note_en. MACHINE PROFILE. TWO DECLAREs, ONE RESULT. The take-them summons (qachem na elai, 48:9) pops at the nearing (48:10); Joseph&#x27;s correction-demand (sim yeminkha al rosho, 48:18 — &#x27;set your right hand on his head&#x27;) meets the flat refusal (va-yemaen aviv, 48:19) and DIES BY REFUSAL, staying OPEN on the queue (the class of Reuben&#x27;s pledge, 42:37-38): the machine keeps the refused correction on file. TWO BLESS stations: the blessing of Joseph through the lads (48:15, with the angel-clause and the two minted verbs at 48:16) and the living formula (48:20, BLESS of Ephraim-and-Manasseh — &#x27;by you shall Israel bless&#x27;). ONE EVENT: the crossing itself (48:14, sikel yadav — the corpus&#x27;s standing younger-over- elder engine run with open eyes). The adoption (48:5) is filed as status-FACT by registry restraint — the tribal ledger is litigated at the mustering-rolls (Num 1-2, armed), and the ledger lists before it installs (gen_69&#x27;s law). REGISTRY 0; TESTS 0; LEDGER 0. Queue at close: ONE OPEN (the refused right-hand demand). CARE-POINTS: the dimmed-eyes measure-for-measure (Isaac 27:1 deceived by Jacob; Jacob&#x27;s own eyes heavy at 48:10 as the sons are crossed on him — but yadati doubled, 48:19: this crossing SEES); the two holdings set side by side (Pharaoh&#x27;s achuza 47:11 vs the covenant&#x27;s achuzat olam 48:4); the bed-triple across the span-seam (head 47:31, upon 48:2, into 49:33 — armed); the shekhem homograph carried named (town / portion — the bones&#x27; plot, Josh 24:32 named); the sword-and-bow against 33:19&#x27;s purchase — readings named, never merged. WATCHLIST ARMS: 49:22-26 (Joseph&#x27;s own blessing), 50:24 (the return-clause repeated at Joseph&#x27;s death — this run), Exod 3:16-17 (the return executed), Num 1:32-35 (the adoption mustered as tribes), Josh 24:32 (the bones at Shechem), Hos 11:3 (the qamats take-them).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-09 (IN-PIPELINE, forward era; manifest logic/oral_audit/manifests/gen_71_crossed_hands_claims.json 13/13 VERIFIED, zero FAILED; record logic/oral_audit/AUDIT_gen_71_2026-08-09.md). CROWNS (chain-attested + DB-verified). THE ONE FULL SAYING [G71-01, MS on 48:20; the Zohar named by folio] — THE UNIT&#x27;S MARQUEE: לאמור (&quot;saying&quot;) FULL with the vav exactly ONCE in the whole Torah — the first word of the living blessing-formula (&#x27;By you shall Israel bless...&#x27;), while the SAME VERSE carries the word LEAN four tokens on: one verse, both spellings — census EXACT in-stream; the Kitzur counts the vav (six) against the six Ephraim-precedences and the six judges (named). THE BLESSING AND THE CURSE [G71-02, MS on 48:20]: ישמך (&quot;may He make you&quot;) — the Masorah&#x27;s pair: Israel&#x27;s blessing-formula here and the exiles&#x27; curse-formula (Jer 29:22, Zedekiah and Ahab, named): one lean skeleton for both; Torah-side checked unique. THE LEAN FIRSTBORN [G71-03, MS on 48:18; the Hilleli vs the Yerushalmi; the Ramah]: הבכר (&quot;the firstborn&quot;) at Joseph&#x27;s protest — Hilleli full, Yerushalmi lean, all accurate books lean; the stream&#x27;s lean census exactly FOUR (43:33, 48:18, Deut 21:16-17 — checked), its full census six (printed beside the Masorah&#x27;s four-count: readings named, never merged): the letter thins the firstbornship in the claiming word. THE LEAN ROAD [G71-04, MS on 48:7; the Ramah&#x27;s nine]: לבא (&quot;to come&quot;) at Rachel&#x27;s death-road — Hilleli full, all books lean, the Masorah&#x27;s nine-mnemonic at this verse; the stream&#x27;s bare census EIGHT with 48:7 canon-first (checked). THE FROM-AGE WORD [G71-05, Kitzur on 48:10]: מזקן (&quot;from age&quot;) — Torah-unique (checked): the two dimmed-eyes blessings, measure for measure (Isaac 27:1 named). THE TAKE-THEM [G71-06, Kitzur on 48:9]: קחם (&quot;take them&quot;) — Torah-unique (checked); Hosea&#x27;s partner with the long-a vowel (the qamats) named (11:3): the Presence taking the boys on His arms. THE TWO PASSIVES [G71-07/08, Kitzur on 48:16 and 48:6]: ויקרא (&quot;let it be called&quot;) and יקראו (&quot;they shall be called&quot;) — each its one Torah station by vocalization (checked); the name into the lads, the lads into their brothers&#x27; names; Levi&#x27;s called-not-counted house paired (named). THE BED-FILE LANDS [G71-09, Kitzur; Esther named]: על המטה (&quot;upon the bed&quot;) — the Torah&#x27;s one adjacency, at the STRENGTHENING (48:2, checked): the righteous strengthen on the bed, Haman falls on it (Esth 7:8, named); the span&#x27;s bed-triple named (head 47:31 / upon 48:2 / into 49:33 armed). THE POINTING FILE [G71-10, MS ×5; the old Sepharad codices]: לאפיו (&quot;to his face&quot;) pe dageshed (checked); בשמאלו (&quot;at his left&quot;) bet and shin soft; שם (&quot;there&quot;, 48:7) shin dageshed after the buried-her verb; לעם (&quot;to a people&quot;) lamed soft; ואברכם (&quot;and I will bless them&quot;) kaf in TSERE with the old Sepharad codices — the stream WITH the old codices here (against them at 47:30): the file checked and asserted. THE TWO MINTED VERBS [G71-11, the stream&#x27;s own census]: וידגו (&quot;may they teem like fish&quot;) and שכל (&quot;he crossed wisely&quot;) — each its ONE Torah token, both in the crossing scene (checked + asserted). THE YOUNGER [G71-12, Kitzur on 48:14]: הצעיר (&quot;the younger&quot;) — the definite form&#x27;s one Torah token, at the verse the hands cross (checked); &#x27;he made himself small&#x27; — Joshua from him (named). READINGS (named-only) [G71-13, Kitzur]: Ephraim-and-Manasseh = Reuben-and-Simeon by letter-count — the declared equivalence exact in the letters; yadati = five kings; melo = Joshua; shekhem achad = the firstborn&#x27;s share; the bones&#x27; plot (Josh 24:32); the sword-and-bow readings (the Targum&#x27;s prayer).</div>
+<div class="meta">confidence: structure tested; oral layer verified 13/13</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>FORWARD ERA run 3, block 2. Canon continuation: Gen 48:1-22 — the adoption and the crossed hands; whole chapter.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Span + source + conventions</td><td>SNAPSHOT prestage: 22 verses, every verse with an etnachta (the mid-verse pause); no ketiv/qere pairs surfaced by the claim probes. Volitive census: the take-them summons (48:9) and Joseph&#x27;s correction-demand (48:18) — two DECLAREs; the covenant recall (48:3-4) and the return-promise (48:21) are covenant speech, filed as facts.</td><td>established</td></tr>
+<tr><td><b>C</b></td><td>Machine structure</td><td>Two DECLAREs, one RESULT (the nearing, 48:10). The correction demand dies by refusal (va-yemaen, 48:19) and stays OPEN — the Reuben&#x27;s-pledge class. BLESS at 48:15 (Joseph, through the lads) and 48:20 (the living formula). EVENT at 48:14 (the crossing). The adoption filed as fact by registry restraint (the ledger lists before it installs). REGISTRY 0; TESTS 0; LEDGER 0. Queue at close: one open.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Gen 48 (10 notes) + Kitzur Baal HaTurim on Gen 48 (11 notes). Manifest 13 rows: 13 VERIFIED / 0 FAILED / 0 UNCHECKABLE. Two Hilleli-vs-stream splits carried named (the lean firstborn 48:18; the lean road-word 48:7); the stream&#x27;s full-firstborn census (six) printed beside the Masorah&#x27;s four-count — readings named, never merged.</td><td>established</td></tr>
+<tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 13/13 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-09 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_48_1 · Gen.48.1 · <span class='expr'>YOUR_FATHER_IS_ILL</span></h3>
+<p><span class="he">וַיְהִי אַחֲרֵי הַדְּבָרִים הָאֵלֶּה וַיֹּאמֶר לְיוֹסֵף הִנֵּה אָבִיךָ חֹלֶה וַיִּקַּח אֶת־שְׁנֵי בָנָיו עִמּוֹ אֶת־מְנַשֶּׁה וְאֶת־אֶפְרָיִם</span> · <i>va-yehi achare ha-devarim ha-ele va-yomer le-yosef hine avi-kha chole va-yiqach et-shene vanay-v im-o et-menashe ve-et-efrayim</i> · And it was after these things, that one said to Joseph: Behold, your father is ill. And he took his two sons with him, Manasseh and Ephraim.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֗י אַחֲרֵי֙ הַדְּבָרִ֣ים הָאֵ֔לֶּה וַיֹּ֣אמֶר לְיוֹסֵ֔ף הִנֵּ֥ה אָבִ֖יךָ חֹלֶ֑ה</span> · <i>va-yehi achare ha-devarim ha-ele va-yomer le-yosef hine avi-kha chole</i> · one said to Joseph: behold, your father is ill (etnachta on chole) [VERIFIED: SNAPSHOT Gen.48.1 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּקַּ֞ח אֶת שְׁנֵ֤י בָנָיו֙ עִמּ֔וֹ אֶת מְנַשֶּׁ֖ה וְאֶת אֶפְרָֽיִם</span> · <i>va-yiqach et-shene vanay-v im-o et-menashe ve-et-efrayim</i> · and he took his two sons with him, Manasseh and Ephraim (verse-final efrayim) [VERIFIED: SNAPSHOT Gen.48.1 idx9-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(hine_avikha_chole, t0)</span><br><span class="gloss">= HOLDS(hine-avikha-chole, t0)</span><br>THE MESSAGE. hine avikha CHOLE — &#x27;behold, your father is ILL&#x27;: the illness-word enters the patriarchs&#x27; story at its close (the readings on Jacob asking for illness before death, that a man may order his house, are the chain&#x27;s — the machine files the letter: the deathbed scene is CONVENED, not stumbled into); va-yiqach et SHENE vanav — Joseph brings the two the adoption will claim.
+</td><td><span class="he">הִנֵּה אָבִיךָ חֹלֶה</span> · <i>hine avi-kha chole</i><br><span class="gloss">= hine avi-kha chole</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The illness message; the two sons brought.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_48_2 · Gen.48.2 · <span class='expr'>STRENGTHENED_ON_THE_BED</span></h3>
+<p><span class="he">וַיַּגֵּד לְיַעֲקֹב וַיֹּאמֶר הִנֵּה בִּנְךָ יוֹסֵף בָּא אֵלֶיךָ וַיִּתְחַזֵּק יִשְׂרָאֵל וַיֵּשֶׁב עַל־הַמִּטָּה</span> · <i>va-yaged le-yaaqov va-yomer hine bin-kha yosef ba ele-kha va-yitchazeq yisrael va-yeshev al-ha-mita</i> · And one told Jacob, and said: Behold, your son Joseph comes to you. And Israel strengthened himself, and sat upon the bed.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּגֵּ֣ד לְיַעֲקֹ֔ב וַיֹּ֕אמֶר הִנֵּ֛ה בִּנְךָ֥ יוֹסֵ֖ף בָּ֣א אֵלֶ֑יךָ</span> · <i>va-yaged le-yaaqov va-yomer hine bin-kha yosef ba ele-kha</i> · behold, your son Joseph comes to you (etnachta on ele-kha) [VERIFIED: SNAPSHOT Gen.48.2 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּתְחַזֵּק֙ יִשְׂרָאֵ֔ל וַיֵּ֖שֶׁב עַל הַמִּטָּֽה</span> · <i>va-yitchazeq yisrael va-yeshev al-ha-mita</i> · and Israel strengthened himself, and sat upon the bed (verse-final ha-mita) [VERIFIED: SNAPSHOT Gen.48.2 idx8-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yitchazeq_yisrael_va_yeshev_al_ha_mita, t0)</span><br><span class="gloss">= HOLDS(and-yitchazeq-yisrael-and-yeshev-upon-the-mita, t0)</span><br>THE STRENGTHENING [G71-09]. va-YITCHAZEQ yisrael — &#x27;and Israel STRENGTHENED himself&#x27;: the dying man sits up for the blessing-hour; va-yeshev AL ha-mita — &#x27;and sat UPON the bed&#x27;: the upon-the-bed adjacency, the Torah&#x27;s ONE (47:31 bowed at the bed&#x27;s HEAD; 49:33 will gather the feet INTO it — the span&#x27;s bed-triple), and the Kitzur&#x27;s file closes on Esther: the righteous, even weak, STRENGTHEN on the bed; Haman, at his height, FALLS on it (Esth 7:8, named) — gen_70&#x27;s armed bed-file lands [VERIFIED: manifest G71-09].
+</td><td><span class="he">וַיִּתְחַזֵּק יִשְׂרָאֵל וַיֵּשֶׁב עַל־הַמִּטָּה</span> · <i>va-yitchazeq yisrael va-yeshev al-ha-mita</i><br><span class="gloss">= and-yitchazeq yisrael and-yeshev upon-the-mita</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The bed-file lands at its strengthening station.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_48_3 · Gen.48.3 · <span class='expr'>EL_SHADAY_AT_LUZ</span></h3>
+<p><span class="he">וַיֹּאמֶר יַעֲקֹב אֶל־יוֹסֵף אֵל שַׁדַּי נִרְאָה־אֵלַי בְּלוּז בְּאֶרֶץ כְּנָעַן וַיְבָרֶךְ אֹתִי</span> · <i>va-yomer yaaqov el-yosef el shaday nira-el-y be-luz be-eretz kenaan va-yevarekh et-y</i> · And Jacob said to Joseph: El Shaddai appeared to me at Luz in the land of Canaan, and blessed me.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר יַעֲקֹב֙ אֶל יוֹסֵ֔ף אֵ֥ל שַׁדַּ֛י נִרְאָֽה אֵלַ֥י בְּל֖וּז בְּאֶ֣רֶץ כְּנָ֑עַן</span> · <i>va-yomer yaaqov el-yosef el shaday nira-el-y be-luz be-eretz kenaan</i> · El Shaddai appeared to me at Luz in the land of Canaan (etnachta on kenaan) [VERIFIED: SNAPSHOT Gen.48.3 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיְבָ֖רֶךְ אֹתִֽי</span> · <i>va-yevarekh et-y</i> · and blessed me (verse-final et-y) [VERIFIED: SNAPSHOT Gen.48.3 idx11-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(el_shaday_nira_elai_be_luz, t0)</span><br><span class="gloss">= HOLDS(to-shaday-nira-elai-in-luz, t0)</span><br>THE RECALL. EL SHADAY nira elai be-LUZ — Jacob opens the adoption with the deed to it: the Luz appearance (35:9-12, gen_58&#x27;s span — where the name Israel was written and the nation-promise given): the machine notes the legal shape — the grandfather cites his covenant before amending his house.
+</td><td><span class="he">אֵל שַׁדַּי נִרְאָה־אֵלַי בְּלוּז</span> · <i>el shaday nira-el-y be-luz</i><br><span class="gloss">= to shaday nira-to-y in-luz</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The Luz appearance recalled.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_48_4 · Gen.48.4 · <span class='expr'>THE_PROMISE_RECALLED</span></h3>
+<p><span class="he">וַיֹּאמֶר אֵלַי הִנְנִי מַפְרְךָ וְהִרְבִּיתִךָ וּנְתַתִּיךָ לִקְהַל עַמִּים וְנָתַתִּי אֶת־הָאָרֶץ הַזֹּאת לְזַרְעֲךָ אַחֲרֶיךָ אֲחֻזַּת עוֹלָם</span> · <i>va-yomer el-y hin-ni mafr-kha ve-hirbiti-kha u-netati-kha li-qehal amim ve-natati et-ha-aretz ha-zot le-zara-kha achare-kha achuzat olam</i> · And He said to me: Behold, I will make you fruitful and multiply you, and I will make you a company of peoples; and I will give this land to your seed after you, an everlasting holding.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֣אמֶר אֵלַ֗י הִנְנִ֤י מַפְרְךָ֙ וְהִרְבִּיתִ֔ךָ וּנְתַתִּ֖יךָ לִקְהַ֣ל עַמִּ֑ים</span> · <i>va-yomer el-y hin-ni mafr-kha ve-hirbiti-kha u-netati-kha li-qehal amim</i> · behold, I will make you fruitful and multiply you, a company of peoples (etnachta on amim) [VERIFIED: SNAPSHOT Gen.48.4 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְנָ֨תַתִּ֜י אֶת הָאָ֧רֶץ הַזֹּ֛את לְזַרְעֲךָ֥ אַחֲרֶ֖יךָ אֲחֻזַּ֥ת עוֹלָֽם</span> · <i>ve-natati et-ha-aretz ha-zot le-zara-kha achare-kha achuzat olam</i> · and I will give this land to your seed after you, an everlasting holding (verse-final olam) [VERIFIED: SNAPSHOT Gen.48.4 idx8-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(achuzat_olam_le_zarakha, t0)</span><br><span class="gloss">= HOLDS(achuzat-olam-to-zarakha, t0)</span><br>THE EVERLASTING HOLDING. mafrekha ve-hirbitikha — the fruitful-and- multiply verbs quoted from the covenant&#x27;s mouth (35:11; narrated done on the family at 47:27); ACHUZAT OLAM — &#x27;an EVERLASTING holding&#x27;: the machine sets the two holdings side by side — the achuza Pharaoh&#x27;s Egypt gave (47:11) against the achuzat olam God swore in Canaan: one is administration, one is covenant; the deathbed chooses which one the bones will trust (47:30&#x27;s open charge).
+</td><td><span class="he">אֲחֻזַּת עוֹלָם</span> · <i>achuzat olam</i><br><span class="gloss">= achuzat olam</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The covenant quoted; the holding upgraded.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_48_5 · Gen.48.5 · <span class='expr'>EPHRAIM_AND_MANASSEH_MINE</span></h3>
+<p><span class="he">וְעַתָּה שְׁנֵי־בָנֶיךָ הַנּוֹלָדִים לְךָ בְּאֶרֶץ מִצְרַיִם עַד־בֹּאִי אֵלֶיךָ מִצְרַיְמָה לִי־הֵם אֶפְרַיִם וּמְנַשֶּׁה כִּרְאוּבֵן וְשִׁמְעוֹן יִהְיוּ־לִי</span> · <i>ve-ata shene-vane-kha ha-noladim le-kha be-eretz mitzrayim ad-boi-y ele-kha mitzrayma-ה li-y-hem efrayim u-menashe ki-reuven ve-shimon yihyu-li-y</i> · And now, your two sons, who were born to you in the land of Egypt before I came to you to Egypt — mine they are: Ephraim and Manasseh, as Reuben and Simeon, shall be mine.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְעַתָּ֡ה שְׁנֵֽי בָנֶיךָ֩ הַנּוֹלָדִ֨ים לְךָ֜ בְּאֶ֣רֶץ מִצְרַ֗יִם עַד בֹּאִ֥י אֵלֶ֛יךָ מִצְרַ֖יְמָה לִי הֵ֑ם</span> · <i>ve-ata shene-vane-kha ha-noladim le-kha be-eretz mitzrayim ad-boi-y ele-kha mitzrayma-ה li-y-hem</i> · your two sons, born to you in Egypt before I came (etnachta on hem) [VERIFIED: SNAPSHOT Gen.48.5 idx12 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֶפְרַ֨יִם֙ וּמְנַשֶּׁ֔ה כִּרְאוּבֵ֥ן וְשִׁמְע֖וֹן יִֽהְיוּ לִֽי</span> · <i>efrayim u-menashe ki-reuven ve-shimon yihyu-li-y</i> · mine they are: Ephraim and Manasseh, as Reuben and Simeon, shall be mine (verse-final li-y) [VERIFIED: SNAPSHOT Gen.48.5 idx13-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(efrayim_u_menashe_ki_reuven_ve_shimon_yihyu_li, t0)</span><br><span class="gloss">= HOLDS(efrayim-and-menashe-when-reuven-and-shimon-yihyu-to-me, t0)</span><br>THE ADOPTION [G71-13]. LI-HEM — &#x27;MINE they are&#x27;: the grandfather claims the Egypt-born pair; ke-REUVEN ve-SHIMON — &#x27;as Reuben and Simeon&#x27;: the firstborn and the second displaced in one comparison — and the Kitzur&#x27;s letter-count finds the equivalence EXACT: Ephraim- and-Manasseh = Reuben-and-Simeon in the letters&#x27; own arithmetic (named [G71-13]). The machine&#x27;s restraint: the adoption is filed as a status-FACT, not a registry rewrite — the tribal ledger is litigated at the mustering-rolls (Num 1-2, far-armed), and the ledger lists before it installs (gen_69&#x27;s law).
+</td><td><span class="he">אֶפְרַיִם וּמְנַשֶּׁה כִּרְאוּבֵן וְשִׁמְעוֹן יִהְיוּ־לִי</span> · <i>efrayim u-menashe ki-reuven ve-shimon yihyu-li-y</i><br><span class="gloss">= efrayim and-menashe when-reuven and-shimon yihyu-to-me-y</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The adoption declared; the registry&#x27;s restraint.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_48_6 · Gen.48.6 · <span class='expr'>AFTER_THEM_YOURS</span></h3>
+<p><span class="he">וּמוֹלַדְתְּךָ אֲשֶׁר־הוֹלַדְתָּ אַחֲרֵיהֶם לְךָ יִהְיוּ עַל שֵׁם אֲחֵיהֶם יִקָּרְאוּ בְּנַחֲלָתָם</span> · <i>u-moladt-kha asher-holadta achare-hem le-kha yihyu al shem ache-hem yiqaru be-nachalata-m</i> · And your offspring whom you beget after them shall be yours; by the name of their brothers they shall be called in their inheritance.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וּמוֹלַדְתְּךָ֛ אֲשֶׁר הוֹלַ֥דְתָּ אַחֲרֵיהֶ֖ם לְךָ֣ יִהְי֑וּ</span> · <i>u-moladt-kha asher-holadta achare-hem le-kha yihyu</i> · your offspring after them shall be yours (etnachta on yihyu) [VERIFIED: SNAPSHOT Gen.48.6 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">עַ֣ל שֵׁ֧ם אֲחֵיהֶ֛ם יִקָּרְא֖וּ בְּנַחֲלָתָֽם</span> · <i>al shem ache-hem yiqaru be-nachalata-m</i> · by the name of their brothers they shall be called in their inheritance (verse-final be-nachalata-m) [VERIFIED: SNAPSHOT Gen.48.6 idx6-10]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(al_shem_achehem_yiqaru_be_nachalatam, t0)</span><br><span class="gloss">= HOLDS(upon-shem-achehem-yiqaru-in-nachalatam, t0)</span><br>THE CALLING CLAUSE [G71-08]. al shem achehem YIQARU — &#x27;by the name of their brothers THEY SHALL BE CALLED&#x27;: the passive they-shall-be- called, its one Torah station by vocalization [VERIFIED: manifest G71-08] — the Kitzur pairs it with Levi&#x27;s sons (named): Joseph&#x27;s later sons called through their brothers&#x27; allotments as the landless tribe is called through everyone&#x27;s cities — the two called-not- counted houses; the machine files the inheritance-grammar the land- books will execute.
+</td><td><span class="he">עַל שֵׁם אֲחֵיהֶם יִקָּרְאוּ בְּנַחֲלָתָם</span> · <i>al shem ache-hem yiqaru be-nachalata-m</i><br><span class="gloss">= upon shem ache-hem yiqaru in-nachalata-m</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The called-not-counted clause.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_48_7 · Gen.48.7 · <span class='expr'>RACHEL_ON_THE_ROAD</span></h3>
+<p><span class="he">וַאֲנִי בְּבֹאִי מִפַּדָּן מֵתָה עָלַי רָחֵל בְּאֶרֶץ כְּנַעַן בַּדֶּרֶךְ בְּעוֹד כִּבְרַת־אֶרֶץ לָבֹא אֶפְרָתָה וָאֶקְבְּרֶהָ שָּׁם בְּדֶרֶךְ אֶפְרָת הִוא בֵּית לָחֶם</span> · <i>va-ani be-voi-y mi-padan meta ala-y rachel be-eretz kenaan ba-derekh be-od kivrat-eretz la-vo efrata va-eqbre-ha sham be-derekh efrat hiv bet lachem</i> · And I — when I came from Paddan, Rachel died on me in the land of Canaan, on the road, while yet a stretch of land to come to Ephrath; and I buried her there on the road of Ephrath — that is Bethlehem.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַאֲנִ֣י בְּבֹאִ֣י מִפַּדָּ֗ן מֵ֩תָה֩ עָלַ֨י רָחֵ֜ל בְּאֶ֤רֶץ כְּנַ֨עַן֙ בַּדֶּ֔רֶךְ בְּע֥וֹד כִּבְרַת אֶ֖רֶץ לָבֹ֣א אֶפְרָ֑תָה</span> · <i>va-ani be-voi-y mi-padan meta ala-y rachel be-eretz kenaan ba-derekh be-od kivrat-eretz la-vo efrata</i> · Rachel died on me in Canaan, on the road, a stretch yet to come to Ephrath (etnachta on efrata) [VERIFIED: SNAPSHOT Gen.48.7 idx13 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וָאֶקְבְּרֶ֤הָ שָּׁם֙ בְּדֶ֣רֶךְ אֶפְרָ֔ת הִ֖וא בֵּ֥ית לָֽחֶם</span> · <i>va-eqbre-ha sham be-derekh efrat hiv bet lachem</i> · and I buried her there on the road of Ephrath — that is Bethlehem (verse-final lachem) [VERIFIED: SNAPSHOT Gen.48.7 idx14-20]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(meta_alai_rachel_ba_derekh, t0)</span><br><span class="gloss">= HOLDS(meta-alai-rachel-in-the-derekh, t0)</span><br>THE APOLOGY [G71-04; G71-10]. meta ALAI rachel — &#x27;Rachel died ON ME&#x27; (the on-me of bereavement, the readings hear the wound); LAVO efrata — &#x27;to COME to Ephrath&#x27;: the come-word LEAN — the Hilleli writes it full, the Yerushalmi lean, all the books lean, and the Masorah&#x27;s own mnemonic for the NINE lean stations sits at this verse (the Ramah concurs): the stream&#x27;s bare-skeleton census reads EIGHT in the Torah with Rachel&#x27;s road FIRST in canon [VERIFIED: manifest G71-04]; va- eqbereha SHAM — &#x27;and I buried her THERE&#x27;, the there-word&#x27;s shin dageshed (the grave and its there pressed together, asserted under G71-10): the buried-by-the-road account rendered to the son whose mother it is — before that son&#x27;s sons are taken in her stead (the readings&#x27; reading, named).
+</td><td><span class="he">בְּעוֹד כִּבְרַת־אֶרֶץ לָבֹא אֶפְרָתָה</span> · <i>be-od kivrat-eretz la-vo efrata</i><br><span class="gloss">= in-od kivrat-earth to-vo efrata</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The unasked apology; the lean road-word.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_48_8 · Gen.48.8 · <span class='expr'>WHO_ARE_THESE</span></h3>
+<p><span class="he">וַיַּרְא יִשְׂרָאֵל אֶת־בְּנֵי יוֹסֵף וַיֹּאמֶר מִי־אֵלֶּה</span> · <i>va-yar yisrael et-bene yosef va-yomer mi-ele</i> · And Israel saw Joseph&#x27;s sons, and said: Who are these?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּ֥רְא יִשְׂרָאֵ֖ל אֶת בְּנֵ֣י יוֹסֵ֑ף</span> · <i>va-yar yisrael et-bene yosef</i> · Israel saw Joseph&#x27;s sons (etnachta on yosef) [VERIFIED: SNAPSHOT Gen.48.8 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּ֖אמֶר מִי אֵֽלֶּה</span> · <i>va-yomer mi-ele</i> · and said: who are these? (verse-final ele) [VERIFIED: SNAPSHOT Gen.48.8 idx5-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yar_yisrael_et_bene_yosef, t0)</span><br><span class="gloss">= HOLDS(and-yar-yisrael-bene-yosef, t0)</span><br>THE QUESTION. va-YAR yisrael — &#x27;and Israel SAW&#x27; — and asks MI ELE (&#x27;who are these?&#x27;): the see-verb over eyes the next verses call too heavy to see (48:10): the readings resolve it (the Presence departed; the seeing is dim recognition asking for formal presentation) — named; the machine files the question as the adoption&#x27;s procedural step: the blessing requires identification, as the deceived father&#x27;s blessing did not get (27:18&#x27;s mi ata — the file G71-05 will close).
+</td><td><span class="he">וַיַּרְא יִשְׂרָאֵל אֶת־בְּנֵי יוֹסֵף</span> · <i>va-yar yisrael et-bene yosef</i><br><span class="gloss">= and-yar yisrael bene yosef</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The question under dimmed eyes.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_48_9 · Gen.48.9 · <span class='expr'>TAKE_THEM_TO_ME</span></h3>
+<p><span class="he">וַיֹּאמֶר יוֹסֵף אֶל־אָבִיו בָּנַי הֵם אֲשֶׁר־נָתַן־לִי אֱלֹהִים בָּזֶה וַיֹּאמַר קָחֶם־נָא אֵלַי וַאֲבָרֲכֵם</span> · <i>va-yomer yosef el-avi-v bana-y hem asher-natan-li-y Elohim ba-ze va-yomar qache-m-na el-y va-avarakhe-m</i> · And Joseph said to his father: They are my sons, whom God has given me in this place. And he said: Take them, pray, to me, and I will bless them.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר יוֹסֵף֙ אֶל אָבִ֔יו בָּנַ֣י הֵ֔ם אֲשֶׁר נָֽתַן לִ֥י אֱלֹהִ֖ים בָּזֶ֑ה</span> · <i>va-yomer yosef el-avi-v bana-y hem asher-natan-li-y Elohim ba-ze</i> · they are my sons, whom God has given me in this place (etnachta on ba-ze) [VERIFIED: SNAPSHOT Gen.48.9 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּאמַ֕ר קָֽחֶם נָ֥א אֵלַ֖י וַאֲבָרֲכֵֽם</span> · <i>va-yomar qache-m-na el-y va-avarakhe-m</i> · and he said: take them, pray, to me, and I will bless them (verse-final va-avarakhe-m) [VERIFIED: SNAPSHOT Gen.48.9 idx11-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yisrael, LET(qachem_na_elai))</span><br><span class="gloss">= DECLARE(yisrael, LET(qachem-na-elai))</span><br>THE SUMMONS [G71-06]. banai hem asher natan li ELOHIM ba-ZE — &#x27;my sons, whom GOD has given me IN THIS PLACE&#x27; (the identification rendered, God in the answer as in Joseph&#x27;s every answer); QACHEM na elai — &#x27;TAKE THEM, pray, to me&#x27;: the take-them word unique in the Torah [VERIFIED: manifest G71-06] — and its one Scripture-partner is Hosea&#x27;s qamats-twin: &#x27;I taught Ephraim to walk, TAKING THEM on His arms&#x27; (Hos 11:3, named): the Kitzur reads the Presence taking the boys onto His arms at this very hour — the demand pushed; va- avarakhem — &#x27;and I will BLESS them&#x27;: the kaf in tsere with the old Sepharad codices (asserted under G71-10).
+</td><td><span class="he">קָחֶם־נָא אֵלַי וַאֲבָרֲכֵם</span> · <i>qache-m-na el-y va-avarakhe-m</i><br><span class="gloss">= qache-m-na to-y and-avarakhe-m</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The take-them demand pushed.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_48_10 · Gen.48.10 · <span class='expr'>KISSED_AND_EMBRACED</span></h3>
+<p><span class="he">וְעֵינֵי יִשְׂרָאֵל כָּבְדוּ מִזֹּקֶן לֹא יוּכַל לִרְאוֹת וַיַּגֵּשׁ אֹתָם אֵלָיו וַיִּשַּׁק לָהֶם וַיְחַבֵּק לָהֶם</span> · <i>ve-ene yisrael kavdu mi-zoqen lo yukhal li-reot va-yagesh et-m elay-v va-yishaq la-hem va-yechabeq la-hem</i> · And Israel&#x27;s eyes were heavy from age — he could not see. And he brought them near to him; and he kissed them, and embraced them.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְעֵינֵ֤י יִשְׂרָאֵל֙ כָּבְד֣וּ מִזֹּ֔קֶן לֹ֥א יוּכַ֖ל לִרְא֑וֹת</span> · <i>ve-ene yisrael kavdu mi-zoqen lo yukhal li-reot</i> · Israel&#x27;s eyes were heavy from age — he could not see (etnachta on li-reot) [VERIFIED: SNAPSHOT Gen.48.10 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּגֵּ֤שׁ אֹתָם֙ אֵלָ֔יו וַיִּשַּׁ֥ק לָהֶ֖ם וַיְחַבֵּ֥ק לָהֶֽם</span> · <i>va-yagesh et-m elay-v va-yishaq la-hem va-yechabeq la-hem</i> · he brought them near to him; and he kissed them, and embraced them (verse-final la-hem) [VERIFIED: SNAPSHOT Gen.48.10 idx7-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(qachem_na_elai, t1)</span><br><span class="gloss">= RESULT: HOLDS(qachem-na-elai, t1)</span><br>THE NEARING [G71-05]. va-YAGESH otam elav — &#x27;he brought them NEAR to him&#x27;: the take-them demand discharges in the next verse (the nearing-verb of 44:18&#x27;s confrontation now a grandfather&#x27;s reach); ve-ene yisrael KAVDU mi-ZOQEN — &#x27;Israel&#x27;s eyes were heavy FROM AGE&#x27;: the from-age word, its ONE Torah token [VERIFIED: manifest G71-05] — and the Kitzur closes the circle: as Isaac&#x27;s eyes DIMMED and Jacob took the blessing by swap (27:1), so under Jacob&#x27;s heavy eyes the sons are crossed on him — measure for measure across a lifetime (named); va-yishaq lahem va-yechabeq lahem — the kiss and the embrace: this time the kiss is real (27:27&#x27;s was the deception&#x27;s instrument — letter-note).
+</td><td><span class="he">וַיַּגֵּשׁ אֹתָם אֵלָיו וַיִּשַּׁק לָהֶם וַיְחַבֵּק לָהֶם</span> · <i>va-yagesh et-m elay-v va-yishaq la-hem va-yechabeq la-hem</i><br><span class="gloss">= and-yagesh m elay-v and-yishaq to-hem and-yechabeq to-hem</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The demand popped; the dimmed-eyes file closes.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_48_11 · Gen.48.11 · <span class='expr'>I_NEVER_JUDGED_TO_SEE</span></h3>
+<p><span class="he">וַיֹּאמֶר יִשְׂרָאֵל אֶל־יוֹסֵף רְאֹה פָנֶיךָ לֹא פִלָּלְתִּי וְהִנֵּה הֶרְאָה אֹתִי אֱלֹהִים גַּם אֶת־זַרְעֶךָ</span> · <i>va-yomer yisrael el-yosef reo fane-kha lo filalti ve-hine hera et-y Elohim gam et-zare-kha</i> · And Israel said to Joseph: To see your face I had not judged — and behold, God has shown me your seed too.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר יִשְׂרָאֵל֙ אֶל יוֹסֵ֔ף רְאֹ֥ה פָנֶ֖יךָ לֹ֣א פִלָּ֑לְתִּי</span> · <i>va-yomer yisrael el-yosef reo fane-kha lo filalti</i> · to see your face I had not judged (etnachta on filalti) [VERIFIED: SNAPSHOT Gen.48.11 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהִנֵּ֨ה הֶרְאָ֥ה אֹתִ֛י אֱלֹהִ֖ים גַּ֥ם אֶת זַרְעֶֽךָ</span> · <i>ve-hine hera et-y Elohim gam et-zare-kha</i> · and behold, God has shown me your seed too (verse-final zare-kha) [VERIFIED: SNAPSHOT Gen.48.11 idx8-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(reo_fanekha_lo_filalti, t0)</span><br><span class="gloss">= HOLDS(reo-fanekha-not-filalti, t0)</span><br>THE UNJUDGED SEEING. reo fanekha lo FILALTI — &#x27;to see your face I had not JUDGED&#x27; (the judge-verb for expectation: he had not dared reckon it); ve-hine hera oti Elohim GAM et zarekha — &#x27;God has shown me your SEED too&#x27;: the seeing-file&#x27;s third station (the resolve 45:28 &#x27;I will see him&#x27;; the meeting 46:30 &#x27;after seeing your face&#x27;; now the seed beyond the face): the machine notes the ledger of sights running past its own hope — the gam-word doing the arithmetic.
+</td><td><span class="he">רְאֹה פָנֶיךָ לֹא פִלָּלְתִּי</span> · <i>reo fane-kha lo filalti</i><br><span class="gloss">= reo fane-kha not filalti</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The seeing-file&#x27;s third station.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_48_12 · Gen.48.12 · <span class='expr'>FROM_BETWEEN_HIS_KNEES</span></h3>
+<p><span class="he">וַיּוֹצֵא יוֹסֵף אֹתָם מֵעִם בִּרְכָּיו וַיִּשְׁתַּחוּ לְאַפָּיו אָרְצָה</span> · <i>va-yotze yosef et-m me-im birkay-v va-yishtachu le-apay-v artza-ה</i> · And Joseph brought them out from between his knees; and he bowed with his face to the earth.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיּוֹצֵ֥א יוֹסֵ֛ף אֹתָ֖ם מֵעִ֣ם בִּרְכָּ֑יו</span> · <i>va-yotze yosef et-m me-im birkay-v</i> · Joseph brought them out from between his knees (etnachta on birkay-v) [VERIFIED: SNAPSHOT Gen.48.12 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּשְׁתַּ֥חוּ לְאַפָּ֖יו אָֽרְצָה</span> · <i>va-yishtachu le-apay-v artza-ה</i> · and he bowed with his face to the earth (verse-final artza-ה) [VERIFIED: SNAPSHOT Gen.48.12 idx5-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yishtachu_le_apav_artza, t0)</span><br><span class="gloss">= HOLDS(and-yishtachu-to-his-nostrils-artza, t0)</span><br>THE BOW [G71-10]. va-yotze yosef otam me-im BIRKAV — from between the KNEES (the adoption-posture of the readings: the knees that claim); va-yishtachu le-APAV artza — the bow with the face to the earth: the pe of the face-word DAGESHED [VERIFIED under G71-10]; the machine notes the dream-arithmetic silently completing: the father who would not be counted bowing (37:10&#x27;s protest) bows to no one here — it is Joseph who bows to the father: the sheaves&#x27; order held right side up.
+</td><td><span class="he">וַיִּשְׁתַּחוּ לְאַפָּיו אָרְצָה</span> · <i>va-yishtachu le-apay-v artza-ה</i><br><span class="gloss">= and-yishtachu to-apay-v artza-ה</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The formal reset before the placement.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_48_13 · Gen.48.13 · <span class='expr'>THE_ARRANGEMENT</span></h3>
+<p><span class="he">וַיִּקַּח יוֹסֵף אֶת־שְׁנֵיהֶם אֶת־אֶפְרַיִם בִּימִינוֹ מִשְּׂמֹאל יִשְׂרָאֵל וְאֶת־מְנַשֶּׁה בִשְׂמֹאלוֹ מִימִין יִשְׂרָאֵל וַיַּגֵּשׁ אֵלָיו</span> · <i>va-yiqach yosef et-shene-hem et-efrayim bi-ymin-o mi-semol yisrael ve-et-menashe vi-semol-o mi-ymin yisrael va-yagesh elay-v</i> · And Joseph took the two of them — Ephraim at his right, toward Israel&#x27;s left, and Manasseh at his left, toward Israel&#x27;s right — and brought them near to him.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּקַּ֣ח יוֹסֵף֮ אֶת שְׁנֵיהֶם֒ אֶת אֶפְרַ֤יִם בִּֽימִינוֹ֙ מִשְּׂמֹ֣אל יִשְׂרָאֵ֔ל וְאֶת מְנַשֶּׁ֥ה בִשְׂמֹאל֖וֹ מִימִ֣ין יִשְׂרָאֵ֑ל</span> · <i>va-yiqach yosef et-shene-hem et-efrayim bi-ymin-o mi-semol yisrael ve-et-menashe vi-semol-o mi-ymin yisrael</i> · Ephraim at his right toward Israel&#x27;s left, Manasseh at his left toward Israel&#x27;s right (etnachta on yisrael) [VERIFIED: SNAPSHOT Gen.48.13 idx13 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּגֵּ֖שׁ אֵלָֽיו</span> · <i>va-yagesh elay-v</i> · and brought them near to him (verse-final elay-v) [VERIFIED: SNAPSHOT Gen.48.13 idx14-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(efrayim_bimino_menashe_vismolo, t0)</span><br><span class="gloss">= HOLDS(efrayim-bimino-menashe-vismolo, t0)</span><br>THE PLACEMENT [G71-10]. et EFRAYIM bimino mi-SEMOL yisrael, ve-et MENASHE vi-SEMOLO mi-YMIN yisrael — the governor stages the scene as he staged the trial and the audience (the machine&#x27;s standing pattern-note): geometry arranged so the right hand falls on the firstborn; vi-semolo with the bet and shin SOFT (asserted under G71-10); va-yagesh elav — the nearing repeated: everything is correct, except what the hands will do.
+</td><td><span class="he">אֶת־אֶפְרַיִם בִּימִינוֹ מִשְּׂמֹאל יִשְׂרָאֵל וְאֶת־מְנַשֶּׁה בִשְׂמֹאלוֹ מִימִין יִשְׂרָאֵל</span> · <i>et-efrayim bi-ymin-o mi-semol yisrael ve-et-menashe vi-semol-o mi-ymin yisrael</i><br><span class="gloss">= efrayim bi-ymin-o from-semol yisrael and-menashe vi-semol-o from-ymin yisrael</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The stage set for the birth order.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_48_14 · Gen.48.14 · <span class='expr'>THE_HANDS_CROSSED</span></h3>
+<p><span class="he">וַיִּשְׁלַח יִשְׂרָאֵל אֶת־יְמִינוֹ וַיָּשֶׁת עַל־רֹאשׁ אֶפְרַיִם וְהוּא הַצָּעִיר וְאֶת־שְׂמֹאלוֹ עַל־רֹאשׁ מְנַשֶּׁה שִׂכֵּל אֶת־יָדָיו כִּי מְנַשֶּׁה הַבְּכוֹר</span> · <i>va-yishlach yisrael et-yemin-o va-yashet al-rosh efrayim ve-hu ha-tzair ve-et-semol-o al-rosh menashe sikel et-yaday-v ki menashe ha-bekhor</i> · And Israel sent out his right hand and set it on Ephraim&#x27;s head — and he was the younger — and his left hand on Manasseh&#x27;s head; he crossed his hands, for Manasseh was the firstborn.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּשְׁלַח֩ יִשְׂרָאֵ֨ל אֶת יְמִינ֜וֹ וַיָּ֨שֶׁת עַל רֹ֤אשׁ אֶפְרַ֨יִם֙ וְה֣וּא הַצָּעִ֔יר וְאֶת שְׂמֹאל֖וֹ עַל רֹ֣אשׁ מְנַשֶּׁ֑ה</span> · <i>va-yishlach yisrael et-yemin-o va-yashet al-rosh efrayim ve-hu ha-tzair ve-et-semol-o al-rosh menashe</i> · Israel sent his right hand and set it on Ephraim&#x27;s head — and he was the younger (etnachta on menashe) [VERIFIED: SNAPSHOT Gen.48.14 idx14 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">שִׂכֵּל֙ אֶת יָדָ֔יו כִּ֥י מְנַשֶּׁ֖ה הַבְּכֽוֹר</span> · <i>sikel et-yaday-v ki menashe ha-bekhor</i> · and his left on Manasseh&#x27;s head: he crossed his hands, for Manasseh was the firstborn (verse-final ha-bekhor) [VERIFIED: SNAPSHOT Gen.48.14 idx15-20]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">sikel_yadav(e1); Agent(e1, yisrael)</span><br><span class="gloss">= sikel-yadav(e1); Agent(e1, yisrael)</span><br>THE CROSSING [G71-11; G71-12]. va-yishlach yisrael et YEMINO — the right hand SENT (the send-verb of missions on a hand); SIKEL et yadav — &#x27;he CROSSED his hands WISELY&#x27;: the wise-crossing verb, its ONE Torah token, minted for this gesture [VERIFIED under G71-11]; ve-hu ha-TZAIR — &#x27;and he was the YOUNGER&#x27;: the definite younger- word, ALSO its one Torah token, planted where the right hand lands [VERIFIED: manifest G71-12] — the Kitzur: he made himself small, and Joshua full of wisdom goes out from him (named); ki MENASHE ha- bekhor — the narrator states the birth order in the same breath the hands invert it: the machine marks the event — the corpus&#x27;s standing younger-over-elder engine (Abel, Isaac, Jacob himself, Perez, Ephraim) runs once more, this time with open eyes and crossed wrists.
+</td><td><span class="he">שִׂכֵּל אֶת־יָדָיו כִּי מְנַשֶּׁה הַבְּכוֹר</span> · <i>sikel et-yaday-v ki menashe ha-bekhor</i><br><span class="gloss">= sikel yaday-v when menashe the-bekhor</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The crossing event; two unique words on one verse.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_48_15 · Gen.48.15 · <span class='expr'>THE_SHEPHERD_GOD</span></h3>
+<p><span class="he">וַיְבָרֶךְ אֶת־יוֹסֵף וַיֹּאמַר הָאֱלֹהִים אֲשֶׁר הִתְהַלְּכוּ אֲבֹתַי לְפָנָיו אַבְרָהָם וְיִצְחָק הָאֱלֹהִים הָרֹעֶה אֹתִי מֵעוֹדִי עַד־הַיּוֹם הַזֶּה</span> · <i>va-yevarekh et-yosef va-yomar ha-Elohim asher hithalkhu avota-y le-fanay-v avraham ve-yitzchaq ha-Elohim ha-roe et-y me-odi-y ad-ha-yom ha-ze</i> · And he blessed Joseph, and said: The God before whom my fathers walked, Abraham and Isaac, the God who shepherds me from my beginning until this day —</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְבָ֥רֶךְ אֶת יוֹסֵ֖ף וַיֹּאמַ֑ר</span> · <i>va-yevarekh et-yosef va-yomar</i> · he blessed Joseph and said: the God before whom my fathers walked (etnachta on va-yomar) [VERIFIED: SNAPSHOT Gen.48.15 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">הָֽאֱלֹהִ֡ים אֲשֶׁר֩ הִתְהַלְּכ֨וּ אֲבֹתַ֤י לְפָנָיו֙ אַבְרָהָ֣ם וְיִצְחָ֔ק הָֽאֱלֹהִים֙ הָרֹעֶ֣ה אֹתִ֔י מֵעוֹדִ֖י עַד הַיּ֥וֹם הַזֶּֽה</span> · <i>ha-Elohim asher hithalkhu avota-y le-fanay-v avraham ve-yitzchaq ha-Elohim ha-roe et-y me-odi-y ad-ha-yom ha-ze</i> · the God who shepherds me from my beginning until this day (verse-final ha-ze) [VERIFIED: SNAPSHOT Gen.48.15 idx4-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>BLESS</td><td><span class="expr">BLESS(yisrael, yosef)</span><br>THE BLESSING OPENS. va-yevarekh et YOSEF — &#x27;and he blessed JOSEPH&#x27;: the letter blesses the father through the sons (the readings: the sons are Joseph&#x27;s blessing — a father&#x27;s greatness is his children); ha-Elohim ha-ROE oti — &#x27;the God who SHEPHERDS me&#x27;: Jacob the shepherd of Laban&#x27;s flocks names God by his own trade — the trade Egypt abominates (46:34) is the verse&#x27;s name for God (the machine files the inversion beside 47:3&#x27;s shepherd-answer); me-ODI ad ha-yom ha-ZE — from my beginning until THIS day: the whole span under one shepherding.
+</td><td><span class="he">הָאֱלֹהִים הָרֹעֶה אֹתִי מֵעוֹדִי</span> · <i>ha-Elohim ha-roe et-y me-odi-y</i><br><span class="gloss">= the-God the-roe y from-odi-y</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The blessing opens; God as shepherd.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_48_16 · Gen.48.16 · <span class='expr'>THE_REDEEMING_ANGEL</span></h3>
+<p><span class="he">הַמַּלְאָךְ הַגֹּאֵל אֹתִי מִכָּל־רָע יְבָרֵךְ אֶת־הַנְּעָרִים וְיִקָּרֵא בָהֶם שְׁמִי וְשֵׁם אֲבֹתַי אַבְרָהָם וְיִצְחָק וְיִדְגּוּ לָרֹב בְּקֶרֶב הָאָרֶץ</span> · <i>ha-malakh ha-goel et-y mi-kal-ra yevarekh et-ha-nearim ve-yiqare va-hem shemi-y ve-shem avota-y avraham ve-yitzchaq ve-yidgu la-rov be-qerev ha-aretz</i> · The angel who redeems me from all evil — may he bless the lads; and let my name be called in them, and the name of my fathers, Abraham and Isaac; and may they teem like fish into a multitude in the midst of the earth.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">הַמַּלְאָךְ֩ הַגֹּאֵ֨ל אֹתִ֜י מִכָּל רָ֗ע יְבָרֵךְ֮ אֶת הַנְּעָרִים֒ וְיִקָּרֵ֤א בָהֶם֙ שְׁמִ֔י וְשֵׁ֥ם אֲבֹתַ֖י אַבְרָהָ֣ם וְיִצְחָ֑ק</span> · <i>ha-malakh ha-goel et-y mi-kal-ra yevarekh et-ha-nearim ve-yiqare va-hem shemi-y ve-shem avota-y avraham ve-yitzchaq</i> · the angel who redeems me from all evil — may he bless the lads (etnachta on ve-yitzchaq) [VERIFIED: SNAPSHOT Gen.48.16 idx14 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְיִדְגּ֥וּ לָרֹ֖ב בְּקֶ֥רֶב הָאָֽרֶץ</span> · <i>ve-yidgu la-rov be-qerev ha-aretz</i> · let my name be called in them, and my fathers&#x27; names; may they teem into a multitude (verse-final ha-aretz) [VERIFIED: SNAPSHOT Gen.48.16 idx15-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ha_malakh_ha_goel_yevarekh_et_ha_nearim, t0)</span><br><span class="gloss">= HOLDS(the-malakh-the-goel-yevarekh-the-nearim, t0)</span><br>THE ANGEL&#x27;S CLAUSE [G71-07; G71-11]. ha-MALAKH ha-GOEL oti mi-kol RA — &#x27;the ANGEL who REDEEMS me from all evil&#x27; (the wrestler, the ladder&#x27;s company, the entity registry&#x27;s UNCERTAIN file — the machine cites, it does not merge); yevarekh et ha-NEARIM — may he bless the LADS (the lad-word that carried Benjamin through gen_67 now carries Joseph&#x27;s two); ve-YIQARE vahem SHEMI — &#x27;let my name BE CALLED in them&#x27;: the passive be-called, its one Torah station [VERIFIED: manifest G71-07] — the Kitzur: all Israel called by Joseph&#x27;s name (&#x27;the sons of Jacob AND JOSEPH, selah&#x27; — the psalm named); ve-YIDGU la-rov — &#x27;may they TEEM-LIKE-FISH into a multitude&#x27;: the fish-verb minted from the noun for this blessing, its one Torah token [VERIFIED under G71-11]: the blessing writes its own grammar.
+</td><td><span class="he">הַמַּלְאָךְ הַגֹּאֵל אֹתִי מִכָּל־רָע יְבָרֵךְ אֶת־הַנְּעָרִים</span> · <i>ha-malakh ha-goel et-y mi-kal-ra yevarekh et-ha-nearim</i><br><span class="gloss">= the-malakh the-goel y from-kal-evil yevarekh the-nearim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The lads blessed; the fish-verb minted.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_48_17 · Gen.48.17 · <span class='expr'>EVIL_IN_HIS_EYES</span></h3>
+<p><span class="he">וַיַּרְא יוֹסֵף כִּי־יָשִׁית אָבִיו יַד־יְמִינוֹ עַל־רֹאשׁ אֶפְרַיִם וַיֵּרַע בְּעֵינָיו וַיִּתְמֹךְ יַד־אָבִיו לְהָסִיר אֹתָהּ מֵעַל רֹאשׁ־אֶפְרַיִם עַל־רֹאשׁ מְנַשֶּׁה</span> · <i>va-yar yosef ki-yashit avi-v yad-yemin-o al-rosh efrayim va-yera be-enay-v va-yitmokh yad-avi-v le-hasir et-ה me-al rosh-efrayim al-rosh menashe</i> · And Joseph saw that his father was setting his right hand on Ephraim&#x27;s head, and it was evil in his eyes; and he took hold of his father&#x27;s hand, to remove it from Ephraim&#x27;s head onto Manasseh&#x27;s head.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּ֣רְא יוֹסֵ֗ף כִּי יָשִׁ֨ית אָבִ֧יו יַד יְמִינ֛וֹ עַל רֹ֥אשׁ אֶפְרַ֖יִם וַיֵּ֣רַע בְּעֵינָ֑יו</span> · <i>va-yar yosef ki-yashit avi-v yad-yemin-o al-rosh efrayim va-yera be-enay-v</i> · Joseph saw his father&#x27;s right hand on Ephraim&#x27;s head, and it was evil in his eyes (etnachta on be-enay-v) [VERIFIED: SNAPSHOT Gen.48.17 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיִּתְמֹ֣ךְ יַד אָבִ֗יו לְהָסִ֥יר אֹתָ֛הּ מֵעַ֥ל רֹאשׁ אֶפְרַ֖יִם עַל רֹ֥אשׁ מְנַשֶּֽׁה</span> · <i>va-yitmokh yad-avi-v le-hasir et-ה me-al rosh-efrayim al-rosh menashe</i> · he took hold of his father&#x27;s hand to remove it onto Manasseh&#x27;s head (verse-final menashe) [VERIFIED: SNAPSHOT Gen.48.17 idx12-22]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yera_be_enav, t0)</span><br><span class="gloss">= HOLDS(and-yera-in-enav, t0)</span><br>THE DISPLEASURE. va-YERA be-enav — &#x27;it was EVIL in his eyes&#x27;: the evil-in-eyes idiom (38:10&#x27;s judgment formula on Onan; 28:8&#x27;s on the Canaanite wives) now on the son judging the father&#x27;s hands; va- YITMOKH yad aviv — he TAKES HOLD of the father&#x27;s hand: the only physical correction attempted on a patriarch&#x27;s blessing in the corpus — the machine files the hand on the hand before the word against the word.
+</td><td><span class="he">וַיֵּרַע בְּעֵינָיו</span> · <i>va-yera be-enay-v</i><br><span class="gloss">= and-yera in-enay-v</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The objection begins in the hand.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_48_18 · Gen.48.18 · <span class='expr'>NOT_SO_MY_FATHER</span></h3>
+<p><span class="he">וַיֹּאמֶר יוֹסֵף אֶל־אָבִיו לֹא־כֵן אָבִי כִּי־זֶה הַבְּכֹר שִׂים יְמִינְךָ עַל־רֹאשׁוֹ</span> · <i>va-yomer yosef el-avi-v lo-khen avi-y ki-ze ha-bekhor sim yemin-kha al-rosh-o</i> · And Joseph said to his father: Not so, my father — for this is the firstborn; set your right hand on his head.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֧אמֶר יוֹסֵ֛ף אֶל אָבִ֖יו לֹא כֵ֣ן אָבִ֑י</span> · <i>va-yomer yosef el-avi-v lo-khen avi-y</i> · not so, my father (etnachta on avi-y) [VERIFIED: SNAPSHOT Gen.48.18 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּי זֶ֣ה הַבְּכֹ֔ר שִׂ֥ים יְמִינְךָ֖ עַל רֹאשֽׁוֹ</span> · <i>ki-ze ha-bekhor sim yemin-kha al-rosh-o</i> · for this is the firstborn; set your right hand on his head (verse-final rosh-o) [VERIFIED: SNAPSHOT Gen.48.18 idx7-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yosef, LET(sim_yeminkha_al_rosho))</span><br><span class="gloss">= DECLARE(yosef, LET(sim-yeminkha-upon-rosho))</span><br>THE CORRECTION DEMANDED [G71-03]. lo khen AVI — &#x27;NOT SO, my father&#x27;: the governor who arranges everything demands the arrangement back; ki ze ha-BEKHOR — &#x27;for THIS is the FIRSTBORN&#x27; — and the firstborn- word is written LEAN: the Hilleli writes it full, the Yerushalmi lean, all accurate books lean (the Masorah&#x27;s four-full list, mnemonic at the Miketz section, excludes it; the Ramah: the rest all lean) — the stream with the Yerushalmi against the Hilleli, and the stream&#x27;s own lean census is exactly FOUR (the seating by birthright 43:33, this protest, and the hated wife&#x27;s firstborn law Deut 21:16-17); its full census counts six stations — the readings named, never merged [VERIFIED: manifest G71-03]: the letter thins the firstbornship in the very word that claims it; SIM yeminkha al ROSHO — the demand pushed on the father&#x27;s right hand.
+</td><td><span class="he">כִּי־זֶה הַבְּכֹר שִׂים יְמִינְךָ עַל־רֹאשׁוֹ</span> · <i>ki-ze ha-bekhor sim yemin-kha al-rosh-o</i><br><span class="gloss">= when-ze the-bekhor sim yemin-kha upon-rosh-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The correction demanded; the lean firstborn.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_48_19 · Gen.48.19 · <span class='expr'>I_KNOW_MY_SON_I_KNOW</span></h3>
+<p><span class="he">וַיְמָאֵן אָבִיו וַיֹּאמֶר יָדַעְתִּי בְנִי יָדַעְתִּי גַּם־הוּא יִהְיֶה־לְּעָם וְגַם־הוּא יִגְדָּל וְאוּלָם אָחִיו הַקָּטֹן יִגְדַּל מִמֶּנּוּ וְזַרְעוֹ יִהְיֶה מְלֹא־הַגּוֹיִם</span> · <i>va-yemaen avi-v va-yomer yadati veni-y yadati gam-hu yihye-le-am ve-gam-hu yigdal ve-ulam achi-v ha-qaton yigdal mime-nu ve-zar-o yihye melo-ha-goyim</i> · And his father refused, and said: I know, my son, I know — he too shall become a people, and he too shall be great; but his younger brother shall be greater than he, and his seed shall be the fullness of the nations.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְמָאֵ֣ן אָבִ֗יו וַיֹּ֨אמֶר֙ יָדַ֤עְתִּֽי בְנִי֙ יָדַ֔עְתִּי גַּם ה֥וּא יִֽהְיֶה לְּעָ֖ם וְגַם ה֣וּא יִגְדָּ֑ל</span> · <i>va-yemaen avi-v va-yomer yadati veni-y yadati gam-hu yihye-le-am ve-gam-hu yigdal</i> · his father refused: I know, my son, I know — he too shall become a people (etnachta on yigdal) [VERIFIED: SNAPSHOT Gen.48.19 idx12 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאוּלָ֗ם אָחִ֤יו הַקָּטֹן֙ יִגְדַּ֣ל מִמֶּ֔נּוּ וְזַרְע֖וֹ יִהְיֶ֥ה מְלֹֽא הַגּוֹיִֽם</span> · <i>ve-ulam achi-v ha-qaton yigdal mime-nu ve-zar-o yihye melo-ha-goyim</i> · but his younger brother shall be greater, and his seed the fullness of the nations (verse-final ha-goyim) [VERIFIED: SNAPSHOT Gen.48.19 idx13-21]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yemaen_aviv_yadati_veni_yadati, t0)</span><br><span class="gloss">= HOLDS(and-yemaen-aviv-yadati-veni-yadati, t0)</span><br>THE REFUSAL [G71-13]. va-yeMAEN aviv — &#x27;and his father REFUSED&#x27;: the refuse-verb flat (39:8&#x27;s refusal was Joseph&#x27;s own — the letter hands it back); YADATI veni YADATI — &#x27;I know, my son, I know&#x27; doubled: the knowing that Isaac&#x27;s dimmed scene lacked, stated twice — the crossing is not error but sight (the Kitzur&#x27;s counts: yadati = the five kings from Manasseh; melo — &#x27;the fullness&#x27; = JOSHUA by the letters, named [G71-13]); the sim-yeminkha demand DIES BY REFUSAL and stays OPEN on the queue (the class of Reuben&#x27;s pledge, 42:38): the machine keeps the refused correction on file — history will audit it (Joshua of Ephraim; the readings&#x27; Gideon of Manasseh, named).
+</td><td><span class="he">וַיְמָאֵן אָבִיו וַיֹּאמֶר יָדַעְתִּי בְנִי יָדַעְתִּי</span> · <i>va-yemaen avi-v va-yomer yadati veni-y yadati</i><br><span class="gloss">= and-yemaen avi-v and-yomer yadati veni-y yadati</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The refusal: the demand dies open.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_48_20 · Gen.48.20 · <span class='expr'>BY_YOU_SHALL_ISRAEL_BLESS</span></h3>
+<p><span class="he">וַיְבָרֲכֵם בַּיּוֹם הַהוּא לֵאמוֹר בְּךָ יְבָרֵךְ יִשְׂרָאֵל לֵאמֹר יְשִׂמְךָ אֱלֹהִים כְּאֶפְרַיִם וְכִמְנַשֶּׁה וַיָּשֶׂם אֶת־אֶפְרַיִם לִפְנֵי מְנַשֶּׁה</span> · <i>va-yevarakhe-m ba-yom ha-hu le-mor be-kha yevarekh yisrael le-mor yesim-kha Elohim ke-efrayim ve-khi-menashe va-yasem et-efrayim li-fene menashe</i> · And he blessed them that day, saying: By you shall Israel bless, saying: God make you as Ephraim and as Manasseh. And he set Ephraim before Manasseh.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְבָ֨רֲכֵ֜ם בַּיּ֣וֹם הַהוּא֮ לֵאמוֹר֒ בְּךָ֗ יְבָרֵ֤ךְ יִשְׂרָאֵל֙ לֵאמֹ֔ר יְשִֽׂמְךָ֣ אֱלֹהִ֔ים כְּאֶפְרַ֖יִם וְכִמְנַשֶּׁ֑ה</span> · <i>va-yevarakhe-m ba-yom ha-hu le-mor be-kha yevarekh yisrael le-mor yesim-kha Elohim ke-efrayim ve-khi-menashe</i> · he blessed them that day: by you shall Israel bless (etnachta on ve-khi-menashe) [VERIFIED: SNAPSHOT Gen.48.20 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיָּ֥שֶׂם אֶת אֶפְרַ֖יִם לִפְנֵ֥י מְנַשֶּֽׁה</span> · <i>va-yasem et-efrayim li-fene menashe</i> · God make you as Ephraim and as Manasseh — and he set Ephraim before Manasseh (verse-final menashe) [VERIFIED: SNAPSHOT Gen.48.20 idx12-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>BLESS</td><td><span class="expr">BLESS(yisrael, efrayim_u_menashe)</span><br><span class="gloss">= BLESS(yisrael, efrayim-and-menashe)</span><br>THE FORMULA [G71-01 MARQUEE; G71-02]. va-yevarakhem ba-yom ha-hu LEMOR — and the saying-word is written FULL with the vav: the Torah&#x27;s ONLY full lemor (&#x27;saying&#x27;), first word of the formula-verse, while the SAME verse writes the word again LEAN four tokens on — one verse, one word, both spellings: the full mouth for the blessing every generation will say, the lean for the stage direction (MS sends to the Zohar by folio; the Kitzur counts the vav — six — against the six Ephraim-precedences and six judges, named) [VERIFIED: manifest G71-01]; YESIMKHA Elohim ke-EFRAYIM ve-khi- MENASHE — &#x27;God make you as Ephraim and as Manasseh&#x27;: the make-you skeleton&#x27;s Masorah-pair is the exiles&#x27; CURSE (&#x27;may God make you like Zedekiah and like Ahab&#x27;, Jer 29:22, named): blessing-formula and curse-formula on one lean skeleton [VERIFIED: manifest G71-02]; va- yasem et EFRAYIM lifne MENASHE — the setting the refused demand could not unset.
+</td><td><span class="he">יְשִׂמְךָ אֱלֹהִים כְּאֶפְרַיִם וְכִמְנַשֶּׁה</span> · <i>yesim-kha Elohim ke-efrayim ve-khi-menashe</i><br><span class="gloss">= yesim-kha God like-efrayim and-khi-menashe</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The living formula; the one full saying-word.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_48_21 · Gen.48.21 · <span class='expr'>GOD_WILL_RETURN_YOU</span></h3>
+<p><span class="he">וַיֹּאמֶר יִשְׂרָאֵל אֶל־יוֹסֵף הִנֵּה אָנֹכִי מֵת וְהָיָה אֱלֹהִים עִמָּכֶם וְהֵשִׁיב אֶתְכֶם אֶל־אֶרֶץ אֲבֹתֵיכֶם</span> · <i>va-yomer yisrael el-yosef hine anokhi met ve-haya Elohim ima-khem ve-heshiv et-khem el-eretz avote-khem</i> · And Israel said to Joseph: Behold, I die; and God will be with you, and will return you to the land of your fathers.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר יִשְׂרָאֵל֙ אֶל יוֹסֵ֔ף הִנֵּ֥ה אָנֹכִ֖י מֵ֑ת</span> · <i>va-yomer yisrael el-yosef hine anokhi met</i> · behold, I die; and God will be with you (etnachta on met) [VERIFIED: SNAPSHOT Gen.48.21 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהָיָ֤ה אֱלֹהִים֙ עִמָּכֶ֔ם וְהֵשִׁ֣יב אֶתְכֶ֔ם אֶל אֶ֖רֶץ אֲבֹתֵיכֶֽם</span> · <i>ve-haya Elohim ima-khem ve-heshiv et-khem el-eretz avote-khem</i> · and will return you to the land of your fathers (verse-final avote-khem) [VERIFIED: SNAPSHOT Gen.48.21 idx7-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_heshiv_etkhem_el_eretz_avotekhem, t0)</span><br><span class="gloss">= HOLDS(and-heshiv-etkhem-to-earth-avotekhem, t0)</span><br>THE RETURN CLAUSE. hine anokhi MET — &#x27;behold, I DIE&#x27; (said plainly, the deathbed&#x27;s own grammar); ve-HESHIV etkhem el eretz AVOTEKHEM — &#x27;and He will RETURN you to your fathers&#x27; land&#x27;: the covenant&#x27;s return-clause spoken to the generation that will die in Egypt — the machine arms the long file: Joseph will repeat the clause word-for- shape at his own death (50:24, this run&#x27;s last block) and the second book will execute it (Exod 3:16-17, named): the promise outlives every speaker who carries it.
+</td><td><span class="he">וְהֵשִׁיב אֶתְכֶם אֶל־אֶרֶץ אֲבֹתֵיכֶם</span> · <i>ve-heshiv et-khem el-eretz avote-khem</i><br><span class="gloss">= and-heshiv khem to-earth avote-khem</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The return-promise armed.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_48_22 · Gen.48.22 · <span class='expr'>SHEKHEM_ABOVE_YOUR_BROTHERS</span></h3>
+<p><span class="he">וַאֲנִי נָתַתִּי לְךָ שְׁכֶם אַחַד עַל־אַחֶיךָ אֲשֶׁר לָקַחְתִּי מִיַּד הָאֱמֹרִי בְּחַרְבִּי וּבְקַשְׁתִּי</span> · <i>va-ani natati le-kha shekhem achad al-ache-kha asher laqachti mi-yad ha-emori be-charbi-y u-ve-qashti-y</i> · And I give you one portion above your brothers, which I took from the hand of the Amorite with my sword and with my bow.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַאֲנִ֞י נָתַ֧תִּֽי לְךָ֛ שְׁכֶ֥ם אַחַ֖ד עַל אַחֶ֑יךָ</span> · <i>va-ani natati le-kha shekhem achad al-ache-kha</i> · I give you one portion above your brothers (etnachta on ache-kha) [VERIFIED: SNAPSHOT Gen.48.22 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֲשֶׁ֤ר לָקַ֨חְתִּי֙ מִיַּ֣ד הָֽאֱמֹרִ֔י בְּחַרְבִּ֖י וּבְקַשְׁתִּֽי</span> · <i>asher laqachti mi-yad ha-emori be-charbi-y u-ve-qashti-y</i> · which I took from the Amorite with my sword and with my bow (verse-final u-ve-qashti-y) [VERIFIED: SNAPSHOT Gen.48.22 idx7-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(natati_lekha_shekhem_achad, t0)</span><br><span class="gloss">= HOLDS(natati-to-you-shekhem-achad, t0)</span><br>THE PORTION [G71-13]. SHEKHEM achad al achekha — &#x27;ONE PORTION above your brothers&#x27;: the portion-word IS the town&#x27;s name (the entity registry&#x27;s shekhem file: town and son, split by scope, never merged — the machine cites): the readings land the grant at the town — the plot Jacob bought (33:19) where Joseph&#x27;s own BONES will rest (Josh 24:32, named: the bones-file&#x27;s ground deeded here, one verse after the burial charge stands open); the Kitzur&#x27;s count: shekhem achad = &#x27;the firstborn&#x27;s share&#x27; (named [G71-13]); be-charbi u-ve-qashti — &#x27;with my sword and my bow&#x27;: against the letter of 33:19&#x27;s purchase — the readings resolve (the Amorite = Esau in his ways; the sword = prayer, the Targum&#x27;s reading); named, never merged: the span closes with Joseph holding the double portion the crossed hands just enacted.
+</td><td><span class="he">וַאֲנִי נָתַתִּי לְךָ שְׁכֶם אַחַד</span> · <i>va-ani natati le-kha shekhem achad</i><br><span class="gloss">= and-ani natati to-kha shekhem achad</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The portion-grant; the homograph carried named.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Gn_48_1 — your father is ill</td><td>And it was after these things, that one said to Joseph: Behold, your father is ill. And he took his two sons with him, Manasseh and Ephraim.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיְהִ֗י אַחֲרֵי֙ הַדְּבָרִ֣ים הָאֵ֔לֶּה</span> · <i>va-yehi achare ha-devarim ha-ele</i><br><span class="gloss">= and-yehi achare the-devarim the-ele</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Gn_48_2 — strengthened on the bed</td><td>And one told Jacob, and said: Behold, your son Joseph comes to you. And Israel strengthened himself, and sat upon the bed.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיַּגֵּ֣ד לְיַעֲקֹ֔ב וַיֹּ֕אמֶר הִנֵּ֛ה</span> · <i>va-yaged le-yaaqov va-yomer hine</i><br><span class="gloss">= and-yaged to-yaaqov and-yomer hine</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Gn_48_3 — El Shaddai at Luz</td><td>And Jacob said to Joseph: El Shaddai appeared to me at Luz in the land of Canaan, and blessed me.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיֹּ֤אמֶר יַעֲקֹב֙ אֶל יוֹסֵ֔ף</span> · <i>va-yomer yaaqov el-yosef</i><br><span class="gloss">= and-yomer yaaqov to-yosef</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Gn_48_4 — the promise recalled</td><td>And He said to me: Behold, I will make you fruitful and multiply you, and I will make you a company of peoples; and I will give this land to your seed after you, an everlasting holding.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיֹּ֣אמֶר אֵלַ֗י הִנְנִ֤י מַפְרְךָ֙</span> · <i>va-yomer el-y hin-ni mafr-kha</i><br><span class="gloss">= and-yomer to-y hin-ni mafr-kha</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Gn_48_5 — Ephraim and Manasseh mine</td><td>And now, your two sons, who were born to you in the land of Egypt before I came to you to Egypt — mine they are: Ephraim and Manasseh, as Reuben and Simeon, shall be mine.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וְעַתָּ֡ה שְׁנֵֽי בָנֶיךָ֩ הַנּוֹלָדִ֨ים</span> · <i>ve-ata shene-vane-kha ha-noladim</i><br><span class="gloss">= and-ata shene-vane-kha the-noladim</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Gn_48_6 — after them, yours</td><td>And your offspring whom you beget after them shall be yours; by the name of their brothers they shall be called in their inheritance.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וּמוֹלַדְתְּךָ֛ אֲשֶׁר הוֹלַ֥דְתָּ אַחֲרֵיהֶ֖ם</span> · <i>u-moladt-kha asher-holadta achare-hem</i><br><span class="gloss">= and-moladt-kha which-holadta achare-hem</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Gn_48_7 — Rachel on the road</td><td>And I — when I came from Paddan, Rachel died on me in the land of Canaan, on the road, while yet a stretch of land to come to Ephrath; and I buried her there on the road of Ephrath — that is Bethlehem.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַאֲנִ֣י בְּבֹאִ֣י מִפַּדָּ֗ן מֵ֩תָה֩</span> · <i>va-ani be-voi-y mi-padan meta</i><br><span class="gloss">= and-ani in-voi-y from-padan meta</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Gn_48_8 — who are these?</td><td>And Israel saw Joseph&#x27;s sons, and said: Who are these?</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיַּ֥רְא יִשְׂרָאֵ֖ל אֶת בְּנֵ֣י</span> · <i>va-yar yisrael et-bene</i><br><span class="gloss">= and-yar yisrael bene</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Gn_48_9 — take them to me</td><td>And Joseph said to his father: They are my sons, whom God has given me in this place. And he said: Take them, pray, to me, and I will bless them.</td><td>LET(qachem_na_elai) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qachem-na-elai) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֤אמֶר יוֹסֵף֙ אֶל אָבִ֔יו</span> · <i>va-yomer yosef el-avi-v</i><br><span class="gloss">= and-yomer yosef to-avi-v</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Gn_48_10 — kissed and embraced</td><td>And Israel&#x27;s eyes were heavy from age — he could not see. And he brought them near to him; and he kissed them, and embraced them.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וְעֵינֵ֤י יִשְׂרָאֵל֙ כָּבְד֣וּ מִזֹּ֔קֶן</span> · <i>ve-ene yisrael kavdu mi-zoqen</i><br><span class="gloss">= and-ene yisrael kavdu from-zoqen</span></td></tr>
+<tr><td><b>S11</b></td><td>after STEP_Gn_48_11 — I never judged to see</td><td>And Israel said to Joseph: To see your face I had not judged — and behold, God has shown me your seed too.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיֹּ֤אמֶר יִשְׂרָאֵל֙ אֶל יוֹסֵ֔ף</span> · <i>va-yomer yisrael el-yosef</i><br><span class="gloss">= and-yomer yisrael to-yosef</span></td></tr>
+<tr><td><b>S12</b></td><td>after STEP_Gn_48_12 — from between his knees</td><td>And Joseph brought them out from between his knees; and he bowed with his face to the earth.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיּוֹצֵ֥א יוֹסֵ֛ף אֹתָ֖ם מֵעִ֣ם</span> · <i>va-yotze yosef et-m me-im</i><br><span class="gloss">= and-yotze yosef m from-if</span></td></tr>
+<tr><td><b>S13</b></td><td>after STEP_Gn_48_13 — the arrangement</td><td>And Joseph took the two of them — Ephraim at his right, toward Israel&#x27;s left, and Manasseh at his left, toward Israel&#x27;s right — and brought them near to him.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיִּקַּ֣ח יוֹסֵף֮ אֶת שְׁנֵיהֶם֒</span> · <i>va-yiqach yosef et-shene-hem</i><br><span class="gloss">= and-yiqach yosef shene-hem</span></td></tr>
+<tr><td><b>S14</b></td><td>after STEP_Gn_48_14 — the hands crossed</td><td>And Israel sent out his right hand and set it on Ephraim&#x27;s head — and he was the younger — and his left hand on Manasseh&#x27;s head; he crossed his hands, for Manasseh was the firstborn.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיִּשְׁלַח֩ יִשְׂרָאֵ֨ל אֶת יְמִינ֜וֹ</span> · <i>va-yishlach yisrael et-yemin-o</i><br><span class="gloss">= and-yishlach yisrael yemin-o</span></td></tr>
+<tr><td><b>S15</b></td><td>after STEP_Gn_48_15 — the shepherd God</td><td>And he blessed Joseph, and said: The God before whom my fathers walked, Abraham and Isaac, the God who shepherds me from my beginning until this day —</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיְבָ֥רֶךְ אֶת יוֹסֵ֖ף וַיֹּאמַ֑ר</span> · <i>va-yevarekh et-yosef va-yomar</i><br><span class="gloss">= and-yevarekh yosef and-yomar</span></td></tr>
+<tr><td><b>S16</b></td><td>after STEP_Gn_48_16 — the redeeming angel</td><td>The angel who redeems me from all evil — may he bless the lads; and let my name be called in them, and the name of my fathers, Abraham and Isaac; and may they teem like fish into a multitude in the midst of the earth.</td><td>SPECS empty; no test, no name.</td><td><span class="he">הַמַּלְאָךְ֩ הַגֹּאֵ֨ל אֹתִ֜י מִכָּל</span> · <i>ha-malakh ha-goel et-y mi-kal-</i><br><span class="gloss">= the-malakh the-goel y from-kal</span></td></tr>
+<tr><td><b>S17</b></td><td>after STEP_Gn_48_17 — evil in his eyes</td><td>And Joseph saw that his father was setting his right hand on Ephraim&#x27;s head, and it was evil in his eyes; and he took hold of his father&#x27;s hand, to remove it from Ephraim&#x27;s head onto Manasseh&#x27;s head.</td><td>SPECS empty; no test, no name.</td><td><span class="he">וַיַּ֣רְא יוֹסֵ֗ף כִּי יָשִׁ֨ית</span> · <i>va-yar yosef ki-yashit</i><br><span class="gloss">= and-yar yosef when-yashit</span></td></tr>
+<tr><td><b>S18</b></td><td>after STEP_Gn_48_18 — not so, my father</td><td>And Joseph said to his father: Not so, my father — for this is the firstborn; set your right hand on his head.</td><td>LET(sim_yeminkha_al_rosho) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(sim-yeminkha-upon-rosho) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֧אמֶר יוֹסֵ֛ף אֶל אָבִ֖יו</span> · <i>va-yomer yosef el-avi-v</i><br><span class="gloss">= and-yomer yosef to-avi-v</span></td></tr>
+<tr><td><b>S19</b></td><td>after STEP_Gn_48_19 — I know, my son, I know</td><td>And his father refused, and said: I know, my son, I know — he too shall become a people, and he too shall be great; but his younger brother shall be greater than he, and his seed shall be the fullness of the nations.</td><td>LET(sim_yeminkha_al_rosho) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(sim-yeminkha-upon-rosho) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְמָאֵ֣ן אָבִ֗יו וַיֹּ֨אמֶר֙ יָדַ֤עְתִּֽי</span> · <i>va-yemaen avi-v va-yomer yadati</i><br><span class="gloss">= and-yemaen avi-v and-yomer yadati</span></td></tr>
+<tr><td><b>S20</b></td><td>after STEP_Gn_48_20 — by you shall Israel bless</td><td>And he blessed them that day, saying: By you shall Israel bless, saying: God make you as Ephraim and as Manasseh. And he set Ephraim before Manasseh.</td><td>LET(sim_yeminkha_al_rosho) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(sim-yeminkha-upon-rosho) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְבָ֨רֲכֵ֜ם בַּיּ֣וֹם הַהוּא֮ לֵאמוֹר֒</span> · <i>va-yevarakhe-m ba-yom ha-hu le-mor</i><br><span class="gloss">= and-yevarakhe-m day the-that to-mor</span></td></tr>
+<tr><td><b>S21</b></td><td>after STEP_Gn_48_21 — God will return you</td><td>And Israel said to Joseph: Behold, I die; and God will be with you, and will return you to the land of your fathers.</td><td>LET(sim_yeminkha_al_rosho) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(sim-yeminkha-upon-rosho) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֤אמֶר יִשְׂרָאֵל֙ אֶל יוֹסֵ֔ף</span> · <i>va-yomer yisrael el-yosef</i><br><span class="gloss">= and-yomer yisrael to-yosef</span></td></tr>
+<tr><td><b>S22</b></td><td>after STEP_Gn_48_22 — one portion above your brothers</td><td>And I give you one portion above your brothers, which I took from the hand of the Amorite with my sword and with my bow.</td><td>LET(sim_yeminkha_al_rosho) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(sim-yeminkha-upon-rosho) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַאֲנִ֞י נָתַ֧תִּֽי לְךָ֛ שְׁכֶ֥ם</span> · <i>va-ani natati le-kha shekhem</i><br><span class="gloss">= and-ani natati to-kha shekhem</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_71_crossed_hands — The crossed hands (48:1-22) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — after STEP_Gn_48_1 — your father is ill
+    וַיְהִ֗י אַחֲרֵי֙ הַדְּבָרִ֣ים הָאֵ֔לֶּה (va-yehi achare ha-devarim ha-ele)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Gn_48_2 — strengthened on the bed
+    וַיַּגֵּ֣ד לְיַעֲקֹ֔ב וַיֹּ֕אמֶר הִנֵּ֛ה (va-yaged le-yaaqov va-yomer hine)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Gn_48_3 — El Shaddai at Luz
+    וַיֹּ֤אמֶר יַעֲקֹב֙ אֶל יוֹסֵ֔ף (va-yomer yaaqov el-yosef)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Gn_48_4 — the promise recalled
+    וַיֹּ֣אמֶר אֵלַ֗י הִנְנִ֤י מַפְרְךָ֙ (va-yomer el-y hin-ni mafr-kha)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Gn_48_5 — Ephraim and Manasseh mine
+    וְעַתָּ֡ה שְׁנֵֽי בָנֶיךָ֩ הַנּוֹלָדִ֨ים (ve-ata shene-vane-kha ha-noladim)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Gn_48_6 — after them, yours
+    וּמוֹלַדְתְּךָ֛ אֲשֶׁר הוֹלַ֥דְתָּ אַחֲרֵיהֶ֖ם (u-moladt-kha asher-holadta achare-hem)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — after STEP_Gn_48_7 — Rachel on the road
+    וַאֲנִ֣י בְּבֹאִ֣י מִפַּדָּ֗ן מֵ֩תָה֩ (va-ani be-voi-y mi-padan meta)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S8 — after STEP_Gn_48_8 — who are these?
+    וַיַּ֥רְא יִשְׂרָאֵ֖ל אֶת בְּנֵ֣י (va-yar yisrael et-bene)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S9 — after STEP_Gn_48_9 — take them to me
+    וַיֹּ֤אמֶר יוֹסֵף֙ אֶל אָבִ֔יו (va-yomer yosef el-avi-v)
+    PASS  LET(qachem_na_elai) pushed and OPEN  (queue=[&#x27;qachem_na_elai&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S10 — after STEP_Gn_48_10 — kissed and embraced
+    וְעֵינֵ֤י יִשְׂרָאֵל֙ כָּבְד֣וּ מִזֹּ֔קֶן (ve-ene yisrael kavdu mi-zoqen)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S11 — after STEP_Gn_48_11 — I never judged to see
+    וַיֹּ֤אמֶר יִשְׂרָאֵל֙ אֶל יוֹסֵ֔ף (va-yomer yisrael el-yosef)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S12 — after STEP_Gn_48_12 — from between his knees
+    וַיּוֹצֵ֥א יוֹסֵ֛ף אֹתָ֖ם מֵעִ֣ם (va-yotze yosef et-m me-im)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S13 — after STEP_Gn_48_13 — the arrangement
+    וַיִּקַּ֣ח יוֹסֵף֮ אֶת שְׁנֵיהֶם֒ (va-yiqach yosef et-shene-hem)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S14 — after STEP_Gn_48_14 — the hands crossed
+    וַיִּשְׁלַח֩ יִשְׂרָאֵ֨ל אֶת יְמִינ֜וֹ (va-yishlach yisrael et-yemin-o)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S15 — after STEP_Gn_48_15 — the shepherd God
+    וַיְבָ֥רֶךְ אֶת יוֹסֵ֖ף וַיֹּאמַ֑ר (va-yevarekh et-yosef va-yomar)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S16 — after STEP_Gn_48_16 — the redeeming angel
+    הַמַּלְאָךְ֩ הַגֹּאֵ֨ל אֹתִ֜י מִכָּל (ha-malakh ha-goel et-y mi-kal-)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S17 — after STEP_Gn_48_17 — evil in his eyes
+    וַיַּ֣רְא יוֹסֵ֗ף כִּי יָשִׁ֨ית (va-yar yosef ki-yashit)
+    PASS  SPECS empty  (queue=0)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S18 — after STEP_Gn_48_18 — not so, my father
+    וַיֹּ֧אמֶר יוֹסֵ֛ף אֶל אָבִ֖יו (va-yomer yosef el-avi-v)
+    PASS  LET(sim_yeminkha_al_rosho) pushed and OPEN  (queue=[&#x27;sim_yeminkha_al_rosho&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S19 — after STEP_Gn_48_19 — I know, my son, I know
+    וַיְמָאֵ֣ן אָבִ֗יו וַיֹּ֨אמֶר֙ יָדַ֤עְתִּֽי (va-yemaen avi-v va-yomer yadati)
+    PASS  LET(sim_yeminkha_al_rosho) pushed and OPEN  (queue=[&#x27;sim_yeminkha_al_rosho&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S20 — after STEP_Gn_48_20 — by you shall Israel bless
+    וַיְבָ֨רֲכֵ֜ם בַּיּ֣וֹם הַהוּא֮ לֵאמוֹר֒ (va-yevarakhe-m ba-yom ha-hu le-mor)
+    PASS  LET(sim_yeminkha_al_rosho) pushed and OPEN  (queue=[&#x27;sim_yeminkha_al_rosho&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S21 — after STEP_Gn_48_21 — God will return you
+    וַיֹּ֤אמֶר יִשְׂרָאֵל֙ אֶל יוֹסֵ֔ף (va-yomer yisrael el-yosef)
+    PASS  LET(sim_yeminkha_al_rosho) pushed and OPEN  (queue=[&#x27;sim_yeminkha_al_rosho&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S22 — after STEP_Gn_48_22 — one portion above your brothers
+    וַאֲנִ֞י נָתַ֧תִּֽי לְךָ֛ שְׁכֶ֥ם (va-ani natati le-kha shekhem)
+    PASS  LET(sim_yeminkha_al_rosho) pushed and OPEN  (queue=[&#x27;sim_yeminkha_al_rosho&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_71_crossed_hands.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_71_crossed_hands — 48:1-22
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_71_crossed_hands.yaml) is CANONICAL (Pre-Code);
+# this file is a derived, runnable rendering. Do not edit — regenerate. The
+# assertion block at the bottom is baked from the Stage D interpreter&#x27;s
+# actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;The crossed hands (48:1-22)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_71_crossed_hands&quot;)
+
+# -------------------------- Gen.48.1 · YOUR_FATHER_IS_ILL ------------------
+# וַיְהִי אַחֲרֵי הַדְּבָרִים הָאֵלֶּה וַיֹּאמֶר לְיוֹסֵף הִנֵּה אָבִיךָ
+# חֹלֶה וַיִּקַּח אֶת־שְׁנֵי בָנָיו עִמּוֹ אֶת־מְנַשֶּׁה וְאֶת־אֶפְרָיִם
+# &quot;[EN-AID] And it was after these things, that one said to Joseph: Behold,
+# your father is ill. And he took his two sons with him, Manasseh and
+# Ephraim.&quot;
+m.step(&quot;Gen.48.1&quot;)
+# ‹הִנֵּה אָבִיךָ חֹלֶה› (“behold father-you/your be-rubbed”) — fact holds:
+# behold-avikha-be-rubbed
+m.fact(&quot;hine_avikha_chole&quot;)
+
+# -------------------------- Gen.48.2 · STRENGTHENED_ON_THE_BED -------------
+# וַיַּגֵּד לְיַעֲקֹב וַיֹּאמֶר הִנֵּה בִּנְךָ יוֹסֵף בָּא אֵלֶיךָ
+# וַיִּתְחַזֵּק יִשְׂרָאֵל וַיֵּשֶׁב עַל־הַמִּטָּה
+# &quot;[EN-AID] And one told Jacob, and said: Behold, your son Joseph comes to
+# you. And Israel strengthened himself, and sat upon the bed.&quot;
+m.step(&quot;Gen.48.2&quot;)
+# ‹וַיִּתְחַזֵּק יִשְׂרָאֵל וַיֵּשֶׁב עַל־הַמִּטָּה› (“and-fasten-upon
+# Israel and-dwell/sit over the-bed-forsleeping”) — fact holds: and-fasten-
+# upon-Israel-and-dwell/sit-over-the-bed-forsleeping
+m.fact(&quot;va_yitchazeq_yisrael_va_yeshev_al_ha_mita&quot;)
+
+# -------------------------- Gen.48.3 · EL_SHADAY_AT_LUZ --------------------
+# וַיֹּאמֶר יַעֲקֹב אֶל־יוֹסֵף אֵל שַׁדַּי נִרְאָה־אֵלַי בְּלוּז בְּאֶרֶץ
+# כְּנָעַן וַיְבָרֶךְ אֹתִי
+# &quot;[EN-AID] And Jacob said to Joseph: El Shaddai appeared to me at Luz in
+# the land of Canaan, and blessed me.&quot;
+m.step(&quot;Gen.48.3&quot;)
+# ‹אֵל שַׁדַּי נִרְאָה־אֵלַי בְּלוּז› (“strength Almighty see to-me/my in-
+# Luz”) — fact holds: to-Almighty-see-elai-in-Luz
+m.fact(&quot;el_shaday_nira_elai_be_luz&quot;)
+
+# -------------------------- Gen.48.4 · THE_PROMISE_RECALLED ----------------
+# וַיֹּאמֶר אֵלַי הִנְנִי מַפְרְךָ וְהִרְבִּיתִךָ וּנְתַתִּיךָ לִקְהַל
+# עַמִּים וְנָתַתִּי אֶת־הָאָרֶץ הַזֹּאת לְזַרְעֲךָ אַחֲרֶיךָ אֲחֻזַּת
+# עוֹלָם
+# &quot;[EN-AID] And He said to me: Behold, I will make you fruitful and multiply
+# you, and I will make you a company of peoples; and I will give this land
+# to your seed after you, an everlasting holding.&quot;
+m.step(&quot;Gen.48.4&quot;)
+# ‹אֲחֻזַּת עוֹלָם› (“something-seized forever”) — fact holds: something-
+# seized-forever-to-zarakha
+m.fact(&quot;achuzat_olam_le_zarakha&quot;)
+
+# -------------------------- Gen.48.5 · EPHRAIM_AND_MANASSEH_MINE -----------
+# וְעַתָּה שְׁנֵי־בָנֶיךָ הַנּוֹלָדִים לְךָ בְּאֶרֶץ מִצְרַיִם עַד־בֹּאִי
+# אֵלֶיךָ מִצְרַיְמָה לִי־הֵם אֶפְרַיִם וּמְנַשֶּׁה כִּרְאוּבֵן וְשִׁמְעוֹן
+# יִהְיוּ־לִי
+# &quot;[EN-AID] And now, your two sons, who were born to you in the land of
+# Egypt before I came to you to Egypt — mine they are: Ephraim and Manasseh,
+# as Reuben and Simeon, shall be mine.&quot;
+m.step(&quot;Gen.48.5&quot;)
+# ‹אֶפְרַיִם וּמְנַשֶּׁה כִּרְאוּבֵן וְשִׁמְעוֹן יִהְיוּ־לִי› (“Ephraim and-
+# Manasseh like-Reuben and-Simeon be to-me/my”) — fact holds: Ephraim-and-
+# Manasseh-that-reuven-and-Simeon-be-to-me
+m.fact(&quot;efrayim_u_menashe_ki_reuven_ve_shimon_yihyu_li&quot;)
+
+# -------------------------- Gen.48.6 · AFTER_THEM_YOURS --------------------
+# וּמוֹלַדְתְּךָ אֲשֶׁר־הוֹלַדְתָּ אַחֲרֵיהֶם לְךָ יִהְיוּ עַל שֵׁם אֲחֵיהֶם
+# יִקָּרְאוּ בְּנַחֲלָתָם
+# &quot;[EN-AID] And your offspring whom you beget after them shall be yours; by
+# the name of their brothers they shall be called in their inheritance.&quot;
+m.step(&quot;Gen.48.6&quot;)
+# ‹עַל שֵׁם אֲחֵיהֶם יִקָּרְאוּ בְּנַחֲלָתָם› (“over name brother-them/their
+# call in-inheritance-them/their”) — fact holds: over-name-achehem-call-in-
+# nachalatam
+m.fact(&quot;al_shem_achehem_yiqaru_be_nachalatam&quot;)
+
+# -------------------------- Gen.48.7 · RACHEL_ON_THE_ROAD ------------------
+# וַאֲנִי בְּבֹאִי מִפַּדָּן מֵתָה עָלַי רָחֵל בְּאֶרֶץ כְּנַעַן בַּדֶּרֶךְ
+# בְּעוֹד כִּבְרַת־אֶרֶץ לָבֹא אֶפְרָתָה וָאֶקְבְּרֶהָ שָּׁם בְּדֶרֶךְ
+# אֶפְרָת הִוא בֵּית לָחֶם
+# &quot;[EN-AID] And I — when I came from Paddan, Rachel died on me in the land
+# of Canaan, on the road, while yet a stretch of land to come to Ephrath;
+# and I buried her there on the road of Ephrath — that is Bethlehem.&quot;
+m.step(&quot;Gen.48.7&quot;)
+# ‹בְּעוֹד כִּבְרַת־אֶרֶץ לָבֹא אֶפְרָתָה› (“in-still/again length earth to-
+# come/bring &#x27;Ephrath”) — fact holds: die-alai-Rachel-come/bring-way/road
+m.fact(&quot;meta_alai_rachel_ba_derekh&quot;)
+
+# -------------------------- Gen.48.8 · WHO_ARE_THESE -----------------------
+# וַיַּרְא יִשְׂרָאֵל אֶת־בְּנֵי יוֹסֵף וַיֹּאמֶר מִי־אֵלֶּה
+# &quot;[EN-AID] And Israel saw Joseph&#x27;s sons, and said: Who are these?&quot;
+m.step(&quot;Gen.48.8&quot;)
+# ‹וַיַּרְא יִשְׂרָאֵל אֶת־בְּנֵי יוֹסֵף› (“and-see Israel obj-marker son
+# Joseph”) — fact holds: and-see-Israel-obj-marker-son-Joseph
+m.fact(&quot;va_yar_yisrael_et_bene_yosef&quot;)
+
+# -------------------------- Gen.48.9 · TAKE_THEM_TO_ME ---------------------
+# וַיֹּאמֶר יוֹסֵף אֶל־אָבִיו בָּנַי הֵם אֲשֶׁר־נָתַן־לִי אֱלֹהִים בָּזֶה
+# וַיֹּאמַר קָחֶם־נָא אֵלַי וַאֲבָרֲכֵם
+# &quot;[EN-AID] And Joseph said to his father: They are my sons, whom God has
+# given me in this place. And he said: Take them, pray, to me, and I will
+# bless them.&quot;
+m.step(&quot;Gen.48.9&quot;)
+# ‹קָחֶם־נָא אֵלַי וַאֲבָרֲכֵם› (“take-them/their please to-me/my and-bless-
+# them/their”) — Israel speaks a demand — LET: qachem-please-elai
+m.declare(&quot;yisrael&quot;, &quot;LET&quot;,
+          &quot;qachem_na_elai&quot;)
+
+# -------------------------- Gen.48.10 · KISSED_AND_EMBRACED ----------------
+# וְעֵינֵי יִשְׂרָאֵל כָּבְדוּ מִזֹּקֶן לֹא יוּכַל לִרְאוֹת וַיַּגֵּשׁ אֹתָם
+# אֵלָיו וַיִּשַּׁק לָהֶם וַיְחַבֵּק לָהֶם
+# &quot;[EN-AID] And Israel&#x27;s eyes were heavy from age — he could not see. And he
+# brought them near to him; and he kissed them, and embraced them.&quot;
+m.step(&quot;Gen.48.10&quot;)
+# ‹וַיַּגֵּשׁ אֹתָם אֵלָיו וַיִּשַּׁק לָהֶם וַיְחַבֵּק לָהֶם› (“and-be obj-
+# marker-them/their to-him/its and-kiss to-them/their and-clasp to-
+# them/their”) — demand settled (popped from the queue): qachem-please-elai
+m.result(&quot;qachem_na_elai&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Gen.48.11 · I_NEVER_JUDGED_TO_SEE --------------
+# וַיֹּאמֶר יִשְׂרָאֵל אֶל־יוֹסֵף רְאֹה פָנֶיךָ לֹא פִלָּלְתִּי וְהִנֵּה
+# הֶרְאָה אֹתִי אֱלֹהִים גַּם אֶת־זַרְעֶךָ
+# &quot;[EN-AID] And Israel said to Joseph: To see your face I had not judged —
+# and behold, God has shown me your seed too.&quot;
+m.step(&quot;Gen.48.11&quot;)
+# ‹רְאֹה פָנֶיךָ לֹא פִלָּלְתִּי› (“see face-you/your not judge”) — fact
+# holds: see-fanekha-not-judge
+m.fact(&quot;reo_fanekha_lo_filalti&quot;)
+
+# -------------------------- Gen.48.12 · FROM_BETWEEN_HIS_KNEES -------------
+# וַיּוֹצֵא יוֹסֵף אֹתָם מֵעִם בִּרְכָּיו וַיִּשְׁתַּחוּ לְאַפָּיו אָרְצָה
+# &quot;[EN-AID] And Joseph brought them out from between his knees; and he bowed
+# with his face to the earth.&quot;
+m.step(&quot;Gen.48.12&quot;)
+# ‹וַיִּשְׁתַּחוּ לְאַפָּיו אָרְצָה› (“and-afflict to-nose-him/its earth-
+# ward”) — fact holds: and-afflict-to-his-nostrils-artza
+m.fact(&quot;va_yishtachu_le_apav_artza&quot;)
+
+# -------------------------- Gen.48.13 · THE_ARRANGEMENT --------------------
+# וַיִּקַּח יוֹסֵף אֶת־שְׁנֵיהֶם אֶת־אֶפְרַיִם בִּימִינוֹ מִשְּׂמֹאל
+# יִשְׂרָאֵל וְאֶת־מְנַשֶּׁה בִשְׂמֹאלוֹ מִימִין יִשְׂרָאֵל וַיַּגֵּשׁ
+# אֵלָיו
+# &quot;[EN-AID] And Joseph took the two of them — Ephraim at his right, toward
+# Israel&#x27;s left, and Manasseh at his left, toward Israel&#x27;s right — and
+# brought them near to him.&quot;
+m.step(&quot;Gen.48.13&quot;)
+# ‹אֶת־אֶפְרַיִם בִּימִינוֹ מִשְּׂמֹאל יִשְׂרָאֵל וְאֶת־מְנַשֶּׁה
+# בִשְׂמֹאלוֹ מִימִין יִשְׂרָאֵל› (“obj-marker Ephraim in-right-hand-him/its
+# from-dark Israel and-obj-marker Manasseh in-dark-him/its from-right-hand
+# Israel”) — fact holds: Ephraim-bimino-Manasseh-vismolo
+m.fact(&quot;efrayim_bimino_menashe_vismolo&quot;)
+
+# -------------------------- Gen.48.14 · THE_HANDS_CROSSED ------------------
+# וַיִּשְׁלַח יִשְׂרָאֵל אֶת־יְמִינוֹ וַיָּשֶׁת עַל־רֹאשׁ אֶפְרַיִם וְהוּא
+# הַצָּעִיר וְאֶת־שְׂמֹאלוֹ עַל־רֹאשׁ מְנַשֶּׁה שִׂכֵּל אֶת־יָדָיו כִּי
+# מְנַשֶּׁה הַבְּכוֹר
+# &quot;[EN-AID] And Israel sent out his right hand and set it on Ephraim&#x27;s head
+# — and he was the younger — and his left hand on Manasseh&#x27;s head; he
+# crossed his hands, for Manasseh was the firstborn.&quot;
+m.step(&quot;Gen.48.14&quot;)
+# ‹שִׂכֵּל אֶת־יָדָיו כִּי מְנַשֶּׁה הַבְּכוֹר› (“be-circumspect-and-hence
+# obj-marker hand-him/its that Manasseh the-firstborn”) — event: be-
+# circumspect-and-hence-yadav — agent Israel
+m.event(&quot;sikel_yadav&quot;, agent=&quot;yisrael&quot;)
+
+# -------------------------- Gen.48.15 · THE_SHEPHERD_GOD -------------------
+# וַיְבָרֶךְ אֶת־יוֹסֵף וַיֹּאמַר הָאֱלֹהִים אֲשֶׁר הִתְהַלְּכוּ אֲבֹתַי
+# לְפָנָיו אַבְרָהָם וְיִצְחָק הָאֱלֹהִים הָרֹעֶה אֹתִי מֵעוֹדִי עַד־הַיּוֹם
+# הַזֶּה
+# &quot;[EN-AID] And he blessed Joseph, and said: The God before whom my fathers
+# walked, Abraham and Isaac, the God who shepherds me from my beginning
+# until this day —&quot;
+m.step(&quot;Gen.48.15&quot;)
+# ‹הָאֱלֹהִים הָרֹעֶה אֹתִי מֵעוֹדִי› (“the-God the-graze obj-marker-me/my
+# from-still/again-me/my”) — blessing: Israel blesses Joseph
+m.bless(&quot;yisrael&quot;, &quot;yosef&quot;)
+
+# -------------------------- Gen.48.16 · THE_REDEEMING_ANGEL ----------------
+# הַמַּלְאָךְ הַגֹּאֵל אֹתִי מִכָּל־רָע יְבָרֵךְ אֶת־הַנְּעָרִים וְיִקָּרֵא
+# בָהֶם שְׁמִי וְשֵׁם אֲבֹתַי אַבְרָהָם וְיִצְחָק וְיִדְגּוּ לָרֹב בְּקֶרֶב
+# הָאָרֶץ
+# &quot;[EN-AID] The angel who redeems me from all evil — may he bless the lads;
+# and let my name be called in them, and the name of my fathers, Abraham and
+# Isaac; and may they teem like fish into a multitude in the midst of the
+# earth.&quot;
+m.step(&quot;Gen.48.16&quot;)
+# ‹הַמַּלְאָךְ הַגֹּאֵל אֹתִי מִכָּל־רָע יְבָרֵךְ אֶת־הַנְּעָרִים› (“the-
+# messenger the-be-the-next-of-kin obj-marker-me/my from-all bad bless obj-
+# marker the-boy”) — fact holds: the-messenger-the-be-the-next-of-kin-bless-
+# obj-marker-the-boy
+m.fact(&quot;ha_malakh_ha_goel_yevarekh_et_ha_nearim&quot;)
+
+# -------------------------- Gen.48.17 · EVIL_IN_HIS_EYES -------------------
+# וַיַּרְא יוֹסֵף כִּי־יָשִׁית אָבִיו יַד־יְמִינוֹ עַל־רֹאשׁ אֶפְרַיִם
+# וַיֵּרַע בְּעֵינָיו וַיִּתְמֹךְ יַד־אָבִיו לְהָסִיר אֹתָהּ מֵעַל
+# רֹאשׁ־אֶפְרַיִם עַל־רֹאשׁ מְנַשֶּׁה
+# &quot;[EN-AID] And Joseph saw that his father was setting his right hand on
+# Ephraim&#x27;s head, and it was evil in his eyes; and he took hold of his
+# father&#x27;s hand, to remove it from Ephraim&#x27;s head onto Manasseh&#x27;s head.&quot;
+m.step(&quot;Gen.48.17&quot;)
+# ‹וַיֵּרַע בְּעֵינָיו› (“and-spoil in-eye-him/its”) — fact holds: and-
+# spoil-in-enav
+m.fact(&quot;va_yera_be_enav&quot;)
+
+# -------------------------- Gen.48.18 · NOT_SO_MY_FATHER -------------------
+# וַיֹּאמֶר יוֹסֵף אֶל־אָבִיו לֹא־כֵן אָבִי כִּי־זֶה הַבְּכֹר שִׂים
+# יְמִינְךָ עַל־רֹאשׁוֹ
+# &quot;[EN-AID] And Joseph said to his father: Not so, my father — for this is
+# the firstborn; set your right hand on his head.&quot;
+m.step(&quot;Gen.48.18&quot;)
+# ‹כִּי־זֶה הַבְּכֹר שִׂים יְמִינְךָ עַל־רֹאשׁוֹ› (“that this the-firstborn
+# put/set right-hand-you/your over head-him/its”) — Joseph speaks a demand —
+# LET: put/set-yeminkha-over-rosho
+m.declare(&quot;yosef&quot;, &quot;LET&quot;,
+          &quot;sim_yeminkha_al_rosho&quot;)
+
+# -------------------------- Gen.48.19 · I_KNOW_MY_SON_I_KNOW ---------------
+# וַיְמָאֵן אָבִיו וַיֹּאמֶר יָדַעְתִּי בְנִי יָדַעְתִּי גַּם־הוּא
+# יִהְיֶה־לְּעָם וְגַם־הוּא יִגְדָּל וְאוּלָם אָחִיו הַקָּטֹן יִגְדַּל
+# מִמֶּנּוּ וְזַרְעוֹ יִהְיֶה מְלֹא־הַגּוֹיִם
+# &quot;[EN-AID] And his father refused, and said: I know, my son, I know — he
+# too shall become a people, and he too shall be great; but his younger
+# brother shall be greater than he, and his seed shall be the fullness of
+# the nations.&quot;
+m.step(&quot;Gen.48.19&quot;)
+# ‹וַיְמָאֵן אָבִיו וַיֹּאמֶר יָדַעְתִּי בְנִי יָדַעְתִּי› (“and-refuse
+# father-him/its and-say know son-me/my know”) — fact holds: and-refuse-
+# aviv-know-veni-know
+m.fact(&quot;va_yemaen_aviv_yadati_veni_yadati&quot;)
+
+# -------------------------- Gen.48.20 · BY_YOU_SHALL_ISRAEL_BLESS ----------
+# וַיְבָרֲכֵם בַּיּוֹם הַהוּא לֵאמוֹר בְּךָ יְבָרֵךְ יִשְׂרָאֵל לֵאמֹר
+# יְשִׂמְךָ אֱלֹהִים כְּאֶפְרַיִם וְכִמְנַשֶּׁה וַיָּשֶׂם אֶת־אֶפְרַיִם
+# לִפְנֵי מְנַשֶּׁה
+# &quot;[EN-AID] And he blessed them that day, saying: By you shall Israel bless,
+# saying: God make you as Ephraim and as Manasseh. And he set Ephraim before
+# Manasseh.&quot;
+m.step(&quot;Gen.48.20&quot;)
+# ‹יְשִׂמְךָ אֱלֹהִים כְּאֶפְרַיִם וְכִמְנַשֶּׁה› (“put/set-you/your God
+# like-Ephraim and-like-Manasseh”) — blessing: Israel blesses Ephraim-and-
+# Manasseh
+m.bless(&quot;yisrael&quot;, &quot;efrayim_u_menashe&quot;)
+
+# -------------------------- Gen.48.21 · GOD_WILL_RETURN_YOU ----------------
+# וַיֹּאמֶר יִשְׂרָאֵל אֶל־יוֹסֵף הִנֵּה אָנֹכִי מֵת וְהָיָה אֱלֹהִים
+# עִמָּכֶם וְהֵשִׁיב אֶתְכֶם אֶל־אֶרֶץ אֲבֹתֵיכֶם
+# &quot;[EN-AID] And Israel said to Joseph: Behold, I die; and God will be with
+# you, and will return you to the land of your fathers.&quot;
+m.step(&quot;Gen.48.21&quot;)
+# ‹וְהֵשִׁיב אֶתְכֶם אֶל־אֶרֶץ אֲבֹתֵיכֶם› (“and-return obj-marker-
+# you/your(pl) to earth father-you/your(pl)”) — fact holds: and-return-
+# etkhem-to-earth-avotekhem
+m.fact(&quot;ve_heshiv_etkhem_el_eretz_avotekhem&quot;)
+
+# -------------------------- Gen.48.22 · SHEKHEM_ABOVE_YOUR_BROTHERS --------
+# וַאֲנִי נָתַתִּי לְךָ שְׁכֶם אַחַד עַל־אַחֶיךָ אֲשֶׁר לָקַחְתִּי מִיַּד
+# הָאֱמֹרִי בְּחַרְבִּי וּבְקַשְׁתִּי
+# &quot;[EN-AID] And I give you one portion above your brothers, which I took
+# from the hand of the Amorite with my sword and with my bow.&quot;
+m.step(&quot;Gen.48.22&quot;)
+# ‹וַאֲנִי נָתַתִּי לְךָ שְׁכֶם אַחַד› (“and-I set to-you/your neck-as-the-
+# place-of-burden one”) — fact holds: set-to-you-neck-as-the-place-of-
+# burden-one
+m.fact(&quot;natati_lekha_shekhem_achad&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;sim_yeminkha_al_rosho&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 2
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;hine_avikha_chole&#x27;, &#x27;va_yitchazeq_yisrael_va_yeshev_al_ha_mita&#x27;, &#x27;el_shaday_nira_elai_be_luz&#x27;, &#x27;achuzat_olam_le_zarakha&#x27;, &#x27;efrayim_u_menashe_ki_reuven_ve_shimon_yihyu_li&#x27;, &#x27;al_shem_achehem_yiqaru_be_nachalatam&#x27;, &#x27;meta_alai_rachel_ba_derekh&#x27;, &#x27;va_yar_yisrael_et_bene_yosef&#x27;, &#x27;reo_fanekha_lo_filalti&#x27;, &#x27;va_yishtachu_le_apav_artza&#x27;, &#x27;efrayim_bimino_menashe_vismolo&#x27;, &#x27;ha_malakh_ha_goel_yevarekh_et_ha_nearim&#x27;, &#x27;va_yera_be_enav&#x27;, &#x27;va_yemaen_aviv_yadati_veni_yadati&#x27;, &#x27;ve_heshiv_etkhem_el_eretz_avotekhem&#x27;, &#x27;natati_lekha_shekhem_achad&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 6
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

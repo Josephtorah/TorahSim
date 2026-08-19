@@ -1,0 +1,750 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>exo_20_the_ten_utterances — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/exo_20_the_ten_utterances?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>The Ten Utterances (20:1-26) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>exo_20_the_ten_utterances</b> · Exodus 20:1-26 · derive logic_derived_v1 · phase FWD-34</div>
+<div class="meta"><a href="../#Exod/20/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">אָֽנֹכִ֖י יְהוָ֣ה אֱלֹהֶ֑יךָ</span> · <i>anokhi YHWH elohe-kha</i> · &#x27;I am the LORD your God&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DERIVED 2026-08-10 · FORWARD ERA unit #34 (run FWD-8 block 4; Exod 1-20 continuous behind it). Span: 20:1-26, whole chapter: 26 verses in the SNAPSHOT&#x27;s division (the individual-reading verse-order; eight verses without a mid-verse rest, including the frame 20:1 and the four short prohibitions). Oral layer IN-PIPELINE: manifest 13/13 VERIFIED, zero FAILED — see oral_audit_note_en. MACHINE PROFILE. FOURTEEN STATUTES, ONE DECLARE, ONE RESULT, ONE EVENT — the STATUTE-CLASS DEBUT in the exodus stack (the apodictic operator introduced at lev_19 arrives at its own source): the TEN UTTERANCES installed as standing law, one statute per utterance at its head-verse (the received count — anokhi and lo-yihye the first two, &#x27;from the mouth of the Power&#x27;), the machine literally counting them: STATUTES 10 STANDING at 20:17 — then the ALTAR-CODE&#x27;s four (silver-gods ban, the earthen altar with its coming-and-blessing warranty, the hewn-stone ban, the steps ban): FOURTEEN standing at close. The one exchange: the people&#x27;s mediation-demand (20:19 daber-ata-imanu — prophecy instituted by petition) pops at 20:21 IN GEOMETRY (the people far, Moses into the thick cloud — the office accepted by walking into it). ONE EVENT: the seeing of the voices (20:18). THE DECALOGUE&#x27;S ARITHMETIC ALL MACHINE-VERIFIED at the build: 620 letters = KETER (the crown), 172 words = EQEV, alef-to-kaf = AKH (surely good), the sixth utterance six letters, the Torah&#x27;s ONLY six two-word verses (both Decalogues&#x27; murder/adultery/theft), the zakhor-verse&#x27;s sevens (verse 7 of the span, opens with zayin, five words, seven resters), the double-pointed tokens (panai, mitachat — the two-reading system&#x27;s trace in the SNAPSHOT). Wires closed: exo_16&#x27;s six-and-one manna-frame pays at 20:8-11 (the Sabbath commanded); the kaved-root&#x27;s arc ends in KABED (the weight-word redeemed into honor); 19:9&#x27;s hear-in-My-speaking certified by 20:19; 19:25&#x27;s open mouth filled by 20:1. Queue at close: EMPTY in-unit (the statutes stand as world-facts, not cards). REGISTRY 0; TESTS 0. CARE-POINTS: the statute-per-utterance convention (the utterance-count is the received one; 20:3-6 one utterance, its detail-verses P-ops); the altar-code as four MORE statutes (10 + 4 — the count-checkpoint at both 20:17 and 20:26); the two-reading system (upper/ lower cantillation — the SNAPSHOT carries double vowels at panai and mitachat, single pausal at tirtzach: the stream&#x27;s shape filed, not forced); the seven closed sections (codex-side, not in the stream — instrument gap); the versification seam (the scroll-app&#x27;s known Exod 20 gloss-chain fallback rides this chapter&#x27;s division — pre-existing, noted). WATCHLIST ARMS: 24:12 (the tablets — the Ten get stone), 31:18-32:19 (written and broken), 34:1-28 (rewritten), Deut 5 (the second Decalogue — the deltas: shamor, the two-word verses census-verified there too), Deut 4:12-13 (the voice and the ten), 27:5-6 (the hewn-ban re-legislated), Josh 8:31 (the iron-free altar built). Outside-Torah names (named-only): Ps 62:12 (one spoke, two heard), Isa 6:4 (the swaying doorposts), Hos 2 (the betrothal), the Yerushalmi of Sheqalim (the two readings), Pirkei deRabbi Eliezer (the seized hands).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-10 (IN-PIPELINE, forward era; manifest logic/oral_audit/manifests/exo_20_the_ten_utterances_claims.json 13/13 VERIFIED, zero FAILED; record logic/oral_audit/AUDIT_exo_20_2026-08-10.md). CROWNS (chain-attested + DB-verified). THE TRIPLE-PLENE BROUGHT-YOU-OUT [EX20-01, KB + MS on 20:2]: הוצאתיך (&quot;I brought you out&quot;) exactly THREE in the Torah (census checked): UR OF THE CHALDEES (Gen 15:7, to Abraham) and the TWO DECALOGUES — &quot;brought from Ur to give his sons the Torah&quot;; all three full-full-full (the Ramah; the Jerusalem Talmud&#x27;s lean split named); אנכי (&quot;I&quot;) = כסא (&quot;throne,&quot; 81 = 81, asserted) — the heavens torn to the throne. THE CROWN-COUNT [EX20-02, KB — THE MARQUEE]: the Ten hold exactly 620 LETTERS = כתר (&quot;crown&quot;: the 613 + the sons of Noah&#x27;s seven — &quot;Torah for its own sake is a crown&quot;) and 172 WORDS = עקב (&quot;because&quot; — &quot;BECAUSE Abraham heard My voice&quot;), both machine-counted on the SNAPSHOT; the Ten open with alef and close with kaf — אך (&quot;SURELY good to Israel&quot;); לא תרצח — six letters at the sixth utterance (&quot;man was created on the sixth day&quot;). THE SIX TWO-WORD VERSES [EX20-03, the Chizkuni + the Zohar via MS]: the whole Torah holds exactly SIX verses of two words — murder, adultery, theft, in BOTH Decalogues (census asserted at the build; the anchor-verses checked) — &quot;no verse of two words in Scripture except these&quot;; the Zohar&#x27;s PAUSING ACCENT: without the pause, killing forbidden even to the court, union even in marriage — &quot;the pause forbids and permits.&quot; THE DOUBLE-POINTED TOKENS [EX20-04, MS&#x27;s essay from ibn Habib]: פני (&quot;My face&quot;) carries BOTH the pausal and running vowels in one token (checked in-token; מתחת likewise, asserted) — the TWO READINGS (the lone reader closes verses; the public reader reads each utterance whole — accents, vowels, and soft-hard letters all doubled); the Rama of Fano: he who reads both aloud is silenced with rebuke; the four dagesh-and-soft letters named; the SNAPSHOT&#x27;s shape filed honestly (double at panai/mitachat, single pausal at tirtzach). THE KINDNESS-FILE [EX20-05, KB on 20:6]: ועשה חסד (&quot;and doing kindness&quot;) three in the Torah (adjacency checked): the SERVANT&#x27;S PRAYER (Gen 24:12) and the two Decalogues — the phrase that entered as a servant&#x27;s plea returns as the Master&#x27;s pledge; David&#x27;s pair named; the SEVEN CROWNLETS on lo-tisa&#x27;s shin (instrument gap — the tagin above the stream). THE ZAKHOR ARITHMETIC [EX20-06, KB on 20:8]: FIVE words (checked — &quot;the five books&quot;), the SEVENTH verse of the span opening with ZAYIN (asserted), SEVEN resters (counted): verse seven, letter seven, roster seven. THE LEAN LENGTHENING [EX20-07, KB on 20:12]: יארכון (&quot;may be long&quot;) census-unique lean (checked) — &quot;no length of days in this world, created with He — but in the world to come, created with yod&quot;; honor-beside-Sabbath (with the mirror&#x27;s English). THE SWAYING [EX20-08, KB on 20:18]: וינעו (&quot;and they swayed&quot;) Torah-unique (checked) — &quot;THEREFORE WE SWAY at the study of Torah&quot;; the twelve-mil recoil named; Isaiah&#x27;s doorposts the twin. THE PRINTER CONVICTED TWICE [EX20-09, MS on 20:18]: הקולת (&quot;the voices&quot;) full-then-lean, census-unique (checked); הלפידם (&quot;the torches&quot;) likewise (asserted) — the printed edition &quot;greatly confused in the Masorah and the verses,&quot; corrected from the manuscripts and the Ramah. THE TEST AND THE SHAME [EX20-10, KB on 20:20]: לבעבור (&quot;in order to&quot;) Torah-unique (checked) — the Masorah-three to David&#x27;s court (&quot;stand the test and be as David&quot;); תחטאו (&quot;you sin&quot;) a Torah-pair (checked): REUBEN&#x27;s don&#x27;t-sin and Moses&#x27; — a brother&#x27;s plea and a mediator&#x27;s charge; the shame-cipher EXACT: יראתו על פניכם (&quot;His fear on your faces&quot;) = זה הוא בושת הפנים (&quot;this is shame-of-face,&quot; 917 = 917, asserted). THE DARK = THE PRESENCE [EX20-11, KB on 20:21]: הערפל (&quot;the thick cloud&quot;) Torah-unique (checked) = שכינה (&quot;the Presence,&quot; 385 = 385, asserted) — the darkness named by number as What it hides; נגש read passive (Pirkei deRabbi Eliezer, with English: Michael and Gabriel seized his hands); the approach-pair asserted: Joseph to Esau, Moses into the cloud. THE ALTAR-CODE&#x27;S LETTERS [EX20-12, MS + KB on 20:24-26]: ותחללה (&quot;and profaned it&quot;) unique, no yod (checked; the Ramah); אבוא (&quot;I will come&quot;) = TEN (asserted) — &quot;if I find ten in the synagogue, I come and bless&quot;; תגלה&#x27;s Masorah-three named; במעלת soft against the printed hard-claim (&quot;I have seen it soft in all the books&quot;). THE SEVEN SECTIONS AND THE COUNT [EX20-13, MS&#x27;s essay]: the precise codices hold seven closed breaks in the Ten, splitting the two covets (instrument gap — the stream carries no break-marks); the split misled some to un-count the first utterance — &quot;the truth is as the sages received: אנכי (&quot;I am&quot;) and לא יהיה (&quot;there shall not be&quot;) ARE the two, heard from the mouth of the Power&quot; (the I-am word anchored in-verse, checked).</div>
+<div class="meta">confidence: structure tested; oral layer verified 13/13</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>FORWARD ERA run 8, block 4 (owner: &quot;lets do 5 more blocks&quot;). Canon continuation: Exod 20:1-26 — the Ten Utterances and the altar-code, whole chapter.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Span + source + conventions</td><td>SNAPSHOT prestage: 26 verses (the individual-reading division; eight without mid-verse rest). Volitive census: the utterances are APODICTIC LAW, not demands — statute class (lev_19&#x27;s operator at its source); ONE real queue-card (20:19 the mediation-demand). The utterance count follows the received division: anokhi and lo-yihye the first two; 20:3-6 one utterance.</td><td>established</td></tr>
+<tr><td><b>C</b></td><td>Machine structure</td><td>14 STATUTES / 1D / 1R / 1E. Ten statutes installed at the utterance head-verses (STATUTES 10 standing checked at 20:17), the altar-code&#x27;s four after (14 at close). The mediation-demand pops in geometry at 20:21. The seeing- event (20:18). The Decalogue&#x27;s arithmetic machine-verified: 620 letters (KETER), 172 words (EQEV), alef-to-kaf, the six-letter sixth, the Torah&#x27;s only six two-word verses, the zakhor sevens, the double-pointed tokens.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Exod 20 (30 notes incl. the double-cantillation essay) + Kitzur Baal HaTurim on Exod 20 (22 notes) + the MS Decalogue essay at the 19:24 ref. Manifest 13 rows: 13 VERIFIED / 0 FAILED / 0 UNCHECKABLE, first run. The triple-plene brought-you-out; the crown-count (620/172, machine- counted); the six two-word verses; the double-pointed tokens; the kindness-file; the zakhor sevens; the lean lengthening; the swaying; the printer convicted twice; the test and the shame-cipher; the dark = the Presence; the altar-code&#x27;s letters; the seven sections and the received count.</td><td>established</td></tr>
+<tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 13/13 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-10 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits. Exod 1-20 continuous.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Ex_20_1 · Exod.20.1 · <span class='expr'>GOD_SPOKE_ALL_THESE_WORDS</span></h3>
+<p><span class="he">וַיְדַבֵּר אֱלֹהִים אֵת כָּל־הַדְּבָרִים הָאֵלֶּה לֵאמֹר</span> · <i>va-yedaber Elohim et kal-ha-devarim ha-ele le-mor</i> · And God spoke all these words, saying:</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְדַבֵּ֣ר אֱלֹהִ֔ים</span> · <i>va-yedaber Elohim</i> · and God spoke all these words (NO etnachta in verse: split at zaqef qatan on Elohim) [VERIFIED: SNAPSHOT Exod.20.1 idx1 zaqef qatan; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֵ֛ת כָּל הַדְּבָרִ֥ים הָאֵ֖לֶּה לֵאמֹֽר</span> · <i>et kal-ha-devarim ha-ele le-mor</i> · saying (verse-final le-mor) [VERIFIED: SNAPSHOT Exod.20.1 idx2-6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yedaber_elohim, t0)</span><br><span class="gloss">= HOLDS(and-yedaber-God, t0)</span><br>THE FRAME. va-yedaber ELOHIM et KOL-ha-devarim ha-ele LEMOR — &#x27;and GOD spoke ALL these words&#x27;: the seven-word frame with no mid-verse rest (the readings: ALL the words IN ONE UTTERANCE — &#x27;what the mouth cannot say and the ear cannot hear&#x27;; the Kitzur&#x27;s cipher-face named: the verse counted to &#x27;all that is in writing and all that is oral&#x27; — the frame claiming the whole Torah); the machine notes the speaker- title: ELOHIM (the judgment-name) speaks the law — 19:19&#x27;s dialogue- channel now carries the code itself; and 19:25&#x27;s open mouth closes here: what Moses turned to say, God says.
+</td><td><span class="he">וַיְדַבֵּר אֱלֹהִים אֵת כָּל־הַדְּבָרִים הָאֵלֶּה לֵאמֹר</span> · <i>va-yedaber Elohim et kal-ha-devarim ha-ele le-mor</i><br><span class="gloss">= and-yedaber God et kal-the-devarim the-ele to-mor</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The frame of the Ten.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_20_2 · Exod.20.2 · <span class='expr'>I_AM</span></h3>
+<p><span class="he">אָנֹכִי יְהוָה אֱלֹהֶיךָ אֲשֶׁר הוֹצֵאתִיךָ מֵאֶרֶץ מִצְרַיִם מִבֵּית עֲבָדִים</span> · <i>anokhi YHWH elohe-kha asher hotzeti-kha me-eretz mitzrayim mi-bet avadim</i> · I am the LORD your God, who brought you out of the land of Egypt, out of the house of slaves.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אָֽנֹכִ֖י יְהוָ֣ה אֱלֹהֶ֑יךָ</span> · <i>anokhi YHWH elohe-kha</i> · I am the LORD your God (etnachta on elohe-kha) [VERIFIED: SNAPSHOT Exod.20.2 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֲשֶׁ֧ר הוֹצֵאתִ֛יךָ מֵאֶ֥רֶץ מִצְרַ֖יִם מִבֵּ֥ית עֲבָדִֽים</span> · <i>asher hotzeti-kha me-eretz mitzrayim mi-bet avadim</i> · who brought you out of the land of Egypt, out of the house of slaves (verse-final avadim) [VERIFIED: SNAPSHOT Exod.20.2 idx3-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>STATUTE</td><td><span class="expr">STATUTE BIND(anokhi_YHWH_elohekha)</span><br><span class="gloss">= STATUTE BIND(anokhi-the-LORD-elohekha)</span><br>UTTERANCE ONE [EX20-01 + EX20-13 CROWNS]. ANOKHI YHWH ELOHEKHA — &#x27;I AM the LORD your God&#x27;: the first utterance INSTALLED as standing law (the corpus&#x27;s statute-class debut in Exodus: the apodictic operator of the law-books arrives with the Ten — and the first statute is not a rule but a RELATION: the I binds before any thou-shalt); asher HOTZETIKHA me-eretz mitzrayim — the credential: the brought-you-out word&#x27;s Torah-three (VERIFIED): UR OF THE CHALDEES (Gen 15:7, to Abraham), and the TWO DECALOGUES — &#x27;brought out of Ur to give his sons the Torah&#x27; (the Kitzur): the nation&#x27;s exodus spelled with the father&#x27;s; all three FULL-full-full (MS with the Ramah; the Jerusalem Talmud&#x27;s lean split named); mi-BET AVADIM — &#x27;out of the house of SLAVES&#x27; (the machine notes the ground of the law: the code opens by citing the emancipation that makes commanding possible); ANOKHI = KISE, the throne (81 = 81, asserted): the I weighing its own seat; and the count-dispute sealed (MS): &#x27;as the sages received — ANOKHI and LO-YIHYE are the two heard FROM THE MOUTH OF THE POWER.&#x27;
+</td><td><span class="he">אָנֹכִי יְהוָה אֱלֹהֶיךָ</span> · <i>anokhi YHWH elohe-kha</i><br><span class="gloss">= anokhi the-LORD elohe-kha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Utterance one; the first statute.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_20_3 · Exod.20.3 · <span class='expr'>NO_OTHER_GODS</span></h3>
+<p><span class="he">לֹא יִהְיֶה־לְךָ אֱלֹהִים אֲחֵרִים עַל־פָּנָיַ</span> · <i>lo yihye-le-kha Elohim acherim al-pana-ya</i> · There shall not be to you other gods before My face.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">לֹֽ֣א יִהְיֶֽה לְךָ֛ אֱלֹהִ֥ים אֲחֵרִ֖ים</span> · <i>lo yihye-le-kha Elohim acherim</i> · there shall not be to you other gods (NO etnachta in verse: split at tifcha on acherim) [VERIFIED: SNAPSHOT Exod.20.3 idx4 tifcha; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">עַל פָּנָֽיַ</span> · <i>al-pana-ya</i> · before My face (verse-final pana-ya) [VERIFIED: SNAPSHOT Exod.20.3 idx5-6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>STATUTE</td><td><span class="expr">STATUTE FORBID(elohim_acherim)</span><br><span class="gloss">= STATUTE FORBID(God-acherim)</span><br>UTTERANCE TWO [EX20-04 CROWN]. lo yihye-lekha ELOHIM ACHERIM — &#x27;there shall not BE to you OTHER GODS&#x27;: the second statute (heard, with the first, from the Power&#x27;s own mouth — the received count; the exclusivity-law covering 20:3-6 as one utterance); al-PANAI — &#x27;before MY FACE&#x27; (the readings: wherever I am — which is everywhere: the ban with no territorial edge, named-only) — and the closing token carries TWO VOWELS IN ONE SLOT (VERIFIED in-token: the verse- end reading&#x27;s long vowel AND the running reading&#x27;s short — the DOUBLE-READING SYSTEM&#x27;S trace in the SNAPSHOT itself: the lone reader closes the verse here; the public reader runs the whole utterance as one — MS&#x27;s essay from ibn Habib: accents, vowels, and soft-hard letters all doubled to keep both readings; the Rama of Fano&#x27;s warning named: read one fork, never both).
+</td><td><span class="he">לֹא יִהְיֶה־לְךָ אֱלֹהִים אֲחֵרִים</span> · <i>lo yihye-le-kha Elohim acherim</i><br><span class="gloss">= not yihye-to-kha God acherim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Utterance two; the double-pointed close.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_20_4 · Exod.20.4 · <span class='expr'>NO_GRAVEN_IMAGE</span></h3>
+<p><span class="he">לֹא תַעֲשֶׂה־לְךָ פֶסֶל וְכָל־תְּמוּנָה אֲשֶׁר בַּשָּׁמַיִם מִמַּעַל וַאֲשֶׁר בָּאָרֶץ מִתָּחַת וַאֲשֶׁר בַּמַּיִם מִתַּחַת לָאָרֶץ</span> · <i>lo taase-le-kha fesel ve-khal-temuna asher ba-shamayim mi-maal va-asher ba-aretz mi-tachat va-asher ba-mayim mi-tachat la-aretz</i> · You shall not make yourself a graven image, or any likeness of what is in the heavens above, or what is in the earth beneath, or what is in the waters beneath the earth.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">לֹֽ֣א תַֽעֲשֶׂ֨ה לְךָ֥ פֶ֨סֶל֙ וְכָל תְּמוּנָ֔ה אֲשֶׁ֤ר בַּשָּׁמַ֨יִם֙ מִמַּ֔עַל וַאֲשֶׁ֥ר בָּאָ֖רֶץ מִתָּ֑חַת</span> · <i>lo taase-le-kha fesel ve-khal-temuna asher ba-shamayim mi-maal va-asher ba-aretz mi-tachat</i> · you shall not make yourself a graven image, or any likeness of what is in the heavens above (etnachta on mi-tachat) [VERIFIED: SNAPSHOT Exod.20.4 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַאֲשֶׁ֥ר בַּמַּ֖יִם מִתַּ֥חַת לָאָֽרֶץ</span> · <i>va-asher ba-mayim mi-tachat la-aretz</i> · or what is in the earth beneath, or what is in the waters beneath the earth (verse-final la-aretz) [VERIFIED: SNAPSHOT Exod.20.4 idx12-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lo_taase_lekha_fesel, t0)</span><br><span class="gloss">= HOLDS(not-taase-to-you-fesel, t0)</span><br>THE IMAGE-BAN. lo taase-lekha FESEL ve-khol-TEMUNA — &#x27;no graven image, or ANY LIKENESS&#x27;: the second utterance&#x27;s detail-law (the statute of 20:3 unpacked — heavens above, earth beneath, waters beneath the earth: the three floors of the creation swept for portrait-subjects); TEMUNA = PARTZUF ADAM (&#x27;the human visage,&#x27; 501 = 501, asserted at the build — the Kitzur: the likeness-ban counting the likeliest likeness: man&#x27;s own face); the beneath-word double- pointed at the mid-verse rest (VERIFIED in-token: the pausal and running vowels both held — the double-reading system&#x27;s second trace); the Kitzur&#x27;s earth-count named (the mountains and the hills): the machine files the ban&#x27;s scope: nothing that IS may stand for the One who IS.
+</td><td><span class="he">לֹא תַעֲשֶׂה־לְךָ פֶסֶל וְכָל־תְּמוּנָה</span> · <i>lo taase-le-kha fesel ve-khal-temuna</i><br><span class="gloss">= not taase-to-kha fesel and-khal-temuna</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The image-ban&#x27;s three floors.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_20_5 · Exod.20.5 · <span class='expr'>A_JEALOUS_GOD</span></h3>
+<p><span class="he">לֹא־תִשְׁתַּחֲוֶה לָהֶם וְלֹא תָעָבְדֵם כִּי אָנֹכִי יְהוָה אֱלֹהֶיךָ אֵל קַנָּא פֹּקֵד עֲוֺן אָבֹת עַל־בָּנִים עַל־שִׁלֵּשִׁים וְעַל־רִבֵּעִים לְשֹׂנְאָי</span> · <i>lo-tishtachave la-hem ve-lo taavde-m ki anokhi YHWH elohe-kha el qana poqed avon avot al-banim al-shileshim ve-al-ribeim le-sona-y</i> · You shall not bow down to them, and you shall not serve them; for I the LORD your God am a jealous God, visiting the iniquity of fathers on sons, on the third and on the fourth generation, to those who hate Me.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">לֹֽא תִשְׁתַּחֲוֶ֥ה לָהֶ֖ם וְלֹ֣א תָעָבְדֵ֑ם</span> · <i>lo-tishtachave la-hem ve-lo taavde-m</i> · you shall not bow down to them, and you shall not serve them (etnachta on taavde-m) [VERIFIED: SNAPSHOT Exod.20.5 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּ֣י אָֽנֹכִ֞י יְהוָ֤ה אֱלֹהֶ֨יךָ֙ אֵ֣ל קַנָּ֔א פֹּ֠קֵד עֲוֺ֨ן אָבֹ֧ת עַל בָּנִ֛ים עַל שִׁלֵּשִׁ֥ים וְעַל רִבֵּעִ֖ים לְשֹׂנְאָֽי</span> · <i>ki anokhi YHWH elohe-kha el qana poqed avon avot al-banim al-shileshim ve-al-ribeim le-sona-y</i> · for I the LORD your God am a jealous God, visiting the iniquity of fathers on sons, on the third and on the fourth generation, to those who hate Me (verse-final le-sona-y) [VERIFIED: SNAPSHOT Exod.20.5 idx5-20]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(el_qana, t0)</span><br><span class="gloss">= HOLDS(to-qana, t0)</span><br>THE JEALOUSY. lo-tishtachave lahem ve-lo TAAVDEM — &#x27;not bow, not SERVE&#x27; (the worship-verbs banned in the pair the exodus freed: avad, the slave-root — the machine notes the exchange: out of the house of avadim, and immediately forbidden to avad elsewhere: the emancipation was a transfer of service, not its end); ki anokhi YHWH elohekha EL QANA — &#x27;a JEALOUS God&#x27; (the marriage-frame of 19:4&#x27;s betrothal enforcing itself: jealousy is the covenant&#x27;s grammar, not its temper — the readings named-only); POQED avon AVOT al-BANIM al- shileshim ve-al-ribeim LE-SONAI — &#x27;visiting the iniquity of fathers on sons... to those who HATE Me&#x27;: the visiting-verb (the ledger-verb of 3:16&#x27;s I-have-surely-visited turned to audit), the four generations counted against the next verse&#x27;s THOUSANDS — the machine holds the asymmetry for 20:6.
+</td><td><span class="he">כִּי אָנֹכִי יְהוָה אֱלֹהֶיךָ אֵל קַנָּא</span> · <i>ki anokhi YHWH elohe-kha el qana</i><br><span class="gloss">= when anokhi the-LORD elohe-kha to qana</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The enforcement clause.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_20_6 · Exod.20.6 · <span class='expr'>MERCY_TO_THOUSANDS</span></h3>
+<p><span class="he">וְעֹשֶׂה חֶסֶד לַאֲלָפִים לְאֹהֲבַי וּלְשֹׁמְרֵי מִצְוֺתָי</span> · <i>ve-ose chesed la-alafim le-ohava-y u-le-shomre mitzvota-y</i> · And doing kindness to thousands — to those who love Me, and to those who keep My commandments.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְעֹ֥שֶׂה חֶ֖סֶד לַאֲלָפִ֑ים</span> · <i>ve-ose chesed la-alafim</i> · and doing kindness to thousands (etnachta on la-alafim) [VERIFIED: SNAPSHOT Exod.20.6 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לְאֹהֲבַ֖י וּלְשֹׁמְרֵ֥י מִצְוֺתָֽי</span> · <i>le-ohava-y u-le-shomre mitzvota-y</i> · to those who love Me, and to those who keep My commandments (verse-final mitzvota-y) [VERIFIED: SNAPSHOT Exod.20.6 idx3-5]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_ose_chesed_la_alafim, t0)</span><br><span class="gloss">= HOLDS(and-ose-chesed-to-alafim, t0)</span><br>THE KINDNESS [EX20-05 CROWN]. VE-OSE CHESED la-ALAFIM — &#x27;and DOING KINDNESS to THOUSANDS&#x27;: the mercy-clause outnumbering the audit four-to-two-thousand (the readings&#x27; five-hundred-to-one arithmetic, named-only) — and the doing-kindness contact stands THREE times in the Torah (VERIFIED adjacency): the SERVANT&#x27;S PRAYER (&#x27;do kindness with my master Abraham,&#x27; Gen 24:12 — the corpus&#x27;s first do-kindness, a plea FOR a master) and the TWO DECALOGUES (the Master&#x27;s own pledge): the phrase that entered the canon as a servant&#x27;s request returns as divine self-description; the Kitzur&#x27;s David-file named (&#x27;who does kindness is done kindness&#x27;); le-OHAVAI u-le-shomre MITZVOTAI — lovers and keepers: the law&#x27;s two grips (the heart&#x27;s and the hand&#x27;s); and the next utterance&#x27;s ornament filed as instrument- gap: the SEVEN CROWNLETS on the oath-ban&#x27;s shin (the tagin above the SNAPSHOT&#x27;s letter-stream — the sevens named).
+</td><td><span class="he">וְעֹשֶׂה חֶסֶד לַאֲלָפִים</span> · <i>ve-ose chesed la-alafim</i><br><span class="gloss">= and-ose chesed to-alafim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The asymmetry; the kindness-file.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_20_7 · Exod.20.7 · <span class='expr'>THE_NAME_IN_VAIN</span></h3>
+<p><span class="he">לֹא תִשָּׂא אֶת־שֵׁם־יְהוָה אֱלֹהֶיךָ לַשָּׁוְא כִּי לֹא יְנַקֶּה יְהוָה אֵת אֲשֶׁר־יִשָּׂא אֶת־שְׁמוֹ לַשָּׁוְא</span> · <i>lo tisa et-shem-YHWH elohe-kha la-shav ki lo yenaqe YHWH et asher-yisa et-shem-o la-shav</i> · You shall not take up the name of the LORD your God in vain; for the LORD will not hold him guiltless who takes up His name in vain.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">לֹ֥א תִשָּׂ֛א אֶת שֵֽׁם יְהוָ֥ה אֱלֹהֶ֖יךָ לַשָּׁ֑וְא</span> · <i>lo tisa et-shem-YHWH elohe-kha la-shav</i> · you shall not take up the name of the LORD your God in vain (etnachta on la-shav) [VERIFIED: SNAPSHOT Exod.20.7 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּ֣י לֹ֤א יְנַקֶּה֙ יְהוָ֔ה אֵ֛ת אֲשֶׁר יִשָּׂ֥א אֶת שְׁמ֖וֹ לַשָּֽׁוְא</span> · <i>ki lo yenaqe YHWH et asher-yisa et-shem-o la-shav</i> · for the LORD will not hold him guiltless who takes up His name in vain (verse-final la-shav) [VERIFIED: SNAPSHOT Exod.20.7 idx7-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>STATUTE</td><td><span class="expr">STATUTE FORBID(shem_la_shav)</span><br><span class="gloss">= STATUTE FORBID(shem-to-shav)</span><br>UTTERANCE THREE. lo TISA et-shem-YHWH elohekha LA-SHAV — &#x27;you shall not TAKE UP the Name in VAIN&#x27;: the third statute (the lift-verb: the Name as a thing carried — misuse is bad freight); ki LO YENAQE YHWH — &#x27;the LORD will NOT HOLD GUILTLESS&#x27;: the statute arrives with its own enforcement rider (the machine notes the form: the only utterance whose sanction is a refusal — no penalty named, only pardon withheld); the Kitzur&#x27;s juxtaposition carried: mercy-to- keepers beside the oath-ban — &#x27;the vain oath weighs as all the commandments&#x27;; and the readings on shav doubled (the false and the pointless), named-only.
+</td><td><span class="he">לֹא תִשָּׂא אֶת־שֵׁם־יְהוָה אֱלֹהֶיךָ לַשָּׁוְא</span> · <i>lo tisa et-shem-YHWH elohe-kha la-shav</i><br><span class="gloss">= not tisa shem-the-LORD elohe-kha to-shav</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Utterance three.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_20_8 · Exod.20.8 · <span class='expr'>REMEMBER_THE_SABBATH</span></h3>
+<p><span class="he">זָכוֹר אֶת־יוֹם הַשַּׁבָּת לְקַדְּשׁוֹ</span> · <i>zakhor et-yom ha-shabat le-qadsh-o</i> · Remember the sabbath day, to keep it holy.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">זָכ֛וֹר אֶת י֥וֹם הַשַּׁבָּ֖ת</span> · <i>zakhor et-yom ha-shabat</i> · remember the sabbath day (NO etnachta in verse: split at tifcha on ha-shabat) [VERIFIED: SNAPSHOT Exod.20.8 idx3 tifcha; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">לְקַדְּשֽׁוֹ</span> · <i>le-qadsh-o</i> · to keep it holy (verse-final le-qadsh-o) [VERIFIED: SNAPSHOT Exod.20.8 idx4-4]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>STATUTE</td><td><span class="expr">STATUTE BIND(zakhor_et_yom_ha_shabat)</span><br><span class="gloss">= STATUTE BIND(zakhor-day-the-shabat)</span><br>UTTERANCE FOUR [EX20-06 CROWN]. ZAKHOR et-yom ha-SHABAT le-qadsho — &#x27;REMEMBER the sabbath day, to keep it holy&#x27;: the fourth statute — and the manna&#x27;s classroom becomes law (the machine settles exo_16&#x27;s arm: the six-and-one frame taught in bread at 16:26 is here spoken from the mountain — the Sabbath commanded at Sinai, learned first at breakfast); the Kitzur&#x27;s arithmetic ALL VERIFIED at the build: FIVE words (&#x27;who upholds the Sabbath upholds the FIVE books&#x27;), the SEVENTH verse of the span, opening with ZAYIN (= 7), and SEVEN resters coming in its law — verse seven, letter seven, roster seven: the day&#x27;s number stamped at every scale; zakhor the infinitive- absolute (the readings: remember-and-keep IN ONE SAYING — Deut 5&#x27;s shamor its twin utterance, named-only).
+</td><td><span class="he">זָכוֹר אֶת־יוֹם הַשַּׁבָּת לְקַדְּשׁוֹ</span> · <i>zakhor et-yom ha-shabat le-qadsh-o</i><br><span class="gloss">= zakhor day the-shabat to-qadsh-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Utterance four; the sevens.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_20_9 · Exod.20.9 · <span class='expr'>SIX_DAYS_SHALL_YOU_LABOR</span></h3>
+<p><span class="he">שֵׁשֶׁת יָמִים תַּעֲבֹד וְעָשִׂיתָ כָּל־מְלַאכְתֶּךָ</span> · <i>sheshet yamim taavod ve-asita kal-melakhte-kha</i> · Six days shall you labor, and do all your work.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">שֵׁ֤שֶׁת יָמִים֙ תַּֽעֲבֹ֔ד</span> · <i>sheshet yamim taavod</i> · six days shall you labor (NO etnachta in verse: split at zaqef qatan on taavod) [VERIFIED: SNAPSHOT Exod.20.9 idx2 zaqef qatan; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְעָשִׂ֖יתָ כָּל מְלַאכְתֶּֽךָ</span> · <i>ve-asita kal-melakhte-kha</i> · and do all your work (verse-final melakhte-kha) [VERIFIED: SNAPSHOT Exod.20.9 idx3-5]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(sheshet_yamim_taavod, t0)</span><br><span class="gloss">= HOLDS(sheshet-seas-taavod, t0)</span><br>THE SIX. SHESHET YAMIM taavod — &#x27;SIX DAYS shall you labor&#x27;: 16:26&#x27;s exact frame (sheshet yamim... u-va-yom ha-shevii) re-cut as command — the machine closes the wire: the manna-week armed at exo_16 pays at Sinai; ve-asita KOL-melakhtekha — &#x27;ALL your work&#x27; (the readings: rest as if all the work were done — the kaf that reads both hard and soft in the two reading-systems, MS&#x27;s four-letter file): the labor- clause as the Sabbath&#x27;s other face: the seventh is holy only where the six are worked.
+</td><td><span class="he">שֵׁשֶׁת יָמִים תַּעֲבֹד וְעָשִׂיתָ</span> · <i>sheshet yamim taavod ve-asita</i><br><span class="gloss">= sheshet seas taavod and-asita</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The week&#x27;s other side.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_20_10 · Exod.20.10 · <span class='expr'>THE_SEVENTH_IS_REST</span></h3>
+<p><span class="he">וְיוֹם הַשְּׁבִיעִי שַׁבָּת לַיהוָה אֱלֹהֶיךָ לֹא־תַעֲשֶׂה כָל־מְלָאכָה אַתָּה וּבִנְךָ־וּבִתֶּךָ עַבְדְּךָ וַאֲמָתְךָ וּבְהֶמְתֶּךָ וְגֵרְךָ אֲשֶׁר בִּשְׁעָרֶיךָ</span> · <i>ve-yom ha-shevii shabat la-YHWH elohe-kha lo-taase khal-melakha ata u-vin-kha-u-vite-kha avd-kha va-amat-kha u-vehemte-kha ve-ger-kha asher bi-sheare-kha</i> · And the seventh day is a sabbath to the LORD your God; you shall not do any work — you, and your son and your daughter, your servant and your maid, and your beast, and your stranger who is within your gates.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְי֨וֹם֙ הַשְּׁבִיעִ֔י שַׁבָּ֖ת לַיהוָ֣ה אֱלֹהֶ֑יךָ</span> · <i>ve-yom ha-shevii shabat la-YHWH elohe-kha</i> · and the seventh day is a sabbath to the LORD your God (etnachta on elohe-kha) [VERIFIED: SNAPSHOT Exod.20.10 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לֹֽ֣א תַעֲשֶׂ֨ה כָל מְלָאכָ֜ה אַתָּ֣ה וּבִנְךָֽ֣ וּבִתֶּ֗ךָ עַבְדְּךָ֤ וַאֲמָֽתְךָ֙ וּבְהֶמְתֶּ֔ךָ וְגֵרְךָ֖ אֲשֶׁ֥ר בִּשְׁעָרֶֽיךָ</span> · <i>lo-taase khal-melakha ata u-vin-kha-u-vite-kha avd-kha va-amat-kha u-vehemte-kha ve-ger-kha asher bi-sheare-kha</i> · you shall not do any work — you, and your son and your daughter, your servant and your maid, and your beast, and your stranger who is within your gates (verse-final bi-sheare-kha) [VERIFIED: SNAPSHOT Exod.20.10 idx5-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shabat_la_YHWH_elohekha, t0)</span><br><span class="gloss">= HOLDS(shabat-to-the-LORD-elohekha, t0)</span><br>THE ROSTER. ve-yom ha-SHEVII shabat la-YHWH elohekha — &#x27;the seventh day is a sabbath TO THE LORD&#x27;; lo-taase khol-melakha — the work-ban universal — and then the SEVEN RESTERS counted (VERIFIED at the build): ATA u-vinkha u-vitekha, avdekha va-amatekha, u-vehemtekha, ve-gerkha — you, son, daughter, servant, maid, BEAST, STRANGER: the Kitzur: &#x27;against them the seven rests were ordained&#x27; — the machine files the roster&#x27;s reach: the rest-law is the corpus&#x27;s first command addressed THROUGH a person to his whole economic shadow (children, staff, livestock, guests — the Sabbath as the first labor-law), and the first statute with a BEAST among its beneficiaries.
+</td><td><span class="he">אַתָּה וּבִנְךָ־וּבִתֶּךָ עַבְדְּךָ וַאֲמָתְךָ וּבְהֶמְתֶּךָ וְגֵרְךָ</span> · <i>ata u-vin-kha-u-vite-kha avd-kha va-amat-kha u-vehemte-kha ve-ger-kha</i><br><span class="gloss">= ata and-vin-kha-and-vite-kha avd-kha and-amat-kha and-vehemte-kha and-ger-kha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The seven resters.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_20_11 · Exod.20.11 · <span class='expr'>THE_CREATION_WARRANT</span></h3>
+<p><span class="he">כִּי שֵׁשֶׁת־יָמִים עָשָׂה יְהוָה אֶת־הַשָּׁמַיִם וְאֶת־הָאָרֶץ אֶת־הַיָּם וְאֶת־כָּל־אֲשֶׁר־בָּם וַיָּנַח בַּיּוֹם הַשְּׁבִיעִי עַל־כֵּן בֵּרַךְ יְהוָה אֶת־יוֹם הַשַּׁבָּת וַיְקַדְּשֵׁהוּ</span> · <i>ki sheshet-yamim asa YHWH et-ha-shamayim ve-et-ha-aretz et-ha-yam ve-et-kal-asher-ba-m va-yanach ba-yom ha-shevii al-ken berakh YHWH et-yom ha-shabat va-yeqadshe-hu</i> · For six days the LORD made the heavens and the earth, the sea and all that is in them, and He rested on the seventh day; therefore the LORD blessed the sabbath day, and sanctified it.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">כִּ֣י שֵֽׁשֶׁת יָמִים֩ עָשָׂ֨ה יְהוָ֜ה אֶת הַשָּׁמַ֣יִם וְאֶת הָאָ֗רֶץ אֶת הַיָּם֙ וְאֶת כָּל אֲשֶׁר בָּ֔ם וַיָּ֖נַח בַּיּ֣וֹם הַשְּׁבִיעִ֑י</span> · <i>ki sheshet-yamim asa YHWH et-ha-shamayim ve-et-ha-aretz et-ha-yam ve-et-kal-asher-ba-m va-yanach ba-yom ha-shevii</i> · for six days the LORD made the heavens and the earth, the sea and all that is in them, and He rested on the seventh day (etnachta on ha-shevii) [VERIFIED: SNAPSHOT Exod.20.11 idx17 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">עַל כֵּ֗ן בֵּרַ֧ךְ יְהוָ֛ה אֶת י֥וֹם הַשַּׁבָּ֖ת וַֽיְקַדְּשֵֽׁהוּ</span> · <i>al-ken berakh YHWH et-yom ha-shabat va-yeqadshe-hu</i> · therefore the LORD blessed the sabbath day, and sanctified it (verse-final va-yeqadshe-hu) [VERIFIED: SNAPSHOT Exod.20.11 idx18-25]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(al_ken_berakh_YHWH, t0)</span><br><span class="gloss">= HOLDS(upon-ken-berakh-the-LORD, t0)</span><br>THE WARRANT. ki sheshet-yamim ASA YHWH et-ha-shamayim ve-et-ha-aretz — &#x27;for six days the LORD MADE the heavens and the earth&#x27; — va-YANACH ba-yom ha-shevii — &#x27;and He RESTED on the seventh&#x27;: the statute cites its precedent — CREATION ITSELF entered as the Sabbath&#x27;s case-law (the machine notes the jurisprudence: the fourth utterance is the only one of the Ten that argues — al-KEN, THEREFORE — and its warrant is Gen 2:2-3 quoted into the code: berakh... va-yeqadshehu, the blessing and sanctifying verbs of the creation-week now legislation); the corpus closes its oldest arc: the seventh day sanctified at the world&#x27;s first week, kept first by a nation at 16:30, here becomes statute — blessed twice, once at the beginning and once on the mountain.
+</td><td><span class="he">עַל־כֵּן בֵּרַךְ יְהוָה אֶת־יוֹם הַשַּׁבָּת וַיְקַדְּשֵׁהוּ</span> · <i>al-ken berakh YHWH et-yom ha-shabat va-yeqadshe-hu</i><br><span class="gloss">= upon-ken berakh the-LORD day the-shabat and-yeqadshe-that</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The warrant cited.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_20_12 · Exod.20.12 · <span class='expr'>HONOR_FATHER_AND_MOTHER</span></h3>
+<p><span class="he">כַּבֵּד אֶת־אָבִיךָ וְאֶת־אִמֶּךָ לְמַעַן יַאֲרִכוּן יָמֶיךָ עַל הָאֲדָמָה אֲשֶׁר־יְהוָה אֱלֹהֶיךָ נֹתֵן לָךְ</span> · <i>kabed et-avi-kha ve-et-ime-kha lemaan yaarikhu-n yame-kha al ha-adama asher-YHWH elohe-kha noten la-khe</i> · Honor your father and your mother — that your days may be long on the land which the LORD your God gives you.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">כַּבֵּ֥ד אֶת אָבִ֖יךָ וְאֶת אִמֶּ֑ךָ</span> · <i>kabed et-avi-kha ve-et-ime-kha</i> · honor your father and your mother (etnachta on ime-kha) [VERIFIED: SNAPSHOT Exod.20.12 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לְמַ֨עַן֙ יַאֲרִכ֣וּן יָמֶ֔יךָ עַ֚ל הָאֲדָמָ֔ה אֲשֶׁר יְהוָ֥ה אֱלֹהֶ֖יךָ נֹתֵ֥ן לָֽךְ</span> · <i>lemaan yaarikhu-n yame-kha al ha-adama asher-YHWH elohe-kha noten la-khe</i> · that your days may be long on the land which the LORD your God gives you (verse-final la-khe) [VERIFIED: SNAPSHOT Exod.20.12 idx5-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>STATUTE</td><td><span class="expr">STATUTE BIND(kabed_av_va_em)</span><br><span class="gloss">= STATUTE BIND(kabed-father-and-mother)</span><br>UTTERANCE FIVE [EX20-07 CROWN]. KABED et-AVIKHA ve-et-IMEKHA — &#x27;HONOR your father and your mother&#x27;: the fifth statute — and the KAVED-ROOT&#x27;S FINAL TURN (the machine closes the file: Pharaoh&#x27;s heavy heart, Moses&#x27; heavy hands, the heavy caseload, the heavy cloud — and now kabed as command: the weight-word redeemed into HONOR: to make one&#x27;s parents WEIGHTY); the Kitzur&#x27;s placement-law with its English face: &#x27;honoring parents is NEXT TO the Sabbath — as one honors the Sabbath, one honors father and mother&#x27; (the first tablet&#x27;s last human-facing law leaning on the Creator&#x27;s day: the readings on the three partners, named-only); lemaan YAARIKHUN yamekha — &#x27;that your days may be LONG&#x27;: the lengthening-word written LEAN (VERIFIED census-unique) — &#x27;no length of days in THIS world, created with He — but in the WORLD TO COME, created with yod&#x27;: the reward-word missing exactly the letter of the world where the reward lives.
+</td><td><span class="he">כַּבֵּד אֶת־אָבִיךָ וְאֶת־אִמֶּךָ</span> · <i>kabed et-avi-kha ve-et-ime-kha</i><br><span class="gloss">= kabed avi-kha and-ime-kha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Utterance five; the lean lengthening.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_20_13 · Exod.20.13 · <span class='expr'>NO_MURDER</span></h3>
+<p><span class="he">לֹא תִּרְצָח</span> · <i>lo tirtzach</i> · You shall not murder.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">לֹ֖א</span> · <i>lo</i> · you shall not (NO etnachta in verse: split at tifcha on lo) [VERIFIED: SNAPSHOT Exod.20.13 idx0 tifcha; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">תִּרְצָֽח</span> · <i>tirtzach</i> · murder (verse-final tirtzach) [VERIFIED: SNAPSHOT Exod.20.13 idx1-1]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>STATUTE</td><td><span class="expr">STATUTE FORBID(retzach)</span><br>UTTERANCE SIX [EX20-02 + EX20-03 CROWNS]. LO TIRTZACH — &#x27;you shall not MURDER&#x27;: the sixth statute — SIX LETTERS at the SIXTH utterance (VERIFIED: &#x27;for MAN WAS CREATED ON THE SIXTH DAY&#x27; — the murder-ban sized to its victim&#x27;s birthday), and one of the Torah&#x27;s SIX two-word verses (VERIFIED census: murder, adultery, theft, in both Decalogues — the whole canon holds no other two-word verse): the shortest laws in the language, and the Zohar&#x27;s hinge carried (MS): &#x27;were it not for the PAUSING ACCENT, killing would be forbidden even to the court — the pause forbids and permits&#x27; (the cantillation as the law&#x27;s own joint); the machine files the statute at its size: two words against the first crime the corpus ever narrated (Gen 4 — the readings, named-only).
+</td><td><span class="he">לֹא תִּרְצָח</span> · <i>lo tirtzach</i><br><span class="gloss">= not tirtzach</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Utterance six; six letters.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_20_14 · Exod.20.14 · <span class='expr'>NO_ADULTERY</span></h3>
+<p><span class="he">לֹא תִּנְאָף</span> · <i>lo tinaf</i> · You shall not commit adultery.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">לֹ֖א</span> · <i>lo</i> · you shall not (NO etnachta in verse: split at tifcha on lo) [VERIFIED: SNAPSHOT Exod.20.14 idx0 tifcha; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">תִּנְאָֽף</span> · <i>tinaf</i> · commit adultery (verse-final tinaf) [VERIFIED: SNAPSHOT Exod.20.14 idx1-1]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>STATUTE</td><td><span class="expr">STATUTE FORBID(niuf)</span><br>UTTERANCE SEVEN [EX20-03]. LO TINAF — &#x27;you shall not commit ADULTERY&#x27;: the seventh statute, the second two-word verse (VERIFIED in the six-verse census) — the Zohar&#x27;s hinge again: &#x27;without the pause, even the marriage-bed and the joy of the commandment would fall under it — the pause forbids and permits&#x27;; the machine notes the code&#x27;s marriage-logic: the covenant offered as betrothal (19:4-5) writes the betrayal-ban into its core — the jealous God of 20:5 and the adultery-ban one doctrine at two scales (the readings named-only).
+</td><td><span class="he">לֹא תִּנְאָף</span> · <i>lo tinaf</i><br><span class="gloss">= not tinaf</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Utterance seven.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_20_15 · Exod.20.15 · <span class='expr'>NO_THEFT</span></h3>
+<p><span class="he">לֹא תִּגְנֹב</span> · <i>lo tignov</i> · You shall not steal.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">לֹ֖א</span> · <i>lo</i> · you shall not (NO etnachta in verse: split at tifcha on lo) [VERIFIED: SNAPSHOT Exod.20.15 idx0 tifcha; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">תִּגְנֹֽב</span> · <i>tignov</i> · steal (verse-final tignov) [VERIFIED: SNAPSHOT Exod.20.15 idx1-1]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>STATUTE</td><td><span class="expr">STATUTE FORBID(geneva)</span><br>UTTERANCE EIGHT [EX20-03]. LO TIGNOV — &#x27;you shall not STEAL&#x27;: the eighth statute, the third two-word verse (VERIFIED) — the tradition reads the KIDNAPPER here (the Kitzur&#x27;s near-count named: lo-tignov weighed against the man-stealer — the capital theft among thefts, as the neighboring statutes are capital); the Zohar&#x27;s hinge completes its three: &#x27;without the pause, even to steal the teacher&#x27;s mind in learning, or the thief&#x27;s mind to bring the truth to light — the pause forbids and permits&#x27;; the machine files the triple: three two- word statutes, three pausing accents, three hinges — the terser the law, the more its music carries.
+</td><td><span class="he">לֹא תִּגְנֹב</span> · <i>lo tignov</i><br><span class="gloss">= not tignov</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Utterance eight.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_20_16 · Exod.20.16 · <span class='expr'>NO_FALSE_WITNESS</span></h3>
+<p><span class="he">לֹא־תַעֲנֶה בְרֵעֲךָ עֵד שָׁקֶר</span> · <i>lo-taane ve-rea-kha ed shaqer</i> · You shall not answer against your fellow as a false witness.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">לֹֽא תַעֲנֶ֥ה בְרֵעֲךָ֖</span> · <i>lo-taane ve-rea-kha</i> · you shall not answer against your fellow (NO etnachta in verse: split at tifcha on ve-rea-kha) [VERIFIED: SNAPSHOT Exod.20.16 idx2 tifcha; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">עֵ֥ד שָֽׁקֶר</span> · <i>ed shaqer</i> · as a false witness (verse-final shaqer) [VERIFIED: SNAPSHOT Exod.20.16 idx3-4]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>STATUTE</td><td><span class="expr">STATUTE FORBID(ed_shaqer)</span><br><span class="gloss">= STATUTE FORBID(mist-shaqer)</span><br>UTTERANCE NINE. lo-taane ve-reakha ED SHAQER — &#x27;you shall not ANSWER against your fellow as a FALSE WITNESS&#x27;: the ninth statute — the court-crime (the machine notes the code&#x27;s architecture: after the crimes of hand and bed, the crime of the MOUTH IN COURT: the Ten protect the tribunal itself — 18&#x27;s judges armed with their own statute); ED — the witness-word (the readings wire Deut 5&#x27;s ed shav, the two vanities, named-only): the corpus files the pairing: the third utterance guards the Name from vain lifting, the ninth guards the neighbor from vain testimony — the same crime at two altitudes.
+</td><td><span class="he">לֹא־תַעֲנֶה בְרֵעֲךָ עֵד שָׁקֶר</span> · <i>lo-taane ve-rea-kha ed shaqer</i><br><span class="gloss">= not-taane and-rea-kha mist shaqer</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Utterance nine.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_20_17 · Exod.20.17 · <span class='expr'>NO_COVETING</span></h3>
+<p><span class="he">לֹא תַחְמֹד בֵּית רֵעֶךָ לֹא־תַחְמֹד אֵשֶׁת רֵעֶךָ וְעַבְדּוֹ וַאֲמָתוֹ וְשׁוֹרוֹ וַחֲמֹרוֹ וְכֹל אֲשֶׁר לְרֵעֶךָ</span> · <i>lo tachmod bet ree-kha lo-tachmod eshet ree-kha ve-avd-o va-amat-o ve-shor-o va-chamor-o ve-khol asher le-ree-kha</i> · You shall not covet your fellow&#x27;s house; you shall not covet your fellow&#x27;s wife, or his servant, or his maid, or his ox, or his donkey, or anything that is your fellow&#x27;s.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">לֹ֥א תַחְמֹ֖ד בֵּ֣ית רֵעֶ֑ךָ</span> · <i>lo tachmod bet ree-kha</i> · you shall not covet your fellow&#x27;s house (etnachta on ree-kha) [VERIFIED: SNAPSHOT Exod.20.17 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לֹֽא תַחְמֹ֞ד אֵ֣שֶׁת רֵעֶ֗ךָ וְעַבְדּ֤וֹ וַאֲמָתוֹ֙ וְשׁוֹר֣וֹ וַחֲמֹר֔וֹ וְכֹ֖ל אֲשֶׁ֥ר לְרֵעֶֽךָ</span> · <i>lo-tachmod eshet ree-kha ve-avd-o va-amat-o ve-shor-o va-chamor-o ve-khol asher le-ree-kha</i> · you shall not covet your fellow&#x27;s wife, or his servant, or his maid, or his ox, or his donkey, or anything that is your fellow&#x27;s (verse-final le-ree-kha) [VERIFIED: SNAPSHOT Exod.20.17 idx4-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>STATUTE</td><td><span class="expr">STATUTE FORBID(chimud)</span><br>UTTERANCE TEN [EX20-13 CROWN]. lo TACHMOD bet reekha — &#x27;you shall not COVET&#x27;: the tenth statute — the code&#x27;s only law against a STATE OF MIND (nine utterances police word and deed; the tenth polices wanting: the machine files the closing escalation — the Ten end inside the heart); lo tachmod ESHET reekha, ve-avdo va-amato ve- shoro va-chamoro — the inventory (the house first, then the persons and beasts: MS&#x27;s codex-file: the precise texts hold SEVEN CLOSED BREAKS in the Ten and SPLIT THE TWO COVETS — the section-shape that misled some to cut the utterances differently, &#x27;and the truth is as the sages received&#x27;); ve-KHOL asher le-reekha — &#x27;and ANYTHING that is your fellow&#x27;s&#x27;: the catch-all (the readings: covet nothing, for the whole inventory is one man&#x27;s peace); THE TEN NOW STAND (the machine&#x27;s own count: ten statutes installed, verse two to verse seventeen — 620 letters, the CROWN; 172 words, the EQEV; alef to kaf, SURELY GOOD — all verified at the build).
+</td><td><span class="he">לֹא תַחְמֹד בֵּית רֵעֶךָ</span> · <i>lo tachmod bet ree-kha</i><br><span class="gloss">= not tachmod bet ree-kha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Utterance ten; the statutes stand.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_20_18 · Exod.20.18 · <span class='expr'>SEEING_THE_VOICES</span></h3>
+<p><span class="he">וְכָל־הָעָם רֹאִים אֶת־הַקּוֹלֹת וְאֶת־הַלַּפִּידִם וְאֵת קוֹל הַשֹּׁפָר וְאֶת־הָהָר עָשֵׁן וַיַּרְא הָעָם וַיָּנֻעוּ וַיַּעַמְדוּ מֵרָחֹק</span> · <i>ve-khal-ha-am roim et-ha-qolot ve-et-ha-lapidim ve-et qol ha-shofar ve-et-ha-har ashen va-yar ha-am va-yanuu va-yaamdu me-rachoq</i> · And all the people were seeing the voices and the torches, and the voice of the shofar, and the mountain smoking; and the people saw, and they swayed, and stood far off.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְכָל הָעָם֩ רֹאִ֨ים אֶת הַקּוֹלֹ֜ת וְאֶת הַלַּפִּידִ֗ם וְאֵת֙ ק֣וֹל הַשֹּׁפָ֔ר וְאֶת הָהָ֖ר עָשֵׁ֑ן</span> · <i>ve-khal-ha-am roim et-ha-qolot ve-et-ha-lapidim ve-et qol ha-shofar ve-et-ha-har ashen</i> · and all the people were seeing the voices and the torches, and the voice of the shofar, and the mountain smoking (etnachta on ashen) [VERIFIED: SNAPSHOT Exod.20.18 idx12 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּ֤רְא הָעָם֙ וַיָּנֻ֔עוּ וַיַּֽעַמְד֖וּ מֵֽרָחֹֽק</span> · <i>va-yar ha-am va-yanuu va-yaamdu me-rachoq</i> · and the people saw, and they swayed, and stood far off (verse-final me-rachoq) [VERIFIED: SNAPSHOT Exod.20.18 idx13-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">roim_et_ha_qolot(e1); Theme(e1, ha-qolot)</span><br><span class="gloss">= roim-the-qolot(e1); Theme(e1, the-qolot)</span><br>THE SEEING [EX20-08 + EX20-09 CROWNS]. ve-khol-ha-am ROIM et-HA- QOLOT — &#x27;and all the people were SEEING THE VOICES&#x27;: THE EVENT — the senses traded at the mountain (the readings: seeing what is heard); and the voices-word is written FULL-then-LEAN, census-unique (VERIFIED) — &#x27;this alone is so written&#x27; (the Ramah, against the Meiri) — with the torches-word likewise full-then-lean, unique (asserted): MS convicting the PRINTER twice over (&#x27;greatly confused in the Masorah and the verses — in all precise manuscripts the opposite&#x27;: the printed roster inverted, corrected from manuscripts); va-yar ha-am VA-YANUU — &#x27;and they SWAYED&#x27;: the sway-verb Torah- unique (VERIFIED) — the Kitzur: &#x27;THEREFORE WE SWAY at the study of Torah, for it was given in awe, in trembling&#x27; (the study-house&#x27;s rocking traced to this verse); the twelve-mil recoil named; Isaiah&#x27;s swaying doorposts the Scripture-twin (&#x27;there by an angel, here by angels&#x27;); va-yaamdu ME-RACHOQ — &#x27;and stood FAR OFF&#x27;: the machine opens the distance the next verse will legislate.
+</td><td><span class="he">וְכָל־הָעָם רֹאִים אֶת־הַקּוֹלֹת וְאֶת־הַלַּפִּידִם וְאֵת קוֹל הַשֹּׁפָר וְאֶת־הָהָר עָשֵׁן</span> · <i>ve-khal-ha-am roim et-ha-qolot ve-et-ha-lapidim ve-et qol ha-shofar ve-et-ha-har ashen</i><br><span class="gloss">= and-khal-the-am roim the-qolot and-the-lapidim and voice the-shofar and-the-har ashen</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The event; the traded senses.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_20_19 · Exod.20.19 · <span class='expr'>SPEAK_YOU_WITH_US</span></h3>
+<p><span class="he">וַיֹּאמְרוּ אֶל־מֹשֶׁה דַּבֵּר־אַתָּה עִמָּנוּ וְנִשְׁמָעָה וְאַל־יְדַבֵּר עִמָּנוּ אֱלֹהִים פֶּן־נָמוּת</span> · <i>va-yomru el-moshe daber-ata ima-nu ve-nishmaa ve-el-yedaber ima-nu Elohim pen-namut</i> · And they said to Moses: Speak you with us, and we will hear; and let God not speak with us, lest we die.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּֽאמְרוּ֙ אֶל מֹשֶׁ֔ה דַּבֵּר אַתָּ֥ה עִמָּ֖נוּ וְנִשְׁמָ֑עָה</span> · <i>va-yomru el-moshe daber-ata ima-nu ve-nishmaa</i> · and they said to Moses: speak you with us, and we will hear (etnachta on ve-nishmaa) [VERIFIED: SNAPSHOT Exod.20.19 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאַל יְדַבֵּ֥ר עִמָּ֛נוּ אֱלֹהִ֖ים פֶּן נָמֽוּת</span> · <i>ve-el-yedaber ima-nu Elohim pen-namut</i> · and let God not speak with us, lest we die (verse-final namut) [VERIFIED: SNAPSHOT Exod.20.19 idx7-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(ha_am, LET(daber_ata_imanu))</span><br><span class="gloss">= DECLARE(the-am, LET(daber-ata-imanu))</span><br>THE DEMAND. va-yomru el-moshe DABER-ATA imanu VE-NISHMAA — &#x27;SPEAK YOU with us, and WE WILL HEAR&#x27;: the card pushed — the people PETITION FOR A MEDIATOR (the corpus&#x27;s second demand-from-below, and the inverse of 17:2&#x27;s: there they demanded water from Moses&#x27; hand; here they demand Moses&#x27; VOICE between them and the Voice); ve-al- yedaber imanu ELOHIM pen-NAMUT — &#x27;let GOD not speak with us, LEST WE DIE&#x27;: the machine books the exchange 19:9 predicted (&#x27;that the people may HEAR in My speaking with you&#x27;) — the terror certifies the channel: prophecy is instituted at the people&#x27;s own request (Deut 5:24-28&#x27;s ratification and 18:16-17&#x27;s law armed, the readings named- only); MS&#x27;s stroke on the petition named (the segol-tzere split in the books on daber).
+</td><td><span class="he">דַּבֵּר־אַתָּה עִמָּנוּ וְנִשְׁמָעָה</span> · <i>daber-ata ima-nu ve-nishmaa</i><br><span class="gloss">= daber-ata ima-nu and-nishmaa</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The mediation demand.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_20_20 · Exod.20.20 · <span class='expr'>FEAR_NOT_THE_TEST</span></h3>
+<p><span class="he">וַיֹּאמֶר מֹשֶׁה אֶל־הָעָם אַל־תִּירָאוּ כִּי לְבַעֲבוּר נַסּוֹת אֶתְכֶם בָּא הָאֱלֹהִים וּבַעֲבוּר תִּהְיֶה יִרְאָתוֹ עַל־פְּנֵיכֶם לְבִלְתִּי תֶחֱטָאוּ</span> · <i>va-yomer moshe el-ha-am el-tirau ki le-va-avur nasot et-khem ba ha-Elohim u-va-avur tihye yirat-o al-pene-khem le-vilti techetau</i> · And Moses said to the people: Fear not, for in order to test you God has come — and in order that His fear be on your faces, that you sin not.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר מֹשֶׁ֣ה אֶל הָעָם֮ אַל תִּירָאוּ֒ כִּ֗י לְבַֽעֲבוּר֙ נַסּ֣וֹת אֶתְכֶ֔ם בָּ֖א הָאֱלֹהִ֑ים</span> · <i>va-yomer moshe el-ha-am el-tirau ki le-va-avur nasot et-khem ba ha-Elohim</i> · and Moses said to the people: fear not, for in order to test you God has come (etnachta on ha-Elohim) [VERIFIED: SNAPSHOT Exod.20.20 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּבַעֲב֗וּר תִּהְיֶ֧ה יִרְאָת֛וֹ עַל פְּנֵיכֶ֖ם לְבִלְתִּ֥י תֶחֱטָֽאוּ</span> · <i>u-va-avur tihye yirat-o al-pene-khem le-vilti techetau</i> · and in order that His fear be on your faces, that you sin not (verse-final techetau) [VERIFIED: SNAPSHOT Exod.20.20 idx12-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(le_vaavur_nasot_etkhem, t0)</span><br><span class="gloss">= HOLDS(to-vaavur-nasot-etkhem, t0)</span><br>THE TEST [EX20-10 CROWN]. al-TIRAU — &#x27;FEAR NOT&#x27; — ki LE-VAAVUR NASOT etkhem ba ha-elohim — &#x27;for IN ORDER TO TEST you God has come&#x27;: the in-order word Torah-unique (VERIFIED; the Kitzur&#x27;s Masorah-three runs to David&#x27;s court — &#x27;stand the test and be as David&#x27;) — and the machine files the corpus&#x27;s THIRD TEST-STATION: God tested with bread (16:4), the people tested at the rock (17:2,7), and the theophany itself is NASOT — the test-verb&#x27;s arc closing on the mountain; u-vaavur tihye YIRATO al-PENEKHEM — &#x27;that His FEAR be ON YOUR FACES&#x27; — the cipher EXACT (asserted at the build): yirato-al-penekhem = ZE HU BOSHET HA-PANIM (&#x27;this is SHAME-OF-FACE,&#x27; 917 = 917): &#x27;whoever has shame of face does not quickly sin — shame restrains where anger invites&#x27;; le-vilti TECHETAU — &#x27;that you SIN NOT&#x27;: the sin-word&#x27;s Torah-pair (VERIFIED): REUBEN&#x27;S &#x27;do not sin against the boy&#x27; (Gen 42:22) and Moses&#x27; here — the corpus&#x27;s two sin-not warnings: a brother&#x27;s plea and a mediator&#x27;s charge.
+</td><td><span class="he">כִּי לְבַעֲבוּר נַסּוֹת אֶתְכֶם בָּא הָאֱלֹהִים</span> · <i>ki le-va-avur nasot et-khem ba ha-Elohim</i><br><span class="gloss">= when to-and-avur nasot khem in-the the-God</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The third test-station; the shame-cipher.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_20_21 · Exod.20.21 · <span class='expr'>INTO_THE_THICK_CLOUD</span></h3>
+<p><span class="he">וַיַּעֲמֹד הָעָם מֵרָחֹק וּמֹשֶׁה נִגַּשׁ אֶל־הָעֲרָפֶל אֲשֶׁר־שָׁם הָאֱלֹהִים</span> · <i>va-yaamod ha-am me-rachoq u-moshe nigash el-ha-arafel asher-sham ha-Elohim</i> · And the people stood far off — and Moses drew near to the thick cloud where God was.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּעֲמֹ֥ד הָעָ֖ם מֵרָחֹ֑ק</span> · <i>va-yaamod ha-am me-rachoq</i> · and the people stood far off (etnachta on me-rachoq) [VERIFIED: SNAPSHOT Exod.20.21 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּמֹשֶׁה֙ נִגַּ֣שׁ אֶל הָֽעֲרָפֶ֔ל אֲשֶׁר שָׁ֖ם הָאֱלֹהִֽים</span> · <i>u-moshe nigash el-ha-arafel asher-sham ha-Elohim</i> · and Moses drew near to the thick cloud where God was (verse-final ha-Elohim) [VERIFIED: SNAPSHOT Exod.20.21 idx3-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(daber_ata_imanu, t1)</span><br><span class="gloss">= RESULT: HOLDS(daber-ata-imanu, t1)</span><br>THE MEDIATION [EX20-11 CROWN]. va-yaamod ha-am ME-RACHOQ — the people hold their distance — u-moshe NIGASH el-HA-ARAFEL — &#x27;and Moses DREW NEAR to the THICK CLOUD&#x27;: the card POPS IN GEOMETRY (the demand was for a mediator; the compliance is narrated as two positions — the people far, Moses in: the office accepted by walking into it); and HA-ARAFEL = SHEKHINA (385 = 385, asserted EXACT — the dark named, by number, as exactly What it hides; the Kitzur with the mirror&#x27;s English face); the approach-verb read passive (Pirkei deRabbi Eliezer, with translation: &#x27;MICHAEL AND GABRIEL seized him by his two hands and brought him near against his will&#x27; — even the mediator must be carried into the dark); and the verb&#x27;s Torah-pair asserted: JOSEPH drawing near to bow before Esau (Gen 33:7) and MOSES into the cloud — two approaches into fear: toward a brother&#x27;s face, and into the dark where the Face is.
+</td><td><span class="he">וּמֹשֶׁה נִגַּשׁ אֶל־הָעֲרָפֶל אֲשֶׁר־שָׁם הָאֱלֹהִים</span> · <i>u-moshe nigash el-ha-arafel asher-sham ha-Elohim</i><br><span class="gloss">= Moses nigash to-the-arafel which-there the-God</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The card pops; the dark = the Presence.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_20_22 · Exod.20.22 · <span class='expr'>FROM_THE_HEAVENS</span></h3>
+<p><span class="he">וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה כֹּה תֹאמַר אֶל־בְּנֵי יִשְׂרָאֵל אַתֶּם רְאִיתֶם כִּי מִן־הַשָּׁמַיִם דִּבַּרְתִּי עִמָּכֶם</span> · <i>va-yomer YHWH el-moshe ko tomar el-bene yisrael atem reitem ki min-ha-shamayim dibarti ima-khem</i> · And the LORD said to Moses: So shall you say to the sons of Israel: You have seen that from the heavens I spoke with you.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה כֹּ֥ה תֹאמַ֖ר אֶל בְּנֵ֣י יִשְׂרָאֵ֑ל</span> · <i>va-yomer YHWH el-moshe ko tomar el-bene yisrael</i> · and the LORD said to Moses: so shall you say to the sons of Israel (etnachta on yisrael) [VERIFIED: SNAPSHOT Exod.20.22 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אַתֶּ֣ם רְאִיתֶ֔ם כִּ֚י מִן הַשָּׁמַ֔יִם דִּבַּ֖רְתִּי עִמָּכֶֽם</span> · <i>atem reitem ki min-ha-shamayim dibarti ima-khem</i> · you have seen that from the heavens I spoke with you (verse-final ima-khem) [VERIFIED: SNAPSHOT Exod.20.22 idx9-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(min_ha_shamayim_dibarti, t0)</span><br><span class="gloss">= HOLDS(from-the-heavens-dibarti, t0)</span><br>THE PREAMBLE. ko tomar el-bene yisrael — the relay-formula (19:3&#x27;s frame returns: the mediation now standard procedure); ATEM REITEM — &#x27;YOU have seen&#x27; (19:4&#x27;s eagle-verse opener re-spent: the second atem-reitem in one stack — what they saw then was Egypt&#x27;s fall; what they see now is the sky speaking); ki MIN-HA-SHAMAYIM dibarti imakhem — &#x27;that FROM THE HEAVENS I spoke with you&#x27;: the machine holds the dialectic the tradition holds (Rashi at 19:20: He bent the heavens onto the mountain — descended AND from the heavens: the two verses one doctrine of undamaged transcendence): the altar-code&#x27;s preamble grounds the coming law in the hearing itself — you SAW the speaking; now build accordingly.
+</td><td><span class="he">אַתֶּם רְאִיתֶם כִּי מִן־הַשָּׁמַיִם דִּבַּרְתִּי עִמָּכֶם</span> · <i>atem reitem ki min-ha-shamayim dibarti ima-khem</i><br><span class="gloss">= atem reitem when from-the-heavens dibarti ima-khem</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The altar-code&#x27;s preamble.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_20_23 · Exod.20.23 · <span class='expr'>NO_GODS_OF_SILVER</span></h3>
+<p><span class="he">לֹא תַעֲשׂוּן אִתִּי אֱלֹהֵי כֶסֶף וֵאלֹהֵי זָהָב לֹא תַעֲשׂוּ לָכֶם</span> · <i>lo taasu-n et-y elohe khesef ve-lohe zahav lo taasu la-khem</i> · You shall not make with Me gods of silver, and gods of gold you shall not make for yourselves.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">לֹ֥א תַעֲשׂ֖וּן אִתִּ֑י</span> · <i>lo taasu-n et-y</i> · you shall not make with Me gods of silver (etnachta on et-y) [VERIFIED: SNAPSHOT Exod.20.23 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֱלֹ֤הֵי כֶ֨סֶף֙ וֵאלֹהֵ֣י זָהָ֔ב לֹ֥א תַעֲשׂ֖וּ לָכֶֽם</span> · <i>elohe khesef ve-lohe zahav lo taasu la-khem</i> · and gods of gold you shall not make for yourselves (verse-final la-khem) [VERIFIED: SNAPSHOT Exod.20.23 idx3-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>STATUTE</td><td><span class="expr">STATUTE FORBID(elohe_khesef_ve_zahav)</span><br><span class="gloss">= STATUTE FORBID(elohe-khesef-and-gold)</span><br>THE CODE OPENS [EX20-12]. lo taasun ITI elohe KHESEF ve-lohe ZAHAV — &#x27;you shall not make WITH ME gods of SILVER and gods of GOLD&#x27;: the altar-code&#x27;s first statute (the eleventh standing law of the chapter — the Ten sealed, the applied code begins: the machine notes the seam: from the spoken constitution to its first building regulations, no narrative between); iti — &#x27;WITH Me&#x27; (the readings: even as ornament to My service — the ban on gilding the worship itself, named-only); the mil&#x27;el stress on elohe-khesef named (one of the Masorah&#x27;s three): the corpus files the code&#x27;s opening move: before commanding an altar, forbid its counterfeit.
+</td><td><span class="he">לֹא תַעֲשׂוּן אִתִּי אֱלֹהֵי כֶסֶף וֵאלֹהֵי זָהָב</span> · <i>lo taasu-n et-y elohe khesef ve-lohe zahav</i><br><span class="gloss">= not taasu-n y elohe khesef and-lohe gold</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The altar-code opens.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_20_24 · Exod.20.24 · <span class='expr'>AN_ALTAR_OF_EARTH</span></h3>
+<p><span class="he">מִזְבַּח אֲדָמָה תַּעֲשֶׂה־לִּי וְזָבַחְתָּ עָלָיו אֶת־עֹלֹתֶיךָ וְאֶת־שְׁלָמֶיךָ אֶת־צֹאנְךָ וְאֶת־בְּקָרֶךָ בְּכָל־הַמָּקוֹם אֲשֶׁר אַזְכִּיר אֶת־שְׁמִי אָבוֹא אֵלֶיךָ וּבֵרַכְתִּיךָ</span> · <i>mizbach adama taase-li-y ve-zavachta alay-v et-olote-kha ve-et-shelame-kha et-tzon-kha ve-et-beqare-kha be-khal-ha-maqom asher azkir et-shemi-y avo ele-kha u-verakhti-kha</i> · An altar of earth shall you make for Me, and you shall sacrifice on it your burnt-offerings and your peace-offerings, your flock and your herd; in every place where I cause My name to be mentioned, I will come to you and bless you.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">מִזְבַּ֣ח אֲדָמָה֮ תַּעֲשֶׂה לִּי֒ וְזָבַחְתָּ֣ עָלָ֗יו אֶת עֹלֹתֶ֨יךָ֙ וְאֶת שְׁלָמֶ֔יךָ אֶת צֹֽאנְךָ֖ וְאֶת בְּקָרֶ֑ךָ</span> · <i>mizbach adama taase-li-y ve-zavachta alay-v et-olote-kha ve-et-shelame-kha et-tzon-kha ve-et-beqare-kha</i> · an altar of earth shall you make for Me, and you shall sacrifice on it your burnt-offerings and your peace-offerings, your flock and your herd (etnachta on beqare-kha) [VERIFIED: SNAPSHOT Exod.20.24 idx13 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">בְּכָל הַמָּקוֹם֙ אֲשֶׁ֣ר אַזְכִּ֣יר אֶת שְׁמִ֔י אָב֥וֹא אֵלֶ֖יךָ וּבֵרַכְתִּֽיךָ</span> · <i>be-khal-ha-maqom asher azkir et-shemi-y avo ele-kha u-verakhti-kha</i> · in every place where I cause My name to be mentioned, I will come to you and bless you (verse-final u-verakhti-kha) [VERIFIED: SNAPSHOT Exod.20.24 idx14-22]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>STATUTE</td><td><span class="expr">STATUTE BIND(mizbach_adama)</span><br><span class="gloss">= STATUTE BIND(mizbach-adama)</span><br>THE ALTAR [EX20-12 CROWN]. mizbach ADAMA taase-li — &#x27;an altar of EARTH shall you make for Me&#x27;: the code&#x27;s positive statute (earth, the humblest material — the readings on the altar as adam&#x27;s namesake, named-only); ve-zavachta alav et-OLOTEKHA ve-et-SHELAMEKHA — burnt-offerings and peace-offerings (the corpus&#x27;s sacrifice- vocabulary becoming statute: Jethro&#x27;s meal at 18:12 was the last free-form offering; from here the altar has law); be-khol-ha-MAQOM asher AZKIR et-shemi — &#x27;in EVERY PLACE where I cause My Name to be mentioned&#x27; — AVO elekha U-VERAKHTIKHA — &#x27;I will COME to you and BLESS you&#x27;: and AVO = TEN (asserted at the build) — the Kitzur: &#x27;if I find TEN in the synagogue, I COME and bless you&#x27; (the minyan encoded in the coming-verb): the machine files the statute&#x27;s astonishing warranty: a standing divine RESPONSE-LAW — wherever the Name is named, the coming and the blessing are self-obligated.
+</td><td><span class="he">מִזְבַּח אֲדָמָה תַּעֲשֶׂה־לִּי</span> · <i>mizbach adama taase-li-y</i><br><span class="gloss">= mizbach adama taase-to-me-y</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The earthen altar; the minyan-cipher.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_20_25 · Exod.20.25 · <span class='expr'>NO_HEWN_STONES</span></h3>
+<p><span class="he">וְאִם־מִזְבַּח אֲבָנִים תַּעֲשֶׂה־לִּי לֹא־תִבְנֶה אֶתְהֶן גָּזִית כִּי חַרְבְּךָ הֵנַפְתָּ עָלֶיהָ וַתְּחַלְלֶהָ</span> · <i>ve-im-mizbach avanim taase-li-y lo-tivne et-hen gazit ki charb-kha henafta ale-ha va-techalle-ha</i> · And if an altar of stones you make for Me, you shall not build them hewn; for you have lifted your sword upon it, and profaned it.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאִם מִזְבַּ֤ח אֲבָנִים֙ תַּֽעֲשֶׂה לִּ֔י לֹֽא תִבְנֶ֥ה אֶתְהֶ֖ן גָּזִ֑ית</span> · <i>ve-im-mizbach avanim taase-li-y lo-tivne et-hen gazit</i> · and if an altar of stones you make for Me, you shall not build them hewn (etnachta on gazit) [VERIFIED: SNAPSHOT Exod.20.25 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּ֧י חַרְבְּךָ֛ הֵנַ֥פְתָּ עָלֶ֖יהָ וַתְּחַֽלְלֶֽהָ</span> · <i>ki charb-kha henafta ale-ha va-techalle-ha</i> · for you have lifted your sword upon it, and profaned it (verse-final va-techalle-ha) [VERIFIED: SNAPSHOT Exod.20.25 idx9-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>STATUTE</td><td><span class="expr">STATUTE FORBID(gazit)</span><br>THE HEWN BAN [EX20-12 CROWN]. ve-im-mizbach AVANIM taase-li — &#x27;and if an altar of STONES&#x27; — lo-tivne ethen GAZIT — &#x27;you shall not build them HEWN&#x27;; ki CHARBEKHA henafta aleha VA-TECHALLEHA — &#x27;for you have lifted your SWORD upon it, AND PROFANED IT&#x27;: the profane-word Torah- unique, written with NO YOD (VERIFIED; the Ramah) — and the statute&#x27;s doctrine carried by the readings (named): the altar lengthens man&#x27;s days and iron shortens them — &#x27;the shortener may not be lifted over the lengthener&#x27; (the sword disqualifies the stone it touches: the corpus&#x27;s first tool-purity law, and the machine notes its reach: the peace-instrument may not be manufactured by the war- instrument).
+</td><td><span class="he">לֹא־תִבְנֶה אֶתְהֶן גָּזִית</span> · <i>lo-tivne et-hen gazit</i><br><span class="gloss">= not-tivne hen gazit</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The sword and the altar.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_20_26 · Exod.20.26 · <span class='expr'>NO_STEPS</span></h3>
+<p><span class="he">וְלֹא־תַעֲלֶה בְמַעֲלֹת עַל־מִזְבְּחִי אֲשֶׁר לֹא־תִגָּלֶה עֶרְוָתְךָ עָלָיו</span> · <i>ve-lo-taale ve-maalot al-mizbchi-y asher lo-tigale ervat-kha alay-v</i> · And you shall not go up by steps onto My altar — that your nakedness be not uncovered on it.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְלֹֽא תַעֲלֶ֥ה בְמַעֲלֹ֖ת עַֽל מִזְבְּחִ֑י</span> · <i>ve-lo-taale ve-maalot al-mizbchi-y</i> · and you shall not go up by steps onto My altar (etnachta on mizbchi-y) [VERIFIED: SNAPSHOT Exod.20.26 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֲשֶׁ֛ר לֹֽא תִגָּלֶ֥ה עֶרְוָתְךָ֖ עָלָֽיו</span> · <i>asher lo-tigale ervat-kha alay-v</i> · that your nakedness be not uncovered on it (verse-final alay-v) [VERIFIED: SNAPSHOT Exod.20.26 idx5-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>STATUTE</td><td><span class="expr">STATUTE FORBID(maalot)</span><br>THE STEPS BAN [EX20-12]. ve-lo-taale VE-MAALOT al-mizbechi — &#x27;you shall not go up BY STEPS onto My altar&#x27; (the ramp inferred: the ascent graded, not stepped); asher lo-TIGALE ervatkha alav — &#x27;that your NAKEDNESS be not UNCOVERED on it&#x27;: the Kitzur&#x27;s Masorah-file named (&#x27;if he uncovers on the altar — his evil is uncovered in the assembly&#x27;); the bet of ve-maalot SOFT in all books (MS against the Rav Pealim&#x27;s printed claim — &#x27;I have seen it soft in all the books&#x27;: the printed-authority file&#x27;s last station of the chapter); the machine seals the block&#x27;s arc: the chapter that opened with the Presence descending in fire closes regulating the priest&#x27;s STRIDE — fourteen statutes standing (ten spoken to the nation, four for the altar), and the law&#x27;s final concern is the dignity of a man climbing to serve.
+</td><td><span class="he">וְלֹא־תַעֲלֶה בְמַעֲלֹת עַל־מִזְבְּחִי</span> · <i>ve-lo-taale ve-maalot al-mizbchi-y</i><br><span class="gloss">= and-not-taale and-maalot upon-mizbchi-y</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The code&#x27;s last modesty.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Ex_20_1 — God spoke all these words</td><td>And God spoke all these words, saying:</td><td>no test, no name.</td><td><span class="he">וַיְדַבֵּ֣ר אֱלֹהִ֔ים אֵ֛ת כָּל</span> · <i>va-yedaber Elohim et kal-</i><br><span class="gloss">= and-yedaber God et kal</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Ex_20_2 — I am</td><td>I am the LORD your God, who brought you out of the land of Egypt, out of the house of slaves.</td><td>STATUTES 1 standing no test, no name.</td><td><span class="he">אָֽנֹכִ֖י יְהוָ֣ה אֱלֹהֶ֑יךָ אֲשֶׁ֧ר</span> · <i>anokhi YHWH elohe-kha asher</i><br><span class="gloss">= anokhi the-LORD elohe-kha which</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Ex_20_3 — no other gods</td><td>There shall not be to you other gods before My face.</td><td>STATUTES 2 standing no test, no name.</td><td><span class="he">לֹֽ֣א יִהְיֶֽה לְךָ֛ אֱלֹהִ֥ים</span> · <i>lo yihye-le-kha Elohim</i><br><span class="gloss">= not yihye-to-kha God</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Ex_20_4 — no graven image</td><td>You shall not make yourself a graven image, or any likeness of what is in the heavens above, or what is in the earth beneath, or what is in the waters beneath the earth.</td><td>STATUTES 2 standing no test, no name.</td><td><span class="he">לֹֽ֣א תַֽעֲשֶׂ֨ה לְךָ֥ פֶ֨סֶל֙</span> · <i>lo taase-le-kha fesel</i><br><span class="gloss">= not taase-to-kha fesel</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Ex_20_5 — a jealous God</td><td>You shall not bow down to them, and you shall not serve them; for I the LORD your God am a jealous God, visiting the iniquity of fathers on sons, on the third and on the fourth generation, to those who hate Me.</td><td>STATUTES 2 standing no test, no name.</td><td><span class="he">לֹֽא תִשְׁתַּחֲוֶ֥ה לָהֶ֖ם וְלֹ֣א</span> · <i>lo-tishtachave la-hem ve-lo</i><br><span class="gloss">= not-tishtachave to-hem and-not</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Ex_20_6 — mercy to thousands</td><td>And doing kindness to thousands — to those who love Me, and to those who keep My commandments.</td><td>STATUTES 2 standing no test, no name.</td><td><span class="he">וְעֹ֥שֶׂה חֶ֖סֶד לַאֲלָפִ֑ים לְאֹהֲבַ֖י</span> · <i>ve-ose chesed la-alafim le-ohava-y</i><br><span class="gloss">= and-ose chesed to-alafim to-ohava-y</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Ex_20_7 — the Name in vain</td><td>You shall not take up the name of the LORD your God in vain; for the LORD will not hold him guiltless who takes up His name in vain.</td><td>STATUTES 3 standing no test, no name.</td><td><span class="he">לֹ֥א תִשָּׂ֛א אֶת שֵֽׁם</span> · <i>lo tisa et-shem-</i><br><span class="gloss">= not tisa shem</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Ex_20_8 — remember the Sabbath</td><td>Remember the sabbath day, to keep it holy.</td><td>STATUTES 4 standing no test, no name.</td><td><span class="he">זָכ֛וֹר אֶת י֥וֹם הַשַּׁבָּ֖ת</span> · <i>zakhor et-yom ha-shabat</i><br><span class="gloss">= zakhor day the-shabat</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Ex_20_9 — six days shall you labor</td><td>Six days shall you labor, and do all your work.</td><td>STATUTES 4 standing no test, no name.</td><td><span class="he">שֵׁ֤שֶׁת יָמִים֙ תַּֽעֲבֹ֔ד וְעָשִׂ֖יתָ</span> · <i>sheshet yamim taavod ve-asita</i><br><span class="gloss">= sheshet seas taavod and-asita</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Ex_20_10 — the seventh is rest</td><td>And the seventh day is a sabbath to the LORD your God; you shall not do any work — you, and your son and your daughter, your servant and your maid, and your beast, and your stranger who is within your gates.</td><td>STATUTES 4 standing no test, no name.</td><td><span class="he">וְי֨וֹם֙ הַשְּׁבִיעִ֔י שַׁבָּ֖ת לַיהוָ֣ה</span> · <i>ve-yom ha-shevii shabat la-YHWH</i><br><span class="gloss">= day seventh shabat to-the-LORD</span></td></tr>
+<tr><td><b>S11</b></td><td>after STEP_Ex_20_11 — the creation warrant</td><td>For six days the LORD made the heavens and the earth, the sea and all that is in them, and He rested on the seventh day; therefore the LORD blessed the sabbath day, and sanctified it.</td><td>STATUTES 4 standing no test, no name.</td><td><span class="he">כִּ֣י שֵֽׁשֶׁת יָמִים֩ עָשָׂ֨ה</span> · <i>ki sheshet-yamim asa</i><br><span class="gloss">= when sheshet-seas asa</span></td></tr>
+<tr><td><b>S12</b></td><td>after STEP_Ex_20_12 — honor father and mother</td><td>Honor your father and your mother — that your days may be long on the land which the LORD your God gives you.</td><td>STATUTES 5 standing no test, no name.</td><td><span class="he">כַּבֵּ֥ד אֶת אָבִ֖יךָ וְאֶת</span> · <i>kabed et-avi-kha ve-et-</i><br><span class="gloss">= kabed avi-kha and</span></td></tr>
+<tr><td><b>S13</b></td><td>after STEP_Ex_20_13 — no murder</td><td>You shall not murder.</td><td>STATUTES 6 standing no test, no name.</td><td><span class="he">לֹ֖א תִּרְצָֽח</span> · <i>lo tirtzach</i><br><span class="gloss">= not tirtzach</span></td></tr>
+<tr><td><b>S14</b></td><td>after STEP_Ex_20_14 — no adultery</td><td>You shall not commit adultery.</td><td>STATUTES 7 standing no test, no name.</td><td><span class="he">לֹ֖א תִּנְאָֽף</span> · <i>lo tinaf</i><br><span class="gloss">= not tinaf</span></td></tr>
+<tr><td><b>S15</b></td><td>after STEP_Ex_20_15 — no theft</td><td>You shall not steal.</td><td>STATUTES 8 standing no test, no name.</td><td><span class="he">לֹ֖א תִּגְנֹֽב</span> · <i>lo tignov</i><br><span class="gloss">= not tignov</span></td></tr>
+<tr><td><b>S16</b></td><td>after STEP_Ex_20_16 — no false witness</td><td>You shall not answer against your fellow as a false witness.</td><td>STATUTES 9 standing no test, no name.</td><td><span class="he">לֹֽא תַעֲנֶ֥ה בְרֵעֲךָ֖ עֵ֥ד</span> · <i>lo-taane ve-rea-kha ed</i><br><span class="gloss">= not-taane and-rea-kha mist</span></td></tr>
+<tr><td><b>S17</b></td><td>after STEP_Ex_20_17 — no coveting</td><td>You shall not covet your fellow&#x27;s house; you shall not covet your fellow&#x27;s wife, or his servant, or his maid, or his ox, or his donkey, or anything that is your fellow&#x27;s.</td><td>STATUTES 10 standing no test, no name.</td><td><span class="he">לֹ֥א תַחְמֹ֖ד בֵּ֣ית רֵעֶ֑ךָ</span> · <i>lo tachmod bet ree-kha</i><br><span class="gloss">= not tachmod bet ree-kha</span></td></tr>
+<tr><td><b>S18</b></td><td>after STEP_Ex_20_18 — seeing the voices</td><td>And all the people were seeing the voices and the torches, and the voice of the shofar, and the mountain smoking; and the people saw, and they swayed, and stood far off.</td><td>STATUTES 10 standing no test, no name.</td><td><span class="he">וְכָל הָעָם֩ רֹאִ֨ים אֶת</span> · <i>ve-khal-ha-am roim et-</i><br><span class="gloss">= and-khal-the-am roim et-</span></td></tr>
+<tr><td><b>S19</b></td><td>after STEP_Ex_20_19 — speak you with us</td><td>And they said to Moses: Speak you with us, and we will hear; and let God not speak with us, lest we die.</td><td>LET(daber_ata_imanu) pushed and OPEN; STATUTES 10 standing no test, no name.<br><span class="gloss">= LET(daber-ata-imanu) pushed and OPEN; STATUTES 10 standing no test, no name.</span></td><td><span class="he">וַיֹּֽאמְרוּ֙ אֶל מֹשֶׁ֔ה דַּבֵּר</span> · <i>va-yomru el-moshe daber-</i><br><span class="gloss">= and-yomru to-Moses daber</span></td></tr>
+<tr><td><b>S20</b></td><td>after STEP_Ex_20_20 — fear not — the test</td><td>And Moses said to the people: Fear not, for in order to test you God has come — and in order that His fear be on your faces, that you sin not.</td><td>LET(daber_ata_imanu) pushed and OPEN; STATUTES 10 standing no test, no name.<br><span class="gloss">= LET(daber-ata-imanu) pushed and OPEN; STATUTES 10 standing no test, no name.</span></td><td><span class="he">וַיֹּ֨אמֶר מֹשֶׁ֣ה אֶל הָעָם֮</span> · <i>va-yomer moshe el-ha-am</i><br><span class="gloss">= and-yomer Moses to-the-am</span></td></tr>
+<tr><td><b>S21</b></td><td>after STEP_Ex_20_21 — into the thick cloud</td><td>And the people stood far off — and Moses drew near to the thick cloud where God was.</td><td>STATUTES 10 standing no test, no name.</td><td><span class="he">וַיַּעֲמֹ֥ד הָעָ֖ם מֵרָחֹ֑ק וּמֹשֶׁה֙</span> · <i>va-yaamod ha-am me-rachoq u-moshe</i><br><span class="gloss">= and-yaamod the-am from-rachoq Moses</span></td></tr>
+<tr><td><b>S22</b></td><td>after STEP_Ex_20_22 — from the heavens</td><td>And the LORD said to Moses: So shall you say to the sons of Israel: You have seen that from the heavens I spoke with you.</td><td>STATUTES 10 standing no test, no name.</td><td><span class="he">וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה</span> · <i>va-yomer YHWH el-moshe</i><br><span class="gloss">= and-yomer the-LORD to-Moses</span></td></tr>
+<tr><td><b>S23</b></td><td>after STEP_Ex_20_23 — no gods of silver</td><td>You shall not make with Me gods of silver, and gods of gold you shall not make for yourselves.</td><td>STATUTES 11 standing no test, no name.</td><td><span class="he">לֹ֥א תַעֲשׂ֖וּן אִתִּ֑י אֱלֹ֤הֵי</span> · <i>lo taasu-n et-y elohe</i><br><span class="gloss">= not taasu-n y elohe</span></td></tr>
+<tr><td><b>S24</b></td><td>after STEP_Ex_20_24 — an altar of earth</td><td>An altar of earth shall you make for Me, and you shall sacrifice on it your burnt-offerings and your peace-offerings, your flock and your herd; in every place where I cause My name to be mentioned, I will come to you and bless you.</td><td>STATUTES 12 standing no test, no name.</td><td><span class="he">מִזְבַּ֣ח אֲדָמָה֮ תַּעֲשֶׂה לִּי֒</span> · <i>mizbach adama taase-li-y</i><br><span class="gloss">= mizbach adama taase-to-me-y</span></td></tr>
+<tr><td><b>S25</b></td><td>after STEP_Ex_20_25 — no hewn stones</td><td>And if an altar of stones you make for Me, you shall not build them hewn; for you have lifted your sword upon it, and profaned it.</td><td>STATUTES 13 standing no test, no name.</td><td><span class="he">וְאִם מִזְבַּ֤ח אֲבָנִים֙ תַּֽעֲשֶׂה</span> · <i>ve-im-mizbach avanim taase-</i><br><span class="gloss">= and-if-mizbach avanim taase</span></td></tr>
+<tr><td><b>S26</b></td><td>after STEP_Ex_20_26 — no steps</td><td>And you shall not go up by steps onto My altar — that your nakedness be not uncovered on it.</td><td>STATUTES 14 standing no test, no name.</td><td><span class="he">וְלֹֽא תַעֲלֶ֥ה בְמַעֲלֹ֖ת עַֽל</span> · <i>ve-lo-taale ve-maalot al-</i><br><span class="gloss">= and-not-taale and-maalot upon</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: exo_20_the_ten_utterances — The Ten Utterances (20:1-26) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — after STEP_Ex_20_1 — God spoke all these words
+    וַיְדַבֵּ֣ר אֱלֹהִ֔ים אֵ֛ת כָּל (va-yedaber Elohim et kal-)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Ex_20_2 — I am
+    אָֽנֹכִ֖י יְהוָ֣ה אֱלֹהֶ֑יךָ אֲשֶׁ֧ר (anokhi YHWH elohe-kha asher)
+    PASS  STATUTES 1 standing no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Ex_20_3 — no other gods
+    לֹֽ֣א יִהְיֶֽה לְךָ֛ אֱלֹהִ֥ים (lo yihye-le-kha Elohim)
+    PASS  STATUTES 2 standing no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Ex_20_4 — no graven image
+    לֹֽ֣א תַֽעֲשֶׂ֨ה לְךָ֥ פֶ֨סֶל֙ (lo taase-le-kha fesel)
+    PASS  STATUTES 2 standing no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Ex_20_5 — a jealous God
+    לֹֽא תִשְׁתַּחֲוֶ֥ה לָהֶ֖ם וְלֹ֣א (lo-tishtachave la-hem ve-lo)
+    PASS  STATUTES 2 standing no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Ex_20_6 — mercy to thousands
+    וְעֹ֥שֶׂה חֶ֖סֶד לַאֲלָפִ֑ים לְאֹהֲבַ֖י (ve-ose chesed la-alafim le-ohava-y)
+    PASS  STATUTES 2 standing no test, no name.  (tests=0 names=0)
+
+=== S7 — after STEP_Ex_20_7 — the Name in vain
+    לֹ֥א תִשָּׂ֛א אֶת שֵֽׁם (lo tisa et-shem-)
+    PASS  STATUTES 3 standing no test, no name.  (tests=0 names=0)
+
+=== S8 — after STEP_Ex_20_8 — remember the Sabbath
+    זָכ֛וֹר אֶת י֥וֹם הַשַּׁבָּ֖ת (zakhor et-yom ha-shabat)
+    PASS  STATUTES 4 standing no test, no name.  (tests=0 names=0)
+
+=== S9 — after STEP_Ex_20_9 — six days shall you labor
+    שֵׁ֤שֶׁת יָמִים֙ תַּֽעֲבֹ֔ד וְעָשִׂ֖יתָ (sheshet yamim taavod ve-asita)
+    PASS  STATUTES 4 standing no test, no name.  (tests=0 names=0)
+
+=== S10 — after STEP_Ex_20_10 — the seventh is rest
+    וְי֨וֹם֙ הַשְּׁבִיעִ֔י שַׁבָּ֖ת לַיהוָ֣ה (ve-yom ha-shevii shabat la-YHWH)
+    PASS  STATUTES 4 standing no test, no name.  (tests=0 names=0)
+
+=== S11 — after STEP_Ex_20_11 — the creation warrant
+    כִּ֣י שֵֽׁשֶׁת יָמִים֩ עָשָׂ֨ה (ki sheshet-yamim asa)
+    PASS  STATUTES 4 standing no test, no name.  (tests=0 names=0)
+
+=== S12 — after STEP_Ex_20_12 — honor father and mother
+    כַּבֵּ֥ד אֶת אָבִ֖יךָ וְאֶת (kabed et-avi-kha ve-et-)
+    PASS  STATUTES 5 standing no test, no name.  (tests=0 names=0)
+
+=== S13 — after STEP_Ex_20_13 — no murder
+    לֹ֖א תִּרְצָֽח (lo tirtzach)
+    PASS  STATUTES 6 standing no test, no name.  (tests=0 names=0)
+
+=== S14 — after STEP_Ex_20_14 — no adultery
+    לֹ֖א תִּנְאָֽף (lo tinaf)
+    PASS  STATUTES 7 standing no test, no name.  (tests=0 names=0)
+
+=== S15 — after STEP_Ex_20_15 — no theft
+    לֹ֖א תִּגְנֹֽב (lo tignov)
+    PASS  STATUTES 8 standing no test, no name.  (tests=0 names=0)
+
+=== S16 — after STEP_Ex_20_16 — no false witness
+    לֹֽא תַעֲנֶ֥ה בְרֵעֲךָ֖ עֵ֥ד (lo-taane ve-rea-kha ed)
+    PASS  STATUTES 9 standing no test, no name.  (tests=0 names=0)
+
+=== S17 — after STEP_Ex_20_17 — no coveting
+    לֹ֥א תַחְמֹ֖ד בֵּ֣ית רֵעֶ֑ךָ (lo tachmod bet ree-kha)
+    PASS  STATUTES 10 standing no test, no name.  (tests=0 names=0)
+
+=== S18 — after STEP_Ex_20_18 — seeing the voices
+    וְכָל הָעָם֩ רֹאִ֨ים אֶת (ve-khal-ha-am roim et-)
+    PASS  STATUTES 10 standing no test, no name.  (tests=0 names=0)
+
+=== S19 — after STEP_Ex_20_19 — speak you with us
+    וַיֹּֽאמְרוּ֙ אֶל מֹשֶׁ֔ה דַּבֵּר (va-yomru el-moshe daber-)
+    PASS  LET(daber_ata_imanu) pushed and OPEN  (queue=[&#x27;daber_ata_imanu&#x27;])
+    PASS  STATUTES 10 standing no test, no name.  (tests=0 names=0)
+
+=== S20 — after STEP_Ex_20_20 — fear not — the test
+    וַיֹּ֨אמֶר מֹשֶׁ֣ה אֶל הָעָם֮ (va-yomer moshe el-ha-am)
+    PASS  LET(daber_ata_imanu) pushed and OPEN  (queue=[&#x27;daber_ata_imanu&#x27;])
+    PASS  STATUTES 10 standing no test, no name.  (tests=0 names=0)
+
+=== S21 — after STEP_Ex_20_21 — into the thick cloud
+    וַיַּעֲמֹ֥ד הָעָ֖ם מֵרָחֹ֑ק וּמֹשֶׁה֙ (va-yaamod ha-am me-rachoq u-moshe)
+    PASS  STATUTES 10 standing no test, no name.  (tests=0 names=0)
+
+=== S22 — after STEP_Ex_20_22 — from the heavens
+    וַיֹּ֤אמֶר יְהוָה֙ אֶל מֹשֶׁ֔ה (va-yomer YHWH el-moshe)
+    PASS  STATUTES 10 standing no test, no name.  (tests=0 names=0)
+
+=== S23 — after STEP_Ex_20_23 — no gods of silver
+    לֹ֥א תַעֲשׂ֖וּן אִתִּ֑י אֱלֹ֤הֵי (lo taasu-n et-y elohe)
+    PASS  STATUTES 11 standing no test, no name.  (tests=0 names=0)
+
+=== S24 — after STEP_Ex_20_24 — an altar of earth
+    מִזְבַּ֣ח אֲדָמָה֮ תַּעֲשֶׂה לִּי֒ (mizbach adama taase-li-y)
+    PASS  STATUTES 12 standing no test, no name.  (tests=0 names=0)
+
+=== S25 — after STEP_Ex_20_25 — no hewn stones
+    וְאִם מִזְבַּ֤ח אֲבָנִים֙ תַּֽעֲשֶׂה (ve-im-mizbach avanim taase-)
+    PASS  STATUTES 13 standing no test, no name.  (tests=0 names=0)
+
+=== S26 — after STEP_Ex_20_26 — no steps
+    וְלֹֽא תַעֲלֶ֥ה בְמַעֲלֹ֖ת עַֽל (ve-lo-taale ve-maalot al-)
+    PASS  STATUTES 14 standing no test, no name.  (tests=0 names=0)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/exo_20_the_ten_utterances.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# exo_20_the_ten_utterances — 20:1-26
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/exo_20_the_ten_utterances.yaml) is CANONICAL (Pre-
+# Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;The Ten Utterances (20:1-26)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;exo_20_the_ten_utterances&quot;)
+
+# -------------------------- Exod.20.1 · GOD_SPOKE_ALL_THESE_WORDS ----------
+# וַיְדַבֵּר אֱלֹהִים אֵת כָּל־הַדְּבָרִים הָאֵלֶּה לֵאמֹר
+# &quot;[EN-AID] And God spoke all these words, saying:&quot;
+m.step(&quot;Exod.20.1&quot;)
+# ‹וַיְדַבֵּר אֱלֹהִים אֵת כָּל־הַדְּבָרִים הָאֵלֶּה לֵאמֹר› (“and-speak God
+# obj-marker all the-word/thing the-these to-say”) — fact holds: and-speak-
+# God
+m.fact(&quot;va_yedaber_elohim&quot;)
+
+# -------------------------- Exod.20.2 · I_AM -------------------------------
+# אָנֹכִי יְהוָה אֱלֹהֶיךָ אֲשֶׁר הוֹצֵאתִיךָ מֵאֶרֶץ מִצְרַיִם מִבֵּית
+# עֲבָדִים
+# &quot;[EN-AID] I am the LORD your God, who brought you out of the land of
+# Egypt, out of the house of slaves.&quot;
+m.step(&quot;Exod.20.2&quot;)
+# ‹אָנֹכִי יְהוָה אֱלֹהֶיךָ› (“YHWH God-you/your”) —
+m.statute(&quot;BIND&quot;, &quot;anokhi_YHWH_elohekha&quot;)
+
+# -------------------------- Exod.20.3 · NO_OTHER_GODS ----------------------
+# לֹא יִהְיֶה־לְךָ אֱלֹהִים אֲחֵרִים עַל־פָּנָיַ
+# &quot;[EN-AID] There shall not be to you other gods before My face.&quot;
+m.step(&quot;Exod.20.3&quot;)
+# ‹לֹא יִהְיֶה־לְךָ אֱלֹהִים אֲחֵרִים› (“not be to-you/your God other”) —
+m.statute(&quot;FORBID&quot;, &quot;elohim_acherim&quot;)
+
+# -------------------------- Exod.20.4 · NO_GRAVEN_IMAGE --------------------
+# לֹא תַעֲשֶׂה־לְךָ פֶסֶל וְכָל־תְּמוּנָה אֲשֶׁר בַּשָּׁמַיִם מִמַּעַל
+# וַאֲשֶׁר בָּאָרֶץ מִתָּחַת וַאֲשֶׁר בַּמַּיִם מִתַּחַת לָאָרֶץ
+# &quot;[EN-AID] You shall not make yourself a graven image, or any likeness of
+# what is in the heavens above, or what is in the earth beneath, or what is
+# in the waters beneath the earth.&quot;
+m.step(&quot;Exod.20.4&quot;)
+# ‹לֹא תַעֲשֶׂה־לְךָ פֶסֶל וְכָל־תְּמוּנָה› (“not make to-you/your idol and-
+# all something-portioned-out”) — fact holds: not-make-to-you-idol
+m.fact(&quot;lo_taase_lekha_fesel&quot;)
+
+# -------------------------- Exod.20.5 · A_JEALOUS_GOD ----------------------
+# לֹא־תִשְׁתַּחֲוֶה לָהֶם וְלֹא תָעָבְדֵם כִּי אָנֹכִי יְהוָה אֱלֹהֶיךָ אֵל
+# קַנָּא פֹּקֵד עֲוֺן אָבֹת עַל־בָּנִים עַל־שִׁלֵּשִׁים וְעַל־רִבֵּעִים
+# לְשֹׂנְאָי
+# &quot;[EN-AID] You shall not bow down to them, and you shall not serve them;
+# for I the LORD your God am a jealous God, visiting the iniquity of fathers
+# on sons, on the third and on the fourth generation, to those who hate Me.&quot;
+m.step(&quot;Exod.20.5&quot;)
+# ‹כִּי אָנֹכִי יְהוָה אֱלֹהֶיךָ אֵל קַנָּא› (“that YHWH God-you/your
+# strength jealous”) — fact holds: strength-jealous
+m.fact(&quot;el_qana&quot;)
+
+# -------------------------- Exod.20.6 · MERCY_TO_THOUSANDS -----------------
+# וְעֹשֶׂה חֶסֶד לַאֲלָפִים לְאֹהֲבַי וּלְשֹׁמְרֵי מִצְוֺתָי
+# &quot;[EN-AID] And doing kindness to thousands — to those who love Me, and to
+# those who keep My commandments.&quot;
+m.step(&quot;Exod.20.6&quot;)
+# ‹וְעֹשֶׂה חֶסֶד לַאֲלָפִים› (“and-make kindness to-thousand”) — fact
+# holds: and-make-kindness-to-thousand
+m.fact(&quot;ve_ose_chesed_la_alafim&quot;)
+
+# -------------------------- Exod.20.7 · THE_NAME_IN_VAIN -------------------
+# לֹא תִשָּׂא אֶת־שֵׁם־יְהוָה אֱלֹהֶיךָ לַשָּׁוְא כִּי לֹא יְנַקֶּה יְהוָה
+# אֵת אֲשֶׁר־יִשָּׂא אֶת־שְׁמוֹ לַשָּׁוְא
+# &quot;[EN-AID] You shall not take up the name of the LORD your God in vain; for
+# the LORD will not hold him guiltless who takes up His name in vain.&quot;
+m.step(&quot;Exod.20.7&quot;)
+# ‹לֹא תִשָּׂא אֶת־שֵׁם־יְהוָה אֱלֹהֶיךָ לַשָּׁוְא› (“not lift/carry obj-
+# marker name YHWH God-you/your to-evil”) —
+m.statute(&quot;FORBID&quot;, &quot;shem_la_shav&quot;)
+
+# -------------------------- Exod.20.8 · REMEMBER_THE_SABBATH ---------------
+# זָכוֹר אֶת־יוֹם הַשַּׁבָּת לְקַדְּשׁוֹ
+# &quot;[EN-AID] Remember the sabbath day, to keep it holy.&quot;
+m.step(&quot;Exod.20.8&quot;)
+# ‹זָכוֹר אֶת־יוֹם הַשַּׁבָּת לְקַדְּשׁוֹ› (“mark obj-marker day the-
+# intermission to-sanctify-him/its”) —
+m.statute(&quot;BIND&quot;, &quot;zakhor_et_yom_ha_shabat&quot;)
+
+# -------------------------- Exod.20.9 · SIX_DAYS_SHALL_YOU_LABOR -----------
+# שֵׁשֶׁת יָמִים תַּעֲבֹד וְעָשִׂיתָ כָּל־מְלַאכְתֶּךָ
+# &quot;[EN-AID] Six days shall you labor, and do all your work.&quot;
+m.step(&quot;Exod.20.9&quot;)
+# ‹שֵׁשֶׁת יָמִים תַּעֲבֹד וְעָשִׂיתָ› (“six day work/serve and-make”) —
+# fact holds: six-day-work/serve
+m.fact(&quot;sheshet_yamim_taavod&quot;)
+
+# -------------------------- Exod.20.10 · THE_SEVENTH_IS_REST ---------------
+# וְיוֹם הַשְּׁבִיעִי שַׁבָּת לַיהוָה אֱלֹהֶיךָ לֹא־תַעֲשֶׂה כָל־מְלָאכָה
+# אַתָּה וּבִנְךָ־וּבִתֶּךָ עַבְדְּךָ וַאֲמָתְךָ וּבְהֶמְתֶּךָ וְגֵרְךָ
+# אֲשֶׁר בִּשְׁעָרֶיךָ
+# &quot;[EN-AID] And the seventh day is a sabbath to the LORD your God; you shall
+# not do any work — you, and your son and your daughter, your servant and
+# your maid, and your beast, and your stranger who is within your gates.&quot;
+m.step(&quot;Exod.20.10&quot;)
+# ‹אַתָּה וּבִנְךָ־וּבִתֶּךָ עַבְדְּךָ וַאֲמָתְךָ וּבְהֶמְתֶּךָ וְגֵרְךָ›
+# (“you and-son-you/your and-daughter-you/your servant-you/your and-
+# maidservant-you/your and-livestock-you/your and-sojourner-you/your”) —
+# fact holds: intermission-to-the-LORD-elohekha
+m.fact(&quot;shabat_la_YHWH_elohekha&quot;)
+
+# -------------------------- Exod.20.11 · THE_CREATION_WARRANT --------------
+# כִּי שֵׁשֶׁת־יָמִים עָשָׂה יְהוָה אֶת־הַשָּׁמַיִם וְאֶת־הָאָרֶץ אֶת־הַיָּם
+# וְאֶת־כָּל־אֲשֶׁר־בָּם וַיָּנַח בַּיּוֹם הַשְּׁבִיעִי עַל־כֵּן בֵּרַךְ
+# יְהוָה אֶת־יוֹם הַשַּׁבָּת וַיְקַדְּשֵׁהוּ
+# &quot;[EN-AID] For six days the LORD made the heavens and the earth, the sea
+# and all that is in them, and He rested on the seventh day; therefore the
+# LORD blessed the sabbath day, and sanctified it.&quot;
+m.step(&quot;Exod.20.11&quot;)
+# ‹עַל־כֵּן בֵּרַךְ יְהוָה אֶת־יוֹם הַשַּׁבָּת וַיְקַדְּשֵׁהוּ› (“over so
+# bless YHWH obj-marker day the-intermission and-sanctify-him/its”) — fact
+# holds: over-so-bless-the-LORD
+m.fact(&quot;al_ken_berakh_YHWH&quot;)
+
+# -------------------------- Exod.20.12 · HONOR_FATHER_AND_MOTHER -----------
+# כַּבֵּד אֶת־אָבִיךָ וְאֶת־אִמֶּךָ לְמַעַן יַאֲרִכוּן יָמֶיךָ עַל הָאֲדָמָה
+# אֲשֶׁר־יְהוָה אֱלֹהֶיךָ נֹתֵן לָךְ
+# &quot;[EN-AID] Honor your father and your mother — that your days may be long
+# on the land which the LORD your God gives you.&quot;
+m.step(&quot;Exod.20.12&quot;)
+# ‹כַּבֵּד אֶת־אָבִיךָ וְאֶת־אִמֶּךָ› (“be-heavy obj-marker father-you/your
+# and-obj-marker mother-you/your”) —
+m.statute(&quot;BIND&quot;, &quot;kabed_av_va_em&quot;)
+
+# -------------------------- Exod.20.13 · NO_MURDER -------------------------
+# לֹא תִּרְצָח
+# &quot;[EN-AID] You shall not murder.&quot;
+m.step(&quot;Exod.20.13&quot;)
+# ‹לֹא תִּרְצָח› (“not dash-in-pieces”) —
+m.statute(&quot;FORBID&quot;, &quot;retzach&quot;)
+
+# -------------------------- Exod.20.14 · NO_ADULTERY -----------------------
+# לֹא תִּנְאָף
+# &quot;[EN-AID] You shall not commit adultery.&quot;
+m.step(&quot;Exod.20.14&quot;)
+# ‹לֹא תִּנְאָף› (“not commit-adultery”) —
+m.statute(&quot;FORBID&quot;, &quot;niuf&quot;)
+
+# -------------------------- Exod.20.15 · NO_THEFT --------------------------
+# לֹא תִּגְנֹב
+# &quot;[EN-AID] You shall not steal.&quot;
+m.step(&quot;Exod.20.15&quot;)
+# ‹לֹא תִּגְנֹב› (“not steal”) —
+m.statute(&quot;FORBID&quot;, &quot;geneva&quot;)
+
+# -------------------------- Exod.20.16 · NO_FALSE_WITNESS ------------------
+# לֹא־תַעֲנֶה בְרֵעֲךָ עֵד שָׁקֶר
+# &quot;[EN-AID] You shall not answer against your fellow as a false witness.&quot;
+m.step(&quot;Exod.20.16&quot;)
+# ‹לֹא־תַעֲנֶה בְרֵעֲךָ עֵד שָׁקֶר› (“not eye in-associate-you/your
+# concretely untruth”) —
+m.statute(&quot;FORBID&quot;, &quot;ed_shaqer&quot;)
+
+# -------------------------- Exod.20.17 · NO_COVETING -----------------------
+# לֹא תַחְמֹד בֵּית רֵעֶךָ לֹא־תַחְמֹד אֵשֶׁת רֵעֶךָ וְעַבְדּוֹ וַאֲמָתוֹ
+# וְשׁוֹרוֹ וַחֲמֹרוֹ וְכֹל אֲשֶׁר לְרֵעֶךָ
+# &quot;[EN-AID] You shall not covet your fellow&#x27;s house; you shall not covet
+# your fellow&#x27;s wife, or his servant, or his maid, or his ox, or his donkey,
+# or anything that is your fellow&#x27;s.&quot;
+m.step(&quot;Exod.20.17&quot;)
+# ‹לֹא תַחְמֹד בֵּית רֵעֶךָ› (“not delight-in house associate-you/your”) —
+m.statute(&quot;FORBID&quot;, &quot;chimud&quot;)
+
+# -------------------------- Exod.20.18 · SEEING_THE_VOICES -----------------
+# וְכָל־הָעָם רֹאִים אֶת־הַקּוֹלֹת וְאֶת־הַלַּפִּידִם וְאֵת קוֹל הַשֹּׁפָר
+# וְאֶת־הָהָר עָשֵׁן וַיַּרְא הָעָם וַיָּנֻעוּ וַיַּעַמְדוּ מֵרָחֹק
+# &quot;[EN-AID] And all the people were seeing the voices and the torches, and
+# the voice of the shofar, and the mountain smoking; and the people saw, and
+# they swayed, and stood far off.&quot;
+m.step(&quot;Exod.20.18&quot;)
+# ‹וְכָל־הָעָם רֹאִים אֶת־הַקּוֹלֹת וְאֶת־הַלַּפִּידִם וְאֵת קוֹל הַשֹּׁפָר
+# וְאֶת־הָהָר עָשֵׁן› (“and-all the-people see obj-marker the-voice/sound
+# and-obj-marker the-flambeau and-obj-marker voice/sound the-cornet and-obj-
+# marker the-mountain smoky”) — event: see-obj-marker-the-voice/sound —
+# theme ha-qolot
+m.event(&quot;roim_et_ha_qolot&quot;, themes=[&quot;ha-qolot&quot;])
+
+# -------------------------- Exod.20.19 · SPEAK_YOU_WITH_US -----------------
+# וַיֹּאמְרוּ אֶל־מֹשֶׁה דַּבֵּר־אַתָּה עִמָּנוּ וְנִשְׁמָעָה וְאַל־יְדַבֵּר
+# עִמָּנוּ אֱלֹהִים פֶּן־נָמוּת
+# &quot;[EN-AID] And they said to Moses: Speak you with us, and we will hear; and
+# let God not speak with us, lest we die.&quot;
+m.step(&quot;Exod.20.19&quot;)
+# ‹דַּבֵּר־אַתָּה עִמָּנוּ וְנִשְׁמָעָה› (“speak you with-us/our and-hear”)
+# — the-people speaks a demand — LET: speak-you-imanu
+m.declare(&quot;ha_am&quot;, &quot;LET&quot;,
+          &quot;daber_ata_imanu&quot;)
+
+# -------------------------- Exod.20.20 · FEAR_NOT_THE_TEST -----------------
+# וַיֹּאמֶר מֹשֶׁה אֶל־הָעָם אַל־תִּירָאוּ כִּי לְבַעֲבוּר נַסּוֹת אֶתְכֶם
+# בָּא הָאֱלֹהִים וּבַעֲבוּר תִּהְיֶה יִרְאָתוֹ עַל־פְּנֵיכֶם לְבִלְתִּי
+# תֶחֱטָאוּ
+# &quot;[EN-AID] And Moses said to the people: Fear not, for in order to test you
+# God has come — and in order that His fear be on your faces, that you sin
+# not.&quot;
+m.step(&quot;Exod.20.20&quot;)
+# ‹כִּי לְבַעֲבוּר נַסּוֹת אֶתְכֶם בָּא הָאֱלֹהִים› (“that to-in-crossed
+# test obj-marker-you/your(pl) come/bring the-God”) — fact holds: to-vaavur-
+# test-etkhem
+m.fact(&quot;le_vaavur_nasot_etkhem&quot;)
+
+# -------------------------- Exod.20.21 · INTO_THE_THICK_CLOUD --------------
+# וַיַּעֲמֹד הָעָם מֵרָחֹק וּמֹשֶׁה נִגַּשׁ אֶל־הָעֲרָפֶל אֲשֶׁר־שָׁם
+# הָאֱלֹהִים
+# &quot;[EN-AID] And the people stood far off — and Moses drew near to the thick
+# cloud where God was.&quot;
+m.step(&quot;Exod.20.21&quot;)
+# ‹וּמֹשֶׁה נִגַּשׁ אֶל־הָעֲרָפֶל אֲשֶׁר־שָׁם הָאֱלֹהִים› (“and-Moses be to
+# the-gloom which there the-God”) — demand settled (popped from the queue):
+# speak-you-imanu
+m.result(&quot;daber_ata_imanu&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Exod.20.22 · FROM_THE_HEAVENS ------------------
+# וַיֹּאמֶר יְהוָה אֶל־מֹשֶׁה כֹּה תֹאמַר אֶל־בְּנֵי יִשְׂרָאֵל אַתֶּם
+# רְאִיתֶם כִּי מִן־הַשָּׁמַיִם דִּבַּרְתִּי עִמָּכֶם
+# &quot;[EN-AID] And the LORD said to Moses: So shall you say to the sons of
+# Israel: You have seen that from the heavens I spoke with you.&quot;
+m.step(&quot;Exod.20.22&quot;)
+# ‹אַתֶּם רְאִיתֶם כִּי מִן־הַשָּׁמַיִם דִּבַּרְתִּי עִמָּכֶם› (“you see
+# that from the-heavens speak with-you/your(pl)”) — fact holds: from-the-
+# heavens-speak
+m.fact(&quot;min_ha_shamayim_dibarti&quot;)
+
+# -------------------------- Exod.20.23 · NO_GODS_OF_SILVER -----------------
+# לֹא תַעֲשׂוּן אִתִּי אֱלֹהֵי כֶסֶף וֵאלֹהֵי זָהָב לֹא תַעֲשׂוּ לָכֶם
+# &quot;[EN-AID] You shall not make with Me gods of silver, and gods of gold you
+# shall not make for yourselves.&quot;
+m.step(&quot;Exod.20.23&quot;)
+# ‹לֹא תַעֲשׂוּן אִתִּי אֱלֹהֵי כֶסֶף וֵאלֹהֵי זָהָב› (“not make-ward with-
+# me/my God silver and-God gold”) —
+m.statute(&quot;FORBID&quot;, &quot;elohe_khesef_ve_zahav&quot;)
+
+# -------------------------- Exod.20.24 · AN_ALTAR_OF_EARTH -----------------
+# מִזְבַּח אֲדָמָה תַּעֲשֶׂה־לִּי וְזָבַחְתָּ עָלָיו אֶת־עֹלֹתֶיךָ
+# וְאֶת־שְׁלָמֶיךָ אֶת־צֹאנְךָ וְאֶת־בְּקָרֶךָ בְּכָל־הַמָּקוֹם אֲשֶׁר
+# אַזְכִּיר אֶת־שְׁמִי אָבוֹא אֵלֶיךָ וּבֵרַכְתִּיךָ
+# &quot;[EN-AID] An altar of earth shall you make for Me, and you shall sacrifice
+# on it your burnt-offerings and your peace-offerings, your flock and your
+# herd; in every place where I cause My name to be mentioned, I will come to
+# you and bless you.&quot;
+m.step(&quot;Exod.20.24&quot;)
+# ‹מִזְבַּח אֲדָמָה תַּעֲשֶׂה־לִּי› (“altar ground make to-me/my”) —
+m.statute(&quot;BIND&quot;, &quot;mizbach_adama&quot;)
+
+# -------------------------- Exod.20.25 · NO_HEWN_STONES --------------------
+# וְאִם־מִזְבַּח אֲבָנִים תַּעֲשֶׂה־לִּי לֹא־תִבְנֶה אֶתְהֶן גָּזִית כִּי
+# חַרְבְּךָ הֵנַפְתָּ עָלֶיהָ וַתְּחַלְלֶהָ
+# &quot;[EN-AID] And if an altar of stones you make for Me, you shall not build
+# them hewn; for you have lifted your sword upon it, and profaned it.&quot;
+m.step(&quot;Exod.20.25&quot;)
+# ‹לֹא־תִבְנֶה אֶתְהֶן גָּזִית› (“not build obj-marker-them/their something-
+# cut”) —
+m.statute(&quot;FORBID&quot;, &quot;gazit&quot;)
+
+# -------------------------- Exod.20.26 · NO_STEPS --------------------------
+# וְלֹא־תַעֲלֶה בְמַעֲלֹת עַל־מִזְבְּחִי אֲשֶׁר לֹא־תִגָּלֶה עֶרְוָתְךָ
+# עָלָיו
+# &quot;[EN-AID] And you shall not go up by steps onto My altar — that your
+# nakedness be not uncovered on it.&quot;
+m.step(&quot;Exod.20.26&quot;)
+# ‹וְלֹא־תַעֲלֶה בְמַעֲלֹת עַל־מִזְבְּחִי› (“and-not go-up in-Most-High over
+# altar-me/my”) —
+m.statute(&quot;FORBID&quot;, &quot;maalot&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS[&quot;log&quot;]) == 1
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;va_yedaber_elohim&#x27;, &#x27;statute: BIND(anokhi_YHWH_elohekha)&#x27;, &#x27;statute: FORBID(elohim_acherim)&#x27;, &#x27;lo_taase_lekha_fesel&#x27;, &#x27;el_qana&#x27;, &#x27;ve_ose_chesed_la_alafim&#x27;, &#x27;statute: FORBID(shem_la_shav)&#x27;, &#x27;statute: BIND(zakhor_et_yom_ha_shabat)&#x27;, &#x27;sheshet_yamim_taavod&#x27;, &#x27;shabat_la_YHWH_elohekha&#x27;, &#x27;al_ken_berakh_YHWH&#x27;, &#x27;statute: BIND(kabed_av_va_em)&#x27;, &#x27;statute: FORBID(retzach)&#x27;, &#x27;statute: FORBID(niuf)&#x27;, &#x27;statute: FORBID(geneva)&#x27;, &#x27;statute: FORBID(ed_shaqer)&#x27;, &#x27;statute: FORBID(chimud)&#x27;, &#x27;le_vaavur_nasot_etkhem&#x27;, &#x27;min_ha_shamayim_dibarti&#x27;, &#x27;statute: FORBID(elohe_khesef_ve_zahav)&#x27;, &#x27;statute: BIND(mizbach_adama)&#x27;, &#x27;statute: FORBID(gazit)&#x27;, &#x27;statute: FORBID(maalot)&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 17
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-10 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

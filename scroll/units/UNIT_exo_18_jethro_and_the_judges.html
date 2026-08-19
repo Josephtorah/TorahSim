@@ -1,0 +1,810 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>exo_18_jethro_and_the_judges — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/exo_18_jethro_and_the_judges?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Jethro and the judges (18:1-27) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>exo_18_jethro_and_the_judges</b> · Exodus 18:1-27 · derive logic_derived_v1 · phase FWD-32</div>
+<div class="meta"><a href="../#Exod/18/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">עַתָּ֞ה שְׁמַ֤ע בְּקֹלִי֙ אִיעָ֣צְךָ֔</span> · <i>ata shema be-qoli-y iatz-kha</i> · &#x27;now hear my voice — I will counsel you&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DERIVED 2026-08-10 · FORWARD ERA unit #32 (run FWD-8 block 2; Exod 1-18 continuous behind it). Span: 18:1-27, whole chapter: 27 verses (SNAPSHOT-verified). Oral layer IN-PIPELINE: manifest 13/13 VERIFIED, zero FAILED — see oral_audit_note_en. MACHINE PROFILE. ONE DECLARE, ONE RESULT, ONE EVENT — the lightest command-load since the forward era opened, and deliberately so: the chapter is a HEARING, not a decree. The one card is ADVISORY (18:19 shema-be-qoli — a human counselor files at the prophet; the corpus&#x27;s first advisory declare), self-gated on the divine countersignature (18:23 ve-tzivkha, the command-word unique), and pops at 18:24 on the hear-verb that opened the chapter (18:1 Jethro heard / 18:24 Moses heard — the chapter rings closed ear to ear) with the unqualified compliance-formula (va-yaas kol asher amar, asserted). ONE EVENT: the convert&#x27;s offering (18:12 — the corpus&#x27;s first narrated sacrifice since leaving Egypt; u-zvachim unique, asserted; the elders eat before God). The KNOW-LEDGER takes its first voluntary foreign deposit (18:11 ata yadati — Egypt knew by drowning, Jethro by comparison). REGISTRY 0 (Gershom&#x27;s name is a READ of 2:22&#x27;s write; ELIEZER surfaces as report-class — the corpus learns the second son&#x27;s name here first, no naming-verb, registry deferred to the run-end entity file). MACHINE EVIDENCE asserted at the build: the Torah&#x27;s TWO not-goods (adjacency census: Gen 2:18 Eden&#x27;s alone / 18:17 Jethro&#x27;s alone — both indict aloneness); the kaved-root&#x27;s third station (Pharaoh&#x27;s heart, Moses&#x27; hands, now the caseload — the first heaviness delegation can cure, answered by 18:22 ve-haqel); the lean-rescue trio (ve-yatzilehu Gen 37:21 / va-yatzileni 18:4 / va-yatzilem 18:8 — two of three in-span); the seek-verb&#x27;s pair (18:15 + Rebekah Gen 25:22); yishptu/yishputu — the delegation-clause&#x27;s verb grown a vav between plan (18:22) and practice (18:26); the articles dropped between 18:13 and 18:14 (the He&#x27;s of partnership); Jethro = the-Torah (616). Queue at close: EMPTY in-unit (the standing opens ride). TESTS 0. CARE-POINTS: the advisory card&#x27;s gate (the counsel binds only through God&#x27;s ratification — the pop at 18:24 is Moses adopting, not God commanding; the readings on which clauses waited, named-only); the spec-vs-delivery seam (18:21&#x27;s four qualifications, 18:25&#x27;s one — filed as data); the great-vs-hard re-sort (18:22 plan routes by SIZE, 18:26 practice by DIFFICULTY); Zipporah&#x27;s unnarrated sending (achar shilucheha cites an off-stage event); Eliezer&#x27;s deferred name (report-class, no registry write — entity file at run-end). WATCHLIST ARMS: 19:1-2 (the Sinai arrival — the mount of God becomes THE mount); 24:14 (the elders + Hur hold the camp — the delegation tested); Num 10:29-32 (Hobab asked to stay — the family&#x27;s road-fork); Num 11:14-17 (I cannot alone — the seventy; the kaved-file&#x27;s next station); Deut 1:9-18 (Moses retells this chapter — the retrospective&#x27;s deltas). Outside-Torah names (named-only): 1 Sam 9 (Saul&#x27;s seeking), 2 Sam 24 / 1 Chr 21 (David&#x27;s plague-seeking), 2 Chr 26 (Uzziah), Ps 34:8 (the camping angel), Job 3:6 (the joy-ban), Judg 1:16 (Jethro&#x27;s sons in the land), Ezek 43-44 (the torahs of the house).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-10 (IN-PIPELINE, forward era; manifest logic/oral_audit/manifests/exo_18_jethro_and_the_judges_claims.json 13/13 VERIFIED, zero FAILED; record logic/oral_audit/AUDIT_exo_18_2026-08-10.md). CROWNS (chain-attested + DB-verified). THE DID-GOD PAIR [EX18-01, KB on 18:1]: עשה אלהים (&quot;God did&quot;) adjacency exactly twice (checked): Miqetz&#x27;s terror (&quot;what is this God has done to us,&quot; Gen 42:28) and Jethro&#x27;s good news — &quot;in the language they grieved, in that language came their relief&quot;; what he heard: the sea&#x27;s roar + Amalek&#x27;s war; יתרו = התורה (616 = 616, asserted) — &quot;he came to receive the Torah&quot;; the six names; the 613 from his letters (named). THE THREE LEAN RESCUES [EX18-02, MS on 18:8 with the Ramah]: the rescue-verb lean (no yod) exactly three times in the Torah — ויצלהו (Reuben, Gen 37:21), ויצלני (from Pharaoh&#x27;s sword, 18:4), ויצלם (the nation, 18:8; checked, others asserted) — two of the three in this chapter: brother-of-brother, God-of-a- fugitive, God-of-a-nation on one thinned skeleton. THE CAMPING ANGEL [EX18-03, KB + MS on 18:5]: חנה (&quot;camping&quot;) participle Torah-unique (checked) — Psalm 34&#x27;s twin: &quot;the angel of the LORD camps around His fearers&quot; — Jethro needed no directions: he saw the cloud tied over the tent; the qadma on the guest&#x27;s name. THE ON-ACCOUNT PAIR [EX18-04, MS on 18:8]: אודת with first vav full — the PRINTED MASORAH CONVICTED of corruption (its four-count smuggled in Toledot&#x27;s well; the Menachat Cohen misled): the Ramah + manuscript Masorah: TWO in the Torah (census checked) — Abraham&#x27;s &quot;on account of his SON&quot; (Gen 21:11) and &quot;on account of ISRAEL&quot;: both full-vav on-accounts on account of a son (4:22&#x27;s My-firstborn). THE UNIQUE JOY [EX18-05, KB + MS on 18:9]: ויחד (&quot;and he rejoiced&quot;) Torah-unique (checked; the Masorah&#x27;s one Scripture-twin: Job&#x27;s &quot;let no joy enter it&quot;); the two faces — heart made ONE / flesh gone prickles; the dalet&#x27;s stroke on a silent rest (the Mikhlol); and the expected-but-not-written: הצילו (&quot;He delivered HIM&quot;) where one supposes &quot;them&quot; — the nation one body. THE POINTED BLESSING [EX18-06, MS on 18:10]: ברוך יהוה (&quot;blessed be the LORD&quot;) — the Name under the little-upright pause (mark checked): the first human blessing of the LORD since Melchizedek — both from foreign priests. THE CREATION-LETTERS [EX18-07, KB on 18:13]: the court-day with BOTH articles — הבקר (&quot;THE morning&quot;)... הערב (&quot;THE evening&quot;), checked — where Jethro&#x27;s replay drops them (18:14 bare, asserted) — the two spare He&#x27;s: &quot;the true judge is a partner in the creation, created with He&quot;; the six-hour bench; the morrow (named). THE SEEK-FILE [EX18-08, KB on 18:15-16]: לדרש אלהים (&quot;to seek God&quot;) — the Torah&#x27;s only station (adjacency checked; the Scripture-four: Saul&#x27;s donkeys, David&#x27;s plague, Uzziah&#x27;s war — &quot;for all their needs&quot;); the bare verb&#x27;s Torah-twin REBEKAH (Gen 25:22, asserted); תורתיו (&quot;His torahs,&quot; plural before Sinai) unique (checked) — its two Scripture-twins in Ezekiel&#x27;s Temple. THE HEAVY GUARD-STROKE [EX18-09, MS on 18:18]: the kaf of כי under the guard-stroke (checked in-token); עשהו (&quot;do it&quot;) LEAN — the printed Masorah&#x27;s &quot;none like it and full&quot; ruled AN ERROR (the Ramah: lean); the heavy-root&#x27;s third station (asserted). THE TEN-UTTERANCE WARNING [EX18-10, MS + KB + Lekach Tov on 18:20]: והזהרתה (&quot;and you shall warn&quot;) full with final He — &quot;NONE LIKE IT in the reading&quot; (census checked); the two surplus He&#x27;s (5+5) = the TEN utterances; החקים dageshed (asserted); printed-authority: the intruding relative-word struck. THE TWO COUNSELORS [EX18-11, KB on 18:19/23]: איעצך (&quot;I will counsel you&quot;) exactly twice in the Torah (census checked): JETHRO and BALAAM (Num 24:14) — the courts&#x27; builder and the snare&#x27;s architect; heeded counsel keeps a man his place (Moses vs Zedekiah); וצוך (&quot;and God command you&quot;) unique (checked at the build) — the counsel self-gated; על מקומו — the Job-twin: judge below or be judged above. THE ROSTER&#x27;S LETTERS [EX18-12, MS on 18:21-25]: לקול (&quot;the voice&quot;) FULL (the Ramah: every Torah voice-form full but five — the heeded voice whole; checked in-verse); עשרת (&quot;tens&quot;) lean both times; הגדל lean; מאות full; the one-codex stroke on haters-of-gain (named). THE GROWN VAV [EX18-13, MS + KB on 18:26]: ישפוטו (&quot;they shall judge&quot;) long-spelled, Torah-unique (checked) against 18:22&#x27;s lean ישפטו in the same clause (asserted) — the verb gains its vav where judging turns from plan to practice; the long stress (the Mikhlol); the HARD matter beside the STIFF neck (Deut 31:27) — &quot;Moses judged the stiff-necked.&quot;</div>
+<div class="meta">confidence: structure tested; oral layer verified 13/13</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>FORWARD ERA run 8, block 2 (owner: &quot;lets do 5 more blocks&quot;). Canon continuation: Exod 18:1-27 — Jethro, whole chapter.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Span + source + conventions</td><td>SNAPSHOT prestage: 27 verses, all with etnachta. Volitive census: ONE real push (18:19 the counsel — advisory class, gated at 18:23); 18:20-22&#x27;s instructions fold into the counsel-card as its content; the greeting, the meal, the court-day are narration.</td><td>established</td></tr>
+<tr><td><b>C</b></td><td>Machine structure</td><td>1D/1R/1E — the hearing-chapter: the advisory card (18:19) pops at 18:24 on the chapter&#x27;s own opening verb (heard/ heard) with the unqualified compliance-formula. The convert&#x27;s offering-event (18:12). The know-ledger&#x27;s first voluntary foreign deposit (18:11). REGISTRY 0 — Eliezer arrives report-class (name learned here first, no naming-verb; entity file at run-end). Asserted machine evidence: the Torah&#x27;s two not-goods (Eden/Jethro — both aloneness); the kaved arc completed by ve-haqel; the lean rescue trio; the seek-pair with Rebekah; the vav grown between 18:22 and 18:26; the dropped articles; 616.</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Exod 18 (18 notes) + Kitzur Baal HaTurim on Exod 18 (18 notes). Manifest 13 rows: 13 VERIFIED / 0 FAILED / 0 UNCHECKABLE, first run. The did-God pair; the three lean rescues; the camping angel; the on-account pair (printed Masorah convicted); the unique joy + the sevirin; the pointed blessing; the creation-letters; the seek-file; the heavy guard-stroke; the ten-utterance warning; the two counselors; the roster&#x27;s letters; the grown vav.</td><td>established</td></tr>
+<tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 13/13 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-10 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits. Exod 1-18 continuous.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Ex_18_1 · Exod.18.1 · <span class='expr'>JETHRO_HEARS</span></h3>
+<p><span class="he">וַיִּשְׁמַע יִתְרוֹ כֹהֵן מִדְיָן חֹתֵן מֹשֶׁה אֵת כָּל־אֲשֶׁר עָשָׂה אֱלֹהִים לְמֹשֶׁה וּלְיִשְׂרָאֵל עַמּוֹ כִּי־הוֹצִיא יְהוָה אֶת־יִשְׂרָאֵל מִמִּצְרָיִם</span> · <i>va-yishma yitro khohen midyan choten moshe et kal-asher asa Elohim le-moshe u-le-yisrael am-o ki-hotzi YHWH et-yisrael mi-mitzrayim</i> · And Jethro, priest of Midian, Moses&#x27; father-in-law, heard all that God had done for Moses and for Israel His people — that the LORD had brought Israel out from Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּשְׁמַ֞ע יִתְר֨וֹ כֹהֵ֤ן מִדְיָן֙ חֹתֵ֣ן מֹשֶׁ֔ה אֵת֩ כָּל אֲשֶׁ֨ר עָשָׂ֤ה אֱלֹהִים֙ לְמֹשֶׁ֔ה וּלְיִשְׂרָאֵ֖ל עַמּ֑וֹ</span> · <i>va-yishma yitro khohen midyan choten moshe et kal-asher asa Elohim le-moshe u-le-yisrael am-o</i> · and Jethro, priest of Midian, Moses&#x27; father-in-law, heard all that God had done for Moses and for Israel His people (etnachta on am-o) [VERIFIED: SNAPSHOT Exod.18.1 idx13 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּֽי הוֹצִ֧יא יְהוָ֛ה אֶת יִשְׂרָאֵ֖ל מִמִּצְרָֽיִם</span> · <i>ki-hotzi YHWH et-yisrael mi-mitzrayim</i> · that the LORD had brought Israel out from Egypt (verse-final mi-mitzrayim) [VERIFIED: SNAPSHOT Exod.18.1 idx14-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yishma_yitro, t0)</span><br><span class="gloss">= HOLDS(and-yishma-yitro, t0)</span><br>THE HEARING [EX18-01 CROWN]. va-YISHMA yitro khohen midyan choten moshe — &#x27;and JETHRO HEARD&#x27;: the chapter opens on the hear-verb it will close on (18:24 — Jethro heard the news; Moses will hear the counsel: the chapter is one ear answering another); WHAT he heard (the readings named): the sea&#x27;s tearing &#x27;roared until all the kings of east and west heard&#x27; — and Amalek&#x27;s war (the two neighboring chapters as the broadcast); et kol-asher ASA ELOHIM le-moshe u-le- yisrael — the did-God pair (VERIFIED): Miqetz&#x27;s &#x27;what is this God has DONE to us&#x27; (the brothers&#x27; terror at the sacks) and Jethro&#x27;s good news — &#x27;in the language they grieved, in that language came their relief&#x27;; and the guest&#x27;s name is its own credential (asserted at the build): YITRO = HA-TORAH, 616 = 616 — &#x27;he came to convert and to receive the Torah&#x27; (the Kitzur&#x27;s further faces named: the six names; the 613 assembled from his letters); ki HOTZI YHWH et-yisrael mi-mitzrayim — the exodus stated as the headline: the machine notes the verse&#x27;s own theology: the deed credited to ELOHIM for the household, to YHWH for the nation.
+</td><td><span class="he">וַיִּשְׁמַע יִתְרוֹ כֹהֵן מִדְיָן חֹתֵן מֹשֶׁה</span> · <i>va-yishma yitro khohen midyan choten moshe</i><br><span class="gloss">= and-yishma yitro khohen midyan choten Moses</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The hearing; the did-God pair.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_18_2 · Exod.18.2 · <span class='expr'>AFTER_HER_SENDING</span></h3>
+<p><span class="he">וַיִּקַּח יִתְרוֹ חֹתֵן מֹשֶׁה אֶת־צִפֹּרָה אֵשֶׁת מֹשֶׁה אַחַר שִׁלּוּחֶיהָ</span> · <i>va-yiqach yitro choten moshe et-tzipora eshet moshe achar shiluche-ha</i> · And Jethro, Moses&#x27; father-in-law, took Zipporah, Moses&#x27; wife — after her being sent away.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּקַּ֗ח יִתְרוֹ֙ חֹתֵ֣ן מֹשֶׁ֔ה אֶת צִפֹּרָ֖ה אֵ֣שֶׁת מֹשֶׁ֑ה</span> · <i>va-yiqach yitro choten moshe et-tzipora eshet moshe</i> · and Jethro, Moses&#x27; father-in-law, took Zipporah, Moses&#x27; wife (etnachta on moshe) [VERIFIED: SNAPSHOT Exod.18.2 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אַחַ֖ר שִׁלּוּחֶֽיהָ</span> · <i>achar shiluche-ha</i> · after her being sent away (verse-final shiluche-ha) [VERIFIED: SNAPSHOT Exod.18.2 idx8-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(achar_shilucheha, t0)</span><br><span class="gloss">= HOLDS(achar-shilucheha, t0)</span><br>THE RETURN. va-yiqach yitro... et-TZIPORA eshet moshe — Zipporah RE- ENTERS (4:20 took her toward Egypt; 4:24-26&#x27;s blood-bridegroom crisis was her last scene; the corpus never narrated the sending the verse now cites); ACHAR SHILUCHEHA — &#x27;after her being SENT AWAY&#x27;: the send-verb&#x27;s noun on a wife (the readings the Kitzur carries: sent yet still his wife — &#x27;a king may not take back a divorcee,&#x27; so she was never that; the Mekhilta&#x27;s split on when and why, named- only): the machine holds the surface: the deliverer&#x27;s own household arrives at the camp as returned freight, ahead of a chapter about what Moses can and cannot carry alone.
+</td><td><span class="he">אֶת־צִפֹּרָה אֵשֶׁת מֹשֶׁה אַחַר שִׁלּוּחֶיהָ</span> · <i>et-tzipora eshet moshe achar shiluche-ha</i><br><span class="gloss">= tzipora wife-of Moses achar shiluche-the</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The returned household.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_18_3 · Exod.18.3 · <span class='expr'>GERSHOM</span></h3>
+<p><span class="he">וְאֵת שְׁנֵי בָנֶיהָ אֲשֶׁר שֵׁם הָאֶחָד גֵּרְשֹׁם כִּי אָמַר גֵּר הָיִיתִי בְּאֶרֶץ נָכְרִיָּה</span> · <i>ve-et shene vane-ha asher shem ha-echad gershom ki amar ger hayiti be-eretz nakhriya</i> · And her two sons — of whom the name of the one was Gershom, for he said: A stranger have I been in a foreign land.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאֵ֖ת שְׁנֵ֣י בָנֶ֑יהָ</span> · <i>ve-et shene vane-ha</i> · and her two sons (etnachta on vane-ha) [VERIFIED: SNAPSHOT Exod.18.3 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֲשֶׁ֨ר שֵׁ֤ם הָֽאֶחָד֙ גֵּֽרְשֹׁ֔ם כִּ֣י אָמַ֔ר גֵּ֣ר הָיִ֔יתִי בְּאֶ֖רֶץ נָכְרִיָּֽה</span> · <i>asher shem ha-echad gershom ki amar ger hayiti be-eretz nakhriya</i> · of whom the name of the one was Gershom, for he said: a stranger have I been in a foreign land (verse-final nakhriya) [VERIFIED: SNAPSHOT Exod.18.3 idx3-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ger_hayiti_be_eretz_nakhriya, t0)</span><br><span class="gloss">= HOLDS(ger-hayiti-in-earth-nakhriya, t0)</span><br>THE FIRST NAME. asher shem ha-echad GERSHOM ki amar GER HAYITI be- eretz nakhriya — Gershom&#x27;s etymology REPLAYED VERBATIM from 2:22 (the corpus&#x27;s registry holds the write from there; the citation is a read, not a write): &#x27;a STRANGER have I been in a foreign land&#x27; — the machine notes what the replay does at this station: the stranger- name is recited at the tent where the strangerhood ENDS (the family reunited at the mount of God) — and the readings the Kitzur files on the naming-order (the condition with Jethro; the son wired to Jonathan the idol-priest&#x27;s line) stay named-only: the corpus keeps the verse&#x27;s own face.
+</td><td><span class="he">הָאֶחָד גֵּרְשֹׁם כִּי אָמַר גֵּר הָיִיתִי בְּאֶרֶץ נָכְרִיָּה</span> · <i>ha-echad gershom ki amar ger hayiti be-eretz nakhriya</i><br><span class="gloss">= the-echad gershom when amar ger hayiti earth nakhriya</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The first son&#x27;s name recalled.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_18_4 · Exod.18.4 · <span class='expr'>ELIEZER</span></h3>
+<p><span class="he">וְשֵׁם הָאֶחָד אֱלִיעֶזֶר כִּי־אֱלֹהֵי אָבִי בְּעֶזְרִי וַיַּצִּלֵנִי מֵחֶרֶב פַּרְעֹה</span> · <i>ve-shem ha-echad eliezer ki-elohe avi-y be-ezri-y va-yatzile-ni me-cherev paro</i> · And the name of the one was Eliezer — for the God of my father was my help, and delivered me from the sword of Pharaoh.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְשֵׁ֥ם הָאֶחָ֖ד אֱלִיעֶ֑זֶר</span> · <i>ve-shem ha-echad eliezer</i> · and the name of the one was Eliezer (etnachta on eliezer) [VERIFIED: SNAPSHOT Exod.18.4 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּֽי אֱלֹהֵ֤י אָבִי֙ בְּעֶזְרִ֔י וַיַּצִּלֵ֖נִי מֵחֶ֥רֶב פַּרְעֹֽה</span> · <i>ki-elohe avi-y be-ezri-y va-yatzile-ni me-cherev paro</i> · for the God of my father was my help, and delivered me from the sword of Pharaoh (verse-final paro) [VERIFIED: SNAPSHOT Exod.18.4 idx3-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(elohe_avi_be_ezri, t0)</span><br><span class="gloss">= HOLDS(elohe-avi-in-ezri, t0)</span><br>THE SECOND NAME [EX18-02]. ve-shem ha-echad ELIEZER — &#x27;and the name of the one was ELIEZER&#x27;: the corpus LEARNS THIS NAME HERE FIRST (2:22 named only Gershom; 4:20&#x27;s &#x27;sons&#x27; rode unnamed: the registry&#x27;s long-deferred second son surfaces with his etymology eighteen chapters after his birth-window — the report-class, no naming-verb: the write happened off-stage and the text files the receipt); ki elohe AVI be-EZRI — &#x27;the God of MY FATHER was my HELP&#x27;; va-YATZILENI me-CHEREV paro — &#x27;and DELIVERED ME from the SWORD OF PHARAOH&#x27; (2:15&#x27;s flight cited as the etymology): and the rescue-verb is the SECOND OF THE RAMAH&#x27;S THREE LEAN SPELLINGS (VERIFIED census at the build; the trio: Reuben&#x27;s rescue of Joseph, this rescue from the sword, 18:8&#x27;s rescue of the nation — two of the three in this chapter): the boy&#x27;s name carries the family&#x27;s thinnest-written verb.
+</td><td><span class="he">כִּי־אֱלֹהֵי אָבִי בְּעֶזְרִי וַיַּצִּלֵנִי מֵחֶרֶב פַּרְעֹה</span> · <i>ki-elohe avi-y be-ezri-y va-yatzile-ni me-cherev paro</i><br><span class="gloss">= when-elohe avi-y in-ezri-y and-yatzile-ni from-cherev paro</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The second son&#x27;s name — first heard.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_18_5 · Exod.18.5 · <span class='expr'>TO_THE_MOUNT_OF_GOD</span></h3>
+<p><span class="he">וַיָּבֹא יִתְרוֹ חֹתֵן מֹשֶׁה וּבָנָיו וְאִשְׁתּוֹ אֶל־מֹשֶׁה אֶל־הַמִּדְבָּר אֲשֶׁר־הוּא חֹנֶה שָׁם הַר הָאֱלֹהִים</span> · <i>va-yavo yitro choten moshe u-vanay-v ve-isht-o el-moshe el-ha-midbar asher-hu chone sham har ha-Elohim</i> · And Jethro, Moses&#x27; father-in-law, came, and his sons and his wife, to Moses — to the wilderness where he was camping, the mount of God.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיָּבֹ֞א יִתְר֨וֹ חֹתֵ֥ן מֹשֶׁ֛ה וּבָנָ֥יו וְאִשְׁתּ֖וֹ אֶל מֹשֶׁ֑ה</span> · <i>va-yavo yitro choten moshe u-vanay-v ve-isht-o el-moshe</i> · and Jethro, Moses&#x27; father-in-law, came, and his sons and his wife, to Moses (etnachta on moshe) [VERIFIED: SNAPSHOT Exod.18.5 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֶל הַמִּדְבָּ֗ר אֲשֶׁר ה֛וּא חֹנֶ֥ה שָׁ֖ם הַ֥ר הָאֱלֹהִֽים</span> · <i>el-ha-midbar asher-hu chone sham har ha-Elohim</i> · to the wilderness where he was camping, the mount of God (verse-final ha-Elohim) [VERIFIED: SNAPSHOT Exod.18.5 idx8-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(el_har_ha_elohim, t0)</span><br><span class="gloss">= HOLDS(to-har-the-God, t0)</span><br>THE ARRIVAL [EX18-03 CROWN]. va-yavo yitro... el-ha-midbar asher hu CHONE sham — &#x27;to the wilderness where he was CAMPING&#x27;: the camping- participle Torah-unique (VERIFIED) — its Scripture-twin the Psalm&#x27;s angel (&#x27;the angel of the LORD CAMPS around those who fear Him&#x27;): the Kitzur — Jethro NEEDED NO DIRECTIONS: &#x27;he saw the CLOUD TIED over the tent, and by it he knew&#x27; (the address written in sky); HAR HA- ELOHIM — &#x27;the MOUNT OF GOD&#x27;: 3:1&#x27;s address recurs (the bush&#x27;s mountain, 4:27&#x27;s meeting-mountain, now the reunion&#x27;s: the machine notes the magnetism — every homecoming in this stack lands on the same rock, one chapter before Sinai&#x27;s own arrival at 19:2); MS&#x27;s small stroke named: the qadma-accent riding the guest&#x27;s name.
+</td><td><span class="he">אֶל־הַמִּדְבָּר אֲשֶׁר־הוּא חֹנֶה שָׁם הַר הָאֱלֹהִים</span> · <i>el-ha-midbar asher-hu chone sham har ha-Elohim</i><br><span class="gloss">= to-the-midbar which-that chone there har the-God</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The arrival; the camping participle.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_18_6 · Exod.18.6 · <span class='expr'>I_YOUR_FATHER_IN_LAW</span></h3>
+<p><span class="he">וַיֹּאמֶר אֶל־מֹשֶׁה אֲנִי חֹתֶנְךָ יִתְרוֹ בָּא אֵלֶיךָ וְאִשְׁתְּךָ וּשְׁנֵי בָנֶיהָ עִמָּהּ</span> · <i>va-yomer el-moshe ani choten-kha yitro ba ele-kha ve-isht-kha u-shene vane-ha ima-ה</i> · And he said to Moses: I, your father-in-law Jethro, am coming to you — and your wife, and her two sons with her.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר֙ אֶל מֹשֶׁ֔ה אֲנִ֛י חֹתֶנְךָ֥ יִתְר֖וֹ בָּ֣א אֵלֶ֑יךָ</span> · <i>va-yomer el-moshe ani choten-kha yitro ba ele-kha</i> · and he said to Moses: I, your father-in-law Jethro, am coming to you (etnachta on ele-kha) [VERIFIED: SNAPSHOT Exod.18.6 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאִ֨שְׁתְּךָ֔ וּשְׁנֵ֥י בָנֶ֖יהָ עִמָּֽהּ</span> · <i>ve-isht-kha u-shene vane-ha ima-ה</i> · and your wife, and her two sons with her (verse-final ima-ה) [VERIFIED: SNAPSHOT Exod.18.6 idx8-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ani_chotenkha_ba_elekha, t0)</span><br><span class="gloss">= HOLDS(ani-chotenkha-in-the-to-you, t0)</span><br>THE ANNOUNCEMENT. va-yomer el-moshe ANI chotenkha yitro BA elekha — &#x27;I, your father-in-law Jethro, am COMING to you&#x27;: the visitor announces himself by RELATION first, name second (choten runs THIRTEEN times in this chapter&#x27;s frame — the text will barely say Jethro without saying father-in-law: the machine notes the insistence: the chapter that builds Israel&#x27;s courts credits the design to kinship, not office); ve-ISHTEKHA u-shene VANEHA ima-ה — &#x27;and YOUR WIFE, and her two sons WITH HER&#x27;: the family listed as the caravan&#x27;s cargo (the readings on the pronouns — HER sons — named- only).
+</td><td><span class="he">אֲנִי חֹתֶנְךָ יִתְרוֹ בָּא אֵלֶיךָ</span> · <i>ani choten-kha yitro ba ele-kha</i><br><span class="gloss">= ani choten-kha yitro in-the ele-kha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The announcement.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_18_7 · Exod.18.7 · <span class='expr'>THE_GREETING</span></h3>
+<p><span class="he">וַיֵּצֵא מֹשֶׁה לִקְרַאת חֹתְנוֹ וַיִּשְׁתַּחוּ וַיִּשַּׁק־לוֹ וַיִּשְׁאֲלוּ אִישׁ־לְרֵעֵהוּ לְשָׁלוֹם וַיָּבֹאוּ הָאֹהֱלָה</span> · <i>va-yetze moshe li-qerat chotn-o va-yishtachu va-yishaq-l-o va-yishalu ish-le-ree-hu le-shalom va-yavou ha-ohela-ה</i> · And Moses went out to meet his father-in-law, and bowed, and kissed him, and they asked each man his fellow of peace — and they came into the tent.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֵּצֵ֨א מֹשֶׁ֜ה לִקְרַ֣את חֹֽתְנ֗וֹ וַיִּשְׁתַּ֨חוּ֙ וַיִּשַּׁק ל֔וֹ וַיִּשְׁאֲל֥וּ אִישׁ לְרֵעֵ֖הוּ לְשָׁל֑וֹם</span> · <i>va-yetze moshe li-qerat chotn-o va-yishtachu va-yishaq-l-o va-yishalu ish-le-ree-hu le-shalom</i> · and Moses went out to meet his father-in-law, and bowed, and kissed him, and they asked each man his fellow of peace (etnachta on le-shalom) [VERIFIED: SNAPSHOT Exod.18.7 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיָּבֹ֖אוּ הָאֹֽהֱלָה</span> · <i>va-yavou ha-ohela-ה</i> · and they came into the tent (verse-final ha-ohela-ה) [VERIFIED: SNAPSHOT Exod.18.7 idx11-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yishalu_ish_le_reehu_le_shalom, t0)</span><br><span class="gloss">= HOLDS(and-yishalu-man-to-reehu-to-shalom, t0)</span><br>THE GREETING. va-yetze moshe liqrat chotno va-YISHTACHU va-YISHAQ-lo — Moses GOES OUT, BOWS, KISSES (the readings on who bowed to whom — &#x27;a man to his FELLOW&#x27; read to Moses, the king bowing to the guest — named-only); va-yishalu ish le-reehu LE-SHALOM — &#x27;they asked each man his fellow OF PEACE&#x27;: the corpus&#x27;s first narrated mutual shalom- exchange (4:27&#x27;s brother-kiss was one-way; 18:7 is symmetric — the machine files the etiquette-protocol: the chapter of case-law opens with the law of the doorway); va-yavou HA-OHELA — &#x27;into the TENT&#x27; (the readings: the tent = the house of study, named-only).
+</td><td><span class="he">וַיִּשְׁאֲלוּ אִישׁ־לְרֵעֵהוּ לְשָׁלוֹם</span> · <i>va-yishalu ish-le-ree-hu le-shalom</i><br><span class="gloss">= and-yishalu man-to-ree-that to-shalom</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The protocol of welcome.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_18_8 · Exod.18.8 · <span class='expr'>MOSES_RECOUNTS</span></h3>
+<p><span class="he">וַיְסַפֵּר מֹשֶׁה לְחֹתְנוֹ אֵת כָּל־אֲשֶׁר עָשָׂה יְהוָה לְפַרְעֹה וּלְמִצְרַיִם עַל אוֹדֹת יִשְׂרָאֵל אֵת כָּל־הַתְּלָאָה אֲשֶׁר מְצָאָתַם בַּדֶּרֶךְ וַיַּצִּלֵם יְהוָה</span> · <i>va-yesaper moshe le-chotn-o et kal-asher asa YHWH le-faro u-le-mitzrayim al odot yisrael et kal-ha-telaa asher metzaata-m ba-derekh va-yatzile-m YHWH</i> · And Moses recounted to his father-in-law all that the LORD had done to Pharaoh and to Egypt on account of Israel; all the travail that had found them on the way — and the LORD delivered them.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְסַפֵּ֤ר מֹשֶׁה֙ לְחֹ֣תְנ֔וֹ אֵת֩ כָּל אֲשֶׁ֨ר עָשָׂ֤ה יְהוָה֙ לְפַרְעֹ֣ה וּלְמִצְרַ֔יִם עַ֖ל אוֹדֹ֣ת יִשְׂרָאֵ֑ל</span> · <i>va-yesaper moshe le-chotn-o et kal-asher asa YHWH le-faro u-le-mitzrayim al odot yisrael</i> · and Moses recounted to his father-in-law all that the LORD had done to Pharaoh and to Egypt on account of Israel (etnachta on yisrael) [VERIFIED: SNAPSHOT Exod.18.8 idx12 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֵ֤ת כָּל הַתְּלָאָה֙ אֲשֶׁ֣ר מְצָאָ֣תַם בַּדֶּ֔רֶךְ וַיַּצִּלֵ֖ם יְהוָֽה</span> · <i>et kal-ha-telaa asher metzaata-m ba-derekh va-yatzile-m YHWH</i> · all the travail that had found them on the way — and the LORD delivered them (verse-final YHWH) [VERIFIED: SNAPSHOT Exod.18.8 idx13-20]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yesaper_moshe, t0)</span><br><span class="gloss">= HOLDS(and-yesaper-Moses, t0)</span><br>THE TELLING [EX18-02 + EX18-04 CROWNS]. va-YESAPER moshe le-chotno — &#x27;and Moses RECOUNTED to his father-in-law&#x27;: the corpus&#x27;s first PERSONAL DEBRIEF (the deeds so far narrated by the text or sung by the nation; here they are TOLD, one man to one man, as news — the readings: &#x27;to draw his heart near to the Torah,&#x27; named-only); al ODOT yisrael — &#x27;on account of ISRAEL&#x27;: the on-account word with its first vav FULL — MS convicting the PRINTED MASORAH of corruption (the four-count ruled wrong; the Ramah: TWO in the Torah, VERIFIED census): Abraham&#x27;s grief on account of HIS SON and this telling on account of ISRAEL — both full-vav on-accounts on account of a son (4:22&#x27;s My-firstborn); et kol-ha-TELAA — &#x27;all the TRAVAIL on the way&#x27;; va-YATZILEM YHWH — &#x27;and the LORD DELIVERED THEM&#x27;: THE THIRD LEAN RESCUE (VERIFIED: the Ramah&#x27;s roster — Reuben&#x27;s, the sword&#x27;s at 18:4, the nation&#x27;s here; everywhere else the yod stands full): the debrief closes on the family&#x27;s thin verb, now nation-sized.
+</td><td><span class="he">וַיְסַפֵּר מֹשֶׁה לְחֹתְנוֹ</span> · <i>va-yesaper moshe le-chotn-o</i><br><span class="gloss">= and-yesaper Moses to-chotn-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The debrief; the third lean rescue.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_18_9 · Exod.18.9 · <span class='expr'>JETHRO_REJOICES</span></h3>
+<p><span class="he">וַיִּחַדְּ יִתְרוֹ עַל כָּל־הַטּוֹבָה אֲשֶׁר־עָשָׂה יְהוָה לְיִשְׂרָאֵל אֲשֶׁר הִצִּילוֹ מִיַּד מִצְרָיִם</span> · <i>va-yichad yitro al kal-ha-tova asher-asa YHWH le-yisrael asher hitzil-o mi-yad mitzrayim</i> · And Jethro rejoiced over all the good which the LORD had done for Israel — that He had delivered him from the hand of Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּ֣חַדְּ יִתְר֔וֹ עַ֚ל כָּל הַטּוֹבָ֔ה אֲשֶׁר עָשָׂ֥ה יְהוָ֖ה לְיִשְׂרָאֵ֑ל</span> · <i>va-yichad yitro al kal-ha-tova asher-asa YHWH le-yisrael</i> · and Jethro rejoiced over all the good which the LORD had done for Israel (etnachta on le-yisrael) [VERIFIED: SNAPSHOT Exod.18.9 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֲשֶׁ֥ר הִצִּיל֖וֹ מִיַּ֥ד מִצְרָֽיִם</span> · <i>asher hitzil-o mi-yad mitzrayim</i> · that He had delivered him from the hand of Egypt (verse-final mitzrayim) [VERIFIED: SNAPSHOT Exod.18.9 idx9-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yichad_yitro, t0)</span><br><span class="gloss">= HOLDS(and-yichad-yitro, t0)</span><br>THE JOY [EX18-05 CROWN]. va-YICHAD yitro al kol-ha-TOVA — &#x27;and Jethro REJOICED over all the GOOD&#x27;: the rejoicing-verb Torah-unique (VERIFIED; MS&#x27;s Masorah names the one Scripture-twin: Job&#x27;s &#x27;let no JOY enter it&#x27; — the night cursing what Jethro feels); the Kitzur&#x27;s two faces carried whole: &#x27;he made his heart ONE to the One God — and became a Jew&#x27; / &#x27;his flesh became PRICKLES upon prickles over Egypt&#x27;s ruin&#x27; (the convert&#x27;s joy with the convert&#x27;s shudder in one skeleton; the dalet&#x27;s stroke over a silent rest, the Mikhlol — checked at the build); asher HITZILO mi-yad mitzrayim — &#x27;that He delivered HIM&#x27;: the expected-but-not-written station (MS: &#x27;one supposes THEM; the reading is HIM&#x27; — the sevirin class): the machine files the grammar&#x27;s verdict: the delivered nation counted as one body — and the joy-verb spent on it once in the whole Torah.
+</td><td><span class="he">וַיִּחַדְּ יִתְרוֹ</span> · <i>va-yichad yitro</i><br><span class="gloss">= and-yichad yitro</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The unique joy.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_18_10 · Exod.18.10 · <span class='expr'>BLESSED_BE_THE_LORD</span></h3>
+<p><span class="he">וַיֹּאמֶר יִתְרוֹ בָּרוּךְ יְהוָה אֲשֶׁר הִצִּיל אֶתְכֶם מִיַּד מִצְרַיִם וּמִיַּד פַּרְעֹה אֲשֶׁר הִצִּיל אֶת־הָעָם מִתַּחַת יַד־מִצְרָיִם</span> · <i>va-yomer yitro barukh YHWH asher hitzil et-khem mi-yad mitzrayim u-mi-yad paro asher hitzil et-ha-am mi-tachat yad-mitzrayim</i> · And Jethro said: Blessed be the LORD, who delivered you from the hand of Egypt and from the hand of Pharaoh — who delivered the people from under the hand of Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּאמֶר֮ יִתְרוֹ֒ בָּר֣וּךְ יְהוָ֔ה אֲשֶׁ֨ר הִצִּ֥יל אֶתְכֶ֛ם מִיַּ֥ד מִצְרַ֖יִם וּמִיַּ֣ד פַּרְעֹ֑ה</span> · <i>va-yomer yitro barukh YHWH asher hitzil et-khem mi-yad mitzrayim u-mi-yad paro</i> · and Jethro said: blessed be the LORD, who delivered you from the hand of Egypt and from the hand of Pharaoh (etnachta on paro) [VERIFIED: SNAPSHOT Exod.18.10 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֲשֶׁ֤ר הִצִּיל֙ אֶת הָעָ֔ם מִתַּ֖חַת יַד מִצְרָֽיִם</span> · <i>asher hitzil et-ha-am mi-tachat yad-mitzrayim</i> · who delivered the people from under the hand of Egypt (verse-final mitzrayim) [VERIFIED: SNAPSHOT Exod.18.10 idx11-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(barukh_YHWH, t0)</span><br><span class="gloss">= HOLDS(barukh-the-LORD, t0)</span><br>THE BLESSING [EX18-06 CROWN]. BARUKH YHWH — &#x27;BLESSED BE THE LORD&#x27;: the priest of Midian blesses the Name (the Masorah files even its pointing: the Name under the little-upright pause, VERIFIED mark) — the corpus&#x27;s first narrated human blessing of the LORD since MELCHIZEDEK (&#x27;blessed be God Most High, who delivered your foes,&#x27; Gen 14:20 — twice in the canon a FOREIGN PRIEST blesses the Deliverer before Israel&#x27;s own liturgy exists; the readings that sharpen it, named-only); asher HITZIL etkhem... mi-tachat YAD mitzrayim — the delivered-verb&#x27;s third run in two verses, and the HAND-ledger closes: 3:19-20&#x27;s hand-against-hand forecast, 14:31&#x27;s great hand seen — 18:10 files Egypt&#x27;s hand as the thing crawled out from UNDER (the machine notes the blessing&#x27;s anatomy: two hands named and one Name blessing over both).
+</td><td><span class="he">בָּרוּךְ יְהוָה אֲשֶׁר הִצִּיל אֶתְכֶם מִיַּד מִצְרַיִם וּמִיַּד פַּרְעֹה</span> · <i>barukh YHWH asher hitzil et-khem mi-yad mitzrayim u-mi-yad paro</i><br><span class="gloss">= barukh the-LORD which hitzil khem from-yad mitzrayim and-from-yad paro</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The doxology.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_18_11 · Exod.18.11 · <span class='expr'>NOW_I_KNOW</span></h3>
+<p><span class="he">עַתָּה יָדַעְתִּי כִּי־גָדוֹל יְהוָה מִכָּל־הָאֱלֹהִים כִּי בַדָּבָר אֲשֶׁר זָדוּ עֲלֵיהֶם</span> · <i>ata yadati ki-gadol YHWH mi-kal-ha-Elohim ki va-davar asher zadu ale-hem</i> · Now I know that the LORD is greater than all the gods — for in the thing in which they dealt proudly, against them.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">עַתָּ֣ה יָדַ֔עְתִּי כִּֽי גָד֥וֹל יְהוָ֖ה מִכָּל הָאֱלֹהִ֑ים</span> · <i>ata yadati ki-gadol YHWH mi-kal-ha-Elohim</i> · now I know that the LORD is greater than all the gods (etnachta on ha-Elohim) [VERIFIED: SNAPSHOT Exod.18.11 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּ֣י בַדָּבָ֔ר אֲשֶׁ֥ר זָד֖וּ עֲלֵיהֶֽם</span> · <i>ki va-davar asher zadu ale-hem</i> · for in the thing in which they dealt proudly, against them (verse-final ale-hem) [VERIFIED: SNAPSHOT Exod.18.11 idx7-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ata_yadati, t0)</span><br><span class="gloss">= HOLDS(ata-yadati, t0)</span><br>THE CREED. ATA YADATI ki-GADOL YHWH mi-kol-ha-ELOHIM — &#x27;NOW I KNOW that the LORD is greater than all the gods&#x27;: THE KNOW-LEDGER&#x27;S FIRST VOLUNTARY FOREIGN DEPOSIT (Egypt was made to know by drowning, 14:4/18; Israel promised knowing by supper, 16:12; Jethro walks in and FILES HIS OWN — the priest of another altar auditing all altars: the readings on &#x27;he had tried every idolatry,&#x27; named-only); ki VA- DAVAR asher ZADU alehem — &#x27;for in the THING in which they DEALT PROUDLY — against them&#x27;: the measure-for-measure clause (the readings: the water they schemed with became the water over them — the pot cooked in its own plot; named-only): the machine books the entry as the ledger&#x27;s cleanest line: knowledge reached by comparison shopping, sealed by symmetry.
+</td><td><span class="he">עַתָּה יָדַעְתִּי כִּי־גָדוֹל יְהוָה מִכָּל־הָאֱלֹהִים</span> · <i>ata yadati ki-gadol YHWH mi-kal-ha-Elohim</i><br><span class="gloss">= ata yadati when-gadol the-LORD from-kal-the-God</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The know-ledger&#x27;s foreign account.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_18_12 · Exod.18.12 · <span class='expr'>THE_MEAL_BEFORE_GOD</span></h3>
+<p><span class="he">וַיִּקַּח יִתְרוֹ חֹתֵן מֹשֶׁה עֹלָה וּזְבָחִים לֵאלֹהִים וַיָּבֹא אַהֲרֹן וְכֹל זִקְנֵי יִשְׂרָאֵל לֶאֱכָל־לֶחֶם עִם־חֹתֵן מֹשֶׁה לִפְנֵי הָאֱלֹהִים</span> · <i>va-yiqach yitro choten moshe ola u-zevachim le-Elohim va-yavo aharon ve-khol ziqne yisrael le-ekhal-lechem im-choten moshe li-fene ha-Elohim</i> · And Jethro, Moses&#x27; father-in-law, took a burnt-offering and sacrifices for God; and Aaron came, and all the elders of Israel, to eat bread with Moses&#x27; father-in-law before God.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּקַּ֞ח יִתְר֨וֹ חֹתֵ֥ן מֹשֶׁ֛ה עֹלָ֥ה וּזְבָחִ֖ים לֵֽאלֹהִ֑ים</span> · <i>va-yiqach yitro choten moshe ola u-zevachim le-Elohim</i> · and Jethro, Moses&#x27; father-in-law, took a burnt-offering and sacrifices for God (etnachta on le-Elohim) [VERIFIED: SNAPSHOT Exod.18.12 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיָּבֹ֨א אַהֲרֹ֜ן וְכֹ֣ל זִקְנֵ֣י יִשְׂרָאֵ֗ל לֶאֱכָל לֶ֛חֶם עִם חֹתֵ֥ן מֹשֶׁ֖ה לִפְנֵ֥י הָאֱלֹהִֽים</span> · <i>va-yavo aharon ve-khol ziqne yisrael le-ekhal-lechem im-choten moshe li-fene ha-Elohim</i> · and Aaron came, and all the elders of Israel, to eat bread with Moses&#x27; father-in-law before God (verse-final ha-Elohim) [VERIFIED: SNAPSHOT Exod.18.12 idx7-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">zevach_yitro(e1); Agent(e1, yitro); Theme(e1, ola_u_zvachim)</span><br><span class="gloss">= zevach-yitro(e1); Agent(e1, yitro); Theme(e1, ola-and-zvachim)</span><br>THE OFFERING. va-yiqach yitro... OLA u-ZVACHIM le-ELOHIM — &#x27;a BURNT- OFFERING and SACRIFICES for God&#x27;: THE EVENT — the corpus&#x27;s first narrated sacrifice since Egypt was left (the altar-file&#x27;s Exodus opener is a CONVERT&#x27;S: the and-sacrifices form Torah-unique, asserted at the build), brought by the priest of Midian the verse before Israel&#x27;s own law arrives; va-yavo AHARON ve-khol ZIQNE yisrael le-ekhol-LECHEM im-choten moshe LIFNE HA-ELOHIM — &#x27;to eat BREAD... BEFORE GOD&#x27;: the elders&#x27; table set at the Presence (the readings: &#x27;whoever enjoys a meal at which scholars sit enjoys the radiance&#x27; — and the missing host: where is MOSES? standing and serving, the tradition answers — named-only): the machine files the scene: Israel&#x27;s first interfaith state dinner, catered by the guest, addressed to the Host.
+</td><td><span class="he">וַיִּקַּח יִתְרוֹ חֹתֵן מֹשֶׁה עֹלָה וּזְבָחִים לֵאלֹהִים</span> · <i>va-yiqach yitro choten moshe ola u-zevachim le-Elohim</i><br><span class="gloss">= and-yiqach yitro choten Moses ola and-zevachim to-God</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The event; the convert&#x27;s table.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_18_13 · Exod.18.13 · <span class='expr'>THE_COURT_DAY</span></h3>
+<p><span class="he">וַיְהִי מִמָּחֳרָת וַיֵּשֶׁב מֹשֶׁה לִשְׁפֹּט אֶת־הָעָם וַיַּעֲמֹד הָעָם עַל־מֹשֶׁה מִן־הַבֹּקֶר עַד־הָעָרֶב</span> · <i>va-yehi mi-machorat va-yeshev moshe li-shepot et-ha-am va-yaamod ha-am al-moshe min-ha-boqer ad-ha-arev</i> · And it was on the morrow, that Moses sat to judge the people; and the people stood over Moses from the morning until the evening.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִי֙ מִֽמָּחֳרָ֔ת וַיֵּ֥שֶׁב מֹשֶׁ֖ה לִשְׁפֹּ֣ט אֶת הָעָ֑ם</span> · <i>va-yehi mi-machorat va-yeshev moshe li-shepot et-ha-am</i> · and it was on the morrow, that Moses sat to judge the people (etnachta on ha-am) [VERIFIED: SNAPSHOT Exod.18.13 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּעֲמֹ֤ד הָעָם֙ עַל מֹשֶׁ֔ה מִן הַבֹּ֖קֶר עַד הָעָֽרֶב</span> · <i>va-yaamod ha-am al-moshe min-ha-boqer ad-ha-arev</i> · and the people stood over Moses from the morning until the evening (verse-final ha-arev) [VERIFIED: SNAPSHOT Exod.18.13 idx7-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yeshev_moshe_lishpot, t0)</span><br><span class="gloss">= HOLDS(and-yeshev-Moses-lishpot, t0)</span><br>THE COURT [EX18-07 CROWN]. va-yehi MI-MACHORAT — &#x27;on the MORROW&#x27; (the Kitzur&#x27;s with-the-words count to &#x27;the morrow of the Day of Atonement&#x27; named as the tradition&#x27;s device — the docket read as Moses down from the mount); va-YESHEV moshe LISHPOT et-ha-am — Moses SITS TO JUDGE (the judge-verb opens its chapter-long run); va-yaamod ha-am al-moshe min-HA-BOQER ad-HA-AREV — &#x27;from THE morning until THE evening&#x27;: the narration spends BOTH ARTICLES on the court-day — and Jethro&#x27;s replay one verse down DROPS THEM (bare boqer, bare arev — VERIFIED both at the build): the Kitzur counts the two spare letters: He and He — &#x27;the judge who judges truly is made a PARTNER to the Holy One in the work of creation, created with He&#x27; (the narrator grants the creation-letters; the complaint strips them); the six-hour bench-rule named (ad, not ve-ad): the machine files the picture the verse takes: one seated man, a nation on its feet, and a day measured at both ends.
+</td><td><span class="he">וַיַּעֲמֹד הָעָם עַל־מֹשֶׁה מִן־הַבֹּקֶר עַד־הָעָרֶב</span> · <i>va-yaamod ha-am al-moshe min-ha-boqer ad-ha-arev</i><br><span class="gloss">= and-yaamod the-am upon-Moses from-the-morning until-the-arev</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The bottleneck pictured.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_18_14 · Exod.18.14 · <span class='expr'>WHY_ALONE</span></h3>
+<p><span class="he">וַיַּרְא חֹתֵן מֹשֶׁה אֵת כָּל־אֲשֶׁר־הוּא עֹשֶׂה לָעָם וַיֹּאמֶר מָה־הַדָּבָר הַזֶּה אֲשֶׁר אַתָּה עֹשֶׂה לָעָם מַדּוּעַ אַתָּה יוֹשֵׁב לְבַדֶּךָ וְכָל־הָעָם נִצָּב עָלֶיךָ מִן־בֹּקֶר עַד־עָרֶב</span> · <i>va-yar choten moshe et kal-asher-hu ose la-am va-yomer ma-ha-davar ha-ze asher ata ose la-am madua ata yoshev le-vade-kha ve-khal-ha-am nitzav ale-kha min-boqer ad-arev</i> · And Moses&#x27; father-in-law saw all that he was doing for the people — and he said: What is this thing that you are doing for the people? Why do you sit alone, and all the people stand over you from morning until evening?</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּרְא֙ חֹתֵ֣ן מֹשֶׁ֔ה אֵ֛ת כָּל אֲשֶׁר ה֥וּא עֹשֶׂ֖ה לָעָ֑ם</span> · <i>va-yar choten moshe et kal-asher-hu ose la-am</i> · and Moses&#x27; father-in-law saw all that he was doing for the people (etnachta on la-am) [VERIFIED: SNAPSHOT Exod.18.14 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֹּ֗אמֶר מָֽה הַדָּבָ֤ר הַזֶּה֙ אֲשֶׁ֨ר אַתָּ֤ה עֹשֶׂה֙ לָעָ֔ם מַדּ֗וּעַ אַתָּ֤ה יוֹשֵׁב֙ לְבַדֶּ֔ךָ וְכָל הָעָ֛ם נִצָּ֥ב עָלֶ֖יךָ מִן בֹּ֥קֶר עַד עָֽרֶב</span> · <i>va-yomer ma-ha-davar ha-ze asher ata ose la-am madua ata yoshev le-vade-kha ve-khal-ha-am nitzav ale-kha min-boqer ad-arev</i> · and he said: what is this thing that you are doing for the people? why do you sit alone, and all the people stand over you from morning until evening? (verse-final arev) [VERIFIED: SNAPSHOT Exod.18.14 idx9-28]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(madua_ata_yoshev_levadekha, t0)</span><br><span class="gloss">= HOLDS(madua-ata-yoshev-levadekha, t0)</span><br>THE QUESTION. va-YAR choten moshe — the father-in-law SEES (the chapter&#x27;s verbs: he heard, he came, now he WATCHES — the corpus&#x27;s first process-audit); MA-ha-davar ha-ze asher ATA OSE la-am — &#x27;WHAT is this thing that YOU are doing for the people&#x27;; MADUA ata yoshev LEVADEKHA — &#x27;WHY do you sit ALONE&#x27;: the alone-word lands (the machine arms it: 18:18 will answer it with the Torah&#x27;s second not- good — Eden&#x27;s pair); min-BOQER ad-AREV — the same day, STRIPPED of its articles (the He&#x27;s of partnership are the narrator&#x27;s to give, not the visitor&#x27;s — VERIFIED at the build): the outsider sees the hours; the text alone sees the creation-letters in them.
+</td><td><span class="he">מַדּוּעַ אַתָּה יוֹשֵׁב לְבַדֶּךָ</span> · <i>madua ata yoshev le-vade-kha</i><br><span class="gloss">= madua ata yoshev to-vade-kha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The consultant&#x27;s question.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_18_15 · Exod.18.15 · <span class='expr'>TO_SEEK_GOD</span></h3>
+<p><span class="he">וַיֹּאמֶר מֹשֶׁה לְחֹתְנוֹ כִּי־יָבֹא אֵלַי הָעָם לִדְרֹשׁ אֱלֹהִים</span> · <i>va-yomer moshe le-chotn-o ki-yavo el-y ha-am li-derosh Elohim</i> · And Moses said to his father-in-law — because the people come to me to seek God.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֥אמֶר מֹשֶׁ֖ה לְחֹתְנ֑וֹ</span> · <i>va-yomer moshe le-chotn-o</i> · and Moses said to his father-in-law (etnachta on le-chotn-o) [VERIFIED: SNAPSHOT Exod.18.15 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּֽי יָבֹ֥א אֵלַ֛י הָעָ֖ם לִדְרֹ֥שׁ אֱלֹהִֽים</span> · <i>ki-yavo el-y ha-am li-derosh Elohim</i> · because the people come to me to seek God (verse-final Elohim) [VERIFIED: SNAPSHOT Exod.18.15 idx3-8]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lidrosh_elohim, t0)</span><br><span class="gloss">= HOLDS(lidrosh-God, t0)</span><br>THE ANSWER [EX18-08 CROWN]. ki-yavo elai ha-am LIDROSH ELOHIM — &#x27;because the people come to me TO SEEK GOD&#x27;: the phrase&#x27;s only Torah station (VERIFIED adjacency; the Kitzur&#x27;s Scripture-four: Saul over the donkeys, David over the plague, Uzziah in the war — &#x27;for ALL their needs they came to seek God&#x27;: the lost, the sick, the besieged); and the bare seek-verb&#x27;s Torah-twin is REBEKAH (asserted at the build: &#x27;and she went TO SEEK the LORD,&#x27; Gen 25:22): the corpus&#x27;s first seeker carried a war in her body; the nation brings its questions to a tent — the machine notes what Moses claims: not that he judges, but that THEY SEEK: the docket described from the plaintiff&#x27;s side.
+</td><td><span class="he">כִּי־יָבֹא אֵלַי הָעָם לִדְרֹשׁ אֱלֹהִים</span> · <i>ki-yavo el-y ha-am li-derosh Elohim</i><br><span class="gloss">= when-yavo to-y the-am to-me-derosh God</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The docket named.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_18_16 · Exod.18.16 · <span class='expr'>STATUTES_AND_TORAHS</span></h3>
+<p><span class="he">כִּי־יִהְיֶה לָהֶם דָּבָר בָּא אֵלַי וְשָׁפַטְתִּי בֵּין אִישׁ וּבֵין רֵעֵהוּ וְהוֹדַעְתִּי אֶת־חֻקֵּי הָאֱלֹהִים וְאֶת־תּוֹרֹתָיו</span> · <i>ki-yihye la-hem davar ba el-y ve-shafatti ben ish u-ven ree-hu ve-hodati et-chuqe ha-Elohim ve-et-torotay-v</i> · When they have a matter, it comes to me, and I judge between a man and his fellow — and I make known the statutes of God, and His torahs.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">כִּֽי יִהְיֶ֨ה לָהֶ֤ם דָּבָר֙ בָּ֣א אֵלַ֔י וְשָׁ֣פַטְתִּ֔י בֵּ֥ין אִ֖ישׁ וּבֵ֣ין רֵעֵ֑הוּ</span> · <i>ki-yihye la-hem davar ba el-y ve-shafatti ben ish u-ven ree-hu</i> · when they have a matter, it comes to me, and I judge between a man and his fellow (etnachta on ree-hu) [VERIFIED: SNAPSHOT Exod.18.16 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהוֹדַעְתִּ֛י אֶת חֻקֵּ֥י הָאֱלֹהִ֖ים וְאֶת תּוֹרֹתָֽיו</span> · <i>ve-hodati et-chuqe ha-Elohim ve-et-torotay-v</i> · and I make known the statutes of God, and His torahs (verse-final torotay-v) [VERIFIED: SNAPSHOT Exod.18.16 idx11-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_hodati_et_chuqe_ha_elohim, t0)</span><br><span class="gloss">= HOLDS(and-hodati-chuqe-the-God, t0)</span><br>THE DOCKET [EX18-08]. ki-yihye lahem DAVAR ba elai — &#x27;when they have a MATTER, it comes to me&#x27;; ve-SHAFATTI ben ish u-ven reehu — &#x27;and I JUDGE between a man and his fellow&#x27; (the judge-verb&#x27;s second station of the chapter&#x27;s run); ve-HODATI et-CHUQE ha-elohim ve-et-TOROTAV — &#x27;and I make known the statutes of God and HIS TORAHS&#x27;: the word Torah-unique in this plural (VERIFIED) — the Kitzur: its two Scripture-twins stand in EZEKIEL&#x27;S TEMPLE-vision (&#x27;a hint of the building of the Sanctuary&#x27;) — the machine files the astonishment plainly: TORAHS, plural, cited as existing case-law BEFORE SINAI (the readings on what law Moses taught at Marah&#x27;s statute-station, 15:25, named-only): the docket already runs on a library the mountain has not yet published.
+</td><td><span class="he">וְהוֹדַעְתִּי אֶת־חֻקֵּי הָאֱלֹהִים וְאֶת־תּוֹרֹתָיו</span> · <i>ve-hodati et-chuqe ha-Elohim ve-et-torotay-v</i><br><span class="gloss">= and-hodati chuqe the-God and-torotay-v</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The plural law before Sinai.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_18_17 · Exod.18.17 · <span class='expr'>NOT_GOOD</span></h3>
+<p><span class="he">וַיֹּאמֶר חֹתֵן מֹשֶׁה אֵלָיו לֹא־טוֹב הַדָּבָר אֲשֶׁר אַתָּה עֹשֶׂה</span> · <i>va-yomer choten moshe elay-v lo-tov ha-davar asher ata ose</i> · And Moses&#x27; father-in-law said to him: Not good is the thing that you are doing.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֛אמֶר חֹתֵ֥ן מֹשֶׁ֖ה אֵלָ֑יו</span> · <i>va-yomer choten moshe elay-v</i> · and Moses&#x27; father-in-law said to him (etnachta on elay-v) [VERIFIED: SNAPSHOT Exod.18.17 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לֹא טוֹב֙ הַדָּבָ֔ר אֲשֶׁ֥ר אַתָּ֖ה עֹשֶֽׂה</span> · <i>lo-tov ha-davar asher ata ose</i> · not good is the thing that you are doing (verse-final ose) [VERIFIED: SNAPSHOT Exod.18.17 idx4-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lo_tov_ha_davar, t0)</span><br><span class="gloss">= HOLDS(not-good-the-davar, t0)</span><br>THE VERDICT. LO-TOV ha-davar asher ata ose — &#x27;NOT GOOD is the thing that you are doing&#x27;: the corpus&#x27;s SECOND not-good (asserted at the build: the adjacency stands exactly TWICE in the Torah — EDEN&#x27;S &#x27;not good the man&#x27;s being ALONE&#x27; (Gen 2:18) and here — and both indict the same condition: 18:14&#x27;s LEVADEKHA, you sit ALONE, answered by 2:18&#x27;s LEVADO): the machine files the frame-signature: the last time the text said not-good, it built the man a partner; Jethro is about to prescribe seventy-eight thousand of them (the readings on the audacity — a Midianite priest grading the prophet&#x27;s workflow, and the Torah printing the grade — named-only); MS&#x27;s stroke-file on the verse named: the lengthener on asher, the low-pause on ata.
+</td><td><span class="he">לֹא־טוֹב הַדָּבָר אֲשֶׁר אַתָּה עֹשֶׂה</span> · <i>lo-tov ha-davar asher ata ose</i><br><span class="gloss">= not-good the-davar which ata ose</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The Torah&#x27;s second not-good.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_18_18 · Exod.18.18 · <span class='expr'>YOU_WILL_WILT</span></h3>
+<p><span class="he">נָבֹל תִּבֹּל גַּם־אַתָּה גַּם־הָעָם הַזֶּה אֲשֶׁר עִמָּךְ כִּי־כָבֵד מִמְּךָ הַדָּבָר לֹא־תוּכַל עֲשֹׂהוּ לְבַדֶּךָ</span> · <i>navol tibol gam-ata gam-ha-am ha-ze asher ima-khe ki-khaved mim-kha ha-davar lo-tukhal aso-hu le-vade-kha</i> · You will surely wilt — both you and this people that is with you; for the thing is too heavy for you — you cannot do it alone.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">נָבֹ֣ל תִּבֹּ֔ל גַּם אַתָּ֕ה גַּם הָעָ֥ם הַזֶּ֖ה אֲשֶׁ֣ר עִמָּ֑ךְ</span> · <i>navol tibol gam-ata gam-ha-am ha-ze asher ima-khe</i> · you will surely wilt — both you and this people that is with you (etnachta on ima-khe) [VERIFIED: SNAPSHOT Exod.18.18 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּֽי כָבֵ֤ד מִמְּךָ֙ הַדָּבָ֔ר לֹא תוּכַ֥ל עֲשֹׂ֖הוּ לְבַדֶּֽךָ</span> · <i>ki-khaved mim-kha ha-davar lo-tukhal aso-hu le-vade-kha</i> · for the thing is too heavy for you; you cannot do it alone (verse-final le-vade-kha) [VERIFIED: SNAPSHOT Exod.18.18 idx9-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(navol_tibol, t0)</span><br><span class="gloss">= HOLDS(navol-tibol, t0)</span><br>THE DIAGNOSIS [EX18-09 CROWN]. NAVOL TIBOL — &#x27;you will surely WILT&#x27; (the doubled leaf-wither verb: burnout as botany); gam-ATA gam-ha-AM — &#x27;both YOU and THIS PEOPLE&#x27; (the queue damages both its ends); ki- KHAVED mimkha ha-davar — &#x27;for the thing is TOO HEAVY for you&#x27;: the kaf under the guard-stroke (VERIFIED in-token) — and the machine files the root&#x27;s arc (asserted): the heavy HEART (Pharaoh, nine plagues), the heavy HANDS (17:12), now the heavy CASELOAD — the first heaviness in the file that DELEGATION can cure; lo-tukhal ASOHU levadekha — &#x27;you cannot DO IT alone&#x27;: the do-word written LEAN (the printed Masorah&#x27;s &#x27;none like it and full&#x27; ruled AN ERROR — most copies and the Ramah: lean, VERIFIED skeleton): the printed- authority file lands on the very word Jethro says cannot be done single-handed.
+</td><td><span class="he">כִּי־כָבֵד מִמְּךָ הַדָּבָר לֹא־תוּכַל עֲשֹׂהוּ לְבַדֶּךָ</span> · <i>ki-khaved mim-kha ha-davar lo-tukhal aso-hu le-vade-kha</i><br><span class="gloss">= when-khaved mim-kha the-davar not-tukhal aso-that to-vade-kha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The diagnosis; the heavy-root&#x27;s third station.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_18_19 · Exod.18.19 · <span class='expr'>HEAR_MY_VOICE</span></h3>
+<p><span class="he">עַתָּה שְׁמַע בְּקֹלִי אִיעָצְךָ וִיהִי אֱלֹהִים עִמָּךְ הֱיֵה אַתָּה לָעָם מוּל הָאֱלֹהִים וְהֵבֵאתָ אַתָּה אֶת־הַדְּבָרִים אֶל־הָאֱלֹהִים</span> · <i>ata shema be-qoli-y iatz-kha vi-yhi Elohim ima-khe heye ata la-am mul ha-Elohim ve-heveta ata et-ha-devarim el-ha-Elohim</i> · Now hear my voice — I will counsel you, and God be with you; be you for the people toward God, and bring you the matters to God.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">עַתָּ֞ה שְׁמַ֤ע בְּקֹלִי֙ אִיעָ֣צְךָ֔ וִיהִ֥י אֱלֹהִ֖ים עִמָּ֑ךְ</span> · <i>ata shema be-qoli-y iatz-kha vi-yhi Elohim ima-khe</i> · now hear my voice — I will counsel you, and God be with you (etnachta on ima-khe) [VERIFIED: SNAPSHOT Exod.18.19 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">הֱיֵ֧ה אַתָּ֣ה לָעָ֗ם מ֚וּל הָֽאֱלֹהִ֔ים וְהֵבֵאתָ֥ אַתָּ֛ה אֶת הַדְּבָרִ֖ים אֶל הָאֱלֹהִֽים</span> · <i>heye ata la-am mul ha-Elohim ve-heveta ata et-ha-devarim el-ha-Elohim</i> · be you for the people toward God, and bring you the matters to God (verse-final ha-Elohim) [VERIFIED: SNAPSHOT Exod.18.19 idx7-17]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(yitro, LET(shema_be_qoli_iatzkha))</span><br><span class="gloss">= DECLARE(yitro, LET(hear-in-qoli-iatzkha))</span><br>THE COUNSEL [EX18-11 CROWN]. ata SHEMA be-QOLI — &#x27;now HEAR MY VOICE&#x27;: the card pushed (a human counselor files a card at the prophet — the corpus&#x27;s first ADVISORY declare: not a command, an offer with a blessing riding it: vi-YHI ELOHIM IMAKH, &#x27;and God be with you&#x27;); IATZKHA — &#x27;I will COUNSEL you&#x27;: the counsel-verb&#x27;s Torah-census exactly TWO (VERIFIED): JETHRO here and BALAAM (Num 24:14, &#x27;come, I will counsel you&#x27;) — the corpus&#x27;s two outside counselors under one verb, the builder of Israel&#x27;s courts and the architect of its snare (the Kitzur&#x27;s doctrine: Moses HEEDED and &#x27;shall come to his place in peace&#x27;; Zedekiah refused Jeremiah&#x27;s and lost his place — counsel heard keeps a man his place); HEYE ATA la- am MUL ha-elohim — &#x27;BE YOU for the people TOWARD God&#x27;: the job re- scoped upward (the interface retained, the queue re-routed); ve- heveta ata et-ha-devarim el-ha-elohim — the hard channel kept open to the top.
+</td><td><span class="he">עַתָּה שְׁמַע בְּקֹלִי אִיעָצְךָ וִיהִי אֱלֹהִים עִמָּךְ</span> · <i>ata shema be-qoli-y iatz-kha vi-yhi Elohim ima-khe</i><br><span class="gloss">= ata hear in-qoli-y iatz-kha vi-yhi God ima-khe</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The counsel card pushed.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_18_20 · Exod.18.20 · <span class='expr'>WARN_AND_TEACH</span></h3>
+<p><span class="he">וְהִזְהַרְתָּה אֶתְהֶם אֶת־הַחֻקִּים וְאֶת־הַתּוֹרֹת וְהוֹדַעְתָּ לָהֶם אֶת־הַדֶּרֶךְ יֵלְכוּ בָהּ וְאֶת־הַמַּעֲשֶׂה אֲשֶׁר יַעֲשׂוּן</span> · <i>ve-hizharta et-hem et-ha-chuqim ve-et-ha-torot ve-hodata la-hem et-ha-derekh yelkhu va-ה ve-et-ha-maase asher yaasu-n</i> · And you shall warn them of the statutes and the torahs — and make known to them the way they shall walk in, and the deed they shall do.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהִזְהַרְתָּ֣ה אֶתְהֶ֔ם אֶת הַחֻקִּ֖ים וְאֶת הַתּוֹרֹ֑ת</span> · <i>ve-hizharta et-hem et-ha-chuqim ve-et-ha-torot</i> · and you shall warn them of the statutes and the torahs (etnachta on ha-torot) [VERIFIED: SNAPSHOT Exod.18.20 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהוֹדַעְתָּ֣ לָהֶ֗ם אֶת הַדֶּ֨רֶךְ֙ יֵ֣לְכוּ בָ֔הּ וְאֶת הַֽמַּעֲשֶׂ֖ה אֲשֶׁ֥ר יַעֲשֽׂוּן</span> · <i>ve-hodata la-hem et-ha-derekh yelkhu va-ה ve-et-ha-maase asher yaasu-n</i> · and make known to them the way they shall walk in, and the deed they shall do (verse-final yaasu-n) [VERIFIED: SNAPSHOT Exod.18.20 idx6-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_hizharta_ethem, t0)</span><br><span class="gloss">= HOLDS(and-hizharta-ethem, t0)</span><br>THE TEACHING [EX18-10 CROWN]. VE-HIZHARTA ETHEM et-ha-CHUQIM ve-et- ha-TOROT — &#x27;and you shall WARN THEM of the statutes and the torahs&#x27;: the warn-word written with a FINAL HE — &#x27;and NONE LIKE IT in the reading&#x27; (VERIFIED census-unique; MS) — and the midrash counts the surplus (Lekach Tov, the Kitzur): the He of the warning and the He of the warned — FIVE AND FIVE — &#x27;these are the TEN UTTERANCES&#x27; (the teaching-command carrying Sinai&#x27;s number two chapters early); ha- CHUQIM under the guard-stroke (checked at the build); ve-hodata lahem et-ha-DEREKH yelkhu VAH — &#x27;the WAY they shall walk in&#x27; (printed-authority: the presses&#x27; intruding relative-word struck — MS); ve-et-ha-MAASE asher YAASUN — &#x27;and the DEED they shall do&#x27;: the machine files the curriculum&#x27;s order: statutes, torahs, way, deed — law taught downhill from text to footstep (the readings that hang livelihood, visiting the sick, burial, and beyond-the-line on these four, named-only).
+</td><td><span class="he">וְהִזְהַרְתָּה אֶתְהֶם אֶת־הַחֻקִּים וְאֶת־הַתּוֹרֹת</span> · <i>ve-hizharta et-hem et-ha-chuqim ve-et-ha-torot</i><br><span class="gloss">= and-hizharta hem the-chuqim and-the-torot</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The unique warn-word.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_18_21 · Exod.18.21 · <span class='expr'>MEN_OF_WORTH</span></h3>
+<p><span class="he">וְאַתָּה תֶחֱזֶה מִכָּל־הָעָם אַנְשֵׁי־חַיִל יִרְאֵי אֱלֹהִים אַנְשֵׁי אֱמֶת שֹׂנְאֵי בָצַע וְשַׂמְתָּ עֲלֵהֶם שָׂרֵי אֲלָפִים שָׂרֵי מֵאוֹת שָׂרֵי חֲמִשִּׁים וְשָׂרֵי עֲשָׂרֹת</span> · <i>ve-ata techeze mi-kal-ha-am anshe-chayil yire Elohim anshe emet sone vatza ve-samta ale-hem sare alafim sare meot sare chamishim ve-sare asarot</i> · And you shall see out of all the people men of worth, fearers of God, men of truth, haters of gain — and set over them princes of thousands, princes of hundreds, princes of fifties, and princes of tens.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְאַתָּ֣ה תֶחֱזֶ֣ה מִכָּל הָ֠עָם אַנְשֵׁי חַ֜יִל יִרְאֵ֧י אֱלֹהִ֛ים אַנְשֵׁ֥י אֱמֶ֖ת שֹׂ֣נְאֵי בָ֑צַע</span> · <i>ve-ata techeze mi-kal-ha-am anshe-chayil yire Elohim anshe emet sone vatza</i> · and you shall see out of all the people men of worth, fearers of God, men of truth, haters of gain (etnachta on vatza) [VERIFIED: SNAPSHOT Exod.18.21 idx11 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְשַׂמְתָּ֣ עֲלֵהֶ֗ם שָׂרֵ֤י אֲלָפִים֙ שָׂרֵ֣י מֵא֔וֹת שָׂרֵ֥י חֲמִשִּׁ֖ים וְשָׂרֵ֥י עֲשָׂרֹֽת</span> · <i>ve-samta ale-hem sare alafim sare meot sare chamishim ve-sare asarot</i> · and set over them princes of thousands, princes of hundreds, princes of fifties, and princes of tens (verse-final asarot) [VERIFIED: SNAPSHOT Exod.18.21 idx12-21]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(anshe_chayil_yire_elohim, t0)</span><br><span class="gloss">= HOLDS(anshe-chayil-yire-God, t0)</span><br>THE ROSTER [EX18-12]. ve-ata TECHEZE mi-kol-ha-am — &#x27;and you shall SEE OUT of all the people&#x27; (the seer-verb for the search: leadership recruited by vision, the readings on the prophetic screen named- only); the FOUR QUALIFICATIONS: anshe-CHAYIL (worth), yire ELOHIM (fearers of God), anshe EMET (truth), sone VATZA (haters of gain — the one-codex binder-stroke named, MS): the corpus&#x27;s first published JOB DESCRIPTION — character-criteria only, no birth, no tribe (the machine notes what is absent: lineage — the courts open on merit while the priesthood will close on blood); sare ALAFIM, MEOT, CHAMISHIM, ASAROT — thousands, hundreds, fifties, TENS (the tens- word LEAN both times, VERIFIED at the build; the readings&#x27; arithmetic — 78,600 officers for 600,000 — named-only): the pyramid drawn in four words.
+</td><td><span class="he">אַנְשֵׁי־חַיִל יִרְאֵי אֱלֹהִים אַנְשֵׁי אֱמֶת שֹׂנְאֵי בָצַע</span> · <i>anshe-chayil yire Elohim anshe emet sone vatza</i><br><span class="gloss">= anshe-chayil yire God anshe emet sone vatza</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The job description; the four tiers.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_18_22 · Exod.18.22 · <span class='expr'>GREAT_AND_SMALL</span></h3>
+<p><span class="he">וְשָׁפְטוּ אֶת־הָעָם בְּכָל־עֵת וְהָיָה כָּל־הַדָּבָר הַגָּדֹל יָבִיאוּ אֵלֶיךָ וְכָל־הַדָּבָר הַקָּטֹן יִשְׁפְּטוּ־הֵם וְהָקֵל מֵעָלֶיךָ וְנָשְׂאוּ אִתָּךְ</span> · <i>ve-shaftu et-ha-am be-khal-et ve-haya kal-ha-davar ha-gadol yaviu ele-kha ve-khal-ha-davar ha-qaton yishptu-hem ve-haqel me-ale-kha ve-nasu et-khe</i> · And they shall judge the people at every time; and it shall be: every great matter they shall bring to you, and every small matter they shall judge themselves — and lighten it from off you, and they shall bear with you.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְשָׁפְט֣וּ אֶת הָעָם֮ בְּכָל עֵת֒ וְהָיָ֞ה כָּל הַדָּבָ֤ר הַגָּדֹל֙ יָבִ֣יאוּ אֵלֶ֔יךָ וְכָל הַדָּבָ֥ר הַקָּטֹ֖ן יִשְׁפְּטוּ הֵ֑ם</span> · <i>ve-shaftu et-ha-am be-khal-et ve-haya kal-ha-davar ha-gadol yaviu ele-kha ve-khal-ha-davar ha-qaton yishptu-hem</i> · and they shall judge the people at every time; and it shall be: every great matter they shall bring to you, and every small matter they shall judge themselves (etnachta on hem) [VERIFIED: SNAPSHOT Exod.18.22 idx15 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְהָקֵל֙ מֵֽעָלֶ֔יךָ וְנָשְׂא֖וּ אִתָּֽךְ</span> · <i>ve-haqel me-ale-kha ve-nasu et-khe</i> · and lighten it from off you, and they shall bear with you (verse-final et-khe) [VERIFIED: SNAPSHOT Exod.18.22 idx16-19]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_haqel_me_alekha, t0)</span><br><span class="gloss">= HOLDS(and-haqel-from-alekha, t0)</span><br>THE ROUTING [EX18-13]. ve-SHAFTU et-ha-am be-khol-ET — &#x27;and they shall judge the people AT EVERY TIME&#x27; (the queue goes continuous: no more one-day bottleneck); kol-ha-davar ha-GADOL yaviu elekha — the GREAT matter up (the great-word lean, VERIFIED at the build — absent from the full-roster of Noah&#x27;s parasha), ve-khol-ha-davar ha-QATON yishptu-HEM — the SMALL they judge (the judging-verb here LEAN — armed: 18:26 will replay this clause with the verb GROWN A VAV); ve- HAQEL me-alekha — &#x27;and LIGHTEN it from off you&#x27;: the heavy-diagnosis (18:18 khaved) answered by its own antonym (the machine closes the arc: the chapter is one mass-transfer problem — kaved in, haqel out); ve-NASU itakh — &#x27;and they shall BEAR WITH you&#x27;: the carrying shared (Numbers 11&#x27;s seventy elders armed, the readings named-only).
+</td><td><span class="he">וְהָקֵל מֵעָלֶיךָ וְנָשְׂאוּ אִתָּךְ</span> · <i>ve-haqel me-ale-kha ve-nasu et-khe</i><br><span class="gloss">= and-haqel from-ale-kha and-nasu khe</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The routing rule.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_18_23 · Exod.18.23 · <span class='expr'>TO_ITS_PLACE_IN_PEACE</span></h3>
+<p><span class="he">אִם אֶת־הַדָּבָר הַזֶּה תַּעֲשֶׂה וְצִוְּךָ אֱלֹהִים וְיָכָלְתָּ עֲמֹד וְגַם כָּל־הָעָם הַזֶּה עַל־מְקֹמוֹ יָבֹא בְשָׁלוֹם</span> · <i>im et-ha-davar ha-ze taase ve-tziv-kha Elohim ve-yakhalta amod ve-gam kal-ha-am ha-ze al-meqom-o yavo ve-shalom</i> · If you do this thing, and God command you, then you will be able to stand — and also all this people will come to its place in peace.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אִ֣ם אֶת הַדָּבָ֤ר הַזֶּה֙ תַּעֲשֶׂ֔ה וְצִוְּךָ֣ אֱלֹהִ֔ים וְיָֽכָלְתָּ֖ עֲמֹ֑ד</span> · <i>im et-ha-davar ha-ze taase ve-tziv-kha Elohim ve-yakhalta amod</i> · if you do this thing, and God command you, then you will be able to stand (etnachta on amod) [VERIFIED: SNAPSHOT Exod.18.23 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְגַם֙ כָּל הָעָ֣ם הַזֶּ֔ה עַל מְקֹמ֖וֹ יָבֹ֥א בְשָׁלֽוֹם</span> · <i>ve-gam kal-ha-am ha-ze al-meqom-o yavo ve-shalom</i> · and also all this people will come to its place in peace (verse-final ve-shalom) [VERIFIED: SNAPSHOT Exod.18.23 idx9-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(al_meqomo_yavo_ve_shalom, t0)</span><br><span class="gloss">= HOLDS(upon-meqomo-yavo-and-shalom, t0)</span><br>THE FORECAST [EX18-11]. im et-ha-davar ha-ze taase VE-TZIVKHA ELOHIM — &#x27;if you do this thing AND GOD COMMAND YOU&#x27;: the counselor GATES HIS OWN COUNSEL on the divine countersignature (the command-word Torah-unique, VERIFIED at the build; its Scripture-twin &#x27;and He command you as RULER&#x27; — the Kitzur: with the commissioning, you can stand; without it, no standing): the corpus&#x27;s most self-limiting card — advice that requires ratification to bind; ve-yakholta AMOD — &#x27;you will be able to STAND&#x27; (the wilting reversed); ve-gam kol-ha-am ha-ze AL-MEQOMO yavo VE-SHALOM — &#x27;and also all this people will come TO ITS PLACE IN PEACE&#x27;: the place-phrase&#x27;s Job-twin named (the Kitzur: &#x27;judge below and there is peace; if not, judgment is done above — and you shall look on his place, and he is not&#x27;): the machine notes the forecast&#x27;s scope — the reform is priced not in Moses&#x27; relief but in the PEOPLE&#x27;S arrival: good process as the nation&#x27;s way home.
+</td><td><span class="he">וְגַם כָּל־הָעָם הַזֶּה עַל־מְקֹמוֹ יָבֹא בְשָׁלוֹם</span> · <i>ve-gam kal-ha-am ha-ze al-meqom-o yavo ve-shalom</i><br><span class="gloss">= and-also kal-the-am the-ze upon-meqom-o yavo and-shalom</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The gated forecast.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_18_24 · Exod.18.24 · <span class='expr'>MOSES_HEARS</span></h3>
+<p><span class="he">וַיִּשְׁמַע מֹשֶׁה לְקוֹל חֹתְנוֹ וַיַּעַשׂ כֹּל אֲשֶׁר אָמָר</span> · <i>va-yishma moshe le-qol chotn-o va-yaas kol asher amar</i> · And Moses heard the voice of his father-in-law — and did all that he had said.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּשְׁמַ֥ע מֹשֶׁ֖ה לְק֣וֹל חֹתְנ֑וֹ</span> · <i>va-yishma moshe le-qol chotn-o</i> · and Moses heard the voice of his father-in-law (etnachta on chotn-o) [VERIFIED: SNAPSHOT Exod.18.24 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּ֕עַשׂ כֹּ֖ל אֲשֶׁ֥ר אָמָֽר</span> · <i>va-yaas kol asher amar</i> · and did all that he had said (verse-final amar) [VERIFIED: SNAPSHOT Exod.18.24 idx4-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>RESULT</td><td><span class="expr">RESULT: HOLDS(shema_be_qoli_iatzkha, t1)</span><br><span class="gloss">= RESULT: HOLDS(hear-in-qoli-iatzkha, t1)</span><br>THE HEEDING [EX18-12 CROWN]. va-YISHMA moshe LE-QOL chotno — &#x27;and Moses HEARD THE VOICE of his father-in-law&#x27;: the card POPS on the hear-verb that opened the chapter (18:1 Jethro heard of Israel; 18:24 Moses hears Jethro: the chapter rings closed ear to ear) — and the voice-word is written FULL (VERIFIED skeleton; the Ramah&#x27;s rule: every Torah voice-form full but five — the voice Moses obeys carries its whole letter); va-YAAS KOL ASHER AMAR — &#x27;and DID ALL that he had said&#x27; (asserted): the compliance-formula, unqualified (the machine files the credential in reverse: the prophet who relays God&#x27;s law takes a man&#x27;s advice whole — the readings on which parts waited for God&#x27;s ratification, named-only, riding 18:23&#x27;s gate).
+</td><td><span class="he">וַיִּשְׁמַע מֹשֶׁה לְקוֹל חֹתְנוֹ וַיַּעַשׂ כֹּל אֲשֶׁר אָמָר</span> · <i>va-yishma moshe le-qol chotn-o va-yaas kol asher amar</i><br><span class="gloss">= and-yishma Moses voice chotn-o and-yaas all which amar</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The card pops.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_18_25 · Exod.18.25 · <span class='expr'>THE_JUDGES_INSTALLED</span></h3>
+<p><span class="he">וַיִּבְחַר מֹשֶׁה אַנְשֵׁי־חַיִל מִכָּל־יִשְׂרָאֵל וַיִּתֵּן אֹתָם רָאשִׁים עַל־הָעָם שָׂרֵי אֲלָפִים שָׂרֵי מֵאוֹת שָׂרֵי חֲמִשִּׁים וְשָׂרֵי עֲשָׂרֹת</span> · <i>va-yivchar moshe anshe-chayil mi-kal-yisrael va-yiten et-m rashim al-ha-am sare alafim sare meot sare chamishim ve-sare asarot</i> · And Moses chose men of worth out of all Israel, and gave them heads over the people — princes of thousands, princes of hundreds, princes of fifties, and princes of tens.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּבְחַ֨ר מֹשֶׁ֤ה אַנְשֵׁי חַ֨יִל֙ מִכָּל יִשְׂרָאֵ֔ל וַיִּתֵּ֥ן אֹתָ֛ם רָאשִׁ֖ים עַל הָעָ֑ם</span> · <i>va-yivchar moshe anshe-chayil mi-kal-yisrael va-yiten et-m rashim al-ha-am</i> · and Moses chose men of worth out of all Israel, and gave them heads over the people (etnachta on ha-am) [VERIFIED: SNAPSHOT Exod.18.25 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">שָׂרֵ֤י אֲלָפִים֙ שָׂרֵ֣י מֵא֔וֹת שָׂרֵ֥י חֲמִשִּׁ֖ים וְשָׂרֵ֥י עֲשָׂרֹֽת</span> · <i>sare alafim sare meot sare chamishim ve-sare asarot</i> · princes of thousands, princes of hundreds, princes of fifties, and princes of tens (verse-final asarot) [VERIFIED: SNAPSHOT Exod.18.25 idx11-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yiten_otam_rashim, t0)</span><br><span class="gloss">= HOLDS(and-yiten-otam-heads, t0)</span><br>THE INSTALLATION [EX18-12]. va-YIVCHAR moshe anshe-CHAYIL mi-kol- yisrael — &#x27;and Moses CHOSE men of WORTH out of all Israel&#x27; (the machine notes the delta against the spec: 18:21 listed FOUR qualifications; the execution names ONE — worth (the readings: only that grade was found in supply; the spec-versus-delivery seam, named-only — the corpus files the shortfall as data, not failure); va-yiten otam RASHIM al-ha-am — &#x27;and gave them HEADS over the people&#x27;: the appointment executed; sare alafim, meot, chamishim, asarot — the four-tier pyramid stood up verbatim (the tens LEAN again, the hundreds FULL — VERIFIED at the build: the roster&#x27;s letters keep their discipline through the repetition).
+</td><td><span class="he">וַיִּבְחַר מֹשֶׁה אַנְשֵׁי־חַיִל מִכָּל־יִשְׂרָאֵל וַיִּתֵּן אֹתָם רָאשִׁים</span> · <i>va-yivchar moshe anshe-chayil mi-kal-yisrael va-yiten et-m rashim</i><br><span class="gloss">= and-yivchar Moses anshe-chayil from-kal-yisrael and-yiten m heads</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The pyramid built.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_18_26 · Exod.18.26 · <span class='expr'>THE_HARD_TO_MOSES</span></h3>
+<p><span class="he">וְשָׁפְטוּ אֶת־הָעָם בְּכָל־עֵת אֶת־הַדָּבָר הַקָּשֶׁה יְבִיאוּן אֶל־מֹשֶׁה וְכָל־הַדָּבָר הַקָּטֹן יִשְׁפּוּטוּ הֵם</span> · <i>ve-shaftu et-ha-am be-khal-et et-ha-davar ha-qashe yeviu-n el-moshe ve-khal-ha-davar ha-qaton yishputu hem</i> · And they judged the people at every time; the hard matter they would bring to Moses, and every small matter they would judge themselves.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְשָׁפְט֥וּ אֶת הָעָ֖ם בְּכָל עֵ֑ת</span> · <i>ve-shaftu et-ha-am be-khal-et</i> · and they judged the people at every time (etnachta on et) [VERIFIED: SNAPSHOT Exod.18.26 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֶת הַדָּבָ֤ר הַקָּשֶׁה֙ יְבִיא֣וּן אֶל מֹשֶׁ֔ה וְכָל הַדָּבָ֥ר הַקָּטֹ֖ן יִשְׁפּוּט֥וּ הֵֽם</span> · <i>et-ha-davar ha-qashe yeviu-n el-moshe ve-khal-ha-davar ha-qaton yishputu hem</i> · the hard matter they would bring to Moses, and every small matter they would judge themselves (verse-final hem) [VERIFIED: SNAPSHOT Exod.18.26 idx5-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(yishputu_hem, t0)</span><br><span class="gloss">= HOLDS(yishputu-hem, t0)</span><br>THE PRACTICE [EX18-13 CROWN]. ve-shaftu et-ha-am be-khol-et — the standing docket (the judge-verb&#x27;s run through the chapter closes here); et-ha-davar ha-QASHE yeviun el-moshe — &#x27;the HARD matter to Moses&#x27; (the Kitzur&#x27;s wire: the HARD matter beside the STIFF neck, Deut 31:27 — &#x27;Moses judged the cases of the stiff-necked&#x27;; and the delta named: 18:22 routed the GREAT matter up, 18:26 routes the HARD — the readings on size versus difficulty, named-only: practice re- sorted the docket by what actually needs the prophet); ve-khol-ha- davar ha-qaton YISHPUTU hem — and the judging-verb comes back GROWN A VAV (VERIFIED: the long spelling Torah-unique, against 18:22&#x27;s lean twin in the same clause — MS climbing the grammarians for its long-stressed reading, the Mikhlol twice): the machine files the letter where it landed: the verb gained its vav in the verse where the judging became real.
+</td><td><span class="he">וְכָל־הַדָּבָר הַקָּטֹן יִשְׁפּוּטוּ הֵם</span> · <i>ve-khal-ha-davar ha-qaton yishputu hem</i><br><span class="gloss">= and-khal-the-davar the-qaton yishputu hem</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The verb grows a letter.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_18_27 · Exod.18.27 · <span class='expr'>THE_SEND_OFF</span></h3>
+<p><span class="he">וַיְשַׁלַּח מֹשֶׁה אֶת־חֹתְנוֹ וַיֵּלֶךְ לוֹ אֶל־אַרְצוֹ</span> · <i>va-yeshalach moshe et-chotn-o va-yelekh l-o el-artz-o</i> · And Moses sent his father-in-law away — and he went him to his land.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְשַׁלַּ֥ח מֹשֶׁ֖ה אֶת חֹתְנ֑וֹ</span> · <i>va-yeshalach moshe et-chotn-o</i> · and Moses sent his father-in-law away (etnachta on chotn-o) [VERIFIED: SNAPSHOT Exod.18.27 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיֵּ֥לֶךְ ל֖וֹ אֶל אַרְצֽוֹ</span> · <i>va-yelekh l-o el-artz-o</i> · and he went him to his land (verse-final artz-o) [VERIFIED: SNAPSHOT Exod.18.27 idx4-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yelekh_lo_el_artzo, t0)</span><br><span class="gloss">= HOLDS(and-yelekh-not-to-artzo, t0)</span><br>THE DEPARTURE. va-YESHALACH moshe et-chotno — &#x27;and Moses SENT his father-in-law away&#x27; (the send-verb that ran the exodus — shalach, nine chapters of let-My-people-go — spent here on a blessing-bearing guest: the machine notes the verb&#x27;s gentlest station in the book); va-YELEKH LO el-ARTZO — &#x27;and he went HIM to his land&#x27;: the reflexive going (the readings hear lekh-lekha&#x27;s shadow — the go-for-yourself of Gen 12:1 echoed in a Midianite&#x27;s homeward turn; and the Mekhilta&#x27;s errand: &#x27;he went to convert his family&#x27; — named-only): the corpus closes the visit in the chapter it opened — the counselor arrives hearing and leaves heard, and the courts he drew stay standing behind him.
+</td><td><span class="he">וַיֵּלֶךְ לוֹ אֶל־אַרְצוֹ</span> · <i>va-yelekh l-o el-artz-o</i><br><span class="gloss">= and-yelekh l-o to-artz-o</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The consultant departs.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Ex_18_1 — Jethro hears</td><td>And Jethro, priest of Midian, Moses&#x27; father-in-law, heard all that God had done for Moses and for Israel His people — that the LORD had brought Israel out from Egypt.</td><td>no test, no name.</td><td><span class="he">וַיִּשְׁמַ֞ע יִתְר֨וֹ כֹהֵ֤ן מִדְיָן֙</span> · <i>va-yishma yitro khohen midyan</i><br><span class="gloss">= and-yishma yitro khohen midyan</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Ex_18_2 — after her sending</td><td>And Jethro, Moses&#x27; father-in-law, took Zipporah, Moses&#x27; wife — after her being sent away.</td><td>no test, no name.</td><td><span class="he">וַיִּקַּ֗ח יִתְרוֹ֙ חֹתֵ֣ן מֹשֶׁ֔ה</span> · <i>va-yiqach yitro choten moshe</i><br><span class="gloss">= and-yiqach yitro choten Moses</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Ex_18_3 — Gershom</td><td>And her two sons — of whom the name of the one was Gershom, for he said: A stranger have I been in a foreign land.</td><td>no test, no name.</td><td><span class="he">וְאֵ֖ת שְׁנֵ֣י בָנֶ֑יהָ אֲשֶׁ֨ר</span> · <i>ve-et shene vane-ha asher</i><br><span class="gloss">= and shene vane-the which</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Ex_18_4 — Eliezer</td><td>And the name of the one was Eliezer — for the God of my father was my help, and delivered me from the sword of Pharaoh.</td><td>no test, no name.</td><td><span class="he">וְשֵׁ֥ם הָאֶחָ֖ד אֱלִיעֶ֑זֶר כִּֽי</span> · <i>ve-shem ha-echad eliezer ki-</i><br><span class="gloss">= and-shem the-echad eliezer when</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Ex_18_5 — to the mount of God</td><td>And Jethro, Moses&#x27; father-in-law, came, and his sons and his wife, to Moses — to the wilderness where he was camping, the mount of God.</td><td>no test, no name.</td><td><span class="he">וַיָּבֹ֞א יִתְר֨וֹ חֹתֵ֥ן מֹשֶׁ֛ה</span> · <i>va-yavo yitro choten moshe</i><br><span class="gloss">= and-yavo yitro choten Moses</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Ex_18_6 — I, your father-in-law</td><td>And he said to Moses: I, your father-in-law Jethro, am coming to you — and your wife, and her two sons with her.</td><td>no test, no name.</td><td><span class="he">וַיֹּ֨אמֶר֙ אֶל מֹשֶׁ֔ה אֲנִ֛י</span> · <i>va-yomer el-moshe ani</i><br><span class="gloss">= and-yomer to-Moses ani</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Ex_18_7 — the greeting</td><td>And Moses went out to meet his father-in-law, and bowed, and kissed him, and they asked each man his fellow of peace — and they came into the tent.</td><td>no test, no name.</td><td><span class="he">וַיֵּצֵ֨א מֹשֶׁ֜ה לִקְרַ֣את חֹֽתְנ֗וֹ</span> · <i>va-yetze moshe li-qerat chotn-o</i><br><span class="gloss">= and-yetze Moses to-me-qerat chotn-o</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Ex_18_8 — Moses recounts</td><td>And Moses recounted to his father-in-law all that the LORD had done to Pharaoh and to Egypt on account of Israel; all the travail that had found them on the way — and the LORD delivered them.</td><td>no test, no name.</td><td><span class="he">וַיְסַפֵּ֤ר מֹשֶׁה֙ לְחֹ֣תְנ֔וֹ אֵת֩</span> · <i>va-yesaper moshe le-chotn-o et</i><br><span class="gloss">= and-yesaper Moses to-chotn-o et</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Ex_18_9 — Jethro rejoices</td><td>And Jethro rejoiced over all the good which the LORD had done for Israel — that He had delivered him from the hand of Egypt.</td><td>no test, no name.</td><td><span class="he">וַיִּ֣חַדְּ יִתְר֔וֹ עַ֚ל כָּל</span> · <i>va-yichad yitro al kal-</i><br><span class="gloss">= and-yichad yitro upon kal</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Ex_18_10 — blessed be the LORD</td><td>And Jethro said: Blessed be the LORD, who delivered you from the hand of Egypt and from the hand of Pharaoh — who delivered the people from under the hand of Egypt.</td><td>no test, no name.</td><td><span class="he">וַיֹּאמֶר֮ יִתְרוֹ֒ בָּר֣וּךְ יְהוָ֔ה</span> · <i>va-yomer yitro barukh YHWH</i><br><span class="gloss">= and-yomer yitro barukh the-LORD</span></td></tr>
+<tr><td><b>S11</b></td><td>after STEP_Ex_18_11 — now I know</td><td>Now I know that the LORD is greater than all the gods — for in the thing in which they dealt proudly, against them.</td><td>no test, no name.</td><td><span class="he">עַתָּ֣ה יָדַ֔עְתִּי כִּֽי גָד֥וֹל</span> · <i>ata yadati ki-gadol</i><br><span class="gloss">= ata yadati when-gadol</span></td></tr>
+<tr><td><b>S12</b></td><td>after STEP_Ex_18_12 — the meal before God</td><td>And Jethro, Moses&#x27; father-in-law, took a burnt-offering and sacrifices for God; and Aaron came, and all the elders of Israel, to eat bread with Moses&#x27; father-in-law before God.</td><td>no test, no name.</td><td><span class="he">וַיִּקַּ֞ח יִתְר֨וֹ חֹתֵ֥ן מֹשֶׁ֛ה</span> · <i>va-yiqach yitro choten moshe</i><br><span class="gloss">= and-yiqach yitro choten Moses</span></td></tr>
+<tr><td><b>S13</b></td><td>after STEP_Ex_18_13 — the court day</td><td>And it was on the morrow, that Moses sat to judge the people; and the people stood over Moses from the morning until the evening.</td><td>no test, no name.</td><td><span class="he">וַיְהִי֙ מִֽמָּחֳרָ֔ת וַיֵּ֥שֶׁב מֹשֶׁ֖ה</span> · <i>va-yehi mi-machorat va-yeshev moshe</i><br><span class="gloss">= and-yehi from-machorat and-yeshev Moses</span></td></tr>
+<tr><td><b>S14</b></td><td>after STEP_Ex_18_14 — why alone</td><td>And Moses&#x27; father-in-law saw all that he was doing for the people — and he said: What is this thing that you are doing for the people? Why do you sit alone, and all the people stand over you from morning until evening?</td><td>no test, no name.</td><td><span class="he">וַיַּרְא֙ חֹתֵ֣ן מֹשֶׁ֔ה אֵ֛ת</span> · <i>va-yar choten moshe et</i><br><span class="gloss">= and-yar choten Moses et</span></td></tr>
+<tr><td><b>S15</b></td><td>after STEP_Ex_18_15 — to seek God</td><td>And Moses said to his father-in-law — because the people come to me to seek God.</td><td>no test, no name.</td><td><span class="he">וַיֹּ֥אמֶר מֹשֶׁ֖ה לְחֹתְנ֑וֹ כִּֽי</span> · <i>va-yomer moshe le-chotn-o ki-</i><br><span class="gloss">= and-yomer Moses to-chotn-o when</span></td></tr>
+<tr><td><b>S16</b></td><td>after STEP_Ex_18_16 — statutes and torahs</td><td>When they have a matter, it comes to me, and I judge between a man and his fellow — and I make known the statutes of God, and His torahs.</td><td>no test, no name.</td><td><span class="he">כִּֽי יִהְיֶ֨ה לָהֶ֤ם דָּבָר֙</span> · <i>ki-yihye la-hem davar</i><br><span class="gloss">= when-yihye to-hem davar</span></td></tr>
+<tr><td><b>S17</b></td><td>after STEP_Ex_18_17 — not good</td><td>And Moses&#x27; father-in-law said to him: Not good is the thing that you are doing.</td><td>no test, no name.</td><td><span class="he">וַיֹּ֛אמֶר חֹתֵ֥ן מֹשֶׁ֖ה אֵלָ֑יו</span> · <i>va-yomer choten moshe elay-v</i><br><span class="gloss">= and-yomer choten Moses elay-v</span></td></tr>
+<tr><td><b>S18</b></td><td>after STEP_Ex_18_18 — you will wilt</td><td>You will surely wilt — both you and this people that is with you; for the thing is too heavy for you — you cannot do it alone.</td><td>no test, no name.</td><td><span class="he">נָבֹ֣ל תִּבֹּ֔ל גַּם אַתָּ֕ה</span> · <i>navol tibol gam-ata</i><br><span class="gloss">= navol tibol also-ata</span></td></tr>
+<tr><td><b>S19</b></td><td>after STEP_Ex_18_19 — hear my voice</td><td>Now hear my voice — I will counsel you, and God be with you; be you for the people toward God, and bring you the matters to God.</td><td>LET(shema_be_qoli_iatzkha) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(hear-in-qoli-iatzkha) pushed and OPEN; no test, no name.</span></td><td><span class="he">עַתָּ֞ה שְׁמַ֤ע בְּקֹלִי֙ אִיעָ֣צְךָ֔</span> · <i>ata shema be-qoli-y iatz-kha</i><br><span class="gloss">= ata hear in-qoli-y iatz-kha</span></td></tr>
+<tr><td><b>S20</b></td><td>after STEP_Ex_18_20 — warn and teach</td><td>And you shall warn them of the statutes and the torahs — and make known to them the way they shall walk in, and the deed they shall do.</td><td>LET(shema_be_qoli_iatzkha) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(hear-in-qoli-iatzkha) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהִזְהַרְתָּ֣ה אֶתְהֶ֔ם אֶת הַחֻקִּ֖ים</span> · <i>ve-hizharta et-hem et-ha-chuqim</i><br><span class="gloss">= and-hizharta hem the-chuqim</span></td></tr>
+<tr><td><b>S21</b></td><td>after STEP_Ex_18_21 — men of worth</td><td>And you shall see out of all the people men of worth, fearers of God, men of truth, haters of gain — and set over them princes of thousands, princes of hundreds, princes of fifties, and princes of tens.</td><td>LET(shema_be_qoli_iatzkha) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(hear-in-qoli-iatzkha) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְאַתָּ֣ה תֶחֱזֶ֣ה מִכָּל הָ֠עָם</span> · <i>ve-ata techeze mi-kal-ha-am</i><br><span class="gloss">= and-ata techeze from-kal-the-am</span></td></tr>
+<tr><td><b>S22</b></td><td>after STEP_Ex_18_22 — great and small</td><td>And they shall judge the people at every time; and it shall be: every great matter they shall bring to you, and every small matter they shall judge themselves — and lighten it from off you, and they shall bear with you.</td><td>LET(shema_be_qoli_iatzkha) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(hear-in-qoli-iatzkha) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְשָׁפְט֣וּ אֶת הָעָם֮ בְּכָל</span> · <i>ve-shaftu et-ha-am be-khal-</i><br><span class="gloss">= and-shaftu the-am in-khal</span></td></tr>
+<tr><td><b>S23</b></td><td>after STEP_Ex_18_23 — to its place in peace</td><td>If you do this thing, and God command you, then you will be able to stand — and also all this people will come to its place in peace.</td><td>LET(shema_be_qoli_iatzkha) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(hear-in-qoli-iatzkha) pushed and OPEN; no test, no name.</span></td><td><span class="he">אִ֣ם אֶת הַדָּבָ֤ר הַזֶּה֙</span> · <i>im et-ha-davar ha-ze</i><br><span class="gloss">= if the-davar the-ze</span></td></tr>
+<tr><td><b>S24</b></td><td>after STEP_Ex_18_24 — Moses hears</td><td>And Moses heard the voice of his father-in-law — and did all that he had said.</td><td>no test, no name.</td><td><span class="he">וַיִּשְׁמַ֥ע מֹשֶׁ֖ה לְק֣וֹל חֹתְנ֑וֹ</span> · <i>va-yishma moshe le-qol chotn-o</i><br><span class="gloss">= and-yishma Moses voice chotn-o</span></td></tr>
+<tr><td><b>S25</b></td><td>after STEP_Ex_18_25 — the judges installed</td><td>And Moses chose men of worth out of all Israel, and gave them heads over the people — princes of thousands, princes of hundreds, princes of fifties, and princes of tens.</td><td>no test, no name.</td><td><span class="he">וַיִּבְחַ֨ר מֹשֶׁ֤ה אַנְשֵׁי חַ֨יִל֙</span> · <i>va-yivchar moshe anshe-chayil</i><br><span class="gloss">= and-yivchar Moses anshe-chayil</span></td></tr>
+<tr><td><b>S26</b></td><td>after STEP_Ex_18_26 — the hard to Moses</td><td>And they judged the people at every time; the hard matter they would bring to Moses, and every small matter they would judge themselves.</td><td>no test, no name.</td><td><span class="he">וְשָׁפְט֥וּ אֶת הָעָ֖ם בְּכָל</span> · <i>ve-shaftu et-ha-am be-khal-</i><br><span class="gloss">= and-shaftu the-am in-khal</span></td></tr>
+<tr><td><b>S27</b></td><td>after STEP_Ex_18_27 — the send-off</td><td>And Moses sent his father-in-law away — and he went him to his land.</td><td>no test, no name.</td><td><span class="he">וַיְשַׁלַּ֥ח מֹשֶׁ֖ה אֶת חֹתְנ֑וֹ</span> · <i>va-yeshalach moshe et-chotn-o</i><br><span class="gloss">= and-yeshalach Moses chotn-o</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: exo_18_jethro_and_the_judges — Jethro and the judges (18:1-27) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — after STEP_Ex_18_1 — Jethro hears
+    וַיִּשְׁמַ֞ע יִתְר֨וֹ כֹהֵ֤ן מִדְיָן֙ (va-yishma yitro khohen midyan)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Ex_18_2 — after her sending
+    וַיִּקַּ֗ח יִתְרוֹ֙ חֹתֵ֣ן מֹשֶׁ֔ה (va-yiqach yitro choten moshe)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Ex_18_3 — Gershom
+    וְאֵ֖ת שְׁנֵ֣י בָנֶ֑יהָ אֲשֶׁ֨ר (ve-et shene vane-ha asher)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Ex_18_4 — Eliezer
+    וְשֵׁ֥ם הָאֶחָ֖ד אֱלִיעֶ֑זֶר כִּֽי (ve-shem ha-echad eliezer ki-)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Ex_18_5 — to the mount of God
+    וַיָּבֹ֞א יִתְר֨וֹ חֹתֵ֥ן מֹשֶׁ֛ה (va-yavo yitro choten moshe)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Ex_18_6 — I, your father-in-law
+    וַיֹּ֨אמֶר֙ אֶל מֹשֶׁ֔ה אֲנִ֛י (va-yomer el-moshe ani)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — after STEP_Ex_18_7 — the greeting
+    וַיֵּצֵ֨א מֹשֶׁ֜ה לִקְרַ֣את חֹֽתְנ֗וֹ (va-yetze moshe li-qerat chotn-o)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S8 — after STEP_Ex_18_8 — Moses recounts
+    וַיְסַפֵּ֤ר מֹשֶׁה֙ לְחֹ֣תְנ֔וֹ אֵת֩ (va-yesaper moshe le-chotn-o et)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S9 — after STEP_Ex_18_9 — Jethro rejoices
+    וַיִּ֣חַדְּ יִתְר֔וֹ עַ֚ל כָּל (va-yichad yitro al kal-)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S10 — after STEP_Ex_18_10 — blessed be the LORD
+    וַיֹּאמֶר֮ יִתְרוֹ֒ בָּר֣וּךְ יְהוָ֔ה (va-yomer yitro barukh YHWH)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S11 — after STEP_Ex_18_11 — now I know
+    עַתָּ֣ה יָדַ֔עְתִּי כִּֽי גָד֥וֹל (ata yadati ki-gadol)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S12 — after STEP_Ex_18_12 — the meal before God
+    וַיִּקַּ֞ח יִתְר֨וֹ חֹתֵ֥ן מֹשֶׁ֛ה (va-yiqach yitro choten moshe)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S13 — after STEP_Ex_18_13 — the court day
+    וַיְהִי֙ מִֽמָּחֳרָ֔ת וַיֵּ֥שֶׁב מֹשֶׁ֖ה (va-yehi mi-machorat va-yeshev moshe)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S14 — after STEP_Ex_18_14 — why alone
+    וַיַּרְא֙ חֹתֵ֣ן מֹשֶׁ֔ה אֵ֛ת (va-yar choten moshe et)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S15 — after STEP_Ex_18_15 — to seek God
+    וַיֹּ֥אמֶר מֹשֶׁ֖ה לְחֹתְנ֑וֹ כִּֽי (va-yomer moshe le-chotn-o ki-)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S16 — after STEP_Ex_18_16 — statutes and torahs
+    כִּֽי יִהְיֶ֨ה לָהֶ֤ם דָּבָר֙ (ki-yihye la-hem davar)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S17 — after STEP_Ex_18_17 — not good
+    וַיֹּ֛אמֶר חֹתֵ֥ן מֹשֶׁ֖ה אֵלָ֑יו (va-yomer choten moshe elay-v)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S18 — after STEP_Ex_18_18 — you will wilt
+    נָבֹ֣ל תִּבֹּ֔ל גַּם אַתָּ֕ה (navol tibol gam-ata)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S19 — after STEP_Ex_18_19 — hear my voice
+    עַתָּ֞ה שְׁמַ֤ע בְּקֹלִי֙ אִיעָ֣צְךָ֔ (ata shema be-qoli-y iatz-kha)
+    PASS  LET(shema_be_qoli_iatzkha) pushed and OPEN  (queue=[&#x27;shema_be_qoli_iatzkha&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S20 — after STEP_Ex_18_20 — warn and teach
+    וְהִזְהַרְתָּ֣ה אֶתְהֶ֔ם אֶת הַחֻקִּ֖ים (ve-hizharta et-hem et-ha-chuqim)
+    PASS  LET(shema_be_qoli_iatzkha) pushed and OPEN  (queue=[&#x27;shema_be_qoli_iatzkha&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S21 — after STEP_Ex_18_21 — men of worth
+    וְאַתָּ֣ה תֶחֱזֶ֣ה מִכָּל הָ֠עָם (ve-ata techeze mi-kal-ha-am)
+    PASS  LET(shema_be_qoli_iatzkha) pushed and OPEN  (queue=[&#x27;shema_be_qoli_iatzkha&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S22 — after STEP_Ex_18_22 — great and small
+    וְשָׁפְט֣וּ אֶת הָעָם֮ בְּכָל (ve-shaftu et-ha-am be-khal-)
+    PASS  LET(shema_be_qoli_iatzkha) pushed and OPEN  (queue=[&#x27;shema_be_qoli_iatzkha&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S23 — after STEP_Ex_18_23 — to its place in peace
+    אִ֣ם אֶת הַדָּבָ֤ר הַזֶּה֙ (im et-ha-davar ha-ze)
+    PASS  LET(shema_be_qoli_iatzkha) pushed and OPEN  (queue=[&#x27;shema_be_qoli_iatzkha&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S24 — after STEP_Ex_18_24 — Moses hears
+    וַיִּשְׁמַ֥ע מֹשֶׁ֖ה לְק֣וֹל חֹתְנ֑וֹ (va-yishma moshe le-qol chotn-o)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S25 — after STEP_Ex_18_25 — the judges installed
+    וַיִּבְחַ֨ר מֹשֶׁ֤ה אַנְשֵׁי חַ֨יִל֙ (va-yivchar moshe anshe-chayil)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S26 — after STEP_Ex_18_26 — the hard to Moses
+    וְשָׁפְט֥וּ אֶת הָעָ֖ם בְּכָל (ve-shaftu et-ha-am be-khal-)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S27 — after STEP_Ex_18_27 — the send-off
+    וַיְשַׁלַּ֥ח מֹשֶׁ֖ה אֶת חֹתְנ֑וֹ (va-yeshalach moshe et-chotn-o)
+    PASS  no test, no name.  (tests=0 names=0)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/exo_18_jethro_and_the_judges.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# exo_18_jethro_and_the_judges — 18:1-27
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/exo_18_jethro_and_the_judges.yaml) is CANONICAL
+# (Pre-Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Jethro and the judges (18:1-27)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;exo_18_jethro_and_the_judges&quot;)
+
+# -------------------------- Exod.18.1 · JETHRO_HEARS -----------------------
+# וַיִּשְׁמַע יִתְרוֹ כֹהֵן מִדְיָן חֹתֵן מֹשֶׁה אֵת כָּל־אֲשֶׁר עָשָׂה
+# אֱלֹהִים לְמֹשֶׁה וּלְיִשְׂרָאֵל עַמּוֹ כִּי־הוֹצִיא יְהוָה אֶת־יִשְׂרָאֵל
+# מִמִּצְרָיִם
+# &quot;[EN-AID] And Jethro, priest of Midian, Moses&#x27; father-in-law, heard all
+# that God had done for Moses and for Israel His people — that the LORD had
+# brought Israel out from Egypt.&quot;
+m.step(&quot;Exod.18.1&quot;)
+# ‹וַיִּשְׁמַע יִתְרוֹ כֹהֵן מִדְיָן חֹתֵן מֹשֶׁה› (“and-hear Jethro priest
+# Midian give-away-in-marriage Moses”) — fact holds: and-hear-Jethro
+m.fact(&quot;va_yishma_yitro&quot;)
+
+# -------------------------- Exod.18.2 · AFTER_HER_SENDING ------------------
+# וַיִּקַּח יִתְרוֹ חֹתֵן מֹשֶׁה אֶת־צִפֹּרָה אֵשֶׁת מֹשֶׁה אַחַר
+# שִׁלּוּחֶיהָ
+# &quot;[EN-AID] And Jethro, Moses&#x27; father-in-law, took Zipporah, Moses&#x27; wife —
+# after her being sent away.&quot;
+m.step(&quot;Exod.18.2&quot;)
+# ‹אֶת־צִפֹּרָה אֵשֶׁת מֹשֶׁה אַחַר שִׁלּוּחֶיהָ› (“obj-marker Zipporah
+# woman Moses after dismissal-her/its”) — fact holds: after-shilucheha
+m.fact(&quot;achar_shilucheha&quot;)
+
+# -------------------------- Exod.18.3 · GERSHOM ----------------------------
+# וְאֵת שְׁנֵי בָנֶיהָ אֲשֶׁר שֵׁם הָאֶחָד גֵּרְשֹׁם כִּי אָמַר גֵּר
+# הָיִיתִי בְּאֶרֶץ נָכְרִיָּה
+# &quot;[EN-AID] And her two sons — of whom the name of the one was Gershom, for
+# he said: A stranger have I been in a foreign land.&quot;
+m.step(&quot;Exod.18.3&quot;)
+# ‹הָאֶחָד גֵּרְשֹׁם כִּי אָמַר גֵּר הָיִיתִי בְּאֶרֶץ נָכְרִיָּה› (“the-one
+# Gershom that say sojourner be in-earth strange”) — fact holds: sojourner-
+# be-in-earth-strange
+m.fact(&quot;ger_hayiti_be_eretz_nakhriya&quot;)
+
+# -------------------------- Exod.18.4 · ELIEZER ----------------------------
+# וְשֵׁם הָאֶחָד אֱלִיעֶזֶר כִּי־אֱלֹהֵי אָבִי בְּעֶזְרִי וַיַּצִּלֵנִי
+# מֵחֶרֶב פַּרְעֹה
+# &quot;[EN-AID] And the name of the one was Eliezer — for the God of my father
+# was my help, and delivered me from the sword of Pharaoh.&quot;
+m.step(&quot;Exod.18.4&quot;)
+# ‹כִּי־אֱלֹהֵי אָבִי בְּעֶזְרִי וַיַּצִּלֵנִי מֵחֶרֶב פַּרְעֹה› (“that God
+# father-me/my in-aid-me/my and-snatch-away-me/my from-drought Pharaoh”) —
+# fact holds: God-avi-in-ezri
+m.fact(&quot;elohe_avi_be_ezri&quot;)
+
+# -------------------------- Exod.18.5 · TO_THE_MOUNT_OF_GOD ----------------
+# וַיָּבֹא יִתְרוֹ חֹתֵן מֹשֶׁה וּבָנָיו וְאִשְׁתּוֹ אֶל־מֹשֶׁה
+# אֶל־הַמִּדְבָּר אֲשֶׁר־הוּא חֹנֶה שָׁם הַר הָאֱלֹהִים
+# &quot;[EN-AID] And Jethro, Moses&#x27; father-in-law, came, and his sons and his
+# wife, to Moses — to the wilderness where he was camping, the mount of
+# God.&quot;
+m.step(&quot;Exod.18.5&quot;)
+# ‹אֶל־הַמִּדְבָּר אֲשֶׁר־הוּא חֹנֶה שָׁם הַר הָאֱלֹהִים› (“to the-pasture
+# which he/it encamp there mountain the-God”) — fact holds: to-mountain-the-
+# God
+m.fact(&quot;el_har_ha_elohim&quot;)
+
+# -------------------------- Exod.18.6 · I_YOUR_FATHER_IN_LAW ---------------
+# וַיֹּאמֶר אֶל־מֹשֶׁה אֲנִי חֹתֶנְךָ יִתְרוֹ בָּא אֵלֶיךָ וְאִשְׁתְּךָ
+# וּשְׁנֵי בָנֶיהָ עִמָּהּ
+# &quot;[EN-AID] And he said to Moses: I, your father-in-law Jethro, am coming to
+# you — and your wife, and her two sons with her.&quot;
+m.step(&quot;Exod.18.6&quot;)
+# ‹אֲנִי חֹתֶנְךָ יִתְרוֹ בָּא אֵלֶיךָ› (“give-away-in-marriage-you/your
+# Jethro come/bring to-you/your”) — fact holds: ani-chotenkha-come/bring-to-
+# you
+m.fact(&quot;ani_chotenkha_ba_elekha&quot;)
+
+# -------------------------- Exod.18.7 · THE_GREETING -----------------------
+# וַיֵּצֵא מֹשֶׁה לִקְרַאת חֹתְנוֹ וַיִּשְׁתַּחוּ וַיִּשַּׁק־לוֹ
+# וַיִּשְׁאֲלוּ אִישׁ־לְרֵעֵהוּ לְשָׁלוֹם וַיָּבֹאוּ הָאֹהֱלָה
+# &quot;[EN-AID] And Moses went out to meet his father-in-law, and bowed, and
+# kissed him, and they asked each man his fellow of peace — and they came
+# into the tent.&quot;
+m.step(&quot;Exod.18.7&quot;)
+# ‹וַיִּשְׁאֲלוּ אִישׁ־לְרֵעֵהוּ לְשָׁלוֹם› (“and-inquire man to-associate-
+# him/its to-safe”) — fact holds: and-inquire-man-to-reehu-to-safe
+m.fact(&quot;va_yishalu_ish_le_reehu_le_shalom&quot;)
+
+# -------------------------- Exod.18.8 · MOSES_RECOUNTS ---------------------
+# וַיְסַפֵּר מֹשֶׁה לְחֹתְנוֹ אֵת כָּל־אֲשֶׁר עָשָׂה יְהוָה לְפַרְעֹה
+# וּלְמִצְרַיִם עַל אוֹדֹת יִשְׂרָאֵל אֵת כָּל־הַתְּלָאָה אֲשֶׁר מְצָאָתַם
+# בַּדֶּרֶךְ וַיַּצִּלֵם יְהוָה
+# &quot;[EN-AID] And Moses recounted to his father-in-law all that the LORD had
+# done to Pharaoh and to Egypt on account of Israel; all the travail that
+# had found them on the way — and the LORD delivered them.&quot;
+m.step(&quot;Exod.18.8&quot;)
+# ‹וַיְסַפֵּר מֹשֶׁה לְחֹתְנוֹ› (“and-count Moses to-give-away-in-marriage-
+# him/its”) — fact holds: and-count-Moses
+m.fact(&quot;va_yesaper_moshe&quot;)
+
+# -------------------------- Exod.18.9 · JETHRO_REJOICES --------------------
+# וַיִּחַדְּ יִתְרוֹ עַל כָּל־הַטּוֹבָה אֲשֶׁר־עָשָׂה יְהוָה לְיִשְׂרָאֵל
+# אֲשֶׁר הִצִּילוֹ מִיַּד מִצְרָיִם
+# &quot;[EN-AID] And Jethro rejoiced over all the good which the LORD had done
+# for Israel — that He had delivered him from the hand of Egypt.&quot;
+m.step(&quot;Exod.18.9&quot;)
+# ‹וַיִּחַדְּ יִתְרוֹ› (“and-rejoice Jethro”) — fact holds: and-rejoice-
+# Jethro
+m.fact(&quot;va_yichad_yitro&quot;)
+
+# -------------------------- Exod.18.10 · BLESSED_BE_THE_LORD ---------------
+# וַיֹּאמֶר יִתְרוֹ בָּרוּךְ יְהוָה אֲשֶׁר הִצִּיל אֶתְכֶם מִיַּד מִצְרַיִם
+# וּמִיַּד פַּרְעֹה אֲשֶׁר הִצִּיל אֶת־הָעָם מִתַּחַת יַד־מִצְרָיִם
+# &quot;[EN-AID] And Jethro said: Blessed be the LORD, who delivered you from the
+# hand of Egypt and from the hand of Pharaoh — who delivered the people from
+# under the hand of Egypt.&quot;
+m.step(&quot;Exod.18.10&quot;)
+# ‹בָּרוּךְ יְהוָה אֲשֶׁר הִצִּיל אֶתְכֶם מִיַּד מִצְרַיִם וּמִיַּד
+# פַּרְעֹה› (“bless YHWH which snatch-away obj-marker-you/your(pl) from-hand
+# Egypt and-from-hand Pharaoh”) — fact holds: bless-the-LORD
+m.fact(&quot;barukh_YHWH&quot;)
+
+# -------------------------- Exod.18.11 · NOW_I_KNOW ------------------------
+# עַתָּה יָדַעְתִּי כִּי־גָדוֹל יְהוָה מִכָּל־הָאֱלֹהִים כִּי בַדָּבָר
+# אֲשֶׁר זָדוּ עֲלֵיהֶם
+# &quot;[EN-AID] Now I know that the LORD is greater than all the gods — for in
+# the thing in which they dealt proudly, against them.&quot;
+m.step(&quot;Exod.18.11&quot;)
+# ‹עַתָּה יָדַעְתִּי כִּי־גָדוֹל יְהוָה מִכָּל־הָאֱלֹהִים› (“now know that
+# great YHWH from-all the-God”) — fact holds: now-know
+m.fact(&quot;ata_yadati&quot;)
+
+# -------------------------- Exod.18.12 · THE_MEAL_BEFORE_GOD ---------------
+# וַיִּקַּח יִתְרוֹ חֹתֵן מֹשֶׁה עֹלָה וּזְבָחִים לֵאלֹהִים וַיָּבֹא אַהֲרֹן
+# וְכֹל זִקְנֵי יִשְׂרָאֵל לֶאֱכָל־לֶחֶם עִם־חֹתֵן מֹשֶׁה לִפְנֵי הָאֱלֹהִים
+# &quot;[EN-AID] And Jethro, Moses&#x27; father-in-law, took a burnt-offering and
+# sacrifices for God; and Aaron came, and all the elders of Israel, to eat
+# bread with Moses&#x27; father-in-law before God.&quot;
+m.step(&quot;Exod.18.12&quot;)
+# ‹וַיִּקַּח יִתְרוֹ חֹתֵן מֹשֶׁה עֹלָה וּזְבָחִים לֵאלֹהִים› (“and-take
+# Jethro give-away-in-marriage Moses burnt-offering and-sacrifice to-God”) —
+# event: zevach-Jethro — agent Jethro; theme burnt-offering-and-zvachim
+m.event(&quot;zevach_yitro&quot;, agent=&quot;yitro&quot;, themes=[&quot;ola_u_zvachim&quot;])
+
+# -------------------------- Exod.18.13 · THE_COURT_DAY ---------------------
+# וַיְהִי מִמָּחֳרָת וַיֵּשֶׁב מֹשֶׁה לִשְׁפֹּט אֶת־הָעָם וַיַּעֲמֹד הָעָם
+# עַל־מֹשֶׁה מִן־הַבֹּקֶר עַד־הָעָרֶב
+# &quot;[EN-AID] And it was on the morrow, that Moses sat to judge the people;
+# and the people stood over Moses from the morning until the evening.&quot;
+m.step(&quot;Exod.18.13&quot;)
+# ‹וַיַּעֲמֹד הָעָם עַל־מֹשֶׁה מִן־הַבֹּקֶר עַד־הָעָרֶב› (“and-stand the-
+# people over Moses from the-morning until the-evening”) — fact holds: and-
+# dwell/sit-Moses-lishpot
+m.fact(&quot;va_yeshev_moshe_lishpot&quot;)
+
+# -------------------------- Exod.18.14 · WHY_ALONE -------------------------
+# וַיַּרְא חֹתֵן מֹשֶׁה אֵת כָּל־אֲשֶׁר־הוּא עֹשֶׂה לָעָם וַיֹּאמֶר
+# מָה־הַדָּבָר הַזֶּה אֲשֶׁר אַתָּה עֹשֶׂה לָעָם מַדּוּעַ אַתָּה יוֹשֵׁב
+# לְבַדֶּךָ וְכָל־הָעָם נִצָּב עָלֶיךָ מִן־בֹּקֶר עַד־עָרֶב
+# &quot;[EN-AID] And Moses&#x27; father-in-law saw all that he was doing for the
+# people — and he said: What is this thing that you are doing for the
+# people? Why do you sit alone, and all the people stand over you from
+# morning until evening?&quot;
+m.step(&quot;Exod.18.14&quot;)
+# ‹מַדּוּעַ אַתָּה יוֹשֵׁב לְבַדֶּךָ› (“what-known? you dwell/sit to-
+# separation-you/your”) — fact holds: what-known?-now-dwell/sit-levadekha
+m.fact(&quot;madua_ata_yoshev_levadekha&quot;)
+
+# -------------------------- Exod.18.15 · TO_SEEK_GOD -----------------------
+# וַיֹּאמֶר מֹשֶׁה לְחֹתְנוֹ כִּי־יָבֹא אֵלַי הָעָם לִדְרֹשׁ אֱלֹהִים
+# &quot;[EN-AID] And Moses said to his father-in-law — because the people come to
+# me to seek God.&quot;
+m.step(&quot;Exod.18.15&quot;)
+# ‹כִּי־יָבֹא אֵלַי הָעָם לִדְרֹשׁ אֱלֹהִים› (“that come/bring to-me/my the-
+# people to-tread God”) — fact holds: lidrosh-God
+m.fact(&quot;lidrosh_elohim&quot;)
+
+# -------------------------- Exod.18.16 · STATUTES_AND_TORAHS ---------------
+# כִּי־יִהְיֶה לָהֶם דָּבָר בָּא אֵלַי וְשָׁפַטְתִּי בֵּין אִישׁ וּבֵין
+# רֵעֵהוּ וְהוֹדַעְתִּי אֶת־חֻקֵּי הָאֱלֹהִים וְאֶת־תּוֹרֹתָיו
+# &quot;[EN-AID] When they have a matter, it comes to me, and I judge between a
+# man and his fellow — and I make known the statutes of God, and His
+# torahs.&quot;
+m.step(&quot;Exod.18.16&quot;)
+# ‹וְהוֹדַעְתִּי אֶת־חֻקֵּי הָאֱלֹהִים וְאֶת־תּוֹרֹתָיו› (“and-know obj-
+# marker enactment the-God and-obj-marker precept-him/its”) — fact holds:
+# and-know-obj-marker-enactment-the-God
+m.fact(&quot;ve_hodati_et_chuqe_ha_elohim&quot;)
+
+# -------------------------- Exod.18.17 · NOT_GOOD --------------------------
+# וַיֹּאמֶר חֹתֵן מֹשֶׁה אֵלָיו לֹא־טוֹב הַדָּבָר אֲשֶׁר אַתָּה עֹשֶׂה
+# &quot;[EN-AID] And Moses&#x27; father-in-law said to him: Not good is the thing that
+# you are doing.&quot;
+m.step(&quot;Exod.18.17&quot;)
+# ‹לֹא־טוֹב הַדָּבָר אֲשֶׁר אַתָּה עֹשֶׂה› (“not good the-word/thing which
+# you make”) — fact holds: not-good-the-word/thing
+m.fact(&quot;lo_tov_ha_davar&quot;)
+
+# -------------------------- Exod.18.18 · YOU_WILL_WILT ---------------------
+# נָבֹל תִּבֹּל גַּם־אַתָּה גַּם־הָעָם הַזֶּה אֲשֶׁר עִמָּךְ כִּי־כָבֵד
+# מִמְּךָ הַדָּבָר לֹא־תוּכַל עֲשֹׂהוּ לְבַדֶּךָ
+# &quot;[EN-AID] You will surely wilt — both you and this people that is with
+# you; for the thing is too heavy for you — you cannot do it alone.&quot;
+m.step(&quot;Exod.18.18&quot;)
+# ‹כִּי־כָבֵד מִמְּךָ הַדָּבָר לֹא־תוּכַל עֲשֹׂהוּ לְבַדֶּךָ› (“that heavy
+# from-you/your the-word/thing not be-able make-him/its to-separation-
+# you/your”) — fact holds: wilt-wilt
+m.fact(&quot;navol_tibol&quot;)
+
+# -------------------------- Exod.18.19 · HEAR_MY_VOICE ---------------------
+# עַתָּה שְׁמַע בְּקֹלִי אִיעָצְךָ וִיהִי אֱלֹהִים עִמָּךְ הֱיֵה אַתָּה
+# לָעָם מוּל הָאֱלֹהִים וְהֵבֵאתָ אַתָּה אֶת־הַדְּבָרִים אֶל־הָאֱלֹהִים
+# &quot;[EN-AID] Now hear my voice — I will counsel you, and God be with you; be
+# you for the people toward God, and bring you the matters to God.&quot;
+m.step(&quot;Exod.18.19&quot;)
+# ‹עַתָּה שְׁמַע בְּקֹלִי אִיעָצְךָ וִיהִי אֱלֹהִים עִמָּךְ› (“now hear in-
+# voice/sound-me/my advise-you/your and-be God with-you/your”) — Jethro
+# speaks a demand — LET: hear-in-qoli-iatzkha
+m.declare(&quot;yitro&quot;, &quot;LET&quot;,
+          &quot;shema_be_qoli_iatzkha&quot;)
+
+# -------------------------- Exod.18.20 · WARN_AND_TEACH --------------------
+# וְהִזְהַרְתָּה אֶתְהֶם אֶת־הַחֻקִּים וְאֶת־הַתּוֹרֹת וְהוֹדַעְתָּ לָהֶם
+# אֶת־הַדֶּרֶךְ יֵלְכוּ בָהּ וְאֶת־הַמַּעֲשֶׂה אֲשֶׁר יַעֲשׂוּן
+# &quot;[EN-AID] And you shall warn them of the statutes and the torahs — and
+# make known to them the way they shall walk in, and the deed they shall
+# do.&quot;
+m.step(&quot;Exod.18.20&quot;)
+# ‹וְהִזְהַרְתָּה אֶתְהֶם אֶת־הַחֻקִּים וְאֶת־הַתּוֹרֹת› (“and-gleam obj-
+# marker-them/their obj-marker the-enactment and-obj-marker the-precept”) —
+# fact holds: and-gleam-ethem
+m.fact(&quot;ve_hizharta_ethem&quot;)
+
+# -------------------------- Exod.18.21 · MEN_OF_WORTH ----------------------
+# וְאַתָּה תֶחֱזֶה מִכָּל־הָעָם אַנְשֵׁי־חַיִל יִרְאֵי אֱלֹהִים אַנְשֵׁי
+# אֱמֶת שֹׂנְאֵי בָצַע וְשַׂמְתָּ עֲלֵהֶם שָׂרֵי אֲלָפִים שָׂרֵי מֵאוֹת
+# שָׂרֵי חֲמִשִּׁים וְשָׂרֵי עֲשָׂרֹת
+# &quot;[EN-AID] And you shall see out of all the people men of worth, fearers of
+# God, men of truth, haters of gain — and set over them princes of
+# thousands, princes of hundreds, princes of fifties, and princes of tens.&quot;
+m.step(&quot;Exod.18.21&quot;)
+# ‹אַנְשֵׁי־חַיִל יִרְאֵי אֱלֹהִים אַנְשֵׁי אֱמֶת שֹׂנְאֵי בָצַע› (“man
+# force fearing God man stability hate plunder”) — fact holds: man-force-
+# fearing-God
+m.fact(&quot;anshe_chayil_yire_elohim&quot;)
+
+# -------------------------- Exod.18.22 · GREAT_AND_SMALL -------------------
+# וְשָׁפְטוּ אֶת־הָעָם בְּכָל־עֵת וְהָיָה כָּל־הַדָּבָר הַגָּדֹל יָבִיאוּ
+# אֵלֶיךָ וְכָל־הַדָּבָר הַקָּטֹן יִשְׁפְּטוּ־הֵם וְהָקֵל מֵעָלֶיךָ
+# וְנָשְׂאוּ אִתָּךְ
+# &quot;[EN-AID] And they shall judge the people at every time; and it shall be:
+# every great matter they shall bring to you, and every small matter they
+# shall judge themselves — and lighten it from off you, and they shall bear
+# with you.&quot;
+m.step(&quot;Exod.18.22&quot;)
+# ‹וְהָקֵל מֵעָלֶיךָ וְנָשְׂאוּ אִתָּךְ› (“and-be-light from-over-you/your
+# and-lift/carry with-you/your”) — fact holds: and-be-light-from-alekha
+m.fact(&quot;ve_haqel_me_alekha&quot;)
+
+# -------------------------- Exod.18.23 · TO_ITS_PLACE_IN_PEACE -------------
+# אִם אֶת־הַדָּבָר הַזֶּה תַּעֲשֶׂה וְצִוְּךָ אֱלֹהִים וְיָכָלְתָּ עֲמֹד
+# וְגַם כָּל־הָעָם הַזֶּה עַל־מְקֹמוֹ יָבֹא בְשָׁלוֹם
+# &quot;[EN-AID] If you do this thing, and God command you, then you will be able
+# to stand — and also all this people will come to its place in peace.&quot;
+m.step(&quot;Exod.18.23&quot;)
+# ‹וְגַם כָּל־הָעָם הַזֶּה עַל־מְקֹמוֹ יָבֹא בְשָׁלוֹם› (“and-also all the-
+# people the-this over place-him/its come/bring in-safe”) — fact holds:
+# over-meqomo-come/bring-and-safe
+m.fact(&quot;al_meqomo_yavo_ve_shalom&quot;)
+
+# -------------------------- Exod.18.24 · MOSES_HEARS -----------------------
+# וַיִּשְׁמַע מֹשֶׁה לְקוֹל חֹתְנוֹ וַיַּעַשׂ כֹּל אֲשֶׁר אָמָר
+# &quot;[EN-AID] And Moses heard the voice of his father-in-law — and did all
+# that he had said.&quot;
+m.step(&quot;Exod.18.24&quot;)
+# ‹וַיִּשְׁמַע מֹשֶׁה לְקוֹל חֹתְנוֹ וַיַּעַשׂ כֹּל אֲשֶׁר אָמָר› (“and-hear
+# Moses to-voice/sound give-away-in-marriage-him/its and-make all which
+# say”) — demand settled (popped from the queue): hear-in-qoli-iatzkha
+m.result(&quot;shema_be_qoli_iatzkha&quot;, tmark=&quot;t1&quot;)
+
+# -------------------------- Exod.18.25 · THE_JUDGES_INSTALLED --------------
+# וַיִּבְחַר מֹשֶׁה אַנְשֵׁי־חַיִל מִכָּל־יִשְׂרָאֵל וַיִּתֵּן אֹתָם
+# רָאשִׁים עַל־הָעָם שָׂרֵי אֲלָפִים שָׂרֵי מֵאוֹת שָׂרֵי חֲמִשִּׁים
+# וְשָׂרֵי עֲשָׂרֹת
+# &quot;[EN-AID] And Moses chose men of worth out of all Israel, and gave them
+# heads over the people — princes of thousands, princes of hundreds, princes
+# of fifties, and princes of tens.&quot;
+m.step(&quot;Exod.18.25&quot;)
+# ‹וַיִּבְחַר מֹשֶׁה אַנְשֵׁי־חַיִל מִכָּל־יִשְׂרָאֵל וַיִּתֵּן אֹתָם
+# רָאשִׁים› (“and-try Moses man force from-all Israel and-set obj-marker-
+# them/their head”) — fact holds: and-set-otam-head
+m.fact(&quot;va_yiten_otam_rashim&quot;)
+
+# -------------------------- Exod.18.26 · THE_HARD_TO_MOSES -----------------
+# וְשָׁפְטוּ אֶת־הָעָם בְּכָל־עֵת אֶת־הַדָּבָר הַקָּשֶׁה יְבִיאוּן
+# אֶל־מֹשֶׁה וְכָל־הַדָּבָר הַקָּטֹן יִשְׁפּוּטוּ הֵם
+# &quot;[EN-AID] And they judged the people at every time; the hard matter they
+# would bring to Moses, and every small matter they would judge themselves.&quot;
+m.step(&quot;Exod.18.26&quot;)
+# ‹וְכָל־הַדָּבָר הַקָּטֹן יִשְׁפּוּטוּ הֵם› (“and-all the-word/thing the-
+# small judge they”) — fact holds: judge-them/their
+m.fact(&quot;yishputu_hem&quot;)
+
+# -------------------------- Exod.18.27 · THE_SEND_OFF ----------------------
+# וַיְשַׁלַּח מֹשֶׁה אֶת־חֹתְנוֹ וַיֵּלֶךְ לוֹ אֶל־אַרְצוֹ
+# &quot;[EN-AID] And Moses sent his father-in-law away — and he went him to his
+# land.&quot;
+m.step(&quot;Exod.18.27&quot;)
+# ‹וַיֵּלֶךְ לוֹ אֶל־אַרְצוֹ› (“and-go to-him/its to earth-him/its”) — fact
+# holds: and-go-not-to-artzo
+m.fact(&quot;va_yelekh_lo_el_artzo&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == []
+    assert len(m.SPECS[&quot;log&quot;]) == 1
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;va_yishma_yitro&#x27;, &#x27;achar_shilucheha&#x27;, &#x27;ger_hayiti_be_eretz_nakhriya&#x27;, &#x27;elohe_avi_be_ezri&#x27;, &#x27;el_har_ha_elohim&#x27;, &#x27;ani_chotenkha_ba_elekha&#x27;, &#x27;va_yishalu_ish_le_reehu_le_shalom&#x27;, &#x27;va_yesaper_moshe&#x27;, &#x27;va_yichad_yitro&#x27;, &#x27;barukh_YHWH&#x27;, &#x27;ata_yadati&#x27;, &#x27;va_yeshev_moshe_lishpot&#x27;, &#x27;madua_ata_yoshev_levadekha&#x27;, &#x27;lidrosh_elohim&#x27;, &#x27;ve_hodati_et_chuqe_ha_elohim&#x27;, &#x27;lo_tov_ha_davar&#x27;, &#x27;navol_tibol&#x27;, &#x27;ve_hizharta_ethem&#x27;, &#x27;anshe_chayil_yire_elohim&#x27;, &#x27;ve_haqel_me_alekha&#x27;, &#x27;al_meqomo_yavo_ve_shalom&#x27;, &#x27;va_yiten_otam_rashim&#x27;, &#x27;yishputu_hem&#x27;, &#x27;va_yelekh_lo_el_artzo&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 3
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-10 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

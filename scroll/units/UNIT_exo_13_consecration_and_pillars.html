@@ -1,0 +1,712 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>exo_13_consecration_and_pillars — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/exo_13_consecration_and_pillars?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>Consecration and pillars (13:1-22) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>exo_13_consecration_and_pillars</b> · Exodus 13:1-22 · derive logic_derived_v1 · phase FWD-27</div>
+<div class="meta"><a href="../#Exod/13/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">קַדֶּשׁ לִ֨י כָל בְּכ֜וֹר</span> · <i>qadesh-li-y khal-bekhor</i> · &#x27;consecrate to Me every firstborn&#x27;</p>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DERIVED 2026-08-09 · FORWARD ERA unit #27 (run FWD-6 block 3; Exod 1-13 continuous behind it). Span: 13:1-22, whole chapter: 22 verses (SNAPSHOT-verified; 13:1 without etnachta, split per canon). Oral layer IN-PIPELINE: manifest 12/12 VERIFIED, zero FAILED — see oral_audit_note_en. MACHINE PROFILE. TWO DECLAREs, twenty PRECONDITION_STATEs — both cards PERPETUAL-OPEN by the statute-class: the CONSECRATION (13:2, qadesh-li — the night&#x27;s invoice: the spared firstborn claimed; administered by 13:12-15&#x27;s transfer/redemption grid and Num 3&#x27;s swap, never popped in-Torah) and Moses&#x27; REMEMBER-relay (13:3-16 — the memory-deck: the zakhor-verb, the aviv-date, the week restated, the telling 13:8, the two tefillin-verses 13:9 + 13:16, the two question-scripts 13:14 + 12:26&#x27;s pair). THE BONES-OATH PAYS (13:19): gen_73&#x27;s card — armed at Gen 50:25 across the book-boundary, password paqod-yifqod — receipted VERBATIM in-verse (settlement link authored at the fold); the bones&#x27; next leg re-armed toward Josh 24:32. The ROUTING DECISION (13:17 — not the near Philistine way, lest they repent at war and return: the return-to-Egypt fear enters, 14:11 and Num 14:4 armed); the REED SEA ROAD (13:18 — 10:19&#x27;s naming pays; the armed-fifty spelling); the PILLARS installed (13:21-22 — the corpus&#x27;s first standing miracle: infrastructure, not event; the doubled night-word; the not-depart frame paired with Joshua 33:11). The strength-of-hand formula sounds FOUR times (13:3, 9, 14, 16). Queue at close: TWO perpetual-opens in-unit + the standing opens (exo_12&#x27;s four perpetuals; the dead-by-refusal four; the judgment-plea). REGISTRY 0; TESTS 0. CARE-POINTS: the chapter carries BOTH skeletons of the coming-word (13:5 full, 13:11 lean — six verses apart); the three-verb leaven-ladder (eaten 13:3, seen 13:7, found 12:19); the avoda-inversion continues (13:5); the catechism&#x27;s three intake-valves (asked 12:26, unasked 13:8, asked-tomorrow 13:14); the nacham/yinachem wordplay at the routing (13:17). WATCHLIST ARMS: 14:2 (the turn-back from Etham), 14:11 (the return-wish), 19:1 (the fifty-day clock), 20:2 (the house-of-slaves epithet in the Decalogue), 29:2 + Lev 2:4 (the lean matzot&#x27;s last stations), 33:11 (Joshua in the tent), Num 3 (the Levite swap), Num 33:6 (the itinerary&#x27;s Etham), Josh 24:32 (the bones&#x27; burial).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-09 (IN-PIPELINE, forward era; manifest logic/oral_audit/manifests/exo_13_consecration_and_pillars_claims.json 12/12 VERIFIED, zero FAILED; record logic/oral_audit/AUDIT_exo_13_2026-08-09.md). CROWNS (chain-attested + DB-verified). THE DOUBLED OATH [EX13-01, KB on 13:19] — THE UNIT&#x27;S MARQUEE: השבע השביע (&quot;he had SURELY SWORN&quot;) once in the Torah (adjacency exact); its Scripture-twin SAUL&#x27;S honey-oath (1 Sam 14:28) — &quot;he made the brothers swear to make their sons swear; so Saul bound even the absent — therefore Jonathan was caught&quot;: the transitive oath; and פקד יפקד (&quot;God will surely visit&quot;) verbatim in-verse — gen_73&#x27;s bones-card PAYS across the book-boundary. THE JOSHUA PAIR [EX13-02, KB on 13:22]: לא ימיש (&quot;shall not depart&quot;) exactly twice in the Torah — the pillars and Joshua-in-the-tent (Exod 33:11): &quot;as the pillars never departed, Joshua never departed — therefore he merited to go before the people.&quot; THE LEAN FIRSTBORN PAIR [EX13-03, MS on 13:15]: מבכר lean exactly at the deed-verse (12:29) and the memory-verse (13:15); the forecast (11:5) full. THE WEAK HAND [EX13-04, MS+KB on 13:16]: ידכה (&quot;your hand&quot; with final he) Torah-unique; Rav Ashi: yad KEHA — tefillin on the LEFT arm from one letter; the Zohar-placement wonder; five crownlets named. THE ONE LEAN COMING [EX13-05, MS on 13:11]: יבאך unique lean (the Ramah&#x27;s sign this verse) vs four full including 13:5 — one chapter, both skeletons; the printer&#x27;s FALSE QERE annulled (&quot;no ketiv/qere here at all&quot;) — the press the run&#x27;s eighth corrected authority. THE CHILD-TEST [EX13-06, MS on 13:15]: ויהרג (&quot;and He slew&quot;) lean and unique — Menachot&#x27;s broken-vav rule: &quot;bring a child neither wise nor foolish&quot;: read as ויהרג (&quot;and He slew&quot;), valid; read as &quot;He was slain&quot; — blasphemy, invalid: one letter between the God who slew and was slain. THE DONKEY&#x27;S ERASED VAV [EX13-07, MS on 13:13]: חמר lean by Berakhot&#x27;s dream — &quot;the vav of peter chamor is ERASED in your tefillin&quot; (the scribe wrote full and scraped it); the five thin skeletons across four senses. THE TESTIMONY-WORD [EX13-08, MS+KB on 13:10]: למועדה full and unique — &quot;read it as TWO WORDS: a testimony it is to Israel&quot;; מימים ימימה both unique; the Masorah&#x27;s five with the exemptions the chain derives (Sabbaths, festivals, women — Jephthah&#x27;s daughter). THE ARMED FIFTY [EX13-09, MS+KB on 13:18]: וחמשים on its thin skeleton (qubbutz checked, shin raphe); Bachya: &quot;the Torah given at FIFTY days was the purpose — and the fifty mentions of the exodus&quot;; the Mekhilta&#x27;s descending census; the five weapons. THE BOOTH-GRID [EX13-10, MS on 13:20]: מסכת pair exact (13:20 + Num 33:6); the Ramah&#x27;s whole file: all booth-words lean-of-lean except Lev 23:43&#x27;s reason-verse; Jacob&#x27;s double-form verse. THE HARDENED PAIR [EX13-11, KB on 13:15]: הקשה — its Masorah-twin Job 9:4, &quot;WHO has hardened against Him and prospered?&quot; — expounded on Pharaoh. THE LETTER-FILE [EX13-12, MS]: the qof of ויקח (&quot;and he took&quot;) dageshed at the bones-verse (checked); בחזק (&quot;by strength&quot;) bet dageshed; the kol after the Name dageshed with the false paseq struck; the false section-break at 13:5 struck; הוצאך (&quot;He brought you out&quot;) lean-pair with the tenth-plague cipher; ולילה (&quot;and by night&quot;) doubled in 13:21 with the Sisera-wire; the pillars&#x27; seam (לפני &quot;before,&quot; not מלפני &quot;from before&quot;); the ערב רב (&quot;mixed multitude&quot;) cipher counted with the inclusive one.</div>
+<div class="meta">confidence: structure tested; oral layer verified 12/12</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>FORWARD ERA run 6, block 3 (owner: &quot;process the next 5 blocks of exodus&quot;). Canon continuation: Exod 13:1-22 — consecration and pillars; whole chapter.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Span + source + conventions</td><td>SNAPSHOT prestage: 22 verses; 13:1 without etnachta (split per canon). No ketiv/qere pairs in-span — and MS ANNULS a printed false qere at 13:11 (the printer&#x27;s ובאך apparatus: &quot;no ketiv/qere here at all&quot;). Volitive census: two real pushes — the consecration (13:2) and Moses&#x27; remember-relay (13:3, the deck running to 13:16); the statute-content verses encode as armed PRECONDITION_STATE cards.</td><td>established</td></tr>
+<tr><td><b>C</b></td><td>Machine structure</td><td>Two DECLAREs, both perpetual-open by the statute-class; twenty PRECONDITION_STATEs. The bones-oath receipt (13:19, paqod-yifqod verbatim — settlement link authored at the fold, gen_73 closed across the book-boundary, re-armed toward Josh 24:32). The routing decision (13:17), the Reed Sea road (13:18), the pillars installed (13:21-22, the Joshua pair armed at 33:11).</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Oral scan (in-pipeline)</td><td>Local mirror only (zero fetches): Minchat Shai on Exod 13 (21 notes) + Kitzur Baal HaTurim on Exod 13 (18 notes). Manifest 12 rows: 12 VERIFIED / 0 FAILED / 0 UNCHECKABLE. The doubled oath with Saul&#x27;s pair; the Joshua not-depart pair; the lean firstborn pair; the weak hand; the annulled qere; the child-test; the dream-erased vav; the testimony-word; the armed fifty; the booth-grid; the hardened pair; the press corrected (authority eight).</td><td>established</td></tr>
+<tr><td><b>E</b></td><td>Gates</td><td>verify_claims.py 12/12 zero FAILED; verify_text.py green; preflight ALL GREEN; gloss_lint clean. Review waived per the revised standing law.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Freeze</td><td>status: frozen 2026-08-09 on green mechanical gates (forward-era law). Oral layer in-pipeline. Changes require a new derive pass, not silent edits. Exod 1-13 continuous.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Ex_13_1 · Exod.13.1 · <span class='expr'>THE_FRAME</span></h3>
+<p><span class="he">וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר</span> · <i>va-yedaber YHWH el-moshe le-mor</i> · And the LORD spoke to Moses, saying:</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְדַבֵּ֥ר יְהוָ֖ה</span> · <i>va-yedaber YHWH</i> · and the LORD spoke (NO etnachta in verse: split at tifcha on YHWH) [VERIFIED: SNAPSHOT Exod.13.1 idx1 tifcha; no etnachta token]</div><div class="arm"><b>RIGHT</b><br><span class="he">אֶל מֹשֶׁ֥ה לֵּאמֹֽר</span> · <i>el-moshe le-mor</i> · to Moses, saying (verse-final le-mor) [VERIFIED: SNAPSHOT Exod.13.1 idx2-4]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yedaber_el_moshe, t0)</span><br><span class="gloss">= HOLDS(and-yedaber-to-Moses, t0)</span><br>THE FRAME. va-yedaber YHWH el-moshe lemor — the five-word frame (no etnachta: the stream splits the miniature at its strongest servant- stroke): the speech-formula in its tersest form, opening the consecration-command the night has just purchased: the machine notes the sequence — the event (12:29), then the title-deed (13:2): the firstborn spared become the firstborn owed.
+</td><td><span class="he">וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר</span> · <i>va-yedaber YHWH el-moshe le-mor</i><br><span class="gloss">= and-yedaber the-LORD to-Moses to-mor</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The speech-frame.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_13_2 · Exod.13.2 · <span class='expr'>CONSECRATE_THE_FIRSTBORN</span></h3>
+<p><span class="he">קַדֶּשׁ־לִי כָל־בְּכוֹר פֶּטֶר כָּל־רֶחֶם בִּבְנֵי יִשְׂרָאֵל בָּאָדָם וּבַבְּהֵמָה לִי הוּא</span> · <i>qadesh-li-y khal-bekhor peter kal-rechem bi-vene yisrael ba-adam u-va-behema li-y hu</i> · Consecrate to Me every firstborn, opener of every womb among the sons of Israel, in man and in beast — Mine is it.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">קַדֶּשׁ לִ֨י כָל בְּכ֜וֹר פֶּ֤טֶר כָּל רֶ֨חֶם֙ בִּבְנֵ֣י יִשְׂרָאֵ֔ל בָּאָדָ֖ם וּבַבְּהֵמָ֑ה</span> · <i>qadesh-li-y khal-bekhor peter kal-rechem bi-vene yisrael ba-adam u-va-behema</i> · consecrate to Me every firstborn, opener of every womb among the sons of Israel (etnachta on u-va-behema) [VERIFIED: SNAPSHOT Exod.13.2 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לִ֖י הֽוּא</span> · <i>li-y hu</i> · in man and in beast — Mine is it (verse-final hu) [VERIFIED: SNAPSHOT Exod.13.2 idx11-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(qadesh_li_khol_bekhor))</span><br><span class="gloss">= DECLARE(the-LORD, LET(qadesh-to-me-all-bekhor))</span><br>THE CLAIM. QADESH-LI khol-BEKHOR — &#x27;CONSECRATE to Me every FIRSTBORN&#x27;: the night&#x27;s invoice — the firstborn the strike passed over are claimed as the price of the passing (peter kol-RECHEM — the womb-opener term debuts, the legal handle of the class); ba-adam u-va-behema LI HU — &#x27;in man and in beast — MINE is it&#x27;: the possessive verdict in two words: the machine pushes the PERPETUAL card (the statute-class of exo_12 continuing: no in-Torah pop — the redemption-laws of 13:12-15 and Num 3&#x27;s Levite-swap will administer it forever OPEN).
+</td><td><span class="he">קַדֶּשׁ־לִי כָל־בְּכוֹר</span> · <i>qadesh-li-y khal-bekhor</i><br><span class="gloss">= qadesh-to-me-y khal-bekhor</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The consecration-card.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_13_3 · Exod.13.3 · <span class='expr'>REMEMBER_THIS_DAY</span></h3>
+<p><span class="he">וַיֹּאמֶר מֹשֶׁה אֶל־הָעָם זָכוֹר אֶת־הַיּוֹם הַזֶּה אֲשֶׁר יְצָאתֶם מִמִּצְרַיִם מִבֵּית עֲבָדִים כִּי בְּחֹזֶק יָד הוֹצִיא יְהֹוָה אֶתְכֶם מִזֶּה וְלֹא יֵאָכֵל חָמֵץ</span> · <i>va-yomer moshe el-ha-am zakhor et-ha-yom ha-ze asher yetzatem mi-mitzrayim mi-bet avadim ki be-chozeq yad hotzi YHWH et-khem mi-ze ve-lo yeakhel chametz</i> · And Moses said to the people: Remember this day on which you went out from Egypt, from the house of slaves — for by strength of hand the LORD brought you out from this place; and no leavened bread shall be eaten.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיֹּ֨אמֶר מֹשֶׁ֜ה אֶל הָעָ֗ם זָכ֞וֹר אֶת הַיּ֤וֹם הַזֶּה֙ אֲשֶׁ֨ר יְצָאתֶ֤ם מִמִּצְרַ֨יִם֙ מִבֵּ֣ית עֲבָדִ֔ים כִּ֚י בְּחֹ֣זֶק יָ֔ד הוֹצִ֧יא יְהֹוָ֛ה אֶתְכֶ֖ם מִזֶּ֑ה</span> · <i>va-yomer moshe el-ha-am zakhor et-ha-yom ha-ze asher yetzatem mi-mitzrayim mi-bet avadim ki be-chozeq yad hotzi YHWH et-khem mi-ze</i> · and Moses said to the people: remember this day on which you went out from Egypt, from the house of slaves — for by strength of hand the LORD brought you out from this place (etnachta on mi-ze) [VERIFIED: SNAPSHOT Exod.13.3 idx19 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְלֹ֥א יֵאָכֵ֖ל חָמֵֽץ</span> · <i>ve-lo yeakhel chametz</i> · and no leavened bread shall be eaten (verse-final chametz) [VERIFIED: SNAPSHOT Exod.13.3 idx20-22]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(moshe, LET(zakhor_et_ha_yom_ha_ze))</span><br><span class="gloss">= DECLARE(Moses, LET(zakhor-the-day-the-ze))</span><br>THE REMEMBER. va-yomer moshe el-ha-am ZAKHOR et-ha-yom ha-ze — &#x27;REMEMBER this day&#x27;: Moses&#x27; relay-deck opens (the speech runs 13:3-16: the memory-laws, the signs, the questions — one card for the relay, perpetual by content); mi-BET AVADIM — &#x27;from the house of SLAVES&#x27;: the epithet debuts (the Decalogue&#x27;s own tag for Egypt, 20:2 armed); ki BE-CHOZEQ YAD hotzi YHWH etkhem — &#x27;by STRENGTH OF HAND&#x27; (the bet DAGESHED, MS, asserted): the strength-formula that will anchor the whole passage (13:9, 13:14, 13:16 — four soundings in one chapter); ve-lo yeakhel CHAMETZ — the leaven-ban restated in the passive: the machine opens the memory-machinery of the exodus one march out of Egypt.
+</td><td><span class="he">זָכוֹר אֶת־הַיּוֹם הַזֶּה</span> · <i>zakhor et-ha-yom ha-ze</i><br><span class="gloss">= zakhor the-day the-ze</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The relay opens; the zakhor-verb.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_13_4 · Exod.13.4 · <span class='expr'>IN_THE_MONTH_OF_AVIV</span></h3>
+<p><span class="he">הַיּוֹם אַתֶּם יֹצְאִים בְּחֹדֶשׁ הָאָבִיב</span> · <i>ha-yom atem yotzim be-chodesh ha-aviv</i> · Today you are going out, in the month of the Aviv.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">הַיּ֖וֹם אַתֶּ֣ם יֹצְאִ֑ים</span> · <i>ha-yom atem yotzim</i> · today you are going out (etnachta on yotzim) [VERIFIED: SNAPSHOT Exod.13.4 idx2 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">בְּחֹ֖דֶשׁ הָאָבִֽיב</span> · <i>be-chodesh ha-aviv</i> · in the month of the Aviv (verse-final ha-aviv) [VERIFIED: SNAPSHOT Exod.13.4 idx3-4]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(be_chodesh_ha_aviv, t0)</span><br><span class="gloss">= HOLDS(in-chodesh-the-aviv, t0)</span><br>THE MONTH. ha-yom atem yotzim be-CHODESH HA-AVIV — &#x27;in the month of the AVIV&#x27;: the month of 12:2&#x27;s calendar-command receives its NAME (the ripening-ear month — the readings: He chose a month fit for the road, neither heat nor cold, named-only): the five-word verse stamps the date into the memory-law; the corpus notes the watch armed at exo_10 (13:4, the aviv) now paid: the machine files the calendar&#x27;s first proper noun.
+</td><td><span class="he">הַיּוֹם אַתֶּם יֹצְאִים בְּחֹדֶשׁ הָאָבִיב</span> · <i>ha-yom atem yotzim be-chodesh ha-aviv</i><br><span class="gloss">= day atem yotzim in-chodesh the-aviv</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The month named.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_13_5 · Exod.13.5 · <span class='expr'>THE_SERVICE_IN_THE_LAND</span></h3>
+<p><span class="he">וְהָיָה כִי־יְבִיאֲךָ יְהוָה אֶל־אֶרֶץ הַכְּנַעֲנִי וְהַחִתִּי וְהָאֱמֹרִי וְהַחִוִּי וְהַיְבוּסִי אֲשֶׁר נִשְׁבַּע לַאֲבֹתֶיךָ לָתֶת לָךְ אֶרֶץ זָבַת חָלָב וּדְבָשׁ וְעָבַדְתָּ אֶת־הָעֲבֹדָה הַזֹּאת בַּחֹדֶשׁ הַזֶּה</span> · <i>ve-haya ki-yevia-kha YHWH el-eretz ha-kenaani ve-ha-chiti ve-ha-emori ve-ha-chivi ve-ha-yevusi asher nishba la-avote-kha la-tet la-khe eretz zavat chalav u-devash ve-avadta et-ha-avoda ha-zot ba-chodesh ha-ze</i> · And it shall be, when the LORD brings you to the land of the Canaanite and the Hittite and the Amorite and the Hivvite and the Jebusite, which He swore to your fathers to give you, a land flowing with milk and honey — you shall serve this service in this month.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהָיָ֣ה כִֽי יְבִֽיאֲךָ֣ יְהוָ֡ה אֶל אֶ֣רֶץ הַֽ֠כְּנַעֲנִי וְהַחִתִּ֨י וְהָאֱמֹרִ֜י וְהַחִוִּ֣י וְהַיְבוּסִ֗י אֲשֶׁ֨ר נִשְׁבַּ֤ע לַאֲבֹתֶ֨יךָ֙ לָ֣תֶת לָ֔ךְ אֶ֛רֶץ זָבַ֥ת חָלָ֖ב וּדְבָ֑שׁ</span> · <i>ve-haya ki-yevia-kha YHWH el-eretz ha-kenaani ve-ha-chiti ve-ha-emori ve-ha-chivi ve-ha-yevusi asher nishba la-avote-kha la-tet la-khe eretz zavat chalav u-devash</i> · and it shall be, when the LORD brings you to the land of the Canaanite and the Hittite and the Amorite and the Hivvite and the Jebusite, which He swore to your fathers to give you, a land flowing with milk and honey (etnachta on u-devash) [VERIFIED: SNAPSHOT Exod.13.5 idx19 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְעָבַדְתָּ֛ אֶת הָעֲבֹדָ֥ה הַזֹּ֖את בַּחֹ֥דֶשׁ הַזֶּֽה</span> · <i>ve-avadta et-ha-avoda ha-zot ba-chodesh ha-ze</i> · you shall serve this service in this month (verse-final ha-ze) [VERIFIED: SNAPSHOT Exod.13.5 idx20-25]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_avadta_et_ha_avoda, t0)</span><br><span class="gloss">= HOLDS(and-avadta-the-avoda, t0)</span><br>THE VENUE. ve-haya khi-YEVI&#x27;AKHA YHWH el-eretz ha-kenaani — &#x27;when the LORD BRINGS YOU&#x27; (the coming-word FULL here — the chapter&#x27;s first skeleton of the pair, its lean twin six verses on [EX13-05]; MS: &#x27;NO break here&#x27; — the printer&#x27;s false parasha struck, asserted; the kaf soft, asserted); the five-nation list with the oath-clause (asher NISHBA la-avotekha — the patriarch-deeds cited again as venue); eretz zavat CHALAV U-DVASH — the milk-and-honey formula (3:8&#x27;s bush-promise language returning in a statute); ve-avadta et- HA-AVODA ha-zot — &#x27;you shall SERVE this SERVICE&#x27;: the avoda- inversion of 12:25 continued: the machine files the diaspora-proof rite — commanded for the land, rehearsed on the road.
+</td><td><span class="he">אֶת־הָעֲבֹדָה הַזֹּאת בַּחֹדֶשׁ הַזֶּה</span> · <i>et-ha-avoda ha-zot ba-chodesh ha-ze</i><br><span class="gloss">= the-avoda the-this in-the-chodesh the-ze</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The land-clause; the full coming-word.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_13_6 · Exod.13.6 · <span class='expr'>SEVEN_DAYS_AND_A_FEAST</span></h3>
+<p><span class="he">שִׁבְעַת יָמִים תֹּאכַל מַצֹּת וּבַיּוֹם הַשְּׁבִיעִי חַג לַיהוָה</span> · <i>shivat yamim tokhal matzot u-va-yom ha-shevii chag la-YHWH</i> · Seven days you shall eat unleavened bread, and on the seventh day is a feast to the LORD.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">שִׁבְעַ֥ת יָמִ֖ים תֹּאכַ֣ל מַצֹּ֑ת</span> · <i>shivat yamim tokhal matzot</i> · seven days you shall eat unleavened bread (etnachta on matzot) [VERIFIED: SNAPSHOT Exod.13.6 idx3 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּבַיּוֹם֙ הַשְּׁבִיעִ֔י חַ֖ג לַיהוָֽה</span> · <i>u-va-yom ha-shevii chag la-YHWH</i> · and on the seventh day is a feast to the LORD (verse-final la-YHWH) [VERIFIED: SNAPSHOT Exod.13.6 idx4-7]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(shivat_yamim_tokhal_matzot, t0)</span><br><span class="gloss">= HOLDS(seven-seas-you-shall-eat-matzot, t0)</span><br>THE WEEK RESTATED. shivat yamim tokhal MATZOT — and the matzot-word is LEAN (the third of the Masorah&#x27;s FOUR — the sign transmitted at 12:18 pays its next station exactly where exo_12 armed it: 12:18, HERE, 29:2, Lev 2:4 [EX12-04&#x27;s grid live]); u-va-yom ha-shevii CHAG la-YHWH — &#x27;on the seventh day a FEAST&#x27;: the chag-word of 12:14&#x27;s card sounding in the relay: the machine files the restatement as the relay&#x27;s summary of the week-deck (one card, exo_12&#x27;s — no new push: resumptive-repetition law).
+</td><td><span class="he">שִׁבְעַת יָמִים תֹּאכַל מַצֹּת</span> · <i>shivat yamim tokhal matzot</i><br><span class="gloss">= seven seas you-shall-eat matzot</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The lean matzot&#x27;s third station.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_13_7 · Exod.13.7 · <span class='expr'>NO_LEAVEN_SEEN</span></h3>
+<p><span class="he">מַצּוֹת יֵאָכֵל אֵת שִׁבְעַת הַיָּמִים וְלֹא־יֵרָאֶה לְךָ חָמֵץ וְלֹא־יֵרָאֶה לְךָ שְׂאֹר בְּכָל־גְּבֻלֶךָ</span> · <i>matzot yeakhel et shivat ha-yamim ve-lo-yerae le-kha chametz ve-lo-yerae le-kha seor be-khal-gevule-kha</i> · Unleavened bread shall be eaten the seven days; and nothing leavened shall be seen for you, and no leaven shall be seen for you in all your border.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">מַצּוֹת֙ יֵֽאָכֵ֔ל אֵ֖ת שִׁבְעַ֣ת הַיָּמִ֑ים</span> · <i>matzot yeakhel et shivat ha-yamim</i> · unleavened bread shall be eaten the seven days (etnachta on ha-yamim) [VERIFIED: SNAPSHOT Exod.13.7 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְלֹֽא יֵרָאֶ֨ה לְךָ֜ חָמֵ֗ץ וְלֹֽא יֵרָאֶ֥ה לְךָ֛ שְׂאֹ֖ר בְּכָל גְּבֻלֶֽךָ</span> · <i>ve-lo-yerae le-kha chametz ve-lo-yerae le-kha seor be-khal-gevule-kha</i> · and nothing leavened shall be seen for you, and no leaven shall be seen for you in all your border (verse-final gevule-kha) [VERIFIED: SNAPSHOT Exod.13.7 idx5-14]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lo_yerae_lekha_chametz, t0)</span><br><span class="gloss">= HOLDS(not-yerae-to-you-chametz, t0)</span><br>THE SEEN-BAN. matzot yeakhel et shivat ha-yamim — the passive again (the bread eats itself into the week, the readings note the impersonal — named-only); ve-LO-YERAE lekha CHAMETZ ve-lo-yerae lekha SEOR — &#x27;nothing leavened shall be SEEN for you&#x27;: the ban escalates from found (12:19) to SEEN — be-khol-GEVULEKHA — &#x27;in all your BORDER&#x27; (the border-word of the locust-threat 10:4 now the leaven-law&#x27;s jurisdiction: the corpus notes the word&#x27;s transfer from plague-geography to festival-geography): the machine files the three-verb ladder — eaten, found, seen — the statute tightening as it repeats.
+</td><td><span class="he">וְלֹא־יֵרָאֶה לְךָ חָמֵץ וְלֹא־יֵרָאֶה</span> · <i>ve-lo-yerae le-kha chametz ve-lo-yerae</i><br><span class="gloss">= and-not-yerae to-kha chametz and-not-yerae</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The seen-ban.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_13_8 · Exod.13.8 · <span class='expr'>AND_YOU_SHALL_TELL_YOUR_SON</span></h3>
+<p><span class="he">וְהִגַּדְתָּ לְבִנְךָ בַּיּוֹם הַהוּא לֵאמֹר בַּעֲבוּר זֶה עָשָׂה יְהוָה לִי בְּצֵאתִי מִמִּצְרָיִם</span> · <i>ve-higadta le-vin-kha ba-yom ha-hu le-mor ba-avur ze asa YHWH li-y be-tzeti-y mi-mitzrayim</i> · And you shall tell your son in that day, saying: For the sake of this the LORD acted for me in my going out from Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהִגַּדְתָּ֣ לְבִנְךָ֔ בַּיּ֥וֹם הַה֖וּא לֵאמֹ֑ר</span> · <i>ve-higadta le-vin-kha ba-yom ha-hu le-mor</i> · and you shall tell your son in that day, saying (etnachta on le-mor) [VERIFIED: SNAPSHOT Exod.13.8 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">בַּעֲב֣וּר זֶ֗ה עָשָׂ֤ה יְהוָה֙ לִ֔י בְּצֵאתִ֖י מִמִּצְרָֽיִם</span> · <i>ba-avur ze asa YHWH li-y be-tzeti-y mi-mitzrayim</i> · for the sake of this the LORD acted for me in my going out from Egypt (verse-final mi-mitzrayim) [VERIFIED: SNAPSHOT Exod.13.8 idx5-11]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_higadta_le_vinkha, t0)</span><br><span class="gloss">= HOLDS(and-higadta-to-vinkha, t0)</span><br>THE TELLING. VE-HIGADTA le-vinkha ba-yom ha-hu — &#x27;and you shall TELL YOUR SON in that day&#x27;: the telling-command proper — the HAGGADA&#x27;S name-verse (10:2&#x27;s story-clause armed, 12:26&#x27;s question-script pushed, now the UNASKED telling commanded: the readings&#x27; four-sons grid completes its third cell — the son who does not know to ask is told unprompted, named-only); BA-AVUR ZE asa YHWH LI — &#x27;for the sake of THIS the LORD acted FOR ME&#x27;: the this-word pointing at the table (the readings: matza and maror before you — named-only) and the FOR- ME that every generation must say of itself (be-tzeti mi-mitzrayim — &#x27;in MY going out&#x27;: the as-if-you-yourself law in the verse&#x27;s own first person): the machine files the corpus&#x27;s memory-engine at its ignition-verse.
+</td><td><span class="he">וְהִגַּדְתָּ לְבִנְךָ בַּיּוֹם הַהוּא לֵאמֹר</span> · <i>ve-higadta le-vin-kha ba-yom ha-hu le-mor</i><br><span class="gloss">= and-higadta to-vin-kha day the-that to-mor</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The Haggada-verse.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_13_9 · Exod.13.9 · <span class='expr'>A_SIGN_ON_YOUR_HAND</span></h3>
+<p><span class="he">וְהָיָה לְךָ לְאוֹת עַל־יָדְךָ וּלְזִכָּרוֹן בֵּין עֵינֶיךָ לְמַעַן תִּהְיֶה תּוֹרַת יְהוָה בְּפִיךָ כִּי בְּיָד חֲזָקָה הוֹצִאֲךָ יְהֹוָה מִמִּצְרָיִם</span> · <i>ve-haya le-kha le-ot al-yad-kha u-le-zikaron ben ene-kha lemaan tihye torat YHWH be-fi-kha ki be-yad chazaqa hotzia-kha YHWH mi-mitzrayim</i> · And it shall be for you for a sign on your hand and for a memorial between your eyes, in order that the Torah of the LORD be in your mouth — for with a strong hand the LORD brought you out from Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהָיָה֩ לְךָ֨ לְא֜וֹת עַל יָדְךָ֗ וּלְזִכָּרוֹן֙ בֵּ֣ין עֵינֶ֔יךָ לְמַ֗עַן תִּהְיֶ֛ה תּוֹרַ֥ת יְהוָ֖ה בְּפִ֑יךָ</span> · <i>ve-haya le-kha le-ot al-yad-kha u-le-zikaron ben ene-kha lemaan tihye torat YHWH be-fi-kha</i> · and it shall be for you for a sign on your hand and for a memorial between your eyes, in order that the Torah of the LORD be in your mouth (etnachta on be-fi-kha) [VERIFIED: SNAPSHOT Exod.13.9 idx12 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּ֚י בְּיָ֣ד חֲזָקָ֔ה הוֹצִֽאֲךָ֥ יְהֹוָ֖ה מִמִּצְרָֽיִם</span> · <i>ki be-yad chazaqa hotzia-kha YHWH mi-mitzrayim</i> · for with a strong hand the LORD brought you out from Egypt (verse-final mi-mitzrayim) [VERIFIED: SNAPSHOT Exod.13.9 idx13-18]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(le_ot_al_yadkha_u_le_zikaron, t0)</span><br><span class="gloss">= HOLDS(to-ot-upon-yadkha-and-to-zikaron, t0)</span><br>THE SIGN. ve-haya lekha LE-OT al-YADKHA u-le-ZIKARON ben ENEKHA — &#x27;a SIGN on your hand, a MEMORIAL between your eyes&#x27;: the tefillin- institution&#x27;s first verse (the ot-ledger of 12:13 moved from the doorpost to the body; the Kitzur&#x27;s ciphers named: the left arm, the Shema in the mouth); lemaan tihye TORAT YHWH be-fikha — &#x27;that the TORAH of the LORD be IN YOUR MOUTH&#x27;: the Torah-word&#x27;s second counted appearance (12:49&#x27;s one-Torah now located: the mouth); ki be-yad chazaqa HOTZA&#x27;AKHA — the strength-formula&#x27;s second sounding, and the brought-you-out word LEAN-yod (VERIFIED pair: here and Deut 7:19 — the Kitzur: &#x27;with the TENTH plague He brought them out&#x27;: the missing yod as the count of the last blow): the machine files the body-sign card under the relay.
+</td><td><span class="he">וְהָיָה לְךָ לְאוֹת עַל־יָדְךָ וּלְזִכָּרוֹן בֵּין עֵינֶיךָ</span> · <i>ve-haya le-kha le-ot al-yad-kha u-le-zikaron ben ene-kha</i><br><span class="gloss">= and-haya to-kha to-ot upon-yad-kha and-to-zikaron ben ene-kha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The first tefillin-verse.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_13_10 · Exod.13.10 · <span class='expr'>AT_ITS_SEASON</span></h3>
+<p><span class="he">וְשָׁמַרְתָּ אֶת־הַחֻקָּה הַזֹּאת לְמוֹעֲדָהּ מִיָּמִים יָמִימָה</span> · <i>ve-shamarta et-ha-chuqa ha-zot le-moada-ה mi-yamim yamima-ה</i> · And you shall keep this statute at its season, from days to days.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְשָׁמַרְתָּ֛ אֶת הַחֻקָּ֥ה הַזֹּ֖את לְמוֹעֲדָ֑הּ</span> · <i>ve-shamarta et-ha-chuqa ha-zot le-moada-ה</i> · and you shall keep this statute (etnachta on le-moada-ה) [VERIFIED: SNAPSHOT Exod.13.10 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">מִיָּמִ֖ים יָמִֽימָה</span> · <i>mi-yamim yamima-ה</i> · at its season, from days to days (verse-final yamima-ה) [VERIFIED: SNAPSHOT Exod.13.10 idx5-6]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(la_moada_mi_yamim_yamima, t0)</span><br><span class="gloss">= HOLDS(to-moada-from-seas-yamima, t0)</span><br>THE SEASON [EX13-08 CROWN]. ve-shamarta et-ha-chuqa ha-zot LE-MOADAH — &#x27;at its SEASON&#x27;: the season-word FULL-vav and Torah-UNIQUE (VERIFIED) — MS: read LAMO EDAH, &#x27;TWO WORDS: a TESTIMONY is it to Israel, that the Name is called upon them&#x27; (the tefillin-verse split into its own witness-formula); the Kitzur counting the vav: six weekdays bound, six festival-days free; MI-YAMIM YAMIMA — &#x27;from days to days&#x27;: BOTH words Torah-unique here (VERIFIED), the Masorah&#x27;s five completed in the Prophets (Jephthah&#x27;s daughter, Shiloh&#x27;s feast, Elkanah, Hannah&#x27;s little coat — named) with the chain&#x27;s law: &#x27;FROM days, not ALL days — Sabbaths and festivals excluded; and by Jephthah&#x27;s daughter: women exempt&#x27;: one adverb carrying the tefillin-calendar, its exemptions, and four yearly pilgrimages of the Prophets.
+</td><td><span class="he">הַזֹּאת לְמוֹעֲדָהּ מִיָּמִים יָמִימָה</span> · <i>ha-zot le-moada-ה mi-yamim yamima-ה</i><br><span class="gloss">= the-this to-moada-ה seas yamima-ה</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The testimony-word.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_13_11 · Exod.13.11 · <span class='expr'>WHEN_HE_BRINGS_YOU_LEAN</span></h3>
+<p><span class="he">וְהָיָה כִּי־יְבִאֲךָ יְהוָה אֶל־אֶרֶץ הַכְּנַעֲנִי כַּאֲשֶׁר נִשְׁבַּע לְךָ וְלַאֲבֹתֶיךָ וּנְתָנָהּ לָךְ</span> · <i>ve-haya ki-yevia-kha YHWH el-eretz ha-kenaani ka-asher nishba le-kha ve-la-avote-kha u-netana-ה la-khe</i> · And it shall be, when the LORD brings you to the land of the Canaanite, as He swore to you and to your fathers, and gives it to you:</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהָיָ֞ה כִּֽי יְבִֽאֲךָ֤ יְהוָה֙ אֶל אֶ֣רֶץ הַֽכְּנַעֲנִ֔י כַּאֲשֶׁ֛ר נִשְׁבַּ֥ע לְךָ֖ וְלַֽאֲבֹתֶ֑יךָ</span> · <i>ve-haya ki-yevia-kha YHWH el-eretz ha-kenaani ka-asher nishba le-kha ve-la-avote-kha</i> · and it shall be, when the LORD brings you to the land of the Canaanite, as He swore to you and to your fathers (etnachta on ve-la-avote-kha) [VERIFIED: SNAPSHOT Exod.13.11 idx10 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וּנְתָנָ֖הּ לָֽךְ</span> · <i>u-netana-ה la-khe</i> · and gives it to you (verse-final la-khe) [VERIFIED: SNAPSHOT Exod.13.11 idx11-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ki_yeviakha_lean, t0)</span><br><span class="gloss">= HOLDS(when-yeviakha-lean, t0)</span><br>THE LEAN COMING [EX13-05 CROWN]. ve-haya ki-YEVI&#x27;AKHA — the coming- word again, now LEAN in its second yod (VERIFIED: the Torah&#x27;s ONE lean station, the Ramah&#x27;s sign this very verse — against 13:5&#x27;s FULL twin six verses back: one chapter, both skeletons) — and MS dismantles the phantom apparatus: &#x27;the PRINTER ERRED who wrote a vav-form in the text and yevi&#x27;akha in the margin as a qere — THERE IS NO KETIV/QERE HERE AT ALL&#x27; (the false variant annulled; R. Yaakov of Beit Levi&#x27;s responsum and the Beit Yosef&#x27;s citation set straight — the press itself the run&#x27;s eighth corrected authority); u-netanah LAKH — &#x27;and GIVES it to you&#x27; (the Kitzur&#x27;s three crownlets on the he named: &#x27;keep the FIVE books and He gives it to you&#x27;): the machine files the conditional&#x27;s frame for the firstborn-laws that follow.
+</td><td><span class="he">וְהָיָה כִּי־יְבִאֲךָ יְהוָה</span> · <i>ve-haya ki-yevia-kha YHWH</i><br><span class="gloss">= and-haya when-yevia-kha the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The lean coming; the annulled qere.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_13_12 · Exod.13.12 · <span class='expr'>PASS_THE_WOMB_OPENERS</span></h3>
+<p><span class="he">וְהַעֲבַרְתָּ כָל־פֶּטֶר־רֶחֶם לַיהֹוָה וְכָל־פֶּטֶר שֶׁגֶר בְּהֵמָה אֲשֶׁר יִהְיֶה לְךָ הַזְּכָרִים לַיהוָה</span> · <i>ve-haavarta khal-peter-rechem la-YHWH ve-khal-peter sheger behema asher yihye le-kha ha-zekharim la-YHWH</i> · Then you shall pass every opener of the womb to the LORD; and every firstling dropped of beast which you have, the males — to the LORD.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהַעֲבַרְתָּ֥ כָל פֶּֽטֶר רֶ֖חֶם לַֽיהֹוָ֑ה</span> · <i>ve-haavarta khal-peter-rechem la-YHWH</i> · then you shall pass every opener of the womb to the LORD (etnachta on la-YHWH) [VERIFIED: SNAPSHOT Exod.13.12 idx4 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְכָל פֶּ֣טֶר שֶׁ֣גֶר בְּהֵמָ֗ה אֲשֶׁ֨ר יִהְיֶ֥ה לְךָ֛ הַזְּכָרִ֖ים לַיהוָֽה</span> · <i>ve-khal-peter sheger behema asher yihye le-kha ha-zekharim la-YHWH</i> · and every firstling dropped of beast which you have, the males — to the LORD (verse-final la-YHWH) [VERIFIED: SNAPSHOT Exod.13.12 idx5-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_haavarta_khol_peter_rechem, t0)</span><br><span class="gloss">= HOLDS(and-haavarta-all-peter-rechem, t0)</span><br>THE TRANSFER. VE-HAAVARTA khol-peter-rechem la-YHWH — &#x27;you shall PASS every womb-opener to the LORD&#x27; (the pass-verb — the readings hear 12:12&#x27;s I-passed-through returned as duty; MS&#x27;s accent-ruling asserted: the word closes on a lengthener or mercha, NOT a tevir, kol raphe beside it); ve-khol-PETER sheger behema — the dropped- firstling clause (VE-KHOL PETER adjacent twice in the Torah, both in this chapter — asserted: 13:12 and 13:13, the law&#x27;s own pair; Bekhorot&#x27;s donkey-of-a-donkey rule named from the Kitzur): ha- zekharim la-YHWH — the males to the LORD: the machine files 13:2&#x27;s card receiving its administration.
+</td><td><span class="he">וְהַעֲבַרְתָּ כָל־פֶּטֶר־רֶחֶם לַיהֹוָה</span> · <i>ve-haavarta khal-peter-rechem la-YHWH</i><br><span class="gloss">= and-haavarta khal-peter-rechem to-the-LORD</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The transfer-verb.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_13_13 · Exod.13.13 · <span class='expr'>THE_DONKEY_AND_THE_LAMB</span></h3>
+<p><span class="he">וְכָל־פֶּטֶר חֲמֹר תִּפְדֶּה בְשֶׂה וְאִם־לֹא תִפְדֶּה וַעֲרַפְתּוֹ וְכֹל בְּכוֹר אָדָם בְּבָנֶיךָ תִּפְדֶּה</span> · <i>ve-khal-peter chamor tifde ve-se ve-im-lo tifde va-araft-o ve-khol bekhor adam be-vane-kha tifde</i> · And every firstling of a donkey you shall redeem with a lamb, and if you do not redeem — you shall break its neck; and every firstborn of man among your sons you shall redeem.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְכָל פֶּ֤טֶר חֲמֹר֙ תִּפְדֶּ֣ה בְשֶׂ֔ה וְאִם לֹ֥א תִפְדֶּ֖ה וַעֲרַפְתּ֑וֹ</span> · <i>ve-khal-peter chamor tifde ve-se ve-im-lo tifde va-araft-o</i> · and every firstling of a donkey you shall redeem with a lamb, and if you do not redeem — you shall break its neck (etnachta on va-araft-o) [VERIFIED: SNAPSHOT Exod.13.13 idx8 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְכֹ֨ל בְּכ֥וֹר אָדָ֛ם בְּבָנֶ֖יךָ תִּפְדֶּֽה</span> · <i>ve-khol bekhor adam be-vane-kha tifde</i> · and every firstborn of man among your sons you shall redeem (verse-final tifde) [VERIFIED: SNAPSHOT Exod.13.13 idx9-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(peter_chamor_tifde_ve_se, t0)</span><br><span class="gloss">= HOLDS(peter-chamor-tifde-and-se, t0)</span><br>THE DONKEY [EX13-07 CROWN]. ve-khol-PETER CHAMOR tifde ve-SE — &#x27;every firstling of a DONKEY you shall redeem with a LAMB&#x27;: the one unclean species with a redemption-rite (the readings: the donkeys that carried Egypt&#x27;s spoil — named-only) — and the donkey-word LEAN by a DREAM (VERIFIED among the five thin skeletons of the letters, the four senses asserted): Berakhot&#x27;s Bar Hedya to Rava — &#x27;the VAV of peter chamor is ERASED in your tefillin&#x27; — Rashi: the scribe wrote it full and SCRAPED IT OUT (the Arukh reading the tale inversely, MS ruling with Rashi and the Ramah): a spelling fixed by a dream about a correction, frozen in every tefillin-scroll since; ve-im-lo tifde VA-ARAFTO — the neck-clause (the unredeemed firstling may not be kept — the readings&#x27; money-lesson, named-only); ve-khol bekhor ADAM be-vanekha TIFDE — man&#x27;s firstborn always redeemed: the machine files the three-species grid.
+</td><td><span class="he">וְכָל־פֶּטֶר חֲמֹר תִּפְדֶּה בְשֶׂה</span> · <i>ve-khal-peter chamor tifde ve-se</i><br><span class="gloss">= and-khal-peter chamor tifde and-se</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The dream-ruled vav.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_13_14 · Exod.13.14 · <span class='expr'>WHEN_YOUR_SON_ASKS_TOMORROW</span></h3>
+<p><span class="he">וְהָיָה כִּי־יִשְׁאָלְךָ בִנְךָ מָחָר לֵאמֹר מַה־זֹּאת וְאָמַרְתָּ אֵלָיו בְּחֹזֶק יָד הוֹצִיאָנוּ יְהוָה מִמִּצְרַיִם מִבֵּית עֲבָדִים</span> · <i>ve-haya ki-yishal-kha vin-kha machar le-mor ma-zot ve-amarta elay-v be-chozeq yad hotzia-nu YHWH mi-mitzrayim mi-bet avadim</i> · And it shall be, when your son asks you tomorrow, saying: What is this? — you shall say to him: By strength of hand the LORD brought us out from Egypt, from the house of slaves.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהָיָ֞ה כִּֽי יִשְׁאָלְךָ֥ בִנְךָ֛ מָחָ֖ר לֵאמֹ֣ר מַה זֹּ֑את</span> · <i>ve-haya ki-yishal-kha vin-kha machar le-mor ma-zot</i> · and it shall be, when your son asks you tomorrow, saying: what is this? (etnachta on zot) [VERIFIED: SNAPSHOT Exod.13.14 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וְאָמַרְתָּ֣ אֵלָ֔יו בְּחֹ֣זֶק יָ֗ד הוֹצִיאָ֧נוּ יְהוָ֛ה מִמִּצְרַ֖יִם מִבֵּ֥ית עֲבָדִֽים</span> · <i>ve-amarta elay-v be-chozeq yad hotzia-nu YHWH mi-mitzrayim mi-bet avadim</i> · you shall say to him: by strength of hand the LORD brought us out from Egypt, from the house of slaves (verse-final avadim) [VERIFIED: SNAPSHOT Exod.13.14 idx8-16]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ki_yishalkha_vinkha_machar, t0)</span><br><span class="gloss">= HOLDS(when-yishalkha-vinkha-machar, t0)</span><br>THE QUESTION. ve-haya ki-YISHALKHA VINKHA machar lemor MA-ZOT — &#x27;when your son ASKS you TOMORROW: WHAT IS THIS?&#x27;: the second question-script (12:26&#x27;s what-is-this-service was the rite&#x27;s son; this is the redemption-law&#x27;s — the readings&#x27; grid fills its simple- son cell: the two-word question answered with the whole formula, named-only; MS&#x27;s accent on yad ruled: the revia, asserted); ve- amarta elav BE-CHOZEQ YAD hotzianu YHWH — the strength-formula&#x27;s third sounding, mi-BET AVADIM again: the machine files the catechism-pair now complete in the relay (asked 12:26, unasked 13:8, asked-tomorrow here): the memory-machine&#x27;s three intake-valves.
+</td><td><span class="he">וְהָיָה כִּי־יִשְׁאָלְךָ בִנְךָ מָחָר לֵאמֹר</span> · <i>ve-haya ki-yishal-kha vin-kha machar le-mor</i><br><span class="gloss">= and-haya when-yishal-kha vin-kha machar to-mor</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The second question-script.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_13_15 · Exod.13.15 · <span class='expr'>WHEN_PHARAOH_HARDENED</span></h3>
+<p><span class="he">וַיְהִי כִּי־הִקְשָׁה פַרְעֹה לְשַׁלְּחֵנוּ וַיַּהֲרֹג יְהֹוָה כָּל־בְּכוֹר בְּאֶרֶץ מִצְרַיִם מִבְּכֹר אָדָם וְעַד־בְּכוֹר בְּהֵמָה עַל־כֵּן אֲנִי זֹבֵחַ לַיהוָה כָּל־פֶּטֶר רֶחֶם הַזְּכָרִים וְכָל־בְּכוֹר בָּנַי אֶפְדֶּה</span> · <i>va-yehi ki-hiqsha faro le-shalche-nu va-yaharog YHWH kal-bekhor be-eretz mitzrayim mi-bekhor adam ve-ad-bekhor behema al-ken ani zovecha la-YHWH kal-peter rechem ha-zekharim ve-khal-bekhor bana-y efde</i> · And it was, when Pharaoh hardened against sending us, the LORD slew every firstborn in the land of Egypt, from the firstborn of man to the firstborn of beast; therefore I sacrifice to the LORD every opener of the womb, the males, and every firstborn of my sons I redeem.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֗י כִּֽי הִקְשָׁ֣ה פַרְעֹה֮ לְשַׁלְּחֵנוּ֒ וַיַּהֲרֹ֨ג יְהֹוָ֤ה כָּל בְּכוֹר֙ בְּאֶ֣רֶץ מִצְרַ֔יִם מִבְּכֹ֥ר אָדָ֖ם וְעַד בְּכ֣וֹר בְּהֵמָ֑ה</span> · <i>va-yehi ki-hiqsha faro le-shalche-nu va-yaharog YHWH kal-bekhor be-eretz mitzrayim mi-bekhor adam ve-ad-bekhor behema</i> · and it was, when Pharaoh hardened against sending us, the LORD slew every firstborn in the land of Egypt, from the firstborn of man to the firstborn of beast (etnachta on behema) [VERIFIED: SNAPSHOT Exod.13.15 idx15 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">עַל כֵּן֩ אֲנִ֨י זֹבֵ֜חַ לַֽיהוָ֗ה כָּל פֶּ֤טֶר רֶ֨חֶם֙ הַזְּכָרִ֔ים וְכָל בְּכ֥וֹר בָּנַ֖י אֶפְדֶּֽה</span> · <i>al-ken ani zovecha la-YHWH kal-peter rechem ha-zekharim ve-khal-bekhor bana-y efde</i> · therefore I sacrifice to the LORD every opener of the womb, the males, and every firstborn of my sons I redeem (verse-final efde) [VERIFIED: SNAPSHOT Exod.13.15 idx16-28]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yehi_ki_hiqsha_paro, t0)</span><br><span class="gloss">= HOLDS(and-yehi-when-hiqsha-paro, t0)</span><br>THE ANSWER [EX13-03; EX13-06; EX13-11 CROWNS]. va-yehi ki-HIQSHA faro le-shalchenu — &#x27;when Pharaoh HARDENED against sending us&#x27;: the father&#x27;s history-lesson names the hardening (the Kitzur&#x27;s Masorah- pair: &#x27;WHO HAS HARDENED against Him AND PROSPERED?&#x27; — Job 9:4, &#x27;which the midrash expounds on Pharaoh&#x27;: the only Scripture that answers this verb is a question with no survivors; Sihon&#x27;s Heaven- hardened spirit asserted in the skeleton&#x27;s spread); va-YAHAROG YHWH kol-bekhor — &#x27;the LORD SLEW&#x27;: the slay-word LEAN and unique (VERIFIED) — guarded by the Talmud&#x27;s child-test (Menachot&#x27;s broken vav: &#x27;bring a child neither wise nor foolish — if he reads VA- YAHAROG, valid; if YEHAREG [He was slain], invalid&#x27;: one letter&#x27;s leg between theology and blasphemy, the Masorah&#x27;s four full slay- words counted without it); mi-BEKHOR adam — LEAN (VERIFIED pair): the deed-verse (12:29) and this memory-verse — the Torah&#x27;s two thin from-firstborns, the forecast (11:5) left full; al-ken ANI ZOVEACH — &#x27;therefore I SACRIFICE&#x27;: the father&#x27;s practice deduced from the father&#x27;s history: the machine files the seder-answer as the redemption-laws&#x27; own etiology (the kol after the Name DAGESHED with no paseq, MS, asserted).
+</td><td><span class="he">וַיְהִי כִּי־הִקְשָׁה פַרְעֹה לְשַׁלְּחֵנוּ וַיַּהֲרֹג</span> · <i>va-yehi ki-hiqsha faro le-shalche-nu va-yaharog</i><br><span class="gloss">= and-yehi when-hiqsha faro to-shalche-nu and-yaharog</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The answer; the child-test; the lean pair.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_13_16 · Exod.13.16 · <span class='expr'>THE_WEAK_HAND</span></h3>
+<p><span class="he">וְהָיָה לְאוֹת עַל־יָדְכָה וּלְטוֹטָפֹת בֵּין עֵינֶיךָ כִּי בְּחֹזֶק יָד הוֹצִיאָנוּ יְהוָה מִמִּצְרָיִם</span> · <i>ve-haya le-ot al-yad-kha u-le-totafot ben ene-kha ki be-chozeq yad hotzia-nu YHWH mi-mitzrayim</i> · And it shall be for a sign on your hand and for frontlets between your eyes — for by strength of hand the LORD brought us out from Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וְהָיָ֤ה לְאוֹת֙ עַל יָ֣דְכָ֔ה וּלְטוֹטָפֹ֖ת בֵּ֣ין עֵינֶ֑יךָ</span> · <i>ve-haya le-ot al-yad-kha u-le-totafot ben ene-kha</i> · and it shall be for a sign on your hand and for frontlets between your eyes (etnachta on ene-kha) [VERIFIED: SNAPSHOT Exod.13.16 idx6 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּ֚י בְּחֹ֣זֶק יָ֔ד הוֹצִיאָ֥נוּ יְהוָ֖ה מִמִּצְרָֽיִם</span> · <i>ki be-chozeq yad hotzia-nu YHWH mi-mitzrayim</i> · for by strength of hand the LORD brought us out from Egypt (verse-final mi-mitzrayim) [VERIFIED: SNAPSHOT Exod.13.16 idx7-12]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(le_ot_al_yadkha_he, t0)</span><br><span class="gloss">= HOLDS(to-ot-upon-yadkha-he, t0)</span><br>THE WEAK HAND [EX13-04 CROWN]. ve-haya le-ot al YADKHA — &#x27;a sign on YOUR HAND&#x27; — written with a FINAL HE, Torah-UNIQUE (VERIFIED; the Ramah: &#x27;bent kaf and full final he — all the rest of the Torah without it&#x27;; one of the Masorah&#x27;s 21 he-ended words): and Rav Ashi reads the letter as law: YAD KEHA — &#x27;the WEAK hand&#x27; — TEFILLIN ON THE LEFT ARM, derived from one quiet he (Rashi on the Torah at this passage; MS&#x27;s wonder at the Zohar placing the derash at Vaetchanan, resolved by his Psalms-rule, named; the Kitzur&#x27;s five crownlets on the he — the five joints to the binding-place — named); u-le-TOTAFOT ben enekha — the frontlets-word (full-first lean-second, MS, asserted; the four-compartments cipher named): the strength- formula&#x27;s FOURTH sounding closes the relay-speech — the strong hand of the LORD remembered on the weak hand of the wearer: the machine seals Moses&#x27; deck.
+</td><td><span class="he">וְהָיָה לְאוֹת עַל־יָדְכָה וּלְטוֹטָפֹת</span> · <i>ve-haya le-ot al-yad-kha u-le-totafot</i><br><span class="gloss">= and-haya to-ot upon-yad-kha and-to-totafot</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The yadkha-with-he.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_13_17 · Exod.13.17 · <span class='expr'>NOT_BY_THE_NEAR_WAY</span></h3>
+<p><span class="he">וַיְהִי בְּשַׁלַּח פַּרְעֹה אֶת־הָעָם וְלֹא־נָחָם אֱלֹהִים דֶּרֶךְ אֶרֶץ פְּלִשְׁתִּים כִּי קָרוֹב הוּא כִּי אָמַר אֱלֹהִים פֶּן־יִנָּחֵם הָעָם בִּרְאֹתָם מִלְחָמָה וְשָׁבוּ מִצְרָיְמָה</span> · <i>va-yehi be-shalach paro et-ha-am ve-lo-nacha-m Elohim derekh eretz pelishtim ki qarov hu ki amar Elohim pen-yinachem ha-am bi-reota-m milchama ve-shavu mitzrayma-ה</i> · And it was, when Pharaoh sent the people, God did not lead them the way of the land of the Philistines, for it was near — for God said: Lest the people repent when they see war, and return to Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיְהִ֗י בְּשַׁלַּ֣ח פַּרְעֹה֮ אֶת הָעָם֒ וְלֹא נָחָ֣ם אֱלֹהִ֗ים דֶּ֚רֶךְ אֶ֣רֶץ פְּלִשְׁתִּ֔ים כִּ֥י קָר֖וֹב ה֑וּא</span> · <i>va-yehi be-shalach paro et-ha-am ve-lo-nacha-m Elohim derekh eretz pelishtim ki qarov hu</i> · and it was, when Pharaoh sent the people, God did not lead them the way of the land of the Philistines, for it was near (etnachta on hu) [VERIFIED: SNAPSHOT Exod.13.17 idx13 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּ֣י אָמַ֣ר אֱלֹהִ֗ים פֶּֽן יִנָּחֵ֥ם הָעָ֛ם בִּרְאֹתָ֥ם מִלְחָמָ֖ה וְשָׁ֥בוּ מִצְרָֽיְמָה</span> · <i>ki amar Elohim pen-yinachem ha-am bi-reota-m milchama ve-shavu mitzrayma-ה</i> · for God said: lest the people repent when they see war, and return to Egypt (verse-final mitzrayma-ה) [VERIFIED: SNAPSHOT Exod.13.17 idx14-23]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_lo_nacham_derekh_pelishtim, t0)</span><br><span class="gloss">= HOLDS(and-not-nacham-derekh-pelishtim, t0)</span><br>THE ROUTE. va-yehi BE-SHALACH paro et-ha-am — &#x27;when Pharaoh SENT&#x27;: the send-verb&#x27;s career closes in a temporal clause (the demand of 5:2, granted 12:31, now the backdrop; the Kitzur&#x27;s cipher asserted at the build: et-ha-am = gam EREV RAV with the kollel — the sent people already counting its multitude); ve-LO-NACHAM elohim derekh eretz pelishtim KI QAROV HU — &#x27;God did NOT LEAD them the way of the Philistines, for it was NEAR&#x27; (asserted; the kaf of ki dageshed, MS, checked at the manifest): the route chosen against geography — PEN YINACHEM ha-am — &#x27;LEST the people REPENT&#x27; (the lead-verb and the repent-verb one skeleton apart: nacham/yinachem — the readings&#x27; wordplay, named-only) — bi-rotam MILCHAMA ve-shavu mitzrayma — &#x27;when they see WAR, and return&#x27;: the return-to-Egypt fear enters the corpus (14:11&#x27;s wish armed, Num 14:4&#x27;s motion armed): the machine files the first divine ROUTING decision — the plot now steered by pedagogy, not geography.
+</td><td><span class="he">וְלֹא־נָחָם אֱלֹהִים דֶּרֶךְ אֶרֶץ פְּלִשְׁתִּים</span> · <i>ve-lo-nacha-m Elohim derekh eretz pelishtim</i><br><span class="gloss">= and-not-nacha-m God derekh earth pelishtim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The routing decision.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_13_18 · Exod.13.18 · <span class='expr'>BY_THE_REED_SEA_ROAD</span></h3>
+<p><span class="he">וַיַּסֵּב אֱלֹהִים אֶת־הָעָם דֶּרֶךְ הַמִּדְבָּר יַם־סוּף וַחֲמֻשִׁים עָלוּ בְנֵי־יִשְׂרָאֵל מֵאֶרֶץ מִצְרָיִם</span> · <i>va-yasev Elohim et-ha-am derekh ha-midbar yam-suf va-chamushim alu vene-yisrael me-eretz mitzrayim</i> · And God turned the people the way of the wilderness of the Reed Sea; and armed the sons of Israel went up from the land of Egypt.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיַּסֵּ֨ב אֱלֹהִ֧ים אֶת הָעָ֛ם דֶּ֥רֶךְ הַמִּדְבָּ֖ר יַם ס֑וּף</span> · <i>va-yasev Elohim et-ha-am derekh ha-midbar yam-suf</i> · and God turned the people the way of the wilderness of the Reed Sea (etnachta on suf) [VERIFIED: SNAPSHOT Exod.13.18 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַחֲמֻשִׁ֛ים עָל֥וּ בְנֵי יִשְׂרָאֵ֖ל מֵאֶ֥רֶץ מִצְרָֽיִם</span> · <i>va-chamushim alu vene-yisrael me-eretz mitzrayim</i> · and armed the sons of Israel went up from the land of Egypt (verse-final mitzrayim) [VERIFIED: SNAPSHOT Exod.13.18 idx8-13]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(derekh_ha_midbar_yam_suf, t0)</span><br><span class="gloss">= HOLDS(derekh-the-midbar-yam-suf, t0)</span><br>THE TURN [EX13-09 CROWN]. va-YASEV elohim et-ha-am derekh ha-midbar YAM-SUF — &#x27;God TURNED the people... the REED SEA road&#x27; (asserted: 10:19&#x27;s first naming pays — the locusts&#x27; grave becomes the nation&#x27;s route; the Kitzur&#x27;s table-derash named: &#x27;He seated them around, as one sets a table in the wilderness&#x27;; MS&#x27;s paseq on elohim beside the darga, and derekh dageshed, asserted); VA-CHAMUSHIM alu — &#x27;and ARMED they went up&#x27;: the armed-word on its thin skeleton (VERIFIED: the qubbutz where the vav is not; the shin raphe) — and the chain arms it three ways: the Mekhilta&#x27;s descending census (one in five — one in fifty — one in five hundred), the Yerushalmi&#x27;s five weapons (the Kitzur listing them), and Rabbenu Bachya reading the missing vav as the destination: &#x27;the Torah GIVEN AT FIFTY DAYS was the purpose of their going up — and the FIFTY mentions of the exodus&#x27;: the armed- word spelled like the number fifty, marching fifty days toward Sinai (19:1 armed).
+</td><td><span class="he">דֶּרֶךְ הַמִּדְבָּר יַם־סוּף</span> · <i>derekh ha-midbar yam-suf</i><br><span class="gloss">= derekh the-midbar yam-suf</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The armed fifty.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_13_19 · Exod.13.19 · <span class='expr'>THE_BONES_OF_JOSEPH</span></h3>
+<p><span class="he">וַיִּקַּח מֹשֶׁה אֶת־עַצְמוֹת יוֹסֵף עִמּוֹ כִּי הַשְׁבֵּעַ הִשְׁבִּיעַ אֶת־בְּנֵי יִשְׂרָאֵל לֵאמֹר פָּקֹד יִפְקֹד אֱלֹהִים אֶתְכֶם וְהַעֲלִיתֶם אֶת־עַצְמֹתַי מִזֶּה אִתְּכֶם</span> · <i>va-yiqach moshe et-atzmot yosef im-o ki hashbea hishbia et-bene yisrael le-mor paqod yifqod Elohim et-khem ve-haalitem et-atzmota-y mi-ze et-khem</i> · And Moses took the bones of Joseph with him; for he had surely sworn the sons of Israel, saying: God will surely visit you, and you shall bring up my bones from here with you.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּקַּ֥ח מֹשֶׁ֛ה אֶת עַצְמ֥וֹת יוֹסֵ֖ף עִמּ֑וֹ</span> · <i>va-yiqach moshe et-atzmot yosef im-o</i> · and Moses took the bones of Joseph with him (etnachta on im-o) [VERIFIED: SNAPSHOT Exod.13.19 idx5 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">כִּי֩ הַשְׁבֵּ֨עַ הִשְׁבִּ֜יעַ אֶת בְּנֵ֤י יִשְׂרָאֵל֙ לֵאמֹ֔ר פָּקֹ֨ד יִפְקֹ֤ד אֱלֹהִים֙ אֶתְכֶ֔ם וְהַעֲלִיתֶ֧ם אֶת עַצְמֹתַ֛י מִזֶּ֖ה אִתְּכֶֽם</span> · <i>ki hashbea hishbia et-bene yisrael le-mor paqod yifqod Elohim et-khem ve-haalitem et-atzmota-y mi-ze et-khem</i> · for he had surely sworn the sons of Israel, saying: God will surely visit you, and you shall bring up my bones from here with you (verse-final et-khem) [VERIFIED: SNAPSHOT Exod.13.19 idx6-21]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yiqach_moshe_et_atzmot_yosef, t0)</span><br><span class="gloss">= HOLDS(and-yiqach-Moses-atzmot-yosef, t0)</span><br>THE BONES [EX13-01 CROWN — THE MARQUEE]. va-YIQACH moshe et-ATZMOT YOSEF imo — &#x27;and Moses TOOK the BONES OF JOSEPH with him&#x27; (the qof DAGESHED, VERIFIED — the taking-verb hardened at the receipt): the corpus&#x27;s longest-armed card PAYS: gen_73 froze the oath at Gen 50:25 (PAQOD YIFQOD — the password&#x27;s double verb, the four-station file closed at 3:16, the receipt pre-armed at this verse since the Genesis-complete fold) — and the verse quotes the password VERBATIM (checked in-verse: paqod yifqod at tokens fourteen-fifteen): the settlement is authored at the fold, the book-boundary crossed; ki HASHBEA HISHBIA — &#x27;he had SURELY SWORN&#x27;: the doubled oath-verb Torah-UNIQUE (VERIFIED), its Scripture-twin SAUL&#x27;S honey-oath (1 Sam 14:28 — the Kitzur: &#x27;as here he made the brothers swear TO MAKE THEIR SONS SWEAR, so there the oath bound even the absent — therefore Jonathan was caught who never heard it&#x27;): the transitive oath that carried a coffin through two centuries, filed beside the oath that nearly killed a prince; ve-haalitem et-ATZMOTAI mi-ze itkhem — the bones&#x27; next leg armed (Josh 24:32, named — the corpus notes the card re-opened toward Shechem: paid to Moses, owed to the land).
+</td><td><span class="he">וַיִּקַּח מֹשֶׁה אֶת־עַצְמוֹת יוֹסֵף</span> · <i>va-yiqach moshe et-atzmot yosef</i><br><span class="gloss">= and-yiqach Moses atzmot yosef</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The oath receipted across the book-boundary.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_13_20 · Exod.13.20 · <span class='expr'>ETHAM_AT_THE_WILDERNESS_EDGE</span></h3>
+<p><span class="he">וַיִּסְעוּ מִסֻּכֹּת וַיַּחֲנוּ בְאֵתָם בִּקְצֵה הַמִּדְבָּר</span> · <i>va-yisu mi-sukot va-yachanu ve-etam bi-qetze ha-midbar</i> · And they journeyed from Succoth, and camped in Etham, at the edge of the wilderness.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַיִּסְע֖וּ מִסֻּכֹּ֑ת</span> · <i>va-yisu mi-sukot</i> · and they journeyed from Succoth (etnachta on mi-sukot) [VERIFIED: SNAPSHOT Exod.13.20 idx1 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">וַיַּחֲנ֣וּ בְאֵתָ֔ם בִּקְצֵ֖ה הַמִּדְבָּֽר</span> · <i>va-yachanu ve-etam bi-qetze ha-midbar</i> · and camped in Etham, at the edge of the wilderness (verse-final ha-midbar) [VERIFIED: SNAPSHOT Exod.13.20 idx2-5]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_yachanu_ve_etam, t0)</span><br><span class="gloss">= HOLDS(and-yachanu-and-etam, t0)</span><br>THE STATION [EX13-10 CROWN]. va-yisu MI-SUKOT — &#x27;they journeyed FROM SUCCOTH&#x27;: the from-Succoth word lean-of-lean (VERIFIED pair: here and the itinerary&#x27;s repeat Num 33:6) — and MS unrolls the Ramah&#x27;s whole BOOTH-GRID: every sukkot-word lean-of-lean except TWO full (the sign: &#x27;in BOOTHS I made Israel dwell,&#x27; Lev 23:43 — the festival&#x27;s reason-verse), Jacob&#x27;s verse carrying both the booth-form and the name-form (asserted), the feast-of-booths unique lean: the station Israel leaves is spelled by the rule-book that spells the holiday — the geography and the festival one file (the corpus notes the wire: the booths of the road become the booths of the command); va-yachanu VE-ETAM bi-qtze ha-midbar — Etham, the wilderness&#x27; edge: the camp-verb debuts (the itinerary-ledger&#x27;s second entry; 14:2&#x27;s turn-back armed).
+</td><td><span class="he">וַיִּסְעוּ מִסֻּכֹּת וַיַּחֲנוּ</span> · <i>va-yisu mi-sukot va-yachanu</i><br><span class="gloss">= and-yisu from-sukot and-yachanu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The itinerary&#x27;s booth-file.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_13_21 · Exod.13.21 · <span class='expr'>PILLAR_OF_CLOUD_PILLAR_OF_FIRE</span></h3>
+<p><span class="he">וַיהוָה הֹלֵךְ לִפְנֵיהֶם יוֹמָם בְּעַמּוּד עָנָן לַנְחֹתָם הַדֶּרֶךְ וְלַיְלָה בְּעַמּוּד אֵשׁ לְהָאִיר לָהֶם לָלֶכֶת יוֹמָם וָלָיְלָה</span> · <i>va-YHWH holekh li-fene-hem yomam be-amud anan la-nechota-m ha-derekh ve-layla be-amud esh le-hair la-hem la-lekhet yomam va-layla</i> · And the LORD was going before them: by day in a pillar of cloud to lead them the way, and by night in a pillar of fire to give them light — to go by day and by night.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וַֽיהוָ֡ה הֹלֵךְ֩ לִפְנֵיהֶ֨ם יוֹמָ֜ם בְּעַמּ֤וּד עָנָן֙ לַנְחֹתָ֣ם הַדֶּ֔רֶךְ וְלַ֛יְלָה בְּעַמּ֥וּד אֵ֖שׁ לְהָאִ֣יר לָהֶ֑ם</span> · <i>va-YHWH holekh li-fene-hem yomam be-amud anan la-nechota-m ha-derekh ve-layla be-amud esh le-hair la-hem</i> · and the LORD was going before them: by day in a pillar of cloud to lead them the way, and by night in a pillar of fire to give them light (etnachta on la-hem) [VERIFIED: SNAPSHOT Exod.13.21 idx12 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לָלֶ֖כֶת יוֹמָ֥ם וָלָֽיְלָה</span> · <i>la-lekhet yomam va-layla</i> · to go by day and by night (verse-final va-layla) [VERIFIED: SNAPSHOT Exod.13.21 idx13-15]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(amud_anan_ve_amud_esh, t0)</span><br><span class="gloss">= HOLDS(amud-anan-and-amud-esh, t0)</span><br>THE PILLARS. va-YHWH holekh LIFNEHEM — &#x27;and the LORD was GOING BEFORE THEM&#x27;: the guidance-machinery installed (yomam be-AMUD ANAN... ve-layla be-AMUD ESH — cloud to lead, fire to light; MS: NO lengthener in the lamed of la-nechotam, asserted); and the night- word stands TWICE IN THIS VERSE (asserted: ve-layla at tokens nine and sixteen — the Kitzur&#x27;s SIX across Scripture named, with the wire lit: &#x27;night SHONE about me,&#x27; &#x27;night bright as DAY,&#x27; and &#x27;this night REVEALS KNOWLEDGE to the night of SISERA&#x27; — the stars that fought from their courses read back into the fire-pillar): la-lekhet yomam VA-LAYLA — the march released from the clock: the machine files the corpus&#x27;s first standing miracle — not an event but an INFRASTRUCTURE.
+</td><td><span class="he">וַיהוָה הֹלֵךְ לִפְנֵיהֶם יוֹמָם בְּעַמּוּד עָנָן</span> · <i>va-YHWH holekh li-fene-hem yomam be-amud anan</i><br><span class="gloss">= and-the-LORD holekh to-me-fene-hem yomam in-amud anan</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The doubled night.</div>
+</div>
+<div class="step">
+<h3>STEP_Ex_13_22 · Exod.13.22 · <span class='expr'>IT_SHALL_NOT_DEPART</span></h3>
+<p><span class="he">לֹא־יָמִישׁ עַמּוּד הֶעָנָן יוֹמָם וְעַמּוּד הָאֵשׁ לָיְלָה לִפְנֵי הָעָם</span> · <i>lo-yamish amud he-anan yomam ve-amud ha-esh layla li-fene ha-am</i> · The pillar of cloud shall not depart by day, nor the pillar of fire by night, before the people.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">לֹֽא יָמִ֞ישׁ עַמּ֤וּד הֶֽעָנָן֙ יוֹמָ֔ם וְעַמּ֥וּד הָאֵ֖שׁ לָ֑יְלָה</span> · <i>lo-yamish amud he-anan yomam ve-amud ha-esh layla</i> · the pillar of cloud shall not depart by day, nor the pillar of fire by night (etnachta on layla) [VERIFIED: SNAPSHOT Exod.13.22 idx7 etnachta in-stream]</div><div class="arm"><b>RIGHT</b><br><span class="he">לִפְנֵ֖י הָעָֽם</span> · <i>li-fene ha-am</i> · before the people (verse-final ha-am) [VERIFIED: SNAPSHOT Exod.13.22 idx8-9]</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lo_yamish_amud_he_anan, t0)</span><br><span class="gloss">= HOLDS(not-yamish-amud-he-anan, t0)</span><br>THE PERMANENCE [EX13-02 CROWN]. LO YAMISH amud he-anan yomam ve-amud ha-esh layla — &#x27;it shall NOT DEPART&#x27;: the not-depart frame&#x27;s exact Torah-pair (VERIFIED): the pillars here — and JOSHUA (Exod 33:11: &#x27;his attendant, the youth, DID NOT DEPART from within the tent&#x27;): the Kitzur — &#x27;as the clouds RELIEVED one another, so Joshua: learning by the fire-pillar&#x27;s last light and the cloud&#x27;s first — as the pillars never departed, Joshua never departed, AND THEREFORE HE MERITED TO GO BEFORE THE PEOPLE&#x27; (the leadership-succession read from a shared verb: the one who would not leave the tent inherits the office of the pillar that would not leave the people); LIFNE ha- am — &#x27;BEFORE the people&#x27; (not MI-lifne, asserted — the Kitzur: at the seams BOTH stood before them, the fire rising while the cloud still burned): the machine closes the unit on the standing guard — the book&#x27;s next verse will turn the column toward the sea.
+</td><td><span class="he">לֹא־יָמִישׁ עַמּוּד הֶעָנָן</span> · <i>lo-yamish amud he-anan</i><br><span class="gloss">= not-yamish amud he-anan</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The Joshua pair.</div>
+</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>after STEP_Ex_13_1 — the frame</td><td>And the LORD spoke to Moses, saying:</td><td>no test, no name.</td><td><span class="he">וַיְדַבֵּ֥ר יְהוָ֖ה אֶל מֹשֶׁ֥ה</span> · <i>va-yedaber YHWH el-moshe</i><br><span class="gloss">= and-yedaber the-LORD to-Moses</span></td></tr>
+<tr><td><b>S2</b></td><td>after STEP_Ex_13_2 — consecrate the firstborn</td><td>Consecrate to Me every firstborn, opener of every womb among the sons of Israel, in man and in beast — Mine is it.</td><td>LET(qadesh_li_khol_bekhor) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qadesh-to-me-all-bekhor) pushed and OPEN; no test, no name.</span></td><td><span class="he">קַדֶּשׁ לִ֨י כָל בְּכ֜וֹר</span> · <i>qadesh-li-y khal-bekhor</i><br><span class="gloss">= qadesh-to-me-y khal-bekhor</span></td></tr>
+<tr><td><b>S3</b></td><td>after STEP_Ex_13_3 — remember this day</td><td>And Moses said to the people: Remember this day on which you went out from Egypt, from the house of slaves — for by strength of hand the LORD brought you out from this place; and no leavened bread shall be eaten.</td><td>LET(qadesh_li_khol_bekhor) pushed and OPEN; LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qadesh-to-me-all-bekhor) pushed and OPEN; LET(zakhor-the-day-the-ze) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיֹּ֨אמֶר מֹשֶׁ֜ה אֶל הָעָ֗ם</span> · <i>va-yomer moshe el-ha-am</i><br><span class="gloss">= and-yomer Moses to-the-am</span></td></tr>
+<tr><td><b>S4</b></td><td>after STEP_Ex_13_4 — in the month of the Aviv</td><td>Today you are going out, in the month of the Aviv.</td><td>LET(qadesh_li_khol_bekhor) pushed and OPEN; LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qadesh-to-me-all-bekhor) pushed and OPEN; LET(zakhor-the-day-the-ze) pushed and OPEN; no test, no name.</span></td><td><span class="he">הַיּ֖וֹם אַתֶּ֣ם יֹצְאִ֑ים בְּחֹ֖דֶשׁ</span> · <i>ha-yom atem yotzim be-chodesh</i><br><span class="gloss">= day atem yotzim in-chodesh</span></td></tr>
+<tr><td><b>S5</b></td><td>after STEP_Ex_13_5 — the service in the land</td><td>And it shall be, when the LORD brings you to the land of the Canaanite and the Hittite and the Amorite and the Hivvite and the Jebusite, which He swore to your fathers to give you, a land flowing with milk and honey — you shall serve this service in this month.</td><td>LET(qadesh_li_khol_bekhor) pushed and OPEN; LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qadesh-to-me-all-bekhor) pushed and OPEN; LET(zakhor-the-day-the-ze) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהָיָ֣ה כִֽי יְבִֽיאֲךָ֣ יְהוָ֡ה</span> · <i>ve-haya ki-yevia-kha YHWH</i><br><span class="gloss">= and-haya when-yevia-kha the-LORD</span></td></tr>
+<tr><td><b>S6</b></td><td>after STEP_Ex_13_6 — seven days and a feast</td><td>Seven days you shall eat unleavened bread, and on the seventh day is a feast to the LORD.</td><td>LET(qadesh_li_khol_bekhor) pushed and OPEN; LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qadesh-to-me-all-bekhor) pushed and OPEN; LET(zakhor-the-day-the-ze) pushed and OPEN; no test, no name.</span></td><td><span class="he">שִׁבְעַ֥ת יָמִ֖ים תֹּאכַ֣ל מַצֹּ֑ת</span> · <i>shivat yamim tokhal matzot</i><br><span class="gloss">= seven seas you-shall-eat matzot</span></td></tr>
+<tr><td><b>S7</b></td><td>after STEP_Ex_13_7 — no leaven seen</td><td>Unleavened bread shall be eaten the seven days; and nothing leavened shall be seen for you, and no leaven shall be seen for you in all your border.</td><td>LET(qadesh_li_khol_bekhor) pushed and OPEN; LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qadesh-to-me-all-bekhor) pushed and OPEN; LET(zakhor-the-day-the-ze) pushed and OPEN; no test, no name.</span></td><td><span class="he">מַצּוֹת֙ יֵֽאָכֵ֔ל אֵ֖ת שִׁבְעַ֣ת</span> · <i>matzot yeakhel et shivat</i><br><span class="gloss">= matzot yeakhel et seven</span></td></tr>
+<tr><td><b>S8</b></td><td>after STEP_Ex_13_8 — and you shall tell your son</td><td>And you shall tell your son in that day, saying: For the sake of this the LORD acted for me in my going out from Egypt.</td><td>LET(qadesh_li_khol_bekhor) pushed and OPEN; LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qadesh-to-me-all-bekhor) pushed and OPEN; LET(zakhor-the-day-the-ze) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהִגַּדְתָּ֣ לְבִנְךָ֔ בַּיּ֥וֹם הַה֖וּא</span> · <i>ve-higadta le-vin-kha ba-yom ha-hu</i><br><span class="gloss">= and-higadta to-vin-kha day the-that</span></td></tr>
+<tr><td><b>S9</b></td><td>after STEP_Ex_13_9 — a sign on your hand</td><td>And it shall be for you for a sign on your hand and for a memorial between your eyes, in order that the Torah of the LORD be in your mouth — for with a strong hand the LORD brought you out from Egypt.</td><td>LET(qadesh_li_khol_bekhor) pushed and OPEN; LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qadesh-to-me-all-bekhor) pushed and OPEN; LET(zakhor-the-day-the-ze) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהָיָה֩ לְךָ֨ לְא֜וֹת עַל</span> · <i>ve-haya le-kha le-ot al-</i><br><span class="gloss">= and-haya to-kha to-ot upon</span></td></tr>
+<tr><td><b>S10</b></td><td>after STEP_Ex_13_10 — at its season</td><td>And you shall keep this statute at its season, from days to days.</td><td>LET(qadesh_li_khol_bekhor) pushed and OPEN; LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qadesh-to-me-all-bekhor) pushed and OPEN; LET(zakhor-the-day-the-ze) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְשָׁמַרְתָּ֛ אֶת הַחֻקָּ֥ה הַזֹּ֖את</span> · <i>ve-shamarta et-ha-chuqa ha-zot</i><br><span class="gloss">= and-shamarta the-chuqa the-this</span></td></tr>
+<tr><td><b>S11</b></td><td>after STEP_Ex_13_11 — when He brings you (lean)</td><td>And it shall be, when the LORD brings you to the land of the Canaanite, as He swore to you and to your fathers, and gives it to you:</td><td>LET(qadesh_li_khol_bekhor) pushed and OPEN; LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qadesh-to-me-all-bekhor) pushed and OPEN; LET(zakhor-the-day-the-ze) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהָיָ֞ה כִּֽי יְבִֽאֲךָ֤ יְהוָה֙</span> · <i>ve-haya ki-yevia-kha YHWH</i><br><span class="gloss">= and-haya when-yevia-kha the-LORD</span></td></tr>
+<tr><td><b>S12</b></td><td>after STEP_Ex_13_12 — pass the womb-openers</td><td>Then you shall pass every opener of the womb to the LORD; and every firstling dropped of beast which you have, the males — to the LORD.</td><td>LET(qadesh_li_khol_bekhor) pushed and OPEN; LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qadesh-to-me-all-bekhor) pushed and OPEN; LET(zakhor-the-day-the-ze) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהַעֲבַרְתָּ֥ כָל פֶּֽטֶר רֶ֖חֶם</span> · <i>ve-haavarta khal-peter-rechem</i><br><span class="gloss">= and-haavarta khal-peter-rechem</span></td></tr>
+<tr><td><b>S13</b></td><td>after STEP_Ex_13_13 — the donkey and the lamb</td><td>And every firstling of a donkey you shall redeem with a lamb, and if you do not redeem — you shall break its neck; and every firstborn of man among your sons you shall redeem.</td><td>LET(qadesh_li_khol_bekhor) pushed and OPEN; LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qadesh-to-me-all-bekhor) pushed and OPEN; LET(zakhor-the-day-the-ze) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְכָל פֶּ֤טֶר חֲמֹר֙ תִּפְדֶּ֣ה</span> · <i>ve-khal-peter chamor tifde</i><br><span class="gloss">= and-khal-peter chamor tifde</span></td></tr>
+<tr><td><b>S14</b></td><td>after STEP_Ex_13_14 — when your son asks tomorrow</td><td>And it shall be, when your son asks you tomorrow, saying: What is this? — you shall say to him: By strength of hand the LORD brought us out from Egypt, from the house of slaves.</td><td>LET(qadesh_li_khol_bekhor) pushed and OPEN; LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qadesh-to-me-all-bekhor) pushed and OPEN; LET(zakhor-the-day-the-ze) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהָיָ֞ה כִּֽי יִשְׁאָלְךָ֥ בִנְךָ֛</span> · <i>ve-haya ki-yishal-kha vin-kha</i><br><span class="gloss">= and-haya when-yishal-kha vin-kha</span></td></tr>
+<tr><td><b>S15</b></td><td>after STEP_Ex_13_15 — when Pharaoh hardened</td><td>And it was, when Pharaoh hardened against sending us, the LORD slew every firstborn in the land of Egypt, from the firstborn of man to the firstborn of beast; therefore I sacrifice to the LORD every opener of the womb, the males, and every firstborn of my sons I redeem.</td><td>LET(qadesh_li_khol_bekhor) pushed and OPEN; LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qadesh-to-me-all-bekhor) pushed and OPEN; LET(zakhor-the-day-the-ze) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְהִ֗י כִּֽי הִקְשָׁ֣ה פַרְעֹה֮</span> · <i>va-yehi ki-hiqsha faro</i><br><span class="gloss">= and-yehi when-hiqsha faro</span></td></tr>
+<tr><td><b>S16</b></td><td>after STEP_Ex_13_16 — the weak hand</td><td>And it shall be for a sign on your hand and for frontlets between your eyes — for by strength of hand the LORD brought us out from Egypt.</td><td>LET(qadesh_li_khol_bekhor) pushed and OPEN; LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qadesh-to-me-all-bekhor) pushed and OPEN; LET(zakhor-the-day-the-ze) pushed and OPEN; no test, no name.</span></td><td><span class="he">וְהָיָ֤ה לְאוֹת֙ עַל יָ֣דְכָ֔ה</span> · <i>ve-haya le-ot al-yad-kha</i><br><span class="gloss">= and-haya to-ot upon-yad-kha</span></td></tr>
+<tr><td><b>S17</b></td><td>after STEP_Ex_13_17 — not by the near way</td><td>And it was, when Pharaoh sent the people, God did not lead them the way of the land of the Philistines, for it was near — for God said: Lest the people repent when they see war, and return to Egypt.</td><td>LET(qadesh_li_khol_bekhor) pushed and OPEN; LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qadesh-to-me-all-bekhor) pushed and OPEN; LET(zakhor-the-day-the-ze) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיְהִ֗י בְּשַׁלַּ֣ח פַּרְעֹה֮ אֶת</span> · <i>va-yehi be-shalach paro et-</i><br><span class="gloss">= and-yehi in-shalach paro et-</span></td></tr>
+<tr><td><b>S18</b></td><td>after STEP_Ex_13_18 — by the Reed Sea road</td><td>And God turned the people the way of the wilderness of the Reed Sea; and armed the sons of Israel went up from the land of Egypt.</td><td>LET(qadesh_li_khol_bekhor) pushed and OPEN; LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qadesh-to-me-all-bekhor) pushed and OPEN; LET(zakhor-the-day-the-ze) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיַּסֵּ֨ב אֱלֹהִ֧ים אֶת הָעָ֛ם</span> · <i>va-yasev Elohim et-ha-am</i><br><span class="gloss">= and-yasev God the-am</span></td></tr>
+<tr><td><b>S19</b></td><td>after STEP_Ex_13_19 — the bones of Joseph</td><td>And Moses took the bones of Joseph with him; for he had surely sworn the sons of Israel, saying: God will surely visit you, and you shall bring up my bones from here with you.</td><td>LET(qadesh_li_khol_bekhor) pushed and OPEN; LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qadesh-to-me-all-bekhor) pushed and OPEN; LET(zakhor-the-day-the-ze) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּקַּ֥ח מֹשֶׁ֛ה אֶת עַצְמ֥וֹת</span> · <i>va-yiqach moshe et-atzmot</i><br><span class="gloss">= and-yiqach Moses atzmot</span></td></tr>
+<tr><td><b>S20</b></td><td>after STEP_Ex_13_20 — Etham at the wilderness edge</td><td>And they journeyed from Succoth, and camped in Etham, at the edge of the wilderness.</td><td>LET(qadesh_li_khol_bekhor) pushed and OPEN; LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qadesh-to-me-all-bekhor) pushed and OPEN; LET(zakhor-the-day-the-ze) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַיִּסְע֖וּ מִסֻּכֹּ֑ת וַיַּחֲנ֣וּ בְאֵתָ֔ם</span> · <i>va-yisu mi-sukot va-yachanu ve-etam</i><br><span class="gloss">= and-yisu from-sukot and-yachanu and-etam</span></td></tr>
+<tr><td><b>S21</b></td><td>after STEP_Ex_13_21 — pillar of cloud, pillar of fire</td><td>And the LORD was going before them: by day in a pillar of cloud to lead them the way, and by night in a pillar of fire to give them light — to go by day and by night.</td><td>LET(qadesh_li_khol_bekhor) pushed and OPEN; LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qadesh-to-me-all-bekhor) pushed and OPEN; LET(zakhor-the-day-the-ze) pushed and OPEN; no test, no name.</span></td><td><span class="he">וַֽיהוָ֡ה הֹלֵךְ֩ לִפְנֵיהֶ֨ם יוֹמָ֜ם</span> · <i>va-YHWH holekh li-fene-hem yomam</i><br><span class="gloss">= and-the-LORD holekh to-me-fene-hem yomam</span></td></tr>
+<tr><td><b>S22</b></td><td>after STEP_Ex_13_22 — it shall not depart</td><td>The pillar of cloud shall not depart by day, nor the pillar of fire by night, before the people.</td><td>LET(qadesh_li_khol_bekhor) pushed and OPEN; LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN; no test, no name.<br><span class="gloss">= LET(qadesh-to-me-all-bekhor) pushed and OPEN; LET(zakhor-the-day-the-ze) pushed and OPEN; no test, no name.</span></td><td><span class="he">לֹֽא יָמִ֞ישׁ עַמּ֤וּד הֶֽעָנָן֙</span> · <i>lo-yamish amud he-anan</i><br><span class="gloss">= not-yamish amud he-anan</span></td></tr>
+</table>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: exo_13_consecration_and_pillars — Consecration and pillars (13:1-22) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — after STEP_Ex_13_1 — the frame
+    וַיְדַבֵּ֥ר יְהוָ֖ה אֶל מֹשֶׁ֥ה (va-yedaber YHWH el-moshe)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S2 — after STEP_Ex_13_2 — consecrate the firstborn
+    קַדֶּשׁ לִ֨י כָל בְּכ֜וֹר (qadesh-li-y khal-bekhor)
+    PASS  LET(qadesh_li_khol_bekhor) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — after STEP_Ex_13_3 — remember this day
+    וַיֹּ֨אמֶר מֹשֶׁ֜ה אֶל הָעָ֗ם (va-yomer moshe el-ha-am)
+    PASS  LET(qadesh_li_khol_bekhor) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S4 — after STEP_Ex_13_4 — in the month of the Aviv
+    הַיּ֖וֹם אַתֶּ֣ם יֹצְאִ֑ים בְּחֹ֖דֶשׁ (ha-yom atem yotzim be-chodesh)
+    PASS  LET(qadesh_li_khol_bekhor) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S5 — after STEP_Ex_13_5 — the service in the land
+    וְהָיָ֣ה כִֽי יְבִֽיאֲךָ֣ יְהוָ֡ה (ve-haya ki-yevia-kha YHWH)
+    PASS  LET(qadesh_li_khol_bekhor) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S6 — after STEP_Ex_13_6 — seven days and a feast
+    שִׁבְעַ֥ת יָמִ֖ים תֹּאכַ֣ל מַצֹּ֑ת (shivat yamim tokhal matzot)
+    PASS  LET(qadesh_li_khol_bekhor) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — after STEP_Ex_13_7 — no leaven seen
+    מַצּוֹת֙ יֵֽאָכֵ֔ל אֵ֖ת שִׁבְעַ֣ת (matzot yeakhel et shivat)
+    PASS  LET(qadesh_li_khol_bekhor) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S8 — after STEP_Ex_13_8 — and you shall tell your son
+    וְהִגַּדְתָּ֣ לְבִנְךָ֔ בַּיּ֥וֹם הַה֖וּא (ve-higadta le-vin-kha ba-yom ha-hu)
+    PASS  LET(qadesh_li_khol_bekhor) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S9 — after STEP_Ex_13_9 — a sign on your hand
+    וְהָיָה֩ לְךָ֨ לְא֜וֹת עַל (ve-haya le-kha le-ot al-)
+    PASS  LET(qadesh_li_khol_bekhor) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S10 — after STEP_Ex_13_10 — at its season
+    וְשָׁמַרְתָּ֛ אֶת הַחֻקָּ֥ה הַזֹּ֖את (ve-shamarta et-ha-chuqa ha-zot)
+    PASS  LET(qadesh_li_khol_bekhor) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S11 — after STEP_Ex_13_11 — when He brings you (lean)
+    וְהָיָ֞ה כִּֽי יְבִֽאֲךָ֤ יְהוָה֙ (ve-haya ki-yevia-kha YHWH)
+    PASS  LET(qadesh_li_khol_bekhor) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S12 — after STEP_Ex_13_12 — pass the womb-openers
+    וְהַעֲבַרְתָּ֥ כָל פֶּֽטֶר רֶ֖חֶם (ve-haavarta khal-peter-rechem)
+    PASS  LET(qadesh_li_khol_bekhor) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S13 — after STEP_Ex_13_13 — the donkey and the lamb
+    וְכָל פֶּ֤טֶר חֲמֹר֙ תִּפְדֶּ֣ה (ve-khal-peter chamor tifde)
+    PASS  LET(qadesh_li_khol_bekhor) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S14 — after STEP_Ex_13_14 — when your son asks tomorrow
+    וְהָיָ֞ה כִּֽי יִשְׁאָלְךָ֥ בִנְךָ֛ (ve-haya ki-yishal-kha vin-kha)
+    PASS  LET(qadesh_li_khol_bekhor) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S15 — after STEP_Ex_13_15 — when Pharaoh hardened
+    וַיְהִ֗י כִּֽי הִקְשָׁ֣ה פַרְעֹה֮ (va-yehi ki-hiqsha faro)
+    PASS  LET(qadesh_li_khol_bekhor) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S16 — after STEP_Ex_13_16 — the weak hand
+    וְהָיָ֤ה לְאוֹת֙ עַל יָ֣דְכָ֔ה (ve-haya le-ot al-yad-kha)
+    PASS  LET(qadesh_li_khol_bekhor) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S17 — after STEP_Ex_13_17 — not by the near way
+    וַיְהִ֗י בְּשַׁלַּ֣ח פַּרְעֹה֮ אֶת (va-yehi be-shalach paro et-)
+    PASS  LET(qadesh_li_khol_bekhor) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S18 — after STEP_Ex_13_18 — by the Reed Sea road
+    וַיַּסֵּ֨ב אֱלֹהִ֧ים אֶת הָעָ֛ם (va-yasev Elohim et-ha-am)
+    PASS  LET(qadesh_li_khol_bekhor) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S19 — after STEP_Ex_13_19 — the bones of Joseph
+    וַיִּקַּ֥ח מֹשֶׁ֛ה אֶת עַצְמ֥וֹת (va-yiqach moshe et-atzmot)
+    PASS  LET(qadesh_li_khol_bekhor) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S20 — after STEP_Ex_13_20 — Etham at the wilderness edge
+    וַיִּסְע֖וּ מִסֻּכֹּ֑ת וַיַּחֲנ֣וּ בְאֵתָ֔ם (va-yisu mi-sukot va-yachanu ve-etam)
+    PASS  LET(qadesh_li_khol_bekhor) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S21 — after STEP_Ex_13_21 — pillar of cloud, pillar of fire
+    וַֽיהוָ֡ה הֹלֵךְ֩ לִפְנֵיהֶ֨ם יוֹמָ֜ם (va-YHWH holekh li-fene-hem yomam)
+    PASS  LET(qadesh_li_khol_bekhor) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S22 — after STEP_Ex_13_22 — it shall not depart
+    לֹֽא יָמִ֞ישׁ עַמּ֤וּד הֶֽעָנָן֙ (lo-yamish amud he-anan)
+    PASS  LET(qadesh_li_khol_bekhor) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  LET(zakhor_et_ha_yom_ha_ze) pushed and OPEN  (queue=[&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;])
+    PASS  no test, no name.  (tests=0 names=0)
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/exo_13_consecration_and_pillars.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# exo_13_consecration_and_pillars — 13:1-22
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/exo_13_consecration_and_pillars.yaml) is CANONICAL
+# (Pre-Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;Consecration and pillars (13:1-22)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;exo_13_consecration_and_pillars&quot;)
+
+# -------------------------- Exod.13.1 · THE_FRAME --------------------------
+# וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר
+# &quot;[EN-AID] And the LORD spoke to Moses, saying:&quot;
+m.step(&quot;Exod.13.1&quot;)
+# ‹וַיְדַבֵּר יְהוָה אֶל־מֹשֶׁה לֵּאמֹר› (“and-speak YHWH to Moses to-say”)
+# — fact holds: and-speak-to-Moses
+m.fact(&quot;va_yedaber_el_moshe&quot;)
+
+# -------------------------- Exod.13.2 · CONSECRATE_THE_FIRSTBORN -----------
+# קַדֶּשׁ־לִי כָל־בְּכוֹר פֶּטֶר כָּל־רֶחֶם בִּבְנֵי יִשְׂרָאֵל בָּאָדָם
+# וּבַבְּהֵמָה לִי הוּא
+# &quot;[EN-AID] Consecrate to Me every firstborn, opener of every womb among the
+# sons of Israel, in man and in beast — Mine is it.&quot;
+m.step(&quot;Exod.13.2&quot;)
+# ‹קַדֶּשׁ־לִי כָל־בְּכוֹר› (“sanctify to-me/my all firstborn”) — the-LORD
+# speaks a demand — LET: sanctify-to-me-all-firstborn
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;qadesh_li_khol_bekhor&quot;)
+
+# -------------------------- Exod.13.3 · REMEMBER_THIS_DAY ------------------
+# וַיֹּאמֶר מֹשֶׁה אֶל־הָעָם זָכוֹר אֶת־הַיּוֹם הַזֶּה אֲשֶׁר יְצָאתֶם
+# מִמִּצְרַיִם מִבֵּית עֲבָדִים כִּי בְּחֹזֶק יָד הוֹצִיא יְהֹוָה אֶתְכֶם
+# מִזֶּה וְלֹא יֵאָכֵל חָמֵץ
+# &quot;[EN-AID] And Moses said to the people: Remember this day on which you
+# went out from Egypt, from the house of slaves — for by strength of hand
+# the LORD brought you out from this place; and no leavened bread shall be
+# eaten.&quot;
+m.step(&quot;Exod.13.3&quot;)
+# ‹זָכוֹר אֶת־הַיּוֹם הַזֶּה› (“mark obj-marker the-day the-this”) — Moses
+# speaks a demand — LET: mark-obj-marker-the-day-the-this
+m.declare(&quot;moshe&quot;, &quot;LET&quot;,
+          &quot;zakhor_et_ha_yom_ha_ze&quot;)
+
+# -------------------------- Exod.13.4 · IN_THE_MONTH_OF_AVIV ---------------
+# הַיּוֹם אַתֶּם יֹצְאִים בְּחֹדֶשׁ הָאָבִיב
+# &quot;[EN-AID] Today you are going out, in the month of the Aviv.&quot;
+m.step(&quot;Exod.13.4&quot;)
+# ‹הַיּוֹם אַתֶּם יֹצְאִים בְּחֹדֶשׁ הָאָבִיב› (“the-day you bring-forth in-
+# new-moon the-green”) — fact holds: in-new-moon-the-green
+m.fact(&quot;be_chodesh_ha_aviv&quot;)
+
+# -------------------------- Exod.13.5 · THE_SERVICE_IN_THE_LAND ------------
+# וְהָיָה כִי־יְבִיאֲךָ יְהוָה אֶל־אֶרֶץ הַכְּנַעֲנִי וְהַחִתִּי וְהָאֱמֹרִי
+# וְהַחִוִּי וְהַיְבוּסִי אֲשֶׁר נִשְׁבַּע לַאֲבֹתֶיךָ לָתֶת לָךְ אֶרֶץ
+# זָבַת חָלָב וּדְבָשׁ וְעָבַדְתָּ אֶת־הָעֲבֹדָה הַזֹּאת בַּחֹדֶשׁ הַזֶּה
+# &quot;[EN-AID] And it shall be, when the LORD brings you to the land of the
+# Canaanite and the Hittite and the Amorite and the Hivvite and the
+# Jebusite, which He swore to your fathers to give you, a land flowing with
+# milk and honey — you shall serve this service in this month.&quot;
+m.step(&quot;Exod.13.5&quot;)
+# ‹אֶת־הָעֲבֹדָה הַזֹּאת בַּחֹדֶשׁ הַזֶּה› (“obj-marker the-service/work
+# the-this in-new-moon the-this”) — fact holds: and-work/serve-obj-marker-
+# the-service/work
+m.fact(&quot;ve_avadta_et_ha_avoda&quot;)
+
+# -------------------------- Exod.13.6 · SEVEN_DAYS_AND_A_FEAST -------------
+# שִׁבְעַת יָמִים תֹּאכַל מַצֹּת וּבַיּוֹם הַשְּׁבִיעִי חַג לַיהוָה
+# &quot;[EN-AID] Seven days you shall eat unleavened bread, and on the seventh
+# day is a feast to the LORD.&quot;
+m.step(&quot;Exod.13.6&quot;)
+# ‹שִׁבְעַת יָמִים תֹּאכַל מַצֹּת› (“seven day eat sweetness”) — fact holds:
+# seven-day-eat-sweetness
+m.fact(&quot;shivat_yamim_tokhal_matzot&quot;)
+
+# -------------------------- Exod.13.7 · NO_LEAVEN_SEEN ---------------------
+# מַצּוֹת יֵאָכֵל אֵת שִׁבְעַת הַיָּמִים וְלֹא־יֵרָאֶה לְךָ חָמֵץ
+# וְלֹא־יֵרָאֶה לְךָ שְׂאֹר בְּכָל־גְּבֻלֶךָ
+# &quot;[EN-AID] Unleavened bread shall be eaten the seven days; and nothing
+# leavened shall be seen for you, and no leaven shall be seen for you in all
+# your border.&quot;
+m.step(&quot;Exod.13.7&quot;)
+# ‹וְלֹא־יֵרָאֶה לְךָ חָמֵץ וְלֹא־יֵרָאֶה› (“and-not see to-you/your ferment
+# and-not see”) — fact holds: not-see-to-you-ferment
+m.fact(&quot;lo_yerae_lekha_chametz&quot;)
+
+# -------------------------- Exod.13.8 · AND_YOU_SHALL_TELL_YOUR_SON --------
+# וְהִגַּדְתָּ לְבִנְךָ בַּיּוֹם הַהוּא לֵאמֹר בַּעֲבוּר זֶה עָשָׂה יְהוָה
+# לִי בְּצֵאתִי מִמִּצְרָיִם
+# &quot;[EN-AID] And you shall tell your son in that day, saying: For the sake of
+# this the LORD acted for me in my going out from Egypt.&quot;
+m.step(&quot;Exod.13.8&quot;)
+# ‹וְהִגַּדְתָּ לְבִנְךָ בַּיּוֹם הַהוּא לֵאמֹר› (“and-tell to-son-you/your
+# in-day that to-say”) — fact holds: and-tell-to-vinkha
+m.fact(&quot;ve_higadta_le_vinkha&quot;)
+
+# -------------------------- Exod.13.9 · A_SIGN_ON_YOUR_HAND ----------------
+# וְהָיָה לְךָ לְאוֹת עַל־יָדְךָ וּלְזִכָּרוֹן בֵּין עֵינֶיךָ לְמַעַן
+# תִּהְיֶה תּוֹרַת יְהוָה בְּפִיךָ כִּי בְּיָד חֲזָקָה הוֹצִאֲךָ יְהֹוָה
+# מִמִּצְרָיִם
+# &quot;[EN-AID] And it shall be for you for a sign on your hand and for a
+# memorial between your eyes, in order that the Torah of the LORD be in your
+# mouth — for with a strong hand the LORD brought you out from Egypt.&quot;
+m.step(&quot;Exod.13.9&quot;)
+# ‹וְהָיָה לְךָ לְאוֹת עַל־יָדְךָ וּלְזִכָּרוֹן בֵּין עֵינֶיךָ› (“and-be to-
+# you/your to-signs over hand-you/your and-to-memento between eye-you/your”)
+# — fact holds: to-signs-over-yadkha-and-to-memento
+m.fact(&quot;le_ot_al_yadkha_u_le_zikaron&quot;)
+
+# -------------------------- Exod.13.10 · AT_ITS_SEASON ---------------------
+# וְשָׁמַרְתָּ אֶת־הַחֻקָּה הַזֹּאת לְמוֹעֲדָהּ מִיָּמִים יָמִימָה
+# &quot;[EN-AID] And you shall keep this statute at its season, from days to
+# days.&quot;
+m.step(&quot;Exod.13.10&quot;)
+# ‹הַזֹּאת לְמוֹעֲדָהּ מִיָּמִים יָמִימָה› (“the-this to-seasons-her/its
+# from-day day-ward”) — fact holds: to-moada-from-day-yamima
+m.fact(&quot;la_moada_mi_yamim_yamima&quot;)
+
+# -------------------------- Exod.13.11 · WHEN_HE_BRINGS_YOU_LEAN -----------
+# וְהָיָה כִּי־יְבִאֲךָ יְהוָה אֶל־אֶרֶץ הַכְּנַעֲנִי כַּאֲשֶׁר נִשְׁבַּע
+# לְךָ וְלַאֲבֹתֶיךָ וּנְתָנָהּ לָךְ
+# &quot;[EN-AID] And it shall be, when the LORD brings you to the land of the
+# Canaanite, as He swore to you and to your fathers, and gives it to you:&quot;
+m.step(&quot;Exod.13.11&quot;)
+# ‹וְהָיָה כִּי־יְבִאֲךָ יְהוָה› (“and-be that come/bring-you/your YHWH”) —
+# fact holds: that-yeviakha-lean
+m.fact(&quot;ki_yeviakha_lean&quot;)
+
+# -------------------------- Exod.13.12 · PASS_THE_WOMB_OPENERS -------------
+# וְהַעֲבַרְתָּ כָל־פֶּטֶר־רֶחֶם לַיהֹוָה וְכָל־פֶּטֶר שֶׁגֶר בְּהֵמָה
+# אֲשֶׁר יִהְיֶה לְךָ הַזְּכָרִים לַיהוָה
+# &quot;[EN-AID] Then you shall pass every opener of the womb to the LORD; and
+# every firstling dropped of beast which you have, the males — to the LORD.&quot;
+m.step(&quot;Exod.13.12&quot;)
+# ‹וְהַעֲבַרְתָּ כָל־פֶּטֶר־רֶחֶם לַיהֹוָה› (“and-pass-over all fissure womb
+# to-YHWH”) — fact holds: and-pass-over-all-fissure-womb
+m.fact(&quot;ve_haavarta_khol_peter_rechem&quot;)
+
+# -------------------------- Exod.13.13 · THE_DONKEY_AND_THE_LAMB -----------
+# וְכָל־פֶּטֶר חֲמֹר תִּפְדֶּה בְשֶׂה וְאִם־לֹא תִפְדֶּה וַעֲרַפְתּוֹ וְכֹל
+# בְּכוֹר אָדָם בְּבָנֶיךָ תִּפְדֶּה
+# &quot;[EN-AID] And every firstling of a donkey you shall redeem with a lamb,
+# and if you do not redeem — you shall break its neck; and every firstborn
+# of man among your sons you shall redeem.&quot;
+m.step(&quot;Exod.13.13&quot;)
+# ‹וְכָל־פֶּטֶר חֲמֹר תִּפְדֶּה בְשֶׂה› (“and-all fissure male-ass sever in-
+# member-of-a-flock”) — fact holds: fissure-male-ass-sever-and-member-of-a-
+# flock
+m.fact(&quot;peter_chamor_tifde_ve_se&quot;)
+
+# -------------------------- Exod.13.14 · WHEN_YOUR_SON_ASKS_TOMORROW -------
+# וְהָיָה כִּי־יִשְׁאָלְךָ בִנְךָ מָחָר לֵאמֹר מַה־זֹּאת וְאָמַרְתָּ אֵלָיו
+# בְּחֹזֶק יָד הוֹצִיאָנוּ יְהוָה מִמִּצְרַיִם מִבֵּית עֲבָדִים
+# &quot;[EN-AID] And it shall be, when your son asks you tomorrow, saying: What
+# is this? — you shall say to him: By strength of hand the LORD brought us
+# out from Egypt, from the house of slaves.&quot;
+m.step(&quot;Exod.13.14&quot;)
+# ‹וְהָיָה כִּי־יִשְׁאָלְךָ בִנְךָ מָחָר לֵאמֹר› (“and-be that inquire-
+# you/your son-you/your deferred to-say”) — fact holds: that-yishalkha-
+# vinkha-deferred
+m.fact(&quot;ki_yishalkha_vinkha_machar&quot;)
+
+# -------------------------- Exod.13.15 · WHEN_PHARAOH_HARDENED -------------
+# וַיְהִי כִּי־הִקְשָׁה פַרְעֹה לְשַׁלְּחֵנוּ וַיַּהֲרֹג יְהֹוָה
+# כָּל־בְּכוֹר בְּאֶרֶץ מִצְרַיִם מִבְּכֹר אָדָם וְעַד־בְּכוֹר בְּהֵמָה
+# עַל־כֵּן אֲנִי זֹבֵחַ לַיהוָה כָּל־פֶּטֶר רֶחֶם הַזְּכָרִים וְכָל־בְּכוֹר
+# בָּנַי אֶפְדֶּה
+# &quot;[EN-AID] And it was, when Pharaoh hardened against sending us, the LORD
+# slew every firstborn in the land of Egypt, from the firstborn of man to
+# the firstborn of beast; therefore I sacrifice to the LORD every opener of
+# the womb, the males, and every firstborn of my sons I redeem.&quot;
+m.step(&quot;Exod.13.15&quot;)
+# ‹וַיְהִי כִּי־הִקְשָׁה פַרְעֹה לְשַׁלְּחֵנוּ וַיַּהֲרֹג› (“and-be that be-
+# dense Pharaoh to-send-us/our and-smite-with-deadly-intent”) — fact holds:
+# and-be-that-be-dense-Pharaoh
+m.fact(&quot;va_yehi_ki_hiqsha_paro&quot;)
+
+# -------------------------- Exod.13.16 · THE_WEAK_HAND ---------------------
+# וְהָיָה לְאוֹת עַל־יָדְכָה וּלְטוֹטָפֹת בֵּין עֵינֶיךָ כִּי בְּחֹזֶק יָד
+# הוֹצִיאָנוּ יְהוָה מִמִּצְרָיִם
+# &quot;[EN-AID] And it shall be for a sign on your hand and for frontlets
+# between your eyes — for by strength of hand the LORD brought us out from
+# Egypt.&quot;
+m.step(&quot;Exod.13.16&quot;)
+# ‹וְהָיָה לְאוֹת עַל־יָדְכָה וּלְטוֹטָפֹת› (“and-be to-signs over hand-
+# you/your and-to-fillet-for-the-forehead”) — fact holds: to-signs-over-
+# yadkha-he
+m.fact(&quot;le_ot_al_yadkha_he&quot;)
+
+# -------------------------- Exod.13.17 · NOT_BY_THE_NEAR_WAY ---------------
+# וַיְהִי בְּשַׁלַּח פַּרְעֹה אֶת־הָעָם וְלֹא־נָחָם אֱלֹהִים דֶּרֶךְ אֶרֶץ
+# פְּלִשְׁתִּים כִּי קָרוֹב הוּא כִּי אָמַר אֱלֹהִים פֶּן־יִנָּחֵם הָעָם
+# בִּרְאֹתָם מִלְחָמָה וְשָׁבוּ מִצְרָיְמָה
+# &quot;[EN-AID] And it was, when Pharaoh sent the people, God did not lead them
+# the way of the land of the Philistines, for it was near — for God said:
+# Lest the people repent when they see war, and return to Egypt.&quot;
+m.step(&quot;Exod.13.17&quot;)
+# ‹וְלֹא־נָחָם אֱלֹהִים דֶּרֶךְ אֶרֶץ פְּלִשְׁתִּים› (“and-not guide-
+# them/their God way/road earth Pelishtite”) — fact holds: and-not-nacham-
+# way/road-Pelishtite
+m.fact(&quot;ve_lo_nacham_derekh_pelishtim&quot;)
+
+# -------------------------- Exod.13.18 · BY_THE_REED_SEA_ROAD --------------
+# וַיַּסֵּב אֱלֹהִים אֶת־הָעָם דֶּרֶךְ הַמִּדְבָּר יַם־סוּף וַחֲמֻשִׁים
+# עָלוּ בְנֵי־יִשְׂרָאֵל מֵאֶרֶץ מִצְרָיִם
+# &quot;[EN-AID] And God turned the people the way of the wilderness of the Reed
+# Sea; and armed the sons of Israel went up from the land of Egypt.&quot;
+m.step(&quot;Exod.13.18&quot;)
+# ‹דֶּרֶךְ הַמִּדְבָּר יַם־סוּף› (“way/road the-pasture seas reed”) — fact
+# holds: way/road-the-pasture-seas-reed
+m.fact(&quot;derekh_ha_midbar_yam_suf&quot;)
+
+# -------------------------- Exod.13.19 · THE_BONES_OF_JOSEPH ---------------
+# וַיִּקַּח מֹשֶׁה אֶת־עַצְמוֹת יוֹסֵף עִמּוֹ כִּי הַשְׁבֵּעַ הִשְׁבִּיעַ
+# אֶת־בְּנֵי יִשְׂרָאֵל לֵאמֹר פָּקֹד יִפְקֹד אֱלֹהִים אֶתְכֶם וְהַעֲלִיתֶם
+# אֶת־עַצְמֹתַי מִזֶּה אִתְּכֶם
+# &quot;[EN-AID] And Moses took the bones of Joseph with him; for he had surely
+# sworn the sons of Israel, saying: God will surely visit you, and you shall
+# bring up my bones from here with you.&quot;
+m.step(&quot;Exod.13.19&quot;)
+# ‹וַיִּקַּח מֹשֶׁה אֶת־עַצְמוֹת יוֹסֵף› (“and-take Moses obj-marker bone
+# Joseph”) — fact holds: and-take-Moses-obj-marker-bone-Joseph
+m.fact(&quot;va_yiqach_moshe_et_atzmot_yosef&quot;)
+
+# -------------------------- Exod.13.20 · ETHAM_AT_THE_WILDERNESS_EDGE ------
+# וַיִּסְעוּ מִסֻּכֹּת וַיַּחֲנוּ בְאֵתָם בִּקְצֵה הַמִּדְבָּר
+# &quot;[EN-AID] And they journeyed from Succoth, and camped in Etham, at the
+# edge of the wilderness.&quot;
+m.step(&quot;Exod.13.20&quot;)
+# ‹וַיִּסְעוּ מִסֻּכֹּת וַיַּחֲנוּ› (“and-journey from-Succoth and-encamp”)
+# — fact holds: and-encamp-and-Etham
+m.fact(&quot;va_yachanu_ve_etam&quot;)
+
+# -------------------------- Exod.13.21 · PILLAR_OF_CLOUD_PILLAR_OF_FIRE ----
+# וַיהוָה הֹלֵךְ לִפְנֵיהֶם יוֹמָם בְּעַמּוּד עָנָן לַנְחֹתָם הַדֶּרֶךְ
+# וְלַיְלָה בְּעַמּוּד אֵשׁ לְהָאִיר לָהֶם לָלֶכֶת יוֹמָם וָלָיְלָה
+# &quot;[EN-AID] And the LORD was going before them: by day in a pillar of cloud
+# to lead them the way, and by night in a pillar of fire to give them light
+# — to go by day and by night.&quot;
+m.step(&quot;Exod.13.21&quot;)
+# ‹וַיהוָה הֹלֵךְ לִפְנֵיהֶם יוֹמָם בְּעַמּוּד עָנָן› (“and-YHWH walk/go to-
+# face-them/their daily in-column cloud”) — fact holds: column-cloud-and-
+# column-fire
+m.fact(&quot;amud_anan_ve_amud_esh&quot;)
+
+# -------------------------- Exod.13.22 · IT_SHALL_NOT_DEPART ---------------
+# לֹא־יָמִישׁ עַמּוּד הֶעָנָן יוֹמָם וְעַמּוּד הָאֵשׁ לָיְלָה לִפְנֵי הָעָם
+# &quot;[EN-AID] The pillar of cloud shall not depart by day, nor the pillar of
+# fire by night, before the people.&quot;
+m.step(&quot;Exod.13.22&quot;)
+# ‹לֹא־יָמִישׁ עַמּוּד הֶעָנָן› (“not withdraw column the-cloud”) — fact
+# holds: not-withdraw-column-he-cloud
+m.fact(&quot;lo_yamish_amud_he_anan&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;qadesh_li_khol_bekhor&#x27;, &#x27;zakhor_et_ha_yom_ha_ze&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 2
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;va_yedaber_el_moshe&#x27;, &#x27;be_chodesh_ha_aviv&#x27;, &#x27;ve_avadta_et_ha_avoda&#x27;, &#x27;shivat_yamim_tokhal_matzot&#x27;, &#x27;lo_yerae_lekha_chametz&#x27;, &#x27;ve_higadta_le_vinkha&#x27;, &#x27;le_ot_al_yadkha_u_le_zikaron&#x27;, &#x27;la_moada_mi_yamim_yamima&#x27;, &#x27;ki_yeviakha_lean&#x27;, &#x27;ve_haavarta_khol_peter_rechem&#x27;, &#x27;peter_chamor_tifde_ve_se&#x27;, &#x27;ki_yishalkha_vinkha_machar&#x27;, &#x27;va_yehi_ki_hiqsha_paro&#x27;, &#x27;le_ot_al_yadkha_he&#x27;, &#x27;ve_lo_nacham_derekh_pelishtim&#x27;, &#x27;derekh_ha_midbar_yam_suf&#x27;, &#x27;va_yiqach_moshe_et_atzmot_yosef&#x27;, &#x27;va_yachanu_ve_etam&#x27;, &#x27;amud_anan_ve_amud_esh&#x27;, &#x27;lo_yamish_amud_he_anan&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 2
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

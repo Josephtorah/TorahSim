@@ -1,0 +1,1284 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'><title>gen_33_shaddai_covenant_flesh — frozen logic unit</title><style>
+body { background:#fff; color:#1f2937; font:16px/1.55 "Charter","Georgia",serif;
+       margin:0; padding:2rem 1rem 6rem; }
+main { max-width:1200px; margin:0 auto; }
+h1 { font-size:1.4rem; border-bottom:2px solid #8a6d1a; padding-bottom:.3rem; }
+h2 { font-size:1.1rem; margin-top:2.2rem; border-bottom:1px solid #d7d3c8; padding-bottom:.2rem; }
+h3 { font-size:.95rem; margin:1.2rem 0 .4rem; }
+.he { font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif; font-size:1.25em;
+      direction:rtl; unicode-bidi:isolate; }
+.meta { color:#6b7280; font-size:.85rem; }
+.badge { font:.7rem/1.6 monospace; padding:0 .5rem; border-radius:10px; }
+.frozen { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-v { background:#e8f5ec; color:#0a7a2f; border:1px solid #bfe3ca; }
+.tier-o { background:#fff3e0; color:#b04000; border:1px solid #ecc9a8; }
+.pyblock { background:#1e2430; color:#d8dee9; border-radius:8px;
+  padding:1rem 1.2rem; overflow-x:auto; font-size:.78rem; line-height:1.45; }
+.note { background:#f5f2ea; border:1px solid #d7d3c8; border-radius:8px;
+        padding:.6rem .9rem; font-size:.88rem; margin:.8rem 0; }
+table { border-collapse:collapse; width:100%; font-size:.84rem; margin:.5rem 0 1rem; }
+th { background:#f0ecdf; text-align:left; font-size:.7rem; letter-spacing:.05em;
+     text-transform:uppercase; }
+th,td { border:1px solid #d7d3c8; padding:.3rem .55rem; vertical-align:top; }
+td.he-cell { direction:rtl; text-align:right; font-size:1.1rem; white-space:nowrap; }
+.step { border:1px solid #d7d3c8; border-radius:10px; padding:.8rem 1.1rem; margin:1rem 0; }
+.step h3 { margin-top:0; color:#8a6d1a; }
+.opline td:first-child { font-family:monospace; font-weight:bold; white-space:nowrap; }
+.expr { font-family:Menlo,monospace; font-size:.82rem; background:#f7f5ee;
+        padding:.1rem .35rem; border-radius:4px; }
+.cite { font-family:monospace; font-size:.75rem; color:#4a6da7; }
+.gloss { color:#6b6455; font-size:.8rem; font-style:italic; }
+pre { background:#f7f5ee; border:1px solid #d7d3c8; padding:.7rem .9rem;
+      font-size:.75rem; line-height:1.4; overflow-x:auto; }
+.arms { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; margin:.4rem 0; }
+.arm { flex:1; min-width:280px; background:#faf8f1; border:1px solid #e5e0d0;
+       border-radius:8px; padding:.4rem .7rem; }
+.arm b { color:#6b7280; font-size:.72rem; text-transform:uppercase; letter-spacing:.05em; }
+</style></head><body><button id='regenBtn' style='display:none;position:fixed;top:.6rem;right:.8rem;font:0.8rem monospace;padding:.25rem .7rem;cursor:pointer' title='Local dev only: re-run render_unit_html.py for this unit, then reload'>⟳ regenerate</button><script>(function(){var b=document.getElementById('regenBtn');fetch('/regen/ping').then(function(r){if(r.ok)b.style.display='';}).catch(function(){});b.onclick=function(){b.disabled=true;b.textContent='⟳ regenerating…';var out=location.pathname.split('/').pop();fetch('/regen/unit/gen_33_shaddai_covenant_flesh?out='+encodeURIComponent(out),{method:'POST'}).then(function(r){return r.json();}).then(function(j){if(!j.ok)throw new Error(j.log);location.reload();}).catch(function(e){console.error('[regen]',e);b.textContent='⟳ failed (see console)';b.disabled=false;});};})();</script><main><h1>El Shaddai: the renamings, the law of the flesh, the laugh, the selfsame day (17:1-27) <span class='badge frozen'>FROZEN</span></h1>
+<div class="meta">unit <b>gen_33_shaddai_covenant_flesh</b> · Genesis 17:1-27 · derive logic_derived_v1 · phase C-33</div>
+<div class="meta"><a href="../#Gen/17/1">⇄ verse view — this span in the scroll (trees + morphology)</a> &nbsp;·&nbsp; <a href="UNIT_INDEX.html">☰ all derived units</a></div>
+<p><span class="he">אֲנִי־אֵל שַׁדַּי הִתְהַלֵּךְ לְפָנַי</span> · <i>ani-El Shaddai hithalekh lefanai</i> · &#x27;I am God Almighty — walk before Me&#x27;</p>
+<div class="note">Logic-derived v1: v3 taamim (cantillation accents) trees from DB tree_json -&gt; leaf role frames from OSHB morph -&gt; operator lines citing TIR rules -&gt; machine-state scenarios. Machine tokens apostrophe-free and underscore-joined (hithalekh_ve_heyeh_tamim( avram, lefanai), tishmor(avraham, et_briti), the HANDLER pair). HYBRID steps: per-verse 17:1-22 + one grouped compliance-row 17:23-27 (gen_24/gen_30&#x27;s ratified device) = 23 steps.</div>
+<div class="note"><b>DERIVATION RECORD — freeze-era draft note:</b> DRAFT by the gen-5 block agent (third unit of its tenure; sixteenth agent-derived unit overall), 2026-08-05. Censuses run against the raw snapshot BEFORE drafting; all frozen-unit quotes opened at line ranges this session (gen_31 and gen_32 quoted as FROZEN, freezes #14-15). Span per the owner&#x27;s two-block order ratifying the staged recommendation: ONE UNIT, seam at 18:1, HYBRID steps — per-verse 17:1-22 (22 steps) + ONE grouped compliance-step 17:23-27 (gen_24/ gen_30&#x27;s grouped device on the letter&#x27;s own execution-roster) = 23 steps. 355 tokens / 27 verses, census-exact. Machine shape: DECLARE x2 (the compound walk-command as LET; the keep-command as LET? — TIR-028&#x27;s mandatory guard), HANDLER x2 (the law-genre&#x27;s generational installs), 24 standing fact-lines, ZERO pops (both demands stand letter-faithfully OPEN), ZERO names/installs/tests/ ledger-rows/invariants, ZERO presupposed reads (eretz kenaan unflagged per frozen gen_32&#x27;s own 16:3 precedent). INTERPRETER: ZERO extensions sought. THE THREE OPEN OWNER TRIAGES are not touched as precedent: where this unit meets their neighborhoods (brit olam; the renaming/registry question) it encodes per EXISTING frozen law and flags. THE DRAFT&#x27;S FLAGGED CHOICES (ratify-or-reverse, per flag): (1) BRIT OLAM (&#x27;everlasting covenant&#x27;) HELD AS FACT PER DIRECT FROZEN LAW [the coordinator-flagged pressure point]: 17:7&#x27;s li-vrit olam, 17:13&#x27;s li-vrit olam, 17:19&#x27;s li-vrit olam, and 17:8&#x27;s la-achuzat olam are held as HOLDS-facts — the controlling precedent is frozen gen_22&#x27;s OWN brit-olam token, quoted: &#x27;HOLDS(u_reitiha_li_zekor_brit_olam, t1)&#x27; (9:16 — the everlasting covenant itself held as fact, no INVARIANT), with frozen gen_29&#x27;s ruling behind it (&#x27;a perpetual per-case commitment... the INVARIANT class carries it&#x27; cut the OTHER way only for never-again negations; its ad-olam analysis — &#x27;AD-OLAM modifies the TENURE... not the act&#x27; — was quoted and applied). The weigh was REOPENED as staged (the perpetuity here modifies the covenant itself), and CLOSED BY DIRECT PRECEDENT: gen_22 already held exactly this phrase as fact. FLAGGED for review since the 15:6 triage neighborhood is open — but the encoding follows frozen law, not the staged alternatives. (2) THE RENAMINGS AS DECREE-FACTS, NOT NAME OPS [flagged; the NAME-triage neighborhood]: 17:5 (avram -&gt; avraham) and 17:15 (saray -&gt; sarah) are DECREES (lo-yiqare od / lo-tiqra — negated imperfect + nominal clause), NOT the va-yiqra narrative formula: frozen gen_25&#x27;s rule controls, quoted: &#x27;NO NAME op — KARA is a bare perfect with an indefinite subject (&quot;one called&quot;) — no va-yiqra (&quot;and-he-called&quot;) narrative formula... the REGISTRY takes nothing.&#x27; The REGISTRY takes nothing here; the machine holds the decrees as facts — and the LETTER ITSELF countersigns: AVRAM has exactly 59 Torah tokens and TOKEN 59 sits at 17:5 INSIDE the retirement sentence; SARAY has exactly 17 and TOKENS 16-17 both sit at 17:15 INSIDE hers — both old names die in the verses that retire them, and BOTH verses REST on the dying name (17:5&#x27;s etnachta is avram; 17:15&#x27;s etnachta is saray) [census + tree twin, DB-verified]. The narrator obeys instantly: avraham from 17:5 on, sarah from 17:15 on. ALTERNATIVE STAGED: gen_12&#x27;s registry-overwrite class, quoted (&#x27;kayin&#x27;s NAME... OVERWRITTEN by his CURSE... the single-value register records the cycle&#x27;s arc in one key&#x27;) — but both writes there rode formula-backed ops (NAME at 4:1, ASSIGN at 4:11); a formula-less overwrite would be new law — the owner&#x27;s call. (3) THE LAW-GENRE ENTERS THE COVENANT [the derive&#x27;s central mechanical choice, staged in the pre-stage and decided by mood-law]: 17:9&#x27;s VE-ATAH ET-BRITI TISHMOR (&#x27;and YOU shall KEEP My covenant&#x27; — coded imperfect HVqi2ms, addressed) is a TIR-028 LET? — DECLARE(elohim, LET?(tishmor(avraham, et_briti))), the mandatory ?-guard, frozen gen_21&#x27;s device quoted (&#x27;the imperfect in a command frame takes TIR-028&#x27;s mandatory ?... the demand stays pushed and OPEN, mood guarded: letter-faithful debt&#x27;) — keeping a covenant has no single receipt; it stands OPEN, mood guarded, forever. The GENERATIONAL LAW (17:10-13) installs as HANDLER x2 (lev_13&#x27;s class — the law installs; only cases execute; gen_12&#x27;s counsel-handlers the Genesis precedent): HANDLER IF(ben_shemonat_yamim ∧ kol_zakhar_le_dorotekhem) THEN(yimol — including yelid_bayit and miqnat_kesef), and the karet-penalty HANDLER IF(arel_zakhar_asher_lo_yimol) THEN( ve_nikhrta_ha_nefesh_ha_hi_me_ameha ∧ et_briti_hefar). The command-forms are law-grammar, not imperatives (himol — niphal infinitive absolute x2, DB-verified HVNa; yimol — imperfect 3ms): NO imperative-LET fires — the mood decides [TIR-027&#x27;s boundary respected]. THEREFORE: 17:23-27&#x27;s same-day compliance is NOT a demand-pop — it is the installed law&#x27;s FIRST CASE EXECUTING, encoded as EVENTs with the letter&#x27;s own receipt -formula held as fact (ka-asher diber ito elohim — the 6:22/ 7:5 compliance-formula class, frozen gen_16&#x27;s line quoted: &#x27;BOTH demands popped by one compliance formula&#x27; as the CLASS ancestor, with the difference named: there demands existed to pop; here the law stands and its first case runs). NO CYCLE #10 CLAIMED — the precise reframe over the staged overclaim [pre-stage self-correction, recorded]. (4) KARAT TOKEN 3 — THE CUT-LADDER&#x27;S THIRD RUNG: 17:14&#x27;s VE-NIKHRTA (&#x27;that soul shall be CUT OFF from its people&#x27;) — after token 1 born negated (9:11, frozen gen_22&#x27;s crown line quoted: &#x27;born refusing a cutting-off&#x27;) and token 2 cutting the covenant (15:18, frozen gen_31 quoted), token 3 cuts a SOUL from its people INSIDE the covenant that token 2 cut: the covenant-verb and the excision-verb are one word — and the letter pairs it with HEFER (&#x27;he has BROKEN My covenant&#x27;) — parar&#x27;s TORAH DEBUT, whose only other Torah tokens are Lev 26:15/44, THE COVENANT-CURSE CHAPTER [census, prose]. Tokens 4-5 are 21:27/32 — Beer-sheva: humans cut covenants next. (5) THE COMPOUND WALK-COMMAND: 17:1&#x27;s HITHALEKH LEFANAI (hitpael imperative HVtv2ms) + VE-HYEH TAMIM (imperative HVqv2ms) ride ONE demand — DECLARE(YHWH, LET(hithalekh_ve_ heyeh_tamim(avram, lefanai))) — the compound device (frozen gen_32&#x27;s line quoted; the chain runs gen_29 -&gt; 31 -&gt; 32 -&gt; here) [TIR-027]. OPEN letter-faithfully: the response is prostration, not walking (va-yipol — he falls; the letter&#x27;s own irony held in prose). THE WALK-LADDER: Chanokh walked WITH God (frozen gen_14&#x27;s facts quoted: &#x27;hithalekh_chanokh_ et_ha_elohim&#x27;), Noach walked WITH God (frozen gen_16&#x27;s 6:9 line quoted: &#x27;et-ha-Elohim hithalekh-Noach&#x27;), Abram was commanded to walk THE LAND (13:17, frozen gen_29&#x27;s qum_hithalekh demand — STILL OPEN across two walls), and now to walk BEFORE (lefanai): with, with, through, before — the walk-verb&#x27;s prepositions tell the whole theology [career, prose]. TAMIM token 2 — token 1 is 6:9, NOACH (frozen gen_16&#x27;s line: the spec-word as a man&#x27;s attribute); token 3 is Exod 12:5 — THE PESACH LAMB: man, man, lamb [census]. (6) THE LAUGH IS BORN FACE-DOWN [census]: 17:17&#x27;s VA-YITZCHAQ — tzachaq&#x27;s TORAH DEBUT: Abraham falls on his face AND LAUGHS, and the letter seats the laugh ALONE on the etnachta; YITZCHAQ is named from this root at 17:19 (the weqatal pre-birth name-decree — frozen gen_32&#x27;s class, quoted: &#x27;the corpus&#x27;s first PRE-BIRTH NAME-DECREE... the class&#x27;s next token is 17:19, God naming Yitzchak&#x27; — LANDED, the class&#x27;s second token exactly as predicted; decree-FACT, no NAME op, nothing pushed). The laugh-family&#x27;s career: tokens 2-5 are SARAH&#x27;s laugh and its denial (18:12-15), token 6 Lot&#x27;s sons-in-law, token 7 the name&#x27;s own etymology (21:6), token 8 the METZACHEQ that expels Yishmael (21:9): the root laughs, denies, mocks, and names [census, prose]. The HEART-SPEECH: va-yomer BE-LIBO (&#x27;said in his HEART&#x27;) — the corpus&#x27;s second interior speaker: lev tokens 1-4 are the flood-heart cluster (man&#x27;s evil heart, God&#x27;s grieved heart, God&#x27;s el-libo speech — frozen gen_20&#x27;s device quoted: &#x27;EVENT say (el_libo — the interior frame)&#x27;); token 5 is Abraham&#x27;s laughing heart [census, prose]. His two utterances split inner/outer: the arithmetic doubt stays in the heart; the Yishmael-plea goes out loud [letter fact]. (7) THE LU-PLEA IS PROSE [frozen gen_31&#x27;s flag-5 class extended]: 17:18&#x27;s LU YISHMAEL YICHYEH LEFANEKHA (&#x27;would that Yishmael might live before You&#x27;) — LU (&#x27;would that&#x27;) TORAH DEBUT: an optative particle, not an imperative or jussive — no DECLARE mood exists for wishes and none is invented; held as spoken fact. And the letter ANSWERS it in the verb that names the boy: 17:20&#x27;s U-LE-YISHMAEL SHEMATIKHA (&#x27;as for Yishmael, I HAVE HEARD YOU&#x27; — shama token 9, performative perfect): frozen gen_32&#x27;s monument line lands (&#x27;the child&#x27;s name is the verb&#x27;s own monument: YISHMA-EL, &quot;God hears&quot;&#x27;) — God hears the father about the boy named God-hears [quoted, landed; census]. 17:20 packs THREE receipt-perfects and a weqatal chain: shematikha, hineh BERAKHTI (&#x27;I HAVE blessed him&#x27; — the performative class, gen_21&#x27;s natati device, now on the bless-verb), ve-hifreti/ve-hirbeti/u-netativ — and BI-MEOD MEOD: the covenant&#x27;s doubled adverb lands on the MAID&#x27;S SON [census, prose]. Twelve NESIIM (&#x27;princes&#x27;) — nasi&#x27;s TORAH DEBUT; token 2 is 23:6: the Chittites call ABRAHAM nesi elohim [census, prose]. (8) MELEKH TOKENS 28-29 — FROZEN gen_30&#x27;s PREDICTION LANDS TWICE: quoted verbatim (&#x27;melekh (&quot;king&quot;) in-span x27 with tokens 28-29 = 17:6/17:16 (&quot;kings shall come out of you&quot;)&#x27;) — 17:6&#x27;s u-melakhim mimkha yetzeu AND 17:16&#x27;s malkhei amim mimenah yihyu: the king-word born in a war reappears in the covenant, once for Abraham and once FOR SARAH — the corpus&#x27;s first royal promise to a woman [landed x2; census; token 30 is 20:2, Avimelech — a king returns as a taker]. (9) THE SELFSAME-DAY FORMULA&#x27;S PAIR [census]: BE-ETZEM HA-YOM HA-ZEH (&#x27;in the SELFSAME day&#x27;) x2 (17:23, 17:26) — etzem tokens 4-5; token 3 is 7:13: NOACH&#x27;S BOARDING DAY (frozen gen_17_boarding&#x27;s span): the formula&#x27;s only two Genesis events are entering the ark and entering the covenant — both same-day obediences [census, prose; tokens 1-2 are 2:23&#x27;s etzem me-atzamai, the BONE itself: the word&#x27;s career runs bone, bone, ark-day, covenant-day]. KA-ASHER DIBER ITO ELOHIM — the compliance-formula (flag 3). VA-YIQACH (laqach token 32) — Abraham TAKES Yishmael and the house TO the knife: the take-arc&#x27;s next token after Sarai&#x27;s (31) [census, prose]. (10) THE FIVE-FRAME SPEECH AND THE APPEARANCE-CHAIN: the chapter is FIVE divine speech-frames (17:1 va-yomer; 17:3 VA-YEDABER — dibber token 4, the speak-verb stepping in at the covenant&#x27;s core, tokens 4-6 in-span; 17:9; 17:15; 17:19) against Abraham&#x27;s two [say-roster census]. It opens with VA-YERA YHWH (&#x27;YHWH APPEARED&#x27;) — the appearance-verb&#x27;s second Abram-token after 12:7 (frozen gen_27&#x27;s span; 18:1 is the third, across the seam — named-only) and closes with VA-YAAL ELOHIM (&#x27;God WENT UP from Abraham&#x27; — alah token 4, the ascend-verb&#x27;s first divine subject; tokens 1-3: Eden&#x27;s mist, Noach&#x27;s offerings, Abram from Egypt) after VA-YEKHAL LE-DABER (&#x27;He FINISHED speaking&#x27; — kalah token 4: the finish-verb of creation&#x27;s completion, 2:1-2, now finishing a SPEECH; token 5 is 18:33&#x27;s kila le-daber — the same exit-formula at the Sodom plea, named-only) [censuses, prose]. (11) THE FALL-CENSUS: nafal tokens 5-8 are ALL Abram&#x27;s field — the sleep fell (15:12), the dread falling (15:12), he falls silent (17:3), he falls laughing (17:17): four consecutive fall-tokens around one man, two his own [census, prose; the va-yipol x2 frame]. VE-ETNAH (17:2) — a divine COHORTATIVE (Vqh1cs, &#x27;let Me set My covenant&#x27;): a first-person volitive is a demand on NO ONE — held as promise-fact with the mood named [morph; decision recorded]. VE-HIFRETI (17:6, 17:20) — parah&#x27;s FIRST HIPHILS: commanded five times as peru (1:22-9:7), now performed causatively — &#x27;I will MAKE fruitful&#x27; [census]. ACHUZAH token 1 (17:8) — tokens 2-4 are ALL ch. 23 (Machpelah): the everlasting possession&#x27;s first realized instance is a GRAVE [census, prose, named-only]. (12) GLOSS_FIX candidates verified: hamon &#x27;noise&#x27; -&gt; &#x27;multitude&#x27; (1995); mul &#x27;cut-short&#x27; -&gt; &#x27;circumcise&#x27; (4135); achuzah &#x27;something-seized&#x27; -&gt; &#x27;possession&#x27; (272); megurekha &#x27;temporary-abode&#x27; -&gt; &#x27;sojournings&#x27; (4033); miqnah &#x27;buying&#x27; -&gt; &#x27;purchase&#x27; (4736); lu &#x27;conditional-particle&#x27; -&gt; &#x27;would that&#x27; (3863); aval &#x27;nay&#x27; -&gt; &#x27;but indeed&#x27; (61); etzem &#x27;bone&#x27; -&gt; &#x27;selfsame&#x27; in the be-etzem idiom (6106); nasi fine; shaday fine. (13) SEED/STAGING SELF-CORRECTIONS: (a) the staged &#x27;settled cycle candidate #10&#x27; is WITHDRAWN — the law&#x27;s command-forms are not imperatives, so nothing pops: the compliance executes the installed law (flag 3&#x27;s precise reframe); (b) the staged both-ways renaming weigh is decided by gen_25&#x27;s formula-rule (flag 2), with the overwrite-class named for the owner; (c) the staged brit-olam re-argument closed by gen_22&#x27;s own 9:16 token (flag 1); (d) the staged &#x27;first HANDLER outside Leviticus&#x27; claim corrected — gen_12&#x27;s counsel-handlers hold that title; this is the class&#x27;s first COVENANT-LAW firing in Genesis. (14) NAME CHOICE flagged: gen_33_shaddai_covenant_flesh — the Almighty-name&#x27;s debut over the covenant cut in flesh. ONKELOS (Aramaic translation) read Tier-A at derive time (27 sequential fetches, 0.5s spacing, Data/FETCHLOG.md 2026-08-05; cache MISS for the whole span as staged) — HEADLINE: THE MEMRA BECOMES THE COVENANT PARTY. Four times (17:2, 17:7, 17:10, 17:11) the covenant&#x27;s between-formula beini u-veinekha (&#x27;between ME and you&#x27;) is rendered bein MEIMRI u-veinakh (&#x27;between MY WORD and you&#x27;) — the Word signs the covenant; frozen gen_22&#x27;s single 9:16 note (&#x27;the third-person turn absorbed into the Memra&#x27;) extends to the formula wholesale. The tenure&#x27;s Memra-arc completes: shield-to-Word (gen_31), naming-to-prayer (gen_32), now covenant-by-Word. Full findings and repeat-buffers in ORAL_onkelos_tier_a. PROSPECTIVE MIDDOT RUN queued as WATCHLIST_gen33_prospective (scratchpad; the cache middot scan is the MAIN LOOP&#x27;S gate, not claimed here).</div>
+<div class="note"><b>ORAL AUDIT — crowns (chain-attested + DB-verified):</b> ORAL AUDIT 2026-08-08 (retro, PROCESS.md oral-first era; manifest logic/oral_audit/manifests/gen_33_shaddai_covenant_flesh_claims.json — 18 VERIFIED, 0 FAILED, 0 UNCHECKABLE; record logic/oral_audit/AUDIT_gen_33_2026-08-08.md). CROWNS (chain-attested + DB-verified): (1) THE ONE PATACH FATHER (G33-01, the Masorah via Minchat Shai): every אב (&quot;father&quot;) in all Scripture is pointed qamatz except ONE with patach (the open a-vowel) — כי אב המון גוים (&quot;for a FATHER of a multitude of nations,&quot; 17:5): the Bible&#x27;s single differently-voweled father-word sits inside the renaming sentence itself. SNAPSHOT exact — the machine&#x27;s &quot;both old names die inside their own retirement sentences&quot; gains a vowel-level twin. (2) THE FRUITFUL-VERB SPLIT (G33-02/03): והפרתי (&quot;and I will make you fruitful,&quot; to ABRAHAM, 17:6) defective and Masorah-unique; the two plene tokens are Ishmael&#x27;s והפריתי (17:20) and the law&#x27;s (Lev 26:9). (3) THE ESTABLISH-VERB LAW (G33-04/05, the Hilleli and the Ramah): והקמתי (&quot;and I will ESTABLISH&quot;) doubly defective at all five Torah stations (6:18, 9:11, 17:7, 17:19, 26:3); the ONE plene והקימתי is Lev 26:9 — the same verse where the fruitful-verb fills out: two independent Masorah laws converging on one far verse. (4) והרביתי (&quot;and I will MULTIPLY&quot;) — the Ramah&#x27;s plene ruling against an old tikkun&#x27;s &quot;precise books defective&quot;: SNAPSHOT plene at all five tokens, the defective nowhere (G33-07). (5) מגריך (&quot;your sojournings&quot;) no-vav-with-yod at both Torah tokens (17:8, 28:4) (G33-06). (6) נשיאם (&quot;princes&quot;) without its last yod at the twelve-princes promise — Rabbeinu Bachye&#x27;s withheld letter, named (G33-08). (7) המול ימול (&quot;he must surely be circumcised&quot;) plene vav as the Masorah proves (G33-09). (8) ויצחק (&quot;and he LAUGHED&quot; — the laugh that names Isaac): chet in qamatz under the etnachta (the major rest); the Mikra Gedolah&#x27;s contrary listing is &quot;an error&quot; (Or Torah) — SNAPSHOT: qamatz (G33-10). (9) אב המון exactly TWICE in the parasha (17:4 prefixed, 17:5 bare) — the Kitzur counts the doubling; the 208 = יצחק arithmetic rides named-only (G33-12/13). (10) הפר (&quot;he has broken&quot;) — the annul-lemma&#x27;s perfect-pointed pair (17:14 the covenant-breaker, Num 15:31 the commandment-breaker; the midrash reads them together, named) plus the vow-law&#x27;s infinitive twins (Num 30:13/16): four tokens, lemma-locked (G33-14). (11) Closing rulings (G33-15..18): וימל with the single-stroke accent on the yod (stress retracted); ומקנת כסף (&quot;and those bought with silver&quot;) joined by maqqef (the joining hyphen); נמלו (&quot;they were circumcised&quot;) with dagesh (the doubling dot) in the mem; לזרעו אחריו with bare lamed — the brit-olam clause held as FACT reads exactly as ruled. DISCREPANCY (filed, not merged): הלבן מאה שנה (&quot;shall a HUNDRED-YEAR-old be born to?&quot;) — Sephardic books rule accent on the aleph with NO maqqef; SNAPSHOT joins מאה־שנה (G33-11) — fourth accent-writing convention split of the run. INHERITANCE EDGES (export_links, Torah side verified): 17:1-14 → Lev 12:3 — the eighth-day circumcision STATUTE cites back to the flesh-covenant&#x27;s institution; 17:1 → II Kings 20:3 — Hezekiah&#x27;s deathbed &quot;I walked before You&quot; INVOKES the walk-before-Me formula (התהלך לפני, &quot;walk before Me&quot;) as precedent; 17:1 → Deut 28:9 (walk in His ways) and the Shaddai-name&#x27;s prophetic legs (Ezek 1:24 the wings&#x27; sound, Joel 1:15 the destruction) — the Almighty-name&#x27;s debut inherited in vision and in dread. READINGS (named-only): אקים expanded as the acronym &quot;who sanctified the beloved from the womb&quot; (the circumcision blessing&#x27;s phrase); the 208-arithmetic pair; the foreskin-drawer midrash; the minutiae file: יהיו (&quot;they shall be&quot;) without dagesh; אשתך (&quot;your wife&quot;) under the four-stroke accent; לך שרה (&quot;to you, Sarah&quot;) with no separator bar; ובינך (&quot;and between you&quot;) defective — the between-you law continuing, 16:5&#x27;s dotted exception unique). Machine layer untouched.</div>
+<div class="meta">confidence: structure tested; operator readings tested-per-TIR; intent hypothesis</div>
+<h2>Derivation log (steps A–J)</h2><table>
+<tr><th>step</th><th>name</th><th>comment</th><th>confidence</th></tr>
+<tr><td><b>A</b></td><td>Block choice</td><td>Gen 17:1-27 as ONE UNIT (the owner&#x27;s two-block order ratifying the staged span), hybrid 23 steps: the appearing and the walk-command (17:1), the cohortative covenant (17:2), the first fall (17:3), the father-of-nations charter and the renaming (17:4-5), fruitfulness and kings (17:6), the everlasting covenant (17:7), the everlasting possession (17:8), the keep-command (17:9), the law of the flesh (17:10-13), the karet-penalty (17:14), Sarai to Sarah (17:15), her blessing and her kings (17:16), the laugh in the heart (17:17), the lu-plea (17:18), Yitzchaq named pre-birth (17:19), Yishmael heard (17:20), the covenant fixed to a calendar (17:21), the ascent (17:22), and the grouped selfsame-day compliance (17:23-27). 18:1 breaks cleanly (va-yera at Mamre — visitors, hospitality genre). 27 verses, 355 tokens.</td><td>established</td></tr>
+<tr><td><b>B</b></td><td>Hebrew source + trees</td><td>All 27 verses from DB tree_json (rule set v3, unique, pure binary; ascii rendered 2026-08-05). Tree facts (accent positions DB-verified): 17:1 ends on VE-HYEH TAMIM (the be-whole command verse-final); 17:2 ends on bi-meod meod; 17:4 ends on hamon goyim; 17:5 RESTS ON AVRAM — the dying name on the etnachta of its own retirement verse — and ends on netatikha; 17:7 rests on li-VRIT OLAM (the everlasting covenant at the rest); 17:8 rests on OLAM again (achuzat olam) and ends on le-lohim (&#x27;to be their GOD&#x27;); 17:9 rests on ET-BRITI TISHMOR (the keep-demand at the rest); 17:13 ends on li-vrit olam (the phrase takes a silluq too); 17:14 ends on HEFAR (&#x27;he BROKE&#x27; — the annul-verb verse-final); 17:15 RESTS ON SARAY — the twin of 17:5: both retirement verses seat the dying name on the etnachta [tree twin] — and ends on shemah; 17:16 ends on mimenah yihyu (kings &#x27;FROM HER&#x27;); 17:17 RESTS ON VA-YITZCHAQ — the laugh ALONE at the rest — and ends on teled (&#x27;shall she BEAR?&#x27;); 17:18 ends on yichyeh lefanekha; 17:19 rests on YITZCHAQ (the name at the rest) and ends on le-zaro acharav; 17:20 rests on bi-meod meod (the doubled adverb at the rest, for the maid&#x27;s son); 17:21 rests on aqim et-YITZCHAQ and ends on ha-acheret (&#x27;the NEXT year&#x27; — the calendar verse-final); 17:22 ends on AVRAHAM (the ascent measured from the man); 17:23 rests on beit avraham and ends on ELOHIM (the compliance countersigned); 17:24-25 end on the IDENTICAL phrase besar arlato (the father&#x27;s verse and the son&#x27;s verse close on the same three words — silluq twin); 17:26 rests on nimol AVRAHAM; 17:27 ends on ITO (&#x27;with him&#x27; — the house&#x27;s last word is companionship in the cut).</td><td>tested</td></tr>
+<tr><td><b>C</b></td><td>Segment structure</td><td>Verb morphology (#IMPOSED OSHB, DB-verified 2026-08-05) and censuses run BEFORE drafting. THE DEMAND FIELD (the complete coded-mood census): 17:1 HITHALEKH (HVtv2ms, hitpael imperative) + VE-HYEH (HVqv2ms) — the compound pair; 17:2 VE-ETNAH (Vqh1cs — divine COHORTATIVE, a volitive on no one: fact, mood named); 17:9 TISHMOR (HVqi2ms — coded imperfect, TIR-028 LET?); 17:10/13 HIMOL (HVNa — niphal infinitive absolute, law-grammar, NOT imperative); NOTHING else. THE NAME FIELD: qara tokens 27-29 — 17:5&#x27;s yiqare (niphal decree), 17:15&#x27;s tiqra (negated imperfect decree), 17:19&#x27;s ve-qarata (weqatal name-decree, gen_32&#x27;s class token 2, LANDED): three naming-grammars, ZERO va-yiqra formulas, ZERO NAME ops — the registry takes nothing (flag 2). THE CENSUS HEADLINERS: avram 59/59 and saray 17/17 die in-span (flag 2); brit tokens 11-23 (x13 — the densest covenant field in the Torah); olam tokens 7-10 (flag 1); QUM tokens 7-9 (va-haqimoti x2 + aqim — the establish-verb&#x27;s hiphil returns from the Noach covenant: frozen gen_22&#x27;s aspect-ladder line quoted, &#x27;6:18&#x27;s EXACT form re-sounded&#x27;); melekh 28-29 (flag 8, LANDED); zera x7 in-span (tokens 22-28); goy tokens 11-15; natan tokens 23-28 (six in-span — cohortative, two receipts, three weqatals; token 29 is 18:7&#x27;s calf, named-only); mul tokens 1-10 of 21 (the verb nearly lives in this chapter) + orlah x5 + arel + nemaltem hapax-form + basar tokens 20-25; karat token 3 + hefer token 1 (tokens 2-3 = Lev 26:15/44 — flag 4); tzachaq token 1 (flag 6); shaddai token 1 of 9 (tokens 2-6 all patriarchal blessings; 7 = Exod 6:3&#x27;s retrospective; 8-9 = BILAM — the machazeh-owner again); tamim token 2 (flag 5); lu token 1 (token 2 = 23:13, Abraham to Efron); nasi token 1 (token 2 = 23:6 — Abraham himself called nesi elohim); moed token 2 (token 1 = 1:14&#x27;s calendar; token 3 = 18:14&#x27;s la-moed — the visitors re-use this unit&#x27;s word, named-only); etzem tokens 4-5 (token 3 = 7:13, the ark-boarding — flag 9); alah token 4 (first divine subject); kalah token 4 (creation&#x27;s finish-verb on a speech; token 5 = 18:33); lev token 5 (the heart-speech — flag 6); nafal tokens 7-8 (flag 11); shama token 9 (flag 7); parah&#x27;s first hiphils (flag 11); achuzah token 1 (tokens 2-4 all Machpelah); miqnah tokens 1-4 (all in-span — the purchase-word&#x27;s whole debut field is persons); nekhar tokens 1-2; yelid tokens 2-5; SAY-ROSTER: five divine frames (with DIBBER tokens 4-6 stepping in at the core) vs Abraham&#x27;s two (one interior); NO ktiv/qere; NO instrument tokens AT ALL (the four roster words entirely absent — the cleanest span yet); 355 tokens / 27 verses [census-exact].</td><td>tested</td></tr>
+<tr><td><b>D</b></td><td>Predicates &amp; outcomes</td><td>The machine&#x27;s registers tell a charter, not a story: TWO demands only — the compound walk-and-be-whole (OPEN; the man falls instead of walking) and the guarded keep-command (LET?, OPEN forever — a covenant is kept, never receipted) — beside TWO installed HANDLERs (the eighth-day law and the karet-penalty: the law-genre&#x27;s first covenant-firing in Genesis) and 24 standing facts that do the chapter&#x27;s real work: the self-naming, the cohortative covenant, the two renaming-decrees (the registry untouched — flag 2), the everlasting covenant and possession (FACT per frozen law — flag 1), the sign, Sarah&#x27;s blessing and her kings, the laugh and the heart-speech, the lu-plea and its shematikha answer, the pre-birth name-decree (class token 2), Yishmael&#x27;s receipt-perfects, the calendar (la-moed), the ascent, and the grouped selfsame-day compliance with its ka-asher-diber countersign. ZERO pops; ZERO names; ZERO installs (the law installs as FACTS, not WORLD entities); TESTS empty; LEDGER empty; ZERO presupposed reads.</td><td>tested</td></tr>
+<tr><td><b>E</b></td><td>Logic format choice</td><td>Operator lines; HYBRID 23 steps (per-verse x22 + one grouped row). DECLARE x2: LET(hithalekh_ve_heyeh_tamim( avram, lefanai)) [17:1 — compound device, TIR-027]; LET?(tishmor(avraham, et_briti)) [17:9 — TIR-028&#x27;s mandatory guard, gen_21&#x27;s device]. HANDLER x2 [17:12, 17:14 — lev_13&#x27;s class]. EVENTs (14): appear (17:1), fall x2 (17:3, 17:17), speak (17:3 — the dibber frame), laugh (17:17), say x2 (17:17 be-libo interior — gen_20&#x27;s device; 17:18), say-frames x3 (17:9, 17:15, 17:19), finish_speaking + ascend (17:22), take + circumcise (17:23-27 grouped). Standing facts: 24 HOLDS lines. NOTE_PRESUPPOSED x0 (eretz kenaan unflagged per frozen gen_32&#x27;s 16:3 precedent — decision recorded). NAME x0, TESTS x0, LEDGER x0, REGISTRY_INSTALL x0, INVARIANT x0 [flag 1 — FACT per gen_22]. Queue at rest: 2 OPEN (one LET, one guarded LET?), 0 settled. Interpreter extensions: NONE.</td><td>established</td></tr>
+<tr><td><b>F</b></td><td>Bilingual logic objects</td><td>Every operator line carries he + he_translit + en. Machine tokens apostrophe-free: hithalekh_ve_heyeh_tamim( avram, lefanai), tishmor(avraham, et_briti), ani_el_shaddai, li_vrit_olam, la_achuzat_olam, ve_nikhrta_ha_nefesh_ha_hi_me_ameha, et_briti_hefar, lu_yishmael_yichyeh_lefanekha, u_le_yishmael_shematikha, be_etzem_ha_yom_ha_zeh, ka_asher_diber_ito_elohim.</td><td>established</td></tr>
+<tr><td><b>G</b></td><td>Oral (named only) + Tier-A translation check</td><td>Named but NOT read (queue only — the cache middot scan is the main loop&#x27;s gate): Bereshit Rabbah 46-47 (the span; the name-arithmetic classes on Avraham/Sarah; the Shaddai etymologies; the circumcision-timing files); Rashi at 17:1 (tamim&#x27;s readings), 17:3 (the fall), 17:5 and 17:15 (the letter-swap files — the heh entering both names, the yod&#x27;s later flight to Yehoshua), 17:17 (the laugh vs Sarah&#x27;s), 17:19 (the name-reason); Ramban at 17:1 (El Shaddai&#x27;s theology); Bavli Nedarim 31b-32a (the circumcision-greatness file; Rosh Hashanah 11a (the timing); the Avram/Avraham prohibition class (Berakhot 13a — &#x27;whoever calls Abraham Abram...&#x27; — the chain&#x27;s own registry-overwrite ruling, named-only beside flag 2). Tier-A Onkelos (27 fetches, Data/FETCHLOG.md 2026-08-05): findings in ORAL_onkelos_tier_a — headline: the Memra as covenant party x4; the laugh softened to rejoicing; the walk-command turned worship; the prayer-buffer&#x27;s third firing at shematikha.</td><td>tested</td></tr>
+<tr><td><b>H</b></td><td>Scenarios</td><td>S1 the walk-command: compound LET pushed and OPEN, the self-naming fact holds. S2 the charter: covenant and renaming facts hold, no test, no name — the registry&#x27;s emptiness MACHINE-ASSERTED against the renaming (flag 2&#x27;s encoding proven at the gate). S3 the everlasting pair: brit-olam and achuzat-olam facts hold (flag 1). S4 the keep-command: LET? pushed and OPEN, mood remains LET? (TIR-028&#x27;s guard asserted). S5 the law: both HANDLER-facts hold. S6 Sarah&#x27;s charter: the renaming -decree, blessing, and kings facts hold, still no name. S7 the laugh and the plea: heart-speech and lu-facts hold. S8 the two sons: the name-decree, brit-olam, and shematikha facts hold. S9 the exit: the moed and ascent facts hold. S10 the selfsame day: compliance facts hold, both demands STILL open (nothing pops — flag 3), LEDGER stays EMPTY. S11_negative LET? guard; S12_negative flag-never-block.</td><td>tested</td></tr>
+<tr><td><b>I</b></td><td>English leakage review</td><td>Operators derive from morph codes (the hitpael+qal imperative pair; the cohortative; the coded-imperfect LET?; the niphal infinitive-absolute law-forms; the weqatal chains; the receipt-perfects; TIR-014/027/028/ 029) and censuses run BEFORE drafting (the twin name-retirements; brit x13; olam x4; the mood census; the naming-grammar census; melekh 28-29; etzem&#x27;s ark-pair; the fall/heart/laugh/hear censuses; miqnah/ yelid/nekhar; the instrument-absence check; the no-ktiv/qere check; 355/27 totals). NOT supplied: whether the everlasting covenant is INVARIANT (frozen gen_22 says FACT — flag 1, owner reviews); whether a formula-less renaming writes the registry (frozen gen_25 says no — flag 2, owner reviews; the chain&#x27;s own Berakhot 13a ruling named-only); what tamim demands (the letter&#x27;s own pair held); why the laugh is not rebuked here and Sarah&#x27;s will be (out of span, named-only); the Shaddai etymologies (the chain&#x27;s); the foreskin&#x27;s meaning (the letter legislates, the machine records).</td><td>established</td></tr>
+<tr><td><b>J</b></td><td>Pre-flight + draft ship</td><td>Pre-flight 2026-08-05 against the UNMODIFIED repo interpreter — zero injected prototypes (scratchpad preflight_gen33.py; draft guard bypassed for preview only). Ships as STATUS: DRAFT by the gen-5 block agent (mechanics only, third unit of its tenure); the main loop verifies quotes, re-runs censuses, rules on flags 1-14, and freezes through the standard gate chain.</td><td>established</td></tr>
+</table>
+<h2>Boot steps — the operator lines (hand-derived, owner-approved)</h2>
+<div class="step">
+<h3>STEP_Gn_17_1 · Gen.17.1 · <span class='expr'>EL_SHADDAI_AND_THE_WALK_COMMAND</span></h3>
+<p><span class="he">וַיְהִי אַבְרָם בֶּן־תִּשְׁעִים שָׁנָה וְתֵשַׁע שָׁנִים וַיֵּרָא יְהוָה אֶל־אַבְרָם וַיֹּאמֶר אֵלָיו אֲנִי־אֵל שַׁדַּי הִתְהַלֵּךְ לְפָנַי וֶהְיֵה תָמִים</span> · <i>va-yehi avram ben-tishim shanah ve-tesha shanim va-yera YHWH el-avram va-yomer elav ani-el shaddai hithalekh lefanai ve-heyeh tamim</i> · [EN-AID/JPS] And when Abram was ninety years old and nine, the LORD appeared to Abram, and said unto him: &#x27;I am God Almighty; walk before Me, and be thou wholehearted.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויהי אברם בן־תשעים שנה ותשע שנים</span> · <i>va-yehi avram ben-tishim shanah ve-tesha shanim</i> · Abram ninety-nine (etnachta arm — thirteen silent years since 16:16&#x27;s 86)</div><div class="arm"><b>RIGHT</b><br><span class="he">וירא יהוה אל־אברם ויאמר אליו אני־אל שדי התהלך לפני והיה תמים</span> · <i>va-yera YHWH el-avram va-yomer elav ani-el shaddai hithalekh lefanai ve-heyeh tamim</i> · YHWH appeared: I am El Shaddai — walk before Me and BE WHOLE (verse-final tamim)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">appear(e1) ∧ Agent(e1, YHWH) ∧ Goal(e1, avram)</span><br><span class="gloss">= appear(e1) ∧ Agent(e1, the-LORD) ∧ Goal(e1, avram)</span><br>VA-YERA — the appearance-verb&#x27;s second Abram-token (the first was 12:7, frozen gen_27&#x27;s altar-trigger; the third is 18:1, across the seam, named-only). The frame carries the seam-fact: 16:16 closed at 86; this verse opens at 99 — THIRTEEN SILENT YEARS, the letter&#x27;s longest jump inside one biography [letter frame, prose; flag 10].
+</td><td><span class="he">וַיֵּרָא יְהוָה אֶל־אַבְרָם</span> · <i>va-yera YHWH el-avram</i><br><span class="gloss">= and-yera the-LORD to-avram</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ani_el_shaddai, t0)</span><br><span class="gloss">= HOLDS(ani-to-shaddai, t0)</span><br>ANI EL SHADDAI — SHADDAI&#x27;s TORAH DEBUT, and frozen gen_31&#x27;s self-naming ladder lands its second rung, quoted: &#x27;The ladder that follows: 17:1 ani El Shaddai, 28:13 anokhi YHWH&#x27; [landed]. Shaddai&#x27;s nine Torah tokens: five patriarchal blessings, Exod 6:3&#x27;s own retrospective, and BILAM x2 — the Almighty-name lives in blessings and a foreign seer&#x27;s mouth [census, prose]. EL token 6 — the ladder after El Elyon and El Roi [census].
+</td><td><span class="he">אֲנִי־אֵל שַׁדַּי</span> · <i>ani-el shaddai</i><br><span class="gloss">= ani-to shaddai</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(YHWH, LET(hithalekh_ve_heyeh_tamim(avram, lefanai)))</span><br><span class="gloss">= DECLARE(the-LORD, LET(walked-about-and-heyeh-tamim(avram, before-Me)))</span><br>THE COMPOUND WALK-COMMAND [flag 5]: HITHALEKH (hitpael imperative HVtv2ms) + VE-HYEH (imperative HVqv2ms) ride ONE demand — the compound device, frozen gen_32&#x27;s line quoted: &#x27;DECLARE(YHWH, LET(habet_u_sefor(avram, ha_shamaymah_ve_ha_kokhavim)))&#x27; [TIR-027]. Pushed; OPEN — the next verse&#x27;s response is a FALL, not a walk [letter irony, prose]. THE WALK-LADDER: Chanokh walked WITH God (frozen gen_14: &#x27;hithalekh_chanokh_et_ha_ elohim&#x27;), Noach WITH God (frozen gen_16: &#x27;et-ha-Elohim hithalekh-Noach&#x27;), Abram was sent to walk THE LAND (13:17 — frozen gen_29&#x27;s qum_hithalekh demand, still OPEN across two walls), now BEFORE ME: with, with, through, before [career, prose]. TAMIM token 2 — token 1 is 6:9&#x27;s Noach; token 3 is Exod 12:5&#x27;s LAMB: man, man, lamb [census]. Onkelos: hithalekh -&gt; PELACH KODAMAI (&#x27;SERVE/worship before Me&#x27;) — the walk turned worship; tamim -&gt; shelim (gen_16&#x27;s frozen buffer repeating) [dual-track].
+</td><td><span class="he">הִתְהַלֵּךְ לְפָנַי וֶהְיֵה תָמִים</span> · <i>hithalekh lefanai ve-heyeh tamim</i><br><span class="gloss">= walked-about before-Me and-heyeh tamim</span></td><td class='cite'>TIR-027</td><td>tested</td></tr>
+</table>
+<div class="meta">Thirteen years of silence end with a name the corpus has never heard and a command in two imperatives: walk, be whole — graded on a ladder where the last two walkers walked WITH, and this one must walk BEFORE.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_17_2 · Gen.17.2 · <span class='expr'>THE_COHORTATIVE_COVENANT</span></h3>
+<p><span class="he">וְאֶתְּנָה בְרִיתִי בֵּינִי וּבֵינֶךָ וְאַרְבֶּה אוֹתְךָ בִּמְאֹד מְאֹד</span> · <i>ve-etnah vriti beini u-veinekha ve-arbeh otkha bi-meod meod</i> · [EN-AID/JPS] And I will make My covenant between Me and thee, and will multiply thee exceedingly.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ואתנה בריתי ביני ובינך</span> · <i>ve-etnah vriti beini u-veinekha</i> · let Me set My covenant between Me and you (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וארבה אותך במאד מאד</span> · <i>ve-arbeh otkha bi-meod meod</i> · and multiply you exceedingly — bi-meod meod verse-final</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_etnah_vriti_beini_u_veinekha, t0) ∧ HOLDS(ve_arbeh_otkha_bi_meod_meod, t0)</span><br><span class="gloss">= HOLDS(and-etnah-vriti-beini-and-veinekha, t0) ∧ HOLDS(and-I-will-multiply-otkha-bi-very-very, t0)</span><br>VE-ETNAH — a divine COHORTATIVE (Vqh1cs, &#x27;let Me SET My covenant&#x27;): a first-person volitive is a demand on NO ONE — held as promise-fact with the mood named [morph; flag 11; the give-verb natan token 23 opens the chapter&#x27;s six-token run]. BRIT token 11 opens the densest covenant-field in the Torah (x13 in-span) [census]. BI-MEOD MEOD — the doubled very, first of three in-span (17:2, 17:6, 17:20) [census]. Onkelos begins the headline here: beini -&gt; bein MEIMRI (&#x27;between MY WORD and you&#x27;) — the Memra enters the between-formula [dual-track, flagged].
+</td><td><span class="he">וְאֶתְּנָה בְרִיתִי בֵּינִי וּבֵינֶךָ וְאַרְבֶּה אוֹתְךָ בִּמְאֹד מְאֹד</span> · <i>ve-etnah vriti beini u-veinekha ve-arbeh otkha bi-meod meod</i><br><span class="gloss">= and-etnah vriti beini and-veinekha I-will-multiply otkha very very</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The covenant arrives in the grammar of self-resolve: let Me set it — no one commanded, nothing demanded, a doubled adverb where a measure should be.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_17_3 · Gen.17.3 · <span class='expr'>THE_FIRST_FALL_AND_THE_SPEAK_FRAME</span></h3>
+<p><span class="he">וַיִּפֹּל אַבְרָם עַל־פָּנָיו וַיְדַבֵּר אִתּוֹ אֱלֹהִים לֵאמֹר</span> · <i>va-yipol avram al-panav va-yedaber ito elohim le-mor</i> · [EN-AID/JPS] And Abram fell on his face; and God talked with him, saying:</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויפל אברם על־פניו</span> · <i>va-yipol avram al-panav</i> · Abram fell on his face (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">וידבר אתו אלהים לאמר</span> · <i>va-yedaber ito elohim le-mor</i> · and God SPOKE with him, saying</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">fall(e2) ∧ Agent(e2, avram)</span><br>The walk-command&#x27;s answer is a FALL [flag 11&#x27;s census: nafal tokens 5-8 are all Abram&#x27;s field — the sleep fell, the dread falling (15:12, frozen gen_31), he falls silent here, he falls laughing at 17:17]. The demand stands OPEN over the prostration [letter fact].
+</td><td><span class="he">וַיִּפֹּל אַבְרָם עַל־פָּנָיו</span> · <i>va-yipol avram al-panav</i><br><span class="gloss">= and-yipol avram upon-panav</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">speak(e3) ∧ Agent(e3, elohim) ∧ Goal(e3, avram)</span><br><span class="gloss">= speak(e3) ∧ Agent(e3, God) ∧ Goal(e3, avram)</span><br>VA-YEDABER — DIBBER token 4: the SPEAK-verb steps in for the say-verb at the covenant&#x27;s core (tokens 4-6 all in-span: the charter&#x27;s frame, the exit, the compliance-countersign) [census; flag 10&#x27;s five-frame roster].
+</td><td><span class="he">וַיְדַבֵּר אִתּוֹ אֱלֹהִים לֵאמֹר</span> · <i>va-yedaber ito elohim le-mor</i><br><span class="gloss">= and-yedaber with-him God to-mor</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+</table>
+<div class="meta">Commanded to walk, the man goes down instead — and the letter switches verbs for what comes next: not saying now but SPEAKING, the word the law-books will live in.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_17_4 · Gen.17.4 · <span class='expr'>THE_FATHER_OF_MULTITUDE_CHARTER</span></h3>
+<p><span class="he">אֲנִי הִנֵּה בְרִיתִי אִתָּךְ וְהָיִיתָ לְאַב הֲמוֹן גּוֹיִם</span> · <i>ani hineh vriti itakh ve-hayita le-av hamon goyim</i> · [EN-AID/JPS] &#x27;As for Me, behold, My covenant is with thee, and thou shalt be the father of a multitude of nations.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">אני הנה בריתי אתך</span> · <i>ani hineh vriti itakh</i> · as for ME — behold, My covenant is WITH you (etnachta on itakh)</div><div class="arm"><b>RIGHT</b><br><span class="he">והיית לאב המון גוים</span> · <i>ve-hayita le-av hamon goyim</i> · and you shall be father of a MULTITUDE of nations (verse-final)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ani_hineh_vriti_itakh, t0) ∧ HOLDS(ve_hayita_le_av_hamon_goyim, t0)</span><br><span class="gloss">= HOLDS(ani-hineh-vriti-with-you, t0) ∧ HOLDS(and-hayita-to-father-hamon-goyim, t0)</span><br>ANI token 7 opens the charter-half (&#x27;as for ME&#x27;); 17:9&#x27;s ve-atah (&#x27;and YOU&#x27;) will answer it — the covenant&#x27;s two-party grammar [letter structure]. HAMON (&#x27;multitude&#x27;) — its only two Torah tokens are 17:4 and 17:5, BRACKETING THE NEW NAME: the word exists to etymologize AVRAHAM [census; flag 2]. The weqatal chain (ve-hayita) is decree-grammar, TIR-029 — facts, not demands [morph].
+</td><td><span class="he">אֲנִי הִנֵּה בְרִיתִי אִתָּךְ וְהָיִיתָ לְאַב הֲמוֹן גּוֹיִם</span> · <i>ani hineh vriti itakh ve-hayita le-av hamon goyim</i><br><span class="gloss">= ani hineh vriti with-you and-hayita father hamon goyim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The charter opens on a word invented for one purpose: a multitude that exists twice in the Torah, both times standing next to the name it is about to explain.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_17_5 · Gen.17.5 · <span class='expr'>AVRAM_RETIRED_AVRAHAM_DECREED</span></h3>
+<p><span class="he">וְלֹא־יִקָּרֵא עוֹד אֶת־שִׁמְךָ אַבְרָם וְהָיָה שִׁמְךָ אַבְרָהָם כִּי אַב־הֲמוֹן גּוֹיִם נְתַתִּיךָ</span> · <i>ve-lo-yiqare od et-shimkha avram ve-hayah shimkha avraham ki av-hamon goyim netatikha</i> · [EN-AID/JPS] Neither shall thy name any more be called Abram, but thy name shall be Abraham; for the father of a multitude of nations have I made thee.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ולא־יקרא עוד את־שמך אברם</span> · <i>ve-lo-yiqare od et-shimkha avram</i> · no longer shall your name be called AVRAM — the dying name ON the etnachta</div><div class="arm"><b>RIGHT</b><br><span class="he">והיה שמך אברהם כי אב־המון גוים נתתיך</span> · <i>ve-hayah shimkha avraham ki av-hamon goyim netatikha</i> · your name shall be AVRAHAM, for I have MADE you father of multitude (verse-final netatikha)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lo_yiqare_od_shimkha_avram, t0) ∧ HOLDS(ve_hayah_shimkha_avraham, t0)</span><br><span class="gloss">= HOLDS(not-yiqare-od-shimkha-avram, t0) ∧ HOLDS(and-was-shimkha-avraham, t0)</span><br>THE RENAMING AS DECREE-FACT, NOT NAME OP [flag 2 — the boldest]: yiqare is a NIPHAL IMPERFECT decree, not the va-yiqra narrative formula — frozen gen_25&#x27;s rule controls, quoted: &#x27;NO NAME op... no va-yiqra (&quot;and-he-called&quot;) narrative formula... the REGISTRY takes nothing.&#x27; AND THE LETTER COUNTERSIGNS: AVRAM has exactly 59 Torah tokens and TOKEN 59 — the last ever — sits in THIS verse, inside the sentence retiring it; the verse even RESTS on the dying name (the etnachta is avram) [census + tree, DB-verified]. The narrator obeys instantly: avraham from here on (tokens 1-10 in-span). NETATIKHA (&#x27;I have MADE you&#x27; — natan token 24, the receipt-perfect, gen_21&#x27;s class): the renaming&#x27;s ground is already in the past tense [census]. The registry&#x27;s silence is machine-asserted at the scenario gate [flag 2].
+</td><td><span class="he">וְלֹא־יִקָּרֵא עוֹד אֶת־שִׁמְךָ אַבְרָם וְהָיָה שִׁמְךָ אַבְרָהָם</span> · <i>ve-lo-yiqare od et-shimkha avram ve-hayah shimkha avraham</i><br><span class="gloss">= and-not-yiqare od shimkha avram was shimkha avraham</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The old name is spent to the last token inside the decree that ends it, and the verse leans its mid-point on the word it is retiring: the letter performs the funeral it pronounces.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_17_6 · Gen.17.6 · <span class='expr'>FRUITFULNESS_AND_KINGS</span></h3>
+<p><span class="he">וְהִפְרֵתִי אֹתְךָ בִּמְאֹד מְאֹד וּנְתַתִּיךָ לְגוֹיִם וּמְלָכִים מִמְּךָ יֵצֵאוּ</span> · <i>ve-hifreti otkha bi-meod meod u-netatikha le-goyim u-melakhim mimkha yetzeu</i> · [EN-AID/JPS] And I will make thee exceeding fruitful, and I will make nations of thee, and kings shall come out of thee.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">והפרתי אתך במאד מאד ונתתיך לגוים</span> · <i>ve-hifreti otkha bi-meod meod u-netatikha le-goyim</i> · I will make you fruitful exceedingly — into NATIONS (etnachta on le-goyim)</div><div class="arm"><b>RIGHT</b><br><span class="he">ומלכים ממך יצאו</span> · <i>u-melakhim mimkha yetzeu</i> · and KINGS shall come out of you (verse-final yetzeu)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_hifreti_otkha_bi_meod_meod, t0) ∧ HOLDS(u_melakhim_mimkha_yetzeu, t0)</span><br><span class="gloss">= HOLDS(and-hifreti-otkha-bi-very-very, t0) ∧ HOLDS(and-melakhim-mimkha-yetzeu, t0)</span><br>VE-HIFRETI — parah&#x27;s FIRST HIPHIL: commanded five times as peru (&#x27;be fruitful&#x27;, 1:22-9:7), the verb now turns causative in God&#x27;s own hand — &#x27;I will MAKE fruitful&#x27; [census; flag 11]. U-MELAKHIM MIMKHA YETZEU — MELEKH TOKEN 28, and FROZEN gen_30&#x27;s prediction LANDS, quoted verbatim: &#x27;melekh (&quot;king&quot;) in-span x27 with tokens 28-29 = 17:6/17:16 (&quot;kings shall come out of you&quot;)&#x27; — the king-word born in a war reappears in the covenant [landed; flag 8]. YETZEU — yatza: the bring-out verb of the exodus-formula now births kings [census, prose].
+</td><td><span class="he">וְהִפְרֵתִי אֹתְךָ בִּמְאֹד מְאֹד וּמְלָכִים מִמְּךָ יֵצֵאוּ</span> · <i>ve-hifreti otkha bi-meod meod u-melakhim mimkha yetzeu</i><br><span class="gloss">= and-hifreti otkha very very and-melakhim mimkha yetzeu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The blessing-verb of the fifth day goes causative, and the word the letter spent on nine warlords is promised to one man&#x27;s body: kings, plural, out of you.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_17_7 · Gen.17.7 · <span class='expr'>THE_EVERLASTING_COVENANT</span></h3>
+<p><span class="he">וַהֲקִמֹתִי אֶת־בְּרִיתִי בֵּינִי וּבֵינֶךָ וּבֵין זַרְעֲךָ אַחֲרֶיךָ לְדֹרֹתָם לִבְרִית עוֹלָם לִהְיוֹת לְךָ לֵאלֹהִים וּלְזַרְעֲךָ אַחֲרֶיךָ</span> · <i>va-haqimoti et-briti beini u-veinekha u-vein zarakha acharekha le-dorotam li-vrit olam li-heyot lekha le-lohim u-le-zarakha acharekha</i> · [EN-AID/JPS] And I will establish My covenant between Me and thee and thy seed after thee throughout their generations for an everlasting covenant, to be a God unto thee and to thy seed after thee.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">והקמתי את־בריתי ביני ובינך ובין זרעך אחריך לדרתם לברית עולם</span> · <i>va-haqimoti et-briti beini u-veinekha u-vein zarakha acharekha le-dorotam li-vrit olam</i> · I will establish My covenant — for an EVERLASTING COVENANT (etnachta on li-vrit olam)</div><div class="arm"><b>RIGHT</b><br><span class="he">להיות לך לאלהים ולזרעך אחריך</span> · <i>li-heyot lekha le-lohim u-le-zarakha acharekha</i> · to be God to you and to your seed after you</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(va_haqimoti_et_briti_li_vrit_olam, t0) ∧ HOLDS(li_heyot_lekha_le_lohim, t0)</span><br><span class="gloss">= HOLDS(and-haqimoti-My-covenant-to-me-vrit-olam, t0) ∧ HOLDS(to-me-being-to-you-to-lohim, t0)</span><br>BRIT OLAM HELD AS FACT PER DIRECT FROZEN LAW [flag 1]: frozen gen_22&#x27;s own 9:16 token is the controlling precedent, quoted: &#x27;HOLDS(u_reitiha_li_zekor_brit_olam, t1)&#x27; — the everlasting covenant itself already held as fact, no INVARIANT; gen_29&#x27;s ad-olam analysis stands behind it. The phrase sits ON the etnachta [tree fact]. VA-HAQIMOTI — the establish-verb returns from the Noach covenant in its EXACT form (frozen gen_22&#x27;s aspect-ladder line quoted: &#x27;6:18&#x27;s EXACT form re-sounded&#x27;); qum tokens 7-9 in-span after token 6 = 13:17&#x27;s qum (frozen gen_29&#x27;s still-open walk-demand — the same root now establishes) [census, prose]. The God-clause debuts the covenant&#x27;s deepest formula: li-heyot lekha le-LOHIM (&#x27;to BE GOD to you&#x27;) — the Sinai formula&#x27;s seed [career, prose, named-only]. Onkelos: bein MEIMRI — the Memra as party again [dual-track, headline].
+</td><td><span class="he">וַהֲקִמֹתִי אֶת־בְּרִיתִי … לִבְרִית עוֹלָם לִהְיוֹת לְךָ לֵאלֹהִים</span> · <i>va-haqimoti et-briti … li-vrit olam li-heyot lekha le-lohim</i><br><span class="gloss">= and-haqimoti My-covenant to-me-vrit olam being to-you to-lohim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The establish-verb of the flood-covenant returns letter -perfect, and what it establishes this time is not a never-again but a forever-yes — held as fact exactly as the frozen law already held its rainbow twin.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_17_8 · Gen.17.8 · <span class='expr'>THE_EVERLASTING_POSSESSION</span></h3>
+<p><span class="he">וְנָתַתִּי לְךָ וּלְזַרְעֲךָ אַחֲרֶיךָ אֵת אֶרֶץ מְגֻרֶיךָ אֵת כָּל־אֶרֶץ כְּנַעַן לַאֲחֻזַּת עוֹלָם וְהָיִיתִי לָהֶם לֵאלֹהִים</span> · <i>ve-natati lekha u-le-zarakha acharekha et eretz megurekha et kol-eretz kenaan la-achuzat olam ve-hayiti lahem le-lohim</i> · [EN-AID/JPS] And I will give unto thee, and to thy seed after thee, the land of thy sojournings, all the land of Canaan, for an everlasting possession; and I will be their God.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ונתתי לך ולזרעך אחריך את ארץ מגריך את כל־ארץ כנען לאחזת עולם</span> · <i>ve-natati lekha u-le-zarakha acharekha et eretz megurekha et kol-eretz kenaan la-achuzat olam</i> · the land of your sojournings, all Canaan, for an everlasting POSSESSION (etnachta on olam)</div><div class="arm"><b>RIGHT</b><br><span class="he">והייתי להם לאלהים</span> · <i>ve-hayiti lahem le-lohim</i> · and I will be their God</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_natati_et_eretz_megurekha_la_achuzat_olam, t0) ∧ HOLDS(ve_hayiti_lahem_le_lohim, t0)</span><br><span class="gloss">= HOLDS(and-natati-earth-megurekha-to-achuzat-olam, t0) ∧ HOLDS(and-hayiti-to-them-to-lohim, t0)</span><br>The land-grant re-sounds frozen gen_31&#x27;s receipt (15:18&#x27;s natati — quoted there; here the weqatal ve-natati continues the chain): ERETZ MEGUREKHA (&#x27;the land of your SOJOURNINGS&#x27;) — magor&#x27;s TORAH DEBUT: the ger-root of the 15:13 decree and 12:10&#x27;s descent nominalized onto the land itself — the promised land is named by the sojourning it will cost [census, prose]. ACHUZAH (&#x27;possession&#x27;) — TORAH DEBUT with OLAM (fact per flag 1&#x27;s law); its tokens 2-4 are ALL ch. 23: the everlasting possession&#x27;s first realized instance is Machpelah — A GRAVE [census, prose, named-only]. The lekha-and-seed recipient restores gen_29&#x27;s double after 15:18&#x27;s seed-only [cross-unit delta, prose].
+</td><td><span class="he">וְנָתַתִּי … אֵת אֶרֶץ מְגֻרֶיךָ … לַאֲחֻזַּת עוֹלָם וְהָיִיתִי לָהֶם לֵאלֹהִים</span> · <i>ve-natati … et eretz megurekha … la-achuzat olam ve-hayiti lahem le-lohim</i><br><span class="gloss">= and-natati et earth megurekha to-achuzat olam and-hayiti to-them to-lohim</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The land is deeded under the name of what it will not yet be — sojourning-country granted as everlasting holding — and the possession-word&#x27;s next three tokens buy a cave to bury a wife.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_17_9 · Gen.17.9 · <span class='expr'>THE_GUARDED_KEEP_COMMAND</span></h3>
+<p><span class="he">וַיֹּאמֶר אֱלֹהִים אֶל־אַבְרָהָם וְאַתָּה אֶת־בְּרִיתִי תִשְׁמֹר אַתָּה וְזַרְעֲךָ אַחֲרֶיךָ לְדֹרֹתָם</span> · <i>va-yomer elohim el-avraham ve-atah et-briti tishmor atah ve-zarakha acharekha le-dorotam</i> · [EN-AID/JPS] And God said unto Abraham: &#x27;And as for thee, thou shalt keep My covenant, thou, and thy seed after thee throughout their generations.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר אלהים אל־אברהם ואתה את־בריתי תשמר</span> · <i>va-yomer elohim el-avraham ve-atah et-briti tishmor</i> · and YOU: My covenant you shall KEEP (etnachta on tishmor — the demand at the rest)</div><div class="arm"><b>RIGHT</b><br><span class="he">אתה וזרעך אחריך לדרתם</span> · <i>atah ve-zarakha acharekha le-dorotam</i> · you and your seed after you, through their generations</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">say(e4) ∧ Agent(e4, elohim) ∧ Goal(e4, avraham)</span><br><span class="gloss">= say(e4) ∧ Agent(e4, God) ∧ Goal(e4, avraham)</span><br>The third frame — and the first speech ever addressed to AVRAHAM under the new name [say-roster; letter fact]. VE-ATAH (&#x27;and YOU&#x27;) answers 17:4&#x27;s ani: the covenant&#x27;s second party called to its duty [letter structure].
+</td><td><span class="he">וַיֹּאמֶר אֱלֹהִים אֶל־אַבְרָהָם</span> · <i>va-yomer elohim el-avraham</i><br><span class="gloss">= and-yomer God to-avraham</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>DECLARE</td><td><span class="expr">DECLARE(elohim, LET?(tishmor(avraham, et_briti)))</span><br><span class="gloss">= DECLARE(God, LET?(tishmor(avraham, My-covenant)))</span><br>THE GUARDED KEEP-COMMAND [flag 3]: TISHMOR — a coded imperfect in a command frame (HVqi2ms, DB-verified): TIR-028&#x27;s mandatory ?-guard, frozen gen_21&#x27;s device quoted: &#x27;the imperfect in a command frame takes TIR-028&#x27;s mandatory ?... the demand stays pushed and OPEN, mood guarded: letter-faithful debt.&#x27; Pushed as LET?; OPEN FOREVER — keeping a covenant has no single receipt; the mood never upgrades without citation (the S7 contract). SHAMAR tokens 4-5 in-span (tishmor/ tishmeru) — the garden&#x27;s keep-verb (2:15&#x27;s le-shomrah) turned covenant-duty [census, prose]. The demand sits ON the etnachta [tree fact].
+</td><td><span class="he">וְאַתָּה אֶת־בְּרִיתִי תִשְׁמֹר</span> · <i>ve-atah et-briti tishmor</i><br><span class="gloss">= you My-covenant tishmor</span></td><td class='cite'>TIR-028</td><td>tested</td></tr>
+</table>
+<div class="meta">The charter turns and faces its human party with a verb in the mood of standing obligation: keep — a demand the machine must guard with a question mark, because no single day can ever pop it.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_17_10 · Gen.17.10 · <span class='expr'>THE_LAW_ANNOUNCED</span></h3>
+<p><span class="he">זֹאת בְּרִיתִי אֲשֶׁר תִּשְׁמְרוּ בֵּינִי וּבֵינֵיכֶם וּבֵין זַרְעֲךָ אַחֲרֶיךָ הִמּוֹל לָכֶם כָּל־זָכָר</span> · <i>zot briti asher tishmeru beini u-veineikhem u-vein zarakha acharekha himol lakhem kol-zakhar</i> · [EN-AID/JPS] This is My covenant, which ye shall keep, between Me and you and thy seed after thee: every male among you shall be circumcised.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">זאת בריתי אשר תשמרו ביני וביניכם ובין זרעך אחריך</span> · <i>zot briti asher tishmeru beini u-veineikhem u-vein zarakha acharekha</i> · THIS is My covenant you shall keep (etnachta on acharekha)</div><div class="arm"><b>RIGHT</b><br><span class="he">המול לכם כל־זכר</span> · <i>himol lakhem kol-zakhar</i> · circumcised for you every male — the law in three words</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(zot_briti_asher_tishmeru, t0) ∧ HOLDS(himol_lakhem_kol_zakhar, t0)</span><br><span class="gloss">= HOLDS(this-My-covenant-which-tishmeru, t0) ∧ HOLDS(himol-lakhem-all-male, t0)</span><br>THE LAW ANNOUNCED IN LAW-GRAMMAR [flag 3]: HIMOL — MUL&#x27;s TORAH DEBUT as a NIPHAL INFINITIVE ABSOLUTE (HVNa, DB-verified) — a command-form that commands no addressee: not an imperative (TIR-027&#x27;s boundary — NO imperative-LET fires; the mood decides). Mul&#x27;s tokens 1-10 of 21 all in-span: the verb nearly lives in this chapter [census]. The zot-formula (&#x27;THIS is My covenant&#x27;) is definitional speech — the covenant acquires a body [letter fact; the HANDLER installs at 17:12].
+</td><td><span class="he">זֹאת בְּרִיתִי אֲשֶׁר תִּשְׁמְרוּ … הִמּוֹל לָכֶם כָּל־זָכָר</span> · <i>zot briti asher tishmeru … himol lakhem kol-zakhar</i><br><span class="gloss">= this My-covenant which tishmeru himol lakhem all-male</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The covenant gets its operative clause in a verb-form with no second person in it: circumcised, every male — law spoken the way statutes are, to everyone by naming no one.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_17_11 · Gen.17.11 · <span class='expr'>THE_SIGN_IN_THE_FLESH</span></h3>
+<p><span class="he">וּנְמַלְתֶּם אֵת בְּשַׂר עָרְלַתְכֶם וְהָיָה לְאוֹת בְּרִית בֵּינִי וּבֵינֵיכֶם</span> · <i>u-nemaltem et besar arlatkhem ve-hayah le-ot brit beini u-veineikhem</i> · [EN-AID/JPS] And ye shall be circumcised in the flesh of your foreskin; and it shall be a token of a covenant betwixt Me and you.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ונמלתם את בשר ערלתכם</span> · <i>u-nemaltem et besar arlatkhem</i> · you shall be circumcised in the flesh of your foreskin (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">והיה לאות ברית ביני וביניכם</span> · <i>ve-hayah le-ot brit beini u-veineikhem</i> · and it shall be a covenant-SIGN between Me and you</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(u_nemaltem_et_besar_arlatkhem, t0) ∧ HOLDS(ve_hayah_le_ot_brit, t0)</span><br><span class="gloss">= HOLDS(and-nemaltem-besar-arlatkhem, t0) ∧ HOLDS(and-was-to-ot-brit, t0)</span><br>U-NEMALTEM — a weqatal 2mp (the TIR-029 chain; a hapax-form of the clip-root) riding the law&#x27;s decree-grammar [morph]. ORLAH (&#x27;foreskin&#x27;) — TORAH DEBUT (x5 in-span); BASAR tokens 20-25 — the flood&#x27;s all-flesh word becomes the covenant&#x27;s WRITING SURFACE [census, prose]. OT BRIT (&#x27;covenant-SIGN&#x27;) — the sign-class&#x27;s third member: the calendar-lights (1:14), the bow (9:12-17, frozen gen_22&#x27;s field), now flesh — sky, cloud, body [career, prose]. Onkelos: bein MEIMRI again — the sign stands between the Word and them [dual-track, headline].
+</td><td><span class="he">וּנְמַלְתֶּם אֵת בְּשַׂר עָרְלַתְכֶם וְהָיָה לְאוֹת בְּרִית</span> · <i>u-nemaltem et besar arlatkhem ve-hayah le-ot brit</i><br><span class="gloss">= and-nemaltem et besar arlatkhem was to-ot brit</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The covenant&#x27;s third sign moves from sky to cloud to skin: after lights that mark seasons and a bow that interrupts storms, a mark carried on the body that walks before God.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_17_12 · Gen.17.12 · <span class='expr'>THE_EIGHTH_DAY_HANDLER</span></h3>
+<p><span class="he">וּבֶן־שְׁמֹנַת יָמִים יִמּוֹל לָכֶם כָּל־זָכָר לְדֹרֹתֵיכֶם יְלִיד בָּיִת וּמִקְנַת־כֶּסֶף מִכֹּל בֶּן־נֵכָר אֲשֶׁר לֹא מִזַּרְעֲךָ הוּא</span> · <i>u-ven-shemonat yamim yimol lakhem kol-zakhar le-doroteikhem yelid bayit u-miqnat-kesef mi-kol ben-nekhar asher lo mi-zarakha hu</i> · [EN-AID/JPS] And he that is eight days old shall be circumcised among you, every male throughout your generations, he that is born in the house, or bought with money of any foreigner, that is not of thy seed.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ובן־שמנת ימים ימול לכם כל־זכר לדרתיכם</span> · <i>u-ven-shemonat yamim yimol lakhem kol-zakhar le-doroteikhem</i> · eight days old, every male, through your generations (etnachta on le-doroteikhem)</div><div class="arm"><b>RIGHT</b><br><span class="he">יליד בית ומקנת־כסף מכל בן־נכר אשר לא מזרעך הוא</span> · <i>yelid bayit u-miqnat-kesef mi-kol ben-nekhar asher lo mi-zarakha hu</i> · house-born and silver-bought, even the foreigner&#x27;s son not of your seed</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>HANDLER</td><td><span class="expr">HANDLER IF(ben_shemonat_yamim ∧ kol_zakhar_le_doroteikhem) THEN(yimol ∧ yelid_bayit_u_miqnat_kesef_bi_khlal)</span><br><span class="gloss">= HANDLER IF(ben-shemonat-seas ∧ all-male-to-doroteikhem) THEN(yimol ∧ yelid-bayit-and-miqnat-kesef-bi-khlal)</span><br>THE EIGHTH-DAY LAW INSTALLS [flag 3]: a generational standing directive — lev_13&#x27;s class (the law installs; only cases execute), gen_12&#x27;s counsel-handlers the Genesis precedent. YIMOL is imperfect 3ms (law-grammar); the scope-clause reaches past blood: YELID BAYIT (&#x27;house-born&#x27;) and MIQNAT-KESEF (&#x27;silver-bought&#x27; — miqnah&#x27;s TORAH DEBUT: the purchase-word&#x27;s whole debut field, tokens 1-4, is PERSONS in this chapter) and even BEN-NEKHAR (&#x27;the foreigner&#x27;s son&#x27; — nekhar debut): the covenant&#x27;s mark crosses the bloodline it defines [census, prose]. The eighth day: the number&#x27;s first law [the chain&#x27;s timing-files named-only].
+</td><td><span class="he">וּבֶן־שְׁמֹנַת יָמִים יִמּוֹל לָכֶם כָּל־זָכָר</span> · <i>u-ven-shemonat yamim yimol lakhem kol-zakhar</i><br><span class="gloss">= and-ven-shemonat seas yimol lakhem all-male</span></td><td class='cite'>TIR-029</td><td>tested</td></tr>
+</table>
+<div class="meta">The law&#x27;s reach is its own commentary: eight days old, born or bought, seed or stranger — the covenant marks the whole house before anyone in it can choose.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_17_13 · Gen.17.13 · <span class='expr'>THE_DOUBLED_MUST_AND_THE_FLESH_COVENANT</span></h3>
+<p><span class="he">הִמּוֹל יִמּוֹל יְלִיד בֵּיתְךָ וּמִקְנַת כַּסְפֶּךָ וְהָיְתָה בְרִיתִי בִּבְשַׂרְכֶם לִבְרִית עוֹלָם</span> · <i>himol yimol yelid beitkha u-miqnat kaspekha ve-haytah vriti bi-vesarkhem li-vrit olam</i> · [EN-AID/JPS] He that is born in thy house, and he that is bought with thy money, must needs be circumcised; and My covenant shall be in your flesh for an everlasting covenant.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">המול ימול יליד ביתך ומקנת כספך</span> · <i>himol yimol yelid beitkha u-miqnat kaspekha</i> · circumcised he MUST be — house-born and silver-bought (etnachta on kaspekha)</div><div class="arm"><b>RIGHT</b><br><span class="he">והיתה בריתי בבשרכם לברית עולם</span> · <i>ve-haytah vriti bi-vesarkhem li-vrit olam</i> · and My covenant shall be IN YOUR FLESH — an everlasting covenant (verse-final)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(himol_yimol_yelid_beitkha, t0) ∧ HOLDS(vriti_bi_vesarkhem_li_vrit_olam, t0)</span><br><span class="gloss">= HOLDS(himol-yimol-yelid-beitkha, t0) ∧ HOLDS(vriti-bi-vesarkhem-to-me-vrit-olam, t0)</span><br>HIMOL YIMOL — the law doubles its own verb (infinitive absolute + imperfect: the mot-tamut emphatic class, on a statute) [morph, prose]. VRITI BI-VESARKHEM (&#x27;My covenant IN YOUR FLESH&#x27;) — the covenant located bodily; LI-VRIT OLAM again, verse-final this time — fact per flag 1&#x27;s frozen law [tree fact; census: brit tokens 18-19 in this verse].
+</td><td><span class="he">הִמּוֹל יִמּוֹל … וְהָיְתָה בְרִיתִי בִּבְשַׂרְכֶם לִבְרִית עוֹלָם</span> · <i>himol yimol … ve-haytah vriti bi-vesarkhem li-vrit olam</i><br><span class="gloss">= himol yimol and-haytah vriti bi-vesarkhem to-me-vrit olam</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The statute doubles its verb the way the garden doubled dying — and then files the covenant at a street address: in your flesh, forever.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_17_14 · Gen.17.14 · <span class='expr'>THE_KARET_HANDLER</span></h3>
+<p><span class="he">וְעָרֵל זָכָר אֲשֶׁר לֹא־יִמּוֹל אֶת־בְּשַׂר עָרְלָתוֹ וְנִכְרְתָה הַנֶּפֶשׁ הַהִוא מֵעַמֶּיהָ אֶת־בְּרִיתִי הֵפַר</span> · <i>ve-arel zakhar asher lo-yimol et-besar orlato ve-nikhrta ha-nefesh ha-hi me-ameha et-briti hefar</i> · [EN-AID/JPS] And the uncircumcised male who is not circumcised in the flesh of his foreskin, that soul shall be cut off from his people; he hath broken My covenant.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וערל זכר אשר לא־ימול את־בשר ערלתו ונכרתה הנפש ההוא מעמיה</span> · <i>ve-arel zakhar asher lo-yimol et-besar orlato ve-nikhrta ha-nefesh ha-hi me-ameha</i> · the uncut male — that soul shall be CUT OFF from its people (etnachta on me-ameha)</div><div class="arm"><b>RIGHT</b><br><span class="he">את־בריתי הפר</span> · <i>et-briti hefar</i> · My covenant he has BROKEN — hefar verse-final</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>HANDLER</td><td><span class="expr">HANDLER IF(arel_zakhar_asher_lo_yimol) THEN(ve_nikhrta_ha_nefesh_ha_hi_me_ameha ∧ et_briti_hefar)</span><br><span class="gloss">= HANDLER IF(arel-male-which-not-yimol) THEN(and-nikhrta-the-nefesh-the-hi-from-ameha ∧ My-covenant-hefar)</span><br>THE KARET-PENALTY INSTALLS [flags 3, 4]: an IF-THEN in weqatal (VNq3fs — TIR-029), lev_13&#x27;s class. KARAT TOKEN 3 — the cut-ladder&#x27;s third rung: token 1 born NEGATED (frozen gen_22&#x27;s crown, quoted: &#x27;born refusing a cutting-off&#x27;), token 2 CUTS THE COVENANT (15:18, frozen gen_31), token 3 cuts a SOUL from its people INSIDE the covenant token 2 cut — one verb seals and severs [census, prose; tokens 4-5 are 21:27/32, Beer-sheva: humans cut pacts next]. AREL (&#x27;uncircumcised&#x27;) debut; HEFER — parar&#x27;s TORAH DEBUT, verse-final (&#x27;he has BROKEN My covenant&#x27;): its only other Torah tokens are Lev 26:15/44 — the covenant-curse chapter [census, prose]. Onkelos: ve-yishtetzei (&#x27;shall be DESTROYED&#x27;) — the cut-play dies in Aramaic AGAIN (frozen gen_22&#x27;s 9:11 buffer note repeating); hefar -&gt; ashni (&#x27;CHANGED&#x27;) [repeat-buffer, dual-track].
+</td><td><span class="he">וְעָרֵל זָכָר אֲשֶׁר לֹא־יִמּוֹל … וְנִכְרְתָה הַנֶּפֶשׁ הַהִוא מֵעַמֶּיהָ</span> · <i>ve-arel zakhar asher lo-yimol … ve-nikhrta ha-nefesh ha-hi me-ameha</i><br><span class="gloss">= and-arel male which not-yimol and-nikhrta the-nefesh the-hi from-ameha</span></td><td class='cite'>TIR-029</td><td>tested</td></tr>
+</table>
+<div class="meta">The covenant learns to subtract: the verb that cut it can cut FROM it, and the break-verb makes its debut at the exact spot where its only other appearances will curse a nation for the same offense.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_17_15 · Gen.17.15 · <span class='expr'>SARAY_RETIRED_SARAH_DECREED</span></h3>
+<p><span class="he">וַיֹּאמֶר אֱלֹהִים אֶל־אַבְרָהָם שָׂרַי אִשְׁתְּךָ לֹא־תִקְרָא אֶת־שְׁמָהּ שָׂרָי כִּי שָׂרָה שְׁמָהּ</span> · <i>va-yomer elohim el-avraham saray ishtkha lo-tiqra et-shemah saray ki sarah shemah</i> · [EN-AID/JPS] And God said unto Abraham: &#x27;As for Sarai thy wife, thou shalt not call her name Sarai, but Sarah shall her name be.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר אלהים אל־אברהם שרי אשתך לא־תקרא את־שמה שרי</span> · <i>va-yomer elohim el-avraham saray ishtkha lo-tiqra et-shemah saray</i> · you shall not call her name SARAY — the dying name on the etnachta (the 17:5 twin)</div><div class="arm"><b>RIGHT</b><br><span class="he">כי שרה שמה</span> · <i>ki sarah shemah</i> · for SARAH is her name</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">say(e5) ∧ Agent(e5, elohim) ∧ Goal(e5, avraham)</span><br><span class="gloss">= say(e5) ∧ Agent(e5, God) ∧ Goal(e5, avraham)</span><br>The fourth frame opens the Sarah-charter [say-roster; flag 10].
+</td><td><span class="he">וַיֹּאמֶר אֱלֹהִים אֶל־אַבְרָהָם</span> · <i>va-yomer elohim el-avraham</i><br><span class="gloss">= and-yomer God to-avraham</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lo_tiqra_et_shemah_saray, t0) ∧ HOLDS(ki_sarah_shemah, t0)</span><br><span class="gloss">= HOLDS(not-tiqra-shemah-saray, t0) ∧ HOLDS(when-sarah-shemah, t0)</span><br>THE TWIN RETIREMENT [flag 2]: lo-tiqra is a NEGATED IMPERFECT decree — no va-yiqra formula, NO NAME op (frozen gen_25&#x27;s rule, quoted at 17:5); the REGISTRY stays empty and the scenario gate proves it. THE LETTER&#x27;S TWIN COUNTERSIGN: SARAY has exactly 17 Torah tokens and TOKENS 16-17 — her last — both sit in THIS verse, inside her retirement sentence; and the verse RESTS on saray exactly as 17:5 rested on avram — the two renaming verses seat both dying names on their etnachta thrones [census + tree twin, DB-verified]. SARAH debuts (x4 in-span). Note the decree&#x27;s addressee: ABRAHAM is told how to call HER — the letter renames the wife through the husband&#x27;s mouth; she is not present in the scene [letter fact, held].
+</td><td><span class="he">לֹא־תִקְרָא אֶת־שְׁמָהּ שָׂרָי כִּי שָׂרָה שְׁמָהּ</span> · <i>lo-tiqra et-shemah saray ki sarah shemah</i><br><span class="gloss">= not-tiqra shemah saray when sarah shemah</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The second funeral matches the first to the token and the throne: her old name spent to the last two uses inside the sentence that ends it — a renaming she receives thirdhand, in a chapter where she never speaks.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_17_16 · Gen.17.16 · <span class='expr'>SARAHS_BLESSING_AND_HER_KINGS</span></h3>
+<p><span class="he">וּבֵרַכְתִּי אֹתָהּ וְגַם נָתַתִּי מִמֶּנָּה לְךָ בֵּן וּבֵרַכְתִּיהָ וְהָיְתָה לְגוֹיִם מַלְכֵי עַמִּים מִמֶּנָּה יִהְיוּ</span> · <i>u-verakhti otah ve-gam natati mimenah lekha ben u-verakhtiha ve-haytah le-goyim malkhei amim mimenah yihyu</i> · [EN-AID/JPS] And I will bless her, and moreover I will give thee a son of her; yea, I will bless her, and she shall be a mother of nations; kings of peoples shall be of her.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">וברכתי אתה וגם נתתי ממנה לך בן</span> · <i>u-verakhti otah ve-gam natati mimenah lekha ben</i> · I will bless her — and I HAVE GIVEN you a son from her (etnachta on ben)</div><div class="arm"><b>RIGHT</b><br><span class="he">וברכתיה והיתה לגוים מלכי עמים ממנה יהיו</span> · <i>u-verakhtiha ve-haytah le-goyim malkhei amim mimenah yihyu</i> · I bless her again: nations — kings of peoples FROM HER (verse-final yihyu)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(u_verakhti_otah_ve_natati_mimenah_lekha_ben, t0) ∧ HOLDS(malkhei_amim_mimenah_yihyu, t0)</span><br><span class="gloss">= HOLDS(and-verakhti-her-and-natati-mimenah-to-you-ben, t0) ∧ HOLDS(malkhei-amim-mimenah-yihyu, t0)</span><br>THE GIVE-VERB LANDS ON THE ASKED-FOR THING: NATATI MIMENAH LEKHA BEN (&#x27;I HAVE GIVEN you a son from her&#x27; — natan token 27, the receipt-perfect): what 15:2-3 asked in the give-verb (frozen gen_31&#x27;s question-arc) is receipted in the give-verb&#x27;s own performative class (gen_21&#x27;s device) — a son, from HER [census, prose]. Sarah blessed TWICE in one verse (u-verakhti ... u-verakhtiha — barakh tokens 14-15). MALKHEI AMIM MIMENAH — MELEKH TOKEN 29: frozen gen_30&#x27;s prediction lands its SECOND half (quoted at 17:6) — the corpus&#x27;s first royal promise to a WOMAN [landed; flag 8]. Onkelos: le-goyim -&gt; LE-KHINSHIN (&#x27;assemblies&#x27;) — the nations ecclesialized [dual-track].
+</td><td><span class="he">וּבֵרַכְתִּי אֹתָהּ וְגַם נָתַתִּי מִמֶּנָּה לְךָ בֵּן … מַלְכֵי עַמִּים מִמֶּנָּה יִהְיוּ</span> · <i>u-verakhti otah ve-gam natati mimenah lekha ben … malkhei amim mimenah yihyu</i><br><span class="gloss">= and-verakhti her and-also natati mimenah to-you ben malkhei amim mimenah yihyu</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">Her charter arrives entirely in the third person — blessed twice, mother of nations, kings from her — a verse about Sarah addressed to her husband, with the son already in the perfect tense.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_17_17 · Gen.17.17 · <span class='expr'>THE_LAUGH_IN_THE_HEART</span></h3>
+<p><span class="he">וַיִּפֹּל אַבְרָהָם עַל־פָּנָיו וַיִּצְחָק וַיֹּאמֶר בְּלִבּוֹ הַלְּבֶן מֵאָה־שָׁנָה יִוָּלֵד וְאִם־שָׂרָה הֲבַת־תִּשְׁעִים שָׁנָה תֵּלֵד</span> · <i>va-yipol avraham al-panav va-yitzchaq va-yomer be-libo ha-le-ven meah-shanah yivaled ve-im-sarah ha-vat-tishim shanah teled</i> · [EN-AID/JPS] Then Abraham fell upon his face, and laughed, and said in his heart: &#x27;Shall a child be born unto him that is a hundred years old? and shall Sarah, that is ninety years old, bear?&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויפל אברהם על־פניו ויצחק</span> · <i>va-yipol avraham al-panav va-yitzchaq</i> · he fell on his face AND LAUGHED (the laugh alone on the etnachta)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויאמר בלבו הלבן מאה־שנה יולד ואם־שרה הבת־תשעים שנה תלד</span> · <i>va-yomer be-libo ha-le-ven meah-shanah yivaled ve-im-sarah ha-vat-tishim shanah teled</i> · and said in his heart: shall a hundred-year-old father, shall ninety-year Sarah BEAR? (verse-final teled)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">fall(e6) ∧ Agent(e6, avraham)</span><br>The second fall — the frame&#x27;s twin (17:3 silent, here laughing; nafal token 8 closes flag 11&#x27;s census).
+</td><td><span class="he">וַיִּפֹּל אַבְרָהָם עַל־פָּנָיו</span> · <i>va-yipol avraham al-panav</i><br><span class="gloss">= and-yipol avraham upon-panav</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">laugh(e7) ∧ Agent(e7, avraham)</span><br>VA-YITZCHAQ — TZACHAQ&#x27;s TORAH DEBUT, seated ALONE on the etnachta [flag 6; tree fact]: the laugh-root is born face-down in the father two verses before the son is named from it. Career: tokens 2-5 are SARAH&#x27;s laugh and denial (18:12-15); 6 Lot&#x27;s sons-in-law; 7 the etymology (21:6); 8 the metzacheq that expels Yishmael (21:9) — the root laughs, denies, mocks, names [census, prose]. Onkelos: VA-CHADI (&#x27;and he REJOICED&#x27;) — the laugh softened to joy [dual-track, flagged; Sarah&#x27;s is out of span, named-only].
+</td><td><span class="he">וַיִּצְחָק</span> · <i>va-yitzchaq</i><br><span class="gloss">= and-yitzchaq</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">say(e8) ∧ Agent(e8, avraham)</span><br>THE HEART-SPEECH — the corpus&#x27;s second interior speaker: frozen gen_20&#x27;s device quoted (&#x27;EVENT say (el_libo — the interior frame)&#x27;) — God spoke to His heart at 8:21; Abraham speaks in his at 17:17 (lev token 5 after the flood-heart cluster, tokens 1-4) [census, prose]. The content held below as fact.
+</td><td><span class="he">וַיֹּאמֶר בְּלִבּוֹ</span> · <i>va-yomer be-libo</i><br><span class="gloss">= and-yomer His-heart</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ha_le_ven_meah_shanah_yivaled, t0) ∧ HOLDS(ha_vat_tishim_shanah_teled, t0)</span><br><span class="gloss">= HOLDS(the-to-ven-hundred-year-yivaled, t0) ∧ HOLDS(the-vat-tishim-year-teled, t0)</span><br>The doubt held in the letter&#x27;s own arithmetic — a hundred and ninety, two rhetorical questions (interrogatives push nothing — frozen gen_31&#x27;s flag-5 class); the verse ends on TELED (&#x27;shall she BEAR?&#x27;) and 17:19&#x27;s yoledet answers it in the same root [letter fact, prose].
+</td><td><span class="he">הַלְּבֶן מֵאָה־שָׁנָה יִוָּלֵד וְאִם־שָׂרָה הֲבַת־תִּשְׁעִים שָׁנָה תֵּלֵד</span> · <i>ha-le-ven meah-shanah yivaled ve-im-sarah ha-vat-tishim shanah teled</i><br><span class="gloss">= the-to-ven hundred-year yivaled and-if-sarah the-vat-tishim year teled</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The chapter&#x27;s only laughter happens face-down and inside: a fall that looks like reverence wrapped around a doubt that sounds like arithmetic — and the letter will name the answer after the laugh itself.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_17_18 · Gen.17.18 · <span class='expr'>THE_LU_PLEA</span></h3>
+<p><span class="he">וַיֹּאמֶר אַבְרָהָם אֶל־הָאֱלֹהִים לוּ יִשְׁמָעֵאל יִחְיֶה לְפָנֶיךָ</span> · <i>va-yomer avraham el-ha-elohim lu yishmael yichyeh lefanekha</i> · [EN-AID/JPS] And Abraham said unto God: &#x27;Oh that Ishmael might live before Thee!&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר אברהם אל־האלהים</span> · <i>va-yomer avraham el-ha-elohim</i> · Abraham said to God (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">לו ישמעאל יחיה לפניך</span> · <i>lu yishmael yichyeh lefanekha</i> · would that Yishmael might live BEFORE YOU (verse-final lefanekha)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">say(e9) ∧ Agent(e9, avraham) ∧ Goal(e9, elohim)</span><br><span class="gloss">= say(e9) ∧ Agent(e9, avraham) ∧ Goal(e9, God)</span><br>His one spoken utterance in the chapter — the heart kept the doubt; the mouth pleads for the existing son [say-roster; letter fact].
+</td><td><span class="he">וַיֹּאמֶר אַבְרָהָם אֶל־הָאֱלֹהִים</span> · <i>va-yomer avraham el-ha-elohim</i><br><span class="gloss">= and-yomer avraham to-the-God</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(lu_yishmael_yichyeh_lefanekha, t0)</span><br><span class="gloss">= HOLDS(lu-yishmael-yichyeh-lefanekha, t0)</span><br>THE LU-PLEA IS PROSE [flag 7]: LU (&#x27;would that&#x27;) — TORAH DEBUT: an optative particle, neither imperative nor jussive — no DECLARE mood exists for wishes and none is invented (frozen gen_31&#x27;s flag-5 class extended from questions to wishes); held as spoken fact. LEFANEKHA (&#x27;before You&#x27;) echoes 17:1&#x27;s LEFANAI: the father asks for the boy exactly the standing the command asked of him — to live before [letter echo, prose]. Lu token 2 is 23:13 — Abraham to Efron: his two would-thats bracket a son and a grave [census, prose].
+</td><td><span class="he">לוּ יִשְׁמָעֵאל יִחְיֶה לְפָנֶיךָ</span> · <i>lu yishmael yichyeh lefanekha</i><br><span class="gloss">= lu yishmael yichyeh lefanekha</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">One verse of pure fatherhood: no bargaining, no arithmetic — just the wish-particle&#x27;s first breath, spent on the son already alive, asking for him the very standing the chapter&#x27;s first command defined.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_17_19 · Gen.17.19 · <span class='expr'>YITZCHAQ_NAMED_BEFORE_BIRTH</span></h3>
+<p><span class="he">וַיֹּאמֶר אֱלֹהִים אֲבָל שָׂרָה אִשְׁתְּךָ יֹלֶדֶת לְךָ בֵּן וְקָרָאתָ אֶת־שְׁמוֹ יִצְחָק וַהֲקִמֹתִי אֶת־בְּרִיתִי אִתּוֹ לִבְרִית עוֹלָם לְזַרְעוֹ אַחֲרָיו</span> · <i>va-yomer elohim aval sarah ishtkha yoledet lekha ben ve-qarata et-shemo yitzchaq va-haqimoti et-briti ito li-vrit olam le-zaro acharav</i> · [EN-AID/JPS] And God said: &#x27;Nay, but Sarah thy wife shall bear thee a son; and thou shalt call his name Isaac; and I will establish My covenant with him for an everlasting covenant for his seed after him.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויאמר אלהים אבל שרה אשתך ילדת לך בן וקראת את־שמו יצחק</span> · <i>va-yomer elohim aval sarah ishtkha yoledet lekha ben ve-qarata et-shemo yitzchaq</i> · nay — Sarah bears you a son: you shall call him YITZCHAQ (the name on the etnachta)</div><div class="arm"><b>RIGHT</b><br><span class="he">והקמתי את־בריתי אתו לברית עולם לזרעו אחריו</span> · <i>va-haqimoti et-briti ito li-vrit olam le-zaro acharav</i> · and I will establish My covenant with HIM — everlasting, for his seed after him</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">say(e10) ∧ Agent(e10, elohim) ∧ Goal(e10, avraham)</span><br><span class="gloss">= say(e10) ∧ Agent(e10, God) ∧ Goal(e10, avraham)</span><br>The fifth frame opens on AVAL (&#x27;nay, but&#x27;) — the corrective particle&#x27;s TORAH DEBUT: the answer to both the heart-doubt and the plea in one word [census; say-roster].
+</td><td><span class="he">וַיֹּאמֶר אֱלֹהִים אֲבָל</span> · <i>va-yomer elohim aval</i><br><span class="gloss">= and-yomer God aval</span></td><td class='cite'>—</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(sarah_yoledet_lekha_ben, t0) ∧ HOLDS(ve_qarata_et_shemo_yitzchaq, t0) ∧ HOLDS(va_haqimoti_et_briti_ito_li_vrit_olam, t0)</span><br><span class="gloss">= HOLDS(sarah-yoledet-to-you-ben, t0) ∧ HOLDS(and-qarata-shemo-yitzchaq, t0) ∧ HOLDS(and-haqimoti-My-covenant-with-him-to-me-vrit-olam, t0)</span><br>THE PRE-BIRTH NAME-DECREE, CLASS TOKEN 2 — FROZEN gen_32&#x27;s prediction LANDS, quoted: &#x27;the corpus&#x27;s first PRE-BIRTH NAME-DECREE... the class&#x27;s next token is 17:19, God naming Yitzchak&#x27; — VE-QARATA (weqatal HVqq2ms, TIR-029): decree-FACT, no NAME op, nothing pushed — and the name is the LAUGH two verses old: the letter names the son from the father&#x27;s doubt [landed; flag 6; census]. YOLEDET answers 17:17&#x27;s teled in its own root [letter echo]. The covenant is fixed to the unborn: va-haqimoti ... ITO, li-vrit olam (fact per flag 1) — the heir designated before conception; Yishmael&#x27;s answer waits one verse [letter structure].
+</td><td><span class="he">שָׂרָה … יֹלֶדֶת לְךָ בֵּן וְקָרָאתָ אֶת־שְׁמוֹ יִצְחָק וַהֲקִמֹתִי אֶת־בְּרִיתִי אִתּוֹ</span> · <i>sarah … yoledet lekha ben ve-qarata et-shemo yitzchaq va-haqimoti et-briti ito</i><br><span class="gloss">= sarah yoledet to-you ben and-qarata shemo yitzchaq and-haqimoti My-covenant with-him</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The correction is gentler than the doubt deserved: yes, a son; his name will be the laugh you laughed — carried into a covenant older than his conception.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_17_20 · Gen.17.20 · <span class='expr'>YISHMAEL_HEARD</span></h3>
+<p><span class="he">וּלְיִשְׁמָעֵאל שְׁמַעְתִּיךָ הִנֵּה בֵּרַכְתִּי אֹתוֹ וְהִפְרֵיתִי אֹתוֹ וְהִרְבֵּיתִי אֹתוֹ בִּמְאֹד מְאֹד שְׁנֵים־עָשָׂר נְשִׂיאִם יוֹלִיד וּנְתַתִּיו לְגוֹי גָּדוֹל</span> · <i>u-le-yishmael shematikha hineh berakhti oto ve-hifreti oto ve-hirbeti oto bi-meod meod shneim-asar nesiim yolid u-netativ le-goy gadol</i> · [EN-AID/JPS] And as for Ishmael, I have heard thee; behold, I have blessed him, and will make him fruitful, and will multiply him exceedingly; twelve princes shall he beget, and I will make him a great nation.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ולישמעאל שמעתיך הנה ברכתי אתו והפריתי אתו והרביתי אתו במאד מאד</span> · <i>u-le-yishmael shematikha hineh berakhti oto ve-hifreti oto ve-hirbeti oto bi-meod meod</i> · as for Yishmael: I HAVE HEARD you — blessed, fruitful, multiplied exceedingly (etnachta on bi-meod meod)</div><div class="arm"><b>RIGHT</b><br><span class="he">שנים־עשר נשיאם יוליד ונתתיו לגוי גדול</span> · <i>shneim-asar nesiim yolid u-netativ le-goy gadol</i> · twelve princes he shall beget — a great nation (verse-final gadol)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(u_le_yishmael_shematikha, t0) ∧ HOLDS(hineh_berakhti_oto_bi_meod_meod, t0) ∧ HOLDS(shneim_asar_nesiim_yolid, t0)</span><br><span class="gloss">= HOLDS(and-to-yishmael-shematikha, t0) ∧ HOLDS(hineh-berakhti-it-bi-very-very, t0) ∧ HOLDS(shneim-asar-nesiim-yolid, t0)</span><br>SHEMATIKHA (&#x27;I HAVE HEARD YOU&#x27; — shama token 9, performative perfect): FROZEN gen_32&#x27;s monument-line answered in the first person, quoted: &#x27;the child&#x27;s name is the verb&#x27;s own monument: YISHMA-EL, &quot;God hears&quot;&#x27; — God hears the father about the boy named God-hears [landed; flag 7]. The verse packs THREE receipt-perfects (shematikha, hineh BERAKHTI — the performative class, gen_21&#x27;s natati device, now on the bless-verb — plus 17:16&#x27;s natati) and a weqatal chain; BI-MEOD MEOD — the covenant&#x27;s doubled adverb ON THE MAID&#x27;S SON, at the etnachta [tree fact; census]. Twelve NESIIM — nasi&#x27;s TORAH DEBUT; token 2 is 23:6: the Chittites will call ABRAHAM nesi elohim [census, prose]. Onkelos: QABELIT TZELOTAKH (&#x27;I have RECEIVED your PRAYER&#x27;) — the prayer-buffer&#x27;s third firing on the Yishmael hear-family [repeat-buffer, dual-track].
+</td><td><span class="he">וּלְיִשְׁמָעֵאל שְׁמַעְתִּיךָ הִנֵּה בֵּרַכְתִּי אֹתוֹ … שְׁנֵים־עָשָׂר נְשִׂיאִם יוֹלִיד</span> · <i>u-le-yishmael shematikha hineh berakhti oto … shneim-asar nesiim yolid</i><br><span class="gloss">= and-to-yishmael shematikha hineh berakhti it shneim-asar nesiim yolid</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The plea is granted in the boy&#x27;s own name: heard — and the blessing that follows borrows the covenant&#x27;s grammar, its doubled adverb, its great nation, everything but the covenant itself, which the next verse files elsewhere.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_17_21 · Gen.17.21 · <span class='expr'>THE_COVENANT_GETS_A_CALENDAR</span></h3>
+<p><span class="he">וְאֶת־בְּרִיתִי אָקִים אֶת־יִצְחָק אֲשֶׁר תֵּלֵד לְךָ שָׂרָה לַמּוֹעֵד הַזֶּה בַּשָּׁנָה הָאַחֶרֶת</span> · <i>ve-et-briti aqim et-yitzchaq asher teled lekha sarah la-moed ha-zeh ba-shanah ha-acheret</i> · [EN-AID/JPS] But My covenant will I establish with Isaac, whom Sarah shall bear unto thee at this set time in the next year.&#x27;</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ואת־בריתי אקים את־יצחק</span> · <i>ve-et-briti aqim et-yitzchaq</i> · but My covenant I will establish with YITZCHAQ (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">אשר תלד לך שרה למועד הזה בשנה האחרת</span> · <i>asher teled lekha sarah la-moed ha-zeh ba-shanah ha-acheret</i> · whom Sarah bears at THIS APPOINTED TIME, next year (verse-final ha-acheret)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(ve_et_briti_aqim_et_yitzchaq, t0) ∧ HOLDS(la_moed_ha_zeh_ba_shanah_ha_acheret, t0)</span><br><span class="gloss">= HOLDS(and-My-covenant-aqim-yitzchaq, t0) ∧ HOLDS(to-moed-the-this-in-the-year-the-acheret, t0)</span><br>AQIM — the establish-verb&#x27;s third in-span token (qum 9), now imperfect: established, established, WILL establish — the aspect-run on one covenant [census; gen_22&#x27;s ladder class]. LA-MOED HA-ZEH — MOED TOKEN 2: token 1 is 1:14, the calendar&#x27;s appointed-times (the creation-week&#x27;s word); its second token DATES A BIRTH — the covenant acquires a calendar; token 3 is 18:14&#x27;s la-moed, the visitors re-using this word across the seam [census, prose, named-only]. The two-sons partition closes: blessing for Yishmael, covenant for Yitzchaq — the letter&#x27;s own division, held as facts, judged by no one [letter structure].
+</td><td><span class="he">וְאֶת־בְּרִיתִי אָקִים אֶת־יִצְחָק … לַמּוֹעֵד הַזֶּה בַּשָּׁנָה הָאַחֶרֶת</span> · <i>ve-et-briti aqim et-yitzchaq … la-moed ha-zeh ba-shanah ha-acheret</i><br><span class="gloss">= and-My-covenant aqim yitzchaq to-moed this year the-acheret</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The covenant takes an appointment: the word that set festivals in the sky at creation now sets one birth in one year — and the chapter&#x27;s hardest sentence stays flat as a ledger: blessing there, covenant here.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_17_22 · Gen.17.22 · <span class='expr'>THE_FINISH_AND_THE_ASCENT</span></h3>
+<p><span class="he">וַיְכַל לְדַבֵּר אִתּוֹ וַיַּעַל אֱלֹהִים מֵעַל אַבְרָהָם</span> · <i>va-yekhal le-daber ito va-yaal elohim me-al avraham</i> · [EN-AID/JPS] And He left off talking with him, and God went up from Abraham.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויכל לדבר אתו</span> · <i>va-yekhal le-daber ito</i> · He FINISHED speaking with him (etnachta arm)</div><div class="arm"><b>RIGHT</b><br><span class="he">ויעל אלהים מעל אברהם</span> · <i>va-yaal elohim me-al avraham</i> · and God WENT UP from Abraham (verse-final avraham)</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">finish_speaking(e11) ∧ Agent(e11, elohim)</span><br><span class="gloss">= finish-speaking(e11) ∧ Agent(e11, God)</span><br>VA-YEKHAL — KALAH token 4: the finish-verb of creation&#x27;s completion (2:1-2, tokens 1-2) now finishes a SPEECH; token 5 is 18:33&#x27;s kila le-daber — the same exit-formula will close the Sodom plea [census, prose, named-only]. Dibber token 5 [flag 10].
+</td><td><span class="he">וַיְכַל לְדַבֵּר אִתּוֹ</span> · <i>va-yekhal le-daber ito</i><br><span class="gloss">= and-yekhal to-daber with-him</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">ascend(e12) ∧ Agent(e12, elohim)</span><br><span class="gloss">= ascend(e12) ∧ Agent(e12, God)</span><br>VA-YAAL ELOHIM — ALAH token 4, the ascend-verb&#x27;s FIRST DIVINE SUBJECT (tokens 1-3: Eden&#x27;s mist, Noach&#x27;s offerings, Abram up from Egypt): the visit ends vertically, measured FROM the man (me-al avraham — the verse ends on his new name) [census, prose; tree fact]. Onkelos: VE-ISTALAQ YEQARA da-YHWH (&#x27;the GLORY of YHWH withdrew&#x27;) — the ascent transferred to the Glory [dual-track, new buffer-family noted].
+</td><td><span class="he">וַיַּעַל אֱלֹהִים מֵעַל אַבְרָהָם</span> · <i>va-yaal elohim me-al avraham</i><br><span class="gloss">= and-yaal God from-upon avraham</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+</table>
+<div class="meta">The charter closes the way creation did — with a finish-verb — and then the corpus learns how a divine visit ends: upward, leaving a renamed man alone with a law and a knife.</div>
+</div>
+<div class="step">
+<h3>STEP_Gn_17_23_27 · Gen.17.23 · <span class='expr'>THE_SELFSAME_DAY_COMPLIANCE</span></h3>
+<p><span class="he">וַיִּקַּח אַבְרָהָם אֶת־יִשְׁמָעֵאל בְּנוֹ וְאֵת כָּל־יְלִידֵי בֵיתוֹ … וַיָּמָל אֶת־בְּשַׂר עָרְלָתָם בְּעֶצֶם הַיּוֹם הַזֶּה כַּאֲשֶׁר דִּבֶּר אִתּוֹ אֱלֹהִים … בְּעֶצֶם הַיּוֹם הַזֶּה נִמּוֹל אַבְרָהָם וְיִשְׁמָעֵאל בְּנוֹ … נִמֹּלוּ אִתּוֹ</span> · <i>va-yiqach avraham et-yishmael beno ve-et kol-yelidei veito … va-yamal et-besar orlatam be-etzem ha-yom ha-zeh ka-asher diber ito elohim … be-etzem ha-yom ha-zeh nimol avraham ve-yishmael beno … nimolu ito</i> · [EN-AID/JPS 17:23-27] And Abraham took Ishmael his son, and all that were born in his house, and all that were bought with his money... and circumcised the flesh of their foreskin in the selfsame day, as God had said unto him. And Abraham was ninety years old and nine... And Ishmael his son was thirteen years old... In the selfsame day was Abraham circumcised, and Ishmael his son. And all the men of his house... were circumcised with him.</p>
+<div class="arms"><div class="arm"><b>LEFT</b><br><span class="he">ויקח אברהם את־ישמעאל בנו ואת כל־ילידי ביתו ואת כל־מקנת כספו כל־זכר באנשי בית אברהם</span> · <i>va-yiqach avraham et-yishmael beno ve-et kol-yelidei veito ve-et kol-miqnat kaspo kol-zakhar be-anshei beit avraham</i> · Abraham took Yishmael, the house-born, the silver-bought — every male (LEAD verse 17:23 etnachta arm — gen_24/gen_30&#x27;s grouped device)</div><div class="arm"><b>RIGHT</b><br><span class="he">וימל את־בשר ערלתם בעצם היום הזה כאשר דבר אתו אלהים</span> · <i>va-yamal et-besar orlatam be-etzem ha-yom ha-zeh ka-asher diber ito elohim</i> · and cut their flesh IN THE SELFSAME DAY, as God had SPOKEN — 17:23 ends on elohim</div></div>
+<table><tr><th>operator</th><th>expression</th><th>Hebrew anchor</th><th>cites</th><th>confidence</th></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">take(e13) ∧ Agent(e13, avraham) ∧ Theme(e13, yishmael_ve_khol_anshei_beito)</span><br><span class="gloss">= take(e13) ∧ Agent(e13, avraham) ∧ Theme(e13, yishmael-and-all-men-of-beito)</span><br>LAQACH token 32 — the take-arc&#x27;s next token after Sarai&#x27;s (31, frozen gen_32): Abraham TAKES his son and his whole house to the knife — the take-verb&#x27;s first covenant-obedience [census, prose].
+</td><td><span class="he">וַיִּקַּח אַבְרָהָם אֶת־יִשְׁמָעֵאל בְּנוֹ</span> · <i>va-yiqach avraham et-yishmael beno</i><br><span class="gloss">= and-yiqach avraham yishmael beno</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>EVENT</td><td><span class="expr">circumcise(e14) ∧ Agent(e14, avraham) ∧ Theme(e14, kol_zakhar_be_anshei_beito)</span><br><span class="gloss">= circumcise(e14) ∧ Agent(e14, avraham) ∧ Theme(e14, all-male-in-men-of-beito)</span><br>THE INSTALLED LAW&#x27;S FIRST CASE EXECUTES [flag 3 — no demand pops; nothing was pushed in imperative mood]: VA-YAMAL (mul token 6), then the passive roster (nimol / nimolu — tokens 9-10): the law of 17:12 runs on its own announcer first — Abraham 99, Yishmael 13 (the ages held below), house-born and silver-bought and the foreigner&#x27;s son, exactly the statute&#x27;s scope-list re-run as narrative [letter structure; census]. 17:24-25 close on the IDENTICAL phrase besar orlato — the father&#x27;s verse and the son&#x27;s verse end on the same three words [silluq twin, tree fact]; 17:27 ends on ITO (&#x27;with him&#x27;) [tree fact].
+</td><td><span class="he">וַיָּמָל אֶת־בְּשַׂר עָרְלָתָם … נִמּוֹל אַבְרָהָם וְיִשְׁמָעֵאל בְּנוֹ … נִמֹּלוּ אִתּוֹ</span> · <i>va-yamal et-besar orlatam … nimol avraham ve-yishmael beno … nimolu ito</i><br><span class="gloss">= and-yamal besar orlatam nimol avraham and-yishmael beno nimolu with-him</span></td><td class='cite'>TIR-014</td><td>tested</td></tr>
+<tr class="opline"><td>PRECONDITION_STATE</td><td><span class="expr">HOLDS(be_etzem_ha_yom_ha_zeh, t0) ∧ HOLDS(ka_asher_diber_ito_elohim, t0) ∧ HOLDS(avraham_99_yishmael_13_be_himolam, t0)</span><br><span class="gloss">= HOLDS(in-etzem-the-day-the-this, t0) ∧ HOLDS(like-which-diber-with-him-God, t0) ∧ HOLDS(avraham-99-yishmael-13-in-himolam, t0)</span><br>THE SELFSAME-DAY PAIR [flag 9, census]: BE-ETZEM HA-YOM HA-ZEH x2 (etzem tokens 4-5) — token 3 is 7:13, NOACH&#x27;S BOARDING DAY: the formula&#x27;s only two Genesis events are entering the ark and entering the covenant, both same-day obediences [census, prose]. KA-ASHER DIBER ITO ELOHIM — the compliance-formula class (frozen gen_16&#x27;s 6:22 line quoted in flag 3: &#x27;BOTH demands popped by one compliance formula&#x27; — the CLASS ancestor; here the law stands installed and its first case runs: the difference is the finding). The ages held: 99 and 13 — the thirteen-year-old son whose plea-verse just ran is cut beside his father [letter fact; the chain&#x27;s Yishmael-age files named-only]. Dibber token 6 closes the frame-census [flag 10].
+</td><td><span class="he">בְּעֶצֶם הַיּוֹם הַזֶּה … כַּאֲשֶׁר דִּבֶּר אִתּוֹ אֱלֹהִים</span> · <i>be-etzem ha-yom ha-zeh … ka-asher diber ito elohim</i><br><span class="gloss">= in-etzem day this like-which diber with-him God</span></td><td class='cite'>—</td><td>tested</td></tr>
+</table>
+<div class="meta">The chapter that legislated in five speeches ends in five verses of execution-roster: took, cut, ninety-nine, thirteen, the selfsame day — the formula last used when a family walked into an ark, now for a household cut into a covenant, every verse ending on flesh, on God, on with him.</div>
+</div>
+<h2>State machine</h2>
+<div class="meta">El Shaddai&#x27;s covenant charter (standalone; registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER).</div>
+<table><tr><th>state</th><th>meaning</th></tr>
+<tr><td><b>S_boot</b></td><td>Before 17:1 — all registers empty (standalone unit; thirteen silent years behind the frame)</td></tr>
+<tr><td><b>S_commanded</b></td><td>After 17:1 — El Shaddai debuts; the compound walk-and-be-whole LET pushed and OPEN</td></tr>
+<tr><td><b>S_covenant_spoken</b></td><td>After 17:2 — the cohortative covenant held as fact (a volitive on no one); the Memra enters the buffer&#x27;s between-formula</td></tr>
+<tr><td><b>S_fallen</b></td><td>After 17:3 — the first fall answers the walk-command; the speak-verb takes the frame</td></tr>
+<tr><td><b>S_chartered</b></td><td>After 17:4-5 — the multitude-charter; AVRAM RETIRED (token 59/59 inside the decree; the registry untouched — flag 2)</td></tr>
+<tr><td><b>S_kings_promised</b></td><td>After 17:6 — the first hiphil fruitfulness; melekh token 28 lands gen_30&#x27;s prediction</td></tr>
+<tr><td><b>S_everlasting</b></td><td>After 17:7-8 — brit olam + achuzat olam held as FACT per gen_22&#x27;s frozen law (flag 1); the sojourning-land granted</td></tr>
+<tr><td><b>S_keep_guarded</b></td><td>After 17:9 — LET?(tishmor) pushed, mood guarded (TIR-028); OPEN forever</td></tr>
+<tr><td><b>S_law_announced</b></td><td>After 17:10-11 — the law in law-grammar (no imperative-LET); the third covenant-sign: flesh</td></tr>
+<tr><td><b>S_law_installed</b></td><td>After 17:12-14 — HANDLER x2: the eighth-day law and the karet-penalty (karat token 3; hefer debut)</td></tr>
+<tr><td><b>S_sarah_chartered</b></td><td>After 17:15-16 — SARAY RETIRED (tokens 16-17/17 inside the decree — the twin); Sarah blessed twice; melekh token 29 lands</td></tr>
+<tr><td><b>S_laughed</b></td><td>After 17:17 — the second fall; the laugh-root born; the heart-speech (the corpus&#x27;s second interior speaker)</td></tr>
+<tr><td><b>S_pleaded</b></td><td>After 17:18 — the lu-plea held as spoken fact (wishes push nothing)</td></tr>
+<tr><td><b>S_heir_fixed</b></td><td>After 17:19-21 — the pre-birth name-decree (class token 2, landed); Yishmael HEARD (three receipt-perfects); the covenant gets a calendar (moed token 2)</td></tr>
+<tr><td><b>S_ascended</b></td><td>After 17:22 — the finish-verb on a speech; the ascend-verb&#x27;s first divine subject</td></tr>
+<tr><td><b>S_house_cut</b></td><td>After 17:23-27 — the installed law&#x27;s first case executes on the selfsame day (7:13&#x27;s formula-pair); QUEUE ENDS 2 OPEN (the walk-LET, the guarded keep-LET?); every other register empty</td></tr>
+</table><table><tr><th>from</th><th>to</th><th>via</th></tr>
+<tr><td>S_boot</td><td>S_commanded</td><td>STEP_Gn_17_1</td></tr>
+<tr><td>S_commanded</td><td>S_covenant_spoken</td><td>STEP_Gn_17_2</td></tr>
+<tr><td>S_covenant_spoken</td><td>S_fallen</td><td>STEP_Gn_17_3</td></tr>
+<tr><td>S_fallen</td><td>S_chartered</td><td>STEP_Gn_17_5</td></tr>
+<tr><td>S_chartered</td><td>S_kings_promised</td><td>STEP_Gn_17_6</td></tr>
+<tr><td>S_kings_promised</td><td>S_everlasting</td><td>STEP_Gn_17_8</td></tr>
+<tr><td>S_everlasting</td><td>S_keep_guarded</td><td>STEP_Gn_17_9</td></tr>
+<tr><td>S_keep_guarded</td><td>S_law_announced</td><td>STEP_Gn_17_11</td></tr>
+<tr><td>S_law_announced</td><td>S_law_installed</td><td>STEP_Gn_17_14</td></tr>
+<tr><td>S_law_installed</td><td>S_sarah_chartered</td><td>STEP_Gn_17_16</td></tr>
+<tr><td>S_sarah_chartered</td><td>S_laughed</td><td>STEP_Gn_17_17</td></tr>
+<tr><td>S_laughed</td><td>S_pleaded</td><td>STEP_Gn_17_18</td></tr>
+<tr><td>S_pleaded</td><td>S_heir_fixed</td><td>STEP_Gn_17_21</td></tr>
+<tr><td>S_heir_fixed</td><td>S_ascended</td><td>STEP_Gn_17_22</td></tr>
+<tr><td>S_ascended</td><td>S_house_cut</td><td>STEP_Gn_17_23_27</td></tr>
+</table>
+<div class="note"><b>AFTER_S_house_cut</b> — TIME: t0, no marks (no RESULT ever fires — flag 3: the law executes, the demands persist). WORLD: ZERO installs (the law installs as standing FACTS, not entities) + ZERO presupposed reads (eretz kenaan unflagged per frozen gen_32&#x27;s 16:3 precedent). REGISTRY: ZERO writes — the chapter that renames BOTH its humans writes nothing: the renamings are decrees without the va-yiqra formula (gen_25&#x27;s frozen rule; flag 2), and the letter countersigns with the twin retirements (avram 59/59 at 17:5; saray 16-17/17 at 17:15; both verses resting on the dying names). EVENTS: 12 narrative + 2 declares + 2 handler-installs. SPECS: TWO pushed, ZERO popped, TWO OPEN — LET(hithalekh_ve_heyeh_tamim(avram, lefanai)) (the response was two falls, not a walk) and LET?(tishmor(avraham, et_briti)) (mood guarded, TIR-028 — a covenant is kept, never receipted). Standing facts (24 + 2 handler-facts): the self-naming (ani El Shaddai — the ladder&#x27;s second rung), the cohortative covenant, the doubled-very triple, the two renaming-decrees, the multitude-etymology (hamon&#x27;s two tokens bracketing the new name), the first-hiphil fruitfulness and both king-promises (gen_30&#x27;s prediction landed x2), BRIT OLAM x3 + ACHUZAT OLAM as FACT (gen_22&#x27;s frozen law — flag 1), the God-formula, the sojourning-land, the announced law and the flesh-sign, the eighth-day HANDLER and the karet HANDLER (karat token 3; hefer&#x27;s debut), the Sarah-blessings, the heart-doubt pair, the lu-plea and its shematikha answer (three receipt-perfects at 17:20), the pre-birth name-decree (class token 2, landed), the calendar (moed token 2), the ascent, and the selfsame-day compliance pair with its ka-asher-diber countersign (7:13&#x27;s ark-twin). TESTS: EMPTY (zero instrument tokens in-span — the cleanest absence yet; tamim is a command-adjective, not a verdict). LEDGER: EMPTY. FLAGS: none fired (no reads, no presence-violations). THE SHAPE IS THE STATE: a charter that renames, legislates, and schedules — two demands hanging (one guarded forever), two handlers armed for every generation, and a house already cut on the day the law was spoken: obedience outrunning the machine&#x27;s own bookkeeping.</div>
+<h2>Scenarios (the unit's own test suite)</h2>
+<table><tr><th>id</th><th>title</th><th>given</th><th>expect</th><th>anchor</th></tr>
+<tr><td><b>S1</b></td><td>El Shaddai and the walk-command: after STEP_Gn_17_1</td><td>All registers empty (standalone unit; thirteen silent years in the frame). (appear(e1); the compound imperative pair rides ONE demand — gen_32&#x27;s device; flag 5.)</td><td>LET(hithalekh_ve_heyeh_tamim(avram, lefanai)) pushed and OPEN; Facts ani-el-shaddai HOLD.<br><span class="gloss">= LET(walked-about-and-heyeh-tamim(avram, before-Me)) pushed and OPEN; Facts ani-to-shaddai HOLD.</span></td><td><span class="he">אֲנִי־אֵל שַׁדַּי הִתְהַלֵּךְ לְפָנַי וֶהְיֵה תָמִים</span> · <i>ani-el shaddai hithalekh lefanai ve-heyeh tamim</i><br><span class="gloss">= ani-to shaddai walked-about before-Me and-heyeh tamim</span></td></tr>
+<tr><td><b>S2</b></td><td>The charter and the first retirement: after STEP_Gn_17_5</td><td>S1 state plus 17:2-4 (the cohortative covenant — a volitive on no one; the first fall; the multitude-charter). (The renaming is a DECREE without the va-yiqra formula — gen_25&#x27;s rule: the registry takes NOTHING, machine-asserted below; flag 2.)</td><td>Facts ve-etnah HOLD; Facts hamon-goyim HOLD; Facts shimkha-avraham HOLD; no test, no name.<br><span class="gloss">= Facts and-etnah HOLD; Facts hamon-goyim HOLD; Facts shimkha-avraham HOLD; no test, no name.</span></td><td><span class="he">וְהָיָה שִׁמְךָ אַבְרָהָם</span> · <i>ve-hayah shimkha avraham</i><br><span class="gloss">= was shimkha avraham</span></td></tr>
+<tr><td><b>S3</b></td><td>The everlasting pair held as fact: after STEP_Gn_17_8</td><td>S2 state plus 17:6-7 (the first hiphil fruitfulness; melekh token 28 lands gen_30&#x27;s line). (brit olam + achuzat olam as FACT per gen_22&#x27;s frozen 9:16 token; flag 1.)</td><td>Facts vrit-olam HOLD; Facts achuzat-olam HOLD; Facts melakhim-yetzeu HOLD.</td><td><span class="he">לִבְרִית עוֹלָם … לַאֲחֻזַּת עוֹלָם</span> · <i>li-vrit olam … la-achuzat olam</i><br><span class="gloss">= to-me-vrit olam to-achuzat olam</span></td></tr>
+<tr><td><b>S4</b></td><td>The keep-command guarded: after STEP_Gn_17_9</td><td>S3 state. (Coded imperfect in a command frame — TIR-028&#x27;s mandatory ?; gen_21&#x27;s device; flag 3.)</td><td>LET?(tishmor(avraham, et_briti)) pushed and OPEN; LET?(tishmor(avraham, et_briti)) mood remains LET?.<br><span class="gloss">= LET?(tishmor(avraham, My-covenant)) pushed and OPEN; LET?(tishmor(avraham, My-covenant)) mood remains LET?.</span></td><td><span class="he">וְאַתָּה אֶת־בְּרִיתִי תִשְׁמֹר</span> · <i>ve-atah et-briti tishmor</i><br><span class="gloss">= you My-covenant tishmor</span></td></tr>
+<tr><td><b>S5</b></td><td>The law installed: after STEP_Gn_17_14</td><td>S4 state plus 17:10-13 (the law announced in law-grammar — no imperative-LET; the flesh-sign; the doubled must). (HANDLER x2 — lev_13&#x27;s class; karat token 3; hefer debut; flags 3-4.)</td><td>Facts shemonat-yamim HOLD; Facts nikhrta HOLD; Facts vesarkhem HOLD.<br><span class="gloss">= Facts shemonat-seas HOLD; Facts nikhrta HOLD; Facts vesarkhem HOLD.</span></td><td><span class="he">וּבֶן־שְׁמֹנַת יָמִים יִמּוֹל … וְנִכְרְתָה הַנֶּפֶשׁ הַהִוא</span> · <i>u-ven-shemonat yamim yimol … ve-nikhrta ha-nefesh ha-hi</i><br><span class="gloss">= and-ven-shemonat seas yimol and-nikhrta the-nefesh the-hi</span></td></tr>
+<tr><td><b>S6</b></td><td>The twin retirement and Sarah&#x27;s kings: after STEP_Gn_17_16</td><td>S5 state plus 17:15 (saray tokens 16-17/17 die inside the decree; the registry still silent — flag 2). (melekh token 29 lands the prediction&#x27;s second half; the natati receipt-perfect on the promised son.)</td><td>Facts sarah-shemah HOLD; Facts natati-mimenah HOLD; Facts malkhei-amim HOLD; no test, no name.</td><td><span class="he">כִּי שָׂרָה שְׁמָהּ … מַלְכֵי עַמִּים מִמֶּנָּה יִהְיוּ</span> · <i>ki sarah shemah … malkhei amim mimenah yihyu</i><br><span class="gloss">= when sarah shemah malkhei amim mimenah yihyu</span></td></tr>
+<tr><td><b>S7</b></td><td>The laugh, the heart, the plea: after STEP_Gn_17_18</td><td>S6 state plus 17:17 (the second fall; tzachaq debuts alone on the etnachta; the heart-speech — gen_20&#x27;s interior device). (The lu-plea is prose — wishes push nothing; flag 7.)</td><td>Facts meah-shanah HOLD; Facts lu-yishmael HOLD.<br><span class="gloss">= Facts hundred-year HOLD; Facts lu-yishmael HOLD.</span></td><td><span class="he">וַיִּצְחָק וַיֹּאמֶר בְּלִבּוֹ … לוּ יִשְׁמָעֵאל יִחְיֶה לְפָנֶיךָ</span> · <i>va-yitzchaq va-yomer be-libo … lu yishmael yichyeh lefanekha</i><br><span class="gloss">= and-yitzchaq and-yomer His-heart lu yishmael yichyeh lefanekha</span></td></tr>
+<tr><td><b>S8</b></td><td>The two sons filed: after STEP_Gn_17_21</td><td>S7 state plus 17:19-20 (the pre-birth name-decree — gen_32&#x27;s class token 2, LANDED; Yishmael heard in three receipt-perfects). (The covenant gets a calendar — moed token 2.)</td><td>Facts qarata-yitzchaq HOLD; Facts shematikha HOLD; Facts nesiim HOLD; Facts la-moed HOLD.<br><span class="gloss">= Facts qarata-yitzchaq HOLD; Facts shematikha HOLD; Facts nesiim HOLD; Facts to-moed HOLD.</span></td><td><span class="he">וְקָרָאתָ אֶת־שְׁמוֹ יִצְחָק … וּלְיִשְׁמָעֵאל שְׁמַעְתִּיךָ</span> · <i>ve-qarata et-shemo yitzchaq … u-le-yishmael shematikha</i><br><span class="gloss">= and-qarata shemo yitzchaq and-to-yishmael shematikha</span></td></tr>
+<tr><td><b>S9</b></td><td>The selfsame day: after STEP_Gn_17_23_27</td><td>S8 state plus 17:22 (the finish-verb on a speech; the ascend-verb&#x27;s first divine subject). (The installed law&#x27;s first case EXECUTES — take + circumcise EVENTs; NOTHING pops — flag 3&#x27;s reframe; the 7:13 formula-pair; both demands still stand.)</td><td>LET(hithalekh_ve_heyeh_tamim(avram, lefanai)) pushed and OPEN; LET?(tishmor(avraham, et_briti)) pushed and OPEN; LET?(tishmor(avraham, et_briti)) mood remains LET?; Facts be-etzem HOLD; Facts ka-asher-diber HOLD; no test, no name; LEDGER stays EMPTY (open transaction).<br><span class="gloss">= LET(walked-about-and-heyeh-tamim(avram, before-Me)) pushed and OPEN; LET?(tishmor(avraham, My-covenant)) pushed and OPEN; LET?(tishmor(avraham, My-covenant)) mood remains LET?; Facts in-etzem HOLD; Facts like-which-diber HOLD; no test, no name; LEDGER stays EMPTY (open transaction).</span></td><td><span class="he">בְּעֶצֶם הַיּוֹם הַזֶּה נִמּוֹל אַבְרָהָם וְיִשְׁמָעֵאל בְּנוֹ</span> · <i>be-etzem ha-yom ha-zeh nimol avraham ve-yishmael beno</i><br><span class="gloss">= in-etzem day this nimol avraham and-yishmael beno</span></td></tr>
+<tr><td><b>S10_negative</b></td><td>Negative: the LET? contract guard</td><td>A synthetic LET? demand (the machine&#x27;s own contract self-test — and this unit carries a live LET?: the keep-command).</td><td>LET? never auto-upgrades: resolution without citation must REFUSE; with a per-unit citation it may resolve — entries pop demands; nothing but citation moves a mood.</td><td><span class="he">תִשְׁמֹר</span> · <i>tishmor</i><br><span class="gloss">= tishmor</span></td></tr>
+<tr><td><b>S11_negative</b></td><td>Negative: flags never block</td><td>A synthetic commit with TESTS empty (the machine&#x27;s own contract self-test).</td><td>Cycle close with TESTS empty must be FLAGGED, never blocked.<br><span class="gloss">= Cycle close with TESTS empty must in FLAGGED, never blocked.</span></td><td></td></tr>
+</table>
+<h2>Exports (reusable patterns)</h2><table><tr><th>id</th><th>content</th></tr>
+<tr><td>EXPORT_the_twin_retirements_and_the_registry_silence</td><td><span class="he">וְלֹא־יִקָּרֵא עוֹד אֶת־שִׁמְךָ אַבְרָם … לֹא־תִקְרָא אֶת־שְׁמָהּ שָׂרָי</span> · <i>ve-lo-yiqare od et-shimkha avram … lo-tiqra et-shemah saray</i> · THE RENAMINGS AS DECREE-FACTS [flag 2 — boldest; the NAME-triage neighborhood, encoded per EXISTING frozen law]: no va-yiqra formula, so no NAME op and zero REGISTRY writes (gen_25&#x27;s rule quoted both ways; gen_12&#x27;s overwrite-class named for the owner — both its writes rode formula-backed ops); the LETTER countersigns with the twin retirements: AVRAM has 59 Torah tokens and token 59 dies at 17:5 inside its own retirement decree; SARAY has 17 and tokens 16-17 both die at 17:15 inside hers — and BOTH verses REST on the dying name (17:5&#x27;s etnachta = avram; 17:15&#x27;s = saray) [census + tree twin]; the narrator obeys instantly (avraham x10, sarah x4 in-span); HAMON&#x27;s only two Torah tokens bracket the new name (the multitude-word exists to etymologize AVRAHAM); the registry&#x27;s silence is machine-asserted at the gates (&#x27;no test, no name&#x27; after both decrees)</td></tr>
+<tr><td>EXPORT_brit_olam_as_fact_and_the_cut_ladder</td><td><span class="he">לִבְרִית עוֹלָם … וְנִכְרְתָה הַנֶּפֶשׁ הַהִוא מֵעַמֶּיהָ אֶת־בְּרִיתִי הֵפַר</span> · <i>li-vrit olam … ve-nikhrta ha-nefesh ha-hi me-ameha et-briti hefar</i> · BRIT OLAM (&#x27;everlasting covenant&#x27;) x3 + ACHUZAT OLAM held as FACT per DIRECT frozen law [flag 1 — the coordinator-flagged pressure point]: gen_22&#x27;s own 9:16 token quoted (&#x27;HOLDS(u_reitiha_li_zekor_brit_olam, t1)&#x27;) — the reopened perpetuity weigh closes by precedent, no INVARIANT; VA-HAQIMOTI re-sounds 6:18&#x27;s EXACT establish-form (gen_22&#x27;s aspect-ladder quoted) with the in-span aspect-run established/established/will-establish (qum 7-9); THE CUT-LADDER&#x27;s third rung: karat token 1 born negated (gen_22&#x27;s crown), token 2 cuts the covenant (gen_31), token 3 cuts a SOUL from its people INSIDE that covenant (17:14&#x27;s karet HANDLER) — with HEFER (&#x27;broken&#x27;) debuting beside it, a verb whose only other Torah tokens are Lev 26&#x27;s covenant-curses; the law-genre&#x27;s first covenant-firing in Genesis: HANDLER x2 (lev_13&#x27;s class, gen_12&#x27;s counsel-precedent) for the eighth-day law (reaching house-born, silver-bought, foreigner&#x27;s son — miqnah&#x27;s whole debut field is persons) and the karet-penalty; the KEEP-command guarded as LET? (TIR-028, gen_21&#x27;s device) — OPEN forever, mood never upgrading without citation</td></tr>
+<tr><td>EXPORT_the_laugh_the_plea_and_the_two_sons</td><td><span class="he">וַיִּצְחָק … לוּ יִשְׁמָעֵאל יִחְיֶה לְפָנֶיךָ … וְקָרָאתָ אֶת־שְׁמוֹ יִצְחָק … וּלְיִשְׁמָעֵאל שְׁמַעְתִּיךָ</span> · <i>va-yitzchaq … lu yishmael yichyeh lefanekha … ve-qarata et-shemo yitzchaq … u-le-yishmael shematikha</i> · THE LAUGH IS BORN FACE-DOWN: tzachaq&#x27;s Torah debut seated ALONE on 17:17&#x27;s etnachta — the root that will name the heir debuts in the father&#x27;s doubt (career: Sarah&#x27;s laugh-and-denial x4, Lot&#x27;s sons-in-law, the 21:6 etymology, the 21:9 metzacheq that expels Yishmael); the HEART-SPEECH makes Abraham the corpus&#x27;s second interior speaker (gen_20&#x27;s el-libo device quoted; lev tokens 1-4 are the flood-heart cluster); the LU-PLEA is prose (the wish-particle&#x27;s debut — no DECLARE mood for optatives; gen_31&#x27;s question-class extended) and is answered in the boy&#x27;s own name: SHEMATIKHA — gen_32&#x27;s monument-line landed in first person (&#x27;God hears&#x27; hears the father about God-hears), inside a verse of THREE receipt-perfects with the covenant&#x27;s doubled adverb on the maid&#x27;s son and twelve princes (nasi debut; token 2 calls ABRAHAM prince); the pre-birth name-decree lands gen_32&#x27;s class token 2 exactly as predicted (ve-qarata Yitzchaq — weqatal, decree-FACT); the two-sons partition held flat (blessing/covenant; the calendar: moed token 2 dates the birth after 1:14&#x27;s token set festivals)</td></tr>
+<tr><td>EXPORT_the_selfsame_day_and_the_walk_ladder</td><td><span class="he">הִתְהַלֵּךְ לְפָנַי … בְּעֶצֶם הַיּוֹם הַזֶּה נִמּוֹל אַבְרָהָם</span> · <i>hithalekh lefanai … be-etzem ha-yom ha-zeh nimol avraham</i> · THE WALK-LADDER AND THE SELFSAME DAY: the compound walk-and-be-whole demand (gen_32&#x27;s compound device; TIR-027) joins the hithalekh-career — Chanokh WITH God (gen_14 quoted), Noach WITH God (gen_16&#x27;s 6:9 quoted), the land-walk (13:17, gen_29&#x27;s STILL-OPEN demand), now BEFORE Me — with, with, through, before; answered by two FALLS (nafal tokens 5-8 all Abram&#x27;s field: sleep, dread, silence, laughter) — the demand stands OPEN; TAMIM&#x27;s ladder: Noach, Abraham, the pesach lamb; the compliance runs on the SELFSAME-DAY formula whose only other Genesis token is 7:13 — Noach&#x27;s boarding day (etzem tokens 3-5): the ark and the covenant are the corpus&#x27;s two same-day obediences, countersigned ka-asher diber ito elohim (gen_16&#x27;s compliance-formula class quoted — with the difference held: there demands popped; here an installed law runs its first case, and NOTHING pops — the staged cycle-#10 withdrawn as the precise reframe); the chapter closes on the silluq twins (17:24-25 both ending besar orlato) and 17:27&#x27;s ITO (&#x27;with him&#x27;)</td></tr>
+</table>
+<h2>Oral notes (named, tiered, dual-track — never merged)</h2>
+<div class="note"><span class="badge tier-o">observation</span> <b>Bereshit Rabbah 46-47 (the span; the name-letter files — the heh entering both names; the Shaddai etymologies; the timing files); Rashi at 17:1, 17:3, 17:5, 17:15, 17:17 (the laugh vs Sarah&#x27;s), 17:19; Ramban at 17:1; Bavli Nedarim 31b-32a (circumcision&#x27;s weight); Rosh Hashanah 11a (the timing); Berakhot 13a (the Avram-prohibition class — the chain&#x27;s own registry-overwrite ruling, named beside flag 2) — gen_33 Tier-A queue</b><br><span class="he">אֲנִי־אֵל שַׁדַּי</span> · <i>(queue — named only)</i> · Named, not read. The cache middot scan is the MAIN LOOP&#x27;S gate and is not claimed by this draft [flagged]. Predicted classes: the NAME-LETTER class (the heh given to both names; Berakhot 13a&#x27;s whoever-calls-Abraham-Abram ruling — the chain legislating exactly flag 2&#x27;s question); the SHADDAI-ETYMOLOGY class (she-amar-dai and rivals); the LAUGH-ASYMMETRY class (his laugh unrebuked, hers rebuked — ch. 18&#x27;s question prefiled); the TIMING class (why not before; Rosh Hashanah 11a&#x27;s dating); the CIRCUMCISION-GREATNESS class (Nedarim&#x27;s ladder); the MILAH-AS-COMPLETION class (tamim read through the knife).
+<br><i>Queue entry — no claim made beyond the naming.</i></div>
+<div class="note"><span class="badge tier-v">verified</span> <b>Onkelos Genesis 17:1-27 — read Tier-A at derive time (27 sequential fetches, 0.5s spacing, Data/FETCHLOG.md 2026-08-05; cache MISS for the full span as staged)</b><br><span class="he">בֵּין מֵימְרִי וּבֵינָךְ</span> · <i>bein meimri u-veinakh</i> · The span&#x27;s translation witness — HEADLINE: THE MEMRA BECOMES THE COVENANT PARTY. FOUR TIMES (17:2, 17:7, 17:10, 17:11) the covenant&#x27;s between-formula beini u-veinekha (&#x27;between ME and you&#x27;) is rendered bein MEIMRI u-veinakh (&#x27;between MY WORD and you&#x27;) — the Word signs the covenant; frozen gen_22&#x27;s single 9:16 note is the seed (&#x27;the third-person turn absorbed into the Memra&#x27;) and here the policy goes wholesale: the tenure&#x27;s Memra-arc completes (gen_31&#x27;s shield-to-Word, gen_32&#x27;s naming-to-prayer, now covenant-by-Word) [find-class, flagged]. SECOND: the LAUGH SOFTENED — va-yitzchaq -&gt; VA-CHADI (&#x27;and he REJOICED&#x27;): the father&#x27;s laugh becomes joy (the famous asymmetry with Sarah&#x27;s laugh is ch. 18&#x27;s question, named-only). THIRD: the WALK turned WORSHIP — hithalekh lefanai -&gt; PELACH KODAMAI (&#x27;SERVE before Me&#x27;): the walk-command liturgized, with tamim -&gt; shelim (gen_16&#x27;s frozen buffer repeating). REPEAT BUFFERS CONSISTENT WITH FROZEN RECORDS: the karet-penalty&#x27;s cut-play dies AGAIN (ve-nikhrta -&gt; ve-yishtetzei &#x27;destroyed&#x27; — gen_22&#x27;s 9:11 record verbatim; hefar -&gt; ashni &#x27;changed&#x27;); shematikha -&gt; QABELIT TZELOTAKH (&#x27;received your PRAYER&#x27; — gen_32&#x27;s 16:11 buffer on the same hear-family); va-yiqach -&gt; u-devar (&#x27;LED&#x27; — the lead-for-take policy, fourth unit running); Qadesh-class identifications continue. NEW BUFFER-FAMILY NOTED: va-yaal elohim -&gt; VE-ISTALAQ YEQARA da-YHWH (&#x27;the GLORY withdrew&#x27;) — the ascent transferred to the Glory (yeqara enters the record); le-goyim -&gt; LE-KHINSHIN (&#x27;assemblies&#x27;) at 17:6/17:16 — the nations-promise ecclesialized; lu -&gt; levai; aval -&gt; be-qushta (&#x27;in truth&#x27;).
+<br><i>Read from Data/sefaria_texts/ (local; FETCHLOG is provenance). Dual-track; not merged.</i></div>
+<h2>Binary trees (ta'amim v3, glue bricks)</h2>
+<h3>Gen.17.1 · parser unique · 20 words</h3>
+<div class="meta"><span class="he">ויהי אברם בן־תשעים שנה ותשע שנים וירא יהוה אל־אברם ויאמר אליו אני־אל שדי התהלך לפני והיה תמים</span> · <i>va-yehi avram ben-tishim shana ve-tesha shanim va-yera YHWH el-avram va-yomer elay-v ani-el shaday hithalekh le-fana-y ve-heye tamim</i> · Abram 99: YHWH appeared — I am El Shaddai; walk before Me, be whole. [EN-AID]</div>
+<pre>PHRASE (binary 20w) וַ/יְהִ֣י אַבְרָ֔ם בֶּן תִּשְׁעִ֥ים שָׁנָ֖ה וְ/…
+├── PHRASE (binary 7w) וַ/יְהִ֣י אַבְרָ֔ם בֶּן תִּשְׁעִ֥ים שָׁנָ֖ה וְ/…
+│   ├── [0-1] GLUE וַ/יְהִ֣י אַבְרָ֔ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) בֶּן תִּשְׁעִ֥ים שָׁנָ֖ה וְ/תֵ֣שַׁע שָׁנִ֑ים
+│       ├── [2-4] GLUE בֶּן תִּשְׁעִ֥ים שָׁנָ֖ה (tifcha, rank=2)
+│       └── [5-6] GLUE וְ/תֵ֣שַׁע שָׁנִ֑ים (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 13w) וַ/יֵּרָ֨א יְהוָ֜ה אֶל אַבְרָ֗ם וַ/יֹּ֤אמֶר אֵל…
+    ├── PHRASE (binary 9w) וַ/יֵּרָ֨א יְהוָ֜ה אֶל אַבְרָ֗ם וַ/יֹּ֤אמֶר אֵל…
+    │   ├── PHRASE (binary 4w) וַ/יֵּרָ֨א יְהוָ֜ה אֶל אַבְרָ֗ם
+    │   │   ├── [7-8] GLUE וַ/יֵּרָ֨א יְהוָ֜ה (geresh, rank=4)
+    │   │   └── [9-10] GLUE אֶל אַבְרָ֗ם (revia, rank=3)
+    │   └── PHRASE (binary 5w) וַ/יֹּ֤אמֶר אֵלָי/ו֙ אֲנִי אֵ֣ל שַׁדַּ֔י
+    │       ├── [11-12] GLUE וַ/יֹּ֤אמֶר אֵלָי/ו֙ (pashta, rank=3)
+    │       └── [13-15] GLUE אֲנִי אֵ֣ל שַׁדַּ֔י (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) הִתְהַלֵּ֥ךְ לְ/פָנַ֖/י וֶ/הְיֵ֥ה תָמִֽים
+        ├── [16-17] GLUE הִתְהַלֵּ֥ךְ לְ/פָנַ֖/י (tifcha, rank=2)
+        └── [18-19] GLUE וֶ/הְיֵ֥ה תָמִֽים (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.17.2 · parser unique · 8 words</h3>
+<div class="meta"><span class="he">ואתנה בריתי ביני ובינך וארבה אותך במאד מאד</span> · <i>ve-etna veriti-y beni-y u-vene-kha ve-arbe ot-kha bi-meod meod</i> · Let Me set My covenant; I will multiply you exceedingly. [EN-AID]</div>
+<pre>PHRASE (binary 8w) וְ/אֶתְּנָ֥ה בְרִיתִ֖/י בֵּינִ֣/י וּ/בֵינֶ֑/ךָ …
+├── PHRASE (binary 4w) וְ/אֶתְּנָ֥ה בְרִיתִ֖/י בֵּינִ֣/י וּ/בֵינֶ֑/ךָ
+│   ├── [0-1] GLUE וְ/אֶתְּנָ֥ה בְרִיתִ֖/י (tifcha, rank=2)
+│   └── [2-3] GLUE בֵּינִ֣/י וּ/בֵינֶ֑/ךָ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וְ/אַרְבֶּ֥ה אוֹתְ/ךָ֖ בִּ/מְאֹ֥ד מְאֹֽד
+    ├── [4-5] GLUE וְ/אַרְבֶּ֥ה אוֹתְ/ךָ֖ (tifcha, rank=2)
+    └── [6-7] GLUE בִּ/מְאֹ֥ד מְאֹֽד (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.17.3 · parser unique · 8 words</h3>
+<div class="meta"><span class="he">ויפל אברם על־פניו וידבר אתו אלהים לאמר</span> · <i>va-yipol avram al-panay-v va-yedaber et-o Elohim le-mor</i> · Abram fell on his face; God spoke with him. [EN-AID]</div>
+<pre>PHRASE (binary 8w) וַ/יִּפֹּ֥ל אַבְרָ֖ם עַל פָּנָ֑י/ו וַ/יְדַבֵּ֥ר…
+├── PHRASE (binary 4w) וַ/יִּפֹּ֥ל אַבְרָ֖ם עַל פָּנָ֑י/ו
+│   ├── [0-1] GLUE וַ/יִּפֹּ֥ל אַבְרָ֖ם (tifcha, rank=2)
+│   └── [2-3] GLUE עַל פָּנָ֑י/ו (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וַ/יְדַבֵּ֥ר אִתּ֛/וֹ אֱלֹהִ֖ים לֵ/אמֹֽר
+    ├── PHRASE (binary 3w) וַ/יְדַבֵּ֥ר אִתּ֛/וֹ אֱלֹהִ֖ים
+    │   ├── [4-5] GLUE וַ/יְדַבֵּ֥ר אִתּ֛/וֹ (tevir, rank=3)
+    │   └── [6] אֱלֹהִ֖ים (tifcha, rank=2)
+    └── [7] לֵ/אמֹֽר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.17.4 · parser unique · 8 words</h3>
+<div class="meta"><span class="he">אני הנה בריתי אתך והיית לאב המון גוים</span> · <i>ani hine veriti-y et-khe ve-hayita le-av hamon goyim</i> · My covenant with you: father of a multitude of nations. [EN-AID]</div>
+<pre>PHRASE (binary 8w) אֲנִ֕י הִנֵּ֥ה בְרִיתִ֖/י אִתָּ֑/ךְ וְ/הָיִ֕יתָ…
+├── PHRASE (binary 4w) אֲנִ֕י הִנֵּ֥ה בְרִיתִ֖/י אִתָּ֑/ךְ
+│   ├── [0] אֲנִ֕י (zaqef gadol, rank=2)
+│   └── PHRASE (binary 3w) הִנֵּ֥ה בְרִיתִ֖/י אִתָּ֑/ךְ
+│       ├── [1-2] GLUE הִנֵּ֥ה בְרִיתִ֖/י (tifcha, rank=2)
+│       └── [3] אִתָּ֑/ךְ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וְ/הָיִ֕יתָ לְ/אַ֖ב הֲמ֥וֹן גּוֹיִֽם
+    ├── [4] וְ/הָיִ֕יתָ (zaqef gadol, rank=2)
+    └── PHRASE (binary 3w) לְ/אַ֖ב הֲמ֥וֹן גּוֹיִֽם
+        ├── [5] לְ/אַ֖ב (tifcha, rank=2)
+        └── [6-7] GLUE הֲמ֥וֹן גּוֹיִֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.17.5 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">ולא־יקרא עוד את־שמך אברם והיה שמך אברהם כי אב־המון גוים נתתיך</span> · <i>ve-lo-yiqare od et-shim-kha avram ve-haya shim-kha avraham ki av-hamon goyim netati-kha</i> · No longer Avram: your name is Avraham — father of multitude. [EN-AID]</div>
+<pre>PHRASE (binary 14w) וְ/לֹא יִקָּרֵ֥א ע֛וֹד אֶת שִׁמְ/ךָ֖ אַבְרָ֑ם ו…
+├── PHRASE (binary 6w) וְ/לֹא יִקָּרֵ֥א ע֛וֹד אֶת שִׁמְ/ךָ֖ אַבְרָ֑ם
+│   ├── PHRASE (binary 5w) וְ/לֹא יִקָּרֵ֥א ע֛וֹד אֶת שִׁמְ/ךָ֖
+│   │   ├── [0-2] GLUE וְ/לֹא יִקָּרֵ֥א ע֛וֹד (tevir, rank=3)
+│   │   └── [3-4] GLUE אֶת שִׁמְ/ךָ֖ (tifcha, rank=2)
+│   └── [5] אַבְרָ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) וְ/הָיָ֤ה שִׁמְ/ךָ֙ אַבְרָהָ֔ם כִּ֛י אַב הֲמ֥וֹ…
+    ├── PHRASE (binary 3w) וְ/הָיָ֤ה שִׁמְ/ךָ֙ אַבְרָהָ֔ם
+    │   ├── [6-7] GLUE וְ/הָיָ֤ה שִׁמְ/ךָ֙ (pashta, rank=3)
+    │   └── [8] אַבְרָהָ֔ם (zaqef qatan, rank=2)
+    └── PHRASE (binary 5w) כִּ֛י אַב הֲמ֥וֹן גּוֹיִ֖ם נְתַתִּֽי/ךָ
+        ├── PHRASE (binary 4w) כִּ֛י אַב הֲמ֥וֹן גּוֹיִ֖ם
+        │   ├── [9] כִּ֛י (tevir, rank=3)
+        │   └── [10-12] GLUE אַב הֲמ֥וֹן גּוֹיִ֖ם (tifcha, rank=2)
+        └── [13] נְתַתִּֽי/ךָ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.17.6 · parser unique · 9 words</h3>
+<div class="meta"><span class="he">והפרתי אתך במאד מאד ונתתיך לגוים ומלכים ממך יצאו</span> · <i>ve-hifreti et-kha bi-meod meod u-netati-kha le-goyim u-melakhim mim-kha yetzeu</i> · Exceeding fruitfulness; nations; kings shall come out of you. [EN-AID]</div>
+<pre>PHRASE (binary 9w) וְ/הִפְרֵתִ֤י אֹֽתְ/ךָ֙ בִּ/מְאֹ֣ד מְאֹ֔ד וּ/נְ…
+├── PHRASE (binary 6w) וְ/הִפְרֵתִ֤י אֹֽתְ/ךָ֙ בִּ/מְאֹ֣ד מְאֹ֔ד וּ/נְ…
+│   ├── PHRASE (binary 4w) וְ/הִפְרֵתִ֤י אֹֽתְ/ךָ֙ בִּ/מְאֹ֣ד מְאֹ֔ד
+│   │   ├── [0-1] GLUE וְ/הִפְרֵתִ֤י אֹֽתְ/ךָ֙ (pashta, rank=3)
+│   │   └── [2-3] GLUE בִּ/מְאֹ֣ד מְאֹ֔ד (zaqef qatan, rank=2)
+│   └── PHRASE (binary 2w) וּ/נְתַתִּ֖י/ךָ לְ/גוֹיִ֑ם
+│       ├── [4] וּ/נְתַתִּ֖י/ךָ (tifcha, rank=2)
+│       └── [5] לְ/גוֹיִ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וּ/מְלָכִ֖ים מִמְּ/ךָ֥ יֵצֵֽאוּ
+    ├── [6] וּ/מְלָכִ֖ים (tifcha, rank=2)
+    └── [7-8] GLUE מִמְּ/ךָ֥ יֵצֵֽאוּ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.17.7 · parser unique · 16 words</h3>
+<div class="meta"><span class="he">והקמתי את־בריתי ביני ובינך ובין זרעך אחריך לדרתם לברית עולם להיות לך לאלהים ולזרעך אחריך</span> · <i>va-haqimoti et-beriti-y beni-y u-vene-kha u-ven zara-kha achare-kha le-dorota-m li-verit olam li-heot le-kha le-Elohim u-le-zara-kha achare-kha</i> · My covenant established with you and your seed — everlasting. [EN-AID]</div>
+<pre>PHRASE (binary 16w) וַ/הֲקִמֹתִ֨י אֶת בְּרִיתִ֜/י בֵּינִ֣/י וּ/בֵינ…
+├── PHRASE (binary 11w) וַ/הֲקִמֹתִ֨י אֶת בְּרִיתִ֜/י בֵּינִ֣/י וּ/בֵינ…
+│   ├── PHRASE (binary 9w) וַ/הֲקִמֹתִ֨י אֶת בְּרִיתִ֜/י בֵּינִ֣/י וּ/בֵינ…
+│   │   ├── PHRASE (binary 5w) וַ/הֲקִמֹתִ֨י אֶת בְּרִיתִ֜/י בֵּינִ֣/י וּ/בֵינ…
+│   │   │   ├── [0-2] GLUE וַ/הֲקִמֹתִ֨י אֶת בְּרִיתִ֜/י (geresh, rank=4)
+│   │   │   └── [3-4] GLUE בֵּינִ֣/י וּ/בֵינֶ֗/ךָ (revia, rank=3)
+│   │   └── PHRASE (binary 4w) וּ/בֵ֨ין זַרְעֲ/ךָ֧ אַחֲרֶ֛י/ךָ לְ/דֹרֹתָ֖/ם
+│   │       ├── [5-7] GLUE וּ/בֵ֨ין זַרְעֲ/ךָ֧ אַחֲרֶ֛י/ךָ (tevir, rank=3)
+│   │       └── [8] לְ/דֹרֹתָ֖/ם (tifcha, rank=2)
+│   └── [9-10] GLUE לִ/בְרִ֣ית עוֹלָ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) לִ/הְי֤וֹת לְ/ךָ֙ לֵֽ/אלֹהִ֔ים וּֽ/לְ/זַרְעֲ/ךָ…
+    ├── PHRASE (binary 3w) לִ/הְי֤וֹת לְ/ךָ֙ לֵֽ/אלֹהִ֔ים
+    │   ├── [11-12] GLUE לִ/הְי֤וֹת לְ/ךָ֙ (pashta, rank=3)
+    │   └── [13] לֵֽ/אלֹהִ֔ים (zaqef qatan, rank=2)
+    └── PHRASE (binary 2w) וּֽ/לְ/זַרְעֲ/ךָ֖ אַחֲרֶֽי/ךָ
+        ├── [14] וּֽ/לְ/זַרְעֲ/ךָ֖ (tifcha, rank=2)
+        └── [15] אַחֲרֶֽי/ךָ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.17.8 · parser unique · 16 words</h3>
+<div class="meta"><span class="he">ונתתי לך ולזרעך אחריך את ארץ מגריך את כל־ארץ כנען לאחזת עולם והייתי להם לאלהים</span> · <i>ve-natati le-kha u-le-zara-kha achare-kha et eretz megure-kha et kal-eretz kenaan la-achuzat olam ve-hayiti la-hem le-Elohim</i> · The land of your sojournings, all Canaan — everlasting possession. [EN-AID]</div>
+<pre>PHRASE (binary 16w) וְ/נָתַתִּ֣י לְ֠/ךָ וּ/לְ/זַרְעֲ/ךָ֨ אַחֲרֶ֜י/ך…
+├── PHRASE (binary 13w) וְ/נָתַתִּ֣י לְ֠/ךָ וּ/לְ/זַרְעֲ/ךָ֨ אַחֲרֶ֜י/ך…
+│   ├── PHRASE (binary 11w) וְ/נָתַתִּ֣י לְ֠/ךָ וּ/לְ/זַרְעֲ/ךָ֨ אַחֲרֶ֜י/ך…
+│   │   ├── PHRASE (binary 7w) וְ/נָתַתִּ֣י לְ֠/ךָ וּ/לְ/זַרְעֲ/ךָ֨ אַחֲרֶ֜י/ך…
+│   │   │   ├── [0-1] GLUE וְ/נָתַתִּ֣י לְ֠/ךָ (telisha gedola, rank=4)
+│   │   │   └── PHRASE (binary 5w) וּ/לְ/זַרְעֲ/ךָ֨ אַחֲרֶ֜י/ךָ אֵ֣ת אֶ֣רֶץ מְגֻרֶ…
+│   │   │       ├── [2-3] GLUE וּ/לְ/זַרְעֲ/ךָ֨ אַחֲרֶ֜י/ךָ (geresh, rank=4)
+│   │   │       └── [4-6] GLUE אֵ֣ת אֶ֣רֶץ מְגֻרֶ֗י/ךָ (revia, rank=3)
+│   │   └── PHRASE (binary 4w) אֵ֚ת כָּל אֶ֣רֶץ כְּנַ֔עַן
+│   │       ├── [7] אֵ֚ת (yetiv, rank=3)
+│   │       └── [8-10] GLUE כָּל אֶ֣רֶץ כְּנַ֔עַן (zaqef qatan, rank=2)
+│   └── PHRASE (binary 2w) לַ/אֲחֻזַּ֖ת עוֹלָ֑ם
+│       ├── [11] לַ/אֲחֻזַּ֖ת (tifcha, rank=2)
+│       └── [12] עוֹלָ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) וְ/הָיִ֥יתִי לָ/הֶ֖ם לֵ/אלֹהִֽים
+    ├── [13-14] GLUE וְ/הָיִ֥יתִי לָ/הֶ֖ם (tifcha, rank=2)
+    └── [15] לֵ/אלֹהִֽים (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.17.9 · parser unique · 12 words</h3>
+<div class="meta"><span class="he">ויאמר אלהים אל־אברהם ואתה את־בריתי תשמר אתה וזרעך אחריך לדרתם</span> · <i>va-yomer Elohim el-avraham ve-ata et-beriti-y tishmor ata ve-zara-kha achare-kha le-dorota-m</i> · And you: keep My covenant, you and your seed. [EN-AID]</div>
+<pre>PHRASE (binary 12w) וַ/יֹּ֤אמֶר אֱלֹהִים֙ אֶל אַבְרָהָ֔ם וְ/אַתָּ֖ה…
+├── PHRASE (binary 8w) וַ/יֹּ֤אמֶר אֱלֹהִים֙ אֶל אַבְרָהָ֔ם וְ/אַתָּ֖ה…
+│   ├── PHRASE (binary 4w) וַ/יֹּ֤אמֶר אֱלֹהִים֙ אֶל אַבְרָהָ֔ם
+│   │   ├── [0-1] GLUE וַ/יֹּ֤אמֶר אֱלֹהִים֙ (pashta, rank=3)
+│   │   └── [2-3] GLUE אֶל אַבְרָהָ֔ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) וְ/אַתָּ֖ה אֶת בְּרִיתִ֣/י תִשְׁמֹ֑ר
+│       ├── [4] וְ/אַתָּ֖ה (tifcha, rank=2)
+│       └── [5-7] GLUE אֶת בְּרִיתִ֣/י תִשְׁמֹ֑ר (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) אַתָּ֛ה וְ/זַרְעֲ/ךָ֥ אַֽחֲרֶ֖י/ךָ לְ/דֹרֹתָֽ/ם
+    ├── PHRASE (binary 3w) אַתָּ֛ה וְ/זַרְעֲ/ךָ֥ אַֽחֲרֶ֖י/ךָ
+    │   ├── [8] אַתָּ֛ה (tevir, rank=3)
+    │   └── [9-10] GLUE וְ/זַרְעֲ/ךָ֥ אַֽחֲרֶ֖י/ךָ (tifcha, rank=2)
+    └── [11] לְ/דֹרֹתָֽ/ם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.17.10 · parser unique · 13 words</h3>
+<div class="meta"><span class="he">זאת בריתי אשר תשמרו ביני וביניכם ובין זרעך אחריך המול לכם כל־זכר</span> · <i>zot beriti-y asher tishmru beni-y u-vene-khem u-ven zara-kha achare-kha himol la-khem kal-zakhar</i> · This is the covenant you shall keep: every male circumcised. [EN-AID]</div>
+<pre>PHRASE (binary 13w) זֹ֣את בְּרִיתִ֞/י אֲשֶׁ֣ר תִּשְׁמְר֗וּ בֵּינִ/י…
+├── PHRASE (binary 9w) זֹ֣את בְּרִיתִ֞/י אֲשֶׁ֣ר תִּשְׁמְר֗וּ בֵּינִ/י…
+│   ├── PHRASE (binary 6w) זֹ֣את בְּרִיתִ֞/י אֲשֶׁ֣ר תִּשְׁמְר֗וּ בֵּינִ/י…
+│   │   ├── PHRASE (binary 4w) זֹ֣את בְּרִיתִ֞/י אֲשֶׁ֣ר תִּשְׁמְר֗וּ
+│   │   │   ├── [0-1] GLUE זֹ֣את בְּרִיתִ֞/י (gershayim, rank=4)
+│   │   │   └── [2-3] GLUE אֲשֶׁ֣ר תִּשְׁמְר֗וּ (revia, rank=3)
+│   │   └── PHRASE (binary 2w) בֵּינִ/י֙ וּ/בֵ֣ינֵי/כֶ֔ם
+│   │       ├── [4] בֵּינִ/י֙ (pashta, rank=3)
+│   │       └── [5] וּ/בֵ֣ינֵי/כֶ֔ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 3w) וּ/בֵ֥ין זַרְעֲ/ךָ֖ אַחֲרֶ֑י/ךָ
+│       ├── [6-7] GLUE וּ/בֵ֥ין זַרְעֲ/ךָ֖ (tifcha, rank=2)
+│       └── [8] אַחֲרֶ֑י/ךָ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) הִמּ֥וֹל לָ/כֶ֖ם כָּל זָכָֽר
+    ├── [9-10] GLUE הִמּ֥וֹל לָ/כֶ֖ם (tifcha, rank=2)
+    └── [11-12] GLUE כָּל זָכָֽר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.17.11 · parser unique · 9 words</h3>
+<div class="meta"><span class="he">ונמלתם את בשר ערלתכם והיה לאות ברית ביני וביניכם</span> · <i>u-nemaltem et besar arlat-khem ve-haya le-ot berit beni-y u-vene-khem</i> · Circumcised in the flesh of your foreskin — a covenant-sign. [EN-AID]</div>
+<pre>PHRASE (binary 9w) וּ/נְמַלְתֶּ֕ם אֵ֖ת בְּשַׂ֣ר עָרְלַתְ/כֶ֑ם וְ/ה…
+├── PHRASE (binary 4w) וּ/נְמַלְתֶּ֕ם אֵ֖ת בְּשַׂ֣ר עָרְלַתְ/כֶ֑ם
+│   ├── [0] וּ/נְמַלְתֶּ֕ם (zaqef gadol, rank=2)
+│   └── PHRASE (binary 3w) אֵ֖ת בְּשַׂ֣ר עָרְלַתְ/כֶ֑ם
+│       ├── [1] אֵ֖ת (tifcha, rank=2)
+│       └── [2-3] GLUE בְּשַׂ֣ר עָרְלַתְ/כֶ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) וְ/הָיָה֙ לְ/א֣וֹת בְּרִ֔ית בֵּינִ֖/י וּ/בֵינֵי…
+    ├── PHRASE (binary 3w) וְ/הָיָה֙ לְ/א֣וֹת בְּרִ֔ית
+    │   ├── [4] וְ/הָיָה֙ (pashta, rank=3)
+    │   └── [5-6] GLUE לְ/א֣וֹת בְּרִ֔ית (zaqef qatan, rank=2)
+    └── PHRASE (binary 2w) בֵּינִ֖/י וּ/בֵינֵי/כֶֽם
+        ├── [7] בֵּינִ֖/י (tifcha, rank=2)
+        └── [8] וּ/בֵינֵי/כֶֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.17.12 · parser unique · 19 words</h3>
+<div class="meta"><span class="he">ובן־שמנת ימים ימול לכם כל־זכר לדרתיכם יליד בית ומקנת־כסף מכל בן־נכר אשר לא מזרעך הוא</span> · <i>u-ven-shemonat yamim yimol la-khem kal-zakhar le-dorote-khem yelid bayit u-miqnat-kesef mi-kol ben-nekhar asher lo mi-zara-kha hu</i> · Eight days old, every male, house-born or silver-bought. [EN-AID]</div>
+<pre>PHRASE (binary 19w) וּ/בֶן שְׁמֹנַ֣ת יָמִ֗ים יִמּ֥וֹל לָ/כֶ֛ם כָּל …
+├── PHRASE (binary 8w) וּ/בֶן שְׁמֹנַ֣ת יָמִ֗ים יִמּ֥וֹל לָ/כֶ֛ם כָּל …
+│   ├── PHRASE (binary 7w) וּ/בֶן שְׁמֹנַ֣ת יָמִ֗ים יִמּ֥וֹל לָ/כֶ֛ם כָּל …
+│   │   ├── [0-2] GLUE וּ/בֶן שְׁמֹנַ֣ת יָמִ֗ים (revia, rank=3)
+│   │   └── PHRASE (binary 4w) יִמּ֥וֹל לָ/כֶ֛ם כָּל זָכָ֖ר
+│   │       ├── [3-4] GLUE יִמּ֥וֹל לָ/כֶ֛ם (tevir, rank=3)
+│   │       └── [5-6] GLUE כָּל זָכָ֖ר (tifcha, rank=2)
+│   └── [7] לְ/דֹרֹתֵי/כֶ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 11w) יְלִ֣יד בָּ֔יִת וּ/מִקְנַת כֶּ֨סֶף֙ מִ/כֹּ֣ל בּ…
+    ├── [8-9] GLUE יְלִ֣יד בָּ֔יִת (zaqef qatan, rank=2)
+    └── PHRASE (binary 9w) וּ/מִקְנַת כֶּ֨סֶף֙ מִ/כֹּ֣ל בֶּן נֵכָ֔ר אֲשֶׁ֛…
+        ├── PHRASE (binary 5w) וּ/מִקְנַת כֶּ֨סֶף֙ מִ/כֹּ֣ל בֶּן נֵכָ֔ר
+        │   ├── [10-11] GLUE וּ/מִקְנַת כֶּ֨סֶף֙ (pashta, rank=3)
+        │   └── [12-14] GLUE מִ/כֹּ֣ל בֶּן נֵכָ֔ר (zaqef qatan, rank=2)
+        └── PHRASE (binary 4w) אֲשֶׁ֛ר לֹ֥א מִֽ/זַּרְעֲ/ךָ֖ הֽוּא
+            ├── PHRASE (binary 3w) אֲשֶׁ֛ר לֹ֥א מִֽ/זַּרְעֲ/ךָ֖
+            │   ├── [15] אֲשֶׁ֛ר (tevir, rank=3)
+            │   └── [16-17] GLUE לֹ֥א מִֽ/זַּרְעֲ/ךָ֖ (tifcha, rank=2)
+            └── [18] הֽוּא (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.17.13 · parser unique · 11 words</h3>
+<div class="meta"><span class="he">המול ימול יליד ביתך ומקנת כספך והיתה בריתי בבשרכם לברית עולם</span> · <i>himol yimol yelid bet-kha u-miqnat kaspe-kha ve-hayta veriti-y bi-vesar-khem li-verit olam</i> · Circumcised he must be; My covenant in your flesh, everlasting. [EN-AID]</div>
+<pre>PHRASE (binary 11w) הִמּ֧וֹל יִמּ֛וֹל יְלִ֥יד בֵּֽיתְ/ךָ֖ וּ/מִקְנַ…
+├── PHRASE (binary 6w) הִמּ֧וֹל יִמּ֛וֹל יְלִ֥יד בֵּֽיתְ/ךָ֖ וּ/מִקְנַ…
+│   ├── PHRASE (binary 4w) הִמּ֧וֹל יִמּ֛וֹל יְלִ֥יד בֵּֽיתְ/ךָ֖
+│   │   ├── [0-1] GLUE הִמּ֧וֹל יִמּ֛וֹל (tevir, rank=3)
+│   │   └── [2-3] GLUE יְלִ֥יד בֵּֽיתְ/ךָ֖ (tifcha, rank=2)
+│   └── [4-5] GLUE וּ/מִקְנַ֣ת כַּסְפֶּ֑/ךָ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 5w) וְ/הָיְתָ֧ה בְרִיתִ֛/י בִּ/בְשַׂרְ/כֶ֖ם לִ/בְרִ…
+    ├── PHRASE (binary 3w) וְ/הָיְתָ֧ה בְרִיתִ֛/י בִּ/בְשַׂרְ/כֶ֖ם
+    │   ├── [6-7] GLUE וְ/הָיְתָ֧ה בְרִיתִ֛/י (tevir, rank=3)
+    │   └── [8] בִּ/בְשַׂרְ/כֶ֖ם (tifcha, rank=2)
+    └── [9-10] GLUE לִ/בְרִ֥ית עוֹלָֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.17.14 · parser unique · 15 words</h3>
+<div class="meta"><span class="he">וערל זכר אשר לא־ימול את־בשר ערלתו ונכרתה הנפש ההוא מעמיה את־בריתי הפר</span> · <i>ve-arel zakhar asher lo-yimol et-besar arlat-o ve-nikhrta ha-nefesh ha-hiv me-ame-ha et-beriti-y hefar</i> · The uncut male shall be cut off — he has broken My covenant. [EN-AID]</div>
+<pre>PHRASE (binary 15w) וְ/עָרֵ֣ל זָכָ֗ר אֲשֶׁ֤ר לֹֽא יִמּוֹל֙ אֶת בְּש…
+├── PHRASE (binary 12w) וְ/עָרֵ֣ל זָכָ֗ר אֲשֶׁ֤ר לֹֽא יִמּוֹל֙ אֶת בְּש…
+│   ├── PHRASE (binary 8w) וְ/עָרֵ֣ל זָכָ֗ר אֲשֶׁ֤ר לֹֽא יִמּוֹל֙ אֶת בְּש…
+│   │   ├── [0-1] GLUE וְ/עָרֵ֣ל זָכָ֗ר (revia, rank=3)
+│   │   └── PHRASE (binary 6w) אֲשֶׁ֤ר לֹֽא יִמּוֹל֙ אֶת בְּשַׂ֣ר עָרְלָת֔/וֹ
+│   │       ├── [2-4] GLUE אֲשֶׁ֤ר לֹֽא יִמּוֹל֙ (pashta, rank=3)
+│   │       └── [5-7] GLUE אֶת בְּשַׂ֣ר עָרְלָת֔/וֹ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) וְ/נִכְרְתָ֛ה הַ/נֶּ֥פֶשׁ הַ/הִ֖וא מֵ/עַמֶּ֑י/הָ
+│       ├── PHRASE (binary 3w) וְ/נִכְרְתָ֛ה הַ/נֶּ֥פֶשׁ הַ/הִ֖וא
+│       │   ├── [8] וְ/נִכְרְתָ֛ה (tevir, rank=3)
+│       │   └── [9-10] GLUE הַ/נֶּ֥פֶשׁ הַ/הִ֖וא (tifcha, rank=2)
+│       └── [11] מֵ/עַמֶּ֑י/הָ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) אֶת בְּרִיתִ֖/י הֵפַֽר
+    ├── [12-13] GLUE אֶת בְּרִיתִ֖/י (tifcha, rank=2)
+    └── [14] הֵפַֽר (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.17.15 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">ויאמר אלהים אל־אברהם שרי אשתך לא־תקרא את־שמה שרי כי שרה שמה</span> · <i>va-yomer Elohim el-avraham saray isht-kha lo-tiqra et-shema-ה saray ki sara shema-ה</i> · Not Sarai: Sarah is her name. [EN-AID]</div>
+<pre>PHRASE (binary 14w) וַ/יֹּ֤אמֶר אֱלֹהִים֙ אֶל אַבְרָהָ֔ם שָׂרַ֣י אִ…
+├── PHRASE (binary 11w) וַ/יֹּ֤אמֶר אֱלֹהִים֙ אֶל אַבְרָהָ֔ם שָׂרַ֣י אִ…
+│   ├── PHRASE (binary 4w) וַ/יֹּ֤אמֶר אֱלֹהִים֙ אֶל אַבְרָהָ֔ם
+│   │   ├── [0-1] GLUE וַ/יֹּ֤אמֶר אֱלֹהִים֙ (pashta, rank=3)
+│   │   └── [2-3] GLUE אֶל אַבְרָהָ֔ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 7w) שָׂרַ֣י אִשְׁתְּ/ךָ֔ לֹא תִקְרָ֥א אֶת שְׁמָ֖/הּ…
+│       ├── [4-5] GLUE שָׂרַ֣י אִשְׁתְּ/ךָ֔ (zaqef qatan, rank=2)
+│       └── PHRASE (binary 5w) לֹא תִקְרָ֥א אֶת שְׁמָ֖/הּ שָׂרָ֑י
+│           ├── [6-9] GLUE לֹא תִקְרָ֥א אֶת שְׁמָ֖/הּ (tifcha, rank=2)
+│           └── [10] שָׂרָ֑י (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) כִּ֥י שָׂרָ֖ה שְׁמָֽ/הּ
+    ├── [11-12] GLUE כִּ֥י שָׂרָ֖ה (tifcha, rank=2)
+    └── [13] שְׁמָֽ/הּ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.17.16 · parser unique · 14 words</h3>
+<div class="meta"><span class="he">וברכתי אתה וגם נתתי ממנה לך בן וברכתיה והיתה לגוים מלכי עמים ממנה יהיו</span> · <i>u-verakhti et-ה ve-gam natati mime-na le-kha ben u-verakhti-ha ve-hayta le-goyim malkhe amim mime-na yihyu</i> · I will bless her — a son from her; kings of peoples from her. [EN-AID]</div>
+<pre>PHRASE (binary 14w) וּ/בֵרַכְתִּ֣י אֹתָ֔/הּ וְ/גַ֨ם נָתַ֧תִּי מִמֶּ…
+├── PHRASE (binary 7w) וּ/בֵרַכְתִּ֣י אֹתָ֔/הּ וְ/גַ֨ם נָתַ֧תִּי מִמֶּ…
+│   ├── [0-1] GLUE וּ/בֵרַכְתִּ֣י אֹתָ֔/הּ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) וְ/גַ֨ם נָתַ֧תִּי מִמֶּ֛/נָּה לְ/ךָ֖ בֵּ֑ן
+│       ├── PHRASE (binary 4w) וְ/גַ֨ם נָתַ֧תִּי מִמֶּ֛/נָּה לְ/ךָ֖
+│       │   ├── [2-4] GLUE וְ/גַ֨ם נָתַ֧תִּי מִמֶּ֛/נָּה (tevir, rank=3)
+│       │   └── [5] לְ/ךָ֖ (tifcha, rank=2)
+│       └── [6] בֵּ֑ן (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) וּ/בֵֽרַכְתִּ֨י/הָ֙ וְ/הָֽיְתָ֣ה לְ/גוֹיִ֔ם מַל…
+    ├── PHRASE (binary 3w) וּ/בֵֽרַכְתִּ֨י/הָ֙ וְ/הָֽיְתָ֣ה לְ/גוֹיִ֔ם
+    │   ├── [7] וּ/בֵֽרַכְתִּ֨י/הָ֙ (pashta, rank=3)
+    │   └── [8-9] GLUE וְ/הָֽיְתָ֣ה לְ/גוֹיִ֔ם (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) מַלְכֵ֥י עַמִּ֖ים מִמֶּ֥/נָּה יִהְיֽוּ
+        ├── [10-11] GLUE מַלְכֵ֥י עַמִּ֖ים (tifcha, rank=2)
+        └── [12-13] GLUE מִמֶּ֥/נָּה יִהְיֽוּ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.17.17 · parser unique · 17 words</h3>
+<div class="meta"><span class="he">ויפל אברהם על־פניו ויצחק ויאמר בלבו הלבן מאה־שנה יולד ואם־שרה הבת־תשעים שנה תלד</span> · <i>va-yipol avraham al-panay-v va-yitzchaq va-yomer be-lib-o ha-le-ven mea-shana yivaled ve-im-sara ha-vat-tishim shana teled</i> · Abraham fell, laughed, said in his heart: at a hundred? at ninety? [EN-AID]</div>
+<pre>PHRASE (binary 17w) וַ/יִּפֹּ֧ל אַבְרָהָ֛ם עַל פָּנָ֖י/ו וַ/יִּצְחָ…
+├── PHRASE (binary 5w) וַ/יִּפֹּ֧ל אַבְרָהָ֛ם עַל פָּנָ֖י/ו וַ/יִּצְחָ…
+│   ├── PHRASE (binary 4w) וַ/יִּפֹּ֧ל אַבְרָהָ֛ם עַל פָּנָ֖י/ו
+│   │   ├── [0-1] GLUE וַ/יִּפֹּ֧ל אַבְרָהָ֛ם (tevir, rank=3)
+│   │   └── [2-3] GLUE עַל פָּנָ֖י/ו (tifcha, rank=2)
+│   └── [4] וַ/יִּצְחָ֑ק (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 12w) וַ/יֹּ֣אמֶר בְּ/לִבּ֗/וֹ הַ/לְּ/בֶ֤ן מֵאָֽה שָׁ…
+    ├── PHRASE (binary 6w) וַ/יֹּ֣אמֶר בְּ/לִבּ֗/וֹ הַ/לְּ/בֶ֤ן מֵאָֽה שָׁ…
+    │   ├── [5-6] GLUE וַ/יֹּ֣אמֶר בְּ/לִבּ֗/וֹ (revia, rank=3)
+    │   └── PHRASE (binary 4w) הַ/לְּ/בֶ֤ן מֵאָֽה שָׁנָה֙ יִוָּלֵ֔ד
+    │       ├── [7-9] GLUE הַ/לְּ/בֶ֤ן מֵאָֽה שָׁנָה֙ (pashta, rank=3)
+    │       └── [10] יִוָּלֵ֔ד (zaqef qatan, rank=2)
+    └── PHRASE (binary 6w) וְ/אִ֨ם שָׂרָ֔ה הֲ/בַת תִּשְׁעִ֥ים שָׁנָ֖ה תֵּל…
+        ├── [11-12] GLUE וְ/אִ֨ם שָׂרָ֔ה (zaqef qatan, rank=2)
+        └── PHRASE (binary 4w) הֲ/בַת תִּשְׁעִ֥ים שָׁנָ֖ה תֵּלֵֽד
+            ├── [13-15] GLUE הֲ/בַת תִּשְׁעִ֥ים שָׁנָ֖ה (tifcha, rank=2)
+            └── [16] תֵּלֵֽד (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.17.18 · parser unique · 8 words</h3>
+<div class="meta"><span class="he">ויאמר אברהם אל־האלהים לו ישמעאל יחיה לפניך</span> · <i>va-yomer avraham el-ha-Elohim lu yishmael yichye le-fane-kha</i> · Would that Yishmael might live before You! [EN-AID]</div>
+<pre>PHRASE (binary 8w) וַ/יֹּ֥אמֶר אַבְרָהָ֖ם אֶל הָֽ/אֱלֹהִ֑ים ל֥וּ י…
+├── PHRASE (binary 4w) וַ/יֹּ֥אמֶר אַבְרָהָ֖ם אֶל הָֽ/אֱלֹהִ֑ים
+│   ├── [0-1] GLUE וַ/יֹּ֥אמֶר אַבְרָהָ֖ם (tifcha, rank=2)
+│   └── [2-3] GLUE אֶל הָֽ/אֱלֹהִ֑ים (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) ל֥וּ יִשְׁמָעֵ֖אל יִחְיֶ֥ה לְ/פָנֶֽי/ךָ
+    ├── [4-5] GLUE ל֥וּ יִשְׁמָעֵ֖אל (tifcha, rank=2)
+    └── [6-7] GLUE יִחְיֶ֥ה לְ/פָנֶֽי/ךָ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.17.19 · parser unique · 20 words</h3>
+<div class="meta"><span class="he">ויאמר אלהים אבל שרה אשתך ילדת לך בן וקראת את־שמו יצחק והקמתי את־בריתי אתו לברית עולם לזרעו אחריו</span> · <i>va-yomer Elohim aval sara isht-kha yoledet le-kha ben ve-qarata et-shem-o yitzchaq va-haqimoti et-beriti-y et-o li-verit olam le-zar-o acharay-v</i> · Nay — Sarah bears a son: call him Yitzchaq; My covenant with him. [EN-AID]</div>
+<pre>PHRASE (binary 20w) וַ/יֹּ֣אמֶר אֱלֹהִ֗ים אֲבָל֙ שָׂרָ֣ה אִשְׁתְּ/ך…
+├── PHRASE (binary 12w) וַ/יֹּ֣אמֶר אֱלֹהִ֗ים אֲבָל֙ שָׂרָ֣ה אִשְׁתְּ/ך…
+│   ├── PHRASE (binary 8w) וַ/יֹּ֣אמֶר אֱלֹהִ֗ים אֲבָל֙ שָׂרָ֣ה אִשְׁתְּ/ך…
+│   │   ├── [0-1] GLUE וַ/יֹּ֣אמֶר אֱלֹהִ֗ים (revia, rank=3)
+│   │   └── PHRASE (binary 6w) אֲבָל֙ שָׂרָ֣ה אִשְׁתְּ/ךָ֗ יֹלֶ֤דֶת לְ/ךָ֙ בֵּ…
+│   │       ├── [2] אֲבָל֙ (pashta, rank=3)
+│   │       └── PHRASE (binary 5w) שָׂרָ֣ה אִשְׁתְּ/ךָ֗ יֹלֶ֤דֶת לְ/ךָ֙ בֵּ֔ן
+│   │           ├── [3-4] GLUE שָׂרָ֣ה אִשְׁתְּ/ךָ֗ (revia, rank=3)
+│   │           └── PHRASE (binary 3w) יֹלֶ֤דֶת לְ/ךָ֙ בֵּ֔ן
+│   │               ├── [5-6] GLUE יֹלֶ֤דֶת לְ/ךָ֙ (pashta, rank=3)
+│   │               └── [7] בֵּ֔ן (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) וְ/קָרָ֥אתָ אֶת שְׁמ֖/וֹ יִצְחָ֑ק
+│       ├── [8-10] GLUE וְ/קָרָ֥אתָ אֶת שְׁמ֖/וֹ (tifcha, rank=2)
+│       └── [11] יִצְחָ֑ק (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) וַ/הֲקִמֹתִ֨י אֶת בְּרִיתִ֥/י אִתּ֛/וֹ לִ/בְרִ֥…
+    ├── PHRASE (binary 6w) וַ/הֲקִמֹתִ֨י אֶת בְּרִיתִ֥/י אִתּ֛/וֹ לִ/בְרִ֥…
+    │   ├── [12-15] GLUE וַ/הֲקִמֹתִ֨י אֶת בְּרִיתִ֥/י אִתּ֛/וֹ (tevir, rank=3)
+    │   └── [16-17] GLUE לִ/בְרִ֥ית עוֹלָ֖ם (tifcha, rank=2)
+    └── [18-19] GLUE לְ/זַרְע֥/וֹ אַחֲרָֽי/ו (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.17.20 · parser unique · 18 words</h3>
+<div class="meta"><span class="he">ולישמעאל שמעתיך הנה ברכתי אתו והפריתי אתו והרביתי אתו במאד מאד שנים־עשר נשיאם יוליד ונתתיו לגוי גדול</span> · <i>u-le-yishmael shemati-kha hine berakhti et-o ve-hifreti et-o ve-hirbeti et-o bi-meod meod shenem-asar nesiim yolid u-netati-v le-goy gadol</i> · As for Yishmael: I have heard you — blessed, twelve princes, a great nation. [EN-AID]</div>
+<pre>PHRASE (binary 18w) וּֽ/לְ/יִשְׁמָעֵ֘אל שְׁמַעְתִּי/ךָ֒ הִנֵּ֣ה בֵּ…
+├── PHRASE (binary 11w) וּֽ/לְ/יִשְׁמָעֵ֘אל שְׁמַעְתִּי/ךָ֒ הִנֵּ֣ה בֵּ…
+│   ├── PHRASE (binary 2w) וּֽ/לְ/יִשְׁמָעֵ֘אל שְׁמַעְתִּי/ךָ֒
+│   │   ├── [0] וּֽ/לְ/יִשְׁמָעֵ֘אל (zarqa, rank=3)
+│   │   └── [1] שְׁמַעְתִּי/ךָ֒ (segol, rank=2)
+│   └── PHRASE (binary 9w) הִנֵּ֣ה בֵּרַ֣כְתִּי אֹת֗/וֹ וְ/הִפְרֵיתִ֥י אֹת…
+│       ├── PHRASE (binary 7w) הִנֵּ֣ה בֵּרַ֣כְתִּי אֹת֗/וֹ וְ/הִפְרֵיתִ֥י אֹת…
+│       │   ├── [2-4] GLUE הִנֵּ֣ה בֵּרַ֣כְתִּי אֹת֗/וֹ (revia, rank=3)
+│       │   └── PHRASE (binary 4w) וְ/הִפְרֵיתִ֥י אֹת֛/וֹ וְ/הִרְבֵּיתִ֥י אֹת֖/וֹ
+│       │       ├── [5-6] GLUE וְ/הִפְרֵיתִ֥י אֹת֛/וֹ (tevir, rank=3)
+│       │       └── [7-8] GLUE וְ/הִרְבֵּיתִ֥י אֹת֖/וֹ (tifcha, rank=2)
+│       └── [9-10] GLUE בִּ/מְאֹ֣ד מְאֹ֑ד (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 7w) שְׁנֵים עָשָׂ֤ר נְשִׂיאִם֙ יוֹלִ֔יד וּ/נְתַתִּ֖…
+    ├── PHRASE (binary 4w) שְׁנֵים עָשָׂ֤ר נְשִׂיאִם֙ יוֹלִ֔יד
+    │   ├── [11-13] GLUE שְׁנֵים עָשָׂ֤ר נְשִׂיאִם֙ (pashta, rank=3)
+    │   └── [14] יוֹלִ֔יד (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) וּ/נְתַתִּ֖י/ו לְ/ג֥וֹי גָּדֽוֹל
+        ├── [15] וּ/נְתַתִּ֖י/ו (tifcha, rank=2)
+        └── [16-17] GLUE לְ/ג֥וֹי גָּדֽוֹל (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.17.21 · parser unique · 13 words</h3>
+<div class="meta"><span class="he">ואת־בריתי אקים את־יצחק אשר תלד לך שרה למועד הזה בשנה האחרת</span> · <i>ve-et-beriti-y aqim et-yitzchaq asher teled le-kha sara la-moed ha-ze ba-shana ha-acheret</i> · My covenant I establish with Yitzchaq — at this set time next year. [EN-AID]</div>
+<pre>PHRASE (binary 13w) וְ/אֶת בְּרִיתִ֖/י אָקִ֣ים אֶת יִצְחָ֑ק אֲשֶׁר֩…
+├── PHRASE (binary 5w) וְ/אֶת בְּרִיתִ֖/י אָקִ֣ים אֶת יִצְחָ֑ק
+│   ├── [0-1] GLUE וְ/אֶת בְּרִיתִ֖/י (tifcha, rank=2)
+│   └── [2-4] GLUE אָקִ֣ים אֶת יִצְחָ֑ק (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 8w) אֲשֶׁר֩ תֵּלֵ֨ד לְ/ךָ֤ שָׂרָה֙ לַ/מּוֹעֵ֣ד הַ/ז…
+    ├── PHRASE (binary 6w) אֲשֶׁר֩ תֵּלֵ֨ד לְ/ךָ֤ שָׂרָה֙ לַ/מּוֹעֵ֣ד הַ/ז…
+    │   ├── [5-8] GLUE אֲשֶׁר֩ תֵּלֵ֨ד לְ/ךָ֤ שָׂרָה֙ (pashta, rank=3)
+    │   └── [9-10] GLUE לַ/מּוֹעֵ֣ד הַ/זֶּ֔ה (zaqef qatan, rank=2)
+    └── PHRASE (binary 2w) בַּ/שָּׁנָ֖ה הָ/אַחֶֽרֶת
+        ├── [11] בַּ/שָּׁנָ֖ה (tifcha, rank=2)
+        └── [12] הָ/אַחֶֽרֶת (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.17.22 · parser unique · 7 words</h3>
+<div class="meta"><span class="he">ויכל לדבר אתו ויעל אלהים מעל אברהם</span> · <i>va-yekhal le-daber et-o va-yaal Elohim me-al avraham</i> · He finished speaking; God went up from Abraham. [EN-AID]</div>
+<pre>PHRASE (binary 7w) וַ/יְכַ֖ל לְ/דַבֵּ֣ר אִתּ֑/וֹ וַ/יַּ֣עַל אֱלֹהִ…
+├── PHRASE (binary 3w) וַ/יְכַ֖ל לְ/דַבֵּ֣ר אִתּ֑/וֹ
+│   ├── [0] וַ/יְכַ֖ל (tifcha, rank=2)
+│   └── [1-2] GLUE לְ/דַבֵּ֣ר אִתּ֑/וֹ (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) וַ/יַּ֣עַל אֱלֹהִ֔ים מֵ/עַ֖ל אַבְרָהָֽם
+    ├── [3-4] GLUE וַ/יַּ֣עַל אֱלֹהִ֔ים (zaqef qatan, rank=2)
+    └── PHRASE (binary 2w) מֵ/עַ֖ל אַבְרָהָֽם
+        ├── [5] מֵ/עַ֖ל (tifcha, rank=2)
+        └── [6] אַבְרָהָֽם (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.17.23 · parser unique · 29 words</h3>
+<div class="meta"><span class="he">ויקח אברהם את־ישמעאל בנו ואת כל־ילידי ביתו ואת כל־מקנת כספו כל־זכר באנשי בית אברהם וימל את־בשר ערלתם בעצם היום הזה כאשר דבר אתו אלהים</span> · <i>va-yiqach avraham et-yishmael ben-o ve-et kal-yelide vet-o ve-et kal-miqnat kasp-o kal-zakhar be-anshe bet avraham va-yamal et-besar arlata-m be-etzem ha-yom ha-ze ka-asher diber et-o Elohim</i> · Abraham took his house and circumcised them the selfsame day. [EN-AID]</div>
+<pre>PHRASE (binary 29w) וַ/יִּקַּ֨ח אַבְרָהָ֜ם אֶת יִשְׁמָעֵ֣אל בְּנ֗/ו…
+├── PHRASE (binary 18w) וַ/יִּקַּ֨ח אַבְרָהָ֜ם אֶת יִשְׁמָעֵ֣אל בְּנ֗/ו…
+│   ├── PHRASE (binary 13w) וַ/יִּקַּ֨ח אַבְרָהָ֜ם אֶת יִשְׁמָעֵ֣אל בְּנ֗/ו…
+│   │   ├── PHRASE (binary 5w) וַ/יִּקַּ֨ח אַבְרָהָ֜ם אֶת יִשְׁמָעֵ֣אל בְּנ֗/וֹ
+│   │   │   ├── [0-1] GLUE וַ/יִּקַּ֨ח אַבְרָהָ֜ם (geresh, rank=4)
+│   │   │   └── [2-4] GLUE אֶת יִשְׁמָעֵ֣אל בְּנ֗/וֹ (revia, rank=3)
+│   │   └── PHRASE (binary 8w) וְ/אֵ֨ת כָּל יְלִידֵ֤י בֵית/וֹ֙ וְ/אֵת֙ כָּל מִ…
+│   │       ├── [5-8] GLUE וְ/אֵ֨ת כָּל יְלִידֵ֤י בֵית/וֹ֙ (pashta, rank=3)
+│   │       └── PHRASE (binary 4w) וְ/אֵת֙ כָּל מִקְנַ֣ת כַּסְפּ֔/וֹ
+│   │           ├── [9] וְ/אֵת֙ (pashta, rank=3)
+│   │           └── [10-12] GLUE כָּל מִקְנַ֣ת כַּסְפּ֔/וֹ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) כָּל זָכָ֕ר בְּ/אַנְשֵׁ֖י בֵּ֣ית אַבְרָהָ֑ם
+│       ├── [13-14] GLUE כָּל זָכָ֕ר (zaqef gadol, rank=2)
+│       └── PHRASE (binary 3w) בְּ/אַנְשֵׁ֖י בֵּ֣ית אַבְרָהָ֑ם
+│           ├── [15] בְּ/אַנְשֵׁ֖י (tifcha, rank=2)
+│           └── [16-17] GLUE בֵּ֣ית אַבְרָהָ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 11w) וַ/יָּ֜מָל אֶת בְּשַׂ֣ר עָרְלָתָ֗/ם בְּ/עֶ֨צֶם֙…
+    ├── PHRASE (binary 7w) וַ/יָּ֜מָל אֶת בְּשַׂ֣ר עָרְלָתָ֗/ם בְּ/עֶ֨צֶם֙…
+    │   ├── PHRASE (binary 4w) וַ/יָּ֜מָל אֶת בְּשַׂ֣ר עָרְלָתָ֗/ם
+    │   │   ├── [18] וַ/יָּ֜מָל (geresh, rank=4)
+    │   │   └── [19-21] GLUE אֶת בְּשַׂ֣ר עָרְלָתָ֗/ם (revia, rank=3)
+    │   └── PHRASE (binary 3w) בְּ/עֶ֨צֶם֙ הַ/יּ֣וֹם הַ/זֶּ֔ה
+    │       ├── [22] בְּ/עֶ֨צֶם֙ (pashta, rank=3)
+    │       └── [23-24] GLUE הַ/יּ֣וֹם הַ/זֶּ֔ה (zaqef qatan, rank=2)
+    └── PHRASE (binary 4w) כַּ/אֲשֶׁ֛ר דִּבֶּ֥ר אִתּ֖/וֹ אֱלֹהִֽים
+        ├── PHRASE (binary 3w) כַּ/אֲשֶׁ֛ר דִּבֶּ֥ר אִתּ֖/וֹ
+        │   ├── [25] כַּ/אֲשֶׁ֛ר (tevir, rank=3)
+        │   └── [26-27] GLUE דִּבֶּ֥ר אִתּ֖/וֹ (tifcha, rank=2)
+        └── [28] אֱלֹהִֽים (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.17.24 · parser unique · 8 words</h3>
+<div class="meta"><span class="he">ואברהם בן־תשעים ותשע שנה בהמלו בשר ערלתו</span> · <i>ve-avraham ben-tishim va-tesha shana be-himol-o besar arlat-o</i> · Abraham ninety-nine when circumcised. [EN-AID]</div>
+<pre>PHRASE (binary 8w) וְ/אַ֨בְרָהָ֔ם בֶּן תִּשְׁעִ֥ים וָ/תֵ֖שַׁע שָׁנ…
+├── PHRASE (binary 5w) וְ/אַ֨בְרָהָ֔ם בֶּן תִּשְׁעִ֥ים וָ/תֵ֖שַׁע שָׁנ…
+│   ├── [0] וְ/אַ֨בְרָהָ֔ם (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) בֶּן תִּשְׁעִ֥ים וָ/תֵ֖שַׁע שָׁנָ֑ה
+│       ├── [1-3] GLUE בֶּן תִּשְׁעִ֥ים וָ/תֵ֖שַׁע (tifcha, rank=2)
+│       └── [4] שָׁנָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 3w) בְּ/הִמֹּל֖/וֹ בְּשַׂ֥ר עָרְלָתֽ/וֹ
+    ├── [5] בְּ/הִמֹּל֖/וֹ (tifcha, rank=2)
+    └── [6-7] GLUE בְּשַׂ֥ר עָרְלָתֽ/וֹ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.17.25 · parser unique · 10 words</h3>
+<div class="meta"><span class="he">וישמעאל בנו בן־שלש עשרה שנה בהמלו את בשר ערלתו</span> · <i>ve-yishmael ben-o ben-shelosh esre shana be-himol-o et besar arlat-o</i> · Yishmael thirteen when circumcised. [EN-AID]</div>
+<pre>PHRASE (binary 10w) וְ/יִשְׁמָעֵ֣אל בְּנ֔/וֹ בֶּן שְׁלֹ֥שׁ עֶשְׂרֵ֖…
+├── PHRASE (binary 6w) וְ/יִשְׁמָעֵ֣אל בְּנ֔/וֹ בֶּן שְׁלֹ֥שׁ עֶשְׂרֵ֖…
+│   ├── [0-1] GLUE וְ/יִשְׁמָעֵ֣אל בְּנ֔/וֹ (zaqef qatan, rank=2)
+│   └── PHRASE (binary 4w) בֶּן שְׁלֹ֥שׁ עֶשְׂרֵ֖ה שָׁנָ֑ה
+│       ├── [2-4] GLUE בֶּן שְׁלֹ֥שׁ עֶשְׂרֵ֖ה (tifcha, rank=2)
+│       └── [5] שָׁנָ֑ה (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 4w) בְּ/הִ֨מֹּל֔/וֹ אֵ֖ת בְּשַׂ֥ר עָרְלָתֽ/וֹ
+    ├── [6] בְּ/הִ֨מֹּל֔/וֹ (zaqef qatan, rank=2)
+    └── PHRASE (binary 3w) אֵ֖ת בְּשַׂ֥ר עָרְלָתֽ/וֹ
+        ├── [7] אֵ֖ת (tifcha, rank=2)
+        └── [8-9] GLUE בְּשַׂ֥ר עָרְלָתֽ/וֹ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.17.26 · parser unique · 7 words</h3>
+<div class="meta"><span class="he">בעצם היום הזה נמול אברהם וישמעאל בנו</span> · <i>be-etzem ha-yom ha-ze nimol avraham ve-yishmael ben-o</i> · The selfsame day: Abraham and Yishmael his son. [EN-AID]</div>
+<pre>PHRASE (binary 7w) בְּ/עֶ֨צֶם֙ הַ/יּ֣וֹם הַ/זֶּ֔ה נִמּ֖וֹל אַבְרָה…
+├── PHRASE (binary 5w) בְּ/עֶ֨צֶם֙ הַ/יּ֣וֹם הַ/זֶּ֔ה נִמּ֖וֹל אַבְרָה…
+│   ├── PHRASE (binary 3w) בְּ/עֶ֨צֶם֙ הַ/יּ֣וֹם הַ/זֶּ֔ה
+│   │   ├── [0] בְּ/עֶ֨צֶם֙ (pashta, rank=3)
+│   │   └── [1-2] GLUE הַ/יּ֣וֹם הַ/זֶּ֔ה (zaqef qatan, rank=2)
+│   └── PHRASE (binary 2w) נִמּ֖וֹל אַבְרָהָ֑ם
+│       ├── [3] נִמּ֖וֹל (tifcha, rank=2)
+│       └── [4] אַבְרָהָ֑ם (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 2w) וְ/יִשְׁמָעֵ֖אל בְּנֽ/וֹ
+    ├── [5] וְ/יִשְׁמָעֵ֖אל (tifcha, rank=2)
+    └── [6] בְּנֽ/וֹ (silluq (verse-end emperor), rank=1)
+</pre>
+<h3>Gen.17.27 · parser unique · 12 words</h3>
+<div class="meta"><span class="he">וכל־אנשי ביתו יליד בית ומקנת־כסף מאת בן־נכר נמלו אתו</span> · <i>ve-khal-anshe vet-o yelid bayit u-miqnat-kesef me-et ben-nekhar nimolu et-o</i> · And all the men of his house were circumcised with him. [EN-AID]</div>
+<pre>PHRASE (binary 12w) וְ/כָל אַנְשֵׁ֤י בֵית/וֹ֙ יְלִ֣יד בָּ֔יִת וּ/מִ…
+├── PHRASE (binary 10w) וְ/כָל אַנְשֵׁ֤י בֵית/וֹ֙ יְלִ֣יד בָּ֔יִת וּ/מִ…
+│   ├── PHRASE (binary 5w) וְ/כָל אַנְשֵׁ֤י בֵית/וֹ֙ יְלִ֣יד בָּ֔יִת
+│   │   ├── [0-2] GLUE וְ/כָל אַנְשֵׁ֤י בֵית/וֹ֙ (pashta, rank=3)
+│   │   └── [3-4] GLUE יְלִ֣יד בָּ֔יִת (zaqef qatan, rank=2)
+│   └── PHRASE (binary 5w) וּ/מִקְנַת כֶּ֖סֶף מֵ/אֵ֣ת בֶּן נֵכָ֑ר
+│       ├── [5-6] GLUE וּ/מִקְנַת כֶּ֖סֶף (tifcha, rank=2)
+│       └── [7-9] GLUE מֵ/אֵ֣ת בֶּן נֵכָ֑ר (etnachta (major mid-verse rest), rank=1)
+└── PHRASE (binary 2w) נִמֹּ֖לוּ אִתּֽ/וֹ
+    ├── [10] נִמֹּ֖לוּ (tifcha, rank=2)
+    └── [11] אִתּֽ/וֹ (silluq (verse-end emperor), rank=1)
+</pre>
+<h2>Machine verification — run_unit.py (computed live, not stored)</h2>
+<pre>unit: gen_33_shaddai_covenant_flesh — El Shaddai: the renamings, the law of the flesh, the laugh, the selfsame day (17:1-27) [frozen]
+
+final state: WORLD=[] (+0 presupposed) | REGISTRY={} | TESTS=0 PASS | LEDGER days=[] | FLAGS=[]
+
+=== S1 — El Shaddai and the walk-command: after STEP_Gn_17_1
+    אֲנִי־אֵל שַׁדַּי הִתְהַלֵּךְ לְפָנַי וֶהְיֵה תָמִים (ani-el shaddai hithalekh lefanai ve-heyeh tamim)
+    PASS  LET(hithalekh_ve_heyeh_tamim(avram, lefanai)) pushed and OPEN  (queue=[&#x27;hithalekh_ve_heyeh_tamim(avram, lefanai)&#x27;])
+    PASS  Facts ani-el-shaddai HOLD.  (1 facts)
+
+=== S2 — The charter and the first retirement: after STEP_Gn_17_5
+    וְהָיָה שִׁמְךָ אַבְרָהָם (ve-hayah shimkha avraham)
+    PASS  Facts ve-etnah HOLD  (7 facts)
+    PASS  Facts hamon-goyim HOLD  (7 facts)
+    PASS  Facts shimkha-avraham HOLD  (7 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S3 — The everlasting pair held as fact: after STEP_Gn_17_8
+    לִבְרִית עוֹלָם … לַאֲחֻזַּת עוֹלָם (li-vrit olam … la-achuzat olam)
+    PASS  Facts vrit-olam HOLD  (13 facts)
+    PASS  Facts achuzat-olam HOLD  (13 facts)
+    PASS  Facts melakhim-yetzeu HOLD.  (13 facts)
+
+=== S4 — The keep-command guarded: after STEP_Gn_17_9
+    וְאַתָּה אֶת־בְּרִיתִי תִשְׁמֹר (ve-atah et-briti tishmor)
+    PASS  LET?(tishmor(avraham, et_briti)) pushed and OPEN  (queue=[&#x27;hithalekh_ve_heyeh_tamim(avram, lefanai)&#x27;, &#x27;tishmor(avraham, et_briti)&#x27;])
+    PASS  LET?(tishmor(avraham, et_briti)) mood remains LET?.  (mood=LET?)
+
+=== S5 — The law installed: after STEP_Gn_17_14
+    וּבֶן־שְׁמֹנַת יָמִים יִמּוֹל … וְנִכְרְתָה הַנֶּפֶשׁ הַהִוא (u-ven-shemonat yamim yimol … ve-nikhrta ha-nefesh ha-hi)
+    PASS  Facts shemonat-yamim HOLD  (21 facts)
+    PASS  Facts nikhrta HOLD  (21 facts)
+    PASS  Facts vesarkhem HOLD.  (21 facts)
+
+=== S6 — The twin retirement and Sarah&#x27;s kings: after STEP_Gn_17_16
+    כִּי שָׂרָה שְׁמָהּ … מַלְכֵי עַמִּים מִמֶּנָּה יִהְיוּ (ki sarah shemah … malkhei amim mimenah yihyu)
+    PASS  Facts sarah-shemah HOLD  (25 facts)
+    PASS  Facts natati-mimenah HOLD  (25 facts)
+    PASS  Facts malkhei-amim HOLD  (25 facts)
+    PASS  no test, no name.  (tests=0 names=0)
+
+=== S7 — The laugh, the heart, the plea: after STEP_Gn_17_18
+    וַיִּצְחָק וַיֹּאמֶר בְּלִבּוֹ … לוּ יִשְׁמָעֵאל יִחְיֶה לְפָנֶיךָ (va-yitzchaq va-yomer be-libo … lu yishmael yichyeh lefanekha)
+    PASS  Facts meah-shanah HOLD  (28 facts)
+    PASS  Facts lu-yishmael HOLD.  (28 facts)
+
+=== S8 — The two sons filed: after STEP_Gn_17_21
+    וְקָרָאתָ אֶת־שְׁמוֹ יִצְחָק … וּלְיִשְׁמָעֵאל שְׁמַעְתִּיךָ (ve-qarata et-shemo yitzchaq … u-le-yishmael shematikha)
+    PASS  Facts qarata-yitzchaq HOLD  (36 facts)
+    PASS  Facts shematikha HOLD  (36 facts)
+    PASS  Facts nesiim HOLD  (36 facts)
+    PASS  Facts la-moed HOLD.  (36 facts)
+
+=== S9 — The selfsame day: after STEP_Gn_17_23_27
+    בְּעֶצֶם הַיּוֹם הַזֶּה נִמּוֹל אַבְרָהָם וְיִשְׁמָעֵאל בְּנוֹ (be-etzem ha-yom ha-zeh nimol avraham ve-yishmael beno)
+    PASS  LET(hithalekh_ve_heyeh_tamim(avram, lefanai)) pushed and OPEN  (queue=[&#x27;hithalekh_ve_heyeh_tamim(avram, lefanai)&#x27;, &#x27;tishmor(avraham, et_briti)&#x27;])
+    PASS  LET?(tishmor(avraham, et_briti)) pushed and OPEN  (queue=[&#x27;hithalekh_ve_heyeh_tamim(avram, lefanai)&#x27;, &#x27;tishmor(avraham, et_briti)&#x27;])
+    PASS  LET?(tishmor(avraham, et_briti)) mood remains LET?  (mood=LET?)
+    PASS  Facts be-etzem HOLD  (39 facts)
+    PASS  Facts ka-asher-diber HOLD  (39 facts)
+    PASS  no test, no name  (tests=0 names=0)
+    PASS  LEDGER stays EMPTY (open transaction).  (ledger_days=[])
+
+=== S10_negative — Negative: the LET? contract guard
+    תִשְׁמֹר (tishmor)
+    PASS  imperfect-in-command parsed as LET? (question mark kept)  (mood=LET?)
+    PASS  auto-upgrade REFUSED  (TIR-028: LET? never auto-upgrades to LET — a per-unit judgme...)
+    PASS  upgrade WITH citation allowed  (cite=per-unit judgment (owner), TIR-028 resolution)
+
+=== S11_negative — Negative: flags never block
+    PASS  commit proceeded (not blocked)  (LEDGER=[99])
+    PASS  pattern deviation FLAGGED  (flags=[&#x27;commit_without_test&#x27;])
+
+ALL SCENARIOS GREEN
+</pre>
+<h2>Python rendering — the unit as a program</h2>
+<p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_33_shaddai_covenant_flesh.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
+<pre class='pyblock'>#!/usr/bin/env python3
+# =============================================================================
+# gen_33_shaddai_covenant_flesh — 17:1-27
+# PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
+# The YAML (logic/units/gen_33_shaddai_covenant_flesh.yaml) is CANONICAL
+# (Pre-Code); this file is a derived, runnable rendering. Do not edit —
+# regenerate. The assertion block at the bottom is baked from the Stage D
+# interpreter&#x27;s actual final state: running this file re-proves the unit.
+# Experimental model — not binding religious law.
+# =============================================================================
+&quot;&quot;&quot;El Shaddai: the renamings, the law of the flesh, the laugh, the selfsame day (17:1-27)&quot;&quot;&quot;
+from machine import Machine
+
+m = Machine(&quot;gen_33_shaddai_covenant_flesh&quot;)
+
+# -------------------------- Gen.17.1 · EL_SHADDAI_AND_THE_WALK_COMMAND -----
+# וַיְהִי אַבְרָם בֶּן־תִּשְׁעִים שָׁנָה וְתֵשַׁע שָׁנִים וַיֵּרָא יְהוָה
+# אֶל־אַבְרָם וַיֹּאמֶר אֵלָיו אֲנִי־אֵל שַׁדַּי הִתְהַלֵּךְ לְפָנַי וֶהְיֵה
+# תָמִים
+# &quot;And when Abram was ninety years old and nine, the LORD appeared to Abram,
+# and said unto him: &#x27;I am God Almighty; walk before Me, and be thou
+# wholehearted.&quot;
+m.step(&quot;Gen.17.1&quot;)
+# ‹וַיֵּרָא יְהוָה אֶל־אַבְרָם› (“and-see YHWH to Abram”) — event: appear —
+# agent the-LORD
+m.event(&quot;appear&quot;, agent=&quot;YHWH&quot;)
+# ‹אֲנִי־אֵל שַׁדַּי› (“strength Almighty”) — fact holds: ani-to-shaddai
+m.fact(&quot;ani_el_shaddai&quot;)
+# ‹הִתְהַלֵּךְ לְפָנַי וֶהְיֵה תָמִים› (“walk/go to-face-me/my and-be
+# entire”) — the-LORD speaks a demand — LET: walk/go-and-heyeh-entire(Abram,
+# before-Me)
+m.declare(&quot;YHWH&quot;, &quot;LET&quot;,
+          &quot;hithalekh_ve_heyeh_tamim(avram, lefanai)&quot;)
+
+# -------------------------- Gen.17.2 · THE_COHORTATIVE_COVENANT ------------
+# וְאֶתְּנָה בְרִיתִי בֵּינִי וּבֵינֶךָ וְאַרְבֶּה אוֹתְךָ בִּמְאֹד מְאֹד
+# &quot;And I will make My covenant between Me and thee, and will multiply thee
+# exceedingly.&#x27;&quot;
+m.step(&quot;Gen.17.2&quot;)
+# ‹וְאֶתְּנָה בְרִיתִי בֵּינִי וּבֵינֶךָ וְאַרְבֶּה אוֹתְךָ בִּמְאֹד מְאֹד›
+# (“and-set covenant-me/my between-me/my and-between-you/your and-multiply
+# obj-marker-you/your in-very very”) — fact holds: and-etnah-vriti-beini-
+# and-veinekha; and-I-will-multiply-otkha-bi-very-very
+m.fact(&quot;ve_etnah_vriti_beini_u_veinekha&quot;,
+       &quot;ve_arbeh_otkha_bi_meod_meod&quot;)
+
+# -------------------------- Gen.17.3 · THE_FIRST_FALL_AND_THE_SPEAK_FRAME --
+# וַיִּפֹּל אַבְרָם עַל־פָּנָיו וַיְדַבֵּר אִתּוֹ אֱלֹהִים לֵאמֹר
+# &quot;And Abram fell on his face; and God talked with him, saying:&quot;
+m.step(&quot;Gen.17.3&quot;)
+# ‹וַיִּפֹּל אַבְרָם עַל־פָּנָיו› (“and-fall Abram over face-him/its”) —
+# event: fall — agent Abram
+m.event(&quot;fall&quot;, agent=&quot;avram&quot;)
+# ‹וַיְדַבֵּר אִתּוֹ אֱלֹהִים לֵאמֹר› (“and-speak with-him/its God to-say”)
+# — event: speak — agent God
+m.event(&quot;speak&quot;, agent=&quot;elohim&quot;)
+
+# -------------------------- Gen.17.4 · THE_FATHER_OF_MULTITUDE_CHARTER -----
+# אֲנִי הִנֵּה בְרִיתִי אִתָּךְ וְהָיִיתָ לְאַב הֲמוֹן גּוֹיִם
+# &quot;&#x27;As for Me, behold, My covenant is with thee, and thou shalt be the
+# father of a multitude of nations.&quot;
+m.step(&quot;Gen.17.4&quot;)
+# ‹אֲנִי הִנֵּה בְרִיתִי אִתָּךְ וְהָיִיתָ לְאַב הֲמוֹן גּוֹיִם› (“behold
+# covenant-me/my with-you/your and-be to-father noise nation”) — fact holds:
+# ani-hineh-vriti-with-you; and-be-to-father-noise-nation
+m.fact(&quot;ani_hineh_vriti_itakh&quot;,
+       &quot;ve_hayita_le_av_hamon_goyim&quot;)
+
+# -------------------------- Gen.17.5 · AVRAM_RETIRED_AVRAHAM_DECREED -------
+# וְלֹא־יִקָּרֵא עוֹד אֶת־שִׁמְךָ אַבְרָם וְהָיָה שִׁמְךָ אַבְרָהָם כִּי
+# אַב־הֲמוֹן גּוֹיִם נְתַתִּיךָ
+# &quot;Neither shall thy name any more be called Abram, but thy name shall be
+# Abraham; for the father of a multitude of nations have I made thee.&quot;
+m.step(&quot;Gen.17.5&quot;)
+# ‹וְלֹא־יִקָּרֵא עוֹד אֶת־שִׁמְךָ אַבְרָם וְהָיָה שִׁמְךָ אַבְרָהָם› (“and-
+# not call still/again obj-marker name-you/your Abram and-be name-you/your
+# Abraham”) — fact holds: not-call-still/again-shimkha-Abram; and-was-
+# shimkha-Abraham
+m.fact(&quot;lo_yiqare_od_shimkha_avram&quot;,
+       &quot;ve_hayah_shimkha_avraham&quot;)
+
+# -------------------------- Gen.17.6 · FRUITFULNESS_AND_KINGS --------------
+# וְהִפְרֵתִי אֹתְךָ בִּמְאֹד מְאֹד וּנְתַתִּיךָ לְגוֹיִם וּמְלָכִים מִמְּךָ
+# יֵצֵאוּ
+# &quot;And I will make thee exceeding fruitful, and I will make nations of thee,
+# and kings shall come out of thee.&quot;
+m.step(&quot;Gen.17.6&quot;)
+# ‹וְהִפְרֵתִי אֹתְךָ בִּמְאֹד מְאֹד וּמְלָכִים מִמְּךָ יֵצֵאוּ› (“and-be-
+# fruitful obj-marker-you/your in-very very and-king from-you/your bring-
+# forth”) — fact holds: and-be-fruitful-otkha-bi-very-very; and-king-mimkha-
+# bring-forth
+m.fact(&quot;ve_hifreti_otkha_bi_meod_meod&quot;,
+       &quot;u_melakhim_mimkha_yetzeu&quot;)
+
+# -------------------------- Gen.17.7 · THE_EVERLASTING_COVENANT ------------
+# וַהֲקִמֹתִי אֶת־בְּרִיתִי בֵּינִי וּבֵינֶךָ וּבֵין זַרְעֲךָ אַחֲרֶיךָ
+# לְדֹרֹתָם לִבְרִית עוֹלָם לִהְיוֹת לְךָ לֵאלֹהִים וּלְזַרְעֲךָ אַחֲרֶיךָ
+# &quot;And I will establish My covenant between Me and thee and thy seed after
+# thee throughout their generations for an everlasting covenant, to be a God
+# unto thee and to thy seed after thee.&quot;
+m.step(&quot;Gen.17.7&quot;)
+# ‹וַהֲקִמֹתִי אֶת־בְּרִיתִי … לִבְרִית עוֹלָם לִהְיוֹת לְךָ לֵאלֹהִים›
+# (“and-arise obj-marker covenant-me/my … to-covenant forever to-be to-
+# you/your to-God”) — fact holds: and-arise-obj-marker-My-covenant-to-me-
+# vrit-forever; to-me-being-to-you-to-lohim
+m.fact(&quot;va_haqimoti_et_briti_li_vrit_olam&quot;,
+       &quot;li_heyot_lekha_le_lohim&quot;)
+
+# -------------------------- Gen.17.8 · THE_EVERLASTING_POSSESSION ----------
+# וְנָתַתִּי לְךָ וּלְזַרְעֲךָ אַחֲרֶיךָ אֵת אֶרֶץ מְגֻרֶיךָ אֵת כָּל־אֶרֶץ
+# כְּנַעַן לַאֲחֻזַּת עוֹלָם וְהָיִיתִי לָהֶם לֵאלֹהִים
+# &quot;And I will give unto thee, and to thy seed after thee, the land of thy
+# sojournings, all the land of Canaan, for an everlasting possession; and I
+# will be their God.&#x27;&quot;
+m.step(&quot;Gen.17.8&quot;)
+# ‹וְנָתַתִּי … אֵת אֶרֶץ מְגֻרֶיךָ … לַאֲחֻזַּת עוֹלָם וְהָיִיתִי לָהֶם
+# לֵאלֹהִים› (“and-set … obj-marker earth sojourning-you/your … to-
+# something-seized forever and-be to-them/their to-God”) — fact holds: and-
+# set-obj-marker-earth-megurekha-to-something-seized-forever; and-be-to-
+# them-to-lohim
+m.fact(&quot;ve_natati_et_eretz_megurekha_la_achuzat_olam&quot;,
+       &quot;ve_hayiti_lahem_le_lohim&quot;)
+
+# -------------------------- Gen.17.9 · THE_GUARDED_KEEP_COMMAND ------------
+# וַיֹּאמֶר אֱלֹהִים אֶל־אַבְרָהָם וְאַתָּה אֶת־בְּרִיתִי תִשְׁמֹר אַתָּה
+# וְזַרְעֲךָ אַחֲרֶיךָ לְדֹרֹתָם
+# &quot;And God said unto Abraham: &#x27;And as for thee, thou shalt keep My covenant,
+# thou, and thy seed after thee throughout their generations.&quot;
+m.step(&quot;Gen.17.9&quot;)
+# ‹וַיֹּאמֶר אֱלֹהִים אֶל־אַבְרָהָם› (“and-say God to Abraham”) — event: say
+# — agent God
+m.event(&quot;say&quot;, agent=&quot;elohim&quot;)
+# ‹וְאַתָּה אֶת־בְּרִיתִי תִשְׁמֹר› (“and-you obj-marker covenant-me/my
+# keep/guard”) — God speaks a demand — LET?: keep/guard(Abraham, obj-marker-
+# My-covenant)
+m.declare(&quot;elohim&quot;, &quot;LET?&quot;,
+          &quot;tishmor(avraham, et_briti)&quot;)
+
+# -------------------------- Gen.17.10 · THE_LAW_ANNOUNCED ------------------
+# זֹאת בְּרִיתִי אֲשֶׁר תִּשְׁמְרוּ בֵּינִי וּבֵינֵיכֶם וּבֵין זַרְעֲךָ
+# אַחֲרֶיךָ הִמּוֹל לָכֶם כָּל־זָכָר
+# &quot;This is My covenant, which ye shall keep, between Me and you and thy seed
+# after thee: every male among you shall be circumcised.&quot;
+m.step(&quot;Gen.17.10&quot;)
+# ‹זֹאת בְּרִיתִי אֲשֶׁר תִּשְׁמְרוּ … הִמּוֹל לָכֶם כָּל־זָכָר› (“this
+# covenant-me/my which keep/guard … circumcise to-you/your(pl) all male”) —
+# fact holds: this-My-covenant-which-tishmeru; circumcise-lakhem-all-male
+m.fact(&quot;zot_briti_asher_tishmeru&quot;,
+       &quot;himol_lakhem_kol_zakhar&quot;)
+
+# -------------------------- Gen.17.11 · THE_SIGN_IN_THE_FLESH --------------
+# וּנְמַלְתֶּם אֵת בְּשַׂר עָרְלַתְכֶם וְהָיָה לְאוֹת בְּרִית בֵּינִי
+# וּבֵינֵיכֶם
+# &quot;And ye shall be circumcised in the flesh of your foreskin; and it shall
+# be a token of a covenant betwixt Me and you.&quot;
+m.step(&quot;Gen.17.11&quot;)
+# ‹וּנְמַלְתֶּם אֵת בְּשַׂר עָרְלַתְכֶם וְהָיָה לְאוֹת בְּרִית› (“and-be-
+# circumcised obj-marker flesh foreskin-you/your(pl) and-be to-signs
+# covenant”) — fact holds: and-be-circumcised-obj-marker-flesh-arlatkhem;
+# and-was-to-signs-brit
+m.fact(&quot;u_nemaltem_et_besar_arlatkhem&quot;,
+       &quot;ve_hayah_le_ot_brit&quot;)
+
+# -------------------------- Gen.17.12 · THE_EIGHTH_DAY_HANDLER -------------
+# וּבֶן־שְׁמֹנַת יָמִים יִמּוֹל לָכֶם כָּל־זָכָר לְדֹרֹתֵיכֶם יְלִיד בָּיִת
+# וּמִקְנַת־כֶּסֶף מִכֹּל בֶּן־נֵכָר אֲשֶׁר לֹא מִזַּרְעֲךָ הוּא
+# &quot;And he that is eight days old shall be circumcised among you, every male
+# throughout your generations, he that is born in the house, or bought with
+# money of any foreigner, that is not of thy seed.&quot;
+m.step(&quot;Gen.17.12&quot;)
+# ‹וּבֶן־שְׁמֹנַת יָמִים יִמּוֹל לָכֶם כָּל־זָכָר› (“and-son number day
+# circumcise to-you/your(pl) all male”) — standing handler — if son-number-
+# day ∧ all-male-to-doroteikhem then circumcise ∧ born-house-and-buying-
+# silver-bi-khlal
+m.handler(&quot;ben_shemonat_yamim ∧ kol_zakhar_le_doroteikhem&quot;,
+          &quot;yimol ∧ yelid_bayit_u_miqnat_kesef_bi_khlal&quot;)
+
+# -------------------------- Gen.17.13 · THE_DOUBLED_MUST_AND_THE_FLESH_COVENANT -
+# הִמּוֹל יִמּוֹל יְלִיד בֵּיתְךָ וּמִקְנַת כַּסְפֶּךָ וְהָיְתָה בְרִיתִי
+# בִּבְשַׂרְכֶם לִבְרִית עוֹלָם
+# &quot;He that is born in thy house, and he that is bought with thy money, must
+# needs be circumcised; and My covenant shall be in your flesh for an
+# everlasting covenant.&quot;
+m.step(&quot;Gen.17.13&quot;)
+# ‹הִמּוֹל יִמּוֹל … וְהָיְתָה בְרִיתִי בִּבְשַׂרְכֶם לִבְרִית עוֹלָם›
+# (“circumcise circumcise … and-be covenant-me/my in-flesh-you/your(pl) to-
+# covenant forever”) — fact holds: circumcise-circumcise-born-beitkha;
+# vriti-bi-vesarkhem-to-me-vrit-forever
+m.fact(&quot;himol_yimol_yelid_beitkha&quot;,
+       &quot;vriti_bi_vesarkhem_li_vrit_olam&quot;)
+
+# -------------------------- Gen.17.14 · THE_KARET_HANDLER ------------------
+# וְעָרֵל זָכָר אֲשֶׁר לֹא־יִמּוֹל אֶת־בְּשַׂר עָרְלָתוֹ וְנִכְרְתָה
+# הַנֶּפֶשׁ הַהִוא מֵעַמֶּיהָ אֶת־בְּרִיתִי הֵפַר
+# &quot;And the uncircumcised male who is not circumcised in the flesh of his
+# foreskin, that soul shall be cut off from his people; he hath broken My
+# covenant.&#x27;&quot;
+m.step(&quot;Gen.17.14&quot;)
+# ‹וְעָרֵל זָכָר אֲשֶׁר לֹא־יִמּוֹל … וְנִכְרְתָה הַנֶּפֶשׁ הַהִוא
+# מֵעַמֶּיהָ› (“and-uncircumcised male which not circumcise … and-cut the-
+# living-being that from-people-her/its”) — standing handler — if
+# uncircumcised-male-which-not-circumcise then and-cut-the-living-being-the-
+# hi-from-ameha ∧ obj-marker-My-covenant-break-up
+m.handler(&quot;arel_zakhar_asher_lo_yimol&quot;,
+          &quot;ve_nikhrta_ha_nefesh_ha_hi_me_ameha ∧ et_briti_hefar&quot;)
+
+# -------------------------- Gen.17.15 · SARAY_RETIRED_SARAH_DECREED --------
+# וַיֹּאמֶר אֱלֹהִים אֶל־אַבְרָהָם שָׂרַי אִשְׁתְּךָ לֹא־תִקְרָא אֶת־שְׁמָהּ
+# שָׂרָי כִּי שָׂרָה שְׁמָהּ
+# &quot;And God said unto Abraham: &#x27;As for Sarai thy wife, thou shalt not call
+# her name Sarai, but Sarah shall her name be.&quot;
+m.step(&quot;Gen.17.15&quot;)
+# ‹וַיֹּאמֶר אֱלֹהִים אֶל־אַבְרָהָם› (“and-say God to Abraham”) — event: say
+# — agent God
+m.event(&quot;say&quot;, agent=&quot;elohim&quot;)
+# ‹לֹא־תִקְרָא אֶת־שְׁמָהּ שָׂרָי כִּי שָׂרָה שְׁמָהּ› (“not call obj-marker
+# name-her/its Sarai that Sarah name-her/its”) — fact holds: not-call-obj-
+# marker-shemah-Sarai; that-sarah-shemah
+m.fact(&quot;lo_tiqra_et_shemah_saray&quot;,
+       &quot;ki_sarah_shemah&quot;)
+
+# -------------------------- Gen.17.16 · SARAHS_BLESSING_AND_HER_KINGS ------
+# וּבֵרַכְתִּי אֹתָהּ וְגַם נָתַתִּי מִמֶּנָּה לְךָ בֵּן וּבֵרַכְתִּיהָ
+# וְהָיְתָה לְגוֹיִם מַלְכֵי עַמִּים מִמֶּנָּה יִהְיוּ
+# &quot;And I will bless her, and moreover I will give thee a son of her; yea, I
+# will bless her, and she shall be a mother of nations; kings of peoples
+# shall be of her.&#x27;&quot;
+m.step(&quot;Gen.17.16&quot;)
+# ‹וּבֵרַכְתִּי אֹתָהּ וְגַם נָתַתִּי מִמֶּנָּה לְךָ בֵּן … מַלְכֵי עַמִּים
+# מִמֶּנָּה יִהְיוּ› (“and-bless obj-marker-her/its and-also set from-
+# her/its to-you/your son … king people from-her/its be”) — fact holds: and-
+# bless-her-and-set-mimenah-to-you-son; malkhei-people-mimenah-be
+m.fact(&quot;u_verakhti_otah_ve_natati_mimenah_lekha_ben&quot;,
+       &quot;malkhei_amim_mimenah_yihyu&quot;)
+
+# -------------------------- Gen.17.17 · THE_LAUGH_IN_THE_HEART -------------
+# וַיִּפֹּל אַבְרָהָם עַל־פָּנָיו וַיִּצְחָק וַיֹּאמֶר בְּלִבּוֹ הַלְּבֶן
+# מֵאָה־שָׁנָה יִוָּלֵד וְאִם־שָׂרָה הֲבַת־תִּשְׁעִים שָׁנָה תֵּלֵד
+# &quot;Then Abraham fell upon his face, and laughed, and said in his heart:
+# &#x27;Shall a child be born unto him that is a hundred years old? and shall
+# Sarah, that is ninety years old, bear?&#x27;&quot;
+m.step(&quot;Gen.17.17&quot;)
+# ‹וַיִּפֹּל אַבְרָהָם עַל־פָּנָיו› (“and-fall Abraham over face-him/its”) —
+# event: fall — agent Abraham
+m.event(&quot;fall&quot;, agent=&quot;avraham&quot;)
+# ‹וַיִּצְחָק› (“and-laugh-outright”) — event: laugh — agent Abraham
+m.event(&quot;laugh&quot;, agent=&quot;avraham&quot;)
+# ‹וַיֹּאמֶר בְּלִבּוֹ› (“and-say in-heart-him/its”) — event: say — agent
+# Abraham
+m.event(&quot;say&quot;, agent=&quot;avraham&quot;)
+# ‹הַלְּבֶן מֵאָה־שָׁנָה יִוָּלֵד וְאִם־שָׂרָה הֲבַת־תִּשְׁעִים שָׁנָה
+# תֵּלֵד› (“the-to-son hundred years bear-young and-if Sarah the-daughter
+# ninety years bear-young”) — fact holds: the-to-between-hundred-year-bear-
+# young; the-daughter-ninety-year-bear-young
+m.fact(&quot;ha_le_ven_meah_shanah_yivaled&quot;,
+       &quot;ha_vat_tishim_shanah_teled&quot;)
+
+# -------------------------- Gen.17.18 · THE_LU_PLEA ------------------------
+# וַיֹּאמֶר אַבְרָהָם אֶל־הָאֱלֹהִים לוּ יִשְׁמָעֵאל יִחְיֶה לְפָנֶיךָ
+# &quot;And Abraham said unto God: &#x27;Oh that Ishmael might live before Thee!&#x27;&quot;
+m.step(&quot;Gen.17.18&quot;)
+# ‹וַיֹּאמֶר אַבְרָהָם אֶל־הָאֱלֹהִים› (“and-say Abraham to the-God”) —
+# event: say — agent Abraham
+m.event(&quot;say&quot;, agent=&quot;avraham&quot;)
+# ‹לוּ יִשְׁמָעֵאל יִחְיֶה לְפָנֶיךָ› (“conditional-particle Ishmael live
+# to-face-you/your”) — fact holds: conditional-particle-Ishmael-yichyeh-
+# lefanekha
+m.fact(&quot;lu_yishmael_yichyeh_lefanekha&quot;)
+
+# -------------------------- Gen.17.19 · YITZCHAQ_NAMED_BEFORE_BIRTH --------
+# וַיֹּאמֶר אֱלֹהִים אֲבָל שָׂרָה אִשְׁתְּךָ יֹלֶדֶת לְךָ בֵּן וְקָרָאתָ
+# אֶת־שְׁמוֹ יִצְחָק וַהֲקִמֹתִי אֶת־בְּרִיתִי אִתּוֹ לִבְרִית עוֹלָם
+# לְזַרְעוֹ אַחֲרָיו
+# &quot;And God said: &#x27;Nay, but Sarah thy wife shall bear thee a son; and thou
+# shalt call his name Isaac; and I will establish My covenant with him for
+# an everlasting covenant for his seed after him.&quot;
+m.step(&quot;Gen.17.19&quot;)
+# ‹וַיֹּאמֶר אֱלֹהִים אֲבָל› (“and-say God nay”) — event: say — agent God
+m.event(&quot;say&quot;, agent=&quot;elohim&quot;)
+# ‹שָׂרָה … יֹלֶדֶת לְךָ בֵּן וְקָרָאתָ אֶת־שְׁמוֹ יִצְחָק וַהֲקִמֹתִי
+# אֶת־בְּרִיתִי אִתּוֹ› (“Sarah … bear-young to-you/your son and-call obj-
+# marker name-him/its Isaac and-arise obj-marker covenant-me/my with-
+# him/its”) — fact holds: sarah-bear-young-to-you-son; and-call-obj-marker-
+# shemo-laugh-outright; and-arise-obj-marker-My-covenant-with-him-to-me-
+# vrit-forever
+m.fact(&quot;sarah_yoledet_lekha_ben&quot;,
+       &quot;ve_qarata_et_shemo_yitzchaq&quot;,
+       &quot;va_haqimoti_et_briti_ito_li_vrit_olam&quot;)
+
+# -------------------------- Gen.17.20 · YISHMAEL_HEARD ---------------------
+# וּלְיִשְׁמָעֵאל שְׁמַעְתִּיךָ הִנֵּה בֵּרַכְתִּי אֹתוֹ וְהִפְרֵיתִי אֹתוֹ
+# וְהִרְבֵּיתִי אֹתוֹ בִּמְאֹד מְאֹד שְׁנֵים־עָשָׂר נְשִׂיאִם יוֹלִיד
+# וּנְתַתִּיו לְגוֹי גָּדוֹל
+# &quot;And as for Ishmael, I have heard thee; behold, I have blessed him, and
+# will make him fruitful, and will multiply him exceedingly; twelve princes
+# shall he beget, and I will make him a great nation.&quot;
+m.step(&quot;Gen.17.20&quot;)
+# ‹וּלְיִשְׁמָעֵאל שְׁמַעְתִּיךָ הִנֵּה בֵּרַכְתִּי אֹתוֹ … שְׁנֵים־עָשָׂר
+# נְשִׂיאִם יוֹלִיד› (“and-to-Ishmael hear-you/your behold bless obj-marker-
+# him/its … two -teen prince bear-young”) — fact holds: and-to-Ishmael-
+# shematikha; hineh-bless-it-bi-very-very; shneim--teen-prince-bear-young
+m.fact(&quot;u_le_yishmael_shematikha&quot;,
+       &quot;hineh_berakhti_oto_bi_meod_meod&quot;,
+       &quot;shneim_asar_nesiim_yolid&quot;)
+
+# -------------------------- Gen.17.21 · THE_COVENANT_GETS_A_CALENDAR -------
+# וְאֶת־בְּרִיתִי אָקִים אֶת־יִצְחָק אֲשֶׁר תֵּלֵד לְךָ שָׂרָה לַמּוֹעֵד
+# הַזֶּה בַּשָּׁנָה הָאַחֶרֶת
+# &quot;But My covenant will I establish with Isaac, whom Sarah shall bear unto
+# thee at this set time in the next year.&#x27;&quot;
+m.step(&quot;Gen.17.21&quot;)
+# ‹וְאֶת־בְּרִיתִי אָקִים אֶת־יִצְחָק … לַמּוֹעֵד הַזֶּה בַּשָּׁנָה
+# הָאַחֶרֶת› (“and-obj-marker covenant-me/my arise with Isaac … to-seasons
+# the-this in-years the-hinder”) — fact holds: and-obj-marker-My-covenant-
+# arise-obj-marker-laugh-outright; to-seasons-the-this-in-the-year-the-
+# hinder
+m.fact(&quot;ve_et_briti_aqim_et_yitzchaq&quot;,
+       &quot;la_moed_ha_zeh_ba_shanah_ha_acheret&quot;)
+
+# -------------------------- Gen.17.22 · THE_FINISH_AND_THE_ASCENT ----------
+# וַיְכַל לְדַבֵּר אִתּוֹ וַיַּעַל אֱלֹהִים מֵעַל אַבְרָהָם
+# &quot;And He left off talking with him, and God went up from Abraham.&quot;
+m.step(&quot;Gen.17.22&quot;)
+# ‹וַיְכַל לְדַבֵּר אִתּוֹ› (“and-be-complete to-speak with-him/its”) —
+# event: finish-speaking — agent God
+m.event(&quot;finish_speaking&quot;, agent=&quot;elohim&quot;)
+# ‹וַיַּעַל אֱלֹהִים מֵעַל אַבְרָהָם› (“and-go-up God from-over Abraham”) —
+# event: ascend — agent God
+m.event(&quot;ascend&quot;, agent=&quot;elohim&quot;)
+
+# -------------------------- Gen.17.23 · THE_SELFSAME_DAY_COMPLIANCE --------
+# וַיִּקַּח אַבְרָהָם אֶת־יִשְׁמָעֵאל בְּנוֹ וְאֵת כָּל־יְלִידֵי בֵיתוֹ …
+# וַיָּמָל אֶת־בְּשַׂר עָרְלָתָם בְּעֶצֶם הַיּוֹם הַזֶּה כַּאֲשֶׁר דִּבֶּר
+# אִתּוֹ אֱלֹהִים … בְּעֶצֶם הַיּוֹם הַזֶּה נִמּוֹל אַבְרָהָם וְיִשְׁמָעֵאל
+# בְּנוֹ … נִמֹּלוּ אִתּוֹ
+# &quot;[EN-AID/JPS 17:23-27] And Abraham took Ishmael his son, and all that were
+# born in his house, and all that were bought with his money... and
+# circumcised the flesh of their foreskin in the selfsame day, as God had
+# said unto him. And Abraham was ninety years old and nine... And Ishmael
+# his son was thirteen years old... In the selfsame day was Abraham
+# circumcised, and Ishmael his son. And all the men of his house... were
+# circumcised with him.&quot;
+m.step(&quot;Gen.17.23&quot;)
+# ‹וַיִּקַּח אַבְרָהָם אֶת־יִשְׁמָעֵאל בְּנוֹ› (“and-take Abraham obj-marker
+# Ishmael son-him/its”) — event: take — agent Abraham; theme Ishmael-and-
+# all-men-of-beito
+m.event(&quot;take&quot;, agent=&quot;avraham&quot;, themes=[&quot;yishmael_ve_khol_anshei_beito&quot;])
+# ‹וַיָּמָל אֶת־בְּשַׂר עָרְלָתָם … נִמּוֹל אַבְרָהָם וְיִשְׁמָעֵאל בְּנוֹ …
+# נִמֹּלוּ אִתּוֹ› (“and-circumcise obj-marker flesh foreskin-them/their …
+# circumcise Abraham and-Ishmael son-him/its … circumcise with-him/its”) —
+# event: circumcise — agent Abraham; theme all-male-in-men-of-beito
+m.event(&quot;circumcise&quot;, agent=&quot;avraham&quot;, themes=[&quot;kol_zakhar_be_anshei_beito&quot;])
+# ‹בְּעֶצֶם הַיּוֹם הַזֶּה … כַּאֲשֶׁר דִּבֶּר אִתּוֹ אֱלֹהִים› (“in-bone
+# the-day the-this … like-as/which speak with-him/its God”) — fact holds:
+# in-bone-the-day-the-this; like-which-speak-with-him-God;
+# Abraham-99-Ishmael-13-in-himolam
+m.fact(&quot;be_etzem_ha_yom_ha_zeh&quot;,
+       &quot;ka_asher_diber_ito_elohim&quot;,
+       &quot;avraham_99_yishmael_13_be_himolam&quot;)
+
+# -------------------------- machine truth (baked from the Stage D run) -------
+if __name__ == &quot;__main__&quot;:
+    m.report()
+    assert m.created_set() == set()
+    assert m.presupposed_set() == set()
+    assert m.REGISTRY[&quot;names&quot;] == {}
+    assert m.REGISTRY[&quot;writes&quot;] == 0
+    assert m.tests_list() == []
+    assert m.open_demands() == [&#x27;hithalekh_ve_heyeh_tamim(avram, lefanai)&#x27;, &#x27;tishmor(avraham, et_briti)&#x27;]
+    assert len(m.SPECS[&quot;log&quot;]) == 2
+    assert sorted(m.LEDGER) == []
+    assert m.flag_counts() == {}
+    assert sorted(m.WORLD[&quot;facts&quot;]) == sorted([&#x27;ani_el_shaddai&#x27;, &#x27;ve_etnah_vriti_beini_u_veinekha&#x27;, &#x27;ve_arbeh_otkha_bi_meod_meod&#x27;, &#x27;ani_hineh_vriti_itakh&#x27;, &#x27;ve_hayita_le_av_hamon_goyim&#x27;, &#x27;lo_yiqare_od_shimkha_avram&#x27;, &#x27;ve_hayah_shimkha_avraham&#x27;, &#x27;ve_hifreti_otkha_bi_meod_meod&#x27;, &#x27;u_melakhim_mimkha_yetzeu&#x27;, &#x27;va_haqimoti_et_briti_li_vrit_olam&#x27;, &#x27;li_heyot_lekha_le_lohim&#x27;, &#x27;ve_natati_et_eretz_megurekha_la_achuzat_olam&#x27;, &#x27;ve_hayiti_lahem_le_lohim&#x27;, &#x27;zot_briti_asher_tishmeru&#x27;, &#x27;himol_lakhem_kol_zakhar&#x27;, &#x27;u_nemaltem_et_besar_arlatkhem&#x27;, &#x27;ve_hayah_le_ot_brit&#x27;, &#x27;handler: IF(ben_shemonat_yamim ∧ kol_zakhar_le_doroteikhem) THEN(yimol ∧ yelid_bayit_u_miqnat_kesef_bi_khlal)&#x27;, &#x27;himol_yimol_yelid_beitkha&#x27;, &#x27;vriti_bi_vesarkhem_li_vrit_olam&#x27;, &#x27;handler: IF(arel_zakhar_asher_lo_yimol) THEN(ve_nikhrta_ha_nefesh_ha_hi_me_ameha ∧ et_briti_hefar)&#x27;, &#x27;lo_tiqra_et_shemah_saray&#x27;, &#x27;ki_sarah_shemah&#x27;, &#x27;u_verakhti_otah_ve_natati_mimenah_lekha_ben&#x27;, &#x27;malkhei_amim_mimenah_yihyu&#x27;, &#x27;ha_le_ven_meah_shanah_yivaled&#x27;, &#x27;ha_vat_tishim_shanah_teled&#x27;, &#x27;lu_yishmael_yichyeh_lefanekha&#x27;, &#x27;sarah_yoledet_lekha_ben&#x27;, &#x27;ve_qarata_et_shemo_yitzchaq&#x27;, &#x27;va_haqimoti_et_briti_ito_li_vrit_olam&#x27;, &#x27;u_le_yishmael_shematikha&#x27;, &#x27;hineh_berakhti_oto_bi_meod_meod&#x27;, &#x27;shneim_asar_nesiim_yolid&#x27;, &#x27;ve_et_briti_aqim_et_yitzchaq&#x27;, &#x27;la_moed_ha_zeh_ba_shanah_ha_acheret&#x27;, &#x27;be_etzem_ha_yom_ha_zeh&#x27;, &#x27;ka_asher_diber_ito_elohim&#x27;, &#x27;avraham_99_yishmael_13_be_himolam&#x27;])
+    assert m.WORLD[&quot;invariants&quot;] == []
+    assert m.WORLD[&quot;partitions&quot;] == []
+    assert len(m.EVENTS) == 18
+    print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
+</pre><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
