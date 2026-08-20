@@ -337,6 +337,112 @@ experimental model &mdash; not binding religious law &middot;
 """
 
 
+# ---------------------------------------------------------------------------
+# THE SCROLL'S SITE DESIGN — settled in mockup review 2026-08-20 and applied
+# at export time as asserted patches, so the received pages in scroll/ stay
+# exactly as delivered and a future refresh cannot erase the design:
+#   · the button masthead on the scroll page and every unit page
+#   · the control bar restyled as a parchment left rail
+#   · the chip convention (a border means it goes somewhere; an i-mark
+#     means it explains) — frozen chips gold-bordered, oral counters flat
+#   · a back button under the masthead on unit pages
+# ---------------------------------------------------------------------------
+MAST_CSS = """<style>
+.mast{border-bottom:2px solid #6e5417;padding:0 22px;display:flex;
+align-items:center;gap:18px;height:54px;position:fixed;top:0;left:0;right:0;
+background:#faf7f0;z-index:60;font:14px Georgia,serif;box-sizing:border-box}
+.mast .brand{font-size:20px;color:#6e5417;font-weight:bold}
+.mast nav{display:flex;gap:10px;align-items:center}
+.mast nav.mid{position:absolute;left:50%;transform:translateX(-50%)}
+.mast nav.ext{margin-left:auto}
+.mast nav a{border:1px solid #b08a3e;border-radius:6px;padding:6px 15px;
+color:#6e5417;text-decoration:none;white-space:nowrap;line-height:1}
+.mast nav a:hover{background:#f3eee1}
+.mast nav a.on{background:#6e5417;color:#faf7f0;border-color:#6e5417;
+font-weight:bold}
+.mast nav.ext a{border:none;padding:6px 4px}
+.mast svg.ic{width:15px;height:15px;vertical-align:-2px;margin-right:5px}
+</style>"""
+
+SCROLL_RAIL_CSS = """<style>
+body{margin-top:54px}
+header{position:fixed !important;top:54px;left:0;bottom:0;width:210px;
+z-index:40}
+.bar{flex-direction:row;flex-wrap:wrap;align-items:stretch;gap:.3rem;
+height:100%;overflow-y:auto;max-width:none;padding:.7rem .7rem 2rem;
+align-content:flex-start;font-size:12.5px;background:#faf7f0;
+border-right:1px solid #e4dcc8}
+.bar .brand{width:100%;font-size:12.5px;line-height:1.3;
+margin-bottom:.25rem;color:#6e5417}
+.bar .brand small{color:#57503f}
+.bar select{width:100%;margin:0;font-size:12.5px;padding:.22rem .3rem}
+.bar button{font-size:12px;padding:.2rem .4rem}
+.bar button.nav{flex:1 1 40%;line-height:1.1;background:#f3eee1;
+border:1px solid #d8cfb8;color:#6e5417}
+.bar button.nav:hover{background:#e9e2cf;color:#6e5417}
+.bar button:not(.nav){width:100%}
+.bar a.nav{width:100%;text-align:center;flex:none;font-size:12.5px;
+padding:.3rem 0;color:#6e5417 !important;border:1px solid #b08a3e;
+border-radius:4px;text-decoration:none}
+.bar .search{width:100%;box-sizing:border-box;font-size:12.5px;
+padding:.25rem .4rem;background:#fff;border:1px solid #d8cfb8}
+.bar .loc{width:100%;text-align:center;font-size:12px;color:#57503f}
+.bar .loc b{color:#151009}
+main{margin-left:210px;max-width:none;padding:1rem 2rem 8rem}
+.results{left:6px;right:auto;width:198px}
+.badge.frozen{background:#faf7f0;color:#6e5417 !important;
+border:1px solid #b08a3e}
+.badge.frozen:hover{background:#6e5417;color:#faf7f0 !important}
+.badge.oral{background:none;border:none;color:#57503f}
+</style>"""
+
+UNIT_BACK = ('<div style="padding:12px 22px 0">'
+             '<button onclick="history.back()" style="border:1px solid '
+             '#b08a3e;border-radius:6px;padding:5px 14px;color:#6e5417;'
+             'background:none;font:14px Georgia,serif;cursor:pointer">'
+             '&#8592; back</button></div>')
+
+
+def masthead(prefix):
+    return (MAST_CSS + '<div class="mast"><span class="brand">TorahSim'
+            '</span><nav class="mid">'
+            '<a href="%s">Epic Disclosure</a>'
+            '<a class="on" href="%sscroll/">The Scroll</a>'
+            '<a href="%srun/">The Run</a></nav><nav class="ext">'
+            '<a href="https://github.com/Josephtorah/TorahSim" '
+            'target="_blank" rel="noopener">%s github</a>'
+            '<a href="https://discord.gg/UXZUguY9Pb" '
+            'target="_blank" rel="noopener">%s discord</a></nav></div>'
+            % (prefix, prefix, prefix, GITHUB_SVG, DISCORD_SVG))
+
+
+def build_scroll_site():
+    sdir = os.path.join(SITE, "scroll")
+    path = os.path.join(sdir, "index.html")
+    with open(path, encoding="utf-8") as f:
+        t = f.read()
+    assert t.count("<body>") == 1 and t.count("\U0001F4DC oral") == 1
+    t = t.replace("\U0001F4DC oral", "ⓘ oral")
+    t = t.replace("<body>", "<body>" + masthead("../") + SCROLL_RAIL_CSS, 1)
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(t)
+    n = 0
+    for name in sorted(os.listdir(os.path.join(sdir, "units"))):
+        if not name.endswith(".html"):
+            continue
+        upath = os.path.join(sdir, "units", name)
+        with open(upath, encoding="utf-8") as f:
+            u = f.read()
+        m = re.search(r"<body[^>]*>", u)
+        u = (u[:m.end()] + "<style>body{margin-top:54px}</style>"
+             + masthead("../../") + UNIT_BACK + u[m.end():])
+        with open(upath, "w", encoding="utf-8") as f:
+            f.write(u)
+        n += 1
+    print("  scroll design            rail + masthead; %d unit pages "
+          "stamped" % n)
+
+
 def _md_inline(s):
     s = _html.escape(s, quote=False)
     s = re.sub(r"`([^`]+)`", r"<code>\1</code>", s)
@@ -457,6 +563,7 @@ def main():
                 os.path.join(SITE, "inheritance.html"))
     shutil.copytree(os.path.join(ROOT, "scroll"),
                     os.path.join(SITE, "scroll"))
+    build_scroll_site()
     # A real 404 page: without one, Pages answers every unknown path with
     # index.html and status 200, which fools the scroll reader's dev-server
     # probe into showing its regenerate button on the public site.
