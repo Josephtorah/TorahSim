@@ -282,7 +282,8 @@ def fold(write=True):
                     W["standing"].append({"seq": seq, "unit": uid, "ref": ref,
                                           "kind": k, "payload": e[:400]})
                 elif k in ("TRIPLE", "NOTE_SPEC_DELTA",
-                           "TIME_ANCHOR", "NOTE_ZERO_EVENTS"):
+                           "TIME_ANCHOR", "NOTE_ZERO_EVENTS",
+                           "ORAL_UTTERANCE", "WITNESS_STATE"):
                     W["standing"].append({"seq": seq, "unit": uid, "ref": ref,
                                           "kind": k, "payload": e[:400]})
                 else:

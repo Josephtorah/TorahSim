@@ -71,7 +71,8 @@ class ContractError(Exception):
 class Machine:
     def __init__(self):
         self.TIME = {"t0": None, "marks": []}
-        self.WORLD = {"entities": {}, "facts": [], "invariants": [], "partitions": []}
+        self.WORLD = {"entities": {}, "facts": [], "invariants": [], "partitions": [],
+                      "witnessed": {}}
         self.REGISTRY = {"names": {}, "writes": 0}
         self.SPECS = {"queue": [], "log": []}
         self.TESTS = []
@@ -79,6 +80,8 @@ class Machine:
         self.FLAGS = []
         self.EVENTS = []
         self.TRIPLES = []
+        self.UTTERANCES = []
+        self.UTTERANCES_DISPUTED = []
         self._step_ref = None
 
     # -- entity helpers ------------------------------------------------------
@@ -428,6 +431,38 @@ def h_commit(m, op, step):
                      "step": step["ref"]}
 
 
+def h_oral_utterance(m, op, step):
+    """ORAL_UTTERANCE — the ma'amarot ("utterances") census (Avot 5:1).
+    Counted form: UTTERANCE(n, mode). Disputed form: UTTERANCE(?, disputed)
+    with the positions in en — a machloket ("recorded dispute"), carried
+    as data, never decided. Amendment 2026-08-20."""
+    expr = op.get("expr_en", "")
+    mt = re.match(r"UTTERANCE\((\d+),\s*([\w-]+)\)", expr)
+    if mt:
+        m.UTTERANCES.append({"n": int(mt.group(1)), "mode": mt.group(2),
+                             "step": step["ref"]})
+        return
+    if re.match(r"UTTERANCE\(\?,\s*disputed\)", expr):
+        m.UTTERANCES_DISPUTED.append({"positions": op.get("en", ""),
+                                      "step": step["ref"]})
+        return
+    raise ContractError("ORAL_UTTERANCE expr unparsed: %r" % expr)
+
+
+def h_witness_state(m, op, step):
+    """WITNESS_STATE — aggadic testimony writes world state in its own
+    witness-grounded tier (owner ruling 2026-08-20): entity present so
+    later texts find it mechanically; never mixed into text-grounded
+    facts (the tier wall is asserted at rendering)."""
+    mt = re.match(r"WITNESS\(([\w-]+),\s*([\w-]+)\)", op.get("expr_en", ""))
+    if not mt:
+        raise ContractError("WITNESS_STATE expr unparsed: %r"
+                            % op.get("expr_en", ""))
+    m.WORLD["witnessed"][mt.group(1)] = {"state": mt.group(2),
+                                         "cites": list(op.get("cites", [])),
+                                         "step": step["ref"]}
+
+
 HANDLERS = {
     "TIME_ANCHOR": h_time_anchor,
     "EVENT": h_event,
@@ -451,12 +486,30 @@ HANDLERS = {
     "SECTION": h_section,
     "PATTERN": h_pattern,
     "COMMIT": h_commit,
+    "ORAL_UTTERANCE": h_oral_utterance,
+    "WITNESS_STATE": h_witness_state,
 }
 
 
 # ---------------------------------------------------------------------------
 # Loading + static validation
 # ---------------------------------------------------------------------------
+
+_TRIAGE_CACHE = []
+
+
+def _triage_ledger_text():
+    """The concatenated triage ledgers (logic/oral_triage/) — the record of
+    every oral source actually read. Loaded once, lazily."""
+    if not _TRIAGE_CACHE:
+        parts = []
+        tdir = ROOT / "logic" / "oral_triage"
+        if tdir.is_dir():
+            for f in sorted(tdir.glob("*.md")):
+                parts.append(f.read_text(encoding="utf-8"))
+        _TRIAGE_CACHE.append("\n".join(parts))
+    return _TRIAGE_CACHE[0]
+
 
 def load_unit(unit_id):
     path = UNITS_DIR / ("%s.yaml" % unit_id)
@@ -483,7 +536,11 @@ def validate_unit(unit):
                     "rulebook gap: operator '%s' in %s has no interpretation — "
                     "version the rulebook or fix the unit" % (kind, step.get("id")))
             for cite in op.get("cites") or []:
-                if not re.fullmatch(r"TIR-\d{3}", cite):
+                # a cite is valid if it names a TIR catalog entry, or a
+                # source actually READ in the triage ledger (amendment-era
+                # rule 2026-08-20: every oral cite must be a read source)
+                if not re.fullmatch(r"TIR-\d{3}", cite) \
+                        and cite not in _triage_ledger_text():
                     problems.append("bad cite '%s' in %s" % (cite, step.get("id")))
             expr = op.get("expr_en", "")
             for dm in re.findall(r"LET\?\((.+?)\)", expr):

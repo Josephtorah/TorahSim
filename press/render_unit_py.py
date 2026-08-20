@@ -162,6 +162,17 @@ def emit_op(op):
         members = [x.strip() for x in mt.group(2).split(",") if x.strip()]
         L.append("m.section(%s)" % ", ".join([_q(mt.group(1))]
                                              + [_q(x) for x in members]))
+    elif kind == "ORAL_UTTERANCE":
+        mt = re.match(r"UTTERANCE\((\d+),\s*([\w-]+)\)", expr)
+        if mt:
+            L.append("m.utterance(%s, %s)" % (mt.group(1), _q(mt.group(2))))
+        else:
+            L.append("m.utterance_disputed(%s)" % _q(op.get("en", "")))
+    elif kind == "WITNESS_STATE":
+        mt = re.match(r"WITNESS\(([\w-]+),\s*([\w-]+)\)", expr)
+        L.append("m.witness_state(%s, %s,\n                cites=[%s])"
+                 % (_q(mt.group(1)), _q(mt.group(2)),
+                    ", ".join(_q(c) for c in op.get("cites", []))))
     elif kind == "COMMIT":
         dm = re.search(r"LEDGER\[day (\d+)\]", expr)
         en_note = op.get("en", "")
@@ -271,6 +282,14 @@ def op_comment(op, ref=None):
         members = [x.strip() for x in mt.group(2).split(",") if x.strip()]
         en = "section %s: %s" % (G(mt.group(1)),
                                  ", ".join(G(x) for x in members))
+    elif kind == "ORAL_UTTERANCE":
+        mt = re.match(r"UTTERANCE\((\d+)", expr)
+        en = ("utterance #%s of the ten (ma'amar census)" % mt.group(1)
+              if mt else "disputed utterance — machloket carried, not decided")
+    elif kind == "WITNESS_STATE":
+        mt = re.match(r"WITNESS\(([\w-]+),\s*([\w-]+)\)", expr)
+        en = ("witness-grounded state (its own tier): %s on %s"
+              % (mt.group(2), mt.group(1)))
     elif kind == "COMMIT":
         dm = re.search(r"LEDGER\[day (\d+)\]", expr)
         en = "ledger: day %s committed" % dm.group(1)
@@ -367,6 +386,24 @@ def render(uid):
           '    assert m.WORLD["invariants"] == %r' % truth.WORLD["invariants"],
           '    assert m.WORLD["partitions"] == %r' % truth.WORLD["partitions"],
           "    assert len(m.EVENTS) == %d" % len(truth.EVENTS),
+          ]
+    # amendment-era registers, asserted only where the unit carries them —
+    # units without them reprint byte-identical (the press gate's parity)
+    if truth.UTTERANCES:
+        L += ['    assert [(u["n"], u["mode"]) for u in m.UTTERANCES] == %r'
+              % [(u["n"], u["mode"]) for u in truth.UTTERANCES]]
+    if truth.UTTERANCES_DISPUTED:
+        L += ["    assert len(m.UTTERANCES_DISPUTED) == %d"
+              % len(truth.UTTERANCES_DISPUTED)]
+    _wit = truth.WORLD.get("witnessed", {})
+    if _wit:
+        L += ['    assert sorted(m.WORLD["witnessed"]) == %r' % sorted(_wit)]
+        for _e in sorted(_wit):
+            L += ['    assert m.WORLD["witnessed"][%s]["cites"] == %r'
+                  % (repr(_e), _wit[_e]["cites"]),
+                  '    assert all(%r not in f for f in m.WORLD["facts"])'
+                  % _wit[_e]["state"]]
+    L += [
           '    print("ALL ASSERTIONS GREEN — rendering matches the frozen '
           "unit's machine truth\")",
           ""]

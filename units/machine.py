@@ -29,7 +29,8 @@ class Machine:
     def __init__(self, unit_id=""):
         self.unit_id = unit_id
         self.TIME = {"t0": None, "marks": []}
-        self.WORLD = {"entities": {}, "facts": [], "invariants": [], "partitions": []}
+        self.WORLD = {"entities": {}, "facts": [], "invariants": [], "partitions": [],
+                      "witnessed": {}}
         self.REGISTRY = {"names": {}, "writes": 0}
         self.SPECS = {"queue": [], "log": []}
         self.TESTS = []
@@ -37,6 +38,8 @@ class Machine:
         self.FLAGS = []
         self.EVENTS = []
         self.TRIPLES = []
+        self.UTTERANCES = []
+        self.UTTERANCES_DISPUTED = []
         self._step_ref = None
         self._step_event_mark = 0
 
@@ -56,6 +59,26 @@ class Machine:
 
     def flag(self, kind, detail):
         self.FLAGS.append({"kind": kind, "detail": detail, "step": self._step_ref})
+
+    def utterance(self, n, mode):
+        # ORAL_UTTERANCE — the ma'amarot ("utterances") census (Avot 5:1);
+        # amendment 2026-08-20, day-one re-derivation under the full rule
+        self.UTTERANCES.append({"n": n, "mode": mode, "step": self._step_ref})
+
+    def utterance_disputed(self, positions):
+        # ORAL_UTTERANCE, disputed — a machloket ("recorded dispute") in the
+        # census; carried as data, never decided
+        self.UTTERANCES_DISPUTED.append({"positions": positions,
+                                         "step": self._step_ref})
+
+    def witness_state(self, entity, state, cites=()):
+        # WITNESS_STATE — aggadic testimony writes world state in ITS OWN
+        # tier (owner ruling 2026-08-20): the entity is present so later
+        # texts can find it, but the state is witness-grounded and never
+        # mixes into the text-grounded fact set
+        self.WORLD["witnessed"][entity] = {"state": state,
+                                           "cites": list(cites),
+                                           "step": self._step_ref}
 
     def event(self, verb, agent=None, themes=()):
         self.EVENTS.append({"verb": verb, "agent": agent,

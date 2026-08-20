@@ -26,7 +26,7 @@ meta:
     individual claims keep their own confidence labels below.
   tree_derive_version: logic_derived_v1
   tree_derive_phase: "C-pilot"
-  confidence_overall: "structure tested; operator readings tested-per-TIR; intent hypothesis"
+  confidence_overall: "structure tested; operator readings tested-per-TIR; intent hypothesis. Day-one span (1:1-5) re-derived 2026-08-20 under the full-rule order — readings first, 24 material verdicts, 12-claim manifest, two independent derivations with 10/11 blind match. Unit remains FIRST PASS: the full span is not yet read through"
   genre: "narrative_boot"
   build_track: genesis_stack
   depends_on:
@@ -177,19 +177,25 @@ boot_steps:
     operators:
       - op: TIME_ANCHOR
         expr_en: "t0 := reshit (timeline origin from the be- prefix frame)"
-        cites: ["TIR-022"]
+        en: "Onkelos: be-kadmin ('at first') — the authorized translation ruling the word temporal (amendment 2026-08-20, day-one re-derivation)"
+        cites: ["TIR-022", "Onkelos Genesis 1:1"]
         confidence: tested
       - op: EVENT
         expr_en: "create(e1) ∧ Agent(e1, Elohim) ∧ Theme(e1, shamayim) ∧ Theme(e1, aretz)"
         he: אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ
         he_translit: "et ha-shamayim ve-et ha-aretz"
-        en: "perfect bara = completed narrative event; et X ve-et Y = full Theme list"
-        cites: ["TIR-014", "TIR-015"]
+        en: "perfect bara = completed narrative event; et X ve-et Y = full Theme list. Chain witnesses (amendment 2026-08-20): et = INCLUSION — heavens include the luminaries, earth includes vegetation (Akiva from Nachum Ish Gam Zu); without et, shamayim could read as the Creator's name — et forces the created-object reading; Onkelos: yat, the explicit accusative. Surface order carries no temporal claim — both created together (Gen 2:4 inversion, Mekhilta)"
+        cites: ["TIR-014", "TIR-015", "Bereshit Rabbah 1:14", "Chagigah 12a:20", "Onkelos Genesis 1:1", "Mekhilta DeRabbi Yishmael, Tractate Pischa 1:4"]
         confidence: tested
       - op: REGISTRY_INSTALL
         expr_en: "WORLD += {shamayim, aretz} — installed by narration, NOT by naming formula"
         en: "these two labels are re-issued later (1:8, 1:10) — the registry collisions"
         cites: []
+        confidence: tested
+      - op: ORAL_UTTERANCE
+        expr_en: "UTTERANCE(1, bulk-create) — ma'amar census (Avot 5:1)"
+        en: "the verse IS an utterance though va-yomer ('and [God] said') is absent — grounded Ps 33:6 'by the word of the LORD the heavens were made'; one utterance creating all matter at once, the other nine differentiate (amendment 2026-08-20, day-one re-derivation under the full-rule order)"
+        cites: ["Bereshit Rabbah 17:1", "Megillah 21b:10", "Rosh Hashanah 32a:19"]
         confidence: tested
     comment: >
       Top split L=etnachta after Elohim: [event | inventory]. No directive operator:
@@ -231,8 +237,13 @@ boot_steps:
         confidence: tested
       - op: NOTE_PRESUPPOSED
         expr_en: "choshekh, tehom, mayim, ruach are READ without prior install (uninitialized entities)"
-        en: "flag, not fix: the pre-existing-materials question belongs to interpretation"
-        cites: []
+        en: "flag, not fix — and the chain answers the question twice, differently (amendment 2026-08-20, the fork carried as data): Chagigah 12a counts tohu/vohu/choshekh/ruach/mayim among the TEN THINGS CREATED ON DAY ONE; Bereshit Rabbah 1:9 answers the philosopher's found-materials challenge with creation verses elsewhere (Isa 45:7 darkness, Amos 4:13 wind, Prov 8:24 deeps). Both refuse 'found materials'; they differ on where creation is attested"
+        cites: ["Bereshit Rabbah 1:9", "Chagigah 12a:6"]
+        confidence: tested
+      - op: ORAL_UTTERANCE
+        expr_en: "UTTERANCE(?, disputed)"
+        en: "is ruach ('wind/spirit') the tenth utterance? R. Yaakov ben Kurshai: counts; Menachem bar Yosei: Gen 2:18 instead — machloket ('recorded dispute') carried, never decided (amendment 2026-08-20)"
+        cites: ["Bereshit Rabbah 17:1"]
         confidence: tested
     comment: >
       Precondition block for the first triple: {P} = 1:2 in full.
@@ -255,6 +266,11 @@ boot_steps:
       he_translit: "va-yehi or"
       en: "the postcondition asserted"
     operators:
+      - op: ORAL_UTTERANCE
+        expr_en: "UTTERANCE(2, fiat) — ma'amar census (Avot 5:1)"
+        en: "yehi or — the second utterance of the ten (amendment 2026-08-20)"
+        cites: ["Bereshit Rabbah 17:1"]
+        confidence: tested
       - op: DECLARE
         expr_en: "DECLARE(Elohim, LET(exists(or)))"
         he: יְהִי אוֹר
@@ -271,8 +287,8 @@ boot_steps:
         expr_en: "HOLDS(exists(or), t1) — SPECS queue popped same verse (latency 0)"
         he: וַיְהִי־אוֹר
         he_translit: "va-yehi or"
-        en: "wayyiqtol: narrative event; verbatim echo of the spec (only day with verbatim RESULT)"
-        cites: []
+        en: "wayyiqtol: narrative event; verbatim echo of the spec (only day with verbatim RESULT). The chain's own mood argument (amendment 2026-08-20): 've-haya or' (light SHALL be) is NOT written — rather va-yehi (it WAS): instantaneous-complete, latency 0"
+        cites: ["Bereshit Rabbah 3:2"]
         confidence: tested
     comment: >
       The minimal fiat: cleanest {P} op {Q} in the corpus.
@@ -309,6 +325,11 @@ boot_steps:
         en: "bein...u-vein = one two-place relation (set partition reading = hypothesis)"
         cites: []
         confidence: "event tested; partition reading hypothesis"
+      - op: WITNESS_STATE
+        expr_en: "WITNESS(or, or_ha_ganuz) — hidden for the righteous"
+        en: "the primordial light serves neither day nor night — nignezah ('hidden') for the righteous; for-whom from this verse's own word: tov ('good') = the righteous (Isa 3:10). WITNESS-GROUNDED TIER (owner ruling 2026-08-20, the first of its kind): aggadic testimony writes world state in its own tier — the entity is present (Ps 97:11 'light is sown for the righteous' will find it), never mixed into the text-grounded facts"
+        cites: ["Bereshit Rabbah 3:6", "Chagigah 12a:10"]
+        confidence: "witness-grounded (aggadic tier)"
     comment: >
       Note: divide operates on choshekh — an entity never installed (see STEP_Gn_1_2 flag).
     confidence: tested
@@ -334,16 +355,16 @@ boot_steps:
         expr_en: "REGISTRY: name(or) := yom; name(choshekh) := layla"
         he: לָאוֹר יוֹם … וְלַחֹשֶׁךְ … לָיְלָה
         he_translit: "la-or yom … ve-la-choshekh … layla"
-        en: "performative naming: le- prefix marks the receiver; bare word after = label; registry write, not a truth claim; choshekh (never installed) is legitimized by naming"
-        cites: ["TIR-022"]
+        en: "performative naming: le- prefix marks the receiver; bare word after = label; registry write, not a truth claim; choshekh (never installed) is legitimized by naming. The chain asks the machine's own question (amendment 2026-08-20): 'but the light is not the day?!' — the write binds LABEL, never entity; and Onkelos splits the polysemy: registry label yemama ('daytime') vs ledger unit yoma ('day') — two tokens for the two structures"
+        cites: ["TIR-022", "Bereshit Rabbah 3:6", "Onkelos Genesis 1:5"]
         confidence: tested
       - op: COMMIT
         expr_en: "cycle(erev -> boqer); LEDGER[day 1] := {spec ✓, test PASS, names 2}"
         he: יוֹם אֶחָד
         he_translit: "yom echad"
-        en: "echad = CARDINAL 'one' (days 2-6 use ordinals) — marked form, flagged not resolved"
-        cites: []
-        confidence: "commit tested; cardinal significance [OPEN]"
+        en: "echad = CARDINAL 'one' (days 2-6 use ordinals) — marked form. The mixed-series question is the chain's own, asked and answered (amendment 2026-08-20): BR 3:9 — repaid at the Mishkan's dedication; Onkelos preserves yoma chad unordinalized. And the close itself is seder zemanim ('order of times'): time becomes ordered at this commit"
+        cites: ["Bereshit Rabbah 3:9", "Onkelos Genesis 1:5", "Bereshit Rabbah 3:7"]
+        confidence: "commit tested; cardinal significance chain-answered (BR 3:9)"
     comment: >
       Day-1 transaction closes complete: P (1:2) -> fiat (1:3) -> test+partition (1:4)
       -> names+commit (1:5). This shape is the baseline the other days deviate from.
