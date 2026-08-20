@@ -422,7 +422,7 @@ m.event("return", agent="avraham")
 if __name__ == "__main__":
     m.report()
     assert m.created_set() == {'shelosha_anashim'}
-    assert m.presupposed_set() == {'sedom', 'mamre', 'amora'}
+    assert m.presupposed_set() == {'amora', 'mamre', 'sedom'}
     assert m.REGISTRY["names"] == {}
     assert m.REGISTRY["writes"] == 0
     assert m.tests_list() == []

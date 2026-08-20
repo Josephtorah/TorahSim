@@ -1,0 +1,259 @@
+# settlement_links.yaml — authored cross-unit demand settlements
+# (corpus world config).
+#
+# WHY THIS FILE EXISTS: inside a unit, a RESULT operator pops its demand
+# by EXACT string match — the interpreter proves those. ACROSS units the
+# settling verse almost never repeats the demand's wording, so every
+# cross-unit settlement is an authored judgment citing both verses. The
+# fold applies these links after all units are folded; each link carries
+# its basis and an uncertain flag where the judgment is arguable.
+#
+# link form:
+#   - demand:     the demand string as the declaring unit wrote it
+#     from_unit:  unit that declared it
+#     settled_by: {unit: ..., ref: Book.Ch.Vs}
+#     basis_en:   one sentence: why this verse settles that demand
+#     uncertain:  true|false (+ comment when true)
+#
+# AWAITING (hooks armed at units outside the current corpus):
+# Pharaoh's chase-binding (Exod 14:6, the bindings file); the BONES
+# OATH (gen_73's ve-haalitem, 50:25) vs Exod 13:19 (the taking) and
+# Josh 24:32 (the resting at Shechem); the refused right-hand demand
+# (gen_71's sim-yeminkha, 48:18) stays open by the dead-by-refusal
+# law — no settlement will be authored for it. FWD-4 arms: the
+# SEND-DEMAND (exo_05's shalach et ami, 5:1 — refused 5:2, granted
+# in Pharaoh's own mouth at Exod 12:31-32); the WONDERS-CHARGE
+# (exo_04, 4:21 → the plague-cycle from 7:10); the SON-SCRIPT
+# (exo_04, 4:22-23 → the midnight-announcement 11:4-5 and the
+# stroke 12:29); exo_01's kill-order stays open FOREVER by the
+# dead-by-refusal law (the midwives' refusal, 1:17); exo_01's
+# Nile-decree and exo_03's sandal-demand stay open (no receipt
+# verse); exo_04's send-by-another plea and exo_05's judgment-plea
+# stay open by the transcended class (gen_67's precedent).
+
+links:
+  - demand: "lekh_ve_asafta_et_ziqne_yisrael"
+    from_unit: exo_03_bush_and_name
+    settled_by: {unit: exo_04_signs_and_firstborn, ref: Exod.4.29}
+    basis_en: >
+      The elders-script ("go, gather the elders of Israel, and say
+      to them... I have surely visited," 3:16) is PERFORMED whole at
+      4:29-31: they gather ALL the elders (4:29, the gather-verb
+      verbatim), Aaron speaks ALL the words (4:30 — the relay of
+      4:15-16 operating inside the performance), and the people
+      believe AND HEAR "that the LORD had VISITED" (4:31 — the
+      password's verb sounding in the audience exactly as scripted):
+      gathered, spoken, and believed.
+    uncertain: false
+
+  - demand: "va_amartem_el_melekh_mitzrayim"
+    from_unit: exo_03_bush_and_name
+    settled_by: {unit: exo_05_bricks_without_straw, ref: Exod.5.3}
+    basis_en: >
+      The court-script ("you and the elders shall come to the king
+      of Egypt and SAY to him: the God of the Hebrews... let us go
+      three days... and sacrifice," 3:18) is performed at the first
+      audience: 5:1 opens BOLDER than the script (send-My-people,
+      the feast), and 5:3 delivers the script's own measured lines
+      nearly verbatim (the God of the Hebrews; the three days; the
+      sacrifice) with the softening deviation the scripted-speech
+      class predicts (gen_69's precedent at Gen 47:3): said, and
+      said to the king — the elders' absence at the door carried
+      named (the readings), not held against the saying.
+    uncertain: false
+
+  - demand: "va_amartem_anshe_miqne"
+    from_unit: gen_69_descent_seventy
+    settled_by: {unit: gen_70_goshen_and_the_fifth, ref: Gen.47.3}
+    basis_en: >
+      Joseph's scripted answer ("you shall say: men of livestock,"
+      46:34) is PERFORMED when Pharaoh asks the predicted question
+      verbatim (47:3, "what is your work?") and the brothers answer
+      with their occupation — the say-demand is discharged by the
+      saying, though the delivery deviates (they say the
+      shepherd-word the script softened, and the letter marks the
+      verse with the Torah's only full-of-full "our fathers"): asked
+      and answered.
+    uncertain: false
+
+  - demand: "al_na_tiqbreni_be_mitzrayim"
+    from_unit: gen_70_goshen_and_the_fifth
+    settled_by: {unit: gen_73_coffin_in_egypt, ref: Gen.50.13}
+    basis_en: >
+      "Do not, pray, bury me in Egypt" (47:29) is honored literally:
+      the sons CARRY him to the land of Canaan and bury him there
+      (50:13) — he does not lie in Egypt; the ban's honoring is the
+      performed carrying-out (50:4-13, Pharaoh's leave obtained by
+      the recorded oath itself).
+    uncertain: false
+
+  - demand: "u_qevartani_bi_qvuratam"
+    from_unit: gen_70_goshen_and_the_fifth
+    settled_by: {unit: gen_73_coffin_in_egypt, ref: Gen.50.13}
+    basis_en: >
+      "Carry me from Egypt and bury me in THEIR burying-place"
+      (47:30) is performed to the letter at 50:13: carried from
+      Egypt (va-yisu), buried in the cave of the field of Machpelah
+      — the burying-place of Abraham, Sarah, Isaac, Rebekah, and
+      Leah (49:31's register): the oath Joseph swore (47:31)
+      discharged by the deed.
+    uncertain: false
+
+  - demand: "qivru_oti_el_avotai"
+    from_unit: gen_72_testament_twelve
+    settled_by: {unit: gen_73_coffin_in_egypt, ref: Gen.50.13}
+    basis_en: >
+      The testament's charge to the twelve ("bury me with my
+      fathers, in the cave...", 49:29) receives the Torah's own
+      receipt-formula one verse before the deed: "and his sons did
+      for him SO, exactly as he charged them" (50:12 — with the
+      charged-them word's one Torah token inside it), and the deed
+      follows at 50:13 (the cave, the field, the purchase recited):
+      charged, done-so, and buried.
+    uncertain: false
+  - demand: "et_achikhem_ha_qaton_taviu_elai"
+    from_unit: gen_65_first_descent
+    settled_by: {unit: gen_66_second_descent, ref: Gen.43.26}
+    basis_en: >
+      "Your youngest brother you shall bring TO ME" (Gen 42:20) is
+      satisfied when Benjamin stands in Joseph's own house and bows
+      with the gift (Gen 43:26; the descent with Benjamin at 43:15,
+      the seeing at 43:16): brought, and brought to him.
+    uncertain: false
+
+  - demand: "alu_le_shalom_el_avikhem"
+    from_unit: gen_67_cup_and_surety
+    settled_by: {unit: gen_68_i_am_yosef, ref: Gen.45.25}
+    basis_en: >
+      "Go up in peace to your father" (Gen 44:17) — refused in the
+      moment (Judah steps closer instead) — finally happens at "and
+      they went UP from Egypt... to Jacob their father" (Gen 45:25),
+      with Benjamin free, Simeon out, and peace actual.
+    uncertain: false
+
+  - demand: "yeshev_na_avdekha_tachat_ha_naar"
+    from_unit: gen_67_cup_and_surety
+    settled_by: {unit: gen_68_i_am_yosef, ref: Gen.45.3}
+    basis_en: >
+      Judah's substitution offer ("let your servant stay instead of
+      the lad", Gen 44:33) receives no grant and no refusal — the
+      unmasking (Gen 45:3-4) dissolves the trial that demanded a
+      slave: no one stays, everyone goes up.
+    uncertain: true
+    # UNCERTAIN — the demand was TRANSCENDED, not granted: reading
+    # the unmasking as its settlement is a judgment about what
+    # answers a demand; the queue's alternative (leave it open
+    # forever) reads the offer as never answered. Owner may re-rule.
+
+  - demand: "el_shaday_yiten_lakhem_rachamim"
+    from_unit: gen_66_second_descent
+    settled_by: {unit: gen_68_i_am_yosef, ref: Gen.45.25}
+    basis_en: >
+      Jacob's prayer (Gen 43:14) asked mercy before the man, the
+      release of "your other brother," and Benjamin. Simeon walked at
+      43:23 (the partial); by the ascent of 45:25 every son is alive,
+      free, and going up together: the prayer's full basket.
+    uncertain: false
+
+  - demand: "u_qchu_et_avikhem_u_vou_elai"
+    from_unit: gen_68_i_am_yosef
+    settled_by: {unit: gen_69_descent_seventy, ref: Gen.46.6}
+    basis_en: >
+      Pharaoh's summons "take your father and your households and
+      come TO ME" (Gen 45:18) meets its arrival-verse: "and they came
+      to Egypt — Jacob, and all his seed with him" (Gen 46:6-7).
+    uncertain: false
+  - demand: "zekhartani_ve_hizkartani_el_paro"
+    from_unit: gen_63_two_dreams_prison
+    settled_by: {unit: gen_64_pharaoh_dreams_rise, ref: Gen.41.9}
+    basis_en: >
+      Joseph's "remember me and mention me to Pharaoh" (Gen 40:14, the
+      hizkir root) is delivered at Gen 41:9-13 — the chief cupbearer's
+      "my offenses I MENTION (mazkir) today," the same verb, followed by
+      the full retelling that brings Joseph up from the pit. The text
+      itself marks the two-year delay (40:23 "did not remember... and
+      forgot him" — narrated non-satisfaction — then 41:1 "at the end of
+      two years").
+    uncertain: false
+
+  - demand: "machah(ha_adam, me_al_pnei_ha_adamah)"
+    from_unit: gen_15_flood_prologue
+    settled_by: {unit: gen_18_the_rise, ref: Gen.7.23}
+    basis_en: >
+      "I will wipe out (emcheh) the human from the face of the ground"
+      (Gen 6:7) is executed at Gen 7:23 "and He wiped out (va-yimach)
+      every living thing... from man to beast to creeping thing to fowl"
+      — the same verb machah ("wipe"), the same face-of-the-ground scope,
+      narrated done.
+    uncertain: false
+
+  - demand: "hatzileni(YHWH, mi_yad_esav)"
+    from_unit: gen_55_two_camps_wrestled_name
+    settled_by: {unit: gen_56_blessing_returned_first_altar, ref: Gen.33.4}
+    basis_en: >
+      Jacob's prayer "deliver me from the hand of Esau" (Gen 32:12) is
+      answered in the event: "Esau ran to meet him and embraced him...
+      and they wept" (Gen 33:4) — no hand raised.
+    uncertain: true
+    # UNCERTAIN — the deliverance is narrated in outcome, not in receipt:
+    # no verse says "God delivered." Reading the embrace as the answer is
+    # a judgment (a strong one, but authored, not textual-exact).
+
+  - demand: "bo_daber_el_paro"
+    from_unit: exo_06_i_am_the_lord
+    settled_by: {unit: exo_07_staff_and_blood, ref: Exod.7.6}
+    basis_en: >
+      The go-speak demand ("go, speak to Pharaoh king of Egypt, that
+      he send the sons of Israel out of his land," 6:11 — re-pressed
+      and WIDENED by the resumption at 6:29, "speak to Pharaoh all
+      that I speak to you": one demand, one card, the resumptive
+      class) receipts on the doubled compliance-formula of 7:6: "and
+      Moses and Aaron DID as the LORD commanded them — SO THEY DID"
+      (the twice-signed so-they-did covering both the errand and its
+      widened content).
+    uncertain: false
+
+  - demand: "reeh_ha_moftim_va_asitam_lifne_faro"
+    from_unit: exo_04_signs_and_firstborn
+    settled_by: {unit: exo_07_staff_and_blood, ref: Exod.7.10}
+    basis_en: >
+      The wonders-charge ("see all the wonders which I have put in
+      your hand, and DO them BEFORE PHARAOH," 4:21) receipts at the
+      first court-performance: "and Moses and Aaron came to Pharaoh
+      and did SO, as the LORD had commanded; and Aaron threw down
+      his staff BEFORE PHARAOH and before his servants, and it
+      became a serpent" (7:10 — the wonder done before Pharaoh in
+      the charge's own words; the plague-cycle continues the card's
+      ledger, but the charged performance-before-the-throne is
+      narrated done here).
+    uncertain: false
+
+  - demand: "hotzi_et_bene_yisrael_me_eretz_mitzrayim"
+    from_unit: exo_06_i_am_the_lord
+    settled_by: {unit: exo_12_passover_and_exodus, ref: Exod.12.51}
+    basis_en: >
+      The joint charge (6:13 — "and He charged them to the sons of
+      Israel and to Pharaoh king of Egypt, TO BRING OUT the sons of
+      Israel from the land of Egypt") receipts on the exodus
+      summary-verse in the charge's own words: "and it came to pass
+      on THAT VERY DAY: the LORD BROUGHT OUT the sons of Israel FROM
+      THE LAND OF EGYPT by their hosts" (12:51 — the bring-out
+      returned verbatim, the agent resolved to the Charger Himself).
+      Queued for this receipt at the FWD-5 state note ("exo_06's
+      joint charge → 12:51"); the append itself is run-6 bookkeeping.
+    uncertain: false
+
+  - demand: "ve_haalitem_et_atzmotai_mi_ze"
+    from_unit: gen_73_coffin_in_egypt
+    settled_by: {unit: exo_13_consecration_and_pillars, ref: Exod.13.19}
+    basis_en: >
+      Joseph's bones-oath (Gen 50:25 — "you shall BRING UP MY BONES
+      from here") receipts at 13:19: "and Moses took THE BONES OF
+      JOSEPH with him, for he had SURELY SWORN the sons of Israel...
+      you shall bring up my bones from here with you" — the demand's
+      own wording quoted as the taking's warrant: the carry-up out of
+      Egypt is narrated done. Armed since gen_73 ("13:19 the
+      bones-oath receipt"); the burial at Shechem (Josh 24:32)
+      completes the arc beyond the Torah — the Torah-receipt is this
+      verse.
+    uncertain: false

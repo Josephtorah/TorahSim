@@ -245,7 +245,7 @@ m.fact("admission_va_okhel(ishah)")
 if __name__ == "__main__":
     m.report()
     assert m.created_set() == {'chagorot'}
-    assert m.presupposed_set() == {'adam', 'nachash', 'gan', 'ishah', 'ha_etz'}
+    assert m.presupposed_set() == {'adam', 'gan', 'ha_etz', 'ishah', 'nachash'}
     assert m.REGISTRY["names"] == {}
     assert m.REGISTRY["writes"] == 0
     assert m.tests_list() == [('PASS', 'tov', 'ha_etz_le_maakhal')]

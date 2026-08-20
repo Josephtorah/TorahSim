@@ -296,8 +296,8 @@ m.fact("va_yaqam_ha_sadeh_la_achuzat_qaver_me_et_bnei_chet")
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
-    assert m.created_set() == {'bnei_chet', 'sarah', 'efron'}
-    assert m.presupposed_set() == {'mamre', 'chevron'}
+    assert m.created_set() == {'bnei_chet', 'efron', 'sarah'}
+    assert m.presupposed_set() == {'chevron', 'mamre'}
     assert m.REGISTRY["names"] == {}
     assert m.REGISTRY["writes"] == 0
     assert m.tests_list() == []

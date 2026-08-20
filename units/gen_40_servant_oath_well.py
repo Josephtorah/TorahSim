@@ -468,8 +468,8 @@ m.declare("house_voice", "LET",
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
-    assert m.created_set() == {'lavan', 'rivqah', 'ha_eved'}
-    assert m.presupposed_set() == {'avraham', 'ir_nachor', 'YHWH', 'aram_naharayim'}
+    assert m.created_set() == {'ha_eved', 'lavan', 'rivqah'}
+    assert m.presupposed_set() == {'YHWH', 'aram_naharayim', 'avraham', 'ir_nachor'}
     assert m.REGISTRY["names"] == {}
     assert m.REGISTRY["writes"] == 0
     assert m.tests_list() == []

@@ -212,7 +212,7 @@ m.commit(6, label_form="ordinal", label_translit="yom ha-shishi")
 if __name__ == "__main__":
     m.report()
     assert m.created_set() == {'behemah', 'chayat_ha_aretz', 'ha_adam', 'remes_ha_adamah'}
-    assert m.presupposed_set() == {'aretz', 'kol_zorea_zera', 'of_ha_shamayim', 'dagat_ha_yam', 'kol_yerek_esev'}
+    assert m.presupposed_set() == {'aretz', 'dagat_ha_yam', 'kol_yerek_esev', 'kol_zorea_zera', 'of_ha_shamayim'}
     assert m.REGISTRY["names"] == {'kol_zorea_zera': 'okhlah_la_adam', 'kol_yerek_esev': 'okhlah_le_chol_nefesh_chaya'}
     assert m.REGISTRY["writes"] == 2
     assert m.tests_list() == [('PASS', 'tov', 'nefesh_chaya'), ('PASS', 'tov_meod', 'kol_asher_asah')]

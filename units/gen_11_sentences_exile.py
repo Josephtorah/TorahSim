@@ -210,8 +210,8 @@ m.assign("keruvim", "shomer_derekh_etz_ha_chayim")
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
-    assert m.created_set() == {'keruvim', 'lahat_ha_cherev', 'kotnot_or'}
-    assert m.presupposed_set() == {'adam', 'adamah', 'nachash', 'gan', 'ishah', 'etz_ha_chayim'}
+    assert m.created_set() == {'keruvim', 'kotnot_or', 'lahat_ha_cherev'}
+    assert m.presupposed_set() == {'adam', 'adamah', 'etz_ha_chayim', 'gan', 'ishah', 'nachash'}
     assert m.REGISTRY["names"] == {'nachash': 'arur_mi_kol_ha_behemah', 'adamah': 'arurah_baavurekha', 'ishah': 'Chavah', 'keruvim': 'shomer_derekh_etz_ha_chayim'}
     assert m.REGISTRY["writes"] == 4
     assert m.tests_list() == []

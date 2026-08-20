@@ -251,7 +251,7 @@ m.fact("eleh_mishpechot_bnei_noach_le_toledotam",
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
-    assert m.created_set() == {'kalach', 'rechovot_ir', 'resen', 'ninveh'}
+    assert m.created_set() == {'kalach', 'ninveh', 'rechovot_ir', 'resen'}
     assert m.presupposed_set() == {'noach'}
     assert m.REGISTRY["names"] == {}
     assert m.REGISTRY["writes"] == 0

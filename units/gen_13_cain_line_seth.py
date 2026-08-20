@@ -185,7 +185,7 @@ m.fact("huchal_likro_be_shem_YHWH")
 if __name__ == "__main__":
     m.report()
     assert m.created_set() == {'ir'}
-    assert m.presupposed_set() == {'kayin', 'eshet_adam', 'eshet_kayin', 'adam'}
+    assert m.presupposed_set() == {'adam', 'eshet_adam', 'eshet_kayin', 'kayin'}
     assert m.REGISTRY["names"] == {'ir': 'Chanokh', 'shet': 'Shet', 'enosh': 'Enosh'}
     assert m.REGISTRY["writes"] == 3
     assert m.tests_list() == []

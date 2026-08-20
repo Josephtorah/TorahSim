@@ -412,7 +412,7 @@ m.fact("va_yizbach_zevach_va_yokhlu_va_yalinu(yaaqov, echav, ba_har)")
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
-    assert m.created_set() == {'ha_matzeva', 'ha_gal'}
+    assert m.created_set() == {'ha_gal', 'ha_matzeva'}
     assert m.presupposed_set() == set()
     assert m.REGISTRY["names"] == {'ha_gal': 'galed'}
     assert m.REGISTRY["writes"] == 2

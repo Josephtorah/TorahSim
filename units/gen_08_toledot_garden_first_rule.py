@@ -250,8 +250,8 @@ m.handler("be_yom_akhal(adam, me_etz_ha_daat_tov_va_ra)",
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
-    assert m.created_set() == {'nahar_3', 'nahar_2', 'adam', 'nahar_4', 'nahar', 'gan', 'nahar_1', 'etz_ha_chayim', 'etz_ha_daat_tov_va_ra'}
-    assert m.presupposed_set() == {'adamah', 'aretz', 'shamayim', 'eden'}
+    assert m.created_set() == {'adam', 'etz_ha_chayim', 'etz_ha_daat_tov_va_ra', 'gan', 'nahar', 'nahar_1', 'nahar_2', 'nahar_3', 'nahar_4'}
+    assert m.presupposed_set() == {'adamah', 'aretz', 'eden', 'shamayim'}
     assert m.REGISTRY["names"] == {'nahar_1': 'Pishon', 'nahar_2': 'Gichon', 'nahar_3': 'Chidekel', 'nahar_4': 'Perat', 'adam': 'oved_ve_shomer'}
     assert m.REGISTRY["writes"] == 5
     assert m.tests_list() == []

@@ -289,8 +289,8 @@ m.fact("morat_ruach_le_yitzchaq_u_le_rivqah")
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
-    assert m.created_set() == {'yehudit', 'elon', 'basmat', 'beeri'}
-    assert m.presupposed_set() == {'yitzchaq', 'achuzat', 'gerar', 'fikhol', 'merea'}
+    assert m.created_set() == {'basmat', 'beeri', 'elon', 'yehudit'}
+    assert m.presupposed_set() == {'achuzat', 'fikhol', 'gerar', 'merea', 'yitzchaq'}
     assert m.REGISTRY["names"] == {'beer_eseq': 'eseq', 'beer_sitna': 'sitna', 'beer_rechovot': 'rechovot', 'beer_shiva': 'shiva'}
     assert m.REGISTRY["writes"] == 4
     assert m.tests_list() == []

@@ -260,7 +260,7 @@ m.note_zero_events()
 if __name__ == "__main__":
     m.report()
     assert m.created_set() == {'avimelekh'}
-    assert m.presupposed_set() == {'shur', 'gerar', 'qadesh'}
+    assert m.presupposed_set() == {'gerar', 'qadesh', 'shur'}
     assert m.REGISTRY["names"] == {}
     assert m.REGISTRY["writes"] == 0
     assert m.tests_list() == []

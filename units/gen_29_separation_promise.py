@@ -296,7 +296,7 @@ m.presupposed("mamre", "chevron")
 if __name__ == "__main__":
     m.report()
     assert m.created_set() == {'mizbeach_chevron'}
-    assert m.presupposed_set() == {'beit_el', 'mitzrayim', 'eretz_kenaan', 'ha_negev', 'chevron', 'ha_yarden', 'sedom', 'mamre', 'amora', 'mizbeach_beit_el', 'ha_ai', 'tzoar'}
+    assert m.presupposed_set() == {'amora', 'beit_el', 'chevron', 'eretz_kenaan', 'ha_ai', 'ha_negev', 'ha_yarden', 'mamre', 'mitzrayim', 'mizbeach_beit_el', 'sedom', 'tzoar'}
     assert m.REGISTRY["names"] == {}
     assert m.REGISTRY["writes"] == 0
     assert m.tests_list() == []

@@ -327,7 +327,7 @@ m.fact("shmonah_ele_yaldah_milkah_u_filagsho_reumah_arbaah")
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
-    assert m.created_set() == {'yitzchaq', 'shnei_nearav', 'malakh_YHWH'}
+    assert m.created_set() == {'malakh_YHWH', 'shnei_nearav', 'yitzchaq'}
     assert m.presupposed_set() == {'beer_sheva'}
     assert m.REGISTRY["names"] == {'ha_maqom': 'YHWH_Yireh'}
     assert m.REGISTRY["writes"] == 1

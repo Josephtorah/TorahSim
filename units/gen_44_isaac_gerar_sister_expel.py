@@ -287,7 +287,7 @@ m.fact("atzamta_mime_nu_meod")
 if __name__ == "__main__":
     m.report()
     assert m.created_set() == set()
-    assert m.presupposed_set() == {'yitzchaq', 'pelishtim', 'gerar', 'avimelekh', 'avraham'}
+    assert m.presupposed_set() == {'avimelekh', 'avraham', 'gerar', 'pelishtim', 'yitzchaq'}
     assert m.REGISTRY["names"] == {}
     assert m.REGISTRY["writes"] == 0
     assert m.tests_list() == []

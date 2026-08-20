@@ -198,7 +198,7 @@ m.event("die", agent="noach")
 if __name__ == "__main__":
     m.report()
     assert m.created_set() == {'kerem'}
-    assert m.presupposed_set() == {'noach', 'kenaan', 'tevah'}
+    assert m.presupposed_set() == {'kenaan', 'noach', 'tevah'}
     assert m.REGISTRY["names"] == {'kenaan': 'arur'}
     assert m.REGISTRY["writes"] == 1
     assert m.tests_list() == []

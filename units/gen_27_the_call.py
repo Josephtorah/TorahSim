@@ -194,8 +194,8 @@ m.presupposed("ha_negev")
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
-    assert m.created_set() == {'mizbeach_shekhem', 'mizbeach_beit_el'}
-    assert m.presupposed_set() == {'beit_el', 'eretz_kenaan', 'charan', 'ha_negev', 'shekhem', 'ha_ai'}
+    assert m.created_set() == {'mizbeach_beit_el', 'mizbeach_shekhem'}
+    assert m.presupposed_set() == {'beit_el', 'charan', 'eretz_kenaan', 'ha_ai', 'ha_negev', 'shekhem'}
     assert m.REGISTRY["names"] == {}
     assert m.REGISTRY["writes"] == 0
     assert m.tests_list() == []

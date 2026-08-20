@@ -378,7 +378,7 @@ m.name("zarach", "zarach")
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
-    assert m.created_set() == {'zarach', 'onan', 'er', 'paretz', 'shela'}
+    assert m.created_set() == {'er', 'onan', 'paretz', 'shela', 'zarach'}
     assert m.presupposed_set() == set()
     assert m.REGISTRY["names"] == {'er': 'er', 'onan': 'onan', 'shela': 'shela', 'paretz': 'paretz', 'zarach': 'zarach'}
     assert m.REGISTRY["writes"] == 5

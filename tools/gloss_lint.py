@@ -56,6 +56,9 @@ HEBREW_RUN = re.compile(r"[א-ת][֑-תװ-״]*")
 # generated files (never hand-edited); improving these means improving
 # the generator in the research repo. Keyed (file basename, token).
 ALLOW = {
+    # CSS tokens, not Hebrew (same class as the index.html entries below)
+    ("render_coverage_index.py", "ui-monospace"),
+    ("render_flat_ledger_morph_html.py", "inline-block"),
     ("gen_10_serpent_violation_trace.py", "qere"),
     ("gen_24_nations_table.py", "and-vnei-ramah"),
     ("gen_32_hagar_angel.py", "to-onyekh"),

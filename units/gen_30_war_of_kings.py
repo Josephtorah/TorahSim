@@ -307,7 +307,7 @@ m.declare("avram", "LET",
 if __name__ == "__main__":
     m.report()
     assert m.created_set() == set()
-    assert m.presupposed_set() == {'yam_ha_melach', 'tzevoyim', 'goyim_land', 'emeq_shaveh', 'emeq_ha_sidim', 'shinar', 'dan', 'en_mishpat_qadesh', 'amora', 'elam', 'tzoar', 'elasar', 'chatzetzon_tamar', 'shaveh_qiryatayim', 'damaseq', 'har_seir', 'sedom', 'ham', 'admah', 'ashterot_qarnayim', 'chovah', 'shalem', 'el_paran'}
+    assert m.presupposed_set() == {'admah', 'amora', 'ashterot_qarnayim', 'chatzetzon_tamar', 'chovah', 'damaseq', 'dan', 'el_paran', 'elam', 'elasar', 'emeq_ha_sidim', 'emeq_shaveh', 'en_mishpat_qadesh', 'goyim_land', 'ham', 'har_seir', 'sedom', 'shalem', 'shaveh_qiryatayim', 'shinar', 'tzevoyim', 'tzoar', 'yam_ha_melach'}
     assert m.REGISTRY["names"] == {}
     assert m.REGISTRY["writes"] == 0
     assert m.tests_list() == []

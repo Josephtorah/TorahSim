@@ -235,7 +235,7 @@ m.event("go_out", agent="kayin", themes=["eretz_nod_kidmat_eden"])
 if __name__ == "__main__":
     m.report()
     assert m.created_set() == set()
-    assert m.presupposed_set() == {'adamah', 'chavah', 'adam'}
+    assert m.presupposed_set() == {'adam', 'adamah', 'chavah'}
     assert m.REGISTRY["names"] == {'kayin': 'arur_min_ha_adamah'}
     assert m.REGISTRY["writes"] == 2
     assert m.tests_list() == [('PASS', 'shaah', 'hevel_u_minchato')]

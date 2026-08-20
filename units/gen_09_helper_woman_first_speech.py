@@ -149,8 +149,8 @@ m.fact("arumim(ha_adam_ve_ishto)",
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
-    assert m.created_set() == {'ishah', 'chayat_ha_sadeh', 'of_ha_shamayim'}
-    assert m.presupposed_set() == {'adamah', 'behemah', 'adam'}
+    assert m.created_set() == {'chayat_ha_sadeh', 'ishah', 'of_ha_shamayim'}
+    assert m.presupposed_set() == {'adam', 'adamah', 'behemah'}
     assert m.REGISTRY["names"] == {'ishah': 'ishah'}
     assert m.REGISTRY["writes"] == 1
     assert m.tests_list() == [('FAIL', 'tov', 'heyot_ha_adam_levado')]

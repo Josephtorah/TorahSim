@@ -1,0 +1,1036 @@
+# =============================================================================
+# LOGIC UNIT: Genesis 1:20-23 — Day five: swarms and the blessing — two LET?
+#             demands, the missing receipt, bara returns, delivery credited
+#             to the delegate, first life, first blessing (new op BLESS),
+#             mood-split mandate, clean ordinal commit
+# LOGIC-DERIVED v1 (Stage C, unit 5) — derived 2026-07-30 per the method charter
+# =============================================================================
+# Experimental model — not binding religious law.
+# STATUS: FROZEN 2026-07-30 on owner order ("freeze").
+
+meta:
+  id: "gen_05_swarms_blessing"
+  title_en: "Day five: swarms and the blessing — LET? demands, missing receipt, bara returns, first life, first blessing (1:20-23)"
+  title_he: יוֹם חֲמִישִׁי — הַשֶּׁרֶץ וְהַבְּרָכָה
+  title_he_translit: "yom chamishi — ha-sheretz ve-ha-berakhah"
+  title_he_en: "fifth day — the swarm and the blessing"
+  book_he: בְּרֵאשִׁית
+  book_he_translit: Be-reshit
+  book_en: Genesis
+  refs: "1:20-23"
+  data_paths_he:
+    - "Data/Gen.xml"
+  status: frozen
+  frozen_note_en: >
+    Derived 2026-07-30 at owner's order ("derive day 5") under the calibrated
+    coverage protocol (charter section 4.1): the span's Onkelos was read
+    Tier-A at derive time (single range fetch, logged in Data/FETCHLOG.md)
+    and the accumulated triage findings anchored to 1:20-23 were queried
+    before writing. FROZEN 2026-07-30 on owner approval ("freeze"). At
+    freeze, the interpreter gained the BLESS handler (day-4 ASSIGN
+    precedent) and the unit was machine-verified; pre-flight had run all
+    scenarios green before presentation.
+  tree_derive_version: logic_derived_v1
+  tree_derive_phase: "C-5"
+  confidence_overall: "structure tested; operator readings tested-per-TIR; intent hypothesis"
+  genre: "narrative_boot"
+  build_track: genesis_stack
+  depends_on: gen_04_lights_calendar
+  depends_note_en: >
+    Depends for PATTERN only (day-ledger baseline; the spec/delivery diff
+    method; the over-delivery precedent of the stars; receipt conventions
+    of days 1-4). Standalone machine: mayim (gen_01), aretz (gen_01/03),
+    raqia/shamayim (gen_02), yamim (named gen_03) are referenced here —
+    flagged read-before-install, not fixed.
+  owner_language_note: >
+    English for reading only. Hebrew is the derivation source.
+  oral_policy_note_en: >
+    Written trees first. Dual-track Oral only when named; never silent-merge.
+  method_note_en: >
+    Logic-derived v1: v3 ta'amim trees (glue bricks, pure binary) -> leaf role
+    frames from OSHB morph -> operator lines citing TIR-026..033 ->
+    machine-state scenarios (registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER).
+    Compound machine names use underscores (nefesh_chaya_romeset, of_kanaf)
+    so scenario clauses stay checkable; display fields keep the hyphenated
+    transliteration.
+
+  oral_audit_note_en: >
+    ORAL AUDIT 2026-08-08 (retro, oral-first era; record:
+    logic/oral_audit/AUDIT_gen_05_2026-08-08.md; manifest 6 VERIFIED
+    / 0 FAILED / 1 UNCHECKABLE). CROWNS (chain-attested +
+    DB-verified). THE MATELESS SERPENTS [G05-01, the Masorah via
+    Minchat Shai; Bereshit Rabbah 7]: התנינם ("the great
+    sea-serpents," 1:21) is written LEAN in the last yod — a
+    singular-looking skeleton for a plural word — and BR 7 rides
+    exactly that: these are behemot and leviathan, created WITHOUT
+    mates lest they fill the world; the lean form stands once in the
+    Torah. THE HARDENED GIMEL [G05-02, MS]: הגדלים ("the great
+    ones") carries the dagesh (the hardening dot) in its gimel,
+    in-stream. THE ALL-FULL FOWL-RULE [G05-03/04/05, MS + the
+    Ramah]: עוף כנף ("winged fowl," 1:21) written FULL with vav;
+    ועוף יעופף ("and fowl that flies," 1:20) "both written full";
+    and the Ramah's whole-Torah rule — "every fowl-language in the
+    Torah is likewise full" — verified by its negative space: the
+    lean fowl-skeleton (the word without its vav) appears ZERO times
+    in the stream, bare or prefixed. THE KITZUR'S FOWL-TRIPLE, EXACT
+    [G05-06, Kitzur Baal HaTurim; the Masorah; Chullin 63b]: והעוף
+    ("and the fowl") stands THREE times in the Masorah's count — the
+    fowl shall INCREASE (1:22, the blessing), the fowl ATE them (the
+    baker's doomed dream, Gen 40:17), the law of beast and fowl (Lev
+    11:46) — hinting Chullin 63b: pure birds outnumber the impure;
+    all three stations are Torah-side and SNAPSHOT's count is exact.
+    INSTRUMENT GAP [G05-07, Et Sofer + the Jerusalem-exile Sephardic
+    books + Rambam via MS]: an OPEN paragraph break stands before
+    "let the waters swarm" (1:20) against prints that run it on —
+    the paragraph layer is uninstrumented in SNAPSHOT, filed to the
+    paragraph gap class. READINGS (named-only): BR 7 (the mateless
+    pair); Chullin 63b via the Kitzur (the purity-census of birds).
+derivation_log:
+  - step: A
+    name_en: "Block choice"
+    comment: >
+      Day-5 unit (1:20-23): four firsts in four verses — the corpus's first
+      LIFE (nefesh chaya), its first BLESSING (va-yevarekh), its first true
+      IMPERATIVES (peru u-revu u-milu, Vqv2mp — the creatures are the first
+      entities the corpus addresses in the second person), and the first
+      return of bara since 1:1. Structurally it is the deviation unit: the
+      only work-day fiat with NO receipt token (va-yehi khen absent from
+      the whole span, MT — Onkelos adds none either), both demands in the
+      corpus's LET? mood (imperfect forms, TIR-028), and the delivery
+      executed by God under a spec that delegated to the waters.
+    confidence: established
+  - step: B
+    name_en: "Hebrew source + trees"
+    comment: >
+      All 4 verses via taamim_tree_parse.py rule set v3: status unique,
+      pure_binary true. tree_ascii regenerated 2026-07-30 from DB tree_json.
+    confidence: tested
+    tags: ["[HE-STRUCT]"]
+  - step: C
+    name_en: "Segment structure"
+    comment: >
+      Verb morphology (#IMPOSED OSHB, DB-verified 2026-07-30): yishretzu
+      Vqi3mp — QAL IMPERFECT, not jussive-coded — over subject ha-mayim:
+      the LET? mood is mandatory (TIR-028); ye'ofef Voi3ms — POLEL
+      IMPERFECT — second LET?. shartzu Vqp3cp — the same root sh-r-tz
+      returning as PERFECT inside 1:21's relative clause (imperfect demand
+      -> perfect receipt, letter-visible). ha-romeset Vqrfsa — participle,
+      standing behavior (TIR-031). va-yevarekh Vpw3ms — PIEL wayyiqtol,
+      new verb stem for the corpus. peru/u-revu/u-milu Vqv2mp x3 — the
+      corpus's first true imperatives (TIR-027); yirev Vqj3ms — JUSSIVE,
+      apocopated — a third-person mood inside the same quoted mandate.
+      THREE et-markers at 1:21 (To x3) + otam (To+Sp3mp) at 1:22.
+      ha-taninim coded PLURAL (Ncmpa) but written DEFECTIVE — the plural
+      suffix missing its yod (התנינם, single yod; verified from own letter
+      data 2026-07-30) — the me'orot-class orthography flag. chamishi
+      Aomsa — the day label morphology-tagged ORDINAL.
+    confidence: tested
+    tags: ["[HE-STRUCT]","#IMPOSED-OSHB"]
+  - step: D
+    name_en: "Predicates & outcomes"
+    comment: >
+      SPEC (1:20): two LET? demands in one utterance — the waters delegated
+      to swarm swarming-life (cognate accusative: yishretzu...sheretz), and
+      fliers to fly across the face of the raqia (second cognate pair:
+      of...ye'ofef). NO receipt token follows — the first fiat in the week
+      whose verse (and span) has no va-yehi khen. BUILD (1:21): bara — God
+      himself delivers; the great taninim lead the inventory unordered;
+      the relative clause asher shartzu ha-mayim (PERFECT) credits the
+      delegate after the fact — the receipt rides the delivery. Kind-keys
+      (le-minehem/le-minehu) and the kanaf differentiator are added at
+      delivery. TEST passes at 1:21, BEFORE the blessing. BLESS (1:22):
+      the mandate quoted via le-mor — three 2mp imperatives for the water
+      creatures, one 3ms jussive for the fowl (which receives only the
+      middle verb, r-b-h); the erstwhile delegate mayim becomes the OBJECT
+      to be filled (et-ha-mayim). COMMIT ordinal, clean.
+    confidence: tested
+  - step: E
+    name_en: "Logic format choice"
+    comment: >
+      Operator lines + WORLD writes + day-ledger row; ONE Hoare TRIPLE
+      carries the delegation contract of the primary demand; BLESS
+      introduced for the benediction speech act — the mandate is recorded
+      as STANDING WORLD FACTS, deliberately NOT pushed to SPECS: its
+      fulfillment horizon exceeds the unit (and the week — pru u-rvu
+      recurs at 1:28 and 9:1), and the text itself closes the day clean
+      with no receipt for it; a SPECS push would falsify the text's own
+      clean commit. Interpreter vocabulary to be extended at verification
+      (day-4 ASSIGN precedent).
+    confidence: established
+  - step: F
+    name_en: "Bilingual logic objects"
+    comment: >
+      Every operator line carries he + he_translit + en; register values
+      keep Hebrew where the text supplies them (sheretz, chamishi).
+      Compound machine identifiers use underscores for clause-checkability.
+    confidence: established
+  - step: G
+    name_en: "Oral (named only) + Tier-A translation check"
+    comment: >
+      Verified from local Data: Avot DeRabbi Natan B 36:2 (R. Yirmiyah's
+      ten-utterances census variant COUNTS this unit's va-yivra
+      et-ha-taninim among the ten — read at the day-1 triage, gen_01
+      ledger row 93; quote re-verified local 2026-07-30). Named but not
+      yet read (observation tier, day-5 Tier-A queue): Bava Batra 74b and
+      BR 7:4 on the defective taninim ktiv (the tradition Rashi on 1:21
+      transmits — Leviathan and its mate). Tier-A Onkelos read at derive
+      time (FETCHLOG 2026-07-30), five findings: yirchashun — the
+      delegation and its imperfect mood RETAINED (contrast day 4, where
+      Onkelos normalized yehi's number); NO receipt token added — the
+      missing va-yehi khen stood in the received text; archishu — the
+      waters' swarming rendered in the APHEL (causative) stem, "which the
+      waters BROUGHT FORTH": the translation's resolution of the dual
+      agency; ofa de-farach — kanaf re-verbalized, giving the flier demand
+      the same relative-clause receipt shape the Hebrew gives only the
+      swarm demand; the imperatives pushu/u-sgu/u-mlu retained 2mp with
+      the fowl's 3ms yisgei — both grammar quirks preserved, and the
+      s-g-y root repetition exposes the fowl's one-verb-of-three mandate.
+    confidence: tested
+    tags: ["[ORAL]","[TIER-A]"]
+  - step: H
+    name_en: "Scenarios"
+    comment: >
+      S1-S4 register deltas per step: the two LET? demands with moods
+      intact after 1:20, the triple discharge and three-entity WORLD write
+      and spec-delta flags and early TEST at 1:21, the standing mandate
+      facts at 1:22, the clean ORDINAL commit at 1:23. S5_negative
+      re-asserts the LET? contract on the very form this unit carries live
+      (the interpreter's S7 self-test has rehearsed LET?(swarm(mayim))
+      since gen_02 — day 5 is where the rehearsal becomes the text).
+      S6_negative re-asserts flag-never-block.
+    confidence: tested
+  - step: I
+    name_en: "English leakage review"
+    comment: >
+      Operators derive from morph codes (Vqi/Voi imperfects -> LET?;
+      Vqv2mp imperatives -> CMD!; Vqj3ms jussive -> LET; Vpw piel
+      wayyiqtol; Vqp perfect; Vqrfsa participle; Aomsa ordinal), particles
+      (et x3 inventory, le- kind-keys, al-pnei vs bi- mount contrast) —
+      not from English glosses. The deltas are letter-visible
+      word-sequence comparisons (taninim absent from spec; sh-r-tz
+      imperfect -> perfect with agent shift; kind-keys and kanaf added).
+      The defective-plural flag rests on our own letter data (התנינם,
+      single yod) against the OSHB plural coding (Ncmpa).
+    confidence: established
+  - step: J
+    name_en: "Freeze"
+    comment: >
+      status: frozen 2026-07-30 on owner approval ("freeze"). BLESS
+      handler added to the interpreter at verification (ASSIGN precedent);
+      all five logic-derived units verified green. Changes require a new
+      derive pass, not silent edits.
+      Oral audit 2026-08-08 folded same day (run 8 block 3): 6 VERIFIED /
+      0 FAILED / 1 UNCHECKABLE — see meta oral_audit_note_en; machine
+      layer untouched.
+    confidence: established
+
+boot_steps:
+  - id: STEP_Gn_1_20
+    order: 1
+    ref: "Gen.1.20"
+    op: DECLARE_SPEC_SWARM_FLIGHT
+    he: וַיֹּאמֶר אֱלֹהִים יִשְׁרְצוּ הַמַּיִם שֶׁרֶץ נֶפֶשׁ חַיָּה וְעוֹף יְעוֹפֵף עַל־הָאָרֶץ עַל־פְּנֵי רְקִיעַ הַשָּׁמָיִם
+    he_translit: "va-yomer Elohim yishretzu ha-mayim sheretz nefesh chaya ve-of ye'ofef al-ha-aretz al-pnei reqia ha-shamayim"
+    en: "[EN-AID/JPS] And God said: 'Let the waters swarm with swarms of living creatures, and let fowl fly above the earth in the open firmament of heaven.'"
+    tree_left:
+      he: ויאמר אלהים ישרצו המים שרץ נפש חיה
+      he_translit: "va-yomer Elohim yishretzu ha-mayim sheretz nefesh chaya"
+      en: "speech act + the swarm delegation with its cognate product (etnachta arm)"
+    tree_right:
+      he: ועוף יעופף על הארץ על פני רקיע השמים
+      he_translit: "ve-of ye'ofef al-ha-aretz al-pnei reqia ha-shamayim"
+      en: "the flight demand: over the earth, across the FACE of the firmament"
+    operators:
+      - op: DECLARE
+        expr_en: "DECLARE(Elohim, LET?(swarm(mayim), product=sheretz_nefesh_chaya))"
+        he: יִשְׁרְצוּ הַמַּיִם שֶׁרֶץ נֶפֶשׁ חַיָּה
+        he_translit: "yishretzu ha-mayim sheretz nefesh chaya"
+        en: >
+          QAL IMPERFECT 3MP (Vqi3mp) — NOT jussive-coded: the ? is mandatory
+          (TIR-028) and stays on the log forever (contrast day 3's yiqqavu,
+          coded niphal JUSSIVE, a clean LET). A delegation with a named
+          delegate: the WATERS are the subject of the swarming — the day-3
+          pattern (tadshe ha-aretz) on the water registry. The product is a
+          COGNATE ACCUSATIVE: yishretzu...sheretz — the verb's own root
+          (sh-r-tz) as its object, letter-visible; and the product class is
+          NEFESH CHAYA — the corpus's first living entities (day 3's plants
+          never receive the term). Onkelos (Tier-A 2026-07-30) retains both
+          the delegation and the imperfect (yirchashun mayya) — no
+          normalization this time.
+        cites: ["TIR-028"]
+        confidence: "tested as flag; resolution per-unit only"
+      - op: DECLARE
+        expr_en: "DECLARE(Elohim, LET?(fly(of), loc=pnei_raqia_ha_shamayim))"
+        he: וְעוֹף יְעוֹפֵף עַל־הָאָרֶץ עַל־פְּנֵי רְקִיעַ הַשָּׁמָיִם
+        he_translit: "ve-of ye'ofef al-ha-aretz al-pnei reqia ha-shamayim"
+        en: >
+          POLEL IMPERFECT 3MS (Voi3ms) — second mandatory LET?. Second
+          cognate pair in the same verse: of...ye'ofef ('let the flier
+          fly'). Location note, letter-visible against day 4: the
+          luminaries were mounted BI-rkia ('IN the firmament', 1:17); the
+          fliers fly AL-PNEI reqia ('across the FACE of the firmament') —
+          two prepositions, two relations to the same day-2 entity: the
+          birds are not fixtures.
+        cites: ["TIR-028"]
+        confidence: "tested as flag; resolution per-unit only"
+      - op: TRIPLE
+        expr_en: "{ P: mayim read (presupposed, standalone) } delegate-build { Q: swarm(mayim), product=sheretz_nefesh_chaya }"
+        he: יִשְׁרְצוּ הַמַּיִם שֶׁרֶץ
+        he_translit: "yishretzu ha-mayim sheretz"
+        en: >
+          The delegation contract on the primary demand: the waters, read
+          presupposed, are to produce swarming life. Unlike day 4's triple
+          (job-list criteria, receipt by va-yehi khen at 1:15), this
+          contract has NO receipt token waiting — its discharge arrives
+          inside the delivery verse itself (1:21's relative clause).
+        cites: []
+        confidence: tested
+      - op: NOTE_PRESUPPOSED
+        expr_en: "mayim, aretz, raqia, shamayim are READ without prior install (standalone machine; installed in gen_01/gen_02 — cross-unit chaining is Stage E)"
+        en: "flag, not fix"
+        cites: []
+        confidence: tested
+    comment: >
+      The etnachta splits [delegation + cognate product | flight demand]:
+      one utterance, two demands, two registries (waters below, the
+      raqia's face above). The FIRST fiat in the week with no va-yehi khen
+      in its verse — and none ever comes: the receipt convention of days
+      1-4 is silently dropped (MT; Onkelos adds none), recorded [OPEN].
+    confidence: tested
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+  - id: STEP_Gn_1_21
+    order: 2
+    ref: "Gen.1.21"
+    op: BUILD_CREATE_CREDIT_DELTA_TEST
+    he: וַיִּבְרָא אֱלֹהִים אֶת־הַתַּנִּינִם הַגְּדֹלִים וְאֵת כָּל־נֶפֶשׁ הַחַיָּה הָרֹמֶשֶׂת אֲשֶׁר שָׁרְצוּ הַמַּיִם לְמִינֵהֶם וְאֵת כָּל־עוֹף כָּנָף לְמִינֵהוּ וַיַּרְא אֱלֹהִים כִּי־טוֹב
+    he_translit: "va-yivra Elohim et-ha-taninim ha-gedolim ve-et kol-nefesh ha-chaya ha-romeset asher shartzu ha-mayim le-minehem ve-et kol-of kanaf le-minehu va-yar Elohim ki-tov"
+    en: "[EN-AID/JPS] And God created the great sea-monsters, and every living creature that creepeth, wherewith the waters swarmed, after its kind, and every winged fowl after its kind; and God saw that it was good."
+    tree_left:
+      he: ויברא אלהים את התנינם הגדלים
+      he_translit: "va-yivra Elohim et-ha-taninim ha-gedolim"
+      en: "bara returns: the unordered great taninim lead the inventory (etnachta arm)"
+    tree_right:
+      he: ואת כל נפש החיה הרמשת אשר שרצו המים למינהם ואת כל עוף כנף למינהו וירא אלהים כי טוב
+      he_translit: "ve-et kol-nefesh ha-chaya ha-romeset asher shartzu ha-mayim le-minehem ve-et kol-of kanaf le-minehu va-yar Elohim ki-tov"
+      en: "the credited inventory (kind-keyed) + the day's test — before the blessing"
+    operators:
+      - op: EVENT
+        expr_en: "create(e1) ∧ Agent(e1, Elohim) ∧ Theme(e1, taninim) ∧ Theme(e1, nefesh_chaya_romeset) ∧ Theme(e1, of_kanaf)"
+        he: וַיִּבְרָא אֱלֹהִים אֶת … וְאֵת … וְאֵת
+        he_translit: "va-yivra Elohim et … ve-et … ve-et"
+        en: >
+          bara ('created', Vqw3ms) — the 1:1 verb, RETURNING for the first
+          time since the corpus opened: not asah (days 2, 4), not a
+          delegate's production (day 3) — creation's own verb, and its
+          themes are the corpus's first LIVING entities. THREE et-markers
+          (To x3). Orthography flag, verified from own letter data
+          2026-07-30: הַתַּנִּינִם is coded PLURAL (Ncmpa) but WRITTEN
+          DEFECTIVE — the plural suffix missing its yod (single-yod ktiv) —
+          the me'orot-class mismatch between coded form and written form,
+          recorded [OPEN] (Oral candidate: the tannin/Leviathan reading —
+          observation tier, ORAL_taninim_defective). ha-romeset: participle
+          (Vqrfsa) — the delivered class described by STANDING BEHAVIOR
+          (TIR-031), not event.
+        cites: ["TIR-014", "TIR-015", "TIR-031"]
+        confidence: tested
+      - op: REGISTRY_INSTALL
+        expr_en: "WORLD += {taninim, nefesh_chaya_romeset, of_kanaf} — the delivered inventory, credited and kind-keyed"
+        en: "three entity classes enter the world; the middle one arrives inside a relative clause that names its producer"
+        cites: []
+        confidence: tested
+      - op: RESULT
+        expr_en: "HOLDS(swarm(mayim), product=sheretz_nefesh_chaya, t1) — asher shartzu ha-mayim: the perfect-tense relative clause is the receipt; no va-yehi khen exists in this unit"
+        he: אֲשֶׁר שָׁרְצוּ הַמַּיִם
+        he_translit: "asher shartzu ha-mayim"
+        en: >
+          The receipt, relocated: the demand verb returns as a PERFECT
+          (shartzu, Vqp3cp — same root, same subject ha-mayim) inside the
+          delivery's relative clause — 'which the waters SWARMED'. The
+          text pops the 1:20 demand not with the ceremonial token but by
+          crediting the delegate mid-inventory. Onkelos sharpens the
+          crediting into causation: archishu (APHEL) — 'which the waters
+          BROUGHT FORTH'. Mood of the demand stays LET? on the log
+          (TIR-028 — satisfaction is not upgrade).
+        cites: []
+        confidence: tested
+      - op: RESULT
+        expr_en: "HOLDS(fly(of), loc=pnei_raqia_ha_shamayim, t1) — ve-et kol-of kanaf: receipt by delivered inventory"
+        he: וְאֵת כָּל־עוֹף כָּנָף
+        he_translit: "ve-et kol-of kanaf"
+        en: >
+          The flier demand pops by DELIVERY ALONE: no perfect-tense echo,
+          no receipt clause — the winged inventory simply appears in the
+          bara list. Receipt asymmetry, letter-visible: the waters get
+          verbal credit (shartzu), the fliers only presence. Onkelos
+          repairs the asymmetry — ofa DE-FARACH ('fowl THAT FLIES')
+          re-verbalizes kanaf, handing the flier demand the same
+          relative-clause receipt shape. Recorded [OPEN].
+        cites: []
+        confidence: tested
+      - op: NOTE_SPEC_DELTA
+        expr_en: "spec 'yishretzu HA-MAYIM (the waters as delegated producer)' delivered 'va-yivra ELOHIM (bara — God executes; the waters credited only in the relative clause)' — flag spec_delta"
+        he: יִשְׁרְצוּ הַמַּיִם ← וַיִּבְרָא אֱלֹהִים
+        he_translit: "yishretzu ha-mayim -> va-yivra Elohim"
+        en: >
+          The agent delta: the spec delegates, the delivery is executed by
+          God himself with creation's strongest verb — while the relative
+          clause simultaneously credits the delegate. Dual agency,
+          letter-visible in one verse (bara + shartzu). Contrast day 3,
+          where the delegate performed (tadshe -> va-totze ha-aretz).
+          Significance = named-Oral track (Onkelos's aphel is the first
+          resolution witness; chain primaries queued for the day-5 triage).
+        cites: []
+        confidence: "delta tested (letter-visible); significance = named-Oral track"
+      - op: NOTE_SPEC_DELTA
+        expr_en: "spec 'no taninim in the order' delivered 'et-ha-taninim ha-gedolim leading the inventory, with the week's only mid-week bara' — flag spec_delta"
+        he: אֶת־הַתַּנִּינִם הַגְּדֹלִים
+        he_translit: "et-ha-taninim ha-gedolim"
+        en: >
+          Over-delivery in first position: the great taninim appear in no
+          spec clause, yet they lead the delivery AND take the bara. The
+          day-4 pattern (the stars, appended unordered) escalated: the
+          stars trailed office-less; the taninim LEAD, adjective-bearing —
+          ha-GEDOLIM, the same plural adjective 1:16 gave the two lights:
+          the week's only two 'great' inventories, both followed by
+          chain diminution traditions (the moon; the Leviathan's mate) —
+          echo candidate, observation tier.
+        cites: []
+        confidence: "delta tested (letter-visible)"
+      - op: NOTE_SPEC_DELTA
+        expr_en: "spec 'sheretz nefesh chaya; of (bare classes)' delivered 'kol- totality x2, kind-keys le-minehem / le-minehu, of differentiated as of KANAF' — flag spec_delta"
+        he: כָּל … לְמִינֵהֶם … כָּל־עוֹף כָּנָף לְמִינֵהוּ
+        he_translit: "kol … le-minehem … kol-of kanaf le-minehu"
+        en: >
+          Delivery enrichment: the spec named bare classes; the delivery
+          quantifies them (kol-, 'every'), partitions them by kind
+          (le-minehem/le-minehu — the day-3 kind-key system, here ADDED at
+          delivery where day 3's spec ordered it), and differentiates the
+          flier (kanaf, 'winged'). Inverse of day 3's direction; same
+          diff method.
+        cites: []
+        confidence: "delta tested (letter-visible)"
+      - op: TEST
+        expr_en: "PASS(tov, nefesh_chaya)"
+        he: כִּי־טוֹב
+        he_translit: "ki-tov"
+        en: >
+          The day's single test — no explicit et-object (like days 3-4):
+          the inspection covers the delivered work as a whole. Position
+          note: the test rides the DELIVERY verse, BEFORE the blessing —
+          the oracle passes the work, then the work is blessed: quality
+          gate precedes benediction, letter-visible order. Three deltas
+          stand flagged; the oracle passes the delivery AS DELIVERED.
+        cites: []
+        confidence: tested
+    comment: >
+      The densest verse of the unit: creation verb returned, inventory
+      credited to its delegate mid-list, three deltas on the books, test
+      passed — all before the day's most novel act (1:22). The receipt
+      convention of days 1-4 is replaced by a relative clause doing
+      receipt work inside the delivery itself.
+    confidence: tested
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+  - id: STEP_Gn_1_22
+    order: 3
+    ref: "Gen.1.22"
+    op: BLESS_MANDATE
+    he: וַיְבָרֶךְ אֹתָם אֱלֹהִים לֵאמֹר פְּרוּ וּרְבוּ וּמִלְאוּ אֶת־הַמַּיִם בַּיַּמִּים וְהָעוֹף יִרֶב בָּאָרֶץ
+    he_translit: "va-yevarekh otam Elohim le-mor peru u-revu u-milu et-ha-mayim ba-yamim ve-ha-of yirev ba-aretz"
+    en: "[EN-AID/JPS] And God blessed them, saying: 'Be fruitful, and multiply, and fill the waters in the seas, and let fowl multiply in the earth.'"
+    tree_left:
+      he: ויברך אתם אלהים לאמר
+      he_translit: "va-yevarekh otam Elohim le-mor"
+      en: "the blessing event + the quote opener (etnachta arm)"
+    tree_right:
+      he: פרו ורבו ומלאו את המים בימים והעוף ירב בארץ
+      he_translit: "peru u-revu u-milu et-ha-mayim ba-yamim ve-ha-of yirev ba-aretz"
+      en: "the quoted mandate: three imperatives + the fowl's jussive"
+    operators:
+      - op: BLESS
+        expr_en: "BLESS(Elohim, otam) MANDATE {CMD!(peru), CMD!(revu), CMD!(milu(et_ha_mayim_ba_yamim)), LET(yirev(ha_of_ba_aretz))}"
+        he: וַיְבָרֶךְ אֹתָם אֱלֹהִים לֵאמֹר פְּרוּ וּרְבוּ וּמִלְאוּ
+        he_translit: "va-yevarekh otam Elohim le-mor peru u-revu u-milu"
+        en: >
+          The corpus's FIRST BLESSING: va-yevarekh (PIEL wayyiqtol — a new
+          verb stem) + otam (the et-marker with pronominal suffix, the 1:21
+          inventory as recipients) + le-mor opening QUOTED DIRECT SPEECH.
+          Inside the quote: peru u-revu u-milu — Vqv2mp x3, the corpus's
+          first true IMPERATIVES (TIR-027: CMD!): the creatures are the
+          first entities the corpus ADDRESSES — second-person speech to
+          made things, inside a blessing (the rulebook's own note on the
+          1:28 parallel: the operator records mood, not tone, and the
+          co-occurrence is itself a finding). Then the mood SPLITS: the
+          fowl's clause is 3MS JUSSIVE (yirev, Vqj3ms, apocopated —
+          TIR-026: LET) — third person inside the same mandate, and the
+          fowl receives only ONE of the three verbs (r-b-h, the middle
+          one): no peru, no milu — 1/3 of the mandate, letter-visible
+          (Onkelos mirrors: pushu/u-sgu/u-mlu 2mp, then yisgei 3ms — the
+          s-g-y repetition exposing the ration). Role flip, letter-visible:
+          et-ha-mayim — the 1:20 DELEGATE is now the OBJECT to be filled
+          (subject at 1:20-21, patient at 1:22), recorded [OPEN]. The
+          mandate is a STANDING DIRECTIVE recorded as WORLD facts, NOT
+          pushed to SPECS: no receipt for it exists in the text, its
+          horizon exceeds the week (1:28 humans; 9:1 Noah), and the day
+          still commits clean — a SPECS push would falsify that. NEW OP:
+          interpreter vocabulary extended at verification (day-4 ASSIGN
+          precedent).
+        cites: ["TIR-027", "TIR-026", "TIR-014"]
+        confidence: tested
+      - op: NOTE_PRESUPPOSED
+        expr_en: "yamim are READ without prior install (standalone machine; NAMED in gen_03's va-yiqra — cross-unit chaining is Stage E)"
+        en: "flag, not fix — the mandate's fill-target container is day 3's named entity"
+        cites: []
+        confidence: tested
+    comment: >
+      The day's novelty verse: after building and testing, the corpus
+      acquires a speech act that neither demands (DECLARE) nor labels
+      (NAME) nor appoints (ASSIGN) — it EMPOWERS its recipients toward
+      their own increase, in the second person. First addressees, first
+      imperatives, first standing mandate.
+    confidence: tested
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+  - id: STEP_Gn_1_23
+    order: 4
+    ref: "Gen.1.23"
+    op: COMMIT_DAY
+    he: וַיְהִי־עֶרֶב וַיְהִי־בֹקֶר יוֹם חֲמִישִׁי
+    he_translit: "va-yehi erev va-yehi voqer yom chamishi"
+    en: "[EN-AID/JPS] And there was evening and there was morning, a fifth day."
+    tree_left:
+      he: ויהי ערב ויהי בקר
+      he_translit: "va-yehi erev va-yehi voqer"
+      en: "cycle close"
+    tree_right:
+      he: יום חמישי
+      he_translit: "yom chamishi"
+      en: "day ledger entry — two demands popped, one test, mandate standing"
+    operators:
+      - op: COMMIT
+        expr_en: "cycle(erev -> boqer); LEDGER[day 5] := {spec ✓, test PASS, mandate standing}"
+        he: יוֹם חֲמִישִׁי
+        he_translit: "yom chamishi"
+        en: >
+          chamishi = ORDINAL 'fifth' (Aomsa — the morphology itself tags
+          the label; the day-1 cardinal echad remains the marked
+          exception). Both LET? demands popped at 1:21 (moods still LET?
+          on the log — TIR-028), one PASS on the books, the blessing's
+          mandate standing as WORLD facts with no receipt owed. Three
+          spec-delta flags ride the ledger without blocking. ZERO REGISTRY
+          writes — no naming (series ended day 3), no office (day 4's
+          device unused): the first build day that leaves the registry
+          untouched. Clean commit.
+        cites: []
+        confidence: tested
+    comment: >
+      The transaction closes clean around an unclosed mandate: the machine
+      distinguishes what the day OWED (spec, test — settled) from what the
+      day LAUNCHED (the standing fertility directive — open by design).
+    confidence: tested
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+state_machine:
+  comment_en: "Day-5 work order (standalone; registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER)."
+  states:
+    - id: S_boot
+      en: "Before 1:20 — all registers empty (standalone unit)"
+    - id: S_spec_open_two
+      en: "After 1:20 — TWO LET? demands pushed and OPEN (swarm delegation; flight); NO receipt token anywhere ahead; mayim/aretz/raqia/shamayim flagged"
+    - id: S_built_credited_tested
+      en: "After 1:21 — bara delivery: WORLD += {taninim, nefesh_chaya_romeset, of_kanaf}; both demands popped (receipt via relative clause / via delivery); moods remain LET?; spec_delta x3; TESTS: PASS(tov, nefesh_chaya) — before the blessing"
+    - id: S_blessed_mandated
+      en: "After 1:22 — first BLESS: mandate standing as WORLD facts (3 CMD! + 1 LET), SPECS untouched; yamim flagged"
+    - id: S_day5_committed_clean
+      en: "After 1:23 — LEDGER[5] closed ordinal chamishi; clean; zero REGISTRY writes; three deltas ride"
+  transitions:
+    - {from: S_boot, to: S_spec_open_two, via: STEP_Gn_1_20}
+    - {from: S_spec_open_two, to: S_built_credited_tested, via: STEP_Gn_1_21}
+    - {from: S_built_credited_tested, to: S_blessed_mandated, via: STEP_Gn_1_22}
+    - {from: S_blessed_mandated, to: S_day5_committed_clean, via: STEP_Gn_1_23}
+
+state_after:
+  - id: AFTER_S_day5_committed_clean
+    en: >
+      WORLD: taninim, nefesh_chaya_romeset, of_kanaf (the delivered,
+      credited, kind-keyed inventory — the corpus's first LIVING entities)
+      + mayim, aretz, raqia, shamayim, yamim (presupposed, flagged) +
+      standing mandate facts {CMD!(peru), CMD!(revu), CMD!(milu),
+      LET(yirev)} — the first WORLD entries that are directives held BY
+      creatures rather than states of them. REGISTRY: untouched — 0 naming
+      writes, 0 role writes (day 4 ended naming; day 5 uses neither
+      device). SPECS: log holds two satisfied demands, both moods still
+      LET? (TIR-028). TESTS: PASS(tov, nefesh_chaya). LEDGER: day 5
+      committed, ordinal chamishi, clean. FLAGS: read_before_install x5
+      (mayim, aretz, raqia, shamayim, yamim), spec_delta x3 (agent shift;
+      taninim over-delivered; totality/kind-keys/kanaf enrichment) — none
+      blocking.
+
+exports:
+  - id: EXPORT_first_life
+    he: נֶפֶשׁ חַיָּה
+    he_translit: "nefesh chaya"
+    en: "the corpus's first living entities and its taxonomy term for them — day 3's plants never receive it; recurs at 1:24 (land animals), 1:30, 2:7 (the human)"
+  - id: EXPORT_first_blessing_addressees
+    he: וַיְבָרֶךְ … פְּרוּ וּרְבוּ
+    he_translit: "va-yevarekh … peru u-revu"
+    en: "BLESS + second-person imperatives: creatures as the corpus's first addressees; the formula recurs at 1:28 (humans, extended to five imperatives), 2:3 (the day itself blessed), 9:1 (Noah)"
+  - id: EXPORT_delegation_answered_by_bara
+    he: יִשְׁרְצוּ הַמַּיִם ← וַיִּבְרָא אֱלֹהִים … אֲשֶׁר שָׁרְצוּ הַמַּיִם
+    he_translit: "yishretzu ha-mayim -> va-yivra Elohim … asher shartzu ha-mayim"
+    en: "delegation answered by direct divine creation WITH the delegate credited in a relative clause — dual agency in one verse; contrast day 3 (delegate performed); Onkelos resolves via the causative stem"
+  - id: EXPORT_missing_receipt
+    he: (וַיְהִי־כֵן — absent)
+    he_translit: "(va-yehi khen — absent)"
+    en: "the only work-day fiat with no receipt token (MT; Onkelos adds none): receipt work relocated into the delivery's relative clause — check against 1:24-31 (day 6 restores va-yehi khen) and day 7 (no commit at all)"
+  - id: EXPORT_gedolim_pair
+    he: הַמְּאֹרֹת הַגְּדֹלִים ← הַתַּנִּינִם הַגְּדֹלִים
+    he_translit: "ha-me'orot ha-gedolim -> ha-taninim ha-gedolim"
+    en: "the week's only two 'great' inventories (1:16, 1:21), both defectively-spelled head nouns, both with chain diminution traditions (the moon; the Leviathan's mate) — written-echo candidate, observation tier"
+  - id: EXPORT_mood_split_mandate
+    he: פְּרוּ וּרְבוּ וּמִלְאוּ … וְהָעוֹף יִרֶב
+    he_translit: "peru u-revu u-milu … ve-ha-of yirev"
+    en: "one mandate, two moods (2mp imperatives; 3ms jussive) — and the fowl receives only the middle verb: mandate rationing, letter-visible in both languages"
+  - id: EXPORT_face_vs_in_mount
+    he: בִּרְקִיעַ (1:17) ← עַל־פְּנֵי רְקִיעַ (1:20)
+    he_translit: "bi-rkia (1:17) -> al-pnei reqia (1:20)"
+    en: "two relations to the day-2 entity: luminaries mounted IN it (fixtures), fliers crossing its FACE (free agents) — preposition-level distinction between installed and blessed kinds"
+
+oral_notes:
+  - id: ORAL_census_taninim
+    status: verified
+    work_en: "Avot DeRabbi Natan, Recension B 36:2 (ten-utterances census variant) — read at the day-1 triage (gen_01 ledger row 93); quote re-verified local 2026-07-30"
+    he: "רבי ירמיה הוה מקיים ויברא אלהים את התנינים [וגורע] לא טוב היות"
+    he_translit: "Rabbi Yirmiyah havah mekayyem va-yivra Elohim et ha-taninim [ve-gorea] lo tov heyot"
+    en: >
+      R. Yirmiyah SUSTAINS 'va-yivra Elohim et-ha-taninim' (this unit's
+      1:21) in the ten-utterances census [and removes 'it is not good...'
+      (2:18)]: a chain voice counting the bara of the taninim among the
+      ten ma'amarot (utterances) — the delivery verse read as carrying
+      utterance force of its own, bearing on the DECLARE/bara relation
+      this unit flags as its agent delta. Note: the anthology quotes the
+      word PLENE (התנינים, two yods) where our corpus writes it DEFECTIVE
+      (התנינם) — the census variant silently normalizes the very
+      orthography flagged [OPEN] here.
+    comment_en: "Verified from Data/sefaria_texts/ (local). Dual-track; not merged."
+    source: "[ORAL][VERIFIED-LOCAL]"
+  - id: ORAL_taninim_defective
+    status: verified
+    work_en: "Bereshit Rabbah 7:4 (the ktiv owner) with Bava Batra 74b:5-8 (the Leviathan dossier; 74b:6-8 via §4.1 promotion fetch) — read at the day-5 triage (ledger rows 3, 9); the tradition Rashi on 1:21 transmits"
+    he: "רַבִּי פִּנְחָס בְּשֵׁם רַבִּי אַחָא אָמַר תַּנִּינָם כְּתִיב, זֶה בְּהֵמוֹת וְלִוְיָתָן שֶׁאֵין לָהֶם בֶּן זוּגוֹת"
+    he_translit: "Rabbi Pinchas be-shem Rabbi Acha amar: TANNINAM KTIV — zeh Behemot ve-Livyatan she-ein lahem ben zugot"
+    en: >
+      "R. Pinchas in the name of R. Acha said: TANNINAM IS WRITTEN
+      [defective] — this is Behemot and Leviathan, who have no mates":
+      the chain-primary owner of the single-yod flag, reading the short
+      plural as the pair-less singulars. Beside it the Bavli's version
+      (BB 74b:5: R. Yochanan — "this is Leviathan the slant serpent and
+      Leviathan the tortuous serpent"; 74b:6: "male and female He created
+      them… He castrated the male and slew the female and salted her for
+      the righteous — ve-harag et ha-tannin asher ba-yam", Isa 27:1):
+      same flag, two chain resolutions (never-paired vs pair-broken).
+      Targum Jonathan writes the tradition into the verse itself ("yat
+      Leviathan and its mate, readied for the day of consolation" — the
+      preserved-not-slain version); Lekach Tov 1:21:1 states the letter
+      fact verbatim ("tanninam is written, MISSING ITS YOD"). The
+      letter-level fact remains verified from our own word data
+      (single-yod ktiv against the Ncmpa plural coding, 2026-07-30).
+    comment_en: >
+      AMENDED 2026-07-30 at the day-5 triage (owner order "do the day 5
+      triage"; upgrade pre-announced in the note's own text): observation
+      -> verified at the chain-primary locations, from local text.
+      Dual-track; the machine's [OPEN] flag stands. Not merged.
+    source: "[ORAL][VERIFIED-LOCAL]"
+  - id: ORAL_of_source_reqaq
+    status: verified
+    work_en: "Bavli Chullin 27b:11 (with the sugya's answer at 27b:12, carried in Ein Yaakov Chullin 2:1) and Pesikta DeRav Kahana 4:3 — on the 1:20 DECLARE-2; day-5 triage rows 11, 66"
+    he: "כָּתוּב אֶחָד אוֹמֵר יִשְׁרְצוּ הַמַּיִם … וְעוֹף יְעוֹפֵף — אַלְמָא מִמַּיָּא אִיבְּרוֹ, וּכְתִיב וַיִּצֶר ה' אֱלֹהִים מִן הָאֲדָמָה … וְאֵת כָּל עוֹף הַשָּׁמַיִם — אַלְמָא מֵאַרְעָא אִיבְּרוֹ! … מִן הָרְקָק נִבְרְאוּ"
+    he_translit: "katuv echad omer yishretzu ha-mayim … ve-of ye'ofef — alma mi-maya ibberu; u-khtiv va-yitzer … min ha-adamah … ve-et kol of ha-shamayim — alma me-ar'a ibberu! … min ha-REQAQ nivre'u"
+    en: >
+      "One verse says 'let the waters swarm … and fowl fly' — so they were
+      created FROM THE WATER; but another says 'He formed from the GROUND
+      … every fowl of the heavens' (2:19)!" — answered: "from the REQAQ
+      (the mud-shallows) they were created." The chain asking whether the
+      of stands INSIDE or BESIDE the waters' delegation — the structure of
+      the unit's second demand — and resolving it with a third medium.
+      Bar Kappara's form (PDRK 4:3): "the of was created from the reqaq
+      OF THE SEA." Targum Jonathan writes the harmonization into the verse
+      itself: yerachashun REQAQEI moi — "let the MUD-SHALLOWS of the
+      waters swarm."
+    comment_en: >
+      AMENDED 2026-07-30, owner order ("amend"). The DECLARE-2 operator
+      stands as derived (the of the subject of its own imperfect); the
+      chain's source-medium debate is recorded beside it. Verified local.
+      Dual-track; not merged.
+    source: "[ORAL][VERIFIED-LOCAL]"
+  - id: ORAL_missing_receipt_answers
+    status: verified
+    work_en: "Midrash Lekach Tov 1:21:3 and 1:21:4 (anthology tier — R. Tuviah b. Eliezer; primary unidentified) — on the 1:21 RESULT and the missing va-yehi khen; day-5 triage rows 33, 34"
+    he: "וּמִפְּנֵי מָה לֹא נֶאֱמַר בְּפָרָשַׁת יִשְׁרְצוּ הַמַּיִם וַיְהִי כֵן … שְׁלֹשָׁה שֶׁנֶּאֱמַר בָּהֶן בְּרִיאָה לֹא נֶאֱמַר בָּהֶן וַיְהִי כֵן: שָׁמַיִם וָאָרֶץ, וְהַתַּנִּינִים, וְאָדָם … מִשּׁוּם שֶׁנֶּאֱמַר כִּי הוּא אָמַר וַיֶּהִי"
+    he_translit: "u-mipnei mah lo ne'emar be-farashat yishretzu ha-mayim VA-YEHI KHEN? … sheloshah she-ne'emar bahen BERIAH lo ne'emar bahen va-yehi khen: shamayim va-aretz, ve-ha-taninim, ve-adam … mishum she-ne'emar KI HU AMAR VA-YEHI"
+    en: >
+      The anthology asks the unit's missing-receipt [OPEN] verbatim: "why
+      is va-yehi khen not said in the yishretzu passage?" — and transmits
+      two answers. (1) "Because it was already said in the yiqqavu passage
+      (1:9)": the water registry's day-3 receipt still covers day 5.
+      (2) "THREE things of which BERIAH is said lack va-yehi khen —
+      heavens-and-earth, the TANINIM, and ADAM, great and weighty
+      creations; since beriah is said of them, va-yehi khen is not
+      needed — for HE SPOKE, AND IT WAS (Ps 33:6)": bara itself is the
+      receipt, prooftexted on the maamar doctrine's own verse — the
+      chain's triad matching the machine's bara-returns finding exactly.
+    comment_en: >
+      AMENDED 2026-07-30, owner order ("amend"). The RESULT operators
+      stand as derived (receipt via the relative clause); the chain's two
+      accounts of the ABSENT token are recorded beside the [OPEN] flag.
+      Anthology tier, honestly labeled; primary unidentified. Verified
+      local. Dual-track; not merged.
+    source: "[ORAL][VERIFIED-LOCAL]"
+  - id: ORAL_crossover_fowl
+    status: verified
+    work_en: "Pirkei DeRabbi Eliezer 9:8 (R. Meir), with Midrash Aggadah 1:22:2 — on the 1:22 BLESS mood-split; day-5 triage rows 71, 27"
+    he: "רַבִּי מֵאִיר אוֹמֵר: אֵלּוּ שֶׁנִּבְרְאוּ מִן הָאָרֶץ פָּרִים וְרָבִים בָּאָרֶץ, וְאֵלּוּ שֶׁשָּׁרְצוּ מִן הַמַּיִם פָּרִים וְרָבִים בַּמַּיִם, חוּץ מִכָּל מִין עוֹף כָּנָף שֶׁבְּרִיָּתוֹ מִן הַמַּיִם וּפָרֶה וְרָבֶה בָּאָרֶץ, שֶׁנֶּאֱמַר וְהָעוֹף יִרֶב בָּאָרֶץ"
+    he_translit: "Rabbi Meir omer: elu she-nivre'u min ha-aretz parim ve-ravim ba-aretz, ve-elu she-shartzu min ha-mayim parim ve-ravim ba-mayim — CHUTZ mi-kol min OF KANAF she-beriyato min ha-mayim u-fareh ve-raveh BA-ARETZ, she-ne'emar ve-ha-of yirev ba-aretz"
+    en: >
+      "R. Meir says: those created from the earth are fruitful and
+      multiply on the earth; those swarmed from the waters are fruitful
+      and multiply in the water — EXCEPT every winged of, whose creation
+      is from the water yet it is fruitful and multiplies ON THE EARTH,
+      as it says: ve-ha-of yirev ba-aretz." The chain's answer to the
+      mandate's mood-split: the fowl's clause is separate because the
+      fowl is the taxonomy's one CROSSOVER class (water-born,
+      land-breeding — PRE adds the egg-vs-live-birth partition; Midrash
+      Aggadah's reqaq variant matches). The unit's own kanaf
+      differentiator and the clause's separate zone (ba-aretz) are read
+      by the chain as one system.
+    comment_en: >
+      AMENDED 2026-07-30, owner order ("amend"). The BLESS operator and
+      its [OPEN] mood-split stand; the chain's taxonomic account is
+      recorded beside them. Verified local. Dual-track; not merged.
+    source: "[ORAL][VERIFIED-LOCAL]"
+  - id: ORAL_taninim_praise_order
+    status: verified
+    work_en: "Midrash Tehillim 148:2 — beside spec delta #2 (the over-delivered leading item); day-5 triage row 49"
+    he: "וּמִי מְקַלֵּס תְּחִלָּה — מִי שֶׁהוּא גָּדוֹל מֵחֲבֵרוֹ. וּמִי הֵם הַגְּדוֹלִים — אֵלּוּ הַתַּנִּינִים, שֶׁנֶּאֱמַר וַיִּבְרָא אֱלֹהִים אֶת הַתַּנִּינִים הַגְּדוֹלִים. לְפִיכָךְ הֵם מְקַלְּסִין תְּחִלָּה"
+    he_translit: "u-mi mekales techilah? — mi she-hu GADOL me-chavero. u-mi hem ha-gedolim? — elu ha-TANINIM, she-ne'emar va-yivra Elohim et ha-taninim ha-gedolim. lefikhakh hem mekalsin techilah"
+    en: >
+      "Who praises first? The one greater than his fellows. And who are
+      the great ones? The TANINIM — as it says: and God created the great
+      taninim. Therefore they praise FIRST (Ps 148:7, 'taninim and all
+      deeps')." The chain reading the over-delivered item's leading
+      position in our inventory as rank: first in the bara list, first in
+      the cosmic liturgy — delta #2's placement given significance on the
+      Oral track.
+    comment_en: >
+      AMENDED 2026-07-30, owner order ("amend"). The spec_delta flag
+      stands; the precedence reading is the chain's. Verified local.
+      Dual-track; not merged.
+    source: "[ORAL][VERIFIED-LOCAL]"
+  - id: ORAL_policy
+    status: observation
+    work_en: "Oral policy"
+    comment_en: "Named location only; never silent-merge."
+    source: "[PROJECT]"
+
+scenarios:
+  - id: S1
+    title_en: "Two LET? demands, no receipt ahead: after STEP_Gn_1_20"
+    given_en: "All registers empty (standalone unit)."
+    expect_en: >
+      SPECS: LET?(swarm(mayim), product=sheretz_nefesh_chaya) mood remains
+      LET?; LET?(fly(of), loc=pnei_raqia_ha_shamayim) mood remains LET?;
+      machine flags mayim/aretz/raqia/shamayim as read-before-install
+      (presupposed).
+    value_he: יִשְׁרְצוּ הַמַּיִם
+    value_he_translit: "yishretzu ha-mayim"
+  - id: S2
+    title_en: "Bara delivery pops both demands, deltas flagged, early test: after STEP_Gn_1_21"
+    given_en: "S1 state."
+    expect_en: >
+      WORLD += taninim; WORLD += nefesh_chaya_romeset; WORLD += of_kanaf;
+      SPECS empty; triple contract { swarm(mayim),
+      product=sheretz_nefesh_chaya } discharged; TESTS += PASS(tov,
+      nefesh_chaya); machine flags spec-delta.
+    value_he: אֲשֶׁר שָׁרְצוּ הַמַּיִם
+    value_he_translit: "asher shartzu ha-mayim"
+  - id: S3
+    title_en: "First blessing: mandate standing, SPECS untouched: after STEP_Gn_1_22"
+    given_en: "S2 state."
+    expect_en: >
+      Facts mandate-peru/mandate-revu/mandate-milu/mandate-yirev HOLD;
+      SPECS empty; machine flags yamim as read-before-install
+      (presupposed).
+    value_he: פְּרוּ וּרְבוּ וּמִלְאוּ
+    value_he_translit: "peru u-revu u-milu"
+  - id: S4
+    title_en: "Clean ordinal commit around a standing mandate: after STEP_Gn_1_23"
+    given_en: "S3 state."
+    expect_en: >
+      LEDGER[day 5] committed with spec ✓ / test PASS; day label is ORDINAL
+      chamishi; commit is clean.
+    value_he: יוֹם חֲמִישִׁי
+    value_he_translit: "yom chamishi"
+  - id: S5_negative
+    title_en: "Negative: LET? never auto-upgrades — the rehearsal becomes the text"
+    given_en: >
+      The unit's own yishretzu demand — the very form the interpreter's
+      S7 self-test has rehearsed as LET?(swarm(mayim)) since gen_02.
+    expect_en: >
+      Operator stays LET?(p) with the question mark (TIR-028); satisfaction
+      at 1:21 pops the demand but never upgrades the mood; any resolution
+      requires an explicit per-unit citation.
+  - id: S6_negative
+    title_en: "Negative: flags never block the ledger"
+    given_en: "A synthetic commit with TESTS empty (the machine's own contract self-test)."
+    expect_en: >
+      Cycle close with TESTS empty must be FLAGGED, never blocked — the
+      same flag-don't-block rule that lets this unit's three spec-deltas
+      ride a clean commit.
+
+binary_trees:
+  display_policy_en: >
+    Always he + he_translit + en. Full tree_ascii per verse. Chat display per
+    logic/TREE_DISPLAY.md (B# GLUE|ATOM).
+  method_note_en: >
+    taamim_tree_parse.py rule set v3 (glue bricks -> pure binary); ascii
+    regenerated 2026-07-30 from derivation.sqlite tree_json.
+  data_source: "Data/Gen.xml"
+  parser: "taamim_tree_parse.py"
+  rule_set_version: "v3"
+  tags: ["[HE-STRUCT]"]
+  verse_trees:
+    Gen_1_20:
+      verse: "1:20"
+      osis_id: "Gen.1.20"
+      parser_status: unique
+      pure_binary: true
+      word_count: 15
+      linear:
+        he: וַיֹּאמֶר אֱלֹהִים יִשְׁרְצוּ הַמַּיִם שֶׁרֶץ נֶפֶשׁ חַיָּה וְעוֹף יְעוֹפֵף עַל־הָאָרֶץ עַל־פְּנֵי רְקִיעַ הַשָּׁמָיִם
+        he_translit: "va-yomer Elohim yishretzu ha-mayim sheretz nefesh chaya ve-of ye'ofef al-ha-aretz al-pnei reqia ha-shamayim"
+        en: "Let the waters swarm with living swarms, and fliers fly over the earth, across the face of the firmament. [EN-AID]"
+      tree_ascii: |
+        PHRASE (binary 15w) וַ/יֹּ֣אמֶר אֱלֹהִ֔ים יִשְׁרְצ֣וּ הַ/מַּ֔יִם שׁ…
+        ├── PHRASE (binary 7w) וַ/יֹּ֣אמֶר אֱלֹהִ֔ים יִשְׁרְצ֣וּ הַ/מַּ֔יִם שׁ…
+        │   ├── [0-1] GLUE וַ/יֹּ֣אמֶר אֱלֹהִ֔ים (zaqef qatan, rank=2)
+        │   └── PHRASE (binary 5w) יִשְׁרְצ֣וּ הַ/מַּ֔יִם שֶׁ֖רֶץ נֶ֣פֶשׁ חַיָּ֑ה
+        │       ├── [2-3] GLUE יִשְׁרְצ֣וּ הַ/מַּ֔יִם (zaqef qatan, rank=2)
+        │       └── PHRASE (binary 3w) שֶׁ֖רֶץ נֶ֣פֶשׁ חַיָּ֑ה
+        │           ├── [4] שֶׁ֖רֶץ (tifcha, rank=2)
+        │           └── [5-6] GLUE נֶ֣פֶשׁ חַיָּ֑ה (etnachta (major mid-verse rest), rank=1)
+        └── PHRASE (binary 8w) וְ/עוֹף֙ יְעוֹפֵ֣ף עַל הָ/אָ֔רֶץ עַל פְּנֵ֖י רְ…
+            ├── PHRASE (binary 4w) וְ/עוֹף֙ יְעוֹפֵ֣ף עַל הָ/אָ֔רֶץ
+            │   ├── [7] וְ/עוֹף֙ (pashta, rank=3)
+            │   └── [8-10] GLUE יְעוֹפֵ֣ף עַל הָ/אָ֔רֶץ (zaqef qatan, rank=2)
+            └── PHRASE (binary 4w) עַל פְּנֵ֖י רְקִ֥יעַ הַ/שָּׁמָֽיִם
+                ├── [11-12] GLUE עַל פְּנֵ֖י (tifcha, rank=2)
+                └── [13-14] GLUE רְקִ֥יעַ הַ/שָּׁמָֽיִם (silluq (verse-end emperor), rank=1)
+      maps_to: ["STEP_Gn_1_20"]
+      confidence: tested
+      source: "[HE-STRUCT][HE-WRITTEN]"
+    Gen_1_21:
+      verse: "1:21"
+      osis_id: "Gen.1.21"
+      parser_status: unique
+      pure_binary: true
+      word_count: 23
+      linear:
+        he: וַיִּבְרָא אֱלֹהִים אֶת־הַתַּנִּינִם הַגְּדֹלִים וְאֵת כָּל־נֶפֶשׁ הַחַיָּה הָרֹמֶשֶׂת אֲשֶׁר שָׁרְצוּ הַמַּיִם לְמִינֵהֶם וְאֵת כָּל־עוֹף כָּנָף לְמִינֵהוּ וַיַּרְא אֱלֹהִים כִּי־טוֹב
+        he_translit: "va-yivra Elohim et-ha-taninim ha-gedolim ve-et kol-nefesh ha-chaya ha-romeset asher shartzu ha-mayim le-minehem ve-et kol-of kanaf le-minehu va-yar Elohim ki-tov"
+        en: "The great sea-monsters created — with every creeping life the waters swarmed, by kinds, and every winged flier — and it was good. [EN-AID]"
+      tree_ascii: |
+        PHRASE (binary 23w) וַ/יִּבְרָ֣א אֱלֹהִ֔ים אֶת הַ/תַּנִּינִ֖ם הַ/גּ…
+        ├── PHRASE (binary 5w) וַ/יִּבְרָ֣א אֱלֹהִ֔ים אֶת הַ/תַּנִּינִ֖ם הַ/גּ…
+        │   ├── [0-1] GLUE וַ/יִּבְרָ֣א אֱלֹהִ֔ים (zaqef qatan, rank=2)
+        │   └── PHRASE (binary 3w) אֶת הַ/תַּנִּינִ֖ם הַ/גְּדֹלִ֑ים
+        │       ├── [2-3] GLUE אֶת הַ/תַּנִּינִ֖ם (tifcha, rank=2)
+        │       └── [4] הַ/גְּדֹלִ֑ים (etnachta (major mid-verse rest), rank=1)
+        └── PHRASE (binary 18w) וְ/אֵ֣ת כָּל נֶ֣פֶשׁ הַֽ/חַיָּ֣ה הָֽ/רֹמֶ֡שֶׂת …
+            ├── PHRASE (binary 14w) וְ/אֵ֣ת כָּל נֶ֣פֶשׁ הַֽ/חַיָּ֣ה הָֽ/רֹמֶ֡שֶׂת …
+            │   ├── PHRASE (binary 9w) וְ/אֵ֣ת כָּל נֶ֣פֶשׁ הַֽ/חַיָּ֣ה הָֽ/רֹמֶ֡שֶׂת …
+            │   │   ├── [5-9] GLUE וְ/אֵ֣ת כָּל נֶ֣פֶשׁ הַֽ/חַיָּ֣ה הָֽ/רֹמֶ֡שֶׂת (pazer, rank=4)
+            │   │   └── PHRASE (binary 4w) אֲשֶׁר֩ שָׁרְצ֨וּ הַ/מַּ֜יִם לְ/מִֽינֵ/הֶ֗ם
+            │   │       ├── [10-12] GLUE אֲשֶׁר֩ שָׁרְצ֨וּ הַ/מַּ֜יִם (geresh, rank=4)
+            │   │       └── [13] לְ/מִֽינֵ/הֶ֗ם (revia, rank=3)
+            │   └── PHRASE (binary 5w) וְ/אֵ֨ת כָּל ע֤וֹף כָּנָף֙ לְ/מִינֵ֔/הוּ
+            │       ├── [14-17] GLUE וְ/אֵ֨ת כָּל ע֤וֹף כָּנָף֙ (pashta, rank=3)
+            │       └── [18] לְ/מִינֵ֔/הוּ (zaqef qatan, rank=2)
+            └── PHRASE (binary 4w) וַ/יַּ֥רְא אֱלֹהִ֖ים כִּי טֽוֹב
+                ├── [19-20] GLUE וַ/יַּ֥רְא אֱלֹהִ֖ים (tifcha, rank=2)
+                └── [21-22] GLUE כִּי טֽוֹב (silluq (verse-end emperor), rank=1)
+      maps_to: ["STEP_Gn_1_21"]
+      confidence: tested
+      source: "[HE-STRUCT][HE-WRITTEN]"
+    Gen_1_22:
+      verse: "1:22"
+      osis_id: "Gen.1.22"
+      parser_status: unique
+      pure_binary: true
+      word_count: 13
+      linear:
+        he: וַיְבָרֶךְ אֹתָם אֱלֹהִים לֵאמֹר פְּרוּ וּרְבוּ וּמִלְאוּ אֶת־הַמַּיִם בַּיַּמִּים וְהָעוֹף יִרֶב בָּאָרֶץ
+        he_translit: "va-yevarekh otam Elohim le-mor peru u-revu u-milu et-ha-mayim ba-yamim ve-ha-of yirev ba-aretz"
+        en: "He blessed them: be fruitful, multiply, fill the waters in the seas — and let the fowl multiply on earth. [EN-AID]"
+      tree_ascii: |
+        PHRASE (binary 13w) וַ/יְבָ֧רֶךְ אֹתָ֛/ם אֱלֹהִ֖ים לֵ/אמֹ֑ר פְּר֣וּ…
+        ├── PHRASE (binary 4w) וַ/יְבָ֧רֶךְ אֹתָ֛/ם אֱלֹהִ֖ים לֵ/אמֹ֑ר
+        │   ├── PHRASE (binary 3w) וַ/יְבָ֧רֶךְ אֹתָ֛/ם אֱלֹהִ֖ים
+        │   │   ├── [0-1] GLUE וַ/יְבָ֧רֶךְ אֹתָ֛/ם (tevir, rank=3)
+        │   │   └── [2] אֱלֹהִ֖ים (tifcha, rank=2)
+        │   └── [3] לֵ/אמֹ֑ר (etnachta (major mid-verse rest), rank=1)
+        └── PHRASE (binary 9w) פְּר֣וּ וּ/רְב֗וּ וּ/מִלְא֤וּ אֶת הַ/מַּ֨יִם֙ ב…
+            ├── PHRASE (binary 6w) פְּר֣וּ וּ/רְב֗וּ וּ/מִלְא֤וּ אֶת הַ/מַּ֨יִם֙ ב…
+            │   ├── [4-5] GLUE פְּר֣וּ וּ/רְב֗וּ (revia, rank=3)
+            │   └── PHRASE (binary 4w) וּ/מִלְא֤וּ אֶת הַ/מַּ֨יִם֙ בַּ/יַּמִּ֔ים
+            │       ├── [6-8] GLUE וּ/מִלְא֤וּ אֶת הַ/מַּ֨יִם֙ (pashta, rank=3)
+            │       └── [9] בַּ/יַּמִּ֔ים (zaqef qatan, rank=2)
+            └── PHRASE (binary 3w) וְ/הָ/ע֖וֹף יִ֥רֶב בָּ/אָֽרֶץ
+                ├── [10] וְ/הָ/ע֖וֹף (tifcha, rank=2)
+                └── [11-12] GLUE יִ֥רֶב בָּ/אָֽרֶץ (silluq (verse-end emperor), rank=1)
+      maps_to: ["STEP_Gn_1_22"]
+      confidence: tested
+      source: "[HE-STRUCT][HE-WRITTEN]"
+    Gen_1_23:
+      verse: "1:23"
+      osis_id: "Gen.1.23"
+      parser_status: unique
+      pure_binary: true
+      word_count: 6
+      linear:
+        he: וַיְהִי־עֶרֶב וַיְהִי־בֹקֶר יוֹם חֲמִישִׁי
+        he_translit: "va-yehi erev va-yehi voqer yom chamishi"
+        en: "Evening, morning — a fifth day. [EN-AID]"
+      tree_ascii: |
+        PHRASE (binary 6w) וַֽ/יְהִי עֶ֥רֶב וַֽ/יְהִי בֹ֖קֶר י֥וֹם חֲמִישׁ…
+        ├── [0-3] GLUE וַֽ/יְהִי עֶ֥רֶב וַֽ/יְהִי בֹ֖קֶר (tifcha, rank=2)
+        └── [4-5] GLUE י֥וֹם חֲמִישִֽׁי (silluq (verse-end emperor), rank=1)
+      maps_to: ["STEP_Gn_1_23"]
+      confidence: tested
+      source: "[HE-STRUCT][HE-WRITTEN]"
+
+tree_coverage:
+  aspiration_en: >
+    100% word use with named roles and TIR citations.
+  word_total: 57
+  verses:
+  - ref: "Gen.1.20"
+    words:
+      - {index: 0, he: ויאמר, he_translit: va-yomer, en: and-said, role: speech_verb_declare, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_20]}
+      - {index: 1, he: אלהים, he_translit: Elohim, en: God, role: agent, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_20]}
+      - {index: 2, he: ישרצו, he_translit: yishretzu, en: let-swarm, role: delegated_imperfect_let_q, kind: logic_bearing, interp_rule: TIR-028, feeds: [STEP_Gn_1_20]}
+      - {index: 3, he: המים, he_translit: ha-mayim, en: the-waters, role: delegate_subject_presupposed, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_20]}
+      - {index: 4, he: שרץ, he_translit: sheretz, en: swarm-of, role: cognate_accusative_product, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_20]}
+      - {index: 5, he: נפש, he_translit: nefesh, en: living-being, role: life_class_noun_first, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_20]}
+      - {index: 6, he: חיה, he_translit: chaya, en: living, role: life_class_adjective, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_20]}
+      - {index: 7, he: ועוף, he_translit: ve-of, en: and-flier, role: second_demand_subject, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_20]}
+      - {index: 8, he: יעופף, he_translit: ye'ofef, en: let-fly, role: cognate_flight_imperfect_let_q, kind: logic_bearing, interp_rule: TIR-028, feeds: [STEP_Gn_1_20]}
+      - {index: 9, he: על, he_translit: al, en: over, role: location_prep, kind: glue, interp_rule: TIR-008, feeds: [STEP_Gn_1_20]}
+      - {index: 10, he: הארץ, he_translit: ha-aretz, en: the-earth, role: flight_zone_presupposed, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_20]}
+      - {index: 11, he: על, he_translit: al, en: across, role: location_prep, kind: glue, interp_rule: TIR-008, feeds: [STEP_Gn_1_20]}
+      - {index: 12, he: פני, he_translit: pnei, en: face-of, role: boundary_surface_construct, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_20]}
+      - {index: 13, he: רקיע, he_translit: reqia, en: firmament-of, role: mount_surface_presupposed, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_20]}
+      - {index: 14, he: השמים, he_translit: ha-shamayim, en: the-heavens, role: mount_surface_presupposed, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_20]}
+  - ref: "Gen.1.21"
+    words:
+      - {index: 0, he: ויברא, he_translit: va-yivra, en: and-created, role: build_verb_bara_first_return, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_21]}
+      - {index: 1, he: אלהים, he_translit: Elohim, en: God, role: agent, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_21]}
+      - {index: 2, he: את, he_translit: et, en: obj-marker, role: obj_marker_inventory, kind: logic_bearing, interp_rule: TIR-014, feeds: [STEP_Gn_1_21]}
+      - {index: 3, he: התנינם, he_translit: ha-taninim, en: the-sea-monsters, role: delivered_member_over_delivery_defective_ktiv, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_21]}
+      - {index: 4, he: הגדלים, he_translit: ha-gedolim, en: the-great-ones, role: adjective_great_echo_1_16, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_21]}
+      - {index: 5, he: ואת, he_translit: ve-et, en: and-obj-marker, role: obj_marker_inventory, kind: logic_bearing, interp_rule: TIR-014, feeds: [STEP_Gn_1_21]}
+      - {index: 6, he: כל, he_translit: kol, en: every, role: totality_quantifier, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_21]}
+      - {index: 7, he: נפש, he_translit: nefesh, en: living-being, role: life_class_noun, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_21]}
+      - {index: 8, he: החיה, he_translit: ha-chaya, en: the-living, role: life_class_adjective, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_21]}
+      - {index: 9, he: הרמשת, he_translit: ha-romeset, en: the-creeping, role: participle_standing_behavior, kind: logic_bearing, interp_rule: TIR-031, feeds: [STEP_Gn_1_21]}
+      - {index: 10, he: אשר, he_translit: asher, en: which, role: relative_receipt_opener, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_21]}
+      - {index: 11, he: שרצו, he_translit: shartzu, en: swarmed, role: delegated_verb_perfect_receipt, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_21]}
+      - {index: 12, he: המים, he_translit: ha-mayim, en: the-waters, role: delegate_subject_credited, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_21]}
+      - {index: 13, he: למינהם, he_translit: le-minehem, en: by-their-kinds, role: kind_key_dative, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_21]}
+      - {index: 14, he: ואת, he_translit: ve-et, en: and-obj-marker, role: obj_marker_inventory, kind: logic_bearing, interp_rule: TIR-014, feeds: [STEP_Gn_1_21]}
+      - {index: 15, he: כל, he_translit: kol, en: every, role: totality_quantifier, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_21]}
+      - {index: 16, he: עוף, he_translit: of, en: flier, role: delivered_member_flier, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_21]}
+      - {index: 17, he: כנף, he_translit: kanaf, en: wing, role: wing_differentiator, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_21]}
+      - {index: 18, he: למינהו, he_translit: le-minehu, en: by-its-kind, role: kind_key_dative, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_21]}
+      - {index: 19, he: וירא, he_translit: va-yar, en: and-saw, role: perception_verb, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_21]}
+      - {index: 20, he: אלהים, he_translit: Elohim, en: God, role: agent, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_21]}
+      - {index: 21, he: כי, he_translit: ki, en: that, role: complementizer_that, kind: glue, interp_rule: TIR-008, feeds: [STEP_Gn_1_21]}
+      - {index: 22, he: טוב, he_translit: tov, en: good, role: eval_oracle_predicate, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_21]}
+  - ref: "Gen.1.22"
+    words:
+      - {index: 0, he: ויברך, he_translit: va-yevarekh, en: and-blessed, role: bless_verb_piel_first, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_22]}
+      - {index: 1, he: אתם, he_translit: otam, en: them, role: obj_marker_pronoun_recipients, kind: logic_bearing, interp_rule: TIR-014, feeds: [STEP_Gn_1_22]}
+      - {index: 2, he: אלהים, he_translit: Elohim, en: God, role: agent, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_22]}
+      - {index: 3, he: לאמר, he_translit: le-mor, en: saying, role: quote_opener_infinitive, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_22]}
+      - {index: 4, he: פרו, he_translit: peru, en: be-fruitful, role: imperative_2mp_mandate_first, kind: logic_bearing, interp_rule: TIR-027, feeds: [STEP_Gn_1_22]}
+      - {index: 5, he: ורבו, he_translit: u-revu, en: and-multiply, role: imperative_2mp_mandate, kind: logic_bearing, interp_rule: TIR-027, feeds: [STEP_Gn_1_22]}
+      - {index: 6, he: ומלאו, he_translit: u-milu, en: and-fill, role: imperative_2mp_mandate, kind: logic_bearing, interp_rule: TIR-027, feeds: [STEP_Gn_1_22]}
+      - {index: 7, he: את, he_translit: et, en: obj-marker, role: obj_marker_fill_target, kind: logic_bearing, interp_rule: TIR-014, feeds: [STEP_Gn_1_22]}
+      - {index: 8, he: המים, he_translit: ha-mayim, en: the-waters, role: erstwhile_delegate_now_patient, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_22]}
+      - {index: 9, he: בימים, he_translit: ba-yamim, en: in-the-seas, role: container_named_gen_03_presupposed, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_22]}
+      - {index: 10, he: והעוף, he_translit: ve-ha-of, en: and-the-flier, role: mandate_recipient_person_switch, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_22]}
+      - {index: 11, he: ירב, he_translit: yirev, en: let-multiply, role: jussive_3ms_mood_split, kind: logic_bearing, interp_rule: TIR-026, feeds: [STEP_Gn_1_22]}
+      - {index: 12, he: בארץ, he_translit: ba-aretz, en: on-the-earth, role: flight_zone_presupposed, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_22]}
+  - ref: "Gen.1.23"
+    words:
+      - {index: 0, he: ויהי, he_translit: va-yehi, en: and-there-was, role: cycle_verb, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_23]}
+      - {index: 1, he: ערב, he_translit: erev, en: evening, role: cycle_time_unit, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_23]}
+      - {index: 2, he: ויהי, he_translit: va-yehi, en: and-there-was, role: cycle_verb, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_23]}
+      - {index: 3, he: בקר, he_translit: voqer, en: morning, role: cycle_time_unit, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_23]}
+      - {index: 4, he: יום, he_translit: yom, en: day, role: ledger_day_noun, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_23]}
+      - {index: 5, he: חמישי, he_translit: chamishi, en: fifth, role: ledger_count_ordinal, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_23]}
+
+confidence: "structure tested · operators tested-per-TIR · machine model hypothesis"
+
+amendment_log:
+  - date: 2026-07-30
+    authorized: >
+      owner order ("yes write the narrative then do the day 5 triage");
+      the upgrade pre-announced in the frozen unit's own note text.
+    what: >
+      Day-5 triage completed same-day (129/129 read, second full-coverage
+      unit under charter section 4.1): ORAL_taninim_defective upgraded
+      observation -> verified at its chain-primary locations — Bereshit
+      Rabbah 7:4 (tanninam ktiv, the pair-less reading) with Bava Batra
+      74b:5-8 (the Leviathan dossier; 74b:6-8 read via a section-4.1
+      promotion fetch, logged in FETCHLOG). Oral-notes track only; NO
+      operator, scenario, or register change — the machine's [OPEN] ktiv
+      flag stands. Machine re-verified after edit. New material finds
+      queued for owner approval: Chullin 27b:11 + PDRK 4:3 + TJ 1:20 (the
+      of's source — the reqaq harmonization, on the 1:20 DECLARE-2);
+      Lekach Tov 1:21:3 + 1:21:4 (the two chain answers to the missing
+      receipt, on the 1:21 RESULT); PRE 9:8 + MA 1:22:2 (R. Meir's
+      crossover rule, on the 1:22 BLESS mood-split); Midrash Tehillim
+      148:2 (the taninim lead the praise order as they lead the
+      inventory, beside delta #2).
+  - date: 2026-07-30
+    authorized: owner order ("amend")
+    what: >
+      The four queued material finds promoted to verified oral notes:
+      ORAL_of_source_reqaq (Chullin 27b:11-12 + PDRK 4:3 — the of's
+      source-medium debate, the reqaq harmonization TJ embeds in the
+      verse), ORAL_missing_receipt_answers (Lekach Tov 1:21:3-4 — the 1:9
+      coverage answer and the bara-triad-needs-no-receipt answer on
+      Ps 33:6; anthology tier, primary unidentified, honestly labeled),
+      ORAL_crossover_fowl (PRE 9:8 R. Meir + MA 1:22:2 — the fowl as the
+      taxonomy's crossover class), ORAL_taninim_praise_order (Midrash
+      Tehillim 148:2 — inventory-leading position read as liturgical
+      precedence). All quotes verified from local corpus. Oral-notes
+      track only; NO operator, scenario, or register change — the
+      machine's [OPEN] flags and spec_delta flags stand as before.
+      Machine re-verified after edit.
+
+status_note_en: >
+  FROZEN 2026-07-30 (owner approved): fifth logic-derived unit, second
+  under the calibrated coverage protocol. Central findings: TWO live LET? demands
+  (the interpreter's own S7 rehearsal example made real); the week's only
+  missing receipt token (no va-yehi khen, MT and Onkelos), receipt work
+  relocated into the delivery's relative clause; bara returning for the
+  corpus's first LIVING entities with the unordered great taninim leading;
+  the delegation answered by direct divine creation with the delegate
+  credited (dual agency — Onkelos resolves via the causative archishu);
+  the first BLESSING with the corpus's first second-person imperatives and
+  a mood-split, rationed mandate recorded as standing WORLD facts (new op
+  BLESS — interpreter extension at freeze, ASSIGN precedent); zero
+  REGISTRY writes; the defective taninim ktiv verified from own letter
+  data. Not binding religious law.

@@ -1,0 +1,905 @@
+# =============================================================================
+# LOGIC UNIT: Genesis 1:1-5 — Genesis boot: create world, light, separate, name, day one
+# LOGIC-DERIVED v1 (Stage C pilot, 2026-07-28) — upgraded from tree_derived_v1:
+#   v3 glue-brick trees · TIR-026..033 operator layer · machine-state scenarios
+# =============================================================================
+# Experimental model — not binding religious law.
+# Pipeline: v3 tree -> leaves -> morph frames -> operators (cite TIR) -> scenarios.
+# Reference unit for Stage C (see logic/pre_logic_methods_2026-07-28/PLAN §8).
+
+meta:
+  id: "gen_01_creation_boot"
+  title_en: "Genesis boot: create world, light, separate, name, day one (1:1-5)"
+  title_he: בְּרֵאשִׁית — אִתְחוּל הַבְּרִיאָה (יוֹם אֶחָד)
+  title_he_translit: "bereshit — itchul ha-beri'ah (yom echad)"
+  title_he_en: Bereshit — start of creation (one day)
+  book_he: בְּרֵאשִׁית
+  book_he_translit: Be-reshit
+  book_en: Genesis
+  refs: "1:1-5"
+  data_paths_he:
+    - "Data/Gen.xml"
+  status: frozen
+  frozen_note_en: >
+    Frozen 2026-07-28 as the Stage C pilot (owner ordered the build after approving
+    TIR-026..033). Frozen = stable for optional code to load (SYSTEM.md Step J);
+    individual claims keep their own confidence labels below.
+  tree_derive_version: logic_derived_v1
+  tree_derive_phase: "C-pilot"
+  confidence_overall: "structure tested; operator readings tested-per-TIR; intent hypothesis"
+  genre: "narrative_boot"
+  build_track: genesis_stack
+  depends_on:
+  owner_language_note: >
+    English for reading only. Hebrew is the derivation source.
+  oral_policy_note_en: >
+    Written trees first. Dual-track Oral only when named; never silent-merge.
+  method_note_en: >
+    Logic-derived v1: v3 ta'amim trees (glue bricks, pure binary) -> leaf role frames
+    from OSHB morph -> operator lines citing TIR-026..033 -> machine-state scenarios
+    (registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER). Evidence doc:
+    logic/pre_logic_methods_2026-07-28/EXPERIMENT_precode_logic_gen_1_1_to_2_3_2026-07-28.md
+
+  oral_audit_note_en: >
+    ORAL AUDIT 2026-08-08 (retro, oral-first era; record:
+    logic/oral_audit/AUDIT_gen_01_2026-08-08.md; manifest 6/6
+    VERIFIED, zero FAILED — all-checkable). CROWNS (chain-attested +
+    DB-verified). THE FINALS OF TRUTH [G01-01, Kitzur Baal HaTurim]:
+    the Torah's first three words — בראשית ברא אלהים ("In the
+    beginning God created") — end in the letters of אמת ("truth"),
+    DB-checked in order: the world created with truth sealed into the
+    opening's own ends, as the psalm says "the head of Your word is
+    truth." THE FIRST SPLIT OF THE TWO SCHOOLS [G01-03, Minchat
+    Shai]: at the Torah's first command — יהי אור ("let there be
+    LIGHT," 1:3) — the two masters of the Masorah part for the first
+    time: Ben Asher reads the command unjoined with the galgal (the
+    wheel-accent), Ben Naphtali joins it to the light with maqqef
+    (the joining stroke) — Minchat Shai records this as the FIRST of
+    all their differences. SNAPSHOT stands with BEN ASHER: no maqqef
+    on the command (DB-checked), the reading the Rambam relied on —
+    while the fulfillment ויהי־אור IS joined by maqqef
+    (builder-checked): the command free, the fulfillment bound. The
+    wheel itself is stored as a munach stroke — the galgal class's
+    fourth station, at the most famous site it will ever have. THE
+    GREAT BET'S VERIFIED COMPANIONS [G01-02]: the Torah's first
+    letter — the famous LARGE bet of בראשית, the bet of
+    Blessed-is-His-Name — belongs to the uninstrumented letter-size
+    layer (its most famous member, filed with the head-of-line,
+    head-of-page placement to the layout gap); but its two ruled
+    companions stand in the stream exactly as given: the bet dageshed
+    and the tipcha under the shin (DB-checked). THE FIVE LIGHTS OF
+    THE FIRST DAY [G01-04, Kitzur]: the light-word אור stands exactly
+    FIVE times in the light-section (1:3 twice, 1:4 twice, 1:5 once —
+    builder-counted): five lights against the five books of the
+    Torah, which is itself called light. THE COVENANT AT THE ENDS OF
+    THE LIGHT-CLAUSE [G01-05, Kitzur]: the four words את האור כי טוב
+    ("the light, that it was good," 1:4) end in the letters of ברית
+    ("covenant"), DB-checked in order — the covenant sealed at the
+    ends of the first thing called good; the flame-blessing teaching
+    named beside it. THE HOVERING SPIRIT, ONCE [G01-06]: the pair
+    ורוח אלהים ("and the SPIRIT OF GOD was hovering over the face of
+    the waters," 1:2) stands exactly once in the Torah; the
+    construct-pair Masorah's partner is the spirit that clothed
+    ZECHARIAH (II Chr 24, named) — with Minchat Shai's own
+    text-criticism preserved: the printed Baal HaTurim cites Amasai,
+    and Minchat Shai proves the copy corrupt and restores Zechariah;
+    the Kitzur's Messiah-count on the hovering, named. READINGS
+    (named-only): the Rosh-HaShanah count and the
+    Israel-accepts-the-Torah word-split on בראשית; the 613 summed at
+    את האור; the yearly count of Sabbath-closing blessings on ויבדל ("and He divided"); and Minchat Shai's whole
+    history of the two Masorah masters (the schools, the names, the
+    Rambam's reliance), kept in his note on 1:3.
+derivation_log:
+  - step: A
+    name_en: "Block choice"
+    comment: >
+      Day-1 unit (1:1-5) chosen as Stage C pilot: smallest complete
+      spec->build->verify->name->commit transaction in the corpus.
+    confidence: established
+  - step: B
+    name_en: "Hebrew source + trees"
+    comment: >
+      All 5 verses via taamim_tree_parse.py rule set v3 (glue bricks): status unique,
+      pure_binary true, leaf_complete true for every verse. tree_ascii recorded below.
+    confidence: tested
+    tags: ["[HE-STRUCT]"]
+  - step: C
+    name_en: "Segment structure"
+    comment: >
+      Leaves = conjunctive-glued bricks closed by disjunctives; brick roles frame from
+      OSHB verb morphology (#IMPOSED labeled aid, logic/lexicon v1 glosses EN-AID).
+    confidence: tested
+    tags: ["[HE-STRUCT]","#IMPOSED-OSHB"]
+  - step: D
+    name_en: "Predicates & outcomes"
+    comment: >
+      Candidate operators per leaf: DECLARE/LET (jussive), state-block (verse 2, zero
+      wayyiqtol), PASS(tov) test, divide partition, registry naming, cycle commit.
+    confidence: tested
+  - step: E
+    name_en: "Logic format choice"
+    comment: >
+      Operator lines (deontic/event/temporal per TIR-026..033) + registry table +
+      day-ledger row. Not a decision table (no casuistic ki-frames in this block).
+    confidence: established
+  - step: F
+    name_en: "Bilingual logic objects"
+    comment: >
+      Every operator line carries he + he_translit + en; registers named in English
+      with Hebrew value fields where the text supplies them (yom, layla, echad).
+    confidence: established
+  - step: G
+    name_en: "Oral (named only)"
+    comment: >
+      BR 3:7 (seder zemanim on va-yehi erev) verified from local Data; day-1 light
+      midrashim (or ha-ganuz) NOT verified locally -> observation tier only.
+    confidence: tested
+    tags: ["[ORAL]"]
+  - step: H
+    name_en: "Scenarios"
+    comment: >
+      Machine-state scenarios S1-S6 below: register deltas per verse + one negative
+      scenario (commit-without-test) so the day-2 contrast is testable.
+    confidence: tested
+  - step: I
+    name_en: "English leakage review"
+    comment: >
+      Operators derive from verb forms (jussive/wayyiqtol/participle/perfect), the
+      et/bein/le particles, and tree arms — not from English glosses. LET? never
+      silently upgraded (TIR-028 discipline).
+    confidence: established
+  - step: J
+    name_en: "Freeze"
+    comment: >
+      status: frozen 2026-07-28. Changes require a new derive pass, not
+      silent edits. Oral audit 2026-08-08 folded same day (run 7 block
+      9, creation week begins): 6 VERIFIED, 0 FAILED, 0 UNCHECKABLE;
+      headline: the finals of truth at the opening words, and the
+      first Ben Asher / Ben Naphtali split at the light-command.
+    confidence: established
+
+boot_steps:
+  - id: STEP_Gn_1_1
+    order: 1
+    ref: "Gen.1.1"
+    op: EVENT_CREATE
+    he: בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ
+    he_translit: "be-reshit bara Elohim et ha-shamayim ve-et ha-aretz"
+    en: "[EN-AID] In the beginning God created the heavens and the earth."
+    tree_left:
+      he: בראשית ברא אלהים
+      he_translit: "be-reshit bara Elohim"
+      en: "time-anchor + creation event (etnachta arm)"
+    tree_right:
+      he: את השמים ואת הארץ
+      he_translit: "et ha-shamayim ve-et ha-aretz"
+      en: "the complete Theme inventory (double et)"
+    operators:
+      - op: TIME_ANCHOR
+        expr_en: "t0 := reshit (timeline origin from the be- prefix frame)"
+        cites: ["TIR-022"]
+        confidence: tested
+      - op: EVENT
+        expr_en: "create(e1) ∧ Agent(e1, Elohim) ∧ Theme(e1, shamayim) ∧ Theme(e1, aretz)"
+        he: אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ
+        he_translit: "et ha-shamayim ve-et ha-aretz"
+        en: "perfect bara = completed narrative event; et X ve-et Y = full Theme list"
+        cites: ["TIR-014", "TIR-015"]
+        confidence: tested
+      - op: REGISTRY_INSTALL
+        expr_en: "WORLD += {shamayim, aretz} — installed by narration, NOT by naming formula"
+        en: "these two labels are re-issued later (1:8, 1:10) — the registry collisions"
+        cites: []
+        confidence: tested
+    comment: >
+      Top split L=etnachta after Elohim: [event | inventory]. No directive operator:
+      verse 1 is direct initialization, narrated not commanded.
+    confidence: tested
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+  - id: STEP_Gn_1_2
+    order: 2
+    ref: "Gen.1.2"
+    op: STATE_BLOCK
+    he: וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ וְחֹשֶׁךְ עַל־פְּנֵי תְהוֹם וְרוּחַ אֱלֹהִים מְרַחֶפֶת עַל־פְּנֵי הַמָּיִם
+    he_translit: "ve-ha-aretz hayta tohu va-vohu ve-choshekh al-penei tehom ve-ruach Elohim merachefet al-penei ha-mayim"
+    en: "[EN-AID] The earth was formless and void, darkness over the deep, God's spirit hovering over the waters."
+    tree_left:
+      he: והארץ היתה תהו ובהו וחשך על פני תהום
+      he_translit: "ve-ha-aretz hayta tohu va-vohu ve-choshekh al-penei tehom"
+      en: "state predicates: formless/void + darkness-over-deep"
+    tree_right:
+      he: ורוח אלהים מרחפת על פני המים
+      he_translit: "ve-ruach Elohim merachefet al-penei ha-mayim"
+      en: "standing condition: spirit hovering"
+    operators:
+      - op: PRECONDITION_STATE
+        expr_en: "HOLDS(tohu(aretz) ∧ vohu(aretz), t0); HOLDS(over(choshekh, face(tehom)), t0)"
+        en: "perfect hayta + verbless clauses = states, not actions"
+        cites: []
+        confidence: tested
+      - op: INVARIANT
+        expr_en: "INVARIANT(hover(ruach-Elohim, face(mayim))) during t0"
+        he: מְרַחֶפֶת
+        he_translit: merachefet
+        en: "participle = ongoing condition"
+        cites: ["TIR-031"]
+        confidence: tested
+      - op: NOTE_ZERO_EVENTS
+        expr_en: "no wayyiqtol in the verse — this whole verse is {P}, the precondition block"
+        cites: []
+        confidence: tested
+      - op: NOTE_PRESUPPOSED
+        expr_en: "choshekh, tehom, mayim, ruach are READ without prior install (uninitialized entities)"
+        en: "flag, not fix: the pre-existing-materials question belongs to interpretation"
+        cites: []
+        confidence: tested
+    comment: >
+      Precondition block for the first triple: {P} = 1:2 in full.
+    confidence: tested
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+  - id: STEP_Gn_1_3
+    order: 3
+    ref: "Gen.1.3"
+    op: DECLARE_LET_RESULT
+    he: וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר וַיְהִי־אוֹר
+    he_translit: "va-yomer Elohim yehi or va-yehi or"
+    en: "[EN-AID] God said: let there be light — and there was light."
+    tree_left:
+      he: ויאמר אלהים יהי אור
+      he_translit: "va-yomer Elohim yehi or"
+      en: "speech act wrapping the jussive directive"
+    tree_right:
+      he: ויהי אור
+      he_translit: "va-yehi or"
+      en: "the postcondition asserted"
+    operators:
+      - op: DECLARE
+        expr_en: "DECLARE(Elohim, LET(exists(or)))"
+        he: יְהִי אוֹר
+        he_translit: "yehi or"
+        en: "jussive yehi = LET; the saying is the doing (performative)"
+        cites: ["TIR-026"]
+        confidence: tested
+      - op: TRIPLE
+        expr_en: "{ P: 1:2 state } yehi or { Q: exists(or) }"
+        en: "spec and result share root+letters; mood alone (jussive vs wayyiqtol) splits demanded-Q from holds-Q"
+        cites: ["TIR-026"]
+        confidence: tested
+      - op: RESULT
+        expr_en: "HOLDS(exists(or), t1) — SPECS queue popped same verse (latency 0)"
+        he: וַיְהִי־אוֹר
+        he_translit: "va-yehi or"
+        en: "wayyiqtol: narrative event; verbatim echo of the spec (only day with verbatim RESULT)"
+        cites: []
+        confidence: tested
+    comment: >
+      The minimal fiat: cleanest {P} op {Q} in the corpus.
+    confidence: tested
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+  - id: STEP_Gn_1_4
+    order: 4
+    ref: "Gen.1.4"
+    op: TEST_AND_PARTITION
+    he: וַיַּרְא אֱלֹהִים אֶת־הָאוֹר כִּי־טוֹב וַיַּבְדֵּל אֱלֹהִים בֵּין הָאוֹר וּבֵין הַחֹשֶׁךְ
+    he_translit: "va-yar Elohim et-ha-or ki-tov va-yavdel Elohim bein ha-or u-vein ha-choshekh"
+    en: "[EN-AID] God saw the light, that it was good; and God divided the light from the darkness."
+    tree_left:
+      he: וירא אלהים את האור כי טוב
+      he_translit: "va-yar Elohim et-ha-or ki-tov"
+      en: "inspection + acceptance test"
+    tree_right:
+      he: ויבדל אלהים בין האור ובין החשך
+      he_translit: "va-yavdel Elohim bein ha-or u-vein ha-choshekh"
+      en: "partition event on the between-pair"
+    operators:
+      - op: TEST
+        expr_en: "PASS(tov, or) — inside see(e2, Agent Elohim, Theme or): epistemic wrap"
+        he: כִּי־טוֹב
+        he_translit: "ki-tov"
+        en: "ki here = 'that' (complementizer under the etnachta arm), NOT casuistic IF — per-unit ki ruling (STANDING §3); tov = oracle predicate, undefined in-text"
+        cites: ["TIR-014"]
+        confidence: tested
+      - op: EVENT_PARTITION
+        expr_en: "divide(e3, Agent Elohim, between(or, choshekh)) ⇒ or ∩ choshekh = ∅"
+        he: בֵּין הָאוֹר וּבֵין הַחֹשֶׁךְ
+        he_translit: "bein ha-or u-vein ha-choshekh"
+        en: "bein...u-vein = one two-place relation (set partition reading = hypothesis)"
+        cites: []
+        confidence: "event tested; partition reading hypothesis"
+    comment: >
+      Note: divide operates on choshekh — an entity never installed (see STEP_Gn_1_2 flag).
+    confidence: tested
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+  - id: STEP_Gn_1_5
+    order: 5
+    ref: "Gen.1.5"
+    op: NAME_AND_COMMIT
+    he: וַיִּקְרָא אֱלֹהִים לָאוֹר יוֹם וְלַחֹשֶׁךְ קָרָא לָיְלָה וַיְהִי־עֶרֶב וַיְהִי־בֹקֶר יוֹם אֶחָד
+    he_translit: "va-yiqra Elohim la-or yom ve-la-choshekh qara layla va-yehi erev va-yehi voqer yom echad"
+    en: "[EN-AID] God called the light Day and the darkness Night; evening, morning — day one."
+    tree_left:
+      he: ויקרא אלהים לאור יום ולחשך קרא לילה
+      he_translit: "va-yiqra Elohim la-or yom ve-la-choshekh qara layla"
+      en: "two registry writes via the naming formula"
+    tree_right:
+      he: ויהי ערב ויהי בקר יום אחד
+      he_translit: "va-yehi erev va-yehi voqer yom echad"
+      en: "cycle close + day ledger entry"
+    operators:
+      - op: NAME
+        expr_en: "REGISTRY: name(or) := yom; name(choshekh) := layla"
+        he: לָאוֹר יוֹם … וְלַחֹשֶׁךְ … לָיְלָה
+        he_translit: "la-or yom … ve-la-choshekh … layla"
+        en: "performative naming: le- prefix marks the receiver; bare word after = label; registry write, not a truth claim; choshekh (never installed) is legitimized by naming"
+        cites: ["TIR-022"]
+        confidence: tested
+      - op: COMMIT
+        expr_en: "cycle(erev -> boqer); LEDGER[day 1] := {spec ✓, test PASS, names 2}"
+        he: יוֹם אֶחָד
+        he_translit: "yom echad"
+        en: "echad = CARDINAL 'one' (days 2-6 use ordinals) — marked form, flagged not resolved"
+        cites: []
+        confidence: "commit tested; cardinal significance [OPEN]"
+    comment: >
+      Day-1 transaction closes complete: P (1:2) -> fiat (1:3) -> test+partition (1:4)
+      -> names+commit (1:5). This shape is the baseline the other days deviate from.
+    confidence: tested
+    source: "[HE-WRITTEN][HE-STRUCT]"
+
+state_machine:
+  comment_en: "Day-1 transaction machine (registers: TIME/WORLD/REGISTRY/SPECS/TESTS/LEDGER)."
+  states:
+    - id: S_boot
+      en: "Before 1:1 — all registers empty (Elohim presupposed constant)"
+    - id: S_world_seeded
+      en: "After 1:1 — WORLD={shamayim, aretz}, t0 set"
+    - id: S_precondition_loaded
+      en: "After 1:2 — state facts + hover INVARIANT loaded; zero events"
+    - id: S_light_exists
+      en: "After 1:3 — LET issued and satisfied; WORLD += or"
+    - id: S_tested_partitioned
+      en: "After 1:4 — TESTS: PASS(tov, or); or/choshekh partitioned"
+    - id: S_day1_committed
+      en: "After 1:5 — REGISTRY has yom/layla; LEDGER[1] closed"
+  transitions:
+    - {from: S_boot, to: S_world_seeded, via: STEP_Gn_1_1}
+    - {from: S_world_seeded, to: S_precondition_loaded, via: STEP_Gn_1_2}
+    - {from: S_precondition_loaded, to: S_light_exists, via: STEP_Gn_1_3}
+    - {from: S_light_exists, to: S_tested_partitioned, via: STEP_Gn_1_4}
+    - {from: S_tested_partitioned, to: S_day1_committed, via: STEP_Gn_1_5}
+
+state_after:
+  - id: AFTER_S_day1_committed
+    en: >
+      WORLD: shamayim, aretz, or (created) + choshekh, tehom, mayim, ruach (presupposed).
+      REGISTRY: or->yom, choshekh->layla. TESTS: day-1 PASS. LEDGER: day 1 committed
+      (cardinal). SPECS: empty.
+
+exports:
+  - id: EXPORT_day_cycle
+    he: וַיְהִי־עֶרֶב וַיְהִי־בֹקֶר
+    he_translit: va-yehi-erev va-yehi-voqer
+    en: day cycle = evening then morning (COMMIT formula; absent on day 7)
+  - id: EXPORT_light_dark
+    he: אוֹר / חֹשֶׁךְ
+    he_translit: or / choshekh
+    en: light and darkness as a partitioned pair with registry names yom/layla
+  - id: EXPORT_create_by_speech
+    he: וַיֹּאמֶר … וַיְהִי
+    he_translit: va-yomer … va-yehi
+    en: DECLARE+LET -> RESULT (the fiat cycle; TIR-026)
+  - id: EXPORT_agent_elohim
+    he: אֱלֹהִים
+    he_translit: Elohim
+    en: God as creating agent (presupposed constant of the machine)
+  - id: EXPORT_precondition_block
+    he: תֹהוּ וָבֹהוּ
+    he_translit: tohu va-vohu
+    en: verse 2 as reusable {P} pattern — a zero-event state block
+  - id: EXPORT_day_ledger_pattern
+    en: "spec -> build -> RESULT -> PASS(tov) -> name -> COMMIT: baseline for days 2-7 deviations"
+
+oral_notes:
+  - id: ORAL_seder_zemanim
+    status: verified
+    work_en: "Bereshit Rabbah 3:7 (on va-yehi erev, 1:5)"
+    he: יהי ערב אין כתיב כאן אלא ויהי ערב — מכאן שהיה סדר זמנים קדם לכן
+    he_translit: "yehi erev ein ketiv kan ela VA-yehi erev — mi-kan she-hayah seder zemanim qodem lakhen"
+    en: >
+      "'Let there be evening' is not written — rather 'AND there WAS evening': from here,
+      an order of times existed beforehand." R. Yehuda b. Simon reads the wayyiqtol
+      (not jussive!) of the commit formula — the same mood distinction TIR-026 encodes.
+    comment_en: "Verified from Data/bereshit_rabbah_he.json. Dual-track; not merged into Written."
+    source: "[ORAL][VERIFIED-LOCAL]"
+  - id: ORAL_or_haganuz
+    status: verified
+    work_en: "Or ha-ganuz (hidden primordial light) — Bavli Chagigah 12a (R. Elazar)"
+    he: אור שברא הקב"ה ביום ראשון אדם צופה בו מסוף העולם ועד סופו כיון שנסתכל הקב"ה בדור המבול ובדור הפלגה וראה שמעשיהם מקולקלים עמד וגנזו מהן
+    he_translit: "or she-bara HKB'H be-yom rishon adam tzofeh bo mi-sof ha-olam ve-ad sofo; keivan she-nistakel be-dor ha-mabul u-ve-dor ha-flagah ve-ra'ah she-ma'aseihem mequlqalim, amad u-genazo mehen"
+    en: >
+      "The light the Holy One created on day one (or = light) — a person could
+      see by it from one end of the world to the other; when He beheld the
+      generation of the Flood and the generation of the Dispersion and saw
+      their deeds corrupt, He arose and hid it (genazo) from them."
+    comment_en: >
+      AMENDED 2026-07-30: upgraded observation -> verified. The oral_links
+      coverage review anchored Chagigah 12a to this span and the quote was
+      verified from Data/bavli_chagigah_he.json. Dual-track; not merged.
+    source: "[ORAL][VERIFIED-LOCAL]"
+  - id: ORAL_e1_maamar
+    status: verified
+    work_en: "Ten utterances (asarah ma'amarot) — Mishnah Avot 5:1, enumerated at Bereshit Rabbah 17:1"
+    he: "תְּנֵינַן בַּעֲשָׂרָה מַאֲמָרוֹת נִבְרָא הָעוֹלָם, וְאֵלּוּ הֵן: בְּרֵאשִׁית, וְרוּחַ אֱלֹהִים מְרַחֶפֶת, וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר…"
+    he_translit: "teneinan ba-asarah ma'amarot nivra ha-olam, ve-elu hen: be-reshit, ve-ruach Elohim merachefet, va-yomer Elohim yehi or…"
+    en: >
+      "We learned: with TEN UTTERANCES the world was created, and these are they:
+      'be-reshit' (1:1), 'and the spirit of God hovered' (1:2), 'and God said let
+      there be light' (1:3) …" — the chain's own census of the account's speech-act
+      operators. It counts e1 (Gen 1:1) as an utterance although va-yomer ("and He
+      said") is absent there — grounded on Ps 33:6 ("by the word of the LORD the
+      heavens were made") — and records dissent: Menachem bar Yosei removes the
+      ruach utterance and substitutes Gen 2:18; R. Yaakov ben Kurshai retains it.
+    comment_en: >
+      Bears on this unit's e1, which models bara as EVENT with no speech operator:
+      the chain holds e1 to be a maamar too (with a named minority view). Recorded
+      as dual-track testimony; the operator itself is unchanged pending a derive
+      pass. Verified from Data/sefaria_texts/ (BR 17:1, local). Triage ledger row 37.
+      CORROBORATED (amendment pass 2026-07-30): Bavli Megillah 21b:10 and Rosh
+      Hashanah 32a:19 state the same census (RH adds the architecture: ONE
+      utterance created all matter, the other nine differentiated it — rows 52,
+      65); ADRN B 36:2 preserves the dissent census, reaching ten va-yomer lines
+      WITHOUT counting bereshit (row 93).
+    source: "[ORAL][VERIFIED-LOCAL]"
+  - id: ORAL_et_theme_marker
+    status: verified
+    work_en: "The et rule — Bereshit Rabbah 1:14, Bavli Chagigah 12a:20 (Nachum Ish Gam Zu via R. Akiva), Targum Onkelos Gen 1:1"
+    he: "אִילּוּ נֶאֱמַר ״שָׁמַיִם וָאָרֶץ״, הָיִיתִי אוֹמֵר: ״שָׁמַיִם״ — שְׁמוֹ שֶׁל הַקָּדוֹשׁ בָּרוּךְ הוּא. עַכְשָׁיו שֶׁנֶּאֱמַר ״אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ״ — שָׁמַיִם מַמָּשׁ, אָרֶץ מַמָּשׁ"
+    he_translit: "ilu ne'emar 'shamayim va-aretz', hayiti omer: shamayim — shemo shel HKB'H; akhshav she-ne'emar 'ET ha-shamayim VE-ET ha-aretz' — shamayim mamash, aretz mamash"
+    en: >
+      "Had it said 'shamayim va-aretz' (heavens and earth), I would have said
+      shamayim is the NAME of the Holy One; now that it says ET ha-shamayim
+      ve-ET ha-aretz — actual heavens, actual earth" (Chagigah 12a:20): et
+      disambiguates Agent-name from created OBJECT. Sister rule at BR 1:14:
+      "akhin ve-rakin mi'utin, ETIN ve-gamin RIBUYIN" — akh/rak exclude, et/gam
+      INCLUDE ("et ha-shamayim includes sun, moon, constellations; et ha-aretz
+      includes trees, grasses, Gan Eden"). And the Targum rules in the grammar
+      itself: Onkelos renders et as YAT, the explicit Aramaic object marker
+      ("be-kadmin bera YY YAT shemaya ve-YAT ar'a").
+    comment_en: >
+      Three independent chain witnesses for the TIR-014/015 reading of et as
+      Theme marker / Theme-inventory on e1: hermeneutic rule (BR), agent/Theme
+      disambiguation argument (Bavli), and translation grammar (Onkelos).
+      Verified local. Triage rows 14, 43, 105. Amendment pass 2026-07-30.
+    source: "[ORAL][VERIFIED-LOCAL]"
+  - id: ORAL_echad_label_form
+    status: verified
+    work_en: "The cardinal echad — Bereshit Rabbah 3:9, Targum Onkelos Gen 1:5"
+    he: "לֹא הָיָה צָרִיךְ לְמֵימַר אֶלָּא אֶחָד שְׁנַיִם שְׁלֹשָׁה, אוֹ רִאשׁוֹן שֵׁנִי וּשְׁלִישִׁי. שֶׁמָּא אֶחָד, שֵׁנִי, שְׁלִישִׁי, אֶתְמְהָא"
+    he_translit: "lo hayah tzarikh le-meimar ela echad shenayim shelosha, o rishon sheni u-shlishi; shema echad, sheni, shlishi — etmeha?!"
+    en: >
+      "It should have said only echad, shenayim, shelosha (one, two, three) OR
+      rishon, sheni, shlishi (first, second, third) — but ECHAD then SHENI?!"
+      (BR 3:9) — the chain itself asks our LEDGER's mixed-series question, and
+      answers by deferred repayment at the Mishkan's dedication ("va-yehi
+      ha-makriv ba-yom ha-RISHON… first to creation"). Onkelos preserves the
+      anomaly in translation: "yoma CHAD" (ONE day, cardinal kept) — and splits
+      the yom polysemy: the registry label is rendered YEMAMA ("daytime") while
+      the ledger unit stays yoma.
+    comment_en: >
+      Two chain witnesses on the label_form [OPEN] flag: the question named and
+      answered (BR 3:9, with the same anomaly-repayment pattern as the alef/
+      Sinai tradition, PDRK 12:24), and the authorized translation refusing to
+      ordinalize while formally distinguishing REGISTRY label from LEDGER unit
+      (Onkelos 1:5). The [OPEN] flag stays open — the chain marks the anomaly
+      as deliberate, not resolved into an ordinal. Verified local. Triage rows
+      29, 109, 130. Amendment pass 2026-07-30.
+    source: "[ORAL][VERIFIED-LOCAL]"
+  - id: ORAL_presupposed_resolutions
+    status: verified
+    work_en: "The presupposed materials — Bereshit Rabbah 1:9 vs Bavli Chagigah 12a:6"
+    he: "צַיָּר גָּדוֹל הוּא אֱלֹהֵיכֶם, אֶלָּא שֶׁמָּצָא סַמְּמָנִים טוֹבִים — תֹּהוּ וָבֹהוּ וְחֹשֶׁךְ וְרוּחַ וּמַיִם וּתְהוֹמוֹת. אֲמַר לֵיהּ: כּוּלְּהוֹן כְּתִיב בָּהֶן בְּרִיאָה"
+    he_translit: "tzayar gadol hu Eloheikhem, ela she-matza samemanim tovim — tohu va-vohu ve-choshekh ve-ruach u-mayim u-tehomot; amar leih: kulhon ketiv bahen beriah"
+    en: >
+      The philosopher to Rabban Gamliel: "a great painter is your God — but He
+      FOUND good pigments: tohu, vohu, darkness, wind, water, deeps." Gamliel:
+      "creation is written of ALL of them," answering item by item from later
+      Scripture (darkness: Isa 45:7 yotzer or u-vore choshekh). The Bavli's
+      parallel resolution (Chagigah 12a:6): TEN things were created on DAY ONE —
+      heavens and earth, tohu and vohu, light AND DARKNESS, wind and water, the
+      measure of day and the measure of night — each with its day-1 verse.
+    comment_en: >
+      The chain's twin resolutions of exactly our NOTE_PRESUPPOSED flag (the
+      read-before-install list {tohu, vohu, choshekh, ruach, mayim, tehom}):
+      BR answers from later Written verses (the same verses now in the echo
+      register — Isa 45:7 edge); the Bavli declares them day-one creations
+      outright. The unit's flag stands — the machine still observes reads
+      before installs in the local text; the chain's answers are recorded as
+      the resolution tradition. Verified local. Triage rows 9, 40. Amendment
+      pass 2026-07-30.
+    source: "[ORAL][VERIFIED-LOCAL]"
+  - id: ORAL_theme_order
+    status: verified
+    work_en: "Theme order carries no temporal claim — Mekhilta DeRabbi Yishmael, Pischa 1:4"
+    he: "שׁוֹמֵעַ אֲנִי, כָּל הַקּוֹדֵם בַּמִּקְרָא הוּא קוֹדֵם בַּמַּעֲשֶׂה; כְּשֶׁהוּא אוֹמֵר בְּיוֹם עֲשׂוֹת ה׳ אֱלֹהִים אֶרֶץ וְשָׁמָיִם, מַגִּיד שֶׁשְּׁנֵיהֶם שְׁקוּלִין זֶה בָזֶה"
+    he_translit: "shome'a ani, kol ha-kodem ba-mikra hu kodem ba-ma'aseh; k'she-hu omer 'be-yom asot H' Elohim eretz ve-shamayim', magid she-SHNEIHEM SHEKULIN zeh ba-zeh"
+    en: >
+      "I might hear that whatever precedes in the VERSE precedes in the DEED;
+      when it says (Gen 2:4) 'on the day the LORD God made EARTH AND HEAVENS'
+      [reversed], it tells you the two are equal to one another." Tannaitic
+      ruling: surface order in e1's Theme list carries no temporal claim.
+    comment_en: >
+      Grounds the unit's order-agnostic Theme list on e1. The amoraic machloket
+      (Beit Shammai heavens-first / Beit Hillel earth-first — BR 1:15, Chagigah
+      12a:16, JT Chagigah 2:1:17, VR 36:1) is recorded around this; VR 36:1
+      generalizes the same move into a rule (a single order-inversion among
+      fixed orderings teaches equivalence, across six word-pairs). Verified
+      local. Triage rows 15, 42, 59, 83, 114, 127. Amendment pass 2026-07-30.
+    source: "[ORAL][VERIFIED-LOCAL]"
+  - id: ORAL_result_latency
+    status: verified
+    work_en: "Result is instantaneous-complete — Bereshit Rabbah 3:2"
+    he: "לֹא בֶעָמָל לֹא בִיגִיעָה בָּרָא הַקָּדוֹשׁ בָּרוּךְ הוּא אֶת עוֹלָמוֹ, אֶלָּא בִּדְבַר ה׳ — וְהָיָה אוֹר אֵין כְּתִיב כָּאן אֶלָּא וַיְהִי אוֹר, כְּבָר הָיָה"
+    he_translit: "lo ve-amal lo vi-ygi'ah bara HKB'H et olamo, ela bi-dvar H' — VE-HAYA or ein ketiv kan ela VA-YEHI or: kevar hayah"
+    en: >
+      "Not with toil nor labor did the Holy One create His world, but by the
+      word of the LORD (Ps 33:6) — 've-haya or' (and light SHALL BE) is not
+      written here, but VA-YEHI or (and light WAS): it already was."
+    comment_en: >
+      Chain-primary derivation from the wayyiqtol mood that the RESULT of the
+      yehi-or command is latency-zero — complete on utterance; the same
+      morphological contrast (va-yehi vs ve-haya) that TIR-026/029 encode,
+      argued by the chain on this unit's own token. Sister to the cited BR 3:7
+      seder-zemanim argument. Note Ps 33:6 as ground — the same verse behind
+      ORAL_e1_maamar and in the echo-candidate frontier. Verified local.
+      Triage row 22. Amendment pass 2026-07-30.
+    source: "[ORAL][VERIFIED-LOCAL]"
+  - id: ORAL_label_not_entity
+    status: verified
+    work_en: "The naming write binds label, not identity — Bereshit Rabbah 3:6"
+    he: "וַיִּקְרָא אֱלֹהִים לָאוֹר יוֹם — לֹא הוּא אוֹר וְלֹא הוּא יוֹם, אֶתְמְהָא"
+    he_translit: "va-yiqra Elohim la-or yom — lo hu or ve-lo hu yom, etmeha?!"
+    en: >
+      "'And God called the light day' — but the light is not [the same as] the
+      day?! " — the chain opens by articulating that the naming write binds a
+      LABEL to an entity without collapsing them; it continues with the
+      primordial light serving neither day nor night, hidden (nignezah) for the
+      righteous.
+    comment_en: >
+      Chain-primary articulation of this unit's REGISTRY semantics (TIR-022):
+      va-yiqra installs label->entity bindings ({or: yom, choshekh: layla}),
+      label distinct from entity. The Bavli runs the operational consistency
+      test on the same verse (Megillah 20b:2-3 / Pesachim 2a:5: the 'advancing
+      light' reading rejected by choshekh-symmetry — labels read literally);
+      Onkelos splits the label lexically (yemama, see ORAL_echad_label_form).
+      Verified local. Triage rows 26, 50, 51, 63. Amendment pass 2026-07-30.
+    source: "[ORAL][VERIFIED-LOCAL]"
+  - id: ORAL_policy
+    status: observation
+    work_en: "Oral policy"
+    comment_en: "Named location only; every MH endpoint possible Oral; never silent-merge."
+    source: "[PROJECT]"
+
+scenarios:
+  - id: S1
+    title_en: "Boot: after STEP_Gn_1_1"
+    given_en: "All registers empty; Elohim presupposed."
+    expect_en: "WORLD = {shamayim, aretz}; TIME t0 = reshit; SPECS empty; no test, no name."
+    value_he: אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ
+    value_he_translit: "et ha-shamayim ve-et ha-aretz"
+  - id: S2
+    title_en: "Precondition load: after STEP_Gn_1_2"
+    given_en: "S1 state."
+    expect_en: >
+      Facts tohu/vohu/darkness-over-deep HOLD; hover INVARIANT active; ZERO events fired;
+      machine flags choshekh/tehom/mayim/ruach as read-before-install (presupposed).
+    value_he: תֹהוּ וָבֹהוּ
+    value_he_translit: "tohu va-vohu"
+  - id: S3
+    title_en: "Fiat: after STEP_Gn_1_3"
+    given_en: "S2 state (P holds)."
+    expect_en: >
+      SPECS: LET(exists(or)) pushed then satisfied in the SAME verse (latency 0);
+      WORLD += or; triple {P} yehi-or {exists(or)} discharged.
+    value_he: יְהִי אוֹר
+    value_he_translit: "yehi or"
+  - id: S4
+    title_en: "Test + partition: after STEP_Gn_1_4"
+    given_en: "S3 state."
+    expect_en: "TESTS += PASS(tov, or); partition or ∩ choshekh = ∅ recorded."
+    value_he: כִּי־טוֹב
+    value_he_translit: "ki-tov"
+  - id: S5
+    title_en: "Name + commit: after STEP_Gn_1_5"
+    given_en: "S4 state."
+    expect_en: >
+      REGISTRY: or->yom, choshekh->layla (2 writes); LEDGER[day 1] committed with
+      spec ✓ / test PASS / names 2; day label is CARDINAL echad.
+    value_he: יוֹם אֶחָד
+    value_he_translit: "yom echad"
+  - id: S6_negative
+    title_en: "Negative: commit without test"
+    given_en: "A day-unit reaching its cycle close with TESTS empty for the unit."
+    expect_en: >
+      Interpreter must FLAG pattern deviation (do not block): this is exactly day 2
+      (1:6-8), which commits with no PASS(tov). The flag is data, not an error.
+  - id: S7_negative
+    title_en: "Negative: LET? never auto-upgrades"
+    given_en: "A leaf whose verb is imperfect inside command speech."
+    expect_en: >
+      Operator stays LET?(p) with the question mark (TIR-028); any resolution to
+      LET/CMD! must cite a per-unit judgment, or the run fails validation.
+
+binary_trees:
+  display_policy_en: >
+    Always he + he_translit + en. Full tree_ascii per verse. Chat display per
+    logic/TREE_DISPLAY.md (B# GLUE|ATOM).
+  method_note_en: >
+    taamim_tree_parse.py rule set v3 (glue bricks -> pure binary). Upgraded 2026-07-28
+    from the v1 word-level trees (v1 had 3-ary/4-ary flat nodes; v3 is pure binary
+    with conjunctive glue).
+  data_source: "Data/Gen.xml"
+  parser: "taamim_tree_parse.py"
+  rule_set_version: "v3"
+  tags: ["[HE-STRUCT]"]
+  verse_trees:
+    Gen_1_1:
+      verse: "1:1"
+      osis_id: "Gen.1.1"
+      parser_status: unique
+      pure_binary: true
+      word_count: 7
+      linear:
+        he: בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ
+        he_translit: "be-reshit bara Elohim et ha-shamayim ve-et ha-aretz"
+        en: "In the beginning God created the heavens and the earth. [EN-AID]"
+      top_binary_split:
+        comment: "etnachta after Elohim: [time-anchor + event | double-et Theme inventory]"
+        left_half:
+          phrase: {he: בראשית ברא אלהים, he_translit: "be-reshit bara Elohim", en: "in-beginning created God"}
+        right_half:
+          phrase: {he: את השמים ואת הארץ, he_translit: "et ha-shamayim ve-et ha-aretz", en: "et the-heavens and-et the-earth"}
+      tree_ascii: |
+        PHRASE (binary 7w) בְּ/רֵאשִׁ֖ית בָּרָ֣א אֱלֹהִ֑ים אֵ֥ת הַ/שָּׁמַ֖…
+        ├── PHRASE (binary 3w) בְּ/רֵאשִׁ֖ית בָּרָ֣א אֱלֹהִ֑ים
+        │   ├── [0] בְּ/רֵאשִׁ֖ית (tifcha, rank=2)
+        │   └── [1-2] GLUE בָּרָ֣א אֱלֹהִ֑ים (etnachta (major mid-verse rest), rank=1)
+        └── PHRASE (binary 4w) אֵ֥ת הַ/שָּׁמַ֖יִם וְ/אֵ֥ת הָ/אָֽרֶץ
+            ├── [3-4] GLUE אֵ֥ת הַ/שָּׁמַ֖יִם (tifcha, rank=2)
+            └── [5-6] GLUE וְ/אֵ֥ת הָ/אָֽרֶץ (silluq (verse-end emperor), rank=1)
+      maps_to: ["STEP_Gn_1_1"]
+      confidence: tested
+      source: "[HE-STRUCT][HE-WRITTEN]"
+    Gen_1_2:
+      verse: "1:2"
+      osis_id: "Gen.1.2"
+      parser_status: unique
+      pure_binary: true
+      word_count: 14
+      linear:
+        he: וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ וְחֹשֶׁךְ עַל־פְּנֵי תְהוֹם וְרוּחַ אֱלֹהִים מְרַחֶפֶת עַל־פְּנֵי הַמָּיִם
+        he_translit: "ve-ha-aretz hayta tohu va-vohu ve-choshekh al-penei tehom ve-ruach Elohim merachefet al-penei ha-mayim"
+        en: "The earth was formless and void; darkness over the deep; God's spirit hovering over the waters. [EN-AID]"
+      top_binary_split:
+        comment: "etnachta after tehom: [earth-state + darkness | spirit INVARIANT]"
+        left_half:
+          phrase: {he: והארץ היתה תהו ובהו וחשך על פני תהום, he_translit: "ve-ha-aretz hayta tohu va-vohu ve-choshekh al-penei tehom", en: "state predicates"}
+        right_half:
+          phrase: {he: ורוח אלהים מרחפת על פני המים, he_translit: "ve-ruach Elohim merachefet al-penei ha-mayim", en: "hovering invariant"}
+      tree_ascii: |
+        PHRASE (binary 14w) וְ/הָ/אָ֗רֶץ הָיְתָ֥ה תֹ֨הוּ֙ וָ/בֹ֔הוּ וְ/חֹ֖ש…
+        ├── PHRASE (binary 8w) וְ/הָ/אָ֗רֶץ הָיְתָ֥ה תֹ֨הוּ֙ וָ/בֹ֔הוּ וְ/חֹ֖ש…
+        │   ├── PHRASE (binary 4w) וְ/הָ/אָ֗רֶץ הָיְתָ֥ה תֹ֨הוּ֙ וָ/בֹ֔הוּ
+        │   │   ├── [0] וְ/הָ/אָ֗רֶץ (revia, rank=3)
+        │   │   └── PHRASE (binary 3w) הָיְתָ֥ה תֹ֨הוּ֙ וָ/בֹ֔הוּ
+        │   │       ├── [1-2] GLUE הָיְתָ֥ה תֹ֨הוּ֙ (pashta, rank=3)
+        │   │       └── [3] וָ/בֹ֔הוּ (zaqef qatan, rank=2)
+        │   └── PHRASE (binary 4w) וְ/חֹ֖שֶׁךְ עַל פְּנֵ֣י תְה֑וֹם
+        │       ├── [4] וְ/חֹ֖שֶׁךְ (tifcha, rank=2)
+        │       └── [5-7] GLUE עַל פְּנֵ֣י תְה֑וֹם (etnachta (major mid-verse rest), rank=1)
+        └── PHRASE (binary 6w) וְ/ר֣וּחַ אֱלֹהִ֔ים מְרַחֶ֖פֶת עַל פְּנֵ֥י הַ/מ…
+            ├── [8-9] GLUE וְ/ר֣וּחַ אֱלֹהִ֔ים (zaqef qatan, rank=2)
+            └── PHRASE (binary 4w) מְרַחֶ֖פֶת עַל פְּנֵ֥י הַ/מָּֽיִם
+                ├── [10] מְרַחֶ֖פֶת (tifcha, rank=2)
+                └── [11-13] GLUE עַל פְּנֵ֥י הַ/מָּֽיִם (silluq (verse-end emperor), rank=1)
+      maps_to: ["STEP_Gn_1_2"]
+      confidence: tested
+      source: "[HE-STRUCT][HE-WRITTEN]"
+    Gen_1_3:
+      verse: "1:3"
+      osis_id: "Gen.1.3"
+      parser_status: unique
+      pure_binary: true
+      word_count: 6
+      linear:
+        he: וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר וַיְהִי־אוֹר
+        he_translit: "va-yomer Elohim yehi or va-yehi or"
+        en: "God said: let there be light — and there was light. [EN-AID]"
+      top_binary_split:
+        comment: "etnachta after or: [speech+directive | result]"
+        left_half:
+          phrase: {he: ויאמר אלהים יהי אור, he_translit: "va-yomer Elohim yehi or", en: "DECLARE + LET"}
+        right_half:
+          phrase: {he: ויהי אור, he_translit: "va-yehi or", en: "RESULT"}
+      tree_ascii: |
+        PHRASE (binary 6w) וַ/יֹּ֥אמֶר אֱלֹהִ֖ים יְהִ֣י א֑וֹר וַֽ/יְהִי אֽ…
+        ├── PHRASE (binary 4w) וַ/יֹּ֥אמֶר אֱלֹהִ֖ים יְהִ֣י א֑וֹר
+        │   ├── [0-1] GLUE וַ/יֹּ֥אמֶר אֱלֹהִ֖ים (tifcha, rank=2)
+        │   └── [2-3] GLUE יְהִ֣י א֑וֹר (etnachta (major mid-verse rest), rank=1)
+        └── [4-5] GLUE וַֽ/יְהִי אֽוֹר (silluq (verse-end emperor), rank=1)
+      maps_to: ["STEP_Gn_1_3"]
+      confidence: tested
+      source: "[HE-STRUCT][HE-WRITTEN]"
+    Gen_1_4:
+      verse: "1:4"
+      osis_id: "Gen.1.4"
+      parser_status: unique
+      pure_binary: true
+      word_count: 12
+      linear:
+        he: וַיַּרְא אֱלֹהִים אֶת־הָאוֹר כִּי־טוֹב וַיַּבְדֵּל אֱלֹהִים בֵּין הָאוֹר וּבֵין הַחֹשֶׁךְ
+        he_translit: "va-yar Elohim et-ha-or ki-tov va-yavdel Elohim bein ha-or u-vein ha-choshekh"
+        en: "God saw the light, that it was good; God divided light from darkness. [EN-AID]"
+      top_binary_split:
+        comment: "etnachta after tov: [inspection + test | partition]"
+        left_half:
+          phrase: {he: וירא אלהים את האור כי טוב, he_translit: "va-yar Elohim et-ha-or ki-tov", en: "SEE + PASS(tov)"}
+        right_half:
+          phrase: {he: ויבדל אלהים בין האור ובין החשך, he_translit: "va-yavdel Elohim bein ha-or u-vein ha-choshekh", en: "DIVIDE between-pair"}
+      tree_ascii: |
+        PHRASE (binary 12w) וַ/יַּ֧רְא אֱלֹהִ֛ים אֶת הָ/א֖וֹר כִּי ט֑וֹב וַ…
+        ├── PHRASE (binary 6w) וַ/יַּ֧רְא אֱלֹהִ֛ים אֶת הָ/א֖וֹר כִּי ט֑וֹב
+        │   ├── PHRASE (binary 4w) וַ/יַּ֧רְא אֱלֹהִ֛ים אֶת הָ/א֖וֹר
+        │   │   ├── [0-1] GLUE וַ/יַּ֧רְא אֱלֹהִ֛ים (tevir, rank=3)
+        │   │   └── [2-3] GLUE אֶת הָ/א֖וֹר (tifcha, rank=2)
+        │   └── [4-5] GLUE כִּי ט֑וֹב (etnachta (major mid-verse rest), rank=1)
+        └── PHRASE (binary 6w) וַ/יַּבְדֵּ֣ל אֱלֹהִ֔ים בֵּ֥ין הָ/א֖וֹר וּ/בֵ֥י…
+            ├── [6-7] GLUE וַ/יַּבְדֵּ֣ל אֱלֹהִ֔ים (zaqef qatan, rank=2)
+            └── PHRASE (binary 4w) בֵּ֥ין הָ/א֖וֹר וּ/בֵ֥ין הַ/חֹֽשֶׁךְ
+                ├── [8-9] GLUE בֵּ֥ין הָ/א֖וֹר (tifcha, rank=2)
+                └── [10-11] GLUE וּ/בֵ֥ין הַ/חֹֽשֶׁךְ (silluq (verse-end emperor), rank=1)
+      maps_to: ["STEP_Gn_1_4"]
+      confidence: tested
+      source: "[HE-STRUCT][HE-WRITTEN]"
+    Gen_1_5:
+      verse: "1:5"
+      osis_id: "Gen.1.5"
+      parser_status: unique
+      pure_binary: true
+      word_count: 13
+      linear:
+        he: וַיִּקְרָא אֱלֹהִים לָאוֹר יוֹם וְלַחֹשֶׁךְ קָרָא לָיְלָה וַיְהִי־עֶרֶב וַיְהִי־בֹקֶר יוֹם אֶחָד
+        he_translit: "va-yiqra Elohim la-or yom ve-la-choshekh qara layla va-yehi erev va-yehi voqer yom echad"
+        en: "God named light Day and darkness Night; evening, morning — day one. [EN-AID]"
+      top_binary_split:
+        comment: "etnachta after layla: [two namings | cycle + ledger]"
+        left_half:
+          phrase: {he: ויקרא אלהים לאור יום ולחשך קרא לילה, he_translit: "va-yiqra Elohim la-or yom ve-la-choshekh qara layla", en: "NAME x2"}
+        right_half:
+          phrase: {he: ויהי ערב ויהי בקר יום אחד, he_translit: "va-yehi erev va-yehi voqer yom echad", en: "COMMIT day 1"}
+      tree_ascii: |
+        PHRASE (binary 13w) וַ/יִּקְרָ֨א אֱלֹהִ֤ים לָ/אוֹר֙ י֔וֹם וְ/לַ/חֹ֖…
+        ├── PHRASE (binary 7w) וַ/יִּקְרָ֨א אֱלֹהִ֤ים לָ/אוֹר֙ י֔וֹם וְ/לַ/חֹ֖…
+        │   ├── PHRASE (binary 4w) וַ/יִּקְרָ֨א אֱלֹהִ֤ים לָ/אוֹר֙ י֔וֹם
+        │   │   ├── [0-2] GLUE וַ/יִּקְרָ֨א אֱלֹהִ֤ים לָ/אוֹר֙ (pashta, rank=3)
+        │   │   └── [3] י֔וֹם (zaqef qatan, rank=2)
+        │   └── PHRASE (binary 3w) וְ/לַ/חֹ֖שֶׁךְ קָ֣רָא לָ֑יְלָה
+        │       ├── [4] וְ/לַ/חֹ֖שֶׁךְ (tifcha, rank=2)
+        │       └── [5-6] GLUE קָ֣רָא לָ֑יְלָה (etnachta (major mid-verse rest), rank=1)
+        └── PHRASE (binary 6w) וַֽ/יְהִי עֶ֥רֶב וַֽ/יְהִי בֹ֖קֶר י֥וֹם אֶחָֽד
+            ├── [7-10] GLUE וַֽ/יְהִי עֶ֥רֶב וַֽ/יְהִי בֹ֖קֶר (tifcha, rank=2)
+            └── [11-12] GLUE י֥וֹם אֶחָֽד (silluq (verse-end emperor), rank=1)
+      maps_to: ["STEP_Gn_1_5"]
+      confidence: tested
+      source: "[HE-STRUCT][HE-WRITTEN]"
+
+tree_coverage:
+  aspiration_en: >
+    100% word use with named roles and TIR citations (upgraded 2026-07-28 from
+    generic leaf roles).
+  word_total: 52
+  verses:
+  - ref: "Gen.1.1"
+    words:
+      - {index: 0, he: בראשית, he_translit: be-reshit, en: in-beginning, role: time_anchor, kind: logic_bearing, interp_rule: TIR-022, feeds: [STEP_Gn_1_1]}
+      - {index: 1, he: ברא, he_translit: bara, en: created, role: event_verb_create, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_1]}
+      - {index: 2, he: אלהים, he_translit: Elohim, en: God, role: agent, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_1]}
+      - {index: 3, he: את, he_translit: et, en: obj-marker, role: glue_object_marker, kind: glue, interp_rule: TIR-014, feeds: [STEP_Gn_1_1]}
+      - {index: 4, he: השמים, he_translit: ha-shamayim, en: the-heavens, role: theme_inventory_member, kind: logic_bearing, interp_rule: TIR-015, feeds: [STEP_Gn_1_1]}
+      - {index: 5, he: ואת, he_translit: ve-et, en: and-obj-marker, role: glue_object_marker, kind: glue, interp_rule: TIR-015, feeds: [STEP_Gn_1_1]}
+      - {index: 6, he: הארץ, he_translit: ha-aretz, en: the-earth, role: theme_inventory_member, kind: logic_bearing, interp_rule: TIR-015, feeds: [STEP_Gn_1_1]}
+  - ref: "Gen.1.2"
+    words:
+      - {index: 0, he: והארץ, he_translit: ve-ha-aretz, en: and-the-earth, role: state_subject, kind: logic_bearing, interp_rule: TIR-022, feeds: [STEP_Gn_1_2]}
+      - {index: 1, he: היתה, he_translit: hayta, en: was, role: state_verb_perfect, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_2]}
+      - {index: 2, he: תהו, he_translit: tohu, en: formless, role: state_predicate, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_2]}
+      - {index: 3, he: ובהו, he_translit: va-vohu, en: and-void, role: state_predicate, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_2]}
+      - {index: 4, he: וחשך, he_translit: ve-choshekh, en: and-darkness, role: state_subject_presupposed, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_2]}
+      - {index: 5, he: על, he_translit: al, en: over, role: location_prep, kind: glue, interp_rule: TIR-008, feeds: [STEP_Gn_1_2]}
+      - {index: 6, he: פני, he_translit: penei, en: face-of, role: location_construct, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_2]}
+      - {index: 7, he: תהום, he_translit: tehom, en: deep, role: location_ref_presupposed, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_2]}
+      - {index: 8, he: ורוח, he_translit: ve-ruach, en: and-spirit, role: invariant_subject, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_2]}
+      - {index: 9, he: אלהים, he_translit: Elohim, en: God, role: construct_possessor, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_2]}
+      - {index: 10, he: מרחפת, he_translit: merachefet, en: hovering, role: invariant_participle, kind: logic_bearing, interp_rule: TIR-031, feeds: [STEP_Gn_1_2]}
+      - {index: 11, he: על, he_translit: al, en: over, role: location_prep, kind: glue, interp_rule: TIR-008, feeds: [STEP_Gn_1_2]}
+      - {index: 12, he: פני, he_translit: penei, en: face-of, role: location_construct, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_2]}
+      - {index: 13, he: המים, he_translit: ha-mayim, en: the-waters, role: location_ref_presupposed, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_2]}
+  - ref: "Gen.1.3"
+    words:
+      - {index: 0, he: ויאמר, he_translit: va-yomer, en: and-said, role: speech_verb_declare, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_3]}
+      - {index: 1, he: אלהים, he_translit: Elohim, en: God, role: agent, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_3]}
+      - {index: 2, he: יהי, he_translit: yehi, en: let-there-be, role: jussive_directive, kind: logic_bearing, interp_rule: TIR-026, feeds: [STEP_Gn_1_3]}
+      - {index: 3, he: אור, he_translit: or, en: light, role: directive_theme, kind: logic_bearing, interp_rule: TIR-026, feeds: [STEP_Gn_1_3]}
+      - {index: 4, he: ויהי, he_translit: va-yehi, en: and-there-was, role: result_wayyiqtol, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_3]}
+      - {index: 5, he: אור, he_translit: or, en: light, role: result_theme, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_3]}
+  - ref: "Gen.1.4"
+    words:
+      - {index: 0, he: וירא, he_translit: va-yar, en: and-saw, role: perception_verb, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_4]}
+      - {index: 1, he: אלהים, he_translit: Elohim, en: God, role: agent, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_4]}
+      - {index: 2, he: את, he_translit: et, en: obj-marker, role: glue_object_marker, kind: glue, interp_rule: TIR-014, feeds: [STEP_Gn_1_4]}
+      - {index: 3, he: האור, he_translit: ha-or, en: the-light, role: test_theme, kind: logic_bearing, interp_rule: TIR-014, feeds: [STEP_Gn_1_4]}
+      - {index: 4, he: כי, he_translit: ki, en: that, role: complementizer_that, kind: glue, interp_rule: TIR-008, feeds: [STEP_Gn_1_4]}
+      - {index: 5, he: טוב, he_translit: tov, en: good, role: eval_oracle_predicate, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_4]}
+      - {index: 6, he: ויבדל, he_translit: va-yavdel, en: and-divided, role: event_verb_partition, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_4]}
+      - {index: 7, he: אלהים, he_translit: Elohim, en: God, role: agent, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_4]}
+      - {index: 8, he: בין, he_translit: bein, en: between, role: pair_boundary_marker, kind: glue, interp_rule: TIR-008, feeds: [STEP_Gn_1_4]}
+      - {index: 9, he: האור, he_translit: ha-or, en: the-light, role: pair_member_a, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_4]}
+      - {index: 10, he: ובין, he_translit: u-vein, en: and-between, role: pair_boundary_marker, kind: glue, interp_rule: TIR-008, feeds: [STEP_Gn_1_4]}
+      - {index: 11, he: החשך, he_translit: ha-choshekh, en: the-darkness, role: pair_member_b, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_4]}
+  - ref: "Gen.1.5"
+    words:
+      - {index: 0, he: ויקרא, he_translit: va-yiqra, en: and-called, role: naming_verb, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_5]}
+      - {index: 1, he: אלהים, he_translit: Elohim, en: God, role: agent, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_5]}
+      - {index: 2, he: לאור, he_translit: la-or, en: to-the-light, role: name_receiver_dative, kind: logic_bearing, interp_rule: TIR-022, feeds: [STEP_Gn_1_5]}
+      - {index: 3, he: יום, he_translit: yom, en: Day, role: name_label_installed, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_5]}
+      - {index: 4, he: ולחשך, he_translit: ve-la-choshekh, en: and-to-the-darkness, role: name_receiver_dative, kind: logic_bearing, interp_rule: TIR-022, feeds: [STEP_Gn_1_5]}
+      - {index: 5, he: קרא, he_translit: qara, en: called, role: naming_verb, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_5]}
+      - {index: 6, he: לילה, he_translit: layla, en: Night, role: name_label_installed, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_5]}
+      - {index: 7, he: ויהי, he_translit: va-yehi, en: and-there-was, role: cycle_verb, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_5]}
+      - {index: 8, he: ערב, he_translit: erev, en: evening, role: cycle_time_unit, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_5]}
+      - {index: 9, he: ויהי, he_translit: va-yehi, en: and-there-was, role: cycle_verb, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_5]}
+      - {index: 10, he: בקר, he_translit: voqer, en: morning, role: cycle_time_unit, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_5]}
+      - {index: 11, he: יום, he_translit: yom, en: day, role: ledger_day_noun, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_5]}
+      - {index: 12, he: אחד, he_translit: echad, en: one, role: ledger_count_cardinal, kind: logic_bearing, interp_rule: none, feeds: [STEP_Gn_1_5]}
+
+confidence: "structure tested · operators tested-per-TIR · machine model hypothesis"
+status_note_en: >
+  Stage C pilot (2026-07-28): first unit carrying the TIR-026..033 operator layer and
+  machine-state scenarios. Frozen for interpreter work (Stage D target: reproduce
+  S1-S5 mechanically; S6/S7 are the negative contract). Not binding religious law.
+
+amendment_log:
+  - date: 2026-07-30
+    authorized: owner order ("amend day one and three and add day two enrichment")
+    what: >
+      ORAL_or_haganuz upgraded observation -> verified with exact Chagigah 12a
+      quote (local text), surfaced by the oral_links coverage review
+      (ORAL_COVERAGE_review_gen01-03_2026-07-30.md). Oral-notes track only;
+      no operator, scenario, or coverage change.
+  - date: 2026-07-30
+    authorized: owner order ("yes amend based on your finding for BR 17:1")
+    what: >
+      Added ORAL_e1_maamar (verified, local): the ten-utterances census of
+      Avot 5:1 / Bereshit Rabbah 17:1, which counts e1 (Gen 1:1) as a maamar
+      without va-yomer via Ps 33:6, with recorded dissent. Surfaced by triage
+      batch 3 (ledger row 37). Oral-notes track only; e1's EVENT operator is
+      unchanged — any speech-operator change would require a new derive pass.
+  - date: 2026-07-30
+    authorized: owner order ("do the amendment pass")
+    what: >
+      Batch amendment from triage batches 1-6 (132/483 read): added six
+      verified oral notes — ORAL_et_theme_marker (BR 1:14 + Chagigah 12a:20 +
+      Onkelos 1:1 yat, on TIR-014/015), ORAL_echad_label_form (BR 3:9 +
+      Onkelos 1:5 yoma-chad/yemama, on the LEDGER label_form [OPEN] flag —
+      flag stays open), ORAL_presupposed_resolutions (BR 1:9 vs Chagigah
+      12a:6 twin resolutions of NOTE_PRESUPPOSED — flag stands),
+      ORAL_theme_order (MdRY Pischa 1:4 tannaitic ruling: verse order is not
+      event order), ORAL_result_latency (BR 3:2 va-yehi/ve-haya latency-zero),
+      ORAL_label_not_entity (BR 3:6 label-vs-entity on the REGISTRY write);
+      and corroboration appended to ORAL_e1_maamar (Megillah 21b:10, RH
+      32a:19, ADRN B 36:2 dissent census). All quotes verified from local
+      corpus (Data/sefaria_texts/). Oral-notes track only; NO operator,
+      scenario, register, or coverage change. Machine re-verified after edit.

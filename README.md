@@ -73,7 +73,16 @@ data/       tanakh.sqlite (Hebrew Bible + word tags) · lexicon.json
             (English gloss layers) · units_index.json (the 97 units)
 machines/   the Exodus 21 block machines + the assembled chapter, with
             the 60-edge dependency proof
+logic/      the canonical derivation layer: the 97 frozen unit YAMLs
+            (Pre-Code — the plate the prints are struck from), schema,
+            gloss overrides, rule sets, world config, and the received
+            method records (see logic/README.md)
+press/      the derivation press: interpreter, renderers, bundle
+            exporter, world fold, database build chain, and the
+            authoring gates — TorahSim reprints everything it ships
 units/      97 runnable derivation units, Genesis 1 – Exodus 21
+            (printed from logic/units/ by the press; the sixth gate
+            re-proves the match on every check)
 scans/      the evidence layer: coverage ledger · 100 witnessed-claim
             manifests · the scanning-day notes
 app/        the Tanakh-run web app (64 scenes, forms, replay)

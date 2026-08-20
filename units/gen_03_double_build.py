@@ -106,7 +106,7 @@ m.commit(3, label_form="ordinal", label_translit="yom shelishi")
 if __name__ == "__main__":
     m.report()
     assert m.created_set() == {'deshe', 'yabasha'}
-    assert m.presupposed_set() == {'shamayim', 'mayim'}
+    assert m.presupposed_set() == {'mayim', 'shamayim'}
     assert m.REGISTRY["names"] == {'yabasha': 'eretz', 'miqveh-ha-mayim': 'yamim'}
     assert m.REGISTRY["writes"] == 2
     assert m.tests_list() == [('PASS', 'tov', 'gathering'), ('PASS', 'tov', 'vegetation')]

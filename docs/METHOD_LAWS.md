@@ -79,6 +79,21 @@ neutralized at copy time (a snapshot database and two working notes,
 cited by neutral description in eight pages). They ride under the same
 rule: reported, never gated, never retouched further.
 
+The 2026-08-20 capability transfer widened this class once, the same way.
+When the canonical unit YAMLs, the triage ledgers, the parser rule notes,
+the method documents, and the append-only fetch log crossed from the
+workshop into `logic/`, the same border redaction was applied and is
+recorded in `logic/README.md`: the workshop's name, its database
+filenames, and its private working-note filenames were neutralized to the
+forms this repository uses (`derivation.sqlite`, `source-snapshot.sqlite`,
+`debut-snapshot.sqlite`, `provenance/`, "the interim coordinator") —
+thirty-seven references across the crossing, zero remaining. The received
+prose records under `logic/docs/`, `logic/oral_triage/`,
+`logic/taamim_rules/`, and `logic/FETCHLOG.md` keep their original gloss
+discipline and are reported, never gated, never retouched. The canonical
+YAMLs themselves are gated forward: any future edit to them is new
+derivation work and answers to every law here.
+
 ## 9. Scope honesty
 
 The project's claims end where its mechanism ends. The machines verify

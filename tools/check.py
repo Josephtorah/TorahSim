@@ -38,9 +38,18 @@ BASELINE = os.path.join(ROOT, "app", "scene_stamps_baseline.json")
 SKIP_DIRS = {".git", ".github", "__pycache__", "shelf", "BriansTemp",
              "site"}   # site/ is generated; its sources are linted here
 # preserved records: reported by the lint, never gated (method law 8's
-# declared exception) — the scan records, and the derivation review pages
-RECORDS = {("scans", "ledgers"), ("scans", "manifests"),
-           ("scans", "notes"), ("scroll", "units")}
+# declared exception) — the scan records, the derivation review pages,
+# and the workshop records that crossed with the press (method docs,
+# triage ledgers, parser rule notes, the append-only fetch log): shipped
+# as received, under the one documented redaction.
+RECORD_PREFIXES = (os.path.join("scans", "ledgers"),
+                   os.path.join("scans", "manifests"),
+                   os.path.join("scans", "notes"),
+                   os.path.join("scroll", "units"),
+                   os.path.join("logic", "docs"),
+                   os.path.join("logic", "oral_triage"),
+                   os.path.join("logic", "taamim_rules"))
+RECORD_FILES = {os.path.join("logic", "FETCHLOG.md")}
 LINT_EXT = (".py", ".md", ".html")
 
 results = []   # (gate name, ok, one-line report)
@@ -56,12 +65,14 @@ def lint_files():
     gated, records = [], []
     for base, dirs, files in os.walk(ROOT):
         dirs[:] = sorted(d for d in dirs if d not in SKIP_DIRS)
-        preserved = (os.path.basename(os.path.dirname(base)),
-                     os.path.basename(base)) in RECORDS
+        rel_base = os.path.relpath(base, ROOT)
+        preserved = any(rel_base == p or rel_base.startswith(p + os.sep)
+                        for p in RECORD_PREFIXES)
         for f in sorted(files):
             if f.endswith(LINT_EXT):
-                (records if preserved else gated).append(
-                    os.path.join(base, f))
+                rel = os.path.normpath(os.path.join(rel_base, f))
+                (records if preserved or rel in RECORD_FILES
+                 else gated).append(os.path.join(base, f))
     return gated, records
 
 
@@ -146,6 +157,40 @@ def main():
     report("sim", r.returncode == 0,
            "house of David run, findings hold"
            if r.returncode == 0 else "FAILED — output above")
+
+    # -- gate 6: the press — the shipped pool must be reprintable --------
+    # Regenerate all 97 unit renderings from the canonical YAML (logic/
+    # units/) through press/render_unit_py.py into a temp dir and diff
+    # them against units/. Self-sufficiency is not a claim; it re-proves
+    # here on every run. Needs the derivation DB (uncommitted, like
+    # shelf/) — absent, the gate reports itself skipped rather than red.
+    db = os.path.join(ROOT, "data", "derivation.sqlite")
+    if os.path.exists(db):
+        import tempfile
+        with tempfile.TemporaryDirectory() as td:
+            env = dict(os.environ, TS_OUT=td)
+            r = subprocess.run(
+                [sys.executable, os.path.join(ROOT, "press",
+                                              "render_unit_py.py")],
+                capture_output=True, text=True, cwd=ROOT, env=env)
+            drift = []
+            if r.returncode == 0:
+                for f in sorted(os.listdir(td)):
+                    a = open(os.path.join(td, f), encoding="utf-8").read()
+                    b_path = os.path.join(ROOT, "units", f)
+                    b = (open(b_path, encoding="utf-8").read()
+                         if os.path.exists(b_path) else None)
+                    if a != b:
+                        drift.append(f)
+            report("press", r.returncode == 0 and not drift,
+                   "97 units reprinted from canonical YAML, "
+                   "diff vs units/: clean" if r.returncode == 0
+                   and not drift else
+                   ("REPRINT FAILED — run press/render_unit_py.py"
+                    if r.returncode else "DRIFT: " + ", ".join(drift[:5])))
+    else:
+        print("           note   press gate skipped — data/derivation."
+              "sqlite absent (rebuild per docs/SOURCES.md)")
 
     bad = [n for n, ok, _ in results if not ok]
     print("check: %d gates — %s" % (len(results),

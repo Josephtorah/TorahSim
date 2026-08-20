@@ -345,7 +345,7 @@ m.fact("ve_et_ha_emori_ve_et_ha_kenaani_ve_et_ha_girgashi_ve_et_ha_yevusi")
 if __name__ == "__main__":
     m.report()
     assert m.created_set() == set()
-    assert m.presupposed_set() == {'nehar_perat', 'ur_kasdim', 'dameseq', 'nahar_mitzrayim'}
+    assert m.presupposed_set() == {'dameseq', 'nahar_mitzrayim', 'nehar_perat', 'ur_kasdim'}
     assert m.REGISTRY["names"] == {}
     assert m.REGISTRY["writes"] == 0
     assert m.tests_list() == []

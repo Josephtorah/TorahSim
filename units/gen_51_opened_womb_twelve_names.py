@@ -343,7 +343,7 @@ m.name("ben_1_rachel", "yosef")
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
-    assert m.created_set() == {'ben_1_leah', 'ben_3_leah', 'ben_2_leah', 'ben_1_zilpah', 'ben_1_bilhah', 'ben_6_leah', 'ben_4_leah', 'ben_1_rachel', 'ben_2_zilpah', 'bat_leah', 'ben_5_leah', 'ben_2_bilhah'}
+    assert m.created_set() == {'bat_leah', 'ben_1_bilhah', 'ben_1_leah', 'ben_1_rachel', 'ben_1_zilpah', 'ben_2_bilhah', 'ben_2_leah', 'ben_2_zilpah', 'ben_3_leah', 'ben_4_leah', 'ben_5_leah', 'ben_6_leah'}
     assert m.presupposed_set() == set()
     assert m.REGISTRY["names"] == {'ben_1_leah': 'reuven', 'ben_2_leah': 'shimon', 'ben_3_leah': 'levi', 'ben_4_leah': 'yehuda', 'ben_1_bilhah': 'dan', 'ben_2_bilhah': 'naftali', 'ben_1_zilpah': 'gad', 'ben_2_zilpah': 'asher', 'ben_5_leah': 'yisashkhar', 'ben_6_leah': 'zevulun', 'bat_leah': 'dina', 'ben_1_rachel': 'yosef'}
     assert m.REGISTRY["writes"] == 12

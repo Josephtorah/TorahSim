@@ -1,0 +1,585 @@
+# entity_registry.yaml — WHO IS WHO across units (corpus world config).
+#
+# Owner ruling 2026-08-09: identity decisions authored by the machine's
+# operator, best-effort; every uncertain identification MARKED in comments.
+# Linked, NOT merged: every fact in the world keeps its original unit-local
+# token with provenance; this table only says which tokens point at the
+# same corpus entity. One world, one registry (no variant configs).
+#
+# DEFAULT RULE: any token NOT listed here is its own singleton entity.
+# Only multi-token identities, splits (same token, different referents,
+# scoped by unit), and flagged questions appear below.
+#
+# member forms:  {token: X}            — the token everywhere
+#                {token: X, units: []} — the token only in those units
+
+entities:
+
+  # ---- the divine names -------------------------------------------------
+  - id: god
+    en: "God (the LORD)"
+    kind: divine
+    members:
+      - {token: Elohim}        # "God"
+      - {token: elohim}        # lower-case variant token, later units
+      - {token: YHWH}          # the four-letter Name
+      - {token: YHWH_Elohim}   # "the LORD God" (garden narrative)
+      - {token: el_shaday}     # "God Almighty" (Gen 35:11)
+      - {token: el_elyon}      # "God Most High" (Gen 14) — Abram's own oath
+                               # joins the names: "YHWH, God Most High" 14:22
+      - {token: yhwh_elohei_shem}  # "the LORD, the God of Shem" (Gen 9:26)
+    note: >
+      One entity, the names LINKED not merged — the token distinction
+      survives on every fact (readings that split by name stay nameable,
+      per the triage law). Authored identification per the text's own
+      equations (Gen 14:22 joins YHWH to El Elyon; Gen 2:4 joins the
+      names in one breath).
+
+  - id: angel_of_the_lord
+    en: "the angel of the LORD"
+    kind: divine
+    members:
+      - {token: malakh_YHWH}     # Hagar (Gen 16), the binding (Gen 22)
+      - {token: malakh_elohim}   # Hagar at the well of the lad (Gen 21)
+    note: >
+      UNCERTAIN on two axes: (1) whether every appearance is one figure;
+      (2) the angel sometimes speaks in God's own first person (Gen 16:10,
+      22:12) — the angel/God boundary is a named open question, so this
+      entity is kept SEPARATE from `god` with the link recorded here only.
+
+  - id: bnei_ha_elohim
+    en: "the sons of God (Gen 6:2,4)"
+    kind: collective
+    members: [{token: bnei_ha_elohim}]
+    note: >
+      UNCERTAIN — contested for two millennia (divine beings / judges /
+      Sethite line). Registered as its own collective; no identification
+      made.
+
+  - id: ha_ish_peniel
+    en: "the man who wrestled at Peniel (Gen 32:25)"
+    kind: person
+    members: [{token: ha_ish}]
+    note: >
+      UNCERTAIN — the text says "a man"; Jacob says "I have seen God face
+      to face" (32:31); Hosea 12:4-5 calls him an angel. All three readings
+      named; no identification made — own entity.
+
+  # ---- the first family -------------------------------------------------
+  - id: the_human
+    en: "Adam (the human)"
+    kind: person
+    members:
+      - {token: ha_adam}       # installed Gen 1 account (gen_06)
+      - {token: adam}          # installed Gen 2 account (gen_08)
+      - {token: adam_species}  # the Gen 5:1-2 ledger head, named "Adam"
+    note: >
+      The double install (1:27 and 2:7) is the text's own double account —
+      identified as one entity per the ledger's own equation (Gen 5:1-2
+      names the created pair "Adam"). UNCERTAIN only at adam_species: 5:2
+      names male-and-female together, so the ledger token leans species
+      rather than individual; kept in this entity with that caveat.
+
+  - id: eve
+    en: "Eve (the woman)"
+    kind: person
+    members:
+      - {token: ishah}        # built and named (gen_09, gen_11)
+      - {token: chavah}       # the name Eve in use (gen_12)
+      - {token: eshet_adam}   # "the wife of Adam" bearing Seth (gen_13)
+    note: eshet_adam = Eve is certain by context (Gen 4:25).
+
+  - id: adam_and_eve
+    en: "the two of them (Adam and Eve together)"
+    kind: collective
+    members: [{token: shneihem}]
+
+  # ---- Noah era ---------------------------------------------------------
+  - id: noach
+    en: "Noah"
+    kind: person
+    members: [{token: noach}]
+
+  - id: noah_and_sons
+    en: "Noah and his sons"
+    kind: collective
+    members: [{token: noach_u_vanav}, {token: banav}]
+
+  # ---- Abraham cycle ----------------------------------------------------
+  - id: abraham
+    en: "Abraham"
+    kind: person
+    members:
+      - {token: avram}     # before Gen 17:5
+      - {token: avraham}   # after the renaming (NAME operator, gen_33)
+
+  - id: sarah
+    en: "Sarah"
+    kind: person
+    members:
+      - {token: saray}     # before Gen 17:15
+      - {token: sarah}     # after the renaming
+
+  - id: lot
+    en: "Lot"
+    kind: person
+    members: [{token: lot}]
+
+  - id: hagar
+    en: "Hagar"
+    kind: person
+    members: [{token: hagar}]
+
+  - id: ishmael
+    en: "Ishmael"
+    kind: person
+    members:
+      - {token: yishmael}
+      - {token: ha_naar, units: [gen_37_laughter_wilderness_oath]}
+        # "the lad" under the bush (Gen 21) = Ishmael — certain by context.
+        # NOTE the same token in gen_34 is a DIFFERENT person (below).
+
+  - id: abrahams_serving_lad
+    en: "Abraham's serving lad (Gen 18:7)"
+    kind: person
+    members:
+      - {token: ha_naar, units: [gen_34_mamre_laugh_plea]}
+    note: the token split ha_naar is scoped by unit — two referents.
+
+  - id: servant_of_abraham
+    en: "Abraham's servant (the wooing of Rebekah)"
+    kind: person
+    members:
+      - {token: ha_eved}
+    note: >
+      The text never names him in Gen 24. Tradition reads him as Eliezer
+      of Damascus (Gen 15:2) — that identification is NAMED here but NOT
+      made (midrashic, not textual). UNCERTAIN.
+
+  - id: servant_and_men
+    en: "the servant and his men"
+    kind: collective
+    members: [{token: ha_eved_u_anashim}, {token: house_voice}]
+    note: >
+      house_voice (gen_40 speaker) — UNCERTAIN which voice the unit meant
+      (the household of the master, or the servant party's collective
+      speech). Filed with the servant party as best reading; revisit if
+      the unit's derivation log says otherwise.
+
+  - id: three_visitors
+    en: "the three men at Mamre (Gen 18)"
+    kind: collective
+    members: [{token: shelosha_anashim}]
+    note: >
+      UNCERTAIN relation to `god` and to the two angels: Gen 18 slides
+      between "three men," "the LORD," and the two who go on to Sodom
+      (19:1). The overlap is recorded here as a named reading only —
+      no merge.
+
+  - id: two_angels_sodom
+    en: "the two angels at Sodom (Gen 19)"
+    kind: collective
+    members: [{token: shnei_ha_malakhim}, {token: ha_malakhim}]
+
+  - id: melchizedek
+    en: "Melchizedek king of Salem"
+    kind: person
+    members: [{token: malki_tzedeq}]
+
+  # ---- Gerar: the two eras (split, both UNCERTAIN) ----------------------
+  - id: avimelekh_abraham_era
+    en: "Avimelech of Gerar (Abraham's era, Gen 20-21)"
+    kind: person
+    members:
+      - {token: avimelekh, units: [gen_36_gerar_dream_prophet, gen_37_laughter_wilderness_oath]}
+
+  - id: avimelekh_isaac_era
+    en: "Avimelech of Gerar (Isaac's era, Gen 26)"
+    kind: person
+    members:
+      - {token: avimelekh, units: [gen_44_isaac_gerar_sister_expel, gen_45_wells_covenant_esau_wives]}
+      - {token: avimelekh_party, units: [gen_45_wells_covenant_esau_wives]}
+    note: >
+      UNCERTAIN SPLIT — the corpus installs Avimelech twice (gen_36 and
+      gen_44), and ~75 textual years separate the eras, so two entities is
+      the safer default; "Avimelech" may be a dynastic title (as "Pharaoh"
+      is), in which case the split is right for the men and the title is
+      the shared thing. Same question applies to Pikhol below. If the
+      owner rules one long-lived king, merge the two ids.
+
+  - id: fikhol_abraham_era
+    en: "Pikhol, captain of the host (Abraham's era)"
+    kind: person
+    members:
+      - {token: fikhol, units: [gen_37_laughter_wilderness_oath]}
+
+  - id: fikhol_isaac_era
+    en: "Pikhol, captain of the host (Isaac's era)"
+    kind: person
+    members:
+      - {token: fikhol, units: [gen_45_wells_covenant_esau_wives]}
+    note: UNCERTAIN — same split and same reasoning as Avimelech above.
+
+  # ---- Pharaohs (split, CERTAIN) ----------------------------------------
+  - id: paro_abram_era
+    en: "Pharaoh (Abram's descent, Gen 12)"
+    kind: person
+    members:
+      - {token: paro, units: [gen_28_egypt_descent]}
+      - {token: sarei_faro, units: [gen_28_egypt_descent]}
+
+  - id: paro_yosef_era
+    en: "Pharaoh (Joseph's era, Gen 39-41)"
+    kind: person
+    members:
+      - {token: paro, units: [gen_62_potifar_house, gen_63_two_dreams_prison, gen_64_pharaoh_dreams_rise]}
+    note: >
+      Split is CERTAIN (centuries apart); "Pharaoh" is a title. sarei_faro
+      ("Pharaoh's officers") filed under the Abram-era court as a court
+      collective rather than the king himself — minor modeling choice.
+
+  # ---- Isaac cycle ------------------------------------------------------
+  - id: isaac
+    en: "Isaac"
+    kind: person
+    members: [{token: yitzchaq}]
+
+  - id: rebekah
+    en: "Rebekah"
+    kind: person
+    members: [{token: rivqah}]
+
+  - id: esau
+    en: "Esau"
+    kind: person
+    members: [{token: esav}]
+
+  # ---- Jacob cycle ------------------------------------------------------
+  - id: jacob
+    en: "Jacob / Israel"
+    kind: person
+    members:
+      - {token: yaaqov}
+      - {token: yisrael}   # the man, post-renaming (Gen 32:29; in use gen_60)
+    note: >
+      The token yisrael here is Jacob the MAN. When Exodus units arrive,
+      "Israel" the PEOPLE will need its own entity and a unit-scoped
+      split of this token — flagged now so the future split is expected.
+
+  - id: laban
+    en: "Laban"
+    kind: person
+    members: [{token: lavan}]
+
+  - id: laban_and_bethuel
+    en: "Laban and Bethuel answering together (Gen 24:50)"
+    kind: collective
+    members: [{token: lavan_betuel}]
+
+  - id: rachel
+    en: "Rachel"
+    kind: person
+    members: [{token: rachel}]
+
+  - id: leah
+    en: "Leah"
+    kind: person
+    members: [{token: leah}]
+
+  - id: rachel_and_leah
+    en: "Rachel and Leah answering together"
+    kind: collective
+    members: [{token: rachel_ve_leah}]
+
+  # ---- the twelve (birth tokens joined to later in-use tokens) ----------
+  - id: reuben
+    en: "Reuben"
+    kind: person
+    members: [{token: ben_1_leah}, {token: reuven}]
+  - id: simeon
+    en: "Simeon"
+    kind: person
+    members: [{token: ben_2_leah}]
+  - id: levi
+    en: "Levi"
+    kind: person
+    members: [{token: ben_3_leah}]
+  - id: judah
+    en: "Judah"
+    kind: person
+    members: [{token: ben_4_leah}, {token: yehuda}]
+  - id: issachar
+    en: "Issachar"
+    kind: person
+    members: [{token: ben_5_leah}]
+  - id: zebulun
+    en: "Zebulun"
+    kind: person
+    members: [{token: ben_6_leah}]
+  - id: dan_son
+    en: "Dan (the son)"
+    kind: person
+    members: [{token: ben_1_bilhah}]
+    note: >
+      TOKEN SPLIT — the bare token `dan` (gen_30, "pursued as far as Dan")
+      is the PLACE, a singleton by the default rule; the son exists here
+      only via his birth token. No overlap in practice.
+  - id: naphtali
+    en: "Naphtali"
+    kind: person
+    members: [{token: ben_2_bilhah}]
+  - id: gad
+    en: "Gad"
+    kind: person
+    members: [{token: ben_1_zilpah}]
+  - id: asher
+    en: "Asher"
+    kind: person
+    members: [{token: ben_2_zilpah}]
+  - id: joseph
+    en: "Joseph (Tzafnat-paneach)"
+    kind: person
+    members: [{token: ben_1_rachel}, {token: yosef}]
+    note: the Egyptian name arrives by NAME operator (gen_64) — same entity.
+  - id: benjamin
+    en: "Benjamin (Ben-oni)"
+    kind: person
+    members: [{token: ha_ben, units: [gen_58_israel_written_three_deaths]}]
+  - id: dinah
+    en: "Dinah"
+    kind: person
+    members: [{token: bat_leah}]
+
+  - id: josephs_brothers
+    en: "Joseph's brothers (as a body)"
+    kind: collective
+    members: [{token: achim}, {token: echay_v}]
+
+  # ---- Judah-Tamar house ------------------------------------------------
+  - id: tamar
+    en: "Tamar"
+    kind: person
+    members: [{token: tamar}]
+
+  # ---- Potiphar's house -------------------------------------------------
+  - id: potiphars_wife
+    en: "the wife of Joseph's master (Gen 39)"
+    kind: person
+    members: [{token: eshet_adonav}]
+    note: the text keeps her unnamed; no identification made.
+
+  # ---- token splits: person vs place ------------------------------------
+  - id: shechem_town
+    en: "Shechem (the town)"
+    kind: place
+    members: [{token: shekhem, units: [gen_27_the_call]}]
+
+  - id: shechem_son_of_chamor
+    en: "Shechem son of Hamor"
+    kind: person
+    members:
+      - {token: shekhem, units: [gen_57_deceit_at_the_gate]}
+      - {token: chamor_u_shekhem, units: [gen_57_deceit_at_the_gate]}
+    note: chamor_u_shekhem is the father-and-son pair speaking together;
+      filed here AND implicitly with Hamor — collective of two.
+
+  - id: mitzrayim_son_of_ham
+    en: "Mitzrayim (son of Ham, the nations table)"
+    kind: person
+    members: [{token: mitzrayim, units: [gen_24_nations_table]}]
+    note: >
+      TOKEN SPLIT — everywhere else the token mitzrayim is Egypt the
+      place/nation (default singleton). The nations table is the one unit
+      where it is the eponymous ancestor.
+
+  # ---- places with two naming stories / spelling variants ---------------
+  - id: beer_sheva_place
+    en: "Beersheba"
+    kind: place
+    members: [{token: beer_sheva}, {token: beer_shiva}]
+    note: >
+      One place, two naming stories (Gen 21:31 with Abraham, Gen 26:33
+      with Isaac) and two spellings. Identified as one place — the text
+      itself returns Isaac to "Beersheba" (26:23) before the re-naming.
+
+  - id: damascus
+    en: "Damascus"
+    kind: place
+    members: [{token: damaseq}, {token: dameseq}]
+    note: spelling variants across gen_30/gen_31 — one place, certain.
+
+  # ---- Leviticus voices -------------------------------------------------
+  - id: moses
+    en: "Moses"
+    kind: person
+    members: [{token: moshe}]
+
+  - id: aaron
+    en: "Aaron"
+    kind: person
+    members: [{token: aharon}]
+
+  # ---- Exodus opening (run FWD-4, 2026-08-09) ---------------------------
+  - id: paro_oppression_era
+    en: "Pharaoh (the oppression king, Exod 1:8-2:23)"
+    kind: person
+    members:
+      - {token: melekh_chadash, units: [exo_01_names_and_midwives]}
+      - {token: melekh_mitzrayim, units: [exo_01_names_and_midwives, exo_02_drawn_from_the_water]}
+      - {token: paro, units: [exo_01_names_and_midwives, exo_02_drawn_from_the_water]}
+    note: >
+      The arisen king (1:8), the midwife-decree king (1:15), and the
+      Nile-decree Pharaoh (1:22) identified as ONE person by narrative
+      continuity; he DIES at Exod 2:23 (the machine event). The readings'
+      two-houses split on "new" (actually new / new-decreed) carried
+      named in exo_01, not resolved here.
+
+  - id: paro_exodus_era
+    en: "Pharaoh (the refuser, Exod 5:1+)"
+    kind: person
+    members:
+      - {token: paro, units: [exo_05_bricks_without_straw]}
+      - {token: melekh_mitzrayim, units: [exo_05_bricks_without_straw]}
+    note: >
+      UNCERTAIN — registered SEPARATE from the oppression king on the
+      letter's own death-notice (2:23). The readings split: a literal
+      successor refuses at 5:1; or "died" = struck/deposed and the same
+      king stands (the leprosy-hearing, named in exo_02). The split is
+      carried named; the two entities stay linked-not-merged here.
+
+  - id: reuel_yitro
+    en: "Reuel/Jethro, priest of Midian, Moses' father-in-law"
+    kind: person
+    members:
+      - {token: reuel, units: [exo_02_drawn_from_the_water]}
+      - {token: yitro, units: [exo_03_bush_and_name, exo_04_signs_and_firstborn]}
+      - {token: yeter, units: [exo_04_signs_and_firstborn]}
+    note: >
+      One father-in-law under three tokens (Reuel 2:18; Jethro 3:1,
+      4:18; Jether 4:18 — the shortened form in the same verse as the
+      full one). Identified by the text's own apposition ("Jethro his
+      father-in-law," 3:1). The readings' seven-names file carried
+      named, never merged (armed at 18:1).
+
+  - id: moshe_ve_aharon_compound
+    en: "Moses-and-Aaron (compound speaker, Exod 5:1)"
+    kind: compound
+    members: [{token: moshe_ve_aharon}]
+    note: >
+      The two-man compound speaker of the send-demand (the class of
+      lavan_betuel and rachel_ve_leah). Members are the moses and aaron
+      entities; the compound token kept distinct so the demand's
+      provenance stays two-mouthed.
+
+  - id: achot_moshe
+    en: "the sister of Moses (Exod 2:4-8, unnamed)"
+    kind: person
+    members: [{token: achoto, units: [exo_02_drawn_from_the_water]}]
+    note: >
+      UNCERTAIN-FORWARD — the readings identify her as MIRIAM (named
+      first at Exod 15:20, not yet derived). Registered as the unnamed
+      sister; the identification deferred until the corpus meets Miriam
+      in the letter (the ha-elekh prophecy-file named in exo_02).
+
+  - id: amram
+    en: "Amram, son of Kohath, father of Aaron and Moses (Exod 6:18-20)"
+    kind: person
+    members: [{token: amram, units: [exo_06_i_am_the_lord]}]
+    note: >
+      The registry's own signing of 2:1's withheld "man of the house
+      of Levi" (exo_02's restraint PAID at 6:20 — the letter itself
+      names the parents four chapters late). Life-total 137 recorded.
+
+  - id: yokheved
+    en: "Yokheved, Amram's wife, mother of Aaron and Moses (Exod 6:20)"
+    kind: person
+    members: [{token: yokheved, units: [exo_06_i_am_the_lord]}]
+    note: >
+      The "daughter of Levi" of 2:1 signed by name at 6:20 (dodato —
+      "his father's sister": the aunt-marriage recorded plainly; the
+      readings' hearings named at the unit, unclaimed). The world
+      links her to the mother-entity of exo_02 on the registry's own
+      authority; 26:59's fuller record armed.
+
+  - id: elisheva
+    en: "Elisheva, daughter of Amminadav, sister of Nachshon, Aaron's wife (Exod 6:23)"
+    kind: person
+    members: [{token: elisheva, units: [exo_06_i_am_the_lord]}]
+    note: >
+      The priestly line's mother — the marriage binding Levi's house
+      to Judah's princely house (Nachshon, the roster's first prince,
+      Num 1:7 armed). Her four sons (Nadav, Avihu, Elazar, Itamar)
+      recorded at the same verse.
+
+  - id: pinchas
+    en: "Pinchas, son of Elazar, son of Aaron (Exod 6:25)"
+    kind: person
+    members: [{token: pinchas, units: [exo_06_i_am_the_lord]}]
+    note: >
+      The registry bracket's LAST entry — born at its closing verse,
+      written FULL at all four Torah stations (the Ramah's rule,
+      EX06-12). The therefore-say pair (EX06-04) binds his covenant
+      of peace (Num 25:12, armed) to the redemption-speech of the
+      chapter that records his birth.
+
+  - id: miryam
+    en: "Miriam the prophetess, sister of Aaron (Exod 15:20)"
+    kind: person
+    members: [{token: miryam, units: [exo_15_the_song_and_marah]}]
+    note: >
+      The watching sister of 2:4 SIGNED at 15:20 — exo_02's
+      withheld-name restraint pays its third installment (the parents
+      at 6:20, the sister at the Song). She arrives already titled:
+      the corpus's first woman called prophetess, and sister-of-AARON
+      (the one-brother title's readings named at the unit, unclaimed).
+      Num 26:59's full family record armed; her five-word prayer
+      (Num 12:13) standing since exo_14's prayer-calendar.
+
+  - id: yehoshua
+    en: "Joshua (Exod 17:9)"
+    kind: person
+    members: [{token: yehoshua, units: [exo_17_massah_and_amalek]}]
+    note: >
+      The successor's DEBUT — unintroduced, unpatronymed, no office:
+      commissioned mid-battle-order (17:9) and first narrated doing
+      exactly as told (17:10 — the full obedience-formula). The
+      write-command is set in HIS ears (17:14: the erasure-notice
+      briefed to the man who will fight Amalek's remnant). Exod 24:13
+      (the minister on the mountain), 33:11 (the tent), Num 13:16 (the
+      name expanded), Deut 31 (the charge) armed.
+
+  - id: chur
+    en: "Hur (Exod 17:10)"
+    kind: person
+    members: [{token: chur, units: [exo_17_massah_and_amalek]}]
+    note: >
+      The corpus's most economical officer: his whole Torah career is
+      three tokens (asserted at exo_17's build) — the hands at 17:10,
+      the hands at 17:12, the regency at 24:14. He exists to hold
+      things up. The readings' identifications (Miriam's line; Bezalel's
+      grandfather, Exod 31:2 armed) carried named-only.
+
+  - id: eliezer_ben_moshe
+    en: "Eliezer, Moses' second son (Exod 18:4)"
+    kind: person
+    members: [{token: eliezer, units: [exo_18_jethro_and_the_judges]}]
+    note: >
+      The registry's longest-deferred name: born in the 2:22 window,
+      carried unnamed in 4:20's "sons," SURFACED at 18:4 report-class
+      (no naming-verb — the corpus learns the name eighteen chapters
+      after the birth; exo_02's restraint-doctrine pays its fourth
+      installment). His etymology carries the second lean rescue
+      (va-yatzileni me-cherev paro — the Ramah's thin trio, EX18-02).
+      1 Chr 23:15-17 (his line) outside-Torah, named.
+
+  - id: amaleq
+    en: "Amalek (Exod 17:8)"
+    kind: people
+    members: [{token: amaleq, units: [exo_17_massah_and_amalek]}]
+    note: >
+      The corpus's first battlefield enemy (the first war Israel must
+      fight itself — 14:14's the-LORD-will-fight suspended at 17:8).
+      Esau's grandson by Gen 36:12 (the go-out pair's edge, EX17-07).
+      Subject of the corpus's first write-command and the standing
+      erasure-oath (17:14-16, the card OPEN): Deut 25:17-19, 1 Sam 15,
+      Esther (the Agagite) armed, named.

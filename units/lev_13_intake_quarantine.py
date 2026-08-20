@@ -138,7 +138,7 @@ m.handler("hineh_pastah_ha_mispachat",
 if __name__ == "__main__":
     m.report()
     assert m.created_set() == set()
-    assert m.presupposed_set() == {'moshe', 'adam', 'or_basar', 'ha_kohen', 'aharon'}
+    assert m.presupposed_set() == {'adam', 'aharon', 'ha_kohen', 'moshe', 'or_basar'}
     assert m.REGISTRY["names"] == {}
     assert m.REGISTRY["writes"] == 0
     assert m.tests_list() == []

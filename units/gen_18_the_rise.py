@@ -151,7 +151,7 @@ m.fact("chamishim_u_meat_yom_al_ha_aretz")
 if __name__ == "__main__":
     m.report()
     assert m.created_set() == set()
-    assert m.presupposed_set() == {'noach', 'tevah', 'mayim'}
+    assert m.presupposed_set() == {'mayim', 'noach', 'tevah'}
     assert m.REGISTRY["names"] == {}
     assert m.REGISTRY["writes"] == 0
     assert m.tests_list() == []

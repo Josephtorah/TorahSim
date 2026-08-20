@@ -14,12 +14,15 @@ blocks shipping.
 python3 tools/check.py
 ```
 
-Five gates, one exit code: the gloss lint, the 97 derivation units, the
+Six gates, one exit code: the gloss lint, the 97 derivation units, the
 chapter machine with its 60-edge dependency proof, the 64 Tanakh-run
 scenes against their frozen stamp baseline
-(`app/scene_stamps_baseline.json`), and the simulation sketch. Run it
-before and after any change. A change that flips a scene stamp must
-answer for it; only after it has answered, re-freeze deliberately with
+(`app/scene_stamps_baseline.json`), the simulation sketch, and the press
+(the 97 unit renderings reprinted from the canonical YAML in
+`logic/units/` and diffed against `units/` — skipped with a note when
+`data/derivation.sqlite` is absent, as on CI). Run it before and after
+any change. A change that flips a scene stamp must answer for it; only
+after it has answered, re-freeze deliberately with
 `python3 tools/check.py --rebaseline`. CI runs the same command on every
 push (`.github/workflows/check.yml`).
 
@@ -57,7 +60,11 @@ The token file lives outside the repo; never commit or echo it.
 ## Rules that bind every contribution
 
 - **Stock Python 3, zero dependencies.** Everything must run for a
-  stranger with one command. Never add a package.
+  stranger with one command. Never add a package. One vendored
+  exception, owner-approved 2026-08-20: PyYAML rides in
+  `press/vendor/yaml/` (pure-Python, MIT, license included) so the press
+  can read the canonical YAML — nothing to install, the one-command rule
+  holds.
 - **Witnessed claims only.** No constant, branch, or rule enters a
   machine without a claim ID citing a source in the chain of
   transmission (`docs/CHAIN_OF_TRANSMISSION.md`).
@@ -85,9 +92,25 @@ The token file lives outside the repo; never commit or echo it.
   `machines/`.
 - `scans/` is the evidence layer, shipped exactly as written during the
   scans. Never retouch a ledger, manifest, or note.
-- `shelf/` (~2.7 GB) is an uncommitted, rebuildable source cache —
-  `tools/fetch_*.py` per `docs/SOURCES.md`. `BriansTemp/` is private
-  scratch — never commit it and never promote its content.
+- `logic/` is the canonical derivation layer (since 2026-08-20): the 97
+  frozen unit YAMLs, the schema, gloss overrides, rule sets, the world
+  config, and the received records (method docs, triage ledgers, fetch
+  log — preserved, never retouched; see `logic/README.md` for the
+  documented border redaction). Editing a frozen YAML is derivation
+  work, not maintenance.
+- `press/` is the toolchain that prints everything from `logic/`: the
+  Stage D interpreter (`run_unit.py`), the renderers (`render_unit_py.py`
+  → `units/`, `render_unit_html.py` → the review pages), the scroll
+  bundle exporter (`export_web.py`, byte-reproduces `scroll/data/`), the
+  world fold (`corpus_world.py`), the database build chain
+  (`build_db.py` → `index_units.py` → `index_triage.py`), and the
+  authoring gates in `press/gates/` (preflight, lints, the freeze
+  ritual). Run press tools from the repo root.
+- `shelf/` (~5.5 GB with `shelf/sources/`) is an uncommitted, rebuildable
+  source cache — `tools/fetch_*.py` per `docs/SOURCES.md`. The press
+  databases (`data/derivation.sqlite`, rebuildable; the two pinned
+  snapshots, back them up) are uncommitted the same way. `BriansTemp/` is
+  private scratch — never commit it and never promote its content.
 - A new chapter clones the `machines/exo21/` pattern: scan ledger →
   claim manifests → block machines → assembled chapter with its own
   dependency proof, then its scenes join the Tanakh run.

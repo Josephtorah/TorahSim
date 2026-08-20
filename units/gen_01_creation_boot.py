@@ -86,8 +86,8 @@ m.commit(1, label_form="cardinal", label_translit="yom echad")
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == "__main__":
     m.report()
-    assert m.created_set() == {'aretz', 'shamayim', 'or'}
-    assert m.presupposed_set() == {'choshekh', 'ruach', 'mayim', 'tehom'}
+    assert m.created_set() == {'aretz', 'or', 'shamayim'}
+    assert m.presupposed_set() == {'choshekh', 'mayim', 'ruach', 'tehom'}
     assert m.REGISTRY["names"] == {'or': 'yom', 'choshekh': 'layla'}
     assert m.REGISTRY["writes"] == 2
     assert m.tests_list() == [('PASS', 'tov', 'or')]
