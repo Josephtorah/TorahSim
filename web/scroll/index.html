@@ -61,6 +61,7 @@ a.badge.frozen { text-decoration:none; cursor:pointer; }
 a.badge.frozen:hover { background:#d8eedd; }
 a.nav { text-decoration:none; display:inline-block; }
 .badge.auto { background:#eef1f7; color:var(--blue); border:1px solid #ccd6ea; }
+.badge.vstat { background:none; border:none; color:#57503f; cursor:help; }
 .badge.oral { background:#faf3e3; color:#7a5b0a; border:1px solid #e6d5a3; cursor:help; }
 .vhead .fen { color:var(--mut); font-style:italic; font-size:.88rem; }
 .flat .row { margin:.1rem 0 .3rem; }
@@ -175,9 +176,15 @@ function verseHTML(b, c, vd) {
   const badge = vd.frozen.length
     ? `<a class="badge frozen" href="units/UNIT_${esc(uid0)}.html" title="${esc(vd.frozen.join(" · "))} — click to switch to the unit's derivation page (the YAML view)">❄ frozen: ${esc(uid0)} ⇄</a>`
     : `<span class="badge auto">auto · illustrative</span>`;
-  const oral = vd.oral
-    ? `<span class="badge oral" title="Oral-tradition sources anchored to this verse (tier 1 of Sefaria's link index): ${vd.oral[0]} enumerated, ${vd.oral[1]} read with a verdict in the triage ledger, ${vd.oral[2]} judged material (bearing on the frozen derivation). Enumerated / fetched / read are kept as separate honest counters; the ledger in logic/oral_triage/ is the canonical record.">📜 oral ${vd.oral[1]}/${vd.oral[0]} read${vd.oral[2] ? ` · ${vd.oral[2]} material` : ""}</span>`
-    : "";
+  const vs = vd.vstat || {o: 0, d: 0, p: false, g: "v"};
+  const otxt = vs.o === 3 ? (vs.g === "c" ? "chapter read through" : "read through")
+    : vs.o === 2 ? `in reading ${vd.oral[1]}/${vd.oral[0]}` : "unopened";
+  const mat = vs.o >= 2 && vd.oral && vd.oral[2] ? ` · ${vd.oral[2]} material` : "";
+  const dtxt = vs.d === 2 ? "full rule" : vs.d === 1 ? "first pass" : "underived";
+  const vtitle = vs.g === "c"
+    ? "Verse status. Oral track: the whole chapter was read through under the law-era rule — every readable oral source on the chapter read and logged in the reading ledger (logic/oral_audit/ledgers/). Its rows anchor to the chapter's law, so no per-verse fraction is shown. Derivation track: " + dtxt + (vs.p ? ". Proven: the chapter is compiled to machines and its recorded cases run green." : ".")
+    : "Verse status. Oral track: " + (vd.oral ? vd.oral[0] + " sources enumerated (tier 1 of the link index), " + vd.oral[1] + " read with a verdict in the triage ledger (logic/oral_triage/), " + vd.oral[2] + " judged material (bearing on the frozen derivation)" : "no oral sources enumerated yet") + ". Derivation track: " + dtxt + (vs.p ? ". Proven: compiled to machines, recorded cases green." : ".") + " Labels are computed from the records on every build — never hand-set.";
+  const vchip = `<span class="badge vstat" title="${vtitle}">ⓘ ${otxt}${mat} · ${dtxt}${vs.p ? " · proven" : ""}</span>`;
   const fen = vd.fen ? `“${esc(vd.fen)}”`
     : "word glosses: " + esc(vd.leaves.map(l => l.en).join(" · "));
   const bricks = k => vd.leaves.map(l =>
@@ -199,7 +206,7 @@ function verseHTML(b, c, vd) {
     `${esc(l.c).padEnd(38)}<span class="cmt">${esc(l.m)}</span>`).join("\n");
 
   return `<section class="verse" id="v${b}_${c}_${vd.v}" data-ref="${esc(name)} ${c}:${vd.v}">
-  <div class="vhead"><span class="vref">${esc(b)} ${c}:${vd.v}</span>${badge}${oral}
+  <div class="vhead"><span class="vref">${esc(b)} ${c}:${vd.v}</span>${badge}${vchip}
     <span class="fen">${fen}</span></div>
   <div class="flat">
     <div class="lab">Hebrew</div>

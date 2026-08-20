@@ -1689,6 +1689,55 @@ epub rebuilt + verified. ALSO our-code "machine" renamed "the
 program" (Amaziah passage x2 + echo fix; owner rejected "rules
 engine" as law-flavored; machines-as-computers + word-as-machine
 metaphor + "verified by machine" idiom all KEPT); epub rebuilt.
+★ VERSE-STATUS LABELS 2026-08-20 (37th update): the two-axis per-verse
+progress system, spec'd jointly with the TorahSim session (settled doc
+TorahSim/BriansTemp/verse_status_spec_v2.md; discussion-first per owner
+order, built on owner word both sides). Owner rulings same day: coverage
+grid PUBLIC at /scroll/coverage/; span-O3 = ELIGIBILITY for full-rule
+re-freeze while TOP10 stays the working order; names unopened / in
+reading / read through · underived / first pass / full rule · proven.
+vstat {o,d,p,g} emitted after oral in every bundle verse (the oral
+triple stays the source of fractions + material); D-span = units.refs
+(not coverage, not steps — 26 span-verses are stepless); P is
+ORTHOGONAL, forced by the finding that exo_21_the_ordinances is v1
+(logic_derived_v1, oral 13/13 targeted) — the 64-scene proof rides the
+v1 unit, so D2 is EMPTY until the first freeze stamped
+tree_derive_version=logic_derived_v2_full_rule (ritual refuses the
+stamp unless span is O3). Chapter-grain rule: a chapter with a reading
+ledger (logic/oral_audit/ledgers/) is O3(c) whole — 52% of the 4,903
+Exod 21 rows anchor to the chapter, per-verse fractions FORBIDDEN
+there. TorahSim built+live first (chip, public grid, labels gate);
+workshop MIRROR this update: export_web.py vstat block + scroll chip
+(replaces the oral badge, absorbs its counters + tooltip). PARITY
+VERIFIED: 188/189 data files byte-identical to TorahSim's shipped
+bundles; manifest differs by the workshop's commit key alone (their
+de-brand, by design). Map today: 3,658 O0·D0 / 2,124 O0·D1 / 19 O2·D1
+/ 15 O3v·D1 / 37 O3c·D1·P = 5,853. Memory: torahsim-public-era,
+two-window-workflow, verse-status-labeling + law-era addendum +
+pipeline marquee pointer. UNCOMMITTED awaiting owner word.
+★ THE PROJECT RENAMED: TorahCode -> TorahSim 2026-08-19 (36th
+update): owner ruling (spelling confirmed capital T capital S),
+reason on the record: "TorahCode" collides with the letter-skipping
+"Torah codes" ELS hunt = the exact impostor the recital's prologue
+disavows; TorahSim says what the recital demonstrates. EXECUTED
+new-repo path on owner choice (old repo had only 3 commits, no
+users; history evidence lives in Torah_Grok): (1) in-repo sweep 118
+occurrences / 115 text files (109 py, 4 md, 1 html; zero binaries
+touched), machines re-run green + all py parse post-sweep,
+committed 058580e; (2) local folder <home>/TorahCode ->
+<repo> (ALL TOOLS/DOCS NOW POINT THERE; old path
+DEAD); (3) NEW PUBLIC REPO github.com/Josephtorah/TorahSim created
+via gh (auth OK as Josephtorah), remote repointed, ALL 4 commits
+pushed; (4) old github.com/Josephtorah/TorahCode = one-line
+signpost README ("moved to TorahSim") + description updated +
+ARCHIVED read-only (catches any old link; NO auto-redirect on this
+path, the signpost is the redirect); (5) recital's 3 sites renamed
++ epub AND pdf rebuilt, both verified TorahCode-free with the new
+address; (6) mirror tools renamed build_torahcode_*.py ->
+build_torahsim_*.py (contents+paths swept, git mv'd); dated
+reports (SY 08-17) + old state-doc entries LEFT AS HISTORY per
+lean-record; memory files had zero mentions. Torah_Grok/Disclosure
+changes UNCOMMITTED awaiting owner word.
 ★ SIMULATION-SECTION REBUILD + PDF 2026-08-18 (35th update; inner
 Disclosure COMMITTED 83b0ae1; COMPACTION POINT #35 stamped here):
 owner-paced recital session, all display-first. (1) sec 9 RETITLED

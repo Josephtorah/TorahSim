@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
 """
-build_torahcode_data.py — home-side generator for the PUBLIC TorahCode repo's
+build_torahsim_data.py — home-side generator for the PUBLIC TorahSim repo's
 data/ tree. Runs in Torah_Grok (needs the private snapshot DB); writes only
 public artifacts:
 
-  TorahCode/data/lexicon.json      Strong's-number -> English gloss (the lemma
+  TorahSim/data/lexicon.json      Strong's-number -> English gloss (the lemma
                                    bridge), + unpointed-spelling fallback, +
                                    the hand supplement — exactly the three
                                    layers the tanakh_run app derives at boot.
-  TorahCode/data/units_index.json  the 97 frozen derivation units (id, book,
+  TorahSim/data/units_index.json  the 97 frozen derivation units (id, book,
                                    verse span, title) — what dependency
                                    proofs resolve against.
-  TorahCode/data/tanakh.sqlite     copied from elijah_docket/ (WLC text +
+  TorahSim/data/tanakh.sqlite     copied from elijah_docket/ (WLC text +
                                    OSHB lemma/morph tags — see ATTRIBUTION.md
-                                   in TorahCode).
+                                   in TorahSim).
 
 The 147 MB private snapshot never leaves home; this exports the ~1 MB the
 public app actually needs. Rerun after gloss-override changes to refresh.
@@ -24,7 +24,7 @@ import sqlite3
 from pathlib import Path
 
 HOME = Path("<repo-old>")
-PUB = Path("<home>/TorahCode")
+PUB = Path("<repo>")
 SNAPSHOT = HOME / "torah_grok.SNAPSHOT-main-51801ca.sqlite"
 MAIN_DB = HOME / "torah_grok.sqlite"
 TANAKH = HOME / "elijah_docket" / "tanakh.sqlite"

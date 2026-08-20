@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-build_torahcode_units.py — home-side exporter for the PUBLIC TorahCode
+build_torahsim_units.py — home-side exporter for the PUBLIC TorahSim
 repo's units/ tree: the 97 frozen derivation units as runnable Python
 renderings, plus the machine.py library that backs them and the ALL_UNITS
 runner.
 
-Source of truth for WHICH units ship: TorahCode/data/units_index.json
-(itself exported from the units table by build_torahcode_data.py) — the
+Source of truth for WHICH units ship: TorahSim/data/units_index.json
+(itself exported from the units table by build_torahsim_data.py) — the
 exporter fails loudly if a listed unit has no rendering.
 
 Each copied file gets the MIT notice line injected after the shebang so the
@@ -18,10 +18,10 @@ import json
 from pathlib import Path
 
 HOME = Path("<repo-old>/logic/py_units")
-PUB = Path("<home>/TorahCode/units")
-INDEX = Path("<home>/TorahCode/data/units_index.json")
+PUB = Path("<repo>/units")
+INDEX = Path("<repo>/data/units_index.json")
 
-NOTICE = ("# TorahCode — (c) 2026 Brian LeBlanc · MIT license "
+NOTICE = ("# TorahSim — (c) 2026 Brian LeBlanc · MIT license "
           "(see LICENSE at repo root)\n")
 
 

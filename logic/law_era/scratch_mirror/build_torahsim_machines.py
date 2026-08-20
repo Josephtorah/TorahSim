@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-build_torahcode_machines.py — home-side copier for the PUBLIC TorahCode
+build_torahsim_machines.py — home-side copier for the PUBLIC TorahSim
 repo's machines/exo21/ tree. Copies the four Exodus 21 machine files out of
 Torah_Grok with three mechanical transformations (verified: nothing else
 changes):
@@ -17,7 +17,7 @@ Rerun after any machine change at home to refresh the public copies.
 from pathlib import Path
 
 HOME = Path("<repo-old>/logic/law_era")
-PUB = Path("<home>/TorahCode/machines/exo21")
+PUB = Path("<repo>/machines/exo21")
 
 OLD_SPANS = '''def _frozen_spans():
     import sqlite3, re, os
@@ -75,7 +75,7 @@ FILES = {
 }
 
 
-NOTICE = ("# TorahCode — (c) 2026 Brian LeBlanc · MIT license "
+NOTICE = ("# TorahSim — (c) 2026 Brian LeBlanc · MIT license "
           "(see LICENSE at repo root)\n")
 
 
