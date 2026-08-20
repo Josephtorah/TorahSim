@@ -32,7 +32,8 @@ has crossed: finished, redacted at the border, and provable on arrival.
 ## What is a preserved record here
 
 `docs/` (the workshop's method documents and tutorials), `oral_triage/`
-(the TIR citation ledgers behind every `cites:` field), the
+(the TIR citation ledgers behind every `cites:` field), `oral_audit/`
+(the chain-attestation audit records the oral-audit pages render), the
 `taamim_rules/` version notes, and `FETCHLOG.md` (the append-only Tier-A
 fetch log) are received records: shipped as written, reported by the
 gloss lint but never gated, never retouched. See method law 8.

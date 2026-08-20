@@ -50,3 +50,13 @@ The scan record quotes sources the way scholarship does: by citation
 lemmas from the public-domain originals, analyzed in the project's own
 words. No modern edition or translation is reproduced at length. See
 `ATTRIBUTION.md` at the repository root.
+
+## The census queues (added 2026-08-20)
+
+`queues/law01_queue.json` (3,286 entries), `law02_queue.json` (2,450),
+`law03_queue.json` (1,702): the enumeration side of the reading — for
+each block of the chapter, every readable oral source the census found,
+keyed source → work, category, class, segment count. The ledger above is
+the reading's receipt; these are its to-read lists, preserved as written.
+Together they close the loop the front page describes: the census set the
+target, the ledger holds the 4,903 rows read against it.

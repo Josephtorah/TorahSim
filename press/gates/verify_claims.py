@@ -22,8 +22,8 @@ discrepancy observation.
 """
 import json, re, sqlite3, sys
 
-DB = "source-snapshot.sqlite"
-DM = "debut-snapshot.sqlite"
+DB = "data/source-snapshot.sqlite"
+DM = "data/debut-snapshot.sqlite"
 FINALS = {"ך": "כ", "ם": "מ", "ן": "נ", "ף": "פ", "ץ": "צ"}
 
 

@@ -48,6 +48,7 @@ RECORD_PREFIXES = (os.path.join("scans", "ledgers"),
                    os.path.join("scroll", "units"),
                    os.path.join("logic", "docs"),
                    os.path.join("logic", "oral_triage"),
+                   os.path.join("logic", "oral_audit"),
                    os.path.join("logic", "taamim_rules"))
 RECORD_FILES = {os.path.join("logic", "FETCHLOG.md")}
 LINT_EXT = (".py", ".md", ".html")
@@ -158,7 +159,31 @@ def main():
            "house of David run, findings hold"
            if r.returncode == 0 else "FAILED — output above")
 
-    # -- gate 6: the press — the shipped pool must be reprintable --------
+    # -- gate 6: the receipts — the front page's recorded figures --------
+    # The recital says the law chapter's reading was logged, 4,903 rows,
+    # against a census. Assert the shipped evidence still says so: the
+    # reading ledger's row count and the three census queues' entry
+    # counts must equal their documented figures.
+    try:
+        with open(os.path.join(ROOT, "scans", "ledgers",
+                               "Exod_21.jsonl"), encoding="utf-8") as f:
+            rows = sum(1 for line in f if line.strip())
+        import json as _json
+        qn = []
+        for n in (1, 2, 3):
+            with open(os.path.join(ROOT, "scans", "queues",
+                                   "law0%d_queue.json" % n),
+                      encoding="utf-8") as f:
+                qn.append(len(_json.load(f)))
+        ok = rows == 4903 and qn == [3286, 2450, 1702]
+        report("receipts", ok,
+               "reading ledger 4,903 rows · census queues 3,286/2,450/"
+               "1,702 — as recorded" if ok else
+               "MISMATCH: ledger %d rows, queues %s" % (rows, qn))
+    except OSError as e:
+        report("receipts", False, "missing evidence file: %s" % e)
+
+    # -- gate 7: the press — the shipped pool must be reprintable --------
     # Regenerate all 97 unit renderings from the canonical YAML (logic/
     # units/) through press/render_unit_py.py into a temp dir and diff
     # them against units/. Self-sufficiency is not a claim; it re-proves

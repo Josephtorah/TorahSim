@@ -14,13 +14,15 @@ blocks shipping.
 python3 tools/check.py
 ```
 
-Six gates, one exit code: the gloss lint, the 97 derivation units, the
+Seven gates, one exit code: the gloss lint, the 97 derivation units, the
 chapter machine with its 60-edge dependency proof, the 64 Tanakh-run
 scenes against their frozen stamp baseline
-(`app/scene_stamps_baseline.json`), the simulation sketch, and the press
-(the 97 unit renderings reprinted from the canonical YAML in
-`logic/units/` and diffed against `units/` — skipped with a note when
-`data/derivation.sqlite` is absent, as on CI). Run it before and after
+(`app/scene_stamps_baseline.json`), the simulation sketch, the receipts
+(the reading ledger's 4,903 rows and the census queues' counts, asserted
+against their documented figures), and the press (the 97 unit renderings
+reprinted from the canonical YAML in `logic/units/` and diffed against
+`units/` — skipped with a note when `data/derivation.sqlite` is absent,
+as on CI). Run it before and after
 any change. A change that flips a scene stamp must answer for it; only
 after it has answered, re-freeze deliberately with
 `python3 tools/check.py --rebaseline`. CI runs the same command on every
@@ -28,9 +30,15 @@ push (`.github/workflows/check.yml`).
 
 Individual instruments: `python3 app/app.py` (the 64 scenes, port 8021),
 `python3 machines/exo21/chapter.py`, `python3 units/run_all.py`,
-`python3 sim/house_of_david.py`, `open viz/inheritance.html`,
-`python3 -m http.server 8012 -d scroll` (the Torah as a scroll — static,
-whole Torah, with the 97 derivation review pages under `scroll/units/`).
+`python3 sim/house_of_david.py`, `open viz/inheritance.html`.
+
+The derivation loop's preview is `python3 tools/dev_server.py` (port
+8012): it serves the dressed `site/` exactly as Cloudflare ships it, and
+answers the pages' hidden ⟳ regenerate buttons — `/regen/data` re-runs
+the index → export → re-dress chain, `/regen/unit/<uid>` reprints one
+unit's rendering and review page. Loopback-only, fixed script allowlist,
+derived artifacts only (it can never touch `logic/`); production answers
+404 on `/regen/ping`, so the buttons never appear on the public site.
 
 ## The public site — torahsim.org
 

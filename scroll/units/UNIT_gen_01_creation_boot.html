@@ -335,6 +335,7 @@ ALL SCENARIOS GREEN
 <h2>Python rendering — the unit as a program</h2>
 <p class='meta'>Generated from the frozen YAML by render_unit_py.py (the YAML stays canonical — this layer is derived, like this page). Runnable: <code>python3 logic/py_units/gen_01_creation_boot.py</code> — replays the six registers and asserts the interpreter's machine truth.</p>
 <pre class='pyblock'>#!/usr/bin/env python3
+# TorahSim — (c) 2026 Brian LeBlanc · MIT license (see LICENSE at repo root)
 # =============================================================================
 # gen_01_creation_boot — 1:1-5
 # PYTHON RENDERING — GENERATED from the FROZEN YAML by render_unit_py.py.
@@ -421,8 +422,8 @@ m.commit(1, label_form=&quot;cardinal&quot;, label_translit=&quot;yom echad&quot
 # -------------------------- machine truth (baked from the Stage D run) -------
 if __name__ == &quot;__main__&quot;:
     m.report()
-    assert m.created_set() == {&#x27;aretz&#x27;, &#x27;shamayim&#x27;, &#x27;or&#x27;}
-    assert m.presupposed_set() == {&#x27;choshekh&#x27;, &#x27;ruach&#x27;, &#x27;mayim&#x27;, &#x27;tehom&#x27;}
+    assert m.created_set() == {&#x27;aretz&#x27;, &#x27;or&#x27;, &#x27;shamayim&#x27;}
+    assert m.presupposed_set() == {&#x27;choshekh&#x27;, &#x27;mayim&#x27;, &#x27;ruach&#x27;, &#x27;tehom&#x27;}
     assert m.REGISTRY[&quot;names&quot;] == {&#x27;or&#x27;: &#x27;yom&#x27;, &#x27;choshekh&#x27;: &#x27;layla&#x27;}
     assert m.REGISTRY[&quot;writes&quot;] == 2
     assert m.tests_list() == [(&#x27;PASS&#x27;, &#x27;tov&#x27;, &#x27;or&#x27;)]
@@ -436,4 +437,4 @@ if __name__ == &quot;__main__&quot;:
     assert len(m.EVENTS) == 6
     print(&quot;ALL ASSERTIONS GREEN — rendering matches the frozen unit&#x27;s machine truth&quot;)
 </pre>
-<div class="note">Stage C pilot (2026-07-28): first unit carrying the TIR-026..033 operator layer and machine-state scenarios. Frozen for interpreter work (Stage D target: reproduce S1-S5 mechanically; S6/S7 are the negative contract). Not binding religious law.</div><p class='meta'>Rendered 2026-08-09 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>
+<div class="note">Stage C pilot (2026-07-28): first unit carrying the TIR-026..033 operator layer and machine-state scenarios. Frozen for interpreter work (Stage D target: reproduce S1-S5 mechanically; S6/S7 are the negative contract). Not binding religious law.</div><p class='meta'>Rendered 2026-08-20 by render_unit_html.py · the YAML is canonical, this page is read-only display · English = aid only · not binding religious law.</p></main></body></html>

@@ -1,0 +1,28 @@
+[
+  {"id": "G21-01", "source": "Minchat Shai on Gen 9:2", "ref": "Gen 9:2",
+   "claim_en": "כל חית הארץ (\"every beast of the earth,\" the dread-clause) — the yod carries a dagesh (doubling dot). SNAPSHOT agrees.",
+   "check": {"type": "he_contains", "ref": "Gen 9:2", "idx": 5, "contains": "יּ"}},
+
+  {"id": "G21-02", "source": "Minchat Shai on Gen 9:2", "ref": "Gen 9:2",
+   "claim_en": "דגי הים (\"the fish of the sea\") — the yod of the sea-word with dagesh (doubling dot). SNAPSHOT agrees.",
+   "check": {"type": "he_contains", "ref": "Gen 9:2", "idx": 17, "contains": "יּ"}},
+
+  {"id": "G21-03", "source": "Minchat Shai on Gen 9:2 (Ben Asher; the precise books)", "ref": "Gen 9:2",
+   "claim_en": "ובכל (\"and in every [fish of the sea]\") — the vav carries the lengthening mark (maarikh, the small vertical stroke) \"per Ben Asher, and so in the precise books.\" SNAPSHOT's codepoints: vav, its vowel-dot, and the stroke — the Ben Asher reading locked.",
+   "check": {"type": "he_contains", "ref": "Gen 9:2", "idx": 15, "contains": "וּֽ"}},
+
+  {"id": "G21-04", "source": "Minchat Shai on Gen 9:4", "ref": "Gen 9:4",
+   "claim_en": "בשר בנפשו דמו (\"flesh with its life, its BLOOD\") — the first blood-word's dalet is SOFT (no dagesh): dalet+vowel contiguous in SNAPSHOT.",
+   "check": {"type": "he_contains", "ref": "Gen 9:4", "idx": 3, "contains": "דָ"}},
+
+  {"id": "G21-05", "source": "Minchat Shai on Gen 9:7 (Great Masorah)", "ref": "Gen 9:7",
+   "claim_en": "שרצו בארץ (\"SWARM in the earth,\" the renewed blessing) — the Great Masorah lists it among the pairs that take NO vav at the word's head, \"and the copies err in them\": here bare, unlike the true ושרצו (\"and they shall swarm\") of the exit-command (8:17) — both forms locked one chapter apart.",
+   "check": {"type": "letters_multiset", "ref": "Gen 9:7", "idx": 3,
+             "equals_letters_of": "שרצו"}},
+
+  {"id": "G21-06", "source": "Kitzur Baal HaTurim on Gen 9:5 (Masorah)", "ref": "Gen 9:5",
+   "scope": "scripture",
+   "claim_en": "ואך (\"and yet\") — the Kitzur's Masorah trio: the blood-reckoning (9:5), Balaam's \"yet ONLY the word I speak\" (Num 22:20), and \"yet if the land of your possession is unclean\" (Josh 22:19): as one may not kill oneself, one may not curse oneself — even SPEECH is reckoned. Torah-side: exactly the two tokens of this pointing (Pharaoh's ואך, Exod 9:15, is another vocalization); the Joshua leg is an inheritance edge.",
+   "check": {"type": "token_count", "where": {"translit": "ve-akh"},
+             "expect_total": 2, "expect_refs": ["Gen 9:5", "Num 22:20"]}}
+]

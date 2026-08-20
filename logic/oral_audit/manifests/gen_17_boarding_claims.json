@@ -1,0 +1,129 @@
+[
+ {
+  "id": "G17-01",
+  "source": "Minchat Shai on Gen 7:2 (Ramah; corrected Masorah)",
+  "ref": "Gen 7:2",
+  "claim_en": "הטהורה (\"the pure one,\" with the article) — the Ramah: plene with vav exactly TWICE in the Torah, \"both verse-openings\" — the boarding commands 7:2 and 7:8; every other pure-form defective (Minchat Shai calls our printed Masorah here \"words of error\"). SNAPSHOT holds THREE plene tokens: the Ramah's verse-initial pair AND 8:20 (the altar verse) — the third is a deviation from his rule, banked as a discrepancy for the gen_20 audit. (The pure LAMPSTAND's tokens and Lev 20:25, same pronunciation, are all defective — consistent with the rule.)",
+  "check": {
+   "type": "spelling_variants",
+   "where": {
+    "translit": "ha-tehora"
+   },
+   "pattern_full": "טהורה",
+   "expect_full_refs": [
+    "Gen 7:2",
+    "Gen 7:8",
+    "Gen 8:20"
+   ]
+  }
+ },
+ {
+  "id": "G17-02",
+  "source": "Minchat Shai on Gen 7:8 (Pesachim 3a; Bereshit Rabbah 32)",
+  "ref": "Gen 7:8",
+  "claim_en": "DISCREPANCY OBSERVATION, the tradition's own — the Talmud: \"the verse BENT EIGHT LETTERS rather than utter an ugly word\" (אשר איננה טהרה, \"which is not pure,\" for הטמאה, \"the impure\"). Minchat Shai's challenge: טהרה here is written DEFECTIVE (four letters), so the detour is SEVEN letters, not eight — and he resolves it by Bereshit Rabbah's version, which counts WORDS (\"two and three words\"), not letters. SNAPSHOT sides with his arithmetic: the defective spelling locked.",
+  "check": {
+   "type": "letters_multiset",
+   "ref": "Gen 7:8",
+   "idx": 7,
+   "equals_letters_of": "טהרה"
+  }
+ },
+ {
+  "id": "G17-03",
+  "source": "Minchat Shai on Gen 7:11 (Hilleli vs Yerushalmi; Ramah; Or Torah)",
+  "ref": "Gen 7:11",
+  "claim_en": "DISCREPANCY OBSERVATION — מעינות (\"fountains\"): \"a great dispute on this word.\" The Hilleli codex, the Ramah, and Or Torah rule 7:11 PLENE — \"full when the fountains were full\" — and 8:2's closing token defective, \"drained when they drained\": the spelling-homily rides the ruling. SNAPSHOT writes BOTH tokens defective (מעינת) — the Yerushalmi camp — against the Ramah's ruling and its homily. Both camps recorded; the check locks zero plene tokens.",
+  "check": {
+   "type": "spelling_variants",
+   "where": {
+    "translit": "maynot"
+   },
+   "pattern_full": "מעינות",
+   "expect_full_refs": []
+  }
+ },
+ {
+  "id": "G17-04",
+  "source": "Kitzur Baal HaTurim on Gen 7:4 (Masorah)",
+  "ref": "Gen 7:4",
+  "claim_en": "היקום (\"the standing-substance\") — the Kitzur's Masorah trio, all THREE in the Torah: \"and I will wipe out all the standing\" (7:4), \"and He wiped out all the standing\" (7:23), \"and all the standing at their feet\" (Deut 11:6 — Korach's household): \"as the flood generation sinned from too much good, so Korach from his wealth.\" SNAPSHOT: exactly three tokens.",
+  "check": {
+   "type": "token_count",
+   "where": {
+    "translit": "ha-yequm"
+   },
+   "expect_total": 3,
+   "expect_refs": [
+    "Gen 7:4",
+    "Gen 7:23",
+    "Deut 11:6"
+   ]
+  }
+ },
+ {
+  "id": "G17-05",
+  "source": "Kitzur Baal HaTurim on Gen 7:16 (Masorah)",
+  "ref": "Gen 7:16",
+  "scope": "scripture",
+  "claim_en": "והבאים (\"and those coming\") — the Kitzur's Masorah pair spans out of the Torah: the boarding animals (7:16) and \"those who came with Zerubbabel\" (the return list): \"as here they came OF THEMSELVES, so there they went up of themselves.\" Torah-side: this is the word's only token — and the pair is an inheritance edge (Torah → Writings) of exactly the class the edge layer records.",
+  "check": {
+   "type": "token_count",
+   "where": {
+    "translit": "ve-ha-baim"
+   },
+   "expect_total": 1,
+   "expect_refs": [
+    "Gen 7:16"
+   ]
+  }
+ },
+ {
+  "id": "G17-06",
+  "source": "Minchat Shai on Gen 7:6",
+  "ref": "Gen 7:6",
+  "claim_en": "ונח בן שש מאות שנה (\"and Noah was six hundred years old\") — שש with its own accent and NO maqqef (joining hyphen): Noah's age stands unjoined. SNAPSHOT: no maqqef after שש.",
+  "check": {
+   "type": "maqqef_after",
+   "ref": "Gen 7:6",
+   "idx": 2,
+   "expect": 0
+  }
+ },
+ {
+  "id": "G17-07",
+  "source": "Minchat Shai on Gen 7:11",
+  "ref": "Gen 7:11",
+  "claim_en": "בשנת שש מאות שנה (\"in the six-hundredth year,\" the date formula) — here שש WITH maqqef and no lengthening mark: the same number, joined when it dates the flood and free when it ages the man — Minchat Shai notes both pointings five verses apart. SNAPSHOT: maqqef after שש.",
+  "check": {
+   "type": "maqqef_after",
+   "ref": "Gen 7:11",
+   "idx": 1,
+   "expect": 1
+  }
+ },
+ {
+  "id": "G17-08",
+  "source": "Minchat Shai on Gen 7:11",
+  "ref": "Gen 7:11",
+  "claim_en": "בחדש השני (\"in the second month\") — zaqef qatan (\"small upright\" pause accent) on the nun. SNAPSHOT agrees.",
+  "check": {
+   "type": "mark",
+   "ref": "Gen 7:11",
+   "idx": 7,
+   "expect_mark": "zaqef_qatan"
+  }
+ },
+ {
+  "id": "G17-09",
+  "source": "Minchat Shai on Gen 7:12",
+  "ref": "Gen 7:12",
+  "claim_en": "ויהי הגשם על הארץ (\"and the rain was upon the earth\") — על joined by maqqef (joining hyphen). SNAPSHOT agrees.",
+  "check": {
+   "type": "maqqef_after",
+   "ref": "Gen 7:12",
+   "idx": 2,
+   "expect": 1
+  }
+ }
+]

@@ -1,0 +1,53 @@
+[
+  {"id": "G14-01", "source": "Minchat Shai on Gen 5:3 (Masorah alphabet; Ramah)", "ref": "Gen 5:3",
+   "claim_en": "כצלמו (\"AS his image,\" the man-to-son likeness) — the Masorah's alphabet-count: the pair occurs once with bet and once with kaf, \"the first בצלמו with bet, the latter כצלמו with kaf, and the mnemonic is בצלמנו כדמותנו ('in our image, as our likeness')\" (Ramah). SNAPSHOT: כצלמו unique, here.",
+   "check": {"type": "token_count", "where": {"translit": "ke-tzalm-o"},
+             "expect_total": 1, "expect_refs": ["Gen 5:3"]}},
+
+  {"id": "G14-02", "source": "Minchat Shai on Gen 5:3 (Masorah alphabet; Ramah)", "ref": "Gen 1:27",
+   "claim_en": "בצלמו (\"IN His image,\" the God-to-man direction, 1:27) — the pair's bet member, likewise unique: the two prepositions split the two directions of likeness across the two creation notices.",
+   "check": {"type": "token_count", "where": {"translit": "be-tzalm-o"},
+             "expect_total": 1, "expect_refs": ["Gen 1:27"]}},
+
+  {"id": "G14-03", "source": "Minchat Shai on Gen 5:25-26 (Ramah; Hilleli)", "ref": "Gen 5:26",
+   "claim_en": "שמונים (\"eighty\") — the Ramah: \"ONE alone in the Torah is written plene with vav\" — Methuselah's SECOND eighty (5:26, after he begot Lamech), plene with vav and yod; every other Torah eighty (including Methuselah's first, one verse earlier) defective. Minchat Shai calls the six-plene Masorah note \"two errors\"; SNAPSHOT sides with the Ramah: nine eighty-tokens, exactly one plene, at 5:26.",
+   "check": {"type": "spelling_variants", "where": {"translit_like": "%shemonim%"},
+             "pattern_full": "שמונים", "expect_full_refs": ["Gen 5:26"]}},
+
+  {"id": "G14-04", "source": "Minchat Shai on Gen 5:29 (Ramah; Hilleli)", "ref": "Gen 5:29",
+   "claim_en": "ממעשנו (\"from our work\") in Noah's naming-speech — written DEFECTIVE without yod (the Ramah; the Hilleli records a dispute, \"our books\" defective). SNAPSHOT letter-exact.",
+   "check": {"type": "letters_multiset", "ref": "Gen 5:29", "idx": 7,
+             "equals_letters_of": "ממעשנו"}},
+
+  {"id": "G14-05", "source": "Minchat Shai on Gen 5:29", "ref": "Gen 5:29",
+   "claim_en": "ומעצבון (\"and from the toil\") — the tsadi carries a dagesh (doubling dot): the toil-word's third and last Torah token (after the woman's and the man's sentences, 3:16/3:17 — this unit's own census), pointed exactly as its siblings.",
+   "check": {"type": "he_contains", "ref": "Gen 5:29", "idx": 8, "contains": "צּ"}},
+
+  {"id": "G14-06", "source": "Minchat Shai on Gen 5:24", "ref": "Gen 5:24",
+   "claim_en": "כי לקח (\"for [God] took him\" — Enoch's exit) — כי joined by maqqef (the joining hyphen), not accented: the taking-clause reads as one breath. SNAPSHOT's maqqef data agrees.",
+   "check": {"type": "maqqef_after", "ref": "Gen 5:24", "idx": 5, "expect": 1}},
+
+  {"id": "G14-07", "source": "Minchat Shai on Gen 5:5", "ref": "Gen 5:5",
+   "claim_en": "אשר חי (\"which he lived,\" Adam's total) — אשר \"with maqqef (joining hyphen), not with mehuppach (the inverted-horn accent)\": SNAPSHOT joins it.",
+   "check": {"type": "maqqef_after", "ref": "Gen 5:5", "idx": 4, "expect": 1}},
+
+  {"id": "G14-08", "source": "Minchat Shai on Gen 5:5", "ref": "Gen 5:5",
+   "claim_en": "ויהיו (\"and all the days of Adam WERE\") — \"in most books with two gerishin\" (gershayim, the double-stroke accent): SNAPSHOT reads gershayim on the ledger's first total.",
+   "check": {"type": "mark", "ref": "Gen 5:5", "idx": 0, "expect_mark": "gershayim"}},
+
+  {"id": "G14-09", "source": "Minchat Shai on Gen 5:18", "ref": "Gen 5:18",
+   "claim_en": "שתים (\"two,\" in Jared's 162) — darga (the stair-step conjunctive accent) on the tav: SNAPSHOT agrees.",
+   "check": {"type": "mark", "ref": "Gen 5:18", "idx": 2, "expect_mark": "darga"}},
+
+  {"id": "G14-10", "source": "Minchat Shai on Gen 5:26", "ref": "Gen 5:26",
+   "claim_en": "מתושלח אחרי (\"Methuselah, after...\") — אחרי with pashta (the forward-leaning pause accent): SNAPSHOT agrees.",
+   "check": {"type": "mark", "ref": "Gen 5:26", "idx": 2, "expect_mark": "pashta"}},
+
+  {"id": "G14-11", "source": "Minchat Shai on Gen 5 (eight setuma notes)", "ref": "Gen 5:6",
+   "claim_en": "THE LEDGER'S ROW-BREAKS: Minchat Shai marks each generation's opening a CLOSED section (setuma) — 5:6, 5:9, 5:15, 5:18, 5:21, 5:25, 5:28, 5:32 all \"closed\" per the precise books: the death-ledger's rows are paragraph-ruled. SNAPSHOT carries no paragraph (petucha/setuma) instrumentation — gap class of gen_12's G12-11.",
+   "check": {"type": "manual", "note": "no petucha/setuma columns in SNAPSHOT; the eight-row paragraph structure is real Masorah data the instrument cannot see"}},
+
+  {"id": "G14-12", "source": "Minchat Shai on Gen 5:7 (galgal class)", "ref": "Gen 5:7",
+   "claim_en": "הולידו (\"after he begot,\" Seth's row) — Minchat Shai reads galgal (\"wheel,\" the day-old-moon accent) on the dalet; SNAPSHOT's chain reads munach (a plain conjunctive) — the galgal-vs-SNAPSHOT variant class again (gen_11's G11-16 on 3:14): recurrence #2, same manuscript family difference.",
+   "check": {"type": "manual", "note": "galgal absent from SNAPSHOT's mark inventory at this token (munach); manuscript accent-variant class, banked with G11-16"}}
+]

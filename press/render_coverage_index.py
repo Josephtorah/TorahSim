@@ -19,7 +19,8 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 DB = ROOT / "data" / "derivation.sqlite"
-OUT = HERE / "UNIT_INDEX.html"
+PAGES = ROOT / "scroll" / "units"
+OUT = PAGES / "UNIT_INDEX.html"
 
 BOOK_IDS = {"Genesis": "Gen", "Exodus": "Exod", "Leviticus": "Lev",
             "Numbers": "Num", "Deuteronomy": "Deut"}
@@ -53,7 +54,7 @@ def main():
     S.append("<h1>Derived coverage — all frozen logic units</h1>")
     S.append('<div class="meta">generated %s from derivation.sqlite (indexed from '
              "the canonical YAML in logic/units/) · "
-             '<a href="/">⇄ open the scroll (verse tree + morph view)</a></div>'
+             '<a href="../">⇄ open the scroll (verse tree + morph view)</a></div>'
              % date.today().isoformat())
 
     S.append("<h2>Coverage meters</h2><table>")
@@ -76,12 +77,12 @@ def main():
     for uid, book, refs, title, n_steps, n_scen in units:
         bid = BOOK_IDS.get(book, book)
         mt = re.match(r"(\d+):(\d+)", refs or "")
-        verse_link = ('<a href="/#%s/%s/%s">verse view</a>' %
+        verse_link = ('<a href="../#%s/%s/%s">verse view</a>' %
                       (bid, mt.group(1), mt.group(2))) if mt else ""
         # oral-first era (2026-08-08): link the unit's oral-audit page when
         # one has been rendered (retro program, PROCESS.md)
         audit_link = ""
-        if (HERE / ("ORAL_AUDIT_%s.html" % uid)).exists():
+        if (PAGES / ("ORAL_AUDIT_%s.html" % uid)).exists():
             audited += 1
             audit_link = (' · <a href="ORAL_AUDIT_%s.html" class="audit">'
                           '&#10003; oral audit</a>' % uid)
