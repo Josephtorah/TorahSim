@@ -13,6 +13,7 @@ Usage: python3 export_web.py            (whole Torah, ~30s)
 
 import importlib.util
 import json
+import re
 import sqlite3
 import os
 import sys
@@ -105,7 +106,7 @@ def code_lines(d):
     return lines
 
 
-def verse_json(d, frozen_rows, fen, oral=None):
+def verse_json(d, frozen_rows, fen, oral=None, vstat=None):
     words, leaves = d["words"], d["leaves"]
     out = {"v": d["verse"]["verse"], "osis": d["osis"],
            "sys": d["verse"]["system"], "status": d["tree"]["status"],
@@ -114,6 +115,8 @@ def verse_json(d, frozen_rows, fen, oral=None):
                       for r in (frozen_rows or [])]}
     if oral:
         out["oral"] = oral  # [enumerated, read, material] — honest counters
+    if vstat:
+        out["vstat"] = vstat  # the two-axis status: {o, d, p, g} — spec v2
     out["leaves"] = []
     for lf in leaves:
         ws, we = lf["w_start"], lf["w_end"]
@@ -178,6 +181,82 @@ def main():
     except sqlite3.OperationalError:
         pass  # oral_links / triage not built yet -> no badges
 
+    # verse-status labels (the settled two-axis ladder; spec v2). Computed
+    # from records, never hand-set — the oral triple above remains the
+    # source of the fractions and the material count; vstat classifies.
+    #   o: 0 unopened / 2 in reading / 3 read through   g: "v"|"c" grain
+    #   d: 0 underived / 1 first pass / 2 full rule     p: proven-by-cases
+
+    # chapter-grain read-through: a chapter whose reading ledger sits in
+    # scans/ledgers/ (the law-era receipts) is O3 for all its verses —
+    # its rows anchor to the chapter's law, so per-verse fractions there
+    # would undercount and are forbidden.
+    ledger_ch = set()
+    for f in (ROOT / "scans" / "ledgers").glob("*_*.jsonl"):
+        bk, _, chs = f.stem.rpartition("_")
+        if bk in BOOKS and chs.isdigit():
+            ledger_ch.add((bk, int(chs)))
+
+    # proven-by-cases: chapters compiled to machines/ (the scenes gate in
+    # tools/check.py guards the baseline's green)
+    ABBR3 = {"gen": "Gen", "exo": "Exod", "lev": "Lev",
+             "num": "Num", "deu": "Deut"}
+    proven_ch = set()
+    mdir = ROOT / "machines"
+    if mdir.is_dir():
+        for dname in mdir.iterdir():
+            m = re.match(r"^([a-z]{3})(\d+)$", dname.name)
+            if m and dname.is_dir() and m.group(1) in ABBR3:
+                proven_ch.add((ABBR3[m.group(1)], int(m.group(2))))
+
+    # derivation level per verse, from the frozen units' declared refs
+    # spans (the spec's D-span source); the stamp decides first pass vs
+    # full rule (absent or v1 = first pass by definition). P holds only
+    # where the covering unit's whole span lies in compiled chapters.
+    BOOK_ABBR = {"Genesis": "Gen", "Exodus": "Exod", "Leviticus": "Lev",
+                 "Numbers": "Num", "Deuteronomy": "Deut"}
+    d_level, p_flag = {}, set()
+    try:
+        for r in cx.execute("""SELECT book_en, refs, tree_derive_version
+                               FROM units WHERE status = 'frozen'"""):
+            bid = BOOK_ABBR.get(r["book_en"])
+            m = re.match(r"^(\d+):(\d+)\s*[-–]\s*(?:(\d+):)?(\d+)$",
+                         (r["refs"] or "").strip())
+            if not bid or not m:
+                continue
+            c1, v1 = int(m.group(1)), int(m.group(2))
+            c2 = int(m.group(3)) if m.group(3) else c1
+            v2 = int(m.group(4))
+            lvl = 2 if (r["tree_derive_version"] or "").endswith(
+                "full_rule") else 1
+            span_proven = all((bid, c) in proven_ch
+                              for c in range(c1, c2 + 1))
+            for c in range(c1, c2 + 1):
+                lo = v1 if c == c1 else 1
+                hi = v2 if c == c2 else shape[bid][c]
+                for v in range(lo, hi + 1):
+                    key = (bid, c, v)
+                    d_level[key] = max(d_level.get(key, 0), lvl)
+                    if span_proven:
+                        p_flag.add(key)
+    except sqlite3.OperationalError:
+        pass   # units table absent -> everything underived
+
+    def vstat_for(bid, ch, v):
+        if (bid, ch) in ledger_ch:
+            o, g = 3, "c"
+        else:
+            oc = oral_counts.get("%s.%d.%d" % (bid, ch, v))
+            if not oc or oc[0] == 0:
+                o, g = 0, "v"
+            elif oc[1] >= oc[0]:
+                o, g = 3, "v"
+            else:
+                o, g = 2, "v"
+        key = (bid, ch, v)
+        return {"o": o, "d": d_level.get(key, 0),
+                "p": key in p_flag, "g": g}
+
     jps = load_jps(shape)
     build_search_index(cx, jps)
     if "--search-only" in sys.argv:
@@ -209,7 +288,8 @@ def main():
                 fen = ch_jps[v - 1] if ch_jps else (
                     RDB.VERSE_EN.get((ch, v)) if b == "Gen" else None)
                 verses.append(verse_json(d, frozen_steps.get(d["osis"]), fen,
-                                         oral_counts.get(d["osis"])))
+                                         oral_counts.get(d["osis"]),
+                                         vstat_for(b, ch, v)))
                 n_v += 1
             (OUT / ("%s_%d.json" % (b, ch))).write_text(
                 json.dumps({"book": b, "chapter": ch, "verses": verses},

@@ -183,7 +183,88 @@ def main():
     except OSError as e:
         report("receipts", False, "missing evidence file: %s" % e)
 
-    # -- gate 7: the press — the shipped pool must be reprintable --------
+    # -- gate 7: the labels — vstat vs. the records ----------------------
+    # The verse-status chips and the coverage grid render the bundles'
+    # vstat field; this gate re-derives every claim from the committed
+    # records and refuses drift: no read-through without the counters, no
+    # chapter grain without its reading ledger, no derivation level
+    # outside a frozen span, no full-rule stamp the DB cannot show, no
+    # proven flag without a compiled chapter and a green scene baseline.
+    import glob as _glob
+    import json as _json2
+    import re as _re
+    scenes_green = any(n == "scenes" and ok for n, ok, _ in results)
+    spans = set()
+    _ABBR = {"Genesis": "Gen", "Exodus": "Exod", "Leviticus": "Lev",
+             "Numbers": "Num", "Deuteronomy": "Deut"}
+    shape = {}
+    for bpath in sorted(_glob.glob(os.path.join(ROOT, "scroll", "data",
+                                                "*_*.json"))):
+        with open(bpath, encoding="utf-8") as f:
+            _d = _json2.load(f)
+        shape[(_d["book"], _d["chapter"])] = len(_d["verses"])
+    for u in _json2.load(open(os.path.join(ROOT, "data",
+                                           "units_index.json"),
+                              encoding="utf-8"))["units"]:
+        bid = _ABBR[u["book"]]
+        m = _re.match(r"^(\d+):(\d+)\s*[-–]\s*(?:(\d+):)?(\d+)$",
+                      u["refs"].strip())
+        c1, v1 = int(m.group(1)), int(m.group(2))
+        c2 = int(m.group(3)) if m.group(3) else c1
+        v2 = int(m.group(4))
+        for c in range(c1, c2 + 1):
+            hi = v2 if c == c2 else shape[(bid, c)]
+            for v in range((v1 if c == c1 else 1), hi + 1):
+                spans.add((bid, c, v))
+    compiled = set()
+    _A3 = {"gen": "Gen", "exo": "Exod", "lev": "Lev", "num": "Num",
+           "deu": "Deut"}
+    for dname in os.listdir(os.path.join(ROOT, "machines")):
+        m = _re.match(r"^([a-z]{3})(\d+)$", dname)
+        if m and m.group(1) in _A3:
+            compiled.add((_A3[m.group(1)], int(m.group(2))))
+    bad, n_checked = [], 0
+    for bpath in sorted(_glob.glob(os.path.join(ROOT, "scroll", "data",
+                                                "*_*.json"))):
+        with open(bpath, encoding="utf-8") as f:
+            _d = _json2.load(f)
+        b, ch = _d["book"], _d["chapter"]
+        has_ledger = os.path.exists(os.path.join(
+            ROOT, "scans", "ledgers", "%s_%d.jsonl" % (b, ch)))
+        for v in _d["verses"]:
+            s = v.get("vstat")
+            if not s:
+                bad.append("%s %d:%d no vstat" % (b, ch, v["v"]))
+                continue
+            n_checked += 1
+            oc = v.get("oral")
+            key = (b, ch, v["v"])
+            ok = True
+            if s["g"] == "c":
+                ok = has_ledger and s["o"] == 3
+            elif s["o"] == 3:
+                ok = bool(oc) and oc[0] > 0 and oc[1] == oc[0]
+            elif s["o"] == 2:
+                ok = bool(oc) and oc[0] > 0 and oc[1] < oc[0]
+            else:
+                ok = not oc or oc[0] == 0
+            if s["d"] >= 1 and key not in spans:
+                ok = False
+            if s["d"] == 0 and key in spans:
+                ok = False
+            if s["d"] == 2:
+                ok = False   # no full-rule stamp exists yet; the first
+                             # one must extend this gate to verify it
+            if s["p"] and not ((b, ch) in compiled and scenes_green):
+                ok = False
+            if not ok:
+                bad.append("%s %d:%d %r oral=%r" % (b, ch, v["v"], s, oc))
+    report("labels", not bad,
+           "%d verse labels re-derived from the records: consistent"
+           % n_checked if not bad else
+           "DRIFT in %d labels, e.g. %s" % (len(bad), bad[0]))
+
+    # -- gate 8: the press — the shipped pool must be reprintable --------
     # Regenerate all 97 unit renderings from the canonical YAML (logic/
     # units/) through press/render_unit_py.py into a temp dir and diff
     # them against units/. Self-sufficiency is not a claim; it re-proves

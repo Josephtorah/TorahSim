@@ -654,16 +654,50 @@ def masthead(prefix, active):
             % (GITHUB_SVG, DISCORD_SVG))
 
 
+VSTAT_CSS = """<style>
+.badge.vstat{background:none;border:none;color:#57503f;cursor:help}
+</style>"""
+
+VSTAT_OLD_ORAL = '''  const oral = vd.oral
+    ? `<span class="badge oral" title="Oral-tradition sources anchored to this verse (tier 1 of Sefaria's link index): ${vd.oral[0]} enumerated, ${vd.oral[1]} read with a verdict in the triage ledger, ${vd.oral[2]} judged material (bearing on the frozen derivation). Enumerated / fetched / read are kept as separate honest counters; the ledger in logic/oral_triage/ is the canonical record.">\U0001F4DC oral ${vd.oral[1]}/${vd.oral[0]} read${vd.oral[2] ? ` · ${vd.oral[2]} material` : ""}</span>`
+    : "";'''
+
+VSTAT_CHIP_JS = '''  const vs = vd.vstat || {o: 0, d: 0, p: false, g: "v"};
+  const otxt = vs.o === 3 ? (vs.g === "c" ? "chapter read through" : "read through")
+    : vs.o === 2 ? `in reading ${vd.oral[1]}/${vd.oral[0]}` : "unopened";
+  const mat = vs.o >= 2 && vd.oral && vd.oral[2] ? ` · ${vd.oral[2]} material` : "";
+  const dtxt = vs.d === 2 ? "full rule" : vs.d === 1 ? "first pass" : "underived";
+  const vtitle = vs.g === "c"
+    ? "Verse status. Oral track: the whole chapter was read through under the law-era rule — every readable oral source on the chapter read and logged in the reading ledger (scans/ledgers/). Its rows anchor to the chapter's law, so no per-verse fraction is shown. Derivation track: " + dtxt + (vs.p ? ". Proven: the chapter is compiled to machines and its recorded cases run green." : ".")
+    : "Verse status. Oral track: " + (vd.oral ? vd.oral[0] + " sources enumerated (tier 1 of the link index), " + vd.oral[1] + " read with a verdict in the triage ledger (logic/oral_triage/), " + vd.oral[2] + " judged material (bearing on the frozen derivation)" : "no oral sources enumerated yet") + ". Derivation track: " + dtxt + (vs.p ? ". Proven: compiled to machines, recorded cases green." : ".") + " Labels are computed from the records on every build — never hand-set.";
+  const vchip = `<span class="badge vstat" title="${vtitle}">ⓘ ${otxt}${mat} · ${dtxt}${vs.p ? " · proven" : ""}</span>`;'''
+
+
 def build_scroll_site():
     sdir = os.path.join(SITE, "scroll")
     path = os.path.join(sdir, "index.html")
     with open(path, encoding="utf-8") as f:
         t = f.read()
-    assert t.count("<body>") == 1 and t.count("\U0001F4DC oral") == 1
-    t = t.replace("\U0001F4DC oral", "ⓘ oral")
+    assert t.count("<body>") == 1
     t = t.replace("<body>",
                   "<body>" + masthead("../", "scroll") + SCROLL_RAIL_CSS
-                  + TREE_CSS, 1)
+                  + TREE_CSS + VSTAT_CSS, 1)
+    # The verse-status chip (spec v2, Brian's rulings 2026-08-20): the
+    # two-axis label — oral track · derivation track · proven — computed
+    # into the bundles by the press, rendered here in place of the old
+    # oral badge, whose fraction, material count, and honest-counter
+    # tooltip it absorbs.
+    t = patch(t, VSTAT_OLD_ORAL, VSTAT_CHIP_JS)
+    t = patch(t, "${badge}${oral}", "${badge}${vchip}")
+    t = patch(t, '<a class="nav" href="units/UNIT_INDEX.html" '
+              'title="coverage index — every derived unit, with links '
+              'between the YAML view and this verse view">☰ units</a>',
+              '<a class="nav" href="units/UNIT_INDEX.html" '
+              'title="coverage index — every derived unit, with links '
+              'between the YAML view and this verse view">☰ units</a>\n'
+              '  <a class="nav" href="coverage/" title="the whole Torah '
+              'as a grid — every verse\'s status on the two tracks, '
+              'computed from the records at every build">▦ coverage</a>')
     # The leaf ledger becomes the verse-tree window: same facts, drawn.
     t = patch(t, LEDGER_CONST_OLD, TREE_CONST_NEW)
     t = patch(t, LEDGER_ROWS_OLD, "  const morph = vd.morph.map(m =>")
@@ -700,6 +734,115 @@ def _md_inline(s):
     s = re.sub(r"\*\*([^*]+)\*\*", r"<b>\1</b>", s)
     s = re.sub(r"\*([^*]+)\*", r"<i>\1</i>", s)
     return s
+
+
+def build_coverage_page():
+    """The Torah as a grid — one cell per verse, color = derivation
+    level, fill = oral level, ring = proven-by-cases. Built from the
+    bundles' vstat field (spec v2), so the page can never say more than
+    the records do; regenerated on every export."""
+    sdir = os.path.join(SITE, "scroll", "data")
+    books = json.load(open(os.path.join(sdir, "manifest.json"),
+                           encoding="utf-8"))["books"]
+    ONAME = {0: "unopened", 2: "in reading", 3: "read through"}
+    DNAME = {0: "underived", 1: "first pass", 2: "full rule"}
+    tallies, rows_html = {}, []
+    for bk in books:
+        rows_html.append("<h2>%s</h2>" % bk["name"])
+        for ch in range(1, len(bk["chapters"]) + 1):
+            with open(os.path.join(sdir, "%s_%d.json" % (bk["id"], ch)),
+                      encoding="utf-8") as f:
+                verses = json.load(f)["verses"]
+            cells = []
+            for v in verses:
+                s = v.get("vstat") or {"o": 0, "d": 0, "p": False, "g": "v"}
+                key = (s["o"], s["d"], s["p"], s["g"])
+                tallies[key] = tallies.get(key, 0) + 1
+                oc = v.get("oral")
+                ot = ("chapter read through" if s["o"] == 3 and s["g"] == "c"
+                      else ONAME[s["o"]])
+                if s["o"] == 2 and oc:
+                    ot += " %d/%d" % (oc[1], oc[0])
+                lab = "%s %d:%d — %s · %s%s" % (
+                    bk["id"], ch, v["v"], ot, DNAME[s["d"]],
+                    " · proven" if s["p"] else "")
+                cells.append('<span class="c d%d o%d%s" title="%s"></span>'
+                             % (s["d"], s["o"], " p" if s["p"] else "",
+                                _html.escape(lab)))
+            rows_html.append('<div class="row"><span class="rl">%s %d'
+                             '</span>%s</div>'
+                             % (bk["id"], ch, "".join(cells)))
+    total = sum(tallies.values())
+    sumrows = "".join(
+        "<tr><td><span class='c d%d o%d%s'></span></td>"
+        "<td>%s%s · %s%s</td><td>%d</td></tr>"
+        % (d, o, " p" if p else "",
+           ("chapter read through" if o == 3 and g == "c" else ONAME[o]),
+           "", DNAME[d], " · proven" if p else "", n)
+        for (o, d, p, g), n in sorted(tallies.items()))
+    page = COVERAGE_PAGE % {
+        "mast": masthead("../../", "scroll"), "total": total,
+        "summary": sumrows, "rows": "".join(rows_html)}
+    cdir = os.path.join(SITE, "scroll", "coverage")
+    os.makedirs(cdir, exist_ok=True)
+    with open(os.path.join(cdir, "index.html"), "w",
+              encoding="utf-8") as f:
+        f.write(page)
+    print("  coverage grid           %d verses, %d status classes"
+          % (total, len(tallies)))
+
+
+COVERAGE_PAGE = """<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TorahSim — derivation coverage</title>
+<style>
+body{margin:54px 0 0;background:#faf7f0;color:#151009;
+font:16px/1.6 Georgia,serif}
+main{max-width:1180px;margin:0 auto;padding:24px 28px 90px}
+h1{font-size:30px;color:#6e5417;font-weight:normal;margin:18px 0 4px}
+h2{font-size:20px;color:#6e5417;font-weight:normal;margin:30px 0 6px;
+border-bottom:1px solid #e4dcc8;padding-bottom:4px}
+p.lead{color:#57503f;max-width:52em}
+table{border-collapse:collapse;margin:14px 0;font-size:14px}
+td{border:1px solid #e4dcc8;padding:3px 12px}
+.row{line-height:0;margin:2px 0;white-space:nowrap;overflow-x:auto}
+.rl{display:inline-block;width:64px;font:11px Georgia,serif;
+color:#57503f;line-height:16px;vertical-align:middle}
+.c{display:inline-block;width:9px;height:15px;margin:0 1px;
+border-radius:2px;background:#efe9d8;vertical-align:middle}
+.c.d1.o0{background:linear-gradient(to top,#b08a3e 22%%,#efe9d8 22%%)}
+.c.d1.o2{background:linear-gradient(to top,#b08a3e 55%%,#efe9d8 55%%)}
+.c.d1.o3{background:#b08a3e}
+.c.d2.o0{background:linear-gradient(to top,#6e5417 22%%,#efe9d8 22%%)}
+.c.d2.o2{background:linear-gradient(to top,#6e5417 55%%,#efe9d8 55%%)}
+.c.d2.o3{background:#6e5417}
+.c.d0.o2{background:linear-gradient(to top,#8a8171 55%%,#efe9d8 55%%)}
+.c.d0.o3{background:#8a8171}
+.c.p{outline:2px solid #0a7a2f;outline-offset:-2px}
+.note{color:#57503f;font-size:13.5px;border-top:1px solid #e4dcc8;
+margin-top:26px;padding-top:10px}
+</style></head><body>
+%(mast)s
+<main>
+<h1>Derivation coverage</h1>
+<p class="lead">The whole Torah, one cell per verse — %(total)d verses.
+The cell's color is the derivation track (pale: underived; gold: first
+pass; deep gold: full rule); its fill is the oral track (empty: unopened;
+half: in reading; full: read through); a green ring marks a chapter
+proven by its recorded cases. Hover any cell for its verse and status.
+Every label is computed from the records at build time — never hand-set.
+</p>
+<table><tr><td colspan="3"><b>Today's map</b></td></tr>%(summary)s</table>
+%(rows)s
+<div class="note">Labels: the oral track counts every source the link
+index anchors to a verse (enumerated), how many have a logged verdict in
+the triage ledger (read), and how many were judged material. Law-era
+chapters carry chapter-grain attribution — their reading ledgers anchor
+rows to the chapter's law, so no per-verse fraction is shown.
+Experimental model — not binding religious law.</div>
+</main></body></html>
+"""
 
 
 def build_disclosure():
@@ -815,6 +958,7 @@ def main():
     shutil.copytree(os.path.join(ROOT, "scroll"),
                     os.path.join(SITE, "scroll"))
     build_scroll_site()
+    build_coverage_page()
     # A real 404 page: without one, Pages answers every unknown path with
     # index.html and status 200, which fools the scroll reader's dev-server
     # probe into showing its regenerate button on the public site.

@@ -102,3 +102,37 @@ undecided and prove no theological proposition. The standing summary is
 **consistency certified, agency absent**, and every document that presents
 results carries the scope it was measured under. This is an experimental
 model of a legal tradition, not binding religious law.
+
+## The verse-status labels (settled 2026-08-20)
+
+Every verse on the public scroll carries a status — two tracks and one
+flag — and these definitions are written once, here, so no level can
+quietly weaken. Labels are computed from the records on every build and
+a gate re-derives all of them from the records and refuses drift; none
+is ever set by hand.
+
+**The oral track** — how much of the tradition has been walked on the
+verse. *Unopened*: no tier-1 sources enumerated. *In reading*: sources
+enumerated, verdicts logged for some; always displayed with the honest
+fraction. *Read through*: every enumerated source carries a logged
+verdict — the full check. Attribution carries a grain: verse-grain where
+the counts come from the per-verse join of the link index against the
+triage ledger; chapter-grain where a law-era reading ledger in
+`scans/ledgers/` covers the chapter — its rows anchor to the chapter's
+law, so per-verse fractions there would undercount and are never shown.
+
+**The derivation track** — what has been built on the verse.
+*Underived*. *First pass*: inside the declared span of a frozen unit
+whose `tree_derive_version` is absent or any v1 value — absence means
+first pass by definition. *Full rule*: inside the span of a unit stamped
+with the full-rule value by the freeze ritual, which refuses the stamp
+unless the unit's whole span is read through by the records. The
+ninety-seven shipped units are first pass; the recital says so and the
+grid shows it.
+
+**Proven** — an orthogonal flag, not the top of the ladder: the verse's
+covering span lies inside a chapter compiled to machines whose recorded
+cases run green against the frozen baseline. The flag computably drops
+if that baseline ever goes red. Exodus 21 today reads chapter-grain
+read-through, first pass, proven — the flagship itself mid-process by
+the law's own standard, which is the era's honest story.
