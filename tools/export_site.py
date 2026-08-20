@@ -176,6 +176,37 @@ def build_page():
               "TorahSim &middot; "
               '<a href="https://github.com/Josephtorah/TorahSim" '
               'style="color:inherit">source</a> &middot; MIT license')
+    # The run sheds its dark skin for the site: the same parchment ground
+    # as the other two pages, keyed to the shared palette. The verdict
+    # colors (confirm/diverge/no-verdict/forward) are untouched — they
+    # carry meaning and read on either ground.
+    p = patch(p, "--bg:#12100d;--panel:#1c1915;--ink:#e8e0d0;"
+              "--dim:#9a8f7a;\n--gold:#c9a45c;--line:#2e2a22;",
+              "--bg:#faf7f0;--panel:#f3eee1;--ink:#151009;"
+              "--dim:#57503f;\n--gold:#6e5417;--line:#e4dcc8;")
+    p = patch(p, ".chip.P0{background:var(--gold);color:#241d10}",
+              ".chip.P0{background:var(--gold);color:#faf7f0}")
+    p = patch(p, ".chip.P1,.chip.P2{background:#3a352b;color:var(--dim)}",
+              ".chip.P1,.chip.P2{background:#e4dcc8;color:#57503f}")
+    p = patch(p, "form.binder select{width:100%;background:#26221b;",
+              "form.binder select{width:100%;background:#fff;")
+    p = patch(p, "button.go{background:var(--gold);color:#241d10;",
+              "button.go{background:var(--gold);color:#faf7f0;")
+    p = patch(p, "pre.out{background:#0d0b08;", "pre.out{background:#f3eee1;")
+    p = patch(p, "word-break:break-word;color:#cfc4ab}",
+              "word-break:break-word;color:#3a3126}")
+    p = patch(p, ".filter select{background:#26221b;",
+              ".filter select{background:#fff;")
+    p = patch(p, "style=\"background:#26221b;", "style=\"background:#fff;")
+    p = patch(p, "border-top:1px solid #333;", "border-top:1px solid #e4dcc8;")
+    # The one never-changing masthead, worn here too: the app keeps its
+    # own chrome beneath it, pushed down by the masthead's 54px —
+    # the three viewport-height panels must shrink by the same 54.
+    assert p.count("calc(100vh - 110px)") == 3, "run page height calcs moved"
+    p = p.replace("calc(100vh - 110px)", "calc(100vh - 164px)")
+    p = patch(p, "</style></head><body>",
+              "</style></head><body><style>body{margin-top:54px}</style>"
+              + masthead("../", "run"))
     with open(os.path.join(SITE, "run", "index.html"), "w",
               encoding="utf-8") as f:
         f.write(p)
@@ -246,7 +277,7 @@ DISC_PAGE = """<!DOCTYPE html>
 <title>TorahSim — Epic Disclosure</title>
 <style>
 :root{--bg:#faf7f0;--ink:#151009;--dim:#57503f;--gold:#6e5417;
---bright:#b08a3e;--line:#e4dcc8;--panel:#f3eee1}
+--bright:#b08a3e;--line:#e4dcc8;--panel:#f3eee1;--hh:54px}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);
 font:20px/1.7 Georgia,'Times New Roman',serif}
@@ -268,7 +299,7 @@ svg.ic{width:15px;height:15px;vertical-align:-2px;margin-right:5px}
 main{display:flex;max-width:1320px;margin:0 auto}
 #toc{width:330px;flex-shrink:0;position:sticky;top:54px;
 align-self:flex-start;max-height:calc(100vh - 80px);overflow-y:auto;
-padding:26px 20px;font-size:inherit;line-height:1.4;
+padding:56px 20px 26px;font-size:inherit;line-height:1.4;
 border-right:1px solid var(--line)}
 #toc a{display:block;color:var(--dim);text-decoration:none;padding:7px 0}
 #toc a:hover{color:var(--gold)}
@@ -296,23 +327,24 @@ th{background:var(--panel);color:var(--gold);font-weight:normal;
 text-transform:uppercase;font-size:11.5px;letter-spacing:.09em}
 footer{border-top:1px solid var(--line);color:var(--dim);
 font-size:12.5px;padding:18px 34px;text-align:center}
-#menu{display:none;background:none;border:1px solid var(--line);
+#menu{position:fixed;top:calc(var(--hh) + 8px);left:12px;z-index:30;
+background:var(--bg);border:1px solid var(--bright);
 border-radius:5px;color:var(--gold);font-size:19px;line-height:1;
 padding:5px 9px;cursor:pointer}
+#menu:hover{background:var(--panel)}
+article{margin:0 auto}
+body.flip #toc{display:none}
 @media(max-width:900px){
 header.site{height:auto;padding:8px 14px;flex-wrap:wrap}
 header.site nav.mid{position:static;transform:none;margin-left:auto}
 #toc{display:none}
-#toc.open{display:block;position:fixed;top:54px;left:0;bottom:0;
-width:min(300px,85vw);background:var(--bg);z-index:10;
+body.flip #toc{display:block;position:fixed;top:var(--hh);left:0;bottom:0;
+width:min(300px,85vw);background:var(--bg);z-index:10;overflow-y:auto;
 border-right:1px solid var(--line);box-shadow:4px 0 18px rgba(0,0,0,.12)}
-#menu{display:inline-block}
 article{padding:20px 18px 70px}
 body{font-size:18px}}
 </style></head><body>
 <header class="site">
-  <button id="menu" aria-label="contents"
-    onclick="document.getElementById('toc').classList.toggle('open')">&#9776;</button>
   <span class="brand">TorahSim</span>
   <nav class="mid">
     <a class="on" href="./">Epic Disclosure</a>
@@ -324,8 +356,10 @@ body{font-size:18px}}
     <a href="https://discord.gg/UXZUguY9Pb" target="_blank" rel="noopener">%s discord</a>
   </nav>
 </header>
+<button id="menu" aria-label="contents"
+  onclick="document.body.classList.toggle('flip')">&#9776;</button>
 <main>
-<nav id="toc" onclick="if(event.target.tagName==='A')this.classList.remove('open')">%s</nav>
+<nav id="toc" onclick="if(event.target.tagName==='A'&&innerWidth<=900)document.body.classList.remove('flip')">%s</nav>
 <article>
 %s
 </article>
@@ -333,6 +367,11 @@ body{font-size:18px}}
 <footer>TorahSim &middot; Epic Disclosure &middot; %s &middot;
 experimental model &mdash; not binding religious law &middot;
 <a href="https://github.com/Josephtorah/TorahSim" style="color:inherit">source</a></footer>
+<script>
+const hh=()=>document.documentElement.style.setProperty('--hh',
+document.querySelector('header.site').offsetHeight+'px');
+addEventListener('resize',hh);hh();
+</script>
 </body></html>
 """
 
@@ -402,18 +441,217 @@ UNIT_BACK = ('<div style="padding:12px 22px 0">'
              'background:none;font:14px Georgia,serif;cursor:pointer">'
              '&#8592; back</button></div>')
 
+# The verse-tree window (settled in mockup review 2026-08-20): the leaf
+# ledger's path column, drawn. Each verse's binary tree is rebuilt in the
+# browser from the leaf paths already shipped in every bundle; the window
+# pans by drag and magnifies only on an intentional gesture (Cmd/Ctrl +
+# scroll — a trackpad pinch arrives as exactly that — double-click, touch
+# pinch, or the corner controls), so a plain wheel keeps scrolling the page.
+TREE_CSS = """<style>
+.tvp { position:relative; height:300px; border:1px solid var(--line); border-radius:10px;
+       overflow:hidden; background:#fffdf6; cursor:grab; user-select:none;
+       margin:.3rem 0 .2rem; }
+.tvp:active { cursor:grabbing; }
+.tvp .tin { position:absolute; top:0; left:0; transform-origin:0 0; }
+.tzc { position:absolute; bottom:10px; right:10px; z-index:5; display:flex;
+       flex-direction:column; gap:4px; align-items:center; }
+.tzc button { width:34px; height:30px; font-size:16px; font-weight:700; padding:0;
+       background:#fffdf6; color:var(--acc); border:1px solid var(--line);
+       border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,.08); }
+.tzc button:hover { background:var(--chip); color:var(--acc); }
+.tzc button.tzf { font:.62rem/1 monospace; font-weight:600; height:24px; }
+.tzc .tzl { font:.62rem/1.5 monospace; color:var(--mut); background:#fffdf6;
+       border:1px solid var(--line); border-radius:6px; padding:0 .35rem; }
+</style>"""
 
-def masthead(prefix):
+LEDGER_CONST_OLD = '''const LEDGER_DESC = "The result of splitting the verse into leaves based on the " +
+  "cantillation marks: one row per leaf-brick — the words the ta'amim glued together, " +
+  "the pause mark that sealed them, their address in the verse's tree, and an " +
+  "automatic hint at their role.";'''
+
+TREE_CONST_NEW = '''const TREE_DESC = "The verse as the ta'amim (cantillation marks) built it: the " +
+  "strongest pause splits first, each split labeled with the mark that made the cut, " +
+  "down to the leaf-bricks. Drag to pan; magnify with \\u2318/Ctrl + scroll, " +
+  "double-click (shift to shrink), pinch, or the corner controls; " +
+  "hover a brick for its word range and why it froze.";'''
+
+LEDGER_ROWS_OLD = '''  const ledger = vd.leaves.map(l =>
+    `<tr><td><b>B${l.b}</b></td><td>${esc(l.w)}</td><td class="code">${esc(l.path)}</td>` +
+    `<td class="he">${esc(l.he)}</td><td>${esc(l.tr)}</td><td>${esc(l.en)}</td>` +
+    `<td>${esc(l.mark)} · r${l.rank}</td><td>${esc(l.froze)}</td><td>${esc(l.role)}</td></tr>`).join("");
+
+  const morph = vd.morph.map(m =>'''
+
+LEDGER_SECT_OLD = '''  <div class="sect"><h3>Leaf ledger <span class="count">· ${vd.leaves.length} bricks</span></h3>
+    <p class="desc">${LEDGER_DESC}</p>
+    <table><tr><th>B#</th><th>words</th><th>path</th><th>Hebrew</th><th>Transliteration</th>
+      <th>English</th><th>end mark · rank</th><th>froze because</th><th>role (auto)</th></tr>
+      ${ledger}</table></div>'''
+
+TREE_SECT_NEW = '''  <div class="sect"><h3>Verse tree <span class="count">· ${vd.leaves.length} bricks</span></h3>
+    <p class="desc">${TREE_DESC}</p>
+    <div class="tvp">${treeSVG(vd.leaves)}
+      <div class="tzc"><button class="tzi" title="zoom in">+</button>
+        <span class="tzl">100%</span>
+        <button class="tzo" title="zoom out">−</button>
+        <button class="tzf" title="fit the whole tree in the window">fit</button></div>
+    </div></div>'''
+
+TREE_JS = '''/* ---------------- verse tree (pan + zoom window) ----------------
+   The tree is rebuilt from each leaf's path (L·R address): the split
+   at any node is the pause mark that sealed the last leaf of its left
+   half. Pure computation — the SVG string is generated with the verse. */
+const TG = {LW:150, LH:90, SW:64, SH:26, HP:14, VG:34};
+const trunc = (s, n) => (s = String(s ?? "")).length > n ? s.slice(0, n - 1) + "…" : s;
+
+function treeBuild(ls, d) {
+  if (ls.length === 1) return {leaf: ls[0].l};
+  const L = ls.filter(x => x.t[d] === "L"), R = ls.filter(x => x.t[d] === "R");
+  if (!L.length || !R.length) return {leaf: ls[0].l};
+  const seal = L[L.length - 1].l;
+  return {left: treeBuild(L, d + 1), right: treeBuild(R, d + 1),
+          mark: seal.mark, rank: seal.rank};
+}
+
+function treeMeasure(m) {
+  if (m.leaf) { m.w = TG.LW; m.h = TG.LH; return m; }
+  treeMeasure(m.left); treeMeasure(m.right);
+  m.w = Math.max(TG.SW, m.left.w + TG.HP + m.right.w);
+  m.h = TG.SH + TG.VG + Math.max(m.left.h, m.right.h);
+  return m;
+}
+
+function treeLayout(m, x, y) {
+  m.x = x; m.y = y; m.cx = x + m.w / 2;
+  if (m.leaf) { m.cx = x + TG.LW / 2; return; }
+  const cy = y + TG.SH + TG.VG;
+  const sx = x + (m.w - (m.left.w + TG.HP + m.right.w)) / 2;
+  treeLayout(m.left, sx, cy);
+  treeLayout(m.right, sx + m.left.w + TG.HP, cy);
+}
+
+function treeRender(m, lines, nodes, isRoot) {
+  if (m.leaf) {
+    const l = m.leaf;
+    nodes.push(`<g transform="translate(${m.x},${m.y})">` +
+      `<title>B${l.b} · words ${esc(l.w)} · froze: ${esc(l.froze)}</title>` +
+      `<rect width="${TG.LW}" height="${TG.LH}" rx="8" fill="#fff" stroke="#c9b98a" stroke-width="1.4"/>` +
+      `<text text-anchor="middle" x="${TG.LW/2}" y="21" font-family="SBL Hebrew,David,Noto Sans Hebrew,serif" font-size="15" fill="#1f2937">${esc(l.he)}</text>` +
+      `<text text-anchor="middle" x="${TG.LW/2}" y="37" font-size="10" fill="#6b7280">${esc(trunc(l.tr, 26))}</text>` +
+      `<text text-anchor="middle" x="${TG.LW/2}" y="51" font-size="10" fill="#1f2937">${esc(trunc(l.en, 26))}</text>` +
+      `<text text-anchor="middle" x="${TG.LW/2}" y="67" font-size="9.5" font-weight="700" fill="#8a6d1a">${esc(trunc(l.role, 24))}</text>` +
+      `<text text-anchor="middle" x="${TG.LW/2}" y="81" font-size="8.5" fill="#6b7280">B${l.b} · ${esc(l.mark)} · r${l.rank}</text></g>`);
+    return;
+  }
+  const label = `${m.mark} r${m.rank}`;
+  const nw = Math.max(TG.SW, label.length * 6.5 + 14), nx = m.cx - nw / 2;
+  nodes.push(`<g transform="translate(${nx},${m.y})">` +
+    `<rect width="${nw}" height="${TG.SH}" rx="6" fill="#f0ecdf" stroke="#d7d3c8" stroke-width="1.3"/>` +
+    `<text text-anchor="middle" x="${nw/2}" y="17" font-size="10.5" font-weight="600" fill="#8a6d1a">${esc(label)}</text></g>`);
+  const fy = m.y + TG.SH;
+  [["left", "#0a7a2f", "PROCESS"], ["right", "#a33327", "RESULT"]].forEach(([k, col, tag]) => {
+    const ch = m[k];
+    lines.push(`<line x1="${m.cx}" y1="${fy}" x2="${ch.cx}" y2="${ch.y}" ` +
+      `stroke="${isRoot ? col : "#c4bda9"}" stroke-width="${isRoot ? 2 : 1.4}"/>`);
+    if (isRoot) nodes.push(`<text x="${ch.cx}" y="${ch.y - 7}" text-anchor="middle" ` +
+      `font-size="10.5" font-weight="700" fill="${col}">${tag}</text>`);
+    treeRender(ch, lines, nodes, false);
+  });
+}
+
+function treeSVG(leaves) {
+  const m = treeMeasure(treeBuild(
+    leaves.map(l => ({t: l.path ? l.path.split("·") : [], l})), 0));
+  treeLayout(m, 20, 20);
+  const w = m.w + 40, h = m.h + 40, lines = [], nodes = [];
+  treeRender(m, lines, nodes, true);
+  return `<div class="tin" data-w="${w}" data-h="${h}">` +
+    `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" ` +
+    `font-family="Charter,Georgia,serif">${lines.join("")}${nodes.join("")}</svg></div>`;
+}
+
+function initTVP(vp) {
+  const tin = vp.querySelector(".tin"), zl = vp.querySelector(".tzl");
+  const sw = +tin.dataset.w, sh = +tin.dataset.h;
+  let s = 1, px = 0, py = 0, dr = false, lx = 0, ly = 0, lt = null, ld = null;
+  const apply = () => {
+    tin.style.transform = `translate(${px}px,${py}px) scale(${s})`;
+    zl.textContent = Math.round(s * 100) + "%";
+  };
+  const fit = () => {
+    const vw = vp.clientWidth, vh = vp.clientHeight;
+    s = Math.max(0.1, Math.min(vw / sw, vh / sh, 1));
+    px = (vw - sw * s) / 2; py = Math.max(4, (vh - sh * s) / 2); apply();
+  };
+  const zoomAt = (cx, cy, f) => {
+    const r = vp.getBoundingClientRect();
+    const mx = cx - r.left, my = cy - r.top;
+    const bx = (mx - px) / s, by = (my - py) / s;
+    s = Math.min(4, Math.max(0.1, s * f));
+    px = mx - bx * s; py = my - by * s; apply();
+  };
+  // A plain wheel scrolls the page; zooming asks for intent —
+  // Cmd/Ctrl + wheel (trackpad pinch arrives as exactly that) or double-click.
+  vp.addEventListener("wheel", e => {
+    if (!e.ctrlKey && !e.metaKey) return;
+    e.preventDefault();
+    zoomAt(e.clientX, e.clientY, e.deltaY > 0 ? 0.9 : 1.1);
+  }, {passive: false});
+  vp.addEventListener("dblclick", e => {
+    if (e.target.closest(".tzc")) return;
+    zoomAt(e.clientX, e.clientY, e.shiftKey ? 1 / 1.6 : 1.6);
+  });
+  vp.addEventListener("mousedown", e => {
+    if (e.target.closest(".tzc")) return;
+    dr = true; lx = e.clientX; ly = e.clientY; e.preventDefault();
+  });
+  window.addEventListener("mousemove", e => {
+    if (!dr) return;
+    px += e.clientX - lx; py += e.clientY - ly; lx = e.clientX; ly = e.clientY; apply();
+  });
+  window.addEventListener("mouseup", () => { dr = false; });
+  vp.addEventListener("touchstart", e => {
+    if (e.touches.length === 1) { lt = {x: e.touches[0].clientX, y: e.touches[0].clientY}; ld = null; }
+    else if (e.touches.length === 2) {
+      ld = Math.hypot(e.touches[0].clientX - e.touches[1].clientX,
+                      e.touches[0].clientY - e.touches[1].clientY); lt = null; }
+  }, {passive: true});
+  vp.addEventListener("touchmove", e => {
+    e.preventDefault();
+    if (e.touches.length === 1 && lt) {
+      px += e.touches[0].clientX - lt.x; py += e.touches[0].clientY - lt.y;
+      lt = {x: e.touches[0].clientX, y: e.touches[0].clientY}; apply();
+    } else if (e.touches.length === 2 && ld !== null) {
+      const dd = Math.hypot(e.touches[0].clientX - e.touches[1].clientX,
+                            e.touches[0].clientY - e.touches[1].clientY);
+      s = Math.min(4, Math.max(0.1, s * (dd / ld))); ld = dd; apply();
+    }
+  }, {passive: false});
+  vp.addEventListener("touchend", () => { lt = null; ld = null; });
+  vp.querySelector(".tzi").onclick = () => { s = Math.min(4, s * 1.25); apply(); };
+  vp.querySelector(".tzo").onclick = () => { s = Math.max(0.1, s * 0.8); apply(); };
+  vp.querySelector(".tzf").onclick = fit;
+  fit();
+}
+
+'''
+
+
+def masthead(prefix, active):
+    def link(key, href, label):
+        cls = ' class="on"' if key == active else ""
+        return '<a%s href="%s">%s</a>' % (cls, href, label)
     return (MAST_CSS + '<div class="mast"><span class="brand">TorahSim'
             '</span><nav class="mid">'
-            '<a href="%s">Epic Disclosure</a>'
-            '<a class="on" href="%sscroll/">The Scroll</a>'
-            '<a href="%srun/">The Run</a></nav><nav class="ext">'
+            + link("disclosure", prefix, "Epic Disclosure")
+            + link("scroll", prefix + "scroll/", "The Scroll")
+            + link("run", prefix + "run/", "The Run")
+            + '</nav><nav class="ext">'
             '<a href="https://github.com/Josephtorah/TorahSim" '
             'target="_blank" rel="noopener">%s github</a>'
             '<a href="https://discord.gg/UXZUguY9Pb" '
             'target="_blank" rel="noopener">%s discord</a></nav></div>'
-            % (prefix, prefix, prefix, GITHUB_SVG, DISCORD_SVG))
+            % (GITHUB_SVG, DISCORD_SVG))
 
 
 def build_scroll_site():
@@ -423,7 +661,20 @@ def build_scroll_site():
         t = f.read()
     assert t.count("<body>") == 1 and t.count("\U0001F4DC oral") == 1
     t = t.replace("\U0001F4DC oral", "ⓘ oral")
-    t = t.replace("<body>", "<body>" + masthead("../") + SCROLL_RAIL_CSS, 1)
+    t = t.replace("<body>",
+                  "<body>" + masthead("../", "scroll") + SCROLL_RAIL_CSS
+                  + TREE_CSS, 1)
+    # The leaf ledger becomes the verse-tree window: same facts, drawn.
+    t = patch(t, LEDGER_CONST_OLD, TREE_CONST_NEW)
+    t = patch(t, LEDGER_ROWS_OLD, "  const morph = vd.morph.map(m =>")
+    t = patch(t, LEDGER_SECT_OLD, TREE_SECT_NEW)
+    t = patch(t, "function chapterHTML(data) {",
+              TREE_JS + "function chapterHTML(data) {")
+    t = patch(t, 'div.querySelectorAll(".verse")'
+              '.forEach(s => locObs.observe(s));',
+              'div.querySelectorAll(".verse")'
+              '.forEach(s => locObs.observe(s));\n'
+              '  div.querySelectorAll(".tvp").forEach(initTVP);')
     with open(path, "w", encoding="utf-8") as f:
         f.write(t)
     n = 0
@@ -435,7 +686,7 @@ def build_scroll_site():
             u = f.read()
         m = re.search(r"<body[^>]*>", u)
         u = (u[:m.end()] + "<style>body{margin-top:54px}</style>"
-             + masthead("../../") + UNIT_BACK + u[m.end():])
+             + masthead("../../", "scroll") + UNIT_BACK + u[m.end():])
         with open(upath, "w", encoding="utf-8") as f:
             f.write(u)
         n += 1
