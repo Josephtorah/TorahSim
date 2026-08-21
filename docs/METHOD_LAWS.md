@@ -4,13 +4,20 @@ These are the binding rules the work in this repository was done under.
 They are not aspirations; each one is enforced by a mechanical gate
 somewhere in the pipeline, and a violation blocks the work from shipping.
 
-## 1. Full inversion — read everything
+## 1. Declared reading, honest ledgers
 
-A derivation walks the **complete** record of what the oral tradition says
-on its verses. Coverage is counted word by word in a scan ledger, and an
-incomplete scan mechanically blocks every later step. No skimming, no
-sampling, no "the relevant passages." Narrowing a scan's scope is never
-permitted silently.
+*(Rewritten 2026-08-21 by owner ruling; the original law mandated complete
+inversion on every derivation. The owner's words: "I might want to only
+read the Talmud on one verse or block of verses — that law is too rigid.")*
+
+Reading depth is a **per-item choice** — a verse, a block, a chapter may
+be read to any declared depth, from one targeted source to the complete
+inversion. Three things remain law: the chosen scope is **declared up
+front and never silently narrowed** (the 2026-08-10 drift stands as the
+warning); the reading ledgers are **append-only**; and the labels stay
+honest — "read through" is claimed only where every enumerated source
+carries a logged verdict, whatever scope was chosen. Every oral citation
+in a unit must name a source actually read in a ledger.
 
 ## 2. Witnessed claims only
 
@@ -103,6 +110,37 @@ undecided and prove no theological proposition. The standing summary is
 results carries the scope it was measured under. This is an experimental
 model of a legal tradition, not binding religious law.
 
+## The constitution of the re-derivation era (owner ruling, 2026-08-21)
+
+**"RE is the approach."** The project runs as reverse engineering: the
+text is the binary, the recorded outcomes are the traces, the worked
+cases are the test vectors, and the Oral Torah is the recovered
+engineering documentation. From that frame, three standings:
+
+**Immutable** — the text itself; the reading ledgers (append-only,
+always); the test corpus — unit assertion batteries, the scene-stamp
+baselines, the case gradings. Tests only accumulate; deleting a test or
+re-freezing a baseline takes the owner's word.
+
+**Freely rewritable** — unit logic, the world engine, the renderers.
+Any edit, for any reason, under two conditions: **all gates stay
+green**, and the edited unit gains a one-line `changelog:` entry with a
+bumped `rev:` (absence of the field means rev 1 — the 97 shipped units
+need no retroactive edits). A gate refuses any unit diff that arrives
+without its changelog line. The freeze ritual is demoted to one job:
+issuing full-rule stamps. The unit YAMLs' `status: frozen` field is
+historical vocabulary meaning *shipped model* — the code it marks is
+rewritable under this law, and the public pages say "model, revision N,"
+never "frozen," of code.
+
+**Owner's word required** — method-law changes, test deletion or
+rebaselining, full-rule stamps, and publishing.
+
+The amendment-receipts design of 2026-08-20 (bd9642a) stands as history
+and precedent for witnessed amendment, but per-edit receipts are no
+longer required — the changelog line and the green gates are the
+record.
+
 ## The verse-status labels (settled 2026-08-20)
 
 Every verse on the public scroll carries a status — two tracks and one
@@ -122,10 +160,10 @@ triage ledger; chapter-grain where a law-era reading ledger in
 law, so per-verse fractions there would undercount and are never shown.
 
 **The derivation track** — what has been built on the verse.
-*Underived*. *First pass*: inside the declared span of a frozen unit
+*Underived*. *First pass*: inside the declared span of a shipped unit
 whose `tree_derive_version` is absent or any v1 value — absence means
 first pass by definition. *Full rule*: inside the span of a unit stamped
-with the full-rule value by the freeze ritual, which refuses the stamp
+with the full-rule value by the stamp ritual, which refuses the stamp
 unless the unit's whole span is read through by the records. The
 ninety-seven shipped units are first pass; the recital says so and the
 grid shows it.

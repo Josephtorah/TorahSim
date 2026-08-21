@@ -133,8 +133,13 @@ def render(unit_id, out_path):
     _gloss.GLOSS_UNIT.update(_gloss.build_unit_gloss(u))
     S = []
 
+    # re-era wording: 'frozen' stays internal vocabulary; the page says
+    # what the code IS — a model at a revision, gate-checked every build
+    _badge = ("MODEL · REV %d · GATES GREEN" % int(m.get("rev", 1))
+              if m.get("status") == "frozen"
+              else esc(m.get("status", "?").upper()))
     S.append("<h1>%s <span class='badge frozen'>%s</span></h1>"
-             % (esc(m.get("title_en", unit_id)), esc(m.get("status", "?").upper())))
+             % (esc(m.get("title_en", unit_id)), _badge))
     S.append('<div class="meta">unit <b>%s</b> · %s %s · derive %s · phase %s</div>'
              % (esc(m.get("id")), esc(m.get("book_en")), esc(m.get("refs")),
                 esc(m.get("tree_derive_version")), esc(m.get("tree_derive_phase"))))
@@ -315,7 +320,7 @@ def render(unit_id, out_path):
     py_path = ROOT / "units" / ("%s.py" % unit_id)
     if py_path.exists():
         S.append("<h2>Python rendering — the unit as a program</h2>")
-        S.append("<p class='meta'>Generated from the frozen YAML by "
+        S.append("<p class='meta'>Generated from the canonical YAML by "
                  "render_unit_py.py (the YAML stays canonical — this layer is "
                  "derived, like this page). Runnable: <code>python3 "
                  "logic/py_units/%s.py</code> — replays the six registers and "
@@ -344,7 +349,7 @@ def render(unit_id, out_path):
         "b.textContent='⟳ failed (see console)';b.disabled=false;});};})();"
         "</script>" % unit_id)
     page = ("<!DOCTYPE html><html lang='en'><head><meta charset='utf-8'>"
-            "<title>%s — frozen logic unit</title><style>%s</style></head>"
+            "<title>%s — derived logic unit</title><style>%s</style></head>"
             "<body>%s<main>%s"
             "<p class='meta'>Rendered %s by render_unit_html.py · the YAML is "
             "canonical, this page is read-only display · English = aid only · "

@@ -471,9 +471,9 @@ LEDGER_CONST_OLD = '''const LEDGER_DESC = "The result of splitting the verse int
 
 TREE_CONST_NEW = '''const TREE_DESC = "The verse as the ta'amim (cantillation marks) built it: the " +
   "strongest pause splits first, each split labeled with the mark that made the cut, " +
-  "down to the leaf-bricks. Drag to pan; magnify with \\u2318/Ctrl + scroll, " +
+  "down to the leaves. Drag to pan; magnify with \\u2318/Ctrl + scroll, " +
   "double-click (shift to shrink), pinch, or the corner controls; " +
-  "hover a brick for its word range and why it froze.";'''
+  "hover a leaf for its word range and why it froze.";'''
 
 LEDGER_ROWS_OLD = '''  const ledger = vd.leaves.map(l =>
     `<tr><td><b>B${l.b}</b></td><td>${esc(l.w)}</td><td class="code">${esc(l.path)}</td>` +
@@ -488,7 +488,7 @@ LEDGER_SECT_OLD = '''  <div class="sect"><h3>Leaf ledger <span class="count">· 
       <th>English</th><th>end mark · rank</th><th>froze because</th><th>role (auto)</th></tr>
       ${ledger}</table></div>'''
 
-TREE_SECT_NEW = '''  <div class="sect"><h3>Verse tree <span class="count">· ${vd.leaves.length} bricks</span></h3>
+TREE_SECT_NEW = '''  <div class="sect"><h3>Verse tree <span class="count">· ${vd.leaves.length} leaves</span></h3>
     <p class="desc">${TREE_DESC}</p>
     <div class="tvp">${treeSVG(vd.leaves)}
       <div class="tzc"><button class="tzi" title="zoom in">+</button>
@@ -549,12 +549,13 @@ function treeRender(m, lines, nodes, isRoot) {
     `<rect width="${nw}" height="${TG.SH}" rx="6" fill="#f0ecdf" stroke="#d7d3c8" stroke-width="1.3"/>` +
     `<text text-anchor="middle" x="${nw/2}" y="17" font-size="10.5" font-weight="600" fill="#8a6d1a">${esc(label)}</text></g>`);
   const fy = m.y + TG.SH;
-  [["left", "#0a7a2f", "PROCESS"], ["right", "#a33327", "RESULT"]].forEach(([k, col, tag]) => {
+  // No hardcoded arm labels: PROCESS/RESULT was true of command-verses
+  // only; a generic pair overclaims the derivation (owner ruling
+  // 2026-08-21 — per-verse labels from the units may return later).
+  ["left", "right"].forEach(k => {
     const ch = m[k];
     lines.push(`<line x1="${m.cx}" y1="${fy}" x2="${ch.cx}" y2="${ch.y}" ` +
-      `stroke="${isRoot ? col : "#c4bda9"}" stroke-width="${isRoot ? 2 : 1.4}"/>`);
-    if (isRoot) nodes.push(`<text x="${ch.cx}" y="${ch.y - 7}" text-anchor="middle" ` +
-      `font-size="10.5" font-weight="700" fill="${col}">${tag}</text>`);
+      `stroke="#c4bda9" stroke-width="${isRoot ? 2 : 1.4}"/>`);
     treeRender(ch, lines, nodes, false);
   });
 }
@@ -682,6 +683,31 @@ def build_scroll_site():
     t = t.replace("<body>",
                   "<body>" + masthead("../", "scroll") + SCROLL_RAIL_CSS
                   + TREE_CSS + VSTAT_CSS, 1)
+    # Re-era wording (owner ruling 2026-08-21): the unit chip names the
+    # model and its revision, never "frozen" of code. Revisions are read
+    # from the canonical YAMLs at export (absence = rev 1).
+    revs = {}
+    for yp in sorted(os.listdir(os.path.join(ROOT, "logic", "units"))):
+        if yp.endswith(".yaml"):
+            ym = re.search(r"^  rev: (\d+)$",
+                           open(os.path.join(ROOT, "logic", "units", yp),
+                                encoding="utf-8").read(), re.M)
+            if ym:
+                revs[yp[:-5]] = int(ym.group(1))
+    t = patch(t, '''  const badge = vd.frozen.length
+    ? `<a class="badge frozen" href="units/UNIT_${esc(uid0)}.html" title="${esc(vd.frozen.join(" · "))} — click to switch to the unit's derivation page (the YAML view)">❄ frozen: ${esc(uid0)} ⇄</a>`
+    : `<span class="badge auto">auto · illustrative</span>`;''',
+              '''  const REVS = ''' + json.dumps(revs) + ''';
+  const badge = vd.frozen.length
+    ? `<a class="badge frozen" href="units/UNIT_${esc(uid0)}.html" title="derived model, revision ${REVS[uid0]||1} — all gates green at build. ${esc(vd.frozen.join(" · "))} — click for the full derivation (the YAML view)">⚙ ${esc(uid0)} · rev ${REVS[uid0]||1} ⇄</a>`
+    : `<span class="badge auto">auto · illustrative</span>`;''')
+    t = patch(t, "Role and code lines are automatic, illustrative "
+              "renderings of grammatical facts; verses marked\n"
+              "  ❄ frozen carry human-derived, owner-reviewed logic units.",
+              "Role and code lines are automatic, illustrative "
+              "renderings of grammatical facts; verses marked\n"
+              "  ⚙ carry human-derived logic units — the model revision "
+              "is shown, and all gates are green at every build.")
     # The verse-status chip (spec v2, Brian's rulings 2026-08-20): the
     # two-axis label — oral track · derivation track · proven — computed
     # into the bundles by the press, rendered here in place of the old

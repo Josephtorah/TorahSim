@@ -8,7 +8,9 @@ has crossed: finished, redacted at the border, and provable on arrival.
 
 ## What is canonical here
 
-- **`units/*.yaml`** — the 97 frozen unit derivations, Pre-Code. Each
+- **`units/*.yaml`** — the 97 canonical unit derivations, Pre-Code
+  (rev-tracked models; freely rewritable under the re-era constitution,
+  gates green + a changelog line per edit). Each
   step carries its verse, its Hebrew with transliteration and gloss, its
   operator list with citations and confidence, and its tree halves. The
   Python renderings in `../units/` and the review pages in

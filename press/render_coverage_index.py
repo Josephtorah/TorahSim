@@ -51,7 +51,7 @@ def main():
     totals = dict(cx.execute("SELECT book, COUNT(*) FROM verses GROUP BY book"))
 
     S = []
-    S.append("<h1>Derived coverage — all frozen logic units</h1>")
+    S.append("<h1>Derived coverage — every shipped logic unit</h1>")
     S.append('<div class="meta">generated %s from derivation.sqlite (indexed from '
              "the canonical YAML in logic/units/) · "
              '<a href="../">⇄ open the scroll (verse tree + morph view)</a></div>'

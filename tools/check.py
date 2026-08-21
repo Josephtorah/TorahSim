@@ -264,7 +264,42 @@ def main():
            % n_checked if not bad else
            "DRIFT in %d labels, e.g. %s" % (len(bad), bad[0]))
 
-    # -- gate 8: the press — the shipped pool must be reprintable --------
+    # -- the changelog gate — rewritable code must say what changed ------
+    # Re-era constitution (METHOD_LAWS): unit logic is freely rewritable,
+    # but any diff to a canonical unit YAML must arrive with a new
+    # changelog line (and its bumped rev). Compared against git HEAD; a
+    # clean tree or a fresh clone passes trivially.
+    r = run(["git", "diff", "--name-only", "HEAD", "--",
+             os.path.join("logic", "units")])
+    if r.returncode == 0:
+        import re as _re2
+
+        def _clog(text):
+            m = _re2.search(r"^  changelog:\n((?:    - .*\n)+)",
+                            text, _re2.M)
+            return len(m.group(1).splitlines()) if m else 0
+
+        changed = [l.strip() for l in r.stdout.splitlines() if l.strip()]
+        bad = []
+        for rel in changed:
+            path = os.path.join(ROOT, rel)
+            if not os.path.exists(path):
+                bad.append(os.path.basename(rel) + " (deleted)")
+                continue
+            now = open(path, encoding="utf-8").read()
+            h = run(["git", "show", "HEAD:" + rel])
+            before = h.stdout if h.returncode == 0 else ""
+            if _clog(now) <= _clog(before):
+                bad.append(os.path.basename(rel))
+        report("changelog", not bad,
+               ("%d unit YAML(s) edited, each carries its new changelog "
+                "line" % len(changed)) if changed and not bad else
+               ("no unit edits pending" if not bad else
+                "EDIT WITHOUT CHANGELOG: " + ", ".join(bad)))
+    else:
+        print("           note   changelog gate skipped — git unavailable")
+
+    # -- the press — the shipped pool must be reprintable ----------------
     # Regenerate all 97 unit renderings from the canonical YAML (logic/
     # units/) through press/render_unit_py.py into a temp dir and diff
     # them against units/. Self-sufficiency is not a claim; it re-proves

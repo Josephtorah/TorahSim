@@ -474,7 +474,7 @@ def render_verse(book, chapter, vnum, oshb, parsed):
 
     out = [f'<h2 id="v{chapter}_{vnum}">Gen {chapter}:{vnum}</h2>']
     out.append(f'<div class="meta">FLAT · taamim {esc(parsed["rule_set_version"])} · {esc(parsed["system"])} · '
-               f'{len(words)} words → {nb} bricks · parser status: {esc(parsed["status"])}</div>')
+               f'{len(words)} words → {nb} leaves · parser status: {esc(parsed["status"])}</div>')
     out.append(f'<div class="fen">en: “{esc(VERSE_EN.get((chapter, vnum), ""))}”</div>')
     out.append('<div class="flat">')
     out.append(f'<div class="row he-row"><span class="lab">he:</span> {" ".join(he_chips)}</div>')

@@ -14,18 +14,20 @@ blocks shipping.
 python3 tools/check.py
 ```
 
-Seven gates, one exit code: the gloss lint, the 97 derivation units, the
+Nine gates, one exit code: the gloss lint, the 97 derivation units, the
 chapter machine with its 60-edge dependency proof, the 64 Tanakh-run
 scenes against their frozen stamp baseline
 (`app/scene_stamps_baseline.json`), the simulation sketch, the receipts
 (the reading ledger's 4,903 rows and the census queues' counts, asserted
-against their documented figures), and the press (the 97 unit renderings
-reprinted from the canonical YAML in `logic/units/` and diffed against
-`units/` — skipped with a note when `data/derivation.sqlite` is absent,
-as on CI). Run it before and after
-any change. A change that flips a scene stamp must answer for it; only
-after it has answered, re-freeze deliberately with
-`python3 tools/check.py --rebaseline`. CI runs the same command on every
+against their documented figures), the labels (all 5,853 verse-status
+labels re-derived from the records), the changelog (any edit to a unit
+YAML must carry its new changelog line), and the press (the 97 unit
+renderings reprinted from the canonical YAML in `logic/units/` and
+diffed against `units/` — skipped with a note when
+`data/derivation.sqlite` is absent, as on CI). Run it before and after
+any change. A change that flips a scene stamp must answer for it;
+rebaselining is owner's-word territory (re-era constitution), done
+deliberately with `python3 tools/check.py --rebaseline`. CI runs the same command on every
 push (`.github/workflows/check.yml`).
 
 Individual instruments: `python3 app/app.py` (the 64 scenes, port 8021),
@@ -101,11 +103,13 @@ The token file lives outside the repo; never commit or echo it.
 - `scans/` is the evidence layer, shipped exactly as written during the
   scans. Never retouch a ledger, manifest, or note.
 - `logic/` is the canonical derivation layer (since 2026-08-20): the 97
-  frozen unit YAMLs, the schema, gloss overrides, rule sets, the world
-  config, and the received records (method docs, triage ledgers, fetch
-  log — preserved, never retouched; see `logic/README.md` for the
-  documented border redaction). Editing a frozen YAML is derivation
-  work, not maintenance.
+  canonical unit YAMLs (rev-tracked models — `status: frozen` is the
+  historical field meaning *shipped*; code is freely rewritable under
+  the re-era constitution in `docs/METHOD_LAWS.md`, gates green + a
+  changelog line per edit), the schema, gloss overrides, rule sets, the
+  world config, and the received records (method docs, triage ledgers,
+  fetch log — preserved, never retouched; see `logic/README.md` for the
+  documented border redaction).
 - `press/` is the toolchain that prints everything from `logic/`: the
   Stage D interpreter (`run_unit.py`), the renderers (`render_unit_py.py`
   → `units/`, `render_unit_html.py` → the review pages), the scroll
