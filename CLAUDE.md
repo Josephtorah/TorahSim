@@ -3,7 +3,10 @@
 TorahSim rewrites the laws of the Hebrew Bible, as explained by its oral
 tradition, into running Python, and tests that code against the recorded
 cases of the rest of the Hebrew Bible. Before touching any law code, read
-`docs/PROCESS_OVERVIEW.md` (the eight-step pipeline) and
+`THE_STEPS.md` (the owner's plain-language process reference — ten
+steps, the settled vocabulary every working session must speak; keep it
+current at every process or status change), `docs/PROCESS_OVERVIEW.md`
+(the law-era eight-step pipeline it grew from), and
 `docs/METHOD_LAWS.md` (the nine binding rules). The rules are not
 aspirations — each is enforced by a mechanical gate, and a violation
 blocks shipping.
