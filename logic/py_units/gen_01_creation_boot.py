@@ -24,6 +24,8 @@ m.time_anchor("reshit")
 m.event("create", agent="Elohim", themes=["shamayim", "aretz"])
 # the world gains: heavens, earth
 m.install("shamayim", "aretz")
+# utterance #1 of the ten (ma'amar census)
+m.utterance(1, "bulk-create")
 
 # -------------------------- Gen.1.2 · STATE_BLOCK --------------------------
 # וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ וְחֹשֶׁךְ עַל־פְּנֵי תְהוֹם וְרוּחַ
@@ -42,11 +44,15 @@ m.note_zero_events()
 # reads without prior install (flag, not fix): darkness, deep, waters,
 # spirit
 m.presupposed("choshekh", "tehom", "mayim", "ruach")
+# disputed utterance — machloket carried, not decided
+m.utterance_disputed("is ruach ('wind/spirit') the tenth utterance? R. Yaakov ben Kurshai: counts; Menachem bar Yosei: Gen 2:18 instead — machloket ('recorded dispute') carried, never decided (amendment 2026-08-20)")
 
 # -------------------------- Gen.1.3 · DECLARE_LET_RESULT -------------------
 # וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר וַיְהִי־אוֹר
 # "[EN-AID] God said: let there be light — and there was light."
 m.step("Gen.1.3")
+# utterance #2 of the ten (ma'amar census)
+m.utterance(2, "fiat")
 # ‹יְהִי אוֹר› (“let-there-be light”) — God speaks a demand — LET:
 # exists(light)
 m.declare("Elohim", "LET",
@@ -68,6 +74,9 @@ m.test("PASS", "tov", "or")
 # ‹בֵּין הָאוֹר וּבֵין הַחֹשֶׁךְ› (“between the-light and-between the-
 # darkness”) — partition between light and darkness
 m.partition("or", "choshekh")
+# witness-grounded state (its own tier): or_ha_ganuz on or
+m.witness_state("or", "or_ha_ganuz",
+                cites=["Bereshit Rabbah 3:6", "Chagigah 12a:10"])
 
 # -------------------------- Gen.1.5 · NAME_AND_COMMIT ----------------------
 # וַיִּקְרָא אֱלֹהִים לָאוֹר יוֹם וְלַחֹשֶׁךְ קָרָא לָיְלָה וַיְהִי־עֶרֶב
@@ -86,7 +95,7 @@ m.commit(1, label_form="cardinal", label_translit="yom echad")
 if __name__ == "__main__":
     m.report()
     assert m.created_set() == {'aretz', 'shamayim', 'or'}
-    assert m.presupposed_set() == {'choshekh', 'ruach', 'mayim', 'tehom'}
+    assert m.presupposed_set() == {'ruach', 'tehom', 'choshekh', 'mayim'}
     assert m.REGISTRY["names"] == {'or': 'yom', 'choshekh': 'layla'}
     assert m.REGISTRY["writes"] == 2
     assert m.tests_list() == [('PASS', 'tov', 'or')]
@@ -98,4 +107,9 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == ['hover(ruach-Elohim, face(mayim))']
     assert m.WORLD["partitions"] == [('or', 'choshekh')]
     assert len(m.EVENTS) == 6
+    assert [(u["n"], u["mode"]) for u in m.UTTERANCES] == [(1, 'bulk-create'), (2, 'fiat')]
+    assert len(m.UTTERANCES_DISPUTED) == 1
+    assert sorted(m.WORLD["witnessed"]) == ['or']
+    assert m.WORLD["witnessed"]['or']["cites"] == ['Bereshit Rabbah 3:6', 'Chagigah 12a:10']
+    assert all('or_ha_ganuz' not in f for f in m.WORLD["facts"])
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

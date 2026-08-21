@@ -1689,6 +1689,32 @@ epub rebuilt + verified. ALSO our-code "machine" renamed "the
 program" (Amaziah passage x2 + echo fix; owner rejected "rules
 engine" as law-flavored; machines-as-computers + word-as-machine
 metaphor + "verified by machine" idiom all KEPT); epub rebuilt.
+★ FIRST CANON AMENDMENT MIRRORED + CANON HOME RULED 2026-08-20 (38th
+update): the day-one blind-comparison exercise (both sessions derived
+Gen 1:1-5 from the readings independently; 10/11 claims matched; one
+miss each, cross-fixed; owner's hidden-light ruling: aggadic testimony
+writes world state only TYPED, witness-grounded tier behind an asserted
+wall) was folded into canon on the TorahSim side as amendment bd9642a —
+two new operators (ORAL_UTTERANCE census with the tenth-utterance
+machloket carried undecided; WITNESS_STATE) + citation law (every oral
+cite must name a ledger-read source). OWNER RULINGS: (1) mirror it
+here — done: YAML pure-copied (pre-amendment copies verified
+byte-identical), run_unit/corpus_world/render_unit_py/CORPUS_TRUTH/
+py_units-machine patched from the amendment diff, unit + rendering +
+regression green, world refolds to the SAME hash 8b8fff1fa28953af,
+unit page + chain regenerated; (2) STANDING: TorahSim is canon's home,
+the workshop mirrors changes made there. ALSO: creation week is SEVEN
+units (gen_01 = 1:1-5 ONLY) — gen_01/gen_04/gen_05 full-rule-ELIGIBLE
+today; earlier 1:1-2:3 span statements (both sessions made them) were
+wrong. Coordinated error sweep opened on owner order: found + fixed
+mockup inaccuracies (morph 9→11, simplified glosses); live-site defect
+found: hardcoded PROCESS/RESULT tree-arm labels (wrong on 1:1/1:2),
+fix option A (drop the pair) prepared on TorahSim awaiting owner word
+there; coverage grid + chip + bricks verified faithful. Freeze-
+flexibility discussion opened by owner (bugfix amendments) — no change
+yet. Note: bd9642a's stated first-pass rationale ("until the rest of
+its span is read") repeats the span error; true reason = amendment is
+not a re-freeze (ritual + owner word required).
 ★ VERSE-STATUS LABELS 2026-08-20 (37th update): the two-axis per-verse
 progress system, spec'd jointly with the TorahSim session (settled doc
 TorahSim/BriansTemp/verse_status_spec_v2.md; discussion-first per owner
