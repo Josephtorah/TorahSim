@@ -708,6 +708,8 @@ def build_scroll_site():
               "renderings of grammatical facts; verses marked\n"
               "  ⚙ carry human-derived logic units — the model revision "
               "is shown, and all gates are green at every build.")
+    t = patch(t, '`<span class="cmt"># frozen coverage: ${esc(f)}</span>`',
+              '`<span class="cmt"># unit coverage: ${esc(f)}</span>`')
     # The verse-status chip (spec v2, Brian's rulings 2026-08-20): the
     # two-axis label — oral track · derivation track · proven — computed
     # into the bundles by the press, rendered here in place of the old
