@@ -1715,6 +1715,44 @@ mirror only if the local scroll ever gains the tree. Option B (honest
 per-unit arm labels from the 97 YAMLs) stays on the table. The
 gh-active-account issue also hit their pushes; same one-off workaround.
 Workshop mirror work UNCOMMITTED awaiting owner word in this window.
+LATER 2026-08-21: owner clarified the TIR catalog is MODEL LAYER
+("these rules should stay flexible" — never owner-word class); TorahSim
+moved its copy out of the received-record class to the born path with
+gloss fixes + a dated status-note discipline (2aeb971, owner's yes in
+that window, nine gates green); the workshop catalog re-mirrored from
+it (status note + 14 gloss additions; the two copies identical again,
+canon home's now the living one). ALSO: THE_STEPS.md written at repo
+root — Brian's plain-language process reference (ten steps; parse and
+morphology now explicit steps 1-2, ✅ done whole Bible) — keep it
+current at every process or status change.
+LATER 2026-08-21 — THE MIDDOT ENTER THE PROCESS (owner order after
+reading Schumann's Talmudic Logic, kept permanently at
+Data/reference_books/ WORKSHOP-ONLY): new reference logic/MIDDOT.md
+(the 13 of R. Ishmael for law + the 32 of R. Eliezer for narrative,
+with logic meanings and constraints); THE_STEPS.md steps 4-6 now name
+the middah a source argues by, claims carry `middah:`, middah
+constraints ride into logic as assertions (dayo cap, genus match,
+third-verse rule); TIR-overlap policy: TIR rule stands + cites the
+middah as chain authority. Settled analysis: TIR = grammar layer the
+tradition never numbered (not a duplicate); the middot were the
+MISSING claims-layer. First QAL_WACHOMER workout earmarked: TOP10
+block 4 (Exod 22 bailees — Bava Metzia 95a, the book's own worked
+example). THE_STEPS.md + MIDDOT.md + insights relayed to TorahSim for
+alignment (its adoption on owner's word there). ADOPTION COMPLETED +
+VERIFIED same day (TorahSim 9328954 pushed, nine gates green): both
+files' LIVING COPIES ruled canon-home residents (owner), workshop
+copies = mirrors with documented border adaptations; one substantive
+fix mirrored back (I7's missing English gloss — its gloss gate caught
+it); TorahSim CLAUDE.md now routes every session to THE_STEPS.md
+first; old eight-step numbering survives only in PROCESS_OVERVIEW,
+labeled historical. OWNER STANDING ORDERS 2026-08-21 (in session
+memory, binding): TorahSim adopts what the workshop RECOMMENDS
+(canon home = shelf, not author); and PRIVACY DEFAULT — the workshop
+is Brian's private exploration space, nothing crosses to TorahSim
+without his explicit word, some things stay here permanently.
+UNCOMMITTED at this stamp: reference_books (staged), MIDDOT.md,
+THE_STEPS.md updates, this state doc. COMPACTION POINT — records
+current through here.
 ★ THE RE ERA OPENS 2026-08-21 (39th update — owner rulings, records
 only, no code changed): (1) "RE is the approach" — the project runs as
 reverse engineering (text=binary, recorded outcomes=traces, worked
