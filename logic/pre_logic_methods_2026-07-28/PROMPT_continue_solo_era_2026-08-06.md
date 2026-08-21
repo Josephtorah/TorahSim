@@ -1689,6 +1689,32 @@ epub rebuilt + verified. ALSO our-code "machine" renamed "the
 program" (Amaziah passage x2 + echo fix; owner rejected "rules
 engine" as law-flavored; machines-as-computers + word-as-machine
 metaphor + "verified by machine" idiom all KEPT); epub rebuilt.
+★ THE RE ERA OPENS 2026-08-21 (39th update — owner rulings, records
+only, no code changed): (1) "RE is the approach" — the project runs as
+reverse engineering (text=binary, recorded outcomes=traces, worked
+cases=test vectors, Oral Torah=recovered docs). The constitution:
+IMMUTABLE = text + reading ledgers (append-only) + test corpus
+(append-only; deletion/rebaseline = owner word); FREELY REWRITABLE =
+unit logic, world engine, renderers — gates green + a one-line
+changelog entry per unit (rev counter + changelog list, edit-refusing
+lint to come); OWNER WORD reserved for method laws, test
+deletion/rebaseline, full-rule stamps, publishing. Freeze ritual
+demoted to stamps only; the 2026-08-20 amendment-classes design
+SHELVED. "Frozen" to be re-worded publicly: true of text/ledgers/
+tests; unit code = "model rev N, gates green". vstat semantics
+unchanged. (2) THE READING LAW SOFTENED (owner: "I don't want this to
+be law either... I might want to only read the talmud on one verse or
+block of verses. that law is too rigid"): complete inversion is no
+longer mandatory — reading depth is a per-item choice; ledgers stay
+append-only, O3 still means what it says, scan scope declared up
+front and never silently narrowed (the 2026-08-10 drift lesson
+stands). (3) Formal law text: to be drafted in TorahSim (canon home)
+and mirrored here — PENDING owner's go in that window. Memory:
+re-era-constitution written; full-oral-torah-law and
+auto-freeze-process revised/superseded with history preserved. ALSO
+2026-08-21: mirror commit 5836408 pushed via one-shot auth (gh active
+account became PeerloopLLC — Brian's other project; workaround in
+two-window-workflow memory; durable fix pending).
 ★ FIRST CANON AMENDMENT MIRRORED + CANON HOME RULED 2026-08-20 (38th
 update): the day-one blind-comparison exercise (both sessions derived
 Gen 1:1-5 from the readings independently; 10/11 claims matched; one
