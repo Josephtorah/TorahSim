@@ -122,8 +122,13 @@ always); the test corpus — unit assertion batteries, the scene-stamp
 baselines, the case gradings. Tests only accumulate; deleting a test or
 re-freezing a baseline takes the owner's word.
 
-**Freely rewritable** — unit logic, the world engine, the renderers.
-Any edit, for any reason, under two conditions: **all gates stay
+**Freely rewritable** — unit logic, the world engine, the renderers,
+and the TIR catalog (`logic/TREE_INTERPRETATION_RULES.md`, the
+tree-interpretation rulebook; owner clarification 2026-08-21: "I think
+these rules should stay flexible" — its discipline is its own born one:
+provisional unless proven, promoted on multi-unit re-runs, a dated
+status note per rule change, and the gates catch any citing unit a
+change breaks). Any edit, for any reason, under two conditions: **all gates stay
 green**, and the edited unit gains a one-line `changelog:` entry with a
 bumped `rev:` (absence of the field means rev 1 — the 97 shipped units
 need no retroactive edits). A gate refuses any unit diff that arrives

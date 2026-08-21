@@ -40,6 +40,16 @@ has crossed: finished, redacted at the border, and provable on arrival.
 fetch log) are received records: shipped as written, reported by the
 gloss lint but never gated, never retouched. See method law 8.
 
+One file left this class on 2026-08-21, by owner ruling: the TIR
+catalog, `TREE_INTERPRETATION_RULES.md`, is a living rulebook — model
+layer under the re-derivation constitution, freely revisable with a
+dated status note per rule change — and a living document cannot sit in
+a never-retouch class. It moved from `docs/` up to its born path
+`logic/TREE_INTERPRETATION_RULES.md` (the path the received records
+themselves cite) and is gloss-gated forward; the record copies in
+`docs/` that link to it by its old relative name stay exactly as
+written, per the record law, and this note is the pointer.
+
 ## The border redaction
 
 One documented redaction was applied at copy time, continuing the
