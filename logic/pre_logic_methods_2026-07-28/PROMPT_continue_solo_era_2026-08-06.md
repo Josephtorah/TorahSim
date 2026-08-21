@@ -1689,6 +1689,32 @@ epub rebuilt + verified. ALSO our-code "machine" renamed "the
 program" (Amaziah passage x2 + echo fix; owner rejected "rules
 engine" as law-flavored; machines-as-computers + word-as-machine
 metaphor + "verified by machine" idiom all KEPT); epub rebuilt.
+★ CONSTITUTION ADOPTED BOTH SIDES + VERIFIED 2026-08-21 (40th update):
+TorahSim adopted on owner's word in its window (METHOD_LAWS law-1
+"Declared reading, honest ledgers" + constitution section; SCHEMA rev/
+changelog fields; NINTH gate "changelog" refusing undocumented unit
+edits; wording sweep "frozen"→"MODEL · REV N · GATES GREEN" badge, ⚙
+rev chip with REVS map, disclaimer reworded after my catch; gen_01 now
+rev:2 with its changelog line). I VERIFIED per owner order: law-text
+grep clean of mandate survivals; nine gates green; changelog gate
+ADVERSARIALLY tested in their tree (undocumented gen_02 edit → RED
+naming the file; restored byte-clean); live pages confirmed. MIRRORED
+here: rev-2 YAML, SCHEMA docs, render_unit_html badge, coverage
+heading, morph-ledger wording; workshop port of the gate at
+logic/solo_tools/changelog_gate.py (adversarially tested here too:
+RED→restore→GREEN); unit+rendering+regression green, reindexed, unit
+page + coverage index regenerated. OPEN cosmetic: workshop's LOCAL
+scroll chip still ❄ frozen-style (public one is ⚙ rev; local needs a
+REVS source — follow-up). Option A RESOLVED 2026-08-21 on owner's word
+in the TorahSim window: constitution era committed+pushed there
+(e75ecfb, 12 files) INCLUDING option A — hardcoded PROCESS/RESULT arms
+and green/red root colors dropped from the tree, neutral edges with a
+source comment, live. No workshop mirror needed today (export-side
+TREE_JS only; the local scroll shows the leaf ledger, no tree window);
+mirror only if the local scroll ever gains the tree. Option B (honest
+per-unit arm labels from the 97 YAMLs) stays on the table. The
+gh-active-account issue also hit their pushes; same one-off workaround.
+Workshop mirror work UNCOMMITTED awaiting owner word in this window.
 ★ THE RE ERA OPENS 2026-08-21 (39th update — owner rulings, records
 only, no code changed): (1) "RE is the approach" — the project runs as
 reverse engineering (text=binary, recorded outcomes=traces, worked

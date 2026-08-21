@@ -27,7 +27,13 @@ unit:
     refs: string                  # e.g. "12:1-8"
     data_paths_he: [string]       # paths under Data/ for Hebrew sources
     data_paths_en_aid: [string]   # optional English aids only
-    status: draft | review | frozen
+    status: draft | review | frozen   # 'frozen' = shipped model (historical
+                                       # vocabulary; code is rewritable under
+                                       # the re-era constitution, METHOD_LAWS)
+    rev: int                      # revision counter; ABSENT = rev 1
+    changelog: [string]           # one line per revision ("rev N (date): what
+                                  # changed and why"); a gate refuses any unit
+                                  # diff that adds no changelog line
     confidence_overall: hypothesis | tested | failed | dead_end | established
     owner_language_note: string   # remind: English-only reader; HE is source
 
