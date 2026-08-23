@@ -196,6 +196,7 @@ def main():
     scenes_green = any(n == "scenes" and ok for n, ok, _ in results)
     spans = set()
     spans_full = set()
+    spans_o3 = set()
     _ABBR = {"Genesis": "Gen", "Exodus": "Exod", "Leviticus": "Lev",
              "Numbers": "Num", "Deuteronomy": "Deut"}
     shape = {}
@@ -220,12 +221,26 @@ def main():
                 _mt = _re.search(r"^  tree_derive_version: (\S+)$",
                                  f.read(), _re.M)
             _stamped = bool(_mt) and _mt.group(1).endswith("full_rule")
+        # declared-scope read-through (owner ruling 2026-08-23): the
+        # triage ledger's COMPLETE evidence line makes the span o:3 g:"v"
+        _lcomplete = False
+        for _lp in sorted(_glob.glob(os.path.join(
+                ROOT, "logic", "oral_triage", u["unit_id"] + "_*.md"))):
+            with open(_lp, encoding="utf-8") as f:
+                _lm = _re.search(
+                    r"\*\*read:\s*(\d+)\s*of\s*(\d+)\s*—[^\n]*COMPLETE",
+                    f.read())
+            if _lm and _lm.group(1) == _lm.group(2):
+                _lcomplete = True
+                break
         for c in range(c1, c2 + 1):
             hi = v2 if c == c2 else shape[(bid, c)]
             for v in range((v1 if c == c1 else 1), hi + 1):
                 spans.add((bid, c, v))
                 if _stamped:
                     spans_full.add((bid, c, v))
+                if _lcomplete:
+                    spans_o3.add((bid, c, v))
     compiled = set()
     _A3 = {"gen": "Gen", "exo": "Exod", "lev": "Lev", "num": "Num",
            "deu": "Deut"}
@@ -253,11 +268,13 @@ def main():
             if s["g"] == "c":
                 ok = has_ledger and s["o"] == 3
             elif s["o"] == 3:
-                ok = bool(oc) and oc[0] > 0 and oc[1] == oc[0]
+                ok = (key in spans_o3) or (
+                    bool(oc) and oc[0] > 0 and oc[1] == oc[0])
             elif s["o"] == 2:
-                ok = bool(oc) and oc[0] > 0 and oc[1] < oc[0]
+                ok = (key not in spans_o3) and \
+                    bool(oc) and oc[0] > 0 and oc[1] < oc[0]
             else:
-                ok = not oc or oc[0] == 0
+                ok = (key not in spans_o3) and (not oc or oc[0] == 0)
             if s["d"] >= 1 and key not in spans:
                 ok = False
             if s["d"] == 0 and key in spans:

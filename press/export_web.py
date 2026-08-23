@@ -216,8 +216,18 @@ def main():
     BOOK_ABBR = {"Genesis": "Gen", "Exodus": "Exod", "Leviticus": "Lev",
                  "Numbers": "Num", "Deuteronomy": "Deut"}
     d_level, p_flag = {}, set()
+    declared_o3 = set()
+    # declared-scope read-through (owner ruling 2026-08-23, "update the
+    # oral chips to show read through"): a frozen unit whose triage
+    # ledger carries the declared-reading gate's own COMPLETE evidence
+    # line is o:3 g:"v" across its span. Precedence: chapter ledger
+    # (o3 c) > declared-scope ledger (o3 v) > per-verse counters. The
+    # oral triple stays emitted unchanged — only classification changes.
+    _COMPLETE_RX = re.compile(
+        r"\*\*read:\s*(\d+)\s*of\s*(\d+)\s*—[^\n]*COMPLETE")
     try:
-        for r in cx.execute("""SELECT book_en, refs, tree_derive_version
+        for r in cx.execute("""SELECT unit_id, book_en, refs,
+                                      tree_derive_version
                                FROM units WHERE status = 'frozen'"""):
             bid = BOOK_ABBR.get(r["book_en"])
             m = re.match(r"^(\d+):(\d+)\s*[-–]\s*(?:(\d+):)?(\d+)$",
@@ -231,6 +241,13 @@ def main():
                 "full_rule") else 1
             span_proven = all((bid, c) in proven_ch
                               for c in range(c1, c2 + 1))
+            ledger_complete = False
+            for lp in sorted((ROOT / "logic" / "oral_triage").glob(
+                    r["unit_id"] + "_*.md")):
+                mt = _COMPLETE_RX.search(lp.read_text(encoding="utf-8"))
+                if mt and mt.group(1) == mt.group(2):
+                    ledger_complete = True
+                    break
             for c in range(c1, c2 + 1):
                 lo = v1 if c == c1 else 1
                 hi = v2 if c == c2 else shape[bid][c]
@@ -239,12 +256,17 @@ def main():
                     d_level[key] = max(d_level.get(key, 0), lvl)
                     if span_proven:
                         p_flag.add(key)
+                    if ledger_complete:
+                        declared_o3.add(key)
     except sqlite3.OperationalError:
         pass   # units table absent -> everything underived
 
     def vstat_for(bid, ch, v):
+        key = (bid, ch, v)
         if (bid, ch) in ledger_ch:
             o, g = 3, "c"
+        elif key in declared_o3:
+            o, g = 3, "v"
         else:
             oc = oral_counts.get("%s.%d.%d" % (bid, ch, v))
             if not oc or oc[0] == 0:
@@ -253,7 +275,6 @@ def main():
                 o, g = 3, "v"
             else:
                 o, g = 2, "v"
-        key = (bid, ch, v)
         return {"o": o, "d": d_level.get(key, 0),
                 "p": key in p_flag, "g": g}
 
