@@ -69,17 +69,38 @@ def main():
     if not yaml_path.exists():
         sys.exit("no such unit: %s" % yaml_path)
 
-    # 0. FULL ORAL TORAH coverage gate (owner law 2026-08-10): every
-    # chain-readable listing on the span read-and-ledgered, zero
-    # unruled works. Exit 1 here = no freeze, same standing as the
-    # other gates.
+    # 0. DECLARED-READING coverage gate (rewritten 2026-08-23 on owner
+    # word "if you need to rewrite anything to make the new derivation
+    # rules work then do it"). RE-era law: reading scope is a per-item
+    # owner choice with the CORE SHELF as standing default (rulings
+    # 2026-08-21 + 2026-08-23); the 2026-08-10 anti-drift lesson stands
+    # unchanged — whatever scope was DECLARED must be COMPLETELY read
+    # and ledgered. Evidence forms, first match wins:
+    #   (a) a completed triage ledger (creation-week era):
+    #       logic/oral_triage/<uid>_*.md declaring "read: N of N —
+    #       COMPLETE" in its counters block;
+    #   (b) law-era chain ledgers via oral_coverage.py (full-inversion
+    #       declarations, unit_span_planned metadata).
+    # A unit with NO declared-reading record fails the gate — that is
+    # the honest answer, not a bypass.
     import re as _re
     ytxt = yaml_path.read_text()
+    triage_hits = sorted((REPO / "logic" / "oral_triage").glob(uid + "_*.md"))
+    tr_note = ""
+    for tp in triage_hits:
+        mt = _re.search(r"\*\*read:\s*(\d+)\s*of\s*(\d+)\s*—[^\n]*COMPLETE",
+                        tp.read_text(encoding="utf-8"))
+        if mt and mt.group(1) == mt.group(2):
+            tr_note = ("declared scope complete: %s of %s read (%s)"
+                       % (mt.group(1), mt.group(2), tp.name))
+            break
     mb = _re.search(r"book_en:\s*(\w+)", ytxt)
     ms = _re.search(r'unit_span_planned:\s*"?(\d+):\d+-(?:(\d+):)?\d+', ytxt)
     abbrev = {"Genesis": "Gen", "Exodus": "Exod", "Leviticus": "Lev",
               "Numbers": "Num", "Deuteronomy": "Deut"}
-    if mb and ms:
+    if tr_note:
+        step("declared-reading gate", True, tr_note)
+    elif mb and ms:
         book = abbrev[mb.group(1)]
         c1 = ms.group(1)
         c2 = ms.group(2) or c1
@@ -87,9 +108,11 @@ def main():
                        "--to", c2])
         gl = [l.strip() for l in out.split("\n")
               if "GATE:" in l or "read-and" in l]
-        step("oral coverage gate", rc == 0, "; ".join(gl) or out[-80:])
+        step("declared-reading gate", rc == 0, "; ".join(gl) or out[-80:])
     else:
-        step("oral coverage gate", False, "no span metadata — cannot gate")
+        step("declared-reading gate", False,
+             "no declared-reading record (no completed triage ledger, "
+             "no span metadata)")
 
     # 1. text layer
     rc, out = run([PY, str(TOOLS / "verify_text.py"), uid])

@@ -95,7 +95,7 @@ m.commit(1, label_form="cardinal", label_translit="yom echad")
 if __name__ == "__main__":
     m.report()
     assert m.created_set() == {'aretz', 'or', 'shamayim'}
-    assert m.presupposed_set() == {'tehom', 'choshekh', 'ruach', 'mayim'}
+    assert m.presupposed_set() == {'choshekh', 'mayim', 'ruach', 'tehom'}
     assert m.REGISTRY["names"] == {'or': 'yom', 'choshekh': 'layla'}
     assert m.REGISTRY["writes"] == 2
     assert m.tests_list() == [('PASS', 'tov', 'or')]
