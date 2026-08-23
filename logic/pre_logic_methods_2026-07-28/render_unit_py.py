@@ -372,8 +372,13 @@ def render(uid):
     L += ["# " + "-" * 26 + " machine truth (baked from the Stage D run) " + "-" * 7,
           'if __name__ == "__main__":',
           "    m.report()",
-          "    assert m.created_set() == %r" % truth.created_set(),
-          "    assert m.presupposed_set() == %r" % truth.presupposed_set(),
+          "    assert m.created_set() == %s" % (
+              "{%s}" % ", ".join(repr(x) for x in sorted(truth.created_set()))
+              if truth.created_set() else "set()"),
+          "    assert m.presupposed_set() == %s" % (
+              "{%s}" % ", ".join(repr(x) for x in
+                                 sorted(truth.presupposed_set()))
+              if truth.presupposed_set() else "set()"),
           '    assert m.REGISTRY["names"] == %r' % truth.REGISTRY["names"],
           '    assert m.REGISTRY["writes"] == %d' % truth.REGISTRY["writes"],
           "    assert m.tests_list() == %r" % tests,

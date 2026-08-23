@@ -127,7 +127,7 @@ m.commit(4, label_form="ordinal", label_translit="yom revii")
 if __name__ == "__main__":
     m.report()
     assert m.created_set() == {'kokhavim', 'maor_gadol', 'maor_qaton', 'meorot'}
-    assert m.presupposed_set() == {'shamayim', 'aretz', 'raqia'}
+    assert m.presupposed_set() == {'aretz', 'raqia', 'shamayim'}
     assert m.REGISTRY["names"] == {'maor_gadol': 'memshelet_yom', 'maor_qaton': 'memshelet_lailah'}
     assert m.REGISTRY["writes"] == 2
     assert m.tests_list() == [('PASS', 'tov', 'meorot')]
