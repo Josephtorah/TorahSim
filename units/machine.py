@@ -40,6 +40,7 @@ class Machine:
         self.TRIPLES = []
         self.UTTERANCES = []
         self.UTTERANCES_DISPUTED = []
+        self.WITNESS_READS = []
         self._step_ref = None
         self._step_event_mark = 0
 
@@ -79,6 +80,15 @@ class Machine:
         self.WORLD["witnessed"][entity] = {"state": state,
                                            "cites": list(cites),
                                            "step": self._step_ref}
+
+    def witness_read(self, entity, state, cites=()):
+        # WITNESS_READ — the presupposed-read discipline extended to the
+        # witness tier (amendment 2026-08-21): the unit READS a state some
+        # other unit witnessed, records the read with its cites, and
+        # installs nothing in any tier — flag, not fix
+        self.WITNESS_READS.append({"entity": entity, "state": state,
+                                   "cites": list(cites),
+                                   "step": self._step_ref})
 
     def event(self, verb, agent=None, themes=()):
         self.EVENTS.append({"verb": verb, "agent": agent,

@@ -32,6 +32,11 @@ enrichment / duplicate / not-bearing. The ledger is append-only forever.
 When a source ARGUES by one of the middot — the tradition's own
 numbered inference rules (see logic/MIDDOT.md) — the note names it
 (e.g. "argues I1 qal wa-chomer from the paid keeper").
+The two big Oral books read differently, and the note says which you
+got: a Mishnah paragraph is a RULING — an input→output case, no reason
+shown; a Talmud passage is a DERIVATION (hooking verses), a DISPUTE,
+or a TEST. Find the implementing tractates by topic in
+logic/MISHNAH_TOPICS.md (all 63 mapped).
    → shows as: chip "in reading 39/63" or "read through"; grid cell fill.
 
 ## Step 5 — Extract claims
@@ -41,6 +46,11 @@ a read source. Each claim carries a `middah:` field when the source's
 inference form is identifiable — the 13 rules of Rabbi Ishmael for LAW
 spans, the 32 of Rabbi Eliezer for NARRATIVE spans; absent = the source
 states plainly rather than infers.
+Claims come from TWO inputs, checked as a list: the reading's material
+rows, AND the standing canon rules that pattern-match the span — the
+utterance census fires on every qualifying va-yomer ("and He said");
+middah tagging fires on every argued inference. (Lesson of the day-4
+blind compare, 2026-08-21: each session missed exactly one of the two.)
 
 ## Step 6 — Write or amend the logic
 Four inputs combine to produce each verse's logic step:
@@ -82,8 +92,11 @@ from that reading, the owner may order the full-rule stamp.
    → shows as: chip "full rule" (until then: "first pass").
 
 ## Step 9 — Prove against cases (where the text records cases)
-Compile the logic to a machine; run the text's own recorded cases
-against it, every miss printed.
+Compile the logic to a machine; run the recorded cases against it,
+every miss printed. Recorded cases include the tradition's own case
+tables: the Mishnah's input→output rows, graded at the reading, join
+the scene list (the Exodus 21 pattern — 64 scenes from its chapter
+reading).
    → shows as: chip "proven"; drops automatically if a test goes red.
 
 ## Step 10 — Publish
@@ -109,13 +122,14 @@ Export, parity check against the public repo, deploy. Owner's word.
 | 1   | 1:1-5   | complete         | YES — rev 2      | eligible, not stamped |
 | 2   | 1:6-8   | partial          | no               | —     |
 | 3   | 1:9-13  | partial          | no               | —     |
-| 4   | 1:14-19 | complete         | no (findings logged) | eligible, not stamped |
+| 4   | 1:14-19 | complete         | YES — rev 2      | eligible, not stamped |
 | 5   | 1:20-23 | complete         | no (findings logged) | eligible, not stamped |
 | 6   | 1:24-31 | partial          | no               | —     |
 | 7   | 2:1-3   | partial          | no               | —     |
 
 623 sources remain unread, all on days 2, 3, 6, 7. The original seven
 units (July 28) were built BEFORE the reading standard existed — that is
-what "first pass" means, and why the redo era exists. Day one walked the
-full path (read → claims → amend → gates) on 2026-08-20/21 and is the
-pattern for the rest.
+what "first pass" means, and why the redo era exists. Days one and four
+have walked the full path (read → claims → amend → gates) — day four
+twice, independently, blind-compared, then unified. That is the pattern
+for the rest.

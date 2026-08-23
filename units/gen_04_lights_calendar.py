@@ -22,6 +22,8 @@ m = Machine("gen_04_lights_calendar")
 # divide the day from the night; and let them be for signs, and for seasons,
 # and for days and years.'"
 m.step("Gen.1.14")
+# utterance #6 of the ten (ma'amar census)
+m.utterance(6, "fiat")
 # ‹יְהִי מְאֹרֹת› (“let-be lights”) — God speaks a demand — LET:
 # exists(lights), loc=expanse-the-heavens
 m.declare("Elohim", "LET",
@@ -67,10 +69,20 @@ m.assign("maor_qaton", "memshelet_lailah")
 # undifferentiated plural), delivery says two-of the-from
 m.spec_delta("me'orot (one undifferentiated plural)",
              "shnei ha-me")
+# witness-grounded state (its own tier): equal_then_diminished on maor_qaton
+m.witness_state("maor_qaton", "equal_then_diminished",
+                cites=["Chullin 60b:2", "Bereshit Rabbah 6:3", "Chullin 60b:3"])
+# witness-grounded state (its own tier): standing_monthly on
+# kapparah_chodesh
+m.witness_state("kapparah_chodesh", "standing_monthly",
+                cites=["Bereshit Rabbah 6:3"])
 # ‹וְאֵת הַכּוֹכָבִים› (“and-obj-marker the-stars”) — spec-delta — spec said
 # no stars in the job order, delivery says and-obj-marker the-stars
 m.spec_delta("no stars in the job order",
              "ve-et ha-kokhavim")
+# witness-grounded state (its own tier): retinue_of_maor_qaton on kokhavim
+m.witness_state("kokhavim", "retinue_of_maor_qaton",
+                cites=["Bereshit Rabbah 6:4"])
 # ‹לְמֶמְשֶׁלֶת› (“for-dominion-of”) — spec-delta — spec said jobs: divide,
 # signs, festivals, days+years, shine, delivery says to-dominion-of
 # (dominion) added
@@ -85,6 +97,9 @@ m.step("Gen.1.17")
 # ‹וַיִּתֵּן אֹתָם› (“and-set them”) — event: place — agent God; theme them-
 # the-lights
 m.event("place", agent="Elohim", themes=["otam_ha_meorot"])
+# witness-tier presupposed read: or_ha_ganuz on or — read, not installed
+m.witness_read("or", "or_ha_ganuz",
+                cites=["Chagigah 12a:8"])
 
 # -------------------------- Gen.1.18 · PURPOSE_RECAP_DELTA_TEST ------------
 # וְלִמְשֹׁל בַּיּוֹם וּבַלַּיְלָה וּלְהַבְדִּיל בֵּין הָאוֹר וּבֵין
@@ -125,4 +140,16 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 6
+    assert [(u["n"], u["mode"]) for u in m.UTTERANCES] == [(6, 'fiat')]
+    assert sorted(m.WORLD["witnessed"]) == ['kapparah_chodesh', 'kokhavim', 'maor_qaton']
+    assert m.WORLD["witnessed"]['kapparah_chodesh']["cites"] == ['Bereshit Rabbah 6:3']
+    assert all('standing_monthly' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['kokhavim']["cites"] == ['Bereshit Rabbah 6:4']
+    assert all('retinue_of_maor_qaton' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['maor_qaton']["cites"] == ['Chullin 60b:2', 'Bereshit Rabbah 6:3', 'Chullin 60b:3']
+    assert all('equal_then_diminished' not in f for f in m.WORLD["facts"])
+    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == [('or', 'or_ha_ganuz')]
+    assert m.WITNESS_READS[0]["cites"] == ['Chagigah 12a:8']
+    assert all('or_ha_ganuz' not in f for f in m.WORLD["facts"])
+    assert 'or' not in m.WORLD["witnessed"]
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

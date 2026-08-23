@@ -82,6 +82,7 @@ class Machine:
         self.TRIPLES = []
         self.UTTERANCES = []
         self.UTTERANCES_DISPUTED = []
+        self.WITNESS_READS = []
         self._step_ref = None
 
     # -- entity helpers ------------------------------------------------------
@@ -463,6 +464,21 @@ def h_witness_state(m, op, step):
                                          "step": step["ref"]}
 
 
+def h_witness_read(m, op, step):
+    """WITNESS_READ — the presupposed-read discipline at witness tier
+    (amendment 2026-08-21): the unit reads a state another unit
+    witnessed, records the read with its cites, installs nothing in
+    any tier. Form: WITNESS-READ(entity, state)."""
+    mt = re.match(r"WITNESS-READ\(([\w-]+),\s*([\w-]+)\)",
+                  op.get("expr_en", ""))
+    if not mt:
+        raise ContractError("WITNESS_READ expr unparsed: %r"
+                            % op.get("expr_en", ""))
+    m.WITNESS_READS.append({"entity": mt.group(1), "state": mt.group(2),
+                            "cites": list(op.get("cites", [])),
+                            "step": step["ref"]})
+
+
 HANDLERS = {
     "TIME_ANCHOR": h_time_anchor,
     "EVENT": h_event,
@@ -488,6 +504,7 @@ HANDLERS = {
     "COMMIT": h_commit,
     "ORAL_UTTERANCE": h_oral_utterance,
     "WITNESS_STATE": h_witness_state,
+    "WITNESS_READ": h_witness_read,
 }
 
 

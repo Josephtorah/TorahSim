@@ -173,6 +173,11 @@ def emit_op(op):
         L.append("m.witness_state(%s, %s,\n                cites=[%s])"
                  % (_q(mt.group(1)), _q(mt.group(2)),
                     ", ".join(_q(c) for c in op.get("cites", []))))
+    elif kind == "WITNESS_READ":
+        mt = re.match(r"WITNESS-READ\(([\w-]+),\s*([\w-]+)\)", expr)
+        L.append("m.witness_read(%s, %s,\n                cites=[%s])"
+                 % (_q(mt.group(1)), _q(mt.group(2)),
+                    ", ".join(_q(c) for c in op.get("cites", []))))
     elif kind == "COMMIT":
         dm = re.search(r"LEDGER\[day (\d+)\]", expr)
         en_note = op.get("en", "")
@@ -290,6 +295,10 @@ def op_comment(op, ref=None):
         mt = re.match(r"WITNESS\(([\w-]+),\s*([\w-]+)\)", expr)
         en = ("witness-grounded state (its own tier): %s on %s"
               % (mt.group(2), mt.group(1)))
+    elif kind == "WITNESS_READ":
+        mt = re.match(r"WITNESS-READ\(([\w-]+),\s*([\w-]+)\)", expr)
+        en = ("witness-tier presupposed read: %s on %s — read, not installed"
+              % (mt.group(2), mt.group(1)))
     elif kind == "COMMIT":
         dm = re.search(r"LEDGER\[day (\d+)\]", expr)
         en = "ledger: day %s committed" % dm.group(1)
@@ -403,6 +412,17 @@ def render(uid):
                   % (repr(_e), _wit[_e]["cites"]),
                   '    assert all(%r not in f for f in m.WORLD["facts"])'
                   % _wit[_e]["state"]]
+    if truth.WITNESS_READS:
+        L += ['    assert [(w["entity"], w["state"]) for w in m.WITNESS_READS] == %r'
+              % [(w["entity"], w["state"]) for w in truth.WITNESS_READS]]
+        for _i, _w in enumerate(truth.WITNESS_READS):
+            L += ['    assert m.WITNESS_READS[%d]["cites"] == %r'
+                  % (_i, _w["cites"]),
+                  '    assert all(%r not in f for f in m.WORLD["facts"])'
+                  % _w["state"]]
+            if _w["entity"] not in truth.WORLD.get("witnessed", {}):
+                L += ['    assert %r not in m.WORLD["witnessed"]'
+                      % _w["entity"]]
     L += [
           '    print("ALL ASSERTIONS GREEN — rendering matches the frozen '
           "unit's machine truth\")",
