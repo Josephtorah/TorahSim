@@ -195,6 +195,7 @@ def main():
     import re as _re
     scenes_green = any(n == "scenes" and ok for n, ok, _ in results)
     spans = set()
+    spans_full = set()
     _ABBR = {"Genesis": "Gen", "Exodus": "Exod", "Leviticus": "Lev",
              "Numbers": "Num", "Deuteronomy": "Deut"}
     shape = {}
@@ -212,10 +213,19 @@ def main():
         c1, v1 = int(m.group(1)), int(m.group(2))
         c2 = int(m.group(3)) if m.group(3) else c1
         v2 = int(m.group(4))
+        _uy = os.path.join(ROOT, "logic", "units", u["unit_id"] + ".yaml")
+        _stamped = False
+        if os.path.exists(_uy):
+            with open(_uy, encoding="utf-8") as f:
+                _mt = _re.search(r"^  tree_derive_version: (\S+)$",
+                                 f.read(), _re.M)
+            _stamped = bool(_mt) and _mt.group(1).endswith("full_rule")
         for c in range(c1, c2 + 1):
             hi = v2 if c == c2 else shape[(bid, c)]
             for v in range((v1 if c == c1 else 1), hi + 1):
                 spans.add((bid, c, v))
+                if _stamped:
+                    spans_full.add((bid, c, v))
     compiled = set()
     _A3 = {"gen": "Gen", "exo": "Exod", "lev": "Lev", "num": "Num",
            "deu": "Deut"}
@@ -252,9 +262,14 @@ def main():
                 ok = False
             if s["d"] == 0 and key in spans:
                 ok = False
-            if s["d"] == 2:
-                ok = False   # no full-rule stamp exists yet; the first
-                             # one must extend this gate to verify it
+            # Full rule verifies against the stamp in the canonical YAML
+            # (extended 2026-08-23 at the first stamps, as this gate's
+            # born comment ordered: gen_01 + gen_04, owner's word "lets
+            # declare day 1 and 4 good"). Drift refused both directions.
+            if s["d"] == 2 and key not in spans_full:
+                ok = False
+            if s["d"] < 2 and key in spans_full:
+                ok = False
             if s["p"] and not ((b, ch) in compiled and scenes_green):
                 ok = False
             if not ok:

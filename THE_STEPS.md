@@ -24,6 +24,14 @@ Choose how much of the oral tradition to read for this span — everything
 (the full inversion), one work (just the Talmud), one verse's worth, a
 block. Owner's choice, per item. The scope is DECLARED up front and
 never silently narrowed.
+The MINIMUM shelf per track — which books ground material findings,
+law and narrative, with the full-name decoder for the tradition's
+shorthand — is logic/CORE_SHELF.md.
+STANDING DEFAULT (owner, 2026-08-23): the declared scope IS the core
+shelf unless the owner orders otherwise. The full source list is still
+enumerated and recorded in the ledger, its unread remainder marked
+outside declared scope; depth passes run only on the owner's order,
+for a named reason.
 
 ## Step 4 — Read and log
 Actually read each chosen source against the text. Every source gets one
@@ -119,17 +127,21 @@ Export, parity check against the public repo, deploy. Owner's word.
 ## Creation week, honestly (as of 2026-08-21)
 | Day | Verses  | Step 4 (reading) | Step 6 (applied) | Stamp |
 |-----|---------|------------------|------------------|-------|
-| 1   | 1:1-5   | complete         | YES — rev 2      | eligible, not stamped |
+| 1   | 1:1-5   | complete         | YES — rev 2      | ✔ STAMPED 2026-08-23 |
 | 2   | 1:6-8   | partial          | no               | —     |
 | 3   | 1:9-13  | partial          | no               | —     |
-| 4   | 1:14-19 | complete         | YES — rev 2      | eligible, not stamped |
-| 5   | 1:20-23 | complete         | no (findings logged) | eligible, not stamped |
+| 4   | 1:14-19 | complete         | YES — rev 2      | ✔ STAMPED 2026-08-23 |
+| 5   | 1:20-23 | complete         | YES — rev 2      | ✔ STAMPED 2026-08-23 |
 | 6   | 1:24-31 | partial          | no               | —     |
 | 7   | 2:1-3   | partial          | no               | —     |
 
-623 sources remain unread, all on days 2, 3, 6, 7. The original seven
-units (July 28) were built BEFORE the reading standard existed — that is
-what "first pass" means, and why the redo era exists. Days one and four
-have walked the full path (read → claims → amend → gates) — day four
-twice, independently, blind-compared, then unified. That is the pattern
-for the rest.
+Days one, four, and five stand at FULL RULE — read through, logic
+rebuilt from the reading, stamped on the owner's word 2026-08-23, the
+chips live. (Day four walked the path twice, independently,
+blind-compared, then unified; day five was the first solo run of the
+two-inputs law.) Days 2, 3, 6, and 7 remain in partial reading — under
+the core-shelf standing default their remainder is roughly 120-150
+chain-primary sources, not the old 623. The original seven units (July
+28) were built BEFORE the reading standard existed — that is what
+"first pass" meant, and why the redo era exists. The walked path
+(read → claims → amend → gates → stamp) is the pattern for the rest.

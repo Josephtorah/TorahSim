@@ -20,6 +20,8 @@ m = Machine("gen_05_swarms_blessing")
 # "And God said: 'Let the waters swarm with swarms of living creatures, and
 # let fowl fly above the earth in the open firmament of heaven.'"
 m.step("Gen.1.20")
+# utterance #7 of the ten (ma'amar census)
+m.utterance(7, "fiat")
 # ‹יִשְׁרְצוּ הַמַּיִם שֶׁרֶץ נֶפֶשׁ חַיָּה› (“let-swarm the-waters swarm-of
 # living-being living”) — God speaks a demand — LET?: swarm(waters),
 # product=swarm-of-living-being-living
@@ -49,6 +51,8 @@ m.step("Gen.1.21")
 # and-obj-marker … and-obj-marker”) — event: create — agent God; theme sea-
 # monsters, living-being-living-creeping, flier-wing
 m.event("create", agent="Elohim", themes=["taninim", "nefesh_chaya_romeset", "of_kanaf"])
+# disputed utterance — machloket carried, not decided
+m.utterance_disputed("does 1:21's bara count among the ten? R. Yirmiyah: sustains it (removing Gen 2:18) — machloket ('recorded dispute') carried, never decided (amendment 2026-08-23; full dossier at ORAL_census_taninim, incl. the plene-vs-defective quote twist)")
 # the world gains: sea-monsters, living-being-living-creeping, flier-wing
 m.install("taninim", "nefesh_chaya_romeset", "of_kanaf")
 # ‹אֲשֶׁר שָׁרְצוּ הַמַּיִם› (“which swarmed the-waters”) — demand settled
@@ -71,6 +75,9 @@ m.spec_delta("yishretzu HA-MAYIM (the waters as delegated producer)",
 # with the week
 m.spec_delta("no taninim in the order",
              "et-ha-taninim ha-gedolim leading the inventory, with the week")
+# witness-grounded state (its own tier): no_propagating_pair on taninim
+m.witness_state("taninim", "no_propagating_pair",
+                cites=["Bereshit Rabbah 7:4", "Bava Batra 74b:5", "Bava Batra 74b:6"])
 # ‹כָּל … לְמִינֵהֶם … כָּל־עוֹף כָּנָף לְמִינֵהוּ› (“every … by-their-kinds
 # … every flier wing by-its-kind”) — spec-delta — spec said swarm-of living-
 # being living; flier (bare classes), delivery says every- totality x2,
@@ -118,4 +125,9 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 6
+    assert [(u["n"], u["mode"]) for u in m.UTTERANCES] == [(7, 'fiat')]
+    assert len(m.UTTERANCES_DISPUTED) == 1
+    assert sorted(m.WORLD["witnessed"]) == ['taninim']
+    assert m.WORLD["witnessed"]['taninim']["cites"] == ['Bereshit Rabbah 7:4', 'Bava Batra 74b:5', 'Bava Batra 74b:6']
+    assert all('no_propagating_pair' not in f for f in m.WORLD["facts"])
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
