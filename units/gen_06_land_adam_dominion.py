@@ -21,6 +21,8 @@ m = Machine("gen_06_land_adam_dominion")
 # kind, cattle, and creeping thing, and beast of the earth after its kind.'
 # And it was so."
 m.step("Gen.1.24")
+# utterance #8 of the ten (ma'amar census)
+m.utterance(8, "fiat")
 # ‹תּוֹצֵא הָאָרֶץ נֶפֶשׁ חַיָּה לְמִינָהּ› (“let-bring-forth the-earth
 # living-being living by-its-kind”) — God speaks a demand — LET: let-bring-
 # forth(earth), product=living-being-living-to-by-its-kind
@@ -76,6 +78,8 @@ m.test("PASS", "tov", "nefesh_chaya")
 # and over the cattle, and over all the earth, and over every creeping thing
 # that creepeth upon the earth.'"
 m.step("Gen.1.26")
+# utterance #9 of the ten (ma'amar census)
+m.utterance(9, "fiat")
 # ‹נַעֲשֶׂה אָדָם בְּצַלְמֵנוּ כִּדְמוּתֵנוּ› (“let-us-make man in-our-image
 # as-our-likeness”) — God speaks a demand — CMD-US?: make(man), spec=in-
 # image-after-likeness
@@ -164,6 +168,8 @@ m.spec_delta("design verbs: radah only (rule)",
 # is upon the face of all the earth, and every tree, in which is the fruit
 # of a tree yielding seed — to you it shall be for food;'"
 m.step("Gen.1.29")
+# utterance #10 of the ten (ma'amar census)
+m.utterance(10, "fiat")
 # ‹הִנֵּה נָתַתִּי לָכֶם› (“behold I-have-given to-you”) — event: grant —
 # agent God; theme every-seed-bearing-plant
 m.event("grant", agent="Elohim", themes=["kol_zorea_zera"])
@@ -205,6 +211,10 @@ m.step("Gen.1.31")
 # ‹וְהִנֵּה־טוֹב מְאֹד› (“and-behold good very”) — test PASS — oracle-word
 # very-good, on all-that-He-made
 m.test("PASS", "tov_meod", "kol_asher_asah")
+# witness-grounded state (its own tier): conditional_on_torah_acceptance on
+# beriah
+m.witness_state("beriah", "conditional_on_torah_acceptance",
+                cites=["Shabbat 88a:6", "Avodah Zarah 3a:6", "Avodah Zarah 5a:12"])
 # ‹יוֹם הַשִּׁשִּׁי› (“day the-sixth”) — ledger: day 6 committed
 m.commit(6, label_form="ordinal", label_translit="yom ha-shishi")
 
@@ -224,4 +234,8 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 12
+    assert [(u["n"], u["mode"]) for u in m.UTTERANCES] == [(8, 'fiat'), (9, 'fiat'), (10, 'fiat')]
+    assert sorted(m.WORLD["witnessed"]) == ['beriah']
+    assert m.WORLD["witnessed"]['beriah']["cites"] == ['Shabbat 88a:6', 'Avodah Zarah 3a:6', 'Avodah Zarah 5a:12']
+    assert all('conditional_on_torah_acceptance' not in f for f in m.WORLD["facts"])
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")

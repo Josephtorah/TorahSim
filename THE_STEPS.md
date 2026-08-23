@@ -132,18 +132,19 @@ Export, parity check against the public repo, deploy. Owner's word.
 | 3   | 1:9-13  | complete (core shelf) | YES — rev 2 | ✔ STAMPED 2026-08-23 |
 | 4   | 1:14-19 | complete         | YES — rev 2      | ✔ STAMPED 2026-08-23 |
 | 5   | 1:20-23 | complete         | YES — rev 2      | ✔ STAMPED 2026-08-23 |
-| 6   | 1:24-31 | partial          | no               | —     |
+| 6   | 1:24-31 | complete (core shelf) | YES — rev 2 | ✔ STAMPED 2026-08-23 |
 | 7   | 2:1-3   | partial          | no               | —     |
 
-Days one through five stand at FULL RULE — Genesis 1:1-23 continuous —
+Days one through six stand at FULL RULE — the whole of Genesis 1 —
 read through, logic rebuilt from the reading, stamped on the owner's
 word. (Day four walked the path twice, blind-compared, then unified;
 day five was the first solo run of the two-inputs law; day two was the
 TIMING RACE — identical core logic from both blind runs, and the
 narrow scope became the law; day three brought the first load-bearing
-Onkelos reading — the minimal resolver preserving both spec deltas.)
-Days 6 and 7 remain — a handful of chain primaries each under the
-narrowed core-shelf default; the site deploys when the week is whole. The original seven units (July
+Onkelos reading; day six was the biggest reading — 100 sources, the
+census CLOSED at the tenth utterance, and the creation held
+conditional on Torah's acceptance entered the witness tier.) Day 7
+(2:1-3) remains; the site deploys when the week is whole. The original seven units (July
 28) were built BEFORE the reading standard existed — that is what
 "first pass" meant, and why the redo era exists. The walked path
 (read → claims → amend → gates → stamp) is the pattern for the rest.
