@@ -1852,8 +1852,41 @@ mine: logic/SCHEMA.yaml lacked the claim-level middah: field block
 SCHEMA now byte-identical. (its) gen_05 review-page badge stale at
 REV 2 — re-rendered REV 3, its gates green. Net: trees identical up
 to documented borders; the audit method (never trust the reports,
-diff the disks) caught one stale mirror per side. COMPACTION
-POINT — records current through here.
+diff the disks) caught one stale mirror per side.
+LATER 2026-08-23 — THE TIMING RACE + DAY 2 (owner: "I want to run a
+timeing test… go"): both sessions derived Gen 1:6-8 blind,
+simultaneously, same protocol (clock = Step-3 first act → ritual
+complete + manifest fixed). WORKSHOP 11m39s (34 declared/read of 733
+enumerated, 7 material, 7 claims) vs TORAHSIM 13m48s (80 declared —
+its scope call went WIDE: corroboration tier + Rashi — 26 material,
+13 claims). CONVERGED BLIND on the core logic: census utterance at
+1:6, WITNESS_STATE(mayim_elyonim, suspended_by_maamar) w/ Ps 148:4
+anchor, missing-tov as multi-position machloket, the ein-lemedin
+boundary note, zero new vocabulary, same hash. HEADLINE FINDING: the
+scope ambiguity in CORE_SHELF (register-primaries vs shelf-letter) —
+OWNER RULED narrow ("I do not want the wide scope"); CORE_SHELF
+ruling section clarified (corroboration tier = depth; Rashi/letter
+apparatus on actual need). My misses (all narrow-grounded, conceded):
+dispute-relative census ordinal (1:6 = #4 under the R. Yaakov ben
+Kurshai census — same failure class as day 4's census miss: standing
+rule applied incompletely; now encoded in the op text), E5 on R.
+Tavyomei, E29 on lamed=30. Its misses: the Monday fast (my C6),
+E7 matlit, shamim-ketiv. UNIFICATION (owner delegated "you decide"):
+three catches adopted into the narrow unit; wide-scope-only claims
+stay in its ledger (append-only), NOT the unit; canonical state
+string suspended_by_maamar. gen_02 rev 2 UNIFIED: ritual complete
+again, hash held, changelog folded. DAY 2 = read through (declared
+scope) + rebuilt + unified = stamp-eligible, awaiting owner word.
+Remaining: days 3, 6, 7.
+LATER 2026-08-23 — DAY 2 STAMPED (owner: "day 2 good. commit and push
+both sides"): gen_02 rev 3, full-rule stamp, ritual complete, export
+flips Gen 1:6-8 chips to d:2 — SIX of seven creation days now at FULL
+RULE (1, 2, 4, 5 stamped; 3, 6, 7 remain: days 3/6/7 readings under
+the clarified narrow default). Unification round-trip complete both
+trees (its register correction: wide-run material 26 -> 18, all
+primaries — the narrow ruling's own postscript); CORE_SHELF gloss
+touch carried back. Committed+pushed both sides on his word.
+COMPACTION POINT — records current through here.
 ★ CONSTITUTION ADOPTED BOTH SIDES + VERIFIED 2026-08-21 (40th update):
 TorahSim adopted on owner's word in its window (METHOD_LAWS law-1
 "Declared reading, honest ledgers" + constitution section; SCHEMA rev/
