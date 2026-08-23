@@ -1689,6 +1689,62 @@ epub rebuilt + verified. ALSO our-code "machine" renamed "the
 program" (Amaziah passage x2 + echo fix; owner rejected "rules
 engine" as law-flavored; machines-as-computers + word-as-machine
 metaphor + "verified by machine" idiom all KEPT); epub rebuilt.
+★ DAY-4 BLIND ROUND + THE MISHNAH SHELF (41st update, 2026-08-21→23):
+DAY-4 BLIND DUAL-DERIVATION (owner's day-one-protocol order relayed
+via the TorahSim window): my 11-claim manifest FIXED to
+logic/v2_drafts/gen_04_day_four/claims_manifest.json from the
+2026-07-30 day-4 triage (10 material rows: 8 bold + 2
+already-cited; JT RH 2:8:4 rides the gen_01 ledger via the overlap)
+BEFORE exchange; comparison run in the peer window. MY MISS: the
+census claim — va-yomer 1:14 = utterance #6, TorahSim's find (mirror
+of day one's C12). ITS MISS: the Step-5 middah fields. Owner: "I like
+your feedback… make sure both of you are on the same page" → all six
+alignment items ACKed and folded into its gen_04 rev 2: unified
+12-claim set; GRANULAR witness writes over composite
+(equal_then_diminished(maor_qaton) w/ provenance as recorded dispute
+A=Chullin 60b:2 self-diminution / B=BR 6:3 domain-encroachment,
+outcome converged; kapparah_chodesh standing monthly obligation w/
+Num 28:15 anchor; kokhavim retinue link); C10 adapted by agreement to
+NEW OPERATOR WITNESS_READ(or, or_ha_ganuz) — presupposed-read at
+witness tier, installs NOTHING, wall asserted 3 ways (its tier-mixing
++ fold-collision args verified right; canon name checked in my
+mirrored gen_01 rev 2 before accepting); middah tags E5/E26/E15 into
+the YAML; THE_STEPS Step-5 TWO-INPUTS LAW (claims = material rows +
+standing canon rules run as a CHECKLIST — both misses were the same
+failure); delta renumbering (the machine always asserted
+spec_delta:4; only the prose said three). Blind claims preserved
+verbatim; alignment appended as post_exchange_alignment block.
+2026-08-23 — THE MISHNAH SHELF: Mishnah/Talmud USAGE MANUAL (rewrite
+of Brian's Grok draft; his verdict "didn't do so well" = structure
+lecture, not how-to) + epub, at Torah_Grok_local (non-repo). Software
+mapping settled with Brian: Torah = source; MISHNAH = expected-output
+fixture table of the system that ran on it (input→output, no reasons,
+never cites its verse; Step-5 claims source + STEP-9 TEST SUITE);
+TALMUD = the interrogation/derivation record (why-this-output,
+wording-surplus bug reports, collisions, come-and-hear stress tests,
+teiku = our [OPEN]); the FOUR DOORS of the topic↔verse join
+(verse-order midrash / implementing tractates / whole Gemara
+discussions / cite index). logic/MISHNAH_TOPICS.md BORN: all 525
+chapter openings read from Data/mishnah_*_he.json (the 2026-07-24
+chapter cards proved template stubs for 62/63 tractates — went to the
+text), 63 tractates topic-labeled in canonical order, counts verified
+63/525/~4,192. Owner: "this is yours" → moved to my memory shelf,
+then "needs to be in the project so I can find it in cursor" → final
+home logic/MISHNAH_TOPICS.md, MAINTENANCE DUTY MINE (memory keeps a
+pointer), REVERSED mirror flow: workshop = living copy, TorahSim
+mirrors (its copy landed, 2 documented border touches; its gloss gate
+caught bare "non-kilayim" — fix carried back). THE_STEPS updated
+both sides (Step 4: Mishnah-ruling vs Talmud-derivation/dispute/test
+distinction + MISHNAH_TOPICS pointer; Step 9: recorded cases include
+the Mishnah's rows — the Exod 21 pattern named; day-4 table row YES
+rev 2; closing line: day four twice, blind-compared, unified).
+TorahSim COMMITTED dcee5e2 PUSHED on owner word in its window (gen_04
+rev 2 + WITNESS_READ toolchain 4 plug points + refold SAME HASH
+8b8fff1fa28953af + THE_STEPS + MISHNAH_TOPICS). THIS COMMIT: the
+workshop set (manifest, MISHNAH_TOPICS, THE_STEPS mirror, this doc);
+day-4 rev 2 MIRROR here runs NEXT as its own commit (YAML pure-copy +
+4 plug points + gates + hash check). COMPACTION POINT — records
+current through here.
 ★ CONSTITUTION ADOPTED BOTH SIDES + VERIFIED 2026-08-21 (40th update):
 TorahSim adopted on owner's word in its window (METHOD_LAWS law-1
 "Declared reading, honest ledgers" + constitution section; SCHEMA rev/
