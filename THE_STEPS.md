@@ -133,18 +133,22 @@ Export, parity check against the public repo, deploy. Owner's word.
 | 4   | 1:14-19 | complete         | YES — rev 2      | ✔ STAMPED 2026-08-23 |
 | 5   | 1:20-23 | complete         | YES — rev 2      | ✔ STAMPED 2026-08-23 |
 | 6   | 1:24-31 | complete (core shelf) | YES — rev 2 | ✔ STAMPED 2026-08-23 |
-| 7   | 2:1-3   | partial          | no               | —     |
+| 7   | 2:1-3   | complete (core shelf) | YES — rev 2 | ✔ STAMPED 2026-08-23 |
 
-Days one through six stand at FULL RULE — the whole of Genesis 1 —
-read through, logic rebuilt from the reading, stamped on the owner's
-word. (Day four walked the path twice, blind-compared, then unified;
-day five was the first solo run of the two-inputs law; day two was the
-TIMING RACE — identical core logic from both blind runs, and the
-narrow scope became the law; day three brought the first load-bearing
-Onkelos reading; day six was the biggest reading — 100 sources, the
-census CLOSED at the tenth utterance, and the creation held
-conditional on Torah's acceptance entered the witness tier.) Day 7
-(2:1-3) remains; the site deploys when the week is whole. The original seven units (July
+THE CREATION WEEK IS WHOLE (2026-08-23): all seven days stand at FULL
+RULE — Genesis 1:1 through 2:3, read through under the declared law,
+logic rebuilt from the readings, stamped on the owner's word, end to
+end. The week's story in one breath: day four walked the path twice,
+blind-compared, then unified; day five ran the two-inputs law solo;
+day two was the timing race that made the narrow scope law; day three
+put Onkelos under load; day six read a hundred sources and closed the
+census at the tenth utterance; day seven — the speech-less day, zero
+utterances confirmed — finished fastest, and rest itself entered the
+witness tier as a thing created. The original seven units (July 28)
+were built BEFORE the reading standard existed; twenty-six days later
+the redo era re-derived every one of them from the tradition's own
+pages. The walked path (read → claims → amend → gates → stamp) now
+turns to the rest of the Torah. The original seven units (July
 28) were built BEFORE the reading standard existed — that is what
 "first pass" meant, and why the redo era exists. The walked path
 (read → claims → amend → gates → stamp) is the pattern for the rest.

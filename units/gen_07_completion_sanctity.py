@@ -34,6 +34,9 @@ m.step("Gen.2.2")
 # ‹וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ› (“and-he-finished God
 # on-the-day the-seventh his-work”) — event: finish — agent God
 m.event("finish", agent="Elohim")
+# witness-grounded state (its own tier): created_with_the_day on menuchah
+m.witness_state("menuchah", "created_with_the_day",
+                cites=["Bereshit Rabbah 10:9"])
 # ‹וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ› (“and-he-ceased
 # on-the-day the-seventh from-all his-work”) — event: cease — agent God
 m.event("cease", agent="Elohim")
@@ -67,4 +70,7 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == []
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 5
+    assert sorted(m.WORLD["witnessed"]) == ['menuchah']
+    assert m.WORLD["witnessed"]['menuchah']["cites"] == ['Bereshit Rabbah 10:9']
+    assert all('created_with_the_day' not in f for f in m.WORLD["facts"])
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
