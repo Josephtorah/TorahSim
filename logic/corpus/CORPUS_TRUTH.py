@@ -14,7 +14,7 @@ assert len(W["facts"]) == 1809
 assert len(W["demands"]) == 341
 assert len(W["events"]) == 557
 assert len(W["names"]) == 81
-assert len(W["standing"]) == 269
+assert len(W["standing"]) == 274
 open_d = sorted((d["unit"], d["ref"], d["mood"], d["demand"])
                 for d in W["demands"] if d["status"] == "OPEN")
 assert len(open_d) == 191

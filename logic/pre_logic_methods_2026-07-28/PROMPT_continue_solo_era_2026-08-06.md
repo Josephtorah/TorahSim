@@ -1743,8 +1743,20 @@ rev 2 + WITNESS_READ toolchain 4 plug points + refold SAME HASH
 8b8fff1fa28953af + THE_STEPS + MISHNAH_TOPICS). THIS COMMIT: the
 workshop set (manifest, MISHNAH_TOPICS, THE_STEPS mirror, this doc);
 day-4 rev 2 MIRROR here runs NEXT as its own commit (YAML pure-copy +
-4 plug points + gates + hash check). COMPACTION POINT — records
-current through here.
+4 plug points + gates + hash check). MIRROR EXECUTED same day
+(commit after 2615952): YAML pure-copied; machine.py / run_unit.py /
+render_unit_py.py / corpus_world.py patched from dcee5e2 diffs (all
+clean, no fuzz); CORPUS_TRUTH standing 269→274 (the five new
+standing entries); unit + preflight ALL SCENARIOS GREEN; rendering
+regenerated GREEN (delta +28/-1 vs canon's +27/0/0 — two explained
+diffs: license-header border line, and ONE set-literal emitted in
+different order = renderer nondeterminism from Python string-hash
+randomization, flagged to peer for a sorted() fix; semantically
+identical); world refolds to the SAME hash 8b8fff1fa28953af;
+changelog gate GREEN; unit page re-rendered (dated 2026-08-23
+snapshot + undated current updated). Day 4 = the second unit at
+rev 2; spec_delta now honestly x4 in machine and prose both.
+COMPACTION POINT — records current through here.
 ★ CONSTITUTION ADOPTED BOTH SIDES + VERIFIED 2026-08-21 (40th update):
 TorahSim adopted on owner's word in its window (METHOD_LAWS law-1
 "Declared reading, honest ledgers" + constitution section; SCHEMA rev/
