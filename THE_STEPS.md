@@ -129,20 +129,21 @@ Export, parity check against the public repo, deploy. Owner's word.
 |-----|---------|------------------|------------------|-------|
 | 1   | 1:1-5   | complete         | YES — rev 2      | ✔ STAMPED 2026-08-23 |
 | 2   | 1:6-8   | complete (core shelf) | YES — rev 2 | ✔ STAMPED 2026-08-23 |
-| 3   | 1:9-13  | partial          | no               | —     |
+| 3   | 1:9-13  | complete (core shelf) | YES — rev 2 | ✔ STAMPED 2026-08-23 |
 | 4   | 1:14-19 | complete         | YES — rev 2      | ✔ STAMPED 2026-08-23 |
 | 5   | 1:20-23 | complete         | YES — rev 2      | ✔ STAMPED 2026-08-23 |
 | 6   | 1:24-31 | partial          | no               | —     |
 | 7   | 2:1-3   | partial          | no               | —     |
 
-Days one, two, four, and five stand at FULL RULE — read through, logic
-rebuilt from the reading, stamped on the owner's word. (Day four walked
-the path twice, blind-compared, then unified; day five was the first
-solo run of the two-inputs law; day two was the TIMING RACE — both
-sessions derived it blind and simultaneously, 11m39s narrow vs 13m48s
-wide, identical core logic from both, and the narrow scope became the
-law.) Days 3, 6, and 7 remain — a handful of chain primaries each
-under the narrowed core-shelf default. The original seven units (July
+Days one through five stand at FULL RULE — Genesis 1:1-23 continuous —
+read through, logic rebuilt from the reading, stamped on the owner's
+word. (Day four walked the path twice, blind-compared, then unified;
+day five was the first solo run of the two-inputs law; day two was the
+TIMING RACE — identical core logic from both blind runs, and the
+narrow scope became the law; day three brought the first load-bearing
+Onkelos reading — the minimal resolver preserving both spec deltas.)
+Days 6 and 7 remain — a handful of chain primaries each under the
+narrowed core-shelf default; the site deploys when the week is whole. The original seven units (July
 28) were built BEFORE the reading standard existed — that is what
 "first pass" meant, and why the redo era exists. The walked path
 (read → claims → amend → gates → stamp) is the pattern for the rest.

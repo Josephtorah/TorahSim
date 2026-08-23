@@ -20,6 +20,8 @@ m = Machine("gen_03_double_build")
 # "And God said: 'Let the waters under the heaven be gathered together unto
 # one place, and let the dry land appear.' And it was so."
 m.step("Gen.1.9")
+# utterance #4 of the ten (ma'amar census)
+m.utterance(4, "fiat")
 # ‹יִקָּווּ הַמַּיִם› (“be-gathered the-waters”) — God speaks a demand —
 # LET: gathered(waters, to=place-one)
 m.declare("Elohim", "LET",
@@ -47,6 +49,10 @@ m.step("Gen.1.10")
 # Seas”) — named: dry-land := Earth; miqveh-ha-mayim := Seas
 m.name("yabasha", "eretz")
 m.name("miqveh-ha-mayim", "yamim")
+# witness-grounded state (its own tier): condition_to_split_installed on
+# yamim
+m.witness_state("yamim", "condition_to_split_installed",
+                cites=["Bereshit Rabbah 5:5"])
 # ‹כִּי־טוֹב› (“that good”) — test PASS — oracle-word good, on gathering
 m.test("PASS", "tov", "gathering")
 
@@ -57,6 +63,8 @@ m.test("PASS", "tov", "gathering")
 # fruit-tree bearing fruit after its kind, wherein is the seed thereof, upon
 # the earth.' And it was so."
 m.step("Gen.1.11")
+# utterance #5 of the ten (ma'amar census)
+m.utterance(5, "fiat")
 # ‹תַּדְשֵׁא הָאָרֶץ› (“let-sprout the-earth”) — God speaks a demand — LET:
 # sprout(earth, vegetation)
 m.declare("Elohim", "LET",
@@ -92,6 +100,9 @@ m.spec_delta("etz peri oseh peri",
 # to-by-its-kind
 m.spec_delta("esev mazria zera",
              "esev mazria zera le-minehu")
+# witness-grounded state (its own tier): staged_at_soil_mouth on deshe
+m.witness_state("deshe", "staged_at_soil_mouth",
+                cites=["Chullin 60b:5"])
 # ‹כִּי־טוֹב› (“that good”) — test PASS — oracle-word good, on vegetation
 m.test("PASS", "tov", "vegetation")
 
@@ -118,4 +129,10 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == ['mazria(esev, zera) ∧ oseh(etz, peri) ∧ le-mino(reproduction)']
     assert m.WORLD["partitions"] == []
     assert len(m.EVENTS) == 9
+    assert [(u["n"], u["mode"]) for u in m.UTTERANCES] == [(4, 'fiat'), (5, 'fiat')]
+    assert sorted(m.WORLD["witnessed"]) == ['deshe', 'yamim']
+    assert m.WORLD["witnessed"]['deshe']["cites"] == ['Chullin 60b:5']
+    assert all('staged_at_soil_mouth' not in f for f in m.WORLD["facts"])
+    assert m.WORLD["witnessed"]['yamim']["cites"] == ['Bereshit Rabbah 5:5']
+    assert all('condition_to_split_installed' not in f for f in m.WORLD["facts"])
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
