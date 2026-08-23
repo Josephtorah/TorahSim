@@ -1880,13 +1880,32 @@ scope) + rebuilt + unified = stamp-eligible, awaiting owner word.
 Remaining: days 3, 6, 7.
 LATER 2026-08-23 — DAY 2 STAMPED (owner: "day 2 good. commit and push
 both sides"): gen_02 rev 3, full-rule stamp, ritual complete, export
-flips Gen 1:6-8 chips to d:2 — SIX of seven creation days now at FULL
-RULE (1, 2, 4, 5 stamped; 3, 6, 7 remain: days 3/6/7 readings under
-the clarified narrow default). Unification round-trip complete both
+flips Gen 1:6-8 chips to d:2 — FOUR of seven creation days now at FULL
+RULE (1, 2, 4, 5 stamped, spans 1:1-8 + 1:14-23; 3, 6, 7 remain: days
+3/6/7 readings under the clarified narrow default). [count "SIX"
+corrected to FOUR — peer's audit catch, 2026-08-23.] Unification round-trip complete both
 trees (its register correction: wide-run material 26 -> 18, all
 primaries — the narrow ruling's own postscript); CORE_SHELF gloss
 touch carried back. Committed+pushed both sides on his word.
 COMPACTION POINT — records current through here.
+LATER 2026-08-23 (post-compaction) — day-2 round CLOSED both trees:
+TorahSim's stamp landed a768593 (verified on disk: HEAD = origin/main),
+its deploy held pending owner word in its window. Export verified
+here: Gen 1:6/1:8 d:2, control 1:9 stays d:1. OPEN QUESTION for owner
+(flagged by both sessions): the o-track chip on Gen 1:6-8 honestly
+reads o:2 "in reading" (spec v2: o:3 "read through" requires every
+enumerated source verdicted — 34 of 733 read under declared scope).
+If the chip should be able to say "read through under declared scope,"
+that is a vstat SPEC amendment needing his word; until then o:2 is
+the honest label and stands.
+LATER 2026-08-23 — RULED by owner ("update the oral chips to show read
+through"): declared-scope completion = O3. export_web.py amended: a
+frozen unit whose triage ledger matches the declared-reading gate's
+own regex (read N of N ...COMPLETE) is o:3 g:"v" across its refs span;
+precedence chapter-ledger > declared-ledger > counters; oral fraction
+triple unchanged (honest numbers stay visible). Ruling relayed to
+TorahSim for its exporter. Spec v2 note: O3 now means "declared
+reading complete" per the revised oral law, not full enumeration.
 ★ CONSTITUTION ADOPTED BOTH SIDES + VERIFIED 2026-08-21 (40th update):
 TorahSim adopted on owner's word in its window (METHOD_LAWS law-1
 "Declared reading, honest ledgers" + constitution section; SCHEMA rev/

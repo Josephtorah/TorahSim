@@ -240,9 +240,46 @@ def main():
     except sqlite3.OperationalError:
         pass   # units table absent -> everything underived
 
+    # declared-scope read-through (owner ruling 2026-08-23): a unit whose
+    # triage ledger carries the declared-reading gate's own evidence line
+    # ("read: N of N ... COMPLETE", N == N) is READ THROUGH for its span —
+    # the ledger enumerates the full link list and marks the remainder
+    # outside declared scope, so the label stays honest at ledger grain.
+    declared_ok = set()
+    try:
+        unit_span = {r["unit_id"]: (r["book_en"], r["refs"])
+                     for r in cx.execute("""SELECT unit_id, book_en, refs
+                                            FROM units
+                                            WHERE status = 'frozen'""")}
+        for f in (ROOT / "logic" / "oral_triage").glob("*.md"):
+            uid = re.sub(r"_\d{4}-\d{2}-\d{2}$", "", f.stem)
+            if uid not in unit_span:
+                continue
+            mt = re.search(r"\*\*read:\s*(\d+)\s*of\s*(\d+)\s*—[^\n]*COMPLETE",
+                           f.read_text(encoding="utf-8"))
+            if not (mt and mt.group(1) == mt.group(2)):
+                continue
+            bid = BOOK_ABBR.get(unit_span[uid][0])
+            m = re.match(r"^(\d+):(\d+)\s*[-–]\s*(?:(\d+):)?(\d+)$",
+                         (unit_span[uid][1] or "").strip())
+            if not bid or not m:
+                continue
+            c1, v1 = int(m.group(1)), int(m.group(2))
+            c2 = int(m.group(3)) if m.group(3) else c1
+            v2 = int(m.group(4))
+            for c in range(c1, c2 + 1):
+                lo = v1 if c == c1 else 1
+                hi = v2 if c == c2 else shape[bid][c]
+                for v in range(lo, hi + 1):
+                    declared_ok.add((bid, c, v))
+    except sqlite3.OperationalError:
+        pass
+
     def vstat_for(bid, ch, v):
         if (bid, ch) in ledger_ch:
             o, g = 3, "c"
+        elif (bid, ch, v) in declared_ok:
+            o, g = 3, "v"
         else:
             oc = oral_counts.get("%s.%d.%d" % (bid, ch, v))
             if not oc or oc[0] == 0:
