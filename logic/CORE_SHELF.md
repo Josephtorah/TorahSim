@@ -33,6 +33,18 @@ foundation. **Not** binding religious law.
 Effect: the creation-week backlog drops from 623 unread sources to
 roughly 120-150 primaries; a law block reads a shelf, not a library.
 
+**Scope clarified by the day-2 timing race (owner ruling 2026-08-23,
+"I do not want the wide scope"):** the default READ is the NARROW
+interpretation — the register's chain_primary class matched to the
+span, plus Onkelos. The corroboration tier (the narrative-track
+midrash ("exposition") compilations listed below — Midrash Tanchuma,
+Pirkei DeRabbi Eliezer, and their kin) and the anthologies are DEPTH,
+not default. Rashi and
+the letter apparatus join a reading only when a pointer or spelling
+question actually arises (deriver's judgment, noted in the ledger).
+Race evidence: the narrow run produced the identical core logic at
+34 sources; the wide run's extras were corroboration color.
+
 ## Foundation — both tracks, every span
 
 1. **The Hebrew text itself** with cantillation trees + morphology

@@ -20,6 +20,8 @@ m = Machine("gen_02_raqia_day")
 # "And God said: 'Let there be a firmament in the midst of the waters, and
 # let it divide the waters from the waters.'"
 m.step("Gen.1.6")
+# utterance #3 of the ten (ma'amar census)
+m.utterance(3, "fiat")
 # ‹יְהִי רָקִיעַ› (“let-there-be firmament”) — God speaks a demand — LET:
 # exists(firmament)
 m.declare("Elohim", "LET",
@@ -46,6 +48,10 @@ m.event("make", agent="Elohim", themes=["raqia"])
 # ‹בֵּין הַמַּיִם … וּבֵין הַמַּיִם› (“between the-waters … and-between the-
 # waters”) — partition between mayim-under and mayim-over
 m.partition("mayim-under", "mayim-over")
+# witness-grounded state (its own tier): suspended_by_maamar on
+# mayim_elyonim
+m.witness_state("mayim_elyonim", "suspended_by_maamar",
+                cites=["Bereshit Rabbah 4:3", "Bereshit Rabbah 4:4", "Chagigah 15a:4"])
 # ‹וַיְהִי־כֵן› (“and-there-was so”) — demand settled (popped from the
 # queue): exists(firmament)
 m.result("exists(raqia)", tmark="t2")
@@ -81,4 +87,8 @@ if __name__ == "__main__":
     assert m.WORLD["invariants"] == ['mavdil(raqia, mayim|mayim)']
     assert m.WORLD["partitions"] == [('mayim-under', 'mayim-over')]
     assert len(m.EVENTS) == 7
+    assert [(u["n"], u["mode"]) for u in m.UTTERANCES] == [(3, 'fiat')]
+    assert sorted(m.WORLD["witnessed"]) == ['mayim_elyonim']
+    assert m.WORLD["witnessed"]['mayim_elyonim']["cites"] == ['Bereshit Rabbah 4:3', 'Bereshit Rabbah 4:4', 'Chagigah 15a:4']
+    assert all('suspended_by_maamar' not in f for f in m.WORLD["facts"])
     print("ALL ASSERTIONS GREEN — rendering matches the frozen unit's machine truth")
