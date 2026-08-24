@@ -30,7 +30,7 @@ from pathlib import Path
 
 BUCKET = "https://storage.googleapis.com/sefaria-export"
 REPO = Path(__file__).resolve().parents[2]
-OUT = REPO / "Data/sefaria_export"
+OUT = REPO / "shelf/sources/sefaria_export"
 DELAY = 0.4
 
 WANT = [
