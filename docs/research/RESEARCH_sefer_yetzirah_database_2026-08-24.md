@@ -218,3 +218,114 @@ computed axis, combinatorial generation, crowned letters) while
 diverging exactly where SY's schema needs symmetry (the seventh double)
 — and the corpus data adjudicates the divergence. Boundary unchanged:
 model-layer research; grounds nothing without a depth-pass word.
+
+---
+
+## Fifth look (2026-08-24, owner: "yes do 1, lets see what we can find")
+## — the 231 gates against the Torah's own verb-root inventory
+
+Sefer Yetzirah 2:4-5: the 22 letters are fixed in a wheel and combined
+two by two into 231 gates — every unordered pair of distinct letters —
+"and all that is formed and all that is spoken emerges from them." One
+chapter earlier than the wheel sits 2:3: the five mouth-classes, SY's
+own phonetics — throat אחהע (alef-chet-heh-ayin), palate גיכק
+(gimel-yod-kaf-qof), tongue דטלנת (dalet-tet-lamed-nun-tav), teeth
+זסשרצ (zayin-samekh-shin-resh-tsadi), lips בומפ (bet-vav-mem-peh).
+The experiment: build the wheel from the Torah's real lexicon and see
+which gates speech actually used — and whether the unused gates fall
+where 2:3's classes predict.
+
+**Method.** The 697 distinct verb lemmas of the Torah (the parse
+database's Strong numbers, every word morphology-tagged as a verb in
+Genesis through Deuteronomy) were resolved to their dictionary
+headwords through the public-domain Strong's lexicon (openscriptures'
+HebrewStrong.xml, fetched to scratch — analysis input, not a shelf
+source), stripped of pointing to consonantal skeletons: 691
+triliteral, 664 distinct roots (six non-triliteral outliers excluded
+and listed in the scratch record). A gate counts as ATTESTED when its
+two letters occupy adjacent root slots (first-second or second-third)
+in at least one root.
+
+**Finding 1 — the wheel is nearly full: 202 of 231 gates are real.**
+Speech, at the gate grain, did emerge from the wheel — 87% of all
+possible letter-pairs ground at least one Torah verb root. The claim
+"all speech emerges from them" is close to literally true of the
+gates as a set.
+
+**Finding 2 — the 29 empty gates cluster on SY's own classes, and it
+is not chance.** Of the 38 gates whose two letters share one
+mouth-class, 15 are empty (39%). Of the 193 cross-class gates, 14 are
+empty (7%). The probability of that clustering arising by chance is
+1.9 in a million (hypergeometric). Frequency-controlled, the same:
+same-class pairs occur at 0.56 of their expected rate, cross-class at
+1.10 — the lexicon actively AVOIDS same-class gates, it does not
+merely happen to miss them.
+
+**Finding 3 — the empties are not rare-letter accidents.** The
+control expected each gate's count from the roots' own letter
+frequencies. Lamed-nun (לנ, "lamed-nun" — two of the commonest
+letters): 10.2 roots expected, ZERO exist. Bet-mem (במ): 8.7
+expected, one. Chet-ayin (חע): 6.8 expected, zero. Mem-peh (מפ) and
+tsadi-shin (צש): ~6.5-6.9 expected, zero each. The famous bans are
+all here: the labial pairs, the velar pairs (גכ gimel-kaf, גק
+gimel-qof, כק kaf-qof — all three empty), the guttural pairs אע and
+חע, the sibilant pairs.
+
+**Finding 4 — the wheel's own exclusion is the lexicon's absolute
+ban.** SY's 231 counts only pairs of DISTINCT letters — self-gates do
+not exist on the wheel. In the 664 roots, first-and-second identical
+letters occur exactly ZERO times (second-and-third: 52 times, the
+geminate roots). The one pair-shape the wheel refuses to draw is the
+one pair-shape the lexicon's opening position absolutely refuses to
+speak.
+
+**Finding 5 — resh again, and now vav.** The four true sibilants
+(zayin, samekh, tsadi, shin) avoid each other almost perfectly — all
+six of their pairs stand at zero or one root. Resh, SY's fifth teeth
+letter, ignores the avoidance entirely: its class-mate gates hold 6,
+7, 13, and 18 roots, at or above chance. This is resh's THIRD
+boundary-crossing in this study: the doubles class it joins against
+the grammar, the dagesh it takes once at Genesis 2:10, and now the
+one teeth letter that freely partners its own class. And the same
+diagnosis catches vav: SY's lips class holds three true labials (bet,
+mem, peh) that mutually avoid — their three pairs: zero, zero, one —
+plus vav, which partners them ABOVE chance (vav-mem: 10 roots against
+7.7 expected). Each class's odd member is exactly the letter modern
+phonology would call the odd member (the liquid, the glide) — SY's
+classes carry their own exceptions, and the corpus data finds them.
+
+**Finding 6 — where the empties cross classes, the classes are
+neighbors.** Six of the fourteen cross-class empties join teeth to
+tongue (דז dalet-zayin, זט zayin-tet, זת zayin-tav, טס tet-samekh, טצ
+tet-tsadi, לר lamed-resh) — the two adjacent mouth zones, dental
+against sibilant, plus the liquid pair lamed-resh that a
+liquids-as-one-class analysis (which SY's five classes split) would
+have predicted directly.
+
+**Robustness.** Tanakh-wide the verb inventory nearly doubles (1,212
+roots) and the split holds: 37% of same-class gates empty against 6%
+of cross-class; only four of the Torah's 29 empty gates fill.
+
+**The reading (labeled).** *Data:* the Torah's root lexicon obeys a
+same-articulation-class avoidance constraint, and SY's five
+mouth-classes of 2:3 are the classifier that predicts which gates of
+2:4-5's wheel go unused — with the residue explained by class
+adjacency and by each class's phonetically odd member. *Modern name:*
+this is the root co-occurrence constraint documented by Greenberg
+(1950) — outside-chain academic, observation only. *What is NOT
+claimed:* that SY states the constraint. SY presents the full wheel
+as generative; it never says some gates sit unused. What the book
+does do is put the classifier and the wheel side by side in one
+chapter — and the classifier turns out to be the right one for the
+wheel's real holes. Significance deliberately unassigned.
+
+**Caveats.** Headword-as-root is a proxy: hollow and third-heh roots
+put glide letters (vav, yod, heh) in root slots that Greenberg's
+method would exclude — a bias that ADDS attestations and so cannot
+manufacture emptiness (it can only hide it; conservative for every
+finding above). Verbs only; Strong-number homographs merge by
+skeleton (691 → 664); the companion script
+`docs/research/research_sy_gates.py` reproduces every number above,
+per-gate tables included (its header documents the one fetch it
+needs — the lexicon XML stays uncommitted, like any shelf source). Boundary unchanged:
+model-layer research; grounds nothing without a depth-pass word.
