@@ -590,3 +590,42 @@ workshop dashboard's black skin — or both with a toggle.
   the schema survived its second book — at sketch grade. The Stage-2
   gate question now has a hypothesis-grade YES; the derived answer
   still requires the stone. Real journal md5 verified untouched.
+
+- 2026-08-24 — THE ONE-WORLD RUN + THE SANDBOX VIEWER (owner: "does
+  this exodus code variables it creates change when it runs kings and
+  samuel? can I see this run in the sandbox simulation"). Answer built
+  into the sandbox: a third scenario, one_world — the same four sketch
+  units on ONE continuous state in canonical order, four staged
+  captures. THE ANSWER THE RUN GIVES: the Exodus variables do NOT
+  change when Kings runs — they PERSIST and history ACCUMULATES. The
+  ark is born once (Exod 37:1) and never re-created; Kings adds a
+  second placement fact beside the first (the move to the devir/"inner
+  sanctuary") and retires the tent of meeting INTO the temple (1 Kgs
+  8:4, newly grounded and added to the Kings unit); 11 entities grow
+  to 20; the demand Samuel opened closes in Kings; both partitions
+  stand. Append-only vindicated at sketch grade: an entity's past is
+  never overwritten, only superseded by later facts. VIEWER:
+  sketches/sandbox/viewer.html (red SANDBOX banner per rule 8; black/
+  gold stationary tiles per the owner's display rulings) — scenario
+  tabs (tabernacle/temple/one world), stage buttons, THE COUNTS, OPEN
+  DEMANDS glossed, WORLD TREE (green=built, italic=ghost/zone), THE
+  ARK tracker (blueprint→exists→moved; "present, not born here" in
+  the temple-alone view), FACTS append-only pane. One bug caught on
+  sight: alphabetical fact-sort made the OLD placement look current —
+  fixed by canonical ordering in the ark tile. Verified in Chrome
+  (one-world stage 4 + temple B). Real journal untouched throughout.
+
+- 2026-08-24 — TUTORING FILE: HOW THE CODE RELATES TO ITSELF (owner
+  order; learning exercise, NOT law — lives in grok-mockups/learning/,
+  deliberately not at root). Research pass behind it: 19 cross-book
+  consonantal probes, 19 hits. Headline finds for the direction
+  discussion: the corpus AUDITS ITSELF (Joshua 21:45 + 1 Kings 8:56 =
+  the text sweeping its own promise queue — compile-to-assertion
+  candidate); receipts that CITE their demands (seventy years: 2 Chr
+  36:21 / Ezra 1:1 / Daniel 9:2 — Ezra's completion verb = Genesis
+  2:1's finish root); "as it is written" = import statements (2 Kgs
+  14:6 → Deut 24:16); handler installed Lev 26:33 fires 2 Kgs 17:6;
+  Joseph's bones = 3-book custody chain; canon ENDS with the queue
+  deliberately open (Malachi 3:23). Six mechanisms taxonomy, 5+5
+  dialect map, 10 derivation lessons, 6 open questions — all
+  hypothesis-grade until decided into THE_WORLD/THE_STEPS.

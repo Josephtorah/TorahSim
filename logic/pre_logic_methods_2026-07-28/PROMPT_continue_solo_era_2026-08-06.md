@@ -3684,3 +3684,64 @@ logged in the sketch + THE_WORLD.md. Schema survived book two at
 sketch grade (Stage-2 gate: hypothesis-grade yes; stone still
 required). Real journal md5 verified untouched. Nothing committed.
 STANDING: end-of-day tutoring epub on owner's word.
+
+LATER 2026-08-24 (world era day 3, cont.): housekeeping commit 4b3b17e
+PUSHED on owner word (THE_WORLD.md + HOW_THE_WORLD_GETS_BUILT.md +
+both epubs + state doc; never-commit set held — grok-mockups/ etc.
+stay out). Then owner asked whether Exodus-created variables change
+when Kings/Samuel run + to SEE it: one_world scenario added to
+run_sandbox.py (4 cumulative stages on one state; 1 Kgs 8:4 tent-
+carried-up newly grounded + added to the Kings unit) — result: Exodus
+variables persist unchanged, ark born once at Exod 37:1, second
+placement fact accumulates beside the first, tent retired into
+temple, 11→20 entities, Samuel's demand closes in Kings. SANDBOX
+VIEWER built: sketches/sandbox/viewer.html (red banner, black/gold
+stationary tiles, scenario tabs + stages, ark tracker, glossed
+throughout), verified in Chrome; placement-order display bug fixed.
+Real journal untouched. Viewer at localhost:8765/sketches/sandbox/
+viewer.html. STANDING: end-of-day tutoring epub on owner's word.
+
+LATER 2026-08-24 (derivation refocus): GEN_08 READ + REBUILT in one
+sitting (owner: "lets do the next block" / "go") — first RE-era reading
+pass over a v1 unit, first Eden-block ledger. Enumerated 3,968 (local
+export_links; process delta recorded openly — per-verse oral_links
+fetches stop at Gen 2:3), declared 146 (132 primaries + Onkelos 2:4-17;
+the Shabbat-Siddur register false-positive excluded with cause again),
+READ 146/146 COMPLETE: 105 fresh (5 Pesikta DeRav Kahana in Hebrew),
+26 creation-week carry-credits, 14 Onkelos derive-time credits. Tally:
+48 material (NEW PROJECT RECORD; day 6 held 38) / 33 enrichment / 20
+dup / 4 no-bearing recorded openly. Crown: Noachide laws word-by-word
+from OUR 2:16 (Sanhedrin 56b + BR 16:6 + PDRK 12:1 accretion ladder,
+count-dissent carried); 2:17 handler resolved (1000-yr day-scope,
+multi-target, eat-only exact scope + adds-subtracts minted here,
+serpent's motive quotes our clause); SEVEN more laws land on span ops;
+proleptic-name rule at its legal seat (Ketubot 10b) upgrades
+NOTE_PRESUPPOSED; created-time + containment machlokot dual-tracked;
+ark-permanence join (BR 15:5 ↔ 2 Chr 5:9 — the world era's own thread,
+found by the chain first). REBUILD: rev 2 + changelog + 9 ORAL_* blocks,
+ORAL_eden_queue DISCHARGED. GATES: verify_claims 0 FAILED (14 ok),
+preflight ALL SCENARIOS GREEN, gloss_lint 0 flags (unit + ledger);
+verify_text 1 PRE-EXISTING fail (July red-dozen, confirmed unchanged
+vs HEAD, on the record awaiting text-layer redo). Full-rule-eligible;
+STAMP AWAITS OWNER WORD. Nothing committed.
+
+LATER 2026-08-24: GEN_08 STAMPED FULL RULE on owner word ("gen_08
+good") — rev 3, tree_derive_version -> logic_derived_v2_full_rule.
+BONUS AT THE STAMP: the July text-layer red REDONE — the 2:15
+tree_right quote carried an extra yod (ויניחהו for the ink's וינחהו,
+"and He placed him"); corrected to the ink, TEXT LAYER GREEN (14
+steps, 11 scenarios) — gen_08 leaves the honest-dozen list (was 85/97
+green era-wide; now one fewer red). FULL RITUAL COMPLETE: declared-
+reading gate (146/146), text layer, frozen run + scenarios, corpus
+regression 97/97, render py + self-proof, html, indexes, ALL_UNITS
+proof. Machine ops untouched throughout (records + one ink-true quote
+fix). First Eden unit at full rule; first v1 unit carried to full rule
+by the RE-era path end to end. TorahSim peer notified pre-stamp
+(msg fcabc88c); stamp itself not yet relayed. Nothing committed —
+owner commit word pending.
+ADDENDUM: stamp relayed to torahsim-19 (msg 2761f2b7) and ACKNOWLEDGED
+— it recorded gen_08 rev 3 / full rule / ritual green on its side,
+HOLDS until owner directs the sync (no standing word covers Eden; our
+commit word itself pending); on his word there: pure-copy + border
+substitution, re-render, nine gates, commit, chips read-through+full-
+rule per the vstat ruling. Owner informed in that window too.
