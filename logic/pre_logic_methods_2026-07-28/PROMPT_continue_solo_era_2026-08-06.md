@@ -2013,7 +2013,138 @@ process (read -> claims -> amend -> gates -> stamp, core-shelf
 narrow). THE_STEPS week table complete. Committing days 3+6+7 batch
 on the owner's word now; stamp relayed to TorahSim — its one-release
 deploy waits on Brian's word in its window.
+LATER 2026-08-23 — THE WEEK IS LIVE: TorahSim landed day 7 (ac0f14a,
+on c99c260 + a53ae4d, all pushed; verified HEAD=origin on disk) and
+Brian's conditional deploy word in its window ("wait until all 7 are
+done then deploy") FIRED — deployment cfd77bbd. VERIFIED FROM THE
+PUBLIC EDGE (WebFetch torahsimulation.org): Gen 2:1-3 serve {o:3,
+d:2}, Gen 2:4 control {o:0, d:1}. Before its commit, Brian ordered an
+overview review of the workshop-generated code in its window — CLEAN:
+all three solo units purely additive, witness states wall-asserted,
+census coherent 1-10 across seven units with both disputes carried,
+cites spot-checked present, gen_07's absent-row claim proven by its
+own baked assert. Genesis 1:1-2:3 read-through at full rule, PUBLIC.
+NEXT (discussion opened, NO changes ordered): Brian wants the public
+presentation reviewed — "sharing too much, overwhelming" — his idea:
+one exhibit set per THE_STEPS step; my counsel: guided front door
+(one worked example per step, the completed week as specimen), keep
+the full archive reachable behind it, never remove receipts;
+TorahSim-window work, sequenced after the release (which has now
+shipped). Awaiting his ruling on the shape.
+LATER 2026-08-23 — FRONT-DOOR MOCKUP delivered (owner: "make a
+mockup... no change just discuss" continued into build): grok-mockups/
+front_door_mockup_2026-08-23.html (workshop-only, never-commit dir).
+Shows: color-coded day-blocks on the scroll (colored rail + header),
+per-verse click-to-reveal ledger panel (1:7 demo), THE_STEPS walk as
+accordion cards (expand BELOW, same page, day-2 specimen), three
+grouping variants (rail / tinted / outline bracket) + four expansion
+patterns. Served to Chrome via localhost:8765 (nohup python http.
+server in grok-mockups/ — still running; kill with: lsof -ti :8765 |
+xargs kill). OPEN QUESTIONS for Brian: which grouping variant, which
+expansion patterns, day-2 as specimen? NO public-repo changes made.
+(Side item: fixed Cursor mic via tccutil reset, his hand.)
+LATER 2026-08-23 — MOCKUP SESSION #2, DESIGN SETTLED (long iterative
+sitting, all owner-ruled): the working spec now lives in grok-mockups/
+front_door_mockup_v4_2026-08-23.html (+ buttons_mockup gallery;
+local-only, never-commit dir; served localhost:8765). RULINGS:
+(1) mockups must replicate the LIVE SITE's design (v1-v3 failure:
+built from memory — corrected by fetching torahsimulation.org);
+(2) block = colored band with VERTICAL SPINE label ("BLOCK · DAY 2 ·
+GENESIS 1:6-8"), blue this block, green next; (3) verse rows collapse
+to LABEL ONLY (ref + JPS), one click opens pills+tree+morphology;
+whole card clickable to open, header closes; (4) every door = split
+button (option C: label + darker arrow end-cap, BIG arrow); inner
+labels plain text (blue button = clickable, nothing else);
+(5) step-numbered cards 3-8 at block foot ("the unit record"), STEP 3
+own card first (NOT nested in 4), full ledger inside STEP 4;
+(6) unit pill + chip status REMOVED from verse rows; band header
+carries plain words — owner's wording: "seven teachings from the
+tradition are built into this unit"; record: uid · rev as fine print;
+(7) transliteration pill row removed; (8) 1:6 tree = EXACT replica of
+live site (6 leaves, mark pills, 5-line leaf cards w/ ROLE line, zoom
+cluster; 1:7/1:8 trees still simplified — TODO if spec ships);
+(9) accordion: ONE item open at a time; opened item aligns to top w/
+collapse-compensated smooth scroll; open-state imagery = chevron/word
+swap (▸ open / ▾ close) + lit header + thin tan line down the open
+body; (10) STEP 5 renders ALL SEVEN day-2 claim chains as teaching
+cards (SAID → CLAIMED w/ middah → MACHINE) — owner wants the site to
+TEACH derivation; open discussion: add rules-intro box (my rec),
+cross-links, a rejected-example card. NEXT: owner verdict on teaching
+depth, then whether v4 becomes the build spec relayed to TorahSim.
 COMPACTION POINT — records current through here.
+★ WORLD REPLAY PLAYER — PROTOTYPE BUILT 2026-08-23 (post-compaction):
+owner asked how to visualize the logic RUNNING (learn / monitor / demo;
+"the end goal is to build a world — are we heading in the right
+direction?"). Answer settled: the world is ALREADY built (corpus_world
+fold); the tool is a WINDOW. Owner ruled world-first, then "yes build
+it," with a port question answered: two files + a data contract, all
+path knowledge in the generator, player is repo-blind. BUILT, workshop-
+only, grok-mockups/world_player/ (never-commit dir): (1) build_trace.py
+— read-only over the physics, calls corpus_world.fold(write=False)
+(drift gate vs Stage D intact), replays fold's exact seq numbering over
+the YAMLs, joins the world journal per op, exports trace.json (97
+units, 3,027 ops, 2,132 verses, 3.4 MB) + token→English glosses from
+entity_registry + full-book-name cite decoder (Bereshit Rabbah →
+"Midrash Rabbah, Genesis", bare tractates → "Babylonian Talmud, X");
+HASH MATCHES THE WORLD: 8b8fff1fa28953af. (2) index.html — THE WORLD ·
+REPLAY player, site design language, three panels (THE TEXT verse card
+w/ active op span highlighted in the verse Hebrew + JPS · THE TAPE
+per-unit op rows, family-colored spines, click-to-seek · THE WORLD
+live: counters, open-demands queue, ten-utterances census, names
+registry w/ glosses, day ledger, standing law, latest facts, WITNESS
+TIER in a double-border walled box, per-unit checkpoint hash line).
+Transport: step ◂▸ (arrow keys), play/pause (space), scrub, unit
+picker ⏮⏭. State = pure replay of deltas 0..cursor (backstep free).
+VERIFIED IN BROWSER: day 1 checkpoint (2 facts, census 1-2, or→yom
+w/ partition), day 2 queue mechanics (2 DECLAREs open → va-yehi khen
+["and it was so"] pops exists(raqia), divider stays), exo_21 HANDLER
+awl-and-door at Exod 21:6, END OF TAPE = FACTS 1809 · OPEN 191 · NAMES
+81 (authored-link settlements settle at their citing unit's end — bug
+found via 209≠191, fixed). Fold runs ~28s per trace regen. Server
+localhost:8765 (grok-mockups root). PORT PLAN (when owner says ship):
+copy player + run generator against TorahSim canon; player accepts
+embedded trace or fetch. OPEN: registry tokens (or, choshekh…) not in
+entity_registry show unglossed in machine-code context — flagged to
+owner; 1:7/1:8 mockup trees TODO unchanged; STEP 5 teaching-depth
+verdict still pending from mockup session.
+ ADDENDUM same day: (a) mockup v4 RELAYED to peer torahsim-19 on
+owner's word ("tell torahsim about this mockup… store this for
+tomorrow's work on restructuring the website… He will build it") —
+storage only, no build today, open items marked not-ruled; (b) owner
+ruled the player scrolls too much ("display that was stationary…
+boxes that update without moving") → STATIONARY DASHBOARD built:
+world_player/dashboard.html (index.html kept as sibling, same
+trace.json contract). One fixed screen, no page scroll: THE VERSE /
+WHAT JUST HAPPENED (generated plain-English narrator per op kind) /
+THE CHAIN'S TEACHING (scrolls inside its box) on the left; instrument
+tiles right (queue, census, ledger, tests, facts, names, law, witness
+wall) — each tile FLASHES gold when the current op touches it (the
+"screen points at what changed" fix); canvas FILMSTRIP of all 3,027
+ops across the bottom (family colors, unit borders, playhead, click
+to jump); click any tile header → full-archive overlay (scale answer:
+dashboard shows the frontier, archive behind the click; counters are
+scale-proof). Verified in browser: day-2 witness flash, end-of-tape
+FACTS 1809 / OPEN 191 / NAMES 81 (glosses live) / LAW 179 / WIT 11 /
+TESTS 14, queue overlay lists all 191 with speaker + spoken-at ref.
+Zoom-to-unit-grain watching = discussed, not yet ruled.
+ NIGHT CLOSE 2026-08-23: dashboard restyled on owner word (black bg,
+white letters, large type). Then the ARCHITECTURE conversation — owner:
+"should we rethink how we are deriving code from genesis if the end
+goal is to build a simulation?… does that sound like a database
+structure?" Settled in discussion (no build): derivation UNCHANGED
+(evidence immutable per constitution); the want is a STRUCTURAL FOLD —
+a new model over the same frozen ops. Evidence check confirmed loc=/
+product= slots already in receipts (day 4 loc=raqia_ha_shamayim, day
+5-6 product=). Two-machines picture named: proof machine (corpus fold,
+no inputs by design) vs simulation machine (exo_21 v2 World class —
+owner's memory of the Tanakh case run confirmed in
+logic/law_era/exo_21_v2_DRAFT.py + tanakh_run/). ★ THE_WORLD.md
+CREATED at repo ROOT on owner word ("master architect file… keep a
+log of these ideas") — goal, two machines, Genesis-as-schema, build
+queue (structural fold + WORLD TREE tile recommended; scenario mode /
+case runner; forming-filling test; unit-grain zoom), design
+principles, dated idea log. Memory pointer added. Owner to bed;
+RESUME TOMORROW: pick from THE_WORLD.md build queue.
 ★ CONSTITUTION ADOPTED BOTH SIDES + VERIFIED 2026-08-21 (40th update):
 TorahSim adopted on owner's word in its window (METHOD_LAWS law-1
 "Declared reading, honest ledgers" + constitution section; SCHEMA rev/
@@ -3472,3 +3603,84 @@ Josephtorah. Memory dir holds the standing laws: external-review-standing-
 law, triage-deferral-policy, grok-full-control-handoff (CLOSED — audit
 discharged), auto-freeze-process, derivation-narrative-process (ASK OWNER
 before each narrative), compaction-protocol.
+
+LATER 2026-08-24 (world era, day 2): morning design run in THE_WORLD.md
+— disposability principle, website path (3 stages + parity gate), THE
+WORLD IS A LEDGER (owner's living-world challenge), database ruling
+(journal=pen, sqlite=index, two disciplines), KINDS table (owner's
+type insight; le-minah), PEER REVIEW by torahsim-19 at owner's word
+(agreed + 9 adopted deltas incl. truth split L0/L1 derived vs L2+
+primary, witness wall as mechanical gate, byte determinism, event-
+kinds register), one-source site rule. Then "ok build it": PASS 1
+SHIPPED — grok-mockups/world_journal/ (registers, worldledger.py,
+build_world.py), L0+L1 journal chained + sqlite index, 17/17
+verification green, byte-identical double fold, world_tree.json view,
+WORLD TREE tile live in the dashboard (grows with cursor, breach
+banner at the flood). All workshop-only, nothing committed.
+
+LATER 2026-08-24 (world era day 2, afternoon): PASS 2 SHIPPED — the
+living layer (primary/scenes.yaml 5 scenes = first PRIMARY records;
+run_cases.py → 43 L2 events; verdicts computed by the exo21 machine:
+tam pays 75 from his own body w/ KENAS + Babylonia riders, muad 150
+from best land, benefit ban rides-the-verdict then spent by execution,
+slave FREE at day 2190, muad walks back to tam on clean days). Phone
+viewer published (private artifact d5c60599…, milestone chips + tree
+scrub + verdicts; NOT a publish — no-publish rule intact). Owner
+governance sweep: guesses → measured pins (21 checks), scans → gates
+(dialect report per book: gen installs / exo names / lev pure-law;
+Exodus dialect PINNED zero installs; --selftest byte determinism);
+three-tier doctrine + physical separation (sketches/ w/ rules README);
+vocabulary ruling STONE · MILL · SKETCH ("machine" keeps site meaning:
+stone instructions on the physics); derivation lessons logged (protect
+slots; decide entity-birth convention pre-scale; sketch-to-plan/
+derive-blind/compare-after safeguard). FIRST SKETCH RUN: tabernacle
+Exod 25-27 (grounded in Data/Exod.xml; ve-asita ×53, ka-asher tzivah
+×23) → 8 proposed classes (template/instance, graded zones — the veil
+uses day 2's dividing verb INSIDE a container, assembly w/ counts,
+mikshah integrity, materials gradient, portability, occupancy/built
+meeting point — Eden's cherubim become throne attendants, cross-unit
+demand load ×10) — highest yield seen, fourth dialect. All in
+THE_WORLD.md. OWNER STANDING REQUEST: end-of-day tutoring EPUB of
+today's learning (listening edition, like How_The_World_Gets_Built_
+Audio) — build when he says the day is done.
+
+LATER 2026-08-24 (world era day 2, close of span): SANDBOX MODE built
+on owner's word ("Yes and keep the folders separate don't blend
+anything") — sketches/sandbox/ (units STATUS=SKETCH hard-checked, own
+data/ + journal w/ local chain, real physics machine.py imported
+read-only; no world_journal imports, chain duplicated for quarantine;
+rules 5-8 in sketches/README). FIRST SANDBOX RUN green: tabernacle
+sketch as 2 executable units — Run A (Exod 25-27 spec alone) = 12
+demands OPEN, ZERO entities, 22 spec facts, 2 invariants (blueprints
+not buildings); Run B (+35-40 receipts) = 0 open, 11 built, holy|
+most-holy partition, glory-fills event closes the master demand. Real
+journal md5 verified untouched. Owner clarifications answered: run
+input was ONLY the 2 sketch units (not the Torah); Tanakh-wide survey
+given LOOK-ONLY (sanctuary system thread: Exod 28-31 specs, Leviticus
+as operating manual + Lev 16 ACL, Numbers logistics/porters/cloud,
+David→Solomon deferred demand, 1 Kings 8 glory-fill repeat, 1 Chr
+28:19 tavnit-by-name, vessel exile + Ezra counted restore 5,400,
+Ezekiel 40-48 spec-with-no-receipt — every sketched class exercised
+downstream; survey earmarked for the epub). STANDING: end-of-day
+tutoring epub (listening edition) on owner's "done for the day".
+OWNER'S NEXT INTENT after compaction: "then we can run the test code."
+THE_WORLD.md idea log current through 16 entries today.
+COMPACTION POINT — records current through here.
+
+LATER 2026-08-24 (world era day 3): SECOND SANDBOX RUN on owner's word
+("ok lets run the test code on the other section") — Solomon's temple,
+the second-book test. SKETCH_1kgs_6-8_temple_2026-08-24.md grounded
+(13 consonantal probes, 1Kgs+2Sam; twin verses in the ink: dwell-verb
+6:13=Exod 25:8, glory-fill 8:11=Exod 40:34, melakhah/"work" 7:51=Exod
+40:33=Gen 2:2). Two new sketch units + run_sandbox.py generalized to
+SCENARIOS (guards intact). Results: temple A (Kings alone) = 9 built /
+0 local declares — receipts-first FIFTH dialect, inverse of tabernacle
+A; temple B (2 Sam 7 prepended) = exists(beit_YHWH) pushed 2Sam.7.13
+satisfied 1Kgs.6.14 — CROSS-BOOK DEMAND DISCHARGED on the unmodified
+physics; correctly still open: dynasty promise ad-olam ("forever") +
+the 6:12 IF. Ark absent from created set (only placement facts) — F14
+object-migration exhibited by the machine itself. Findings F9-F14
+logged in the sketch + THE_WORLD.md. Schema survived book two at
+sketch grade (Stage-2 gate: hypothesis-grade yes; stone still
+required). Real journal md5 verified untouched. Nothing committed.
+STANDING: end-of-day tutoring epub on owner's word.
