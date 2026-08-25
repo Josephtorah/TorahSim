@@ -87,6 +87,7 @@ ALLOW = {
     ("index.html", "ve-harag"),
     ("index.html", "le-minehem"),
     # same class: CSS tokens in the website/ design mockups
+    ("spacing_mockup_2026-08-25.html", "uband-head"),
     ("buttons_mockup_2026-08-23.html", "inline-flex"),
     ("buttons_mockup_2026-08-23.html", "inline-block"),
     ("front_door_mockup_v4_2026-08-23.html", "uband-head"),

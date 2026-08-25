@@ -7,7 +7,7 @@
 * { box-sizing:border-box; }
 html { font-size:18px; }   /* master text scale — all rem sizes key off this */
 body { margin:0; background:var(--bg); color:var(--fg);
-       font:1rem/1.55 "Charter","Georgia",serif;
+       font:1rem/1.4 "Charter","Georgia",serif;  /* COMPACT (owner spacing ruling 2026-08-25) */
        min-width:1024px;              /* layout floor: fits iPad landscape fully   */
        -webkit-text-size-adjust:100%; /* iPhone pans sideways instead of reflowing */ }
 main { max-width:1680px; margin:0 auto; padding:1rem 2rem 8rem; }
@@ -46,14 +46,14 @@ input.search { width:230px; }
 mark { background:#ffe89a; padding:0 .05em; }
 
 /* ---------- chapter + verse cards ---------- */
-.chapter-head { margin:2rem 0 .6rem; padding:.5rem .9rem; background:var(--hd);
+.chapter-head { margin:1rem 0 .45rem; padding:.35rem .7rem; background:var(--hd);
        border:1px solid var(--line); border-radius:8px; display:flex; gap:.8rem;
        align-items:baseline; }
 .chapter-head h2 { margin:0; font-size:1.15rem; }
 .chapter-head span { color:var(--mut); font-size:.82rem; }
-.verse { border:1px solid var(--line); border-radius:10px; margin:1rem 0; padding:.9rem 1.2rem;
+.verse { border:1px solid var(--line); border-radius:10px; margin:.45rem 0; padding:.45rem .8rem;
        scroll-margin-top:5.2rem; }
-.vhead { display:flex; gap:.6rem; align-items:center; flex-wrap:wrap; margin-bottom:.4rem; }
+.vhead { display:flex; gap:.6rem; align-items:center; flex-wrap:wrap; margin-bottom:.18rem; }
 .vref { font-weight:bold; color:var(--acc); }
 .badge { font:.68rem/1.5 monospace; padding:0 .45rem; border-radius:10px; }
 .badge.frozen { background:#e8f5ec; color:var(--frozen); border:1px solid #bfe3ca; }
@@ -69,7 +69,7 @@ a.nav { text-decoration:none; display:inline-block; }
 .flat .lab:first-child { margin-top:0; }
 .he-row { direction:rtl; text-align:left; font-size:1.3rem; }
 .brick { display:inline-block; background:var(--chip); border:1px solid var(--line);
-       border-radius:6px; padding:.03rem .45rem; margin:.08rem .12rem; }
+       border-radius:6px; padding:.02rem .35rem; margin:.06rem .1rem; }
 
 /* ---------- always-open sections ---------- */
 .sect { border-top:1px dashed var(--line); margin-top:.7rem; padding-top:.45rem; }
@@ -77,10 +77,10 @@ a.nav { text-decoration:none; display:inline-block; }
        text-transform:uppercase; color:var(--mut); font-weight:normal; }
 .sect h3 .count { color:#b0a88f; }
 .sect .desc { font-size:.78rem; color:var(--mut); font-style:italic; margin:0 0 .25rem; }
-table { border-collapse:collapse; width:100%; font-size:.82rem; margin:.45rem 0 .3rem; }
+table { border-collapse:collapse; width:100%; font-size:.82rem; margin:.3rem 0 .2rem; }
 th { background:var(--hd); text-align:left; font-size:.68rem; letter-spacing:.05em;
      text-transform:uppercase; }
-th,td { border:1px solid var(--line); padding:.28rem .55rem; vertical-align:top; }
+th,td { border:1px solid var(--line); padding:.18rem .45rem; vertical-align:top; }
 td.he { font-size:1.05rem; direction:rtl; text-align:right; }
 td.code, .mono { font-family:monospace; font-size:.76rem; }
 tr.bstart td { border-top:2px solid var(--acc); }
@@ -101,6 +101,104 @@ pre.codepre .cmt { color:#6b7280; }
 footer { border-top:2px solid var(--acc); margin-top:3rem; padding-top:1rem;
        font-size:.82rem; color:var(--mut); }
 footer h3 { font-size:.8rem; text-transform:uppercase; letter-spacing:.07em; color:var(--fg); }
+
+/* ---------- the redesign (owner build order 2026-08-25): unit bands,
+   collapsed verse cards, the steps 3–8 record at each band's foot,
+   one blue everywhere (spine, buttons, verse shades — owner ruling) ---------- */
+.uband { border:1px solid var(--line); border-radius:10px; margin:.7rem 0;
+       display:flex; overflow:hidden; }
+.uspine { flex:none; width:26px; background:var(--bblue); color:#fff;
+       writing-mode:vertical-rl; text-orientation:mixed; padding:14px 0;
+       display:flex; justify-content:flex-start; align-items:center;
+       font:700 11px Verdana,sans-serif; letter-spacing:.18em; white-space:nowrap; }
+.ubody { flex:1; min-width:0; padding:0 0 6px;
+       background:linear-gradient(to right, var(--bbluel), transparent 140px); }
+.uband-head { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;
+       padding:.3rem .75rem; border-bottom:1px dashed var(--line); }
+.uband-head .ulab { font:700 12px Verdana,sans-serif; color:var(--bblue);
+       letter-spacing:.03em; }
+.uband-head .ustat { font-size:.85rem; }
+.uband-head .urecline { font:.68rem monospace; color:var(--mut); margin-left:auto; }
+.uband .verse { margin:.4rem .55rem; background:#fff; }
+.verse.vclosed { cursor:pointer; }
+.verse.isopen { cursor:auto; }
+.verse.isopen .vhead { cursor:pointer; }
+.vhead.on { background:var(--bbluel); border-radius:6px; }
+.vhead .more, .xp-head .more { margin-left:auto; font:11px Verdana,sans-serif;
+       color:var(--bblue); white-space:nowrap; }
+.stepchip { display:Inline-Flex; align-items:stretch; flex:none; border-radius:5px;
+       overflow:hidden; font:700 10px Verdana,sans-serif; color:#fff; letter-spacing:.06em; }
+.stepchip .lab { background:var(--bblue); padding:3px 7px; display:flex; align-items:center; }
+.stepchip .cap2 { background:rgba(0,0,0,.25); padding:2px 9px; font-size:15px;
+       line-height:1; display:flex; align-items:center; }
+.jps { font-style:italic; color:#5a5648; margin:.05rem 0 0; }
+.rowlab { font:.68rem monospace; letter-spacing:.12em; color:var(--mut);
+       margin:.35rem 0 .15rem; text-transform:uppercase; }
+.vbody { display:none; border-top:1px dashed var(--line); margin-top:.32rem; padding-top:.32rem; }
+.vbody.open { display:block; }
+.urec { margin:.3rem .55rem .5rem; border-top:2px solid var(--bblue); padding-top:.32rem; }
+.urec-title { font:700 11.5px Verdana,sans-serif; color:var(--bblue);
+       letter-spacing:.1em; margin:2px 0 5px; }
+.xp { background:#fff; border:1px solid var(--line); border-radius:8px; margin:4px 0;
+       scroll-margin-top:5.2rem; }
+.xp-head { display:flex; gap:12px; align-items:baseline; padding:5px 10px; cursor:pointer; }
+.xp-head:hover { background:#fdfaf1; }
+.xp-head.on { background:var(--bbluel); }
+.xp-head .sum { color:var(--mut); font-size:.85rem; }
+.xp-body { display:none; border-top:1px solid var(--line); padding:8px 12px;
+       font-size:.88rem; background:#fffdf8; }
+.xp-body.open { display:block; border-left:3px solid #d3c69f; }
+.counters { display:flex; gap:10px; flex-wrap:wrap; margin:6px 0; }
+.counters div { background:var(--bbluel); border-radius:6px; padding:5px 10px; text-align:center; }
+.counters b { display:block; font-size:19px; }
+.counters span { font:10.5px Verdana,sans-serif; color:var(--mut); }
+td.mat { background:#edf3ea; font-weight:700; }
+.claim { border:1px solid var(--line); border-radius:8px; background:#fff;
+       margin:10px 0; padding:10px 14px; }
+.claim h5 { margin:0 0 6px; font:700 .88rem Charter,Georgia,serif; }
+.claim.rej { border-style:dashed; background:#fffdf6; }
+.clrow { display:flex; gap:10px; margin:4px 0; font-size:.82rem; line-height:1.5; }
+.clrow .t { flex:none; width:74px; font:700 9.5px Verdana,sans-serif;
+       letter-spacing:.08em; color:#7a5c10; padding-top:3px; }
+.clrow .t.m { color:var(--bblue); }
+.midd { font:italic .8rem Charter,Georgia,serif; color:var(--mut); }
+.rulesintro { background:var(--hd); border:1px solid var(--line); border-radius:8px;
+       padding:10px 14px; margin:6px 0 10px; font-size:.82rem; line-height:1.55; }
+.peek { border-bottom:1.5px dotted var(--bblue); cursor:pointer; color:var(--bblue); }
+.peekbox { display:none; position:relative; margin:6px 0 2px 84px; background:var(--bbluel);
+       border:1px solid var(--bblue); border-radius:8px; padding:8px 34px 8px 12px;
+       font:.8rem/1.5 Charter,Georgia,serif; }
+.peekbox.open { display:block; }
+.peekbox .pkx { position:absolute; right:8px; top:6px; font:700 12px Verdana,sans-serif;
+       color:var(--bblue); cursor:pointer; }
+.peekbox .pkt { font:700 9.5px Verdana,sans-serif; letter-spacing:.08em;
+       color:var(--bblue); display:block; margin-bottom:2px; }
+.gates { display:flex; flex-wrap:wrap; gap:6px; font:11.5px Verdana,sans-serif; margin:6px 0; }
+.gates i { font-style:normal; background:#eef3ea; border:1px solid #c8d6bc;
+       border-radius:4px; padding:3px 8px; }
+.vchip2 { font:700 10px Verdana,sans-serif; color:#fff; border-radius:3px;
+       padding:2px 7px; margin-right:8px; }
+.vgroup { border-left:5px solid; background:var(--code); border-radius:0 8px 8px 0;
+       padding:8px 12px; margin:6px 0 10px; font:.78rem/1.6 Menlo,Consolas,monospace;
+       overflow-x:auto; white-space:pre; }
+.badge.vstat { background:none; border:none; color:var(--mut); cursor:help; }
+:root { --bblue:#5a7ca6; --bbluel:#eef2f8; }
+
+/* ---------- the verse-tree window (pan + zoom) ---------- */
+.tvp { position:relative; height:300px; border:1px solid var(--line); border-radius:10px;
+       overflow:hidden; background:#fffdf6; cursor:grab; user-select:none;
+       margin:.3rem 0 .2rem; }
+.tvp:active { cursor:grabbing; }
+.tvp .tin { position:absolute; top:0; left:0; transform-origin:0 0; }
+.tzc { position:absolute; bottom:10px; right:10px; z-index:5; display:flex;
+       flex-direction:column; gap:4px; align-items:center; }
+.tzc button { width:34px; height:30px; font-size:16px; font-weight:700; padding:0;
+       background:#fffdf6; color:var(--acc); border:1px solid var(--line);
+       border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,.08); }
+.tzc button:hover { background:var(--chip); color:var(--acc); }
+.tzc button.tzf { font:.62rem/1 monospace; font-weight:600; height:24px; }
+.tzc .tzl { font:.62rem/1.5 monospace; color:var(--mut); background:#fffdf6;
+       border:1px solid var(--line); border-radius:6px; padding:0 .35rem; }
 </style></head><body>
 
 <header><div class="bar">
@@ -110,6 +208,7 @@ footer h3 { font-size:.8rem; text-transform:uppercase; letter-spacing:.07em; col
   <select id="vrs" onchange="jump()" title="verse"></select><button class="nav" onclick="step('vrs',-1)" title="previous verse">◀</button><button class="nav" onclick="step('vrs',1)" title="next verse">▶</button>
   <button onclick="jump()">Go</button>
   <a class="nav" href="units/UNIT_INDEX.html" title="coverage index — every derived unit, with links between the YAML view and this verse view">☰ units</a>
+  <a class="nav" href="coverage/" title="the whole Torah as a grid — every verse's status on the two tracks, computed from the records at every build">▦ coverage</a>
   <input class="search" id="q" placeholder="🔍 Search any word…"
          title="Hebrew (unpointed), transliteration, or English — Enter to search, Esc to close"
          onkeydown="if(event.key==='Enter')doSearch(); if(event.key==='Escape')hideResults()">
@@ -135,19 +234,24 @@ footer h3 { font-size:.8rem; text-transform:uppercase; letter-spacing:.07em; col
   where possible.</p>
   <h3>Read this first</h3>
   <p>English and transliteration are reading aids only — Hebrew is the sole derivation source.
-  Role and code lines are automatic, illustrative renderings of grammatical facts; verses marked
-  ❄ frozen carry human-derived, owner-reviewed logic units. Nothing on this site is binding
-  religious law.</p>
+  Role and code lines are automatic, illustrative renderings of grammatical facts; verses inside
+  a ⚙ unit band carry human-derived logic — the model revision is shown, and all gates are green
+  at every build. Nothing on this site is binding religious law.</p>
 </footer>
 </main>
 
 <script>
 "use strict";
-const LEDGER_DESC = "The result of splitting the verse into leaves based on the " +
-  "cantillation marks: one row per leaf-brick — the words the ta'amim glued together, " +
-  "the pause mark that sealed them, their address in the verse's tree, and an " +
-  "automatic hint at their role.";
+const TREE_DESC = "The verse as the ta'amim (cantillation marks) built it: the " +
+  "strongest pause splits first, each split labeled with the mark that made the cut, " +
+  "down to the leaves. Drag to pan; magnify with ⌘/Ctrl + scroll, " +
+  "double-click (shift to shrink), pinch, or the corner controls; " +
+  "hover a leaf for its word range and why it froze.";
 const FSI = "⁨", PDI = "⁩";
+
+let UREC = {};                // unit records (data/urec.json) — the band facts
+const VD = new Map();         // verse id -> bundle verse (for lazy tree builds)
+let BSEQ = 0;                 // band sequence, namespaces the record's ids
 
 let MANIFEST = null;
 let SEQ = [];          // ordered chapter list: [{b:"Gen", c:1}, ...]
@@ -168,68 +272,452 @@ async function bundle(b, c) {
   return cache.get(key);
 }
 
-/* ---------------- rendering ---------------- */
-function verseHTML(b, c, vd) {
-  const name = MANIFEST.books.find(x => x.id === b).name;
-  const uid0 = vd.frozen.length ? vd.frozen[0].split(" · ")[0] : "";
-  const badge = vd.frozen.length
-    ? `<a class="badge frozen" href="units/UNIT_${esc(uid0)}.html" title="${esc(vd.frozen.join(" · "))} — click to switch to the unit's derivation page (the YAML view)">❄ frozen: ${esc(uid0)} ⇄</a>`
-    : `<span class="badge auto">auto · illustrative</span>`;
-  const oral = vd.oral
-    ? `<span class="badge oral" title="Oral-tradition sources anchored to this verse (tier 1 of Sefaria's link index): ${vd.oral[0]} enumerated, ${vd.oral[1]} read with a verdict in the triage ledger, ${vd.oral[2]} judged material (bearing on the frozen derivation). Enumerated / fetched / read are kept as separate honest counters; the ledger in logic/oral_triage/ is the canonical record.">📜 oral ${vd.oral[1]}/${vd.oral[0]} read${vd.oral[2] ? ` · ${vd.oral[2]} material` : ""}</span>`
-    : "";
+/* ---------------- rendering (the redesign, owner build 2026-08-25):
+   collapsed verse cards inside unit bands; the steps 3–8 record at each
+   band's foot; everything drawn from the bundles and data/urec.json ---- */
+function vstatChip(vd) {
+  const vs = vd.vstat || {o: 0, d: 0, p: false, g: "v"};
+  const otxt = vs.o === 3 ? (vs.g === "c" ? "chapter read through" : "read through")
+    : vs.o === 2 ? `in reading ${vd.oral[1]}/${vd.oral[0]}` : "unopened";
+  const mat = vs.o >= 2 && vd.oral && vd.oral[2] ? ` · ${vd.oral[2]} material` : "";
+  const dtxt = vs.d === 2 ? "full rule" : vs.d === 1 ? "first pass" : "underived";
+  const vtitle = vs.g === "c"
+    ? "Verse status. Oral track: the whole chapter was read through under the law-era rule — every readable oral source on the chapter read and logged in the reading ledger (scans/ledgers/). Its rows anchor to the chapter's law, so no per-verse fraction is shown. Derivation track: " + dtxt + (vs.p ? ". Proven: the chapter is compiled to machines and its recorded cases run green." : ".")
+    : "Verse status. Oral track: " + (vd.oral ? vd.oral[0] + " sources enumerated (tier 1 of the link index), " + vd.oral[1] + " read with a verdict in the triage ledger (logic/oral_triage/), " + vd.oral[2] + " judged material (bearing on the derived logic)" : otxt === "read through" ? "the block's declared reading is COMPLETE in its triage ledger (logic/oral_triage/)" : "no oral sources enumerated yet") + ". Derivation track: " + dtxt + (vs.p ? ". Proven: compiled to machines, recorded cases green." : ".") + " Labels are computed from the records on every build — never hand-set.";
+  return `<span class="badge vstat" title="${vtitle}">ⓘ ${otxt}${mat} · ${dtxt}${vs.p ? " · proven" : ""}</span>`;
+}
+
+function verseHTML(b, c, vd, banded) {
+  const name = bookById(b).name;
+  const vid = `v${b}_${c}_${vd.v}`;
+  VD.set(vid, vd);
   const fen = vd.fen ? `“${esc(vd.fen)}”`
     : "word glosses: " + esc(vd.leaves.map(l => l.en).join(" · "));
-  const bricks = k => vd.leaves.map(l =>
-    `<span class="brick">(${k === "he" ? FSI + esc(l.he) + PDI : esc(l[k])})</span>`).join(" ");
-
-  const ledger = vd.leaves.map(l =>
-    `<tr><td><b>B${l.b}</b></td><td>${esc(l.w)}</td><td class="code">${esc(l.path)}</td>` +
-    `<td class="he">${esc(l.he)}</td><td>${esc(l.tr)}</td><td>${esc(l.en)}</td>` +
-    `<td>${esc(l.mark)} · r${l.rank}</td><td>${esc(l.froze)}</td><td>${esc(l.role)}</td></tr>`).join("");
-
+  const chips = banded ? "" :
+    `<span class="badge auto">auto · illustrative</span>${vstatChip(vd)}`;
+  const heb = vd.leaves.map(l =>
+    `<span class="brick">(${FSI}${esc(l.he)}${PDI})</span>`).join(" ");
+  const eng = vd.leaves.map(l =>
+    `<span class="brick">(${esc(l.en)})</span>`).join(" ");
   const morph = vd.morph.map(m =>
     `<tr${m.bs ? ' class="bstart"' : ""}><td><b>B${m.b}</b></td><td class="code">${esc(m.w)}</td>` +
     `<td class="he">${esc(m.he)}</td><td>${esc(m.tr)}</td><td>${esc(m.en)}</td>` +
     `<td class="code">${esc(m.code)}</td><td>${esc(m.g)}</td></tr>`).join("");
-
-  const codeHead = vd.frozen.map(f =>
-    `<span class="cmt"># frozen coverage: ${esc(f)}</span>`).join("\n");
-  const code = vd.code.map(l =>
-    `${esc(l.c).padEnd(38)}<span class="cmt">${esc(l.m)}</span>`).join("\n");
-
-  return `<section class="verse" id="v${b}_${c}_${vd.v}" data-ref="${esc(name)} ${c}:${vd.v}">
-  <div class="vhead"><span class="vref">${esc(b)} ${c}:${vd.v}</span>${badge}${oral}
-    <span class="fen">${fen}</span></div>
-  <div class="flat">
-    <div class="lab">Hebrew</div>
-    <div class="row he-row">${bricks("he")}</div>
-    <div class="lab">Transliteration</div>
-    <div class="row">${bricks("tr")}</div>
-    <div class="lab">English</div>
-    <div class="row">${bricks("en")}</div>
-  </div>
-  <div class="sect"><h3>Leaf ledger <span class="count">· ${vd.leaves.length} bricks</span></h3>
-    <p class="desc">${LEDGER_DESC}</p>
-    <table><tr><th>B#</th><th>words</th><th>path</th><th>Hebrew</th><th>Transliteration</th>
-      <th>English</th><th>end mark · rank</th><th>froze because</th><th>role (auto)</th></tr>
-      ${ledger}</table></div>
-  <div class="sect"><h3>Morph <span class="count">· ${vd.morph.length} morpheme rows</span></h3>
+  const code = banded ? "" :
+    `<div class="sect"><h3>Code <span class="count">· machine-operator sketch (auto)</span></h3>
+    <pre class="codepre">${vd.code.map(l =>
+      `${esc(l.c).padEnd(38)}<span class="cmt">${esc(l.m)}</span>`).join("\n")}</pre></div>`;
+  return `<section class="verse vclosed" id="${vid}" data-ref="${esc(name)} ${c}:${vd.v}" onclick="vtg(event,this,'b_${vid}')">
+  <div class="vhead"><span class="stepchip"><span class="lab">STEP 1 · 2</span><span class="cap2">▸</span></span>
+    <span class="vref">${esc(b)} ${c}:${vd.v}</span>${chips}<span class="more">▸ open</span></div>
+  <div class="jps">${fen}</div>
+  <div id="b_${vid}" class="vbody">
+    <div class="rowlab">Hebrew</div>
+    <div class="flat"><div class="row he-row">${heb}</div></div>
+    <div class="rowlab">English</div>
+    <div class="flat"><div class="row">${eng}</div></div>
+    <div class="rowlab">Step 1 — verse tree · ${vd.leaves.length} leaves</div>
+    <p class="desc" style="font-style:italic;font-size:.78rem;color:var(--mut);margin:.1rem 0 .25rem">${TREE_DESC}</p>
+    <div class="tvp" data-key="${vid}"></div>
+    <div class="rowlab">Step 2 — morphology · ${vd.morph.length} morpheme rows</div>
     <table><tr><th>B#</th><th>w</th><th>Hebrew</th><th>Transliteration</th><th>English</th>
-      <th>code</th><th>grammar (English aid)</th></tr>
-      ${morph}</table></div>
-  <div class="sect"><h3>Code <span class="count">· machine-operator sketch (auto)</span></h3>
-    <pre class="codepre">${codeHead}${codeHead ? "\n" : ""}${code}</pre></div>
-</section>`;
+      <th>code</th><th>grammar (English aid)</th></tr>${morph}</table>
+    ${code}
+  </div></section>`;
+}
+
+const RULES_INTRO = "<b>The tradition's own rulebook.</b> When the sages derive a claim " +
+  "from a verse, they name the inference rule they used — the tradition keeps a numbered " +
+  "rulebook of its own: 13 rules of Rabbi Ishmael for law, 32 rules of Rabbi Eliezer for " +
+  "narrative. When a teaching below leans on one, its card names the rule — e.g. the " +
+  "wording-analogy (gezerah shavah) or word-splitting (notarikon). Where no rule is " +
+  "named, the source states plainly rather than infers.";
+const GATE_NAMES = ["gloss", "97 units", "chapter proof", "64 scenes", "sim",
+                    "receipts", "labels", "changelog", "press"];
+
+function shadeOf(i, n) {
+  const base = [0x5a, 0x7c, 0xa6];
+  const t = (i - (n - 1) / 2) / Math.max(n, 2) * 0.55;
+  const f = c => Math.round(t < 0 ? c + (255 - c) * (-t) : c * (1 - t));
+  return "#" + base.map(f).map(x => x.toString(16).padStart(2, "0")).join("");
+}
+
+function teachCards(bid, u) {
+  const inc = (s, n) => { const w = String(s || "").replace(/\./g, " ").split(/\s+/)
+    .filter(Boolean); return w.slice(0, n).join(" ") + (w.length > n ? " …" : ""); };
+  let census = u.census;
+  const cards = (u.teach || []).map((t, i) => {
+    const low = String(t.en).toLowerCase();
+    let middah = "";
+    for (const [probe, nm] of [["a-fortiori", "a-fortiori (qal va-chomer, the light-and-weighty rule)"],
+                               ["gezerah", "wording-analogy (gezerah shavah)"],
+                               ["notarikon", "word-splitting (notarikon)"],
+                               ["gematria", "letter-count (gematria)"]])
+      if (low.includes(probe)) { middah = `<span class="midd">middah named in the source: ${nm}.</span>`; break; }
+    let claimed = esc(t.en), peek = "";
+    if (census && (low.includes("utterance") || low.includes("census") || low.includes("ma'amar"))) {
+      const pid = bid + "pk" + i;
+      claimed += ` <span class="peek" onclick="pk(event,'${pid}')">the census thread</span>`;
+      peek = `<div id="${pid}" class="peekbox"><span class="pkx" onclick="pk(event,'${pid}')">×</span><span class="pkt">THE CENSUS THREAD</span>${esc(census)} <span style="font:.72rem monospace;color:var(--mut)">↳ the ten-utterances census, counted block by block across the creation week</span></div>`;
+      census = null;
+    }
+    return `<div class="claim"><h5>T${i + 1} · ${esc(t.id.replace(/^ORAL_/, "").replace(/_/g, " "))}</h5>
+      <div class="clrow"><span class="t">SAID</span><span>${esc(t.work)}: <span dir="rtl">(${esc(inc(t.he, 5))})</span> (${esc(inc(t.tr, 7))})</span></div>
+      <div class="clrow"><span class="t">CLAIMED</span><span>${claimed} ${middah}</span></div>${peek}
+      <div class="clrow"><span class="t m">MACHINE</span><span style="font-family:monospace;font-size:.76rem">oral block ${esc(t.id)} · status ${esc(t.status)} · carried in the unit's record</span></div></div>`;
+  }).join("");
+  const kept = u.kept ? `<div class="claim rej"><h5>R · Read, recorded — and kept out</h5>
+      <div class="clrow"><span class="t">SAID</span><span>${esc(u.kept[0])} — ${esc(u.kept[1])}</span></div>
+      <div class="clrow"><span class="t">CLAIMED</span><span>Nothing. The reading adorns the verse — verdict: <b>enrichment</b>, ledger row ${u.kept[2]} — but it adds no operator, no state, no boundary the primaries did not already give.</span></div>
+      <div class="clrow"><span class="t m">MACHINE</span><span style="font-family:monospace;font-size:.76rem">no change — the row stands in the append-only ledger; reading means filtering, and the filter is on the record</span></div></div>` : "";
+  return cards + kept;
+}
+
+function unitRecordHTML(bid, uid, u, vds) {
+  const g = (vds[0].vstat || {}).g;
+  const teach = u.teach || [], hasLed = !!u.led;
+  const material = (u.cls || {}).material || 0;
+  const chip = s => `<span class="stepchip"><span class="lab">${s}</span><span class="cap2">▸</span></span>`;
+  const xp = (id, label, title, sum, body, top) =>
+    `<div class="xp"><div class="xp-head" onclick="tg(this,'${id}',${top ? 1 : 0})">${chip(label)}<b>${title}</b><span class="sum">${sum}</span><span class="more">▸ open</span></div><div id="${id}" class="xp-body">${body}</div></div>`;
+
+  let s3sum, s3body, s4sum, s4body;
+  if (hasLed) {
+    const clsRows = Object.entries(u.cls || {}).sort((a, b) => b[1] - a[1]).map(([k, n]) =>
+      `<tr><td${k === "material" ? ' class="mat"' : ""}>${esc(k)}</td><td${k === "material" ? ' class="mat"' : ""}>${n}</td></tr>`).join("");
+    s3sum = `chain primaries + Onkelos — ${u.declared ?? (u.rows || []).length} sources declared`;
+    s3body = `<p style="margin-top:2px"><b>The scope, declared before reading</b> — standing rule (owner, 2026-08-23):
+      read the register's <i>chain-primary</i> class matched to the span, plus Onkelos (the received translation);
+      everything else is enumerated and recorded as <i>outside declared scope</i> — narrowing done openly, never
+      silently. A later depth pass resumes from the recorded list.</p>
+      <div class="counters"><div><b>${u.declared ?? "—"}</b><span>DECLARED</span></div>
+      <div><b>${u.read ?? (u.rows || []).length}</b><span>READ &amp; VERDICTED</span></div>
+      <div><b>${material}</b><span>MATERIAL</span></div></div>
+      <p style="margin:10px 0 2px"><b>The ledger's verdicts</b> — by class:</p>
+      <table><tr><th>verdict class</th><th>rows</th></tr>${clsRows}</table>
+      <p class="desc" style="font-size:.78rem;color:var(--mut)">↳ the append-only ledger: logic/oral_triage/${esc(u.led)}</p>`;
+    const matRows = (u.mat || []).filter(r => r[1]).map(r =>
+      `<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td></tr>`).join("");
+    const allRows = (u.rows || []).map(r =>
+      `<tr><td class="code">${r[0]}</td><td>${esc(r[1])}</td><td${r[2] === "material" ? ' class="mat"' : ""}>${esc(r[2])}</td></tr>`).join("");
+    s4sum = `every declared source verdicted — the ${material} material findings`;
+    s4body = `<table><tr><th>source</th><th>what it said (the ledger's note)</th></tr>${matRows}</table>
+      <div class="xp" style="margin-top:10px;border-style:dashed"><div class="xp-head" onclick="tg(this,'${bid}s4a',0)">
+      <b style="font-size:.85rem">The full ledger — all ${(u.rows || []).length} rows, verdicted, append-only</b>
+      <span class="more">▸ open</span></div><div id="${bid}s4a" class="xp-body">
+      <table><tr><th>#</th><th>source</th><th>verdict</th></tr>${allRows}</table>
+      <p class="desc" style="font-size:.78rem;color:var(--mut)">↳ the canonical record: logic/oral_triage/${esc(u.led)}</p></div></div>`;
+  } else if (g === "c") {
+    s3sum = "law-era chapter reading — the whole chapter, every readable source";
+    s3body = `<p>This span was read under the LAW-ERA rule: the whole chapter's oral sources read and logged
+      in the chapter reading ledger (scans/ledgers/, append-only). Its rows anchor to the chapter's law,
+      so no per-block declaration table is shown here.</p>`;
+    s4sum = "the chapter ledger's rows are the record";
+    s4body = `<p>Every readable source on this chapter carries a logged verdict in the chapter reading
+      ledger — the receipts gate asserts its row count on every build.</p>`;
+  } else {
+    s3sum = "not yet declared — the walk advances block by block";
+    s3body = `<p>The reading for this block has not yet been declared (THE_STEPS, step 3). Until it runs,
+      the logic below stands at FIRST PASS — it predates its reading, and the label says so honestly.</p>`;
+    s4sum = "pending the declaration";
+    s4body = `<p>No triage ledger yet — reading and logging (step 4) follow the declaration.</p>`;
+  }
+
+  const s5sum = teach.length
+    ? `${teach.length} teaching${teach.length === 1 ? "" : "s"} built into the unit${u.kept ? " — and one reading that changed nothing" : ""}`
+    : "no oral teaching blocks recorded yet";
+  const s5body = `<div class="rulesintro">${RULES_INTRO}</div>
+    <p class="desc" style="font-size:.78rem;color:var(--mut);margin:2px 0 8px">Each teaching is a chain: what the source SAID → what the unit CLAIMED from it (with the tradition's own inference rule, where one is named) → where it lives in the MACHINE. Nothing enters the machine without this chain.</p>
+    ${teachCards(bid, u) || '<p class="desc" style="color:var(--mut)">None yet — claims follow the reading.</p>'}`;
+
+  const nv = vds.length;
+  const codeGroups = vds.map((vd, i) => { const sh = shadeOf(i, nv);
+    return `<div><span class="vchip2" style="background:${sh}">${vd.v}</span><div class="vgroup" style="border-left-color:${sh}">${vd.code.map(l =>
+      `${esc(l.c).padEnd(38)}<span class="cmt">${esc(l.m)}</span>`).join("\n")}</div></div>`; }).join("");
+  const s6body = `<p class="desc" style="font:11px Verdana,sans-serif;color:var(--mut);margin:4px 0 8px">each verse keeps one shade of the band's blue, everywhere code appears</p>
+    ${codeGroups}
+    <p class="desc" style="font-size:.78rem;color:var(--mut)">↳ the full derivation, operator by operator with its citations: <a href="units/UNIT_${esc(uid)}.html">the unit page</a> — printed by the mill from the unit's record: the mill transforms, never asserts</p>`;
+
+  const s7body = `<div class="gates">${GATE_NAMES.map(x => `<i>✓ ${x}</i>`).join("")}<i>— 9/9</i></div>
+    <p class="desc" style="font-size:.78rem;color:var(--mut);margin:6px 0 2px">The same nine gates run on every change and every push; a full-rule stamp ran its own declared-reading check besides — no record, no stamp.</p>`;
+
+  const s8sum = u.full ? `the owner's word${u.stamped ? ", " + u.stamped : ""} — rev ${u.rev || 1}`
+    : `awaiting the owner's word — rev ${u.rev || 1}`;
+  const s8body = `<p class="desc" style="font-size:.82rem;margin:2px 0">${u.full
+    ? `Stamped full rule${u.stamped ? " " + u.stamped : ""} on the owner's word — the only human act in the chain; the labels above are computed from the records, never hand-set.`
+    : "Not yet stamped — the stamp is the owner's word alone, given when a span's declared reading is complete and its logic was rebuilt from that reading. Until then the unit stands honestly at first pass."}</p>`;
+
+  return `<div class="urec"><div class="urec-title">▙ THE UNIT RECORD — steps 3–8, in order · opens here, not on another page</div>
+    ${xp(bid + "s3", "STEP 3", "Declare the reading", s3sum, s3body, 1)}
+    ${xp(bid + "s4", "STEP 4", "Read and log", s4sum, s4body, 1)}
+    ${xp(bid + "s5", "STEP 5", "Extract claims", s5sum, s5body, 1)}
+    ${xp(bid + "s6", "STEP 6", "Write or amend the logic", "the unit's machine — every line shaded by its verse", s6body, 1)}
+    ${xp(bid + "s7", "STEP 7", "Run the gates", "one command, nine gates, all green — before any human declared anything", s7body, 1)}
+    ${xp(bid + "s8", "STEP 8", "The stamp", s8sum, s8body, 1)}</div>`;
+}
+
+function bandHTML(b, c, uid, vds) {
+  const u = UREC[uid] || {};
+  const bid = "u" + (++BSEQ) + "_";
+  const name = bookById(b).name;
+  const a = vds[0].v, z = vds[vds.length - 1].v;
+  const teach = u.teach || [];
+  const g = (vds[0].vstat || {}).g;
+  let status;
+  if (u.led && u.read != null && u.read === u.declared)
+    status = `every declared source read · ${teach.length} teaching${teach.length === 1 ? "" : "s"} from the tradition built into this unit · ${u.full ? "full rule" : "first pass — the stamp awaits the owner's word"}${u.stamped ? " · stamped " + u.stamped : ""}`;
+  else if (g === "c")
+    status = `the whole chapter read through under the law-era rule · ${u.full ? "full rule" : "first pass"} · the chapter ledger is the record`;
+  else
+    status = `reading not yet declared — the logic is first pass (it predates its reading)${teach.length ? ` · ${teach.length} recorded oral note${teach.length === 1 ? "" : "s"} ride the unit` : ""}`;
+  const span = a === z ? `${c}:${a}` : `${c}:${a}–${z}`;
+  return `<div class="uband"><div class="uspine">BLOCK · ${esc(name.toUpperCase())} ${span}</div><div class="ubody">
+    <div class="uband-head"><span class="ulab">${esc(u.t || uid)}</span><span class="ustat">${esc(status)}</span>
+      <span class="urecline">record: <a class="badge frozen" href="units/UNIT_${esc(uid)}.html" title="derived model, revision ${u.rev || 1} — click for the full derivation (the YAML view)">⚙ ${esc(uid)} · rev ${u.rev || 1} ⇄</a></span></div>
+    ${vds.map(vd => verseHTML(b, c, vd, true)).join("")}
+    ${unitRecordHTML(bid, uid, u, vds)}
+  </div></div>`;
 }
 
 function chapterHTML(data) {
-  const b = data.book, name = MANIFEST.books.find(x => x.id === b).name;
-  return `<div class="chapter-head" id="ch${b}_${data.chapter}">
+  const b = data.book, name = bookById(b).name;
+  let out = `<div class="chapter-head" id="ch${b}_${data.chapter}">
       <h2>${esc(name)} ${data.chapter}</h2>
       <span>${esc(data.verses[0]?.sys || "")} · ta'amim ${esc(MANIFEST.taamim)} ·
-      ${data.verses.length} verses</span></div>` +
-    data.verses.map(v => verseHTML(b, data.chapter, v)).join("");
+      ${data.verses.length} verses</span></div>`;
+  let i = 0;
+  while (i < data.verses.length) {
+    const vd = data.verses[i];
+    const uid = vd.frozen.length ? vd.frozen[0].split(" · ")[0] : null;
+    if (uid) {
+      const grp = [vd];
+      let j = i + 1;
+      while (j < data.verses.length && data.verses[j].frozen.length &&
+             data.verses[j].frozen[0].split(" · ")[0] === uid) {
+        grp.push(data.verses[j]); j++;
+      }
+      out += bandHTML(b, data.chapter, uid, grp);
+      i = j;
+    } else {
+      out += verseHTML(b, data.chapter, vd, false);
+      i++;
+    }
+  }
+  return out;
+}
+
+/* ---------------- the accordion: one item open at a time (ruling 7) ---- */
+let OPENID = null;
+function headOf(id) { return document.querySelector(`[onclick*="'${id}'"]`); }
+function shutItem(id) {
+  const body = document.getElementById(id);
+  if (!body) return;
+  body.classList.remove("open");
+  const el = headOf(id);
+  if (!el) return;
+  const head = el.classList.contains("vhead") ? el
+    : el.querySelector(".vhead") || el;
+  el.classList.remove("on", "isopen"); head.classList.remove("on");
+  const sec = el.closest(".verse"); if (sec) sec.classList.remove("isopen");
+  const m = head.querySelector(".more") || el.querySelector(".more");
+  if (m) m.innerHTML = "▸ open";
+  const cp = head.querySelector(".cap2") || el.querySelector(".cap2");
+  if (cp) cp.textContent = "▸";
+}
+function alignAfter(el, before) {
+  const after = el.getBoundingClientRect().top;
+  window.scrollBy(0, after - before);
+  requestAnimationFrame(() => {
+    const y = el.getBoundingClientRect().top;
+    window.scrollBy({top: y - 66, behavior: "smooth"});
+  });
+}
+function tg(el, id, top) {
+  const body = document.getElementById(id);
+  const willOpen = !body.classList.contains("open");
+  const before = el.getBoundingClientRect().top;
+  if (willOpen && top && OPENID && OPENID !== id) shutItem(OPENID);
+  const open = body.classList.toggle("open");
+  el.classList.toggle("on", open);
+  const m = el.querySelector(".more"); if (m) m.innerHTML = open ? "▾ close" : "▸ open";
+  const cp = el.querySelector(".cap2"); if (cp) cp.textContent = open ? "▾" : "▸";
+  if (open) initTrees(body);
+  if (open && top) { OPENID = id; alignAfter(el, before); }
+  else if (!open && OPENID === id) OPENID = null;
+}
+function vtg(ev, card, id) {
+  const body = document.getElementById(id);
+  const head = card.querySelector(".vhead");
+  const isOpen = body.classList.contains("open");
+  if (isOpen && !head.contains(ev.target)) return;
+  const before = card.getBoundingClientRect().top;
+  if (!isOpen && OPENID && OPENID !== id) shutItem(OPENID);
+  const open = body.classList.toggle("open");
+  card.classList.toggle("isopen", open); head.classList.toggle("on", open);
+  const m = head.querySelector(".more"); if (m) m.innerHTML = open ? "▾ close" : "▸ open";
+  const cp = head.querySelector(".cap2"); if (cp) cp.textContent = open ? "▾" : "▸";
+  if (open) { OPENID = id; initTrees(body); alignAfter(card, before); }
+  else if (OPENID === id) OPENID = null;
+}
+function pk(ev, id) {
+  ev.stopPropagation();
+  const b = document.getElementById(id);
+  const was = b.classList.contains("open");
+  document.querySelectorAll(".peekbox.open").forEach(p => p.classList.remove("open"));
+  if (!was) b.classList.add("open");
+}
+
+/* ---------------- verse tree (pan + zoom window) ----------------
+   The tree is rebuilt from each leaf's path (L·R address): the split
+   at any node is the pause mark that sealed the last leaf of its left
+   half. Pure computation — the SVG string is generated with the verse. */
+const TG = {LW:150, LH:90, SW:64, SH:26, HP:14, VG:34};
+const trunc = (s, n) => (s = String(s ?? "")).length > n ? s.slice(0, n - 1) + "…" : s;
+
+function treeBuild(ls, d) {
+  if (ls.length === 1) return {leaf: ls[0].l};
+  const L = ls.filter(x => x.t[d] === "L"), R = ls.filter(x => x.t[d] === "R");
+  if (!L.length || !R.length) return {leaf: ls[0].l};
+  const seal = L[L.length - 1].l;
+  return {left: treeBuild(L, d + 1), right: treeBuild(R, d + 1),
+          mark: seal.mark, rank: seal.rank};
+}
+
+function treeMeasure(m) {
+  if (m.leaf) { m.w = TG.LW; m.h = TG.LH; return m; }
+  treeMeasure(m.left); treeMeasure(m.right);
+  m.w = Math.max(TG.SW, m.left.w + TG.HP + m.right.w);
+  m.h = TG.SH + TG.VG + Math.max(m.left.h, m.right.h);
+  return m;
+}
+
+function treeLayout(m, x, y) {
+  m.x = x; m.y = y; m.cx = x + m.w / 2;
+  if (m.leaf) { m.cx = x + TG.LW / 2; return; }
+  const cy = y + TG.SH + TG.VG;
+  const sx = x + (m.w - (m.left.w + TG.HP + m.right.w)) / 2;
+  treeLayout(m.left, sx, cy);
+  treeLayout(m.right, sx + m.left.w + TG.HP, cy);
+}
+
+function treeRender(m, lines, nodes, isRoot) {
+  if (m.leaf) {
+    const l = m.leaf;
+    nodes.push(`<g transform="translate(${m.x},${m.y})">` +
+      `<title>B${l.b} · words ${esc(l.w)} · froze: ${esc(l.froze)}</title>` +
+      `<rect width="${TG.LW}" height="${TG.LH}" rx="8" fill="#fff" stroke="#c9b98a" stroke-width="1.4"/>` +
+      `<text text-anchor="middle" x="${TG.LW/2}" y="21" font-family="SBL Hebrew,David,Noto Sans Hebrew,serif" font-size="15" fill="#1f2937">${esc(l.he)}</text>` +
+      `<text text-anchor="middle" x="${TG.LW/2}" y="37" font-size="10" fill="#6b7280">${esc(trunc(l.tr, 26))}</text>` +
+      `<text text-anchor="middle" x="${TG.LW/2}" y="51" font-size="10" fill="#1f2937">${esc(trunc(l.en, 26))}</text>` +
+      `<text text-anchor="middle" x="${TG.LW/2}" y="67" font-size="9.5" font-weight="700" fill="#8a6d1a">${esc(trunc(l.role, 24))}</text>` +
+      `<text text-anchor="middle" x="${TG.LW/2}" y="81" font-size="8.5" fill="#6b7280">B${l.b} · ${esc(l.mark)} · r${l.rank}</text></g>`);
+    return;
+  }
+  const label = `${m.mark} r${m.rank}`;
+  const nw = Math.max(TG.SW, label.length * 6.5 + 14), nx = m.cx - nw / 2;
+  nodes.push(`<g transform="translate(${nx},${m.y})">` +
+    `<rect width="${nw}" height="${TG.SH}" rx="6" fill="#f0ecdf" stroke="#d7d3c8" stroke-width="1.3"/>` +
+    `<text text-anchor="middle" x="${nw/2}" y="17" font-size="10.5" font-weight="600" fill="#8a6d1a">${esc(label)}</text></g>`);
+  const fy = m.y + TG.SH;
+  // No hardcoded arm labels: PROCESS/RESULT was true of command-verses
+  // only; a generic pair overclaims the derivation (owner ruling
+  // 2026-08-21 — per-verse labels from the units may return later).
+  ["left", "right"].forEach(k => {
+    const ch = m[k];
+    lines.push(`<line x1="${m.cx}" y1="${fy}" x2="${ch.cx}" y2="${ch.y}" ` +
+      `stroke="#c4bda9" stroke-width="${isRoot ? 2 : 1.4}"/>`);
+    treeRender(ch, lines, nodes, false);
+  });
+}
+
+function treeSVG(leaves) {
+  const m = treeMeasure(treeBuild(
+    leaves.map(l => ({t: l.path ? l.path.split("·") : [], l})), 0));
+  treeLayout(m, 20, 20);
+  const w = m.w + 40, h = m.h + 40, lines = [], nodes = [];
+  treeRender(m, lines, nodes, true);
+  return `<div class="tin" data-w="${w}" data-h="${h}">` +
+    `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" ` +
+    `font-family="Charter,Georgia,serif">${lines.join("")}${nodes.join("")}</svg></div>`;
+}
+
+function initTVP(vp) {
+  const tin = vp.querySelector(".tin"), zl = vp.querySelector(".tzl");
+  const sw = +tin.dataset.w, sh = +tin.dataset.h;
+  let s = 1, px = 0, py = 0, dr = false, lx = 0, ly = 0, lt = null, ld = null;
+  const apply = () => {
+    tin.style.transform = `translate(${px}px,${py}px) scale(${s})`;
+    zl.textContent = Math.round(s * 100) + "%";
+  };
+  const fit = () => {
+    const vw = vp.clientWidth, vh = vp.clientHeight;
+    s = Math.max(0.1, Math.min(vw / sw, vh / sh, 1));
+    px = (vw - sw * s) / 2; py = Math.max(4, (vh - sh * s) / 2); apply();
+  };
+  const zoomAt = (cx, cy, f) => {
+    const r = vp.getBoundingClientRect();
+    const mx = cx - r.left, my = cy - r.top;
+    const bx = (mx - px) / s, by = (my - py) / s;
+    s = Math.min(4, Math.max(0.1, s * f));
+    px = mx - bx * s; py = my - by * s; apply();
+  };
+  // A plain wheel scrolls the page; zooming asks for intent —
+  // Cmd/Ctrl + wheel (trackpad pinch arrives as exactly that) or double-click.
+  vp.addEventListener("wheel", e => {
+    if (!e.ctrlKey && !e.metaKey) return;
+    e.preventDefault();
+    zoomAt(e.clientX, e.clientY, e.deltaY > 0 ? 0.9 : 1.1);
+  }, {passive: false});
+  vp.addEventListener("dblclick", e => {
+    if (e.target.closest(".tzc")) return;
+    zoomAt(e.clientX, e.clientY, e.shiftKey ? 1 / 1.6 : 1.6);
+  });
+  vp.addEventListener("mousedown", e => {
+    if (e.target.closest(".tzc")) return;
+    dr = true; lx = e.clientX; ly = e.clientY; e.preventDefault();
+  });
+  window.addEventListener("mousemove", e => {
+    if (!dr) return;
+    px += e.clientX - lx; py += e.clientY - ly; lx = e.clientX; ly = e.clientY; apply();
+  });
+  window.addEventListener("mouseup", () => { dr = false; });
+  vp.addEventListener("touchstart", e => {
+    if (e.touches.length === 1) { lt = {x: e.touches[0].clientX, y: e.touches[0].clientY}; ld = null; }
+    else if (e.touches.length === 2) {
+      ld = Math.hypot(e.touches[0].clientX - e.touches[1].clientX,
+                      e.touches[0].clientY - e.touches[1].clientY); lt = null; }
+  }, {passive: true});
+  vp.addEventListener("touchmove", e => {
+    e.preventDefault();
+    if (e.touches.length === 1 && lt) {
+      px += e.touches[0].clientX - lt.x; py += e.touches[0].clientY - lt.y;
+      lt = {x: e.touches[0].clientX, y: e.touches[0].clientY}; apply();
+    } else if (e.touches.length === 2 && ld !== null) {
+      const dd = Math.hypot(e.touches[0].clientX - e.touches[1].clientX,
+                            e.touches[0].clientY - e.touches[1].clientY);
+      s = Math.min(4, Math.max(0.1, s * (dd / ld))); ld = dd; apply();
+    }
+  }, {passive: false});
+  vp.addEventListener("touchend", () => { lt = null; ld = null; });
+  vp.querySelector(".tzi").onclick = () => { s = Math.min(4, s * 1.25); apply(); };
+  vp.querySelector(".tzo").onclick = () => { s = Math.max(0.1, s * 0.8); apply(); };
+  vp.querySelector(".tzf").onclick = fit;
+  fit();
+}
+
+function initTrees(body) {
+  body.querySelectorAll(".tvp").forEach(vp => {
+    if (vp.dataset.done) return;
+    vp.dataset.done = 1;
+    const vd = VD.get(vp.dataset.key);
+    if (!vd) return;
+    vp.innerHTML = treeSVG(vd.leaves) +
+      '<div class="tzc"><button class="tzi" title="zoom in">+</button>' +
+      '<span class="tzl">100%</span>' +
+      '<button class="tzo" title="zoom out">−</button>' +
+      '<button class="tzf" title="fit the whole tree in the window">fit</button></div>';
+    initTVP(vp);
+  });
 }
 
 /* ---------------- feed ---------------- */
@@ -472,6 +960,8 @@ fetch("/regen/ping").then(r => r.ok && ($("regenBtn").style.display = ""))
 /* ---------------- boot ---------------- */
 (async function () {
   MANIFEST = await (await fetch("data/manifest.json")).json();
+  try { UREC = await (await fetch("data/urec.json")).json(); }
+  catch (e) { console.error("[urec]", e); UREC = {}; }
   SEQ = MANIFEST.books.flatMap(bk =>
     bk.chapters.map((_, i) => ({b: bk.id, c: i + 1})));
   fillSelect($("book"), MANIFEST.books.map(bk => [bk.id, bk.name]));

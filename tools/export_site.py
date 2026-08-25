@@ -680,63 +680,14 @@ def build_scroll_site():
     with open(path, encoding="utf-8") as f:
         t = f.read()
     assert t.count("<body>") == 1
+    # The reader carries the redesign natively since the owner's build
+    # order (2026-08-25) — unit bands, collapsed verse cards, the
+    # verse-tree window, the vstat chip, and the rail's coverage link
+    # all live in scroll/index.html itself. The dress now adds only the
+    # site chrome: the masthead and the left-rail CSS. The retired
+    # patch constants above stand as the dress's own history.
     t = t.replace("<body>",
-                  "<body>" + masthead("../", "scroll") + SCROLL_RAIL_CSS
-                  + TREE_CSS + VSTAT_CSS, 1)
-    # Re-era wording (owner ruling 2026-08-21): the unit chip names the
-    # model and its revision, never "frozen" of code. Revisions are read
-    # from the canonical YAMLs at export (absence = rev 1).
-    revs = {}
-    for yp in sorted(os.listdir(os.path.join(ROOT, "logic", "units"))):
-        if yp.endswith(".yaml"):
-            ym = re.search(r"^  rev: (\d+)$",
-                           open(os.path.join(ROOT, "logic", "units", yp),
-                                encoding="utf-8").read(), re.M)
-            if ym:
-                revs[yp[:-5]] = int(ym.group(1))
-    t = patch(t, '''  const badge = vd.frozen.length
-    ? `<a class="badge frozen" href="units/UNIT_${esc(uid0)}.html" title="${esc(vd.frozen.join(" · "))} — click to switch to the unit's derivation page (the YAML view)">❄ frozen: ${esc(uid0)} ⇄</a>`
-    : `<span class="badge auto">auto · illustrative</span>`;''',
-              '''  const REVS = ''' + json.dumps(revs) + ''';
-  const badge = vd.frozen.length
-    ? `<a class="badge frozen" href="units/UNIT_${esc(uid0)}.html" title="derived model, revision ${REVS[uid0]||1} — all gates green at build. ${esc(vd.frozen.join(" · "))} — click for the full derivation (the YAML view)">⚙ ${esc(uid0)} · rev ${REVS[uid0]||1} ⇄</a>`
-    : `<span class="badge auto">auto · illustrative</span>`;''')
-    t = patch(t, "Role and code lines are automatic, illustrative "
-              "renderings of grammatical facts; verses marked\n"
-              "  ❄ frozen carry human-derived, owner-reviewed logic units.",
-              "Role and code lines are automatic, illustrative "
-              "renderings of grammatical facts; verses marked\n"
-              "  ⚙ carry human-derived logic units — the model revision "
-              "is shown, and all gates are green at every build.")
-    t = patch(t, '`<span class="cmt"># frozen coverage: ${esc(f)}</span>`',
-              '`<span class="cmt"># unit coverage: ${esc(f)}</span>`')
-    # The verse-status chip (spec v2, Brian's rulings 2026-08-20): the
-    # two-axis label — oral track · derivation track · proven — computed
-    # into the bundles by the press, rendered here in place of the old
-    # oral badge, whose fraction, material count, and honest-counter
-    # tooltip it absorbs.
-    t = patch(t, VSTAT_OLD_ORAL, VSTAT_CHIP_JS)
-    t = patch(t, "${badge}${oral}", "${badge}${vchip}")
-    t = patch(t, '<a class="nav" href="units/UNIT_INDEX.html" '
-              'title="coverage index — every derived unit, with links '
-              'between the YAML view and this verse view">☰ units</a>',
-              '<a class="nav" href="units/UNIT_INDEX.html" '
-              'title="coverage index — every derived unit, with links '
-              'between the YAML view and this verse view">☰ units</a>\n'
-              '  <a class="nav" href="coverage/" title="the whole Torah '
-              'as a grid — every verse\'s status on the two tracks, '
-              'computed from the records at every build">▦ coverage</a>')
-    # The leaf ledger becomes the verse-tree window: same facts, drawn.
-    t = patch(t, LEDGER_CONST_OLD, TREE_CONST_NEW)
-    t = patch(t, LEDGER_ROWS_OLD, "  const morph = vd.morph.map(m =>")
-    t = patch(t, LEDGER_SECT_OLD, TREE_SECT_NEW)
-    t = patch(t, "function chapterHTML(data) {",
-              TREE_JS + "function chapterHTML(data) {")
-    t = patch(t, 'div.querySelectorAll(".verse")'
-              '.forEach(s => locObs.observe(s));',
-              'div.querySelectorAll(".verse")'
-              '.forEach(s => locObs.observe(s));\n'
-              '  div.querySelectorAll(".tvp").forEach(initTVP);')
+                  "<body>" + masthead("../", "scroll") + SCROLL_RAIL_CSS, 1)
     with open(path, "w", encoding="utf-8") as f:
         f.write(t)
     n = 0

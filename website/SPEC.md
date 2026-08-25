@@ -79,6 +79,16 @@ the deployed dress, not the undressed reader).
   enrichment) — reading means filtering, and the filter is on the
   record.
 
+## Spacing (owner ruling 2026-08-25, "lets go with compact")
+
+The COMPACT density from `spacing_mockup_2026-08-25.html` variant C is
+the shipped spacing — text size unchanged, roughly a third less air:
+line-height 1.4; verse cards .45/.8rem padding, .4/.55rem gaps in
+bands; band heads .3/.75rem; accordion heads 5/10px, bodies 8/12px;
+table cells .18/.45rem; chips 3/7px. The mockup's four variants stand
+as the comparison record (D — dense with 108% text — was liked and
+remains the recorded runner-up).
+
 ## Vocabulary (owner ruling 2026-08-24, canon 2026-08-25)
 
 In page copy, "machine" names only the steps-derived law programs —

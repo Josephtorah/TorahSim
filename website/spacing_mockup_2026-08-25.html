@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scroll spacing — four densities</title>
+<style>
+  :root { --bg:#ffffff; --fg:#1f2937; --mut:#6b7280; --line:#d7d3c8; --acc:#8a6d1a;
+          --chip:#f5f2ea; --hd:#f0ecdf; --bblue:#5a7ca6; --bbluel:#eef2f8; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:#faf7f0; color:var(--fg);
+         font:17px/1.5 Charter,Georgia,serif; padding:0 0 6rem; }
+  .top { position:sticky; top:0; z-index:10; background:#332a18; color:#f3e9c8;
+         padding:10px 26px; font-size:14px; border-bottom:3px solid var(--acc); }
+  .top b { letter-spacing:.02em; }
+  .top a { color:#e8dcb8; text-decoration:none; margin-left:14px; font-size:13px;
+           border:1px solid #5a4d31; border-radius:6px; padding:3px 10px; }
+  .top a:hover { background:#4a3d24; }
+  .wrap { max-width:1150px; margin:0 auto; padding:0 26px; }
+  .varhead { margin:2.6rem 0 .6rem; padding:.7rem 1rem; background:#fff;
+             border:1px solid var(--line); border-left:6px solid var(--bblue);
+             border-radius:8px; scroll-margin-top:60px; }
+  .varhead h2 { margin:0 0 .2rem; font-size:1.05rem; }
+  .varhead .delta { font:12.5px Menlo,Consolas,monospace; color:var(--mut); }
+
+  /* ---------- the scroll excerpt, structural rules keyed to spacing vars ---------- */
+  .sample { background:#fff; border:1px solid var(--line); border-radius:10px;
+            padding:var(--pagepad); }
+  .sample, .sample * { line-height:var(--lh); }
+  .sample { font-size:var(--fs); }
+  .chapter-head { margin:0 0 var(--chapmb); padding:var(--chappad); background:var(--hd);
+         border:1px solid var(--line); border-radius:8px; display:flex; gap:.8rem;
+         align-items:baseline; }
+  .chapter-head h2 { margin:0; font-size:1.12em; }
+  .chapter-head span { color:var(--mut); font-size:.8em; }
+  .uband { border:1px solid var(--line); border-radius:10px; margin:var(--bandm) 0;
+           display:flex; overflow:hidden; }
+  .uspine { flex:none; width:var(--spinew); background:var(--bblue); color:#fff;
+            writing-mode:vertical-rl; padding:12px 0; display:flex; align-items:center;
+            font:700 11px Verdana,sans-serif; letter-spacing:.18em; white-space:nowrap; }
+  .ubody { flex:1; min-width:0; padding:0 0 var(--vgap);
+           background:linear-gradient(to right, var(--bbluel), transparent 140px); }
+  .uband-head { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;
+                padding:var(--bheadpad); border-bottom:1px dashed var(--line); }
+  .uband-head .ulab { font:700 12px Verdana,sans-serif; color:var(--bblue); }
+  .uband-head .ustat { font-size:.85em; }
+  .uband-head .urecline { font:.66em Menlo,Consolas,monospace; color:var(--mut); margin-left:auto; }
+  .badge { font:.64em/1.5 Menlo,Consolas,monospace; padding:0 .45em; border-radius:10px; }
+  .badge.frozen { background:#faf7f0; color:#6e5417; border:1px solid #b08a3e; text-decoration:none; }
+  .verse { border:1px solid var(--line); border-radius:10px; margin:var(--vgap) var(--vside);
+           padding:var(--vpad); background:#fff; }
+  .vhead { display:flex; gap:.6em; align-items:center; flex-wrap:wrap;
+           margin-bottom:var(--vheadmb); }
+  .vref { font-weight:bold; color:var(--acc); font-size:1.02em; }
+  .stepchip { display:Inline-Flex; align-items:stretch; flex:none; border-radius:5px;
+              overflow:hidden; font:700 10px Verdana,sans-serif; color:#fff; letter-spacing:.06em; }
+  .stepchip .lab { background:var(--bblue); padding:var(--chippad); display:flex; align-items:center; }
+  .stepchip .cap2 { background:rgba(0,0,0,.25); padding:2px 8px; font-size:14px;
+                    display:flex; align-items:center; }
+  .vhead .more { margin-left:auto; font:11px Verdana,sans-serif; color:var(--bblue); }
+  .jps { font-style:italic; color:#5a5648; margin:var(--jpsm); }
+  .vbody { border-top:1px dashed var(--line); margin-top:var(--vbodymt); padding-top:var(--vbodymt); }
+  .rowlab { font:.64em Menlo,Consolas,monospace; letter-spacing:.12em; color:var(--mut);
+            margin:var(--rowlabm); text-transform:uppercase; }
+  .brick { display:inline-block; background:var(--chip); border:1px solid var(--line);
+           border-radius:6px; padding:var(--brickpad); margin:.08em .1em; }
+  .he-row { direction:rtl; text-align:left; font-size:1.28em; }
+  table { border-collapse:collapse; width:100%; font-size:.8em; margin:var(--tablem); }
+  th { background:var(--hd); text-align:left; font-size:.85em; letter-spacing:.05em;
+       text-transform:uppercase; }
+  th,td { border:1px solid var(--line); padding:var(--cellpad); vertical-align:top; }
+  td.he { font-size:1.3em; direction:rtl; text-align:right; }
+  td.code { font-family:monospace; font-size:.92em; }
+  .urec { margin:var(--vgap) var(--vside) var(--vgap); border-top:2px solid var(--bblue);
+          padding-top:var(--vbodymt); }
+  .urec-title { font:700 11.5px Verdana,sans-serif; color:var(--bblue);
+                letter-spacing:.1em; margin:2px 0 var(--vheadmb); }
+  .xp { background:#fff; border:1px solid var(--line); border-radius:8px; margin:var(--xpm) 0; }
+  .xp-head { display:flex; gap:12px; align-items:baseline; padding:var(--xphead); cursor:pointer; }
+  .xp-head.on { background:var(--bbluel); }
+  .xp-head .sum { color:var(--mut); font-size:.85em; }
+  .xp-head .more { margin-left:auto; font:11px Verdana,sans-serif; color:var(--bblue); }
+  .xp-body { border-top:1px solid var(--line); padding:var(--xpbody); font-size:.88em;
+             background:#fffdf8; border-left:3px solid #d3c69f; }
+  .counters { display:flex; gap:10px; flex-wrap:wrap; margin:var(--tablem); }
+  .counters div { background:var(--bbluel); border-radius:6px; padding:var(--ctrpad); text-align:center; }
+  .counters b { display:block; font-size:1.25em; }
+  .counters span { font:10.5px Verdana,sans-serif; color:var(--mut); }
+
+  /* ---------- the four densities ---------- */
+  .vA { --fs:1em;    --lh:1.55; --pagepad:1rem 1.6rem; --chapmb:2rem;   --chappad:.5rem .9rem;
+        --bandm:1.2rem; --spinew:30px; --bheadpad:.55rem 1rem; --vgap:.8rem;  --vside:.9rem;
+        --vpad:.9rem 1.2rem; --vheadmb:.4rem; --chippad:4px 9px; --jpsm:.15em 0 .1em;
+        --vbodymt:.5rem; --rowlabm:.6em 0 .25em; --brickpad:.03em .45em; --tablem:.45em 0 .3em;
+        --cellpad:.28em .55em; --xpm:8px; --xphead:9px 14px; --xpbody:12px 16px; --ctrpad:7px 13px; }
+  .vB { --fs:1em;    --lh:1.45; --pagepad:.8rem 1.3rem; --chapmb:1.3rem; --chappad:.4rem .8rem;
+        --bandm:.9rem;  --spinew:28px; --bheadpad:.4rem .85rem; --vgap:.55rem; --vside:.7rem;
+        --vpad:.6rem .95rem; --vheadmb:.25rem; --chippad:3px 8px; --jpsm:.08em 0 .05em;
+        --vbodymt:.4rem; --rowlabm:.45em 0 .2em; --brickpad:.02em .4em; --tablem:.35em 0 .25em;
+        --cellpad:.22em .5em; --xpm:6px; --xphead:7px 12px; --xpbody:10px 14px; --ctrpad:6px 11px; }
+  .vC { --fs:1em;    --lh:1.4;  --pagepad:.7rem 1.1rem; --chapmb:1rem;   --chappad:.35rem .7rem;
+        --bandm:.7rem;  --spinew:26px; --bheadpad:.3rem .75rem; --vgap:.4rem;  --vside:.55rem;
+        --vpad:.45rem .8rem; --vheadmb:.18rem; --chippad:3px 7px; --jpsm:.05em 0 0;
+        --vbodymt:.32rem; --rowlabm:.35em 0 .15em; --brickpad:.02em .35em; --tablem:.3em 0 .2em;
+        --cellpad:.18em .45em; --xpm:4px; --xphead:5px 10px; --xpbody:8px 12px; --ctrpad:5px 10px; }
+  .vD { --fs:1.08em; --lh:1.35; --pagepad:.55rem .9rem; --chapmb:.7rem;  --chappad:.3rem .6rem;
+        --bandm:.55rem; --spinew:24px; --bheadpad:.25rem .65rem; --vgap:.3rem;  --vside:.45rem;
+        --vpad:.32rem .65rem; --vheadmb:.12rem; --chippad:2px 6px; --jpsm:.03em 0 0;
+        --vbodymt:.25rem; --rowlabm:.3em 0 .12em; --brickpad:.01em .3em; --tablem:.25em 0 .15em;
+        --cellpad:.15em .4em; --xpm:3px; --xphead:4px 8px; --xpbody:6px 10px; --ctrpad:4px 9px; }
+</style>
+</head>
+<body>
+
+<div class="top"><b>Scroll spacing — four densities, same real excerpt</b>
+  <a href="#A">A · current</a><a href="#B">B · snug</a><a href="#C">C · compact</a><a href="#D">D · dense</a>
+  <span style="float:right;font-size:12px;color:#b8ab8a">every block below is the live page's own content — only the spacing variables change</span>
+</div>
+
+<div class="wrap" id="samples"></div>
+
+<script>
+"use strict";
+// one excerpt, stamped four times — the deltas are the experiment
+const VARIANTS = [
+  ["A", "CURRENT — as shipped 2026-08-25",
+   "font 1em/1.55 · verse pad .9/1.2rem · card gap .8rem · accordion head 9/14px · body 12/16px"],
+  ["B", "SNUG — roughly 20% tighter",
+   "line-height 1.45 · verse pad .6/.95rem · card gap .55rem · accordion head 7/12px · body 10/14px"],
+  ["C", "COMPACT — roughly a third tighter, same text size",
+   "line-height 1.4 · verse pad .45/.8rem · card gap .4rem · accordion head 5/10px · body 8/12px"],
+  ["D", "DENSE — tightest spacing, text LARGER (108%)",
+   "font 1.08em/1.35 · verse pad .32/.65rem · card gap .3rem · accordion head 4/8px · body 6/10px"],
+];
+
+const EXCERPT = `
+<div class="chapter-head"><h2>Genesis 1</h2>
+  <span>prose · ta'amim (cantillation) v3 · 31 verses</span></div>
+
+<div class="uband"><div class="uspine">BLOCK · GENESIS 1:1–5</div><div class="ubody">
+  <div class="uband-head"><span class="ulab">Genesis boot: create world, light, separate, name, day one (1:1-5)</span>
+    <span class="ustat">every declared source read · 9 teachings from the tradition built into this unit · full rule · stamped 2026-08-23</span>
+    <span class="urecline">record: <a class="badge frozen" href="#">⚙ gen_01_creation_boot · rev 3 ⇄</a></span></div>
+
+  <div class="verse">
+    <div class="vhead"><span class="stepchip"><span class="lab">STEP 1 · 2</span><span class="cap2">▾</span></span>
+      <span class="vref">Gen 1:1</span><span class="more">▾ close</span></div>
+    <div class="jps">“In the beginning God created the heaven and the earth.”</div>
+    <div class="vbody">
+      <div class="rowlab">Hebrew</div>
+      <div class="he-row"><span class="brick">(וְאֵת הָאָרֶץ)</span> <span class="brick">(אֵת הַשָּׁמַיִם)</span> <span class="brick">(בָּרָא אֱלֹהִים)</span> <span class="brick">(בְּרֵאשִׁית)</span></div>
+      <div class="rowlab">English</div>
+      <div><span class="brick">(in-beginning)</span> <span class="brick">(create God)</span> <span class="brick">(obj-marker·et the-heavens)</span> <span class="brick">(and-obj-marker·et the-earth)</span></div>
+      <div class="rowlab">Step 2 — morphology · first rows of 11</div>
+      <table><tr><th>B#</th><th>Hebrew</th><th>Transliteration</th><th>English</th><th>code</th><th>grammar (English aid)</th></tr>
+      <tr><td><b>B0</b></td><td class="he">בְּרֵאשִׁית</td><td>be-reshit</td><td>in-beginning</td><td class="code">R+Ncfsa</td><td>preposition + noun — the opening</td></tr>
+      <tr><td><b>B1</b></td><td class="he">בָּרָא</td><td>bara</td><td>create</td><td class="code">Vqp3ms</td><td>verb · qal · perfect — the creation event</td></tr>
+      <tr><td><b>B1</b></td><td class="he">אֱלֹהִים</td><td>Elohim</td><td>God</td><td class="code">Ncmpa</td><td>noun · plural form, singular agent</td></tr></table>
+      <p style="font-size:.78em;color:var(--mut);font-style:italic;margin:.2em 0 0">(the verse-tree window sits here on the real page — omitted so the spacing comparison stays about spacing)</p>
+    </div>
+  </div>
+
+  <div class="verse">
+    <div class="vhead"><span class="stepchip"><span class="lab">STEP 1 · 2</span><span class="cap2">▸</span></span>
+      <span class="vref">Gen 1:2</span><span class="more">▸ open</span></div>
+    <div class="jps">“Now the earth was unformed and void, and darkness was upon the face of the deep; and the spirit of God hovered over the face of the waters.”</div>
+  </div>
+
+  <div class="verse">
+    <div class="vhead"><span class="stepchip"><span class="lab">STEP 1 · 2</span><span class="cap2">▸</span></span>
+      <span class="vref">Gen 1:3</span><span class="more">▸ open</span></div>
+    <div class="jps">“And God said: ‘Let there be light.’ And there was light.”</div>
+  </div>
+
+  <div class="urec"><div class="urec-title">▙ THE UNIT RECORD — steps 3–8, in order · opens here, not on another page</div>
+    <div class="xp"><div class="xp-head on"><span class="stepchip"><span class="lab">STEP 3</span><span class="cap2">▾</span></span>
+      <b>Declare the reading</b><span class="sum">chain primaries + Onkelos — 483 sources declared</span><span class="more">▾ close</span></div>
+      <div class="xp-body"><p style="margin-top:2px"><b>The scope, declared before reading</b> — standing rule (owner, 2026-08-23):
+      read the register's <i>chain-primary</i> class matched to the span, plus Onkelos (the received translation);
+      everything else is enumerated and recorded as <i>outside declared scope</i> — narrowing done openly, never silently.</p>
+      <div class="counters"><div><b>483</b><span>DECLARED</span></div><div><b>483</b><span>READ &amp; VERDICTED</span></div>
+      <div><b>16</b><span>MATERIAL</span></div></div></div></div>
+    <div class="xp"><div class="xp-head"><span class="stepchip"><span class="lab">STEP 4</span><span class="cap2">▸</span></span>
+      <b>Read and log</b><span class="sum">every declared source verdicted — the 16 material findings</span><span class="more">▸ open</span></div></div>
+    <div class="xp"><div class="xp-head"><span class="stepchip"><span class="lab">STEP 5</span><span class="cap2">▸</span></span>
+      <b>Extract claims</b><span class="sum">9 teachings built into the unit — and one reading that changed nothing</span><span class="more">▸ open</span></div></div>
+    <div class="xp"><div class="xp-head"><span class="stepchip"><span class="lab">STEP 6</span><span class="cap2">▸</span></span>
+      <b>Write or amend the logic</b><span class="sum">the unit's machine — every line shaded by its verse</span><span class="more">▸ open</span></div></div>
+    <div class="xp"><div class="xp-head"><span class="stepchip"><span class="lab">STEP 7</span><span class="cap2">▸</span></span>
+      <b>Run the gates</b><span class="sum">one command, nine gates, all green</span><span class="more">▸ open</span></div></div>
+    <div class="xp"><div class="xp-head"><span class="stepchip"><span class="lab">STEP 8</span><span class="cap2">▸</span></span>
+      <b>The stamp</b><span class="sum">the owner's word, 2026-08-23 — rev 3</span><span class="more">▸ open</span></div></div>
+  </div>
+</div></div>`;
+
+document.getElementById("samples").innerHTML = VARIANTS.map(([k, name, delta]) =>
+  `<div class="varhead" id="${k}"><h2>${k} · ${name}</h2><div class="delta">${delta}</div></div>
+   <div class="sample v${k}">${EXCERPT}</div>`).join("");
+</script>
+</body>
+</html>
