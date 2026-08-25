@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Step-Button Options</title>
+<style>
+  :root{--cream:#fdfbf4;--tan:#f5eeda;--hair:#e4dcc4;--blue:#5a7ca6;--blued:#3d5f8a;
+        --bluel:#eef2f8;--ink:#2a2a24;--soft:#8c8468}
+  body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.6 Charter,Georgia,serif;padding:30px 26px 80px}
+  h1{font-size:24px;margin:0 0 4px}
+  .lede{color:var(--soft);margin:0 0 26px;font-size:14.5px}
+  .opt{background:#fff;border:1px solid var(--hair);border-radius:10px;padding:16px 20px;margin:14px 0;
+       max-width:880px}
+  .opt h3{margin:0 0 2px;font-size:16px}
+  .opt .note{font-size:13px;color:var(--soft);margin:0 0 12px}
+  .row{display:flex;gap:34px;align-items:center;flex-wrap:wrap}
+  .cell{display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+  .cap{font:700 10px Verdana,sans-serif;letter-spacing:.12em;color:var(--soft)}
+  .live{border-left:3px solid var(--hair);padding-left:26px}
+  button{cursor:pointer;font-family:Verdana,sans-serif}
+
+  /* A — chevron inside the chip */
+  .bA{font:700 11px Verdana,sans-serif;color:#fff;background:var(--blue);border:none;border-radius:5px;
+      padding:6px 12px;letter-spacing:.06em;display:inline-flex;gap:8px;align-items:center}
+  .bA .ch{font-size:10px}
+  .bA.open{background:var(--blued)}
+
+  /* B — filled closed, hollow open */
+  .bB{font:700 11px Verdana,sans-serif;border-radius:5px;padding:6px 12px;letter-spacing:.06em;
+      display:inline-flex;gap:8px;align-items:center;border:2px solid var(--blue)}
+  .bB.closed{background:var(--blue);color:#fff}
+  .bB.open{background:#fff;color:var(--blue)}
+
+  /* C — split button: label + state end-cap */
+  .bC{display:inline-flex;font:700 11px Verdana,sans-serif;letter-spacing:.06em;border-radius:5px;overflow:hidden;
+      border:none;padding:0;background:none}
+  .bC .lab{background:var(--blue);color:#fff;padding:6px 12px}
+  .bC .cap2{background:var(--blued);color:#fff;padding:6px 9px}
+  .bC.open .lab{background:var(--blued)}
+  .bC.open .cap2{background:#2a4568}
+
+  /* D — raised 3D, presses in when open */
+  .bD{font:700 11px Verdana,sans-serif;color:#fff;letter-spacing:.06em;border:none;border-radius:6px;
+      padding:7px 13px;display:inline-flex;gap:8px;align-items:center;
+      background:linear-gradient(#6b8cb5,var(--blue));box-shadow:0 2px 0 var(--blued),0 3px 5px rgba(0,0,0,.18)}
+  .bD.open{background:linear-gradient(var(--blued),#4a6c96);box-shadow:inset 0 2px 4px rgba(0,0,0,.35);
+           transform:translateY(2px)}
+
+  /* E — folder tab: connects to the panel when open */
+  .wrapE{display:inline-block;text-align:left}
+  .bE{font:700 11px Verdana,sans-serif;color:#fff;background:var(--blue);border:1px solid var(--blued);
+      border-radius:8px 8px 8px 8px;padding:6px 13px;display:inline-flex;gap:8px;letter-spacing:.06em}
+  .bE.open{border-radius:8px 8px 0 0;border-bottom-color:var(--bluel);background:var(--blued)}
+  .panelE{display:none;border:1px solid var(--blued);border-radius:0 8px 8px 8px;background:var(--bluel);
+          padding:10px 14px;font:13px Charter,Georgia,serif;color:var(--ink);max-width:330px}
+  .panelE.show{display:block}
+
+  /* F — plus / minus */
+  .bF{font:700 11px Verdana,sans-serif;color:#fff;background:var(--blue);border:none;border-radius:16px;
+      padding:6px 14px;letter-spacing:.06em;display:inline-flex;gap:9px;align-items:center}
+  .bF .pm{font-size:13px;font-weight:900}
+  .bF.open{background:var(--blued)}
+
+  /* G — arrow-shaped end */
+  .bG{font:700 11px Verdana,sans-serif;color:#fff;background:var(--blue);border:none;letter-spacing:.06em;
+      padding:7px 20px 7px 13px;clip-path:polygon(0 0,calc(100% - 11px) 0,100% 50%,calc(100% - 11px) 100%,0 100%)}
+  .bG.open{background:var(--blued);clip-path:polygon(0 0,100% 0,100% calc(100% - 8px),50% 100%,0 calc(100% - 8px))}
+
+  demo-line{display:block;font-size:13px;color:var(--soft);font-style:italic;margin-top:6px}
+
+  /* ===== LOUD options ===== */
+  .bH{font:700 11px Verdana,sans-serif;color:#fff;background:var(--blue);border:none;border-radius:6px;
+      padding:8px 14px;letter-spacing:.06em;box-shadow:0 2px 5px rgba(0,0,0,.22);transition:all .15s}
+  .bH u{text-underline-offset:3px;text-decoration-thickness:2px}
+  .bH:hover{transform:translateY(-1px);box-shadow:0 4px 9px rgba(0,0,0,.28)}
+  .bH.open{background:var(--blued);box-shadow:inset 0 2px 4px rgba(0,0,0,.3)}
+  .bH.open u{text-decoration:none}
+
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(90,124,166,.55)}70%{box-shadow:0 0 0 9px rgba(90,124,166,0)}100%{box-shadow:0 0 0 0 rgba(90,124,166,0)}}
+  .bI{font:700 11px Verdana,sans-serif;color:#fff;background:var(--blue);border:none;border-radius:6px;
+      padding:8px 14px;letter-spacing:.06em;animation:pulse 1.8s infinite}
+  .bI.open{animation:none;background:var(--blued)}
+
+  .bJ{font:700 11px Verdana,sans-serif;color:#fff;background:var(--blue);border:none;border-radius:6px;
+      padding:8px 14px;letter-spacing:.08em;display:inline-flex;gap:9px;align-items:center;
+      box-shadow:0 2px 0 var(--blued)}
+  .bJ .verb{background:#fff;color:var(--blue);border-radius:3px;padding:2px 7px;font-size:10px}
+  .bJ.open{background:var(--blued)}
+  .bJ.open .verb{color:var(--blued)}
+
+  @keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(4px)}}
+  .bK{font:700 11px Verdana,sans-serif;color:#fff;background:var(--blue);border:none;border-radius:6px;
+      padding:8px 14px;letter-spacing:.06em;display:inline-flex;gap:9px;align-items:center}
+  .bK .ar{display:inline-block;animation:nudge .9s infinite}
+  .bK.open .ar{animation:none}
+
+  .rowL{display:flex;align-items:center;gap:12px;width:560px;max-width:100%;background:#fff;
+        border:2px solid var(--blue);border-radius:8px;padding:10px 14px;cursor:pointer;
+        box-shadow:0 2px 6px rgba(0,0,0,.14);transition:all .15s;font:16px Charter,Georgia,serif}
+  .rowL:hover{background:var(--bluel);transform:translateY(-1px)}
+  .rowL .chip{font:700 11px Verdana,sans-serif;color:#fff;background:var(--blue);border-radius:5px;padding:5px 10px}
+  .rowL .hint{margin-left:auto;font:700 12px Verdana,sans-serif;color:var(--blue);text-decoration:underline;
+              text-underline-offset:3px}
+  .rowL.open{border-color:var(--blued);background:var(--bluel);box-shadow:inset 0 2px 4px rgba(0,0,0,.12)}
+</style>
+</head>
+<body>
+<h1>Step-button options — “STEP 1 · 2” on a verse row</h1>
+<p class="lede">Each option shows CLOSED and OPEN side by side, then a LIVE one — click it. All in the site palette; the blue is the block color (each block would tint its own buttons).</p>
+
+<div class="opt">
+  <h3>A · Chevron in the chip</h3>
+  <p class="note">The current shape plus a state arrow: ▸ points at the row when closed, ▾ points at the opened content below. Subtle darkening when open.</p>
+  <div class="row">
+    <div class="cell"><span class="cap">CLOSED</span><button class="bA"><span class="ch">▸</span> STEP 1 · 2</button></div>
+    <div class="cell"><span class="cap">OPEN</span><button class="bA open"><span class="ch">▾</span> STEP 1 · 2</button></div>
+    <div class="cell live"><span class="cap">LIVE — CLICK ME</span>
+      <button class="bA" onclick="tgA(this)"><span class="ch">▸</span> STEP 1 · 2</button></div>
+  </div>
+</div>
+
+<div class="opt">
+  <h3>B · Filled ↔ hollow</h3>
+  <p class="note">Closed = solid (a door). Open = hollow outline (the door is standing open). The strongest at-a-glance state difference.</p>
+  <div class="row">
+    <div class="cell"><span class="cap">CLOSED</span><button class="bB closed">▸ STEP 1 · 2</button></div>
+    <div class="cell"><span class="cap">OPEN</span><button class="bB open">▾ STEP 1 · 2</button></div>
+    <div class="cell live"><span class="cap">LIVE — CLICK ME</span>
+      <button class="bB closed" onclick="tgB(this)">▸ STEP 1 · 2</button></div>
+  </div>
+</div>
+
+<div class="opt">
+  <h3>C · Split button</h3>
+  <p class="note">Label + a state end-cap in darker blue. The cap is a dedicated “what happens when I click” zone.</p>
+  <div class="row">
+    <div class="cell"><span class="cap">CLOSED</span><button class="bC"><span class="lab">STEP 1 · 2</span><span class="cap2">▸</span></button></div>
+    <div class="cell"><span class="cap">OPEN</span><button class="bC open"><span class="lab">STEP 1 · 2</span><span class="cap2">▾</span></button></div>
+    <div class="cell live"><span class="cap">LIVE — CLICK ME</span>
+      <button class="bC" onclick="tgC(this)"><span class="lab">STEP 1 · 2</span><span class="cap2">▸</span></button></div>
+  </div>
+</div>
+
+<div class="opt">
+  <h3>D · Raised, presses in</h3>
+  <p class="note">Physical metaphor: closed sits raised with a drop shadow (obviously pressable); open is pressed into the page. The most “button-like” of all.</p>
+  <div class="row">
+    <div class="cell"><span class="cap">CLOSED</span><button class="bD">▸ STEP 1 · 2</button></div>
+    <div class="cell"><span class="cap">OPEN</span><button class="bD open">▾ STEP 1 · 2</button></div>
+    <div class="cell live"><span class="cap">LIVE — CLICK ME</span>
+      <button class="bD" onclick="tgD(this)">▸ STEP 1 · 2</button></div>
+  </div>
+</div>
+
+<div class="opt">
+  <h3>E · Folder tab</h3>
+  <p class="note">Open state fuses the button to the panel below it — the button becomes the tab of the opened drawer. Strongest connection between button and content.</p>
+  <div class="row">
+    <div class="cell"><span class="cap">CLOSED</span><span class="wrapE"><button class="bE">▸ STEP 1 · 2</button></span></div>
+    <div class="cell"><span class="cap">OPEN</span><span class="wrapE"><button class="bE open">▾ STEP 1 · 2</button>
+      <div class="panelE show">the tree and morphology render here…</div></span></div>
+    <div class="cell live"><span class="cap">LIVE — CLICK ME</span><span class="wrapE">
+      <button class="bE" onclick="tgE(this)">▸ STEP 1 · 2</button>
+      <div class="panelE">the tree and morphology render here…</div></span></div>
+  </div>
+</div>
+
+<div class="opt">
+  <h3>F · Plus / minus pill</h3>
+  <p class="note">The reading-glasses convention: ＋ means “there is more,” － means “take it away.” Rounded pill softens it.</p>
+  <div class="row">
+    <div class="cell"><span class="cap">CLOSED</span><button class="bF"><span class="pm">＋</span> STEP 1 · 2</button></div>
+    <div class="cell"><span class="cap">OPEN</span><button class="bF open"><span class="pm">−</span> STEP 1 · 2</button></div>
+    <div class="cell live"><span class="cap">LIVE — CLICK ME</span>
+      <button class="bF" onclick="tgF(this)"><span class="pm">＋</span> STEP 1 · 2</button></div>
+  </div>
+</div>
+
+<div class="opt">
+  <h3>G · Arrow-shaped chip</h3>
+  <p class="note">The whole button is the arrow: points right (into the row) closed, points down (at its content) open.</p>
+  <div class="row">
+    <div class="cell"><span class="cap">CLOSED</span><button class="bG">STEP 1 · 2</button></div>
+    <div class="cell"><span class="cap">OPEN</span><button class="bG open">STEP 1 · 2</button></div>
+    <div class="cell live"><span class="cap">LIVE — CLICK ME</span>
+      <button class="bG" onclick="tgG(this)">STEP 1 · 2</button></div>
+  </div>
+</div>
+
+<script>
+function swap(b, openNow, closedHTML, openHTML){ b.innerHTML = openNow ? openHTML : closedHTML; }
+function tgA(b){var o=b.classList.toggle('open');swap(b,o,'<span class="ch">▸</span> STEP 1 · 2','<span class="ch">▾</span> STEP 1 · 2')}
+function tgB(b){var o=b.classList.toggle('open');b.classList.toggle('closed',!o);b.textContent=o?'▾ STEP 1 · 2':'▸ STEP 1 · 2'}
+function tgC(b){var o=b.classList.toggle('open');b.querySelector('.cap2').textContent=o?'▾':'▸'}
+function tgD(b){var o=b.classList.toggle('open');b.textContent=o?'▾ STEP 1 · 2':'▸ STEP 1 · 2'}
+function tgE(b){var o=b.classList.toggle('open');b.textContent=o?'▾ STEP 1 · 2':'▸ STEP 1 · 2';
+  b.parentElement.querySelector('.panelE').classList.toggle('show',o)}
+function tgF(b){var o=b.classList.toggle('open');b.querySelector('.pm').textContent=o?'−':'＋'}
+function tgG(b){b.classList.toggle('open')}
+</script>
+
+<h1 style="margin-top:34px">Louder — “this screams click me”</h1>
+<p class="lede">Underline + shadow + motion + the verb written out. The animated ones stop moving once opened — the motion itself means “unopened content here.”</p>
+
+<div class="opt">
+  <h3>H · Underlined &amp; raised</h3>
+  <p class="note">The label is underlined like a link AND the button is raised with a shadow; hover lifts it. Open = pressed in, underline gone.</p>
+  <div class="row">
+    <div class="cell"><span class="cap">CLOSED</span><button class="bH">▸ <u>STEP 1 · 2 — OPEN</u></button></div>
+    <div class="cell"><span class="cap">OPEN</span><button class="bH open">▾ STEP 1 · 2 — CLOSE</button></div>
+    <div class="cell live"><span class="cap">LIVE — CLICK ME</span>
+      <button class="bH" onclick="tgH(this)">▸ <u>STEP 1 · 2 — OPEN</u></button></div>
+  </div>
+</div>
+
+<div class="opt">
+  <h3>I · Pulsing glow</h3>
+  <p class="note">A soft pulse radiates while closed — impossible to miss. The pulse stops when opened. (Use sparingly: fine when only closed rows pulse.)</p>
+  <div class="row">
+    <div class="cell"><span class="cap">CLOSED — PULSING</span><button class="bI">▸ STEP 1 · 2</button></div>
+    <div class="cell"><span class="cap">OPEN — STILL</span><button class="bI open">▾ STEP 1 · 2</button></div>
+    <div class="cell live"><span class="cap">LIVE — CLICK ME</span>
+      <button class="bI" onclick="tgI(this)">▸ STEP 1 · 2</button></div>
+  </div>
+</div>
+
+<div class="opt">
+  <h3>J · Says the verb</h3>
+  <p class="note">No symbols to decode — the word OPEN sits in a white tag inside the button, flipping to CLOSE. The most literal option.</p>
+  <div class="row">
+    <div class="cell"><span class="cap">CLOSED</span><button class="bJ">STEP 1 · 2 <span class="verb">OPEN ▸</span></button></div>
+    <div class="cell"><span class="cap">OPEN</span><button class="bJ open">STEP 1 · 2 <span class="verb">CLOSE ▴</span></button></div>
+    <div class="cell live"><span class="cap">LIVE — CLICK ME</span>
+      <button class="bJ" onclick="tgJ(this)">STEP 1 · 2 <span class="verb">OPEN ▸</span></button></div>
+  </div>
+</div>
+
+<div class="opt">
+  <h3>K · Nudging arrow</h3>
+  <p class="note">The chevron taps sideways over and over while closed — motion draws the eye without a full glow. Stops when open.</p>
+  <div class="row">
+    <div class="cell"><span class="cap">CLOSED — NUDGING</span><button class="bK"><span class="ar">▸</span> STEP 1 · 2</button></div>
+    <div class="cell"><span class="cap">OPEN — STILL</span><button class="bK open"><span class="ar">▾</span> STEP 1 · 2</button></div>
+    <div class="cell live"><span class="cap">LIVE — CLICK ME</span>
+      <button class="bK" onclick="tgK(this)"><span class="ar">▸</span> STEP 1 · 2</button></div>
+  </div>
+</div>
+
+<div class="opt">
+  <h3>L · The whole row is the button</h3>
+  <p class="note">Closest to the real page: the entire verse row gets the button treatment — bold border, shadow, hover tint, underlined verb at the right. The biggest possible click target.</p>
+  <div class="row">
+    <div class="cell" style="width:100%"><span class="cap">CLOSED</span>
+      <div class="rowL"><span class="chip">STEP 1 · 2</span> <b style="color:#a3542c">Gen 1:6</b>
+        <span style="font-style:italic;color:var(--soft);font-size:14px">“Let there be a firmament…”</span>
+        <span class="hint">▸ OPEN</span></div></div>
+    <div class="cell" style="width:100%"><span class="cap">OPEN</span>
+      <div class="rowL open"><span class="chip">STEP 1 · 2</span> <b style="color:#a3542c">Gen 1:6</b>
+        <span style="font-style:italic;color:var(--soft);font-size:14px">“Let there be a firmament…”</span>
+        <span class="hint">▾ CLOSE</span></div></div>
+    <div class="cell live" style="width:100%"><span class="cap">LIVE — CLICK ME</span>
+      <div class="rowL" onclick="tgL(this)"><span class="chip">STEP 1 · 2</span> <b style="color:#a3542c">Gen 1:6</b>
+        <span style="font-style:italic;color:var(--soft);font-size:14px">“Let there be a firmament…”</span>
+        <span class="hint">▸ OPEN</span></div></div>
+  </div>
+</div>
+
+<script>
+function tgH(b){var o=b.classList.toggle('open');b.innerHTML=o?'▾ STEP 1 · 2 — CLOSE':'▸ <u>STEP 1 · 2 — OPEN</u>'}
+function tgI(b){var o=b.classList.toggle('open');b.textContent=o?'▾ STEP 1 · 2':'▸ STEP 1 · 2'}
+function tgJ(b){var o=b.classList.toggle('open');b.querySelector('.verb').textContent=o?'CLOSE ▴':'OPEN ▸'}
+function tgK(b){var o=b.classList.toggle('open');b.querySelector('.ar').textContent=o?'▾':'▸'}
+function tgL(r){var o=r.classList.toggle('open');r.querySelector('.hint').textContent=o?'▾ CLOSE':'▸ OPEN'}
+</script>
+</body>
+</html>

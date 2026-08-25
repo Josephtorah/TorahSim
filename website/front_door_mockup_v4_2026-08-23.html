@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scroll Mockup v4 — in-site style</title>
+<style>
+  :root{
+    --cream:#fdfbf4; --panel:#fff; --tan:#f5eeda; --hair:#e4dcc4; --olive:#7a5c10;
+    --brown:#8a6a20; --rust:#a3542c; --ink:#2a2a24; --soft:#8c8468;
+    --day2:#5a7ca6; --day2l:#eef2f8; --day3:#5f8f63;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--cream);color:var(--ink);
+       font:16px/1.6 Charter,Georgia,'Times New Roman',serif}
+  /* top nav — as the site */
+  .nav{display:flex;align-items:center;gap:14px;background:#fffef9;border-bottom:2px solid var(--brown);
+       padding:10px 22px;}
+  .nav .logo{font:700 20px Charter,Georgia,serif;color:var(--olive)}
+  .nav .tabs{margin:0 auto;display:flex;gap:8px}
+  .nav .tabs a{font:14px Charter,Georgia,serif;border:1px solid var(--hair);border-radius:6px;
+       padding:4px 14px;text-decoration:none;color:var(--olive);background:#fffdf6}
+  .nav .tabs a.on{background:var(--olive);color:#fff;font-weight:700}
+  .nav .ext{font-size:13px;color:var(--olive)}
+  .mock{background:#8a2323;color:#fff;font:700 10px/1 Verdana,sans-serif;letter-spacing:.1em;
+        padding:4px 8px;border-radius:3px}
+  .main{max-width:1060px;margin:0 auto;padding:24px 26px 90px}
+  /* chapter banner — as the site */
+  .chapban{background:var(--tan);border:1px solid var(--hair);border-radius:8px;
+           padding:12px 20px;margin-bottom:16px;font-size:15px;color:var(--soft)}
+  .chapban b{font-size:21px;color:var(--ink);margin-right:10px}
+
+  /* ===== NEW: the unit band (color-coded grouping) ===== */
+  .uband{border:1px solid var(--hair);border-radius:10px;margin:18px 0;display:flex;overflow:hidden}
+  .uspine{flex:none;width:30px;background:var(--day2);color:#fff;writing-mode:vertical-rl;
+          text-orientation:mixed;padding:14px 0;display:flex;justify-content:flex-start;align-items:center;
+          font:700 11px Verdana,sans-serif;letter-spacing:.18em;white-space:nowrap}
+  .ubody{flex:1;min-width:0;background:linear-gradient(to right, var(--day2l), transparent 140px);
+         padding:0 0 6px}
+  .uband-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+              padding:9px 16px;border-bottom:1px dashed var(--hair)}
+  .uband-head .upill{font:12.5px Menlo,Consolas,monospace;color:var(--day2);border:1px solid var(--day2);
+              border-radius:12px;padding:2px 10px;background:#fff}
+  .uband-head .ulab{font:700 13px Verdana,sans-serif;color:var(--day2);letter-spacing:.04em}
+  .uband-head .ustat{font:12.5px Menlo,Consolas,monospace;color:var(--soft)}
+
+  /* verse card — as the site */
+  .vcard{background:var(--panel);border:1px solid var(--hair);border-radius:8px;margin:12px 14px;
+         padding:16px 20px}
+  .vhead{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+  .vref{font:700 17px Charter,Georgia,serif;color:var(--rust)}
+  .vunit{font:12.5px Menlo,Consolas,monospace;border:1px solid var(--hair);border-radius:12px;
+         padding:2px 10px;color:var(--brown);background:#fffdf6}
+  .vstat{font:12.5px Menlo,Consolas,monospace;color:var(--soft)}
+  .jps{font-style:italic;color:#5a5648;margin:4px 0 10px}
+  .rowlab{font:11px Menlo,Consolas,monospace;letter-spacing:.12em;color:var(--soft);margin:10px 0 4px}
+  .pills{display:flex;flex-wrap:wrap;gap:7px}
+  .pills.rtl{direction:rtl}
+  .pill{border:1px solid var(--hair);border-radius:8px;background:#fffdf6;padding:4px 12px;font-size:15.5px}
+  .pill.he{font-size:19px;font-family:'SBL Hebrew','Ezra SIL','Times New Roman',serif}
+  .treehint{font-style:italic;font-size:13px;color:var(--soft);margin:4px 0 6px}
+  .treebox{border:1px solid var(--hair);border-radius:8px;background:#fffefb;padding:12px;overflow-x:auto}
+  .tnode{font:12px Charter,Georgia,serif;background:var(--tan);border:1px solid var(--hair);
+         border-radius:6px;padding:2px 9px}
+  svg text{font:13px Charter,Georgia,serif;fill:var(--ink)}
+  svg .hebt{font-size:16px}
+  svg line{stroke:#c9bd9c;stroke-width:1.2}
+  svg .nodebox{fill:#f5eeda;stroke:#d8cfae}
+  svg .nodetxt{font:700 11px Charter,Georgia,serif;fill:#7a5c10}
+  svg .leafbox{fill:#fff;stroke:#d8cfae}
+  svg .lhe{font-size:15px;text-anchor:middle}
+  svg .ltr{font:9.5px Charter,Georgia,serif;fill:#8c8468;text-anchor:middle}
+  svg .lgl{font:700 10.5px Charter,Georgia,serif;fill:#2a2a24;text-anchor:middle}
+  svg .lrole{font:700 9px Verdana,sans-serif;fill:#7a5c10;text-anchor:middle}
+  svg .lid{font:8.5px Charter,Georgia,serif;fill:#9a916f;text-anchor:middle}
+  .zoomctl{position:absolute;right:10px;top:40%;display:flex;flex-direction:column;gap:5px}
+  .zoomctl span{border:1px solid var(--hair);background:#fff;border-radius:6px;font:700 12px Verdana,sans-serif;
+    color:var(--soft);padding:3px 8px;text-align:center}
+  .treebox{position:relative}
+  table{border-collapse:collapse;width:100%;margin:6px 0;font-size:14px}
+  th,td{border:1px solid var(--hair);padding:5px 9px;text-align:left;vertical-align:top}
+  th{background:var(--tan);font:700 11px Verdana,sans-serif;color:var(--soft)}
+  td.mono{font:12.5px Menlo,Consolas,monospace}
+  td.heb{font-family:'SBL Hebrew','Ezra SIL',serif;font-size:17px;text-align:right}
+  tr.grp td{border-top:2px solid var(--brown)}
+  .code{border-left:4px solid var(--day2);background:#f7f4e9;border-radius:0 8px 8px 0;
+        padding:12px 14px;font:12.5px/1.6 Menlo,Consolas,monospace;overflow-x:auto;white-space:pre}
+  .dim{color:#9a916f}
+  .v6{--vc:#5a7ca6}.v7{--vc:#8aa3c4}.v8{--vc:#33507a}
+  .vchip{font:700 10px Verdana,sans-serif;color:#fff;background:var(--vc);border-radius:3px;padding:2px 7px;margin-right:8px}
+  .vgroup{border-left:5px solid var(--vc);background:#f7f4e9;border-radius:0 8px 8px 0;
+          padding:8px 12px;margin:6px 0;font:12.5px/1.6 Menlo,Consolas,monospace;overflow-x:auto;white-space:pre}
+  .vlegend{display:flex;gap:8px;align-items:center;font:11px Verdana,sans-serif;color:var(--soft);margin:4px 0 8px}
+  tr.vhead td{background:var(--vc);color:#fff;font:700 11px Verdana,sans-serif;border-color:var(--vc)}
+
+  /* ===== NEW: unit record expanders at the band's foot ===== */
+  .urec{margin:4px 14px 10px;border-top:2px solid var(--day2);padding-top:8px}
+  .stepchip{display:inline-flex;align-items:stretch;flex:none;align-self:center;border-radius:5px;overflow:hidden;
+             font:700 10px Verdana,sans-serif;color:#fff;letter-spacing:.06em}
+  .stepchip .lab{background:var(--day2);padding:4px 9px;display:flex;align-items:center}
+  .stepchip .cap2{background:#3d5f8a;padding:2px 9px;font-size:16px;line-height:1;display:flex;align-items:center}
+  .on .stepchip .lab{background:#3d5f8a}
+  .on .stepchip .cap2{background:#2a4568}
+  .urec-title{font:700 11.5px Verdana,sans-serif;color:var(--day2);letter-spacing:.1em;margin:2px 0 8px}
+  .xp{background:var(--panel);border:1px solid var(--hair);border-radius:8px;margin:8px 0;scroll-margin-top:14px}
+  .xp-head{display:flex;gap:12px;align-items:baseline;padding:10px 14px;cursor:pointer}
+  .xp-head:hover{background:#fdfaf1}
+  .xp-head.on,.vhead.on{background:var(--day2l)}
+  .vhead{border-radius:6px;padding:2px 6px;margin:-2px -6px 4px}
+  .vcard{cursor:pointer;scroll-margin-top:14px}
+  .vcard.isopen{cursor:auto}
+  .vcard.isopen .vhead{cursor:pointer}
+  .xp-head b{color:var(--ink)}
+  .xp-head .sum{color:var(--soft);font-size:14px}
+  .xp-head .more{margin-left:auto;font:11px Verdana,sans-serif;color:var(--day2);white-space:nowrap}
+  .xp-body{display:none;border-top:1px solid var(--hair);padding:12px 16px;font-size:14.5px;background:#fffdf8}
+  .xp-body.open{display:block;border-left:3px solid #d3c69f;padding-left:16px;margin-left:2px}
+  .counters{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0}
+  .counters div{background:var(--day2l);border-radius:6px;padding:7px 13px;text-align:center}
+  .counters b{display:block;font-size:19px}
+  .counters span{font:10.5px Verdana,sans-serif;color:var(--soft)}
+  td.mat{background:#edf3ea;font-weight:700}
+  .claim{border:1px solid var(--hair);border-radius:8px;background:#fff;margin:10px 0;padding:10px 14px}
+  .claim h5{margin:0 0 6px;font:700 14px Charter,Georgia,serif}
+  .clrow{display:flex;gap:10px;margin:4px 0;font-size:13.5px;line-height:1.5}
+  .clrow .t{flex:none;width:74px;font:700 9.5px Verdana,sans-serif;letter-spacing:.08em;color:#7a5c10;padding-top:3px}
+  .clrow .t.m{color:var(--day2)}
+  .midd{font:italic 12.5px Charter,Georgia,serif;color:var(--soft)}
+  .gates{display:flex;flex-wrap:wrap;gap:6px;font:11.5px Verdana,sans-serif;margin:6px 0}
+  .gates i{font-style:normal;background:#eef3ea;border:1px solid #c8d6bc;border-radius:4px;padding:3px 8px}
+  .compress{color:var(--soft);font-style:italic;font-size:13.5px;padding:2px 20px 8px}
+  .nextband .uspine{background:var(--day3)}
+  .nextband .ubody{background:linear-gradient(to right,#eef4ee,transparent 140px)}
+  .nextband .ulab,.nextband .upill{color:var(--day3);border-color:var(--day3)}
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <span class="logo">TorahSim</span>
+  <span class="mock">MOCKUP v4</span>
+  <div class="tabs"><a href="#">Epic Disclosure</a><a class="on" href="#">The Scroll</a><a href="#">The Run</a></div>
+  <span class="ext">github &nbsp;·&nbsp; discord</span>
+</div>
+
+<div class="main">
+
+<div class="chapban"><b>Genesis 1</b> prose · ta'amim v3 · 31 verses · <span style="color:var(--day2)">■ day-unit bands shown (new)</span></div>
+
+<!-- ============ THE UNIT BAND (new): day 2 wraps its three verses ============ -->
+<div class="uband">
+  <div class="uspine">BLOCK · DAY 2 · GENESIS 1:6–8</div>
+  <div class="ubody">
+  <div class="uband-head">
+    <span class="ulab">DAY 2 · THE FIRMAMENT · GENESIS 1:6–8</span>
+    <span style="font:14px Charter,Georgia,serif;color:var(--ink)">every declared source read · seven teachings from the tradition are built into this unit · full rule · stamped 2026-08-23</span>
+    <span style="font:11px Menlo,Consolas,monospace;color:var(--soft)">record: gen_02_raqia_day · rev 3</span>
+  </div>
+
+  <!-- verse card, exactly the current site layout -->
+  <div class="vcard" onclick="vtg(event,this,'vb6')">
+    <div class="vhead">
+      <span class="stepchip"><span class="lab">STEP 1 · 2</span><span class="cap2">▸</span></span><span class="vref">Gen 1:6</span>
+      <span class="more" style="margin-left:auto;font:11px Verdana,sans-serif;color:var(--day2)">▸ open</span>
+    </div>
+    <div class="jps">“And God said: Let there be a firmament in the midst of the waters, and let it divide the waters from the waters.”</div>
+    <div id="vb6" class="xp-body" style="padding:0;background:transparent;border-top:1px dashed var(--hair)">
+    <div class="rowlab">HEBREW</div>
+    <div class="pills rtl">
+      <span class="pill he">(וַיֹּאמֶר אֱלֹהִים)</span><span class="pill he">(יְהִי רָקִיעַ)</span>
+      <span class="pill he">(בְּתוֹךְ הַמָּיִם)</span><span class="pill he">(וִיהִי מַבְדִּיל)</span>
+      <span class="pill he">(בֵּין מַיִם)</span><span class="pill he">(לָמָיִם)</span>
+    </div>
+    <div class="rowlab">ENGLISH</div>
+    <div class="pills">
+      <span class="pill">(and-say God)</span><span class="pill">(be firmament)</span>
+      <span class="pill">(in-midst the-waters)</span><span class="pill">(and-be divide)</span>
+      <span class="pill">(between waters)</span><span class="pill">(to-waters)</span>
+    </div>
+
+    <div class="rowlab" style="margin-top:12px">STEP 1 — VERSE TREE · 6 LEAVES</div>
+    <div class="treehint">The verse as the ta'amim (cantillation marks) built it: the strongest pause splits first, each split labeled with the mark that made the cut, down to the leaves. Drag to pan; magnify with ⌘/Ctrl + scroll, double-click (shift to shrink), pinch, or the corner controls; hover a leaf for its word range and why it froze.</div>
+    <div class="treebox">
+      <svg viewBox="0 0 1140 300" width="100%" height="295">
+        <!-- connectors -->
+        <line x1="570" y1="82" x2="392" y2="120"/><line x1="570" y1="82" x2="800" y2="120"/>
+        <line x1="392" y1="144" x2="255" y2="182"/><line x1="392" y1="144" x2="460" y2="176"/>
+        <line x1="460" y1="200" x2="392" y2="228"/><line x1="460" y1="200" x2="527" y2="228"/>
+        <line x1="800" y1="144" x2="663" y2="182"/><line x1="800" y1="144" x2="868" y2="176"/>
+        <line x1="868" y1="200" x2="800" y2="228"/><line x1="868" y1="200" x2="935" y2="228"/>
+        <!-- internal nodes -->
+        <rect class="nodebox" x="512" y="58" rx="6" width="116" height="24"/><text class="nodetxt" x="527" y="75">etnachta r1</text>
+        <rect class="nodebox" x="322" y="120" rx="6" width="140" height="24"/><text class="nodetxt" x="334" y="137">zaqef_qatan r2</text>
+        <rect class="nodebox" x="730" y="120" rx="6" width="140" height="24"/><text class="nodetxt" x="742" y="137">zaqef_qatan r2</text>
+        <rect class="nodebox" x="415" y="176" rx="6" width="90" height="24"/><text class="nodetxt" x="428" y="193">tifcha r2</text>
+        <rect class="nodebox" x="823" y="176" rx="6" width="90" height="24"/><text class="nodetxt" x="836" y="193">tifcha r2</text>
+        <!-- leaves: five-line cards, verse order left to right -->
+        <g><rect class="leafbox" x="185" y="182" rx="8" width="140" height="76"/>
+          <text class="lhe" x="255" y="201">וַיֹּאמֶר אֱלֹהִים</text>
+          <text class="ltr" x="255" y="213">va-yomer Elohim</text>
+          <text class="lgl" x="255" y="225">and-say God</text>
+          <text class="lrole" x="255" y="238">SPEAK(agent=Elohim)</text>
+          <text class="lid" x="255" y="250">B0 · zaqef_qatan · r2</text></g>
+        <g><rect class="leafbox" x="325" y="228" rx="8" width="130" height="66"/>
+          <text class="lhe" x="390" y="246">יְהִי רָקִיעַ</text>
+          <text class="ltr" x="390" y="257">yehi raqia</text>
+          <text class="lgl" x="390" y="268">be firmament</text>
+          <text class="lrole" x="390" y="280">CMD(be)</text>
+          <text class="lid" x="390" y="290">B1 · tifcha · r2</text></g>
+        <g><rect class="leafbox" x="463" y="228" rx="8" width="132" height="66"/>
+          <text class="lhe" x="529" y="246">בְּתוֹךְ הַמָּיִם</text>
+          <text class="ltr" x="529" y="257">be-tokh ha-mayim</text>
+          <text class="lgl" x="529" y="268">in-midst the-waters</text>
+          <text class="lrole" x="529" y="280">PREP(in·midst·waters)</text>
+          <text class="lid" x="529" y="290">B2 · etnachta · r1</text></g>
+        <g><rect class="leafbox" x="593" y="182" rx="8" width="140" height="76"/>
+          <text class="lhe" x="663" y="201">וִיהִי מַבְדִּיל</text>
+          <text class="ltr" x="663" y="213">vi-yhi mavdil</text>
+          <text class="lgl" x="663" y="225">and-be divide</text>
+          <text class="lrole" x="663" y="238">CMD?(be)</text>
+          <text class="lid" x="663" y="250">B3 · zaqef_qatan · r2</text></g>
+        <g><rect class="leafbox" x="733" y="228" rx="8" width="130" height="66"/>
+          <text class="lhe" x="798" y="246">בֵּין מַיִם</text>
+          <text class="ltr" x="798" y="257">ben mayim</text>
+          <text class="lgl" x="798" y="268">between waters</text>
+          <text class="lrole" x="798" y="280">BETWEEN(waters)</text>
+          <text class="lid" x="798" y="290">B4 · tifcha · r2</text></g>
+        <g><rect class="leafbox" x="871" y="228" rx="8" width="128" height="66"/>
+          <text class="lhe" x="935" y="246">לָמָיִם</text>
+          <text class="ltr" x="935" y="257">la-mayim</text>
+          <text class="lgl" x="935" y="268">to-waters</text>
+          <text class="lrole" x="935" y="280">PREP(to·waters)</text>
+          <text class="lid" x="935" y="290">B5 · silluq · r1</text></g>
+      </svg>
+      <div class="zoomctl"><span>＋</span><span style="font-size:10px">71%</span><span>−</span><span style="font-size:10px">fit</span></div>
+    </div>
+
+    <div class="rowlab" style="margin-top:14px">STEP 2 — MORPHOLOGY</div>
+    <table>
+      <tr><th></th><th>#</th><th>Hebrew</th><th>translit</th><th>gloss</th><th>code</th><th>analysis</th></tr>
+      <tr class="grp"><td class="mono">B1</td><td class="mono">1</td><td class="heb">וַיֹּאמֶר</td><td>va-yomer</td><td>and-said</td><td class="mono">Vqw3ms</td><td>verb · qal · wayyiqtol · 3rd masc sing — the narrative past</td></tr>
+      <tr><td class="mono">B1</td><td class="mono">2</td><td class="heb">אֱלֹהִים</td><td>Elohim</td><td>God</td><td class="mono">Ncmpa</td><td>noun · common · masc · plural · absolute — “God” (H430)</td></tr>
+      <tr class="grp"><td class="mono">B2</td><td class="mono">3</td><td class="heb">יְהִי</td><td>yehi</td><td>let-be</td><td class="mono">Vqj3ms</td><td>verb · qal · <b>jussive</b> — a clean directive: the machine logs LET</td></tr>
+      <tr><td class="mono">B2</td><td class="mono">4</td><td class="heb">רָקִיעַ</td><td>raqia</td><td>firmament</td><td class="mono">Ncmsa</td><td>noun · common · masc · sing · absolute — “firmament” (H7549)</td></tr>
+      <tr class="grp"><td class="mono">B4</td><td class="mono">7</td><td class="heb">וִיהִי</td><td>vi-yhi</td><td>and-let-be</td><td class="mono">Vqi3ms</td><td>verb · qal · <b>imperfect</b> — command or future? the form cannot say: LET?</td></tr>
+      <tr><td class="mono">B4</td><td class="mono">8</td><td class="heb">מַבְדִּיל</td><td>mavdil</td><td>dividing</td><td class="mono">Vhrmsa</td><td>verb · hifil · <b>participle</b> — a standing duty, not an event</td></tr>
+      <tr><td colspan="7" class="dim" style="font-style:italic">… all 11 words on the real page</td></tr>
+    </table>
+    </div>
+
+    
+  </div>
+
+  <div class="vcard" onclick="vtg(event,this,'vb7')">
+    <div class="vhead">
+      <span class="stepchip"><span class="lab">STEP 1 · 2</span><span class="cap2">▸</span></span><span class="vref">Gen 1:7</span>
+      <span class="more" style="margin-left:auto;font:11px Verdana,sans-serif;color:var(--day2)">▸ open</span>
+    </div>
+    <div class="jps">“And God made the firmament, and divided the waters which were under the firmament from the waters which were above the firmament; and it was so.”</div>
+    <div id="vb7" class="xp-body" style="padding:0;background:transparent;border-top:1px dashed var(--hair)">
+    <div class="rowlab">HEBREW</div>
+    <div class="pills rtl">
+      <span class="pill he">וַיַּעַשׂ אֱלֹהִים</span><span class="pill he">אֶת־הָרָקִיעַ</span>
+      <span class="pill he">וַיַּבְדֵּל</span><span class="pill he">בֵּין הַמַּיִם אֲשֶׁר מִתַּחַת לָרָקִיעַ</span>
+      <span class="pill he">וּבֵין הַמַּיִם אֲשֶׁר מֵעַל לָרָקִיעַ</span><span class="pill he">וַיְהִי־כֵן</span>
+    </div>
+    <div class="rowlab">ENGLISH</div>
+    <div class="pills">
+      <span class="pill">(and-He-made God)</span><span class="pill">(obj-marker·et the-firmament)</span>
+      <span class="pill">(and-He-divided)</span><span class="pill">(between the-waters that-are-under the-firmament)</span>
+      <span class="pill">(and-between the-waters that-are-above the-firmament)</span><span class="pill">(and-it-was so)</span>
+    </div>
+    <div class="rowlab" style="margin-top:12px">STEP 1 — VERSE TREE · 17 LEAVES</div>
+    <div class="treebox">
+      <svg viewBox="0 0 920 220" width="100%" height="215">
+        <rect class="nodebox" x="400" y="6" rx="6" width="120" height="24"/><text x="412" y="23">etnachta r1</text>
+        <line x1="460" y1="30" x2="260" y2="60"/><line x1="460" y1="30" x2="740" y2="60"/>
+        <rect class="nodebox" x="200" y="60" rx="6" width="120" height="24"/><text x="220" y="77">segol r2</text>
+        <rect class="nodebox" x="655" y="60" rx="6" width="170" height="26"/><text class="hebt" x="670" y="79">וַיְהִי־כֵן</text>
+        <text x="838" y="79" class="dim" style="font-size:11px">"and it was so"</text>
+        <line x1="260" y1="84" x2="130" y2="118"/><line x1="260" y1="84" x2="400" y2="118"/>
+        <rect class="nodebox" x="20" y="118" rx="6" width="220" height="26"/><text class="hebt" x="32" y="137">וַיַּעַשׂ אֱלֹהִים אֶת־הָרָקִיעַ</text>
+        <rect class="nodebox" x="330" y="118" rx="6" width="140" height="24"/><text x="342" y="135">zaqef qatan r2</text>
+        <line x1="400" y1="142" x2="310" y2="176"/><line x1="400" y1="142" x2="520" y2="176"/>
+        <rect class="nodebox" x="190" y="176" rx="6" width="240" height="26"/><text class="hebt" x="200" y="195">וַיַּבְדֵּל בֵּין הַמַּיִם … מִתַּחַת</text>
+        <rect class="nodebox" x="450" y="176" rx="6" width="235" height="26"/><text class="hebt" x="460" y="195">וּבֵין הַמַּיִם אֲשֶׁר מֵעַל לָרָקִיעַ</text>
+        <text x="20" y="214" class="dim" style="font-size:11.5px">left arm: the build ("and God made the firmament") + the division, its two sides located under / above · right arm: the receipt ("and it was so")</text>
+      </svg>
+    </div>
+    <div class="rowlab" style="margin-top:14px">STEP 2 — MORPHOLOGY</div>
+    <table>
+      <tr><th></th><th>#</th><th>Hebrew</th><th>translit</th><th>gloss</th><th>code</th><th>analysis</th></tr>
+      <tr class="grp"><td class="mono">B1</td><td class="mono">1</td><td class="heb">וַיַּעַשׂ</td><td>va-ya'as</td><td>and-He-made</td><td class="mono">Vqw3ms</td><td>verb · qal · wayyiqtol — the build event</td></tr>
+      <tr><td class="mono">B1</td><td class="mono">3</td><td class="heb">אֶת</td><td>et</td><td>obj-marker·et</td><td class="mono">To</td><td>particle: object marker — marks the built thing</td></tr>
+      <tr class="grp"><td class="mono">B2</td><td class="mono">5</td><td class="heb">וַיַּבְדֵּל</td><td>va-yavdel</td><td>and-He-divided</td><td class="mono">Vhw3ms</td><td>verb · hifil · wayyiqtol — the partition event</td></tr>
+      <tr><td class="mono">B2</td><td class="mono">9</td><td class="heb">מִתַּחַת</td><td>mi-tachat</td><td>from-under</td><td class="mono">R</td><td>preposition — locates the lower waters</td></tr>
+      <tr><td class="mono">B2</td><td class="mono">14</td><td class="heb">מֵעַל</td><td>me-al</td><td>from-above</td><td class="mono">R</td><td>preposition — <b>“from above,” not “upon”</b>: the letter the suspended-waters reading rides (STEP 4)</td></tr>
+      <tr class="grp"><td class="mono">B3</td><td class="mono">16</td><td class="heb">וַיְהִי</td><td>va-yehi</td><td>and-it-was</td><td class="mono">Vqw3ms</td><td>verb · qal · wayyiqtol — the receipt formula opens</td></tr>
+      <tr><td colspan="7" class="dim" style="font-style:italic">… all 17 words on the real page</td></tr>
+    </table>
+    </div>
+  </div>
+
+  <div class="vcard" onclick="vtg(event,this,'vb8')">
+    <div class="vhead">
+      <span class="stepchip"><span class="lab">STEP 1 · 2</span><span class="cap2">▸</span></span><span class="vref">Gen 1:8</span>
+      <span class="more" style="margin-left:auto;font:11px Verdana,sans-serif;color:var(--day2)">▸ open</span>
+    </div>
+    <div class="jps">“And God called the firmament Heaven. And there was evening and there was morning, a second day.”</div>
+    <div id="vb8" class="xp-body" style="padding:0;background:transparent;border-top:1px dashed var(--hair)">
+    <div class="rowlab">HEBREW</div>
+    <div class="pills rtl">
+      <span class="pill he">וַיִּקְרָא אֱלֹהִים</span><span class="pill he">לָרָקִיעַ</span>
+      <span class="pill he">שָׁמָיִם</span><span class="pill he">וַיְהִי־עֶרֶב וַיְהִי־בֹקֶר</span>
+      <span class="pill he">יוֹם שֵׁנִי</span>
+    </div>
+    <div class="rowlab">ENGLISH</div>
+    <div class="pills">
+      <span class="pill">(and-He-called God)</span><span class="pill">(to-the-firmament)</span>
+      <span class="pill">(Heaven)</span><span class="pill">(and-there-was evening and-there-was morning)</span>
+      <span class="pill">(day second)</span>
+    </div>
+    <div class="rowlab" style="margin-top:12px">STEP 1 — VERSE TREE · 10 LEAVES</div>
+    <div class="treebox">
+      <svg viewBox="0 0 920 200" width="100%" height="195">
+        <rect class="nodebox" x="400" y="6" rx="6" width="120" height="24"/><text x="412" y="23">etnachta r1</text>
+        <line x1="460" y1="30" x2="240" y2="60"/><line x1="460" y1="30" x2="700" y2="60"/>
+        <rect class="nodebox" x="180" y="60" rx="6" width="120" height="24"/><text x="200" y="77">tifcha r2</text>
+        <rect class="nodebox" x="640" y="60" rx="6" width="120" height="24"/><text x="660" y="77">tifcha r2</text>
+        <line x1="240" y1="84" x2="130" y2="118"/><line x1="240" y1="84" x2="350" y2="118"/>
+        <line x1="700" y1="84" x2="590" y2="118"/><line x1="700" y1="84" x2="810" y2="118"/>
+        <rect class="nodebox" x="30" y="118" rx="6" width="200" height="26"/><text class="hebt" x="42" y="137">וַיִּקְרָא אֱלֹהִים לָרָקִיעַ</text>
+        <rect class="nodebox" x="290" y="118" rx="6" width="110" height="26"/><text class="hebt" x="302" y="137">שָׁמָיִם</text>
+        <rect class="nodebox" x="490" y="118" rx="6" width="210" height="26"/><text class="hebt" x="500" y="137">וַיְהִי־עֶרֶב וַיְהִי־בֹקֶר</text>
+        <rect class="nodebox" x="740" y="118" rx="6" width="120" height="26"/><text class="hebt" x="752" y="137">יוֹם שֵׁנִי</text>
+        <text x="30" y="188" class="dim" style="font-size:11.5px">left arm: the naming ("and God called the firmament — Heaven") · right arm: the commit ("evening … morning — a second day")</text>
+      </svg>
+    </div>
+    <div class="rowlab" style="margin-top:14px">STEP 2 — MORPHOLOGY</div>
+    <table>
+      <tr><th></th><th>#</th><th>Hebrew</th><th>translit</th><th>gloss</th><th>code</th><th>analysis</th></tr>
+      <tr class="grp"><td class="mono">B1</td><td class="mono">1</td><td class="heb">וַיִּקְרָא</td><td>va-yiqra</td><td>and-He-called</td><td class="mono">Vqw3ms</td><td>verb · qal · wayyiqtol — the naming act</td></tr>
+      <tr><td class="mono">B1</td><td class="mono">3</td><td class="heb">לָרָקִיעַ</td><td>la-raqia</td><td>to-the-firmament</td><td class="mono">Rd+Ncmsa</td><td>dative la- — marks the name's receiver</td></tr>
+      <tr><td class="mono">B1</td><td class="mono">4</td><td class="heb">שָׁמָיִם</td><td>shamayim</td><td>Heaven</td><td class="mono">Ncmpa</td><td>noun — the name written into the registry (H8064)</td></tr>
+      <tr class="grp"><td class="mono">B2</td><td class="mono">9</td><td class="heb">שֵׁנִי</td><td>sheni</td><td>second</td><td class="mono">Aomsa</td><td>ordinal, <b>no article</b> — “a second day” (only day 6 will take “THE”: the flagged extra letter)</td></tr>
+      <tr><td colspan="7" class="dim" style="font-style:italic">… all 10 words on the real page</td></tr>
+    </table>
+    </div>
+  </div>
+
+  <!-- ============ NEW: the unit record — what used to be another page ============ -->
+  <div class="urec">
+    <div class="urec-title">▙ THE UNIT RECORD — DAY 2 · steps 3–8, in order · opens here, not on another page</div>
+
+    <div class="xp">
+      <div class="xp-head" onclick="tg(this,'r3')">
+        <span class="stepchip"><span class="lab">STEP 3</span><span class="cap2">▸</span></span><b>Declare the reading</b>
+        <span class="sum">scoped before reading: chain primaries + Onkelos — 34 of the 733 sources that touch 1:6–8</span>
+        <span class="more">▸ open</span>
+      </div>
+      <div id="r3" class="xp-body">
+        <p style="margin-top:2px"><b>The scope, declared before reading</b> — standing rule (owner,
+        2026-08-23): read the register's <i>chain-primary</i> class matched to the span, plus Onkelos
+        (the received translation); everything else is enumerated and recorded as
+        <i>outside declared scope</i> — narrowing done openly, never silently. A later depth pass
+        resumes from the recorded list.</p>
+        <div class="counters">
+          <div><b>733</b><span>ENUMERATED</span></div>
+          <div><b>34</b><span>DECLARED</span></div>
+          <div><b>2</b><span>EXCLUDED, WITH CAUSE</span></div>
+          <div><b>699</b><span>OUTSIDE SCOPE</span></div>
+        </div>
+        <p style="margin:10px 0 2px"><b>What the 733 are</b> — by register class:</p>
+        <table>
+          <tr><th>register class</th><th>count</th><th>role in this method</th></tr>
+          <tr><td class="mat">chain primary</td><td class="mat">36</td><td class="mat">grounds material findings — THE declared set (31 read + Onkelos ×3; 2 excluded, below)</td></tr>
+          <tr><td>chain compilation</td><td>35</td><td>corroboration tier — depth passes only, on the owner's order</td></tr>
+          <tr><td>chain anthology</td><td>14</td><td>locators — resolve to the primary they quote</td></tr>
+          <tr><td>late composite translation</td><td>5</td><td>translation observations only</td></tr>
+          <tr><td>geonic</td><td>4</td><td>post-Talmudic chain</td></tr>
+          <tr><td>halakhic application</td><td>5</td><td>deployed-code cross-check, never a claims source</td></tr>
+          <tr><td>outside-chain academic</td><td>5</td><td>observation only, never authority</td></tr>
+          <tr><td>unmatched (commentary/modern tiers)</td><td>629</td><td>enumerated, outside the register's chain classes</td></tr>
+        </table>
+        <p style="margin:10px 0 2px"><b>Exclusions, with cause</b> — 2 register false-positives:
+        “Shabbat Siddur Sefard Linear …” ×2 — liturgy books caught by the bare “Shabbat” tractate
+        prefix rule (first-match-wins hazard); surfaced here, not hidden.</p>
+        <p class="dim" style="font-size:13px">↳ the 699 outside-scope sources, listed ·
+        ↳ the register (works.yaml) that classifies them</p>
+      </div>
+    </div>
+
+    <div class="xp">
+      <div class="xp-head" onclick="tg(this,'r1')">
+        <span class="stepchip"><span class="lab">STEP 4</span><span class="cap2">▸</span></span><b>Read and log</b>
+        <span class="sum">all 34 read and verdicted — the 7 findings that fed the logic</span>
+        <span class="more">▸ open</span>
+      </div>
+      <div id="r1" class="xp-body">
+        <table>
+          <tr><th>source</th><th>what it said</th></tr>
+          <tr><td>Midrash (“exposition”) Rabbah, Genesis 4:2</td><td>the two-phase build — “fluid on the first day, on the second they CONGEALED”</td></tr>
+          <tr><td>Midrash Rabbah, Genesis 4:3</td><td>מֵעַל (“from above”), not עַל (“upon”) — the upper waters hang by the word, not resting on the firmament</td></tr>
+          <tr><td>Midrash Rabbah, Genesis 4:6</td><td>why no “it was good” today — the chain's four recorded answers, repaid by day 3's double</td></tr>
+          <tr><td>Midrash Rabbah, Genesis 4:7</td><td>the naming: fire + water kneaded together into שָׁמָיִם (“Heaven”)</td></tr>
+          <tr><td>Jerusalem Talmud, Berakhot 1:1:23</td><td>the congeal verb-set: strengthen / congeal / skin over / stretch</td></tr>
+          <tr><td>Jerusalem Talmud, Taanit 4:3:3</td><td>Monday's fast for sea-farers hangs on this very verse</td></tr>
+          <tr><td>Midrash Rabbah, Genesis 17:1</td><td>the ten-utterances census — this fiat is #3 (a recorded dispute renumbers it #4)</td></tr>
+        </table>
+        <div class="xp" style="margin-top:10px;border-style:dashed">
+          <div class="xp-head" onclick="tg(this,'r1sub')">
+            <b style="font-size:14px">The full ledger — all 34 rows, verdicted, append-only</b>
+            <span class="more">▸ open</span>
+          </div>
+          <div id="r1sub" class="xp-body">
+            <table>
+              <tr><th>#</th><th>source</th><th>verdict</th></tr>
+              <tr><td class="mono">1</td><td>Midrash Rabbah, Genesis 4:1</td><td>enrichment — the King roofs His chambers with water</td></tr>
+              <tr><td class="mono">2</td><td>Midrash Rabbah, Genesis 4:2</td><td class="mat">material</td></tr>
+              <tr><td class="mono">3</td><td>Midrash Rabbah, Genesis 4:3</td><td class="mat">material</td></tr>
+              <tr><td class="mono">4</td><td>Midrash Rabbah, Genesis 4:4</td><td>enrichment — the Samaritan's challenge; half in the firmament, half in the ocean</td></tr>
+              <tr><td colspan="3" class="dim" style="font-style:italic">… rows 5–34 render in full on the real page (mockup elision only)</td></tr>
+            </table>
+            <p class="dim" style="font-size:13px">↳ the append-only ledger file in the public repo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="xp">
+      <div class="xp-head" onclick="tg(this,'r5')">
+        <span class="stepchip"><span class="lab">STEP 5</span><span class="cap2">▸</span></span><b>Extract claims</b>
+        <span class="sum">seven claims, each shown as its full chain: said → claimed → changed the machine</span>
+        <span class="more">▸ open</span>
+      </div>
+      <div id="r5" class="xp-body">
+        <p class="dim" style="margin:2px 0 8px;font-size:13px">Each claim is a three-step chain: what the source SAID (the ledger row) → what we CLAIMED from it (with the tradition's own inference rule, where one is used) → what it CHANGED in the machine. Nothing enters the machine without this chain.</p>
+
+        <div class="claim"><h5>C1 · The census continues</h5>
+          <div class="clrow"><span class="t">SAID</span><span>Midrash Rabbah, Genesis 17:1 (with the day-1 canon from Rosh Hashanah 32a): the world was created with TEN UTTERANCES — the opening word counts, and each “and God said” counts.</span></div>
+          <div class="clrow"><span class="t">CLAIMED</span><span>Our 1:6 fiat is utterance #3 of the ten — and under R. Yaakov ben Kurshai's recorded dissent (the wind of 1:2 counts too) it is #4: <b>the ordinal is dispute-relative</b>, and both numbers are carried.</span></div>
+          <div class="clrow"><span class="t m">MACHINE</span><span style="font-family:Menlo,monospace;font-size:12.5px">ORAL_UTTERANCE — UTTERANCE(3, fiat) · dispute-relative note in the op text</span></div>
+        </div>
+
+        <div class="claim"><h5>C2 · The two-phase build</h5>
+          <div class="clrow"><span class="t">SAID</span><span>Midrash Rabbah, Genesis 4:2 + Jerusalem Talmud, Berakhot 1:1:23: “the works were FLUID on the first day; on the second they CONGEALED” — יְהִי (“let there be”) read as “let it STRENGTHEN,” with the Jerusalem Talmud's verb-set: strengthen / congeal / skin over / stretch; and רָקִיעַ (“firmament”) tied to hammered-out sheets — “as you say: ‘they hammered out the gold sheets’” (Exodus 39:3).</span></div>
+          <div class="clrow"><span class="t">CLAIMED</span><span>The firmament's making is a TWO-PHASE build: day-1 material, day-2 hardening. <span class="midd">middah: wording-analogy (gezerah shavah) on the hammering root — the tradition's rule E7.</span></span></div>
+          <div class="clrow"><span class="t m">MACHINE</span><span style="font-family:Menlo,monospace;font-size:12.5px">the DECLARE op carries the chain's reading beside its clean LET — recorded, never merged</span></div>
+        </div>
+
+        <div class="claim"><h5>C3 · The suspended waters</h5>
+          <div class="clrow"><span class="t">SAID</span><span>Midrash Rabbah, Genesis 4:3 (with 4:4's demonstration, and Chagigah 15a's three fingerbreadths): the letter says מֵעַל (“from ABOVE”) the firmament — not עַל (“upon”) — so the upper waters do not REST on the built thing: they hang by the word.</span></div>
+          <div class="clrow"><span class="t">CLAIMED</span><span>The converged outcome — a standing suspension maintained by the word — becomes a claim; the GAP'S SIZE (vast, or three fingerbreadths) never converged, so it stays a carried dispute, never decided. <span class="midd">middah: letter-level close reading of the preposition.</span></span></div>
+          <div class="clrow"><span class="t m">MACHINE</span><span style="font-family:Menlo,monospace;font-size:12.5px">WITNESS("upper waters", "suspended-by-the-word") · witness tier, walled from machine facts · typed anchor: Psalm 148:4 — “the waters above the heavens,” still praising, still there</span></div>
+        </div>
+
+        <div class="claim"><h5>C4 · The missing “good,” answered four ways</h5>
+          <div class="clrow"><span class="t">SAID</span><span>Midrash Rabbah, Genesis 4:6: why is “it was good” missing from day 2? — Gehinnom was created on it · DIVISION was born on it (R. Tavyomei: if even division that builds the world earns no “good,” how much more division that wrecks it) · the water-work was UNFINISHED, repaid by day 3's double “good.”</span></div>
+          <div class="clrow"><span class="t">CLAIMED</span><span>The machine's no-test flag is CHAIN-WITNESSED: the tradition asked the same question of the same absence and left four recorded answers — none decided, all carried. <span class="midd">middah in the source: an explicit a-fortiori (the tradition's rule E5).</span></span></div>
+          <div class="clrow"><span class="t m">MACHINE</span><span style="font-family:Menlo,monospace;font-size:12.5px">the COMMIT op carries the dossier; FLAG("no test") stands — the machine records the absence, the chain records why</span></div>
+        </div>
+
+        <div class="claim"><h5>C5 · The name kneaded from fire and water</h5>
+          <div class="clrow"><span class="t">SAID</span><span>Midrash Rabbah, Genesis 4:7: Rav — שָׁמַיִם (“Heaven”) is אֵשׁ + מַיִם (“fire” + “water”) kneaded together; also read as “carrier of water”; and a written-form note rides the name.</span></div>
+          <div class="clrow"><span class="t">CLAIMED</span><span>The registry write carries the chain's etymology set for the name it installs. <span class="midd">middah: word-splitting (notarikon) — the tradition's rule E30.</span></span></div>
+          <div class="clrow"><span class="t m">MACHINE</span><span style="font-family:Menlo,monospace;font-size:12.5px">the NAME op — raqia → שָׁמָיִם (“Heaven”) — annotated with the etymologies</span></div>
+        </div>
+
+        <div class="claim"><h5>C6 · The Monday fast</h5>
+          <div class="clrow"><span class="t">SAID</span><span>Jerusalem Talmud, Taanit 4:3:3: “On Monday they fast for travellers at sea — ‘God said: let there be a firmament amid the waters.’” The weekly fast-list hangs Monday's fast on this very verse.</span></div>
+          <div class="clrow"><span class="t">CLAIMED</span><span>The water-division's standing peril is acknowledged in WEEKLY PRACTICE — the verse has a living echo in the tradition's calendar, matching day 3's Tuesday fast and day 4's Wednesday fast.</span></div>
+          <div class="clrow"><span class="t m">MACHINE</span><span style="font-family:Menlo,monospace;font-size:12.5px">standing-practice note on the DECLARE op</span></div>
+        </div>
+
+        <div class="claim"><h5>C7 · The boundary: no law from creation's ledger</h5>
+          <div class="clrow"><span class="t">SAID</span><span>Jerusalem Talmud, Rosh Hashanah 1:1:2 — a CONTEXT row, not one of the seven teachings, and still load-bearing: a calendar proof built on our 1:8 commit is dismissed — “one does not derive counting-law from the creation of the world.”</span></div>
+          <div class="clrow"><span class="t">CLAIMED</span><span>The chain itself refuses to use this unit's ledger as legal precedent — a recorded BOUNDARY on what our facts may ground. Even a non-material reading can bound the machine.</span></div>
+          <div class="clrow"><span class="t m">MACHINE</span><span style="font-family:Menlo,monospace;font-size:12.5px">boundary note on the COMMIT op</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="xp">
+      <div class="xp-head" onclick="tg(this,'r2')">
+        <span class="stepchip"><span class="lab">STEP 6</span><span class="cap2">▸</span></span><b>Write or amend the logic</b>
+        <span class="sum">the unit's machine — every line labeled and shaded by its verse</span>
+        <span class="more">▸ open</span>
+      </div>
+      <div id="r2" class="xp-body">
+        <div class="vlegend">each verse keeps one shade of the unit's blue, everywhere code appears:
+          <span class="v6"><span class="vchip">1:6</span></span>
+          <span class="v7"><span class="vchip">1:7</span></span>
+          <span class="v8"><span class="vchip">1:8</span></span>
+        </div>
+
+        <div class="v6"><span class="vchip">1:6</span><span style="font:italic 12px Georgia,serif;color:var(--soft)">the spec — two demands, two moods</span>
+        <div class="vgroup">DECLARE("exists raqia")     <span class="dim"># yehi raqia — let-be firmament [jussive — clean LET]</span>
+DECLARE("divide", mood="?") <span class="dim"># vi-yhi mavdil — and-let-be dividing [imperfect — LET?]</span>
+INVARIANT("dividing")       <span class="dim"># mavdil — participle: standing duty</span></div></div>
+
+        <div class="v7"><span class="vchip">1:7</span><span style="font:italic 12px Georgia,serif;color:var(--soft)">the build — event, partition, receipt</span>
+        <div class="vgroup">EVENT("make raqia")                            <span class="dim"># va-ya'as — and-He-made</span>
+EVENT("partition: waters-under | waters-over") <span class="dim"># va-yavdel — and-He-divided</span>
+RESULT("and it was so")                        <span class="dim"># va-yehi khen — the receipt</span>
+WITNESS("upper waters", "suspended-by-the-word") <span class="dim"># the chain's reading — walled from machine facts</span></div></div>
+
+        <div class="v8"><span class="vchip">1:8</span><span style="font:italic 12px Georgia,serif;color:var(--soft)">the name and the commit — with the missing test</span>
+        <div class="vgroup">NAME("raqia" → שָׁמָיִם "Heaven")  <span class="dim"># va-yiqra — and-He-called</span>
+COMMIT("day 2")                    <span class="dim"># yom sheni — a second day</span>
+FLAG("no test")                    <span class="dim"># the week's only commit without "it was good"</span></div></div>
+
+        <p style="margin:10px 0 4px"><b>What the machine now holds:</b> world — the firmament, on duty ·
+        name — Heaven · tests — none · flags — the unresolved LET? and the missing test.</p>
+
+        <div class="xp" style="margin-top:10px;border-style:dashed">
+          <div class="xp-head" onclick="tg(this,'r2a')">
+            <b style="font-size:14px">Full operator record</b>
+            <span class="sum">every operator with its Hebrew, cites, and confidence — verse-shaded</span>
+            <span class="more">▸ open</span>
+          </div>
+          <div id="r2a" class="xp-body">
+            <table>
+              <tr class="vhead v6"><td colspan="3">GEN 1:6 — DECLARE_SPEC_TWO_MOODS</td></tr>
+              <tr><td class="mono">DECLARE(LET(exists(raqia)))</td><td class="heb">יְהִי רָקִיעַ</td><td>"let there be a firmament" — jussive, a clean LET · cites: TIR-026, TIR-032 · tested</td></tr>
+              <tr><td class="mono">DECLARE(LET?(mavdil))</td><td class="heb">וִיהִי מַבְדִּיל</td><td>"and let it be dividing" — imperfect, the ? never auto-resolves · cites: TIR-028 · tested-as-flag</td></tr>
+              <tr class="vhead v7"><td colspan="3">GEN 1:7 — BUILD_DIVIDE_RESULT</td></tr>
+              <tr><td class="mono">EVENT(make, Theme=raqia)</td><td class="heb">וַיַּעַשׂ אֶת־הָרָקִיעַ</td><td>"and He made the firmament" — wayyiqtol build event · cites: TIR-014 · tested</td></tr>
+              <tr class="vhead v8"><td colspan="3">GEN 1:8 — NAME_COMMIT_NO_TEST</td></tr>
+              <tr><td class="mono">NAME(raqia → shamayim)</td><td class="heb">וַיִּקְרָא … שָׁמָיִם</td><td>"and He called … Heaven" — the registry write · cites: TIR-022 · tested</td></tr>
+              <tr><td colspan="3" class="dim" style="font-style:italic">… all operators render on the real page</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="xp" style="border-style:dashed">
+          <div class="xp-head" onclick="tg(this,'r2b')">
+            <b style="font-size:14px">The runnable proof</b>
+            <span class="sum">the generated Python — 38 assertions, all green: if a claim were wrong, this file would crash</span>
+            <span class="more">▸ open</span>
+          </div>
+          <div id="r2b" class="xp-body">
+            <div class="v6"><div class="vgroup"><span class="dim"># ‹יְהִי רָקִיעַ› yehi (let-be) raqia (firmament) — Gen 1:6</span>
+m.declare("raqia", mood="LET")
+m.declare("divide", mood="LET?")
+assert m.SPECS["divide"].mood == "LET?"   <span class="dim"># the ? survives — never auto-upgraded</span></div></div>
+            <div class="v7"><div class="vgroup"><span class="dim"># ‹וַיַּעַשׂ› va-ya'as (and-He-made) — Gen 1:7</span>
+m.event("make", theme="raqia")
+m.result("va-yehi khen")
+assert "raqia" in m.WORLD</div></div>
+            <div class="v8"><div class="vgroup"><span class="dim"># ‹וַיִּקְרָא› va-yiqra (and-He-called) — Gen 1:8</span>
+m.name("raqia", "shamayim")
+m.commit(day=2)
+assert "tov" not in m.TESTS[2]            <span class="dim"># the missing test, asserted</span></div></div>
+            <p class="dim" style="font-size:13px">↳ the full generated file (runnable, word-glossed) in the public repo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="xp">
+      <div class="xp-head" onclick="tg(this,'r7')">
+        <span class="stepchip"><span class="lab">STEP 7</span><span class="cap2">▸</span></span><b>Run the gates</b>
+        <span class="sum">13 mechanical checks, all green, before any human declared anything</span>
+        <span class="more">▸ open</span>
+      </div>
+      <div id="r7" class="xp-body">
+        <div class="gates"><i>✓ declared-reading</i><i>✓ text layer</i><i>✓ frozen run</i><i>✓ scenarios</i><i>✓ regression 97/97</i><i>✓ rendering self-proof</i><i>✓ … 13/13</i></div>
+      </div>
+    </div>
+
+    <div class="xp">
+      <div class="xp-head" onclick="tg(this,'r8')">
+        <span class="stepchip"><span class="lab">STEP 8</span><span class="cap2">▸</span></span><b>The stamp</b>
+        <span class="sum">the owner's word, 2026-08-23 — the only human act in the chain; the chips above are computed, never hand-set</span>
+        <span class="more">▸ open</span>
+      </div>
+      <div id="r8" class="xp-body">
+        <p class="dim" style="font-size:13.5px;margin:2px 0">Stamped full rule on the word “day 2 good.”
+        A chip can never claim more than the ledger and the gates show — remove the records and the chip
+        falls back on its own.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- next unit band — the color hands off -->
+<div class="uband nextband">
+  <div class="uspine">BLOCK · DAY 3 · GENESIS 1:9–13</div>
+  <div class="ubody">
+  <div class="uband-head">
+    <span class="ulab">DAY 3 · GATHERING &amp; SPROUTING · GENESIS 1:9–13</span>
+    <span style="font:14px Charter,Georgia,serif;color:var(--ink)">every declared source read · twenty teachings from the tradition are built into this unit · full rule · stamped 2026-08-23</span>
+    <span style="font:11px Menlo,Consolas,monospace;color:var(--soft)">record: gen_03_double_build · rev 3</span>
+  </div>
+  <div class="compress">five verse cards + the day-3 unit record — same shape, its own color</div>
+  </div>
+</div>
+
+</div>
+<script>
+var TOP=['vb6','vb7','vb8','r3','r1','r5','r2','r7','r8'];
+function headOf(id){return document.querySelector('[onclick*="\''+id+'\'"]')}
+function shut(id){var b=document.getElementById(id); if(!b)return;
+  b.classList.remove('open');
+  var el=headOf(id); if(!el)return;
+  var head=el.classList.contains('vhead')||el.querySelector('.vhead')?(el.querySelector('.vhead')||el):el;
+  el.classList.remove('on','isopen'); head.classList.remove('on');
+  var m=(head.querySelector&&head.querySelector('.more'))||el.querySelector('.more'); if(m){m.innerHTML='▸ open';}
+  var c=(head.querySelector&&head.querySelector('.cap2'))||el.querySelector('.cap2'); if(c){c.textContent='▸';}}
+function shutOthers(id){TOP.forEach(function(t){if(t!==id)shut(t);});}
+function alignAfter(el, before){
+  var after = el.getBoundingClientRect().top;
+  window.scrollBy(0, after - before);                 /* pin: no visual jump from the collapse */
+  requestAnimationFrame(function(){                    /* then glide gently to the top */
+    var y = el.getBoundingClientRect().top;
+    window.scrollBy({top: y - 14, behavior: 'smooth'});
+  });}
+function tg(el,id){var b=document.getElementById(id);var willOpen=!b.classList.contains('open');
+  var before = el.getBoundingClientRect().top;
+  if(willOpen && TOP.indexOf(id)>=0) shutOthers(id);
+  var open=b.classList.toggle('open');
+  el.classList.toggle('on',open);
+  var m=el.querySelector('.more'); if(m){m.innerHTML=open?'▾ close':'▸ open';}
+  var c=el.querySelector('.cap2'); if(c){c.textContent=open?'▾':'▸';}
+  if(open && TOP.indexOf(id)>=0){alignAfter(el, before);}}
+function vtg(ev,card,id){var b=document.getElementById(id);var head=card.querySelector('.vhead');
+  var isOpen=b.classList.contains('open');
+  if(isOpen && !head.contains(ev.target)) return;
+  var before = card.getBoundingClientRect().top;
+  if(!isOpen) shutOthers(id);
+  var open=b.classList.toggle('open');
+  card.classList.toggle('isopen',open); head.classList.toggle('on',open);
+  var m=head.querySelector('.more'); if(m){m.innerHTML=open?'▾ close':'▸ open';}
+  var c=head.querySelector('.cap2'); if(c){c.textContent=open?'▾':'▸';}
+  if(open){alignAfter(card, before);}}
+</script>
+</body>
+</html>
