@@ -52,7 +52,14 @@ logic/MISHNAH_TOPICS.md (all 63 mapped).
 SPEED RULINGS (owner, 2026-08-25, binding for the Genesis walk):
 (a) READ AT THE PARASHAH GRAIN — one sequential pass over a weekly
 portion's primaries covers all its blocks; the ledgers stay
-per-block. (b) STANDING-VERDICT CREDITS — a source already verdicted
+per-block. WHY (measured 2026-08-26, owner-confirmed): the reading
+itself costs the same either way — batching cuts the OVERHEAD
+(setup runs once, not per block; neighboring blocks share sources
+that get read once and verdicted everywhere; credits compound
+inside the sitting). Four blocks swept in ~23 minutes vs one block
+the old way in over an hour. Never fall back to block-by-block.
+[Workshop note: this WHY paragraph needs mirroring to the canon
+copy in TorahSim on the owner's word in that window.] (b) STANDING-VERDICT CREDITS — a source already verdicted
 in any prior ledger is CREDITED, never re-read; duplicate clusters
 are precomputed so dup rows are verdicted without being opened.
 (c) TERSE NON-MATERIAL ROWS — every declared source still gets its

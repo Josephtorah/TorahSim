@@ -3828,3 +3828,185 @@ applied by the peer). STAGED THERE, pending his word in THAT window:
 THE_STEPS credit-guards amendment, register-pass re-run of the
 pre-enumeration, canon commits. Workshop side fully applied and
 current; workshop commit also pending owner word here.
+
+LATER 2026-08-25: GEN_10 READ + REBUILT (owner "derive next block
+now") — FIRST FULL SPEED-LAW SITTING, and the fastest yet: 2,020
+enumerated, 66 declared (arithmetic gated), READ 66/66 — only 35
+fresh (31 credits from THREE eras: the compounding works; Sanhedrin
+29a + BR 19 rows arrived pre-verdicted from gen_08). Tally: 14
+material / 9 enrichment / 8 dup / 4 no-bearing, terse rows applied.
+Guard-3 CATCH ON FIRST OUTING: tree-identity attributions DIFFER
+between Bavli (R. Meir=vine) and midrashic seats (R. Meir=wheat) —
+dual-tracked, exactly the variance class the guard exists for. First
+Tosefta primaries read under the new register rule (Tosefta Sotah 4:5
+— serpent's motive kill-Adam-marry-Eve at its tannaitic seat).
+Headlines: interrogation typed (tapped jugs; ayeka heart-accusation;
+va-okhel ink-tense); the missing third question explained (serpent
+sentenced without hearing); Presence-withdrawal ladder initialized at
+OUR 3:8 (seven up/seven down, polarity variance dual-tracked);
+serpent baseline (erect/legs/king-intended) for gen_11's curses.
+REBUILD rev 2 + 4 ORAL blocks, queue discharged. GATES ALL GREEN
+(claims 0 FAILED, TEXT GREEN 13 steps, gloss 0, preflight GREEN).
+Batch-eligible; stamp awaits owner word. gen_11 (3:14-24) next.
+
+OWNER'S NEXT INTENT after compaction: gen_11 (the sentences and the
+exile, 3:14-24, ~2,808 enumerated — the serpent-baseline dossier from
+gen_10 feeds its curse ops) — then the EDEN BATCH STAMP is available
+on one word (gen_09 + gen_10 + gen_11; ritual once per batch).
+UNCOMMITTED on disk (safe, awaiting owner commit word): gen_10 unit
+rev 2 + its ledger + state-doc entries since commit 63b7dbd. Canon
+side still holds staged behind the owner's direct hold in torahsim-19.
+COMPACTION POINT — records current through here.
+
+LATER (2026-08-25, post-compaction — gen_11 sitting, owner word "do
+next block"): THE EDEN QUARTET'S READING IS COMPLETE. gen_11 (the
+sentences and the exile, Genesis 3:14-24) read end to end in one
+sitting under the speed law: 2,808 enumerated, 101 declared (90
+primaries + 11 Onkelos; ONE register false-positive excluded with
+cause — "Mishnah Berurah 4:52" caught by the Mishnah prefix, the
+Shabbat-Siddur class), read 101 of 101 COMPLETE — 61 fresh (41
+material, the densest yield of the Eden sittings), 29 carry credits
+from FOUR eras (all verified against actual verdict rows; the loose
+matcher's 17 daf-level false candidates demoted to fresh and read —
+guards holding), 11 Onkelos credits on the v1 Tier-A record. Ledger
+logic/oral_triage/gen_11_sentences_exile_2026-08-25.md; unit rev 2
+with 7 new ORAL blocks + queue discharged. HEADLINES: the 71-CENSUS
+MACHINE-VERIFIED (Bereshit Rabbah 20:4 — exactly 71 divine-name
+tokens Genesis 1:1-3:13 at the OSHB ink, the count reaching 71
+precisely at the sentencing's threshold; ten-utterances class); the
+FOURTH DEFENDANT (earth cursed beside the three tried — Jerusalem
+Talmud Kilayim 1:7:4 + Bereshit Rabbah 5:9 joining gen_03's
+deviation dispute to the 3:17 curse); the lament re-reading of
+"like one of us" dual-tracked; Papus/Akiva two-paths at tannaitic +
+amoraic seats (death/other-path wording variance); repentance
+opened-and-refused (ve-atah/pen) vs accepted-after (Eikhah Rabbah
+5:21 — the liturgy's ke-kedem petition in our expulsion token); the
+3:16 token-mapping variance between Eruvin 100b and Bereshit Rabbah
+20:6 (guard-class catch); BOTH sentence terms carrying
+righteous-exemptions (default writs, not physics); EIGHT
+laws/standing obligations on this unit's ops (imitatio-clothing,
+skin-after-formation purity, she-ascends, pre-journey duty,
+childbirth offering form, havdalah fire blessing,
+derekh-eretz-precedes-Torah, lesser-first curse order). Pirkei
+DeRabbi Eliezer 20 (day-clock) stays outside the core shelf
+(chain_compilation) — depth option recorded openly; handler-delta
+spec flag stands, dossiers grown (first-mortality Avodah Zarah
+8a:7, Elijah not-to-taste-death). GATES: verify_claims 15/0/1,
+TEXT LAYER GREEN (two July reds fixed to the ink at this sitting —
+the Name's cholam at 3:14, the spec-delta op-fragment requoted to
+3:19's own ink with the 2:17 handler phrase kept in expr_en),
+gloss_lint 0, preflight ALL SCENARIOS GREEN; the amended
+declared-reading gate parses the ledger 61+29+11=101 PASS.
+Machine untouched. STATUS: gen_09 + gen_10 + gen_11 all read,
+rebuilt, gates green, UNSTAMPED — THE EDEN BATCH STAMP is available
+on one owner word (ritual once per batch; gen_11's ritual will also
+carry its red-dozen exit). UNCOMMITTED on disk: gen_10 + gen_11
+units and ledgers + state-doc entries since 63b7dbd. Canon side
+unchanged (owner's direct hold in torahsim-19 stands).
+
+LATER (2026-08-26 — the FIRST PARASHAH-GRAIN SWEEP, owner word "now
+lets do the next block with the new rules"): PARASHAT BERESHIT'S
+READING IS COMPLETE. One sequential sitting covered Genesis 4:1-6:8 —
+FOUR blocks, FOUR ledgers, ONE pass, exactly as speed-law rule (a)
+orders (the rule broken at gen_11 and corrected here; the
+post-compaction-reread memory now guards it). Totals: 6,571 enumerated
+across the four spans; 269 declared; 269 read (172 fresh rows + 31
+carry credits from FIVE eras + 66 Onkelos on the v1 Tier-A records);
+106 material. Two register false-positives excluded with cause
+(Mishnah Berurah class at gen_11; Shabbat Siddur class at gen_15).
+Per block: gen_12 (4:1-16) 2,458/77/34 material — the capital-court
+crown (Mishnah Sanhedrin 4:5 on demei-plural with the mi-Yisrael
+ink-variance), the NA/NOD HALF-DECREE INK-DIFF MACHINE-VERIFIED
+(na va-nad at 4:12+4:14, nod alone at 4:16 — three seats, three
+mechanisms), the thousand-year-day at a shelf seat (handler-delta
+dossier in-shelf at Bereshit Rabbah 22:1), se'et heading the
+undecidable-parse census, 4:7 carrying condition-law +
+Torah-as-antidote + the Antoninus emergence ruling, the empty quote
+of 4:8 filled three ways, the suspended sentence discharged at 7:23.
+gen_13 (4:17-26) 1,037/35/11 material — the decree-verb genealogy,
+LEMEKH'S A-FORTIORI GRADED FLAWED-YET-CANONICAL by the chain itself
+(middah-layer crown), the huchal rebellion census with the Enosh
+partial-inundation measure variance, the image-line cut at Enosh,
+Seth as Messiah-root. gen_14 (5:1-32) 1,385/82/24 material — the
+sefer as shown-registry/pre-written book/two ledgers/Messiah-gate
+soul-queue, the great-principle dispute seated ON 5:1 (with graded vs
+level seat-variance), PROCREATION LAW'S PROOF-TEXT IS 5:2 (Mishnah +
+Tosefta), the 130-years likeness proof at Eruvin 18b (daf-ref read at
+segments), Chanokh's gezerah-shavah duel, five Noach-name
+derivations, order-by-rank argued arithmetically. gen_15 (6:1-8)
+1,691/75/37 material — the benei-ha-elohim identity machloket
+(judges-rendering cursed-literal vs the Azazel join), LO YADON's
+full legal field (Mishnah Sanhedrin 10:3 case row + Tosefta + the
+Gehenna cycle + the share tension recorded from both sides), chamas
+sealed the decree + the sub-perutah engineering, the 120-years
+triangle + be-shagam=Moshe cipher, THE EARTH'S THIRD DEVIATION
+(darnel — joining gen_03 and gen_11's fourth-defendant), the court
+procedure reading of 6:5-7. GATES: all four units verify_claims 0
+FAILED, TEXT LAYER GREEN, gloss_lint 0 (six flags fixed), preflight
+ALL SCENARIOS GREEN; the declared-reading gate parses all four
+completion lines PASS (77/35/82/75). Rebuilds: rev 2 + changelog +
+ORAL_reading_pass_2026_08_26 block + v1 queues discharged, machine
+untouched, all v1 flags stand. STATUS: gen_09 through gen_15 now all
+read/rebuilt/green and UNSTAMPED — one owner word can cover any batch
+(noted once, not pushed). NEXT parashah: Noach (gen_16..gen_19 —
+ark_spec 6:9-22, boarding 7, the rise 8, the remembering/covenant 9
+— plus whatever the block table holds through 11:32), one sweep.
+UNCOMMITTED on disk: everything since 63b7dbd (gen_10/11 + this
+sweep's four ledgers + four units + state doc), awaiting owner word.
+
+LATER (2026-08-26): owner reviewed the sweep — "I am impressed. Good
+job." — and asked the batching rationale be added to the rules. Done:
+the WHY paragraph now sits under Step 4 (a) in the workshop
+THE_STEPS.md (needs mirroring to canon TorahSim on his word in that
+window) and in the post-compaction-rule-reread memory. OWNER'S NEXT
+INTENT after compaction: the PARASHAT NOACH SWEEP — gen_16 (ark spec
+6:9-22), gen_17 (boarding 7), gen_18 (the rise 8), gen_19 (the
+remembering 9) — one pass, per Step 4 (a); check the block table for
+whether 10-11 blocks join it. gen_09 through gen_15 remain read,
+green, UNSTAMPED (batch word available, not pushed). UNCOMMITTED on
+disk since 63b7dbd: gen_10/11 + the four sweep ledgers + four units +
+THE_STEPS WHY + state doc. COMPACTION POINT — records current
+through here.
+
+=== 2026-08-25 (post-compaction #19): THE PARASHAT NOACH SWEEP — ELEVEN
+BLOCKS, ONE SITTING, 28m47s (09:35:49-10:04:36, per-step times kept on
+the owner's order). The block table answered the parked question: Noach
+= gen_16 THROUGH gen_26 (6:9-11:32, 153 verses, clean cut at 12:1), so
+the sweep ran all eleven, not four. TIMES: pre-enumeration+register all
+11 blocks 0m33s; credit-guard catch + boundary-aware roster rebuild
+1m01s (guard-1 exposed my substring matcher crediting "Bereshit Rabbah
+30:1" off a standing "30:11" row — 138 false credits demoted to fresh
+BEFORE anything was credited; the fix is exact-match-with-boundary +
+daf-grain-with-quick-look only); text fetch 289 fresh refs 1m08s;
+reading+ledgers in three legs — gen_16-18 6m45s, gen_19-22 6m34s,
+gen_23-26 7m26s; declared-arithmetic normalization 1m02s; 11 unit
+rebuilds to rev 2 2m31s; gates 1m47s. NUMBERS: 14,478 enumerated;
+declared core shelf 626 (284 fresh verdict rows + 129 carry credits +
+31 daf-grain + 29 in-sitting dups + 153 Onkelos); 169 material F;
+13,784 marked outside declared scope openly; 68 register false
+positives excluded with cause — including a THIRD FP class discovered:
+"Tosefta Kifshutah on..." (Lieberman's modern commentary caught by the
+"Tosefta " prefix; 5 refs; register untouched, change is owner's word).
+Guard-3 honored: the daf-level link "Sanhedrin 70a" read at SEGMENT
+grain (22 segments), yielding the 13-vs-14 woe-vav ink-count variance
+against Bereshit Rabbah 36:4 — recorded dual-track. TWO JULY-RED text
+failures surfaced and fixed to the ink (gen_19's 8:9 quote stitched
+around the return clause; gen_24's 10:11 city list missing the
+object-particles) — changelog lines in both units. HEADLINE YIELD (the
+ledgers carry it all): the Noachide law corpus lands on its home ink —
+murder procedure from 9:6's words, robbery from 9:3's green herbs, the
+seven-laws execution paradigm, the exit-verse ketiv/qere pair
+(hotze/haitze), the seven-days-mourning law on 7:10, life-in-the-
+nostrils on 7:22, the translation charter + Greek-scrolls halakha on
+9:27, the Ptolemy alteration at 11:7, the peace-outweighs grading on
+11:1, Haran-at-six as live paternity-law precedent, and the calendar
+laws standing on 8:13. GATES: gloss_lint 0 (2 flags fixed), preflight
+ALL SCENARIOS GREEN x11, TEXT LAYER GREEN x11, declared-reading gate
+parses all eleven completion lines (81/78/44/41/54/68/27/49/79/55/50).
+STATUS: gen_09 THROUGH gen_26 now read/rebuilt/green — EIGHTEEN blocks
+UNSTAMPED; one owner word can cover any batch (noted once, not
+pushed). Genesis progress: 26 of 73 blocks read, 47 left (~8 more
+parashah sweeps; next: Lech Lecha — gen_27 the call 12:1-9 onward).
+UNCOMMITTED on disk since 63b7dbd: gen_10/11 + Bereshit sweep (4) +
+Noach sweep (11 ledgers + 11 units) + THE_STEPS WHY + memory + state
+doc — awaiting owner word.
