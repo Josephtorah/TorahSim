@@ -7,6 +7,94 @@ automatically, where liability persists as state across years and
 generations, and where the computed consequences can be checked against
 what the narrative itself reports.
 
+## The purpose (owner ruling 2026-08-25 — the missing why, now ruled)
+
+Owner verbatim: **"we will use the talmud as our source of truth."**
+Ruled after a four-purposes discussion (prove the law computable / a
+concordance of state / run the tradition's own hypotheticals / the
+canon's open-demand queue): the MISSION is the third — **run the
+tradition's own hypotheticals**. The Talmud's case-discussions (each
+sugya — a Talmudic case-discussion) pose cases AND record their
+answers; those recorded answers are the ORACLE — the expected outputs
+the simulator's computed verdicts are tested against.
+
+Precision, so "truth" stays honest: the STONE (derived logic) remains
+the machine's program — the only truth about what the verses say. The
+Talmud's recorded answers are the GROUND TRUTH FOR TESTING — what the
+machine's outputs are measured against. Two different jobs for the
+word, both kept.
+
+What the ruling buys: (a) computability is PROVEN as this mission's
+passing grade — a verdict without an oracle proves nothing; (b) the
+state concordance gets BUILT as its substrate; (c) the hypotheticals
+are INTEGRATION TESTS — "the ox gored on the Sabbath" needs two laws
+loaded in one world; single-unit derivation never exercises law-on-law
+interaction; (d) DISAGREEMENT IS THE PRODUCT — a machine-vs-sugya
+mismatch means either a missed claim (→ a specific reading target) or
+an input not in the written verses (→ a documented Oral Torah
+finding); the flywheel: read → derive → run the sugya → mismatch →
+told what to read next; (e) DISPUTES ARE RUNTIME OUTPUTS — a machloket
+(recorded dispute) returns two rulings with attribution, and teiku
+("let it stand" — the Talmud's own unresolved) returns unresolved; a
+single-answer machine would be wrong about the Talmud; (f) underived
+law blocks a case honestly — the sketch tier stands in, labeled, and
+blocked cases RANK the next derivation targets.
+
+Follow-on, queued not designed: the sugya CASE FILE (inputs + the
+tradition's recorded answer + citation) as a first-class runnable
+artifact that reading passes collect. THE_STEPS stays untouched until
+that design is ruled.
+
+## The oracle's anatomy — how the Mishnah fits (owner, 2026-08-25)
+
+The owner's words on this insight: "this is the greatest insights of
+this entire project." "Talmud as source of truth" contains the Mishnah
+automatically — the Talmud physically IS Mishnah paragraphs plus the
+discussion around them. The two layers do different jobs, and the
+split is the one THE_STEPS Step 4 already teaches (a Mishnah paragraph
+is a RULING — input→output, no reason shown; a Talmud passage is a
+DERIVATION, DISPUTE, or TEST):
+
+**The Mishnah is the verdict table.** Each paragraph is a test
+fixture: declared inputs, expected output, derivation stripped. Six
+orders, 63 tractates of settled cases — organized BY SUBSYSTEM, not
+narrative: Seeds (agricultural law), Festival (the calendar — the
+world clock's own test suite), Women (marriage law), Damages (torts),
+Holy Things (the sanctuary), Purities. The Torah is source code in
+narrative order; the Mishnah is the API organized by module — it hands
+the simulator its MODULE MAP. The routing table already exists:
+`logic/MISHNAH_TOPICS.md`, all 525 chapters topic-labeled.
+
+**The Gemara is everything around the table** — three jobs:
+(1) TRACEABILITY — menalan ("from where do we know this?") hooks each
+Mishnah row to its verses: WHICH STONE EACH TEST EXERCISES; a failing
+case's own gemara points at the verse span to derive next — the
+tradition wrote the traceability matrix for us; (2) EDGE CASES — the
+hypotheticals probe each row's boundaries: the generated edge tests
+around each core fixture; (3) DISPUTE FLAGS — contested / resolved /
+teiku ("let it stand"): the metadata telling the oracle to expect one
+output, two attributed outputs, or unresolved.
+
+Consequences, standing: case files anchor on the MISHNAH ROW (the
+gemara supplies the verse hooks = which units must be loaded, the
+hypothetical variants, the dispute status); a Mishnah row WITHOUT
+gemara still stands — a black-box test (the gemara turns black-box
+into glass-box); the Mishnah's internal disputes (the houses of Hillel
+and Shammai) are DUAL EXPECTED OUTPUTS; Tosefta (the supplement
+collection) rows are VARIANT oracle rows, dual-tracked. Precedent
+proven in-house: the Exodus 21 machine's 64 scenes leaned on Mishnah
+Bava Kamma's ox taxonomy; its standing-verdict mechanics rode Mishnah
+Keritot 6:2.
+
+One breath: Mishnah = the expected-output table, organized by module.
+Gemara = the traceability, the edge cases, and the dispute flags.
+Talmud = both — which is why the purpose ruling names the whole.
+
+*(Both sections ruled in the workshop window 2026-08-25 and mirrored
+here on the owner's order — "mirror the purpose and anatomy to
+torahsim"; the workshop's THE_WORLD.md holds its own copy under "The
+goal." This document is their canon home.)*
+
 ## The prototype that exists
 
 `sim/house_of_david.py` — run it (`python3 sim/house_of_david.py`). It
