@@ -15,7 +15,7 @@ from machine import Machine
 m = Machine("gen_11_sentences_exile")
 
 # -------------------------- Gen.3.14 · SENTENCE_SERPENT_FIRST_CURSE --------
-# וַיֹּאמֶר יְהוָה אֱלֹהִים אֶל־הַנָּחָשׁ כִּי עָשִׂיתָ זֹּאת אָרוּר אַתָּה
+# וַיֹּאמֶר יְהֹוָה אֱלֹהִים אֶל־הַנָּחָשׁ כִּי עָשִׂיתָ זֹּאת אָרוּר אַתָּה
 # מִכָּל־הַבְּהֵמָה וּמִכֹּל חַיַּת הַשָּׂדֶה עַל־גְּחֹנְךָ תֵלֵךְ וְעָפָר
 # תֹּאכַל כָּל־יְמֵי חַיֶּיךָ
 # "And the LORD God said unto the serpent: 'Because thou hast done this,
@@ -119,12 +119,13 @@ m.step("Gen.3.19")
 m.fact("be_zeat_apekha_tokhal_lechem(adam)",
        "ad_shuvkha_el_ha_adamah(adam)",
        "afar_atah_ve_el_afar_tashuv(adam)")
-# ‹מוֹת תָּמוּת … עַד שׁוּבְךָ› (“die die … until your-return”) — spec-delta
-# — spec said because in-day your-eating from-it dying you-shall-die (gen-08
-# 2:17 — the armed HANDLER: dying-you-shall-die, IN THE DAY), delivery says
-# until your-return to-the-ground … and-to-dust you-shall-return (the
-# sentence: toil-terms + mortality as BOUNDARY — the return to dust as
-# horizon; same-day death not executed)
+# ‹עַד שׁוּבְךָ אֶל־הָאֲדָמָה … כִּי־עָפָר אַתָּה וְאֶל־עָפָר תָּשׁוּב›
+# (“until your-return to the-ground … for dust you and-to dust you-shall-
+# return”) — spec-delta — spec said because in-day your-eating from-it dying
+# you-shall-die (gen-08 2:17 — the armed HANDLER: dying-you-shall-die, IN
+# THE DAY), delivery says until your-return to-the-ground … and-to-dust you-
+# shall-return (the sentence: toil-terms + mortality as BOUNDARY — the
+# return to dust as horizon; same-day death not executed)
 m.spec_delta("ki be-yom akholkha mimenu mot tamut (gen_08 2:17 — the armed HANDLER: dying-you-shall-die, IN THE DAY)",
              "ad shuvkha el-ha-adamah … ve-el-afar tashuv (the sentence: toil-terms + mortality as BOUNDARY — the return to dust as horizon; same-day death not executed)")
 

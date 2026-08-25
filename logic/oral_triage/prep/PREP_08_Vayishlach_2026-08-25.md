@@ -76,15 +76,15 @@ each block still gets its own ledger.
 
 - enumerated: 1864 distinct linked sources
 - declared: 86 = 55 chain primaries + 31 Onkelos verses
-- credited (standing verdicts): 2 · FRESH TO READ: 53
+- credited (standing verdicts): 8 · FRESH TO READ: 47
 - outside declared scope (open narrowing, per the standing default): 1778
 
 | # | source | status |
 |---|--------|--------|
 | 1 | Bava Batra 15b:7 | fresh |
-| 2 | Bereshit Rabbah 18:2 | fresh |
-| 3 | Bereshit Rabbah 19:12 | fresh |
-| 4 | Bereshit Rabbah 45:5 | fresh |
+| 2 | Bereshit Rabbah 18:2 | CREDIT — material at gen_09_helper_woman_first_speech |
+| 3 | Bereshit Rabbah 19:12 | CREDIT — material at gen_10_serpent_violation_trace |
+| 4 | Bereshit Rabbah 45:5 | CREDIT — enrichment at gen_10_serpent_violation_trace |
 | 5 | Bereshit Rabbah 57:4 | fresh |
 | 6 | Bereshit Rabbah 73:9 | fresh |
 | 7 | Bereshit Rabbah 76:9 | fresh |
@@ -96,8 +96,8 @@ each block still gets its own ledger.
 | 13 | Bereshit Rabbah 80:2 | fresh |
 | 14 | Bereshit Rabbah 80:3 | fresh |
 | 15 | Bereshit Rabbah 80:4 | fresh |
-| 16 | Bereshit Rabbah 80:5 | fresh · also in gen_58_israel_written_three_deaths |
-| 17 | Bereshit Rabbah 80:6 | fresh |
+| 16 | Bereshit Rabbah 80:5 | CREDIT — dup-of at gen_09_helper_woman_first_speech |
+| 17 | Bereshit Rabbah 80:6 | CREDIT — material at gen_12_cain_abel |
 | 18 | Bereshit Rabbah 80:7 | fresh |
 | 19 | Bereshit Rabbah 80:8 | fresh · also in gen_56_blessing_returned_first_altar |
 | 20 | Bereshit Rabbah 80:9 | fresh |
@@ -105,7 +105,7 @@ each block still gets its own ledger.
 | 22 | Bereshit Rabbah 97:6 | fresh |
 | 23 | Bereshit Rabbah 99:7 | fresh |
 | 24 | Jerusalem Talmud Avodah Zarah 1:2:2 | fresh |
-| 25 | Jerusalem Talmud Avodah Zarah 2:7:9 | fresh |
+| 25 | Jerusalem Talmud Avodah Zarah 2:7:9 | CREDIT — dup-of at gen_12_cain_abel |
 | 26 | Jerusalem Talmud Berakhot 8:6:10 | fresh |
 | 27 | Jerusalem Talmud Eruvin 5:1:3 | fresh |
 | 28 | Jerusalem Talmud Ketubot 3:5:3 | fresh |
@@ -142,7 +142,7 @@ each block still gets its own ledger.
 
 - enumerated: 2306 distinct linked sources
 - declared: 117 = 88 chain primaries + 29 Onkelos verses
-- credited (standing verdicts): 1 · FRESH TO READ: 87
+- credited (standing verdicts): 3 · FRESH TO READ: 85
 - excluded with cause (register false positive): Shabbat Siddur Sefard Linear, The Morning Prayers, Eil Adon 97
 - outside declared scope (open narrowing, per the standing default): 2188
 
@@ -159,7 +159,7 @@ each block still gets its own ledger.
 | 9 | Bereshit Rabbah 74:9 | fresh |
 | 10 | Bereshit Rabbah 78:3 | fresh · also in gen_56_blessing_returned_first_altar |
 | 11 | Bereshit Rabbah 79:1 | fresh · also in gen_56_blessing_returned_first_altar |
-| 12 | Bereshit Rabbah 80:5 | fresh · also in gen_57_deceit_at_the_gate |
+| 12 | Bereshit Rabbah 80:5 | CREDIT — dup-of at gen_09_helper_woman_first_speech |
 | 13 | Bereshit Rabbah 81:1 | fresh |
 | 14 | Bereshit Rabbah 81:2 | fresh |
 | 15 | Bereshit Rabbah 81:3 | fresh |
@@ -181,7 +181,7 @@ each block still gets its own ledger.
 | 31 | Bereshit Rabbah 84:4 | fresh |
 | 32 | Bereshit Rabbah 87:5 | fresh |
 | 33 | Bereshit Rabbah 87:6 | fresh |
-| 34 | Bereshit Rabbah 8:13 | fresh |
+| 34 | Bereshit Rabbah 8:13 | CREDIT — material at gen_09_helper_woman_first_speech |
 | 35 | Bereshit Rabbah 98:4 | fresh |
 | 36 | Chagigah 12a:15 | fresh |
 | 37 | Chullin 101b:9 | fresh |
@@ -242,7 +242,7 @@ each block still gets its own ledger.
 
 - enumerated: 1740 distinct linked sources
 - declared: 78 = 35 chain primaries + 43 Onkelos verses
-- credited (standing verdicts): 2 · FRESH TO READ: 33
+- credited (standing verdicts): 3 · FRESH TO READ: 32
 - outside declared scope (open narrowing, per the standing default): 1662
 
 | # | source | status |
@@ -271,7 +271,7 @@ each block still gets its own ledger.
 | 22 | Eikhah Rabbah 2:8 | fresh |
 | 23 | Eikhah Rabbah 3:1 | fresh |
 | 24 | Jerusalem Talmud Berakhot 8:5:6 | fresh |
-| 25 | Jerusalem Talmud Sanhedrin 10:1:10 | fresh |
+| 25 | Jerusalem Talmud Sanhedrin 10:1:10 | CREDIT — material at gen_13_cain_line_seth |
 | 26 | Megillah 11a:17 | fresh |
 | 27 | Mekhilta DeRabbi Shimon Ben Yochai 15:14 | fresh |
 | 28 | Mekhilta DeRabbi Yishmael, Tractate Shirah 9:12 | fresh |

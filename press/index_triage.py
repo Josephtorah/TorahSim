@@ -10,9 +10,12 @@ web app can later surface "N sources read on this verse, k material" from here.
 
 Ledger contract (what this parser relies on):
   - filename: <unit>_<YYYY-MM-DD>.md
-  - a '## Ledger' section (or '## Row table', the Eden-era heading)
-    containing a markdown table
+  - a '## Ledger' section (or '## Row table' / '## FRESH VERDICT ROWS',
+    the Eden-era headings) containing a markdown table
     | # | source | status | verdict | note |
+    (a CARRY CREDITS table with C-numbered 4-cell rows may precede it —
+    those rows point at verdicts indexed from their prior ledgers and
+    are skipped by the 5-cell numeric filter)
   - verdict cell may carry ** emphasis and qualifiers ('material (already
     cited)', 'dup-of:<ref>'); the first token normalizes to verdict_class
     ('no-bearing' is the Eden-era spelling of 'not-bearing' — both stand)
@@ -40,16 +43,24 @@ def parse_ledger(path):
     m = re.match(r"(.+)_(\d{4}-\d{2}-\d{2})\.md$", path.name)
     unit, ledger_date = m.group(1), m.group(2)
     text = path.read_text(encoding="utf-8")
-    parts = re.split(r"## (?:Ledger|Row table)", text, maxsplit=1)
+    parts = re.split(r"## (?:Ledger|Row table|FRESH VERDICT ROWS)", text, maxsplit=1)
     if len(parts) < 2:
         raise SystemExit(f"{path.name}: no '## Ledger' / '## Row table' section")
     body = parts[1]
     rows = []
     for line in body.splitlines():
         cells = [c.strip() for c in line.strip().strip("|").split("|")]
-        if len(cells) != 5 or not cells[0].isdigit():
+        if not cells or not cells[0].isdigit():
             continue
-        num, source, status, verdict, note = cells
+        if len(cells) == 5:
+            num, source, status, verdict, note = cells
+        elif len(cells) == 4:
+            # the parashah-sweep ledgers drop the class column — every
+            # declared row is chain_primary by the declaration itself
+            num, source, verdict, note = cells
+            status = "chain_primary"
+        else:
+            continue
         rows.append((unit, ledger_date, int(num), source, status,
                      verdict.replace("**", ""), verdict_class(verdict), note))
     return rows

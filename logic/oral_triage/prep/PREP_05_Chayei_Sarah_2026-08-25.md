@@ -8,7 +8,7 @@ each block still gets its own ledger.
 
 - enumerated: 2001 distinct linked sources
 - declared: 68 = 48 chain primaries + 20 Onkelos verses
-- credited (standing verdicts): 0 · FRESH TO READ: 48
+- credited (standing verdicts): 2 · FRESH TO READ: 46
 - outside declared scope (open narrowing, per the standing default): 1933
 
 | # | source | status |
@@ -54,13 +54,13 @@ each block still gets its own ledger.
 | 39 | Mishnah Sanhedrin 7:4 | fresh |
 | 40 | Pesikta DeRav Kahana 10:1 | fresh |
 | 41 | Pesikta DeRav Kahana 26:10 | fresh |
-| 42 | Pesikta DeRav Kahana 26:3 | fresh |
+| 42 | Pesikta DeRav Kahana 26:3 | CREDIT — dup-of at gen_11_sentences_exile |
 | 43 | Rosh Hashanah 16b:5 | fresh |
 | 44 | Sanhedrin 46b:21 | fresh |
 | 45 | Sifra, Acharei Mot, Section 8 6 | fresh |
 | 46 | Sifrei Devarim 37:2 | fresh |
 | 47 | Vayikra Rabbah 20:11 | fresh |
-| 48 | Vayikra Rabbah 20:2 | fresh |
+| 48 | Vayikra Rabbah 20:2 | CREDIT — material at gen_11_sentences_exile |
 | — | Onkelos Genesis 23:1-20 (20 verses) | derive-time credit (foundation layer) |
 
 ## gen_40_servant_oath_well — Genesis 24:1-33
@@ -207,7 +207,7 @@ each block still gets its own ledger.
 
 - enumerated: 1405 distinct linked sources
 - declared: 46 = 28 chain primaries + 18 Onkelos verses
-- credited (standing verdicts): 1 · FRESH TO READ: 27
+- credited (standing verdicts): 3 · FRESH TO READ: 25
 - outside declared scope (open narrowing, per the standing default): 1359
 
 | # | source | status |
@@ -221,7 +221,7 @@ each block still gets its own ledger.
 | 7 | Bereshit Rabbah 61:1 | fresh |
 | 8 | Bereshit Rabbah 61:2 | fresh · also in gen_39_machpelah_purchase, gen_40_servant_oath_well |
 | 9 | Bereshit Rabbah 61:3 | fresh |
-| 10 | Bereshit Rabbah 61:4 | fresh |
+| 10 | Bereshit Rabbah 61:4 | CREDIT — no-bearing at gen_12_cain_abel |
 | 11 | Bereshit Rabbah 61:5 | fresh |
 | 12 | Bereshit Rabbah 61:6 | fresh |
 | 13 | Bereshit Rabbah 61:7 | fresh |
@@ -238,6 +238,6 @@ each block still gets its own ledger.
 | 24 | Mekhilta DeRabbi Shimon Ben Yochai 20:9 | fresh |
 | 25 | Sanhedrin 91a:14 | fresh |
 | 26 | Sanhedrin 91a:16 | fresh |
-| 27 | Sotah 14a:4 | fresh |
+| 27 | Sotah 14a:4 | CREDIT — material at gen_11_sentences_exile |
 | 28 | Tosefta Megillah 3:19 | fresh |
 | — | Onkelos Genesis 25:1-18 (18 verses) | derive-time credit (foundation layer) |

@@ -8,15 +8,15 @@ each block still gets its own ledger.
 
 - enumerated: 2213 distinct linked sources
 - declared: 66 = 38 chain primaries + 28 Onkelos verses
-- credited (standing verdicts): 0 · FRESH TO READ: 38
+- credited (standing verdicts): 2 · FRESH TO READ: 36
 - outside declared scope (open narrowing, per the standing default): 2147
 
 | # | source | status |
 |---|--------|--------|
 | 1 | Avodah Zarah 9b:3 | fresh · also in gen_69_descent_seventy |
-| 2 | Bereshit Rabbah 25:3 | fresh |
+| 2 | Bereshit Rabbah 25:3 | CREDIT — enrichment at gen_11_sentences_exile |
 | 3 | Bereshit Rabbah 40:6 | fresh · also in gen_70_goshen_and_the_fifth |
-| 4 | Bereshit Rabbah 64:2 | fresh |
+| 4 | Bereshit Rabbah 64:2 | CREDIT — dup-of at gen_11_sentences_exile |
 | 5 | Bereshit Rabbah 79:1 | fresh |
 | 6 | Bereshit Rabbah 90:1 | fresh |
 | 7 | Bereshit Rabbah 93:10 | fresh |
@@ -57,7 +57,7 @@ each block still gets its own ledger.
 
 - enumerated: 2296 distinct linked sources
 - declared: 75 = 41 chain primaries + 34 Onkelos verses
-- credited (standing verdicts): 0 · FRESH TO READ: 41
+- credited (standing verdicts): 2 · FRESH TO READ: 39
 - outside declared scope (open narrowing, per the standing default): 2221
 
 | # | source | status |
@@ -70,7 +70,7 @@ each block still gets its own ledger.
 | 6 | Berakhot 56b:19 | fresh |
 | 7 | Bereshit Rabbah 100:5 | fresh |
 | 8 | Bereshit Rabbah 55:8 | fresh |
-| 9 | Bereshit Rabbah 61:4 | fresh |
+| 9 | Bereshit Rabbah 61:4 | CREDIT — no-bearing at gen_12_cain_abel |
 | 10 | Bereshit Rabbah 73:2 | fresh |
 | 11 | Bereshit Rabbah 73:8 | fresh |
 | 12 | Bereshit Rabbah 80:11 | fresh |
@@ -94,7 +94,7 @@ each block still gets its own ledger.
 | 30 | Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 2:26 | fresh |
 | 31 | Niddah 31a:24 | fresh |
 | 32 | Pesikta DeRav Kahana 11:13 | fresh |
-| 33 | Pesikta DeRav Kahana 14:2 | fresh |
+| 33 | Pesikta DeRav Kahana 14:2 | CREDIT — material at gen_11_sentences_exile |
 | 34 | Shabbat 89b:3 | fresh |
 | 35 | Sifra, Vayikra Dibbura DeNedavah, Chapter 1 12 | fresh |
 | 36 | Sotah 12a:14 | fresh |
@@ -109,7 +109,7 @@ each block still gets its own ledger.
 
 - enumerated: 2785 distinct linked sources
 - declared: 88 = 57 chain primaries + 31 Onkelos verses
-- credited (standing verdicts): 1 · FRESH TO READ: 56
+- credited (standing verdicts): 2 · FRESH TO READ: 55
 - NOTE: span crosses a parashah boundary — read both portions' runs
 - outside declared scope (open narrowing, per the standing default): 2697
 
@@ -117,7 +117,7 @@ each block still gets its own ledger.
 |---|--------|--------|
 | 1 | Bava Kamma 92a:19 | fresh |
 | 2 | Berakhot 63b:22 | fresh |
-| 3 | Bereshit Rabbah 30:8 | fresh |
+| 3 | Bereshit Rabbah 30:8 | CREDIT — enrichment at gen_10_serpent_violation_trace |
 | 4 | Bereshit Rabbah 39:12 | fresh |
 | 5 | Bereshit Rabbah 40:6 | fresh · also in gen_68_i_am_yosef |
 | 6 | Bereshit Rabbah 53:7 | fresh |

@@ -8,7 +8,7 @@ each block still gets its own ledger.
 
 - enumerated: 3421 distinct linked sources
 - declared: 97 = 81 chain primaries + 16 Onkelos verses
-- credited (standing verdicts): 1 · FRESH TO READ: 80
+- credited (standing verdicts): 3 · FRESH TO READ: 78
 - outside declared scope (open narrowing, per the standing default): 3324
 
 | # | source | status |
@@ -23,7 +23,7 @@ each block still gets its own ledger.
 | 8 | Berakhot 57b:17 | fresh |
 | 9 | Berakhot 5b:24 | fresh |
 | 10 | Berakhot 7b:6 | fresh · also in gen_47_grudge_flight_paddan_send |
-| 11 | Bereshit Rabbah 20:6 | fresh |
+| 11 | Bereshit Rabbah 20:6 | CREDIT — material at gen_11_sentences_exile |
 | 12 | Bereshit Rabbah 37:2 | fresh |
 | 13 | Bereshit Rabbah 38:10 | fresh |
 | 14 | Bereshit Rabbah 45:10 | fresh |
@@ -56,7 +56,7 @@ each block still gets its own ledger.
 | 41 | Jerusalem Talmud Sanhedrin 10:1:14 | fresh |
 | 42 | Jerusalem Talmud Sanhedrin 10:2:14 | fresh |
 | 43 | Jerusalem Talmud Sanhedrin 8:1:2 | fresh |
-| 44 | Jerusalem Talmud Sotah 7:1:3 | fresh |
+| 44 | Jerusalem Talmud Sotah 7:1:3 | CREDIT — enrichment at gen_10_serpent_violation_trace |
 | 45 | Megillah 17a:1 | fresh |
 | 46 | Megillah 6a:17 | fresh |
 | 47 | Mekhilta DeRabbi Shimon Ben Yochai 12:40 | fresh |
@@ -100,15 +100,15 @@ each block still gets its own ledger.
 
 - enumerated: 1767 distinct linked sources
 - declared: 58 = 42 chain primaries + 16 Onkelos verses
-- credited (standing verdicts): 1 · FRESH TO READ: 41
+- credited (standing verdicts): 4 · FRESH TO READ: 38
 - outside declared scope (open narrowing, per the standing default): 1709
 
 | # | source | status |
 |---|--------|--------|
-| 1 | Bereshit Rabbah 25:3 | fresh |
+| 1 | Bereshit Rabbah 25:3 | CREDIT — enrichment at gen_11_sentences_exile |
 | 2 | Bereshit Rabbah 4:2 | CREDIT — material at gen_01_creation_boot |
 | 3 | Bereshit Rabbah 64:1 | fresh |
-| 4 | Bereshit Rabbah 64:2 | fresh |
+| 4 | Bereshit Rabbah 64:2 | CREDIT — dup-of at gen_11_sentences_exile |
 | 5 | Bereshit Rabbah 64:3 | fresh |
 | 6 | Bereshit Rabbah 64:4 | fresh |
 | 7 | Bereshit Rabbah 64:5 | fresh |
@@ -117,7 +117,7 @@ each block still gets its own ledger.
 | 10 | Bereshit Rabbah 73:8 | fresh |
 | 11 | Bereshit Rabbah 86:1 | fresh |
 | 12 | Bereshit Rabbah 95:3 | fresh |
-| 13 | Eikhah Rabbah 1:1 | fresh · also in gen_47_grudge_flight_paddan_send |
+| 13 | Eikhah Rabbah 1:1 | CREDIT — dup-of at gen_10_serpent_violation_trace |
 | 14 | Eikhah Rabbah, Petichta 1 | fresh · also in gen_47_grudge_flight_paddan_send |
 | 15 | Jerusalem Talmud Kiddushin 4:12:1 | fresh |
 | 16 | Jerusalem Talmud Kiddushin 4:12:2 | fresh · also in gen_46_isaac_blessing_demandee_mismatch |
@@ -153,14 +153,14 @@ each block still gets its own ledger.
 
 - enumerated: 1206 distinct linked sources
 - declared: 45 = 26 chain primaries + 19 Onkelos verses
-- credited (standing verdicts): 0 · FRESH TO READ: 26
+- credited (standing verdicts): 3 · FRESH TO READ: 23
 - excluded with cause (register false positive): Shabbat Siddur Sefard Linear, Prayers for Yom Tov, Musaf for Yom Tov, Prayer for Rain 44
 - outside declared scope (open narrowing, per the standing default): 1160
 
 | # | source | status |
 |---|--------|--------|
 | 1 | Berakhot 56b:7 | fresh |
-| 2 | Bereshit Rabbah 28:5 | fresh |
+| 2 | Bereshit Rabbah 28:5 | CREDIT — enrichment at gen_15_flood_prologue |
 | 3 | Bereshit Rabbah 60:1 | fresh |
 | 4 | Bereshit Rabbah 62:3 | fresh |
 | 5 | Bereshit Rabbah 64:10 | fresh |
@@ -174,7 +174,7 @@ each block still gets its own ledger.
 | 13 | Bereshit Rabbah 87:5 | fresh |
 | 14 | Mekhilta DeRabbi Shimon Ben Yochai 13:16 | fresh |
 | 15 | Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 1:1 | fresh |
-| 16 | Pesikta DeRav Kahana 9:4 | fresh |
+| 16 | Pesikta DeRav Kahana 9:4 | CREDIT — dup-of at gen_12_cain_abel |
 | 17 | Sanhedrin 111a:9 | fresh · also in gen_44_isaac_gerar_sister_expel |
 | 18 | Sifrei Devarim 1:18 | fresh |
 | 19 | Sifrei Devarim 1:8 | fresh |
@@ -184,14 +184,14 @@ each block still gets its own ledger.
 | 23 | Tosefta Berakhot 6:1 | fresh |
 | 24 | Tosefta Berakhot 6:13 | fresh · also in gen_44_isaac_gerar_sister_expel |
 | 25 | Tosefta Sotah 10:2 | fresh · also in gen_44_isaac_gerar_sister_expel |
-| 26 | Vayikra Rabbah 27:5 | fresh |
+| 26 | Vayikra Rabbah 27:5 | CREDIT — material at gen_12_cain_abel |
 | — | Onkelos Genesis 26:17-35 (19 verses) | derive-time credit (foundation layer) |
 
 ## gen_46_isaac_blessing_demandee_mismatch — Genesis 27:1-40
 
 - enumerated: 4010 distinct linked sources
 - declared: 141 = 101 chain primaries + 40 Onkelos verses
-- credited (standing verdicts): 2 · FRESH TO READ: 99
+- credited (standing verdicts): 5 · FRESH TO READ: 96
 - excluded with cause (register false positive): Shabbat Siddur Sefard Linear, Birchas Hamazon, Birchas Hamazon 311 · Shabbat Siddur Sefard Linear, Maariv Service for the Conclusion of Shabbos, Veyiten Lecha 11
 - outside declared scope (open narrowing, per the standing default): 3867
 
@@ -208,7 +208,7 @@ each block still gets its own ledger.
 | 9 | Bereshit Rabbah 65:10 | fresh |
 | 10 | Bereshit Rabbah 65:11 | fresh |
 | 11 | Bereshit Rabbah 65:12 | fresh |
-| 12 | Bereshit Rabbah 65:13 | fresh |
+| 12 | Bereshit Rabbah 65:13 | CREDIT — dup-of at gen_10_serpent_violation_trace |
 | 13 | Bereshit Rabbah 65:14 | fresh |
 | 14 | Bereshit Rabbah 65:15 | CREDIT — not-bearing at gen_06_land_adam_dominion |
 | 15 | Bereshit Rabbah 65:16 | fresh |
@@ -279,7 +279,7 @@ each block still gets its own ledger.
 | 80 | Pesikta DeRav Kahana 5:18 | fresh · also in gen_43_isaac_twins_birthright |
 | 81 | Pesikta DeRav Kahana 9:9 | fresh |
 | 82 | Pirkei Avot 1:1 | fresh |
-| 83 | Sanhedrin 101b:3 | fresh |
+| 83 | Sanhedrin 101b:3 | CREDIT — material at gen_12_cain_abel |
 | 84 | Sanhedrin 37a:7 | fresh |
 | 85 | Sanhedrin 92a:19 | fresh |
 | 86 | Shabbat 89b:3 | fresh |
@@ -292,7 +292,7 @@ each block still gets its own ledger.
 | 93 | Sukkah 5b:1 | fresh |
 | 94 | Taanit 29b:2 | fresh |
 | 95 | Tosefta Kifshutah on Shabbat 8:24:1 | fresh |
-| 96 | Vayikra Rabbah 18:2 | fresh |
+| 96 | Vayikra Rabbah 18:2 | CREDIT — enrichment at gen_10_serpent_violation_trace |
 | 97 | Vayikra Rabbah 21:11 | fresh |
 | 98 | Vayikra Rabbah 27:9 | fresh |
 | 99 | Vayikra Rabbah 34:16 | fresh |
@@ -304,7 +304,7 @@ each block still gets its own ledger.
 
 - enumerated: 1275 distinct linked sources
 - declared: 50 = 35 chain primaries + 15 Onkelos verses
-- credited (standing verdicts): 1 · FRESH TO READ: 34
+- credited (standing verdicts): 2 · FRESH TO READ: 33
 - outside declared scope (open narrowing, per the standing default): 1225
 
 | # | source | status |
@@ -329,7 +329,7 @@ each block still gets its own ledger.
 | 18 | Bereshit Rabbah 79:4 | fresh · also in gen_46_isaac_blessing_demandee_mismatch |
 | 19 | Bereshit Rabbah 82:2 | fresh |
 | 20 | Bereshit Rabbah 99:2 | fresh |
-| 21 | Eikhah Rabbah 1:1 | fresh · also in gen_44_isaac_gerar_sister_expel |
+| 21 | Eikhah Rabbah 1:1 | CREDIT — dup-of at gen_10_serpent_violation_trace |
 | 22 | Eikhah Rabbah, Petichta 1 | fresh · also in gen_44_isaac_gerar_sister_expel |
 | 23 | Jerusalem Talmud Avodah Zarah 1:2:7 | fresh |
 | 24 | Jerusalem Talmud Bikkurim 3:3:16 | fresh |

@@ -8,7 +8,7 @@ each block still gets its own ledger.
 
 - enumerated: 4733 distinct linked sources
 - declared: 131 = 95 chain primaries + 36 Onkelos verses
-- credited (standing verdicts): 3 · FRESH TO READ: 92
+- credited (standing verdicts): 4 · FRESH TO READ: 91
 - outside declared scope (open narrowing, per the standing default): 4602
 
 | # | source | status |
@@ -50,7 +50,7 @@ each block still gets its own ledger.
 | 35 | Bereshit Rabbah 84:9 | fresh |
 | 36 | Bereshit Rabbah 85:1 | CREDIT — no-bearing at gen_08_toledot_garden_first_rule |
 | 37 | Bereshit Rabbah 85:11 | fresh · also in gen_61_yehuda_tamar |
-| 38 | Bereshit Rabbah 85:2 | fresh · also in gen_61_yehuda_tamar, gen_62_potifar_house |
+| 38 | Bereshit Rabbah 85:2 | CREDIT — dup-of at gen_09_helper_woman_first_speech |
 | 39 | Bereshit Rabbah 85:3 | fresh · also in gen_61_yehuda_tamar |
 | 40 | Bereshit Rabbah 86:1 | fresh · also in gen_62_potifar_house |
 | 41 | Bereshit Rabbah 88:5 | fresh · also in gen_62_potifar_house, gen_63_two_dreams_prison |
@@ -114,7 +114,7 @@ each block still gets its own ledger.
 
 - enumerated: 2452 distinct linked sources
 - declared: 108 = 78 chain primaries + 30 Onkelos verses
-- credited (standing verdicts): 2 · FRESH TO READ: 76
+- credited (standing verdicts): 4 · FRESH TO READ: 74
 - outside declared scope (open narrowing, per the standing default): 2344
 
 | # | source | status |
@@ -124,7 +124,7 @@ each block still gets its own ledger.
 | 3 | Berakhot 43b:8 | fresh |
 | 4 | Bereshit Rabbah 41:7 | fresh · also in gen_62_potifar_house |
 | 5 | Bereshit Rabbah 60:15 | fresh · also in gen_60_dreamer_sold, gen_62_potifar_house |
-| 6 | Bereshit Rabbah 61:4 | fresh |
+| 6 | Bereshit Rabbah 61:4 | CREDIT — no-bearing at gen_12_cain_abel |
 | 7 | Bereshit Rabbah 63:8 | fresh |
 | 8 | Bereshit Rabbah 71:5 | fresh |
 | 9 | Bereshit Rabbah 74:5 | fresh |
@@ -137,7 +137,7 @@ each block still gets its own ledger.
 | 16 | Bereshit Rabbah 85:12 | fresh |
 | 17 | Bereshit Rabbah 85:13 | fresh |
 | 18 | Bereshit Rabbah 85:14 | fresh |
-| 19 | Bereshit Rabbah 85:2 | fresh · also in gen_60_dreamer_sold, gen_62_potifar_house |
+| 19 | Bereshit Rabbah 85:2 | CREDIT — dup-of at gen_09_helper_woman_first_speech |
 | 20 | Bereshit Rabbah 85:3 | fresh · also in gen_60_dreamer_sold |
 | 21 | Bereshit Rabbah 85:4 | fresh |
 | 22 | Bereshit Rabbah 85:5 | fresh |
@@ -203,16 +203,16 @@ each block still gets its own ledger.
 
 - enumerated: 1957 distinct linked sources
 - declared: 97 = 74 chain primaries + 23 Onkelos verses
-- credited (standing verdicts): 4 · FRESH TO READ: 70
+- credited (standing verdicts): 10 · FRESH TO READ: 64
 - outside declared scope (open narrowing, per the standing default): 1860
 
 | # | source | status |
 |---|--------|--------|
-| 1 | Arakhin 15b:19 | fresh |
+| 1 | Arakhin 15b:19 | CREDIT — enrichment at gen_12_cain_abel |
 | 2 | Avodah Zarah 3a:8 | fresh |
 | 3 | Avodah Zarah 5a:5 | fresh |
 | 4 | Berakhot 42a:8 | fresh |
-| 5 | Bereshit Rabbah 29:4 | fresh |
+| 5 | Bereshit Rabbah 29:4 | CREDIT — material at gen_15_flood_prologue |
 | 6 | Bereshit Rabbah 41:7 | fresh · also in gen_61_yehuda_tamar |
 | 7 | Bereshit Rabbah 42:3 | CREDIT — enrichment at gen_01_creation_boot |
 | 8 | Bereshit Rabbah 53:10 | fresh |
@@ -222,7 +222,7 @@ each block still gets its own ledger.
 | 12 | Bereshit Rabbah 70:4 | fresh |
 | 13 | Bereshit Rabbah 73:8 | fresh |
 | 14 | Bereshit Rabbah 84:7 | fresh · also in gen_60_dreamer_sold |
-| 15 | Bereshit Rabbah 85:2 | fresh · also in gen_60_dreamer_sold, gen_61_yehuda_tamar |
+| 15 | Bereshit Rabbah 85:2 | CREDIT — dup-of at gen_09_helper_woman_first_speech |
 | 16 | Bereshit Rabbah 86:1 | fresh · also in gen_60_dreamer_sold |
 | 17 | Bereshit Rabbah 86:2 | fresh |
 | 18 | Bereshit Rabbah 86:3 | fresh |
@@ -250,7 +250,7 @@ each block still gets its own ledger.
 | 40 | Jerusalem Talmud Avodah Zarah 3:2:3 | fresh |
 | 41 | Jerusalem Talmud Ketubot 5:11:1 | fresh |
 | 42 | Jerusalem Talmud Ketubot 5:7:7 | fresh |
-| 43 | Jerusalem Talmud Peah 1:1:38 | fresh |
+| 43 | Jerusalem Talmud Peah 1:1:38 | CREDIT — dup-of at gen_12_cain_abel |
 | 44 | Jerusalem Talmud Peah 1:1:39 | fresh · also in gen_60_dreamer_sold |
 | 45 | Jerusalem Talmud Shabbat 7:2:2 | CREDIT — material at gen_07_completion_sanctity |
 | 46 | Mekhilta DeRabbi Shimon Ben Yochai 13:18 | fresh · also in gen_60_dreamer_sold |
@@ -260,8 +260,8 @@ each block still gets its own ledger.
 | 50 | Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 4:19 | fresh |
 | 51 | Mishnah Makkot 3:15 | fresh |
 | 52 | Nazir 23a:16 | fresh |
-| 53 | Pesikta DeRav Kahana 14:2 | fresh |
-| 54 | Pesikta DeRav Kahana 9:4 | fresh |
+| 53 | Pesikta DeRav Kahana 14:2 | CREDIT — material at gen_11_sentences_exile |
+| 54 | Pesikta DeRav Kahana 9:4 | CREDIT — dup-of at gen_12_cain_abel |
 | 55 | Sanhedrin 109a:10 | fresh |
 | 56 | Sanhedrin 109a:9 | fresh |
 | 57 | Sanhedrin 39b:11 | fresh |
@@ -288,14 +288,14 @@ each block still gets its own ledger.
 
 - enumerated: 1405 distinct linked sources
 - declared: 49 = 26 chain primaries + 23 Onkelos verses
-- credited (standing verdicts): 0 · FRESH TO READ: 26
+- credited (standing verdicts): 1 · FRESH TO READ: 25
 - outside declared scope (open narrowing, per the standing default): 1356
 
 | # | source | status |
 |---|--------|--------|
 | 1 | Berakhot 55b | fresh |
 | 2 | Berakhot 55b:18 | fresh |
-| 3 | Bereshit Rabbah 19:2 | fresh |
+| 3 | Bereshit Rabbah 19:2 | CREDIT — enrichment at gen_10_serpent_violation_trace |
 | 4 | Bereshit Rabbah 87:10 | fresh · also in gen_62_potifar_house |
 | 5 | Bereshit Rabbah 88:1 | fresh · also in gen_62_potifar_house |
 | 6 | Bereshit Rabbah 88:2 | fresh · also in gen_62_potifar_house |
