@@ -227,10 +227,12 @@ def main():
         for _lp in sorted(_glob.glob(os.path.join(
                 ROOT, "logic", "oral_triage", u["unit_id"] + "_*.md"))):
             with open(_lp, encoding="utf-8") as f:
-                _lm = _re.search(
+                # LAST completion line governs (owner-approved semantics
+                # 2026-08-25): supplements append newer lines below the old
+                _lms = _re.findall(
                     r"\*\*read:\s*(\d+)\s*of\s*(\d+)\s*—[^\n]*COMPLETE",
                     f.read())
-            if _lm and _lm.group(1) == _lm.group(2):
+            if _lms and _lms[-1][0] == _lms[-1][1]:
                 _lcomplete = True
                 break
         for c in range(c1, c2 + 1):

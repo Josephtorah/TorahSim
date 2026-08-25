@@ -244,8 +244,10 @@ def main():
             ledger_complete = False
             for lp in sorted((ROOT / "logic" / "oral_triage").glob(
                     r["unit_id"] + "_*.md")):
-                mt = _COMPLETE_RX.search(lp.read_text(encoding="utf-8"))
-                if mt and mt.group(1) == mt.group(2):
+                # the LAST completion line governs (owner-approved gate
+                # semantics 2026-08-25 — supplements append new lines)
+                mts = _COMPLETE_RX.findall(lp.read_text(encoding="utf-8"))
+                if mts and mts[-1][0] == mts[-1][1]:
                     ledger_complete = True
                     break
             for c in range(c1, c2 + 1):
