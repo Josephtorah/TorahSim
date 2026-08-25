@@ -3745,3 +3745,86 @@ HOLDS until owner directs the sync (no standing word covers Eden; our
 commit word itself pending); on his word there: pure-copy + border
 substitution, re-render, nine gates, commit, chips read-through+full-
 rule per the vstat ruling. Owner informed in that window too.
+
+LATER 2026-08-24: COMMIT 0f058c4 PUSHED on owner word ("commit and
+push then do gen_09") — gen_08 full-rule batch (unit rev 3, ledger,
+state doc, THE_WORLD.md, regenerated py/html/index; never-commit set
+held). Then GEN_09 READ + REBUILT in the same order: enumerated 1,972,
+declared 87 (79 primaries + Onkelos 2:18-25, zero false-positives),
+READ 87/87 COMPLETE — 53 fresh (PDRK 4:4 in Hebrew), 18 carry-credits
+(FIRST ledger drawing from BOTH eras: creation week + gen_08's
+same-day rows), 8 Onkelos. Tally: 32 material / 6 enrichment / 11 dup
+/ 4 no-bearing (3 via translator footnotes — recorded). THE TRIPWIRE
+CONFIRMED: v1 freeze note predicted legal formulas would fire on
+Sanhedrin 58a — they did: 2:24 Noachide family law crown at three
+seat-families (cleave-exclusions, one-flesh scope + gender inclusion,
+leave-referents disputed R. Eliezer/R. Akiva + R. Meir/R. Yehudah).
+FIVE more laws: wife-obligatory (Yevamot 61b on lo-tov), orphan's wife
+(Sifrei 116/Ketubot 67b lo-join), binah/vows-ages (Niddah 45b),
+braiding-is-building Shabbat labor (Shabbat 95a), third wedding
+blessing (Ketubot 8a binyan adei ad). Du-partzufin arrives home
+(Eruvin 18a/Berakhot 61a on OUR tzela); birds-delta resolved (Chullin
+27b: brought only for naming); sacred-tongue on ish/isha; kenegdo
+written/read pair (consonants verified); canopy-count seat-variance
+dual-tracked. REBUILD rev 2 + 5 ORAL blocks, queue discharged. GATES
+ALL GREEN incl. text layer (gen_09 never was red): verify_claims 0
+FAILED, TEXT GREEN, gloss 0, preflight GREEN. Full-rule-eligible;
+STAMP AWAITS OWNER WORD. Not yet committed.
+
+LATER 2026-08-25: SPEED RULINGS relayed from the owner's window
+(torahsim-19 msg): parashah-grain reading w/ per-block ledgers;
+standing-verdict credits + precomputed dup clusters; terse
+non-material rows; BATCH stamps/ritual/landing per parashah;
+pre-enumeration of all 65 remaining blocks by script (gen_09's 1,972
+= validation target — parameters sent back: DISTINCT source_ref,
+short book forms, works.yaml first-match, Shabbat-Siddur exclusion);
+one derivation stream (split REJECTED). THE_STEPS workshop mirror
+refreshed from canon (pure copy + the one border substitution —
+also picked up the week-narrative and rev-3 table it was missing).
+Memory full-oral-torah-law.md updated. gen_08 LANDED in canon (their
+window; chips read-through+full-rule; their index_triage accepts
+"## Row table" + "no-bearing"). gen_09 still awaits stamp — possibly
+as part of the first parashah batch under the new law.
+
+LATER 2026-08-25: PEER VALIDATION CATCH, verified and corrected
+append-only — gen_09's declared count was 79, not 87 (the register's
+79 primaries already included the 8 Onkelos; header double-counted).
+Itemization was always right: 53 fresh + 18 carry + 8 Onkelos = 79 =
+READ 79 of 79 COMPLETE, no verdict missing; outside scope 1,893.
+Correction appended to ledger + unit changelog (originals stand);
+gen_08 checked CLEAN of the same slip. TWO OWNER PROPOSALS PENDING
+(register + gates change only on owner word): (1) works.yaml
+additions — Tosefta → chain_primary (Tannaitic proper; 4 span refs
+currently unmatched→outside-scope; Lieberman editions = same-work
+aliases), Seder Olam Rabbah → chain_compilation (Avot DeRabbi Natan
+precedent: Tannaitic content, late redaction); if approved, gen_09
+gets a small supplemental read (~4 texts) appended. (2) declared-
+reading gate improvement: take LAST completion line + check N ==
+credits + max fresh row (the current first-match regex reads the
+stale 87 line — substantively harmless, N==N either way, but the
+peer's caught class should be gated).
+
+LATER 2026-08-25: OWNER TRIPLE APPROVAL ("I will accept your changes
+... approve register and approve gate") — ALL APPLIED: (1) CREDIT
+GUARDS added to THE_STEPS Step 4 (workshop mirror; exact text relayed
+to canon): quick-look on silent credits, one-member-read before
+cluster credits, numeric/ink claims never credited unopened. (2)
+REGISTER: works.yaml + Tosefta→chain_primary (Lieberman=aliases) +
+Seder Olam Rabbah→chain_compilation, owner-approval noted in the
+rules. Supplements READ + APPENDED both Eden ledgers: gen_08 +3 refs
+(Tosefta Keritot 4:7 MATERIAL — R. Shimon: our 2:4's earth-and-heaven
+order teaches EQUAL, the chiasm delta's tannaitic answer; Sotah 3:2 +
+Lieberman dups) → 149/149; gen_09 +4 refs (Tosefta Ketubot 6:9 +
+Peah 4:10 BOTH MATERIAL — the tannaitic seats of the orphan's-wife
+lo-derivation from our 2:18; Lieberman dups opened per ink-guard) →
+83/83. (3) GATE amended in freeze_ritual.py: LAST completion line +
+component cross-check; era formats (creation week) pass on N==N;
+verified against ALL 9 ledgers + slip simulation (pre-correction
+gen_09 correctly FAILS 87!=79). Not yet committed.
+ADDENDUM: canon HOLDS — the owner has a standing direct hold in the
+torahsim-19 window ("don't do anything until I say so"), which a
+relayed approval does not lift (per-window authorization, correctly
+applied by the peer). STAGED THERE, pending his word in THAT window:
+THE_STEPS credit-guards amendment, register-pass re-run of the
+pre-enumeration, canon commits. Workshop side fully applied and
+current; workshop commit also pending owner word here.

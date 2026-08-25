@@ -231,3 +231,21 @@ core-shelf standing default.
    Yoma 44b); the Yuval extension (Pesikta DeRav Kahana 6:1).
 10. **Template/instance witness:** the eikha mapping (BR 19:9 + two parallel
     seats) — Eden's ops as the template the exile instances; witness tier.
+
+---
+## SUPPLEMENT (2026-08-25, appended) — register amendment, owner-approved
+
+Owner word "approve register" (2026-08-25): Tosefta → chain_primary; Seder Olam
+Rabbah → chain_compilation (its 5:2 on this span stays outside declared scope).
+Three span refs enter declared scope:
+
+| # | source | class | verdict | finding |
+|---|--------|-------|---------|---------|
+| 106 | Tosefta Keritot 4:7 | chain_primary | **material** | F — R. Shimon ON OUR 2:4 CHIASM DELTA at a tannaitic seat: everywhere the heavens precede the earth, but in one place — "on the day the Lord God made EARTH AND HEAVEN" (our verse) — teaching THEY ARE EQUAL (shekulin); the equal-pairs series follows (the patriarchs, Moses/Aaron, Joshua/Caleb) — stands beside Bereshit Rabbah 12:12's one-act answer in the header dossier |
+| 107 | Tosefta Sotah 3:2 | chain_primary | dup-of:Mekhilta Shirah 2:4 | third tannaitic seat of the flood-boast on our 2:6 ("all we need are two drops — ours are the rivers and springs"); adds R. Yosei ben Dormaskit's eye/water measure-for-measure (the galgal pairing) |
+| 108 | Tosefta Sotah (Lieberman) 3:7 | chain_primary | dup-of:Tosefta Sotah 3:2 | edition alias, OPENED per the ink-guard (Hebrew): same boast quoting our 2:6, Lieberman numbering |
+
+**read: 149 of 149 — COMPLETE** (supplemented 2026-08-25): 108 fresh rows
+covering 109 fresh link-refs (the two range-refs read via components, as above)
++ 26 carry-forward credits + 14 Onkelos credits = 149. Declared now 149;
+outside declared scope 3,819 of 3,968.

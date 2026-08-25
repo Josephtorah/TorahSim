@@ -87,13 +87,51 @@ def main():
     ytxt = yaml_path.read_text()
     triage_hits = sorted((REPO / "logic" / "oral_triage").glob(uid + "_*.md"))
     tr_note = ""
+    tr_fail = ""
     for tp in triage_hits:
-        mt = _re.search(r"\*\*read:\s*(\d+)\s*of\s*(\d+)\s*—[^\n]*COMPLETE",
-                        tp.read_text(encoding="utf-8"))
-        if mt and mt.group(1) == mt.group(2):
-            tr_note = ("declared scope complete: %s of %s read (%s)"
-                       % (mt.group(1), mt.group(2), tp.name))
+        ttxt = tp.read_text(encoding="utf-8")
+        # OWNER-APPROVED gate amendment 2026-08-25 ("approve gate"), after
+        # the gen_09 arithmetic slip: take the LAST completion line (a
+        # correction or supplement appended later supersedes), and
+        # cross-check N against the ledger's own components — fresh rows
+        # (or the stated fresh link-ref count) + carry credits + Onkelos
+        # credits. A parse failure FAILS the gate honestly.
+        mts = list(_re.finditer(
+            r"\*\*read:\s*(\d+)\s*of\s*(\d+)\s*—[^\n]*COMPLETE", ttxt))
+        if not mts:
+            continue
+        mt = mts[-1]
+        if mt.group(1) != mt.group(2):
+            continue
+        n = int(mt.group(1))
+        tail = ttxt[mt.start():mt.start() + 600]
+        mfresh = (_re.search(r"covering(?:\s+all)?\s+(\d+)\s+fresh link-refs",
+                             tail)
+                  or _re.search(r"(\d+)\s+fresh", tail))
+        mcarry = _re.search(r"(\d+)\s+carry", tail)
+        monk = _re.search(r"(\d+)\s+Onkelos", tail)
+        if not (mfresh and mcarry and monk):
+            # pre-amendment era format (creation week): components not
+            # stated — the gate honors declared reading in whichever form
+            # the era recorded it; N==N passes with the era noted.
+            tr_note = ("declared scope complete: %d of %d read "
+                       "(era format, components not stated) (%s)"
+                       % (n, n, tp.name))
             break
+        total = int(mfresh.group(1)) + int(mcarry.group(1)) + int(monk.group(1))
+        if total != n:
+            tr_fail = ("component check FAILED: %d of %d claimed but "
+                       "fresh+carry+Onkelos = %d (%s)"
+                       % (n, n, total, tp.name))
+            continue
+        tr_note = ("declared scope complete: %d of %d read, components "
+                   "verified %s+%s+%s (%s)"
+                   % (n, n, mfresh.group(1), mcarry.group(1), monk.group(1),
+                      tp.name))
+        break
+    if not tr_note and tr_fail:
+        step("declared-reading gate", False, tr_fail)
+        return
     mb = _re.search(r"book_en:\s*(\w+)", ytxt)
     ms = _re.search(r'unit_span_planned:\s*"?(\d+):\d+-(?:(\d+):)?\d+', ytxt)
     abbrev = {"Genesis": "Gen", "Exodus": "Exod", "Leviticus": "Lev",
