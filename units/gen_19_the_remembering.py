@@ -149,11 +149,11 @@ m.fact("li_reot_ha_qalu_ha_mayim")
 # and he put forth his hand, and took her, and brought her in unto him into
 # the ark."
 m.step("Gen.8.9")
-# ‹וְלֹא־מָצְאָה הַיּוֹנָה מָנוֹחַ לְכַף־רַגְלָהּ כִּי־מַיִם עַל־פְּנֵי
-# כָל־הָאָרֶץ› (“and-not she-found the-dove resting-place for-the-sole-of
-# her-foot that waters over face all the-earth”) — fact holds: not-found-
-# the-dove-resting-place-to-sole-of-her-foot; that-waters-over-face-of-all-
-# the-earth
+# ‹וְלֹא־מָצְאָה הַיּוֹנָה מָנוֹחַ לְכַף־רַגְלָהּ וַתָּשָׁב אֵלָיו
+# אֶל־הַתֵּבָה כִּי־מַיִם עַל־פְּנֵי כָל־הָאָרֶץ› (“and-not she-found the-
+# dove resting-place for-the-sole-of her-foot and-return to-him to the-ark
+# that waters over face all the-earth”) — fact holds: not-found-the-dove-
+# resting-place-to-sole-of-her-foot; that-waters-over-face-of-all-the-earth
 m.fact("lo_matzah_ha_yonah_manoach_le_khaf_raglah",
        "ki_mayim_al_pnei_khol_ha_aretz")
 # ‹וַתָּשָׁב אֵלָיו אֶל־הַתֵּבָה› (“and-return to-him to the-ark”) — event:

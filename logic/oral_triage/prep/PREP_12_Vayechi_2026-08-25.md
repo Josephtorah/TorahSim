@@ -8,7 +8,7 @@ each block still gets its own ledger.
 
 - enumerated: 2448 distinct linked sources
 - declared: 75 = 53 chain primaries + 22 Onkelos verses
-- credited (standing verdicts): 5 · FRESH TO READ: 48
+- credited (standing verdicts): 9 · FRESH TO READ: 44
 - excluded with cause (register false positive): Shabbat Siddur Sefard Linear, Maariv Service for the Conclusion of Shabbos, Veyiten Lecha 58 · Shabbat Siddur Sefard Linear, Prayer Before Retiring at Night 204
 - outside declared scope (open narrowing, per the standing default): 2371
 
@@ -21,9 +21,9 @@ each block still gets its own ledger.
 | 5 | Berakhot 20a:8 | fresh |
 | 6 | Berakhot 55b:12 | fresh · also in gen_72_testament_twelve |
 | 7 | Bereshit Rabbah 20:9 | CREDIT — dup-of at gen_11_sentences_exile |
-| 8 | Bereshit Rabbah 30:10 | fresh |
+| 8 | Bereshit Rabbah 30:10 | CREDIT — material at gen_16_ark_spec |
 | 9 | Bereshit Rabbah 37:7 | CREDIT — material at gen_14_adam_line_ledger |
-| 10 | Bereshit Rabbah 65:9 | fresh |
+| 10 | Bereshit Rabbah 65:9 | CREDIT — no-bearing at gen_30_war_of_kings |
 | 11 | Bereshit Rabbah 69:4 | fresh |
 | 12 | Bereshit Rabbah 6:4 | CREDIT — material at gen_04_lights_calendar |
 | 13 | Bereshit Rabbah 6:9 | CREDIT — enrichment at gen_04_lights_calendar |
@@ -44,7 +44,7 @@ each block still gets its own ledger.
 | 28 | Jerusalem Talmud Taanit 4:7:2 | fresh |
 | 29 | Jerusalem Talmud Yevamot 12:6:8 | fresh |
 | 30 | Ketubot 72b:5 | fresh |
-| 31 | Mekhilta DeRabbi Shimon Ben Yochai 14:10 | fresh |
+| 31 | Mekhilta DeRabbi Shimon Ben Yochai 14:10 | CREDIT — enrichment at gen_27_the_call |
 | 32 | Mekhilta DeRabbi Yishmael, Tractate Pischa 13:18 | fresh |
 | 33 | Mekhilta DeRabbi Yishmael, Tractate Pischa 17:27 | fresh |
 | 34 | Mekhilta DeRabbi Yishmael, Tractate Pischa 5:6 | fresh |
@@ -52,7 +52,7 @@ each block still gets its own ledger.
 | 36 | Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 4:4 | fresh |
 | 37 | Mishnah Horayot 1:5 | fresh |
 | 38 | Pesachim 118a:7 | fresh |
-| 39 | Pesikta DeRav Kahana 10:6 | fresh |
+| 39 | Pesikta DeRav Kahana 10:6 | CREDIT — material at gen_30_war_of_kings |
 | 40 | Sanhedrin 107b:17 | fresh |
 | 41 | Sanhedrin 22b:4 | fresh |
 | 42 | Sifrei Devarim 217:4 | fresh |
@@ -73,7 +73,7 @@ each block still gets its own ledger.
 
 - enumerated: 6024 distinct linked sources
 - declared: 165 = 132 chain primaries + 33 Onkelos verses
-- credited (standing verdicts): 7 · FRESH TO READ: 125
+- credited (standing verdicts): 10 · FRESH TO READ: 122
 - excluded with cause (register false positive): Shabbat Siddur Sefard Linear, Maariv Service for the Conclusion of Shabbos, Veyiten Lecha 31 · Shabbat Siddur Sefard Linear, Prayer Before Retiring at Night 241 · Shabbat Siddur Sefard Linear, Prayers for Yom Tov, Musaf for Yom Tov, Prayer for Rain 77
 - outside declared scope (open narrowing, per the standing default): 5856
 
@@ -90,14 +90,14 @@ each block still gets its own ledger.
 | 9 | Bereshit Rabbah 100:12 | fresh · also in gen_73_coffin_in_egypt |
 | 10 | Bereshit Rabbah 100:2 | fresh · also in gen_73_coffin_in_egypt |
 | 11 | Bereshit Rabbah 33:3 | CREDIT — enrichment at gen_15_flood_prologue |
-| 12 | Bereshit Rabbah 47:5 | fresh |
+| 12 | Bereshit Rabbah 47:5 | CREDIT — material at gen_32_hagar_angel |
 | 13 | Bereshit Rabbah 66:4 | fresh |
 | 14 | Bereshit Rabbah 72:5 | fresh |
 | 15 | Bereshit Rabbah 75:12 | fresh |
 | 16 | Bereshit Rabbah 78:10 | fresh |
 | 17 | Bereshit Rabbah 80:10 | fresh · also in gen_71_crossed_hands |
 | 18 | Bereshit Rabbah 80:6 | CREDIT — material at gen_12_cain_abel |
-| 19 | Bereshit Rabbah 84:6 | fresh · also in gen_73_coffin_in_egypt |
+| 19 | Bereshit Rabbah 84:6 | CREDIT — no-bearing at gen_24_nations_table |
 | 20 | Bereshit Rabbah 87:6 | fresh |
 | 21 | Bereshit Rabbah 87:7 | fresh |
 | 22 | Bereshit Rabbah 90:4 | fresh |
@@ -207,7 +207,7 @@ each block still gets its own ledger.
 | 126 | Tosefta Kifshutah on Shabbat 9:17:1 | fresh |
 | 127 | Tosefta Sheviit (Lieberman) 7:12 | fresh |
 | 128 | Tosefta Sheviit 7:10 | fresh |
-| 129 | Vayikra Rabbah 21:6 | fresh |
+| 129 | Vayikra Rabbah 21:6 | CREDIT — material at gen_33_shaddai_covenant_flesh |
 | 130 | Vayikra Rabbah 36:5 | fresh |
 | 131 | Yevamot 76a:4 | fresh |
 | 132 | Yoma 52b:4 | fresh |
@@ -217,7 +217,7 @@ each block still gets its own ledger.
 
 - enumerated: 1822 distinct linked sources
 - declared: 83 = 57 chain primaries + 26 Onkelos verses
-- credited (standing verdicts): 3 · FRESH TO READ: 54
+- credited (standing verdicts): 8 · FRESH TO READ: 49
 - outside declared scope (open narrowing, per the standing default): 1739
 
 | # | source | status |
@@ -226,7 +226,7 @@ each block still gets its own ledger.
 | 2 | Bereshit Rabbah 100:10 | fresh |
 | 3 | Bereshit Rabbah 100:11 | fresh |
 | 4 | Bereshit Rabbah 100:12 | fresh · also in gen_72_testament_twelve |
-| 5 | Bereshit Rabbah 100:13 | fresh |
+| 5 | Bereshit Rabbah 100:13 | CREDIT — no-bearing at gen_31_covenant_pieces |
 | 6 | Bereshit Rabbah 100:2 | fresh · also in gen_72_testament_twelve |
 | 7 | Bereshit Rabbah 100:3 | fresh |
 | 8 | Bereshit Rabbah 100:4 | fresh |
@@ -235,10 +235,10 @@ each block still gets its own ledger.
 | 11 | Bereshit Rabbah 100:7 | CREDIT — material at gen_07_completion_sanctity |
 | 12 | Bereshit Rabbah 100:8 | fresh |
 | 13 | Bereshit Rabbah 100:9 | fresh |
-| 14 | Bereshit Rabbah 84:6 | fresh · also in gen_72_testament_twelve |
+| 14 | Bereshit Rabbah 84:6 | CREDIT — no-bearing at gen_24_nations_table |
 | 15 | Chullin 92a:17 | fresh |
 | 16 | Jerusalem Talmud Ketubot 1:1:12 | fresh |
-| 17 | Jerusalem Talmud Moed Katan 3:5:14 | fresh |
+| 17 | Jerusalem Talmud Moed Katan 3:5:14 | CREDIT — material at gen_17_boarding |
 | 18 | Jerusalem Talmud Nedarim 6:8:13 | fresh |
 | 19 | Jerusalem Talmud Peah 1:1:42 | fresh |
 | 20 | Jerusalem Talmud Sotah 1:10:1 | fresh |
@@ -248,7 +248,7 @@ each block still gets its own ledger.
 | 24 | Megillah 16b:5 | fresh |
 | 25 | Megillah 16b:7 | fresh |
 | 26 | Mekhilta DeRabbi Shimon Ben Yochai 13:18 | fresh · also in gen_72_testament_twelve |
-| 27 | Mekhilta DeRabbi Shimon Ben Yochai 31:6 | fresh |
+| 27 | Mekhilta DeRabbi Shimon Ben Yochai 31:6 | CREDIT — material at gen_22_covenant_bow |
 | 28 | Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 1:12 | fresh |
 | 29 | Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 1:13 | fresh |
 | 30 | Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 1:14 | fresh |
@@ -259,7 +259,7 @@ each block still gets its own ledger.
 | 35 | Pesikta DeRav Kahana 16:5 | fresh |
 | 36 | Rosh Hashanah 26a:19 | fresh |
 | 37 | Sanhedrin 108a:15 | CREDIT — material at gen_15_flood_prologue |
-| 38 | Shabbat 152a:15 | fresh |
+| 38 | Shabbat 152a:15 | CREDIT — no-bearing at gen_24_nations_table |
 | 39 | Sifrei Devarim 348:3 | fresh |
 | 40 | Sifrei Devarim 357:33 | fresh |
 | 41 | Sifrei Devarim 38:8 | fresh |

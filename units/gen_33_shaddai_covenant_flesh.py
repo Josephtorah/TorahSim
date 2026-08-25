@@ -86,8 +86,8 @@ m.fact("lo_yiqare_od_shimkha_avram",
 # "And I will make thee exceeding fruitful, and I will make nations of thee,
 # and kings shall come out of thee."
 m.step("Gen.17.6")
-# ‹וְהִפְרֵתִי אֹתְךָ בִּמְאֹד מְאֹד וּמְלָכִים מִמְּךָ יֵצֵאוּ› (“and-be-
-# fruitful obj-marker-you/your in-very very and-king from-you/your bring-
+# ‹וְהִפְרֵתִי אֹתְךָ בִּמְאֹד מְאֹד … וּמְלָכִים מִמְּךָ יֵצֵאוּ› (“and-be-
+# fruitful obj-marker-you/your in-very very … and-king from-you/your bring-
 # forth”) — fact holds: and-be-fruitful-otkha-bi-very-very; and-king-mimkha-
 # bring-forth
 m.fact("ve_hifreti_otkha_bi_meod_meod",

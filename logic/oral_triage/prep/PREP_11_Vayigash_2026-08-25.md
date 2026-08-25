@@ -8,14 +8,14 @@ each block still gets its own ledger.
 
 - enumerated: 2213 distinct linked sources
 - declared: 66 = 38 chain primaries + 28 Onkelos verses
-- credited (standing verdicts): 2 · FRESH TO READ: 36
+- credited (standing verdicts): 5 · FRESH TO READ: 33
 - outside declared scope (open narrowing, per the standing default): 2147
 
 | # | source | status |
 |---|--------|--------|
 | 1 | Avodah Zarah 9b:3 | fresh · also in gen_69_descent_seventy |
 | 2 | Bereshit Rabbah 25:3 | CREDIT — enrichment at gen_11_sentences_exile |
-| 3 | Bereshit Rabbah 40:6 | fresh · also in gen_70_goshen_and_the_fifth |
+| 3 | Bereshit Rabbah 40:6 | CREDIT — material at gen_28_egypt_descent |
 | 4 | Bereshit Rabbah 64:2 | CREDIT — dup-of at gen_11_sentences_exile |
 | 5 | Bereshit Rabbah 79:1 | fresh |
 | 6 | Bereshit Rabbah 90:1 | fresh |
@@ -38,7 +38,7 @@ each block still gets its own ledger.
 | 23 | Megillah 16b:3 | fresh |
 | 24 | Megillah 16b:4 | fresh |
 | 25 | Megillah 17a:3 | fresh |
-| 26 | Mekhilta DeRabbi Yishmael, Tractate Pischa 5:7 | fresh |
+| 26 | Mekhilta DeRabbi Yishmael, Tractate Pischa 5:7 | CREDIT — dup-of at gen_30_war_of_kings |
 | 27 | Mishnah Oholot 16:4 | fresh |
 | 28 | Pesikta DeRav Kahana 11:6 | fresh |
 | 29 | Sifrei Devarim 23:2 | fresh |
@@ -50,14 +50,14 @@ each block still gets its own ledger.
 | 35 | Tosefta Kifshutah on Eruvin 4:6:2 | fresh |
 | 36 | Tosefta Sotah (Lieberman) 10:9 | fresh |
 | 37 | Tosefta Sotah 10:3 | fresh · also in gen_69_descent_seventy |
-| 38 | Vayikra Rabbah 32:5 | fresh |
+| 38 | Vayikra Rabbah 32:5 | CREDIT — material at gen_28_egypt_descent |
 | — | Onkelos Genesis 45:1-28 (28 verses) | derive-time credit (foundation layer) |
 
 ## gen_69_descent_seventy — Genesis 46:1-34
 
 - enumerated: 2296 distinct linked sources
 - declared: 75 = 41 chain primaries + 34 Onkelos verses
-- credited (standing verdicts): 2 · FRESH TO READ: 39
+- credited (standing verdicts): 7 · FRESH TO READ: 34
 - outside declared scope (open narrowing, per the standing default): 2221
 
 | # | source | status |
@@ -67,7 +67,7 @@ each block still gets its own ledger.
 | 3 | Bava Batra 123a:21 | fresh |
 | 4 | Bava Batra 143b:6 | fresh |
 | 5 | Berakhot 13a:12 | fresh |
-| 6 | Berakhot 56b:19 | fresh |
+| 6 | Berakhot 56b:19 | CREDIT — no-bearing at gen_28_egypt_descent |
 | 7 | Bereshit Rabbah 100:5 | fresh |
 | 8 | Bereshit Rabbah 55:8 | fresh |
 | 9 | Bereshit Rabbah 61:4 | CREDIT — no-bearing at gen_12_cain_abel |
@@ -75,7 +75,7 @@ each block still gets its own ledger.
 | 11 | Bereshit Rabbah 73:8 | fresh |
 | 12 | Bereshit Rabbah 80:11 | fresh |
 | 13 | Bereshit Rabbah 94:4 | fresh |
-| 14 | Bereshit Rabbah 94:5 | fresh |
+| 14 | Bereshit Rabbah 94:5 | CREDIT — enrichment at gen_33_shaddai_covenant_flesh |
 | 15 | Bereshit Rabbah 94:6 | fresh |
 | 16 | Bereshit Rabbah 94:7 | fresh |
 | 17 | Bereshit Rabbah 94:8 | fresh |
@@ -89,18 +89,18 @@ each block still gets its own ledger.
 | 25 | Jerusalem Talmud Yevamot 8:3:3 | fresh |
 | 26 | Mekhilta DeRabbi Shimon Ben Yochai 13:18 | fresh · also in gen_70_goshen_and_the_fifth |
 | 27 | Mekhilta DeRabbi Shimon Ben Yochai 14:2 | fresh |
-| 28 | Mekhilta DeRabbi Shimon Ben Yochai 3:1 | fresh · also in gen_70_goshen_and_the_fifth |
+| 28 | Mekhilta DeRabbi Shimon Ben Yochai 3:1 | CREDIT — material at gen_28_egypt_descent |
 | 29 | Mekhilta DeRabbi Yishmael, Tractate Shirah 3:17 | fresh |
 | 30 | Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 2:26 | fresh |
 | 31 | Niddah 31a:24 | fresh |
 | 32 | Pesikta DeRav Kahana 11:13 | fresh |
 | 33 | Pesikta DeRav Kahana 14:2 | CREDIT — material at gen_11_sentences_exile |
-| 34 | Shabbat 89b:3 | fresh |
+| 34 | Shabbat 89b:3 | CREDIT — material at gen_31_covenant_pieces |
 | 35 | Sifra, Vayikra Dibbura DeNedavah, Chapter 1 12 | fresh |
 | 36 | Sotah 12a:14 | fresh |
 | 37 | Sotah 13b:8 | fresh |
 | 38 | Sotah 36b:16 | fresh |
-| 39 | Tosefta Berakhot 1:15 | fresh |
+| 39 | Tosefta Berakhot 1:15 | CREDIT — material at gen_33_shaddai_covenant_flesh |
 | 40 | Tosefta Sotah 10:3 | fresh · also in gen_68_i_am_yosef |
 | 41 | Vayikra Rabbah 14:9 | fresh |
 | — | Onkelos Genesis 46:1-34 (34 verses) | derive-time credit (foundation layer) |
@@ -109,7 +109,7 @@ each block still gets its own ledger.
 
 - enumerated: 2785 distinct linked sources
 - declared: 88 = 57 chain primaries + 31 Onkelos verses
-- credited (standing verdicts): 2 · FRESH TO READ: 55
+- credited (standing verdicts): 10 · FRESH TO READ: 47
 - NOTE: span crosses a parashah boundary — read both portions' runs
 - outside declared scope (open narrowing, per the standing default): 2697
 
@@ -118,16 +118,16 @@ each block still gets its own ledger.
 | 1 | Bava Kamma 92a:19 | fresh |
 | 2 | Berakhot 63b:22 | fresh |
 | 3 | Bereshit Rabbah 30:8 | CREDIT — enrichment at gen_10_serpent_violation_trace |
-| 4 | Bereshit Rabbah 39:12 | fresh |
-| 5 | Bereshit Rabbah 40:6 | fresh · also in gen_68_i_am_yosef |
-| 6 | Bereshit Rabbah 53:7 | fresh |
+| 4 | Bereshit Rabbah 39:12 | CREDIT — material at gen_27_the_call |
+| 5 | Bereshit Rabbah 40:6 | CREDIT — material at gen_28_egypt_descent |
+| 6 | Bereshit Rabbah 53:7 | CREDIT — material at gen_33_shaddai_covenant_flesh |
 | 7 | Bereshit Rabbah 71:2 | fresh |
-| 8 | Bereshit Rabbah 86:2 | fresh |
-| 9 | Bereshit Rabbah 86:3 | fresh |
+| 8 | Bereshit Rabbah 86:2 | CREDIT — material at gen_31_covenant_pieces |
+| 9 | Bereshit Rabbah 86:3 | CREDIT — enrichment at gen_23_vineyard_curse |
 | 10 | Bereshit Rabbah 90:6 | fresh |
 | 11 | Bereshit Rabbah 95:4 | fresh |
 | 12 | Bereshit Rabbah 96:1 | fresh |
-| 13 | Bereshit Rabbah 96:2 | fresh |
+| 13 | Bereshit Rabbah 96:2 | CREDIT — enrichment at gen_31_covenant_pieces |
 | 14 | Bereshit Rabbah 96:3 | fresh |
 | 15 | Bereshit Rabbah 96:4 | fresh |
 | 16 | Bereshit Rabbah 96:5 | fresh · also in gen_69_descent_seventy |
@@ -144,7 +144,7 @@ each block still gets its own ledger.
 | 27 | Megillah 16b:6 | fresh |
 | 28 | Megillah 17a:4 | fresh |
 | 29 | Mekhilta DeRabbi Shimon Ben Yochai 13:18 | fresh · also in gen_69_descent_seventy |
-| 30 | Mekhilta DeRabbi Shimon Ben Yochai 3:1 | fresh · also in gen_69_descent_seventy |
+| 30 | Mekhilta DeRabbi Shimon Ben Yochai 3:1 | CREDIT — material at gen_28_egypt_descent |
 | 31 | Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 1:14 | fresh |
 | 32 | Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 2:4 | fresh |
 | 33 | Mishnah Berurah 135:7 | fresh |
@@ -170,6 +170,6 @@ each block still gets its own ledger.
 | 53 | Sifrei Devarim 38:8 | fresh · also in gen_68_i_am_yosef |
 | 54 | Sifrei Devarim 42:9 | fresh |
 | 55 | Tosefta Kifshutah on Gittin 4:1:1 | fresh |
-| 56 | Vayikra Rabbah 35:11 | fresh |
+| 56 | Vayikra Rabbah 35:11 | CREDIT — enrichment at gen_27_the_call |
 | 57 | Vayikra Rabbah 9:1 | fresh |
 | — | Onkelos Genesis 47:1-31 (31 verses) | derive-time credit (foundation layer) |

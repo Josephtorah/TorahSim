@@ -52,7 +52,13 @@ logic/MISHNAH_TOPICS.md (all 63 mapped).
 SPEED RULINGS (owner, 2026-08-25, binding for the Genesis walk):
 (a) READ AT THE PARASHAH GRAIN — one sequential pass over a weekly
 portion's primaries covers all its blocks; the ledgers stay
-per-block. (b) STANDING-VERDICT CREDITS — a source already verdicted
+per-block. WHY (measured in the sweeps, owner-confirmed): the reading
+itself costs the same either way — batching cuts the OVERHEAD
+(setup runs once, not per block; neighboring blocks share sources
+that get read once and verdicted everywhere; credits compound
+inside the sitting). Four blocks swept in ~23 minutes vs one block
+the old way in over an hour. Never fall back to block-by-block.
+(b) STANDING-VERDICT CREDITS — a source already verdicted
 in any prior ledger is CREDITED, never re-read; duplicate clusters
 are precomputed so dup rows are verdicted without being opened.
 (c) TERSE NON-MATERIAL ROWS — every declared source still gets its
@@ -195,7 +201,19 @@ canon window itself; gen_13 through gen_15 (the two lines and the
 flood prologue) swept in from the workshop's first true
 parashah-grain pass. Genesis 1:1 to 6:8 now reads READ THROUGH end to
 end — full rule through 2:17, the rest honestly first pass, the batch
-stamp awaiting the owner's word. REMAINING: 58 blocks (gen_16 through
-gen_73 — the July partition covers the whole book, 50 chapters, no
-gaps) under the speed rulings above, walking onward by parashah —
-Noach next.
+stamp awaiting the owner's word.
+
+THE SWEEP ERA REACHES LECH LECHA (2026-08-25): the speed rulings
+proved out at full scale. Parashat Noach went first (gen_16 through
+gen_26 — eleven blocks in one workshop sitting), then parashat Lech
+Lecha (gen_27 through gen_33, Genesis 12:1-17:27 — seven blocks, 660
+declared sources read in about 35 minutes, 268 material findings).
+All eighteen LANDED IN CANON the same day on the owner's word ("bring
+torahsim up to date"): every declared source verdicted, every ledger
+past the completion gate, every unit at rev 2 with its reading-pass
+record, chips live from Genesis 1:1 to 17:27. TWENTY-FIVE blocks —
+gen_09 through gen_33 — now stand read and green, waiting UNSTAMPED:
+one batch word per weekly portion stamps them, ritual once per batch.
+Genesis stands at 33 of 73 blocks read; 40 remain; the next sweep is
+parashat Vayera, opening at gen_34 (Genesis 18:1), awaiting the
+owner's word.

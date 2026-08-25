@@ -108,8 +108,10 @@ m.fact("reshit_mamlakhto_bavel_be_eretz_shinar",
 # and-obj-marker Resen”) — event: build — theme ninveh, Rehoboth-city,
 # Calah, Resen
 m.event("build", themes=["ninveh", "rechovot_ir", "kalach", "resen"])
-# ‹נִינְוֵה וְרְחֹבֹת עִיר וְכָלַח וְרֶסֶן› (“Nineveh and-Rehoboth city and-
-# Calah and-Resen”) — the world gains: ninveh, Rehoboth-city, Calah, Resen
+# ‹וַיִּבֶן אֶת־נִינְוֵה וְאֶת־רְחֹבֹת עִיר וְאֶת־כָּלַח וְאֶת־רֶסֶן› (“and-
+# build obj-marker Nineveh and-obj-marker Rehoboth city and-obj-marker Calah
+# and-obj-marker Resen”) — the world gains: ninveh, Rehoboth-city, Calah,
+# Resen
 m.install("ninveh", "rechovot_ir", "kalach", "resen")
 # ‹הִוא הָעִיר הַגְּדֹלָה› (“he/it the-city the-great”) — fact holds: hi-
 # the-city-the-gedolah
