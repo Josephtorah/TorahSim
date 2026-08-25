@@ -197,3 +197,19 @@ reads read-through · full rule from Genesis 1:1 to 2:17. REMAINING:
 whole book, 50 chapters, no gaps) under the speed rulings above; the
 queue runs gen_09 (2:18-25), gen_10 (3:1-13), gen_11 (3:14-24), then
 onward by parashah.
+
+THE SWEEP ERA REACHES LECH LECHA (2026-08-25): the speed rulings
+proved out at full scale. Parashat Noach went first (gen_16 through
+gen_26 — eleven blocks in one sitting), then parashat Lech Lecha
+(gen_27 through gen_33, Genesis 12:1-17:27 — seven blocks, 660
+declared sources read in about 35 minutes, 268 material findings).
+Every declared source got its verdict row, every ledger passes the
+completion gate, every unit is rebuilt to rev 2 carrying its
+reading-pass record, and all gates run green (gloss check 0, preflight,
+text layer). TWENTY-FIVE blocks — gen_09 through gen_33 — now stand
+read and green, waiting UNSTAMPED: one batch word per weekly portion
+stamps them, ritual once per batch. Genesis stands at 33 of 73 blocks
+read; the next sweep is parashat Vayera, opening at gen_34 (Genesis
+18:1). [Workshop note: this paragraph needs mirroring to the canon
+copy in TorahSim on the owner's word in that window, joining the
+pending Step 4 WHY paragraph.]

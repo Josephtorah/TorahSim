@@ -4010,3 +4010,172 @@ parashah sweeps; next: Lech Lecha — gen_27 the call 12:1-9 onward).
 UNCOMMITTED on disk since 63b7dbd: gen_10/11 + Bereshit sweep (4) +
 Noach sweep (11 ledgers + 11 units) + THE_STEPS WHY + memory + state
 doc — awaiting owner word.
+
+LATER (2026-08-25, after the Noach sweep): COMMITTED on owner word —
+3f18dea, 36 files, 2,107 insertions: gen_10/11 + the Bereshit-remainder
+sweep (4) + the Noach sweep (11 ledgers + 11 units) + THE_STEPS WHY +
+state doc. Tree clean but for the never-commit set and THE_WORLD.md
+(see next). VOCABULARY RELAY: owner, kicking off the website redesign
+with TorahSim, asked where the machine-naming discussion lived — it was
+HERE (THE_WORLD.md idea log, 2026-08-24): the VOCABULARY RULING (owner
+"should we rename one of them?" — machine STAYS for steps-derived law
+programs; "machinery" became THE MILL; core keeps THE PHYSICS; standing
+triad THE STONE · THE MILL · THE SKETCH) and the companion ONE-SOURCE
+site rule. Neither had crossed to the peer (the 08-24 peer review
+predated both). On owner word ("relay that to torahsim. I want this to
+be on the same page") relayed by direct session message to torahsim-19;
+CONFIRMED — the peer recorded the triad in its persistent memory and
+committed redesign copy to it. Relay + handshake recorded as a dated
+idea-log entry in THE_WORLD.md (now the one modified tracked file,
+uncommitted — world-era file, commits on owner word).
+
+OWNER'S NEXT INTENT after compaction: the PARASHAT LECH LECHA SWEEP —
+SEVEN blocks, one pass per Step 4 (a): gen_27 the call (12:1-9),
+gen_28 egypt_descent (12:10-20), gen_29 separation_promise (13),
+gen_30 war_of_kings (14), gen_31 covenant_pieces (15), gen_32
+hagar_angel (16), gen_33 shaddai_covenant_flesh (17) — clean cut,
+gen_34 opens Vayera at 18:1. FIRST ACTION of the sitting: reread
+THE_STEPS Step 4 per the standing post-compaction memory; run the
+same machinery as Noach (pre-enumerate all seven by script with
+boundary-aware credit matching, one reading pass in span order,
+per-block ledgers, batch unit rebuilds, gates). Standing ready, not
+pushed: gen_09 through gen_26 (EIGHTEEN blocks) read/green/UNSTAMPED
+— one owner word covers any batch. Genesis: 26 of 73 read.
+COMPACTION POINT — records current through here.
+
+
+=== 2026-08-25 (post-compaction #20): THE PARASHAT LECH LECHA SWEEP —
+READING PHASE COMPLETE, SEVEN BLOCKS, ONE SITTING. Sweep started 10:40:07
+on the owner's word ('run the lech lecha sweep and keep time'); PAUSED BY
+THE OWNER at the reading/ledger boundary 11:15 ('we are running out of
+context, lets wrap it up at a stopping point') — the clean cut: ALL
+EVIDENCE ON DISK, the mechanical remainder deferred. TIMES: pre-enumeration
++ register all 7 blocks 0m25s (boundary-aware matcher written in from the
+start); credit-guard verification + roster patch 1m06s (guard-1 caught
+FOUR bad credits pre-read: two mention-only/dup-target matches in gen_32,
+two no-bearing-elsewhere rows whose home seats are gen_33's naming and
+circumcision verses — all four demoted to fresh, all four vindicated in
+reading); text fetch 398 refs 0m27s (6 missing = NEW register FP variant:
+'Shabbat Siddur Sefard Linear...' — class 2 extended, liturgical works via
+the 'Shabbat ' prefix, 6 refs excluded with cause, register untouched);
+reading + ledgers: leg 1 gen_27-28 done 10:49:40, leg 2 gen_29-30 done
+10:57:57, leg 3 gen_31 done 11:03:55, leg 4 gen_32-33 read by 11:11:10,
+last two ledgers written 11:15. TOTAL 35m01s for the reading phase.
+NUMBERS: 17,161 enumerated; declared core shelf 660 (398 fresh verdict
+rows + 64 carry + 23 daf-grain + 49 in-sitting dups + 126 Onkelos);
+distribution across the seven ledgers: 29/13/25/36/62/28/75 material =
+268 MATERIAL F (the sweep record — Lech Lecha is law-bearing end to end);
+16,494 marked outside declared scope openly; 7 register FPs excluded with
+cause. All seven completion lines parse under the declared-reading gate
+regex (checked 11:15: 71/71, 45/45, 87/87, 98/98, 145/145, 60/60,
+154/154). HEADLINE YIELD (the ledgers carry it all): the Shechem
+gezerah-shavah location law with the Samaritan-text variance (12:6); two
+priestly-blessing derivations on 12:3; the paved-way machine's eleven
+ink-pairs (12:10-20); the al-devar gezerah shavah with raatan at its
+divorce-law seat (12:17); the escort law's 4-steps-400-years (12:20);
+the walking-acquisition machloket at three courts (13:17); the quarrel
+paradigm inside Exodus 21's assault law (13:7 — exo21 cross-hook); the
+three-scrolls majority-rule procedure with 14:3's hee in the
+eleven-census; the priesthood transferred on the blessing ORDER of
+14:19-20; the Ivri gezerah shavah inside Exodus 21's opening law (14:13);
+the David spoils statute sourced to 14:24; the reading-as-sacrifice
+institution founded on 15:9; the two-clocks law (400 years vs fourth
+generation) at Mishnah/Tosefta tier with the pieces dated to Abraham's
+seventieth year (grounding the lekh-lekha-twice inversion); ein-mazal on
+15:5; natati-as-deed deciding tithe law (15:18); the ten-years childless
+law from 16:3 at five seats with its hint-grade recorded; the
+angel-count machloket (16:7-12); the himol-yimol battery with the
+two-grammar-schools dispute over the doubling itself (17:13); the
+three-verbal-analogies weighing for the Shabbat override; the notarikon
+charter on 17:5 at both seats; Shaddai's expansion-halting dai-claim
+(17:1); the patriarchs-are-the-chariot ontology (17:22); the name laws
+with the Tosefta's praise-not-shame counter-rule dual-tracked; the
+enforcement cascade + Mishnah Keritot's karet; the intermarriage and
+havchanah laws from 17:7. PAUSED — REMAINING FOR NEXT SITTING (all
+scripted, ~5-7 min): (1) batch-rebuild the seven units to rev 2
+(adapt scratchpad rebuild_noach_units.py — write HEADLINES per unit,
+insert rev+changelog, append ORAL_reading_pass_2026_08_25 blocks);
+(2) gates — gloss_lint on the seven ledgers, preflight x7, verify_text
+x7; (3) then the sweep is at the Noach-parity point: gen_09 through
+gen_33 read/green/UNSTAMPED — TWENTY-FIVE blocks, one owner batch word
+covers any of them. Genesis: 33 of 73 blocks read, 40 left (~6 more
+parashah sweeps; next: VAYERA — gen_34 mamre_laugh_plea 18:1 onward;
+check the block table for Vayera's exact roster, likely gen_34..gen_40
+through chapter 22). Scratchpad state (survives): lech_sweep.json
+(final roster incl. demotions + FP moves), lech_texts_01-06.txt (all
+read), enumerate_lech.py. UNCOMMITTED on disk since 3f18dea: the seven
+Lech Lecha ledgers + THE_WORLD.md + state doc — awaiting owner word.
+COMPACTION POINT — records current through here.
+=== 2026-08-25 (post-compaction #21): LECH LECHA REBUILD + GATES — THE SWEEP CLOSES GREEN ===
+Step 4 speed rulings reread first (standing post-compaction rule), then the
+deferred mechanical remainder ran end to end:
+- BATCH REBUILD: all seven units gen_27..gen_33 to rev 2 via scratchpad
+  rebuild_lech_units.py (Noach pattern): rev+changelog inserted after meta id,
+  ORAL_reading_pass_2026_08_25 block appended before scenarios (block N of 7,
+  headlines composed from each ledger's amendment candidates, Hebrew jargon
+  glossed inline on first use), YAML parse-checked; oral_notes now 3 blocks each.
+- GLOSS_LINT: 5 flags first run, reviewed by hand, fixed to 0 (prior-practice
+  form fixes, no verdicts touched) — gen_27: "weeding and hoeing" unhyphenated
+  (pure-English heuristic FP), the Shechem gezerah-shavah glossed "(verbal
+  analogy)" in the amendment line; gen_30: hee (הִוא, the written 'she' — the
+  Salt Sea), va-aromemenhu glossed "'and I will exalt Him'", ketiv glossed
+  "the written-form claim". Re-run over seven ledgers + seven units: 0 flags.
+- PREFLIGHT x7: ALL SCENARIOS GREEN.
+- VERIFY_TEXT x7: six green first pass; gen_33 FAILED at Genesis 17:6 —
+  PRE-EXISTING AT HEAD (proven by stash test, not from the rebuild):
+  STEP_Gn_17_6's PRECONDITION_STATE fragment stitched two non-contiguous spans
+  as one run. Model-layer fix under RE law: ellipsis inserted (the verifier's
+  own convention — "the gap is the quote's own honesty about omission"),
+  honestly omitting u-netatikha le-goyim ('and I will make you into nations');
+  second changelog line recorded on gen_33; re-run GREEN (23 steps, 11
+  scenarios). Full battery re-run on gen_33: YAML OK / preflight green /
+  text green / gloss 0.
+- THE_STEPS workshop tail: sweep-era standing paragraph appended (Noach 11 +
+  Lech Lecha 7, twenty-five blocks read/green/unstamped, 33 of 73, Vayera
+  next) — needs canon mirroring in the TorahSim window on the owner's word,
+  joining the pending Step 4 WHY paragraph.
+STANDING: gen_09 through gen_33 = TWENTY-FIVE blocks read/green/UNSTAMPED —
+Lech Lecha at Noach parity. One owner batch word per parashah stamps them;
+ritual (renderings/exports) at stamp time. NOT pushed for.
+UNCOMMITTED ON DISK: seven Lech Lecha ledgers + seven rev-2 units +
+THE_STEPS.md + THE_WORLD.md + state doc — awaiting owner word.
+NEXT: parashat VAYERA sweep — gen_34 (Genesis 18:1) onward; pre-enumerate by
+script per Step 3, check the block table for the exact roster.
+COMPACTION POINT — records current through here.
+
+=== 2026-08-25 (same day, later): THE PURPOSE RULED — TALMUD AS ORACLE ===
+Owner, verbatim: "we will use the talmud as our source of truth." The
+simulation's mission is now ruled: run the tradition's own hypotheticals,
+with each sugya's (case-discussion's) recorded answer as the test oracle.
+Full record: THE_WORLD.md new section "The purpose" + idea-log entry +
+three build-queue items (sugya case-file format, standing-rules table,
+world clock); permanent memory simulation-purpose-talmud-oracle.md.
+Precision kept: the stone stays the program; the Talmud's answers are
+ground truth for TESTING. Disputes are runtime outputs (machloket = two
+rulings attributed; teiku = unresolved). THE_STEPS untouched until the
+case-file design is ruled. Also this sitting: the sketch simulator
+mockup built and opened in Chrome (grok-mockups/
+sketch_simulator_mockup_2026-08-25.html — Step 6 logic / sketch code /
+real sandbox runs, gloss 0). Derivation walk unchanged: Vayera next on
+the owner's word.
+
+=== 2026-08-25 (same day, later still): THE ORACLE'S ANATOMY — OWNER-STAMPED ===
+Owner, on recording it: "record it. this is the greatest insights of this
+entire project." The insight: Mishnah = the expected-output table
+(input→output fixtures, derivation stripped), organized BY MODULE — the
+six orders are the simulator's module map, MISHNAH_TOPICS.md the routing
+table; gemara = traceability (menalan, "from where do we know this?" —
+which stone each test exercises, where a failing case sends the next
+derivation), edge cases (the hypotheticals), dispute flags (machloket =
+dual attributed outputs, teiku = unresolved as a valid result); Talmud =
+both, which is why the purpose ruling names the whole. Case files anchor
+on Mishnah rows; gemara-less rows = black-box tests; Tosefta rows =
+variant oracle rows, dual-tracked. RECORDED: THE_WORLD.md new section
+"The oracle's anatomy" (under "The purpose") + idea-log entry, gloss 0;
+permanent memory oracle-anatomy-mishnah-gemara.md + index line.
+COMPACTION POINT — records current through here.
+ADDENDUM same sitting: owner ordered "mirror the purpose and anatomy to
+torahsim" — both sections relayed in full to torahsim-19 by session
+message (msg 9349036a), landing location their window's call, commit/
+deploy on the owner's words there. Awaiting their landing confirmation
+for mirror-awareness.
