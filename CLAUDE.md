@@ -100,6 +100,20 @@ The token file lives outside the repo; never commit or echo it.
 
 ## Layout and invariants
 
+- **The three tiers on disk** (owner vocabulary ruling, adopted in
+  canon 2026-08-25): `logic/` and `scans/` are THE STONE — derived
+  units, ledgers, and evidence, the only truth. `press/` and `tools/`
+  are THE MILL — transforms that assert nothing; its products
+  (`data/`, `site/`, `scroll/data/`) are rebuildable and never truth;
+  its physics-grade core is the interpreter and the gates. `machines/`,
+  `units/`, and `app/` are THE MACHINE — the stone's instructions
+  running on the physics. `sim/` is THE SKETCH — estimates awaiting
+  derivation, the only directory that may hold them; the sketch is
+  walled (no stone, mill, or machine file may import from `sim/` — the
+  sim gate enforces it) and a sketch dies when its stone arrives. In
+  shipped copy, "machine" names only steps-derived law programs; the
+  fold engine is "the mill," never "machinery" (old occurrences in
+  append-only records stay as written).
 - Unit IDs and file paths are load-bearing — the dependency proof
   resolves against them. Never rename `units/*.py`; never move
   `machines/`.

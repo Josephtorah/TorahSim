@@ -20,7 +20,10 @@ program is the gates, assembled:
      component 9); after it has answered, re-freeze deliberately with
      --rebaseline;
   5. the simulation sketch (sim/house_of_david.py) — its two findings
-     ride as assertions.
+     ride as assertions; the same gate holds the sketch fence (owner
+     word, 2026-08-25): sim/ is the only sketch directory, and no
+     stone, mill, or machine file may import from it — the sketch is
+     run, never depended on, and dies when its stone arrives.
 
 Usage:  python3 tools/check.py [--rebaseline]
 Exit 0 only when every gate is green. Stock Python 3; nothing to install.
@@ -28,6 +31,7 @@ Exit 0 only when every gate is green. Stock Python 3; nothing to install.
 import importlib.util
 import json
 import os
+import re
 import subprocess
 import sys
 
@@ -151,13 +155,31 @@ def main():
                if not flips else "%d stamp(s) flipped — answer for them "
                "or --rebaseline" % len(flips))
 
-    # -- gate 5: the simulation sketch -----------------------------------
+    # -- gate 5: the simulation sketch + the sketch fence ----------------
     r = run([sys.executable, os.path.join(ROOT, "sim", "house_of_david.py")])
     if r.returncode:
         print(r.stdout, r.stderr, end="")
-    report("sim", r.returncode == 0,
-           "house of David run, findings hold"
-           if r.returncode == 0 else "FAILED — output above")
+    # the fence: no stone, mill, or machine file imports from sim/ —
+    # this gate RUNS the sketch (allowed); nothing may depend on it.
+    fence = []
+    for tier in ("logic", "machines", "press", "units", "app", "tools"):
+        for base, dirs, files in os.walk(os.path.join(ROOT, tier)):
+            dirs[:] = sorted(d for d in dirs if d not in SKIP_DIRS)
+            for f in sorted(files):
+                if not f.endswith(".py"):
+                    continue
+                path = os.path.join(base, f)
+                with open(path, encoding="utf-8") as fh:
+                    for n, line in enumerate(fh, 1):
+                        if re.match(r"\s*(import|from)\s+sim\b", line):
+                            fence.append("%s:%d" % (
+                                os.path.relpath(path, ROOT), n))
+    for hit in fence:
+        print("  FENCE  %s imports from sim/ — the sketch is walled" % hit)
+    report("sim", r.returncode == 0 and not fence,
+           "house of David run, findings hold; sketch fence holds"
+           if r.returncode == 0 and not fence
+           else "FAILED — output above")
 
     # -- gate 6: the receipts — the front page's recorded figures --------
     # The recital says the law chapter's reading was logged, 4,903 rows,

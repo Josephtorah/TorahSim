@@ -184,9 +184,18 @@ garden and the first rule) became the first July v1 unit carried
 end-to-end by the RE-era path — 146 of 146 declared sources read, 48
 material (the project record), the Noachide laws derived word-by-word
 from our 2:16, the 2:15 extra-yod corrected to the ink, stamped full
-rule on the owner's "gen_08 good" and landed in canon. The scroll now
-reads read-through · full rule from Genesis 1:1 to 2:17. REMAINING:
-65 blocks (gen_09 through gen_73 — the July partition covers the
-whole book, 50 chapters, no gaps) under the speed rulings above; the
-queue runs gen_09 (2:18-25), gen_10 (3:1-13), gen_11 (3:14-24), then
-onward by parashah.
+rule on the owner's "gen_08 good" and landed in canon.
+
+PARASHAT BERESHIT READS THROUGH (2026-08-25): the speed rulings above
+carried the walk through the whole first portion in two days — gen_09
+through gen_11 (the helper, the serpent, the sentences) derived in
+the workshop and landed; gen_12 (Cain and Abel, 77 of 77 declared
+sources verdicted, 37 material) the first sitting ever run in the
+canon window itself; gen_13 through gen_15 (the two lines and the
+flood prologue) swept in from the workshop's first true
+parashah-grain pass. Genesis 1:1 to 6:8 now reads READ THROUGH end to
+end — full rule through 2:17, the rest honestly first pass, the batch
+stamp awaiting the owner's word. REMAINING: 58 blocks (gen_16 through
+gen_73 — the July partition covers the whole book, 50 chapters, no
+gaps) under the speed rulings above, walking onward by parashah —
+Noach next.
