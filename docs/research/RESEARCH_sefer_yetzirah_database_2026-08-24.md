@@ -329,3 +329,86 @@ skeleton (691 → 664); the companion script
 per-gate tables included (its header documents the one fetch it
 needs — the lexicon XML stays uncommitted, like any shelf source). Boundary unchanged:
 model-layer research; grounds nothing without a depth-pass word.
+
+---
+
+## Sixth look (2026-08-24, continuing on the owner's "continue
+## research") — order is meaning: the gates are directed doors
+
+Sefer Yetzirah's engine is tzeruf ("combination") — and its doctrine
+is that ORDER carries the meaning: the same letters in a different
+sequence are a different created thing, stated flat at 3:7-9 where
+the male is formed with אמש (AMSh) and the female with אשמ (AShM).
+The fifth look treated each gate as an unordered pair. This look asks
+the order question of the same 664 roots: when the lexicon uses a
+gate, does it use it in both directions (X-before-Y and Y-before-X),
+or is the door one-way?
+
+**Finding 1 — the gates are directional.** Among gates grounding at
+least four roots, 19 of 142 are perfectly ONE-WAY — every root runs
+the same direction — where a fair coin expects 4.6. Across all
+attested traffic, 67% flows in each gate's majority direction (a
+directionless lexicon would sit at 50%). Examples with zero traffic
+the other way: zayin-then-resh six roots, resh-then-zayin none;
+gimel-then-dalet five and none; gimel-then-ayin five and none.
+
+**Finding 2 — the honest frame, and it holds.** The loudest one-way
+gates in the full inventory are an artifact this study already knows:
+the third-heh citation class (nun-then-heh at 12:0 is just the many
+dictionary forms ending in heh). So the test was rerun on gates of
+STRONG letters only — heh, vav, and yod excluded entirely. The effect
+stands: 9 one-way gates of 103 against 2.9 expected (simulated
+p ≈ 0.002), majority share steady at 65% at every threshold. Order
+preference is a fact of the true consonants, not a citation-form
+shadow. One honest limit: at the highest volumes (six-plus roots) the
+one-way count falls to chance — the busiest doors do run both ways —
+so absolute one-way-ness lives in the mid-frequency band, while the
+65% majority-flow bias holds throughout.
+
+**Finding 3 — resh, a fourth time.** The eight busiest TWO-WAY gates
+in the lexicon are, every one of them, resh gates: chet-resh at 11
+and 10, ayin-resh at 8 and 11, resh-shin at 7 and 11, and the resh
+pairs with bet, kaf, mem, peh, qof filling out the list. The letter
+that crossed the doubles boundary, took the one dagesh, and ignored
+its class's avoidance now also ignores direction — the only letter
+whose doors all swing freely. Modern phonology's diagnosis is one
+word, liquid; the study's running observation is that every anomaly
+this data surfaces keeps being the same letter.
+
+**Finding 4 — letters have home slots.** Positional preference is
+real per letter and per class (strong letters only): shin and nun
+open roots — each sits in the first slot over half the time it
+appears at all — while lamed shuns the opening (first slot only 12%
+of its occurrences, against 49% in the third). By mouth-class, palate
+letters lean to the front of the root, throat letters to the edges.
+The root is not a bag of letters; each letter carries a positional
+signature, one more computed classification the primitives turn out
+to own.
+
+**Finding 5 — the mothers, and the one root they spell.** Of the six
+possible orderings of the three mothers alef-mem-shin, the ENTIRE
+Tanakh verb lexicon — 1,212 roots — contains exactly one as a real
+root: אשם (asham, "to incur guilt"). Not the male ordering; the
+lexicalized ordering is אשמ (AShM) — precisely the sequence 3:7-9
+assigns to the FEMALE. Reported as data with significance
+deliberately unassigned, twice over: that only one ordering of the
+mothers was ever lexicalized is a fact of the language; which SY
+register that ordering belongs to is SY's claim, not the corpus's;
+and the root's meaning is left sitting on the table untouched.
+
+**The reading (labeled).** *Data:* the gate system is directed —
+two-thirds of root traffic runs each gate's majority way, a hard core
+of doors admits one direction only, and every letter has home slots.
+*The SY resonance:* tzeruf's order-carries-meaning doctrine has a
+real corpus analog — the pair is not the unit; the SEQUENCED pair is.
+*What is NOT claimed:* that any specific SY ordering maps to any
+specific meaning. The one place the corpus itself offers such a
+datum — the mothers' single lexicalized ordering landing on SY's
+female sequence — is recorded and left unread.
+
+**Caveats.** All of the fifth look's caveats carry (headword proxy,
+verbs only); the directional analysis adds the glide exclusion as its
+own control rather than a hidden assumption. The companion script
+`docs/research/research_sy_gates_order.py` reproduces every number,
+same one-fetch input. Boundary unchanged: model-layer research;
+grounds nothing without a depth-pass word.
