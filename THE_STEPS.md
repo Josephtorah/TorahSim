@@ -32,6 +32,10 @@ shelf unless the owner orders otherwise. The full source list is still
 enumerated and recorded in the ledger, its unread remainder marked
 outside declared scope; depth passes run only on the owner's order,
 for a named reason.
+PRE-ENUMERATION (owner, 2026-08-25, speed ruling): the enumeration and
+register classification for every remaining block is computed AHEAD in
+one mechanical pass — each sitting starts with its declared list
+already printed, never re-deriving it by hand.
 
 ## Step 4 — Read and log
 Actually read each chosen source against the text. Every source gets one
@@ -45,6 +49,26 @@ got: a Mishnah paragraph is a RULING — an input→output case, no reason
 shown; a Talmud passage is a DERIVATION (hooking verses), a DISPUTE,
 or a TEST. Find the implementing tractates by topic in
 logic/MISHNAH_TOPICS.md (all 63 mapped).
+SPEED RULINGS (owner, 2026-08-25, binding for the Genesis walk):
+(a) READ AT THE PARASHAH GRAIN — one sequential pass over a weekly
+portion's primaries covers all its blocks; the ledgers stay
+per-block. (b) STANDING-VERDICT CREDITS — a source already verdicted
+in any prior ledger is CREDITED, never re-read; duplicate clusters
+are precomputed so dup rows are verdicted without being opened.
+(c) TERSE NON-MATERIAL ROWS — every declared source still gets its
+verdict (that is what read-through means), but only material rows
+take full-finding prose; enrichment / dup / no-bearing rows are one
+line. The work is NOT split across windows — one derivation stream
+(owner, same ruling).
+CREDIT GUARDS (owner, 2026-08-25, "I will accept your changes" — amending
+(b) on the workshop's proposal): (1) a credited source whose standing row
+says nothing about the current block's ops gets a QUICK LOOK, not a blind
+credit; (2) a dup cluster is credited unopened only after at least ONE
+member has been fully read in some ledger; (3) sources carrying NUMBERS
+or ink-level claims — counts, spellings, written-vs-read forms — are
+NEVER dup-credited without opening: that is the class where seats
+diverge (the canopy counts 9/10/11 vs 13/11/10 are the standing
+exhibit).
    → shows as: chip "in reading 39/63" or "read through"; grid cell fill.
 
 ## Step 5 — Extract claims
@@ -97,6 +121,10 @@ changelog check. (Deleting or rebaselining a TEST takes owner word.)
 ## Step 8 — The stamp (owner word only)
 When a span's declared reading is COMPLETE and its logic was rebuilt
 from that reading, the owner may order the full-rule stamp.
+BATCH STAMPS (owner, 2026-08-25): the word may cover a batch — a
+parashah, a section — in one utterance; per-block stamps are not
+required. The freeze ritual and the landing overhead (index → render
+→ export → gates) then run once per batch, not once per block.
    → shows as: chip "full rule" (until then: "first pass").
 
 ## Step 9 — Prove against cases (where the text records cases)
@@ -127,13 +155,13 @@ Export, parity check against the public repo, deploy. Owner's word.
 ## Creation week, honestly (as of 2026-08-21)
 | Day | Verses  | Step 4 (reading) | Step 6 (applied) | Stamp |
 |-----|---------|------------------|------------------|-------|
-| 1   | 1:1-5   | complete         | YES — rev 2      | ✔ STAMPED 2026-08-23 |
-| 2   | 1:6-8   | complete (core shelf) | YES — rev 2 | ✔ STAMPED 2026-08-23 |
-| 3   | 1:9-13  | complete (core shelf) | YES — rev 2 | ✔ STAMPED 2026-08-23 |
-| 4   | 1:14-19 | complete         | YES — rev 2      | ✔ STAMPED 2026-08-23 |
-| 5   | 1:20-23 | complete         | YES — rev 2      | ✔ STAMPED 2026-08-23 |
-| 6   | 1:24-31 | complete (core shelf) | YES — rev 2 | ✔ STAMPED 2026-08-23 |
-| 7   | 2:1-3   | complete (core shelf) | YES — rev 2 | ✔ STAMPED 2026-08-23 |
+| 1   | 1:1-5   | complete         | YES — rev 3      | ✔ STAMPED 2026-08-23 |
+| 2   | 1:6-8   | complete (core shelf) | YES — rev 3 | ✔ STAMPED 2026-08-23 |
+| 3   | 1:9-13  | complete (core shelf) | YES — rev 3 | ✔ STAMPED 2026-08-23 |
+| 4   | 1:14-19 | complete         | YES — rev 3      | ✔ STAMPED 2026-08-23 |
+| 5   | 1:20-23 | complete         | YES — rev 3      | ✔ STAMPED 2026-08-23 |
+| 6   | 1:24-31 | complete (core shelf) | YES — rev 3 | ✔ STAMPED 2026-08-23 |
+| 7   | 2:1-3   | complete (core shelf) | YES — rev 3 | ✔ STAMPED 2026-08-23 |
 
 THE CREATION WEEK IS WHOLE (2026-08-23): all seven days stand at FULL
 RULE — Genesis 1:1 through 2:3, read through under the declared law,
@@ -147,8 +175,18 @@ utterances confirmed — finished fastest, and rest itself entered the
 witness tier as a thing created. The original seven units (July 28)
 were built BEFORE the reading standard existed; twenty-six days later
 the redo era re-derived every one of them from the tradition's own
-pages. The walked path (read → claims → amend → gates → stamp) now
-turns to the rest of the Torah. The original seven units (July
-28) were built BEFORE the reading standard existed — that is what
-"first pass" meant, and why the redo era exists. The walked path
-(read → claims → amend → gates → stamp) is the pattern for the rest.
+pages — that is what "first pass" meant, and why the redo era exists.
+The walked path (read → claims → amend → gates → stamp) now turns to
+the rest of the Torah.
+
+THE EDEN BLOCK OPENED (2026-08-24): gen_08 (Genesis 2:4-17, the
+garden and the first rule) became the first July v1 unit carried
+end-to-end by the RE-era path — 146 of 146 declared sources read, 48
+material (the project record), the Noachide laws derived word-by-word
+from our 2:16, the 2:15 extra-yod corrected to the ink, stamped full
+rule on the owner's "gen_08 good" and landed in canon. The scroll now
+reads read-through · full rule from Genesis 1:1 to 2:17. REMAINING:
+65 blocks (gen_09 through gen_73 — the July partition covers the
+whole book, 50 chapters, no gaps) under the speed rulings above; the
+queue runs gen_09 (2:18-25), gen_10 (3:1-13), gen_11 (3:14-24), then
+onward by parashah.
