@@ -4364,3 +4364,204 @@ thirty blocks unstamped), and THE OWNER'S DEPLOY ORDER relayed verbatim
 as authorization for their chain + deploy — with the hold-at-ready
 option if their practice wants his word typed there. Awaiting landing +
 deploy confirmation.
+ADDENDUM (pre-compaction): owner's "commit and push" EXECUTED — commit
+1f4cbf2 (21 files: the 2026-08-27 rulings/tests day + the Vayera sweep)
+PUSHED to origin/main, which also carried the previously unpushed
+3f18dea (the 18-block reading batch) and 91a4712 (Lech Lecha rebuild +
+purpose/anatomy). Workshop tree CLEAN. OPEN THREAD for after
+compaction: torahsim-19 owes a landing + website-deploy confirmation
+for the Vayera relay (msg f76071a8, owner's deploy order relayed) —
+when it arrives, record it; if their practice held the deploy for the
+owner's word in that window, tell the owner. NEXT WORK on the owner's
+go: parashat Chayei Sarah sweep (gen_39, Genesis 23:1) under the spine
+default; batch stamp words stand ready for gen_09-38 (thirty blocks);
+the sugya case-file design continues in parallel. FIRST ACTION of the
+post-compaction sitting: reread THE_STEPS Step 4 per the standing rule.
+COMPACTION POINT #22 — records current through here. Safe to compact.
+ADDENDUM (post-compaction, same sitting): the OPEN THREAD CLOSED —
+torahsim-19 confirmed the Vayera landing AND DEPLOY, executed on the
+owner's relayed word. Their report: all five pairs copied and
+md5-verified against current workshop bytes (gen_35's two ink fixes
+included), zero border strings, all five COMPLETE lines checked
+(102/74/41/71/62); full chain green (renderings, review pages, indexes
+at 2,232 triage rows, prep, urec 38 units, bundles); the spine-default
+ledger headers and shelf-split lines parsed AS-IS, no indexer changes;
+THE_STEPS canon copy carries the Vayera paragraph. Nine gates green;
+DEPLOYED to torahsimulation.org and verified live (Gen 22:1 serves o:3
+under gen_38_moriah_binding_oath; urec 62-of-62 rev 2). Genesis 38 of
+73 BOTH SIDES, workshop and public. Their COMMIT still awaits the
+owner's word in the torahsim window (their pile spans the 08-27 sync +
+Vayera). Step 4 reread performed per the standing post-compaction rule.
+Nothing else moved. Awaiting the owner's go (Chayei Sarah / stamps /
+case-file design).
+2026-08-27 (same sitting, after the owner's "go sarah sweep"): THE
+CHAYEI SARAH SWEEP — second run under the spine default, four blocks
+one sitting (gen_39 Machpelah purchase 23:1-20, gen_40 servant's oath
+24:1-33, gen_41 retelling-release-meeting 24:34-67, gen_42 Abraham's
+end 25:1-18; 105 verses). DATING CORRECTION recorded in gen_39's
+ledger header: the Vayera files carry a 2026-08-28 stamp but git and
+the clock show that sweep ran 2026-08-27 — this sweep stamps the true
+date. NUMBERS: 8,717 enumerated; DECLARED 182 = 32 fresh Bereshit
+Rabbah + 41 standing credits + 4 in-sitting + 105 Onkelos; fresh
+material 26 of 32; ~15 credits upgraded material at home seats under
+guard 1 (two opened under guard 3: the Ephron ink pair VERIFIED
+against our tree ink — defective sitting at 23:10, dropped vav at
+23:16; the concubines-defective claim at 25:6 recorded as the chain's
+own variant AGAINST our full-spelled tree, dual-track, not applied);
+18 Onkelos delta rows (largest: 24:67 deeds-like-Sarah absorbed into
+the translation; the minchah/afternoon-prayer conversion at 24:63
+double-witnessed with the midrash's institution claim). Exhibits: the
+mourner's-exemption law claiming our 23:3; the deed-specification law
+from 23:17; the triple-track targum seam at 25:3 (midrash disputing
+"the translators" by name, our Onkelos a third way); the
+vayehi-acharei regression rule with ink-guarded boundary
+(standing-rules-table candidate). LEDGERS: four, _2026-08-27.md,
+COMPLETE lines 35/64/48/35; roster-diff CLEAN (ranges expanded).
+UNITS: four rebuilt rev 2 (gen_40/41/42 got their oral_notes section
+created — old-layout units); the text gate caught NINE pre-existing
+draft ink defects (gen_40 one: interrogative-heh pointing; gen_41
+four: missing vav + maqaf at 24:35, written-form hi at 24:44, two
+tree spans realigned to snapshot halves; gen_42 four: Chanokh and
+Nevayot and nesi'im ×2 restored defective) — all fixed with changelog
+lines. GATES: gloss_lint 0 across 4 ledgers + 4 units + THE_STEPS;
+preflight ALL GREEN ×4; verify_text TEXT LAYER GREEN ×4. THE_STEPS
+tail gained the Vayera paragraph (was drift — canon had it, workshop
+did not) and the Chayei Sarah paragraph; both marked for canon
+mirroring on the owner's word there. Sweep wall time ~30m
+(enumeration 14:50 → gates green 15:2x). GENESIS 42 OF 73;
+THIRTY-FOUR blocks gen_09-42 green/unstamped (batches: Bereshit-rem,
+Noach, Lech Lecha, Vayera, Chayei Sarah). Uncommitted: 4 ledgers, 4
+units, THE_STEPS, state doc. NEXT on the owner's go: parashat Toledot
+(gen_43, Genesis 25:19); landing relay to torahsim on his word.
+2026-08-27 (same sitting, owner: "Ok forget 9. Let's do more verses"):
+THE TOLEDOT SWEEP — third run under the spine default, five blocks
+one sitting (gen_43 twins/birthright 25:19-34, gen_44 Gerar 26:1-16,
+gen_45 wells/covenant 26:17-35, gen_46 the blessing 27:1-40, gen_47
+grudge/flight 27:41-28:9; 106 verses; gen_47 the first multi-chapter
+block, enumerator extended to multi-span). NUMBERS: 11,679 enumerated;
+DECLARED 230 = 78 fresh Bereshit Rabbah + 40 credits + 6 in-sitting +
+106 Onkelos; fresh material 67 of 78; credits upgraded at home seats
+incl. the FIRST-SUFFERING census at 27:1 (standing no-bearing, the
+twin of gen_40's first-aging), the ekev-172 numeric at 26:5 (guard 3
+opened), the five-years-withheld at the stew day, the senator acronym
+at 27:41, the trembling-support angels at 27:21. INK: tomim (25:24)
+and avdah (26:14) defective claims VERIFIED against our trees; the
+concubines-variant policy of gen_42 unchanged. EXHIBITS: wells-are-
+the-books canon anatomy (Ben Kappara's seven-book division on our
+names); the chain's own Scripture/Mishnah/Talmud/narrative-lore
+self-map at 27:28; Onkelos convergences (matriarch-prophecy insert
+27:13; Torah-condition into 27:40; wisdom re-grade 27:35) and dissent
+(straight firstborn claim 27:19); ratification-by-signatories +
+slave-property maxims from the case shelf; the manslayer-verb wire
+(27:30 ↔ Exodus 21:13); cry-for-cry ledger (27:34 ↔ Esther 4:1); the
+tribe-against-kingdom table; the relay rule; the achadim=7-years
+analogy; Esau's Cain calculus. LEDGERS: five, _2026-08-27.md,
+COMPLETE lines 45/28/31/93/33; roster-diff CLEAN. UNITS: five rebuilt
+rev 2 (ALL five old-layout — oral_notes sections created); the text
+gate caught FOURTEEN pre-existing draft defects (10 tree spans off
+snapshot; 2 paseq step-lines; ka-shemot + Elon plene; the 27:33
+non-contiguous fragment; 2 contrast fragments moved from the
+not-equals notation to the arrow convention) — all fixed with
+changelog lines. GATES: gloss_lint 0 (5 ledgers + 5 units +
+THE_STEPS), preflight GREEN x5, verify_text GREEN x5. Sweep wall time
+~32m (~15:25-15:57). THE_STEPS gained the Toledot paragraph (canon
+mirroring queued). GENESIS 47 OF 73; THIRTY-NINE blocks gen_09-47
+green/unstamped (batches: Bereshit-rem, Noach, Lech Lecha, Vayera,
+Chayei Sarah, Toledot). Also this sitting, before the sweep: the
+Mishnah/Talmud coverage measurement for the owner (Chayei Sarah's 105
+verses: 45 touched — Talmud 43 verses/75 passages, Mishnah 6, Tosefta
+8 — the two-shelves split confirmed in numbers; several
+midrash-quoted Mishnah contacts absent from the link graph: the two
+instruments overlap, neither contains the other). Uncommitted: 9
+ledgers (Chayei Sarah 4 + Toledot 5), 9 rev-2 units, THE_STEPS, state
+doc. NEXT on the owner's go: parashat Vayetze (gen_48, Genesis
+28:10); commit/push, landing relay, batch stamps all await his word.
+ADDENDUM (pre-compaction): sitting summary for the record — this
+sitting held the torahsim deploy confirmation (Vayera live on the
+site, their commit still awaiting the owner's word in that window),
+the Step 4 post-compaction reread, TWO full sweeps (Chayei Sarah 4
+blocks + Toledot 5 blocks = 9 blocks, 211 verses, 412 declared
+sources read, 23 pre-existing draft ink defects caught and fixed),
+and the Mishnah/Talmud coverage measurement. UNCOMMITTED: 9 ledgers,
+9 rev-2 units, THE_STEPS (Vayera + Chayei Sarah + Toledot
+paragraphs), CORE-adjacent nothing, state doc. Commit/push, landing
+relay to torahsim, and batch stamps (gen_09-47, THIRTY-NINE blocks)
+all await the owner's word. NEXT WORK on his go: parashat Vayetze
+(gen_48, Genesis 28:10). FIRST ACTION of the post-compaction sitting:
+reread THE_STEPS Step 4 per the standing rule. COMPACTION POINT #23 —
+records current through here. Safe to compact.
+
+2026-08-27 (post-compaction-#23 sitting) — THE VAYETZE SWEEP. First
+action done: Step 4 speed rulings reread before deriving. Then, on
+the owner's "lets do one more today": parashat Vayetze swept —
+gen_48 through gen_54 (Genesis 28:10-31:54, 145 verses, SEVEN blocks,
+the biggest sweep yet; the parashah tail 32:1-3 sits in gen_55's
+whole-chapter-32 block and reads with Vayishlach — blocks are the
+ledger unit, noted in ledgers and THE_STEPS). Numbers: 13,534
+enumerated; DECLARED 287 = 84 fresh Bereshit Rabbah + 47 credits +
+11 in-sitting + 145 Onkelos; outside-scope primaries 140 (reading 47
+/ testing 9 / bridge 84); FP 5. All guards honored (numeric rows —
+the flight arithmetic, the stones census, the hen-lu counts — all
+fresh-read or read at home seats; quick-looks on all 42 unique
+credits). Multi-span enumerator reused (gen_51 crosses 29→30).
+Headline finds in the seven ledgers; the marquee: the well SEVEN
+WAYS schema exhibit (gen_49), labor-over-merit at 31:42 (gen_54),
+the hire-law seat at 30:16 + the bailment rebuild of 31:39 (both
+queued for the case-file machinery), Rachel's theft two-track
+(intent-defense vs verb-demotion, gen_53), Leah's eyes dual
+(gen_50), the three-keys petition rebuild at 30:22 (gen_51), the
+mixing-of-joys law at 29:27, Elijah settling his own provenance
+(gen_51 row 8 — Elijah-docket exhibit). TEXT GATE: ZERO pre-existing
+defects — first defect-free sweep; all seven units were clean at
+HEAD. Gates: verify_text GREEN ×7, preflight ALL SCENARIOS GREEN ×7,
+gloss_lint 0 flags. Seven ledgers written (append-only, stamped
+2026-08-27), seven units rebuilt rev 2 (oral_notes sections created
+— all seven old-layout), THE_STEPS fourth-sweep paragraph appended
+(canon mirroring queued for the owner's word in the torahsim
+window). GENESIS NOW: 54 of 73 blocks read, Genesis 1:1-31:54
+continuous; FORTY-SIX blocks (gen_09-gen_54) green and unstamped —
+batch candidates: Bereshit remainder, Noach, Lech Lecha, Vayera,
+Chayei Sarah, Toledot, Vayetze. UNCOMMITTED PILE (this sitting +
+last): 16 ledgers, 16 rev-2 units, THE_STEPS, state doc. Awaiting
+the owner's word: commit/push, landing relay to torahsim (now
+sixteen pairs), batch stamps. NEXT SWEEP on his go: parashat
+Vayishlach (gen_55, Genesis 32:1 — whole chapter 32 with Vayetze's
+tail, through 36:43; blocks gen_55-59, spans to be confirmed at
+sweep time).
+
+2026-08-27 (same sitting, second sweep — "Another set go") — THE
+VAYISHLACH SWEEP. gen_55 through gen_59 (Genesis 32:1-36:43, 156
+verses, FIVE chapter-aligned blocks; gen_55 carries Vayetze's tail
+32:1-3 as recorded). Numbers: 12,293 enumerated; DECLARED 294 = 67
+fresh Bereshit Rabbah + 63 credits + 8 in-sitting + 156 Onkelos;
+outside-scope primaries 208; FP 1. The credit flywheel at full
+speed: morning Vayetze rows (the muzzle prayer, promised-yet-afraid,
+the arise-five, the sun-debt) returned as afternoon credits AT THEIR
+HOME SEATS — 57 unique quick-looks, all guards honored (the ink/
+numeric seats — the dotted kiss, the eight-kings count, the mamzer
+count — all fresh-read). Headliners per ledger; the marquee: the
+eight-adoni → eight-kings cross-block arithmetic (gen_55 row 3 →
+gen_59 row 3), the sciatic-nerve law at its birth verse (gen_55),
+the dotted-kiss hard case (gen_56), the barrel exchange left open +
+the third-day danger sugya + the fondness table (gen_57), the vow
+arc closed with the buffer's complete bookkeeping + hidden Rebecca
++ the Ben Oni two-tongues seam (gen_58), the roster exposure audit
+(gen_59). Onkelos guards: strove-with-God refused, Peniel's God →
+angels, guile → wisdom, harlot euphemized, katonti → my-merits-are-
+few. TEXT GATE: ZERO pre-existing defects again (second defect-free
+sweep, same day). Gates: verify_text GREEN ×5, preflight ALL
+SCENARIOS GREEN ×5, gloss_lint 0 flags. Five ledgers (append-only,
+2026-08-27), five units rebuilt rev 2 (oral_notes created),
+THE_STEPS fifth-sweep paragraph appended (canon mirroring queued,
+owner's word, torahsim window). GENESIS NOW: 59 of 73 blocks,
+Genesis 1:1-36:43 continuous, 1,084 of 1,533 verses (71%);
+FIFTY-ONE blocks (gen_09-gen_59) green and unstamped — batch
+candidates now seven parashiyot: Bereshit remainder, Noach, Lech
+Lecha, Vayera, Chayei Sarah, Toledot, Vayetze, Vayishlach (eight
+with the remainder). UNCOMMITTED PILE (three sittings): 21 ledgers,
+21 rev-2 units, THE_STEPS, state doc. Awaiting the owner's word:
+commit/push, landing relay to torahsim (twenty-one pairs), batch
+stamps. NEXT SWEEP on his go: parashat Vayeshev (gen_60, Genesis
+37:1 — Joseph's coat; blocks gen_60+ spans to confirm at sweep
+time). TODAY'S TALLY: 12 blocks, 301 verses, 581 declared sources
+read in one day — the first two-parashah day.

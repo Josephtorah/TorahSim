@@ -265,3 +265,147 @@ run first (retro-checks against the finished parashiyot measure what
 the narrower reading would have kept and what the exam recovers).
 [Workshop note: needs canon mirroring with the rest of the 2026-08-27
 queue on the owner's word in that window.]
+
+THE SPINE DEFAULT'S FIRST RUN — VAYERA (2026-08-28 stamp; the sitting
+ran 2026-08-27 by the clock, noted in the gen_39 ledger): parashat
+Vayera (gen_34 through gen_38, Genesis 18:1-22:24, five blocks, 129
+verses) was the first sweep under the one-book rule — 16,718 sources
+enumerated, 350 declared (Bereshit Rabbah fresh + credits + Onkelos),
+91 fresh material findings and 28 translation-delta rows, 27m53s for
+the whole sweep. Two ink defects in gen_35 were caught by the text
+gate and corrected against the verse (the 19:20 yod-census member;
+19:16 written defective). The narrowing held its yield: reading time
+fell by a third against Lech Lecha while the parashah's law and
+dispute density stayed on the page. Landed and DEPLOYED to the public
+site on the owner's relayed word; Genesis 38 of 73 both sides.
+
+THE SECOND SWEEP — CHAYEI SARAH (2026-08-27): gen_39 through gen_42
+(Genesis 23:1-25:18 — the purchase, the mission, the meeting, the
+end of Abraham; four blocks, 105 verses) in one sitting: 8,717
+enumerated, 182 declared = 32 fresh Bereshit Rabbah + 41 standing
+credits + 4 in-sitting + 105 Onkelos verses; 26 of the 32 fresh
+sections material, some fifteen credits upgraded to material at their
+home seats (the mourner's exemption claiming 23:3; the first-aging
+census at 24:1; Isaac's afternoon prayer at 24:63), and 18 Onkelos
+delta rows — the largest: 24:67 where the received translation
+absorbs the deeds-like-Sarah midrash into the verse itself. The
+sweep's exhibits: the double Ephron ink dossier VERIFIED against our
+own tree (the defective "sitting," the dropped vav at the payment);
+the triple-track seam at 25:3 where the midrash disputes "the
+Aramaic translators" by name while our Onkelos renders a third way —
+the two-shelves model's seam on exhibit; and the "it was after the
+death" regression rule with its ink-guarded boundary, a
+standing-rules-table candidate. The text gate caught NINE pre-recorded
+draft defects across the three old-layout units (plene spellings
+against defective verse ink, a written-form hi, two tree spans) — all
+fixed and changelogged. All gates green; four ledgers, four rev-2
+units. Genesis stands at 42 of 73 blocks read; THIRTY-FOUR blocks
+(gen_09 through gen_42) green and unstamped, one batch word per
+parashah stamps them. Next sweep: parashat Toledot, opening at gen_43
+(Genesis 25:19). [Workshop note: needs canon mirroring on the owner's
+word in that window.]
+
+THE THIRD SWEEP — TOLEDOT (2026-08-27, same sitting as Chayei Sarah):
+gen_43 through gen_47 (Genesis 25:19-28:9 — the twins, Gerar, the
+wells, the blessing, the flight; five blocks, 106 verses) in about
+thirty minutes: 11,679 enumerated, 230 declared = 78 fresh Bereshit
+Rabbah + 40 credits + 6 in-sitting + 106 Onkelos; 67 of the 78 fresh
+material, with the blessing chapter alone carrying 93 declared
+sources. The sweep's exhibits: the tomim and avdah DEFECTIVE-INK
+claims both verified against our own trees; THE WELLS ARE THE BOOKS
+(the chain mapping the Torah's own structure — seven books by Ben
+Kappara's division — onto our well names); the tradition mapping its
+own four-part canon (Scripture, Mishnah, Talmud, narrative lore) onto
+the blessing's dew-fat-grain-wine at 27:28; Onkelos's two great
+convergences — the matriarch-prophecy insert at 27:13 and the
+when-Israel-casts-off-the-Torah condition written into 27:40 — beside
+its dissent (the straight rendering of "I am Esau your firstborn"
+where the midrash equivocates); the first-suffering census at 27:1
+twinning the first-aging census at 24:1; and the
+ratified-only-by-its-signatories and slave-property maxims arriving
+from the case shelf as narrative logic. The text gate caught FOURTEEN
+pre-recorded draft defects across the three old-layout units (tree
+spans off the snapshot, paseq marks, plene spellings, a skipped word,
+two fragments in an unrecognized notation) — all fixed and
+changelogged. All gates green; five ledgers, five rev-2 units.
+Genesis stands at 47 of 73 blocks read; THIRTY-NINE blocks (gen_09
+through gen_47) green and unstamped. Next sweep: parashat Vayetze,
+opening at gen_48 (Genesis 28:10). [Workshop note: needs canon
+mirroring on the owner's word in that window.]
+
+THE FOURTH SWEEP — VAYETZE (2026-08-27, the day after Toledot):
+gen_48 through gen_54 (Genesis 28:10-31:54 — the ladder, the well,
+the switched bride, the twelve births, the rods, the flight, the
+pursuit and the heap; seven blocks, 145 verses — the parashah's last
+three verses, 32:1-3, live inside gen_55's whole-chapter block and
+read with Vayishlach, because blocks are the ledger unit) in about
+forty minutes: 13,534 enumerated, 287 declared = 84 fresh Bereshit
+Rabbah + 47 credits + 11 in-sitting + 145 Onkelos — the biggest
+sweep yet, with the credits compounding hard (Toledot's flight
+arithmetic row turned out to have its home seat here and was
+credited, not re-read). The sweep's exhibits: the WELL SEVEN WAYS
+(one narrative frame instantiated over seven institutional schemas,
+Sinai's completeness gate included — the strongest simulation-facing
+find so far); the LABOR-OVER-MERIT doctrine at 31:42 ("merit
+salvaged money, labor saved lives"); the vow's whole legal lifecycle
+born at Bethel (first vow, the four-vows ledger, the delayed-vow
+audit); the hire-law defaults derived at 30:16 and the bailment
+rebuild of 31:39 — two testing-shelf wires the case-file machinery
+will want; Rachel's theft solved two ways (the midrash defends her
+intent, Onkelos demotes the verb from stole to hid — the cleanest
+two-track exhibit yet); Leah's eyes (the midrash reads
+tender-from-weeping, Onkelos renders beautiful — the buffer taking a
+side in a recorded quarrel); the mixing-of-joys law born at 29:27;
+the three-keys doctrine with Onkelos rebuilding 30:22 as petition
+language; the truncated-prophecy doctrine double-witnessed at 31:24;
+the treaty's commerce carve-out argued before David's Sanhedrin
+centuries later; the Aramaic dignity row at the two-tongues verse;
+and Elijah settling his own tribal-provenance dispute in person.
+The text gate found ZERO pre-existing defects — all seven draft
+units were already clean, the first defect-free sweep. All gates
+green; seven ledgers, seven rev-2 units. Genesis stands at 54 of 73
+blocks read (Genesis 1:1-31:54 continuous); FORTY-SIX blocks (gen_09
+through gen_54) green and unstamped. Next sweep: parashat
+Vayishlach, opening at gen_55 (Genesis 32:1 — the whole chapter,
+carrying Vayetze's three-verse tail). [Workshop note: needs canon
+mirroring on the owner's word in that window.]
+
+THE FIFTH SWEEP — VAYISHLACH (2026-08-27, same sitting as Vayetze —
+the first two-parashah day): gen_55 through gen_59 (Genesis
+32:1-36:43 — the camps and the wrestling, the meeting, Dina's
+chapter, Beit El and the three deaths, Edom's roster; five
+chapter-aligned blocks, 156 verses, gen_55 carrying Vayetze's
+three-verse tail) in about forty minutes: 12,293 enumerated, 294
+declared = 67 fresh Bereshit Rabbah + 63 credits + 8 in-sitting +
+156 Onkelos — the largest declared count yet, and the leanest fresh
+load: the credit engine now pre-answers half the parashah (rows read
+in the morning's Vayetze sweep came back as afternoon credits at
+their home seats). The sweep's exhibits: the sciatic-nerve law at
+its birth verse with the which-leg dispute; the who-won honesty
+("we do not know — but who was filled with dust?") beside Onkelos
+refusing "you strove with God" and turning Peniel's seen God into
+seen angels; the EIGHT-ADONI arithmetic — eight "my lords" spoken to
+Esau at gen_55, eight Edomite kings counted at gen_59 (a numeric
+claim minted in one block and cashed in another, four chapters
+apart); the dotted-kiss rule's hard case at 33:4 (script and dots
+equal — kissed or bit, the marble neck); the Seir audit resolving
+the unpaid promise eschatologically; the barrel exchange at Dina's
+chapter recorded open (muddied-vs-clarified — the moral verdict as
+a standing dual); the third-day danger sugya quoted whole at 34:25
+(a testing-shelf cluster running into the reading); the fondness
+table — God's covenant vocabulary learned from the violator's own
+verses; the delayed-vow enforcement closing the arc Bethel opened,
+with Onkelos's bookkeeping complete (promise, recall, discharge all
+in the accepted-prayer/Word-as-support vocabulary); the hidden death
+of Rebecca under Alon Bakhut; the two-language seam at Ben Oni
+marked by the chain itself ("in Aramaic… in the sacred tongue" —
+and the buffer IS the Aramaic seat); Rachel's grave sited on the
+road to plead for the exiles, against the anti-monument maxim; and
+the mamzer audit of Edom's roster. The text gate again found ZERO
+pre-existing defects — the second defect-free sweep, same day. All
+gates green; five ledgers, five rev-2 units. Genesis stands at 59
+of 73 blocks read (Genesis 1:1-36:43 continuous, 1,084 of 1,533
+verses — 71%); FIFTY-ONE blocks (gen_09 through gen_59) green and
+unstamped. Next sweep: parashat Vayeshev, opening at gen_60
+(Genesis 37:1). [Workshop note: needs canon mirroring on the
+owner's word in that window.]

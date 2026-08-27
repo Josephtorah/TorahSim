@@ -1,5 +1,9 @@
 meta:
   id: gen_41_retelling_release_meeting
+  rev: 2
+  changelog:
+    - "2026-08-27 rev 2: RE-era reading pass (parashat Chayei Sarah sweep, 4 blocks one sitting — SECOND RUN UNDER THE SPINE DEFAULT, owner 2026-08-27: Bereshit Rabbah + Onkelos declared, Mishnah/Talmud held for the Step 9 exam): ledger logic/oral_triage/gen_41_retelling_release_meeting_2026-08-27.md; v1 queue discharged; ORAL_reading_pass block appended; no machine ops changed."
+    - "2026-08-27 ink fixes (pre-existing at HEAD, caught by verify_text): 24:35 op fragment restored va-YHWH (and the LORD — the vav) and the maqaf of va-yiten-lo (and he gave him); 24:44 op fragment corrected to the written form hi with vav (the yod/vav written-pair class); 24:48 tree_right and 24:49 tree_left aligned to the snapshot's computed halves (word-joined spans, snapshot accents)."
   title_en: The retelling, the release, and the meeting (24:34-67)
   title_he: קַח וָלֵךְ
   title_he_translit: qach va-lekh
@@ -368,6 +372,44 @@ derivation_log:
       (record: logic/oral_audit/AUDIT_gen_41_2026-08-08.md; the crowns
       are displayed in the audit note above).
     confidence: reconstructed
+oral_notes:
+  - id: ORAL_reading_pass_2026_08_27
+    status: verified
+    work_en: "RE-era reading pass 2026-08-27 (parashat Chayei Sarah sweep, block 3 of 4, spine default; ledger logic/oral_triage/gen_41_retelling_release_meeting_2026-08-27.md)"
+    he: נקרא כולו
+    he_translit: "nikra kulo (read in full — the declared spine)"
+    en: >
+      The v1 queue above is DISCHARGED: the declared spine read end
+      to end. HEADLINES: the CONSENT LAW at our 24:57 ("one may
+      marry off an orphan only with her consent") double-witnessed —
+      the midrash derives it, Onkelos renders the verse "hear what
+      she says"; BETUEL STRUCK DOWN OVERNIGHT (the vanishing father
+      solved) with the mourning-days and TWELVE-MONTH BRIDE-TIME
+      parses of 24:55 (Mishnah Ketubot 5:2's allowance); the
+      CONCEPTION-HELD-FOR-PRAYER wire (Rebecca barren until Isaac's
+      entreaty so no idolater could claim the credit — 25:21's op
+      decided at our 24:60); the MORIAH-DECREE dispute at 24:50
+      ("the matter came forth" — from the mountain, against the
+      Rabbis' verse-tail reading) with the MATCH-FROM-GOD doctrine's
+      Torah-leg on the same verse; the INCLINED-NOT-FELL verb at
+      24:64 converged from two directions (the Psalm-proof and the
+      buffer's own rendering); the CAMEL-SIGN twins foreshadow and
+      walking-behind rule at 24:61; the TWO-VEILED-BORE-TWINS census
+      at 24:65; the GENERAL-EXCEEDS-DETAIL doctrine measured on our
+      24:66 (pairing gen_40's ink-economy rule — the tradition
+      explaining its own repetition block); the FOUR TENT MIRACLES
+      with the deeds-test — and THE SWEEP'S LARGEST DELTA: Onkelos
+      absorbs that midrash into 24:67 itself ("he saw, and behold,
+      her deeds were proper like the deeds of Sarah his mother");
+      ISAAC'S AFTERNOON PRAYER (minchah) instituted at our 24:63,
+      double-witnessed (the midrash's second seat of three, and
+      Onkelos rendering "to meditate" as TO PRAY); the living-angel
+      rewrite of the well's name at 24:62; the MARRY-CHILDREN-FIRST
+      sequence law read from 24:67 into 25:1. Findings in the
+      ledger; dual-track; no machine ops changed.
+    comment_en: "Reading-pass record; the stamp and ritual remain the owner's word (batch, per parashah). Outside-scope primaries recorded in the ledger await the exam (testing shelf) or depth orders."
+    source: "[ORAL][READ-THROUGH][SPINE-DEFAULT]"
+
 scenarios:
 - id: S1
   title_en: after STEP_Gn_24_34 — identity; SPECS empty
@@ -596,7 +638,7 @@ boot_steps:
   operators:
   - op: PRECONDITION_STATE
     expr_en: HOLDS(YHWH_berakh_et_adoni_meod_va_yigdal_va_yiten_wealth, t0) — retell FACT
-    he: יְהוָה בֵּרַךְ אֶת־אֲדֹנִי … וַיִּתֶּן לוֹ
+    he: וַיהוָה בֵּרַךְ אֶת־אֲדֹנִי … וַיִּתֶּן־לוֹ
     he_translit: YHWH berakh et adoni-y … va-yiten l-o
     en: >
       RETELLING FENCE [flag 2,4 SAFE]. berakh (HVpp3ms 1288 ord=25) [VERIFIED: SNAPSHOT Gen.24.35 idx1 morph=HVpp3ms]
@@ -926,7 +968,7 @@ boot_steps:
   operators:
   - op: PRECONDITION_STATE
     expr_en: HOLDS(retold_sign_shete_eshav_and_appoint, t0) — doubly fenced design FACT
-    he: גַּם־אַתָּה שְׁתֵה … אֶשְׁאָב … הִיא הָאִשָּׁה אֲשֶׁר־הֹכִיחַ יְהוָה
+    he: גַּם־אַתָּה שְׁתֵה … אֶשְׁאָב … הִוא הָאִשָּׁה אֲשֶׁר־הֹכִיחַ יְהוָה
     he_translit: gam ata shete … eshav … hiv ha-isha asher hokhicha YHWH
     en: >
       shete (HVqv2ms 8354 ord=7) [VERIFIED: SNAPSHOT Gen.24.44 idx4 morph=HVqv2ms]
@@ -1044,7 +1086,7 @@ boot_steps:
     he_translit: va-eqod va-eshtachave la-YHWH
     en: 'I bowed and prostrated to YHWH (etnachta on la-YHWH) [VERIFIED: SNAPSHOT Gen.24.48 idx2 mark_id=etnachta rank=1]'
   tree_right:
-    he: וָאֲבָרֵךְ֙ אֶת־יְהוָ֔ה אֱלֹהֵי֙ אֲדֹנִ֣י אַבְרָהָ֔ם אֲשֶׁ֤ר הִנְחַ֙נִי֙ בְּדֶ֣רֶךְ אֱמֶ֔ת לָקַ֛חַת אֶת־בַּת־אֲחִ֥י אֲדֹנִ֖י לִבְנֽוֹ
+    he: וָאֲבָרֵ֗ךְ אֶת יְהוָה֙ אֱלֹהֵי֙ אֲדֹנִ֣י אַבְרָהָ֔ם אֲשֶׁ֤ר הִנְחַ֨נִי֙ בְּדֶ֣רֶךְ אֱמֶ֔ת לָקַ֛חַת אֶת בַּת אֲחִ֥י אֲדֹנִ֖י לִבְנֽוֹ
     he_translit: va-avarekh et YHWH elohe adoni-y avraham asher hinchani be-derekh emet laqachat et bat achi adoni-y li-ven-o
     en: 'and I blessed YHWH who led me in true way to take the brother''s daughter for his son (verse-final li-ven-o) [VERIFIED: SNAPSHOT Gen.24.48 idx3-18; silluq idx18]'
   operators:
@@ -1072,7 +1114,7 @@ boot_steps:
   he_translit: ve-ata im yesh-khem osim chesed ve-emet et adoni-y hagidu li-y ve-im lo hagidu li-y ve-efne al yamin o al semol
   en: '[EN-AID] And now, if you will deal kindly and truly with my master, tell me; and if not, tell me, that I may turn to the right or to the left.'
   tree_left:
-    he: וְעַתָּ֗ה אִם־יֶשְׁכֶ֨ם עֹשִׂ֜ים חֶ֧סֶד וֶֽאֱמֶ֛ת אֶת־אֲדֹנִ֖י הַגִּ֣ידוּ לִ֑י
+    he: וְ֠עַתָּה אִם יֶשְׁכֶ֨ם עֹשִׂ֜ים חֶ֧סֶד וֶֽאֱמֶ֛ת אֶת אֲדֹנִ֖י הַגִּ֣ידוּ לִ֑י
     he_translit: ve-ata im yesh-khem osim chesed ve-emet et adoni-y hagidu li-y
     en: 'and now if you do kindness and truth with my master, TELL me (etnachta on li-y ''to me'') [VERIFIED: SNAPSHOT Gen.24.49 idx9 mark_id=etnachta rank=1]'
   tree_right:
