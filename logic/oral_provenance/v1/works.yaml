@@ -37,130 +37,139 @@ policy_proposed:
   context_notes_only: [halakhic_application]
   observation_only: [targum_composite_late, outside_chain_academic]
 
+shelves:
+  # OWNER-APPROVED 2026-08-27 ("yes add the register to the shelf label") —
+  # the two-shelves ruling (THE_WORLD.md "The two shelves"; THE_STEPS Step 4):
+  reading: "verse-anchored — starts at the verse and walks toward law/story; organized like the units; feeds the READING passes (Steps 3-4)"
+  testing: "case-anchored — starts from the case/topic, barely cites verses; unreadable at a verse span; the input-output rows are the EXAM (Step 9, the oracle, the case files); includes the later codes as the tradition's compiled answer key"
+  bridge: "the Talmuds — walk case rules back to their verses (menalan, 'from where do we know this?'); serve BOTH shelves"
+  note: "shelf is ORTHOGONAL to status: shelf says which pipeline consumes the work; status says its chain authority. Assignments for the ruling's named classes (Mishnah/Tosefta = testing; the Talmuds = bridge; Onkelos + the midrash collections = reading) are the owner's ruling; assignments beyond them (later codes, minor tractates, anthologies) are workshop judgment at hypothesis grade — owner-overridable per row."
+
 rules:
   # ---- order matters: specific before general -------------------------------
-  - {prefix: "Mishneh Torah",            status: halakhic_application, era: rishonim,   note: "Rambam, 12th c."}
-  - {prefix: "Mishnah ",                 status: chain_primary,        era: tannaitic,  note: "redacted c. 200 CE"}
-  - {prefix: "Tosefta ",                 status: chain_primary,        era: tannaitic,  note: "Tannaitic literature proper; OWNER-APPROVED addition 2026-08-25 ('approve register') after the pre-enumeration validation exposed the gap; '(Lieberman)' citations are edition aliases of the same rows — one dup cluster, not extra works"}
-  - {prefix: "Seder Olam Rabbah",        status: chain_compilation,    era: tannaitic,  note: "Tannaitic chronography in late redaction — the Avot DeRabbi Natan precedent; OWNER-APPROVED addition 2026-08-25"}
-  - {prefix: "Pirkei Avot",              status: chain_primary,        era: tannaitic,  note: "Mishnah tractate; carries the chain itself (1:1)"}
+  - {prefix: "Mishneh Torah",            status: halakhic_application, era: rishonim,   note: "Rambam, 12th c.", shelf: testing}
+  - {prefix: "Mishnah ",                 status: chain_primary,        era: tannaitic,  note: "redacted c. 200 CE", shelf: testing}
+  - {prefix: "Tosefta ",                 status: chain_primary,        era: tannaitic,  note: "Tannaitic literature proper; OWNER-APPROVED addition 2026-08-25 ('approve register') after the pre-enumeration validation exposed the gap; '(Lieberman)' citations are edition aliases of the same rows — one dup cluster, not extra works", shelf: testing}
+  - {prefix: "Seder Olam Rabbah",        status: chain_compilation,    era: tannaitic,  note: "Tannaitic chronography in late redaction — the Avot DeRabbi Natan precedent; OWNER-APPROVED addition 2026-08-25", shelf: reading}
+  - {prefix: "Pirkei Avot",              status: chain_primary,        era: tannaitic,  note: "Mishnah tractate; carries the chain itself (1:1)", shelf: testing}
 
   # ---- Bavli tractates (bare tractate names in Sefaria refs) ----------------
-  - {prefix: "Arakhin",       status: chain_primary, era: amoraic, note: "Bavli"}
-  - {prefix: "Avodah Zarah",  status: chain_primary, era: amoraic, note: "Bavli"}
-  - {prefix: "Bava Batra",    status: chain_primary, era: amoraic, note: "Bavli"}
-  - {prefix: "Bava Kamma",    status: chain_primary, era: amoraic, note: "Bavli"}
-  - {prefix: "Berakhot",      status: chain_primary, era: amoraic, note: "Bavli"}
-  - {prefix: "Chagigah",      status: chain_primary, era: amoraic, note: "Bavli"}
-  - {prefix: "Chullin",       status: chain_primary, era: amoraic, note: "Bavli"}
-  - {prefix: "Eruvin",        status: chain_primary, era: amoraic, note: "Bavli"}
-  - {prefix: "Gittin",        status: chain_primary, era: amoraic, note: "Bavli"}
-  - {prefix: "Ketubot",       status: chain_primary, era: amoraic, note: "Bavli"}
-  - {prefix: "Kiddushin",     status: chain_primary, era: amoraic, note: "Bavli"}
-  - {prefix: "Megillah",      status: chain_primary, era: amoraic, note: "Bavli"}
-  - {prefix: "Nazir",         status: chain_primary, era: amoraic, note: "Bavli"}
-  - {prefix: "Niddah",        status: chain_primary, era: amoraic, note: "Bavli"}
-  - {prefix: "Pesachim",      status: chain_primary, era: amoraic, note: "Bavli"}
-  - {prefix: "Rosh Hashanah", status: chain_primary, era: amoraic, note: "Bavli"}
-  - {prefix: "Sanhedrin",     status: chain_primary, era: amoraic, note: "Bavli"}
-  - {prefix: "Shabbat HaAretz", status: halakhic_application, era: contemporary, note: "R. Kook, shemitah — listed before bare 'Shabbat'"}
-  - {prefix: "Shabbat",       status: chain_primary, era: amoraic, note: "Bavli"}
-  - {prefix: "Sotah",         status: chain_primary, era: amoraic, note: "Bavli"}
-  - {prefix: "Sukkah",        status: chain_primary, era: amoraic, note: "Bavli"}
-  - {prefix: "Taanit",        status: chain_primary, era: amoraic, note: "Bavli"}
-  - {prefix: "Tamid",         status: chain_primary, era: amoraic, note: "Bavli"}
-  - {prefix: "Yevamot",       status: chain_primary, era: amoraic, note: "Bavli"}
-  - {prefix: "Yoma",          status: chain_primary, era: amoraic, note: "Bavli"}
-  - {prefix: "Jerusalem Talmud", status: chain_primary, era: amoraic, note: "Yerushalmi, c. 400 CE"}
+  - {prefix: "Arakhin",       status: chain_primary, era: amoraic, note: "Bavli", shelf: bridge}
+  - {prefix: "Avodah Zarah",  status: chain_primary, era: amoraic, note: "Bavli", shelf: bridge}
+  - {prefix: "Bava Batra",    status: chain_primary, era: amoraic, note: "Bavli", shelf: bridge}
+  - {prefix: "Bava Kamma",    status: chain_primary, era: amoraic, note: "Bavli", shelf: bridge}
+  - {prefix: "Berakhot",      status: chain_primary, era: amoraic, note: "Bavli", shelf: bridge}
+  - {prefix: "Chagigah",      status: chain_primary, era: amoraic, note: "Bavli", shelf: bridge}
+  - {prefix: "Chullin",       status: chain_primary, era: amoraic, note: "Bavli", shelf: bridge}
+  - {prefix: "Eruvin",        status: chain_primary, era: amoraic, note: "Bavli", shelf: bridge}
+  - {prefix: "Gittin",        status: chain_primary, era: amoraic, note: "Bavli", shelf: bridge}
+  - {prefix: "Ketubot",       status: chain_primary, era: amoraic, note: "Bavli", shelf: bridge}
+  - {prefix: "Kiddushin",     status: chain_primary, era: amoraic, note: "Bavli", shelf: bridge}
+  - {prefix: "Megillah",      status: chain_primary, era: amoraic, note: "Bavli", shelf: bridge}
+  - {prefix: "Nazir",         status: chain_primary, era: amoraic, note: "Bavli", shelf: bridge}
+  - {prefix: "Niddah",        status: chain_primary, era: amoraic, note: "Bavli", shelf: bridge}
+  - {prefix: "Pesachim",      status: chain_primary, era: amoraic, note: "Bavli", shelf: bridge}
+  - {prefix: "Rosh Hashanah", status: chain_primary, era: amoraic, note: "Bavli", shelf: bridge}
+  - {prefix: "Sanhedrin",     status: chain_primary, era: amoraic, note: "Bavli", shelf: bridge}
+  - {prefix: "Shabbat HaAretz", status: halakhic_application, era: contemporary, note: "R. Kook, shemitah — listed before bare 'Shabbat'", shelf: testing}
+  - {prefix: "Shabbat",       status: chain_primary, era: amoraic, note: "Bavli", shelf: bridge}
+  - {prefix: "Sotah",         status: chain_primary, era: amoraic, note: "Bavli", shelf: bridge}
+  - {prefix: "Sukkah",        status: chain_primary, era: amoraic, note: "Bavli", shelf: bridge}
+  - {prefix: "Taanit",        status: chain_primary, era: amoraic, note: "Bavli", shelf: bridge}
+  - {prefix: "Tamid",         status: chain_primary, era: amoraic, note: "Bavli", shelf: bridge}
+  - {prefix: "Yevamot",       status: chain_primary, era: amoraic, note: "Bavli", shelf: bridge}
+  - {prefix: "Yoma",          status: chain_primary, era: amoraic, note: "Bavli", shelf: bridge}
+  - {prefix: "Jerusalem Talmud", status: chain_primary, era: amoraic, note: "Yerushalmi, c. 400 CE", shelf: bridge}
 
   # ---- halachic midrashim (tannaitic) ---------------------------------------
-  - {prefix: "Mekhilta DeRabbi Yishmael", status: chain_primary, era: tannaitic, note: ""}
-  - {prefix: "Mekhilta DeRabbi Shimon",   status: chain_primary, era: tannaitic, note: "text recovered largely via Midrash HaGadol — modern edition caveat"}
-  - {prefix: "Sifra",                     status: chain_primary, era: tannaitic, note: ""}
-  - {prefix: "Sifrei Devarim",            status: chain_primary, era: tannaitic, note: ""}
-  - {prefix: "Midrash Tannaim on Deuteronomy", status: chain_compilation, era: tannaitic_content, note: "tannaitic material; modern reconstruction (Hoffmann) from Midrash HaGadol"}
+  - {prefix: "Mekhilta DeRabbi Yishmael", status: chain_primary, era: tannaitic, note: "", shelf: reading}
+  - {prefix: "Mekhilta DeRabbi Shimon",   status: chain_primary, era: tannaitic, note: "text recovered largely via Midrash HaGadol — modern edition caveat", shelf: reading}
+  - {prefix: "Sifra",                     status: chain_primary, era: tannaitic, note: "", shelf: reading}
+  - {prefix: "Sifrei Devarim",            status: chain_primary, era: tannaitic, note: "", shelf: reading}
+  - {prefix: "Sifrei Bamidbar",           status: chain_primary, era: tannaitic, note: "OWNER-APPROVED addition 2026-08-27 ('yes get the numbers book') — the Numbers spine of the spine default; local text Data/sifrei_bamidbar_he.json", shelf: reading}
+  - {prefix: "Midrash Tannaim on Deuteronomy", status: chain_compilation, era: tannaitic_content, note: "tannaitic material; modern reconstruction (Hoffmann) from Midrash HaGadol", shelf: reading}
 
   # ---- classical aggadic midrash (amoraic-era compilations) -----------------
-  - {prefix: "Bereshit Rabbah",     status: chain_primary, era: amoraic, note: "c. 5th c."}
-  - {prefix: "Vayikra Rabbah",      status: chain_primary, era: amoraic, note: "c. 5th c."}
-  - {prefix: "Eikhah Rabbah",       status: chain_primary, era: amoraic, note: "c. 5th c."}
-  - {prefix: "Pesikta DeRav Kahana", status: chain_primary, era: amoraic, note: "c. 5th-6th c."}
+  - {prefix: "Bereshit Rabbah",     status: chain_primary, era: amoraic, note: "c. 5th c.", shelf: reading}
+  - {prefix: "Vayikra Rabbah",      status: chain_primary, era: amoraic, note: "c. 5th c.", shelf: reading}
+  - {prefix: "Eikhah Rabbah",       status: chain_primary, era: amoraic, note: "c. 5th c.", shelf: reading}
+  - {prefix: "Pesikta DeRav Kahana", status: chain_primary, era: amoraic, note: "c. 5th-6th c.", shelf: reading}
 
   # ---- received targum -------------------------------------------------------
-  - {prefix: "Onkelos",             status: chain_primary, era: tannaitic, note: "the received Targum — Megillah 3a"}
+  - {prefix: "Onkelos",             status: chain_primary, era: tannaitic, note: "the received Targum — Megillah 3a", shelf: reading}
 
   # ---- late Rabbah volumes + late midrash (chain content, late redaction) ---
-  - {prefix: "Shemot Rabbah",       status: chain_compilation, era: medieval, note: "c. 10th-12th c. redaction"}
-  - {prefix: "Bamidbar Rabbah",     status: chain_compilation, era: medieval, note: "first half 12th c. (R. Moshe HaDarshan school)"}
-  - {prefix: "Devarim Rabbah",      status: chain_compilation, era: gaonic,   note: "c. 9th c."}
-  - {prefix: "Kohelet Rabbah",      status: chain_compilation, era: gaonic,   note: "c. 7th-8th c."}
-  - {prefix: "Shir HaShirim Rabbah", status: chain_compilation, era: gaonic,  note: "c. 6th-7th c."}
-  - {prefix: "Ruth Rabbah",         status: chain_compilation, era: gaonic,   note: "c. 6th-7th c. (incl. Lerner ed.)"}
-  - {prefix: "Esther Rabbah",       status: chain_compilation, era: mixed,    note: "part early, part medieval"}
-  - {prefix: "Midrash Tanchuma Buber", status: chain_compilation, era: gaonic, note: "Tanchuma-Yelamdenu family; Buber recension"}
-  - {prefix: "Midrash Tanchuma",    status: chain_compilation, era: gaonic,   note: "Tanchuma-Yelamdenu family, printed recension"}
-  - {prefix: "Midrash Yelamdenu",   status: chain_compilation, era: gaonic,   note: "Tanchuma family; survives via anthologies"}
-  - {prefix: "Pirkei DeRabbi Eliezer", status: chain_compilation, era: gaonic, note: "attributed to Tanna R. Eliezer; composed c. 8th-9th c."}
-  - {prefix: "Pesikta Rabbati",     status: chain_compilation, era: gaonic,   note: "c. 9th c."}
-  - {prefix: "Midrash Tehillim",    status: chain_compilation, era: mixed,    note: "layered, partly late"}
-  - {prefix: "Midrash Shmuel",      status: chain_compilation, era: medieval, note: ""}
-  - {prefix: "Aggadat Bereshit",    status: chain_compilation, era: gaonic,   note: "c. 10th c."}
-  - {prefix: "Tanna DeBei Eliyahu", status: chain_compilation, era: gaonic,   note: "c. 9th-10th c. (Rabbah + Zuta/additions)"}
-  - {prefix: "Midrash Aggadah",     status: chain_compilation, era: medieval, note: "anon., 12th c. (Buber)"}
-  - {prefix: "Bereshit Rabbati",    status: chain_compilation, era: medieval, note: "school of R. Moshe HaDarshan, 11th c."}
-  - {prefix: "Avot DeRabbi Natan",  status: chain_compilation, era: tannaitic_content, note: "tannaitic material, late redaction (both recensions)"}
-  - {prefix: "Tractate Soferim",    status: chain_compilation, era: gaonic, note: "minor tractate, c. 8th c."}
-  - {prefix: "Tractate Sefer Torah", status: chain_compilation, era: gaonic, note: "minor tractate"}
-  - {prefix: "Tractate Derekh Eretz", status: chain_compilation, era: mixed, note: "minor tractate"}
-  - {prefix: "Tractate Kallah Rabbati", status: chain_compilation, era: gaonic, note: "minor tractate"}
+  - {prefix: "Shemot Rabbah",       status: chain_compilation, era: medieval, note: "c. 10th-12th c. redaction", shelf: reading}
+  - {prefix: "Bamidbar Rabbah",     status: chain_compilation, era: medieval, note: "first half 12th c. (R. Moshe HaDarshan school)", shelf: reading}
+  - {prefix: "Devarim Rabbah",      status: chain_compilation, era: gaonic,   note: "c. 9th c.", shelf: reading}
+  - {prefix: "Kohelet Rabbah",      status: chain_compilation, era: gaonic,   note: "c. 7th-8th c.", shelf: reading}
+  - {prefix: "Shir HaShirim Rabbah", status: chain_compilation, era: gaonic,  note: "c. 6th-7th c.", shelf: reading}
+  - {prefix: "Ruth Rabbah",         status: chain_compilation, era: gaonic,   note: "c. 6th-7th c. (incl. Lerner ed.)", shelf: reading}
+  - {prefix: "Esther Rabbah",       status: chain_compilation, era: mixed,    note: "part early, part medieval", shelf: reading}
+  - {prefix: "Midrash Tanchuma Buber", status: chain_compilation, era: gaonic, note: "Tanchuma-Yelamdenu family; Buber recension", shelf: reading}
+  - {prefix: "Midrash Tanchuma",    status: chain_compilation, era: gaonic,   note: "Tanchuma-Yelamdenu family, printed recension", shelf: reading}
+  - {prefix: "Midrash Yelamdenu",   status: chain_compilation, era: gaonic,   note: "Tanchuma family; survives via anthologies", shelf: reading}
+  - {prefix: "Pirkei DeRabbi Eliezer", status: chain_compilation, era: gaonic, note: "attributed to Tanna R. Eliezer; composed c. 8th-9th c.", shelf: reading}
+  - {prefix: "Pesikta Rabbati",     status: chain_compilation, era: gaonic,   note: "c. 9th c.", shelf: reading}
+  - {prefix: "Midrash Tehillim",    status: chain_compilation, era: mixed,    note: "layered, partly late", shelf: reading}
+  - {prefix: "Midrash Shmuel",      status: chain_compilation, era: medieval, note: "", shelf: reading}
+  - {prefix: "Aggadat Bereshit",    status: chain_compilation, era: gaonic,   note: "c. 10th c.", shelf: reading}
+  - {prefix: "Tanna DeBei Eliyahu", status: chain_compilation, era: gaonic,   note: "c. 9th-10th c. (Rabbah + Zuta/additions)", shelf: reading}
+  - {prefix: "Midrash Aggadah",     status: chain_compilation, era: medieval, note: "anon., 12th c. (Buber)", shelf: reading}
+  - {prefix: "Bereshit Rabbati",    status: chain_compilation, era: medieval, note: "school of R. Moshe HaDarshan, 11th c.", shelf: reading}
+  - {prefix: "Avot DeRabbi Natan",  status: chain_compilation, era: tannaitic_content, note: "tannaitic material, late redaction (both recensions)", shelf: testing}
+  - {prefix: "Tractate Soferim",    status: chain_compilation, era: gaonic, note: "minor tractate, c. 8th c.", shelf: testing}
+  - {prefix: "Tractate Sefer Torah", status: chain_compilation, era: gaonic, note: "minor tractate", shelf: testing}
+  - {prefix: "Tractate Derekh Eretz", status: chain_compilation, era: mixed, note: "minor tractate", shelf: testing}
+  - {prefix: "Tractate Kallah Rabbati", status: chain_compilation, era: gaonic, note: "minor tractate", shelf: testing}
 
   # ---- Rishonim-era anthologies/digests (locators -> primaries) --------------
-  - {prefix: "Midrash Lekach Tov",  status: chain_anthology, era: rishonim, note: "R. Toviah b. Eliezer, 11th c."}
-  - {prefix: "Midrash Sekhel Tov",  status: chain_anthology, era: rishonim, note: "R. Menachem b. Shlomo, 12th c."}
-  - {prefix: "Yalkut Shimoni",      status: chain_anthology, era: rishonim, note: "13th c. anthology; preserves lost sources"}
-  - {prefix: "Ein Yaakov",          status: chain_anthology, era: acharonim, note: "16th c. digest of Bavli aggadah (incl. Glick tr. edition); resolve to Bavli"}
-  - {prefix: "Sefer HaYashar (midrash)", status: chain_anthology, era: medieval, note: "narrative retelling, pseudo-epigraphic; use with caution"}
+  - {prefix: "Midrash Lekach Tov",  status: chain_anthology, era: rishonim, note: "R. Toviah b. Eliezer, 11th c.", shelf: reading}
+  - {prefix: "Midrash Sekhel Tov",  status: chain_anthology, era: rishonim, note: "R. Menachem b. Shlomo, 12th c.", shelf: reading}
+  - {prefix: "Yalkut Shimoni",      status: chain_anthology, era: rishonim, note: "13th c. anthology; preserves lost sources", shelf: reading}
+  - {prefix: "Ein Yaakov",          status: chain_anthology, era: acharonim, note: "16th c. digest of Bavli aggadah (incl. Glick tr. edition); resolve to Bavli", shelf: bridge}
+  - {prefix: "Sefer HaYashar (midrash)", status: chain_anthology, era: medieval, note: "narrative retelling, pseudo-epigraphic; use with caution", shelf: reading}
 
   # ---- targumim other than Onkelos -------------------------------------------
-  - {prefix: "Tafsir Rasag",        status: chain_geonic, era: geonic, note: "Saadia Gaon's Arabic translation"}
-  - {prefix: "Targum Jonathan on",  status: targum_composite_late, era: medieval, note: "'Pseudo-Jonathan' — misattributed; post-Islamic elements; printed in tradition since 1591"}
-  - {prefix: "Targum Jerusalem",    status: targum_composite_late, era: medieval, note: "Fragment Targum"}
-  - {prefix: "Targum Neofiti",      status: outside_chain_academic, era: manuscript, note: "Palestinian targum ms.; identified in the Vatican library 1949 — never community-transmitted"}
+  - {prefix: "Tafsir Rasag",        status: chain_geonic, era: geonic, note: "Saadia Gaon's Arabic translation", shelf: reading}
+  - {prefix: "Targum Jonathan on",  status: targum_composite_late, era: medieval, note: "'Pseudo-Jonathan' — misattributed; post-Islamic elements; printed in tradition since 1591", shelf: reading}
+  - {prefix: "Targum Jerusalem",    status: targum_composite_late, era: medieval, note: "Fragment Targum", shelf: reading}
+  - {prefix: "Targum Neofiti",      status: outside_chain_academic, era: manuscript, note: "Palestinian targum ms.; identified in the Vatican library 1949 — never community-transmitted", shelf: reading}
 
   # ---- Geonim -----------------------------------------------------------------
-  - {prefix: "Halakhot Gedolot",    status: chain_geonic, era: geonic, note: ""}
-  - {prefix: "Sheiltot",            status: chain_geonic, era: geonic, note: "Rav Achai Gaon"}
+  - {prefix: "Halakhot Gedolot",    status: chain_geonic, era: geonic, note: "", shelf: testing}
+  - {prefix: "Sheiltot",            status: chain_geonic, era: geonic, note: "Rav Achai Gaon", shelf: reading}
 
   # ---- halakhah/liturgy citing the verses (Rishonim -> contemporary) ---------
-  - {prefix: "Sefer HaMitzvot HaKatzar", status: halakhic_application, era: acharonim, note: "Chafetz Chaim"}
-  - {prefix: "Sefer HaMitzvot",     status: halakhic_application, era: rishonim, note: "Rambam"}
-  - {prefix: "Sefer HaChinukh",     status: halakhic_application, era: rishonim, note: ""}
-  - {prefix: "Sefer Mitzvot Gadol", status: halakhic_application, era: rishonim, note: "SMaG"}
-  - {prefix: "Sefer Mitzvot Katan", status: halakhic_application, era: rishonim, note: "SMaK"}
-  - {prefix: "Siddur Rashi",        status: halakhic_application, era: rishonim, note: "Rashi school"}
-  - {prefix: "Sefer HaOrah",        status: halakhic_application, era: rishonim, note: "Rashi school"}
-  - {prefix: "Shibbolei HaLeket",   status: halakhic_application, era: rishonim, note: ""}
-  - {prefix: "Abudarham",           status: halakhic_application, era: rishonim, note: "liturgy commentary"}
-  - {prefix: "Kol Bo",              status: halakhic_application, era: rishonim, note: ""}
-  - {prefix: "Sefer Chasidim",      status: halakhic_application, era: rishonim, note: "Chassidei Ashkenaz"}
-  - {prefix: "Shulchan Shel Arba",  status: halakhic_application, era: rishonim, note: "Rabbenu Bachya b. Asher"}
-  - {prefix: "The Sabbath Epistle", status: halakhic_application, era: rishonim, note: "Ibn Ezra, Iggeret HaShabbat"}
-  - {prefix: "Tur",                 status: halakhic_application, era: rishonim, note: ""}
-  - {prefix: "Shulchan Arukh",      status: halakhic_application, era: acharonim, note: ""}
-  - {prefix: "Kitzur Shulchan Arukh", status: halakhic_application, era: acharonim, note: ""}
-  - {prefix: "Arukh HaShulchan",    status: halakhic_application, era: acharonim, note: ""}
-  - {prefix: "Ben Ish Hai",         status: halakhic_application, era: acharonim, note: "19th c. Baghdad"}
-  - {prefix: "Shev Shmateta",       status: halakhic_application, era: acharonim, note: ""}
-  - {prefix: "Ahavat Chesed",       status: halakhic_application, era: acharonim, note: "Chafetz Chaim"}
-  - {prefix: "Ein HaTekhelet",      status: halakhic_application, era: acharonim, note: "Radziner Rebbe"}
-  - {prefix: "Peninei Halakhah",    status: halakhic_application, era: contemporary, note: "R. Eliezer Melamed"}
-  - {prefix: "Contemporary Halakhic Problems", status: halakhic_application, era: contemporary, note: "R. J. David Bleich"}
-  - {prefix: "From Sinai to Ethiopia", status: halakhic_application, era: contemporary, note: "R. Sharon Shalom"}
-  - {prefix: "Gray Matter",         status: halakhic_application, era: contemporary, note: "R. Chaim Jachter"}
-  - {prefix: "Sefer Puah",          status: halakhic_application, era: contemporary, note: ""}
-  - {prefix: "A Lifetime Companion", status: halakhic_application, era: contemporary, note: ""}
+  - {prefix: "Sefer HaMitzvot HaKatzar", status: halakhic_application, era: acharonim, note: "Chafetz Chaim", shelf: testing}
+  - {prefix: "Sefer HaMitzvot",     status: halakhic_application, era: rishonim, note: "Rambam", shelf: testing}
+  - {prefix: "Sefer HaChinukh",     status: halakhic_application, era: rishonim, note: "", shelf: testing}
+  - {prefix: "Sefer Mitzvot Gadol", status: halakhic_application, era: rishonim, note: "SMaG", shelf: testing}
+  - {prefix: "Sefer Mitzvot Katan", status: halakhic_application, era: rishonim, note: "SMaK", shelf: testing}
+  - {prefix: "Siddur Rashi",        status: halakhic_application, era: rishonim, note: "Rashi school", shelf: testing}
+  - {prefix: "Sefer HaOrah",        status: halakhic_application, era: rishonim, note: "Rashi school", shelf: testing}
+  - {prefix: "Shibbolei HaLeket",   status: halakhic_application, era: rishonim, note: "", shelf: testing}
+  - {prefix: "Abudarham",           status: halakhic_application, era: rishonim, note: "liturgy commentary", shelf: testing}
+  - {prefix: "Kol Bo",              status: halakhic_application, era: rishonim, note: "", shelf: testing}
+  - {prefix: "Sefer Chasidim",      status: halakhic_application, era: rishonim, note: "Chassidei Ashkenaz", shelf: testing}
+  - {prefix: "Shulchan Shel Arba",  status: halakhic_application, era: rishonim, note: "Rabbenu Bachya b. Asher", shelf: testing}
+  - {prefix: "The Sabbath Epistle", status: halakhic_application, era: rishonim, note: "Ibn Ezra, Iggeret HaShabbat", shelf: testing}
+  - {prefix: "Tur",                 status: halakhic_application, era: rishonim, note: "", shelf: testing}
+  - {prefix: "Shulchan Arukh",      status: halakhic_application, era: acharonim, note: "", shelf: testing}
+  - {prefix: "Kitzur Shulchan Arukh", status: halakhic_application, era: acharonim, note: "", shelf: testing}
+  - {prefix: "Arukh HaShulchan",    status: halakhic_application, era: acharonim, note: "", shelf: testing}
+  - {prefix: "Ben Ish Hai",         status: halakhic_application, era: acharonim, note: "19th c. Baghdad", shelf: testing}
+  - {prefix: "Shev Shmateta",       status: halakhic_application, era: acharonim, note: "", shelf: testing}
+  - {prefix: "Ahavat Chesed",       status: halakhic_application, era: acharonim, note: "Chafetz Chaim", shelf: testing}
+  - {prefix: "Ein HaTekhelet",      status: halakhic_application, era: acharonim, note: "Radziner Rebbe", shelf: testing}
+  - {prefix: "Peninei Halakhah",    status: halakhic_application, era: contemporary, note: "R. Eliezer Melamed", shelf: testing}
+  - {prefix: "Contemporary Halakhic Problems", status: halakhic_application, era: contemporary, note: "R. J. David Bleich", shelf: testing}
+  - {prefix: "From Sinai to Ethiopia", status: halakhic_application, era: contemporary, note: "R. Sharon Shalom", shelf: testing}
+  - {prefix: "Gray Matter",         status: halakhic_application, era: contemporary, note: "R. Chaim Jachter", shelf: testing}
+  - {prefix: "Sefer Puah",          status: halakhic_application, era: contemporary, note: "", shelf: testing}
+  - {prefix: "A Lifetime Companion", status: halakhic_application, era: contemporary, note: "", shelf: testing}
 
   # ---- modern print anthologies & academic works ------------------------------
-  - {prefix: "Otzar Midrashim",     status: outside_chain_academic, era: modern_print, note: "Eisenstein 1915 printed anthology of minor/late midrashim (incl. Hekhalot material); individual items may resolve to older primaries case-by-case"}
-  - {prefix: "Legends of the Jews", status: outside_chain_academic, era: modern, note: "Ginzberg 1909, academic English anthology"}
-  - {prefix: "Learning to Read Midrash", status: outside_chain_academic, era: contemporary, note: "instructional book"}
+  - {prefix: "Otzar Midrashim",     status: outside_chain_academic, era: modern_print, note: "Eisenstein 1915 printed anthology of minor/late midrashim (incl. Hekhalot material); individual items may resolve to older primaries case-by-case", shelf: reading}
+  - {prefix: "Legends of the Jews", status: outside_chain_academic, era: modern, note: "Ginzberg 1909, academic English anthology", shelf: reading}
+  - {prefix: "Learning to Read Midrash", status: outside_chain_academic, era: contemporary, note: "instructional book", shelf: reading}

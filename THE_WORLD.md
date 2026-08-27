@@ -117,6 +117,43 @@ One breath: Mishnah = the expected-output table, organized by module.
 Gemara = the traceability, the edge cases, and the dispute flags.
 Talmud = both — which is why the purpose ruling names the whole.
 
+## The two shelves (owner ruling 2026-08-27 — "record it")
+
+The owner's question that forced it: shouldn't the Mishnah and Talmud
+be classified differently from the rest of the Oral Torah — the rest
+clarifies the verse logic, they seem to ADD logic? Answer, adopted:
+the real split is WHICH END OF THE BRIDGE A BOOK STARTS FROM, and the
+two kinds get two different jobs in the pipeline:
+
+- **THE READING SHELF — verse-anchored books** (Onkelos; the midrash
+  collections — the verse-by-verse expounding books — including the
+  law-midrash: Mekhilta, Sifra, the two Sifrei). They start at the verse and walk toward the law; organized
+  like our units, they feed the READING passes (Steps 3-4). They feel
+  like clarification because they start where we start — but in the
+  law books they add machinery too (the Mekhilta's five tam/muad
+  differences).
+- **THE TESTING SHELF — case-anchored books** (the Mishnah, the
+  Tosefta beside it). They start from the case and barely cite
+  verses; unreadable at a verse span, routed by topic
+  (logic/MISHNAH_TOPICS.md). Their input→output rows are the EXAM —
+  the oracle's core, the machine's test bed (Step 9, the case files).
+- **THE TALMUD IS THE BRIDGE.** It takes a Mishnah rule that looks
+  like pure addition and walks it back to the verse (menalan — "from
+  where do we know this?"). When it succeeds, the addition was
+  derivation all along; when it cannot, the tradition says so and
+  labels the tier (received oral law; a decree).
+
+MEASURED, not asserted (the expansion test, 2026-08-27, logic/
+law_era/expansion_test_2026-08-27/): on the goring-ox block's 35
+witnessed claims, 22 walk back to the verse's own ink or an argued
+analogy; exactly TWO are pure additions and the tradition labels both
+itself as decrees. The Grok-side cross-test agreed from the other
+direction: on 48 rows, the oral layer never mints a verdict kind the
+verse did not name (zero new kinds; our three in-alphabet strains sit
+exactly on the override and dispute tiers). One breath: the Mishnah
+writes as if it is adding; the Talmud shows most of it was derived;
+the true remainder arrives self-labeled.
+
 ## The two machines (both real, different jobs — keep both)
 
 1. **The proof machine** — corpus_world.py fold + the Stage D
@@ -199,11 +236,19 @@ that grounds it.
 - **Token gloss layer** — machine tokens not in entity_registry (or,
   choshekh…) show unglossed in code-context panels; flagged to owner,
   not ruled.
-- **Sugya case-file format (purpose-driven, 2026-08-25)** — the
-  runnable artifact for the mission: a case's declared inputs + the
-  tradition's recorded answer (single ruling, dispute, or unresolved),
-  with its Talmud citation; reading passes collect them, the simulator
-  runs them. Design pending.
+- **Sugya case-file format (purpose-driven, 2026-08-25; DEADLINE SET
+  2026-08-27)** — the runnable artifact for the mission: a case's
+  declared inputs + the tradition's recorded answer (single ruling,
+  dispute, or unresolved), with its Talmud citation; reading passes
+  collect them, the simulator runs them. Design pending — and now
+  scheduled: MUST be designed and proven on the Exodus 21 material
+  during the Genesis remainder (~40 blocks), because the spine
+  default's thin-reading deal is "the exam tests it" — the exam must
+  be real before the walk reaches Exodus's law spans. Design inputs
+  banked: the tier field (the expansion test), the tier-profiled
+  verdict (the coded run), the hook-not-fence discovery rule and
+  no-cantillation caution (the Grok cross-test), the doubt layer as
+  first missing subsystem (First Gate 5:1).
 - **Standing-rules table (rules as handlers, 2026-08-25)** — laws
   stored as installed handlers with firing conditions the live loop
   consults (the bow-in-cloud pattern generalized); the gap between
@@ -782,3 +827,19 @@ workshop dashboard's black skin — or both with a toggle.
   names the whole. Recorded as the section "The oracle's anatomy"
   under the purpose. Case files anchor on Mishnah rows; gemara-less
   rows are black-box tests; Tosefta rows are variant oracle rows.
+
+- 2026-08-27 — THE TWO SHELVES RULED + THE_STEPS UPDATED (owner:
+  "record it. we should also update the steps"). The reading-shelf /
+  testing-shelf classification recorded as a section under the
+  oracle's anatomy (verse-anchored books feed Steps 3-4; case-anchored
+  books are Step 9's exam; the Talmud is the bridge walking Mishnah
+  rules back to their verses), carrying the measured findings of the
+  day: the expansion test's 22-of-35 kernel-compiled with two
+  self-labeled decrees, and the Grok cross-test's zero-new-verdict-
+  kinds with our three strains sitting on the O and D tiers (folder
+  logic/law_era/expansion_test_2026-08-27/ holds the work: tier table,
+  provenance report with an instrumented scene run, output-alphabet
+  test, cross-join, gap roster — the doubt layer named the first
+  missing subsystem). THE_STEPS Step 4 gained the TWO SHELVES passage
+  (workshop copy; canon mirroring pending on the owner's word in that
+  window, joining the queue) and Step 9 now points at it.

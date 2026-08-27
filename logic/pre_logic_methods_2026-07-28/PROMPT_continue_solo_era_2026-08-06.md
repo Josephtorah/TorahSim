@@ -4179,3 +4179,188 @@ torahsim" — both sections relayed in full to torahsim-19 by session
 message (msg 9349036a), landing location their window's call, commit/
 deploy on the owner's words there. Awaiting their landing confirmation
 for mirror-awareness.
+ADDENDUM 2: mirror CONFIRMED landed in canon — both sections in TorahSim
+docs/ROADMAP_SIMULATION.md (top, before "The prototype that exists"),
+faithful text, provenance note naming the owner's order and THE_WORLD.md
+as workshop home; METHOD_LAWS and THE_STEPS untouched there per the
+ruling's own instruction; their memory talmud-oracle-mission recorded;
+nine gates green; their commit/deploy on the owner's words there. Also:
+this side committed 91a4712 on the owner's word "commit all of this" —
+17 files: seven Lech Lecha ledgers + seven rev-2 units + THE_STEPS +
+THE_WORLD + state doc. Tree clean; push awaits its own word.
+
+=== 2026-08-27: THE EXPANSION TEST — GORING OX ===
+Owner's new lens ("mishnah and talmud as not just a execution trace but
+expansion of existing code derived from the logic") discussed, then run
+as a test on his order. New folder logic/law_era/expansion_test_2026-08-27/
+(README defines it: analysis only, hypothesis-grade, no undefined code) +
+GORING_OX_EXPANSION_TEST.md: all 35 witnessed claims of the exo_21 block-3
+manifest classified by kernel-relation tier (K/I/M/C/D/G/O/R/E). FINDING:
+15 of 35 are ink-derivations, 5 analogy, 7 case-table — the expansion
+overwhelmingly COMPILES from the kernel's ink; exactly TWO pure installs
+in the block and the tradition labels both itself (gezerat ha-katuv on the
+pit exclusions, gezerat melekh on the 4/5 tariff — L37-05 dual-tagged:
+decree + four derivations). The override class found inside our own block
+(L29-04 "the halakhah uproots the verse" — owner's death = by Heaven).
+Machine half-tagged already (claim-IDs on every rule); missing only the
+tier letter. Discussion record (avot/toladot inheritance, binyan av =
+"building the father", provenance tiers w/ differential doubt policy)
+written into the same doc per the order. gloss_lint 0. No code, no unit/
+ledger/machine touched. Next steps listed, not started: tier-tag block 3,
+classify blocks 1-2, tier field into the case-file schema.
+ADDENDUM (2026-08-27, same sitting): THE TEST CODED AND RUN on the owner's
+question ("can you code it and run it?") — answered: small piece now, big
+pieces after more learning. Two tier-labeled files joined the test folder:
+claim_tiers.json (MODEL — 35 classifications as data, joins the manifest
+read-only) + expansion_report.py (MILL — gates the join both ways, tallies,
+maps every block-3 definition to cited claims and tiers, then INSTRUMENTS
+the machine and runs a scene). RUN GREEN, and it CAUGHT ITS AUTHOR: the
+md's hand tally (I:15, C:7) corrected by machine count to I:16, C:5, K:1 —
+correction noted in Part III, full run in new Part V. Kernel-compiled 22
+of 35; installs still exactly 2, both self-labeled. New output kind born:
+the TIER-PROFILED VERDICT (the slave-fine scene ran on I:7 K:1 O:1) — what
+sugya case files should emit. Constants split visibly: thirty=K, 4/5=G,
+thresholds/depths=I. gloss 0. Manifest/machine untouched. Uncommitted:
+the expansion_test folder + state doc.
+ADDENDUM 2 (2026-08-27): THE GROK-NOTE CROSS-TEST run on the owner's word.
+Owner shared a Grok-side research note (exo21_mishnah_extension_findings.md,
+CORE/EXTENSION/DISPUTE/NEW_MODULE scoring, 48 rows, NEW_MODULE:0). Three
+tests run and documented in the expansion_test folder (CROSS_TEST_GROK_NOTE
+.md + output_alphabet.py MILL): (A) OUTPUT-ALPHABET on our 35 claims — the
+invariant HOLDS: 11 verse-named letters, 23 verdict rows, ZERO new kinds;
+three strains all sitting exactly on our O and D tiers (L29-04 executor
+swap, L35-02 the letter's own type disputed, L35-03 partnership re-typing);
+live machine outputs harvested, all in-alphabet. (B) CROSS-JOIN their 14
+ox rows x our tiers — 11/14 land on our claims (independent convergence);
+their two CORE rows both hide what ours flags (a D and the O); their label
+is coarser on disputes. (C) GAP ROSTER — machine runs 9 of their 12 exam
+paragraphs; backlog: collection queue (4:1), stadium input (4:4), guardian
+procedure (4:4), and THE DOUBT LAYER (5:1) as the first missing SUBSYSTEM
+(joins the provenance-tiered doubt-policy finding). Hook-not-fence rule +
+no-cantillation caution adopted for the case-file design. gloss 0 on all.
+README contents updated. Uncommitted: the whole expansion_test folder +
+state doc.
+
+=== 2026-08-27 (later): THE TWO SHELVES RULED — AND THE_STEPS UPDATED ===
+Owner: "record it. we should also update the steps." His question (should
+Mishnah/Talmud classify apart from the rest — the rest clarifies, they
+add?) answered and adopted with the correction: the honest cut is WHICH
+END OF THE BRIDGE A BOOK STARTS FROM. READING SHELF = verse-anchored
+(Onkelos + the midrash collections incl. law-midrash) feeding Steps 3-4;
+TESTING SHELF = case-anchored (Mishnah + Tosefta) feeding Step 9's exam,
+routed by MISHNAH_TOPICS; THE TALMUD = the bridge (menalan walking rules
+back to verses). Carried with the day's measurements: 22-of-35 kernel-
+compiled / 2 self-labeled decrees (expansion test) + zero-new-verdict-
+kinds (Grok cross-test). RECORDED: THE_WORLD.md "The two shelves" section
++ idea-log entry; THE_STEPS Step 4 TWO SHELVES passage + Step 9 pointer
+(workshop copy — canon mirroring PENDING on the owner's word in the
+TorahSim window, joining the queue: Step 4 WHY + sweep-era + two shelves);
+memory two-shelves-classification.md + index line. gloss 0 both files.
+COMPACTION POINT — records current through here.
+ADDENDUM (2026-08-27, cont.): TWO MORE ON THE OWNER'S WORDS. (1) G-TIER
+REFINED by the owner's question ("could the two additions occur in another
+verse we didn't notice?") — close look answered: BOTH decree-tier items
+have verse anchors (pit exclusions read off this verse's own named
+animals; the 4/5 tariff's numbers are in the verse AND the tradition
+already found the cross-verse composition, L37-04 containing Exodus
+22:3's double); the decree label marks uncompiled REASON, not missing
+SOURCE. G split G-ink/G-nohook; on the block: 2/0. Sharpened finding:
+ALL 35 claims carry a verse anchor. Recorded: Part VI of the goring-ox
+test md + claim_tiers.json _meta refined + expansion_report re-run GREEN.
+(2) THE REGISTER GAINS THE SHELF FIELD (owner: "yes add the register to
+the shelf label") — logic/oral_provenance/v1/works.yaml: new shelves:
+doc block + shelf on ALL 105 rules (reading 41 / testing 38 / bridge 26);
+shelf orthogonal to status; ruling-named classes = owner's ruling,
+beyond-them assignments = workshop judgment hypothesis-grade,
+owner-overridable per row; YAML parse-checked, gloss 0. Uncommitted:
+expansion_test folder + THE_WORLD + THE_STEPS + works.yaml + state doc.
+
+=== 2026-08-27 (later still): THE SPINE DEFAULT RULED — READING NARROWS TO ONE BOOK PER TORAH BOOK ===
+Owner recalled the thin-first-pass discussion and asked for the
+recommendation; recommendation given (adopt — the two-shelves ruling +
+oracle mission + expansion-test measurement make it safe); owner: "yes
+get the numbers book." ENACTED: (1) works.yaml register row ADDED —
+Sifrei Bamidbar, chain_primary/tannaitic/shelf:reading, owner-approved
+note (local text Data/sifrei_bamidbar_he.json verified, Hebrew only);
+(2) CORE_SHELF.md gains THE SPINE DEFAULT section — declared reading =
+one spine per Torah book + Onkelos (Gen=Bereshit Rabbah, Exod=Mekhilta
+DeRabbi Yishmael w/ Rashbi as depth, Lev=Sifra, Num=Sifrei Bamidbar,
+Deut=Sifrei Devarim), Mishnah/Talmud wholly to Step 9's exam, riders
+unchanged (canon rules, ink guard, full enumeration, dual-track),
+EFFECTIVE AT VAYERA; (3) THE_STEPS Step 3 gains the same passage
+(canon mirroring pending, queue now: Step 4 WHY + sweep-era + two
+shelves + spine default); (4) memory spine-default.md + index line.
+DEPENDENCY ON RECORD: sugya case-file machinery must be built during
+the rest of Genesis (~40 blocks), before Exodus law spans. All five
+spine texts verified local. gloss 0 on all touched files.
+COMPACTION POINT — records current through here.
+ADDENDUM (2026-08-27): FULL SYNC RELAY TO CANON on the owner's word
+("lets update torahsim on our decision. And yall sync fully to this new
+plan") — msg e3f6dd0f to torahsim-19 carrying: the two-shelves ruling
+(full Step-4 mirror text + the G-ink/G-nohook refinement), the spine
+default (Step-3/CORE_SHELF mirror text, effective Vayera, case-file
+dependency), the register changes (shelf field 105 rows + Sifrei
+Bamidbar row), the retro-test verification numbers (451 findings: 38%
+spine / 43% exam / 13% deferred-to-other-spines / ~5.5% true cost,
+soft-spot caveat on narrative aggadah), and the synced plan (Genesis
+remainder under spine default + case-file build in parallel + Exodus
+thin with exam). Awaiting their landing confirmation.
+ADDENDUM 2: SYNC CONFIRMED LANDED in canon, nine gates green — two
+shelves into THE_STEPS Step 4 (ahead of SPEED RULINGS) + Step 9
+cross-ref; spine default into Step 3 + CORE_SHELF closing section;
+works.yaml pure-copied whole (shelf field + Sifrei Bamidbar verified,
+zero border strings); plan paragraph at the tail extended with the
+retro-test arithmetic; roadmap gained "The two shelves, and the
+measured bridge" incl. Part VI sharpening + case-file design inputs.
+Their style correction accepted: "Bava Kamma (the First Gate) 5:1" —
+Hebrew name with English gloss — over my English-only "Mishnah First
+Gate 5:1". Their commit/deploy on the owner's words there. BOTH WINDOWS
+ON ONE PLAN. Awaiting owner goes here: Vayera sweep / batch stamps /
+workshop commit word.
+
+=== 2026-08-28: THE VAYERA SWEEP — FIRST RUN UNDER THE SPINE DEFAULT, COMPLETE AND GREEN ===
+Owner: "ok run it." Five blocks, Genesis 18:1-22:24, one sitting, times
+kept: enumeration 14:06:38-14:07:18 (16,718 enumerated -> 350 DECLARED:
+103 fresh Bereshit Rabbah + 100 credits + 147 Onkelos; 320 outside-scope
+primaries recorded with shelf splits; 8 FPs excluded, standing classes);
+texts fetched from the local DB (9 files, 1 range-ref resolved by hand);
+READING PHASE 14:06:38-14:31:02 = 24m24s, all five ledgers written
+incrementally, every completion line gate-PASS (102/102, 74/74, 41/41,
+71/71, 62/62); rebuild to rev 2 14:32:10; ALL GATES GREEN 14:34:31 —
+WHOLE SWEEP 27m53s (Lech Lecha: 35m for reading alone). The spine
+default's live verdict: less than half the declared reads, the material
+yield dense as ever — fresh material 91 rows + 28 Onkelos delta rows.
+ROSTER-DIFF GUARD earned its keep TWICE (6 gen_35 rows + confirmed
+gen_38 complete). VERIFY_TEXT caught TWO pre-existing ink defects in
+gen_35 (both at HEAD, fixed to the ink with changelog): Genesis 19:20's
+first ve-hi written WITH YOD — a MEMBER OF THE ELEVEN yod-instances the
+three-scrolls census counts (the census claim carried since gen_30
+materially validated at a new member) — and 19:16's vayachaziku written
+DEFECTIVE against the unit's plene. Headline yield: the plea on the
+Noach oath; the six-hour clock; TWO scribal-dot exhibits (18:9 with the
+dots-majority meta-rule; 19:33's dotted vav); peace-overrides-report;
+tikkun soferim at 18:22; the dawn measure (4+4 mil) as live time-law;
+the 138-year angel arc closing at the ladder; the directional-heh rule
+at its seat + Sodom's five judges; no-forewarning-for-Noahides (both
+legs); the first prayer-for-another; the 20:13 plural-verb rewrite in
+Onkelos (the sweep's largest buffer delta); the present-state-judgment
+law; the gazlan definition at the well; the cedars-of-21:33 ->
+Tabernacle supply chain (cross-corpus demand); intent-counted-as-deed;
+THE SLAUGHTER-INSTRUMENT LAW from 22:10 (Chullin exam hook); the shofar
+institution + ram's parts census; Onkelos's 22:14 rewritten as the
+worship institution; and THE SPINE DISAGREEING WITH ITSELF, recorded
+dual-track (adonai sacred/profane at 18:3; the 19:24 double-name solved
+two ways; the eshel triple reading) — the two-shelves model's expected
+seams, on exhibit. GENESIS NOW 38 OF 73 READ (gen_09-38 = THIRTY blocks
+green/unstamped awaiting batch words). Uncommitted: 5 ledgers + 5 rev-2
+units + state doc. NEXT: parashat Chayei Sarah (gen_39, Genesis 23:1)
+on the owner's go; the sugya case-file build continues in parallel.
+COMPACTION POINT — records current through here.
+ADDENDUM: owner's order "sync up with torahsim and tell it to update the
+webstie" — full Vayera landing relay sent to torahsim-19 (msg f76071a8):
+the five 2026-08-28 pairs with the copy-current-bytes warning (gen_35's
+two ink fixes named), sweep totals, chip implications (Genesis 38/73,
+thirty blocks unstamped), and THE OWNER'S DEPLOY ORDER relayed verbatim
+as authorization for their chain + deploy — with the hold-at-ready
+option if their practice wants his word typed there. Awaiting landing +
+deploy confirmation.
