@@ -90,6 +90,104 @@ One breath: Mishnah = the expected-output table, organized by module.
 Gemara = the traceability, the edge cases, and the dispute flags.
 Talmud = both — which is why the purpose ruling names the whole.
 
+### How the books are used (owner's word in the canon window, 2026-08-25)
+
+The shapes of the two books say how they were meant to be read, and
+the project follows the same grain.
+
+**The Mishnah is a practitioner's reference, not a reading book.** Its
+users were judges and teachers who needed the law of a domain, now —
+an ox case routes to Damages, a sabbatical question to Seeds, a
+wedding to Women. That is why it stands in subject order, why its rows
+are terse (input → output, reasons stripped), and why it almost never
+quotes a verse: it PRESUMES the Torah known and hands the operator the
+settled law, arranged for memorization and retrieval. The deployed
+system's manual, organized by module, written for operators — not for
+the compiler.
+
+**Two runs, not one.** BUILDING runs in Torah order — the walk from
+Genesis 1:1 — because state accumulates: creation installs the world,
+covenants install standing rules, Sinai switches the law on; "the ox
+that gores" cannot load into a world that does not yet exist. USING
+runs in subject order — a case never replays Genesis; it routes to the
+module, and the Mishnah IS the routing. The simulator needs both at
+once: the narrative-order world and the subject-order verdict table.
+
+**The verse hook is asked, not printed.** The Mishnah row does not
+name its verse; the Gemara's signature move is exactly that question —
+menalan ("from where do we know this?") — answered with a verse and
+its derivation chain, row by row: the tradition wrote its own
+traceability matrix. Where the Gemara is silent, the midrash halakha
+collections (verse-ordered legal exposition: Mekhilta on Exodus, Sifra
+on Leviticus, Sifrei on Numbers and Deuteronomy) hold the SAME law
+body in SOURCE order — the transposed matrix. Mishnah = law by module;
+midrash halakha = law by verse; together they are the join in both
+directions, and the verse-ordered side is the natural future reverse
+map beside `logic/MISHNAH_TOPICS.md`'s topic map.
+
+**The gaps are data.** Sometimes the hookup is contested — two sages
+propose two source verses, and the derivation itself is a machloket
+(recorded dispute). Sometimes the Gemara rejects every proposed verse
+and the rule stands on received tradition — halakha le-Moshe mi-Sinai
+("a law to Moses from Sinai") — or on rabbinic decree, de-rabbanan
+("from the rabbis"). Those are the purpose ruling's category (d) made
+concrete: an input not in the written verses, a documented Oral Torah
+finding, never a failure. A row whose gemara gives no hook stays a
+black-box test; the row stands.
+
+**The pipeline the books themselves suggest:** route by topic
+(`logic/MISHNAH_TOPICS.md`, built) → read the Mishnah rows as fixtures
+→ read each row's gemara for the verse hooks (which units must load),
+the edge-case variants, and the dispute flag. Done once by hand
+already: the Exodus 21 machine's 64 scenes were graded against Mishnah
+Bava Kamma's ox taxonomy.
+
+### The two shelves, and the measured bridge (owner rulings 2026-08-27)
+
+The library split became law: books divide by WHICH END OF THE BRIDGE
+they start from. The READING SHELF is the verse-anchored books —
+Onkelos and the midrash collections, the law-midrash included —
+organized like our units; they feed Steps 3–4. The TESTING SHELF is
+the case-anchored books — the Mishnah, the Tosefta beside it — which
+start from the case, barely cite verses, and cannot be read at a
+verse span; their rows are the Step 9 exam, routed by topic. The
+TALMUD IS THE BRIDGE, walking a Mishnah rule back to its verse. The
+register now carries the split as a `shelf:` field on every rule
+(reading 41 / testing 38 / bridge 26), orthogonal to chain status,
+with the owner's Sifrei-on-Numbers row added the same day.
+
+And the bridge was MEASURED, on the project's deepest block — the
+goring ox, 35 witnessed claims (the workshop's expansion test,
+2026-08-27): 22 of 35 walk back to the verse's own ink or an argued
+analogy; exactly two are additions whose derivation never compiles —
+and the tradition labels both itself as decrees. The owner-stamped
+sharpening: even those two carry verse ANCHORS (the pit's exclusions
+read off the verse's own named animals; the 4-and-5 tariff's numbers
+sit in the verse, with the cross-verse double found inside it) — so
+the decree tier splits anchored-without-compiled-reason from
+no-hook-at-all, and on this block the no-hook class is EMPTY. The
+sharpened finding, one breath: every claim has a verse anchor; only
+REASONS ever fail to compile. The Mishnah writes as if it is adding;
+the Talmud shows most of it was derived; the true remainder arrives
+self-labeled.
+
+The spine default follows from all of it (Step 3; the table lives in
+`logic/CORE_SHELF.md`): one verse-anchored spine per Torah book plus
+Onkelos; the Mishnah and Talmud leave the reading pass and return as
+the exam. Retro-tested against the 18 finished sweep ledgers before
+adoption: ~94% of the 451 fresh material findings return through the
+plan's own channels; the honest remainder is marked and recoverable
+by depth order. Effective at parashat Vayera. DEPENDENCY ON RECORD:
+the sugya case-file machinery must be designed and proven — on the
+Exodus 21 material in hand — during the Genesis remainder, before the
+walk reaches Exodus's law spans; the thin-reading deal is "the exam
+tests it," so the exam must be real by then. Design inputs already
+banked in the workshop: the tier field and tier-profiled verdicts
+from the coded expansion run, the hook-not-fence discovery rule with
+its no-cantillation caution, and the doubt layer (Mishnah Bava Kamma
+— the First Gate — 5:1, verdict under uncertainty) as the first
+missing subsystem.
+
 *(Both sections ruled in the workshop window 2026-08-25 and mirrored
 here on the owner's order — "mirror the purpose and anatomy to
 torahsim"; the workshop's THE_WORLD.md holds its own copy under "The

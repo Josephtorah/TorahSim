@@ -154,3 +154,38 @@ shorthand; decode:
 
 There is NO "Mishnah-Bavli": the Mishnah is ONE book; each Talmud
 contains it whole and adds its own discussion.
+
+---
+
+## THE SPINE DEFAULT — owner ruling 2026-08-27 ("yes")
+
+Narrows the 2026-08-23 default further, on the strength of three
+later rulings: the two shelves (verse-anchored books read; case-
+anchored books test), the oracle mission (the Mishnah/Talmud exam
+catches what thin reading misses, and each failure names its page),
+and the expansion test's measurement (the law overwhelmingly compiles
+from the verse's own ink — the very thing a verse-order book walks).
+
+**Declared reading per span = the book's ONE SPINE + Onkelos:**
+
+| Torah book | The spine |
+|---|---|
+| Genesis | Bereshit Rabbah |
+| Exodus | Mekhilta of Rabbi Yishmael (the Rabbi Shimon Mekhilta = depth) |
+| Leviticus | Sifra |
+| Numbers | Sifrei on Numbers (register row added 2026-08-27) |
+| Deuteronomy | Sifrei on Deuteronomy |
+
+Riding along unchanged: the canon pattern-rules that fire on grammar
+(the censuses); the ink guard (numeric/written-form claims never
+credited unopened; the text layer mechanical); FULL enumeration with
+the remainder marked outside declared scope; dual-track on every
+dispute met. The Mishnah and Talmud leave the reading pass entirely
+and return at Step 9 as the exam (the testing shelf).
+
+Effective at parashat Vayera (gen_34) onward. Dependency, recorded:
+before Exodus's law spans, the sugya case-file machinery must exist —
+the thin-reading deal is "the exam tests it," so the exam must be
+real by then. (Mirrored from the workshop's living copy 2026-08-27 on
+the owner's sync order; the workshop verified all local spine texts
+on disk the same day.)
