@@ -7,10 +7,10 @@ each block still gets its own ledger.
 ## gen_71_crossed_hands — Genesis 48:1-22
 
 - enumerated: 2448 distinct linked sources
-- declared: 75 = 53 chain primaries + 22 Onkelos verses
-- credited (standing verdicts): 9 · FRESH TO READ: 44
+- declared: 77 = 55 chain primaries + 22 Onkelos verses
+- credited (standing verdicts): 9 · FRESH TO READ: 46
 - excluded with cause (register false positive): Shabbat Siddur Sefard Linear, Maariv Service for the Conclusion of Shabbos, Veyiten Lecha 58 · Shabbat Siddur Sefard Linear, Prayer Before Retiring at Night 204
-- outside declared scope (open narrowing, per the standing default): 2371
+- outside declared scope (open narrowing, per the standing default): 2369
 
 | # | source | status |
 |---|--------|--------|
@@ -55,18 +55,20 @@ each block still gets its own ledger.
 | 39 | Pesikta DeRav Kahana 10:6 | CREDIT — material at gen_30_war_of_kings |
 | 40 | Sanhedrin 107b:17 | fresh |
 | 41 | Sanhedrin 22b:4 | fresh |
-| 42 | Sifrei Devarim 217:4 | fresh |
-| 43 | Sifrei Devarim 289:3 | fresh |
-| 44 | Sifrei Devarim 352:11 | fresh · also in gen_72_testament_twelve |
-| 45 | Sifrei Devarim 356:6 | fresh |
-| 46 | Sifrei Devarim 35:10 | fresh |
-| 47 | Sotah 36b:7 | fresh |
-| 48 | Tosefta Kifshutah on Eruvin 1:1:2 | fresh |
-| 49 | Tosefta Kifshutah on Sotah 11:12:2 | fresh |
-| 50 | Tosefta Kifshutah on Yevamot 6:3:8 | fresh |
-| 51 | Vayikra Rabbah 37:1 | fresh |
-| 52 | Yevamot 24a:6 | fresh |
-| 53 | Yoma 28b:7 | fresh |
+| 42 | Sifrei Bamidbar 131:2 | fresh |
+| 43 | Sifrei Bamidbar 18:1 | fresh |
+| 44 | Sifrei Devarim 217:4 | fresh |
+| 45 | Sifrei Devarim 289:3 | fresh |
+| 46 | Sifrei Devarim 352:11 | fresh · also in gen_72_testament_twelve |
+| 47 | Sifrei Devarim 356:6 | fresh |
+| 48 | Sifrei Devarim 35:10 | fresh |
+| 49 | Sotah 36b:7 | fresh |
+| 50 | Tosefta Kifshutah on Eruvin 1:1:2 | fresh |
+| 51 | Tosefta Kifshutah on Sotah 11:12:2 | fresh |
+| 52 | Tosefta Kifshutah on Yevamot 6:3:8 | fresh |
+| 53 | Vayikra Rabbah 37:1 | fresh |
+| 54 | Yevamot 24a:6 | fresh |
+| 55 | Yoma 28b:7 | fresh |
 | — | Onkelos Genesis 48:1-22 (22 verses) | derive-time credit (foundation layer) |
 
 ## gen_72_testament_twelve — Genesis 49:1-33
@@ -216,9 +218,9 @@ each block still gets its own ledger.
 ## gen_73_coffin_in_egypt — Genesis 50:1-26
 
 - enumerated: 1822 distinct linked sources
-- declared: 83 = 57 chain primaries + 26 Onkelos verses
-- credited (standing verdicts): 8 · FRESH TO READ: 49
-- outside declared scope (open narrowing, per the standing default): 1739
+- declared: 85 = 59 chain primaries + 26 Onkelos verses
+- credited (standing verdicts): 8 · FRESH TO READ: 51
+- outside declared scope (open narrowing, per the standing default): 1737
 
 | # | source | status |
 |---|--------|--------|
@@ -260,23 +262,25 @@ each block still gets its own ledger.
 | 36 | Rosh Hashanah 26a:19 | fresh |
 | 37 | Sanhedrin 108a:15 | CREDIT — material at gen_15_flood_prologue |
 | 38 | Shabbat 152a:15 | CREDIT — no-bearing at gen_24_nations_table |
-| 39 | Sifrei Devarim 348:3 | fresh |
-| 40 | Sifrei Devarim 357:33 | fresh |
-| 41 | Sifrei Devarim 38:8 | fresh |
-| 42 | Sifrei Devarim 38:9 | fresh |
-| 43 | Sotah 13a:12 | fresh |
-| 44 | Sotah 13a:2 | fresh |
-| 45 | Sotah 13a:4 | fresh |
-| 46 | Sotah 13a:6 | fresh |
-| 47 | Sotah 13a:8 | fresh |
-| 48 | Sotah 13b | fresh |
-| 49 | Sotah 13b:9 | fresh |
-| 50 | Sotah 36b:22 | fresh |
-| 51 | Sotah 9b:9 | fresh |
-| 52 | Tosefta Sotah (Lieberman) 10:9 | fresh |
-| 53 | Tosefta Sotah 10:3 | fresh |
-| 54 | Tosefta Sotah 4:2 | fresh |
-| 55 | Vayikra Rabbah 9:9 | CREDIT — enrichment at gen_01_creation_boot |
-| 56 | Yevamot 65b:7 | fresh |
-| 57 | Yoma 87a:13 | fresh |
+| 39 | Sifrei Bamidbar 106:1 | fresh |
+| 40 | Sifrei Bamidbar 133:2 | fresh |
+| 41 | Sifrei Devarim 348:3 | fresh |
+| 42 | Sifrei Devarim 357:33 | fresh |
+| 43 | Sifrei Devarim 38:8 | fresh |
+| 44 | Sifrei Devarim 38:9 | fresh |
+| 45 | Sotah 13a:12 | fresh |
+| 46 | Sotah 13a:2 | fresh |
+| 47 | Sotah 13a:4 | fresh |
+| 48 | Sotah 13a:6 | fresh |
+| 49 | Sotah 13a:8 | fresh |
+| 50 | Sotah 13b | fresh |
+| 51 | Sotah 13b:9 | fresh |
+| 52 | Sotah 36b:22 | fresh |
+| 53 | Sotah 9b:9 | fresh |
+| 54 | Tosefta Sotah (Lieberman) 10:9 | fresh |
+| 55 | Tosefta Sotah 10:3 | fresh |
+| 56 | Tosefta Sotah 4:2 | fresh |
+| 57 | Vayikra Rabbah 9:9 | CREDIT — enrichment at gen_01_creation_boot |
+| 58 | Yevamot 65b:7 | fresh |
+| 59 | Yoma 87a:13 | fresh |
 | — | Onkelos Genesis 50:1-26 (26 verses) | derive-time credit (foundation layer) |

@@ -8,7 +8,7 @@ each block still gets its own ledger.
 
 - enumerated: 2213 distinct linked sources
 - declared: 66 = 38 chain primaries + 28 Onkelos verses
-- credited (standing verdicts): 5 · FRESH TO READ: 33
+- credited (standing verdicts): 6 · FRESH TO READ: 32
 - outside declared scope (open narrowing, per the standing default): 2147
 
 | # | source | status |
@@ -28,7 +28,7 @@ each block still gets its own ledger.
 | 13 | Bereshit Rabbah 94:1 | fresh |
 | 14 | Bereshit Rabbah 94:2 | fresh |
 | 15 | Bereshit Rabbah 94:3 | fresh |
-| 16 | Bereshit Rabbah 95:3 | fresh · also in gen_69_descent_seventy |
+| 16 | Bereshit Rabbah 95:3 | CREDIT — material at gen_34_mamre_laugh_plea |
 | 17 | Chagigah 4b:8 | fresh |
 | 18 | Jerusalem Talmud Eruvin 3:1:8 | fresh |
 | 19 | Jerusalem Talmud Nazir 6:9:3 | fresh |
@@ -57,7 +57,7 @@ each block still gets its own ledger.
 
 - enumerated: 2296 distinct linked sources
 - declared: 75 = 41 chain primaries + 34 Onkelos verses
-- credited (standing verdicts): 7 · FRESH TO READ: 34
+- credited (standing verdicts): 10 · FRESH TO READ: 31
 - outside declared scope (open narrowing, per the standing default): 2221
 
 | # | source | status |
@@ -69,19 +69,19 @@ each block still gets its own ledger.
 | 5 | Berakhot 13a:12 | fresh |
 | 6 | Berakhot 56b:19 | CREDIT — no-bearing at gen_28_egypt_descent |
 | 7 | Bereshit Rabbah 100:5 | fresh |
-| 8 | Bereshit Rabbah 55:8 | fresh |
+| 8 | Bereshit Rabbah 55:8 | CREDIT — material at gen_38_moriah_binding_oath |
 | 9 | Bereshit Rabbah 61:4 | CREDIT — no-bearing at gen_12_cain_abel |
 | 10 | Bereshit Rabbah 73:2 | fresh |
 | 11 | Bereshit Rabbah 73:8 | fresh |
 | 12 | Bereshit Rabbah 80:11 | fresh |
-| 13 | Bereshit Rabbah 94:4 | fresh |
+| 13 | Bereshit Rabbah 94:4 | CREDIT — material at gen_37_laughter_wilderness_oath |
 | 14 | Bereshit Rabbah 94:5 | CREDIT — enrichment at gen_33_shaddai_covenant_flesh |
 | 15 | Bereshit Rabbah 94:6 | fresh |
 | 16 | Bereshit Rabbah 94:7 | fresh |
 | 17 | Bereshit Rabbah 94:8 | fresh |
 | 18 | Bereshit Rabbah 94:9 | fresh |
 | 19 | Bereshit Rabbah 95:1 | fresh |
-| 20 | Bereshit Rabbah 95:3 | fresh · also in gen_68_i_am_yosef |
+| 20 | Bereshit Rabbah 95:3 | CREDIT — material at gen_34_mamre_laugh_plea |
 | 21 | Bereshit Rabbah 96:5 | fresh · also in gen_70_goshen_and_the_fifth |
 | 22 | Chullin 101b:9 | fresh |
 | 23 | Jerusalem Talmud Sotah 1:10:4 | fresh |

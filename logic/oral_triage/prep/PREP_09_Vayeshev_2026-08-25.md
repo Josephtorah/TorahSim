@@ -7,9 +7,9 @@ each block still gets its own ledger.
 ## gen_60_dreamer_sold — Genesis 37:1-36
 
 - enumerated: 4733 distinct linked sources
-- declared: 131 = 95 chain primaries + 36 Onkelos verses
-- credited (standing verdicts): 13 · FRESH TO READ: 82
-- outside declared scope (open narrowing, per the standing default): 4602
+- declared: 135 = 99 chain primaries + 36 Onkelos verses
+- credited (standing verdicts): 14 · FRESH TO READ: 85
+- outside declared scope (open narrowing, per the standing default): 4598
 
 | # | source | status |
 |---|--------|--------|
@@ -49,7 +49,7 @@ each block still gets its own ledger.
 | 34 | Bereshit Rabbah 84:8 | fresh |
 | 35 | Bereshit Rabbah 84:9 | fresh |
 | 36 | Bereshit Rabbah 85:1 | CREDIT — no-bearing at gen_08_toledot_garden_first_rule |
-| 37 | Bereshit Rabbah 85:11 | fresh · also in gen_61_yehuda_tamar |
+| 37 | Bereshit Rabbah 85:11 | CREDIT — material at gen_37_laughter_wilderness_oath |
 | 38 | Bereshit Rabbah 85:2 | CREDIT — dup-of at gen_09_helper_woman_first_speech |
 | 39 | Bereshit Rabbah 85:3 | fresh · also in gen_61_yehuda_tamar |
 | 40 | Bereshit Rabbah 86:1 | fresh · also in gen_62_potifar_house |
@@ -89,33 +89,37 @@ each block still gets its own ledger.
 | 74 | Shabbat 10b:7 | fresh |
 | 75 | Shabbat 22a:1 | fresh |
 | 76 | Sifra, Shemini, Mekhilta DeMiluim II 3 | fresh |
-| 77 | Sifrei Devarim 31:6 | fresh |
-| 78 | Sifrei Devarim 334:3 | fresh |
-| 79 | Sifrei Devarim 347:3 | fresh |
-| 80 | Sotah 10b:7 | fresh · also in gen_61_yehuda_tamar |
-| 81 | Sotah 11a:1 | CREDIT — dup-of at gen_31_covenant_pieces |
-| 82 | Sotah 13b:4 | fresh |
-| 83 | Sotah 13b:7 | fresh · also in gen_61_yehuda_tamar |
-| 84 | Sotah 36b:16 | fresh |
-| 85 | Sotah 43a:2 | fresh |
-| 86 | Tosefta Berakhot (Lieberman) 4:16 | fresh |
-| 87 | Tosefta Berakhot (Lieberman) 4:18 | fresh |
-| 88 | Tosefta Berakhot 4:14 | fresh |
-| 89 | Tosefta Berakhot 4:16 | fresh |
-| 90 | Tosefta Kifshutah on Shabbat 17:11:1 | fresh |
-| 91 | Tosefta Sanhedrin 1:3 | fresh |
-| 92 | Vayikra Rabbah 10:6 | fresh |
-| 93 | Vayikra Rabbah 31:10 | CREDIT — dup-of at gen_19_the_remembering |
-| 94 | Vayikra Rabbah 34:8 | fresh |
-| 95 | Yevamot 121a | fresh |
+| 77 | Sifrei Bamidbar 105:1 | fresh |
+| 78 | Sifrei Bamidbar 131:1 | fresh |
+| 79 | Sifrei Bamidbar 157:4 | fresh |
+| 80 | Sifrei Bamidbar 69:2 | fresh |
+| 81 | Sifrei Devarim 31:6 | fresh |
+| 82 | Sifrei Devarim 334:3 | fresh |
+| 83 | Sifrei Devarim 347:3 | fresh |
+| 84 | Sotah 10b:7 | fresh · also in gen_61_yehuda_tamar |
+| 85 | Sotah 11a:1 | CREDIT — dup-of at gen_31_covenant_pieces |
+| 86 | Sotah 13b:4 | fresh |
+| 87 | Sotah 13b:7 | fresh · also in gen_61_yehuda_tamar |
+| 88 | Sotah 36b:16 | fresh |
+| 89 | Sotah 43a:2 | fresh |
+| 90 | Tosefta Berakhot (Lieberman) 4:16 | fresh |
+| 91 | Tosefta Berakhot (Lieberman) 4:18 | fresh |
+| 92 | Tosefta Berakhot 4:14 | fresh |
+| 93 | Tosefta Berakhot 4:16 | fresh |
+| 94 | Tosefta Kifshutah on Shabbat 17:11:1 | fresh |
+| 95 | Tosefta Sanhedrin 1:3 | fresh |
+| 96 | Vayikra Rabbah 10:6 | fresh |
+| 97 | Vayikra Rabbah 31:10 | CREDIT — dup-of at gen_19_the_remembering |
+| 98 | Vayikra Rabbah 34:8 | fresh |
+| 99 | Yevamot 121a | fresh |
 | — | Onkelos Genesis 37:1-36 (36 verses) | derive-time credit (foundation layer) |
 
 ## gen_61_yehuda_tamar — Genesis 38:1-30
 
 - enumerated: 2452 distinct linked sources
-- declared: 108 = 78 chain primaries + 30 Onkelos verses
-- credited (standing verdicts): 7 · FRESH TO READ: 71
-- outside declared scope (open narrowing, per the standing default): 2344
+- declared: 109 = 79 chain primaries + 30 Onkelos verses
+- credited (standing verdicts): 8 · FRESH TO READ: 71
+- outside declared scope (open narrowing, per the standing default): 2343
 
 | # | source | status |
 |---|--------|--------|
@@ -133,7 +137,7 @@ each block still gets its own ledger.
 | 12 | Bereshit Rabbah 84:21 | fresh · also in gen_60_dreamer_sold |
 | 13 | Bereshit Rabbah 85:1 | CREDIT — no-bearing at gen_08_toledot_garden_first_rule |
 | 14 | Bereshit Rabbah 85:10 | CREDIT — material at gen_30_war_of_kings |
-| 15 | Bereshit Rabbah 85:11 | fresh · also in gen_60_dreamer_sold |
+| 15 | Bereshit Rabbah 85:11 | CREDIT — material at gen_37_laughter_wilderness_oath |
 | 16 | Bereshit Rabbah 85:12 | fresh |
 | 17 | Bereshit Rabbah 85:13 | fresh |
 | 18 | Bereshit Rabbah 85:14 | fresh |
@@ -175,36 +179,37 @@ each block still gets its own ledger.
 | 54 | Pesachim 50a:15 | fresh |
 | 55 | Pesikta DeRav Kahana 12:1 | CREDIT — material at gen_08_toledot_garden_first_rule |
 | 56 | Sanhedrin 102a:5 | fresh |
-| 57 | Sifrei Devarim 260:2 | fresh |
-| 58 | Sifrei Devarim 348:1 | fresh |
-| 59 | Sotah 10a:16 | fresh |
-| 60 | Sotah 10a:19 | fresh |
-| 61 | Sotah 10b:12 | fresh |
-| 62 | Sotah 10b:2 | fresh |
-| 63 | Sotah 10b:4 | fresh |
-| 64 | Sotah 10b:6 | fresh |
-| 65 | Sotah 10b:7 | fresh · also in gen_60_dreamer_sold |
-| 66 | Sotah 10b:9 | fresh |
-| 67 | Sotah 13b:7 | fresh · also in gen_60_dreamer_sold |
-| 68 | Sotah 13b:8 | fresh |
-| 69 | Sotah 7b:8 | fresh |
-| 70 | Tosefta Kifshutah on Yevamot 14:10:8 | fresh |
-| 71 | Tosefta Kifshutah on Yevamot 6:3:8 | fresh |
-| 72 | Tosefta Niddah 1:4 | fresh |
-| 73 | Tosefta Sotah (Lieberman) 9:3 | fresh |
-| 74 | Tosefta Sotah 9:5 | fresh |
-| 75 | Vayikra Rabbah 2:10 | CREDIT — enrichment at gen_20_exit_altar |
-| 76 | Yevamot 34b:3 | fresh |
-| 77 | Yevamot 34b:4 | fresh |
-| 78 | Yevamot 59a:8 | fresh |
+| 57 | Sifrei Bamidbar 88:1 | fresh |
+| 58 | Sifrei Devarim 260:2 | fresh |
+| 59 | Sifrei Devarim 348:1 | fresh |
+| 60 | Sotah 10a:16 | fresh |
+| 61 | Sotah 10a:19 | fresh |
+| 62 | Sotah 10b:12 | fresh |
+| 63 | Sotah 10b:2 | fresh |
+| 64 | Sotah 10b:4 | fresh |
+| 65 | Sotah 10b:6 | fresh |
+| 66 | Sotah 10b:7 | fresh · also in gen_60_dreamer_sold |
+| 67 | Sotah 10b:9 | fresh |
+| 68 | Sotah 13b:7 | fresh · also in gen_60_dreamer_sold |
+| 69 | Sotah 13b:8 | fresh |
+| 70 | Sotah 7b:8 | fresh |
+| 71 | Tosefta Kifshutah on Yevamot 14:10:8 | fresh |
+| 72 | Tosefta Kifshutah on Yevamot 6:3:8 | fresh |
+| 73 | Tosefta Niddah 1:4 | fresh |
+| 74 | Tosefta Sotah (Lieberman) 9:3 | fresh |
+| 75 | Tosefta Sotah 9:5 | fresh |
+| 76 | Vayikra Rabbah 2:10 | CREDIT — enrichment at gen_20_exit_altar |
+| 77 | Yevamot 34b:3 | fresh |
+| 78 | Yevamot 34b:4 | fresh |
+| 79 | Yevamot 59a:8 | fresh |
 | — | Onkelos Genesis 38:1-30 (30 verses) | derive-time credit (foundation layer) |
 
 ## gen_62_potifar_house — Genesis 39:1-23
 
 - enumerated: 1957 distinct linked sources
-- declared: 97 = 74 chain primaries + 23 Onkelos verses
-- credited (standing verdicts): 18 · FRESH TO READ: 56
-- outside declared scope (open narrowing, per the standing default): 1860
+- declared: 99 = 76 chain primaries + 23 Onkelos verses
+- credited (standing verdicts): 21 · FRESH TO READ: 55
+- outside declared scope (open narrowing, per the standing default): 1858
 
 | # | source | status |
 |---|--------|--------|
@@ -215,9 +220,9 @@ each block still gets its own ledger.
 | 5 | Bereshit Rabbah 29:4 | CREDIT — material at gen_15_flood_prologue |
 | 6 | Bereshit Rabbah 41:7 | CREDIT — material at gen_29_separation_promise |
 | 7 | Bereshit Rabbah 42:3 | CREDIT — enrichment at gen_01_creation_boot |
-| 8 | Bereshit Rabbah 53:10 | fresh |
-| 9 | Bereshit Rabbah 53:11 | fresh |
-| 10 | Bereshit Rabbah 55:2 | fresh |
+| 8 | Bereshit Rabbah 53:10 | CREDIT — material at gen_37_laughter_wilderness_oath |
+| 9 | Bereshit Rabbah 53:11 | CREDIT — material at gen_37_laughter_wilderness_oath |
+| 10 | Bereshit Rabbah 55:2 | CREDIT — material at gen_38_moriah_binding_oath |
 | 11 | Bereshit Rabbah 60:15 | fresh · also in gen_60_dreamer_sold, gen_61_yehuda_tamar |
 | 12 | Bereshit Rabbah 70:4 | fresh |
 | 13 | Bereshit Rabbah 73:8 | fresh |
@@ -266,22 +271,24 @@ each block still gets its own ledger.
 | 56 | Sanhedrin 109a:9 | fresh |
 | 57 | Sanhedrin 39b:11 | fresh |
 | 58 | Shabbat 49b:8 | fresh |
-| 59 | Sifrei Devarim 38:8 | fresh |
-| 60 | Sotah 13b:11 | fresh |
-| 61 | Sotah 13b:12 | fresh |
-| 62 | Sotah 36b:11 | fresh |
-| 63 | Sotah 36b:12 | fresh |
-| 64 | Sotah 36b:13 | fresh |
-| 65 | Sotah 3b:14 | fresh |
-| 66 | Tosefta Sotah (Lieberman) 10:8 | fresh |
-| 67 | Tosefta Sotah (Lieberman) 6:6 | fresh |
-| 68 | Tosefta Sotah 10:3 | fresh |
-| 69 | Tosefta Sotah 6:3 | fresh |
-| 70 | Vayikra Rabbah 11:7 | CREDIT — dup-of at gen_01_creation_boot |
-| 71 | Vayikra Rabbah 23:11 | fresh |
-| 72 | Vayikra Rabbah 32:5 | CREDIT — material at gen_28_egypt_descent |
-| 73 | Yoma 35b:12 | fresh |
-| 74 | Yoma 35b:13 | fresh |
+| 59 | Sifrei Bamidbar 41:1 | fresh |
+| 60 | Sifrei Bamidbar 84:4 | fresh |
+| 61 | Sifrei Devarim 38:8 | fresh |
+| 62 | Sotah 13b:11 | fresh |
+| 63 | Sotah 13b:12 | fresh |
+| 64 | Sotah 36b:11 | fresh |
+| 65 | Sotah 36b:12 | fresh |
+| 66 | Sotah 36b:13 | fresh |
+| 67 | Sotah 3b:14 | fresh |
+| 68 | Tosefta Sotah (Lieberman) 10:8 | fresh |
+| 69 | Tosefta Sotah (Lieberman) 6:6 | fresh |
+| 70 | Tosefta Sotah 10:3 | fresh |
+| 71 | Tosefta Sotah 6:3 | fresh |
+| 72 | Vayikra Rabbah 11:7 | CREDIT — dup-of at gen_01_creation_boot |
+| 73 | Vayikra Rabbah 23:11 | fresh |
+| 74 | Vayikra Rabbah 32:5 | CREDIT — material at gen_28_egypt_descent |
+| 75 | Yoma 35b:12 | fresh |
+| 76 | Yoma 35b:13 | fresh |
 | — | Onkelos Genesis 39:1-23 (23 verses) | derive-time credit (foundation layer) |
 
 ## gen_63_two_dreams_prison — Genesis 40:1-23

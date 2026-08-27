@@ -428,10 +428,10 @@ each block still gets its own ledger.
 ## gen_15_flood_prologue — Genesis 6:1-8
 
 - enumerated: 1691 distinct linked sources
-- declared: 75 = 67 chain primaries + 8 Onkelos verses
-- credited (standing verdicts): 67 · FRESH TO READ: 0
+- declared: 76 = 68 chain primaries + 8 Onkelos verses
+- credited (standing verdicts): 67 · FRESH TO READ: 1
 - excluded with cause (register false positive): Shabbat Siddur Sefard Linear, The Morning Prayers, Recitation of Shema 56
-- outside declared scope (open narrowing, per the standing default): 1615
+- outside declared scope (open narrowing, per the standing default): 1614
 
 | # | source | status |
 |---|--------|--------|
@@ -490,16 +490,17 @@ each block still gets its own ledger.
 | 53 | Sanhedrin 108a:15 | CREDIT — material at gen_15_flood_prologue |
 | 54 | Sanhedrin 108a:5 | CREDIT — dup-of at gen_15_flood_prologue |
 | 55 | Sanhedrin 108a:9 | CREDIT — dup-of at gen_15_flood_prologue |
-| 56 | Sifrei Devarim 326:1 | CREDIT — material at gen_15_flood_prologue |
-| 57 | Sifrei Devarim 43:31 | CREDIT — material at gen_15_flood_prologue |
-| 58 | Sukkah 52a:13 | CREDIT — dup-of at gen_15_flood_prologue |
-| 59 | Sukkah 52b:1 | CREDIT — material at gen_15_flood_prologue |
-| 60 | Tosefta Sanhedrin 13:1 | CREDIT — material at gen_15_flood_prologue |
-| 61 | Tosefta Sotah (Lieberman) 3:9 | CREDIT — dup-of at gen_15_flood_prologue |
-| 62 | Tosefta Sotah (Lieberman) 4:11 | CREDIT — dup-of at gen_15_flood_prologue |
-| 63 | Tosefta Sotah 3:2 | CREDIT — dup-of at gen_08_toledot_garden_first_rule |
-| 64 | Tosefta Sotah 4:3 | CREDIT — no-bearing at gen_10_serpent_violation_trace |
-| 65 | Tosefta Sotah 4:4 | CREDIT — dup-of at gen_15_flood_prologue |
-| 66 | Vayikra Rabbah 23:9 | CREDIT — dup-of at gen_15_flood_prologue |
-| 67 | Yoma 67b:7 | CREDIT — material at gen_15_flood_prologue |
+| 56 | Sifrei Bamidbar 86:1 | fresh |
+| 57 | Sifrei Devarim 326:1 | CREDIT — material at gen_15_flood_prologue |
+| 58 | Sifrei Devarim 43:31 | CREDIT — material at gen_15_flood_prologue |
+| 59 | Sukkah 52a:13 | CREDIT — dup-of at gen_15_flood_prologue |
+| 60 | Sukkah 52b:1 | CREDIT — material at gen_15_flood_prologue |
+| 61 | Tosefta Sanhedrin 13:1 | CREDIT — material at gen_15_flood_prologue |
+| 62 | Tosefta Sotah (Lieberman) 3:9 | CREDIT — dup-of at gen_15_flood_prologue |
+| 63 | Tosefta Sotah (Lieberman) 4:11 | CREDIT — dup-of at gen_15_flood_prologue |
+| 64 | Tosefta Sotah 3:2 | CREDIT — dup-of at gen_08_toledot_garden_first_rule |
+| 65 | Tosefta Sotah 4:3 | CREDIT — no-bearing at gen_10_serpent_violation_trace |
+| 66 | Tosefta Sotah 4:4 | CREDIT — dup-of at gen_15_flood_prologue |
+| 67 | Vayikra Rabbah 23:9 | CREDIT — dup-of at gen_15_flood_prologue |
+| 68 | Yoma 67b:7 | CREDIT — material at gen_15_flood_prologue |
 | — | Onkelos Genesis 6:1-8 (8 verses) | derive-time credit (foundation layer) |

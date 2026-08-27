@@ -7,10 +7,10 @@ each block still gets its own ledger.
 ## gen_56_blessing_returned_first_altar — Genesis 33:1-20
 
 - enumerated: 2150 distinct linked sources
-- declared: 76 = 56 chain primaries + 20 Onkelos verses
-- credited (standing verdicts): 5 · FRESH TO READ: 51
+- declared: 77 = 57 chain primaries + 20 Onkelos verses
+- credited (standing verdicts): 6 · FRESH TO READ: 51
 - excluded with cause (register false positive): Shabbat Siddur Sefard Linear, Birchas Hamazon, Birchas Hamazon 312
-- outside declared scope (open narrowing, per the standing default): 2073
+- outside declared scope (open narrowing, per the standing default): 2072
 
 | # | source | status |
 |---|--------|--------|
@@ -31,7 +31,7 @@ each block still gets its own ledger.
 | 15 | Bereshit Rabbah 78:16 | fresh |
 | 16 | Bereshit Rabbah 78:3 | CREDIT — dup-of at gen_33_shaddai_covenant_flesh |
 | 17 | Bereshit Rabbah 78:7 | fresh |
-| 18 | Bereshit Rabbah 78:8 | fresh |
+| 18 | Bereshit Rabbah 78:8 | CREDIT — enrichment at gen_34_mamre_laugh_plea |
 | 19 | Bereshit Rabbah 78:9 | fresh |
 | 20 | Bereshit Rabbah 79:1 | fresh · also in gen_58_israel_written_three_deaths |
 | 21 | Bereshit Rabbah 79:2 | fresh |
@@ -62,22 +62,23 @@ each block still gets its own ledger.
 | 46 | Pesikta DeRav Kahana 4:3 | CREDIT — enrichment at gen_05_swarms_blessing |
 | 47 | Rosh Hashanah 26a:18 | fresh |
 | 48 | Shabbat 33b:10 | fresh |
-| 49 | Sifrei Devarim 322:8 | fresh |
-| 50 | Sifrei Devarim 356:13 | fresh |
-| 51 | Sifrei Devarim 8:1 | CREDIT — material at gen_29_separation_promise |
-| 52 | Sotah 41b:9 | fresh |
-| 53 | Sotah 5a:5 | fresh |
-| 54 | Sukkah 39a:3 | fresh |
-| 55 | Sukkah 5b:2 | fresh |
-| 56 | Tosefta Avodah Zarah 3:1 | fresh |
+| 49 | Sifrei Bamidbar 69:2 | fresh |
+| 50 | Sifrei Devarim 322:8 | fresh |
+| 51 | Sifrei Devarim 356:13 | fresh |
+| 52 | Sifrei Devarim 8:1 | CREDIT — material at gen_29_separation_promise |
+| 53 | Sotah 41b:9 | fresh |
+| 54 | Sotah 5a:5 | fresh |
+| 55 | Sukkah 39a:3 | fresh |
+| 56 | Sukkah 5b:2 | fresh |
+| 57 | Tosefta Avodah Zarah 3:1 | fresh |
 | — | Onkelos Genesis 33:1-20 (20 verses) | derive-time credit (foundation layer) |
 
 ## gen_57_deceit_at_the_gate — Genesis 34:1-31
 
 - enumerated: 1864 distinct linked sources
-- declared: 86 = 55 chain primaries + 31 Onkelos verses
-- credited (standing verdicts): 13 · FRESH TO READ: 42
-- outside declared scope (open narrowing, per the standing default): 1778
+- declared: 87 = 56 chain primaries + 31 Onkelos verses
+- credited (standing verdicts): 14 · FRESH TO READ: 42
+- outside declared scope (open narrowing, per the standing default): 1777
 
 | # | source | status |
 |---|--------|--------|
@@ -85,7 +86,7 @@ each block still gets its own ledger.
 | 2 | Bereshit Rabbah 18:2 | CREDIT — material at gen_09_helper_woman_first_speech |
 | 3 | Bereshit Rabbah 19:12 | CREDIT — material at gen_10_serpent_violation_trace |
 | 4 | Bereshit Rabbah 45:5 | CREDIT — enrichment at gen_10_serpent_violation_trace |
-| 5 | Bereshit Rabbah 57:4 | fresh |
+| 5 | Bereshit Rabbah 57:4 | CREDIT — material at gen_38_moriah_binding_oath |
 | 6 | Bereshit Rabbah 73:9 | fresh |
 | 7 | Bereshit Rabbah 76:9 | fresh |
 | 8 | Bereshit Rabbah 79:8 | fresh · also in gen_56_blessing_returned_first_altar |
@@ -130,12 +131,13 @@ each block still gets its own ledger.
 | 47 | Sanhedrin 70a:19 | CREDIT — material at gen_23_vineyard_curse |
 | 48 | Shabbat 134b:1 | fresh |
 | 49 | Shabbat 86a:2 | fresh |
-| 50 | Sifrei Devarim 348:7 | fresh · also in gen_58_israel_written_three_deaths |
-| 51 | Sifrei Devarim 349:1 | fresh |
-| 52 | Sotah 33b:8 | fresh |
-| 53 | Taanit 27b:8 | fresh |
-| 54 | Vayikra Rabbah 37:1 | fresh · also in gen_58_israel_written_three_deaths |
-| 55 | Yoma 77b:3 | fresh |
+| 50 | Sifrei Bamidbar 131:3 | fresh |
+| 51 | Sifrei Devarim 348:7 | fresh · also in gen_58_israel_written_three_deaths |
+| 52 | Sifrei Devarim 349:1 | fresh |
+| 53 | Sotah 33b:8 | fresh |
+| 54 | Taanit 27b:8 | fresh |
+| 55 | Vayikra Rabbah 37:1 | fresh · also in gen_58_israel_written_three_deaths |
+| 56 | Yoma 77b:3 | fresh |
 | — | Onkelos Genesis 34:1-31 (31 verses) | derive-time credit (foundation layer) |
 
 ## gen_58_israel_written_three_deaths — Genesis 35:1-29
@@ -241,9 +243,9 @@ each block still gets its own ledger.
 ## gen_59_esau_edom_kings_ledger — Genesis 36:1-43
 
 - enumerated: 1740 distinct linked sources
-- declared: 78 = 35 chain primaries + 43 Onkelos verses
-- credited (standing verdicts): 8 · FRESH TO READ: 27
-- outside declared scope (open narrowing, per the standing default): 1662
+- declared: 80 = 37 chain primaries + 43 Onkelos verses
+- credited (standing verdicts): 8 · FRESH TO READ: 29
+- outside declared scope (open narrowing, per the standing default): 1660
 
 | # | source | status |
 |---|--------|--------|
@@ -280,6 +282,8 @@ each block still gets its own ledger.
 | 31 | Sanhedrin 99b:5 | fresh |
 | 32 | Sanhedrin 99b:7 | fresh |
 | 33 | Shabbat 85a:2 | fresh |
-| 34 | Sifrei Devarim 336:1 | fresh |
-| 35 | Vayikra Rabbah 4:6 | fresh |
+| 34 | Sifrei Bamidbar 112:2 | fresh |
+| 35 | Sifrei Bamidbar 157:1 | fresh |
+| 36 | Sifrei Devarim 336:1 | fresh |
+| 37 | Vayikra Rabbah 4:6 | fresh |
 | — | Onkelos Genesis 36:1-43 (43 verses) | derive-time credit (foundation layer) |

@@ -7,9 +7,9 @@ each block still gets its own ledger.
 ## gen_27_the_call — Genesis 12:1-9
 
 - enumerated: 2768 distinct linked sources
-- declared: 71 = 62 chain primaries + 9 Onkelos verses
-- credited (standing verdicts): 61 · FRESH TO READ: 1
-- outside declared scope (open narrowing, per the standing default): 2697
+- declared: 72 = 63 chain primaries + 9 Onkelos verses
+- credited (standing verdicts): 61 · FRESH TO READ: 2
+- outside declared scope (open narrowing, per the standing default): 2696
 
 | # | source | status |
 |---|--------|--------|
@@ -62,27 +62,28 @@ each block still gets its own ledger.
 | 47 | Pirkei Avot 4:1 | CREDIT — no-bearing at gen_27_the_call |
 | 48 | Rosh Hashanah 16b:7 | CREDIT — material at gen_27_the_call |
 | 49 | Sanhedrin 99b:12 | CREDIT — material at gen_27_the_call |
-| 50 | Sifrei Devarim 27:3 | CREDIT — no-bearing at gen_27_the_call |
-| 51 | Sifrei Devarim 311:1 | CREDIT — material at gen_27_the_call |
-| 52 | Sifrei Devarim 313:2 | CREDIT — enrichment at gen_27_the_call |
-| 53 | Sifrei Devarim 32:2 | CREDIT — dup-of at gen_27_the_call |
-| 54 | Sifrei Devarim 56:3 | CREDIT — dup-of at gen_27_the_call |
-| 55 | Sifrei Devarim 75:2 | CREDIT — enrichment at gen_27_the_call |
-| 56 | Sotah 32a:10 | CREDIT — dup-of at gen_27_the_call |
-| 57 | Sotah 33b:5 | CREDIT — dup-of at gen_27_the_call |
-| 58 | Sotah 38b:3 | CREDIT — material at gen_27_the_call |
-| 59 | Vayikra Rabbah 10:1 | CREDIT — dup-of at gen_27_the_call |
-| 60 | Vayikra Rabbah 11:7 | CREDIT — dup-of at gen_01_creation_boot |
-| 61 | Vayikra Rabbah 35:11 | CREDIT — enrichment at gen_27_the_call |
-| 62 | Yevamot 63a:6 | fresh |
+| 50 | Sifrei Bamidbar 18:1 | fresh |
+| 51 | Sifrei Devarim 27:3 | CREDIT — no-bearing at gen_27_the_call |
+| 52 | Sifrei Devarim 311:1 | CREDIT — material at gen_27_the_call |
+| 53 | Sifrei Devarim 313:2 | CREDIT — enrichment at gen_27_the_call |
+| 54 | Sifrei Devarim 32:2 | CREDIT — dup-of at gen_27_the_call |
+| 55 | Sifrei Devarim 56:3 | CREDIT — dup-of at gen_27_the_call |
+| 56 | Sifrei Devarim 75:2 | CREDIT — enrichment at gen_27_the_call |
+| 57 | Sotah 32a:10 | CREDIT — dup-of at gen_27_the_call |
+| 58 | Sotah 33b:5 | CREDIT — dup-of at gen_27_the_call |
+| 59 | Sotah 38b:3 | CREDIT — material at gen_27_the_call |
+| 60 | Vayikra Rabbah 10:1 | CREDIT — dup-of at gen_27_the_call |
+| 61 | Vayikra Rabbah 11:7 | CREDIT — dup-of at gen_01_creation_boot |
+| 62 | Vayikra Rabbah 35:11 | CREDIT — enrichment at gen_27_the_call |
+| 63 | Yevamot 63a:6 | fresh |
 | — | Onkelos Genesis 12:1-9 (9 verses) | derive-time credit (foundation layer) |
 
 ## gen_28_egypt_descent — Genesis 12:10-20
 
 - enumerated: 1183 distinct linked sources
-- declared: 45 = 34 chain primaries + 11 Onkelos verses
-- credited (standing verdicts): 32 · FRESH TO READ: 2
-- outside declared scope (open narrowing, per the standing default): 1138
+- declared: 46 = 35 chain primaries + 11 Onkelos verses
+- credited (standing verdicts): 32 · FRESH TO READ: 3
+- outside declared scope (open narrowing, per the standing default): 1137
 
 | # | source | status |
 |---|--------|--------|
@@ -115,20 +116,21 @@ each block still gets its own ledger.
 | 27 | Pirkei Avot 5:19 | CREDIT — no-bearing at gen_28_egypt_descent |
 | 28 | Sanhedrin 39b:12 | CREDIT — no-bearing at gen_28_egypt_descent |
 | 29 | Sanhedrin 39b:21 | CREDIT — material at gen_28_egypt_descent |
-| 30 | Sifrei Devarim 311:1 | CREDIT — material at gen_27_the_call |
-| 31 | Sotah 46b:14 | CREDIT — material at gen_28_egypt_descent |
-| 32 | Vayikra Rabbah 16:1 | CREDIT — material at gen_28_egypt_descent |
-| 33 | Vayikra Rabbah 32:5 | CREDIT — material at gen_28_egypt_descent |
-| 34 | Yevamot 13b:6 | CREDIT — material at gen_28_egypt_descent |
+| 30 | Sifrei Bamidbar 99:1 | fresh |
+| 31 | Sifrei Devarim 311:1 | CREDIT — material at gen_27_the_call |
+| 32 | Sotah 46b:14 | CREDIT — material at gen_28_egypt_descent |
+| 33 | Vayikra Rabbah 16:1 | CREDIT — material at gen_28_egypt_descent |
+| 34 | Vayikra Rabbah 32:5 | CREDIT — material at gen_28_egypt_descent |
+| 35 | Yevamot 13b:6 | CREDIT — material at gen_28_egypt_descent |
 | — | Onkelos Genesis 12:10-20 (11 verses) | derive-time credit (foundation layer) |
 
 ## gen_29_separation_promise — Genesis 13:1-18
 
 - enumerated: 1836 distinct linked sources
-- declared: 87 = 69 chain primaries + 18 Onkelos verses
-- credited (standing verdicts): 62 · FRESH TO READ: 7
+- declared: 88 = 70 chain primaries + 18 Onkelos verses
+- credited (standing verdicts): 62 · FRESH TO READ: 8
 - excluded with cause (register false positive): Shabbat Siddur Sefard Linear, The Morning Prayers, Hodu 32 · Shabbat Siddur Sefard Linear, The Morning Prayers, Shiras Hayam 66
-- outside declared scope (open narrowing, per the standing default): 1747
+- outside declared scope (open narrowing, per the standing default): 1746
 
 | # | source | status |
 |---|--------|--------|
@@ -183,24 +185,25 @@ each block still gets its own ledger.
 | 49 | Shabbat 118b:1 | fresh |
 | 50 | Sifra, Bechukotai, Section 2 2 | CREDIT — material at gen_29_separation_promise |
 | 51 | Sifra, Bechukotai, Section 2 3 | CREDIT — no-bearing at gen_29_separation_promise |
-| 52 | Sifrei Devarim 11:1 | CREDIT — enrichment at gen_29_separation_promise |
-| 53 | Sifrei Devarim 25:4 | CREDIT — material at gen_29_separation_promise |
-| 54 | Sifrei Devarim 286:1 | CREDIT — material at gen_29_separation_promise |
-| 55 | Sifrei Devarim 292:1 | CREDIT — dup-of at gen_29_separation_promise |
-| 56 | Sifrei Devarim 311:5 | CREDIT — material at gen_25_babel |
-| 57 | Sifrei Devarim 36:10 | CREDIT — material at gen_29_separation_promise |
-| 58 | Sifrei Devarim 37:2 | CREDIT — dup-of at gen_29_separation_promise |
-| 59 | Sifrei Devarim 38:6 | CREDIT — material at gen_29_separation_promise |
-| 60 | Sifrei Devarim 43:11 | CREDIT — dup-of at gen_29_separation_promise |
-| 61 | Sifrei Devarim 8:1 | CREDIT — material at gen_29_separation_promise |
-| 62 | Sotah 34b:12 | fresh |
-| 63 | Tosefta Sanhedrin 13:1 | CREDIT — material at gen_15_flood_prologue |
-| 64 | Tosefta Shabbat (Lieberman) 7:22 | CREDIT — dup-of at gen_29_separation_promise |
-| 65 | Tosefta Shabbat 8:12 | CREDIT — material at gen_29_separation_promise |
-| 66 | Yevamot 13b:6 | CREDIT — material at gen_28_egypt_descent |
-| 67 | Yevamot 17b:6 | CREDIT — material at gen_29_separation_promise |
-| 68 | Yoma 38b:11 | CREDIT — not-bearing at gen_01_creation_boot |
-| 69 | Yoma 38b:8 | fresh |
+| 52 | Sifrei Bamidbar 136:1 | fresh |
+| 53 | Sifrei Devarim 11:1 | CREDIT — enrichment at gen_29_separation_promise |
+| 54 | Sifrei Devarim 25:4 | CREDIT — material at gen_29_separation_promise |
+| 55 | Sifrei Devarim 286:1 | CREDIT — material at gen_29_separation_promise |
+| 56 | Sifrei Devarim 292:1 | CREDIT — dup-of at gen_29_separation_promise |
+| 57 | Sifrei Devarim 311:5 | CREDIT — material at gen_25_babel |
+| 58 | Sifrei Devarim 36:10 | CREDIT — material at gen_29_separation_promise |
+| 59 | Sifrei Devarim 37:2 | CREDIT — dup-of at gen_29_separation_promise |
+| 60 | Sifrei Devarim 38:6 | CREDIT — material at gen_29_separation_promise |
+| 61 | Sifrei Devarim 43:11 | CREDIT — dup-of at gen_29_separation_promise |
+| 62 | Sifrei Devarim 8:1 | CREDIT — material at gen_29_separation_promise |
+| 63 | Sotah 34b:12 | fresh |
+| 64 | Tosefta Sanhedrin 13:1 | CREDIT — material at gen_15_flood_prologue |
+| 65 | Tosefta Shabbat (Lieberman) 7:22 | CREDIT — dup-of at gen_29_separation_promise |
+| 66 | Tosefta Shabbat 8:12 | CREDIT — material at gen_29_separation_promise |
+| 67 | Yevamot 13b:6 | CREDIT — material at gen_28_egypt_descent |
+| 68 | Yevamot 17b:6 | CREDIT — material at gen_29_separation_promise |
+| 69 | Yoma 38b:11 | CREDIT — not-bearing at gen_01_creation_boot |
+| 70 | Yoma 38b:8 | fresh |
 | — | Onkelos Genesis 13:1-18 (18 verses) | derive-time credit (foundation layer) |
 
 ## gen_30_war_of_kings — Genesis 14:1-24
@@ -292,10 +295,10 @@ each block still gets its own ledger.
 ## gen_31_covenant_pieces — Genesis 15:1-21
 
 - enumerated: 4084 distinct linked sources
-- declared: 145 = 124 chain primaries + 21 Onkelos verses
-- credited (standing verdicts): 121 · FRESH TO READ: 3
+- declared: 146 = 125 chain primaries + 21 Onkelos verses
+- credited (standing verdicts): 121 · FRESH TO READ: 4
 - excluded with cause (register false positive): Shabbat Siddur Sefard Linear, Prayers for Yom Tov, Musaf for Yom Tov, Prayer for Rain 32
-- outside declared scope (open narrowing, per the standing default): 3938
+- outside declared scope (open narrowing, per the standing default): 3937
 
 | # | source | status |
 |---|--------|--------|
@@ -407,30 +410,31 @@ each block still gets its own ledger.
 | 106 | Shabbat 156a:13 | CREDIT — material at gen_31_covenant_pieces |
 | 107 | Shabbat 89b:3 | CREDIT — material at gen_31_covenant_pieces |
 | 108 | Shabbat 97a:5 | CREDIT — material at gen_31_covenant_pieces |
-| 109 | Sifrei Devarim 171:6 | CREDIT — material at gen_31_covenant_pieces |
-| 110 | Sifrei Devarim 313:1 | CREDIT — material at gen_31_covenant_pieces |
-| 111 | Sifrei Devarim 319:3 | CREDIT — no-bearing at gen_31_covenant_pieces |
-| 112 | Sifrei Devarim 75:2 | CREDIT — enrichment at gen_27_the_call |
-| 113 | Sotah 11a:1 | CREDIT — dup-of at gen_31_covenant_pieces |
-| 114 | Sotah 46b:14 | CREDIT — material at gen_28_egypt_descent |
-| 115 | Taanit 27b:3 | fresh |
-| 116 | Taanit 27b:4 | fresh |
-| 117 | Tosefta Eduyot 1:11 | CREDIT — material at gen_31_covenant_pieces |
-| 118 | Vayikra Rabbah 11:5 | CREDIT — material at gen_31_covenant_pieces |
-| 119 | Vayikra Rabbah 13:5 | CREDIT — dup-of at gen_08_toledot_garden_first_rule |
-| 120 | Vayikra Rabbah 17:5 | CREDIT — material at gen_23_vineyard_curse |
-| 121 | Vayikra Rabbah 1:4 | CREDIT — material at gen_30_war_of_kings |
-| 122 | Vayikra Rabbah 33:2 | CREDIT — material at gen_31_covenant_pieces |
-| 123 | Vayikra Rabbah 3:3 | CREDIT — dup-of at gen_31_covenant_pieces |
-| 124 | Yoma 28b:8 | CREDIT — material at gen_31_covenant_pieces |
+| 109 | Sifrei Bamidbar 42:2 | fresh |
+| 110 | Sifrei Devarim 171:6 | CREDIT — material at gen_31_covenant_pieces |
+| 111 | Sifrei Devarim 313:1 | CREDIT — material at gen_31_covenant_pieces |
+| 112 | Sifrei Devarim 319:3 | CREDIT — no-bearing at gen_31_covenant_pieces |
+| 113 | Sifrei Devarim 75:2 | CREDIT — enrichment at gen_27_the_call |
+| 114 | Sotah 11a:1 | CREDIT — dup-of at gen_31_covenant_pieces |
+| 115 | Sotah 46b:14 | CREDIT — material at gen_28_egypt_descent |
+| 116 | Taanit 27b:3 | fresh |
+| 117 | Taanit 27b:4 | fresh |
+| 118 | Tosefta Eduyot 1:11 | CREDIT — material at gen_31_covenant_pieces |
+| 119 | Vayikra Rabbah 11:5 | CREDIT — material at gen_31_covenant_pieces |
+| 120 | Vayikra Rabbah 13:5 | CREDIT — dup-of at gen_08_toledot_garden_first_rule |
+| 121 | Vayikra Rabbah 17:5 | CREDIT — material at gen_23_vineyard_curse |
+| 122 | Vayikra Rabbah 1:4 | CREDIT — material at gen_30_war_of_kings |
+| 123 | Vayikra Rabbah 33:2 | CREDIT — material at gen_31_covenant_pieces |
+| 124 | Vayikra Rabbah 3:3 | CREDIT — dup-of at gen_31_covenant_pieces |
+| 125 | Yoma 28b:8 | CREDIT — material at gen_31_covenant_pieces |
 | — | Onkelos Genesis 15:1-21 (21 verses) | derive-time credit (foundation layer) |
 
 ## gen_32_hagar_angel — Genesis 16:1-16
 
 - enumerated: 1427 distinct linked sources
-- declared: 60 = 44 chain primaries + 16 Onkelos verses
-- credited (standing verdicts): 44 · FRESH TO READ: 0
-- outside declared scope (open narrowing, per the standing default): 1367
+- declared: 61 = 45 chain primaries + 16 Onkelos verses
+- credited (standing verdicts): 44 · FRESH TO READ: 1
+- outside declared scope (open narrowing, per the standing default): 1366
 
 | # | source | status |
 |---|--------|--------|
@@ -472,12 +476,13 @@ each block still gets its own ledger.
 | 36 | Mishnah Nazir 2:7 | CREDIT — no-bearing at gen_32_hagar_angel |
 | 37 | Mishnah Yevamot 6:6 | CREDIT — enrichment at gen_05_swarms_blessing |
 | 38 | Rosh Hashanah 16b:5 | CREDIT — material at gen_32_hagar_angel |
-| 39 | Sifrei Devarim 313:1 | CREDIT — material at gen_31_covenant_pieces |
-| 40 | Sifrei Devarim 343:6 | CREDIT — dup-of at gen_32_hagar_angel |
-| 41 | Tosefta Sotah (Lieberman) 5:12 | CREDIT — material at gen_32_hagar_angel |
-| 42 | Tosefta Sotah 5:7 | CREDIT — dup-of at gen_32_hagar_angel |
-| 43 | Tosefta Yevamot 8:4 | CREDIT — material at gen_32_hagar_angel |
-| 44 | Yevamot 64a:5 | CREDIT — material at gen_32_hagar_angel |
+| 39 | Sifrei Bamidbar 69:2 | fresh |
+| 40 | Sifrei Devarim 313:1 | CREDIT — material at gen_31_covenant_pieces |
+| 41 | Sifrei Devarim 343:6 | CREDIT — dup-of at gen_32_hagar_angel |
+| 42 | Tosefta Sotah (Lieberman) 5:12 | CREDIT — material at gen_32_hagar_angel |
+| 43 | Tosefta Sotah 5:7 | CREDIT — dup-of at gen_32_hagar_angel |
+| 44 | Tosefta Yevamot 8:4 | CREDIT — material at gen_32_hagar_angel |
+| 45 | Yevamot 64a:5 | CREDIT — material at gen_32_hagar_angel |
 | — | Onkelos Genesis 16:1-16 (16 verses) | derive-time credit (foundation layer) |
 
 ## gen_33_shaddai_covenant_flesh — Genesis 17:1-27

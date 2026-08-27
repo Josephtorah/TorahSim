@@ -7,9 +7,9 @@ each block still gets its own ledger.
 ## gen_43_isaac_twins_birthright — Genesis 25:19-34
 
 - enumerated: 3421 distinct linked sources
-- declared: 97 = 81 chain primaries + 16 Onkelos verses
-- credited (standing verdicts): 20 · FRESH TO READ: 61
-- outside declared scope (open narrowing, per the standing default): 3324
+- declared: 98 = 82 chain primaries + 16 Onkelos verses
+- credited (standing verdicts): 20 · FRESH TO READ: 62
+- outside declared scope (open narrowing, per the standing default): 3323
 
 | # | source | status |
 |---|--------|--------|
@@ -78,29 +78,30 @@ each block still gets its own ledger.
 | 63 | Sanhedrin 69a:4 | fresh |
 | 64 | Sanhedrin 91a:14 | fresh |
 | 65 | Sanhedrin 92a:1 | fresh |
-| 66 | Sifrei Devarim 26:7 | fresh |
-| 67 | Sifrei Devarim 312:1 | fresh |
-| 68 | Sifrei Devarim 319:1 | fresh |
-| 69 | Sifrei Devarim 336:1 | fresh |
-| 70 | Sifrei Devarim 343:7 | fresh |
-| 71 | Sifrei Devarim 343:8 | fresh |
-| 72 | Sotah 11a:11 | fresh |
-| 73 | Sotah 12b:3 | fresh |
-| 74 | Sotah 41b:13 | fresh |
-| 75 | Sukkah 14a:9 | fresh |
-| 76 | Tosefta Kifshutah on Gittin 1:1:8 | fresh |
-| 77 | Vayikra Rabbah 23:1 | fresh · also in gen_47_grudge_flight_paddan_send |
-| 78 | Vayikra Rabbah 30:16 | fresh |
-| 79 | Vayikra Rabbah 36:6 | fresh |
-| 80 | Yevamot 64a:6 | fresh |
-| 81 | Yevamot 64a:8 | fresh |
+| 66 | Sifrei Bamidbar 52:1 | fresh |
+| 67 | Sifrei Devarim 26:7 | fresh |
+| 68 | Sifrei Devarim 312:1 | fresh |
+| 69 | Sifrei Devarim 319:1 | fresh |
+| 70 | Sifrei Devarim 336:1 | fresh |
+| 71 | Sifrei Devarim 343:7 | fresh |
+| 72 | Sifrei Devarim 343:8 | fresh |
+| 73 | Sotah 11a:11 | fresh |
+| 74 | Sotah 12b:3 | fresh |
+| 75 | Sotah 41b:13 | fresh |
+| 76 | Sukkah 14a:9 | fresh |
+| 77 | Tosefta Kifshutah on Gittin 1:1:8 | fresh |
+| 78 | Vayikra Rabbah 23:1 | fresh · also in gen_47_grudge_flight_paddan_send |
+| 79 | Vayikra Rabbah 30:16 | fresh |
+| 80 | Vayikra Rabbah 36:6 | fresh |
+| 81 | Yevamot 64a:6 | fresh |
+| 82 | Yevamot 64a:8 | fresh |
 | — | Onkelos Genesis 25:19-34 (16 verses) | derive-time credit (foundation layer) |
 
 ## gen_44_isaac_gerar_sister_expel — Genesis 26:1-16
 
 - enumerated: 1767 distinct linked sources
 - declared: 58 = 42 chain primaries + 16 Onkelos verses
-- credited (standing verdicts): 15 · FRESH TO READ: 27
+- credited (standing verdicts): 17 · FRESH TO READ: 25
 - outside declared scope (open narrowing, per the standing default): 1709
 
 | # | source | status |
@@ -110,13 +111,13 @@ each block still gets its own ledger.
 | 3 | Bereshit Rabbah 64:1 | fresh |
 | 4 | Bereshit Rabbah 64:2 | CREDIT — dup-of at gen_11_sentences_exile |
 | 5 | Bereshit Rabbah 64:3 | fresh |
-| 6 | Bereshit Rabbah 64:4 | fresh |
+| 6 | Bereshit Rabbah 64:4 | CREDIT — material at gen_38_moriah_binding_oath |
 | 7 | Bereshit Rabbah 64:5 | fresh |
 | 8 | Bereshit Rabbah 64:6 | fresh |
 | 9 | Bereshit Rabbah 64:7 | fresh |
 | 10 | Bereshit Rabbah 73:8 | fresh |
 | 11 | Bereshit Rabbah 86:1 | fresh |
-| 12 | Bereshit Rabbah 95:3 | fresh |
+| 12 | Bereshit Rabbah 95:3 | CREDIT — material at gen_34_mamre_laugh_plea |
 | 13 | Eikhah Rabbah 1:1 | CREDIT — dup-of at gen_10_serpent_violation_trace |
 | 14 | Eikhah Rabbah, Petichta 1 | CREDIT — dup-of at gen_28_egypt_descent |
 | 15 | Jerusalem Talmud Kiddushin 4:12:1 | fresh |
@@ -152,16 +153,16 @@ each block still gets its own ledger.
 ## gen_45_wells_covenant_esau_wives — Genesis 26:17-35
 
 - enumerated: 1206 distinct linked sources
-- declared: 45 = 26 chain primaries + 19 Onkelos verses
-- credited (standing verdicts): 6 · FRESH TO READ: 20
+- declared: 46 = 27 chain primaries + 19 Onkelos verses
+- credited (standing verdicts): 7 · FRESH TO READ: 20
 - excluded with cause (register false positive): Shabbat Siddur Sefard Linear, Prayers for Yom Tov, Musaf for Yom Tov, Prayer for Rain 44
-- outside declared scope (open narrowing, per the standing default): 1160
+- outside declared scope (open narrowing, per the standing default): 1159
 
 | # | source | status |
 |---|--------|--------|
 | 1 | Berakhot 56b:7 | fresh |
 | 2 | Bereshit Rabbah 28:5 | CREDIT — enrichment at gen_15_flood_prologue |
-| 3 | Bereshit Rabbah 60:1 | fresh |
+| 3 | Bereshit Rabbah 60:1 | CREDIT — material at gen_38_moriah_binding_oath |
 | 4 | Bereshit Rabbah 62:3 | fresh |
 | 5 | Bereshit Rabbah 64:10 | fresh |
 | 6 | Bereshit Rabbah 64:8 | fresh |
@@ -176,22 +177,23 @@ each block still gets its own ledger.
 | 15 | Mekhilta DeRabbi Yishmael, Tractate Vayehi Beshalach 1:1 | fresh |
 | 16 | Pesikta DeRav Kahana 9:4 | CREDIT — dup-of at gen_12_cain_abel |
 | 17 | Sanhedrin 111a:9 | fresh · also in gen_44_isaac_gerar_sister_expel |
-| 18 | Sifrei Devarim 1:18 | fresh |
-| 19 | Sifrei Devarim 1:8 | fresh |
-| 20 | Sifrei Devarim 27:3 | CREDIT — no-bearing at gen_27_the_call |
-| 21 | Sifrei Devarim 2:5 | fresh |
-| 22 | Tosefta Berakhot (Lieberman) 6:8 | fresh |
-| 23 | Tosefta Berakhot 6:1 | fresh |
-| 24 | Tosefta Berakhot 6:13 | fresh · also in gen_44_isaac_gerar_sister_expel |
-| 25 | Tosefta Sotah 10:2 | fresh · also in gen_44_isaac_gerar_sister_expel |
-| 26 | Vayikra Rabbah 27:5 | CREDIT — material at gen_12_cain_abel |
+| 18 | Sifrei Bamidbar 128:1 | fresh |
+| 19 | Sifrei Devarim 1:18 | fresh |
+| 20 | Sifrei Devarim 1:8 | fresh |
+| 21 | Sifrei Devarim 27:3 | CREDIT — no-bearing at gen_27_the_call |
+| 22 | Sifrei Devarim 2:5 | fresh |
+| 23 | Tosefta Berakhot (Lieberman) 6:8 | fresh |
+| 24 | Tosefta Berakhot 6:1 | fresh |
+| 25 | Tosefta Berakhot 6:13 | fresh · also in gen_44_isaac_gerar_sister_expel |
+| 26 | Tosefta Sotah 10:2 | fresh · also in gen_44_isaac_gerar_sister_expel |
+| 27 | Vayikra Rabbah 27:5 | CREDIT — material at gen_12_cain_abel |
 | — | Onkelos Genesis 26:17-35 (19 verses) | derive-time credit (foundation layer) |
 
 ## gen_46_isaac_blessing_demandee_mismatch — Genesis 27:1-40
 
 - enumerated: 4010 distinct linked sources
 - declared: 141 = 101 chain primaries + 40 Onkelos verses
-- credited (standing verdicts): 23 · FRESH TO READ: 78
+- credited (standing verdicts): 24 · FRESH TO READ: 77
 - excluded with cause (register false positive): Shabbat Siddur Sefard Linear, Birchas Hamazon, Birchas Hamazon 311 · Shabbat Siddur Sefard Linear, Maariv Service for the Conclusion of Shabbos, Veyiten Lecha 11
 - outside declared scope (open narrowing, per the standing default): 3867
 
@@ -214,7 +216,7 @@ each block still gets its own ledger.
 | 15 | Bereshit Rabbah 65:16 | fresh |
 | 16 | Bereshit Rabbah 65:17 | fresh |
 | 17 | Bereshit Rabbah 65:18 | fresh |
-| 18 | Bereshit Rabbah 65:19 | fresh |
+| 18 | Bereshit Rabbah 65:19 | CREDIT — material at gen_38_moriah_binding_oath |
 | 19 | Bereshit Rabbah 65:20 | fresh |
 | 20 | Bereshit Rabbah 65:21 | fresh |
 | 21 | Bereshit Rabbah 65:22 | fresh |

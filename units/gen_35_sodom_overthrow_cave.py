@@ -241,7 +241,7 @@ m.declare("ha_malakhim", "LET",
           "qum_qach(ishtekha_u_shtei_venotekha)")
 
 # -------------------------- Gen.19.16 · THE_LINGERING_AND_THE_SEIZURE ------
-# וַיִּתְמַהְמָהּ וַיַּחֲזִיקוּ הָאֲנָשִׁים בְּיָדוֹ וּבְיַד־אִשְׁתּוֹ
+# וַיִּתְמַהְמָהּ וַיַּחֲזִקוּ הָאֲנָשִׁים בְּיָדוֹ וּבְיַד־אִשְׁתּוֹ
 # וּבְיַד שְׁתֵּי בְנֹתָיו בְּחֶמְלַת יְהוָה עָלָיו וַיֹּצִאֻהוּ
 # וַיַּנִּחֻהוּ מִחוּץ לָעִיר
 # "But he lingered; and the men laid hold upon his hand, and upon the hand
@@ -249,8 +249,8 @@ m.declare("ha_malakhim", "LET",
 # merciful unto him. And they brought him forth, and set him without the
 # city."
 m.step("Gen.19.16")
-# ‹וַיִּתְמַהְמָהּ וַיַּחֲזִיקוּ הָאֲנָשִׁים בְּיָדוֹ … וַיֹּצִאֻהוּ› (“and-
-# question and-they-seized the-man in-hand-him/its … and-bring-forth-
+# ‹וַיִּתְמַהְמָהּ וַיַּחֲזִקוּ הָאֲנָשִׁים בְּיָדוֹ … וַיֹּצִאֻהוּ› (“and-
+# question and-fasten-upon the-man in-hand-him/its … and-bring-forth-
 # him/its”) — event: seize-carry — agent shnei-the-messenger; theme Lot-and-
 # veito
 m.event("seize_carry", agent="shnei_ha_malakhim", themes=["lot_u_veito"])
@@ -300,7 +300,7 @@ m.fact("matza_chen_va_tagdel_chasdekha",
        "lo_ukhal_le_himalet")
 
 # -------------------------- Gen.19.20 · THE_LITTLE_CITY_PLEA ---------------
-# הִנֵּה־נָא הָעִיר הַזֹּאת קְרֹבָה לָנוּס שָׁמָּה וְהִוא מִצְעָר אִמָּלְטָה
+# הִנֵּה־נָא הָעִיר הַזֹּאת קְרֹבָה לָנוּס שָׁמָּה וְהִיא מִצְעָר אִמָּלְטָה
 # נָּא שָׁמָּה הֲלֹא מִצְעָר הִוא וּתְחִי נַפְשִׁי
 # "Behold now, this city is near to flee unto, and it is a little one; oh,
 # let me escape thither—is it not a little one?—and my soul shall live.'"

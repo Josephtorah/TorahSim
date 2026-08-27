@@ -21,6 +21,11 @@
 
 meta:
   id: "gen_35_sodom_overthrow_cave"
+  rev: 2
+  changelog:
+    - "2026-08-28 rev 2: RE-era reading pass (parashat Vayera sweep, 5 blocks one sitting — FIRST RUN UNDER THE SPINE DEFAULT, owner 2026-08-27: Bereshit Rabbah + Onkelos declared, Mishnah/Talmud held for the Step 9 exam): ledger logic/oral_triage/gen_35_sodom_overthrow_cave_2026-08-28.md; v1 Tier-A queue discharged; ORAL_reading_pass block appended; no machine ops changed."
+    - "2026-08-28 rev 2 (same sitting): ink fix at Genesis 19:20 — the verse's FIRST ve-hi is written WITH YOD (a member of the eleven yod-instances the three-scrolls census counts; the second, ha-lo mitzar hu, keeps the vav form): step he and tree_left corrected to the snapshot's ink; pre-existing at HEAD, caught by verify_text; no semantic change."
+    - "2026-08-28 rev 2 (same sitting): second ink fix — Genesis 19:16's vayachaziku (they grasped) is written DEFECTIVE (no yod); the unit's step and operator fragment carried the plene spelling; both corrected to the ink. Same class, same gate, pre-existing at HEAD."
   title_en: "The two angels, the overthrow of Sodom, the pillar, the cave (19:1-38)"
   title_he: הִמָּלֵט עַל־נַפְשֶׁךָ אַל־תַּבִּיט אַחֲרֶיךָ
   title_he_translit: "himalet al-nafshekha al-tabit acharekha"
@@ -310,7 +315,7 @@ derivation_log:
     name_en: "Source fetch + verification"
     comment: >
       Hebrew: Data/Gen.xml via the DB snapshot
-      source-snapshot.sqlite; pointed lines
+      torah_grok.SNAPSHOT-main-51801ca.sqlite; pointed lines
       regenerated (cantillation stripped, vowels kept — gen_22's
       convention). English aid: JPS 1917. Span totals VERIFIED: 563
       tokens / 38 verses — the NEW largest span (past gen_34's 437);
@@ -1401,7 +1406,7 @@ boot_steps:
     order: 16
     ref: "Gen.19.16"
     op: THE_LINGERING_AND_THE_SEIZURE
-    he: וַיִּתְמַהְמָהּ וַיַּחֲזִיקוּ הָאֲנָשִׁים בְּיָדוֹ וּבְיַד־אִשְׁתּוֹ וּבְיַד שְׁתֵּי בְנֹתָיו בְּחֶמְלַת יְהוָה עָלָיו וַיֹּצִאֻהוּ וַיַּנִּחֻהוּ מִחוּץ לָעִיר
+    he: וַיִּתְמַהְמָהּ וַיַּחֲזִקוּ הָאֲנָשִׁים בְּיָדוֹ וּבְיַד־אִשְׁתּוֹ וּבְיַד שְׁתֵּי בְנֹתָיו בְּחֶמְלַת יְהוָה עָלָיו וַיֹּצִאֻהוּ וַיַּנִּחֻהוּ מִחוּץ לָעִיר
     he_translit: "va-yitmahmah va-yachaziqu ha-anashim be-yado u-ve-yad-ishto u-ve-yad shtei venotav be-chemlat YHWH alav va-yotziuhu va-yanichuhu mi-chutz la-ir"
     en: "[EN-AID/JPS] But he lingered; and the men laid hold upon his hand, and upon the hand of his wife, and upon the hand of his two daughters; the LORD being merciful unto him. And they brought him forth, and set him without the city."
     tree_left:
@@ -1415,7 +1420,7 @@ boot_steps:
     operators:
       - op: EVENT
         expr_en: "seize_carry(e7) ∧ Agent(e7, shnei_ha_malakhim) ∧ Theme(e7, lot_u_veito)"
-        he: וַיִּתְמַהְמָהּ וַיַּחֲזִיקוּ הָאֲנָשִׁים בְּיָדוֹ … וַיֹּצִאֻהוּ
+        he: וַיִּתְמַהְמָהּ וַיַּחֲזִקוּ הָאֲנָשִׁים בְּיָדוֹ … וַיֹּצִאֻהוּ
         he_translit: "va-yitmahmah va-yachaziqu ha-anashim be-yado … va-yotziuhu"
         en: >
           THE ISSUER-EXECUTED DEMAND — NO POP [flag 4; the staged
@@ -1626,11 +1631,11 @@ boot_steps:
     order: 20
     ref: "Gen.19.20"
     op: THE_LITTLE_CITY_PLEA
-    he: הִנֵּה־נָא הָעִיר הַזֹּאת קְרֹבָה לָנוּס שָׁמָּה וְהִוא מִצְעָר אִמָּלְטָה נָּא שָׁמָּה הֲלֹא מִצְעָר הִוא וּתְחִי נַפְשִׁי
+    he: הִנֵּה־נָא הָעִיר הַזֹּאת קְרֹבָה לָנוּס שָׁמָּה וְהִיא מִצְעָר אִמָּלְטָה נָּא שָׁמָּה הֲלֹא מִצְעָר הִוא וּתְחִי נַפְשִׁי
     he_translit: "hinneh-na ha-ir ha-zot qerovah lanus shamah ve-hi mitzar imaltah na shamah ha-lo mitzar hi u-techi nafshi"
     en: "[EN-AID/JPS] Behold now, this city is near to flee unto, and it is a little one; oh, let me escape thither—is it not a little one?—and my soul shall live.'"
     tree_left:
-      he: הנה־נא העיר הזאת קרבה לנוס שמה והוא מצער
+      he: הנה־נא העיר הזאת קרבה לנוס שמה והיא מצער
       he_translit: "hinneh-na ha-ir ha-zot qerovah lanus shamah ve-hi mitzar"
       en: "this city is NEAR to flee to — and it is LITTLE (etnachta arm)"
     tree_right:
@@ -2576,6 +2581,38 @@ oral_notes:
       qevilta and dayin-dina (the din-family); qama de-milcha (the
       pillar); pattira (the unleavened); u-dekhir (the remembering,
       kept plain). Deltas recorded, never merged.
+
+  - id: ORAL_reading_pass_2026_08_28
+    status: verified
+    work_en: "RE-era reading pass 2026-08-28 (parashat Vayera sweep, block 2 of 5, spine default; ledger logic/oral_triage/gen_35_sodom_overthrow_cave_2026-08-28.md)"
+    he: נקרא כולו
+    he_translit: "nikra kulo (read in full — the declared spine)"
+    en: >
+      The v1 queue above is DISCHARGED: the declared spine read end to
+      end. HEADLINES: the DIRECTIONAL-HEH RULE at its own seat (gen_28
+      carried it; here it is law: "Sedoma, Se'ira, Mitzraima,
+      Charana") with the FIVE JUDGES of Sodom named and Lot seated
+      CHIEF JUSTICE that day (yashav written defective); the
+      ADVOCACY-LICENSE window ("what more can your MOUTH say");
+      the ANGELS' 138-YEAR PENALTY for "we are destroying" — the arc
+      closing at Jacob's ladder; THE DAWN MEASURE derived from our
+      19:15/23 (four mil gleam-to-east, four east-to-sunrise — live
+      time-of-day halakhah); the 16-NISAN timing (sun and moon both
+      standing against the two idolatries); FIVE CITIES ON ONE ROCK
+      (the hand vs little-finger dispute); the wife's SALT
+      measure-for-measure; the SCRIBAL DOT on u-v-kumah ("her rising
+      he knew") — the sweep's second dotted-text exhibit — beside the
+      SEED-FROM-ANOTHER-PLACE messianic ink in the daughters' own
+      words; the WEEKLY LOT READING claim; the MOABITE GENDER SPLIT
+      seeding Ruth's admission law; Moav's motive machloket
+      dual-tracked; INITIATOR-PUNISHED-FIRST applied at the blindness;
+      the double-name anomaly of 19:24 solved twice by the spine
+      itself (Gavriel/His-court vs Onkelos's kodam buffer); Onkelos's
+      FIDELITY INSERT at 19:15 ("daughters found FAITHFUL") and the
+      sacred/profane variance INSIDE Onkelos's editions at 19:18.
+      Findings in the ledger; dual-track; no machine ops changed.
+    comment_en: "Reading-pass record; the stamp and ritual remain the owner's word (batch, per parashah). Outside-scope primaries recorded in the ledger await the exam (testing shelf) or depth orders."
+    source: "[ORAL][READ-THROUGH][SPINE-DEFAULT]"
 
 scenarios:
   - id: S1

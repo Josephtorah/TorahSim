@@ -7,10 +7,10 @@ each block still gets its own ledger.
 ## gen_48_bethel_ladder_vow — Genesis 28:10-22
 
 - enumerated: 3382 distinct linked sources
-- declared: 108 = 95 chain primaries + 13 Onkelos verses
-- credited (standing verdicts): 16 · FRESH TO READ: 79
+- declared: 109 = 96 chain primaries + 13 Onkelos verses
+- credited (standing verdicts): 19 · FRESH TO READ: 77
 - excluded with cause (register false positive): Shabbat Siddur Sefard Linear, The Morning Prayers, Ashrei 229
-- outside declared scope (open narrowing, per the standing default): 3273
+- outside declared scope (open narrowing, per the standing default): 3272
 
 | # | source | status |
 |---|--------|--------|
@@ -19,12 +19,12 @@ each block still gets its own ledger.
 | 3 | Bereshit Rabbah 11:7 | CREDIT — enrichment at gen_07_completion_sanctity |
 | 4 | Bereshit Rabbah 44:8 | CREDIT — material at gen_31_covenant_pieces |
 | 5 | Bereshit Rabbah 47:6 | CREDIT — material at gen_33_shaddai_covenant_flesh |
-| 6 | Bereshit Rabbah 50:9 | fresh |
+| 6 | Bereshit Rabbah 50:9 | CREDIT — material at gen_35_sodom_overthrow_cave |
 | 7 | Bereshit Rabbah 67:13 | fresh |
 | 8 | Bereshit Rabbah 68:1 | fresh |
 | 9 | Bereshit Rabbah 68:10 | fresh · also in gen_55_two_camps_wrestled_name |
 | 10 | Bereshit Rabbah 68:11 | fresh |
-| 11 | Bereshit Rabbah 68:12 | fresh |
+| 11 | Bereshit Rabbah 68:12 | CREDIT — material at gen_35_sodom_overthrow_cave |
 | 12 | Bereshit Rabbah 68:13 | fresh |
 | 13 | Bereshit Rabbah 68:14 | fresh |
 | 14 | Bereshit Rabbah 68:2 | fresh |
@@ -34,7 +34,7 @@ each block still gets its own ledger.
 | 18 | Bereshit Rabbah 68:6 | fresh |
 | 19 | Bereshit Rabbah 68:7 | fresh |
 | 20 | Bereshit Rabbah 68:8 | fresh |
-| 21 | Bereshit Rabbah 68:9 | fresh |
+| 21 | Bereshit Rabbah 68:9 | CREDIT — material at gen_34_mamre_laugh_plea |
 | 22 | Bereshit Rabbah 69:1 | fresh |
 | 23 | Bereshit Rabbah 69:2 | fresh |
 | 24 | Bereshit Rabbah 69:3 | CREDIT — enrichment at gen_33_shaddai_covenant_flesh |
@@ -99,16 +99,17 @@ each block still gets its own ledger.
 | 83 | Sanhedrin 98b:5 | fresh · also in gen_55_two_camps_wrestled_name |
 | 84 | Shabbat 118b:1 | fresh |
 | 85 | Sifra, Bechukotai, Chapter 1 2 | fresh |
-| 86 | Sifrei Devarim 146:1 | fresh |
-| 87 | Sifrei Devarim 31:5 | fresh |
-| 88 | Sifrei Devarim 352:7 | fresh |
-| 89 | Sifrei Devarim 47:6 | fresh |
-| 90 | Tosefta Avodah Zarah 5:2 | fresh |
-| 91 | Tosefta Kifshutah on Shabbat 7:1:2 | fresh |
-| 92 | Vayikra Rabbah 29:2 | fresh |
-| 93 | Vayikra Rabbah 35:11 | CREDIT — enrichment at gen_27_the_call |
-| 94 | Vayikra Rabbah 35:2 | fresh |
-| 95 | Vayikra Rabbah 37:1 | fresh · also in gen_53_flight_over_the_river |
+| 86 | Sifrei Bamidbar 119:2 | fresh |
+| 87 | Sifrei Devarim 146:1 | fresh |
+| 88 | Sifrei Devarim 31:5 | fresh |
+| 89 | Sifrei Devarim 352:7 | fresh |
+| 90 | Sifrei Devarim 47:6 | fresh |
+| 91 | Tosefta Avodah Zarah 5:2 | fresh |
+| 92 | Tosefta Kifshutah on Shabbat 7:1:2 | fresh |
+| 93 | Vayikra Rabbah 29:2 | fresh |
+| 94 | Vayikra Rabbah 35:11 | CREDIT — enrichment at gen_27_the_call |
+| 95 | Vayikra Rabbah 35:2 | fresh |
+| 96 | Vayikra Rabbah 37:1 | fresh · also in gen_53_flight_over_the_river |
 | — | Onkelos Genesis 28:10-22 (13 verses) | derive-time credit (foundation layer) |
 
 ## gen_49_well_stone_rachel_arrival — Genesis 29:1-14
@@ -170,9 +171,9 @@ each block still gets its own ledger.
 ## gen_51_opened_womb_twelve_names — Genesis 29:31-30:24
 
 - enumerated: 2383 distinct linked sources
-- declared: 86 = 57 chain primaries + 29 Onkelos verses
-- credited (standing verdicts): 8 · FRESH TO READ: 49
-- outside declared scope (open narrowing, per the standing default): 2297
+- declared: 87 = 58 chain primaries + 29 Onkelos verses
+- credited (standing verdicts): 8 · FRESH TO READ: 50
+- outside declared scope (open narrowing, per the standing default): 2296
 
 | # | source | status |
 |---|--------|--------|
@@ -227,12 +228,13 @@ each block still gets its own ledger.
 | 49 | Rosh Hashanah 11a:16 | fresh |
 | 50 | Sanhedrin 99b:5 | fresh |
 | 51 | Sanhedrin 99b:9 | fresh |
-| 52 | Sifrei Devarim 2:4 | fresh |
-| 53 | Sifrei Devarim 306:6 | fresh |
-| 54 | Taanit 2a:13 | fresh |
-| 55 | Taanit 2b:1 | fresh |
-| 56 | Taanit 8b:2 | fresh |
-| 57 | Vayikra Rabbah 14:4 | fresh |
+| 52 | Sifrei Bamidbar 112:2 | fresh |
+| 53 | Sifrei Devarim 2:4 | fresh |
+| 54 | Sifrei Devarim 306:6 | fresh |
+| 55 | Taanit 2a:13 | fresh |
+| 56 | Taanit 2b:1 | fresh |
+| 57 | Taanit 8b:2 | fresh |
+| 58 | Vayikra Rabbah 14:4 | fresh |
 | — | Onkelos Genesis 29:31-30:24 (29 verses) | derive-time credit (foundation layer) |
 
 ## gen_52_send_me_speckled_wage_rods — Genesis 30:25-43
@@ -314,7 +316,7 @@ each block still gets its own ledger.
 
 - enumerated: 2518 distinct linked sources
 - declared: 77 = 44 chain primaries + 33 Onkelos verses
-- credited (standing verdicts): 6 · FRESH TO READ: 38
+- credited (standing verdicts): 9 · FRESH TO READ: 35
 - excluded with cause (register false positive): Shabbat Siddur Sefard Linear, Song of Songs 4:1
 - outside declared scope (open narrowing, per the standing default): 2440
 
@@ -324,8 +326,8 @@ each block still gets its own ledger.
 | 2 | Avodah Zarah 3a:8 | fresh |
 | 3 | Avodah Zarah 9a:3 | fresh |
 | 4 | Bava Kamma 65b:18 | fresh |
-| 5 | Bereshit Rabbah 48:15 | fresh |
-| 6 | Bereshit Rabbah 52:5 | fresh |
+| 5 | Bereshit Rabbah 48:15 | CREDIT — material at gen_34_mamre_laugh_plea |
+| 6 | Bereshit Rabbah 52:5 | CREDIT — material at gen_36_gerar_dream_prophet |
 | 7 | Bereshit Rabbah 74:10 | fresh |
 | 8 | Bereshit Rabbah 74:11 | fresh · also in gen_52_send_me_speckled_wage_rods, gen_53_flight_over_the_river |
 | 9 | Bereshit Rabbah 74:12 | fresh |
@@ -335,7 +337,7 @@ each block still gets its own ledger.
 | 13 | Bereshit Rabbah 74:16 | fresh · also in gen_55_two_camps_wrestled_name |
 | 14 | Bereshit Rabbah 74:4 | fresh · also in gen_53_flight_over_the_river |
 | 15 | Bereshit Rabbah 74:6 | fresh · also in gen_52_send_me_speckled_wage_rods |
-| 16 | Bereshit Rabbah 74:7 | fresh |
+| 16 | Bereshit Rabbah 74:7 | CREDIT — material at gen_36_gerar_dream_prophet |
 | 17 | Bereshit Rabbah 74:8 | fresh |
 | 18 | Bereshit Rabbah 74:9 | fresh · also in gen_53_flight_over_the_river |
 | 19 | Bereshit Rabbah 79:1 | fresh · also in gen_48_bethel_ladder_vow |

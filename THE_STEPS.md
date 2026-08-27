@@ -32,6 +32,19 @@ shelf unless the owner orders otherwise. The full source list is still
 enumerated and recorded in the ledger, its unread remainder marked
 outside declared scope; depth passes run only on the owner's order,
 for a named reason.
+THE SPINE DEFAULT (owner, 2026-08-27 — narrows the above; effective
+at parashat Vayera): declared reading per span = the Torah book's ONE
+SPINE + Onkelos. The spines: Genesis — Bereshit Rabbah; Exodus — the
+Mekhilta of Rabbi Yishmael; Leviticus — the Sifra; Numbers — the
+Sifrei on Numbers; Deuteronomy — the Sifrei on Deuteronomy. The
+Mishnah and Talmud leave the reading pass and return at Step 9 as the
+exam (see THE TWO SHELVES, Step 4). Unchanged riders: canon
+pattern-rules fire on grammar; ink claims never credited unopened;
+FULL enumeration with the remainder marked outside declared scope;
+dual-track on disputes. Dependency on record: the sugya case-file
+machinery must exist before Exodus's law spans — the thin-reading
+deal is "the exam tests it." Full table + reasoning:
+logic/CORE_SHELF.md.
 PRE-ENUMERATION (owner, 2026-08-25, speed ruling): the enumeration and
 register classification for every remaining block is computed AHEAD in
 one mechanical pass — each sitting starts with its declared list
@@ -49,6 +62,26 @@ got: a Mishnah paragraph is a RULING — an input→output case, no reason
 shown; a Talmud passage is a DERIVATION (hooking verses), a DISPUTE,
 or a TEST. Find the implementing tractates by topic in
 logic/MISHNAH_TOPICS.md (all 63 mapped).
+THE TWO SHELVES (owner ruling 2026-08-27): the oral library splits by
+which end of the bridge a book starts from, and the two kinds have two
+different jobs. VERSE-ANCHORED books (Onkelos; the midrash
+collections — the verse-by-verse expounding books — including the
+law-midrash like the Mekhilta on Exodus)
+start at the verse and walk toward the law — they are organized like
+our units, so they are the READING SHELF: they feed Steps 3-4.
+CASE-ANCHORED books (the Mishnah, with the Tosefta beside it) start
+from the case and barely cite verses — they cannot be read at a verse
+span, so they are the TESTING SHELF: their input→output rows are the
+exam the machine faces at Step 9, routed by topic. The TALMUD is the
+bridge between the two directions: it takes a Mishnah rule that looks
+like pure addition and walks it back to the verse ("from where do we
+know this?"). MEASURED on our deepest block (the goring ox — 35
+witnessed claims, the expansion test of 2026-08-27): 22 of 35 walk
+back to the verse's own ink or an argued analogy; exactly TWO are
+additions with no compiled derivation behind them, and the tradition
+labels both itself as decrees ("a king's decree"). One breath: the
+Mishnah writes as if it is adding; the Talmud shows most of it was
+derived; the true remainder arrives self-labeled.
 SPEED RULINGS (owner, 2026-08-25, binding for the Genesis walk):
 (a) READ AT THE PARASHAH GRAIN — one sequential pass over a weekly
 portion's primaries covers all its blocks; the ledgers stay
@@ -138,7 +171,8 @@ Compile the logic to a machine; run the recorded cases against it,
 every miss printed. Recorded cases include the tradition's own case
 tables: the Mishnah's input→output rows, graded at the reading, join
 the scene list (the Exodus 21 pattern — 64 scenes from its chapter
-reading).
+reading). The case-anchored books are this step's home shelf — see
+THE TWO SHELVES in Step 4.
    → shows as: chip "proven"; drops automatically if a test goes red.
 
 ## Step 10 — Publish
@@ -216,4 +250,39 @@ gen_09 through gen_33 — now stand read and green, waiting UNSTAMPED:
 one batch word per weekly portion stamps them, ritual once per batch.
 Genesis stands at 33 of 73 blocks read; 40 remain; the next sweep is
 parashat Vayera, opening at gen_34 (Genesis 18:1), awaiting the
-owner's word.
+owner's word. [Superseded same week — Vayera ran; see the paragraph
+after the plan.]
+
+THE PLAN FROM HERE (2026-08-27, under the spine default): the rest of
+the Genesis walk — Vayera (gen_34) through the end (gen_73), about 40
+blocks — runs one parashah sweep at a time under ONE spine + Onkelos:
+Bereshit Rabbah is Genesis's book. Everything else stays enumerated,
+marked outside declared scope, recoverable on order. In parallel,
+during the Genesis remainder, the sugya case-file machinery gets
+designed and proven on the Exodus 21 material already in hand — so
+that when the walk reaches Exodus, the law spans read thin (the
+Mekhilta as spine) and the Mishnah/Talmud exam does the heavy testing,
+per the two-shelves ruling. The spine default was retro-tested against
+the 18 finished Noach and Lech Lecha ledgers before adoption: of 451
+fresh material findings, 38% would have been kept by the spine, 43%
+return through the exam's own channels, 13% wait for the OTHER books'
+spines, and about 5.5% — the compilations that are never a spine —
+stay honestly outside scope, recoverable only by depth order. Roughly
+94% retention through the plan's own channels; the known soft spot
+(Talmud NARRATIVE on Genesis, which no failed law case will summon)
+is the next measurement in the workshop's queue.
+
+VAYERA RAN FIRST UNDER THE SPINE (2026-08-28, landed in canon on the
+owner's relayed word): five blocks — Mamre and the laughter and the
+plea (gen_34, 102 of 102), the overthrow of Sodom and the cave
+(gen_35, 74 of 74, with two same-sitting ink corrections caught by the
+text gate: the yod spelling of 19:20's first ve-hi, a new member of
+the three-scrolls census, and 19:16's defective vayachaziku), Gerar
+and the dream and the prophet (gen_36, 41 of 41), the laughter and
+the wilderness and the oath (gen_37, 71 of 71), and Moriah, the
+binding, and the oath (gen_38, 62 of 62). The whole sweep: 27 minutes
+53 seconds, 350 declared under the spine, 91 fresh material findings,
+the outside-scope remainder carried with its shelf split marked.
+Genesis 1:1 through 22:24 now reads READ THROUGH — 38 of 73 blocks;
+THIRTY blocks (gen_09-38) stand honestly unstamped; Chayei Sarah
+(gen_39, Genesis 23:1) is next on the owner's go.
