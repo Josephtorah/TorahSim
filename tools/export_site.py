@@ -350,6 +350,7 @@ body{font-size:18px}}
     <a class="on" href="./">Epic Disclosure</a>
     <a href="scroll/">The Scroll</a>
     <a href="run/">The Run</a>
+    <a href="contact/">Contact</a>
   </nav>
   <nav class="ext">
     <a href="https://github.com/Josephtorah/TorahSim" target="_blank" rel="noopener">%s github</a>
@@ -647,6 +648,7 @@ def masthead(prefix, active):
             + link("disclosure", prefix, "Epic Disclosure")
             + link("scroll", prefix + "scroll/", "The Scroll")
             + link("run", prefix + "run/", "The Run")
+            + link("contact", prefix + "contact/", "Contact")
             + '</nav><nav class="ext">'
             '<a href="https://github.com/Josephtorah/TorahSim" '
             'target="_blank" rel="noopener">%s github</a>'
@@ -824,6 +826,38 @@ Experimental model — not binding religious law.</div>
 """
 
 
+def build_contact():
+    """The contact page (owner order 2026-08-28): one address, no form
+    — a static site collects nothing."""
+    os.makedirs(os.path.join(SITE, "contact"), exist_ok=True)
+    page = ('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">'
+            '<meta name="viewport" content="width=device-width, '
+            'initial-scale=1"><title>TorahSim — contact</title>'
+            "<style>body{margin:54px 0 0;background:#fdfbf4;color:#2a2a24;"
+            "font:17px/1.6 Georgia,serif}main{max-width:640px;margin:0 auto;"
+            "padding:3rem 1.5rem}h1{font-size:1.5rem;color:#6e5417}"
+            "a.mail{display:inline-block;margin:.6rem 0;padding:.55rem 1.1rem;"
+            "border:1px solid #b08a3e;border-radius:8px;color:#6e5417;"
+            "background:#fffdf6;text-decoration:none;font-size:1.05rem}"
+            "a.mail:hover{background:#f3eee1}p{color:#57503f}</style>"
+            "</head><body>" + masthead("../", "contact") + "<main>"
+            "<h1>Contact</h1>"
+            "<p>Questions, corrections, or a source the reading missed — "
+            "all welcome. Misses are part of the record here.</p>"
+            '<a class="mail" href="mailto:josephtorah@gmail.com">'
+            "josephtorah@gmail.com</a>"
+            "<p>The project is also on "
+            '<a href="https://github.com/Josephtorah/TorahSim" '
+            'style="color:#6e5417">github</a> and '
+            '<a href="https://discord.gg/UXZUguY9Pb" '
+            'style="color:#6e5417">discord</a>.</p>'
+            "</main></body></html>\n")
+    with open(os.path.join(SITE, "contact", "index.html"), "w",
+              encoding="utf-8") as f:
+        f.write(page)
+    print("  contact                  one page, one address")
+
+
 def build_disclosure():
     text = open(DISC, encoding="utf-8").read()
     m = re.search(r"\*\*Date:\*\* (\S+)\n*", text)
@@ -904,6 +938,7 @@ def main():
         shutil.rmtree(SITE)
     os.makedirs(os.path.join(SITE, "run"))
     build_disclosure()
+    build_contact()
 
     scenes = []
     for s in app.CAT["scenes"]:
