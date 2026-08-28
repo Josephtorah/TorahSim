@@ -56,9 +56,9 @@ m.fact("named_only_roster_yaqshan_line")
 # "[EN-AID] And the sons of Midian: Ephah and Epher and Hanoch and Abida and
 # Eldaah. All these were the sons of Keturah."
 m.step("Gen.25.4")
-# ‹עֵיפָה … עֵפֶר … חֲנוֹךְ … אֲבִידָע … אֶלְדָּעָה … בְּנֵי קְטוּרָה›
-# (“Ephah … dust … Enoch … Abida … Eldaah … son Keturah”) — fact holds:
-# named-only-roster-Midian-line-and-close
+# ‹עֵיפָה … עֵפֶר … חֲנֹךְ … אֲבִידָע … אֶלְדָּעָה … בְּנֵי קְטוּרָה›
+# (“Ephah … dust … חנך … Abida … Eldaah … son Keturah”) — fact holds: named-
+# only-roster-Midian-line-and-close
 m.fact("named_only_roster_midyan_line_and_close")
 
 # -------------------------- Gen.25.5 · THE_HEIR_GIFT_TO_ISAAC --------------
@@ -159,7 +159,7 @@ m.fact("toledot_yishmael_section_header")
 # according to their generations: the firstborn of Ishmael, Nevayot; and
 # Qedar and Adbeel and Mibsam."
 m.step("Gen.25.13")
-# ‹נְבָיוֹת וְקֵדָר וְאַדְבְּאֵל וּמִבְשָׂם› (“Nebaioth and-Kedar and-Adbeel
+# ‹נְבָיֹת וְקֵדָר וְאַדְבְּאֵל וּמִבְשָׂם› (“Nebaioth and-Kedar and-Adbeel
 # and-Mibsam”) — fact holds: named-only-roster-ishmael-sons-a
 m.fact("named_only_roster_ishmael_sons_a")
 
@@ -186,8 +186,8 @@ m.fact("named_only_roster_ishmael_sons_c")
 # their villages and by their encampments: twelve princes according to their
 # nations."
 m.step("Gen.25.16")
-# ‹שְׁנֵים־עָשָׂר נְשִׂיאִים› (“two -teen chieftains”) — fact holds: shneim
-# --teen-prince-promise-landing-from-17-20
+# ‹שְׁנֵים־עָשָׂר נְשִׂיאִם› (“two -teen prince”) — fact holds: shneim--
+# teen-prince-promise-landing-from-17-20
 m.fact("shneim_asar_nesiim_promise_landing_from_17_20")
 
 # -------------------------- Gen.25.17 · THE_ISHMAEL_DEATH_TRIAD ------------

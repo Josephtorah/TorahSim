@@ -124,7 +124,7 @@ m.step("Gen.26.6")
 # ‹וַיֵּשֶׁב יִצְחָק בִּגְרָר› (“and-dwell/sit Isaac in-Gerar”) — event:
 # dwell — agent Isaac
 m.event("dwell", agent="yitzchaq")
-# ‹וַיֵּשֶׁב ≠ שְׁכֹן / גּוּר› (“and-dwell/sit reside cub”) — fact holds:
+# ‹וַיֵּשֶׁב ← שְׁכֹן / גּוּר› (“and-dwell/sit reside cub”) — fact holds:
 # other-verb-non-pop-reside-and-turn-aside-from-the-road
 m.fact("other_verb_non_pop_shekhon_and_gur")
 

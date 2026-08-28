@@ -42,9 +42,9 @@ m.step("Gen.26.18")
 # obj-marker pit the-waters”) — event: redig-wells — agent Isaac; theme pit-
 # Abraham
 m.event("redig_wells", agent="yitzchaq", themes=["beerot_avraham"])
-# ‹וַיִּקְרָא לָהֶן שֵׁמוֹת כַּשֵּׁמוֹת אֲשֶׁר־קָרָא לָהֶן אָבִיו› (“and-
-# call to-them/their name like-the-names which call to-them/their father-
-# him/its”) — event: ?
+# ‹וַיִּקְרָא לָהֶן שֵׁמוֹת כַּשֵּׁמֹת אֲשֶׁר־קָרָא לָהֶן אָבִיו› (“and-call
+# to-them/their name like-name which call to-them/their father-him/its”) —
+# event: ?
 m.event("?")
 
 # -------------------------- Gen.26.19 · THE_WELL_OF_LIVING_WATER -----------
@@ -176,7 +176,7 @@ m.step("Gen.26.27")
 m.event("say", agent="yitzchaq")
 
 # -------------------------- Gen.26.28 · THE_COVENANT_VOLITIVES -------------
-# וַיֹּאמְר֗וּ רָא֣וֹ רָאִינוּ֮ כִּֽי־הָיָ֣ה יְהוָ֣ה ׀ עִמָּךְ֒ וַנֹּ֗אמֶר
+# וַיֹּאמְר֗וּ רָא֣וֹ רָאִינוּ֮ כִּֽי־הָיָ֣ה יְהוָ֣ה עִמָּךְ֒ וַנֹּ֗אמֶר
 # תְּהִ֨י נָ֥א אָלָ֛ה בֵּינוֹתֵ֖ינוּ בֵּינֵ֣ינוּ וּבֵינֶ֑ךָ וְנִכְרְתָ֥ה
 # בְרִ֖ית עִמָּֽךְ
 # "[EN-AID] And they said: We have surely seen that YHWH is with you; and we
@@ -227,7 +227,7 @@ m.step("Gen.26.31")
 # ‹וַיַּשְׁכִּימוּ … וַיִּשָּׁבְעוּ אִישׁ לְאָחִיו› (“and-rise-early … and-
 # swear man to-brother-him/its”) — event: ?
 m.event("?")
-# ‹וַיִּשָּׁבְעוּ ≠ תְּהִי / נִכְרְתָה› (“and-swear be cut”) — fact holds:
+# ‹וַיִּשָּׁבְעוּ ← תְּהִי / נִכְרְתָה› (“and-swear be cut”) — fact holds:
 # other-verb-non-pop-be-and-nikhreta
 m.fact("other_verb_non_pop_tehi_and_nikhreta")
 # ‹וַיְשַׁלְּחֵם יִצְחָק וַיֵּלְכוּ … בְּשָׁלוֹם› (“and-send-them/their
@@ -235,7 +235,7 @@ m.fact("other_verb_non_pop_tehi_and_nikhreta")
 m.event("?")
 
 # -------------------------- Gen.26.32 · THE_WELL_FOUND_REPORT --------------
-# וַיְהִ֣י ׀ בַּיּ֣וֹם הַה֗וּא וַיָּבֹ֨אוּ֙ עַבְדֵ֣י יִצְחָ֔ק וַיַּגִּ֣דוּ
+# וַיְהִ֣י בַּיּ֣וֹם הַה֗וּא וַיָּבֹ֨אוּ֙ עַבְדֵ֣י יִצְחָ֔ק וַיַּגִּ֣דוּ
 # לוֹ֔ עַל־אֹד֥וֹת הַבְּאֵ֖ר אֲשֶׁ֣ר חָפָ֑רוּ וַיֹּ֥אמְרוּ ל֖וֹ מָצָ֥אנוּ
 # מָֽיִם
 # "[EN-AID] And it came to pass the same day that Isaac's servants came and
@@ -274,8 +274,8 @@ m.fact("esav_ben_arbaim_shana")
 # marker Judith … and-obj-marker Bashemath”) — event: take-wives — agent
 # Esau
 m.event("take_wives", agent="esav")
-# ‹יְהוּדִית … בָּשְׂמַת … בְּאֵרִי … אֵילוֹן› (“Judith … Bashemath … Beeri
-# … Elon”) — the world gains: Judith, Bashemath, Beeri, Elon
+# ‹יְהוּדִית … בָּשְׂמַת … בְּאֵרִי … אֵילֹן› (“Judith … Bashemath … Beeri …
+# Elon”) — the world gains: Judith, Bashemath, Beeri, Elon
 m.install("yehudit", "basmat", "beeri", "elon")
 
 # -------------------------- Gen.26.35 · BITTERNESS_OF_SPIRIT ---------------

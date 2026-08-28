@@ -8,7 +8,7 @@ each block still gets its own ledger.
 
 - enumerated: 2001 distinct linked sources
 - declared: 68 = 48 chain primaries + 20 Onkelos verses
-- credited (standing verdicts): 18 · FRESH TO READ: 30
+- credited (standing verdicts): 23 · FRESH TO READ: 25
 - outside declared scope (open narrowing, per the standing default): 1933
 
 | # | source | status |
@@ -19,18 +19,18 @@ each block still gets its own ledger.
 | 4 | Bereshit Rabbah 42:5 | CREDIT — material at gen_30_war_of_kings |
 | 5 | Bereshit Rabbah 43:5 | CREDIT — material at gen_30_war_of_kings |
 | 6 | Bereshit Rabbah 55:6 | CREDIT — material at gen_38_moriah_binding_oath |
-| 7 | Bereshit Rabbah 58:1 | fresh |
+| 7 | Bereshit Rabbah 58:1 | CREDIT — material at gen_39_machpelah_purchase |
 | 8 | Bereshit Rabbah 58:2 | CREDIT — material at gen_38_moriah_binding_oath |
-| 9 | Bereshit Rabbah 58:3 | fresh |
+| 9 | Bereshit Rabbah 58:3 | CREDIT — material at gen_39_machpelah_purchase |
 | 10 | Bereshit Rabbah 58:4 | CREDIT — enrichment at gen_29_separation_promise |
 | 11 | Bereshit Rabbah 58:5 | CREDIT — enrichment at gen_26_shem_ledger |
 | 12 | Bereshit Rabbah 58:6 | CREDIT — no-bearing at gen_27_the_call |
 | 13 | Bereshit Rabbah 58:7 | CREDIT — no-bearing at gen_26_shem_ledger |
-| 14 | Bereshit Rabbah 58:8 | fresh |
+| 14 | Bereshit Rabbah 58:8 | CREDIT — material at gen_39_machpelah_purchase |
 | 15 | Bereshit Rabbah 58:9 | CREDIT — enrichment at gen_34_mamre_laugh_plea |
 | 16 | Bereshit Rabbah 59:5 | CREDIT — enrichment at gen_27_the_call |
-| 17 | Bereshit Rabbah 61:2 | fresh · also in gen_40_servant_oath_well, gen_42_abraham_end_ishmael_line |
-| 18 | Bereshit Rabbah 79:7 | fresh |
+| 17 | Bereshit Rabbah 61:2 | CREDIT — enrichment at gen_39_machpelah_purchase |
+| 18 | Bereshit Rabbah 79:7 | CREDIT — material at gen_39_machpelah_purchase |
 | 19 | Chullin 120a:18 | fresh |
 | 20 | Eruvin 53a:3 | fresh |
 | 21 | Eruvin 53a:4 | fresh |
@@ -67,7 +67,7 @@ each block still gets its own ledger.
 
 - enumerated: 3160 distinct linked sources
 - declared: 112 = 79 chain primaries + 33 Onkelos verses
-- credited (standing verdicts): 24 · FRESH TO READ: 55
+- credited (standing verdicts): 37 · FRESH TO READ: 42
 - outside declared scope (open narrowing, per the standing default): 3048
 
 | # | source | status |
@@ -82,31 +82,31 @@ each block still gets its own ledger.
 | 8 | Bereshit Rabbah 58:9 | CREDIT — enrichment at gen_34_mamre_laugh_plea |
 | 9 | Bereshit Rabbah 59:1 | CREDIT — enrichment at gen_34_mamre_laugh_plea |
 | 10 | Bereshit Rabbah 59:10 | CREDIT — material at gen_31_covenant_pieces |
-| 11 | Bereshit Rabbah 59:11 | fresh · also in gen_41_retelling_release_meeting |
-| 12 | Bereshit Rabbah 59:12 | fresh |
+| 11 | Bereshit Rabbah 59:11 | CREDIT — material at gen_40_servant_oath_well |
+| 12 | Bereshit Rabbah 59:12 | CREDIT — material at gen_40_servant_oath_well |
 | 13 | Bereshit Rabbah 59:2 | CREDIT — enrichment at gen_34_mamre_laugh_plea |
 | 14 | Bereshit Rabbah 59:3 | CREDIT — enrichment at gen_34_mamre_laugh_plea |
 | 15 | Bereshit Rabbah 59:4 | CREDIT — enrichment at gen_34_mamre_laugh_plea |
 | 16 | Bereshit Rabbah 59:5 | CREDIT — enrichment at gen_27_the_call |
-| 17 | Bereshit Rabbah 59:6 | fresh |
-| 18 | Bereshit Rabbah 59:7 | fresh |
-| 19 | Bereshit Rabbah 59:8 | fresh |
+| 17 | Bereshit Rabbah 59:6 | CREDIT — material at gen_40_servant_oath_well |
+| 18 | Bereshit Rabbah 59:7 | CREDIT — material at gen_40_servant_oath_well |
+| 19 | Bereshit Rabbah 59:8 | CREDIT — material at gen_40_servant_oath_well |
 | 20 | Bereshit Rabbah 59:9 | CREDIT — enrichment at gen_23_vineyard_curse |
 | 21 | Bereshit Rabbah 60:1 | CREDIT — material at gen_38_moriah_binding_oath |
 | 22 | Bereshit Rabbah 60:2 | CREDIT — enrichment at gen_23_vineyard_curse |
-| 23 | Bereshit Rabbah 60:3 | fresh |
-| 24 | Bereshit Rabbah 60:4 | fresh |
+| 23 | Bereshit Rabbah 60:3 | CREDIT — material at gen_40_servant_oath_well |
+| 24 | Bereshit Rabbah 60:4 | CREDIT — material at gen_40_servant_oath_well |
 | 25 | Bereshit Rabbah 60:5 | CREDIT — material at gen_33_shaddai_covenant_flesh |
-| 26 | Bereshit Rabbah 60:6 | fresh |
+| 26 | Bereshit Rabbah 60:6 | CREDIT — material at gen_40_servant_oath_well |
 | 27 | Bereshit Rabbah 60:7 | CREDIT — material at gen_23_vineyard_curse |
-| 28 | Bereshit Rabbah 60:8 | fresh |
+| 28 | Bereshit Rabbah 60:8 | CREDIT — material at gen_40_servant_oath_well |
 | 29 | Bereshit Rabbah 60:9 | CREDIT — enrichment at gen_29_separation_promise |
-| 30 | Bereshit Rabbah 61:2 | fresh · also in gen_39_machpelah_purchase, gen_42_abraham_end_ishmael_line |
+| 30 | Bereshit Rabbah 61:2 | CREDIT — enrichment at gen_39_machpelah_purchase |
 | 31 | Bereshit Rabbah 65:19 | CREDIT — material at gen_38_moriah_binding_oath |
 | 32 | Bereshit Rabbah 65:9 | CREDIT — no-bearing at gen_30_war_of_kings |
-| 33 | Bereshit Rabbah 68:2 | fresh |
-| 34 | Bereshit Rabbah 70:12 | fresh |
-| 35 | Bereshit Rabbah 70:13 | fresh |
+| 33 | Bereshit Rabbah 68:2 | CREDIT — enrichment at gen_40_servant_oath_well |
+| 34 | Bereshit Rabbah 70:12 | CREDIT — enrichment at gen_40_servant_oath_well |
+| 35 | Bereshit Rabbah 70:13 | CREDIT — enrichment at gen_40_servant_oath_well |
 | 36 | Bereshit Rabbah 75:4 | CREDIT — material at gen_32_hagar_angel |
 | 37 | Chullin 95b:8 | CREDIT — no-bearing at gen_30_war_of_kings |
 | 38 | Eikhah Rabbah 1:19 | fresh |
@@ -157,7 +157,7 @@ each block still gets its own ledger.
 
 - enumerated: 2151 distinct linked sources
 - declared: 74 = 40 chain primaries + 34 Onkelos verses
-- credited (standing verdicts): 8 · FRESH TO READ: 32
+- credited (standing verdicts): 17 · FRESH TO READ: 23
 - outside declared scope (open narrowing, per the standing default): 2077
 
 | # | source | status |
@@ -167,20 +167,20 @@ each block still gets its own ledger.
 | 3 | Bava Kamma 92b:9 | fresh · also in gen_42_abraham_end_ishmael_line |
 | 4 | Berakhot 26b:6 | fresh |
 | 5 | Berakhot 61a:24 | fresh |
-| 6 | Bereshit Rabbah 59:11 | fresh · also in gen_40_servant_oath_well |
+| 6 | Bereshit Rabbah 59:11 | CREDIT — material at gen_40_servant_oath_well |
 | 7 | Bereshit Rabbah 60:10 | CREDIT — material at gen_38_moriah_binding_oath |
-| 8 | Bereshit Rabbah 60:11 | fresh |
-| 9 | Bereshit Rabbah 60:12 | fresh |
-| 10 | Bereshit Rabbah 60:13 | fresh |
+| 8 | Bereshit Rabbah 60:11 | CREDIT — material at gen_41_retelling_release_meeting |
+| 9 | Bereshit Rabbah 60:12 | CREDIT — material at gen_41_retelling_release_meeting |
+| 10 | Bereshit Rabbah 60:13 | CREDIT — material at gen_41_retelling_release_meeting |
 | 11 | Bereshit Rabbah 60:14 | CREDIT — material at gen_37_laughter_wilderness_oath |
-| 12 | Bereshit Rabbah 60:15 | fresh |
-| 13 | Bereshit Rabbah 60:16 | fresh · also in gen_42_abraham_end_ishmael_line |
+| 12 | Bereshit Rabbah 60:15 | CREDIT — material at gen_41_retelling_release_meeting |
+| 13 | Bereshit Rabbah 60:16 | CREDIT — material at gen_41_retelling_release_meeting |
 | 14 | Bereshit Rabbah 60:9 | CREDIT — enrichment at gen_29_separation_promise |
 | 15 | Bereshit Rabbah 65:19 | CREDIT — material at gen_38_moriah_binding_oath |
-| 16 | Bereshit Rabbah 68:3 | fresh |
-| 17 | Bereshit Rabbah 68:4 | fresh |
+| 16 | Bereshit Rabbah 68:3 | CREDIT — material at gen_41_retelling_release_meeting |
+| 17 | Bereshit Rabbah 68:4 | CREDIT — enrichment at gen_41_retelling_release_meeting |
 | 18 | Bereshit Rabbah 68:9 | CREDIT — material at gen_34_mamre_laugh_plea |
-| 19 | Bereshit Rabbah 85:7 | fresh |
+| 19 | Bereshit Rabbah 85:7 | CREDIT — enrichment at gen_41_retelling_release_meeting |
 | 20 | Eruvin 18b:8 | fresh |
 | 21 | Jerusalem Talmud Berakhot 4:1:8 | fresh |
 | 22 | Jerusalem Talmud Peah 8:8:13 | CREDIT — material at gen_32_hagar_angel |
@@ -208,7 +208,7 @@ each block still gets its own ledger.
 
 - enumerated: 1405 distinct linked sources
 - declared: 46 = 28 chain primaries + 18 Onkelos verses
-- credited (standing verdicts): 11 · FRESH TO READ: 17
+- credited (standing verdicts): 20 · FRESH TO READ: 8
 - outside declared scope (open narrowing, per the standing default): 1359
 
 | # | source | status |
@@ -218,20 +218,20 @@ each block still gets its own ledger.
 | 3 | Bereshit Rabbah 45:9 | CREDIT — material at gen_32_hagar_angel |
 | 4 | Bereshit Rabbah 47:2 | CREDIT — material at gen_32_hagar_angel |
 | 5 | Bereshit Rabbah 58:9 | CREDIT — enrichment at gen_34_mamre_laugh_plea |
-| 6 | Bereshit Rabbah 60:16 | fresh · also in gen_41_retelling_release_meeting |
+| 6 | Bereshit Rabbah 60:16 | CREDIT — material at gen_41_retelling_release_meeting |
 | 7 | Bereshit Rabbah 61:1 | CREDIT — enrichment at gen_29_separation_promise |
-| 8 | Bereshit Rabbah 61:2 | fresh · also in gen_39_machpelah_purchase, gen_40_servant_oath_well |
-| 9 | Bereshit Rabbah 61:3 | fresh |
+| 8 | Bereshit Rabbah 61:2 | CREDIT — enrichment at gen_39_machpelah_purchase |
+| 9 | Bereshit Rabbah 61:3 | CREDIT — material at gen_42_abraham_end_ishmael_line |
 | 10 | Bereshit Rabbah 61:4 | CREDIT — no-bearing at gen_12_cain_abel |
-| 11 | Bereshit Rabbah 61:5 | fresh |
-| 12 | Bereshit Rabbah 61:6 | fresh |
+| 11 | Bereshit Rabbah 61:5 | CREDIT — material at gen_42_abraham_end_ishmael_line |
+| 12 | Bereshit Rabbah 61:6 | CREDIT — material at gen_42_abraham_end_ishmael_line |
 | 13 | Bereshit Rabbah 61:7 | CREDIT — material at gen_23_vineyard_curse |
 | 14 | Bereshit Rabbah 62:1 | CREDIT — material at gen_33_shaddai_covenant_flesh |
-| 15 | Bereshit Rabbah 62:2 | fresh |
-| 16 | Bereshit Rabbah 62:3 | fresh |
+| 15 | Bereshit Rabbah 62:2 | CREDIT — material at gen_42_abraham_end_ishmael_line |
+| 16 | Bereshit Rabbah 62:3 | CREDIT — material at gen_42_abraham_end_ishmael_line |
 | 17 | Bereshit Rabbah 62:4 | CREDIT — dup-of at gen_32_hagar_angel |
-| 18 | Bereshit Rabbah 66:4 | fresh |
-| 19 | Bereshit Rabbah 98:15 | fresh |
+| 18 | Bereshit Rabbah 66:4 | CREDIT — material at gen_42_abraham_end_ishmael_line |
+| 19 | Bereshit Rabbah 98:15 | CREDIT — material at gen_42_abraham_end_ishmael_line |
 | 20 | Jerusalem Talmud Sotah 5:6:3 | fresh |
 | 21 | Kiddushin 2a:5 | fresh |
 | 22 | Megillah 17a:1 | CREDIT — material at gen_32_hagar_angel |

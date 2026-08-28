@@ -8,7 +8,7 @@ each block still gets its own ledger.
 
 - enumerated: 4733 distinct linked sources
 - declared: 135 = 99 chain primaries + 36 Onkelos verses
-- credited (standing verdicts): 14 · FRESH TO READ: 85
+- credited (standing verdicts): 47 · FRESH TO READ: 52
 - outside declared scope (open narrowing, per the standing default): 4598
 
 | # | source | status |
@@ -23,48 +23,48 @@ each block still gets its own ledger.
 | 8 | Berakhot 7b:8 | fresh |
 | 9 | Bereshit Rabbah 1:5 | CREDIT — not-bearing at gen_01_creation_boot |
 | 10 | Bereshit Rabbah 33:6 | CREDIT — material at gen_19_the_remembering |
-| 11 | Bereshit Rabbah 60:15 | fresh · also in gen_61_yehuda_tamar, gen_62_potifar_house |
-| 12 | Bereshit Rabbah 68:10 | fresh |
+| 11 | Bereshit Rabbah 60:15 | CREDIT — material at gen_41_retelling_release_meeting |
+| 12 | Bereshit Rabbah 68:10 | CREDIT — material at gen_48_bethel_ladder_vow |
 | 13 | Bereshit Rabbah 6:9 | CREDIT — enrichment at gen_04_lights_calendar |
 | 14 | Bereshit Rabbah 75:4 | CREDIT — material at gen_32_hagar_angel |
-| 15 | Bereshit Rabbah 84:1 | fresh |
-| 16 | Bereshit Rabbah 84:10 | fresh |
-| 17 | Bereshit Rabbah 84:11 | fresh |
-| 18 | Bereshit Rabbah 84:12 | fresh |
+| 15 | Bereshit Rabbah 84:1 | CREDIT — material at gen_59_esau_edom_kings_ledger |
+| 16 | Bereshit Rabbah 84:10 | CREDIT — material at gen_60_dreamer_sold |
+| 17 | Bereshit Rabbah 84:11 | CREDIT — material at gen_60_dreamer_sold |
+| 18 | Bereshit Rabbah 84:12 | CREDIT — material at gen_60_dreamer_sold |
 | 19 | Bereshit Rabbah 84:13 | CREDIT — material at gen_31_covenant_pieces |
-| 20 | Bereshit Rabbah 84:14 | fresh |
-| 21 | Bereshit Rabbah 84:15 | fresh |
-| 22 | Bereshit Rabbah 84:16 | fresh |
-| 23 | Bereshit Rabbah 84:17 | fresh |
-| 24 | Bereshit Rabbah 84:18 | fresh |
-| 25 | Bereshit Rabbah 84:19 | fresh · also in gen_61_yehuda_tamar |
-| 26 | Bereshit Rabbah 84:20 | fresh |
-| 27 | Bereshit Rabbah 84:21 | fresh · also in gen_61_yehuda_tamar |
-| 28 | Bereshit Rabbah 84:22 | fresh |
-| 29 | Bereshit Rabbah 84:3 | fresh |
+| 20 | Bereshit Rabbah 84:14 | CREDIT — material at gen_60_dreamer_sold |
+| 21 | Bereshit Rabbah 84:15 | CREDIT — material at gen_58_israel_written_three_deaths |
+| 22 | Bereshit Rabbah 84:16 | CREDIT — material at gen_60_dreamer_sold |
+| 23 | Bereshit Rabbah 84:17 | CREDIT — material at gen_60_dreamer_sold |
+| 24 | Bereshit Rabbah 84:18 | CREDIT — material at gen_60_dreamer_sold |
+| 25 | Bereshit Rabbah 84:19 | CREDIT — material at gen_58_israel_written_three_deaths |
+| 26 | Bereshit Rabbah 84:20 | CREDIT — material at gen_60_dreamer_sold |
+| 27 | Bereshit Rabbah 84:21 | CREDIT — material at gen_60_dreamer_sold |
+| 28 | Bereshit Rabbah 84:22 | CREDIT — material at gen_60_dreamer_sold |
+| 29 | Bereshit Rabbah 84:3 | CREDIT — material at gen_60_dreamer_sold |
 | 30 | Bereshit Rabbah 84:4 | CREDIT — dup-of at gen_27_the_call |
 | 31 | Bereshit Rabbah 84:5 | CREDIT — material at gen_31_covenant_pieces |
 | 32 | Bereshit Rabbah 84:6 | CREDIT — no-bearing at gen_24_nations_table |
-| 33 | Bereshit Rabbah 84:7 | fresh · also in gen_62_potifar_house |
-| 34 | Bereshit Rabbah 84:8 | fresh |
-| 35 | Bereshit Rabbah 84:9 | fresh |
+| 33 | Bereshit Rabbah 84:7 | CREDIT — material at gen_60_dreamer_sold |
+| 34 | Bereshit Rabbah 84:8 | CREDIT — material at gen_60_dreamer_sold |
+| 35 | Bereshit Rabbah 84:9 | CREDIT — material at gen_60_dreamer_sold |
 | 36 | Bereshit Rabbah 85:1 | CREDIT — no-bearing at gen_08_toledot_garden_first_rule |
 | 37 | Bereshit Rabbah 85:11 | CREDIT — material at gen_37_laughter_wilderness_oath |
 | 38 | Bereshit Rabbah 85:2 | CREDIT — dup-of at gen_09_helper_woman_first_speech |
-| 39 | Bereshit Rabbah 85:3 | fresh · also in gen_61_yehuda_tamar |
-| 40 | Bereshit Rabbah 86:1 | fresh · also in gen_62_potifar_house |
-| 41 | Bereshit Rabbah 88:5 | fresh · also in gen_62_potifar_house, gen_63_two_dreams_prison |
-| 42 | Bereshit Rabbah 91:8 | fresh |
-| 43 | Bereshit Rabbah 92:8 | fresh |
-| 44 | Bereshit Rabbah 93:5 | fresh |
-| 45 | Bereshit Rabbah 93:8 | fresh |
-| 46 | Bereshit Rabbah 94:8 | fresh |
-| 47 | Bereshit Rabbah 95:2 | fresh |
-| 48 | Bereshit Rabbah 97:4 | fresh |
-| 49 | Bereshit Rabbah 97:6 | fresh |
-| 50 | Bereshit Rabbah 98:18 | fresh |
-| 51 | Bereshit Rabbah 99:2 | fresh |
-| 52 | Bereshit Rabbah 99:7 | fresh |
+| 39 | Bereshit Rabbah 85:3 | CREDIT — material at gen_60_dreamer_sold |
+| 40 | Bereshit Rabbah 86:1 | CREDIT — enrichment at gen_44_isaac_gerar_sister_expel |
+| 41 | Bereshit Rabbah 88:5 | CREDIT — material at gen_60_dreamer_sold |
+| 42 | Bereshit Rabbah 91:8 | CREDIT — material at gen_60_dreamer_sold |
+| 43 | Bereshit Rabbah 92:8 | CREDIT — material at gen_53_flight_over_the_river |
+| 44 | Bereshit Rabbah 93:5 | CREDIT — material at gen_60_dreamer_sold |
+| 45 | Bereshit Rabbah 93:8 | CREDIT — material at gen_60_dreamer_sold |
+| 46 | Bereshit Rabbah 94:8 | CREDIT — material at gen_60_dreamer_sold |
+| 47 | Bereshit Rabbah 95:2 | CREDIT — material at gen_60_dreamer_sold |
+| 48 | Bereshit Rabbah 97:4 | CREDIT — material at gen_60_dreamer_sold |
+| 49 | Bereshit Rabbah 97:6 | CREDIT — material at gen_57_deceit_at_the_gate |
+| 50 | Bereshit Rabbah 98:18 | CREDIT — material at gen_56_blessing_returned_first_altar |
+| 51 | Bereshit Rabbah 99:2 | CREDIT — material at gen_47_grudge_flight_paddan_send |
+| 52 | Bereshit Rabbah 99:7 | CREDIT — material at gen_46_isaac_blessing_demandee_mismatch |
 | 53 | Bereshit Rabbah 99:8 | fresh |
 | 54 | Chagigah 3a:14 | fresh |
 | 55 | Chullin 91b:3 | fresh |
@@ -118,7 +118,7 @@ each block still gets its own ledger.
 
 - enumerated: 2452 distinct linked sources
 - declared: 109 = 79 chain primaries + 30 Onkelos verses
-- credited (standing verdicts): 8 · FRESH TO READ: 71
+- credited (standing verdicts): 26 · FRESH TO READ: 53
 - outside declared scope (open narrowing, per the standing default): 2343
 
 | # | source | status |
@@ -127,29 +127,29 @@ each block still gets its own ledger.
 | 2 | Bava Kamma 92a:22 | fresh |
 | 3 | Berakhot 43b:8 | fresh |
 | 4 | Bereshit Rabbah 41:7 | CREDIT — material at gen_29_separation_promise |
-| 5 | Bereshit Rabbah 60:15 | fresh · also in gen_60_dreamer_sold, gen_62_potifar_house |
+| 5 | Bereshit Rabbah 60:15 | CREDIT — material at gen_41_retelling_release_meeting |
 | 6 | Bereshit Rabbah 61:4 | CREDIT — no-bearing at gen_12_cain_abel |
-| 7 | Bereshit Rabbah 63:8 | fresh |
-| 8 | Bereshit Rabbah 71:5 | fresh |
-| 9 | Bereshit Rabbah 74:5 | fresh |
-| 10 | Bereshit Rabbah 79:1 | fresh |
-| 11 | Bereshit Rabbah 84:19 | fresh · also in gen_60_dreamer_sold |
-| 12 | Bereshit Rabbah 84:21 | fresh · also in gen_60_dreamer_sold |
+| 7 | Bereshit Rabbah 63:8 | CREDIT — material at gen_43_isaac_twins_birthright |
+| 8 | Bereshit Rabbah 71:5 | CREDIT — material at gen_51_opened_womb_twelve_names |
+| 9 | Bereshit Rabbah 74:5 | CREDIT — material at gen_53_flight_over_the_river |
+| 10 | Bereshit Rabbah 79:1 | CREDIT — material at gen_48_bethel_ladder_vow |
+| 11 | Bereshit Rabbah 84:19 | CREDIT — material at gen_58_israel_written_three_deaths |
+| 12 | Bereshit Rabbah 84:21 | CREDIT — material at gen_60_dreamer_sold |
 | 13 | Bereshit Rabbah 85:1 | CREDIT — no-bearing at gen_08_toledot_garden_first_rule |
 | 14 | Bereshit Rabbah 85:10 | CREDIT — material at gen_30_war_of_kings |
 | 15 | Bereshit Rabbah 85:11 | CREDIT — material at gen_37_laughter_wilderness_oath |
-| 16 | Bereshit Rabbah 85:12 | fresh |
-| 17 | Bereshit Rabbah 85:13 | fresh |
-| 18 | Bereshit Rabbah 85:14 | fresh |
+| 16 | Bereshit Rabbah 85:12 | CREDIT — material at gen_61_yehuda_tamar |
+| 17 | Bereshit Rabbah 85:13 | CREDIT — material at gen_43_isaac_twins_birthright |
+| 18 | Bereshit Rabbah 85:14 | CREDIT — material at gen_61_yehuda_tamar |
 | 19 | Bereshit Rabbah 85:2 | CREDIT — dup-of at gen_09_helper_woman_first_speech |
-| 20 | Bereshit Rabbah 85:3 | fresh · also in gen_60_dreamer_sold |
-| 21 | Bereshit Rabbah 85:4 | fresh |
-| 22 | Bereshit Rabbah 85:5 | fresh |
-| 23 | Bereshit Rabbah 85:6 | fresh |
-| 24 | Bereshit Rabbah 85:7 | fresh |
-| 25 | Bereshit Rabbah 85:8 | fresh |
-| 26 | Bereshit Rabbah 85:9 | fresh |
-| 27 | Bereshit Rabbah 87:6 | fresh · also in gen_62_potifar_house |
+| 20 | Bereshit Rabbah 85:3 | CREDIT — material at gen_60_dreamer_sold |
+| 21 | Bereshit Rabbah 85:4 | CREDIT — material at gen_61_yehuda_tamar |
+| 22 | Bereshit Rabbah 85:5 | CREDIT — material at gen_61_yehuda_tamar |
+| 23 | Bereshit Rabbah 85:6 | CREDIT — material at gen_53_flight_over_the_river |
+| 24 | Bereshit Rabbah 85:7 | CREDIT — enrichment at gen_41_retelling_release_meeting |
+| 25 | Bereshit Rabbah 85:8 | CREDIT — material at gen_61_yehuda_tamar |
+| 26 | Bereshit Rabbah 85:9 | CREDIT — material at gen_61_yehuda_tamar |
+| 27 | Bereshit Rabbah 87:6 | CREDIT — material at gen_58_israel_written_three_deaths |
 | 28 | Chullin 113a:20 | fresh |
 | 29 | Jerusalem Talmud Bava Batra 3:1:7 | fresh |
 | 30 | Jerusalem Talmud Demai 1:1:4 | fresh |
@@ -208,7 +208,7 @@ each block still gets its own ledger.
 
 - enumerated: 1957 distinct linked sources
 - declared: 99 = 76 chain primaries + 23 Onkelos verses
-- credited (standing verdicts): 21 · FRESH TO READ: 55
+- credited (standing verdicts): 44 · FRESH TO READ: 32
 - outside declared scope (open narrowing, per the standing default): 1858
 
 | # | source | status |
@@ -223,34 +223,34 @@ each block still gets its own ledger.
 | 8 | Bereshit Rabbah 53:10 | CREDIT — material at gen_37_laughter_wilderness_oath |
 | 9 | Bereshit Rabbah 53:11 | CREDIT — material at gen_37_laughter_wilderness_oath |
 | 10 | Bereshit Rabbah 55:2 | CREDIT — material at gen_38_moriah_binding_oath |
-| 11 | Bereshit Rabbah 60:15 | fresh · also in gen_60_dreamer_sold, gen_61_yehuda_tamar |
-| 12 | Bereshit Rabbah 70:4 | fresh |
-| 13 | Bereshit Rabbah 73:8 | fresh |
-| 14 | Bereshit Rabbah 84:7 | fresh · also in gen_60_dreamer_sold |
+| 11 | Bereshit Rabbah 60:15 | CREDIT — material at gen_41_retelling_release_meeting |
+| 12 | Bereshit Rabbah 70:4 | CREDIT — material at gen_48_bethel_ladder_vow |
+| 13 | Bereshit Rabbah 73:8 | CREDIT — material at gen_44_isaac_gerar_sister_expel |
+| 14 | Bereshit Rabbah 84:7 | CREDIT — material at gen_60_dreamer_sold |
 | 15 | Bereshit Rabbah 85:2 | CREDIT — dup-of at gen_09_helper_woman_first_speech |
-| 16 | Bereshit Rabbah 86:1 | fresh · also in gen_60_dreamer_sold |
+| 16 | Bereshit Rabbah 86:1 | CREDIT — enrichment at gen_44_isaac_gerar_sister_expel |
 | 17 | Bereshit Rabbah 86:2 | CREDIT — material at gen_31_covenant_pieces |
 | 18 | Bereshit Rabbah 86:3 | CREDIT — enrichment at gen_23_vineyard_curse |
-| 19 | Bereshit Rabbah 86:4 | fresh |
-| 20 | Bereshit Rabbah 86:5 | fresh |
-| 21 | Bereshit Rabbah 86:6 | fresh |
-| 22 | Bereshit Rabbah 87:1 | fresh |
-| 23 | Bereshit Rabbah 87:10 | fresh · also in gen_63_two_dreams_prison |
-| 24 | Bereshit Rabbah 87:2 | fresh |
-| 25 | Bereshit Rabbah 87:3 | fresh |
-| 26 | Bereshit Rabbah 87:4 | fresh |
+| 19 | Bereshit Rabbah 86:4 | CREDIT — material at gen_62_potifar_house |
+| 20 | Bereshit Rabbah 86:5 | CREDIT — material at gen_62_potifar_house |
+| 21 | Bereshit Rabbah 86:6 | CREDIT — material at gen_50_wage_seven_years_switched_bride |
+| 22 | Bereshit Rabbah 87:1 | CREDIT — material at gen_62_potifar_house |
+| 23 | Bereshit Rabbah 87:10 | CREDIT — material at gen_62_potifar_house |
+| 24 | Bereshit Rabbah 87:2 | CREDIT — material at gen_62_potifar_house |
+| 25 | Bereshit Rabbah 87:3 | CREDIT — material at gen_62_potifar_house |
+| 26 | Bereshit Rabbah 87:4 | CREDIT — material at gen_62_potifar_house |
 | 27 | Bereshit Rabbah 87:5 | CREDIT — enrichment at gen_31_covenant_pieces |
-| 28 | Bereshit Rabbah 87:6 | fresh · also in gen_61_yehuda_tamar |
-| 29 | Bereshit Rabbah 87:7 | fresh |
+| 28 | Bereshit Rabbah 87:6 | CREDIT — material at gen_58_israel_written_three_deaths |
+| 29 | Bereshit Rabbah 87:7 | CREDIT — material at gen_62_potifar_house |
 | 30 | Bereshit Rabbah 87:8 | CREDIT — enrichment at gen_31_covenant_pieces |
-| 31 | Bereshit Rabbah 87:9 | fresh |
-| 32 | Bereshit Rabbah 88:1 | fresh · also in gen_63_two_dreams_prison |
-| 33 | Bereshit Rabbah 88:2 | fresh · also in gen_63_two_dreams_prison |
-| 34 | Bereshit Rabbah 88:3 | fresh |
-| 35 | Bereshit Rabbah 88:4 | fresh · also in gen_63_two_dreams_prison |
-| 36 | Bereshit Rabbah 88:5 | fresh · also in gen_60_dreamer_sold, gen_63_two_dreams_prison |
-| 37 | Bereshit Rabbah 88:6 | fresh · also in gen_63_two_dreams_prison |
-| 38 | Bereshit Rabbah 88:7 | fresh · also in gen_63_two_dreams_prison |
+| 31 | Bereshit Rabbah 87:9 | CREDIT — material at gen_62_potifar_house |
+| 32 | Bereshit Rabbah 88:1 | CREDIT — material at gen_62_potifar_house |
+| 33 | Bereshit Rabbah 88:2 | CREDIT — material at gen_62_potifar_house |
+| 34 | Bereshit Rabbah 88:3 | CREDIT — material at gen_62_potifar_house |
+| 35 | Bereshit Rabbah 88:4 | CREDIT — material at gen_62_potifar_house |
+| 36 | Bereshit Rabbah 88:5 | CREDIT — material at gen_60_dreamer_sold |
+| 37 | Bereshit Rabbah 88:6 | CREDIT — material at gen_62_potifar_house |
+| 38 | Bereshit Rabbah 88:7 | CREDIT — material at gen_62_potifar_house |
 | 39 | Bereshit Rabbah 91:1 | CREDIT — material at gen_31_covenant_pieces |
 | 40 | Jerusalem Talmud Avodah Zarah 3:2:3 | fresh |
 | 41 | Jerusalem Talmud Ketubot 5:11:1 | fresh |
@@ -295,7 +295,7 @@ each block still gets its own ledger.
 
 - enumerated: 1405 distinct linked sources
 - declared: 49 = 26 chain primaries + 23 Onkelos verses
-- credited (standing verdicts): 4 · FRESH TO READ: 22
+- credited (standing verdicts): 13 · FRESH TO READ: 13
 - outside declared scope (open narrowing, per the standing default): 1356
 
 | # | source | status |
@@ -303,15 +303,15 @@ each block still gets its own ledger.
 | 1 | Berakhot 55b | fresh |
 | 2 | Berakhot 55b:18 | fresh |
 | 3 | Bereshit Rabbah 19:2 | CREDIT — enrichment at gen_10_serpent_violation_trace |
-| 4 | Bereshit Rabbah 87:10 | fresh · also in gen_62_potifar_house |
-| 5 | Bereshit Rabbah 88:1 | fresh · also in gen_62_potifar_house |
-| 6 | Bereshit Rabbah 88:2 | fresh · also in gen_62_potifar_house |
-| 7 | Bereshit Rabbah 88:4 | fresh · also in gen_62_potifar_house |
-| 8 | Bereshit Rabbah 88:5 | fresh · also in gen_60_dreamer_sold, gen_62_potifar_house |
-| 9 | Bereshit Rabbah 88:6 | fresh · also in gen_62_potifar_house |
-| 10 | Bereshit Rabbah 88:7 | fresh · also in gen_62_potifar_house |
-| 11 | Bereshit Rabbah 89:2 | fresh |
-| 12 | Bereshit Rabbah 89:3 | fresh |
+| 4 | Bereshit Rabbah 87:10 | CREDIT — material at gen_62_potifar_house |
+| 5 | Bereshit Rabbah 88:1 | CREDIT — material at gen_62_potifar_house |
+| 6 | Bereshit Rabbah 88:2 | CREDIT — material at gen_62_potifar_house |
+| 7 | Bereshit Rabbah 88:4 | CREDIT — material at gen_62_potifar_house |
+| 8 | Bereshit Rabbah 88:5 | CREDIT — material at gen_60_dreamer_sold |
+| 9 | Bereshit Rabbah 88:6 | CREDIT — material at gen_62_potifar_house |
+| 10 | Bereshit Rabbah 88:7 | CREDIT — material at gen_62_potifar_house |
+| 11 | Bereshit Rabbah 89:2 | CREDIT — material at gen_63_two_dreams_prison |
+| 12 | Bereshit Rabbah 89:3 | CREDIT — material at gen_63_two_dreams_prison |
 | 13 | Chullin 92a:13 | fresh |
 | 14 | Chullin 92a:5 | fresh |
 | 15 | Chullin 92a:9 | fresh |

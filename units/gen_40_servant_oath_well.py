@@ -322,7 +322,7 @@ m.event("empty_run_draw", agent="rivqah", themes=["all_camels"])
 # "[EN-AID] And the man was gazing at her, keeping silent, to know whether
 # YHWH had prospered his way or not."
 m.step("Gen.24.21")
-# ‹מִשְׁתָּאֵה … מַחֲרִישׁ … הֲהִצְלִיחַ› (“stun … scratch … the-push-
+# ‹מִשְׁתָּאֵה … מַחֲרִישׁ … הַהִצְלִיחַ› (“stun … scratch … the-push-
 # forward”) — fact holds: gazing-silent-wonder
 m.fact("gazing_silent_wonder")
 

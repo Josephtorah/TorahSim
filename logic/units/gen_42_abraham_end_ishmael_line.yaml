@@ -1,5 +1,9 @@
 meta:
   id: gen_42_abraham_end_ishmael_line
+  rev: 2
+  changelog:
+    - "2026-08-27 rev 2: RE-era reading pass (parashat Chayei Sarah sweep, 4 blocks one sitting — SECOND RUN UNDER THE SPINE DEFAULT, owner 2026-08-27: Bereshit Rabbah + Onkelos declared, Mishnah/Talmud held for the Step 9 exam): ledger logic/oral_triage/gen_42_abraham_end_ishmael_line_2026-08-27.md; v1 queue discharged; ORAL_reading_pass block appended; no machine ops changed."
+    - "2026-08-27 ink fixes (pre-existing at HEAD, caught by verify_text): three defective spellings restored against the verse ink — 25:4 Chanokh without vav, 25:13 Nevayot without vav, 25:16 nesi'im (princes) without yod (op fragment + scenario value)."
   title_en: Abraham's end and Ishmael's line (25:1-18)
   title_he: וַיִּגְוַע וַיָּמָת אַבְרָהָם
   title_he_translit: va-yigva va-yamat avraham
@@ -265,6 +269,45 @@ derivation_log:
       logic/oral_audit/AUDIT_gen_42_2026-08-08.md; the crowns are
       displayed in the audit note above).
     confidence: reconstructed
+oral_notes:
+  - id: ORAL_reading_pass_2026_08_27
+    status: verified
+    work_en: "RE-era reading pass 2026-08-27 (parashat Chayei Sarah sweep, block 4 of 4, spine default; ledger logic/oral_triage/gen_42_abraham_end_ishmael_line_2026-08-27.md)"
+    he: נקרא כולו
+    he_translit: "nikra kulo (read in full — the declared spine)"
+    en: >
+      The v1 queue above is DISCHARGED: the declared spine read end
+      to end. HEADLINES: the VAYEHI-ACHAREI ("it was after the
+      death") REGRESSION RULE — a canon-grade pattern rule with its
+      own ink-guarded boundary (the formula without "it was" does
+      not fire), four recorded cases, the successor-mitigation, and
+      our 25:11 as a firing seat — candidate for the standing-rules
+      table; the DEFERRED-BLESSING ARC (the two-intertwined-trees
+      parable at 25:5 — bless no one, let the Owner act — closed by
+      25:11's "GOD blessed Isaac"); the TRIPLE-TRACK TARGUM SEAM at
+      25:3 — the midrash by name disputing "the Aramaic translators"
+      while our own Onkelos renders a third way (camps, tents,
+      islands): the two-shelves model's seam on exhibit inside the
+      declared spine; KETURA = HAGAR with the concubines-defective
+      ink claim recorded as the chain's own variant against our
+      full-spelled tree (dual-track, not applied); the GEVIA BEN
+      KOSEM tribunal — the birthright claim defeated from our
+      25:5-6's deed-of-gift-plus-severance (pairing gen_39's title
+      doctrine); ISHMAEL YIELDS PRECEDENCE at 25:9 — the repentance
+      evidence cashing gen_40's bakol leg; the KINDNESS-REPAID
+      funeral wire ("and Sarah his wife" at 25:10 answering gen_39's
+      locked doors); the YISHKON/NAFAL polarity completed at our
+      25:18 (dwelt while Abraham lived, fell after — with Onkelos
+      flattening the verb, dual); JACOB 63 AT THE BLESSING — the
+      bridge arithmetic riding Ishmael's 137 at our 25:17; the
+      HAGRITE WAR FAMILIES deployed from our 25:15's roster; the
+      RECORDED-YEARS rationale on 25:7; the morning-and-evening
+      sowing dossier landing on the remarriage; the living-angel
+      well rewrite at its second seat (25:11). Findings in the
+      ledger; dual-track; no machine ops changed.
+    comment_en: "Reading-pass record; the stamp and ritual remain the owner's word (batch, per parashah). Outside-scope primaries recorded in the ledger await the exam (testing shelf) or depth orders."
+    source: "[ORAL][READ-THROUGH][SPINE-DEFAULT]"
+
 scenarios:
 - id: S1
   title_en: after STEP_Gn_25_1 — Keturah report-name; SPECS empty
@@ -344,7 +387,7 @@ scenarios:
   expect_en: |
     SPECS empty;
     no test, no name.
-  value_he: שְׁנֵים־עָשָׂר נְשִׂיאִים
+  value_he: שְׁנֵים עָשָׂר נְשִׂיאִם
   value_he_translit: shenem-asar nesiim
 - id: S11
   title_en: after STEP_Gn_25_17 — Ishmael death triad; SPECS empty
@@ -499,7 +542,7 @@ boot_steps:
   operators:
   - op: PRECONDITION_STATE
     expr_en: HOLDS(named_only_roster_midyan_line_and_close, t0)
-    he: עֵיפָה … עֵפֶר … חֲנוֹךְ … אֲבִידָע … אֶלְדָּעָה … בְּנֵי קְטוּרָה
+    he: עֵיפָה … עֵפֶר … חֲנֹךְ … אֲבִידָע … אֶלְדָּעָה … בְּנֵי קְטוּרָה
     he_translit: efa … efer … chanokh … avida … eldaa … bene qetura
     en: >
       NAMED-ONLY CLOSE [flag 4 SAFE]. midyan (4080 tok2) [VERIFIED: SNAPSHOT Gen.25.4 idx1];
@@ -833,7 +876,7 @@ boot_steps:
   operators:
   - op: PRECONDITION_STATE
     expr_en: HOLDS(named_only_roster_ishmael_sons_a, t0)
-    he: נְבָיוֹת וְקֵדָר וְאַדְבְּאֵל וּמִבְשָׂם
+    he: נְבָיֹת וְקֵדָר וְאַדְבְּאֵל וּמִבְשָׂם
     he_translit: nevayot ve-qedar ve-adbel u-mivsam
     en: >
       NAMED-ONLY ROSTER A [flag 16 SAFE]. le-toldota-m (8435 tok9)
@@ -926,7 +969,7 @@ boot_steps:
   operators:
   - op: PRECONDITION_STATE
     expr_en: HOLDS(shneim_asar_nesiim_promise_landing_from_17_20, t0) — LANDING not pop
-    he: שְׁנֵים־עָשָׂר נְשִׂיאִים
+    he: שְׁנֵים־עָשָׂר נְשִׂיאִם
     he_translit: shenem-asar nesiim
     en: >
       TWELVE PRINCES PAY [flag 17 SAFE; owner/Claude care]. nesiim (5387 tok3/71)

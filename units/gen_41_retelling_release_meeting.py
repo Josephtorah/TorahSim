@@ -34,8 +34,8 @@ m.presupposed("ha_eved", "avraham")
 # and He gave him flocks and herds, silver and gold, male and female
 # servants, camels and donkeys."
 m.step("Gen.24.35")
-# ‹יְהוָה בֵּרַךְ אֶת־אֲדֹנִי … וַיִּתֶּן לוֹ› (“YHWH bless obj-marker lord-
-# me/my … and-set to-him/its”) — fact holds: the-LORD-bless-obj-marker-
+# ‹וַיהוָה בֵּרַךְ אֶת־אֲדֹנִי … וַיִּתֶּן־לוֹ› (“and-YHWH bless obj-marker
+# lord-me/my … and-set to-him/its”) — fact holds: the-LORD-bless-obj-marker-
 # adoni-very-and-be-large-and-set-wealth
 m.fact("YHWH_berakh_et_adoni_meod_va_yigdal_va_yiten_wealth")
 
@@ -143,7 +143,7 @@ m.fact("retold_design_hashqi_ni_sign")
 # "[EN-AID] and she says to me, Drink, and I will also draw for your camels
 # — she is the woman whom YHWH has appointed for my master's son."
 m.step("Gen.24.44")
-# ‹גַּם־אַתָּה שְׁתֵה … אֶשְׁאָב … הִיא הָאִשָּׁה אֲשֶׁר־הֹכִיחַ יְהוָה›
+# ‹גַּם־אַתָּה שְׁתֵה … אֶשְׁאָב … הִוא הָאִשָּׁה אֲשֶׁר־הֹכִיחַ יְהוָה›
 # (“also you drink … bale-up-water … he/it the-woman which be-right YHWH”) —
 # fact holds: retold-sign-drink-bale-up-water-and-appoint
 m.fact("retold_sign_shete_eshav_and_appoint")

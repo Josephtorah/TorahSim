@@ -8,7 +8,7 @@ each block still gets its own ledger.
 
 - enumerated: 3382 distinct linked sources
 - declared: 109 = 96 chain primaries + 13 Onkelos verses
-- credited (standing verdicts): 19 · FRESH TO READ: 77
+- credited (standing verdicts): 51 · FRESH TO READ: 45
 - excluded with cause (register false positive): Shabbat Siddur Sefard Linear, The Morning Prayers, Ashrei 229
 - outside declared scope (open narrowing, per the standing default): 3272
 
@@ -20,45 +20,45 @@ each block still gets its own ledger.
 | 4 | Bereshit Rabbah 44:8 | CREDIT — material at gen_31_covenant_pieces |
 | 5 | Bereshit Rabbah 47:6 | CREDIT — material at gen_33_shaddai_covenant_flesh |
 | 6 | Bereshit Rabbah 50:9 | CREDIT — material at gen_35_sodom_overthrow_cave |
-| 7 | Bereshit Rabbah 67:13 | fresh |
-| 8 | Bereshit Rabbah 68:1 | fresh |
-| 9 | Bereshit Rabbah 68:10 | fresh · also in gen_55_two_camps_wrestled_name |
-| 10 | Bereshit Rabbah 68:11 | fresh |
+| 7 | Bereshit Rabbah 67:13 | CREDIT — material at gen_46_isaac_blessing_demandee_mismatch |
+| 8 | Bereshit Rabbah 68:1 | CREDIT — material at gen_48_bethel_ladder_vow |
+| 9 | Bereshit Rabbah 68:10 | CREDIT — material at gen_48_bethel_ladder_vow |
+| 10 | Bereshit Rabbah 68:11 | CREDIT — material at gen_48_bethel_ladder_vow |
 | 11 | Bereshit Rabbah 68:12 | CREDIT — material at gen_35_sodom_overthrow_cave |
-| 12 | Bereshit Rabbah 68:13 | fresh |
-| 13 | Bereshit Rabbah 68:14 | fresh |
-| 14 | Bereshit Rabbah 68:2 | fresh |
-| 15 | Bereshit Rabbah 68:3 | fresh |
-| 16 | Bereshit Rabbah 68:4 | fresh |
-| 17 | Bereshit Rabbah 68:5 | fresh |
-| 18 | Bereshit Rabbah 68:6 | fresh |
-| 19 | Bereshit Rabbah 68:7 | fresh |
-| 20 | Bereshit Rabbah 68:8 | fresh |
+| 12 | Bereshit Rabbah 68:13 | CREDIT — material at gen_48_bethel_ladder_vow |
+| 13 | Bereshit Rabbah 68:14 | CREDIT — material at gen_48_bethel_ladder_vow |
+| 14 | Bereshit Rabbah 68:2 | CREDIT — enrichment at gen_40_servant_oath_well |
+| 15 | Bereshit Rabbah 68:3 | CREDIT — material at gen_41_retelling_release_meeting |
+| 16 | Bereshit Rabbah 68:4 | CREDIT — enrichment at gen_41_retelling_release_meeting |
+| 17 | Bereshit Rabbah 68:5 | CREDIT — material at gen_47_grudge_flight_paddan_send |
+| 18 | Bereshit Rabbah 68:6 | CREDIT — material at gen_48_bethel_ladder_vow |
+| 19 | Bereshit Rabbah 68:7 | CREDIT — material at gen_43_isaac_twins_birthright |
+| 20 | Bereshit Rabbah 68:8 | CREDIT — material at gen_48_bethel_ladder_vow |
 | 21 | Bereshit Rabbah 68:9 | CREDIT — material at gen_34_mamre_laugh_plea |
-| 22 | Bereshit Rabbah 69:1 | fresh |
-| 23 | Bereshit Rabbah 69:2 | fresh |
+| 22 | Bereshit Rabbah 69:1 | CREDIT — enrichment at gen_48_bethel_ladder_vow |
+| 23 | Bereshit Rabbah 69:2 | CREDIT — enrichment at gen_48_bethel_ladder_vow |
 | 24 | Bereshit Rabbah 69:3 | CREDIT — enrichment at gen_33_shaddai_covenant_flesh |
-| 25 | Bereshit Rabbah 69:4 | fresh |
-| 26 | Bereshit Rabbah 69:5 | fresh |
-| 27 | Bereshit Rabbah 69:6 | fresh |
+| 25 | Bereshit Rabbah 69:4 | CREDIT — material at gen_48_bethel_ladder_vow |
+| 26 | Bereshit Rabbah 69:5 | CREDIT — material at gen_48_bethel_ladder_vow |
+| 27 | Bereshit Rabbah 69:6 | CREDIT — material at gen_48_bethel_ladder_vow |
 | 28 | Bereshit Rabbah 69:7 | CREDIT — no-bearing at gen_14_adam_line_ledger |
-| 29 | Bereshit Rabbah 69:8 | fresh |
-| 30 | Bereshit Rabbah 70:1 | fresh |
-| 31 | Bereshit Rabbah 70:2 | fresh |
-| 32 | Bereshit Rabbah 70:3 | fresh |
-| 33 | Bereshit Rabbah 70:4 | fresh · also in gen_53_flight_over_the_river |
-| 34 | Bereshit Rabbah 70:5 | fresh |
-| 35 | Bereshit Rabbah 70:7 | fresh |
-| 36 | Bereshit Rabbah 76:1 | fresh · also in gen_55_two_camps_wrestled_name |
-| 37 | Bereshit Rabbah 76:2 | fresh · also in gen_53_flight_over_the_river, gen_55_two_camps_wrestled_name |
-| 38 | Bereshit Rabbah 79:1 | fresh · also in gen_54_pursuit_heap_two_tongues |
-| 39 | Bereshit Rabbah 79:2 | fresh |
-| 40 | Bereshit Rabbah 79:3 | fresh |
-| 41 | Bereshit Rabbah 81:1 | fresh |
+| 29 | Bereshit Rabbah 69:8 | CREDIT — material at gen_48_bethel_ladder_vow |
+| 30 | Bereshit Rabbah 70:1 | CREDIT — material at gen_48_bethel_ladder_vow |
+| 31 | Bereshit Rabbah 70:2 | CREDIT — material at gen_48_bethel_ladder_vow |
+| 32 | Bereshit Rabbah 70:3 | CREDIT — material at gen_48_bethel_ladder_vow |
+| 33 | Bereshit Rabbah 70:4 | CREDIT — material at gen_48_bethel_ladder_vow |
+| 34 | Bereshit Rabbah 70:5 | CREDIT — material at gen_48_bethel_ladder_vow |
+| 35 | Bereshit Rabbah 70:7 | CREDIT — material at gen_48_bethel_ladder_vow |
+| 36 | Bereshit Rabbah 76:1 | CREDIT — material at gen_48_bethel_ladder_vow |
+| 37 | Bereshit Rabbah 76:2 | CREDIT — material at gen_47_grudge_flight_paddan_send |
+| 38 | Bereshit Rabbah 79:1 | CREDIT — material at gen_48_bethel_ladder_vow |
+| 39 | Bereshit Rabbah 79:2 | CREDIT — material at gen_48_bethel_ladder_vow |
+| 40 | Bereshit Rabbah 79:3 | CREDIT — enrichment at gen_43_isaac_twins_birthright |
+| 41 | Bereshit Rabbah 81:1 | CREDIT — material at gen_48_bethel_ladder_vow |
 | 42 | Bereshit Rabbah 82:6 | CREDIT — dup-of at gen_33_shaddai_covenant_flesh |
 | 43 | Bereshit Rabbah 84:6 | CREDIT — no-bearing at gen_24_nations_table |
 | 44 | Bereshit Rabbah 87:5 | CREDIT — enrichment at gen_31_covenant_pieces |
-| 45 | Bereshit Rabbah 89:4 | fresh |
+| 45 | Bereshit Rabbah 89:4 | CREDIT — material at gen_48_bethel_ladder_vow |
 | 46 | Chagigah 4b:8 | fresh |
 | 47 | Chullin 91b:11 | fresh |
 | 48 | Chullin 91b:12 | fresh |
@@ -116,7 +116,7 @@ each block still gets its own ledger.
 
 - enumerated: 1219 distinct linked sources
 - declared: 29 = 15 chain primaries + 14 Onkelos verses
-- credited (standing verdicts): 2 · FRESH TO READ: 13
+- credited (standing verdicts): 10 · FRESH TO READ: 5
 - excluded with cause (register false positive): Shabbat Siddur Sefard Linear, Prayers for Yom Tov, Musaf for Yom Tov, Prayer for Rain 52
 - outside declared scope (open narrowing, per the standing default): 1189
 
@@ -124,14 +124,14 @@ each block still gets its own ledger.
 |---|--------|--------|
 | 1 | Bava Batra 123a:18 | fresh |
 | 2 | Bereshit Rabbah 60:7 | CREDIT — material at gen_23_vineyard_curse |
-| 3 | Bereshit Rabbah 70:10 | fresh |
-| 4 | Bereshit Rabbah 70:11 | fresh |
-| 5 | Bereshit Rabbah 70:12 | fresh · also in gen_51_opened_womb_twelve_names |
-| 6 | Bereshit Rabbah 70:13 | fresh |
-| 7 | Bereshit Rabbah 70:14 | fresh · also in gen_50_wage_seven_years_switched_bride |
-| 8 | Bereshit Rabbah 70:8 | fresh |
-| 9 | Bereshit Rabbah 70:9 | fresh |
-| 10 | Bereshit Rabbah 79:4 | fresh |
+| 3 | Bereshit Rabbah 70:10 | CREDIT — material at gen_49_well_stone_rachel_arrival |
+| 4 | Bereshit Rabbah 70:11 | CREDIT — material at gen_49_well_stone_rachel_arrival |
+| 5 | Bereshit Rabbah 70:12 | CREDIT — enrichment at gen_40_servant_oath_well |
+| 6 | Bereshit Rabbah 70:13 | CREDIT — enrichment at gen_40_servant_oath_well |
+| 7 | Bereshit Rabbah 70:14 | CREDIT — material at gen_49_well_stone_rachel_arrival |
+| 8 | Bereshit Rabbah 70:8 | CREDIT — material at gen_49_well_stone_rachel_arrival |
+| 9 | Bereshit Rabbah 70:9 | CREDIT — material at gen_49_well_stone_rachel_arrival |
+| 10 | Bereshit Rabbah 79:4 | CREDIT — enrichment at gen_46_isaac_blessing_demandee_mismatch |
 | 11 | Megillah 10b:10 | CREDIT — enrichment at gen_01_creation_boot |
 | 12 | Megillah 13b:2 | fresh |
 | 13 | Pirkei Avot 5:7 | fresh |
@@ -143,7 +143,7 @@ each block still gets its own ledger.
 
 - enumerated: 1113 distinct linked sources
 - declared: 34 = 18 chain primaries + 16 Onkelos verses
-- credited (standing verdicts): 3 · FRESH TO READ: 15
+- credited (standing verdicts): 12 · FRESH TO READ: 6
 - outside declared scope (open narrowing, per the standing default): 1079
 
 | # | source | status |
@@ -151,15 +151,15 @@ each block still gets its own ledger.
 | 1 | Bava Batra 123a:14 | CREDIT — material at gen_17_boarding |
 | 2 | Bava Batra 123a:15-16 | fresh |
 | 3 | Bava Batra 123a:20 | fresh |
-| 4 | Bereshit Rabbah 67:10 | fresh |
-| 5 | Bereshit Rabbah 70:14 | fresh · also in gen_49_well_stone_rachel_arrival |
-| 6 | Bereshit Rabbah 70:15 | fresh |
-| 7 | Bereshit Rabbah 70:16 | fresh |
-| 8 | Bereshit Rabbah 70:17 | fresh |
-| 9 | Bereshit Rabbah 70:18 | fresh |
-| 10 | Bereshit Rabbah 70:19 | fresh |
-| 11 | Bereshit Rabbah 70:20 | fresh |
-| 12 | Bereshit Rabbah 86:6 | fresh |
+| 4 | Bereshit Rabbah 67:10 | CREDIT — material at gen_47_grudge_flight_paddan_send |
+| 5 | Bereshit Rabbah 70:14 | CREDIT — material at gen_49_well_stone_rachel_arrival |
+| 6 | Bereshit Rabbah 70:15 | CREDIT — material at gen_50_wage_seven_years_switched_bride |
+| 7 | Bereshit Rabbah 70:16 | CREDIT — material at gen_50_wage_seven_years_switched_bride |
+| 8 | Bereshit Rabbah 70:17 | CREDIT — material at gen_47_grudge_flight_paddan_send |
+| 9 | Bereshit Rabbah 70:18 | CREDIT — material at gen_50_wage_seven_years_switched_bride |
+| 10 | Bereshit Rabbah 70:19 | CREDIT — material at gen_50_wage_seven_years_switched_bride |
+| 11 | Bereshit Rabbah 70:20 | CREDIT — material at gen_50_wage_seven_years_switched_bride |
+| 12 | Bereshit Rabbah 86:6 | CREDIT — material at gen_50_wage_seven_years_switched_bride |
 | 13 | Jerusalem Talmud Ketubot 1:1:12 | fresh |
 | 14 | Jerusalem Talmud Moed Katan 1:7:3 | fresh |
 | 15 | Megillah 13b:5 | fresh |
@@ -172,7 +172,7 @@ each block still gets its own ledger.
 
 - enumerated: 2383 distinct linked sources
 - declared: 87 = 58 chain primaries + 29 Onkelos verses
-- credited (standing verdicts): 8 · FRESH TO READ: 50
+- credited (standing verdicts): 34 · FRESH TO READ: 24
 - outside declared scope (open narrowing, per the standing default): 2296
 
 | # | source | status |
@@ -186,34 +186,34 @@ each block still gets its own ledger.
 | 7 | Bereshit Rabbah 45:2 | CREDIT — material at gen_32_hagar_angel |
 | 8 | Bereshit Rabbah 45:5 | CREDIT — enrichment at gen_10_serpent_violation_trace |
 | 9 | Bereshit Rabbah 61:4 | CREDIT — no-bearing at gen_12_cain_abel |
-| 10 | Bereshit Rabbah 70:12 | fresh · also in gen_49_well_stone_rachel_arrival |
-| 11 | Bereshit Rabbah 71:1 | fresh |
-| 12 | Bereshit Rabbah 71:10 | fresh |
-| 13 | Bereshit Rabbah 71:2 | fresh |
-| 14 | Bereshit Rabbah 71:3 | fresh |
-| 15 | Bereshit Rabbah 71:4 | fresh |
-| 16 | Bereshit Rabbah 71:5 | fresh |
-| 17 | Bereshit Rabbah 71:6 | fresh |
+| 10 | Bereshit Rabbah 70:12 | CREDIT — enrichment at gen_40_servant_oath_well |
+| 11 | Bereshit Rabbah 71:1 | CREDIT — material at gen_51_opened_womb_twelve_names |
+| 12 | Bereshit Rabbah 71:10 | CREDIT — material at gen_51_opened_womb_twelve_names |
+| 13 | Bereshit Rabbah 71:2 | CREDIT — material at gen_51_opened_womb_twelve_names |
+| 14 | Bereshit Rabbah 71:3 | CREDIT — material at gen_51_opened_womb_twelve_names |
+| 15 | Bereshit Rabbah 71:4 | CREDIT — material at gen_51_opened_womb_twelve_names |
+| 16 | Bereshit Rabbah 71:5 | CREDIT — material at gen_51_opened_womb_twelve_names |
+| 17 | Bereshit Rabbah 71:6 | CREDIT — material at gen_51_opened_womb_twelve_names |
 | 18 | Bereshit Rabbah 71:7 | CREDIT — material at gen_32_hagar_angel |
-| 19 | Bereshit Rabbah 71:8 | fresh |
-| 20 | Bereshit Rabbah 71:9 | fresh |
-| 21 | Bereshit Rabbah 72:1 | fresh |
-| 22 | Bereshit Rabbah 72:2 | fresh |
-| 23 | Bereshit Rabbah 72:3 | fresh |
-| 24 | Bereshit Rabbah 72:4 | fresh |
-| 25 | Bereshit Rabbah 72:5 | fresh |
-| 26 | Bereshit Rabbah 72:6 | fresh |
-| 27 | Bereshit Rabbah 73:1 | fresh |
-| 28 | Bereshit Rabbah 73:2 | fresh |
+| 19 | Bereshit Rabbah 71:8 | CREDIT — material at gen_51_opened_womb_twelve_names |
+| 20 | Bereshit Rabbah 71:9 | CREDIT — material at gen_51_opened_womb_twelve_names |
+| 21 | Bereshit Rabbah 72:1 | CREDIT — material at gen_51_opened_womb_twelve_names |
+| 22 | Bereshit Rabbah 72:2 | CREDIT — material at gen_51_opened_womb_twelve_names |
+| 23 | Bereshit Rabbah 72:3 | CREDIT — material at gen_51_opened_womb_twelve_names |
+| 24 | Bereshit Rabbah 72:4 | CREDIT — material at gen_51_opened_womb_twelve_names |
+| 25 | Bereshit Rabbah 72:5 | CREDIT — material at gen_51_opened_womb_twelve_names |
+| 26 | Bereshit Rabbah 72:6 | CREDIT — material at gen_51_opened_womb_twelve_names |
+| 27 | Bereshit Rabbah 73:1 | CREDIT — material at gen_51_opened_womb_twelve_names |
+| 28 | Bereshit Rabbah 73:2 | CREDIT — material at gen_51_opened_womb_twelve_names |
 | 29 | Bereshit Rabbah 73:3 | CREDIT — material at gen_15_flood_prologue |
-| 30 | Bereshit Rabbah 73:4 | fresh |
-| 31 | Bereshit Rabbah 73:5 | fresh |
-| 32 | Bereshit Rabbah 73:6 | fresh |
-| 33 | Bereshit Rabbah 80:1 | fresh |
-| 34 | Bereshit Rabbah 98:4 | fresh |
-| 35 | Bereshit Rabbah 99:10 | fresh |
-| 36 | Bereshit Rabbah 99:12 | fresh |
-| 37 | Bereshit Rabbah 99:6 | fresh |
+| 30 | Bereshit Rabbah 73:4 | CREDIT — material at gen_51_opened_womb_twelve_names |
+| 31 | Bereshit Rabbah 73:5 | CREDIT — material at gen_51_opened_womb_twelve_names |
+| 32 | Bereshit Rabbah 73:6 | CREDIT — material at gen_51_opened_womb_twelve_names |
+| 33 | Bereshit Rabbah 80:1 | CREDIT — material at gen_51_opened_womb_twelve_names |
+| 34 | Bereshit Rabbah 98:4 | CREDIT — enrichment at gen_46_isaac_blessing_demandee_mismatch |
+| 35 | Bereshit Rabbah 99:10 | CREDIT — material at gen_51_opened_womb_twelve_names |
+| 36 | Bereshit Rabbah 99:12 | CREDIT — material at gen_51_opened_womb_twelve_names |
+| 37 | Bereshit Rabbah 99:6 | CREDIT — material at gen_51_opened_womb_twelve_names |
 | 38 | Eikhah Rabbah 3:2 | fresh |
 | 39 | Eruvin 100b:19 | fresh |
 | 40 | Jerusalem Talmud Berakhot 9:3:8 | fresh |
@@ -241,24 +241,24 @@ each block still gets its own ledger.
 
 - enumerated: 1679 distinct linked sources
 - declared: 44 = 25 chain primaries + 19 Onkelos verses
-- credited (standing verdicts): 1 · FRESH TO READ: 24
+- credited (standing verdicts): 11 · FRESH TO READ: 14
 - outside declared scope (open narrowing, per the standing default): 1635
 
 | # | source | status |
 |---|--------|--------|
 | 1 | Bava Batra 123b:2 | fresh |
 | 2 | Berakhot 42a:8 | fresh |
-| 3 | Bereshit Rabbah 73:10 | fresh · also in gen_53_flight_over_the_river |
-| 4 | Bereshit Rabbah 73:11 | fresh |
-| 5 | Bereshit Rabbah 73:7 | fresh |
-| 6 | Bereshit Rabbah 73:8 | fresh |
-| 7 | Bereshit Rabbah 73:9 | fresh · also in gen_53_flight_over_the_river |
-| 8 | Bereshit Rabbah 74:11 | fresh · also in gen_53_flight_over_the_river, gen_54_pursuit_heap_two_tongues |
-| 9 | Bereshit Rabbah 74:3 | fresh · also in gen_53_flight_over_the_river |
-| 10 | Bereshit Rabbah 74:6 | fresh · also in gen_54_pursuit_heap_two_tongues |
-| 11 | Bereshit Rabbah 80:4 | fresh |
+| 3 | Bereshit Rabbah 73:10 | CREDIT — material at gen_52_send_me_speckled_wage_rods |
+| 4 | Bereshit Rabbah 73:11 | CREDIT — material at gen_52_send_me_speckled_wage_rods |
+| 5 | Bereshit Rabbah 73:7 | CREDIT — material at gen_52_send_me_speckled_wage_rods |
+| 6 | Bereshit Rabbah 73:8 | CREDIT — material at gen_44_isaac_gerar_sister_expel |
+| 7 | Bereshit Rabbah 73:9 | CREDIT — material at gen_52_send_me_speckled_wage_rods |
+| 8 | Bereshit Rabbah 74:11 | CREDIT — material at gen_52_send_me_speckled_wage_rods |
+| 9 | Bereshit Rabbah 74:3 | CREDIT — material at gen_52_send_me_speckled_wage_rods |
+| 10 | Bereshit Rabbah 74:6 | CREDIT — material at gen_52_send_me_speckled_wage_rods |
+| 11 | Bereshit Rabbah 80:4 | CREDIT — material at gen_52_send_me_speckled_wage_rods |
 | 12 | Bereshit Rabbah 84:5 | CREDIT — material at gen_31_covenant_pieces |
-| 13 | Bereshit Rabbah 86:1 | fresh |
+| 13 | Bereshit Rabbah 86:1 | CREDIT — enrichment at gen_44_isaac_gerar_sister_expel |
 | 14 | Jerusalem Talmud Avodah Zarah 3:2:3 | fresh |
 | 15 | Jerusalem Talmud Shabbat 1:3:9 | fresh |
 | 16 | Mishnah Bava Batra 5:6 | fresh |
@@ -277,7 +277,7 @@ each block still gets its own ledger.
 
 - enumerated: 1240 distinct linked sources
 - declared: 49 = 28 chain primaries + 21 Onkelos verses
-- credited (standing verdicts): 5 · FRESH TO READ: 23
+- credited (standing verdicts): 21 · FRESH TO READ: 7
 - outside declared scope (open narrowing, per the standing default): 1191
 
 | # | source | status |
@@ -285,24 +285,24 @@ each block still gets its own ledger.
 | 1 | Berakhot 8b:14 | fresh |
 | 2 | Bereshit Rabbah 18:2 | CREDIT — material at gen_09_helper_woman_first_speech |
 | 3 | Bereshit Rabbah 45:5 | CREDIT — enrichment at gen_10_serpent_violation_trace |
-| 4 | Bereshit Rabbah 70:4 | fresh · also in gen_48_bethel_ladder_vow |
-| 5 | Bereshit Rabbah 73:10 | fresh · also in gen_52_send_me_speckled_wage_rods |
-| 6 | Bereshit Rabbah 73:12 | fresh |
-| 7 | Bereshit Rabbah 73:9 | fresh · also in gen_52_send_me_speckled_wage_rods |
-| 8 | Bereshit Rabbah 74:1 | fresh |
-| 9 | Bereshit Rabbah 74:11 | fresh · also in gen_52_send_me_speckled_wage_rods, gen_54_pursuit_heap_two_tongues |
-| 10 | Bereshit Rabbah 74:2 | fresh |
-| 11 | Bereshit Rabbah 74:3 | fresh · also in gen_52_send_me_speckled_wage_rods |
-| 12 | Bereshit Rabbah 74:4 | fresh · also in gen_54_pursuit_heap_two_tongues |
-| 13 | Bereshit Rabbah 74:5 | fresh |
-| 14 | Bereshit Rabbah 74:9 | fresh · also in gen_54_pursuit_heap_two_tongues |
+| 4 | Bereshit Rabbah 70:4 | CREDIT — material at gen_48_bethel_ladder_vow |
+| 5 | Bereshit Rabbah 73:10 | CREDIT — material at gen_52_send_me_speckled_wage_rods |
+| 6 | Bereshit Rabbah 73:12 | CREDIT — material at gen_53_flight_over_the_river |
+| 7 | Bereshit Rabbah 73:9 | CREDIT — material at gen_52_send_me_speckled_wage_rods |
+| 8 | Bereshit Rabbah 74:1 | CREDIT — material at gen_53_flight_over_the_river |
+| 9 | Bereshit Rabbah 74:11 | CREDIT — material at gen_52_send_me_speckled_wage_rods |
+| 10 | Bereshit Rabbah 74:2 | CREDIT — material at gen_53_flight_over_the_river |
+| 11 | Bereshit Rabbah 74:3 | CREDIT — material at gen_52_send_me_speckled_wage_rods |
+| 12 | Bereshit Rabbah 74:4 | CREDIT — material at gen_53_flight_over_the_river |
+| 13 | Bereshit Rabbah 74:5 | CREDIT — material at gen_53_flight_over_the_river |
+| 14 | Bereshit Rabbah 74:9 | CREDIT — material at gen_53_flight_over_the_river |
 | 15 | Bereshit Rabbah 75:1 | CREDIT — no-bearing at gen_24_nations_table |
-| 16 | Bereshit Rabbah 76:2 | fresh · also in gen_48_bethel_ladder_vow, gen_55_two_camps_wrestled_name |
-| 17 | Bereshit Rabbah 82:1 | fresh |
+| 16 | Bereshit Rabbah 76:2 | CREDIT — material at gen_47_grudge_flight_paddan_send |
+| 17 | Bereshit Rabbah 82:1 | CREDIT — material at gen_53_flight_over_the_river |
 | 18 | Bereshit Rabbah 82:13 | CREDIT — material at gen_31_covenant_pieces |
-| 19 | Bereshit Rabbah 82:3 | fresh |
-| 20 | Bereshit Rabbah 85:6 | fresh |
-| 21 | Bereshit Rabbah 92:8 | fresh |
+| 19 | Bereshit Rabbah 82:3 | CREDIT — material at gen_53_flight_over_the_river |
+| 20 | Bereshit Rabbah 85:6 | CREDIT — material at gen_53_flight_over_the_river |
+| 21 | Bereshit Rabbah 92:8 | CREDIT — material at gen_53_flight_over_the_river |
 | 22 | Jerusalem Talmud Nazir 7:2:4 | fresh |
 | 23 | Jerusalem Talmud Nazir 9:1:3 | fresh |
 | 24 | Jerusalem Talmud Sotah 1:8:1 | fresh |
@@ -316,7 +316,7 @@ each block still gets its own ledger.
 
 - enumerated: 2518 distinct linked sources
 - declared: 77 = 44 chain primaries + 33 Onkelos verses
-- credited (standing verdicts): 9 · FRESH TO READ: 35
+- credited (standing verdicts): 21 · FRESH TO READ: 23
 - excluded with cause (register false positive): Shabbat Siddur Sefard Linear, Song of Songs 4:1
 - outside declared scope (open narrowing, per the standing default): 2440
 
@@ -328,19 +328,19 @@ each block still gets its own ledger.
 | 4 | Bava Kamma 65b:18 | fresh |
 | 5 | Bereshit Rabbah 48:15 | CREDIT — material at gen_34_mamre_laugh_plea |
 | 6 | Bereshit Rabbah 52:5 | CREDIT — material at gen_36_gerar_dream_prophet |
-| 7 | Bereshit Rabbah 74:10 | fresh |
-| 8 | Bereshit Rabbah 74:11 | fresh · also in gen_52_send_me_speckled_wage_rods, gen_53_flight_over_the_river |
-| 9 | Bereshit Rabbah 74:12 | fresh |
-| 10 | Bereshit Rabbah 74:13 | fresh |
-| 11 | Bereshit Rabbah 74:14 | fresh |
-| 12 | Bereshit Rabbah 74:15 | fresh |
-| 13 | Bereshit Rabbah 74:16 | fresh · also in gen_55_two_camps_wrestled_name |
-| 14 | Bereshit Rabbah 74:4 | fresh · also in gen_53_flight_over_the_river |
-| 15 | Bereshit Rabbah 74:6 | fresh · also in gen_52_send_me_speckled_wage_rods |
+| 7 | Bereshit Rabbah 74:10 | CREDIT — material at gen_54_pursuit_heap_two_tongues |
+| 8 | Bereshit Rabbah 74:11 | CREDIT — material at gen_52_send_me_speckled_wage_rods |
+| 9 | Bereshit Rabbah 74:12 | CREDIT — material at gen_54_pursuit_heap_two_tongues |
+| 10 | Bereshit Rabbah 74:13 | CREDIT — material at gen_54_pursuit_heap_two_tongues |
+| 11 | Bereshit Rabbah 74:14 | CREDIT — material at gen_54_pursuit_heap_two_tongues |
+| 12 | Bereshit Rabbah 74:15 | CREDIT — material at gen_54_pursuit_heap_two_tongues |
+| 13 | Bereshit Rabbah 74:16 | CREDIT — material at gen_54_pursuit_heap_two_tongues |
+| 14 | Bereshit Rabbah 74:4 | CREDIT — material at gen_53_flight_over_the_river |
+| 15 | Bereshit Rabbah 74:6 | CREDIT — material at gen_52_send_me_speckled_wage_rods |
 | 16 | Bereshit Rabbah 74:7 | CREDIT — material at gen_36_gerar_dream_prophet |
-| 17 | Bereshit Rabbah 74:8 | fresh |
-| 18 | Bereshit Rabbah 74:9 | fresh · also in gen_53_flight_over_the_river |
-| 19 | Bereshit Rabbah 79:1 | fresh · also in gen_48_bethel_ladder_vow |
+| 17 | Bereshit Rabbah 74:8 | CREDIT — material at gen_54_pursuit_heap_two_tongues |
+| 18 | Bereshit Rabbah 74:9 | CREDIT — material at gen_53_flight_over_the_river |
+| 19 | Bereshit Rabbah 79:1 | CREDIT — material at gen_48_bethel_ladder_vow |
 | 20 | Bereshit Rabbah 84:6 | CREDIT — no-bearing at gen_24_nations_table |
 | 21 | Bereshit Rabbah 93:6 | CREDIT — enrichment at gen_28_egypt_descent |
 | 22 | Jerusalem Talmud Demai 2:1:19 | fresh |
@@ -372,7 +372,7 @@ each block still gets its own ledger.
 
 - enumerated: 4233 distinct linked sources
 - declared: 137 = 104 chain primaries + 33 Onkelos verses
-- credited (standing verdicts): 10 · FRESH TO READ: 94
+- credited (standing verdicts): 43 · FRESH TO READ: 61
 - NOTE: span crosses a parashah boundary — read both portions' runs
 - excluded with cause (register false positive): Shabbat Siddur Sefard Linear, Prayers for Yom Tov, Musaf for Yom Tov, Prayer for Rain 49 · Shabbat Siddur Sefard Linear, Prayers for Yom Tov, Musaf for Yom Tov, Prayer for Rain 53 · Shabbat Siddur Sefard Linear, Songs for Shabbos Morning, Baruch El Elyon 33
 - outside declared scope (open narrowing, per the standing default): 4093
@@ -384,44 +384,44 @@ each block still gets its own ledger.
 | 3 | Berakhot 62b:15 | fresh |
 | 4 | Bereshit Rabbah 34:13 | CREDIT — material at gen_21_blessing_blood_law |
 | 5 | Bereshit Rabbah 63:12 | CREDIT — material at gen_31_covenant_pieces |
-| 6 | Bereshit Rabbah 63:3 | fresh |
+| 6 | Bereshit Rabbah 63:3 | CREDIT — material at gen_43_isaac_twins_birthright |
 | 7 | Bereshit Rabbah 65:13 | CREDIT — dup-of at gen_10_serpent_violation_trace |
-| 8 | Bereshit Rabbah 68:10 | fresh · also in gen_48_bethel_ladder_vow |
-| 9 | Bereshit Rabbah 74:16 | fresh · also in gen_54_pursuit_heap_two_tongues |
-| 10 | Bereshit Rabbah 74:17 | fresh |
+| 8 | Bereshit Rabbah 68:10 | CREDIT — material at gen_48_bethel_ladder_vow |
+| 9 | Bereshit Rabbah 74:16 | CREDIT — material at gen_54_pursuit_heap_two_tongues |
+| 10 | Bereshit Rabbah 74:17 | CREDIT — material at gen_55_two_camps_wrestled_name |
 | 11 | Bereshit Rabbah 75:1 | CREDIT — no-bearing at gen_24_nations_table |
-| 12 | Bereshit Rabbah 75:10 | fresh |
-| 13 | Bereshit Rabbah 75:11 | fresh |
-| 14 | Bereshit Rabbah 75:12 | fresh |
-| 15 | Bereshit Rabbah 75:13 | fresh |
-| 16 | Bereshit Rabbah 75:2 | fresh |
-| 17 | Bereshit Rabbah 75:3 | fresh |
+| 12 | Bereshit Rabbah 75:10 | CREDIT — material at gen_55_two_camps_wrestled_name |
+| 13 | Bereshit Rabbah 75:11 | CREDIT — material at gen_55_two_camps_wrestled_name |
+| 14 | Bereshit Rabbah 75:12 | CREDIT — material at gen_55_two_camps_wrestled_name |
+| 15 | Bereshit Rabbah 75:13 | CREDIT — material at gen_55_two_camps_wrestled_name |
+| 16 | Bereshit Rabbah 75:2 | CREDIT — material at gen_55_two_camps_wrestled_name |
+| 17 | Bereshit Rabbah 75:3 | CREDIT — material at gen_55_two_camps_wrestled_name |
 | 18 | Bereshit Rabbah 75:4 | CREDIT — material at gen_32_hagar_angel |
-| 19 | Bereshit Rabbah 75:5 | fresh |
-| 20 | Bereshit Rabbah 75:6 | fresh |
-| 21 | Bereshit Rabbah 75:7 | fresh |
-| 22 | Bereshit Rabbah 75:8 | fresh |
-| 23 | Bereshit Rabbah 75:9 | fresh |
-| 24 | Bereshit Rabbah 76:1 | fresh · also in gen_48_bethel_ladder_vow |
-| 25 | Bereshit Rabbah 76:2 | fresh · also in gen_48_bethel_ladder_vow, gen_53_flight_over_the_river |
-| 26 | Bereshit Rabbah 76:3 | fresh |
-| 27 | Bereshit Rabbah 76:4 | fresh |
-| 28 | Bereshit Rabbah 76:5 | fresh |
-| 29 | Bereshit Rabbah 76:6 | fresh |
+| 19 | Bereshit Rabbah 75:5 | CREDIT — material at gen_55_two_camps_wrestled_name |
+| 20 | Bereshit Rabbah 75:6 | CREDIT — material at gen_55_two_camps_wrestled_name |
+| 21 | Bereshit Rabbah 75:7 | CREDIT — material at gen_55_two_camps_wrestled_name |
+| 22 | Bereshit Rabbah 75:8 | CREDIT — material at gen_46_isaac_blessing_demandee_mismatch |
+| 23 | Bereshit Rabbah 75:9 | CREDIT — material at gen_47_grudge_flight_paddan_send |
+| 24 | Bereshit Rabbah 76:1 | CREDIT — material at gen_48_bethel_ladder_vow |
+| 25 | Bereshit Rabbah 76:2 | CREDIT — material at gen_47_grudge_flight_paddan_send |
+| 26 | Bereshit Rabbah 76:3 | CREDIT — material at gen_55_two_camps_wrestled_name |
+| 27 | Bereshit Rabbah 76:4 | CREDIT — material at gen_55_two_camps_wrestled_name |
+| 28 | Bereshit Rabbah 76:5 | CREDIT — material at gen_55_two_camps_wrestled_name |
+| 29 | Bereshit Rabbah 76:6 | CREDIT — material at gen_46_isaac_blessing_demandee_mismatch |
 | 30 | Bereshit Rabbah 76:7 | CREDIT — no-bearing at gen_30_war_of_kings |
-| 31 | Bereshit Rabbah 76:8 | fresh |
-| 32 | Bereshit Rabbah 76:9 | fresh |
-| 33 | Bereshit Rabbah 77:1 | fresh |
-| 34 | Bereshit Rabbah 77:2 | fresh |
-| 35 | Bereshit Rabbah 77:3 | fresh |
-| 36 | Bereshit Rabbah 78:1 | fresh |
-| 37 | Bereshit Rabbah 78:11 | fresh |
-| 38 | Bereshit Rabbah 78:2 | fresh |
+| 31 | Bereshit Rabbah 76:8 | CREDIT — material at gen_55_two_camps_wrestled_name |
+| 32 | Bereshit Rabbah 76:9 | CREDIT — material at gen_55_two_camps_wrestled_name |
+| 33 | Bereshit Rabbah 77:1 | CREDIT — material at gen_55_two_camps_wrestled_name |
+| 34 | Bereshit Rabbah 77:2 | CREDIT — material at gen_55_two_camps_wrestled_name |
+| 35 | Bereshit Rabbah 77:3 | CREDIT — material at gen_55_two_camps_wrestled_name |
+| 36 | Bereshit Rabbah 78:1 | CREDIT — material at gen_55_two_camps_wrestled_name |
+| 37 | Bereshit Rabbah 78:11 | CREDIT — material at gen_55_two_camps_wrestled_name |
+| 38 | Bereshit Rabbah 78:2 | CREDIT — material at gen_55_two_camps_wrestled_name |
 | 39 | Bereshit Rabbah 78:3 | CREDIT — dup-of at gen_33_shaddai_covenant_flesh |
-| 40 | Bereshit Rabbah 78:4 | fresh |
-| 41 | Bereshit Rabbah 78:5 | fresh |
-| 42 | Bereshit Rabbah 78:6 | fresh |
-| 43 | Bereshit Rabbah 79:5 | fresh |
+| 40 | Bereshit Rabbah 78:4 | CREDIT — material at gen_55_two_camps_wrestled_name |
+| 41 | Bereshit Rabbah 78:5 | CREDIT — material at gen_55_two_camps_wrestled_name |
+| 42 | Bereshit Rabbah 78:6 | CREDIT — material at gen_55_two_camps_wrestled_name |
+| 43 | Bereshit Rabbah 79:5 | CREDIT — material at gen_55_two_camps_wrestled_name |
 | 44 | Chullin 100b:14 | fresh |
 | 45 | Chullin 100b:3 | fresh |
 | 46 | Chullin 101a:3 | fresh |

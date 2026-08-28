@@ -415,8 +415,9 @@ m.fact("spoken_true_identity_ani_binkha_vekhorkha_esav")
 # he that hunted game and brought it to me, and I ate of all before you
 # came, and blessed him? Indeed, he shall be blessed."
 m.step("Gen.27.33")
-# ‹וַיֶּחֱרַד חֲרָדָה … וָאֲבָרֲכֵהוּ … גַּם־בָּרוּךְ יִהְיֶה› (“and-
-# shudder-with-terror fear … and-bless-him/its … also bless be”) — event: ?
+# ‹וַיֶּחֱרַד יִצְחָק חֲרָדָה … וָאֲבָרֲכֵהוּ … גַּם־בָּרוּךְ יִהְיֶה›
+# (“and-shudder-with-terror Isaac fear … and-bless-him/its … also bless be”)
+# — event: ?
 m.event("?")
 
 # -------------------------- Gen.27.34 · THE_GREAT_BITTER_CRY_AND_BARAKHENI_1 -
