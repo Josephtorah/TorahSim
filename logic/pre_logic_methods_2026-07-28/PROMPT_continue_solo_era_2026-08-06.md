@@ -5265,3 +5265,191 @@ CORPUS_TRUTH (standing 495) + corpus_world.sqlite + both addenda.
 Never-commit set untouched. AWAITING OWNER WORD, unchanged: commit/push;
 batch stamps (honest for gen_01-33 and gen_60-63, incl. gen_08's
 re-affirmation); the two works.yaml register rows; the rulebook question.
+
+## ADDENDUM 2026-08-30 — VAYERA DERIVED (third derivation group)
+
+Owner's word: "Go." gen_34-gen_38, Genesis 18:1-22:24, FIVE BLOCKS.
+
+THE NUMBERS: 35 operators (30 WITNESS_READ, 5 WITNESS_STATE; none
+invented, rulebook NOT versioned). 35 claims (G34-18..24, G35-19..25,
+G36-13..17, G37-23..29, G38-31..39); one machine-checked, the rest
+manual, several resting on ink or arithmetic verified at derivation.
+ALL GATES GREEN 5/5; gloss_lint 0; changelog GREEN. World fold: standing
+495 -> 530, exactly the 35 operators; hash 8b8fff1fa28953af unchanged.
+
+PREREQUISITE DONE FIRST: these five ledgers carried their Onkelos track
+in the compact row form and had NO citable Onkelos strings, so the
+translation could not be cited. Citation keys APPENDED to all five
+(append-only, same law and reason as the fourteen sweep ledgers earlier
+today): gen_34 33 verses, gen_35 38, gen_36 18, gen_37 34, gen_38 24.
+No verdict changed, no row rewritten.
+
+THE GROUP'S SIGNATURE FINDING — THE SPINE ARGUING WITH ITSELF. The
+declared reading has two members, and this parashah shows them
+disagreeing and agreeing by turns, all recorded:
+- 18:3 THEY SPLIT. Onkelos renders the address as the divine Name;
+  Bereshit Rabbah 48:10 reads it as profane, addressed to the senior
+  visitor. A dispute between the two books this project declared.
+- 19:18 THE SPLIT MOVES INSIDE ONE OF THEM. Onkelos reads profane while
+  its OWN printed variant reads the Name.
+- 18:21 THEY CONVERGE INDEPENDENTLY. Onkelos writes the repentance door
+  into the verse; Bereshit Rabbah 49:6 reads the descent as the opening
+  of repentance. Neither cites the other.
+- 19:27 THEY CONVERGE AGAIN on the prayer gloss, by which the morning
+  prayer is instituted.
+- 20:3 A THIRD CONVERGENCE, and the sharpest: a prophecy-GRADE. The
+  chain states the machine (the nations' prophets receive at night, by
+  half-speech, behind a curtain); Onkelos encodes the identical
+  distinction by routing the gentile king's revelation through the WORD
+  where Abraham's come direct. Same claim, two devices, no citation.
+
+MACHINE-CHECKED: THE TORAH'S TEN DOTTED PASSAGES. The extraordinary
+points (upper dot, U+05C4) stand at exactly TEN verses in the whole
+Torah — Genesis 16:5, 18:9, 19:33, 33:4, 37:12; Numbers 3:39, 9:10,
+21:30, 29:15; Deuteronomy 29:28 — 11 tokens, 32 dots. TWO of the ten
+fall in this parashah (18:9 and 19:33) and a third at gen_32's 16:5,
+already derived. At 18:9 the meta-rule is stated at its seat: WHERE THE
+DOTTED LETTERS ARE THE MAJORITY, EXPOUND THE DOTS — reading "where is
+HE?" for "to him". Honest note carried: our text dots FOUR letters
+(alef, lamed, yod, vav) where the exposition uses three; the fourth is
+recorded, not smoothed (G34-18, G35-19).
+
+ALSO VERIFIED: the rare verb of 21:7 totals exactly ONE HUNDRED, the
+age at the birth (G37-23, middah E29); the defective sitting-word of
+18:1 and the single-consonant heart of 18:5, both grounding readings.
+
+LAWS AND INSTITUTIONS SEATED IN THIS GROUP: the slaughter-instrument
+law (a detached, movable blade) derived from "he EXTENDED HIS HAND and
+took the knife"; the SHOFAR instituted on the ram with its parts
+censused into an inventory; the PRESENT-STATE JUDGMENT LAW at its home
+verse ("as he is THERE" — judged by his now, not by his descendants);
+the PUBLIC ROBBER defined at 21:25; the partitive preposition of 21:12
+doing the work of a descent statute; the DAWN MEASURE computed from
+gen_35's own two timestamps; the second leg of the no-forewarning rule
+for Noahides, so both legs sit in this parashah; the morning prayer
+instituted at 19:27; and Onkelos rewriting 22:14's naming as the
+founding of Temple worship — "here will the generations worship".
+
+FINDINGS ABOUT THE TEXT ITSELF: the canon RECORDS ITSELF EDITING FOR
+PEACE at 18:13 (Scripture altered Sarah's words deliberately); 18:22
+enrolled in the scribal-emendation census; the plea at 18:23 CITING
+gen_22's flood oath as governing precedent, so a character argues the
+oath-scope question that block left open; a 138-year penalty filed at
+19:13 and explicitly receipted at the ladder of 28:12; the plural-verb
+crux of 20:13 resolved in translation by re-subjecting the verb to the
+nations; INTENT COUNTED AS DEED with the binding as the ruling case; and
+R. Akiva reading the three-day journey as deliberation time deliberately
+given "so people should not say He stunned him" — the unit's own time
+operator as a procedural guarantee of consent.
+
+STATE: Genesis 73 of 73 READ; **42 of 73 DERIVED** (gen_01-38
+continuous, 1:1-22:24, plus gen_60-63). **31 blocks remain**: gen_39-59
+and gen_64-73. Six groups left: gen_39-42 (Chayei Sarah, 4), 43-47
+(Toledot, 5), 48-54 (Vayetze, 7), 55-59 (Vayishlach, 5), 64-67 (Miketz,
+4), 68-73 (Vayigash + Vayechi, 6).
+
+UNCOMMITTED: 5 rev-3 units + 5 manifests + 5 ledgers (citation keys
+appended) + CORPUS_TRUTH (530) + corpus_world.sqlite + this addendum.
+Never-commit set untouched. AWAITING OWNER WORD: commit/push; batch
+stamps (now honest for gen_01-38 and gen_60-63, incl. gen_08's
+re-affirmation); the two works.yaml register rows; the rulebook question.
+
+### Appended 2026-08-30 — TORAHSIM RE-LAND VERIFIED; TWO CROSS-TREE FACTS
+
+torahsim-19 re-landed the 26 derived pairs: nine gates green, 26/26
+units GREEN on render, CORPUS_TRUTH taken 306 -> 495 by the assert
+alone with its border line untouched, hash 8b8fff1fa28953af unchanged,
+2,672 triage rows indexed, 73 units in urec. LABEL PICTURE CONFIRMED
+from that side: gen_09-33 all read first pass — derived but unstamped —
+exactly as gen_60-63 do; only gen_01-08 read stamped. Our folded-shape
+tally reproduced there EXACTLY (189 tags, same seven counts), and the
+corrected census reproduced mechanically (37 derived / 36 remaining /
+seven groups). It agrees with the recommendation to WAIT on the
+rulebook question and has written that into canon.
+
+IT ALSO CONFIRMED THE GEN_08 STAMP FLAG IS REAL AND VISIBLE IN ITS
+EXPORTER: gen_08 is the single block in the book whose chip says full
+rule on a machine that changed after its stamp. No stamp field touched
+on either side; recorded there as an open question for the owner.
+
+TWO CROSS-TREE FACTS IT FOUND BY CHECKING, BOTH VERIFIED HERE:
+
+(1) DO NOT "FIX" GEN_08'S LEDGER DIFFERENCE. A naive md5 sweep flags
+gen_08's triage ledger as differing between trees. It is the documented
+border substitution alone: our line 18 names `torah_grok.sqlite` where
+canon names `derivation.sqlite` — same 251 lines, one word. VERIFIED on
+this side (line 18 confirmed). A future sync must NOT normalise it.
+
+(2) GEN_12 WAS READ TWICE, INDEPENDENTLY, AND BOTH READINGS NOW STAND
+IN CANON. Canon holds its own canon-window sitting of 2026-08-25 (77
+declared = 61 fresh + 16 Onkelos). This tree holds a separate
+parashah-grain reading of 2026-08-26 (77 declared = 55 fresh + 6 carry
++ 16 Onkelos) — VERIFIED here: this tree has exactly ONE gen_12 ledger,
+the 08-26 file, and gen_12's rev-3 changelog cites it by that filename,
+which is why canon could not resolve the citation without it. torahsim
+landed our ledger as a NEW FILE BESIDE its own, editing and replacing
+nothing, so the append-only law is intact and the citation resolves.
+NOTE THE CONVERGENCE: two independent readings of Cain and Abel,
+different compositions, the SAME declared total of 77, both closing at
+77 of 77 COMPLETE. No other block in this tree has two ledgers.
+CONSEQUENCE STATED OPENLY: gen_12's triage rows are counted twice in
+canon's aggregates, which is why canon reads 2,672 rows where a
+single-ledger count would read fewer.
+
+OPEN QUESTION FOR THE OWNER (not ours to settle): should canon carry
+BOTH gen_12 readings or only one? WORKSHOP RECOMMENDATION: keep both.
+Each is a true record of work actually done, the ledgers are
+append-only, and two independent readings converging on the same
+declared count is evidence rather than noise. The double count is a
+DISPLAY defect in the aggregate counter and should be fixed there — by
+de-duplicating rows per block when totalling — not by deleting a
+ledger. Awaiting his word; nothing done in either tree.
+
+### Appended 2026-08-30 (later) — GEN_12 DOUBLE-READING RESOLVED IN THE DISPLAY
+
+torahsim-19 fixed the defect where the workshop said it belonged — in
+the aggregate counter, not by deleting a ledger. BOTH gen_12 readings
+stand untouched in canon; the append-only law was never tested.
+
+WHAT THE DEFECT ACTUALLY WAS, measured there before the fix: the public
+unit band would have told readers that Cain and Abel carries 71 material
+findings and 116 ledger rows, with the row numbering RESTARTING halfway
+— two readings concatenated and presented as one. The exporter now
+selects rows by the GOVERNING ledger's date (the same ledger whose
+completion line the header already quoted, so header and table finally
+agree), and gen_12 reads 55 rows / 34 material with clean numbering. The
+fix is per-block and general, not a gen_12 special case.
+
+SO THE OTHER READING IS NOT SILENTLY HIDDEN: canon's unit record gained
+a `leds` field listing every ledger a block carries, and the scroll's
+Step 3 now prints, wherever a block has more than one — "This span was
+read 2 times, independently — <both filenames>. Every reading stands in
+the append-only record; the counts and rows shown here are the governing
+one, the latest." Exactly one block in the corpus trips it today. Nine
+gates green there.
+
+STATUS OF THE OPEN QUESTION: the owner may still rule on whether canon
+should carry one gen_12 reading or both, but it NO LONGER BLOCKS
+ANYTHING and no data is at risk either way — both ledgers are on disk in
+both trees, the display is honest, and the disclosure line names both
+files. Downgraded from open question to owner's-option.
+
+A PROPOSAL HELD FOR THE OWNER (torahsim built nothing; a new display
+class is his call): the spine-arguing-with-itself findings of Vayera are
+a different KIND of result — a property of the DECLARED READING rather
+than of the text — and the spine default is what made them visible. One
+verse-ordered book plus Onkelos means that when those two split,
+converge independently, or divide internally, it is the WHOLE declared
+shelf disagreeing with itself, with no third voice to drown it out. The
+thin reading sharpened the evidence rather than weakening it. Its
+suggested home if the owner ever wants it surfaced: a fourth row in the
+claim chain — SAID / CLAIMED / MACHINE gaining an AGREEMENT line reading
+split, converged-independently, or internally divided — which the
+current card layout would take without redesign. NOT BUILT. Awaiting his
+word.
+
+VAYERA IS HELD at torahsim per this window's instruction; nothing landed
+there. Its indexer takes appended citation-key sections as-is, so no
+tooling change is needed for the five Vayera ledgers or for future
+groups; the standing instruction is to keep announcing the appends each
+time, which this window will do.
