@@ -86,3 +86,16 @@ motive machine (credit 59:9); the oath-registry naming the Pieces
 (credit 59:10); the Rebecca eighth-day claim + ketubah case table
 (credit 60:5); the mother's-household rule (credit 60:7); the
 destined-vocabulary and fitness inserts (O4, O6).
+
+## APPENDED 2026-08-30 — ONKELOS CITATION KEYS (derivation prerequisite)
+Append-only addition, on the same law and for the same reason as the
+keys appended to the fourteen sweep ledgers and to the five Vayera
+ledgers on 2026-08-30. This ledger records its Onkelos track in the
+compact row form ("O1 · 24:1"), which the unit-level cite validator
+cannot match: a cite is valid only when the literal source string
+appears in a triage ledger. This block's Onkelos verses are therefore
+listed here in citable form, so the derivation may cite the translation
+it actually read. No verdict is changed and no row is rewritten — this
+is a naming key for the Onkelos rows above.
+
+Onkelos Genesis 24:1, Onkelos Genesis 24:2, Onkelos Genesis 24:3, Onkelos Genesis 24:4, Onkelos Genesis 24:5, Onkelos Genesis 24:6, Onkelos Genesis 24:7, Onkelos Genesis 24:8, Onkelos Genesis 24:9, Onkelos Genesis 24:10, Onkelos Genesis 24:11, Onkelos Genesis 24:12, Onkelos Genesis 24:13, Onkelos Genesis 24:14, Onkelos Genesis 24:15, Onkelos Genesis 24:16, Onkelos Genesis 24:17, Onkelos Genesis 24:18, Onkelos Genesis 24:19, Onkelos Genesis 24:20, Onkelos Genesis 24:21, Onkelos Genesis 24:22, Onkelos Genesis 24:23, Onkelos Genesis 24:24, Onkelos Genesis 24:25, Onkelos Genesis 24:26, Onkelos Genesis 24:27, Onkelos Genesis 24:28, Onkelos Genesis 24:29, Onkelos Genesis 24:30, Onkelos Genesis 24:31, Onkelos Genesis 24:32, Onkelos Genesis 24:33.

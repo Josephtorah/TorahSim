@@ -5453,3 +5453,186 @@ there. Its indexer takes appended citation-key sections as-is, so no
 tooling change is needed for the five Vayera ledgers or for future
 groups; the standing instruction is to keep announcing the appends each
 time, which this window will do.
+
+## ADDENDUM 2026-08-30 — CHAYEI SARAH DERIVED (fourth derivation group)
+
+Owner's word: "you follow your recommendation" (the recommendation being:
+commit Vayera, then drive to the end of Genesis, holding stamps until the
+book is whole). gen_39-gen_42, Genesis 23:1-25:18, FOUR BLOCKS.
+
+THE NUMBERS: 52 operators (48 WITNESS_READ, 4 WITNESS_STATE; none
+invented, rulebook NOT versioned). 52 claims (G39-21..33, G40-21..34,
+G41-22..34, G42-17..28); six machine-checked, the rest manual. ALL GATES
+GREEN 4/4; claims 83 verified / 0 failed / 47 uncheckable; changelog
+GREEN; gloss_lint 0. World fold: standing 530 -> 582, exactly the 52
+operators; hash 8b8fff1fa28953af unchanged.
+
+PREREQUISITE DONE FIRST: 105 Onkelos citation keys appended across the
+four 2026-08-27 ledgers (gen_39 20 verses, gen_40 33, gen_41 34, gen_42
+18). Append-only; no verdict changed, no row rewritten.
+
+**THE GROUP'S SIGNATURE RESULT — GUARD 3 EARNED ITS KEEP TWICE.** The
+owner's rule that numeric and ink claims are NEVER credited unopened
+caught two claims this group that a credit would have carried silently:
+
+(1) GEN_40, THE FIRST-AGING CENSUS — FAILS AGAINST OUR TREE. Bereshit
+Rabbah 65:9 holds that aging is not written from the beginning of the
+book until 24:1 ("when Abraham stood, He granted him aging"). Machine
+census: the word stands FIVE times earlier — 18:11, 18:12, 18:13, 19:4,
+19:31 — and 18:11 carries the identical phrase ("old, advanced in days")
+that 24:1 repeats. RECORDED as the chain's own premise, NOT applied, with
+the counter-witness at 18:11 machine-checked and carried beside it. The
+ledger had this as an UPGRADED credit (standing verdict had been
+no-bearing) — i.e. exactly the class the guard exists for.
+
+(2) GEN_42, THE DEFECTIVE CONCUBINES-PLURAL — NOT IN OUR TREE. Bereshit
+Rabbah 61:4 answers the plural objection at 25:6 on ink, reading the word
+defective to yield ONE concubine (Hagar). Our tree writes it FULL and
+plural (machine-checked). Recorded as the chain's own variant tradition,
+dual-track, NOT applied; the identification stands on its other legs.
+
+AND ONE THAT HELD, EXACTLY — THE TEN-FOLD VENDOR CENSUS IS A TITLE
+CENSUS. Bereshit Rabbah 58:8 counts "sons of Chet" ten times and reads
+the ten against the Ten Commandments. A chapter-scoped query returns
+EIGHT and would have called the tradition wrong. Opened properly: the
+name stands 13 times in the Torah — one the ancestor himself at 10:15,
+two "DAUGHTERS of Chet" at 27:46 — leaving exactly TEN "sons of," and
+every one of the ten sits in a passage about ONE conveyance: eight in
+Genesis 23, one at 25:10 (this same group, gen_42), one at 49:32 (gen_73,
+not yet derived). The exclusions are principled, not convenient. This is
+the toledot lesson repeating: when the machine and the tradition disagree
+on a count, check the frame before checking the tradition.
+
+OTHER MACHINE-CHECKED INK: the vendor's name written DEFECTIVE exactly at
+the weighing (23:16 carries BOTH spellings — full when he is addressed,
+short when the silver is weighed); the participle at 23:10 defective as
+the "seated that day" reading requires; and the divine-title pair holding
+exactly — 24:3 has the title TWICE ("God of the heavens AND God of the
+earth"), 24:7 once, the ink difference R. Pinchas builds a theology on.
+
+LAWS AND INSTITUTIONS SEATED: the deed-specification law (write the field
+and its markers) from 23:17's own enumeration; the mourner's-exemption
+law claiming 23:3 as its source — a testing-shelf ruling reaching back
+INTO the reading; the standing-title doctrine (three purchases the
+nations cannot call stolen) and its tribunal counterpart at 25:5-6 (Gevia
+ben Kosem before Alexander, the disposition clause argued as operative
+property law); the thigh-oath procedure; the marriage-CONSENT law at
+24:57; the twelve-month bride-time; the say-your-flaw-first disclosure
+rule; the marry-off-children-first precedence rule, carried by nothing
+but the order of two verses that STRADDLE the gen_41/gen_42 boundary —
+which makes the block join itself load-bearing.
+
+THE AFTERNOON PRAYER, INSTITUTED BY BOTH MEMBERS AT ONCE (24:63): the
+chain seats it, and Onkelos WRITES it, rendering the verb "to pray."
+The 19:27 pattern (gen_35) repeated exactly, neither citing the other —
+the second instance of independent spine convergence on a standing
+institution. Also converging: the consent law at 24:57 (midrash derives
+it, Onkelos smooths "ask her mouth" to "hear what she says"); and "she
+fell" softened to "she INCLINED" at 24:64 by proof-text on one side and
+lexical choice on the other.
+
+THE SPINE ARGUING WITH ITSELF, NOW BY NAME (25:3): Bereshit Rabbah 61:5
+corrects the translation leg EXPLICITLY — "although the Aramaic
+translators say merchants, iron-workers and heads of nations, they were
+ALL heads of nations" — while our own Onkelos renders a THIRD way (camp-,
+tent-, island-dwellers). One member of the declared shelf naming the
+other as its opponent, with the received text agreeing with neither. This
+is the sharpest instance yet of the Vayera pattern, and it is explicit
+rather than reconstructed.
+
+META-RULES THE TRADITION STATES ABOUT ITS OWN INK: the servants'-talk
+economy doctrine at gen_40 (this errand spans columns and REPEATS, while
+a whole impurity law hangs on one extra letter) and the
+generalities-exceed-details doctrine at gen_41's 24:66 — the pair
+BRACKETS the repetition block from both ends, the tradition explaining in
+advance why the long retelling is allowed to stand.
+
+TOOLCHAIN FIX (derive.py): the operator-entry indent is NOT uniform
+across the corpus — gen_38/gen_39 put list items under the key (step+4),
+gen_40/41/42 level with it (step+2). The helper now READS the indent from
+an existing "- op:" inside the target step instead of assuming. Three
+units were reverted and rewritten clean; manifests de-duplicate by claim
+id, so nothing doubled. Vayera is unaffected (its files use the other
+convention) and its committed state is sound.
+
+STATE: Genesis 73 of 73 READ; **46 of 73 DERIVED** (gen_01-42 continuous,
+1:1-25:18, plus gen_60-63). **27 blocks remain**: gen_43-59 and
+gen_64-73. Five groups left: gen_43-47 (Toledot, 5), 48-54 (Vayetze, 7),
+55-59 (Vayishlach, 5), 64-67 (Miketz, 4), 68-73 (Vayigash + Vayechi, 6).
+
+UNCOMMITTED: 4 rev-3 units + 4 manifests + 4 ledgers (citation keys) +
+CORPUS_TRUTH (582) + corpus_world.sqlite + this addendum. Never-commit
+set untouched. AWAITING OWNER WORD: commit/push. Stamps held to the end
+of the book by his standing decision.
+
+### Appended 2026-08-30 — TORAHSIM: VAYERA LANDED, AND A BORDER LEAK IT FOUND
+
+torahsim-19 landed Vayera: five pairs byte-verified, the append-only
+claim PROVEN mechanically (canon prefix byte-identical, file grew by
+exactly the 14-line citation-key section), units rev 2 -> 3, all five
+GREEN, CORPUS_TRUTH 495 -> 530 by the assert alone, hash unchanged,
+2,611 rows indexed. Nine gates green.
+
+ITS FINDING, WHICH IS OURS TOO: four of the five Vayera units carried
+this workshop's live database FILENAME in their verification notes, and a
+sweep found THREE MORE already sitting in canon from the 2026-08-28
+landing (gen_39, gen_40, gen_44) — seven in all. Redacted there to
+canon's own name per the documented border table. Its own earlier
+"border check clean" reports had grepped the ledgers and sampled, never
+the unit YAMLs; it named that as its miss. The redaction is now
+MECHANICAL (press/redact_border.py, run between copy and render at every
+landing) and reports any unmapped workshop mention for a human decision
+rather than rewriting silently. Currently zero.
+
+CARRY THESE TWO: (1) canon's gen_34/35/37/38/39/40/44 are no longer
+byte-identical to ours, by exactly that redaction and nothing else — a
+future sync must NOT "repair" it, same standing as the gen_08 ledger
+line. (2) The three older units got changelog lines but their REVS WERE
+DELIBERATELY NOT BUMPED, because rev 3 now signals a derivation pass and
+a redaction is not a derivation. That reasoning is adopted here: a
+records-layer fix must never fake a derivation.
+
+NOTE FOR THE NEXT LANDING: gen_39 and gen_40 are in THIS group and go
+over again at rev 3. Canon's copies of both carry a redaction changelog
+line ours do not, so those two will differ by that line as well.
+
+### Appended 2026-08-30 — BORDER LEAK QUESTION RESOLVED: OUR SIX WERE A FALSE ALARM
+
+Correcting the note above before it hardens into a worry. torahsim-19
+checked the six at the LINE, not by pattern: canon's gen_02 reads
+"regenerated 2026-07-30 from derivation.sqlite tree_json", and gen_03,
+gen_05, gen_06, gen_07 and lev_13 all read the same way at their own
+provenance lines. They were redacted at their ORIGINAL crossing — part of
+the thirty-seven references its logic/README.md records as rewritten back
+then. The bare form NEVER entered canon; the border table did its job
+long before the mechanical tool existed, and its zero was a TRUE
+negative. Our six differ permanently and correctly: ours say
+torah_grok.sqlite, canon's say derivation.sqlite. NEITHER SIDE SHOULD EVER
+REPAIR THE OTHER. Same standing as the gen_08 ledger line.
+
+WHAT DID COME OF IT, and it is worth more than the false alarm was: the
+methodological objection stood on its own — a zero from a check that
+cannot show its coverage is unfalsifiable, which is the exact weakness
+that let the original leak through one layer up. redact_border.py no
+longer reports a bare zero. Every run now self-tests its patterns against
+a probe string carrying both known border names and REFUSES to report at
+all if they fail to fire, then prints coverage with the result: "scanned
+317 file(s) under logic/, of which 97 unit YAML(s); pattern self-test
+passed — 0 occurrence(s)". 97 against 97 on disk, cross-checked. Its
+README now records the rule: a report of zero is only worth the coverage
+line printed above it. Worth adopting here for any future gate we write
+that reports an absence.
+
+CONFIRMED BOTH SIDES: the leak class is always PRE-EXISTING provenance
+and verification prose, never derived content — all seven canon redacted
+sat in notes, and zero of our 52 Chayei Sarah operators carry it. So no
+re-derivation is implied anywhere in the class, and the no-rev-bump
+reasoning covers all of it.
+
+EXPECTED AT THE NEXT LANDING (no action needed either side): our rev-3
+gen_39 and gen_40 will overwrite canon's redaction changelog lines with
+our derivation lines, and will arrive carrying the workshop filename
+again. Both are correct — a derivation outranks a records note, and
+redact_border.py --apply now runs as a landing step, so the redaction
+re-applies automatically.
+
