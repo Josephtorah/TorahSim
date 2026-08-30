@@ -44,8 +44,7 @@ FULL enumeration with the remainder marked outside declared scope;
 dual-track on disputes. Dependency on record: the sugya case-file
 machinery must exist before Exodus's law spans — the thin-reading
 deal is "the exam tests it." Full table + reasoning:
-logic/CORE_SHELF.md. [Workshop note: needs canon mirroring on the
-owner's word in that window.]
+logic/CORE_SHELF.md.
 PRE-ENUMERATION (owner, 2026-08-25, speed ruling): the enumeration and
 register classification for every remaining block is computed AHEAD in
 one mechanical pass — each sitting starts with its declared list
@@ -83,8 +82,7 @@ ink or an argued analogy; exactly TWO are additions with no verse
 behind them, and the tradition labels both itself as decrees ("a
 king's decree"). One breath: the Mishnah writes as if it is adding;
 the Talmud shows most of it was derived; the true remainder arrives
-self-labeled. [Workshop note: this passage needs mirroring to the
-canon copy in TorahSim on the owner's word in that window.]
+self-labeled.
 SPEED RULINGS (owner, 2026-08-25, binding for the Genesis walk):
 (a) READ AT THE PARASHAH GRAIN — one sequential pass over a weekly
 portion's primaries covers all its blocks; the ledgers stay
@@ -94,8 +92,7 @@ itself costs the same either way — batching cuts the OVERHEAD
 that get read once and verdicted everywhere; credits compound
 inside the sitting). Four blocks swept in ~23 minutes vs one block
 the old way in over an hour. Never fall back to block-by-block.
-[Workshop note: this WHY paragraph needs mirroring to the canon
-copy in TorahSim on the owner's word in that window.] (b) STANDING-VERDICT CREDITS — a source already verdicted
+(b) STANDING-VERDICT CREDITS — a source already verdicted
 in any prior ledger is CREDITED, never re-read; duplicate clusters
 are precomputed so dup rows are verdicted without being opened.
 (c) TERSE NON-MATERIAL ROWS — every declared source still gets its
@@ -247,9 +244,7 @@ text layer). TWENTY-FIVE blocks — gen_09 through gen_33 — now stand
 read and green, waiting UNSTAMPED: one batch word per weekly portion
 stamps them, ritual once per batch. Genesis stands at 33 of 73 blocks
 read; the next sweep is parashat Vayera, opening at gen_34 (Genesis
-18:1). [Workshop note: this paragraph needs mirroring to the canon
-copy in TorahSim on the owner's word in that window, joining the
-pending Step 4 WHY paragraph.]
+18:1).
 
 THE PLAN FROM HERE (2026-08-27, under the spine default): the rest of
 the Genesis walk — Vayera (gen_34) through the end (gen_73), about 40
@@ -263,8 +258,6 @@ Mekhilta as spine) and the Mishnah/Talmud exam does the heavy testing,
 per the two-shelves ruling. Verification tests of the spine default
 run first (retro-checks against the finished parashiyot measure what
 the narrower reading would have kept and what the exam recovers).
-[Workshop note: needs canon mirroring with the rest of the 2026-08-27
-queue on the owner's word in that window.]
 
 THE SPINE DEFAULT'S FIRST RUN — VAYERA (2026-08-28 stamp; the sitting
 ran 2026-08-27 by the clock, noted in the gen_39 ledger): parashat
@@ -302,8 +295,7 @@ fixed and changelogged. All gates green; four ledgers, four rev-2
 units. Genesis stands at 42 of 73 blocks read; THIRTY-FOUR blocks
 (gen_09 through gen_42) green and unstamped, one batch word per
 parashah stamps them. Next sweep: parashat Toledot, opening at gen_43
-(Genesis 25:19). [Workshop note: needs canon mirroring on the owner's
-word in that window.]
+(Genesis 25:19).
 
 THE THIRD SWEEP — TOLEDOT (2026-08-27, same sitting as Chayei Sarah):
 gen_43 through gen_47 (Genesis 25:19-28:9 — the twins, Gerar, the
@@ -330,8 +322,7 @@ two fragments in an unrecognized notation) — all fixed and
 changelogged. All gates green; five ledgers, five rev-2 units.
 Genesis stands at 47 of 73 blocks read; THIRTY-NINE blocks (gen_09
 through gen_47) green and unstamped. Next sweep: parashat Vayetze,
-opening at gen_48 (Genesis 28:10). [Workshop note: needs canon
-mirroring on the owner's word in that window.]
+opening at gen_48 (Genesis 28:10).
 
 THE FOURTH SWEEP — VAYETZE (2026-08-27, the day after Toledot):
 gen_48 through gen_54 (Genesis 28:10-31:54 — the ladder, the well,
@@ -367,8 +358,7 @@ green; seven ledgers, seven rev-2 units. Genesis stands at 54 of 73
 blocks read (Genesis 1:1-31:54 continuous); FORTY-SIX blocks (gen_09
 through gen_54) green and unstamped. Next sweep: parashat
 Vayishlach, opening at gen_55 (Genesis 32:1 — the whole chapter,
-carrying Vayetze's three-verse tail). [Workshop note: needs canon
-mirroring on the owner's word in that window.]
+carrying Vayetze's three-verse tail).
 
 THE FIFTH SWEEP — VAYISHLACH (2026-08-27, same sitting as Vayetze —
 the first two-parashah day): gen_55 through gen_59 (Genesis
@@ -407,5 +397,131 @@ gates green; five ledgers, five rev-2 units. Genesis stands at 59
 of 73 blocks read (Genesis 1:1-36:43 continuous, 1,084 of 1,533
 verses — 71%); FIFTY-ONE blocks (gen_09 through gen_59) green and
 unstamped. Next sweep: parashat Vayeshev, opening at gen_60
-(Genesis 37:1). [Workshop note: needs canon mirroring on the
-owner's word in that window.]
+(Genesis 37:1).
+
+THE SIXTH SWEEP — VAYESHEV (2026-08-28, one sitting). Parashat
+Vayeshev read at the parashah grain under the spine default:
+gen_60 through gen_63 (Genesis 37:1-40:23, 112 verses, four
+chapter-aligned blocks — the coat and the sale, Judah and Tamar,
+Potiphar's house, the two prison dreams). 10,547 sources
+enumerated; 226 declared read = 45 fresh Bereshit Rabbah + 58
+standing credits + 11 in-sitting + 112 Onkelos verses; 163 chain
+primaries recorded outside declared scope (the levirate chapter
+alone pulls 41 bridge sources to the border — enumerated, held
+for the exam). The flywheel's best day yet: gen_63 closed on TWO
+fresh reads — seven of its ten midrash sources were owned upstream
+in the same sitting. The sweep's exhibits: the three-slanders /
+three-repayments scales that run blocks three and four (the goat,
+the slavery, the she-bear); the dream as a DEED — Joshua
+commanding the sun as "my father's purchase"; the dream logged
+with a quill (day, hour, place); the firstborn-redemption five
+sela'im and the beka-per-head priced from the twenty silver; the
+four cups of Passover seated at the butler's cup; Judah initiating
+the levirate marriage with the second-permission rule quoted whole
+(testing-shelf machinery at the narrative seat); the three pledges
+decoded as the dynasty's three crowns (signet-kingship,
+cord-Sanhedrin, staff-Messiah); the Divine Spirit in three courts
+("you attest the revealed, I attest the concealed") beside the
+buffer SPLITTING the same word into verdict-plus-paternity; the
+crown dual at 39:11 — the chain's three-way on "to do his work"
+(accounts / indeed / not-a-man) and Onkelos VOTING for the
+account-books; the Memra-support formula transferred to Joseph
+and Joseph's own memra governing the prison; the Psalm-146 duel;
+Benjamin's ten sons as a ten-name memorial of the lost brother;
+the two-years-for-two-words trust audit at the parashah's last
+verse; and one idiom rendered three ways — "lift your head" as
+take, remove, remember — the interpretation written into the
+translation. The text gate found ZERO pre-existing defects — the
+third defect-free sweep in a row. All gates green; four ledgers,
+four rev-2 units. Genesis stands at 63 of 73 blocks read (Genesis
+1:1-40:23 continuous, 1,196 of 1,533 verses — 78%); FIFTY-FIVE
+blocks (gen_09 through gen_63) green and unstamped. Next sweep:
+parashat Miketz, opening at gen_64 (Genesis 41:1 — Pharaoh's
+dreams; the seam gen_63's ledger already names: the elevation
+routed through the dream).
+
+THE SEVENTH SWEEP — MIKETZ (2026-08-28, the sitting after Vayeshev):
+gen_64 through gen_67 (Genesis 41:1-44:34 — Pharaoh's dreams and the
+rise, the first descent, the second descent and the meal, the goblet
+and the surety; four blocks, 163 verses, the longest sweep of the
+Genesis walk). 11,025 sources enumerated, 245 declared = 34 fresh
+Bereshit Rabbah + 39 standing credits + 9 in-sitting + 163 Onkelos
+verses; 30 of the 34 fresh sections material, and 17 Onkelos delta
+rows. Ninety-seven outside-scope chain primaries carried with their
+shelf split marked. The sweep's exhibits: TWO LAWS AND AN INFERENCE
+RULE resting on these units' own ink — the quorum of ten derived by
+equal-decree from "the sons of Israel came AMONG those who came"
+(42:5), the restrictive-particle reading that caps "you shall be ONLY
+above" and "you shall be holy" learned from Pharaoh's "only the
+throne" (41:40), and 44:8 standing as the FIRST MEMBER of the ten
+a-fortiori arguments of Scripture, which makes this unit's verse the
+tradition's own type-specimen for the light-and-heavy inference the
+machine cites everywhere; the dreams-follow-the-mouth rule carried
+with R. Abahu's flat denial; the famine's length disputed four ways;
+the six-row limb-by-limb repayment table paying out the refusal read
+at gen_62; Judah's speech read as conciliation three ways at once —
+the repentance the sale of gen_60 had been waiting on. Onkelos
+carried the heaviest theological freight yet: DIVINATION CONVERTED TO
+INVESTIGATION at both of Joseph's goblet verses (the righteous one
+does not practice augury), the separate tables EXPLAINED by naming
+the Egyptian cult, "he made himself a stranger" rendered "he
+considered what to say" against the midrash's own reading, "harm"
+rendered DEATH at four seats — the reading the Exodus miscarriage law
+will require — and "torn, torn" rendered "surely killed" in exact
+agreement with what the same translation did seven chapters back. The
+flywheel ran hardest in gen_66, where FIVE standing credits cashed
+seats promised in earlier ledgers on this block's own verses. The
+text gate found ZERO pre-existing defects — the fourth defect-free
+sweep in a row. All gates green; four ledgers, four rev-2 units.
+Genesis stands at 67 of 73 blocks read (Genesis 1:1-44:34 continuous,
+1,359 of 1,533 verses — 89%); FIFTY-NINE blocks (gen_09 through
+gen_67) green and unstamped. Note the block boundary: gen_67 spans
+the whole of chapter 44, so Vayigash's opening seventeen verses were
+read here; the parashah proper opens at gen_68 (Genesis 45:1 — "Joseph
+could not restrain himself"), which is where the next sweep begins,
+with six blocks and 174 verses left to a whole Genesis. [Workshop
+note: needs canon mirroring on the owner's word in that window.]
+
+THE EIGHTH SWEEP — VAYIGASH AND VAYECHI: **GENESIS CLOSES**
+(2026-08-28, same sitting as Miketz). gen_68 through gen_73 (Genesis
+45:1-50:26 — the disclosure, the descent and the count, Goshen and the
+fifth, the crossed hands, the testament, and the coffin in Egypt; six
+blocks, 174 verses, two parashiyot in one run). 17,588 sources
+enumerated, 297 declared = 45 fresh Bereshit Rabbah + 74 standing
+credits + 4 in-sitting + 174 Onkelos verses; 44 of the 45 fresh
+sections material, and 22 Onkelos delta rows. 253 outside-scope chain
+primaries carried with their shelf split marked — the largest
+remainder of any sweep, because every later book cites chapter 49.
+The sweep's exhibits: THE SHEMA SOURCED TO JACOB'S DEATHBED — the sons
+answering "Hear, Israel" to their father and Jacob replying with the
+line Israel has said in an undertone ever since; THE TEMPLE'S SITE
+decided by who did not join the sale of Joseph, eleven tribes
+disqualified and Benjamin's portion chosen — the furthest consequence
+the sale has drawn in the whole walk; the seventy that count
+sixty-nine, disputed five ways and carrying R. Meir's own scroll
+reading of "the SON of Dan" in the singular, with the siege law on
+delivering one soul riding beside it; the peace ruling at the book's
+end, where the text records the tribes speaking words that were not so
+in order to make peace; the bones-oath scope rule that hands this book
+off to the next; and a nine-item precedence census verifying the
+crossed hands across four later books. THE LARGEST TRANSLATION-LAYER
+FINDING OF THE WALK also lands here: in chapter 49 Onkelos CHANGES
+GENRE — after forty-eight chapters of translation it becomes an
+interpretive paraphrase, naming the Messiah at Shiloh, writing
+Reuben's three forfeited portions into the verse, giving Benjamin's
+portion the Temple outright, and rendering seven consecutive blessings
+as their fulfilments. At the other end of the same chapter the chain
+preserves the Ptolemy emendation, so one verse carries three
+translation layers at once. The text gate found ZERO pre-existing
+defects — the fifth defect-free sweep in a row. All gates green; six
+ledgers, six rev-2 units.
+**GENESIS IS READ THROUGH: 73 of 73 blocks, Genesis 1:1-50:26
+continuous, 1,533 of 1,533 verses — 100%.** Verified block by block:
+every one of the seventy-three numbered blocks carries a dated triage
+ledger with its read-N-of-N-COMPLETE line. SIXTY-FIVE blocks (gen_09
+through gen_73) stand green and unstamped, batchable by parashah on
+the owner's word. The walk now reaches Exodus, where the spine changes
+to the Mekhilta of Rabbi Yishmael — and the standing dependency comes
+due: the sugya case-file machinery must be real before the law spans.
+[Workshop note: needs canon mirroring on the owner's word in that
+window.]

@@ -4565,3 +4565,317 @@ stamps. NEXT SWEEP on his go: parashat Vayeshev (gen_60, Genesis
 37:1 — Joseph's coat; blocks gen_60+ spans to confirm at sweep
 time). TODAY'S TALLY: 12 blocks, 301 verses, 581 declared sources
 read in one day — the first two-parashah day.
+
+2026-08-27 (owner: "Commit push") — COMMITTED AND PUSHED: 14b192d
+"FOUR PARASHIYOT LAND IN ONE BATCH" (1f4cbf2..14b192d on main) — 44
+files: 21 ledgers (gen_39-59, all 2026-08-27), 21 rev-2 units,
+THE_STEPS (four sweep paragraphs), state doc (with the 26→21 tally
+correction noted and fixed pre-commit). Never-commit set untouched.
+STILL AWAITING THE OWNER'S WORD: batch stamps (gen_09-gen_59,
+FIFTY-ONE blocks, eight parashah batches); the landing relay to
+torahsim (twenty-one new pairs, in that window); canon mirroring of
+the sweep paragraphs. NEXT SWEEP on his go: Vayeshev (gen_60,
+Genesis 37:1).
+
+ADDENDUM (pre-compaction): sitting summary for the record — this
+post-compaction-#23 sitting held the Step 4 reread (first action),
+the Genesis remainder count (750 verses, six portions), TWO full
+sweeps (Vayetze gen_48-54, 7 blocks, 287 declared; Vayishlach
+gen_55-59, 5 blocks, 294 declared — the first two-parashah day: 12
+blocks, 301 verses, 581 declared sources), both defect-free at the
+text gate, all gates green, and the owner's "Commit push" —
+EXECUTED: 14b192d pushed to origin/main (44 files, the whole
+four-parashah pile of three sittings). NOTHING UNCOMMITTED remains
+in the tracked set; the never-commit set stands untouched. AWAITING
+THE OWNER'S WORD: batch stamps (gen_09-gen_59, fifty-one blocks);
+torahsim landing relay (twenty-one pairs) + canon mirroring of the
+four THE_STEPS sweep paragraphs (in that window); next sweep
+Vayeshev (gen_60, Genesis 37:1 — then Miketz/Vayigash/Vayechi
+spans to confirm; two more sweep-days to a whole Genesis). FIRST
+ACTION of the post-compaction sitting: reread THE_STEPS Step 4 per
+the standing rule. COMPACTION POINT #24 — records current through
+here. Safe to compact.
+
+## ADDENDUM 2026-08-28 — THE VAYESHEV SWEEP (sixth spine-default sweep)
+
+Post-compaction sitting #25 (compaction point #24 closed yesterday).
+FIRST ACTION done: THE_STEPS Step 4 speed rulings reread before any
+derivation. Morning was an owner side-project (the World Tree mockup
+— a claude.ai artifact, step-in tree navigation of Genesis 1-2;
+scratchpad only, nothing in the repo, no derivation). Then the owner:
+"lets get back to derivation… go."
+
+THE SWEEP: parashat Vayeshev, gen_60–gen_63 (Genesis 37:1–40:23,
+112 verses, 4 chapter-aligned blocks), one sitting, ONE stream.
+- Pre-enumeration by script (enumerate_vayeshev.py, scratchpad):
+  10,547 enumerated; DECLARED 226 = 45 fresh Bereshit Rabbah + 58
+  standing credits + 11 in-sitting + 112 Onkelos; 163 outside-scope
+  chain primaries (gen_61's bridge shelf = 41 — the levirate pull);
+  register FP 3 (Tosefta Kifshutah rows, patterns held).
+- gen_63 pre-answered: 2 fresh only; 7 of 10 midrash sources owned
+  upstream in the SAME sitting (88:1-7 cluster owned by gen_60/62).
+- All 69 credits quick-looked (guard #1); numeric/ink credits opened
+  (guard #3): the twins-spelling pair (63:8 + 85:13), the
+  three-months arithmetic (85:10), the dotted et (84:13).
+- Four ledgers written: logic/oral_triage/gen_6{0,1,2,3}_*_2026-08-28.md
+  — read-N-of-N-COMPLETE all four (81/54/58/33).
+- Four units rebuilt rev 2 (oral_notes created, ORAL_reading_pass_
+  2026_08_28 blocks; changelog lines; no machine ops changed).
+- GATES: verify_text GREEN ×4 (ZERO pre-existing ink defects — third
+  defect-free sweep in a row), preflight ALL SCENARIOS GREEN ×4,
+  gloss_lint 0 flags repo-wide.
+- THE_STEPS.md tail: THE SIXTH SWEEP paragraph appended (canon
+  mirroring flagged for the owner's word in the torahsim window).
+
+Headlines (full detail in the ledgers): three-slanders/three-
+repayments scales; the dream as a deed (Joshua: "my father's
+purchase"); the quill-logged dream; vayikaḥehu = Simeon (ink) repaid
+42:24; firstborn-redemption 5 sela'im + beka-per-head priced from
+the twenty silver; four-vs-five bills of sale; rending-repayment
+table + 22-year clock; Benjamin's ten-name memorial; FOUR CUPS OF
+PASSOVER seated at the butler's cup (owned gen_60, seats gen_63);
+Judah initiates levirate marriage + second-permission rule quoted
+whole; three pledges = kingship/Sanhedrin/Messiah; Divine Spirit in
+three courts + ke-ilu principle; mimeni split (Bat Kol vs Onkelos's
+verdict+paternity); crown dual at 39:11 — Onkelos VOTES account-books
+in the chain's own three-way; Memra-support transferred to Joseph +
+Joseph's own memra in the prison; Psalm-146 duel; Potiphar's I-know
+verdict with the appoint-verb ink; two-years-for-two-words audit;
+one idiom three verbs (lift-your-head: take/remove/remember).
+Cross-sweep consistency claim: nafkat bara at 38:15 = gen_57 O2's
+34:31 idiom.
+
+STATE: Genesis 63 of 73 blocks read; Genesis 1:1–40:23 CONTINUOUS;
+1,196 of 1,533 verses (78%). FIFTY-FIVE blocks (gen_09–gen_63) green
+and unstamped. Remaining: Miketz (gen_64+, Gen 41:1, 146v), Vayigash
+(106v), Vayechi (85v) — 337 verses, ten blocks, one or two more
+sweep-days to a whole Genesis.
+
+UNCOMMITTED (awaiting owner word): 4 ledgers + 4 rev-2 units +
+THE_STEPS tail + this addendum. Never-commit set untouched.
+
+AWAITING OWNER WORD (never push): batch stamps gen_09–gen_63 (now
+55 blocks, candidates by parashah); torahsim landing relay (now
+twenty-five ledger/unit pairs + THE_STEPS sweep paragraphs 4-6);
+next sweep Miketz on his go; commit/push of this sweep on his word.
+
+## ADDENDUM 2026-08-28 (closing) — RELAY DISPATCHED; COMPACTION POINT #25
+
+After the sweep record above, the owner directed ("i want you to tell
+torahsim to update its data with what you did since last sync. then
+let it do the work"): the sync brief was SENT to session torahsim-19
+via cross-session message (owner direction quoted verbatim inside as
+its authorization). Contents: (1) commit 14b192d's 21 pairs
+gen_39–59; (2) today's uncommitted Vayeshev 4 pairs gen_60–63;
+(3) the canon-mirror queue — six THE_STEPS sweep paragraphs + the
+two flagged Step 4 passages (two shelves; parashah-grain WHY);
+(4) state numbers 63/73 blocks, 1,196/1,533 verses (78%), with the
+explicit caution that all 55 blocks gen_09–63 are UNSTAMPED (no
+full-rule chip flips). TorahSim owns its landing and gates. A
+one-shot idle notice was subscribed — the NEXT SITTING should expect
+(or check for) torahsim-19's result and verify its landing report.
+
+Also this sitting, before the sweep: an owner side-project — "The
+World Tree" claude.ai artifact (Genesis 1–2 as an interactive
+step-in tree; scratchpad + artifact only, NOTHING in the repo).
+
+UNCOMMITTED in the tracked set (awaiting owner word): 4 Vayeshev
+ledgers + 4 rev-2 units + THE_STEPS tail + the two 2026-08-28 state
+doc addenda. Never-commit set untouched.
+
+AWAITING OWNER WORD (never push): commit/push of the Vayeshev sweep;
+batch stamps gen_09–gen_63 (55 blocks); next sweep MIKETZ (gen_64,
+Genesis 41:1 — Pharaoh's dreams; ~146 verses; then Vayigash 106,
+Vayechi 85 — 337 verses to a whole Genesis).
+
+FIRST ACTION of the post-compaction sitting: reread THE_STEPS Step 4
+per the standing rule; then check the torahsim-19 landing result.
+
+COMPACTION POINT #25 — records current through here. Safe to compact.
+
+## ADDENDUM 2026-08-28 — TORAHSIM LANDING VERIFIED; STALE FLAGS CLEARED (sitting #26 opens)
+
+Post-compaction sitting #26. FIRST ACTIONS done in order: THE_STEPS
+Step 4 reread (standing rule); torahsim-19's landing report arrived
+and was VERIFIED from this side. All 25 pairs (gen_39–63) landed
+byte-verified, chips checked at every boundary (32:1 inside gen_55
+per the block-boundary law; 41:1 honestly unopened), 2,538 triage
+rows indexed, nine gates green — and the landing is COMMITTED in
+TorahSim at 46512c9 ("Five parashiyot land in one breath…"), its
+tree clean, so the owner's word evidently landed in that window.
+Deploy not claimed in that commit — that window's business.
+
+Its TWO reported discrepancies, both handled here:
+(1) STALE MIRROR FLAGS — the TWO SHELVES passage + Step-4 WHY
+paragraph have stood in canon since 2026-08-27 (2eabf68, verified);
+and the five sweep paragraphs (Chayei Sarah→Vayeshev) are mirrored
+brackets-dropped. All SEVEN stale [Workshop note] brackets removed
+from workshop THE_STEPS.md (uncommitted, joins the Vayeshev batch).
+The three flags NOT confirmed by its report stood briefly — then
+torahsim-19 confirmed all three in canon (Step 3 spine-default note
++ THE PLAN FROM HERE in 2eabf68; the first-sweep tail covered by
+canon's own Vayera paragraph, 2ad9b06, mirrored-in-substance) —
+verified here (canon THE_STEPS lines 256/275, CORE_SHELF spine
+table) and cleared. Workshop THE_STEPS.md now carries ZERO workshop
+-note brackets; the trees are even on process text. Canon HEAD
+46512c9 is two commits ahead of ITS origin — push/deploy await the
+owner's words in that window.
+(2) RELAY LABEL ERROR (mine): the relay called gen_39–47 "Toledot";
+disk truth is gen_39–42 Chayei Sarah, gen_43–47 Toledot — torahsim
+landed by the disk, nothing on our disk carried the error.
+
+Acknowledgment replied to torahsim-19. UNCOMMITTED tracked set now:
+4 Vayeshev ledgers + 4 rev-2 units + THE_STEPS tail AND flag
+removals + the 2026-08-28 addenda incl. this one. AWAITING OWNER
+WORD unchanged: commit/push of the sweep; batch stamps gen_09–63
+(55 blocks); next sweep MIKETZ (gen_64, Genesis 41:1) on his go.
+
+## ADDENDUM 2026-08-28 — THE MIKETZ SWEEP (seventh spine-default sweep)
+
+Same sitting (#26) as the torahsim verification above. Owner asked
+"how many left in genesis," was told ten blocks / 337 verses, and
+said "go."
+
+THE SWEEP: parashat Miketz, gen_64–gen_67 (Genesis 41:1–44:34,
+163 verses, 4 chapter-aligned blocks — the LONGEST sweep of the walk),
+one sitting, ONE stream.
+- Pre-enumeration by script (enumerate_miketz.py, scratchpad):
+  11,025 enumerated; DECLARED 245 = 34 fresh Bereshit Rabbah + 39
+  standing credits + 9 in-sitting + 163 Onkelos; 97 outside-scope
+  chain primaries with shelf split; register FP 4 (patterns held).
+- All 39 credits quick-looked (guard #1); numeric/ink credits opened
+  (guard #3). The flywheel's best showing: FIVE credits cashed
+  promised forward seats on gen_66's own verses; four more on gen_67
+  from gen_60's ledger eight chapters back.
+- BLOCK-BOUNDARY LAW applied: gen_67 spans all of chapter 44, so
+  Vayigash's opening 17 verses (44:18-34, Judah's speech) were read
+  here — the gen_55 precedent. Vayigash proper opens at gen_68 (45:1).
+- Four ledgers written: logic/oral_triage/gen_6{4,5,6,7}_*_2026-08-28.md
+  — read-N-of-N-COMPLETE all four (85/57/51/52).
+- Four units rebuilt rev 2 (oral_notes created; no machine ops changed).
+- GATES: verify_text GREEN ×4 (ZERO pre-existing ink defects — FOURTH
+  defect-free sweep in a row), preflight ALL SCENARIOS GREEN ×4,
+  gloss_lint 0 flags repo-wide.
+- THE_STEPS.md tail: THE SEVENTH SWEEP paragraph appended (the ONLY
+  workshop-note flag now in the file — the ten stale ones were cleared
+  earlier this sitting).
+
+Headlines (detail in the ledgers): TWO LAWS AND AN INFERENCE RULE on
+these units' own ink — the ten-man quorum by equal-decree from 42:5,
+the restrictive-particle rule learned from Pharaoh's "only the throne"
+(41:40), and 44:8 as the FIRST MEMBER of Scripture's ten a-fortiori
+arguments (a MIDDOT.md seat: our verse is the tradition's own
+type-specimen for the light-and-heavy inference); dreams-follow-the-
+mouth with R. Abahu's denial carried; the famine length disputed four
+ways (14/28/42/two); the six-row limb-by-limb repayment table paying
+out gen_62's refusal; the accuser-accuses-only-in-danger rule minted
+at 42:38; Joseph's three registration edicts; prayer sited at the
+completion of the accounting (43:14, read twice — father's prayer and
+the exiles' petition); the almost-five "your servant my father"
+silences billed to Joseph's early death; Judah's speech as
+conciliation three ways at once. ONKELOS carried the heaviest
+theological freight of the walk: DIVINATION → INVESTIGATION at both
+goblet verses; the separate tables explained by naming the Egyptian
+cult; "made himself a stranger" → "considered what to say" (against
+the midrash); "harm" → DEATH at four seats (the Exodus miscarriage
+law's needed reading); "torn, torn" → "surely killed," matching
+gen_60's O2 seven chapters back.
+
+STATE: Genesis 67 of 73 blocks read; Genesis 1:1–44:34 CONTINUOUS;
+1,359 of 1,533 verses (89%). FIFTY-NINE blocks (gen_09–gen_67) green
+and unstamped. Remaining: gen_68 (Genesis 45:1) through gen_73 — SIX
+blocks, 174 verses, one sitting to a whole Genesis.
+
+UNCOMMITTED (awaiting owner word): the Vayeshev batch (4 ledgers +
+4 units) + this Miketz batch (4 ledgers + 4 units) + THE_STEPS
+(two sweep paragraphs, ten stale flags cleared) + all 2026-08-28
+addenda. Never-commit set untouched.
+
+AWAITING OWNER WORD (never push): commit/push of both sweeps; batch
+stamps gen_09–gen_67 (59 blocks, by parashah); the last Genesis sweep
+(gen_68, Genesis 45:1 — "Joseph could not restrain himself"); a
+second torahsim relay when the owner wants canon caught up (its HEAD
+46512c9 is two commits ahead of its own origin, push/deploy awaiting
+his word in that window).
+
+## ADDENDUM 2026-08-28 — THE FINAL GENESIS SWEEP: **THE BOOK IS READ THROUGH**
+
+Same sitting (#26). Owner asked whether Genesis could finish in one
+more run and how many verses; was told 174 verses / six blocks with a
+live enumeration; said "go."
+
+THE SWEEP: Vayigash + Vayechi, gen_68–gen_73 (Genesis 45:1–50:26,
+174 verses, 6 chapter-aligned blocks, TWO parashiyot in one run).
+- Pre-enumeration by script (enumerate_final_genesis.py, scratchpad):
+  17,588 enumerated; DECLARED 297 = 45 fresh Bereshit Rabbah + 74
+  standing credits + 4 in-sitting + 174 Onkelos; 253 outside-scope
+  chain primaries (the largest remainder of any sweep — chapter 49 is
+  cited by every later book); register FP 11 (patterns held).
+- All 74 credits quick-looked (guard #1); numeric/ink credits opened
+  (guard #3): the seventy-count, R. Meir's scroll variant, the
+  closed-portion layout claim, the written/read pair at Psalms 100:3.
+- gen_71 set the walk's credit record: 13 credits to 3 fresh.
+- gen_72 was the densest block of the walk: 6,024 enumerated, 82
+  declared, and the ONLY block where every fresh section came back
+  material (22 of 22).
+- Six ledgers written: logic/oral_triage/gen_6{8,9}_*, gen_7{0,1,2,3}_*
+  _2026-08-28.md — read-N-of-N-COMPLETE all six (43/49/45/38/82/40).
+- Six units rebuilt rev 2 (oral_notes created; no machine ops changed).
+- GATES: verify_text GREEN ×6 (ZERO pre-existing ink defects — FIFTH
+  defect-free sweep in a row), preflight ALL SCENARIOS GREEN ×6,
+  gloss_lint 0 flags repo-wide.
+- THE_STEPS.md: the book-closing paragraph appended.
+
+Headlines (detail in the ledgers): THE SHEMA SOURCED TO JACOB'S
+DEATHBED (the sons answer "Hear, Israel" to their father; he replies
+with the undertone line) — the walk's strongest liturgical claim; THE
+TEMPLE'S SITE decided by who did NOT join the sale of Joseph (eleven
+tribes disqualified, Benjamin's portion chosen — the sale's furthest
+consequence); the seventy that count sixty-nine, five candidates, with
+R. Meir's own scroll reading "the SON of Dan" singular, and the siege
+law on delivering one soul riding with it; the PEACE RULING at the
+book's end (the tribes spoke words that were not so, to make peace —
+the text recording a command Jacob never gave); the bones-oath scope
+rule ("with you" = at the going up, and all the tribes' bones) — the
+hinge into Exodus; the nine-item Ephraim precedence census; the closed
+portion read three ways off the scroll's own missing white space; the
+Canaanites spared for a pointed finger, credited back at Esther's
+seventy days. ONKELOS: THE LARGEST TRANSLATION-LAYER FINDING OF THE
+WALK — in chapter 49 it CHANGES GENRE, ceasing to translate and
+becoming interpretive paraphrase (the Messiah named at Shiloh,
+Reuben's three forfeited portions written in, the Temple given to
+Benjamin's portion, seven blessings rendered as their fulfilments);
+plus the sword and bow rendered PRAYER AND PLEA at 48:22 while the
+chain independently rules the sword was Esau's; "am I in the place of
+God?" reversed into "I am one who fears God"; and the Ptolemy
+emendation recorded at 49:6, putting THREE translation layers on one
+verse. Candidate for the CORE_SHELF record: the genre change is a fact
+about the reading shelf itself.
+
+**STATE: GENESIS IS READ THROUGH. 73 of 73 blocks; Genesis 1:1–50:26
+CONTINUOUS; 1,533 of 1,533 verses — 100%.** Verified mechanically
+block by block this sitting: every one of the 73 numbered blocks
+carries a dated triage ledger with its read-N-of-N-COMPLETE line
+(the 25 unmatched units in the naive check are the superseded v1
+coarse multi-chapter units, not blocks). SIXTY-FIVE blocks (gen_09–
+gen_73) green and unstamped.
+
+NEXT: the walk reaches EXODUS, where the spine changes to the Mekhilta
+of Rabbi Yishmael. THE STANDING DEPENDENCY IS NOW DUE — the sugya
+case-file machinery must be real before the Exodus law spans (owner's
+condition of the spine default, 2026-08-27; THE_WORLD.md build queue).
+Exodus 1–21 already has frozen units from the forward era; the reading
+pass under the spine default has not run on them.
+
+UNCOMMITTED (awaiting owner word): Vayeshev (4+4), Miketz (4+4), the
+final Genesis sweep (6+6) = 14 ledgers + 14 rev-2 units; THE_STEPS
+(three sweep paragraphs, ten stale flags cleared, one live flag on the
+new closing paragraph); all 2026-08-28 addenda. Never-commit set
+untouched.
+
+AWAITING OWNER WORD (never push): commit/push of all three sweeps;
+BATCH STAMPS gen_09–gen_73 (65 blocks — the whole book is now
+stampable by parashah); the torahsim relay for the three new sweeps
+(its HEAD 46512c9 is two commits ahead of its own origin; push/deploy
+await his word in that window); and the Exodus decision — case-file
+machinery first, per his own standing condition.
